@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class TextureOp29 extends TextureOp {
 
 	@OriginalMember(owner = "client!si", name = "U", descriptor = "[Lclient!kf;")
-	private Class18[] aClass18Array1;
+	private TextureOp29SubOp[] aClass18Array1;
 
 	@OriginalMember(owner = "client!si", name = "<init>", descriptor = "()V")
 	public TextureOp29() {
@@ -34,7 +34,7 @@ public final class TextureOp29 extends TextureOp {
 			return;
 		}
 		for (@Pc(23) int local23 = 0; local23 < this.aClass18Array1.length; local23++) {
-			@Pc(33) Class18 local33 = this.aClass18Array1[local23];
+			@Pc(33) TextureOp29SubOp local33 = this.aClass18Array1[local23];
 			@Pc(36) int local36 = local33.anInt5228;
 			@Pc(39) int local39 = local33.anInt5229;
 			if (local36 >= 0) {
@@ -53,7 +53,7 @@ public final class TextureOp29 extends TextureOp {
 	@Override
 	public final void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		if (arg0 == 0) {
-			this.aClass18Array1 = new Class18[arg1.method2229()];
+			this.aClass18Array1 = new TextureOp29SubOp[arg1.method2229()];
 			for (@Pc(11) int local11 = 0; local11 < this.aClass18Array1.length; local11++) {
 				@Pc(24) int local24 = arg1.method2229();
 				if (local24 == 0) {
