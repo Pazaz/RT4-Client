@@ -548,7 +548,7 @@ public final class Static280 {
 			return Static5.method32(arg0.anInt456);
 		}
 		@Pc(28) int local28 = arg0.anInt507 >>> 16;
-		@Pc(33) Class86 local33 = new Class86(Static119.aClass133_9);
+		@Pc(33) HashTableIterator local33 = new HashTableIterator(Static119.aClass133_9);
 		for (@Pc(38) Class3_Sub31 local38 = (Class3_Sub31) local33.method2701(); local38 != null; local38 = (Class3_Sub31) local33.method2700()) {
 			if (local28 == local38.anInt5878) {
 				return Static5.method32((int) local38.aLong192);
