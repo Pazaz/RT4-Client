@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static27 {
 
 	@OriginalMember(owner = "client!cb", name = "hb", descriptor = "Lclient!le;")
-	public static Class89 aClass89_1;
+	public static SoundBank aClass89_1;
 
 	@OriginalMember(owner = "client!cb", name = "I", descriptor = "[I")
 	public static final int[] anIntArray70 = new int[32];

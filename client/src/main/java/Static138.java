@@ -130,7 +130,7 @@ public final class Static138 {
 					}
 				}
 				if (Static27.aClass89_1 == null) {
-					Static27.aClass89_1 = new Class89(Static78.aClass153_32, Static252.aClass153_103);
+					Static27.aClass89_1 = new SoundBank(Static78.aClass153_32, Static252.aClass153_103);
 				}
 				if (Static172.aClass3_Sub3_Sub4_2.method4411(Static144.aClass3_Sub29_1, Static210.aClass153_87, Static27.aClass89_1)) {
 					Static172.aClass3_Sub3_Sub4_2.method4412();
