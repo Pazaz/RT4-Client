@@ -11,7 +11,7 @@ public final class Static122 {
 	public static Class12 aClass12_1;
 
 	@OriginalMember(owner = "client!jh", name = "p", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_46;
+	public static Js5 aClass153_46;
 
 	@OriginalMember(owner = "client!jh", name = "b", descriptor = "[Lclient!na;")
 	public static final Class100[] aClass100Array92 = new Class100[200];
@@ -26,7 +26,7 @@ public final class Static122 {
 	public static int anInt3047 = 0;
 
 	@OriginalMember(owner = "client!jh", name = "a", descriptor = "(Lclient!ve;ZIIZI)V")
-	public static void method2410(@OriginalArg(0) Class153 arg0, @OriginalArg(2) int arg1, @OriginalArg(5) int arg2) {
+	public static void method2410(@OriginalArg(0) Js5 arg0, @OriginalArg(2) int arg1, @OriginalArg(5) int arg2) {
 		Static172.aClass153_70 = arg0;
 		Static14.anInt441 = 1;
 		Static253.anInt5527 = arg2;
@@ -90,7 +90,7 @@ public final class Static122 {
 	}
 
 	@OriginalMember(owner = "client!jh", name = "a", descriptor = "(IILclient!ve;Lclient!ve;I)Lclient!dd;")
-	public static SoftwareFont method2412(@OriginalArg(0) int arg0, @OriginalArg(2) Class153 arg1, @OriginalArg(3) Class153 arg2) {
+	public static SoftwareFont method2412(@OriginalArg(0) int arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) Js5 arg2) {
 		return Static234.method4016(arg2, 0, arg0) ? Static114.method4635(arg1.method4495(arg0, 0)) : null;
 	}
 }

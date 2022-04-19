@@ -13,10 +13,10 @@ public final class Class109 implements GlTextureProvider {
 	private int anInt4186 = 50;
 
 	@OriginalMember(owner = "client!nk", name = "b", descriptor = "Lclient!ve;")
-	private final Class153 aClass153_72;
+	private final Js5 aClass153_72;
 
 	@OriginalMember(owner = "client!nk", name = "i", descriptor = "Lclient!ve;")
-	private final Class153 aClass153_73;
+	private final Js5 aClass153_73;
 
 	@OriginalMember(owner = "client!nk", name = "P", descriptor = "Lclient!gn;")
 	private LruHashTable aClass54_12;
@@ -55,7 +55,7 @@ public final class Class109 implements GlTextureProvider {
 	private final boolean[] aBooleanArray93;
 
 	@OriginalMember(owner = "client!nk", name = "<init>", descriptor = "(Lclient!ve;Lclient!ve;Lclient!ve;IZ)V")
-	public Class109(@OriginalArg(0) Class153 arg0, @OriginalArg(1) Class153 arg1, @OriginalArg(2) Class153 arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4) {
+	public Class109(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1, @OriginalArg(2) Js5 arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4) {
 		this.aClass153_72 = arg2;
 		this.aBoolean200 = arg4;
 		this.anInt4186 = arg3;

@@ -11,7 +11,7 @@ public final class Static28 {
 	public static int anInt919;
 
 	@OriginalMember(owner = "client!cd", name = "B", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_18;
+	public static Js5 aClass153_18;
 
 	@OriginalMember(owner = "client!cd", name = "v", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_172 = method790("Atteindre");
@@ -23,7 +23,7 @@ public final class Static28 {
 	public static final Class100 aClass100_174 = method790("Lade Wordpack )2 ");
 
 	@OriginalMember(owner = "client!cd", name = "a", descriptor = "(Lclient!ve;B)I")
-	public static int method789(@OriginalArg(0) Class153 arg0) {
+	public static int method789(@OriginalArg(0) Js5 arg0) {
 		@Pc(5) int local5 = 0;
 		if (arg0.method4506(Static280.anInt5900)) {
 			local5++;

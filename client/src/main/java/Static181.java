@@ -39,7 +39,7 @@ public final class Static181 {
 	}
 
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(Lclient!ve;B)V")
-	public static void method3344(@OriginalArg(0) Class153 arg0) {
+	public static void method3344(@OriginalArg(0) Js5 arg0) {
 		if (Static18.aBoolean40) {
 			return;
 		}
@@ -74,7 +74,7 @@ public final class Static181 {
 	}
 
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(ILclient!ve;Lclient!ve;Z)V")
-	public static void method3349(@OriginalArg(1) Class153 arg0, @OriginalArg(2) Class153 arg1) {
+	public static void method3349(@OriginalArg(1) Js5 arg0, @OriginalArg(2) Js5 arg1) {
 		Static30.aBoolean61 = true;
 		Static121.aClass153_45 = arg1;
 		Static146.aClass153_54 = arg0;

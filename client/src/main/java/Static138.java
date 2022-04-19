@@ -11,10 +11,10 @@ public final class Static138 {
 	public static float aFloat14;
 
 	@OriginalMember(owner = "client!km", name = "Nc", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_50;
+	public static Js5 aClass153_50;
 
 	@OriginalMember(owner = "client!km", name = "Oc", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_51;
+	public static Js5 aClass153_51;
 
 	@OriginalMember(owner = "client!km", name = "Pc", descriptor = "I")
 	public static int anInt3439;

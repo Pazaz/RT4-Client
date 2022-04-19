@@ -10,7 +10,7 @@ public final class Static213 {
 	public static int anInt4851;
 
 	@OriginalMember(owner = "client!re", name = "B", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_88;
+	public static Js5 aClass153_88;
 
 	@OriginalMember(owner = "client!re", name = "r", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_910 = Static28.method790("Hierhin gehen");

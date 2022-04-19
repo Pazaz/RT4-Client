@@ -8,7 +8,7 @@ public final class Static26 {
 	public static int[] anIntArray66;
 
 	@OriginalMember(owner = "client!ca", name = "Z", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_16;
+	public static Js5 aClass153_16;
 
 	@OriginalMember(owner = "client!ca", name = "ab", descriptor = "Z")
 	public static boolean aBoolean59;

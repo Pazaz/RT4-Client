@@ -23,7 +23,7 @@ public final class Static125 {
 	public static int anInt3104 = 127;
 
 	@OriginalMember(owner = "client!jl", name = "a", descriptor = "(ILclient!ve;Lclient!ve;)V")
-	public static void method2446(@OriginalArg(1) Class153 arg0, @OriginalArg(2) Class153 arg1) {
+	public static void method2446(@OriginalArg(1) Js5 arg0, @OriginalArg(2) Js5 arg1) {
 		Static14.aClass153_8 = arg0;
 		Static216.aClass153_31 = arg1;
 		Static53.anInt1716 = Static216.aClass153_31.method4504(3);

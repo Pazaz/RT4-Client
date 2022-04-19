@@ -8,7 +8,7 @@ public final class Static280 {
 	public static Font aClass3_Sub2_Sub9_43;
 
 	@OriginalMember(owner = "client!wl", name = "s", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_110;
+	public static Js5 aClass153_110;
 
 	@OriginalMember(owner = "client!wl", name = "A", descriptor = "I")
 	public static int anInt5900;

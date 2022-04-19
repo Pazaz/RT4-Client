@@ -86,7 +86,7 @@ public final class Static34 {
 	public static boolean aBoolean65 = false;
 
 	@OriginalMember(owner = "client!ck", name = "a", descriptor = "(ILclient!va;Lclient!ve;Lclient!ve;Lclient!ve;)Z")
-	public static boolean method876(@OriginalArg(1) MidiPcmStream arg0, @OriginalArg(2) Class153 arg1, @OriginalArg(3) Class153 arg2, @OriginalArg(4) Class153 arg3) {
+	public static boolean method876(@OriginalArg(1) MidiPcmStream arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) Js5 arg2, @OriginalArg(4) Js5 arg3) {
 		Static210.aClass153_87 = arg1;
 		Static78.aClass153_32 = arg3;
 		Static252.aClass153_103 = arg2;

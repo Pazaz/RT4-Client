@@ -8,7 +8,7 @@ public final class Static225 {
 	public static int anInt5068;
 
 	@OriginalMember(owner = "client!se", name = "l", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_92;
+	public static Js5 aClass153_92;
 
 	@OriginalMember(owner = "client!se", name = "b", descriptor = "Lclient!na;")
 	private static final Class100 aClass100_959 = Static28.method790("Prepared sound engine");

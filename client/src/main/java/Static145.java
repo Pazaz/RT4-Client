@@ -33,7 +33,7 @@ public final class Static145 {
 	}
 
 	@OriginalMember(owner = "client!lf", name = "a", descriptor = "(ILclient!ve;)V")
-	public static void method2743(@OriginalArg(1) Class153 arg0) {
+	public static void method2743(@OriginalArg(1) Js5 arg0) {
 		Static233.aClass36_Sub1Array1 = Static162.method3088(Static138.anInt3443, arg0);
 		Static96.anIntArray235 = new int[256];
 		@Pc(15) int local15;

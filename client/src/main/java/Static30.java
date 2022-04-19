@@ -20,12 +20,12 @@ public final class Static30 {
 	public static final Class100 aClass100_185 = Static28.method790(")3");
 
 	@OriginalMember(owner = "client!cg", name = "a", descriptor = "(ZILclient!ve;I)[Lclient!ek;")
-	private static Class36_Sub1[] method837(@OriginalArg(1) int arg0, @OriginalArg(2) Class153 arg1) {
+	private static Class36_Sub1[] method837(@OriginalArg(1) int arg0, @OriginalArg(2) Js5 arg1) {
 		return Static234.method4016(arg1, 0, arg0) ? Static121.method2406() : null;
 	}
 
 	@OriginalMember(owner = "client!cg", name = "a", descriptor = "(ILclient!ve;)V")
-	public static void method839(@OriginalArg(1) Class153 arg0) {
+	public static void method839(@OriginalArg(1) Js5 arg0) {
 		Static173.aClass3_Sub2_Sub1_Sub1Array9 = Static265.method4523(Static280.anInt5900, arg0);
 		Static213.aClass3_Sub2_Sub1Array8 = Static209.method3708(Static131.anInt3261, arg0);
 		Static116.aClass3_Sub2_Sub1Array3 = Static209.method3708(Static36.anInt1165, arg0);

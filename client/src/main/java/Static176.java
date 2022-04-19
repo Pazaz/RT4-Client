@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static176 {
 
 	@OriginalMember(owner = "client!ob", name = "f", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_76;
+	public static Js5 aClass153_76;
 
 	@OriginalMember(owner = "client!ob", name = "a", descriptor = "[Z")
 	public static final boolean[] aBooleanArray95 = new boolean[5];

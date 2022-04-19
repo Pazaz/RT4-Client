@@ -30,7 +30,7 @@ public final class Static80 {
 	public static final int[] anIntArray419 = new int[] { 0, 2, 2, 2, 1, 1, 2, 2, 1, 3, 1, 1 };
 
 	@OriginalMember(owner = "client!gf", name = "a", descriptor = "(Lclient!ve;IIB)Lclient!mm;")
-	public static SoftwareSprite method3613(@OriginalArg(0) Class153 arg0, @OriginalArg(2) int arg1) {
+	public static SoftwareSprite method3613(@OriginalArg(0) Js5 arg0, @OriginalArg(2) int arg1) {
 		return Static234.method4016(arg0, 0, arg1) ? Static102.method2071() : null;
 	}
 

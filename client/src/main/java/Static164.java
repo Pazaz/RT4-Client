@@ -173,12 +173,12 @@ public final class Static164 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(Lclient!ve;IZ)Lclient!mm;")
-	public static SoftwareSprite method3117(@OriginalArg(0) Class153 arg0, @OriginalArg(1) int arg1) {
+	public static SoftwareSprite method3117(@OriginalArg(0) Js5 arg0, @OriginalArg(1) int arg1) {
 		return Static254.method4346(arg0, arg1) ? Static196.method3537() : null;
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(IZILclient!ve;)Lclient!ek;")
-	public static Class36_Sub1 method3119(@OriginalArg(2) int arg0, @OriginalArg(3) Class153 arg1) {
+	public static Class36_Sub1 method3119(@OriginalArg(2) int arg0, @OriginalArg(3) Js5 arg1) {
 		return Static234.method4016(arg1, 0, arg0) ? Static134.method2619() : null;
 	}
 

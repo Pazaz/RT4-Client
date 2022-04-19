@@ -104,7 +104,7 @@ public final class Static107 {
 	}
 
 	@OriginalMember(owner = "client!id", name = "a", descriptor = "(Lclient!ve;B)V")
-	public static void method2264(@OriginalArg(0) Class153 arg0) {
+	public static void method2264(@OriginalArg(0) Js5 arg0) {
 		Static85.aClass153_36 = arg0;
 	}
 }

@@ -23,7 +23,7 @@ public final class Static246 {
 	public static final Class100 aClass100_1029 = Static28.method790("cookiehost");
 
 	@OriginalMember(owner = "client!u", name = "a", descriptor = "(BLclient!ve;Lclient!ve;)V")
-	public static void method4237(@OriginalArg(1) Class153 arg0, @OriginalArg(2) Class153 arg1) {
+	public static void method4237(@OriginalArg(1) Js5 arg0, @OriginalArg(2) Js5 arg1) {
 		Static153.aClass153_57 = arg0;
 		Static243.aClass153_97 = arg1;
 	}

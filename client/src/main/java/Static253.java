@@ -14,7 +14,7 @@ public final class Static253 {
 	public static float aFloat36;
 
 	@OriginalMember(owner = "client!ui", name = "cb", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_104;
+	public static Js5 aClass153_104;
 
 	@OriginalMember(owner = "client!ui", name = "eb", descriptor = "[[[B")
 	public static byte[][][] aByteArrayArrayArray16;

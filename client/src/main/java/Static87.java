@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static87 {
 
 	@OriginalMember(owner = "client!gn", name = "t", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_38;
+	public static Js5 aClass153_38;
 
 	@OriginalMember(owner = "client!gn", name = "d", descriptor = "Z")
 	public static boolean aBoolean130 = false;
@@ -29,7 +29,7 @@ public final class Static87 {
 	}
 
 	@OriginalMember(owner = "client!gn", name = "a", descriptor = "(Lclient!ve;ZLclient!ve;BI)Lclient!cl;")
-	public static Class3_Sub2_Sub7 method1803(@OriginalArg(0) Class153 arg0, @OriginalArg(2) Class153 arg1, @OriginalArg(4) int arg2) {
+	public static Class3_Sub2_Sub7 method1803(@OriginalArg(0) Js5 arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(4) int arg2) {
 		@Pc(5) boolean local5 = true;
 		@Pc(16) int[] local16 = arg0.method4503(arg2);
 		for (@Pc(18) int local18 = 0; local18 < local16.length; local18++) {
