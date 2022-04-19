@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!l")
-public final class Class86 {
+public final class HashTableIterator {
 
 	@OriginalMember(owner = "client!l", name = "a", descriptor = "Lclient!ab;")
 	private Node aClass3_135;
@@ -16,7 +16,7 @@ public final class Class86 {
 	private final HashTable aClass133_10;
 
 	@OriginalMember(owner = "client!l", name = "<init>", descriptor = "(Lclient!sc;)V")
-	public Class86(@OriginalArg(0) HashTable arg0) {
+	public HashTableIterator(@OriginalArg(0) HashTable arg0) {
 		this.aClass133_10 = arg0;
 	}
 
