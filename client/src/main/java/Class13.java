@@ -964,7 +964,7 @@ public final class Class13 {
 		}
 		if (!Static239.aBoolean269) {
 			local72 = local85;
-		} else if (local85 instanceof Class3_Sub2_Sub1_Sub1_Sub1) {
+		} else if (local85 instanceof SoftwareAlphaSprite) {
 			local72 = new Class3_Sub2_Sub1_Sub2_Sub1(local85);
 		} else {
 			local72 = new GlSprite(local85);
