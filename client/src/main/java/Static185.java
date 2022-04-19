@@ -39,7 +39,7 @@ public final class Static185 {
 		if (arg2 < Static146.anInt3508) {
 			Static146.anInt3508 = arg2;
 		}
-		@Pc(62) Class118 local62 = Static271.method4601(arg5);
+		@Pc(62) LocType local62 = Static271.method4601(arg5);
 		if (Static239.aBoolean269 && local62.aBoolean216) {
 			return;
 		}

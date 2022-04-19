@@ -49,7 +49,7 @@ public final class Static49 {
 			@Pc(39) boolean local39 = false;
 			while (true) {
 				@Pc(78) int local78;
-				@Pc(95) Class118 local95;
+				@Pc(95) LocType local95;
 				do {
 					@Pc(72) int local72;
 					@Pc(68) int local68;

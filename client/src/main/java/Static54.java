@@ -88,7 +88,7 @@ public final class Static54 {
 			for (local146 = 0; local146 < Static251.anInt5454; local146++) {
 				local181 = Static145.anIntArray331[local146] * 4 + 2 - Static173.aClass8_Sub4_Sub1_2.anInt3412 / 32;
 				local150 = Static93.anIntArray219[local146] * 4 + 2 - Static173.aClass8_Sub4_Sub1_2.anInt3421 / 32;
-				@Pc(382) Class118 local382 = Static271.method4601(Static199.anIntArray417[local146]);
+				@Pc(382) LocType local382 = Static271.method4601(Static199.anIntArray417[local146]);
 				if (local382.anIntArray380 != null) {
 					local382 = local382.method3417();
 					if (local382 == null || local382.anInt4400 == -1) {

@@ -40,7 +40,7 @@ public final class Static164 {
 		@Pc(28) int local28;
 		@Pc(35) int local35;
 		@Pc(42) int local42;
-		@Pc(46) Class118 local46;
+		@Pc(46) LocType local46;
 		@Pc(65) int local65;
 		@Pc(75) int[] local75;
 		@Pc(90) int local90;
@@ -151,7 +151,7 @@ public final class Static164 {
 		if (local14 != 0L) {
 			local28 = (int) local14 >> 20 & 0x3;
 			local35 = (int) (local14 >>> 32) & Integer.MAX_VALUE;
-			@Pc(586) Class118 local586 = Static271.method4601(local35);
+			@Pc(586) LocType local586 = Static271.method4601(local35);
 			if (local586.anInt4415 != -1 && !Static33.method867(arg0, local586, arg2, local28)) {
 				return false;
 			}

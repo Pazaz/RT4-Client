@@ -48,13 +48,13 @@ public final class Static271 {
 	}
 
 	@OriginalMember(owner = "client!wc", name = "a", descriptor = "(II)Lclient!pb;")
-	public static Class118 method4601(@OriginalArg(1) int arg0) {
-		@Pc(15) Class118 local15 = (Class118) Static179.aClass99_25.method3106((long) arg0);
+	public static LocType method4601(@OriginalArg(1) int arg0) {
+		@Pc(15) LocType local15 = (LocType) Static179.aClass99_25.method3106((long) arg0);
 		if (local15 != null) {
 			return local15;
 		}
 		@Pc(30) byte[] local30 = Static146.aClass153_54.method4495(Static253.method4328(arg0), Static33.method872(arg0));
-		local15 = new Class118();
+		local15 = new LocType();
 		local15.anInt4426 = arg0;
 		if (local30 != null) {
 			local15.method3424(new Buffer(local30));

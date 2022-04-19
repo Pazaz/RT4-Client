@@ -21,7 +21,7 @@ public final class Static33 {
 	public static final int[] anIntArray79 = new int[32768];
 
 	@OriginalMember(owner = "client!cj", name = "a", descriptor = "(ILclient!pb;ZIIII)Z")
-	public static boolean method867(@OriginalArg(0) int arg0, @OriginalArg(1) Class118 arg1, @OriginalArg(5) int arg2, @OriginalArg(6) int arg3) {
+	public static boolean method867(@OriginalArg(0) int arg0, @OriginalArg(1) LocType arg1, @OriginalArg(5) int arg2, @OriginalArg(6) int arg3) {
 		@Pc(10) Class2 local10 = Static40.method1013(arg1.anInt4415);
 		if (local10.anInt12 == -1) {
 			return true;
