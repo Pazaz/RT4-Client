@@ -26,8 +26,8 @@ public final class Static91 {
 	}
 
 	@OriginalMember(owner = "client!hc", name = "a", descriptor = "(IB)Lclient!qc;")
-	public static Class3_Sub2_Sub17 method1875(@OriginalArg(0) int arg0) {
-		@Pc(12) Class3_Sub2_Sub17 local12 = (Class3_Sub2_Sub17) Static105.aClass54_9.method1806((long) arg0);
+	public static ClientScript method1875(@OriginalArg(0) int arg0) {
+		@Pc(12) ClientScript local12 = (ClientScript) Static105.aClass54_9.method1806((long) arg0);
 		if (local12 != null) {
 			return local12;
 		}
@@ -35,7 +35,7 @@ public final class Static91 {
 		if (local22 == null) {
 			return null;
 		}
-		local12 = new Class3_Sub2_Sub17();
+		local12 = new ClientScript();
 		@Pc(42) Buffer local42 = new Buffer(local22);
 		local42.anInt2792 = local42.aByteArray40.length - 2;
 		@Pc(53) int local53 = local42.method2163();
