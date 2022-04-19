@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!mb")
-public final class Class3_Sub2_Sub9_Sub2 extends Font {
+public final class GlFont extends Font {
 
 	@OriginalMember(owner = "client!mb", name = "Gb", descriptor = "[I")
 	private int[] anIntArray349;
@@ -24,7 +24,7 @@ public final class Class3_Sub2_Sub9_Sub2 extends Font {
 	private int anInt3637 = 0;
 
 	@OriginalMember(owner = "client!mb", name = "<init>", descriptor = "([B[I[I[I[I[[B)V")
-	public Class3_Sub2_Sub9_Sub2(@OriginalArg(0) byte[] arg0, @OriginalArg(1) int[] arg1, @OriginalArg(2) int[] arg2, @OriginalArg(3) int[] arg3, @OriginalArg(4) int[] arg4, @OriginalArg(5) byte[][] arg5) {
+	public GlFont(@OriginalArg(0) byte[] arg0, @OriginalArg(1) int[] arg1, @OriginalArg(2) int[] arg2, @OriginalArg(3) int[] arg3, @OriginalArg(4) int[] arg4, @OriginalArg(5) byte[][] arg5) {
 		super(arg0, arg1, arg2, arg3, arg4);
 		this.method2881(arg5);
 		this.method2880();
