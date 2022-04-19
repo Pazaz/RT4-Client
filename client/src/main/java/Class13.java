@@ -967,7 +967,7 @@ public final class Class13 {
 		} else if (local85 instanceof Class3_Sub2_Sub1_Sub1_Sub1) {
 			local72 = new Class3_Sub2_Sub1_Sub2_Sub1(local85);
 		} else {
-			local72 = new Class3_Sub2_Sub1_Sub2(local85);
+			local72 = new GlSprite(local85);
 		}
 		Static190.aClass99_26.method3095(local72, local66);
 		return local72;

@@ -70,7 +70,7 @@ public final class Class3_Sub2_Sub9_Sub2 extends Class3_Sub2_Sub9 {
 		@Pc(51) float local51 = local32 + (float) this.anIntArray343[arg0] / (float) this.anInt3640;
 		@Pc(63) float local63 = local39 + (float) this.anIntArray345[arg0] / (float) this.anInt3640;
 		Static239.method4177(this.anInt3638);
-		@Pc(68) Class3_Sub2_Sub1_Sub2 local68 = Static46.aClass3_Sub2_Sub1_Sub2_1;
+		@Pc(68) GlSprite local68 = Static46.aClass3_Sub2_Sub1_Sub2_1;
 		local4.glActiveTexture(GL.GL_TEXTURE1);
 		local4.glEnable(GL.GL_TEXTURE_2D);
 		local4.glBindTexture(GL.GL_TEXTURE_2D, local68.anInt1872);

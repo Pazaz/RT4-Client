@@ -127,7 +127,7 @@ public final class Static137 {
 					local576[local80] = 1;
 				}
 			}
-			Static89.aClass3_Sub2_Sub1_5 = new Class3_Sub2_Sub1_Sub2(Static56.aClass3_Sub2_Sub1_Sub1_1);
+			Static89.aClass3_Sub2_Sub1_5 = new GlSprite(Static56.aClass3_Sub2_Sub1_Sub1_1);
 		} else {
 			Static89.aClass3_Sub2_Sub1_5 = Static56.aClass3_Sub2_Sub1_Sub1_1;
 		}

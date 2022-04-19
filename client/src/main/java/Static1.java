@@ -550,7 +550,7 @@ public final class Static1 {
 			Static129.method2491(local63.anIntArray20, arg2, arg1);
 			Static214.method4364(arg2, 0, Static48.anInt1449, 0, 0, Static181.anInt4296, arg1, 0);
 			if (Static239.aBoolean269) {
-				Static70.aClass3_Sub2_Sub1_2 = new Class3_Sub2_Sub1_Sub2(local63);
+				Static70.aClass3_Sub2_Sub1_2 = new GlSprite(local63);
 			} else {
 				Static70.aClass3_Sub2_Sub1_2 = local63;
 			}

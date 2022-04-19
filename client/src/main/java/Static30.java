@@ -50,7 +50,7 @@ public final class Static30 {
 		@Pc(124) Class3_Sub2_Sub1_Sub1 local124 = Static78.method1693(0, arg0, Static163.anInt3962);
 		local124.method311();
 		if (Static239.aBoolean269) {
-			Static106.aClass3_Sub2_Sub1_7 = new Class3_Sub2_Sub1_Sub2(local124);
+			Static106.aClass3_Sub2_Sub1_7 = new GlSprite(local124);
 		} else {
 			Static106.aClass3_Sub2_Sub1_7 = local124;
 		}
@@ -62,7 +62,7 @@ public final class Static30 {
 		if (Static239.aBoolean269) {
 			Static277.aClass3_Sub2_Sub1Array12 = new Class3_Sub2_Sub1[local143.length];
 			for (local145 = 0; local145 < local143.length; local145++) {
-				Static277.aClass3_Sub2_Sub1Array12[local145] = new Class3_Sub2_Sub1_Sub2(local143[local145]);
+				Static277.aClass3_Sub2_Sub1Array12[local145] = new GlSprite(local143[local145]);
 			}
 		} else {
 			Static277.aClass3_Sub2_Sub1Array12 = local143;
@@ -78,7 +78,7 @@ public final class Static30 {
 		if (Static239.aBoolean269) {
 			Static67.aClass3_Sub2_Sub1Array4 = new Class3_Sub2_Sub1[Static173.aClass3_Sub2_Sub1_Sub1Array9.length];
 			for (local219 = 0; local219 < Static173.aClass3_Sub2_Sub1_Sub1Array9.length; local219++) {
-				Static67.aClass3_Sub2_Sub1Array4[local219] = new Class3_Sub2_Sub1_Sub2(Static173.aClass3_Sub2_Sub1_Sub1Array9[local219]);
+				Static67.aClass3_Sub2_Sub1Array4[local219] = new GlSprite(Static173.aClass3_Sub2_Sub1_Sub1Array9[local219]);
 			}
 		} else {
 			Static67.aClass3_Sub2_Sub1Array4 = Static173.aClass3_Sub2_Sub1_Sub1Array9;

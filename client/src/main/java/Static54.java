@@ -33,7 +33,7 @@ public final class Static54 {
 			@Pc(57) int local57 = Static173.aClass8_Sub4_Sub1_2.anInt3412 / 32 + 48;
 			@Pc(67) int local67 = 464 - Static173.aClass8_Sub4_Sub1_2.anInt3421 / 32;
 			if (Static239.aBoolean269) {
-				((Class3_Sub2_Sub1_Sub2) Static89.aClass3_Sub2_Sub1_5).method1427(arg2, arg1, arg3.anInt445, arg3.anInt459, local57, local67, local48, Static273.anInt4130 + 256, (Class3_Sub2_Sub1_Sub2) arg3.method489(false));
+				((GlSprite) Static89.aClass3_Sub2_Sub1_5).method1427(arg2, arg1, arg3.anInt445, arg3.anInt459, local57, local67, local48, Static273.anInt4130 + 256, (GlSprite) arg3.method489(false));
 			} else {
 				((Class3_Sub2_Sub1_Sub1) Static89.aClass3_Sub2_Sub1_5).method310(arg2, arg1, arg3.anInt445, arg3.anInt459, local57, local67, local48, Static273.anInt4130 + 256, arg3.anIntArray37, arg3.anIntArray45);
 			}
@@ -71,7 +71,7 @@ public final class Static54 {
 								local271 = Static235.aClass134_2.anIntArray444[local117];
 							}
 							if (Static239.aBoolean269) {
-								Static46.method1188((Class3_Sub2_Sub1_Sub2) arg3.method489(false));
+								Static46.method1188((GlSprite) arg3.method489(false));
 							} else {
 								Static129.method2486(arg3.anIntArray37, arg3.anIntArray45);
 							}
