@@ -112,7 +112,7 @@ public final class MidiPcmStream extends PcmStream {
 		@Pc(20) int[] local20 = new int[] { 22050 };
 		for (@Pc(34) Class3_Sub9 local34 = (Class3_Sub9) arg0.aClass133_22.method3859(); local34 != null; local34 = (Class3_Sub9) arg0.aClass133_22.method3861()) {
 			@Pc(40) int local40 = (int) local34.aLong192;
-			@Pc(48) Class3_Sub18 local48 = (Class3_Sub18) this.aClass133_23.method3863((long) local40);
+			@Pc(48) MidiInstrument local48 = (MidiInstrument) this.aClass133_23.method3863((long) local40);
 			if (local48 == null) {
 				local48 = Static116.method2320(arg1, local40);
 				if (local48 == null) {
@@ -133,7 +133,7 @@ public final class MidiPcmStream extends PcmStream {
 
 	@OriginalMember(owner = "client!va", name = "d", descriptor = "(B)V")
 	public final synchronized void method4412() {
-		for (@Pc(15) Class3_Sub18 local15 = (Class3_Sub18) this.aClass133_23.method3859(); local15 != null; local15 = (Class3_Sub18) this.aClass133_23.method3861()) {
+		for (@Pc(15) MidiInstrument local15 = (MidiInstrument) this.aClass133_23.method3859(); local15 != null; local15 = (MidiInstrument) this.aClass133_23.method3861()) {
 			local15.method2432();
 		}
 	}
@@ -254,7 +254,7 @@ public final class MidiPcmStream extends PcmStream {
 
 	@OriginalMember(owner = "client!va", name = "e", descriptor = "(I)V")
 	public final synchronized void method4426() {
-		for (@Pc(7) Class3_Sub18 local7 = (Class3_Sub18) this.aClass133_23.method3859(); local7 != null; local7 = (Class3_Sub18) this.aClass133_23.method3861()) {
+		for (@Pc(7) MidiInstrument local7 = (MidiInstrument) this.aClass133_23.method3859(); local7 != null; local7 = (MidiInstrument) this.aClass133_23.method3861()) {
 			local7.method4658();
 		}
 	}
@@ -276,7 +276,7 @@ public final class MidiPcmStream extends PcmStream {
 				}
 			}
 		}
-		@Pc(118) Class3_Sub18 local118 = (Class3_Sub18) this.aClass133_23.method3863((long) this.anIntArray506[arg1]);
+		@Pc(118) MidiInstrument local118 = (MidiInstrument) this.aClass133_23.method3863((long) this.anIntArray506[arg1]);
 		if (local118 == null) {
 			return;
 		}

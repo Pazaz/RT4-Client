@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!jk")
-public final class Class3_Sub18 extends Node {
+public final class MidiInstrument extends Node {
 
 	@OriginalMember(owner = "client!jk", name = "r", descriptor = "[B")
 	public final byte[] aByteArray43 = new byte[128];
@@ -31,7 +31,7 @@ public final class Class3_Sub18 extends Node {
 	public final Class162[] aClass162Array1 = new Class162[128];
 
 	@OriginalMember(owner = "client!jk", name = "<init>", descriptor = "([B)V")
-	public Class3_Sub18(@OriginalArg(0) byte[] arg0) {
+	public MidiInstrument(@OriginalArg(0) byte[] arg0) {
 		@Pc(29) int local29 = 0;
 		this.aByteArray44 = new byte[128];
 		@Pc(38) Buffer local38 = new Buffer(arg0);
