@@ -75,7 +75,7 @@ public final class Class8_Sub4_Sub2 extends Class8_Sub4 {
 		}
 		if (!Static239.aBoolean269) {
 			if (local140 != null) {
-				local74 = ((Class8_Sub1_Sub2) local74).method4588(local140);
+				local74 = ((SoftwareModel) local74).method4588(local140);
 			}
 			if (this.aClass96_1.anInt3713 == 1) {
 				local74.aBoolean303 = true;

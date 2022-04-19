@@ -196,7 +196,7 @@ public final class Static164 {
 				local5 = Static71.method1439(local15);
 			}
 		}
-		@Pc(60) Class8_Sub1_Sub2 local60 = local5.method1834();
+		@Pc(60) SoftwareModel local60 = local5.method1834();
 		if (local60 == null) {
 			return null;
 		}

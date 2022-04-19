@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!w")
-public final class Class8_Sub1_Sub2 extends Model {
+public final class SoftwareModel extends Model {
 
 	@OriginalMember(owner = "client!w", name = "t", descriptor = "[S")
 	private short[] aShortArray89;
@@ -124,11 +124,11 @@ public final class Class8_Sub1_Sub2 extends Model {
 	}
 
 	@OriginalMember(owner = "client!w", name = "<init>", descriptor = "()V")
-	public Class8_Sub1_Sub2() {
+	public SoftwareModel() {
 	}
 
 	@OriginalMember(owner = "client!w", name = "<init>", descriptor = "(Lclient!gb;IIIII)V")
-	public Class8_Sub1_Sub2(@OriginalArg(0) RawModel arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
+	public SoftwareModel(@OriginalArg(0) RawModel arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
 		arg0.method1668();
 		arg0.method1683();
 		this.anInt5788 = arg0.anInt2139;
@@ -304,7 +304,7 @@ public final class Class8_Sub1_Sub2 extends Model {
 	}
 
 	@OriginalMember(owner = "client!w", name = "<init>", descriptor = "([Lclient!w;I)V")
-	private Class8_Sub1_Sub2(@OriginalArg(0) Class8_Sub1_Sub2[] arg0, @OriginalArg(1) int arg1) {
+	private SoftwareModel(@OriginalArg(0) SoftwareModel[] arg0, @OriginalArg(1) int arg1) {
 		@Pc(21) boolean local21 = false;
 		@Pc(23) boolean local23 = false;
 		@Pc(25) boolean local25 = false;
@@ -314,7 +314,7 @@ public final class Class8_Sub1_Sub2 extends Model {
 		this.anInt5789 = 0;
 		this.aByte20 = -1;
 		@Pc(45) int local45;
-		@Pc(52) Class8_Sub1_Sub2 local52;
+		@Pc(52) SoftwareModel local52;
 		for (local45 = 0; local45 < arg1; local45++) {
 			local52 = arg0[local45];
 			if (local52 != null) {
@@ -512,7 +512,7 @@ public final class Class8_Sub1_Sub2 extends Model {
 	}
 
 	@OriginalMember(owner = "client!w", name = "a", descriptor = "(ZZLclient!w;[B[S[I[I[I)Lclient!ak;")
-	private Model method4584(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) Class8_Sub1_Sub2 arg2, @OriginalArg(3) byte[] arg3, @OriginalArg(4) short[] arg4, @OriginalArg(5) int[] arg5, @OriginalArg(6) int[] arg6, @OriginalArg(7) int[] arg7) {
+	private Model method4584(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) SoftwareModel arg2, @OriginalArg(3) byte[] arg3, @OriginalArg(4) short[] arg4, @OriginalArg(5) int[] arg5, @OriginalArg(6) int[] arg6, @OriginalArg(7) int[] arg7) {
 		arg2.anInt5788 = this.anInt5788;
 		arg2.anInt5787 = this.anInt5787;
 		arg2.anInt5789 = this.anInt5789;
@@ -769,7 +769,7 @@ public final class Class8_Sub1_Sub2 extends Model {
 	}
 
 	@OriginalMember(owner = "client!w", name = "a", descriptor = "(II[[I[[IIIIZ)Lclient!w;")
-	public final Class8_Sub1_Sub2 method4586(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int[][] arg2, @OriginalArg(3) int[][] arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) boolean arg7) {
+	public final SoftwareModel method4586(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int[][] arg2, @OriginalArg(3) int[][] arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) boolean arg7) {
 		if (!this.aBoolean305) {
 			this.method4592();
 		}
@@ -796,9 +796,9 @@ public final class Class8_Sub1_Sub2 extends Model {
 				return this;
 			}
 		}
-		@Pc(150) Class8_Sub1_Sub2 local150;
+		@Pc(150) SoftwareModel local150;
 		if (arg7) {
-			local150 = new Class8_Sub1_Sub2();
+			local150 = new SoftwareModel();
 			local150.anInt5788 = this.anInt5788;
 			local150.anInt5787 = this.anInt5787;
 			local150.anInt5789 = this.anInt5789;
@@ -1185,7 +1185,7 @@ public final class Class8_Sub1_Sub2 extends Model {
 
 	@OriginalMember(owner = "client!w", name = "a", descriptor = "(Lclient!ak;)Lclient!ak;")
 	public final Model method4588(@OriginalArg(0) Model arg0) {
-		return new Class8_Sub1_Sub2(new Class8_Sub1_Sub2[] { this, (Class8_Sub1_Sub2) arg0 }, 2);
+		return new SoftwareModel(new SoftwareModel[] { this, (SoftwareModel) arg0 }, 2);
 	}
 
 	@OriginalMember(owner = "client!w", name = "g", descriptor = "()I")

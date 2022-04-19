@@ -31,7 +31,7 @@ public final class Static268 {
 	public static int[] anIntArray558;
 
 	@OriginalMember(owner = "client!w", name = "ab", descriptor = "Lclient!w;")
-	public static final Class8_Sub1_Sub2 aClass8_Sub1_Sub2_1 = new Class8_Sub1_Sub2();
+	public static final SoftwareModel aClass8_Sub1_Sub2_1 = new SoftwareModel();
 
 	@OriginalMember(owner = "client!w", name = "cb", descriptor = "[I")
 	public static int[] anIntArray535 = new int[1];
@@ -40,7 +40,7 @@ public final class Static268 {
 	public static int[] anIntArray536 = new int[1];
 
 	@OriginalMember(owner = "client!w", name = "eb", descriptor = "Lclient!w;")
-	public static final Class8_Sub1_Sub2 aClass8_Sub1_Sub2_2 = new Class8_Sub1_Sub2();
+	public static final SoftwareModel aClass8_Sub1_Sub2_2 = new SoftwareModel();
 
 	@OriginalMember(owner = "client!w", name = "fb", descriptor = "[B")
 	public static byte[] aByteArray76 = new byte[1];
@@ -64,7 +64,7 @@ public final class Static268 {
 	public static byte[] aByteArray77 = new byte[1];
 
 	@OriginalMember(owner = "client!w", name = "nb", descriptor = "Lclient!w;")
-	public static final Class8_Sub1_Sub2 aClass8_Sub1_Sub2_3 = new Class8_Sub1_Sub2();
+	public static final SoftwareModel aClass8_Sub1_Sub2_3 = new SoftwareModel();
 
 	@OriginalMember(owner = "client!w", name = "ob", descriptor = "[I")
 	public static int[] anIntArray540 = new int[1];
