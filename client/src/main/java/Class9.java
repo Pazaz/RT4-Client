@@ -19,7 +19,7 @@ public final class Class9 {
 	private final Js5NetQueue aClass73_1;
 
 	@OriginalMember(owner = "client!al", name = "c", descriptor = "Lclient!pm;")
-	private Class3_Sub2_Sub5_Sub2 aClass3_Sub2_Sub5_Sub2_1;
+	private Js5NetRequest aClass3_Sub2_Sub5_Sub2_1;
 
 	@OriginalMember(owner = "client!al", name = "<init>", descriptor = "(Lclient!jb;Lclient!k;)V")
 	public Class9(@OriginalArg(0) Js5NetQueue arg0, @OriginalArg(1) Js5CacheQueue arg1) {
