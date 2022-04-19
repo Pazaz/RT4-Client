@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static192 {
 
 	@OriginalMember(owner = "client!ph", name = "b", descriptor = "[[Lclient!li;")
-	public static final Class92[][] aClass92ArrayArray1 = new Class92[13][13];
+	public static final Environment[][] aClass92ArrayArray1 = new Environment[13][13];
 
 	@OriginalMember(owner = "client!ph", name = "c", descriptor = "Lclient!na;")
 	private static final Class100 aClass100_848 = Static28.method790("Ok");
