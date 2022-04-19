@@ -56,7 +56,7 @@ public final class Static80 {
 		Static12.anInt391 = 255;
 		Static53.aBoolean99 = true;
 		Static186.anInt4392 = 0;
-		@Pc(48) Class214 local48 = null;
+		@Pc(48) FileOnDisk local48 = null;
 		Static125.anInt3104 = 127;
 		if (Static238.anInt5316 >= 96) {
 			Static76.method1645(2);
@@ -76,7 +76,7 @@ public final class Static80 {
 				Static231.method3983(1L);
 			}
 			if (local78.anInt5925 == 1) {
-				local48 = (Class214) local78.anObject6;
+				local48 = (FileOnDisk) local78.anObject6;
 				@Pc(106) byte[] local106 = new byte[(int) local48.method5137()];
 				@Pc(128) int local128;
 				for (@Pc(108) int local108 = 0; local108 < local106.length; local108 += local128) {

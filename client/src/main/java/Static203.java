@@ -71,14 +71,14 @@ public final class Static203 {
 
 	@OriginalMember(owner = "client!qh", name = "a", descriptor = "(Lsignlink!ll;B)V")
 	public static void method3663(@OriginalArg(0) SignLink arg0) {
-		@Pc(11) Class214 local11 = null;
+		@Pc(11) FileOnDisk local11 = null;
 		try {
 			@Pc(16) Class212 local16 = arg0.method5112("runescape");
 			while (local16.anInt5925 == 0) {
 				Static231.method3983(1L);
 			}
 			if (local16.anInt5925 == 1) {
-				local11 = (Class214) local16.anObject6;
+				local11 = (FileOnDisk) local16.anObject6;
 				@Pc(39) Buffer local39 = Static48.method1196();
 				local11.method5134(local39.aByteArray40, local39.anInt2792, 0);
 			}

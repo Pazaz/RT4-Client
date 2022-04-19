@@ -25,7 +25,7 @@ public final class Class38 {
 	private long aLong69 = -1L;
 
 	@OriginalMember(owner = "client!en", name = "s", descriptor = "Lsignlink!qm;")
-	private final Class214 aClass214_1;
+	private final FileOnDisk aClass214_1;
 
 	@OriginalMember(owner = "client!en", name = "a", descriptor = "J")
 	private long aLong64;
@@ -43,7 +43,7 @@ public final class Class38 {
 	private long aLong66;
 
 	@OriginalMember(owner = "client!en", name = "<init>", descriptor = "(Lsignlink!qm;II)V")
-	public Class38(@OriginalArg(0) Class214 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) throws IOException {
+	public Class38(@OriginalArg(0) FileOnDisk arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) throws IOException {
 		this.aClass214_1 = arg0;
 		this.aLong65 = this.aLong64 = arg0.method5137();
 		this.aByteArray20 = new byte[arg2];
