@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!dd")
-public final class SoftwareFont extends Class3_Sub2_Sub9 {
+public final class SoftwareFont extends Font {
 
 	@OriginalMember(owner = "client!dd", name = "Eb", descriptor = "[[B")
 	private byte[][] aByteArrayArray7 = new byte[256][];

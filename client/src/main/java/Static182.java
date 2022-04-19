@@ -26,7 +26,7 @@ public final class Static182 {
 	public static final boolean[] aBooleanArray97 = new boolean[] { true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false };
 
 	@OriginalMember(owner = "client!oj", name = "a", descriptor = "(BZLclient!rk;)V")
-	public static void method3359(@OriginalArg(1) boolean arg0, @OriginalArg(2) Class3_Sub2_Sub9 arg1) {
+	public static void method3359(@OriginalArg(1) boolean arg0, @OriginalArg(2) Font arg1) {
 		@Pc(9) int local9;
 		if (Static239.aBoolean269 || arg0) {
 			local9 = Static254.anInt5554;

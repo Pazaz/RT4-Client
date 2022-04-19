@@ -30,7 +30,7 @@ public final class Static127 {
 	public static final Class100 aClass100_605 = Static28.method790("Chargement des sprites )2 ");
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(IIBLclient!ve;Lclient!ve;)Lclient!rk;")
-	public static Class3_Sub2_Sub9 method2462(@OriginalArg(1) int arg0, @OriginalArg(3) Class153 arg1, @OriginalArg(4) Class153 arg2) {
+	public static Font method2462(@OriginalArg(1) int arg0, @OriginalArg(3) Class153 arg1, @OriginalArg(4) Class153 arg2) {
 		return Static234.method4016(arg1, 0, arg0) ? Static29.method799(arg2.method4495(arg0, 0)) : null;
 	}
 

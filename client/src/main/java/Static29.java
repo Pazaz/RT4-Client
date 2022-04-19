@@ -11,11 +11,11 @@ public final class Static29 {
 	public static final Class100 aClass100_175 = Static28.method790("Lade Texturen )2 ");
 
 	@OriginalMember(owner = "client!ce", name = "a", descriptor = "(I[B)Lclient!rk;")
-	public static Class3_Sub2_Sub9 method799(@OriginalArg(1) byte[] arg0) {
+	public static Font method799(@OriginalArg(1) byte[] arg0) {
 		if (arg0 == null) {
 			return null;
 		}
-		@Pc(27) Class3_Sub2_Sub9 local27;
+		@Pc(27) Font local27;
 		if (Static239.aBoolean269) {
 			local27 = new Class3_Sub2_Sub9_Sub2(arg0, Static274.anIntArray440, Static269.anIntArray252, Static254.anIntArray488, Static26.anIntArray66, Static7.aByteArrayArray5);
 		} else {

@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!rk")
-public abstract class Class3_Sub2_Sub9 extends SecondaryNode {
+public abstract class Font extends SecondaryNode {
 
 	@OriginalMember(owner = "client!rk", name = "W", descriptor = "[I")
 	private int[] anIntArray346;
@@ -41,7 +41,7 @@ public abstract class Class3_Sub2_Sub9 extends SecondaryNode {
 	private int anInt3624;
 
 	@OriginalMember(owner = "client!rk", name = "<init>", descriptor = "([B[I[I[I[I)V")
-	protected Class3_Sub2_Sub9(@OriginalArg(0) byte[] arg0, @OriginalArg(1) int[] arg1, @OriginalArg(2) int[] arg2, @OriginalArg(3) int[] arg3, @OriginalArg(4) int[] arg4) {
+	protected Font(@OriginalArg(0) byte[] arg0, @OriginalArg(1) int[] arg1, @OriginalArg(2) int[] arg2, @OriginalArg(3) int[] arg3, @OriginalArg(4) int[] arg4) {
 		this.anIntArray344 = arg1;
 		this.anIntArray347 = arg2;
 		this.anIntArray343 = arg3;
@@ -62,7 +62,7 @@ public abstract class Class3_Sub2_Sub9 extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "<init>", descriptor = "([B)V")
-	public Class3_Sub2_Sub9(@OriginalArg(0) byte[] arg0) {
+	public Font(@OriginalArg(0) byte[] arg0) {
 		this.method2876(arg0);
 	}
 

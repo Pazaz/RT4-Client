@@ -194,7 +194,7 @@ public final class Static49 {
 			Static133.method4012(arg2 + 4, Static280.aClass3_Sub2_Sub9_43.method2858(local24) + local40, arg1, 15);
 			return;
 		}
-		@Pc(59) Class3_Sub2_Sub9 local59 = arg0.method491(Static159.aClass36Array12);
+		@Pc(59) Font local59 = arg0.method491(Static159.aClass36Array12);
 		if (local59 == null) {
 			local59 = Static280.aClass3_Sub2_Sub9_43;
 		}

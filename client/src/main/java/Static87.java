@@ -530,7 +530,7 @@ public final class Static87 {
 										Static129.method2487(local123, local114, local30.anInt445, local30.anInt459, local270, 256 - (local117 & 0xFF));
 									}
 								} else {
-									@Pc(1921) Class3_Sub2_Sub9 local1921;
+									@Pc(1921) Font local1921;
 									if (local30.anInt452 == 4) {
 										local1921 = local30.method491(Static159.aClass36Array12);
 										if (local1921 != null) {
@@ -805,7 +805,7 @@ public final class Static87 {
 												local276 = 0;
 												local270 = 0;
 												@Pc(3297) Class100 local3297 = local30.aClass100_84;
-												@Pc(3299) Class3_Sub2_Sub9 local3299 = Static215.aClass3_Sub2_Sub9_32;
+												@Pc(3299) Font local3299 = Static215.aClass3_Sub2_Sub9_32;
 												local3297 = Static127.method2465(local30, local3297);
 												@Pc(3325) Class100 local3325;
 												while (local3297.method3120() > 0) {
