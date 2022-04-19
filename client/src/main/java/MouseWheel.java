@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!uc")
-public abstract class Class111 {
+public abstract class MouseWheel {
 
 	@OriginalMember(owner = "client!uc", name = "a", descriptor = "(I)I")
 	public abstract int method3287();

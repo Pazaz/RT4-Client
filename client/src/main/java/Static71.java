@@ -14,7 +14,7 @@ public final class Static71 {
 	public static SignLink aClass213_3;
 
 	@OriginalMember(owner = "client!fk", name = "q", descriptor = "Lclient!uc;")
-	public static Class111 aClass111_2;
+	public static MouseWheel aClass111_2;
 
 	@OriginalMember(owner = "client!fk", name = "b", descriptor = "Lclient!na;")
 	private static final Class100 aClass100_415 = Static28.method790("Please remove ");
