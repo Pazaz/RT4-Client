@@ -32,7 +32,7 @@ public final class Static195 {
 	@OriginalMember(owner = "client!pk", name = "i", descriptor = "(I)V")
 	public static void method3532() {
 		for (@Pc(16) Class3_Sub2_Sub19 local16 = (Class3_Sub2_Sub19) Static217.aClass69_116.method2289(); local16 != null; local16 = (Class3_Sub2_Sub19) Static217.aClass69_116.method2288()) {
-			@Pc(21) Class8_Sub6 local21 = local16.aClass8_Sub6_1;
+			@Pc(21) ProjAnim local21 = local16.aClass8_Sub6_1;
 			if (Static55.anInt1735 != local21.anInt4810 || local21.anInt4800 < Static83.anInt372) {
 				local16.method4658();
 			} else if (Static83.anInt372 >= local21.anInt4822) {
