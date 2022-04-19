@@ -60,7 +60,7 @@ public final class SignLink implements Runnable {
 	private static volatile long aLong1314 = 0L;
 
 	@OriginalMember(owner = "signlink!ll", name = "A", descriptor = "Lsignlink!ai;")
-	private Interface10 anInterface10_2;
+	private AudioSource anInterface10_2;
 
 	@OriginalMember(owner = "signlink!ll", name = "g", descriptor = "Lsignlink!qm;")
 	public Class214 aClass214_2 = null;
@@ -536,7 +536,7 @@ public final class SignLink implements Runnable {
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "b", descriptor = "(B)Lsignlink!ai;")
-	public final Interface10 method5125() {
+	public final AudioSource method5125() {
 		return this.anInterface10_2;
 	}
 

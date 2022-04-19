@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("signlink!ai")
-public interface Interface10 {
+public interface AudioSource {
 
 	@OriginalMember(owner = "signlink!ai", name = "a", descriptor = "(II)V")
 	void method5097(@OriginalArg(0) int arg0);
