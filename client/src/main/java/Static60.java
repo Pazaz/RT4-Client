@@ -45,9 +45,9 @@ public final class Static60 {
 		if (local39 * local39 < local21) {
 			return;
 		}
-		@Pc(50) int local50 = Class58.anIntArray223[local27];
+		@Pc(50) int local50 = MathUtils.anIntArray223[local27];
 		@Pc(58) int local58 = local50 * 256 / (Static273.anInt4130 + 256);
-		@Pc(62) int local62 = Class58.anIntArray225[local27];
+		@Pc(62) int local62 = MathUtils.anIntArray225[local27];
 		@Pc(70) int local70 = local62 * 256 / (Static273.anInt4130 + 256);
 		@Pc(81) int local81 = local58 * arg2 + arg3 * local70 >> 16;
 		@Pc(92) int local92 = local70 * arg2 - arg3 * local58 >> 16;

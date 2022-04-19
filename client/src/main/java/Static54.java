@@ -49,8 +49,8 @@ public final class Static54 {
 				for (@Pc(117) int local117 = 0; local117 < Static235.aClass134_2.anInt5074; local117++) {
 					if (Static235.aClass134_2.method3892(local117)) {
 						local146 = (Static235.aClass134_2.aShortArray73[local117] - Static225.anInt5068) * 4 + 2 - Static173.aClass8_Sub4_Sub1_2.anInt3412 / 32;
-						local150 = Class58.anIntArray223[local48];
-						local154 = Class58.anIntArray225[local48];
+						local150 = MathUtils.anIntArray223[local48];
+						local154 = MathUtils.anIntArray225[local48];
 						@Pc(156) Font local156 = Static114.aClass3_Sub2_Sub9_42;
 						@Pc(164) int local164 = local150 * 256 / (Static273.anInt4130 + 256);
 						local181 = (Static235.aClass134_2.aShortArray72[local117] - Static142.anInt3483) * 4 + 2 - Static173.aClass8_Sub4_Sub1_2.anInt3421 / 32;

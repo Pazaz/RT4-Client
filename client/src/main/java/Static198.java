@@ -68,10 +68,10 @@ public final class Static198 {
 		@Pc(42) int local42 = arg2 - Static134.anInt3302;
 		@Pc(46) int local46 = local38 - Static5.anInt40;
 		@Pc(50) int local50 = arg5 - Static138.anInt3439;
-		@Pc(54) int local54 = Class58.anIntArray223[Static240.anInt5333];
-		@Pc(58) int local58 = Class58.anIntArray225[Static240.anInt5333];
-		@Pc(62) int local62 = Class58.anIntArray223[Static184.anInt4358];
-		@Pc(66) int local66 = Class58.anIntArray225[Static184.anInt4358];
+		@Pc(54) int local54 = MathUtils.anIntArray223[Static240.anInt5333];
+		@Pc(58) int local58 = MathUtils.anIntArray225[Static240.anInt5333];
+		@Pc(62) int local62 = MathUtils.anIntArray223[Static184.anInt4358];
+		@Pc(66) int local66 = MathUtils.anIntArray225[Static184.anInt4358];
 		@Pc(76) int local76 = local50 * local66 + local62 * local42 >> 16;
 		@Pc(87) int local87 = local42 * local66 - local62 * local50 >> 16;
 		@Pc(89) int local89 = local76;

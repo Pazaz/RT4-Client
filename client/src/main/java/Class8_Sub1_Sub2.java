@@ -580,8 +580,8 @@ public final class Class8_Sub1_Sub2 extends Class8_Sub1 {
 	@OriginalMember(owner = "client!w", name = "d", descriptor = "(I)V")
 	@Override
 	public final void method4574(@OriginalArg(0) int arg0) {
-		@Pc(3) int local3 = Class58.anIntArray223[arg0];
-		@Pc(7) int local7 = Class58.anIntArray225[arg0];
+		@Pc(3) int local3 = MathUtils.anIntArray223[arg0];
+		@Pc(7) int local7 = MathUtils.anIntArray225[arg0];
 		for (@Pc(9) int local9 = 0; local9 < this.anInt5788; local9++) {
 			@Pc(29) int local29 = this.anIntArray527[local9] * local7 - this.anIntArray531[local9] * local3 >> 16;
 			this.anIntArray531[local9] = this.anIntArray527[local9] * local3 + this.anIntArray531[local9] * local7 >> 16;
@@ -606,8 +606,8 @@ public final class Class8_Sub1_Sub2 extends Class8_Sub1 {
 	@OriginalMember(owner = "client!w", name = "c", descriptor = "(I)V")
 	@Override
 	public final void method4564(@OriginalArg(0) int arg0) {
-		@Pc(3) int local3 = Class58.anIntArray223[arg0];
-		@Pc(7) int local7 = Class58.anIntArray225[arg0];
+		@Pc(3) int local3 = MathUtils.anIntArray223[arg0];
+		@Pc(7) int local7 = MathUtils.anIntArray225[arg0];
 		for (@Pc(9) int local9 = 0; local9 < this.anInt5788; local9++) {
 			@Pc(29) int local29 = this.anIntArray527[local9] * local3 + this.anIntArray528[local9] * local7 >> 16;
 			this.anIntArray527[local9] = this.anIntArray527[local9] * local7 - this.anIntArray528[local9] * local3 >> 16;
@@ -655,8 +655,8 @@ public final class Class8_Sub1_Sub2 extends Class8_Sub1 {
 		@Pc(176) int local176 = 0;
 		@Pc(178) int local178 = 0;
 		if (arg0 != 0) {
-			local176 = Class58.anIntArray223[arg0];
-			local178 = Class58.anIntArray225[arg0];
+			local176 = MathUtils.anIntArray223[arg0];
+			local178 = MathUtils.anIntArray225[arg0];
 		}
 		@Pc(190) boolean local190 = false;
 		@Pc(204) int local204;
@@ -939,14 +939,14 @@ public final class Class8_Sub1_Sub2 extends Class8_Sub1 {
 			}
 			@Pc(6) int local6 = Static94.anInt2471;
 			@Pc(8) int local8 = Static94.anInt2469;
-			@Pc(12) int local12 = Class58.anIntArray223[0];
-			@Pc(16) int local16 = Class58.anIntArray225[0];
-			@Pc(20) int local20 = Class58.anIntArray223[arg0];
-			@Pc(24) int local24 = Class58.anIntArray225[arg0];
-			@Pc(28) int local28 = Class58.anIntArray223[arg1];
-			@Pc(32) int local32 = Class58.anIntArray225[arg1];
-			@Pc(36) int local36 = Class58.anIntArray223[arg2];
-			@Pc(40) int local40 = Class58.anIntArray225[arg2];
+			@Pc(12) int local12 = MathUtils.anIntArray223[0];
+			@Pc(16) int local16 = MathUtils.anIntArray225[0];
+			@Pc(20) int local20 = MathUtils.anIntArray223[arg0];
+			@Pc(24) int local24 = MathUtils.anIntArray225[arg0];
+			@Pc(28) int local28 = MathUtils.anIntArray223[arg1];
+			@Pc(32) int local32 = MathUtils.anIntArray225[arg1];
+			@Pc(36) int local36 = MathUtils.anIntArray223[arg2];
+			@Pc(40) int local40 = MathUtils.anIntArray225[arg2];
 			@Pc(50) int local50 = arg4 * local36 + arg5 * local40 >> 16;
 			for (@Pc(52) int local52 = 0; local52 < this.anInt5788; local52++) {
 				@Pc(61) int local61 = this.anIntArray528[local52];
@@ -1012,14 +1012,14 @@ public final class Class8_Sub1_Sub2 extends Class8_Sub1 {
 			local79 = Static268.anIntArray548[local10];
 			local86 = this.anIntArray533[arg0] & 0xFFFF;
 			if (local32 >= 50) {
-				local99 = (50 - local24) * Class58.anIntArray224[local32 - local24];
+				local99 = (50 - local24) * MathUtils.anIntArray224[local32 - local24];
 				Static268.anIntArray542[0] = local1 + (local75 + ((Static268.anIntArray560[local20] - local75) * local99 >> 16) << 9) / 50;
 				Static268.anIntArray547[0] = local3 + (local79 + ((Static268.anIntArray548[local20] - local79) * local99 >> 16) << 9) / 50;
 				local5++;
 				Static268.anIntArray553[0] = local86 + (((this.anIntArray532[arg0] & 0xFFFF) - local86) * local99 >> 16);
 			}
 			if (local28 >= 50) {
-				local99 = (50 - local24) * Class58.anIntArray224[local28 - local24];
+				local99 = (50 - local24) * MathUtils.anIntArray224[local28 - local24];
 				Static268.anIntArray542[local5] = local1 + (local75 + ((Static268.anIntArray560[local15] - local75) * local99 >> 16) << 9) / 50;
 				Static268.anIntArray547[local5] = local3 + (local79 + ((Static268.anIntArray548[local15] - local79) * local99 >> 16) << 9) / 50;
 				Static268.anIntArray553[local5++] = local86 + (((this.anIntArray523[arg0] & 0xFFFF) - local86) * local99 >> 16);
@@ -1034,13 +1034,13 @@ public final class Class8_Sub1_Sub2 extends Class8_Sub1 {
 			local79 = Static268.anIntArray548[local15];
 			local86 = this.anIntArray523[arg0] & 0xFFFF;
 			if (local24 >= 50) {
-				local99 = (50 - local28) * Class58.anIntArray224[local24 - local28];
+				local99 = (50 - local28) * MathUtils.anIntArray224[local24 - local28];
 				Static268.anIntArray542[local5] = local1 + (local75 + ((Static268.anIntArray560[local10] - local75) * local99 >> 16) << 9) / 50;
 				Static268.anIntArray547[local5] = local3 + (local79 + ((Static268.anIntArray548[local10] - local79) * local99 >> 16) << 9) / 50;
 				Static268.anIntArray553[local5++] = local86 + (((this.anIntArray533[arg0] & 0xFFFF) - local86) * local99 >> 16);
 			}
 			if (local32 >= 50) {
-				local99 = (50 - local28) * Class58.anIntArray224[local32 - local28];
+				local99 = (50 - local28) * MathUtils.anIntArray224[local32 - local28];
 				Static268.anIntArray542[local5] = local1 + (local75 + ((Static268.anIntArray560[local20] - local75) * local99 >> 16) << 9) / 50;
 				Static268.anIntArray547[local5] = local3 + (local79 + ((Static268.anIntArray548[local20] - local79) * local99 >> 16) << 9) / 50;
 				Static268.anIntArray553[local5++] = local86 + (((this.anIntArray532[arg0] & 0xFFFF) - local86) * local99 >> 16);
@@ -1055,13 +1055,13 @@ public final class Class8_Sub1_Sub2 extends Class8_Sub1 {
 			local79 = Static268.anIntArray548[local20];
 			local86 = this.anIntArray532[arg0] & 0xFFFF;
 			if (local28 >= 50) {
-				local99 = (50 - local32) * Class58.anIntArray224[local28 - local32];
+				local99 = (50 - local32) * MathUtils.anIntArray224[local28 - local32];
 				Static268.anIntArray542[local5] = local1 + (local75 + ((Static268.anIntArray560[local15] - local75) * local99 >> 16) << 9) / 50;
 				Static268.anIntArray547[local5] = local3 + (local79 + ((Static268.anIntArray548[local15] - local79) * local99 >> 16) << 9) / 50;
 				Static268.anIntArray553[local5++] = local86 + (((this.anIntArray523[arg0] & 0xFFFF) - local86) * local99 >> 16);
 			}
 			if (local24 >= 50) {
-				local99 = (50 - local32) * Class58.anIntArray224[local24 - local32];
+				local99 = (50 - local32) * MathUtils.anIntArray224[local24 - local32];
 				Static268.anIntArray542[local5] = local1 + (local75 + ((Static268.anIntArray560[local10] - local75) * local99 >> 16) << 9) / 50;
 				Static268.anIntArray547[local5] = local3 + (local79 + ((Static268.anIntArray548[local10] - local79) * local99 >> 16) << 9) / 50;
 				Static268.anIntArray553[local5++] = local86 + (((this.anIntArray533[arg0] & 0xFFFF) - local86) * local99 >> 16);
@@ -1210,8 +1210,8 @@ public final class Class8_Sub1_Sub2 extends Class8_Sub1 {
 	@OriginalMember(owner = "client!w", name = "b", descriptor = "(I)V")
 	@Override
 	public final void method4554(@OriginalArg(0) int arg0) {
-		@Pc(3) int local3 = Class58.anIntArray223[arg0];
-		@Pc(7) int local7 = Class58.anIntArray225[arg0];
+		@Pc(3) int local3 = MathUtils.anIntArray223[arg0];
+		@Pc(7) int local7 = MathUtils.anIntArray225[arg0];
 		for (@Pc(9) int local9 = 0; local9 < this.anInt5788; local9++) {
 			@Pc(29) int local29 = this.anIntArray531[local9] * local3 + this.anIntArray528[local9] * local7 >> 16;
 			this.anIntArray531[local9] = this.anIntArray531[local9] * local7 - this.anIntArray528[local9] * local3 >> 16;
@@ -1287,22 +1287,22 @@ public final class Class8_Sub1_Sub2 extends Class8_Sub1 {
 						this.anIntArray527[local33] -= Static268.anInt5791;
 						this.anIntArray531[local33] -= Static268.anInt5792;
 						if (arg4 != 0) {
-							local41 = Class58.anIntArray223[arg4];
-							local222 = Class58.anIntArray225[arg4];
+							local41 = MathUtils.anIntArray223[arg4];
+							local222 = MathUtils.anIntArray225[arg4];
 							local240 = this.anIntArray527[local33] * local41 + this.anIntArray528[local33] * local222 + 32767 >> 16;
 							this.anIntArray527[local33] = this.anIntArray527[local33] * local222 + 32767 - this.anIntArray528[local33] * local41 >> 16;
 							this.anIntArray528[local33] = local240;
 						}
 						if (arg2 != 0) {
-							local41 = Class58.anIntArray223[arg2];
-							local222 = Class58.anIntArray225[arg2];
+							local41 = MathUtils.anIntArray223[arg2];
+							local222 = MathUtils.anIntArray225[arg2];
 							local240 = this.anIntArray527[local33] * local222 + 32767 - this.anIntArray531[local33] * local41 >> 16;
 							this.anIntArray531[local33] = this.anIntArray527[local33] * local41 + this.anIntArray531[local33] * local222 + 32767 >> 16;
 							this.anIntArray527[local33] = local240;
 						}
 						if (arg3 != 0) {
-							local41 = Class58.anIntArray223[arg3];
-							local222 = Class58.anIntArray225[arg3];
+							local41 = MathUtils.anIntArray223[arg3];
+							local222 = MathUtils.anIntArray225[arg3];
 							local240 = this.anIntArray531[local33] * local41 + this.anIntArray528[local33] * local222 + 32767 >> 16;
 							this.anIntArray531[local33] = this.anIntArray531[local33] * local222 + 32767 - this.anIntArray528[local33] * local41 >> 16;
 							this.anIntArray528[local33] = local240;
@@ -1741,14 +1741,14 @@ public final class Class8_Sub1_Sub2 extends Class8_Sub1 {
 			}
 			@Pc(6) int local6 = Static94.anInt2471;
 			@Pc(8) int local8 = Static94.anInt2469;
-			@Pc(12) int local12 = Class58.anIntArray223[0];
-			@Pc(16) int local16 = Class58.anIntArray225[0];
-			@Pc(20) int local20 = Class58.anIntArray223[arg0];
-			@Pc(24) int local24 = Class58.anIntArray225[arg0];
-			@Pc(28) int local28 = Class58.anIntArray223[arg1];
-			@Pc(32) int local32 = Class58.anIntArray225[arg1];
-			@Pc(36) int local36 = Class58.anIntArray223[arg2];
-			@Pc(40) int local40 = Class58.anIntArray225[arg2];
+			@Pc(12) int local12 = MathUtils.anIntArray223[0];
+			@Pc(16) int local16 = MathUtils.anIntArray225[0];
+			@Pc(20) int local20 = MathUtils.anIntArray223[arg0];
+			@Pc(24) int local24 = MathUtils.anIntArray225[arg0];
+			@Pc(28) int local28 = MathUtils.anIntArray223[arg1];
+			@Pc(32) int local32 = MathUtils.anIntArray225[arg1];
+			@Pc(36) int local36 = MathUtils.anIntArray223[arg2];
+			@Pc(40) int local40 = MathUtils.anIntArray225[arg2];
 			@Pc(50) int local50 = arg4 * local36 + arg5 * local40 >> 16;
 			for (@Pc(52) int local52 = 0; local52 < this.anInt5788; local52++) {
 				@Pc(61) int local61 = this.anIntArray528[local52];
@@ -1948,22 +1948,22 @@ public final class Class8_Sub1_Sub2 extends Class8_Sub1 {
 								this.anIntArray527[local33] -= Static268.anInt5791;
 								this.anIntArray531[local33] -= Static268.anInt5792;
 								if (arg4 != 0) {
-									local41 = Class58.anIntArray223[arg4];
-									local307 = Class58.anIntArray225[arg4];
+									local41 = MathUtils.anIntArray223[arg4];
+									local307 = MathUtils.anIntArray225[arg4];
 									local329 = this.anIntArray527[local33] * local41 + this.anIntArray528[local33] * local307 + 32767 >> 16;
 									this.anIntArray527[local33] = this.anIntArray527[local33] * local307 + 32767 - this.anIntArray528[local33] * local41 >> 16;
 									this.anIntArray528[local33] = local329;
 								}
 								if (arg2 != 0) {
-									local41 = Class58.anIntArray223[arg2];
-									local307 = Class58.anIntArray225[arg2];
+									local41 = MathUtils.anIntArray223[arg2];
+									local307 = MathUtils.anIntArray225[arg2];
 									local329 = this.anIntArray527[local33] * local307 + 32767 - this.anIntArray531[local33] * local41 >> 16;
 									this.anIntArray531[local33] = this.anIntArray527[local33] * local41 + this.anIntArray531[local33] * local307 + 32767 >> 16;
 									this.anIntArray527[local33] = local329;
 								}
 								if (arg3 != 0) {
-									local41 = Class58.anIntArray223[arg3];
-									local307 = Class58.anIntArray225[arg3];
+									local41 = MathUtils.anIntArray223[arg3];
+									local307 = MathUtils.anIntArray225[arg3];
 									local329 = this.anIntArray531[local33] * local41 + this.anIntArray528[local33] * local307 + 32767 >> 16;
 									this.anIntArray531[local33] = this.anIntArray531[local33] * local307 + 32767 - this.anIntArray528[local33] * local41 >> 16;
 									this.anIntArray528[local33] = local329;
@@ -1995,12 +1995,12 @@ public final class Class8_Sub1_Sub2 extends Class8_Sub1 {
 					Static268.aBoolean306 = false;
 				}
 				@Pc(374) int[] local374 = new int[9];
-				local329 = Class58.anIntArray225[arg2] >> 1;
-				local351 = Class58.anIntArray223[arg2] >> 1;
-				local392 = Class58.anIntArray225[arg3] >> 1;
-				local398 = Class58.anIntArray223[arg3] >> 1;
-				local404 = Class58.anIntArray225[arg4] >> 1;
-				local410 = Class58.anIntArray223[arg4] >> 1;
+				local329 = MathUtils.anIntArray225[arg2] >> 1;
+				local351 = MathUtils.anIntArray223[arg2] >> 1;
+				local392 = MathUtils.anIntArray225[arg3] >> 1;
+				local398 = MathUtils.anIntArray223[arg3] >> 1;
+				local404 = MathUtils.anIntArray225[arg4] >> 1;
+				local410 = MathUtils.anIntArray223[arg4] >> 1;
 				local418 = local351 * local404 + 16384 >> 15;
 				local426 = local351 * local410 + 16384 >> 15;
 				local374[0] = local392 * local404 + local398 * local426 + 16384 >> 15;
@@ -2261,22 +2261,22 @@ public final class Class8_Sub1_Sub2 extends Class8_Sub1 {
 					this.anIntArray527[local3] -= Static268.anInt5791;
 					this.anIntArray531[local3] -= Static268.anInt5792;
 					if (arg3 != 0) {
-						local11 = Class58.anIntArray223[arg3];
-						local146 = Class58.anIntArray225[arg3];
+						local11 = MathUtils.anIntArray223[arg3];
+						local146 = MathUtils.anIntArray225[arg3];
 						local164 = this.anIntArray527[local3] * local11 + this.anIntArray528[local3] * local146 + 32767 >> 16;
 						this.anIntArray527[local3] = this.anIntArray527[local3] * local146 + 32767 - this.anIntArray528[local3] * local11 >> 16;
 						this.anIntArray528[local3] = local164;
 					}
 					if (arg1 != 0) {
-						local11 = Class58.anIntArray223[arg1];
-						local146 = Class58.anIntArray225[arg1];
+						local11 = MathUtils.anIntArray223[arg1];
+						local146 = MathUtils.anIntArray225[arg1];
 						local164 = this.anIntArray527[local3] * local146 + 32767 - this.anIntArray531[local3] * local11 >> 16;
 						this.anIntArray531[local3] = this.anIntArray527[local3] * local11 + this.anIntArray531[local3] * local146 + 32767 >> 16;
 						this.anIntArray527[local3] = local164;
 					}
 					if (arg2 != 0) {
-						local11 = Class58.anIntArray223[arg2];
-						local146 = Class58.anIntArray225[arg2];
+						local11 = MathUtils.anIntArray223[arg2];
+						local146 = MathUtils.anIntArray225[arg2];
 						local164 = this.anIntArray531[local3] * local11 + this.anIntArray528[local3] * local146 + 32767 >> 16;
 						this.anIntArray531[local3] = this.anIntArray531[local3] * local146 + 32767 - this.anIntArray528[local3] * local11 >> 16;
 						this.anIntArray528[local3] = local164;

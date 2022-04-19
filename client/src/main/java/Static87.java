@@ -238,8 +238,8 @@ public final class Static87 {
 								local276 -= local30.anInt459 / 2;
 								local503 = Static57.anInt1747 + Static59.anInt1814 & 0x7FF;
 								local270 -= local30.anInt445 / 2;
-								local514 = Class58.anIntArray223[local503];
-								local518 = Class58.anIntArray225[local503];
+								local514 = MathUtils.anIntArray223[local503];
+								local518 = MathUtils.anIntArray225[local503];
 								local514 = (Static273.anInt4130 + 256) * local514 >> 8;
 								local518 = (Static273.anInt4130 + 256) * local518 >> 8;
 								local545 = local518 * local276 - local514 * local270 >> 11;
@@ -743,8 +743,8 @@ public final class Static87 {
 													if (local30.aBoolean34) {
 														Static239.method4178();
 													}
-													local563 = Class58.anIntArray223[local30.anInt450] * local30.anInt443 >> 16;
-													local571 = local30.anInt443 * Class58.anIntArray225[local30.anInt450] >> 16;
+													local563 = MathUtils.anIntArray223[local30.anInt450] * local30.anInt443 >> 16;
+													local571 = local30.anInt443 * MathUtils.anIntArray225[local30.anInt450] >> 16;
 													if (local30.aBoolean32) {
 														local2589.method4571(local30.anInt524, local30.anInt508, local30.anInt450, local30.anInt494, local30.anInt497 + local563 + local503, local30.anInt497 + local571, -1L);
 													} else {
@@ -755,8 +755,8 @@ public final class Static87 {
 													}
 												} else {
 													Static94.method1919(local556, local545);
-													local563 = Class58.anIntArray223[local30.anInt450] * local30.anInt443 >> 16;
-													local571 = local30.anInt443 * Class58.anIntArray225[local30.anInt450] >> 16;
+													local563 = MathUtils.anIntArray223[local30.anInt450] * local30.anInt443 >> 16;
+													local571 = local30.anInt443 * MathUtils.anIntArray225[local30.anInt450] >> 16;
 													if (!local30.aBoolean32) {
 														local2589.method4571(local30.anInt524, 0, local30.anInt450, 0, local563, local571, -1L);
 													} else if (local30.aBoolean22) {

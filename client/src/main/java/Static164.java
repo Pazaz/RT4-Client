@@ -228,8 +228,8 @@ public final class Static164 {
 		} else if (arg4 == 2) {
 			local145 = (int) ((double) local145 * 1.04D);
 		}
-		@Pc(176) int local176 = Class58.anIntArray225[local5.anInt2353] * local145 >> 16;
-		@Pc(185) int local185 = Class58.anIntArray223[local5.anInt2353] * local145 >> 16;
+		@Pc(176) int local176 = MathUtils.anIntArray225[local5.anInt2353] * local145 >> 16;
+		@Pc(185) int local185 = MathUtils.anIntArray223[local5.anInt2353] * local145 >> 16;
 		local60.method4571(local5.anInt2369, local5.anInt2339, local5.anInt2353, local5.anInt2359, local185 + local5.anInt2319 - local60.method4549() / 2, local5.anInt2319 + local176, -1L);
 		if (arg4 >= 1) {
 			local133.method303(1);

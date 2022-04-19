@@ -39,8 +39,8 @@ public final class Static97 {
 		}
 		local30 -= 10;
 		@Pc(58) int local58 = Static59.anInt1814 + Static57.anInt1747 & 0x7FF;
-		@Pc(62) int local62 = Class58.anIntArray225[local58];
-		@Pc(66) int local66 = Class58.anIntArray223[local58];
+		@Pc(62) int local62 = MathUtils.anIntArray225[local58];
+		@Pc(66) int local66 = MathUtils.anIntArray223[local58];
 		@Pc(74) int local74 = local66 * 256 / (Static273.anInt4130 + 256);
 		@Pc(82) int local82 = local62 * 256 / (Static273.anInt4130 + 256);
 		@Pc(93) int local93 = arg4 * local74 + local82 * arg3 >> 16;
