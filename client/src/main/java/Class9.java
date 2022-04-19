@@ -16,13 +16,13 @@ public final class Class9 {
 	private final Js5CacheQueue aClass80_1;
 
 	@OriginalMember(owner = "client!al", name = "f", descriptor = "Lclient!jb;")
-	private final Class73 aClass73_1;
+	private final Js5NetQueue aClass73_1;
 
 	@OriginalMember(owner = "client!al", name = "c", descriptor = "Lclient!pm;")
 	private Class3_Sub2_Sub5_Sub2 aClass3_Sub2_Sub5_Sub2_1;
 
 	@OriginalMember(owner = "client!al", name = "<init>", descriptor = "(Lclient!jb;Lclient!k;)V")
-	public Class9(@OriginalArg(0) Class73 arg0, @OriginalArg(1) Js5CacheQueue arg1) {
+	public Class9(@OriginalArg(0) Js5NetQueue arg0, @OriginalArg(1) Js5CacheQueue arg1) {
 		this.aClass80_1 = arg1;
 		this.aClass73_1 = arg0;
 		if (!this.aClass73_1.method2326()) {

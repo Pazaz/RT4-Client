@@ -322,7 +322,7 @@ public final class client extends GameShell {
 	protected final void method935() {
 		Static203.method3662();
 		Static86.aClass80_3 = new Js5CacheQueue();
-		Static107.aClass73_3 = new Class73();
+		Static107.aClass73_3 = new Js5NetQueue();
 		if (Static81.anInt2219 != 0) {
 			Static51.aByteArrayArray8 = new byte[50][];
 		}
