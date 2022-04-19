@@ -3,10 +3,10 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!v")
-public abstract class Class14 {
+public abstract class Js5ResourceProvider {
 
 	@OriginalMember(owner = "client!v", name = "<init>", descriptor = "()V")
-	protected Class14() {
+	protected Js5ResourceProvider() {
 	}
 
 	@OriginalMember(owner = "client!v", name = "b", descriptor = "(I)Lclient!ii;")

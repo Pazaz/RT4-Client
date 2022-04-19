@@ -16,7 +16,7 @@ public final class Js5 {
 	private Js5Index aClass70_2 = null;
 
 	@OriginalMember(owner = "client!ve", name = "i", descriptor = "Lclient!v;")
-	private final Class14 aClass14_1;
+	private final Js5ResourceProvider aClass14_1;
 
 	@OriginalMember(owner = "client!ve", name = "c", descriptor = "Z")
 	private final boolean aBoolean296;
@@ -25,7 +25,7 @@ public final class Js5 {
 	private final boolean aBoolean297;
 
 	@OriginalMember(owner = "client!ve", name = "<init>", descriptor = "(Lclient!v;ZZ)V")
-	public Js5(@OriginalArg(0) Class14 arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
+	public Js5(@OriginalArg(0) Js5ResourceProvider arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
 		this.aClass14_1 = arg0;
 		this.aBoolean296 = arg1;
 		this.aBoolean297 = arg2;

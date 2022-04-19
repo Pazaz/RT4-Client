@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!bg")
-public final class Class14_Sub1 extends Class14 {
+public final class Class14_Sub1 extends Js5ResourceProvider {
 
 	@OriginalMember(owner = "client!bg", name = "m", descriptor = "Lclient!ii;")
 	private Js5Index aClass70_1;
