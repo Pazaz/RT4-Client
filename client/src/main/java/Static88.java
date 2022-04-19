@@ -1530,7 +1530,7 @@ public final class Static88 {
 										continue;
 									}
 								} else if (local226 < 3500) {
-									@Pc(3422) Class3_Sub2_Sub15 local3422;
+									@Pc(3422) EnumType local3422;
 									if (local226 == 3400) {
 										local28 -= 2;
 										local809 = Static254.anIntArray487[local28];
@@ -1547,7 +1547,7 @@ public final class Static88 {
 										local803 = Static254.anIntArray487[local28 + 1];
 										local652 = Static254.anIntArray487[local28 + 3];
 										local1052 = Static254.anIntArray487[local28 + 2];
-										@Pc(3469) Class3_Sub2_Sub15 local3469 = Static253.method4330(local1052);
+										@Pc(3469) EnumType local3469 = Static253.method4330(local1052);
 										if (local3469.anInt3957 == local809 && local3469.anInt3950 == local803) {
 											if (local803 == 115) {
 												Static3.aClass100Array176[local26++] = local3469.method3085(local652);
@@ -1566,7 +1566,7 @@ public final class Static88 {
 										if (local803 == -1) {
 											throw new RuntimeException("C3409-2");
 										}
-										@Pc(3549) Class3_Sub2_Sub15 local3549 = Static253.method4330(local803);
+										@Pc(3549) EnumType local3549 = Static253.method4330(local803);
 										if (local3549.anInt3950 != local809) {
 											throw new RuntimeException("C3409-1");
 										}
@@ -1591,7 +1591,7 @@ public final class Static88 {
 									if (local226 == 3411) {
 										local28--;
 										local809 = Static254.anIntArray487[local28];
-										@Pc(3645) Class3_Sub2_Sub15 local3645 = Static253.method4330(local809);
+										@Pc(3645) EnumType local3645 = Static253.method4330(local809);
 										Static254.anIntArray487[local28++] = local3645.aClass133_16.method3864();
 										continue;
 									}
