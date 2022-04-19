@@ -91,7 +91,7 @@ public final class MidiPcmStream extends PcmStream {
 	private final int[] anIntArray504 = new int[16];
 
 	@OriginalMember(owner = "client!va", name = "K", descriptor = "Lclient!ki;")
-	private final Class84 aClass84_1 = new Class84();
+	private final MidiDecoder aClass84_1 = new MidiDecoder();
 
 	@OriginalMember(owner = "client!va", name = "Pb", descriptor = "Lclient!te;")
 	private final Class3_Sub3_Sub3 aClass3_Sub3_Sub3_1 = new Class3_Sub3_Sub3(this);
