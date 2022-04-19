@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!li")
-public final class Class92 {
+public final class Environment {
 
 	@OriginalMember(owner = "client!li", name = "c", descriptor = "I")
 	public final int anInt3526;
@@ -34,7 +34,7 @@ public final class Class92 {
 	public final int anInt3530;
 
 	@OriginalMember(owner = "client!li", name = "<init>", descriptor = "()V")
-	public Class92() {
+	public Environment() {
 		this.anInt3526 = Static161.anInt3923;
 		this.aFloat17 = 1.2F;
 		this.anInt3527 = -50;
@@ -47,7 +47,7 @@ public final class Class92 {
 	}
 
 	@OriginalMember(owner = "client!li", name = "<init>", descriptor = "(Lclient!wa;)V")
-	public Class92(@OriginalArg(0) Buffer arg0) {
+	public Environment(@OriginalArg(0) Buffer arg0) {
 		@Pc(7) int local7 = arg0.method2229();
 		if ((local7 & 0x1) == 0) {
 			this.anInt3526 = Static161.anInt3923;

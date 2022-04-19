@@ -733,7 +733,7 @@ public final class Static103 {
 			arg0 = 1000000;
 			Static222.aBoolean246 = false;
 		}
-		@Pc(15) Class92 local15 = Static192.aClass92ArrayArray1[arg3][arg1];
+		@Pc(15) Environment local15 = Static192.aClass92ArrayArray1[arg3][arg1];
 		@Pc(25) float local25 = ((float) arg2 * 0.1F + 0.7F) * local15.aFloat16;
 		@Pc(28) float local28 = local15.aFloat18;
 		@Pc(31) int local31 = local15.anInt3526;

@@ -186,7 +186,7 @@ public final class Static245 {
 		}
 		@Pc(497) int local497;
 		if (Static239.aBoolean269 && !arg9) {
-			@Pc(472) Class92 local472 = null;
+			@Pc(472) Environment local472 = null;
 			label207: while (true) {
 				label200: do {
 					while (local96.aByteArray40.length > local96.anInt2792) {
@@ -198,10 +198,10 @@ public final class Static245 {
 							local497 = local96.method2229();
 							continue label200;
 						}
-						local472 = new Class92(local96);
+						local472 = new Environment(local96);
 					}
 					if (local472 == null) {
-						local472 = new Class92();
+						local472 = new Environment();
 					}
 					Static192.aClass92ArrayArray1[arg1 >> 3][arg4 >> 3] = local472;
 					break label207;
