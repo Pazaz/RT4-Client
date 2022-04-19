@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!vk")
-public abstract class Class27 {
+public abstract class FrameBuffer {
 
 	@OriginalMember(owner = "client!vk", name = "e", descriptor = "[I")
 	protected int[] anIntArray472;

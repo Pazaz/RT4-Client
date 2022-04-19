@@ -13,7 +13,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ti")
-public final class BufferedImageFrameBuffer extends Class27 {
+public final class BufferedImageFrameBuffer extends FrameBuffer {
 
 	@OriginalMember(owner = "client!ti", name = "p", descriptor = "Ljava/awt/Component;")
 	private Component aComponent1;
