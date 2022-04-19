@@ -266,8 +266,8 @@ public final class Class8_Sub4_Sub1 extends Class8_Sub4 {
 				this.anObject5 = null;
 			}
 			if (this.anInt3390 <= Static83.anInt372 && this.anInt3375 > Static83.anInt372) {
-				if (this.anObject5 instanceof Class8_Sub3) {
-					local515 = (Model) ((Class8_Sub3) this.anObject5).method1049();
+				if (this.anObject5 instanceof Loc) {
+					local515 = (Model) ((Loc) this.anObject5).method1049();
 				} else {
 					local515 = (Model) this.anObject5;
 				}
