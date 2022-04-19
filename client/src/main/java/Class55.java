@@ -625,7 +625,7 @@ public final class Class55 {
 	}
 
 	@OriginalMember(owner = "client!h", name = "d", descriptor = "(I)Lclient!w;")
-	public final Class8_Sub1_Sub2 method1834() {
+	public final SoftwareModel method1834() {
 		@Pc(11) RawModel local11 = Static77.method1686(Static230.aClass153_95, this.anInt2320);
 		if (local11 == null) {
 			return null;
@@ -645,7 +645,7 @@ public final class Class55 {
 				local11.method1669(this.aShortArray32[local21], this.aShortArray31[local21]);
 			}
 		}
-		@Pc(107) Class8_Sub1_Sub2 local107 = local11.method1671(this.anInt2352 + 64, 768 - -this.anInt2357);
+		@Pc(107) SoftwareModel local107 = local11.method1671(this.anInt2352 + 64, 768 - -this.anInt2357);
 		if (this.anInt2373 != 128 || this.anInt2350 != 128 || this.anInt2368 != 128) {
 			local107.method4559(this.anInt2373, this.anInt2350, this.anInt2368);
 		}

@@ -805,7 +805,7 @@ public final class Class118 {
 				local69.aShort18 = (short) (this.anInt4405 * 5 + 768);
 				local69.method1668();
 			} else {
-				local60 = new Class8_Sub1_Sub2(local69, this.anInt4407 + 64, this.anInt4405 * 5 + 768, -50, -10, -50);
+				local60 = new SoftwareModel(local69, this.anInt4407 + 64, this.anInt4405 * 5 + 768, -50, -10, -50);
 			}
 			Static93.aClass99_14.method3095(local60, local29);
 		}
@@ -813,8 +813,8 @@ public final class Class118 {
 			local60 = ((RawModel) local60).method1675();
 		}
 		if (this.aByte15 != 0) {
-			if (local60 instanceof Class8_Sub1_Sub2) {
-				local60 = ((Class8_Sub1_Sub2) local60).method4586(this.aByte15, this.aShort26, arg2, arg5, arg1, arg4, arg9, true);
+			if (local60 instanceof SoftwareModel) {
+				local60 = ((SoftwareModel) local60).method4586(this.aByte15, this.aShort26, arg2, arg5, arg1, arg4, arg9, true);
 			} else if (local60 instanceof RawModel) {
 				local60 = ((RawModel) local60).method1670(this.aByte15, this.aShort26, arg2, arg5, arg1, arg4, arg9);
 			}
@@ -832,30 +832,30 @@ public final class Class118 {
 			} else {
 				local30 = arg5 + (this.anInt4426 << 10) + (arg11 << 3);
 			}
-			@Pc(195) Class8_Sub1_Sub2 local195 = (Class8_Sub1_Sub2) Static262.aClass99_36.method3106(local30);
+			@Pc(195) SoftwareModel local195 = (SoftwareModel) Static262.aClass99_36.method3106(local30);
 			if (local195 == null) {
 				@Pc(204) RawModel local204 = this.method3418(arg5, arg11);
 				if (local204 == null) {
 					return null;
 				}
-				local195 = new Class8_Sub1_Sub2(local204, this.anInt4407 + 64, this.anInt4405 * 5 + 768, -50, -10, -50);
+				local195 = new SoftwareModel(local204, this.anInt4407 + 64, this.anInt4405 * 5 + 768, -50, -10, -50);
 				Static262.aClass99_36.method3095(local195, local30);
 			}
 			@Pc(234) boolean local234 = false;
 			if (arg4 != null) {
 				local234 = true;
-				local195 = (Class8_Sub1_Sub2) arg4.method4214(arg8, arg10, local195, arg5, arg12);
+				local195 = (SoftwareModel) arg4.method4214(arg8, arg10, local195, arg5, arg12);
 			}
 			if (arg11 == 10 && arg5 > 3) {
 				if (!local234) {
 					local234 = true;
-					local195 = (Class8_Sub1_Sub2) local195.method4568(true, true, true);
+					local195 = (SoftwareModel) local195.method4568(true, true, true);
 				}
 				local195.method4554(256);
 			}
 			if (this.aByte15 != 0) {
 				if (!local234) {
-					local195 = (Class8_Sub1_Sub2) local195.method4568(true, true, true);
+					local195 = (SoftwareModel) local195.method4568(true, true, true);
 				}
 				local195 = local195.method4586(this.aByte15, this.aShort26, arg6, arg9, arg1, arg3, arg0, false);
 			}

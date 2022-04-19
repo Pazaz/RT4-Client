@@ -290,10 +290,10 @@ public final class Class8_Sub4_Sub1 extends Class8_Sub4 {
 			}
 		} else {
 			if (local184 != null) {
-				local76 = ((Class8_Sub1_Sub2) local76).method4588(local184);
+				local76 = ((SoftwareModel) local76).method4588(local184);
 			}
 			if (local515 != null) {
-				local76 = ((Class8_Sub1_Sub2) local76).method4588(local515);
+				local76 = ((SoftwareModel) local76).method4588(local515);
 			}
 			local76.aBoolean303 = true;
 			local76.method4546(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.aClass47_Sub1_5);

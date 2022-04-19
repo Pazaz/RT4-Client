@@ -157,7 +157,7 @@ public final class Static41 {
 				local650.aClass127_4.aBoolean235 = false;
 			}
 		} else {
-			@Pc(574) Class8_Sub1_Sub2 local574 = (Class8_Sub1_Sub2) local33;
+			@Pc(574) SoftwareModel local574 = (SoftwareModel) local33;
 			if (Static207.method3685(Static55.anInt1735, arg3 + local384, arg5 - -local126) != arg11 || arg11 != Static207.method3685(Static55.anInt1735, arg3 + local115, arg5 - -local130)) {
 				for (local162 = 0; local162 < local574.anInt5788; local162++) {
 					local574.anIntArray527[local162] += Static207.method3685(Static55.anInt1735, arg3 + local574.anIntArray528[local162], arg5 + local574.anIntArray531[local162]) - arg11;

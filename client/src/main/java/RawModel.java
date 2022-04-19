@@ -786,8 +786,8 @@ public final class RawModel extends Entity {
 	}
 
 	@OriginalMember(owner = "client!gb", name = "b", descriptor = "(IIIII)Lclient!w;")
-	public final Class8_Sub1_Sub2 method1671(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		return new Class8_Sub1_Sub2(this, arg0, arg1, -50, -10, -50);
+	public final SoftwareModel method1671(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+		return new SoftwareModel(this, arg0, arg1, -50, -10, -50);
 	}
 
 	@OriginalMember(owner = "client!gb", name = "a", descriptor = "(IIIII)V")
@@ -1236,7 +1236,7 @@ public final class RawModel extends Entity {
 			local9.method4099();
 			return local9;
 		} else {
-			return new Class8_Sub1_Sub2(this, arg0, arg1, arg2, arg3, arg4);
+			return new SoftwareModel(this, arg0, arg1, arg2, arg3, arg4);
 		}
 	}
 

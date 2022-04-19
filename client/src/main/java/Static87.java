@@ -760,7 +760,7 @@ public final class Static87 {
 													if (!local30.aBoolean32) {
 														local2589.method4571(local30.anInt524, 0, local30.anInt450, 0, local563, local571, -1L);
 													} else if (local30.aBoolean22) {
-														((Class8_Sub1_Sub2) local2589).method4591(local30.anInt524, local30.anInt508, local30.anInt450, local30.anInt494, local30.anInt497 + local503 + local563, local571 + local30.anInt497, local30.anInt443);
+														((SoftwareModel) local2589).method4591(local30.anInt524, local30.anInt508, local30.anInt450, local30.anInt494, local30.anInt497 + local503 + local563, local571 + local30.anInt497, local30.anInt443);
 													} else {
 														local2589.method4571(local30.anInt524, local30.anInt508, local30.anInt450, local30.anInt494, local30.anInt497 + local563 + local503, local571 + local30.anInt497, -1L);
 													}
