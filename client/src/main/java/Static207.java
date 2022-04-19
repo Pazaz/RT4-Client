@@ -92,14 +92,14 @@ public final class Static207 {
 	public static int method3684() {
 		try {
 			if (Static82.anInt2231 == 0) {
-				if (Class209.method5096() - 5000L < Static231.aLong174) {
+				if (MonotonicClock.method5096() - 5000L < Static231.aLong174) {
 					return 0;
 				}
 				Static72.aClass212_3 = Static71.aClass213_3.method5120(Static143.aString4, Static208.anInt4784);
-				Static15.aLong18 = Class209.method5096();
+				Static15.aLong18 = MonotonicClock.method5096();
 				Static82.anInt2231 = 1;
 			}
-			if (Static15.aLong18 + 30000L < Class209.method5096()) {
+			if (Static15.aLong18 + 30000L < MonotonicClock.method5096()) {
 				return Static10.method347(1000);
 			}
 			@Pc(82) int local82;
@@ -178,7 +178,7 @@ public final class Static207 {
 				Static127.anInt3132 = 0;
 				Static82.anInt2231 = 0;
 				Static229.aByteArray70 = null;
-				Static231.aLong174 = Class209.method5096();
+				Static231.aLong174 = MonotonicClock.method5096();
 				return 0;
 			} else {
 				return Static10.method347(1002);

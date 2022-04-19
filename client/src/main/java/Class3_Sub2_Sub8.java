@@ -24,7 +24,7 @@ public final class Class3_Sub2_Sub8 extends Class3_Sub2 {
 
 	@OriginalMember(owner = "client!da", name = "a", descriptor = "(Z)V")
 	public final void method1007() {
-		this.aLong185 = Class209.method5096() + 500L | Long.MIN_VALUE & this.aLong185;
+		this.aLong185 = MonotonicClock.method5096() + 500L | Long.MIN_VALUE & this.aLong185;
 		Static140.aClass16_7.method798(this);
 	}
 

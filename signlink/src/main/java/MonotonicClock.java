@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("signlink!ad")
-public final class Class209 {
+public final class MonotonicClock {
 
 	@OriginalMember(owner = "signlink!ad", name = "a", descriptor = "J")
 	private static long aLong1312;

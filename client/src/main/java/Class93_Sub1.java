@@ -22,7 +22,7 @@ public final class Class93_Sub1 extends Class93 {
 	private int anInt3553 = 0;
 
 	@OriginalMember(owner = "client!lj", name = "k", descriptor = "J")
-	private long aLong122 = Class209.method5096();
+	private long aLong122 = MonotonicClock.method5096();
 
 	@OriginalMember(owner = "client!lj", name = "<init>", descriptor = "()V")
 	public Class93_Sub1() {
@@ -46,7 +46,7 @@ public final class Class93_Sub1 extends Class93 {
 		@Pc(20) int local20 = this.anInt3550;
 		this.anInt3550 = 300;
 		this.anInt3552 = 1;
-		this.aLong122 = Class209.method5096();
+		this.aLong122 = MonotonicClock.method5096();
 		if (this.aLongArray4[this.anInt3549] == 0L) {
 			this.anInt3550 = local20;
 			this.anInt3552 = local17;
