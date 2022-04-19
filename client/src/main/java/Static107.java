@@ -48,7 +48,7 @@ public final class Static107 {
 			throw new IllegalStateException();
 		}
 		try {
-			@Pc(33) AudioChannel local33 = (AudioChannel) Class.forName("Class62_Sub2").getDeclaredConstructor().newInstance();
+			@Pc(33) AudioChannel local33 = (AudioChannel) Class.forName("JavaAudioChannel").getDeclaredConstructor().newInstance();
 			local33.anInt4641 = arg0;
 			local33.anIntArray411 = new int[(Static164.aBoolean192 ? 2 : 1) * 256];
 			local33.method3576(arg2);
