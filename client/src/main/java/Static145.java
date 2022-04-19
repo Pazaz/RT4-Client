@@ -62,7 +62,7 @@ public final class Static145 {
 		Static69.method1545(null);
 		Static103.anIntArray254 = new int[32768];
 		Static216.anIntArray188 = new int[32768];
-		Static167.aClass3_Sub2_Sub1_Sub1_3 = new Class3_Sub2_Sub1_Sub1(128, 254);
+		Static167.aClass3_Sub2_Sub1_Sub1_3 = new SoftwareSprite(128, 254);
 	}
 
 	@OriginalMember(owner = "client!lf", name = "b", descriptor = "(I)V")

@@ -546,7 +546,7 @@ public final class Static1 {
 			return;
 		}
 		if (Static70.aClass3_Sub2_Sub1_2 == null || arg2 != Static70.aClass3_Sub2_Sub1_2.anInt1867 || Static70.aClass3_Sub2_Sub1_2.anInt1859 != arg1) {
-			@Pc(63) Class3_Sub2_Sub1_Sub1 local63 = new Class3_Sub2_Sub1_Sub1(arg2, arg1);
+			@Pc(63) SoftwareSprite local63 = new SoftwareSprite(arg2, arg1);
 			Static129.method2491(local63.anIntArray20, arg2, arg1);
 			Static214.method4364(arg2, 0, Static48.anInt1449, 0, 0, Static181.anInt4296, arg1, 0);
 			if (Static239.aBoolean269) {

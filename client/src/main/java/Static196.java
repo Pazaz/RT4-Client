@@ -104,14 +104,14 @@ public final class Static196 {
 	}
 
 	@OriginalMember(owner = "client!pl", name = "a", descriptor = "(I)Lclient!mm;")
-	public static Class3_Sub2_Sub1_Sub1 method3537() {
+	public static SoftwareSprite method3537() {
 		@Pc(13) int local13 = Static254.anIntArray488[0] * Static26.anIntArray66[0];
 		@Pc(17) byte[] local17 = Static7.aByteArrayArray5[0];
 		@Pc(20) int[] local20 = new int[local13];
 		for (@Pc(22) int local22 = 0; local22 < local13; local22++) {
 			local20[local22] = Static259.anIntArray513[local17[local22] & 0xFF];
 		}
-		@Pc(57) Class3_Sub2_Sub1_Sub1 local57 = new Class3_Sub2_Sub1_Sub1(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[0], Static269.anIntArray252[0], Static254.anIntArray488[0], Static26.anIntArray66[0], local20);
+		@Pc(57) SoftwareSprite local57 = new SoftwareSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[0], Static269.anIntArray252[0], Static254.anIntArray488[0], Static26.anIntArray66[0], local20);
 		Static75.method1631();
 		return local57;
 	}

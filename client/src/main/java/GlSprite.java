@@ -42,7 +42,7 @@ public class GlSprite extends Class3_Sub2_Sub1 {
 	}
 
 	@OriginalMember(owner = "client!cf", name = "<init>", descriptor = "(Lclient!mm;)V")
-	public GlSprite(@OriginalArg(0) Class3_Sub2_Sub1_Sub1 arg0) {
+	public GlSprite(@OriginalArg(0) SoftwareSprite arg0) {
 		this.anInt1860 = arg0.anInt1860;
 		this.anInt1866 = arg0.anInt1866;
 		this.anInt1863 = arg0.anInt1863;

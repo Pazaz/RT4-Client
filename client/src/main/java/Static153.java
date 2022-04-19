@@ -8,7 +8,7 @@ public final class Static153 {
 	public static Class100 aClass100_724;
 
 	@OriginalMember(owner = "client!mc", name = "S", descriptor = "Lclient!mm;")
-	public static Class3_Sub2_Sub1_Sub1 aClass3_Sub2_Sub1_Sub1_2;
+	public static SoftwareSprite aClass3_Sub2_Sub1_Sub1_2;
 
 	@OriginalMember(owner = "client!mc", name = "Z", descriptor = "Lclient!ve;")
 	public static Class153 aClass153_57;

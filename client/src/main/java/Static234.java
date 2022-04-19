@@ -150,7 +150,7 @@ public final class Static234 {
 	}
 
 	@OriginalMember(owner = "client!ta", name = "a", descriptor = "([Lclient!mm;ILclient!ve;)V")
-	public static void method4018(@OriginalArg(0) Class3_Sub2_Sub1_Sub1[] arg0, @OriginalArg(2) Class153 arg1) {
+	public static void method4018(@OriginalArg(0) SoftwareSprite[] arg0, @OriginalArg(2) Class153 arg1) {
 		Static119.aClass153_44 = arg1;
 		Static241.aClass3_Sub2_Sub1_Sub1Array13 = arg0;
 		Static258.aBooleanArray130 = new boolean[Static241.aClass3_Sub2_Sub1_Sub1Array13.length];

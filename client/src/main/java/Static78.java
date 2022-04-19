@@ -45,7 +45,7 @@ public final class Static78 {
 	}
 
 	@OriginalMember(owner = "client!gd", name = "a", descriptor = "(ILclient!ve;II)Lclient!mm;")
-	public static Class3_Sub2_Sub1_Sub1 method1693(@OriginalArg(0) int arg0, @OriginalArg(1) Class153 arg1, @OriginalArg(3) int arg2) {
+	public static SoftwareSprite method1693(@OriginalArg(0) int arg0, @OriginalArg(1) Class153 arg1, @OriginalArg(3) int arg2) {
 		return Static234.method4016(arg1, arg0, arg2) ? Static196.method3537() : null;
 	}
 

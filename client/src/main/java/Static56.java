@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class Static56 {
 
 	@OriginalMember(owner = "client!ef", name = "j", descriptor = "Lclient!mm;")
-	public static Class3_Sub2_Sub1_Sub1 aClass3_Sub2_Sub1_Sub1_1;
+	public static SoftwareSprite aClass3_Sub2_Sub1_Sub1_1;
 
 	@OriginalMember(owner = "client!ef", name = "p", descriptor = "Lclient!vj;")
 	public static Resampler aClass156_1;

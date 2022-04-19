@@ -173,7 +173,7 @@ public final class Static164 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(Lclient!ve;IZ)Lclient!mm;")
-	public static Class3_Sub2_Sub1_Sub1 method3117(@OriginalArg(0) Class153 arg0, @OriginalArg(1) int arg1) {
+	public static SoftwareSprite method3117(@OriginalArg(0) Class153 arg0, @OriginalArg(1) int arg1) {
 		return Static254.method4346(arg0, arg1) ? Static196.method3537() : null;
 	}
 
@@ -200,14 +200,14 @@ public final class Static164 {
 		if (local60 == null) {
 			return null;
 		}
-		@Pc(71) Class3_Sub2_Sub1_Sub1 local71 = null;
+		@Pc(71) SoftwareSprite local71 = null;
 		if (local5.anInt2358 != -1) {
-			local71 = (Class3_Sub2_Sub1_Sub1) method3150(0, true, local5.anInt2356, false, 1, 10, true);
+			local71 = (SoftwareSprite) method3150(0, true, local5.anInt2356, false, 1, 10, true);
 			if (local71 == null) {
 				return null;
 			}
 		} else if (local5.anInt2334 != -1) {
-			local71 = (Class3_Sub2_Sub1_Sub1) method3150(arg0, true, local5.anInt2363, false, arg4, arg5, false);
+			local71 = (SoftwareSprite) method3150(arg0, true, local5.anInt2363, false, arg4, arg5, false);
 			if (local71 == null) {
 				return null;
 			}
@@ -217,7 +217,7 @@ public final class Static164 {
 		@Pc(122) int local122 = Static129.anInt3146;
 		@Pc(125) int[] local125 = new int[4];
 		Static129.method2497(local125);
-		@Pc(133) Class3_Sub2_Sub1_Sub1 local133 = new Class3_Sub2_Sub1_Sub1(36, 32);
+		@Pc(133) SoftwareSprite local133 = new SoftwareSprite(36, 32);
 		Static129.method2491(local133.anIntArray20, 36, 32);
 		Static94.method1908();
 		Static94.method1919(16, 16);

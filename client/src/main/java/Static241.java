@@ -17,7 +17,7 @@ public final class Static241 {
 	public static int[] anIntArray522;
 
 	@OriginalMember(owner = "client!th", name = "p", descriptor = "[Lclient!mm;")
-	public static Class3_Sub2_Sub1_Sub1[] aClass3_Sub2_Sub1_Sub1Array13;
+	public static SoftwareSprite[] aClass3_Sub2_Sub1_Sub1Array13;
 
 	@OriginalMember(owner = "client!th", name = "h", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_1088 = Static28.method790("::setparticles");
