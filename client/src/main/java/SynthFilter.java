@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!nl")
-public final class Class110 {
+public final class SynthFilter {
 
 	@OriginalMember(owner = "client!nl", name = "e", descriptor = "[I")
 	public final int[] anIntArray368 = new int[2];

@@ -35,7 +35,7 @@ public final class Class123 {
 	private Class42 aClass42_7;
 
 	@OriginalMember(owner = "client!pj", name = "w", descriptor = "Lclient!nl;")
-	private Class110 aClass110_1;
+	private SynthFilter aClass110_1;
 
 	@OriginalMember(owner = "client!pj", name = "x", descriptor = "Lclient!ff;")
 	private Class42 aClass42_8;
@@ -303,7 +303,7 @@ public final class Class123 {
 		this.anInt4549 = arg0.method2204();
 		this.anInt4546 = arg0.method2163();
 		this.anInt4548 = arg0.method2163();
-		this.aClass110_1 = new Class110();
+		this.aClass110_1 = new SynthFilter();
 		this.aClass42_6 = new Class42();
 		this.aClass110_1.method3249(arg0, this.aClass42_6);
 	}
