@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!vm")
-public final class Class158 implements MaterialRenderer {
+public final class SpecularMaterialRenderer implements MaterialRenderer {
 
 	@OriginalMember(owner = "client!vm", name = "a", descriptor = "I")
 	private int anInt5777 = -1;
@@ -18,7 +18,7 @@ public final class Class158 implements MaterialRenderer {
 	private boolean aBoolean301 = false;
 
 	@OriginalMember(owner = "client!vm", name = "<init>", descriptor = "()V")
-	public Class158() {
+	public SpecularMaterialRenderer() {
 		if (Static239.aBoolean275 && Static239.anInt5322 >= 2) {
 			this.method4536();
 			@Pc(19) GL local19 = Static239.aGL1;

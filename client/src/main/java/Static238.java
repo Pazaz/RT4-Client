@@ -48,7 +48,7 @@ public final class Static238 {
 	public static void method4145() {
 		Static151.method2809();
 		Static2.anInterface4Array1 = new MaterialRenderer[7];
-		Static2.anInterface4Array1[1] = new Class158();
+		Static2.anInterface4Array1[1] = new SpecularMaterialRenderer();
 		Static2.anInterface4Array1[2] = new Class130();
 		Static2.anInterface4Array1[3] = new UnderwaterMaterialRenderer();
 		Static2.anInterface4Array1[4] = new Class119();
