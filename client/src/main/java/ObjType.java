@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!h")
-public final class Class55 {
+public final class ObjType {
 
 	@OriginalMember(owner = "client!h", name = "S", descriptor = "[I")
 	public static final int[] anIntArray213 = new int[99];
@@ -213,7 +213,7 @@ public final class Class55 {
 	}
 
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(II)Lclient!h;")
-	public final Class55 method1820(@OriginalArg(0) int arg0) {
+	public final ObjType method1820(@OriginalArg(0) int arg0) {
 		if (this.anIntArray214 != null && arg0 > 1) {
 			@Pc(23) int local23 = -1;
 			for (@Pc(25) int local25 = 0; local25 < 10; local25++) {
@@ -255,7 +255,7 @@ public final class Class55 {
 	}
 
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(BLclient!h;Lclient!h;)V")
-	public final void method1823(@OriginalArg(1) Class55 arg0, @OriginalArg(2) Class55 arg1) {
+	public final void method1823(@OriginalArg(1) ObjType arg0, @OriginalArg(2) ObjType arg1) {
 		this.aByteArray36 = arg0.aByteArray36;
 		this.anInt2347 = arg0.anInt2347;
 		this.aClass133_6 = arg0.aClass133_6;
@@ -605,7 +605,7 @@ public final class Class55 {
 	}
 
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(Lclient!h;Lclient!h;Z)V")
-	public final void method1832(@OriginalArg(0) Class55 arg0, @OriginalArg(1) Class55 arg1) {
+	public final void method1832(@OriginalArg(0) ObjType arg0, @OriginalArg(1) ObjType arg1) {
 		this.aClass100_495 = arg0.aClass100_495;
 		this.anInt2375 = arg1.anInt2375;
 		this.aShortArray34 = arg1.aShortArray34;

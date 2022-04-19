@@ -62,7 +62,7 @@ public final class Static258 {
 						Static18.anInt588 = local171;
 						if (arg2.anIntArray40[local171] > 0) {
 							@Pc(267) Class3_Sub4 local267 = Static36.method940(arg2);
-							@Pc(276) Class55 local276 = Static71.method1439(arg2.anIntArray40[local171] - 1);
+							@Pc(276) ObjType local276 = Static71.method1439(arg2.anIntArray40[local171] - 1);
 							if (Static260.anInt5014 == 1 && local267.method510()) {
 								if (Static224.anInt5062 != arg2.anInt507 || Static185.anInt4370 != local171) {
 									Static98.method1966(-1, (long) local276.anInt2354, Static34.method882(new JagString[] { Static34.aClass100_203, Static223.aClass100_947, local276.aClass100_495 }), local171, (short) 40, Static222.aClass100_937, arg2.anInt507);

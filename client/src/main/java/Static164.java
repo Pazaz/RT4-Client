@@ -184,7 +184,7 @@ public final class Static164 {
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(IBZIZIIZ)Lclient!qf;")
 	public static Sprite method3150(@OriginalArg(0) int arg0, @OriginalArg(2) boolean arg1, @OriginalArg(3) int arg2, @OriginalArg(4) boolean arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) boolean arg6) {
-		@Pc(5) Class55 local5 = Static71.method1439(arg2);
+		@Pc(5) ObjType local5 = Static71.method1439(arg2);
 		if (arg5 > 1 && local5.anIntArray214 != null) {
 			@Pc(15) int local15 = -1;
 			for (@Pc(17) int local17 = 0; local17 < 10; local17++) {

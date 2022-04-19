@@ -210,7 +210,7 @@ public final class Static176 {
 					if (local931 != null) {
 						for (@Pc(940) Class3_Sub2_Sub16 local940 = (Class3_Sub2_Sub16) local931.method2279(); local940 != null; local940 = (Class3_Sub2_Sub16) local931.method2286()) {
 							local240 = local940.aClass8_Sub7_1.anInt5555;
-							@Pc(951) Class55 local951 = Static71.method1439(local240);
+							@Pc(951) ObjType local951 = Static71.method1439(local240);
 							if (Static260.anInt5014 == 1) {
 								Static98.method1966(Static169.anInt4075, (long) local240, Static34.method882(new JagString[] { Static34.aClass100_203, Static223.aClass100_947, local951.aClass100_495 }), local47, (short) 33, Static222.aClass100_937, local147);
 							} else if (Static241.aBoolean302) {

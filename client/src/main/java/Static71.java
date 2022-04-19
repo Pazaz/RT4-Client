@@ -38,13 +38,13 @@ public final class Static71 {
 	public static final JagString aClass100_419 = Static28.method790("ondulation2:");
 
 	@OriginalMember(owner = "client!fk", name = "a", descriptor = "(IB)Lclient!h;")
-	public static Class55 method1439(@OriginalArg(0) int arg0) {
-		@Pc(6) Class55 local6 = (Class55) Static27.aClass99_4.method3106((long) arg0);
+	public static ObjType method1439(@OriginalArg(0) int arg0) {
+		@Pc(6) ObjType local6 = (ObjType) Static27.aClass99_4.method3106((long) arg0);
 		if (local6 != null) {
 			return local6;
 		}
 		@Pc(25) byte[] local25 = Static167.aClass153_61.method4495(Static18.method554(arg0), Static247.method4247(arg0));
-		local6 = new Class55();
+		local6 = new ObjType();
 		local6.anInt2354 = arg0;
 		if (local25 != null) {
 			local6.method1827(new Buffer(local25));
