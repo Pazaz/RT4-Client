@@ -69,7 +69,7 @@ public final class Static192 {
 						local159 = local198.aClass8_4;
 					}
 				} else if (local164 == 3) {
-					@Pc(216) Class15 local216 = Static269.method2210(Static55.anInt1735, local17.anInt1190, local17.anInt1204);
+					@Pc(216) GroundDecor local216 = Static269.method2210(Static55.anInt1735, local17.anInt1190, local17.anInt1204);
 					if (local216 != null) {
 						local159 = local216.aClass8_1;
 					}

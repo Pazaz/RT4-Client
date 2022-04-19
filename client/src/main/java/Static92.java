@@ -78,7 +78,7 @@ public final class Static92 {
 			}
 		}
 		if (arg4 == 3) {
-			@Pc(290) Class15 local290 = Static269.method2210(arg0, arg5, arg3);
+			@Pc(290) GroundDecor local290 = Static269.method2210(arg0, arg5, arg3);
 			if (local290 != null) {
 				local290.aClass8_1 = new Class8_Sub3(Integer.MAX_VALUE & (int) (local290.aLong26 >>> 32), 22, arg1, arg0, arg5, arg3, arg6, false, local290.aClass8_1);
 			}

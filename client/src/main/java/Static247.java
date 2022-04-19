@@ -201,7 +201,7 @@ public final class Static247 {
 												}
 											}
 											if (var24) {
-												@Pc(549) Class15 local549 = local8.aClass15_1;
+												@Pc(549) GroundDecor local549 = local8.aClass15_1;
 												if (local549 != null && (local549.aLong26 & 0x80000000L) != 0L) {
 													if (Static239.aBoolean269 && local549.aBoolean49) {
 														Static239.method4159(local33 + 50.0F - 1.5F);
@@ -308,7 +308,7 @@ public final class Static247 {
 												}
 											}
 											if (var24) {
-												@Pc(1001) Class15 local1001 = local8.aClass15_1;
+												@Pc(1001) GroundDecor local1001 = local8.aClass15_1;
 												if (local1001 != null && (local1001.aLong26 & 0x80000000L) == 0L) {
 													if (Static239.aBoolean269 && local1001.aBoolean49) {
 														Static239.method4159(local33 + 50.0F - 1.5F);

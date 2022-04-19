@@ -24,7 +24,7 @@ public final class Tile extends Node {
 	public int anInt665;
 
 	@OriginalMember(owner = "client!bj", name = "G", descriptor = "Lclient!bm;")
-	public Class15 aClass15_1;
+	public GroundDecor aClass15_1;
 
 	@OriginalMember(owner = "client!bj", name = "I", descriptor = "I")
 	public int anInt667;
