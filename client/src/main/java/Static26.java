@@ -14,7 +14,7 @@ public final class Static26 {
 	public static boolean aBoolean59;
 
 	@OriginalMember(owner = "client!ca", name = "X", descriptor = "Lclient!ih;")
-	public static Class69 aClass69_27 = new Class69();
+	public static LinkedList aClass69_27 = new LinkedList();
 
 	@OriginalMember(owner = "client!ca", name = "bb", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_159 = Static28.method790("Examiner");

@@ -9,7 +9,7 @@ public final class Static63 {
 	public static int anInt1942 = 0;
 
 	@OriginalMember(owner = "client!fa", name = "b", descriptor = "Lclient!ih;")
-	private static final Class69 aClass69_48 = new Class69();
+	private static final LinkedList aClass69_48 = new LinkedList();
 
 	@OriginalMember(owner = "client!fa", name = "c", descriptor = "I")
 	public static int anInt1943 = 0;
@@ -24,13 +24,13 @@ public final class Static63 {
 	public static int anInt1945 = 0;
 
 	@OriginalMember(owner = "client!fa", name = "g", descriptor = "Lclient!ih;")
-	private static final Class69 aClass69_49 = new Class69();
+	private static final LinkedList aClass69_49 = new LinkedList();
 
 	@OriginalMember(owner = "client!fa", name = "h", descriptor = "Lclient!ih;")
-	private static final Class69 aClass69_50 = new Class69();
+	private static final LinkedList aClass69_50 = new LinkedList();
 
 	@OriginalMember(owner = "client!fa", name = "i", descriptor = "Lclient!ih;")
-	private static final Class69 aClass69_51 = new Class69();
+	private static final LinkedList aClass69_51 = new LinkedList();
 
 	@OriginalMember(owner = "client!fa", name = "j", descriptor = "[I")
 	private static final int[] anIntArray151 = new int[1000];

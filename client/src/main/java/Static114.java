@@ -28,7 +28,7 @@ public final class Static114 {
 
 	@OriginalMember(owner = "client!j", name = "c", descriptor = "(I)V")
 	public static void method4625() {
-		Static204.aClass69_113 = new Class69();
+		Static204.aClass69_113 = new LinkedList();
 	}
 
 	@OriginalMember(owner = "client!j", name = "a", descriptor = "([BI)Lclient!dd;")

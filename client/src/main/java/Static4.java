@@ -12,7 +12,7 @@ public final class Static4 {
 	public static int anInt30 = 0;
 
 	@OriginalMember(owner = "client!ac", name = "i", descriptor = "Lclient!ih;")
-	public static final Class69 aClass69_2 = new Class69();
+	public static final LinkedList aClass69_2 = new LinkedList();
 
 	@OriginalMember(owner = "client!ac", name = "k", descriptor = "S")
 	public static short aShort1 = 32767;

@@ -14,7 +14,7 @@ public final class Static217 {
 	public static int anInt4901 = -1;
 
 	@OriginalMember(owner = "client!rj", name = "U", descriptor = "Lclient!ih;")
-	public static final Class69 aClass69_116 = new Class69();
+	public static final LinkedList aClass69_116 = new LinkedList();
 
 	@OriginalMember(owner = "client!rj", name = "Z", descriptor = "[I")
 	public static final int[] anIntArray434 = new int[64];

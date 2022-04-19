@@ -9,7 +9,7 @@ public final class Static99 {
 	public static int[] anIntArray239;
 
 	@OriginalMember(owner = "client!hk", name = "W", descriptor = "Lclient!ih;")
-	public static final Class69 aClass69_64 = new Class69();
+	public static final LinkedList aClass69_64 = new LinkedList();
 
 	@OriginalMember(owner = "client!hk", name = "db", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_529 = Static28.method790("::wm3");

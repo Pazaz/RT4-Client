@@ -99,7 +99,7 @@ public final class Static54 {
 			}
 			for (local146 = 0; local146 < 104; local146++) {
 				for (local181 = 0; local181 < 104; local181++) {
-					@Pc(439) Class69 local439 = Static159.aClass69ArrayArrayArray1[Static55.anInt1735][local146][local181];
+					@Pc(439) LinkedList local439 = Static159.aClass69ArrayArrayArray1[Static55.anInt1735][local146][local181];
 					if (local439 != null) {
 						local154 = local146 * 4 + 2 - Static173.aClass8_Sub4_Sub1_2.anInt3412 / 32;
 						local231 = local181 * 4 + 2 - Static173.aClass8_Sub4_Sub1_2.anInt3421 / 32;

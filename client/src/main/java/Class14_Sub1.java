@@ -25,7 +25,7 @@ public final class Class14_Sub1 extends Class14 {
 	private int anInt578 = 0;
 
 	@OriginalMember(owner = "client!bg", name = "R", descriptor = "Lclient!ih;")
-	private final Class69 aClass69_16 = new Class69();
+	private final LinkedList aClass69_16 = new LinkedList();
 
 	@OriginalMember(owner = "client!bg", name = "V", descriptor = "J")
 	private long aLong20 = 0L;
@@ -40,7 +40,7 @@ public final class Class14_Sub1 extends Class14 {
 	private boolean aBoolean35;
 
 	@OriginalMember(owner = "client!bg", name = "U", descriptor = "Lclient!ih;")
-	private Class69 aClass69_17;
+	private LinkedList aClass69_17;
 
 	@OriginalMember(owner = "client!bg", name = "J", descriptor = "Lclient!k;")
 	private final Class80 aClass80_2;
@@ -71,7 +71,7 @@ public final class Class14_Sub1 extends Class14 {
 			this.aBoolean35 = false;
 		} else {
 			this.aBoolean35 = true;
-			this.aClass69_17 = new Class69();
+			this.aClass69_17 = new LinkedList();
 		}
 		this.aClass80_2 = arg4;
 		this.anInt573 = arg5;
@@ -168,7 +168,7 @@ public final class Class14_Sub1 extends Class14 {
 		if (this.aClass49_2 != null) {
 			this.aBoolean36 = true;
 			if (this.aClass69_17 == null) {
-				this.aClass69_17 = new Class69();
+				this.aClass69_17 = new LinkedList();
 			}
 		}
 	}

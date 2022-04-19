@@ -101,7 +101,7 @@ public final class Static243 {
 				}
 			}
 		}
-		Static26.aClass69_27 = new Class69();
+		Static26.aClass69_27 = new LinkedList();
 		Static166.anInt4054 = 0;
 		Static9.anInt178 = 0;
 		Static8.method121();

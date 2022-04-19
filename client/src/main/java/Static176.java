@@ -206,7 +206,7 @@ public final class Static176 {
 					Static217.method3767(local140, local147, local688, local47);
 				}
 				if (local133 == 3) {
-					@Pc(931) Class69 local931 = Static159.aClass69ArrayArrayArray1[Static55.anInt1735][local47][local147];
+					@Pc(931) LinkedList local931 = Static159.aClass69ArrayArrayArray1[Static55.anInt1735][local47][local147];
 					if (local931 != null) {
 						for (@Pc(940) Class3_Sub2_Sub16 local940 = (Class3_Sub2_Sub16) local931.method2279(); local940 != null; local940 = (Class3_Sub2_Sub16) local931.method2286()) {
 							local240 = local940.aClass8_Sub7_1.anInt5555;

@@ -23,7 +23,7 @@ public final class Static159 {
 	public static final long[] aLongArray5 = new long[500];
 
 	@OriginalMember(owner = "client!mi", name = "Y", descriptor = "[[[Lclient!ih;")
-	public static final Class69[][][] aClass69ArrayArrayArray1 = new Class69[4][104][104];
+	public static final LinkedList[][][] aClass69ArrayArrayArray1 = new LinkedList[4][104][104];
 
 	@OriginalMember(owner = "client!mi", name = "ab", descriptor = "Z")
 	public static boolean aBoolean189 = true;

@@ -14,7 +14,7 @@ public final class Static115 {
 	public static final Class100 aClass100_578 = Static28.method790("niveau ");
 
 	@OriginalMember(owner = "client!ja", name = "f", descriptor = "Lclient!ih;")
-	public static final Class69 aClass69_70 = new Class69();
+	public static final LinkedList aClass69_70 = new LinkedList();
 
 	@OriginalMember(owner = "client!ja", name = "j", descriptor = "I")
 	public static int anInt2937 = 0;
