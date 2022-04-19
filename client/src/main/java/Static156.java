@@ -18,7 +18,7 @@ public final class Static156 {
 	public static final JagString aClass100_742 = Static28.method790("Okay");
 
 	@OriginalMember(owner = "client!mf", name = "x", descriptor = "Lclient!ha;")
-	public static final Class56 aClass56_1 = new Class56();
+	public static final GzipDecompressor aClass56_1 = new GzipDecompressor();
 
 	@OriginalMember(owner = "client!mf", name = "K", descriptor = "Lclient!na;")
 	public static final JagString aClass100_743 = Static28.method790("Poser");
