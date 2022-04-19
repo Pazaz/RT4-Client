@@ -30,7 +30,7 @@ public final class Static230 {
 	public static final Class100 aClass100_979 = Static28.method790("Connexion au serveur de mise -9 jour en cours");
 
 	@OriginalMember(owner = "client!sj", name = "F", descriptor = "Lclient!rc;")
-	public static Applet_Sub1 anApplet_Sub1_1 = null;
+	public static GameShell anApplet_Sub1_1 = null;
 
 	@OriginalMember(owner = "client!sj", name = "H", descriptor = "I")
 	public static int anInt5161 = 0;
