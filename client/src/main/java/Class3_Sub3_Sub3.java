@@ -23,9 +23,9 @@ public final class Class3_Sub3_Sub3 extends PcmStream {
 	@OriginalMember(owner = "client!te", name = "d", descriptor = "()Lclient!qb;")
 	@Override
 	public final PcmStream method4409() {
-		@Pc(9) Class3_Sub25 local9;
+		@Pc(9) MidiNote local9;
 		do {
-			local9 = (Class3_Sub25) this.aClass69_126.method2288();
+			local9 = (MidiNote) this.aClass69_126.method2288();
 			if (local9 == null) {
 				return null;
 			}
@@ -36,7 +36,7 @@ public final class Class3_Sub3_Sub3 extends PcmStream {
 	@OriginalMember(owner = "client!te", name = "b", descriptor = "()Lclient!qb;")
 	@Override
 	public final PcmStream method4406() {
-		@Pc(9) Class3_Sub25 local9 = (Class3_Sub25) this.aClass69_126.method2289();
+		@Pc(9) MidiNote local9 = (MidiNote) this.aClass69_126.method2289();
 		if (local9 == null) {
 			return null;
 		} else if (local9.aClass3_Sub3_Sub1_3 == null) {
@@ -47,7 +47,7 @@ public final class Class3_Sub3_Sub3 extends PcmStream {
 	}
 
 	@OriginalMember(owner = "client!te", name = "a", descriptor = "(Lclient!mf;II)V")
-	private void method4141(@OriginalArg(0) Class3_Sub25 arg0, @OriginalArg(2) int arg1) {
+	private void method4141(@OriginalArg(0) MidiNote arg0, @OriginalArg(2) int arg1) {
 		if ((this.aClass3_Sub3_Sub4_3.anIntArray508[arg0.anInt3773] & 0x4) != 0 && arg0.anInt3767 < 0) {
 			@Pc(27) int local27 = this.aClass3_Sub3_Sub4_3.anIntArray503[arg0.anInt3773] / Static44.anInt1404;
 			@Pc(37) int local37 = (local27 + 1048575 - arg0.anInt3775) / local27;
@@ -78,7 +78,7 @@ public final class Class3_Sub3_Sub3 extends PcmStream {
 	@Override
 	public final void method4410(@OriginalArg(0) int arg0) {
 		this.aClass3_Sub3_Sub2_2.method4410(arg0);
-		for (@Pc(15) Class3_Sub25 local15 = (Class3_Sub25) this.aClass69_126.method2289(); local15 != null; local15 = (Class3_Sub25) this.aClass69_126.method2288()) {
+		for (@Pc(15) MidiNote local15 = (MidiNote) this.aClass69_126.method2289(); local15 != null; local15 = (MidiNote) this.aClass69_126.method2288()) {
 			if (!this.aClass3_Sub3_Sub4_3.method4445(local15)) {
 				@Pc(27) int local27 = arg0;
 				do {
@@ -98,7 +98,7 @@ public final class Class3_Sub3_Sub3 extends PcmStream {
 	@Override
 	public final void method4408(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		this.aClass3_Sub3_Sub2_2.method4408(arg0, arg1, arg2);
-		for (@Pc(17) Class3_Sub25 local17 = (Class3_Sub25) this.aClass69_126.method2289(); local17 != null; local17 = (Class3_Sub25) this.aClass69_126.method2288()) {
+		for (@Pc(17) MidiNote local17 = (MidiNote) this.aClass69_126.method2289(); local17 != null; local17 = (MidiNote) this.aClass69_126.method2288()) {
 			if (!this.aClass3_Sub3_Sub4_3.method4445(local17)) {
 				@Pc(29) int local29 = arg2;
 				@Pc(31) int local31 = arg1;
@@ -117,7 +117,7 @@ public final class Class3_Sub3_Sub3 extends PcmStream {
 	}
 
 	@OriginalMember(owner = "client!te", name = "a", descriptor = "([ILclient!mf;IIIB)V")
-	private void method4146(@OriginalArg(0) int[] arg0, @OriginalArg(1) Class3_Sub25 arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+	private void method4146(@OriginalArg(0) int[] arg0, @OriginalArg(1) MidiNote arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		if ((this.aClass3_Sub3_Sub4_3.anIntArray508[arg1.anInt3773] & 0x4) != 0 && arg1.anInt3767 < 0) {
 			@Pc(26) int local26 = this.aClass3_Sub3_Sub4_3.anIntArray503[arg1.anInt3773] / Static44.anInt1404;
 			while (true) {
