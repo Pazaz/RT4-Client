@@ -59,7 +59,7 @@ public final class Static1 {
 				local30 = arg8[local12][local17] & 0xFF;
 				local38 = arg9[local12][local17] & 0xFF;
 				if (local38 != 0) {
-					@Pc(50) Class164 local50 = Static256.method4395(local38 - 1);
+					@Pc(50) FloType local50 = Static256.method4395(local38 - 1);
 					if (local50.anInt5899 == -1) {
 						continue;
 					}
@@ -87,7 +87,7 @@ public final class Static1 {
 					local202 = arg9[local12 + 1][local17 - 1] & 0xFF;
 					local214 = arg9[local12 - 1][local17 - 1] & 0xFF;
 					local226 = arg9[local12 + 1][local17 + 1] & 0xFF;
-					@Pc(242) Class164 local242;
+					@Pc(242) FloType local242;
 					@Pc(264) byte local264;
 					@Pc(287) int local287;
 					if (local180 != 0 && local38 != local180) {
@@ -237,7 +237,7 @@ public final class Static1 {
 						local1068 = Static277.aBooleanArrayArray4[local777 == local153 ? local131 : 0];
 						@Pc(1077) boolean[] local1077 = Static277.aBooleanArrayArray4[local143 == local777 ? local129 : 0];
 						local1086 = Static277.aBooleanArrayArray4[local190 == local777 ? local168 : 0];
-						@Pc(1092) Class164 local1092 = Static256.method4395(local777 - 1);
+						@Pc(1092) FloType local1092 = Static256.method4395(local777 - 1);
 						@Pc(1097) Class3_Sub14 local1097 = Static243.method4212(local10, local1092);
 						local1097.anInt2482 += 5;
 						local1097.anInt2482 += local1077.length - 2;
@@ -265,7 +265,7 @@ public final class Static1 {
 					local30 = arg3;
 				}
 				if (local127 != 0) {
-					@Pc(1250) Class164 local1250 = Static256.method4395(local127 - 1);
+					@Pc(1250) FloType local1250 = Static256.method4395(local127 - 1);
 					if (local1250.anInt5899 == -1) {
 						continue;
 					}
@@ -294,7 +294,7 @@ public final class Static1 {
 					local226 = arg9[local12 + 1][local17 - 1] & 0xFF;
 					local1035 = arg9[local12 + 1][local17 + 1] & 0xFF;
 					@Pc(1527) byte local1527;
-					@Pc(1496) Class164 local1496;
+					@Pc(1496) FloType local1496;
 					@Pc(1571) int local1571;
 					if (local214 == 0 || local214 == local127) {
 						local214 = 0;
@@ -468,7 +468,7 @@ public final class Static1 {
 						local1068 = Static277.aBooleanArrayArray4[local153 == local2003 ? local131 : 0];
 						local1086 = Static277.aBooleanArrayArray4[local2003 == local190 ? local168 : 0];
 						@Pc(2318) boolean[] local2318 = Static277.aBooleanArrayArray4[local2003 == local180 ? local143 : 0];
-						@Pc(2324) Class164 local2324 = Static256.method4395(local2003 - 1);
+						@Pc(2324) FloType local2324 = Static256.method4395(local2003 - 1);
 						@Pc(2329) Class3_Sub14 local2329 = Static243.method4212(local10, local2324);
 						@Pc(2345) int local2345 = Static19.method588(local2324.anInt5892, local2324.anInt5899, arg6[local12][local17]) << 8 | 0xFF;
 						@Pc(2365) int local2365 = Static19.method588(local2324.anInt5892, local2324.anInt5899, arg6[local12 + 1][local17]) << 8 | 0xFF;

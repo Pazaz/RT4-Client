@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!wl")
-public final class Class164 {
+public final class FloType {
 
 	@OriginalMember(owner = "client!wl", name = "j", descriptor = "Z")
 	public boolean aBoolean310 = false;
