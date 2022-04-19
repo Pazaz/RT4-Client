@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!vj")
-public final class Class156 {
+public final class Resampler {
 
 	@OriginalMember(owner = "client!vj", name = "k", descriptor = "I")
 	private int anInt5769;
@@ -16,7 +16,7 @@ public final class Class156 {
 	private int anInt5766;
 
 	@OriginalMember(owner = "client!vj", name = "<init>", descriptor = "(II)V")
-	public Class156(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+	public Resampler(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		if (arg1 != arg0) {
 			@Pc(12) int local12 = Static180.method3330(arg1, arg0);
 			@Pc(16) int local16 = arg1 / local12;

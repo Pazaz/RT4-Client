@@ -38,7 +38,7 @@ public final class Class3_Sub16_Sub1 extends Class3_Sub16 {
 	}
 
 	@OriginalMember(owner = "client!kj", name = "a", descriptor = "(Lclient!vj;)Lclient!kj;")
-	public final Class3_Sub16_Sub1 method2648(@OriginalArg(0) Class156 arg0) {
+	public final Class3_Sub16_Sub1 method2648(@OriginalArg(0) Resampler arg0) {
 		this.aByteArray47 = arg0.method4520(this.aByteArray47);
 		this.anInt3316 = arg0.method4524(this.anInt3316);
 		if (this.anInt3315 == this.anInt3314) {
