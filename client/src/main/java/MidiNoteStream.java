@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!te")
-public final class Class3_Sub3_Sub3 extends PcmStream {
+public final class MidiNoteStream extends PcmStream {
 
 	@OriginalMember(owner = "client!te", name = "w", descriptor = "Lclient!ih;")
 	public final LinkedList aClass69_126 = new LinkedList();
@@ -16,7 +16,7 @@ public final class Class3_Sub3_Sub3 extends PcmStream {
 	private final MidiPcmStream aClass3_Sub3_Sub4_3;
 
 	@OriginalMember(owner = "client!te", name = "<init>", descriptor = "(Lclient!va;)V")
-	public Class3_Sub3_Sub3(@OriginalArg(0) MidiPcmStream arg0) {
+	public MidiNoteStream(@OriginalArg(0) MidiPcmStream arg0) {
 		this.aClass3_Sub3_Sub4_3 = arg0;
 	}
 
