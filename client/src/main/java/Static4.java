@@ -563,7 +563,7 @@ public final class Static4 {
 							@Pc(1994) Class144 local1994;
 							if (local864 >> 29 != 0) {
 								local1146 = local864 & 0xFFFF;
-								@Pc(1894) Class8_Sub4_Sub2 local1894 = Static175.aClass8_Sub4_Sub2Array1[local1146];
+								@Pc(1894) Npc local1894 = Static175.aClass8_Sub4_Sub2Array1[local1146];
 								if (local1894 != null) {
 									if (local171 == 65535) {
 										local171 = -1;
@@ -1017,7 +1017,7 @@ public final class Static4 {
 								local133 = Static57.aClass3_Sub15_Sub1_3.method2192();
 								local786 = Static57.aClass3_Sub15_Sub1_3.method2180();
 								local864 = Static57.aClass3_Sub15_Sub1_3.method2163();
-								@Pc(3766) Class8_Sub4_Sub2 local3766 = Static175.aClass8_Sub4_Sub2Array1[local133];
+								@Pc(3766) Npc local3766 = Static175.aClass8_Sub4_Sub2Array1[local133];
 								if (local3766 != null) {
 									Static223.method3855(local786, local864, local3766);
 								}

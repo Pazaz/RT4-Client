@@ -25,7 +25,7 @@ public final class Static173 {
 	@OriginalMember(owner = "client!nk", name = "c", descriptor = "(IZ)V")
 	public static void method3240(@OriginalArg(1) boolean arg0) {
 		@Pc(7) int local7;
-		@Pc(16) Class8_Sub4_Sub2 local16;
+		@Pc(16) Npc local16;
 		@Pc(107) int local107;
 		@Pc(113) int local113;
 		@Pc(133) int local133;

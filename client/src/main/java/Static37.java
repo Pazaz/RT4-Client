@@ -34,7 +34,7 @@ public final class Static37 {
 		@Pc(43) int local43;
 		@Pc(36) int local36;
 		if (arg0.anInt3370 != -1 && arg0.anInt3370 < 32768) {
-			@Pc(26) Class8_Sub4_Sub2 local26 = Static175.aClass8_Sub4_Sub2Array1[arg0.anInt3370];
+			@Pc(26) Npc local26 = Static175.aClass8_Sub4_Sub2Array1[arg0.anInt3370];
 			if (local26 != null) {
 				local36 = arg0.anInt3421 - local26.anInt3421;
 				local43 = arg0.anInt3412 - local26.anInt3412;

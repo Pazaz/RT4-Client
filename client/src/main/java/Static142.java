@@ -37,8 +37,8 @@ public final class Static142 {
 			}
 			if (local17 != null && local17.method2682()) {
 				@Pc(58) Class96 local58;
-				if (local17 instanceof Class8_Sub4_Sub2) {
-					local58 = ((Class8_Sub4_Sub2) local17).aClass96_1;
+				if (local17 instanceof Npc) {
+					local58 = ((Npc) local17).aClass96_1;
 					if (local58.anIntArray357 != null) {
 						local58 = local58.method2932();
 					}
@@ -48,7 +48,7 @@ public final class Static142 {
 				}
 				@Pc(161) int local161;
 				if (local5 >= Static267.anInt5774) {
-					local58 = ((Class8_Sub4_Sub2) local17).aClass96_1;
+					local58 = ((Npc) local17).aClass96_1;
 					if (local58.anIntArray357 != null) {
 						local58 = local58.method2932();
 					}
@@ -124,8 +124,8 @@ public final class Static142 {
 				if (local17.anInt3378 > Static83.anInt372) {
 					@Pc(508) Sprite local508 = Static116.aClass3_Sub2_Sub1Array3[0];
 					@Pc(512) Sprite local512 = Static116.aClass3_Sub2_Sub1Array3[1];
-					if (local17 instanceof Class8_Sub4_Sub2) {
-						@Pc(518) Class8_Sub4_Sub2 local518 = (Class8_Sub4_Sub2) local17;
+					if (local17 instanceof Npc) {
+						@Pc(518) Npc local518 = (Npc) local17;
 						@Pc(528) Sprite[] local528 = (Sprite[]) Static73.aClass99_10.method3106((long) local518.aClass96_1.anInt3736);
 						if (local528 == null) {
 							local528 = Static209.method3708(local518.aClass96_1.anInt3736, Static209.aClass153_86);
@@ -168,8 +168,8 @@ public final class Static142 {
 				}
 				for (local74 = 0; local74 < 4; local74++) {
 					if (local17.anIntArray319[local74] > Static83.anInt372) {
-						if (local17 instanceof Class8_Sub4_Sub2) {
-							@Pc(725) Class8_Sub4_Sub2 local725 = (Class8_Sub4_Sub2) local17;
+						if (local17 instanceof Npc) {
+							@Pc(725) Npc local725 = (Npc) local17;
 							@Pc(728) Class96 local728 = local725.aClass96_1;
 							if (local728.anInt3730 == -1) {
 								local265 = local17.method2691() / 2;

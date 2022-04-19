@@ -29,7 +29,7 @@ public final class Static234 {
 	public static void method4014() {
 		for (@Pc(3) int local3 = 0; local3 < Static116.anInt2951; local3++) {
 			@Pc(10) int local10 = Static44.anIntArray106[local3];
-			@Pc(14) Class8_Sub4_Sub2 local14 = Static175.aClass8_Sub4_Sub2Array1[local10];
+			@Pc(14) Npc local14 = Static175.aClass8_Sub4_Sub2Array1[local10];
 			@Pc(18) int local18 = Static57.aClass3_Sub15_Sub1_3.method2229();
 			if ((local18 & 0x8) != 0) {
 				local18 += Static57.aClass3_Sub15_Sub1_3.method2229() << 8;

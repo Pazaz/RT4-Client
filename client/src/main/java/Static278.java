@@ -28,9 +28,9 @@ public final class Static278 {
 					@Pc(19) boolean local19 = false;
 					if (Static175.aClass8_Sub4_Sub2Array1[local14] == null) {
 						local19 = true;
-						Static175.aClass8_Sub4_Sub2Array1[local14] = new Class8_Sub4_Sub2();
+						Static175.aClass8_Sub4_Sub2Array1[local14] = new Npc();
 					}
-					@Pc(37) Class8_Sub4_Sub2 local37 = Static175.aClass8_Sub4_Sub2Array1[local14];
+					@Pc(37) Npc local37 = Static175.aClass8_Sub4_Sub2Array1[local14];
 					Static33.anIntArray79[Static272.anInt5214++] = local14;
 					local37.anInt3430 = Static83.anInt372;
 					if (local37.aClass96_1 != null && local37.aClass96_1.method2935()) {

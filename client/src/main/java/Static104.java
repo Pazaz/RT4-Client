@@ -75,8 +75,8 @@ public final class Static104 {
 			local227 = local9.anInt1051;
 		}
 		arg0.anInt3366 = local227;
-		if (arg0 instanceof Class8_Sub4_Sub2) {
-			local233 = ((Class8_Sub4_Sub2) arg0).aClass96_1.aBoolean181;
+		if (arg0 instanceof Npc) {
+			local233 = ((Npc) arg0).aClass96_1.aBoolean181;
 		}
 		if (local233) {
 			if (arg0.anInt3381 != arg0.anInt3400 && arg0.anInt3370 == -1 && arg0.anInt3376 != 0) {

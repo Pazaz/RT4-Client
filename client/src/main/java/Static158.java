@@ -158,8 +158,8 @@ public final class Static158 {
 					@Pc(142) int local142 = local129 + (Static238.anIntArray470[local16] & 0xFF) * 64 - Static142.anInt3483;
 					@Pc(148) Class96 local148 = Static214.method4363(local74.method2163());
 					if (Static175.aClass8_Sub4_Sub2Array1[local97] == null && (local148.aByte10 & 0x1) > 0 && local107 == Static41.anInt1316 && local125 >= 0 && local148.anInt3713 + local125 < 104 && local142 >= 0 && local142 + local148.anInt3713 < 104) {
-						Static175.aClass8_Sub4_Sub2Array1[local97] = new Class8_Sub4_Sub2();
-						@Pc(198) Class8_Sub4_Sub2 local198 = Static175.aClass8_Sub4_Sub2Array1[local97];
+						Static175.aClass8_Sub4_Sub2Array1[local97] = new Npc();
+						@Pc(198) Npc local198 = Static175.aClass8_Sub4_Sub2Array1[local97];
 						Static33.anIntArray79[Static272.anInt5214++] = local97;
 						local198.anInt3430 = Static83.anInt372;
 						local198.method2698(local148);

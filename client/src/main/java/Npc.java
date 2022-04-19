@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!km")
-public final class Class8_Sub4_Sub2 extends PathingEntity {
+public final class Npc extends PathingEntity {
 
 	@OriginalMember(owner = "client!km", name = "rc", descriptor = "Lclient!me;")
 	public Class96 aClass96_1;

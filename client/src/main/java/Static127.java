@@ -60,7 +60,7 @@ public final class Static127 {
 		@Pc(86) int local86 = Static225.anInt5068 - local55;
 		Static235.aClass134_2 = null;
 		@Pc(96) int local96;
-		@Pc(103) Class8_Sub4_Sub2 local103;
+		@Pc(103) Npc local103;
 		@Pc(109) int local109;
 		if (arg4) {
 			Static272.anInt5214 = 0;

@@ -216,7 +216,7 @@ public final class Player extends PathingEntity {
 					@Pc(291) int local291;
 					@Pc(302) int local302;
 					if (local245.anInt4058 == 1 && local245.anInt4057 >= 0 && Static175.aClass8_Sub4_Sub2Array1.length > local245.anInt4057) {
-						@Pc(278) Class8_Sub4_Sub2 local278 = Static175.aClass8_Sub4_Sub2Array1[local245.anInt4057];
+						@Pc(278) Npc local278 = Static175.aClass8_Sub4_Sub2Array1[local245.anInt4057];
 						if (local278 != null) {
 							local291 = local278.anInt3412 / 32 - Static173.aClass8_Sub4_Sub1_2.anInt3412 / 32;
 							local302 = local278.anInt3421 / 32 - Static173.aClass8_Sub4_Sub1_2.anInt3421 / 32;

@@ -106,7 +106,7 @@ public final class Static49 {
 		Static272.anInt5214 = 0;
 		for (local22 = 0; local22 < local13; local22++) {
 			@Pc(61) int local61 = Static33.anIntArray79[local22];
-			@Pc(65) Class8_Sub4_Sub2 local65 = Static175.aClass8_Sub4_Sub2Array1[local61];
+			@Pc(65) Npc local65 = Static175.aClass8_Sub4_Sub2Array1[local61];
 			@Pc(70) int local70 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
 			if (local70 == 0) {
 				Static33.anIntArray79[Static272.anInt5214++] = local61;
