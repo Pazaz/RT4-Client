@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!kd")
-public final class Class3_Sub1_Sub18_Sub1 extends Class3_Sub1_Sub18 {
+public final class Class3_Sub1_Sub18_Sub1 extends TextureOpSprite {
 
 	@OriginalMember(owner = "client!kd", name = "b", descriptor = "(II)[[I")
 	@Override

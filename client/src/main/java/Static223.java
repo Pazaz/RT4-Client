@@ -162,7 +162,7 @@ public final class Static223 {
 		} else if (arg0 == 38) {
 			return new Class3_Sub1_Sub38();
 		} else if (arg0 == 39) {
-			return new Class3_Sub1_Sub18();
+			return new TextureOpSprite();
 		} else {
 			return null;
 		}
