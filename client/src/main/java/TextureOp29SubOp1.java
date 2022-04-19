@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ci")
-public final class Class18_Sub1 extends Class18 {
+public final class TextureOp29SubOp1 extends TextureOp29SubOp {
 
 	@OriginalMember(owner = "client!ci", name = "s", descriptor = "I")
 	private final int anInt1015;
@@ -19,7 +19,7 @@ public final class Class18_Sub1 extends Class18 {
 	private final int anInt1017;
 
 	@OriginalMember(owner = "client!ci", name = "<init>", descriptor = "(IIIIII)V")
-	public Class18_Sub1(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
+	public TextureOp29SubOp1(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
 		super(-1, arg4, arg5);
 		this.anInt1015 = arg3;
 		this.anInt1012 = arg1;

@@ -191,7 +191,7 @@ public final class Static156 {
 	}
 
 	@OriginalMember(owner = "client!mf", name = "a", descriptor = "(BLclient!wa;)Lclient!ta;")
-	public static Class18_Sub4 method2960(@OriginalArg(1) Buffer arg0) {
-		return new Class18_Sub4(arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2220(), arg0.method2220(), arg0.method2229());
+	public static TextureOp29SubOp4 method2960(@OriginalArg(1) Buffer arg0) {
+		return new TextureOp29SubOp4(arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2220(), arg0.method2220(), arg0.method2229());
 	}
 }

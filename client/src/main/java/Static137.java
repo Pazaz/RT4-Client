@@ -14,8 +14,8 @@ public final class Static137 {
 	public static final JagString aClass100_637 = Static28.method790("<col=ffffff>");
 
 	@OriginalMember(owner = "client!kl", name = "a", descriptor = "(Lclient!wa;B)Lclient!kc;")
-	public static Class18_Sub2 method2664(@OriginalArg(0) Buffer arg0) {
-		return new Class18_Sub2(arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2220(), arg0.method2220(), arg0.method2229());
+	public static TextureOp29SubOp2 method2664(@OriginalArg(0) Buffer arg0) {
+		return new TextureOp29SubOp2(arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2220(), arg0.method2220(), arg0.method2229());
 	}
 
 	@OriginalMember(owner = "client!kl", name = "b", descriptor = "(II)Z")

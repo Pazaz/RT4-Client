@@ -31,7 +31,7 @@ public final class Static21 {
 	}
 
 	@OriginalMember(owner = "client!bk", name = "a", descriptor = "(BLclient!wa;)Lclient!re;")
-	public static Class18_Sub3 method620(@OriginalArg(1) Buffer arg0) {
-		return new Class18_Sub3(arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2220(), arg0.method2229());
+	public static TextureOp29SubOp3 method620(@OriginalArg(1) Buffer arg0) {
+		return new TextureOp29SubOp3(arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2220(), arg0.method2229());
 	}
 }
