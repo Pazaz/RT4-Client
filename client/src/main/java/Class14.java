@@ -10,7 +10,7 @@ public abstract class Class14 {
 	}
 
 	@OriginalMember(owner = "client!v", name = "b", descriptor = "(I)Lclient!ii;")
-	public abstract Class70 method521();
+	public abstract Js5Index method521();
 
 	@OriginalMember(owner = "client!v", name = "a", descriptor = "(II)V")
 	public abstract void method522(@OriginalArg(0) int arg0);
