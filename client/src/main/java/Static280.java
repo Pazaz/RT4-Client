@@ -675,9 +675,9 @@ public final class Static280 {
 
 	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(IIIIB)V")
 	public static void method4672(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		@Pc(12) Class3_Sub27 local12 = (Class3_Sub27) Static20.aClass133_2.method3863((long) arg3);
+		@Pc(12) Inv local12 = (Inv) Static20.aClass133_2.method3863((long) arg3);
 		if (local12 == null) {
-			local12 = new Class3_Sub27();
+			local12 = new Inv();
 			Static20.aClass133_2.method3862(local12, (long) arg3);
 		}
 		if (arg1 >= local12.anIntArray420.length) {

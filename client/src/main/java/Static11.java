@@ -35,7 +35,7 @@ public final class Static11 {
 		if (arg0 < 0) {
 			return 0;
 		}
-		@Pc(17) Class3_Sub27 local17 = (Class3_Sub27) Static20.aClass133_2.method3863((long) arg0);
+		@Pc(17) Inv local17 = (Inv) Static20.aClass133_2.method3863((long) arg0);
 		if (local17 == null) {
 			return Static246.method4241(arg0).anInt3706;
 		}
