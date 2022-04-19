@@ -55,7 +55,7 @@ public final class Loc extends Entity {
 	private final int anInt1300;
 
 	@OriginalMember(owner = "client!dc", name = "u", descriptor = "Lclient!tk;")
-	private Class144 aClass144_2;
+	private SeqType aClass144_2;
 
 	@OriginalMember(owner = "client!dc", name = "y", descriptor = "I")
 	private int anInt1297;

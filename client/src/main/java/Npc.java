@@ -26,8 +26,8 @@ public final class Npc extends PathingEntity {
 		if (this.aClass96_1 == null) {
 			return;
 		}
-		@Pc(29) Class144 local29 = this.anInt3369 != -1 && this.anInt3420 == 0 ? Static36.method941(this.anInt3369) : null;
-		@Pc(53) Class144 local53 = this.anInt3366 == -1 || this.anInt3366 == this.method2681().anInt1037 && local29 != null ? null : Static36.method941(this.anInt3366);
+		@Pc(29) SeqType local29 = this.anInt3369 != -1 && this.anInt3420 == 0 ? Static36.method941(this.anInt3369) : null;
+		@Pc(53) SeqType local53 = this.anInt3366 == -1 || this.anInt3366 == this.method2681().anInt1037 && local29 != null ? null : Static36.method941(this.anInt3366);
 		@Pc(74) Model local74 = this.aClass96_1.method2937(this.aClass147Array3, this.anInt3388, this.anInt3407, this.anInt3373, this.anInt3360, this.anInt3425, local53, this.anInt3396, local29);
 		if (local74 == null) {
 			return;

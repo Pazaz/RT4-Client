@@ -165,7 +165,7 @@ public final class Static186 {
 	@OriginalMember(owner = "client!pa", name = "a", descriptor = "(IIILclient!e;)V")
 	public static void method3415(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Player arg2) {
 		if (arg1 == arg2.anInt3369 && arg1 != -1) {
-			@Pc(89) Class144 local89 = Static36.method941(arg1);
+			@Pc(89) SeqType local89 = Static36.method941(arg1);
 			@Pc(92) int local92 = local89.anInt5347;
 			if (local92 == 1) {
 				arg2.anInt3420 = arg0;

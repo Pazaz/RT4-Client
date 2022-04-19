@@ -12,7 +12,7 @@ public final class Static208 {
 	public static JagString aClass100_906 = aClass100_907;
 
 	@OriginalMember(owner = "client!r", name = "b", descriptor = "[Lclient!tk;")
-	public static final Class144[] aClass144Array2 = new Class144[14];
+	public static final SeqType[] aClass144Array2 = new SeqType[14];
 
 	@OriginalMember(owner = "client!r", name = "d", descriptor = "Z")
 	public static final boolean aBoolean237 = false;

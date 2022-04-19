@@ -43,7 +43,7 @@ public final class SpotAnim extends Entity {
 	public final int anInt599;
 
 	@OriginalMember(owner = "client!bh", name = "J", descriptor = "Lclient!tk;")
-	private Class144 aClass144_1;
+	private SeqType aClass144_1;
 
 	@OriginalMember(owner = "client!bh", name = "<init>", descriptor = "(IIIIIII)V")
 	public SpotAnim(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6) {

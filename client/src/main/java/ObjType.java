@@ -300,7 +300,7 @@ public final class ObjType {
 	}
 
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(IIILclient!tk;II)Lclient!ak;")
-	public final Model method1824(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Class144 arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
+	public final Model method1824(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) SeqType arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
 		if (this.anIntArray214 != null && arg3 > 1) {
 			@Pc(22) int local22 = -1;
 			for (@Pc(24) int local24 = 0; local24 < 10; local24++) {

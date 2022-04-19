@@ -560,7 +560,7 @@ public final class Static4 {
 						local864 = Static57.aClass3_Sub15_Sub1_3.method2206();
 						local171 = Static57.aClass3_Sub15_Sub1_3.method2207();
 						if (local864 >> 30 == 0) {
-							@Pc(1994) Class144 local1994;
+							@Pc(1994) SeqType local1994;
 							if (local864 >> 29 != 0) {
 								local1146 = local864 & 0xFFFF;
 								@Pc(1894) Npc local1894 = Static175.aClass8_Sub4_Sub2Array1[local1146];

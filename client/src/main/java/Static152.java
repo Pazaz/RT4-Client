@@ -86,7 +86,7 @@ public final class Static152 {
 	}
 
 	@OriginalMember(owner = "client!ma", name = "a", descriptor = "(ILclient!tk;IIZI)V")
-	public static void method2836(@OriginalArg(0) int arg0, @OriginalArg(1) Class144 arg1, @OriginalArg(3) int arg2, @OriginalArg(4) boolean arg3, @OriginalArg(5) int arg4) {
+	public static void method2836(@OriginalArg(0) int arg0, @OriginalArg(1) SeqType arg1, @OriginalArg(3) int arg2, @OriginalArg(4) boolean arg3, @OriginalArg(5) int arg4) {
 		if (Static189.anInt4451 >= 50 || (arg1.anIntArrayArray38 == null || arg4 >= arg1.anIntArrayArray38.length || arg1.anIntArrayArray38[arg4] == null)) {
 			return;
 		}

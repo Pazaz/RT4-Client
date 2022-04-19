@@ -182,7 +182,7 @@ public final class Static84 {
 				if (arg2.anInt3432 != -1 && Static83.anInt372 == arg2.anInt3359) {
 					local24 = Static34.method877(arg2.anInt3432).anInt1754;
 					if (local24 != -1) {
-						@Pc(663) Class144 local663 = Static36.method941(local24);
+						@Pc(663) SeqType local663 = Static36.method941(local24);
 						if (local663 != null && local663.anIntArray473 != null) {
 							Static152.method2836(arg2.anInt3421, local663, arg2.anInt3412, arg2 == Static173.aClass8_Sub4_Sub1_2, 0);
 						}
