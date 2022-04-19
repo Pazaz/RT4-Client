@@ -71,7 +71,7 @@ public final class Static80 {
 		Static127.aBoolean159 = false;
 		Static214.anInt5581 = 0;
 		try {
-			@Pc(78) Class212 local78 = arg0.method5112("runescape");
+			@Pc(78) PrivilegedRequest local78 = arg0.method5112("runescape");
 			while (local78.anInt5925 == 0) {
 				Static231.method3983(1L);
 			}

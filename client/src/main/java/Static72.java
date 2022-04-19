@@ -8,7 +8,7 @@ public final class Static72 {
 	public static boolean aBoolean116;
 
 	@OriginalMember(owner = "client!fl", name = "C", descriptor = "Lsignlink!im;")
-	public static Class212 aClass212_3;
+	public static PrivilegedRequest aClass212_3;
 
 	@OriginalMember(owner = "client!fl", name = "D", descriptor = "[[I")
 	public static int[][] anIntArrayArray14;

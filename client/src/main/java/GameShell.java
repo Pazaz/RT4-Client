@@ -382,7 +382,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			@Pc(44) Insets local44 = Static39.aFrame1.getInsets();
 			Static39.aFrame1.setSize(local44.left + Static72.anInt2046 + local44.right, local44.top + Static122.anInt3045 + local44.bottom);
 			Static69.aClass213_4 = Static71.aClass213_3 = new SignLink(null, arg0, arg1, 28);
-			@Pc(76) Class212 local76 = Static71.aClass213_3.method5130(1, this);
+			@Pc(76) PrivilegedRequest local76 = Static71.aClass213_3.method5130(1, this);
 			while (local76.anInt5925 == 0) {
 				Static231.method3983(10L);
 			}
@@ -434,7 +434,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			if (Static71.aClass213_3 == null) {
 				Static69.aClass213_4 = Static71.aClass213_3 = new SignLink(this, arg0, null, 0);
 			}
-			@Pc(86) Class212 local86 = Static71.aClass213_3.method5130(1, this);
+			@Pc(86) PrivilegedRequest local86 = Static71.aClass213_3.method5130(1, this);
 			while (local86.anInt5925 == 0) {
 				Static231.method3983(10L);
 			}

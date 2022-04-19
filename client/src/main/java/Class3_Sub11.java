@@ -8,7 +8,7 @@ public final class Class3_Sub11 extends Node {
 	public int anInt1725;
 
 	@OriginalMember(owner = "client!ed", name = "u", descriptor = "[Lsignlink!im;")
-	public Class212[] aClass212Array1;
+	public PrivilegedRequest[] aClass212Array1;
 
 	@OriginalMember(owner = "client!ed", name = "v", descriptor = "[I")
 	public int[] anIntArray137;
@@ -23,7 +23,7 @@ public final class Class3_Sub11 extends Node {
 	public byte[][][] aByteArrayArrayArray6;
 
 	@OriginalMember(owner = "client!ed", name = "C", descriptor = "[Lsignlink!im;")
-	public Class212[] aClass212Array2;
+	public PrivilegedRequest[] aClass212Array2;
 
 	@OriginalMember(owner = "client!ed", name = "F", descriptor = "I")
 	public int anInt1732;

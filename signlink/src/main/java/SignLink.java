@@ -66,7 +66,7 @@ public final class SignLink implements Runnable {
 	public FileOnDisk aClass214_2 = null;
 
 	@OriginalMember(owner = "signlink!ll", name = "p", descriptor = "Lsignlink!im;")
-	private Class212 aClass212_7 = null;
+	private PrivilegedRequest aClass212_7 = null;
 
 	@OriginalMember(owner = "signlink!ll", name = "f", descriptor = "Z")
 	private boolean aBoolean360 = false;
@@ -78,7 +78,7 @@ public final class SignLink implements Runnable {
 	public FileOnDisk aClass214_4 = null;
 
 	@OriginalMember(owner = "signlink!ll", name = "y", descriptor = "Lsignlink!im;")
-	private Class212 aClass212_8 = null;
+	private PrivilegedRequest aClass212_8 = null;
 
 	@OriginalMember(owner = "signlink!ll", name = "i", descriptor = "Ljava/applet/Applet;")
 	public Applet anApplet2 = null;
@@ -267,18 +267,18 @@ public final class SignLink implements Runnable {
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(Ljava/lang/String;I)Lsignlink!im;")
-	public final Class212 method5112(@OriginalArg(0) String arg0) {
+	public final PrivilegedRequest method5112(@OriginalArg(0) String arg0) {
 		return this.method5114(12, 0, arg0, 0);
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "([IIILjava/awt/Component;Ljava/awt/Point;I)Lsignlink!im;")
-	public final Class212 method5113(@OriginalArg(0) int[] arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Component arg2, @OriginalArg(4) Point arg3, @OriginalArg(5) int arg4) {
+	public final PrivilegedRequest method5113(@OriginalArg(0) int[] arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Component arg2, @OriginalArg(4) Point arg3, @OriginalArg(5) int arg4) {
 		return this.method5114(17, arg4, new Object[] { arg2, arg0, arg3 }, arg1);
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(IILjava/lang/Object;II)Lsignlink!im;")
-	private Class212 method5114(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Object arg2, @OriginalArg(3) int arg3) {
-		@Pc(3) Class212 local3 = new Class212();
+	private PrivilegedRequest method5114(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Object arg2, @OriginalArg(3) int arg3) {
+		@Pc(3) PrivilegedRequest local3 = new PrivilegedRequest();
 		local3.anInt5927 = arg1;
 		local3.anInt5926 = arg3;
 		local3.anInt5924 = arg0;
@@ -296,27 +296,27 @@ public final class SignLink implements Runnable {
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(Ljava/awt/Frame;I)Lsignlink!im;")
-	public final Class212 method5115(@OriginalArg(0) Frame arg0) {
+	public final PrivilegedRequest method5115(@OriginalArg(0) Frame arg0) {
 		return this.method5114(7, 0, arg0, 0);
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(ZLjava/net/URL;)Lsignlink!im;")
-	public final Class212 method5118(@OriginalArg(1) URL arg0) {
+	public final PrivilegedRequest method5118(@OriginalArg(1) URL arg0) {
 		return this.method5114(4, 0, arg0, 0);
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(BLjava/lang/String;I)Lsignlink!im;")
-	public final Class212 method5120(@OriginalArg(1) String arg0, @OriginalArg(2) int arg1) {
+	public final PrivilegedRequest method5120(@OriginalArg(1) String arg0, @OriginalArg(2) int arg1) {
 		return this.method5114(1, 0, arg0, arg1);
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(Ljava/lang/Class;I)Lsignlink!im;")
-	public final Class212 method5121(@OriginalArg(0) Class arg0) {
+	public final PrivilegedRequest method5121(@OriginalArg(0) Class arg0) {
 		return this.method5114(11, 0, arg0, 0);
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(Ljava/lang/Class;[Ljava/lang/Class;ILjava/lang/String;)Lsignlink!im;")
-	public final Class212 method5122(@OriginalArg(0) Class arg0, @OriginalArg(1) Class[] arg1, @OriginalArg(3) String arg2) {
+	public final PrivilegedRequest method5122(@OriginalArg(0) Class arg0, @OriginalArg(1) Class[] arg1, @OriginalArg(3) String arg2) {
 		return this.method5114(8, 0, new Object[] { arg0, arg2, arg1 }, 0);
 	}
 
@@ -324,7 +324,7 @@ public final class SignLink implements Runnable {
 	@Override
 	public final void run() {
 		while (true) {
-			@Pc(16) Class212 local16;
+			@Pc(16) PrivilegedRequest local16;
 			synchronized (this) {
 				while (true) {
 					if (this.aBoolean360) {
@@ -491,7 +491,7 @@ public final class SignLink implements Runnable {
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(ILjava/lang/Class;)Lsignlink!im;")
-	public final Class212 method5123(@OriginalArg(1) Class arg0) {
+	public final PrivilegedRequest method5123(@OriginalArg(1) Class arg0) {
 		return this.method5114(10, 0, arg0, 0);
 	}
 
@@ -541,32 +541,32 @@ public final class SignLink implements Runnable {
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(ILjava/lang/String;Ljava/lang/Class;)Lsignlink!im;")
-	public final Class212 method5126(@OriginalArg(1) String arg0, @OriginalArg(2) Class arg1) {
+	public final PrivilegedRequest method5126(@OriginalArg(1) String arg0, @OriginalArg(2) Class arg1) {
 		return this.method5114(9, 0, new Object[] { arg1, arg0 }, 0);
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(II)Lsignlink!im;")
-	public final Class212 method5128(@OriginalArg(1) int arg0) {
+	public final PrivilegedRequest method5128(@OriginalArg(1) int arg0) {
 		return this.method5114(3, 0, null, arg0);
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(IIIII)Lsignlink!im;")
-	public final Class212 method5129(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
+	public final PrivilegedRequest method5129(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
 		return this.method5114(6, arg0 << 16, null, (arg2 << 16) + arg1);
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(IILjava/lang/Runnable;)Lsignlink!im;")
-	public final Class212 method5130(@OriginalArg(1) int arg0, @OriginalArg(2) Runnable arg1) {
+	public final PrivilegedRequest method5130(@OriginalArg(1) int arg0, @OriginalArg(2) Runnable arg1) {
 		return this.method5114(2, 0, arg1, arg0);
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(Ljava/lang/String;Z)Lsignlink!im;")
-	public final Class212 method5131(@OriginalArg(0) String arg0) {
+	public final PrivilegedRequest method5131(@OriginalArg(0) String arg0) {
 		return this.method5114(16, 0, arg0, 0);
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(B)Lsignlink!im;")
-	public final Class212 method5132() {
+	public final PrivilegedRequest method5132() {
 		return this.method5114(5, 0, null, 0);
 	}
 }

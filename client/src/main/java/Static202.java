@@ -33,10 +33,10 @@ public final class Static202 {
 		@Pc(17) Class3_Sub11 local17 = new Class3_Sub11();
 		local17.anInt1725 = arg1.method2229();
 		local17.anInt1732 = arg1.method2174();
-		local17.aClass212Array1 = new Class212[local17.anInt1725];
+		local17.aClass212Array1 = new PrivilegedRequest[local17.anInt1725];
 		local17.anIntArray138 = new int[local17.anInt1725];
 		local17.aByteArrayArrayArray6 = new byte[local17.anInt1725][][];
-		local17.aClass212Array2 = new Class212[local17.anInt1725];
+		local17.aClass212Array2 = new PrivilegedRequest[local17.anInt1725];
 		local17.anIntArray139 = new int[local17.anInt1725];
 		local17.anIntArray137 = new int[local17.anInt1725];
 		for (@Pc(59) int local59 = 0; local59 < local17.anInt1725; local59++) {

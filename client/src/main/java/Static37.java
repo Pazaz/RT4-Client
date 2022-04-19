@@ -14,7 +14,7 @@ public final class Static37 {
 	public static int anInt1176;
 
 	@OriginalMember(owner = "client!cm", name = "f", descriptor = "Lsignlink!im;")
-	public static Class212 aClass212_2;
+	public static PrivilegedRequest aClass212_2;
 
 	@OriginalMember(owner = "client!cm", name = "e", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_236 = Static28.method790("Vous ne pouvez pas ajouter votre nom -9 votre liste d(Wamis)3");

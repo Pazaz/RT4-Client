@@ -30,7 +30,7 @@ public final class Static197 {
 		if (!arg0.method5111()) {
 			return new Class114[0];
 		}
-		@Pc(17) Class212 local17 = arg0.method5132();
+		@Pc(17) PrivilegedRequest local17 = arg0.method5132();
 		while (local17.anInt5925 == 0) {
 			Static231.method3983(10L);
 		}
@@ -148,7 +148,7 @@ public final class Static197 {
 				} else {
 					Static260.aClass27_2 = null;
 				}
-				@Pc(300) Class212 local300 = Static71.aClass213_3.method5123(Static215.aClient1.getClass());
+				@Pc(300) PrivilegedRequest local300 = Static71.aClass213_3.method5123(Static215.aClient1.getClass());
 				while (local300.anInt5925 == 0) {
 					Static231.method3983(100L);
 				}
