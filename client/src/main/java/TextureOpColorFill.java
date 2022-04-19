@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!fm")
-public final class Class3_Sub1_Sub11 extends TextureOp {
+public final class TextureOpColorFill extends TextureOp {
 
 	@OriginalMember(owner = "client!fm", name = "P", descriptor = "I")
 	private int anInt2073;
@@ -16,13 +16,13 @@ public final class Class3_Sub1_Sub11 extends TextureOp {
 	private int anInt2080;
 
 	@OriginalMember(owner = "client!fm", name = "<init>", descriptor = "(I)V")
-	private Class3_Sub1_Sub11(@OriginalArg(0) int arg0) {
+	private TextureOpColorFill(@OriginalArg(0) int arg0) {
 		super(0, false);
 		this.method1595(arg0);
 	}
 
 	@OriginalMember(owner = "client!fm", name = "<init>", descriptor = "()V")
-	public Class3_Sub1_Sub11() {
+	public TextureOpColorFill() {
 		this(0);
 	}
 
