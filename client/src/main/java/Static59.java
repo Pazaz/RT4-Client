@@ -54,7 +54,7 @@ public final class Static59 {
 	}
 
 	@OriginalMember(owner = "client!ej", name = "a", descriptor = "(Lclient!ve;ILclient!ve;Lclient!of;)V")
-	public static void method1374(@OriginalArg(0) Class153 arg0, @OriginalArg(2) Class153 arg1, @OriginalArg(3) Interface3 arg2) {
+	public static void method1374(@OriginalArg(0) Class153 arg0, @OriginalArg(2) Class153 arg1, @OriginalArg(3) QuickChatCommandDecoder arg2) {
 		Static262.aClass153_108 = arg0;
 		Static107.anInterface3_1 = arg2;
 		Static238.aClass153_96 = arg1;

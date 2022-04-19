@@ -30,7 +30,7 @@ public final class Static107 {
 	public static boolean aBoolean147 = false;
 
 	@OriginalMember(owner = "client!id", name = "j", descriptor = "Lclient!of;")
-	public static Interface3 anInterface3_1 = null;
+	public static QuickChatCommandDecoder anInterface3_1 = null;
 
 	@OriginalMember(owner = "client!id", name = "b", descriptor = "(I)V")
 	public static void method2261() {
