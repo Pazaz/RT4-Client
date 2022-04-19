@@ -53,7 +53,7 @@ public final class Static82 {
 	}
 
 	@OriginalMember(owner = "client!gi", name = "a", descriptor = "(ILclient!jl;)V")
-	public static void method1767(@OriginalArg(1) Class3_Sub19 arg0) {
+	public static void method1767(@OriginalArg(1) HookRequest arg0) {
 		Static88.method1818(200000, arg0);
 	}
 }

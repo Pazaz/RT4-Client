@@ -58,9 +58,9 @@ public final class Static2 {
 						Static54.method1304(arg1, local49.anInt5878);
 					}
 				}
-				@Pc(72) Class3_Sub19 local72;
+				@Pc(72) HookRequest local72;
 				if (arg1 == 0 && local23.anObjectArray12 != null) {
-					local72 = new Class3_Sub19();
+					local72 = new HookRequest();
 					local72.anObjectArray31 = local23.anObjectArray12;
 					local72.aClass13_17 = local23;
 					Static82.method1767(local72);
@@ -72,7 +72,7 @@ public final class Static2 {
 							continue;
 						}
 					}
-					local72 = new Class3_Sub19();
+					local72 = new HookRequest();
 					local72.anObjectArray31 = local23.anObjectArray8;
 					local72.aClass13_17 = local23;
 					Static82.method1767(local72);

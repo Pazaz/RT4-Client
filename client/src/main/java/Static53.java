@@ -95,7 +95,7 @@ public final class Static53 {
 		}
 		@Pc(19) Component local19 = Static201.method1418(Static98.anInt2512, Static15.anInt506);
 		if (local19 != null && local19.anObjectArray27 != null) {
-			@Pc(29) Class3_Sub19 local29 = new Class3_Sub19();
+			@Pc(29) HookRequest local29 = new HookRequest();
 			local29.anObjectArray31 = local19.anObjectArray27;
 			local29.aClass13_17 = local19;
 			Static82.method1767(local29);

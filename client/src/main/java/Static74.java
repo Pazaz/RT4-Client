@@ -87,7 +87,7 @@ public final class Static74 {
 		for (@Pc(33) int local33 = 0; local33 < local31.length; local33++) {
 			@Pc(41) Component local41 = local31[local33];
 			if (local41.anObjectArray3 != null) {
-				@Pc(50) Class3_Sub19 local50 = new Class3_Sub19();
+				@Pc(50) HookRequest local50 = new HookRequest();
 				local50.anObjectArray31 = local41.anObjectArray3;
 				local50.aClass13_17 = local41;
 				Static88.method1818(2000000, local50);
