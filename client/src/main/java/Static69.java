@@ -78,7 +78,7 @@ public final class Static69 {
 		@Pc(42) Tile local42 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
 		if (local42 != null) {
 			for (@Pc(46) int local46 = 0; local46 < local42.anInt662; local46++) {
-				@Pc(55) Class31 local55 = local42.aClass31Array1[local46];
+				@Pc(55) Scenery local55 = local42.aClass31Array1[local46];
 				if ((local55.aLong56 & 0x400000L) == 4194304L) {
 					@Pc(66) int local66 = local55.aClass8_4.method4549();
 					if (local66 != -32768 && local66 < local34) {
@@ -120,7 +120,7 @@ public final class Static69 {
 										}
 									}
 									for (@Pc(232) int local232 = 0; local232 < local71.anInt662; local232++) {
-										@Pc(241) Class31 local241 = local71.aClass31Array1[local232];
+										@Pc(241) Scenery local241 = local71.aClass31Array1[local232];
 										if (local241 != null && local241.aClass8_4.method4543() && (local28 == local241.anInt1701 || local28 == local3) && (local39 == local241.anInt1696 || local39 == local11)) {
 											@Pc(270) int local270 = local241.anInt1713 + 1 - local241.anInt1701;
 											@Pc(278) int local278 = local241.anInt1698 + 1 - local241.anInt1696;

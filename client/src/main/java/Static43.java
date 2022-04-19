@@ -96,7 +96,7 @@ public final class Static43 {
 				local102 = local233.aClass8_2;
 			}
 		} else if (arg3 == 2) {
-			@Pc(148) Class31 local148 = Static47.method3996(arg2, arg1, arg0);
+			@Pc(148) Scenery local148 = Static47.method3996(arg2, arg1, arg0);
 			if (local148 != null) {
 				local100 = local148.aClass8_4;
 			}

@@ -14,7 +14,7 @@ public final class Static243 {
 	public static Class153 aClass153_98;
 
 	@OriginalMember(owner = "client!tk", name = "D", descriptor = "[Lclient!ec;")
-	public static Class31[] aClass31Array3;
+	public static Scenery[] aClass31Array3;
 
 	@OriginalMember(owner = "client!tk", name = "c", descriptor = "J")
 	public static volatile long aLong178 = 0L;

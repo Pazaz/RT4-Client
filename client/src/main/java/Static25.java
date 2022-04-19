@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static25 {
 
 	@OriginalMember(owner = "client!c", name = "bb", descriptor = "[Lclient!ec;")
-	public static Class31[] aClass31Array2;
+	public static Scenery[] aClass31Array2;
 
 	@OriginalMember(owner = "client!c", name = "W", descriptor = "Lclient!na;")
 	private static final Class100 aClass100_153 = Static28.method790(" has logged in)3");

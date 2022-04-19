@@ -85,7 +85,7 @@ public final class Static248 {
 								}
 								if (local46.aClass31Array1 != null) {
 									for (local183 = 0; local183 < local46.anInt662; local183++) {
-										@Pc(192) Class31 local192 = local46.aClass31Array1[local183];
+										@Pc(192) Scenery local192 = local46.aClass31Array1[local183];
 										local192.aClass8_4.method4545(local192.anInt1714, local23, local192.anInt1706, local192.anInt1699, local192.anInt1703);
 									}
 								}

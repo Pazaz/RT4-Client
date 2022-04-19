@@ -111,7 +111,7 @@ public final class Static254 {
 						@Pc(395) Tile local395 = arg3[local150][local108][local122];
 						if (local395 != null && local395.anInt662 > 0) {
 							for (local227 = 0; local227 < local395.anInt662; local227++) {
-								@Pc(418) Class31 local418 = local395.aClass31Array1[local227];
+								@Pc(418) Scenery local418 = local395.aClass31Array1[local227];
 								if (local418.anInt1713 != local418.anInt1701 || local418.anInt1698 != local418.anInt1696) {
 									for (local358 = local418.anInt1701; local358 <= local418.anInt1713; local358++) {
 										for (@Pc(450) int local450 = local418.anInt1696; local450 <= local418.anInt1698; local450++) {

@@ -54,7 +54,7 @@ public final class Tile extends Node {
 	public int anInt664 = 0;
 
 	@OriginalMember(owner = "client!bj", name = "w", descriptor = "[Lclient!ec;")
-	public final Class31[] aClass31Array1 = new Class31[5];
+	public final Scenery[] aClass31Array1 = new Scenery[5];
 
 	@OriginalMember(owner = "client!bj", name = "P", descriptor = "[I")
 	public final int[] anIntArray59 = new int[5];

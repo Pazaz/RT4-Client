@@ -72,7 +72,7 @@ public final class Static92 {
 			if (arg2 == 11) {
 				arg2 = 10;
 			}
-			@Pc(255) Class31 local255 = Static133.method4008(arg0, arg5, arg3);
+			@Pc(255) Scenery local255 = Static133.method4008(arg0, arg5, arg3);
 			if (local255 != null) {
 				local255.aClass8_4 = new Class8_Sub3((int) (local255.aLong56 >>> 32) & Integer.MAX_VALUE, arg2, arg1, arg0, arg5, arg3, arg6, false, local255.aClass8_4);
 			}

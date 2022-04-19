@@ -61,7 +61,7 @@ public final class Static266 {
 	}
 
 	@OriginalMember(owner = "client!vk", name = "a", descriptor = "(Lclient!ec;)V")
-	public static void method4193(@OriginalArg(0) Class31 arg0) {
+	public static void method4193(@OriginalArg(0) Scenery arg0) {
 		for (@Pc(2) int local2 = arg0.anInt1701; local2 <= arg0.anInt1713; local2++) {
 			for (@Pc(9) int local9 = arg0.anInt1696; local9 <= arg0.anInt1698; local9++) {
 				@Pc(22) Tile local22 = Static130.aClass3_Sub5ArrayArrayArray1[arg0.anInt1709][local2][local9];

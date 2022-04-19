@@ -43,7 +43,7 @@ public final class Static224 {
 			if (local30 != null) {
 				local30.anInt672--;
 				for (@Pc(40) int local40 = 0; local40 < local30.anInt662; local40++) {
-					@Pc(49) Class31 local49 = local30.aClass31Array1[local40];
+					@Pc(49) Scenery local49 = local30.aClass31Array1[local40];
 					if ((local49.aLong56 >> 29 & 0x3L) == 2L && local49.anInt1701 == arg0 && local49.anInt1696 == arg1) {
 						local49.anInt1709--;
 					}

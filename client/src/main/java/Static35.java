@@ -113,7 +113,7 @@ public final class Static35 {
 			return 0L;
 		}
 		for (@Pc(13) int local13 = 0; local13 < local7.anInt662; local13++) {
-			@Pc(22) Class31 local22 = local7.aClass31Array1[local13];
+			@Pc(22) Scenery local22 = local7.aClass31Array1[local13];
 			if ((local22.aLong56 >> 29 & 0x3L) == 2L && local22.anInt1701 == arg1 && local22.anInt1696 == arg2) {
 				return local22.aLong56;
 			}
