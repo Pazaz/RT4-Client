@@ -45,7 +45,7 @@ public final class Static27 {
 				Static2.anInterface4Array1[Static48.anInt1447].method4602();
 			}
 			if (arg1 != 0) {
-				@Pc(61) Interface4 local61 = Static2.anInterface4Array1[arg1];
+				@Pc(61) MaterialRenderer local61 = Static2.anInterface4Array1[arg1];
 				local61.method4603();
 				local61.method4604(arg0);
 			}

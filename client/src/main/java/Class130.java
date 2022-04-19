@@ -8,7 +8,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!rd")
-public final class Class130 implements Interface4 {
+public final class Class130 implements MaterialRenderer {
 
 	@OriginalMember(owner = "client!rd", name = "a", descriptor = "I")
 	private int anInt4829 = -1;
