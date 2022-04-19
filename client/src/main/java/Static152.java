@@ -46,7 +46,7 @@ public final class Static152 {
 			}
 			return;
 		}
-		@Pc(58) Class43 local58 = local7.aClass43_1;
+		@Pc(58) ShapedTile local58 = local7.aClass43_1;
 		if (local58 == null) {
 			return;
 		}

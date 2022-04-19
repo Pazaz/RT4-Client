@@ -15,7 +15,7 @@ public final class Tile extends Node {
 	public boolean aBoolean46;
 
 	@OriginalMember(owner = "client!bj", name = "B", descriptor = "Lclient!fg;")
-	public Class43 aClass43_1;
+	public ShapedTile aClass43_1;
 
 	@OriginalMember(owner = "client!bj", name = "C", descriptor = "I")
 	public int anInt663;
