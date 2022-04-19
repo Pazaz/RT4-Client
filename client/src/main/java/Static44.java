@@ -121,7 +121,7 @@ public final class Static44 {
 	@OriginalMember(owner = "client!dh", name = "a", descriptor = "(B)Lclient!uc;")
 	public static Class111 method1150() {
 		try {
-			return (Class111) Class.forName("Class111_Sub1").getDeclaredConstructor().newInstance();
+			return (Class111) Class.forName("JavaMouseWheel").getDeclaredConstructor().newInstance();
 		} catch (@Pc(15) Throwable local15) {
 			return null;
 		}

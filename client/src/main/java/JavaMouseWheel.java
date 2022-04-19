@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!o")
-public final class Class111_Sub1 extends Class111 implements MouseWheelListener {
+public final class JavaMouseWheel extends Class111 implements MouseWheelListener {
 
 	@OriginalMember(owner = "client!o", name = "g", descriptor = "I")
 	private int anInt4233 = 0;
