@@ -131,7 +131,7 @@ public final class Js5GlTextureProvider implements GlTextureProvider {
 
 	@OriginalMember(owner = "client!nk", name = "a", descriptor = "(ZI)V")
 	public final void method3239(@OriginalArg(1) int arg0) {
-		for (@Pc(19) Class3_Sub2_Sub20 local19 = (Class3_Sub2_Sub20) this.aClass54_12.method1808(); local19 != null; local19 = (Class3_Sub2_Sub20) this.aClass54_12.method1813()) {
+		for (@Pc(19) GlTexture local19 = (GlTexture) this.aClass54_12.method1808(); local19 != null; local19 = (GlTexture) this.aClass54_12.method1813()) {
 			if (local19.aBoolean287) {
 				local19.method4300(arg0);
 				local19.aBoolean287 = false;
@@ -142,7 +142,7 @@ public final class Js5GlTextureProvider implements GlTextureProvider {
 	@OriginalMember(owner = "client!nk", name = "e", descriptor = "(II)[I")
 	@Override
 	public final int[] method3235(@OriginalArg(1) int arg0) {
-		@Pc(16) Class3_Sub2_Sub20 local16 = this.method3242(arg0);
+		@Pc(16) GlTexture local16 = this.method3242(arg0);
 		return local16 == null ? null : local16.method4297(this.aBoolean200 || this.aBooleanArray89[arg0], this, this.aClass153_72);
 	}
 
@@ -151,7 +151,7 @@ public final class Js5GlTextureProvider implements GlTextureProvider {
 	public final void method3227(@OriginalArg(0) int arg0) {
 		Static27.method766(this.aByteArray61[arg0] & 0xFF, this.aByteArray62[arg0] & 0xFF);
 		@Pc(23) boolean local23 = false;
-		@Pc(28) Class3_Sub2_Sub20 local28 = this.method3242(arg0);
+		@Pc(28) GlTexture local28 = this.method3242(arg0);
 		if (local28 != null) {
 			local23 = local28.method4296(this.aClass153_72, this, this.aBoolean200 || this.aBooleanArray89[arg0]);
 		}
@@ -162,8 +162,8 @@ public final class Js5GlTextureProvider implements GlTextureProvider {
 	}
 
 	@OriginalMember(owner = "client!nk", name = "i", descriptor = "(II)Lclient!uh;")
-	private Class3_Sub2_Sub20 method3242(@OriginalArg(0) int arg0) {
-		@Pc(14) Class3_Sub2_Sub20 local14 = (Class3_Sub2_Sub20) this.aClass54_12.method1806((long) arg0);
+	private GlTexture method3242(@OriginalArg(0) int arg0) {
+		@Pc(14) GlTexture local14 = (GlTexture) this.aClass54_12.method1806((long) arg0);
 		if (local14 != null) {
 			return local14;
 		}
@@ -172,7 +172,7 @@ public final class Js5GlTextureProvider implements GlTextureProvider {
 			return null;
 		} else {
 			@Pc(41) Buffer local41 = new Buffer(local30);
-			local14 = new Class3_Sub2_Sub20(local41);
+			local14 = new GlTexture(local41);
 			this.aClass54_12.method1811(local14, (long) arg0);
 			return local14;
 		}
@@ -217,7 +217,7 @@ public final class Js5GlTextureProvider implements GlTextureProvider {
 	@OriginalMember(owner = "client!nk", name = "b", descriptor = "(II)Z")
 	@Override
 	public final boolean method3230(@OriginalArg(1) int arg0) {
-		@Pc(15) Class3_Sub2_Sub20 local15 = this.method3242(arg0);
+		@Pc(15) GlTexture local15 = this.method3242(arg0);
 		return local15 == null ? false : local15.method4299(this, this.aClass153_72);
 	}
 
@@ -279,7 +279,7 @@ public final class Js5GlTextureProvider implements GlTextureProvider {
 	@OriginalMember(owner = "client!nk", name = "a", descriptor = "(IZF)[I")
 	@Override
 	public final int[] method3232(@OriginalArg(0) int arg0, @OriginalArg(2) float arg1) {
-		@Pc(8) Class3_Sub2_Sub20 local8 = this.method3242(arg0);
+		@Pc(8) GlTexture local8 = this.method3242(arg0);
 		if (local8 == null) {
 			return null;
 		} else {
