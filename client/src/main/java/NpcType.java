@@ -479,7 +479,7 @@ public final class NpcType {
 		if (this.aClass133_15 == null) {
 			return arg1;
 		} else {
-			@Pc(18) Class3_Sub30 local18 = (Class3_Sub30) this.aClass133_15.method3863((long) arg0);
+			@Pc(18) StringNode local18 = (StringNode) this.aClass133_15.method3863((long) arg0);
 			return local18 == null ? arg1 : local18.aClass100_980;
 		}
 	}
@@ -724,7 +724,7 @@ public final class NpcType {
 					@Pc(596) int local596 = arg1.method2220();
 					@Pc(605) Node local605;
 					if (local592) {
-						local605 = new Class3_Sub30(arg1.method2202());
+						local605 = new StringNode(arg1.method2202());
 					} else {
 						local605 = new Class3_Sub21(arg1.method2174());
 					}

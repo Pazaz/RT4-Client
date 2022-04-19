@@ -35,7 +35,7 @@ public final class StructType extends SecondaryNode {
 			@Pc(49) int local49 = arg0.method2220();
 			@Pc(58) Node local58;
 			if (local45) {
-				local58 = new Class3_Sub30(arg0.method2202());
+				local58 = new StringNode(arg0.method2202());
 			} else {
 				local58 = new Class3_Sub21(arg0.method2174());
 			}
@@ -48,7 +48,7 @@ public final class StructType extends SecondaryNode {
 		if (this.aClass133_14 == null) {
 			return arg0;
 		} else {
-			@Pc(16) Class3_Sub30 local16 = (Class3_Sub30) this.aClass133_14.method3863((long) arg1);
+			@Pc(16) StringNode local16 = (StringNode) this.aClass133_14.method3863((long) arg1);
 			return local16 == null ? arg0 : local16.aClass100_980;
 		}
 	}
