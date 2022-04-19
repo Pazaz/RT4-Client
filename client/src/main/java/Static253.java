@@ -194,13 +194,13 @@ public final class Static253 {
 	}
 
 	@OriginalMember(owner = "client!ui", name = "a", descriptor = "(IZ)Lclient!ml;")
-	public static Class3_Sub2_Sub15 method4330(@OriginalArg(0) int arg0) {
-		@Pc(10) Class3_Sub2_Sub15 local10 = (Class3_Sub2_Sub15) Static149.aClass54_10.method1806((long) arg0);
+	public static EnumType method4330(@OriginalArg(0) int arg0) {
+		@Pc(10) EnumType local10 = (EnumType) Static149.aClass54_10.method1806((long) arg0);
 		if (local10 != null) {
 			return local10;
 		}
 		@Pc(24) byte[] local24 = Static84.aClass153_35.method4495(Static97.method1959(arg0), Static103.method2236(arg0));
-		local10 = new Class3_Sub2_Sub15();
+		local10 = new EnumType();
 		if (local24 != null) {
 			local10.method3094(new Buffer(local24));
 		}
