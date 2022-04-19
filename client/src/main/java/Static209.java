@@ -20,7 +20,7 @@ public final class Static209 {
 	public static volatile long aLong161 = 0L;
 
 	@OriginalMember(owner = "client!ra", name = "a", descriptor = "(ILclient!pb;BII)V")
-	public static void method3701(@OriginalArg(0) int arg0, @OriginalArg(1) Class118 arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
+	public static void method3701(@OriginalArg(0) int arg0, @OriginalArg(1) LocType arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		for (@Pc(10) Class3_Sub12 local10 = (Class3_Sub12) Static3.aClass69_135.method2289(); local10 != null; local10 = (Class3_Sub12) Static3.aClass69_135.method2288()) {
 			if (arg3 == local10.anInt2033 && local10.anInt2041 == arg0 * 128 && local10.anInt2029 == arg2 * 128 && arg1.anInt4426 == local10.aClass118_1.anInt4426) {
 				if (local10.aClass3_Sub3_Sub1_1 != null) {

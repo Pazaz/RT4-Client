@@ -37,7 +37,7 @@ public final class Static122 {
 	}
 
 	@OriginalMember(owner = "client!jh", name = "a", descriptor = "(IZLclient!pb;ILclient!km;IILclient!e;)V")
-	public static void method2411(@OriginalArg(0) int arg0, @OriginalArg(2) Class118 arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Npc arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) Player arg6) {
+	public static void method2411(@OriginalArg(0) int arg0, @OriginalArg(2) LocType arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Npc arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) Player arg6) {
 		@Pc(13) Class3_Sub12 local13 = new Class3_Sub12();
 		local13.anInt2029 = arg0 * 128;
 		local13.anInt2041 = arg4 * 128;

@@ -157,7 +157,7 @@ public final class Static217 {
 				@Pc(68) int local68 = local64 >> 2;
 				@Pc(72) int local72 = local64 & 0x3;
 				if (arg3 == local60 && local56 >= arg8 && local56 < arg8 + 8 && arg9 <= local50 && arg9 + 8 > local50) {
-					@Pc(103) Class118 local103 = Static271.method4601(local7);
+					@Pc(103) LocType local103 = Static271.method4601(local7);
 					@Pc(120) int local120 = Static52.method1286(local50 & 0x7, arg4, local72, local103.anInt4403, local103.anInt4397, local56 & 0x7) + arg5;
 					@Pc(137) int local137 = Static241.method4541(local103.anInt4397, arg4, local103.anInt4403, local56 & 0x7, local72, local50 & 0x7) + arg6;
 					if (local120 > 0 && local137 > 0 && local120 < 103 && local137 < 103) {

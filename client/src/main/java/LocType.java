@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!pb")
-public final class Class118 {
+public final class LocType {
 
 	@OriginalMember(owner = "client!pb", name = "a", descriptor = "[S")
 	private short[] aShortArray60;
@@ -206,7 +206,7 @@ public final class Class118 {
 	}
 
 	@OriginalMember(owner = "client!pb", name = "a", descriptor = "(I)Lclient!pb;")
-	public final Class118 method3417() {
+	public final LocType method3417() {
 		@Pc(26) int local26 = -1;
 		if (this.anInt4425 != -1) {
 			local26 = Static155.method2945(this.anInt4425);
@@ -363,7 +363,7 @@ public final class Class118 {
 		}
 		for (@Pc(44) int local44 = 0; local44 < this.anIntArray380.length; local44++) {
 			if (this.anIntArray380[local44] != -1) {
-				@Pc(70) Class118 local70 = Static271.method4601(this.anIntArray380[local44]);
+				@Pc(70) LocType local70 = Static271.method4601(this.anIntArray380[local44]);
 				if (local70.anInt4412 != -1 || local70.anIntArray381 != null) {
 					return true;
 				}

@@ -27,7 +27,7 @@ public final class Class3_Sub12 extends Node {
 	public int anInt2034;
 
 	@OriginalMember(owner = "client!fl", name = "E", descriptor = "Lclient!pb;")
-	public Class118 aClass118_1;
+	public LocType aClass118_1;
 
 	@OriginalMember(owner = "client!fl", name = "F", descriptor = "I")
 	public int anInt2037;
@@ -63,7 +63,7 @@ public final class Class3_Sub12 extends Node {
 	public final void method1567() {
 		@Pc(8) int local8 = this.anInt2044;
 		if (this.aClass118_1 != null) {
-			@Pc(17) Class118 local17 = this.aClass118_1.method3417();
+			@Pc(17) LocType local17 = this.aClass118_1.method3417();
 			if (local17 == null) {
 				this.anInt2044 = -1;
 				this.anIntArray181 = null;

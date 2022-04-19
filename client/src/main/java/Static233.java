@@ -131,7 +131,7 @@ public final class Static233 {
 		@Pc(24) int local24 = (int) arg0 >> 20 & 0x3;
 		@Pc(31) int local31 = (int) (arg0 >>> 32) & Integer.MAX_VALUE;
 		if (local12 == 10 || local12 == 11 || local12 == 22) {
-			@Pc(46) Class118 local46 = Static271.method4601(local31);
+			@Pc(46) LocType local46 = Static271.method4601(local31);
 			@Pc(62) int local62;
 			@Pc(59) int local59;
 			if (local24 == 0 || local24 == 2) {

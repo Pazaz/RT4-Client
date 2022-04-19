@@ -77,7 +77,7 @@ public final class Loc extends Entity {
 		this.anInt1307 = arg1;
 		this.anInt1299 = arg0;
 		this.anInt1300 = arg5;
-		@Pc(67) Class118 local67;
+		@Pc(67) LocType local67;
 		if (Static239.aBoolean269 && arg8 != null) {
 			if (arg8 instanceof Loc) {
 				((Loc) arg8).method1046();
@@ -222,7 +222,7 @@ public final class Loc extends Entity {
 	@OriginalMember(owner = "client!dc", name = "a", descriptor = "(ZI)Lclient!th;")
 	private Entity method1048(@OriginalArg(0) boolean arg0) {
 		@Pc(12) boolean local12 = Static107.anIntArrayArrayArray10 != Static83.anIntArrayArrayArray4;
-		@Pc(19) Class118 local19 = Static271.method4601(this.anInt1299);
+		@Pc(19) LocType local19 = Static271.method4601(this.anInt1299);
 		@Pc(22) int local22 = local19.anInt4430;
 		if (local19.anIntArray380 != null) {
 			local19 = local19.method3417();
