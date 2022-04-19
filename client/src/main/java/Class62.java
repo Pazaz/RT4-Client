@@ -8,7 +8,7 @@ import org.openrs2.deob.annotation.Pc;
 public class Class62 {
 
 	@OriginalMember(owner = "client!vh", name = "h", descriptor = "Lclient!qb;")
-	private Class3_Sub3 aClass3_Sub3_6;
+	private PcmStream aClass3_Sub3_6;
 
 	@OriginalMember(owner = "client!vh", name = "n", descriptor = "[I")
 	public int[] anIntArray411;
@@ -29,7 +29,7 @@ public class Class62 {
 	private long aLong151 = Class209.method5096();
 
 	@OriginalMember(owner = "client!vh", name = "w", descriptor = "[Lclient!qb;")
-	private final Class3_Sub3[] aClass3_Sub3Array5 = new Class3_Sub3[8];
+	private final PcmStream[] aClass3_Sub3Array5 = new PcmStream[8];
 
 	@OriginalMember(owner = "client!vh", name = "x", descriptor = "I")
 	private int anInt4634 = 0;
@@ -44,7 +44,7 @@ public class Class62 {
 	private boolean aBoolean229 = true;
 
 	@OriginalMember(owner = "client!vh", name = "z", descriptor = "[Lclient!qb;")
-	private final Class3_Sub3[] aClass3_Sub3Array6 = new Class3_Sub3[8];
+	private final PcmStream[] aClass3_Sub3Array6 = new PcmStream[8];
 
 	@OriginalMember(owner = "client!vh", name = "y", descriptor = "J")
 	private long aLong153 = 0L;
@@ -95,8 +95,8 @@ public class Class62 {
 				for (@Pc(73) int local73 = local47 >>> local57 & 0x11111111; local73 != 0; local73 >>>= 0x4) {
 					if ((local73 & 0x1) != 0) {
 						local47 &= ~(0x1 << local57);
-						@Pc(91) Class3_Sub3 local91 = null;
-						@Pc(96) Class3_Sub3 local96 = this.aClass3_Sub3Array5[local57];
+						@Pc(91) PcmStream local91 = null;
+						@Pc(96) PcmStream local96 = this.aClass3_Sub3Array5[local57];
 						label100: while (true) {
 							while (true) {
 								if (local96 == null) {
@@ -113,7 +113,7 @@ public class Class62 {
 									if (local45 >= this.anInt4621) {
 										break label106;
 									}
-									@Pc(145) Class3_Sub3 local145 = local96.method4406();
+									@Pc(145) PcmStream local145 = local96.method4406();
 									if (local145 != null) {
 										@Pc(150) int local150 = local96.anInt5626;
 										while (local145 != null) {
@@ -121,7 +121,7 @@ public class Class62 {
 											local145 = local96.method4409();
 										}
 									}
-									@Pc(169) Class3_Sub3 local169 = local96.aClass3_Sub3_8;
+									@Pc(169) PcmStream local169 = local96.aClass3_Sub3_8;
 									local96.aClass3_Sub3_8 = null;
 									if (local91 == null) {
 										this.aClass3_Sub3Array5[local57] = local169;
@@ -146,10 +146,10 @@ public class Class62 {
 				local49--;
 			}
 			for (local49 = 0; local49 < 8; local49++) {
-				@Pc(212) Class3_Sub3 local212 = this.aClass3_Sub3Array5[local49];
+				@Pc(212) PcmStream local212 = this.aClass3_Sub3Array5[local49];
 				this.aClass3_Sub3Array5[local49] = this.aClass3_Sub3Array6[local49] = null;
 				while (local212 != null) {
-					@Pc(227) Class3_Sub3 local227 = local212.aClass3_Sub3_8;
+					@Pc(227) PcmStream local227 = local212.aClass3_Sub3_8;
 					local212.aClass3_Sub3_8 = null;
 					local212 = local227;
 				}
@@ -239,14 +239,14 @@ public class Class62 {
 	}
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "(ILclient!qb;)V")
-	public final synchronized void method3566(@OriginalArg(1) Class3_Sub3 arg0) {
+	public final synchronized void method3566(@OriginalArg(1) PcmStream arg0) {
 		this.aClass3_Sub3_6 = arg0;
 	}
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "(Lclient!qb;IB)V")
-	private void method3567(@OriginalArg(0) Class3_Sub3 arg0, @OriginalArg(1) int arg1) {
+	private void method3567(@OriginalArg(0) PcmStream arg0, @OriginalArg(1) int arg1) {
 		@Pc(16) int local16 = arg1 >> 5;
-		@Pc(21) Class3_Sub3 local21 = this.aClass3_Sub3Array6[local16];
+		@Pc(21) PcmStream local21 = this.aClass3_Sub3Array6[local16];
 		if (local21 == null) {
 			this.aClass3_Sub3Array5[local16] = arg0;
 		} else {
