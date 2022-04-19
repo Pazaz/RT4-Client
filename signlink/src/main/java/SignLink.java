@@ -63,7 +63,7 @@ public final class SignLink implements Runnable {
 	private AudioSource anInterface10_2;
 
 	@OriginalMember(owner = "signlink!ll", name = "g", descriptor = "Lsignlink!qm;")
-	public Class214 aClass214_2 = null;
+	public FileOnDisk aClass214_2 = null;
 
 	@OriginalMember(owner = "signlink!ll", name = "p", descriptor = "Lsignlink!im;")
 	private Class212 aClass212_7 = null;
@@ -72,10 +72,10 @@ public final class SignLink implements Runnable {
 	private boolean aBoolean360 = false;
 
 	@OriginalMember(owner = "signlink!ll", name = "h", descriptor = "Lsignlink!qm;")
-	public Class214 aClass214_3 = null;
+	public FileOnDisk aClass214_3 = null;
 
 	@OriginalMember(owner = "signlink!ll", name = "d", descriptor = "Lsignlink!qm;")
-	public Class214 aClass214_4 = null;
+	public FileOnDisk aClass214_4 = null;
 
 	@OriginalMember(owner = "signlink!ll", name = "y", descriptor = "Lsignlink!im;")
 	private Class212 aClass212_8 = null;
@@ -93,7 +93,7 @@ public final class SignLink implements Runnable {
 	public EventQueue anEventQueue1;
 
 	@OriginalMember(owner = "signlink!ll", name = "c", descriptor = "[Lsignlink!qm;")
-	public Class214[] aClass214Array1;
+	public FileOnDisk[] aClass214Array1;
 
 	@OriginalMember(owner = "signlink!ll", name = "t", descriptor = "Lsignlink!e;")
 	private Class210 aClass210_1;
@@ -105,13 +105,13 @@ public final class SignLink implements Runnable {
 	private final Thread aThread3;
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(ZLjava/lang/String;)Lsignlink!qm;")
-	private static Class214 method5117(@OriginalArg(1) String arg0) {
+	private static FileOnDisk method5117(@OriginalArg(1) String arg0) {
 		@Pc(41) String[] local41 = new String[] { "c:/rscache/", "/rscache/", aString17, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", "" };
 		for (@Pc(43) int local43 = 0; local43 < local41.length; local43++) {
 			@Pc(51) String local51 = local41[local43];
 			if (local51.length() <= 0 || (new File(local51)).exists()) {
 				try {
-					return new Class214(new File(local51, "jagex_" + arg0 + "_preferences.dat"), "rw", 10000L);
+					return new FileOnDisk(new File(local51, "jagex_" + arg0 + "_preferences.dat"), "rw", 10000L);
 				} catch (@Pc(84) Exception local84) {
 				}
 			}
@@ -223,12 +223,12 @@ public final class SignLink implements Runnable {
 			}
 		} catch (@Pc(153) Exception local153) {
 		}
-		this.aClass214_4 = new Class214(method5127(null, this.anInt5929, "random.dat"), "rw", 25L);
-		this.aClass214_2 = new Class214(method5127(this.aString19, this.anInt5929, "main_file_cache.dat2"), "rw", 104857600L);
-		this.aClass214_3 = new Class214(method5127(this.aString19, this.anInt5929, "main_file_cache.idx255"), "rw", 1048576L);
-		this.aClass214Array1 = new Class214[arg3];
+		this.aClass214_4 = new FileOnDisk(method5127(null, this.anInt5929, "random.dat"), "rw", 25L);
+		this.aClass214_2 = new FileOnDisk(method5127(this.aString19, this.anInt5929, "main_file_cache.dat2"), "rw", 104857600L);
+		this.aClass214_3 = new FileOnDisk(method5127(this.aString19, this.anInt5929, "main_file_cache.idx255"), "rw", 1048576L);
+		this.aClass214Array1 = new FileOnDisk[arg3];
 		for (@Pc(200) int local200 = 0; local200 < arg3; local200++) {
-			this.aClass214Array1[local200] = new Class214(method5127(this.aString19, this.anInt5929, "main_file_cache.idx" + local200), "rw", 1048576L);
+			this.aClass214Array1[local200] = new FileOnDisk(method5127(this.aString19, this.anInt5929, "main_file_cache.idx" + local200), "rw", 1048576L);
 		}
 		try {
 			this.aClass210_1 = new Class210();
@@ -442,7 +442,7 @@ public final class SignLink implements Runnable {
 								local477.setAccessible(false);
 							} else if (local45 == 12) {
 								local147 = (String) local16.anObject7;
-								@Pc(558) Class214 local558 = method5117(local147);
+								@Pc(558) FileOnDisk local558 = method5117(local147);
 								local16.anObject6 = local558;
 							} else if (local45 == 14) {
 								@Pc(570) int local570 = local16.anInt5927;
