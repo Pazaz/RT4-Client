@@ -711,7 +711,7 @@ public final class Static88 {
 									} else {
 										local1182.anInt458 = local803;
 										local1182.anInt503 = local1052;
-										@Pc(13416) Class55 local13416 = Static71.method1439(local803);
+										@Pc(13416) ObjType local13416 = Static71.method1439(local803);
 										local1182.anInt508 = local13416.anInt2339;
 										local1182.anInt494 = local13416.anInt2359;
 										local1182.anInt450 = local13416.anInt2353;
@@ -2057,7 +2057,7 @@ public final class Static88 {
 											Static3.aClass100Array176[local26++] = Static71.method1439(local809).aClass100_495;
 											continue;
 										}
-										@Pc(11269) Class55 local11269;
+										@Pc(11269) ObjType local11269;
 										if (local226 == 4201) {
 											local28 -= 2;
 											local809 = Static254.anIntArray487[local28];
@@ -2094,7 +2094,7 @@ public final class Static88 {
 											Static254.anIntArray487[local28++] = Static71.method1439(local809).anInt2336 == 1 ? 1 : 0;
 											continue;
 										}
-										@Pc(11417) Class55 local11417;
+										@Pc(11417) ObjType local11417;
 										if (local226 == 4205) {
 											local28--;
 											local809 = Static254.anIntArray487[local28];

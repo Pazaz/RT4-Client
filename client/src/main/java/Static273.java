@@ -77,7 +77,7 @@ public final class Static273 {
 					local41 = Static7.anIntArray75[local33[local39++]];
 				}
 				if (local46 == 6) {
-					local41 = Class55.anIntArray213[Static141.anIntArray326[local33[local39++]] - 1];
+					local41 = ObjType.anIntArray213[Static141.anIntArray326[local33[local39++]] - 1];
 				}
 				if (local46 == 7) {
 					local41 = Static7.anIntArray75[local33[local39++]] * 100 / 46875;

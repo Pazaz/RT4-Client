@@ -550,7 +550,7 @@ public final class Static87 {
 												}
 											}
 											if (local30.aBoolean32 && local30.anInt458 != -1) {
-												@Pc(1989) Class55 local1989 = Static71.method1439(local30.anInt458);
+												@Pc(1989) ObjType local1989 = Static71.method1439(local30.anInt458);
 												local1934 = local1989.aClass100_495;
 												if (local1934 == null) {
 													local1934 = Static92.aClass100_510;
@@ -662,7 +662,7 @@ public final class Static87 {
 											}
 										}
 									} else {
-										@Pc(2611) Class55 local2611;
+										@Pc(2611) ObjType local2611;
 										if (local30.anInt452 == 6) {
 											@Pc(2587) boolean local2587 = Static154.method2926(local30);
 											@Pc(2589) Model local2589 = null;

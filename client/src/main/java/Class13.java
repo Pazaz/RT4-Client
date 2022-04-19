@@ -882,7 +882,7 @@ public final class Class13 {
 					return local61;
 				}
 			} else if (local10 == 4) {
-				@Pc(164) Class55 local164 = Static71.method1439(local13);
+				@Pc(164) ObjType local164 = Static71.method1439(local13);
 				@Pc(173) Model local173 = local164.method1824(arg0, arg3, arg1, 10, arg2);
 				if (local173 == null) {
 					Static211.aBoolean72 = true;

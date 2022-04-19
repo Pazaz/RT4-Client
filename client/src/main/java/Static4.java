@@ -666,7 +666,7 @@ public final class Static4 {
 						Static99.anIntArray240[local864] = local133;
 						Static141.anIntArray326[local864] = 1;
 						for (local171 = 0; local171 < 98; local171++) {
-							if (Class55.anIntArray213[local171] <= local786) {
+							if (ObjType.anIntArray213[local171] <= local786) {
 								Static141.anIntArray326[local864] = local171 + 2;
 							}
 						}
@@ -1497,7 +1497,7 @@ public final class Static4 {
 									local171 = Static57.aClass3_Sub15_Sub1_3.method2192();
 									if (Static248.method3288(local171)) {
 										@Pc(5603) Class13 local5603 = Static5.method32(local786);
-										@Pc(5615) Class55 local5615;
+										@Pc(5615) ObjType local5615;
 										if (local5603.aBoolean32) {
 											Static209.method3707(local786, local133, local864);
 											local5615 = Static71.method1439(local864);
