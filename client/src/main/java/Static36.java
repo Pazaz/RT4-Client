@@ -17,13 +17,13 @@ public final class Static36 {
 	public static final HashTable aClass133_3 = new HashTable(16);
 
 	@OriginalMember(owner = "client!client", name = "eb", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_235 = Static28.method790("cyan:");
+	private static final JagString aClass100_235 = Static28.method790("cyan:");
 
 	@OriginalMember(owner = "client!client", name = "X", descriptor = "Lclient!na;")
-	public static Class100 aClass100_233 = aClass100_235;
+	public static JagString aClass100_233 = aClass100_235;
 
 	@OriginalMember(owner = "client!client", name = "cb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_234 = aClass100_235;
+	public static final JagString aClass100_234 = aClass100_235;
 
 	@OriginalMember(owner = "client!client", name = "a", descriptor = "(Lclient!be;)Lclient!be;")
 	public static Class13 method938(@OriginalArg(0) Class13 arg0) {

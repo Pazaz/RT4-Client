@@ -13,7 +13,7 @@ public final class Static213 {
 	public static Js5 aClass153_88;
 
 	@OriginalMember(owner = "client!re", name = "r", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_910 = Static28.method790("Hierhin gehen");
+	public static final JagString aClass100_910 = Static28.method790("Hierhin gehen");
 
 	@OriginalMember(owner = "client!re", name = "a", descriptor = "(I)V")
 	public static void method3729() {

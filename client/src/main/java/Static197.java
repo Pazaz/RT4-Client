@@ -14,16 +14,16 @@ public final class Static197 {
 	public static int anInt4620;
 
 	@OriginalMember(owner = "client!pm", name = "Y", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_872 = Static28.method790("<br>");
+	public static final JagString aClass100_872 = Static28.method790("<br>");
 
 	@OriginalMember(owner = "client!pm", name = "ab", descriptor = "Z")
 	public static boolean aBoolean228 = true;
 
 	@OriginalMember(owner = "client!pm", name = "gb", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_874 = Static28.method790(" from your friend list first)3");
+	private static final JagString aClass100_874 = Static28.method790(" from your friend list first)3");
 
 	@OriginalMember(owner = "client!pm", name = "fb", descriptor = "Lclient!na;")
-	public static Class100 aClass100_873 = aClass100_874;
+	public static JagString aClass100_873 = aClass100_874;
 
 	@OriginalMember(owner = "client!pm", name = "a", descriptor = "(ILsignlink!ll;)[Lclient!od;")
 	public static Class114[] method3558(@OriginalArg(1) SignLink arg0) {

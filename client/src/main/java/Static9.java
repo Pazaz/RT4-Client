@@ -14,7 +14,7 @@ public final class Static9 {
 	public static int anInt178 = 0;
 
 	@OriginalMember(owner = "client!al", name = "r", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_35 = Static28.method790("showVideoAd");
+	public static final JagString aClass100_35 = Static28.method790("showVideoAd");
 
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "(Lclient!pb;BIIIIIII)V")
 	public static void method181(@OriginalArg(0) Class118 arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7) {

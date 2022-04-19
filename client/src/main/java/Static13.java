@@ -1,7 +1,7 @@
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
-import java.awt.image.ImageObserver;
+
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
@@ -24,19 +24,19 @@ public final class Static13 {
 	public static final Class3_Sub23 aClass3_Sub23_1 = new Class3_Sub23(0, 0);
 
 	@OriginalMember(owner = "client!bc", name = "f", descriptor = "(B)Lclient!na;")
-	public static Class100 method471() {
-		@Pc(32) Class100 local32;
+	public static JagString method471() {
+		@Pc(32) JagString local32;
 		if (Static260.anInt5014 == 1 && Static231.anInt5204 < 2) {
-			local32 = Static34.method882(new Class100[] { Static222.aClass100_937, Static206.aClass100_901, Static34.aClass100_203, Static225.aClass100_961 });
+			local32 = Static34.method882(new JagString[] { Static222.aClass100_937, Static206.aClass100_901, Static34.aClass100_203, Static225.aClass100_961 });
 		} else if (Static241.aBoolean302 && Static231.anInt5204 < 2) {
-			local32 = Static34.method882(new Class100[] { Static102.aClass100_545, Static206.aClass100_901, Static78.aClass100_466, Static225.aClass100_961 });
+			local32 = Static34.method882(new JagString[] { Static102.aClass100_545, Static206.aClass100_901, Static78.aClass100_466, Static225.aClass100_961 });
 		} else if (Static172.aBoolean199 && Static187.aBooleanArray101[81] && Static231.anInt5204 > 2) {
 			local32 = Static269.method2228(Static231.anInt5204 - 2);
 		} else {
 			local32 = Static269.method2228(Static231.anInt5204 - 1);
 		}
 		if (Static231.anInt5204 > 2) {
-			local32 = Static34.method882(new Class100[] { local32, Static1.aClass100_2, Static123.method2423(Static231.anInt5204 - 2), Static253.aClass100_1054 });
+			local32 = Static34.method882(new JagString[] { local32, Static1.aClass100_2, Static123.method2423(Static231.anInt5204 - 2), Static253.aClass100_1054 });
 		}
 		return local32;
 	}
@@ -50,7 +50,7 @@ public final class Static13 {
 	}
 
 	@OriginalMember(owner = "client!bc", name = "a", descriptor = "(Ljava/awt/Color;ZZLclient!na;I)V")
-	public static void method473(@OriginalArg(0) Color arg0, @OriginalArg(2) boolean arg1, @OriginalArg(3) Class100 arg2, @OriginalArg(4) int arg3) {
+	public static void method473(@OriginalArg(0) Color arg0, @OriginalArg(2) boolean arg1, @OriginalArg(3) JagString arg2, @OriginalArg(4) int arg3) {
 		try {
 			@Pc(6) Graphics local6 = Static154.aCanvas1.getGraphics();
 			if (Static222.aFont1 == null) {

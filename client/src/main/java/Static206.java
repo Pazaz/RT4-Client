@@ -11,10 +11,10 @@ public final class Static206 {
 	public static BufferedSocket aClass95_3;
 
 	@OriginalMember(owner = "client!qk", name = "a", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_899 = Static28.method790("0(U");
+	public static final JagString aClass100_899 = Static28.method790("0(U");
 
 	@OriginalMember(owner = "client!qk", name = "b", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_900 = Static28.method790("tbrefresh");
+	public static final JagString aClass100_900 = Static28.method790("tbrefresh");
 
 	@OriginalMember(owner = "client!qk", name = "f", descriptor = "I")
 	public static int anInt4773 = 0;
@@ -23,10 +23,10 @@ public final class Static206 {
 	public static int anInt4774 = 0;
 
 	@OriginalMember(owner = "client!qk", name = "l", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_902 = Static28.method790(" ");
+	private static final JagString aClass100_902 = Static28.method790(" ");
 
 	@OriginalMember(owner = "client!qk", name = "i", descriptor = "Lclient!na;")
-	public static Class100 aClass100_901 = aClass100_902;
+	public static JagString aClass100_901 = aClass100_902;
 
 	@OriginalMember(owner = "client!qk", name = "a", descriptor = "(ZIIIIFII)[I")
 	public static int[] method3679(@OriginalArg(5) float arg0) {

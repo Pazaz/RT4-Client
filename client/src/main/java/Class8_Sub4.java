@@ -244,7 +244,7 @@ public abstract class Class8_Sub4 extends Entity {
 	public int anInt3425 = 0;
 
 	@OriginalMember(owner = "client!fe", name = "Wb", descriptor = "Lclient!na;")
-	public Class100 aClass100_640 = null;
+	public JagString aClass100_640 = null;
 
 	@OriginalMember(owner = "client!fe", name = "oc", descriptor = "I")
 	public int anInt3432 = -1;

@@ -67,12 +67,12 @@ public abstract class Font extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "a", descriptor = "(Lclient!na;IIIIIIIII)I")
-	public final int method2852(@OriginalArg(0) Class100 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) int arg8, @OriginalArg(9) int arg9) {
+	public final int method2852(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) int arg8, @OriginalArg(9) int arg9) {
 		return this.method2869(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 	}
 
 	@OriginalMember(owner = "client!rk", name = "a", descriptor = "(Lclient!na;II)V")
-	private void method2853(@OriginalArg(0) Class100 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+	private void method2853(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		@Pc(4) int local4 = arg2 - this.anInt3626;
 		@Pc(6) int local6 = -1;
 		@Pc(8) int local8 = 0;
@@ -84,7 +84,7 @@ public abstract class Font extends SecondaryNode {
 			} else {
 				@Pc(120) int local120;
 				if (local22 == 62 && local6 != -1) {
-					@Pc(42) Class100 local42 = arg0.method3137(local14, local6 + 1);
+					@Pc(42) JagString local42 = arg0.method3137(local14, local6 + 1);
 					local6 = -1;
 					if (local42.method3108(Static218.aClass100_696)) {
 						local22 = 60;
@@ -176,7 +176,7 @@ public abstract class Font extends SecondaryNode {
 	protected abstract void method2855(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6);
 
 	@OriginalMember(owner = "client!rk", name = "b", descriptor = "(Lclient!na;I)I")
-	public final int method2856(@OriginalArg(0) Class100 arg0, @OriginalArg(1) int arg1) {
+	public final int method2856(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1) {
 		@Pc(10) int local10 = this.method2867(arg0, new int[] { arg1 }, Static218.aClass100Array110);
 		@Pc(12) int local12 = 0;
 		for (@Pc(14) int local14 = 0; local14 < local10; local14++) {
@@ -189,7 +189,7 @@ public abstract class Font extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "a", descriptor = "(Lclient!na;IIII)V")
-	public final void method2857(@OriginalArg(0) Class100 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+	public final void method2857(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		if (arg0 != null) {
 			this.method2874(arg3, arg4);
 			this.method2853(arg0, arg1, arg2);
@@ -197,7 +197,7 @@ public abstract class Font extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "a", descriptor = "(Lclient!na;)I")
-	public final int method2858(@OriginalArg(0) Class100 arg0) {
+	public final int method2858(@OriginalArg(0) JagString arg0) {
 		if (arg0 == null) {
 			return 0;
 		}
@@ -211,7 +211,7 @@ public abstract class Font extends SecondaryNode {
 				local5 = local15;
 			} else {
 				if (local23 == 62 && local5 != -1) {
-					@Pc(43) Class100 local43 = arg0.method3137(local15, local5 + 1);
+					@Pc(43) JagString local43 = arg0.method3137(local15, local5 + 1);
 					local5 = -1;
 					if (local43.method3108(Static218.aClass100_696)) {
 						local23 = 60;
@@ -255,7 +255,7 @@ public abstract class Font extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "a", descriptor = "(Lclient!na;IIIILjava/util/Random;I)I")
-	public final int method2859(@OriginalArg(0) Class100 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(5) Random arg3, @OriginalArg(6) int arg4) {
+	public final int method2859(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(5) Random arg3, @OriginalArg(6) int arg4) {
 		if (arg0 == null) {
 			return 0;
 		}
@@ -275,12 +275,12 @@ public abstract class Font extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "c", descriptor = "(Lclient!na;I)I")
-	public final int method2860(@OriginalArg(0) Class100 arg0, @OriginalArg(1) int arg1) {
+	public final int method2860(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1) {
 		return this.method2867(arg0, new int[] { arg1 }, Static218.aClass100Array110);
 	}
 
 	@OriginalMember(owner = "client!rk", name = "b", descriptor = "(Lclient!na;)V")
-	private void method2861(@OriginalArg(0) Class100 arg0) {
+	private void method2861(@OriginalArg(0) JagString arg0) {
 		try {
 			if (arg0.method3138(Static218.aClass100_705)) {
 				Static218.anInt3635 = arg0.method3136(4).method3110(16);
@@ -321,7 +321,7 @@ public abstract class Font extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "b", descriptor = "(Lclient!na;IIII)V")
-	public final void method2864(@OriginalArg(0) Class100 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+	public final void method2864(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		if (arg0 != null) {
 			this.method2874(arg3, arg4);
 			this.method2853(arg0, arg1 - this.method2858(arg0), arg2);
@@ -329,7 +329,7 @@ public abstract class Font extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "d", descriptor = "(Lclient!na;I)V")
-	private void method2866(@OriginalArg(0) Class100 arg0, @OriginalArg(1) int arg1) {
+	private void method2866(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1) {
 		@Pc(1) int local1 = 0;
 		@Pc(3) boolean local3 = false;
 		@Pc(7) int local7 = arg0.method3120();
@@ -349,7 +349,7 @@ public abstract class Font extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "a", descriptor = "(Lclient!na;[I[Lclient!na;)I")
-	public final int method2867(@OriginalArg(0) Class100 arg0, @OriginalArg(1) int[] arg1, @OriginalArg(2) Class100[] arg2) {
+	public final int method2867(@OriginalArg(0) JagString arg0, @OriginalArg(1) int[] arg1, @OriginalArg(2) JagString[] arg2) {
 		if (arg0 == null) {
 			return 0;
 		}
@@ -369,7 +369,7 @@ public abstract class Font extends SecondaryNode {
 				local19 = local29;
 			} else {
 				if (local37 == 62 && local19 != -1) {
-					@Pc(57) Class100 local57 = arg0.method3137(local29, local19 + 1);
+					@Pc(57) JagString local57 = arg0.method3137(local29, local19 + 1);
 					local19 = -1;
 					Static218.aClass100_720.method3152(60);
 					Static218.aClass100_720.method3113(local57);
@@ -492,7 +492,7 @@ public abstract class Font extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "a", descriptor = "(Lclient!na;IIIIII)V")
-	public final void method2868(@OriginalArg(0) Class100 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
+	public final void method2868(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
 		if (arg0 == null) {
 			return;
 		}
@@ -510,7 +510,7 @@ public abstract class Font extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "a", descriptor = "(Lclient!na;IIIIIIIIII)I")
-	public final int method2869(@OriginalArg(0) Class100 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(8) int arg7, @OriginalArg(9) int arg8, @OriginalArg(10) int arg9) {
+	public final int method2869(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(8) int arg7, @OriginalArg(9) int arg8, @OriginalArg(10) int arg9) {
 		if (arg0 == null) {
 			return 0;
 		}
@@ -562,7 +562,7 @@ public abstract class Font extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "a", descriptor = "(Lclient!na;IIIII)V")
-	public final void method2871(@OriginalArg(0) Class100 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4) {
+	public final void method2871(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4) {
 		if (arg0 == null) {
 			return;
 		}
@@ -578,7 +578,7 @@ public abstract class Font extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "b", descriptor = "(Lclient!na;IIIII)V")
-	public final void method2872(@OriginalArg(0) Class100 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4) {
+	public final void method2872(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4) {
 		if (arg0 == null) {
 			return;
 		}
@@ -615,7 +615,7 @@ public abstract class Font extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "c", descriptor = "(Lclient!na;IIII)V")
-	public final void method2875(@OriginalArg(0) Class100 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+	public final void method2875(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		if (arg0 != null) {
 			this.method2874(arg3, arg4);
 			this.method2853(arg0, arg1 - this.method2858(arg0) / 2, arg2);
@@ -694,7 +694,7 @@ public abstract class Font extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "a", descriptor = "(Lclient!na;IIIIIIIILjava/util/Random;I[I)I")
-	public final int method2878(@OriginalArg(0) Class100 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) int arg8, @OriginalArg(9) Random arg9, @OriginalArg(10) int arg10, @OriginalArg(11) int[] arg11) {
+	public final int method2878(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) int arg8, @OriginalArg(9) Random arg9, @OriginalArg(10) int arg10, @OriginalArg(11) int[] arg11) {
 		if (arg0 == null) {
 			return 0;
 		}
@@ -739,7 +739,7 @@ public abstract class Font extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "a", descriptor = "(Lclient!na;II[I[I)V")
-	private void method2879(@OriginalArg(0) Class100 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int[] arg3, @OriginalArg(4) int[] arg4) {
+	private void method2879(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int[] arg3, @OriginalArg(4) int[] arg4) {
 		@Pc(4) int local4 = arg2 - this.anInt3626;
 		@Pc(6) int local6 = -1;
 		@Pc(8) int local8 = 0;
@@ -754,7 +754,7 @@ public abstract class Font extends SecondaryNode {
 				@Pc(130) int local130;
 				@Pc(141) int local141;
 				if (local24 == 62 && local6 != -1) {
-					@Pc(44) Class100 local44 = arg0.method3137(local16, local6 + 1);
+					@Pc(44) JagString local44 = arg0.method3137(local16, local6 + 1);
 					local6 = -1;
 					if (local44.method3108(Static218.aClass100_696)) {
 						local24 = 60;

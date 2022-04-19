@@ -9,13 +9,13 @@ public final class Static223 {
 	public static boolean[] aBooleanArray115;
 
 	@OriginalMember(owner = "client!sc", name = "f", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_946 = Static28.method790("(R");
+	public static final JagString aClass100_946 = Static28.method790("(R");
 
 	@OriginalMember(owner = "client!sc", name = "g", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_947 = Static28.method790(" )2> <col=ff9040>");
+	public static final JagString aClass100_947 = Static28.method790(" )2> <col=ff9040>");
 
 	@OriginalMember(owner = "client!sc", name = "k", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_948 = Static28.method790("Hierhin drehen");
+	public static final JagString aClass100_948 = Static28.method790("Hierhin drehen");
 
 	@OriginalMember(owner = "client!sc", name = "o", descriptor = "I")
 	public static int anInt5028 = 0;
@@ -24,10 +24,10 @@ public final class Static223 {
 	public static int anInt5029 = 0;
 
 	@OriginalMember(owner = "client!sc", name = "w", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_950 = Static28.method790("Loaded sprites");
+	private static final JagString aClass100_950 = Static28.method790("Loaded sprites");
 
 	@OriginalMember(owner = "client!sc", name = "r", descriptor = "Lclient!na;")
-	public static Class100 aClass100_949 = aClass100_950;
+	public static JagString aClass100_949 = aClass100_950;
 
 	@OriginalMember(owner = "client!sc", name = "v", descriptor = "I")
 	public static int anInt5032 = 0;
@@ -39,7 +39,7 @@ public final class Static223 {
 	public static final boolean[] aBooleanArray116 = new boolean[100];
 
 	@OriginalMember(owner = "client!sc", name = "D", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_951 = Static28.method790("<col=ff7000>");
+	public static final JagString aClass100_951 = Static28.method790("<col=ff7000>");
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(IIILclient!km;)V")
 	public static void method3855(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) Class8_Sub4_Sub2 arg2) {

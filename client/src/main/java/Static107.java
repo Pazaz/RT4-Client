@@ -18,7 +18,7 @@ public final class Static107 {
 	public static int anInt2875 = -1;
 
 	@OriginalMember(owner = "client!id", name = "c", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_566 = Static28.method790("::fpson");
+	public static final JagString aClass100_566 = Static28.method790("::fpson");
 
 	@OriginalMember(owner = "client!id", name = "d", descriptor = "[[[I")
 	public static final int[][][] anIntArrayArrayArray9 = new int[2][][];

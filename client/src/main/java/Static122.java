@@ -14,13 +14,13 @@ public final class Static122 {
 	public static Js5 aClass153_46;
 
 	@OriginalMember(owner = "client!jh", name = "b", descriptor = "[Lclient!na;")
-	public static final Class100[] aClass100Array92 = new Class100[200];
+	public static final JagString[] aClass100Array92 = new JagString[200];
 
 	@OriginalMember(owner = "client!jh", name = "f", descriptor = "D")
 	public static double aDouble1 = -1.0D;
 
 	@OriginalMember(owner = "client!jh", name = "g", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_591 = Static28.method790("(Udns");
+	public static final JagString aClass100_591 = Static28.method790("(Udns");
 
 	@OriginalMember(owner = "client!jh", name = "j", descriptor = "I")
 	public static int anInt3047 = 0;

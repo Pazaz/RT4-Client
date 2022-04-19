@@ -8,7 +8,7 @@ public final class Class61 {
 	public int[] anIntArray237;
 
 	@OriginalMember(owner = "client!hj", name = "f", descriptor = "[Lclient!na;")
-	public Class100[] aClass100Array79;
+	public JagString[] aClass100Array79;
 
 	@OriginalMember(owner = "client!hj", name = "h", descriptor = "Lclient!qc;")
 	public Class3_Sub2_Sub17 aClass3_Sub2_Sub17_1;

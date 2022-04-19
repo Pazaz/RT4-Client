@@ -8,16 +8,16 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static88 {
 
 	@OriginalMember(owner = "client!h", name = "Bb", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_499 = Static28.method790("green:");
+	private static final JagString aClass100_499 = Static28.method790("green:");
 
 	@OriginalMember(owner = "client!h", name = "wb", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_496 = aClass100_499;
+	private static final JagString aClass100_496 = aClass100_499;
 
 	@OriginalMember(owner = "client!h", name = "yb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_497 = Static28.method790(" zuerst von Ihrer Ignorieren)2Liste(Q");
+	public static final JagString aClass100_497 = Static28.method790(" zuerst von Ihrer Ignorieren)2Liste(Q");
 
 	@OriginalMember(owner = "client!h", name = "zb", descriptor = "Lclient!na;")
-	public static Class100 aClass100_498 = aClass100_499;
+	public static JagString aClass100_498 = aClass100_499;
 
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(Lclient!ve;Lclient!ve;Z)V")
 	public static void method1817(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {
@@ -44,10 +44,10 @@ public final class Static88 {
 		try {
 			Static215.anIntArray432 = new int[local14.anInt4667];
 			@Pc(50) int local50 = 0;
-			Static180.aClass100Array125 = new Class100[local14.anInt4671];
+			Static180.aClass100Array125 = new JagString[local14.anInt4671];
 			@Pc(56) int local56 = 0;
 			@Pc(77) int local77;
-			@Pc(194) Class100 local194;
+			@Pc(194) JagString local194;
 			for (local58 = 1; local58 < local4.length; local58++) {
 				if (local4[local58] instanceof Integer) {
 					local77 = (Integer) local4[local58];
@@ -79,8 +79,8 @@ public final class Static88 {
 						local77 = arg1.anInt3099;
 					}
 					Static215.anIntArray432[local50++] = local77;
-				} else if (local4[local58] instanceof Class100) {
-					local194 = (Class100) local4[local58];
+				} else if (local4[local58] instanceof JagString) {
+					local194 = (JagString) local4[local58];
 					if (local194.method3108(Static15.aClass100_83)) {
 						local194 = arg1.aClass100_598;
 					}
@@ -98,7 +98,7 @@ public final class Static88 {
 				@Pc(803) int local803;
 				@Pc(652) int local652;
 				@Pc(809) int local809;
-				@Pc(609) Class100 local609;
+				@Pc(609) JagString local609;
 				if (local226 < 100) {
 					if (local226 == 0) {
 						Static254.anIntArray487[local28++] = local33[local30];
@@ -229,7 +229,7 @@ public final class Static88 {
 						local77 = local33[local30];
 						@Pc(642) Class3_Sub2_Sub17 local642 = Static91.method1875(local77);
 						@Pc(646) int[] local646 = new int[local642.anInt4667];
-						@Pc(650) Class100[] local650 = new Class100[local642.anInt4671];
+						@Pc(650) JagString[] local650 = new JagString[local642.anInt4671];
 						for (local652 = 0; local652 < local642.anInt4665; local652++) {
 							local646[local652] = Static254.anIntArray487[local652 + local28 - local642.anInt4665];
 						}
@@ -476,7 +476,7 @@ public final class Static88 {
 					} else {
 						@Pc(1552) boolean local1552;
 						if ((local226 < 1000 || local226 >= 1100) && (local226 < 2000 || local226 >= 2100)) {
-							@Pc(2522) Class100 local2522;
+							@Pc(2522) JagString local2522;
 							if (local226 >= 1100 && local226 < 1200 || !(local226 < 2100 || local226 >= 2200)) {
 								if (local226 < 2000) {
 									local1182 = local1020 ? Static274.aClass13_24 : Static227.aClass13_25;
@@ -2990,7 +2990,7 @@ public final class Static88 {
 														local1552 = Static254.anIntArray487[local28] == 1;
 														local26--;
 														local609 = Static3.aClass100Array176[local26];
-														@Pc(8356) Class100 local8356 = Static34.method882(new Class100[] { Static15.method479(), local609 });
+														@Pc(8356) JagString local8356 = Static34.method882(new JagString[] { Static15.method479(), local609 });
 														if (Static39.aFrame1 != null || local1552 && SignLink.anInt5928 != 3 && SignLink.aString15.startsWith("win") && !Static178.aBoolean203) {
 															Static164.aBoolean194 = local1552;
 															Static175.aClass100_797 = local8356;
@@ -3008,13 +3008,13 @@ public final class Static88 {
 														local609 = Static3.aClass100Array176[local26];
 														if (local609.method3120() > 0) {
 															if (Static103.aClass100Array88 == null) {
-																Static103.aClass100Array88 = new Class100[Static132.anIntArray309[Static266.anInt5343]];
+																Static103.aClass100Array88 = new JagString[Static132.anIntArray309[Static266.anInt5343]];
 															}
 															Static103.aClass100Array88[local1052] = local609;
 														}
 														if (local2522.method3120() > 0) {
 															if (Static263.aClass100Array174 == null) {
-																Static263.aClass100Array174 = new Class100[Static132.anIntArray309[Static266.anInt5343]];
+																Static263.aClass100Array174 = new JagString[Static132.anIntArray309[Static266.anInt5343]];
 															}
 															Static263.aClass100Array174[local1052] = local2522;
 														}
@@ -3830,14 +3830,14 @@ public final class Static88 {
 										local609 = Static3.aClass100Array176[local26];
 										local28--;
 										local803 = Static254.anIntArray487[local28];
-										Static3.aClass100Array176[local26++] = Static34.method882(new Class100[] { local609, Static123.method2423(local803) });
+										Static3.aClass100Array176[local26++] = Static34.method882(new JagString[] { local609, Static123.method2423(local803) });
 										continue;
 									}
 									if (local226 == 4101) {
 										local26 -= 2;
 										local2522 = Static3.aClass100Array176[local26 + 1];
 										local609 = Static3.aClass100Array176[local26];
-										Static3.aClass100Array176[local26++] = Static34.method882(new Class100[] { local609, local2522 });
+										Static3.aClass100Array176[local26++] = Static34.method882(new JagString[] { local609, local2522 });
 										continue;
 									}
 									if (local226 == 4102) {
@@ -3845,7 +3845,7 @@ public final class Static88 {
 										local609 = Static3.aClass100Array176[local26];
 										local28--;
 										local803 = Static254.anIntArray487[local28];
-										Static3.aClass100Array176[local26++] = Static34.method882(new Class100[] { local609, Static110.method2285(local803) });
+										Static3.aClass100Array176[local26++] = Static34.method882(new JagString[] { local609, Static110.method2285(local803) });
 										continue;
 									}
 									if (local226 == 4103) {
@@ -3862,7 +3862,7 @@ public final class Static88 {
 										local652 = Static102.aCalendar2.get(5);
 										local4859 = Static102.aCalendar2.get(2);
 										local1087 = Static102.aCalendar2.get(1);
-										Static3.aClass100Array176[local26++] = Static34.method882(new Class100[] { Static123.method2423(local652), Static163.aClass100_767, Static34.aClass100Array40[local4859], Static163.aClass100_767, Static123.method2423(local1087) });
+										Static3.aClass100Array176[local26++] = Static34.method882(new JagString[] { Static123.method2423(local652), Static163.aClass100_767, Static34.aClass100Array40[local4859], Static163.aClass100_767, Static123.method2423(local1087) });
 										continue;
 									}
 									if (local226 == 4105) {
@@ -4136,7 +4136,7 @@ public final class Static88 {
 				}
 				Static89.method1839("CS2 - scr:" + local14.aLong192 + " op:" + local44, local14378);
 			} else {
-				@Pc(14385) Class100 local14385 = Static87.method1804(30);
+				@Pc(14385) JagString local14385 = Static87.method1804(30);
 				local14385.method3113(Static219.aClass100_928).method3113(local14.aClass100_880);
 				for (local58 = Static138.anInt3445 - 1; local58 >= 0; local58--) {
 					local14385.method3113(Static40.aClass100_253).method3113(Static67.aClass61Array3[local58].aClass3_Sub2_Sub17_1.aClass100_880);
@@ -4146,7 +4146,7 @@ public final class Static88 {
 					local14385.method3113(Static176.aClass100_802).method3113(Static123.method2423(local58));
 				}
 				if (Static83.anInt370 != 0) {
-					Static103.method2231(Static72.aClass100_447, 0, Static34.method882(new Class100[] { Static167.aClass100_780, local14.aClass100_880 }));
+					Static103.method2231(Static72.aClass100_447, 0, Static34.method882(new JagString[] { Static167.aClass100_780, local14.aClass100_880 }));
 				}
 				Static89.method1839("CS2 - scr:" + local14.aLong192 + " op:" + local44 + new String(local14385.method3148()), local14378);
 			}

@@ -20,7 +20,7 @@ public final class Static173 {
 	public static final SynthSound[] aClass138Array1 = new SynthSound[50];
 
 	@OriginalMember(owner = "client!nk", name = "o", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_792 = Static28.method790("Titelbild ge-Offnet)3");
+	public static final JagString aClass100_792 = Static28.method790("Titelbild ge-Offnet)3");
 
 	@OriginalMember(owner = "client!nk", name = "c", descriptor = "(IZ)V")
 	public static void method3240(@OriginalArg(1) boolean arg0) {

@@ -4,7 +4,6 @@ import java.nio.ByteOrder;
 import java.nio.IntBuffer;
 import javax.media.opengl.GL;
 import javax.media.opengl.GLCapabilities;
-import javax.media.opengl.GLCapabilitiesChooser;
 import javax.media.opengl.GLContext;
 import javax.media.opengl.GLDrawable;
 import javax.media.opengl.GLDrawableFactory;
@@ -124,10 +123,10 @@ public final class Static239 {
 	private static boolean aBoolean272 = true;
 
 	@OriginalMember(owner = "client!tf", name = "I", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_1007 = Static28.method790("radeon");
+	private static final JagString aClass100_1007 = Static28.method790("radeon");
 
 	@OriginalMember(owner = "client!tf", name = "a", descriptor = "(Ljava/lang/String;)Lclient!na;")
-	private static Class100 method4147(@OriginalArg(0) String arg0) {
+	private static JagString method4147(@OriginalArg(0) String arg0) {
 		@Pc(3) byte[] local3;
 		try {
 			local3 = arg0.getBytes("ISO-8859-1");
@@ -436,12 +435,12 @@ public final class Static239 {
 		aBoolean275 = aGL1.isExtensionAvailable("GL_ARB_texture_cube_map");
 		aBoolean274 = aGL1.isExtensionAvailable("GL_ARB_vertex_program");
 		aBoolean267 = aGL1.isExtensionAvailable("GL_EXT_texture3D");
-		@Pc(176) Class100 local176 = method4147(aString6).method3114();
+		@Pc(176) JagString local176 = method4147(aString6).method3114();
 		if (local176.method3131(aClass100_1007) != -1) {
 			@Pc(184) int local184 = 0;
-			@Pc(193) Class100[] local193 = local176.method3145().method3147(32);
+			@Pc(193) JagString[] local193 = local176.method3145().method3147(32);
 			for (@Pc(195) int local195 = 0; local195 < local193.length; local195++) {
-				@Pc(203) Class100 local203 = local193[local195];
+				@Pc(203) JagString local203 = local193[local195];
 				if (local203.method3120() >= 4 && local203.method3137(4, 0).method3123()) {
 					local184 = local203.method3137(4, 0).method3132();
 					break;

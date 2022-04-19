@@ -8,13 +8,13 @@ public final class Static101 {
 	public static long aLong98;
 
 	@OriginalMember(owner = "client!hm", name = "R", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_537 = Static28.method790("<img=1>");
+	public static final JagString aClass100_537 = Static28.method790("<img=1>");
 
 	@OriginalMember(owner = "client!hm", name = "T", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_538 = Static28.method790(" ");
+	public static final JagString aClass100_538 = Static28.method790(" ");
 
 	@OriginalMember(owner = "client!hm", name = "Y", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_539 = Static28.method790("Fps:");
+	public static final JagString aClass100_539 = Static28.method790("Fps:");
 
 	@OriginalMember(owner = "client!hm", name = "ab", descriptor = "I")
 	public static int anInt2640 = 0;
@@ -23,10 +23,10 @@ public final class Static101 {
 	public static Class10_Sub1[] aClass10_Sub1Array1 = new Class10_Sub1[0];
 
 	@OriginalMember(owner = "client!hm", name = "lb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_540 = Static28.method790("Moteur son pr-Bpar-B");
+	public static final JagString aClass100_540 = Static28.method790("Moteur son pr-Bpar-B");
 
 	@OriginalMember(owner = "client!hm", name = "a", descriptor = "(Lclient!na;B)I")
-	public static int method2053(@OriginalArg(0) Class100 arg0) {
+	public static int method2053(@OriginalArg(0) JagString arg0) {
 		for (@Pc(12) int local12 = 0; local12 < Static153.aClass100Array113.length; local12++) {
 			if (Static153.aClass100Array113[local12].method3111(arg0)) {
 				return local12;

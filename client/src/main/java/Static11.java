@@ -8,7 +8,7 @@ public final class Static11 {
 	public static Class62 aClass62_1;
 
 	@OriginalMember(owner = "client!ba", name = "s", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_68 = Static28.method790("Loaded update list");
+	private static final JagString aClass100_68 = Static28.method790("Loaded update list");
 
 	@OriginalMember(owner = "client!ba", name = "w", descriptor = "I")
 	public static int anInt384 = 0;
@@ -17,13 +17,13 @@ public final class Static11 {
 	public static boolean aBoolean15 = true;
 
 	@OriginalMember(owner = "client!ba", name = "z", descriptor = "Lclient!na;")
-	public static Class100 aClass100_70 = aClass100_68;
+	public static JagString aClass100_70 = aClass100_68;
 
 	@OriginalMember(owner = "client!ba", name = "B", descriptor = "I")
 	public static int anInt386 = 20;
 
 	@OriginalMember(owner = "client!ba", name = "E", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_72 = Static28.method790("Stufe: ");
+	public static final JagString aClass100_72 = Static28.method790("Stufe: ");
 
 	@OriginalMember(owner = "client!ba", name = "e", descriptor = "(I)V")
 	public static void method443() {

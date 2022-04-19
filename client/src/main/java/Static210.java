@@ -11,7 +11,7 @@ public final class Static210 {
 	public static final HashTable aClass133_21 = new HashTable(512);
 
 	@OriginalMember(owner = "client!rb", name = "e", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_909 = Static28.method790("Versteckt");
+	public static final JagString aClass100_909 = Static28.method790("Versteckt");
 
 	@OriginalMember(owner = "client!rb", name = "a", descriptor = "(I)V")
 	public static void method3711() {

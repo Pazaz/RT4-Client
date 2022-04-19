@@ -14,10 +14,10 @@ public final class Static5 {
 	public static int anInt39 = -1;
 
 	@OriginalMember(owner = "client!af", name = "f", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_8 = Static28.method790("Gegenstand f-Ur Mitglieder");
+	public static final JagString aClass100_8 = Static28.method790("Gegenstand f-Ur Mitglieder");
 
 	@OriginalMember(owner = "client!af", name = "g", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_9 = Static28.method790("hint_mapedge");
+	public static final JagString aClass100_9 = Static28.method790("hint_mapedge");
 
 	@OriginalMember(owner = "client!af", name = "k", descriptor = "I")
 	public static int anInt45 = 0;
@@ -26,7 +26,7 @@ public final class Static5 {
 	public static final short[] aShortArray2 = new short[] { 30, 6, 31, 29, 10, 44, 37, 57 };
 
 	@OriginalMember(owner = "client!af", name = "m", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_10 = Static28.method790("<br>");
+	public static final JagString aClass100_10 = Static28.method790("<br>");
 
 	@OriginalMember(owner = "client!af", name = "a", descriptor = "(ILjava/lang/String;)V")
 	public static void method31(@OriginalArg(1) String arg0) {

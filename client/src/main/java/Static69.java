@@ -15,22 +15,22 @@ public final class Static69 {
 	public static volatile boolean aBoolean115 = true;
 
 	@OriginalMember(owner = "client!fh", name = "W", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_442 = Static28.method790("M");
+	private static final JagString aClass100_442 = Static28.method790("M");
 
 	@OriginalMember(owner = "client!fh", name = "T", descriptor = "Lclient!na;")
-	public static Class100 aClass100_440 = aClass100_442;
+	public static JagString aClass100_440 = aClass100_442;
 
 	@OriginalMember(owner = "client!fh", name = "U", descriptor = "[[Z")
 	public static final boolean[][] aBooleanArrayArray2 = new boolean[][] { new boolean[0], { true, false, true }, { true, false, false, true }, { false, false, true, true }, { true, true, false }, { false, true, true }, { true, false, false, true }, { false, false, false, true, true }, { false, true, true }, { true, false, true, true, true }, { false, true, true, true, true }, { false, true, true, true, true, false } };
 
 	@OriginalMember(owner = "client!fh", name = "V", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_441 = Static28.method790("vert:");
+	public static final JagString aClass100_441 = Static28.method790("vert:");
 
 	@OriginalMember(owner = "client!fh", name = "ab", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_443 = Static28.method790("::noclip");
+	public static final JagString aClass100_443 = Static28.method790("::noclip");
 
 	@OriginalMember(owner = "client!fh", name = "bb", descriptor = "Lclient!na;")
-	public static Class100 aClass100_444 = aClass100_442;
+	public static JagString aClass100_444 = aClass100_442;
 
 	@OriginalMember(owner = "client!fh", name = "a", descriptor = "(IIII)I")
 	public static int method1540(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {

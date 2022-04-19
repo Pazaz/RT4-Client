@@ -17,7 +17,7 @@ public final class Static59 {
 	public static int anInt1814 = 0;
 
 	@OriginalMember(owner = "client!ej", name = "cb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_400 = Static28.method790("clignotant2:");
+	public static final JagString aClass100_400 = Static28.method790("clignotant2:");
 
 	@OriginalMember(owner = "client!ej", name = "h", descriptor = "(I)V")
 	public static void method1372() {
@@ -67,7 +67,7 @@ public final class Static59 {
 	}
 
 	@OriginalMember(owner = "client!ej", name = "a", descriptor = "(IZIJ)Lclient!na;")
-	public static Class100 method1376(@OriginalArg(3) long arg0) {
+	public static JagString method1376(@OriginalArg(3) long arg0) {
 		@Pc(35) long local35 = arg0 / (long) 10;
 		@Pc(37) int local37 = 1;
 		while (local35 != 0L) {
@@ -93,7 +93,7 @@ public final class Static59 {
 			}
 			local61[local51 - local79 - 1] = (byte) (local92 + 48);
 		}
-		@Pc(126) Class100 local126 = new Class100();
+		@Pc(126) JagString local126 = new JagString();
 		local126.aByteArray52 = local61;
 		local126.anInt4030 = local51;
 		return local126;

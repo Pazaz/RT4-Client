@@ -12,16 +12,16 @@ public final class Static224 {
 	public static int anInt5062;
 
 	@OriginalMember(owner = "client!sd", name = "J", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_955 = Static28.method790("Veuillez patienter )2 tentative de r-Btablissement)3");
+	public static final JagString aClass100_955 = Static28.method790("Veuillez patienter )2 tentative de r-Btablissement)3");
 
 	@OriginalMember(owner = "client!sd", name = "M", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_956 = Static28.method790("Face here");
+	private static final JagString aClass100_956 = Static28.method790("Face here");
 
 	@OriginalMember(owner = "client!sd", name = "O", descriptor = "Lclient!na;")
-	public static Class100 aClass100_957 = aClass100_956;
+	public static JagString aClass100_957 = aClass100_956;
 
 	@OriginalMember(owner = "client!sd", name = "P", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_958 = Static28.method790("Liste der Welten geladen");
+	public static final JagString aClass100_958 = Static28.method790("Liste der Welten geladen");
 
 	@OriginalMember(owner = "client!sd", name = "S", descriptor = "I")
 	public static int anInt5063 = 100;

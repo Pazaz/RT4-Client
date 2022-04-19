@@ -23,7 +23,7 @@ public final class Static124 {
 	public static final Class99 aClass99_17 = new Class99(50);
 
 	@OriginalMember(owner = "client!jk", name = "F", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_596 = Static28.method790("::tween");
+	public static final JagString aClass100_596 = Static28.method790("::tween");
 
 	@OriginalMember(owner = "client!jk", name = "G", descriptor = "Z")
 	public static boolean aBoolean157 = false;
@@ -34,7 +34,7 @@ public final class Static124 {
 	}
 
 	@OriginalMember(owner = "client!jk", name = "a", descriptor = "(ILclient!na;)Lclient!bn;")
-	public static Class3_Sub2_Sub4 method2434(@OriginalArg(1) Class100 arg0) {
+	public static Class3_Sub2_Sub4 method2434(@OriginalArg(1) JagString arg0) {
 		for (@Pc(15) Class3_Sub2_Sub4 local15 = (Class3_Sub2_Sub4) Static228.aClass69_120.method2289(); local15 != null; local15 = (Class3_Sub2_Sub4) Static228.aClass69_120.method2288()) {
 			if (local15.aClass100_138.method3108(arg0)) {
 				return local15;

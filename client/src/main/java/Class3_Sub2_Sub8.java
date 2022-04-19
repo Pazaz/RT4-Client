@@ -15,7 +15,7 @@ public final class Class3_Sub2_Sub8 extends SecondaryNode {
 	public int anInt1271;
 
 	@OriginalMember(owner = "client!da", name = "W", descriptor = "Lclient!na;")
-	public Class100 aClass100_254;
+	public JagString aClass100_254;
 
 	@OriginalMember(owner = "client!da", name = "<init>", descriptor = "(II)V")
 	public Class3_Sub2_Sub8(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {

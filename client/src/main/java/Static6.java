@@ -8,10 +8,10 @@ public final class Static6 {
 	public static final Class3_Sub15_Sub1 aClass3_Sub15_Sub1_1 = new Class3_Sub15_Sub1(5000);
 
 	@OriginalMember(owner = "client!ag", name = "ab", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_17 = Static28.method790("0");
+	public static final JagString aClass100_17 = Static28.method790("0");
 
 	@OriginalMember(owner = "client!ag", name = "bb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_18 = Static28.method790("<col=40ff00>");
+	public static final JagString aClass100_18 = Static28.method790("<col=40ff00>");
 
 	@OriginalMember(owner = "client!ag", name = "cb", descriptor = "[Lclient!cl;")
 	public static final Class3_Sub2_Sub7[] aClass3_Sub2_Sub7Array1 = new Class3_Sub2_Sub7[14];

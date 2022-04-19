@@ -51,14 +51,14 @@ public final class Static182 {
 	}
 
 	@OriginalMember(owner = "client!oj", name = "a", descriptor = "(IZIJI)Lclient!na;")
-	public static Class100 method3360(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(3) long arg3) {
-		@Pc(9) Class100 local9 = Static87.method1804(0);
+	public static JagString method3360(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(3) long arg3) {
+		@Pc(9) JagString local9 = Static87.method1804(0);
 		if (arg3 < 0L) {
 			arg3 = -arg3;
 			local9.method3113(Static73.aClass100_453);
 		}
-		@Pc(26) Class100 local26 = Static244.aClass100_1017;
-		@Pc(28) Class100 local28 = Static30.aClass100_185;
+		@Pc(26) JagString local26 = Static244.aClass100_1017;
+		@Pc(28) JagString local28 = Static30.aClass100_185;
 		if (arg0 == 1) {
 			local26 = Static30.aClass100_185;
 			local28 = Static244.aClass100_1017;
@@ -71,18 +71,18 @@ public final class Static182 {
 			local26 = Static30.aClass100_185;
 			local28 = Static244.aClass100_1017;
 		}
-		@Pc(59) Class100 local59 = Static87.method1804(0);
+		@Pc(59) JagString local59 = Static87.method1804(0);
 		@Pc(61) int local61;
 		for (local61 = 0; local61 < arg2; local61++) {
 			local59.method3113(Static123.method2423((int) (arg3 % 10L)));
 			arg3 /= 10L;
 		}
 		local61 = 0;
-		@Pc(137) Class100 local137;
+		@Pc(137) JagString local137;
 		if (arg3 == 0L) {
 			local137 = Static6.aClass100_17;
 		} else {
-			@Pc(95) Class100 local95 = Static87.method1804(0);
+			@Pc(95) JagString local95 = Static87.method1804(0);
 			while (arg3 > 0L) {
 				if (arg1 && local61 != 0 && local61 % 3 == 0) {
 					local95.method3113(local26);
@@ -96,7 +96,7 @@ public final class Static182 {
 		if (local59.method3120() > 0) {
 			local59.method3113(local28);
 		}
-		return Static34.method882(new Class100[] { local9, local137.method3124(), local59.method3124() });
+		return Static34.method882(new JagString[] { local9, local137.method3124(), local59.method3124() });
 	}
 
 	@OriginalMember(owner = "client!oj", name = "a", descriptor = "(IBI[[III)I")

@@ -10,7 +10,7 @@ public final class Static12 {
 	public static final byte[][][] aByteArrayArrayArray2 = new byte[4][104][104];
 
 	@OriginalMember(owner = "client!bb", name = "m", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_73 = Static28.method790("runes");
+	public static final JagString aClass100_73 = Static28.method790("runes");
 
 	@OriginalMember(owner = "client!bb", name = "n", descriptor = "I")
 	public static int anInt391 = 255;
@@ -19,13 +19,13 @@ public final class Static12 {
 	public static final byte[][] aByteArrayArray2 = new byte[250][];
 
 	@OriginalMember(owner = "client!bb", name = "A", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_74 = Static28.method790("::");
+	public static final JagString aClass100_74 = Static28.method790("::");
 
 	@OriginalMember(owner = "client!bb", name = "E", descriptor = "I")
 	public static int anInt400 = 0;
 
 	@OriginalMember(owner = "client!bb", name = "N", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_75 = Static28.method790("gelb:");
+	public static final JagString aClass100_75 = Static28.method790("gelb:");
 
 	@OriginalMember(owner = "client!bb", name = "a", descriptor = "(I)V")
 	public static void method447() {

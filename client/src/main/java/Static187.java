@@ -11,10 +11,10 @@ public final class Static187 {
 	public static final int[][][] anIntArrayArrayArray18 = new int[4][13][13];
 
 	@OriginalMember(owner = "client!pb", name = "J", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_831 = Static28.method790("Choisir une option");
+	public static final JagString aClass100_831 = Static28.method790("Choisir une option");
 
 	@OriginalMember(owner = "client!pb", name = "K", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_832 = Static28.method790("Chargement des textures )2 ");
+	public static final JagString aClass100_832 = Static28.method790("Chargement des textures )2 ");
 
 	@OriginalMember(owner = "client!pb", name = "Q", descriptor = "I")
 	public static int anInt4413 = 1;
@@ -23,7 +23,7 @@ public final class Static187 {
 	public static int anInt4422 = 0;
 
 	@OriginalMember(owner = "client!pb", name = "cb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_833 = Static28.method790("Chargement en cours)3 Veuillez patienter)3");
+	public static final JagString aClass100_833 = Static28.method790("Chargement en cours)3 Veuillez patienter)3");
 
 	@OriginalMember(owner = "client!pb", name = "rb", descriptor = "S")
 	public static short aShort27 = 320;

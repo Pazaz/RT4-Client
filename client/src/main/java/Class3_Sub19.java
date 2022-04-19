@@ -8,7 +8,7 @@ public final class Class3_Sub19 extends Node {
 	public Class13 aClass13_16;
 
 	@OriginalMember(owner = "client!jl", name = "r", descriptor = "Lclient!na;")
-	public Class100 aClass100_598;
+	public JagString aClass100_598;
 
 	@OriginalMember(owner = "client!jl", name = "w", descriptor = "I")
 	public int anInt3097;

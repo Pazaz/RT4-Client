@@ -16,7 +16,7 @@ public final class Static250 {
 	public static boolean aBoolean283 = true;
 
 	@OriginalMember(owner = "client!uf", name = "d", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1040 = Static28.method790(" autres options");
+	public static final JagString aClass100_1040 = Static28.method790(" autres options");
 
 	@OriginalMember(owner = "client!uf", name = "e", descriptor = "I")
 	public static int anInt5434 = 0;
@@ -25,13 +25,13 @@ public final class Static250 {
 	public static final Class99 aClass99_33 = new Class99(260);
 
 	@OriginalMember(owner = "client!uf", name = "o", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1041 = Static28.method790("scrollbar");
+	public static final JagString aClass100_1041 = Static28.method790("scrollbar");
 
 	@OriginalMember(owner = "client!uf", name = "q", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1042 = Static28.method790("Null");
+	public static final JagString aClass100_1042 = Static28.method790("Null");
 
 	@OriginalMember(owner = "client!uf", name = "s", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1043 = Static28.method790(" <col=00ff80>");
+	public static final JagString aClass100_1043 = Static28.method790(" <col=00ff80>");
 
 	@OriginalMember(owner = "client!uf", name = "t", descriptor = "I")
 	public static int anInt5444 = 0;

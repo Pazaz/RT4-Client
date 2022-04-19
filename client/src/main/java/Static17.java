@@ -8,10 +8,10 @@ public final class Static17 {
 	public static final Class3_Sub15_Sub1 aClass3_Sub15_Sub1_2 = new Class3_Sub15_Sub1(5000);
 
 	@OriginalMember(owner = "client!bg", name = "n", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_100 = Static28.method790("Votre liste d(Wamis est pleine (X100 noms maximum pour la version gratuite et 200 pour les abonn-Bs(Y)3");
+	public static final JagString aClass100_100 = Static28.method790("Votre liste d(Wamis est pleine (X100 noms maximum pour la version gratuite et 200 pour les abonn-Bs(Y)3");
 
 	@OriginalMember(owner = "client!bg", name = "z", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_101 = Static28.method790("k");
+	public static final JagString aClass100_101 = Static28.method790("k");
 
 	@OriginalMember(owner = "client!bg", name = "A", descriptor = "[I")
 	public static final int[] anIntArray53 = new int[128];
@@ -20,13 +20,13 @@ public final class Static17 {
 	public static int anInt577 = 0;
 
 	@OriginalMember(owner = "client!bg", name = "N", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_102 = Static28.method790("mapfunction");
+	public static final JagString aClass100_102 = Static28.method790("mapfunction");
 
 	@OriginalMember(owner = "client!bg", name = "O", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_103 = Static28.method790("Loading interfaces )2 ");
+	private static final JagString aClass100_103 = Static28.method790("Loading interfaces )2 ");
 
 	@OriginalMember(owner = "client!bg", name = "P", descriptor = "Lclient!na;")
-	public static Class100 aClass100_104 = aClass100_103;
+	public static JagString aClass100_104 = aClass100_103;
 
 	@OriginalMember(owner = "client!bg", name = "a", descriptor = "(B)V")
 	public static void method527() {

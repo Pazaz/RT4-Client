@@ -23,7 +23,7 @@ public final class Static243 {
 	public static int anInt5359 = 0;
 
 	@OriginalMember(owner = "client!tk", name = "x", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1012 = Static28.method790(" steht bereits auf Ihrer Freunde)2Liste(Q");
+	public static final JagString aClass100_1012 = Static28.method790(" steht bereits auf Ihrer Freunde)2Liste(Q");
 
 	@OriginalMember(owner = "client!tk", name = "K", descriptor = "[I")
 	public static int[] anIntArray476 = new int[2];

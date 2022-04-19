@@ -24,7 +24,7 @@ public final class Static227 {
 	public static int anInt5087 = 0;
 
 	@OriginalMember(owner = "client!sg", name = "e", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_966 = Static28.method790("settings");
+	public static final JagString aClass100_966 = Static28.method790("settings");
 
 	@OriginalMember(owner = "client!sg", name = "q", descriptor = "[I")
 	public static final int[] anIntArray447 = new int[128];

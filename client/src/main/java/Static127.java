@@ -21,13 +21,13 @@ public final class Static127 {
 	public static boolean aBoolean160 = false;
 
 	@OriginalMember(owner = "client!k", name = "n", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_604 = Static28.method790("brillant1:");
+	public static final JagString aClass100_604 = Static28.method790("brillant1:");
 
 	@OriginalMember(owner = "client!k", name = "t", descriptor = "I")
 	public static int anInt3132 = 0;
 
 	@OriginalMember(owner = "client!k", name = "u", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_605 = Static28.method790("Chargement des sprites )2 ");
+	public static final JagString aClass100_605 = Static28.method790("Chargement des sprites )2 ");
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(IIBLclient!ve;Lclient!ve;)Lclient!rk;")
 	public static Font method2462(@OriginalArg(1) int arg0, @OriginalArg(3) Js5 arg1, @OriginalArg(4) Js5 arg2) {
@@ -189,7 +189,7 @@ public final class Static127 {
 	}
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(Lclient!be;Lclient!na;I)Lclient!na;")
-	public static Class100 method2465(@OriginalArg(0) Class13 arg0, @OriginalArg(1) Class100 arg1) {
+	public static JagString method2465(@OriginalArg(0) Class13 arg0, @OriginalArg(1) JagString arg1) {
 		if (arg1.method3131(Static49.aClass100_352) == -1) {
 			return arg1;
 		}
@@ -213,7 +213,7 @@ public final class Static127 {
 													if (local14 == -1) {
 														return arg1;
 													}
-													@Pc(246) Class100 local246 = Static186.aClass100_827;
+													@Pc(246) JagString local246 = Static186.aClass100_827;
 													if (Static232.aClass212_5 != null) {
 														local246 = Static181.method3341(Static232.aClass212_5.anInt5926);
 														try {
@@ -224,27 +224,27 @@ public final class Static127 {
 														} catch (@Pc(274) UnsupportedEncodingException local274) {
 														}
 													}
-													arg1 = Static34.method882(new Class100[] { arg1.method3137(local14, 0), local246, arg1.method3136(local14 + 4) });
+													arg1 = Static34.method882(new JagString[] { arg1.method3137(local14, 0), local246, arg1.method3136(local14 + 4) });
 												}
 											}
-											arg1 = Static34.method882(new Class100[] { arg1.method3137(local14, 0), Static262.method4510(Static273.method3212(4, arg0)), arg1.method3136(local14 + 2) });
+											arg1 = Static34.method882(new JagString[] { arg1.method3137(local14, 0), Static262.method4510(Static273.method3212(4, arg0)), arg1.method3136(local14 + 2) });
 										}
 									}
-									arg1 = Static34.method882(new Class100[] { arg1.method3137(local14, 0), Static262.method4510(Static273.method3212(3, arg0)), arg1.method3136(local14 + 2) });
+									arg1 = Static34.method882(new JagString[] { arg1.method3137(local14, 0), Static262.method4510(Static273.method3212(3, arg0)), arg1.method3136(local14 + 2) });
 								}
 							}
-							arg1 = Static34.method882(new Class100[] { arg1.method3137(local14, 0), Static262.method4510(Static273.method3212(2, arg0)), arg1.method3136(local14 + 2) });
+							arg1 = Static34.method882(new JagString[] { arg1.method3137(local14, 0), Static262.method4510(Static273.method3212(2, arg0)), arg1.method3136(local14 + 2) });
 						}
 					}
-					arg1 = Static34.method882(new Class100[] { arg1.method3137(local14, 0), Static262.method4510(Static273.method3212(1, arg0)), arg1.method3136(local14 + 2) });
+					arg1 = Static34.method882(new JagString[] { arg1.method3137(local14, 0), Static262.method4510(Static273.method3212(1, arg0)), arg1.method3136(local14 + 2) });
 				}
 			}
-			arg1 = Static34.method882(new Class100[] { arg1.method3137(local14, 0), Static262.method4510(Static273.method3212(0, arg0)), arg1.method3136(local14 + 2) });
+			arg1 = Static34.method882(new JagString[] { arg1.method3137(local14, 0), Static262.method4510(Static273.method3212(0, arg0)), arg1.method3136(local14 + 2) });
 		}
 	}
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(Lclient!na;Z)V")
-	public static void method2470(@OriginalArg(0) Class100 arg0) {
+	public static void method2470(@OriginalArg(0) JagString arg0) {
 		if (Static191.anInt4502 >= 2) {
 			@Pc(18) int local18;
 			@Pc(38) int local38;
@@ -256,7 +256,7 @@ public final class Static127 {
 				}
 				local29 = Runtime.getRuntime();
 				local38 = (int) ((local29.totalMemory() - local29.freeMemory()) / 1024L);
-				Static103.method2231(null, 0, Static34.method882(new Class100[] { Static202.aClass100_892, Static123.method2423(local38), Static17.aClass100_101 }));
+				Static103.method2231(null, 0, Static34.method882(new JagString[] { Static202.aClass100_892, Static123.method2423(local38), Static17.aClass100_101 }));
 			}
 			@Pc(117) int local117;
 			if (arg0.method3111(Static154.aClass100_735)) {
@@ -266,17 +266,17 @@ public final class Static127 {
 				}
 				local29 = Runtime.getRuntime();
 				local38 = (int) ((local29.totalMemory() - local29.freeMemory()) / 1024L);
-				Static103.method2231(null, 0, Static34.method882(new Class100[] { Static203.aClass100_893, Static123.method2423(local38), Static17.aClass100_101 }));
+				Static103.method2231(null, 0, Static34.method882(new JagString[] { Static203.aClass100_893, Static123.method2423(local38), Static17.aClass100_101 }));
 				Static16.method501();
 				Static119.method2380();
 				for (local117 = 0; local117 < 10; local117++) {
 					System.gc();
 				}
 				local38 = (int) ((local29.totalMemory() - local29.freeMemory()) / 1024L);
-				Static103.method2231(null, 0, Static34.method882(new Class100[] { Static270.aClass100_1093, Static123.method2423(local38), Static17.aClass100_101 }));
+				Static103.method2231(null, 0, Static34.method882(new JagString[] { Static270.aClass100_1093, Static123.method2423(local38), Static17.aClass100_101 }));
 			}
 			if (arg0.method3111(Static240.aClass100_1009)) {
-				Static103.method2231(null, 0, Static34.method882(new Class100[] { Static44.aClass100_335, Static123.method2423(Static198.method1029()) }));
+				Static103.method2231(null, 0, Static34.method882(new JagString[] { Static44.aClass100_335, Static123.method2423(Static198.method1029()) }));
 			}
 			if (Static239.aBoolean269 && arg0.method3111(Static201.aClass100_406)) {
 				System.out.println("oncard_geometry:" + Static63.anInt1945);
@@ -343,7 +343,7 @@ public final class Static127 {
 			}
 			if (arg0.method3138(Static211.aClass100_232)) {
 				Static199.anInt4672 = arg0.method3136(12).method3144().method3132();
-				Static103.method2231(null, 0, Static34.method882(new Class100[] { Static276.aClass100_1096, Static123.method2423(Static199.anInt4672) }));
+				Static103.method2231(null, 0, Static34.method882(new JagString[] { Static276.aClass100_1096, Static123.method2423(Static199.anInt4672) }));
 			}
 			if (arg0.method3111(Static181.aClass100_810)) {
 				Static121.aBoolean154 = true;

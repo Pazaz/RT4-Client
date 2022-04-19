@@ -11,13 +11,13 @@ public final class Static181 {
 	public static int anInt4296;
 
 	@OriginalMember(owner = "client!oi", name = "b", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_810 = Static28.method790("::qa_op_test");
+	public static final JagString aClass100_810 = Static28.method790("::qa_op_test");
 
 	@OriginalMember(owner = "client!oi", name = "j", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_811 = Static28.method790("::wm1");
+	public static final JagString aClass100_811 = Static28.method790("::wm1");
 
 	@OriginalMember(owner = "client!oi", name = "k", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_812 = Static28.method790("cyan:");
+	public static final JagString aClass100_812 = Static28.method790("cyan:");
 
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(IIIIIIIIII)V")
 	public static void method3340(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) int arg8) {
@@ -29,8 +29,8 @@ public final class Static181 {
 	}
 
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(II)Lclient!na;")
-	public static Class100 method3341(@OriginalArg(0) int arg0) {
-		return Static34.method882(new Class100[] { Static123.method2423(arg0 >> 24 & 0xFF), Static233.aClass100_994, Static123.method2423(arg0 >> 16 & 0xFF), Static233.aClass100_994, Static123.method2423(arg0 >> 8 & 0xFF), Static233.aClass100_994, Static123.method2423(arg0 & 0xFF) });
+	public static JagString method3341(@OriginalArg(0) int arg0) {
+		return Static34.method882(new JagString[] { Static123.method2423(arg0 >> 24 & 0xFF), Static233.aClass100_994, Static123.method2423(arg0 >> 16 & 0xFF), Static233.aClass100_994, Static123.method2423(arg0 >> 8 & 0xFF), Static233.aClass100_994, Static123.method2423(arg0 & 0xFF) });
 	}
 
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(I)V")

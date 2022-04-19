@@ -5,28 +5,28 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static49 {
 
 	@OriginalMember(owner = "client!dm", name = "v", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_353 = Static28.method790("Loading title screen )2 ");
+	private static final JagString aClass100_353 = Static28.method790("Loading title screen )2 ");
 
 	@OriginalMember(owner = "client!dm", name = "d", descriptor = "Lclient!na;")
-	public static Class100 aClass100_348 = aClass100_353;
+	public static JagString aClass100_348 = aClass100_353;
 
 	@OriginalMember(owner = "client!dm", name = "B", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_354 = Static28.method790("Loading)3)3)3");
+	private static final JagString aClass100_354 = Static28.method790("Loading)3)3)3");
 
 	@OriginalMember(owner = "client!dm", name = "e", descriptor = "Lclient!na;")
-	public static Class100 aClass100_349 = aClass100_354;
+	public static JagString aClass100_349 = aClass100_354;
 
 	@OriginalMember(owner = "client!dm", name = "h", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_350 = Static28.method790("Bitte entfernen Sie ");
+	public static final JagString aClass100_350 = Static28.method790("Bitte entfernen Sie ");
 
 	@OriginalMember(owner = "client!dm", name = "j", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_351 = Static28.method790(" ");
+	public static final JagString aClass100_351 = Static28.method790(" ");
 
 	@OriginalMember(owner = "client!dm", name = "m", descriptor = "I")
 	public static int anInt1459 = 0;
 
 	@OriginalMember(owner = "client!dm", name = "n", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_352 = Static28.method790("(U");
+	public static final JagString aClass100_352 = Static28.method790("(U");
 
 	@OriginalMember(owner = "client!dm", name = "q", descriptor = "I")
 	public static int anInt1462 = 0;
@@ -188,7 +188,7 @@ public final class Static49 {
 		if (Static231.anInt5204 < 2 && Static260.anInt5014 == 0 && !Static241.aBoolean302) {
 			return;
 		}
-		@Pc(24) Class100 local24 = Static13.method471();
+		@Pc(24) JagString local24 = Static13.method471();
 		if (arg0 == null) {
 			@Pc(40) int local40 = Static280.aClass3_Sub2_Sub9_43.method2859(local24, arg2 + 4, arg1 - -15, Static39.aRandom1, Static60.anInt1895);
 			Static133.method4012(arg2 + 4, Static280.aClass3_Sub2_Sub9_43.method2858(local24) + local40, arg1, 15);

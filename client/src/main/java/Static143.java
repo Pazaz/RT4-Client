@@ -16,10 +16,10 @@ public final class Static143 {
 	public static int anInt3484 = -1;
 
 	@OriginalMember(owner = "client!ld", name = "d", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_668 = Static28.method790("Hidden)2use");
+	public static final JagString aClass100_668 = Static28.method790("Hidden)2use");
 
 	@OriginalMember(owner = "client!ld", name = "g", descriptor = "[Lclient!na;")
-	public static Class100[] aClass100Array104 = null;
+	public static JagString[] aClass100Array104 = null;
 
 	@OriginalMember(owner = "client!ld", name = "i", descriptor = "I")
 	public static int anInt3486 = 0;

@@ -14,10 +14,10 @@ public final class Static44 {
 	public static final int[] anIntArray106 = new int[2048];
 
 	@OriginalMember(owner = "client!dh", name = "e", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_335 = Static28.method790("Number of player models in cache:");
+	public static final JagString aClass100_335 = Static28.method790("Number of player models in cache:");
 
 	@OriginalMember(owner = "client!dh", name = "i", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_336 = Static28.method790("<img=1>");
+	public static final JagString aClass100_336 = Static28.method790("<img=1>");
 
 	@OriginalMember(owner = "client!dh", name = "a", descriptor = "(Z)V")
 	public static void method1146() {
@@ -111,7 +111,7 @@ public final class Static44 {
 	}
 
 	@OriginalMember(owner = "client!dh", name = "a", descriptor = "(Lclient!na;I)V")
-	public static void method1149(@OriginalArg(0) Class100 arg0) {
+	public static void method1149(@OriginalArg(0) JagString arg0) {
 		@Pc(7) int local7 = Static91.method1879(arg0);
 		if (local7 != -1) {
 			Static80.method3616(Static203.aClass134_1.aShortArray73[local7], Static203.aClass134_1.aShortArray72[local7]);

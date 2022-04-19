@@ -7,16 +7,16 @@ public final class Static252 {
 	public static Js5 aClass153_103;
 
 	@OriginalMember(owner = "client!uh", name = "O", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1048 = Static28.method790("Benutzeroberfl-=che geladen)3");
+	public static final JagString aClass100_1048 = Static28.method790("Benutzeroberfl-=che geladen)3");
 
 	@OriginalMember(owner = "client!uh", name = "Y", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1049 = Static28.method790("huffman");
+	public static final JagString aClass100_1049 = Static28.method790("huffman");
 
 	@OriginalMember(owner = "client!uh", name = "ab", descriptor = "Lclient!q;")
 	public static final Class22 aClass22_1 = Static44.method1147();
 
 	@OriginalMember(owner = "client!uh", name = "fb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1050 = Static28.method790("RuneScape wird geladen )2 bitte warten)3)3)3");
+	public static final JagString aClass100_1050 = Static28.method790("RuneScape wird geladen )2 bitte warten)3)3)3");
 
 	@OriginalMember(owner = "client!uh", name = "e", descriptor = "(I)V")
 	public static void method4301() {

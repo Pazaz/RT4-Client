@@ -20,10 +20,10 @@ public final class Static221 {
 	public static final int[] anIntArray375 = new int[128];
 
 	@OriginalMember(owner = "client!s", name = "g", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_821 = Static28.method790("document)3cookie=(R");
+	public static final JagString aClass100_821 = Static28.method790("document)3cookie=(R");
 
 	@OriginalMember(owner = "client!s", name = "j", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_822 = Static28.method790("Sie k-Onnen sich selbst nicht auf Ihre Freunde)2Liste setzen(Q");
+	public static final JagString aClass100_822 = Static28.method790("Sie k-Onnen sich selbst nicht auf Ihre Freunde)2Liste setzen(Q");
 
 	@OriginalMember(owner = "client!s", name = "a", descriptor = "(II)I")
 	public static int method3389(@OriginalArg(0) int arg0) {

@@ -20,16 +20,16 @@ public final class Static164 {
 	public static int anInt3988 = 0;
 
 	@OriginalMember(owner = "client!na", name = "p", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_768 = Static28.method790("Bitte warten Sie )2 es wird versucht)1 die Verbindung wiederherzustellen)3");
+	public static final JagString aClass100_768 = Static28.method790("Bitte warten Sie )2 es wird versucht)1 die Verbindung wiederherzustellen)3");
 
 	@OriginalMember(owner = "client!na", name = "ob", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_771 = Static28.method790("Allocated memory");
+	private static final JagString aClass100_771 = Static28.method790("Allocated memory");
 
 	@OriginalMember(owner = "client!na", name = "D", descriptor = "Lclient!na;")
-	public static Class100 aClass100_769 = aClass100_771;
+	public static JagString aClass100_769 = aClass100_771;
 
 	@OriginalMember(owner = "client!na", name = "cb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_770 = Static28.method790(":allyreq:");
+	public static final JagString aClass100_770 = Static28.method790(":allyreq:");
 
 	@OriginalMember(owner = "client!na", name = "mb", descriptor = "[I")
 	public static final int[] anIntArray362 = new int[50];

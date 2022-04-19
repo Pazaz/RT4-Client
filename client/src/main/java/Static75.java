@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static75 {
 
 	@OriginalMember(owner = "client!g", name = "b", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_462 = Static28.method790("Ihre Freunde)2Liste ist voll(Q Maximale Eintr-=ge: Mitglieder 200)4freie Spieler 100");
+	public static final JagString aClass100_462 = Static28.method790("Ihre Freunde)2Liste ist voll(Q Maximale Eintr-=ge: Mitglieder 200)4freie Spieler 100");
 
 	@OriginalMember(owner = "client!g", name = "d", descriptor = "I")
 	public static int anInt2119 = 0;
@@ -65,10 +65,10 @@ public final class Static75 {
 						Static35.anIntArray82[local20] = -1;
 					} else {
 						Static238.anIntArray470[local20] = local169;
-						Static36.anIntArray84[local20] = Static26.aClass153_16.method4482(Static34.method882(new Class100[] { Static103.aClass100_558, Static123.method2423(local138), Static86.aClass100_488, Static123.method2423(local151) }));
-						Static172.anIntArray366[local20] = Static26.aClass153_16.method4482(Static34.method882(new Class100[] { Static270.aClass100_1090, Static123.method2423(local138), Static86.aClass100_488, Static123.method2423(local151) }));
-						Static99.anIntArray239[local20] = Static26.aClass153_16.method4482(Static34.method882(new Class100[] { Static165.aClass100_772, Static123.method2423(local138), Static86.aClass100_488, Static123.method2423(local151) }));
-						Static35.anIntArray82[local20] = Static26.aClass153_16.method4482(Static34.method882(new Class100[] { Static278.aClass100_1103, Static123.method2423(local138), Static86.aClass100_488, Static123.method2423(local151) }));
+						Static36.anIntArray84[local20] = Static26.aClass153_16.method4482(Static34.method882(new JagString[] { Static103.aClass100_558, Static123.method2423(local138), Static86.aClass100_488, Static123.method2423(local151) }));
+						Static172.anIntArray366[local20] = Static26.aClass153_16.method4482(Static34.method882(new JagString[] { Static270.aClass100_1090, Static123.method2423(local138), Static86.aClass100_488, Static123.method2423(local151) }));
+						Static99.anIntArray239[local20] = Static26.aClass153_16.method4482(Static34.method882(new JagString[] { Static165.aClass100_772, Static123.method2423(local138), Static86.aClass100_488, Static123.method2423(local151) }));
+						Static35.anIntArray82[local20] = Static26.aClass153_16.method4482(Static34.method882(new JagString[] { Static278.aClass100_1103, Static123.method2423(local138), Static86.aClass100_488, Static123.method2423(local151) }));
 					}
 					local20++;
 				}
@@ -134,10 +134,10 @@ public final class Static75 {
 							Static238.anIntArray470[local60] = local571;
 							@Pc(609) int local609 = local571 & 0xFF;
 							local573 = local571 >> 8 & 0xFF;
-							Static36.anIntArray84[local60] = Static26.aClass153_16.method4482(Static34.method882(new Class100[] { Static103.aClass100_558, Static123.method2423(local573), Static86.aClass100_488, Static123.method2423(local609) }));
-							Static172.anIntArray366[local60] = Static26.aClass153_16.method4482(Static34.method882(new Class100[] { Static270.aClass100_1090, Static123.method2423(local573), Static86.aClass100_488, Static123.method2423(local609) }));
-							Static99.anIntArray239[local60] = Static26.aClass153_16.method4482(Static34.method882(new Class100[] { Static165.aClass100_772, Static123.method2423(local573), Static86.aClass100_488, Static123.method2423(local609) }));
-							Static35.anIntArray82[local60] = Static26.aClass153_16.method4482(Static34.method882(new Class100[] { Static278.aClass100_1103, Static123.method2423(local573), Static86.aClass100_488, Static123.method2423(local609) }));
+							Static36.anIntArray84[local60] = Static26.aClass153_16.method4482(Static34.method882(new JagString[] { Static103.aClass100_558, Static123.method2423(local573), Static86.aClass100_488, Static123.method2423(local609) }));
+							Static172.anIntArray366[local60] = Static26.aClass153_16.method4482(Static34.method882(new JagString[] { Static270.aClass100_1090, Static123.method2423(local573), Static86.aClass100_488, Static123.method2423(local609) }));
+							Static99.anIntArray239[local60] = Static26.aClass153_16.method4482(Static34.method882(new JagString[] { Static165.aClass100_772, Static123.method2423(local573), Static86.aClass100_488, Static123.method2423(local609) }));
+							Static35.anIntArray82[local60] = Static26.aClass153_16.method4482(Static34.method882(new JagString[] { Static278.aClass100_1103, Static123.method2423(local573), Static86.aClass100_488, Static123.method2423(local609) }));
 							local60++;
 						}
 					}

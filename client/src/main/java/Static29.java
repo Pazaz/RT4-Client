@@ -8,7 +8,7 @@ public final class Static29 {
 	public static Js5 aClass153_19;
 
 	@OriginalMember(owner = "client!ce", name = "m", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_175 = Static28.method790("Lade Texturen )2 ");
+	public static final JagString aClass100_175 = Static28.method790("Lade Texturen )2 ");
 
 	@OriginalMember(owner = "client!ce", name = "a", descriptor = "(I[B)Lclient!rk;")
 	public static Font method799(@OriginalArg(1) byte[] arg0) {

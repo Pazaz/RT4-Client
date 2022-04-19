@@ -15,16 +15,16 @@ public final class Static171 {
 	public static int anInt4157;
 
 	@OriginalMember(owner = "client!ni", name = "p", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_791 = Static28.method790("Loaded input handler");
+	private static final JagString aClass100_791 = Static28.method790("Loaded input handler");
 
 	@OriginalMember(owner = "client!ni", name = "j", descriptor = "Lclient!na;")
-	public static Class100 aClass100_790 = aClass100_791;
+	public static JagString aClass100_790 = aClass100_791;
 
 	@OriginalMember(owner = "client!ni", name = "n", descriptor = "Lclient!sm;")
 	public static Class139 aClass139_1 = new Class139();
 
 	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(ILclient!na;)I")
-	public static int method3218(@OriginalArg(1) Class100 arg0) {
+	public static int method3218(@OriginalArg(1) JagString arg0) {
 		if (Static203.aClass134_1 == null || arg0.method3120() == 0) {
 			return -1;
 		}
@@ -53,7 +53,7 @@ public final class Static171 {
 	}
 
 	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(ILclient!na;I)V")
-	public static void method3221(@OriginalArg(1) Class100 arg0, @OriginalArg(2) int arg1) {
+	public static void method3221(@OriginalArg(1) JagString arg0, @OriginalArg(2) int arg1) {
 		Static6.aClass3_Sub15_Sub1_1.method2242(188);
 		Static6.aClass3_Sub15_Sub1_1.method2216(arg1);
 		Static6.aClass3_Sub15_Sub1_1.method2166(arg0.method3158());

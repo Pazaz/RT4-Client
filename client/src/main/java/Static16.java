@@ -7,10 +7,10 @@ public final class Static16 {
 	public static Js5 aClass153_9;
 
 	@OriginalMember(owner = "client!bf", name = "y", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_92 = Static28.method790("white:");
+	private static final JagString aClass100_92 = Static28.method790("white:");
 
 	@OriginalMember(owner = "client!bf", name = "A", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_93 = Static28.method790("brillant2:");
+	public static final JagString aClass100_93 = Static28.method790("brillant2:");
 
 	@OriginalMember(owner = "client!bf", name = "B", descriptor = "I")
 	public static int anInt548 = -1;
@@ -19,7 +19,7 @@ public final class Static16 {
 	public static final int[] anIntArray51 = new int[] { 2, 2, 4, 2, 1, 8, 4, 1, 4, 4, 2, 1, 1, 1, 4, 1 };
 
 	@OriginalMember(owner = "client!bf", name = "D", descriptor = "Lclient!na;")
-	public static Class100 aClass100_94 = aClass100_92;
+	public static JagString aClass100_94 = aClass100_92;
 
 	@OriginalMember(owner = "client!bf", name = "E", descriptor = "I")
 	public static int anInt549 = -1;
@@ -31,7 +31,7 @@ public final class Static16 {
 	public static final int[] anIntArray52 = new int[] { 16776960, 16711680, 65280, 65535, 16711935, 16777215 };
 
 	@OriginalMember(owner = "client!bf", name = "N", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_95 = aClass100_92;
+	public static final JagString aClass100_95 = aClass100_92;
 
 	@OriginalMember(owner = "client!bf", name = "c", descriptor = "(I)V")
 	public static void method501() {

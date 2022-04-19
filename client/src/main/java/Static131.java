@@ -15,7 +15,7 @@ public final class Static131 {
 	public static int anInt3261;
 
 	@OriginalMember(owner = "client!kd", name = "kb", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_624 = Static28.method790("Allocating memory");
+	private static final JagString aClass100_624 = Static28.method790("Allocating memory");
 
 	@OriginalMember(owner = "client!kd", name = "mb", descriptor = "[Lclient!cl;")
 	public static final Class3_Sub2_Sub7[] aClass3_Sub2_Sub7Array5 = new Class3_Sub2_Sub7[14];
@@ -30,7 +30,7 @@ public final class Static131 {
 	public static final int[] anIntArray307 = new int[] { 1, 1, 0, 0, 0, 8, 0, 0, 8 };
 
 	@OriginalMember(owner = "client!kd", name = "tb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_625 = Static28.method790("Connect-B au serveur de mise -9 jour");
+	public static final JagString aClass100_625 = Static28.method790("Connect-B au serveur de mise -9 jour");
 
 	@OriginalMember(owner = "client!kd", name = "yb", descriptor = "S")
 	public static short aShort21 = 32767;
@@ -39,7 +39,7 @@ public final class Static131 {
 	public static int anInt3259 = 0;
 
 	@OriginalMember(owner = "client!kd", name = "Ab", descriptor = "Lclient!na;")
-	public static Class100 aClass100_626 = aClass100_624;
+	public static JagString aClass100_626 = aClass100_624;
 
 	@OriginalMember(owner = "client!kd", name = "Bb", descriptor = "I")
 	public static int anInt3260 = -1;

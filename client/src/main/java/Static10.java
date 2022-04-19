@@ -6,23 +6,23 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static10 {
 
 	@OriginalMember(owner = "client!an", name = "Z", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_63 = Static28.method790("Hidden");
+	private static final JagString aClass100_63 = Static28.method790("Hidden");
 
 	@OriginalMember(owner = "client!an", name = "ab", descriptor = "Lclient!uf;")
 	public static Class149 aClass149_1 = new Class149();
 
 	@OriginalMember(owner = "client!an", name = "cb", descriptor = "Lclient!na;")
-	public static Class100 aClass100_64 = aClass100_63;
+	public static JagString aClass100_64 = aClass100_63;
 
 	@OriginalMember(owner = "client!an", name = "db", descriptor = "S")
 	public static short aShort9 = 205;
 
 	@OriginalMember(owner = "client!an", name = "eb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_65 = Static28.method790("Lade Schrifts-=tze )2 ");
+	public static final JagString aClass100_65 = Static28.method790("Lade Schrifts-=tze )2 ");
 
 	@OriginalMember(owner = "client!an", name = "a", descriptor = "([BIII)Lclient!na;")
-	public static Class100 method346(@OriginalArg(0) byte[] arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-		@Pc(7) Class100 local7 = new Class100();
+	public static JagString method346(@OriginalArg(0) byte[] arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
+		@Pc(7) JagString local7 = new JagString();
 		local7.aByteArray52 = new byte[arg1];
 		local7.anInt4030 = 0;
 		for (@Pc(22) int local22 = arg2; local22 < arg1 + arg2; local22++) {

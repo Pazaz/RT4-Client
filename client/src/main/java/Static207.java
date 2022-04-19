@@ -13,13 +13,13 @@ public final class Static207 {
 	public static int anInt4778 = 0;
 
 	@OriginalMember(owner = "client!ql", name = "h", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_903 = Static28.method790("Hidden)2");
+	public static final JagString aClass100_903 = Static28.method790("Hidden)2");
 
 	@OriginalMember(owner = "client!ql", name = "i", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_904 = Static28.method790("::wm2");
+	public static final JagString aClass100_904 = Static28.method790("::wm2");
 
 	@OriginalMember(owner = "client!ql", name = "k", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_905 = Static28.method790("gleiten:");
+	public static final JagString aClass100_905 = Static28.method790("gleiten:");
 
 	@OriginalMember(owner = "client!ql", name = "a", descriptor = "(IFII[[I[[II[[FIBIZLclient!hg;[[FII[[FI)I")
 	public static int method3683(@OriginalArg(0) int arg0, @OriginalArg(1) float arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int[][] arg4, @OriginalArg(5) int[][] arg5, @OriginalArg(6) int arg6, @OriginalArg(7) float[][] arg7, @OriginalArg(8) int arg8, @OriginalArg(10) int arg9, @OriginalArg(11) boolean arg10, @OriginalArg(12) Class3_Sub14 arg11, @OriginalArg(13) float[][] arg12, @OriginalArg(14) int arg13, @OriginalArg(15) int arg14, @OriginalArg(16) float[][] arg15, @OriginalArg(17) int arg16) {

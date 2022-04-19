@@ -11,22 +11,22 @@ public final class Static73 {
 	public static final Class99 aClass99_10 = new Class99(4);
 
 	@OriginalMember(owner = "client!fm", name = "T", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_452 = Static28.method790(" ");
+	public static final JagString aClass100_452 = Static28.method790(" ");
 
 	@OriginalMember(owner = "client!fm", name = "W", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_453 = Static28.method790(")2");
+	public static final JagString aClass100_453 = Static28.method790(")2");
 
 	@OriginalMember(owner = "client!fm", name = "db", descriptor = "Lclient!gn;")
 	public static final LruHashTable aClass54_7 = new LruHashTable(64);
 
 	@OriginalMember(owner = "client!fm", name = "eb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_454 = Static28.method790("b12_full");
+	public static final JagString aClass100_454 = Static28.method790("b12_full");
 
 	@OriginalMember(owner = "client!fm", name = "fb", descriptor = "[I")
 	public static final int[] anIntArray183 = new int[14];
 
 	@OriginalMember(owner = "client!fm", name = "gb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_455 = Static28.method790("overlay2");
+	public static final JagString aClass100_455 = Static28.method790("overlay2");
 
 	@OriginalMember(owner = "client!fm", name = "a", descriptor = "(ZI)V")
 	public static void method1596(@OriginalArg(0) boolean arg0) {
@@ -75,7 +75,7 @@ public final class Static73 {
 	}
 
 	@OriginalMember(owner = "client!fm", name = "a", descriptor = "(ILclient!na;Lclient!na;Lclient!na;I)V")
-	public static void method1598(@OriginalArg(1) Class100 arg0, @OriginalArg(2) Class100 arg1, @OriginalArg(3) Class100 arg2) {
+	public static void method1598(@OriginalArg(1) JagString arg0, @OriginalArg(2) JagString arg1, @OriginalArg(3) JagString arg2) {
 		Static154.method2928(-1, 9, arg0, arg2, arg1);
 	}
 

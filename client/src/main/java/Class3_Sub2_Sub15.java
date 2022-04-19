@@ -22,7 +22,7 @@ public final class Class3_Sub2_Sub15 extends SecondaryNode {
 	private int anInt3960;
 
 	@OriginalMember(owner = "client!ml", name = "Z", descriptor = "Lclient!na;")
-	private Class100 aClass100_766 = Static87.aClass100_494;
+	private JagString aClass100_766 = Static87.aClass100_494;
 
 	@OriginalMember(owner = "client!ml", name = "a", descriptor = "(ILclient!wa;B)V")
 	private void method3084(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
@@ -51,7 +51,7 @@ public final class Class3_Sub2_Sub15 extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!ml", name = "a", descriptor = "(IB)Lclient!na;")
-	public final Class100 method3085(@OriginalArg(0) int arg0) {
+	public final JagString method3085(@OriginalArg(0) int arg0) {
 		if (this.aClass133_16 == null) {
 			return this.aClass100_766;
 		} else {
@@ -61,7 +61,7 @@ public final class Class3_Sub2_Sub15 extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!ml", name = "b", descriptor = "(Lclient!na;I)Z")
-	public final boolean method3086(@OriginalArg(0) Class100 arg0) {
+	public final boolean method3086(@OriginalArg(0) JagString arg0) {
 		if (this.aClass133_16 == null) {
 			return false;
 		}

@@ -8,7 +8,7 @@ public final class Static178 {
 	public static MouseRecorder aClass74_1;
 
 	@OriginalMember(owner = "client!od", name = "b", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_803 = Static28.method790("Connected to update server");
+	private static final JagString aClass100_803 = Static28.method790("Connected to update server");
 
 	@OriginalMember(owner = "client!od", name = "c", descriptor = "Z")
 	public static boolean aBoolean202 = true;
@@ -20,7 +20,7 @@ public final class Static178 {
 	public static short aShort25 = 256;
 
 	@OriginalMember(owner = "client!od", name = "h", descriptor = "Lclient!na;")
-	public static Class100 aClass100_804 = aClass100_803;
+	public static JagString aClass100_804 = aClass100_803;
 
 	@OriginalMember(owner = "client!od", name = "i", descriptor = "I")
 	public static int anInt4247 = 0;
@@ -29,7 +29,7 @@ public final class Static178 {
 	public static boolean aBoolean203 = false;
 
 	@OriginalMember(owner = "client!od", name = "a", descriptor = "(ILclient!na;)V")
-	public static void method3318(@OriginalArg(1) Class100 arg0) {
+	public static void method3318(@OriginalArg(1) JagString arg0) {
 		if (Static199.aClass3_Sub22Array1 == null) {
 			return;
 		}

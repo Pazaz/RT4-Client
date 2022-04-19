@@ -72,7 +72,7 @@ public final class Class41 {
 	}
 
 	@OriginalMember(owner = "client!fd", name = "a", descriptor = "(Lclient!na;IIIZ)V")
-	private void method1502(@OriginalArg(0) Class100 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4) {
+	private void method1502(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4) {
 		if (this.aBoolean112 || arg3 == 0) {
 			arg4 = false;
 		}
@@ -198,7 +198,7 @@ public final class Class41 {
 	}
 
 	@OriginalMember(owner = "client!fd", name = "b", descriptor = "(Lclient!na;IIIZ)V")
-	public final void method1508(@OriginalArg(0) Class100 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	public final void method1508(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		@Pc(5) int local5 = this.method1510(arg0) / 2;
 		@Pc(8) int local8 = this.method1511();
 		if (arg1 - local5 <= Static129.anInt3148 && (arg1 + local5 >= Static129.anInt3145 && (arg2 - local8 <= Static129.anInt3149 && arg2 >= 0))) {
@@ -305,7 +305,7 @@ public final class Class41 {
 	}
 
 	@OriginalMember(owner = "client!fd", name = "a", descriptor = "(Lclient!na;)I")
-	private int method1510(@OriginalArg(0) Class100 arg0) {
+	private int method1510(@OriginalArg(0) JagString arg0) {
 		@Pc(1) int local1 = 0;
 		for (@Pc(3) int local3 = 0; local3 < arg0.method3120(); local3++) {
 			if (arg0.method3149(local3) == 64 && local3 + 4 < arg0.method3120() && arg0.method3149(local3 + 4) == 64) {

@@ -20,7 +20,7 @@ public final class Static93 {
 	public static Class150 aClass150_1 = new Class150();
 
 	@OriginalMember(owner = "client!he", name = "db", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_517 = Static28.method790("");
+	public static final JagString aClass100_517 = Static28.method790("");
 
 	@OriginalMember(owner = "client!he", name = "eb", descriptor = "[I")
 	public static final int[] anIntArray219 = new int[1000];
@@ -29,7 +29,7 @@ public final class Static93 {
 	public static final Class99 aClass99_14 = new Class99(30);
 
 	@OriginalMember(owner = "client!he", name = "gb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_518 = Static28.method790("www");
+	public static final JagString aClass100_518 = Static28.method790("www");
 
 	@OriginalMember(owner = "client!he", name = "c", descriptor = "(II)V")
 	public static void method1906(@OriginalArg(1) int arg0) {

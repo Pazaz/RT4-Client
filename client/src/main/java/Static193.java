@@ -14,16 +14,16 @@ public final class Static193 {
 	public static long aLong147 = 0L;
 
 	@OriginalMember(owner = "client!pi", name = "Q", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_853 = Static28.method790("null");
+	public static final JagString aClass100_853 = Static28.method790("null");
 
 	@OriginalMember(owner = "client!pi", name = "V", descriptor = "[Lclient!na;")
-	public static final Class100[] aClass100Array134 = new Class100[100];
+	public static final JagString[] aClass100Array134 = new JagString[100];
 
 	@OriginalMember(owner = "client!pi", name = "bb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_854 = Static28.method790("Sie k-Onnen sich selbst nicht selbst auf Ihre Ignorieren)2Liste setzen(Q");
+	public static final JagString aClass100_854 = Static28.method790("Sie k-Onnen sich selbst nicht selbst auf Ihre Ignorieren)2Liste setzen(Q");
 
 	@OriginalMember(owner = "client!pi", name = "a", descriptor = "(Lclient!na;BI)V")
-	public static void method3498(@OriginalArg(0) Class100 arg0, @OriginalArg(2) int arg1) {
+	public static void method3498(@OriginalArg(0) JagString arg0, @OriginalArg(2) int arg1) {
 		@Pc(10) Class3_Sub2_Sub8 local10 = Static238.method4143(2, arg1);
 		local10.method1017();
 		local10.aClass100_254 = arg0;

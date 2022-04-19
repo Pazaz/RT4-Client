@@ -20,16 +20,16 @@ public final class Static105 {
 	public static final int[] anIntArray256 = new int[2048];
 
 	@OriginalMember(owner = "client!ib", name = "g", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_559 = Static28.method790("<col=ffff00>");
+	public static final JagString aClass100_559 = Static28.method790("<col=ffff00>");
 
 	@OriginalMember(owner = "client!ib", name = "m", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_562 = Static28.method790("Walk here");
+	private static final JagString aClass100_562 = Static28.method790("Walk here");
 
 	@OriginalMember(owner = "client!ib", name = "j", descriptor = "Lclient!na;")
-	public static Class100 aClass100_560 = aClass100_562;
+	public static JagString aClass100_560 = aClass100_562;
 
 	@OriginalMember(owner = "client!ib", name = "k", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_561 = Static28.method790(" )2> <col=ffffff>");
+	public static final JagString aClass100_561 = Static28.method790(" )2> <col=ffffff>");
 
 	@OriginalMember(owner = "client!ib", name = "l", descriptor = "I")
 	public static int anInt2863 = 0;

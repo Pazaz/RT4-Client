@@ -32,7 +32,7 @@ public final class Static238 {
 	}
 
 	@OriginalMember(owner = "client!te", name = "b", descriptor = "(Lclient!na;I)Z")
-	public static boolean method4144(@OriginalArg(0) Class100 arg0) {
+	public static boolean method4144(@OriginalArg(0) JagString arg0) {
 		if (arg0 == null) {
 			return false;
 		}

@@ -14,10 +14,10 @@ public final class Static279 {
 	public static final Class99 aClass99_38 = new Class99(64);
 
 	@OriginalMember(owner = "client!wk", name = "u", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1106 = Static28.method790("::clientjs5drop");
+	public static final JagString aClass100_1106 = Static28.method790("::clientjs5drop");
 
 	@OriginalMember(owner = "client!wk", name = "x", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1107 = Static28.method790(")4l=");
+	public static final JagString aClass100_1107 = Static28.method790(")4l=");
 
 	@OriginalMember(owner = "client!wk", name = "b", descriptor = "(II)V")
 	public static void method4662() {
@@ -26,12 +26,12 @@ public final class Static279 {
 	}
 
 	@OriginalMember(owner = "client!wk", name = "a", descriptor = "(I[Lclient!na;)[Lclient!na;")
-	public static Class100[] method4664(@OriginalArg(1) Class100[] arg0) {
-		@Pc(8) Class100[] local8 = new Class100[5];
+	public static JagString[] method4664(@OriginalArg(1) JagString[] arg0) {
+		@Pc(8) JagString[] local8 = new JagString[5];
 		for (@Pc(15) int local15 = 0; local15 < 5; local15++) {
-			local8[local15] = Static34.method882(new Class100[] { Static123.method2423(local15), Static27.aClass100_168 });
+			local8[local15] = Static34.method882(new JagString[] { Static123.method2423(local15), Static27.aClass100_168 });
 			if (arg0 != null && arg0[local15] != null) {
-				local8[local15] = Static34.method882(new Class100[] { local8[local15], arg0[local15] });
+				local8[local15] = Static34.method882(new JagString[] { local8[local15], arg0[local15] });
 			}
 		}
 		return local8;

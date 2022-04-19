@@ -14,7 +14,7 @@ public final class Static142 {
 	public static int anInt3482 = -1;
 
 	@OriginalMember(owner = "client!lc", name = "m", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_667 = Static28.method790("settings=");
+	public static final JagString aClass100_667 = Static28.method790("settings=");
 
 	@OriginalMember(owner = "client!lc", name = "a", descriptor = "(IIIIIII)V")
 	public static void method2726(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
@@ -216,7 +216,7 @@ public final class Static142 {
 			}
 			Static65.anInt1951 = Static191.anIntArray385[local5];
 			Static16.anInt548 = Static191.anIntArray392[local5] = local74;
-			@Pc(962) Class100 local962 = Static191.aClass100Array132[local5];
+			@Pc(962) JagString local962 = Static191.aClass100Array132[local5];
 			if (Static79.anInt2157 == 0) {
 				local639 = 16776960;
 				if (Static191.anIntArray390[local5] < 6) {

@@ -5,22 +5,22 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static38 {
 
 	@OriginalMember(owner = "client!cn", name = "J", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_244 = Static28.method790("Starting 3d Library");
+	private static final JagString aClass100_244 = Static28.method790("Starting 3d Library");
 
 	@OriginalMember(owner = "client!cn", name = "q", descriptor = "Lclient!na;")
-	public static Class100 aClass100_240 = aClass100_244;
+	public static JagString aClass100_240 = aClass100_244;
 
 	@OriginalMember(owner = "client!cn", name = "s", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_241 = Static28.method790("lila:");
+	public static final JagString aClass100_241 = Static28.method790("lila:");
 
 	@OriginalMember(owner = "client!cn", name = "x", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_242 = Static28.method790("Vous ne pouvez pas ajouter votre nom -9 votre liste noire)3");
+	public static final JagString aClass100_242 = Static28.method790("Vous ne pouvez pas ajouter votre nom -9 votre liste noire)3");
 
 	@OriginalMember(owner = "client!cn", name = "B", descriptor = "I")
 	public static int anInt1196 = 1;
 
 	@OriginalMember(owner = "client!cn", name = "C", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_243 = Static28.method790("rot:");
+	public static final JagString aClass100_243 = Static28.method790("rot:");
 
 	@OriginalMember(owner = "client!cn", name = "L", descriptor = "I")
 	public static int anInt1203 = 0;
@@ -87,7 +87,7 @@ public final class Static38 {
 					local80 -= local84.method1503() * (local211 - 1) / 2;
 					local80 += local84.method1511() / 2;
 					for (@Pc(231) int local231 = 0; local231 < local211; local231++) {
-						@Pc(242) Class100 local242 = Static45.aClass100Array53[local231];
+						@Pc(242) JagString local242 = Static45.aClass100Array53[local231];
 						if (local211 - 1 > local231) {
 							local242.method3133(local242.method3120() - 4);
 						}

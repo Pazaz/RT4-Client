@@ -17,7 +17,7 @@ public final class Static185 {
 	public static int anInt4369 = 0;
 
 	@OriginalMember(owner = "client!p", name = "f", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_823 = Static28.method790("::serverjs5drop");
+	public static final JagString aClass100_823 = Static28.method790("::serverjs5drop");
 
 	@OriginalMember(owner = "client!p", name = "a", descriptor = "(I)V")
 	public static void method3395() {

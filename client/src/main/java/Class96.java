@@ -61,7 +61,7 @@ public final class Class96 {
 	public short aShort23 = 0;
 
 	@OriginalMember(owner = "client!me", name = "L", descriptor = "Lclient!na;")
-	public Class100 aClass100_738 = Static266.aClass100_1010;
+	public JagString aClass100_738 = Static266.aClass100_1010;
 
 	@OriginalMember(owner = "client!me", name = "x", descriptor = "I")
 	public int anInt3726 = -1;
@@ -112,7 +112,7 @@ public final class Class96 {
 	public int anInt3733 = 32;
 
 	@OriginalMember(owner = "client!me", name = "u", descriptor = "[Lclient!na;")
-	public final Class100[] aClass100Array116 = new Class100[5];
+	public final JagString[] aClass100Array116 = new JagString[5];
 
 	@OriginalMember(owner = "client!me", name = "ib", descriptor = "I")
 	public int anInt3747 = -1;
@@ -475,7 +475,7 @@ public final class Class96 {
 	}
 
 	@OriginalMember(owner = "client!me", name = "a", descriptor = "(ILclient!na;Z)Lclient!na;")
-	public final Class100 method2938(@OriginalArg(0) int arg0, @OriginalArg(1) Class100 arg1) {
+	public final JagString method2938(@OriginalArg(0) int arg0, @OriginalArg(1) JagString arg1) {
 		if (this.aClass133_15 == null) {
 			return arg1;
 		} else {

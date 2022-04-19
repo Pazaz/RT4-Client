@@ -17,7 +17,7 @@ public final class Static85 {
 	public static int anInt2263;
 
 	@OriginalMember(owner = "client!gl", name = "c", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_484 = Static28.method790("Monde de jeu cr-B-B");
+	public static final JagString aClass100_484 = Static28.method790("Monde de jeu cr-B-B");
 
 	@OriginalMember(owner = "client!gl", name = "a", descriptor = "(Lclient!ve;I)V")
 	public static void method1774(@OriginalArg(0) Js5 arg0) {

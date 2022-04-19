@@ -14,7 +14,7 @@ public final class Static190 {
 	public static final long[] aLongArray6 = new long[100];
 
 	@OriginalMember(owner = "client!pf", name = "l", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_838 = Static28.method790(" weitere Optionen");
+	public static final JagString aClass100_838 = Static28.method790(" weitere Optionen");
 
 	@OriginalMember(owner = "client!pf", name = "r", descriptor = "[I")
 	public static final int[] anIntArray382 = new int[500];

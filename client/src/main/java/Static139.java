@@ -18,7 +18,7 @@ public final class Static139 {
 	public static final Class99 aClass99_21 = new Class99(5);
 
 	@OriginalMember(owner = "client!l", name = "d", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_659 = Static28.method790(")4j");
+	public static final JagString aClass100_659 = Static28.method790(")4j");
 
 	@OriginalMember(owner = "client!l", name = "f", descriptor = "Lclient!n;")
 	public static final Class99 aClass99_22 = new Class99(4);

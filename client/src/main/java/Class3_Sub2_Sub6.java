@@ -16,7 +16,7 @@ public final class Class3_Sub2_Sub6 extends SecondaryNode {
 	private int[][] anIntArrayArray5;
 
 	@OriginalMember(owner = "client!cb", name = "V", descriptor = "[Lclient!na;")
-	private Class100[] aClass100Array35;
+	private JagString[] aClass100Array35;
 
 	@OriginalMember(owner = "client!cb", name = "O", descriptor = "Z")
 	public boolean aBoolean60 = true;
@@ -107,8 +107,8 @@ public final class Class3_Sub2_Sub6 extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!cb", name = "f", descriptor = "(I)Lclient!na;")
-	public final Class100 method769() {
-		@Pc(15) Class100 local15 = Static87.method1804(80);
+	public final JagString method769() {
+		@Pc(15) JagString local15 = Static87.method1804(80);
 		if (this.aClass100Array35 == null) {
 			return Static202.aClass100_891;
 		}
@@ -121,8 +121,8 @@ public final class Class3_Sub2_Sub6 extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!cb", name = "a", descriptor = "(ILclient!wa;)Lclient!na;")
-	public final Class100 method770(@OriginalArg(1) Buffer arg0) {
-		@Pc(17) Class100 local17 = Static87.method1804(80);
+	public final JagString method770(@OriginalArg(1) Buffer arg0) {
+		@Pc(17) JagString local17 = Static87.method1804(80);
 		if (this.anIntArray71 != null) {
 			for (@Pc(22) int local22 = 0; local22 < this.anIntArray71.length; local22++) {
 				local17.method3113(this.aClass100Array35[local22]);

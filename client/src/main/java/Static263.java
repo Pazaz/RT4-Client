@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static263 {
 
 	@OriginalMember(owner = "client!vg", name = "a", descriptor = "[Lclient!na;")
-	public static Class100[] aClass100Array174;
+	public static JagString[] aClass100Array174;
 
 	@OriginalMember(owner = "client!vg", name = "e", descriptor = "[I")
 	public static int[] anIntArray516;
@@ -20,10 +20,10 @@ public final class Static263 {
 	public static int anInt5755 = 2;
 
 	@OriginalMember(owner = "client!vg", name = "f", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1081 = Static28.method790("<col=80ff00>");
+	public static final JagString aClass100_1081 = Static28.method790("<col=80ff00>");
 
 	@OriginalMember(owner = "client!vg", name = "h", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1082 = Static28.method790("; Expires=");
+	public static final JagString aClass100_1082 = Static28.method790("; Expires=");
 
 	@OriginalMember(owner = "client!vg", name = "a", descriptor = "(I[S)[S")
 	public static short[] method4511(@OriginalArg(1) short[] arg0) {
@@ -37,7 +37,7 @@ public final class Static263 {
 	}
 
 	@OriginalMember(owner = "client!vg", name = "a", descriptor = "(Lclient!na;IIBI)V")
-	public static void method4512(@OriginalArg(0) Class100 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {
+	public static void method4512(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {
 		@Pc(8) Class13 local8 = Static201.method1418(arg3, arg1);
 		if (local8 == null) {
 			return;

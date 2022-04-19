@@ -5,10 +5,10 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static47 {
 
 	@OriginalMember(owner = "client!dk", name = "h", descriptor = "Lclient!na;")
-	public static Class100 aClass100_991 = null;
+	public static JagString aClass100_991 = null;
 
 	@OriginalMember(owner = "client!dk", name = "i", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_992 = Static28.method790("blinken1:");
+	public static final JagString aClass100_992 = Static28.method790("blinken1:");
 
 	@OriginalMember(owner = "client!dk", name = "j", descriptor = "[Lclient!en;")
 	public static final Class38[] aClass38Array2 = new Class38[28];

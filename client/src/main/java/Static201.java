@@ -11,16 +11,16 @@ public final class Static201 {
 	public static int anInt1862 = 0;
 
 	@OriginalMember(owner = "client!qf", name = "N", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_406 = Static28.method790("::cardmem");
+	public static final JagString aClass100_406 = Static28.method790("::cardmem");
 
 	@OriginalMember(owner = "client!qf", name = "Q", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_407 = Static28.method790(" )2> <col=ffff00>");
+	public static final JagString aClass100_407 = Static28.method790(" )2> <col=ffff00>");
 
 	@OriginalMember(owner = "client!qf", name = "R", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_408 = Static28.method790(" )2> ");
+	public static final JagString aClass100_408 = Static28.method790(" )2> ");
 
 	@OriginalMember(owner = "client!qf", name = "U", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_409 = Static28.method790("W-=hlen Sie eine Option");
+	public static final JagString aClass100_409 = Static28.method790("W-=hlen Sie eine Option");
 
 	@OriginalMember(owner = "client!qf", name = "X", descriptor = "Lclient!be;")
 	public static Class13 aClass13_13 = null;

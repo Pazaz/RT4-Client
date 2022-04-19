@@ -8,7 +8,7 @@ public final class Class6 implements QuickChatCommandDecoder {
 
 	@OriginalMember(owner = "client!af", name = "a", descriptor = "(I[IIJ)Lclient!na;")
 	@Override
-	public final Class100 method30(@OriginalArg(0) int arg0, @OriginalArg(1) int[] arg1, @OriginalArg(3) long arg2) {
+	public final JagString method30(@OriginalArg(0) int arg0, @OriginalArg(1) int[] arg1, @OriginalArg(3) long arg2) {
 		if (arg0 == 0) {
 			@Pc(12) Class3_Sub2_Sub15 local12 = Static253.method4330(arg1[0]);
 			return local12.method3085((int) arg2);

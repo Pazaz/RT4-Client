@@ -19,7 +19,7 @@ public final class Static97 {
 	public static long aLong89 = 0L;
 
 	@OriginalMember(owner = "client!hi", name = "h", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_523 = Static28.method790("Chargement de l(W-Bcran)2titre )2 ");
+	public static final JagString aClass100_523 = Static28.method790("Chargement de l(W-Bcran)2titre )2 ");
 
 	@OriginalMember(owner = "client!hi", name = "a", descriptor = "(BI)I")
 	public static int method1959(@OriginalArg(1) int arg0) {
@@ -127,7 +127,7 @@ public final class Static97 {
 	}
 
 	@OriginalMember(owner = "client!hi", name = "a", descriptor = "(Lclient!be;B)Lclient!na;")
-	public static Class100 method1963(@OriginalArg(0) Class13 arg0) {
+	public static JagString method1963(@OriginalArg(0) Class13 arg0) {
 		if (Static36.method940(arg0).method512() == 0) {
 			return null;
 		} else if (arg0.aClass100_86 == null || arg0.aClass100_86.method3144().method3120() == 0) {

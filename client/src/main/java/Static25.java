@@ -9,13 +9,13 @@ public final class Static25 {
 	public static Scenery[] aClass31Array2;
 
 	@OriginalMember(owner = "client!c", name = "W", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_153 = Static28.method790(" has logged in)3");
+	private static final JagString aClass100_153 = Static28.method790(" has logged in)3");
 
 	@OriginalMember(owner = "client!c", name = "Y", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_154 = Static28.method790("Mem:");
+	public static final JagString aClass100_154 = Static28.method790("Mem:");
 
 	@OriginalMember(owner = "client!c", name = "Z", descriptor = "Lclient!na;")
-	public static Class100 aClass100_155 = aClass100_153;
+	public static JagString aClass100_155 = aClass100_153;
 
 	@OriginalMember(owner = "client!c", name = "eb", descriptor = "I")
 	public static int anInt826 = 0;

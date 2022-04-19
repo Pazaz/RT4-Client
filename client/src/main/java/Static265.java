@@ -11,16 +11,16 @@ public final class Static265 {
 	public static SoftwareFont aClass3_Sub2_Sub9_Sub1_2;
 
 	@OriginalMember(owner = "client!vj", name = "h", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_1084 = Static28.method790("Connecting to update server");
+	private static final JagString aClass100_1084 = Static28.method790("Connecting to update server");
 
 	@OriginalMember(owner = "client!vj", name = "b", descriptor = "Lclient!na;")
-	public static Class100 aClass100_1083 = aClass100_1084;
+	public static JagString aClass100_1083 = aClass100_1084;
 
 	@OriginalMember(owner = "client!vj", name = "l", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1085 = Static28.method790("Chargement des fichiers config )2 ");
+	public static final JagString aClass100_1085 = Static28.method790("Chargement des fichiers config )2 ");
 
 	@OriginalMember(owner = "client!vj", name = "m", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1086 = Static28.method790("_labels");
+	public static final JagString aClass100_1086 = Static28.method790("_labels");
 
 	@OriginalMember(owner = "client!vj", name = "a", descriptor = "(III)J")
 	public static long method4521(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {

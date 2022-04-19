@@ -20,25 +20,25 @@ public final class Static148 {
 	public static int anInt3535;
 
 	@OriginalMember(owner = "client!li", name = "b", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_673 = Static28.method790("Loading wordpack )2 ");
+	private static final JagString aClass100_673 = Static28.method790("Loading wordpack )2 ");
 
 	@OriginalMember(owner = "client!li", name = "e", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_674 = Static28.method790("Veuillez patienter)3)3)3");
+	public static final JagString aClass100_674 = Static28.method790("Veuillez patienter)3)3)3");
 
 	@OriginalMember(owner = "client!li", name = "u", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_678 = Static28.method790("Examine");
+	private static final JagString aClass100_678 = Static28.method790("Examine");
 
 	@OriginalMember(owner = "client!li", name = "f", descriptor = "Lclient!na;")
-	public static Class100 aClass100_675 = aClass100_678;
+	public static JagString aClass100_675 = aClass100_678;
 
 	@OriginalMember(owner = "client!li", name = "h", descriptor = "[Lclient!mj;")
 	public static final CollisionMap[] aClass97Array1 = new CollisionMap[4];
 
 	@OriginalMember(owner = "client!li", name = "i", descriptor = "Lclient!na;")
-	public static Class100 aClass100_676 = aClass100_673;
+	public static JagString aClass100_676 = aClass100_673;
 
 	@OriginalMember(owner = "client!li", name = "p", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_677 = Static28.method790("::rebuild");
+	public static final JagString aClass100_677 = Static28.method790("::rebuild");
 
 	@OriginalMember(owner = "client!li", name = "a", descriptor = "(ZI)V")
 	public static void method2765(@OriginalArg(1) int arg0) {

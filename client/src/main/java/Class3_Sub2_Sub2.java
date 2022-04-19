@@ -16,7 +16,7 @@ public final class Class3_Sub2_Sub2 extends SecondaryNode {
 	public int[] anIntArray31;
 
 	@OriginalMember(owner = "client!bc", name = "Y", descriptor = "Lclient!na;")
-	public Class100 aClass100_79;
+	public JagString aClass100_79;
 
 	@OriginalMember(owner = "client!bc", name = "ab", descriptor = "[I")
 	public int[] anIntArray32;
