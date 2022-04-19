@@ -341,7 +341,7 @@ public final class Static103 {
 			local693 = Static201.method1418(local19, local15);
 			if (local693 != null) {
 				Static53.method1294();
-				@Pc(1493) Class3_Sub4 local1493 = Static36.method940(local693);
+				@Pc(1493) ServerActiveProperties local1493 = Static36.method940(local693);
 				Static247.method4246(local19, local15, local1493.method512(), local1493.anInt540, local693.anInt499, local693.anInt484);
 				Static260.anInt5014 = 0;
 				Static102.aClass100_545 = Static97.method1963(local693);

@@ -289,7 +289,7 @@ public final class Class13 {
 	public boolean aBoolean32 = false;
 
 	@OriginalMember(owner = "client!be", name = "gc", descriptor = "Lclient!bf;")
-	public Class3_Sub4 aClass3_Sub4_1 = Static45.aClass3_Sub4_2;
+	public ServerActiveProperties aClass3_Sub4_1 = Static45.aClass3_Sub4_2;
 
 	@OriginalMember(owner = "client!be", name = "cc", descriptor = "I")
 	public int anInt492 = 0;
@@ -761,7 +761,7 @@ public final class Class13 {
 		if (this.anInt530 == 6) {
 			local164 |= 0x1;
 		}
-		this.aClass3_Sub4_1 = new Class3_Sub4(local164, -1);
+		this.aClass3_Sub4_1 = new ServerActiveProperties(local164, -1);
 	}
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(ZI)Lclient!qf;")
@@ -1128,7 +1128,7 @@ public final class Class13 {
 				this.anInt484 = -1;
 			}
 		}
-		this.aClass3_Sub4_1 = new Class3_Sub4(local175, local567);
+		this.aClass3_Sub4_1 = new ServerActiveProperties(local175, local567);
 		this.anObjectArray3 = this.method485(arg0);
 		this.anObjectArray19 = this.method485(arg0);
 		this.anObjectArray24 = this.method485(arg0);

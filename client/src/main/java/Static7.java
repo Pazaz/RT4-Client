@@ -79,7 +79,7 @@ public final class Static7 {
 					local93 = Static196.anIntArray408[Static231.anInt5204 - 1];
 					local99 = Static56.anIntArray142[Static231.anInt5204 - 1];
 					@Pc(103) Class13 local103 = Static5.method32(local99);
-					@Pc(106) Class3_Sub4 local106 = Static36.method940(local103);
+					@Pc(106) ServerActiveProperties local106 = Static36.method940(local103);
 					if (local106.method511() || local106.method504()) {
 						Static78.anInt2145 = 0;
 						Static123.aBoolean155 = false;
