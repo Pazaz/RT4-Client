@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ca")
-public final class Class3_Sub1_Sub6 extends TextureOp {
+public final class TextureOpBinary extends TextureOp {
 
 	@OriginalMember(owner = "client!ca", name = "T", descriptor = "I")
 	private int anInt861 = 4096;
@@ -13,7 +13,7 @@ public final class Class3_Sub1_Sub6 extends TextureOp {
 	private int anInt857 = 0;
 
 	@OriginalMember(owner = "client!ca", name = "<init>", descriptor = "()V")
-	public Class3_Sub1_Sub6() {
+	public TextureOpBinary() {
 		super(1, true);
 	}
 
