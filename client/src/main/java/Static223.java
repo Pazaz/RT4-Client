@@ -104,7 +104,7 @@ public final class Static223 {
 		} else if (arg0 == 9) {
 			return new Class3_Sub1_Sub8();
 		} else if (arg0 == 10) {
-			return new Class3_Sub1_Sub37();
+			return new TextureOpColorGradient();
 		} else if (arg0 == 11) {
 			return new Class3_Sub1_Sub21();
 		} else if (arg0 == 12) {
