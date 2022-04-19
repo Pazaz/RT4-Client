@@ -22,7 +22,7 @@ public final class Static70 {
 	@OriginalMember(owner = "client!fi", name = "a", descriptor = "(B)Lclient!s;")
 	public static Class93 method1547() {
 		try {
-			return (Class93) Class.forName("Class93_Sub2").getDeclaredConstructor().newInstance();
+			return (Class93) Class.forName("NanoTimer").getDeclaredConstructor().newInstance();
 		} catch (@Pc(15) Throwable local15) {
 			return new Class93_Sub1();
 		}
