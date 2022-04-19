@@ -16,7 +16,7 @@ public final class ProjAnim extends Entity {
 	private double aDouble4;
 
 	@OriginalMember(owner = "client!ra", name = "Q", descriptor = "Lclient!ga;")
-	private Class47_Sub1 aClass47_Sub1_6;
+	private ParticleSystem aClass47_Sub1_6;
 
 	@OriginalMember(owner = "client!ra", name = "U", descriptor = "D")
 	private double aDouble5;
@@ -195,7 +195,7 @@ public final class ProjAnim extends Entity {
 
 	@OriginalMember(owner = "client!ra", name = "a", descriptor = "(IIIIIIIIJILclient!ga;)V")
 	@Override
-	public final void method4546(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) long arg8, @OriginalArg(9) int arg9, @OriginalArg(10) Class47_Sub1 arg10) {
+	public final void method4546(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) long arg8, @OriginalArg(9) int arg9, @OriginalArg(10) ParticleSystem arg10) {
 		@Pc(3) Model local3 = this.method3703();
 		if (local3 != null) {
 			local3.method4546(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.aClass47_Sub1_6);

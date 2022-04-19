@@ -43,7 +43,7 @@ public abstract class Class8_Sub4 extends Entity {
 	public int anInt3395;
 
 	@OriginalMember(owner = "client!fe", name = "vb", descriptor = "Lclient!ga;")
-	protected Class47_Sub1 aClass47_Sub1_5;
+	protected ParticleSystem aClass47_Sub1_5;
 
 	@OriginalMember(owner = "client!fe", name = "Ab", descriptor = "I")
 	public int anInt3400;
