@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!me")
-public final class Class96 {
+public final class NpcType {
 
 	@OriginalMember(owner = "client!me", name = "b", descriptor = "[S")
 	private short[] aShortArray37;
@@ -154,7 +154,7 @@ public final class Class96 {
 	public int anInt3752 = -1;
 
 	@OriginalMember(owner = "client!me", name = "a", descriptor = "(B)Lclient!me;")
-	public final Class96 method2932() {
+	public final NpcType method2932() {
 		@Pc(5) int local5 = -1;
 		if (this.anInt3723 != -1) {
 			local5 = Static155.method2945(this.anInt3723);
@@ -195,7 +195,7 @@ public final class Class96 {
 		}
 		for (@Pc(35) int local35 = 0; local35 < this.anIntArray357.length; local35++) {
 			if (this.anIntArray357[local35] != -1) {
-				@Pc(60) Class96 local60 = Static214.method4363(this.anIntArray357[local35]);
+				@Pc(60) NpcType local60 = Static214.method4363(this.anIntArray357[local35]);
 				if (local60.anInt3728 != -1 || local60.anInt3747 != -1 || local60.anInt3734 != -1) {
 					return true;
 				}
@@ -217,7 +217,7 @@ public final class Class96 {
 	@OriginalMember(owner = "client!me", name = "a", descriptor = "([Lclient!ub;IBIIIILclient!tk;ILclient!tk;)Lclient!ak;")
 	public final Model method2937(@OriginalArg(0) Class147[] arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) Class144 arg6, @OriginalArg(8) int arg7, @OriginalArg(9) Class144 arg8) {
 		if (this.anIntArray357 != null) {
-			@Pc(13) Class96 local13 = this.method2932();
+			@Pc(13) NpcType local13 = this.method2932();
 			return local13 == null ? null : local13.method2937(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 		}
 		@Pc(40) Model local40 = (Model) Static125.aClass99_18.method3106((long) this.anInt3741);
@@ -502,7 +502,7 @@ public final class Class96 {
 	@OriginalMember(owner = "client!me", name = "a", descriptor = "(Lclient!tk;IIII)Lclient!ak;")
 	public final Model method2943(@OriginalArg(0) Class144 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {
 		if (this.anIntArray357 != null) {
-			@Pc(13) Class96 local13 = this.method2932();
+			@Pc(13) NpcType local13 = this.method2932();
 			return local13 == null ? null : local13.method2943(arg0, arg1, arg2, arg3);
 		} else if (this.anIntArray354 == null) {
 			return null;

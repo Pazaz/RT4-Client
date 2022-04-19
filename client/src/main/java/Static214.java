@@ -61,13 +61,13 @@ public final class Static214 {
 	}
 
 	@OriginalMember(owner = "client!rg", name = "b", descriptor = "(II)Lclient!me;")
-	public static Class96 method4363(@OriginalArg(0) int arg0) {
-		@Pc(10) Class96 local10 = (Class96) Static93.aClass99_13.method3106((long) arg0);
+	public static NpcType method4363(@OriginalArg(0) int arg0) {
+		@Pc(10) NpcType local10 = (NpcType) Static93.aClass99_13.method3106((long) arg0);
 		if (local10 != null) {
 			return local10;
 		}
 		@Pc(26) byte[] local26 = Static58.aClass153_28.method4495(Static60.method1447(arg0), Static179.method3322(arg0));
-		local10 = new Class96();
+		local10 = new NpcType();
 		local10.anInt3741 = arg0;
 		if (local26 != null) {
 			local10.method2939(new Buffer(local26));

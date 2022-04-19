@@ -110,7 +110,7 @@ public final class Static54 {
 			for (local146 = 0; local146 < Static272.anInt5214; local146++) {
 				@Pc(498) Npc local498 = Static175.aClass8_Sub4_Sub2Array1[Static33.anIntArray79[local146]];
 				if (local498 != null && local498.method2682()) {
-					@Pc(507) Class96 local507 = local498.aClass96_1;
+					@Pc(507) NpcType local507 = local498.aClass96_1;
 					if (local507 != null && local507.anIntArray357 != null) {
 						local507 = local507.method2932();
 					}
