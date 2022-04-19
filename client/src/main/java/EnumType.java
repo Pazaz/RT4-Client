@@ -41,7 +41,7 @@ public final class EnumType extends SecondaryNode {
 				@Pc(58) int local58 = arg1.method2174();
 				@Pc(70) Node local70;
 				if (arg0 == 5) {
-					local70 = new Class3_Sub30(arg1.method2202());
+					local70 = new StringNode(arg1.method2202());
 				} else {
 					local70 = new Class3_Sub21(arg1.method2174());
 				}
@@ -55,7 +55,7 @@ public final class EnumType extends SecondaryNode {
 		if (this.aClass133_16 == null) {
 			return this.aClass100_766;
 		} else {
-			@Pc(26) Class3_Sub30 local26 = (Class3_Sub30) this.aClass133_16.method3863((long) arg0);
+			@Pc(26) StringNode local26 = (StringNode) this.aClass133_16.method3863((long) arg0);
 			return local26 == null ? this.aClass100_766 : local26.aClass100_980;
 		}
 	}
@@ -79,7 +79,7 @@ public final class EnumType extends SecondaryNode {
 	@OriginalMember(owner = "client!ml", name = "d", descriptor = "(I)V")
 	private void method3087() {
 		this.aClass133_17 = new HashTable(this.aClass133_16.method3868());
-		for (@Pc(22) Class3_Sub30 local22 = (Class3_Sub30) this.aClass133_16.method3859(); local22 != null; local22 = (Class3_Sub30) this.aClass133_16.method3861()) {
+		for (@Pc(22) StringNode local22 = (StringNode) this.aClass133_16.method3859(); local22 != null; local22 = (StringNode) this.aClass133_16.method3861()) {
 			@Pc(36) Class3_Sub13 local36 = new Class3_Sub13(local22.aClass100_980, (int) local22.aLong192);
 			this.aClass133_17.method3862(local36, local22.aClass100_980.method3118());
 		}
