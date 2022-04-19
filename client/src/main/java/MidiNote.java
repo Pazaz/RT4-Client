@@ -65,7 +65,7 @@ public final class MidiNote extends Node {
 	public int anInt3782;
 
 	@OriginalMember(owner = "client!mf", name = "V", descriptor = "Lclient!jk;")
-	public Class3_Sub18 aClass3_Sub18_1;
+	public MidiInstrument aClass3_Sub18_1;
 
 	@OriginalMember(owner = "client!mf", name = "d", descriptor = "(I)V")
 	public final void method2957() {
