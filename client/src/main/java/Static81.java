@@ -63,13 +63,13 @@ public final class Static81 {
 	}
 
 	@OriginalMember(owner = "client!gg", name = "d", descriptor = "(II)Lclient!dm;")
-	public static Class30 method1752(@OriginalArg(0) int arg0) {
-		@Pc(10) Class30 local10 = (Class30) Static67.aClass99_20.method3106((long) arg0);
+	public static IdkType method1752(@OriginalArg(0) int arg0) {
+		@Pc(10) IdkType local10 = (IdkType) Static67.aClass99_20.method3106((long) arg0);
 		if (local10 != null) {
 			return local10;
 		}
 		@Pc(21) byte[] local21 = Static216.aClass153_31.method4495(3, arg0);
-		local10 = new Class30();
+		local10 = new IdkType();
 		if (local21 != null) {
 			local10.method1209(new Buffer(local21));
 		}

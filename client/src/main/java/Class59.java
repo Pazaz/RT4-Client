@@ -110,7 +110,7 @@ public final class Class59 {
 			arg3 = new int[12];
 			for (@Pc(24) int local24 = 0; local24 < 8; local24++) {
 				for (@Pc(31) int local31 = 0; local31 < Static53.anInt1716; local31++) {
-					@Pc(38) Class30 local38 = Static81.method1752(local31);
+					@Pc(38) IdkType local38 = Static81.method1752(local31);
 					if (local38 != null && !local38.aBoolean85 && local38.anInt1457 == (arg2 ? Static153.anIntArray351[local24] : Static204.anIntArray425[local24])) {
 						arg3[Static272.anIntArray451[local24]] = Integer.MIN_VALUE | local31;
 						break;

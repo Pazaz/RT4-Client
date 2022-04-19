@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!dm")
-public final class Class30 {
+public final class IdkType {
 
 	@OriginalMember(owner = "client!dm", name = "b", descriptor = "[S")
 	private short[] aShortArray11;
