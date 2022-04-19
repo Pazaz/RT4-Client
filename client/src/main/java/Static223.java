@@ -100,7 +100,7 @@ public final class Static223 {
 		} else if (arg0 == 7) {
 			return new TextureOpCombine();
 		} else if (arg0 == 8) {
-			return new Class3_Sub1_Sub39();
+			return new TextureOpCurve();
 		} else if (arg0 == 9) {
 			return new Class3_Sub1_Sub8();
 		} else if (arg0 == 10) {
