@@ -52,7 +52,7 @@ public final class Static213 {
 					local38[local44] = Static259.anIntArray513[local23[local44] & 0xFF] | (local42[local44] & 0xFF) << 24;
 				}
 				if (Static239.aBoolean269) {
-					local14[local16] = new Class3_Sub2_Sub1_Sub2_Sub1(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local16], Static269.anIntArray252[local16], Static254.anIntArray488[local16], Static26.anIntArray66[local16], local38);
+					local14[local16] = new GlAlphaSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local16], Static269.anIntArray252[local16], Static254.anIntArray488[local16], Static26.anIntArray66[local16], local38);
 				} else {
 					local14[local16] = new SoftwareAlphaSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local16], Static269.anIntArray252[local16], Static254.anIntArray488[local16], Static26.anIntArray66[local16], local38);
 				}
