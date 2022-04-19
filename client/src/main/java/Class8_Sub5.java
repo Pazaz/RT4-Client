@@ -112,7 +112,7 @@ public final class Class8_Sub5 extends Class8 {
 	public int[] anIntArray202;
 
 	@OriginalMember(owner = "client!gb", name = "kb", descriptor = "[Lclient!qj;")
-	public Class126[] aClass126Array1;
+	public BufferedFile[] aClass126Array1;
 
 	@OriginalMember(owner = "client!gb", name = "mb", descriptor = "[S")
 	public short[] aShortArray27;
@@ -608,9 +608,9 @@ public final class Class8_Sub5 extends Class8 {
 				local272.anInt2432++;
 			} else if (local201 == 1) {
 				if (this.aClass126Array1 == null) {
-					this.aClass126Array1 = new Class126[this.anInt2136];
+					this.aClass126Array1 = new BufferedFile[this.anInt2136];
 				}
-				@Pc(317) Class126 local317 = this.aClass126Array1[local10] = new Class126();
+				@Pc(317) BufferedFile local317 = this.aClass126Array1[local10] = new BufferedFile();
 				local317.anInt4769 = local112;
 				local317.anInt4770 = local120;
 				local317.anInt4767 = local128;

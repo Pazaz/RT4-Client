@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!qj")
-public final class Class126 {
+public final class BufferedFile {
 
 	@OriginalMember(owner = "client!qj", name = "a", descriptor = "[J")
 	public static final long[] aLongArray7 = new long[256];
