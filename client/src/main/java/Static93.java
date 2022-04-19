@@ -8,7 +8,7 @@ public final class Static93 {
 	public static Js5 aClass153_41;
 
 	@OriginalMember(owner = "client!he", name = "V", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_13 = new Class99(64);
+	public static final SoftLruHashTable aClass99_13 = new SoftLruHashTable(64);
 
 	@OriginalMember(owner = "client!he", name = "Y", descriptor = "I")
 	public static volatile int anInt2467 = 0;
@@ -26,7 +26,7 @@ public final class Static93 {
 	public static final int[] anIntArray219 = new int[1000];
 
 	@OriginalMember(owner = "client!he", name = "fb", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_14 = new Class99(30);
+	public static final SoftLruHashTable aClass99_14 = new SoftLruHashTable(30);
 
 	@OriginalMember(owner = "client!he", name = "gb", descriptor = "Lclient!na;")
 	public static final JagString aClass100_518 = Static28.method790("www");

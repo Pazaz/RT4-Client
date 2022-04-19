@@ -11,7 +11,7 @@ public final class Static118 {
 	public static Class13 aClass13_15;
 
 	@OriginalMember(owner = "client!jd", name = "c", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_16 = new Class99(100);
+	public static final SoftLruHashTable aClass99_16 = new SoftLruHashTable(100);
 
 	@OriginalMember(owner = "client!jd", name = "a", descriptor = "(B)I")
 	public static int method2352() {

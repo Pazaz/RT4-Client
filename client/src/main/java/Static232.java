@@ -17,7 +17,7 @@ public final class Static232 {
 	public static int anInt5212;
 
 	@OriginalMember(owner = "client!sm", name = "c", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_30 = new Class99(64);
+	public static final SoftLruHashTable aClass99_30 = new SoftLruHashTable(64);
 
 	@OriginalMember(owner = "client!sm", name = "f", descriptor = "Lclient!na;")
 	private static final JagString aClass100_987 = Static28.method790("Connection lost)3");

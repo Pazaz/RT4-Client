@@ -15,13 +15,13 @@ public final class Static139 {
 	public static int[] anIntArray325;
 
 	@OriginalMember(owner = "client!l", name = "b", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_21 = new Class99(5);
+	public static final SoftLruHashTable aClass99_21 = new SoftLruHashTable(5);
 
 	@OriginalMember(owner = "client!l", name = "d", descriptor = "Lclient!na;")
 	public static final JagString aClass100_659 = Static28.method790(")4j");
 
 	@OriginalMember(owner = "client!l", name = "f", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_22 = new Class99(4);
+	public static final SoftLruHashTable aClass99_22 = new SoftLruHashTable(4);
 
 	@OriginalMember(owner = "client!l", name = "k", descriptor = "I")
 	public static int anInt3451 = 2;

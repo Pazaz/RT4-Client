@@ -13,7 +13,7 @@ public final class Static179 {
 	public static final int[][] anIntArrayArray33 = new int[5][5000];
 
 	@OriginalMember(owner = "client!oe", name = "j", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_25 = new Class99(64);
+	public static final SoftLruHashTable aClass99_25 = new SoftLruHashTable(64);
 
 	@OriginalMember(owner = "client!oe", name = "k", descriptor = "Lclient!na;")
 	public static final JagString aClass100_805 = Static28.method790("leuchten3:");

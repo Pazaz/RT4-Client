@@ -11,7 +11,7 @@ public final class Static262 {
 	public static Js5 aClass153_108;
 
 	@OriginalMember(owner = "client!vf", name = "a", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_34 = new Class99(64);
+	public static final SoftLruHashTable aClass99_34 = new SoftLruHashTable(64);
 
 	@OriginalMember(owner = "client!vf", name = "d", descriptor = "Lclient!na;")
 	private static final JagString aClass100_1076 = Static28.method790("Please wait )2 attempting to reestablish)3");
@@ -32,10 +32,10 @@ public final class Static262 {
 	public static JagString aClass100_1079 = aClass100_1080;
 
 	@OriginalMember(owner = "client!vf", name = "k", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_35 = new Class99(5);
+	public static final SoftLruHashTable aClass99_35 = new SoftLruHashTable(5);
 
 	@OriginalMember(owner = "client!vf", name = "l", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_36 = new Class99(50);
+	public static final SoftLruHashTable aClass99_36 = new SoftLruHashTable(50);
 
 	@OriginalMember(owner = "client!vf", name = "m", descriptor = "I")
 	public static int anInt5754 = -1;

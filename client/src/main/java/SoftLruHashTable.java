@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!n")
-public final class Class99 {
+public final class SoftLruHashTable {
 
 	@OriginalMember(owner = "client!n", name = "k", descriptor = "Lclient!ce;")
 	private final SecondaryLinkedList aClass16_8 = new SecondaryLinkedList();
@@ -19,7 +19,7 @@ public final class Class99 {
 	private final HashTable aClass133_18;
 
 	@OriginalMember(owner = "client!n", name = "<init>", descriptor = "(I)V")
-	public Class99(@OriginalArg(0) int arg0) {
+	public SoftLruHashTable(@OriginalArg(0) int arg0) {
 		this.anInt3970 = arg0;
 		@Pc(11) int local11;
 		for (local11 = 1; local11 + local11 < arg0; local11 += local11) {

@@ -11,10 +11,10 @@ public final class Static125 {
 	public static int anInt3096 = 0;
 
 	@OriginalMember(owner = "client!jl", name = "x", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_18 = new Class99(50);
+	public static final SoftLruHashTable aClass99_18 = new SoftLruHashTable(50);
 
 	@OriginalMember(owner = "client!jl", name = "G", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_19 = new Class99(64);
+	public static final SoftLruHashTable aClass99_19 = new SoftLruHashTable(64);
 
 	@OriginalMember(owner = "client!jl", name = "H", descriptor = "I")
 	public static int anInt3103 = -1;

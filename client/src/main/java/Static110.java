@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static110 {
 
 	@OriginalMember(owner = "client!ih", name = "l", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_15 = new Class99(4);
+	public static final SoftLruHashTable aClass99_15 = new SoftLruHashTable(4);
 
 	@OriginalMember(owner = "client!ih", name = "a", descriptor = "(III)Lclient!jh;")
 	public static Class77 method2276(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {

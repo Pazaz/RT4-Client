@@ -29,7 +29,7 @@ public final class Static233 {
 	public static volatile boolean aBoolean253 = true;
 
 	@OriginalMember(owner = "client!t", name = "p", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_31 = new Class99(64);
+	public static final SoftLruHashTable aClass99_31 = new SoftLruHashTable(64);
 
 	@OriginalMember(owner = "client!t", name = "v", descriptor = "[Lclient!na;")
 	public static final JagString[] aClass100Array160 = new JagString[500];

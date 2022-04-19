@@ -11,7 +11,7 @@ public final class Static279 {
 	public static int anInt5880;
 
 	@OriginalMember(owner = "client!wk", name = "t", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_38 = new Class99(64);
+	public static final SoftLruHashTable aClass99_38 = new SoftLruHashTable(64);
 
 	@OriginalMember(owner = "client!wk", name = "u", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1106 = Static28.method790("::clientjs5drop");
