@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!af")
-public final class Class6 implements QuickChatCommandDecoder {
+public final class Js5QuickChatCommandDecoder implements QuickChatCommandDecoder {
 
 	@OriginalMember(owner = "client!af", name = "a", descriptor = "(I[IIJ)Lclient!na;")
 	@Override
