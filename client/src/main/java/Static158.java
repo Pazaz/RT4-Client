@@ -86,7 +86,7 @@ public final class Static158 {
 				if (Static124.aClass95_2.method2831() < 1) {
 					return;
 				}
-				Static229.aClass100Array156 = new Class100[Static124.aClass95_2.method2828()];
+				Static229.aClass100Array156 = new JagString[Static124.aClass95_2.method2828()];
 				Static179.anInt4261 = 4;
 			}
 			if (Static179.anInt4261 == 4) {

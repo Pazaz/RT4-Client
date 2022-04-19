@@ -8,16 +8,16 @@ public final class Static30 {
 	public static boolean aBoolean61;
 
 	@OriginalMember(owner = "client!cg", name = "d", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_183 = Static28.method790("Ablegen");
+	public static final JagString aClass100_183 = Static28.method790("Ablegen");
 
 	@OriginalMember(owner = "client!cg", name = "e", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_184 = Static28.method790("1");
+	public static final JagString aClass100_184 = Static28.method790("1");
 
 	@OriginalMember(owner = "client!cg", name = "f", descriptor = "I")
 	public static int anInt978 = 127;
 
 	@OriginalMember(owner = "client!cg", name = "h", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_185 = Static28.method790(")3");
+	public static final JagString aClass100_185 = Static28.method790(")3");
 
 	@OriginalMember(owner = "client!cg", name = "a", descriptor = "(ZILclient!ve;I)[Lclient!ek;")
 	private static Class36_Sub1[] method837(@OriginalArg(1) int arg0, @OriginalArg(2) Js5 arg1) {

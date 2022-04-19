@@ -65,7 +65,7 @@ public final class Static91 {
 		local42.anInt2792 = 0;
 		local12.aClass100_880 = local42.method2176();
 		local12.anIntArray415 = new int[local70];
-		local12.aClass100Array140 = new Class100[local70];
+		local12.aClass100Array140 = new JagString[local70];
 		local107 = 0;
 		local12.anIntArray416 = new int[local70];
 		while (local63 > local42.anInt2792) {
@@ -103,7 +103,7 @@ public final class Static91 {
 	}
 
 	@OriginalMember(owner = "client!hc", name = "a", descriptor = "(Lclient!na;Z)I")
-	public static int method1879(@OriginalArg(0) Class100 arg0) {
+	public static int method1879(@OriginalArg(0) JagString arg0) {
 		if (Static203.aClass134_1 == null || arg0.method3120() == 0) {
 			return -1;
 		}

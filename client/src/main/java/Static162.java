@@ -11,7 +11,7 @@ public final class Static162 {
 	public static int anInt3953 = 0;
 
 	@OriginalMember(owner = "client!ml", name = "S", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_765 = Static28.method790("T");
+	public static final JagString aClass100_765 = Static28.method790("T");
 
 	@OriginalMember(owner = "client!ml", name = "ab", descriptor = "Z")
 	public static boolean aBoolean190 = true;

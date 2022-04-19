@@ -14,10 +14,10 @@ public final class Static98 {
 	public static Js5 aClass153_42;
 
 	@OriginalMember(owner = "client!hj", name = "d", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_524 = Static28.method790("hint_headicons");
+	public static final JagString aClass100_524 = Static28.method790("hint_headicons");
 
 	@OriginalMember(owner = "client!hj", name = "i", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_525 = Static28.method790("Benutzen");
+	public static final JagString aClass100_525 = Static28.method790("Benutzen");
 
 	@OriginalMember(owner = "client!hj", name = "a", descriptor = "(II)V")
 	public static void method1964(@OriginalArg(0) int arg0) {
@@ -28,7 +28,7 @@ public final class Static98 {
 	}
 
 	@OriginalMember(owner = "client!hj", name = "a", descriptor = "(Lclient!na;B)Z")
-	public static boolean method1965(@OriginalArg(0) Class100 arg0) {
+	public static boolean method1965(@OriginalArg(0) JagString arg0) {
 		if (arg0 == null) {
 			return false;
 		}
@@ -45,7 +45,7 @@ public final class Static98 {
 	}
 
 	@OriginalMember(owner = "client!hj", name = "a", descriptor = "(IJBLclient!na;ISLclient!na;I)V")
-	public static void method1966(@OriginalArg(0) int arg0, @OriginalArg(1) long arg1, @OriginalArg(3) Class100 arg2, @OriginalArg(4) int arg3, @OriginalArg(5) short arg4, @OriginalArg(6) Class100 arg5, @OriginalArg(7) int arg6) {
+	public static void method1966(@OriginalArg(0) int arg0, @OriginalArg(1) long arg1, @OriginalArg(3) JagString arg2, @OriginalArg(4) int arg3, @OriginalArg(5) short arg4, @OriginalArg(6) JagString arg5, @OriginalArg(7) int arg6) {
 		if (Static60.aBoolean108 || Static231.anInt5204 >= 500) {
 			return;
 		}

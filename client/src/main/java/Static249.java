@@ -10,10 +10,10 @@ public final class Static249 {
 	public static int anInt5428;
 
 	@OriginalMember(owner = "client!ud", name = "I", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1037 = Static28.method790("Chargement en cours)3)3)3");
+	public static final JagString aClass100_1037 = Static28.method790("Chargement en cours)3)3)3");
 
 	@OriginalMember(owner = "client!ud", name = "L", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1038 = Static28.method790("clignotant1:");
+	public static final JagString aClass100_1038 = Static28.method790("clignotant1:");
 
 	@OriginalMember(owner = "client!ud", name = "O", descriptor = "I")
 	public static int anInt5431 = 0;
@@ -22,7 +22,7 @@ public final class Static249 {
 	public static final LruHashTable aClass54_15 = new LruHashTable(64);
 
 	@OriginalMember(owner = "client!ud", name = "Q", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1039 = Static28.method790(" x ");
+	public static final JagString aClass100_1039 = Static28.method790(" x ");
 
 	@OriginalMember(owner = "client!ud", name = "S", descriptor = "Z")
 	public static boolean aBoolean282 = false;

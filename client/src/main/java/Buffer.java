@@ -87,7 +87,7 @@ public class Buffer extends Node {
 	}
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(ILclient!na;)V")
-	public final void method2171(@OriginalArg(1) Class100 arg0) {
+	public final void method2171(@OriginalArg(1) JagString arg0) {
 		this.anInt2792 += arg0.method3160(this.aByteArray40, this.anInt2792, arg0.method3120());
 		this.aByteArray40[this.anInt2792++] = 0;
 	}
@@ -114,7 +114,7 @@ public class Buffer extends Node {
 	}
 
 	@OriginalMember(owner = "client!wa", name = "f", descriptor = "(B)Lclient!na;")
-	public final Class100 method2176() {
+	public final JagString method2176() {
 		if (this.aByteArray40[this.anInt2792] == 0) {
 			this.anInt2792++;
 			return null;
@@ -186,7 +186,7 @@ public class Buffer extends Node {
 	}
 
 	@OriginalMember(owner = "client!wa", name = "h", descriptor = "(I)Lclient!na;")
-	public final Class100 method2187() {
+	public final JagString method2187() {
 		@Pc(10) byte local10 = this.aByteArray40[this.anInt2792++];
 		if (local10 != 0) {
 			throw new IllegalStateException("Bad version number in gjstr2");
@@ -325,7 +325,7 @@ public class Buffer extends Node {
 	}
 
 	@OriginalMember(owner = "client!wa", name = "e", descriptor = "(Z)Lclient!na;")
-	public final Class100 method2202() {
+	public final JagString method2202() {
 		@Pc(12) int local12 = this.anInt2792;
 		while (this.aByteArray40[this.anInt2792++] != 0) {
 		}

@@ -10,7 +10,7 @@ public final class Class8_Sub4_Sub1 extends Class8_Sub4 {
 	public Class59 aClass59_1;
 
 	@OriginalMember(owner = "client!e", name = "Mc", descriptor = "Lclient!na;")
-	public Class100 aClass100_364;
+	public JagString aClass100_364;
 
 	@OriginalMember(owner = "client!e", name = "tc", descriptor = "I")
 	public int anInt1649 = -1;
@@ -342,13 +342,13 @@ public final class Class8_Sub4_Sub1 extends Class8_Sub4 {
 	}
 
 	@OriginalMember(owner = "client!e", name = "e", descriptor = "(I)Lclient!na;")
-	public final Class100 method1264() {
-		@Pc(2) Class100 local2 = this.aClass100_364;
+	public final JagString method1264() {
+		@Pc(2) JagString local2 = this.aClass100_364;
 		if (Static103.aClass100Array88 != null) {
-			local2 = Static34.method882(new Class100[] { Static103.aClass100Array88[this.anInt1651], local2 });
+			local2 = Static34.method882(new JagString[] { Static103.aClass100Array88[this.anInt1651], local2 });
 		}
 		if (Static263.aClass100Array174 != null) {
-			local2 = Static34.method882(new Class100[] { local2, Static263.aClass100Array174[this.anInt1651] });
+			local2 = Static34.method882(new JagString[] { local2, Static263.aClass100Array174[this.anInt1651] });
 		}
 		return local2;
 	}

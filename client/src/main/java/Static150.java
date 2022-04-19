@@ -5,13 +5,13 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static150 {
 
 	@OriginalMember(owner = "client!lk", name = "J", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_687 = Static28.method790(")4p=");
+	public static final JagString aClass100_687 = Static28.method790(")4p=");
 
 	@OriginalMember(owner = "client!lk", name = "P", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_688 = Static28.method790("Loading fonts )2 ");
+	private static final JagString aClass100_688 = Static28.method790("Loading fonts )2 ");
 
 	@OriginalMember(owner = "client!lk", name = "S", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_689 = Static28.method790(" is already on your friend list)3");
+	private static final JagString aClass100_689 = Static28.method790(" is already on your friend list)3");
 
 	@OriginalMember(owner = "client!lk", name = "U", descriptor = "Z")
 	public static boolean aBoolean175 = false;
@@ -20,13 +20,13 @@ public final class Static150 {
 	public static int anInt3582 = 0;
 
 	@OriginalMember(owner = "client!lk", name = "X", descriptor = "Lclient!na;")
-	public static Class100 aClass100_690 = aClass100_688;
+	public static JagString aClass100_690 = aClass100_688;
 
 	@OriginalMember(owner = "client!lk", name = "Z", descriptor = "I")
 	public static int anInt3585 = 0;
 
 	@OriginalMember(owner = "client!lk", name = "ab", descriptor = "Lclient!na;")
-	public static Class100 aClass100_691 = aClass100_689;
+	public static JagString aClass100_691 = aClass100_689;
 
 	@OriginalMember(owner = "client!lk", name = "a", descriptor = "(ILclient!ve;)I")
 	public static int method2797(@OriginalArg(1) Js5 arg0) {

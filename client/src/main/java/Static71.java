@@ -17,25 +17,25 @@ public final class Static71 {
 	public static MouseWheel aClass111_2;
 
 	@OriginalMember(owner = "client!fk", name = "b", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_415 = Static28.method790("Please remove ");
+	private static final JagString aClass100_415 = Static28.method790("Please remove ");
 
 	@OriginalMember(owner = "client!fk", name = "c", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_416 = Static28.method790("V-Brification des mises -9 jour )2 ");
+	public static final JagString aClass100_416 = Static28.method790("V-Brification des mises -9 jour )2 ");
 
 	@OriginalMember(owner = "client!fk", name = "g", descriptor = "Z")
 	public static boolean aBoolean107 = true;
 
 	@OriginalMember(owner = "client!fk", name = "h", descriptor = "Lclient!na;")
-	public static Class100 aClass100_417 = aClass100_415;
+	public static JagString aClass100_417 = aClass100_415;
 
 	@OriginalMember(owner = "client!fk", name = "k", descriptor = "[I")
 	public static final int[] anIntArray147 = new int[14];
 
 	@OriginalMember(owner = "client!fk", name = "o", descriptor = "Lclient!na;")
-	public static Class100 aClass100_418 = aClass100_415;
+	public static JagString aClass100_418 = aClass100_415;
 
 	@OriginalMember(owner = "client!fk", name = "p", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_419 = Static28.method790("ondulation2:");
+	public static final JagString aClass100_419 = Static28.method790("ondulation2:");
 
 	@OriginalMember(owner = "client!fk", name = "a", descriptor = "(IB)Lclient!h;")
 	public static Class55 method1439(@OriginalArg(0) int arg0) {

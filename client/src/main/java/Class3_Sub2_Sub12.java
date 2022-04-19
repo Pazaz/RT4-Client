@@ -13,7 +13,7 @@ public final class Class3_Sub2_Sub12 extends SecondaryNode {
 	private int anInt2669;
 
 	@OriginalMember(owner = "client!hn", name = "Q", descriptor = "Lclient!na;")
-	public Class100 aClass100_544;
+	public JagString aClass100_544;
 
 	@OriginalMember(owner = "client!hn", name = "a", descriptor = "(ILclient!wa;I)V")
 	private void method2072(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {

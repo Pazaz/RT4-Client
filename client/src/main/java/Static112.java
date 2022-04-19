@@ -5,10 +5,10 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static112 {
 
 	@OriginalMember(owner = "client!ij", name = "a", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_574 = Static28.method790(":duelfriend:");
+	public static final JagString aClass100_574 = Static28.method790(":duelfriend:");
 
 	@OriginalMember(owner = "client!ij", name = "n", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_575 = Static28.method790(" de votre liste noire)3");
+	public static final JagString aClass100_575 = Static28.method790(" de votre liste noire)3");
 
 	@OriginalMember(owner = "client!ij", name = "a", descriptor = "(B)V")
 	public static void method2297() {

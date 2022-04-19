@@ -14,16 +14,16 @@ public final class Static186 {
 	public static int anInt4392 = 0;
 
 	@OriginalMember(owner = "client!pa", name = "O", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_827 = Static28.method790("");
+	public static final JagString aClass100_827 = Static28.method790("");
 
 	@OriginalMember(owner = "client!pa", name = "P", descriptor = "Lclient!na;")
-	public static Class100 aClass100_828 = aClass100_827;
+	public static JagString aClass100_828 = aClass100_827;
 
 	@OriginalMember(owner = "client!pa", name = "R", descriptor = "[Z")
 	public static final boolean[] aBooleanArray100 = new boolean[100];
 
 	@OriginalMember(owner = "client!pa", name = "S", descriptor = "Lclient!na;")
-	public static Class100 aClass100_829 = aClass100_827;
+	public static JagString aClass100_829 = aClass100_827;
 
 	@OriginalMember(owner = "client!pa", name = "d", descriptor = "(I)V")
 	public static void method3413() {
@@ -108,11 +108,11 @@ public final class Static186 {
 			Static7.method842(true);
 			Static234.method4020();
 		} else if (Static41.anInt1309 == 60) {
-			if (Static119.aClass153_44.method4497(Static34.method882(new Class100[] { Static269.aClass3_Sub2_Sub4_2.aClass100_138, Static265.aClass100_1086 }))) {
-				if (!Static119.aClass153_44.method4489(Static34.method882(new Class100[] { Static269.aClass3_Sub2_Sub4_2.aClass100_138, Static265.aClass100_1086 }))) {
+			if (Static119.aClass153_44.method4497(Static34.method882(new JagString[] { Static269.aClass3_Sub2_Sub4_2.aClass100_138, Static265.aClass100_1086 }))) {
+				if (!Static119.aClass153_44.method4489(Static34.method882(new JagString[] { Static269.aClass3_Sub2_Sub4_2.aClass100_138, Static265.aClass100_1086 }))) {
 					return;
 				}
-				Static203.aClass134_1 = Static140.method2711(Static34.method882(new Class100[] { Static269.aClass3_Sub2_Sub4_2.aClass100_138, Static265.aClass100_1086 }), Static119.aClass153_44);
+				Static203.aClass134_1 = Static140.method2711(Static34.method882(new JagString[] { Static269.aClass3_Sub2_Sub4_2.aClass100_138, Static265.aClass100_1086 }), Static119.aClass153_44);
 			} else {
 				Static203.aClass134_1 = new Class134(0);
 			}

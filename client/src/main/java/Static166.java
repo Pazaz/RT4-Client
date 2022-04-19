@@ -11,10 +11,10 @@ public final class Static166 {
 	public static int anInt4049;
 
 	@OriginalMember(owner = "client!nc", name = "d", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_778 = Static28.method790("Kampfstufe: ");
+	public static final JagString aClass100_778 = Static28.method790("Kampfstufe: ");
 
 	@OriginalMember(owner = "client!nc", name = "e", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_779 = Static28.method790("underlay");
+	public static final JagString aClass100_779 = Static28.method790("underlay");
 
 	@OriginalMember(owner = "client!nc", name = "j", descriptor = "I")
 	public static int anInt4051 = 0;

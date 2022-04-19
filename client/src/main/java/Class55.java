@@ -61,7 +61,7 @@ public final class Class55 {
 	public int anInt2351 = 0;
 
 	@OriginalMember(owner = "client!h", name = "E", descriptor = "Lclient!na;")
-	public Class100 aClass100_495 = Static78.aClass100_464;
+	public JagString aClass100_495 = Static78.aClass100_464;
 
 	@OriginalMember(owner = "client!h", name = "J", descriptor = "I")
 	private int anInt2343 = 0;
@@ -151,7 +151,7 @@ public final class Class55 {
 	public int anInt2360 = -1;
 
 	@OriginalMember(owner = "client!h", name = "qb", descriptor = "[Lclient!na;")
-	public Class100[] aClass100Array72 = new Class100[] { null, null, Static229.aClass100_973, null, null };
+	public JagString[] aClass100Array72 = new JagString[] { null, null, Static229.aClass100_973, null, null };
 
 	@OriginalMember(owner = "client!h", name = "ub", descriptor = "I")
 	private int anInt2373 = 128;
@@ -163,7 +163,7 @@ public final class Class55 {
 	private int anInt2347 = 0;
 
 	@OriginalMember(owner = "client!h", name = "U", descriptor = "[Lclient!na;")
-	public Class100[] aClass100Array71 = new Class100[] { null, null, null, null, Static41.aClass100_271 };
+	public JagString[] aClass100Array71 = new JagString[] { null, null, null, null, Static41.aClass100_271 };
 
 	@OriginalMember(owner = "client!h", name = "Ab", descriptor = "I")
 	public int anInt2375 = 2000;
@@ -203,7 +203,7 @@ public final class Class55 {
 	}
 
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(ILclient!na;I)Lclient!na;")
-	public final Class100 method1819(@OriginalArg(1) Class100 arg0, @OriginalArg(2) int arg1) {
+	public final JagString method1819(@OriginalArg(1) JagString arg0, @OriginalArg(2) int arg1) {
 		if (this.aClass133_6 == null) {
 			return arg0;
 		} else {
@@ -262,7 +262,7 @@ public final class Class55 {
 		this.anInt2340 = arg0.anInt2340;
 		this.anInt2331 = arg0.anInt2331;
 		this.anInt2343 = arg0.anInt2343;
-		this.aClass100Array71 = new Class100[5];
+		this.aClass100Array71 = new JagString[5];
 		this.anInt2320 = arg1.anInt2320;
 		this.anInt2375 = arg1.anInt2375;
 		this.anInt2325 = 0;

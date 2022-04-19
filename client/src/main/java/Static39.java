@@ -28,10 +28,10 @@ public final class Static39 {
 	public static final short[] aShortArray6 = new short[500];
 
 	@OriginalMember(owner = "client!d", name = "fb", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_248 = Static28.method790("Close");
+	private static final JagString aClass100_248 = Static28.method790("Close");
 
 	@OriginalMember(owner = "client!d", name = "gb", descriptor = "Lclient!na;")
-	public static Class100 aClass100_249 = aClass100_248;
+	public static JagString aClass100_249 = aClass100_248;
 
 	@OriginalMember(owner = "client!d", name = "c", descriptor = "(III)I")
 	public static int method990(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {

@@ -23,22 +23,22 @@ public final class Static253 {
 	public static float aFloat37;
 
 	@OriginalMember(owner = "client!ui", name = "ab", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_1056 = Static28.method790(" more options");
+	private static final JagString aClass100_1056 = Static28.method790(" more options");
 
 	@OriginalMember(owner = "client!ui", name = "V", descriptor = "Lclient!na;")
-	public static Class100 aClass100_1054 = aClass100_1056;
+	public static JagString aClass100_1054 = aClass100_1056;
 
 	@OriginalMember(owner = "client!ui", name = "ob", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_1059 = Static28.method790("Attack");
+	private static final JagString aClass100_1059 = Static28.method790("Attack");
 
 	@OriginalMember(owner = "client!ui", name = "Y", descriptor = "Lclient!na;")
-	public static Class100 aClass100_1055 = aClass100_1059;
+	public static JagString aClass100_1055 = aClass100_1059;
 
 	@OriginalMember(owner = "client!ui", name = "hb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1057 = Static28.method790("Schrifts-=tze geladen)3");
+	public static final JagString aClass100_1057 = Static28.method790("Schrifts-=tze geladen)3");
 
 	@OriginalMember(owner = "client!ui", name = "nb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1058 = Static28.method790("jaune:");
+	public static final JagString aClass100_1058 = Static28.method790("jaune:");
 
 	@OriginalMember(owner = "client!ui", name = "a", descriptor = "(IIZIII)V")
 	public static void method4326(@OriginalArg(1) int arg0, @OriginalArg(2) boolean arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {

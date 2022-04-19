@@ -14,16 +14,16 @@ public final class Static220 {
 	public static boolean aBoolean244 = true;
 
 	@OriginalMember(owner = "client!rm", name = "h", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_929 = Static28.method790("shake:");
+	private static final JagString aClass100_929 = Static28.method790("shake:");
 
 	@OriginalMember(owner = "client!rm", name = "i", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_930 = Static28.method790("(Z");
+	public static final JagString aClass100_930 = Static28.method790("(Z");
 
 	@OriginalMember(owner = "client!rm", name = "j", descriptor = "Lclient!na;")
-	public static Class100 aClass100_931 = aClass100_929;
+	public static JagString aClass100_931 = aClass100_929;
 
 	@OriginalMember(owner = "client!rm", name = "k", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_932 = aClass100_929;
+	public static final JagString aClass100_932 = aClass100_929;
 
 	@OriginalMember(owner = "client!rm", name = "a", descriptor = "(IBI)V")
 	public static void method3797(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {

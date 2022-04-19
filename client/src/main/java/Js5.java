@@ -72,9 +72,9 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(ILclient!na;)I")
-	public final int method4478(@OriginalArg(1) Class100 arg0) {
+	public final int method4478(@OriginalArg(1) JagString arg0) {
 		if (this.method4484()) {
-			@Pc(15) Class100 local15 = arg0.method3114();
+			@Pc(15) JagString local15 = arg0.method3114();
 			@Pc(29) int local29 = this.aClass70_2.aClass76_1.method2405(local15.method3154());
 			return this.method4476(local29);
 		} else {
@@ -103,9 +103,9 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(Lclient!na;B)I")
-	public final int method4482(@OriginalArg(0) Class100 arg0) {
+	public final int method4482(@OriginalArg(0) JagString arg0) {
 		if (this.method4484()) {
-			@Pc(16) Class100 local16 = arg0.method3114();
+			@Pc(16) JagString local16 = arg0.method3114();
 			@Pc(27) int local27 = this.aClass70_2.aClass76_1.method2405(local16.method3154());
 			return this.method4492(local27) ? local27 : -1;
 		} else {
@@ -132,12 +132,12 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(ILclient!na;Lclient!na;)[B")
-	public final byte[] method4485(@OriginalArg(1) Class100 arg0, @OriginalArg(2) Class100 arg1) {
+	public final byte[] method4485(@OriginalArg(1) JagString arg0, @OriginalArg(2) JagString arg1) {
 		if (!this.method4484()) {
 			return null;
 		}
-		@Pc(15) Class100 local15 = arg1.method3114();
-		@Pc(19) Class100 local19 = arg0.method3114();
+		@Pc(15) JagString local15 = arg1.method3114();
+		@Pc(19) JagString local19 = arg0.method3114();
 		@Pc(28) int local28 = this.aClass70_2.aClass76_1.method2405(local15.method3154());
 		if (this.method4492(local28)) {
 			@Pc(53) int local53 = this.aClass70_2.aClass76Array1[local28].method2405(local19.method3154());
@@ -148,21 +148,21 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "b", descriptor = "(ILclient!na;)V")
-	public final void method4486(@OriginalArg(1) Class100 arg0) {
+	public final void method4486(@OriginalArg(1) JagString arg0) {
 		if (this.method4484()) {
-			@Pc(13) Class100 local13 = arg0.method3114();
+			@Pc(13) JagString local13 = arg0.method3114();
 			@Pc(22) int local22 = this.aClass70_2.aClass76_1.method2405(local13.method3154());
 			this.method4493(local22);
 		}
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(Lclient!na;BLclient!na;)Z")
-	public final boolean method4487(@OriginalArg(0) Class100 arg0, @OriginalArg(2) Class100 arg1) {
+	public final boolean method4487(@OriginalArg(0) JagString arg0, @OriginalArg(2) JagString arg1) {
 		if (!this.method4484()) {
 			return false;
 		}
-		@Pc(17) Class100 local17 = arg1.method3114();
-		@Pc(21) Class100 local21 = arg0.method3114();
+		@Pc(17) JagString local17 = arg1.method3114();
+		@Pc(21) JagString local21 = arg0.method3114();
 		@Pc(30) int local30 = this.aClass70_2.aClass76_1.method2405(local17.method3154());
 		if (this.method4492(local30)) {
 			@Pc(49) int local49 = this.aClass70_2.aClass76Array1[local30].method2405(local21.method3154());
@@ -198,9 +198,9 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(BLclient!na;)Z")
-	public final boolean method4489(@OriginalArg(1) Class100 arg0) {
+	public final boolean method4489(@OriginalArg(1) JagString arg0) {
 		if (this.method4484()) {
-			@Pc(14) Class100 local14 = arg0.method3114();
+			@Pc(14) JagString local14 = arg0.method3114();
 			@Pc(25) int local25 = this.aClass70_2.aClass76_1.method2405(local14.method3154());
 			return this.method4479(local25);
 		} else {
@@ -374,9 +374,9 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(Lclient!na;I)Z")
-	public final boolean method4497(@OriginalArg(0) Class100 arg0) {
+	public final boolean method4497(@OriginalArg(0) JagString arg0) {
 		if (this.method4484()) {
-			@Pc(19) Class100 local19 = arg0.method3114();
+			@Pc(19) JagString local19 = arg0.method3114();
 			@Pc(28) int local28 = this.aClass70_2.aClass76_1.method2405(local19.method3154());
 			return local28 >= 0;
 		} else {

@@ -10,7 +10,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!na")
-public final class Class100 implements Interface2 {
+public final class JagString implements Interface2 {
 
 	@OriginalMember(owner = "client!na", name = "T", descriptor = "[B")
 	public byte[] aByteArray52;
@@ -27,7 +27,7 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(BLclient!na;)Z")
-	public final boolean method3108(@OriginalArg(1) Class100 arg0) {
+	public final boolean method3108(@OriginalArg(1) JagString arg0) {
 		if (arg0 == null) {
 			return false;
 		} else if (arg0 == this) {
@@ -91,7 +91,7 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(ILclient!na;)Z")
-	public final boolean method3111(@OriginalArg(1) Class100 arg0) {
+	public final boolean method3111(@OriginalArg(1) JagString arg0) {
 		if (arg0 == null) {
 			return false;
 		} else if (this.anInt4030 == arg0.anInt4030) {
@@ -126,7 +126,7 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(Lclient!na;Z)Lclient!na;")
-	public final Class100 method3113(@OriginalArg(0) Class100 arg0) {
+	public final JagString method3113(@OriginalArg(0) JagString arg0) {
 		if (!this.aBoolean193) {
 			throw new IllegalArgumentException();
 		}
@@ -144,8 +144,8 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(I)Lclient!na;")
-	public final Class100 method3114() {
-		@Pc(14) Class100 local14 = new Class100();
+	public final JagString method3114() {
+		@Pc(14) JagString local14 = new JagString();
 		local14.anInt4030 = this.anInt4030;
 		local14.aByteArray52 = new byte[this.anInt4030];
 		for (@Pc(29) int local29 = 0; local29 < this.anInt4030; local29++) {
@@ -159,9 +159,9 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "b", descriptor = "(I)Lclient!na;")
-	public final Class100 method3116() {
+	public final JagString method3116() {
 		@Pc(7) byte local7 = 2;
-		@Pc(11) Class100 local11 = new Class100();
+		@Pc(11) JagString local11 = new JagString();
 		local11.anInt4030 = this.anInt4030;
 		local11.aByteArray52 = new byte[this.anInt4030];
 		for (@Pc(28) int local28 = 0; local28 < this.anInt4030; local28++) {
@@ -203,7 +203,7 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(ILclient!na;II)Lclient!na;")
-	public final Class100 method3122(@OriginalArg(1) Class100 arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
+	public final JagString method3122(@OriginalArg(1) JagString arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
 		if (!this.aBoolean193) {
 			throw new IllegalArgumentException();
 		} else if (arg1 >= 0 && arg1 <= arg2 && arg2 <= arg0.anInt4030) {
@@ -229,8 +229,8 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "b", descriptor = "(Z)Lclient!na;")
-	public final Class100 method3124() {
-		@Pc(7) Class100 local7 = new Class100();
+	public final JagString method3124() {
+		@Pc(7) JagString local7 = new JagString();
 		local7.anInt4030 = this.anInt4030;
 		local7.aByteArray52 = new byte[local7.anInt4030];
 		for (@Pc(24) int local24 = 0; local24 < this.anInt4030; local24++) {
@@ -240,8 +240,8 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(B)Lclient!na;")
-	public final Class100 method3125() {
-		@Pc(9) Class100 local9 = new Class100();
+	public final JagString method3125() {
+		@Pc(9) JagString local9 = new JagString();
 		local9.anInt4030 = this.anInt4030;
 		local9.aByteArray52 = new byte[this.anInt4030];
 		@Pc(20) boolean local20 = true;
@@ -262,7 +262,7 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "b", descriptor = "(BLclient!na;)I")
-	public final int method3126(@OriginalArg(1) Class100 arg0) {
+	public final int method3126(@OriginalArg(1) JagString arg0) {
 		@Pc(12) int local12 = 0;
 		@Pc(14) int local14 = 0;
 		@Pc(17) int local17 = arg0.anInt4030;
@@ -322,11 +322,11 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(ZI)Lclient!na;")
-	public final Class100 method3128(@OriginalArg(1) int arg0) {
+	public final JagString method3128(@OriginalArg(1) int arg0) {
 		if (arg0 <= 0 || arg0 > 255) {
 			throw new IllegalArgumentException("invalid char");
 		}
-		@Pc(23) Class100 local23 = new Class100();
+		@Pc(23) JagString local23 = new JagString();
 		local23.aByteArray52 = new byte[this.anInt4030 + 1];
 		local23.anInt4030 = this.anInt4030 + 1;
 		Static289.method2612(this.aByteArray52, 0, local23.aByteArray52, 0, this.anInt4030);
@@ -346,7 +346,7 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "c", descriptor = "(BLclient!na;)Z")
-	public final boolean method3130(@OriginalArg(1) Class100 arg0) {
+	public final boolean method3130(@OriginalArg(1) JagString arg0) {
 		if (arg0.anInt4030 > this.anInt4030) {
 			return false;
 		}
@@ -360,7 +360,7 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(Lclient!na;I)I")
-	public final int method3131(@OriginalArg(0) Class100 arg0) {
+	public final int method3131(@OriginalArg(0) JagString arg0) {
 		return this.method3146(arg0, 0);
 	}
 
@@ -415,13 +415,13 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(IB)Lclient!na;")
-	public final Class100 method3136(@OriginalArg(0) int arg0) {
+	public final JagString method3136(@OriginalArg(0) int arg0) {
 		return this.method3137(this.anInt4030, arg0);
 	}
 
 	@OriginalMember(owner = "client!na", name = "b", descriptor = "(III)Lclient!na;")
-	public final Class100 method3137(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		@Pc(7) Class100 local7 = new Class100();
+	public final JagString method3137(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
+		@Pc(7) JagString local7 = new JagString();
 		local7.anInt4030 = arg0 - arg1;
 		local7.aByteArray52 = new byte[arg0 - arg1];
 		Static289.method2612(this.aByteArray52, arg1, local7.aByteArray52, 0, local7.anInt4030);
@@ -429,7 +429,7 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "b", descriptor = "(Lclient!na;I)Z")
-	public final boolean method3138(@OriginalArg(0) Class100 arg0) {
+	public final boolean method3138(@OriginalArg(0) JagString arg0) {
 		if (this.anInt4030 < arg0.anInt4030) {
 			return false;
 		}
@@ -444,14 +444,14 @@ public final class Class100 implements Interface2 {
 	@OriginalMember(owner = "client!na", name = "equals", descriptor = "(Ljava/lang/Object;)Z")
 	@Override
 	public final boolean equals(@OriginalArg(0) Object arg0) {
-		if (!(arg0 instanceof Class100)) {
+		if (!(arg0 instanceof JagString)) {
 			throw new IllegalArgumentException();
 		}
-		return this.method3108((Class100) arg0);
+		return this.method3108((JagString) arg0);
 	}
 
 	@OriginalMember(owner = "client!na", name = "c", descriptor = "(Lclient!na;I)I")
-	public final int method3139(@OriginalArg(0) Class100 arg0) {
+	public final int method3139(@OriginalArg(0) JagString arg0) {
 		@Pc(20) int local20;
 		if (arg0.anInt4030 < this.anInt4030) {
 			local20 = arg0.anInt4030;
@@ -476,7 +476,7 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(Lclient!na;ZLclient!na;)Lclient!na;")
-	public final Class100 method3140(@OriginalArg(0) Class100 arg0, @OriginalArg(2) Class100 arg1) {
+	public final JagString method3140(@OriginalArg(0) JagString arg0, @OriginalArg(2) JagString arg1) {
 		@Pc(8) int local8 = this.anInt4030;
 		@Pc(14) int local14 = arg0.anInt4030 - arg1.anInt4030;
 		@Pc(16) int local16 = 0;
@@ -484,7 +484,7 @@ public final class Class100 implements Interface2 {
 			@Pc(22) int local22 = this.method3146(arg1, local16);
 			if (local22 < 0) {
 				local16 = 0;
-				@Pc(45) Class100 local45 = Static87.method1804(local8);
+				@Pc(45) JagString local45 = Static87.method1804(local8);
 				while (true) {
 					@Pc(51) int local51 = this.method3146(arg1, local16);
 					if (local51 < 0) {
@@ -553,7 +553,7 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "d", descriptor = "(BLclient!na;)Z")
-	public final boolean method3142(@OriginalArg(1) Class100 arg0) {
+	public final boolean method3142(@OriginalArg(1) JagString arg0) {
 		if (this.anInt4030 < arg0.anInt4030) {
 			return false;
 		}
@@ -574,12 +574,12 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "g", descriptor = "(I)Lclient!na;")
-	public final Class100 method3143() {
+	public final JagString method3143() {
 		return this;
 	}
 
 	@OriginalMember(owner = "client!na", name = "h", descriptor = "(I)Lclient!na;")
-	public final Class100 method3144() {
+	public final JagString method3144() {
 		@Pc(17) int local17;
 		for (local17 = 0; local17 < this.anInt4030 && (this.aByteArray52[local17] >= 0 && this.aByteArray52[local17] <= 32 || (this.aByteArray52[local17] & 0xFF) == 160); local17++) {
 		}
@@ -589,7 +589,7 @@ public final class Class100 implements Interface2 {
 		if (local17 == 0 && this.anInt4030 == local53) {
 			return this;
 		}
-		@Pc(111) Class100 local111 = new Class100();
+		@Pc(111) JagString local111 = new JagString();
 		local111.anInt4030 = local53 - local17;
 		local111.aByteArray52 = new byte[local111.anInt4030];
 		for (@Pc(124) int local124 = 0; local124 < local111.anInt4030; local124++) {
@@ -599,8 +599,8 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "c", descriptor = "(III)Lclient!na;")
-	public final Class100 method3145() {
-		@Pc(8) Class100 local8 = new Class100();
+	public final JagString method3145() {
+		@Pc(8) JagString local8 = new JagString();
 		local8.anInt4030 = this.anInt4030;
 		local8.aByteArray52 = new byte[this.anInt4030];
 		for (@Pc(31) int local31 = 0; local31 < this.anInt4030; local31++) {
@@ -615,7 +615,7 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(Lclient!na;II)I")
-	public final int method3146(@OriginalArg(0) Class100 arg0, @OriginalArg(1) int arg1) {
+	public final int method3146(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1) {
 		@Pc(8) int local8 = arg0.anInt4030;
 		if (arg1 >= this.anInt4030) {
 			return local8 == 0 ? this.anInt4030 : -1;
@@ -655,14 +655,14 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "b", descriptor = "(IB)[Lclient!na;")
-	public final Class100[] method3147(@OriginalArg(0) int arg0) {
+	public final JagString[] method3147(@OriginalArg(0) int arg0) {
 		@Pc(7) int local7 = 0;
 		for (@Pc(9) int local9 = 0; local9 < this.anInt4030; local9++) {
 			if (arg0 == this.aByteArray52[local9]) {
 				local7++;
 			}
 		}
-		@Pc(37) Class100[] local37 = new Class100[local7 + 1];
+		@Pc(37) JagString[] local37 = new JagString[local7 + 1];
 		if (local7 == 0) {
 			local37[0] = this;
 			return local37;
@@ -693,9 +693,9 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "c", descriptor = "(B)Lclient!na;")
-	public final Class100 method3151() {
+	public final JagString method3151() {
 		@Pc(9) long local9 = this.method3118();
-		@Pc(19) Class local19 = Class100.class;
+		@Pc(19) Class local19 = JagString.class;
 		synchronized (local19) {
 			@Pc(30) Class3_Sub30 local30;
 			if (Static148.aClass133_13 == null) {
@@ -716,7 +716,7 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "d", descriptor = "(IB)Lclient!na;")
-	public final Class100 method3152(@OriginalArg(0) int arg0) {
+	public final JagString method3152(@OriginalArg(0) int arg0) {
 		if (arg0 <= 0 || arg0 > 255) {
 			throw new IllegalArgumentException("invalid char:" + arg0);
 		} else if (this.aBoolean193) {
@@ -736,7 +736,7 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(BLjava/applet/Applet;)Lclient!na;")
-	public final Class100 method3153(@OriginalArg(1) Applet arg0) {
+	public final JagString method3153(@OriginalArg(1) Applet arg0) {
 		@Pc(19) String local19 = new String(this.aByteArray52, 0, this.anInt4030);
 		@Pc(23) String local23 = arg0.getParameter(local19);
 		return local23 == null ? null : Static230.method3952(local23);
@@ -763,7 +763,7 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "d", descriptor = "(B)Lclient!na;")
-	public final Class100 method3156() {
+	public final JagString method3156() {
 		if (!this.aBoolean193) {
 			throw new IllegalArgumentException();
 		}
@@ -807,8 +807,8 @@ public final class Class100 implements Interface2 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "k", descriptor = "(I)Lclient!na;")
-	public final Class100 method3159() {
-		@Pc(9) Class100 local9 = Static79.method1702(this.method3158());
+	public final JagString method3159() {
+		@Pc(9) JagString local9 = Static79.method1702(this.method3158());
 		return local9 == null ? Static228.aClass100_967 : local9;
 	}
 

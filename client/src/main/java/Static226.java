@@ -20,10 +20,10 @@ public final class Static226 {
 	public static int anInt5081 = 1;
 
 	@OriginalMember(owner = "client!sf", name = "g", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_965 = Static28.method790("<col=ffff00>");
+	public static final JagString aClass100_965 = Static28.method790("<col=ffff00>");
 
 	@OriginalMember(owner = "client!sf", name = "h", descriptor = "[Lclient!na;")
-	public static final Class100[] aClass100Array154 = new Class100[1000];
+	public static final JagString[] aClass100Array154 = new JagString[1000];
 
 	@OriginalMember(owner = "client!sf", name = "i", descriptor = "I")
 	public static int anInt5084 = 0;

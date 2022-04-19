@@ -39,13 +39,13 @@ public final class Static52 {
 	}
 
 	@OriginalMember(owner = "client!eb", name = "b", descriptor = "(II)Lclient!na;")
-	public static Class100 method1288(@OriginalArg(1) int arg0) {
+	public static JagString method1288(@OriginalArg(1) int arg0) {
 		if (arg0 < 100000) {
-			return Static34.method882(new Class100[] { Static105.aClass100_559, Static123.method2423(arg0), Static123.aClass100_594 });
+			return Static34.method882(new JagString[] { Static105.aClass100_559, Static123.method2423(arg0), Static123.aClass100_594 });
 		} else if (arg0 >= 10000000) {
-			return Static34.method882(new Class100[] { Static184.aClass100_819, Static123.method2423(arg0 / 1000000), Static69.aClass100_440, Static123.aClass100_594 });
+			return Static34.method882(new JagString[] { Static184.aClass100_819, Static123.method2423(arg0 / 1000000), Static69.aClass100_440, Static123.aClass100_594 });
 		} else {
-			return Static34.method882(new Class100[] { Static137.aClass100_637, Static123.method2423(arg0 / 1000), Static35.aClass100_218, Static123.aClass100_594 });
+			return Static34.method882(new JagString[] { Static137.aClass100_637, Static123.method2423(arg0 / 1000), Static35.aClass100_218, Static123.aClass100_594 });
 		}
 	}
 }

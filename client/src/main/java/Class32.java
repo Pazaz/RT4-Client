@@ -8,5 +8,5 @@ public final class Class32 {
 	public int anInt1739;
 
 	@OriginalMember(owner = "client!ee", name = "i", descriptor = "Lclient!na;")
-	public Class100 aClass100_378;
+	public JagString aClass100_378;
 }

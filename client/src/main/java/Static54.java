@@ -5,13 +5,13 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static54 {
 
 	@OriginalMember(owner = "client!ed", name = "r", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_373 = Static28.method790("Wordpack geladen)3");
+	public static final JagString aClass100_373 = Static28.method790("Wordpack geladen)3");
 
 	@OriginalMember(owner = "client!ed", name = "D", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_374 = Static28.method790("details");
+	public static final JagString aClass100_374 = Static28.method790("details");
 
 	@OriginalMember(owner = "client!ed", name = "H", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_375 = Static28.method790("<)4col> x");
+	public static final JagString aClass100_375 = Static28.method790("<)4col> x");
 
 	@OriginalMember(owner = "client!ed", name = "a", descriptor = "(III)V")
 	public static void method1304(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
@@ -218,13 +218,13 @@ public final class Static54 {
 	}
 
 	@OriginalMember(owner = "client!ed", name = "a", descriptor = "([SI[Lclient!na;II)V")
-	public static void method1307(@OriginalArg(0) short[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Class100[] arg2, @OriginalArg(4) int arg3) {
+	public static void method1307(@OriginalArg(0) short[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) JagString[] arg2, @OriginalArg(4) int arg3) {
 		if (arg1 <= arg3) {
 			return;
 		}
 		@Pc(14) int local14 = arg3;
 		@Pc(21) int local21 = (arg3 + arg1) / 2;
-		@Pc(25) Class100 local25 = arg2[local21];
+		@Pc(25) JagString local25 = arg2[local21];
 		arg2[local21] = arg2[arg1];
 		arg2[arg1] = local25;
 		@Pc(39) short local39 = arg0[local21];
@@ -232,7 +232,7 @@ public final class Static54 {
 		arg0[arg1] = local39;
 		for (@Pc(51) int local51 = arg3; local51 < arg1; local51++) {
 			if (local25 == null || arg2[local51] != null && arg2[local51].method3139(local25) < (local51 & 0x1)) {
-				@Pc(80) Class100 local80 = arg2[local51];
+				@Pc(80) JagString local80 = arg2[local51];
 				arg2[local51] = arg2[local14];
 				arg2[local14] = local80;
 				@Pc(94) short local94 = arg0[local51];

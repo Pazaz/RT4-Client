@@ -11,7 +11,7 @@ public final class Static270 {
 	public static Class41 aClass41_9;
 
 	@OriginalMember(owner = "client!wb", name = "a", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1089 = Static28.method790(")2");
+	public static final JagString aClass100_1089 = Static28.method790(")2");
 
 	@OriginalMember(owner = "client!wb", name = "c", descriptor = "I")
 	public static int anInt5794 = -1;
@@ -20,22 +20,22 @@ public final class Static270 {
 	public static int anInt5795 = 0;
 
 	@OriginalMember(owner = "client!wb", name = "e", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1090 = Static28.method790("l");
+	public static final JagString aClass100_1090 = Static28.method790("l");
 
 	@OriginalMember(owner = "client!wb", name = "f", descriptor = "Lclient!wa;")
 	public static final Buffer aClass3_Sub15_9 = new Buffer(new byte[5000]);
 
 	@OriginalMember(owner = "client!wb", name = "i", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_1092 = Static28.method790("Cancel");
+	private static final JagString aClass100_1092 = Static28.method790("Cancel");
 
 	@OriginalMember(owner = "client!wb", name = "h", descriptor = "Lclient!na;")
-	public static Class100 aClass100_1091 = aClass100_1092;
+	public static JagString aClass100_1091 = aClass100_1092;
 
 	@OriginalMember(owner = "client!wb", name = "j", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1093 = Static28.method790("Memory after cleanup=");
+	public static final JagString aClass100_1093 = Static28.method790("Memory after cleanup=");
 
 	@OriginalMember(owner = "client!wb", name = "m", descriptor = "Lclient!na;")
-	public static Class100 aClass100_1094 = null;
+	public static JagString aClass100_1094 = null;
 
 	@OriginalMember(owner = "client!wb", name = "a", descriptor = "(IIIIIIII)V")
 	public static void method4594(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6) {

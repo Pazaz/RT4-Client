@@ -11,22 +11,22 @@ public final class Static269 {
 	public static Class3_Sub2_Sub4 aClass3_Sub2_Sub4_2;
 
 	@OriginalMember(owner = "client!wa", name = "D", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_553 = Static28.method790("Loaded interfaces");
+	private static final JagString aClass100_553 = Static28.method790("Loaded interfaces");
 
 	@OriginalMember(owner = "client!wa", name = "H", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_554 = Static28.method790("Polices charg-Bes");
+	public static final JagString aClass100_554 = Static28.method790("Polices charg-Bes");
 
 	@OriginalMember(owner = "client!wa", name = "X", descriptor = "[Lclient!na;")
-	public static Class100[] aClass100Array87 = null;
+	public static JagString[] aClass100Array87 = null;
 
 	@OriginalMember(owner = "client!wa", name = "eb", descriptor = "Lclient!na;")
-	public static Class100 aClass100_555 = aClass100_553;
+	public static JagString aClass100_555 = aClass100_553;
 
 	@OriginalMember(owner = "client!wa", name = "pb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_556 = Static28.method790("<br>");
+	public static final JagString aClass100_556 = Static28.method790("<br>");
 
 	@OriginalMember(owner = "client!wa", name = "tb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_557 = Static28.method790("d-Broulement:");
+	public static final JagString aClass100_557 = Static28.method790("d-Broulement:");
 
 	@OriginalMember(owner = "client!wa", name = "Eb", descriptor = "[Lclient!bg;")
 	public static final Class14_Sub1[] aClass14_Sub1Array3 = new Class14_Sub1[28];
@@ -323,7 +323,7 @@ public final class Static269 {
 		}
 		@Pc(405) int local405 = arg1 + arg2 - 8;
 		@Pc(412) int local412 = arg0 + arg3 - 5;
-		Static215.aClass3_Sub2_Sub9_32.method2864(Static34.method882(new Class100[] { Static115.aClass100_579, Static123.method2423(Static243.anInt5359) }), local412, local405, 16776960, -1);
+		Static215.aClass3_Sub2_Sub9_32.method2864(Static34.method882(new JagString[] { Static115.aClass100_579, Static123.method2423(Static243.anInt5359) }), local412, local405, 16776960, -1);
 		@Pc(434) Runtime local434 = Runtime.getRuntime();
 		@Pc(443) int local443 = (int) ((local434.totalMemory() - local434.freeMemory()) / 1024L);
 		@Pc(445) int local445 = 16776960;
@@ -331,12 +331,12 @@ public final class Static269 {
 		if (local443 > 65536) {
 			local445 = 16711680;
 		}
-		Static215.aClass3_Sub2_Sub9_32.method2864(Static34.method882(new Class100[] { Static203.aClass100_894, Static123.method2423(local443), Static19.aClass100_112 }), local412, local446, local445, -1);
+		Static215.aClass3_Sub2_Sub9_32.method2864(Static34.method882(new JagString[] { Static203.aClass100_894, Static123.method2423(local443), Static19.aClass100_112 }), local412, local446, local445, -1);
 		local405 = local446 - 15;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(IZ)Lclient!na;")
-	public static Class100 method2228(@OriginalArg(0) int arg0) {
-		return Static233.aClass100Array160[arg0].method3120() > 0 ? Static34.method882(new Class100[] { Static254.aClass100Array168[arg0], Static206.aClass100_901, Static233.aClass100Array160[arg0] }) : Static254.aClass100Array168[arg0];
+	public static JagString method2228(@OriginalArg(0) int arg0) {
+		return Static233.aClass100Array160[arg0].method3120() > 0 ? Static34.method882(new JagString[] { Static254.aClass100Array168[arg0], Static206.aClass100_901, Static233.aClass100Array160[arg0] }) : Static254.aClass100Array168[arg0];
 	}
 }

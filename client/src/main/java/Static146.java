@@ -17,13 +17,13 @@ public final class Static146 {
 	public static final Class144[] aClass144Array1 = new Class144[14];
 
 	@OriginalMember(owner = "client!lg", name = "j", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_669 = Static28.method790("gr-Un:");
+	public static final JagString aClass100_669 = Static28.method790("gr-Un:");
 
 	@OriginalMember(owner = "client!lg", name = "k", descriptor = "I")
 	public static int anInt3508 = 99;
 
 	@OriginalMember(owner = "client!lg", name = "a", descriptor = "(ZLclient!wa;Lclient!na;)I")
-	public static int method2748(@OriginalArg(1) Buffer arg0, @OriginalArg(2) Class100 arg1) {
+	public static int method2748(@OriginalArg(1) Buffer arg0, @OriginalArg(2) JagString arg1) {
 		@Pc(6) int local6 = arg0.anInt2792;
 		@Pc(14) byte[] local14 = arg1.method3148();
 		arg0.method2194(local14.length);

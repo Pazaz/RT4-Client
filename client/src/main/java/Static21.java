@@ -4,22 +4,22 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class Static21 {
 
 	@OriginalMember(owner = "client!bk", name = "I", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_121 = Static28.method790("yellow:");
+	private static final JagString aClass100_121 = Static28.method790("yellow:");
 
 	@OriginalMember(owner = "client!bk", name = "K", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_122 = Static28.method790("Loading config )2 ");
+	private static final JagString aClass100_122 = Static28.method790("Loading config )2 ");
 
 	@OriginalMember(owner = "client!bk", name = "L", descriptor = "Lclient!na;")
-	public static Class100 aClass100_123 = aClass100_121;
+	public static JagString aClass100_123 = aClass100_121;
 
 	@OriginalMember(owner = "client!bk", name = "N", descriptor = "Lclient!na;")
-	public static Class100 aClass100_124 = aClass100_122;
+	public static JagString aClass100_124 = aClass100_122;
 
 	@OriginalMember(owner = "client!bk", name = "P", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_125 = Static28.method790("Speicher wird zugewiesen)3");
+	public static final JagString aClass100_125 = Static28.method790("Speicher wird zugewiesen)3");
 
 	@OriginalMember(owner = "client!bk", name = "R", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_126 = aClass100_121;
+	public static final JagString aClass100_126 = aClass100_121;
 
 	@OriginalMember(owner = "client!bk", name = "a", descriptor = "(BI)V")
 	public static void method619(@OriginalArg(1) int arg0) {

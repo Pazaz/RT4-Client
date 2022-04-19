@@ -16,7 +16,7 @@ public final class Static19 {
 	public static int anInt647;
 
 	@OriginalMember(owner = "client!bi", name = "W", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_112 = Static28.method790("k");
+	public static final JagString aClass100_112 = Static28.method790("k");
 
 	@OriginalMember(owner = "client!bi", name = "jb", descriptor = "Z")
 	public static boolean aBoolean43 = true;

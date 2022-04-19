@@ -14,10 +14,10 @@ public final class Static58 {
 	public static boolean aBoolean101 = false;
 
 	@OriginalMember(owner = "client!eh", name = "h", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_394 = Static28.method790("m-Ochte mit Ihnen handeln)3");
+	public static final JagString aClass100_394 = Static28.method790("m-Ochte mit Ihnen handeln)3");
 
 	@OriginalMember(owner = "client!eh", name = "i", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_395 = Static28.method790(" zuerst von Ihrer Freunde)2Liste(Q");
+	public static final JagString aClass100_395 = Static28.method790(" zuerst von Ihrer Freunde)2Liste(Q");
 
 	@OriginalMember(owner = "client!eh", name = "j", descriptor = "I")
 	public static int anInt1766 = 0;

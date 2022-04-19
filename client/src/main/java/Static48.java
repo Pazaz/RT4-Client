@@ -17,10 +17,10 @@ public final class Static48 {
 	public static int anInt1447 = 0;
 
 	@OriginalMember(owner = "client!dl", name = "j", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_346 = Static28.method790("Opened title screen");
+	private static final JagString aClass100_346 = Static28.method790("Opened title screen");
 
 	@OriginalMember(owner = "client!dl", name = "k", descriptor = "Lclient!na;")
-	public static Class100 aClass100_347 = aClass100_346;
+	public static JagString aClass100_347 = aClass100_346;
 
 	@OriginalMember(owner = "client!dl", name = "a", descriptor = "(IIIIIIIII)V")
 	public static void method1195(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7) {

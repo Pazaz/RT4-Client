@@ -14,10 +14,10 @@ public final class Static155 {
 	public static final int[] anIntArray355 = new int[2000];
 
 	@OriginalMember(owner = "client!me", name = "T", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_739 = Static28.method790("violet:");
+	public static final JagString aClass100_739 = Static28.method790("violet:");
 
 	@OriginalMember(owner = "client!me", name = "kb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_740 = Static28.method790("Votre liste noire est pleine (X100 noms maximum(Y)3");
+	public static final JagString aClass100_740 = Static28.method790("Votre liste noire est pleine (X100 noms maximum(Y)3");
 
 	@OriginalMember(owner = "client!me", name = "a", descriptor = "(IB)V")
 	public static void method2940(@OriginalArg(0) int arg0) {
@@ -37,9 +37,9 @@ public final class Static155 {
 	}
 
 	@OriginalMember(owner = "client!me", name = "a", descriptor = "(ZLclient!na;I)V")
-	public static void method2941(@OriginalArg(0) boolean arg0, @OriginalArg(1) Class100 arg1) {
+	public static void method2941(@OriginalArg(0) boolean arg0, @OriginalArg(1) JagString arg1) {
 		@Pc(8) short[] local8 = new short[16];
-		@Pc(12) Class100 local12 = arg1.method3114();
+		@Pc(12) JagString local12 = arg1.method3114();
 		@Pc(14) int local14 = 0;
 		for (@Pc(16) int local16 = 0; local16 < Static170.anInt3245; local16++) {
 			@Pc(27) Class55 local27 = Static71.method1439(local16);
@@ -62,7 +62,7 @@ public final class Static155 {
 		Static169.aShortArray52 = local8;
 		Static67.anInt3356 = 0;
 		Static111.anInt2905 = local14;
-		@Pc(117) Class100[] local117 = new Class100[Static111.anInt2905];
+		@Pc(117) JagString[] local117 = new JagString[Static111.anInt2905];
 		for (@Pc(119) int local119 = 0; local119 < Static111.anInt2905; local119++) {
 			local117[local119] = Static71.method1439(local8[local119]).aClass100_495;
 		}

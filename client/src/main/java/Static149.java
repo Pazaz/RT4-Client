@@ -19,7 +19,7 @@ public final class Static149 {
 	public static final LruHashTable aClass54_10 = new LruHashTable(128);
 
 	@OriginalMember(owner = "client!lj", name = "q", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_683 = Static28.method790("Fallen lassen");
+	public static final JagString aClass100_683 = Static28.method790("Fallen lassen");
 
 	@OriginalMember(owner = "client!lj", name = "w", descriptor = "I")
 	public static int anInt3554 = 0;

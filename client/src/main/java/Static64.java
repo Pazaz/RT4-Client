@@ -11,19 +11,19 @@ public final class Static64 {
 	public static byte[][] aByteArrayArray9;
 
 	@OriginalMember(owner = "client!fb", name = "i", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_431 = Static28.method790("; Max)2Age=");
+	public static final JagString aClass100_431 = Static28.method790("; Max)2Age=");
 
 	@OriginalMember(owner = "client!fb", name = "k", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_432 = Static28.method790("M");
+	public static final JagString aClass100_432 = Static28.method790("M");
 
 	@OriginalMember(owner = "client!fb", name = "l", descriptor = "[Lclient!na;")
-	public static final Class100[] aClass100Array62 = new Class100[100];
+	public static final JagString[] aClass100Array62 = new JagString[100];
 
 	@OriginalMember(owner = "client!fb", name = "m", descriptor = "Z")
 	public static boolean aBoolean111 = true;
 
 	@OriginalMember(owner = "client!fb", name = "p", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_433 = Static28.method790("<col=ff3000>");
+	public static final JagString aClass100_433 = Static28.method790("<col=ff3000>");
 
 	@OriginalMember(owner = "client!fb", name = "q", descriptor = "[I")
 	public static final int[] anIntArray154 = new int[] { -1, -1, 1, 1 };
@@ -65,17 +65,17 @@ public final class Static64 {
 			Static103.method2231(Static186.aClass100_827, 0, Static233.aClass100_995);
 			return;
 		}
-		@Pc(35) Class100 local35 = Static79.method1702(arg0).method3125();
+		@Pc(35) JagString local35 = Static79.method1702(arg0).method3125();
 		@Pc(42) int local42;
 		for (local42 = 0; local42 < Static9.anInt178; local42++) {
 			if (Static92.aLongArray3[local42] == arg0) {
-				Static103.method2231(Static186.aClass100_827, 0, Static34.method882(new Class100[] { local35, Static150.aClass100_691 }));
+				Static103.method2231(Static186.aClass100_827, 0, Static34.method882(new JagString[] { local35, Static150.aClass100_691 }));
 				return;
 			}
 		}
 		for (local42 = 0; local42 < Static35.anInt1093; local42++) {
 			if (arg0 == Static190.aLongArray6[local42]) {
-				Static103.method2231(Static186.aClass100_827, 0, Static34.method882(new Class100[] { Static71.aClass100_417, local35, Static211.aClass100_227 }));
+				Static103.method2231(Static186.aClass100_827, 0, Static34.method882(new JagString[] { Static71.aClass100_417, local35, Static211.aClass100_227 }));
 				return;
 			}
 		}

@@ -15,7 +15,7 @@ public final class Static102 {
 	public static int anInt2678 = 0;
 
 	@OriginalMember(owner = "client!hn", name = "W", descriptor = "Lclient!na;")
-	public static Class100 aClass100_545 = null;
+	public static JagString aClass100_545 = null;
 
 	@OriginalMember(owner = "client!hn", name = "X", descriptor = "I")
 	public static int anInt2679 = 0;

@@ -14,13 +14,13 @@ public final class Static28 {
 	public static Js5 aClass153_18;
 
 	@OriginalMember(owner = "client!cd", name = "v", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_172 = method790("Atteindre");
+	public static final JagString aClass100_172 = method790("Atteindre");
 
 	@OriginalMember(owner = "client!cd", name = "y", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_173 = method790("Suche nach Updates )2 ");
+	public static final JagString aClass100_173 = method790("Suche nach Updates )2 ");
 
 	@OriginalMember(owner = "client!cd", name = "D", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_174 = method790("Lade Wordpack )2 ");
+	public static final JagString aClass100_174 = method790("Lade Wordpack )2 ");
 
 	@OriginalMember(owner = "client!cd", name = "a", descriptor = "(Lclient!ve;B)I")
 	public static int method789(@OriginalArg(0) Js5 arg0) {
@@ -74,10 +74,10 @@ public final class Static28 {
 	}
 
 	@OriginalMember(owner = "client!cd", name = "a", descriptor = "(Ljava/lang/String;B)Lclient!na;")
-	public static Class100 method790(@OriginalArg(0) String arg0) {
+	public static JagString method790(@OriginalArg(0) String arg0) {
 		@Pc(6) byte[] local6 = arg0.getBytes();
 		@Pc(9) int local9 = local6.length;
-		@Pc(13) Class100 local13 = new Class100();
+		@Pc(13) JagString local13 = new JagString();
 		@Pc(15) int local15 = 0;
 		local13.aByteArray52 = new byte[local9];
 		while (local9 > local15) {

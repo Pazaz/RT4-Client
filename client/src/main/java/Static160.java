@@ -14,10 +14,10 @@ public final class Static160 {
 	public static short[] aShortArray41;
 
 	@OriginalMember(owner = "client!mj", name = "d", descriptor = "[Lclient!na;")
-	public static final Class100[] aClass100Array121 = new Class100[8];
+	public static final JagString[] aClass100Array121 = new JagString[8];
 
 	@OriginalMember(owner = "client!mj", name = "g", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_761 = Static28.method790("(U3");
+	public static final JagString aClass100_761 = Static28.method790("(U3");
 
 	@OriginalMember(owner = "client!mj", name = "i", descriptor = "I")
 	public static int anInt3902 = 0;

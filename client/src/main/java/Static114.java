@@ -12,7 +12,7 @@ public final class Static114 {
 	public static int anInt5831 = 0;
 
 	@OriginalMember(owner = "client!j", name = "z", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1099 = Static28.method790("::shiftclick");
+	public static final JagString aClass100_1099 = Static28.method790("::shiftclick");
 
 	@OriginalMember(owner = "client!j", name = "K", descriptor = "I")
 	public static int anInt5843 = 0;
@@ -21,7 +21,7 @@ public final class Static114 {
 	public static int anInt5844 = 0;
 
 	@OriginalMember(owner = "client!j", name = "M", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1100 = Static28.method790("::replacecanvas");
+	public static final JagString aClass100_1100 = Static28.method790("::replacecanvas");
 
 	@OriginalMember(owner = "client!j", name = "O", descriptor = "[I")
 	public static final int[] anIntArray565 = new int[] { 1, -1, -1, 1 };
@@ -43,7 +43,7 @@ public final class Static114 {
 	}
 
 	@OriginalMember(owner = "client!j", name = "a", descriptor = "(BZLclient!na;)V")
-	public static void method4636(@OriginalArg(1) boolean arg0, @OriginalArg(2) Class100 arg1) {
+	public static void method4636(@OriginalArg(1) boolean arg0, @OriginalArg(2) JagString arg1) {
 		@Pc(24) int local24 = Static215.aClass3_Sub2_Sub9_32.method2856(arg1, 250);
 		@Pc(31) int local31 = Static215.aClass3_Sub2_Sub9_32.method2860(arg1, 250) * 13;
 		if (Static239.aBoolean269) {

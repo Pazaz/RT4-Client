@@ -14,7 +14,7 @@ public final class Static159 {
 	public static int anInt3893;
 
 	@OriginalMember(owner = "client!mi", name = "R", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_760 = Static28.method790(")1");
+	public static final JagString aClass100_760 = Static28.method790(")1");
 
 	@OriginalMember(owner = "client!mi", name = "S", descriptor = "[Lclient!e;")
 	public static final Class8_Sub4_Sub1[] aClass8_Sub4_Sub1Array1 = new Class8_Sub4_Sub1[2048];

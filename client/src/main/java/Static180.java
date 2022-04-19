@@ -11,10 +11,10 @@ public final class Static180 {
 	public static Class13 aClass13_22;
 
 	@OriginalMember(owner = "client!og", name = "g", descriptor = "[Lclient!na;")
-	public static Class100[] aClass100Array125;
+	public static JagString[] aClass100Array125;
 
 	@OriginalMember(owner = "client!og", name = "h", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_808 = Static28.method790(" loggt sich aus)3");
+	public static final JagString aClass100_808 = Static28.method790(" loggt sich aus)3");
 
 	@OriginalMember(owner = "client!og", name = "a", descriptor = "(Lclient!ve;Lclient!ve;B)V")
 	public static void method3324(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {

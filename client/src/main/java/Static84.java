@@ -17,7 +17,7 @@ public final class Static84 {
 	public static Sprite aClass3_Sub2_Sub1_4;
 
 	@OriginalMember(owner = "client!gk", name = "a", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_483 = Static28.method790("leuchten2:");
+	public static final JagString aClass100_483 = Static28.method790("leuchten2:");
 
 	@OriginalMember(owner = "client!gk", name = "c", descriptor = "[I")
 	public static final int[] anIntArray209 = new int[4096];
@@ -62,7 +62,7 @@ public final class Static84 {
 					Static57.aClass3_Sub15_Sub1_3.method2200(local21, Static270.aClass3_Sub15_9.aByteArray40);
 					Static270.aClass3_Sub15_9.anInt2792 = 0;
 					@Pc(106) int local106 = -1;
-					@Pc(127) Class100 local127;
+					@Pc(127) JagString local127;
 					if (local35) {
 						@Pc(112) Class12 local112 = Static264.method3568(Static270.aClass3_Sub15_9);
 						local13 &= 0x7FFF;
@@ -76,9 +76,9 @@ public final class Static84 {
 					arg2.anInt3408 = 150;
 					arg2.anInt3429 = local13 >> 8;
 					if (local17 == 2) {
-						Static154.method2928(local106, local35 ? 17 : 1, local127, null, Static34.method882(new Class100[] { Static44.aClass100_336, arg2.method1264() }));
+						Static154.method2928(local106, local35 ? 17 : 1, local127, null, Static34.method882(new JagString[] { Static44.aClass100_336, arg2.method1264() }));
 					} else if (local17 == 1) {
-						Static154.method2928(local106, local35 ? 17 : 1, local127, null, Static34.method882(new Class100[] { Static65.aClass100_435, arg2.method1264() }));
+						Static154.method2928(local106, local35 ? 17 : 1, local127, null, Static34.method882(new JagString[] { Static65.aClass100_435, arg2.method1264() }));
 					} else {
 						Static154.method2928(local106, local35 ? 17 : 2, local127, null, arg2.method1264());
 					}

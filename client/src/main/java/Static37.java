@@ -17,13 +17,13 @@ public final class Static37 {
 	public static PrivilegedRequest aClass212_2;
 
 	@OriginalMember(owner = "client!cm", name = "e", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_236 = Static28.method790("Vous ne pouvez pas ajouter votre nom -9 votre liste d(Wamis)3");
+	public static final JagString aClass100_236 = Static28.method790("Vous ne pouvez pas ajouter votre nom -9 votre liste d(Wamis)3");
 
 	@OriginalMember(owner = "client!cm", name = "h", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_237 = Static28.method790("Verbindung abgebrochen)3");
+	public static final JagString aClass100_237 = Static28.method790("Verbindung abgebrochen)3");
 
 	@OriginalMember(owner = "client!cm", name = "i", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_238 = Static28.method790("comp-Btence ");
+	public static final JagString aClass100_238 = Static28.method790("comp-Btence ");
 
 	@OriginalMember(owner = "client!cm", name = "a", descriptor = "(ILclient!fe;)V")
 	public static void method949(@OriginalArg(1) Class8_Sub4 arg0) {

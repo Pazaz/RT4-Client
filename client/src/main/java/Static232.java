@@ -20,10 +20,10 @@ public final class Static232 {
 	public static final Class99 aClass99_30 = new Class99(64);
 
 	@OriginalMember(owner = "client!sm", name = "f", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_987 = Static28.method790("Connection lost)3");
+	private static final JagString aClass100_987 = Static28.method790("Connection lost)3");
 
 	@OriginalMember(owner = "client!sm", name = "d", descriptor = "Lclient!na;")
-	public static Class100 aClass100_986 = aClass100_987;
+	public static JagString aClass100_986 = aClass100_987;
 
 	@OriginalMember(owner = "client!sm", name = "l", descriptor = "[S")
 	public static short[] aShortArray74 = new short[256];

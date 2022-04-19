@@ -25,10 +25,10 @@ public final class Class13 {
 	public Object[] anObjectArray6;
 
 	@OriginalMember(owner = "client!be", name = "q", descriptor = "[Lclient!na;")
-	public Class100[] aClass100Array18;
+	public JagString[] aClass100Array18;
 
 	@OriginalMember(owner = "client!be", name = "s", descriptor = "[Lclient!na;")
-	public Class100[] aClass100Array19;
+	public JagString[] aClass100Array19;
 
 	@OriginalMember(owner = "client!be", name = "t", descriptor = "[Ljava/lang/Object;")
 	public Object[] anObjectArray7;
@@ -247,7 +247,7 @@ public final class Class13 {
 	public boolean aBoolean24 = false;
 
 	@OriginalMember(owner = "client!be", name = "Sb", descriptor = "Lclient!na;")
-	public Class100 aClass100_85 = Static176.aClass100_800;
+	public JagString aClass100_85 = Static176.aClass100_800;
 
 	@OriginalMember(owner = "client!be", name = "i", descriptor = "Z")
 	public boolean aBoolean19 = false;
@@ -295,7 +295,7 @@ public final class Class13 {
 	public int anInt492 = 0;
 
 	@OriginalMember(owner = "client!be", name = "Gb", descriptor = "Lclient!na;")
-	public Class100 aClass100_84 = Static176.aClass100_800;
+	public JagString aClass100_84 = Static176.aClass100_800;
 
 	@OriginalMember(owner = "client!be", name = "n", descriptor = "I")
 	public int anInt445 = 0;
@@ -325,7 +325,7 @@ public final class Class13 {
 	public int anInt497 = 0;
 
 	@OriginalMember(owner = "client!be", name = "Dc", descriptor = "Lclient!na;")
-	public Class100 aClass100_88 = Static176.aClass100_800;
+	public JagString aClass100_88 = Static176.aClass100_800;
 
 	@OriginalMember(owner = "client!be", name = "Lc", descriptor = "I")
 	public int anInt511 = 0;
@@ -352,13 +352,13 @@ public final class Class13 {
 	public int anInt494 = 0;
 
 	@OriginalMember(owner = "client!be", name = "Ub", descriptor = "Lclient!na;")
-	public Class100 aClass100_86 = Static176.aClass100_800;
+	public JagString aClass100_86 = Static176.aClass100_800;
 
 	@OriginalMember(owner = "client!be", name = "Lb", descriptor = "I")
 	public int anInt483 = 0;
 
 	@OriginalMember(owner = "client!be", name = "r", descriptor = "Lclient!na;")
-	public Class100 aClass100_82 = Static176.aClass100_800;
+	public JagString aClass100_82 = Static176.aClass100_800;
 
 	@OriginalMember(owner = "client!be", name = "Pc", descriptor = "I")
 	public int anInt514 = 0;
@@ -409,7 +409,7 @@ public final class Class13 {
 	public int anInt522 = -1;
 
 	@OriginalMember(owner = "client!be", name = "Rc", descriptor = "Lclient!na;")
-	public Class100 aClass100_89 = Static192.aClass100_849;
+	public JagString aClass100_89 = Static192.aClass100_849;
 
 	@OriginalMember(owner = "client!be", name = "Gc", descriptor = "I")
 	public int anInt508 = 0;
@@ -530,9 +530,9 @@ public final class Class13 {
 	}
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(BLclient!na;I)V")
-	public final void method480(@OriginalArg(1) Class100 arg0, @OriginalArg(2) int arg1) {
+	public final void method480(@OriginalArg(1) JagString arg0, @OriginalArg(2) int arg1) {
 		if (this.aClass100Array18 == null || this.aClass100Array18.length <= arg1) {
-			@Pc(23) Class100[] local23 = new Class100[arg1 + 1];
+			@Pc(23) JagString[] local23 = new JagString[arg1 + 1];
 			if (this.aClass100Array18 != null) {
 				for (@Pc(30) int local30 = 0; local30 < this.aClass100Array18.length; local30++) {
 					local23[local30] = this.aClass100Array18[local30];
@@ -641,9 +641,9 @@ public final class Class13 {
 					this.anIntArray36[local364] = -1;
 				}
 			}
-			this.aClass100Array19 = new Class100[5];
+			this.aClass100Array19 = new JagString[5];
 			for (local364 = 0; local364 < 5; local364++) {
-				@Pc(418) Class100 local418 = arg0.method2202();
+				@Pc(418) JagString local418 = arg0.method2202();
 				if (local418.method3120() > 0) {
 					this.aClass100Array19[local364] = local418;
 					local164 |= 0x1 << local364 + 23;
@@ -720,9 +720,9 @@ public final class Class13 {
 			if (local175 == 1) {
 				local164 |= 0x40000000;
 			}
-			this.aClass100Array19 = new Class100[5];
+			this.aClass100Array19 = new JagString[5];
 			for (local183 = 0; local183 < 5; local183++) {
-				@Pc(756) Class100 local756 = arg0.method2202();
+				@Pc(756) JagString local756 = arg0.method2202();
 				if (local756.method3120() > 0) {
 					this.aClass100Array19[local183] = local756;
 					local164 |= 0x1 << local183 + 23;
@@ -1091,7 +1091,7 @@ public final class Class13 {
 		@Pc(557) int local557 = local497 & 0xF;
 		@Pc(567) int local567;
 		if (local557 > 0) {
-			this.aClass100Array18 = new Class100[local557];
+			this.aClass100Array18 = new JagString[local557];
 			for (local567 = 0; local567 < local557; local567++) {
 				this.aClass100Array18[local567] = arg0.method2202();
 			}

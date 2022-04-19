@@ -11,13 +11,13 @@ public final class Static141 {
 	public static final int[] anIntArray326 = new int[25];
 
 	@OriginalMember(owner = "client!lb", name = "x", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_665 = Static28.method790("red:");
+	private static final JagString aClass100_665 = Static28.method790("red:");
 
 	@OriginalMember(owner = "client!lb", name = "q", descriptor = "Lclient!na;")
-	public static Class100 aClass100_663 = aClass100_665;
+	public static JagString aClass100_663 = aClass100_665;
 
 	@OriginalMember(owner = "client!lb", name = "s", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_664 = Static28.method790(":clan:");
+	public static final JagString aClass100_664 = Static28.method790(":clan:");
 
 	@OriginalMember(owner = "client!lb", name = "u", descriptor = "I")
 	public static int anInt3469 = 0;
@@ -29,7 +29,7 @@ public final class Static141 {
 	public static int anInt3474 = 0;
 
 	@OriginalMember(owner = "client!lb", name = "D", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_666 = aClass100_665;
+	public static final JagString aClass100_666 = aClass100_665;
 
 	@OriginalMember(owner = "client!lb", name = "d", descriptor = "(B)V")
 	public static void method2720() {

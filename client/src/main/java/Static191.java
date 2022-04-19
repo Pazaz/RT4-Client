@@ -9,7 +9,7 @@ public final class Static191 {
 	public static final int anInt4506 = 50;
 
 	@OriginalMember(owner = "client!pg", name = "P", descriptor = "[Lclient!na;")
-	public static final Class100[] aClass100Array132 = new Class100[anInt4506];
+	public static final JagString[] aClass100Array132 = new JagString[anInt4506];
 
 	@OriginalMember(owner = "client!pg", name = "Q", descriptor = "[I")
 	public static final int[] anIntArray384 = new int[anInt4506];
@@ -27,16 +27,16 @@ public final class Static191 {
 	public static final int anInt4504 = 50;
 
 	@OriginalMember(owner = "client!pg", name = "W", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_842 = Static28.method790(" loggt sich ein)3");
+	public static final JagString aClass100_842 = Static28.method790(" loggt sich ein)3");
 
 	@OriginalMember(owner = "client!pg", name = "ib", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_847 = Static28.method790("wave2:");
+	private static final JagString aClass100_847 = Static28.method790("wave2:");
 
 	@OriginalMember(owner = "client!pg", name = "X", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_843 = aClass100_847;
+	public static final JagString aClass100_843 = aClass100_847;
 
 	@OriginalMember(owner = "client!pg", name = "Y", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_844 = Static28.method790("leuchten1:");
+	public static final JagString aClass100_844 = Static28.method790("leuchten1:");
 
 	@OriginalMember(owner = "client!pg", name = "Z", descriptor = "[I")
 	public static final int[] anIntArray387 = new int[anInt4506];
@@ -48,13 +48,13 @@ public final class Static191 {
 	public static final int[] anIntArray389 = new int[anInt4506];
 
 	@OriginalMember(owner = "client!pg", name = "db", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_845 = Static28.method790(":assistreq:");
+	public static final JagString aClass100_845 = Static28.method790(":assistreq:");
 
 	@OriginalMember(owner = "client!pg", name = "eb", descriptor = "[I")
 	public static final int[] anIntArray390 = new int[anInt4506];
 
 	@OriginalMember(owner = "client!pg", name = "hb", descriptor = "Lclient!na;")
-	public static Class100 aClass100_846 = aClass100_847;
+	public static JagString aClass100_846 = aClass100_847;
 
 	@OriginalMember(owner = "client!pg", name = "kb", descriptor = "[I")
 	public static final int[] anIntArray391 = new int[anInt4506];

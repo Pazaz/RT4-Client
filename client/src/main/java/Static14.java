@@ -8,10 +8,10 @@ public final class Static14 {
 	public static Js5 aClass153_8;
 
 	@OriginalMember(owner = "client!bd", name = "b", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_80 = Static28.method790("(U(Y");
+	public static final JagString aClass100_80 = Static28.method790("(U(Y");
 
 	@OriginalMember(owner = "client!bd", name = "d", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_81 = Static28.method790("Ausw-=hlen");
+	public static final JagString aClass100_81 = Static28.method790("Ausw-=hlen");
 
 	@OriginalMember(owner = "client!bd", name = "i", descriptor = "I")
 	public static int anInt441 = 0;

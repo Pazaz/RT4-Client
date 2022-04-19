@@ -27,5 +27,5 @@ public final class Static215 {
 	public static int anInt4873 = 0;
 
 	@OriginalMember(owner = "client!rh", name = "q", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_912 = Static28.method790("OK");
+	public static final JagString aClass100_912 = Static28.method790("OK");
 }

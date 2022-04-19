@@ -23,7 +23,7 @@ public final class Static121 {
 	public static boolean aBoolean154 = false;
 
 	@OriginalMember(owner = "client!jg", name = "k", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_590 = Static28.method790("Titelbild geladen)3");
+	public static final JagString aClass100_590 = Static28.method790("Titelbild geladen)3");
 
 	@OriginalMember(owner = "client!jg", name = "a", descriptor = "(I)[Lclient!ek;")
 	public static Class36_Sub1[] method2406() {

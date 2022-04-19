@@ -32,7 +32,7 @@ public final class Static233 {
 	public static final Class99 aClass99_31 = new Class99(64);
 
 	@OriginalMember(owner = "client!t", name = "v", descriptor = "[Lclient!na;")
-	public static final Class100[] aClass100Array160 = new Class100[500];
+	public static final JagString[] aClass100Array160 = new JagString[500];
 
 	@OriginalMember(owner = "client!t", name = "w", descriptor = "[J")
 	public static final long[] aLongArray9 = new long[100];
@@ -47,13 +47,13 @@ public final class Static233 {
 	public static int anInt5224 = 0;
 
 	@OriginalMember(owner = "client!t", name = "B", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_993 = Static28.method790("Your friend list is full)3 Max of 100 for free users)1 and 200 for members)3");
+	private static final JagString aClass100_993 = Static28.method790("Your friend list is full)3 Max of 100 for free users)1 and 200 for members)3");
 
 	@OriginalMember(owner = "client!t", name = "C", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_994 = Static28.method790(")3");
+	public static final JagString aClass100_994 = Static28.method790(")3");
 
 	@OriginalMember(owner = "client!t", name = "D", descriptor = "Lclient!na;")
-	public static Class100 aClass100_995 = aClass100_993;
+	public static JagString aClass100_995 = aClass100_993;
 
 	@OriginalMember(owner = "client!t", name = "E", descriptor = "[I")
 	public static final int[] anIntArray452 = new int[32];
@@ -226,9 +226,9 @@ public final class Static233 {
 							} else if (local272 instanceof Number) {
 								arg0.method2178(1);
 								arg0.method2166(((Number) local272).longValue());
-							} else if (local272 instanceof Class100) {
+							} else if (local272 instanceof JagString) {
 								arg0.method2178(2);
-								arg0.method2171((Class100) local272);
+								arg0.method2171((JagString) local272);
 							} else {
 								arg0.method2178(4);
 							}

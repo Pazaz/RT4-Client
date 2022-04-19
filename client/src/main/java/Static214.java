@@ -14,19 +14,19 @@ public final class Static214 {
 	public static int anInt5579;
 
 	@OriginalMember(owner = "client!rg", name = "r", descriptor = "[Lclient!na;")
-	public static final Class100[] aClass100Array170 = new Class100[200];
+	public static final JagString[] aClass100Array170 = new JagString[200];
 
 	@OriginalMember(owner = "client!rg", name = "s", descriptor = "I")
 	public static int anInt5574 = -1;
 
 	@OriginalMember(owner = "client!rg", name = "u", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_1063 = Static28.method790("Started 3d Library");
+	private static final JagString aClass100_1063 = Static28.method790("Started 3d Library");
 
 	@OriginalMember(owner = "client!rg", name = "A", descriptor = "[I")
 	public static final int[] anIntArray492 = new int[14];
 
 	@OriginalMember(owner = "client!rg", name = "E", descriptor = "Lclient!na;")
-	public static Class100 aClass100_1064 = aClass100_1063;
+	public static JagString aClass100_1064 = aClass100_1063;
 
 	@OriginalMember(owner = "client!rg", name = "F", descriptor = "I")
 	public static int anInt5581 = 0;

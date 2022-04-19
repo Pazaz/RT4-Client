@@ -8,10 +8,10 @@ public final class Static115 {
 	public static int anInt2940;
 
 	@OriginalMember(owner = "client!ja", name = "b", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_577 = Static28.method790("S-Blectionner");
+	public static final JagString aClass100_577 = Static28.method790("S-Blectionner");
 
 	@OriginalMember(owner = "client!ja", name = "d", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_578 = Static28.method790("niveau ");
+	public static final JagString aClass100_578 = Static28.method790("niveau ");
 
 	@OriginalMember(owner = "client!ja", name = "f", descriptor = "Lclient!ih;")
 	public static final LinkedList aClass69_70 = new LinkedList();
@@ -20,7 +20,7 @@ public final class Static115 {
 	public static int anInt2937 = 0;
 
 	@OriginalMember(owner = "client!ja", name = "k", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_579 = Static28.method790("Fps:");
+	public static final JagString aClass100_579 = Static28.method790("Fps:");
 
 	@OriginalMember(owner = "client!ja", name = "l", descriptor = "[Lclient!wa;")
 	public static final Buffer[] aClass3_Sub15Array1 = new Buffer[2048];
@@ -29,16 +29,16 @@ public final class Static115 {
 	public static int anInt2939 = 0;
 
 	@OriginalMember(owner = "client!ja", name = "o", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_580 = Static28.method790("voudrait faire un -Bchange avec vous)3");
+	public static final JagString aClass100_580 = Static28.method790("voudrait faire un -Bchange avec vous)3");
 
 	@OriginalMember(owner = "client!ja", name = "p", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_581 = Static28.method790(" est d-Bj-9 dans votre liste d(Wamis)3");
+	public static final JagString aClass100_581 = Static28.method790(" est d-Bj-9 dans votre liste d(Wamis)3");
 
 	@OriginalMember(owner = "client!ja", name = "r", descriptor = "I")
 	public static int anInt2941 = -1;
 
 	@OriginalMember(owner = "client!ja", name = "s", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_582 = Static28.method790("http:)4)4");
+	public static final JagString aClass100_582 = Static28.method790("http:)4)4");
 
 	@OriginalMember(owner = "client!ja", name = "a", descriptor = "([II)[I")
 	public static int[] method2308(@OriginalArg(0) int[] arg0) {

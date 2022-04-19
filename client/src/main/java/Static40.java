@@ -11,7 +11,7 @@ public final class Static40 {
 	public static int anInt1275;
 
 	@OriginalMember(owner = "client!da", name = "O", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_253 = Static28.method790("(U0a )2 via: ");
+	public static final JagString aClass100_253 = Static28.method790("(U0a )2 via: ");
 
 	@OriginalMember(owner = "client!da", name = "d", descriptor = "(I)V")
 	public static void method1008() {
@@ -119,7 +119,7 @@ public final class Static40 {
 	}
 
 	@OriginalMember(owner = "client!da", name = "a", descriptor = "(IIIILclient!na;JI)V")
-	public static void method1016(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Class100 arg3, @OriginalArg(5) long arg4, @OriginalArg(6) int arg5) {
+	public static void method1016(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) JagString arg3, @OriginalArg(5) long arg4, @OriginalArg(6) int arg5) {
 		@Pc(8) Buffer local8 = new Buffer(128);
 		local8.method2178(10);
 		local8.method2230((int) (Math.random() * 99999.0D));

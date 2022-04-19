@@ -10,16 +10,16 @@ public final class Static126 {
 	public static float aFloat13;
 
 	@OriginalMember(owner = "client!jm", name = "t", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_600 = Static28.method790("Module texte charg-B");
+	public static final JagString aClass100_600 = Static28.method790("Module texte charg-B");
 
 	@OriginalMember(owner = "client!jm", name = "w", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_601 = Static28.method790("3D)2Softwarebibliothek gestartet)3");
+	public static final JagString aClass100_601 = Static28.method790("3D)2Softwarebibliothek gestartet)3");
 
 	@OriginalMember(owner = "client!jm", name = "A", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_603 = Static28.method790("");
+	private static final JagString aClass100_603 = Static28.method790("");
 
 	@OriginalMember(owner = "client!jm", name = "z", descriptor = "Lclient!na;")
-	public static Class100 aClass100_602 = aClass100_603;
+	public static JagString aClass100_602 = aClass100_603;
 
 	@OriginalMember(owner = "client!jm", name = "a", descriptor = "(Z)V")
 	public static void method2460() {

@@ -14,16 +14,16 @@ public final class Static23 {
 	public static Js5 aClass153_12;
 
 	@OriginalMember(owner = "client!bm", name = "d", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_130 = Static28.method790("Checking for updates )2 ");
+	private static final JagString aClass100_130 = Static28.method790("Checking for updates )2 ");
 
 	@OriginalMember(owner = "client!bm", name = "h", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_131 = Static28.method790(",Mcran)2titre charg-B");
+	public static final JagString aClass100_131 = Static28.method790(",Mcran)2titre charg-B");
 
 	@OriginalMember(owner = "client!bm", name = "l", descriptor = "Lclient!na;")
-	public static Class100 aClass100_132 = aClass100_130;
+	public static JagString aClass100_132 = aClass100_130;
 
 	@OriginalMember(owner = "client!bm", name = "p", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_133 = Static28.method790("(U1");
+	public static final JagString aClass100_133 = Static28.method790("(U1");
 
 	@OriginalMember(owner = "client!bm", name = "a", descriptor = "(IBIIII)V")
 	public static void method645(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {

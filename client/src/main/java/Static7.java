@@ -21,7 +21,7 @@ public final class Static7 {
 	public static final long[] aLongArray2 = new long[32];
 
 	@OriginalMember(owner = "client!ah", name = "m", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_189 = Static28.method790("glow3:");
+	private static final JagString aClass100_189 = Static28.method790("glow3:");
 
 	@OriginalMember(owner = "client!ah", name = "n", descriptor = "I")
 	public static int anInt983 = 0;
@@ -30,16 +30,16 @@ public final class Static7 {
 	public static final LinkedList aClass69_32 = new LinkedList();
 
 	@OriginalMember(owner = "client!ah", name = "q", descriptor = "Lclient!na;")
-	public static Class100 aClass100_190 = aClass100_189;
+	public static JagString aClass100_190 = aClass100_189;
 
 	@OriginalMember(owner = "client!ah", name = "r", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_191 = aClass100_189;
+	public static final JagString aClass100_191 = aClass100_189;
 
 	@OriginalMember(owner = "client!ah", name = "s", descriptor = "I")
 	public static int anInt985 = 0;
 
 	@OriginalMember(owner = "client!ah", name = "u", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_192 = Static28.method790("Veuillez commencer par supprimer ");
+	public static final JagString aClass100_192 = Static28.method790("Veuillez commencer par supprimer ");
 
 	@OriginalMember(owner = "client!ah", name = "a", descriptor = "(BZ)V")
 	public static void method842(@OriginalArg(1) boolean arg0) {

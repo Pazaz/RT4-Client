@@ -21,7 +21,7 @@ public final class Static80 {
 	public static int anInt4702;
 
 	@OriginalMember(owner = "client!gf", name = "I", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_886 = Static28.method790(")3runescape)3com)4l=");
+	public static final JagString aClass100_886 = Static28.method790(")3runescape)3com)4l=");
 
 	@OriginalMember(owner = "client!gf", name = "N", descriptor = "Z")
 	public static boolean aBoolean231 = true;
@@ -120,7 +120,7 @@ public final class Static80 {
 	}
 
 	@OriginalMember(owner = "client!gf", name = "a", descriptor = "(Lclient!na;II)V")
-	public static void method3617(@OriginalArg(0) Class100 arg0, @OriginalArg(2) int arg1) {
+	public static void method3617(@OriginalArg(0) JagString arg0, @OriginalArg(2) int arg1) {
 		@Pc(6) Class3_Sub2_Sub8 local6 = Static238.method4143(3, arg1);
 		local6.method1017();
 		local6.aClass100_254 = arg0;

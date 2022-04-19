@@ -55,7 +55,7 @@ public final class Class118 {
 	private int anInt4407 = 0;
 
 	@OriginalMember(owner = "client!pb", name = "E", descriptor = "Lclient!na;")
-	public Class100 aClass100_830 = Static81.aClass100_475;
+	public JagString aClass100_830 = Static81.aClass100_475;
 
 	@OriginalMember(owner = "client!pb", name = "D", descriptor = "Z")
 	public boolean aBoolean212 = true;
@@ -100,7 +100,7 @@ public final class Class118 {
 	private int anInt4399 = 128;
 
 	@OriginalMember(owner = "client!pb", name = "z", descriptor = "[Lclient!na;")
-	public Class100[] aClass100Array130 = new Class100[5];
+	public JagString[] aClass100Array130 = new JagString[5];
 
 	@OriginalMember(owner = "client!pb", name = "d", descriptor = "I")
 	private int anInt4396 = 128;
@@ -906,7 +906,7 @@ public final class Class118 {
 	}
 
 	@OriginalMember(owner = "client!pb", name = "a", descriptor = "(Lclient!na;II)Lclient!na;")
-	public final Class100 method3430(@OriginalArg(0) Class100 arg0, @OriginalArg(2) int arg1) {
+	public final JagString method3430(@OriginalArg(0) JagString arg0, @OriginalArg(2) int arg1) {
 		if (this.aClass133_19 == null) {
 			return arg0;
 		} else {

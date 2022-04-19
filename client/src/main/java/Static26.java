@@ -17,10 +17,10 @@ public final class Static26 {
 	public static LinkedList aClass69_27 = new LinkedList();
 
 	@OriginalMember(owner = "client!ca", name = "bb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_159 = Static28.method790("Examiner");
+	public static final JagString aClass100_159 = Static28.method790("Examiner");
 
 	@OriginalMember(owner = "client!ca", name = "cb", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_160 = Static165.method3165();
+	public static final JagString aClass100_160 = Static165.method3165();
 
 	@OriginalMember(owner = "client!ca", name = "db", descriptor = "I")
 	public static int anInt865 = 0;
@@ -53,11 +53,11 @@ public final class Static26 {
 			for (@Pc(97) int local97 = (local23 - 6) / 8; local97 <= (local23 + 6) / 8; local97++) {
 				@Pc(115) int local115 = (local80 << 8) + local97;
 				Static238.anIntArray470[local74] = local115;
-				Static36.anIntArray84[local74] = aClass153_16.method4482(Static34.method882(new Class100[] { Static103.aClass100_558, Static123.method2423(local80), Static86.aClass100_488, Static123.method2423(local97) }));
-				Static172.anIntArray366[local74] = aClass153_16.method4482(Static34.method882(new Class100[] { Static270.aClass100_1090, Static123.method2423(local80), Static86.aClass100_488, Static123.method2423(local97) }));
-				Static175.anIntArray371[local74] = aClass153_16.method4482(Static34.method882(new Class100[] { Static179.aClass100_807, Static123.method2423(local80), Static86.aClass100_488, Static123.method2423(local97) }));
-				Static99.anIntArray239[local74] = aClass153_16.method4482(Static34.method882(new Class100[] { Static165.aClass100_772, Static123.method2423(local80), Static86.aClass100_488, Static123.method2423(local97) }));
-				Static35.anIntArray82[local74] = aClass153_16.method4482(Static34.method882(new Class100[] { Static278.aClass100_1103, Static123.method2423(local80), Static86.aClass100_488, Static123.method2423(local97) }));
+				Static36.anIntArray84[local74] = aClass153_16.method4482(Static34.method882(new JagString[] { Static103.aClass100_558, Static123.method2423(local80), Static86.aClass100_488, Static123.method2423(local97) }));
+				Static172.anIntArray366[local74] = aClass153_16.method4482(Static34.method882(new JagString[] { Static270.aClass100_1090, Static123.method2423(local80), Static86.aClass100_488, Static123.method2423(local97) }));
+				Static175.anIntArray371[local74] = aClass153_16.method4482(Static34.method882(new JagString[] { Static179.aClass100_807, Static123.method2423(local80), Static86.aClass100_488, Static123.method2423(local97) }));
+				Static99.anIntArray239[local74] = aClass153_16.method4482(Static34.method882(new JagString[] { Static165.aClass100_772, Static123.method2423(local80), Static86.aClass100_488, Static123.method2423(local97) }));
+				Static35.anIntArray82[local74] = aClass153_16.method4482(Static34.method882(new JagString[] { Static278.aClass100_1103, Static123.method2423(local80), Static86.aClass100_488, Static123.method2423(local97) }));
 				if (Static175.anIntArray371[local74] == -1) {
 					Static36.anIntArray84[local74] = -1;
 					Static172.anIntArray366[local74] = -1;

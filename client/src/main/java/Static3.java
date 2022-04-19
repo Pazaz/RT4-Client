@@ -11,16 +11,16 @@ public final class Static3 {
 	public static final boolean[] aBooleanArray135 = new boolean[200];
 
 	@OriginalMember(owner = "client!ab", name = "j", descriptor = "[Lclient!na;")
-	public static final Class100[] aClass100Array176 = new Class100[1000];
+	public static final JagString[] aClass100Array176 = new JagString[1000];
 
 	@OriginalMember(owner = "client!ab", name = "m", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_1105 = Static28.method790("Objet d(Wabonn-Bs");
+	public static final JagString aClass100_1105 = Static28.method790("Objet d(Wabonn-Bs");
 
 	@OriginalMember(owner = "client!ab", name = "n", descriptor = "Lclient!ih;")
 	public static final LinkedList aClass69_135 = new LinkedList();
 
 	@OriginalMember(owner = "client!ab", name = "a", descriptor = "(Lclient!na;I)V")
-	public static void method4656(@OriginalArg(0) Class100 arg0) {
+	public static void method4656(@OriginalArg(0) JagString arg0) {
 		@Pc(9) int local9 = Static171.method3218(arg0);
 		if (local9 != -1) {
 			Static80.method3616(Static203.aClass134_1.aShortArray73[local9], Static203.aClass134_1.aShortArray72[local9]);

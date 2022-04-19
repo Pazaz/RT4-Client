@@ -9,7 +9,7 @@ public final class Class134 {
 	public final int anInt5074;
 
 	@OriginalMember(owner = "client!se", name = "j", descriptor = "[Lclient!na;")
-	public final Class100[] aClass100Array153;
+	public final JagString[] aClass100Array153;
 
 	@OriginalMember(owner = "client!se", name = "d", descriptor = "[S")
 	public final short[] aShortArray72;
@@ -26,7 +26,7 @@ public final class Class134 {
 	@OriginalMember(owner = "client!se", name = "<init>", descriptor = "(I)V")
 	public Class134(@OriginalArg(0) int arg0) {
 		this.anInt5074 = arg0;
-		this.aClass100Array153 = new Class100[this.anInt5074];
+		this.aClass100Array153 = new JagString[this.anInt5074];
 		this.aShortArray72 = new short[this.anInt5074];
 		this.anIntArray444 = new int[this.anInt5074];
 		this.aByteArray69 = new byte[this.anInt5074];

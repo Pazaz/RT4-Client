@@ -11,13 +11,13 @@ public final class Static96 {
 	public static int[] anIntArray235;
 
 	@OriginalMember(owner = "client!hh", name = "a", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_520 = Static28.method790("(U4");
+	public static final JagString aClass100_520 = Static28.method790("(U4");
 
 	@OriginalMember(owner = "client!hh", name = "b", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_521 = Static28.method790("::tele ");
+	public static final JagString aClass100_521 = Static28.method790("::tele ");
 
 	@OriginalMember(owner = "client!hh", name = "k", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_522 = Static28.method790("::wm0");
+	public static final JagString aClass100_522 = Static28.method790("::wm0");
 
 	@OriginalMember(owner = "client!hh", name = "a", descriptor = "(II)V")
 	public static void method1949(@OriginalArg(1) int arg0) {

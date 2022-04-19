@@ -44,7 +44,7 @@ public final class Class3_Sub2_Sub13 extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!lk", name = "a", descriptor = "(Lclient!na;BI)Lclient!na;")
-	public final Class100 method2802(@OriginalArg(0) Class100 arg0, @OriginalArg(2) int arg1) {
+	public final JagString method2802(@OriginalArg(0) JagString arg0, @OriginalArg(2) int arg1) {
 		if (this.aClass133_14 == null) {
 			return arg0;
 		} else {

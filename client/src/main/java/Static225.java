@@ -11,28 +11,28 @@ public final class Static225 {
 	public static Js5 aClass153_92;
 
 	@OriginalMember(owner = "client!se", name = "b", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_959 = Static28.method790("Prepared sound engine");
+	private static final JagString aClass100_959 = Static28.method790("Prepared sound engine");
 
 	@OriginalMember(owner = "client!se", name = "h", descriptor = "I")
 	public static int anInt5073 = -1;
 
 	@OriginalMember(owner = "client!se", name = "o", descriptor = "Lclient!na;")
-	private static final Class100 aClass100_962 = Static28.method790("Select");
+	private static final JagString aClass100_962 = Static28.method790("Select");
 
 	@OriginalMember(owner = "client!se", name = "k", descriptor = "Lclient!na;")
-	public static Class100 aClass100_960 = aClass100_962;
+	public static JagString aClass100_960 = aClass100_962;
 
 	@OriginalMember(owner = "client!se", name = "m", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_961 = Static28.method790(" )2>");
+	public static final JagString aClass100_961 = Static28.method790(" )2>");
 
 	@OriginalMember(owner = "client!se", name = "s", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_963 = Static28.method790("Eingabeprozedur geladen)3");
+	public static final JagString aClass100_963 = Static28.method790("Eingabeprozedur geladen)3");
 
 	@OriginalMember(owner = "client!se", name = "t", descriptor = "[I")
 	public static final int[] anIntArray445 = new int[] { 12543016, 15504954, 15914854, 16773818 };
 
 	@OriginalMember(owner = "client!se", name = "v", descriptor = "Lclient!na;")
-	public static Class100 aClass100_964 = aClass100_959;
+	public static JagString aClass100_964 = aClass100_959;
 
 	@OriginalMember(owner = "client!se", name = "a", descriptor = "(I)V")
 	public static void method3889() {
@@ -93,7 +93,7 @@ public final class Static225 {
 	}
 
 	@OriginalMember(owner = "client!se", name = "a", descriptor = "(Lclient!na;Lclient!na;IB)V")
-	public static void method3896(@OriginalArg(0) Class100 arg0, @OriginalArg(1) Class100 arg1, @OriginalArg(2) int arg2) {
+	public static void method3896(@OriginalArg(0) JagString arg0, @OriginalArg(1) JagString arg1, @OriginalArg(2) int arg2) {
 		Static186.aClass100_828 = arg1;
 		Static5.anInt39 = arg2;
 		Static186.aClass100_829 = arg0;

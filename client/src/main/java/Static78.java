@@ -14,16 +14,16 @@ public final class Static78 {
 	public static Sprite aClass3_Sub2_Sub1_3;
 
 	@OriginalMember(owner = "client!gd", name = "b", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_464 = Static28.method790("null");
+	public static final JagString aClass100_464 = Static28.method790("null");
 
 	@OriginalMember(owner = "client!gd", name = "c", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_465 = Static28.method790(")0");
+	public static final JagString aClass100_465 = Static28.method790(")0");
 
 	@OriginalMember(owner = "client!gd", name = "h", descriptor = "[I")
 	public static final int[] anIntArray204 = new int[] { 16, 32, 64, 128 };
 
 	@OriginalMember(owner = "client!gd", name = "i", descriptor = "Lclient!na;")
-	public static Class100 aClass100_466 = null;
+	public static JagString aClass100_466 = null;
 
 	@OriginalMember(owner = "client!gd", name = "j", descriptor = "I")
 	public static int anInt2145 = 0;
@@ -105,10 +105,10 @@ public final class Static78 {
 			}
 		}
 		if (Static235.aClass134_2 == null) {
-			if (Static158.aClass3_Sub2_Sub4_3 == null || !Static227.aClass153_94.method4497(Static34.method882(new Class100[] { Static158.aClass3_Sub2_Sub4_3.aClass100_138, Static50.aClass100_363 }))) {
+			if (Static158.aClass3_Sub2_Sub4_3 == null || !Static227.aClass153_94.method4497(Static34.method882(new JagString[] { Static158.aClass3_Sub2_Sub4_3.aClass100_138, Static50.aClass100_363 }))) {
 				Static235.aClass134_2 = new Class134(0);
-			} else if (Static227.aClass153_94.method4489(Static34.method882(new Class100[] { Static158.aClass3_Sub2_Sub4_3.aClass100_138, Static50.aClass100_363 }))) {
-				Static235.aClass134_2 = Static140.method2711(Static34.method882(new Class100[] { Static158.aClass3_Sub2_Sub4_3.aClass100_138, Static50.aClass100_363 }), Static227.aClass153_94);
+			} else if (Static227.aClass153_94.method4489(Static34.method882(new JagString[] { Static158.aClass3_Sub2_Sub4_3.aClass100_138, Static50.aClass100_363 }))) {
+				Static235.aClass134_2 = Static140.method2711(Static34.method882(new JagString[] { Static158.aClass3_Sub2_Sub4_3.aClass100_138, Static50.aClass100_363 }), Static227.aClass153_94);
 			} else {
 				local12 = false;
 				Static175.anInt4220++;
@@ -151,7 +151,7 @@ public final class Static78 {
 			return;
 		}
 		if (Static233.anInt5223 != 0) {
-			Static114.method4636(true, Static34.method882(new Class100[] { Static170.aClass100_621, Static18.aClass100_108 }));
+			Static114.method4636(true, Static34.method882(new JagString[] { Static170.aClass100_621, Static18.aClass100_108 }));
 		}
 		Static107.method2261();
 		Static217.method3768();
@@ -286,8 +286,8 @@ public final class Static78 {
 			for (@Pc(837) int local837 = local320 - 1; local837 <= local309 + 1; local837++) {
 				for (@Pc(850) int local850 = local821 - 1; local850 <= local815 + 1; local850++) {
 					if (local837 < local320 || local837 > local309 || local850 < local821 || local850 > local815) {
-						Static26.aClass153_16.method4486(Static34.method882(new Class100[] { Static103.aClass100_558, Static123.method2423(local837), Static86.aClass100_488, Static123.method2423(local850) }));
-						Static26.aClass153_16.method4486(Static34.method882(new Class100[] { Static270.aClass100_1090, Static123.method2423(local837), Static86.aClass100_488, Static123.method2423(local850) }));
+						Static26.aClass153_16.method4486(Static34.method882(new JagString[] { Static103.aClass100_558, Static123.method2423(local837), Static86.aClass100_488, Static123.method2423(local850) }));
+						Static26.aClass153_16.method4486(Static34.method882(new JagString[] { Static270.aClass100_1090, Static123.method2423(local837), Static86.aClass100_488, Static123.method2423(local850) }));
 					}
 				}
 			}

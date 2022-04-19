@@ -9,7 +9,7 @@ public final class Static67 {
 	public static Sprite[] aClass3_Sub2_Sub1Array4;
 
 	@OriginalMember(owner = "client!fe", name = "I", descriptor = "Lclient!na;")
-	public static final Class100 aClass100_639 = Static28.method790(" ");
+	public static final JagString aClass100_639 = Static28.method790(" ");
 
 	@OriginalMember(owner = "client!fe", name = "R", descriptor = "Z")
 	public static boolean aBoolean168 = true;
