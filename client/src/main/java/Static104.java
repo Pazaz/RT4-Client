@@ -8,7 +8,7 @@ public final class Static104 {
 	public static final int[] anIntArray255 = new int[200];
 
 	@OriginalMember(owner = "client!ia", name = "a", descriptor = "(BLclient!fe;)V")
-	public static void method2247(@OriginalArg(1) Class8_Sub4 arg0) {
+	public static void method2247(@OriginalArg(1) PathingEntity arg0) {
 		@Pc(9) Class20 local9 = arg0.method2681();
 		arg0.anInt3366 = local9.anInt1037;
 		if (arg0.anInt3409 == 0) {

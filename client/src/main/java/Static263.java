@@ -110,7 +110,7 @@ public final class Static263 {
 	}
 
 	@OriginalMember(owner = "client!vg", name = "a", descriptor = "(IILclient!fe;)V")
-	public static void method4514(@OriginalArg(0) int arg0, @OriginalArg(2) Class8_Sub4 arg1) {
+	public static void method4514(@OriginalArg(0) int arg0, @OriginalArg(2) PathingEntity arg1) {
 		if (Static83.anInt372 < arg1.anInt3395) {
 			Static18.method553(arg1);
 		} else if (arg1.anInt3386 >= Static83.anInt372) {

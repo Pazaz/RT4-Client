@@ -23,7 +23,7 @@ public final class Static280 {
 	public static int anInt5895 = 0;
 
 	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(Lclient!fe;B)V")
-	public static void method4665(@OriginalArg(0) Class8_Sub4 arg0) {
+	public static void method4665(@OriginalArg(0) PathingEntity arg0) {
 		if (Static83.anInt372 == arg0.anInt3386 || arg0.anInt3369 == -1 || arg0.anInt3420 != 0 || arg0.anInt3360 + 1 > Static36.method941(arg0.anInt3369).anIntArray474[arg0.anInt3425]) {
 			@Pc(35) int local35 = arg0.anInt3386 - arg0.anInt3395;
 			@Pc(41) int local41 = Static83.anInt372 - arg0.anInt3395;

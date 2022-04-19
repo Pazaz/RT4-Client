@@ -19,7 +19,7 @@ public final class Static192 {
 			if (local17 == null) {
 				return;
 			}
-			@Pc(40) Class8_Sub4 local40;
+			@Pc(40) PathingEntity local40;
 			@Pc(29) int local29;
 			if (local17.anInt1192 < 0) {
 				local29 = -local17.anInt1192 - 1;
