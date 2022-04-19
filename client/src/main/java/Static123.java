@@ -20,13 +20,13 @@ public final class Static123 {
 	public static final JagString aClass100_594 = Static28.method790("<)4col>");
 
 	@OriginalMember(owner = "client!jj", name = "a", descriptor = "(BI)Lclient!lk;")
-	public static Class3_Sub2_Sub13 method2417(@OriginalArg(1) int arg0) {
-		@Pc(10) Class3_Sub2_Sub13 local10 = (Class3_Sub2_Sub13) Static231.aClass54_13.method1806((long) arg0);
+	public static StructType method2417(@OriginalArg(1) int arg0) {
+		@Pc(10) StructType local10 = (StructType) Static231.aClass54_13.method1806((long) arg0);
 		if (local10 != null) {
 			return local10;
 		}
 		@Pc(26) byte[] local26 = Static23.aClass153_11.method4495(26, arg0);
-		local10 = new Class3_Sub2_Sub13();
+		local10 = new StructType();
 		if (local26 != null) {
 			local10.method2806(new Buffer(local26));
 		}
