@@ -12,7 +12,7 @@ public final class Static33 {
 	public static boolean aBoolean63;
 
 	@OriginalMember(owner = "client!cj", name = "n", descriptor = "Lsignlink!im;")
-	public static Class212 aClass212_1;
+	public static PrivilegedRequest aClass212_1;
 
 	@OriginalMember(owner = "client!cj", name = "b", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_194 = Static28.method790("blanc:");

@@ -15,7 +15,7 @@ public final class BufferedSocket implements Runnable {
 	private byte[] aByteArray49;
 
 	@OriginalMember(owner = "client!ma", name = "n", descriptor = "Lsignlink!im;")
-	private Class212 aClass212_4;
+	private PrivilegedRequest aClass212_4;
 
 	@OriginalMember(owner = "client!ma", name = "l", descriptor = "I")
 	private int anInt3596 = 0;

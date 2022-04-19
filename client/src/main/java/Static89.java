@@ -130,7 +130,7 @@ public final class Static89 {
 			if (Static69.aClass213_4.anApplet2 == null) {
 				return;
 			}
-			@Pc(109) Class212 local109 = Static69.aClass213_4.method5118(new URL(Static69.aClass213_4.anApplet2.getCodeBase(), "clienterror.ws?c=" + Static131.anInt3252 + "&u=" + Static101.aLong98 + "&v1=" + SignLink.aString20 + "&v2=" + SignLink.aString14 + "&e=" + local13));
+			@Pc(109) PrivilegedRequest local109 = Static69.aClass213_4.method5118(new URL(Static69.aClass213_4.anApplet2.getCodeBase(), "clienterror.ws?c=" + Static131.anInt3252 + "&u=" + Static101.aLong98 + "&v1=" + SignLink.aString20 + "&v2=" + SignLink.aString14 + "&e=" + local13));
 			while (local109.anInt5925 == 0) {
 				Static231.method3983(1L);
 			}

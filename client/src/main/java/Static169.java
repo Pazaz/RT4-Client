@@ -64,7 +64,7 @@ public final class Static169 {
 		if (!local27) {
 			return null;
 		}
-		@Pc(90) Class212 local90 = arg3.method5129(arg0, arg1, arg2);
+		@Pc(90) PrivilegedRequest local90 = arg3.method5129(arg0, arg1, arg2);
 		while (local90.anInt5925 == 0) {
 			Static231.method3983(10L);
 		}

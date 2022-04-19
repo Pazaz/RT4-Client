@@ -11,7 +11,7 @@ public final class Static232 {
 	public static byte[][][] aByteArrayArrayArray13;
 
 	@OriginalMember(owner = "client!sm", name = "k", descriptor = "Lsignlink!im;")
-	public static Class212 aClass212_5;
+	public static PrivilegedRequest aClass212_5;
 
 	@OriginalMember(owner = "client!sm", name = "m", descriptor = "I")
 	public static int anInt5212;

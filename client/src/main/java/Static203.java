@@ -73,7 +73,7 @@ public final class Static203 {
 	public static void method3663(@OriginalArg(0) SignLink arg0) {
 		@Pc(11) FileOnDisk local11 = null;
 		try {
-			@Pc(16) Class212 local16 = arg0.method5112("runescape");
+			@Pc(16) PrivilegedRequest local16 = arg0.method5112("runescape");
 			while (local16.anInt5925 == 0) {
 				Static231.method3983(1L);
 			}
