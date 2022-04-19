@@ -19,7 +19,7 @@ public final class Class118 {
 	private short[] aShortArray62;
 
 	@OriginalMember(owner = "client!pb", name = "B", descriptor = "Lclient!sc;")
-	private Class133 aClass133_19;
+	private HashTable aClass133_19;
 
 	@OriginalMember(owner = "client!pb", name = "H", descriptor = "[S")
 	private short[] aShortArray63;
@@ -586,7 +586,7 @@ public final class Class118 {
 			local18 = arg0.method2229();
 			if (this.aClass133_19 == null) {
 				local38 = Static165.method3164(local18);
-				this.aClass133_19 = new Class133(local38);
+				this.aClass133_19 = new HashTable(local38);
 			}
 			for (local38 = 0; local38 < local18; local38++) {
 				@Pc(576) boolean local576 = arg0.method2229() == 1;

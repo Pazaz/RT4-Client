@@ -28,7 +28,7 @@ public final class Class3_Sub14 extends Node {
 	private int[] anIntArray229;
 
 	@OriginalMember(owner = "client!hg", name = "A", descriptor = "Lclient!sc;")
-	private Class133 aClass133_8;
+	private HashTable aClass133_8;
 
 	@OriginalMember(owner = "client!hg", name = "B", descriptor = "[F")
 	private float[] aFloatArray5;
@@ -118,7 +118,7 @@ public final class Class3_Sub14 extends Node {
 		this.anIntArray227 = new int[this.anInt2484];
 		this.anIntArray231 = new int[this.anInt2484];
 		this.anIntArrayArray17 = new int[this.anInt2484][];
-		this.aClass133_8 = new Class133(Static165.method3164(this.anInt2482));
+		this.aClass133_8 = new HashTable(Static165.method3164(this.anInt2482));
 		if (this.aBoolean140) {
 			this.anIntArrayArray18 = new int[this.anInt2484][];
 			this.aBooleanArray54 = new boolean[this.anInt2484];

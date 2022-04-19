@@ -14,7 +14,7 @@ public final class Static119 {
 	public static boolean aBoolean153 = false;
 
 	@OriginalMember(owner = "client!je", name = "T", descriptor = "Lclient!sc;")
-	public static Class133 aClass133_9 = new Class133(8);
+	public static HashTable aClass133_9 = new HashTable(8);
 
 	@OriginalMember(owner = "client!je", name = "U", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_588 = Static28.method790("showingVideoAd");

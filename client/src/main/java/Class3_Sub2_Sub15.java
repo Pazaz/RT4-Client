@@ -13,10 +13,10 @@ public final class Class3_Sub2_Sub15 extends SecondaryNode {
 	public int anInt3957;
 
 	@OriginalMember(owner = "client!ml", name = "X", descriptor = "Lclient!sc;")
-	public Class133 aClass133_16;
+	public HashTable aClass133_16;
 
 	@OriginalMember(owner = "client!ml", name = "bb", descriptor = "Lclient!sc;")
-	private Class133 aClass133_17;
+	private HashTable aClass133_17;
 
 	@OriginalMember(owner = "client!ml", name = "cb", descriptor = "I")
 	private int anInt3960;
@@ -36,7 +36,7 @@ public final class Class3_Sub2_Sub15 extends SecondaryNode {
 			this.anInt3960 = arg1.method2174();
 		} else if (arg0 == 5 || arg0 == 6) {
 			@Pc(41) int local41 = arg1.method2163();
-			this.aClass133_16 = new Class133(Static165.method3164(local41));
+			this.aClass133_16 = new HashTable(Static165.method3164(local41));
 			for (@Pc(51) int local51 = 0; local51 < local41; local51++) {
 				@Pc(58) int local58 = arg1.method2174();
 				@Pc(70) Node local70;
@@ -78,7 +78,7 @@ public final class Class3_Sub2_Sub15 extends SecondaryNode {
 
 	@OriginalMember(owner = "client!ml", name = "d", descriptor = "(I)V")
 	private void method3087() {
-		this.aClass133_17 = new Class133(this.aClass133_16.method3868());
+		this.aClass133_17 = new HashTable(this.aClass133_16.method3868());
 		for (@Pc(22) Class3_Sub30 local22 = (Class3_Sub30) this.aClass133_16.method3859(); local22 != null; local22 = (Class3_Sub30) this.aClass133_16.method3861()) {
 			@Pc(36) Class3_Sub13 local36 = new Class3_Sub13(local22.aClass100_980, (int) local22.aLong192);
 			this.aClass133_17.method3862(local36, local22.aClass100_980.method3118());
@@ -109,7 +109,7 @@ public final class Class3_Sub2_Sub15 extends SecondaryNode {
 
 	@OriginalMember(owner = "client!ml", name = "e", descriptor = "(I)V")
 	private void method3091() {
-		this.aClass133_17 = new Class133(this.aClass133_16.method3868());
+		this.aClass133_17 = new HashTable(this.aClass133_16.method3868());
 		for (@Pc(24) Class3_Sub21 local24 = (Class3_Sub21) this.aClass133_16.method3859(); local24 != null; local24 = (Class3_Sub21) this.aClass133_16.method3861()) {
 			@Pc(34) Class3_Sub21 local34 = new Class3_Sub21((int) local24.aLong192);
 			this.aClass133_17.method3862(local34, (long) local24.anInt3141);

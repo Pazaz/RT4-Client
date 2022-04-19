@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!sc")
-public final class Class133 {
+public final class HashTable {
 
 	@OriginalMember(owner = "client!sc", name = "q", descriptor = "Lclient!ab;")
 	private Node aClass3_192;
@@ -25,7 +25,7 @@ public final class Class133 {
 	public final int anInt5023;
 
 	@OriginalMember(owner = "client!sc", name = "<init>", descriptor = "(I)V")
-	public Class133(@OriginalArg(0) int arg0) {
+	public HashTable(@OriginalArg(0) int arg0) {
 		this.aClass3Array1 = new Node[arg0];
 		this.anInt5023 = arg0;
 		for (@Pc(13) int local13 = 0; local13 < arg0; local13++) {

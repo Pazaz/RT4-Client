@@ -97,7 +97,7 @@ public final class MidiPcmStream extends PcmStream {
 	private final Class3_Sub3_Sub3 aClass3_Sub3_Sub3_1 = new Class3_Sub3_Sub3(this);
 
 	@OriginalMember(owner = "client!va", name = "P", descriptor = "Lclient!sc;")
-	private final Class133 aClass133_23 = new Class133(128);
+	private final HashTable aClass133_23 = new HashTable(128);
 
 	@OriginalMember(owner = "client!va", name = "<init>", descriptor = "()V")
 	public MidiPcmStream() {

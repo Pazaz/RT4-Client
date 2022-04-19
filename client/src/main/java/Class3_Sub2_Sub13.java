@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Class3_Sub2_Sub13 extends SecondaryNode {
 
 	@OriginalMember(owner = "client!lk", name = "I", descriptor = "Lclient!sc;")
-	private Class133 aClass133_14;
+	private HashTable aClass133_14;
 
 	@OriginalMember(owner = "client!lk", name = "a", descriptor = "(IIB)I")
 	public final int method2798(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
@@ -28,7 +28,7 @@ public final class Class3_Sub2_Sub13 extends SecondaryNode {
 		@Pc(25) int local25;
 		if (this.aClass133_14 == null) {
 			local25 = Static165.method3164(local17);
-			this.aClass133_14 = new Class133(local25);
+			this.aClass133_14 = new HashTable(local25);
 		}
 		for (local25 = 0; local25 < local17; local25++) {
 			@Pc(45) boolean local45 = arg0.method2229() == 1;

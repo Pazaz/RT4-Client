@@ -19,7 +19,7 @@ public final class Class14_Sub1 extends Class14 {
 	private int anInt567 = 0;
 
 	@OriginalMember(owner = "client!bg", name = "p", descriptor = "Lclient!sc;")
-	private final Class133 aClass133_1 = new Class133(16);
+	private final HashTable aClass133_1 = new HashTable(16);
 
 	@OriginalMember(owner = "client!bg", name = "S", descriptor = "I")
 	private int anInt578 = 0;

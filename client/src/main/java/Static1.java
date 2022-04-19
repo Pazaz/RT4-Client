@@ -29,7 +29,7 @@ public final class Static1 {
 
 	@OriginalMember(owner = "client!a", name = "a", descriptor = "([[F[[F[[II[[F[[B[[II[[B[[B[[B[[[B)[Lclient!hg;")
 	public static Class3_Sub14[] method2(@OriginalArg(0) float[][] arg0, @OriginalArg(1) float[][] arg1, @OriginalArg(2) int[][] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) float[][] arg4, @OriginalArg(5) byte[][] arg5, @OriginalArg(6) int[][] arg6, @OriginalArg(8) byte[][] arg7, @OriginalArg(9) byte[][] arg8, @OriginalArg(10) byte[][] arg9, @OriginalArg(11) byte[][][] arg10) {
-		@Pc(10) Class133 local10 = new Class133(128);
+		@Pc(10) HashTable local10 = new HashTable(128);
 		@Pc(12) int local12;
 		@Pc(17) int local17;
 		@Pc(30) int local30;

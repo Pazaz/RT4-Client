@@ -699,7 +699,7 @@ public final class Class100 implements Interface2 {
 		synchronized (local19) {
 			@Pc(30) Class3_Sub30 local30;
 			if (Static148.aClass133_13 == null) {
-				Static148.aClass133_13 = new Class133(4096);
+				Static148.aClass133_13 = new HashTable(4096);
 			} else {
 				for (local30 = (Class3_Sub30) Static148.aClass133_13.method3863(local9); local30 != null; local30 = (Class3_Sub30) Static148.aClass133_13.method3867()) {
 					if (this.method3108(local30.aClass100_980)) {

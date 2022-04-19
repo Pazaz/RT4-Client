@@ -23,7 +23,7 @@ public final class Static20 {
 	public static final short[] aShortArray5 = new short[] { -4160, -4163, -8256, -8259, 22461 };
 
 	@OriginalMember(owner = "client!bj", name = "v", descriptor = "Lclient!sc;")
-	public static Class133 aClass133_2 = new Class133(32);
+	public static HashTable aClass133_2 = new HashTable(32);
 
 	@OriginalMember(owner = "client!bj", name = "U", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_117 = Static28.method790("welle2:");

@@ -38,7 +38,7 @@ public final class Static73 {
 				Static132.method2605(true, local18);
 			}
 			Static154.anInt3711 = -1;
-			Static119.aClass133_9 = new Class133(8);
+			Static119.aClass133_9 = new HashTable(8);
 			Static52.method1287();
 			Static154.anInt3711 = Static156.anInt3783;
 			Static210.method3712(false);

@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Class3_Sub29 extends Node {
 
 	@OriginalMember(owner = "client!rf", name = "p", descriptor = "Lclient!sc;")
-	public Class133 aClass133_22;
+	public HashTable aClass133_22;
 
 	@OriginalMember(owner = "client!rf", name = "q", descriptor = "[B")
 	public final byte[] aByteArray65;
@@ -307,7 +307,7 @@ public final class Class3_Sub29 extends Node {
 		if (this.aClass133_22 != null) {
 			return;
 		}
-		this.aClass133_22 = new Class133(16);
+		this.aClass133_22 = new HashTable(16);
 		@Pc(12) int[] local12 = new int[16];
 		@Pc(15) int[] local15 = new int[16];
 		local12[9] = local15[9] = 128;

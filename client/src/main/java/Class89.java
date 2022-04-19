@@ -7,10 +7,10 @@ import org.openrs2.deob.annotation.Pc;
 public final class Class89 {
 
 	@OriginalMember(owner = "client!le", name = "d", descriptor = "Lclient!sc;")
-	private final Class133 aClass133_11 = new Class133(256);
+	private final HashTable aClass133_11 = new HashTable(256);
 
 	@OriginalMember(owner = "client!le", name = "l", descriptor = "Lclient!sc;")
-	private final Class133 aClass133_12 = new Class133(256);
+	private final HashTable aClass133_12 = new HashTable(256);
 
 	@OriginalMember(owner = "client!le", name = "b", descriptor = "Lclient!ve;")
 	private final Class153 aClass153_52;

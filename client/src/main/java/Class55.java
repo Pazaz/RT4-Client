@@ -34,7 +34,7 @@ public final class Class55 {
 	public int anInt2354;
 
 	@OriginalMember(owner = "client!h", name = "nb", descriptor = "Lclient!sc;")
-	public Class133 aClass133_6;
+	public HashTable aClass133_6;
 
 	@OriginalMember(owner = "client!h", name = "tb", descriptor = "[I")
 	public int[] anIntArray214;
@@ -501,7 +501,7 @@ public final class Class55 {
 				local169 = arg0.method2229();
 				if (this.aClass133_6 == null) {
 					local179 = Static165.method3164(local169);
-					this.aClass133_6 = new Class133(local179);
+					this.aClass133_6 = new HashTable(local179);
 				}
 				for (local179 = 0; local179 < local169; local179++) {
 					@Pc(510) boolean local510 = arg0.method2229() == 1;
