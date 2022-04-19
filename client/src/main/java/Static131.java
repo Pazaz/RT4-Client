@@ -152,7 +152,7 @@ public final class Static131 {
 			local16.method4192(arg0, arg1, arg2);
 			return local16;
 		} catch (@Pc(25) Throwable local25) {
-			@Pc(29) Class27_Sub1 local29 = new Class27_Sub1();
+			@Pc(29) ImageProducerFrameBuffer local29 = new ImageProducerFrameBuffer();
 			local29.method4192(arg0, arg1, arg2);
 			return local29;
 		}
