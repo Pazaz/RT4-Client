@@ -11,7 +11,7 @@ public final class Static231 {
 	public static int anInt5205;
 
 	@OriginalMember(owner = "client!sk", name = "bb", descriptor = "Lclient!gn;")
-	public static final Class54 aClass54_13 = new Class54(64);
+	public static final LruHashTable aClass54_13 = new LruHashTable(64);
 
 	@OriginalMember(owner = "client!sk", name = "cb", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_984 = Static28.method790("Untersuchen");

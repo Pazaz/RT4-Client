@@ -19,10 +19,10 @@ public final class Class109 implements GlTextureProvider {
 	private final Class153 aClass153_73;
 
 	@OriginalMember(owner = "client!nk", name = "P", descriptor = "Lclient!gn;")
-	private Class54 aClass54_12;
+	private LruHashTable aClass54_12;
 
 	@OriginalMember(owner = "client!nk", name = "G", descriptor = "Lclient!gn;")
-	private Class54 aClass54_11;
+	private LruHashTable aClass54_11;
 
 	@OriginalMember(owner = "client!nk", name = "Q", descriptor = "[B")
 	private final byte[] aByteArray61;
@@ -60,9 +60,9 @@ public final class Class109 implements GlTextureProvider {
 		this.aBoolean200 = arg4;
 		this.anInt4186 = arg3;
 		this.aClass153_73 = arg0;
-		this.aClass54_12 = new Class54(this.anInt4186);
+		this.aClass54_12 = new LruHashTable(this.anInt4186);
 		if (Static239.aBoolean269) {
-			this.aClass54_11 = new Class54(this.anInt4186);
+			this.aClass54_11 = new LruHashTable(this.anInt4186);
 		} else {
 			this.aClass54_11 = null;
 		}
@@ -262,9 +262,9 @@ public final class Class109 implements GlTextureProvider {
 	@OriginalMember(owner = "client!nk", name = "k", descriptor = "(II)V")
 	public final void method3248(@OriginalArg(0) int arg0) {
 		this.anInt4186 = arg0;
-		this.aClass54_12 = new Class54(this.anInt4186);
+		this.aClass54_12 = new LruHashTable(this.anInt4186);
 		if (Static239.aBoolean269) {
-			this.aClass54_11 = new Class54(this.anInt4186);
+			this.aClass54_11 = new LruHashTable(this.anInt4186);
 		} else {
 			this.aClass54_11 = null;
 		}

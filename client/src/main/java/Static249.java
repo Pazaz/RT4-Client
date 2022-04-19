@@ -19,7 +19,7 @@ public final class Static249 {
 	public static int anInt5431 = 0;
 
 	@OriginalMember(owner = "client!ud", name = "P", descriptor = "Lclient!gn;")
-	public static final Class54 aClass54_15 = new Class54(64);
+	public static final LruHashTable aClass54_15 = new LruHashTable(64);
 
 	@OriginalMember(owner = "client!ud", name = "Q", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_1039 = Static28.method790(" x ");

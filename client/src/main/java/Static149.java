@@ -16,7 +16,7 @@ public final class Static149 {
 	public static int anInt3555;
 
 	@OriginalMember(owner = "client!lj", name = "p", descriptor = "Lclient!gn;")
-	public static final Class54 aClass54_10 = new Class54(128);
+	public static final LruHashTable aClass54_10 = new LruHashTable(128);
 
 	@OriginalMember(owner = "client!lj", name = "q", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_683 = Static28.method790("Fallen lassen");

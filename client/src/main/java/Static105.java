@@ -11,7 +11,7 @@ public final class Static105 {
 	public static final Class3_Sub28 aClass3_Sub28_1 = new Class3_Sub28(0, 0);
 
 	@OriginalMember(owner = "client!ib", name = "d", descriptor = "Lclient!gn;")
-	public static final Class54 aClass54_9 = new Class54(128);
+	public static final LruHashTable aClass54_9 = new LruHashTable(128);
 
 	@OriginalMember(owner = "client!ib", name = "e", descriptor = "Lclient!be;")
 	public static Class13 aClass13_14 = null;

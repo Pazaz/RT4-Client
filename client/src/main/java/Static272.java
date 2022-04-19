@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static272 {
 
 	@OriginalMember(owner = "client!wd", name = "a", descriptor = "Lclient!gn;")
-	public static final Class54 aClass54_14 = new Class54(64);
+	public static final LruHashTable aClass54_14 = new LruHashTable(64);
 
 	@OriginalMember(owner = "client!wd", name = "c", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_988 = Static28.method790("Spieler kann nicht gefunden werden: ");
