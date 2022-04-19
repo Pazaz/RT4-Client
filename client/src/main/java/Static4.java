@@ -1361,10 +1361,10 @@ public final class Static4 {
 								} else if (Static164.anInt3985 == 116) {
 									local133 = Static57.aClass3_Sub15_Sub1_3.method2229();
 									if (Static57.aClass3_Sub15_Sub1_3.method2229() == 0) {
-										Static229.aClass136Array1[local133] = new Class136();
+										Static229.aClass136Array1[local133] = new StockMarketOffer();
 									} else {
 										Static57.aClass3_Sub15_Sub1_3.anInt2792--;
-										Static229.aClass136Array1[local133] = new Class136(Static57.aClass3_Sub15_Sub1_3);
+										Static229.aClass136Array1[local133] = new StockMarketOffer(Static57.aClass3_Sub15_Sub1_3);
 									}
 									Static164.anInt3985 = -1;
 									Static207.anInt4778 = Static119.anInt3028;
