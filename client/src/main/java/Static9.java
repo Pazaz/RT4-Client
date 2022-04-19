@@ -76,9 +76,9 @@ public final class Static9 {
 
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "(ZZZIZ)Lclient!ve;")
 	public static Js5 method183(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) int arg3) {
-		@Pc(7) Class49 local7 = null;
+		@Pc(7) Cache local7 = null;
 		if (Static172.aClass38_4 != null) {
-			local7 = new Class49(arg3, Static172.aClass38_4, Static47.aClass38Array2[arg3], 1000000);
+			local7 = new Cache(arg3, Static172.aClass38_4, Static47.aClass38Array2[arg3], 1000000);
 		}
 		Static269.aClass14_Sub1Array3[arg3] = Static257.aClass9_2.method180(arg3, Static148.aClass49_4, local7);
 		if (arg1) {

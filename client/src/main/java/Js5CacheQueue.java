@@ -55,7 +55,7 @@ public final class Js5CacheQueue implements Runnable {
 	}
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(Lclient!ge;I[BI)Lclient!c;")
-	public final Class3_Sub2_Sub5_Sub1 method2467(@OriginalArg(0) Class49 arg0, @OriginalArg(2) byte[] arg1, @OriginalArg(3) int arg2) {
+	public final Class3_Sub2_Sub5_Sub1 method2467(@OriginalArg(0) Cache arg0, @OriginalArg(2) byte[] arg1, @OriginalArg(3) int arg2) {
 		@Pc(7) Class3_Sub2_Sub5_Sub1 local7 = new Class3_Sub2_Sub5_Sub1();
 		local7.aByteArray11 = arg1;
 		local7.aBoolean225 = false;
@@ -67,7 +67,7 @@ public final class Js5CacheQueue implements Runnable {
 	}
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(IILclient!ge;)Lclient!c;")
-	public final Class3_Sub2_Sub5_Sub1 method2469(@OriginalArg(0) int arg0, @OriginalArg(2) Class49 arg1) {
+	public final Class3_Sub2_Sub5_Sub1 method2469(@OriginalArg(0) int arg0, @OriginalArg(2) Cache arg1) {
 		@Pc(7) Class3_Sub2_Sub5_Sub1 local7 = new Class3_Sub2_Sub5_Sub1();
 		local7.aClass49_3 = arg1;
 		local7.anInt824 = 3;
@@ -78,7 +78,7 @@ public final class Js5CacheQueue implements Runnable {
 	}
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(Lclient!ge;BI)Lclient!c;")
-	public final Class3_Sub2_Sub5_Sub1 method2471(@OriginalArg(0) Class49 arg0, @OriginalArg(2) int arg1) {
+	public final Class3_Sub2_Sub5_Sub1 method2471(@OriginalArg(0) Cache arg0, @OriginalArg(2) int arg1) {
 		@Pc(9) Class3_Sub2_Sub5_Sub1 local9 = new Class3_Sub2_Sub5_Sub1();
 		local9.anInt824 = 1;
 		@Pc(16) SecondaryLinkedList local16 = this.aClass16_6;

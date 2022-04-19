@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ge")
-public final class Class49 {
+public final class Cache {
 
 	@OriginalMember(owner = "client!ge", name = "a", descriptor = "Lclient!en;")
 	private Class38 aClass38_1 = null;
@@ -21,7 +21,7 @@ public final class Class49 {
 	private final int anInt2150;
 
 	@OriginalMember(owner = "client!ge", name = "<init>", descriptor = "(ILclient!en;Lclient!en;I)V")
-	public Class49(@OriginalArg(0) int arg0, @OriginalArg(1) Class38 arg1, @OriginalArg(2) Class38 arg2, @OriginalArg(3) int arg3) {
+	public Cache(@OriginalArg(0) int arg0, @OriginalArg(1) Class38 arg1, @OriginalArg(2) Class38 arg2, @OriginalArg(3) int arg3) {
 		this.anInt2156 = arg3;
 		this.aClass38_2 = arg2;
 		this.anInt2150 = arg0;
