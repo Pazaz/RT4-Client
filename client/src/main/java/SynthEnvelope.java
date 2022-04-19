@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ff")
-public final class Class42 {
+public final class SynthEnvelope {
 
 	@OriginalMember(owner = "client!ff", name = "b", descriptor = "I")
 	public int anInt1958;
@@ -40,7 +40,7 @@ public final class Class42 {
 	private int[] anIntArray156 = new int[2];
 
 	@OriginalMember(owner = "client!ff", name = "<init>", descriptor = "()V")
-	public Class42() {
+	public SynthEnvelope() {
 		this.anIntArray157[0] = 0;
 		this.anIntArray157[1] = 65535;
 		this.anIntArray156[0] = 0;
