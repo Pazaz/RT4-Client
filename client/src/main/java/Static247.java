@@ -321,7 +321,7 @@ public final class Static247 {
 														Static239.method4159(local33);
 													}
 												}
-												@Pc(1064) Class79 local1064 = local8.aClass79_1;
+												@Pc(1064) ObjStackEntity local1064 = local8.aClass79_1;
 												if (local1064 != null && local1064.anInt3063 == 0) {
 													if (Static239.aBoolean269) {
 														Static120.method2393(Static149.anInt3555, Static162.anInt3947, Static217.anInt4903, local24, local18, local21);
@@ -566,7 +566,7 @@ public final class Static247 {
 			} while (local153 != null && local153.aBoolean46);
 			local8.aBoolean46 = false;
 			Static211.anInt1142--;
-			@Pc(1999) Class79 local1999 = local8.aClass79_1;
+			@Pc(1999) ObjStackEntity local1999 = local8.aClass79_1;
 			if (local1999 != null && local1999.anInt3063 != 0) {
 				if (Static239.aBoolean269) {
 					Static120.method2393(Static149.anInt3555, Static162.anInt3947, Static217.anInt4903, local24, local18, local21);
