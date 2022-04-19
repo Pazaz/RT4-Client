@@ -33,7 +33,7 @@ public final class Static214 {
 
 	@OriginalMember(owner = "client!rg", name = "a", descriptor = "(Lclient!e;I)V")
 	public static void method4359(@OriginalArg(0) Player arg0) {
-		@Pc(12) Class3_Sub12 local12 = (Class3_Sub12) Static93.aClass133_7.method3863(arg0.aClass100_364.method3158());
+		@Pc(12) AreaSound local12 = (AreaSound) Static93.aClass133_7.method3863(arg0.aClass100_364.method3158());
 		if (local12 == null) {
 			Static122.method2411(arg0.anIntArray317[0], null, 0, null, arg0.anIntArray318[0], Static55.anInt1735, arg0);
 		} else {
