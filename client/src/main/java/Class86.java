@@ -13,10 +13,10 @@ public final class Class86 {
 	private int anInt3447 = 0;
 
 	@OriginalMember(owner = "client!l", name = "e", descriptor = "Lclient!sc;")
-	private final Class133 aClass133_10;
+	private final HashTable aClass133_10;
 
 	@OriginalMember(owner = "client!l", name = "<init>", descriptor = "(Lclient!sc;)V")
-	public Class86(@OriginalArg(0) Class133 arg0) {
+	public Class86(@OriginalArg(0) HashTable arg0) {
 		this.aClass133_10 = arg0;
 	}
 

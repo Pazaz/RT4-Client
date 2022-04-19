@@ -17,7 +17,7 @@ public final class Class3_Sub2_Sub17 extends SecondaryNode {
 	public int[] anIntArray415;
 
 	@OriginalMember(owner = "client!qc", name = "Q", descriptor = "[Lclient!sc;")
-	public Class133[] aClass133Array1;
+	public HashTable[] aClass133Array1;
 
 	@OriginalMember(owner = "client!qc", name = "R", descriptor = "Lclient!na;")
 	public Class100 aClass100_880;

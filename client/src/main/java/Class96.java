@@ -31,7 +31,7 @@ public final class Class96 {
 	private short[] aShortArray40;
 
 	@OriginalMember(owner = "client!me", name = "K", descriptor = "Lclient!sc;")
-	private Class133 aClass133_15;
+	private HashTable aClass133_15;
 
 	@OriginalMember(owner = "client!me", name = "X", descriptor = "I")
 	public int anInt3741;
@@ -717,7 +717,7 @@ public final class Class96 {
 				local12 = arg1.method2229();
 				if (this.aClass133_15 == null) {
 					local18 = Static165.method3164(local12);
-					this.aClass133_15 = new Class133(local18);
+					this.aClass133_15 = new HashTable(local18);
 				}
 				for (local18 = 0; local18 < local12; local18++) {
 					@Pc(592) boolean local592 = arg1.method2229() == 1;

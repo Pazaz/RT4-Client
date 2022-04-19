@@ -19,7 +19,7 @@ public final class LruHashTable {
 	private final int anInt2313;
 
 	@OriginalMember(owner = "client!gn", name = "q", descriptor = "Lclient!sc;")
-	private final Class133 aClass133_5;
+	private final HashTable aClass133_5;
 
 	@OriginalMember(owner = "client!gn", name = "<init>", descriptor = "(I)V")
 	public LruHashTable(@OriginalArg(0) int arg0) {
@@ -29,7 +29,7 @@ public final class LruHashTable {
 			local13 += local13;
 		}
 		this.anInt2313 = arg0;
-		this.aClass133_5 = new Class133(local13);
+		this.aClass133_5 = new HashTable(local13);
 	}
 
 	@OriginalMember(owner = "client!gn", name = "a", descriptor = "(JI)Lclient!rg;")

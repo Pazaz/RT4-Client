@@ -51,7 +51,7 @@ public final class Class45 {
 	public int anInt2018;
 
 	@OriginalMember(owner = "client!fj", name = "o", descriptor = "Lclient!sc;")
-	private Class133 aClass133_4;
+	private HashTable aClass133_4;
 
 	@OriginalMember(owner = "client!fj", name = "p", descriptor = "I")
 	public int anInt2019;
@@ -176,7 +176,7 @@ public final class Class45 {
 		this.aByteArray25 = new byte[this.anInt2019];
 		this.aByteArray23 = new byte[this.anInt2019];
 		this.aByteArray24 = new byte[this.anInt2019];
-		this.aClass133_4 = new Class133(Static165.method3164(this.anInt2019));
+		this.aClass133_4 = new HashTable(Static165.method3164(this.anInt2019));
 	}
 
 	@OriginalMember(owner = "client!fj", name = "c", descriptor = "()V")

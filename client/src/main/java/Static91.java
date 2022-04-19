@@ -50,10 +50,10 @@ public final class Static91 {
 		@Pc(107) int local107;
 		@Pc(114) int local114;
 		if (local98 > 0) {
-			local12.aClass133Array1 = new Class133[local98];
+			local12.aClass133Array1 = new HashTable[local98];
 			for (local107 = 0; local107 < local98; local107++) {
 				local114 = local42.method2163();
-				@Pc(121) Class133 local121 = new Class133(Static165.method3164(local114));
+				@Pc(121) HashTable local121 = new HashTable(Static165.method3164(local114));
 				local12.aClass133Array1[local107] = local121;
 				while (local114-- > 0) {
 					@Pc(136) int local136 = local42.method2174();

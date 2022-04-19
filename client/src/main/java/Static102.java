@@ -48,7 +48,7 @@ public final class Static102 {
 
 	@OriginalMember(owner = "client!hn", name = "f", descriptor = "(B)V")
 	public static void method2073() {
-		Static20.aClass133_2 = new Class133(32);
+		Static20.aClass133_2 = new HashTable(32);
 	}
 
 	@OriginalMember(owner = "client!hn", name = "a", descriptor = "(Lclient!ve;ILclient!ve;)V")

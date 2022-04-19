@@ -29,7 +29,7 @@ public final class Static243 {
 	public static int[] anIntArray476 = new int[2];
 
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(Lclient!sc;ZLclient!wl;)Lclient!hg;")
-	public static Class3_Sub14 method4212(@OriginalArg(0) Class133 arg0, @OriginalArg(2) Class164 arg1) {
+	public static Class3_Sub14 method4212(@OriginalArg(0) HashTable arg0, @OriginalArg(2) Class164 arg1) {
 		@Pc(23) long local23 = (long) ((arg1.anInt5892 + 1 << 16) + arg1.anInt5885) + ((long) arg1.anInt5897 << 56) + ((long) arg1.anInt5889 << 32);
 		@Pc(38) Class3_Sub14 local38 = (Class3_Sub14) arg0.method3863(local23);
 		if (local38 == null) {
@@ -126,7 +126,7 @@ public final class Static243 {
 			Static132.method2605(true, local3755);
 		}
 		Static154.anInt3711 = -1;
-		Static119.aClass133_9 = new Class133(8);
+		Static119.aClass133_9 = new HashTable(8);
 		Static52.method1287();
 		Static39.aClass13_10 = null;
 		Static60.aBoolean108 = false;

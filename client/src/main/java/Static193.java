@@ -75,7 +75,7 @@ public final class Static193 {
 				}
 			}
 		}
-		@Pc(103) Class133 local103 = new Class133(128);
+		@Pc(103) HashTable local103 = new HashTable(128);
 		@Pc(155) int local155;
 		@Pc(161) int local161;
 		@Pc(169) int local169;

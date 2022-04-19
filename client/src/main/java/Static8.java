@@ -123,6 +123,6 @@ public final class Static8 {
 				Static7.anIntArray75[local3] = 0;
 			}
 		}
-		Static199.aClass133_20 = new Class133(16);
+		Static199.aClass133_20 = new HashTable(16);
 	}
 }

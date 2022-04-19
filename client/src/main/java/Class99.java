@@ -16,7 +16,7 @@ public final class Class99 {
 	private int anInt3966;
 
 	@OriginalMember(owner = "client!n", name = "n", descriptor = "Lclient!sc;")
-	private final Class133 aClass133_18;
+	private final HashTable aClass133_18;
 
 	@OriginalMember(owner = "client!n", name = "<init>", descriptor = "(I)V")
 	public Class99(@OriginalArg(0) int arg0) {
@@ -25,7 +25,7 @@ public final class Class99 {
 		for (local11 = 1; local11 + local11 < arg0; local11 += local11) {
 		}
 		this.anInt3966 = arg0;
-		this.aClass133_18 = new Class133(local11);
+		this.aClass133_18 = new HashTable(local11);
 	}
 
 	@OriginalMember(owner = "client!n", name = "a", descriptor = "(BLjava/lang/Object;J)V")

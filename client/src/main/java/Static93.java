@@ -14,7 +14,7 @@ public final class Static93 {
 	public static volatile int anInt2467 = 0;
 
 	@OriginalMember(owner = "client!he", name = "ab", descriptor = "Lclient!sc;")
-	public static final Class133 aClass133_7 = new Class133(16);
+	public static final HashTable aClass133_7 = new HashTable(16);
 
 	@OriginalMember(owner = "client!he", name = "bb", descriptor = "Lclient!ug;")
 	public static Class150 aClass150_1 = new Class150();

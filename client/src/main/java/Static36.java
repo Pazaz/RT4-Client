@@ -14,7 +14,7 @@ public final class Static36 {
 	public static int[] anIntArray84;
 
 	@OriginalMember(owner = "client!client", name = "U", descriptor = "Lclient!sc;")
-	public static final Class133 aClass133_3 = new Class133(16);
+	public static final HashTable aClass133_3 = new HashTable(16);
 
 	@OriginalMember(owner = "client!client", name = "eb", descriptor = "Lclient!na;")
 	private static final Class100 aClass100_235 = Static28.method790("cyan:");

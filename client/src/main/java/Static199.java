@@ -11,7 +11,7 @@ public final class Static199 {
 	public static int anInt4675;
 
 	@OriginalMember(owner = "client!qc", name = "K", descriptor = "Lclient!sc;")
-	public static Class133 aClass133_20 = new Class133(16);
+	public static HashTable aClass133_20 = new HashTable(16);
 
 	@OriginalMember(owner = "client!qc", name = "P", descriptor = "I")
 	public static int anInt4670 = 10;

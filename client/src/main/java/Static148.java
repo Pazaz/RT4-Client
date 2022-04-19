@@ -14,7 +14,7 @@ public final class Static148 {
 	public static MidiPcmStream aClass3_Sub3_Sub4_1;
 
 	@OriginalMember(owner = "client!li", name = "w", descriptor = "Lclient!sc;")
-	public static Class133 aClass133_13;
+	public static HashTable aClass133_13;
 
 	@OriginalMember(owner = "client!li", name = "x", descriptor = "I")
 	public static int anInt3535;
