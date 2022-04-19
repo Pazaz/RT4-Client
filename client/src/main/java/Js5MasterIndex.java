@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!al")
-public final class Class9 {
+public final class Js5MasterIndex {
 
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "Lclient!wa;")
 	private Buffer aClass3_Sub15_1;
@@ -22,7 +22,7 @@ public final class Class9 {
 	private Js5NetRequest aClass3_Sub2_Sub5_Sub2_1;
 
 	@OriginalMember(owner = "client!al", name = "<init>", descriptor = "(Lclient!jb;Lclient!k;)V")
-	public Class9(@OriginalArg(0) Js5NetQueue arg0, @OriginalArg(1) Js5CacheQueue arg1) {
+	public Js5MasterIndex(@OriginalArg(0) Js5NetQueue arg0, @OriginalArg(1) Js5CacheQueue arg1) {
 		this.aClass80_1 = arg1;
 		this.aClass73_1 = arg0;
 		if (!this.aClass73_1.method2326()) {
