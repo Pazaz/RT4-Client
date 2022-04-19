@@ -23,7 +23,7 @@ public final class Static117 {
 	public static int anInt2975;
 
 	@OriginalMember(owner = "client!jc", name = "A", descriptor = "[Lclient!uk;")
-	public static Class151[] aClass151Array1;
+	public static VorbisMapping[] aClass151Array1;
 
 	@OriginalMember(owner = "client!jc", name = "B", descriptor = "[F")
 	public static float[] aFloatArray12;
@@ -186,9 +186,9 @@ public final class Static117 {
 			aClass152Array1[local34] = new VorbisResidue();
 		}
 		local34 = method2350(6) + 1;
-		aClass151Array1 = new Class151[local34];
+		aClass151Array1 = new VorbisMapping[local34];
 		for (local38 = 0; local38 < local34; local38++) {
-			aClass151Array1[local38] = new Class151();
+			aClass151Array1[local38] = new VorbisMapping();
 		}
 		local38 = method2350(6) + 1;
 		aBooleanArray63 = new boolean[local38];
