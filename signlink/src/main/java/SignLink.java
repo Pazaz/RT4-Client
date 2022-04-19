@@ -96,7 +96,7 @@ public final class SignLink implements Runnable {
 	public FileOnDisk[] aClass214Array1;
 
 	@OriginalMember(owner = "signlink!ll", name = "t", descriptor = "Lsignlink!e;")
-	private Class210 aClass210_1;
+	private FullScreenManager aClass210_1;
 
 	@OriginalMember(owner = "signlink!ll", name = "s", descriptor = "Lsignlink!g;")
 	private CursorManager aClass211_1;
@@ -231,7 +231,7 @@ public final class SignLink implements Runnable {
 			this.aClass214Array1[local200] = new FileOnDisk(method5127(this.aString19, this.anInt5929, "main_file_cache.idx" + local200), "rw", 1048576L);
 		}
 		try {
-			this.aClass210_1 = new Class210();
+			this.aClass210_1 = new FullScreenManager();
 		} catch (@Pc(239) Throwable local239) {
 		}
 		try {
