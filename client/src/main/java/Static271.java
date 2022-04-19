@@ -18,7 +18,7 @@ public final class Static271 {
 
 	@OriginalMember(owner = "client!wc", name = "a", descriptor = "(Lclient!e;I)V")
 	public static void method4597(@OriginalArg(0) Player arg0) {
-		@Pc(10) Class3_Sub12 local10 = (Class3_Sub12) Static93.aClass133_7.method3863(arg0.aClass100_364.method3158());
+		@Pc(10) AreaSound local10 = (AreaSound) Static93.aClass133_7.method3863(arg0.aClass100_364.method3158());
 		if (local10 == null) {
 			return;
 		}

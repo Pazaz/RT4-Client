@@ -176,8 +176,8 @@ public final class Static260 {
 
 	@OriginalMember(owner = "client!vd", name = "a", descriptor = "(BZ)V")
 	public static void method3852(@OriginalArg(1) boolean arg0) {
-		@Pc(14) Class3_Sub12 local14;
-		for (local14 = (Class3_Sub12) Static3.aClass69_135.method2289(); local14 != null; local14 = (Class3_Sub12) Static3.aClass69_135.method2288()) {
+		@Pc(14) AreaSound local14;
+		for (local14 = (AreaSound) Static3.aClass69_135.method2289(); local14 != null; local14 = (AreaSound) Static3.aClass69_135.method2288()) {
 			if (local14.aClass3_Sub3_Sub1_1 != null) {
 				Static204.aClass3_Sub3_Sub2_1.method1347(local14.aClass3_Sub3_Sub1_1);
 				local14.aClass3_Sub3_Sub1_1 = null;
@@ -191,14 +191,14 @@ public final class Static260 {
 		if (!arg0) {
 			return;
 		}
-		for (local14 = (Class3_Sub12) Static152.aClass69_87.method2289(); local14 != null; local14 = (Class3_Sub12) Static152.aClass69_87.method2288()) {
+		for (local14 = (AreaSound) Static152.aClass69_87.method2289(); local14 != null; local14 = (AreaSound) Static152.aClass69_87.method2288()) {
 			if (local14.aClass3_Sub3_Sub1_1 != null) {
 				Static204.aClass3_Sub3_Sub2_1.method1347(local14.aClass3_Sub3_Sub1_1);
 				local14.aClass3_Sub3_Sub1_1 = null;
 			}
 			local14.method4658();
 		}
-		for (local14 = (Class3_Sub12) Static93.aClass133_7.method3859(); local14 != null; local14 = (Class3_Sub12) Static93.aClass133_7.method3861()) {
+		for (local14 = (AreaSound) Static93.aClass133_7.method3859(); local14 != null; local14 = (AreaSound) Static93.aClass133_7.method3861()) {
 			if (local14.aClass3_Sub3_Sub1_1 != null) {
 				Static204.aClass3_Sub3_Sub2_1.method1347(local14.aClass3_Sub3_Sub1_1);
 				local14.aClass3_Sub3_Sub1_1 = null;
