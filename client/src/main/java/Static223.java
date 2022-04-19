@@ -120,7 +120,7 @@ public final class Static223 {
 		} else if (arg0 == 17) {
 			return new Class3_Sub1_Sub15();
 		} else if (arg0 == 18) {
-			return new Class3_Sub1_Sub18_Sub1();
+			return new TextureOpTiledSprite();
 		} else if (arg0 == 19) {
 			return new Class3_Sub1_Sub19();
 		} else if (arg0 == 20) {
