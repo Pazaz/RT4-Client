@@ -53,9 +53,9 @@ public final class Static148 {
 	@OriginalMember(owner = "client!li", name = "a", descriptor = "(III)V")
 	public static void method2766(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
 		Static7.anIntArray75[arg0] = arg1;
-		@Pc(21) Class3_Sub10 local21 = (Class3_Sub10) Static199.aClass133_20.method3863((long) arg0);
+		@Pc(21) LongNode local21 = (LongNode) Static199.aClass133_20.method3863((long) arg0);
 		if (local21 == null) {
-			local21 = new Class3_Sub10(MonotonicClock.method5096() + 500L);
+			local21 = new LongNode(MonotonicClock.method5096() + 500L);
 			Static199.aClass133_20.method3862(local21, (long) arg0);
 		} else {
 			local21.aLong55 = MonotonicClock.method5096() + 500L;
