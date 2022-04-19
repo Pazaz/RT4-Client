@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static85 {
 
 	@OriginalMember(owner = "client!gl", name = "a", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_36;
+	public static Js5 aClass153_36;
 
 	@OriginalMember(owner = "client!gl", name = "d", descriptor = "I")
 	public static int anInt2261;
@@ -20,7 +20,7 @@ public final class Static85 {
 	public static final Class100 aClass100_484 = Static28.method790("Monde de jeu cr-B-B");
 
 	@OriginalMember(owner = "client!gl", name = "a", descriptor = "(Lclient!ve;I)V")
-	public static void method1774(@OriginalArg(0) Class153 arg0) {
+	public static void method1774(@OriginalArg(0) Js5 arg0) {
 		Static84.aClass153_35 = arg0;
 	}
 

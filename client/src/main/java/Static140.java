@@ -117,7 +117,7 @@ public final class Static140 {
 	}
 
 	@OriginalMember(owner = "client!la", name = "a", descriptor = "(ILclient!na;Lclient!ve;)Lclient!se;")
-	public static Class134 method2711(@OriginalArg(1) Class100 arg0, @OriginalArg(2) Class153 arg1) {
+	public static Class134 method2711(@OriginalArg(1) Class100 arg0, @OriginalArg(2) Js5 arg1) {
 		@Pc(10) int local10 = arg1.method4482(arg0);
 		if (local10 == -1) {
 			return new Class134(0);

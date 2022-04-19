@@ -41,7 +41,7 @@ public final class Static257 {
 	}
 
 	@OriginalMember(owner = "client!v", name = "a", descriptor = "(ZIILclient!ve;ZII)V")
-	public static void method526(@OriginalArg(1) int arg0, @OriginalArg(3) Class153 arg1, @OriginalArg(5) int arg2) {
+	public static void method526(@OriginalArg(1) int arg0, @OriginalArg(3) Js5 arg1, @OriginalArg(5) int arg2) {
 		Static172.aClass153_70 = arg1;
 		Static226.anInt5085 = 0;
 		Static277.anInt5853 = arg0;

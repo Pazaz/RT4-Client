@@ -10,7 +10,7 @@ public final class Static81 {
 	public static int anInt2222;
 
 	@OriginalMember(owner = "client!gg", name = "ab", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_34;
+	public static Js5 aClass153_34;
 
 	@OriginalMember(owner = "client!gg", name = "bb", descriptor = "I")
 	public static int anInt2223;
@@ -94,7 +94,7 @@ public final class Static81 {
 	}
 
 	@OriginalMember(owner = "client!gg", name = "a", descriptor = "(ILclient!ve;)V")
-	public static void method1754(@OriginalArg(1) Class153 arg0) {
+	public static void method1754(@OriginalArg(1) Js5 arg0) {
 		Static138.anInt3443 = arg0.method4482(Static12.aClass100_73);
 	}
 

@@ -9,7 +9,7 @@ public final class Static156 {
 	public static byte[][] aByteArrayArray11;
 
 	@OriginalMember(owner = "client!mf", name = "W", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_59;
+	public static Js5 aClass153_59;
 
 	@OriginalMember(owner = "client!mf", name = "X", descriptor = "I")
 	public static int anInt3783;

@@ -20,7 +20,7 @@ public final class Static88 {
 	public static Class100 aClass100_498 = aClass100_499;
 
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(Lclient!ve;Lclient!ve;Z)V")
-	public static void method1817(@OriginalArg(0) Class153 arg0, @OriginalArg(1) Class153 arg1) {
+	public static void method1817(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {
 		Static86.aClass153_37 = arg0;
 		Static58.aClass153_28 = arg1;
 	}

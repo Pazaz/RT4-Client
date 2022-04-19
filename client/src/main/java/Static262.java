@@ -8,7 +8,7 @@ public final class Static262 {
 	public static int anInt5752;
 
 	@OriginalMember(owner = "client!vf", name = "n", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_108;
+	public static Js5 aClass153_108;
 
 	@OriginalMember(owner = "client!vf", name = "a", descriptor = "Lclient!n;")
 	public static final Class99 aClass99_34 = new Class99(64);

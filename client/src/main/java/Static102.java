@@ -52,7 +52,7 @@ public final class Static102 {
 	}
 
 	@OriginalMember(owner = "client!hn", name = "a", descriptor = "(Lclient!ve;ILclient!ve;)V")
-	public static void method2074(@OriginalArg(0) Class153 arg0, @OriginalArg(2) Class153 arg1) {
+	public static void method2074(@OriginalArg(0) Js5 arg0, @OriginalArg(2) Js5 arg1) {
 		Static114.aClass3_Sub2_Sub9_42 = Static127.method2462(Static166.anInt4049, arg1, arg0);
 		if (Static239.aBoolean269) {
 			Static265.aClass3_Sub2_Sub9_Sub1_2 = Static122.method2412(Static166.anInt4049, arg0, arg1);

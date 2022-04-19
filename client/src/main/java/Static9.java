@@ -8,7 +8,7 @@ public final class Static9 {
 	public static int anInt172;
 
 	@OriginalMember(owner = "client!al", name = "q", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_2;
+	public static Js5 aClass153_2;
 
 	@OriginalMember(owner = "client!al", name = "m", descriptor = "I")
 	public static int anInt178 = 0;
@@ -75,7 +75,7 @@ public final class Static9 {
 	}
 
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "(ZZZIZ)Lclient!ve;")
-	public static Class153 method183(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) int arg3) {
+	public static Js5 method183(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) int arg3) {
 		@Pc(7) Class49 local7 = null;
 		if (Static172.aClass38_4 != null) {
 			local7 = new Class49(arg3, Static172.aClass38_4, Static47.aClass38Array2[arg3], 1000000);
@@ -84,7 +84,7 @@ public final class Static9 {
 		if (arg1) {
 			Static269.aClass14_Sub1Array3[arg3].method528();
 		}
-		return new Class153(Static269.aClass14_Sub1Array3[arg3], arg0, arg2);
+		return new Js5(Static269.aClass14_Sub1Array3[arg3], arg0, arg2);
 	}
 
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "(ILclient!wa;)Lclient!ci;")

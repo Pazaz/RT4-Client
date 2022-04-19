@@ -11,7 +11,7 @@ public final class Static98 {
 	public static int anInt2512;
 
 	@OriginalMember(owner = "client!hj", name = "m", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_42;
+	public static Js5 aClass153_42;
 
 	@OriginalMember(owner = "client!hj", name = "d", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_524 = Static28.method790("hint_headicons");

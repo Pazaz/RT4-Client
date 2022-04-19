@@ -5,13 +5,13 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static243 {
 
 	@OriginalMember(owner = "client!tk", name = "j", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_97;
+	public static Js5 aClass153_97;
 
 	@OriginalMember(owner = "client!tk", name = "o", descriptor = "Lclient!ok;")
 	public static Class36 aClass36_1;
 
 	@OriginalMember(owner = "client!tk", name = "s", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_98;
+	public static Js5 aClass153_98;
 
 	@OriginalMember(owner = "client!tk", name = "D", descriptor = "[Lclient!ec;")
 	public static Scenery[] aClass31Array3;

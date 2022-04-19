@@ -8,7 +8,7 @@ public final class Static182 {
 	public static int[] anIntArray372;
 
 	@OriginalMember(owner = "client!oj", name = "x", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_77;
+	public static Js5 aClass153_77;
 
 	@OriginalMember(owner = "client!oj", name = "E", descriptor = "[[Lclient!hg;")
 	public static Class3_Sub14[][] aClass3_Sub14ArrayArray2;

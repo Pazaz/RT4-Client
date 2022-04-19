@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ve")
-public final class Class153 {
+public final class Js5 {
 
 	@OriginalMember(owner = "client!ve", name = "A", descriptor = "[[Ljava/lang/Object;")
 	private Object[][] anObjectArrayArray1;
@@ -25,7 +25,7 @@ public final class Class153 {
 	private final boolean aBoolean297;
 
 	@OriginalMember(owner = "client!ve", name = "<init>", descriptor = "(Lclient!v;ZZ)V")
-	public Class153(@OriginalArg(0) Class14 arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
+	public Js5(@OriginalArg(0) Class14 arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
 		this.aClass14_1 = arg0;
 		this.aBoolean296 = arg1;
 		this.aBoolean297 = arg2;

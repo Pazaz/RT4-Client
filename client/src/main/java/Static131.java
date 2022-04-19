@@ -159,7 +159,7 @@ public final class Static131 {
 	}
 
 	@OriginalMember(owner = "client!kd", name = "a", descriptor = "(IIILclient!ve;)[Lclient!qf;")
-	public static Sprite[] method2580(@OriginalArg(2) int arg0, @OriginalArg(3) Class153 arg1) {
+	public static Sprite[] method2580(@OriginalArg(2) int arg0, @OriginalArg(3) Js5 arg1) {
 		return Static234.method4016(arg1, 0, arg0) ? Static33.method870() : null;
 	}
 }

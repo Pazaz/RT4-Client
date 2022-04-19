@@ -132,7 +132,7 @@ public final class Static234 {
 	}
 
 	@OriginalMember(owner = "client!ta", name = "a", descriptor = "(Lclient!ve;III)Z")
-	public static boolean method4016(@OriginalArg(0) Class153 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+	public static boolean method4016(@OriginalArg(0) Js5 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		@Pc(9) byte[] local9 = arg0.method4495(arg2, arg1);
 		if (local9 == null) {
 			return false;
@@ -150,7 +150,7 @@ public final class Static234 {
 	}
 
 	@OriginalMember(owner = "client!ta", name = "a", descriptor = "([Lclient!mm;ILclient!ve;)V")
-	public static void method4018(@OriginalArg(0) SoftwareSprite[] arg0, @OriginalArg(2) Class153 arg1) {
+	public static void method4018(@OriginalArg(0) SoftwareSprite[] arg0, @OriginalArg(2) Js5 arg1) {
 		Static119.aClass153_44 = arg1;
 		Static241.aClass3_Sub2_Sub1_Sub1Array13 = arg0;
 		Static258.aBooleanArray130 = new boolean[Static241.aClass3_Sub2_Sub1_Sub1Array13.length];

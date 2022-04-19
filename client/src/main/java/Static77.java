@@ -34,7 +34,7 @@ public final class Static77 {
 	}
 
 	@OriginalMember(owner = "client!gb", name = "a", descriptor = "(Lclient!ve;II)Lclient!gb;")
-	public static Class8_Sub5 method1686(@OriginalArg(0) Class153 arg0, @OriginalArg(1) int arg1) {
+	public static Class8_Sub5 method1686(@OriginalArg(0) Js5 arg0, @OriginalArg(1) int arg1) {
 		@Pc(5) byte[] local5 = arg0.method4495(arg1, 0);
 		return local5 == null ? null : new Class8_Sub5(local5);
 	}

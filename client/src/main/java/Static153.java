@@ -11,7 +11,7 @@ public final class Static153 {
 	public static SoftwareSprite aClass3_Sub2_Sub1_Sub1_2;
 
 	@OriginalMember(owner = "client!mc", name = "Z", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_57;
+	public static Js5 aClass153_57;
 
 	@OriginalMember(owner = "client!mc", name = "Y", descriptor = "[Lclient!na;")
 	public static final Class100[] aClass100Array112 = new Class100[100];

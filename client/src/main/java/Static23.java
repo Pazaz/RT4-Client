@@ -8,10 +8,10 @@ public final class Static23 {
 	public static float aFloat5;
 
 	@OriginalMember(owner = "client!bm", name = "e", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_11;
+	public static Js5 aClass153_11;
 
 	@OriginalMember(owner = "client!bm", name = "f", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_12;
+	public static Js5 aClass153_12;
 
 	@OriginalMember(owner = "client!bm", name = "d", descriptor = "Lclient!na;")
 	private static final Class100 aClass100_130 = Static28.method790("Checking for updates )2 ");

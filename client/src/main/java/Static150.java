@@ -29,7 +29,7 @@ public final class Static150 {
 	public static Class100 aClass100_691 = aClass100_689;
 
 	@OriginalMember(owner = "client!lk", name = "a", descriptor = "(ILclient!ve;)I")
-	public static int method2797(@OriginalArg(1) Class153 arg0) {
+	public static int method2797(@OriginalArg(1) Js5 arg0) {
 		@Pc(1) int local1 = 0;
 		if (arg0.method4506(Static262.anInt5754)) {
 			local1++;
@@ -41,7 +41,7 @@ public final class Static150 {
 	}
 
 	@OriginalMember(owner = "client!lk", name = "a", descriptor = "(IIBLclient!ve;)Lclient!qf;")
-	public static Sprite method2800(@OriginalArg(1) int arg0, @OriginalArg(3) Class153 arg1) {
+	public static Sprite method2800(@OriginalArg(1) int arg0, @OriginalArg(3) Js5 arg1) {
 		return Static234.method4016(arg1, 0, arg0) ? Static82.method1764() : null;
 	}
 

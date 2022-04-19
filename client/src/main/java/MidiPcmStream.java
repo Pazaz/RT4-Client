@@ -106,7 +106,7 @@ public final class MidiPcmStream extends PcmStream {
 	}
 
 	@OriginalMember(owner = "client!va", name = "a", descriptor = "(Lclient!rf;ILclient!ve;Lclient!le;I)Z")
-	public final synchronized boolean method4411(@OriginalArg(0) Class3_Sub29 arg0, @OriginalArg(2) Class153 arg1, @OriginalArg(3) Class89 arg2) {
+	public final synchronized boolean method4411(@OriginalArg(0) Class3_Sub29 arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) Class89 arg2) {
 		arg0.method3741();
 		@Pc(5) boolean local5 = true;
 		@Pc(20) int[] local20 = new int[] { 22050 };

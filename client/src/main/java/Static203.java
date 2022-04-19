@@ -16,7 +16,7 @@ public final class Static203 {
 	public static Class32[] aClass32Array1;
 
 	@OriginalMember(owner = "client!qh", name = "g", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_85;
+	public static Js5 aClass153_85;
 
 	@OriginalMember(owner = "client!qh", name = "c", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_893 = Static28.method790("Memory before cleanup=");

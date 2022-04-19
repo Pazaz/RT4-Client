@@ -73,7 +73,7 @@ public final class Class88 {
 	}
 
 	@OriginalMember(owner = "client!lc", name = "a", descriptor = "(IZIDILclient!ve;Lclient!m;Z)[I")
-	public final int[] method2725(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(3) double arg3, @OriginalArg(5) Class153 arg4, @OriginalArg(6) GlTextureProvider arg5, @OriginalArg(7) boolean arg6) {
+	public final int[] method2725(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(3) double arg3, @OriginalArg(5) Js5 arg4, @OriginalArg(6) GlTextureProvider arg5, @OriginalArg(7) boolean arg6) {
 		Static241.method4537(arg3);
 		Static37.anInterface1_1 = arg5;
 		Static176.aClass153_76 = arg4;
@@ -152,7 +152,7 @@ public final class Class88 {
 	}
 
 	@OriginalMember(owner = "client!lc", name = "a", descriptor = "(IIZLclient!m;DILclient!ve;)[B")
-	public final byte[] method2728(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) GlTextureProvider arg3, @OriginalArg(4) double arg4, @OriginalArg(6) Class153 arg5) {
+	public final byte[] method2728(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) GlTextureProvider arg3, @OriginalArg(4) double arg4, @OriginalArg(6) Js5 arg5) {
 		@Pc(8) byte[] local8 = new byte[arg1 * 4 * arg0];
 		Static241.method4537(arg4);
 		Static176.aClass153_76 = arg5;
@@ -241,7 +241,7 @@ public final class Class88 {
 	}
 
 	@OriginalMember(owner = "client!lc", name = "a", descriptor = "(ZLclient!m;Lclient!ve;)Z")
-	public final boolean method2729(@OriginalArg(1) GlTextureProvider arg0, @OriginalArg(2) Class153 arg1) {
+	public final boolean method2729(@OriginalArg(1) GlTextureProvider arg0, @OriginalArg(2) Js5 arg1) {
 		@Pc(10) int local10;
 		if (Static215.anInt4868 > 0) {
 			for (local10 = 0; local10 < this.anIntArray327.length; local10++) {

@@ -13,13 +13,13 @@ public final class Class89 {
 	private final HashTable aClass133_12 = new HashTable(256);
 
 	@OriginalMember(owner = "client!le", name = "b", descriptor = "Lclient!ve;")
-	private final Class153 aClass153_52;
+	private final Js5 aClass153_52;
 
 	@OriginalMember(owner = "client!le", name = "i", descriptor = "Lclient!ve;")
-	private final Class153 aClass153_53;
+	private final Js5 aClass153_53;
 
 	@OriginalMember(owner = "client!le", name = "<init>", descriptor = "(Lclient!ve;Lclient!ve;)V")
-	public Class89(@OriginalArg(0) Class153 arg0, @OriginalArg(1) Class153 arg1) {
+	public Class89(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {
 		this.aClass153_52 = arg0;
 		this.aClass153_53 = arg1;
 	}

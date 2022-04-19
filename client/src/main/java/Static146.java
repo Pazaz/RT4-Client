@@ -8,7 +8,7 @@ public final class Static146 {
 	public static float aFloat15;
 
 	@OriginalMember(owner = "client!lg", name = "g", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_54;
+	public static Js5 aClass153_54;
 
 	@OriginalMember(owner = "client!lg", name = "b", descriptor = "Z")
 	public static boolean aBoolean174 = false;
@@ -32,7 +32,7 @@ public final class Static146 {
 	}
 
 	@OriginalMember(owner = "client!lg", name = "a", descriptor = "(Lclient!ve;BII)[Lclient!ok;")
-	public static Class36[] method2749(@OriginalArg(0) Class153 arg0, @OriginalArg(3) int arg1) {
+	public static Class36[] method2749(@OriginalArg(0) Js5 arg0, @OriginalArg(3) int arg1) {
 		return Static234.method4016(arg0, 0, arg1) ? Static253.method4331() : null;
 	}
 

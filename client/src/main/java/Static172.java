@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static172 {
 
 	@OriginalMember(owner = "client!nj", name = "c", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_69;
+	public static Js5 aClass153_69;
 
 	@OriginalMember(owner = "client!nj", name = "e", descriptor = "Lclient!va;")
 	public static MidiPcmStream aClass3_Sub3_Sub4_2;
@@ -14,7 +14,7 @@ public final class Static172 {
 	public static Class38 aClass38_4;
 
 	@OriginalMember(owner = "client!nj", name = "g", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_70;
+	public static Js5 aClass153_70;
 
 	@OriginalMember(owner = "client!nj", name = "j", descriptor = "[I")
 	public static int[] anIntArray366;
@@ -23,7 +23,7 @@ public final class Static172 {
 	public static int anInt4165;
 
 	@OriginalMember(owner = "client!nj", name = "l", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_71;
+	public static Js5 aClass153_71;
 
 	@OriginalMember(owner = "client!nj", name = "m", descriptor = "[[S")
 	public static short[][] aShortArrayArray7;

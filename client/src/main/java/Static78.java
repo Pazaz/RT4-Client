@@ -8,7 +8,7 @@ public final class Static78 {
 	public static int anInt2147;
 
 	@OriginalMember(owner = "client!gd", name = "m", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_32;
+	public static Js5 aClass153_32;
 
 	@OriginalMember(owner = "client!gd", name = "n", descriptor = "Lclient!qf;")
 	public static Sprite aClass3_Sub2_Sub1_3;
@@ -45,7 +45,7 @@ public final class Static78 {
 	}
 
 	@OriginalMember(owner = "client!gd", name = "a", descriptor = "(ILclient!ve;II)Lclient!mm;")
-	public static SoftwareSprite method1693(@OriginalArg(0) int arg0, @OriginalArg(1) Class153 arg1, @OriginalArg(3) int arg2) {
+	public static SoftwareSprite method1693(@OriginalArg(0) int arg0, @OriginalArg(1) Js5 arg1, @OriginalArg(3) int arg2) {
 		return Static234.method4016(arg1, arg0, arg2) ? Static196.method3537() : null;
 	}
 

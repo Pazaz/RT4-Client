@@ -5,19 +5,19 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static167 {
 
 	@OriginalMember(owner = "client!nd", name = "n", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_61;
+	public static Js5 aClass153_61;
 
 	@OriginalMember(owner = "client!nd", name = "p", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_62;
+	public static Js5 aClass153_62;
 
 	@OriginalMember(owner = "client!nd", name = "s", descriptor = "I")
 	public static int anInt4069;
 
 	@OriginalMember(owner = "client!nd", name = "t", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_63;
+	public static Js5 aClass153_63;
 
 	@OriginalMember(owner = "client!nd", name = "v", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_64;
+	public static Js5 aClass153_64;
 
 	@OriginalMember(owner = "client!nd", name = "y", descriptor = "Lclient!mm;")
 	public static SoftwareSprite aClass3_Sub2_Sub1_Sub1_3;
@@ -49,7 +49,7 @@ public final class Static167 {
 	}
 
 	@OriginalMember(owner = "client!nd", name = "a", descriptor = "(ILclient!ve;)V")
-	public static void method3172(@OriginalArg(1) Class153 arg0) {
+	public static void method3172(@OriginalArg(1) Js5 arg0) {
 		Static262.anInt5754 = arg0.method4482(Static27.aClass100_165);
 		Static136.anInt3322 = arg0.method4482(Static165.aClass100_776);
 	}

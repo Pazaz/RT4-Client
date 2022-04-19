@@ -8,7 +8,7 @@ public final class Static86 {
 	public static Class80 aClass80_3;
 
 	@OriginalMember(owner = "client!gm", name = "ib", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_37;
+	public static Js5 aClass153_37;
 
 	@OriginalMember(owner = "client!gm", name = "R", descriptor = "I")
 	public static int anInt2293 = (int) (Math.random() * 17.0D) - 8;

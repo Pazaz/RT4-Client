@@ -99,7 +99,7 @@ public final class Static141 {
 	}
 
 	@OriginalMember(owner = "client!lb", name = "a", descriptor = "(Lclient!ve;Lclient!ve;ILclient!ve;)V")
-	public static void method2724(@OriginalArg(0) Class153 arg0, @OriginalArg(1) Class153 arg1, @OriginalArg(3) Class153 arg2) {
+	public static void method2724(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1, @OriginalArg(3) Js5 arg2) {
 		Static243.aClass153_98 = arg1;
 		Static5.aClass153_1 = arg0;
 		Static225.aClass153_92 = arg2;

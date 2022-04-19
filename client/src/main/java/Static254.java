@@ -17,7 +17,7 @@ public final class Static254 {
 	public static int anInt5559;
 
 	@OriginalMember(owner = "client!uj", name = "J", descriptor = "Lclient!ve;")
-	public static Class153 aClass153_105;
+	public static Js5 aClass153_105;
 
 	@OriginalMember(owner = "client!uj", name = "s", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_1061 = Static28.method790("null");
@@ -32,7 +32,7 @@ public final class Static254 {
 	public static final Class100[] aClass100Array168 = new Class100[500];
 
 	@OriginalMember(owner = "client!uj", name = "a", descriptor = "(BLclient!ve;I)Z")
-	public static boolean method4346(@OriginalArg(1) Class153 arg0, @OriginalArg(2) int arg1) {
+	public static boolean method4346(@OriginalArg(1) Js5 arg0, @OriginalArg(2) int arg1) {
 		@Pc(13) byte[] local13 = arg0.method4500(arg1);
 		if (local13 == null) {
 			return false;
