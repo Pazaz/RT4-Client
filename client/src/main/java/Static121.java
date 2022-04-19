@@ -26,10 +26,10 @@ public final class Static121 {
 	public static final JagString aClass100_590 = Static28.method790("Titelbild geladen)3");
 
 	@OriginalMember(owner = "client!jg", name = "a", descriptor = "(I)[Lclient!ek;")
-	public static Class36_Sub1[] method2406() {
-		@Pc(2) Class36_Sub1[] local2 = new Class36_Sub1[Static165.anInt4038];
+	public static SoftwareIndexedSprite[] method2406() {
+		@Pc(2) SoftwareIndexedSprite[] local2 = new SoftwareIndexedSprite[Static165.anInt4038];
 		for (@Pc(8) int local8 = 0; local8 < Static165.anInt4038; local8++) {
-			local2[local8] = new Class36_Sub1(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local8], Static269.anIntArray252[local8], Static254.anIntArray488[local8], Static26.anIntArray66[local8], Static7.aByteArrayArray5[local8], Static259.anIntArray513);
+			local2[local8] = new SoftwareIndexedSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local8], Static269.anIntArray252[local8], Static254.anIntArray488[local8], Static26.anIntArray66[local8], Static7.aByteArrayArray5[local8], Static259.anIntArray513);
 		}
 		Static75.method1631();
 		return local2;

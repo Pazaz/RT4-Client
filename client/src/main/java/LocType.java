@@ -731,7 +731,7 @@ public final class LocType {
 	}
 
 	@OriginalMember(owner = "client!pb", name = "a", descriptor = "(II[[III[[IZLclient!ek;BZI)Lclient!sm;")
-	public final Class139 method3428(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int[][] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int[][] arg5, @OriginalArg(6) boolean arg6, @OriginalArg(7) Class36_Sub1 arg7, @OriginalArg(9) boolean arg8, @OriginalArg(10) int arg9) {
+	public final Class139 method3428(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int[][] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int[][] arg5, @OriginalArg(6) boolean arg6, @OriginalArg(7) SoftwareIndexedSprite arg7, @OriginalArg(9) boolean arg8, @OriginalArg(10) int arg9) {
 		@Pc(29) long local29;
 		if (Static239.aBoolean269) {
 			if (this.anIntArray378 == null) {
@@ -741,7 +741,7 @@ public final class LocType {
 			}
 			@Pc(225) Class139 local225 = (Class139) Static93.aClass99_14.method3106(local29);
 			@Pc(235) GlModel local235;
-			@Pc(265) Class36_Sub1 local265;
+			@Pc(265) SoftwareIndexedSprite local265;
 			if (local225 == null) {
 				local235 = this.method3427(arg0, false, arg3);
 				if (local235 == null) {
@@ -824,7 +824,7 @@ public final class LocType {
 	}
 
 	@OriginalMember(owner = "client!pb", name = "a", descriptor = "(IILclient!ek;ILclient!tk;I[[IZII[[IIII)Lclient!sm;")
-	public final Class139 method3429(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Class36_Sub1 arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Class144 arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int[][] arg6, @OriginalArg(7) boolean arg7, @OriginalArg(8) int arg8, @OriginalArg(10) int[][] arg9, @OriginalArg(11) int arg10, @OriginalArg(12) int arg11, @OriginalArg(13) int arg12) {
+	public final Class139 method3429(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) SoftwareIndexedSprite arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Class144 arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int[][] arg6, @OriginalArg(7) boolean arg7, @OriginalArg(8) int arg8, @OriginalArg(10) int[][] arg9, @OriginalArg(11) int arg10, @OriginalArg(12) int arg11, @OriginalArg(13) int arg12) {
 		@Pc(30) long local30;
 		if (!Static239.aBoolean269) {
 			if (this.anIntArray378 == null) {

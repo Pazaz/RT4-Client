@@ -500,7 +500,7 @@ public final class Component {
 		if (this.anIntArray37 != null) {
 			return true;
 		}
-		@Pc(18) Class36_Sub1 local18 = Static164.method3119(this.anInt477, Static23.aClass153_12);
+		@Pc(18) SoftwareIndexedSprite local18 = Static164.method3119(this.anInt477, Static23.aClass153_12);
 		if (local18 == null) {
 			return false;
 		}

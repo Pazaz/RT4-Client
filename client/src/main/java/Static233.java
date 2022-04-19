@@ -23,7 +23,7 @@ public final class Static233 {
 	public static int anInt5225;
 
 	@OriginalMember(owner = "client!t", name = "G", descriptor = "[Lclient!ek;")
-	public static Class36_Sub1[] aClass36_Sub1Array1;
+	public static SoftwareIndexedSprite[] aClass36_Sub1Array1;
 
 	@OriginalMember(owner = "client!t", name = "m", descriptor = "Z")
 	public static volatile boolean aBoolean253 = true;

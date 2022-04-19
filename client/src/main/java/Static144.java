@@ -227,7 +227,7 @@ public final class Static144 {
 									if (local233 != 0) {
 										local254 = local222 >> 14 & 0x3;
 										@Pc(998) Class2 local998 = Static40.method1013(local233 - 1);
-										@Pc(1003) Class36_Sub1 local1003 = local998.method9(local254);
+										@Pc(1003) SoftwareIndexedSprite local1003 = local998.method9(local254);
 										if (local1003 != null) {
 											local276 = local162 * local1003.anInt4278 / 4;
 											local270 = local62 * local1003.anInt4270 / 4;

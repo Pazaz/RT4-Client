@@ -139,7 +139,7 @@ public final class Static69 {
 	}
 
 	@OriginalMember(owner = "client!fh", name = "a", descriptor = "(BLclient!ek;)V")
-	public static void method1545(@OriginalArg(1) Class36_Sub1 arg0) {
+	public static void method1545(@OriginalArg(1) SoftwareIndexedSprite arg0) {
 		@Pc(5) int local5;
 		for (local5 = 0; local5 < Static270.anIntArray562.length; local5++) {
 			Static270.anIntArray562[local5] = 0;

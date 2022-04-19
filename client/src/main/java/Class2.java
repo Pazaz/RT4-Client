@@ -27,8 +27,8 @@ public final class Class2 {
 	}
 
 	@OriginalMember(owner = "client!aa", name = "a", descriptor = "(IB)Lclient!ek;")
-	public final Class36_Sub1 method9(@OriginalArg(0) int arg0) {
-		@Pc(17) Class36_Sub1 local17 = (Class36_Sub1) Static219.aClass99_27.method3106((long) (arg0 << 16 | this.anInt12));
+	public final SoftwareIndexedSprite method9(@OriginalArg(0) int arg0) {
+		@Pc(17) SoftwareIndexedSprite local17 = (SoftwareIndexedSprite) Static219.aClass99_27.method3106((long) (arg0 << 16 | this.anInt12));
 		if (local17 != null) {
 			return local17;
 		}
