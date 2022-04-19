@@ -29,7 +29,7 @@ public final class Static269 {
 	public static final JagString aClass100_557 = Static28.method790("d-Broulement:");
 
 	@OriginalMember(owner = "client!wa", name = "Eb", descriptor = "[Lclient!bg;")
-	public static final Class14_Sub1[] aClass14_Sub1Array3 = new Class14_Sub1[28];
+	public static final Js5CachedResourceProvider[] aClass14_Sub1Array3 = new Js5CachedResourceProvider[28];
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(Z)V")
 	public static void method2170() {
