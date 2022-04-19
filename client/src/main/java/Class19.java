@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Class19 implements Runnable {
 
 	@OriginalMember(owner = "client!cj", name = "m", descriptor = "Lsignlink!ll;")
-	public Class213 aClass213_1;
+	public SignLink aClass213_1;
 
 	@OriginalMember(owner = "client!cj", name = "p", descriptor = "[Lclient!vh;")
 	public final Class62[] aClass62Array1 = new Class62[2];

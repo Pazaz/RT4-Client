@@ -9,7 +9,7 @@ public final class Static69 {
 	public static Frame aFrame2;
 
 	@OriginalMember(owner = "client!fh", name = "cb", descriptor = "Lsignlink!ll;")
-	public static Class213 aClass213_4;
+	public static SignLink aClass213_4;
 
 	@OriginalMember(owner = "client!fh", name = "P", descriptor = "Z")
 	public static volatile boolean aBoolean115 = true;

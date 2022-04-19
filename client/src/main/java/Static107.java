@@ -43,7 +43,7 @@ public final class Static107 {
 	}
 
 	@OriginalMember(owner = "client!id", name = "a", descriptor = "(ILsignlink!ll;Ljava/awt/Component;II)Lclient!vh;")
-	public static Class62 method2262(@OriginalArg(0) int arg0, @OriginalArg(1) Class213 arg1, @OriginalArg(2) Component arg2, @OriginalArg(3) int arg3) {
+	public static Class62 method2262(@OriginalArg(0) int arg0, @OriginalArg(1) SignLink arg1, @OriginalArg(2) Component arg2, @OriginalArg(3) int arg3) {
 		if (Static44.anInt1404 == 0) {
 			throw new IllegalStateException();
 		}

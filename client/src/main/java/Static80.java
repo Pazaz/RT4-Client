@@ -35,7 +35,7 @@ public final class Static80 {
 	}
 
 	@OriginalMember(owner = "client!gf", name = "a", descriptor = "(Lsignlink!ll;I)V")
-	public static void method3615(@OriginalArg(0) Class213 arg0) {
+	public static void method3615(@OriginalArg(0) SignLink arg0) {
 		Static113.anInt4609 = 3;
 		Static53.method1293(true);
 		aBoolean231 = true;

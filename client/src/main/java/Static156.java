@@ -132,7 +132,7 @@ public final class Static156 {
 
 	@OriginalMember(owner = "client!mf", name = "e", descriptor = "(I)V")
 	public static void method2958() {
-		if (Class213.aString20.toLowerCase().indexOf("microsoft") != -1) {
+		if (SignLink.aString20.toLowerCase().indexOf("microsoft") != -1) {
 			Static196.anIntArray407[187] = 27;
 			Static196.anIntArray407[223] = 28;
 			Static196.anIntArray407[221] = 43;
@@ -147,7 +147,7 @@ public final class Static156 {
 			Static196.anIntArray407[189] = 26;
 			return;
 		}
-		if (Class213.aMethod6 == null) {
+		if (SignLink.aMethod6 == null) {
 			Static196.anIntArray407[192] = 58;
 			Static196.anIntArray407[222] = 59;
 		} else {

@@ -70,7 +70,7 @@ public final class Static203 {
 	}
 
 	@OriginalMember(owner = "client!qh", name = "a", descriptor = "(Lsignlink!ll;B)V")
-	public static void method3663(@OriginalArg(0) Class213 arg0) {
+	public static void method3663(@OriginalArg(0) SignLink arg0) {
 		@Pc(11) Class214 local11 = null;
 		try {
 			@Pc(16) Class212 local16 = arg0.method5112("runescape");

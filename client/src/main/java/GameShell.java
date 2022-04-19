@@ -23,7 +23,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 	private boolean aBoolean71 = false;
 
 	@OriginalMember(owner = "client!rc", name = "providesignlink", descriptor = "(Lsignlink!ll;)V")
-	public static void providesignlink(@OriginalArg(0) Class213 arg0) {
+	public static void providesignlink(@OriginalArg(0) SignLink arg0) {
 		Static71.aClass213_3 = arg0;
 		Static69.aClass213_4 = arg0;
 	}
@@ -279,26 +279,26 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 	@Override
 	public final void run() {
 		try {
-			if (Class213.aString20 != null) {
-				@Pc(12) String local12 = Class213.aString20.toLowerCase();
+			if (SignLink.aString20 != null) {
+				@Pc(12) String local12 = SignLink.aString20.toLowerCase();
 				if (local12.indexOf("sun") != -1 || local12.indexOf("apple") != -1) {
-					@Pc(24) String local24 = Class213.aString14;
+					@Pc(24) String local24 = SignLink.aString14;
 					if (local24.equals("1.1") || local24.startsWith("1.1.") || local24.equals("1.2") || local24.startsWith("1.2.")) {
 						this.method927("wrongjava");
 						return;
 					}
 					Static226.anInt5081 = 5;
-				} else if (local12.indexOf("ibm") != -1 && (Class213.aString14 == null || Class213.aString14.equals("1.4.2"))) {
+				} else if (local12.indexOf("ibm") != -1 && (SignLink.aString14 == null || SignLink.aString14.equals("1.4.2"))) {
 					this.method927("wrongjava");
 					return;
 				}
 			}
 			@Pc(76) int local76;
-			if (Class213.aString14 != null && Class213.aString14.startsWith("1.")) {
+			if (SignLink.aString14 != null && SignLink.aString14.startsWith("1.")) {
 				local76 = 2;
 				@Pc(78) int local78 = 0;
-				while (local76 < Class213.aString14.length()) {
-					@Pc(90) char local90 = Class213.aString14.charAt(local76);
+				while (local76 < SignLink.aString14.length()) {
+					@Pc(90) char local90 = SignLink.aString14.charAt(local76);
 					if (local90 < '0' || local90 > '9') {
 						break;
 					}
@@ -310,7 +310,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 				}
 			}
 			if (Static71.aClass213_3.anApplet2 != null) {
-				@Pc(125) Method local125 = Class213.aMethod5;
+				@Pc(125) Method local125 = SignLink.aMethod5;
 				if (local125 != null) {
 					try {
 						local125.invoke(Static71.aClass213_3.anApplet2, Boolean.TRUE);
@@ -381,7 +381,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			Static39.aFrame1.toFront();
 			@Pc(44) Insets local44 = Static39.aFrame1.getInsets();
 			Static39.aFrame1.setSize(local44.left + Static72.anInt2046 + local44.right, local44.top + Static122.anInt3045 + local44.bottom);
-			Static69.aClass213_4 = Static71.aClass213_3 = new Class213(null, arg0, arg1, 28);
+			Static69.aClass213_4 = Static71.aClass213_3 = new SignLink(null, arg0, arg1, 28);
 			@Pc(76) Class212 local76 = Static71.aClass213_3.method5130(1, this);
 			while (local76.anInt5925 == 0) {
 				Static231.method3983(10L);
@@ -432,7 +432,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 				Static40.aBoolean78 = false;
 			}
 			if (Static71.aClass213_3 == null) {
-				Static69.aClass213_4 = Static71.aClass213_3 = new Class213(this, arg0, null, 0);
+				Static69.aClass213_4 = Static71.aClass213_3 = new SignLink(this, arg0, null, 0);
 			}
 			@Pc(86) Class212 local86 = Static71.aClass213_3.method5130(1, this);
 			while (local86.anInt5925 == 0) {

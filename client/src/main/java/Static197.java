@@ -26,7 +26,7 @@ public final class Static197 {
 	public static Class100 aClass100_873 = aClass100_874;
 
 	@OriginalMember(owner = "client!pm", name = "a", descriptor = "(ILsignlink!ll;)[Lclient!od;")
-	public static Class114[] method3558(@OriginalArg(1) Class213 arg0) {
+	public static Class114[] method3558(@OriginalArg(1) SignLink arg0) {
 		if (!arg0.method5111()) {
 			return new Class114[0];
 		}

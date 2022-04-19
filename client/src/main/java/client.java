@@ -360,7 +360,7 @@ public final class client extends GameShell {
 		Static208.anInt4784 = Static249.anInt5428;
 		Static259.aShortArray88 = Static62.aShortArray19 = Static232.aShortArray74 = Static259.aShortArray87 = new short[256];
 		Static209.anInt4794 = Static208.anInt4784;
-		if (Class213.anInt5928 == 3 && Static83.anInt370 != 2) {
+		if (SignLink.anInt5928 == 3 && Static83.anInt370 != 2) {
 			Static125.anInt3103 = Static187.anInt4413;
 		}
 		Static156.method2958();
@@ -370,7 +370,7 @@ public final class client extends GameShell {
 		if (Static71.aClass111_2 != null) {
 			Static71.aClass111_2.method3293(Static154.aCanvas1);
 		}
-		Static7.anInt986 = Class213.anInt5928;
+		Static7.anInt986 = SignLink.anInt5928;
 		try {
 			if (Static71.aClass213_3.aClass214_2 != null) {
 				Static172.aClass38_4 = new Class38(Static71.aClass213_3.aClass214_2, 5200, 0);
