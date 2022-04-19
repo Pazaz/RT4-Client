@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ei")
-public final class Class3_Sub3_Sub2 extends PcmStream {
+public final class MixerPcmStream extends PcmStream {
 
 	@OriginalMember(owner = "client!ei", name = "t", descriptor = "Lclient!ih;")
 	private final LinkedList aClass69_43 = new LinkedList();

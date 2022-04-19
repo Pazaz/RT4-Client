@@ -9,7 +9,7 @@ public abstract class Class3_Sub6 extends Node {
 	public int anInt905;
 
 	@OriginalMember(owner = "client!cc", name = "a", descriptor = "(Lclient!ei;)I")
-	public abstract int method779(@OriginalArg(0) Class3_Sub3_Sub2 arg0);
+	public abstract int method779(@OriginalArg(0) MixerPcmStream arg0);
 
 	@OriginalMember(owner = "client!cc", name = "a", descriptor = "()V")
 	public abstract void method780();

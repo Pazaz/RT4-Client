@@ -10,7 +10,7 @@ public final class Class3_Sub3_Sub3 extends PcmStream {
 	public final LinkedList aClass69_126 = new LinkedList();
 
 	@OriginalMember(owner = "client!te", name = "K", descriptor = "Lclient!ei;")
-	public final Class3_Sub3_Sub2 aClass3_Sub3_Sub2_2 = new Class3_Sub3_Sub2();
+	public final MixerPcmStream aClass3_Sub3_Sub2_2 = new MixerPcmStream();
 
 	@OriginalMember(owner = "client!te", name = "E", descriptor = "Lclient!va;")
 	private final MidiPcmStream aClass3_Sub3_Sub4_3;

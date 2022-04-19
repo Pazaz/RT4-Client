@@ -731,7 +731,7 @@ public final class client extends GameShell {
 			Static11.aClass62_1.method3566(Static148.aClass3_Sub3_Sub4_1);
 			Static34.method876(Static148.aClass3_Sub3_Sub4_1, Static138.aClass153_51, Static137.aClass153_49, Static248.aClass153_75);
 			Static147.aClass62_2 = Static107.method2262(2048, Static71.aClass213_3, Static154.aCanvas1, 1);
-			Static204.aClass3_Sub3_Sub2_1 = new Class3_Sub3_Sub2();
+			Static204.aClass3_Sub3_Sub2_1 = new MixerPcmStream();
 			Static147.aClass62_2.method3566(Static204.aClass3_Sub3_Sub2_1);
 			Static56.aClass156_1 = new Resampler(22050, Static44.anInt1404);
 			Static250.anInt5441 = Static130.aClass153_47.method4482(Static1.aClass100_1);
