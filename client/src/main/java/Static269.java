@@ -196,7 +196,7 @@ public final class Static269 {
 					break label270;
 				} while (local515 <= 0);
 				for (local243 = 0; local243 < local515; local243++) {
-					@Pc(529) Class51 local529 = new Class51(local95);
+					@Pc(529) Light local529 = new Light(local95);
 					if (local529.anInt2243 == 31) {
 						@Pc(541) Class65 local541 = Static140.method2709(local95.method2163());
 						local529.method1762(local541.anInt2865, local541.anInt2873, local541.anInt2867, local541.anInt2872);

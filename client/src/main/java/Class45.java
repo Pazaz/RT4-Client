@@ -57,7 +57,7 @@ public final class Class45 {
 	public int anInt2019;
 
 	@OriginalMember(owner = "client!fj", name = "a", descriptor = "(Lclient!gi;IIIFFF)I")
-	public final int method1553(@OriginalArg(0) Class51 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) float arg4, @OriginalArg(5) float arg5, @OriginalArg(6) float arg6) {
+	public final int method1553(@OriginalArg(0) Light arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) float arg4, @OriginalArg(5) float arg5, @OriginalArg(6) float arg6) {
 		@Pc(1) long local1 = 0L;
 		if ((arg1 & 0x7F) == 0 || (arg3 & 0x7F) == 0) {
 			local1 = arg1 + (arg3 << 16);

@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static120 {
 
 	@OriginalMember(owner = "client!jf", name = "a", descriptor = "[Lclient!gi;")
-	public static Class51[] aClass51Array1;
+	public static Light[] aClass51Array1;
 
 	@OriginalMember(owner = "client!jf", name = "c", descriptor = "[I")
 	private static int[] anIntArray283;
@@ -78,7 +78,7 @@ public final class Static120 {
 	}
 
 	@OriginalMember(owner = "client!jf", name = "a", descriptor = "(Lclient!gi;)V")
-	public static void method2389(@OriginalArg(0) Class51 arg0) {
+	public static void method2389(@OriginalArg(0) Light arg0) {
 		if (anInt3034 >= 255) {
 			System.out.println("Number of lights added exceeds maximum!");
 		} else {
@@ -242,7 +242,7 @@ public final class Static120 {
 	@OriginalMember(owner = "client!jf", name = "b", descriptor = "()V")
 	public static void method2395() {
 		for (@Pc(1) int local1 = 0; local1 < anInt3034; local1++) {
-			@Pc(8) Class51 local8 = aClass51Array1[local1];
+			@Pc(8) Light local8 = aClass51Array1[local1];
 			@Pc(11) int local11 = local8.anInt2241;
 			if (local8.aBoolean124) {
 				local11 = 0;
@@ -357,7 +357,7 @@ public final class Static120 {
 
 	@OriginalMember(owner = "client!jf", name = "f", descriptor = "()V")
 	public static void method2401() {
-		aClass51Array1 = new Class51[255];
+		aClass51Array1 = new Light[255];
 		anIntArray284 = new int[4];
 		aBooleanArray65 = new boolean[4];
 		anIntArray283 = new int[4];
@@ -382,7 +382,7 @@ public final class Static120 {
 		local4.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_SRC0_RGB, GL.GL_CONSTANT);
 		local4.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_OPERAND0_RGB, GL.GL_SRC_ALPHA);
 		label71: for (@Pc(56) int local56 = 0; local56 < anInt3034; local56++) {
-			@Pc(63) Class51 local63 = aClass51Array1[local56];
+			@Pc(63) Light local63 = aClass51Array1[local56];
 			@Pc(66) int local66 = local63.anInt2241;
 			if (local63.aBoolean125) {
 				local66--;
@@ -433,7 +433,7 @@ public final class Static120 {
 	}
 
 	@OriginalMember(owner = "client!jf", name = "a", descriptor = "(ILclient!gi;III)V")
-	private static void method2403(@OriginalArg(0) int arg0, @OriginalArg(1) Class51 arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+	private static void method2403(@OriginalArg(0) int arg0, @OriginalArg(1) Light arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		@Pc(5) int local5 = arg0 + 16384 + 4;
 		@Pc(7) GL local7 = Static239.aGL1;
 		if (!aBooleanArray65[arg0]) {
