@@ -32,7 +32,7 @@ public final class Static148 {
 	public static Class100 aClass100_675 = aClass100_678;
 
 	@OriginalMember(owner = "client!li", name = "h", descriptor = "[Lclient!mj;")
-	public static final Class97[] aClass97Array1 = new Class97[4];
+	public static final CollisionMap[] aClass97Array1 = new CollisionMap[4];
 
 	@OriginalMember(owner = "client!li", name = "i", descriptor = "Lclient!na;")
 	public static Class100 aClass100_676 = aClass100_673;
