@@ -11,7 +11,7 @@ public final class Class61 {
 	public JagString[] aClass100Array79;
 
 	@OriginalMember(owner = "client!hj", name = "h", descriptor = "Lclient!qc;")
-	public Class3_Sub2_Sub17 aClass3_Sub2_Sub17_1;
+	public ClientScript aClass3_Sub2_Sub17_1;
 
 	@OriginalMember(owner = "client!hj", name = "k", descriptor = "I")
 	public int anInt2515 = -1;
