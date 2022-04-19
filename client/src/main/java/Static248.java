@@ -128,7 +128,7 @@ public final class Static248 {
 					for (local37 = 0; local37 < Static182.aClass3_Sub14ArrayArray2[local32].length; local37++) {
 						@Pc(336) Class3_Sub14 local336 = Static182.aClass3_Sub14ArrayArray2[local32][local37];
 						@Pc(350) float local350 = 201.5F - (float) local32 * 50.0F - (local336.aBoolean140 ? 1.0F : 0.5F);
-						if (local336.anInt2485 != -1 && Static94.anInterface1_2.method3237(local336.anInt2485) == 4 && Static220.aBoolean244) {
+						if (local336.anInt2485 != -1 && Rasteriser.anInterface1_2.method3237(local336.anInt2485) == 4 && Static220.aBoolean244) {
 							Static21.method619(local336.anInt2486);
 						}
 						local336.method1944(Static130.aClass3_Sub5ArrayArrayArray1, local350, false);

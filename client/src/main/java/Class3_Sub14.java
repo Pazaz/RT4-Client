@@ -280,7 +280,7 @@ public final class Class3_Sub14 extends Node {
 			Static239.method4177(-1);
 			Static27.method766(0, 0);
 		} else {
-			Static94.anInterface1_2.method3227(this.anInt2485);
+			Rasteriser.anInterface1_2.method3227(this.anInt2485);
 		}
 		@Pc(282) int local282 = this.aBoolean139 ? 40 : 36;
 		if (this.aClass155_3 == null) {

@@ -834,18 +834,18 @@ public final class client extends GameShell {
 		} else if (Static166.anInt4051 == 90) {
 			if (Static167.aClass153_63.method4475()) {
 				@Pc(951) Js5GlTextureProvider local951 = new Js5GlTextureProvider(Static195.aClass153_80, Static167.aClass153_63, Static209.aClass153_86, 20, !Static53.aBoolean99);
-				Static94.method1914(local951);
+				Rasteriser.method1914(local951);
 				if (Static113.anInt4609 == 1) {
-					Static94.method1911(0.9F);
+					Rasteriser.method1911(0.9F);
 				}
 				if (Static113.anInt4609 == 2) {
-					Static94.method1911(0.8F);
+					Rasteriser.method1911(0.8F);
 				}
 				if (Static113.anInt4609 == 3) {
-					Static94.method1911(0.7F);
+					Rasteriser.method1911(0.7F);
 				}
 				if (Static113.anInt4609 == 4) {
-					Static94.method1911(0.6F);
+					Rasteriser.method1911(0.6F);
 				}
 				Static126.aClass100_602 = Static86.aClass100_489;
 				Static166.anInt4051 = 100;

@@ -2,7 +2,7 @@ import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
-public final class Static94 {
+public final class Rasteriser {
 
 	@OriginalMember(owner = "client!hf", name = "b", descriptor = "I")
 	public static int anInt2469;

@@ -168,9 +168,9 @@ public final class Static197 {
 			Static37.aThread1.setPriority(5);
 			Static260.aClass27_2 = null;
 			Static268.method4580();
-			((Js5GlTextureProvider) Static94.anInterface1_2).method3248(200);
+			((Js5GlTextureProvider) Rasteriser.anInterface1_2).method3248(200);
 			if (Static178.aBoolean202) {
-				Static94.method1911(0.7F);
+				Rasteriser.method1911(0.7F);
 			}
 			Static114.method4637();
 		} else if (arg1 == 0 && arg3 > 0) {
@@ -178,19 +178,19 @@ public final class Static197 {
 			Static260.aClass27_2 = Static131.method2579(503, 765, Static154.aCanvas1);
 			Static268.method4583();
 			Static76.method1643();
-			((Js5GlTextureProvider) Static94.anInterface1_2).method3248(20);
+			((Js5GlTextureProvider) Rasteriser.anInterface1_2).method3248(20);
 			if (Static178.aBoolean202) {
 				if (Static113.anInt4609 == 1) {
-					Static94.method1911(0.9F);
+					Rasteriser.method1911(0.9F);
 				}
 				if (Static113.anInt4609 == 2) {
-					Static94.method1911(0.8F);
+					Rasteriser.method1911(0.8F);
 				}
 				if (Static113.anInt4609 == 3) {
-					Static94.method1911(0.7F);
+					Rasteriser.method1911(0.7F);
 				}
 				if (Static113.anInt4609 == 4) {
-					Static94.method1911(0.6F);
+					Rasteriser.method1911(0.6F);
 				}
 			}
 			Static95.method1939();

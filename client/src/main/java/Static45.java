@@ -223,7 +223,7 @@ public final class Static45 {
 									local267 = 127;
 								}
 								local273 = (local234 & 0x380) + (local234 + local10 & 0xFC00) + local267;
-								local254 = Static94.anIntArray220[Static87.method1814(96, local273)];
+								local254 = Rasteriser.anIntArray220[Static87.method1814(96, local273)];
 							}
 							local267 = local146[local168][local173];
 							local332 = local146[local168][local173 + 1];
@@ -241,7 +241,7 @@ public final class Static45 {
 												@Pc(1834) int local1834 = Static240.aByteArrayArrayArray14[local152][local322][local1794] & 0xFF;
 												if (local1834 != 0) {
 													@Pc(1842) FloType local1842 = Static256.method4395(local1834 - 1);
-													if (local1842.anInt5892 != -1 && Static94.anInterface1_2.method3237(local1842.anInt5892) == 4) {
+													if (local1842.anInt5892 != -1 && Rasteriser.anInterface1_2.method3237(local1842.anInt5892) == 4) {
 														Static62.anIntArrayArray11[local168][local173] = local1842.anInt5889 + (local1842.anInt5898 << 24);
 														continue label771;
 													}
@@ -258,7 +258,7 @@ public final class Static45 {
 								@Pc(1353) int local1353;
 								@Pc(1288) int local1288;
 								if (Static239.aBoolean269 && !arg1 && Static62.anIntArrayArray11 != null && local152 == 0) {
-									if (local1248.anInt5892 != -1 && Static94.anInterface1_2.method3237(local1248.anInt5892) == 4) {
+									if (local1248.anInt5892 != -1 && Rasteriser.anInterface1_2.method3237(local1248.anInt5892) == 4) {
 										Static62.anIntArrayArray11[local168][local173] = (local1248.anInt5898 << 24) + local1248.anInt5889;
 									} else {
 										label737: for (local1288 = local168 - 1; local1288 <= local168 + 1; local1288++) {
@@ -267,7 +267,7 @@ public final class Static45 {
 													local1353 = Static240.aByteArrayArrayArray14[local152][local1288][local1301] & 0xFF;
 													if (local1353 != 0) {
 														@Pc(1366) FloType local1366 = Static256.method4395(local1353 - 1);
-														if (local1366.anInt5892 != -1 && Static94.anInterface1_2.method3237(local1366.anInt5892) == 4) {
+														if (local1366.anInt5892 != -1 && Rasteriser.anInterface1_2.method3237(local1366.anInt5892) == 4) {
 															Static62.anIntArrayArray11[local168][local173] = local1366.anInt5889 + (local1366.anInt5898 << 24);
 															break label737;
 														}
@@ -278,14 +278,14 @@ public final class Static45 {
 									}
 								}
 								local1288 = local1248.anInt5892;
-								if (local1288 >= 0 && !Static94.anInterface1_2.method3236(local1288)) {
+								if (local1288 >= 0 && !Rasteriser.anInterface1_2.method3236(local1288)) {
 									local1288 = -1;
 								}
 								@Pc(1458) int local1458;
 								@Pc(1429) int local1429;
 								if (local1288 >= 0) {
 									local1301 = -1;
-									local1353 = Static94.anIntArray220[Static230.method3949(Static94.anInterface1_2.method3234(local1288), 96)];
+									local1353 = Rasteriser.anIntArray220[Static230.method3949(Rasteriser.anInterface1_2.method3234(local1288), 96)];
 								} else if (local1248.anInt5899 == -1) {
 									local1301 = -2;
 									local1353 = 0;
@@ -298,7 +298,7 @@ public final class Static45 {
 										local1429 = 127;
 									}
 									local1458 = (local1301 & 0x380) + ((local1301 + local10 & 0xFC00) + local1429);
-									local1353 = Static94.anIntArray220[Static230.method3949(local1458, 96)];
+									local1353 = Rasteriser.anIntArray220[Static230.method3949(local1458, 96)];
 								}
 								if (local1248.anInt5894 >= 0) {
 									local1429 = local1248.anInt5894;
@@ -309,7 +309,7 @@ public final class Static45 {
 										local1458 = 127;
 									}
 									@Pc(1529) int local1529 = (local1429 & 0x380) + ((local1429 + local10 & 0xFC00) + local1458);
-									local1353 = Static94.anIntArray220[Static230.method3949(local1529, 96)];
+									local1353 = Rasteriser.anIntArray220[Static230.method3949(local1529, 96)];
 								}
 								Static176.method3305(local152, local168, local173, local322, local1242, local1288, local200, local202, local209, local349, Static87.method1814(local267, local234), Static87.method1814(local273, local234), Static87.method1814(local326, local234), Static87.method1814(local332, local234), Static230.method3949(local1301, local267), Static230.method3949(local1301, local273), Static230.method3949(local1301, local326), Static230.method3949(local1301, local332), local254, local1353);
 								if (Static239.aBoolean269 && local152 > 0) {

@@ -167,7 +167,7 @@ public final class Static33 {
 								local519 = 127;
 							}
 							@Pc(541) int local541 = local519 + (local480 & 0x380) + (local480 + local19 & 0xFC00);
-							local462[((local367 & 0x3F) << 6) + (local102 & 0x3F)] = Static94.anIntArray220[Static87.method1814(96, local541)];
+							local462[((local367 & 0x3F) << 6) + (local102 & 0x3F)] = Rasteriser.anIntArray220[Static87.method1814(96, local541)];
 						} else if (local462 != null) {
 							local462[((local367 & 0x3F) << 6) + (local102 & 0x3F)] = 0;
 						}

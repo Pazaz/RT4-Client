@@ -137,7 +137,7 @@ public final class GlModel extends Model {
 		@Pc(23) int[] local23 = new int[arg0.anInt2136];
 		this.anIntArray462 = new int[arg0.anInt2139 + 1];
 		for (@Pc(32) int local32 = 0; local32 < arg0.anInt2136; local32++) {
-			if ((arg0.aByteArray30 == null || arg0.aByteArray30[local32] != 2) && (arg0.aShortArray23 == null || arg0.aShortArray23[local32] == -1 || !Static94.anInterface1_2.method3231(arg0.aShortArray23[local32] & 0xFFFF))) {
+			if ((arg0.aByteArray30 == null || arg0.aByteArray30[local32] != 2) && (arg0.aShortArray23 == null || arg0.aShortArray23[local32] == -1 || !Rasteriser.anInterface1_2.method3231(arg0.aShortArray23[local32] & 0xFFFF))) {
 				local23[this.anInt5297++] = local32;
 				this.anIntArray462[arg0.anIntArray197[local32]]++;
 				this.anIntArray462[arg0.anIntArray200[local32]]++;
@@ -159,11 +159,11 @@ public final class GlModel extends Model {
 			if (arg0.aShortArray23 != null) {
 				local135 = arg0.aShortArray23[local125];
 				if (local135 != -1) {
-					local131 = Static94.anInterface1_2.method3237(local135 & 0xFFFF);
-					local133 = Static94.anInterface1_2.method3228(local135 & 0xFFFF);
+					local131 = Rasteriser.anInterface1_2.method3237(local135 & 0xFFFF);
+					local133 = Rasteriser.anInterface1_2.method3228(local135 & 0xFFFF);
 				}
 			}
-			@Pc(182) boolean local182 = arg0.aByteArray26 != null && arg0.aByteArray26[local125] != 0 || local135 != -1 && !Static94.anInterface1_2.method3226(local135 & 0xFFFF);
+			@Pc(182) boolean local182 = arg0.aByteArray26 != null && arg0.aByteArray26[local125] != 0 || local135 != -1 && !Rasteriser.anInterface1_2.method3226(local135 & 0xFFFF);
 			if ((arg3 || local182) && arg0.aByteArray35 != null) {
 				local127 += arg0.aByteArray35[local125] << 17;
 			}
@@ -1742,14 +1742,14 @@ public final class GlModel extends Model {
 		local1 = 0;
 		@Pc(22) int local22 = 0;
 		if (arg0 != -1) {
-			local1 = Static94.anInterface1_2.method3238(arg0 & 0xFFFF);
-			local22 = Static94.anInterface1_2.method3229(arg0 & 0xFFFF);
+			local1 = Rasteriser.anInterface1_2.method3238(arg0 & 0xFFFF);
+			local22 = Rasteriser.anInterface1_2.method3229(arg0 & 0xFFFF);
 		}
 		@Pc(41) int local41 = 0;
 		@Pc(43) int local43 = 0;
 		if (arg1 != -1) {
-			local41 = Static94.anInterface1_2.method3238(arg1 & 0xFFFF);
-			local43 = Static94.anInterface1_2.method3229(arg1 & 0xFFFF);
+			local41 = Rasteriser.anInterface1_2.method3238(arg1 & 0xFFFF);
+			local43 = Rasteriser.anInterface1_2.method3229(arg1 & 0xFFFF);
 		}
 		if (local1 != local41 || local22 != local43) {
 			this.aClass127_1.aBoolean235 = false;
@@ -3069,7 +3069,7 @@ public final class GlModel extends Model {
 				Static239.method4177(-1);
 				Static27.method766(0, 0);
 			} else {
-				Static94.anInterface1_2.method3227(local439 & 0xFFFF);
+				Rasteriser.anInterface1_2.method3227(local439 & 0xFFFF);
 			}
 			if (this.aClass127_5.aClass155_4 == null) {
 				this.aClass127_5.aByteBuffer8.position(local427 * 12);
@@ -3230,7 +3230,7 @@ public final class GlModel extends Model {
 				@Pc(322) int local322 = Static237.anIntArray467[local297];
 				@Pc(326) int local326 = Static237.anIntArray467[local302];
 				if ((local246 - local248) * (local322 - local326) - (local322 - local318) * (local258 - local248) > 0) {
-					Static94.method1921(local151.aByteArray18, local318, local322, local326, local246, local248, local258, local134);
+					Rasteriser.method1921(local151.aByteArray18, local318, local322, local326, local246, local248, local258, local134);
 				}
 			}
 		}

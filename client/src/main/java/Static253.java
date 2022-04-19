@@ -119,7 +119,7 @@ public final class Static253 {
 			Static239.method4171(arg2, arg4, arg3, arg0, arg3 / 2 + arg2, arg4 - -(arg0 / 2), local248, local253, Static223.anInt5029, Static223.anInt5029);
 		} else {
 			Static129.method2496(arg2, arg4, arg3 + arg2, arg0 + arg4);
-			Static94.method1908();
+			Rasteriser.method1908();
 		}
 		if (Static60.aBoolean108 || Static155.anInt3751 < arg2 || Static155.anInt3751 >= arg3 + arg2 || arg4 > Static60.anInt1892 || arg0 + arg4 <= Static60.anInt1892) {
 			Static39.aBoolean77 = false;
@@ -165,7 +165,7 @@ public final class Static253 {
 			Static142.method2726(arg4, arg3, arg2, 256, arg0, 256);
 			Static233.method4000(arg3, arg2, arg0, 256, 256, arg4);
 		}
-		((Js5GlTextureProvider) Static94.anInterface1_2).method3239(Static178.anInt4247);
+		((Js5GlTextureProvider) Rasteriser.anInterface1_2).method3239(Static178.anInt4247);
 		Static115.method2310(arg3, arg4, arg0, arg2);
 		Static240.anInt5333 = local123;
 		Static134.anInt3302 = local121;
