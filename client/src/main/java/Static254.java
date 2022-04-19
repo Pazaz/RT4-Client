@@ -216,7 +216,7 @@ public final class Static254 {
 	}
 
 	@OriginalMember(owner = "client!uj", name = "a", descriptor = "(Lclient!wa;II)Lclient!na;")
-	public static Class100 method4350(@OriginalArg(0) Class3_Sub15 arg0) {
+	public static Class100 method4350(@OriginalArg(0) Buffer arg0) {
 		try {
 			@Pc(7) int local7 = arg0.method2204();
 			if (local7 > 32767) {

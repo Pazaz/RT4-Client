@@ -95,7 +95,7 @@ public final class Class3_Sub17 extends Class3 {
 
 	@OriginalMember(owner = "client!jc", name = "a", descriptor = "([B)V")
 	private void method2342(@OriginalArg(0) byte[] arg0) {
-		@Pc(4) Class3_Sub15 local4 = new Class3_Sub15(arg0);
+		@Pc(4) Buffer local4 = new Buffer(arg0);
 		this.anInt2980 = local4.method2174();
 		this.anInt2974 = local4.method2174();
 		this.anInt2976 = local4.method2174();

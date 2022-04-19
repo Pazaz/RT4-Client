@@ -354,7 +354,7 @@ public final class Class55 {
 	}
 
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(ILclient!wa;)V")
-	public final void method1827(@OriginalArg(1) Class3_Sub15 arg0) {
+	public final void method1827(@OriginalArg(1) Buffer arg0) {
 		while (true) {
 			@Pc(5) int local5 = arg0.method2229();
 			if (local5 == 0) {
@@ -365,7 +365,7 @@ public final class Class55 {
 	}
 
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(BLclient!wa;I)V")
-	private void method1828(@OriginalArg(1) Class3_Sub15 arg0, @OriginalArg(2) int arg1) {
+	private void method1828(@OriginalArg(1) Buffer arg0, @OriginalArg(2) int arg1) {
 		if (arg1 == 1) {
 			this.anInt2320 = arg0.method2163();
 		} else if (arg1 == 2) {

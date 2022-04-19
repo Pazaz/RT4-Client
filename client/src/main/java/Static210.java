@@ -28,7 +28,7 @@ public final class Static210 {
 	}
 
 	@OriginalMember(owner = "client!rb", name = "a", descriptor = "(Lclient!wa;Z)Lclient!bn;")
-	public static Class3_Sub2_Sub4 method3713(@OriginalArg(0) Class3_Sub15 arg0) {
+	public static Class3_Sub2_Sub4 method3713(@OriginalArg(0) Buffer arg0) {
 		@Pc(35) Class3_Sub2_Sub4 local35 = new Class3_Sub2_Sub4(arg0.method2202(), arg0.method2202(), arg0.method2163(), arg0.method2163(), arg0.method2174(), arg0.method2229() == 1, arg0.method2229());
 		@Pc(39) int local39 = arg0.method2229();
 		for (@Pc(41) int local41 = 0; local41 < local39; local41++) {

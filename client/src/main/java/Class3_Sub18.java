@@ -34,7 +34,7 @@ public final class Class3_Sub18 extends Class3 {
 	public Class3_Sub18(@OriginalArg(0) byte[] arg0) {
 		@Pc(29) int local29 = 0;
 		this.aByteArray44 = new byte[128];
-		@Pc(38) Class3_Sub15 local38 = new Class3_Sub15(arg0);
+		@Pc(38) Buffer local38 = new Buffer(arg0);
 		while (local38.aByteArray40[local29 + local38.anInt2792] != 0) {
 			local29++;
 		}

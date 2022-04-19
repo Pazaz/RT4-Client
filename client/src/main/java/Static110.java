@@ -28,7 +28,7 @@ public final class Static110 {
 		@Pc(30) byte[] local30 = Static39.aClass153_23.method4495(11, arg0);
 		local6 = new Class3_Sub2_Sub12();
 		if (local30 != null) {
-			local6.method2076(new Class3_Sub15(local30));
+			local6.method2076(new Buffer(local30));
 		}
 		Static272.aClass54_14.method1811(local6, (long) arg0);
 		return local6;

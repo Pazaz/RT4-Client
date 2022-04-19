@@ -28,7 +28,7 @@ public final class Class84 {
 	private int anInt3304;
 
 	@OriginalMember(owner = "client!ki", name = "a", descriptor = "Lclient!wa;")
-	private final Class3_Sub15 aClass3_Sub15_6 = new Class3_Sub15(null);
+	private final Buffer aClass3_Sub15_6 = new Buffer(null);
 
 	@OriginalMember(owner = "client!ki", name = "<init>", descriptor = "()V")
 	public Class84() {

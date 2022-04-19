@@ -46,7 +46,7 @@ public final class Class165 {
 
 	@OriginalMember(owner = "client!wm", name = "a", descriptor = "([[III)V")
 	public final void method4676(@OriginalArg(0) int[][] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		@Pc(4) Class3_Sub15 local4 = new Class3_Sub15(1620);
+		@Pc(4) Buffer local4 = new Buffer(1620);
 		@Pc(11) int local11;
 		for (@Pc(6) int local6 = 0; local6 <= 8; local6++) {
 			for (local11 = 0; local11 <= 8; local11++) {
@@ -74,7 +74,7 @@ public final class Class165 {
 			this.aByteBuffer12.put(local4.aByteArray40, 0, local4.anInt2792);
 			this.aByteBuffer12.flip();
 		}
-		@Pc(147) Class3_Sub15 local147 = new Class3_Sub15(1536);
+		@Pc(147) Buffer local147 = new Buffer(1536);
 		for (local11 = 0; local11 < 8; local11++) {
 			for (@Pc(154) int local154 = 0; local154 < 8; local154++) {
 				if (Static239.aBoolean263) {

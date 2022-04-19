@@ -67,7 +67,7 @@ public final class Class8_Sub4_Sub1 extends Class8_Sub4 {
 	}
 
 	@OriginalMember(owner = "client!e", name = "a", descriptor = "(ILclient!wa;)V")
-	public final void method1262(@OriginalArg(1) Class3_Sub15 arg0) {
+	public final void method1262(@OriginalArg(1) Buffer arg0) {
 		arg0.anInt2792 = 0;
 		@Pc(20) int local20 = arg0.method2229();
 		@Pc(22) int local22 = -1;

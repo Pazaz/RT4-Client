@@ -39,7 +39,7 @@ public final class Static237 {
 	public static float aFloat29;
 
 	@OriginalMember(owner = "client!td", name = "D", descriptor = "Lclient!wa;")
-	public static Class3_Sub15 aClass3_Sub15_8 = new Class3_Sub15(10000);
+	public static Buffer aClass3_Sub15_8 = new Buffer(10000);
 
 	@OriginalMember(owner = "client!td", name = "bb", descriptor = "Lclient!td;")
 	public static Class8_Sub1_Sub1 aClass8_Sub1_Sub1_1 = new Class8_Sub1_Sub1();

@@ -39,8 +39,8 @@ public final class Class104 {
 	@OriginalMember(owner = "client!ne", name = "<init>", descriptor = "([BLclient!jm;)V")
 	public Class104(@OriginalArg(0) byte[] arg0, @OriginalArg(1) Class3_Sub20 arg1) {
 		this.aClass3_Sub20_1 = arg1;
-		@Pc(21) Class3_Sub15 local21 = new Class3_Sub15(arg0);
-		@Pc(26) Class3_Sub15 local26 = new Class3_Sub15(arg0);
+		@Pc(21) Buffer local21 = new Buffer(arg0);
+		@Pc(26) Buffer local26 = new Buffer(arg0);
 		local21.anInt2792 = 2;
 		@Pc(33) int local33 = local21.method2229();
 		@Pc(35) int local35 = 0;

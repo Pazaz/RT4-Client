@@ -26,7 +26,7 @@ public final class Static166 {
 	public static int anInt4055 = 0;
 
 	@OriginalMember(owner = "client!nc", name = "a", descriptor = "(BLclient!wa;)V")
-	public static void method3166(@OriginalArg(1) Class3_Sub15 arg0) {
+	public static void method3166(@OriginalArg(1) Buffer arg0) {
 		label123: while (true) {
 			if (arg0.aByteArray40.length > arg0.anInt2792) {
 				@Pc(17) boolean local17 = false;

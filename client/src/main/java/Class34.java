@@ -46,7 +46,7 @@ public final class Class34 {
 	private int anInt1755 = 0;
 
 	@OriginalMember(owner = "client!eg", name = "a", descriptor = "(Lclient!wa;B)V")
-	public final void method1316(@OriginalArg(0) Class3_Sub15 arg0) {
+	public final void method1316(@OriginalArg(0) Buffer arg0) {
 		while (true) {
 			@Pc(17) int local17 = arg0.method2229();
 			if (local17 == 0) {
@@ -57,7 +57,7 @@ public final class Class34 {
 	}
 
 	@OriginalMember(owner = "client!eg", name = "a", descriptor = "(Lclient!wa;II)V")
-	private void method1318(@OriginalArg(0) Class3_Sub15 arg0, @OriginalArg(1) int arg1) {
+	private void method1318(@OriginalArg(0) Buffer arg0, @OriginalArg(1) int arg1) {
 		if (arg1 == 1) {
 			this.anInt1753 = arg0.method2163();
 		} else if (arg1 == 2) {

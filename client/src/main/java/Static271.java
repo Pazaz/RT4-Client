@@ -30,7 +30,7 @@ public final class Static271 {
 	}
 
 	@OriginalMember(owner = "client!wc", name = "a", descriptor = "(Lclient!wa;I)V")
-	public static void method4598(@OriginalArg(0) Class3_Sub15 arg0) {
+	public static void method4598(@OriginalArg(0) Buffer arg0) {
 		if (Static121.aClass38_3 != null) {
 			try {
 				Static121.aClass38_3.method1459(0L);
@@ -57,7 +57,7 @@ public final class Static271 {
 		local15 = new Class118();
 		local15.anInt4426 = arg0;
 		if (local30 != null) {
-			local15.method3424(new Class3_Sub15(local30));
+			local15.method3424(new Buffer(local30));
 		}
 		local15.method3421();
 		if (!Static30.aBoolean61 && local15.aBoolean208) {

@@ -112,8 +112,8 @@ public final class Class45 {
 
 	@OriginalMember(owner = "client!fj", name = "a", descriptor = "()V")
 	public final void method1554() {
-		@Pc(7) Class3_Sub15 local7 = new Class3_Sub15(this.anInt2018 * 4);
-		@Pc(15) Class3_Sub15 local15 = new Class3_Sub15(this.anInt2017 * 16);
+		@Pc(7) Buffer local7 = new Buffer(this.anInt2018 * 4);
+		@Pc(15) Buffer local15 = new Buffer(this.anInt2017 * 16);
 		@Pc(19) int local19;
 		if (Static239.aBoolean263) {
 			for (local19 = 0; local19 < this.anInt2017; local19++) {

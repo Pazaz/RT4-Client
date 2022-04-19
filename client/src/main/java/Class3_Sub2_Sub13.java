@@ -20,7 +20,7 @@ public final class Class3_Sub2_Sub13 extends Class3_Sub2 {
 	}
 
 	@OriginalMember(owner = "client!lk", name = "a", descriptor = "(Lclient!wa;IB)V")
-	private void method2799(@OriginalArg(0) Class3_Sub15 arg0, @OriginalArg(1) int arg1) {
+	private void method2799(@OriginalArg(0) Buffer arg0, @OriginalArg(1) int arg1) {
 		if (arg1 != 249) {
 			return;
 		}
@@ -54,7 +54,7 @@ public final class Class3_Sub2_Sub13 extends Class3_Sub2 {
 	}
 
 	@OriginalMember(owner = "client!lk", name = "a", descriptor = "(ILclient!wa;)V")
-	public final void method2806(@OriginalArg(1) Class3_Sub15 arg0) {
+	public final void method2806(@OriginalArg(1) Buffer arg0) {
 		while (true) {
 			@Pc(5) int local5 = arg0.method2229();
 			if (local5 == 0) {

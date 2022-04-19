@@ -19,7 +19,7 @@ public final class Class3_Sub1_Sub8 extends Class3_Sub1 {
 
 	@OriginalMember(owner = "client!ej", name = "a", descriptor = "(ILclient!wa;Z)V")
 	@Override
-	public final void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Class3_Sub15 arg1) {
+	public final void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		if (arg0 == 0) {
 			this.aBoolean104 = arg1.method2229() == 1;
 		} else if (arg0 == 1) {

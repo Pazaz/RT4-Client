@@ -45,7 +45,7 @@ public final class Static206 {
 	}
 
 	@OriginalMember(owner = "client!qk", name = "a", descriptor = "(BLclient!wa;)Lclient!j;")
-	public static Class3_Sub1 method3680(@OriginalArg(1) Class3_Sub15 arg0) {
+	public static Class3_Sub1 method3680(@OriginalArg(1) Buffer arg0) {
 		arg0.method2229();
 		@Pc(13) int local13 = arg0.method2229();
 		@Pc(17) Class3_Sub1 local17 = Static223.method3860(local13);

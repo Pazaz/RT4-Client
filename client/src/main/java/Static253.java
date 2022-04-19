@@ -202,7 +202,7 @@ public final class Static253 {
 		@Pc(24) byte[] local24 = Static84.aClass153_35.method4495(Static97.method1959(arg0), Static103.method2236(arg0));
 		local10 = new Class3_Sub2_Sub15();
 		if (local24 != null) {
-			local10.method3094(new Class3_Sub15(local24));
+			local10.method3094(new Buffer(local24));
 		}
 		Static149.aClass54_10.method1811(local10, (long) arg0);
 		return local10;

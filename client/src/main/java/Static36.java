@@ -56,7 +56,7 @@ public final class Static36 {
 		local17 = new Class144();
 		local17.anInt5361 = arg0;
 		if (local32 != null) {
-			local17.method4213(new Class3_Sub15(local32));
+			local17.method4213(new Buffer(local32));
 		}
 		local17.method4218();
 		Static142.aClass99_23.method3095(local17, (long) arg0);

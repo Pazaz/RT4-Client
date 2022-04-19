@@ -28,7 +28,7 @@ public final class Class136 {
 	}
 
 	@OriginalMember(owner = "client!sg", name = "<init>", descriptor = "(Lclient!wa;)V")
-	public Class136(@OriginalArg(0) Class3_Sub15 arg0) {
+	public Class136(@OriginalArg(0) Buffer arg0) {
 		this.aByte17 = arg0.method2186();
 		this.anInt5094 = arg0.method2163();
 		this.anInt5099 = arg0.method2174();

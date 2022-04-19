@@ -261,7 +261,7 @@ public final class Class123 {
 	}
 
 	@OriginalMember(owner = "client!pj", name = "a", descriptor = "(Lclient!wa;)V")
-	public final void method3506(@OriginalArg(0) Class3_Sub15 arg0) {
+	public final void method3506(@OriginalArg(0) Buffer arg0) {
 		this.aClass42_5 = new Class42();
 		this.aClass42_5.method1515(arg0);
 		this.aClass42_3 = new Class42();

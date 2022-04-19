@@ -11,7 +11,7 @@ public final class Class3_Sub2_Sub5_Sub2 extends Class3_Sub2_Sub5 {
 	public int anInt4617;
 
 	@OriginalMember(owner = "client!pm", name = "bb", descriptor = "Lclient!wa;")
-	public Class3_Sub15 aClass3_Sub15_7;
+	public Buffer aClass3_Sub15_7;
 
 	@OriginalMember(owner = "client!pm", name = "a", descriptor = "(Z)I")
 	@Override

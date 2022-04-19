@@ -31,7 +31,7 @@ public final class Class130 implements Interface4 {
 			this.anInt4830 = local19[0];
 			@Pc(42) int[][] local42 = Static33.method874(0.4F);
 			@Pc(53) int[][] local53 = Static33.method874(0.4F);
-			@Pc(58) Class3_Sub15 local58 = new Class3_Sub15(262144);
+			@Pc(58) Buffer local58 = new Buffer(262144);
 			for (@Pc(60) int local60 = 0; local60 < 256; local60++) {
 				@Pc(67) int[] local67 = local42[local60];
 				@Pc(71) int[] local71 = local53[local60];

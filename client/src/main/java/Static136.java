@@ -41,7 +41,7 @@ public final class Static136 {
 	}
 
 	@OriginalMember(owner = "client!kk", name = "b", descriptor = "(Lclient!wa;I)V")
-	public static void method2654(@OriginalArg(0) Class3_Sub15 arg0) {
+	public static void method2654(@OriginalArg(0) Buffer arg0) {
 		if (arg0.aByteArray40.length - arg0.anInt2792 < 1) {
 			return;
 		}

@@ -147,7 +147,7 @@ public final class Static158 {
 					local25 = Static157.anInt3811++;
 				}
 				@Pc(67) int local67 = 0;
-				@Pc(74) Class3_Sub15 local74 = new Class3_Sub15(Static191.aByteArrayArray15[local16]);
+				@Pc(74) Buffer local74 = new Buffer(Static191.aByteArrayArray15[local16]);
 				while (local74.anInt2792 < Static191.aByteArrayArray15[local16].length && local67 < 511) {
 					@Pc(97) int local97 = local67++ << 6 | local25;
 					@Pc(103) int local103 = local74.method2163();

@@ -59,7 +59,7 @@ public final class Class70 {
 
 	@OriginalMember(owner = "client!ii", name = "a", descriptor = "(I[B)V")
 	private void method2293(@OriginalArg(1) byte[] arg0) {
-		@Pc(12) Class3_Sub15 local12 = new Class3_Sub15(Static162.method3092(arg0));
+		@Pc(12) Buffer local12 = new Buffer(Static162.method3092(arg0));
 		@Pc(16) int local16 = local12.method2229();
 		if (local16 != 5 && local16 != 6) {
 			throw new RuntimeException();

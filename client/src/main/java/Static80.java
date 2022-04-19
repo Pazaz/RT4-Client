@@ -85,7 +85,7 @@ public final class Static80 {
 						throw new IOException("EOF");
 					}
 				}
-				Static136.method2654(new Class3_Sub15(local106));
+				Static136.method2654(new Buffer(local106));
 			}
 		} catch (@Pc(151) Exception local151) {
 		}

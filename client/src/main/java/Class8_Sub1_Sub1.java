@@ -1673,7 +1673,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 	@OriginalMember(owner = "client!td", name = "q", descriptor = "()V")
 	private void method4103() {
 		if (Static237.aClass3_Sub15_8.aByteArray40.length < this.anInt5296 * 12) {
-			Static237.aClass3_Sub15_8 = new Class3_Sub15((this.anInt5296 + 100) * 12);
+			Static237.aClass3_Sub15_8 = new Buffer((this.anInt5296 + 100) * 12);
 		} else {
 			Static237.aClass3_Sub15_8.anInt2792 = 0;
 		}
@@ -2022,7 +2022,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 			return;
 		}
 		if (Static237.aClass3_Sub15_8.aByteArray40.length < this.anInt5296 * local1) {
-			Static237.aClass3_Sub15_8 = new Class3_Sub15((this.anInt5296 + 100) * local1);
+			Static237.aClass3_Sub15_8 = new Buffer((this.anInt5296 + 100) * local1);
 		} else {
 			Static237.aClass3_Sub15_8.anInt2792 = 0;
 		}

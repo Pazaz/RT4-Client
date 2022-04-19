@@ -69,7 +69,7 @@ public final class Class30 {
 	}
 
 	@OriginalMember(owner = "client!dm", name = "a", descriptor = "(BLclient!wa;I)V")
-	private void method1203(@OriginalArg(1) Class3_Sub15 arg0, @OriginalArg(2) int arg1) {
+	private void method1203(@OriginalArg(1) Buffer arg0, @OriginalArg(2) int arg1) {
 		if (arg1 == 1) {
 			this.anInt1457 = arg0.method2229();
 			return;
@@ -146,7 +146,7 @@ public final class Class30 {
 	}
 
 	@OriginalMember(owner = "client!dm", name = "a", descriptor = "(ILclient!wa;)V")
-	public final void method1209(@OriginalArg(1) Class3_Sub15 arg0) {
+	public final void method1209(@OriginalArg(1) Buffer arg0) {
 		while (true) {
 			@Pc(13) int local13 = arg0.method2229();
 			if (local13 == 0) {

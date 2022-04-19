@@ -27,7 +27,7 @@ public final class Class3_Sub20 extends Class3 {
 	@OriginalMember(owner = "client!jm", name = "<init>", descriptor = "(I[B)V")
 	public Class3_Sub20(@OriginalArg(0) int arg0, @OriginalArg(1) byte[] arg1) {
 		this.anInt3113 = arg0;
-		@Pc(9) Class3_Sub15 local9 = new Class3_Sub15(arg1);
+		@Pc(9) Buffer local9 = new Buffer(arg1);
 		this.anInt3116 = local9.method2229();
 		this.anIntArrayArray23 = new int[this.anInt3116][];
 		this.anIntArray291 = new int[this.anInt3116];

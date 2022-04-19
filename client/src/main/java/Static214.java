@@ -70,7 +70,7 @@ public final class Static214 {
 		local10 = new Class96();
 		local10.anInt3741 = arg0;
 		if (local26 != null) {
-			local10.method2939(new Class3_Sub15(local26));
+			local10.method2939(new Buffer(local26));
 		}
 		local10.method2942();
 		Static93.aClass99_13.method3095(local10, (long) arg0);

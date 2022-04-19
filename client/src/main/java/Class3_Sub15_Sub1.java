@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!i")
-public final class Class3_Sub15_Sub1 extends Class3_Sub15 {
+public final class Class3_Sub15_Sub1 extends Buffer {
 
 	@OriginalMember(owner = "client!i", name = "Xb", descriptor = "Lclient!ij;")
 	private Class71 aClass71_1;

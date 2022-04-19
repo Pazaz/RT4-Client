@@ -1,4 +1,3 @@
-import java.awt.Color;
 import java.awt.Container;
 import java.awt.Graphics;
 import java.awt.Insets;
@@ -591,7 +590,7 @@ public final class client extends Applet_Sub1 {
 			}
 			if (Static4.anInt30 == 2) {
 				Static206.aClass95_3 = new Class95((Socket) Static37.aClass212_2.anObject6, Static71.aClass213_3);
-				@Pc(194) Class3_Sub15 local194 = new Class3_Sub15(5);
+				@Pc(194) Buffer local194 = new Buffer(5);
 				local194.method2178(15);
 				local194.method2164(530);
 				Static206.aClass95_3.method2830(local194.aByteArray40, 5);

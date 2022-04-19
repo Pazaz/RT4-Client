@@ -36,7 +36,7 @@ public final class Static91 {
 			return null;
 		}
 		local12 = new Class3_Sub2_Sub17();
-		@Pc(42) Class3_Sub15 local42 = new Class3_Sub15(local22);
+		@Pc(42) Buffer local42 = new Buffer(local22);
 		local42.anInt2792 = local42.aByteArray40.length - 2;
 		@Pc(53) int local53 = local42.method2163();
 		@Pc(63) int local63 = local42.aByteArray40.length - local53 - 12 - 2;

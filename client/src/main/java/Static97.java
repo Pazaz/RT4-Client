@@ -100,7 +100,7 @@ public final class Static97 {
 	}
 
 	@OriginalMember(owner = "client!hi", name = "a", descriptor = "(Lclient!wa;I)V")
-	public static void method1962(@OriginalArg(0) Class3_Sub15 arg0) {
+	public static void method1962(@OriginalArg(0) Buffer arg0) {
 		@Pc(9) int local9 = arg0.method2204();
 		Static203.aClass32Array1 = new Class32[local9];
 		@Pc(14) int local14;

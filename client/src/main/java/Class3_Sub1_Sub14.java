@@ -25,7 +25,7 @@ public final class Class3_Sub1_Sub14 extends Class3_Sub1 {
 
 	@OriginalMember(owner = "client!gm", name = "a", descriptor = "(ILclient!wa;Z)V")
 	@Override
-	public final void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Class3_Sub15 arg1) {
+	public final void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		if (arg0 == 0) {
 			this.anInt2298 = arg1.method2163();
 		} else if (arg0 == 1) {

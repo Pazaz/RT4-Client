@@ -92,7 +92,7 @@ public final class Class20 {
 	}
 
 	@OriginalMember(owner = "client!ck", name = "a", descriptor = "(ILclient!wa;)V")
-	public final void method880(@OriginalArg(1) Class3_Sub15 arg0) {
+	public final void method880(@OriginalArg(1) Buffer arg0) {
 		while (true) {
 			@Pc(16) int local16 = arg0.method2229();
 			if (local16 == 0) {
@@ -103,7 +103,7 @@ public final class Class20 {
 	}
 
 	@OriginalMember(owner = "client!ck", name = "a", descriptor = "(IBLclient!wa;)V")
-	private void method881(@OriginalArg(0) int arg0, @OriginalArg(2) Class3_Sub15 arg1) {
+	private void method881(@OriginalArg(0) int arg0, @OriginalArg(2) Buffer arg1) {
 		if (arg0 == 1) {
 			this.anInt1037 = arg1.method2163();
 			this.anInt1051 = arg1.method2163();

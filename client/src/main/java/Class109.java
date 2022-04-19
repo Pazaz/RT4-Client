@@ -66,7 +66,7 @@ public final class Class109 implements Interface1 {
 		} else {
 			this.aClass54_11 = null;
 		}
-		@Pc(51) Class3_Sub15 local51 = new Class3_Sub15(arg1.method4495(0, 0));
+		@Pc(51) Buffer local51 = new Buffer(arg1.method4495(0, 0));
 		@Pc(55) int local55 = local51.method2163();
 		this.aByteArray61 = new byte[local55];
 		this.aByteArray60 = new byte[local55];
@@ -171,7 +171,7 @@ public final class Class109 implements Interface1 {
 		if (local30 == null) {
 			return null;
 		} else {
-			@Pc(41) Class3_Sub15 local41 = new Class3_Sub15(local30);
+			@Pc(41) Buffer local41 = new Buffer(local30);
 			local14 = new Class3_Sub2_Sub20(local41);
 			this.aClass54_12.method1811(local14, (long) arg0);
 			return local14;

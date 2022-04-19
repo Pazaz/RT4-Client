@@ -56,7 +56,7 @@ public final class Static269 {
 				}
 			}
 		}
-		@Pc(95) Class3_Sub15 local95 = new Class3_Sub15(arg6);
+		@Pc(95) Buffer local95 = new Buffer(arg6);
 		@Pc(99) byte local99;
 		if (arg1) {
 			local99 = 1;

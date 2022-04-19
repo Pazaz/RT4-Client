@@ -20,7 +20,7 @@ public final class Class56 {
 	}
 
 	@OriginalMember(owner = "client!ha", name = "a", descriptor = "([BLclient!wa;Z)V")
-	public final void method1842(@OriginalArg(0) byte[] arg0, @OriginalArg(1) Class3_Sub15 arg1) {
+	public final void method1842(@OriginalArg(0) byte[] arg0, @OriginalArg(1) Buffer arg1) {
 		if (arg1.aByteArray40[arg1.anInt2792] != 31 || arg1.aByteArray40[arg1.anInt2792 + 1] != -117) {
 			throw new RuntimeException("Invalid GZIP header!");
 		}

@@ -43,7 +43,7 @@ public abstract class Class3_Sub1 extends Class3 {
 	}
 
 	@OriginalMember(owner = "client!j", name = "a", descriptor = "(ILclient!wa;Z)V")
-	public void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Class3_Sub15 arg1) {
+	public void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 	}
 
 	@OriginalMember(owner = "client!j", name = "e", descriptor = "(I)V")

@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Class9 {
 
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "Lclient!wa;")
-	private Class3_Sub15 aClass3_Sub15_1;
+	private Buffer aClass3_Sub15_1;
 
 	@OriginalMember(owner = "client!al", name = "s", descriptor = "[Lclient!bg;")
 	private Class14_Sub1[] aClass14_Sub1Array1;
@@ -44,7 +44,7 @@ public final class Class9 {
 		if (this.aClass3_Sub2_Sub5_Sub2_1.aBoolean226) {
 			return false;
 		} else {
-			this.aClass3_Sub15_1 = new Class3_Sub15(this.aClass3_Sub2_Sub5_Sub2_1.method3554());
+			this.aClass3_Sub15_1 = new Buffer(this.aClass3_Sub2_Sub5_Sub2_1.method3554());
 			this.aClass14_Sub1Array1 = new Class14_Sub1[(this.aClass3_Sub15_1.aByteArray40.length - 5) / 8];
 			return true;
 		}
