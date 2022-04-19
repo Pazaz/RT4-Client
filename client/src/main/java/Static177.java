@@ -5,10 +5,10 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static177 {
 
 	@OriginalMember(owner = "client!oc", name = "a", descriptor = "Lclient!bb;")
-	private static final Class11 aClass11_1 = new Class11();
+	private static final Bzip2DState aClass11_1 = new Bzip2DState();
 
 	@OriginalMember(owner = "client!oc", name = "a", descriptor = "(ILclient!bb;)I")
-	private static int method3309(@OriginalArg(0) int arg0, @OriginalArg(1) Class11 arg1) {
+	private static int method3309(@OriginalArg(0) int arg0, @OriginalArg(1) Bzip2DState arg1) {
 		while (arg1.anInt395 < arg0) {
 			arg1.anInt402 = arg1.anInt402 << 8 | arg1.aByteArray4[arg1.anInt389] & 0xFF;
 			arg1.anInt395 += 8;
@@ -23,7 +23,7 @@ public final class Static177 {
 	}
 
 	@OriginalMember(owner = "client!oc", name = "a", descriptor = "(Lclient!bb;)V")
-	private static void method3310(@OriginalArg(0) Class11 arg0) {
+	private static void method3310(@OriginalArg(0) Bzip2DState arg0) {
 		@Pc(2) byte local2 = arg0.aByte1;
 		@Pc(5) int local5 = arg0.anInt405;
 		@Pc(8) int local8 = arg0.anInt397;
@@ -174,7 +174,7 @@ public final class Static177 {
 	}
 
 	@OriginalMember(owner = "client!oc", name = "b", descriptor = "(Lclient!bb;)V")
-	private static void method3312(@OriginalArg(0) Class11 arg0) {
+	private static void method3312(@OriginalArg(0) Bzip2DState arg0) {
 		arg0.anInt401 = 0;
 		for (@Pc(4) int local4 = 0; local4 < 256; local4++) {
 			if (arg0.aBooleanArray13[local4]) {
@@ -185,12 +185,12 @@ public final class Static177 {
 	}
 
 	@OriginalMember(owner = "client!oc", name = "c", descriptor = "(Lclient!bb;)B")
-	private static byte method3313(@OriginalArg(0) Class11 arg0) {
+	private static byte method3313(@OriginalArg(0) Bzip2DState arg0) {
 		return (byte) method3309(8, arg0);
 	}
 
 	@OriginalMember(owner = "client!oc", name = "d", descriptor = "(Lclient!bb;)V")
-	private static void method3314(@OriginalArg(0) Class11 arg0) {
+	private static void method3314(@OriginalArg(0) Bzip2DState arg0) {
 		arg0.anInt404 = 1;
 		if (Static221.anIntArray374 == null) {
 			Static221.anIntArray374 = new int[arg0.anInt404 * 100000];
@@ -479,13 +479,13 @@ public final class Static177 {
 	}
 
 	@OriginalMember(owner = "client!oc", name = "e", descriptor = "(Lclient!bb;)B")
-	private static byte method3315(@OriginalArg(0) Class11 arg0) {
+	private static byte method3315(@OriginalArg(0) Bzip2DState arg0) {
 		return (byte) method3309(1, arg0);
 	}
 
 	@OriginalMember(owner = "client!oc", name = "a", descriptor = "([BI[BII)I")
 	public static int method3316(@OriginalArg(0) byte[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) byte[] arg2, @OriginalArg(3) int arg3) {
-		@Pc(2) Class11 local2 = aClass11_1;
+		@Pc(2) Bzip2DState local2 = aClass11_1;
 		synchronized (aClass11_1) {
 			aClass11_1.aByteArray4 = arg2;
 			aClass11_1.anInt389 = 9;
