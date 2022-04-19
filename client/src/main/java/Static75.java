@@ -396,7 +396,7 @@ public final class Static75 {
 						local19 *= 64;
 						if (local39 != 0) {
 							@Pc(1194) int local1194;
-							@Pc(1198) Class8_Sub4 local1198;
+							@Pc(1198) PathingEntity local1198;
 							@Pc(1184) int local1184;
 							@Pc(1188) int local1188;
 							if (local39 >= 0) {

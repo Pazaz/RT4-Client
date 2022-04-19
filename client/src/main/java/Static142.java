@@ -27,7 +27,7 @@ public final class Static142 {
 		@Pc(359) int local359;
 		@Pc(639) int local639;
 		for (local5 = -1; local5 < Static267.anInt5774 + Static272.anInt5214; local5++) {
-			@Pc(17) Class8_Sub4 local17;
+			@Pc(17) PathingEntity local17;
 			if (local5 == -1) {
 				local17 = Static173.aClass8_Sub4_Sub1_2;
 			} else if (Static267.anInt5774 > local5) {

@@ -111,7 +111,7 @@ public final class Static34 {
 	}
 
 	@OriginalMember(owner = "client!ck", name = "a", descriptor = "(Lclient!fe;I)V")
-	public static void method879(@OriginalArg(0) Class8_Sub4 arg0) {
+	public static void method879(@OriginalArg(0) PathingEntity arg0) {
 		arg0.aBoolean171 = false;
 		@Pc(18) Class144 local18;
 		if (arg0.anInt3366 != -1) {

@@ -26,7 +26,7 @@ public final class Static37 {
 	public static final JagString aClass100_238 = Static28.method790("comp-Btence ");
 
 	@OriginalMember(owner = "client!cm", name = "a", descriptor = "(ILclient!fe;)V")
-	public static void method949(@OriginalArg(1) Class8_Sub4 arg0) {
+	public static void method949(@OriginalArg(1) PathingEntity arg0) {
 		if (arg0.anInt3376 == 0) {
 			return;
 		}
