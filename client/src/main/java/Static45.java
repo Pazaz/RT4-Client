@@ -240,7 +240,7 @@ public final class Static45 {
 											if ((local322 != local168 || local173 != local1794) && local322 >= 0 && local322 < 104 && local1794 >= 0 && local1794 < 104) {
 												@Pc(1834) int local1834 = Static240.aByteArrayArrayArray14[local152][local322][local1794] & 0xFF;
 												if (local1834 != 0) {
-													@Pc(1842) Class164 local1842 = Static256.method4395(local1834 - 1);
+													@Pc(1842) FloType local1842 = Static256.method4395(local1834 - 1);
 													if (local1842.anInt5892 != -1 && Static94.anInterface1_2.method3237(local1842.anInt5892) == 4) {
 														Static62.anIntArrayArray11[local168][local173] = local1842.anInt5889 + (local1842.anInt5898 << 24);
 														continue label771;
@@ -253,7 +253,7 @@ public final class Static45 {
 							} else {
 								local322 = Static163.aByteArrayArrayArray11[local152][local168][local173] + 1;
 								@Pc(1242) byte local1242 = Static4.aByteArrayArrayArray1[local152][local168][local173];
-								@Pc(1248) Class164 local1248 = Static256.method4395(local194 - 1);
+								@Pc(1248) FloType local1248 = Static256.method4395(local194 - 1);
 								@Pc(1301) int local1301;
 								@Pc(1353) int local1353;
 								@Pc(1288) int local1288;
@@ -266,7 +266,7 @@ public final class Static45 {
 												if ((local168 != local1288 || local1301 != local173) && local1288 >= 0 && local1288 < 104 && local1301 >= 0 && local1301 < 104) {
 													local1353 = Static240.aByteArrayArrayArray14[local152][local1288][local1301] & 0xFF;
 													if (local1353 != 0) {
-														@Pc(1366) Class164 local1366 = Static256.method4395(local1353 - 1);
+														@Pc(1366) FloType local1366 = Static256.method4395(local1353 - 1);
 														if (local1366.anInt5892 != -1 && Static94.anInterface1_2.method3237(local1366.anInt5892) == 4) {
 															Static62.anIntArrayArray11[local168][local173] = local1366.anInt5889 + (local1366.anInt5898 << 24);
 															break label737;

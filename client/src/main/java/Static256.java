@@ -97,13 +97,13 @@ public final class Static256 {
 	}
 
 	@OriginalMember(owner = "client!um", name = "a", descriptor = "(BI)Lclient!wl;")
-	public static Class164 method4395(@OriginalArg(1) int arg0) {
-		@Pc(6) Class164 local6 = (Class164) Static233.aClass99_31.method3106((long) arg0);
+	public static FloType method4395(@OriginalArg(1) int arg0) {
+		@Pc(6) FloType local6 = (FloType) Static233.aClass99_31.method3106((long) arg0);
 		if (local6 != null) {
 			return local6;
 		}
 		@Pc(30) byte[] local30 = Static35.aClass153_22.method4495(4, arg0);
-		local6 = new Class164();
+		local6 = new FloType();
 		if (local30 != null) {
 			local6.method4669(new Buffer(local30), arg0);
 		}

@@ -115,7 +115,7 @@ public final class Static221 {
 						@Pc(125) int local125 = arg1[local114][local72] & 0xFF;
 						local133 = arg8[local114][local72] & 0xFF;
 						@Pc(135) boolean local135 = false;
-						@Pc(151) Class164 local151;
+						@Pc(151) FloType local151;
 						@Pc(176) int[] local176;
 						@Pc(234) int[] local234;
 						if (local125 == 0) {
@@ -245,7 +245,7 @@ public final class Static221 {
 						local133 = arg1[local114][local72] & 0xFF;
 						@Pc(789) byte local789 = arg2[local114][local72];
 						@Pc(791) boolean local791 = false;
-						@Pc(805) Class164 local805;
+						@Pc(805) FloType local805;
 						if (local133 == 0) {
 							if (local775 == 0) {
 								continue;
