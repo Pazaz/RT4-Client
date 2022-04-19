@@ -93,7 +93,7 @@ public final class Static170 {
 			local20 = new Class3_Sub10(4611686018427387905L);
 			Static199.aClass133_20.method3862(local20, (long) arg1);
 		} else if (local20.aLong55 != 4611686018427387905L) {
-			local20.aLong55 = Class209.method5096() + 500L | 0x4000000000000000L;
+			local20.aLong55 = MonotonicClock.method5096() + 500L | 0x4000000000000000L;
 		}
 	}
 }

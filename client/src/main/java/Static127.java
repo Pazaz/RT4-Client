@@ -179,7 +179,7 @@ public final class Static127 {
 			if (local10 == null) {
 				return null;
 			}
-			if (local10.method1009() > Class209.method5096()) {
+			if (local10.method1009() > MonotonicClock.method5096()) {
 				return null;
 			}
 			local10.method4658();

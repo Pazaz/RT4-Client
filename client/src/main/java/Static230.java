@@ -166,7 +166,7 @@ public final class Static230 {
 			if (arg0.method3120() == 0) {
 				local48 = Static34.method882(new Class100[] { local48, Static245.aClass100_1018 });
 			} else {
-				local48 = Static34.method882(new Class100[] { local48, Static263.aClass100_1082, Static33.method873(Class209.method5096() + 94608000000L), Static64.aClass100_431, Static154.method2929(94608000L) });
+				local48 = Static34.method882(new Class100[] { local48, Static263.aClass100_1082, Static33.method873(MonotonicClock.method5096() + 94608000000L), Static64.aClass100_431, Static154.method2929(94608000L) });
 			}
 			Static34.method882(new Class100[] { Static221.aClass100_821, local48, Static223.aClass100_946 }).method3134(Static71.aClass213_3.anApplet2);
 		} catch (@Pc(124) Throwable local124) {

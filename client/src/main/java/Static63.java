@@ -97,9 +97,9 @@ public final class Static63 {
 								while (true) {
 									local8 = (Class3_Sub21) aClass69_51.method2287();
 									if (local8 == null) {
-										if (anInt1945 + anInt1944 + anInt1942 > 100663296 && Class209.method5096() > aLong71 + 60000L) {
+										if (anInt1945 + anInt1944 + anInt1942 > 100663296 && MonotonicClock.method5096() > aLong71 + 60000L) {
 											System.gc();
-											aLong71 = Class209.method5096();
+											aLong71 = MonotonicClock.method5096();
 										}
 										return;
 									}

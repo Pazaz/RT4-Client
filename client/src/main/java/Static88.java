@@ -3636,11 +3636,11 @@ public final class Static88 {
 													}
 												} else if (local226 < 6400) {
 													if (local226 == 6300) {
-														Static254.anIntArray487[local28++] = (int) (Class209.method5096() / 60000L);
+														Static254.anIntArray487[local28++] = (int) (MonotonicClock.method5096() / 60000L);
 														continue;
 													}
 													if (local226 == 6301) {
-														Static254.anIntArray487[local28++] = (int) (Class209.method5096() / 86400000L) - 11745;
+														Static254.anIntArray487[local28++] = (int) (MonotonicClock.method5096() / 86400000L) - 11745;
 														continue;
 													}
 													if (local226 == 6302) {
@@ -3656,7 +3656,7 @@ public final class Static88 {
 													}
 													if (local226 == 6303) {
 														Static102.aCalendar2.clear();
-														Static102.aCalendar2.setTime(new Date(Class209.method5096()));
+														Static102.aCalendar2.setTime(new Date(MonotonicClock.method5096()));
 														Static254.anIntArray487[local28++] = Static102.aCalendar2.get(1);
 														continue;
 													}

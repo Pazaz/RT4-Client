@@ -78,7 +78,7 @@ public final class client extends GameShell {
 		if (local15 && Static144.aBoolean173 && Static11.aClass62_1 != null) {
 			Static11.aClass62_1.method3570();
 		}
-		if ((Static244.anInt5370 == 30 || Static244.anInt5370 == 10) && (Static35.aBoolean66 || Static97.aLong89 != 0L && Static97.aLong89 < Class209.method5096())) {
+		if ((Static244.anInt5370 == 30 || Static244.anInt5370 == 10) && (Static35.aBoolean66 || Static97.aLong89 != 0L && Static97.aLong89 < MonotonicClock.method5096())) {
 			Static241.method4540(Static35.aBoolean66, Static144.method2736(), Static114.anInt5831, Static22.anInt729);
 		}
 		@Pc(80) int local80;
@@ -101,7 +101,7 @@ public final class client extends GameShell {
 			}
 			if (local80 != Static72.anInt2046 || local84 != Static122.anInt3045) {
 				Static203.method3662();
-				Static97.aLong89 = Class209.method5096() + 500L;
+				Static97.aLong89 = MonotonicClock.method5096() + 500L;
 			}
 		}
 		if (Static69.aFrame2 != null && !Static26.aBoolean59 && (Static244.anInt5370 == 30 || Static244.anInt5370 == 10)) {
@@ -595,7 +595,7 @@ public final class client extends GameShell {
 				local194.method2164(530);
 				Static206.aClass95_3.method2830(local194.aByteArray40, 5);
 				Static4.anInt30++;
-				Static217.aLong165 = Class209.method5096();
+				Static217.aLong165 = MonotonicClock.method5096();
 			}
 			if (Static4.anInt30 == 3) {
 				if (Static244.anInt5370 == 0 || Static244.anInt5370 == 5 || Static206.aClass95_3.method2831() > 0) {
@@ -605,7 +605,7 @@ public final class client extends GameShell {
 						return;
 					}
 					Static4.anInt30++;
-				} else if (Class209.method5096() - Static217.aLong165 > 30000L) {
+				} else if (MonotonicClock.method5096() - Static217.aLong165 > 30000L) {
 					this.method942(1001);
 					return;
 				}
@@ -638,7 +638,7 @@ public final class client extends GameShell {
 		if (Static166.anInt4051 == 0) {
 			@Pc(34) Runtime local34 = Runtime.getRuntime();
 			local43 = (int) (0L / 1024L);
-			@Pc(46) long local46 = Class209.method5096();
+			@Pc(46) long local46 = MonotonicClock.method5096();
 			if (Static175.aLong138 == 0L) {
 				Static175.aLong138 = local46;
 			}

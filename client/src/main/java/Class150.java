@@ -78,7 +78,7 @@ public final class Class150 implements MouseListener, MouseMotionListener, Focus
 			Static93.anInt2467 = 0;
 			Static34.anInt1034 = arg0.getX();
 			Static222.anInt4973 = arg0.getY();
-			Static209.aLong161 = Class209.method5096();
+			Static209.aLong161 = MonotonicClock.method5096();
 			if ((arg0.getModifiersEx() & MouseEvent.BUTTON3_DOWN_MASK) == 0) {
 				Static41.anInt1313 = 1;
 				Static57.anInt1759 = 1;

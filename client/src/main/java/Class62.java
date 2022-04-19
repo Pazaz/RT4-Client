@@ -26,7 +26,7 @@ public class Class62 {
 	private final int anInt4621 = 32;
 
 	@OriginalMember(owner = "client!vh", name = "f", descriptor = "J")
-	private long aLong151 = Class209.method5096();
+	private long aLong151 = MonotonicClock.method5096();
 
 	@OriginalMember(owner = "client!vh", name = "w", descriptor = "[Lclient!qb;")
 	private final PcmStream[] aClass3_Sub3Array5 = new PcmStream[8];
@@ -161,7 +161,7 @@ public class Class62 {
 		if (this.aClass3_Sub3_6 != null) {
 			this.aClass3_Sub3_6.method4408(arg0, 0, 256);
 		}
-		this.aLong151 = Class209.method5096();
+		this.aLong151 = MonotonicClock.method5096();
 	}
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "(B)V")
@@ -169,7 +169,7 @@ public class Class62 {
 		if (this.anIntArray411 == null) {
 			return;
 		}
-		@Pc(14) long local14 = Class209.method5096();
+		@Pc(14) long local14 = MonotonicClock.method5096();
 		try {
 			if (this.aLong153 != 0L) {
 				if (local14 < this.aLong153) {
@@ -268,7 +268,7 @@ public class Class62 {
 			this.method3563();
 		} catch (@Pc(10) Exception local10) {
 			this.method3572();
-			this.aLong153 = Class209.method5096() + 2000L;
+			this.aLong153 = MonotonicClock.method5096() + 2000L;
 		}
 	}
 
