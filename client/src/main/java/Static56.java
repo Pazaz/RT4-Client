@@ -6,7 +6,7 @@ public final class Static56 {
 	public static Class3_Sub2_Sub1_Sub1 aClass3_Sub2_Sub1_Sub1_1;
 
 	@OriginalMember(owner = "client!ef", name = "p", descriptor = "Lclient!vj;")
-	public static Class156 aClass156_1;
+	public static Resampler aClass156_1;
 
 	@OriginalMember(owner = "client!ef", name = "a", descriptor = "[I")
 	public static final int[] anIntArray141 = new int[] { 768, 1024, 1280, 512, 1536, 256, 0, 1792 };

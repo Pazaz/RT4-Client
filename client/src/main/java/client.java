@@ -733,7 +733,7 @@ public final class client extends GameShell {
 			Static147.aClass62_2 = Static107.method2262(2048, Static71.aClass213_3, Static154.aCanvas1, 1);
 			Static204.aClass3_Sub3_Sub2_1 = new Class3_Sub3_Sub2();
 			Static147.aClass62_2.method3566(Static204.aClass3_Sub3_Sub2_1);
-			Static56.aClass156_1 = new Class156(22050, Static44.anInt1404);
+			Static56.aClass156_1 = new Resampler(22050, Static44.anInt1404);
 			Static250.anInt5441 = Static130.aClass153_47.method4482(Static1.aClass100_1);
 			Static199.anInt4670 = 30;
 			Static166.anInt4051 = 50;
