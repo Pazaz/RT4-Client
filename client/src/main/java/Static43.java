@@ -90,7 +90,7 @@ public final class Static43 {
 				arg5.method3039(local92, local74.aBoolean207, arg0, local57, arg1);
 			}
 		} else if (arg3 == 1) {
-			@Pc(233) Class24 local233 = Static75.method1633(arg2, arg1, arg0);
+			@Pc(233) WallDecor local233 = Static75.method1633(arg2, arg1, arg0);
 			if (local233 != null) {
 				local100 = local233.aClass8_3;
 				local102 = local233.aClass8_2;

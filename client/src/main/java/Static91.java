@@ -120,7 +120,7 @@ public final class Static91 {
 		if (arg4 == null) {
 			return;
 		}
-		@Pc(6) Class24 local6 = new Class24();
+		@Pc(6) WallDecor local6 = new WallDecor();
 		local6.aLong52 = arg10;
 		local6.anInt1390 = arg1 * 128 + 64;
 		local6.anInt1393 = arg2 * 128 + 64;

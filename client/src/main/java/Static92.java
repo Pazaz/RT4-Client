@@ -53,7 +53,7 @@ public final class Static92 {
 			}
 		}
 		if (arg4 == 1) {
-			@Pc(106) Class24 local106 = Static83.method435(arg0, arg5, arg3);
+			@Pc(106) WallDecor local106 = Static83.method435(arg0, arg5, arg3);
 			if (local106 != null) {
 				local38 = (int) (local106.aLong52 >>> 32) & Integer.MAX_VALUE;
 				if (arg2 == 4 || arg2 == 5) {

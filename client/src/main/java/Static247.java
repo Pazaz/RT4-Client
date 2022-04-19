@@ -218,7 +218,7 @@ public final class Static247 {
 											var10 = 0;
 											local65 = 0;
 											@Pc(616) Class77 local616 = local8.aClass77_1;
-											@Pc(619) Class24 local619 = local8.aClass24_1;
+											@Pc(619) WallDecor local619 = local8.aClass24_1;
 											if (local616 != null || local619 != null) {
 												if (Static167.anInt4069 == local18) {
 													var10++;
@@ -582,7 +582,7 @@ public final class Static247 {
 				}
 			}
 			if (local8.anInt670 != 0) {
-				@Pc(2109) Class24 local2109 = local8.aClass24_1;
+				@Pc(2109) WallDecor local2109 = local8.aClass24_1;
 				if (local2109 != null && !Static276.method4611(local27, local18, local21, local2109.aClass8_3.method4549())) {
 					if ((local2109.anInt1395 & local8.anInt670) != 0) {
 						if (Static239.aBoolean269) {
