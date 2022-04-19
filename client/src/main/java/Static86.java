@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static86 {
 
 	@OriginalMember(owner = "client!gm", name = "T", descriptor = "Lclient!k;")
-	public static Class80 aClass80_3;
+	public static Js5CacheQueue aClass80_3;
 
 	@OriginalMember(owner = "client!gm", name = "ib", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_37;

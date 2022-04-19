@@ -321,7 +321,7 @@ public final class client extends GameShell {
 	@Override
 	protected final void method935() {
 		Static203.method3662();
-		Static86.aClass80_3 = new Class80();
+		Static86.aClass80_3 = new Js5CacheQueue();
 		Static107.aClass73_3 = new Class73();
 		if (Static81.anInt2219 != 0) {
 			Static51.aByteArrayArray8 = new byte[50][];

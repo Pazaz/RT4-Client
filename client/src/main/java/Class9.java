@@ -13,7 +13,7 @@ public final class Class9 {
 	private Class14_Sub1[] aClass14_Sub1Array1;
 
 	@OriginalMember(owner = "client!al", name = "j", descriptor = "Lclient!k;")
-	private final Class80 aClass80_1;
+	private final Js5CacheQueue aClass80_1;
 
 	@OriginalMember(owner = "client!al", name = "f", descriptor = "Lclient!jb;")
 	private final Class73 aClass73_1;
@@ -22,7 +22,7 @@ public final class Class9 {
 	private Class3_Sub2_Sub5_Sub2 aClass3_Sub2_Sub5_Sub2_1;
 
 	@OriginalMember(owner = "client!al", name = "<init>", descriptor = "(Lclient!jb;Lclient!k;)V")
-	public Class9(@OriginalArg(0) Class73 arg0, @OriginalArg(1) Class80 arg1) {
+	public Class9(@OriginalArg(0) Class73 arg0, @OriginalArg(1) Js5CacheQueue arg1) {
 		this.aClass80_1 = arg1;
 		this.aClass73_1 = arg0;
 		if (!this.aClass73_1.method2326()) {

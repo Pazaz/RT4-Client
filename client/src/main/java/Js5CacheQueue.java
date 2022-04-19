@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!k")
-public final class Class80 implements Runnable {
+public final class Js5CacheQueue implements Runnable {
 
 	@OriginalMember(owner = "client!k", name = "q", descriptor = "Lclient!ce;")
 	private final SecondaryLinkedList aClass16_6 = new SecondaryLinkedList();
@@ -19,7 +19,7 @@ public final class Class80 implements Runnable {
 	private Thread aThread2;
 
 	@OriginalMember(owner = "client!k", name = "<init>", descriptor = "()V")
-	public Class80() {
+	public Js5CacheQueue() {
 		@Pc(20) PrivilegedRequest local20 = Static71.aClass213_3.method5130(5, this);
 		while (local20.anInt5925 == 0) {
 			Static231.method3983(10L);
