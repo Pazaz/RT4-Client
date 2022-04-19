@@ -39,7 +39,7 @@ public final class Class3_Sub2_Sub15 extends Class3_Sub2 {
 			this.aClass133_16 = new Class133(Static165.method3164(local41));
 			for (@Pc(51) int local51 = 0; local51 < local41; local51++) {
 				@Pc(58) int local58 = arg1.method2174();
-				@Pc(70) Class3 local70;
+				@Pc(70) Node local70;
 				if (arg0 == 5) {
 					local70 = new Class3_Sub30(arg1.method2202());
 				} else {

@@ -42,7 +42,7 @@ public final class Class54 {
 	}
 
 	@OriginalMember(owner = "client!gn", name = "a", descriptor = "(I)Lclient!ab;")
-	public final Class3 method1808() {
+	public final Node method1808() {
 		return this.aClass133_5.method3859();
 	}
 
@@ -65,7 +65,7 @@ public final class Class54 {
 	}
 
 	@OriginalMember(owner = "client!gn", name = "b", descriptor = "(I)Lclient!ab;")
-	public final Class3 method1813() {
+	public final Node method1813() {
 		return this.aClass133_5.method3861();
 	}
 

@@ -90,13 +90,13 @@ public final class Class14_Sub1 extends Class14 {
 		if (this.aClass49_2 == null) {
 			return;
 		}
-		@Pc(15) Class3 local15;
+		@Pc(15) Node local15;
 		for (local15 = this.aClass69_16.method2289(); local15 != null; local15 = this.aClass69_16.method2288()) {
 			if (local15.aLong192 == (long) arg0) {
 				return;
 			}
 		}
-		local15 = new Class3();
+		local15 = new Node();
 		local15.aLong192 = arg0;
 		this.aClass69_16.method2282(local15);
 	}
@@ -183,7 +183,7 @@ public final class Class14_Sub1 extends Class14 {
 		if (this.aClass70_1 == null) {
 			return 0;
 		} else if (this.aBoolean35) {
-			@Pc(25) Class3 local25 = this.aClass69_17.method2289();
+			@Pc(25) Node local25 = this.aClass69_17.method2289();
 			return local25 == null ? 0 : (int) local25.aLong192;
 		} else {
 			return this.aClass70_1.anInt2902;
@@ -197,7 +197,7 @@ public final class Class14_Sub1 extends Class14 {
 				return;
 			}
 			@Pc(32) boolean local32;
-			@Pc(37) Class3 local37;
+			@Pc(37) Node local37;
 			@Pc(43) int local43;
 			if (this.aBoolean35) {
 				local32 = true;
@@ -225,7 +225,7 @@ public final class Class14_Sub1 extends Class14 {
 						}
 						if (this.aByteArray9[this.anInt578] == 0) {
 							local32 = false;
-							local37 = new Class3();
+							local37 = new Node();
 							local37.aLong192 = this.anInt578;
 							this.aClass69_17.method2282(local37);
 						}
@@ -261,7 +261,7 @@ public final class Class14_Sub1 extends Class14 {
 							this.method536(2, this.anInt578);
 						}
 						if (this.aByteArray9[this.anInt578] != 1) {
-							local37 = new Class3();
+							local37 = new Node();
 							local37.aLong192 = this.anInt578;
 							this.aClass69_17.method2282(local37);
 							local32 = false;
@@ -427,7 +427,7 @@ public final class Class14_Sub1 extends Class14 {
 		if (this.aClass69_17 == null || this.method521() == null) {
 			return;
 		}
-		for (@Pc(21) Class3 local21 = this.aClass69_16.method2289(); local21 != null; local21 = this.aClass69_16.method2288()) {
+		for (@Pc(21) Node local21 = this.aClass69_16.method2289(); local21 != null; local21 = this.aClass69_16.method2288()) {
 			@Pc(28) int local28 = (int) local21.aLong192;
 			if (local28 < 0 || this.aClass70_1.anInt2907 <= local28 || this.aClass70_1.anIntArray272[local28] == 0) {
 				local21.method4658();

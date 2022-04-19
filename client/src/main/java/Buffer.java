@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!wa")
-public class Buffer extends Class3 {
+public class Buffer extends Node {
 
 	@OriginalMember(owner = "client!wa", name = "y", descriptor = "[B")
 	public byte[] aByteArray40;

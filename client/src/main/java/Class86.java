@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Class86 {
 
 	@OriginalMember(owner = "client!l", name = "a", descriptor = "Lclient!ab;")
-	private Class3 aClass3_135;
+	private Node aClass3_135;
 
 	@OriginalMember(owner = "client!l", name = "c", descriptor = "I")
 	private int anInt3447 = 0;
@@ -21,8 +21,8 @@ public final class Class86 {
 	}
 
 	@OriginalMember(owner = "client!l", name = "a", descriptor = "(I)Lclient!ab;")
-	public final Class3 method2700() {
-		@Pc(30) Class3 local30;
+	public final Node method2700() {
+		@Pc(30) Node local30;
 		if (this.anInt3447 > 0 && this.aClass133_10.aClass3Array1[this.anInt3447 - 1] != this.aClass3_135) {
 			local30 = this.aClass3_135;
 			this.aClass3_135 = local30.aClass3_222;
@@ -39,7 +39,7 @@ public final class Class86 {
 	}
 
 	@OriginalMember(owner = "client!l", name = "a", descriptor = "(B)Lclient!ab;")
-	public final Class3 method2701() {
+	public final Node method2701() {
 		this.anInt3447 = 0;
 		return this.method2700();
 	}

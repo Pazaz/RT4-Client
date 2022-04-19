@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!hg")
-public final class Class3_Sub14 extends Class3 {
+public final class Class3_Sub14 extends Node {
 
 	@OriginalMember(owner = "client!hg", name = "s", descriptor = "Ljava/nio/ByteBuffer;")
 	private ByteBuffer aByteBuffer3;

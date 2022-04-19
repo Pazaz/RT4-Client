@@ -33,7 +33,7 @@ public final class Class3_Sub2_Sub13 extends Class3_Sub2 {
 		for (local25 = 0; local25 < local17; local25++) {
 			@Pc(45) boolean local45 = arg0.method2229() == 1;
 			@Pc(49) int local49 = arg0.method2220();
-			@Pc(58) Class3 local58;
+			@Pc(58) Node local58;
 			if (local45) {
 				local58 = new Class3_Sub30(arg0.method2202());
 			} else {

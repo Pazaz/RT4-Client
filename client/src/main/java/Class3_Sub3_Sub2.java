@@ -22,7 +22,7 @@ public final class Class3_Sub3_Sub2 extends PcmStream {
 	private void method1342(@OriginalArg(0) Class3_Sub6 arg0) {
 		arg0.method4658();
 		arg0.method780();
-		@Pc(9) Class3 local9 = this.aClass69_44.aClass3_109.aClass3_222;
+		@Pc(9) Node local9 = this.aClass69_44.aClass3_109.aClass3_222;
 		if (local9 == this.aClass69_44.aClass3_109) {
 			this.anInt1781 = -1;
 		} else {
@@ -150,7 +150,7 @@ public final class Class3_Sub3_Sub2 extends PcmStream {
 	}
 
 	@OriginalMember(owner = "client!ei", name = "a", descriptor = "(Lclient!ab;Lclient!cc;)V")
-	private void method1348(@OriginalArg(0) Class3 arg0, @OriginalArg(1) Class3_Sub6 arg1) {
+	private void method1348(@OriginalArg(0) Node arg0, @OriginalArg(1) Class3_Sub6 arg1) {
 		while (arg0 != this.aClass69_44.aClass3_109 && ((Class3_Sub6) arg0).anInt905 <= arg1.anInt905) {
 			arg0 = arg0.aClass3_222;
 		}

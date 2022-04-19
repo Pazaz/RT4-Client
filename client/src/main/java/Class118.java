@@ -591,7 +591,7 @@ public final class Class118 {
 			for (local38 = 0; local38 < local18; local38++) {
 				@Pc(576) boolean local576 = arg0.method2229() == 1;
 				@Pc(580) int local580 = arg0.method2220();
-				@Pc(589) Class3 local589;
+				@Pc(589) Node local589;
 				if (local576) {
 					local589 = new Class3_Sub30(arg0.method2202());
 				} else {

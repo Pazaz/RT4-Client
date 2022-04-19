@@ -722,7 +722,7 @@ public final class Class96 {
 				for (local18 = 0; local18 < local12; local18++) {
 					@Pc(592) boolean local592 = arg1.method2229() == 1;
 					@Pc(596) int local596 = arg1.method2220();
-					@Pc(605) Class3 local605;
+					@Pc(605) Node local605;
 					if (local592) {
 						local605 = new Class3_Sub30(arg1.method2202());
 					} else {
