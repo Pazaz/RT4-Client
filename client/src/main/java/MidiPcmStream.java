@@ -94,7 +94,7 @@ public final class MidiPcmStream extends PcmStream {
 	private final MidiDecoder aClass84_1 = new MidiDecoder();
 
 	@OriginalMember(owner = "client!va", name = "Pb", descriptor = "Lclient!te;")
-	private final Class3_Sub3_Sub3 aClass3_Sub3_Sub3_1 = new Class3_Sub3_Sub3(this);
+	private final MidiNoteStream aClass3_Sub3_Sub3_1 = new MidiNoteStream(this);
 
 	@OriginalMember(owner = "client!va", name = "P", descriptor = "Lclient!sc;")
 	private final HashTable aClass133_23 = new HashTable(128);
