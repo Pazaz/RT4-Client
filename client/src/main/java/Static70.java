@@ -24,7 +24,7 @@ public final class Static70 {
 		try {
 			return (Timer) Class.forName("NanoTimer").getDeclaredConstructor().newInstance();
 		} catch (@Pc(15) Throwable local15) {
-			return new Class93_Sub1();
+			return new MillisTimer();
 		}
 	}
 

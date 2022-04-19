@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!lj")
-public final class Class93_Sub1 extends Timer {
+public final class MillisTimer extends Timer {
 
 	@OriginalMember(owner = "client!lj", name = "o", descriptor = "I")
 	private int anInt3549;
@@ -25,7 +25,7 @@ public final class Class93_Sub1 extends Timer {
 	private long aLong122 = MonotonicClock.method5096();
 
 	@OriginalMember(owner = "client!lj", name = "<init>", descriptor = "()V")
-	public Class93_Sub1() {
+	public MillisTimer() {
 		for (@Pc(22) int local22 = 0; local22 < 10; local22++) {
 			this.aLongArray4[local22] = this.aLong122;
 		}
