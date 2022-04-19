@@ -25,7 +25,7 @@ public final class Class3_Sub2_Sub18 extends SecondaryNode {
 		this.anInt5058 = local12[0];
 		this.anInt5059 = Static63.anInt1943;
 		Static239.method4177(this.anInt5058);
-		@Pc(32) int local32 = Static94.anIntArray220[arg0];
+		@Pc(32) int local32 = Rasteriser.anIntArray220[arg0];
 		@Pc(58) byte[] local58 = new byte[] { (byte) (local32 >> 16), (byte) (local32 >> 8), (byte) local32, -1 };
 		@Pc(61) ByteBuffer local61 = ByteBuffer.wrap(local58);
 		local9.glTexImage2D(GL.GL_TEXTURE_2D, 0, GL.GL_RGBA, 1, 1, 0, GL.GL_RGBA, GL.GL_UNSIGNED_BYTE, local61);

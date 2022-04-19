@@ -116,9 +116,9 @@ public final class Static237 {
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(ISIB)I")
 	public static int method4096(@OriginalArg(0) int arg0, @OriginalArg(1) short arg1, @OriginalArg(2) int arg2, @OriginalArg(3) byte arg3) {
-		@Pc(5) int local5 = Static94.anIntArray220[Static268.method4585(arg0, arg2)];
+		@Pc(5) int local5 = Rasteriser.anIntArray220[Static268.method4585(arg0, arg2)];
 		if (arg1 != -1) {
-			@Pc(15) int local15 = Static94.anInterface1_2.method3238(arg1 & 0xFFFF);
+			@Pc(15) int local15 = Rasteriser.anInterface1_2.method3238(arg1 & 0xFFFF);
 			@Pc(21) int local21;
 			@Pc(44) int local44;
 			if (local15 != 0) {
@@ -136,7 +136,7 @@ public final class Static237 {
 					local5 = ((local21 & 0xFF00FF) * local15 + (local5 & 0xFF00FF) * local44 & 0xFF00FF00) + ((local21 & 0xFF00) * local15 + (local5 & 0xFF00) * local44 & 0xFF0000) >> 8;
 				}
 			}
-			local21 = Static94.anInterface1_2.method3229(arg1 & 0xFFFF);
+			local21 = Rasteriser.anInterface1_2.method3229(arg1 & 0xFFFF);
 			if (local21 != 0) {
 				local21 += 256;
 				@Pc(92) int local92 = (local5 >> 16 & 0xFF) * local21;

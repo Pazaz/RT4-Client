@@ -219,10 +219,10 @@ public final class Static164 {
 		Static129.method2497(local125);
 		@Pc(133) SoftwareSprite local133 = new SoftwareSprite(36, 32);
 		Static129.method2491(local133.anIntArray20, 36, 32);
-		Static94.method1908();
-		Static94.method1919(16, 16);
+		Rasteriser.method1908();
+		Rasteriser.method1919(16, 16);
 		@Pc(145) int local145 = local5.anInt2375;
-		Static94.aBoolean136 = false;
+		Rasteriser.aBoolean136 = false;
 		if (arg6) {
 			local145 = (int) ((double) local145 * 1.5D);
 		} else if (arg4 == 2) {
@@ -253,8 +253,8 @@ public final class Static164 {
 		}
 		Static129.method2491(local118, local120, local122);
 		Static129.method2488(local125);
-		Static94.method1908();
-		Static94.aBoolean136 = true;
+		Rasteriser.method1908();
+		Rasteriser.aBoolean136 = true;
 		return Static239.aBoolean269 && !arg1 ? new GlSprite(local133) : local133;
 	}
 }

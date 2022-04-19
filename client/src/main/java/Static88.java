@@ -3218,16 +3218,16 @@ public final class Static88 {
 														Static113.anInt4609 = local809;
 														if (!Static239.aBoolean269 || !Static178.aBoolean202) {
 															if (Static113.anInt4609 == 1) {
-																Static94.method1911(0.9F);
+																Rasteriser.method1911(0.9F);
 															}
 															if (Static113.anInt4609 == 2) {
-																Static94.method1911(0.8F);
+																Rasteriser.method1911(0.8F);
 															}
 															if (Static113.anInt4609 == 3) {
-																Static94.method1911(0.7F);
+																Rasteriser.method1911(0.7F);
 															}
 															if (Static113.anInt4609 == 4) {
-																Static94.method1911(0.6F);
+																Rasteriser.method1911(0.6F);
 															}
 														}
 														if (Static239.aBoolean269) {
@@ -3270,7 +3270,7 @@ public final class Static88 {
 													if (local226 == 6006) {
 														local28--;
 														Static53.aBoolean99 = Static254.anIntArray487[local28] == 1;
-														((Js5GlTextureProvider) Static94.anInterface1_2).method3245(!Static53.aBoolean99);
+														((Js5GlTextureProvider) Rasteriser.anInterface1_2).method3245(!Static53.aBoolean99);
 														Static203.method3663(Static71.aClass213_3);
 														Static18.aBoolean39 = false;
 														continue;
@@ -3321,19 +3321,19 @@ public final class Static88 {
 														local28--;
 														Static178.aBoolean202 = Static254.anIntArray487[local28] == 1;
 														if (Static239.aBoolean269 && Static178.aBoolean202) {
-															Static94.method1911(0.7F);
+															Rasteriser.method1911(0.7F);
 														} else {
 															if (Static113.anInt4609 == 1) {
-																Static94.method1911(0.9F);
+																Rasteriser.method1911(0.9F);
 															}
 															if (Static113.anInt4609 == 2) {
-																Static94.method1911(0.8F);
+																Rasteriser.method1911(0.8F);
 															}
 															if (Static113.anInt4609 == 3) {
-																Static94.method1911(0.7F);
+																Rasteriser.method1911(0.7F);
 															}
 															if (Static113.anInt4609 == 4) {
-																Static94.method1911(0.6F);
+																Rasteriser.method1911(0.6F);
 															}
 														}
 														Static145.method2742();

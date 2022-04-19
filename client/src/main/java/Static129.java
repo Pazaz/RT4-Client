@@ -224,8 +224,8 @@ public final class Static129 {
 		@Pc(67) int local67 = arg5 * local43 + 1 >> 17;
 		@Pc(73) int local73 = arg5 * local37 >> 17;
 		@Pc(81) int local81 = arg5 * local37 + 1 >> 17;
-		@Pc(85) int local85 = arg0 - Static94.method1913();
-		@Pc(89) int local89 = arg1 - Static94.method1927();
+		@Pc(85) int local85 = arg0 - Rasteriser.method1913();
+		@Pc(89) int local89 = arg1 - Rasteriser.method1927();
 		@Pc(93) int local93 = local85 + local59;
 		@Pc(97) int local97 = local85 - local67;
 		@Pc(103) int local103 = local85 + local3 - local67;
@@ -234,10 +234,10 @@ public final class Static129 {
 		@Pc(117) int local117 = local89 - local81;
 		@Pc(123) int local123 = local89 + local7 - local81;
 		@Pc(129) int local129 = local89 + local7 + local73;
-		Static94.method1922(local93, local97, local103);
-		Static94.method1918(local113, local117, local123, local93, local97, local103, arg4);
-		Static94.method1922(local93, local103, local109);
-		Static94.method1918(local113, local123, local129, local93, local103, local109, arg4);
+		Rasteriser.method1922(local93, local97, local103);
+		Rasteriser.method1918(local113, local117, local123, local93, local97, local103, arg4);
+		Rasteriser.method1922(local93, local103, local109);
+		Rasteriser.method1918(local113, local123, local129, local93, local103, local109, arg4);
 	}
 
 	@OriginalMember(owner = "client!kb", name = "c", descriptor = "(IIIII)V")

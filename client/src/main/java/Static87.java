@@ -113,7 +113,7 @@ public final class Static87 {
 			Static46.method1187(arg0, arg6, arg4, arg7);
 		} else {
 			Static129.method2496(arg0, arg6, arg4, arg7);
-			Static94.method1908();
+			Rasteriser.method1908();
 		}
 		for (@Pc(18) int local18 = 0; local18 < arg3.length; local18++) {
 			@Pc(30) Class13 local30 = arg3[local18];
@@ -394,7 +394,7 @@ public final class Static87 {
 								Static46.method1187(arg0, arg6, arg4, arg7);
 							} else {
 								Static129.method2496(arg0, arg6, arg4, arg7);
-								Static94.method1908();
+								Rasteriser.method1908();
 							}
 						}
 						if (Static223.aBooleanArray116[local57] || Static199.anInt4672 > 1) {
@@ -421,7 +421,7 @@ public final class Static87 {
 													} else {
 														local1476 = Static190.method3443(1, local545, local30.aBoolean31, local30.anIntArray50[local270], 3153952);
 													}
-													if (Static94.aBoolean134) {
+													if (Rasteriser.aBoolean134) {
 														Static186.aBooleanArray100[local57] = true;
 													}
 													if (local1476 == null) {
@@ -754,7 +754,7 @@ public final class Static87 {
 														Static239.method4157();
 													}
 												} else {
-													Static94.method1919(local556, local545);
+													Rasteriser.method1919(local556, local545);
 													local563 = MathUtils.anIntArray223[local30.anInt450] * local30.anInt443 >> 16;
 													local571 = local30.anInt443 * MathUtils.anIntArray225[local30.anInt450] >> 16;
 													if (!local30.aBoolean32) {
@@ -764,7 +764,7 @@ public final class Static87 {
 													} else {
 														local2589.method4571(local30.anInt524, local30.anInt508, local30.anInt450, local30.anInt494, local30.anInt497 + local563 + local503, local571 + local30.anInt497, -1L);
 													}
-													Static94.method1915();
+													Rasteriser.method1915();
 												}
 											}
 										} else {
