@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!kj")
-public final class PcmSound extends Class3_Sub16 {
+public final class PcmSound extends Sound {
 
 	@OriginalMember(owner = "client!kj", name = "r", descriptor = "Z")
 	public boolean aBoolean165;
