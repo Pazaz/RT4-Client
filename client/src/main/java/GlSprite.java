@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!cf")
-public class GlSprite extends Class3_Sub2_Sub1 {
+public class GlSprite extends Sprite {
 
 	@OriginalMember(owner = "client!cf", name = "O", descriptor = "I")
 	public int anInt1870;

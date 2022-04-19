@@ -122,11 +122,11 @@ public final class Static142 {
 					}
 				}
 				if (local17.anInt3378 > Static83.anInt372) {
-					@Pc(508) Class3_Sub2_Sub1 local508 = Static116.aClass3_Sub2_Sub1Array3[0];
-					@Pc(512) Class3_Sub2_Sub1 local512 = Static116.aClass3_Sub2_Sub1Array3[1];
+					@Pc(508) Sprite local508 = Static116.aClass3_Sub2_Sub1Array3[0];
+					@Pc(512) Sprite local512 = Static116.aClass3_Sub2_Sub1Array3[1];
 					if (local17 instanceof Class8_Sub4_Sub2) {
 						@Pc(518) Class8_Sub4_Sub2 local518 = (Class8_Sub4_Sub2) local17;
-						@Pc(528) Class3_Sub2_Sub1[] local528 = (Class3_Sub2_Sub1[]) Static73.aClass99_10.method3106((long) local518.aClass96_1.anInt3736);
+						@Pc(528) Sprite[] local528 = (Sprite[]) Static73.aClass99_10.method3106((long) local518.aClass96_1.anInt3736);
 						if (local528 == null) {
 							local528 = Static209.method3708(local518.aClass96_1.anInt3736, Static209.aClass153_86);
 							if (local528 != null) {

@@ -13,7 +13,7 @@ public final class Static240 {
 	public static int anInt5334;
 
 	@OriginalMember(owner = "client!tg", name = "d", descriptor = "[Lclient!qf;")
-	public static Class3_Sub2_Sub1[] aClass3_Sub2_Sub1Array10;
+	public static Sprite[] aClass3_Sub2_Sub1Array10;
 
 	@OriginalMember(owner = "client!tg", name = "f", descriptor = "Z")
 	public static boolean aBoolean276;

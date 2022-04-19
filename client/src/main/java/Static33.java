@@ -195,8 +195,8 @@ public final class Static33 {
 	}
 
 	@OriginalMember(owner = "client!cj", name = "a", descriptor = "(I)[Lclient!qf;")
-	public static Class3_Sub2_Sub1[] method870() {
-		@Pc(6) Class3_Sub2_Sub1[] local6 = new Class3_Sub2_Sub1[Static165.anInt4038];
+	public static Sprite[] method870() {
+		@Pc(6) Sprite[] local6 = new Sprite[Static165.anInt4038];
 		for (@Pc(15) int local15 = 0; local15 < Static165.anInt4038; local15++) {
 			@Pc(30) int local30 = Static254.anIntArray488[local15] * Static26.anIntArray66[local15];
 			@Pc(34) byte[] local34 = Static7.aByteArrayArray5[local15];

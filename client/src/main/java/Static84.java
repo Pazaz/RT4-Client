@@ -14,7 +14,7 @@ public final class Static84 {
 	public static int anInt2257;
 
 	@OriginalMember(owner = "client!gk", name = "l", descriptor = "Lclient!qf;")
-	public static Class3_Sub2_Sub1 aClass3_Sub2_Sub1_4;
+	public static Sprite aClass3_Sub2_Sub1_4;
 
 	@OriginalMember(owner = "client!gk", name = "a", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_483 = Static28.method790("leuchten2:");

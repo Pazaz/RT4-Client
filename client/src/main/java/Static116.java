@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static116 {
 
 	@OriginalMember(owner = "client!jb", name = "k", descriptor = "[Lclient!qf;")
-	public static Class3_Sub2_Sub1[] aClass3_Sub2_Sub1Array3;
+	public static Sprite[] aClass3_Sub2_Sub1Array3;
 
 	@OriginalMember(owner = "client!jb", name = "c", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_583 = Static28.method790("(Y<)4col>");

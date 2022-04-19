@@ -60,7 +60,7 @@ public final class Static30 {
 			local143[local145].method311();
 		}
 		if (Static239.aBoolean269) {
-			Static277.aClass3_Sub2_Sub1Array12 = new Class3_Sub2_Sub1[local143.length];
+			Static277.aClass3_Sub2_Sub1Array12 = new Sprite[local143.length];
 			for (local145 = 0; local145 < local143.length; local145++) {
 				Static277.aClass3_Sub2_Sub1Array12[local145] = new GlSprite(local143[local145]);
 			}
@@ -76,7 +76,7 @@ public final class Static30 {
 			Static173.aClass3_Sub2_Sub1_Sub1Array9[local219].method315(local145 + local217, local217 + local196, local217 + local210);
 		}
 		if (Static239.aBoolean269) {
-			Static67.aClass3_Sub2_Sub1Array4 = new Class3_Sub2_Sub1[Static173.aClass3_Sub2_Sub1_Sub1Array9.length];
+			Static67.aClass3_Sub2_Sub1Array4 = new Sprite[Static173.aClass3_Sub2_Sub1_Sub1Array9.length];
 			for (local219 = 0; local219 < Static173.aClass3_Sub2_Sub1_Sub1Array9.length; local219++) {
 				Static67.aClass3_Sub2_Sub1Array4[local219] = new GlSprite(Static173.aClass3_Sub2_Sub1_Sub1Array9[local219]);
 			}

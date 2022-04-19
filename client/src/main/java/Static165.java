@@ -8,7 +8,7 @@ public final class Static165 {
 	public static int anInt4038;
 
 	@OriginalMember(owner = "client!nb", name = "i", descriptor = "Lclient!qf;")
-	public static Class3_Sub2_Sub1 aClass3_Sub2_Sub1_8;
+	public static Sprite aClass3_Sub2_Sub1_8;
 
 	@OriginalMember(owner = "client!nb", name = "o", descriptor = "I")
 	public static int anInt4042;

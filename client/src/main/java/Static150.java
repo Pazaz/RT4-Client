@@ -41,7 +41,7 @@ public final class Static150 {
 	}
 
 	@OriginalMember(owner = "client!lk", name = "a", descriptor = "(IIBLclient!ve;)Lclient!qf;")
-	public static Class3_Sub2_Sub1 method2800(@OriginalArg(1) int arg0, @OriginalArg(3) Class153 arg1) {
+	public static Sprite method2800(@OriginalArg(1) int arg0, @OriginalArg(3) Class153 arg1) {
 		return Static234.method4016(arg1, 0, arg0) ? Static82.method1764() : null;
 	}
 

@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static213 {
 
 	@OriginalMember(owner = "client!re", name = "w", descriptor = "[Lclient!qf;")
-	public static Class3_Sub2_Sub1[] aClass3_Sub2_Sub1Array8;
+	public static Sprite[] aClass3_Sub2_Sub1Array8;
 
 	@OriginalMember(owner = "client!re", name = "y", descriptor = "I")
 	public static int anInt4851;
@@ -40,8 +40,8 @@ public final class Static213 {
 	}
 
 	@OriginalMember(owner = "client!re", name = "b", descriptor = "(I)[Lclient!qf;")
-	public static Class3_Sub2_Sub1[] method3730() {
-		@Pc(14) Class3_Sub2_Sub1[] local14 = new Class3_Sub2_Sub1[Static165.anInt4038];
+	public static Sprite[] method3730() {
+		@Pc(14) Sprite[] local14 = new Sprite[Static165.anInt4038];
 		for (@Pc(16) int local16 = 0; local16 < Static165.anInt4038; local16++) {
 			@Pc(23) byte[] local23 = Static7.aByteArrayArray5[local16];
 			@Pc(31) int local31 = Static26.anIntArray66[local16] * Static254.anIntArray488[local16];

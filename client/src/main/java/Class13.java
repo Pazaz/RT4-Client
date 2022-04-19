@@ -765,7 +765,7 @@ public final class Class13 {
 	}
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(ZI)Lclient!qf;")
-	public final Class3_Sub2_Sub1 method482(@OriginalArg(1) int arg0) {
+	public final Sprite method482(@OriginalArg(1) int arg0) {
 		Static211.aBoolean72 = false;
 		if (arg0 < 0 || arg0 >= this.anIntArray36.length) {
 			return null;
@@ -774,7 +774,7 @@ public final class Class13 {
 		if (local29 == -1) {
 			return null;
 		}
-		@Pc(43) Class3_Sub2_Sub1 local43 = (Class3_Sub2_Sub1) Static190.aClass99_26.method3106((long) local29);
+		@Pc(43) Sprite local43 = (Sprite) Static190.aClass99_26.method3106((long) local29);
 		if (local43 != null) {
 			return local43;
 		}
@@ -918,7 +918,7 @@ public final class Class13 {
 	}
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(BZ)Lclient!qf;")
-	public final Class3_Sub2_Sub1 method489(@OriginalArg(1) boolean arg0) {
+	public final Sprite method489(@OriginalArg(1) boolean arg0) {
 		Static211.aBoolean72 = false;
 		@Pc(12) int local12;
 		if (arg0) {
@@ -930,7 +930,7 @@ public final class Class13 {
 			return null;
 		}
 		@Pc(66) long local66 = ((this.aBoolean21 ? 1L : 0L) << 38) + ((this.aBoolean18 ? 1L : 0L) << 35) + (long) local12 + ((long) this.anInt514 << 36) + ((this.aBoolean26 ? 1L : 0L) << 39) + ((long) this.anInt513 << 40);
-		@Pc(72) Class3_Sub2_Sub1 local72 = (Class3_Sub2_Sub1) Static190.aClass99_26.method3106(local66);
+		@Pc(72) Sprite local72 = (Sprite) Static190.aClass99_26.method3106(local66);
 		if (local72 != null) {
 			return local72;
 		}
