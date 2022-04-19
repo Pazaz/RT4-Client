@@ -2,7 +2,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!pm")
-public final class Js5NetRequest extends Class3_Sub2_Sub5 {
+public final class Js5NetRequest extends Js5Request {
 
 	@OriginalMember(owner = "client!pm", name = "U", descriptor = "B")
 	public byte aByte16;

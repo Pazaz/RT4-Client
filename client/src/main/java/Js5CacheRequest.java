@@ -2,7 +2,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!c")
-public final class Js5CacheRequest extends Class3_Sub2_Sub5 {
+public final class Js5CacheRequest extends Js5Request {
 
 	@OriginalMember(owner = "client!c", name = "X", descriptor = "Lclient!ge;")
 	public Cache aClass49_3;

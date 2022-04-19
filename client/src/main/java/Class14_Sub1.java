@@ -61,7 +61,7 @@ public final class Class14_Sub1 extends Class14 {
 	private final int anInt566;
 
 	@OriginalMember(owner = "client!bg", name = "x", descriptor = "Lclient!il;")
-	private Class3_Sub2_Sub5 aClass3_Sub2_Sub5_1;
+	private Js5Request aClass3_Sub2_Sub5_1;
 
 	@OriginalMember(owner = "client!bg", name = "<init>", descriptor = "(ILclient!ge;Lclient!ge;Lclient!jb;Lclient!k;IIZ)V")
 	public Class14_Sub1(@OriginalArg(0) int arg0, @OriginalArg(1) Cache arg1, @OriginalArg(2) Cache arg2, @OriginalArg(3) Js5NetQueue arg3, @OriginalArg(4) Js5CacheQueue arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) boolean arg7) {
@@ -280,7 +280,7 @@ public final class Class14_Sub1 extends Class14 {
 		if (!this.aBoolean37 || this.aLong20 > MonotonicClock.method5096()) {
 			return;
 		}
-		for (@Pc(331) Class3_Sub2_Sub5 local331 = (Class3_Sub2_Sub5) this.aClass133_1.method3859(); local331 != null; local331 = (Class3_Sub2_Sub5) this.aClass133_1.method3861()) {
+		for (@Pc(331) Js5Request local331 = (Js5Request) this.aClass133_1.method3859(); local331 != null; local331 = (Js5Request) this.aClass133_1.method3861()) {
 			if (!local331.aBoolean226) {
 				if (local331.aBoolean227) {
 					if (!local331.aBoolean225) {
@@ -298,7 +298,7 @@ public final class Class14_Sub1 extends Class14 {
 	@OriginalMember(owner = "client!bg", name = "b", descriptor = "(II)I")
 	@Override
 	public final int method524(@OriginalArg(0) int arg0) {
-		@Pc(15) Class3_Sub2_Sub5 local15 = (Class3_Sub2_Sub5) this.aClass133_1.method3863((long) arg0);
+		@Pc(15) Js5Request local15 = (Js5Request) this.aClass133_1.method3863((long) arg0);
 		return local15 == null ? 0 : local15.method3553();
 	}
 
@@ -308,8 +308,8 @@ public final class Class14_Sub1 extends Class14 {
 	}
 
 	@OriginalMember(owner = "client!bg", name = "a", descriptor = "(III)Lclient!il;")
-	private Class3_Sub2_Sub5 method536(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		@Pc(13) Class3_Sub2_Sub5 local13 = (Class3_Sub2_Sub5) this.aClass133_1.method3863((long) arg1);
+	private Js5Request method536(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+		@Pc(13) Js5Request local13 = (Js5Request) this.aClass133_1.method3863((long) arg1);
 		if (local13 != null && arg0 == 0 && !local13.aBoolean225 && local13.aBoolean226) {
 			local13.method4658();
 			local13 = null;
@@ -457,7 +457,7 @@ public final class Class14_Sub1 extends Class14 {
 	@OriginalMember(owner = "client!bg", name = "c", descriptor = "(II)[B")
 	@Override
 	public final byte[] method525(@OriginalArg(0) int arg0) {
-		@Pc(9) Class3_Sub2_Sub5 local9 = this.method536(0, arg0);
+		@Pc(9) Js5Request local9 = this.method536(0, arg0);
 		if (local9 == null) {
 			return null;
 		} else {
