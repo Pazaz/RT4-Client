@@ -106,8 +106,8 @@ public final class Static138 {
 		} else if (arg0 instanceof byte[]) {
 			@Pc(14) byte[] local14 = (byte[]) arg0;
 			return arg1 ? Static23.method648(local14) : local14;
-		} else if (arg0 instanceof Class146) {
-			@Pc(34) Class146 local34 = (Class146) arg0;
+		} else if (arg0 instanceof ByteArray) {
+			@Pc(34) ByteArray local34 = (ByteArray) arg0;
 			return local34.method4236();
 		} else {
 			throw new IllegalArgumentException();
