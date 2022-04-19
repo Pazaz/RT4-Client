@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!ue")
-public final class Class148 implements MaterialRenderer {
+public final class UnlitMaterialRenderer implements MaterialRenderer {
 
 	@OriginalMember(owner = "client!ue", name = "b", descriptor = "()V")
 	@Override
