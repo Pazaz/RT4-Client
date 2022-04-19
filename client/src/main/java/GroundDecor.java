@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class GroundDecor {
 
 	@OriginalMember(owner = "client!bm", name = "c", descriptor = "Lclient!th;")
-	public Class8 aClass8_1;
+	public Entity aClass8_1;
 
 	@OriginalMember(owner = "client!bm", name = "g", descriptor = "I")
 	public int anInt732;

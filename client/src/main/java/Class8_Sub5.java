@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!gb")
-public final class Class8_Sub5 extends Class8 {
+public final class Class8_Sub5 extends Entity {
 
 	@OriginalMember(owner = "client!gb", name = "s", descriptor = "[B")
 	public byte[] aByteArray26;
@@ -480,7 +480,7 @@ public final class Class8_Sub5 extends Class8 {
 
 	@OriginalMember(owner = "client!gb", name = "a", descriptor = "(III)Lclient!th;")
 	@Override
-	public final Class8 method4539() {
+	public final Entity method4539() {
 		return this.method1679(this.aShort19, this.aShort18, -50, -10, -50);
 	}
 
@@ -1259,7 +1259,7 @@ public final class Class8_Sub5 extends Class8 {
 
 	@OriginalMember(owner = "client!gb", name = "a", descriptor = "(Lclient!th;IIIZ)V")
 	@Override
-	public final void method4544(@OriginalArg(0) Class8 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4) {
+	public final void method4544(@OriginalArg(0) Entity arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4) {
 		@Pc(2) Class8_Sub5 local2 = (Class8_Sub5) arg0;
 		local2.method1664();
 		local2.method1668();

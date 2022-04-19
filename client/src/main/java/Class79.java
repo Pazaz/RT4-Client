@@ -5,16 +5,16 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class Class79 {
 
 	@OriginalMember(owner = "client!jj", name = "a", descriptor = "Lclient!th;")
-	public Class8 aClass8_7;
+	public Entity aClass8_7;
 
 	@OriginalMember(owner = "client!jj", name = "b", descriptor = "I")
 	public int anInt3057;
 
 	@OriginalMember(owner = "client!jj", name = "c", descriptor = "Lclient!th;")
-	public Class8 aClass8_8;
+	public Entity aClass8_8;
 
 	@OriginalMember(owner = "client!jj", name = "h", descriptor = "Lclient!th;")
-	public Class8 aClass8_9;
+	public Entity aClass8_9;
 
 	@OriginalMember(owner = "client!jj", name = "k", descriptor = "I")
 	public int anInt3061;

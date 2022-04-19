@@ -8,5 +8,5 @@ public final class Class139 {
 	public Class36_Sub1 aClass36_Sub1_3;
 
 	@OriginalMember(owner = "client!sm", name = "j", descriptor = "Lclient!th;")
-	public Class8 aClass8_10;
+	public Entity aClass8_10;
 }

@@ -51,7 +51,7 @@ public final class Static192 {
 				@Pc(126) int local126 = (local83 + 1 >> 1) + local17.anInt1204;
 				@Pc(130) int[][] local130 = Static83.anIntArrayArrayArray4[Static55.anInt1735];
 				@Pc(157) int local157 = local130[local103][local126] + local130[local110][local126] + local130[local110][local117] + local130[local103][local117] >> 2;
-				@Pc(159) Class8 local159 = null;
+				@Pc(159) Entity local159 = null;
 				@Pc(164) int local164 = Static133.anIntArray453[local17.anInt1198];
 				if (local164 == 0) {
 					@Pc(176) Class77 local176 = Static262.method4509(Static55.anInt1735, local17.anInt1190, local17.anInt1204);
