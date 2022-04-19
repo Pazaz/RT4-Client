@@ -129,7 +129,7 @@ public final class Class3_Sub3_Sub3 extends PcmStream {
 				arg3 -= local36;
 				arg1.aClass3_Sub3_Sub1_3.method4408(arg0, arg2, local36);
 				@Pc(55) int local55 = Static44.anInt1404 / 100;
-				@Pc(58) Class3_Sub3_Sub1 local58 = arg1.aClass3_Sub3_Sub1_3;
+				@Pc(58) SoundPcmStream local58 = arg1.aClass3_Sub3_Sub1_3;
 				@Pc(62) int local62 = 262144 / local26;
 				if (local62 < local55) {
 					local55 = local62;

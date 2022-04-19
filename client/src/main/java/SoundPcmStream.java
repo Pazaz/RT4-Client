@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!b")
-public final class Class3_Sub3_Sub1 extends PcmStream {
+public final class SoundPcmStream extends PcmStream {
 
 	@OriginalMember(owner = "client!b", name = "v", descriptor = "I")
 	public int anInt344;
@@ -52,7 +52,7 @@ public final class Class3_Sub3_Sub1 extends PcmStream {
 	public int anInt346;
 
 	@OriginalMember(owner = "client!b", name = "<init>", descriptor = "(Lclient!kj;II)V")
-	public Class3_Sub3_Sub1(@OriginalArg(0) Class3_Sub16_Sub1 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+	public SoundPcmStream(@OriginalArg(0) Class3_Sub16_Sub1 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		this.aClass3_Sub16_5 = arg0;
 		this.anInt345 = arg0.anInt3315;
 		this.anInt353 = arg0.anInt3314;
@@ -65,7 +65,7 @@ public final class Class3_Sub3_Sub1 extends PcmStream {
 	}
 
 	@OriginalMember(owner = "client!b", name = "<init>", descriptor = "(Lclient!kj;III)V")
-	public Class3_Sub3_Sub1(@OriginalArg(0) Class3_Sub16_Sub1 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	public SoundPcmStream(@OriginalArg(0) Class3_Sub16_Sub1 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		this.aClass3_Sub16_5 = arg0;
 		this.anInt345 = arg0.anInt3315;
 		this.anInt353 = arg0.anInt3314;

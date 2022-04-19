@@ -20,7 +20,7 @@ public final class Class3_Sub25 extends Node {
 	public int anInt3767;
 
 	@OriginalMember(owner = "client!mf", name = "z", descriptor = "Lclient!b;")
-	public Class3_Sub3_Sub1 aClass3_Sub3_Sub1_3;
+	public SoundPcmStream aClass3_Sub3_Sub1_3;
 
 	@OriginalMember(owner = "client!mf", name = "A", descriptor = "I")
 	public int anInt3768;
