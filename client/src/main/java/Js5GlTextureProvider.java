@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!nk")
-public final class Class109 implements GlTextureProvider {
+public final class Js5GlTextureProvider implements GlTextureProvider {
 
 	@OriginalMember(owner = "client!nk", name = "z", descriptor = "Z")
 	private boolean aBoolean200 = false;
@@ -55,7 +55,7 @@ public final class Class109 implements GlTextureProvider {
 	private final boolean[] aBooleanArray93;
 
 	@OriginalMember(owner = "client!nk", name = "<init>", descriptor = "(Lclient!ve;Lclient!ve;Lclient!ve;IZ)V")
-	public Class109(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1, @OriginalArg(2) Js5 arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4) {
+	public Js5GlTextureProvider(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1, @OriginalArg(2) Js5 arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4) {
 		this.aClass153_72 = arg2;
 		this.aBoolean200 = arg4;
 		this.anInt4186 = arg3;

@@ -3270,7 +3270,7 @@ public final class Static88 {
 													if (local226 == 6006) {
 														local28--;
 														Static53.aBoolean99 = Static254.anIntArray487[local28] == 1;
-														((Class109) Static94.anInterface1_2).method3245(!Static53.aBoolean99);
+														((Js5GlTextureProvider) Static94.anInterface1_2).method3245(!Static53.aBoolean99);
 														Static203.method3663(Static71.aClass213_3);
 														Static18.aBoolean39 = false;
 														continue;

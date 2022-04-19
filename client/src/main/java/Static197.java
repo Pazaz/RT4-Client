@@ -168,7 +168,7 @@ public final class Static197 {
 			Static37.aThread1.setPriority(5);
 			Static260.aClass27_2 = null;
 			Static268.method4580();
-			((Class109) Static94.anInterface1_2).method3248(200);
+			((Js5GlTextureProvider) Static94.anInterface1_2).method3248(200);
 			if (Static178.aBoolean202) {
 				Static94.method1911(0.7F);
 			}
@@ -178,7 +178,7 @@ public final class Static197 {
 			Static260.aClass27_2 = Static131.method2579(503, 765, Static154.aCanvas1);
 			Static268.method4583();
 			Static76.method1643();
-			((Class109) Static94.anInterface1_2).method3248(20);
+			((Js5GlTextureProvider) Static94.anInterface1_2).method3248(20);
 			if (Static178.aBoolean202) {
 				if (Static113.anInt4609 == 1) {
 					Static94.method1911(0.9F);
