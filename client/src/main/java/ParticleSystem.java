@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class ParticleSystem extends ParticleNode {
 
 	static {
-		new Class132(8);
+		new SecondaryHashTable(8);
 		new Buffer(131056);
 	}
 
