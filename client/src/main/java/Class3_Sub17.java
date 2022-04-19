@@ -157,7 +157,7 @@ public final class Class3_Sub17 extends Node {
 			local104 = local25;
 			local108 = local25 >> 1;
 		}
-		@Pc(123) Class151 local123 = Static117.aClass151Array1[Static117.anIntArray278[local15]];
+		@Pc(123) VorbisMapping local123 = Static117.aClass151Array1[Static117.anIntArray278[local15]];
 		@Pc(126) int local126 = local123.anInt5562;
 		@Pc(131) int local131 = local123.anIntArray490[local126];
 		@Pc(140) boolean local140 = !Static117.aClass67Array1[local131].method2272();
