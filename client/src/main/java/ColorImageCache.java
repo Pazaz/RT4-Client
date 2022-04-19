@@ -22,7 +22,7 @@ public final class ColorImageCache {
 	private final int anInt4465;
 
 	@OriginalMember(owner = "client!pf", name = "e", descriptor = "[Lclient!qi;")
-	private Class3_Sub28[] aClass3_Sub28Array1;
+	private ColorImageCacheEntry[] aClass3_Sub28Array1;
 
 	@OriginalMember(owner = "client!pf", name = "s", descriptor = "I")
 	private final int anInt4475;
@@ -33,7 +33,7 @@ public final class ColorImageCache {
 	@OriginalMember(owner = "client!pf", name = "<init>", descriptor = "(III)V")
 	public ColorImageCache(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		this.anInt4465 = arg1;
-		this.aClass3_Sub28Array1 = new Class3_Sub28[this.anInt4465];
+		this.aClass3_Sub28Array1 = new ColorImageCacheEntry[this.anInt4465];
 		this.anInt4475 = arg0;
 		this.anIntArrayArray34 = new int[this.anInt4475][arg2];
 	}
@@ -60,15 +60,15 @@ public final class ColorImageCache {
 			this.anInt4471 = arg0;
 			return this.anIntArrayArray34[0];
 		} else {
-			@Pc(29) Class3_Sub28 local29 = this.aClass3_Sub28Array1[arg0];
+			@Pc(29) ColorImageCacheEntry local29 = this.aClass3_Sub28Array1[arg0];
 			if (local29 == null) {
 				this.aBoolean221 = true;
 				if (this.anInt4467 < this.anInt4475) {
-					local29 = new Class3_Sub28(arg0, this.anInt4467);
+					local29 = new ColorImageCacheEntry(arg0, this.anInt4467);
 					this.anInt4467++;
 				} else {
-					@Pc(66) Class3_Sub28 local66 = (Class3_Sub28) this.aClass69_103.method2279();
-					local29 = new Class3_Sub28(arg0, local66.anInt4761);
+					@Pc(66) ColorImageCacheEntry local66 = (ColorImageCacheEntry) this.aClass69_103.method2279();
+					local29 = new ColorImageCacheEntry(arg0, local66.anInt4761);
 					this.aClass3_Sub28Array1[local66.anInt4759] = null;
 					local66.method4658();
 				}
