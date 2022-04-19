@@ -184,7 +184,7 @@ public final class BufferedSocket implements Runnable {
 	@OriginalMember(owner = "client!ma", name = "a", descriptor = "(Z)V")
 	public final void method2833() {
 		if (!this.aBoolean177) {
-			this.anInputStream1 = new InputStream_Sub1();
+			this.anInputStream1 = new BrokenInputStream();
 			this.anOutputStream1 = new BrokenOutputStream();
 		}
 	}

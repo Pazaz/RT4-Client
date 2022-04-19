@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!qk")
-public final class InputStream_Sub1 extends InputStream {
+public final class BrokenInputStream extends InputStream {
 
 	@OriginalMember(owner = "client!qk", name = "read", descriptor = "()I")
 	@Override
