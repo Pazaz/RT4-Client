@@ -36,7 +36,7 @@ public final class Static142 {
 				local17 = Static175.aClass8_Sub4_Sub2Array1[Static33.anIntArray79[local5 - Static267.anInt5774]];
 			}
 			if (local17 != null && local17.method2682()) {
-				@Pc(58) Class96 local58;
+				@Pc(58) NpcType local58;
 				if (local17 instanceof Npc) {
 					local58 = ((Npc) local17).aClass96_1;
 					if (local58.anIntArray357 != null) {
@@ -137,7 +137,7 @@ public final class Static142 {
 							local512 = local528[1];
 							local508 = local528[0];
 						}
-						@Pc(571) Class96 local571 = local518.aClass96_1;
+						@Pc(571) NpcType local571 = local518.aClass96_1;
 						if (local571.anInt3730 == -1) {
 							local310 = local17.method2691();
 						} else {
@@ -170,7 +170,7 @@ public final class Static142 {
 					if (local17.anIntArray319[local74] > Static83.anInt372) {
 						if (local17 instanceof Npc) {
 							@Pc(725) Npc local725 = (Npc) local17;
-							@Pc(728) Class96 local728 = local725.aClass96_1;
+							@Pc(728) NpcType local728 = local725.aClass96_1;
 							if (local728.anInt3730 == -1) {
 								local265 = local17.method2691() / 2;
 							} else {

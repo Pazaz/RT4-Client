@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Npc extends PathingEntity {
 
 	@OriginalMember(owner = "client!km", name = "rc", descriptor = "Lclient!me;")
-	public Class96 aClass96_1;
+	public NpcType aClass96_1;
 
 	@OriginalMember(owner = "client!km", name = "finalize", descriptor = "()V")
 	@Override
@@ -33,7 +33,7 @@ public final class Npc extends PathingEntity {
 			return;
 		}
 		this.anInt3413 = local74.method4549();
-		@Pc(84) Class96 local84 = this.aClass96_1;
+		@Pc(84) NpcType local84 = this.aClass96_1;
 		if (local84.anIntArray357 != null) {
 			local84 = local84.method2932();
 		}
@@ -99,7 +99,7 @@ public final class Npc extends PathingEntity {
 	@Override
 	protected final int method2688() {
 		if (Static266.anInt5343 != 0 && this.aClass96_1.anIntArray357 != null) {
-			@Pc(17) Class96 local17 = this.aClass96_1.method2932();
+			@Pc(17) NpcType local17 = this.aClass96_1.method2932();
 			if (local17 != null && local17.anInt3737 != -1) {
 				return local17.anInt3737;
 			}
@@ -122,7 +122,7 @@ public final class Npc extends PathingEntity {
 	}
 
 	@OriginalMember(owner = "client!km", name = "a", descriptor = "(ILclient!me;)V")
-	public final void method2698(@OriginalArg(1) Class96 arg0) {
+	public final void method2698(@OriginalArg(1) NpcType arg0) {
 		this.aClass96_1 = arg0;
 		if (this.aClass47_Sub1_5 != null) {
 			this.aClass47_Sub1_5.method1646();

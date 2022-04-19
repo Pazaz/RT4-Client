@@ -80,7 +80,7 @@ public final class Class3_Sub12 extends Node {
 		} else if (this.aClass8_Sub4_Sub2_1 != null) {
 			@Pc(92) int local92 = Static112.method2299(this.aClass8_Sub4_Sub2_1);
 			if (local8 != local92) {
-				@Pc(100) Class96 local100 = this.aClass8_Sub4_Sub2_1.aClass96_1;
+				@Pc(100) NpcType local100 = this.aClass8_Sub4_Sub2_1.aClass96_1;
 				this.anInt2044 = local92;
 				if (local100.anIntArray357 != null) {
 					local100 = local100.method2932();

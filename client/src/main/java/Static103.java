@@ -211,7 +211,7 @@ public final class Static103 {
 			Static122.anInt3047 = Static7.anInt985;
 			local192 = Static175.aClass8_Sub4_Sub2Array1[local36];
 			if (local192 != null) {
-				@Pc(884) Class96 local884 = local192.aClass96_1;
+				@Pc(884) NpcType local884 = local192.aClass96_1;
 				if (local884.anIntArray357 != null) {
 					local884 = local884.method2932();
 				}

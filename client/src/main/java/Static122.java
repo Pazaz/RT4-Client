@@ -67,7 +67,7 @@ public final class Static122 {
 			Static3.aClass69_135.method2282(local13);
 		} else if (arg3 != null) {
 			local13.aClass8_Sub4_Sub2_1 = arg3;
-			@Pc(138) Class96 local138 = arg3.aClass96_1;
+			@Pc(138) NpcType local138 = arg3.aClass96_1;
 			if (local138.anIntArray357 != null) {
 				local13.aBoolean117 = true;
 				local138 = local138.method2932();

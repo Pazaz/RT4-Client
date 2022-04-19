@@ -46,7 +46,7 @@ public final class Static246 {
 	}
 
 	@OriginalMember(owner = "client!u", name = "a", descriptor = "(Lclient!me;IIII)V")
-	public static void method4240(@OriginalArg(0) Class96 arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
+	public static void method4240(@OriginalArg(0) NpcType arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		if (Static231.anInt5204 >= 400) {
 			return;
 		}
