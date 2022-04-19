@@ -8,7 +8,7 @@ public final class Static53 {
 	public static int anInt1716;
 
 	@OriginalMember(owner = "client!ec", name = "d", descriptor = "Lclient!gn;")
-	public static final Class54 aClass54_5 = new Class54(16);
+	public static final LruHashTable aClass54_5 = new LruHashTable(16);
 
 	@OriginalMember(owner = "client!ec", name = "r", descriptor = "Lclient!na;")
 	private static final Class100 aClass100_371 = Static28.method790("RuneScape is loading )2 please wait)3)3)3");

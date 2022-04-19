@@ -20,7 +20,7 @@ public final class Static89 {
 	public static int anInt2385 = 0;
 
 	@OriginalMember(owner = "client!ha", name = "p", descriptor = "Lclient!gn;")
-	public static final Class54 aClass54_8 = new Class54(64);
+	public static final LruHashTable aClass54_8 = new LruHashTable(64);
 
 	@OriginalMember(owner = "client!ha", name = "q", descriptor = "I")
 	public static int anInt2388 = 0;

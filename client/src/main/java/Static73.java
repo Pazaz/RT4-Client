@@ -17,7 +17,7 @@ public final class Static73 {
 	public static final Class100 aClass100_453 = Static28.method790(")2");
 
 	@OriginalMember(owner = "client!fm", name = "db", descriptor = "Lclient!gn;")
-	public static final Class54 aClass54_7 = new Class54(64);
+	public static final LruHashTable aClass54_7 = new LruHashTable(64);
 
 	@OriginalMember(owner = "client!fm", name = "eb", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_454 = Static28.method790("b12_full");

@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!gn")
-public final class Class54 {
+public final class LruHashTable {
 
 	@OriginalMember(owner = "client!gn", name = "l", descriptor = "Lclient!rg;")
 	private SecondaryNode aClass3_Sub2_37 = new SecondaryNode();
@@ -22,7 +22,7 @@ public final class Class54 {
 	private final Class133 aClass133_5;
 
 	@OriginalMember(owner = "client!gn", name = "<init>", descriptor = "(I)V")
-	public Class54(@OriginalArg(0) int arg0) {
+	public LruHashTable(@OriginalArg(0) int arg0) {
 		@Pc(13) int local13 = 1;
 		this.anInt2314 = arg0;
 		while (arg0 > local13 + local13) {
