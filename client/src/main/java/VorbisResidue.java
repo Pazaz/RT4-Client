@@ -78,7 +78,7 @@ public final class VorbisResidue {
 					@Pc(96) int local96 = this.anIntArray511[local55 * 8 + local35];
 					if (local96 >= 0) {
 						@Pc(106) int local106 = this.anInt5678 + local40 * this.anInt5681;
-						@Pc(110) Class78 local110 = Static117.aClass78Array1[local96];
+						@Pc(110) VorbisCodebook local110 = Static117.aClass78Array1[local96];
 						@Pc(119) int local119;
 						if (this.anInt5679 == 0) {
 							local119 = this.anInt5681 / local110.anInt3055;
