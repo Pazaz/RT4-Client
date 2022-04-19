@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!i")
-public final class Class3_Sub15_Sub1 extends Buffer {
+public final class Packet extends Buffer {
 
 	@OriginalMember(owner = "client!i", name = "Xb", descriptor = "Lclient!ij;")
 	private Class71 aClass71_1;
@@ -13,7 +13,7 @@ public final class Class3_Sub15_Sub1 extends Buffer {
 	private int anInt2846;
 
 	@OriginalMember(owner = "client!i", name = "<init>", descriptor = "(I)V")
-	public Class3_Sub15_Sub1(@OriginalArg(0) int arg0) {
+	public Packet(@OriginalArg(0) int arg0) {
 		super(arg0);
 	}
 
