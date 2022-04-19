@@ -564,7 +564,7 @@ public final class GlModel extends Model {
 				@Pc(2065) Class57 local2065 = arg0.aClass57Array1[local2060];
 				this.aShortArray83[local439] = this.method4098(arg0, local2060, local1994 + (long) local868, local2065.anInt2437, local2065.anInt2431, local2065.anInt2436, local2065.anInt2432, local714, local685);
 			} else if (local902 == 1) {
-				@Pc(2096) BufferedFile local2096 = arg0.aClass126Array1[local810];
+				@Pc(2096) TriangleNormal local2096 = arg0.aClass126Array1[local810];
 				@Pc(2137) long local2137 = (long) ((local833 << 2) + (local2096.anInt4769 > 0 ? 1024 : 2048) + (local2096.anInt4770 + 256 << 12) + (local2096.anInt4767 + 256 << 22)) + ((long) (local553 << 24) + (long) (local817 << 8) + (long) local844 << 32);
 				this.aShortArray77[local439] = this.method4098(arg0, arg0.anIntArray197[local810], local2137, local2096.anInt4769, local2096.anInt4770, local2096.anInt4767, 0, local854, local856);
 				this.aShortArray82[local439] = this.method4098(arg0, arg0.anIntArray200[local810], local2137 + (long) local866, local2096.anInt4769, local2096.anInt4770, local2096.anInt4767, 0, local858, local683);

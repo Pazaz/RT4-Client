@@ -373,13 +373,13 @@ public final class client extends GameShell {
 		Static7.anInt986 = SignLink.anInt5928;
 		try {
 			if (Static71.aClass213_3.aClass214_2 != null) {
-				Static172.aClass38_4 = new Class38(Static71.aClass213_3.aClass214_2, 5200, 0);
+				Static172.aClass38_4 = new BufferedFile(Static71.aClass213_3.aClass214_2, 5200, 0);
 				for (@Pc(162) int local162 = 0; local162 < 28; local162++) {
-					Static47.aClass38Array2[local162] = new Class38(Static71.aClass213_3.aClass214Array1[local162], 6000, 0);
+					Static47.aClass38Array2[local162] = new BufferedFile(Static71.aClass213_3.aClass214Array1[local162], 6000, 0);
 				}
-				Static190.aClass38_5 = new Class38(Static71.aClass213_3.aClass214_3, 6000, 0);
+				Static190.aClass38_5 = new BufferedFile(Static71.aClass213_3.aClass214_3, 6000, 0);
 				Static148.aClass49_4 = new Cache(255, Static172.aClass38_4, Static190.aClass38_5, 500000);
-				Static121.aClass38_3 = new Class38(Static71.aClass213_3.aClass214_4, 24, 0);
+				Static121.aClass38_3 = new BufferedFile(Static71.aClass213_3.aClass214_4, 24, 0);
 				Static71.aClass213_3.aClass214Array1 = null;
 				Static71.aClass213_3.aClass214_3 = null;
 				Static71.aClass213_3.aClass214_4 = null;

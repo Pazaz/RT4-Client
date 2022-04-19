@@ -234,7 +234,7 @@ public final class SoftwareModel extends Model {
 			}
 			@Pc(435) Class57 local435;
 			@Pc(468) int local468;
-			@Pc(614) BufferedFile local614;
+			@Pc(614) TriangleNormal local614;
 			if (local388 == -1) {
 				if (local366 == 0) {
 					@Pc(416) int local416 = arg0.aShortArray24[local133] & 0xFFFF;

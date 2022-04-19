@@ -9,10 +9,10 @@ import org.openrs2.deob.annotation.Pc;
 public final class Cache {
 
 	@OriginalMember(owner = "client!ge", name = "a", descriptor = "Lclient!en;")
-	private Class38 aClass38_1 = null;
+	private BufferedFile aClass38_1 = null;
 
 	@OriginalMember(owner = "client!ge", name = "f", descriptor = "Lclient!en;")
-	private Class38 aClass38_2 = null;
+	private BufferedFile aClass38_2 = null;
 
 	@OriginalMember(owner = "client!ge", name = "l", descriptor = "I")
 	private int anInt2156 = 65000;
@@ -21,7 +21,7 @@ public final class Cache {
 	private final int anInt2150;
 
 	@OriginalMember(owner = "client!ge", name = "<init>", descriptor = "(ILclient!en;Lclient!en;I)V")
-	public Cache(@OriginalArg(0) int arg0, @OriginalArg(1) Class38 arg1, @OriginalArg(2) Class38 arg2, @OriginalArg(3) int arg3) {
+	public Cache(@OriginalArg(0) int arg0, @OriginalArg(1) BufferedFile arg1, @OriginalArg(2) BufferedFile arg2, @OriginalArg(3) int arg3) {
 		this.anInt2156 = arg3;
 		this.aClass38_2 = arg2;
 		this.anInt2150 = arg0;
@@ -36,7 +36,7 @@ public final class Cache {
 
 	@OriginalMember(owner = "client!ge", name = "a", descriptor = "(II[BB)Z")
 	public final boolean method1700(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) byte[] arg2) {
-		@Pc(7) Class38 local7 = this.aClass38_1;
+		@Pc(7) BufferedFile local7 = this.aClass38_1;
 		synchronized (this.aClass38_1) {
 			if (arg1 < 0 || arg1 > this.anInt2156) {
 				throw new IllegalArgumentException();
@@ -51,7 +51,7 @@ public final class Cache {
 
 	@OriginalMember(owner = "client!ge", name = "a", descriptor = "(IB)[B")
 	public final byte[] method1701(@OriginalArg(0) int arg0) {
-		@Pc(9) Class38 local9 = this.aClass38_1;
+		@Pc(9) BufferedFile local9 = this.aClass38_1;
 		synchronized (this.aClass38_1) {
 			try {
 				@Pc(27) Object local27;
@@ -113,7 +113,7 @@ public final class Cache {
 
 	@OriginalMember(owner = "client!ge", name = "a", descriptor = "(BII[BZ)Z")
 	private boolean method1704(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) byte[] arg2, @OriginalArg(4) boolean arg3) {
-		@Pc(9) Class38 local9 = this.aClass38_1;
+		@Pc(9) BufferedFile local9 = this.aClass38_1;
 		synchronized (this.aClass38_1) {
 			try {
 				@Pc(67) int local67;

@@ -112,7 +112,7 @@ public final class RawModel extends Entity {
 	public int[] anIntArray202;
 
 	@OriginalMember(owner = "client!gb", name = "kb", descriptor = "[Lclient!qj;")
-	public BufferedFile[] aClass126Array1;
+	public TriangleNormal[] aClass126Array1;
 
 	@OriginalMember(owner = "client!gb", name = "mb", descriptor = "[S")
 	public short[] aShortArray27;
@@ -608,9 +608,9 @@ public final class RawModel extends Entity {
 				local272.anInt2432++;
 			} else if (local201 == 1) {
 				if (this.aClass126Array1 == null) {
-					this.aClass126Array1 = new BufferedFile[this.anInt2136];
+					this.aClass126Array1 = new TriangleNormal[this.anInt2136];
 				}
-				@Pc(317) BufferedFile local317 = this.aClass126Array1[local10] = new BufferedFile();
+				@Pc(317) TriangleNormal local317 = this.aClass126Array1[local10] = new TriangleNormal();
 				local317.anInt4769 = local112;
 				local317.anInt4770 = local120;
 				local317.anInt4767 = local128;

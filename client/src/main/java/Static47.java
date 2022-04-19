@@ -11,7 +11,7 @@ public final class Static47 {
 	public static final JagString aClass100_992 = Static28.method790("blinken1:");
 
 	@OriginalMember(owner = "client!dk", name = "j", descriptor = "[Lclient!en;")
-	public static final Class38[] aClass38Array2 = new Class38[28];
+	public static final BufferedFile[] aClass38Array2 = new BufferedFile[28];
 
 	@OriginalMember(owner = "client!dk", name = "a", descriptor = "(III)Lclient!ec;")
 	public static Scenery method3996(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
