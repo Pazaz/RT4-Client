@@ -10,7 +10,7 @@ public final class LruHashTable {
 	private SecondaryNode aClass3_Sub2_37 = new SecondaryNode();
 
 	@OriginalMember(owner = "client!gn", name = "s", descriptor = "Lclient!ce;")
-	private final Class16 aClass16_1 = new Class16();
+	private final SecondaryLinkedList aClass16_1 = new SecondaryLinkedList();
 
 	@OriginalMember(owner = "client!gn", name = "u", descriptor = "I")
 	private int anInt2314;

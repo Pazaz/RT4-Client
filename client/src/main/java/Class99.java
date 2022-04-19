@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Class99 {
 
 	@OriginalMember(owner = "client!n", name = "k", descriptor = "Lclient!ce;")
-	private final Class16 aClass16_8 = new Class16();
+	private final SecondaryLinkedList aClass16_8 = new SecondaryLinkedList();
 
 	@OriginalMember(owner = "client!n", name = "m", descriptor = "I")
 	private final int anInt3970;
