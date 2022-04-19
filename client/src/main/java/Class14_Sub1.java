@@ -43,7 +43,7 @@ public final class Class14_Sub1 extends Class14 {
 	private LinkedList aClass69_17;
 
 	@OriginalMember(owner = "client!bg", name = "J", descriptor = "Lclient!k;")
-	private final Class80 aClass80_2;
+	private final Js5CacheQueue aClass80_2;
 
 	@OriginalMember(owner = "client!bg", name = "H", descriptor = "I")
 	private final int anInt573;
@@ -64,7 +64,7 @@ public final class Class14_Sub1 extends Class14 {
 	private Class3_Sub2_Sub5 aClass3_Sub2_Sub5_1;
 
 	@OriginalMember(owner = "client!bg", name = "<init>", descriptor = "(ILclient!ge;Lclient!ge;Lclient!jb;Lclient!k;IIZ)V")
-	public Class14_Sub1(@OriginalArg(0) int arg0, @OriginalArg(1) Class49 arg1, @OriginalArg(2) Class49 arg2, @OriginalArg(3) Class73 arg3, @OriginalArg(4) Class80 arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) boolean arg7) {
+	public Class14_Sub1(@OriginalArg(0) int arg0, @OriginalArg(1) Class49 arg1, @OriginalArg(2) Class49 arg2, @OriginalArg(3) Class73 arg3, @OriginalArg(4) Js5CacheQueue arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) boolean arg7) {
 		this.anInt576 = arg0;
 		this.aClass49_2 = arg1;
 		if (this.aClass49_2 == null) {
