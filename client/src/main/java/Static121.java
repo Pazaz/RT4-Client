@@ -11,7 +11,7 @@ public final class Static121 {
 	public static int anInt3039;
 
 	@OriginalMember(owner = "client!jg", name = "c", descriptor = "Lclient!en;")
-	public static Class38 aClass38_3;
+	public static BufferedFile aClass38_3;
 
 	@OriginalMember(owner = "client!jg", name = "g", descriptor = "I")
 	public static int anInt3041;

@@ -75,7 +75,7 @@ public final class Class59 {
 	private void method1947() {
 		@Pc(8) long local8 = this.aLong88;
 		this.aLong88 = -1L;
-		@Pc(13) long[] local13 = BufferedFile.aLongArray7;
+		@Pc(13) long[] local13 = TriangleNormal.aLongArray7;
 		this.aLong88 = local13[(int) (((long) (this.anInt2497 >> 8) ^ this.aLong88) & 0xFFL)] ^ this.aLong88 >>> 8;
 		this.aLong88 = local13[(int) ((this.aLong88 ^ (long) this.anInt2497) & 0xFFL)] ^ this.aLong88 >>> 8;
 		@Pc(53) int local53;

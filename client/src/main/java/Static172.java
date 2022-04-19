@@ -11,7 +11,7 @@ public final class Static172 {
 	public static MidiPcmStream aClass3_Sub3_Sub4_2;
 
 	@OriginalMember(owner = "client!nj", name = "f", descriptor = "Lclient!en;")
-	public static Class38 aClass38_4;
+	public static BufferedFile aClass38_4;
 
 	@OriginalMember(owner = "client!nj", name = "g", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_70;
