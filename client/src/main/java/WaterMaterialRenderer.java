@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!pd")
-public final class Class119 implements MaterialRenderer {
+public final class WaterMaterialRenderer implements MaterialRenderer {
 
 	@OriginalMember(owner = "client!pd", name = "a", descriptor = "I")
 	private int anInt4440 = -1;
@@ -21,7 +21,7 @@ public final class Class119 implements MaterialRenderer {
 	private int anInt4442 = -1;
 
 	@OriginalMember(owner = "client!pd", name = "<init>", descriptor = "()V")
-	public Class119() {
+	public WaterMaterialRenderer() {
 		this.method3435();
 		this.method3437();
 	}
