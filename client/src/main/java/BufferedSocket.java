@@ -185,7 +185,7 @@ public final class BufferedSocket implements Runnable {
 	public final void method2833() {
 		if (!this.aBoolean177) {
 			this.anInputStream1 = new InputStream_Sub1();
-			this.anOutputStream1 = new OutputStream_Sub1();
+			this.anOutputStream1 = new BrokenOutputStream();
 		}
 	}
 

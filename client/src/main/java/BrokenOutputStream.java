@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!vg")
-public final class OutputStream_Sub1 extends OutputStream {
+public final class BrokenOutputStream extends OutputStream {
 
 	@OriginalMember(owner = "client!vg", name = "write", descriptor = "(I)V")
 	@Override
