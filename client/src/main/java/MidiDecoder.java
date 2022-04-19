@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ki")
-public final class Class84 {
+public final class MidiDecoder {
 
 	@OriginalMember(owner = "client!ki", name = "b", descriptor = "[I")
 	public int[] anIntArray310;
@@ -31,11 +31,11 @@ public final class Class84 {
 	private final Buffer aClass3_Sub15_6 = new Buffer(null);
 
 	@OriginalMember(owner = "client!ki", name = "<init>", descriptor = "()V")
-	public Class84() {
+	public MidiDecoder() {
 	}
 
 	@OriginalMember(owner = "client!ki", name = "<init>", descriptor = "([B)V")
-	public Class84(@OriginalArg(0) byte[] arg0) {
+	public MidiDecoder(@OriginalArg(0) byte[] arg0) {
 		this.method2635(arg0);
 	}
 
