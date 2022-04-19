@@ -20,16 +20,16 @@ public final class Class73 {
 	private Class3_Sub2_Sub5_Sub2 aClass3_Sub2_Sub5_Sub2_2;
 
 	@OriginalMember(owner = "client!jb", name = "a", descriptor = "Lclient!ce;")
-	private final Class16 aClass16_2 = new Class16();
+	private final SecondaryLinkedList aClass16_2 = new SecondaryLinkedList();
 
 	@OriginalMember(owner = "client!jb", name = "q", descriptor = "Lclient!ce;")
-	private final Class16 aClass16_3 = new Class16();
+	private final SecondaryLinkedList aClass16_3 = new SecondaryLinkedList();
 
 	@OriginalMember(owner = "client!jb", name = "v", descriptor = "Lclient!ce;")
-	private final Class16 aClass16_4 = new Class16();
+	private final SecondaryLinkedList aClass16_4 = new SecondaryLinkedList();
 
 	@OriginalMember(owner = "client!jb", name = "z", descriptor = "Lclient!ce;")
-	private final Class16 aClass16_5 = new Class16();
+	private final SecondaryLinkedList aClass16_5 = new SecondaryLinkedList();
 
 	@OriginalMember(owner = "client!jb", name = "E", descriptor = "Lclient!wa;")
 	private final Buffer aClass3_Sub15_4 = new Buffer(4);

@@ -2780,7 +2780,7 @@ public final class Static88 {
 														local26--;
 														local2522 = Static3.aClass100Array176[local26];
 														local7566 = false;
-														@Pc(7577) Class16 local7577 = Static183.method3333(local809 >> 14 & 0x3FFF, local809 & 0x3FFF);
+														@Pc(7577) SecondaryLinkedList local7577 = Static183.method3333(local809 >> 14 & 0x3FFF, local809 & 0x3FFF);
 														for (@Pc(7582) Class3_Sub2_Sub4 local7582 = (Class3_Sub2_Sub4) local7577.method795(); local7582 != null; local7582 = (Class3_Sub2_Sub4) local7577.method797()) {
 															if (local7582.aClass100_138.method3111(local2522)) {
 																local7566 = true;

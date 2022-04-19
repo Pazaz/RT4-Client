@@ -28,8 +28,8 @@ public final class Static183 {
 	}
 
 	@OriginalMember(owner = "client!ok", name = "a", descriptor = "(IIB)Lclient!ce;")
-	public static Class16 method3333(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		@Pc(9) Class16 local9 = new Class16();
+	public static SecondaryLinkedList method3333(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+		@Pc(9) SecondaryLinkedList local9 = new SecondaryLinkedList();
 		for (@Pc(14) Class3_Sub2_Sub4 local14 = (Class3_Sub2_Sub4) Static228.aClass69_120.method2289(); local14 != null; local14 = (Class3_Sub2_Sub4) Static228.aClass69_120.method2288()) {
 			if (local14.aBoolean50 && local14.method664(arg1, arg0)) {
 				local9.method798(local14);

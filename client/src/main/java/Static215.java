@@ -15,7 +15,7 @@ public final class Static215 {
 	public static client aClient1;
 
 	@OriginalMember(owner = "client!rh", name = "e", descriptor = "Lclient!ce;")
-	public static final Class16 aClass16_9 = new Class16();
+	public static final SecondaryLinkedList aClass16_9 = new SecondaryLinkedList();
 
 	@OriginalMember(owner = "client!rh", name = "g", descriptor = "I")
 	public static final int anInt4868 = -1;

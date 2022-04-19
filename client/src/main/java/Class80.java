@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Class80 implements Runnable {
 
 	@OriginalMember(owner = "client!k", name = "q", descriptor = "Lclient!ce;")
-	private final Class16 aClass16_6 = new Class16();
+	private final SecondaryLinkedList aClass16_6 = new SecondaryLinkedList();
 
 	@OriginalMember(owner = "client!k", name = "s", descriptor = "I")
 	public int anInt3131 = 0;
@@ -32,7 +32,7 @@ public final class Class80 implements Runnable {
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(Lclient!c;I)V")
 	private void method2461(@OriginalArg(0) Class3_Sub2_Sub5_Sub1 arg0) {
-		@Pc(7) Class16 local7 = this.aClass16_6;
+		@Pc(7) SecondaryLinkedList local7 = this.aClass16_6;
 		synchronized (this.aClass16_6) {
 			this.aClass16_6.method798(arg0);
 			this.anInt3131++;
@@ -43,7 +43,7 @@ public final class Class80 implements Runnable {
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(I)V")
 	public final void method2466() {
 		this.aBoolean161 = true;
-		@Pc(6) Class16 local6 = this.aClass16_6;
+		@Pc(6) SecondaryLinkedList local6 = this.aClass16_6;
 		synchronized (this.aClass16_6) {
 			this.aClass16_6.notifyAll();
 		}
@@ -81,7 +81,7 @@ public final class Class80 implements Runnable {
 	public final Class3_Sub2_Sub5_Sub1 method2471(@OriginalArg(0) Class49 arg0, @OriginalArg(2) int arg1) {
 		@Pc(9) Class3_Sub2_Sub5_Sub1 local9 = new Class3_Sub2_Sub5_Sub1();
 		local9.anInt824 = 1;
-		@Pc(16) Class16 local16 = this.aClass16_6;
+		@Pc(16) SecondaryLinkedList local16 = this.aClass16_6;
 		synchronized (this.aClass16_6) {
 			@Pc(31) Class3_Sub2_Sub5_Sub1 local31 = (Class3_Sub2_Sub5_Sub1) this.aClass16_6.method795();
 			while (true) {
@@ -106,7 +106,7 @@ public final class Class80 implements Runnable {
 	@Override
 	public final void run() {
 		while (!this.aBoolean161) {
-			@Pc(12) Class16 local12 = this.aClass16_6;
+			@Pc(12) SecondaryLinkedList local12 = this.aClass16_6;
 			@Pc(19) Class3_Sub2_Sub5_Sub1 local19;
 			synchronized (this.aClass16_6) {
 				local19 = (Class3_Sub2_Sub5_Sub1) this.aClass16_6.method796();
