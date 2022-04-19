@@ -290,7 +290,7 @@ public final class Static81 {
 			Static83.anIntArray23[Static70.anInt2015++ & 0x1F] = local34;
 		}
 		@Pc(782) int local782;
-		for (@Pc(709) Class3_Sub2_Sub8 local709 = Static127.method2464(); local709 != null; local709 = Static127.method2464()) {
+		for (@Pc(709) DelayedStateChange local709 = Static127.method2464(); local709 != null; local709 = Static127.method2464()) {
 			local79 = local709.method1011();
 			local88 = local709.method1012();
 			if (local79 == 1) {

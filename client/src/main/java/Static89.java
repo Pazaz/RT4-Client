@@ -145,7 +145,7 @@ public final class Static89 {
 
 	@OriginalMember(owner = "client!ha", name = "b", descriptor = "(II)V")
 	public static void method1840(@OriginalArg(1) int arg0) {
-		@Pc(8) Class3_Sub2_Sub8 local8 = Static238.method4143(2, arg0);
+		@Pc(8) DelayedStateChange local8 = Static238.method4143(2, arg0);
 		local8.method1007();
 	}
 
