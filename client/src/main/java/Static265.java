@@ -8,7 +8,7 @@ public final class Static265 {
 	public static int anInt5765;
 
 	@OriginalMember(owner = "client!vj", name = "j", descriptor = "Lclient!dd;")
-	public static Class3_Sub2_Sub9_Sub1 aClass3_Sub2_Sub9_Sub1_2;
+	public static SoftwareFont aClass3_Sub2_Sub9_Sub1_2;
 
 	@OriginalMember(owner = "client!vj", name = "h", descriptor = "Lclient!na;")
 	private static final Class100 aClass100_1084 = Static28.method790("Connecting to update server");
