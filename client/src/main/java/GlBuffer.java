@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!ql")
-public final class Class127 {
+public final class GlBuffer {
 
 	@OriginalMember(owner = "client!ql", name = "e", descriptor = "Lclient!vi;")
 	public Class155 aClass155_4;

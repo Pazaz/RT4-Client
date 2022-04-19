@@ -24,16 +24,16 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 	private short[] aShortArray78;
 
 	@OriginalMember(owner = "client!td", name = "z", descriptor = "Lclient!ql;")
-	private Class127 aClass127_1;
+	private GlBuffer aClass127_1;
 
 	@OriginalMember(owner = "client!td", name = "A", descriptor = "Lclient!ql;")
-	private Class127 aClass127_2;
+	private GlBuffer aClass127_2;
 
 	@OriginalMember(owner = "client!td", name = "B", descriptor = "[B")
 	private byte[] aByteArray71;
 
 	@OriginalMember(owner = "client!td", name = "C", descriptor = "Lclient!ql;")
-	private Class127 aClass127_3;
+	private GlBuffer aClass127_3;
 
 	@OriginalMember(owner = "client!td", name = "E", descriptor = "S")
 	private short aShort28;
@@ -81,7 +81,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 	private int[] anIntArray462;
 
 	@OriginalMember(owner = "client!td", name = "Y", descriptor = "Lclient!ql;")
-	public Class127 aClass127_4;
+	public GlBuffer aClass127_4;
 
 	@OriginalMember(owner = "client!td", name = "Z", descriptor = "[I")
 	private int[] anIntArray463;
@@ -99,7 +99,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 	public int[] anIntArray465;
 
 	@OriginalMember(owner = "client!td", name = "fb", descriptor = "Lclient!ql;")
-	private Class127 aClass127_5;
+	private GlBuffer aClass127_5;
 
 	@OriginalMember(owner = "client!td", name = "gb", descriptor = "[F")
 	private float[] aFloatArray26;
@@ -203,13 +203,13 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 			this.aShortArray78 = new short[this.anInt5297];
 		}
 		this.aClass5_1 = new Class5();
-		this.aClass127_4 = new Class127();
-		this.aClass127_1 = new Class127();
+		this.aClass127_4 = new GlBuffer();
+		this.aClass127_1 = new GlBuffer();
 		if (Static178.aBoolean202) {
-			this.aClass127_2 = new Class127();
+			this.aClass127_2 = new GlBuffer();
 		}
-		this.aClass127_3 = new Class127();
-		this.aClass127_5 = new Class127();
+		this.aClass127_3 = new GlBuffer();
+		this.aClass127_5 = new GlBuffer();
 		this.aShort29 = (short) arg1;
 		this.aShort28 = (short) arg2;
 		this.aShortArray81 = new short[local117];
@@ -2362,7 +2362,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 			arg3.anIntArray466[local69] = this.anIntArray466[local69];
 		}
 		if (arg3.aClass127_4 == null) {
-			arg3.aClass127_4 = new Class127();
+			arg3.aClass127_4 = new GlBuffer();
 		}
 		arg3.aClass127_4.aBoolean235 = false;
 		if (arg3.aClass5_1 == null) {
@@ -2395,7 +2395,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 			arg3.aClass127_1 = this.aClass127_1;
 		} else {
 			if (arg4.aClass127_1 == null) {
-				arg4.aClass127_1 = new Class127();
+				arg4.aClass127_1 = new GlBuffer();
 			}
 			arg3.aClass127_1 = arg4.aClass127_1;
 			arg3.aClass127_1.aBoolean235 = false;
@@ -2425,7 +2425,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 			}
 			if (Static178.aBoolean202) {
 				if (arg4.aClass127_2 == null) {
-					arg4.aClass127_2 = new Class127();
+					arg4.aClass127_2 = new GlBuffer();
 				}
 				arg3.aClass127_2 = arg4.aClass127_2;
 				arg3.aClass127_2.aBoolean235 = false;
@@ -2519,7 +2519,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 			local3.aClass127_4 = this.aClass127_4;
 			local3.aClass5_1 = this.aClass5_1;
 		} else {
-			local3.aClass127_4 = new Class127();
+			local3.aClass127_4 = new GlBuffer();
 			local3.aClass5_1 = new Class5();
 		}
 		if (arg2) {
@@ -2531,7 +2531,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 		if (arg2 && arg3 && (arg6 && arg4 || Static178.aBoolean202)) {
 			local3.aClass127_1 = this.aClass127_1;
 		} else {
-			local3.aClass127_1 = new Class127();
+			local3.aClass127_1 = new GlBuffer();
 		}
 		if (arg4) {
 			local3.aShortArray76 = this.aShortArray76;
@@ -2549,7 +2549,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 		} else if (arg4 && arg5 && arg6) {
 			local3.aClass127_2 = this.aClass127_2;
 		} else {
-			local3.aClass127_2 = new Class127();
+			local3.aClass127_2 = new GlBuffer();
 		}
 		local3.aFloatArray25 = this.aFloatArray25;
 		local3.aFloatArray26 = this.aFloatArray26;
@@ -2563,7 +2563,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 			local3.aShortArray77 = Static263.method4511(this.aShortArray77);
 			local3.aShortArray82 = Static263.method4511(this.aShortArray82);
 			local3.aShortArray83 = Static263.method4511(this.aShortArray83);
-			local3.aClass127_5 = new Class127();
+			local3.aClass127_5 = new GlBuffer();
 		}
 		if (arg8) {
 			local3.aShortArray80 = this.aShortArray80;
