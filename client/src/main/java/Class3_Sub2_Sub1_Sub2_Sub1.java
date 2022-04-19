@@ -14,7 +14,7 @@ public final class Class3_Sub2_Sub1_Sub2_Sub1 extends GlSprite {
 	}
 
 	@OriginalMember(owner = "client!el", name = "<init>", descriptor = "(Lclient!mm;)V")
-	public Class3_Sub2_Sub1_Sub2_Sub1(@OriginalArg(0) Class3_Sub2_Sub1_Sub1 arg0) {
+	public Class3_Sub2_Sub1_Sub2_Sub1(@OriginalArg(0) SoftwareSprite arg0) {
 		super(arg0);
 	}
 

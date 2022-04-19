@@ -207,7 +207,7 @@ public final class Static33 {
 			if (Static239.aBoolean269) {
 				local6[local15] = new GlSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local15], Static269.anIntArray252[local15], Static254.anIntArray488[local15], Static26.anIntArray66[local15], local37);
 			} else {
-				local6[local15] = new Class3_Sub2_Sub1_Sub1(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local15], Static269.anIntArray252[local15], Static254.anIntArray488[local15], Static26.anIntArray66[local15], local37);
+				local6[local15] = new SoftwareSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local15], Static269.anIntArray252[local15], Static254.anIntArray488[local15], Static26.anIntArray66[local15], local37);
 			}
 		}
 		Static75.method1631();

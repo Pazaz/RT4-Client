@@ -934,7 +934,7 @@ public final class Class13 {
 		if (local72 != null) {
 			return local72;
 		}
-		@Pc(85) Class3_Sub2_Sub1_Sub1 local85;
+		@Pc(85) SoftwareSprite local85;
 		if (this.aBoolean18) {
 			local85 = Static80.method3613(Static23.aClass153_12, local12);
 		} else {

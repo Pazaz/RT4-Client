@@ -47,14 +47,14 @@ public final class Static30 {
 				Static242.aClass36_Sub1Array2[local101].method1396();
 			}
 		}
-		@Pc(124) Class3_Sub2_Sub1_Sub1 local124 = Static78.method1693(0, arg0, Static163.anInt3962);
+		@Pc(124) SoftwareSprite local124 = Static78.method1693(0, arg0, Static163.anInt3962);
 		local124.method311();
 		if (Static239.aBoolean269) {
 			Static106.aClass3_Sub2_Sub1_7 = new GlSprite(local124);
 		} else {
 			Static106.aClass3_Sub2_Sub1_7 = local124;
 		}
-		@Pc(143) Class3_Sub2_Sub1_Sub1[] local143 = Static265.method4523(Static128.anInt3143, arg0);
+		@Pc(143) SoftwareSprite[] local143 = Static265.method4523(Static128.anInt3143, arg0);
 		@Pc(145) int local145;
 		for (local145 = 0; local145 < local143.length; local145++) {
 			local143[local145].method311();

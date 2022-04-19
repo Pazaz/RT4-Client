@@ -24,10 +24,10 @@ public final class Static102 {
 	public static int anInt2680 = 0;
 
 	@OriginalMember(owner = "client!hn", name = "d", descriptor = "(I)Lclient!mm;")
-	public static Class3_Sub2_Sub1_Sub1 method2071() {
+	public static SoftwareSprite method2071() {
 		@Pc(13) int local13 = Static26.anIntArray66[0] * Static254.anIntArray488[0];
 		@Pc(17) byte[] local17 = Static7.aByteArrayArray5[0];
-		@Pc(78) Class3_Sub2_Sub1_Sub1 local78;
+		@Pc(78) SoftwareSprite local78;
 		if (Static159.aBooleanArray87[0]) {
 			@Pc(30) byte[] local30 = Static64.aByteArrayArray9[0];
 			@Pc(33) int[] local33 = new int[local13];
@@ -40,7 +40,7 @@ public final class Static102 {
 			for (@Pc(85) int local85 = 0; local85 < local13; local85++) {
 				local83[local85] = Static259.anIntArray513[local17[local85] & 0xFF];
 			}
-			local78 = new Class3_Sub2_Sub1_Sub1(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[0], Static269.anIntArray252[0], Static254.anIntArray488[0], Static26.anIntArray66[0], local83);
+			local78 = new SoftwareSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[0], Static269.anIntArray252[0], Static254.anIntArray488[0], Static26.anIntArray66[0], local83);
 		}
 		Static75.method1631();
 		return local78;

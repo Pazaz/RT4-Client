@@ -20,7 +20,7 @@ public final class Static167 {
 	public static Class153 aClass153_64;
 
 	@OriginalMember(owner = "client!nd", name = "y", descriptor = "Lclient!mm;")
-	public static Class3_Sub2_Sub1_Sub1 aClass3_Sub2_Sub1_Sub1_3;
+	public static SoftwareSprite aClass3_Sub2_Sub1_Sub1_3;
 
 	@OriginalMember(owner = "client!nd", name = "b", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_780 = Static28.method790("Clientscript error in: ");

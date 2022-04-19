@@ -298,7 +298,7 @@ public final class Static269 {
 		if (Static239.aBoolean269) {
 			if (Static153.aClass3_Sub2_Sub1_Sub1_2 == null || Static153.aClass3_Sub2_Sub1_Sub1_2.anInt1867 != arg3 || Static153.aClass3_Sub2_Sub1_Sub1_2.anInt1859 != arg2) {
 				Static153.aClass3_Sub2_Sub1_Sub1_2 = null;
-				Static153.aClass3_Sub2_Sub1_Sub1_2 = new Class3_Sub2_Sub1_Sub1(arg3, arg2);
+				Static153.aClass3_Sub2_Sub1_Sub1_2 = new SoftwareSprite(arg3, arg2);
 			}
 			Static129.method2491(Static153.aClass3_Sub2_Sub1_Sub1_2.anIntArray20, arg3, arg2);
 			Static214.method4364(arg3, 0, local61, local50, 0, local236, arg2, local211);

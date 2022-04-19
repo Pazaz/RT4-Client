@@ -26,9 +26,9 @@ public final class Static137 {
 		@Pc(80) int local80;
 		if (Static56.aClass3_Sub2_Sub1_Sub1_1 == null) {
 			if (Static239.aBoolean269 || Static89.aClass3_Sub2_Sub1_5 == null) {
-				Static56.aClass3_Sub2_Sub1_Sub1_1 = new Class3_Sub2_Sub1_Sub1(512, 512);
+				Static56.aClass3_Sub2_Sub1_Sub1_1 = new SoftwareSprite(512, 512);
 			} else {
-				Static56.aClass3_Sub2_Sub1_Sub1_1 = (Class3_Sub2_Sub1_Sub1) Static89.aClass3_Sub2_Sub1_5;
+				Static56.aClass3_Sub2_Sub1_Sub1_1 = (SoftwareSprite) Static89.aClass3_Sub2_Sub1_5;
 			}
 			@Pc(32) int[] local32 = Static56.aClass3_Sub2_Sub1_Sub1_1.anIntArray20;
 			local35 = local32.length;

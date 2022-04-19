@@ -16,8 +16,8 @@ public final class Class63 {
 	private int anInt2857;
 
 	@OriginalMember(owner = "client!ia", name = "a", descriptor = "(B)Lclient!mm;")
-	public final Class3_Sub2_Sub1_Sub1 method2246() {
-		@Pc(7) Class3_Sub2_Sub1_Sub1 local7 = (Class3_Sub2_Sub1_Sub1) Static7.aClass99_5.method3106((long) this.anInt2857);
+	public final SoftwareSprite method2246() {
+		@Pc(7) SoftwareSprite local7 = (SoftwareSprite) Static7.aClass99_5.method3106((long) this.anInt2857);
 		if (local7 != null) {
 			return local7;
 		}

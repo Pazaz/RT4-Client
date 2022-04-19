@@ -17,8 +17,8 @@ public final class Static14 {
 	public static int anInt441 = 0;
 
 	@OriginalMember(owner = "client!bd", name = "a", descriptor = "(Z)[Lclient!mm;")
-	public static Class3_Sub2_Sub1_Sub1[] method474() {
-		@Pc(4) Class3_Sub2_Sub1_Sub1[] local4 = new Class3_Sub2_Sub1_Sub1[Static165.anInt4038];
+	public static SoftwareSprite[] method474() {
+		@Pc(4) SoftwareSprite[] local4 = new SoftwareSprite[Static165.anInt4038];
 		for (@Pc(12) int local12 = 0; local12 < Static165.anInt4038; local12++) {
 			@Pc(27) int local27 = Static26.anIntArray66[local12] * Static254.anIntArray488[local12];
 			@Pc(31) byte[] local31 = Static7.aByteArrayArray5[local12];
@@ -26,7 +26,7 @@ public final class Static14 {
 			for (@Pc(36) int local36 = 0; local36 < local27; local36++) {
 				local34[local36] = Static259.anIntArray513[local31[local36] & 0xFF];
 			}
-			local4[local12] = new Class3_Sub2_Sub1_Sub1(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local12], Static269.anIntArray252[local12], Static254.anIntArray488[local12], Static26.anIntArray66[local12], local34);
+			local4[local12] = new SoftwareSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local12], Static269.anIntArray252[local12], Static254.anIntArray488[local12], Static26.anIntArray66[local12], local34);
 		}
 		Static75.method1631();
 		return local4;

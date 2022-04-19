@@ -11,7 +11,7 @@ public final class Static173 {
 	public static int anInt4183;
 
 	@OriginalMember(owner = "client!nk", name = "L", descriptor = "[Lclient!mm;")
-	public static Class3_Sub2_Sub1_Sub1[] aClass3_Sub2_Sub1_Sub1Array9;
+	public static SoftwareSprite[] aClass3_Sub2_Sub1_Sub1Array9;
 
 	@OriginalMember(owner = "client!nk", name = "O", descriptor = "Lclient!e;")
 	public static Class8_Sub4_Sub1 aClass8_Sub4_Sub1_2;
