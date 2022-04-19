@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!sd")
-public final class Class3_Sub2_Sub18 extends SecondaryNode {
+public final class GlSolidColorTexture extends SecondaryNode {
 
 	@OriginalMember(owner = "client!sd", name = "U", descriptor = "I")
 	private int anInt5065 = 0;
@@ -18,7 +18,7 @@ public final class Class3_Sub2_Sub18 extends SecondaryNode {
 	private final int anInt5059;
 
 	@OriginalMember(owner = "client!sd", name = "<init>", descriptor = "(I)V")
-	public Class3_Sub2_Sub18(@OriginalArg(0) int arg0) {
+	public GlSolidColorTexture(@OriginalArg(0) int arg0) {
 		@Pc(9) GL local9 = Static239.aGL1;
 		@Pc(12) int[] local12 = new int[1];
 		local9.glGenTextures(1, local12, 0);

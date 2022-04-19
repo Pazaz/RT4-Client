@@ -156,7 +156,7 @@ public final class Js5GlTextureProvider implements GlTextureProvider {
 			local23 = local28.method4296(this.aClass153_72, this, this.aBoolean200 || this.aBooleanArray89[arg0]);
 		}
 		if (!local23) {
-			@Pc(56) Class3_Sub2_Sub18 local56 = this.method3244(arg0);
+			@Pc(56) GlSolidColorTexture local56 = this.method3244(arg0);
 			local56.method3887();
 		}
 	}
@@ -203,10 +203,10 @@ public final class Js5GlTextureProvider implements GlTextureProvider {
 	}
 
 	@OriginalMember(owner = "client!nk", name = "j", descriptor = "(II)Lclient!sd;")
-	private Class3_Sub2_Sub18 method3244(@OriginalArg(1) int arg0) {
-		@Pc(19) Class3_Sub2_Sub18 local19 = (Class3_Sub2_Sub18) this.aClass54_11.method1806((long) arg0);
+	private GlSolidColorTexture method3244(@OriginalArg(1) int arg0) {
+		@Pc(19) GlSolidColorTexture local19 = (GlSolidColorTexture) this.aClass54_11.method1806((long) arg0);
 		if (local19 == null) {
-			local19 = new Class3_Sub2_Sub18(this.aShortArray59[arg0] & 0xFFFF);
+			local19 = new GlSolidColorTexture(this.aShortArray59[arg0] & 0xFFFF);
 			this.aClass54_11.method1811(local19, (long) arg0);
 			return local19;
 		} else {
