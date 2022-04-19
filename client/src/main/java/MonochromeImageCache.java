@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!a")
-public final class Class1 {
+public final class MonochromeImageCache {
 
 	@OriginalMember(owner = "client!a", name = "b", descriptor = "[I")
 	public static final int[] anIntArray1 = new int[4096];
