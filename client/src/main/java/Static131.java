@@ -18,7 +18,7 @@ public final class Static131 {
 	private static final JagString aClass100_624 = Static28.method790("Allocating memory");
 
 	@OriginalMember(owner = "client!kd", name = "mb", descriptor = "[Lclient!cl;")
-	public static final Class3_Sub2_Sub7[] aClass3_Sub2_Sub7Array5 = new Class3_Sub2_Sub7[14];
+	public static final AnimFrameset[] aClass3_Sub2_Sub7Array5 = new AnimFrameset[14];
 
 	@OriginalMember(owner = "client!kd", name = "ob", descriptor = "I")
 	public static int anInt3251 = 0;

@@ -75,13 +75,13 @@ public final class Class144 {
 	public final Model method4214(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Model arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
 		@Pc(10) int local10 = this.anIntArray474[arg0];
 		@Pc(15) int local15 = this.anIntArray473[arg0];
-		@Pc(23) Class3_Sub2_Sub7 local23 = Static72.method1566(local15 >> 16);
+		@Pc(23) AnimFrameset local23 = Static72.method1566(local15 >> 16);
 		@Pc(27) int local27 = local15 & 0xFFFF;
 		if (local23 == null) {
 			return arg2.method4568(true, true, true);
 		}
 		@Pc(39) int local39 = arg3 & 0x3;
-		@Pc(41) Class3_Sub2_Sub7 local41 = null;
+		@Pc(41) AnimFrameset local41 = null;
 		if ((this.aBoolean277 || Static204.aBoolean234) && arg1 != -1 && this.anIntArray473.length > arg1) {
 			@Pc(69) int local69 = this.anIntArray473[arg1];
 			local41 = Static72.method1566(local69 >> 16);
@@ -131,19 +131,19 @@ public final class Class144 {
 	public final Model method4215(@OriginalArg(0) Model arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		@Pc(8) int local8 = this.anIntArray473[arg3];
 		@Pc(13) int local13 = this.anIntArray474[arg3];
-		@Pc(19) Class3_Sub2_Sub7 local19 = Static72.method1566(local8 >> 16);
+		@Pc(19) AnimFrameset local19 = Static72.method1566(local8 >> 16);
 		@Pc(23) int local23 = local8 & 0xFFFF;
 		if (local19 == null) {
 			return arg0.method4572(true, true, true);
 		}
-		@Pc(34) Class3_Sub2_Sub7 local34 = null;
+		@Pc(34) AnimFrameset local34 = null;
 		if ((this.aBoolean277 || Static204.aBoolean234) && arg1 != -1 && arg1 < this.anIntArray473.length) {
 			@Pc(59) int local59 = this.anIntArray473[arg1];
 			local34 = Static72.method1566(local59 >> 16);
 			arg1 = local59 & 0xFFFF;
 		}
-		@Pc(71) Class3_Sub2_Sub7 local71 = null;
-		@Pc(81) Class3_Sub2_Sub7 local81 = null;
+		@Pc(71) AnimFrameset local71 = null;
+		@Pc(81) AnimFrameset local81 = null;
 		@Pc(83) int local83 = 0;
 		@Pc(85) int local85 = 0;
 		if (this.anIntArray475 != null) {
@@ -188,13 +188,13 @@ public final class Class144 {
 	public final Model method4216(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Model arg4) {
 		@Pc(6) int local6 = this.anIntArray474[arg1];
 		@Pc(11) int local11 = this.anIntArray473[arg1];
-		@Pc(19) Class3_Sub2_Sub7 local19 = Static72.method1566(local11 >> 16);
+		@Pc(19) AnimFrameset local19 = Static72.method1566(local11 >> 16);
 		@Pc(27) int local27 = local11 & 0xFFFF;
 		if (local19 == null) {
 			return arg4.method4572(true, true, true);
 		}
 		@Pc(40) int local40 = arg3 & 0x3;
-		@Pc(42) Class3_Sub2_Sub7 local42 = null;
+		@Pc(42) AnimFrameset local42 = null;
 		if ((this.aBoolean277 || Static204.aBoolean234) && arg0 != -1 && arg0 < this.anIntArray473.length) {
 			@Pc(66) int local66 = this.anIntArray473[arg0];
 			local42 = Static72.method1566(local66 >> 16);
@@ -263,12 +263,12 @@ public final class Class144 {
 	public final Model method4219(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) Model arg3) {
 		@Pc(16) int local16 = this.anIntArray474[arg2];
 		@Pc(21) int local21 = this.anIntArray473[arg2];
-		@Pc(27) Class3_Sub2_Sub7 local27 = Static72.method1566(local21 >> 16);
+		@Pc(27) AnimFrameset local27 = Static72.method1566(local21 >> 16);
 		@Pc(31) int local31 = local21 & 0xFFFF;
 		if (local27 == null) {
 			return arg3.method4560(true, true, true);
 		}
-		@Pc(42) Class3_Sub2_Sub7 local42 = null;
+		@Pc(42) AnimFrameset local42 = null;
 		if ((this.aBoolean277 || Static204.aBoolean234) && arg0 != -1 && this.anIntArray473.length > arg0) {
 			@Pc(65) int local65 = this.anIntArray473[arg0];
 			local42 = Static72.method1566(local65 >> 16);

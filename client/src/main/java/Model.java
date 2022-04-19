@@ -178,7 +178,7 @@ public abstract class Model extends Entity {
 	public abstract void method4554(@OriginalArg(0) int arg0);
 
 	@OriginalMember(owner = "client!ak", name = "a", descriptor = "(Lclient!cl;I)V")
-	public final void method4555(@OriginalArg(0) Class3_Sub2_Sub7 arg0, @OriginalArg(1) int arg1) {
+	public final void method4555(@OriginalArg(0) AnimFrameset arg0, @OriginalArg(1) int arg1) {
 		if (arg1 == -1 || !this.method4551()) {
 			return;
 		}
@@ -200,7 +200,7 @@ public abstract class Model extends Entity {
 	protected abstract void method4557();
 
 	@OriginalMember(owner = "client!ak", name = "a", descriptor = "(Lclient!cl;ILclient!cl;IIIZ)V")
-	public final void method4558(@OriginalArg(0) Class3_Sub2_Sub7 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Class3_Sub2_Sub7 arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) boolean arg6) {
+	public final void method4558(@OriginalArg(0) AnimFrameset arg0, @OriginalArg(1) int arg1, @OriginalArg(2) AnimFrameset arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) boolean arg6) {
 		if (arg1 == -1 || !this.method4551()) {
 			return;
 		}
@@ -236,7 +236,7 @@ public abstract class Model extends Entity {
 	public abstract void method4564(@OriginalArg(0) int arg0);
 
 	@OriginalMember(owner = "client!ak", name = "a", descriptor = "(Lclient!cl;ILclient!cl;IIIIZ[I)V")
-	public final void method4565(@OriginalArg(0) Class3_Sub2_Sub7 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Class3_Sub2_Sub7 arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) boolean arg7, @OriginalArg(8) int[] arg8) {
+	public final void method4565(@OriginalArg(0) AnimFrameset arg0, @OriginalArg(1) int arg1, @OriginalArg(2) AnimFrameset arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) boolean arg7, @OriginalArg(8) int[] arg8) {
 		if (arg1 == -1 || !this.method4551()) {
 			return;
 		}
@@ -266,7 +266,7 @@ public abstract class Model extends Entity {
 	protected abstract void method4569(@OriginalArg(0) int arg0, @OriginalArg(1) int[] arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) boolean arg5);
 
 	@OriginalMember(owner = "client!ak", name = "a", descriptor = "(Lclient!cl;ILclient!cl;IIILclient!cl;ILclient!cl;III[ZZ)V")
-	public final void method4570(@OriginalArg(0) Class3_Sub2_Sub7 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Class3_Sub2_Sub7 arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) Class3_Sub2_Sub7 arg6, @OriginalArg(7) int arg7, @OriginalArg(8) Class3_Sub2_Sub7 arg8, @OriginalArg(9) int arg9, @OriginalArg(10) int arg10, @OriginalArg(11) int arg11, @OriginalArg(12) boolean[] arg12, @OriginalArg(13) boolean arg13) {
+	public final void method4570(@OriginalArg(0) AnimFrameset arg0, @OriginalArg(1) int arg1, @OriginalArg(2) AnimFrameset arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) AnimFrameset arg6, @OriginalArg(7) int arg7, @OriginalArg(8) AnimFrameset arg8, @OriginalArg(9) int arg9, @OriginalArg(10) int arg10, @OriginalArg(11) int arg11, @OriginalArg(12) boolean[] arg12, @OriginalArg(13) boolean arg13) {
 		if (arg1 == -1) {
 			return;
 		}
