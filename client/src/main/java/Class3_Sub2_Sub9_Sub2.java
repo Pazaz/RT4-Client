@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!mb")
-public final class Class3_Sub2_Sub9_Sub2 extends Class3_Sub2_Sub9 {
+public final class Class3_Sub2_Sub9_Sub2 extends Font {
 
 	@OriginalMember(owner = "client!mb", name = "Gb", descriptor = "[I")
 	private int[] anIntArray349;

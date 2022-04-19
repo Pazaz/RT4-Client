@@ -9,7 +9,7 @@ public final class Static215 {
 	public static int anInt4866;
 
 	@OriginalMember(owner = "client!rh", name = "h", descriptor = "Lclient!rk;")
-	public static Class3_Sub2_Sub9 aClass3_Sub2_Sub9_32;
+	public static Font aClass3_Sub2_Sub9_32;
 
 	@OriginalMember(owner = "client!rh", name = "j", descriptor = "Lclient!client;")
 	public static client aClient1;

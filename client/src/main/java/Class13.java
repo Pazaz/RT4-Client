@@ -1157,12 +1157,12 @@ public final class Class13 {
 	}
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "([Lclient!ok;I)Lclient!rk;")
-	public final Class3_Sub2_Sub9 method491(@OriginalArg(0) Class36[] arg0) {
+	public final Font method491(@OriginalArg(0) Class36[] arg0) {
 		Static211.aBoolean72 = false;
 		if (this.anInt502 == -1) {
 			return null;
 		}
-		@Pc(21) Class3_Sub2_Sub9 local21 = (Class3_Sub2_Sub9) Static87.aClass99_12.method3106((long) this.anInt502);
+		@Pc(21) Font local21 = (Font) Static87.aClass99_12.method3106((long) this.anInt502);
 		if (local21 != null) {
 			return local21;
 		}
