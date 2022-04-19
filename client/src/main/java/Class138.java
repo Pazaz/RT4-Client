@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Class138 {
 
 	@OriginalMember(owner = "client!sl", name = "b", descriptor = "[Lclient!pj;")
-	private final Class123[] aClass123Array1 = new Class123[10];
+	private final SynthInstrument[] aClass123Array1 = new SynthInstrument[10];
 
 	@OriginalMember(owner = "client!sl", name = "c", descriptor = "I")
 	private int anInt5207;
@@ -21,7 +21,7 @@ public final class Class138 {
 			@Pc(14) int local14 = arg0.method2229();
 			if (local14 != 0) {
 				arg0.anInt2792--;
-				this.aClass123Array1[local7] = new Class123();
+				this.aClass123Array1[local7] = new SynthInstrument();
 				this.aClass123Array1[local7].method3506(arg0);
 			}
 		}
