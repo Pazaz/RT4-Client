@@ -13,7 +13,7 @@ public abstract class TextureOp extends Node {
 	public int anInt5840;
 
 	@OriginalMember(owner = "client!j", name = "H", descriptor = "Lclient!pf;")
-	protected Class121 aClass121_41;
+	protected ColorImageCache aClass121_41;
 
 	@OriginalMember(owner = "client!j", name = "u", descriptor = "[Lclient!j;")
 	public final TextureOp[] aClass3_Sub1Array42;
@@ -59,7 +59,7 @@ public abstract class TextureOp extends Node {
 	public final void method4632(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		@Pc(15) int local15 = this.anInt5840 == 255 ? arg0 : this.anInt5840;
 		if (this.aBoolean309) {
-			this.aClass121_41 = new Class121(local15, arg0, arg1);
+			this.aClass121_41 = new ColorImageCache(local15, arg0, arg1);
 		} else {
 			this.aClass103_41 = new Class103(local15, arg0, arg1);
 		}
