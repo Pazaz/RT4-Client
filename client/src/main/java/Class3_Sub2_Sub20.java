@@ -79,7 +79,7 @@ public final class Class3_Sub2_Sub20 extends Class3_Sub2 {
 	}
 
 	@OriginalMember(owner = "client!uh", name = "a", descriptor = "(Lclient!m;IFLclient!ve;Z)[I")
-	public final int[] method4295(@OriginalArg(0) Interface1 arg0, @OriginalArg(2) float arg1, @OriginalArg(3) Class153 arg2, @OriginalArg(4) boolean arg3) {
+	public final int[] method4295(@OriginalArg(0) GlTextureProvider arg0, @OriginalArg(2) float arg1, @OriginalArg(3) Class153 arg2, @OriginalArg(4) boolean arg3) {
 		if (this.anIntArray481 == null || this.aFloat35 != arg1) {
 			if (!this.aClass88_1.method2729(arg0, arg2)) {
 				return null;
@@ -168,7 +168,7 @@ public final class Class3_Sub2_Sub20 extends Class3_Sub2 {
 	}
 
 	@OriginalMember(owner = "client!uh", name = "a", descriptor = "(Lclient!ve;Lclient!m;IZ)Z")
-	public final boolean method4296(@OriginalArg(0) Class153 arg0, @OriginalArg(1) Interface1 arg1, @OriginalArg(3) boolean arg2) {
+	public final boolean method4296(@OriginalArg(0) Class153 arg0, @OriginalArg(1) GlTextureProvider arg1, @OriginalArg(3) boolean arg2) {
 		if (!this.aClass88_1.method2729(arg1, arg0)) {
 			return false;
 		}
@@ -236,7 +236,7 @@ public final class Class3_Sub2_Sub20 extends Class3_Sub2 {
 	}
 
 	@OriginalMember(owner = "client!uh", name = "a", descriptor = "(ZZLclient!m;Lclient!ve;)[I")
-	public final int[] method4297(@OriginalArg(1) boolean arg0, @OriginalArg(2) Interface1 arg1, @OriginalArg(3) Class153 arg2) {
+	public final int[] method4297(@OriginalArg(1) boolean arg0, @OriginalArg(2) GlTextureProvider arg1, @OriginalArg(3) Class153 arg2) {
 		if (this.aClass88_1.method2729(arg1, arg2)) {
 			@Pc(24) int local24 = arg0 ? 64 : 128;
 			return this.aClass88_1.method2725(local24, this.aBoolean288, local24, 1.0D, arg2, arg1, false);
@@ -246,7 +246,7 @@ public final class Class3_Sub2_Sub20 extends Class3_Sub2 {
 	}
 
 	@OriginalMember(owner = "client!uh", name = "a", descriptor = "(ILclient!m;Lclient!ve;)Z")
-	public final boolean method4299(@OriginalArg(1) Interface1 arg0, @OriginalArg(2) Class153 arg1) {
+	public final boolean method4299(@OriginalArg(1) GlTextureProvider arg0, @OriginalArg(2) Class153 arg1) {
 		return this.aClass88_1.method2729(arg0, arg1);
 	}
 

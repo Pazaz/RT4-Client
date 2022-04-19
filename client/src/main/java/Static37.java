@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static37 {
 
 	@OriginalMember(owner = "client!cm", name = "a", descriptor = "Lclient!m;")
-	public static Interface1 anInterface1_1;
+	public static GlTextureProvider anInterface1_1;
 
 	@OriginalMember(owner = "client!cm", name = "b", descriptor = "Ljava/lang/Thread;")
 	public static Thread aThread1;

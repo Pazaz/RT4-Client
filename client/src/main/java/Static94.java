@@ -8,7 +8,7 @@ public final class Static94 {
 	public static int anInt2469;
 
 	@OriginalMember(owner = "client!hf", name = "e", descriptor = "Lclient!m;")
-	public static Interface1 anInterface1_2;
+	public static GlTextureProvider anInterface1_2;
 
 	@OriginalMember(owner = "client!hf", name = "k", descriptor = "I")
 	private static int anInt2470;
@@ -1205,7 +1205,7 @@ public final class Static94 {
 	}
 
 	@OriginalMember(owner = "client!hf", name = "a", descriptor = "(Lclient!m;)V")
-	public static void method1914(@OriginalArg(0) Interface1 arg0) {
+	public static void method1914(@OriginalArg(0) GlTextureProvider arg0) {
 		anInterface1_2 = arg0;
 	}
 
