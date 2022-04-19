@@ -6,15 +6,15 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!el")
-public final class Class3_Sub2_Sub1_Sub2_Sub1 extends GlSprite {
+public final class GlAlphaSprite extends GlSprite {
 
 	@OriginalMember(owner = "client!el", name = "<init>", descriptor = "(IIIIII[I)V")
-	public Class3_Sub2_Sub1_Sub2_Sub1(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int[] arg6) {
+	public GlAlphaSprite(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int[] arg6) {
 		super(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 	}
 
 	@OriginalMember(owner = "client!el", name = "<init>", descriptor = "(Lclient!mm;)V")
-	public Class3_Sub2_Sub1_Sub2_Sub1(@OriginalArg(0) SoftwareSprite arg0) {
+	public GlAlphaSprite(@OriginalArg(0) SoftwareSprite arg0) {
 		super(arg0);
 	}
 
