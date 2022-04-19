@@ -167,15 +167,15 @@ public final class Static127 {
 	}
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(B)Lclient!da;")
-	public static Class3_Sub2_Sub8 method2464() {
-		@Pc(10) Class3_Sub2_Sub8 local10 = (Class3_Sub2_Sub8) Static215.aClass16_9.method795();
+	public static DelayedStateChange method2464() {
+		@Pc(10) DelayedStateChange local10 = (DelayedStateChange) Static215.aClass16_9.method795();
 		if (local10 != null) {
 			local10.method4658();
 			local10.method4365();
 			return local10;
 		}
 		do {
-			local10 = (Class3_Sub2_Sub8) Static140.aClass16_7.method795();
+			local10 = (DelayedStateChange) Static140.aClass16_7.method795();
 			if (local10 == null) {
 				return null;
 			}

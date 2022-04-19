@@ -96,7 +96,7 @@ public final class Static145 {
 
 	@OriginalMember(owner = "client!lf", name = "a", descriptor = "(IIIIB)V")
 	public static void method2745(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		@Pc(8) Class3_Sub2_Sub8 local8 = Static238.method4143(10, arg0);
+		@Pc(8) DelayedStateChange local8 = Static238.method4143(10, arg0);
 		local8.method1017();
 		local8.anInt1270 = arg2;
 		local8.anInt1271 = arg3;

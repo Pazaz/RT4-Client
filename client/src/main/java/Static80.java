@@ -121,7 +121,7 @@ public final class Static80 {
 
 	@OriginalMember(owner = "client!gf", name = "a", descriptor = "(Lclient!na;II)V")
 	public static void method3617(@OriginalArg(0) JagString arg0, @OriginalArg(2) int arg1) {
-		@Pc(6) Class3_Sub2_Sub8 local6 = Static238.method4143(3, arg1);
+		@Pc(6) DelayedStateChange local6 = Static238.method4143(3, arg1);
 		local6.method1017();
 		local6.aClass100_254 = arg0;
 	}

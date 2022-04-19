@@ -58,14 +58,14 @@ public final class Static132 {
 
 	@OriginalMember(owner = "client!ke", name = "c", descriptor = "(III)V")
 	public static void method2606(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		@Pc(8) Class3_Sub2_Sub8 local8 = Static238.method4143(1, arg0);
+		@Pc(8) DelayedStateChange local8 = Static238.method4143(1, arg0);
 		local8.method1017();
 		local8.anInt1271 = arg1;
 	}
 
 	@OriginalMember(owner = "client!ke", name = "a", descriptor = "(IIIBI)V")
 	public static void method2607(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {
-		@Pc(8) Class3_Sub2_Sub8 local8 = Static238.method4143(4, arg2);
+		@Pc(8) DelayedStateChange local8 = Static238.method4143(4, arg2);
 		local8.method1017();
 		local8.anInt1270 = arg3;
 		local8.anInt1269 = arg0;

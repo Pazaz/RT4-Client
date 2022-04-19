@@ -18,7 +18,7 @@ public final class Static261 {
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(BIIII)V")
 	public static void method4505(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
-		@Pc(8) Class3_Sub2_Sub8 local8 = Static238.method4143(8, arg1);
+		@Pc(8) DelayedStateChange local8 = Static238.method4143(8, arg1);
 		local8.method1017();
 		local8.anInt1269 = arg0;
 		local8.anInt1271 = arg3;
