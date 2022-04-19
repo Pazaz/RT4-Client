@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!uj")
-public final class Class8_Sub7 extends Entity {
+public final class ObjStack extends Entity {
 
 	@OriginalMember(owner = "client!uj", name = "v", descriptor = "I")
 	public int anInt5550;
