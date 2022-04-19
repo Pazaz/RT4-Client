@@ -39,7 +39,7 @@ public final class Static170 {
 		if (arg4 == null) {
 			return;
 		}
-		@Pc(6) Class15 local6 = new Class15();
+		@Pc(6) GroundDecor local6 = new GroundDecor();
 		local6.aClass8_1 = arg4;
 		local6.anInt732 = arg1 * 128 + 64;
 		local6.anInt736 = arg2 * 128 + 64;

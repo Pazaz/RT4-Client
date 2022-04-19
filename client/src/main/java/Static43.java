@@ -104,7 +104,7 @@ public final class Static43 {
 				arg5.method3056(arg1, local74.anInt4397, local74.aBoolean207, local92, local74.anInt4403, arg0);
 			}
 		} else if (arg3 == 3) {
-			@Pc(211) Class15 local211 = Static267.method4526(arg2, arg1, arg0);
+			@Pc(211) GroundDecor local211 = Static267.method4526(arg2, arg1, arg0);
 			if (local211 != null) {
 				local100 = local211.aClass8_1;
 			}
