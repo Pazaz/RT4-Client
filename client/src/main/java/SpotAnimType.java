@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!eg")
-public final class Class34 {
+public final class SpotAnimType {
 
 	@OriginalMember(owner = "client!eg", name = "f", descriptor = "[S")
 	private short[] aShortArray15;

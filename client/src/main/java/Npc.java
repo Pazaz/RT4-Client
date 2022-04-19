@@ -56,7 +56,7 @@ public final class Npc extends PathingEntity {
 		this.method2685(local74, arg0);
 		local140 = null;
 		if (this.anInt3432 != -1 && this.anInt3399 != -1) {
-			@Pc(211) Class34 local211 = Static34.method877(this.anInt3432);
+			@Pc(211) SpotAnimType local211 = Static34.method877(this.anInt3432);
 			local140 = local211.method1319(this.anInt3418, this.anInt3399, this.anInt3361);
 			if (local140 != null) {
 				local140.method4575(0, -this.anInt3394, 0);

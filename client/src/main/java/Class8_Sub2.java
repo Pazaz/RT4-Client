@@ -64,7 +64,7 @@ public final class Class8_Sub2 extends Entity {
 
 	@OriginalMember(owner = "client!bh", name = "b", descriptor = "(Z)Lclient!ak;")
 	private Model method552() {
-		@Pc(8) Class34 local8 = Static34.method877(this.anInt596);
+		@Pc(8) SpotAnimType local8 = Static34.method877(this.anInt596);
 		@Pc(26) Model local26;
 		if (this.aBoolean41) {
 			local26 = local8.method1319(-1, -1, 0);
