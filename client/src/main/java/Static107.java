@@ -58,7 +58,7 @@ public final class Static107 {
 			}
 			local33.method3562(local33.anInt4644);
 			if (Static258.anInt5637 > 0 && Static60.aClass19_1 == null) {
-				Static60.aClass19_1 = new Class19();
+				Static60.aClass19_1 = new AudioThread();
 				Static60.aClass19_1.aClass213_1 = arg1;
 				arg1.method5130(Static258.anInt5637, Static60.aClass19_1);
 			}
@@ -78,7 +78,7 @@ public final class Static107 {
 				local120.anInt4644 = 16384;
 				local120.method3562(local120.anInt4644);
 				if (Static258.anInt5637 > 0 && Static60.aClass19_1 == null) {
-					Static60.aClass19_1 = new Class19();
+					Static60.aClass19_1 = new AudioThread();
 					Static60.aClass19_1.aClass213_1 = arg1;
 					arg1.method5130(Static258.anInt5637, Static60.aClass19_1);
 				}

@@ -14,7 +14,7 @@ public final class Static60 {
 	public static int anInt1892;
 
 	@OriginalMember(owner = "client!em", name = "x", descriptor = "Lclient!cj;")
-	public static Class19 aClass19_1;
+	public static AudioThread aClass19_1;
 
 	@OriginalMember(owner = "client!em", name = "D", descriptor = "I")
 	public static int anInt1895;
