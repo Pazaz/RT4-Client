@@ -4,13 +4,13 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!hl")
-public final class Class62_Sub1 extends AudioChannel {
+public final class SignLinkAudioChannel extends AudioChannel {
 
 	@OriginalMember(owner = "client!hl", name = "L", descriptor = "I")
 	private final int anInt2606;
 
 	@OriginalMember(owner = "client!hl", name = "<init>", descriptor = "(Lsignlink!ll;I)V")
-	public Class62_Sub1(@OriginalArg(0) SignLink arg0, @OriginalArg(1) int arg1) {
+	public SignLinkAudioChannel(@OriginalArg(0) SignLink arg0, @OriginalArg(1) int arg1) {
 		Static100.anInterface10_1 = arg0.method5125();
 		this.anInt2606 = arg1;
 	}
