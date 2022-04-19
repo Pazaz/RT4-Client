@@ -7,14 +7,14 @@ import java.awt.image.DirectColorModel;
 import java.awt.image.ImageConsumer;
 import java.awt.image.ImageObserver;
 import java.awt.image.ImageProducer;
-import java.util.Hashtable;
+
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!di")
-public final class Class27_Sub1 extends Class27 implements ImageProducer, ImageObserver {
+public final class Class27_Sub1 extends FrameBuffer implements ImageProducer, ImageObserver {
 
 	@OriginalMember(owner = "client!di", name = "A", descriptor = "Ljava/awt/image/ImageConsumer;")
 	private ImageConsumer anImageConsumer1;

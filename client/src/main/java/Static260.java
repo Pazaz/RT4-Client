@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static260 {
 
 	@OriginalMember(owner = "client!vd", name = "w", descriptor = "Lclient!vk;")
-	public static Class27 aClass27_2;
+	public static FrameBuffer aClass27_2;
 
 	@OriginalMember(owner = "client!vd", name = "v", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_944 = Static28.method790("hitbar_default");
