@@ -77,9 +77,9 @@ public final class Static220 {
 	}
 
 	@OriginalMember(owner = "client!rm", name = "a", descriptor = "(ZIIIILclient!ak;I)Lclient!ak;")
-	public static Class8_Sub1 method3800(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) Class8_Sub1 arg4, @OriginalArg(6) int arg5) {
+	public static Model method3800(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) Model arg4, @OriginalArg(6) int arg5) {
 		@Pc(4) long local4 = (long) arg2;
-		@Pc(10) Class8_Sub1 local10 = (Class8_Sub1) Static110.aClass99_15.method3106(local4);
+		@Pc(10) Model local10 = (Model) Static110.aClass99_15.method3106(local4);
 		if (local10 == null) {
 			@Pc(22) Class8_Sub5 local22 = Static77.method1686(Static267.aClass153_109, arg2);
 			if (local22 == null) {

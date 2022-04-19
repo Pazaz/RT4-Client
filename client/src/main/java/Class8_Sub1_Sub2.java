@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!w")
-public final class Class8_Sub1_Sub2 extends Class8_Sub1 {
+public final class Class8_Sub1_Sub2 extends Model {
 
 	@OriginalMember(owner = "client!w", name = "t", descriptor = "[S")
 	private short[] aShortArray89;
@@ -512,7 +512,7 @@ public final class Class8_Sub1_Sub2 extends Class8_Sub1 {
 	}
 
 	@OriginalMember(owner = "client!w", name = "a", descriptor = "(ZZLclient!w;[B[S[I[I[I)Lclient!ak;")
-	private Class8_Sub1 method4584(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) Class8_Sub1_Sub2 arg2, @OriginalArg(3) byte[] arg3, @OriginalArg(4) short[] arg4, @OriginalArg(5) int[] arg5, @OriginalArg(6) int[] arg6, @OriginalArg(7) int[] arg7) {
+	private Model method4584(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) Class8_Sub1_Sub2 arg2, @OriginalArg(3) byte[] arg3, @OriginalArg(4) short[] arg4, @OriginalArg(5) int[] arg5, @OriginalArg(6) int[] arg6, @OriginalArg(7) int[] arg7) {
 		arg2.anInt5788 = this.anInt5788;
 		arg2.anInt5787 = this.anInt5787;
 		arg2.anInt5789 = this.anInt5789;
@@ -1161,7 +1161,7 @@ public final class Class8_Sub1_Sub2 extends Class8_Sub1 {
 
 	@OriginalMember(owner = "client!w", name = "a", descriptor = "(ZZZ)Lclient!ak;")
 	@Override
-	public final Class8_Sub1 method4560(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
+	public final Model method4560(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
 		if (!arg0 && Static268.aByteArray77.length < this.anInt5787) {
 			Static268.aByteArray77 = new byte[this.anInt5787 + 100];
 		}
@@ -1184,7 +1184,7 @@ public final class Class8_Sub1_Sub2 extends Class8_Sub1 {
 	}
 
 	@OriginalMember(owner = "client!w", name = "a", descriptor = "(Lclient!ak;)Lclient!ak;")
-	public final Class8_Sub1 method4588(@OriginalArg(0) Class8_Sub1 arg0) {
+	public final Model method4588(@OriginalArg(0) Model arg0) {
 		return new Class8_Sub1_Sub2(new Class8_Sub1_Sub2[] { this, (Class8_Sub1_Sub2) arg0 }, 2);
 	}
 
@@ -1398,7 +1398,7 @@ public final class Class8_Sub1_Sub2 extends Class8_Sub1 {
 
 	@OriginalMember(owner = "client!w", name = "c", descriptor = "(ZZZ)Lclient!ak;")
 	@Override
-	public final Class8_Sub1 method4572(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
+	public final Model method4572(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
 		if (!arg0 && Static268.aByteArray76.length < this.anInt5787) {
 			Static268.aByteArray76 = new byte[this.anInt5787 + 100];
 		}
@@ -2346,7 +2346,7 @@ public final class Class8_Sub1_Sub2 extends Class8_Sub1 {
 
 	@OriginalMember(owner = "client!w", name = "b", descriptor = "(ZZZ)Lclient!ak;")
 	@Override
-	public final Class8_Sub1 method4568(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
+	public final Model method4568(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
 		if (!arg0 && Static268.aByteArray78.length < this.anInt5787) {
 			Static268.aByteArray78 = new byte[this.anInt5787 + 100];
 		}

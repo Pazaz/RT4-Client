@@ -173,7 +173,7 @@ public final class Class8_Sub4_Sub1 extends Class8_Sub4 {
 		}
 		@Pc(25) Class144 local25 = this.anInt3369 != -1 && this.anInt3420 == 0 ? Static36.method941(this.anInt3369) : null;
 		@Pc(54) Class144 local54 = this.anInt3366 == -1 || this.aBoolean98 || this.anInt3366 == this.method2681().anInt1037 && local25 != null ? null : Static36.method941(this.anInt3366);
-		@Pc(76) Class8_Sub1 local76 = this.aClass59_1.method1954(this.aClass147Array3, this.anInt3373, local54, local25, this.anInt3396, this.anInt3388, this.anInt3360, this.anInt3425, this.anInt3407);
+		@Pc(76) Model local76 = this.aClass59_1.method1954(this.aClass147Array3, this.anInt3373, local54, local25, this.anInt3396, this.anInt3388, this.anInt3360, this.anInt3425, this.anInt3407);
 		@Pc(79) int local79 = Static198.method1029();
 		if (Static239.aBoolean269 && Static238.anInt5316 < 96 && local79 > 50) {
 			Static16.method501();
@@ -194,7 +194,7 @@ public final class Class8_Sub4_Sub1 extends Class8_Sub4 {
 			return;
 		}
 		this.anInt3413 = local76.method4549();
-		@Pc(184) Class8_Sub1 local184;
+		@Pc(184) Model local184;
 		if (Static209.aBoolean240 && (this.aClass59_1.anInt2492 == -1 || Static214.method4363(this.aClass59_1.anInt2492).aBoolean180)) {
 			local184 = Static41.method1043(160, this.aBoolean171, local54 == null ? local25 : local54, this.anInt3412, 0, this.anInt3421, 0, 1, local76, arg0, local54 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, 240);
 			if (Static239.aBoolean269) {
@@ -260,16 +260,16 @@ public final class Class8_Sub4_Sub1 extends Class8_Sub4 {
 				}
 			}
 		}
-		@Pc(515) Class8_Sub1 local515 = null;
+		@Pc(515) Model local515 = null;
 		if (!this.aBoolean98 && this.anObject5 != null) {
 			if (Static83.anInt372 >= this.anInt3375) {
 				this.anObject5 = null;
 			}
 			if (this.anInt3390 <= Static83.anInt372 && this.anInt3375 > Static83.anInt372) {
 				if (this.anObject5 instanceof Class8_Sub3) {
-					local515 = (Class8_Sub1) ((Class8_Sub3) this.anObject5).method1049();
+					local515 = (Model) ((Class8_Sub3) this.anObject5).method1049();
 				} else {
-					local515 = (Class8_Sub1) this.anObject5;
+					local515 = (Model) this.anObject5;
 				}
 				local515.method4575(this.anInt3379 - this.anInt3412, this.anInt3406 + -this.anInt3424, this.anInt3426 - this.anInt3421);
 				if (this.anInt3400 == 512) {
@@ -312,13 +312,13 @@ public final class Class8_Sub4_Sub1 extends Class8_Sub4 {
 	}
 
 	@OriginalMember(owner = "client!e", name = "a", descriptor = "(Lclient!ga;ILclient!ak;IIIIIIIIIIII)V")
-	private void method1263(@OriginalArg(0) Class47_Sub1 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Class8_Sub1 arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7, @OriginalArg(9) int arg8, @OriginalArg(10) int arg9, @OriginalArg(11) int arg10, @OriginalArg(12) int arg11, @OriginalArg(13) int arg12, @OriginalArg(14) int arg13) {
+	private void method1263(@OriginalArg(0) Class47_Sub1 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Model arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7, @OriginalArg(9) int arg8, @OriginalArg(10) int arg9, @OriginalArg(11) int arg10, @OriginalArg(12) int arg11, @OriginalArg(13) int arg12, @OriginalArg(14) int arg13) {
 		@Pc(12) int local12 = arg3 * arg3 + arg1 * arg1;
 		if (local12 < 16 || local12 > 360000) {
 			return;
 		}
 		@Pc(34) int local34 = (int) (Math.atan2((double) arg3, (double) arg1) * 325.949D) & 0x7FF;
-		@Pc(46) Class8_Sub1 local46 = Static220.method3800(local34, this.anInt3421, arg11, this.anInt3412, arg2, this.anInt3424);
+		@Pc(46) Model local46 = Static220.method3800(local34, this.anInt3421, arg11, this.anInt3412, arg2, this.anInt3424);
 		if (local46 == null) {
 			return;
 		}

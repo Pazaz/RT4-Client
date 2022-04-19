@@ -133,8 +133,8 @@ public final class Static185 {
 				@Pc(531) boolean local531 = Static5.method35(arg2, arg7, arg8, local199, local84, local81, local387, local261);
 				if (local62.aBoolean215 && local531 && arg1) {
 					@Pc(541) int local541 = 15;
-					if (local387 instanceof Class8_Sub1) {
-						local541 = ((Class8_Sub1) local387).method4566() / 4;
+					if (local387 instanceof Model) {
+						local541 = ((Model) local387).method4566() / 4;
 						if (local541 > 30) {
 							local541 = 30;
 						}

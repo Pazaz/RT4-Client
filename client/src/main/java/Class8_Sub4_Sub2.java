@@ -28,7 +28,7 @@ public final class Class8_Sub4_Sub2 extends Class8_Sub4 {
 		}
 		@Pc(29) Class144 local29 = this.anInt3369 != -1 && this.anInt3420 == 0 ? Static36.method941(this.anInt3369) : null;
 		@Pc(53) Class144 local53 = this.anInt3366 == -1 || this.anInt3366 == this.method2681().anInt1037 && local29 != null ? null : Static36.method941(this.anInt3366);
-		@Pc(74) Class8_Sub1 local74 = this.aClass96_1.method2937(this.aClass147Array3, this.anInt3388, this.anInt3407, this.anInt3373, this.anInt3360, this.anInt3425, local53, this.anInt3396, local29);
+		@Pc(74) Model local74 = this.aClass96_1.method2937(this.aClass147Array3, this.anInt3388, this.anInt3407, this.anInt3373, this.anInt3360, this.anInt3425, local53, this.anInt3396, local29);
 		if (local74 == null) {
 			return;
 		}
@@ -37,7 +37,7 @@ public final class Class8_Sub4_Sub2 extends Class8_Sub4 {
 		if (local84.anIntArray357 != null) {
 			local84 = local84.method2932();
 		}
-		@Pc(140) Class8_Sub1 local140;
+		@Pc(140) Model local140;
 		if (Static209.aBoolean240 && local84.aBoolean180) {
 			local140 = Static41.method1043(this.aClass96_1.aByte13, this.aBoolean171, local53 == null ? local29 : local53, this.anInt3412, this.aClass96_1.aShort23, this.anInt3421, this.aClass96_1.aShort24, this.aClass96_1.anInt3713, local74, arg0, local53 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, this.aClass96_1.aByte12);
 			if (Static239.aBoolean269) {
