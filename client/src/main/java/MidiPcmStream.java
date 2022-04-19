@@ -22,7 +22,7 @@ public final class MidiPcmStream extends PcmStream {
 	private long aLong189;
 
 	@OriginalMember(owner = "client!va", name = "Qb", descriptor = "Lclient!rf;")
-	private Class3_Sub29 aClass3_Sub29_2;
+	private Song aClass3_Sub29_2;
 
 	@OriginalMember(owner = "client!va", name = "Rb", descriptor = "I")
 	private int anInt5676;
@@ -106,7 +106,7 @@ public final class MidiPcmStream extends PcmStream {
 	}
 
 	@OriginalMember(owner = "client!va", name = "a", descriptor = "(Lclient!rf;ILclient!ve;Lclient!le;I)Z")
-	public final synchronized boolean method4411(@OriginalArg(0) Class3_Sub29 arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) SoundBank arg2) {
+	public final synchronized boolean method4411(@OriginalArg(0) Song arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) SoundBank arg2) {
 		arg0.method3741();
 		@Pc(5) boolean local5 = true;
 		@Pc(20) int[] local20 = new int[] { 22050 };
@@ -151,7 +151,7 @@ public final class MidiPcmStream extends PcmStream {
 	}
 
 	@OriginalMember(owner = "client!va", name = "a", descriptor = "(ZLclient!rf;ZB)V")
-	private synchronized void method4416(@OriginalArg(0) boolean arg0, @OriginalArg(1) Class3_Sub29 arg1, @OriginalArg(2) boolean arg2) {
+	private synchronized void method4416(@OriginalArg(0) boolean arg0, @OriginalArg(1) Song arg1, @OriginalArg(2) boolean arg2) {
 		this.method4448(arg2);
 		this.aClass84_1.method2635(arg1.aByteArray65);
 		this.aBoolean293 = arg0;
@@ -485,7 +485,7 @@ public final class MidiPcmStream extends PcmStream {
 	}
 
 	@OriginalMember(owner = "client!va", name = "a", descriptor = "(ZLclient!rf;I)V")
-	public final synchronized void method4431(@OriginalArg(0) boolean arg0, @OriginalArg(1) Class3_Sub29 arg1) {
+	public final synchronized void method4431(@OriginalArg(0) boolean arg0, @OriginalArg(1) Song arg1) {
 		this.method4416(arg0, arg1, true);
 	}
 
