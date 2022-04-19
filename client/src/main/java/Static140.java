@@ -43,7 +43,7 @@ public final class Static140 {
 	@OriginalMember(owner = "client!la", name = "a", descriptor = "(ILclient!e;)I")
 	public static int method2706(@OriginalArg(1) Player arg0) {
 		@Pc(14) int local14 = arg0.anInt1654;
-		@Pc(18) Class20 local18 = arg0.method2681();
+		@Pc(18) BasType local18 = arg0.method2681();
 		if (local18.anInt1037 == arg0.anInt3366) {
 			local14 = arg0.anInt1648;
 		} else if (local18.anInt1058 == arg0.anInt3366 || arg0.anInt3366 == local18.anInt1054 || arg0.anInt3366 == local18.anInt1045 || local18.anInt1043 == arg0.anInt3366) {

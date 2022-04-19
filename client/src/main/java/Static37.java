@@ -30,7 +30,7 @@ public final class Static37 {
 		if (arg0.anInt3376 == 0) {
 			return;
 		}
-		@Pc(13) Class20 local13 = arg0.method2681();
+		@Pc(13) BasType local13 = arg0.method2681();
 		@Pc(43) int local43;
 		@Pc(36) int local36;
 		if (arg0.anInt3370 != -1 && arg0.anInt3370 < 32768) {

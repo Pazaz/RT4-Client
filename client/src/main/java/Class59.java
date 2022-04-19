@@ -228,7 +228,7 @@ public final class Class59 {
 						}
 					}
 				}
-				@Pc(303) Class20 local303 = null;
+				@Pc(303) BasType local303 = null;
 				if (this.anInt2497 != -1) {
 					local303 = Static90.method1856(this.anInt2497);
 				}
