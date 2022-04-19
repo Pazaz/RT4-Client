@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!uh")
-public final class Class3_Sub2_Sub20 extends SecondaryNode {
+public final class GlTexture extends SecondaryNode {
 
 	@OriginalMember(owner = "client!uh", name = "K", descriptor = "F")
 	private float aFloat35;
@@ -55,7 +55,7 @@ public final class Class3_Sub2_Sub20 extends SecondaryNode {
 	private final int anInt5489;
 
 	@OriginalMember(owner = "client!uh", name = "<init>", descriptor = "(Lclient!wa;)V")
-	public Class3_Sub2_Sub20(@OriginalArg(0) Buffer arg0) {
+	public GlTexture(@OriginalArg(0) Buffer arg0) {
 		this.aClass88_1 = new Class88(arg0);
 		this.aBoolean286 = arg0.method2229() == 1;
 		this.aBoolean288 = arg0.method2229() == 1;
