@@ -82,7 +82,7 @@ public final class Static223 {
 	}
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(IZ)Lclient!j;")
-	public static Class3_Sub1 method3860(@OriginalArg(0) int arg0) {
+	public static TextureOp method3860(@OriginalArg(0) int arg0) {
 		if (arg0 == 0) {
 			return new Class3_Sub1_Sub23();
 		} else if (arg0 == 1) {

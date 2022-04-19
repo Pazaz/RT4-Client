@@ -45,10 +45,10 @@ public final class Static206 {
 	}
 
 	@OriginalMember(owner = "client!qk", name = "a", descriptor = "(BLclient!wa;)Lclient!j;")
-	public static Class3_Sub1 method3680(@OriginalArg(1) Buffer arg0) {
+	public static TextureOp method3680(@OriginalArg(1) Buffer arg0) {
 		arg0.method2229();
 		@Pc(13) int local13 = arg0.method2229();
-		@Pc(17) Class3_Sub1 local17 = Static223.method3860(local13);
+		@Pc(17) TextureOp local17 = Static223.method3860(local13);
 		local17.anInt5840 = arg0.method2229();
 		@Pc(26) int local26 = arg0.method2229();
 		for (@Pc(34) int local34 = 0; local34 < local26; local34++) {

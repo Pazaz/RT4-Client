@@ -13,23 +13,23 @@ public final class Class88 {
 	private final int[] anIntArray327;
 
 	@OriginalMember(owner = "client!lc", name = "d", descriptor = "Lclient!j;")
-	private final Class3_Sub1 aClass3_Sub1_1;
+	private final TextureOp aClass3_Sub1_1;
 
 	@OriginalMember(owner = "client!lc", name = "i", descriptor = "Lclient!j;")
-	private final Class3_Sub1 aClass3_Sub1_2;
+	private final TextureOp aClass3_Sub1_2;
 
 	@OriginalMember(owner = "client!lc", name = "g", descriptor = "[Lclient!j;")
-	private final Class3_Sub1[] aClass3_Sub1Array22;
+	private final TextureOp[] aClass3_Sub1Array22;
 
 	@OriginalMember(owner = "client!lc", name = "<init>", descriptor = "(Lclient!wa;)V")
 	public Class88(@OriginalArg(0) Buffer arg0) {
 		@Pc(7) int local7 = arg0.method2229();
-		this.aClass3_Sub1Array22 = new Class3_Sub1[local7];
+		this.aClass3_Sub1Array22 = new TextureOp[local7];
 		@Pc(14) int[][] local14 = new int[local7][];
 		@Pc(16) int local16 = 0;
 		@Pc(18) int local18 = 0;
 		@Pc(20) int local20;
-		@Pc(27) Class3_Sub1 local27;
+		@Pc(27) TextureOp local27;
 		@Pc(45) int local45;
 		@Pc(52) int local52;
 		for (local20 = 0; local20 < local7; local20++) {

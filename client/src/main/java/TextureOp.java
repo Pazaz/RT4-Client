@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!j")
-public abstract class Class3_Sub1 extends Node {
+public abstract class TextureOp extends Node {
 
 	@OriginalMember(owner = "client!j", name = "t", descriptor = "Lclient!nd;")
 	protected Class103 aClass103_41;
@@ -16,14 +16,14 @@ public abstract class Class3_Sub1 extends Node {
 	protected Class121 aClass121_41;
 
 	@OriginalMember(owner = "client!j", name = "u", descriptor = "[Lclient!j;")
-	public final Class3_Sub1[] aClass3_Sub1Array42;
+	public final TextureOp[] aClass3_Sub1Array42;
 
 	@OriginalMember(owner = "client!j", name = "p", descriptor = "Z")
 	public boolean aBoolean309;
 
 	@OriginalMember(owner = "client!j", name = "<init>", descriptor = "(IZ)V")
-	protected Class3_Sub1(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1) {
-		this.aClass3_Sub1Array42 = new Class3_Sub1[arg0];
+	protected TextureOp(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1) {
+		this.aClass3_Sub1Array42 = new TextureOp[arg0];
 		this.aBoolean309 = arg1;
 	}
 
