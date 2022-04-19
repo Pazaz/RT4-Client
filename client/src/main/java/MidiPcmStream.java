@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!va")
-public final class Class3_Sub3_Sub4 extends Class3_Sub3 {
+public final class MidiPcmStream extends Class3_Sub3 {
 
 	@OriginalMember(owner = "client!va", name = "Kb", descriptor = "Z")
 	private boolean aBoolean293;
@@ -100,7 +100,7 @@ public final class Class3_Sub3_Sub4 extends Class3_Sub3 {
 	private final Class133 aClass133_23 = new Class133(128);
 
 	@OriginalMember(owner = "client!va", name = "<init>", descriptor = "()V")
-	public Class3_Sub3_Sub4() {
+	public MidiPcmStream() {
 		this.method4424();
 		this.method4441(true);
 	}

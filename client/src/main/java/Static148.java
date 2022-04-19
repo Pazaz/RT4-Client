@@ -11,7 +11,7 @@ public final class Static148 {
 	public static int anInt3534;
 
 	@OriginalMember(owner = "client!li", name = "v", descriptor = "Lclient!va;")
-	public static Class3_Sub3_Sub4 aClass3_Sub3_Sub4_1;
+	public static MidiPcmStream aClass3_Sub3_Sub4_1;
 
 	@OriginalMember(owner = "client!li", name = "w", descriptor = "Lclient!sc;")
 	public static Class133 aClass133_13;
