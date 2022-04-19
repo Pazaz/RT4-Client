@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!pj")
-public final class Class123 {
+public final class SynthInstrument {
 
 	@OriginalMember(owner = "client!pj", name = "k", descriptor = "[I")
 	private static final int[] anIntArray395 = new int[32768];
