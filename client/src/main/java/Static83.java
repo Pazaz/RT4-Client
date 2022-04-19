@@ -37,7 +37,7 @@ public final class Static83 {
 	}
 
 	@OriginalMember(owner = "client!gj", name = "a", descriptor = "(III)Lclient!df;")
-	public static Class24 method435(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+	public static WallDecor method435(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		@Pc(7) Tile local7 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
 		return local7 == null ? null : local7.aClass24_1;
 	}

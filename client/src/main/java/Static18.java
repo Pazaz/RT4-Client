@@ -104,7 +104,7 @@ public final class Static18 {
 		if (local7 == null) {
 			return;
 		}
-		@Pc(13) Class24 local13 = local7.aClass24_1;
+		@Pc(13) WallDecor local13 = local7.aClass24_1;
 		if (local13 != null) {
 			local13.anInt1394 = local13.anInt1394 * arg3 / 16;
 			local13.anInt1392 = local13.anInt1392 * arg3 / 16;

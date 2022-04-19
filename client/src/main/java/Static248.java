@@ -73,7 +73,7 @@ public final class Static248 {
 									}
 								}
 								if (local46.aClass24_1 != null) {
-									@Pc(134) Class24 local134 = local46.aClass24_1;
+									@Pc(134) WallDecor local134 = local46.aClass24_1;
 									local134.aClass8_3.method4545(local134.anInt1388, local23, local134.anInt1391, local134.anInt1390, local134.anInt1393);
 									if (local134.aClass8_2 != null) {
 										local134.aClass8_2.method4545(local134.anInt1388, local23, local134.anInt1391, local134.anInt1390, local134.anInt1393);
