@@ -366,7 +366,7 @@ public final class Static120 {
 	}
 
 	@OriginalMember(owner = "client!jf", name = "a", descriptor = "(II[[[Lclient!bj;)V")
-	public static void method2402(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Class3_Sub5[][][] arg2) {
+	public static void method2402(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Tile[][][] arg2) {
 		if (!Static178.aBoolean202) {
 			return;
 		}
@@ -409,7 +409,7 @@ public final class Static120 {
 						local141 = Static2.anInt15 - 1;
 					}
 					for (@Pc(155) int local155 = local133; local155 <= local141; local155++) {
-						@Pc(160) Class3_Sub5 local160 = null;
+						@Pc(160) Tile local160 = null;
 						if (local66 >= 0) {
 							local160 = arg2[local66][local155][local112];
 						}

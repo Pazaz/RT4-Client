@@ -7,7 +7,7 @@ public final class Static130 {
 	public static Class41 aClass41_1;
 
 	@OriginalMember(owner = "client!kc", name = "o", descriptor = "[[[Lclient!bj;")
-	public static Class3_Sub5[][][] aClass3_Sub5ArrayArrayArray1;
+	public static Tile[][][] aClass3_Sub5ArrayArrayArray1;
 
 	@OriginalMember(owner = "client!kc", name = "p", descriptor = "[I")
 	public static int[] anIntArray299;

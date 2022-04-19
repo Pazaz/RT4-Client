@@ -231,7 +231,7 @@ public final class Static269 {
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(III)Lclient!bm;")
 	public static Class15 method2210(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		@Pc(7) Class3_Sub5 local7 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
+		@Pc(7) Tile local7 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
 		return local7 == null || local7.aClass15_1 == null ? null : local7.aClass15_1;
 	}
 

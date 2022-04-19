@@ -75,7 +75,7 @@ public final class Static69 {
 		local3.aClass8_7 = arg6;
 		local3.aClass8_8 = arg7;
 		@Pc(34) int local34 = 0;
-		@Pc(42) Class3_Sub5 local42 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
+		@Pc(42) Tile local42 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
 		if (local42 != null) {
 			for (@Pc(46) int local46 = 0; local46 < local42.anInt662; local46++) {
 				@Pc(55) Class31 local55 = local42.aClass31Array1[local46];
@@ -89,7 +89,7 @@ public final class Static69 {
 		}
 		local3.anInt3063 = -local34;
 		if (Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2] == null) {
-			Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2] = new Class3_Sub5(arg0, arg1, arg2);
+			Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2] = new Tile(arg0, arg1, arg2);
 		}
 		Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2].aClass79_1 = local3;
 	}
@@ -107,7 +107,7 @@ public final class Static69 {
 					if (local28 >= 0 && local28 < Static152.anInt3594) {
 						for (@Pc(39) int local39 = local11; local39 <= local15; local39++) {
 							if (local39 >= 0 && local39 < Static99.anInt2550 && (!local1 || local28 >= local7 || local39 >= local15 || local39 < arg3 && local28 != arg2)) {
-								@Pc(71) Class3_Sub5 local71 = Static130.aClass3_Sub5ArrayArrayArray1[local17][local28][local39];
+								@Pc(71) Tile local71 = Static130.aClass3_Sub5ArrayArrayArray1[local17][local28][local39];
 								if (local71 != null) {
 									@Pc(158) int local158 = (Static83.anIntArrayArrayArray4[local17][local28][local39] + Static83.anIntArrayArrayArray4[local17][local28 + 1][local39] + Static83.anIntArrayArrayArray4[local17][local28][local39 + 1] + Static83.anIntArrayArrayArray4[local17][local28 + 1][local39 + 1]) / 4 - (Static83.anIntArrayArrayArray4[arg1][arg2][arg3] + Static83.anIntArrayArrayArray4[arg1][arg2 + 1][arg3] + Static83.anIntArrayArrayArray4[arg1][arg2][arg3 + 1] + Static83.anIntArrayArrayArray4[arg1][arg2 + 1][arg3 + 1]) / 4;
 									@Pc(161) Class77 local161 = local71.aClass77_1;

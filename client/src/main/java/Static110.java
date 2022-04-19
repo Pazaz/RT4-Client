@@ -9,7 +9,7 @@ public final class Static110 {
 
 	@OriginalMember(owner = "client!ih", name = "a", descriptor = "(III)Lclient!jh;")
 	public static Class77 method2276(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		@Pc(7) Class3_Sub5 local7 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
+		@Pc(7) Tile local7 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
 		if (local7 == null) {
 			return null;
 		} else {

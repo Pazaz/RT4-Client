@@ -122,7 +122,7 @@ public final class Static105 {
 				if (local10 < 0 || local17 < 0 || local10 >= Static152.anInt3594 || local17 >= Static99.anInt2550) {
 					return false;
 				}
-				@Pc(42) Class3_Sub5 local42 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][local10][local17];
+				@Pc(42) Tile local42 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][local10][local17];
 				if (local42 != null && local42.anInt662 >= 5) {
 					return false;
 				}
@@ -158,10 +158,10 @@ public final class Static105 {
 				}
 				for (@Pc(141) int local141 = arg0; local141 >= 0; local141--) {
 					if (Static130.aClass3_Sub5ArrayArrayArray1[local141][local17][local108] == null) {
-						Static130.aClass3_Sub5ArrayArrayArray1[local141][local17][local108] = new Class3_Sub5(local141, local17, local108);
+						Static130.aClass3_Sub5ArrayArrayArray1[local141][local17][local108] = new Tile(local141, local17, local108);
 					}
 				}
-				@Pc(174) Class3_Sub5 local174 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][local17][local108];
+				@Pc(174) Tile local174 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][local17][local108];
 				local174.aClass31Array1[local174.anInt662] = local58;
 				local174.anIntArray59[local174.anInt662] = local115;
 				local174.anInt664 |= local115;

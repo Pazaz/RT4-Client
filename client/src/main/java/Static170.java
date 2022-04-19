@@ -47,7 +47,7 @@ public final class Static170 {
 		local6.aLong26 = arg5;
 		local6.aBoolean49 = arg6;
 		if (Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2] == null) {
-			Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2] = new Class3_Sub5(arg0, arg1, arg2);
+			Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2] = new Tile(arg0, arg1, arg2);
 		}
 		Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2].aClass15_1 = local6;
 	}

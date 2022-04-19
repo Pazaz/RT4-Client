@@ -43,7 +43,7 @@ public final class Static254 {
 	}
 
 	@OriginalMember(owner = "client!uj", name = "a", descriptor = "(BZII[[[Lclient!bj;I)Z")
-	public static boolean method4348(@OriginalArg(1) boolean arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Class3_Sub5[][][] arg3, @OriginalArg(5) int arg4) {
+	public static boolean method4348(@OriginalArg(1) boolean arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Tile[][][] arg3, @OriginalArg(5) int arg4) {
 		@Pc(14) byte local14 = arg0 ? 1 : (byte) (Static136.anInt3325 & 0xFF);
 		if (local14 == Static266.aByteArrayArrayArray15[Static55.anInt1735][arg1][arg2]) {
 			return false;
@@ -108,7 +108,7 @@ public final class Static254 {
 							}
 						}
 						local132 = true;
-						@Pc(395) Class3_Sub5 local395 = arg3[local150][local108][local122];
+						@Pc(395) Tile local395 = arg3[local150][local108][local122];
 						if (local395 != null && local395.anInt662 > 0) {
 							for (local227 = 0; local227 < local395.anInt662; local227++) {
 								@Pc(418) Class31 local418 = local395.aClass31Array1[local227];
