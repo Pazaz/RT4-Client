@@ -49,7 +49,7 @@ public final class Static178 {
 
 	@OriginalMember(owner = "client!od", name = "a", descriptor = "(IZII)I")
 	public static int method3319(@OriginalArg(1) boolean arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-		@Pc(19) Class3_Sub27 local19 = (Class3_Sub27) Static20.aClass133_2.method3863((long) arg1);
+		@Pc(19) Inv local19 = (Inv) Static20.aClass133_2.method3863((long) arg1);
 		if (local19 == null) {
 			return 0;
 		}

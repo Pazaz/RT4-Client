@@ -180,7 +180,7 @@ public final class Static278 {
 
 	@OriginalMember(owner = "client!wj", name = "a", descriptor = "(BII)I")
 	public static int method4652(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
-		@Pc(8) Class3_Sub27 local8 = (Class3_Sub27) Static20.aClass133_2.method3863((long) arg0);
+		@Pc(8) Inv local8 = (Inv) Static20.aClass133_2.method3863((long) arg0);
 		if (local8 == null) {
 			return 0;
 		} else if (arg1 == -1) {
