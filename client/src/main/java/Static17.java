@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static17 {
 
 	@OriginalMember(owner = "client!bg", name = "g", descriptor = "Lclient!i;")
-	public static final Class3_Sub15_Sub1 aClass3_Sub15_Sub1_2 = new Class3_Sub15_Sub1(5000);
+	public static final Packet aClass3_Sub15_Sub1_2 = new Packet(5000);
 
 	@OriginalMember(owner = "client!bg", name = "n", descriptor = "Lclient!na;")
 	public static final JagString aClass100_100 = Static28.method790("Votre liste d(Wamis est pleine (X100 noms maximum pour la version gratuite et 200 pour les abonn-Bs(Y)3");

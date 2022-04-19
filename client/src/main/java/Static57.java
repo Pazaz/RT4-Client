@@ -13,7 +13,7 @@ public final class Static57 {
 	public static int anInt1747 = 0;
 
 	@OriginalMember(owner = "client!eg", name = "e", descriptor = "Lclient!i;")
-	public static final Class3_Sub15_Sub1 aClass3_Sub15_Sub1_3 = new Class3_Sub15_Sub1(65536);
+	public static final Packet aClass3_Sub15_Sub1_3 = new Packet(65536);
 
 	@OriginalMember(owner = "client!eg", name = "B", descriptor = "Lclient!na;")
 	private static final JagString aClass100_393 = Static28.method790("slide:");

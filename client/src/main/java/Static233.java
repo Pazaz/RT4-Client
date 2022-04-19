@@ -157,7 +157,7 @@ public final class Static233 {
 	}
 
 	@OriginalMember(owner = "client!t", name = "a", descriptor = "(Lclient!i;II)V")
-	public static void method4005(@OriginalArg(0) Class3_Sub15_Sub1 arg0) {
+	public static void method4005(@OriginalArg(0) Packet arg0) {
 		while (true) {
 			@Pc(18) Class3_Sub11 local18 = (Class3_Sub11) Static204.aClass69_113.method2289();
 			if (local18 == null) {

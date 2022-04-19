@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static6 {
 
 	@OriginalMember(owner = "client!ag", name = "P", descriptor = "Lclient!i;")
-	public static final Class3_Sub15_Sub1 aClass3_Sub15_Sub1_1 = new Class3_Sub15_Sub1(5000);
+	public static final Packet aClass3_Sub15_Sub1_1 = new Packet(5000);
 
 	@OriginalMember(owner = "client!ag", name = "ab", descriptor = "Lclient!na;")
 	public static final JagString aClass100_17 = Static28.method790("0");
