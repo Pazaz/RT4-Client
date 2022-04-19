@@ -20,9 +20,9 @@ public final class Static70 {
 	public static int anInt2015 = 0;
 
 	@OriginalMember(owner = "client!fi", name = "a", descriptor = "(B)Lclient!s;")
-	public static Class93 method1547() {
+	public static Timer method1547() {
 		try {
-			return (Class93) Class.forName("NanoTimer").getDeclaredConstructor().newInstance();
+			return (Timer) Class.forName("NanoTimer").getDeclaredConstructor().newInstance();
 		} catch (@Pc(15) Throwable local15) {
 			return new Class93_Sub1();
 		}
