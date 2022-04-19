@@ -11,7 +11,7 @@ public final class Static145 {
 	public static final int[][] anIntArrayArray25 = new int[104][104];
 
 	@OriginalMember(owner = "client!lf", name = "c", descriptor = "Lclient!ih;")
-	public static final Class69 aClass69_84 = new Class69();
+	public static final LinkedList aClass69_84 = new LinkedList();
 
 	@OriginalMember(owner = "client!lf", name = "d", descriptor = "[I")
 	public static final int[] anIntArray331 = new int[1000];

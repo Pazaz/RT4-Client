@@ -17,7 +17,7 @@ public final class Static3 {
 	public static final Class100 aClass100_1105 = Static28.method790("Objet d(Wabonn-Bs");
 
 	@OriginalMember(owner = "client!ab", name = "n", descriptor = "Lclient!ih;")
-	public static final Class69 aClass69_135 = new Class69();
+	public static final LinkedList aClass69_135 = new LinkedList();
 
 	@OriginalMember(owner = "client!ab", name = "a", descriptor = "(Lclient!na;I)V")
 	public static void method4656(@OriginalArg(0) Class100 arg0) {

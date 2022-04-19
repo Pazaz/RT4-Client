@@ -27,7 +27,7 @@ public final class Static7 {
 	public static int anInt983 = 0;
 
 	@OriginalMember(owner = "client!ah", name = "p", descriptor = "Lclient!ih;")
-	public static final Class69 aClass69_32 = new Class69();
+	public static final LinkedList aClass69_32 = new LinkedList();
 
 	@OriginalMember(owner = "client!ah", name = "q", descriptor = "Lclient!na;")
 	public static Class100 aClass100_190 = aClass100_189;

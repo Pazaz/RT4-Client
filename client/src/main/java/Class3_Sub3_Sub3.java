@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Class3_Sub3_Sub3 extends PcmStream {
 
 	@OriginalMember(owner = "client!te", name = "w", descriptor = "Lclient!ih;")
-	public final Class69 aClass69_126 = new Class69();
+	public final LinkedList aClass69_126 = new LinkedList();
 
 	@OriginalMember(owner = "client!te", name = "K", descriptor = "Lclient!ei;")
 	public final Class3_Sub3_Sub2 aClass3_Sub3_Sub2_2 = new Class3_Sub3_Sub2();

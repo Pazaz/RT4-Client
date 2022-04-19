@@ -40,7 +40,7 @@ public final class Class3_Sub2_Sub4 extends SecondaryNode {
 	public final int anInt769;
 
 	@OriginalMember(owner = "client!bn", name = "ab", descriptor = "Lclient!ih;")
-	public final Class69 aClass69_23;
+	public final LinkedList aClass69_23;
 
 	@OriginalMember(owner = "client!bn", name = "<init>", descriptor = "(Lclient!na;Lclient!na;IIIZI)V")
 	public Class3_Sub2_Sub4(@OriginalArg(0) Class100 arg0, @OriginalArg(1) Class100 arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) boolean arg5, @OriginalArg(6) int arg6) {
@@ -54,7 +54,7 @@ public final class Class3_Sub2_Sub4 extends SecondaryNode {
 		if (this.anInt772 == 255) {
 			this.anInt772 = 0;
 		}
-		this.aClass69_23 = new Class69();
+		this.aClass69_23 = new LinkedList();
 	}
 
 	@OriginalMember(owner = "client!bn", name = "a", descriptor = "(IBI)Z")

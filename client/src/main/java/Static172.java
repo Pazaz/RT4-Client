@@ -32,7 +32,7 @@ public final class Static172 {
 	public static boolean aBoolean199 = false;
 
 	@OriginalMember(owner = "client!nj", name = "h", descriptor = "Lclient!ih;")
-	public static final Class69 aClass69_97 = new Class69();
+	public static final LinkedList aClass69_97 = new LinkedList();
 
 	@OriginalMember(owner = "client!nj", name = "i", descriptor = "I")
 	public static int anInt4164 = 0;

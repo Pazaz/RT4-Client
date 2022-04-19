@@ -11,7 +11,7 @@ public final class Class3_Sub2_Sub7 extends SecondaryNode {
 
 	@OriginalMember(owner = "client!cl", name = "<init>", descriptor = "(Lclient!ve;Lclient!ve;IZ)V")
 	public Class3_Sub2_Sub7(@OriginalArg(0) Class153 arg0, @OriginalArg(1) Class153 arg1, @OriginalArg(2) int arg2, @OriginalArg(3) boolean arg3) {
-		@Pc(5) Class69 local5 = new Class69();
+		@Pc(5) LinkedList local5 = new LinkedList();
 		@Pc(10) int local10 = arg0.method4504(arg2);
 		this.aClass104Array1 = new Class104[local10];
 		@Pc(19) int[] local19 = arg0.method4503(arg2);

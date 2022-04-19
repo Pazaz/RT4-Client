@@ -17,7 +17,7 @@ public final class Static204 {
 	public static int anInt4762 = 0;
 
 	@OriginalMember(owner = "client!qi", name = "u", descriptor = "Lclient!ih;")
-	public static Class69 aClass69_113 = new Class69();
+	public static LinkedList aClass69_113 = new LinkedList();
 
 	@OriginalMember(owner = "client!qi", name = "v", descriptor = "Z")
 	public static boolean aBoolean234 = false;

@@ -13,7 +13,7 @@ public final class ColorImageCache {
 	private int anInt4471 = -1;
 
 	@OriginalMember(owner = "client!pf", name = "p", descriptor = "Lclient!ih;")
-	private Class69 aClass69_103 = new Class69();
+	private LinkedList aClass69_103 = new LinkedList();
 
 	@OriginalMember(owner = "client!pf", name = "t", descriptor = "Z")
 	public boolean aBoolean221 = false;

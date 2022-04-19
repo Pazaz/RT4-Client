@@ -16,7 +16,7 @@ public final class Class103 {
 	private int anInt4066 = 0;
 
 	@OriginalMember(owner = "client!nd", name = "g", descriptor = "Lclient!ih;")
-	private Class69 aClass69_96 = new Class69();
+	private LinkedList aClass69_96 = new LinkedList();
 
 	@OriginalMember(owner = "client!nd", name = "w", descriptor = "Z")
 	public boolean aBoolean195 = false;
