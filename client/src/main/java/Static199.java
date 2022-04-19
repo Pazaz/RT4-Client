@@ -29,13 +29,13 @@ public final class Static199 {
 	public static final int[] anIntArray417 = new int[1000];
 
 	@OriginalMember(owner = "client!qc", name = "a", descriptor = "(ZI)Lclient!ni;")
-	public static Class107 method3593(@OriginalArg(1) int arg0) {
-		@Pc(10) Class107 local10 = (Class107) Static83.aClass99_3.method3106((long) arg0);
+	public static FluType method3593(@OriginalArg(1) int arg0) {
+		@Pc(10) FluType local10 = (FluType) Static83.aClass99_3.method3106((long) arg0);
 		if (local10 != null) {
 			return local10;
 		}
 		@Pc(27) byte[] local27 = Static182.aClass153_77.method4495(1, arg0);
-		local10 = new Class107();
+		local10 = new FluType();
 		if (local27 != null) {
 			local10.method3217(arg0, new Buffer(local27));
 		}

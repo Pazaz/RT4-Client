@@ -136,7 +136,7 @@ public final class Static45 {
 					if (local178 < 104) {
 						local194 = Static253.aByteArrayArrayArray16[local152][local178][local173] & 0xFF;
 						if (local194 > 0) {
-							@Pc(693) Class107 local693 = Static199.method3593(local194 - 1);
+							@Pc(693) FluType local693 = Static199.method3593(local194 - 1);
 							Static221.anIntArray376[local173] += local693.anInt4154;
 							Static139.anIntArray325[local173] += local693.anInt4149;
 							Static279.anIntArray568[local173] += local693.anInt4158;
@@ -148,7 +148,7 @@ public final class Static45 {
 					if (local194 >= 0) {
 						local200 = Static253.aByteArrayArrayArray16[local152][local194][local173] & 0xFF;
 						if (local200 > 0) {
-							@Pc(758) Class107 local758 = Static199.method3593(local200 - 1);
+							@Pc(758) FluType local758 = Static199.method3593(local200 - 1);
 							Static221.anIntArray376[local173] -= local758.anInt4154;
 							Static139.anIntArray325[local173] -= local758.anInt4149;
 							Static279.anIntArray568[local173] -= local758.anInt4158;
