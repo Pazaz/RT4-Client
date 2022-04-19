@@ -44,7 +44,7 @@ public final class Static124 {
 	}
 
 	@OriginalMember(owner = "client!jk", name = "a", descriptor = "(IZ[BII[Lclient!mj;)V")
-	public static void method2437(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) byte[] arg2, @OriginalArg(3) int arg3, @OriginalArg(5) Class97[] arg4) {
+	public static void method2437(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) byte[] arg2, @OriginalArg(3) int arg3, @OriginalArg(5) CollisionMap[] arg4) {
 		@Pc(10) Buffer local10 = new Buffer(arg2);
 		@Pc(12) int local12 = -1;
 		while (true) {
@@ -69,7 +69,7 @@ public final class Static124 {
 				@Pc(72) int local72 = arg0 + local56;
 				@Pc(76) int local76 = local46 + arg3;
 				if (local72 > 0 && local76 > 0 && local72 < 103 && local76 < 103) {
-					@Pc(90) Class97 local90 = null;
+					@Pc(90) CollisionMap local90 = null;
 					if (!arg1) {
 						@Pc(95) int local95 = local50;
 						if ((Static12.aByteArrayArrayArray2[1][local72][local76] & 0x2) == 2) {

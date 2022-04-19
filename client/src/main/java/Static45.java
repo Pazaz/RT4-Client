@@ -17,7 +17,7 @@ public final class Static45 {
 	public static final Class99 aClass99_6 = new Class99(32);
 
 	@OriginalMember(owner = "client!di", name = "a", descriptor = "([Lclient!mj;ZI)V")
-	public static void method1169(@OriginalArg(0) Class97[] arg0, @OriginalArg(1) boolean arg1) {
+	public static void method1169(@OriginalArg(0) CollisionMap[] arg0, @OriginalArg(1) boolean arg1) {
 		@Pc(10) int local10;
 		@Pc(15) int local15;
 		if (!arg1) {

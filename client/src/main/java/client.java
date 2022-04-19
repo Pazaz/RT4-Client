@@ -660,7 +660,7 @@ public final class client extends GameShell {
 		if (Static166.anInt4051 == 10) {
 			Static120.method2392();
 			for (local98 = 0; local98 < 4; local98++) {
-				Static148.aClass97Array1[local98] = new Class97(104, 104);
+				Static148.aClass97Array1[local98] = new CollisionMap(104, 104);
 			}
 			Static199.anInt4670 = 10;
 			Static166.anInt4051 = 30;

@@ -134,7 +134,7 @@ public final class Static217 {
 	}
 
 	@OriginalMember(owner = "client!rj", name = "a", descriptor = "([Lclient!mj;I[BIIIIZIIB)V")
-	public static void method3771(@OriginalArg(0) Class97[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) byte[] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) boolean arg7, @OriginalArg(8) int arg8, @OriginalArg(9) int arg9) {
+	public static void method3771(@OriginalArg(0) CollisionMap[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) byte[] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) boolean arg7, @OriginalArg(8) int arg8, @OriginalArg(9) int arg9) {
 		@Pc(7) int local7 = -1;
 		@Pc(12) Buffer local12 = new Buffer(arg2);
 		while (true) {
@@ -161,7 +161,7 @@ public final class Static217 {
 					@Pc(120) int local120 = Static52.method1286(local50 & 0x7, arg4, local72, local103.anInt4403, local103.anInt4397, local56 & 0x7) + arg5;
 					@Pc(137) int local137 = Static241.method4541(local103.anInt4397, arg4, local103.anInt4403, local56 & 0x7, local72, local50 & 0x7) + arg6;
 					if (local120 > 0 && local137 > 0 && local120 < 103 && local137 < 103) {
-						@Pc(154) Class97 local154 = null;
+						@Pc(154) CollisionMap local154 = null;
 						if (!arg7) {
 							@Pc(159) int local159 = arg1;
 							if ((Static12.aByteArrayArrayArray2[1][local120][local137] & 0x2) == 2) {
