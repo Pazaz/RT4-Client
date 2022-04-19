@@ -1157,7 +1157,7 @@ public final class Component {
 	}
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "([Lclient!ok;I)Lclient!rk;")
-	public final Font method491(@OriginalArg(0) Class36[] arg0) {
+	public final Font method491(@OriginalArg(0) IndexedSprite[] arg0) {
 		Static211.aBoolean72 = false;
 		if (this.anInt502 == -1) {
 			return null;

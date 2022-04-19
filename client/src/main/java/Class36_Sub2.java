@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!oh")
-public final class Class36_Sub2 extends Class36 {
+public final class Class36_Sub2 extends IndexedSprite {
 
 	@OriginalMember(owner = "client!oh", name = "r", descriptor = "I")
 	private int anInt4285;

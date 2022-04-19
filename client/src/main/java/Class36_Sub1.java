@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ek")
-public final class Class36_Sub1 extends Class36 {
+public final class Class36_Sub1 extends IndexedSprite {
 
 	@OriginalMember(owner = "client!ek", name = "o", descriptor = "[B")
 	public byte[] aByteArray18;

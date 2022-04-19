@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!ok")
-public abstract class Class36 {
+public abstract class IndexedSprite {
 
 	@OriginalMember(owner = "client!ok", name = "a", descriptor = "I")
 	public int anInt4270;
@@ -24,7 +24,7 @@ public abstract class Class36 {
 	public int anInt4280;
 
 	@OriginalMember(owner = "client!ok", name = "<init>", descriptor = "()V")
-	protected Class36() {
+	protected IndexedSprite() {
 	}
 
 	@OriginalMember(owner = "client!ok", name = "a", descriptor = "(III)V")

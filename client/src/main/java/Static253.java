@@ -209,8 +209,8 @@ public final class Static253 {
 	}
 
 	@OriginalMember(owner = "client!ui", name = "h", descriptor = "(I)[Lclient!ok;")
-	public static Class36[] method4331() {
-		@Pc(8) Class36[] local8 = new Class36[Static165.anInt4038];
+	public static IndexedSprite[] method4331() {
+		@Pc(8) IndexedSprite[] local8 = new IndexedSprite[Static165.anInt4038];
 		for (@Pc(10) int local10 = 0; local10 < Static165.anInt4038; local10++) {
 			if (Static239.aBoolean269) {
 				local8[local10] = new Class36_Sub2(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local10], Static269.anIntArray252[local10], Static254.anIntArray488[local10], Static26.anIntArray66[local10], Static7.aByteArrayArray5[local10], Static259.anIntArray513);

@@ -78,7 +78,7 @@ public final class Static40 {
 	}
 
 	@OriginalMember(owner = "client!da", name = "a", descriptor = "(ILclient!ve;Z)Lclient!ok;")
-	public static Class36 method1010(@OriginalArg(0) int arg0, @OriginalArg(1) Js5 arg1) {
+	public static IndexedSprite method1010(@OriginalArg(0) int arg0, @OriginalArg(1) Js5 arg1) {
 		return Static254.method4346(arg1, arg0) ? Static276.method4614() : null;
 	}
 
