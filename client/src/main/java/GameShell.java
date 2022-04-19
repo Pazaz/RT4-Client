@@ -4,7 +4,6 @@ import java.awt.Container;
 import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.Insets;
-import java.awt.LayoutManager;
 import java.awt.Rectangle;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
@@ -18,7 +17,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!rc")
-public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListener, WindowListener {
+public abstract class GameShell extends Applet implements Runnable, FocusListener, WindowListener {
 
 	@OriginalMember(owner = "client!rc", name = "b", descriptor = "Z")
 	private boolean aBoolean71 = false;
