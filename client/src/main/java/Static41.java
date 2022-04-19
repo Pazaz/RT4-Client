@@ -63,7 +63,7 @@ public final class Static41 {
 				local41 = 21;
 			}
 			@Pc(83) int[] local83 = new int[] { 64, 96, 128 };
-			@Pc(103) Class8_Sub5 local103 = new Class8_Sub5(local41 * 3 + 1, -local41 + local41 * 3 * 2, 0);
+			@Pc(103) RawModel local103 = new RawModel(local41 * 3 + 1, -local41 + local41 * 3 * 2, 0);
 			local109 = local103.method1685(0, 0);
 			@Pc(113) int[][] local113 = new int[3][local41];
 			for (local115 = 0; local115 < 3; local115++) {

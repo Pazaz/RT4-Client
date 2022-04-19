@@ -31,15 +31,15 @@ public final class Class30 {
 	public boolean aBoolean85 = false;
 
 	@OriginalMember(owner = "client!dm", name = "a", descriptor = "(Z)Lclient!gb;")
-	public final Class8_Sub5 method1198() {
+	public final RawModel method1198() {
 		@Pc(13) int local13 = 0;
-		@Pc(16) Class8_Sub5[] local16 = new Class8_Sub5[5];
+		@Pc(16) RawModel[] local16 = new RawModel[5];
 		for (@Pc(18) int local18 = 0; local18 < 5; local18++) {
 			if (this.anIntArray113[local18] != -1) {
 				local16[local13++] = Static77.method1686(Static14.aClass153_8, this.anIntArray113[local18]);
 			}
 		}
-		@Pc(52) Class8_Sub5 local52 = new Class8_Sub5(local16, local13);
+		@Pc(52) RawModel local52 = new RawModel(local16, local13);
 		@Pc(58) int local58;
 		if (this.aShortArray12 != null) {
 			for (local58 = 0; local58 < this.aShortArray12.length; local58++) {
@@ -106,19 +106,19 @@ public final class Class30 {
 	}
 
 	@OriginalMember(owner = "client!dm", name = "b", descriptor = "(B)Lclient!gb;")
-	public final Class8_Sub5 method1204() {
+	public final RawModel method1204() {
 		if (this.anIntArray112 == null) {
 			return null;
 		}
-		@Pc(16) Class8_Sub5[] local16 = new Class8_Sub5[this.anIntArray112.length];
+		@Pc(16) RawModel[] local16 = new RawModel[this.anIntArray112.length];
 		for (@Pc(18) int local18 = 0; local18 < this.anIntArray112.length; local18++) {
 			local16[local18] = Static77.method1686(Static14.aClass153_8, this.anIntArray112[local18]);
 		}
-		@Pc(56) Class8_Sub5 local56;
+		@Pc(56) RawModel local56;
 		if (local16.length == 1) {
 			local56 = local16[0];
 		} else {
-			local56 = new Class8_Sub5(local16, local16.length);
+			local56 = new RawModel(local16, local16.length);
 		}
 		@Pc(70) int local70;
 		if (this.aShortArray12 != null) {

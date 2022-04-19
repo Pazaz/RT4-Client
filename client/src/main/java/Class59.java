@@ -35,12 +35,12 @@ public final class Class59 {
 		@Pc(24) long local24 = (long) arg2 | (long) (arg6 << 16) | (long) arg1 << 32;
 		@Pc(30) Model local30 = (Model) Static139.aClass99_21.method3106(local24);
 		if (local30 == null) {
-			@Pc(36) Class8_Sub5[] local36 = new Class8_Sub5[3];
+			@Pc(36) RawModel[] local36 = new RawModel[3];
 			@Pc(38) int local38 = 0;
 			if (!Static81.method1752(arg2).method1205() || !Static81.method1752(arg6).method1205() || !Static81.method1752(arg1).method1205()) {
 				return null;
 			}
-			@Pc(66) Class8_Sub5 local66 = Static81.method1752(arg2).method1198();
+			@Pc(66) RawModel local66 = Static81.method1752(arg2).method1198();
 			if (local66 != null) {
 				local38++;
 				local36[0] = local66;
@@ -53,7 +53,7 @@ public final class Class59 {
 			if (local66 != null) {
 				local36[local38++] = local66;
 			}
-			local66 = new Class8_Sub5(local36, local38);
+			local66 = new RawModel(local36, local38);
 			for (@Pc(110) int local110 = 0; local110 < 5; local110++) {
 				if (this.anIntArray236[local110] < Static33.aShortArrayArray2[local110].length) {
 					local66.method1687(Static200.aShortArray65[local110], Static33.aShortArrayArray2[local110][this.anIntArray236[local110]]);
@@ -211,11 +211,11 @@ public final class Class59 {
 				}
 			}
 			if (local154 == null) {
-				@Pc(239) Class8_Sub5[] local239 = new Class8_Sub5[12];
+				@Pc(239) RawModel[] local239 = new RawModel[12];
 				@Pc(250) int local250;
 				for (local169 = 0; local169 < 12; local169++) {
 					local250 = local38[local169];
-					@Pc(272) Class8_Sub5 local272;
+					@Pc(272) RawModel local272;
 					if ((local250 & 0x40000000) != 0) {
 						local272 = Static71.method1439(local250 & 0x3FFFFFFF).method1831(this.aBoolean141);
 						if (local272 != null) {
@@ -286,7 +286,7 @@ public final class Class59 {
 						}
 					}
 				}
-				@Pc(740) Class8_Sub5 local740 = new Class8_Sub5(local239, local239.length);
+				@Pc(740) RawModel local740 = new RawModel(local239, local239.length);
 				for (local346 = 0; local346 < 5; local346++) {
 					if (Static33.aShortArrayArray2[local346].length > this.anIntArray236[local346]) {
 						local740.method1687(Static200.aShortArray65[local346], Static33.aShortArrayArray2[local346][this.anIntArray236[local346]]);
@@ -458,12 +458,12 @@ public final class Class59 {
 			if (local42) {
 				return null;
 			}
-			@Pc(100) Class8_Sub5[] local100 = new Class8_Sub5[12];
+			@Pc(100) RawModel[] local100 = new RawModel[12];
 			local52 = 0;
 			@Pc(114) int local114;
 			for (@Pc(104) int local104 = 0; local104 < 12; local104++) {
 				local114 = this.anIntArray233[local104];
-				@Pc(134) Class8_Sub5 local134;
+				@Pc(134) RawModel local134;
 				if ((local114 & 0x40000000) != 0) {
 					local134 = Static71.method1439(local114 & 0x3FFFFFFF).method1830(this.aBoolean141);
 					if (local134 != null) {
@@ -476,7 +476,7 @@ public final class Class59 {
 					}
 				}
 			}
-			@Pc(171) Class8_Sub5 local171 = new Class8_Sub5(local100, local52);
+			@Pc(171) RawModel local171 = new RawModel(local100, local52);
 			for (local114 = 0; local114 < 5; local114++) {
 				if (Static33.aShortArrayArray2[local114].length > this.anIntArray236[local114]) {
 					local171.method1687(Static200.aShortArray65[local114], Static33.aShortArrayArray2[local114][this.anIntArray236[local114]]);
