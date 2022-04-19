@@ -1,5 +1,5 @@
 import org.openrs2.deob.annotation.OriginalClass;
 
 @OriginalClass("client!ri")
-public class Class47 {
+public class ParticleNode {
 }
