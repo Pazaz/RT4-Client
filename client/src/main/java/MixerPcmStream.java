@@ -19,14 +19,14 @@ public final class MixerPcmStream extends PcmStream {
 	private int anInt1781 = -1;
 
 	@OriginalMember(owner = "client!ei", name = "a", descriptor = "(Lclient!cc;)V")
-	private void method1342(@OriginalArg(0) Class3_Sub6 arg0) {
+	private void method1342(@OriginalArg(0) MixerListener arg0) {
 		arg0.method4658();
 		arg0.method780();
 		@Pc(9) Node local9 = this.aClass69_44.aClass3_109.aClass3_222;
 		if (local9 == this.aClass69_44.aClass3_109) {
 			this.anInt1781 = -1;
 		} else {
-			this.anInt1781 = ((Class3_Sub6) local9).anInt905;
+			this.anInt1781 = ((MixerListener) local9).anInt905;
 		}
 	}
 
@@ -54,7 +54,7 @@ public final class MixerPcmStream extends PcmStream {
 			arg2 -= local33;
 			this.anInt1780 += local33;
 			this.method1344();
-			@Pc(60) Class3_Sub6 local60 = (Class3_Sub6) this.aClass69_44.method2289();
+			@Pc(60) MixerListener local60 = (MixerListener) this.aClass69_44.method2289();
 			synchronized (local60) {
 				@Pc(68) int local68 = local60.method779(this);
 				if (local68 < 0) {
@@ -73,7 +73,7 @@ public final class MixerPcmStream extends PcmStream {
 		if (this.anInt1780 <= 0) {
 			return;
 		}
-		for (@Pc(8) Class3_Sub6 local8 = (Class3_Sub6) this.aClass69_44.method2289(); local8 != null; local8 = (Class3_Sub6) this.aClass69_44.method2288()) {
+		for (@Pc(8) MixerListener local8 = (MixerListener) this.aClass69_44.method2289(); local8 != null; local8 = (MixerListener) this.aClass69_44.method2288()) {
 			local8.anInt905 -= this.anInt1780;
 		}
 		this.anInt1781 -= this.anInt1780;
@@ -129,7 +129,7 @@ public final class MixerPcmStream extends PcmStream {
 			arg0 -= local29;
 			this.anInt1780 += local29;
 			this.method1344();
-			@Pc(50) Class3_Sub6 local50 = (Class3_Sub6) this.aClass69_44.method2289();
+			@Pc(50) MixerListener local50 = (MixerListener) this.aClass69_44.method2289();
 			synchronized (local50) {
 				@Pc(58) int local58 = local50.method779(this);
 				if (local58 < 0) {
@@ -150,11 +150,11 @@ public final class MixerPcmStream extends PcmStream {
 	}
 
 	@OriginalMember(owner = "client!ei", name = "a", descriptor = "(Lclient!ab;Lclient!cc;)V")
-	private void method1348(@OriginalArg(0) Node arg0, @OriginalArg(1) Class3_Sub6 arg1) {
-		while (arg0 != this.aClass69_44.aClass3_109 && ((Class3_Sub6) arg0).anInt905 <= arg1.anInt905) {
+	private void method1348(@OriginalArg(0) Node arg0, @OriginalArg(1) MixerListener arg1) {
+		while (arg0 != this.aClass69_44.aClass3_109 && ((MixerListener) arg0).anInt905 <= arg1.anInt905) {
 			arg0 = arg0.aClass3_222;
 		}
 		Static183.method3331(arg1, arg0);
-		this.anInt1781 = ((Class3_Sub6) this.aClass69_44.aClass3_109.aClass3_222).anInt905;
+		this.anInt1781 = ((MixerListener) this.aClass69_44.aClass3_109.aClass3_222).anInt905;
 	}
 }
