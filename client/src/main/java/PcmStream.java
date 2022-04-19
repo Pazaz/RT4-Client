@@ -9,7 +9,7 @@ public abstract class PcmStream extends Node {
 	public int anInt5626;
 
 	@OriginalMember(owner = "client!qb", name = "q", descriptor = "Lclient!ik;")
-	public Class3_Sub16 aClass3_Sub16_5;
+	public Sound aClass3_Sub16_5;
 
 	@OriginalMember(owner = "client!qb", name = "s", descriptor = "Lclient!qb;")
 	public PcmStream aClass3_Sub3_8;
