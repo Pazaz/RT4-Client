@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ck")
-public final class Class20 {
+public final class BasType {
 
 	@OriginalMember(owner = "client!ck", name = "g", descriptor = "[[I")
 	public int[][] anIntArrayArray7;

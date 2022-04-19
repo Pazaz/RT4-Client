@@ -9,7 +9,7 @@ public final class Static104 {
 
 	@OriginalMember(owner = "client!ia", name = "a", descriptor = "(BLclient!fe;)V")
 	public static void method2247(@OriginalArg(1) PathingEntity arg0) {
-		@Pc(9) Class20 local9 = arg0.method2681();
+		@Pc(9) BasType local9 = arg0.method2681();
 		arg0.anInt3366 = local9.anInt1037;
 		if (arg0.anInt3409 == 0) {
 			arg0.anInt3417 = 0;

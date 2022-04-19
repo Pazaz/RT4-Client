@@ -18,7 +18,7 @@ public final class Static4 {
 	public static short aShort1 = 32767;
 
 	@OriginalMember(owner = "client!ac", name = "l", descriptor = "Lclient!ck;")
-	public static final Class20 aClass20_1 = new Class20();
+	public static final BasType aClass20_1 = new BasType();
 
 	@OriginalMember(owner = "client!ac", name = "m", descriptor = "Lclient!na;")
 	public static final JagString aClass100_7 = Static28.method790("overlay");

@@ -252,7 +252,7 @@ public final class NpcType {
 					}
 				}
 			}
-			@Pc(156) Class20 local156 = null;
+			@Pc(156) BasType local156 = null;
 			if (this.anInt3737 != -1) {
 				local156 = Static90.method1856(this.anInt3737);
 			}

@@ -415,7 +415,7 @@ public final class Static75 {
 								}
 							}
 							if (local1198 != null) {
-								@Pc(1232) Class20 local1232 = local1198.method2681();
+								@Pc(1232) BasType local1232 = local1198.method2681();
 								if (local1232.anIntArrayArray7 != null && local1232.anIntArrayArray7[local1194] != null) {
 									local1188 = local1232.anIntArrayArray7[local1194][0];
 									local224 -= local1232.anIntArrayArray7[local1194][1];
