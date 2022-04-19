@@ -388,8 +388,8 @@ public final class Class96 {
 		local221 = -1;
 		local235 = -1;
 		local200 = 0;
-		@Pc(962) Class3_Sub2_Sub7 local962 = null;
-		@Pc(964) Class3_Sub2_Sub7 local964 = null;
+		@Pc(962) AnimFrameset local962 = null;
+		@Pc(964) AnimFrameset local964 = null;
 		@Pc(1040) int local1040;
 		if (arg8 != null) {
 			local235 = arg8.anIntArray473[arg5];
@@ -419,9 +419,9 @@ public final class Class96 {
 		}
 		local228 = -1;
 		local1040 = -1;
-		@Pc(1088) Class3_Sub2_Sub7 local1088 = null;
+		@Pc(1088) AnimFrameset local1088 = null;
 		local300 = 0;
-		@Pc(1092) Class3_Sub2_Sub7 local1092 = null;
+		@Pc(1092) AnimFrameset local1092 = null;
 		if (arg6 != null) {
 			local228 = arg6.anIntArray473[arg2];
 			local324 = local228 >>> 16;

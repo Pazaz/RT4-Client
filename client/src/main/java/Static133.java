@@ -11,7 +11,7 @@ public final class Static133 {
 	public static long aLong175 = 0L;
 
 	@OriginalMember(owner = "client!kf", name = "d", descriptor = "[Lclient!cl;")
-	public static final Class3_Sub2_Sub7[] aClass3_Sub2_Sub7Array7 = new Class3_Sub2_Sub7[14];
+	public static final AnimFrameset[] aClass3_Sub2_Sub7Array7 = new AnimFrameset[14];
 
 	@OriginalMember(owner = "client!kf", name = "h", descriptor = "[I")
 	public static final int[] anIntArray453 = new int[] { 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3 };

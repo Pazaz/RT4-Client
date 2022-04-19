@@ -38,8 +38,8 @@ public final class Static72 {
 	public static final JagString aClass100_448 = Static28.method790("(Y");
 
 	@OriginalMember(owner = "client!fl", name = "b", descriptor = "(II)Lclient!cl;")
-	public static Class3_Sub2_Sub7 method1566(@OriginalArg(0) int arg0) {
-		@Pc(19) Class3_Sub2_Sub7 local19 = (Class3_Sub2_Sub7) Static267.aClass99_37.method3106((long) arg0);
+	public static AnimFrameset method1566(@OriginalArg(0) int arg0) {
+		@Pc(19) AnimFrameset local19 = (AnimFrameset) Static267.aClass99_37.method3106((long) arg0);
 		if (local19 != null) {
 			return local19;
 		}

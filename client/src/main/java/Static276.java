@@ -14,7 +14,7 @@ public final class Static276 {
 	public static final int[] anIntArray563 = new int[50];
 
 	@OriginalMember(owner = "client!wh", name = "j", descriptor = "[Lclient!cl;")
-	public static final Class3_Sub2_Sub7[] aClass3_Sub2_Sub7Array8 = new Class3_Sub2_Sub7[14];
+	public static final AnimFrameset[] aClass3_Sub2_Sub7Array8 = new AnimFrameset[14];
 
 	@OriginalMember(owner = "client!wh", name = "m", descriptor = "[I")
 	public static final int[] anIntArray564 = new int[5];

@@ -352,8 +352,8 @@ public final class Class59 {
 		local353 = -1;
 		local360 = -1;
 		local374 = 0;
-		@Pc(1040) Class3_Sub2_Sub7 local1040 = null;
-		@Pc(1042) Class3_Sub2_Sub7 local1042 = null;
+		@Pc(1040) AnimFrameset local1040 = null;
+		@Pc(1042) AnimFrameset local1042 = null;
 		if (arg3 != null) {
 			local353 = arg3.anIntArray473[arg7];
 			local979 = local353 >>> 16;
@@ -382,8 +382,8 @@ public final class Class59 {
 		}
 		local979 = -1;
 		local451 = -1;
-		@Pc(1154) Class3_Sub2_Sub7 local1154 = null;
-		@Pc(1156) Class3_Sub2_Sub7 local1156 = null;
+		@Pc(1154) AnimFrameset local1154 = null;
+		@Pc(1156) AnimFrameset local1156 = null;
 		local457 = 0;
 		if (arg2 != null) {
 			local979 = arg2.anIntArray473[arg8];

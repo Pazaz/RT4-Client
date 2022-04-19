@@ -98,7 +98,7 @@ public final class Static41 {
 		@Pc(379) int local379 = -local367;
 		@Pc(381) int local381 = local367;
 		@Pc(384) int local384 = arg8.method4562();
-		@Pc(386) Class3_Sub2_Sub7 local386 = null;
+		@Pc(386) AnimFrameset local386 = null;
 		local115 = arg8.method4561();
 		local126 = arg8.method4576();
 		local130 = arg8.method4550();

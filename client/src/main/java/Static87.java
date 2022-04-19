@@ -29,7 +29,7 @@ public final class Static87 {
 	}
 
 	@OriginalMember(owner = "client!gn", name = "a", descriptor = "(Lclient!ve;ZLclient!ve;BI)Lclient!cl;")
-	public static Class3_Sub2_Sub7 method1803(@OriginalArg(0) Js5 arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(4) int arg2) {
+	public static AnimFrameset method1803(@OriginalArg(0) Js5 arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(4) int arg2) {
 		@Pc(5) boolean local5 = true;
 		@Pc(16) int[] local16 = arg0.method4503(arg2);
 		for (@Pc(18) int local18 = 0; local18 < local16.length; local18++) {
@@ -48,7 +48,7 @@ public final class Static87 {
 			return null;
 		}
 		try {
-			return new Class3_Sub2_Sub7(arg0, arg1, arg2, false);
+			return new AnimFrameset(arg0, arg1, arg2, false);
 		} catch (@Pc(84) Exception local84) {
 			return null;
 		}

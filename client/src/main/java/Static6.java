@@ -14,7 +14,7 @@ public final class Static6 {
 	public static final JagString aClass100_18 = Static28.method790("<col=40ff00>");
 
 	@OriginalMember(owner = "client!ag", name = "cb", descriptor = "[Lclient!cl;")
-	public static final Class3_Sub2_Sub7[] aClass3_Sub2_Sub7Array1 = new Class3_Sub2_Sub7[14];
+	public static final AnimFrameset[] aClass3_Sub2_Sub7Array1 = new AnimFrameset[14];
 
 	@OriginalMember(owner = "client!ag", name = "h", descriptor = "(I)V")
 	public static void method82() {
