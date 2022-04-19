@@ -165,7 +165,7 @@ public final class Static253 {
 			Static142.method2726(arg4, arg3, arg2, 256, arg0, 256);
 			Static233.method4000(arg3, arg2, arg0, 256, 256, arg4);
 		}
-		((Class109) Static94.anInterface1_2).method3239(Static178.anInt4247);
+		((Js5GlTextureProvider) Static94.anInterface1_2).method3239(Static178.anInt4247);
 		Static115.method2310(arg3, arg4, arg0, arg2);
 		Static240.anInt5333 = local123;
 		Static134.anInt3302 = local121;
