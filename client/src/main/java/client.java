@@ -725,7 +725,7 @@ public final class client extends Applet_Sub1 {
 			}
 		} else if (Static166.anInt4051 == 45) {
 			Static41.method1045(Static99.aBoolean143);
-			Static148.aClass3_Sub3_Sub4_1 = new Class3_Sub3_Sub4();
+			Static148.aClass3_Sub3_Sub4_1 = new MidiPcmStream();
 			Static148.aClass3_Sub3_Sub4_1.method4420();
 			Static11.aClass62_1 = Static107.method2262(22050, Static71.aClass213_3, Static154.aCanvas1, 0);
 			Static11.aClass62_1.method3566(Static148.aClass3_Sub3_Sub4_1);

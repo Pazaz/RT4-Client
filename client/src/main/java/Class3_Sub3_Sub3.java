@@ -13,10 +13,10 @@ public final class Class3_Sub3_Sub3 extends Class3_Sub3 {
 	public final Class3_Sub3_Sub2 aClass3_Sub3_Sub2_2 = new Class3_Sub3_Sub2();
 
 	@OriginalMember(owner = "client!te", name = "E", descriptor = "Lclient!va;")
-	private final Class3_Sub3_Sub4 aClass3_Sub3_Sub4_3;
+	private final MidiPcmStream aClass3_Sub3_Sub4_3;
 
 	@OriginalMember(owner = "client!te", name = "<init>", descriptor = "(Lclient!va;)V")
-	public Class3_Sub3_Sub3(@OriginalArg(0) Class3_Sub3_Sub4 arg0) {
+	public Class3_Sub3_Sub3(@OriginalArg(0) MidiPcmStream arg0) {
 		this.aClass3_Sub3_Sub4_3 = arg0;
 	}
 

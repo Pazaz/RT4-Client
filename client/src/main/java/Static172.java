@@ -8,7 +8,7 @@ public final class Static172 {
 	public static Class153 aClass153_69;
 
 	@OriginalMember(owner = "client!nj", name = "e", descriptor = "Lclient!va;")
-	public static Class3_Sub3_Sub4 aClass3_Sub3_Sub4_2;
+	public static MidiPcmStream aClass3_Sub3_Sub4_2;
 
 	@OriginalMember(owner = "client!nj", name = "f", descriptor = "Lclient!en;")
 	public static Class38 aClass38_4;
