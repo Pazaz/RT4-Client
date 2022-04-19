@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!rh")
-public final class Class131 {
+public final class PlainTile {
 
 	@OriginalMember(owner = "client!rh", name = "m", descriptor = "Z")
 	public boolean aBoolean241 = true;
@@ -27,7 +27,7 @@ public final class Class131 {
 	public final int anInt4869;
 
 	@OriginalMember(owner = "client!rh", name = "<init>", descriptor = "(IIIIIIZ)V")
-	public Class131(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) boolean arg6) {
+	public PlainTile(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) boolean arg6) {
 		this.anInt4867 = arg1;
 		this.anInt4865 = arg2;
 		this.anInt4872 = arg0;

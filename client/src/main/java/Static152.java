@@ -31,7 +31,7 @@ public final class Static152 {
 		if (local7 == null) {
 			return;
 		}
-		@Pc(13) Class131 local13 = local7.aClass131_1;
+		@Pc(13) PlainTile local13 = local7.aClass131_1;
 		@Pc(23) int local23;
 		if (local13 != null) {
 			@Pc(18) int local18 = local13.anInt4871;
