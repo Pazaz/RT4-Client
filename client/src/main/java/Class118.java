@@ -615,10 +615,10 @@ public final class Class118 {
 	}
 
 	@OriginalMember(owner = "client!pb", name = "a", descriptor = "(IZZI)Lclient!td;")
-	private Class8_Sub1_Sub1 method3427(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(3) int arg2) {
+	private GlModel method3427(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(3) int arg2) {
 		@Pc(10) int local10 = this.anInt4407 + 64;
 		@Pc(17) int local17 = this.anInt4405 * 5 + 768;
-		@Pc(79) Class8_Sub1_Sub1 local79;
+		@Pc(79) GlModel local79;
 		@Pc(24) int local24;
 		@Pc(177) int local177;
 		if (this.anIntArray378 == null) {
@@ -639,7 +639,7 @@ public final class Class118 {
 			if (arg1) {
 				local135 = ~local135;
 			}
-			local79 = (Class8_Sub1_Sub1) Static169.aClass99_24.method3106(local135);
+			local79 = (GlModel) Static169.aClass99_24.method3106(local135);
 			if (local79 == null) {
 				@Pc(175) Class8_Sub5 local175 = null;
 				for (local177 = 0; local177 < local24; local177++) {
@@ -654,7 +654,7 @@ public final class Class118 {
 				if (local24 > 1) {
 					local175 = new Class8_Sub5(Static274.aClass8_Sub5Array5, local24);
 				}
-				local79 = new Class8_Sub1_Sub1(local175, local10, local17, arg1);
+				local79 = new GlModel(local175, local10, local17, arg1);
 				Static169.aClass99_24.method3095(local79, local135);
 			}
 		} else {
@@ -673,13 +673,13 @@ public final class Class118 {
 			if (arg1) {
 				local26 += 65536;
 			}
-			local79 = (Class8_Sub1_Sub1) Static169.aClass99_24.method3106((long) local26);
+			local79 = (GlModel) Static169.aClass99_24.method3106((long) local26);
 			if (local79 == null) {
 				@Pc(90) Class8_Sub5 local90 = Static77.method1686(Static121.aClass153_45, local26 & 0xFFFF);
 				if (local90 == null) {
 					return null;
 				}
-				local79 = new Class8_Sub1_Sub1(local90, local10, local17, arg1);
+				local79 = new GlModel(local90, local10, local17, arg1);
 				Static169.aClass99_24.method3095(local79, (long) local26);
 			}
 		}
@@ -689,7 +689,7 @@ public final class Class118 {
 		}
 		@Pc(264) boolean local264 = this.anInt4404 == 128 && this.anInt4411 == 0;
 		@Pc(294) boolean local294 = arg0 == 0 && this.anInt4396 == 128 && this.anInt4399 == 128 && this.anInt4408 == 0 && this.anInt4434 == 0 && !local236;
-		@Pc(351) Class8_Sub1_Sub1 local351 = local79.method4117(local294, local264, this.aShortArray61 == null, local79.method4094() == local10, arg0 == 0 && !local236, true, local17 == local79.method4115(), !local236, this.aShortArray60 == null);
+		@Pc(351) GlModel local351 = local79.method4117(local294, local264, this.aShortArray61 == null, local79.method4094() == local10, arg0 == 0 && !local236, true, local17 == local79.method4115(), !local236, this.aShortArray60 == null);
 		if (local236) {
 			local351.method4122();
 		}
@@ -740,7 +740,7 @@ public final class Class118 {
 				local29 = arg0 + (this.anInt4426 << 10) + (arg3 << 3);
 			}
 			@Pc(225) Class139 local225 = (Class139) Static93.aClass99_14.method3106(local29);
-			@Pc(235) Class8_Sub1_Sub1 local235;
+			@Pc(235) GlModel local235;
 			@Pc(265) Class36_Sub1 local265;
 			if (local225 == null) {
 				local235 = this.method3427(arg0, false, arg3);
@@ -762,11 +762,11 @@ public final class Class118 {
 				local225.aClass36_Sub1_3 = local265;
 				Static93.aClass99_14.method3095(local225, local29);
 			} else {
-				local235 = (Class8_Sub1_Sub1) local225.aClass8_10;
+				local235 = (GlModel) local225.aClass8_10;
 				local265 = local225.aClass36_Sub1_3;
 			}
 			@Pc(298) boolean local298 = this.aBoolean219 & arg6;
-			@Pc(330) Class8_Sub1_Sub1 local330 = local235.method4117(this.aByte15 != 3, this.aByte15 == 0, true, true, true, !local298, true, true, true);
+			@Pc(330) GlModel local330 = local235.method4117(this.aByte15 != 3, this.aByte15 == 0, true, true, true, !local298, true, true, true);
 			if (this.aByte15 != 0) {
 				local330.method4110(this.aByte15, this.aShort26, local235, arg2, arg5, arg1, arg4, arg9);
 			}
@@ -867,7 +867,7 @@ public final class Class118 {
 		} else {
 			local30 = (arg11 << 3) + ((this.anInt4426 << 10) + arg5);
 		}
-		@Pc(46) Class8_Sub1_Sub1 local46 = (Class8_Sub1_Sub1) Static262.aClass99_36.method3106(local30);
+		@Pc(46) GlModel local46 = (GlModel) Static262.aClass99_36.method3106(local30);
 		if (local46 == null) {
 			local46 = this.method3427(arg5, true, arg11);
 			if (local46 == null) {
@@ -878,14 +878,14 @@ public final class Class118 {
 			Static262.aClass99_36.method3095(local46, local30);
 		}
 		@Pc(80) boolean local80 = false;
-		@Pc(82) Class8_Sub1_Sub1 local82 = local46;
+		@Pc(82) GlModel local82 = local46;
 		if (arg4 != null) {
-			local82 = (Class8_Sub1_Sub1) arg4.method4216(arg10, arg8, arg12, arg5, local46);
+			local82 = (GlModel) arg4.method4216(arg10, arg8, arg12, arg5, local46);
 			local80 = true;
 		}
 		if (arg11 == 10 && arg5 > 3) {
 			if (!local80) {
-				local82 = (Class8_Sub1_Sub1) local82.method4568(true, true, true);
+				local82 = (GlModel) local82.method4568(true, true, true);
 				local80 = true;
 			}
 			local82.method4554(256);
@@ -897,7 +897,7 @@ public final class Class118 {
 		}
 		if (this.aByte15 != 0) {
 			if (!local80) {
-				local82 = (Class8_Sub1_Sub1) local82.method4568(true, true, true);
+				local82 = (GlModel) local82.method4568(true, true, true);
 			}
 			local82.method4110(this.aByte15, this.aShort26, local46, arg6, arg9, arg1, arg3, arg0);
 		}

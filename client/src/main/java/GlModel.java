@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!td")
-public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
+public final class GlModel extends Class8_Sub1 {
 
 	@OriginalMember(owner = "client!td", name = "t", descriptor = "[S")
 	private short[] aShortArray75;
@@ -129,11 +129,11 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 	private int anInt5297 = 0;
 
 	@OriginalMember(owner = "client!td", name = "<init>", descriptor = "()V")
-	public Class8_Sub1_Sub1() {
+	public GlModel() {
 	}
 
 	@OriginalMember(owner = "client!td", name = "<init>", descriptor = "(Lclient!gb;IIZ)V")
-	public Class8_Sub1_Sub1(@OriginalArg(0) Class8_Sub5 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) boolean arg3) {
+	public GlModel(@OriginalArg(0) Class8_Sub5 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) boolean arg3) {
 		@Pc(23) int[] local23 = new int[arg0.anInt2136];
 		this.anIntArray462 = new int[arg0.anInt2139 + 1];
 		for (@Pc(32) int local32 = 0; local32 < arg0.anInt2136; local32++) {
@@ -909,7 +909,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(Lclient!th;IIIZ)V")
 	@Override
 	public final void method4544(@OriginalArg(0) Entity arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4) {
-		@Pc(2) Class8_Sub1_Sub1 local2 = (Class8_Sub1_Sub1) arg0;
+		@Pc(2) GlModel local2 = (GlModel) arg0;
 		if (this.anInt5297 == 0 || local2.anInt5297 == 0) {
 			return;
 		}
@@ -1819,7 +1819,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 	}
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(IILclient!td;[[I[[IIII)V")
-	public final void method4110(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Class8_Sub1_Sub1 arg2, @OriginalArg(3) int[][] arg3, @OriginalArg(4) int[][] arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7) {
+	public final void method4110(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) GlModel arg2, @OriginalArg(3) int[][] arg3, @OriginalArg(4) int[][] arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7) {
 		if (!arg2.aClass5_1.aBoolean3) {
 			arg2.method4108();
 		}
@@ -2343,7 +2343,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 	}
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(ZZZLclient!td;Lclient!td;)Lclient!ak;")
-	private Class8_Sub1 method4114(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) Class8_Sub1_Sub1 arg3, @OriginalArg(4) Class8_Sub1_Sub1 arg4) {
+	private Class8_Sub1 method4114(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) GlModel arg3, @OriginalArg(4) GlModel arg4) {
 		arg3.anInt5295 = this.anInt5295;
 		arg3.anInt5296 = this.anInt5296;
 		arg3.anInt5297 = this.anInt5297;
@@ -2498,8 +2498,8 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 	}
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(ZZZZZZZZZZZ)Lclient!td;")
-	public final Class8_Sub1_Sub1 method4117(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2, @OriginalArg(4) boolean arg3, @OriginalArg(5) boolean arg4, @OriginalArg(6) boolean arg5, @OriginalArg(7) boolean arg6, @OriginalArg(9) boolean arg7, @OriginalArg(10) boolean arg8) {
-		@Pc(3) Class8_Sub1_Sub1 local3 = new Class8_Sub1_Sub1();
+	public final GlModel method4117(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2, @OriginalArg(4) boolean arg3, @OriginalArg(5) boolean arg4, @OriginalArg(6) boolean arg5, @OriginalArg(7) boolean arg6, @OriginalArg(9) boolean arg7, @OriginalArg(10) boolean arg8) {
+		@Pc(3) GlModel local3 = new GlModel();
 		local3.anInt5295 = this.anInt5295;
 		local3.anInt5296 = this.anInt5296;
 		local3.anInt5297 = this.anInt5297;

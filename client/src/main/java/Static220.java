@@ -98,7 +98,7 @@ public final class Static220 {
 		}
 		@Pc(94) int local94;
 		if (Static239.aBoolean269) {
-			@Pc(68) Class8_Sub1_Sub1 local68 = (Class8_Sub1_Sub1) local10;
+			@Pc(68) GlModel local68 = (GlModel) local10;
 			if (arg5 != Static207.method3685(Static55.anInt1735, arg3 + local42, arg1 + local48) || arg5 != Static207.method3685(Static55.anInt1735, arg3 + local45, local51 + arg1)) {
 				for (local94 = 0; local94 < local68.anInt5295; local94++) {
 					local68.anIntArray465[local94] += Static207.method3685(Static55.anInt1735, local68.anIntArray461[local94] + arg3, local68.anIntArray466[local94] + arg1) - arg5;

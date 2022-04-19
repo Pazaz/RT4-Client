@@ -339,7 +339,7 @@ public final class Class55 {
 			}
 			local76.aBoolean303 = true;
 			if (Static239.aBoolean269) {
-				((Class8_Sub1_Sub1) local76).method4111(false, false, false, false, false, true);
+				((GlModel) local76).method4111(false, false, false, false, false, true);
 			}
 			Static244.aClass99_32.method3095(local76, (long) this.anInt2354);
 		}

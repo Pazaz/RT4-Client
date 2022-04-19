@@ -42,22 +42,22 @@ public final class Static237 {
 	public static Buffer aClass3_Sub15_8 = new Buffer(10000);
 
 	@OriginalMember(owner = "client!td", name = "bb", descriptor = "Lclient!td;")
-	public static Class8_Sub1_Sub1 aClass8_Sub1_Sub1_1 = new Class8_Sub1_Sub1();
+	public static GlModel aClass8_Sub1_Sub1_1 = new GlModel();
 
 	@OriginalMember(owner = "client!td", name = "jb", descriptor = "Lclient!td;")
-	public static Class8_Sub1_Sub1 aClass8_Sub1_Sub1_2 = new Class8_Sub1_Sub1();
+	public static GlModel aClass8_Sub1_Sub1_2 = new GlModel();
 
 	@OriginalMember(owner = "client!td", name = "mb", descriptor = "Lclient!td;")
-	public static Class8_Sub1_Sub1 aClass8_Sub1_Sub1_3 = new Class8_Sub1_Sub1();
+	public static GlModel aClass8_Sub1_Sub1_3 = new GlModel();
 
 	@OriginalMember(owner = "client!td", name = "nb", descriptor = "Lclient!td;")
-	public static Class8_Sub1_Sub1 aClass8_Sub1_Sub1_4 = new Class8_Sub1_Sub1();
+	public static GlModel aClass8_Sub1_Sub1_4 = new GlModel();
 
 	@OriginalMember(owner = "client!td", name = "ob", descriptor = "Lclient!td;")
-	public static Class8_Sub1_Sub1 aClass8_Sub1_Sub1_5 = new Class8_Sub1_Sub1();
+	public static GlModel aClass8_Sub1_Sub1_5 = new GlModel();
 
 	@OriginalMember(owner = "client!td", name = "pb", descriptor = "Lclient!td;")
-	public static Class8_Sub1_Sub1 aClass8_Sub1_Sub1_6 = new Class8_Sub1_Sub1();
+	public static GlModel aClass8_Sub1_Sub1_6 = new GlModel();
 
 	@OriginalMember(owner = "client!td", name = "qb", descriptor = "[I")
 	public static int[] anIntArray467 = new int[1];
@@ -307,11 +307,11 @@ public final class Static237 {
 
 	@OriginalMember(owner = "client!td", name = "v", descriptor = "()V")
 	public static void method4120() {
-		aClass8_Sub1_Sub1_1 = new Class8_Sub1_Sub1();
-		aClass8_Sub1_Sub1_2 = new Class8_Sub1_Sub1();
-		aClass8_Sub1_Sub1_3 = new Class8_Sub1_Sub1();
-		aClass8_Sub1_Sub1_4 = new Class8_Sub1_Sub1();
-		aClass8_Sub1_Sub1_5 = new Class8_Sub1_Sub1();
-		aClass8_Sub1_Sub1_6 = new Class8_Sub1_Sub1();
+		aClass8_Sub1_Sub1_1 = new GlModel();
+		aClass8_Sub1_Sub1_2 = new GlModel();
+		aClass8_Sub1_Sub1_3 = new GlModel();
+		aClass8_Sub1_Sub1_4 = new GlModel();
+		aClass8_Sub1_Sub1_5 = new GlModel();
+		aClass8_Sub1_Sub1_6 = new GlModel();
 	}
 }
