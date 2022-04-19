@@ -95,11 +95,11 @@ public final class Class144 {
 		}
 		if (Static239.aBoolean269 && this.aBoolean278) {
 			if (local39 == 1) {
-				((Class8_Sub1_Sub1) local124).method4093();
+				((GlModel) local124).method4093();
 			} else if (local39 == 2) {
-				((Class8_Sub1_Sub1) local124).method4102();
+				((GlModel) local124).method4102();
 			} else if (local39 == 3) {
-				((Class8_Sub1_Sub1) local124).method4116();
+				((GlModel) local124).method4116();
 			}
 		} else if (local39 == 1) {
 			local124.method4578();
@@ -111,11 +111,11 @@ public final class Class144 {
 		local124.method4558(local23, local27, local41, arg1, arg4 - 1, local10, this.aBoolean278);
 		if (Static239.aBoolean269 && this.aBoolean278) {
 			if (local39 == 1) {
-				((Class8_Sub1_Sub1) local124).method4116();
+				((GlModel) local124).method4116();
 			} else if (local39 == 2) {
-				((Class8_Sub1_Sub1) local124).method4102();
+				((GlModel) local124).method4102();
 			} else if (local39 == 3) {
-				((Class8_Sub1_Sub1) local124).method4093();
+				((GlModel) local124).method4093();
 			}
 		} else if (local39 == 1) {
 			local124.method4563();
@@ -208,11 +208,11 @@ public final class Class144 {
 		}
 		if (this.aBoolean278 && Static239.aBoolean269) {
 			if (local40 == 1) {
-				((Class8_Sub1_Sub1) local106).method4093();
+				((GlModel) local106).method4093();
 			} else if (local40 == 2) {
-				((Class8_Sub1_Sub1) local106).method4102();
+				((GlModel) local106).method4102();
 			} else if (local40 == 3) {
-				((Class8_Sub1_Sub1) local106).method4116();
+				((GlModel) local106).method4116();
 			}
 		} else if (local40 == 1) {
 			local106.method4578();
@@ -224,11 +224,11 @@ public final class Class144 {
 		local106.method4558(local19, local27, local42, arg0, arg2 - 1, local6, this.aBoolean278);
 		if (this.aBoolean278 && Static239.aBoolean269) {
 			if (local40 == 1) {
-				((Class8_Sub1_Sub1) local106).method4116();
+				((GlModel) local106).method4116();
 			} else if (local40 == 2) {
-				((Class8_Sub1_Sub1) local106).method4102();
+				((GlModel) local106).method4102();
 			} else if (local40 == 3) {
-				((Class8_Sub1_Sub1) local106).method4093();
+				((GlModel) local106).method4093();
 			}
 		} else if (local40 == 1) {
 			local106.method4563();

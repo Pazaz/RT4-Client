@@ -1232,7 +1232,7 @@ public final class Class8_Sub5 extends Entity {
 	@OriginalMember(owner = "client!gb", name = "c", descriptor = "(IIIII)Lclient!ak;")
 	public final Class8_Sub1 method1679(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		if (Static239.aBoolean269) {
-			@Pc(9) Class8_Sub1_Sub1 local9 = new Class8_Sub1_Sub1(this, arg0, arg1, true);
+			@Pc(9) GlModel local9 = new GlModel(this, arg0, arg1, true);
 			local9.method4099();
 			return local9;
 		} else {
