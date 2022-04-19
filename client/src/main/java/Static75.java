@@ -260,7 +260,7 @@ public final class Static75 {
 					local23 = local23 * 128 + 64;
 					local19 = local19 * 128 + 64;
 					@Pc(427) SpotAnim local427 = new SpotAnim(local27, Static55.anInt1735, local23, local19, Static207.method3685(Static55.anInt1735, local23, local19) - local31, local39, Static83.anInt372);
-					Static99.aClass69_64.method2282(new Class3_Sub2_Sub3(local427));
+					Static99.aClass69_64.method2282(new SpotAnimNode(local427));
 				}
 			} else if (Static164.anInt3985 == 179) {
 				local15 = Static57.aClass3_Sub15_Sub1_3.method2177();

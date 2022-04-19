@@ -642,7 +642,7 @@ public final class Static4 {
 								local1160 = local1160 * 128 + 64;
 								local277 = local277 * 128 + 64;
 								@Pc(2241) SpotAnim local2241 = new SpotAnim(local171, local1146, local277, local1160, Static207.method3685(local1146, local277, local1160) - local786, local133, Static83.anInt372);
-								Static99.aClass69_64.method2282(new Class3_Sub2_Sub3(local2241));
+								Static99.aClass69_64.method2282(new SpotAnimNode(local2241));
 							}
 						}
 						Static164.anInt3985 = -1;
