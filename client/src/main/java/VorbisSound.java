@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!jc")
-public final class Class3_Sub17 extends Node {
+public final class VorbisSound extends Node {
 
 	@OriginalMember(owner = "client!jc", name = "r", descriptor = "I")
 	private int anInt2973;
@@ -46,7 +46,7 @@ public final class Class3_Sub17 extends Node {
 	private int anInt2984;
 
 	@OriginalMember(owner = "client!jc", name = "<init>", descriptor = "([B)V")
-	public Class3_Sub17(@OriginalArg(0) byte[] arg0) {
+	public VorbisSound(@OriginalArg(0) byte[] arg0) {
 		this.method2342(arg0);
 	}
 
