@@ -56,7 +56,7 @@ public final class Static214 {
 	}
 
 	@OriginalMember(owner = "client!rg", name = "d", descriptor = "(B)Lclient!bn;")
-	public static Class3_Sub2_Sub4 method4361() {
+	public static Map method4361() {
 		return Static269.aClass3_Sub2_Sub4_2;
 	}
 

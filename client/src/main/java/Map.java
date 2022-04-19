@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!bn")
-public final class Class3_Sub2_Sub4 extends SecondaryNode {
+public final class Map extends SecondaryNode {
 
 	@OriginalMember(owner = "client!bn", name = "K", descriptor = "I")
 	public int anInt758 = 0;
@@ -43,7 +43,7 @@ public final class Class3_Sub2_Sub4 extends SecondaryNode {
 	public final LinkedList aClass69_23;
 
 	@OriginalMember(owner = "client!bn", name = "<init>", descriptor = "(Lclient!na;Lclient!na;IIIZI)V")
-	public Class3_Sub2_Sub4(@OriginalArg(0) JagString arg0, @OriginalArg(1) JagString arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) boolean arg5, @OriginalArg(6) int arg6) {
+	public Map(@OriginalArg(0) JagString arg0, @OriginalArg(1) JagString arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) boolean arg5, @OriginalArg(6) int arg6) {
 		this.anInt764 = arg3;
 		this.anInt759 = arg4;
 		this.aBoolean50 = arg5;

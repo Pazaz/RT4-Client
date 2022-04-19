@@ -62,8 +62,8 @@ public final class Static29 {
 	}
 
 	@OriginalMember(owner = "client!ce", name = "a", descriptor = "(IBI)Lclient!bn;")
-	public static Class3_Sub2_Sub4 method803(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		for (@Pc(10) Class3_Sub2_Sub4 local10 = (Class3_Sub2_Sub4) Static228.aClass69_120.method2289(); local10 != null; local10 = (Class3_Sub2_Sub4) Static228.aClass69_120.method2288()) {
+	public static Map method803(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
+		for (@Pc(10) Map local10 = (Map) Static228.aClass69_120.method2289(); local10 != null; local10 = (Map) Static228.aClass69_120.method2288()) {
 			if (local10.aBoolean50 && local10.method664(arg1, arg0)) {
 				return local10;
 			}

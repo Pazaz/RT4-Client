@@ -2689,7 +2689,7 @@ public final class Static88 {
 													if (local226 == 5206) {
 														local28--;
 														local809 = Static254.anIntArray487[local28];
-														@Pc(7264) Class3_Sub2_Sub4 local7264 = Static29.method803(local809 >> 14 & 0x3FFF, local809 & 0x3FFF);
+														@Pc(7264) Map local7264 = Static29.method803(local809 >> 14 & 0x3FFF, local809 & 0x3FFF);
 														if (local7264 == null) {
 															Static3.aClass100Array176[local26++] = Static72.aClass100_447;
 														} else {
@@ -2697,7 +2697,7 @@ public final class Static88 {
 														}
 														continue;
 													}
-													@Pc(7293) Class3_Sub2_Sub4 local7293;
+													@Pc(7293) Map local7293;
 													if (local226 == 5207) {
 														local26--;
 														local7293 = Static124.method2434(Static3.aClass100Array176[local26]);
@@ -2781,7 +2781,7 @@ public final class Static88 {
 														local2522 = Static3.aClass100Array176[local26];
 														local7566 = false;
 														@Pc(7577) SecondaryLinkedList local7577 = Static183.method3333(local809 >> 14 & 0x3FFF, local809 & 0x3FFF);
-														for (@Pc(7582) Class3_Sub2_Sub4 local7582 = (Class3_Sub2_Sub4) local7577.method795(); local7582 != null; local7582 = (Class3_Sub2_Sub4) local7577.method797()) {
+														for (@Pc(7582) Map local7582 = (Map) local7577.method795(); local7582 != null; local7582 = (Map) local7577.method797()) {
 															if (local7582.aClass100_138.method3111(local2522)) {
 																local7566 = true;
 																break;
