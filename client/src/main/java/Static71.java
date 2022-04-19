@@ -47,7 +47,7 @@ public final class Static71 {
 		local6 = new Class55();
 		local6.anInt2354 = arg0;
 		if (local25 != null) {
-			local6.method1827(new Class3_Sub15(local25));
+			local6.method1827(new Buffer(local25));
 		}
 		local6.method1826();
 		if (local6.anInt2358 != -1) {

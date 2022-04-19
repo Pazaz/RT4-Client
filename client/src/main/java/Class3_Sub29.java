@@ -13,7 +13,7 @@ public final class Class3_Sub29 extends Class3 {
 	public final byte[] aByteArray65;
 
 	@OriginalMember(owner = "client!rf", name = "<init>", descriptor = "(Lclient!wa;)V")
-	public Class3_Sub29(@OriginalArg(0) Class3_Sub15 arg0) {
+	public Class3_Sub29(@OriginalArg(0) Buffer arg0) {
 		arg0.anInt2792 = arg0.aByteArray40.length - 3;
 		@Pc(12) int local12 = arg0.method2229();
 		@Pc(16) int local16 = arg0.method2163();
@@ -160,7 +160,7 @@ public final class Class3_Sub29 extends Class3 {
 		@Pc(482) int local482 = arg0.anInt2792;
 		arg0.anInt2792 += local27 * 3;
 		this.aByteArray65 = new byte[local22];
-		@Pc(500) Class3_Sub15 local500 = new Class3_Sub15(this.aByteArray65);
+		@Pc(500) Buffer local500 = new Buffer(this.aByteArray65);
 		local500.method2164(1297377380);
 		local500.method2164(6);
 		local500.method2230(local12 > 1 ? 1 : 0);

@@ -22,7 +22,7 @@ public final class Class88 {
 	private final Class3_Sub1[] aClass3_Sub1Array22;
 
 	@OriginalMember(owner = "client!lc", name = "<init>", descriptor = "(Lclient!wa;)V")
-	public Class88(@OriginalArg(0) Class3_Sub15 arg0) {
+	public Class88(@OriginalArg(0) Buffer arg0) {
 		@Pc(7) int local7 = arg0.method2229();
 		this.aClass3_Sub1Array22 = new Class3_Sub1[local7];
 		@Pc(14) int[][] local14 = new int[local7][];

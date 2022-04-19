@@ -6,7 +6,7 @@ public final class Class47_Sub1 extends Class47 {
 
 	static {
 		new Class132(8);
-		new Class3_Sub15(131056);
+		new Buffer(131056);
 	}
 
 	@OriginalMember(owner = "client!ga", name = "d", descriptor = "()V")

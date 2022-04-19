@@ -700,7 +700,7 @@ public final class Static247 {
 		@Pc(20) byte[] local20 = Static81.aClass153_34.method4495(16, arg0);
 		local10 = new Class35();
 		if (local20 != null) {
-			local10.method1323(new Class3_Sub15(local20));
+			local10.method1323(new Buffer(local20));
 		}
 		Static232.aClass99_30.method3095(local10, (long) arg0);
 		return local10;

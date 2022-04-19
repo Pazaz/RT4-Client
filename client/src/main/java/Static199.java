@@ -37,7 +37,7 @@ public final class Static199 {
 		@Pc(27) byte[] local27 = Static182.aClass153_77.method4495(1, arg0);
 		local10 = new Class107();
 		if (local27 != null) {
-			local10.method3217(arg0, new Class3_Sub15(local27));
+			local10.method3217(arg0, new Buffer(local27));
 		}
 		Static83.aClass99_3.method3095(local10, (long) arg0);
 		return local10;

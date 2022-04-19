@@ -45,7 +45,7 @@ public final class Static124 {
 
 	@OriginalMember(owner = "client!jk", name = "a", descriptor = "(IZ[BII[Lclient!mj;)V")
 	public static void method2437(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) byte[] arg2, @OriginalArg(3) int arg3, @OriginalArg(5) Class97[] arg4) {
-		@Pc(10) Class3_Sub15 local10 = new Class3_Sub15(arg2);
+		@Pc(10) Buffer local10 = new Buffer(arg2);
 		@Pc(12) int local12 = -1;
 		while (true) {
 			@Pc(16) int local16 = local10.method2199();

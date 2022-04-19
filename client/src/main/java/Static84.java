@@ -104,7 +104,7 @@ public final class Static84 {
 		if ((arg0 & 0x4) != 0) {
 			local13 = Static57.aClass3_Sub15_Sub1_3.method2177();
 			@Pc(309) byte[] local309 = new byte[local13];
-			@Pc(314) Class3_Sub15 local314 = new Class3_Sub15(local309);
+			@Pc(314) Buffer local314 = new Buffer(local309);
 			Static57.aClass3_Sub15_Sub1_3.method2190(local13, local309);
 			Static115.aClass3_Sub15Array1[arg1] = local314;
 			arg2.method1262(local314);
@@ -198,7 +198,7 @@ public final class Static84 {
 
 	@OriginalMember(owner = "client!gk", name = "a", descriptor = "([BI)V")
 	public static void method1770(@OriginalArg(0) byte[] arg0) {
-		@Pc(4) Class3_Sub15 local4 = new Class3_Sub15(arg0);
+		@Pc(4) Buffer local4 = new Buffer(arg0);
 		local4.anInt2792 = arg0.length - 2;
 		Static165.anInt4038 = local4.method2163();
 		Static26.anIntArray66 = new int[Static165.anInt4038];

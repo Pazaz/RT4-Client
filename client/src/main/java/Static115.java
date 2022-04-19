@@ -23,7 +23,7 @@ public final class Static115 {
 	public static final Class100 aClass100_579 = Static28.method790("Fps:");
 
 	@OriginalMember(owner = "client!ja", name = "l", descriptor = "[Lclient!wa;")
-	public static final Class3_Sub15[] aClass3_Sub15Array1 = new Class3_Sub15[2048];
+	public static final Buffer[] aClass3_Sub15Array1 = new Buffer[2048];
 
 	@OriginalMember(owner = "client!ja", name = "n", descriptor = "I")
 	public static int anInt2939 = 0;

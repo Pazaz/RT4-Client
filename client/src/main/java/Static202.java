@@ -29,7 +29,7 @@ public final class Static202 {
 	}
 
 	@OriginalMember(owner = "client!qg", name = "a", descriptor = "(Lsignlink!ll;Lclient!wa;IB)V")
-	public static void method3654(@OriginalArg(0) Class213 arg0, @OriginalArg(1) Class3_Sub15 arg1, @OriginalArg(2) int arg2) {
+	public static void method3654(@OriginalArg(0) Class213 arg0, @OriginalArg(1) Buffer arg1, @OriginalArg(2) int arg2) {
 		@Pc(17) Class3_Sub11 local17 = new Class3_Sub11();
 		local17.anInt1725 = arg1.method2229();
 		local17.anInt1732 = arg1.method2174();
@@ -137,7 +137,7 @@ public final class Static202 {
 		@Pc(20) byte[] local20 = Static153.aClass153_57.method4495(33, arg0);
 		local10 = new Class63();
 		if (local20 != null) {
-			local10.method2249(new Class3_Sub15(local20), arg0);
+			local10.method2249(new Buffer(local20), arg0);
 		}
 		Static79.aClass99_11.method3095(local10, (long) arg0);
 		return local10;

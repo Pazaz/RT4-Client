@@ -67,7 +67,7 @@ public final class Class51 {
 	public final float[] aFloatArray3 = new float[4];
 
 	@OriginalMember(owner = "client!gi", name = "<init>", descriptor = "(Lclient!wa;)V")
-	public Class51(@OriginalArg(0) Class3_Sub15 arg0) {
+	public Class51(@OriginalArg(0) Buffer arg0) {
 		if (Static62.anIntArray150 == null) {
 			Static84.method1771();
 		}

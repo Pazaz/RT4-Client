@@ -19,7 +19,7 @@ public final class Class65 {
 	public int anInt2873 = 2048;
 
 	@OriginalMember(owner = "client!ic", name = "a", descriptor = "(ILclient!wa;I)V")
-	public final void method2257(@OriginalArg(1) Class3_Sub15 arg0, @OriginalArg(2) int arg1) {
+	public final void method2257(@OriginalArg(1) Buffer arg0, @OriginalArg(2) int arg1) {
 		while (true) {
 			@Pc(5) int local5 = arg0.method2229();
 			if (local5 == 0) {
@@ -30,7 +30,7 @@ public final class Class65 {
 	}
 
 	@OriginalMember(owner = "client!ic", name = "a", descriptor = "(ILclient!wa;IZ)V")
-	private void method2258(@OriginalArg(0) int arg0, @OriginalArg(1) Class3_Sub15 arg1, @OriginalArg(2) int arg2) {
+	private void method2258(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1, @OriginalArg(2) int arg2) {
 		if (arg0 == 1) {
 			this.anInt2865 = arg1.method2229();
 		} else if (arg0 == 2) {

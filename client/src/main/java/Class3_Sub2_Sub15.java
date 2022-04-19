@@ -25,7 +25,7 @@ public final class Class3_Sub2_Sub15 extends Class3_Sub2 {
 	private Class100 aClass100_766 = Static87.aClass100_494;
 
 	@OriginalMember(owner = "client!ml", name = "a", descriptor = "(ILclient!wa;B)V")
-	private void method3084(@OriginalArg(0) int arg0, @OriginalArg(1) Class3_Sub15 arg1) {
+	private void method3084(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		if (arg0 == 1) {
 			this.anInt3957 = arg1.method2229();
 		} else if (arg0 == 2) {
@@ -117,7 +117,7 @@ public final class Class3_Sub2_Sub15 extends Class3_Sub2 {
 	}
 
 	@OriginalMember(owner = "client!ml", name = "a", descriptor = "(Lclient!wa;I)V")
-	public final void method3094(@OriginalArg(0) Class3_Sub15 arg0) {
+	public final void method3094(@OriginalArg(0) Buffer arg0) {
 		while (true) {
 			@Pc(9) int local9 = arg0.method2229();
 			if (local9 == 0) {

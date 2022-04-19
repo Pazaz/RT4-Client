@@ -23,7 +23,7 @@ public final class Static162 {
 
 	@OriginalMember(owner = "client!ml", name = "a", descriptor = "(B[B)[B")
 	public static byte[] method3092(@OriginalArg(1) byte[] arg0) {
-		@Pc(17) Class3_Sub15 local17 = new Class3_Sub15(arg0);
+		@Pc(17) Buffer local17 = new Buffer(arg0);
 		@Pc(21) int local21 = local17.method2229();
 		@Pc(25) int local25 = local17.method2174();
 		if (local25 < 0 || Static133.anInt5233 != 0 && Static133.anInt5233 < local25) {

@@ -91,7 +91,7 @@ public final class Static40 {
 		@Pc(20) byte[] local20 = Static98.aClass153_42.method4495(34, arg0);
 		local10 = new Class2();
 		if (local20 != null) {
-			local10.method6(new Class3_Sub15(local20), arg0);
+			local10.method6(new Buffer(local20), arg0);
 		}
 		Static231.aClass99_29.method3095(local10, (long) arg0);
 		return local10;
@@ -120,7 +120,7 @@ public final class Static40 {
 
 	@OriginalMember(owner = "client!da", name = "a", descriptor = "(IIIILclient!na;JI)V")
 	public static void method1016(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Class100 arg3, @OriginalArg(5) long arg4, @OriginalArg(6) int arg5) {
-		@Pc(8) Class3_Sub15 local8 = new Class3_Sub15(128);
+		@Pc(8) Buffer local8 = new Buffer(128);
 		local8.method2178(10);
 		local8.method2230((int) (Math.random() * 99999.0D));
 		local8.method2230(530);

@@ -7,13 +7,13 @@ public final class Static95 {
 	public static ByteBuffer aByteBuffer4;
 
 	@OriginalMember(owner = "client!hg", name = "K", descriptor = "Lclient!wa;")
-	public static Class3_Sub15 aClass3_Sub15_2;
+	public static Buffer aClass3_Sub15_2;
 
 	@OriginalMember(owner = "client!hg", name = "Q", descriptor = "Ljava/nio/ByteBuffer;")
 	public static ByteBuffer aByteBuffer5;
 
 	@OriginalMember(owner = "client!hg", name = "U", descriptor = "Lclient!wa;")
-	public static Class3_Sub15 aClass3_Sub15_3;
+	public static Buffer aClass3_Sub15_3;
 
 	@OriginalMember(owner = "client!hg", name = "a", descriptor = "()V")
 	public static void method1939() {

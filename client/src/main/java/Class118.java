@@ -383,7 +383,7 @@ public final class Class118 {
 	}
 
 	@OriginalMember(owner = "client!pb", name = "a", descriptor = "(ILclient!wa;)V")
-	public final void method3424(@OriginalArg(1) Class3_Sub15 arg0) {
+	public final void method3424(@OriginalArg(1) Buffer arg0) {
 		while (true) {
 			@Pc(9) int local9 = arg0.method2229();
 			if (local9 == 0) {
@@ -394,7 +394,7 @@ public final class Class118 {
 	}
 
 	@OriginalMember(owner = "client!pb", name = "a", descriptor = "(Lclient!wa;II)V")
-	private void method3425(@OriginalArg(0) Class3_Sub15 arg0, @OriginalArg(1) int arg1) {
+	private void method3425(@OriginalArg(0) Buffer arg0, @OriginalArg(1) int arg1) {
 		@Pc(18) int local18;
 		@Pc(38) int local38;
 		if (arg1 == 1) {

@@ -30,7 +30,7 @@ public final class Static47 {
 	}
 
 	@OriginalMember(owner = "client!dk", name = "a", descriptor = "(Lclient!wa;Z)V")
-	public static void method3998(@OriginalArg(0) Class3_Sub15 arg0) {
+	public static void method3998(@OriginalArg(0) Buffer arg0) {
 		label87: while (true) {
 			if (arg0.anInt2792 < arg0.aByteArray40.length) {
 				@Pc(22) int local22 = 0;

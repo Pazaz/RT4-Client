@@ -54,7 +54,7 @@ public final class Static170 {
 
 	@OriginalMember(owner = "client!nh", name = "a", descriptor = "(I[B)Z")
 	public static boolean method2572(@OriginalArg(1) byte[] arg0) {
-		@Pc(13) Class3_Sub15 local13 = new Class3_Sub15(arg0);
+		@Pc(13) Buffer local13 = new Buffer(arg0);
 		@Pc(17) int local17 = local13.method2229();
 		if (local17 != 1) {
 			return false;

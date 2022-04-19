@@ -17,7 +17,7 @@ public final class Static65 {
 	public static final Class100 aClass100_436 = Static28.method790("Utiliser");
 
 	@OriginalMember(owner = "client!fc", name = "a", descriptor = "(Lclient!wa;I)Lclient!na;")
-	public static Class100 method1497(@OriginalArg(0) Class3_Sub15 arg0) {
+	public static Class100 method1497(@OriginalArg(0) Buffer arg0) {
 		return Static254.method4350(arg0);
 	}
 

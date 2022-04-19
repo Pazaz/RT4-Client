@@ -32,8 +32,8 @@ public final class Static48 {
 	}
 
 	@OriginalMember(owner = "client!dl", name = "a", descriptor = "(B)Lclient!wa;")
-	public static Class3_Sub15 method1196() {
-		@Pc(4) Class3_Sub15 local4 = new Class3_Sub15(34);
+	public static Buffer method1196() {
+		@Pc(4) Buffer local4 = new Buffer(34);
 		local4.method2178(11);
 		local4.method2178(Static113.anInt4609);
 		local4.method2178(Static162.aBoolean190 ? 1 : 0);

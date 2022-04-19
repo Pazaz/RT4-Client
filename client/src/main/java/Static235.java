@@ -32,7 +32,7 @@ public final class Static235 {
 		}
 		local10 = new Class3_Sub2_Sub2();
 		if (local24 != null) {
-			local10.method470(new Class3_Sub15(local24));
+			local10.method470(new Buffer(local24));
 		}
 		if (arg0 >= 32768) {
 			local10.method465();

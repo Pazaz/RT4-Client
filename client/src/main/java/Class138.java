@@ -16,7 +16,7 @@ public final class Class138 {
 	private int anInt5206;
 
 	@OriginalMember(owner = "client!sl", name = "<init>", descriptor = "(Lclient!wa;)V")
-	public Class138(@OriginalArg(0) Class3_Sub15 arg0) {
+	public Class138(@OriginalArg(0) Buffer arg0) {
 		for (@Pc(7) int local7 = 0; local7 < 10; local7++) {
 			@Pc(14) int local14 = arg0.method2229();
 			if (local14 != 0) {

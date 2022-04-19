@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!wa")
-public class Class3_Sub15 extends Class3 {
+public class Buffer extends Class3 {
 
 	@OriginalMember(owner = "client!wa", name = "y", descriptor = "[B")
 	public byte[] aByteArray40;
@@ -14,13 +14,13 @@ public class Class3_Sub15 extends Class3 {
 	public int anInt2792;
 
 	@OriginalMember(owner = "client!wa", name = "<init>", descriptor = "(I)V")
-	public Class3_Sub15(@OriginalArg(0) int arg0) {
+	public Buffer(@OriginalArg(0) int arg0) {
 		this.aByteArray40 = Static228.method3907(arg0);
 		this.anInt2792 = 0;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "<init>", descriptor = "([B)V")
-	public Class3_Sub15(@OriginalArg(0) byte[] arg0) {
+	public Buffer(@OriginalArg(0) byte[] arg0) {
 		this.anInt2792 = 0;
 		this.aByteArray40 = arg0;
 	}

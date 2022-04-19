@@ -90,20 +90,20 @@ public final class Static186 {
 			Static70.method1549(local273, local249);
 			Static41.anInt1309 = 20;
 		} else if (Static41.anInt1309 == 20) {
-			Static33.method868(new Class3_Sub15(Static119.aClass153_44.method4485(Static166.aClass100_779, Static269.aClass3_Sub2_Sub4_2.aClass100_138)));
+			Static33.method868(new Buffer(Static119.aClass153_44.method4485(Static166.aClass100_779, Static269.aClass3_Sub2_Sub4_2.aClass100_138)));
 			Static41.anInt1309 = 30;
 			Static7.method842(true);
 			Static234.method4020();
 		} else if (Static41.anInt1309 == 30) {
-			Static47.method3998(new Class3_Sub15(Static119.aClass153_44.method4485(Static4.aClass100_7, Static269.aClass3_Sub2_Sub4_2.aClass100_138)));
+			Static47.method3998(new Buffer(Static119.aClass153_44.method4485(Static4.aClass100_7, Static269.aClass3_Sub2_Sub4_2.aClass100_138)));
 			Static41.anInt1309 = 40;
 			Static234.method4020();
 		} else if (Static41.anInt1309 == 40) {
-			Static231.method3980(new Class3_Sub15(Static119.aClass153_44.method4485(Static73.aClass100_455, Static269.aClass3_Sub2_Sub4_2.aClass100_138)));
+			Static231.method3980(new Buffer(Static119.aClass153_44.method4485(Static73.aClass100_455, Static269.aClass3_Sub2_Sub4_2.aClass100_138)));
 			Static41.anInt1309 = 50;
 			Static234.method4020();
 		} else if (Static41.anInt1309 == 50) {
-			Static166.method3166(new Class3_Sub15(Static119.aClass153_44.method4485(Static42.aClass100_331, Static269.aClass3_Sub2_Sub4_2.aClass100_138)));
+			Static166.method3166(new Buffer(Static119.aClass153_44.method4485(Static42.aClass100_331, Static269.aClass3_Sub2_Sub4_2.aClass100_138)));
 			Static41.anInt1309 = 60;
 			Static7.method842(true);
 			Static234.method4020();

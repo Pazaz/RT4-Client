@@ -32,7 +32,7 @@ public final class Class73 {
 	private final Class16 aClass16_5 = new Class16();
 
 	@OriginalMember(owner = "client!jb", name = "E", descriptor = "Lclient!wa;")
-	private final Class3_Sub15 aClass3_Sub15_4 = new Class3_Sub15(4);
+	private final Buffer aClass3_Sub15_4 = new Buffer(4);
 
 	@OriginalMember(owner = "client!jb", name = "G", descriptor = "B")
 	private byte aByte8 = 0;
@@ -44,7 +44,7 @@ public final class Class73 {
 	public volatile int anInt2963 = 0;
 
 	@OriginalMember(owner = "client!jb", name = "F", descriptor = "Lclient!wa;")
-	private final Class3_Sub15 aClass3_Sub15_5 = new Class3_Sub15(8);
+	private final Buffer aClass3_Sub15_5 = new Buffer(8);
 
 	@OriginalMember(owner = "client!jb", name = "a", descriptor = "(I)Z")
 	public final boolean method2316() {
@@ -167,7 +167,7 @@ public final class Class73 {
 							}
 							@Pc(568) int local568 = local480 == 0 ? 5 : 9;
 							this.aClass3_Sub2_Sub5_Sub2_2 = local509;
-							this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7 = new Class3_Sub15(local476 + local568 + this.aClass3_Sub2_Sub5_Sub2_2.aByte16);
+							this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7 = new Buffer(local476 + local568 + this.aClass3_Sub2_Sub5_Sub2_2.aByte16);
 							this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.method2178(local480);
 							this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.method2164(local476);
 							this.aClass3_Sub2_Sub5_Sub2_2.anInt4617 = 8;

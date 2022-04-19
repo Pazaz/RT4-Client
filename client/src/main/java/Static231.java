@@ -35,7 +35,7 @@ public final class Static231 {
 	public static boolean aBoolean252 = false;
 
 	@OriginalMember(owner = "client!sk", name = "a", descriptor = "(ILclient!wa;)V")
-	public static void method3980(@OriginalArg(1) Class3_Sub15 arg0) {
+	public static void method3980(@OriginalArg(1) Buffer arg0) {
 		label83: while (true) {
 			if (arg0.anInt2792 < arg0.aByteArray40.length) {
 				@Pc(23) int local23 = 0;

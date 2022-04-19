@@ -19,7 +19,7 @@ public final class Static140 {
 	public static final Class100 aClass100_661 = Static28.method790("Chargement du module texte )2 ");
 
 	@OriginalMember(owner = "client!la", name = "a", descriptor = "(Lclient!wa;Z)V")
-	public static void method2705(@OriginalArg(0) Class3_Sub15 arg0) {
+	public static void method2705(@OriginalArg(0) Buffer arg0) {
 		@Pc(15) byte[] local15 = new byte[24];
 		if (Static121.aClass38_3 != null) {
 			try {
@@ -110,7 +110,7 @@ public final class Static140 {
 		@Pc(26) byte[] local26 = Static85.aClass153_36.method4495(31, arg0);
 		local10 = new Class65();
 		if (local26 != null) {
-			local10.method2257(new Class3_Sub15(local26), arg0);
+			local10.method2257(new Buffer(local26), arg0);
 		}
 		Static220.aClass99_28.method3095(local10, (long) arg0);
 		return local10;
@@ -125,7 +125,7 @@ public final class Static140 {
 		@Pc(29) int[] local29 = arg1.method4503(local10);
 		@Pc(35) Class134 local35 = new Class134(local29.length);
 		for (@Pc(37) int local37 = 0; local37 < local35.anInt5074; local37++) {
-			@Pc(56) Class3_Sub15 local56 = new Class3_Sub15(arg1.method4495(local10, local29[local37]));
+			@Pc(56) Buffer local56 = new Buffer(arg1.method4495(local10, local29[local37]));
 			local35.aClass100Array153[local37] = local56.method2202();
 			local35.aByteArray69[local37] = local56.method2186();
 			local35.aShortArray73[local37] = (short) local56.method2163();

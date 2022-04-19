@@ -281,7 +281,7 @@ public final class Class153 {
 				local114 = Static138.method2696(this.anObjectArray32[arg0], false);
 			} else {
 				local114 = Static138.method2696(this.anObjectArray32[arg0], true);
-				@Pc(128) Class3_Sub15 local128 = new Class3_Sub15(local114);
+				@Pc(128) Buffer local128 = new Buffer(local114);
 				local128.method2196(arg1, local128.aByteArray40.length);
 			}
 			@Pc(140) byte[] local140;
@@ -300,7 +300,7 @@ public final class Class153 {
 				@Pc(216) int local216 = local213 - 1;
 				@Pc(220) int local220 = local140[local216] & 0xFF;
 				@Pc(228) int local228 = local216 - local31 * local220 * 4;
-				@Pc(233) Class3_Sub15 local233 = new Class3_Sub15(local140);
+				@Pc(233) Buffer local233 = new Buffer(local140);
 				local233.anInt2792 = local228;
 				@Pc(239) int[] local239 = new int[local31];
 				@Pc(250) int local250;

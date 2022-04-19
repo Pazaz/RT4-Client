@@ -57,7 +57,7 @@ public final class Static33 {
 	}
 
 	@OriginalMember(owner = "client!cj", name = "a", descriptor = "(BLclient!wa;)V")
-	public static void method868(@OriginalArg(1) Class3_Sub15 arg0) {
+	public static void method868(@OriginalArg(1) Buffer arg0) {
 		@Pc(13) int local13 = Static266.anInt5338 >> 1;
 		@Pc(19) int local19 = Static131.anInt3254 >> 2 << 10;
 		@Pc(23) byte[][] local23 = new byte[Static48.anInt1449][Static181.anInt4296];

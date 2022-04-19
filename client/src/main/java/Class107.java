@@ -92,7 +92,7 @@ public final class Class107 {
 	}
 
 	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(ILclient!wa;I)V")
-	public final void method3217(@OriginalArg(0) int arg0, @OriginalArg(1) Class3_Sub15 arg1) {
+	public final void method3217(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		while (true) {
 			@Pc(7) int local7 = arg1.method2229();
 			if (local7 == 0) {
@@ -103,7 +103,7 @@ public final class Class107 {
 	}
 
 	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(BILclient!wa;I)V")
-	private void method3220(@OriginalArg(1) int arg0, @OriginalArg(2) Class3_Sub15 arg1, @OriginalArg(3) int arg2) {
+	private void method3220(@OriginalArg(1) int arg0, @OriginalArg(2) Buffer arg1, @OriginalArg(3) int arg2) {
 		if (arg0 == 1) {
 			this.anInt4147 = arg1.method2220();
 			this.method3216(this.anInt4147);

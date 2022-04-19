@@ -156,7 +156,7 @@ public final class Class3_Sub14 extends Class3 {
 
 	@OriginalMember(owner = "client!hg", name = "d", descriptor = "()V")
 	public final void method1943() {
-		@Pc(12) Class3_Sub15 local12 = new Class3_Sub15((this.aBoolean139 ? 40 : 36) * this.anInt2483);
+		@Pc(12) Buffer local12 = new Buffer((this.aBoolean139 ? 40 : 36) * this.anInt2483);
 		for (@Pc(14) int local14 = 0; local14 < this.anInt2483; local14++) {
 			if (Static239.aBoolean263) {
 				local12.method2227((float) this.anIntArray232[local14]);
@@ -209,18 +209,18 @@ public final class Class3_Sub14 extends Class3 {
 	@OriginalMember(owner = "client!hg", name = "a", descriptor = "([[[Lclient!bj;FZ)V")
 	public final void method1944(@OriginalArg(0) Class3_Sub5[][][] arg0, @OriginalArg(1) float arg1, @OriginalArg(2) boolean arg2) {
 		if (Static95.aClass3_Sub15_3 == null || Static95.aClass3_Sub15_3.aByteArray40.length < this.anInt2488 * 4) {
-			Static95.aClass3_Sub15_3 = new Class3_Sub15(this.anInt2488 * 4);
+			Static95.aClass3_Sub15_3 = new Buffer(this.anInt2488 * 4);
 		} else {
 			Static95.aClass3_Sub15_3.anInt2792 = 0;
 		}
 		if (Static95.aClass3_Sub15_2 == null || Static95.aClass3_Sub15_2.aByteArray40.length < this.anInt2487 * 4) {
-			Static95.aClass3_Sub15_2 = new Class3_Sub15(this.anInt2487 * 4);
+			Static95.aClass3_Sub15_2 = new Buffer(this.anInt2487 * 4);
 		} else {
 			Static95.aClass3_Sub15_2.anInt2792 = 0;
 		}
 		@Pc(47) int local47;
 		@Pc(68) Class3_Sub5 local68;
-		@Pc(111) Class3_Sub15 local111;
+		@Pc(111) Buffer local111;
 		@Pc(78) int[] local78;
 		@Pc(86) int[] local86;
 		@Pc(90) int local90;

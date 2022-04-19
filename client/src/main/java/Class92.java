@@ -47,7 +47,7 @@ public final class Class92 {
 	}
 
 	@OriginalMember(owner = "client!li", name = "<init>", descriptor = "(Lclient!wa;)V")
-	public Class92(@OriginalArg(0) Class3_Sub15 arg0) {
+	public Class92(@OriginalArg(0) Buffer arg0) {
 		@Pc(7) int local7 = arg0.method2229();
 		if ((local7 & 0x1) == 0) {
 			this.anInt3526 = Static161.anInt3923;

@@ -88,7 +88,7 @@ public final class Static9 {
 	}
 
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "(ILclient!wa;)Lclient!ci;")
-	public static Class18_Sub1 method184(@OriginalArg(1) Class3_Sub15 arg0) {
+	public static Class18_Sub1 method184(@OriginalArg(1) Buffer arg0) {
 		return new Class18_Sub1(arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2220(), arg0.method2229());
 	}
 

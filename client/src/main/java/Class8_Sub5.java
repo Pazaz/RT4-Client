@@ -827,13 +827,13 @@ public final class Class8_Sub5 extends Class8 {
 
 	@OriginalMember(owner = "client!gb", name = "a", descriptor = "([B)V")
 	private void method1674(@OriginalArg(0) byte[] arg0) {
-		@Pc(4) Class3_Sub15 local4 = new Class3_Sub15(arg0);
-		@Pc(9) Class3_Sub15 local9 = new Class3_Sub15(arg0);
-		@Pc(14) Class3_Sub15 local14 = new Class3_Sub15(arg0);
-		@Pc(19) Class3_Sub15 local19 = new Class3_Sub15(arg0);
-		@Pc(24) Class3_Sub15 local24 = new Class3_Sub15(arg0);
-		@Pc(29) Class3_Sub15 local29 = new Class3_Sub15(arg0);
-		@Pc(34) Class3_Sub15 local34 = new Class3_Sub15(arg0);
+		@Pc(4) Buffer local4 = new Buffer(arg0);
+		@Pc(9) Buffer local9 = new Buffer(arg0);
+		@Pc(14) Buffer local14 = new Buffer(arg0);
+		@Pc(19) Buffer local19 = new Buffer(arg0);
+		@Pc(24) Buffer local24 = new Buffer(arg0);
+		@Pc(29) Buffer local29 = new Buffer(arg0);
+		@Pc(34) Buffer local34 = new Buffer(arg0);
 		local4.anInt2792 = arg0.length - 23;
 		@Pc(44) int local44 = local4.method2163();
 		@Pc(48) int local48 = local4.method2163();
@@ -1461,11 +1461,11 @@ public final class Class8_Sub5 extends Class8 {
 	private void method1688(@OriginalArg(0) byte[] arg0) {
 		@Pc(1) boolean local1 = false;
 		@Pc(3) boolean local3 = false;
-		@Pc(8) Class3_Sub15 local8 = new Class3_Sub15(arg0);
-		@Pc(13) Class3_Sub15 local13 = new Class3_Sub15(arg0);
-		@Pc(18) Class3_Sub15 local18 = new Class3_Sub15(arg0);
-		@Pc(23) Class3_Sub15 local23 = new Class3_Sub15(arg0);
-		@Pc(28) Class3_Sub15 local28 = new Class3_Sub15(arg0);
+		@Pc(8) Buffer local8 = new Buffer(arg0);
+		@Pc(13) Buffer local13 = new Buffer(arg0);
+		@Pc(18) Buffer local18 = new Buffer(arg0);
+		@Pc(23) Buffer local23 = new Buffer(arg0);
+		@Pc(28) Buffer local28 = new Buffer(arg0);
 		local8.anInt2792 = arg0.length - 18;
 		@Pc(38) int local38 = local8.method2163();
 		@Pc(42) int local42 = local8.method2163();

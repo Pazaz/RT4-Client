@@ -544,7 +544,7 @@ public final class Class13 {
 	}
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(ILclient!wa;)V")
-	public final void method481(@OriginalArg(1) Class3_Sub15 arg0) {
+	public final void method481(@OriginalArg(1) Buffer arg0) {
 		this.aBoolean32 = false;
 		this.anInt452 = arg0.method2229();
 		this.anInt530 = arg0.method2229();
@@ -788,7 +788,7 @@ public final class Class13 {
 	}
 
 	@OriginalMember(owner = "client!be", name = "b", descriptor = "(ILclient!wa;)[Ljava/lang/Object;")
-	private Object[] method485(@OriginalArg(1) Class3_Sub15 arg0) {
+	private Object[] method485(@OriginalArg(1) Buffer arg0) {
 		@Pc(11) int local11 = arg0.method2229();
 		if (local11 == 0) {
 			return null;
@@ -807,7 +807,7 @@ public final class Class13 {
 	}
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(Lclient!wa;Z)[I")
-	private int[] method486(@OriginalArg(0) Class3_Sub15 arg0) {
+	private int[] method486(@OriginalArg(0) Buffer arg0) {
 		@Pc(9) int local9 = arg0.method2229();
 		if (local9 == 0) {
 			return null;
@@ -974,7 +974,7 @@ public final class Class13 {
 	}
 
 	@OriginalMember(owner = "client!be", name = "c", descriptor = "(ILclient!wa;)V")
-	public final void method490(@OriginalArg(1) Class3_Sub15 arg0) {
+	public final void method490(@OriginalArg(1) Buffer arg0) {
 		this.aBoolean32 = true;
 		arg0.anInt2792++;
 		this.anInt452 = arg0.method2229();

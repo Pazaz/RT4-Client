@@ -23,7 +23,7 @@ public final class Static270 {
 	public static final Class100 aClass100_1090 = Static28.method790("l");
 
 	@OriginalMember(owner = "client!wb", name = "f", descriptor = "Lclient!wa;")
-	public static final Class3_Sub15 aClass3_Sub15_9 = new Class3_Sub15(new byte[5000]);
+	public static final Buffer aClass3_Sub15_9 = new Buffer(new byte[5000]);
 
 	@OriginalMember(owner = "client!wb", name = "i", descriptor = "Lclient!na;")
 	private static final Class100 aClass100_1092 = Static28.method790("Cancel");

@@ -179,7 +179,7 @@ public final class Static69 {
 	}
 
 	@OriginalMember(owner = "client!fh", name = "a", descriptor = "(Lclient!wa;I)V")
-	public static void method1546(@OriginalArg(0) Class3_Sub15 arg0) {
+	public static void method1546(@OriginalArg(0) Buffer arg0) {
 		for (@Pc(7) int local7 = 0; local7 < Static106.anInt2871; local7++) {
 			@Pc(18) int local18 = arg0.method2204();
 			@Pc(22) int local22 = arg0.method2163();
