@@ -42,7 +42,7 @@ public final class Tile extends Node {
 	public boolean aBoolean47;
 
 	@OriginalMember(owner = "client!bj", name = "S", descriptor = "Lclient!rh;")
-	public Class131 aClass131_1;
+	public PlainTile aClass131_1;
 
 	@OriginalMember(owner = "client!bj", name = "T", descriptor = "I")
 	public int anInt670;
