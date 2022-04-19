@@ -32,7 +32,7 @@ public final class Static111 {
 	public static JagString aClass100_573 = aClass100_571;
 
 	@OriginalMember(owner = "client!ii", name = "a", descriptor = "(Lclient!be;III)V")
-	public static void method2291(@OriginalArg(0) Class13 arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
+	public static void method2291(@OriginalArg(0) Component arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
 		if (arg0.aByte2 == 0) {
 			arg0.anInt469 = arg0.anInt444;
 		} else if (arg0.aByte2 == 1) {

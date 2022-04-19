@@ -36,7 +36,7 @@ public final class Static154 {
 	public static final JagString aClass100_737 = Static28.method790("Impossible de trouver ");
 
 	@OriginalMember(owner = "client!md", name = "a", descriptor = "(Lclient!be;I)Z")
-	public static boolean method2926(@OriginalArg(0) Class13 arg0) {
+	public static boolean method2926(@OriginalArg(0) Component arg0) {
 		if (arg0.anIntArray43 == null) {
 			return false;
 		}

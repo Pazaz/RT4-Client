@@ -35,9 +35,9 @@ public final class Static266 {
 	}
 
 	@OriginalMember(owner = "client!vk", name = "a", descriptor = "(IZIII[Lclient!be;)V")
-	public static void method4190(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) Class13[] arg4) {
+	public static void method4190(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) Component[] arg4) {
 		for (@Pc(3) int local3 = 0; local3 < arg4.length; local3++) {
-			@Pc(19) Class13 local19 = arg4[local3];
+			@Pc(19) Component local19 = arg4[local3];
 			if (local19 != null && local19.anInt456 == arg0) {
 				Static150.method2801(arg3, arg2, local19, arg1);
 				Static111.method2291(local19, arg3, arg2);

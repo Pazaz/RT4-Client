@@ -21,7 +21,7 @@ public final class Static54 {
 	}
 
 	@OriginalMember(owner = "client!ed", name = "a", descriptor = "(IBIILclient!be;)V")
-	public static void method1305(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Class13 arg3) {
+	public static void method1305(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Component arg3) {
 		Static107.method2261();
 		if (Static239.aBoolean269) {
 			Static46.method1187(arg2, arg1, arg2 + arg3.anInt445, arg1 + arg3.anInt459);

@@ -30,7 +30,7 @@ public final class Static4 {
 	public static int anInt37 = 0;
 
 	@OriginalMember(owner = "client!ac", name = "p", descriptor = "Lclient!be;")
-	public static Class13 aClass13_1 = null;
+	public static Component aClass13_1 = null;
 
 	@OriginalMember(owner = "client!ac", name = "a", descriptor = "(IIII)I")
 	public static int method22(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2) {
@@ -738,7 +738,7 @@ public final class Static4 {
 						return true;
 					} else if (Static164.anInt3985 == 144) {
 						local133 = Static57.aClass3_Sub15_Sub1_3.method2224();
-						@Pc(2666) Class13 local2666 = Static5.method32(local133);
+						@Pc(2666) Component local2666 = Static5.method32(local133);
 						for (local864 = 0; local864 < local2666.anIntArray40.length; local864++) {
 							local2666.anIntArray40[local864] = -1;
 							local2666.anIntArray40[local864] = 0;
@@ -937,7 +937,7 @@ public final class Static4 {
 										local3449.method4658();
 										Static119.aClass133_9.method3862(local3449, (long) local864);
 									}
-									@Pc(3490) Class13 local3490 = Static5.method32(local133);
+									@Pc(3490) Component local3490 = Static5.method32(local133);
 									if (local3490 != null) {
 										Static43.method1143(local3490);
 									}
@@ -1312,7 +1312,7 @@ public final class Static4 {
 								Static164.anInt3985 = -1;
 								return true;
 							} else {
-								@Pc(4956) Class13 local4956;
+								@Pc(4956) Component local4956;
 								if (Static164.anInt3985 == 22) {
 									local133 = Static57.aClass3_Sub15_Sub1_3.method2174();
 									local786 = Static57.aClass3_Sub15_Sub1_3.method2163();
@@ -1496,7 +1496,7 @@ public final class Static4 {
 									}
 									local171 = Static57.aClass3_Sub15_Sub1_3.method2192();
 									if (Static248.method3288(local171)) {
-										@Pc(5603) Class13 local5603 = Static5.method32(local786);
+										@Pc(5603) Component local5603 = Static5.method32(local786);
 										@Pc(5615) ObjType local5615;
 										if (local5603.aBoolean32) {
 											Static209.method3707(local786, local133, local864);

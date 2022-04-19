@@ -67,8 +67,8 @@ public final class Static89 {
 	}
 
 	@OriginalMember(owner = "client!ha", name = "a", descriptor = "(ILclient!be;)Lclient!be;")
-	public static Class13 method1836(@OriginalArg(1) Class13 arg0) {
-		@Pc(12) Class13 local12 = Static36.method938(arg0);
+	public static Component method1836(@OriginalArg(1) Component arg0) {
+		@Pc(12) Component local12 = Static36.method938(arg0);
 		if (local12 == null) {
 			local12 = arg0.aClass13_5;
 		}

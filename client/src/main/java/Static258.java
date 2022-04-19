@@ -22,7 +22,7 @@ public final class Static258 {
 	}
 
 	@OriginalMember(owner = "client!va", name = "a", descriptor = "(IZILclient!be;)V")
-	public static void method4418(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Class13 arg2) {
+	public static void method4418(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Component arg2) {
 		if (arg2.anInt530 == 1) {
 			Static98.method1966(-1, 0L, Static186.aClass100_827, 0, (short) 8, arg2.aClass100_89, arg2.anInt507);
 		}

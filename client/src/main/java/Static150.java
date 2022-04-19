@@ -46,7 +46,7 @@ public final class Static150 {
 	}
 
 	@OriginalMember(owner = "client!lk", name = "a", descriptor = "(IIILclient!be;Z)V")
-	public static void method2801(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Class13 arg2, @OriginalArg(4) boolean arg3) {
+	public static void method2801(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Component arg2, @OriginalArg(4) boolean arg3) {
 		@Pc(4) int local4 = arg2.anInt445;
 		@Pc(7) int local7 = arg2.anInt459;
 		if (arg2.aByte5 == 0) {

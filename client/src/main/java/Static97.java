@@ -27,7 +27,7 @@ public final class Static97 {
 	}
 
 	@OriginalMember(owner = "client!hi", name = "a", descriptor = "(IIIIILclient!be;Z)V")
-	public static void method1960(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) Class13 arg5) {
+	public static void method1960(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) Component arg5) {
 		@Pc(13) int local13 = arg3 * arg3 + arg4 * arg4;
 		if (local13 > 360000) {
 			return;
@@ -127,7 +127,7 @@ public final class Static97 {
 	}
 
 	@OriginalMember(owner = "client!hi", name = "a", descriptor = "(Lclient!be;B)Lclient!na;")
-	public static JagString method1963(@OriginalArg(0) Class13 arg0) {
+	public static JagString method1963(@OriginalArg(0) Component arg0) {
 		if (Static36.method940(arg0).method512() == 0) {
 			return null;
 		} else if (arg0.aClass100_86 == null || arg0.aClass100_86.method3144().method3120() == 0) {

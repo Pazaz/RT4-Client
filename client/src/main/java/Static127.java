@@ -189,7 +189,7 @@ public final class Static127 {
 	}
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(Lclient!be;Lclient!na;I)Lclient!na;")
-	public static JagString method2465(@OriginalArg(0) Class13 arg0, @OriginalArg(1) JagString arg1) {
+	public static JagString method2465(@OriginalArg(0) Component arg0, @OriginalArg(1) JagString arg1) {
 		if (arg1.method3131(Static49.aClass100_352) == -1) {
 			return arg1;
 		}

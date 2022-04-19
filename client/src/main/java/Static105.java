@@ -14,7 +14,7 @@ public final class Static105 {
 	public static final LruHashTable aClass54_9 = new LruHashTable(128);
 
 	@OriginalMember(owner = "client!ib", name = "e", descriptor = "Lclient!be;")
-	public static Class13 aClass13_14 = null;
+	public static Component aClass13_14 = null;
 
 	@OriginalMember(owner = "client!ib", name = "f", descriptor = "[I")
 	public static final int[] anIntArray256 = new int[2048];

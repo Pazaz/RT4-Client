@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static43 {
 
 	@OriginalMember(owner = "client!dg", name = "h", descriptor = "Lclient!be;")
-	public static Class13 aClass13_11;
+	public static Component aClass13_11;
 
 	@OriginalMember(owner = "client!dg", name = "b", descriptor = "Lclient!na;")
 	public static final JagString aClass100_333 = Static28.method790("Shift)2click ENABLED(Q");
@@ -50,7 +50,7 @@ public final class Static43 {
 	}
 
 	@OriginalMember(owner = "client!dg", name = "a", descriptor = "(ILclient!be;)V")
-	public static void method1143(@OriginalArg(1) Class13 arg0) {
+	public static void method1143(@OriginalArg(1) Component arg0) {
 		if (Static182.anInt4311 == arg0.anInt465) {
 			Static186.aBooleanArray100[arg0.anInt517] = true;
 		}

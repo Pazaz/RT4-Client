@@ -45,13 +45,13 @@ public final class Static245 {
 				return true;
 			}
 			if (Static241.aClass13ArrayArray12[arg0] == null) {
-				Static241.aClass13ArrayArray12[arg0] = new Class13[local25];
+				Static241.aClass13ArrayArray12[arg0] = new Component[local25];
 			}
 			for (@Pc(46) int local46 = 0; local46 < local25; local46++) {
 				if (Static241.aClass13ArrayArray12[arg0][local46] == null) {
 					@Pc(62) byte[] local62 = Static202.aClass153_84.method4495(arg0, local46);
 					if (local62 != null) {
-						@Pc(74) Class13 local74 = Static241.aClass13ArrayArray12[arg0][local46] = new Class13();
+						@Pc(74) Component local74 = Static241.aClass13ArrayArray12[arg0][local46] = new Component();
 						local74.anInt507 = local46 + (arg0 << 16);
 						if (local62[0] == -1) {
 							local74.method490(new Buffer(local62));

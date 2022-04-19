@@ -23,11 +23,11 @@ public final class Static201 {
 	public static final JagString aClass100_409 = Static28.method790("W-=hlen Sie eine Option");
 
 	@OriginalMember(owner = "client!qf", name = "X", descriptor = "Lclient!be;")
-	public static Class13 aClass13_13 = null;
+	public static Component aClass13_13 = null;
 
 	@OriginalMember(owner = "client!qf", name = "a", descriptor = "(BII)Lclient!be;")
-	public static Class13 method1418(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
-		@Pc(7) Class13 local7 = Static5.method32(arg0);
+	public static Component method1418(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
+		@Pc(7) Component local7 = Static5.method32(arg0);
 		if (arg1 == -1) {
 			return local7;
 		} else if (local7 == null || local7.aClass13Array3 == null || local7.aClass13Array3.length <= arg1) {

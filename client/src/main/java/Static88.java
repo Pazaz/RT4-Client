@@ -339,11 +339,11 @@ public final class Static88 {
 				} else {
 					local1020 = false;
 				}
-				@Pc(1182) Class13 local1182;
+				@Pc(1182) Component local1182;
 				@Pc(1052) int local1052;
-				@Pc(1063) Class13 local1063;
+				@Pc(1063) Component local1063;
 				@Pc(1087) int local1087;
-				@Pc(1256) Class13 local1256;
+				@Pc(1256) Component local1256;
 				if (local226 < 300) {
 					if (local226 == 100) {
 						local28 -= 3;
@@ -353,10 +353,10 @@ public final class Static88 {
 						if (local803 != 0) {
 							local1063 = Static5.method32(local809);
 							if (local1063.aClass13Array3 == null) {
-								local1063.aClass13Array3 = new Class13[local1052 + 1];
+								local1063.aClass13Array3 = new Component[local1052 + 1];
 							}
 							if (local1052 >= local1063.aClass13Array3.length) {
-								@Pc(1085) Class13[] local1085 = new Class13[local1052 + 1];
+								@Pc(1085) Component[] local1085 = new Component[local1052 + 1];
 								for (local1087 = 0; local1087 < local1063.aClass13Array3.length; local1087++) {
 									local1085[local1087] = local1063.aClass13Array3[local1087];
 								}
@@ -365,7 +365,7 @@ public final class Static88 {
 							if (local1052 > 0 && local1063.aClass13Array3[local1052 - 1] == null) {
 								throw new RuntimeException("Gap at:" + (local1052 - 1));
 							}
-							@Pc(1137) Class13 local1137 = new Class13();
+							@Pc(1137) Component local1137 = new Component();
 							local1137.aBoolean32 = true;
 							local1137.anInt457 = local1052;
 							local1137.anInt456 = local1137.anInt507 = local1063.anInt507;
@@ -381,7 +381,7 @@ public final class Static88 {
 						}
 						throw new RuntimeException();
 					}
-					@Pc(1204) Class13 local1204;
+					@Pc(1204) Component local1204;
 					if (local226 == 101) {
 						local1182 = local1020 ? Static274.aClass13_24 : Static227.aClass13_25;
 						if (local1182.anInt457 == -1) {

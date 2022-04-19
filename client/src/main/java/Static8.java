@@ -14,7 +14,7 @@ public final class Static8 {
 	public static final JagString aClass100_32 = Static28.method790("<col=ff9040>");
 
 	@OriginalMember(owner = "client!aj", name = "a", descriptor = "(BILclient!be;)I")
-	public static int method118(@OriginalArg(1) int arg0, @OriginalArg(2) Class13 arg1) {
+	public static int method118(@OriginalArg(1) int arg0, @OriginalArg(2) Component arg1) {
 		if (!Static36.method940(arg1).method503(arg0) && arg1.anObjectArray29 == null) {
 			return -1;
 		} else if (arg1.anIntArray39 == null || arg0 >= arg1.anIntArray39.length) {

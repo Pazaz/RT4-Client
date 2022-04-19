@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class Class3_Sub19 extends Node {
 
 	@OriginalMember(owner = "client!jl", name = "q", descriptor = "Lclient!be;")
-	public Class13 aClass13_16;
+	public Component aClass13_16;
 
 	@OriginalMember(owner = "client!jl", name = "r", descriptor = "Lclient!na;")
 	public JagString aClass100_598;
@@ -32,5 +32,5 @@ public final class Class3_Sub19 extends Node {
 	public Object[] anObjectArray31;
 
 	@OriginalMember(owner = "client!jl", name = "F", descriptor = "Lclient!be;")
-	public Class13 aClass13_17;
+	public Component aClass13_17;
 }

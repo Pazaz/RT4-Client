@@ -75,7 +75,7 @@ public final class Static176 {
 			@Pc(33) int local33 = (arg5 - arg3) * (local17 - local19) / arg1 + local19;
 			local47 = local15 + (local13 - local15) * (arg4 - arg0) / arg2;
 			if (Static241.aBoolean302 && (Static274.anInt4999 & 0x40) != 0) {
-				@Pc(61) Class13 local61 = Static201.method1418(Static98.anInt2512, Static15.anInt506);
+				@Pc(61) Component local61 = Static201.method1418(Static98.anInt2512, Static15.anInt506);
 				if (local61 == null) {
 					Static53.method1294();
 				} else {

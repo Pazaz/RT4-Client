@@ -22,7 +22,7 @@ public final class Static273 {
 	}
 
 	@OriginalMember(owner = "client!we", name = "a", descriptor = "(BILclient!be;)I")
-	public static int method3212(@OriginalArg(1) int arg0, @OriginalArg(2) Class13 arg1) {
+	public static int method3212(@OriginalArg(1) int arg0, @OriginalArg(2) Component arg1) {
 		if (arg1.anIntArrayArray4 == null || arg0 >= arg1.anIntArrayArray4.length) {
 			return -2;
 		}
@@ -57,7 +57,7 @@ public final class Static273 {
 					local41 = Static227.anIntArray446[local33[local39++]];
 				}
 				@Pc(124) int local124;
-				@Pc(135) Class13 local135;
+				@Pc(135) Component local135;
 				@Pc(140) int local140;
 				@Pc(152) int local152;
 				if (local46 == 4) {

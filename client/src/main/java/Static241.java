@@ -8,10 +8,10 @@ public final class Static241 {
 	public static Class36[] aClass36Array16;
 
 	@OriginalMember(owner = "client!th", name = "j", descriptor = "[[Lclient!be;")
-	public static Class13[][] aClass13ArrayArray12;
+	public static Component[][] aClass13ArrayArray12;
 
 	@OriginalMember(owner = "client!th", name = "m", descriptor = "[Lclient!be;")
-	public static Class13[] aClass13Array13;
+	public static Component[] aClass13Array13;
 
 	@OriginalMember(owner = "client!th", name = "o", descriptor = "[I")
 	public static int[] anIntArray522;

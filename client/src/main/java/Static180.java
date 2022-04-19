@@ -8,7 +8,7 @@ public final class Static180 {
 	public static int anInt4264;
 
 	@OriginalMember(owner = "client!og", name = "e", descriptor = "Lclient!be;")
-	public static Class13 aClass13_22;
+	public static Component aClass13_22;
 
 	@OriginalMember(owner = "client!og", name = "g", descriptor = "[Lclient!na;")
 	public static JagString[] aClass100Array125;
