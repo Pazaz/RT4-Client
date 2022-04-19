@@ -1,5 +1,4 @@
 import java.awt.Component;
-import java.awt.Cursor;
 import java.awt.Point;
 import java.awt.Robot;
 import java.awt.image.BufferedImage;
@@ -9,7 +8,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("signlink!g")
-public final class Class211 {
+public final class CursorManager {
 
 	@OriginalMember(owner = "signlink!g", name = "b", descriptor = "Ljava/awt/Component;")
 	private Component aComponent5;
@@ -18,7 +17,7 @@ public final class Class211 {
 	private final Robot aRobot1 = new Robot();
 
 	@OriginalMember(owner = "signlink!g", name = "<init>", descriptor = "()V")
-	public Class211() throws Exception {
+	public CursorManager() throws Exception {
 	}
 
 	@OriginalMember(owner = "signlink!g", name = "a", descriptor = "(BLjava/awt/Point;ILjava/awt/Component;I[I)V")
