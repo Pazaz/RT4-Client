@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!pc")
-public interface Interface4 {
+public interface MaterialRenderer {
 
 	@OriginalMember(owner = "client!pc", name = "a", descriptor = "()V")
 	void method4602();

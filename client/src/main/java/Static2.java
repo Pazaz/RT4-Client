@@ -11,7 +11,7 @@ public final class Static2 {
 	public static int anInt15;
 
 	@OriginalMember(owner = "client!aa", name = "t", descriptor = "[Lclient!pc;")
-	public static Interface4[] anInterface4Array1;
+	public static MaterialRenderer[] anInterface4Array1;
 
 	@OriginalMember(owner = "client!aa", name = "a", descriptor = "I")
 	public static int anInt7 = 0;
