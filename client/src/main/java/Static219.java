@@ -7,7 +7,7 @@ public final class Static219 {
 	public static Sprite[] aClass3_Sub2_Sub1Array9;
 
 	@OriginalMember(owner = "client!rl", name = "P", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_27 = new Class99(64);
+	public static final SoftLruHashTable aClass99_27 = new SoftLruHashTable(64);
 
 	@OriginalMember(owner = "client!rl", name = "S", descriptor = "Lclient!na;")
 	public static final JagString aClass100_920 = Static28.method790("hitmarks");

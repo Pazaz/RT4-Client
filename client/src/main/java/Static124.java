@@ -20,7 +20,7 @@ public final class Static124 {
 	public static boolean aBoolean156 = false;
 
 	@OriginalMember(owner = "client!jk", name = "z", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_17 = new Class99(50);
+	public static final SoftLruHashTable aClass99_17 = new SoftLruHashTable(50);
 
 	@OriginalMember(owner = "client!jk", name = "F", descriptor = "Lclient!na;")
 	public static final JagString aClass100_596 = Static28.method790("::tween");

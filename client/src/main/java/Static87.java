@@ -11,7 +11,7 @@ public final class Static87 {
 	public static boolean aBoolean130 = false;
 
 	@OriginalMember(owner = "client!gn", name = "i", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_12 = new Class99(20);
+	public static final SoftLruHashTable aClass99_12 = new SoftLruHashTable(20);
 
 	@OriginalMember(owner = "client!gn", name = "v", descriptor = "Lclient!na;")
 	public static final JagString aClass100_494 = Static28.method790("null");

@@ -15,7 +15,7 @@ public final class Static67 {
 	public static boolean aBoolean168 = true;
 
 	@OriginalMember(owner = "client!fe", name = "jb", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_20 = new Class99(64);
+	public static final SoftLruHashTable aClass99_20 = new SoftLruHashTable(64);
 
 	@OriginalMember(owner = "client!fe", name = "lb", descriptor = "[I")
 	public static final int[] anIntArray320 = new int[100];

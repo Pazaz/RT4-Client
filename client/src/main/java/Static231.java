@@ -23,7 +23,7 @@ public final class Static231 {
 	public static long aLong174 = 0L;
 
 	@OriginalMember(owner = "client!sk", name = "hb", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_29 = new Class99(64);
+	public static final SoftLruHashTable aClass99_29 = new SoftLruHashTable(64);
 
 	@OriginalMember(owner = "client!sk", name = "ib", descriptor = "I")
 	public static int anInt5202 = 0;

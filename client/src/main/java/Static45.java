@@ -14,7 +14,7 @@ public final class Static45 {
 	public static boolean aBoolean84 = false;
 
 	@OriginalMember(owner = "client!di", name = "I", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_6 = new Class99(32);
+	public static final SoftLruHashTable aClass99_6 = new SoftLruHashTable(32);
 
 	@OriginalMember(owner = "client!di", name = "a", descriptor = "([Lclient!mj;ZI)V")
 	public static void method1169(@OriginalArg(0) CollisionMap[] arg0, @OriginalArg(1) boolean arg1) {

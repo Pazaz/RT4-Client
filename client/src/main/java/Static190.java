@@ -8,7 +8,7 @@ public final class Static190 {
 	public static BufferedFile aClass38_5;
 
 	@OriginalMember(owner = "client!pf", name = "b", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_26 = new Class99(200);
+	public static final SoftLruHashTable aClass99_26 = new SoftLruHashTable(200);
 
 	@OriginalMember(owner = "client!pf", name = "h", descriptor = "[J")
 	public static final long[] aLongArray6 = new long[100];

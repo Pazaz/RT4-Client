@@ -8,7 +8,7 @@ public final class Static73 {
 	public static int anInt2077;
 
 	@OriginalMember(owner = "client!fm", name = "S", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_10 = new Class99(4);
+	public static final SoftLruHashTable aClass99_10 = new SoftLruHashTable(4);
 
 	@OriginalMember(owner = "client!fm", name = "T", descriptor = "Lclient!na;")
 	public static final JagString aClass100_452 = Static28.method790(" ");

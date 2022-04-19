@@ -22,7 +22,7 @@ public final class Static250 {
 	public static int anInt5434 = 0;
 
 	@OriginalMember(owner = "client!uf", name = "j", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_33 = new Class99(260);
+	public static final SoftLruHashTable aClass99_33 = new SoftLruHashTable(260);
 
 	@OriginalMember(owner = "client!uf", name = "o", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1041 = Static28.method790("scrollbar");

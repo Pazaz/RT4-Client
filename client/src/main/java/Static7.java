@@ -12,7 +12,7 @@ public final class Static7 {
 	public static int anInt986;
 
 	@OriginalMember(owner = "client!ah", name = "i", descriptor = "Lclient!n;")
-	public static final Class99 aClass99_5 = new Class99(2);
+	public static final SoftLruHashTable aClass99_5 = new SoftLruHashTable(2);
 
 	@OriginalMember(owner = "client!ah", name = "j", descriptor = "[I")
 	public static final int[] anIntArray75 = new int[2500];
