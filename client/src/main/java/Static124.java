@@ -8,7 +8,7 @@ public final class Static124 {
 	public static int anInt3080;
 
 	@OriginalMember(owner = "client!jk", name = "B", descriptor = "Lclient!ma;")
-	public static Class95 aClass95_2;
+	public static BufferedSocket aClass95_2;
 
 	@OriginalMember(owner = "client!jk", name = "J", descriptor = "I")
 	public static int anInt3083;

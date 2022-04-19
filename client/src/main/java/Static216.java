@@ -51,7 +51,7 @@ public final class Static216 {
 				if (Static72.aClass212_3.anInt5925 != 1) {
 					return;
 				}
-				Static124.aClass95_2 = new Class95((Socket) Static72.aClass212_3.anObject6, Static71.aClass213_3);
+				Static124.aClass95_2 = new BufferedSocket((Socket) Static72.aClass212_3.anObject6, Static71.aClass213_3);
 				Static72.aClass212_3 = null;
 				@Pc(106) long local106 = Static101.aLong98 = Static186.aClass100_829.method3158();
 				Static6.aClass3_Sub15_Sub1_1.anInt2792 = 0;

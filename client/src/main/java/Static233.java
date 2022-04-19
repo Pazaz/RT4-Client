@@ -14,7 +14,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static233 {
 
 	@OriginalMember(owner = "client!t", name = "l", descriptor = "Lclient!ma;")
-	public static Class95 aClass95_4;
+	public static BufferedSocket aClass95_4;
 
 	@OriginalMember(owner = "client!t", name = "o", descriptor = "I")
 	public static int anInt5217;

@@ -8,7 +8,7 @@ public final class Static206 {
 	public static int[] anIntArray427;
 
 	@OriginalMember(owner = "client!qk", name = "g", descriptor = "Lclient!ma;")
-	public static Class95 aClass95_3;
+	public static BufferedSocket aClass95_3;
 
 	@OriginalMember(owner = "client!qk", name = "a", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_899 = Static28.method790("0(U");
