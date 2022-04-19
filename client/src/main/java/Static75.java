@@ -259,7 +259,7 @@ public final class Static75 {
 				if (local23 >= 0 && local19 >= 0 && local23 < 104 && local19 < 104) {
 					local23 = local23 * 128 + 64;
 					local19 = local19 * 128 + 64;
-					@Pc(427) Class8_Sub2 local427 = new Class8_Sub2(local27, Static55.anInt1735, local23, local19, Static207.method3685(Static55.anInt1735, local23, local19) - local31, local39, Static83.anInt372);
+					@Pc(427) SpotAnim local427 = new SpotAnim(local27, Static55.anInt1735, local23, local19, Static207.method3685(Static55.anInt1735, local23, local19) - local31, local39, Static83.anInt372);
 					Static99.aClass69_64.method2282(new Class3_Sub2_Sub3(local427));
 				}
 			} else if (Static164.anInt3985 == 179) {

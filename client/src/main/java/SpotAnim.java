@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!bh")
-public final class Class8_Sub2 extends Entity {
+public final class SpotAnim extends Entity {
 
 	@OriginalMember(owner = "client!bh", name = "y", descriptor = "Lclient!ga;")
 	private ParticleSystem aClass47_Sub1_1;
@@ -46,7 +46,7 @@ public final class Class8_Sub2 extends Entity {
 	private Class144 aClass144_1;
 
 	@OriginalMember(owner = "client!bh", name = "<init>", descriptor = "(IIIIIII)V")
-	public Class8_Sub2(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6) {
+	public SpotAnim(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6) {
 		this.anInt598 = arg3;
 		this.anInt604 = arg2;
 		this.anInt606 = arg1;
