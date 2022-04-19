@@ -215,7 +215,7 @@ public final class Static253 {
 			if (Static239.aBoolean269) {
 				local8[local10] = new Class36_Sub2(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local10], Static269.anIntArray252[local10], Static254.anIntArray488[local10], Static26.anIntArray66[local10], Static7.aByteArrayArray5[local10], Static259.anIntArray513);
 			} else {
-				local8[local10] = new Class36_Sub1(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local10], Static269.anIntArray252[local10], Static254.anIntArray488[local10], Static26.anIntArray66[local10], Static7.aByteArrayArray5[local10], Static259.anIntArray513);
+				local8[local10] = new SoftwareIndexedSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local10], Static269.anIntArray252[local10], Static254.anIntArray488[local10], Static26.anIntArray66[local10], Static7.aByteArrayArray5[local10], Static259.anIntArray513);
 			}
 		}
 		Static75.method1631();

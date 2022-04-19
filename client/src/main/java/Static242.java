@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static242 {
 
 	@OriginalMember(owner = "client!tj", name = "a", descriptor = "Lclient!ek;")
-	public static Class36_Sub1 aClass36_Sub1_4;
+	public static SoftwareIndexedSprite aClass36_Sub1_4;
 
 	@OriginalMember(owner = "client!tj", name = "b", descriptor = "[[Lclient!wm;")
 	public static Class165[][] aClass165ArrayArray1;
@@ -15,13 +15,13 @@ public final class Static242 {
 	private static int anInt5345;
 
 	@OriginalMember(owner = "client!tj", name = "d", descriptor = "[Lclient!ek;")
-	public static Class36_Sub1[] aClass36_Sub1Array2;
+	public static SoftwareIndexedSprite[] aClass36_Sub1Array2;
 
 	@OriginalMember(owner = "client!tj", name = "e", descriptor = "I")
 	private static int anInt5346;
 
 	@OriginalMember(owner = "client!tj", name = "a", descriptor = "(Lclient!ek;Lclient!ek;II)V")
-	private static void method4194(@OriginalArg(0) Class36_Sub1 arg0, @OriginalArg(1) Class36_Sub1 arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	private static void method4194(@OriginalArg(0) SoftwareIndexedSprite arg0, @OriginalArg(1) SoftwareIndexedSprite arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		arg2 += arg0.anInt4280;
 		arg3 += arg0.anInt4273;
 		@Pc(16) int local16 = arg2 + arg3 * arg1.anInt4270;
@@ -183,7 +183,7 @@ public final class Static242 {
 	}
 
 	@OriginalMember(owner = "client!tj", name = "b", descriptor = "(Lclient!ek;Lclient!ek;II)Z")
-	private static boolean method4200(@OriginalArg(0) Class36_Sub1 arg0, @OriginalArg(1) Class36_Sub1 arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	private static boolean method4200(@OriginalArg(0) SoftwareIndexedSprite arg0, @OriginalArg(1) SoftwareIndexedSprite arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		arg2 += arg0.anInt4280;
 		arg3 += arg0.anInt4273;
 		@Pc(16) int local16 = arg2 + arg3 * arg1.anInt4270;
@@ -226,7 +226,7 @@ public final class Static242 {
 	public static void method4201() {
 		anInt5346 = 13;
 		anInt5345 = 13;
-		aClass36_Sub1_4 = new Class36_Sub1(anInt5346 * 128 + 2, anInt5345 * 128 + 2, 0);
+		aClass36_Sub1_4 = new SoftwareIndexedSprite(anInt5346 * 128 + 2, anInt5345 * 128 + 2, 0);
 		aClass165ArrayArray1 = new Class165[anInt5346][anInt5345];
 		for (@Pc(32) int local32 = 0; local32 < anInt5346; local32++) {
 			for (@Pc(37) int local37 = 0; local37 < anInt5345; local37++) {
@@ -236,7 +236,7 @@ public final class Static242 {
 	}
 
 	@OriginalMember(owner = "client!tj", name = "c", descriptor = "(Lclient!ek;Lclient!ek;II)V")
-	private static void method4202(@OriginalArg(0) Class36_Sub1 arg0, @OriginalArg(1) Class36_Sub1 arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	private static void method4202(@OriginalArg(0) SoftwareIndexedSprite arg0, @OriginalArg(1) SoftwareIndexedSprite arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		arg2 += arg0.anInt4280;
 		arg3 += arg0.anInt4273;
 		@Pc(16) int local16 = arg2 + arg3 * arg1.anInt4270;
@@ -334,7 +334,7 @@ public final class Static242 {
 	}
 
 	@OriginalMember(owner = "client!tj", name = "a", descriptor = "(Lclient!ek;III)V")
-	public static void method4207(@OriginalArg(0) Class36_Sub1 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	public static void method4207(@OriginalArg(0) SoftwareIndexedSprite arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		if (arg0 != null) {
 			@Pc(12) int local12 = arg1 - (arg2 * Static161.anInt3920 >> 8) >> 3;
 			@Pc(22) int local22 = arg3 - (arg2 * Static161.anInt3921 >> 8) >> 3;
@@ -365,7 +365,7 @@ public final class Static242 {
 	}
 
 	@OriginalMember(owner = "client!tj", name = "b", descriptor = "(Lclient!ek;III)Z")
-	public static boolean method4209(@OriginalArg(0) Class36_Sub1 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	public static boolean method4209(@OriginalArg(0) SoftwareIndexedSprite arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		if (arg0 == null) {
 			return false;
 		} else {
@@ -376,7 +376,7 @@ public final class Static242 {
 	}
 
 	@OriginalMember(owner = "client!tj", name = "a", descriptor = "(Lclient!ek;Lclient!ek;IIIZ)V")
-	private static void method4210(@OriginalArg(0) Class36_Sub1 arg0, @OriginalArg(1) Class36_Sub1 arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) boolean arg5) {
+	private static void method4210(@OriginalArg(0) SoftwareIndexedSprite arg0, @OriginalArg(1) SoftwareIndexedSprite arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) boolean arg5) {
 		if (arg2 <= 0 || arg3 <= 0 || arg2 + 16 >= arg1.anInt4270 || arg3 + 16 >= arg1.anInt4278) {
 			return;
 		}
@@ -411,7 +411,7 @@ public final class Static242 {
 	}
 
 	@OriginalMember(owner = "client!tj", name = "c", descriptor = "(Lclient!ek;III)V")
-	public static void method4211(@OriginalArg(0) Class36_Sub1 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	public static void method4211(@OriginalArg(0) SoftwareIndexedSprite arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		if (arg0 != null) {
 			@Pc(12) int local12 = arg1 - (arg2 * Static161.anInt3920 >> 8) >> 3;
 			@Pc(22) int local22 = arg3 - (arg2 * Static161.anInt3921 >> 8) >> 3;

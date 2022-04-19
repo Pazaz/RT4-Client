@@ -22,7 +22,7 @@ public final class Loc extends Entity {
 	private boolean aBoolean81 = true;
 
 	@OriginalMember(owner = "client!dc", name = "Q", descriptor = "Lclient!ek;")
-	private Class36_Sub1 aClass36_Sub1_2 = null;
+	private SoftwareIndexedSprite aClass36_Sub1_2 = null;
 
 	@OriginalMember(owner = "client!dc", name = "T", descriptor = "I")
 	private final int anInt1311 = -32768;
@@ -305,7 +305,7 @@ public final class Loc extends Entity {
 				@Pc(439) int[][] local439 = Static83.anIntArrayArrayArray4[0];
 				local429 = local293 - (local439[local178][local192] + local439[local185][local192] + local439[local185][local201] + local439[local178][local201] >> 2);
 			}
-			@Pc(471) Class36_Sub1 local471 = local389.aClass36_Sub1_3;
+			@Pc(471) SoftwareIndexedSprite local471 = local389.aClass36_Sub1_3;
 			if (this.aBoolean81 && Static242.method4209(local471, local302, local429, local311)) {
 				this.aBoolean81 = false;
 			}

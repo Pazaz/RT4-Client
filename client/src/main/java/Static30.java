@@ -20,7 +20,7 @@ public final class Static30 {
 	public static final JagString aClass100_185 = Static28.method790(")3");
 
 	@OriginalMember(owner = "client!cg", name = "a", descriptor = "(ZILclient!ve;I)[Lclient!ek;")
-	private static Class36_Sub1[] method837(@OriginalArg(1) int arg0, @OriginalArg(2) Js5 arg1) {
+	private static SoftwareIndexedSprite[] method837(@OriginalArg(1) int arg0, @OriginalArg(2) Js5 arg1) {
 		return Static234.method4016(arg1, 0, arg0) ? Static121.method2406() : null;
 	}
 

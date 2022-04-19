@@ -32,7 +32,7 @@ public final class Static33 {
 		} else {
 			arg3 = 0;
 		}
-		@Pc(42) Class36_Sub1 local42 = local10.method9(arg3);
+		@Pc(42) SoftwareIndexedSprite local42 = local10.method9(arg3);
 		if (local42 == null) {
 			return false;
 		}

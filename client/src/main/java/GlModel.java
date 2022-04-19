@@ -3158,7 +3158,7 @@ public final class GlModel extends Model {
 	}
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(Lclient!ek;)Lclient!ek;")
-	public final Class36_Sub1 method4124(@OriginalArg(0) Class36_Sub1 arg0) {
+	public final SoftwareIndexedSprite method4124(@OriginalArg(0) SoftwareIndexedSprite arg0) {
 		if (this.anInt5296 == 0) {
 			return null;
 		}
@@ -3185,9 +3185,9 @@ public final class GlModel extends Model {
 		}
 		@Pc(134) int local134 = local40 + 1 - local26;
 		@Pc(140) int local140 = local99 + 1 - local85;
-		@Pc(151) Class36_Sub1 local151;
+		@Pc(151) SoftwareIndexedSprite local151;
 		if (arg0 == null || arg0.aByteArray18.length < local134 * local140) {
-			local151 = new Class36_Sub1(local134, local140, 0);
+			local151 = new SoftwareIndexedSprite(local134, local140, 0);
 		} else {
 			local151 = arg0;
 			arg0.anInt4279 = arg0.anInt4270 = local134;
