@@ -16,7 +16,7 @@ public final class Static104 {
 			return;
 		}
 		if (arg0.anInt3369 != -1 && arg0.anInt3420 == 0) {
-			@Pc(40) Class144 local40 = Static36.method941(arg0.anInt3369);
+			@Pc(40) SeqType local40 = Static36.method941(arg0.anInt3369);
 			if (arg0.anInt3405 > 0 && local40.anInt5363 == 0) {
 				arg0.anInt3417++;
 				return;

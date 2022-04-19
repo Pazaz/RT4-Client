@@ -113,7 +113,7 @@ public final class Static34 {
 	@OriginalMember(owner = "client!ck", name = "a", descriptor = "(Lclient!fe;I)V")
 	public static void method879(@OriginalArg(0) PathingEntity arg0) {
 		arg0.aBoolean171 = false;
-		@Pc(18) Class144 local18;
+		@Pc(18) SeqType local18;
 		if (arg0.anInt3366 != -1) {
 			local18 = Static36.method941(arg0.anInt3366);
 			if (local18 == null || local18.anIntArray473 == null) {
@@ -143,7 +143,7 @@ public final class Static34 {
 			if (local156 == -1) {
 				arg0.anInt3432 = -1;
 			} else {
-				@Pc(165) Class144 local165 = Static36.method941(local156);
+				@Pc(165) SeqType local165 = Static36.method941(local156);
 				if (local165 == null || local165.anIntArray473 == null) {
 					arg0.anInt3432 = -1;
 				} else {
@@ -217,7 +217,7 @@ public final class Static34 {
 				if (local545.anInt5408 > 0) {
 					local545.anInt5408--;
 				} else {
-					@Pc(570) Class144 local570 = Static36.method941(local545.anInt5396);
+					@Pc(570) SeqType local570 = Static36.method941(local545.anInt5396);
 					if (local570 == null || local570.anIntArray473 == null) {
 						arg0.aClass147Array3[local156] = null;
 					} else {

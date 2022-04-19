@@ -676,7 +676,7 @@ public final class Static87 {
 												local2611 = Static71.method1439(local30.anInt458);
 												if (local2611 != null) {
 													local2611 = local2611.method1820(local30.anInt503);
-													@Pc(2630) Class144 local2630 = local276 == -1 ? null : Static36.method941(local276);
+													@Pc(2630) SeqType local2630 = local276 == -1 ? null : Static36.method941(local276);
 													local2589 = local2611.method1824(local30.anInt496, local30.anInt500, local2630, 1, local30.anInt510);
 													if (local2589 == null) {
 														Static43.method1143(local30);
@@ -693,7 +693,7 @@ public final class Static87 {
 														local514 = 2047;
 													}
 													@Pc(2751) Player local2751 = Static159.aClass8_Sub4_Sub1Array1[local514];
-													@Pc(2760) Class144 local2760 = local276 == -1 ? null : Static36.method941(local276);
+													@Pc(2760) SeqType local2760 = local276 == -1 ? null : Static36.method941(local276);
 													if (local2751 != null && (int) local2751.aClass100_364.method3158() << 11 == (local30.anInt463 & 0xFFFFF800)) {
 														local2589 = local2751.aClass59_1.method1954(null, -1, null, local2760, 0, -1, 0, local30.anInt510, 0);
 													}
@@ -704,7 +704,7 @@ public final class Static87 {
 													Static43.method1143(local30);
 												}
 											} else {
-												@Pc(2689) Class144 local2689 = Static36.method941(local276);
+												@Pc(2689) SeqType local2689 = Static36.method941(local276);
 												local2589 = local30.method488(local30.anInt496, local2689, local30.anInt510, local30.anInt500, local2587, Static173.aClass8_Sub4_Sub1_2.aClass59_1);
 												if (local2589 == null && Static211.aBoolean72) {
 													Static43.method1143(local30);

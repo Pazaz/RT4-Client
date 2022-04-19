@@ -44,7 +44,7 @@ public final class Static223 {
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(IIILclient!km;)V")
 	public static void method3855(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) Npc arg2) {
 		if (arg2.anInt3369 == arg1 && arg1 != -1) {
-			@Pc(10) Class144 local10 = Static36.method941(arg1);
+			@Pc(10) SeqType local10 = Static36.method941(arg1);
 			@Pc(13) int local13 = local10.anInt5347;
 			if (local13 == 1) {
 				arg2.anInt3373 = 1;

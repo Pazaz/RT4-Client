@@ -53,7 +53,7 @@ public final class Static118 {
 							local105 = local15.anInt522;
 						}
 						if (local105 != -1) {
-							@Pc(118) Class144 local118 = Static36.method941(local105);
+							@Pc(118) SeqType local118 = Static36.method941(local105);
 							if (local118 != null) {
 								local15.anInt500 += Static178.anInt4247;
 								while (local15.anInt500 > local118.anIntArray474[local15.anInt510]) {

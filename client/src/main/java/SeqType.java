@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!tk")
-public final class Class144 {
+public final class SeqType {
 
 	@OriginalMember(owner = "client!tk", name = "g", descriptor = "[I")
 	public int[] anIntArray473;
