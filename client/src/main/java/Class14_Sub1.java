@@ -34,7 +34,7 @@ public final class Class14_Sub1 extends Class14 {
 	private final int anInt576;
 
 	@OriginalMember(owner = "client!bg", name = "F", descriptor = "Lclient!ge;")
-	private final Class49 aClass49_2;
+	private final Cache aClass49_2;
 
 	@OriginalMember(owner = "client!bg", name = "Q", descriptor = "Z")
 	private boolean aBoolean35;
@@ -52,7 +52,7 @@ public final class Class14_Sub1 extends Class14 {
 	private final boolean aBoolean37;
 
 	@OriginalMember(owner = "client!bg", name = "k", descriptor = "Lclient!ge;")
-	private final Class49 aClass49_1;
+	private final Cache aClass49_1;
 
 	@OriginalMember(owner = "client!bg", name = "D", descriptor = "Lclient!jb;")
 	private final Js5NetQueue aClass73_2;
@@ -64,7 +64,7 @@ public final class Class14_Sub1 extends Class14 {
 	private Class3_Sub2_Sub5 aClass3_Sub2_Sub5_1;
 
 	@OriginalMember(owner = "client!bg", name = "<init>", descriptor = "(ILclient!ge;Lclient!ge;Lclient!jb;Lclient!k;IIZ)V")
-	public Class14_Sub1(@OriginalArg(0) int arg0, @OriginalArg(1) Class49 arg1, @OriginalArg(2) Class49 arg2, @OriginalArg(3) Js5NetQueue arg3, @OriginalArg(4) Js5CacheQueue arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) boolean arg7) {
+	public Class14_Sub1(@OriginalArg(0) int arg0, @OriginalArg(1) Cache arg1, @OriginalArg(2) Cache arg2, @OriginalArg(3) Js5NetQueue arg3, @OriginalArg(4) Js5CacheQueue arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) boolean arg7) {
 		this.anInt576 = arg0;
 		this.aClass49_2 = arg1;
 		if (this.aClass49_2 == null) {

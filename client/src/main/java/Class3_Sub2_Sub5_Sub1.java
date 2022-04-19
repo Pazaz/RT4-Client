@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class Class3_Sub2_Sub5_Sub1 extends Class3_Sub2_Sub5 {
 
 	@OriginalMember(owner = "client!c", name = "X", descriptor = "Lclient!ge;")
-	public Class49 aClass49_3;
+	public Cache aClass49_3;
 
 	@OriginalMember(owner = "client!c", name = "ab", descriptor = "[B")
 	public byte[] aByteArray11;

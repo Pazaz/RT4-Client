@@ -69,12 +69,12 @@ public final class Class9 {
 	}
 
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "(IILclient!ge;Lclient!ge;)Lclient!bg;")
-	public final Class14_Sub1 method180(@OriginalArg(1) int arg0, @OriginalArg(2) Class49 arg1, @OriginalArg(3) Class49 arg2) {
+	public final Class14_Sub1 method180(@OriginalArg(1) int arg0, @OriginalArg(2) Cache arg1, @OriginalArg(3) Cache arg2) {
 		return this.method188(arg2, arg0, arg1);
 	}
 
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "(Lclient!ge;IIZLclient!ge;)Lclient!bg;")
-	private Class14_Sub1 method188(@OriginalArg(0) Class49 arg0, @OriginalArg(2) int arg1, @OriginalArg(4) Class49 arg2) {
+	private Class14_Sub1 method188(@OriginalArg(0) Cache arg0, @OriginalArg(2) int arg1, @OriginalArg(4) Cache arg2) {
 		if (this.aClass3_Sub15_1 == null) {
 			throw new RuntimeException();
 		}
