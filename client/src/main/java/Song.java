@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!rf")
-public final class Class3_Sub29 extends Node {
+public final class Song extends Node {
 
 	@OriginalMember(owner = "client!rf", name = "p", descriptor = "Lclient!sc;")
 	public HashTable aClass133_22;
@@ -13,7 +13,7 @@ public final class Class3_Sub29 extends Node {
 	public final byte[] aByteArray65;
 
 	@OriginalMember(owner = "client!rf", name = "<init>", descriptor = "(Lclient!wa;)V")
-	public Class3_Sub29(@OriginalArg(0) Buffer arg0) {
+	public Song(@OriginalArg(0) Buffer arg0) {
 		arg0.anInt2792 = arg0.aByteArray40.length - 3;
 		@Pc(12) int local12 = arg0.method2229();
 		@Pc(16) int local16 = arg0.method2163();
