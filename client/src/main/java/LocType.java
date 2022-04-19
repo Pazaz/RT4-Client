@@ -377,7 +377,7 @@ public final class LocType {
 		if (this.aClass133_19 == null) {
 			return arg0;
 		} else {
-			@Pc(21) Class3_Sub21 local21 = (Class3_Sub21) this.aClass133_19.method3863((long) arg1);
+			@Pc(21) IntNode local21 = (IntNode) this.aClass133_19.method3863((long) arg1);
 			return local21 == null ? arg0 : local21.anInt3141;
 		}
 	}
@@ -595,7 +595,7 @@ public final class LocType {
 				if (local576) {
 					local589 = new StringNode(arg0.method2202());
 				} else {
-					local589 = new Class3_Sub21(arg0.method2174());
+					local589 = new IntNode(arg0.method2174());
 				}
 				this.aClass133_19.method3862(local589, (long) local580);
 			}

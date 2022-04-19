@@ -326,7 +326,7 @@ public final class Static88 {
 					if (local226 == 51) {
 						@Pc(992) HashTable local992 = local14.aClass133Array1[local33[local30]];
 						local28--;
-						@Pc(1002) Class3_Sub21 local1002 = (Class3_Sub21) local992.method3863((long) Static254.anIntArray487[local28]);
+						@Pc(1002) IntNode local1002 = (IntNode) local992.method3863((long) Static254.anIntArray487[local28]);
 						if (local1002 != null) {
 							local30 += local1002.anInt3141;
 						}

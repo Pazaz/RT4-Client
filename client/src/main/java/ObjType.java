@@ -510,7 +510,7 @@ public final class ObjType {
 					if (local510) {
 						local523 = new StringNode(arg0.method2202());
 					} else {
-						local523 = new Class3_Sub21(arg0.method2174());
+						local523 = new IntNode(arg0.method2174());
 					}
 					this.aClass133_6.method3862(local523, (long) local514);
 				}
@@ -523,7 +523,7 @@ public final class ObjType {
 		if (this.aClass133_6 == null) {
 			return arg0;
 		} else {
-			@Pc(25) Class3_Sub21 local25 = (Class3_Sub21) this.aClass133_6.method3863((long) arg1);
+			@Pc(25) IntNode local25 = (IntNode) this.aClass133_6.method3863((long) arg1);
 			return local25 == null ? arg0 : local25.anInt3141;
 		}
 	}
