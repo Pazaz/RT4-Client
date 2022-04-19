@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!qf")
-public abstract class Sprite extends Class3_Sub2 {
+public abstract class Sprite extends SecondaryNode {
 
 	@OriginalMember(owner = "client!qf", name = "I", descriptor = "I")
 	public int anInt1859;

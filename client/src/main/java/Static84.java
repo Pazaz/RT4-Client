@@ -291,7 +291,7 @@ public final class Static84 {
 	}
 
 	@OriginalMember(owner = "client!gk", name = "a", descriptor = "(Lclient!rg;Lclient!rg;B)V")
-	public static void method1772(@OriginalArg(0) Class3_Sub2 arg0, @OriginalArg(1) Class3_Sub2 arg1) {
+	public static void method1772(@OriginalArg(0) SecondaryNode arg0, @OriginalArg(1) SecondaryNode arg1) {
 		if (arg1.aClass3_Sub2_66 != null) {
 			arg1.method4365();
 		}
