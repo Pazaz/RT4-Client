@@ -112,10 +112,10 @@ public final class Static97 {
 		Static19.anInt636 = arg0.method2204();
 		Static171.anInt4157 = arg0.method2204();
 		Static106.anInt2871 = arg0.method2204();
-		Static196.aClass10_Sub1Array2 = new Class10_Sub1[Static171.anInt4157 + 1 - Static19.anInt636];
+		Static196.aClass10_Sub1Array2 = new World[Static171.anInt4157 + 1 - Static19.anInt636];
 		for (local14 = 0; local14 < Static106.anInt2871; local14++) {
 			@Pc(77) int local77 = arg0.method2204();
-			@Pc(85) Class10_Sub1 local85 = Static196.aClass10_Sub1Array2[local77] = new Class10_Sub1();
+			@Pc(85) World local85 = Static196.aClass10_Sub1Array2[local77] = new World();
 			local85.anInt377 = arg0.method2229();
 			local85.anInt381 = arg0.method2174();
 			local85.anInt382 = local77 + Static19.anInt636;

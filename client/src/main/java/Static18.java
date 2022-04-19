@@ -93,7 +93,7 @@ public final class Static18 {
 	}
 
 	@OriginalMember(owner = "client!bh", name = "a", descriptor = "(B)Lclient!ba;")
-	public static Class10_Sub1 method556() {
+	public static World method556() {
 		Static51.anInt1682 = 0;
 		return Static88.method1821();
 	}

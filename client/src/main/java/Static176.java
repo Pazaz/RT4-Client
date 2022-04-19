@@ -31,7 +31,7 @@ public final class Static176 {
 
 	@OriginalMember(owner = "client!ob", name = "a", descriptor = "(IB)Z")
 	public static boolean method3303(@OriginalArg(0) int arg0) {
-		@Pc(3) Class10_Sub1 local3 = Static54.method1310(arg0);
+		@Pc(3) World local3 = Static54.method1310(arg0);
 		if (local3 == null) {
 			return false;
 		} else if (SignLink.anInt5928 == 1 || SignLink.anInt5928 == 2 || Static83.anInt370 == 2) {

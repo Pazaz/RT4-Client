@@ -20,7 +20,7 @@ public final class Static101 {
 	public static int anInt2640 = 0;
 
 	@OriginalMember(owner = "client!hm", name = "fb", descriptor = "[Lclient!ba;")
-	public static Class10_Sub1[] aClass10_Sub1Array1 = new Class10_Sub1[0];
+	public static World[] aClass10_Sub1Array1 = new World[0];
 
 	@OriginalMember(owner = "client!hm", name = "lb", descriptor = "Lclient!na;")
 	public static final JagString aClass100_540 = Static28.method790("Moteur son pr-Bpar-B");

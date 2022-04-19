@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static196 {
 
 	@OriginalMember(owner = "client!pl", name = "a", descriptor = "[Lclient!ba;")
-	public static Class10_Sub1[] aClass10_Sub1Array2;
+	public static World[] aClass10_Sub1Array2;
 
 	@OriginalMember(owner = "client!pl", name = "b", descriptor = "Lclient!na;")
 	private static final JagString aClass100_861 = Static28.method790("Loaded wordpack");
