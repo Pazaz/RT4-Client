@@ -2,7 +2,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!ga")
-public final class ParticleSystem extends Class47 {
+public final class ParticleSystem extends ParticleNode {
 
 	static {
 		new Class132(8);
