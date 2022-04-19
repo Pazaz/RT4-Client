@@ -43,7 +43,7 @@ public final class Static263 {
 			return;
 		}
 		if (local8.anObjectArray29 != null) {
-			@Pc(19) Class3_Sub19 local19 = new Class3_Sub19();
+			@Pc(19) HookRequest local19 = new HookRequest();
 			local19.anObjectArray31 = local8.anObjectArray29;
 			local19.aClass13_17 = local8;
 			local19.aClass100_598 = arg0;

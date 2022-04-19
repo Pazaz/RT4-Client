@@ -26,7 +26,7 @@ public final class Static88 {
 	}
 
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(BILclient!jl;)V")
-	public static void method1818(@OriginalArg(1) int arg0, @OriginalArg(2) Class3_Sub19 arg1) {
+	public static void method1818(@OriginalArg(1) int arg0, @OriginalArg(2) HookRequest arg1) {
 		@Pc(4) Object[] local4 = arg1.anObjectArray31;
 		@Pc(10) int local10 = (Integer) local4[0];
 		@Pc(14) ClientScript local14 = Static91.method1875(local10);

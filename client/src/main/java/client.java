@@ -469,19 +469,19 @@ public final class client extends GameShell {
 			}
 		}
 		while (true) {
-			@Pc(374) Class3_Sub19 local374;
+			@Pc(374) HookRequest local374;
 			@Pc(379) Component local379;
 			@Pc(387) Component local387;
 			do {
-				local374 = (Class3_Sub19) Static4.aClass69_2.method2287();
+				local374 = (HookRequest) Static4.aClass69_2.method2287();
 				if (local374 == null) {
 					while (true) {
 						do {
-							local374 = (Class3_Sub19) Static115.aClass69_70.method2287();
+							local374 = (HookRequest) Static115.aClass69_70.method2287();
 							if (local374 == null) {
 								while (true) {
 									do {
-										local374 = (Class3_Sub19) Static185.aClass69_101.method2287();
+										local374 = (HookRequest) Static185.aClass69_101.method2287();
 										if (local374 == null) {
 											if (Static105.aClass13_14 != null) {
 												Static4.method28();

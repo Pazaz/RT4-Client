@@ -494,17 +494,17 @@ public final class Static81 {
 		while (true) {
 			@Pc(1569) Component local1569;
 			@Pc(1560) Component local1560;
-			@Pc(1555) Class3_Sub19 local1555;
+			@Pc(1555) HookRequest local1555;
 			do {
-				local1555 = (Class3_Sub19) Static4.aClass69_2.method2287();
+				local1555 = (HookRequest) Static4.aClass69_2.method2287();
 				if (local1555 == null) {
 					while (true) {
 						do {
-							local1555 = (Class3_Sub19) Static115.aClass69_70.method2287();
+							local1555 = (HookRequest) Static115.aClass69_70.method2287();
 							if (local1555 == null) {
 								while (true) {
 									do {
-										local1555 = (Class3_Sub19) Static185.aClass69_101.method2287();
+										local1555 = (HookRequest) Static185.aClass69_101.method2287();
 										if (local1555 == null) {
 											if (Static24.aClass13_8 == null) {
 												Static137.anInt3337 = 0;

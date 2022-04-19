@@ -98,7 +98,7 @@ public final class Static150 {
 			Static280.aClass13_26 = arg2;
 		}
 		if (arg3 && arg2.anObjectArray17 != null && (local4 != arg2.anInt445 || arg2.anInt459 != local7)) {
-			@Pc(305) Class3_Sub19 local305 = new Class3_Sub19();
+			@Pc(305) HookRequest local305 = new HookRequest();
 			local305.anObjectArray31 = arg2.anObjectArray17;
 			local305.aClass13_17 = arg2;
 			Static185.aClass69_101.method2282(local305);

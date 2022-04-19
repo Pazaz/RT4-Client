@@ -130,7 +130,7 @@ public final class Static4 {
 			}
 			local163[0] = Integer.valueOf(Static57.aClass3_Sub15_Sub1_3.method2174());
 			if (Static248.method3288(local133)) {
-				@Pc(226) Class3_Sub19 local226 = new Class3_Sub19();
+				@Pc(226) HookRequest local226 = new HookRequest();
 				local226.anObjectArray31 = local163;
 				Static82.method1767(local226);
 			}
@@ -1625,9 +1625,9 @@ public final class Static4 {
 			if (Static213.anInt4851 > Static105.aClass13_14.anInt447 && (local133 < local114 || -local133 > local114 || local109 > local133 || local109 < -local133)) {
 				Static138.aBoolean172 = true;
 			}
-			@Pc(176) Class3_Sub19 local176;
+			@Pc(176) HookRequest local176;
 			if (Static105.aClass13_14.anObjectArray26 != null && Static138.aBoolean172) {
-				local176 = new Class3_Sub19();
+				local176 = new HookRequest();
 				local176.aClass13_17 = Static105.aClass13_14;
 				local176.anObjectArray31 = Static105.aClass13_14.anObjectArray26;
 				local176.anInt3102 = local122;
@@ -1637,7 +1637,7 @@ public final class Static4 {
 			if (Static22.anInt723 == 0) {
 				if (Static138.aBoolean172) {
 					if (Static105.aClass13_14.anObjectArray16 != null) {
-						local176 = new Class3_Sub19();
+						local176 = new HookRequest();
 						local176.anInt3097 = local130;
 						local176.aClass13_16 = Static56.aClass13_12;
 						local176.anInt3102 = local122;
