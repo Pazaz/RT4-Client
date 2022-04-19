@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!pf")
-public final class Class121 {
+public final class ColorImageCache {
 
 	@OriginalMember(owner = "client!pf", name = "d", descriptor = "I")
 	private int anInt4467 = 0;
@@ -31,7 +31,7 @@ public final class Class121 {
 	private int[][] anIntArrayArray34;
 
 	@OriginalMember(owner = "client!pf", name = "<init>", descriptor = "(III)V")
-	public Class121(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+	public ColorImageCache(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		this.anInt4465 = arg1;
 		this.aClass3_Sub28Array1 = new Class3_Sub28[this.anInt4465];
 		this.anInt4475 = arg0;
