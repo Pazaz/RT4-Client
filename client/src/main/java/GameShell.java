@@ -95,7 +95,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			local19 = Static39.aFrame1;
 		}
 		local19.setLayout(null);
-		Static154.aCanvas1 = new Canvas_Sub2(this);
+		Static154.aCanvas1 = new GameCanvas(this);
 		local19.add(Static154.aCanvas1);
 		Static154.aCanvas1.setSize(Static48.anInt1448, Static254.anInt5554);
 		Static154.aCanvas1.setVisible(true);
