@@ -222,7 +222,7 @@ public final class Static75 {
 			@Pc(247) int local247;
 			@Pc(224) int local224;
 			@Pc(236) int local236;
-			@Pc(317) Class8_Sub6 local317;
+			@Pc(317) ProjAnim local317;
 			if (Static164.anInt3985 == 121) {
 				local15 = Static57.aClass3_Sub15_Sub1_3.method2229();
 				local23 = Static115.anInt2940 * 2 + (local15 >> 4 & 0xF);
@@ -245,7 +245,7 @@ public final class Static75 {
 					local27 = local27 * 64;
 					local19 = local19 * 64;
 					local23 = local23 * 64;
-					local317 = new Class8_Sub6(local45, Static55.anInt1735, local23, local19, Static207.method3685(Static55.anInt1735, local23, local19) - local218, Static83.anInt372 + local228, local232 + Static83.anInt372, local236, local247, local39, local224);
+					local317 = new ProjAnim(local45, Static55.anInt1735, local23, local19, Static207.method3685(Static55.anInt1735, local23, local19) - local218, Static83.anInt372 + local228, local232 + Static83.anInt372, local236, local247, local39, local224);
 					local317.method3705(local31, Static83.anInt372 + local228, -local224 + Static207.method3685(Static55.anInt1735, local27, local31), local27);
 					Static217.aClass69_116.method2282(new Class3_Sub2_Sub19(local317));
 				}
@@ -367,7 +367,7 @@ public final class Static75 {
 						local19 = local19 * 128 + 64;
 						local23 = local23 * 128 + 64;
 						local27 = local27 * 128 + 64;
-						local317 = new Class8_Sub6(local45, Static55.anInt1735, local23, local19, Static207.method3685(Static55.anInt1735, local23, local19) - local218, local228 + Static83.anInt372, local232 + Static83.anInt372, local236, local247, local39, local224);
+						local317 = new ProjAnim(local45, Static55.anInt1735, local23, local19, Static207.method3685(Static55.anInt1735, local23, local19) - local218, local228 + Static83.anInt372, local232 + Static83.anInt372, local236, local247, local39, local224);
 						local317.method3705(local31, Static83.anInt372 + local228, Static207.method3685(Static55.anInt1735, local27, local31) - local224, local27);
 						Static217.aClass69_116.method2282(new Class3_Sub2_Sub19(local317));
 					}
@@ -429,7 +429,7 @@ public final class Static75 {
 								}
 							}
 						}
-						@Pc(1331) Class8_Sub6 local1331 = new Class8_Sub6(local218, Static55.anInt1735, local23, local19, Static207.method3685(Static55.anInt1735, local23, local19) - local224, local232 + Static83.anInt372, local236 + Static83.anInt372, local247, local633, local45, local228);
+						@Pc(1331) ProjAnim local1331 = new ProjAnim(local218, Static55.anInt1735, local23, local19, Static207.method3685(Static55.anInt1735, local23, local19) - local224, local232 + Static83.anInt372, local236 + Static83.anInt372, local247, local633, local45, local228);
 						local1331.method3705(local31, local232 + Static83.anInt372, -local228 + Static207.method3685(Static55.anInt1735, local27, local31), local27);
 						Static217.aClass69_116.method2282(new Class3_Sub2_Sub19(local1331));
 					}
