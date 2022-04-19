@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!nk")
-public final class Class109 implements Interface1 {
+public final class Class109 implements GlTextureProvider {
 
 	@OriginalMember(owner = "client!nk", name = "z", descriptor = "Z")
 	private boolean aBoolean200 = false;
