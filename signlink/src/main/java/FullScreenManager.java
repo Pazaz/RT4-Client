@@ -9,7 +9,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("signlink!e")
-public final class Class210 {
+public final class FullScreenManager {
 
 	@OriginalMember(owner = "signlink!e", name = "b", descriptor = "Ljava/awt/DisplayMode;")
 	private DisplayMode aDisplayMode1;
@@ -18,7 +18,7 @@ public final class Class210 {
 	private GraphicsDevice aGraphicsDevice1;
 
 	@OriginalMember(owner = "signlink!e", name = "<init>", descriptor = "()V")
-	public Class210() throws Exception {
+	public FullScreenManager() throws Exception {
 		@Pc(3) GraphicsEnvironment local3 = GraphicsEnvironment.getLocalGraphicsEnvironment();
 		this.aGraphicsDevice1 = local3.getDefaultScreenDevice();
 		if (!this.aGraphicsDevice1.isFullScreenSupported()) {
