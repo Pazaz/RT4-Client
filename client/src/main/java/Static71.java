@@ -11,7 +11,7 @@ public final class Static71 {
 	public static int[][] anIntArrayArray10;
 
 	@OriginalMember(owner = "client!fk", name = "l", descriptor = "Lsignlink!ll;")
-	public static Class213 aClass213_3;
+	public static SignLink aClass213_3;
 
 	@OriginalMember(owner = "client!fk", name = "q", descriptor = "Lclient!uc;")
 	public static Class111 aClass111_2;

@@ -1042,7 +1042,7 @@ public final class Static4 {
 								@Pc(3848) byte[] local3848 = new byte[Static223.anInt5028];
 								Static57.aClass3_Sub15_Sub1_3.method2237(local3848, Static223.anInt5028);
 								local156 = Static10.method346(local3848, Static223.anInt5028, 0);
-								if (Static39.aFrame1 == null && (Class213.anInt5928 == 3 || !Class213.aString15.startsWith("win") || Static178.aBoolean203)) {
+								if (Static39.aFrame1 == null && (SignLink.anInt5928 == 3 || !SignLink.aString15.startsWith("win") || Static178.aBoolean203)) {
 									Static169.method3175(local156, true);
 								} else {
 									Static175.aClass100_797 = local156;

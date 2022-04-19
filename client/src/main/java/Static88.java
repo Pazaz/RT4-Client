@@ -2979,7 +2979,7 @@ public final class Static88 {
 														continue;
 													}
 													if (local226 == 5420) {
-														Static254.anIntArray487[local28++] = Class213.anInt5928 == 3 ? 1 : 0;
+														Static254.anIntArray487[local28++] = SignLink.anInt5928 == 3 ? 1 : 0;
 														continue;
 													}
 													if (local226 == 5421) {
@@ -2991,7 +2991,7 @@ public final class Static88 {
 														local26--;
 														local609 = Static3.aClass100Array176[local26];
 														@Pc(8356) Class100 local8356 = Static34.method882(new Class100[] { Static15.method479(), local609 });
-														if (Static39.aFrame1 != null || local1552 && Class213.anInt5928 != 3 && Class213.aString15.startsWith("win") && !Static178.aBoolean203) {
+														if (Static39.aFrame1 != null || local1552 && SignLink.anInt5928 != 3 && SignLink.aString15.startsWith("win") && !Static178.aBoolean203) {
 															Static164.aBoolean194 = local1552;
 															Static175.aClass100_797 = local8356;
 															Static33.aClass212_1 = Static71.aClass213_3.method5131(new String(local8356.method3148(), "ISO-8859-1"));

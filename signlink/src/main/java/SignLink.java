@@ -21,7 +21,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("signlink!ll")
-public final class Class213 implements Runnable {
+public final class SignLink implements Runnable {
 
 	@OriginalMember(owner = "signlink!ll", name = "o", descriptor = "Ljava/lang/String;")
 	public static String aString14;
@@ -166,7 +166,7 @@ public final class Class213 implements Runnable {
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "<init>", descriptor = "(Ljava/applet/Applet;ILjava/lang/String;I)V")
-	public Class213(@OriginalArg(0) Applet arg0, @OriginalArg(1) int arg1, @OriginalArg(2) String arg2, @OriginalArg(3) int arg3) throws Exception {
+	public SignLink(@OriginalArg(0) Applet arg0, @OriginalArg(1) int arg1, @OriginalArg(2) String arg2, @OriginalArg(3) int arg3) throws Exception {
 		aString14 = "1.1";
 		this.aString19 = arg2;
 		this.anInt5929 = arg1;

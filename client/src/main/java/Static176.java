@@ -34,7 +34,7 @@ public final class Static176 {
 		@Pc(3) Class10_Sub1 local3 = Static54.method1310(arg0);
 		if (local3 == null) {
 			return false;
-		} else if (Class213.anInt5928 == 1 || Class213.anInt5928 == 2 || Static83.anInt370 == 2) {
+		} else if (SignLink.anInt5928 == 1 || SignLink.anInt5928 == 2 || Static83.anInt370 == 2) {
 			@Pc(31) byte[] local31 = local3.aClass100_71.method3148();
 			Static60.aString1 = new String(local31, 0, local31.length);
 			Static125.anInt3103 = local3.anInt382;
