@@ -71,7 +71,7 @@ public final class Static107 {
 			return local33;
 		} catch (@Pc(109) Throwable local109) {
 			try {
-				@Pc(120) Class62_Sub1 local120 = new Class62_Sub1(arg1, arg3);
+				@Pc(120) SignLinkAudioChannel local120 = new SignLinkAudioChannel(arg1, arg3);
 				local120.anIntArray411 = new int[(Static164.aBoolean192 ? 2 : 1) * 256];
 				local120.anInt4641 = arg0;
 				local120.method3576(arg2);
