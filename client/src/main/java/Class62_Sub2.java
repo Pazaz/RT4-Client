@@ -10,7 +10,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!qa")
-public final class Class62_Sub2 extends Class62 {
+public final class Class62_Sub2 extends AudioChannel {
 
 	@OriginalMember(owner = "client!qa", name = "L", descriptor = "I")
 	private int anInt4645;

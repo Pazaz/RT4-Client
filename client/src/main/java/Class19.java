@@ -9,7 +9,7 @@ public final class Class19 implements Runnable {
 	public SignLink aClass213_1;
 
 	@OriginalMember(owner = "client!cj", name = "p", descriptor = "[Lclient!vh;")
-	public final Class62[] aClass62Array1 = new Class62[2];
+	public final AudioChannel[] aClass62Array1 = new AudioChannel[2];
 
 	@OriginalMember(owner = "client!cj", name = "g", descriptor = "Z")
 	public volatile boolean aBoolean62 = false;
@@ -24,7 +24,7 @@ public final class Class19 implements Runnable {
 		try {
 			while (!this.aBoolean62) {
 				for (@Pc(9) int local9 = 0; local9 < 2; local9++) {
-					@Pc(19) Class62 local19 = this.aClass62Array1[local9];
+					@Pc(19) AudioChannel local19 = this.aClass62Array1[local9];
 					if (local19 != null) {
 						local19.method3565();
 					}

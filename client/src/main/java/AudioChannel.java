@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!vh")
-public class Class62 {
+public class AudioChannel {
 
 	@OriginalMember(owner = "client!vh", name = "h", descriptor = "Lclient!qb;")
 	private PcmStream aClass3_Sub3_6;
