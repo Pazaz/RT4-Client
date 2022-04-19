@@ -99,7 +99,7 @@ public final class SignLink implements Runnable {
 	private Class210 aClass210_1;
 
 	@OriginalMember(owner = "signlink!ll", name = "s", descriptor = "Lsignlink!g;")
-	private Class211 aClass211_1;
+	private CursorManager aClass211_1;
 
 	@OriginalMember(owner = "signlink!ll", name = "m", descriptor = "Ljava/lang/Thread;")
 	private final Thread aThread3;
@@ -235,7 +235,7 @@ public final class SignLink implements Runnable {
 		} catch (@Pc(239) Throwable local239) {
 		}
 		try {
-			this.aClass211_1 = new Class211();
+			this.aClass211_1 = new CursorManager();
 		} catch (@Pc(246) Throwable local246) {
 		}
 		@Pc(249) ThreadGroup local249 = Thread.currentThread().getThreadGroup();
