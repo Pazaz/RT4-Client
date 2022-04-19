@@ -15,13 +15,13 @@ public final class AreaSound extends Node {
 	public int anInt2032;
 
 	@OriginalMember(owner = "client!fl", name = "v", descriptor = "Lclient!b;")
-	public Class3_Sub3_Sub1 aClass3_Sub3_Sub1_1;
+	public SoundPcmStream aClass3_Sub3_Sub1_1;
 
 	@OriginalMember(owner = "client!fl", name = "x", descriptor = "I")
 	public int anInt2033;
 
 	@OriginalMember(owner = "client!fl", name = "y", descriptor = "Lclient!b;")
-	public Class3_Sub3_Sub1 aClass3_Sub3_Sub1_2;
+	public SoundPcmStream aClass3_Sub3_Sub1_2;
 
 	@OriginalMember(owner = "client!fl", name = "z", descriptor = "I")
 	public int anInt2034;
