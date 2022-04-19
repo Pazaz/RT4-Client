@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Class14_Sub1 extends Class14 {
 
 	@OriginalMember(owner = "client!bg", name = "m", descriptor = "Lclient!ii;")
-	private Class70 aClass70_1;
+	private Js5Index aClass70_1;
 
 	@OriginalMember(owner = "client!bg", name = "w", descriptor = "[B")
 	private byte[] aByteArray9;
@@ -103,7 +103,7 @@ public final class Class14_Sub1 extends Class14 {
 
 	@OriginalMember(owner = "client!bg", name = "b", descriptor = "(I)Lclient!ii;")
 	@Override
-	public final Class70 method521() {
+	public final Js5Index method521() {
 		if (this.aClass70_1 != null) {
 			return this.aClass70_1;
 		}
@@ -122,7 +122,7 @@ public final class Class14_Sub1 extends Class14 {
 				if (local52 == null) {
 					throw new RuntimeException();
 				}
-				this.aClass70_1 = new Class70(local52, this.anInt573);
+				this.aClass70_1 = new Js5Index(local52, this.anInt573);
 				if (this.anInt566 != this.aClass70_1.anInt2908) {
 					throw new RuntimeException();
 				}
@@ -140,7 +140,7 @@ public final class Class14_Sub1 extends Class14 {
 				if (local52 == null) {
 					throw new RuntimeException();
 				}
-				this.aClass70_1 = new Class70(local52, this.anInt573);
+				this.aClass70_1 = new Js5Index(local52, this.anInt573);
 			} catch (@Pc(131) RuntimeException local131) {
 				this.aClass73_2.method2327();
 				this.aClass70_1 = null;

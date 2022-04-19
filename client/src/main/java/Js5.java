@@ -13,7 +13,7 @@ public final class Js5 {
 	private Object[] anObjectArray32;
 
 	@OriginalMember(owner = "client!ve", name = "o", descriptor = "Lclient!ii;")
-	private Class70 aClass70_2 = null;
+	private Js5Index aClass70_2 = null;
 
 	@OriginalMember(owner = "client!ve", name = "i", descriptor = "Lclient!v;")
 	private final Class14 aClass14_1;

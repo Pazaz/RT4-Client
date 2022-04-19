@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ii")
-public final class Class70 {
+public final class Js5Index {
 
 	@OriginalMember(owner = "client!ii", name = "b", descriptor = "[[I")
 	public int[][] anIntArrayArray21;
@@ -49,7 +49,7 @@ public final class Class70 {
 	public final int anInt2911;
 
 	@OriginalMember(owner = "client!ii", name = "<init>", descriptor = "([BI)V")
-	public Class70(@OriginalArg(0) byte[] arg0, @OriginalArg(1) int arg1) {
+	public Js5Index(@OriginalArg(0) byte[] arg0, @OriginalArg(1) int arg1) {
 		this.anInt2911 = Static71.method1442(arg0, arg0.length);
 		if (arg1 != this.anInt2911) {
 			throw new RuntimeException();
