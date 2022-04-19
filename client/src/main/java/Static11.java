@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static11 {
 
 	@OriginalMember(owner = "client!ba", name = "D", descriptor = "Lclient!vh;")
-	public static Class62 aClass62_1;
+	public static AudioChannel aClass62_1;
 
 	@OriginalMember(owner = "client!ba", name = "s", descriptor = "Lclient!na;")
 	private static final JagString aClass100_68 = Static28.method790("Loaded update list");

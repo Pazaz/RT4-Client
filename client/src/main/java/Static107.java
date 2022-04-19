@@ -43,12 +43,12 @@ public final class Static107 {
 	}
 
 	@OriginalMember(owner = "client!id", name = "a", descriptor = "(ILsignlink!ll;Ljava/awt/Component;II)Lclient!vh;")
-	public static Class62 method2262(@OriginalArg(0) int arg0, @OriginalArg(1) SignLink arg1, @OriginalArg(2) Component arg2, @OriginalArg(3) int arg3) {
+	public static AudioChannel method2262(@OriginalArg(0) int arg0, @OriginalArg(1) SignLink arg1, @OriginalArg(2) Component arg2, @OriginalArg(3) int arg3) {
 		if (Static44.anInt1404 == 0) {
 			throw new IllegalStateException();
 		}
 		try {
-			@Pc(33) Class62 local33 = (Class62) Class.forName("Class62_Sub2").getDeclaredConstructor().newInstance();
+			@Pc(33) AudioChannel local33 = (AudioChannel) Class.forName("Class62_Sub2").getDeclaredConstructor().newInstance();
 			local33.anInt4641 = arg0;
 			local33.anIntArray411 = new int[(Static164.aBoolean192 ? 2 : 1) * 256];
 			local33.method3576(arg2);
@@ -90,7 +90,7 @@ public final class Static107 {
 				}
 				return local120;
 			} catch (@Pc(186) Throwable local186) {
-				return new Class62();
+				return new AudioChannel();
 			}
 		}
 	}
