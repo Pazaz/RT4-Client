@@ -43,7 +43,7 @@ public final class Class3_Sub14 extends Node {
 	private int[][] anIntArrayArray18;
 
 	@OriginalMember(owner = "client!hg", name = "L", descriptor = "Lclient!vi;")
-	private Class155 aClass155_3;
+	private GlVertexBufferObject aClass155_3;
 
 	@OriginalMember(owner = "client!hg", name = "N", descriptor = "[F")
 	private float[] aFloatArray6;
@@ -188,7 +188,7 @@ public final class Class3_Sub14 extends Node {
 		}
 		if (Static239.aBoolean271) {
 			@Pc(200) ByteBuffer local200 = ByteBuffer.wrap(local12.aByteArray40, 0, local12.anInt2792);
-			this.aClass155_3 = new Class155();
+			this.aClass155_3 = new GlVertexBufferObject();
 			this.aClass155_3.method4519(local200);
 		} else {
 			this.aByteBuffer3 = ByteBuffer.allocateDirect(local12.anInt2792).order(ByteOrder.nativeOrder());

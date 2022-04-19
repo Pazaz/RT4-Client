@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!vi")
-public final class Class155 {
+public final class GlVertexBufferObject {
 
 	@OriginalMember(owner = "client!vi", name = "a", descriptor = "I")
 	private int anInt5760;
@@ -21,12 +21,12 @@ public final class Class155 {
 	private final boolean aBoolean300;
 
 	@OriginalMember(owner = "client!vi", name = "<init>", descriptor = "()V")
-	public Class155() {
+	public GlVertexBufferObject() {
 		this(false);
 	}
 
 	@OriginalMember(owner = "client!vi", name = "<init>", descriptor = "(Z)V")
-	public Class155(@OriginalArg(0) boolean arg0) {
+	public GlVertexBufferObject(@OriginalArg(0) boolean arg0) {
 		this.anInt5760 = -1;
 		this.anInt5762 = 0;
 		@Pc(9) GL local9 = Static239.aGL1;
