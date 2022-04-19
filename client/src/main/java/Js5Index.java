@@ -16,7 +16,7 @@ public final class Js5Index {
 	public int anInt2902;
 
 	@OriginalMember(owner = "client!ii", name = "h", descriptor = "Lclient!jg;")
-	public Class76 aClass76_1;
+	public IntHashTable aClass76_1;
 
 	@OriginalMember(owner = "client!ii", name = "m", descriptor = "[I")
 	public int[] anIntArray269;
@@ -43,7 +43,7 @@ public final class Js5Index {
 	public int anInt2908;
 
 	@OriginalMember(owner = "client!ii", name = "x", descriptor = "[Lclient!jg;")
-	public Class76[] aClass76Array1;
+	public IntHashTable[] aClass76Array1;
 
 	@OriginalMember(owner = "client!ii", name = "z", descriptor = "I")
 	public final int anInt2911;
@@ -95,7 +95,7 @@ public final class Js5Index {
 			for (local66 = 0; local66 < this.anInt2902; local66++) {
 				this.anIntArray271[this.anIntArray269[local66]] = local12.method2174();
 			}
-			this.aClass76_1 = new Class76(this.anIntArray271);
+			this.aClass76_1 = new IntHashTable(this.anIntArray271);
 		}
 		for (local66 = 0; local66 < this.anInt2902; local66++) {
 			this.anIntArray268[this.anIntArray269[local66]] = local12.method2174();
@@ -130,7 +130,7 @@ public final class Js5Index {
 		if (local48 == 0) {
 			return;
 		}
-		this.aClass76Array1 = new Class76[local59 + 1];
+		this.aClass76Array1 = new IntHashTable[local59 + 1];
 		this.anIntArrayArray21 = new int[local59 + 1][];
 		for (local66 = 0; local66 < this.anInt2902; local66++) {
 			local273 = this.anIntArray269[local66];
@@ -147,7 +147,7 @@ public final class Js5Index {
 				}
 				this.anIntArrayArray21[local273][local288] = local12.method2174();
 			}
-			this.aClass76Array1[local273] = new Class76(this.anIntArrayArray21[local273]);
+			this.aClass76Array1[local273] = new IntHashTable(this.anIntArrayArray21[local273]);
 		}
 	}
 }
