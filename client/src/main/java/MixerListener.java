@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!cc")
-public abstract class Class3_Sub6 extends Node {
+public abstract class MixerListener extends Node {
 
 	@OriginalMember(owner = "client!cc", name = "p", descriptor = "I")
 	public int anInt905;
