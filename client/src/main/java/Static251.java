@@ -65,7 +65,7 @@ public final class Static251 {
 	@OriginalMember(owner = "client!ug", name = "a", descriptor = "(I)V")
 	public static void method4277() {
 		if (Static93.aClass150_1 != null) {
-			@Pc(5) Class150 local5 = Static93.aClass150_1;
+			@Pc(5) Mouse local5 = Static93.aClass150_1;
 			synchronized (Static93.aClass150_1) {
 				Static93.aClass150_1 = null;
 			}

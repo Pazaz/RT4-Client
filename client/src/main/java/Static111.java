@@ -76,7 +76,7 @@ public final class Static111 {
 
 	@OriginalMember(owner = "client!ii", name = "b", descriptor = "(I)V")
 	public static void method2292() {
-		@Pc(2) Class150 local2 = Static93.aClass150_1;
+		@Pc(2) Mouse local2 = Static93.aClass150_1;
 		synchronized (Static93.aClass150_1) {
 			Static22.anInt723 = Static57.anInt1759;
 			Static215.anInt4873 = Static147.anInt3521;

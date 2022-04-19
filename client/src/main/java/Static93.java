@@ -17,7 +17,7 @@ public final class Static93 {
 	public static final HashTable aClass133_7 = new HashTable(16);
 
 	@OriginalMember(owner = "client!he", name = "bb", descriptor = "Lclient!ug;")
-	public static Class150 aClass150_1 = new Class150();
+	public static Mouse aClass150_1 = new Mouse();
 
 	@OriginalMember(owner = "client!he", name = "db", descriptor = "Lclient!na;")
 	public static final JagString aClass100_517 = Static28.method790("");

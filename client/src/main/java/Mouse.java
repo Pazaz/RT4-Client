@@ -9,7 +9,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ug")
-public final class Class150 implements MouseListener, MouseMotionListener, FocusListener {
+public final class Mouse implements MouseListener, MouseMotionListener, FocusListener {
 
 	@OriginalMember(owner = "client!ug", name = "mouseMoved", descriptor = "(Ljava/awt/event/MouseEvent;)V")
 	@Override
