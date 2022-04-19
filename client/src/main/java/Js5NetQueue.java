@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!jb")
-public final class Class73 {
+public final class Js5NetQueue {
 
 	@OriginalMember(owner = "client!jb", name = "A", descriptor = "J")
 	private long aLong104;
