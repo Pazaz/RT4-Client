@@ -117,7 +117,7 @@ public final class Class14_Sub1 extends Class14 {
 			return null;
 		}
 		@Pc(52) byte[] local52 = this.aClass3_Sub2_Sub5_1.method3554();
-		if (this.aClass3_Sub2_Sub5_1 instanceof Class3_Sub2_Sub5_Sub1) {
+		if (this.aClass3_Sub2_Sub5_1 instanceof Js5CacheRequest) {
 			try {
 				if (local52 == null) {
 					throw new RuntimeException();
@@ -351,7 +351,7 @@ public final class Class14_Sub1 extends Class14 {
 		@Pc(161) byte[] local161 = local13.method3554();
 		@Pc(199) int local199;
 		@Pc(252) Js5NetRequest local252;
-		if (!(local13 instanceof Class3_Sub2_Sub5_Sub1)) {
+		if (!(local13 instanceof Js5CacheRequest)) {
 			try {
 				if (local161 == null || local161.length <= 2) {
 					throw new RuntimeException();

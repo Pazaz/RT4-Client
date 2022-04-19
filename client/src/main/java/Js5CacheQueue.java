@@ -31,7 +31,7 @@ public final class Js5CacheQueue implements Runnable {
 	}
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(Lclient!c;I)V")
-	private void method2461(@OriginalArg(0) Class3_Sub2_Sub5_Sub1 arg0) {
+	private void method2461(@OriginalArg(0) Js5CacheRequest arg0) {
 		@Pc(7) SecondaryLinkedList local7 = this.aClass16_6;
 		synchronized (this.aClass16_6) {
 			this.aClass16_6.method798(arg0);
@@ -55,8 +55,8 @@ public final class Js5CacheQueue implements Runnable {
 	}
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(Lclient!ge;I[BI)Lclient!c;")
-	public final Class3_Sub2_Sub5_Sub1 method2467(@OriginalArg(0) Cache arg0, @OriginalArg(2) byte[] arg1, @OriginalArg(3) int arg2) {
-		@Pc(7) Class3_Sub2_Sub5_Sub1 local7 = new Class3_Sub2_Sub5_Sub1();
+	public final Js5CacheRequest method2467(@OriginalArg(0) Cache arg0, @OriginalArg(2) byte[] arg1, @OriginalArg(3) int arg2) {
+		@Pc(7) Js5CacheRequest local7 = new Js5CacheRequest();
 		local7.aByteArray11 = arg1;
 		local7.aBoolean225 = false;
 		local7.aLong185 = arg2;
@@ -67,8 +67,8 @@ public final class Js5CacheQueue implements Runnable {
 	}
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(IILclient!ge;)Lclient!c;")
-	public final Class3_Sub2_Sub5_Sub1 method2469(@OriginalArg(0) int arg0, @OriginalArg(2) Cache arg1) {
-		@Pc(7) Class3_Sub2_Sub5_Sub1 local7 = new Class3_Sub2_Sub5_Sub1();
+	public final Js5CacheRequest method2469(@OriginalArg(0) int arg0, @OriginalArg(2) Cache arg1) {
+		@Pc(7) Js5CacheRequest local7 = new Js5CacheRequest();
 		local7.aClass49_3 = arg1;
 		local7.anInt824 = 3;
 		local7.aBoolean225 = false;
@@ -78,12 +78,12 @@ public final class Js5CacheQueue implements Runnable {
 	}
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(Lclient!ge;BI)Lclient!c;")
-	public final Class3_Sub2_Sub5_Sub1 method2471(@OriginalArg(0) Cache arg0, @OriginalArg(2) int arg1) {
-		@Pc(9) Class3_Sub2_Sub5_Sub1 local9 = new Class3_Sub2_Sub5_Sub1();
+	public final Js5CacheRequest method2471(@OriginalArg(0) Cache arg0, @OriginalArg(2) int arg1) {
+		@Pc(9) Js5CacheRequest local9 = new Js5CacheRequest();
 		local9.anInt824 = 1;
 		@Pc(16) SecondaryLinkedList local16 = this.aClass16_6;
 		synchronized (this.aClass16_6) {
-			@Pc(31) Class3_Sub2_Sub5_Sub1 local31 = (Class3_Sub2_Sub5_Sub1) this.aClass16_6.method795();
+			@Pc(31) Js5CacheRequest local31 = (Js5CacheRequest) this.aClass16_6.method795();
 			while (true) {
 				if (local31 == null) {
 					break;
@@ -93,7 +93,7 @@ public final class Js5CacheQueue implements Runnable {
 					local9.aBoolean226 = false;
 					return local9;
 				}
-				local31 = (Class3_Sub2_Sub5_Sub1) this.aClass16_6.method797();
+				local31 = (Js5CacheRequest) this.aClass16_6.method797();
 			}
 		}
 		local9.aByteArray11 = arg0.method1701(arg1);
@@ -107,9 +107,9 @@ public final class Js5CacheQueue implements Runnable {
 	public final void run() {
 		while (!this.aBoolean161) {
 			@Pc(12) SecondaryLinkedList local12 = this.aClass16_6;
-			@Pc(19) Class3_Sub2_Sub5_Sub1 local19;
+			@Pc(19) Js5CacheRequest local19;
 			synchronized (this.aClass16_6) {
-				local19 = (Class3_Sub2_Sub5_Sub1) this.aClass16_6.method796();
+				local19 = (Js5CacheRequest) this.aClass16_6.method796();
 				if (local19 == null) {
 					try {
 						this.aClass16_6.wait();
