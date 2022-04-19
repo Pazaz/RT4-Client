@@ -32,11 +32,11 @@ public final class Static114 {
 	}
 
 	@OriginalMember(owner = "client!j", name = "a", descriptor = "([BI)Lclient!dd;")
-	public static Class3_Sub2_Sub9_Sub1 method4635(@OriginalArg(0) byte[] arg0) {
+	public static SoftwareFont method4635(@OriginalArg(0) byte[] arg0) {
 		if (arg0 == null) {
 			return null;
 		} else {
-			@Pc(22) Class3_Sub2_Sub9_Sub1 local22 = new Class3_Sub2_Sub9_Sub1(arg0, Static274.anIntArray440, Static269.anIntArray252, Static254.anIntArray488, Static26.anIntArray66, Static7.aByteArrayArray5);
+			@Pc(22) SoftwareFont local22 = new SoftwareFont(arg0, Static274.anIntArray440, Static269.anIntArray252, Static254.anIntArray488, Static26.anIntArray66, Static7.aByteArrayArray5);
 			Static75.method1631();
 			return local22;
 		}

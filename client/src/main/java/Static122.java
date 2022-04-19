@@ -90,7 +90,7 @@ public final class Static122 {
 	}
 
 	@OriginalMember(owner = "client!jh", name = "a", descriptor = "(IILclient!ve;Lclient!ve;I)Lclient!dd;")
-	public static Class3_Sub2_Sub9_Sub1 method2412(@OriginalArg(0) int arg0, @OriginalArg(2) Class153 arg1, @OriginalArg(3) Class153 arg2) {
+	public static SoftwareFont method2412(@OriginalArg(0) int arg0, @OriginalArg(2) Class153 arg1, @OriginalArg(3) Class153 arg2) {
 		return Static234.method4016(arg2, 0, arg0) ? Static114.method4635(arg1.method4495(arg0, 0)) : null;
 	}
 }

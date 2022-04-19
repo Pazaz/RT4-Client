@@ -63,13 +63,13 @@ public final class Static148 {
 	}
 
 	@OriginalMember(owner = "client!li", name = "a", descriptor = "(II)Lclient!dd;")
-	public static Class3_Sub2_Sub9_Sub1 method2768(@OriginalArg(1) int arg0) {
-		@Pc(16) Class3_Sub2_Sub9_Sub1 local16 = (Class3_Sub2_Sub9_Sub1) Static139.aClass99_22.method3106((long) arg0);
+	public static SoftwareFont method2768(@OriginalArg(1) int arg0) {
+		@Pc(16) SoftwareFont local16 = (SoftwareFont) Static139.aClass99_22.method3106((long) arg0);
 		if (local16 != null) {
 			return local16;
 		}
 		@Pc(26) byte[] local26 = Static261.aClass153_107.method4495(arg0, 0);
-		local16 = new Class3_Sub2_Sub9_Sub1(local26);
+		local16 = new SoftwareFont(local26);
 		local16.method2873(Static159.aClass36Array12, null);
 		Static139.aClass99_22.method3095(local16, (long) arg0);
 		return local16;
