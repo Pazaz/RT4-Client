@@ -1,0 +1,121 @@
+import javax.media.opengl.GL;
+import org.openrs2.deob.annotation.OriginalArg;
+import org.openrs2.deob.annotation.OriginalClass;
+import org.openrs2.deob.annotation.OriginalMember;
+import org.openrs2.deob.annotation.Pc;
+
+@OriginalClass("client!ob")
+public final class Class112 implements Interface4 {
+
+	@OriginalMember(owner = "client!ob", name = "g", descriptor = "I")
+	private int anInt4236;
+
+	@OriginalMember(owner = "client!ob", name = "n", descriptor = "[F")
+	private final float[] aFloatArray21 = new float[4];
+
+	@OriginalMember(owner = "client!ob", name = "<init>", descriptor = "()V")
+	public Class112() {
+		this.method3307();
+	}
+
+	@OriginalMember(owner = "client!ob", name = "c", descriptor = "()I")
+	@Override
+	public final int method4605() {
+		return 0;
+	}
+
+	@OriginalMember(owner = "client!ob", name = "a", descriptor = "(I)V")
+	@Override
+	public final void method4604(@OriginalArg(0) int arg0) {
+		@Pc(7) GL local7 = Static239.aGL1;
+		@Pc(18) float local18 = (float) ((arg0 >> 3 & 0x3) + 1) * 0.01F;
+		@Pc(27) float local27 = -0.01F * (float) ((arg0 & 0x3) + 1);
+		@Pc(36) float local36 = (arg0 & 0x40) == 0 ? 4.8828125E-4F : 9.765625E-4F;
+		@Pc(47) boolean local47 = (arg0 & 0x80) != 0;
+		if (local47) {
+			this.aFloatArray21[0] = local36;
+			this.aFloatArray21[1] = 0.0F;
+			this.aFloatArray21[2] = 0.0F;
+			this.aFloatArray21[3] = 0.0F;
+		} else {
+			this.aFloatArray21[2] = local36;
+			this.aFloatArray21[1] = 0.0F;
+			this.aFloatArray21[3] = 0.0F;
+			this.aFloatArray21[0] = 0.0F;
+		}
+		local7.glActiveTexture(GL.GL_TEXTURE1);
+		local7.glMatrixMode(GL.GL_MODELVIEW);
+		local7.glPushMatrix();
+		local7.glLoadIdentity();
+		local7.glRotatef(180.0F, 1.0F, 0.0F, 0.0F);
+		local7.glRotatef((float) Static254.anInt5559 * 360.0F / 2048.0F, 1.0F, 0.0F, 0.0F);
+		local7.glRotatef((float) Static59.anInt1815 * 360.0F / 2048.0F, 0.0F, 1.0F, 0.0F);
+		local7.glTranslatef((float) -Static12.anInt406, (float) -Static199.anInt4675, (float) -Static230.anInt5158);
+		local7.glTexGenfv(GL.GL_S, GL.GL_EYE_PLANE, this.aFloatArray21, 0);
+		this.aFloatArray21[3] = local27 * (float) Static239.anInt5323;
+		this.aFloatArray21[0] = 0.0F;
+		this.aFloatArray21[2] = 0.0F;
+		this.aFloatArray21[1] = local36;
+		local7.glTexGenfv(GL.GL_T, GL.GL_EYE_PLANE, this.aFloatArray21, 0);
+		local7.glPopMatrix();
+		if (Static151.aBoolean176) {
+			this.aFloatArray21[3] = (float) Static239.anInt5323 * local18;
+			this.aFloatArray21[1] = 0.0F;
+			this.aFloatArray21[0] = 0.0F;
+			this.aFloatArray21[2] = 0.0F;
+			local7.glTexGenfv(GL.GL_R, GL.GL_OBJECT_PLANE, this.aFloatArray21, 0);
+		} else {
+			@Pc(189) int local189 = (int) ((float) Static239.anInt5323 * local18 * 64.0F);
+			local7.glBindTexture(GL.GL_TEXTURE_2D, Static151.anIntArray340[local189 % 64]);
+		}
+		local7.glActiveTexture(GL.GL_TEXTURE0);
+	}
+
+	@OriginalMember(owner = "client!ob", name = "a", descriptor = "()V")
+	@Override
+	public final void method4602() {
+		@Pc(1) GL local1 = Static239.aGL1;
+		local1.glCallList(this.anInt4236 + 1);
+	}
+
+	@OriginalMember(owner = "client!ob", name = "b", descriptor = "()V")
+	@Override
+	public final void method4603() {
+		@Pc(5) GL local5 = Static239.aGL1;
+		local5.glCallList(this.anInt4236);
+	}
+
+	@OriginalMember(owner = "client!ob", name = "b", descriptor = "(I)V")
+	private void method3307() {
+		@Pc(3) GL local3 = Static239.aGL1;
+		this.anInt4236 = local3.glGenLists(2);
+		local3.glNewList(this.anInt4236, GL.GL_COMPILE);
+		local3.glActiveTexture(GL.GL_TEXTURE1);
+		if (Static151.aBoolean176) {
+			local3.glBindTexture(GL.GL_TEXTURE_3D, Static151.anInt3588);
+			local3.glTexGeni(GL.GL_R, GL.GL_TEXTURE_GEN_MODE, GL.GL_OBJECT_LINEAR);
+			local3.glEnable(GL.GL_TEXTURE_GEN_R);
+			local3.glEnable(GL.GL_TEXTURE_3D);
+		} else {
+			local3.glEnable(GL.GL_TEXTURE_2D);
+		}
+		local3.glTexGeni(GL.GL_S, GL.GL_TEXTURE_GEN_MODE, GL.GL_EYE_LINEAR);
+		local3.glTexGeni(GL.GL_T, GL.GL_TEXTURE_GEN_MODE, GL.GL_EYE_LINEAR);
+		local3.glEnable(GL.GL_TEXTURE_GEN_S);
+		local3.glEnable(GL.GL_TEXTURE_GEN_T);
+		local3.glActiveTexture(GL.GL_TEXTURE0);
+		local3.glEndList();
+		local3.glNewList(this.anInt4236 + 1, GL.GL_COMPILE);
+		local3.glActiveTexture(GL.GL_TEXTURE1);
+		if (Static151.aBoolean176) {
+			local3.glDisable(GL.GL_TEXTURE_3D);
+			local3.glDisable(GL.GL_TEXTURE_GEN_R);
+		} else {
+			local3.glDisable(GL.GL_TEXTURE_2D);
+		}
+		local3.glDisable(GL.GL_TEXTURE_GEN_S);
+		local3.glDisable(GL.GL_TEXTURE_GEN_T);
+		local3.glActiveTexture(GL.GL_TEXTURE0);
+		local3.glEndList();
+	}
+}
