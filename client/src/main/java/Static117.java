@@ -14,7 +14,7 @@ public final class Static117 {
 	public static int[] anIntArray276;
 
 	@OriginalMember(owner = "client!jc", name = "u", descriptor = "[Lclient!vb;")
-	public static Class152[] aClass152Array1;
+	public static VorbisResidue[] aClass152Array1;
 
 	@OriginalMember(owner = "client!jc", name = "v", descriptor = "[Z")
 	public static boolean[] aBooleanArray63;
@@ -181,9 +181,9 @@ public final class Static117 {
 			aClass67Array1[local30] = new Class67();
 		}
 		local30 = method2350(6) + 1;
-		aClass152Array1 = new Class152[local30];
+		aClass152Array1 = new VorbisResidue[local30];
 		for (local34 = 0; local34 < local30; local34++) {
-			aClass152Array1[local34] = new Class152();
+			aClass152Array1[local34] = new VorbisResidue();
 		}
 		local34 = method2350(6) + 1;
 		aClass151Array1 = new Class151[local34];

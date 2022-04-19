@@ -162,7 +162,7 @@ public final class Class3_Sub17 extends Node {
 		@Pc(131) int local131 = local123.anIntArray490[local126];
 		@Pc(140) boolean local140 = !Static117.aClass67Array1[local131].method2272();
 		for (@Pc(144) int local144 = 0; local144 < local123.anInt5563; local144++) {
-			@Pc(155) Class152 local155 = Static117.aClass152Array1[local123.anIntArray491[local144]];
+			@Pc(155) VorbisResidue local155 = Static117.aClass152Array1[local123.anIntArray491[local144]];
 			@Pc(157) float[] local157 = Static117.aFloatArray14;
 			local155.method4450(local157, local25 >> 1, local140);
 		}
