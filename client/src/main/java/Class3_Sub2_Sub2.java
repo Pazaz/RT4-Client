@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!bc")
-public final class Class3_Sub2_Sub2 extends Class3_Sub2 {
+public final class Class3_Sub2_Sub2 extends SecondaryNode {
 
 	@OriginalMember(owner = "client!bc", name = "O", descriptor = "[I")
 	public int[] anIntArray29;

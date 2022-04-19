@@ -2,16 +2,16 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!rg")
-public class Class3_Sub2 extends Node {
+public class SecondaryNode extends Node {
 
 	@OriginalMember(owner = "client!rg", name = "v", descriptor = "J")
 	public long aLong185;
 
 	@OriginalMember(owner = "client!rg", name = "w", descriptor = "Lclient!rg;")
-	public Class3_Sub2 aClass3_Sub2_66;
+	public SecondaryNode aClass3_Sub2_66;
 
 	@OriginalMember(owner = "client!rg", name = "G", descriptor = "Lclient!rg;")
-	public Class3_Sub2 aClass3_Sub2_67;
+	public SecondaryNode aClass3_Sub2_67;
 
 	@OriginalMember(owner = "client!rg", name = "e", descriptor = "(B)V")
 	public final void method4365() {

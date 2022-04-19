@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!sd")
-public final class Class3_Sub2_Sub18 extends Class3_Sub2 {
+public final class Class3_Sub2_Sub18 extends SecondaryNode {
 
 	@OriginalMember(owner = "client!sd", name = "U", descriptor = "I")
 	private int anInt5065 = 0;
