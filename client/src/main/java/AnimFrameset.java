@@ -7,13 +7,13 @@ import org.openrs2.deob.annotation.Pc;
 public final class AnimFrameset extends SecondaryNode {
 
 	@OriginalMember(owner = "client!cl", name = "W", descriptor = "[Lclient!ne;")
-	public final Class104[] aClass104Array1;
+	public final AnimFrame[] aClass104Array1;
 
 	@OriginalMember(owner = "client!cl", name = "<init>", descriptor = "(Lclient!ve;Lclient!ve;IZ)V")
 	public AnimFrameset(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1, @OriginalArg(2) int arg2, @OriginalArg(3) boolean arg3) {
 		@Pc(5) LinkedList local5 = new LinkedList();
 		@Pc(10) int local10 = arg0.method4504(arg2);
-		this.aClass104Array1 = new Class104[local10];
+		this.aClass104Array1 = new AnimFrame[local10];
 		@Pc(19) int[] local19 = arg0.method4503(arg2);
 		for (@Pc(21) int local21 = 0; local21 < local19.length; local21++) {
 			@Pc(37) byte[] local37 = arg0.method4495(arg2, local19[local21]);
@@ -32,7 +32,7 @@ public final class AnimFrameset extends SecondaryNode {
 				local58 = new Class3_Sub20(local51, local85);
 				local5.method2282(local58);
 			}
-			this.aClass104Array1[local19[local21]] = new Class104(local37, local58);
+			this.aClass104Array1[local19[local21]] = new AnimFrame(local37, local58);
 		}
 	}
 

@@ -22,7 +22,7 @@ public abstract class Model extends Entity {
 	public abstract void method4552();
 
 	@OriginalMember(owner = "client!ak", name = "a", descriptor = "(Lclient!jm;Lclient!ne;Lclient!ne;II[ZZZI[I)V")
-	private void method4553(@OriginalArg(0) Class3_Sub20 arg0, @OriginalArg(1) Class104 arg1, @OriginalArg(2) Class104 arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) boolean[] arg5, @OriginalArg(6) boolean arg6, @OriginalArg(7) boolean arg7, @OriginalArg(8) int arg8, @OriginalArg(9) int[] arg9) {
+	private void method4553(@OriginalArg(0) Class3_Sub20 arg0, @OriginalArg(1) AnimFrame arg1, @OriginalArg(2) AnimFrame arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) boolean[] arg5, @OriginalArg(6) boolean arg6, @OriginalArg(7) boolean arg7, @OriginalArg(8) int arg8, @OriginalArg(9) int[] arg9) {
 		@Pc(5) int local5;
 		if (arg2 == null || arg3 == 0) {
 			for (local5 = 0; local5 < arg1.anInt4070; local5++) {
@@ -182,7 +182,7 @@ public abstract class Model extends Entity {
 		if (arg1 == -1 || !this.method4551()) {
 			return;
 		}
-		@Pc(12) Class104 local12 = arg0.aClass104Array1[arg1];
+		@Pc(12) AnimFrame local12 = arg0.aClass104Array1[arg1];
 		@Pc(15) Class3_Sub20 local15 = local12.aClass3_Sub20_1;
 		for (@Pc(17) int local17 = 0; local17 < local12.anInt4070; local17++) {
 			@Pc(26) short local26 = local12.aShortArray42[local17];
@@ -204,9 +204,9 @@ public abstract class Model extends Entity {
 		if (arg1 == -1 || !this.method4551()) {
 			return;
 		}
-		@Pc(12) Class104 local12 = arg0.aClass104Array1[arg1];
+		@Pc(12) AnimFrame local12 = arg0.aClass104Array1[arg1];
 		@Pc(15) Class3_Sub20 local15 = local12.aClass3_Sub20_1;
-		@Pc(17) Class104 local17 = null;
+		@Pc(17) AnimFrame local17 = null;
 		if (arg2 != null) {
 			local17 = arg2.aClass104Array1[arg3];
 			if (local17.aClass3_Sub20_1 != local15) {
@@ -240,9 +240,9 @@ public abstract class Model extends Entity {
 		if (arg1 == -1 || !this.method4551()) {
 			return;
 		}
-		@Pc(12) Class104 local12 = arg0.aClass104Array1[arg1];
+		@Pc(12) AnimFrame local12 = arg0.aClass104Array1[arg1];
 		@Pc(15) Class3_Sub20 local15 = local12.aClass3_Sub20_1;
-		@Pc(17) Class104 local17 = null;
+		@Pc(17) AnimFrame local17 = null;
 		if (arg2 != null) {
 			local17 = arg2.aClass104Array1[arg3];
 			if (local17.aClass3_Sub20_1 != local15) {
@@ -273,17 +273,17 @@ public abstract class Model extends Entity {
 		if (arg12 == null || arg7 == -1) {
 			this.method4558(arg0, arg1, arg2, arg3, arg4, arg5, arg13);
 		} else if (this.method4551()) {
-			@Pc(27) Class104 local27 = arg0.aClass104Array1[arg1];
+			@Pc(27) AnimFrame local27 = arg0.aClass104Array1[arg1];
 			@Pc(30) Class3_Sub20 local30 = local27.aClass3_Sub20_1;
-			@Pc(32) Class104 local32 = null;
+			@Pc(32) AnimFrame local32 = null;
 			if (arg2 != null) {
 				local32 = arg2.aClass104Array1[arg3];
 				if (local32.aClass3_Sub20_1 != local30) {
 					local32 = null;
 				}
 			}
-			@Pc(50) Class104 local50 = arg6.aClass104Array1[arg7];
-			@Pc(52) Class104 local52 = null;
+			@Pc(50) AnimFrame local50 = arg6.aClass104Array1[arg7];
+			@Pc(52) AnimFrame local52 = null;
 			if (arg8 != null) {
 				local52 = arg8.aClass104Array1[arg9];
 				if (local52.aClass3_Sub20_1 != local30) {

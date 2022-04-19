@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ne")
-public final class Class104 {
+public final class AnimFrame {
 
 	@OriginalMember(owner = "client!ne", name = "c", descriptor = "Lclient!jm;")
 	public Class3_Sub20 aClass3_Sub20_1 = null;
@@ -37,7 +37,7 @@ public final class Class104 {
 	public final byte[] aByteArray55;
 
 	@OriginalMember(owner = "client!ne", name = "<init>", descriptor = "([BLclient!jm;)V")
-	public Class104(@OriginalArg(0) byte[] arg0, @OriginalArg(1) Class3_Sub20 arg1) {
+	public AnimFrame(@OriginalArg(0) byte[] arg0, @OriginalArg(1) Class3_Sub20 arg1) {
 		this.aClass3_Sub20_1 = arg1;
 		@Pc(21) Buffer local21 = new Buffer(arg0);
 		@Pc(26) Buffer local26 = new Buffer(arg0);
