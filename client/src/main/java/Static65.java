@@ -79,7 +79,7 @@ public final class Static65 {
 
 	@OriginalMember(owner = "client!fc", name = "b", descriptor = "(I)V")
 	public static void method1501() {
-		@Pc(12) Class149 local12 = Static10.aClass149_1;
+		@Pc(12) Keyboard local12 = Static10.aClass149_1;
 		synchronized (Static10.aClass149_1) {
 			Static102.anInt2678 = Static228.anInt5105;
 			Static229.anInt5140++;

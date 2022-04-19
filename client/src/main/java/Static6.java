@@ -19,7 +19,7 @@ public final class Static6 {
 	@OriginalMember(owner = "client!ag", name = "h", descriptor = "(I)V")
 	public static void method82() {
 		if (Static10.aClass149_1 != null) {
-			@Pc(4) Class149 local4 = Static10.aClass149_1;
+			@Pc(4) Keyboard local4 = Static10.aClass149_1;
 			synchronized (Static10.aClass149_1) {
 				Static10.aClass149_1 = null;
 			}

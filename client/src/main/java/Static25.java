@@ -25,7 +25,7 @@ public final class Static25 {
 
 	@OriginalMember(owner = "client!c", name = "d", descriptor = "(I)Z")
 	public static boolean method712() {
-		@Pc(6) Class149 local6 = Static10.aClass149_1;
+		@Pc(6) Keyboard local6 = Static10.aClass149_1;
 		synchronized (Static10.aClass149_1) {
 			if (Static228.anInt5105 == Static102.anInt2678) {
 				return false;
