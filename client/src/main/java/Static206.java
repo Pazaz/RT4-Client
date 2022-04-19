@@ -31,7 +31,7 @@ public final class Static206 {
 	@OriginalMember(owner = "client!qk", name = "a", descriptor = "(ZIIIIFII)[I")
 	public static int[] method3679(@OriginalArg(5) float arg0) {
 		@Pc(11) int[] local11 = new int[2048];
-		@Pc(15) Class3_Sub1_Sub4 local15 = new Class3_Sub1_Sub4();
+		@Pc(15) TextureOp4 local15 = new TextureOp4();
 		local15.anInt646 = 8;
 		local15.anInt642 = 4;
 		local15.anInt650 = 35;
