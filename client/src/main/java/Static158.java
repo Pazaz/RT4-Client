@@ -9,7 +9,7 @@ public final class Static158 {
 	public static int anInt3846;
 
 	@OriginalMember(owner = "client!mh", name = "hb", descriptor = "Lclient!bn;")
-	public static Class3_Sub2_Sub4 aClass3_Sub2_Sub4_3;
+	public static Map aClass3_Sub2_Sub4_3;
 
 	@OriginalMember(owner = "client!mh", name = "X", descriptor = "I")
 	public static int anInt3851 = -1;

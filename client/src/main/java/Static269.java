@@ -8,7 +8,7 @@ public final class Static269 {
 	public static int[] anIntArray252;
 
 	@OriginalMember(owner = "client!wa", name = "ub", descriptor = "Lclient!bn;")
-	public static Class3_Sub2_Sub4 aClass3_Sub2_Sub4_2;
+	public static Map aClass3_Sub2_Sub4_2;
 
 	@OriginalMember(owner = "client!wa", name = "D", descriptor = "Lclient!na;")
 	private static final JagString aClass100_553 = Static28.method790("Loaded interfaces");

@@ -34,8 +34,8 @@ public final class Static124 {
 	}
 
 	@OriginalMember(owner = "client!jk", name = "a", descriptor = "(ILclient!na;)Lclient!bn;")
-	public static Class3_Sub2_Sub4 method2434(@OriginalArg(1) JagString arg0) {
-		for (@Pc(15) Class3_Sub2_Sub4 local15 = (Class3_Sub2_Sub4) Static228.aClass69_120.method2289(); local15 != null; local15 = (Class3_Sub2_Sub4) Static228.aClass69_120.method2288()) {
+	public static Map method2434(@OriginalArg(1) JagString arg0) {
+		for (@Pc(15) Map local15 = (Map) Static228.aClass69_120.method2289(); local15 != null; local15 = (Map) Static228.aClass69_120.method2288()) {
 			if (local15.aClass100_138.method3108(arg0)) {
 				return local15;
 			}
