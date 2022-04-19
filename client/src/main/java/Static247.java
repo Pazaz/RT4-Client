@@ -62,7 +62,7 @@ public final class Static247 {
 										@Pc(48) int var10;
 										@Pc(907) int var17;
 										@Pc(916) int var18;
-										@Pc(363) Class77 var22;
+										@Pc(363) Wall var22;
 										@Pc(469) boolean var24;
 										@Pc(425) Scenery var25;
 										@Pc(1179) Tile var32;
@@ -217,7 +217,7 @@ public final class Static247 {
 											}
 											var10 = 0;
 											local65 = 0;
-											@Pc(616) Class77 local616 = local8.aClass77_1;
+											@Pc(616) Wall local616 = local8.aClass77_1;
 											@Pc(619) WallDecor local619 = local8.aClass24_1;
 											if (local616 != null || local619 != null) {
 												if (Static167.anInt4069 == local18) {
@@ -617,7 +617,7 @@ public final class Static247 {
 						}
 					}
 				}
-				@Pc(2275) Class77 local2275 = local8.aClass77_1;
+				@Pc(2275) Wall local2275 = local8.aClass77_1;
 				if (local2275 != null) {
 					if ((local2275.anInt3052 & local8.anInt670) != 0 && !Static260.method3850(local27, local18, local21, local2275.anInt3052)) {
 						if (Static239.aBoolean269) {

@@ -45,7 +45,7 @@ public final class Static262 {
 		if (arg4 == null && arg5 == null) {
 			return;
 		}
-		@Pc(8) Class77 local8 = new Class77();
+		@Pc(8) Wall local8 = new Wall();
 		local8.aLong107 = arg8;
 		local8.anInt3048 = arg1 * 128 + 64;
 		local8.anInt3044 = arg2 * 128 + 64;
@@ -63,7 +63,7 @@ public final class Static262 {
 	}
 
 	@OriginalMember(owner = "client!vf", name = "a", descriptor = "(III)Lclient!jh;")
-	public static Class77 method4509(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+	public static Wall method4509(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		@Pc(7) Tile local7 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
 		return local7 == null ? null : local7.aClass77_1;
 	}

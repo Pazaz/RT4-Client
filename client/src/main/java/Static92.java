@@ -41,7 +41,7 @@ public final class Static92 {
 		}
 		@Pc(38) int local38;
 		if (arg4 == 0) {
-			@Pc(28) Class77 local28 = Static262.method4509(arg0, arg5, arg3);
+			@Pc(28) Wall local28 = Static262.method4509(arg0, arg5, arg3);
 			if (local28 != null) {
 				local38 = Integer.MAX_VALUE & (int) (local28.aLong107 >>> 32);
 				if (arg2 == 2) {

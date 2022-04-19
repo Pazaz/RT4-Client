@@ -125,7 +125,7 @@ public final class Static220 {
 				for (@Pc(11) int local11 = 0; local11 < Static99.anInt2550; local11++) {
 					@Pc(22) Tile local22 = Static130.aClass3_Sub5ArrayArrayArray1[local1][local6][local11];
 					if (local22 != null) {
-						@Pc(27) Class77 local27 = local22.aClass77_1;
+						@Pc(27) Wall local27 = local22.aClass77_1;
 						if (local27 != null && local27.aClass8_5.method4543()) {
 							Static69.method1544(local27.aClass8_5, local1, local6, local11, 1, 1);
 							if (local27.aClass8_6 != null && local27.aClass8_6.method4543()) {

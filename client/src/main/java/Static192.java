@@ -54,7 +54,7 @@ public final class Static192 {
 				@Pc(159) Entity local159 = null;
 				@Pc(164) int local164 = Static133.anIntArray453[local17.anInt1198];
 				if (local164 == 0) {
-					@Pc(176) Class77 local176 = Static262.method4509(Static55.anInt1735, local17.anInt1190, local17.anInt1204);
+					@Pc(176) Wall local176 = Static262.method4509(Static55.anInt1735, local17.anInt1190, local17.anInt1204);
 					if (local176 != null) {
 						local159 = local176.aClass8_5;
 					}
