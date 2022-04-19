@@ -89,7 +89,7 @@ public final class Static243 {
 		for (local3506 = 0; local3506 < 32768; local3506++) {
 			Static175.aClass8_Sub4_Sub2Array1[local3506] = null;
 		}
-		Static173.aClass8_Sub4_Sub1_2 = Static159.aClass8_Sub4_Sub1Array1[2047] = new Class8_Sub4_Sub1();
+		Static173.aClass8_Sub4_Sub1_2 = Static159.aClass8_Sub4_Sub1Array1[2047] = new Player();
 		Static217.aClass69_116.method2278();
 		Static99.aClass69_64.method2278();
 		if (Static159.aClass69ArrayArrayArray1 != null) {

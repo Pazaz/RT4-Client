@@ -14,7 +14,7 @@ public final class Static173 {
 	public static SoftwareSprite[] aClass3_Sub2_Sub1_Sub1Array9;
 
 	@OriginalMember(owner = "client!nk", name = "O", descriptor = "Lclient!e;")
-	public static Class8_Sub4_Sub1 aClass8_Sub4_Sub1_2;
+	public static Player aClass8_Sub4_Sub1_2;
 
 	@OriginalMember(owner = "client!nk", name = "n", descriptor = "[Lclient!sl;")
 	public static final SynthSound[] aClass138Array1 = new SynthSound[50];

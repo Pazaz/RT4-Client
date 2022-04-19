@@ -44,7 +44,7 @@ public final class Static195 {
 				}
 				if (local21.anInt4819 < 0) {
 					@Pc(102) int local102 = -local21.anInt4819 - 1;
-					@Pc(107) Class8_Sub4_Sub1 local107;
+					@Pc(107) Player local107;
 					if (Static16.anInt549 == local102) {
 						local107 = Static173.aClass8_Sub4_Sub1_2;
 					} else {

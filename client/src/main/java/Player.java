@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!e")
-public final class Class8_Sub4_Sub1 extends Class8_Sub4 {
+public final class Player extends Class8_Sub4 {
 
 	@OriginalMember(owner = "client!e", name = "Bc", descriptor = "Lclient!hh;")
 	public Class59 aClass59_1;
@@ -229,7 +229,7 @@ public final class Class8_Sub4_Sub1 extends Class8_Sub4 {
 						this.method1263(null, local291, local76, local340, arg5, arg9, arg0, arg7, arg4, arg3, arg1, local245.anInt4052, arg2, arg6);
 					}
 					if (local245.anInt4058 == 10 && local245.anInt4057 >= 0 && Static159.aClass8_Sub4_Sub1Array1.length > local245.anInt4057) {
-						@Pc(395) Class8_Sub4_Sub1 local395 = Static159.aClass8_Sub4_Sub1Array1[local245.anInt4057];
+						@Pc(395) Player local395 = Static159.aClass8_Sub4_Sub1Array1[local245.anInt4057];
 						if (local395 != null) {
 							local291 = local395.anInt3412 / 32 - Static173.aClass8_Sub4_Sub1_2.anInt3412 / 32;
 							local302 = local395.anInt3421 / 32 - Static173.aClass8_Sub4_Sub1_2.anInt3421 / 32;

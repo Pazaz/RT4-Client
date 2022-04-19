@@ -32,7 +32,7 @@ public final class Static84 {
 	public static int anInt2256 = 0;
 
 	@OriginalMember(owner = "client!gk", name = "a", descriptor = "(IIBLclient!e;)V")
-	public static void method1768(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) Class8_Sub4_Sub1 arg2) {
+	public static void method1768(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) Player arg2) {
 		@Pc(13) int local13;
 		@Pc(17) int local17;
 		@Pc(24) int local24;

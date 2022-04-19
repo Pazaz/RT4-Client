@@ -42,7 +42,7 @@ public final class Class3_Sub12 extends Node {
 	public int anInt2041;
 
 	@OriginalMember(owner = "client!fl", name = "M", descriptor = "Lclient!e;")
-	public Class8_Sub4_Sub1 aClass8_Sub4_Sub1_1;
+	public Player aClass8_Sub4_Sub1_1;
 
 	@OriginalMember(owner = "client!fl", name = "N", descriptor = "I")
 	public int anInt2042;
