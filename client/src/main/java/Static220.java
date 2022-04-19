@@ -51,10 +51,10 @@ public final class Static220 {
 			return;
 		}
 		local9.method2283(local30);
-		@Pc(89) Class8_Sub7 local89 = null;
-		@Pc(91) Class8_Sub7 local91 = null;
+		@Pc(89) ObjStack local89 = null;
+		@Pc(91) ObjStack local91 = null;
 		for (local35 = (Class3_Sub2_Sub16) local9.method2289(); local35 != null; local35 = (Class3_Sub2_Sub16) local9.method2288()) {
-			@Pc(103) Class8_Sub7 local103 = local35.aClass8_Sub7_1;
+			@Pc(103) ObjStack local103 = local35.aClass8_Sub7_1;
 			if (local103.anInt5555 != local30.aClass8_Sub7_1.anInt5555) {
 				if (local89 == null) {
 					local89 = local103;

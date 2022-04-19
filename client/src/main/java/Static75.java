@@ -206,7 +206,7 @@ public final class Static75 {
 			local19 = (local23 >> 4 & 0x7) + Static115.anInt2940;
 			local31 = Static57.aClass3_Sub15_Sub1_3.method2184();
 			if (local19 >= 0 && local27 >= 0 && local19 < 104 && local27 < 104) {
-				@Pc(122) Class8_Sub7 local122 = new Class8_Sub7();
+				@Pc(122) ObjStack local122 = new ObjStack();
 				local122.anInt5550 = local31;
 				local122.anInt5555 = local15;
 				if (Static159.aClass69ArrayArrayArray1[Static55.anInt1735][local19][local27] == null) {
@@ -319,7 +319,7 @@ public final class Static75 {
 						@Pc(710) LinkedList local710 = Static159.aClass69ArrayArrayArray1[Static55.anInt1735][local23][local19];
 						if (local710 != null) {
 							for (@Pc(718) Class3_Sub2_Sub16 local718 = (Class3_Sub2_Sub16) local710.method2289(); local718 != null; local718 = (Class3_Sub2_Sub16) local710.method2288()) {
-								@Pc(723) Class8_Sub7 local723 = local718.aClass8_Sub7_1;
+								@Pc(723) ObjStack local723 = local718.aClass8_Sub7_1;
 								if ((local27 & 0x7FFF) == local723.anInt5555 && local31 == local723.anInt5550) {
 									local723.anInt5550 = local39;
 									break;
@@ -336,7 +336,7 @@ public final class Static75 {
 					local31 = Static57.aClass3_Sub15_Sub1_3.method2192();
 					local39 = Static57.aClass3_Sub15_Sub1_3.method2192();
 					if (local19 >= 0 && local27 >= 0 && local19 < 104 && local27 < 104 && Static16.anInt549 != local15) {
-						@Pc(812) Class8_Sub7 local812 = new Class8_Sub7();
+						@Pc(812) ObjStack local812 = new ObjStack();
 						local812.anInt5550 = local31;
 						local812.anInt5555 = local39;
 						if (Static159.aClass69ArrayArrayArray1[Static55.anInt1735][local19][local27] == null) {
