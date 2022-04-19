@@ -17,7 +17,7 @@ public final class Static173 {
 	public static Class8_Sub4_Sub1 aClass8_Sub4_Sub1_2;
 
 	@OriginalMember(owner = "client!nk", name = "n", descriptor = "[Lclient!sl;")
-	public static final Class138[] aClass138Array1 = new Class138[50];
+	public static final SynthSound[] aClass138Array1 = new SynthSound[50];
 
 	@OriginalMember(owner = "client!nk", name = "o", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_792 = Static28.method790("Titelbild ge-Offnet)3");

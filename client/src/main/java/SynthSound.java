@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!sl")
-public final class Class138 {
+public final class SynthSound {
 
 	@OriginalMember(owner = "client!sl", name = "b", descriptor = "[Lclient!pj;")
 	private final SynthInstrument[] aClass123Array1 = new SynthInstrument[10];
@@ -16,7 +16,7 @@ public final class Class138 {
 	private int anInt5206;
 
 	@OriginalMember(owner = "client!sl", name = "<init>", descriptor = "(Lclient!wa;)V")
-	public Class138(@OriginalArg(0) Buffer arg0) {
+	public SynthSound(@OriginalArg(0) Buffer arg0) {
 		for (@Pc(7) int local7 = 0; local7 < 10; local7++) {
 			@Pc(14) int local14 = arg0.method2229();
 			if (local14 != 0) {

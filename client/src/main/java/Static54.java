@@ -277,7 +277,7 @@ public final class Static54 {
 		for (@Pc(5) int local5 = 0; local5 < Static189.anInt4451; local5++) {
 			@Pc(12) int local12 = Static164.anIntArray362[local5]--;
 			if (Static164.anIntArray362[local5] >= -10) {
-				@Pc(79) Class138 local79 = Static173.aClass138Array1[local5];
+				@Pc(79) SynthSound local79 = Static173.aClass138Array1[local5];
 				if (local79 == null) {
 					local79 = Static292.method3988(Static248.aClass153_75, Static200.anIntArray421[local5], 0);
 					if (local79 == null) {
