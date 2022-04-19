@@ -38,12 +38,12 @@ public final class Static16 {
 		if (!Static239.aBoolean269 || Static231.aBoolean252) {
 			return;
 		}
-		@Pc(14) Class3_Sub5[][][] local14 = Static130.aClass3_Sub5ArrayArrayArray1;
+		@Pc(14) Tile[][][] local14 = Static130.aClass3_Sub5ArrayArrayArray1;
 		for (@Pc(22) int local22 = 0; local22 < local14.length; local22++) {
-			@Pc(30) Class3_Sub5[][] local30 = local14[local22];
+			@Pc(30) Tile[][] local30 = local14[local22];
 			for (@Pc(32) int local32 = 0; local32 < local30.length; local32++) {
 				for (@Pc(42) int local42 = 0; local42 < local30[local32].length; local42++) {
-					@Pc(54) Class3_Sub5 local54 = local30[local32][local42];
+					@Pc(54) Tile local54 = local30[local32][local42];
 					if (local54 != null) {
 						@Pc(71) Class8_Sub1_Sub1 local71;
 						if (local54.aClass15_1 != null && local54.aClass15_1.aClass8_1 instanceof Class8_Sub1_Sub1) {

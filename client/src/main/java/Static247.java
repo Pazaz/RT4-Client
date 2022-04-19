@@ -35,21 +35,21 @@ public final class Static247 {
 	}
 
 	@OriginalMember(owner = "client!ub", name = "a", descriptor = "(Lclient!bj;Z)V")
-	public static void method4245(@OriginalArg(0) Class3_Sub5 arg0, @OriginalArg(1) boolean arg1) {
+	public static void method4245(@OriginalArg(0) Tile arg0, @OriginalArg(1) boolean arg1) {
 		Static7.aClass69_32.method2282(arg0);
 		while (true) {
-			@Pc(8) Class3_Sub5 local8;
+			@Pc(8) Tile local8;
 			@Pc(18) int local18;
 			@Pc(21) int local21;
 			@Pc(24) int local24;
 			@Pc(27) int local27;
-			@Pc(31) Class3_Sub5[][] local31;
+			@Pc(31) Tile[][] local31;
 			@Pc(65) int local65;
 			@Pc(115) int local115;
 			@Pc(894) int local894;
 			@Pc(899) int local899;
 			@Pc(904) int local904;
-			@Pc(153) Class3_Sub5 local153;
+			@Pc(153) Tile local153;
 			@Pc(1332) int local1332;
 			do {
 				do {
@@ -65,10 +65,10 @@ public final class Static247 {
 										@Pc(363) Class77 var22;
 										@Pc(469) boolean var24;
 										@Pc(425) Class31 var25;
-										@Pc(1179) Class3_Sub5 var32;
+										@Pc(1179) Tile var32;
 										while (true) {
 											do {
-												local8 = (Class3_Sub5) Static7.aClass69_32.method2287();
+												local8 = (Tile) Static7.aClass69_32.method2287();
 												if (local8 == null) {
 													return;
 												}
@@ -525,7 +525,7 @@ public final class Static247 {
 												}
 												for (local894 = local1697.anInt1701; local894 <= local1697.anInt1713; local894++) {
 													for (local899 = local1697.anInt1696; local899 <= local1697.anInt1698; local899++) {
-														@Pc(1863) Class3_Sub5 local1863 = local31[local894][local899];
+														@Pc(1863) Tile local1863 = local31[local894][local899];
 														if (local1863.anInt663 != 0) {
 															Static7.aClass69_32.method2282(local1863);
 														} else if ((local894 != local18 || local899 != local21) && local1863.aBoolean46) {
@@ -633,7 +633,7 @@ public final class Static247 {
 					}
 				}
 			}
-			@Pc(2388) Class3_Sub5 local2388;
+			@Pc(2388) Tile local2388;
 			if (local24 < Static126.anInt3114 - 1) {
 				local2388 = Static130.aClass3_Sub5ArrayArrayArray1[local24 + 1][local18][local21];
 				if (local2388 != null && local2388.aBoolean46) {

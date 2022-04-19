@@ -123,7 +123,7 @@ public final class Static220 {
 		for (@Pc(1) int local1 = 0; local1 < Static126.anInt3114; local1++) {
 			for (@Pc(6) int local6 = 0; local6 < Static152.anInt3594; local6++) {
 				for (@Pc(11) int local11 = 0; local11 < Static99.anInt2550; local11++) {
-					@Pc(22) Class3_Sub5 local22 = Static130.aClass3_Sub5ArrayArrayArray1[local1][local6][local11];
+					@Pc(22) Tile local22 = Static130.aClass3_Sub5ArrayArrayArray1[local1][local6][local11];
 					if (local22 != null) {
 						@Pc(27) Class77 local27 = local22.aClass77_1;
 						if (local27 != null && local27.aClass8_5.method4543()) {

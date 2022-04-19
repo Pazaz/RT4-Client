@@ -207,7 +207,7 @@ public final class Class3_Sub14 extends Node {
 	}
 
 	@OriginalMember(owner = "client!hg", name = "a", descriptor = "([[[Lclient!bj;FZ)V")
-	public final void method1944(@OriginalArg(0) Class3_Sub5[][][] arg0, @OriginalArg(1) float arg1, @OriginalArg(2) boolean arg2) {
+	public final void method1944(@OriginalArg(0) Tile[][][] arg0, @OriginalArg(1) float arg1, @OriginalArg(2) boolean arg2) {
 		if (Static95.aClass3_Sub15_3 == null || Static95.aClass3_Sub15_3.aByteArray40.length < this.anInt2488 * 4) {
 			Static95.aClass3_Sub15_3 = new Buffer(this.anInt2488 * 4);
 		} else {
@@ -219,7 +219,7 @@ public final class Class3_Sub14 extends Node {
 			Static95.aClass3_Sub15_2.anInt2792 = 0;
 		}
 		@Pc(47) int local47;
-		@Pc(68) Class3_Sub5 local68;
+		@Pc(68) Tile local68;
 		@Pc(111) Buffer local111;
 		@Pc(78) int[] local78;
 		@Pc(86) int[] local86;

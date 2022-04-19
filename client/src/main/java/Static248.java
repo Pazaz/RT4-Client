@@ -46,10 +46,10 @@ public final class Static248 {
 		@Pc(37) int local37;
 		@Pc(183) int local183;
 		for (@Pc(23) int local23 = Static235.anInt5276; local23 < Static126.anInt3114; local23++) {
-			@Pc(30) Class3_Sub5[][] local30 = Static130.aClass3_Sub5ArrayArrayArray1[local23];
+			@Pc(30) Tile[][] local30 = Static130.aClass3_Sub5ArrayArrayArray1[local23];
 			for (local32 = Static31.anInt987; local32 < Static2.anInt15; local32++) {
 				for (local37 = Static80.anInt4698; local37 < Static215.anInt4866; local37++) {
-					@Pc(46) Class3_Sub5 local46 = local30[local32][local37];
+					@Pc(46) Tile local46 = local30[local32][local37];
 					if (local46 != null) {
 						if (Static48.aBooleanArrayArray1[local32 + Static277.anInt5855 - Static167.anInt4069][local37 + Static277.anInt5855 - Static193.anInt4539] && (arg3 == null || local23 < arg4 || arg3[local23][local32][local37] != arg5)) {
 							local46.aBoolean45 = true;
@@ -144,9 +144,9 @@ public final class Static248 {
 		}
 		@Pc(434) int local434;
 		@Pc(438) int local438;
-		@Pc(450) Class3_Sub5 local450;
+		@Pc(450) Tile local450;
 		@Pc(399) int local399;
-		@Pc(406) Class3_Sub5[][] local406;
+		@Pc(406) Tile[][] local406;
 		@Pc(415) int local415;
 		@Pc(428) int local428;
 		for (local399 = Static235.anInt5276; local399 < Static126.anInt3114; local399++) {

@@ -35,7 +35,7 @@ public final class Static264 {
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "(Lclient!th;III)V")
 	public static void method3574(@OriginalArg(0) Class8 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		@Pc(12) Class3_Sub5 local12;
+		@Pc(12) Tile local12;
 		if (arg2 < Static152.anInt3594) {
 			local12 = Static130.aClass3_Sub5ArrayArrayArray1[arg1][arg2 + 1][arg3];
 			if (local12 != null && local12.aClass15_1 != null && local12.aClass15_1.aClass8_1.method4543()) {

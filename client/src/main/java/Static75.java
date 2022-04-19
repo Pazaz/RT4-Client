@@ -169,7 +169,7 @@ public final class Static75 {
 
 	@OriginalMember(owner = "client!g", name = "a", descriptor = "(III)Lclient!df;")
 	public static Class24 method1633(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		@Pc(7) Class3_Sub5 local7 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
+		@Pc(7) Tile local7 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
 		if (local7 == null) {
 			return null;
 		} else {

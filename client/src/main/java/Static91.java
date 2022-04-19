@@ -133,7 +133,7 @@ public final class Static91 {
 		local6.anInt1392 = arg9;
 		for (@Pc(46) int local46 = arg0; local46 >= 0; local46--) {
 			if (Static130.aClass3_Sub5ArrayArrayArray1[local46][arg1][arg2] == null) {
-				Static130.aClass3_Sub5ArrayArrayArray1[local46][arg1][arg2] = new Class3_Sub5(local46, arg1, arg2);
+				Static130.aClass3_Sub5ArrayArrayArray1[local46][arg1][arg2] = new Tile(local46, arg1, arg2);
 			}
 		}
 		Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2].aClass24_1 = local6;
