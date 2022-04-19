@@ -43,7 +43,7 @@ public final class EnumType extends SecondaryNode {
 				if (arg0 == 5) {
 					local70 = new StringNode(arg1.method2202());
 				} else {
-					local70 = new Class3_Sub21(arg1.method2174());
+					local70 = new IntNode(arg1.method2174());
 				}
 				this.aClass133_16.method3862(local70, (long) local58);
 			}
@@ -90,7 +90,7 @@ public final class EnumType extends SecondaryNode {
 		if (this.aClass133_16 == null) {
 			return this.anInt3960;
 		} else {
-			@Pc(18) Class3_Sub21 local18 = (Class3_Sub21) this.aClass133_16.method3863((long) arg0);
+			@Pc(18) IntNode local18 = (IntNode) this.aClass133_16.method3863((long) arg0);
 			return local18 == null ? this.anInt3960 : local18.anInt3141;
 		}
 	}
@@ -103,15 +103,15 @@ public final class EnumType extends SecondaryNode {
 		if (this.aClass133_17 == null) {
 			this.method3091();
 		}
-		@Pc(34) Class3_Sub21 local34 = (Class3_Sub21) this.aClass133_17.method3863((long) arg0);
+		@Pc(34) IntNode local34 = (IntNode) this.aClass133_17.method3863((long) arg0);
 		return local34 != null;
 	}
 
 	@OriginalMember(owner = "client!ml", name = "e", descriptor = "(I)V")
 	private void method3091() {
 		this.aClass133_17 = new HashTable(this.aClass133_16.method3868());
-		for (@Pc(24) Class3_Sub21 local24 = (Class3_Sub21) this.aClass133_16.method3859(); local24 != null; local24 = (Class3_Sub21) this.aClass133_16.method3861()) {
-			@Pc(34) Class3_Sub21 local34 = new Class3_Sub21((int) local24.aLong192);
+		for (@Pc(24) IntNode local24 = (IntNode) this.aClass133_16.method3859(); local24 != null; local24 = (IntNode) this.aClass133_16.method3861()) {
+			@Pc(34) IntNode local34 = new IntNode((int) local24.aLong192);
 			this.aClass133_17.method3862(local34, (long) local24.anInt3141);
 		}
 	}

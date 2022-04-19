@@ -38,7 +38,7 @@ public final class Static63 {
 	@OriginalMember(owner = "client!fa", name = "a", descriptor = "(III)V")
 	public static synchronized void method1485(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		if (arg2 == anInt1943) {
-			@Pc(8) Class3_Sub21 local8 = new Class3_Sub21(arg1);
+			@Pc(8) IntNode local8 = new IntNode(arg1);
 			local8.aLong192 = arg0;
 			aClass69_50.method2282(local8);
 		}
@@ -47,7 +47,7 @@ public final class Static63 {
 	@OriginalMember(owner = "client!fa", name = "a", descriptor = "(II)V")
 	public static synchronized void method1486(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		if (arg1 == anInt1943) {
-			@Pc(7) Class3_Sub21 local7 = new Class3_Sub21();
+			@Pc(7) IntNode local7 = new IntNode();
 			local7.aLong192 = arg0;
 			aClass69_51.method2282(local7);
 		}
@@ -68,7 +68,7 @@ public final class Static63 {
 	@OriginalMember(owner = "client!fa", name = "b", descriptor = "(III)V")
 	public static synchronized void method1489(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		if (arg2 == anInt1943) {
-			@Pc(8) Class3_Sub21 local8 = new Class3_Sub21(arg1);
+			@Pc(8) IntNode local8 = new IntNode(arg1);
 			local8.aLong192 = arg0;
 			aClass69_48.method2282(local8);
 		}
@@ -79,23 +79,23 @@ public final class Static63 {
 		@Pc(1) GL local1 = Static239.aGL1;
 		@Pc(3) int local3 = 0;
 		while (true) {
-			@Pc(8) Class3_Sub21 local8 = (Class3_Sub21) aClass69_48.method2287();
+			@Pc(8) IntNode local8 = (IntNode) aClass69_48.method2287();
 			if (local8 == null) {
 				if (local3 > 0) {
 					local1.glDeleteBuffersARB(local3, anIntArray151, 0);
 					local3 = 0;
 				}
 				while (true) {
-					local8 = (Class3_Sub21) aClass69_49.method2287();
+					local8 = (IntNode) aClass69_49.method2287();
 					if (local8 == null) {
 						while (true) {
-							local8 = (Class3_Sub21) aClass69_50.method2287();
+							local8 = (IntNode) aClass69_50.method2287();
 							if (local8 == null) {
 								if (local3 > 0) {
 									local1.glDeleteTextures(local3, anIntArray151, 0);
 								}
 								while (true) {
-									local8 = (Class3_Sub21) aClass69_51.method2287();
+									local8 = (IntNode) aClass69_51.method2287();
 									if (local8 == null) {
 										if (anInt1945 + anInt1944 + anInt1942 > 100663296 && MonotonicClock.method5096() > aLong71 + 60000L) {
 											System.gc();
@@ -135,7 +135,7 @@ public final class Static63 {
 	@OriginalMember(owner = "client!fa", name = "c", descriptor = "(III)V")
 	public static synchronized void method1491(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		if (arg2 == anInt1943) {
-			@Pc(8) Class3_Sub21 local8 = new Class3_Sub21(arg1);
+			@Pc(8) IntNode local8 = new IntNode(arg1);
 			local8.aLong192 = arg0;
 			aClass69_49.method2282(local8);
 		}

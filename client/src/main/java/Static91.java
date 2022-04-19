@@ -58,7 +58,7 @@ public final class Static91 {
 				while (local114-- > 0) {
 					@Pc(136) int local136 = local42.method2174();
 					@Pc(140) int local140 = local42.method2174();
-					local121.method3862(new Class3_Sub21(local140), (long) local136);
+					local121.method3862(new IntNode(local140), (long) local136);
 				}
 			}
 		}
