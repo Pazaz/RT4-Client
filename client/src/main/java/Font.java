@@ -17,7 +17,7 @@ public abstract class Font extends SecondaryNode {
 	private int[] anIntArray348;
 
 	@OriginalMember(owner = "client!rk", name = "nb", descriptor = "[Lclient!ok;")
-	private Class36[] aClass36Array11;
+	private IndexedSprite[] aClass36Array11;
 
 	@OriginalMember(owner = "client!rk", name = "ab", descriptor = "I")
 	public int anInt3626 = 0;
@@ -105,7 +105,7 @@ public abstract class Font extends SecondaryNode {
 							if (local42.method3138(Static218.aClass100_715)) {
 								try {
 									local120 = local42.method3136(4).method3132();
-									@Pc(125) Class36 local125 = this.aClass36Array11[local120];
+									@Pc(125) IndexedSprite local125 = this.aClass36Array11[local120];
 									@Pc(136) int local136 = this.anIntArray346 == null ? local125.anInt4276 : this.anIntArray346[local120];
 									if (Static218.anInt3631 == 256) {
 										local125.method3336(arg1, local4 + this.anInt3626 - local136);
@@ -592,7 +592,7 @@ public abstract class Font extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "a", descriptor = "([Lclient!ok;[I)V")
-	public final void method2873(@OriginalArg(0) Class36[] arg0, @OriginalArg(1) int[] arg1) {
+	public final void method2873(@OriginalArg(0) IndexedSprite[] arg0, @OriginalArg(1) int[] arg1) {
 		if (arg1 != null && arg1.length != arg0.length) {
 			throw new IllegalArgumentException();
 		}
@@ -786,7 +786,7 @@ public abstract class Font extends SecondaryNode {
 									}
 									local10++;
 									local141 = local44.method3136(4).method3132();
-									@Pc(146) Class36 local146 = this.aClass36Array11[local141];
+									@Pc(146) IndexedSprite local146 = this.aClass36Array11[local141];
 									@Pc(157) int local157 = this.anIntArray346 == null ? local146.anInt4276 : this.anIntArray346[local141];
 									if (Static218.anInt3631 == 256) {
 										local146.method3336(arg1 + local121, local4 + this.anInt3626 - local157 + local130);

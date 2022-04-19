@@ -8,7 +8,7 @@ public final class Static243 {
 	public static Js5 aClass153_97;
 
 	@OriginalMember(owner = "client!tk", name = "o", descriptor = "Lclient!ok;")
-	public static Class36 aClass36_1;
+	public static IndexedSprite aClass36_1;
 
 	@OriginalMember(owner = "client!tk", name = "s", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_98;

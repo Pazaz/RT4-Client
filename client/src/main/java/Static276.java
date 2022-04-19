@@ -81,8 +81,8 @@ public final class Static276 {
 	}
 
 	@OriginalMember(owner = "client!wh", name = "b", descriptor = "(B)Lclient!ok;")
-	public static Class36 method4614() {
-		@Pc(27) Class36 local27;
+	public static IndexedSprite method4614() {
+		@Pc(27) IndexedSprite local27;
 		if (Static239.aBoolean269) {
 			local27 = new Class36_Sub2(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[0], Static269.anIntArray252[0], Static254.anIntArray488[0], Static26.anIntArray66[0], Static7.aByteArrayArray5[0], Static259.anIntArray513);
 		} else {

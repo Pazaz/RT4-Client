@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static159 {
 
 	@OriginalMember(owner = "client!mi", name = "T", descriptor = "[Lclient!ok;")
-	public static Class36[] aClass36Array12;
+	public static IndexedSprite[] aClass36Array12;
 
 	@OriginalMember(owner = "client!mi", name = "W", descriptor = "[Z")
 	public static boolean[] aBooleanArray87;
