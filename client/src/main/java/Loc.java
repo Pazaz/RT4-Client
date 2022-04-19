@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!dc")
-public final class Class8_Sub3 extends Entity {
+public final class Loc extends Entity {
 
 	@OriginalMember(owner = "client!dc", name = "U", descriptor = "Lclient!ga;")
 	private ParticleSystem aClass47_Sub1_2;
@@ -70,7 +70,7 @@ public final class Class8_Sub3 extends Entity {
 	private int anInt1320;
 
 	@OriginalMember(owner = "client!dc", name = "<init>", descriptor = "(IIIIIIIZLclient!th;)V")
-	public Class8_Sub3(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) boolean arg7, @OriginalArg(8) Entity arg8) {
+	public Loc(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) boolean arg7, @OriginalArg(8) Entity arg8) {
 		this.anInt1303 = arg3;
 		this.anInt1295 = arg2;
 		this.anInt1308 = arg4;
@@ -79,8 +79,8 @@ public final class Class8_Sub3 extends Entity {
 		this.anInt1300 = arg5;
 		@Pc(67) Class118 local67;
 		if (Static239.aBoolean269 && arg8 != null) {
-			if (arg8 instanceof Class8_Sub3) {
-				((Class8_Sub3) arg8).method1046();
+			if (arg8 instanceof Loc) {
+				((Loc) arg8).method1046();
 			} else {
 				local67 = Static271.method4601(this.anInt1299);
 				if (local67.anIntArray380 != null) {
@@ -101,8 +101,8 @@ public final class Class8_Sub3 extends Entity {
 			}
 			this.anInt1317 = 1;
 			this.anInt1320 = Static83.anInt372 - 1;
-			if (this.aClass144_2.anInt5347 == 0 && arg8 != null && arg8 instanceof Class8_Sub3) {
-				@Pc(142) Class8_Sub3 local142 = (Class8_Sub3) arg8;
+			if (this.aClass144_2.anInt5347 == 0 && arg8 != null && arg8 instanceof Loc) {
+				@Pc(142) Loc local142 = (Loc) arg8;
 				if (this.aClass144_2 == local142.aClass144_2) {
 					this.anInt1297 = local142.anInt1297;
 					this.anInt1320 = local142.anInt1320;
