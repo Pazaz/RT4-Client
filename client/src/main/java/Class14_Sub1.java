@@ -350,7 +350,7 @@ public final class Class14_Sub1 extends Class14 {
 		}
 		@Pc(161) byte[] local161 = local13.method3554();
 		@Pc(199) int local199;
-		@Pc(252) Class3_Sub2_Sub5_Sub2 local252;
+		@Pc(252) Js5NetRequest local252;
 		if (!(local13 instanceof Class3_Sub2_Sub5_Sub1)) {
 			try {
 				if (local161 == null || local161.length <= 2) {

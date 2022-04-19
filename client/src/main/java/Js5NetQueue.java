@@ -17,7 +17,7 @@ public final class Js5NetQueue {
 	private int anInt2962;
 
 	@OriginalMember(owner = "client!jb", name = "J", descriptor = "Lclient!pm;")
-	private Class3_Sub2_Sub5_Sub2 aClass3_Sub2_Sub5_Sub2_2;
+	private Js5NetRequest aClass3_Sub2_Sub5_Sub2_2;
 
 	@OriginalMember(owner = "client!jb", name = "a", descriptor = "Lclient!ce;")
 	private final SecondaryLinkedList aClass16_2 = new SecondaryLinkedList();
@@ -75,15 +75,15 @@ public final class Js5NetQueue {
 		}
 		try {
 			this.aClass95_1.method2832();
-			@Pc(75) Class3_Sub2_Sub5_Sub2 local75;
-			for (local75 = (Class3_Sub2_Sub5_Sub2) this.aClass16_2.method795(); local75 != null; local75 = (Class3_Sub2_Sub5_Sub2) this.aClass16_2.method797()) {
+			@Pc(75) Js5NetRequest local75;
+			for (local75 = (Js5NetRequest) this.aClass16_2.method795(); local75 != null; local75 = (Js5NetRequest) this.aClass16_2.method797()) {
 				this.aClass3_Sub15_4.anInt2792 = 0;
 				this.aClass3_Sub15_4.method2178(1);
 				this.aClass3_Sub15_4.method2205((int) local75.aLong185);
 				this.aClass95_1.method2830(this.aClass3_Sub15_4.aByteArray40, 4);
 				this.aClass16_3.method798(local75);
 			}
-			for (local75 = (Class3_Sub2_Sub5_Sub2) this.aClass16_4.method795(); local75 != null; local75 = (Class3_Sub2_Sub5_Sub2) this.aClass16_4.method797()) {
+			for (local75 = (Js5NetRequest) this.aClass16_4.method795(); local75 != null; local75 = (Js5NetRequest) this.aClass16_4.method797()) {
 				this.aClass3_Sub15_4.anInt2792 = 0;
 				this.aClass3_Sub15_4.method2178(0);
 				this.aClass3_Sub15_4.method2205((int) local75.aLong185);
@@ -154,12 +154,12 @@ public final class Js5NetQueue {
 							@Pc(480) int local480 = local471 & 0x7F;
 							@Pc(491) boolean local491 = (local471 & 0x80) != 0;
 							@Pc(501) long local501 = (long) ((local235 << 16) + local283);
-							@Pc(509) Class3_Sub2_Sub5_Sub2 local509;
+							@Pc(509) Js5NetRequest local509;
 							if (local491) {
-								for (local509 = (Class3_Sub2_Sub5_Sub2) this.aClass16_5.method795(); local509 != null && local509.aLong185 != local501; local509 = (Class3_Sub2_Sub5_Sub2) this.aClass16_5.method797()) {
+								for (local509 = (Js5NetRequest) this.aClass16_5.method795(); local509 != null && local509.aLong185 != local501; local509 = (Js5NetRequest) this.aClass16_5.method797()) {
 								}
 							} else {
-								for (local509 = (Class3_Sub2_Sub5_Sub2) this.aClass16_3.method795(); local509 != null && local501 != local509.aLong185; local509 = (Class3_Sub2_Sub5_Sub2) this.aClass16_3.method797()) {
+								for (local509 = (Js5NetRequest) this.aClass16_3.method795(); local509 != null && local501 != local509.aLong185; local509 = (Js5NetRequest) this.aClass16_3.method797()) {
 								}
 							}
 							if (local509 == null) {
@@ -265,10 +265,10 @@ public final class Js5NetQueue {
 		this.aClass3_Sub15_5.anInt2792 = 0;
 		this.aClass3_Sub2_Sub5_Sub2_2 = null;
 		while (true) {
-			@Pc(44) Class3_Sub2_Sub5_Sub2 local44 = (Class3_Sub2_Sub5_Sub2) this.aClass16_3.method796();
+			@Pc(44) Js5NetRequest local44 = (Js5NetRequest) this.aClass16_3.method796();
 			if (local44 == null) {
 				while (true) {
-					local44 = (Class3_Sub2_Sub5_Sub2) this.aClass16_5.method796();
+					local44 = (Js5NetRequest) this.aClass16_5.method796();
 					if (local44 == null) {
 						if (this.aByte8 != 0) {
 							try {
@@ -328,8 +328,8 @@ public final class Js5NetQueue {
 	}
 
 	@OriginalMember(owner = "client!jb", name = "a", descriptor = "(IIBIZ)Lclient!pm;")
-	public final Class3_Sub2_Sub5_Sub2 method2330(@OriginalArg(1) int arg0, @OriginalArg(2) byte arg1, @OriginalArg(3) int arg2, @OriginalArg(4) boolean arg3) {
-		@Pc(7) Class3_Sub2_Sub5_Sub2 local7 = new Class3_Sub2_Sub5_Sub2();
+	public final Js5NetRequest method2330(@OriginalArg(1) int arg0, @OriginalArg(2) byte arg1, @OriginalArg(3) int arg2, @OriginalArg(4) boolean arg3) {
+		@Pc(7) Js5NetRequest local7 = new Js5NetRequest();
 		@Pc(14) long local14 = (long) (arg2 + (arg0 << 16));
 		local7.aBoolean225 = arg3;
 		local7.aLong185 = local14;
