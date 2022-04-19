@@ -80,7 +80,7 @@ public final class Static131 {
 	}
 
 	@OriginalMember(owner = "client!kd", name = "a", descriptor = "([[F[[II[[FI[ILclient!fj;BLclient!gi;[[FI)V")
-	public static void method2578(@OriginalArg(0) float[][] arg0, @OriginalArg(1) int[][] arg1, @OriginalArg(2) int arg2, @OriginalArg(3) float[][] arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int[] arg5, @OriginalArg(6) Class45 arg6, @OriginalArg(8) Class51 arg7, @OriginalArg(9) float[][] arg8, @OriginalArg(10) int arg9) {
+	public static void method2578(@OriginalArg(0) float[][] arg0, @OriginalArg(1) int[][] arg1, @OriginalArg(2) int arg2, @OriginalArg(3) float[][] arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int[] arg5, @OriginalArg(6) Class45 arg6, @OriginalArg(8) Light arg7, @OriginalArg(9) float[][] arg8, @OriginalArg(10) int arg9) {
 		@Pc(7) int[] local7 = new int[arg5.length / 2];
 		for (@Pc(13) int local13 = 0; local13 < local7.length; local13++) {
 			@Pc(27) int local27 = arg5[local13 + local13];

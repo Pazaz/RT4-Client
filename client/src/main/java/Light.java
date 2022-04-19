@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!gi")
-public final class Class51 {
+public final class Light {
 
 	@OriginalMember(owner = "client!gi", name = "a", descriptor = "Z")
 	public final boolean aBoolean124;
@@ -67,7 +67,7 @@ public final class Class51 {
 	public final float[] aFloatArray3 = new float[4];
 
 	@OriginalMember(owner = "client!gi", name = "<init>", descriptor = "(Lclient!wa;)V")
-	public Class51(@OriginalArg(0) Buffer arg0) {
+	public Light(@OriginalArg(0) Buffer arg0) {
 		if (Static62.anIntArray150 == null) {
 			Static84.method1771();
 		}

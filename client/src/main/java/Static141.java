@@ -49,7 +49,7 @@ public final class Static141 {
 		Static171.aClass139_1 = new Class139();
 		((Js5GlTextureProvider) Static94.anInterface1_2).method3247();
 		Static120.anInt3034 = 0;
-		Static120.aClass51Array1 = new Class51[255];
+		Static120.aClass51Array1 = new Light[255];
 		Static237.method4120();
 		Static242.method4203();
 		Static115.method2315();
