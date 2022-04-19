@@ -389,7 +389,7 @@ public final class Class3_Sub18 extends Node {
 	}
 
 	@OriginalMember(owner = "client!jk", name = "a", descriptor = "(I[ILclient!le;[B)Z")
-	public final boolean method2436(@OriginalArg(1) int[] arg0, @OriginalArg(2) Class89 arg1, @OriginalArg(3) byte[] arg2) {
+	public final boolean method2436(@OriginalArg(1) int[] arg0, @OriginalArg(2) SoundBank arg1, @OriginalArg(3) byte[] arg2) {
 		@Pc(8) int local8 = 0;
 		@Pc(10) Class3_Sub16_Sub1 local10 = null;
 		@Pc(16) boolean local16 = true;

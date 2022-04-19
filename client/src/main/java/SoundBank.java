@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!le")
-public final class Class89 {
+public final class SoundBank {
 
 	@OriginalMember(owner = "client!le", name = "d", descriptor = "Lclient!sc;")
 	private final HashTable aClass133_11 = new HashTable(256);
@@ -19,7 +19,7 @@ public final class Class89 {
 	private final Js5 aClass153_53;
 
 	@OriginalMember(owner = "client!le", name = "<init>", descriptor = "(Lclient!ve;Lclient!ve;)V")
-	public Class89(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {
+	public SoundBank(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {
 		this.aClass153_52 = arg0;
 		this.aClass153_53 = arg1;
 	}
