@@ -14,7 +14,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!di")
-public final class Class27_Sub1 extends FrameBuffer implements ImageProducer, ImageObserver {
+public final class ImageProducerFrameBuffer extends FrameBuffer implements ImageProducer, ImageObserver {
 
 	@OriginalMember(owner = "client!di", name = "A", descriptor = "Ljava/awt/image/ImageConsumer;")
 	private ImageConsumer anImageConsumer1;
