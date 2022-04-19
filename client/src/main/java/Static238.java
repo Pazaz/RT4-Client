@@ -52,7 +52,7 @@ public final class Static238 {
 		Static2.anInterface4Array1[2] = new LiquidMaterialRenderer();
 		Static2.anInterface4Array1[3] = new UnderwaterMaterialRenderer();
 		Static2.anInterface4Array1[4] = new WaterMaterialRenderer();
-		Static2.anInterface4Array1[5] = new Class112();
+		Static2.anInterface4Array1[5] = new WaterfallMaterialRenderer();
 		Static2.anInterface4Array1[6] = new UnlitMaterialRenderer();
 	}
 }
