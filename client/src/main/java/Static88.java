@@ -3697,7 +3697,7 @@ public final class Static88 {
 														continue;
 													}
 													@Pc(10247) Class32 local10247;
-													@Pc(10191) Class10_Sub1 local10191;
+													@Pc(10191) World local10191;
 													if (local226 == 6501) {
 														local10191 = Static18.method556();
 														if (local10191 == null) {
@@ -3761,7 +3761,7 @@ public final class Static88 {
 													if (local226 == 6506) {
 														local28--;
 														local809 = Static254.anIntArray487[local28];
-														@Pc(10440) Class10_Sub1 local10440 = Static54.method1310(local809);
+														@Pc(10440) World local10440 = Static54.method1310(local809);
 														if (local10440 == null) {
 															Static254.anIntArray487[local28++] = -1;
 															Static3.aClass100Array176[local26++] = Static72.aClass100_447;
@@ -4154,7 +4154,7 @@ public final class Static88 {
 	}
 
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(I)Lclient!ba;")
-	public static Class10_Sub1 method1821() {
+	public static World method1821() {
 		return Static101.aClass10_Sub1Array1.length > Static51.anInt1682 ? Static101.aClass10_Sub1Array1[Static51.anInt1682++] : null;
 	}
 

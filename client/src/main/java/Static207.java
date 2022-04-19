@@ -165,10 +165,10 @@ public final class Static207 {
 			if (Static141.anInt3469 < Static116.anInt2961) {
 				return -1;
 			} else if (Static170.method2572(Static229.aByteArray70)) {
-				Static101.aClass10_Sub1Array1 = new Class10_Sub1[Static106.anInt2871];
+				Static101.aClass10_Sub1Array1 = new World[Static106.anInt2871];
 				local124 = 0;
 				for (@Pc(240) int local240 = Static19.anInt636; local240 <= Static171.anInt4157; local240++) {
-					@Pc(247) Class10_Sub1 local247 = Static54.method1310(local240);
+					@Pc(247) World local247 = Static54.method1310(local240);
 					if (local247 != null) {
 						Static101.aClass10_Sub1Array1[local124++] = local247;
 					}

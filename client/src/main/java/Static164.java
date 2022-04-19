@@ -160,7 +160,7 @@ public final class Static164 {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(Lclient!ba;Lclient!ba;IIIZZ)I")
-	public static int method3115(@OriginalArg(0) Class10_Sub1 arg0, @OriginalArg(1) Class10_Sub1 arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) boolean arg4, @OriginalArg(6) boolean arg5) {
+	public static int method3115(@OriginalArg(0) World arg0, @OriginalArg(1) World arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) boolean arg4, @OriginalArg(6) boolean arg5) {
 		@Pc(8) int local8 = Static270.method4595(arg1, arg3, arg0, arg5);
 		if (local8 != 0) {
 			return arg5 ? -local8 : local8;

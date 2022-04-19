@@ -268,7 +268,7 @@ public final class Static54 {
 	}
 
 	@OriginalMember(owner = "client!ed", name = "b", descriptor = "(II)Lclient!ba;")
-	public static Class10_Sub1 method1310(@OriginalArg(1) int arg0) {
+	public static World method1310(@OriginalArg(1) int arg0) {
 		return Static61.aBoolean109 && arg0 >= Static19.anInt636 && arg0 <= Static171.anInt4157 ? Static196.aClass10_Sub1Array2[arg0 - Static19.anInt636] : null;
 	}
 
