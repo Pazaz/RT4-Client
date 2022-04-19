@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!cj")
-public final class Class19 implements Runnable {
+public final class AudioThread implements Runnable {
 
 	@OriginalMember(owner = "client!cj", name = "m", descriptor = "Lsignlink!ll;")
 	public SignLink aClass213_1;
