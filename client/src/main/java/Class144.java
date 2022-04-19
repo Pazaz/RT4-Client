@@ -72,7 +72,7 @@ public final class Class144 {
 	}
 
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(IIILclient!ak;II)Lclient!ak;")
-	public final Class8_Sub1 method4214(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Class8_Sub1 arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
+	public final Model method4214(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Model arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
 		@Pc(10) int local10 = this.anIntArray474[arg0];
 		@Pc(15) int local15 = this.anIntArray473[arg0];
 		@Pc(23) Class3_Sub2_Sub7 local23 = Static72.method1566(local15 >> 16);
@@ -87,7 +87,7 @@ public final class Class144 {
 			local41 = Static72.method1566(local69 >> 16);
 			arg1 = local69 & 0xFFFF;
 		}
-		@Pc(124) Class8_Sub1 local124;
+		@Pc(124) Model local124;
 		if (local41 == null) {
 			local124 = arg2.method4568(!local23.method901(local27), !local23.method903(local27), !this.aBoolean278);
 		} else {
@@ -128,7 +128,7 @@ public final class Class144 {
 	}
 
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(Lclient!ak;BIII)Lclient!ak;")
-	public final Class8_Sub1 method4215(@OriginalArg(0) Class8_Sub1 arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
+	public final Model method4215(@OriginalArg(0) Model arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		@Pc(8) int local8 = this.anIntArray473[arg3];
 		@Pc(13) int local13 = this.anIntArray474[arg3];
 		@Pc(19) Class3_Sub2_Sub7 local19 = Static72.method1566(local8 >> 16);
@@ -176,7 +176,7 @@ public final class Class144 {
 			local163 &= !local81.method901(local85);
 			local172 &= !local81.method903(local85);
 		}
-		@Pc(258) Class8_Sub1 local258 = arg0.method4572(local163, local172, !this.aBoolean278);
+		@Pc(258) Model local258 = arg0.method4572(local163, local172, !this.aBoolean278);
 		local258.method4558(local19, local23, local34, arg1, arg2 - 1, local13, this.aBoolean278);
 		if (local71 != null) {
 			local258.method4558(local71, local83, local81, local85, arg2 - 1, local13, this.aBoolean278);
@@ -185,7 +185,7 @@ public final class Class144 {
 	}
 
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(IIIILclient!ak;I)Lclient!ak;")
-	public final Class8_Sub1 method4216(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Class8_Sub1 arg4) {
+	public final Model method4216(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Model arg4) {
 		@Pc(6) int local6 = this.anIntArray474[arg1];
 		@Pc(11) int local11 = this.anIntArray473[arg1];
 		@Pc(19) Class3_Sub2_Sub7 local19 = Static72.method1566(local11 >> 16);
@@ -200,7 +200,7 @@ public final class Class144 {
 			local42 = Static72.method1566(local66 >> 16);
 			arg0 = local66 & 0xFFFF;
 		}
-		@Pc(106) Class8_Sub1 local106;
+		@Pc(106) Model local106;
 		if (local42 == null) {
 			local106 = arg4.method4572(!local19.method901(local27), !local19.method903(local27), !this.aBoolean278);
 		} else {
@@ -260,7 +260,7 @@ public final class Class144 {
 	}
 
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(IIIBLclient!ak;)Lclient!ak;")
-	public final Class8_Sub1 method4219(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) Class8_Sub1 arg3) {
+	public final Model method4219(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) Model arg3) {
 		@Pc(16) int local16 = this.anIntArray474[arg2];
 		@Pc(21) int local21 = this.anIntArray473[arg2];
 		@Pc(27) Class3_Sub2_Sub7 local27 = Static72.method1566(local21 >> 16);
@@ -274,7 +274,7 @@ public final class Class144 {
 			local42 = Static72.method1566(local65 >> 16);
 			arg0 = local65 & 0xFFFF;
 		}
-		@Pc(103) Class8_Sub1 local103;
+		@Pc(103) Model local103;
 		if (local42 == null) {
 			local103 = arg3.method4560(!local27.method901(local31), !local27.method903(local31), !this.aBoolean278);
 		} else {

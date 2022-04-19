@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!td")
-public final class GlModel extends Class8_Sub1 {
+public final class GlModel extends Model {
 
 	@OriginalMember(owner = "client!td", name = "t", descriptor = "[S")
 	private short[] aShortArray75;
@@ -617,7 +617,7 @@ public final class GlModel extends Class8_Sub1 {
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(ZZZ)Lclient!ak;")
 	@Override
-	public final Class8_Sub1 method4560(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
+	public final Model method4560(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
 		return this.method4114(arg0, arg1, arg2, Static237.aClass8_Sub1_Sub1_4, Static237.aClass8_Sub1_Sub1_3);
 	}
 
@@ -902,7 +902,7 @@ public final class GlModel extends Class8_Sub1 {
 
 	@OriginalMember(owner = "client!td", name = "b", descriptor = "(ZZZ)Lclient!ak;")
 	@Override
-	public final Class8_Sub1 method4568(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
+	public final Model method4568(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
 		return this.method4114(arg0, arg1, arg2, Static237.aClass8_Sub1_Sub1_6, Static237.aClass8_Sub1_Sub1_5);
 	}
 
@@ -1655,7 +1655,7 @@ public final class GlModel extends Class8_Sub1 {
 
 	@OriginalMember(owner = "client!td", name = "c", descriptor = "(ZZZ)Lclient!ak;")
 	@Override
-	public final Class8_Sub1 method4572(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
+	public final Model method4572(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
 		return this.method4114(arg0, arg1, arg2, Static237.aClass8_Sub1_Sub1_2, Static237.aClass8_Sub1_Sub1_1);
 	}
 
@@ -2343,7 +2343,7 @@ public final class GlModel extends Class8_Sub1 {
 	}
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(ZZZLclient!td;Lclient!td;)Lclient!ak;")
-	private Class8_Sub1 method4114(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) GlModel arg3, @OriginalArg(4) GlModel arg4) {
+	private Model method4114(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) GlModel arg3, @OriginalArg(4) GlModel arg4) {
 		arg3.anInt5295 = this.anInt5295;
 		arg3.anInt5296 = this.anInt5296;
 		arg3.anInt5297 = this.anInt5297;

@@ -830,7 +830,7 @@ public final class Class13 {
 	}
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(ILclient!tk;IIIZLclient!hh;)Lclient!ak;")
-	public final Class8_Sub1 method488(@OriginalArg(0) int arg0, @OriginalArg(1) Class144 arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) boolean arg4, @OriginalArg(6) Class59 arg5) {
+	public final Model method488(@OriginalArg(0) int arg0, @OriginalArg(1) Class144 arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) boolean arg4, @OriginalArg(6) Class59 arg5) {
 		Static211.aBoolean72 = false;
 		@Pc(10) int local10;
 		@Pc(13) int local13;
@@ -846,9 +846,9 @@ public final class Class13 {
 		} else if (local10 == 1 && local13 == -1) {
 			return null;
 		} else {
-			@Pc(61) Class8_Sub1 local61;
+			@Pc(61) Model local61;
 			if (local10 == 1) {
-				local61 = (Class8_Sub1) Static124.aClass99_17.method3106((long) ((local10 << 16) + local13));
+				local61 = (Model) Static124.aClass99_17.method3106((long) ((local10 << 16) + local13));
 				if (local61 == null) {
 					@Pc(69) Class8_Sub5 local69 = Static77.method1686(Static203.aClass153_85, local13);
 					if (local69 == null) {
@@ -883,7 +883,7 @@ public final class Class13 {
 				}
 			} else if (local10 == 4) {
 				@Pc(164) Class55 local164 = Static71.method1439(local13);
-				@Pc(173) Class8_Sub1 local173 = local164.method1824(arg0, arg3, arg1, 10, arg2);
+				@Pc(173) Model local173 = local164.method1824(arg0, arg3, arg1, 10, arg2);
 				if (local173 == null) {
 					Static211.aBoolean72 = true;
 					return null;
@@ -906,7 +906,7 @@ public final class Class13 {
 				@Pc(227) int local227 = this.anInt463 >>> 16;
 				@Pc(232) int local232 = this.anInt463 & 0xFFFF;
 				@Pc(235) int local235 = this.anInt498;
-				@Pc(246) Class8_Sub1 local246 = arg5.method1946(arg0, local235, local227, arg3, arg1, arg2, local232);
+				@Pc(246) Model local246 = arg5.method1946(arg0, local235, local227, arg3, arg1, arg2, local232);
 				if (local246 == null) {
 					Static211.aBoolean72 = true;
 					return null;

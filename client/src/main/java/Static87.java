@@ -665,7 +665,7 @@ public final class Static87 {
 										@Pc(2611) Class55 local2611;
 										if (local30.anInt452 == 6) {
 											@Pc(2587) boolean local2587 = Static154.method2926(local30);
-											@Pc(2589) Class8_Sub1 local2589 = null;
+											@Pc(2589) Model local2589 = null;
 											if (local2587) {
 												local276 = local30.anInt462;
 											} else {

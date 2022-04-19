@@ -300,7 +300,7 @@ public final class Class55 {
 	}
 
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(IIILclient!tk;II)Lclient!ak;")
-	public final Class8_Sub1 method1824(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Class144 arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
+	public final Model method1824(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Class144 arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
 		if (this.anIntArray214 != null && arg3 > 1) {
 			@Pc(22) int local22 = -1;
 			for (@Pc(24) int local24 = 0; local24 < 10; local24++) {
@@ -312,7 +312,7 @@ public final class Class55 {
 				return Static71.method1439(local22).method1824(arg0, arg1, arg2, 1, arg4);
 			}
 		}
-		@Pc(76) Class8_Sub1 local76 = (Class8_Sub1) Static244.aClass99_32.method3106((long) this.anInt2354);
+		@Pc(76) Model local76 = (Model) Static244.aClass99_32.method3106((long) this.anInt2354);
 		if (local76 == null) {
 			@Pc(85) Class8_Sub5 local85 = Static77.method1686(Static230.aClass153_95, this.anInt2320);
 			if (local85 == null) {

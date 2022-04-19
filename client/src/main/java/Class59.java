@@ -31,9 +31,9 @@ public final class Class59 {
 	public boolean aBoolean141;
 
 	@OriginalMember(owner = "client!hh", name = "a", descriptor = "(IIIILclient!tk;III)Lclient!ak;")
-	public final Class8_Sub1 method1946(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Class144 arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6) {
+	public final Model method1946(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Class144 arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6) {
 		@Pc(24) long local24 = (long) arg2 | (long) (arg6 << 16) | (long) arg1 << 32;
-		@Pc(30) Class8_Sub1 local30 = (Class8_Sub1) Static139.aClass99_21.method3106(local24);
+		@Pc(30) Model local30 = (Model) Static139.aClass99_21.method3106(local24);
 		if (local30 == null) {
 			@Pc(36) Class8_Sub5[] local36 = new Class8_Sub5[3];
 			@Pc(38) int local38 = 0;
@@ -146,7 +146,7 @@ public final class Class59 {
 	}
 
 	@OriginalMember(owner = "client!hh", name = "a", descriptor = "([Lclient!ub;ILclient!tk;Lclient!tk;IIIIZII)Lclient!ak;")
-	public final Class8_Sub1 method1954(@OriginalArg(0) Class147[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Class144 arg2, @OriginalArg(3) Class144 arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(7) int arg6, @OriginalArg(9) int arg7, @OriginalArg(10) int arg8) {
+	public final Model method1954(@OriginalArg(0) Class147[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Class144 arg2, @OriginalArg(3) Class144 arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(7) int arg6, @OriginalArg(9) int arg7, @OriginalArg(10) int arg8) {
 		if (this.anInt2492 != -1) {
 			return Static214.method4363(this.anInt2492).method2937(arg0, arg5, arg8, arg1, arg6, arg7, arg2, arg4, arg3);
 		}
@@ -176,7 +176,7 @@ public final class Class59 {
 				}
 			}
 		}
-		@Pc(154) Class8_Sub1 local154 = (Class8_Sub1) Static250.aClass99_33.method3106(local41);
+		@Pc(154) Model local154 = (Model) Static250.aClass99_33.method3106(local41);
 		@Pc(158) boolean local158;
 		@Pc(353) int local353;
 		@Pc(360) int local360;
@@ -204,7 +204,7 @@ public final class Class59 {
 			}
 			if (local158) {
 				if (this.aLong87 != -1L) {
-					local154 = (Class8_Sub1) Static250.aClass99_33.method3106(this.aLong87);
+					local154 = (Model) Static250.aClass99_33.method3106(this.aLong87);
 				}
 				if (local154 == null) {
 					return null;
@@ -411,7 +411,7 @@ public final class Class59 {
 				}
 			}
 		}
-		@Pc(1284) Class8_Sub1 local1284 = local154.method4572(!local827, !local836, !local838);
+		@Pc(1284) Model local1284 = local154.method4572(!local827, !local836, !local838);
 		local481 = 0;
 		local598 = 1;
 		while (local481 < local346) {
@@ -437,11 +437,11 @@ public final class Class59 {
 	}
 
 	@OriginalMember(owner = "client!hh", name = "a", descriptor = "(IBLclient!tk;II)Lclient!ak;")
-	public final Class8_Sub1 method1956(@OriginalArg(0) int arg0, @OriginalArg(2) Class144 arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
+	public final Model method1956(@OriginalArg(0) int arg0, @OriginalArg(2) Class144 arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		if (this.anInt2492 != -1) {
 			return Static214.method4363(this.anInt2492).method2943(arg1, arg0, arg3, arg2);
 		}
-		@Pc(30) Class8_Sub1 local30 = (Class8_Sub1) Static139.aClass99_21.method3106(this.aLong88);
+		@Pc(30) Model local30 = (Model) Static139.aClass99_21.method3106(this.aLong88);
 		if (local30 == null) {
 			@Pc(42) boolean local42 = false;
 			@Pc(52) int local52;

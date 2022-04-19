@@ -347,7 +347,7 @@ public abstract class Class8_Sub4 extends Entity {
 	}
 
 	@OriginalMember(owner = "client!fe", name = "a", descriptor = "(BLclient!ak;I)V")
-	protected final void method2685(@OriginalArg(1) Class8_Sub1 arg0, @OriginalArg(2) int arg1) {
+	protected final void method2685(@OriginalArg(1) Model arg0, @OriginalArg(2) int arg1) {
 		Static102.anInt2680 = 0;
 		Static101.anInt2640 = 0;
 		Static62.anInt1938 = 0;
@@ -414,7 +414,7 @@ public abstract class Class8_Sub4 extends Entity {
 	}
 
 	@OriginalMember(owner = "client!fe", name = "a", descriptor = "(Lclient!ak;B)V")
-	protected final void method2687(@OriginalArg(0) Class8_Sub1 arg0) {
+	protected final void method2687(@OriginalArg(0) Model arg0) {
 		@Pc(16) Class20 local16 = this.method2681();
 		if (local16.anInt1064 == 0 && local16.anInt1041 == 0) {
 			return;

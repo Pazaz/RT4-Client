@@ -63,9 +63,9 @@ public final class Class8_Sub2 extends Entity {
 	}
 
 	@OriginalMember(owner = "client!bh", name = "b", descriptor = "(Z)Lclient!ak;")
-	private Class8_Sub1 method552() {
+	private Model method552() {
 		@Pc(8) Class34 local8 = Static34.method877(this.anInt596);
-		@Pc(26) Class8_Sub1 local26;
+		@Pc(26) Model local26;
 		if (this.aBoolean41) {
 			local26 = local8.method1319(-1, -1, 0);
 		} else {
@@ -83,7 +83,7 @@ public final class Class8_Sub2 extends Entity {
 	@OriginalMember(owner = "client!bh", name = "a", descriptor = "(IIIIIIIIJILclient!ga;)V")
 	@Override
 	public final void method4546(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) long arg8, @OriginalArg(9) int arg9, @OriginalArg(10) Class47_Sub1 arg10) {
-		@Pc(7) Class8_Sub1 local7 = this.method552();
+		@Pc(7) Model local7 = this.method552();
 		if (local7 != null) {
 			local7.method4546(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.aClass47_Sub1_1);
 			this.anInt603 = local7.method4549();
