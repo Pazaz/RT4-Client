@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ei")
-public final class Class3_Sub3_Sub2 extends Class3_Sub3 {
+public final class Class3_Sub3_Sub2 extends PcmStream {
 
 	@OriginalMember(owner = "client!ei", name = "t", descriptor = "Lclient!ih;")
 	private final Class69 aClass69_43 = new Class69();
@@ -31,7 +31,7 @@ public final class Class3_Sub3_Sub2 extends Class3_Sub3 {
 	}
 
 	@OriginalMember(owner = "client!ei", name = "a", descriptor = "(Lclient!qb;)V")
-	public final synchronized void method1343(@OriginalArg(0) Class3_Sub3 arg0) {
+	public final synchronized void method1343(@OriginalArg(0) PcmStream arg0) {
 		this.aClass69_43.method2283(arg0);
 	}
 
@@ -82,26 +82,26 @@ public final class Class3_Sub3_Sub2 extends Class3_Sub3 {
 
 	@OriginalMember(owner = "client!ei", name = "b", descriptor = "()Lclient!qb;")
 	@Override
-	public final Class3_Sub3 method4406() {
-		return (Class3_Sub3) this.aClass69_43.method2289();
+	public final PcmStream method4406() {
+		return (PcmStream) this.aClass69_43.method2289();
 	}
 
 	@OriginalMember(owner = "client!ei", name = "d", descriptor = "(I)V")
 	private void method1345(@OriginalArg(0) int arg0) {
-		for (@Pc(5) Class3_Sub3 local5 = (Class3_Sub3) this.aClass69_43.method2289(); local5 != null; local5 = (Class3_Sub3) this.aClass69_43.method2288()) {
+		for (@Pc(5) PcmStream local5 = (PcmStream) this.aClass69_43.method2289(); local5 != null; local5 = (PcmStream) this.aClass69_43.method2288()) {
 			local5.method4410(arg0);
 		}
 	}
 
 	@OriginalMember(owner = "client!ei", name = "c", descriptor = "([III)V")
 	private void method1346(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		for (@Pc(5) Class3_Sub3 local5 = (Class3_Sub3) this.aClass69_43.method2289(); local5 != null; local5 = (Class3_Sub3) this.aClass69_43.method2288()) {
+		for (@Pc(5) PcmStream local5 = (PcmStream) this.aClass69_43.method2289(); local5 != null; local5 = (PcmStream) this.aClass69_43.method2288()) {
 			local5.method4405(arg0, arg1, arg2);
 		}
 	}
 
 	@OriginalMember(owner = "client!ei", name = "b", descriptor = "(Lclient!qb;)V")
-	public final synchronized void method1347(@OriginalArg(0) Class3_Sub3 arg0) {
+	public final synchronized void method1347(@OriginalArg(0) PcmStream arg0) {
 		arg0.method4658();
 	}
 
@@ -145,8 +145,8 @@ public final class Class3_Sub3_Sub2 extends Class3_Sub3 {
 
 	@OriginalMember(owner = "client!ei", name = "d", descriptor = "()Lclient!qb;")
 	@Override
-	public final Class3_Sub3 method4409() {
-		return (Class3_Sub3) this.aClass69_43.method2288();
+	public final PcmStream method4409() {
+		return (PcmStream) this.aClass69_43.method2288();
 	}
 
 	@OriginalMember(owner = "client!ei", name = "a", descriptor = "(Lclient!ab;Lclient!cc;)V")

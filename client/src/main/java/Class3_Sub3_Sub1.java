@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!b")
-public final class Class3_Sub3_Sub1 extends Class3_Sub3 {
+public final class Class3_Sub3_Sub1 extends PcmStream {
 
 	@OriginalMember(owner = "client!b", name = "v", descriptor = "I")
 	public int anInt344;
@@ -568,7 +568,7 @@ public final class Class3_Sub3_Sub1 extends Class3_Sub3 {
 
 	@OriginalMember(owner = "client!b", name = "b", descriptor = "()Lclient!qb;")
 	@Override
-	public final Class3_Sub3 method4406() {
+	public final PcmStream method4406() {
 		return null;
 	}
 
@@ -729,7 +729,7 @@ public final class Class3_Sub3_Sub1 extends Class3_Sub3 {
 
 	@OriginalMember(owner = "client!b", name = "d", descriptor = "()Lclient!qb;")
 	@Override
-	public final Class3_Sub3 method4409() {
+	public final PcmStream method4409() {
 		return null;
 	}
 }

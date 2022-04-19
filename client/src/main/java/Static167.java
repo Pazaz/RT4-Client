@@ -38,12 +38,12 @@ public final class Static167 {
 	public static final Class100 aClass100_783 = Static28.method790(")4p=");
 
 	@OriginalMember(owner = "client!nd", name = "a", descriptor = "(ZLclient!qb;)V")
-	public static void method3170(@OriginalArg(1) Class3_Sub3 arg0) {
+	public static void method3170(@OriginalArg(1) PcmStream arg0) {
 		if (arg0.aClass3_Sub16_5 != null) {
 			arg0.aClass3_Sub16_5.anInt3313 = 0;
 		}
 		arg0.aBoolean292 = false;
-		for (@Pc(14) Class3_Sub3 local14 = arg0.method4406(); local14 != null; local14 = arg0.method4409()) {
+		for (@Pc(14) PcmStream local14 = arg0.method4406(); local14 != null; local14 = arg0.method4409()) {
 			method3170(local14);
 		}
 	}
