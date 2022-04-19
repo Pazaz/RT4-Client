@@ -198,7 +198,7 @@ public final class Static54 {
 				Static129.method2495(arg3.anInt445 / 2 + arg2 - 1, arg3.anInt459 / 2 + -1 + arg1, 3, 3, 16777215);
 			}
 		} else if (Static239.aBoolean269) {
-			@Pc(1041) Class3_Sub2_Sub1 local1041 = arg3.method489(false);
+			@Pc(1041) Sprite local1041 = arg3.method489(false);
 			if (local1041 != null) {
 				local1041.method1423(arg2, arg1);
 			}

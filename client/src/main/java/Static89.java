@@ -8,7 +8,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static89 {
 
 	@OriginalMember(owner = "client!ha", name = "i", descriptor = "Lclient!qf;")
-	public static Class3_Sub2_Sub1 aClass3_Sub2_Sub1_5;
+	public static Sprite aClass3_Sub2_Sub1_5;
 
 	@OriginalMember(owner = "client!ha", name = "k", descriptor = "[[Z")
 	public static boolean[][] aBooleanArrayArray3;

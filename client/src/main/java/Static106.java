@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class Static106 {
 
 	@OriginalMember(owner = "client!ic", name = "a", descriptor = "Lclient!qf;")
-	public static Class3_Sub2_Sub1 aClass3_Sub2_Sub1_7;
+	public static Sprite aClass3_Sub2_Sub1_7;
 
 	@OriginalMember(owner = "client!ic", name = "n", descriptor = "I")
 	public static int anInt2871;

@@ -8,7 +8,7 @@ public final class Static276 {
 	public static Tile[][][] aClass3_Sub5ArrayArrayArray3;
 
 	@OriginalMember(owner = "client!wh", name = "l", descriptor = "[Lclient!qf;")
-	public static Class3_Sub2_Sub1[] aClass3_Sub2_Sub1Array11;
+	public static Sprite[] aClass3_Sub2_Sub1Array11;
 
 	@OriginalMember(owner = "client!wh", name = "g", descriptor = "[I")
 	public static final int[] anIntArray563 = new int[50];

@@ -58,7 +58,7 @@ public final class Static209 {
 	}
 
 	@OriginalMember(owner = "client!ra", name = "a", descriptor = "(IBILclient!ve;)[Lclient!qf;")
-	public static Class3_Sub2_Sub1[] method3708(@OriginalArg(2) int arg0, @OriginalArg(3) Class153 arg1) {
+	public static Sprite[] method3708(@OriginalArg(2) int arg0, @OriginalArg(3) Class153 arg1) {
 		return Static234.method4016(arg1, 0, arg0) ? Static213.method3730() : null;
 	}
 

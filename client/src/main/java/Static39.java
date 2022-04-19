@@ -13,7 +13,7 @@ public final class Static39 {
 	public static Class153 aClass153_23;
 
 	@OriginalMember(owner = "client!d", name = "ib", descriptor = "Lclient!qf;")
-	public static Class3_Sub2_Sub1 aClass3_Sub2_Sub1_1;
+	public static Sprite aClass3_Sub2_Sub1_1;
 
 	@OriginalMember(owner = "client!d", name = "R", descriptor = "Lclient!be;")
 	public static Class13 aClass13_10 = null;

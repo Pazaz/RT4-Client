@@ -11,7 +11,7 @@ public final class Static78 {
 	public static Class153 aClass153_32;
 
 	@OriginalMember(owner = "client!gd", name = "n", descriptor = "Lclient!qf;")
-	public static Class3_Sub2_Sub1 aClass3_Sub2_Sub1_3;
+	public static Sprite aClass3_Sub2_Sub1_3;
 
 	@OriginalMember(owner = "client!gd", name = "b", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_464 = Static28.method790("null");

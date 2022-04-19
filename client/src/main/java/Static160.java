@@ -32,7 +32,7 @@ public final class Static160 {
 		}
 		if (Static270.anInt5795 >= 3) {
 			if (Static239.aBoolean269) {
-				@Pc(44) Class3_Sub2_Sub1 local44 = arg2.method489(false);
+				@Pc(44) Sprite local44 = arg2.method489(false);
 				if (local44 != null) {
 					local44.method1423(arg0, arg1);
 				}

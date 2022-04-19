@@ -7,7 +7,7 @@ public final class Static149 {
 	public static int anInt3551;
 
 	@OriginalMember(owner = "client!lj", name = "t", descriptor = "[Lclient!qf;")
-	public static Class3_Sub2_Sub1[] aClass3_Sub2_Sub1Array7;
+	public static Sprite[] aClass3_Sub2_Sub1Array7;
 
 	@OriginalMember(owner = "client!lj", name = "y", descriptor = "Ljava/awt/Image;")
 	public static Image anImage3;
