@@ -110,7 +110,7 @@ public final class Static69 {
 								@Pc(71) Tile local71 = Static130.aClass3_Sub5ArrayArrayArray1[local17][local28][local39];
 								if (local71 != null) {
 									@Pc(158) int local158 = (Static83.anIntArrayArrayArray4[local17][local28][local39] + Static83.anIntArrayArrayArray4[local17][local28 + 1][local39] + Static83.anIntArrayArrayArray4[local17][local28][local39 + 1] + Static83.anIntArrayArrayArray4[local17][local28 + 1][local39 + 1]) / 4 - (Static83.anIntArrayArrayArray4[arg1][arg2][arg3] + Static83.anIntArrayArrayArray4[arg1][arg2 + 1][arg3] + Static83.anIntArrayArrayArray4[arg1][arg2][arg3 + 1] + Static83.anIntArrayArrayArray4[arg1][arg2 + 1][arg3 + 1]) / 4;
-									@Pc(161) Class77 local161 = local71.aClass77_1;
+									@Pc(161) Wall local161 = local71.aClass77_1;
 									if (local161 != null) {
 										if (local161.aClass8_5.method4543()) {
 											arg0.method4544(local161.aClass8_5, (local28 - arg2) * 128 + (1 - arg4) * 64, local158, (local39 - arg3) * 128 + (1 - arg5) * 64, local1);

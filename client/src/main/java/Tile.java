@@ -33,7 +33,7 @@ public final class Tile extends Node {
 	public WallDecor aClass24_1;
 
 	@OriginalMember(owner = "client!bj", name = "K", descriptor = "Lclient!jh;")
-	public Class77 aClass77_1;
+	public Wall aClass77_1;
 
 	@OriginalMember(owner = "client!bj", name = "M", descriptor = "Lclient!bj;")
 	public Tile aClass3_Sub5_1;

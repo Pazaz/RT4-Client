@@ -2,7 +2,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!jh")
-public final class Class77 {
+public final class Wall {
 
 	@OriginalMember(owner = "client!jh", name = "a", descriptor = "I")
 	public int anInt3044;

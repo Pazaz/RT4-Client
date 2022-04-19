@@ -66,7 +66,7 @@ public final class Static248 {
 							local46.anInt663 = 0;
 							if (local32 >= local9 && local32 <= local13 && local37 >= local17 && local37 <= local21) {
 								if (local46.aClass77_1 != null) {
-									@Pc(103) Class77 local103 = local46.aClass77_1;
+									@Pc(103) Wall local103 = local46.aClass77_1;
 									local103.aClass8_5.method4545(0, local23, local103.anInt3051, local103.anInt3048, local103.anInt3044);
 									if (local103.aClass8_6 != null) {
 										local103.aClass8_6.method4545(0, local23, local103.anInt3051, local103.anInt3048, local103.anInt3044);
