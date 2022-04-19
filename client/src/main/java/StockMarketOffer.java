@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!sg")
-public final class Class136 {
+public final class StockMarketOffer {
 
 	@OriginalMember(owner = "client!sg", name = "a", descriptor = "B")
 	private byte aByte17;
@@ -24,11 +24,11 @@ public final class Class136 {
 	public int anInt5099;
 
 	@OriginalMember(owner = "client!sg", name = "<init>", descriptor = "()V")
-	public Class136() {
+	public StockMarketOffer() {
 	}
 
 	@OriginalMember(owner = "client!sg", name = "<init>", descriptor = "(Lclient!wa;)V")
-	public Class136(@OriginalArg(0) Buffer arg0) {
+	public StockMarketOffer(@OriginalArg(0) Buffer arg0) {
 		this.aByte17 = arg0.method2186();
 		this.anInt5094 = arg0.method2163();
 		this.anInt5099 = arg0.method2174();

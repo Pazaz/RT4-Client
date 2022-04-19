@@ -146,7 +146,7 @@ public final class Static243 {
 		Static199.aClass3_Sub22Array1 = null;
 		Static15.aClass100_87 = null;
 		for (local3506 = 0; local3506 < 6; local3506++) {
-			Static229.aClass136Array1[local3506] = new Class136();
+			Static229.aClass136Array1[local3506] = new StockMarketOffer();
 		}
 		for (local3506 = 0; local3506 < 25; local3506++) {
 			Static99.anIntArray240[local3506] = 0;

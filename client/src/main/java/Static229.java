@@ -17,7 +17,7 @@ public final class Static229 {
 	public static byte[] aByteArray70;
 
 	@OriginalMember(owner = "client!si", name = "X", descriptor = "[Lclient!sg;")
-	public static final Class136[] aClass136Array1 = new Class136[6];
+	public static final StockMarketOffer[] aClass136Array1 = new StockMarketOffer[6];
 
 	@OriginalMember(owner = "client!si", name = "Z", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_972 = Static28.method790("<col=ffb000>");
