@@ -21,12 +21,12 @@ public final class Static112 {
 				Static39.aClass3_Sub2_Sub1_1 = Static80.method3613(Static209.aClass153_86, Static55.anInt1736);
 				Static181.aClass3_Sub2_Sub1_9 = Static80.method3613(Static209.aClass153_86, Static169.anInt4073);
 				if (Static239.aBoolean269) {
-					if (Static39.aClass3_Sub2_Sub1_1 instanceof Class3_Sub2_Sub1_Sub1_Sub1) {
+					if (Static39.aClass3_Sub2_Sub1_1 instanceof SoftwareAlphaSprite) {
 						Static39.aClass3_Sub2_Sub1_1 = new Class3_Sub2_Sub1_Sub2_Sub1((Class3_Sub2_Sub1_Sub1) Static39.aClass3_Sub2_Sub1_1);
 					} else {
 						Static39.aClass3_Sub2_Sub1_1 = new GlSprite((Class3_Sub2_Sub1_Sub1) Static39.aClass3_Sub2_Sub1_1);
 					}
-					if (Static181.aClass3_Sub2_Sub1_9 instanceof Class3_Sub2_Sub1_Sub1_Sub1) {
+					if (Static181.aClass3_Sub2_Sub1_9 instanceof SoftwareAlphaSprite) {
 						Static181.aClass3_Sub2_Sub1_9 = new Class3_Sub2_Sub1_Sub2_Sub1((Class3_Sub2_Sub1_Sub1) Static181.aClass3_Sub2_Sub1_9);
 					} else {
 						Static181.aClass3_Sub2_Sub1_9 = new GlSprite((Class3_Sub2_Sub1_Sub1) Static181.aClass3_Sub2_Sub1_9);
@@ -73,17 +73,17 @@ public final class Static112 {
 			Static92.aClass3_Sub2_Sub1_6 = Static80.method3613(Static209.aClass153_86, Static136.anInt3324);
 			Static204.aClass3_Sub2_Sub1_10 = Static80.method3613(Static209.aClass153_86, Static254.anInt5556);
 			if (Static239.aBoolean269) {
-				if (Static165.aClass3_Sub2_Sub1_8 instanceof Class3_Sub2_Sub1_Sub1_Sub1) {
+				if (Static165.aClass3_Sub2_Sub1_8 instanceof SoftwareAlphaSprite) {
 					Static165.aClass3_Sub2_Sub1_8 = new Class3_Sub2_Sub1_Sub2_Sub1((Class3_Sub2_Sub1_Sub1) Static165.aClass3_Sub2_Sub1_8);
 				} else {
 					Static165.aClass3_Sub2_Sub1_8 = new GlSprite((Class3_Sub2_Sub1_Sub1) Static165.aClass3_Sub2_Sub1_8);
 				}
-				if (Static92.aClass3_Sub2_Sub1_6 instanceof Class3_Sub2_Sub1_Sub1_Sub1) {
+				if (Static92.aClass3_Sub2_Sub1_6 instanceof SoftwareAlphaSprite) {
 					Static92.aClass3_Sub2_Sub1_6 = new Class3_Sub2_Sub1_Sub2_Sub1((Class3_Sub2_Sub1_Sub1) Static92.aClass3_Sub2_Sub1_6);
 				} else {
 					Static92.aClass3_Sub2_Sub1_6 = new GlSprite((Class3_Sub2_Sub1_Sub1) Static92.aClass3_Sub2_Sub1_6);
 				}
-				if (Static204.aClass3_Sub2_Sub1_10 instanceof Class3_Sub2_Sub1_Sub1_Sub1) {
+				if (Static204.aClass3_Sub2_Sub1_10 instanceof SoftwareAlphaSprite) {
 					Static204.aClass3_Sub2_Sub1_10 = new Class3_Sub2_Sub1_Sub2_Sub1((Class3_Sub2_Sub1_Sub1) Static204.aClass3_Sub2_Sub1_10);
 				} else {
 					Static204.aClass3_Sub2_Sub1_10 = new GlSprite((Class3_Sub2_Sub1_Sub1) Static204.aClass3_Sub2_Sub1_10);

@@ -34,7 +34,7 @@ public final class Static102 {
 			for (@Pc(35) int local35 = 0; local35 < local13; local35++) {
 				local33[local35] = (local30[local35] & 0xFF) << 24 | Static259.anIntArray513[local17[local35] & 0xFF];
 			}
-			local78 = new Class3_Sub2_Sub1_Sub1_Sub1(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[0], Static269.anIntArray252[0], Static254.anIntArray488[0], Static26.anIntArray66[0], local33);
+			local78 = new SoftwareAlphaSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[0], Static269.anIntArray252[0], Static254.anIntArray488[0], Static26.anIntArray66[0], local33);
 		} else {
 			@Pc(83) int[] local83 = new int[local13];
 			for (@Pc(85) int local85 = 0; local85 < local13; local85++) {
