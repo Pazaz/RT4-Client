@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!lj")
-public final class Class93_Sub1 extends Class93 {
+public final class Class93_Sub1 extends Timer {
 
 	@OriginalMember(owner = "client!lj", name = "o", descriptor = "I")
 	private int anInt3549;

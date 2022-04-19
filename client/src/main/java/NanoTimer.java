@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!om")
-public final class NanoTimer extends Class93 {
+public final class NanoTimer extends Timer {
 
 	@OriginalMember(owner = "client!om", name = "k", descriptor = "J")
 	private long aLong142 = System.nanoTime();
