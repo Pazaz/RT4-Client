@@ -128,7 +128,7 @@ public final class Static105 {
 				}
 			}
 		}
-		@Pc(58) Class31 local58 = new Class31();
+		@Pc(58) Scenery local58 = new Scenery();
 		local58.aLong56 = arg11;
 		local58.anInt1709 = arg0;
 		local58.anInt1699 = arg5;

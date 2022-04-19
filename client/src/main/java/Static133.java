@@ -23,13 +23,13 @@ public final class Static133 {
 	public static int anInt5235 = 0;
 
 	@OriginalMember(owner = "client!kf", name = "b", descriptor = "(III)Lclient!ec;")
-	public static Class31 method4008(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+	public static Scenery method4008(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		@Pc(7) Tile local7 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
 		if (local7 == null) {
 			return null;
 		}
 		for (@Pc(13) int local13 = 0; local13 < local7.anInt662; local13++) {
-			@Pc(22) Class31 local22 = local7.aClass31Array1[local13];
+			@Pc(22) Scenery local22 = local7.aClass31Array1[local13];
 			if ((local22.aLong56 >> 29 & 0x3L) == 2L && local22.anInt1701 == arg1 && local22.anInt1696 == arg2) {
 				return local22;
 			}

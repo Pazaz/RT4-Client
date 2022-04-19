@@ -136,7 +136,7 @@ public final class Static220 {
 							local27.aClass8_5 = local27.aClass8_5.method4539();
 						}
 						for (@Pc(83) int local83 = 0; local83 < local22.anInt662; local83++) {
-							@Pc(92) Class31 local92 = local22.aClass31Array1[local83];
+							@Pc(92) Scenery local92 = local22.aClass31Array1[local83];
 							if (local92 != null && local92.aClass8_4.method4543()) {
 								Static69.method1544(local92.aClass8_4, local1, local6, local11, local92.anInt1713 + 1 - local92.anInt1701, local92.anInt1698 - local92.anInt1696 + 1);
 								local92.aClass8_4 = local92.aClass8_4.method4539();

@@ -64,7 +64,7 @@ public final class Static247 {
 										@Pc(916) int var18;
 										@Pc(363) Class77 var22;
 										@Pc(469) boolean var24;
-										@Pc(425) Class31 var25;
+										@Pc(425) Scenery var25;
 										@Pc(1179) Tile var32;
 										while (true) {
 											do {
@@ -478,7 +478,7 @@ public final class Static247 {
 												local65 = -50;
 												local115 = -1;
 												for (local1332 = 0; local1332 < var10; local1332++) {
-													@Pc(1628) Class31 local1628 = Static25.aClass31Array2[local1332];
+													@Pc(1628) Scenery local1628 = Static25.aClass31Array2[local1332];
 													if (local1628.anInt1707 != Static13.anInt437) {
 														if (local1628.anInt1705 > local65) {
 															local65 = local1628.anInt1705;
@@ -497,7 +497,7 @@ public final class Static247 {
 												if (local115 == -1) {
 													break;
 												}
-												@Pc(1697) Class31 local1697 = Static25.aClass31Array2[local115];
+												@Pc(1697) Scenery local1697 = Static25.aClass31Array2[local115];
 												local1697.anInt1707 = Static13.anInt437;
 												if (!Static73.method1599(local27, local1697.anInt1701, local1697.anInt1713, local1697.anInt1696, local1697.anInt1698, local1697.aClass8_4.method4549())) {
 													if (Static239.aBoolean269) {
