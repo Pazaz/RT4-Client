@@ -61,7 +61,7 @@ public final class Static258 {
 						Static169.aClass13_18 = arg2;
 						Static18.anInt588 = local171;
 						if (arg2.anIntArray40[local171] > 0) {
-							@Pc(267) Class3_Sub4 local267 = Static36.method940(arg2);
+							@Pc(267) ServerActiveProperties local267 = Static36.method940(arg2);
 							@Pc(276) ObjType local276 = Static71.method1439(arg2.anIntArray40[local171] - 1);
 							if (Static260.anInt5014 == 1 && local267.method510()) {
 								if (Static224.anInt5062 != arg2.anInt507 || Static185.anInt4370 != local171) {

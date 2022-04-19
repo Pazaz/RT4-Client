@@ -41,8 +41,8 @@ public final class Static36 {
 	}
 
 	@OriginalMember(owner = "client!client", name = "b", descriptor = "(Lclient!be;)Lclient!bf;")
-	public static Class3_Sub4 method940(@OriginalArg(0) Class13 arg0) {
-		@Pc(13) Class3_Sub4 local13 = (Class3_Sub4) Static210.aClass133_21.method3863(((long) arg0.anInt507 << 32) + (long) arg0.anInt457);
+	public static ServerActiveProperties method940(@OriginalArg(0) Class13 arg0) {
+		@Pc(13) ServerActiveProperties local13 = (ServerActiveProperties) Static210.aClass133_21.method3863(((long) arg0.anInt507 << 32) + (long) arg0.anInt457);
 		return local13 == null ? arg0.aClass3_Sub4_1 : local13;
 	}
 

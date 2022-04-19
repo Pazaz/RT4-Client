@@ -521,8 +521,8 @@ public final class Static4 {
 					Static164.anInt3985 = -1;
 					return true;
 				} else {
-					@Pc(1814) Class3_Sub4 local1814;
-					@Pc(1804) Class3_Sub4 local1804;
+					@Pc(1814) ServerActiveProperties local1814;
+					@Pc(1804) ServerActiveProperties local1804;
 					if (Static164.anInt3985 == 9) {
 						local133 = Static57.aClass3_Sub15_Sub1_3.method2207();
 						local786 = Static57.aClass3_Sub15_Sub1_3.method2208();
@@ -538,14 +538,14 @@ public final class Static4 {
 						if (Static248.method3288(local864)) {
 							for (local277 = local1146; local277 <= local171; local277++) {
 								local904 = (long) local277 + ((long) local786 << 32);
-								local1804 = (Class3_Sub4) Static210.aClass133_21.method3863(local904);
+								local1804 = (ServerActiveProperties) Static210.aClass133_21.method3863(local904);
 								if (local1804 != null) {
-									local1814 = new Class3_Sub4(local1804.anInt546, local133);
+									local1814 = new ServerActiveProperties(local1804.anInt546, local133);
 									local1804.method4658();
 								} else if (local277 == -1) {
-									local1814 = new Class3_Sub4(Static5.method32(local786).aClass3_Sub4_1.anInt546, local133);
+									local1814 = new ServerActiveProperties(Static5.method32(local786).aClass3_Sub4_1.anInt546, local133);
 								} else {
-									local1814 = new Class3_Sub4(0, local133);
+									local1814 = new ServerActiveProperties(0, local133);
 								}
 								Static210.aClass133_21.method3862(local1814, local904);
 							}
@@ -1400,14 +1400,14 @@ public final class Static4 {
 									if (Static248.method3288(local133)) {
 										for (local277 = local171; local277 <= local786; local277++) {
 											local904 = ((long) local864 << 32) + ((long) local277);
-											local1804 = (Class3_Sub4) Static210.aClass133_21.method3863(local904);
+											local1804 = (ServerActiveProperties) Static210.aClass133_21.method3863(local904);
 											if (local1804 != null) {
-												local1814 = new Class3_Sub4(local1146, local1804.anInt540);
+												local1814 = new ServerActiveProperties(local1146, local1804.anInt540);
 												local1804.method4658();
 											} else if (local277 == -1) {
-												local1814 = new Class3_Sub4(local1146, Static5.method32(local864).aClass3_Sub4_1.anInt540);
+												local1814 = new ServerActiveProperties(local1146, Static5.method32(local864).aClass3_Sub4_1.anInt540);
 											} else {
-												local1814 = new Class3_Sub4(local1146, -1);
+												local1814 = new ServerActiveProperties(local1146, -1);
 											}
 											Static210.aClass133_21.method3862(local1814, local904);
 										}
