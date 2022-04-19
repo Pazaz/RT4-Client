@@ -255,6 +255,6 @@ public final class Static164 {
 		Static129.method2488(local125);
 		Static94.method1908();
 		Static94.aBoolean136 = true;
-		return Static239.aBoolean269 && !arg1 ? new Class3_Sub2_Sub1_Sub2(local133) : local133;
+		return Static239.aBoolean269 && !arg1 ? new GlSprite(local133) : local133;
 	}
 }

@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!cf")
-public class Class3_Sub2_Sub1_Sub2 extends Class3_Sub2_Sub1 {
+public class GlSprite extends Class3_Sub2_Sub1 {
 
 	@OriginalMember(owner = "client!cf", name = "O", descriptor = "I")
 	public int anInt1870;
@@ -30,7 +30,7 @@ public class Class3_Sub2_Sub1_Sub2 extends Class3_Sub2_Sub1 {
 	private int anInt1873 = 0;
 
 	@OriginalMember(owner = "client!cf", name = "<init>", descriptor = "(IIIIII[I)V")
-	public Class3_Sub2_Sub1_Sub2(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int[] arg6) {
+	public GlSprite(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int[] arg6) {
 		this.anInt1860 = arg0;
 		this.anInt1866 = arg1;
 		this.anInt1863 = arg2;
@@ -42,7 +42,7 @@ public class Class3_Sub2_Sub1_Sub2 extends Class3_Sub2_Sub1 {
 	}
 
 	@OriginalMember(owner = "client!cf", name = "<init>", descriptor = "(Lclient!mm;)V")
-	public Class3_Sub2_Sub1_Sub2(@OriginalArg(0) Class3_Sub2_Sub1_Sub1 arg0) {
+	public GlSprite(@OriginalArg(0) Class3_Sub2_Sub1_Sub1 arg0) {
 		this.anInt1860 = arg0.anInt1860;
 		this.anInt1866 = arg0.anInt1866;
 		this.anInt1863 = arg0.anInt1863;
@@ -70,7 +70,7 @@ public class Class3_Sub2_Sub1_Sub2 extends Class3_Sub2_Sub1 {
 	}
 
 	@OriginalMember(owner = "client!cf", name = "a", descriptor = "(IILclient!cf;)V")
-	public final void method1425(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Class3_Sub2_Sub1_Sub2 arg2) {
+	public final void method1425(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) GlSprite arg2) {
 		if (arg2 == null) {
 			return;
 		}
@@ -143,7 +143,7 @@ public class Class3_Sub2_Sub1_Sub2 extends Class3_Sub2_Sub1 {
 	}
 
 	@OriginalMember(owner = "client!cf", name = "a", descriptor = "(IIIIIIIILclient!cf;)V")
-	public final void method1427(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) Class3_Sub2_Sub1_Sub2 arg8) {
+	public final void method1427(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) GlSprite arg8) {
 		if (arg8 == null) {
 			return;
 		}

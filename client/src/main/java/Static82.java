@@ -44,7 +44,7 @@ public final class Static82 {
 		}
 		@Pc(69) Class3_Sub2_Sub1 local69;
 		if (Static239.aBoolean269) {
-			local69 = new Class3_Sub2_Sub1_Sub2(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[0], Static269.anIntArray252[0], Static254.anIntArray488[0], Static26.anIntArray66[0], local20);
+			local69 = new GlSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[0], Static269.anIntArray252[0], Static254.anIntArray488[0], Static26.anIntArray66[0], local20);
 		} else {
 			local69 = new Class3_Sub2_Sub1_Sub1(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[0], Static269.anIntArray252[0], Static254.anIntArray488[0], Static26.anIntArray66[0], local20);
 		}

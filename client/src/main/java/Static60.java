@@ -52,7 +52,7 @@ public final class Static60 {
 		@Pc(81) int local81 = local58 * arg2 + arg3 * local70 >> 16;
 		@Pc(92) int local92 = local70 * arg2 - arg3 * local58 >> 16;
 		if (Static239.aBoolean269) {
-			((Class3_Sub2_Sub1_Sub2) arg1).method1425(arg0.anInt445 / 2 + arg5 + local81 - arg1.anInt1860 / 2, arg0.anInt459 / 2 + arg4 - (local92 + arg1.anInt1866 / 2), (Class3_Sub2_Sub1_Sub2) arg0.method489(false));
+			((GlSprite) arg1).method1425(arg0.anInt445 / 2 + arg5 + local81 - arg1.anInt1860 / 2, arg0.anInt459 / 2 + arg4 - (local92 + arg1.anInt1866 / 2), (GlSprite) arg0.method489(false));
 		} else {
 			((Class3_Sub2_Sub1_Sub1) arg1).method312(arg0.anInt445 / 2 + arg5 + local81 - arg1.anInt1860 / 2, -(arg1.anInt1866 / 2) + arg0.anInt459 / 2 + arg4 + -local92, arg0.anIntArray37, arg0.anIntArray45);
 		}

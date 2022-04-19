@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static46 {
 
 	@OriginalMember(owner = "client!dj", name = "a", descriptor = "Lclient!cf;")
-	public static Class3_Sub2_Sub1_Sub2 aClass3_Sub2_Sub1_Sub2_1 = null;
+	public static GlSprite aClass3_Sub2_Sub1_Sub2_1 = null;
 
 	@OriginalMember(owner = "client!dj", name = "b", descriptor = "I")
 	public static int anInt1438 = 0;
@@ -270,7 +270,7 @@ public final class Static46 {
 	}
 
 	@OriginalMember(owner = "client!dj", name = "a", descriptor = "(Lclient!cf;)V")
-	public static void method1188(@OriginalArg(0) Class3_Sub2_Sub1_Sub2 arg0) {
+	public static void method1188(@OriginalArg(0) GlSprite arg0) {
 		if (arg0.anInt1859 != anInt1441 - anInt1438) {
 			throw new IllegalArgumentException();
 		}
