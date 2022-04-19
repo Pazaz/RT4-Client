@@ -52,7 +52,7 @@ public final class SoundPcmStream extends PcmStream {
 	public int anInt346;
 
 	@OriginalMember(owner = "client!b", name = "<init>", descriptor = "(Lclient!kj;II)V")
-	public SoundPcmStream(@OriginalArg(0) Class3_Sub16_Sub1 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+	public SoundPcmStream(@OriginalArg(0) PcmSound arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		this.aClass3_Sub16_5 = arg0;
 		this.anInt345 = arg0.anInt3315;
 		this.anInt353 = arg0.anInt3314;
@@ -65,7 +65,7 @@ public final class SoundPcmStream extends PcmStream {
 	}
 
 	@OriginalMember(owner = "client!b", name = "<init>", descriptor = "(Lclient!kj;III)V")
-	public SoundPcmStream(@OriginalArg(0) Class3_Sub16_Sub1 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	public SoundPcmStream(@OriginalArg(0) PcmSound arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		this.aClass3_Sub16_5 = arg0;
 		this.anInt345 = arg0.anInt3315;
 		this.anInt353 = arg0.anInt3314;
@@ -84,7 +84,7 @@ public final class SoundPcmStream extends PcmStream {
 			this.method4410(arg2);
 			return;
 		}
-		@Pc(13) Class3_Sub16_Sub1 local13 = (Class3_Sub16_Sub1) this.aClass3_Sub16_5;
+		@Pc(13) PcmSound local13 = (PcmSound) this.aClass3_Sub16_5;
 		@Pc(18) int local18 = this.anInt345 << 8;
 		@Pc(23) int local23 = this.anInt353 << 8;
 		@Pc(29) int local29 = local13.aByteArray47.length << 8;
@@ -345,14 +345,14 @@ public final class SoundPcmStream extends PcmStream {
 				this.anInt351 += arg1;
 				if (this.anInt342 == 256 && (this.anInt346 & 0xFF) == 0) {
 					if (Static164.aBoolean192) {
-						arg1 = Static284.method393(((Class3_Sub16_Sub1) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt355, this.anInt352, this.anInt347, this.anInt354, local7, arg2, this);
+						arg1 = Static284.method393(((PcmSound) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt355, this.anInt352, this.anInt347, this.anInt354, local7, arg2, this);
 					} else {
-						arg1 = Static284.method395(((Class3_Sub16_Sub1) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt348, this.anInt344, local7, arg2, this);
+						arg1 = Static284.method395(((PcmSound) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt348, this.anInt344, local7, arg2, this);
 					}
 				} else if (Static164.aBoolean192) {
-					arg1 = Static284.method388(((Class3_Sub16_Sub1) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt355, this.anInt352, this.anInt347, this.anInt354, local7, arg2, this, this.anInt342, arg4);
+					arg1 = Static284.method388(((PcmSound) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt355, this.anInt352, this.anInt347, this.anInt354, local7, arg2, this, this.anInt342, arg4);
 				} else {
-					arg1 = Static284.method389(((Class3_Sub16_Sub1) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt348, this.anInt344, local7, arg2, this, this.anInt342, arg4);
+					arg1 = Static284.method389(((PcmSound) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt348, this.anInt344, local7, arg2, this, this.anInt342, arg4);
 				}
 				this.anInt351 -= arg1;
 				if (this.anInt351 != 0) {
@@ -365,14 +365,14 @@ public final class SoundPcmStream extends PcmStream {
 			}
 			if (this.anInt342 == 256 && (this.anInt346 & 0xFF) == 0) {
 				if (Static164.aBoolean192) {
-					return Static284.method387(((Class3_Sub16_Sub1) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt355, this.anInt352, arg3, arg2, this);
+					return Static284.method387(((PcmSound) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt355, this.anInt352, arg3, arg2, this);
 				}
-				return Static284.method391(((Class3_Sub16_Sub1) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt348, arg3, arg2, this);
+				return Static284.method391(((PcmSound) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt348, arg3, arg2, this);
 			}
 			if (Static164.aBoolean192) {
-				return Static284.method400(((Class3_Sub16_Sub1) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt355, this.anInt352, arg3, arg2, this, this.anInt342, arg4);
+				return Static284.method400(((PcmSound) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt355, this.anInt352, arg3, arg2, this, this.anInt342, arg4);
 			}
-			return Static284.method422(((Class3_Sub16_Sub1) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt348, arg3, arg2, this, this.anInt342, arg4);
+			return Static284.method422(((PcmSound) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt348, arg3, arg2, this, this.anInt342, arg4);
 		}
 	}
 
@@ -387,9 +387,9 @@ public final class SoundPcmStream extends PcmStream {
 		@Pc(6) int local6 = this.anInt348 * 3 >> 6;
 		local6 = (local6 ^ local6 >> 31) + (local6 >>> 31);
 		if (this.anInt350 == 0) {
-			local6 -= local6 * this.anInt346 / (((Class3_Sub16_Sub1) this.aClass3_Sub16_5).aByteArray47.length << 8);
+			local6 -= local6 * this.anInt346 / (((PcmSound) this.aClass3_Sub16_5).aByteArray47.length << 8);
 		} else if (this.anInt350 >= 0) {
-			local6 -= local6 * this.anInt345 / ((Class3_Sub16_Sub1) this.aClass3_Sub16_5).aByteArray47.length;
+			local6 -= local6 * this.anInt345 / ((PcmSound) this.aClass3_Sub16_5).aByteArray47.length;
 		}
 		return local6 > 255 ? 255 : local6;
 	}
@@ -425,7 +425,7 @@ public final class SoundPcmStream extends PcmStream {
 				this.anInt351 -= arg0;
 			}
 		}
-		@Pc(71) Class3_Sub16_Sub1 local71 = (Class3_Sub16_Sub1) this.aClass3_Sub16_5;
+		@Pc(71) PcmSound local71 = (PcmSound) this.aClass3_Sub16_5;
 		@Pc(76) int local76 = this.anInt345 << 8;
 		@Pc(81) int local81 = this.anInt353 << 8;
 		@Pc(87) int local87 = local71.aByteArray47.length << 8;
@@ -574,7 +574,7 @@ public final class SoundPcmStream extends PcmStream {
 
 	@OriginalMember(owner = "client!b", name = "h", descriptor = "(I)V")
 	public final synchronized void method401(@OriginalArg(0) int arg0) {
-		@Pc(7) int local7 = ((Class3_Sub16_Sub1) this.aClass3_Sub16_5).aByteArray47.length << 8;
+		@Pc(7) int local7 = ((PcmSound) this.aClass3_Sub16_5).aByteArray47.length << 8;
 		if (arg0 < -1) {
 			arg0 = -1;
 		}
@@ -595,14 +595,14 @@ public final class SoundPcmStream extends PcmStream {
 				this.anInt351 += arg1;
 				if (this.anInt342 == -256 && (this.anInt346 & 0xFF) == 0) {
 					if (Static164.aBoolean192) {
-						arg1 = Static284.method402(((Class3_Sub16_Sub1) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt355, this.anInt352, this.anInt347, this.anInt354, local7, arg2, this);
+						arg1 = Static284.method402(((PcmSound) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt355, this.anInt352, this.anInt347, this.anInt354, local7, arg2, this);
 					} else {
-						arg1 = Static284.method394(((Class3_Sub16_Sub1) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt348, this.anInt344, local7, arg2, this);
+						arg1 = Static284.method394(((PcmSound) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt348, this.anInt344, local7, arg2, this);
 					}
 				} else if (Static164.aBoolean192) {
-					arg1 = Static284.method407(((Class3_Sub16_Sub1) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt355, this.anInt352, this.anInt347, this.anInt354, local7, arg2, this, this.anInt342, arg4);
+					arg1 = Static284.method407(((PcmSound) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt355, this.anInt352, this.anInt347, this.anInt354, local7, arg2, this, this.anInt342, arg4);
 				} else {
-					arg1 = Static284.method415(((Class3_Sub16_Sub1) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt348, this.anInt344, local7, arg2, this, this.anInt342, arg4);
+					arg1 = Static284.method415(((PcmSound) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt348, this.anInt344, local7, arg2, this, this.anInt342, arg4);
 				}
 				this.anInt351 -= arg1;
 				if (this.anInt351 != 0) {
@@ -615,14 +615,14 @@ public final class SoundPcmStream extends PcmStream {
 			}
 			if (this.anInt342 == -256 && (this.anInt346 & 0xFF) == 0) {
 				if (Static164.aBoolean192) {
-					return Static284.method414(((Class3_Sub16_Sub1) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt355, this.anInt352, arg3, arg2, this);
+					return Static284.method414(((PcmSound) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt355, this.anInt352, arg3, arg2, this);
 				}
-				return Static284.method413(((Class3_Sub16_Sub1) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt348, arg3, arg2, this);
+				return Static284.method413(((PcmSound) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt348, arg3, arg2, this);
 			}
 			if (Static164.aBoolean192) {
-				return Static284.method420(((Class3_Sub16_Sub1) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt355, this.anInt352, arg3, arg2, this, this.anInt342, arg4);
+				return Static284.method420(((PcmSound) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt355, this.anInt352, arg3, arg2, this, this.anInt342, arg4);
 			}
-			return Static284.method390(((Class3_Sub16_Sub1) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt348, arg3, arg2, this, this.anInt342, arg4);
+			return Static284.method390(((PcmSound) this.aClass3_Sub16_5).aByteArray47, arg0, this.anInt346, arg1, this.anInt348, arg3, arg2, this, this.anInt342, arg4);
 		}
 	}
 
@@ -668,7 +668,7 @@ public final class SoundPcmStream extends PcmStream {
 
 	@OriginalMember(owner = "client!b", name = "i", descriptor = "()Z")
 	public final boolean method411() {
-		return this.anInt346 < 0 || this.anInt346 >= ((Class3_Sub16_Sub1) this.aClass3_Sub16_5).aByteArray47.length << 8;
+		return this.anInt346 < 0 || this.anInt346 >= ((PcmSound) this.aClass3_Sub16_5).aByteArray47.length << 8;
 	}
 
 	@OriginalMember(owner = "client!b", name = "j", descriptor = "()Z")

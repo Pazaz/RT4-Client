@@ -22,7 +22,7 @@ public final class MidiInstrument extends Node {
 	public final byte[] aByteArray45 = new byte[128];
 
 	@OriginalMember(owner = "client!jk", name = "D", descriptor = "[Lclient!kj;")
-	public final Class3_Sub16_Sub1[] aClass3_Sub16_Sub1Array1 = new Class3_Sub16_Sub1[128];
+	public final PcmSound[] aClass3_Sub16_Sub1Array1 = new PcmSound[128];
 
 	@OriginalMember(owner = "client!jk", name = "H", descriptor = "[S")
 	public final short[] aShortArray36 = new short[128];
@@ -391,7 +391,7 @@ public final class MidiInstrument extends Node {
 	@OriginalMember(owner = "client!jk", name = "a", descriptor = "(I[ILclient!le;[B)Z")
 	public final boolean method2436(@OriginalArg(1) int[] arg0, @OriginalArg(2) SoundBank arg1, @OriginalArg(3) byte[] arg2) {
 		@Pc(8) int local8 = 0;
-		@Pc(10) Class3_Sub16_Sub1 local10 = null;
+		@Pc(10) PcmSound local10 = null;
 		@Pc(16) boolean local16 = true;
 		for (@Pc(18) int local18 = 0; local18 < 128; local18++) {
 			if (arg2 == null || arg2[local18] != 0) {

@@ -371,7 +371,7 @@ public final class Static284 {
 	}
 
 	@OriginalMember(owner = "client!b", name = "a", descriptor = "(Lclient!kj;III)Lclient!b;")
-	public static SoundPcmStream method399(@OriginalArg(0) Class3_Sub16_Sub1 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	public static SoundPcmStream method399(@OriginalArg(0) PcmSound arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		return arg0.aByteArray47 == null || arg0.aByteArray47.length == 0 ? null : new SoundPcmStream(arg0, arg1, arg2, arg3);
 	}
 
@@ -487,7 +487,7 @@ public final class Static284 {
 	}
 
 	@OriginalMember(owner = "client!b", name = "a", descriptor = "(Lclient!kj;II)Lclient!b;")
-	public static SoundPcmStream method404(@OriginalArg(0) Class3_Sub16_Sub1 arg0, @OriginalArg(2) int arg1) {
+	public static SoundPcmStream method404(@OriginalArg(0) PcmSound arg0, @OriginalArg(2) int arg1) {
 		return arg0.aByteArray47 == null || arg0.aByteArray47.length == 0 ? null : new SoundPcmStream(arg0, (int) ((long) arg0.anInt3316 * 256L * (long) 100 / (long) (Static44.anInt1404 * 100)), arg1 << 6);
 	}
 

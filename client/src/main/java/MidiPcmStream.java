@@ -280,7 +280,7 @@ public final class MidiPcmStream extends PcmStream {
 		if (local118 == null) {
 			return;
 		}
-		@Pc(126) Class3_Sub16_Sub1 local126 = local118.aClass3_Sub16_Sub1Array1[arg2];
+		@Pc(126) PcmSound local126 = local118.aClass3_Sub16_Sub1Array1[arg2];
 		if (local126 == null) {
 			return;
 		}
