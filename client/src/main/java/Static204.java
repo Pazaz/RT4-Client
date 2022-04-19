@@ -8,7 +8,7 @@ public final class Static204 {
 	public static Sprite aClass3_Sub2_Sub1_10;
 
 	@OriginalMember(owner = "client!qi", name = "C", descriptor = "Lclient!ei;")
-	public static Class3_Sub3_Sub2 aClass3_Sub3_Sub2_1;
+	public static MixerPcmStream aClass3_Sub3_Sub2_1;
 
 	@OriginalMember(owner = "client!qi", name = "r", descriptor = "I")
 	public static int anInt4760 = 0;
