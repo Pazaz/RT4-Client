@@ -14,34 +14,34 @@ public final class SynthInstrument {
 	private static final int[] anIntArray394;
 
 	@OriginalMember(owner = "client!pj", name = "a", descriptor = "Lclient!ff;")
-	private Class42 aClass42_1;
+	private SynthEnvelope aClass42_1;
 
 	@OriginalMember(owner = "client!pj", name = "b", descriptor = "Lclient!ff;")
-	private Class42 aClass42_2;
+	private SynthEnvelope aClass42_2;
 
 	@OriginalMember(owner = "client!pj", name = "d", descriptor = "Lclient!ff;")
-	private Class42 aClass42_3;
+	private SynthEnvelope aClass42_3;
 
 	@OriginalMember(owner = "client!pj", name = "e", descriptor = "Lclient!ff;")
-	private Class42 aClass42_4;
+	private SynthEnvelope aClass42_4;
 
 	@OriginalMember(owner = "client!pj", name = "f", descriptor = "Lclient!ff;")
-	private Class42 aClass42_5;
+	private SynthEnvelope aClass42_5;
 
 	@OriginalMember(owner = "client!pj", name = "i", descriptor = "Lclient!ff;")
-	private Class42 aClass42_6;
+	private SynthEnvelope aClass42_6;
 
 	@OriginalMember(owner = "client!pj", name = "l", descriptor = "Lclient!ff;")
-	private Class42 aClass42_7;
+	private SynthEnvelope aClass42_7;
 
 	@OriginalMember(owner = "client!pj", name = "w", descriptor = "Lclient!nl;")
 	private SynthFilter aClass110_1;
 
 	@OriginalMember(owner = "client!pj", name = "x", descriptor = "Lclient!ff;")
-	private Class42 aClass42_8;
+	private SynthEnvelope aClass42_8;
 
 	@OriginalMember(owner = "client!pj", name = "y", descriptor = "Lclient!ff;")
-	private Class42 aClass42_9;
+	private SynthEnvelope aClass42_9;
 
 	@OriginalMember(owner = "client!pj", name = "c", descriptor = "I")
 	public int anInt4546 = 500;
@@ -262,32 +262,32 @@ public final class SynthInstrument {
 
 	@OriginalMember(owner = "client!pj", name = "a", descriptor = "(Lclient!wa;)V")
 	public final void method3506(@OriginalArg(0) Buffer arg0) {
-		this.aClass42_5 = new Class42();
+		this.aClass42_5 = new SynthEnvelope();
 		this.aClass42_5.method1515(arg0);
-		this.aClass42_3 = new Class42();
+		this.aClass42_3 = new SynthEnvelope();
 		this.aClass42_3.method1515(arg0);
 		@Pc(21) int local21 = arg0.method2229();
 		if (local21 != 0) {
 			arg0.anInt2792--;
-			this.aClass42_9 = new Class42();
+			this.aClass42_9 = new SynthEnvelope();
 			this.aClass42_9.method1515(arg0);
-			this.aClass42_8 = new Class42();
+			this.aClass42_8 = new SynthEnvelope();
 			this.aClass42_8.method1515(arg0);
 		}
 		local21 = arg0.method2229();
 		if (local21 != 0) {
 			arg0.anInt2792--;
-			this.aClass42_7 = new Class42();
+			this.aClass42_7 = new SynthEnvelope();
 			this.aClass42_7.method1515(arg0);
-			this.aClass42_1 = new Class42();
+			this.aClass42_1 = new SynthEnvelope();
 			this.aClass42_1.method1515(arg0);
 		}
 		local21 = arg0.method2229();
 		if (local21 != 0) {
 			arg0.anInt2792--;
-			this.aClass42_2 = new Class42();
+			this.aClass42_2 = new SynthEnvelope();
 			this.aClass42_2.method1515(arg0);
-			this.aClass42_4 = new Class42();
+			this.aClass42_4 = new SynthEnvelope();
 			this.aClass42_4.method1515(arg0);
 		}
 		for (@Pc(109) int local109 = 0; local109 < 10; local109++) {
@@ -304,7 +304,7 @@ public final class SynthInstrument {
 		this.anInt4546 = arg0.method2163();
 		this.anInt4548 = arg0.method2163();
 		this.aClass110_1 = new SynthFilter();
-		this.aClass42_6 = new Class42();
+		this.aClass42_6 = new SynthEnvelope();
 		this.aClass110_1.method3249(arg0, this.aClass42_6);
 	}
 }
