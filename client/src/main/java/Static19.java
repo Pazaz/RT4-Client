@@ -54,7 +54,7 @@ public final class Static19 {
 			} else {
 				local22 = Static105.anIntArray256[local11];
 			}
-			@Pc(30) Class8_Sub4_Sub1 local30 = Static159.aClass8_Sub4_Sub1Array1[local22];
+			@Pc(30) Player local30 = Static159.aClass8_Sub4_Sub1Array1[local22];
 			if (local30 != null && local30.anInt3408 > 0) {
 				local30.anInt3408--;
 				if (local30.anInt3408 == 0) {

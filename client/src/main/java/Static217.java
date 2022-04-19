@@ -23,7 +23,7 @@ public final class Static217 {
 	public static final JagString aClass100_916 = Static28.method790(":clanreq:");
 
 	@OriginalMember(owner = "client!rj", name = "a", descriptor = "(IIILclient!e;I)V")
-	public static void method3767(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Class8_Sub4_Sub1 arg2, @OriginalArg(4) int arg3) {
+	public static void method3767(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Player arg2, @OriginalArg(4) int arg3) {
 		if (Static173.aClass8_Sub4_Sub1_2 == arg2 || Static231.anInt5204 >= 400) {
 			return;
 		}

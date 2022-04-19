@@ -595,7 +595,7 @@ public final class Static4 {
 								}
 							} else if (local864 >> 28 != 0) {
 								local1146 = local864 & 0xFFFF;
-								@Pc(2033) Class8_Sub4_Sub1 local2033;
+								@Pc(2033) Player local2033;
 								if (Static16.anInt549 == local1146) {
 									local2033 = Static173.aClass8_Sub4_Sub1_2;
 								} else {

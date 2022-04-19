@@ -156,7 +156,7 @@ public final class Static176 {
 				@Pc(479) int local479;
 				@Pc(493) int local493;
 				@Pc(502) Class8_Sub4_Sub2 local502;
-				@Pc(597) Class8_Sub4_Sub1 local597;
+				@Pc(597) Player local597;
 				if (local133 == 1) {
 					@Pc(421) Class8_Sub4_Sub2 local421 = Static175.aClass8_Sub4_Sub2Array1[local140];
 					if ((local421.aClass96_1.anInt3713 & 0x1) == 0 && (local421.anInt3412 & 0x7F) == 0 && (local421.anInt3421 & 0x7F) == 0 || (local421.aClass96_1.anInt3713 & 0x1) == 1 && (local421.anInt3412 & 0x7F) == 64 && (local421.anInt3421 & 0x7F) == 64) {
@@ -182,7 +182,7 @@ public final class Static176 {
 					Static246.method4240(local421.aClass96_1, local47, local140, local147);
 				}
 				if (local133 == 0) {
-					@Pc(688) Class8_Sub4_Sub1 local688 = Static159.aClass8_Sub4_Sub1Array1[local140];
+					@Pc(688) Player local688 = Static159.aClass8_Sub4_Sub1Array1[local140];
 					if ((local688.anInt3412 & 0x7F) == 64 && (local688.anInt3421 & 0x7F) == 64) {
 						local479 = local688.anInt3412 - (local688.method2693() - 1) * 64;
 						local240 = local688.anInt3421 + 64 - local688.method2693() * 64;

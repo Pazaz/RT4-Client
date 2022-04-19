@@ -56,7 +56,7 @@ public final class Static141 {
 		Static116.method2325(false);
 		Static119.method2381();
 		for (@Pc(39) int local39 = 0; local39 < 2048; local39++) {
-			@Pc(46) Class8_Sub4_Sub1 local46 = Static159.aClass8_Sub4_Sub1Array1[local39];
+			@Pc(46) Player local46 = Static159.aClass8_Sub4_Sub1Array1[local39];
 			if (local46 != null) {
 				local46.anObject5 = null;
 			}

@@ -34,7 +34,7 @@ public final class Static103 {
 		}
 		@Pc(31) long local31 = Static159.aLongArray5[arg0];
 		@Pc(36) int local36 = (int) Static159.aLongArray5[arg0];
-		@Pc(43) Class8_Sub4_Sub1 local43;
+		@Pc(43) Player local43;
 		if (local23 == 31) {
 			local43 = Static159.aClass8_Sub4_Sub1Array1[local36];
 			if (local43 != null) {

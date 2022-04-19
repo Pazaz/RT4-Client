@@ -177,7 +177,7 @@ public final class Static38 {
 			local3 = 1;
 		}
 		@Pc(28) int local28;
-		@Pc(39) Class8_Sub4_Sub1 local39;
+		@Pc(39) Player local39;
 		@Pc(82) int local82;
 		@Pc(182) int local182;
 		@Pc(200) int local200;

@@ -47,7 +47,7 @@ public final class Static73 {
 		}
 		Static35.anInt1092 = -1;
 		Static81.method1750(Static270.anInt5794);
-		Static173.aClass8_Sub4_Sub1_2 = new Class8_Sub4_Sub1();
+		Static173.aClass8_Sub4_Sub1_2 = new Player();
 		Static173.aClass8_Sub4_Sub1_2.anInt3421 = 3000;
 		Static173.aClass8_Sub4_Sub1_2.anInt3412 = 3000;
 		if (!Static239.aBoolean269) {
