@@ -859,7 +859,7 @@ public final class client extends GameShell {
 				Static166.anInt4051 = 110;
 			}
 		} else if (Static166.anInt4051 == 110) {
-			Static178.aClass74_1 = new Class74();
+			Static178.aClass74_1 = new MouseRecorder();
 			Static71.aClass213_3.method5130(10, Static178.aClass74_1);
 			Static126.aClass100_602 = Static171.aClass100_790;
 			Static199.anInt4670 = 75;
