@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!qb")
-public abstract class PcmStream extends Class3 {
+public abstract class PcmStream extends Node {
 
 	@OriginalMember(owner = "client!qb", name = "p", descriptor = "I")
 	public int anInt5626;

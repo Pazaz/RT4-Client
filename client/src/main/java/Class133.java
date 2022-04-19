@@ -7,29 +7,29 @@ import org.openrs2.deob.annotation.Pc;
 public final class Class133 {
 
 	@OriginalMember(owner = "client!sc", name = "q", descriptor = "Lclient!ab;")
-	private Class3 aClass3_192;
+	private Node aClass3_192;
 
 	@OriginalMember(owner = "client!sc", name = "u", descriptor = "J")
 	private long aLong168;
 
 	@OriginalMember(owner = "client!sc", name = "C", descriptor = "Lclient!ab;")
-	private Class3 aClass3_193;
+	private Node aClass3_193;
 
 	@OriginalMember(owner = "client!sc", name = "F", descriptor = "I")
 	private int anInt5037 = 0;
 
 	@OriginalMember(owner = "client!sc", name = "c", descriptor = "[Lclient!ab;")
-	public final Class3[] aClass3Array1;
+	public final Node[] aClass3Array1;
 
 	@OriginalMember(owner = "client!sc", name = "h", descriptor = "I")
 	public final int anInt5023;
 
 	@OriginalMember(owner = "client!sc", name = "<init>", descriptor = "(I)V")
 	public Class133(@OriginalArg(0) int arg0) {
-		this.aClass3Array1 = new Class3[arg0];
+		this.aClass3Array1 = new Node[arg0];
 		this.anInt5023 = arg0;
 		for (@Pc(13) int local13 = 0; local13 < arg0; local13++) {
-			@Pc(25) Class3 local25 = this.aClass3Array1[local13] = new Class3();
+			@Pc(25) Node local25 = this.aClass3Array1[local13] = new Node();
 			local25.aClass3_223 = local25;
 			local25.aClass3_222 = local25;
 		}
@@ -38,9 +38,9 @@ public final class Class133 {
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(I)V")
 	public final void method3856() {
 		for (@Pc(5) int local5 = 0; local5 < this.anInt5023; local5++) {
-			@Pc(14) Class3 local14 = this.aClass3Array1[local5];
+			@Pc(14) Node local14 = this.aClass3Array1[local5];
 			while (true) {
-				@Pc(17) Class3 local17 = local14.aClass3_222;
+				@Pc(17) Node local17 = local14.aClass3_222;
 				if (local14 == local17) {
 					break;
 				}
@@ -52,14 +52,14 @@ public final class Class133 {
 	}
 
 	@OriginalMember(owner = "client!sc", name = "c", descriptor = "(I)Lclient!ab;")
-	public final Class3 method3859() {
+	public final Node method3859() {
 		this.anInt5037 = 0;
 		return this.method3861();
 	}
 
 	@OriginalMember(owner = "client!sc", name = "d", descriptor = "(I)Lclient!ab;")
-	public final Class3 method3861() {
-		@Pc(24) Class3 local24;
+	public final Node method3861() {
+		@Pc(24) Node local24;
 		if (this.anInt5037 > 0 && this.aClass3_193 != this.aClass3Array1[this.anInt5037 - 1]) {
 			local24 = this.aClass3_193;
 			this.aClass3_193 = local24.aClass3_222;
@@ -76,11 +76,11 @@ public final class Class133 {
 	}
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(ILclient!ab;J)V")
-	public final void method3862(@OriginalArg(1) Class3 arg0, @OriginalArg(2) long arg1) {
+	public final void method3862(@OriginalArg(1) Node arg0, @OriginalArg(2) long arg1) {
 		if (arg0.aClass3_223 != null) {
 			arg0.method4658();
 		}
-		@Pc(21) Class3 local21 = this.aClass3Array1[(int) (arg1 & (long) (this.anInt5023 - 1))];
+		@Pc(21) Node local21 = this.aClass3Array1[(int) (arg1 & (long) (this.anInt5023 - 1))];
 		arg0.aClass3_222 = local21;
 		arg0.aLong192 = arg1;
 		arg0.aClass3_223 = local21.aClass3_223;
@@ -89,12 +89,12 @@ public final class Class133 {
 	}
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(JI)Lclient!ab;")
-	public final Class3 method3863(@OriginalArg(0) long arg0) {
+	public final Node method3863(@OriginalArg(0) long arg0) {
 		this.aLong168 = arg0;
-		@Pc(24) Class3 local24 = this.aClass3Array1[(int) (arg0 & (long) (this.anInt5023 - 1))];
+		@Pc(24) Node local24 = this.aClass3Array1[(int) (arg0 & (long) (this.anInt5023 - 1))];
 		for (this.aClass3_192 = local24.aClass3_222; this.aClass3_192 != local24; this.aClass3_192 = this.aClass3_192.aClass3_222) {
 			if (arg0 == this.aClass3_192.aLong192) {
-				@Pc(46) Class3 local46 = this.aClass3_192;
+				@Pc(46) Node local46 = this.aClass3_192;
 				this.aClass3_192 = this.aClass3_192.aClass3_222;
 				return local46;
 			}
@@ -107,8 +107,8 @@ public final class Class133 {
 	public final int method3864() {
 		@Pc(15) int local15 = 0;
 		for (@Pc(17) int local17 = 0; local17 < this.anInt5023; local17++) {
-			@Pc(26) Class3 local26 = this.aClass3Array1[local17];
-			@Pc(29) Class3 local29 = local26.aClass3_222;
+			@Pc(26) Node local26 = this.aClass3Array1[local17];
+			@Pc(29) Node local29 = local26.aClass3_222;
 			while (local29 != local26) {
 				local29 = local29.aClass3_222;
 				local15++;
@@ -118,11 +118,11 @@ public final class Class133 {
 	}
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "([Lclient!ab;I)I")
-	public final int method3865(@OriginalArg(0) Class3[] arg0) {
+	public final int method3865(@OriginalArg(0) Node[] arg0) {
 		@Pc(13) int local13 = 0;
 		for (@Pc(15) int local15 = 0; local15 < this.anInt5023; local15++) {
-			@Pc(24) Class3 local24 = this.aClass3Array1[local15];
-			for (@Pc(27) Class3 local27 = local24.aClass3_222; local27 != local24; local27 = local27.aClass3_222) {
+			@Pc(24) Node local24 = this.aClass3Array1[local15];
+			for (@Pc(27) Node local27 = local24.aClass3_222; local27 != local24; local27 = local27.aClass3_222) {
 				arg0[local13++] = local27;
 			}
 		}
@@ -130,14 +130,14 @@ public final class Class133 {
 	}
 
 	@OriginalMember(owner = "client!sc", name = "f", descriptor = "(I)Lclient!ab;")
-	public final Class3 method3867() {
+	public final Node method3867() {
 		if (this.aClass3_192 == null) {
 			return null;
 		}
-		@Pc(23) Class3 local23 = this.aClass3Array1[(int) (this.aLong168 & (long) (this.anInt5023 - 1))];
+		@Pc(23) Node local23 = this.aClass3Array1[(int) (this.aLong168 & (long) (this.anInt5023 - 1))];
 		while (local23 != this.aClass3_192) {
 			if (this.aClass3_192.aLong192 == this.aLong168) {
-				@Pc(45) Class3 local45 = this.aClass3_192;
+				@Pc(45) Node local45 = this.aClass3_192;
 				this.aClass3_192 = this.aClass3_192.aClass3_222;
 				return local45;
 			}

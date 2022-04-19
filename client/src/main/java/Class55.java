@@ -506,7 +506,7 @@ public final class Class55 {
 				for (local179 = 0; local179 < local169; local179++) {
 					@Pc(510) boolean local510 = arg0.method2229() == 1;
 					@Pc(514) int local514 = arg0.method2220();
-					@Pc(523) Class3 local523;
+					@Pc(523) Node local523;
 					if (local510) {
 						local523 = new Class3_Sub30(arg0.method2202());
 					} else {
