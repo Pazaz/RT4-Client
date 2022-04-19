@@ -806,7 +806,7 @@ public final class client extends GameShell {
 				Static3.method4661(Static261.aClass153_107, Static209.aClass153_86, Static41.aClass153_25, Static267.aClass153_109);
 				Static119.method2384(Static274.aClass153_90);
 				Static85.method1774(Static138.aClass153_50);
-				Static59.method1374(Static28.aClass153_18, Static254.aClass153_105, new Class6());
+				Static59.method1374(Static28.aClass153_18, Static254.aClass153_105, new Js5QuickChatCommandDecoder());
 				Static115.method2311(Static28.aClass153_18, Static254.aClass153_105);
 				Static107.method2264(Static274.aClass153_90);
 				Static246.method4237(Static274.aClass153_90, Static209.aClass153_86);
