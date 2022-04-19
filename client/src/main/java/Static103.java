@@ -170,7 +170,7 @@ public final class Static103 {
 			Static6.aClass3_Sub15_Sub1_1.method2242(92);
 			Static6.aClass3_Sub15_Sub1_1.method2191(local36);
 		}
-		@Pc(693) Class13 local693;
+		@Pc(693) Component local693;
 		if (local23 == 1006) {
 			local693 = Static5.method32(local19);
 			if (local693 == null || local693.anIntArray50[local15] < 100000) {
@@ -799,7 +799,7 @@ public final class Static103 {
 			@Pc(14) int local14 = local6.anInt5878;
 			if (Static245.method4225(local14)) {
 				@Pc(21) boolean local21 = true;
-				@Pc(25) Class13[] local25 = Static241.aClass13ArrayArray12[local14];
+				@Pc(25) Component[] local25 = Static241.aClass13ArrayArray12[local14];
 				@Pc(27) int local27;
 				for (local27 = 0; local27 < local25.length; local27++) {
 					if (local25[local27] != null) {
@@ -809,7 +809,7 @@ public final class Static103 {
 				}
 				if (!local21) {
 					local27 = (int) local6.aLong192;
-					@Pc(60) Class13 local60 = Static5.method32(local27);
+					@Pc(60) Component local60 = Static5.method32(local27);
 					if (local60 != null) {
 						Static43.method1143(local60);
 					}

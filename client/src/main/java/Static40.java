@@ -106,7 +106,7 @@ public final class Static40 {
 	}
 
 	@OriginalMember(owner = "client!da", name = "a", descriptor = "(IIILclient!be;)V")
-	public static void method1015(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) Class13 arg2) {
+	public static void method1015(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) Component arg2) {
 		if (Static105.aClass13_14 != null || Static60.aBoolean108 || (arg2 == null || Static89.method1836(arg2) == null)) {
 			return;
 		}

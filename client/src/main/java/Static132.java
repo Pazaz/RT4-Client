@@ -25,7 +25,7 @@ public final class Static132 {
 			Static109.method2275(local16);
 		}
 		Static273.method3214(local16);
-		@Pc(32) Class13 local32 = Static5.method32(local9);
+		@Pc(32) Component local32 = Static5.method32(local9);
 		if (local32 != null) {
 			Static43.method1143(local32);
 		}

@@ -108,7 +108,7 @@ public final class Static87 {
 	}
 
 	@OriginalMember(owner = "client!gn", name = "a", descriptor = "(III[Lclient!be;IIIIBI)V")
-	public static void method1809(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) Class13[] arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(9) int arg8) {
+	public static void method1809(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) Component[] arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(9) int arg8) {
 		if (Static239.aBoolean269) {
 			Static46.method1187(arg0, arg6, arg4, arg7);
 		} else {
@@ -116,7 +116,7 @@ public final class Static87 {
 			Rasteriser.method1908();
 		}
 		for (@Pc(18) int local18 = 0; local18 < arg3.length; local18++) {
-			@Pc(30) Class13 local30 = arg3[local18];
+			@Pc(30) Component local30 = arg3[local18];
 			if (local30 != null && (local30.anInt456 == arg5 || arg5 == -1412584499 && local30 == Static105.aClass13_14)) {
 				@Pc(57) int local57;
 				if (arg8 == -1) {
@@ -247,7 +247,7 @@ public final class Static87 {
 								local563 = Static173.aClass8_Sub4_Sub1_2.anInt3412 + local556 >> 7;
 								local571 = Static173.aClass8_Sub4_Sub1_2.anInt3421 - local545 >> 7;
 								if (Static241.aBoolean302 && (Static274.anInt4999 & 0x40) != 0) {
-									@Pc(583) Class13 local583 = Static201.method1418(Static98.anInt2512, Static15.anInt506);
+									@Pc(583) Component local583 = Static201.method1418(Static98.anInt2512, Static15.anInt506);
 									if (local583 == null) {
 										Static53.method1294();
 									} else {
@@ -441,7 +441,7 @@ public final class Static87 {
 														}
 														local1476.method1417(local503 + local518, local514 - -local556, 128);
 														if (arg5 != -1) {
-															@Pc(1571) Class13 local1571 = arg3[arg5 & 0xFFFF];
+															@Pc(1571) Component local1571 = arg3[arg5 & 0xFFFF];
 															@Pc(1577) int local1577;
 															@Pc(1575) int local1575;
 															if (Static239.aBoolean269) {

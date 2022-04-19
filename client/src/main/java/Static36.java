@@ -26,7 +26,7 @@ public final class Static36 {
 	public static final JagString aClass100_234 = aClass100_235;
 
 	@OriginalMember(owner = "client!client", name = "a", descriptor = "(Lclient!be;)Lclient!be;")
-	public static Class13 method938(@OriginalArg(0) Class13 arg0) {
+	public static Component method938(@OriginalArg(0) Component arg0) {
 		@Pc(4) int local4 = method940(arg0).method505();
 		if (local4 == 0) {
 			return null;
@@ -41,7 +41,7 @@ public final class Static36 {
 	}
 
 	@OriginalMember(owner = "client!client", name = "b", descriptor = "(Lclient!be;)Lclient!bf;")
-	public static ServerActiveProperties method940(@OriginalArg(0) Class13 arg0) {
+	public static ServerActiveProperties method940(@OriginalArg(0) Component arg0) {
 		@Pc(13) ServerActiveProperties local13 = (ServerActiveProperties) Static210.aClass133_21.method3863(((long) arg0.anInt507 << 32) + (long) arg0.anInt457);
 		return local13 == null ? arg0.aClass3_Sub4_1 : local13;
 	}
@@ -64,9 +64,9 @@ public final class Static36 {
 	}
 
 	@OriginalMember(owner = "client!client", name = "a", descriptor = "([Lclient!be;IIIIIII)V")
-	public static void method946(@OriginalArg(0) Class13[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7) {
+	public static void method946(@OriginalArg(0) Component[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7) {
 		for (@Pc(1) int local1 = 0; local1 < arg0.length; local1++) {
-			@Pc(9) Class13 local9 = arg0[local1];
+			@Pc(9) Component local9 = arg0[local1];
 			if (local9 != null && local9.anInt456 == arg1 && (!local9.aBoolean32 || local9.anInt452 == 0 || local9.aBoolean25 || method940(local9).anInt546 != 0 || local9 == Static4.aClass13_1 || local9.anInt453 == 1338) && (!local9.aBoolean32 || !method947(local9))) {
 				@Pc(50) int local50 = local9.anInt523 + arg6;
 				@Pc(55) int local55 = local9.anInt469 + arg7;
@@ -514,7 +514,7 @@ public final class Static36 {
 	}
 
 	@OriginalMember(owner = "client!client", name = "c", descriptor = "(Lclient!be;)Z")
-	public static boolean method947(@OriginalArg(0) Class13 arg0) {
+	public static boolean method947(@OriginalArg(0) Component arg0) {
 		if (Static121.aBoolean154) {
 			if (method940(arg0).anInt546 != 0) {
 				return false;

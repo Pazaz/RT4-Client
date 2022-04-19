@@ -31,7 +31,7 @@ public final class Static249 {
 	public static final int[] anIntArray478 = new int[32];
 
 	@OriginalMember(owner = "client!ud", name = "a", descriptor = "(ILclient!be;)Z")
-	public static boolean method4265(@OriginalArg(1) Class13 arg0) {
+	public static boolean method4265(@OriginalArg(1) Component arg0) {
 		if (arg0.anInt453 == 205) {
 			Static267.anInt5775 = 250;
 			return true;

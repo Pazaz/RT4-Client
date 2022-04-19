@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!be")
-public final class Class13 {
+public final class Component {
 
 	@OriginalMember(owner = "client!be", name = "b", descriptor = "[Ljava/lang/Object;")
 	public Object[] anObjectArray1;
@@ -109,7 +109,7 @@ public final class Class13 {
 	public Object[] anObjectArray20;
 
 	@OriginalMember(owner = "client!be", name = "lc", descriptor = "[Lclient!be;")
-	public Class13[] aClass13Array3;
+	public Component[] aClass13Array3;
 
 	@OriginalMember(owner = "client!be", name = "mc", descriptor = "[B")
 	public byte[] aByteArray8;
@@ -427,7 +427,7 @@ public final class Class13 {
 	public int anInt513 = 0;
 
 	@OriginalMember(owner = "client!be", name = "fd", descriptor = "Lclient!be;")
-	public Class13 aClass13_5 = null;
+	public Component aClass13_5 = null;
 
 	@OriginalMember(owner = "client!be", name = "od", descriptor = "I")
 	public int anInt525 = 0;

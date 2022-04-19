@@ -16,7 +16,7 @@ public final class Static274 {
 	public static Js5 aClass153_90;
 
 	@OriginalMember(owner = "client!wf", name = "j", descriptor = "Lclient!be;")
-	public static Class13 aClass13_24;
+	public static Component aClass13_24;
 
 	@OriginalMember(owner = "client!wf", name = "h", descriptor = "Lclient!na;")
 	public static final JagString aClass100_942 = Static28.method790("Update)2Liste geladen)3");

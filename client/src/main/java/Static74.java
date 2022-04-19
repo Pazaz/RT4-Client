@@ -63,8 +63,8 @@ public final class Static74 {
 	}
 
 	@OriginalMember(owner = "client!fn", name = "a", descriptor = "(ILclient!be;)V")
-	public static void method1625(@OriginalArg(1) Class13 arg0) {
-		@Pc(7) Class13 local7 = Static280.method4668(arg0);
+	public static void method1625(@OriginalArg(1) Component arg0) {
+		@Pc(7) Component local7 = Static280.method4668(arg0);
 		@Pc(19) int local19;
 		@Pc(17) int local17;
 		if (local7 == null) {
@@ -83,9 +83,9 @@ public final class Static74 {
 		if (arg0 == -1 || !Static245.method4225(arg0)) {
 			return;
 		}
-		@Pc(31) Class13[] local31 = Static241.aClass13ArrayArray12[arg0];
+		@Pc(31) Component[] local31 = Static241.aClass13ArrayArray12[arg0];
 		for (@Pc(33) int local33 = 0; local33 < local31.length; local33++) {
-			@Pc(41) Class13 local41 = local31[local33];
+			@Pc(41) Component local41 = local31[local33];
 			if (local41.anObjectArray3 != null) {
 				@Pc(50) Class3_Sub19 local50 = new Class3_Sub19();
 				local50.anObjectArray31 = local41.anObjectArray3;

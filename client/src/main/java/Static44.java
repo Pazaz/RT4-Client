@@ -70,7 +70,7 @@ public final class Static44 {
 		local9.anInt5878 = arg0;
 		Static119.aClass133_9.method3862(local9, (long) arg1);
 		Static81.method1753(arg0);
-		@Pc(28) Class13 local28 = Static5.method32(arg1);
+		@Pc(28) Component local28 = Static5.method32(arg1);
 		if (local28 != null) {
 			Static43.method1143(local28);
 		}

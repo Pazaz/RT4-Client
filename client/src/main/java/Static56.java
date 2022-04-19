@@ -51,7 +51,7 @@ public final class Static56 {
 	public static JagString aClass100_386 = aClass100_387;
 
 	@OriginalMember(owner = "client!ef", name = "r", descriptor = "Lclient!be;")
-	public static Class13 aClass13_12 = null;
+	public static Component aClass13_12 = null;
 
 	@OriginalMember(owner = "client!ef", name = "t", descriptor = "Lclient!na;")
 	public static final JagString aClass100_388 = aClass100_383;

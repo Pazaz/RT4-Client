@@ -8,7 +8,7 @@ public final class Static118 {
 	public static byte[][][] aByteArrayArrayArray9;
 
 	@OriginalMember(owner = "client!jd", name = "i", descriptor = "Lclient!be;")
-	public static Class13 aClass13_15;
+	public static Component aClass13_15;
 
 	@OriginalMember(owner = "client!jd", name = "c", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable aClass99_16 = new SoftLruHashTable(100);
@@ -26,9 +26,9 @@ public final class Static118 {
 	}
 
 	@OriginalMember(owner = "client!jd", name = "a", descriptor = "(II[Lclient!be;)V")
-	public static void method2354(@OriginalArg(1) int arg0, @OriginalArg(2) Class13[] arg1) {
+	public static void method2354(@OriginalArg(1) int arg0, @OriginalArg(2) Component[] arg1) {
 		for (@Pc(7) int local7 = 0; local7 < arg1.length; local7++) {
-			@Pc(15) Class13 local15 = arg1[local7];
+			@Pc(15) Component local15 = arg1[local7];
 			if (local15 != null && local15.anInt456 == arg0 && (!local15.aBoolean32 || !Static36.method947(local15))) {
 				if (local15.anInt452 == 0) {
 					if (!local15.aBoolean32 && Static36.method947(local15) && local15 != Static180.aClass13_22) {

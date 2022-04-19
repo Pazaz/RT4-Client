@@ -16,7 +16,7 @@ public final class Static39 {
 	public static Sprite aClass3_Sub2_Sub1_1;
 
 	@OriginalMember(owner = "client!d", name = "R", descriptor = "Lclient!be;")
-	public static Class13 aClass13_10 = null;
+	public static Component aClass13_10 = null;
 
 	@OriginalMember(owner = "client!d", name = "S", descriptor = "Ljava/util/Random;")
 	public static final Random aRandom1 = new Random();

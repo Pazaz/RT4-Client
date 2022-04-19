@@ -86,7 +86,7 @@ public final class Static3 {
 		Static167.aClass153_64 = arg0;
 		Static202.aClass153_84 = arg2;
 		Static203.aClass153_85 = arg3;
-		Static241.aClass13ArrayArray12 = new Class13[Static202.aClass153_84.method4483()][];
+		Static241.aClass13ArrayArray12 = new Component[Static202.aClass153_84.method4483()][];
 		Static223.aBooleanArray115 = new boolean[Static202.aClass153_84.method4483()];
 	}
 }

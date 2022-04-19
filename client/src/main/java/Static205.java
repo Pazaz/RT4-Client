@@ -13,7 +13,7 @@ public final class Static205 {
 	public static final int[] anIntArray426 = new int[128];
 
 	@OriginalMember(owner = "client!qj", name = "a", descriptor = "(Lclient!be;BI)Lclient!na;")
-	public static JagString method3677(@OriginalArg(0) Class13 arg0, @OriginalArg(2) int arg1) {
+	public static JagString method3677(@OriginalArg(0) Component arg0, @OriginalArg(2) int arg1) {
 		if (!Static36.method940(arg0).method503(arg1) && arg0.anObjectArray29 == null) {
 			return null;
 		} else if (arg0.aClass100Array18 == null || arg0.aClass100Array18.length <= arg1 || arg0.aClass100Array18[arg1] == null || arg0.aClass100Array18[arg1].method3144().method3120() == 0) {

@@ -82,9 +82,9 @@ public final class Static81 {
 		if (!Static245.method4225(arg0)) {
 			return;
 		}
-		@Pc(15) Class13[] local15 = Static241.aClass13ArrayArray12[arg0];
+		@Pc(15) Component[] local15 = Static241.aClass13ArrayArray12[arg0];
 		for (@Pc(17) int local17 = 0; local17 < local15.length; local17++) {
-			@Pc(29) Class13 local29 = local15[local17];
+			@Pc(29) Component local29 = local15[local17];
 			if (local29 != null) {
 				local29.anInt496 = 1;
 				local29.anInt510 = 0;
@@ -300,7 +300,7 @@ public final class Static81 {
 				Static226.aClass100Array154[local88] = local709.aClass100_254;
 				Static233.anIntArray452[Static72.anInt2036++ & 0x1F] = local88;
 			} else {
-				@Pc(773) Class13 local773;
+				@Pc(773) Component local773;
 				if (local79 == 3) {
 					local773 = Static5.method32(local88);
 					if (!local709.aClass100_254.method3108(local773.aClass100_84)) {
@@ -332,7 +332,7 @@ public final class Static81 {
 					local111 = local106 >> 10 & 0x1F;
 					local182 = local106 & 0x1F;
 					local782 = local106 >> 5 & 0x1F;
-					@Pc(1189) Class13 local1189 = Static5.method32(local88);
+					@Pc(1189) Component local1189 = Static5.method32(local88);
 					local189 = (local182 << 3) + (local782 << 11) + (local111 << 19);
 					if (local189 != local1189.anInt474) {
 						local1189.anInt474 = local189;
@@ -417,7 +417,7 @@ public final class Static81 {
 				Static257.aClass13_7 = null;
 			}
 		}
-		@Pc(1361) Class13 local1361;
+		@Pc(1361) Component local1361;
 		if (Static118.aClass13_15 != null) {
 			Static43.method1143(Static118.aClass13_15);
 			if (Static149.anInt3554 + 5 < Static215.anInt4873 || Static215.anInt4873 < Static149.anInt3554 - 5 || Static206.anInt4773 + 5 < Static223.anInt5032 || Static206.anInt4773 - 5 > Static223.anInt5032) {
@@ -479,7 +479,7 @@ public final class Static81 {
 		Static182.anInt4313 = 0;
 		local1361 = Static180.aClass13_22;
 		Static180.aClass13_22 = null;
-		@Pc(1508) Class13 local1508 = Static43.aClass13_11;
+		@Pc(1508) Component local1508 = Static43.aClass13_11;
 		Static43.aClass13_11 = null;
 		while (Static25.method712() && Static182.anInt4313 < 128) {
 			Static227.anIntArray447[Static182.anInt4313] = Static102.anInt2681;
@@ -492,8 +492,8 @@ public final class Static81 {
 		}
 		Static119.anInt3028++;
 		while (true) {
-			@Pc(1569) Class13 local1569;
-			@Pc(1560) Class13 local1560;
+			@Pc(1569) Component local1569;
+			@Pc(1560) Component local1560;
 			@Pc(1555) Class3_Sub19 local1555;
 			do {
 				local1555 = (Class3_Sub19) Static4.aClass69_2.method2287();

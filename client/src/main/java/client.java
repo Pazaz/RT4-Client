@@ -470,8 +470,8 @@ public final class client extends GameShell {
 		}
 		while (true) {
 			@Pc(374) Class3_Sub19 local374;
-			@Pc(379) Class13 local379;
-			@Pc(387) Class13 local387;
+			@Pc(379) Component local379;
+			@Pc(387) Component local387;
 			do {
 				local374 = (Class3_Sub19) Static4.aClass69_2.method2287();
 				if (local374 == null) {
