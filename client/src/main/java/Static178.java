@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static178 {
 
 	@OriginalMember(owner = "client!od", name = "f", descriptor = "Lclient!jd;")
-	public static Class74 aClass74_1;
+	public static MouseRecorder aClass74_1;
 
 	@OriginalMember(owner = "client!od", name = "b", descriptor = "Lclient!na;")
 	private static final Class100 aClass100_803 = Static28.method790("Connected to update server");
