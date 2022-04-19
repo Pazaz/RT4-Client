@@ -8,7 +8,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!rd")
-public final class Class130 implements MaterialRenderer {
+public final class LiquidMaterialRenderer implements MaterialRenderer {
 
 	@OriginalMember(owner = "client!rd", name = "a", descriptor = "I")
 	private int anInt4829 = -1;
@@ -23,7 +23,7 @@ public final class Class130 implements MaterialRenderer {
 	private FloatBuffer aFloatBuffer1;
 
 	@OriginalMember(owner = "client!rd", name = "<init>", descriptor = "()V")
-	public Class130() {
+	public LiquidMaterialRenderer() {
 		if (this.anInt4831 < 0 && (Static239.aBoolean274 && Static239.anInt5322 >= 2)) {
 			@Pc(19) int[] local19 = new int[1];
 			@Pc(21) GL local21 = Static239.aGL1;
