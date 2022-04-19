@@ -1,6 +1,5 @@
 import java.awt.Component;
 import java.awt.Graphics;
-import java.awt.Point;
 import java.awt.Shape;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
@@ -14,7 +13,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ti")
-public final class Class27_Sub2 extends Class27 {
+public final class BufferedImageFrameBuffer extends Class27 {
 
 	@OriginalMember(owner = "client!ti", name = "p", descriptor = "Ljava/awt/Component;")
 	private Component aComponent1;
