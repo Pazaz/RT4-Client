@@ -116,7 +116,7 @@ public final class Static112 {
 	}
 
 	@OriginalMember(owner = "client!ij", name = "a", descriptor = "(Lclient!km;I)I")
-	public static int method2299(@OriginalArg(0) Class8_Sub4_Sub2 arg0) {
+	public static int method2299(@OriginalArg(0) Npc arg0) {
 		@Pc(13) Class96 local13 = arg0.aClass96_1;
 		if (local13.anIntArray357 != null) {
 			local13 = local13.method2932();

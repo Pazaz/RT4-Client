@@ -84,7 +84,7 @@ public final class Static91 {
 	}
 
 	@OriginalMember(owner = "client!hc", name = "a", descriptor = "(Lclient!km;Z)V")
-	public static void method1877(@OriginalArg(0) Class8_Sub4_Sub2 arg0) {
+	public static void method1877(@OriginalArg(0) Npc arg0) {
 		for (@Pc(13) Class3_Sub12 local13 = (Class3_Sub12) Static152.aClass69_87.method2289(); local13 != null; local13 = (Class3_Sub12) Static152.aClass69_87.method2288()) {
 			if (arg0 == local13.aClass8_Sub4_Sub2_1) {
 				if (local13.aClass3_Sub3_Sub1_1 != null) {

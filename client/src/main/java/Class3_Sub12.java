@@ -33,7 +33,7 @@ public final class Class3_Sub12 extends Node {
 	public int anInt2037;
 
 	@OriginalMember(owner = "client!fl", name = "I", descriptor = "Lclient!km;")
-	public Class8_Sub4_Sub2 aClass8_Sub4_Sub2_1;
+	public Npc aClass8_Sub4_Sub2_1;
 
 	@OriginalMember(owner = "client!fl", name = "K", descriptor = "I")
 	public int anInt2040;

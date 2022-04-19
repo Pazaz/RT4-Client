@@ -66,7 +66,7 @@ public final class Static103 {
 			Static257.aClass13_7 = Static5.method32(local19);
 			Static250.anInt5444 = local15;
 		}
-		@Pc(192) Class8_Sub4_Sub2 local192;
+		@Pc(192) Npc local192;
 		if (local23 == 19) {
 			local192 = Static175.aClass8_Sub4_Sub2Array1[local36];
 			if (local192 != null) {
