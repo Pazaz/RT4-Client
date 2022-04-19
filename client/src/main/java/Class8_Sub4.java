@@ -357,8 +357,8 @@ public abstract class Class8_Sub4 extends Entity {
 		if (local24 == 0 || local27 == 0) {
 			return;
 		}
-		@Pc(39) int local39 = Class58.anIntArray223[arg1];
-		@Pc(43) int local43 = Class58.anIntArray225[arg1];
+		@Pc(39) int local39 = MathUtils.anIntArray223[arg1];
+		@Pc(43) int local43 = MathUtils.anIntArray225[arg1];
 		@Pc(48) int local48 = -local24 / 2;
 		@Pc(53) int local53 = -local27 / 2;
 		@Pc(64) int local64 = local53 * local43 - local48 * local39 >> 16;

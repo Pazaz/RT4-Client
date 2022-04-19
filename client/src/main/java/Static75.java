@@ -420,8 +420,8 @@ public final class Static75 {
 									local1188 = local1232.anIntArrayArray7[local1194][0];
 									local224 -= local1232.anIntArrayArray7[local1194][1];
 									@Pc(1264) int local1264 = local1232.anIntArrayArray7[local1194][2];
-									@Pc(1269) int local1269 = Class58.anIntArray223[local1198.anInt3381];
-									@Pc(1274) int local1274 = Class58.anIntArray225[local1198.anInt3381];
+									@Pc(1269) int local1269 = MathUtils.anIntArray223[local1198.anInt3381];
+									@Pc(1274) int local1274 = MathUtils.anIntArray225[local1198.anInt3381];
 									@Pc(1284) int local1284 = local1188 * local1274 + local1264 * local1269 >> 16;
 									@Pc(1295) int local1295 = local1274 * local1264 - local1188 * local1269 >> 16;
 									local19 += local1295;

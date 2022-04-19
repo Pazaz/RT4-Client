@@ -114,7 +114,7 @@ public final class Class51 {
 		@Pc(29) int local29 = this.anInt2233;
 		@Pc(62) int local62;
 		if (local29 == 1) {
-			local62 = (Class58.anIntArray223[local26] >> 6) + 1024;
+			local62 = (MathUtils.anIntArray223[local26] >> 6) + 1024;
 		} else if (local29 == 3) {
 			local62 = Static62.anIntArray150[local26] >> 1;
 		} else if (local29 == 4) {

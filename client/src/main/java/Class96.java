@@ -276,12 +276,12 @@ public final class Class96 {
 								local259[0] = local259[4] = local259[8] = 32768;
 								local259[12] = -local235;
 							} else {
-								local300 = Class58.anIntArray225[local207] >> 1;
-								@Pc(306) int local306 = Class58.anIntArray223[local207] >> 1;
-								@Pc(312) int local312 = Class58.anIntArray225[local214] >> 1;
-								local318 = Class58.anIntArray225[local228] >> 1;
-								local324 = Class58.anIntArray223[local214] >> 1;
-								local330 = Class58.anIntArray223[local228] >> 1;
+								local300 = MathUtils.anIntArray225[local207] >> 1;
+								@Pc(306) int local306 = MathUtils.anIntArray223[local207] >> 1;
+								@Pc(312) int local312 = MathUtils.anIntArray225[local214] >> 1;
+								local318 = MathUtils.anIntArray225[local228] >> 1;
+								local324 = MathUtils.anIntArray223[local214] >> 1;
+								local330 = MathUtils.anIntArray223[local228] >> 1;
 								local259[3] = local300 * local330 + 16384 >> 15;
 								local259[8] = local300 * local312 + 16384 >> 15;
 								local259[5] = -local306;
