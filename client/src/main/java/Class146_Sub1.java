@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ua")
-public final class Class146_Sub1 extends Class146 {
+public final class Class146_Sub1 extends ByteArray {
 
 	@OriginalMember(owner = "client!ua", name = "m", descriptor = "Ljava/nio/ByteBuffer;")
 	private ByteBuffer aByteBuffer10;
