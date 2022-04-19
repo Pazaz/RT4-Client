@@ -102,13 +102,13 @@ public final class Static140 {
 	}
 
 	@OriginalMember(owner = "client!la", name = "a", descriptor = "(II)Lclient!ic;")
-	public static Class65 method2709(@OriginalArg(1) int arg0) {
-		@Pc(10) Class65 local10 = (Class65) Static220.aClass99_28.method3106((long) arg0);
+	public static LightType method2709(@OriginalArg(1) int arg0) {
+		@Pc(10) LightType local10 = (LightType) Static220.aClass99_28.method3106((long) arg0);
 		if (local10 != null) {
 			return local10;
 		}
 		@Pc(26) byte[] local26 = Static85.aClass153_36.method4495(31, arg0);
-		local10 = new Class65();
+		local10 = new LightType();
 		if (local26 != null) {
 			local10.method2257(new Buffer(local26), arg0);
 		}
