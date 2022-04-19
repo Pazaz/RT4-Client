@@ -95,13 +95,13 @@ public final class Static34 {
 	}
 
 	@OriginalMember(owner = "client!ck", name = "a", descriptor = "(BI)Lclient!eg;")
-	public static Class34 method877(@OriginalArg(1) int arg0) {
-		@Pc(10) Class34 local10 = (Class34) Static279.aClass99_38.method3106((long) arg0);
+	public static SpotAnimType method877(@OriginalArg(1) int arg0) {
+		@Pc(10) SpotAnimType local10 = (SpotAnimType) Static279.aClass99_38.method3106((long) arg0);
 		if (local10 != null) {
 			return local10;
 		}
 		@Pc(26) byte[] local26 = Static132.aClass153_48.method4495(Static206.method3681(arg0), Static133.method4010(arg0));
-		local10 = new Class34();
+		local10 = new SpotAnimType();
 		local10.anInt1751 = arg0;
 		if (local26 != null) {
 			local10.method1316(new Buffer(local26));

@@ -243,7 +243,7 @@ public final class Player extends PathingEntity {
 		this.method2685(local76, arg0);
 		local184 = null;
 		if (!this.aBoolean98 && this.anInt3432 != -1 && this.anInt3399 != -1) {
-			@Pc(471) Class34 local471 = Static34.method877(this.anInt3432);
+			@Pc(471) SpotAnimType local471 = Static34.method877(this.anInt3432);
 			local184 = local471.method1319(this.anInt3418, this.anInt3399, this.anInt3361);
 			if (local184 != null) {
 				local184.method4575(0, -this.anInt3394, 0);
