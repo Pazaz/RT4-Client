@@ -133,7 +133,7 @@ public final class GlModel extends Model {
 	}
 
 	@OriginalMember(owner = "client!td", name = "<init>", descriptor = "(Lclient!gb;IIZ)V")
-	public GlModel(@OriginalArg(0) Class8_Sub5 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) boolean arg3) {
+	public GlModel(@OriginalArg(0) RawModel arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) boolean arg3) {
 		@Pc(23) int[] local23 = new int[arg0.anInt2136];
 		this.anIntArray462 = new int[arg0.anInt2139 + 1];
 		for (@Pc(32) int local32 = 0; local32 < arg0.anInt2136; local32++) {
@@ -1077,7 +1077,7 @@ public final class GlModel extends Model {
 	}
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(Lclient!gb;IJIIIIFF)S")
-	private short method4098(@OriginalArg(0) Class8_Sub5 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) long arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) float arg7, @OriginalArg(8) float arg8) {
+	private short method4098(@OriginalArg(0) RawModel arg0, @OriginalArg(1) int arg1, @OriginalArg(2) long arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) float arg7, @OriginalArg(8) float arg8) {
 		@Pc(4) int local4 = this.anIntArray462[arg1];
 		@Pc(11) int local11 = this.anIntArray462[arg1 + 1];
 		@Pc(13) int local13 = 0;

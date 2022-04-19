@@ -243,7 +243,7 @@ public final class Class96 {
 			if (local46) {
 				return null;
 			}
-			@Pc(84) Class8_Sub5[] local84 = new Class8_Sub5[this.anIntArray356.length];
+			@Pc(84) RawModel[] local84 = new RawModel[this.anIntArray356.length];
 			for (@Pc(86) int local86 = 0; local86 < this.anIntArray356.length; local86++) {
 				if (this.anIntArray356[local86] != -1) {
 					local84[local86] = Static77.method1686(Static86.aClass153_37, this.anIntArray356[local86]);
@@ -310,11 +310,11 @@ public final class Class96 {
 					}
 				}
 			}
-			@Pc(593) Class8_Sub5 local593;
+			@Pc(593) RawModel local593;
 			if (local84.length == 1) {
 				local593 = local84[0];
 			} else {
-				local593 = new Class8_Sub5(local84, local84.length);
+				local593 = new RawModel(local84, local84.length);
 			}
 			if (this.aShortArray38 != null) {
 				for (local173 = 0; local173 < this.aShortArray38.length; local173++) {
@@ -518,15 +518,15 @@ public final class Class96 {
 				if (local46) {
 					return null;
 				}
-				@Pc(82) Class8_Sub5[] local82 = new Class8_Sub5[this.anIntArray354.length];
+				@Pc(82) RawModel[] local82 = new RawModel[this.anIntArray354.length];
 				for (@Pc(84) int local84 = 0; local84 < this.anIntArray354.length; local84++) {
 					local82[local84] = Static77.method1686(Static86.aClass153_37, this.anIntArray354[local84]);
 				}
-				@Pc(119) Class8_Sub5 local119;
+				@Pc(119) RawModel local119;
 				if (local82.length == 1) {
 					local119 = local82[0];
 				} else {
-					local119 = new Class8_Sub5(local82, local82.length);
+					local119 = new RawModel(local82, local82.length);
 				}
 				@Pc(130) int local130;
 				if (this.aShortArray38 != null) {

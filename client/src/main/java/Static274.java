@@ -22,7 +22,7 @@ public final class Static274 {
 	public static final Class100 aClass100_942 = Static28.method790("Update)2Liste geladen)3");
 
 	@OriginalMember(owner = "client!wf", name = "o", descriptor = "[Lclient!gb;")
-	public static final Class8_Sub5[] aClass8_Sub5Array5 = new Class8_Sub5[4];
+	public static final RawModel[] aClass8_Sub5Array5 = new RawModel[4];
 
 	@OriginalMember(owner = "client!wf", name = "s", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_943 = Static28.method790("Forced tweening disabled)3");

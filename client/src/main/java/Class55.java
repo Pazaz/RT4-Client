@@ -314,7 +314,7 @@ public final class Class55 {
 		}
 		@Pc(76) Model local76 = (Model) Static244.aClass99_32.method3106((long) this.anInt2354);
 		if (local76 == null) {
-			@Pc(85) Class8_Sub5 local85 = Static77.method1686(Static230.aClass153_95, this.anInt2320);
+			@Pc(85) RawModel local85 = Static77.method1686(Static230.aClass153_95, this.anInt2320);
 			if (local85 == null) {
 				return null;
 			}
@@ -529,7 +529,7 @@ public final class Class55 {
 	}
 
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(ZB)Lclient!gb;")
-	public final Class8_Sub5 method1830(@OriginalArg(0) boolean arg0) {
+	public final RawModel method1830(@OriginalArg(0) boolean arg0) {
 		@Pc(4) int local4 = this.anInt2364;
 		@Pc(17) int local17 = this.anInt2372;
 		if (arg0) {
@@ -539,11 +539,11 @@ public final class Class55 {
 		if (local17 == -1) {
 			return null;
 		}
-		@Pc(36) Class8_Sub5 local36 = Static77.method1686(Static230.aClass153_95, local17);
+		@Pc(36) RawModel local36 = Static77.method1686(Static230.aClass153_95, local17);
 		if (local4 != -1) {
-			@Pc(44) Class8_Sub5 local44 = Static77.method1686(Static230.aClass153_95, local4);
-			@Pc(55) Class8_Sub5[] local55 = new Class8_Sub5[] { local36, local44 };
-			local36 = new Class8_Sub5(local55, 2);
+			@Pc(44) RawModel local44 = Static77.method1686(Static230.aClass153_95, local4);
+			@Pc(55) RawModel[] local55 = new RawModel[] { local36, local44 };
+			local36 = new RawModel(local55, 2);
 		}
 		@Pc(66) int local66;
 		if (this.aShortArray34 != null) {
@@ -560,7 +560,7 @@ public final class Class55 {
 	}
 
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(ZI)Lclient!gb;")
-	public final Class8_Sub5 method1831(@OriginalArg(0) boolean arg0) {
+	public final RawModel method1831(@OriginalArg(0) boolean arg0) {
 		@Pc(4) int local4 = this.anInt2360;
 		@Pc(18) int local18 = this.anInt2341;
 		@Pc(21) int local21 = this.anInt2340;
@@ -572,16 +572,16 @@ public final class Class55 {
 		if (local4 == -1) {
 			return null;
 		}
-		@Pc(43) Class8_Sub5 local43 = Static77.method1686(Static230.aClass153_95, local4);
+		@Pc(43) RawModel local43 = Static77.method1686(Static230.aClass153_95, local4);
 		if (local18 != -1) {
-			@Pc(54) Class8_Sub5 local54 = Static77.method1686(Static230.aClass153_95, local18);
+			@Pc(54) RawModel local54 = Static77.method1686(Static230.aClass153_95, local18);
 			if (local21 == -1) {
-				@Pc(68) Class8_Sub5[] local68 = new Class8_Sub5[] { local43, local54 };
-				local43 = new Class8_Sub5(local68, 2);
+				@Pc(68) RawModel[] local68 = new RawModel[] { local43, local54 };
+				local43 = new RawModel(local68, 2);
 			} else {
-				@Pc(81) Class8_Sub5 local81 = Static77.method1686(Static230.aClass153_95, local21);
-				@Pc(96) Class8_Sub5[] local96 = new Class8_Sub5[] { local43, local54, local81 };
-				local43 = new Class8_Sub5(local96, 3);
+				@Pc(81) RawModel local81 = Static77.method1686(Static230.aClass153_95, local21);
+				@Pc(96) RawModel[] local96 = new RawModel[] { local43, local54, local81 };
+				local43 = new RawModel(local96, 3);
 			}
 		}
 		if (!arg0 && (this.anInt2330 != 0 || this.anInt2347 != 0 || this.anInt2343 != 0)) {
@@ -626,7 +626,7 @@ public final class Class55 {
 
 	@OriginalMember(owner = "client!h", name = "d", descriptor = "(I)Lclient!w;")
 	public final Class8_Sub1_Sub2 method1834() {
-		@Pc(11) Class8_Sub5 local11 = Static77.method1686(Static230.aClass153_95, this.anInt2320);
+		@Pc(11) RawModel local11 = Static77.method1686(Static230.aClass153_95, this.anInt2320);
 		if (local11 == null) {
 			return null;
 		}

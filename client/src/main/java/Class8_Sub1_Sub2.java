@@ -128,7 +128,7 @@ public final class Class8_Sub1_Sub2 extends Model {
 	}
 
 	@OriginalMember(owner = "client!w", name = "<init>", descriptor = "(Lclient!gb;IIIII)V")
-	public Class8_Sub1_Sub2(@OriginalArg(0) Class8_Sub5 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
+	public Class8_Sub1_Sub2(@OriginalArg(0) RawModel arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
 		arg0.method1668();
 		arg0.method1683();
 		this.anInt5788 = arg0.anInt2139;

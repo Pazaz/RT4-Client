@@ -850,7 +850,7 @@ public final class Class13 {
 			if (local10 == 1) {
 				local61 = (Model) Static124.aClass99_17.method3106((long) ((local10 << 16) + local13));
 				if (local61 == null) {
-					@Pc(69) Class8_Sub5 local69 = Static77.method1686(Static203.aClass153_85, local13);
+					@Pc(69) RawModel local69 = Static77.method1686(Static203.aClass153_85, local13);
 					if (local69 == null) {
 						Static211.aBoolean72 = true;
 						return null;

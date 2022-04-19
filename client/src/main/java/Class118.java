@@ -222,8 +222,8 @@ public final class Class118 {
 	}
 
 	@OriginalMember(owner = "client!pb", name = "a", descriptor = "(III)Lclient!gb;")
-	private Class8_Sub5 method3418(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		@Pc(7) Class8_Sub5 local7 = null;
+	private RawModel method3418(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+		@Pc(7) RawModel local7 = null;
 		@Pc(10) boolean local10 = this.aBoolean217;
 		if (arg1 == 2 && arg0 > 3) {
 			local10 = !local10;
@@ -243,7 +243,7 @@ public final class Class118 {
 				if (local10) {
 					local60 += 65536;
 				}
-				local7 = (Class8_Sub5) Static169.aClass99_24.method3106((long) local60);
+				local7 = (RawModel) Static169.aClass99_24.method3106((long) local60);
 				if (local7 == null) {
 					local7 = Static77.method1686(Static121.aClass153_45, local60 & 0xFFFF);
 					if (local7 == null) {
@@ -259,7 +259,7 @@ public final class Class118 {
 				}
 			}
 			if (local46 > 1) {
-				local7 = new Class8_Sub5(Static274.aClass8_Sub5Array5, local46);
+				local7 = new RawModel(Static274.aClass8_Sub5Array5, local46);
 			}
 		} else {
 			local46 = -1;
@@ -276,7 +276,7 @@ public final class Class118 {
 			if (local10) {
 				local48 += 65536;
 			}
-			local7 = (Class8_Sub5) Static169.aClass99_24.method3106((long) local48);
+			local7 = (RawModel) Static169.aClass99_24.method3106((long) local48);
 			if (local7 == null) {
 				local7 = Static77.method1686(Static121.aClass153_45, local48 & 0xFFFF);
 				if (local7 == null) {
@@ -300,7 +300,7 @@ public final class Class118 {
 		} else {
 			local230 = true;
 		}
-		@Pc(265) Class8_Sub5 local265 = new Class8_Sub5(local7, arg0 == 0 && !local211 && !local230, this.aShortArray61 == null, this.aShortArray60 == null, true);
+		@Pc(265) RawModel local265 = new RawModel(local7, arg0 == 0 && !local211 && !local230, this.aShortArray61 == null, this.aShortArray60 == null, true);
 		if (arg1 == 4 && arg0 > 3) {
 			local265.method1682();
 			local265.method1672(45, 0, -45);
@@ -641,7 +641,7 @@ public final class Class118 {
 			}
 			local79 = (GlModel) Static169.aClass99_24.method3106(local135);
 			if (local79 == null) {
-				@Pc(175) Class8_Sub5 local175 = null;
+				@Pc(175) RawModel local175 = null;
 				for (local177 = 0; local177 < local24; local177++) {
 					local175 = Static77.method1686(Static121.aClass153_45, this.anIntArray379[local177] & 0xFFFF);
 					if (local175 == null) {
@@ -652,7 +652,7 @@ public final class Class118 {
 					}
 				}
 				if (local24 > 1) {
-					local175 = new Class8_Sub5(Static274.aClass8_Sub5Array5, local24);
+					local175 = new RawModel(Static274.aClass8_Sub5Array5, local24);
 				}
 				local79 = new GlModel(local175, local10, local17, arg1);
 				Static169.aClass99_24.method3095(local79, local135);
@@ -675,7 +675,7 @@ public final class Class118 {
 			}
 			local79 = (GlModel) Static169.aClass99_24.method3106((long) local26);
 			if (local79 == null) {
-				@Pc(90) Class8_Sub5 local90 = Static77.method1686(Static121.aClass153_45, local26 & 0xFFFF);
+				@Pc(90) RawModel local90 = Static77.method1686(Static121.aClass153_45, local26 & 0xFFFF);
 				if (local90 == null) {
 					return null;
 				}
@@ -790,7 +790,7 @@ public final class Class118 {
 		}
 		@Pc(60) Entity local60 = (Entity) Static93.aClass99_14.method3106(local29);
 		if (local60 == null) {
-			@Pc(69) Class8_Sub5 local69 = this.method3418(arg0, arg3);
+			@Pc(69) RawModel local69 = this.method3418(arg0, arg3);
 			if (local69 == null) {
 				Static171.aClass139_1.aClass8_10 = null;
 				return Static171.aClass139_1;
@@ -810,13 +810,13 @@ public final class Class118 {
 			Static93.aClass99_14.method3095(local60, local29);
 		}
 		if (local50) {
-			local60 = ((Class8_Sub5) local60).method1675();
+			local60 = ((RawModel) local60).method1675();
 		}
 		if (this.aByte15 != 0) {
 			if (local60 instanceof Class8_Sub1_Sub2) {
 				local60 = ((Class8_Sub1_Sub2) local60).method4586(this.aByte15, this.aShort26, arg2, arg5, arg1, arg4, arg9, true);
-			} else if (local60 instanceof Class8_Sub5) {
-				local60 = ((Class8_Sub5) local60).method1670(this.aByte15, this.aShort26, arg2, arg5, arg1, arg4, arg9);
+			} else if (local60 instanceof RawModel) {
+				local60 = ((RawModel) local60).method1670(this.aByte15, this.aShort26, arg2, arg5, arg1, arg4, arg9);
 			}
 		}
 		Static171.aClass139_1.aClass8_10 = local60;
@@ -834,7 +834,7 @@ public final class Class118 {
 			}
 			@Pc(195) Class8_Sub1_Sub2 local195 = (Class8_Sub1_Sub2) Static262.aClass99_36.method3106(local30);
 			if (local195 == null) {
-				@Pc(204) Class8_Sub5 local204 = this.method3418(arg5, arg11);
+				@Pc(204) RawModel local204 = this.method3418(arg5, arg11);
 				if (local204 == null) {
 					return null;
 				}
