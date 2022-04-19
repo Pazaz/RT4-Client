@@ -8,10 +8,10 @@ public final class Class77 {
 	public int anInt3044;
 
 	@OriginalMember(owner = "client!jh", name = "e", descriptor = "Lclient!th;")
-	public Class8 aClass8_5;
+	public Entity aClass8_5;
 
 	@OriginalMember(owner = "client!jh", name = "h", descriptor = "Lclient!th;")
-	public Class8 aClass8_6;
+	public Entity aClass8_6;
 
 	@OriginalMember(owner = "client!jh", name = "k", descriptor = "I")
 	public int anInt3048;

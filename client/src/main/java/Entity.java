@@ -3,10 +3,10 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!th")
-public abstract class Class8 {
+public abstract class Entity {
 
 	@OriginalMember(owner = "client!th", name = "a", descriptor = "(III)Lclient!th;")
-	public Class8 method4539() {
+	public Entity method4539() {
 		return this;
 	}
 
@@ -16,7 +16,7 @@ public abstract class Class8 {
 	}
 
 	@OriginalMember(owner = "client!th", name = "a", descriptor = "(Lclient!th;IIIZ)V")
-	public void method4544(@OriginalArg(0) Class8 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4) {
+	public void method4544(@OriginalArg(0) Entity arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4) {
 	}
 
 	@OriginalMember(owner = "client!th", name = "a", descriptor = "(IIIII)V")

@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ak")
-public abstract class Class8_Sub1 extends Class8 {
+public abstract class Class8_Sub1 extends Entity {
 
 	@OriginalMember(owner = "client!ak", name = "s", descriptor = "Z")
 	public boolean aBoolean303 = false;

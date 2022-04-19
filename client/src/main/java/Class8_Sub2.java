@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!bh")
-public final class Class8_Sub2 extends Class8 {
+public final class Class8_Sub2 extends Entity {
 
 	@OriginalMember(owner = "client!bh", name = "y", descriptor = "Lclient!ga;")
 	private Class47_Sub1 aClass47_Sub1_1;

@@ -908,7 +908,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(Lclient!th;IIIZ)V")
 	@Override
-	public final void method4544(@OriginalArg(0) Class8 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4) {
+	public final void method4544(@OriginalArg(0) Entity arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4) {
 		@Pc(2) Class8_Sub1_Sub1 local2 = (Class8_Sub1_Sub1) arg0;
 		if (this.anInt5297 == 0 || local2.anInt5297 == 0) {
 			return;
@@ -2456,7 +2456,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(III)Lclient!th;")
 	@Override
-	public final Class8 method4539() {
+	public final Entity method4539() {
 		this.aBoolean259 = false;
 		if (this.aClass23_1 != null) {
 			this.aShortArray76 = this.aClass23_1.aShortArray8;

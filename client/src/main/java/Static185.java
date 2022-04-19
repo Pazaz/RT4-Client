@@ -101,7 +101,7 @@ public final class Static185 {
 		}
 		@Pc(330) boolean local330 = local62.aBoolean212 & !arg3;
 		local261 |= (long) arg5 << 32;
-		@Pc(387) Class8 local387;
+		@Pc(387) Entity local387;
 		@Pc(403) Class139 local403;
 		if (arg6 == 22) {
 			if (Static250.aBoolean283 || local62.anInt4429 != 0 || local62.anInt4435 == 1 || local62.aBoolean206) {
@@ -249,8 +249,8 @@ public final class Static185 {
 			@Pc(1226) int local1226;
 			if (arg6 == 2) {
 				local1226 = arg9 + 1 & 0x3;
-				@Pc(1269) Class8 local1269;
-				@Pc(1254) Class8 local1254;
+				@Pc(1269) Entity local1269;
+				@Pc(1254) Entity local1254;
 				if (local62.anInt4430 == -1 && local62.anIntArray380 == null && !local62.aBoolean214) {
 					@Pc(1287) Class139 local1287 = local62.method3428(arg9 + 4, local165, local153, 2, local199, local213, arg1, null, local330, local173);
 					if (Static239.aBoolean269 && local330) {
@@ -343,7 +343,7 @@ public final class Static185 {
 				Static91.method1880(arg2, arg7, arg8, local199, local387, null, Static267.anIntArray517[arg9], 0, 0, 0, local261);
 			} else {
 				@Pc(1889) long local1889;
-				@Pc(1934) Class8 local1934;
+				@Pc(1934) Entity local1934;
 				@Pc(1950) Class139 local1950;
 				if (arg6 == 5) {
 					local1226 = 16;
@@ -396,7 +396,7 @@ public final class Static185 {
 						local1226 = Static271.method4601(Integer.MAX_VALUE & (int) (local1889 >>> 32)).anInt4428 / 2;
 					}
 					@Pc(2244) int local2244 = arg9 + 2 & 0x3;
-					@Pc(2289) Class8 local2289;
+					@Pc(2289) Entity local2289;
 					if (local62.anInt4430 == -1 && local62.anIntArray380 == null && !local62.aBoolean214) {
 						@Pc(2297) int local2297 = Static64.anIntArray154[arg9] * 8;
 						@Pc(2303) int local2303 = Static114.anIntArray565[arg9] * 8;

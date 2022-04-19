@@ -788,7 +788,7 @@ public final class Class118 {
 		} else {
 			local50 = false;
 		}
-		@Pc(60) Class8 local60 = (Class8) Static93.aClass99_14.method3106(local29);
+		@Pc(60) Entity local60 = (Entity) Static93.aClass99_14.method3106(local29);
 		if (local60 == null) {
 			@Pc(69) Class8_Sub5 local69 = this.method3418(arg0, arg3);
 			if (local69 == null) {
