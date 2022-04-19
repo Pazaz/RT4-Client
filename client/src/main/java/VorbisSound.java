@@ -51,7 +51,7 @@ public final class VorbisSound extends Node {
 	}
 
 	@OriginalMember(owner = "client!jc", name = "a", descriptor = "([I)Lclient!kj;")
-	public final Class3_Sub16_Sub1 method2341(@OriginalArg(0) int[] arg0) {
+	public final PcmSound method2341(@OriginalArg(0) int[] arg0) {
 		if (arg0 != null && arg0[0] <= 0) {
 			return null;
 		}
@@ -90,7 +90,7 @@ public final class VorbisSound extends Node {
 		this.aFloatArray11 = null;
 		@Pc(129) byte[] local129 = this.aByteArray41;
 		this.aByteArray41 = null;
-		return new Class3_Sub16_Sub1(this.anInt2980, local129, this.anInt2976, this.anInt2977, this.aBoolean148);
+		return new PcmSound(this.anInt2980, local129, this.anInt2976, this.anInt2977, this.aBoolean148);
 	}
 
 	@OriginalMember(owner = "client!jc", name = "a", descriptor = "([B)V")

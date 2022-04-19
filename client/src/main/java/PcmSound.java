@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!kj")
-public final class Class3_Sub16_Sub1 extends Class3_Sub16 {
+public final class PcmSound extends Class3_Sub16 {
 
 	@OriginalMember(owner = "client!kj", name = "r", descriptor = "Z")
 	public boolean aBoolean165;
@@ -21,7 +21,7 @@ public final class Class3_Sub16_Sub1 extends Class3_Sub16 {
 	public int anInt3314;
 
 	@OriginalMember(owner = "client!kj", name = "<init>", descriptor = "(I[BII)V")
-	public Class3_Sub16_Sub1(@OriginalArg(0) int arg0, @OriginalArg(1) byte[] arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	public PcmSound(@OriginalArg(0) int arg0, @OriginalArg(1) byte[] arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		this.anInt3316 = arg0;
 		this.aByteArray47 = arg1;
 		this.anInt3315 = arg2;
@@ -29,7 +29,7 @@ public final class Class3_Sub16_Sub1 extends Class3_Sub16 {
 	}
 
 	@OriginalMember(owner = "client!kj", name = "<init>", descriptor = "(I[BIIZ)V")
-	public Class3_Sub16_Sub1(@OriginalArg(0) int arg0, @OriginalArg(1) byte[] arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4) {
+	public PcmSound(@OriginalArg(0) int arg0, @OriginalArg(1) byte[] arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4) {
 		this.anInt3316 = arg0;
 		this.aByteArray47 = arg1;
 		this.anInt3315 = arg2;
@@ -38,7 +38,7 @@ public final class Class3_Sub16_Sub1 extends Class3_Sub16 {
 	}
 
 	@OriginalMember(owner = "client!kj", name = "a", descriptor = "(Lclient!vj;)Lclient!kj;")
-	public final Class3_Sub16_Sub1 method2648(@OriginalArg(0) Resampler arg0) {
+	public final PcmSound method2648(@OriginalArg(0) Resampler arg0) {
 		this.aByteArray47 = arg0.method4520(this.aByteArray47);
 		this.anInt3316 = arg0.method4524(this.anInt3316);
 		if (this.anInt3315 == this.anInt3314) {
