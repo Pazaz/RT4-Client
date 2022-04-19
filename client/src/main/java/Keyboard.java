@@ -8,7 +8,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!uf")
-public final class Class149 implements KeyListener, FocusListener {
+public final class Keyboard implements KeyListener, FocusListener {
 
 	@OriginalMember(owner = "client!uf", name = "keyPressed", descriptor = "(Ljava/awt/event/KeyEvent;)V")
 	@Override

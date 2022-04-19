@@ -9,7 +9,7 @@ public final class Static10 {
 	private static final JagString aClass100_63 = Static28.method790("Hidden");
 
 	@OriginalMember(owner = "client!an", name = "ab", descriptor = "Lclient!uf;")
-	public static Class149 aClass149_1 = new Class149();
+	public static Keyboard aClass149_1 = new Keyboard();
 
 	@OriginalMember(owner = "client!an", name = "cb", descriptor = "Lclient!na;")
 	public static JagString aClass100_64 = aClass100_63;
