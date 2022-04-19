@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class GlBuffer {
 
 	@OriginalMember(owner = "client!ql", name = "e", descriptor = "Lclient!vi;")
-	public Class155 aClass155_4;
+	public GlVertexBufferObject aClass155_4;
 
 	@OriginalMember(owner = "client!ql", name = "f", descriptor = "Ljava/nio/ByteBuffer;")
 	public ByteBuffer aByteBuffer8;

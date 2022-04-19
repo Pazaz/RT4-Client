@@ -10,7 +10,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Class165 {
 
 	@OriginalMember(owner = "client!wm", name = "a", descriptor = "Lclient!vi;")
-	private Class155 aClass155_6;
+	private GlVertexBufferObject aClass155_6;
 
 	@OriginalMember(owner = "client!wm", name = "c", descriptor = "Ljava/nio/ByteBuffer;")
 	private ByteBuffer aByteBuffer11;
@@ -19,7 +19,7 @@ public final class Class165 {
 	private ByteBuffer aByteBuffer12;
 
 	@OriginalMember(owner = "client!wm", name = "f", descriptor = "Lclient!vi;")
-	private Class155 aClass155_7;
+	private GlVertexBufferObject aClass155_7;
 
 	@OriginalMember(owner = "client!wm", name = "b", descriptor = "Z")
 	public boolean aBoolean313 = true;
@@ -67,7 +67,7 @@ public final class Class165 {
 		}
 		if (Static239.aBoolean271) {
 			@Pc(112) ByteBuffer local112 = ByteBuffer.wrap(local4.aByteArray40, 0, local4.anInt2792);
-			this.aClass155_7 = new Class155();
+			this.aClass155_7 = new GlVertexBufferObject();
 			this.aClass155_7.method4519(local112);
 		} else {
 			this.aByteBuffer12 = ByteBuffer.allocateDirect(local4.anInt2792).order(ByteOrder.nativeOrder());
@@ -96,7 +96,7 @@ public final class Class165 {
 		}
 		if (Static239.aBoolean271) {
 			@Pc(293) ByteBuffer local293 = ByteBuffer.wrap(local147.aByteArray40, 0, local147.anInt2792);
-			this.aClass155_6 = new Class155();
+			this.aClass155_6 = new GlVertexBufferObject();
 			this.aClass155_6.method4517(local293);
 		} else {
 			this.aByteBuffer11 = ByteBuffer.allocateDirect(local147.anInt2792).order(ByteOrder.nativeOrder());

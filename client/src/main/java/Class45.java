@@ -9,7 +9,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Class45 {
 
 	@OriginalMember(owner = "client!fj", name = "a", descriptor = "Lclient!vi;")
-	private Class155 aClass155_1;
+	private GlVertexBufferObject aClass155_1;
 
 	@OriginalMember(owner = "client!fj", name = "b", descriptor = "[I")
 	private int[] anIntArray177;
@@ -21,7 +21,7 @@ public final class Class45 {
 	private int[] anIntArray178;
 
 	@OriginalMember(owner = "client!fj", name = "e", descriptor = "Lclient!vi;")
-	private Class155 aClass155_2;
+	private GlVertexBufferObject aClass155_2;
 
 	@OriginalMember(owner = "client!fj", name = "f", descriptor = "Ljava/nio/ByteBuffer;")
 	private ByteBuffer aByteBuffer1;
@@ -143,10 +143,10 @@ public final class Class45 {
 			}
 		}
 		if (Static239.aBoolean271) {
-			this.aClass155_1 = new Class155();
+			this.aClass155_1 = new GlVertexBufferObject();
 			@Pc(173) ByteBuffer local173 = ByteBuffer.wrap(local15.aByteArray40);
 			this.aClass155_1.method4519(local173);
-			this.aClass155_2 = new Class155();
+			this.aClass155_2 = new GlVertexBufferObject();
 			@Pc(186) ByteBuffer local186 = ByteBuffer.wrap(local7.aByteArray40);
 			this.aClass155_2.method4517(local186);
 		} else {

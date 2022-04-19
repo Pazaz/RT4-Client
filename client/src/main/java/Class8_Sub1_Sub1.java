@@ -18,7 +18,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 	private short[] aShortArray77;
 
 	@OriginalMember(owner = "client!td", name = "x", descriptor = "Lclient!vi;")
-	private Class155 aClass155_5;
+	private GlVertexBufferObject aClass155_5;
 
 	@OriginalMember(owner = "client!td", name = "y", descriptor = "[S")
 	private short[] aShortArray78;
@@ -1700,7 +1700,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 			this.aClass127_5.aClass155_4 = null;
 			return;
 		}
-		@Pc(88) Class155 local88 = new Class155();
+		@Pc(88) GlVertexBufferObject local88 = new GlVertexBufferObject();
 		@Pc(95) ByteBuffer local95 = ByteBuffer.wrap(Static237.aClass3_Sub15_8.aByteArray40, 0, Static237.aClass3_Sub15_8.anInt2792);
 		local88.method4519(local95);
 		this.aClass127_5.aBoolean235 = true;
@@ -2221,7 +2221,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 			if (Static239.aBoolean273) {
 				local1007 = ByteBuffer.wrap(Static237.aClass3_Sub15_8.aByteArray40, 0, Static237.aClass3_Sub15_8.anInt2792);
 				if (this.aClass155_5 == null) {
-					this.aClass155_5 = new Class155(true);
+					this.aClass155_5 = new GlVertexBufferObject(true);
 					this.aClass155_5.method4519(local1007);
 				} else {
 					this.aClass155_5.method4515(local1007);
@@ -2284,7 +2284,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 				}
 			}
 		} else if (Static239.aBoolean271) {
-			@Pc(1211) Class155 local1211 = new Class155();
+			@Pc(1211) GlVertexBufferObject local1211 = new GlVertexBufferObject();
 			@Pc(1218) ByteBuffer local1218 = ByteBuffer.wrap(Static237.aClass3_Sub15_8.aByteArray40, 0, Static237.aClass3_Sub15_8.anInt2792);
 			local1211.method4519(local1218);
 			if (arg1) {
@@ -3006,7 +3006,7 @@ public final class Class8_Sub1_Sub1 extends Class8_Sub1 {
 			}
 			this.aByte19 = 0;
 		}
-		@Pc(172) Class155 local172 = null;
+		@Pc(172) GlVertexBufferObject local172 = null;
 		if (this.aClass127_4.aClass155_4 != null) {
 			this.aClass127_4.aClass155_4.method4516();
 			local172 = this.aClass127_4.aClass155_4;
