@@ -589,7 +589,7 @@ public final class client extends GameShell {
 				}
 			}
 			if (Static4.anInt30 == 2) {
-				Static206.aClass95_3 = new Class95((Socket) Static37.aClass212_2.anObject6, Static71.aClass213_3);
+				Static206.aClass95_3 = new BufferedSocket((Socket) Static37.aClass212_2.anObject6, Static71.aClass213_3);
 				@Pc(194) Buffer local194 = new Buffer(5);
 				local194.method2178(15);
 				local194.method2164(530);

@@ -9,7 +9,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ma")
-public final class Class95 implements Runnable {
+public final class BufferedSocket implements Runnable {
 
 	@OriginalMember(owner = "client!ma", name = "h", descriptor = "[B")
 	private byte[] aByteArray49;
@@ -42,7 +42,7 @@ public final class Class95 implements Runnable {
 	private OutputStream anOutputStream1;
 
 	@OriginalMember(owner = "client!ma", name = "<init>", descriptor = "(Ljava/net/Socket;Lsignlink!ll;)V")
-	public Class95(@OriginalArg(0) Socket arg0, @OriginalArg(1) Class213 arg1) throws IOException {
+	public BufferedSocket(@OriginalArg(0) Socket arg0, @OriginalArg(1) Class213 arg1) throws IOException {
 		this.aClass213_5 = arg1;
 		this.aSocket1 = arg0;
 		this.aSocket1.setSoTimeout(30000);

@@ -11,7 +11,7 @@ public final class Class73 {
 	private long aLong104;
 
 	@OriginalMember(owner = "client!jb", name = "B", descriptor = "Lclient!ma;")
-	private Class95 aClass95_1;
+	private BufferedSocket aClass95_1;
 
 	@OriginalMember(owner = "client!jb", name = "C", descriptor = "I")
 	private int anInt2962;
@@ -251,7 +251,7 @@ public final class Class73 {
 	}
 
 	@OriginalMember(owner = "client!jb", name = "a", descriptor = "(ZLclient!ma;I)V")
-	public final void method2324(@OriginalArg(0) boolean arg0, @OriginalArg(1) Class95 arg1) {
+	public final void method2324(@OriginalArg(0) boolean arg0, @OriginalArg(1) BufferedSocket arg1) {
 		if (this.aClass95_1 != null) {
 			try {
 				this.aClass95_1.method2834();

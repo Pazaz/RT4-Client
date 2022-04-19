@@ -57,7 +57,7 @@ public final class Static158 {
 				if (Static72.aClass212_3.anInt5925 != 1) {
 					return;
 				}
-				Static124.aClass95_2 = new Class95((Socket) Static72.aClass212_3.anObject6, Static71.aClass213_3);
+				Static124.aClass95_2 = new BufferedSocket((Socket) Static72.aClass212_3.anObject6, Static71.aClass213_3);
 				Static72.aClass212_3 = null;
 				Static124.aClass95_2.method2830(Static6.aClass3_Sub15_Sub1_1.aByteArray40, Static6.aClass3_Sub15_Sub1_1.anInt2792);
 				if (Static11.aClass62_1 != null) {
