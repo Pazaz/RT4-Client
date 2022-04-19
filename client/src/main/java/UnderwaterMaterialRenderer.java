@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!wg")
-public final class Class161 implements MaterialRenderer {
+public final class UnderwaterMaterialRenderer implements MaterialRenderer {
 
 	@OriginalMember(owner = "client!wg", name = "c", descriptor = "I")
 	private int anInt5805 = -1;
@@ -18,7 +18,7 @@ public final class Class161 implements MaterialRenderer {
 	private int anInt5806 = -1;
 
 	@OriginalMember(owner = "client!wg", name = "<init>", descriptor = "()V")
-	public Class161() {
+	public UnderwaterMaterialRenderer() {
 		if (Static239.anInt5322 >= 2) {
 			@Pc(17) int[] local17 = new int[1];
 			@Pc(20) byte[] local20 = new byte[8];
