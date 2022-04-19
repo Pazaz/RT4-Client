@@ -2,7 +2,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!ba")
-public final class Class10_Sub1 extends Class10 {
+public final class Class10_Sub1 extends AbstractWorld {
 
 	@OriginalMember(owner = "client!ba", name = "t", descriptor = "Lclient!na;")
 	public JagString aClass100_69;
