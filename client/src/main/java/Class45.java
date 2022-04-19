@@ -1,0 +1,210 @@
+import java.nio.ByteBuffer;
+import javax.media.opengl.GL;
+import org.openrs2.deob.annotation.OriginalArg;
+import org.openrs2.deob.annotation.OriginalClass;
+import org.openrs2.deob.annotation.OriginalMember;
+import org.openrs2.deob.annotation.Pc;
+
+@OriginalClass("client!fj")
+public final class Class45 {
+
+	@OriginalMember(owner = "client!fj", name = "a", descriptor = "Lclient!vi;")
+	private Class155 aClass155_1;
+
+	@OriginalMember(owner = "client!fj", name = "b", descriptor = "[I")
+	private int[] anIntArray177;
+
+	@OriginalMember(owner = "client!fj", name = "c", descriptor = "[B")
+	private byte[] aByteArray23;
+
+	@OriginalMember(owner = "client!fj", name = "d", descriptor = "[I")
+	private int[] anIntArray178;
+
+	@OriginalMember(owner = "client!fj", name = "e", descriptor = "Lclient!vi;")
+	private Class155 aClass155_2;
+
+	@OriginalMember(owner = "client!fj", name = "f", descriptor = "Ljava/nio/ByteBuffer;")
+	private ByteBuffer aByteBuffer1;
+
+	@OriginalMember(owner = "client!fj", name = "g", descriptor = "[I")
+	private int[] anIntArray179;
+
+	@OriginalMember(owner = "client!fj", name = "h", descriptor = "[I")
+	private int[] anIntArray180;
+
+	@OriginalMember(owner = "client!fj", name = "i", descriptor = "[B")
+	private byte[] aByteArray24;
+
+	@OriginalMember(owner = "client!fj", name = "j", descriptor = "I")
+	public int anInt2016;
+
+	@OriginalMember(owner = "client!fj", name = "k", descriptor = "Ljava/nio/ByteBuffer;")
+	private ByteBuffer aByteBuffer2;
+
+	@OriginalMember(owner = "client!fj", name = "l", descriptor = "I")
+	public int anInt2017;
+
+	@OriginalMember(owner = "client!fj", name = "m", descriptor = "[B")
+	private byte[] aByteArray25;
+
+	@OriginalMember(owner = "client!fj", name = "n", descriptor = "I")
+	public int anInt2018;
+
+	@OriginalMember(owner = "client!fj", name = "o", descriptor = "Lclient!sc;")
+	private Class133 aClass133_4;
+
+	@OriginalMember(owner = "client!fj", name = "p", descriptor = "I")
+	public int anInt2019;
+
+	@OriginalMember(owner = "client!fj", name = "a", descriptor = "(Lclient!gi;IIIFFF)I")
+	public final int method1553(@OriginalArg(0) Class51 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) float arg4, @OriginalArg(5) float arg5, @OriginalArg(6) float arg6) {
+		@Pc(1) long local1 = 0L;
+		if ((arg1 & 0x7F) == 0 || (arg3 & 0x7F) == 0) {
+			local1 = arg1 + (arg3 << 16);
+			@Pc(23) Class3_Sub21 local23 = (Class3_Sub21) this.aClass133_4.method3863(local1);
+			if (local23 != null) {
+				return local23.anInt3141;
+			}
+		}
+		@Pc(31) int local31 = arg0.anInt2247;
+		@Pc(37) float local37 = (float) (arg0.anInt2240 - arg1);
+		@Pc(43) float local43 = (float) (arg0.anInt2235 - arg2);
+		@Pc(49) float local49 = (float) (arg0.anInt2245 - arg3);
+		@Pc(64) float local64 = (float) Math.sqrt((double) (local37 * local37 + local43 * local43 + local49 * local49));
+		@Pc(68) float local68 = 1.0F / local64;
+		@Pc(72) float local72 = local37 * local68;
+		@Pc(76) float local76 = local43 * local68;
+		@Pc(80) float local80 = local49 * local68;
+		@Pc(90) float local90 = local64 / (float) ((arg0.anInt2236 << 7) + 64);
+		@Pc(96) float local96 = 1.0F - local90 * local90;
+		if (local96 < 0.0F) {
+			local96 = 0.0F;
+		}
+		@Pc(114) float local114 = local72 * arg4 + local76 * arg5 + local80 * arg6;
+		if (local114 < 0.0F) {
+			local114 = 0.0F;
+		}
+		@Pc(126) float local126 = local114 * local96 * 2.0F;
+		if (local126 > 1.0F) {
+			local126 = 1.0F;
+		}
+		@Pc(142) int local142 = (int) (local126 * (float) (local31 >> 16 & 0xFF));
+		if (local142 > 255) {
+			local142 = 255;
+		}
+		@Pc(157) int local157 = (int) (local126 * (float) (local31 >> 8 & 0xFF));
+		if (local157 > 255) {
+			local157 = 255;
+		}
+		@Pc(170) int local170 = (int) (local126 * (float) (local31 & 0xFF));
+		if (local170 > 255) {
+			local170 = 255;
+		}
+		this.aByteArray25[this.anInt2017] = (byte) local142;
+		this.aByteArray23[this.anInt2017] = (byte) local157;
+		this.aByteArray24[this.anInt2017] = (byte) local170;
+		this.anIntArray178[this.anInt2017] = arg1;
+		this.anIntArray180[this.anInt2017] = arg2;
+		this.anIntArray179[this.anInt2017] = arg3;
+		this.aClass133_4.method3862(new Class3_Sub21(this.anInt2017), local1);
+		return this.anInt2017++;
+	}
+
+	@OriginalMember(owner = "client!fj", name = "a", descriptor = "()V")
+	public final void method1554() {
+		@Pc(7) Class3_Sub15 local7 = new Class3_Sub15(this.anInt2018 * 4);
+		@Pc(15) Class3_Sub15 local15 = new Class3_Sub15(this.anInt2017 * 16);
+		@Pc(19) int local19;
+		if (Static239.aBoolean263) {
+			for (local19 = 0; local19 < this.anInt2017; local19++) {
+				local15.method2178(this.aByteArray25[local19]);
+				local15.method2178(this.aByteArray23[local19]);
+				local15.method2178(this.aByteArray24[local19]);
+				local15.method2178(255);
+				local15.method2227((float) this.anIntArray178[local19]);
+				local15.method2227((float) this.anIntArray180[local19]);
+				local15.method2227((float) this.anIntArray179[local19]);
+			}
+			for (local19 = 0; local19 < this.anInt2018; local19++) {
+				local7.method2164(this.anIntArray177[local19]);
+			}
+		} else {
+			for (local19 = 0; local19 < this.anInt2017; local19++) {
+				local15.method2178(this.aByteArray25[local19]);
+				local15.method2178(this.aByteArray23[local19]);
+				local15.method2178(this.aByteArray24[local19]);
+				local15.method2178(255);
+				local15.method2188((float) this.anIntArray178[local19]);
+				local15.method2188((float) this.anIntArray180[local19]);
+				local15.method2188((float) this.anIntArray179[local19]);
+			}
+			for (local19 = 0; local19 < this.anInt2018; local19++) {
+				local7.method2183(this.anIntArray177[local19]);
+			}
+		}
+		if (Static239.aBoolean271) {
+			this.aClass155_1 = new Class155();
+			@Pc(173) ByteBuffer local173 = ByteBuffer.wrap(local15.aByteArray40);
+			this.aClass155_1.method4519(local173);
+			this.aClass155_2 = new Class155();
+			@Pc(186) ByteBuffer local186 = ByteBuffer.wrap(local7.aByteArray40);
+			this.aClass155_2.method4517(local186);
+		} else {
+			this.aByteBuffer1 = ByteBuffer.allocateDirect(local15.anInt2792);
+			this.aByteBuffer1.put(local15.aByteArray40);
+			this.aByteBuffer1.flip();
+			this.aByteBuffer2 = ByteBuffer.allocateDirect(local7.anInt2792);
+			this.aByteBuffer2.put(local7.aByteArray40);
+			this.aByteBuffer2.flip();
+		}
+		this.anIntArray178 = null;
+		this.anIntArray180 = null;
+		this.anIntArray179 = null;
+		this.aByteArray25 = null;
+		this.aByteArray23 = null;
+		this.aByteArray24 = null;
+		this.anIntArray177 = null;
+		this.aClass133_4 = null;
+	}
+
+	@OriginalMember(owner = "client!fj", name = "b", descriptor = "()V")
+	public final void method1555() {
+		this.anIntArray177 = new int[this.anInt2016];
+		this.anIntArray178 = new int[this.anInt2019];
+		this.anIntArray180 = new int[this.anInt2019];
+		this.anIntArray179 = new int[this.anInt2019];
+		this.aByteArray25 = new byte[this.anInt2019];
+		this.aByteArray23 = new byte[this.anInt2019];
+		this.aByteArray24 = new byte[this.anInt2019];
+		this.aClass133_4 = new Class133(Static165.method3164(this.anInt2019));
+	}
+
+	@OriginalMember(owner = "client!fj", name = "c", descriptor = "()V")
+	public final void method1556() {
+		@Pc(1) GL local1 = Static239.aGL1;
+		if (Static239.aBoolean271) {
+			this.aClass155_1.method4516();
+			local1.glInterleavedArrays(GL.GL_C4UB_V3F, 16, 0L);
+			Static239.aBoolean265 = false;
+			this.aClass155_2.method4518();
+			local1.glDrawElements(GL.GL_TRIANGLES, this.anInt2018, GL.GL_UNSIGNED_INT, 0L);
+			return;
+		}
+		if (Static239.aBoolean271) {
+			local1.glBindBufferARB(GL.GL_ARRAY_BUFFER, 0);
+			local1.glBindBufferARB(GL.GL_ELEMENT_ARRAY_BUFFER, 0);
+		}
+		local1.glInterleavedArrays(GL.GL_C4UB_V3F, 16, this.aByteBuffer1);
+		Static239.aBoolean265 = false;
+		local1.glDrawElements(GL.GL_TRIANGLES, this.anInt2018, GL.GL_UNSIGNED_INT, this.aByteBuffer2);
+	}
+
+	@OriginalMember(owner = "client!fj", name = "a", descriptor = "([I)V")
+	public final void method1557(@OriginalArg(0) int[] arg0) {
+		for (@Pc(1) int local1 = 1; local1 < arg0.length - 1; local1++) {
+			this.anIntArray177[this.anInt2018++] = arg0[0];
+			this.anIntArray177[this.anInt2018++] = arg0[local1];
+			this.anIntArray177[this.anInt2018++] = arg0[local1 + 1];
+		}
+	}
+}
