@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class AnimFrame {
 
 	@OriginalMember(owner = "client!ne", name = "c", descriptor = "Lclient!jm;")
-	public Class3_Sub20 aClass3_Sub20_1 = null;
+	public AnimBase aClass3_Sub20_1 = null;
 
 	@OriginalMember(owner = "client!ne", name = "b", descriptor = "I")
 	public int anInt4070 = -1;
@@ -37,7 +37,7 @@ public final class AnimFrame {
 	public final byte[] aByteArray55;
 
 	@OriginalMember(owner = "client!ne", name = "<init>", descriptor = "([BLclient!jm;)V")
-	public AnimFrame(@OriginalArg(0) byte[] arg0, @OriginalArg(1) Class3_Sub20 arg1) {
+	public AnimFrame(@OriginalArg(0) byte[] arg0, @OriginalArg(1) AnimBase arg1) {
 		this.aClass3_Sub20_1 = arg1;
 		@Pc(21) Buffer local21 = new Buffer(arg0);
 		@Pc(26) Buffer local26 = new Buffer(arg0);
