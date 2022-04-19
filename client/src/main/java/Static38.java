@@ -153,7 +153,7 @@ public final class Static38 {
 	@OriginalMember(owner = "client!cn", name = "a", descriptor = "(ZI)I")
 	public static int method963(@OriginalArg(0) boolean arg0) {
 		@Pc(4) long local4 = MonotonicClock.method5096();
-		for (@Pc(28) Class3_Sub10 local28 = arg0 ? (Class3_Sub10) Static199.aClass133_20.method3859() : (Class3_Sub10) Static199.aClass133_20.method3861(); local28 != null; local28 = (Class3_Sub10) Static199.aClass133_20.method3861()) {
+		for (@Pc(28) LongNode local28 = arg0 ? (LongNode) Static199.aClass133_20.method3859() : (LongNode) Static199.aClass133_20.method3861(); local28 != null; local28 = (LongNode) Static199.aClass133_20.method3861()) {
 			if ((local28.aLong55 & 0x3FFFFFFFFFFFFFFFL) < local4) {
 				if ((local28.aLong55 & 0x4000000000000000L) != 0L) {
 					@Pc(58) int local58 = (int) local28.aLong192;
