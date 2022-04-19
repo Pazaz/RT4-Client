@@ -136,7 +136,7 @@ public final class Static223 {
 		} else if (arg0 == 25) {
 			return new Class3_Sub1_Sub34();
 		} else if (arg0 == 26) {
-			return new Class3_Sub1_Sub6();
+			return new TextureOpBinary();
 		} else if (arg0 == 27) {
 			return new Class3_Sub1_Sub7();
 		} else if (arg0 == 28) {
