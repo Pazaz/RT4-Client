@@ -66,7 +66,7 @@ public final class Static69 {
 
 	@OriginalMember(owner = "client!fh", name = "a", descriptor = "(IIIILclient!th;JLclient!th;Lclient!th;)V")
 	public static void method1543(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Entity arg4, @OriginalArg(5) long arg5, @OriginalArg(6) Entity arg6, @OriginalArg(7) Entity arg7) {
-		@Pc(3) Class79 local3 = new Class79();
+		@Pc(3) ObjStackEntity local3 = new ObjStackEntity();
 		local3.aClass8_9 = arg4;
 		local3.anInt3064 = arg1 * 128 + 64;
 		local3.anInt3061 = arg2 * 128 + 64;
