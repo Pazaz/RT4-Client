@@ -70,7 +70,7 @@ public final class Static193 {
 					local25 = arg2[local11 - 1][local16 - 1];
 				}
 				if (local25 != 0) {
-					@Pc(77) Class107 local77 = Static199.method3593((local25 & 0xFF) - 1);
+					@Pc(77) FluType local77 = Static199.method3593((local25 & 0xFF) - 1);
 					local9[local11][local16] = (local77.anInt4155 + 1 << 16) + local77.anInt4156;
 				}
 			}

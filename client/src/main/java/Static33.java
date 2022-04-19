@@ -108,7 +108,7 @@ public final class Static33 {
 				if (local175 > local114) {
 					local225 = local23[local114][local203] & 0xFF;
 					if (local225 > 0) {
-						@Pc(236) Class107 local236 = Static199.method3593(local225 - 1);
+						@Pc(236) FluType local236 = Static199.method3593(local225 - 1);
 						local183[local203] += local236.anInt4154;
 						local180[local203] += local236.anInt4149;
 						local186[local203] += local236.anInt4158;
@@ -120,7 +120,7 @@ public final class Static33 {
 				if (local225 >= 0) {
 					local293 = local23[local225][local203] & 0xFF;
 					if (local293 > 0) {
-						@Pc(302) Class107 local302 = Static199.method3593(local293 - 1);
+						@Pc(302) FluType local302 = Static199.method3593(local293 - 1);
 						local183[local203] -= local302.anInt4154;
 						local180[local203] -= local302.anInt4149;
 						local186[local203] -= local302.anInt4158;

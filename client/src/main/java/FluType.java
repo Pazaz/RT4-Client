@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ni")
-public final class Class107 {
+public final class FluType {
 
 	@OriginalMember(owner = "client!ni", name = "d", descriptor = "I")
 	public int anInt4149;
