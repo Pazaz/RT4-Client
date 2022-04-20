@@ -8,6 +8,6 @@ public final class Class22_Sub1 extends Class22 {
 	@OriginalMember(owner = "client!db", name = "a", descriptor = "(Lclient!gf;I)Lclient!gf;")
 	@Override
 	public final ReferenceNode method1027(@OriginalArg(0) ReferenceNode arg0) {
-		return new Class3_Sub2_Sub10_Sub2(arg0.method3618());
+		return new SoftReferenceNode(arg0.method3618());
 	}
 }
