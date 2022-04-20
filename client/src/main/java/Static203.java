@@ -10,7 +10,7 @@ public final class Static203 {
 	public static Class134 aClass134_1;
 
 	@OriginalMember(owner = "client!qh", name = "d", descriptor = "Lclient!fd;")
-	public static Class41 aClass41_8;
+	public static WorldMapFont aClass41_8;
 
 	@OriginalMember(owner = "client!qh", name = "e", descriptor = "[Lclient!ee;")
 	public static Class32[] aClass32Array1;

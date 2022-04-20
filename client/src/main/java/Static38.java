@@ -35,7 +35,7 @@ public final class Static38 {
 				@Pc(64) int local64 = Static203.aClass134_1.method3894(local11);
 				@Pc(80) int local80 = (arg7 - arg1) * (local43 - arg5) / (arg4 - arg5) + arg1;
 				@Pc(82) int local82 = 16777215;
-				@Pc(84) Class41 local84 = null;
+				@Pc(84) WorldMapFont local84 = null;
 				if (local64 == 0) {
 					if ((double) Static83.aFloat3 == 3.0D) {
 						local84 = Static273.aClass41_7;

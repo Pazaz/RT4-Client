@@ -9,7 +9,7 @@ public final class Static169 {
 	public static short[] aShortArray52;
 
 	@OriginalMember(owner = "client!nf", name = "d", descriptor = "Lclient!fd;")
-	public static Class41 aClass41_5;
+	public static WorldMapFont aClass41_5;
 
 	@OriginalMember(owner = "client!nf", name = "e", descriptor = "I")
 	public static int anInt4073;
