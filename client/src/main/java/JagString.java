@@ -10,7 +10,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!na")
-public final class JagString implements Interface2 {
+public final class JagString implements StringInterface {
 
 	@OriginalMember(owner = "client!na", name = "T", descriptor = "[B")
 	public byte[] aByteArray52;
