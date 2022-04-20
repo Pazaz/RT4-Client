@@ -155,7 +155,7 @@ public final class Static88 {
 						if (Static138.anInt3445 == 0) {
 							return;
 						}
-						@Pc(423) Class61 local423 = Static67.aClass61Array3[--Static138.anInt3445];
+						@Pc(423) GoSubFrame local423 = Static67.aClass61Array3[--Static138.anInt3445];
 						local14 = local423.aClass3_Sub2_Sub17_1;
 						Static215.anIntArray432 = local423.anIntArray237;
 						local36 = local14.anIntArray415;
@@ -238,7 +238,7 @@ public final class Static88 {
 						}
 						local28 -= local642.anInt4665;
 						local26 -= local642.anInt4669;
-						@Pc(705) Class61 local705 = new Class61();
+						@Pc(705) GoSubFrame local705 = new GoSubFrame();
 						local705.aClass100Array79 = Static180.aClass100Array125;
 						local705.anIntArray237 = Static215.anIntArray432;
 						local705.anInt2515 = local30;
