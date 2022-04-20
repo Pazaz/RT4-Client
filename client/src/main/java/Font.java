@@ -84,7 +84,7 @@ public abstract class Font extends SecondaryNode {
 			} else {
 				@Pc(120) int local120;
 				if (local22 == 62 && local6 != -1) {
-					@Pc(42) JagString local42 = arg0.method3137(local14, local6 + 1);
+					@Pc(42) JagString local42 = arg0.substring(local14, local6 + 1);
 					local6 = -1;
 					if (local42.method3108(Static218.aClass100_696)) {
 						local22 = 60;
@@ -149,14 +149,14 @@ public abstract class Font extends SecondaryNode {
 					}
 					@Pc(323) int local323 = this.anIntArray348[local22];
 					if (Static218.anInt3627 != -1) {
-						if (Static239.aBoolean269) {
+						if (GlRenderer.enabled) {
 							Static46.method1174(arg1, local4 + (int) ((double) this.anInt3626 * 0.7D), local323, Static218.anInt3627);
 						} else {
 							Static129.method2489(arg1, local4 + (int) ((double) this.anInt3626 * 0.7D), local323, Static218.anInt3627);
 						}
 					}
 					if (Static218.anInt3628 != -1) {
-						if (Static239.aBoolean269) {
+						if (GlRenderer.enabled) {
 							Static46.method1174(arg1, local4 + this.anInt3626 + 1, local323, Static218.anInt3628);
 						} else {
 							Static129.method2489(arg1, local4 + this.anInt3626 + 1, local323, Static218.anInt3628);
@@ -211,7 +211,7 @@ public abstract class Font extends SecondaryNode {
 				local5 = local15;
 			} else {
 				if (local23 == 62 && local5 != -1) {
-					@Pc(43) JagString local43 = arg0.method3137(local15, local5 + 1);
+					@Pc(43) JagString local43 = arg0.substring(local15, local5 + 1);
 					local5 = -1;
 					if (local43.method3108(Static218.aClass100_696)) {
 						local23 = 60;
@@ -369,14 +369,14 @@ public abstract class Font extends SecondaryNode {
 				local19 = local29;
 			} else {
 				if (local37 == 62 && local19 != -1) {
-					@Pc(57) JagString local57 = arg0.method3137(local29, local19 + 1);
+					@Pc(57) JagString local57 = arg0.substring(local29, local19 + 1);
 					local19 = -1;
 					Static218.aClass100_720.method3152(60);
 					Static218.aClass100_720.method3113(local57);
 					Static218.aClass100_720.method3152(62);
 					if (local57.method3108(Static218.aClass100_713)) {
 						if (arg2[local23] == null) {
-							arg2[local23] = Static218.aClass100_720.method3143().method3137(Static218.aClass100_720.length(), local11);
+							arg2[local23] = Static218.aClass100_720.method3143().substring(Static218.aClass100_720.length(), local11);
 						} else {
 							arg2[local23].method3133(0);
 							arg2[local23].method3122(Static218.aClass100_720, local11, Static218.aClass100_720.length());
@@ -460,7 +460,7 @@ public abstract class Font extends SecondaryNode {
 					}
 					if (arg1 != null && local9 > arg1[local23 < arg1.length ? local23 : arg1.length - 1] && local13 >= 0) {
 						if (arg2[local23] == null) {
-							arg2[local23] = Static218.aClass100_720.method3143().method3137(local13 - local17, local11);
+							arg2[local23] = Static218.aClass100_720.method3143().substring(local13 - local17, local11);
 						} else {
 							arg2[local23].method3133(0);
 							arg2[local23] = arg2[local23].method3122(Static218.aClass100_720, local11, local13 - local17);
@@ -481,7 +481,7 @@ public abstract class Font extends SecondaryNode {
 		}
 		if (Static218.aClass100_720.length() > local11) {
 			if (arg2[local23] == null) {
-				arg2[local23] = Static218.aClass100_720.method3143().method3137(Static218.aClass100_720.length(), local11);
+				arg2[local23] = Static218.aClass100_720.method3143().substring(Static218.aClass100_720.length(), local11);
 			} else {
 				arg2[local23].method3133(0);
 				arg2[local23] = arg2[local23].method3122(Static218.aClass100_720, local11, Static218.aClass100_720.length());
@@ -754,7 +754,7 @@ public abstract class Font extends SecondaryNode {
 				@Pc(130) int local130;
 				@Pc(141) int local141;
 				if (local24 == 62 && local6 != -1) {
-					@Pc(44) JagString local44 = arg0.method3137(local16, local6 + 1);
+					@Pc(44) JagString local44 = arg0.substring(local16, local6 + 1);
 					local6 = -1;
 					if (local44.method3108(Static218.aClass100_696)) {
 						local24 = 60;
@@ -841,14 +841,14 @@ public abstract class Font extends SecondaryNode {
 					}
 					@Pc(387) int local387 = this.anIntArray348[local24];
 					if (Static218.anInt3627 != -1) {
-						if (Static239.aBoolean269) {
+						if (GlRenderer.enabled) {
 							Static46.method1174(arg1, local4 + (int) ((double) this.anInt3626 * 0.7D), local387, Static218.anInt3627);
 						} else {
 							Static129.method2489(arg1, local4 + (int) ((double) this.anInt3626 * 0.7D), local387, Static218.anInt3627);
 						}
 					}
 					if (Static218.anInt3628 != -1) {
-						if (Static239.aBoolean269) {
+						if (GlRenderer.enabled) {
 							Static46.method1174(arg1, local4 + this.anInt3626, local387, Static218.anInt3628);
 						} else {
 							Static129.method2489(arg1, local4 + this.anInt3626, local387, Static218.anInt3628);

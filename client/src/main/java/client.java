@@ -116,7 +116,7 @@ public final class client extends GameShell {
 		if (local158) {
 			Static139.method2704();
 		}
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			for (local80 = 0; local80 < 100; local80++) {
 				Static186.aBooleanArray100[local80] = true;
 			}
@@ -148,8 +148,8 @@ public final class client extends GameShell {
 		} else if (Static244.anInt5370 == 40) {
 			Static114.method4636(false, Static34.method882(new JagString[] { LocalizedText.CONLOST, Static269.aClass100_556, LocalizedText.ATTEMPT_TO_REESTABLISH}));
 		}
-		if (Static239.aBoolean269 && Static244.anInt5370 != 0) {
-			Static239.method4153();
+		if (GlRenderer.enabled && Static244.anInt5370 != 0) {
+			GlRenderer.method4153();
 			for (local80 = 0; local80 < Static24.anInt766; local80++) {
 				Static31.aBooleanArray29[local80] = false;
 			}
@@ -191,8 +191,8 @@ public final class client extends GameShell {
 	@OriginalMember(owner = "client!client", name = "c", descriptor = "(B)V")
 	@Override
 	protected final void method928() {
-		if (Static239.aBoolean269) {
-			Static239.method4169();
+		if (GlRenderer.enabled) {
+			GlRenderer.quit();
 		}
 		if (Static69.aFrame2 != null) {
 			Static25.method714(Static69.aFrame2, Static71.signLink);
@@ -423,7 +423,7 @@ public final class client extends GameShell {
 			Static57.method1320(0, 0, 0, Static48.anInt1448, Static154.topLevelInterace, 0, Static254.anInt5554);
 		}
 		Static119.transmitTimer++;
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			label191: for (@Pc(57) int local57 = 0; local57 < 32768; local57++) {
 				@Pc(66) Npc local66 = Static175.aClass8_Sub4_Sub2Array1[local57];
 				if (local66 != null) {
@@ -457,7 +457,7 @@ public final class client extends GameShell {
 				}
 			}
 		}
-		if (!Static239.aBoolean269) {
+		if (!GlRenderer.enabled) {
 			Static269.method2170();
 		} else if (Static184.anInt4348 == 0 && Static179.anInt4261 == 0) {
 			if (Static227.anInt5096 == 2) {
@@ -962,7 +962,7 @@ public final class client extends GameShell {
 		Static107.method2261();
 		Static65.method1501();
 		Static111.method2292();
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static63.method1490();
 		}
 		if (Static71.mouseWheel != null) {

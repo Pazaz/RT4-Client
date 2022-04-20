@@ -301,7 +301,7 @@ public final class Static75 {
 					@Pc(625) byte local625 = Static57.aClass3_Sub15_Sub1_3.g1s();
 					local247 = Static57.aClass3_Sub15_Sub1_3.g2();
 					local633 = Static57.aClass3_Sub15_Sub1_3.g2lesadd();
-					if (!Static239.aBoolean269) {
+					if (!GlRenderer.enabled) {
 						Static170.method2574(local625, local247, local633, local232, local39, local613, local19, local605, local31, local23, local609, local228);
 					}
 				}

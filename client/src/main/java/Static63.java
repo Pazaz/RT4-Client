@@ -54,7 +54,7 @@ public final class Static63 {
 	}
 
 	@OriginalMember(owner = "client!fa", name = "b", descriptor = "()V")
-	public static synchronized void method1488() {
+	public static synchronized void clear() {
 		anInt1943++;
 		aClass69_48.method2278();
 		aClass69_49.method2278();
@@ -76,7 +76,7 @@ public final class Static63 {
 
 	@OriginalMember(owner = "client!fa", name = "c", descriptor = "()V")
 	public static synchronized void method1490() {
-		@Pc(1) GL2 local1 = Static239.gl;
+		@Pc(1) GL2 local1 = GlRenderer.gl;
 		@Pc(3) int local3 = 0;
 		while (true) {
 			@Pc(8) IntNode local8 = (IntNode) aClass69_48.method2287();

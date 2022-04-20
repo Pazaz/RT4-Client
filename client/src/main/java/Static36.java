@@ -227,7 +227,7 @@ public final class Static36 {
 									continue;
 								}
 								if (local9.anInt453 == 1402) {
-									if (!Static239.aBoolean269) {
+									if (!GlRenderer.enabled) {
 										Static43.method1143(local9);
 									}
 									continue;

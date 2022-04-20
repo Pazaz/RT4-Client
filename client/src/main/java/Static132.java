@@ -151,7 +151,7 @@ public final class Static132 {
 				Static56.anInt1742 = arg6;
 				Static116.anInt2954 = arg7;
 			}
-			if (!Static239.aBoolean269 && !arg8) {
+			if (!GlRenderer.enabled && !arg8) {
 				Rasteriser.aBoolean138 = false;
 				if (local307 < 0 || local323 < 0 || local291 < 0 || local307 > Rasteriser.anInt2472 || local323 > Rasteriser.anInt2472 || local291 > Rasteriser.anInt2472) {
 					Rasteriser.aBoolean138 = true;
@@ -177,7 +177,7 @@ public final class Static132 {
 			Static56.anInt1742 = arg6;
 			Static116.anInt2954 = arg7;
 		}
-		if (Static239.aBoolean269 || arg8) {
+		if (GlRenderer.enabled || arg8) {
 			return;
 		}
 		Rasteriser.aBoolean138 = false;

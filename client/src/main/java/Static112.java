@@ -17,7 +17,7 @@ public final class Static112 {
 			if (Static209.aClass153_86.method4506(Static55.anInt1736) && Static209.aClass153_86.method4506(Static169.anInt4073)) {
 				Static39.aClass3_Sub2_Sub1_1 = Static80.method3613(Static209.aClass153_86, Static55.anInt1736);
 				Static181.aClass3_Sub2_Sub1_9 = Static80.method3613(Static209.aClass153_86, Static169.anInt4073);
-				if (Static239.aBoolean269) {
+				if (GlRenderer.enabled) {
 					if (Static39.aClass3_Sub2_Sub1_1 instanceof SoftwareAlphaSprite) {
 						Static39.aClass3_Sub2_Sub1_1 = new GlAlphaSprite((SoftwareSprite) Static39.aClass3_Sub2_Sub1_1);
 					} else {
@@ -29,7 +29,7 @@ public final class Static112 {
 						Static181.aClass3_Sub2_Sub1_9 = new GlSprite((SoftwareSprite) Static181.aClass3_Sub2_Sub1_9);
 					}
 				}
-			} else if (Static239.aBoolean269) {
+			} else if (GlRenderer.enabled) {
 				Static46.method1182(local3, local9, local13, 20, Static40.anInt1275, 256 - Static111.anInt2910);
 			} else {
 				Static129.method2484(local3, local9, local13, 20, Static40.anInt1275, 256 - Static111.anInt2910);
@@ -46,7 +46,7 @@ public final class Static112 {
 			Static181.aClass3_Sub2_Sub1_9.method1421(local3 + local13 - Static181.aClass3_Sub2_Sub1_9.anInt1867, local9);
 		}
 		Static280.aClass3_Sub2_Sub9_43.method2857(LocalizedText.CHOOSE_OPTION, local3 + 3, local9 + 14, Static195.anInt4581, -1);
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static46.method1182(local3, local9 + 20, local13, local11 - 20, Static40.anInt1275, 256 - Static111.anInt2910);
 		} else {
 			Static129.method2484(local3, local9 + 20, local13, local11 - 20, Static40.anInt1275, 256 - Static111.anInt2910);
@@ -58,7 +58,7 @@ public final class Static112 {
 		for (local203 = 0; local203 < Static231.anInt5204; local203++) {
 			local219 = (Static231.anInt5204 - local203 - 1) * 15 + local9 + 35;
 			if (local3 < local112 && local112 < local3 + local13 && local114 > local219 - 13 && local114 < local219 + 3) {
-				if (Static239.aBoolean269) {
+				if (GlRenderer.enabled) {
 					Static46.method1182(local3, local219 - 13, local13, 16, Static251.anInt5457, 256 - Static232.anInt5208);
 				} else {
 					Static129.method2484(local3, local219 - 13, local13, 16, Static251.anInt5457, 256 - Static232.anInt5208);
@@ -69,7 +69,7 @@ public final class Static112 {
 			Static165.aClass3_Sub2_Sub1_8 = Static80.method3613(Static209.aClass153_86, Static85.anInt2261);
 			Static92.aClass3_Sub2_Sub1_6 = Static80.method3613(Static209.aClass153_86, Static136.anInt3324);
 			Static204.aClass3_Sub2_Sub1_10 = Static80.method3613(Static209.aClass153_86, Static254.anInt5556);
-			if (Static239.aBoolean269) {
+			if (GlRenderer.enabled) {
 				if (Static165.aClass3_Sub2_Sub1_8 instanceof SoftwareAlphaSprite) {
 					Static165.aClass3_Sub2_Sub1_8 = new GlAlphaSprite((SoftwareSprite) Static165.aClass3_Sub2_Sub1_8);
 				} else {

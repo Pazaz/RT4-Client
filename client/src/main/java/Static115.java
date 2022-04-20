@@ -84,7 +84,7 @@ public final class Static115 {
 		if (arg2 < 1) {
 			arg2 = 1;
 		}
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			@Pc(25) int local25 = arg2 - 334;
 			if (local25 < 0) {
 				local25 = 0;

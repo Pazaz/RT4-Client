@@ -93,7 +93,7 @@ public final class SeqType {
 		} else {
 			local124 = arg2.method4568(!local23.method901(local27) & !local41.method901(arg1), !local23.method903(local27) & !local41.method903(arg1), !this.aBoolean278);
 		}
-		if (Static239.aBoolean269 && this.aBoolean278) {
+		if (GlRenderer.enabled && this.aBoolean278) {
 			if (local39 == 1) {
 				((GlModel) local124).method4093();
 			} else if (local39 == 2) {
@@ -109,7 +109,7 @@ public final class SeqType {
 			local124.method4563();
 		}
 		local124.method4558(local23, local27, local41, arg1, arg4 - 1, local10, this.aBoolean278);
-		if (Static239.aBoolean269 && this.aBoolean278) {
+		if (GlRenderer.enabled && this.aBoolean278) {
 			if (local39 == 1) {
 				((GlModel) local124).method4116();
 			} else if (local39 == 2) {
@@ -206,7 +206,7 @@ public final class SeqType {
 		} else {
 			local106 = arg4.method4572(!local19.method901(local27) & !local42.method901(arg0), !local19.method903(local27) & !local42.method903(arg0), !this.aBoolean278);
 		}
-		if (this.aBoolean278 && Static239.aBoolean269) {
+		if (this.aBoolean278 && GlRenderer.enabled) {
 			if (local40 == 1) {
 				((GlModel) local106).method4093();
 			} else if (local40 == 2) {
@@ -222,7 +222,7 @@ public final class SeqType {
 			local106.method4563();
 		}
 		local106.method4558(local19, local27, local42, arg0, arg2 - 1, local6, this.aBoolean278);
-		if (this.aBoolean278 && Static239.aBoolean269) {
+		if (this.aBoolean278 && GlRenderer.enabled) {
 			if (local40 == 1) {
 				((GlModel) local106).method4116();
 			} else if (local40 == 2) {

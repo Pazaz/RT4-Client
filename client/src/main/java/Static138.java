@@ -104,7 +104,7 @@ public final class Static138 {
 
 	@OriginalMember(owner = "client!km", name = "f", descriptor = "(I)Z")
 	public static boolean method2697() {
-		return Static239.aBoolean269 ? true : Static162.aBoolean190;
+		return GlRenderer.enabled ? true : Static162.aBoolean190;
 	}
 
 	@OriginalMember(owner = "client!km", name = "c", descriptor = "(Z)Z")

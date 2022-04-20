@@ -23,7 +23,7 @@ public final class Static16 {
 
 	@OriginalMember(owner = "client!bf", name = "c", descriptor = "(I)V")
 	public static void method501() {
-		if (!Static239.aBoolean269 || Static231.aBoolean252) {
+		if (!GlRenderer.enabled || Static231.aBoolean252) {
 			return;
 		}
 		@Pc(14) Tile[][][] local14 = Static130.aClass3_Sub5ArrayArrayArray1;

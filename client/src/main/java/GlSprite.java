@@ -59,7 +59,7 @@ public class GlSprite extends Sprite {
 			return;
 		}
 		this.anInt1873 = arg0;
-		@Pc(9) GL2 local9 = Static239.gl;
+		@Pc(9) GL2 local9 = GlRenderer.gl;
 		if (arg0 == 2) {
 			local9.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR);
 			local9.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
@@ -74,11 +74,11 @@ public class GlSprite extends Sprite {
 		if (arg2 == null) {
 			return;
 		}
-		Static239.method4149();
-		Static239.method4177(arg2.anInt1872);
+		GlRenderer.method4149();
+		GlRenderer.setTextureId(arg2.anInt1872);
 		arg2.method1424(1);
-		@Pc(11) GL2 local11 = Static239.gl;
-		Static239.method4177(this.anInt1872);
+		@Pc(11) GL2 local11 = GlRenderer.gl;
+		GlRenderer.setTextureId(this.anInt1872);
 		this.method1424(1);
 		local11.glActiveTexture(GL2.GL_TEXTURE1);
 		local11.glEnable(GL2.GL_TEXTURE_2D);
@@ -97,16 +97,16 @@ public class GlSprite extends Sprite {
 		@Pc(115) float local115 = (float) this.anInt1859 / (float) this.anInt1874;
 		local11.glMultiTexCoord2f(GL2.GL_TEXTURE1, local68, local56);
 		local11.glTexCoord2f(local107, 0.0F);
-		local11.glVertex2f((float) (local85 + this.anInt1867), (float) (Static239.anInt5329 - local90));
+		local11.glVertex2f((float) (local85 + this.anInt1867), (float) (GlRenderer.canvasHeight - local90));
 		local11.glMultiTexCoord2f(GL2.GL_TEXTURE1, local47, local56);
 		local11.glTexCoord2f(0.0F, 0.0F);
-		local11.glVertex2f((float) local85, (float) (Static239.anInt5329 - local90));
+		local11.glVertex2f((float) local85, (float) (GlRenderer.canvasHeight - local90));
 		local11.glMultiTexCoord2f(GL2.GL_TEXTURE1, local47, local80);
 		local11.glTexCoord2f(0.0F, local115);
-		local11.glVertex2f((float) local85, (float) (Static239.anInt5329 - local90 - this.anInt1859));
+		local11.glVertex2f((float) local85, (float) (GlRenderer.canvasHeight - local90 - this.anInt1859));
 		local11.glMultiTexCoord2f(GL2.GL_TEXTURE1, local68, local80);
 		local11.glTexCoord2f(local107, local115);
-		local11.glVertex2f((float) (local85 + this.anInt1867), (float) (Static239.anInt5329 - local90 - this.anInt1859));
+		local11.glVertex2f((float) (local85 + this.anInt1867), (float) (GlRenderer.canvasHeight - local90 - this.anInt1859));
 		local11.glEnd();
 		local11.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_MODULATE);
 		local11.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_SRC0_RGB, GL2.GL_TEXTURE);
@@ -116,9 +116,9 @@ public class GlSprite extends Sprite {
 
 	@OriginalMember(owner = "client!cf", name = "c", descriptor = "(IIIII)V")
 	public final void method1426(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
-		Static239.method4155();
-		@Pc(2) GL2 local2 = Static239.gl;
-		Static239.method4177(this.anInt1872);
+		GlRenderer.method4155();
+		@Pc(2) GL2 local2 = GlRenderer.gl;
+		GlRenderer.setTextureId(this.anInt1872);
 		this.method1424(1);
 		@Pc(16) float local16 = (float) this.anInt1867 / (float) this.anInt1870;
 		@Pc(24) float local24 = (float) this.anInt1859 / (float) this.anInt1874;
@@ -126,7 +126,7 @@ public class GlSprite extends Sprite {
 		@Pc(34) float local34 = local24 * (float) arg4;
 		@Pc(39) int local39 = arg0 + this.anInt1863;
 		@Pc(46) int local46 = local39 + this.anInt1867 * arg3;
-		@Pc(53) int local53 = Static239.anInt5329 - arg1 - this.anInt1861;
+		@Pc(53) int local53 = GlRenderer.canvasHeight - arg1 - this.anInt1861;
 		@Pc(60) int local60 = local53 - this.anInt1859 * arg4;
 		@Pc(65) float local65 = (float) arg2 / 256.0F;
 		local2.glBegin(GL2.GL_TRIANGLE_FAN);
@@ -147,11 +147,11 @@ public class GlSprite extends Sprite {
 		if (arg8 == null) {
 			return;
 		}
-		Static239.method4149();
-		Static239.method4177(arg8.anInt1872);
+		GlRenderer.method4149();
+		GlRenderer.setTextureId(arg8.anInt1872);
 		arg8.method1424(1);
-		@Pc(11) GL2 local11 = Static239.gl;
-		Static239.method4177(this.anInt1872);
+		@Pc(11) GL2 local11 = GlRenderer.gl;
+		GlRenderer.setTextureId(this.anInt1872);
 		this.method1424(1);
 		local11.glActiveTexture(GL2.GL_TEXTURE1);
 		local11.glEnable(GL2.GL_TEXTURE_2D);
@@ -182,16 +182,16 @@ public class GlSprite extends Sprite {
 		@Pc(217) float local217 = (float) (this.anInt1874 * 65536);
 		local11.glMultiTexCoord2f(GL2.GL_TEXTURE1, local188, 0.0F);
 		local11.glTexCoord2f((float) local120 / local211, (float) local132 / local217);
-		local11.glVertex2f((float) (arg0 + arg2), (float) (Static239.anInt5329 - arg1));
+		local11.glVertex2f((float) (arg0 + arg2), (float) (GlRenderer.canvasHeight - arg1));
 		local11.glMultiTexCoord2f(GL2.GL_TEXTURE1, 0.0F, 0.0F);
 		local11.glTexCoord2f((float) local96 / local211, (float) local108 / local217);
-		local11.glVertex2f((float) arg0, (float) (Static239.anInt5329 - arg1));
+		local11.glVertex2f((float) arg0, (float) (GlRenderer.canvasHeight - arg1));
 		local11.glMultiTexCoord2f(GL2.GL_TEXTURE1, 0.0F, local196);
 		local11.glTexCoord2f((float) local144 / local211, (float) local156 / local217);
-		local11.glVertex2f((float) arg0, (float) (Static239.anInt5329 - arg1 - arg3));
+		local11.glVertex2f((float) arg0, (float) (GlRenderer.canvasHeight - arg1 - arg3));
 		local11.glMultiTexCoord2f(GL2.GL_TEXTURE1, local188, local196);
 		local11.glTexCoord2f((float) local168 / local211, (float) local180 / local217);
-		local11.glVertex2f((float) (arg0 + arg2), (float) (Static239.anInt5329 - arg1 - arg3));
+		local11.glVertex2f((float) (arg0 + arg2), (float) (GlRenderer.canvasHeight - arg1 - arg3));
 		local11.glEnd();
 		local11.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_MODULATE);
 		local11.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_SRC0_RGB, GL2.GL_TEXTURE);
@@ -202,13 +202,13 @@ public class GlSprite extends Sprite {
 	@OriginalMember(owner = "client!cf", name = "d", descriptor = "(II)V")
 	@Override
 	public final void method1421(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		Static239.method4149();
+		GlRenderer.method4149();
 		@Pc(5) int local5 = arg0 + this.anInt1863;
 		@Pc(10) int local10 = arg1 + this.anInt1861;
-		@Pc(12) GL2 local12 = Static239.gl;
-		Static239.method4177(this.anInt1872);
+		@Pc(12) GL2 local12 = GlRenderer.gl;
+		GlRenderer.setTextureId(this.anInt1872);
 		this.method1424(1);
-		local12.glTranslatef((float) local5, (float) (Static239.anInt5329 - local10), 0.0F);
+		local12.glTranslatef((float) local5, (float) (GlRenderer.canvasHeight - local10), 0.0F);
 		@Pc(35) float local35 = (float) this.anInt1867 / (float) this.anInt1870;
 		@Pc(43) float local43 = (float) this.anInt1859 / (float) this.anInt1874;
 		local12.glBegin(GL2.GL_TRIANGLE_FAN);
@@ -227,26 +227,26 @@ public class GlSprite extends Sprite {
 	@OriginalMember(owner = "client!cf", name = "e", descriptor = "(II)V")
 	@Override
 	public final void method1423(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		Static239.method4149();
+		GlRenderer.method4149();
 		@Pc(5) int local5 = arg0 + this.anInt1863;
 		@Pc(10) int local10 = arg1 + this.anInt1861;
-		@Pc(12) GL2 local12 = Static239.gl;
-		Static239.method4177(this.anInt1872);
+		@Pc(12) GL2 local12 = GlRenderer.gl;
+		GlRenderer.setTextureId(this.anInt1872);
 		this.method1424(1);
-		local12.glTranslatef((float) local5, (float) (Static239.anInt5329 - local10), 0.0F);
+		local12.glTranslatef((float) local5, (float) (GlRenderer.canvasHeight - local10), 0.0F);
 		local12.glCallList(this.anInt1871);
 		local12.glLoadIdentity();
 	}
 
 	@OriginalMember(owner = "client!cf", name = "b", descriptor = "(IIIIII)V")
 	public final void method1428(@OriginalArg(2) int arg0, @OriginalArg(3) int arg1, @OriginalArg(4) int arg2) {
-		Static239.method4149();
-		@Pc(2) GL2 local2 = Static239.gl;
-		Static239.method4177(this.anInt1872);
+		GlRenderer.method4149();
+		@Pc(2) GL2 local2 = GlRenderer.gl;
+		GlRenderer.setTextureId(this.anInt1872);
 		this.method1424(2);
 		@Pc(15) int local15 = 240 - (this.anInt1863 << 4);
 		@Pc(22) int local22 = 240 - (this.anInt1861 << 4);
-		local2.glTranslatef((float) arg0 / 16.0F, (float) Static239.anInt5329 - (float) arg1 / 16.0F, 0.0F);
+		local2.glTranslatef((float) arg0 / 16.0F, (float) GlRenderer.canvasHeight - (float) arg1 / 16.0F, 0.0F);
 		local2.glRotatef((float) -arg2 * 0.005493164F, 0.0F, 0.0F, 1.0F);
 		local2.glTranslatef((float) -local15 / 16.0F, (float) local22 / 16.0F, 0.0F);
 		local2.glCallList(this.anInt1871);
@@ -259,7 +259,7 @@ public class GlSprite extends Sprite {
 		if (arg2 <= 0 || arg3 <= 0) {
 			return;
 		}
-		Static239.method4149();
+		GlRenderer.method4149();
 		@Pc(8) int local8 = this.anInt1867;
 		@Pc(11) int local11 = this.anInt1859;
 		@Pc(13) int local13 = 0;
@@ -285,12 +285,12 @@ public class GlSprite extends Sprite {
 		if (local11 < local21) {
 			arg3 = ((local11 << 16) + local33 - local15 - 1) / local33;
 		}
-		@Pc(123) GL2 local123 = Static239.gl;
-		Static239.method4177(this.anInt1872);
+		@Pc(123) GL2 local123 = GlRenderer.gl;
+		GlRenderer.setTextureId(this.anInt1872);
 		this.method1424(2);
 		@Pc(132) float local132 = (float) arg0;
 		@Pc(137) float local137 = local132 + (float) arg2;
-		@Pc(142) float local142 = (float) (Static239.anInt5329 - arg1);
+		@Pc(142) float local142 = (float) (GlRenderer.canvasHeight - arg1);
 		@Pc(147) float local147 = local142 - (float) arg3;
 		@Pc(155) float local155 = (float) this.anInt1867 / (float) this.anInt1870;
 		@Pc(163) float local163 = (float) this.anInt1859 / (float) this.anInt1874;
@@ -309,13 +309,13 @@ public class GlSprite extends Sprite {
 	@OriginalMember(owner = "client!cf", name = "c", descriptor = "(II)V")
 	@Override
 	public final void method1415(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		Static239.method4149();
+		GlRenderer.method4149();
 		@Pc(5) int local5 = arg0 + this.anInt1863;
 		@Pc(10) int local10 = arg1 + this.anInt1861;
-		@Pc(12) GL2 local12 = Static239.gl;
-		Static239.method4177(this.anInt1872);
+		@Pc(12) GL2 local12 = GlRenderer.gl;
+		GlRenderer.setTextureId(this.anInt1872);
 		this.method1424(1);
-		local12.glTranslatef((float) local5, (float) (Static239.anInt5329 - local10), 0.0F);
+		local12.glTranslatef((float) local5, (float) (GlRenderer.canvasHeight - local10), 0.0F);
 		local12.glCallList(this.anInt1871);
 		local12.glLoadIdentity();
 	}
@@ -338,13 +338,13 @@ public class GlSprite extends Sprite {
 	@OriginalMember(owner = "client!cf", name = "a", descriptor = "(IIIIII)V")
 	@Override
 	protected final void method1416(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
-		Static239.method4149();
-		@Pc(2) GL2 local2 = Static239.gl;
-		Static239.method4177(this.anInt1872);
+		GlRenderer.method4149();
+		@Pc(2) GL2 local2 = GlRenderer.gl;
+		GlRenderer.setTextureId(this.anInt1872);
 		this.method1424(1);
 		@Pc(15) int local15 = arg0 - (this.anInt1863 << 4);
 		@Pc(22) int local22 = arg1 - (this.anInt1861 << 4);
-		local2.glTranslatef((float) arg2 / 16.0F, (float) Static239.anInt5329 - (float) arg3 / 16.0F, 0.0F);
+		local2.glTranslatef((float) arg2 / 16.0F, (float) GlRenderer.canvasHeight - (float) arg3 / 16.0F, 0.0F);
 		local2.glRotatef((float) arg4 * 0.005493164F, 0.0F, 0.0F, 1.0F);
 		if (arg5 != 4096) {
 			local2.glScalef((float) arg5 / 4096.0F, (float) arg5 / 4096.0F, 0.0F);
@@ -360,7 +360,7 @@ public class GlSprite extends Sprite {
 		if (arg2 <= 0 || arg3 <= 0) {
 			return;
 		}
-		Static239.method4155();
+		GlRenderer.method4155();
 		@Pc(8) int local8 = this.anInt1867;
 		@Pc(11) int local11 = this.anInt1859;
 		@Pc(13) int local13 = 0;
@@ -386,12 +386,12 @@ public class GlSprite extends Sprite {
 		if (local11 < local21) {
 			arg3 = ((local11 << 16) + local33 - local15 - 1) / local33;
 		}
-		@Pc(123) GL2 local123 = Static239.gl;
-		Static239.method4177(this.anInt1872);
+		@Pc(123) GL2 local123 = GlRenderer.gl;
+		GlRenderer.setTextureId(this.anInt1872);
 		this.method1424(1);
 		@Pc(132) float local132 = (float) arg0;
 		@Pc(137) float local137 = local132 + (float) arg2;
-		@Pc(142) float local142 = (float) (Static239.anInt5329 - arg1);
+		@Pc(142) float local142 = (float) (GlRenderer.canvasHeight - arg1);
 		@Pc(147) float local147 = local142 - (float) arg3;
 		@Pc(155) float local155 = (float) this.anInt1867 / (float) this.anInt1870;
 		@Pc(163) float local163 = (float) this.anInt1859 / (float) this.anInt1874;
@@ -411,9 +411,9 @@ public class GlSprite extends Sprite {
 
 	@OriginalMember(owner = "client!cf", name = "b", descriptor = "(IIII)V")
 	public final void method1429(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		Static239.method4149();
-		@Pc(2) GL2 local2 = Static239.gl;
-		Static239.method4177(this.anInt1872);
+		GlRenderer.method4149();
+		@Pc(2) GL2 local2 = GlRenderer.gl;
+		GlRenderer.setTextureId(this.anInt1872);
 		this.method1424(1);
 		@Pc(16) float local16 = (float) this.anInt1867 / (float) this.anInt1870;
 		@Pc(24) float local24 = (float) this.anInt1859 / (float) this.anInt1874;
@@ -421,7 +421,7 @@ public class GlSprite extends Sprite {
 		@Pc(34) float local34 = local24 * (float) arg3;
 		@Pc(39) int local39 = arg0 + this.anInt1863;
 		@Pc(46) int local46 = local39 + this.anInt1867 * arg2;
-		@Pc(53) int local53 = Static239.anInt5329 - arg1 - this.anInt1861;
+		@Pc(53) int local53 = GlRenderer.canvasHeight - arg1 - this.anInt1861;
 		@Pc(60) int local60 = local53 - this.anInt1859 * arg3;
 		local2.glBegin(GL2.GL_TRIANGLE_FAN);
 		local2.glTexCoord2f(local29, 0.0F);
@@ -458,14 +458,14 @@ public class GlSprite extends Sprite {
 			local22 += local32;
 		}
 		@Pc(91) ByteBuffer local91 = ByteBuffer.wrap(local20);
-		@Pc(93) GL2 local93 = Static239.gl;
+		@Pc(93) GL2 local93 = GlRenderer.gl;
 		if (this.anInt1872 == -1) {
 			@Pc(100) int[] local100 = new int[1];
 			local93.glGenTextures(1, local100, 0);
 			this.anInt1872 = local100[0];
 			this.anInt1875 = Static63.anInt1943;
 		}
-		Static239.method4177(this.anInt1872);
+		GlRenderer.setTextureId(this.anInt1872);
 		local93.glTexImage2D(GL2.GL_TEXTURE_2D, 0, GL2.GL_RGBA, this.anInt1870, this.anInt1874, 0, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, local91);
 		Static63.anInt1944 += local91.limit() - this.anInt1869;
 		this.anInt1869 = local91.limit();
@@ -474,14 +474,14 @@ public class GlSprite extends Sprite {
 	@OriginalMember(owner = "client!cf", name = "a", descriptor = "(III)V")
 	@Override
 	public final void method1417(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		Static239.method4155();
+		GlRenderer.method4155();
 		@Pc(5) int local5 = arg0 + this.anInt1863;
 		@Pc(10) int local10 = arg1 + this.anInt1861;
-		@Pc(12) GL2 local12 = Static239.gl;
-		Static239.method4177(this.anInt1872);
+		@Pc(12) GL2 local12 = GlRenderer.gl;
+		GlRenderer.setTextureId(this.anInt1872);
 		this.method1424(1);
 		local12.glColor4f(1.0F, 1.0F, 1.0F, (float) arg2 / 256.0F);
-		local12.glTranslatef((float) local5, (float) (Static239.anInt5329 - local10), 0.0F);
+		local12.glTranslatef((float) local5, (float) (GlRenderer.canvasHeight - local10), 0.0F);
 		local12.glCallList(this.anInt1871);
 		local12.glLoadIdentity();
 	}
@@ -490,7 +490,7 @@ public class GlSprite extends Sprite {
 	private void method1431() {
 		@Pc(7) float local7 = (float) this.anInt1867 / (float) this.anInt1870;
 		@Pc(15) float local15 = (float) this.anInt1859 / (float) this.anInt1874;
-		@Pc(17) GL2 local17 = Static239.gl;
+		@Pc(17) GL2 local17 = GlRenderer.gl;
 		if (this.anInt1871 == -1) {
 			this.anInt1871 = local17.glGenLists(1);
 			this.anInt1875 = Static63.anInt1943;

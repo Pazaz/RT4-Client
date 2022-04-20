@@ -96,13 +96,13 @@ public final class Static248 {
 			}
 		}
 		@Pc(240) boolean local240 = Static83.anIntArrayArrayArray4 == Static80.anIntArrayArrayArray19;
-		if (Static239.aBoolean269) {
-			@Pc(244) GL2 local244 = Static239.gl;
+		if (GlRenderer.enabled) {
+			@Pc(244) GL2 local244 = GlRenderer.gl;
 			local244.glPushMatrix();
 			local244.glTranslatef((float) -arg0, (float) -arg1, (float) -arg2);
 			if (local240) {
 				Static156.method2959();
-				Static27.method766(-1, 3);
+				Static27.setMaterial(-1, 3);
 				Static119.aBoolean153 = true;
 				Static275.method4609();
 				Static152.anInt3604 = -1;
@@ -134,7 +134,7 @@ public final class Static248 {
 						local336.method1944(Static130.aClass3_Sub5ArrayArrayArray1, local350, false);
 					}
 					if (local32 == 0 && Static139.anInt3451 > 0) {
-						Static239.method4159(101.5F);
+						GlRenderer.method4159(101.5F);
 						Static242.method4198(Static167.anInt4069, Static193.anInt4539, Static277.anInt5855, arg1, Static48.aBooleanArrayArray1, Static83.anIntArrayArrayArray4[0]);
 					}
 					local32++;

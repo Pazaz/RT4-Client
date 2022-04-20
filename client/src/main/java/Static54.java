@@ -20,7 +20,7 @@ public final class Static54 {
 	@OriginalMember(owner = "client!ed", name = "a", descriptor = "(IBIILclient!be;)V")
 	public static void method1305(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Component arg3) {
 		Static107.method2261();
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static46.method1187(arg2, arg1, arg2 + arg3.anInt445, arg1 + arg3.anInt459);
 		} else {
 			Static129.method2496(arg2, arg1, arg2 + arg3.anInt445, arg1 + arg3.anInt459);
@@ -29,7 +29,7 @@ public final class Static54 {
 			@Pc(48) int local48 = Static59.anInt1814 + Static57.anInt1747 & 0x7FF;
 			@Pc(57) int local57 = Static173.self.anInt3412 / 32 + 48;
 			@Pc(67) int local67 = 464 - Static173.self.anInt3421 / 32;
-			if (Static239.aBoolean269) {
+			if (GlRenderer.enabled) {
 				((GlSprite) Static89.aClass3_Sub2_Sub1_5).method1427(arg2, arg1, arg3.anInt445, arg3.anInt459, local57, local67, local48, Static273.anInt4130 + 256, (GlSprite) arg3.method489(false));
 			} else {
 				((SoftwareSprite) Static89.aClass3_Sub2_Sub1_5).method310(arg2, arg1, arg3.anInt445, arg3.anInt459, local57, local67, local48, Static273.anInt4130 + 256, arg3.anIntArray37, arg3.anIntArray45);
@@ -67,13 +67,13 @@ public final class Static54 {
 							if (Static235.aClass134_2.anIntArray444[local117] != -1) {
 								local271 = Static235.aClass134_2.anIntArray444[local117];
 							}
-							if (Static239.aBoolean269) {
+							if (GlRenderer.enabled) {
 								Static46.method1188((GlSprite) arg3.method489(false));
 							} else {
 								Static129.method2486(arg3.anIntArray37, arg3.anIntArray45);
 							}
 							local156.method2869(Static235.aClass134_2.aClass100Array153[local117], arg2 + local245 + arg3.anInt445 / 2, arg1 + arg3.anInt459 / 2 + -local200, local239, 50, local271, 0, 1, 0, 0);
-							if (Static239.aBoolean269) {
+							if (GlRenderer.enabled) {
 								Static46.method1173();
 							} else {
 								Static129.method2482();
@@ -189,12 +189,12 @@ public final class Static54 {
 				local181 = Static84.anInt2255 * 4 + 2 - Static173.self.anInt3421 / 32;
 				Static60.method1446(arg3, Static84.aClass3_Sub2_Sub1_4, local181, local146, arg1, arg2);
 			}
-			if (Static239.aBoolean269) {
+			if (GlRenderer.enabled) {
 				Static46.method1186(arg2 + arg3.anInt445 / 2 - 1, arg1 + -1 - -(arg3.anInt459 / 2), 3, 3, 16777215);
 			} else {
 				Static129.method2495(arg3.anInt445 / 2 + arg2 - 1, arg3.anInt459 / 2 + -1 + arg1, 3, 3, 16777215);
 			}
-		} else if (Static239.aBoolean269) {
+		} else if (GlRenderer.enabled) {
 			@Pc(1041) Sprite local1041 = arg3.method489(false);
 			if (local1041 != null) {
 				local1041.method1423(arg2, arg1);

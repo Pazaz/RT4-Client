@@ -88,7 +88,7 @@ public final class Static140 {
 			return;
 		}
 		for (@Pc(19) int local19 = 0; local19 < 50 && arg0.anEventQueue1.peekEvent() != null; local19++) {
-			Static231.method3983(1L);
+			Static231.sleep(1L);
 		}
 		if (arg1 != null) {
 			arg0.anEventQueue1.postEvent(new ActionEvent(arg1, 1001, "dummy"));

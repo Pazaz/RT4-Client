@@ -32,12 +32,12 @@ public final class Class165 {
 
 	@OriginalMember(owner = "client!wm", name = "<init>", descriptor = "()V")
 	public Class165() {
-		@Pc(9) GL2 local9 = Static239.gl;
+		@Pc(9) GL2 local9 = GlRenderer.gl;
 		@Pc(12) int[] local12 = new int[1];
 		local9.glGenTextures(1, local12, 0);
 		this.anInt5901 = local12[0];
 		Static63.anInt1942 += 16384;
-		Static239.method4177(this.anInt5901);
+		GlRenderer.setTextureId(this.anInt5901);
 		local9.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR);
 		local9.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
 		local9.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_WRAP_S, GL2.GL_CLAMP_TO_EDGE);
@@ -50,7 +50,7 @@ public final class Class165 {
 		@Pc(11) int local11;
 		for (@Pc(6) int local6 = 0; local6 <= 8; local6++) {
 			for (local11 = 0; local11 <= 8; local11++) {
-				if (Static239.aBoolean263) {
+				if (GlRenderer.bigEndian) {
 					local4.pFloat((float) local11 / 8.0F);
 					local4.pFloat((float) local6 / 8.0F);
 					local4.pFloat((float) (local11 * 128));
@@ -65,7 +65,7 @@ public final class Class165 {
 				}
 			}
 		}
-		if (Static239.aBoolean271) {
+		if (GlRenderer.arbVboSupported) {
 			@Pc(112) ByteBuffer local112 = ByteBuffer.wrap(local4.data, 0, local4.offset);
 			this.aClass155_7 = new GlVertexBufferObject();
 			this.aClass155_7.method4519(local112);
@@ -77,7 +77,7 @@ public final class Class165 {
 		@Pc(147) Buffer local147 = new Buffer(1536);
 		for (local11 = 0; local11 < 8; local11++) {
 			for (@Pc(154) int local154 = 0; local154 < 8; local154++) {
-				if (Static239.aBoolean263) {
+				if (GlRenderer.bigEndian) {
 					local147.p4(local154 + (local11 + 1) * 9);
 					local147.p4(local154 + local11 * 9);
 					local147.p4(local154 + local11 * 9 + 1);
@@ -94,7 +94,7 @@ public final class Class165 {
 				}
 			}
 		}
-		if (Static239.aBoolean271) {
+		if (GlRenderer.arbVboSupported) {
 			@Pc(293) ByteBuffer local293 = ByteBuffer.wrap(local147.data, 0, local147.offset);
 			this.aClass155_6 = new GlVertexBufferObject();
 			this.aClass155_6.method4517(local293);
@@ -152,31 +152,31 @@ public final class Class165 {
 			}
 			local19 += local5 - 128;
 		}
-		@Pc(145) GL2 local145 = Static239.gl;
+		@Pc(145) GL2 local145 = GlRenderer.gl;
 		@Pc(148) ByteBuffer local148 = ByteBuffer.wrap(Static281.aByteArray82);
 		local148.limit(16384);
-		Static239.method4177(this.anInt5901);
+		GlRenderer.setTextureId(this.anInt5901);
 		local145.glTexImage2D(GL2.GL_TEXTURE_2D, 0, GL2.GL_ALPHA, 128, 128, 0, GL2.GL_ALPHA, GL2.GL_UNSIGNED_BYTE, local148);
 		return true;
 	}
 
 	@OriginalMember(owner = "client!wm", name = "b", descriptor = "()V")
 	public final void method4679() {
-		@Pc(1) GL2 local1 = Static239.gl;
-		Static239.method4177(this.anInt5901);
+		@Pc(1) GL2 local1 = GlRenderer.gl;
+		GlRenderer.setTextureId(this.anInt5901);
 		if (this.aClass155_7 == null) {
-			if (Static239.aBoolean271) {
+			if (GlRenderer.arbVboSupported) {
 				local1.glBindBuffer(GL2.GL_ARRAY_BUFFER, 0);
 			}
 			local1.glInterleavedArrays(GL2.GL_T2F_V3F, 20, this.aByteBuffer12);
-			Static239.aBoolean265 = false;
+			GlRenderer.normalArrayEnabled = false;
 		} else {
 			this.aClass155_7.method4516();
 			local1.glInterleavedArrays(GL2.GL_T2F_V3F, 20, 0L);
-			Static239.aBoolean265 = false;
+			GlRenderer.normalArrayEnabled = false;
 		}
 		if (this.aClass155_6 == null) {
-			if (Static239.aBoolean271) {
+			if (GlRenderer.arbVboSupported) {
 				local1.glBindBuffer(GL2.GL_ELEMENT_ARRAY_BUFFER, 0);
 			}
 			local1.glDrawElements(GL2.GL_TRIANGLES, 384, GL2.GL_UNSIGNED_INT, this.aByteBuffer11);

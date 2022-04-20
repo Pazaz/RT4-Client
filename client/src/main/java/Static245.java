@@ -173,7 +173,7 @@ public final class Static245 {
 			}
 		}
 		@Pc(497) int local497;
-		if (Static239.aBoolean269 && !arg9) {
+		if (GlRenderer.enabled && !arg9) {
 			@Pc(472) Environment local472 = null;
 			label207: while (true) {
 				label200: do {

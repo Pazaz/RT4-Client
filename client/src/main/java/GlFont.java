@@ -52,24 +52,24 @@ public final class GlFont extends Font {
 	protected final void method2854(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
 		@Pc(4) GL2 local4;
 		if (Static46.aClass3_Sub2_Sub1_Sub2_1 == null) {
-			Static239.method4151();
-			local4 = Static239.gl;
-			Static239.method4177(this.anInt3638);
+			GlRenderer.method4151();
+			local4 = GlRenderer.gl;
+			GlRenderer.setTextureId(this.anInt3638);
 			local4.glColor3ub((byte) (arg5 >> 16), (byte) (arg5 >> 8), (byte) arg5);
-			local4.glTranslatef((float) arg1, (float) (Static239.anInt5329 - arg2), 0.0F);
+			local4.glTranslatef((float) arg1, (float) (GlRenderer.canvasHeight - arg2), 0.0F);
 			local4.glCallList(this.anIntArray349[arg0]);
 			local4.glLoadIdentity();
 			return;
 		}
-		Static239.method4151();
-		local4 = Static239.gl;
+		GlRenderer.method4151();
+		local4 = GlRenderer.gl;
 		local4.glColor3ub((byte) (arg5 >> 16), (byte) (arg5 >> 8), (byte) arg5);
-		local4.glTranslatef((float) arg1, (float) (Static239.anInt5329 - arg2), 0.0F);
+		local4.glTranslatef((float) arg1, (float) (GlRenderer.canvasHeight - arg2), 0.0F);
 		@Pc(32) float local32 = (float) (arg0 % 16) / 16.0F;
 		@Pc(39) float local39 = (float) (arg0 / 16) / 16.0F;
 		@Pc(51) float local51 = local32 + (float) this.anIntArray343[arg0] / (float) this.anInt3640;
 		@Pc(63) float local63 = local39 + (float) this.anIntArray345[arg0] / (float) this.anInt3640;
-		Static239.method4177(this.anInt3638);
+		GlRenderer.setTextureId(this.anInt3638);
 		@Pc(68) GlSprite local68 = Static46.aClass3_Sub2_Sub1_Sub2_1;
 		local4.glActiveTexture(GL2.GL_TEXTURE1);
 		local4.glEnable(GL2.GL_TEXTURE_2D);
@@ -104,11 +104,11 @@ public final class GlFont extends Font {
 	@OriginalMember(owner = "client!mb", name = "a", descriptor = "(IIIIIIIZ)V")
 	@Override
 	protected final void method2855(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6) {
-		Static239.method4151();
-		@Pc(2) GL2 local2 = Static239.gl;
-		Static239.method4177(this.anInt3638);
+		GlRenderer.method4151();
+		@Pc(2) GL2 local2 = GlRenderer.gl;
+		GlRenderer.setTextureId(this.anInt3638);
 		local2.glColor4ub((byte) (arg5 >> 16), (byte) (arg5 >> 8), (byte) arg5, arg6 > 255 ? -1 : (byte) arg6);
-		local2.glTranslatef((float) arg1, (float) (Static239.anInt5329 - arg2), 0.0F);
+		local2.glTranslatef((float) arg1, (float) (GlRenderer.canvasHeight - arg2), 0.0F);
 		local2.glCallList(this.anIntArray349[arg0]);
 		local2.glLoadIdentity();
 	}
@@ -119,7 +119,7 @@ public final class GlFont extends Font {
 			return;
 		}
 		this.anIntArray349 = new int[256];
-		@Pc(9) GL2 local9 = Static239.gl;
+		@Pc(9) GL2 local9 = GlRenderer.gl;
 		for (@Pc(11) int local11 = 0; local11 < 256; local11++) {
 			@Pc(21) float local21 = (float) (local11 % 16) / 16.0F;
 			@Pc(28) float local28 = (float) (local11 / 16) / 16.0F;
@@ -182,14 +182,14 @@ public final class GlFont extends Font {
 			}
 		}
 		@Pc(153) ByteBuffer local153 = ByteBuffer.wrap(local66);
-		@Pc(155) GL2 local155 = Static239.gl;
+		@Pc(155) GL2 local155 = GlRenderer.gl;
 		if (this.anInt3638 == -1) {
 			@Pc(162) int[] local162 = new int[1];
 			local155.glGenTextures(1, local162, 0);
 			this.anInt3638 = local162[0];
 			this.anInt3639 = Static63.anInt1943;
 		}
-		Static239.method4177(this.anInt3638);
+		GlRenderer.setTextureId(this.anInt3638);
 		local155.glTexImage2D(GL2.GL_TEXTURE_2D, 0, GL2.GL_LUMINANCE_ALPHA, this.anInt3640, this.anInt3640, 0, GL2.GL_LUMINANCE_ALPHA, GL2.GL_UNSIGNED_BYTE, local153);
 		Static63.anInt1944 += local153.limit() - this.anInt3637;
 		this.anInt3637 = local153.limit();

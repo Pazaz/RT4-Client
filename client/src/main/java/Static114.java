@@ -46,7 +46,7 @@ public final class Static114 {
 	public static void method4636(@OriginalArg(1) boolean arg0, @OriginalArg(2) JagString arg1) {
 		@Pc(24) int local24 = Static215.aClass3_Sub2_Sub9_32.method2856(arg1, 250);
 		@Pc(31) int local31 = Static215.aClass3_Sub2_Sub9_32.method2860(arg1, 250) * 13;
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static46.method1186(6, 6, local24 + 4 + 4, local31 + 8, 0);
 			Static46.method1179(6, 6, local24 + 4 + 4, local31 + 4 + 4, 16777215);
 		} else {
@@ -57,8 +57,8 @@ public final class Static114 {
 		Static133.method4012(6, local24 + 8, 6, local31 + 4 + 4);
 		if (!arg0) {
 			Static121.method2407(10, 10, local31, local24);
-		} else if (Static239.aBoolean269) {
-			Static239.method4153();
+		} else if (GlRenderer.enabled) {
+			GlRenderer.method4153();
 		} else {
 			try {
 				@Pc(159) Graphics local159 = Static154.canvas.getGraphics();

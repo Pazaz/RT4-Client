@@ -47,7 +47,7 @@ public final class Static73 {
 		Static173.self = new Player();
 		Static173.self.anInt3421 = 3000;
 		Static173.self.anInt3412 = 3000;
-		if (!Static239.aBoolean269) {
+		if (!GlRenderer.enabled) {
 			Static145.method2743(Static209.aClass153_86);
 			Static196.method3534(10);
 			return;

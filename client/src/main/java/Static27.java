@@ -26,7 +26,7 @@ public final class Static27 {
 	public static final JagString aClass100_168 = Static28.parse(": ");
 
 	@OriginalMember(owner = "client!cb", name = "b", descriptor = "(III)V")
-	public static void method766(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
+	public static void setMaterial(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
 		if (arg1 == 4 && !Static220.aBoolean244) {
 			arg1 = 2;
 			arg0 = 2;

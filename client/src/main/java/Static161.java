@@ -46,7 +46,7 @@ public final class Static161 {
 
 	@OriginalMember(owner = "client!mk", name = "a", descriptor = "()V")
 	public static void method3058() {
-		@Pc(1) GL2 local1 = Static239.gl;
+		@Pc(1) GL2 local1 = GlRenderer.gl;
 		local1.glLightfv(GL2.GL_LIGHT0, GL2.GL_POSITION, aFloatArray18, 0);
 		local1.glLightfv(GL2.GL_LIGHT1, GL2.GL_POSITION, aFloatArray20, 0);
 	}
@@ -65,7 +65,7 @@ public final class Static161 {
 		aFloat21 = arg1;
 		aFloat19 = arg2;
 		aFloat20 = arg3;
-		@Pc(25) GL2 local25 = Static239.gl;
+		@Pc(25) GL2 local25 = GlRenderer.gl;
 		@Pc(34) float local34 = (float) (arg0 >> 16 & 0xFF) / 255.0F;
 		@Pc(43) float local43 = (float) (arg0 >> 8 & 0xFF) / 255.0F;
 		@Pc(50) float local50 = (float) (arg0 & 0xFF) / 255.0F;
@@ -84,7 +84,7 @@ public final class Static161 {
 		}
 		anInt3925 = arg0;
 		anInt3924 = arg1;
-		@Pc(12) GL2 local12 = Static239.gl;
+		@Pc(12) GL2 local12 = GlRenderer.gl;
 		aFloatArray19[0] = (float) (arg0 >> 16 & 0xFF) / 255.0F;
 		aFloatArray19[1] = (float) (arg0 >> 8 & 0xFF) / 255.0F;
 		aFloatArray19[2] = (float) (arg0 & 0xFF) / 255.0F;
@@ -122,7 +122,7 @@ public final class Static161 {
 
 	@OriginalMember(owner = "client!mk", name = "e", descriptor = "()V")
 	public static void method3065() {
-		@Pc(1) GL2 local1 = Static239.gl;
+		@Pc(1) GL2 local1 = GlRenderer.gl;
 		local1.glColorMaterial(GL2.GL_FRONT, GL2.GL_AMBIENT_AND_DIFFUSE);
 		local1.glEnable(GL2.GL_COLOR_MATERIAL);
 		@Pc(27) float[] local27 = new float[] { 0.0F, 0.0F, 0.0F, 1.0F };
@@ -141,7 +141,7 @@ public final class Static161 {
 		if (arg0 == null) {
 			arg0 = aFloatArray19;
 		}
-		@Pc(5) GL2 local5 = Static239.gl;
+		@Pc(5) GL2 local5 = GlRenderer.gl;
 		local5.glFogfv(GL2.GL_FOG_COLOR, arg0, 0);
 	}
 

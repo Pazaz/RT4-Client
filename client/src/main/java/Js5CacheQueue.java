@@ -22,7 +22,7 @@ public final class Js5CacheQueue implements Runnable {
 	public Js5CacheQueue() {
 		@Pc(20) PrivilegedRequest local20 = Static71.signLink.method5130(5, this);
 		while (local20.status == 0) {
-			Static231.method3983(10L);
+			Static231.sleep(10L);
 		}
 		if (local20.status == 2) {
 			throw new RuntimeException();

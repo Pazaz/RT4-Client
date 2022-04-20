@@ -84,7 +84,7 @@ public final class Static26 {
 	public static void method743(@OriginalArg(0) boolean arg0) {
 		@Pc(13) int local13 = Static273.aByteArrayArray13.length;
 		@Pc(19) byte[][] local19;
-		if (Static239.aBoolean269 && arg0) {
+		if (GlRenderer.enabled && arg0) {
 			local19 = Static19.aByteArrayArray4;
 		} else {
 			local19 = Static156.aByteArrayArray11;

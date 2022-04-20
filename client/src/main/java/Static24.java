@@ -34,14 +34,14 @@ public final class Static24 {
 
 	@OriginalMember(owner = "client!bn", name = "a", descriptor = "(BZLclient!na;)V")
 	public static void method668(@OriginalArg(1) boolean arg0, @OriginalArg(2) JagString arg1) {
-		@Pc(9) JagString local9 = arg1.method3114();
+		@Pc(9) JagString local9 = arg1.toLowerCase();
 		@Pc(11) int local11 = 0;
 		@Pc(22) short[] local22 = new short[16];
 		@Pc(28) int local28 = arg0 ? 32768 : 0;
 		@Pc(36) int local36 = (arg0 ? Static34.anInt1047 : Static144.anInt3490) + local28;
 		for (@Pc(38) int local38 = local28; local38 < local36; local38++) {
 			@Pc(45) Class3_Sub2_Sub6 local45 = Static230.method3953(local38);
-			if (local45.aBoolean60 && local45.method769().method3114().method3131(local9) != -1) {
+			if (local45.aBoolean60 && local45.method769().toLowerCase().indexOf(local9) != -1) {
 				if (local11 >= 50) {
 					Static111.anInt2905 = -1;
 					Static169.aShortArray52 = null;

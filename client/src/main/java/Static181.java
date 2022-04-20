@@ -40,7 +40,7 @@ public final class Static181 {
 		if (Static18.aBoolean40) {
 			return;
 		}
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static46.method1184();
 		} else {
 			Static129.method2492();

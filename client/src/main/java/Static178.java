@@ -8,7 +8,7 @@ public final class Static178 {
 	public static MouseRecorder instance;
 
 	@OriginalMember(owner = "client!od", name = "c", descriptor = "Z")
-	public static boolean aBoolean202 = true;
+	public static boolean highDetailLighting = true;
 
 	@OriginalMember(owner = "client!od", name = "e", descriptor = "I")
 	public static int anInt4246 = 0;

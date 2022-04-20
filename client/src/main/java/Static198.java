@@ -71,7 +71,7 @@ public final class Static198 {
 		if (local113 < 50) {
 			Static16.anInt548 = -1;
 			Static65.anInt1951 = -1;
-		} else if (Static239.aBoolean269) {
+		} else if (GlRenderer.enabled) {
 			@Pc(150) int local150 = arg1 * 512 >> 8;
 			Static65.anInt1951 = local150 * local89 / local113 + arg0;
 			@Pc(164) int local164 = arg6 * 512 >> 8;

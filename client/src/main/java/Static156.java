@@ -55,7 +55,7 @@ public final class Static156 {
 			Static215.anInt4866 = Static99.anInt2550;
 		}
 		@Pc(99) short local99;
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			local99 = 3584;
 		} else {
 			local99 = 3500;
@@ -96,9 +96,9 @@ public final class Static156 {
 		if (Static276.aClass3_Sub5ArrayArrayArray3 != null) {
 			Static278.method4648(true);
 			Static248.method3292(arg0, arg1, arg2, null, 0, (byte) 0, arg13, arg14);
-			if (Static239.aBoolean269) {
+			if (GlRenderer.enabled) {
 				Static119.aBoolean153 = false;
-				Static27.method766(0, 0);
+				Static27.setMaterial(0, 0);
 				Static161.method3066(null);
 				Static120.method2390();
 			}
@@ -153,13 +153,13 @@ public final class Static156 {
 
 	@OriginalMember(owner = "client!mf", name = "a", descriptor = "()V")
 	public static void method2959() {
-		@Pc(1) GL2 local1 = Static239.gl;
+		@Pc(1) GL2 local1 = GlRenderer.gl;
 		local1.glDisableClientState(GL2.GL_COLOR_ARRAY);
-		Static239.method4164(false);
+		GlRenderer.setLightingEnabled(false);
 		local1.glDisable(GL2.GL_DEPTH_TEST);
 		local1.glPushAttrib(GL2.GL_FOG_BIT);
 		local1.glFogf(GL2.GL_FOG_START, 3072.0F);
-		Static239.method4178();
+		GlRenderer.disableDepthMask();
 		for (@Pc(19) int local19 = 0; local19 < Static36.aClass3_Sub14ArrayArray1[0].length; local19++) {
 			@Pc(31) Class3_Sub14 local31 = Static36.aClass3_Sub14ArrayArray1[0][local19];
 			if (local31.anInt2485 >= 0 && Rasteriser.anInterface1_2.method3237(local31.anInt2485) == 4) {
@@ -169,10 +169,10 @@ public final class Static156 {
 			}
 		}
 		local1.glEnableClientState(GL2.GL_COLOR_ARRAY);
-		Static239.method4173();
+		GlRenderer.method4173();
 		local1.glEnable(GL2.GL_DEPTH_TEST);
 		local1.glPopAttrib();
-		Static239.method4157();
+		GlRenderer.enableDepthMask();
 	}
 
 	@OriginalMember(owner = "client!mf", name = "a", descriptor = "(BLclient!wa;)Lclient!ta;")

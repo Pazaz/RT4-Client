@@ -30,7 +30,7 @@ public final class Static126 {
 		Static97.anInt2503 = -1;
 		Static169.aClass13_18 = null;
 		Static182.anInt4311 = Static83.anInt372;
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static263.aBoolean299 = true;
 		}
 		Static214.anInt5574 = -1;
@@ -38,7 +38,7 @@ public final class Static126 {
 			Static24.anInt766 = 0;
 			Static9.method182();
 		}
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static46.method1177();
 		} else {
 			Static129.method2503();

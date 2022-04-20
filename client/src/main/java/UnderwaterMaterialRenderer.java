@@ -19,14 +19,14 @@ public final class UnderwaterMaterialRenderer implements MaterialRenderer {
 
 	@OriginalMember(owner = "client!wg", name = "<init>", descriptor = "()V")
 	public UnderwaterMaterialRenderer() {
-		if (Static239.anInt5322 >= 2) {
+		if (GlRenderer.maxTextureUnits >= 2) {
 			@Pc(17) int[] local17 = new int[1];
 			@Pc(20) byte[] local20 = new byte[8];
 			@Pc(22) int local22 = 0;
 			while (local22 < 8) {
 				local20[local22++] = (byte) (local22 * 159 / 8 + 96);
 			}
-			@Pc(40) GL2 local40 = Static239.gl;
+			@Pc(40) GL2 local40 = GlRenderer.gl;
 			local40.glGenTextures(1, local17, 0);
 			local40.glBindTexture(GL2.GL_TEXTURE_1D, local17[0]);
 			local40.glTexImage1D(GL2.GL_TEXTURE_1D, 0, GL2.GL_ALPHA, 8, 0, GL2.GL_ALPHA, GL2.GL_UNSIGNED_BYTE, ByteBuffer.wrap(local20));
@@ -34,14 +34,14 @@ public final class UnderwaterMaterialRenderer implements MaterialRenderer {
 			local40.glTexParameteri(GL2.GL_TEXTURE_1D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
 			local40.glTexParameteri(GL2.GL_TEXTURE_1D, GL2.GL_TEXTURE_WRAP_S, GL2.GL_CLAMP_TO_EDGE);
 			this.anInt5805 = local17[0];
-			Static275.aBoolean308 = Static239.anInt5322 > 2 && Static239.aBoolean267;
+			Static275.aBoolean308 = GlRenderer.maxTextureUnits > 2 && GlRenderer.extTexture3dSupported;
 			this.method4606();
 		}
 	}
 
 	@OriginalMember(owner = "client!wg", name = "d", descriptor = "()V")
 	private void method4606() {
-		@Pc(1) GL2 local1 = Static239.gl;
+		@Pc(1) GL2 local1 = GlRenderer.gl;
 		this.anInt5806 = local1.glGenLists(2);
 		local1.glNewList(this.anInt5806, GL2.GL_COMPILE);
 		local1.glActiveTexture(GL2.GL_TEXTURE1);
@@ -105,7 +105,7 @@ public final class UnderwaterMaterialRenderer implements MaterialRenderer {
 	@OriginalMember(owner = "client!wg", name = "b", descriptor = "()V")
 	@Override
 	public final void method4603() {
-		@Pc(1) GL2 local1 = Static239.gl;
+		@Pc(1) GL2 local1 = GlRenderer.gl;
 		local1.glCallList(this.anInt5806);
 	}
 
@@ -118,14 +118,14 @@ public final class UnderwaterMaterialRenderer implements MaterialRenderer {
 	@OriginalMember(owner = "client!wg", name = "a", descriptor = "()V")
 	@Override
 	public final void method4602() {
-		@Pc(1) GL2 local1 = Static239.gl;
+		@Pc(1) GL2 local1 = GlRenderer.gl;
 		local1.glCallList(this.anInt5806 + 1);
 	}
 
 	@OriginalMember(owner = "client!wg", name = "a", descriptor = "(I)V")
 	@Override
 	public final void method4604(@OriginalArg(0) int arg0) {
-		@Pc(1) GL2 local1 = Static239.gl;
+		@Pc(1) GL2 local1 = GlRenderer.gl;
 		local1.glActiveTexture(GL2.GL_TEXTURE1);
 		if (Static275.aBoolean308 || arg0 >= 0) {
 			local1.glPushMatrix();
@@ -148,7 +148,7 @@ public final class UnderwaterMaterialRenderer implements MaterialRenderer {
 				this.aFloatArray29[0] = 0.0F;
 				this.aFloatArray29[1] = 0.0F;
 				this.aFloatArray29[2] = 0.0F;
-				this.aFloatArray29[3] = (float) Static239.anInt5323 * 0.005F;
+				this.aFloatArray29[3] = (float) GlRenderer.anInt5323 * 0.005F;
 				local1.glTexGenfv(GL2.GL_R, GL2.GL_EYE_PLANE, this.aFloatArray29, 0);
 				local1.glActiveTexture(GL2.GL_TEXTURE2);
 			}

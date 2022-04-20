@@ -32,7 +32,7 @@ public final class MouseRecorder implements Runnable {
 					this.samples++;
 				}
 			}
-			Static231.method3983(50L);
+			Static231.sleep(50L);
 		}
 	}
 }

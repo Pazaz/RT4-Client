@@ -158,7 +158,7 @@ public final class Class3_Sub14 extends Node {
 	public final void method1943() {
 		@Pc(12) Buffer local12 = new Buffer((this.aBoolean139 ? 40 : 36) * this.anInt2483);
 		for (@Pc(14) int local14 = 0; local14 < this.anInt2483; local14++) {
-			if (Static239.aBoolean263) {
+			if (GlRenderer.bigEndian) {
 				local12.pFloat((float) this.anIntArray232[local14]);
 				local12.pFloat((float) this.anIntArray230[local14]);
 				local12.pFloat((float) this.anIntArray229[local14]);
@@ -186,7 +186,7 @@ public final class Class3_Sub14 extends Node {
 				}
 			}
 		}
-		if (Static239.aBoolean271) {
+		if (GlRenderer.arbVboSupported) {
 			@Pc(200) ByteBuffer local200 = ByteBuffer.wrap(local12.data, 0, local12.offset);
 			this.aClass155_3 = new GlVertexBufferObject();
 			this.aClass155_3.method4519(local200);
@@ -225,7 +225,7 @@ public final class Class3_Sub14 extends Node {
 		@Pc(86) int[] local86;
 		@Pc(90) int local90;
 		@Pc(116) int local116;
-		if (Static239.aBoolean263) {
+		if (GlRenderer.bigEndian) {
 			for (local47 = 0; local47 < this.anInt2489; local47++) {
 				local68 = arg0[this.anIntArray231[local47]][this.anIntArray228[local47]][this.anIntArray227[local47]];
 				if (local68 != null && local68.aBoolean45) {
@@ -275,23 +275,23 @@ public final class Class3_Sub14 extends Node {
 		if (Static95.aClass3_Sub15_3.offset == 0 && Static95.aClass3_Sub15_2.offset == 0) {
 			return;
 		}
-		@Pc(257) GL2 local257 = Static239.gl;
+		@Pc(257) GL2 local257 = GlRenderer.gl;
 		if (this.anInt2485 == -1 || arg2) {
-			Static239.method4177(-1);
-			Static27.method766(0, 0);
+			GlRenderer.setTextureId(-1);
+			Static27.setMaterial(0, 0);
 		} else {
 			Rasteriser.anInterface1_2.method3227(this.anInt2485);
 		}
 		@Pc(282) int local282 = this.aBoolean139 ? 40 : 36;
 		if (this.aClass155_3 == null) {
-			if (Static239.aBoolean271) {
+			if (GlRenderer.arbVboSupported) {
 				local257.glBindBuffer(GL2.GL_ARRAY_BUFFER, 0);
 			}
 			this.aByteBuffer3.position(0);
 			local257.glVertexPointer(3, GL2.GL_FLOAT, local282, this.aByteBuffer3);
 			this.aByteBuffer3.position(12);
 			local257.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, local282, this.aByteBuffer3);
-			if (Static178.aBoolean202) {
+			if (Static178.highDetailLighting) {
 				this.aByteBuffer3.position(16);
 				local257.glNormalPointer(GL2.GL_FLOAT, local282, this.aByteBuffer3);
 			}
@@ -307,7 +307,7 @@ public final class Class3_Sub14 extends Node {
 			this.aClass155_3.method4516();
 			local257.glVertexPointer(3, GL2.GL_FLOAT, local282, 0L);
 			local257.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, local282, 12L);
-			if (Static178.aBoolean202) {
+			if (Static178.highDetailLighting) {
 				local257.glNormalPointer(GL2.GL_FLOAT, local282, 16L);
 			}
 			local257.glTexCoordPointer(2, GL2.GL_FLOAT, local282, 28L);
@@ -317,7 +317,7 @@ public final class Class3_Sub14 extends Node {
 				local257.glClientActiveTexture(GL2.GL_TEXTURE0);
 			}
 		}
-		if (Static239.aBoolean271) {
+		if (GlRenderer.arbVboSupported) {
 			local257.glBindBuffer(GL2.GL_ELEMENT_ARRAY_BUFFER, 0);
 		}
 		if (Static95.aClass3_Sub15_3.offset != 0) {
@@ -328,7 +328,7 @@ public final class Class3_Sub14 extends Node {
 			}
 			Static95.aByteBuffer5.put(Static95.aClass3_Sub15_3.data, 0, Static95.aClass3_Sub15_3.offset);
 			Static95.aByteBuffer5.flip();
-			Static239.method4159(arg1);
+			GlRenderer.method4159(arg1);
 			local257.glDrawElements(GL2.GL_TRIANGLES, Static95.aClass3_Sub15_3.offset / 4, GL2.GL_UNSIGNED_INT, Static95.aByteBuffer5);
 		}
 		if (Static95.aClass3_Sub15_2.offset == 0) {
@@ -341,10 +341,10 @@ public final class Class3_Sub14 extends Node {
 		}
 		Static95.aByteBuffer4.put(Static95.aClass3_Sub15_2.data, 0, Static95.aClass3_Sub15_2.offset);
 		Static95.aByteBuffer4.flip();
-		Static239.method4159(arg1 - 100.0F);
-		Static239.method4178();
+		GlRenderer.method4159(arg1 - 100.0F);
+		GlRenderer.disableDepthMask();
 		local257.glDrawElements(GL2.GL_TRIANGLES, Static95.aClass3_Sub15_2.offset / 4, GL2.GL_UNSIGNED_INT, Static95.aByteBuffer4);
-		Static239.method4157();
+		GlRenderer.enableDepthMask();
 	}
 
 	@OriginalMember(owner = "client!hg", name = "a", descriptor = "(III[I[IZ)I")

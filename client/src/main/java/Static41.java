@@ -138,7 +138,7 @@ public final class Static41 {
 		if (arg9 != 0) {
 			local33.method4554(arg9);
 		}
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			@Pc(650) GlModel local650 = (GlModel) local33;
 			if (Static207.method3685(Static55.level, arg3 + local384, local126 + arg5) != arg11 || Static207.method3685(Static55.level, local115 + arg3, arg5 - -local130) != arg11) {
 				for (local162 = 0; local162 < local650.anInt5295; local162++) {

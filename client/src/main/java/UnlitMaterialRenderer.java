@@ -8,8 +8,8 @@ public final class UnlitMaterialRenderer implements MaterialRenderer {
 	@OriginalMember(owner = "client!ue", name = "b", descriptor = "()V")
 	@Override
 	public final void method4603() {
-		if (Static178.aBoolean202) {
-			Static239.method4164(false);
+		if (Static178.highDetailLighting) {
+			GlRenderer.setLightingEnabled(false);
 		}
 	}
 
@@ -27,8 +27,8 @@ public final class UnlitMaterialRenderer implements MaterialRenderer {
 	@OriginalMember(owner = "client!ue", name = "a", descriptor = "()V")
 	@Override
 	public final void method4602() {
-		if (Static178.aBoolean202) {
-			Static239.method4164(true);
+		if (Static178.highDetailLighting) {
+			GlRenderer.setLightingEnabled(true);
 		}
 	}
 }

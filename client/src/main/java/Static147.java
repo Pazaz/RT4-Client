@@ -64,7 +64,7 @@ public final class Static147 {
 					Static56.anInt1742 = arg5;
 					Static116.anInt2954 = arg6;
 				}
-				if (!Static239.aBoolean269 && !arg7) {
+				if (!GlRenderer.enabled && !arg7) {
 					Rasteriser.aBoolean138 = false;
 					if (local39 < 0 || local148 < 0 || local152 < 0 || local39 > Rasteriser.anInt2472 || local148 > Rasteriser.anInt2472 || local152 > Rasteriser.anInt2472) {
 						Rasteriser.aBoolean138 = true;

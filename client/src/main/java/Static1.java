@@ -535,7 +535,7 @@ public final class Static1 {
 
 	@OriginalMember(owner = "client!a", name = "a", descriptor = "(IIIII)V")
 	public static void method4(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static46.method1187(arg0, arg3, arg2 + arg0, arg1 + arg3);
 			Static46.method1186(arg0, arg3, arg2, arg1, 0);
 		} else {
@@ -549,12 +549,12 @@ public final class Static1 {
 			@Pc(63) SoftwareSprite local63 = new SoftwareSprite(arg2, arg1);
 			Static129.method2491(local63.anIntArray20, arg2, arg1);
 			Static214.method4364(arg2, 0, Static48.anInt1449, 0, 0, Static181.anInt4296, arg1, 0);
-			if (Static239.aBoolean269) {
+			if (GlRenderer.enabled) {
 				Static70.aClass3_Sub2_Sub1_2 = new GlSprite(local63);
 			} else {
 				Static70.aClass3_Sub2_Sub1_2 = local63;
 			}
-			if (Static239.aBoolean269) {
+			if (GlRenderer.enabled) {
 				Static129.anIntArray297 = null;
 			} else {
 				Static260.aClass27_2.method4189();
@@ -569,7 +569,7 @@ public final class Static1 {
 		if (Static266.game == 1) {
 			local169 = 16777215;
 		}
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static46.method1182(local161, local147, local167, local153, local169, 128);
 			Static46.method1179(local161, local147, local167, local153, local169);
 		} else {
@@ -589,7 +589,7 @@ public final class Static1 {
 			if (local238.anInt4308 == Static9.anInt172) {
 				@Pc(258) int local258 = arg3 + local238.anInt4314 * arg1 / Static181.anInt4296;
 				@Pc(267) int local267 = arg2 * local238.anInt4307 / Static48.anInt1449 + arg0;
-				if (Static239.aBoolean269) {
+				if (GlRenderer.enabled) {
 					Static46.method1182(local267 - 2, local258 + -2, 4, 4, 16776960, local225);
 				} else {
 					Static129.method2484(local267 - 2, local258 + -2, 4, 4, 16776960, local225);

@@ -31,7 +31,7 @@ public final class Static74 {
 			local35 = 8;
 		}
 		@Pc(54) int local54 = arg0 * (arg4 - local35 - 32) / (arg1 - arg4);
-		if (!Static239.aBoolean269) {
+		if (!GlRenderer.enabled) {
 			Static129.method2495(arg2, arg3 + 16, 16, arg4 - 32, Static182.anInt4306);
 			Static129.method2495(arg2, local54 + arg3 + 16, 16, local35, Static53.anInt1704);
 			Static129.method2490(arg2, local54 + arg3 + 16, local35, Static219.anInt4938);

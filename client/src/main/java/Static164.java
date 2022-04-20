@@ -246,6 +246,6 @@ public final class Static164 {
 		Static129.method2488(local125);
 		Rasteriser.method1908();
 		Rasteriser.aBoolean136 = true;
-		return Static239.aBoolean269 && !arg1 ? new GlSprite(local133) : local133;
+		return GlRenderer.enabled && !arg1 ? new GlSprite(local133) : local133;
 	}
 }

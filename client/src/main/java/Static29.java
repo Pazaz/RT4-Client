@@ -13,7 +13,7 @@ public final class Static29 {
 			return null;
 		}
 		@Pc(27) Font local27;
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			local27 = new GlFont(arg0, Static274.anIntArray440, Static269.anIntArray252, Static254.anIntArray488, Static26.anIntArray66, Static7.aByteArrayArray5);
 		} else {
 			local27 = new SoftwareFont(arg0, Static274.anIntArray440, Static269.anIntArray252, Static254.anIntArray488, Static26.anIntArray66, Static7.aByteArrayArray5);

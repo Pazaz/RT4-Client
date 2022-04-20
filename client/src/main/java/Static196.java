@@ -66,8 +66,8 @@ public final class Static196 {
 				Static107.js5NetQueue.method2322(true);
 			}
 		}
-		if (Static239.aBoolean269 && (arg0 == 25 || arg0 == 28 || arg0 == 40)) {
-			Static239.method4160();
+		if (GlRenderer.enabled && (arg0 == 25 || arg0 == 28 || arg0 == 40)) {
+			GlRenderer.method4160();
 		}
 		Static244.anInt5370 = arg0;
 	}

@@ -36,7 +36,7 @@ public final class Static253 {
 			Static195.method3532();
 		}
 		Static246.method4239();
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static115.method2314(arg3, arg4, arg0, arg2, true);
 			arg2 = Static7.anInt983;
 			arg4 = Static24.anInt773;
@@ -90,7 +90,7 @@ public final class Static253 {
 			}
 		}
 		Static252.method4302();
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static46.method1187(arg2, arg4, arg2 + arg3, arg4 - -arg0);
 			@Pc(248) float local248 = (float) Static240.anInt5333 * 0.17578125F;
 			@Pc(253) float local253 = (float) Static184.anInt4358 * 0.17578125F;
@@ -98,7 +98,7 @@ public final class Static253 {
 				local248 = Static146.aFloat15 * 360.0F / 6.2831855F;
 				local253 = Static84.aFloat10 * 360.0F / 6.2831855F;
 			}
-			Static239.method4171(arg2, arg4, arg3, arg0, arg3 / 2 + arg2, arg4 - -(arg0 / 2), local248, local253, Static223.anInt5029, Static223.anInt5029);
+			GlRenderer.method4171(arg2, arg4, arg3, arg0, arg3 / 2 + arg2, arg4 - -(arg0 / 2), local248, local253, Static223.anInt5029, Static223.anInt5029);
 		} else {
 			Static129.method2496(arg2, arg4, arg3 + arg2, arg0 + arg4);
 			Rasteriser.method1908();
@@ -118,19 +118,19 @@ public final class Static253 {
 		}
 		Static107.method2261();
 		@Pc(387) byte local387 = Static236.method4047() == 2 ? (byte) Static136.anInt3325 : 1;
-		if (Static239.aBoolean269) {
-			Static239.method4173();
-			Static239.method4158(true);
-			Static239.method4154(true);
+		if (GlRenderer.enabled) {
+			GlRenderer.method4173();
+			GlRenderer.setDepthTestEnabled(true);
+			GlRenderer.setFogEnabled(true);
 			if (Static244.anInt5370 == 10) {
 				local171 = Static103.method2235(Static178.anInt4247, Static134.anInt3302 >> 10, Static113.anInt4609, Static138.anInt3439 >> 10);
 			} else {
 				local171 = Static103.method2235(Static178.anInt4247, Static173.self.movementQueueZ[0] >> 3, Static113.anInt4609, Static173.self.movementQueueX[0] >> 3);
 			}
 			Static120.method2394(Static83.anInt372, !Static11.aBoolean15);
-			Static239.method4176(local171);
+			GlRenderer.clearColorAndDepthBuffers(local171);
 			Static143.method2731(Static240.anInt5333, Static134.anInt3302, Static5.anInt40, Static138.anInt3439, Static184.anInt4358);
-			Static239.anInt5323 = Static83.anInt372;
+			GlRenderer.anInt5323 = Static83.anInt372;
 			Static156.method2954(Static138.anInt3439, Static5.anInt40, Static134.anInt3302, Static240.anInt5333, Static184.anInt4358, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Static55.level + 1, local387, Static173.self.anInt3412 >> 7, Static173.self.anInt3421 >> 7);
 			Static263.aBoolean299 = true;
 			Static120.method2390();
@@ -158,7 +158,7 @@ public final class Static253 {
 			Static19.aBoolean43 = false;
 		}
 		if (Static19.aBoolean43) {
-			if (Static239.aBoolean269) {
+			if (GlRenderer.enabled) {
 				Static46.method1186(arg2, arg4, arg3, arg0, 0);
 			} else {
 				Static129.method2495(arg2, arg4, arg3, arg0, 0);
@@ -194,7 +194,7 @@ public final class Static253 {
 	public static IndexedSprite[] method4331() {
 		@Pc(8) IndexedSprite[] local8 = new IndexedSprite[Static165.anInt4038];
 		for (@Pc(10) int local10 = 0; local10 < Static165.anInt4038; local10++) {
-			if (Static239.aBoolean269) {
+			if (GlRenderer.enabled) {
 				local8[local10] = new GlIndexedSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local10], Static269.anIntArray252[local10], Static254.anIntArray488[local10], Static26.anIntArray66[local10], Static7.aByteArrayArray5[local10], Static259.anIntArray513);
 			} else {
 				local8[local10] = new SoftwareIndexedSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local10], Static269.anIntArray252[local10], Static254.anIntArray488[local10], Static26.anIntArray66[local10], Static7.aByteArrayArray5[local10], Static259.anIntArray513);

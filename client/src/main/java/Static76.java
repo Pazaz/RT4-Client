@@ -11,7 +11,7 @@ public final class Static76 {
 
 	@OriginalMember(owner = "client!ga", name = "a", descriptor = "()V")
 	public static void method1642() {
-		@Pc(1) GL2 local1 = Static239.gl;
+		@Pc(1) GL2 local1 = GlRenderer.gl;
 		if (local1.isExtensionAvailable("GL_ARB_point_parameters")) {
 			@Pc(20) float[] local20 = new float[] { 1.0F, 0.0F, 5.0E-4F };
 			local1.glPointParameterfv(GL2.GL_POINT_DISTANCE_ATTENUATION, local20, 0);

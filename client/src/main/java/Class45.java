@@ -115,7 +115,7 @@ public final class Class45 {
 		@Pc(7) Buffer local7 = new Buffer(this.anInt2018 * 4);
 		@Pc(15) Buffer local15 = new Buffer(this.anInt2017 * 16);
 		@Pc(19) int local19;
-		if (Static239.aBoolean263) {
+		if (GlRenderer.bigEndian) {
 			for (local19 = 0; local19 < this.anInt2017; local19++) {
 				local15.p1(this.aByteArray25[local19]);
 				local15.p1(this.aByteArray23[local19]);
@@ -142,7 +142,7 @@ public final class Class45 {
 				local7.p4le(this.anIntArray177[local19]);
 			}
 		}
-		if (Static239.aBoolean271) {
+		if (GlRenderer.arbVboSupported) {
 			this.aClass155_1 = new GlVertexBufferObject();
 			@Pc(173) ByteBuffer local173 = ByteBuffer.wrap(local15.data);
 			this.aClass155_1.method4519(local173);
@@ -181,21 +181,21 @@ public final class Class45 {
 
 	@OriginalMember(owner = "client!fj", name = "c", descriptor = "()V")
 	public final void method1556() {
-		@Pc(1) GL2 local1 = Static239.gl;
-		if (Static239.aBoolean271) {
+		@Pc(1) GL2 local1 = GlRenderer.gl;
+		if (GlRenderer.arbVboSupported) {
 			this.aClass155_1.method4516();
 			local1.glInterleavedArrays(GL2.GL_C4UB_V3F, 16, 0L);
-			Static239.aBoolean265 = false;
+			GlRenderer.normalArrayEnabled = false;
 			this.aClass155_2.method4518();
 			local1.glDrawElements(GL2.GL_TRIANGLES, this.anInt2018, GL2.GL_UNSIGNED_INT, 0L);
 			return;
 		}
-		if (Static239.aBoolean271) {
+		if (GlRenderer.arbVboSupported) {
 			local1.glBindBuffer(GL2.GL_ARRAY_BUFFER, 0);
 			local1.glBindBuffer(GL2.GL_ELEMENT_ARRAY_BUFFER, 0);
 		}
 		local1.glInterleavedArrays(GL2.GL_C4UB_V3F, 16, this.aByteBuffer1);
-		Static239.aBoolean265 = false;
+		GlRenderer.normalArrayEnabled = false;
 		local1.glDrawElements(GL2.GL_TRIANGLES, this.anInt2018, GL2.GL_UNSIGNED_INT, this.aByteBuffer2);
 	}
 

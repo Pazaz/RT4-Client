@@ -19,9 +19,9 @@ public final class SpecularMaterialRenderer implements MaterialRenderer {
 
 	@OriginalMember(owner = "client!vm", name = "<init>", descriptor = "()V")
 	public SpecularMaterialRenderer() {
-		if (Static239.aBoolean275 && Static239.anInt5322 >= 2) {
+		if (GlRenderer.arbTextureCubeMapSupported && GlRenderer.maxTextureUnits >= 2) {
 			this.method4536();
-			@Pc(19) GL2 local19 = Static239.gl;
+			@Pc(19) GL2 local19 = GlRenderer.gl;
 			local19.glBindTexture(GL2.GL_TEXTURE_CUBE_MAP, this.anIntArray519[0]);
 			local19.glTexParameteri(GL2.GL_TEXTURE_CUBE_MAP, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR);
 			local19.glTexParameteri(GL2.GL_TEXTURE_CUBE_MAP, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
@@ -40,14 +40,14 @@ public final class SpecularMaterialRenderer implements MaterialRenderer {
 			local19.glTexParameteri(GL2.GL_TEXTURE_CUBE_MAP, GL2.GL_TEXTURE_WRAP_R, GL2.GL_CLAMP_TO_EDGE);
 			local19.glTexParameteri(GL2.GL_TEXTURE_CUBE_MAP, GL2.GL_TEXTURE_WRAP_S, GL2.GL_CLAMP_TO_EDGE);
 			local19.glTexParameteri(GL2.GL_TEXTURE_CUBE_MAP, GL2.GL_TEXTURE_WRAP_T, GL2.GL_CLAMP_TO_EDGE);
-			this.aBoolean301 = Static239.anInt5322 < 3;
+			this.aBoolean301 = GlRenderer.maxTextureUnits < 3;
 		}
 		this.method4535();
 	}
 
 	@OriginalMember(owner = "client!vm", name = "d", descriptor = "()V")
 	private void method4535() {
-		@Pc(1) GL2 local1 = Static239.gl;
+		@Pc(1) GL2 local1 = GlRenderer.gl;
 		this.anInt5777 = local1.glGenLists(2);
 		local1.glNewList(this.anInt5777, GL2.GL_COMPILE);
 		if (this.anIntArray519 == null) {
@@ -82,7 +82,7 @@ public final class SpecularMaterialRenderer implements MaterialRenderer {
 				local1.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_OPERAND1_RGB, GL2.GL_SRC_ALPHA);
 				local1.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_ALPHA, GL2.GL_REPLACE);
 				local1.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_SRC0_ALPHA, GL2.GL_PRIMARY_COLOR);
-				local1.glBindTexture(GL2.GL_TEXTURE_2D, Static239.anInt5328);
+				local1.glBindTexture(GL2.GL_TEXTURE_2D, GlRenderer.anInt5328);
 				local1.glEnable(GL2.GL_TEXTURE_2D);
 			}
 			local1.glActiveTexture(GL2.GL_TEXTURE0);
@@ -125,8 +125,8 @@ public final class SpecularMaterialRenderer implements MaterialRenderer {
 	@OriginalMember(owner = "client!vm", name = "a", descriptor = "()V")
 	@Override
 	public final void method4602() {
-		@Pc(1) GL2 local1 = Static239.gl;
-		if (Static178.aBoolean202) {
+		@Pc(1) GL2 local1 = GlRenderer.gl;
+		if (Static178.highDetailLighting) {
 			local1.glCallList(this.anInt5777 + 1);
 		} else {
 			local1.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_SRC0_ALPHA, GL2.GL_TEXTURE);
@@ -142,9 +142,9 @@ public final class SpecularMaterialRenderer implements MaterialRenderer {
 	@OriginalMember(owner = "client!vm", name = "b", descriptor = "()V")
 	@Override
 	public final void method4603() {
-		@Pc(1) GL2 local1 = Static239.gl;
-		Static239.method4174(1);
-		if (Static178.aBoolean202) {
+		@Pc(1) GL2 local1 = GlRenderer.gl;
+		GlRenderer.setTextureCombineAlphaMode(1);
+		if (Static178.highDetailLighting) {
 			local1.glCallList(this.anInt5777);
 		} else {
 			local1.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_SRC0_ALPHA, GL2.GL_PRIMARY_COLOR);
@@ -154,8 +154,8 @@ public final class SpecularMaterialRenderer implements MaterialRenderer {
 	@OriginalMember(owner = "client!vm", name = "a", descriptor = "(I)V")
 	@Override
 	public final void method4604(@OriginalArg(0) int arg0) {
-		@Pc(1) GL2 local1 = Static239.gl;
-		if (Static178.aBoolean202 && this.anIntArray519 != null) {
+		@Pc(1) GL2 local1 = GlRenderer.gl;
+		if (Static178.highDetailLighting && this.anIntArray519 != null) {
 			local1.glActiveTexture(GL2.GL_TEXTURE1);
 			local1.glBindTexture(GL2.GL_TEXTURE_CUBE_MAP, this.anIntArray519[arg0 - 1]);
 			local1.glActiveTexture(GL2.GL_TEXTURE0);
@@ -164,7 +164,7 @@ public final class SpecularMaterialRenderer implements MaterialRenderer {
 
 	@OriginalMember(owner = "client!vm", name = "e", descriptor = "()V")
 	private void method4536() {
-		@Pc(1) GL2 local1 = Static239.gl;
+		@Pc(1) GL2 local1 = GlRenderer.gl;
 		if (this.anIntArray519 == null) {
 			this.anIntArray519 = new int[3];
 			local1.glGenTextures(3, this.anIntArray519, 0);
@@ -207,7 +207,7 @@ public final class SpecularMaterialRenderer implements MaterialRenderer {
 						local137 = 0;
 						local129 = 0;
 					}
-					if (Static239.anInt5322 < 3) {
+					if (GlRenderer.maxTextureUnits < 3) {
 						local129 /= 5;
 						local137 /= 5;
 						local145 /= 5;

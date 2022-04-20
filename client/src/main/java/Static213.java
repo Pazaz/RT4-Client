@@ -48,7 +48,7 @@ public final class Static213 {
 				for (@Pc(44) int local44 = 0; local44 < local31; local44++) {
 					local38[local44] = Static259.anIntArray513[local23[local44] & 0xFF] | (local42[local44] & 0xFF) << 24;
 				}
-				if (Static239.aBoolean269) {
+				if (GlRenderer.enabled) {
 					local14[local16] = new GlAlphaSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local16], Static269.anIntArray252[local16], Static254.anIntArray488[local16], Static26.anIntArray66[local16], local38);
 				} else {
 					local14[local16] = new SoftwareAlphaSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local16], Static269.anIntArray252[local16], Static254.anIntArray488[local16], Static26.anIntArray66[local16], local38);
@@ -58,7 +58,7 @@ public final class Static213 {
 				for (@Pc(121) int local121 = 0; local121 < local31; local121++) {
 					local119[local121] = Static259.anIntArray513[local23[local121] & 0xFF];
 				}
-				if (Static239.aBoolean269) {
+				if (GlRenderer.enabled) {
 					local14[local16] = new GlSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local16], Static269.anIntArray252[local16], Static254.anIntArray488[local16], Static26.anIntArray66[local16], local119);
 				} else {
 					local14[local16] = new SoftwareSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local16], Static269.anIntArray252[local16], Static254.anIntArray488[local16], Static26.anIntArray66[local16], local119);

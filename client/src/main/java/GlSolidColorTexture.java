@@ -19,12 +19,12 @@ public final class GlSolidColorTexture extends SecondaryNode {
 
 	@OriginalMember(owner = "client!sd", name = "<init>", descriptor = "(I)V")
 	public GlSolidColorTexture(@OriginalArg(0) int arg0) {
-		@Pc(9) GL2 local9 = Static239.gl;
+		@Pc(9) GL2 local9 = GlRenderer.gl;
 		@Pc(12) int[] local12 = new int[1];
 		local9.glGenTextures(1, local12, 0);
 		this.anInt5058 = local12[0];
 		this.anInt5059 = Static63.anInt1943;
-		Static239.method4177(this.anInt5058);
+		GlRenderer.setTextureId(this.anInt5058);
 		@Pc(32) int local32 = Rasteriser.anIntArray220[arg0];
 		@Pc(58) byte[] local58 = new byte[] { (byte) (local32 >> 16), (byte) (local32 >> 8), (byte) local32, -1 };
 		@Pc(61) ByteBuffer local61 = ByteBuffer.wrap(local58);
@@ -50,13 +50,13 @@ public final class GlSolidColorTexture extends SecondaryNode {
 	public final void method3887() {
 		@Pc(8) int local8 = Static56.method1314();
 		if ((local8 & 0x1) == 0) {
-			Static239.method4177(this.anInt5058);
+			GlRenderer.setTextureId(this.anInt5058);
 		}
 		if ((local8 & 0x2) == 0) {
-			Static239.method4183(0);
+			GlRenderer.setTextureCombineRgbMode(0);
 		}
 		if ((local8 & 0x4) == 0) {
-			Static239.method4174(0);
+			GlRenderer.setTextureCombineAlphaMode(0);
 		}
 	}
 }
