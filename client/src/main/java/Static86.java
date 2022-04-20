@@ -1,4 +1,3 @@
-import java.math.BigInteger;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
@@ -15,9 +14,6 @@ public final class Static86 {
 
 	@OriginalMember(owner = "client!gm", name = "W", descriptor = "Lclient!na;")
 	public static final JagString aClass100_488 = Static28.parse("_");
-
-	@OriginalMember(owner = "client!gm", name = "X", descriptor = "Ljava/math/BigInteger;")
-	public static final BigInteger aBigInteger1 = new BigInteger("58778699976184461502525193738213253649000149147835990136706041084440742975821");
 
 	@OriginalMember(owner = "client!gm", name = "bb", descriptor = "Z")
 	public static boolean aBoolean129 = false;

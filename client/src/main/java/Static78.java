@@ -34,10 +34,14 @@ public final class Static78 {
 	}
 
 	@OriginalMember(owner = "client!gd", name = "a", descriptor = "(JI)V")
-	public static void method1691(@OriginalArg(0) long arg0) {
+	public static void method1691(@OriginalArg(0) long name) {
 		Static6.outboundBuffer.offset = 0;
 		Static6.outboundBuffer.p1(186);
-		Static6.outboundBuffer.p8(arg0);
+		if (GlobalConfig.LOGIN_USE_STRINGS) {
+			Static6.outboundBuffer.pjstr(Static79.decode37(name));
+		} else {
+			Static6.outboundBuffer.p8(name);
+		}
 		Static179.anInt4261 = 1;
 		Static226.anInt5079 = 0;
 		Static57.anInt1758 = 0;

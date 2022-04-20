@@ -120,7 +120,7 @@ public final class Player extends PathingEntity {
 		}
 		this.anInt3365 = arg0.g2();
 		@Pc(236) long local236 = arg0.g8();
-		this.aClass100_364 = Static79.method1702(local236).method3125();
+		this.aClass100_364 = Static79.decode37(local236).method3125();
 		this.anInt1652 = arg0.g1();
 		if (local37) {
 			this.anInt1671 = arg0.g2();

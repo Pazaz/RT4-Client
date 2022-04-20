@@ -1,4 +1,3 @@
-import java.math.BigInteger;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
@@ -7,9 +6,6 @@ public final class Static256 {
 
 	@OriginalMember(owner = "client!um", name = "U", descriptor = "Lclient!dd;")
 	public static SoftwareFont aClass3_Sub2_Sub9_Sub1_1;
-
-	@OriginalMember(owner = "client!um", name = "V", descriptor = "Ljava/math/BigInteger;")
-	public static final BigInteger aBigInteger2 = new BigInteger("7162900525229798032761816791230527296329313291232324290237849263501208207972894053929065636522363163621000728841182238772712427862772219676577293600221789");
 
 	@OriginalMember(owner = "client!um", name = "a", descriptor = "(Z)V")
 	public static void method4392() {

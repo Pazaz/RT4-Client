@@ -68,7 +68,7 @@ public final class Static79 {
 	}
 
 	@OriginalMember(owner = "client!ge", name = "a", descriptor = "(IJ)Lclient!na;")
-	public static JagString method1702(@OriginalArg(1) long arg0) {
+	public static JagString decode37(@OriginalArg(1) long arg0) {
 		if (arg0 <= 0L || arg0 >= 6582952005840035281L) {
 			return null;
 		} else if (arg0 % 37L == 0L) {

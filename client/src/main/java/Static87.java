@@ -694,7 +694,7 @@ public final class Static87 {
 													}
 													@Pc(2751) Player local2751 = Static159.aClass8_Sub4_Sub1Array1[local514];
 													@Pc(2760) SeqType local2760 = local276 == -1 ? null : Static36.method941(local276);
-													if (local2751 != null && (int) local2751.aClass100_364.method3158() << 11 == (local30.modelId & 0xFFFFF800)) {
+													if (local2751 != null && (int) local2751.aClass100_364.encode37() << 11 == (local30.modelId & 0xFFFFF800)) {
 														local2589 = local2751.aClass59_1.method1954(null, -1, null, local2760, 0, -1, 0, local30.anInt510, 0);
 													}
 												}

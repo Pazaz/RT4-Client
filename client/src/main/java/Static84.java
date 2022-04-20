@@ -40,7 +40,7 @@ public final class Static84 {
 			local24 = Static57.aClass3_Sub15_Sub1_3.offset;
 			@Pc(35) boolean local35 = (local13 & 0x8000) != 0;
 			if (arg2.aClass100_364 != null && arg2.aClass59_1 != null) {
-				@Pc(48) long local48 = arg2.aClass100_364.method3158();
+				@Pc(48) long local48 = arg2.aClass100_364.encode37();
 				@Pc(50) boolean local50 = false;
 				if (local17 <= 1) {
 					if (!local35 && (Static124.aBoolean157 && !Static207.aBoolean236 || Static86.aBoolean129)) {

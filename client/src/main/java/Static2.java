@@ -290,7 +290,7 @@ public final class Static2 {
 				arg0.modelXAngle = 150;
 				arg0.modelYAngle = (int) (Math.sin((double) Static83.anInt372 / 40.0D) * 256.0D) & 0x7FF;
 				arg0.modelType = 5;
-				arg0.modelId = ((int) Static173.self.aClass100_364.method3158() << 11) + 2047;
+				arg0.modelId = ((int) Static173.self.aClass100_364.encode37() << 11) + 2047;
 				arg0.anInt496 = Static173.self.anInt3388;
 				arg0.anInt500 = 0;
 				arg0.anInt522 = Static173.self.anInt3366;

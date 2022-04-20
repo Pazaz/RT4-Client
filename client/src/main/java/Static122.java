@@ -85,7 +85,7 @@ public final class Static122 {
 			local13.anInt2028 = (arg6.method2693() + arg0) * 128;
 			local13.anInt2044 = Static140.method2706(arg6);
 			local13.anInt2042 = arg6.anInt1664 * 128;
-			Static93.aClass133_7.method3862(local13, arg6.aClass100_364.method3158());
+			Static93.aClass133_7.method3862(local13, arg6.aClass100_364.encode37());
 		}
 	}
 
