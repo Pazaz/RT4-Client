@@ -23,7 +23,7 @@ public final class Static246 {
 	public static void method4239() {
 		for (@Pc(9) SpotAnimNode local9 = (SpotAnimNode) Static99.aClass69_64.method2289(); local9 != null; local9 = (SpotAnimNode) Static99.aClass69_64.method2288()) {
 			@Pc(15) SpotAnim local15 = local9.aClass8_Sub2_1;
-			if (local15.anInt606 != Static55.anInt1735 || local15.aBoolean41) {
+			if (local15.anInt606 != Static55.level || local15.aBoolean41) {
 				local9.method4658();
 			} else if (local15.anInt590 <= Static83.anInt372) {
 				local15.method558(Static178.anInt4247);
@@ -50,7 +50,7 @@ public final class Static246 {
 		@Pc(35) JagString local35 = arg0.aClass100_738;
 		if (arg0.anInt3726 != 0) {
 			@Pc(47) JagString local47 = Static266.game == 1 ? LocalizedText.RATING : LocalizedText.LEVEL;
-			local35 = Static34.method882(new JagString[] { local35, Static123.method2420(arg0.anInt3726, Static173.aClass8_Sub4_Sub1_2.anInt1652), Static123.aClass100_593, local47, Static123.method2423(arg0.anInt3726), Static72.aClass100_448 });
+			local35 = Static34.method882(new JagString[] { local35, Static123.method2420(arg0.anInt3726, Static173.self.anInt1652), Static123.aClass100_593, local47, Static123.method2423(arg0.anInt3726), Static72.aClass100_448 });
 		}
 		if (Static260.anInt5014 == 1) {
 			Static98.method1966(Static169.anInt4075, (long) arg2, Static34.method882(new JagString[] { Static34.aClass100_203, Static201.aClass100_407, local35 }), arg1, (short) 26, LocalizedText.USE, arg3);
@@ -99,7 +99,7 @@ public final class Static246 {
 				for (local140 = 4; local140 >= 0; local140--) {
 					if (local129[local140] != null && local129[local140].method3111(LocalizedText.ATTACK)) {
 						@Pc(271) short local271 = 0;
-						if (arg0.anInt3726 > Static173.aClass8_Sub4_Sub1_2.anInt1652) {
+						if (arg0.anInt3726 > Static173.self.anInt1652) {
 							local271 = 2000;
 						}
 						@Pc(281) short local281 = 0;

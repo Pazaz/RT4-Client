@@ -61,7 +61,7 @@ public final class Component {
 	public boolean aBoolean26;
 
 	@OriginalMember(owner = "client!be", name = "Z", descriptor = "I")
-	public int anInt463;
+	public int modelId;
 
 	@OriginalMember(owner = "client!be", name = "bb", descriptor = "[Ljava/lang/Object;")
 	public Object[] anObjectArray11;
@@ -103,13 +103,13 @@ public final class Component {
 	public int[] anIntArray39;
 
 	@OriginalMember(owner = "client!be", name = "dc", descriptor = "[I")
-	public int[] anIntArray40;
+	public int[] objTypes;
 
 	@OriginalMember(owner = "client!be", name = "fc", descriptor = "[Ljava/lang/Object;")
 	public Object[] anObjectArray20;
 
 	@OriginalMember(owner = "client!be", name = "lc", descriptor = "[Lclient!be;")
-	public Component[] aClass13Array3;
+	public Component[] createdComponents;
 
 	@OriginalMember(owner = "client!be", name = "mc", descriptor = "[B")
 	public byte[] aByteArray8;
@@ -175,7 +175,7 @@ public final class Component {
 	public Object[] anObjectArray30;
 
 	@OriginalMember(owner = "client!be", name = "wd", descriptor = "[I")
-	public int[] anIntArray50;
+	public int[] objCounts;
 
 	@OriginalMember(owner = "client!be", name = "H", descriptor = "Z")
 	public boolean aBoolean23 = false;
@@ -190,13 +190,13 @@ public final class Component {
 	public int anInt460 = 0;
 
 	@OriginalMember(owner = "client!be", name = "j", descriptor = "I")
-	public int anInt443 = 100;
+	public int modelZoom = 100;
 
 	@OriginalMember(owner = "client!be", name = "h", descriptor = "B")
-	public byte aByte2 = 0;
+	public byte xMode = 0;
 
 	@OriginalMember(owner = "client!be", name = "jb", descriptor = "I")
-	public int anInt469 = 0;
+	public int y = 0;
 
 	@OriginalMember(owner = "client!be", name = "nb", descriptor = "I")
 	public int anInt472 = 0;
@@ -208,7 +208,7 @@ public final class Component {
 	public short aShort10 = 3000;
 
 	@OriginalMember(owner = "client!be", name = "D", descriptor = "I")
-	public int anInt450 = 0;
+	public int modelXAngle = 0;
 
 	@OriginalMember(owner = "client!be", name = "Eb", descriptor = "I")
 	public int anInt481 = 0;
@@ -223,7 +223,7 @@ public final class Component {
 	public int anInt447 = 0;
 
 	@OriginalMember(owner = "client!be", name = "hb", descriptor = "I")
-	public int anInt468 = 0;
+	public int scrollY = 0;
 
 	@OriginalMember(owner = "client!be", name = "xb", descriptor = "I")
 	public int anInt477 = -1;
@@ -232,7 +232,7 @@ public final class Component {
 	public int anInt467 = 0;
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "Z")
-	public boolean aBoolean17 = false;
+	public boolean hidden = false;
 
 	@OriginalMember(owner = "client!be", name = "Zb", descriptor = "I")
 	public int anInt490 = 1;
@@ -241,7 +241,7 @@ public final class Component {
 	public int anInt484 = -1;
 
 	@OriginalMember(owner = "client!be", name = "O", descriptor = "I")
-	public int anInt457 = -1;
+	public int componentId = -1;
 
 	@OriginalMember(owner = "client!be", name = "J", descriptor = "Z")
 	public boolean aBoolean24 = false;
@@ -310,19 +310,19 @@ public final class Component {
 	private int anInt461 = -1;
 
 	@OriginalMember(owner = "client!be", name = "N", descriptor = "I")
-	public int anInt456 = -1;
+	public int layer = -1;
 
 	@OriginalMember(owner = "client!be", name = "pb", descriptor = "I")
 	public int anInt473 = 1;
 
 	@OriginalMember(owner = "client!be", name = "Q", descriptor = "I")
-	public int anInt458 = -1;
+	public int objId = -1;
 
 	@OriginalMember(owner = "client!be", name = "vb", descriptor = "I")
 	public int anInt475 = 0;
 
 	@OriginalMember(owner = "client!be", name = "nc", descriptor = "I")
-	public int anInt497 = 0;
+	public int modelZOffset = 0;
 
 	@OriginalMember(owner = "client!be", name = "Dc", descriptor = "Lclient!na;")
 	public JagString aClass100_88 = Static176.aClass100_800;
@@ -331,7 +331,7 @@ public final class Component {
 	public int anInt511 = 0;
 
 	@OriginalMember(owner = "client!be", name = "w", descriptor = "I")
-	public int anInt446 = 0;
+	public int baseWidth = 0;
 
 	@OriginalMember(owner = "client!be", name = "Mc", descriptor = "I")
 	public int anInt512 = 0;
@@ -349,13 +349,13 @@ public final class Component {
 	public int anInt476 = 0;
 
 	@OriginalMember(owner = "client!be", name = "hc", descriptor = "I")
-	public int anInt494 = 0;
+	public int modelXOffset = 0;
 
 	@OriginalMember(owner = "client!be", name = "Ub", descriptor = "Lclient!na;")
 	public JagString aClass100_86 = Static176.aClass100_800;
 
 	@OriginalMember(owner = "client!be", name = "Lb", descriptor = "I")
-	public int anInt483 = 0;
+	public int modelRotationSpeed = 0;
 
 	@OriginalMember(owner = "client!be", name = "r", descriptor = "Lclient!na;")
 	public JagString aClass100_82 = Static176.aClass100_800;
@@ -385,7 +385,7 @@ public final class Component {
 	public int anInt519 = -1;
 
 	@OriginalMember(owner = "client!be", name = "zc", descriptor = "B")
-	public byte aByte4 = 0;
+	public byte yMode = 0;
 
 	@OriginalMember(owner = "client!be", name = "qc", descriptor = "I")
 	public int anInt500 = 0;
@@ -412,10 +412,10 @@ public final class Component {
 	public JagString aClass100_89 = LocalizedText.OK;
 
 	@OriginalMember(owner = "client!be", name = "Gc", descriptor = "I")
-	public int anInt508 = 0;
+	public int modelYOffset = 0;
 
 	@OriginalMember(owner = "client!be", name = "vc", descriptor = "I")
-	public int anInt503 = 0;
+	public int objCount = 0;
 
 	@OriginalMember(owner = "client!be", name = "Uc", descriptor = "I")
 	public int anInt517 = -1;
@@ -433,7 +433,7 @@ public final class Component {
 	public int anInt525 = 0;
 
 	@OriginalMember(owner = "client!be", name = "ab", descriptor = "I")
-	public int anInt464 = 1;
+	public int modelType = 1;
 
 	@OriginalMember(owner = "client!be", name = "md", descriptor = "Z")
 	public boolean aBoolean34 = false;
@@ -448,19 +448,19 @@ public final class Component {
 	public int anInt526 = 0;
 
 	@OriginalMember(owner = "client!be", name = "ld", descriptor = "I")
-	public int anInt524 = 0;
+	public int modelYAngle = 0;
 
 	@OriginalMember(owner = "client!be", name = "T", descriptor = "Z")
 	public boolean aBoolean25 = false;
 
 	@OriginalMember(owner = "client!be", name = "vd", descriptor = "I")
-	public int anInt529 = 0;
+	public int baseX = 0;
 
 	@OriginalMember(owner = "client!be", name = "jd", descriptor = "I")
-	public int anInt523 = 0;
+	public int x = 0;
 
 	@OriginalMember(owner = "client!be", name = "l", descriptor = "I")
-	public int anInt444 = 0;
+	public int baseY = 0;
 
 	@OriginalMember(owner = "client!be", name = "Bb", descriptor = "Z")
 	public boolean aBoolean31 = true;
@@ -549,20 +549,20 @@ public final class Component {
 		this.anInt452 = arg0.g1();
 		this.anInt530 = arg0.g1();
 		this.anInt453 = arg0.g2();
-		this.anInt529 = arg0.g2s();
-		this.anInt444 = arg0.g2s();
-		this.anInt446 = arg0.g2();
+		this.baseX = arg0.g2s();
+		this.baseY = arg0.g2s();
+		this.baseWidth = arg0.g2();
 		this.anInt488 = arg0.g2();
 		this.aByte5 = 0;
 		this.aByte3 = 0;
-		this.aByte4 = 0;
-		this.aByte2 = 0;
+		this.yMode = 0;
+		this.xMode = 0;
 		this.anInt476 = arg0.g1();
-		this.anInt456 = arg0.g2();
-		if (this.anInt456 == 65535) {
-			this.anInt456 = -1;
+		this.layer = arg0.g2();
+		if (this.layer == 65535) {
+			this.layer = -1;
 		} else {
-			this.anInt456 += this.anInt507 & 0xFFFF0000;
+			this.layer += this.anInt507 & 0xFFFF0000;
 		}
 		this.anInt470 = arg0.g2();
 		if (this.anInt470 == 65535) {
@@ -597,7 +597,7 @@ public final class Component {
 		}
 		if (this.anInt452 == 0) {
 			this.anInt491 = arg0.g2();
-			this.aBoolean17 = arg0.g1() == 1;
+			this.hidden = arg0.g1() == 1;
 		}
 		if (this.anInt452 == 1) {
 			arg0.g2();
@@ -606,8 +606,8 @@ public final class Component {
 		local164 = 0;
 		if (this.anInt452 == 2) {
 			this.aByte3 = 3;
-			this.anIntArray50 = new int[this.anInt446 * this.anInt488];
-			this.anIntArray40 = new int[this.anInt488 * this.anInt446];
+			this.objCounts = new int[this.baseWidth * this.anInt488];
+			this.objTypes = new int[this.anInt488 * this.baseWidth];
 			this.aByte5 = 3;
 			local175 = arg0.g1();
 			local183 = arg0.g1();
@@ -680,11 +680,11 @@ public final class Component {
 			this.anInt519 = arg0.g4();
 		}
 		if (this.anInt452 == 6) {
-			this.anInt464 = 1;
-			this.anInt463 = arg0.g2();
+			this.modelType = 1;
+			this.modelId = arg0.g2();
 			this.anInt518 = 1;
-			if (this.anInt463 == 65535) {
-				this.anInt463 = -1;
+			if (this.modelId == 65535) {
+				this.modelId = -1;
 			}
 			this.anInt461 = arg0.g2();
 			if (this.anInt461 == 65535) {
@@ -698,15 +698,15 @@ public final class Component {
 			if (this.anInt462 == 65535) {
 				this.anInt462 = -1;
 			}
-			this.anInt443 = arg0.g2();
-			this.anInt450 = arg0.g2();
-			this.anInt524 = arg0.g2();
+			this.modelZoom = arg0.g2();
+			this.modelXAngle = arg0.g2();
+			this.modelYAngle = arg0.g2();
 		}
 		if (this.anInt452 == 7) {
 			this.aByte3 = 3;
 			this.aByte5 = 3;
-			this.anIntArray50 = new int[this.anInt488 * this.anInt446];
-			this.anIntArray40 = new int[this.anInt446 * this.anInt488];
+			this.objCounts = new int[this.anInt488 * this.baseWidth];
+			this.objTypes = new int[this.baseWidth * this.anInt488];
 			this.anInt460 = arg0.g1();
 			this.anInt502 = arg0.g2();
 			if (this.anInt502 == 65535) {
@@ -820,13 +820,13 @@ public final class Component {
 	}
 
 	@OriginalMember(owner = "client!be", name = "b", descriptor = "(III)V")
-	public final void method487(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		@Pc(8) int local8 = this.anIntArray40[arg1];
-		this.anIntArray40[arg1] = this.anIntArray40[arg0];
-		this.anIntArray40[arg0] = local8;
-		@Pc(34) int local34 = this.anIntArray50[arg1];
-		this.anIntArray50[arg1] = this.anIntArray50[arg0];
-		this.anIntArray50[arg0] = local34;
+	public final void swapObjs(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+		@Pc(8) int local8 = this.objTypes[arg1];
+		this.objTypes[arg1] = this.objTypes[arg0];
+		this.objTypes[arg0] = local8;
+		@Pc(34) int local34 = this.objCounts[arg1];
+		this.objCounts[arg1] = this.objCounts[arg0];
+		this.objCounts[arg0] = local34;
 	}
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(ILclient!tk;IIIZLclient!hh;)Lclient!ak;")
@@ -838,8 +838,8 @@ public final class Component {
 			local10 = this.anInt518;
 			local13 = this.anInt461;
 		} else {
-			local13 = this.anInt463;
-			local10 = this.anInt464;
+			local13 = this.modelId;
+			local10 = this.modelType;
 		}
 		if (local10 == 0) {
 			return null;
@@ -903,8 +903,8 @@ public final class Component {
 			} else if (arg5 == null) {
 				return null;
 			} else {
-				@Pc(227) int local227 = this.anInt463 >>> 16;
-				@Pc(232) int local232 = this.anInt463 & 0xFFFF;
+				@Pc(227) int local227 = this.modelId >>> 16;
+				@Pc(232) int local232 = this.modelId & 0xFFFF;
 				@Pc(235) int local235 = this.anInt498;
 				@Pc(246) Model local246 = arg5.method1946(arg0, local235, local227, arg3, arg1, arg2, local232);
 				if (local246 == null) {
@@ -983,21 +983,21 @@ public final class Component {
 			arg0.gjstr();
 		}
 		this.anInt453 = arg0.g2();
-		this.anInt529 = arg0.g2s();
-		this.anInt444 = arg0.g2s();
-		this.anInt446 = arg0.g2();
+		this.baseX = arg0.g2s();
+		this.baseY = arg0.g2s();
+		this.baseWidth = arg0.g2();
 		this.anInt488 = arg0.g2();
 		this.aByte5 = arg0.g1s();
 		this.aByte3 = arg0.g1s();
-		this.aByte4 = arg0.g1s();
-		this.aByte2 = arg0.g1s();
-		this.anInt456 = arg0.g2();
-		if (this.anInt456 == 65535) {
-			this.anInt456 = -1;
+		this.yMode = arg0.g1s();
+		this.xMode = arg0.g1s();
+		this.layer = arg0.g2();
+		if (this.layer == 65535) {
+			this.layer = -1;
 		} else {
-			this.anInt456 = (this.anInt507 & 0xFFFF0000) + this.anInt456;
+			this.layer = (this.anInt507 & 0xFFFF0000) + this.layer;
 		}
-		this.aBoolean17 = arg0.g1() == 1;
+		this.hidden = arg0.g1() == 1;
 		if (this.anInt452 == 0) {
 			this.anInt486 = arg0.g2();
 			this.anInt491 = arg0.g2();
@@ -1017,17 +1017,17 @@ public final class Component {
 			this.aBoolean26 = arg0.g1() == 1;
 		}
 		if (this.anInt452 == 6) {
-			this.anInt464 = 1;
-			this.anInt463 = arg0.g2();
-			if (this.anInt463 == 65535) {
-				this.anInt463 = -1;
+			this.modelType = 1;
+			this.modelId = arg0.g2();
+			if (this.modelId == 65535) {
+				this.modelId = -1;
 			}
 			this.anInt495 = arg0.g2s();
 			this.anInt481 = arg0.g2s();
-			this.anInt450 = arg0.g2();
-			this.anInt524 = arg0.g2();
-			this.anInt508 = arg0.g2();
-			this.anInt443 = arg0.g2();
+			this.modelXAngle = arg0.g2();
+			this.modelYAngle = arg0.g2();
+			this.modelYOffset = arg0.g2();
+			this.modelZoom = arg0.g2();
 			this.anInt522 = arg0.g2();
 			if (this.anInt522 == 65535) {
 				this.anInt522 = -1;

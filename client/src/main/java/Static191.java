@@ -18,7 +18,7 @@ public final class Static191 {
 	public static final int[] anIntArray385 = new int[anInt4506];
 
 	@OriginalMember(owner = "client!pg", name = "S", descriptor = "I")
-	public static int anInt4502 = 0;
+	public static int staffModLevel = 0;
 
 	@OriginalMember(owner = "client!pg", name = "T", descriptor = "[I")
 	public static final int[] anIntArray386 = new int[] { 76, 8, 137, 4, 0, 1, 38, 2, 19 };

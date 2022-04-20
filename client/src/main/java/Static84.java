@@ -128,7 +128,7 @@ public final class Static84 {
 			if (arg2.aClass100_640.method3149(0) == 126) {
 				arg2.aClass100_640 = arg2.aClass100_640.method3136(1);
 				Static103.method2231(arg2.method1264(), 2, arg2.aClass100_640);
-			} else if (arg2 == Static173.aClass8_Sub4_Sub1_2) {
+			} else if (arg2 == Static173.self) {
 				Static103.method2231(arg2.method1264(), 2, arg2.aClass100_640);
 			}
 			arg2.anInt3352 = 0;
@@ -181,7 +181,7 @@ public final class Static84 {
 					if (local24 != -1) {
 						@Pc(663) SeqType local663 = Static36.method941(local24);
 						if (local663 != null && local663.anIntArray473 != null) {
-							Static152.method2836(arg2.anInt3421, local663, arg2.anInt3412, arg2 == Static173.aClass8_Sub4_Sub1_2, 0);
+							Static152.method2836(arg2.anInt3421, local663, arg2.anInt3412, arg2 == Static173.self, 0);
 						}
 					}
 				}

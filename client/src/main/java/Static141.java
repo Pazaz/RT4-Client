@@ -84,7 +84,7 @@ public final class Static141 {
 		if (arg0 && Static113.anInt4612 >= 100) {
 			Static138.anInt3439 = Static245.anInt5375 * 128 + 64;
 			Static134.anInt3302 = Static248.anInt4232 * 128 + 64;
-			Static5.anInt40 = Static207.method3685(Static55.anInt1735, Static138.anInt3439, Static134.anInt3302) - Static231.anInt5203;
+			Static5.anInt40 = Static207.method3685(Static55.level, Static138.anInt3439, Static134.anInt3302) - Static231.anInt5203;
 		}
 		Static227.anInt5096 = 2;
 	}

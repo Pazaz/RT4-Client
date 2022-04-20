@@ -27,10 +27,10 @@ public final class Static31 {
 
 	@OriginalMember(owner = "client!ch", name = "c", descriptor = "(I)V")
 	public static void method846() {
-		if (!Static138.method2697() && Static41.anInt1316 != Static55.anInt1735) {
-			Static127.method2463(Static55.anInt1735, Static52.anInt1695, Static80.anInt4701, Static173.aClass8_Sub4_Sub1_2.anIntArray317[0], false, Static173.aClass8_Sub4_Sub1_2.anIntArray318[0]);
-		} else if (Static55.anInt1735 != Static107.anInt2875 && Static137.method2665(Static55.anInt1735)) {
-			Static107.anInt2875 = Static55.anInt1735;
+		if (!Static138.method2697() && Static41.anInt1316 != Static55.level) {
+			Static127.method2463(Static55.level, Static52.anInt1695, Static80.anInt4701, Static173.self.movementQueueZ[0], false, Static173.self.movementQueueX[0]);
+		} else if (Static55.level != Static107.anInt2875 && Static137.method2665(Static55.level)) {
+			Static107.anInt2875 = Static55.level;
 			Static269.method2218();
 		}
 	}
@@ -49,9 +49,9 @@ public final class Static31 {
 		}
 		try {
 			if (++Static20.anInt673 > 1500) {
-				if (Static124.aClass95_2 != null) {
-					Static124.aClass95_2.method2834();
-					Static124.aClass95_2 = null;
+				if (Static124.socket != null) {
+					Static124.socket.method2834();
+					Static124.socket = null;
 				}
 				if (Static196.anInt4587 >= 1) {
 					Static266.anInt5336 = -5;
@@ -79,16 +79,16 @@ public final class Static31 {
 				if (Static72.aClass212_3.status != 1) {
 					return;
 				}
-				Static124.aClass95_2 = new BufferedSocket((Socket) Static72.aClass212_3.anObject6, Static71.signLink);
+				Static124.socket = new BufferedSocket((Socket) Static72.aClass212_3.result, Static71.signLink);
 				Static72.aClass212_3 = null;
-				Static124.aClass95_2.write(Static6.aClass3_Sub15_Sub1_1.data, Static6.aClass3_Sub15_Sub1_1.offset);
+				Static124.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
 				if (Static11.aClass62_1 != null) {
 					Static11.aClass62_1.method3571();
 				}
 				if (Static147.aClass62_2 != null) {
 					Static147.aClass62_2.method3571();
 				}
-				local126 = Static124.aClass95_2.read();
+				local126 = Static124.socket.read();
 				if (Static11.aClass62_1 != null) {
 					Static11.aClass62_1.method3571();
 				}
@@ -98,35 +98,35 @@ public final class Static31 {
 				if (local126 != 101) {
 					Static266.anInt5336 = local126;
 					Static219.anInt4937 = 0;
-					Static124.aClass95_2.method2834();
-					Static124.aClass95_2 = null;
+					Static124.socket.method2834();
+					Static124.socket = null;
 					return;
 				}
 				Static219.anInt4937 = 3;
 			}
 			if (Static219.anInt4937 == 3) {
-				if (Static124.aClass95_2.available() < 2) {
+				if (Static124.socket.available() < 2) {
 					return;
 				}
-				local126 = Static124.aClass95_2.read() << 8 | Static124.aClass95_2.read();
+				local126 = Static124.socket.read() << 8 | Static124.socket.read();
 				Static176.method3303(local126);
 				if (Static125.worldId == -1) {
 					Static219.anInt4937 = 0;
 					Static266.anInt5336 = 6;
-					Static124.aClass95_2.method2834();
-					Static124.aClass95_2 = null;
+					Static124.socket.method2834();
+					Static124.socket = null;
 					return;
 				}
 				Static219.anInt4937 = 0;
-				Static124.aClass95_2.method2834();
-				Static124.aClass95_2 = null;
+				Static124.socket.method2834();
+				Static124.socket = null;
 				Static49.method1208();
 				return;
 			}
 		} catch (@Pc(210) IOException local210) {
-			if (Static124.aClass95_2 != null) {
-				Static124.aClass95_2.method2834();
-				Static124.aClass95_2 = null;
+			if (Static124.socket != null) {
+				Static124.socket.method2834();
+				Static124.socket = null;
 			}
 			if (Static196.anInt4587 < 1) {
 				if (Static208.worldListPort == Static249.worldListDefaultPort) {

@@ -31,16 +31,20 @@ public final class Static5 {
 	}
 
 	@OriginalMember(owner = "client!af", name = "a", descriptor = "(BI)Lclient!be;")
-	public static Component method32(@OriginalArg(1) int arg0) {
-		@Pc(7) int local7 = arg0 >> 16;
-		@Pc(18) int local18 = arg0 & 0xFFFF;
-		if (Static241.aClass13ArrayArray12[local7] == null || Static241.aClass13ArrayArray12[local7][local18] == null) {
-			@Pc(33) boolean local33 = Static245.method4225(local7);
-			if (!local33) {
+	public static Component getComponent(@OriginalArg(1) int id) {
+		@Pc(7) int interfaceId = id >> 16;
+		@Pc(18) int componentId = id & 0xFFFF;
+		if (Static241.components[interfaceId] == null || Static241.components[interfaceId][componentId] == null) {
+			@Pc(33) boolean success = Static245.load(interfaceId);
+			if (!success) {
+				return null;
+			}
+			// todo: this should not be necessary, data/server-related?
+			if (Static241.components.length <= interfaceId || Static241.components[interfaceId].length <= componentId) {
 				return null;
 			}
 		}
-		return Static241.aClass13ArrayArray12[local7][local18];
+		return Static241.components[interfaceId][componentId];
 	}
 
 	@OriginalMember(owner = "client!af", name = "b", descriptor = "(B)V")

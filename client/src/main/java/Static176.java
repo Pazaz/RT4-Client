@@ -95,7 +95,7 @@ public final class Static176 {
 			if (local121 != local112) {
 				local112 = local121;
 				@Pc(240) int local240;
-				if (local133 == 2 && Static257.method523(Static55.anInt1735, local47, local147, local121)) {
+				if (local133 == 2 && Static257.method523(Static55.level, local47, local147, local121)) {
 					@Pc(172) LocType local172 = Static271.method4601(local140);
 					if (local172.anIntArray380 != null) {
 						local172 = local172.method3417();
@@ -203,7 +203,7 @@ public final class Static176 {
 					Static217.method3767(local140, local147, local688, local47);
 				}
 				if (local133 == 3) {
-					@Pc(931) LinkedList local931 = Static159.aClass69ArrayArrayArray1[Static55.anInt1735][local47][local147];
+					@Pc(931) LinkedList local931 = Static159.aClass69ArrayArrayArray1[Static55.level][local47][local147];
 					if (local931 != null) {
 						for (@Pc(940) ObjStackNode local940 = (ObjStackNode) local931.method2279(); local940 != null; local940 = (ObjStackNode) local931.method2286()) {
 							local240 = local940.aClass8_Sub7_1.anInt5555;

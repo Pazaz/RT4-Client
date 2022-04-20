@@ -663,7 +663,7 @@ public final class Static247 {
 		@Pc(8) Component local8 = Static201.method1418(arg0, arg1);
 		if (local8 != null && local8.anObjectArray11 != null) {
 			@Pc(19) HookRequest local19 = new HookRequest();
-			local19.aClass13_17 = local8;
+			local19.source = local8;
 			local19.anObjectArray31 = local8.anObjectArray11;
 			Static82.method1767(local19);
 		}

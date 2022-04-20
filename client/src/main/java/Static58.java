@@ -14,7 +14,7 @@ public final class Static58 {
 	public static boolean aBoolean101 = false;
 
 	@OriginalMember(owner = "client!eh", name = "j", descriptor = "I")
-	public static int anInt1766 = 0;
+	public static int wheelRotation = 0;
 
 	@OriginalMember(owner = "client!eh", name = "a", descriptor = "(I)V")
 	public static void method1321() {

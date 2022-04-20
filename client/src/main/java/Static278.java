@@ -57,9 +57,9 @@ public final class Static278 {
 					if (local37.anInt3376 == 0) {
 						local37.anInt3381 = 0;
 					}
-					local37.method2683(local37.method2693(), Static173.aClass8_Sub4_Sub1_2.anIntArray318[0] + local124, local105 + Static173.aClass8_Sub4_Sub1_2.anIntArray317[0], local66 == 1);
+					local37.method2683(local37.method2693(), Static173.self.movementQueueX[0] + local124, local105 + Static173.self.movementQueueZ[0], local66 == 1);
 					if (local37.aClass96_1.method2935()) {
-						Static122.method2411(local37.anIntArray317[0], null, 0, local37, local37.anIntArray318[0], Static55.anInt1735, null);
+						Static122.method2411(local37.movementQueueZ[0], null, 0, local37, local37.movementQueueX[0], Static55.level, null);
 					}
 					continue;
 				}
@@ -195,9 +195,9 @@ public final class Static278 {
 
 	@OriginalMember(owner = "client!wj", name = "b", descriptor = "(B)V")
 	public static void method4653() {
-		if (Static124.aClass95_2 != null) {
-			Static124.aClass95_2.method2834();
-			Static124.aClass95_2 = null;
+		if (Static124.socket != null) {
+			Static124.socket.method2834();
+			Static124.socket = null;
 		}
 		Static217.method3768();
 		Static65.method1500();
@@ -212,10 +212,10 @@ public final class Static278 {
 		Static221.anInt4363 = -1;
 		Static260.method3852(true);
 		Static230.aBoolean250 = false;
-		Static142.anInt3483 = 0;
+		Static142.originZ = 0;
 		Static80.anInt4701 = 0;
 		Static52.anInt1695 = 0;
-		Static225.anInt5068 = 0;
+		Static225.originX = 0;
 		for (local19 = 0; local19 < Static143.aClass102Array1.length; local19++) {
 			Static143.aClass102Array1[local19] = null;
 		}

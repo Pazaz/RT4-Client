@@ -32,5 +32,5 @@ public final class HookRequest extends Node {
 	public Object[] anObjectArray31;
 
 	@OriginalMember(owner = "client!jl", name = "F", descriptor = "Lclient!be;")
-	public Component aClass13_17;
+	public Component source;
 }

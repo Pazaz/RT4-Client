@@ -140,18 +140,18 @@ public final class Static41 {
 		}
 		if (Static239.aBoolean269) {
 			@Pc(650) GlModel local650 = (GlModel) local33;
-			if (Static207.method3685(Static55.anInt1735, arg3 + local384, local126 + arg5) != arg11 || Static207.method3685(Static55.anInt1735, local115 + arg3, arg5 - -local130) != arg11) {
+			if (Static207.method3685(Static55.level, arg3 + local384, local126 + arg5) != arg11 || Static207.method3685(Static55.level, local115 + arg3, arg5 - -local130) != arg11) {
 				for (local162 = 0; local162 < local650.anInt5295; local162++) {
-					local650.anIntArray465[local162] += Static207.method3685(Static55.anInt1735, local650.anIntArray461[local162] + arg3, arg5 + local650.anIntArray466[local162]) - arg11;
+					local650.anIntArray465[local162] += Static207.method3685(Static55.level, local650.anIntArray461[local162] + arg3, arg5 + local650.anIntArray466[local162]) - arg11;
 				}
 				local650.aClass5_1.aBoolean3 = false;
 				local650.aClass127_4.aBoolean235 = false;
 			}
 		} else {
 			@Pc(574) SoftwareModel local574 = (SoftwareModel) local33;
-			if (Static207.method3685(Static55.anInt1735, arg3 + local384, arg5 - -local126) != arg11 || arg11 != Static207.method3685(Static55.anInt1735, arg3 + local115, arg5 - -local130)) {
+			if (Static207.method3685(Static55.level, arg3 + local384, arg5 - -local126) != arg11 || arg11 != Static207.method3685(Static55.level, arg3 + local115, arg5 - -local130)) {
 				for (local162 = 0; local162 < local574.anInt5788; local162++) {
-					local574.anIntArray527[local162] += Static207.method3685(Static55.anInt1735, arg3 + local574.anIntArray528[local162], arg5 + local574.anIntArray531[local162]) - arg11;
+					local574.anIntArray527[local162] += Static207.method3685(Static55.level, arg3 + local574.anIntArray528[local162], arg5 + local574.anIntArray531[local162]) - arg11;
 				}
 				local574.aBoolean305 = false;
 			}

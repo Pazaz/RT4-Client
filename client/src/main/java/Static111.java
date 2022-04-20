@@ -24,44 +24,44 @@ public final class Static111 {
 
 	@OriginalMember(owner = "client!ii", name = "a", descriptor = "(Lclient!be;III)V")
 	public static void method2291(@OriginalArg(0) Component arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-		if (arg0.aByte2 == 0) {
-			arg0.anInt469 = arg0.anInt444;
-		} else if (arg0.aByte2 == 1) {
-			arg0.anInt469 = (arg1 - arg0.anInt459) / 2 + arg0.anInt444;
-		} else if (arg0.aByte2 == 2) {
-			arg0.anInt469 = arg1 - arg0.anInt459 - arg0.anInt444;
-		} else if (arg0.aByte2 == 3) {
-			arg0.anInt469 = arg0.anInt444 * arg1 >> 14;
-		} else if (arg0.aByte2 == 4) {
-			arg0.anInt469 = (arg1 * arg0.anInt444 >> 14) + (arg1 - arg0.anInt459) / 2;
+		if (arg0.xMode == 0) {
+			arg0.y = arg0.baseY;
+		} else if (arg0.xMode == 1) {
+			arg0.y = (arg1 - arg0.anInt459) / 2 + arg0.baseY;
+		} else if (arg0.xMode == 2) {
+			arg0.y = arg1 - arg0.anInt459 - arg0.baseY;
+		} else if (arg0.xMode == 3) {
+			arg0.y = arg0.baseY * arg1 >> 14;
+		} else if (arg0.xMode == 4) {
+			arg0.y = (arg1 * arg0.baseY >> 14) + (arg1 - arg0.anInt459) / 2;
 		} else {
-			arg0.anInt469 = arg1 - (arg1 * arg0.anInt444 >> 14) - arg0.anInt459;
+			arg0.y = arg1 - (arg1 * arg0.baseY >> 14) - arg0.anInt459;
 		}
-		if (arg0.aByte4 == 0) {
-			arg0.anInt523 = arg0.anInt529;
-		} else if (arg0.aByte4 == 1) {
-			arg0.anInt523 = arg0.anInt529 + (arg2 - arg0.anInt445) / 2;
-		} else if (arg0.aByte4 == 2) {
-			arg0.anInt523 = arg2 - arg0.anInt529 - arg0.anInt445;
-		} else if (arg0.aByte4 == 3) {
-			arg0.anInt523 = arg0.anInt529 * arg2 >> 14;
-		} else if (arg0.aByte4 == 4) {
-			arg0.anInt523 = (arg0.anInt529 * arg2 >> 14) + (arg2 - arg0.anInt445) / 2;
+		if (arg0.yMode == 0) {
+			arg0.x = arg0.baseX;
+		} else if (arg0.yMode == 1) {
+			arg0.x = arg0.baseX + (arg2 - arg0.anInt445) / 2;
+		} else if (arg0.yMode == 2) {
+			arg0.x = arg2 - arg0.baseX - arg0.anInt445;
+		} else if (arg0.yMode == 3) {
+			arg0.x = arg0.baseX * arg2 >> 14;
+		} else if (arg0.yMode == 4) {
+			arg0.x = (arg0.baseX * arg2 >> 14) + (arg2 - arg0.anInt445) / 2;
 		} else {
-			arg0.anInt523 = arg2 - (arg2 * arg0.anInt529 >> 14) - arg0.anInt445;
+			arg0.x = arg2 - (arg2 * arg0.baseX >> 14) - arg0.anInt445;
 		}
 		if (!Static121.aBoolean154 || Static36.method940(arg0).anInt546 == 0 && arg0.anInt452 != 0) {
 			return;
 		}
-		if (arg0.anInt469 < 0) {
-			arg0.anInt469 = 0;
-		} else if (arg0.anInt459 + arg0.anInt469 > arg1) {
-			arg0.anInt469 = arg1 - arg0.anInt459;
+		if (arg0.y < 0) {
+			arg0.y = 0;
+		} else if (arg0.anInt459 + arg0.y > arg1) {
+			arg0.y = arg1 - arg0.anInt459;
 		}
-		if (arg0.anInt523 < 0) {
-			arg0.anInt523 = 0;
-		} else if (arg2 < arg0.anInt523 + arg0.anInt445) {
-			arg0.anInt523 = arg2 - arg0.anInt445;
+		if (arg0.x < 0) {
+			arg0.x = 0;
+		} else if (arg2 < arg0.x + arg0.anInt445) {
+			arg0.x = arg2 - arg0.anInt445;
 		}
 	}
 
@@ -72,11 +72,11 @@ public final class Static111 {
 			Static22.anInt723 = Static57.anInt1759;
 			Static215.anInt4873 = Static147.anInt3521;
 			Static223.anInt5032 = Static165.anInt4039;
-			Static150.anInt3585 = Static41.anInt1313;
-			Static7.anInt985 = Static34.anInt1034;
+			Static150.clickButton = Static41.anInt1313;
+			Static7.clickX = Static34.anInt1034;
 			Static93.anInt2467++;
-			Static60.anInt1893 = Static222.anInt4973;
-			Static133.aLong175 = Static209.aLong161;
+			Static60.clickY = Static222.anInt4973;
+			Static133.clickTime = Static209.aLong161;
 			Static41.anInt1313 = 0;
 		}
 	}

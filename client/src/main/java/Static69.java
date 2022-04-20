@@ -44,9 +44,9 @@ public final class Static69 {
 					Static190.aLongArray6[local36] = Static190.aLongArray6[local36 + 1];
 					Static193.aClass100Array134[local36] = Static193.aClass100Array134[local36 + 1];
 				}
-				Static185.anInt4369 = Static119.anInt3028;
-				Static6.aClass3_Sub15_Sub1_1.method2242(213);
-				Static6.aClass3_Sub15_Sub1_1.p8(arg0);
+				Static185.anInt4369 = Static119.transmitTimer;
+				Static6.outboundBuffer.p1isaac(213);
+				Static6.outboundBuffer.p8(arg0);
 				break;
 			}
 		}

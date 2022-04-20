@@ -8,7 +8,7 @@ public final class Static241 {
 	public static IndexedSprite[] aClass36Array16;
 
 	@OriginalMember(owner = "client!th", name = "j", descriptor = "[[Lclient!be;")
-	public static Component[][] aClass13ArrayArray12;
+	public static Component[][] components;
 
 	@OriginalMember(owner = "client!th", name = "m", descriptor = "[Lclient!be;")
 	public static Component[] aClass13Array13;

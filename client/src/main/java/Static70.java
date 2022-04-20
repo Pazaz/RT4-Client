@@ -11,13 +11,13 @@ public final class Static70 {
 	public static byte[][][] aByteArrayArrayArray7;
 
 	@OriginalMember(owner = "client!fi", name = "k", descriptor = "I")
-	public static int anInt2013 = 0;
+	public static int type = 0;
 
 	@OriginalMember(owner = "client!fi", name = "l", descriptor = "I")
 	public static int anInt2014 = 0;
 
 	@OriginalMember(owner = "client!fi", name = "n", descriptor = "I")
-	public static int anInt2015 = 0;
+	public static int updatedVarpsWriterIndex = 0;
 
 	@OriginalMember(owner = "client!fi", name = "a", descriptor = "(B)Lclient!s;")
 	public static Timer method1547() {

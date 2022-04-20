@@ -6,16 +6,16 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class DelayedStateChange extends SecondaryNode {
 
 	@OriginalMember(owner = "client!da", name = "T", descriptor = "I")
-	public int anInt1269;
+	public int intArg2;
 
 	@OriginalMember(owner = "client!da", name = "U", descriptor = "I")
-	public int anInt1270;
+	public int intArg3;
 
 	@OriginalMember(owner = "client!da", name = "V", descriptor = "I")
-	public int anInt1271;
+	public int intArg1;
 
 	@OriginalMember(owner = "client!da", name = "W", descriptor = "Lclient!na;")
-	public JagString aClass100_254;
+	public JagString stringArg;
 
 	@OriginalMember(owner = "client!da", name = "<init>", descriptor = "(II)V")
 	public DelayedStateChange(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {

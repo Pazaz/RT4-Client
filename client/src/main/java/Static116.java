@@ -32,7 +32,7 @@ public final class Static116 {
 	public static void method2325(@OriginalArg(1) boolean arg0) {
 		Static90.aByteArrayArrayArray8 = null;
 		Static83.anIntArrayArrayArray3 = null;
-		Static24.aClass13_8 = null;
+		Static24.component = null;
 		Static34.aByteArrayArrayArray3 = null;
 		Static145.anIntArray330 = null;
 		Static125.aByteArrayArrayArray10 = null;

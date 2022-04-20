@@ -23,13 +23,13 @@ public final class Static60 {
 	public static final JagString aClass100_420 = Static28.parse(")1o");
 
 	@OriginalMember(owner = "client!em", name = "y", descriptor = "I")
-	public static int anInt1893 = 0;
+	public static int clickY = 0;
 
 	@OriginalMember(owner = "client!em", name = "z", descriptor = "Z")
 	public static boolean aBoolean108 = false;
 
 	@OriginalMember(owner = "client!em", name = "B", descriptor = "I")
-	public static int anInt1894 = 0;
+	public static int rebootTimer = 0;
 
 	@OriginalMember(owner = "client!em", name = "a", descriptor = "(Lclient!be;Lclient!qf;IIIBI)V")
 	public static void method1446(@OriginalArg(0) Component arg0, @OriginalArg(1) Sprite arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(6) int arg5) {

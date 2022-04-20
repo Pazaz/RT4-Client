@@ -63,7 +63,7 @@ public final class Static203 {
 		} else {
 			Static154.canvas.setLocation(Static145.anInt3497, Static178.anInt4246);
 		}
-		if (Static154.anInt3711 != -1) {
+		if (Static154.topLevelInterace != -1) {
 			Static210.method3712(true);
 		}
 		Static139.method2704();
@@ -78,7 +78,7 @@ public final class Static203 {
 				Static231.method3983(1L);
 			}
 			if (local16.status == 1) {
-				local11 = (FileOnDisk) local16.anObject6;
+				local11 = (FileOnDisk) local16.result;
 				@Pc(39) Buffer local39 = Static48.method1196();
 				local11.method5134(local39.data, local39.offset, 0);
 			}

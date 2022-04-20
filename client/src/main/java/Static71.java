@@ -85,8 +85,8 @@ public final class Static71 {
 	}
 
 	@OriginalMember(owner = "client!fk", name = "c", descriptor = "(I)V")
-	public static void method1445() {
-		Static6.aClass3_Sub15_Sub1_1.method2242(177);
-		Static6.aClass3_Sub15_Sub1_1.p2(Static189.anInt4443);
+	public static void transmitVerifyId() {
+		Static6.outboundBuffer.p1isaac(177);
+		Static6.outboundBuffer.p2(Static189.anInt4443);
 	}
 }

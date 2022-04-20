@@ -17,7 +17,7 @@ public final class Static264 {
 	public static final int[] anIntArray412 = new int[] { 1, 0, 0, 0, 1, 0, 2, 1, 1, 1, 0, 2, 0, 0, 1, 0 };
 
 	@OriginalMember(owner = "client!vh", name = "s", descriptor = "I")
-	public static int anInt4632 = 0;
+	public static int mouseRecorderPrevX = 0;
 
 	@OriginalMember(owner = "client!vh", name = "u", descriptor = "[I")
 	public static final int[] anIntArray413 = new int[128];

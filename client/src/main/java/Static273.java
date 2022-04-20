@@ -63,12 +63,12 @@ public final class Static273 {
 				if (local46 == 4) {
 					local124 = local33[local39++] << 16;
 					@Pc(131) int local131 = local124 + local33[local39++];
-					local135 = Static5.method32(local131);
+					local135 = Static5.getComponent(local131);
 					local140 = local33[local39++];
 					if (local140 != -1 && (!Static71.method1439(local140).aBoolean131 || Static2.aBoolean1)) {
-						for (local152 = 0; local152 < local135.anIntArray40.length; local152++) {
-							if (local140 + 1 == local135.anIntArray40[local152]) {
-								local41 += local135.anIntArray50[local152];
+						for (local152 = 0; local152 < local135.objTypes.length; local152++) {
+							if (local140 + 1 == local135.objTypes[local152]) {
+								local41 += local135.objCounts[local152];
 							}
 						}
 					}
@@ -83,7 +83,7 @@ public final class Static273 {
 					local41 = Static7.anIntArray75[local33[local39++]] * 100 / 46875;
 				}
 				if (local46 == 8) {
-					local41 = Static173.aClass8_Sub4_Sub1_2.anInt1652;
+					local41 = Static173.self.anInt1652;
 				}
 				if (local46 == 9) {
 					for (local124 = 0; local124 < 25; local124++) {
@@ -95,11 +95,11 @@ public final class Static273 {
 				if (local46 == 10) {
 					local124 = local33[local39++] << 16;
 					local124 += local33[local39++];
-					local135 = Static5.method32(local124);
+					local135 = Static5.getComponent(local124);
 					local140 = local33[local39++];
 					if (local140 != -1 && (!Static71.method1439(local140).aBoolean131 || Static2.aBoolean1)) {
-						for (local152 = 0; local152 < local135.anIntArray40.length; local152++) {
-							if (local135.anIntArray40[local152] == local140 + 1) {
+						for (local152 = 0; local152 < local135.objTypes.length; local152++) {
+							if (local135.objTypes[local152] == local140 + 1) {
 								local41 = 999999999;
 								break;
 							}
@@ -122,10 +122,10 @@ public final class Static273 {
 					local41 = Static155.method2945(local124);
 				}
 				if (local46 == 18) {
-					local41 = (Static173.aClass8_Sub4_Sub1_2.anInt3412 >> 7) + Static225.anInt5068;
+					local41 = (Static173.self.anInt3412 >> 7) + Static225.originX;
 				}
 				if (local46 == 19) {
-					local41 = (Static173.aClass8_Sub4_Sub1_2.anInt3421 >> 7) + Static142.anInt3483;
+					local41 = (Static173.self.anInt3421 >> 7) + Static142.originZ;
 				}
 				if (local46 == 20) {
 					local41 = local33[local39++];

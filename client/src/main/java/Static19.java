@@ -45,7 +45,7 @@ public final class Static19 {
 	}
 
 	@OriginalMember(owner = "client!bi", name = "f", descriptor = "(B)V")
-	public static void method587() {
+	public static void loop() {
 		@Pc(11) int local11;
 		for (local11 = -1; local11 < Static267.anInt5774; local11++) {
 			@Pc(22) int local22;

@@ -24,7 +24,7 @@ public final class Static169 {
 	public static int anInt4075 = -1;
 
 	@OriginalMember(owner = "client!nf", name = "a", descriptor = "(Lclient!na;BZ)V")
-	public static void method3175(@OriginalArg(0) JagString arg0, @OriginalArg(2) boolean arg1) {
+	public static void openUrl(@OriginalArg(0) JagString arg0, @OriginalArg(2) boolean arg1) {
 		if (!arg1) {
 			try {
 				Static230.anApplet_Sub1_1.getAppletContext().showDocument(arg0.method3127(Static230.anApplet_Sub1_1.getCodeBase()), "_top");
@@ -68,7 +68,7 @@ public final class Static169 {
 		while (local90.status == 0) {
 			Static231.method3983(10L);
 		}
-		@Pc(103) Frame local103 = (Frame) local90.anObject6;
+		@Pc(103) Frame local103 = (Frame) local90.result;
 		if (local103 == null) {
 			return null;
 		} else if (local90.status == 2) {

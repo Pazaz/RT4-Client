@@ -23,7 +23,7 @@ public final class Static83 {
 	public static final SoftLruHashTable aClass99_3 = new SoftLruHashTable(64);
 
 	@OriginalMember(owner = "client!gj", name = "q", descriptor = "[I")
-	public static final int[] anIntArray23 = new int[32];
+	public static final int[] updatedVarps = new int[32];
 
 	@OriginalMember(owner = "client!gj", name = "a", descriptor = "(II)Z")
 	public static boolean method433(@OriginalArg(0) int arg0) {

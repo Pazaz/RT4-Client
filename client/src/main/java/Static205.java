@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class Static205 {
 
 	@OriginalMember(owner = "client!qj", name = "i", descriptor = "[I")
-	public static final int[] anIntArray426 = new int[128];
+	public static final int[] keyChars = new int[128];
 
 	@OriginalMember(owner = "client!qj", name = "a", descriptor = "(Lclient!be;BI)Lclient!na;")
 	public static JagString method3677(@OriginalArg(0) Component arg0, @OriginalArg(2) int arg1) {

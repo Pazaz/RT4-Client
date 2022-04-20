@@ -31,7 +31,7 @@ public final class Static197 {
 		if (local17.status == 2) {
 			return new Class114[0];
 		}
-		@Pc(39) int[] local39 = (int[]) local17.anObject6;
+		@Pc(39) int[] local39 = (int[]) local17.result;
 		@Pc(45) Class114[] local45 = new Class114[local39.length >> 2];
 		for (@Pc(47) int local47 = 0; local47 < local45.length; local47++) {
 			@Pc(59) Class114 local59 = new Class114();
@@ -199,10 +199,10 @@ public final class Static197 {
 		} else {
 			Static124.aBoolean156 = false;
 		}
-		if (Static154.anInt3711 != -1) {
+		if (Static154.topLevelInterace != -1) {
 			Static210.method3712(true);
 		}
-		if (Static124.aClass95_2 != null && (Static244.anInt5370 == 30 || Static244.anInt5370 == 25)) {
+		if (Static124.socket != null && (Static244.anInt5370 == 30 || Static244.anInt5370 == 25)) {
 			Static59.method1373();
 		}
 		for (@Pc(466) int local466 = 0; local466 < 100; local466++) {

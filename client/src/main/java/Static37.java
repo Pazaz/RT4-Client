@@ -51,8 +51,8 @@ public final class Static37 {
 			}
 		}
 		if ((arg0.anInt3382 != 0 || arg0.anInt3363 != 0) && (arg0.anInt3409 == 0 || arg0.anInt3417 > 0)) {
-			local70 = arg0.anInt3412 - (arg0.anInt3382 - Static225.anInt5068 - Static225.anInt5068) * 64;
-			local43 = arg0.anInt3421 - (arg0.anInt3363 - Static142.anInt3483 - Static142.anInt3483) * 64;
+			local70 = arg0.anInt3412 - (arg0.anInt3382 - Static225.originX - Static225.originX) * 64;
+			local43 = arg0.anInt3421 - (arg0.anInt3363 - Static142.originZ - Static142.originZ) * 64;
 			if (local70 != 0 || local43 != 0) {
 				arg0.anInt3400 = (int) (Math.atan2((double) local70, (double) local43) * 325.949D) & 0x7FF;
 			}

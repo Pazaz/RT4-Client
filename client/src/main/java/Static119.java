@@ -23,7 +23,7 @@ public final class Static119 {
 	public static final JagString aClass100_589 = Static28.parse(" <col=ffffff>");
 
 	@OriginalMember(owner = "client!je", name = "fb", descriptor = "I")
-	public static int anInt3028 = 1;
+	public static int transmitTimer = 1;
 
 	@OriginalMember(owner = "client!je", name = "h", descriptor = "(I)V")
 	public static void method2380() {

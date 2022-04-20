@@ -54,8 +54,8 @@ public final class Static280 {
 	public static void method4666(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2) {
 		@Pc(18) DelayedStateChange local18 = Static238.method4143(11, arg1);
 		local18.method1017();
-		local18.anInt1270 = arg2;
-		local18.anInt1271 = arg0;
+		local18.intArg3 = arg2;
+		local18.intArg1 = arg0;
 	}
 
 	@OriginalMember(owner = "client!wl", name = "a", descriptor = "([IIIIIIIIIZB)V")
@@ -544,14 +544,14 @@ public final class Static280 {
 
 	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(Lclient!be;I)Lclient!be;")
 	public static Component method4668(@OriginalArg(0) Component arg0) {
-		if (arg0.anInt456 != -1) {
-			return Static5.method32(arg0.anInt456);
+		if (arg0.layer != -1) {
+			return Static5.getComponent(arg0.layer);
 		}
 		@Pc(28) int local28 = arg0.anInt507 >>> 16;
 		@Pc(33) HashTableIterator local33 = new HashTableIterator(Static119.aClass133_9);
 		for (@Pc(38) Class3_Sub31 local38 = (Class3_Sub31) local33.method2701(); local38 != null; local38 = (Class3_Sub31) local33.method2700()) {
 			if (local28 == local38.anInt5878) {
-				return Static5.method32((int) local38.aLong192);
+				return Static5.getComponent((int) local38.aLong192);
 			}
 		}
 		return null;

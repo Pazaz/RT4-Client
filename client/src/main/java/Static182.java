@@ -20,7 +20,7 @@ public final class Static182 {
 	public static int anInt4311 = -2;
 
 	@OriginalMember(owner = "client!oj", name = "y", descriptor = "I")
-	public static int anInt4313 = 0;
+	public static int keyQueueSize = 0;
 
 	@OriginalMember(owner = "client!oj", name = "z", descriptor = "[Z")
 	public static final boolean[] aBooleanArray97 = new boolean[] { true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false };

@@ -27,7 +27,7 @@ public final class Static7 {
 	public static final LinkedList aClass69_32 = new LinkedList();
 
 	@OriginalMember(owner = "client!ah", name = "s", descriptor = "I")
-	public static int anInt985 = 0;
+	public static int clickX = 0;
 
 	@OriginalMember(owner = "client!ah", name = "a", descriptor = "(BZ)V")
 	public static void method842(@OriginalArg(1) boolean arg0) {
@@ -40,11 +40,11 @@ public final class Static7 {
 			return;
 		}
 		Static131.anInt3251 = 0;
-		if (!Static224.aBoolean247 && Static124.aClass95_2 != null) {
-			Static6.aClass3_Sub15_Sub1_1.method2242(93);
+		if (!Static224.aBoolean247 && Static124.socket != null) {
+			Static6.outboundBuffer.p1isaac(93);
 			try {
-				Static124.aClass95_2.write(Static6.aClass3_Sub15_Sub1_1.data, Static6.aClass3_Sub15_Sub1_1.offset);
-				Static6.aClass3_Sub15_Sub1_1.offset = 0;
+				Static124.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
+				Static6.outboundBuffer.offset = 0;
 			} catch (@Pc(53) IOException local53) {
 				Static224.aBoolean247 = true;
 			}
@@ -57,7 +57,7 @@ public final class Static7 {
 		if (Static118.aClass13_15 != null || Static105.aClass13_14 != null) {
 			return;
 		}
-		@Pc(20) int local20 = Static150.anInt3585;
+		@Pc(20) int local20 = Static150.clickButton;
 		@Pc(93) int local93;
 		@Pc(99) int local99;
 		if (!Static60.aBoolean108) {
@@ -66,7 +66,7 @@ public final class Static7 {
 				if (local37 == 25 || local37 == 23 || local37 == 48 || local37 == 7 || local37 == 13 || local37 == 47 || local37 == 5 || local37 == 43 || local37 == 35 || local37 == 58 || local37 == 22 || local37 == 1006) {
 					local93 = Static196.anIntArray408[Static231.anInt5204 - 1];
 					local99 = Static56.anIntArray142[Static231.anInt5204 - 1];
-					@Pc(103) Component local103 = Static5.method32(local99);
+					@Pc(103) Component local103 = Static5.getComponent(local99);
 					@Pc(106) ServerActiveProperties local106 = Static36.method940(local103);
 					if (local106.method511() || local106.method504()) {
 						Static78.anInt2145 = 0;
@@ -74,9 +74,9 @@ public final class Static7 {
 						if (Static118.aClass13_15 != null) {
 							Static43.method1143(Static118.aClass13_15);
 						}
-						Static118.aClass13_15 = Static5.method32(local99);
-						Static149.anInt3554 = anInt985;
-						Static206.anInt4773 = Static60.anInt1893;
+						Static118.aClass13_15 = Static5.getComponent(local99);
+						Static149.anInt3554 = clickX;
+						Static206.anInt4773 = Static60.clickY;
 						Static4.anInt36 = local93;
 						Static43.method1143(Static118.aClass13_15);
 						return;
@@ -109,8 +109,8 @@ public final class Static7 {
 		local204 = Static183.anInt4271;
 		local93 = Static229.anInt5138;
 		local99 = Static24.anInt761;
-		@Pc(265) int local265 = anInt985;
-		@Pc(267) int local267 = Static60.anInt1893;
+		@Pc(265) int local265 = clickX;
+		@Pc(267) int local267 = Static60.clickY;
 		@Pc(269) int local269 = -1;
 		for (@Pc(271) int local271 = 0; local271 < Static231.anInt5204; local271++) {
 			@Pc(289) int local289;

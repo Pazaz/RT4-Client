@@ -55,22 +55,22 @@ public final class Static276 {
 			@Pc(28) Player local28 = Static159.aClass8_Sub4_Sub1Array1[Static105.anIntArray256[local15]];
 			if (local28 != null && local28.aClass100_364 != null && local28.aClass100_364.method3111(local7)) {
 				local13 = true;
-				Static102.method2075(Static173.aClass8_Sub4_Sub1_2.anIntArray317[0], 0, 1, false, 0, local28.anIntArray318[0], 1, 0, 2, local28.anIntArray317[0], Static173.aClass8_Sub4_Sub1_2.anIntArray318[0]);
+				Static102.method2075(Static173.self.movementQueueZ[0], 0, 1, false, 0, local28.movementQueueX[0], 1, 0, 2, local28.movementQueueZ[0], Static173.self.movementQueueX[0]);
 				if (arg0 == 1) {
-					Static6.aClass3_Sub15_Sub1_1.method2242(68);
-					Static6.aClass3_Sub15_Sub1_1.p2leadd(Static105.anIntArray256[local15]);
+					Static6.outboundBuffer.p1isaac(68);
+					Static6.outboundBuffer.p2leadd(Static105.anIntArray256[local15]);
 				} else if (arg0 == 4) {
-					Static6.aClass3_Sub15_Sub1_1.method2242(180);
-					Static6.aClass3_Sub15_Sub1_1.p2leadd(Static105.anIntArray256[local15]);
+					Static6.outboundBuffer.p1isaac(180);
+					Static6.outboundBuffer.p2leadd(Static105.anIntArray256[local15]);
 				} else if (arg0 == 5) {
-					Static6.aClass3_Sub15_Sub1_1.method2242(4);
-					Static6.aClass3_Sub15_Sub1_1.p2le(Static105.anIntArray256[local15]);
+					Static6.outboundBuffer.p1isaac(4);
+					Static6.outboundBuffer.p2le(Static105.anIntArray256[local15]);
 				} else if (arg0 == 6) {
-					Static6.aClass3_Sub15_Sub1_1.method2242(133);
-					Static6.aClass3_Sub15_Sub1_1.p2le(Static105.anIntArray256[local15]);
+					Static6.outboundBuffer.p1isaac(133);
+					Static6.outboundBuffer.p2le(Static105.anIntArray256[local15]);
 				} else if (arg0 == 7) {
-					Static6.aClass3_Sub15_Sub1_1.method2242(114);
-					Static6.aClass3_Sub15_Sub1_1.p2leadd(Static105.anIntArray256[local15]);
+					Static6.outboundBuffer.p1isaac(114);
+					Static6.outboundBuffer.p2leadd(Static105.anIntArray256[local15]);
 				}
 				break;
 			}

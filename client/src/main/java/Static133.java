@@ -8,7 +8,7 @@ public final class Static133 {
 	public static int anInt5230;
 
 	@OriginalMember(owner = "client!kf", name = "c", descriptor = "J")
-	public static long aLong175 = 0L;
+	public static long clickTime = 0L;
 
 	@OriginalMember(owner = "client!kf", name = "d", descriptor = "[Lclient!cl;")
 	public static final AnimFrameset[] aClass3_Sub2_Sub7Array7 = new AnimFrameset[14];

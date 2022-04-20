@@ -11,7 +11,7 @@ public final class Static245 {
 	public static final JagString aClass100_1018 = Static28.parse("; Expires=Thu)1 01)2Jan)21970 00:00:00 GMT; Max)2Age=0");
 
 	@OriginalMember(owner = "client!tm", name = "e", descriptor = "Z")
-	public static boolean aBoolean281 = false;
+	public static boolean enabled = false;
 
 	@OriginalMember(owner = "client!tm", name = "i", descriptor = "I")
 	public static int anInt5377 = 0;
@@ -23,7 +23,7 @@ public final class Static245 {
 	}
 
 	@OriginalMember(owner = "client!tm", name = "b", descriptor = "(II)Z")
-	public static boolean method4225(@OriginalArg(0) int arg0) {
+	public static boolean load(@OriginalArg(0) int arg0) {
 		if (Static223.aBooleanArray115[arg0]) {
 			return true;
 		} else if (Static202.aClass153_84.method4479(arg0)) {
@@ -32,14 +32,14 @@ public final class Static245 {
 				Static223.aBooleanArray115[arg0] = true;
 				return true;
 			}
-			if (Static241.aClass13ArrayArray12[arg0] == null) {
-				Static241.aClass13ArrayArray12[arg0] = new Component[local25];
+			if (Static241.components[arg0] == null) {
+				Static241.components[arg0] = new Component[local25];
 			}
 			for (@Pc(46) int local46 = 0; local46 < local25; local46++) {
-				if (Static241.aClass13ArrayArray12[arg0][local46] == null) {
+				if (Static241.components[arg0][local46] == null) {
 					@Pc(62) byte[] local62 = Static202.aClass153_84.method4495(arg0, local46);
 					if (local62 != null) {
-						@Pc(74) Component local74 = Static241.aClass13ArrayArray12[arg0][local46] = new Component();
+						@Pc(74) Component local74 = Static241.components[arg0][local46] = new Component();
 						local74.anInt507 = local46 + (arg0 << 16);
 						if (local62[0] == -1) {
 							local74.method490(new Buffer(local62));

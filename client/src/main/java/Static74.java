@@ -74,16 +74,16 @@ public final class Static74 {
 
 	@OriginalMember(owner = "client!fn", name = "c", descriptor = "(II)V")
 	public static void method1626(@OriginalArg(0) int arg0) {
-		if (arg0 == -1 || !Static245.method4225(arg0)) {
+		if (arg0 == -1 || !Static245.load(arg0)) {
 			return;
 		}
-		@Pc(31) Component[] local31 = Static241.aClass13ArrayArray12[arg0];
+		@Pc(31) Component[] local31 = Static241.components[arg0];
 		for (@Pc(33) int local33 = 0; local33 < local31.length; local33++) {
 			@Pc(41) Component local41 = local31[local33];
 			if (local41.anObjectArray3 != null) {
 				@Pc(50) HookRequest local50 = new HookRequest();
 				local50.anObjectArray31 = local41.anObjectArray3;
-				local50.aClass13_17 = local41;
+				local50.source = local41;
 				Static88.method1818(2000000, local50);
 			}
 		}

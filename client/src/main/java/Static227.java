@@ -27,7 +27,7 @@ public final class Static227 {
 	public static final JagString aClass100_966 = Static28.parse("settings");
 
 	@OriginalMember(owner = "client!sg", name = "q", descriptor = "[I")
-	public static final int[] anIntArray447 = new int[128];
+	public static final int[] keyCodes = new int[128];
 
 	@OriginalMember(owner = "client!sg", name = "a", descriptor = "(B)V")
 	public static void method3903() {

@@ -14,7 +14,7 @@ public final class Static17 {
 	public static final int[] anIntArray53 = new int[128];
 
 	@OriginalMember(owner = "client!bg", name = "M", descriptor = "I")
-	public static int anInt577 = 0;
+	public static int milliseconds = 0;
 
 	@OriginalMember(owner = "client!bg", name = "N", descriptor = "Lclient!na;")
 	public static final JagString aClass100_102 = Static28.parse("mapfunction");
@@ -35,7 +35,7 @@ public final class Static17 {
 		@Pc(64) int local64;
 		if (local23 == 1) {
 			local54 = Static57.aClass3_Sub15_Sub1_3.method2238(3);
-			Static173.aClass8_Sub4_Sub1_2.method2684(1, local54);
+			Static173.self.method2684(1, local54);
 			local64 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
 			if (local64 == 1) {
 				Static44.anIntArray106[Static116.anInt2951++] = 2047;
@@ -43,12 +43,12 @@ public final class Static17 {
 		} else if (local23 == 2) {
 			if (Static57.aClass3_Sub15_Sub1_3.method2238(1) == 1) {
 				local54 = Static57.aClass3_Sub15_Sub1_3.method2238(3);
-				Static173.aClass8_Sub4_Sub1_2.method2684(2, local54);
+				Static173.self.method2684(2, local54);
 				local64 = Static57.aClass3_Sub15_Sub1_3.method2238(3);
-				Static173.aClass8_Sub4_Sub1_2.method2684(2, local64);
+				Static173.self.method2684(2, local64);
 			} else {
 				local54 = Static57.aClass3_Sub15_Sub1_3.method2238(3);
-				Static173.aClass8_Sub4_Sub1_2.method2684(0, local54);
+				Static173.self.method2684(0, local54);
 			}
 			local54 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
 			if (local54 == 1) {
@@ -57,13 +57,13 @@ public final class Static17 {
 		} else if (local23 == 3) {
 			local54 = Static57.aClass3_Sub15_Sub1_3.method2238(7);
 			local64 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
-			Static55.anInt1735 = Static57.aClass3_Sub15_Sub1_3.method2238(2);
+			Static55.level = Static57.aClass3_Sub15_Sub1_3.method2238(2);
 			@Pc(163) int local163 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
 			if (local163 == 1) {
 				Static44.anIntArray106[Static116.anInt2951++] = 2047;
 			}
 			@Pc(181) int local181 = Static57.aClass3_Sub15_Sub1_3.method2238(7);
-			Static173.aClass8_Sub4_Sub1_2.method1265(local181, local64 == 1, local54);
+			Static173.self.method1265(local181, local64 == 1, local54);
 		}
 	}
 
@@ -76,9 +76,9 @@ public final class Static17 {
 	public static void method531(@OriginalArg(0) Component arg0, @OriginalArg(1) boolean arg1) {
 		@Pc(20) int local20 = arg0.anInt486 == 0 ? arg0.anInt445 : arg0.anInt486;
 		@Pc(32) int local32 = arg0.anInt491 == 0 ? arg0.anInt459 : arg0.anInt491;
-		Static266.method4190(arg0.anInt507, arg1, local20, local32, Static241.aClass13ArrayArray12[arg0.anInt507 >> 16]);
-		if (arg0.aClass13Array3 != null) {
-			Static266.method4190(arg0.anInt507, arg1, local20, local32, arg0.aClass13Array3);
+		Static266.method4190(arg0.anInt507, arg1, local20, local32, Static241.components[arg0.anInt507 >> 16]);
+		if (arg0.createdComponents != null) {
+			Static266.method4190(arg0.anInt507, arg1, local20, local32, arg0.createdComponents);
 		}
 		@Pc(66) Class3_Sub31 local66 = (Class3_Sub31) Static119.aClass133_9.method3863((long) arg0.anInt507);
 		if (local66 != null) {

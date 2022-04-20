@@ -92,7 +92,7 @@ public final class Static234 {
 				local14.method2692(local14.aClass96_1.anInt3713);
 				local14.anInt3365 = local14.aClass96_1.anInt3737;
 				if (local14.aClass96_1.method2935()) {
-					Static122.method2411(local14.anIntArray317[0], null, 0, local14, local14.anIntArray318[0], Static55.anInt1735, null);
+					Static122.method2411(local14.movementQueueZ[0], null, 0, local14, local14.movementQueueX[0], Static55.level, null);
 				}
 			}
 			if ((local18 & 0x20) != 0) {
@@ -135,8 +135,8 @@ public final class Static234 {
 
 	@OriginalMember(owner = "client!ta", name = "a", descriptor = "(IZIII)V")
 	public static void method4017(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
-		if (Static245.method4225(arg2)) {
-			Static266.method4190(-1, arg1, arg3, arg0, Static241.aClass13ArrayArray12[arg2]);
+		if (Static245.load(arg2)) {
+			Static266.method4190(-1, arg1, arg3, arg0, Static241.components[arg2]);
 		}
 	}
 

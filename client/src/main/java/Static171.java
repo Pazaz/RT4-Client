@@ -48,8 +48,8 @@ public final class Static171 {
 
 	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(ILclient!na;I)V")
 	public static void method3221(@OriginalArg(1) JagString arg0, @OriginalArg(2) int arg1) {
-		Static6.aClass3_Sub15_Sub1_1.method2242(188);
-		Static6.aClass3_Sub15_Sub1_1.p1a(arg1);
-		Static6.aClass3_Sub15_Sub1_1.p8(arg0.method3158());
+		Static6.outboundBuffer.p1isaac(188);
+		Static6.outboundBuffer.p1a(arg1);
+		Static6.outboundBuffer.p8(arg0.method3158());
 	}
 }

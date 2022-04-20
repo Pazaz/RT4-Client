@@ -23,7 +23,7 @@ public final class Static122 {
 	public static final JagString aClass100_591 = Static28.parse("(Udns");
 
 	@OriginalMember(owner = "client!jh", name = "j", descriptor = "I")
-	public static int anInt3047 = 0;
+	public static int x = 0;
 
 	@OriginalMember(owner = "client!jh", name = "a", descriptor = "(Lclient!ve;ZIIZI)V")
 	public static void method2410(@OriginalArg(0) Js5 arg0, @OriginalArg(2) int arg1, @OriginalArg(5) int arg2) {

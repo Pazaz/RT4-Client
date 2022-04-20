@@ -23,7 +23,7 @@ public final class Static226 {
 	public static final JagString aClass100_965 = Static28.parse("<col=ffff00>");
 
 	@OriginalMember(owner = "client!sf", name = "h", descriptor = "[Lclient!na;")
-	public static final JagString[] aClass100Array154 = new JagString[1000];
+	public static final JagString[] varcstrs = new JagString[1000];
 
 	@OriginalMember(owner = "client!sf", name = "i", descriptor = "I")
 	public static int anInt5084 = 0;
@@ -97,7 +97,7 @@ public final class Static226 {
 				Static60.aBoolean108 = true;
 				Static24.anInt761 = local16;
 			}
-		} else if (Static155.anInt3751 == Static7.anInt985 && Static60.anInt1892 == Static60.anInt1893) {
+		} else if (Static155.anInt3751 == Static7.clickX && Static60.anInt1892 == Static60.clickY) {
 			Static183.anInt4271 = local27;
 			Static162.anInt3953 = 0;
 			Static24.anInt761 = local16;
@@ -105,8 +105,8 @@ public final class Static226 {
 			Static13.anInt436 = (Static261.aBoolean298 ? 26 : 22) + Static231.anInt5204 * 15;
 			Static60.aBoolean108 = true;
 		} else {
-			Static280.anInt5895 = Static60.anInt1893;
-			Static277.anInt5850 = Static7.anInt985;
+			Static280.anInt5895 = Static60.clickY;
+			Static277.anInt5850 = Static7.clickX;
 			Static162.anInt3953 = 1;
 		}
 	}

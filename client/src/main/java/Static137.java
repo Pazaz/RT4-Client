@@ -50,7 +50,7 @@ public final class Static137 {
 			Static251.anInt5454 = 0;
 			for (local37 = 0; local37 < 104; local37++) {
 				for (local76 = 0; local76 < 104; local76++) {
-					@Pc(169) long local169 = Static20.method602(Static55.anInt1735, local37 + 0, local76);
+					@Pc(169) long local169 = Static20.method602(Static55.level, local37 + 0, local76);
 					if (local169 != 0L) {
 						@Pc(184) LocType local184 = Static271.method4601((int) (local169 >>> 32) & Integer.MAX_VALUE);
 						@Pc(187) int local187 = local184.anInt4400;
@@ -70,7 +70,7 @@ public final class Static137 {
 							@Pc(237) int local237 = local76;
 							local194 = local37;
 							if (local187 != 22 && local187 != 29 && local187 != 34 && local187 != 36 && local187 != 46 && local187 != 47 && local187 != 48) {
-								@Pc(269) int[][] local269 = Static148.aClass97Array1[Static55.anInt1735].anIntArrayArray30;
+								@Pc(269) int[][] local269 = Static148.aClass97Array1[Static55.level].anIntArrayArray30;
 								for (@Pc(271) int local271 = 0; local271 < 10; local271++) {
 									@Pc(281) int local281 = (int) (Math.random() * 4.0D);
 									if (local281 == 0 && local194 > 0 && local37 - 3 < local194 && (local269[local194 - 1][local237] & 0x12C0108) == 0) {

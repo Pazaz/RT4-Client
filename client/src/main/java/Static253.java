@@ -54,7 +54,7 @@ public final class Static253 {
 			if (Static176.aBooleanArray95[4] && Static276.anIntArray564[4] + 128 > local59) {
 				local59 = Static276.anIntArray564[4] + 128;
 			}
-			Static18.method555(Static81.anInt2223, arg0, Static207.method3685(Static55.anInt1735, Static173.aClass8_Sub4_Sub1_2.anInt3412, Static173.aClass8_Sub4_Sub1_2.anInt3421) - 50, 600 - -(local59 * 3), local57, Static111.anInt2900, local59);
+			Static18.method555(Static81.anInt2223, arg0, Static207.method3685(Static55.level, Static173.self.anInt3412, Static173.self.anInt3421) - 50, 600 - -(local59 * 3), local57, Static111.anInt2900, local59);
 		}
 		local57 = Static5.anInt40;
 		local59 = Static138.anInt3439;
@@ -125,13 +125,13 @@ public final class Static253 {
 			if (Static244.anInt5370 == 10) {
 				local171 = Static103.method2235(Static178.anInt4247, Static134.anInt3302 >> 10, Static113.anInt4609, Static138.anInt3439 >> 10);
 			} else {
-				local171 = Static103.method2235(Static178.anInt4247, Static173.aClass8_Sub4_Sub1_2.anIntArray317[0] >> 3, Static113.anInt4609, Static173.aClass8_Sub4_Sub1_2.anIntArray318[0] >> 3);
+				local171 = Static103.method2235(Static178.anInt4247, Static173.self.movementQueueZ[0] >> 3, Static113.anInt4609, Static173.self.movementQueueX[0] >> 3);
 			}
 			Static120.method2394(Static83.anInt372, !Static11.aBoolean15);
 			Static239.method4176(local171);
 			Static143.method2731(Static240.anInt5333, Static134.anInt3302, Static5.anInt40, Static138.anInt3439, Static184.anInt4358);
 			Static239.anInt5323 = Static83.anInt372;
-			Static156.method2954(Static138.anInt3439, Static5.anInt40, Static134.anInt3302, Static240.anInt5333, Static184.anInt4358, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Static55.anInt1735 + 1, local387, Static173.aClass8_Sub4_Sub1_2.anInt3412 >> 7, Static173.aClass8_Sub4_Sub1_2.anInt3421 >> 7);
+			Static156.method2954(Static138.anInt3439, Static5.anInt40, Static134.anInt3302, Static240.anInt5333, Static184.anInt4358, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Static55.level + 1, local387, Static173.self.anInt3412 >> 7, Static173.self.anInt3421 >> 7);
 			Static263.aBoolean299 = true;
 			Static120.method2390();
 			Static143.method2731(0, 0, 0, 0, 0);
@@ -141,7 +141,7 @@ public final class Static253 {
 			Static233.method4000(arg3, arg2, arg0, Static223.anInt5029, Static223.anInt5029, arg4);
 		} else {
 			Static129.method2495(arg2, arg4, arg3, arg0, 0);
-			Static156.method2954(Static138.anInt3439, Static5.anInt40, Static134.anInt3302, Static240.anInt5333, Static184.anInt4358, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Static55.anInt1735 + 1, local387, Static173.aClass8_Sub4_Sub1_2.anInt3412 >> 7, Static173.aClass8_Sub4_Sub1_2.anInt3421 >> 7);
+			Static156.method2954(Static138.anInt3439, Static5.anInt40, Static134.anInt3302, Static240.anInt5333, Static184.anInt4358, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Static55.level + 1, local387, Static173.self.anInt3412 >> 7, Static173.self.anInt3421 >> 7);
 			Static107.method2261();
 			Static223.method3858();
 			Static142.method2726(arg4, arg3, arg2, 256, arg0, 256);

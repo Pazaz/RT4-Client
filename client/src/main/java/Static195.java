@@ -19,7 +19,7 @@ public final class Static195 {
 	public static final short[] aShortArray64 = new short[] { -10304, 9104, -1, -1, -1 };
 
 	@OriginalMember(owner = "client!pk", name = "f", descriptor = "(B)I")
-	public static int method3531() {
+	public static int getIdleLoops() {
 		return Static229.anInt5140;
 	}
 
@@ -27,7 +27,7 @@ public final class Static195 {
 	public static void method3532() {
 		for (@Pc(16) ProjAnimNode local16 = (ProjAnimNode) Static217.aClass69_116.method2289(); local16 != null; local16 = (ProjAnimNode) Static217.aClass69_116.method2288()) {
 			@Pc(21) ProjAnim local21 = local16.aClass8_Sub6_1;
-			if (Static55.anInt1735 != local21.anInt4810 || local21.anInt4800 < Static83.anInt372) {
+			if (Static55.level != local21.anInt4810 || local21.anInt4800 < Static83.anInt372) {
 				local16.method4658();
 			} else if (Static83.anInt372 >= local21.anInt4822) {
 				if (local21.anInt4819 > 0) {
@@ -40,7 +40,7 @@ public final class Static195 {
 					@Pc(102) int local102 = -local21.anInt4819 - 1;
 					@Pc(107) Player local107;
 					if (Static16.anInt549 == local102) {
-						local107 = Static173.aClass8_Sub4_Sub1_2;
+						local107 = Static173.self;
 					} else {
 						local107 = Static159.aClass8_Sub4_Sub1Array1[local102];
 					}
@@ -49,7 +49,7 @@ public final class Static195 {
 					}
 				}
 				local21.method3704(Static178.anInt4247);
-				Static43.method1141(Static55.anInt1735, (int) local21.aDouble8, (int) local21.aDouble3, (int) local21.aDouble6, 60, local21, local21.anInt4821, -1L, false);
+				Static43.method1141(Static55.level, (int) local21.aDouble8, (int) local21.aDouble3, (int) local21.aDouble6, 60, local21, local21.anInt4821, -1L, false);
 			}
 		}
 	}

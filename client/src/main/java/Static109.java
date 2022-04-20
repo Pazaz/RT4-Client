@@ -33,21 +33,21 @@ public final class Static109 {
 			return;
 		}
 		Static202.aClass153_84.method4490(arg0);
-		if (Static241.aClass13ArrayArray12[arg0] == null) {
+		if (Static241.components[arg0] == null) {
 			return;
 		}
 		@Pc(27) boolean local27 = true;
-		for (@Pc(29) int local29 = 0; local29 < Static241.aClass13ArrayArray12[arg0].length; local29++) {
-			if (Static241.aClass13ArrayArray12[arg0][local29] != null) {
-				if (Static241.aClass13ArrayArray12[arg0][local29].anInt452 == 2) {
+		for (@Pc(29) int local29 = 0; local29 < Static241.components[arg0].length; local29++) {
+			if (Static241.components[arg0][local29] != null) {
+				if (Static241.components[arg0][local29].anInt452 == 2) {
 					local27 = false;
 				} else {
-					Static241.aClass13ArrayArray12[arg0][local29] = null;
+					Static241.components[arg0][local29] = null;
 				}
 			}
 		}
 		if (local27) {
-			Static241.aClass13ArrayArray12[arg0] = null;
+			Static241.components[arg0] = null;
 		}
 		Static223.aBooleanArray115[arg0] = false;
 	}

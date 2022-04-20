@@ -17,8 +17,8 @@ public final class Static126 {
 
 	@OriginalMember(owner = "client!jm", name = "a", descriptor = "(Z)V")
 	public static void method2460() {
-		if (Static154.anInt3711 != -1) {
-			Static96.method1949(Static154.anInt3711);
+		if (Static154.topLevelInterace != -1) {
+			Static96.method1949(Static154.topLevelInterace);
 		}
 		for (@Pc(15) int local15 = 0; local15 < Static24.anInt766; local15++) {
 			if (Static186.aBooleanArray100[local15]) {
@@ -34,7 +34,7 @@ public final class Static126 {
 			Static263.aBoolean299 = true;
 		}
 		Static214.anInt5574 = -1;
-		if (Static154.anInt3711 != -1) {
+		if (Static154.topLevelInterace != -1) {
 			Static24.anInt766 = 0;
 			Static9.method182();
 		}

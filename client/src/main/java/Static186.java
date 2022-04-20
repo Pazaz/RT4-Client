@@ -62,9 +62,9 @@ public final class Static186 {
 				Static83.aFloat3 = 8.0F;
 				Static138.aFloat14 = 8.0F;
 			}
-			@Pc(144) int local144 = (Static173.aClass8_Sub4_Sub1_2.anInt3412 >> 7) + Static225.anInt5068 - Static158.anInt3846;
+			@Pc(144) int local144 = (Static173.self.anInt3412 >> 7) + Static225.originX - Static158.anInt3846;
 			@Pc(153) int local153 = local144 + (int) (Math.random() * 10.0D) - 5;
-			@Pc(168) int local168 = Static2.anInt13 + Static181.anInt4296 - Static142.anInt3483 - (Static173.aClass8_Sub4_Sub1_2.anInt3421 >> 7) - 1;
+			@Pc(168) int local168 = Static2.anInt13 + Static181.anInt4296 - Static142.originZ - (Static173.self.anInt3421 >> 7) - 1;
 			@Pc(177) int local177 = local168 + (int) (Math.random() * 10.0D) - 5;
 			if (local153 >= 0 && Static48.anInt1449 > local153 && local177 >= 0 && local177 < Static181.anInt4296) {
 				Static13.anInt435 = local153;
@@ -173,7 +173,7 @@ public final class Static186 {
 				arg2.anInt3373 = 1;
 				arg2.anInt3425 = 0;
 				arg2.anInt3371 = 0;
-				Static152.method2836(arg2.anInt3421, local89, arg2.anInt3412, Static173.aClass8_Sub4_Sub1_2 == arg2, arg2.anInt3425);
+				Static152.method2836(arg2.anInt3421, local89, arg2.anInt3412, Static173.self == arg2, arg2.anInt3425);
 			}
 			if (local92 == 2) {
 				arg2.anInt3371 = 0;
@@ -187,7 +187,7 @@ public final class Static186 {
 			arg2.anInt3360 = 0;
 			arg2.anInt3369 = arg1;
 			if (arg2.anInt3369 != -1) {
-				Static152.method2836(arg2.anInt3421, Static36.method941(arg2.anInt3369), arg2.anInt3412, arg2 == Static173.aClass8_Sub4_Sub1_2, arg2.anInt3425);
+				Static152.method2836(arg2.anInt3421, Static36.method941(arg2.anInt3369), arg2.anInt3412, arg2 == Static173.self, arg2.anInt3425);
 			}
 		}
 	}

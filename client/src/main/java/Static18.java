@@ -17,7 +17,7 @@ public final class Static18 {
 	public static final JagString aClass100_107 = Static28.parse("floorshadows");
 
 	@OriginalMember(owner = "client!bh", name = "z", descriptor = "Z")
-	public static boolean aBoolean39 = true;
+	public static boolean sentToServer = true;
 
 	@OriginalMember(owner = "client!bh", name = "C", descriptor = "Lclient!na;")
 	public static final JagString aClass100_108 = Static28.parse("<br>(X100(U(Y");

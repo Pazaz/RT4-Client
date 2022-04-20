@@ -71,15 +71,15 @@ public final class Static140 {
 				return;
 			}
 		}
-		if (local34.method3108(Static173.aClass8_Sub4_Sub1_2.aClass100_364)) {
+		if (local34.method3108(Static173.self.aClass100_364)) {
 			Static103.method2231(Static186.aClass100_827, 0, LocalizedText.IGNORECANTADDSELF);
 			return;
 		}
 		Static190.aLongArray6[Static35.anInt1093] = arg0;
 		Static193.aClass100Array134[Static35.anInt1093++] = Static79.method1702(arg0);
-		Static185.anInt4369 = Static119.anInt3028;
-		Static6.aClass3_Sub15_Sub1_1.method2242(34);
-		Static6.aClass3_Sub15_Sub1_1.p8(arg0);
+		Static185.anInt4369 = Static119.transmitTimer;
+		Static6.outboundBuffer.p1isaac(34);
+		Static6.outboundBuffer.p8(arg0);
 	}
 
 	@OriginalMember(owner = "client!la", name = "a", descriptor = "(Lsignlink!ll;Ljava/lang/Object;I)V")

@@ -110,8 +110,8 @@ public final class Static156 {
 	@OriginalMember(owner = "client!mf", name = "a", descriptor = "(JI)V")
 	public static void method2956(@OriginalArg(0) long arg0) {
 		if ((long) 0 != arg0) {
-			Static6.aClass3_Sub15_Sub1_1.method2242(104);
-			Static6.aClass3_Sub15_Sub1_1.p8(arg0);
+			Static6.outboundBuffer.p1isaac(104);
+			Static6.outboundBuffer.p8(arg0);
 		}
 	}
 

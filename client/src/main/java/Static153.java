@@ -41,7 +41,7 @@ public final class Static153 {
 	public static void method2905(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
 		@Pc(14) DelayedStateChange local14 = Static238.method4143(7, arg0);
 		local14.method1017();
-		local14.anInt1271 = arg1;
+		local14.intArg1 = arg1;
 	}
 
 	@OriginalMember(owner = "client!mc", name = "a", descriptor = "(IIIIIIII)V")
@@ -67,7 +67,7 @@ public final class Static153 {
 
 	@OriginalMember(owner = "client!mc", name = "f", descriptor = "(B)V")
 	public static void method2909() {
-		Static6.aClass3_Sub15_Sub1_1.method2242(184);
+		Static6.outboundBuffer.p1isaac(184);
 		for (@Pc(18) Class3_Sub31 local18 = (Class3_Sub31) Static119.aClass133_9.method3859(); local18 != null; local18 = (Class3_Sub31) Static119.aClass133_9.method3861()) {
 			if (local18.anInt5879 == 0) {
 				Static132.method2605(true, local18);

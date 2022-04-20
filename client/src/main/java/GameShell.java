@@ -109,7 +109,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 		Static154.canvas.requestFocus();
 		Static233.aBoolean253 = true;
 		Static69.aBoolean115 = true;
-		Static26.aBoolean59 = true;
+		Static26.focus = true;
 		Static35.aBoolean66 = false;
 		Static243.aLong178 = MonotonicClock.currentTimeMillis();
 	}
@@ -230,7 +230,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 		Static228.aLongArray8[Static261.anInt5741] = local6;
 		Static261.anInt5741 = Static261.anInt5741 + 1 & 0x1F;
 		synchronized (this) {
-			Static26.aBoolean59 = Static233.aBoolean253;
+			Static26.focus = Static233.aBoolean253;
 		}
 		this.method921();
 		if (local10 != 0L && local6 <= local10) {
@@ -386,7 +386,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			while (local76.status == 0) {
 				Static231.method3983(10L);
 			}
-			Static37.aThread1 = (Thread) local76.anObject6;
+			Static37.aThread1 = (Thread) local76.result;
 		} catch (@Pc(91) Exception local91) {
 			Static89.method1839(null, local91);
 		}
@@ -438,7 +438,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			while (local86.status == 0) {
 				Static231.method3983(10L);
 			}
-			Static37.aThread1 = (Thread) local86.anObject6;
+			Static37.aThread1 = (Thread) local86.result;
 		} catch (@Pc(103) Exception local103) {
 			Static89.method1839(null, local103);
 			this.method927("crash");

@@ -35,17 +35,17 @@ public final class Static266 {
 	public static void method4190(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) Component[] arg4) {
 		for (@Pc(3) int local3 = 0; local3 < arg4.length; local3++) {
 			@Pc(19) Component local19 = arg4[local3];
-			if (local19 != null && local19.anInt456 == arg0) {
+			if (local19 != null && local19.layer == arg0) {
 				Static150.method2801(arg3, arg2, local19, arg1);
 				Static111.method2291(local19, arg3, arg2);
 				if (local19.anInt486 - local19.anInt445 < local19.anInt489) {
 					local19.anInt489 = local19.anInt486 - local19.anInt445;
 				}
-				if (local19.anInt468 > local19.anInt491 - local19.anInt459) {
-					local19.anInt468 = local19.anInt491 - local19.anInt459;
+				if (local19.scrollY > local19.anInt491 - local19.anInt459) {
+					local19.scrollY = local19.anInt491 - local19.anInt459;
 				}
-				if (local19.anInt468 < 0) {
-					local19.anInt468 = 0;
+				if (local19.scrollY < 0) {
+					local19.scrollY = 0;
 				}
 				if (local19.anInt489 < 0) {
 					local19.anInt489 = 0;

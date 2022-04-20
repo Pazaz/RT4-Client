@@ -204,7 +204,7 @@ public final class BufferedSocket implements Runnable {
 			}
 			if (this.aClass212_4.status == 1) {
 				try {
-					((Thread) this.aClass212_4.anObject6).join();
+					((Thread) this.aClass212_4.result).join();
 				} catch (@Pc(59) InterruptedException local59) {
 				}
 			}
