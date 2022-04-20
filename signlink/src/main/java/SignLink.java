@@ -399,21 +399,7 @@ public final class SignLink implements Runnable {
 						} else {
 							@Pc(490) int local490;
 							if (local45 == 11) {
-								@Pc(477) Field local477 = Class.forName("java.lang.ClassLoader").getDeclaredField("nativeLibraries");
-								local477.setAccessible(true);
-								@Pc(488) Vector local488 = (Vector) local477.get(((Class) local16.anObject7).getClassLoader());
-								for (local490 = 0; local488.size() > local490; local490++) {
-									@Pc(502) Object local502 = local488.elementAt(local490);
-									@Pc(509) Method local509 = local502.getClass().getDeclaredMethod("finalize");
-									local509.setAccessible(true);
-									local509.invoke(local502);
-									local509.setAccessible(false);
-									@Pc(526) Field local526 = local502.getClass().getDeclaredField("handle");
-									local526.setAccessible(true);
-									local526.set(local502, Integer.valueOf(0));
-									local526.setAccessible(false);
-								}
-								local477.setAccessible(false);
+								GLProfile.shutdown();
 							} else if (local45 == 12) {
 								local147 = (String) local16.anObject7;
 								@Pc(558) FileOnDisk local558 = method5117(local147);
