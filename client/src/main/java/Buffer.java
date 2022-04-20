@@ -360,16 +360,16 @@ public class Buffer extends Node {
 
 	@OriginalMember(owner = "client!wa", name = "e", descriptor = "(Z)Lclient!na;")
 	public final JagString gjstr() {
-		@Pc(12) int local12 = this.offset;
+		@Pc(12) int start = this.offset;
 		while (this.data[this.offset++] != 0) {
 		}
-		return Static10.decodeString(this.data, this.offset - local12 - 1, local12);
+		return Static10.decodeString(this.data, this.offset - start - 1, start);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "f", descriptor = "(Z)I")
 	public final int gSmart1or2() {
-		@Pc(17) int local17 = this.data[this.offset] & 0xFF;
-		return local17 >= 128 ? this.g2() - 0x8000 : this.g1();
+		@Pc(17) int value = this.data[this.offset] & 0xFF;
+		return value >= 128 ? this.g2() - 0x8000 : this.g1();
 	}
 
 	@OriginalMember(owner = "client!wa", name = "k", descriptor = "(II)V")

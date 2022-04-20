@@ -19,12 +19,6 @@ public final class Static199 {
 	@OriginalMember(owner = "client!qc", name = "U", descriptor = "I")
 	public static int anInt4672 = 0;
 
-	@OriginalMember(owner = "client!qc", name = "Z", descriptor = "Lclient!na;")
-	private static final JagString aClass100_882 = Static28.method790("Members object");
-
-	@OriginalMember(owner = "client!qc", name = "Y", descriptor = "Lclient!na;")
-	public static JagString aClass100_881 = aClass100_882;
-
 	@OriginalMember(owner = "client!qc", name = "ab", descriptor = "[I")
 	public static final int[] anIntArray417 = new int[1000];
 

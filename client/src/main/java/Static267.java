@@ -14,7 +14,7 @@ public final class Static267 {
 	public static final int[] anIntArray517 = new int[] { 1, 2, 4, 8 };
 
 	@OriginalMember(owner = "client!vl", name = "f", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1087 = Static28.method790("Cabbage");
+	public static final JagString aClass100_1087 = Static28.parse("Cabbage");
 
 	@OriginalMember(owner = "client!vl", name = "h", descriptor = "I")
 	public static int anInt5773 = 0;

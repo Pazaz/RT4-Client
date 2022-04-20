@@ -4,23 +4,8 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static82 {
 
-	@OriginalMember(owner = "client!gi", name = "f", descriptor = "Lclient!na;")
-	private static final JagString aClass100_479 = Static28.method790("Unable to find ");
-
-	@OriginalMember(owner = "client!gi", name = "b", descriptor = "Lclient!na;")
-	public static JagString aClass100_478 = aClass100_479;
-
 	@OriginalMember(owner = "client!gi", name = "c", descriptor = "I")
 	public static int anInt2231 = 0;
-
-	@OriginalMember(owner = "client!gi", name = "k", descriptor = "Lclient!na;")
-	public static final JagString aClass100_480 = Static28.method790("clignotant3:");
-
-	@OriginalMember(owner = "client!gi", name = "l", descriptor = "Lclient!na;")
-	public static final JagString aClass100_481 = Static28.method790("blaugr-Un:");
-
-	@OriginalMember(owner = "client!gi", name = "o", descriptor = "Lclient!na;")
-	public static final JagString aClass100_482 = Static28.method790("Chargement de la liste des serveurs");
 
 	@OriginalMember(owner = "client!gi", name = "H", descriptor = "I")
 	public static int anInt2252 = 0;

@@ -20,7 +20,7 @@ public final class Static254 {
 	public static Js5 aClass153_105;
 
 	@OriginalMember(owner = "client!uj", name = "s", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1061 = Static28.method790("null");
+	public static final JagString aClass100_1061 = Static28.parse("null");
 
 	@OriginalMember(owner = "client!uj", name = "t", descriptor = "[I")
 	public static final int[] anIntArray487 = new int[1000];

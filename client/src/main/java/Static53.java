@@ -10,12 +10,6 @@ public final class Static53 {
 	@OriginalMember(owner = "client!ec", name = "d", descriptor = "Lclient!gn;")
 	public static final LruHashTable aClass54_5 = new LruHashTable(16);
 
-	@OriginalMember(owner = "client!ec", name = "r", descriptor = "Lclient!na;")
-	private static final JagString aClass100_371 = Static28.method790("RuneScape is loading )2 please wait)3)3)3");
-
-	@OriginalMember(owner = "client!ec", name = "k", descriptor = "Lclient!na;")
-	public static JagString aClass100_370 = aClass100_371;
-
 	@OriginalMember(owner = "client!ec", name = "l", descriptor = "I")
 	public static final int anInt1704 = 5063219;
 

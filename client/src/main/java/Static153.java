@@ -20,16 +20,16 @@ public final class Static153 {
 	public static final int[] anIntArray351 = new int[] { 7, 8, 9, 10, 11, 12, 13, 15 };
 
 	@OriginalMember(owner = "client!mc", name = "fb", descriptor = "Lclient!na;")
-	private static final JagString aClass100_725 = Static28.method790("pt");
+	private static final JagString aClass100_725 = Static28.parse("pt");
 
 	@OriginalMember(owner = "client!mc", name = "mb", descriptor = "Lclient!na;")
-	private static final JagString aClass100_726 = Static28.method790("en");
+	private static final JagString aClass100_726 = Static28.parse("en");
 
 	@OriginalMember(owner = "client!mc", name = "vb", descriptor = "Lclient!na;")
-	private static final JagString aClass100_728 = Static28.method790("de");
+	private static final JagString aClass100_728 = Static28.parse("de");
 
 	@OriginalMember(owner = "client!mc", name = "pb", descriptor = "Lclient!na;")
-	private static final JagString aClass100_727 = Static28.method790("fr");
+	private static final JagString aClass100_727 = Static28.parse("fr");
 
 	@OriginalMember(owner = "client!mc", name = "ob", descriptor = "[Lclient!na;")
 	public static final JagString[] aClass100Array113 = new JagString[] { aClass100_726, aClass100_728, aClass100_727, aClass100_725 };

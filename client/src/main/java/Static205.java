@@ -3,12 +3,6 @@ import org.openrs2.deob.annotation.OriginalMember;
 
 public final class Static205 {
 
-	@OriginalMember(owner = "client!qj", name = "g", descriptor = "Lclient!na;")
-	public static final JagString aClass100_897 = Static28.method790("rouge:");
-
-	@OriginalMember(owner = "client!qj", name = "h", descriptor = "Lclient!na;")
-	public static final JagString aClass100_898 = Static28.method790("Texturen geladen)3");
-
 	@OriginalMember(owner = "client!qj", name = "i", descriptor = "[I")
 	public static final int[] anIntArray426 = new int[128];
 

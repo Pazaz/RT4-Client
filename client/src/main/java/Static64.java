@@ -11,10 +11,7 @@ public final class Static64 {
 	public static byte[][] aByteArrayArray9;
 
 	@OriginalMember(owner = "client!fb", name = "i", descriptor = "Lclient!na;")
-	public static final JagString aClass100_431 = Static28.method790("; Max)2Age=");
-
-	@OriginalMember(owner = "client!fb", name = "k", descriptor = "Lclient!na;")
-	public static final JagString aClass100_432 = Static28.method790("M");
+	public static final JagString aClass100_431 = Static28.parse("; Max)2Age=");
 
 	@OriginalMember(owner = "client!fb", name = "l", descriptor = "[Lclient!na;")
 	public static final JagString[] aClass100Array62 = new JagString[100];
@@ -23,7 +20,7 @@ public final class Static64 {
 	public static boolean aBoolean111 = true;
 
 	@OriginalMember(owner = "client!fb", name = "p", descriptor = "Lclient!na;")
-	public static final JagString aClass100_433 = Static28.method790("<col=ff3000>");
+	public static final JagString aClass100_433 = Static28.parse("<col=ff3000>");
 
 	@OriginalMember(owner = "client!fb", name = "q", descriptor = "[I")
 	public static final int[] anIntArray154 = new int[] { -1, -1, 1, 1 };
@@ -62,25 +59,25 @@ public final class Static64 {
 			return;
 		}
 		if (Static9.anInt178 >= 100 && !Static202.aBoolean233 || Static9.anInt178 >= 200) {
-			Static103.method2231(Static186.aClass100_827, 0, Static233.aClass100_995);
+			Static103.method2231(Static186.aClass100_827, 0, LocalizedText.FRIENDLISTFULL);
 			return;
 		}
 		@Pc(35) JagString local35 = Static79.method1702(arg0).method3125();
 		@Pc(42) int local42;
 		for (local42 = 0; local42 < Static9.anInt178; local42++) {
 			if (Static92.aLongArray3[local42] == arg0) {
-				Static103.method2231(Static186.aClass100_827, 0, Static34.method882(new JagString[] { local35, Static150.aClass100_691 }));
+				Static103.method2231(Static186.aClass100_827, 0, Static34.method882(new JagString[] { local35, LocalizedText.FRIENDLISTDUPE}));
 				return;
 			}
 		}
 		for (local42 = 0; local42 < Static35.anInt1093; local42++) {
 			if (arg0 == Static190.aLongArray6[local42]) {
-				Static103.method2231(Static186.aClass100_827, 0, Static34.method882(new JagString[] { Static71.aClass100_417, local35, Static211.aClass100_227 }));
+				Static103.method2231(Static186.aClass100_827, 0, Static34.method882(new JagString[] { LocalizedText.REMOVESOCIAL1, local35, LocalizedText.REMOVEIGNORE}));
 				return;
 			}
 		}
 		if (local35.method3108(Static173.aClass8_Sub4_Sub1_2.aClass100_364)) {
-			Static103.method2231(Static186.aClass100_827, 0, Static111.aClass100_573);
+			Static103.method2231(Static186.aClass100_827, 0, LocalizedText.FRIENDCANTADDSELF);
 			return;
 		}
 		Static122.aClass100Array92[Static9.anInt178] = local35;

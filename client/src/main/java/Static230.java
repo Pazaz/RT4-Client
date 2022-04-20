@@ -24,10 +24,7 @@ public final class Static230 {
 	public static boolean aBoolean250 = false;
 
 	@OriginalMember(owner = "client!sj", name = "w", descriptor = "Lclient!na;")
-	public static final JagString aClass100_978 = Static28.method790("<)4col>");
-
-	@OriginalMember(owner = "client!sj", name = "x", descriptor = "Lclient!na;")
-	public static final JagString aClass100_979 = Static28.method790("Connexion au serveur de mise -9 jour en cours");
+	public static final JagString aClass100_978 = Static28.parse("<)4col>");
 
 	@OriginalMember(owner = "client!sj", name = "F", descriptor = "Lclient!rc;")
 	public static GameShell anApplet_Sub1_1 = null;

@@ -20,7 +20,7 @@ public final class Static122 {
 	public static double aDouble1 = -1.0D;
 
 	@OriginalMember(owner = "client!jh", name = "g", descriptor = "Lclient!na;")
-	public static final JagString aClass100_591 = Static28.method790("(Udns");
+	public static final JagString aClass100_591 = Static28.parse("(Udns");
 
 	@OriginalMember(owner = "client!jh", name = "j", descriptor = "I")
 	public static int anInt3047 = 0;

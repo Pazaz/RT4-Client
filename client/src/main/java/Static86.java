@@ -14,7 +14,7 @@ public final class Static86 {
 	public static int anInt2293 = (int) (Math.random() * 17.0D) - 8;
 
 	@OriginalMember(owner = "client!gm", name = "W", descriptor = "Lclient!na;")
-	public static final JagString aClass100_488 = Static28.method790("_");
+	public static final JagString aClass100_488 = Static28.parse("_");
 
 	@OriginalMember(owner = "client!gm", name = "X", descriptor = "Ljava/math/BigInteger;")
 	public static final BigInteger aBigInteger1 = new BigInteger("58778699976184461502525193738213253649000149147835990136706041084440742975821");
@@ -22,23 +22,11 @@ public final class Static86 {
 	@OriginalMember(owner = "client!gm", name = "bb", descriptor = "Z")
 	public static boolean aBoolean129 = false;
 
-	@OriginalMember(owner = "client!gm", name = "fb", descriptor = "Lclient!na;")
-	private static final JagString aClass100_492 = Static28.method790("Loaded textures");
-
-	@OriginalMember(owner = "client!gm", name = "cb", descriptor = "Lclient!na;")
-	public static JagString aClass100_489 = aClass100_492;
-
 	@OriginalMember(owner = "client!gm", name = "db", descriptor = "Lclient!na;")
-	public static final JagString aClass100_490 = Static28.method790("cross");
-
-	@OriginalMember(owner = "client!gm", name = "eb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_491 = Static28.method790("Lade Sprites )2 ");
+	public static final JagString aClass100_490 = Static28.parse("cross");
 
 	@OriginalMember(owner = "client!gm", name = "gb", descriptor = "[I")
 	public static final int[] anIntArray211 = new int[] { 0, 4, 4, 8, 0, 0, 8, 0, 0 };
-
-	@OriginalMember(owner = "client!gm", name = "hb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_493 = Static28.method790("Regarder dans cette direction");
 
 	@OriginalMember(owner = "client!gm", name = "f", descriptor = "(B)V")
 	public static void method1799() {

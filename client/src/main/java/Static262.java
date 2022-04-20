@@ -13,23 +13,8 @@ public final class Static262 {
 	@OriginalMember(owner = "client!vf", name = "a", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable aClass99_34 = new SoftLruHashTable(64);
 
-	@OriginalMember(owner = "client!vf", name = "d", descriptor = "Lclient!na;")
-	private static final JagString aClass100_1076 = Static28.method790("Please wait )2 attempting to reestablish)3");
-
-	@OriginalMember(owner = "client!vf", name = "e", descriptor = "Lclient!na;")
-	public static JagString aClass100_1077 = aClass100_1076;
-
 	@OriginalMember(owner = "client!vf", name = "g", descriptor = "[I")
 	public static final int[] anIntArray515 = new int[14];
-
-	@OriginalMember(owner = "client!vf", name = "j", descriptor = "Lclient!na;")
-	private static final JagString aClass100_1080 = Static28.method790("glow2:");
-
-	@OriginalMember(owner = "client!vf", name = "h", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1078 = aClass100_1080;
-
-	@OriginalMember(owner = "client!vf", name = "i", descriptor = "Lclient!na;")
-	public static JagString aClass100_1079 = aClass100_1080;
 
 	@OriginalMember(owner = "client!vf", name = "k", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable aClass99_35 = new SoftLruHashTable(5);

@@ -5,20 +5,11 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static10 {
 
-	@OriginalMember(owner = "client!an", name = "Z", descriptor = "Lclient!na;")
-	private static final JagString aClass100_63 = Static28.method790("Hidden");
-
 	@OriginalMember(owner = "client!an", name = "ab", descriptor = "Lclient!uf;")
 	public static Keyboard aClass149_1 = new Keyboard();
 
-	@OriginalMember(owner = "client!an", name = "cb", descriptor = "Lclient!na;")
-	public static JagString aClass100_64 = aClass100_63;
-
 	@OriginalMember(owner = "client!an", name = "db", descriptor = "S")
 	public static short aShort9 = 205;
-
-	@OriginalMember(owner = "client!an", name = "eb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_65 = Static28.method790("Lade Schrifts-=tze )2 ");
 
 	@OriginalMember(owner = "client!an", name = "a", descriptor = "([BIII)Lclient!na;")
 	public static JagString decodeString(@OriginalArg(0) byte[] arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {

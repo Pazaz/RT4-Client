@@ -163,7 +163,7 @@ public final class Static89 {
 				Static60.anInt1892 = Static60.anInt1893;
 			}
 			Static231.anInt5204 = 1;
-			Static254.aClass100Array168[0] = Static270.aClass100_1091;
+			Static254.aClass100Array168[0] = LocalizedText.CANCEL;
 			Static233.aClass100Array160[0] = Static186.aClass100_827;
 			Static39.aShortArray6[0] = 1005;
 			Static190.anIntArray382[0] = Static35.anInt1092;

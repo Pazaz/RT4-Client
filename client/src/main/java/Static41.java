@@ -8,37 +8,28 @@ public final class Static41 {
 	public static Js5 aClass153_25;
 
 	@OriginalMember(owner = "client!dc", name = "v", descriptor = "Lclient!na;")
-	public static final JagString aClass100_266 = Static28.method790("<col=c0ff00>");
+	public static final JagString aClass100_266 = Static28.parse("<col=c0ff00>");
 
 	@OriginalMember(owner = "client!dc", name = "E", descriptor = "Lclient!na;")
-	private static final JagString aClass100_267 = Static28.method790("wave:");
+	private static final JagString aClass100_267 = Static28.parse("wave:");
 
 	@OriginalMember(owner = "client!dc", name = "M", descriptor = "Lclient!na;")
-	public static final JagString aClass100_268 = Static28.method790(")4");
+	public static final JagString aClass100_268 = Static28.parse(")4");
 
 	@OriginalMember(owner = "client!dc", name = "O", descriptor = "I")
 	public static int anInt1309 = 0;
 
 	@OriginalMember(owner = "client!dc", name = "R", descriptor = "Lclient!na;")
-	private static final JagString aClass100_269 = Static28.method790("Drop");
-
-	@OriginalMember(owner = "client!dc", name = "S", descriptor = "Lclient!na;")
-	public static final JagString aClass100_270 = aClass100_267;
+	private static final JagString aClass100_269 = Static28.parse("Drop");
 
 	@OriginalMember(owner = "client!dc", name = "W", descriptor = "I")
 	public static volatile int anInt1313 = 0;
-
-	@OriginalMember(owner = "client!dc", name = "Y", descriptor = "Lclient!na;")
-	public static JagString aClass100_271 = aClass100_269;
 
 	@OriginalMember(owner = "client!dc", name = "ab", descriptor = "I")
 	public static int anInt1316 = 0;
 
 	@OriginalMember(owner = "client!dc", name = "db", descriptor = "[[B")
 	public static final byte[][] aByteArrayArray6 = new byte[50][];
-
-	@OriginalMember(owner = "client!dc", name = "hb", descriptor = "Lclient!na;")
-	public static JagString aClass100_272 = aClass100_267;
 
 	@OriginalMember(owner = "client!dc", name = "a", descriptor = "(IZLclient!tk;IIIIILclient!ak;IIIIB)Lclient!ak;")
 	public static Model method1043(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) SeqType arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) Model arg8, @OriginalArg(9) int arg9, @OriginalArg(10) int arg10, @OriginalArg(11) int arg11, @OriginalArg(12) int arg12) {

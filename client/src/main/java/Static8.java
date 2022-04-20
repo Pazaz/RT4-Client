@@ -11,7 +11,7 @@ public final class Static8 {
 	public static int[] anIntArray8;
 
 	@OriginalMember(owner = "client!aj", name = "R", descriptor = "Lclient!na;")
-	public static final JagString aClass100_32 = Static28.method790("<col=ff9040>");
+	public static final JagString aClass100_32 = Static28.parse("<col=ff9040>");
 
 	@OriginalMember(owner = "client!aj", name = "a", descriptor = "(BILclient!be;)I")
 	public static int method118(@OriginalArg(1) int arg0, @OriginalArg(2) Component arg1) {

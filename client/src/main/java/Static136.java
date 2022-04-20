@@ -8,9 +8,6 @@ public final class Static136 {
 	@OriginalMember(owner = "client!kk", name = "i", descriptor = "I")
 	public static int anInt3324;
 
-	@OriginalMember(owner = "client!kk", name = "a", descriptor = "Lclient!na;")
-	public static final JagString aClass100_632 = Static28.method790("M-Bmoire en cours d(Wattribution");
-
 	@OriginalMember(owner = "client!kk", name = "g", descriptor = "I")
 	public static int anInt3322 = -1;
 
@@ -18,7 +15,7 @@ public final class Static136 {
 	public static int anInt3325 = 0;
 
 	@OriginalMember(owner = "client!kk", name = "m", descriptor = "Lclient!na;")
-	public static final JagString aClass100_633 = Static28.method790("Clientscript error )2 check log for details");
+	public static final JagString aClass100_633 = Static28.parse("Clientscript error )2 check log for details");
 
 	@OriginalMember(owner = "client!kk", name = "a", descriptor = "(IIB)V")
 	public static void method2649(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {

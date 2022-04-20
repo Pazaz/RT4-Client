@@ -8,7 +8,7 @@ public final class Static116 {
 	public static Sprite[] aClass3_Sub2_Sub1Array3;
 
 	@OriginalMember(owner = "client!jb", name = "c", descriptor = "Lclient!na;")
-	public static final JagString aClass100_583 = Static28.method790("(Y<)4col>");
+	public static final JagString aClass100_583 = Static28.parse("(Y<)4col>");
 
 	@OriginalMember(owner = "client!jb", name = "m", descriptor = "I")
 	public static int anInt2951 = 0;

@@ -4,29 +4,14 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static49 {
 
-	@OriginalMember(owner = "client!dm", name = "v", descriptor = "Lclient!na;")
-	private static final JagString aClass100_353 = Static28.method790("Loading title screen )2 ");
-
-	@OriginalMember(owner = "client!dm", name = "d", descriptor = "Lclient!na;")
-	public static JagString aClass100_348 = aClass100_353;
-
-	@OriginalMember(owner = "client!dm", name = "B", descriptor = "Lclient!na;")
-	private static final JagString aClass100_354 = Static28.method790("Loading)3)3)3");
-
-	@OriginalMember(owner = "client!dm", name = "e", descriptor = "Lclient!na;")
-	public static JagString aClass100_349 = aClass100_354;
-
-	@OriginalMember(owner = "client!dm", name = "h", descriptor = "Lclient!na;")
-	public static final JagString aClass100_350 = Static28.method790("Bitte entfernen Sie ");
-
 	@OriginalMember(owner = "client!dm", name = "j", descriptor = "Lclient!na;")
-	public static final JagString aClass100_351 = Static28.method790(" ");
+	public static final JagString aClass100_351 = Static28.parse(" ");
 
 	@OriginalMember(owner = "client!dm", name = "m", descriptor = "I")
 	public static int anInt1459 = 0;
 
 	@OriginalMember(owner = "client!dm", name = "n", descriptor = "Lclient!na;")
-	public static final JagString aClass100_352 = Static28.method790("(U");
+	public static final JagString aClass100_352 = Static28.parse("(U");
 
 	@OriginalMember(owner = "client!dm", name = "q", descriptor = "I")
 	public static int anInt1462 = 0;

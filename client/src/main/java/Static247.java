@@ -10,15 +10,6 @@ public final class Static247 {
 	@OriginalMember(owner = "client!ub", name = "m", descriptor = "I")
 	public static int anInt5405;
 
-	@OriginalMember(owner = "client!ub", name = "a", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1031 = Static28.method790("blinken2:");
-
-	@OriginalMember(owner = "client!ub", name = "n", descriptor = "Lclient!na;")
-	private static final JagString aClass100_1033 = Static28.method790("Loading textures )2 ");
-
-	@OriginalMember(owner = "client!ub", name = "e", descriptor = "Lclient!na;")
-	public static JagString aClass100_1032 = aClass100_1033;
-
 	@OriginalMember(owner = "client!ub", name = "a", descriptor = "(IIIIIII)V")
 	public static void method4244(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
 		if (Static172.anInt4164 <= arg1 && Static224.anInt5063 >= arg3 && Static267.anInt5773 <= arg2 && arg4 <= Static106.anInt2869) {

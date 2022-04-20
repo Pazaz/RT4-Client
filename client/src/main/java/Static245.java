@@ -8,25 +8,13 @@ public final class Static245 {
 	public static int anInt5375;
 
 	@OriginalMember(owner = "client!tm", name = "d", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1018 = Static28.method790("; Expires=Thu)1 01)2Jan)21970 00:00:00 GMT; Max)2Age=0");
+	public static final JagString aClass100_1018 = Static28.parse("; Expires=Thu)1 01)2Jan)21970 00:00:00 GMT; Max)2Age=0");
 
 	@OriginalMember(owner = "client!tm", name = "e", descriptor = "Z")
 	public static boolean aBoolean281 = false;
 
 	@OriginalMember(owner = "client!tm", name = "i", descriptor = "I")
 	public static int anInt5377 = 0;
-
-	@OriginalMember(owner = "client!tm", name = "n", descriptor = "Lclient!na;")
-	private static final JagString aClass100_1020 = Static28.method790("flash2:");
-
-	@OriginalMember(owner = "client!tm", name = "k", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1019 = aClass100_1020;
-
-	@OriginalMember(owner = "client!tm", name = "o", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1021 = Static28.method790("Annuler");
-
-	@OriginalMember(owner = "client!tm", name = "p", descriptor = "Lclient!na;")
-	public static JagString aClass100_1022 = aClass100_1020;
 
 	@OriginalMember(owner = "client!tm", name = "a", descriptor = "(II)V")
 	public static void method4224(@OriginalArg(0) int arg0) {

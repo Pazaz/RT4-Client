@@ -22,9 +22,6 @@ public final class Static121 {
 	@OriginalMember(owner = "client!jg", name = "e", descriptor = "Z")
 	public static boolean aBoolean154 = false;
 
-	@OriginalMember(owner = "client!jg", name = "k", descriptor = "Lclient!na;")
-	public static final JagString aClass100_590 = Static28.method790("Titelbild geladen)3");
-
 	@OriginalMember(owner = "client!jg", name = "a", descriptor = "(I)[Lclient!ek;")
 	public static SoftwareIndexedSprite[] method2406() {
 		@Pc(2) SoftwareIndexedSprite[] local2 = new SoftwareIndexedSprite[Static165.anInt4038];

@@ -5,16 +5,13 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static278 {
 
 	@OriginalMember(owner = "client!wj", name = "b", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1101 = Static28.method790(" <col=ffff00>");
+	public static final JagString aClass100_1101 = Static28.parse(" <col=ffff00>");
 
 	@OriginalMember(owner = "client!wj", name = "e", descriptor = "Lclient!na;")
 	public static JagString aClass100_1102 = null;
 
 	@OriginalMember(owner = "client!wj", name = "f", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1103 = Static28.method790("ul");
-
-	@OriginalMember(owner = "client!wj", name = "k", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1104 = Static28.method790("Continuer");
+	public static final JagString aClass100_1103 = Static28.parse("ul");
 
 	@OriginalMember(owner = "client!wj", name = "l", descriptor = "I")
 	public static int anInt5867 = 0;

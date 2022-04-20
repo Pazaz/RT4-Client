@@ -8,16 +8,16 @@ public final class Static61 {
 	public static float aFloat7;
 
 	@OriginalMember(owner = "client!en", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_422 = Static28.method790("::fpsoff");
+	public static final JagString aClass100_422 = Static28.parse("::fpsoff");
 
 	@OriginalMember(owner = "client!en", name = "h", descriptor = "Lclient!na;")
-	public static final JagString aClass100_423 = Static28.method790(":chalreq:");
+	public static final JagString aClass100_423 = Static28.parse(":chalreq:");
 
 	@OriginalMember(owner = "client!en", name = "t", descriptor = "[I")
 	public static final int[] anIntArray148 = new int[14];
 
 	@OriginalMember(owner = "client!en", name = "x", descriptor = "Lclient!na;")
-	public static final JagString aClass100_424 = Static28.method790("http:)4)4");
+	public static final JagString aClass100_424 = Static28.parse("http:)4)4");
 
 	@OriginalMember(owner = "client!en", name = "A", descriptor = "Z")
 	public static boolean aBoolean109 = false;

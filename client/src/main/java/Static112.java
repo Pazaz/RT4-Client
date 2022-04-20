@@ -5,10 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static112 {
 
 	@OriginalMember(owner = "client!ij", name = "a", descriptor = "Lclient!na;")
-	public static final JagString aClass100_574 = Static28.method790(":duelfriend:");
-
-	@OriginalMember(owner = "client!ij", name = "n", descriptor = "Lclient!na;")
-	public static final JagString aClass100_575 = Static28.method790(" de votre liste noire)3");
+	public static final JagString aClass100_574 = Static28.parse(":duelfriend:");
 
 	@OriginalMember(owner = "client!ij", name = "a", descriptor = "(B)V")
 	public static void method2297() {
@@ -48,7 +45,7 @@ public final class Static112 {
 			Static181.aClass3_Sub2_Sub1_9.method1423(local3, local9);
 			Static181.aClass3_Sub2_Sub1_9.method1421(local3 + local13 - Static181.aClass3_Sub2_Sub1_9.anInt1867, local9);
 		}
-		Static280.aClass3_Sub2_Sub9_43.method2857(Static234.aClass100_998, local3 + 3, local9 + 14, Static195.anInt4581, -1);
+		Static280.aClass3_Sub2_Sub9_43.method2857(LocalizedText.CHOOSE_OPTION, local3 + 3, local9 + 14, Static195.anInt4581, -1);
 		if (Static239.aBoolean269) {
 			Static46.method1182(local3, local9 + 20, local13, local11 - 20, Static40.anInt1275, 256 - Static111.anInt2910);
 		} else {

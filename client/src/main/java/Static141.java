@@ -10,14 +10,8 @@ public final class Static141 {
 	@OriginalMember(owner = "client!lb", name = "p", descriptor = "[I")
 	public static final int[] anIntArray326 = new int[25];
 
-	@OriginalMember(owner = "client!lb", name = "x", descriptor = "Lclient!na;")
-	private static final JagString aClass100_665 = Static28.method790("red:");
-
-	@OriginalMember(owner = "client!lb", name = "q", descriptor = "Lclient!na;")
-	public static JagString aClass100_663 = aClass100_665;
-
 	@OriginalMember(owner = "client!lb", name = "s", descriptor = "Lclient!na;")
-	public static final JagString aClass100_664 = Static28.method790(":clan:");
+	public static final JagString aClass100_664 = Static28.parse(":clan:");
 
 	@OriginalMember(owner = "client!lb", name = "u", descriptor = "I")
 	public static int anInt3469 = 0;
@@ -27,9 +21,6 @@ public final class Static141 {
 
 	@OriginalMember(owner = "client!lb", name = "A", descriptor = "I")
 	public static int anInt3474 = 0;
-
-	@OriginalMember(owner = "client!lb", name = "D", descriptor = "Lclient!na;")
-	public static final JagString aClass100_666 = aClass100_665;
 
 	@OriginalMember(owner = "client!lb", name = "d", descriptor = "(B)V")
 	public static void method2720() {

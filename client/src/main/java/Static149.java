@@ -18,9 +18,6 @@ public final class Static149 {
 	@OriginalMember(owner = "client!lj", name = "p", descriptor = "Lclient!gn;")
 	public static final LruHashTable aClass54_10 = new LruHashTable(128);
 
-	@OriginalMember(owner = "client!lj", name = "q", descriptor = "Lclient!na;")
-	public static final JagString aClass100_683 = Static28.method790("Fallen lassen");
-
 	@OriginalMember(owner = "client!lj", name = "w", descriptor = "I")
 	public static int anInt3554 = 0;
 

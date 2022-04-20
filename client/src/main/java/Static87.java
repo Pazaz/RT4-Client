@@ -14,7 +14,7 @@ public final class Static87 {
 	public static final SoftLruHashTable aClass99_12 = new SoftLruHashTable(20);
 
 	@OriginalMember(owner = "client!gn", name = "v", descriptor = "Lclient!na;")
-	public static final JagString aClass100_494 = Static28.method790("null");
+	public static final JagString aClass100_494 = Static28.parse("null");
 
 	@OriginalMember(owner = "client!gn", name = "a", descriptor = "(Z)Z")
 	public static boolean method1802() {
@@ -256,7 +256,7 @@ public final class Static87 {
 									continue;
 								}
 								if (Static266.anInt5343 == 1) {
-									Static98.method1966(-1, 1L, Static186.aClass100_827, local563, (short) 36, Static224.aClass100_957, local571);
+									Static98.method1966(-1, 1L, Static186.aClass100_827, local563, (short) 36, LocalizedText.FACEHERE, local571);
 								}
 								Static98.method1966(-1, 1L, Static186.aClass100_827, local563, (short) 60, Static195.aClass100_859, local571);
 								continue;
@@ -355,7 +355,7 @@ public final class Static87 {
 							if (local30.anInt452 == 0 && local30.aBoolean29 && Static155.anInt3751 >= local166 && Static60.anInt1892 >= local164 && Static155.anInt3751 < local302 && local291 > Static60.anInt1892 && !Static121.aBoolean154) {
 								Static231.anInt5204 = 1;
 								Static190.anIntArray382[0] = Static35.anInt1092;
-								Static254.aClass100Array168[0] = Static270.aClass100_1091;
+								Static254.aClass100Array168[0] = LocalizedText.CANCEL;
 								Static233.aClass100Array160[0] = Static186.aClass100_827;
 								Static39.aShortArray6[0] = 1005;
 							}
@@ -382,7 +382,7 @@ public final class Static87 {
 							@Pc(1186) Class3_Sub31 local1186 = (Class3_Sub31) Static119.aClass133_9.method3863((long) local30.anInt507);
 							if (local1186 != null) {
 								if (local1186.anInt5879 == 0 && !Static60.aBoolean108 && Static155.anInt3751 >= local166 && local164 <= Static60.anInt1892 && local302 > Static155.anInt3751 && Static60.anInt1892 < local291 && !Static121.aBoolean154) {
-									Static254.aClass100Array168[0] = Static270.aClass100_1091;
+									Static254.aClass100Array168[0] = LocalizedText.CANCEL;
 									Static231.anInt5204 = 1;
 									Static190.anIntArray382[0] = Static35.anInt1092;
 									Static39.aShortArray6[0] = 1005;
@@ -561,7 +561,7 @@ public final class Static87 {
 											}
 											if (Static39.aClass13_10 == local30) {
 												local276 = local30.anInt474;
-												local1934 = Static20.aClass100_115;
+												local1934 = LocalizedText.PLEASEWAIT;
 											}
 											if (!local30.aBoolean32) {
 												local1934 = Static127.method2465(local30, local1934);

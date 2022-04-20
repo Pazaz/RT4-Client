@@ -14,10 +14,10 @@ public final class Static78 {
 	public static Sprite aClass3_Sub2_Sub1_3;
 
 	@OriginalMember(owner = "client!gd", name = "b", descriptor = "Lclient!na;")
-	public static final JagString aClass100_464 = Static28.method790("null");
+	public static final JagString aClass100_464 = Static28.parse("null");
 
 	@OriginalMember(owner = "client!gd", name = "c", descriptor = "Lclient!na;")
-	public static final JagString aClass100_465 = Static28.method790(")0");
+	public static final JagString aClass100_465 = Static28.parse(")0");
 
 	@OriginalMember(owner = "client!gd", name = "h", descriptor = "[I")
 	public static final int[] anIntArray204 = new int[] { 16, 32, 64, 128 };
@@ -151,7 +151,7 @@ public final class Static78 {
 			return;
 		}
 		if (Static233.anInt5223 != 0) {
-			Static114.method4636(true, Static34.method882(new JagString[] { Static170.aClass100_621, Static18.aClass100_108 }));
+			Static114.method4636(true, Static34.method882(new JagString[] { LocalizedText.LOADING, Static18.aClass100_108 }));
 		}
 		Static107.method2261();
 		Static217.method3768();

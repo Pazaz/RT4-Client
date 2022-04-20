@@ -18,9 +18,6 @@ public final class Static97 {
 	@OriginalMember(owner = "client!hi", name = "f", descriptor = "J")
 	public static long aLong89 = 0L;
 
-	@OriginalMember(owner = "client!hi", name = "h", descriptor = "Lclient!na;")
-	public static final JagString aClass100_523 = Static28.method790("Chargement de l(W-Bcran)2titre )2 ");
-
 	@OriginalMember(owner = "client!hi", name = "a", descriptor = "(BI)I")
 	public static int method1959(@OriginalArg(1) int arg0) {
 		return arg0 >>> 8;

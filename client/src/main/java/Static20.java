@@ -4,15 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static20 {
 
-	@OriginalMember(owner = "client!bj", name = "p", descriptor = "Lclient!na;")
-	public static final JagString aClass100_114 = Static28.method790("Konfig geladen)3");
-
-	@OriginalMember(owner = "client!bj", name = "z", descriptor = "Lclient!na;")
-	private static final JagString aClass100_116 = Static28.method790("Please wait)3)3)3");
-
-	@OriginalMember(owner = "client!bj", name = "q", descriptor = "Lclient!na;")
-	public static JagString aClass100_115 = aClass100_116;
-
 	@OriginalMember(owner = "client!bj", name = "r", descriptor = "I")
 	public static int anInt659 = 2;
 
@@ -24,9 +15,6 @@ public final class Static20 {
 
 	@OriginalMember(owner = "client!bj", name = "v", descriptor = "Lclient!sc;")
 	public static HashTable aClass133_2 = new HashTable(32);
-
-	@OriginalMember(owner = "client!bj", name = "U", descriptor = "Lclient!na;")
-	public static final JagString aClass100_117 = Static28.method790("welle2:");
 
 	@OriginalMember(owner = "client!bj", name = "V", descriptor = "I")
 	public static final int anInt671 = 3353893;

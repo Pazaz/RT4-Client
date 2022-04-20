@@ -10,29 +10,14 @@ public final class Static225 {
 	@OriginalMember(owner = "client!se", name = "l", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_92;
 
-	@OriginalMember(owner = "client!se", name = "b", descriptor = "Lclient!na;")
-	private static final JagString aClass100_959 = Static28.method790("Prepared sound engine");
-
 	@OriginalMember(owner = "client!se", name = "h", descriptor = "I")
 	public static int anInt5073 = -1;
 
-	@OriginalMember(owner = "client!se", name = "o", descriptor = "Lclient!na;")
-	private static final JagString aClass100_962 = Static28.method790("Select");
-
-	@OriginalMember(owner = "client!se", name = "k", descriptor = "Lclient!na;")
-	public static JagString aClass100_960 = aClass100_962;
-
 	@OriginalMember(owner = "client!se", name = "m", descriptor = "Lclient!na;")
-	public static final JagString aClass100_961 = Static28.method790(" )2>");
-
-	@OriginalMember(owner = "client!se", name = "s", descriptor = "Lclient!na;")
-	public static final JagString aClass100_963 = Static28.method790("Eingabeprozedur geladen)3");
+	public static final JagString aClass100_961 = Static28.parse(" )2>");
 
 	@OriginalMember(owner = "client!se", name = "t", descriptor = "[I")
 	public static final int[] anIntArray445 = new int[] { 12543016, 15504954, 15914854, 16773818 };
-
-	@OriginalMember(owner = "client!se", name = "v", descriptor = "Lclient!na;")
-	public static JagString aClass100_964 = aClass100_959;
 
 	@OriginalMember(owner = "client!se", name = "a", descriptor = "(I)V")
 	public static void method3889() {

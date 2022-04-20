@@ -151,7 +151,7 @@ public final class ObjType {
 	public int anInt2360 = -1;
 
 	@OriginalMember(owner = "client!h", name = "qb", descriptor = "[Lclient!na;")
-	public JagString[] aClass100Array72 = new JagString[] { null, null, Static229.aClass100_973, null, null };
+	public JagString[] aClass100Array72 = new JagString[] { null, null, LocalizedText.TAKE, null, null };
 
 	@OriginalMember(owner = "client!h", name = "ub", descriptor = "I")
 	private int anInt2373 = 128;
@@ -163,7 +163,7 @@ public final class ObjType {
 	private int anInt2347 = 0;
 
 	@OriginalMember(owner = "client!h", name = "U", descriptor = "[Lclient!na;")
-	public JagString[] aClass100Array71 = new JagString[] { null, null, null, null, Static41.aClass100_271 };
+	public JagString[] aClass100Array71 = new JagString[] { null, null, null, null, LocalizedText.DROP};
 
 	@OriginalMember(owner = "client!h", name = "Ab", descriptor = "I")
 	public int anInt2375 = 2000;
@@ -296,7 +296,7 @@ public final class ObjType {
 				this.aClass100Array71[local157] = arg0.aClass100Array71[local157];
 			}
 		}
-		this.aClass100Array71[4] = Static34.aClass100_197;
+		this.aClass100Array71[4] = LocalizedText.LENT_ITEM_RETURN;
 	}
 
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(IIILclient!tk;II)Lclient!ak;")
@@ -402,7 +402,7 @@ public final class ObjType {
 			this.anInt2361 = arg0.g2();
 		} else if (arg1 >= 30 && arg1 < 35) {
 			this.aClass100Array72[arg1 - 30] = arg0.gjstr();
-			if (this.aClass100Array72[arg1 - 30].method3111(Static10.aClass100_64)) {
+			if (this.aClass100Array72[arg1 - 30].method3111(LocalizedText.HIDDEN)) {
 				this.aClass100Array72[arg1 - 30] = null;
 			}
 		} else if (arg1 >= 35 && arg1 < 40) {

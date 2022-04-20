@@ -8,9 +8,6 @@ public final class Static175 {
 	@OriginalMember(owner = "client!nm", name = "W", descriptor = "Lclient!na;")
 	public static JagString aClass100_797;
 
-	@OriginalMember(owner = "client!nm", name = "R", descriptor = "Lclient!na;")
-	public static final JagString aClass100_796 = Static28.method790("Schlie-8en");
-
 	@OriginalMember(owner = "client!nm", name = "S", descriptor = "[Lclient!km;")
 	public static final Npc[] aClass8_Sub4_Sub2Array1 = new Npc[32768];
 
@@ -21,7 +18,7 @@ public final class Static175 {
 	public static long aLong138 = 0L;
 
 	@OriginalMember(owner = "client!nm", name = "bb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_798 = Static28.method790("<col=ff0000>");
+	public static final JagString aClass100_798 = Static28.parse("<col=ff0000>");
 
 	@OriginalMember(owner = "client!nm", name = "a", descriptor = "(Z)V")
 	public static void method3279() {

@@ -16,7 +16,7 @@ public final class Static143 {
 	public static int anInt3484 = -1;
 
 	@OriginalMember(owner = "client!ld", name = "d", descriptor = "Lclient!na;")
-	public static final JagString aClass100_668 = Static28.method790("Hidden)2use");
+	public static final JagString aClass100_668 = Static28.parse("Hidden)2use");
 
 	@OriginalMember(owner = "client!ld", name = "g", descriptor = "[Lclient!na;")
 	public static JagString[] aClass100Array104 = null;

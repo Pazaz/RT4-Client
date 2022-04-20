@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static75 {
 
-	@OriginalMember(owner = "client!g", name = "b", descriptor = "Lclient!na;")
-	public static final JagString aClass100_462 = Static28.method790("Ihre Freunde)2Liste ist voll(Q Maximale Eintr-=ge: Mitglieder 200)4freie Spieler 100");
-
 	@OriginalMember(owner = "client!g", name = "d", descriptor = "I")
 	public static int anInt2119 = 0;
 

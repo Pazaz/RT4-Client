@@ -572,7 +572,7 @@ public final class NpcType {
 			this.anInt3713 = arg1.g1();
 		} else if (arg0 >= 30 && arg0 < 35) {
 			this.aClass100Array116[arg0 - 30] = arg1.gjstr();
-			if (this.aClass100Array116[arg0 - 30].method3111(Static10.aClass100_64)) {
+			if (this.aClass100Array116[arg0 - 30].method3111(LocalizedText.HIDDEN)) {
 				this.aClass100Array116[arg0 - 30] = null;
 			}
 		} else if (arg0 == 40) {

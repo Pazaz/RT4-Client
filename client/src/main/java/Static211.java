@@ -10,26 +10,17 @@ public final class Static211 {
 	@OriginalMember(owner = "client!rc", name = "p", descriptor = "I")
 	public static int anInt1142 = 0;
 
-	@OriginalMember(owner = "client!rc", name = "v", descriptor = "Lclient!na;")
-	private static final JagString aClass100_228 = Static28.method790(" from your ignore list first)3");
-
-	@OriginalMember(owner = "client!rc", name = "s", descriptor = "Lclient!na;")
-	public static JagString aClass100_227 = aClass100_228;
-
 	@OriginalMember(owner = "client!rc", name = "C", descriptor = "Z")
 	public static boolean aBoolean72 = false;
 
-	@OriginalMember(owner = "client!rc", name = "D", descriptor = "Lclient!na;")
-	public static final JagString aClass100_229 = Static28.method790(" s(West d-Bconnect-B)3");
-
 	@OriginalMember(owner = "client!rc", name = "G", descriptor = "Lclient!na;")
-	public static final JagString aClass100_230 = Static28.method790("");
+	public static final JagString aClass100_230 = Static28.parse("");
 
 	@OriginalMember(owner = "client!rc", name = "I", descriptor = "Lclient!na;")
-	public static final JagString aClass100_231 = Static28.method790(")3)3)3");
+	public static final JagString aClass100_231 = Static28.parse(")3)3)3");
 
 	@OriginalMember(owner = "client!rc", name = "K", descriptor = "Lclient!na;")
-	public static final JagString aClass100_232 = Static28.method790("::rect_debug");
+	public static final JagString aClass100_232 = Static28.parse("::rect_debug");
 
 	@OriginalMember(owner = "client!rc", name = "M", descriptor = "Z")
 	public static boolean aBoolean73 = false;

@@ -80,7 +80,7 @@ public final class Static145 {
 			Static129.method2495(local11 + 1, local3 + 1, local9 - 2, 16, 0);
 			Static129.method2483(local11 + 1, local3 + 18, local9 - 2, local15 + -19, 0);
 		}
-		Static280.aClass3_Sub2_Sub9_43.method2857(Static234.aClass100_998, local11 + 3, local3 + 14, 6116423, -1);
+		Static280.aClass3_Sub2_Sub9_43.method2857(LocalizedText.CHOOSE_OPTION, local11 + 3, local3 + 14, 6116423, -1);
 		@Pc(96) int local96 = Static223.anInt5032;
 		@Pc(98) int local98 = Static215.anInt4873;
 		for (@Pc(107) int local107 = 0; local107 < Static231.anInt5204; local107++) {

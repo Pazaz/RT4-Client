@@ -21,7 +21,7 @@ public final class Static80 {
 	public static int anInt4702;
 
 	@OriginalMember(owner = "client!gf", name = "I", descriptor = "Lclient!na;")
-	public static final JagString aClass100_886 = Static28.method790(")3runescape)3com)4l=");
+	public static final JagString aClass100_886 = Static28.parse(")3runescape)3com)4l=");
 
 	@OriginalMember(owner = "client!gf", name = "N", descriptor = "Z")
 	public static boolean aBoolean231 = true;

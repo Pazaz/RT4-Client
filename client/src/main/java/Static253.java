@@ -22,24 +22,6 @@ public final class Static253 {
 	@OriginalMember(owner = "client!ui", name = "mb", descriptor = "F")
 	public static float aFloat37;
 
-	@OriginalMember(owner = "client!ui", name = "ab", descriptor = "Lclient!na;")
-	private static final JagString aClass100_1056 = Static28.method790(" more options");
-
-	@OriginalMember(owner = "client!ui", name = "V", descriptor = "Lclient!na;")
-	public static JagString aClass100_1054 = aClass100_1056;
-
-	@OriginalMember(owner = "client!ui", name = "ob", descriptor = "Lclient!na;")
-	private static final JagString aClass100_1059 = Static28.method790("Attack");
-
-	@OriginalMember(owner = "client!ui", name = "Y", descriptor = "Lclient!na;")
-	public static JagString aClass100_1055 = aClass100_1059;
-
-	@OriginalMember(owner = "client!ui", name = "hb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1057 = Static28.method790("Schrifts-=tze geladen)3");
-
-	@OriginalMember(owner = "client!ui", name = "nb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1058 = Static28.method790("jaune:");
-
 	@OriginalMember(owner = "client!ui", name = "a", descriptor = "(IIZIII)V")
 	public static void method4326(@OriginalArg(1) int arg0, @OriginalArg(2) boolean arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
 		Static136.anInt3325++;
@@ -181,7 +163,7 @@ public final class Static253 {
 			} else {
 				Static129.method2495(arg2, arg4, arg3, arg0, 0);
 			}
-			Static114.method4636(false, Static170.aClass100_621);
+			Static114.method4636(false, LocalizedText.LOADING);
 		}
 		if (!arg1 && !Static19.aBoolean43 && !Static60.aBoolean108 && arg2 <= Static155.anInt3751 && arg3 + arg2 > Static155.anInt3751 && arg4 <= Static60.anInt1892 && arg0 + arg4 > Static60.anInt1892) {
 			Static176.method3304(arg4, arg3, arg0, arg2, Static60.anInt1892, Static155.anInt3751);

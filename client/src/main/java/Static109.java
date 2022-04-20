@@ -16,15 +16,6 @@ public final class Static109 {
 	@OriginalMember(owner = "client!ig", name = "i", descriptor = "I")
 	public static int anInt2886;
 
-	@OriginalMember(owner = "client!ig", name = "c", descriptor = "Lclient!na;")
-	private static final JagString aClass100_567 = Static28.method790("Continue");
-
-	@OriginalMember(owner = "client!ig", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_568 = Static28.method790("Ladevorgang )2 bitte warten Sie)3");
-
-	@OriginalMember(owner = "client!ig", name = "g", descriptor = "Lclient!na;")
-	public static JagString aClass100_569 = aClass100_567;
-
 	@OriginalMember(owner = "client!ig", name = "a", descriptor = "(I)V")
 	public static void method2274() {
 		for (@Pc(7) int local7 = 0; local7 < Static272.anInt5214; local7++) {

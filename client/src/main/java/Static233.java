@@ -46,14 +46,8 @@ public final class Static233 {
 	@OriginalMember(owner = "client!t", name = "z", descriptor = "I")
 	public static int anInt5224 = 0;
 
-	@OriginalMember(owner = "client!t", name = "B", descriptor = "Lclient!na;")
-	private static final JagString aClass100_993 = Static28.method790("Your friend list is full)3 Max of 100 for free users)1 and 200 for members)3");
-
 	@OriginalMember(owner = "client!t", name = "C", descriptor = "Lclient!na;")
-	public static final JagString aClass100_994 = Static28.method790(")3");
-
-	@OriginalMember(owner = "client!t", name = "D", descriptor = "Lclient!na;")
-	public static JagString aClass100_995 = aClass100_993;
+	public static final JagString aClass100_994 = Static28.parse(")3");
 
 	@OriginalMember(owner = "client!t", name = "E", descriptor = "[I")
 	public static final int[] anIntArray452 = new int[32];

@@ -13,12 +13,6 @@ public final class Static155 {
 	@OriginalMember(owner = "client!me", name = "P", descriptor = "[I")
 	public static final int[] anIntArray355 = new int[2000];
 
-	@OriginalMember(owner = "client!me", name = "T", descriptor = "Lclient!na;")
-	public static final JagString aClass100_739 = Static28.method790("violet:");
-
-	@OriginalMember(owner = "client!me", name = "kb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_740 = Static28.method790("Votre liste noire est pleine (X100 noms maximum(Y)3");
-
 	@OriginalMember(owner = "client!me", name = "a", descriptor = "(IB)V")
 	public static void method2940(@OriginalArg(0) int arg0) {
 		Static217.anInt4901 = -1;

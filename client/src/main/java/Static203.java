@@ -19,10 +19,10 @@ public final class Static203 {
 	public static Js5 aClass153_85;
 
 	@OriginalMember(owner = "client!qh", name = "c", descriptor = "Lclient!na;")
-	public static final JagString aClass100_893 = Static28.method790("Memory before cleanup=");
+	public static final JagString aClass100_893 = Static28.parse("Memory before cleanup=");
 
 	@OriginalMember(owner = "client!qh", name = "i", descriptor = "Lclient!na;")
-	public static final JagString aClass100_894 = Static28.method790("Mem:");
+	public static final JagString aClass100_894 = Static28.parse("Mem:");
 
 	@OriginalMember(owner = "client!qh", name = "a", descriptor = "(Z)V")
 	public static void method3662() {

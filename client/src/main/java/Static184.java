@@ -10,20 +10,11 @@ public final class Static184 {
 	@OriginalMember(owner = "client!ol", name = "ib", descriptor = "I")
 	public static int anInt4358;
 
-	@OriginalMember(owner = "client!ol", name = "S", descriptor = "Lclient!na;")
-	public static final JagString aClass100_817 = Static28.method790("Connexion perdue)3");
-
 	@OriginalMember(owner = "client!ol", name = "V", descriptor = "I")
 	public static int anInt4348 = 0;
 
-	@OriginalMember(owner = "client!ol", name = "X", descriptor = "Lclient!na;")
-	private static final JagString aClass100_818 = Static28.method790(" is already on your ignore list)3");
-
 	@OriginalMember(owner = "client!ol", name = "Y", descriptor = "Lclient!na;")
-	public static final JagString aClass100_819 = Static28.method790("<col=00ff80>");
-
-	@OriginalMember(owner = "client!ol", name = "db", descriptor = "Lclient!na;")
-	public static JagString aClass100_820 = aClass100_818;
+	public static final JagString aClass100_819 = Static28.parse("<col=00ff80>");
 
 	@OriginalMember(owner = "client!ol", name = "fb", descriptor = "I")
 	public static int anInt4355 = 500;

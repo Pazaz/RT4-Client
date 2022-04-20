@@ -7,9 +7,6 @@ public final class Static178 {
 	@OriginalMember(owner = "client!od", name = "f", descriptor = "Lclient!jd;")
 	public static MouseRecorder aClass74_1;
 
-	@OriginalMember(owner = "client!od", name = "b", descriptor = "Lclient!na;")
-	private static final JagString aClass100_803 = Static28.method790("Connected to update server");
-
 	@OriginalMember(owner = "client!od", name = "c", descriptor = "Z")
 	public static boolean aBoolean202 = true;
 
@@ -18,9 +15,6 @@ public final class Static178 {
 
 	@OriginalMember(owner = "client!od", name = "g", descriptor = "S")
 	public static short aShort25 = 256;
-
-	@OriginalMember(owner = "client!od", name = "h", descriptor = "Lclient!na;")
-	public static JagString aClass100_804 = aClass100_803;
 
 	@OriginalMember(owner = "client!od", name = "i", descriptor = "I")
 	public static int anInt4247 = 0;

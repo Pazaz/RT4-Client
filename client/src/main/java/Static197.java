@@ -14,16 +14,10 @@ public final class Static197 {
 	public static int anInt4620;
 
 	@OriginalMember(owner = "client!pm", name = "Y", descriptor = "Lclient!na;")
-	public static final JagString aClass100_872 = Static28.method790("<br>");
+	public static final JagString aClass100_872 = Static28.parse("<br>");
 
 	@OriginalMember(owner = "client!pm", name = "ab", descriptor = "Z")
 	public static boolean aBoolean228 = true;
-
-	@OriginalMember(owner = "client!pm", name = "gb", descriptor = "Lclient!na;")
-	private static final JagString aClass100_874 = Static28.method790(" from your friend list first)3");
-
-	@OriginalMember(owner = "client!pm", name = "fb", descriptor = "Lclient!na;")
-	public static JagString aClass100_873 = aClass100_874;
 
 	@OriginalMember(owner = "client!pm", name = "a", descriptor = "(ILsignlink!ll;)[Lclient!od;")
 	public static Class114[] method3558(@OriginalArg(1) SignLink arg0) {
@@ -135,7 +129,7 @@ public final class Static197 {
 				if (Static244.anInt5370 == 5) {
 					Static182.method3359(true, Static280.aClass3_Sub2_Sub9_43);
 				} else {
-					Static114.method4636(false, Static170.aClass100_621);
+					Static114.method4636(false, LocalizedText.LOADING);
 				}
 				try {
 					@Pc(269) Graphics local269 = Static154.aCanvas1.getGraphics();

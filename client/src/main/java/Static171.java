@@ -14,12 +14,6 @@ public final class Static171 {
 	@OriginalMember(owner = "client!ni", name = "q", descriptor = "I")
 	public static int anInt4157;
 
-	@OriginalMember(owner = "client!ni", name = "p", descriptor = "Lclient!na;")
-	private static final JagString aClass100_791 = Static28.method790("Loaded input handler");
-
-	@OriginalMember(owner = "client!ni", name = "j", descriptor = "Lclient!na;")
-	public static JagString aClass100_790 = aClass100_791;
-
 	@OriginalMember(owner = "client!ni", name = "n", descriptor = "Lclient!sm;")
 	public static Class139 aClass139_1 = new Class139();
 

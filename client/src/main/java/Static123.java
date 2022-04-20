@@ -5,19 +5,19 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static123 {
 
 	@OriginalMember(owner = "client!jj", name = "d", descriptor = "Lclient!na;")
-	public static final JagString aClass100_592 = Static28.method790("headicons_pk");
+	public static final JagString aClass100_592 = Static28.parse("headicons_pk");
 
 	@OriginalMember(owner = "client!jj", name = "e", descriptor = "I")
 	public static int anInt3058 = 0;
 
 	@OriginalMember(owner = "client!jj", name = "g", descriptor = "Lclient!na;")
-	public static final JagString aClass100_593 = Static28.method790(" (X");
+	public static final JagString aClass100_593 = Static28.parse(" (X");
 
 	@OriginalMember(owner = "client!jj", name = "j", descriptor = "Z")
 	public static boolean aBoolean155 = false;
 
 	@OriginalMember(owner = "client!jj", name = "m", descriptor = "Lclient!na;")
-	public static final JagString aClass100_594 = Static28.method790("<)4col>");
+	public static final JagString aClass100_594 = Static28.parse("<)4col>");
 
 	@OriginalMember(owner = "client!jj", name = "a", descriptor = "(BI)Lclient!lk;")
 	public static StructType method2417(@OriginalArg(1) int arg0) {

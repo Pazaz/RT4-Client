@@ -18,21 +18,6 @@ public final class Static35 {
 	@OriginalMember(owner = "client!cl", name = "K", descriptor = "Ljava/util/Calendar;")
 	public static final Calendar aCalendar1 = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
 
-	@OriginalMember(owner = "client!cl", name = "N", descriptor = "Lclient!na;")
-	private static final JagString aClass100_216 = Static28.method790("K");
-
-	@OriginalMember(owner = "client!cl", name = "P", descriptor = "Lclient!na;")
-	public static final JagString aClass100_217 = Static28.method790("brillant3:");
-
-	@OriginalMember(owner = "client!cl", name = "Q", descriptor = "Lclient!na;")
-	public static JagString aClass100_218 = aClass100_216;
-
-	@OriginalMember(owner = "client!cl", name = "R", descriptor = "Lclient!na;")
-	public static final JagString aClass100_219 = Static28.method790(",Mcran)2titre ouvert");
-
-	@OriginalMember(owner = "client!cl", name = "T", descriptor = "Lclient!na;")
-	public static JagString aClass100_220 = aClass100_216;
-
 	@OriginalMember(owner = "client!cl", name = "Y", descriptor = "I")
 	public static int anInt1092 = -1;
 

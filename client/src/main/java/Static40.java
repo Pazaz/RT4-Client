@@ -11,7 +11,7 @@ public final class Static40 {
 	public static int anInt1275;
 
 	@OriginalMember(owner = "client!da", name = "O", descriptor = "Lclient!na;")
-	public static final JagString aClass100_253 = Static28.method790("(U0a )2 via: ");
+	public static final JagString aClass100_253 = Static28.parse("(U0a )2 via: ");
 
 	@OriginalMember(owner = "client!da", name = "d", descriptor = "(I)V")
 	public static void method1008() {

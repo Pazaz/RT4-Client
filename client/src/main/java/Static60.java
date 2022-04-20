@@ -20,16 +20,13 @@ public final class Static60 {
 	public static int anInt1895;
 
 	@OriginalMember(owner = "client!em", name = "u", descriptor = "Lclient!na;")
-	public static final JagString aClass100_420 = Static28.method790(")1o");
+	public static final JagString aClass100_420 = Static28.parse(")1o");
 
 	@OriginalMember(owner = "client!em", name = "y", descriptor = "I")
 	public static int anInt1893 = 0;
 
 	@OriginalMember(owner = "client!em", name = "z", descriptor = "Z")
 	public static boolean aBoolean108 = false;
-
-	@OriginalMember(owner = "client!em", name = "A", descriptor = "Lclient!na;")
-	public static final JagString aClass100_421 = Static28.method790("blinken3:");
 
 	@OriginalMember(owner = "client!em", name = "B", descriptor = "I")
 	public static int anInt1894 = 0;

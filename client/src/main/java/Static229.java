@@ -20,22 +20,13 @@ public final class Static229 {
 	public static final StockMarketOffer[] aClass136Array1 = new StockMarketOffer[6];
 
 	@OriginalMember(owner = "client!si", name = "Z", descriptor = "Lclient!na;")
-	public static final JagString aClass100_972 = Static28.method790("<col=ffb000>");
-
-	@OriginalMember(owner = "client!si", name = "hb", descriptor = "Lclient!na;")
-	private static final JagString aClass100_975 = Static28.method790("Take");
-
-	@OriginalMember(owner = "client!si", name = "db", descriptor = "Lclient!na;")
-	public static JagString aClass100_973 = aClass100_975;
+	public static final JagString aClass100_972 = Static28.parse("<col=ffb000>");
 
 	@OriginalMember(owner = "client!si", name = "eb", descriptor = "I")
 	public static volatile int anInt5140 = 0;
 
 	@OriginalMember(owner = "client!si", name = "gb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_974 = Static28.method790("<br>(X");
-
-	@OriginalMember(owner = "client!si", name = "ib", descriptor = "Lclient!na;")
-	public static final JagString aClass100_976 = Static28.method790("Weiter");
+	public static final JagString aClass100_974 = Static28.parse("<br>(X");
 
 	@OriginalMember(owner = "client!si", name = "a", descriptor = "(ZB)I")
 	public static int method3933(@OriginalArg(1) byte arg0) {
