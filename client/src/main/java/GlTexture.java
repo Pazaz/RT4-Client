@@ -28,7 +28,7 @@ public final class GlTexture extends SecondaryNode {
 	private int anInt5495 = 0;
 
 	@OriginalMember(owner = "client!uh", name = "W", descriptor = "Lclient!lc;")
-	private final Class88 aClass88_1;
+	private final Texture aClass88_1;
 
 	@OriginalMember(owner = "client!uh", name = "U", descriptor = "Z")
 	private final boolean aBoolean286;
@@ -56,7 +56,7 @@ public final class GlTexture extends SecondaryNode {
 
 	@OriginalMember(owner = "client!uh", name = "<init>", descriptor = "(Lclient!wa;)V")
 	public GlTexture(@OriginalArg(0) Buffer arg0) {
-		this.aClass88_1 = new Class88(arg0);
+		this.aClass88_1 = new Texture(arg0);
 		this.aBoolean286 = arg0.method2229() == 1;
 		this.aBoolean288 = arg0.method2229() == 1;
 		this.aBoolean285 = arg0.method2229() == 1;
