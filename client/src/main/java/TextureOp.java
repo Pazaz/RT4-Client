@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public abstract class TextureOp extends Node {
 
 	@OriginalMember(owner = "client!j", name = "t", descriptor = "Lclient!nd;")
-	protected Class103 aClass103_41;
+	protected MonochromeImageCache aClass103_41;
 
 	@OriginalMember(owner = "client!j", name = "G", descriptor = "I")
 	public int anInt5840;
@@ -61,7 +61,7 @@ public abstract class TextureOp extends Node {
 		if (this.aBoolean309) {
 			this.aClass121_41 = new ColorImageCache(local15, arg0, arg1);
 		} else {
-			this.aClass103_41 = new Class103(local15, arg0, arg1);
+			this.aClass103_41 = new MonochromeImageCache(local15, arg0, arg1);
 		}
 	}
 

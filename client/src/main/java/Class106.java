@@ -74,7 +74,7 @@ public abstract class Class106 {
 						@Pc(178) int local178 = local162 + 1;
 						@Pc(182) int local182 = local170 + 1;
 						@Pc(190) int local190 = local11[local82] * local16 >> 12;
-						@Pc(194) int local194 = MonochromeImageCache.anIntArray1[local166];
+						@Pc(194) int local194 = MonochromeImageCacheBack.anIntArray1[local166];
 						@Pc(199) int local199 = local190 * this.anInt5002;
 						@Pc(203) int local203 = local170 & 0xFF;
 						@Pc(207) int local207 = local162 & 0xFF;
@@ -96,7 +96,7 @@ public abstract class Class106 {
 						@Pc(259) short local259 = this.aShortArray69[local236 + local232];
 						local126 = local138 & 0xFFF;
 						local222 &= 0xFF;
-						@Pc(271) int local271 = MonochromeImageCache.anIntArray1[local126];
+						@Pc(271) int local271 = MonochromeImageCacheBack.anIntArray1[local126];
 						@Pc(278) short local278 = this.aShortArray69[local222 + local232];
 						@Pc(285) short local285 = this.aShortArray69[local227 + local222];
 						if (local118 <= local178) {
@@ -105,7 +105,7 @@ public abstract class Class106 {
 							local178 &= 0xFF;
 						}
 						@Pc(300) int local300 = local190 - 4096;
-						@Pc(304) int local304 = MonochromeImageCache.anIntArray1[local190];
+						@Pc(304) int local304 = MonochromeImageCacheBack.anIntArray1[local190];
 						@Pc(308) int local308 = local126 - 4096;
 						@Pc(315) short local315 = this.aShortArray69[local227 + local236];
 						@Pc(327) int local327 = Static225.method3891(local166, local126, local190, this.aShortArray69[local285 + local207]);
