@@ -23,7 +23,7 @@ public final class Static1 {
 	public static final JagString aClass100_2 = Static28.method790("<col=ffffff> )4 ");
 
 	@OriginalMember(owner = "client!a", name = "a", descriptor = "(Lclient!fi;I)V")
-	public static void method1(@OriginalArg(0) Class44 arg0) {
+	public static void method1(@OriginalArg(0) HuffmanCodec arg0) {
 		Static62.aClass44_1 = arg0;
 	}
 
