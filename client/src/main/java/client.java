@@ -866,7 +866,7 @@ public final class client extends GameShell {
 			Static166.anInt4051 = 120;
 		} else if (Static166.anInt4051 == 120) {
 			if (Static184.aClass153_78.method4487(Static186.aClass100_827, Static252.aClass100_1049)) {
-				@Pc(1060) Class44 local1060 = new Class44(Static184.aClass153_78.method4485(Static186.aClass100_827, Static252.aClass100_1049));
+				@Pc(1060) HuffmanCodec local1060 = new HuffmanCodec(Static184.aClass153_78.method4485(Static186.aClass100_827, Static252.aClass100_1049));
 				Static1.method1(local1060);
 				Static126.aClass100_602 = Static196.aClass100_864;
 				Static166.anInt4051 = 130;

@@ -6,7 +6,7 @@ public final class Static62 {
 	public static int[] anIntArray150;
 
 	@OriginalMember(owner = "client!f", name = "W", descriptor = "Lclient!fi;")
-	public static Class44 aClass44_1;
+	public static HuffmanCodec aClass44_1;
 
 	@OriginalMember(owner = "client!f", name = "ab", descriptor = "[[I")
 	public static int[][] anIntArrayArray11;
