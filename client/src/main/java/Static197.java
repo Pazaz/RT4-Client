@@ -117,7 +117,7 @@ public final class Static197 {
 			}
 		}
 		if (arg1 == 0 && arg3 > 0) {
-			GlRenderer.method4161(Static154.canvas);
+			GlRenderer.createAndDestroyContext(Static154.canvas);
 		}
 		if (arg2 && arg1 > 0) {
 			Static154.canvas.setIgnoreRepaint(true);
