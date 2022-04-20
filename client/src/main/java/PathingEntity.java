@@ -79,7 +79,7 @@ public abstract class PathingEntity extends Entity {
 	public int anInt3431;
 
 	@OriginalMember(owner = "client!fe", name = "w", descriptor = "[I")
-	public final int[] anIntArray317 = new int[10];
+	public final int[] movementQueueZ = new int[10];
 
 	@OriginalMember(owner = "client!fe", name = "z", descriptor = "I")
 	public int anInt3358 = 0;
@@ -91,7 +91,7 @@ public abstract class PathingEntity extends Entity {
 	public final int[] anIntArray319 = new int[4];
 
 	@OriginalMember(owner = "client!fe", name = "K", descriptor = "[I")
-	public final int[] anIntArray318 = new int[10];
+	public final int[] movementQueueX = new int[10];
 
 	@OriginalMember(owner = "client!fe", name = "B", descriptor = "I")
 	public int anInt3360 = 0;
@@ -269,39 +269,39 @@ public abstract class PathingEntity extends Entity {
 			this.anInt3369 = -1;
 		}
 		if (!arg3) {
-			@Pc(32) int local32 = arg1 - this.anIntArray318[0];
-			@Pc(40) int local40 = arg2 - this.anIntArray317[0];
+			@Pc(32) int local32 = arg1 - this.movementQueueX[0];
+			@Pc(40) int local40 = arg2 - this.movementQueueZ[0];
 			if (local32 >= -8 && local32 <= 8 && local40 >= -8 && local40 <= 8) {
 				if (this.anInt3409 < 9) {
 					this.anInt3409++;
 				}
 				for (@Pc(72) int local72 = this.anInt3409; local72 > 0; local72--) {
-					this.anIntArray318[local72] = this.anIntArray318[local72 - 1];
-					this.anIntArray317[local72] = this.anIntArray317[local72 - 1];
+					this.movementQueueX[local72] = this.movementQueueX[local72 - 1];
+					this.movementQueueZ[local72] = this.movementQueueZ[local72 - 1];
 					this.aByteArray48[local72] = this.aByteArray48[local72 - 1];
 				}
 				this.aByteArray48[0] = 1;
-				this.anIntArray318[0] = arg1;
-				this.anIntArray317[0] = arg2;
+				this.movementQueueX[0] = arg1;
+				this.movementQueueZ[0] = arg2;
 				return;
 			}
 		}
 		this.anInt3417 = 0;
-		this.anIntArray318[0] = arg1;
-		this.anIntArray317[0] = arg2;
+		this.movementQueueX[0] = arg1;
+		this.movementQueueZ[0] = arg2;
 		this.anInt3409 = 0;
 		this.anInt3405 = 0;
-		this.anInt3421 = arg0 * 64 + this.anIntArray317[0] * 128;
-		this.anInt3412 = arg0 * 64 + this.anIntArray318[0] * 128;
-		if (Static239.aBoolean269 && Static173.aClass8_Sub4_Sub1_2 == this) {
+		this.anInt3421 = arg0 * 64 + this.movementQueueZ[0] * 128;
+		this.anInt3412 = arg0 * 64 + this.movementQueueX[0] * 128;
+		if (Static239.aBoolean269 && Static173.self == this) {
 			Static86.method1799();
 		}
 	}
 
 	@OriginalMember(owner = "client!fe", name = "a", descriptor = "(IBI)V")
 	public final void method2684(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		@Pc(10) int local10 = this.anIntArray318[0];
-		@Pc(15) int local15 = this.anIntArray317[0];
+		@Pc(10) int local10 = this.movementQueueX[0];
+		@Pc(15) int local15 = this.movementQueueZ[0];
 		if (arg1 == 0) {
 			local10--;
 			local15++;
@@ -313,8 +313,8 @@ public abstract class PathingEntity extends Entity {
 			this.anInt3409++;
 		}
 		for (@Pc(50) int local50 = this.anInt3409; local50 > 0; local50--) {
-			this.anIntArray318[local50] = this.anIntArray318[local50 - 1];
-			this.anIntArray317[local50] = this.anIntArray317[local50 - 1];
+			this.movementQueueX[local50] = this.movementQueueX[local50 - 1];
+			this.movementQueueZ[local50] = this.movementQueueZ[local50 - 1];
 			this.aByteArray48[local50] = this.aByteArray48[local50 - 1];
 		}
 		if (arg1 == 1) {
@@ -342,8 +342,8 @@ public abstract class PathingEntity extends Entity {
 			local15--;
 			local10++;
 		}
-		this.anIntArray318[0] = local10;
-		this.anIntArray317[0] = local15;
+		this.movementQueueX[0] = local10;
+		this.movementQueueZ[0] = local15;
 	}
 
 	@OriginalMember(owner = "client!fe", name = "a", descriptor = "(BLclient!ak;I)V")
@@ -363,13 +363,13 @@ public abstract class PathingEntity extends Entity {
 		@Pc(53) int local53 = -local27 / 2;
 		@Pc(64) int local64 = local53 * local43 - local48 * local39 >> 16;
 		@Pc(75) int local75 = local39 * local53 + local43 * local48 >> 16;
-		@Pc(87) int local87 = Static207.method3685(Static55.anInt1735, local75 + this.anInt3412, this.anInt3421 + local64);
+		@Pc(87) int local87 = Static207.method3685(Static55.level, local75 + this.anInt3412, this.anInt3421 + local64);
 		@Pc(91) int local91 = local24 / 2;
 		@Pc(96) int local96 = -local27 / 2;
 		@Pc(106) int local106 = local91 * local43 + local96 * local39 >> 16;
 		@Pc(110) int local110 = local27 / 2;
 		@Pc(121) int local121 = local96 * local43 - local91 * local39 >> 16;
-		@Pc(134) int local134 = Static207.method3685(Static55.anInt1735, local106 + this.anInt3412, this.anInt3421 - -local121);
+		@Pc(134) int local134 = Static207.method3685(Static55.level, local106 + this.anInt3412, this.anInt3421 - -local121);
 		@Pc(139) int local139 = -local24 / 2;
 		@Pc(150) int local150 = local110 * local43 - local39 * local139 >> 16;
 		@Pc(154) int local154 = local27 / 2;
@@ -377,9 +377,9 @@ public abstract class PathingEntity extends Entity {
 		@Pc(169) int local169 = local39 * local110 + local43 * local139 >> 16;
 		@Pc(179) int local179 = local154 * local43 - local39 * local158 >> 16;
 		@Pc(189) int local189 = local39 * local154 + local43 * local158 >> 16;
-		@Pc(201) int local201 = Static207.method3685(Static55.anInt1735, this.anInt3412 + local169, local150 + this.anInt3421);
+		@Pc(201) int local201 = Static207.method3685(Static55.level, this.anInt3412 + local169, local150 + this.anInt3421);
 		@Pc(212) int local212 = local134 > local87 ? local87 : local134;
-		@Pc(224) int local224 = Static207.method3685(Static55.anInt1735, local189 + this.anInt3412, local179 + this.anInt3421);
+		@Pc(224) int local224 = Static207.method3685(Static55.level, local189 + this.anInt3412, local179 + this.anInt3421);
 		@Pc(231) int local231 = local224 > local201 ? local201 : local224;
 		@Pc(238) int local238 = local224 > local134 ? local134 : local224;
 		@Pc(245) int local245 = local201 <= local87 ? local201 : local87;

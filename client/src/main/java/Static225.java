@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static225 {
 
 	@OriginalMember(owner = "client!se", name = "a", descriptor = "I")
-	public static int anInt5068;
+	public static int originX;
 
 	@OriginalMember(owner = "client!se", name = "l", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_92;
@@ -53,7 +53,7 @@ public final class Static225 {
 					if (local121 > 15) {
 						local121 -= 32;
 					}
-					local65.method1265(local92 + Static173.aClass8_Sub4_Sub1_2.anIntArray318[0], local116 == 1, Static173.aClass8_Sub4_Sub1_2.anIntArray317[0] + local121);
+					local65.method1265(local92 + Static173.self.movementQueueX[0], local116 == 1, Static173.self.movementQueueZ[0] + local121);
 					continue;
 				}
 			}
@@ -74,7 +74,7 @@ public final class Static225 {
 	public static void method3893(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		@Pc(14) DelayedStateChange local14 = Static238.method4143(5, arg0);
 		local14.method1017();
-		local14.anInt1271 = arg1;
+		local14.intArg1 = arg1;
 	}
 
 	@OriginalMember(owner = "client!se", name = "a", descriptor = "(Lclient!na;Lclient!na;IB)V")
@@ -98,10 +98,10 @@ public final class Static225 {
 			local43.pjstr(Static186.aClass100_828);
 			local43.p4((int) (Math.random() * 9.9999999E7D));
 			local43.encryptRsa(Static86.aBigInteger1, Static256.aBigInteger2);
-			Static6.aClass3_Sub15_Sub1_1.offset = 0;
-			Static6.aClass3_Sub15_Sub1_1.p1(210);
-			Static6.aClass3_Sub15_Sub1_1.p1(local43.offset);
-			Static6.aClass3_Sub15_Sub1_1.pBytes(local43.data, local43.offset);
+			Static6.outboundBuffer.offset = 0;
+			Static6.outboundBuffer.p1(210);
+			Static6.outboundBuffer.p1(local43.offset);
+			Static6.outboundBuffer.pBytes(local43.data, local43.offset);
 		} else {
 			Static49.method1208();
 		}

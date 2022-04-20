@@ -34,7 +34,7 @@ public final class Static98 {
 				return true;
 			}
 		}
-		if (arg0.method3111(Static173.aClass8_Sub4_Sub1_2.aClass100_364)) {
+		if (arg0.method3111(Static173.self.aClass100_364)) {
 			return true;
 		} else {
 			return false;

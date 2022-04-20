@@ -350,18 +350,18 @@ public final class SignLink implements Runnable {
 					if (aLong1314 > MonotonicClock.currentTimeMillis()) {
 						throw new IOException();
 					}
-					local16.anObject6 = new Socket(InetAddress.getByName((String) local16.anObject7), local16.anInt5926);
+					local16.result = new Socket(InetAddress.getByName((String) local16.anObject7), local16.anInt5926);
 				} else if (local45 == 2) {
 					@Pc(813) Thread local813 = new Thread((Runnable) local16.anObject7);
 					local813.setDaemon(true);
 					local813.start();
 					local813.setPriority(local16.anInt5926);
-					local16.anObject6 = local813;
+					local16.result = local813;
 				} else if (local45 == 4) {
 					if (aLong1314 > MonotonicClock.currentTimeMillis()) {
 						throw new IOException();
 					}
-					local16.anObject6 = new DataInputStream(((URL) local16.anObject7).openStream());
+					local16.result = new DataInputStream(((URL) local16.anObject7).openStream());
 				} else {
 					@Pc(687) Object[] local687;
 					if (local45 == 8) {
@@ -369,13 +369,13 @@ public final class SignLink implements Runnable {
 						if (((Class) local687[0]).getClassLoader() == null) {
 							throw new SecurityException();
 						}
-						local16.anObject6 = ((Class) local687[0]).getDeclaredMethod((String) local687[1], (Class[]) local687[2]);
+						local16.result = ((Class) local687[0]).getDeclaredMethod((String) local687[1], (Class[]) local687[2]);
 					} else if (local45 == 9) {
 						local687 = (Object[]) local16.anObject7;
 						if (((Class) local687[0]).getClassLoader() == null) {
 							throw new SecurityException();
 						}
-						local16.anObject6 = ((Class) local687[0]).getDeclaredField((String) local687[1]);
+						local16.result = ((Class) local687[0]).getDeclaredField((String) local687[1]);
 					} else {
 						@Pc(147) String local147;
 						if (local45 == 3) {
@@ -383,12 +383,12 @@ public final class SignLink implements Runnable {
 								throw new IOException();
 							}
 							local147 = (local16.anInt5926 >> 24 & 0xFF) + "." + (local16.anInt5926 >> 16 & 0xFF) + "." + (local16.anInt5926 >> 8 & 0xFF) + "." + (local16.anInt5926 & 0xFF);
-							local16.anObject6 = InetAddress.getByName(local147).getHostName();
+							local16.result = InetAddress.getByName(local147).getHostName();
 						} else if (local45 == 5) {
-							local16.anObject6 = this.aClass210_1.method5105();
+							local16.result = this.aClass210_1.method5105();
 						} else if (local45 == 6) {
 							@Pc(168) Frame local168 = new Frame("Jagex Full Screen");
-							local16.anObject6 = local168;
+							local16.result = local168;
 							local168.setResizable(false);
 							this.aClass210_1.method5104(local16.anInt5927 & 0xFFFF, local16.anInt5927 >> 16, local16.anInt5926 & 0xFFFF, local168, local16.anInt5926 >>> 16);
 						} else if (local45 == 7) {
@@ -443,7 +443,7 @@ public final class SignLink implements Runnable {
 							} else if (local45 == 12) {
 								local147 = (String) local16.anObject7;
 								@Pc(558) FileOnDisk local558 = method5117(local147);
-								local16.anObject6 = local558;
+								local16.result = local558;
 							} else if (local45 == 14) {
 								@Pc(570) int local570 = local16.anInt5927;
 								@Pc(573) int local573 = local16.anInt5926;
@@ -471,9 +471,9 @@ public final class SignLink implements Runnable {
 										}
 									}
 									Runtime.getRuntime().exec("cmd /c start \"j\" \"" + local147 + "\"");
-									local16.anObject6 = null;
+									local16.result = null;
 								} catch (@Pc(674) Exception local674) {
-									local16.anObject6 = local674;
+									local16.result = local674;
 								}
 							} else {
 								throw new Exception();

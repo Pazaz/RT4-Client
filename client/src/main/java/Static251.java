@@ -29,7 +29,7 @@ public final class Static251 {
 	public static int anInt5459 = 0;
 
 	@OriginalMember(owner = "client!ug", name = "a", descriptor = "(B)V")
-	public static void method4274() {
+	public static void loop() {
 		for (@Pc(10) Class3_Sub7 local10 = (Class3_Sub7) Static26.aClass69_27.method2289(); local10 != null; local10 = (Class3_Sub7) Static26.aClass69_27.method2288()) {
 			if (local10.anInt924 > 0) {
 				local10.anInt924--;

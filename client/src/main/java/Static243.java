@@ -39,17 +39,17 @@ public final class Static243 {
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(Z)V")
 	public static void method4221() {
 		Static204.anInt4762 = 0;
-		Static67.aBoolean168 = true;
-		Static183.aLong139 = 0L;
-		Static178.aClass74_1.anInt2990 = 0;
-		Static26.aBoolean59 = true;
+		Static67.prevFocus = true;
+		Static183.prevClickTime = 0L;
+		Static178.instance.samples = 0;
+		Static26.focus = true;
 		Static114.method4625();
 		Static49.anInt1462 = -1;
 		Static5.anInt45 = -1;
 		Static164.anInt3985 = -1;
 		Static267.anInt5775 = 0;
-		Static60.anInt1894 = 0;
-		Static6.aClass3_Sub15_Sub1_1.offset = 0;
+		Static60.rebootTimer = 0;
+		Static6.outboundBuffer.offset = 0;
 		Static230.anInt5152 = -1;
 		Static201.anInt1862 = 0;
 		Static57.aClass3_Sub15_Sub1_3.offset = 0;
@@ -59,7 +59,7 @@ public final class Static243 {
 		}
 		Static231.anInt5204 = 0;
 		Static60.aBoolean108 = false;
-		Static48.method1197(0);
+		Static48.setIdleLoops(0);
 		for (local3506 = 0; local3506 < 100; local3506++) {
 			Static230.aClass100Array158[local3506] = null;
 		}
@@ -86,7 +86,7 @@ public final class Static243 {
 		for (local3506 = 0; local3506 < 32768; local3506++) {
 			Static175.aClass8_Sub4_Sub2Array1[local3506] = null;
 		}
-		Static173.aClass8_Sub4_Sub1_2 = Static159.aClass8_Sub4_Sub1Array1[2047] = new Player();
+		Static173.self = Static159.aClass8_Sub4_Sub1Array1[2047] = new Player();
 		Static217.aClass69_116.method2278();
 		Static99.aClass69_64.method2278();
 		if (Static159.aClass69ArrayArrayArray1 != null) {
@@ -113,16 +113,16 @@ public final class Static243 {
 		Static251.anInt5449 = 0;
 		Static113.anInt4612 = 0;
 		Static233.anInt5225 = 0;
-		for (local3506 = 0; local3506 < Static155.anIntArray355.length; local3506++) {
-			Static155.anIntArray355[local3506] = -1;
+		for (local3506 = 0; local3506 < Static155.varcs.length; local3506++) {
+			Static155.varcs[local3506] = -1;
 		}
-		if (Static154.anInt3711 != -1) {
-			Static109.method2275(Static154.anInt3711);
+		if (Static154.topLevelInterace != -1) {
+			Static109.method2275(Static154.topLevelInterace);
 		}
 		for (@Pc(3755) Class3_Sub31 local3755 = (Class3_Sub31) Static119.aClass133_9.method3859(); local3755 != null; local3755 = (Class3_Sub31) Static119.aClass133_9.method3861()) {
 			Static132.method2605(true, local3755);
 		}
-		Static154.anInt3711 = -1;
+		Static154.topLevelInterace = -1;
 		Static119.aClass133_9 = new HashTable(8);
 		Static52.method1287();
 		Static39.aClass13_10 = null;

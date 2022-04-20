@@ -25,7 +25,7 @@ public final class Static132 {
 			Static109.method2275(local16);
 		}
 		Static273.method3214(local16);
-		@Pc(32) Component local32 = Static5.method32(local9);
+		@Pc(32) Component local32 = Static5.getComponent(local9);
 		if (local32 != null) {
 			Static43.method1143(local32);
 		}
@@ -51,8 +51,8 @@ public final class Static132 {
 			Static13.anInt436 = Static231.anInt5204 * 15 + (Static261.aBoolean298 ? 26 : 22);
 			Static24.anInt761 = local43 + 8;
 		}
-		if (Static154.anInt3711 != -1) {
-			Static54.method1304(1, Static154.anInt3711);
+		if (Static154.topLevelInterace != -1) {
+			Static54.method1304(1, Static154.topLevelInterace);
 		}
 	}
 
@@ -60,16 +60,16 @@ public final class Static132 {
 	public static void method2606(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		@Pc(8) DelayedStateChange local8 = Static238.method4143(1, arg0);
 		local8.method1017();
-		local8.anInt1271 = arg1;
+		local8.intArg1 = arg1;
 	}
 
 	@OriginalMember(owner = "client!ke", name = "a", descriptor = "(IIIBI)V")
 	public static void method2607(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {
 		@Pc(8) DelayedStateChange local8 = Static238.method4143(4, arg2);
 		local8.method1017();
-		local8.anInt1270 = arg3;
-		local8.anInt1269 = arg0;
-		local8.anInt1271 = arg1;
+		local8.intArg3 = arg3;
+		local8.intArg2 = arg0;
+		local8.intArg1 = arg1;
 	}
 
 	@OriginalMember(owner = "client!ke", name = "f", descriptor = "(B)V")

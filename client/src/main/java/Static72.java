@@ -23,7 +23,7 @@ public final class Static72 {
 	public static long aLong74 = 0L;
 
 	@OriginalMember(owner = "client!fl", name = "B", descriptor = "I")
-	public static int anInt2036 = 0;
+	public static int updatedVarcstrsWriterIndex = 0;
 
 	@OriginalMember(owner = "client!fl", name = "H", descriptor = "Lclient!na;")
 	public static final JagString aClass100_446 = Static28.parse("<img=0>");

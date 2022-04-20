@@ -11,7 +11,7 @@ public final class Static26 {
 	public static Js5 aClass153_16;
 
 	@OriginalMember(owner = "client!ca", name = "ab", descriptor = "Z")
-	public static boolean aBoolean59;
+	public static boolean focus;
 
 	@OriginalMember(owner = "client!ca", name = "X", descriptor = "Lclient!ih;")
 	public static LinkedList aClass69_27 = new LinkedList();
@@ -30,8 +30,8 @@ public final class Static26 {
 
 	@OriginalMember(owner = "client!ca", name = "h", descriptor = "(I)V")
 	public static void method740() {
-		@Pc(10) int local10 = (Static138.anInt3439 >> 10) + (Static225.anInt5068 >> 3);
-		@Pc(23) int local23 = (Static134.anInt3302 >> 10) + (Static142.anInt3483 >> 3);
+		@Pc(10) int local10 = (Static138.anInt3439 >> 10) + (Static225.originX >> 3);
+		@Pc(23) int local23 = (Static134.anInt3302 >> 10) + (Static142.originZ >> 3);
 		Static156.aByteArrayArray11 = new byte[18][];
 		Static35.anIntArray82 = new int[18];
 		Static191.aByteArrayArray15 = new byte[18][];
@@ -92,8 +92,8 @@ public final class Static26 {
 		for (@Pc(25) int local25 = 0; local25 < local13; local25++) {
 			@Pc(32) byte[] local32 = local19[local25];
 			if (local32 != null) {
-				@Pc(45) int local45 = (Static238.anIntArray470[local25] >> 8) * 64 - Static225.anInt5068;
-				@Pc(56) int local56 = (Static238.anIntArray470[local25] & 0xFF) * 64 - Static142.anInt3483;
+				@Pc(45) int local45 = (Static238.anIntArray470[local25] >> 8) * 64 - Static225.originX;
+				@Pc(56) int local56 = (Static238.anIntArray470[local25] & 0xFF) * 64 - Static142.originZ;
 				Static107.method2261();
 				Static124.method2437(local45, arg0, local32, local56, Static148.aClass97Array1);
 			}

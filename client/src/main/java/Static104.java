@@ -28,8 +28,8 @@ public final class Static104 {
 		}
 		@Pc(79) int local79 = arg0.anInt3412;
 		@Pc(82) int local82 = arg0.anInt3421;
-		@Pc(99) int local99 = arg0.anIntArray318[arg0.anInt3409 - 1] * 128 + arg0.method2693() * 64;
-		@Pc(116) int local116 = arg0.anIntArray317[arg0.anInt3409 - 1] * 128 + arg0.method2693() * 64;
+		@Pc(99) int local99 = arg0.movementQueueX[arg0.anInt3409 - 1] * 128 + arg0.method2693() * 64;
+		@Pc(116) int local116 = arg0.movementQueueZ[arg0.anInt3409 - 1] * 128 + arg0.method2693() * 64;
 		if (local99 - local79 > 256 || local99 - local79 < -256 || local116 - local82 > 256 || local116 - local82 < -256) {
 			arg0.anInt3412 = local99;
 			arg0.anInt3421 = local116;

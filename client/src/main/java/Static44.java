@@ -21,7 +21,7 @@ public final class Static44 {
 
 	@OriginalMember(owner = "client!dh", name = "a", descriptor = "(Z)V")
 	public static void method1146() {
-		Static6.aClass3_Sub15_Sub1_1.offset = 0;
+		Static6.outboundBuffer.offset = 0;
 		Static5.anInt45 = -1;
 		Static60.aBoolean108 = false;
 		Static223.anInt5028 = 0;
@@ -29,7 +29,7 @@ public final class Static44 {
 		Static231.anInt5204 = 0;
 		Static230.anInt5152 = -1;
 		Static270.anInt5795 = 0;
-		Static60.anInt1894 = 0;
+		Static60.rebootTimer = 0;
 		Static49.anInt1462 = -1;
 		Static57.aClass3_Sub15_Sub1_3.offset = 0;
 		Static201.anInt1862 = 0;
@@ -70,7 +70,7 @@ public final class Static44 {
 		local9.anInt5878 = arg0;
 		Static119.aClass133_9.method3862(local9, (long) arg1);
 		Static81.method1753(arg0);
-		@Pc(28) Component local28 = Static5.method32(arg1);
+		@Pc(28) Component local28 = Static5.getComponent(arg1);
 		if (local28 != null) {
 			Static43.method1143(local28);
 		}
@@ -104,8 +104,8 @@ public final class Static44 {
 			Static17.method531(local28, false);
 		}
 		Static74.method1626(arg0);
-		if (Static154.anInt3711 != -1) {
-			Static54.method1304(1, Static154.anInt3711);
+		if (Static154.topLevelInterace != -1) {
+			Static54.method1304(1, Static154.topLevelInterace);
 		}
 		return local9;
 	}

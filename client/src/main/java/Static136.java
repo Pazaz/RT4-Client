@@ -21,7 +21,7 @@ public final class Static136 {
 	public static void method2649(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		@Pc(4) DelayedStateChange local4 = Static238.method4143(6, arg1);
 		local4.method1017();
-		local4.anInt1271 = arg0;
+		local4.intArg1 = arg0;
 	}
 
 	@OriginalMember(owner = "client!kk", name = "a", descriptor = "(ZLjava/awt/event/KeyEvent;)I")

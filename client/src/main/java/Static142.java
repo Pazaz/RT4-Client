@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static142 {
 
 	@OriginalMember(owner = "client!lc", name = "n", descriptor = "I")
-	public static int anInt3483;
+	public static int originZ;
 
 	@OriginalMember(owner = "client!lc", name = "e", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable aClass99_23 = new SoftLruHashTable(64);
@@ -29,7 +29,7 @@ public final class Static142 {
 		for (local5 = -1; local5 < Static267.anInt5774 + Static272.anInt5214; local5++) {
 			@Pc(17) PathingEntity local17;
 			if (local5 == -1) {
-				local17 = Static173.aClass8_Sub4_Sub1_2;
+				local17 = Static173.self;
 			} else if (Static267.anInt5774 > local5) {
 				local17 = Static159.aClass8_Sub4_Sub1Array1[Static105.anIntArray256[local5]];
 			} else {
@@ -314,7 +314,7 @@ public final class Static142 {
 	}
 
 	@OriginalMember(owner = "client!lc", name = "a", descriptor = "(B)I")
-	public static int method2727() {
+	public static int getIdleLoops() {
 		return Static93.anInt2467;
 	}
 }

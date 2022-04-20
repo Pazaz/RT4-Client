@@ -29,14 +29,14 @@ public final class Static118 {
 	public static void method2354(@OriginalArg(1) int arg0, @OriginalArg(2) Component[] arg1) {
 		for (@Pc(7) int local7 = 0; local7 < arg1.length; local7++) {
 			@Pc(15) Component local15 = arg1[local7];
-			if (local15 != null && local15.anInt456 == arg0 && (!local15.aBoolean32 || !Static36.method947(local15))) {
+			if (local15 != null && local15.layer == arg0 && (!local15.aBoolean32 || !Static36.method947(local15))) {
 				if (local15.anInt452 == 0) {
 					if (!local15.aBoolean32 && Static36.method947(local15) && local15 != Static180.aClass13_22) {
 						continue;
 					}
 					method2354(local15.anInt507, arg1);
-					if (local15.aClass13Array3 != null) {
-						method2354(local15.anInt507, local15.aClass13Array3);
+					if (local15.createdComponents != null) {
+						method2354(local15.anInt507, local15.createdComponents);
 					}
 					@Pc(73) Class3_Sub31 local73 = (Class3_Sub31) Static119.aClass133_9.method3863((long) local15.anInt507);
 					if (local73 != null) {
@@ -77,13 +77,13 @@ public final class Static118 {
 							}
 						}
 					}
-					if (local15.anInt483 != 0 && !local15.aBoolean32) {
-						@Pc(239) int local239 = local15.anInt483 >> 16;
+					if (local15.modelRotationSpeed != 0 && !local15.aBoolean32) {
+						@Pc(239) int local239 = local15.modelRotationSpeed >> 16;
 						@Pc(243) int local243 = local239 * Static178.anInt4247;
-						local105 = local15.anInt483 << 16 >> 16;
-						local15.anInt450 = local243 + local15.anInt450 & 0x7FF;
+						local105 = local15.modelRotationSpeed << 16 >> 16;
+						local15.modelXAngle = local243 + local15.modelXAngle & 0x7FF;
 						local105 *= Static178.anInt4247;
-						local15.anInt524 = local15.anInt524 + local105 & 0x7FF;
+						local15.modelYAngle = local15.modelYAngle + local105 & 0x7FF;
 						Static43.method1143(local15);
 					}
 				}

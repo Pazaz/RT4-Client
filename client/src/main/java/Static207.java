@@ -109,23 +109,23 @@ public final class Static207 {
 				if (Static72.aClass212_3.status != 1) {
 					return -1;
 				}
-				Static124.aClass95_2 = new BufferedSocket((Socket) Static72.aClass212_3.anObject6, Static71.signLink);
-				Static6.aClass3_Sub15_Sub1_1.offset = 0;
+				Static124.socket = new BufferedSocket((Socket) Static72.aClass212_3.result, Static71.signLink);
+				Static6.outboundBuffer.offset = 0;
 				Static72.aClass212_3 = null;
 				local82 = 0;
 				if (Static61.aBoolean109) {
 					local82 = Static80.anInt4702;
 				}
-				Static6.aClass3_Sub15_Sub1_1.p1(255);
-				Static6.aClass3_Sub15_Sub1_1.p4(local82);
-				Static124.aClass95_2.write(Static6.aClass3_Sub15_Sub1_1.data, Static6.aClass3_Sub15_Sub1_1.offset);
+				Static6.outboundBuffer.p1(255);
+				Static6.outboundBuffer.p4(local82);
+				Static124.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
 				if (Static11.aClass62_1 != null) {
 					Static11.aClass62_1.method3571();
 				}
 				if (Static147.aClass62_2 != null) {
 					Static147.aClass62_2.method3571();
 				}
-				local124 = Static124.aClass95_2.read();
+				local124 = Static124.socket.read();
 				if (Static11.aClass62_1 != null) {
 					Static11.aClass62_1.method3571();
 				}
@@ -138,12 +138,12 @@ public final class Static207 {
 				Static82.anInt2231 = 2;
 			}
 			if (Static82.anInt2231 == 2) {
-				if (Static124.aClass95_2.available() < 2) {
+				if (Static124.socket.available() < 2) {
 					return -1;
 				}
-				Static116.anInt2961 = Static124.aClass95_2.read();
+				Static116.anInt2961 = Static124.socket.read();
 				Static116.anInt2961 <<= 0x8;
-				Static116.anInt2961 += Static124.aClass95_2.read();
+				Static116.anInt2961 += Static124.socket.read();
 				Static82.anInt2231 = 3;
 				Static141.anInt3469 = 0;
 				Static229.aByteArray70 = new byte[Static116.anInt2961];
@@ -151,14 +151,14 @@ public final class Static207 {
 			if (Static82.anInt2231 != 3) {
 				return -1;
 			}
-			local82 = Static124.aClass95_2.available();
+			local82 = Static124.socket.available();
 			if (local82 < 1) {
 				return -1;
 			}
 			if (local82 > Static116.anInt2961 - Static141.anInt3469) {
 				local82 = Static116.anInt2961 - Static141.anInt3469;
 			}
-			Static124.aClass95_2.method2827(Static141.anInt3469, local82, Static229.aByteArray70);
+			Static124.socket.method2827(Static141.anInt3469, local82, Static229.aByteArray70);
 			Static141.anInt3469 += local82;
 			if (Static141.anInt3469 < Static116.anInt2961) {
 				return -1;
@@ -171,8 +171,8 @@ public final class Static207 {
 						Static101.aClass10_Sub1Array1[local124++] = local247;
 					}
 				}
-				Static124.aClass95_2.method2834();
-				Static124.aClass95_2 = null;
+				Static124.socket.method2834();
+				Static124.socket = null;
 				Static127.anInt3132 = 0;
 				Static82.anInt2231 = 0;
 				Static229.aByteArray70 = null;

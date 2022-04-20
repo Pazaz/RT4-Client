@@ -29,10 +29,10 @@ public final class Static236 {
 		@Pc(139) int local139;
 		if (Static22.anInt723 != 0) {
 			if (arg4 <= arg3 && arg4 + 16 > arg3 && arg0 >= arg5 && arg5 + 16 > arg0) {
-				arg2.anInt468 -= 4;
+				arg2.scrollY -= 4;
 				Static43.method1143(arg2);
 			} else if (arg3 >= arg4 && arg3 < arg4 + 16 && arg0 >= arg1 + arg5 - 16 && arg1 + arg5 > arg0) {
-				arg2.anInt468 += 4;
+				arg2.scrollY += 4;
 				Static43.method1143(arg2);
 			} else if (arg3 >= arg4 - Static42.anInt1396 && arg3 < arg4 + Static42.anInt1396 + 16 && arg0 >= arg5 + 16 && arg1 + arg5 - 16 > arg0) {
 				local139 = arg1 * (arg1 - 32) / arg6;
@@ -41,17 +41,17 @@ public final class Static236 {
 				}
 				@Pc(150) int local150 = arg1 - local139 - 32;
 				@Pc(162) int local162 = arg0 - local139 / 2 - arg5 - 16;
-				arg2.anInt468 = (arg6 - arg1) * local162 / local150;
+				arg2.scrollY = (arg6 - arg1) * local162 / local150;
 				Static43.method1143(arg2);
 				Static45.aBoolean84 = true;
 			}
 		}
-		if (Static58.anInt1766 == 0) {
+		if (Static58.wheelRotation == 0) {
 			return;
 		}
 		local139 = arg2.anInt445;
 		if (arg4 - local139 <= arg3 && arg5 <= arg0 && arg3 < arg4 + 16 && arg1 + arg5 >= arg0) {
-			arg2.anInt468 += Static58.anInt1766 * 45;
+			arg2.scrollY += Static58.wheelRotation * 45;
 			Static43.method1143(arg2);
 		}
 	}

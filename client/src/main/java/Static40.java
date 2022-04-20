@@ -53,8 +53,8 @@ public final class Static40 {
 			local30[local72] = (float) local119 + (((float) local173 * local66 + (float) local155) * local66 + (float) local146) * local66;
 		}
 		Static5.anInt40 = (int) local30[1] * -1;
-		Static138.anInt3439 = (int) local30[0] - Static225.anInt5068 * 128;
-		Static134.anInt3302 = (int) local30[2] - Static142.anInt3483 * 128;
+		Static138.anInt3439 = (int) local30[0] - Static225.originX * 128;
+		Static134.anInt3302 = (int) local30[2] - Static142.originZ * 128;
 		@Pc(226) float[] local226 = new float[3];
 		local141 = Static75.anInt2119 * 2;
 		for (local131 = 0; local131 < 3; local131++) {
@@ -136,10 +136,10 @@ public final class Static40 {
 		local8.p2(arg1);
 		local8.p4((int) (Math.random() * 9.9999999E7D));
 		local8.encryptRsa(Static86.aBigInteger1, Static256.aBigInteger2);
-		Static6.aClass3_Sub15_Sub1_1.offset = 0;
-		Static6.aClass3_Sub15_Sub1_1.p1(36);
-		Static6.aClass3_Sub15_Sub1_1.p1(local8.offset);
-		Static6.aClass3_Sub15_Sub1_1.pBytes(local8.data, local8.offset);
+		Static6.outboundBuffer.offset = 0;
+		Static6.outboundBuffer.p1(36);
+		Static6.outboundBuffer.p1(local8.offset);
+		Static6.outboundBuffer.pBytes(local8.data, local8.offset);
 		Static223.anInt5034 = -3;
 		Static179.anInt4261 = 1;
 		Static226.anInt5079 = 0;

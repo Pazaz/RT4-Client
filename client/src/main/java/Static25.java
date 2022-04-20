@@ -12,20 +12,20 @@ public final class Static25 {
 	public static final JagString aClass100_154 = Static28.parse("Mem:");
 
 	@OriginalMember(owner = "client!c", name = "eb", descriptor = "I")
-	public static int anInt826 = 0;
+	public static int y = 0;
 
 	@OriginalMember(owner = "client!c", name = "hb", descriptor = "Z")
 	public static boolean aBoolean57 = false;
 
 	@OriginalMember(owner = "client!c", name = "d", descriptor = "(I)Z")
-	public static boolean method712() {
+	public static boolean nextKey() {
 		@Pc(6) Keyboard local6 = Static10.aClass149_1;
 		synchronized (Static10.aClass149_1) {
 			if (Static228.anInt5105 == Static102.anInt2678) {
 				return false;
 			} else {
-				Static102.anInt2681 = Static221.anIntArray375[Static102.anInt2678];
-				Static193.anInt4542 = Static264.anIntArray413[Static102.anInt2678];
+				Static102.keyCode = Static221.anIntArray375[Static102.anInt2678];
+				Static193.keyChar = Static264.anIntArray413[Static102.anInt2678];
 				Static102.anInt2678 = Static102.anInt2678 + 1 & 0x7F;
 				return true;
 			}

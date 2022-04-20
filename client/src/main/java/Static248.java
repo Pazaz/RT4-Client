@@ -20,7 +20,7 @@ public final class Static248 {
 	@OriginalMember(owner = "client!uc", name = "a", descriptor = "(IB)Z")
 	public static boolean method3288(@OriginalArg(0) int arg0) {
 		Static189.anInt4443 = arg0 + 1 & 0xFFFF;
-		Static34.aBoolean65 = true;
+		Static34.verifyIdChanged = true;
 		return true;
 	}
 

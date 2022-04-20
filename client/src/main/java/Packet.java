@@ -59,7 +59,7 @@ public final class Packet extends Buffer {
 	}
 
 	@OriginalMember(owner = "client!i", name = "r", descriptor = "(II)V")
-	public final void method2242(@OriginalArg(1) int arg0) {
+	public final void p1isaac(@OriginalArg(1) int arg0) {
 		this.data[this.offset++] = (byte) (arg0 + this.aClass71_1.method2295());
 	}
 

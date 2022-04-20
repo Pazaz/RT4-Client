@@ -36,7 +36,7 @@ public final class Static134 {
 
 	@OriginalMember(owner = "client!kh", name = "b", descriptor = "(I)V")
 	public static void method2623() {
-		Static6.aClass3_Sub15_Sub1_1.method2242(104);
-		Static6.aClass3_Sub15_Sub1_1.p8(0L);
+		Static6.outboundBuffer.p1isaac(104);
+		Static6.outboundBuffer.p8(0L);
 	}
 }

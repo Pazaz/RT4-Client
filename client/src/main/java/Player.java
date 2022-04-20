@@ -157,8 +157,8 @@ public final class Player extends PathingEntity {
 		local175 = this.aClass59_1.anInt2492;
 		this.aClass59_1.method1950(local197, local22, local26 == 1, local44, this.anInt3365);
 		if (local175 != local22) {
-			this.anInt3412 = this.anIntArray318[0] * 128 + this.method2693() * 64;
-			this.anInt3421 = this.anIntArray317[0] * 128 + this.method2693() * 64;
+			this.anInt3412 = this.movementQueueX[0] * 128 + this.method2693() * 64;
+			this.anInt3421 = this.movementQueueZ[0] * 128 + this.method2693() * 64;
 		}
 		if (this.aClass47_Sub1_5 != null) {
 			this.aClass47_Sub1_5.method1646();
@@ -209,7 +209,7 @@ public final class Player extends PathingEntity {
 				local184.method4546(0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, -1L, arg9, null);
 			}
 		}
-		if (Static173.aClass8_Sub4_Sub1_2 == this) {
+		if (Static173.self == this) {
 			for (local102 = Static143.aClass102Array1.length - 1; local102 >= 0; local102--) {
 				@Pc(245) Class102 local245 = Static143.aClass102Array1[local102];
 				if (local245 != null && local245.anInt4052 != -1) {
@@ -218,21 +218,21 @@ public final class Player extends PathingEntity {
 					if (local245.anInt4058 == 1 && local245.anInt4057 >= 0 && Static175.aClass8_Sub4_Sub2Array1.length > local245.anInt4057) {
 						@Pc(278) Npc local278 = Static175.aClass8_Sub4_Sub2Array1[local245.anInt4057];
 						if (local278 != null) {
-							local291 = local278.anInt3412 / 32 - Static173.aClass8_Sub4_Sub1_2.anInt3412 / 32;
-							local302 = local278.anInt3421 / 32 - Static173.aClass8_Sub4_Sub1_2.anInt3421 / 32;
+							local291 = local278.anInt3412 / 32 - Static173.self.anInt3412 / 32;
+							local302 = local278.anInt3421 / 32 - Static173.self.anInt3421 / 32;
 							this.method1263(null, local302, local76, local291, arg5, arg9, arg0, arg7, arg4, arg3, arg1, local245.anInt4052, arg2, arg6);
 						}
 					}
 					if (local245.anInt4058 == 2) {
-						@Pc(340) int local340 = (local245.anInt4053 - Static225.anInt5068) * 4 + 2 - Static173.aClass8_Sub4_Sub1_2.anInt3412 / 32;
-						local291 = (local245.anInt4046 - Static142.anInt3483) * 4 + 2 - Static173.aClass8_Sub4_Sub1_2.anInt3421 / 32;
+						@Pc(340) int local340 = (local245.anInt4053 - Static225.originX) * 4 + 2 - Static173.self.anInt3412 / 32;
+						local291 = (local245.anInt4046 - Static142.originZ) * 4 + 2 - Static173.self.anInt3421 / 32;
 						this.method1263(null, local291, local76, local340, arg5, arg9, arg0, arg7, arg4, arg3, arg1, local245.anInt4052, arg2, arg6);
 					}
 					if (local245.anInt4058 == 10 && local245.anInt4057 >= 0 && Static159.aClass8_Sub4_Sub1Array1.length > local245.anInt4057) {
 						@Pc(395) Player local395 = Static159.aClass8_Sub4_Sub1Array1[local245.anInt4057];
 						if (local395 != null) {
-							local291 = local395.anInt3412 / 32 - Static173.aClass8_Sub4_Sub1_2.anInt3412 / 32;
-							local302 = local395.anInt3421 / 32 - Static173.aClass8_Sub4_Sub1_2.anInt3421 / 32;
+							local291 = local395.anInt3412 / 32 - Static173.self.anInt3412 / 32;
+							local302 = local395.anInt3421 / 32 - Static173.self.anInt3421 / 32;
 							this.method1263(null, local302, local76, local291, arg5, arg9, arg0, arg7, arg4, arg3, arg1, local245.anInt4052, arg2, arg6);
 						}
 					}

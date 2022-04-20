@@ -45,7 +45,7 @@ public final class Static263 {
 		if (local8.anObjectArray29 != null) {
 			@Pc(19) HookRequest local19 = new HookRequest();
 			local19.anObjectArray31 = local8.anObjectArray29;
-			local19.aClass13_17 = local8;
+			local19.source = local8;
 			local19.aClass100_598 = arg0;
 			local19.anInt3101 = arg2;
 			Static82.method1767(local19);
@@ -58,54 +58,54 @@ public final class Static263 {
 			return;
 		}
 		if (arg2 == 1) {
-			Static6.aClass3_Sub15_Sub1_1.method2242(155);
-			Static6.aClass3_Sub15_Sub1_1.p4(arg3);
-			Static6.aClass3_Sub15_Sub1_1.p2(arg1);
+			Static6.outboundBuffer.p1isaac(155);
+			Static6.outboundBuffer.p4(arg3);
+			Static6.outboundBuffer.p2(arg1);
 		}
 		if (arg2 == 2) {
-			Static6.aClass3_Sub15_Sub1_1.method2242(196);
-			Static6.aClass3_Sub15_Sub1_1.p4(arg3);
-			Static6.aClass3_Sub15_Sub1_1.p2(arg1);
+			Static6.outboundBuffer.p1isaac(196);
+			Static6.outboundBuffer.p4(arg3);
+			Static6.outboundBuffer.p2(arg1);
 		}
 		if (arg2 == 3) {
-			Static6.aClass3_Sub15_Sub1_1.method2242(124);
-			Static6.aClass3_Sub15_Sub1_1.p4(arg3);
-			Static6.aClass3_Sub15_Sub1_1.p2(arg1);
+			Static6.outboundBuffer.p1isaac(124);
+			Static6.outboundBuffer.p4(arg3);
+			Static6.outboundBuffer.p2(arg1);
 		}
 		if (arg2 == 4) {
-			Static6.aClass3_Sub15_Sub1_1.method2242(199);
-			Static6.aClass3_Sub15_Sub1_1.p4(arg3);
-			Static6.aClass3_Sub15_Sub1_1.p2(arg1);
+			Static6.outboundBuffer.p1isaac(199);
+			Static6.outboundBuffer.p4(arg3);
+			Static6.outboundBuffer.p2(arg1);
 		}
 		if (arg2 == 5) {
-			Static6.aClass3_Sub15_Sub1_1.method2242(234);
-			Static6.aClass3_Sub15_Sub1_1.p4(arg3);
-			Static6.aClass3_Sub15_Sub1_1.p2(arg1);
+			Static6.outboundBuffer.p1isaac(234);
+			Static6.outboundBuffer.p4(arg3);
+			Static6.outboundBuffer.p2(arg1);
 		}
 		if (arg2 == 6) {
-			Static6.aClass3_Sub15_Sub1_1.method2242(168);
-			Static6.aClass3_Sub15_Sub1_1.p4(arg3);
-			Static6.aClass3_Sub15_Sub1_1.p2(arg1);
+			Static6.outboundBuffer.p1isaac(168);
+			Static6.outboundBuffer.p4(arg3);
+			Static6.outboundBuffer.p2(arg1);
 		}
 		if (arg2 == 7) {
-			Static6.aClass3_Sub15_Sub1_1.method2242(166);
-			Static6.aClass3_Sub15_Sub1_1.p4(arg3);
-			Static6.aClass3_Sub15_Sub1_1.p2(arg1);
+			Static6.outboundBuffer.p1isaac(166);
+			Static6.outboundBuffer.p4(arg3);
+			Static6.outboundBuffer.p2(arg1);
 		}
 		if (arg2 == 8) {
-			Static6.aClass3_Sub15_Sub1_1.method2242(64);
-			Static6.aClass3_Sub15_Sub1_1.p4(arg3);
-			Static6.aClass3_Sub15_Sub1_1.p2(arg1);
+			Static6.outboundBuffer.p1isaac(64);
+			Static6.outboundBuffer.p4(arg3);
+			Static6.outboundBuffer.p2(arg1);
 		}
 		if (arg2 == 9) {
-			Static6.aClass3_Sub15_Sub1_1.method2242(53);
-			Static6.aClass3_Sub15_Sub1_1.p4(arg3);
-			Static6.aClass3_Sub15_Sub1_1.p2(arg1);
+			Static6.outboundBuffer.p1isaac(53);
+			Static6.outboundBuffer.p4(arg3);
+			Static6.outboundBuffer.p2(arg1);
 		}
 		if (arg2 == 10) {
-			Static6.aClass3_Sub15_Sub1_1.method2242(9);
-			Static6.aClass3_Sub15_Sub1_1.p4(arg3);
-			Static6.aClass3_Sub15_Sub1_1.p2(arg1);
+			Static6.outboundBuffer.p1isaac(9);
+			Static6.outboundBuffer.p4(arg3);
+			Static6.outboundBuffer.p2(arg1);
 		}
 	}
 
@@ -123,17 +123,17 @@ public final class Static263 {
 			arg1.anInt3432 = -1;
 			arg1.anInt3395 = 0;
 			arg1.anInt3386 = 0;
-			arg1.anInt3412 = arg1.anIntArray318[0] * 128 + arg1.method2693() * 64;
-			arg1.anInt3421 = arg1.anIntArray317[0] * 128 + arg1.method2693() * 64;
+			arg1.anInt3412 = arg1.movementQueueX[0] * 128 + arg1.method2693() * 64;
+			arg1.anInt3421 = arg1.movementQueueZ[0] * 128 + arg1.method2693() * 64;
 			arg1.method2689();
 		}
-		if (arg1 == Static173.aClass8_Sub4_Sub1_2 && (arg1.anInt3412 < 1536 || arg1.anInt3421 < 1536 || arg1.anInt3412 >= 11776 || arg1.anInt3421 >= 11776)) {
+		if (arg1 == Static173.self && (arg1.anInt3412 < 1536 || arg1.anInt3421 < 1536 || arg1.anInt3412 >= 11776 || arg1.anInt3421 >= 11776)) {
 			arg1.anInt3432 = -1;
 			arg1.anInt3395 = 0;
 			arg1.anInt3386 = 0;
 			arg1.anInt3369 = -1;
-			arg1.anInt3412 = arg1.anIntArray318[0] * 128 + arg1.method2693() * 64;
-			arg1.anInt3421 = arg1.anIntArray317[0] * 128 + arg1.method2693() * 64;
+			arg1.anInt3412 = arg1.movementQueueX[0] * 128 + arg1.method2693() * 64;
+			arg1.anInt3421 = arg1.movementQueueZ[0] * 128 + arg1.method2693() * 64;
 			arg1.method2689();
 		}
 		Static37.method949(arg1);

@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class PrivilegedRequest {
 
 	@OriginalMember(owner = "signlink!im", name = "e", descriptor = "Ljava/lang/Object;")
-	public volatile Object anObject6;
+	public volatile Object result;
 
 	@OriginalMember(owner = "signlink!im", name = "f", descriptor = "I")
 	public int anInt5924;

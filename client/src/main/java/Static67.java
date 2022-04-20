@@ -12,7 +12,7 @@ public final class Static67 {
 	public static final JagString aClass100_639 = Static28.parse(" ");
 
 	@OriginalMember(owner = "client!fe", name = "R", descriptor = "Z")
-	public static boolean aBoolean168 = true;
+	public static boolean prevFocus = true;
 
 	@OriginalMember(owner = "client!fe", name = "jb", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable aClass99_20 = new SoftLruHashTable(64);

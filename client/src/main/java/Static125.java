@@ -31,12 +31,12 @@ public final class Static125 {
 
 	@OriginalMember(owner = "client!jl", name = "a", descriptor = "(IIIII)V")
 	public static void method2448(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		Static6.aClass3_Sub15_Sub1_1.offset = 0;
-		Static6.aClass3_Sub15_Sub1_1.p1(147);
-		Static6.aClass3_Sub15_Sub1_1.p1(arg2);
-		Static6.aClass3_Sub15_Sub1_1.p1(arg3);
-		Static6.aClass3_Sub15_Sub1_1.p2(arg0);
-		Static6.aClass3_Sub15_Sub1_1.p2(arg1);
+		Static6.outboundBuffer.offset = 0;
+		Static6.outboundBuffer.p1(147);
+		Static6.outboundBuffer.p1(arg2);
+		Static6.outboundBuffer.p1(arg3);
+		Static6.outboundBuffer.p2(arg0);
+		Static6.outboundBuffer.p2(arg1);
 		Static226.anInt5079 = 0;
 		Static57.anInt1758 = 0;
 		Static179.anInt4261 = 1;
@@ -62,11 +62,11 @@ public final class Static125 {
 	public static void method2450() {
 		@Pc(9) int local9 = Static248.anInt4232 * 128 + 64;
 		@Pc(15) int local15 = Static245.anInt5375 * 128 + 64;
-		@Pc(23) int local23 = Static207.method3685(Static55.anInt1735, local15, local9) - Static231.anInt5203;
+		@Pc(23) int local23 = Static207.method3685(Static55.level, local15, local9) - Static231.anInt5203;
 		if (Static113.anInt4612 >= 100) {
 			Static138.anInt3439 = Static245.anInt5375 * 128 + 64;
 			Static134.anInt3302 = Static248.anInt4232 * 128 + 64;
-			Static5.anInt40 = Static207.method3685(Static55.anInt1735, Static138.anInt3439, Static134.anInt3302) - Static231.anInt5203;
+			Static5.anInt40 = Static207.method3685(Static55.level, Static138.anInt3439, Static134.anInt3302) - Static231.anInt5203;
 		} else {
 			if (Static138.anInt3439 < local15) {
 				Static138.anInt3439 += Static233.anInt5225 + Static113.anInt4612 * (local15 - Static138.anInt3439) / 1000;
@@ -107,7 +107,7 @@ public final class Static125 {
 		}
 		local9 = Static265.anInt5765 * 128 + 64;
 		local15 = Static251.anInt5449 * 128 + 64;
-		local23 = Static207.method3685(Static55.anInt1735, local15, local9) - Static57.anInt1744;
+		local23 = Static207.method3685(Static55.level, local15, local9) - Static57.anInt1744;
 		@Pc(236) int local236 = local23 - Static5.anInt40;
 		@Pc(241) int local241 = local9 - Static134.anInt3302;
 		@Pc(246) int local246 = local15 - Static138.anInt3439;

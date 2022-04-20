@@ -14,8 +14,8 @@ public final class Static256 {
 	@OriginalMember(owner = "client!um", name = "a", descriptor = "(Z)V")
 	public static void method4392() {
 		Static11.anInt384 = 0;
-		@Pc(17) int local17 = Static225.anInt5068 + (Static173.aClass8_Sub4_Sub1_2.anInt3412 >> 7);
-		@Pc(25) int local25 = (Static173.aClass8_Sub4_Sub1_2.anInt3421 >> 7) + Static142.anInt3483;
+		@Pc(17) int local17 = Static225.originX + (Static173.self.anInt3412 >> 7);
+		@Pc(25) int local25 = (Static173.self.anInt3421 >> 7) + Static142.originZ;
 		if (local17 >= 3053 && local17 <= 3156 && local25 >= 3056 && local25 <= 3136) {
 			Static11.anInt384 = 1;
 		}

@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static178 {
 
 	@OriginalMember(owner = "client!od", name = "f", descriptor = "Lclient!jd;")
-	public static MouseRecorder aClass74_1;
+	public static MouseRecorder instance;
 
 	@OriginalMember(owner = "client!od", name = "c", descriptor = "Z")
 	public static boolean aBoolean202 = true;
@@ -36,8 +36,8 @@ public final class Static178 {
 			local24++;
 		}
 		if (local24 < Static199.aClass3_Sub22Array1.length && Static199.aClass3_Sub22Array1[local24] != null) {
-			Static6.aClass3_Sub15_Sub1_1.method2242(162);
-			Static6.aClass3_Sub15_Sub1_1.p8(Static199.aClass3_Sub22Array1[local24].aLong192);
+			Static6.outboundBuffer.p1isaac(162);
+			Static6.outboundBuffer.p8(Static199.aClass3_Sub22Array1[local24].aLong192);
 		}
 	}
 

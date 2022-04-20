@@ -136,7 +136,7 @@ public final class Static38 {
 	}
 
 	@OriginalMember(owner = "client!cn", name = "a", descriptor = "(ZI)I")
-	public static int method963(@OriginalArg(0) boolean arg0) {
+	public static int poll(@OriginalArg(0) boolean arg0) {
 		@Pc(4) long local4 = MonotonicClock.currentTimeMillis();
 		for (@Pc(28) LongNode local28 = arg0 ? (LongNode) Static199.aClass133_20.method3859() : (LongNode) Static199.aClass133_20.method3861(); local28 != null; local28 = (LongNode) Static199.aClass133_20.method3861()) {
 			if ((local28.aLong55 & 0x3FFFFFFFFFFFFFFFL) < local4) {
@@ -155,7 +155,7 @@ public final class Static38 {
 	@OriginalMember(owner = "client!cn", name = "b", descriptor = "(ZI)V")
 	public static void method964(@OriginalArg(0) boolean arg0) {
 		@Pc(3) int local3 = Static267.anInt5774;
-		if (Static115.anInt2939 == Static173.aClass8_Sub4_Sub1_2.anInt3412 >> 7 && Static173.aClass8_Sub4_Sub1_2.anInt3421 >> 7 == Static84.anInt2255) {
+		if (Static115.anInt2939 == Static173.self.anInt3412 >> 7 && Static173.self.anInt3421 >> 7 == Static84.anInt2255) {
 			Static115.anInt2939 = 0;
 		}
 		if (arg0) {
@@ -171,7 +171,7 @@ public final class Static38 {
 		@Pc(106) int local106;
 		for (local28 = 0; local28 < local3; local28++) {
 			if (arg0) {
-				local39 = Static173.aClass8_Sub4_Sub1_2;
+				local39 = Static173.self;
 			} else {
 				local39 = Static159.aClass8_Sub4_Sub1Array1[Static105.anIntArray256[local28]];
 			}
@@ -214,7 +214,7 @@ public final class Static38 {
 		label220: for (local28 = 0; local28 < local3; local28++) {
 			@Pc(272) long local272;
 			if (arg0) {
-				local39 = Static173.aClass8_Sub4_Sub1_2;
+				local39 = Static173.self;
 				local272 = 8791798054912L;
 			} else {
 				local39 = Static159.aClass8_Sub4_Sub1Array1[Static105.anIntArray256[local28]];
@@ -280,12 +280,12 @@ public final class Static38 {
 					}
 				}
 				if (local39.anObject5 == null || Static83.anInt372 < local39.anInt3390 || local39.anInt3375 <= Static83.anInt372) {
-					local39.anInt3424 = Static207.method3685(Static55.anInt1735, local39.anInt3412, local39.anInt3421);
-					Static43.method1141(Static55.anInt1735, local39.anInt3412, local39.anInt3421, local39.anInt3424, (local82 - 1) * 64 + 60, local39, local39.anInt3381, local272, local39.aBoolean171);
+					local39.anInt3424 = Static207.method3685(Static55.level, local39.anInt3412, local39.anInt3421);
+					Static43.method1141(Static55.level, local39.anInt3412, local39.anInt3421, local39.anInt3424, (local82 - 1) * 64 + 60, local39, local39.anInt3381, local272, local39.aBoolean171);
 				} else {
 					local39.aBoolean98 = false;
-					local39.anInt3424 = Static207.method3685(Static55.anInt1735, local39.anInt3412, local39.anInt3421);
-					Static184.method3387(Static55.anInt1735, local39.anInt3412, local39.anInt3421, local39.anInt3424, local39, local39.anInt3381, local272, local39.anInt3384, local39.anInt3374, local39.anInt3411, local39.anInt3410);
+					local39.anInt3424 = Static207.method3685(Static55.level, local39.anInt3412, local39.anInt3421);
+					Static184.method3387(Static55.level, local39.anInt3412, local39.anInt3421, local39.anInt3424, local39, local39.anInt3381, local272, local39.anInt3384, local39.anInt3374, local39.anInt3411, local39.anInt3410);
 				}
 			}
 		}

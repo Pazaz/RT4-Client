@@ -14,7 +14,7 @@ public final class Static150 {
 	public static int anInt3582 = 0;
 
 	@OriginalMember(owner = "client!lk", name = "Z", descriptor = "I")
-	public static int anInt3585 = 0;
+	public static int clickButton = 0;
 
 	@OriginalMember(owner = "client!lk", name = "a", descriptor = "(ILclient!ve;)I")
 	public static int method2797(@OriginalArg(1) Js5 arg0) {
@@ -38,16 +38,16 @@ public final class Static150 {
 		@Pc(4) int local4 = arg2.anInt445;
 		@Pc(7) int local7 = arg2.anInt459;
 		if (arg2.aByte5 == 0) {
-			arg2.anInt445 = arg2.anInt446;
+			arg2.anInt445 = arg2.baseWidth;
 		} else if (arg2.aByte5 == 1) {
-			arg2.anInt445 = arg1 - arg2.anInt446;
+			arg2.anInt445 = arg1 - arg2.baseWidth;
 		} else if (arg2.aByte5 == 2) {
-			arg2.anInt445 = arg2.anInt446 * arg1 >> 14;
+			arg2.anInt445 = arg2.baseWidth * arg1 >> 14;
 		} else if (arg2.aByte5 == 3) {
 			if (arg2.anInt452 == 2) {
-				arg2.anInt445 = arg2.anInt446 * 32 + (arg2.anInt446 - 1) * arg2.anInt512;
+				arg2.anInt445 = arg2.baseWidth * 32 + (arg2.baseWidth - 1) * arg2.anInt512;
 			} else if (arg2.anInt452 == 7) {
-				arg2.anInt445 = arg2.anInt446 * 115 + arg2.anInt512 * (arg2.anInt446 - 1);
+				arg2.anInt445 = arg2.baseWidth * 115 + arg2.anInt512 * (arg2.baseWidth - 1);
 			}
 		}
 		if (arg2.aByte3 == 0) {
@@ -88,7 +88,7 @@ public final class Static150 {
 		if (arg3 && arg2.anObjectArray17 != null && (local4 != arg2.anInt445 || arg2.anInt459 != local7)) {
 			@Pc(305) HookRequest local305 = new HookRequest();
 			local305.anObjectArray31 = arg2.anObjectArray17;
-			local305.aClass13_17 = arg2;
+			local305.source = arg2;
 			Static185.aClass69_101.method2282(local305);
 		}
 	}

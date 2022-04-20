@@ -11,7 +11,7 @@ public final class Static155 {
 	public static int anInt3718 = -1;
 
 	@OriginalMember(owner = "client!me", name = "P", descriptor = "[I")
-	public static final int[] anIntArray355 = new int[2000];
+	public static final int[] varcs = new int[2000];
 
 	@OriginalMember(owner = "client!me", name = "a", descriptor = "(IB)V")
 	public static void method2940(@OriginalArg(0) int arg0) {

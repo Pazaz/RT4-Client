@@ -80,7 +80,7 @@ public final class Static65 {
 			@Pc(23) int local23;
 			if (Static114.anInt5844 < 0) {
 				for (local23 = 0; local23 < 112; local23++) {
-					Static187.aBooleanArray101[local23] = false;
+					Static187.pressedKeys[local23] = false;
 				}
 				Static114.anInt5844 = Static227.anInt5087;
 			} else {
@@ -88,9 +88,9 @@ public final class Static65 {
 					local23 = Static17.anIntArray53[Static227.anInt5087];
 					Static227.anInt5087 = Static227.anInt5087 + 1 & 0x7F;
 					if (local23 >= 0) {
-						Static187.aBooleanArray101[local23] = true;
+						Static187.pressedKeys[local23] = true;
 					} else {
-						Static187.aBooleanArray101[~local23] = false;
+						Static187.pressedKeys[~local23] = false;
 					}
 				}
 			}

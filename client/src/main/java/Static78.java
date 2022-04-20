@@ -35,9 +35,9 @@ public final class Static78 {
 
 	@OriginalMember(owner = "client!gd", name = "a", descriptor = "(JI)V")
 	public static void method1691(@OriginalArg(0) long arg0) {
-		Static6.aClass3_Sub15_Sub1_1.offset = 0;
-		Static6.aClass3_Sub15_Sub1_1.p1(186);
-		Static6.aClass3_Sub15_Sub1_1.p8(arg0);
+		Static6.outboundBuffer.offset = 0;
+		Static6.outboundBuffer.p1(186);
+		Static6.outboundBuffer.p8(arg0);
 		Static179.anInt4261 = 1;
 		Static226.anInt5079 = 0;
 		Static57.anInt1758 = 0;
@@ -125,8 +125,8 @@ public final class Static78 {
 		for (local14 = 0; local14 < Static273.aByteArrayArray13.length; local14++) {
 			@Pc(294) byte[] local294 = Static156.aByteArrayArray11[local14];
 			if (local294 != null) {
-				local309 = (Static238.anIntArray470[local14] & 0xFF) * 64 - Static142.anInt3483;
-				local320 = (Static238.anIntArray470[local14] >> 8) * 64 - Static225.anInt5068;
+				local309 = (Static238.anIntArray470[local14] & 0xFF) * 64 - Static142.originZ;
+				local320 = (Static238.anIntArray470[local14] >> 8) * 64 - Static225.originX;
 				if (Static230.aBoolean250) {
 					local309 = 10;
 					local320 = 10;
@@ -136,8 +136,8 @@ public final class Static78 {
 			if (Static239.aBoolean269) {
 				local294 = Static19.aByteArrayArray4[local14];
 				if (local294 != null) {
-					local320 = (Static238.anIntArray470[local14] >> 8) * 64 - Static225.anInt5068;
-					local309 = (Static238.anIntArray470[local14] & 0xFF) * 64 - Static142.anInt3483;
+					local320 = (Static238.anIntArray470[local14] >> 8) * 64 - Static225.originX;
+					local309 = (Static238.anIntArray470[local14] & 0xFF) * 64 - Static142.originZ;
 					if (Static230.aBoolean250) {
 						local309 = 10;
 						local320 = 10;
@@ -199,8 +199,8 @@ public final class Static78 {
 			Static87.method1805(false);
 			Static7.method842(true);
 			if (Static239.aBoolean269) {
-				local427 = Static173.aClass8_Sub4_Sub1_2.anIntArray318[0] >> 3;
-				local320 = Static173.aClass8_Sub4_Sub1_2.anIntArray317[0] >> 3;
+				local427 = Static173.self.movementQueueX[0] >> 3;
+				local320 = Static173.self.movementQueueZ[0] >> 3;
 				Static73.method1597(local320, local427);
 			}
 			Static26.method743(false);
@@ -212,8 +212,8 @@ public final class Static78 {
 			Static89.method1835(false);
 			Static7.method842(true);
 			if (Static239.aBoolean269) {
-				local427 = Static173.aClass8_Sub4_Sub1_2.anIntArray318[0] >> 3;
-				local320 = Static173.aClass8_Sub4_Sub1_2.anIntArray317[0] >> 3;
+				local427 = Static173.self.movementQueueX[0] >> 3;
+				local320 = Static173.self.movementQueueZ[0] >> 3;
 				Static73.method1597(local320, local427);
 			}
 			Static233.method4002(false);
@@ -226,10 +226,10 @@ public final class Static78 {
 		}
 		Static7.method842(true);
 		local427 = Static146.anInt3508;
-		if (local427 > Static55.anInt1735) {
-			local427 = Static55.anInt1735;
+		if (local427 > Static55.level) {
+			local427 = Static55.level;
 		}
-		if (local427 < Static55.anInt1735 - 1) {
+		if (local427 < Static55.level - 1) {
 		}
 		if (Static138.method2697()) {
 			Static146.method2750(0);
@@ -274,9 +274,9 @@ public final class Static78 {
 		Static219.method3796();
 		Static217.method3768();
 		Static231.aBoolean252 = false;
-		if (Static39.aFrame1 != null && Static124.aClass95_2 != null && Static244.anInt5370 == 25) {
-			Static6.aClass3_Sub15_Sub1_1.method2242(20);
-			Static6.aClass3_Sub15_Sub1_1.p4(1057001181);
+		if (Static39.aFrame1 != null && Static124.socket != null && Static244.anInt5370 == 25) {
+			Static6.outboundBuffer.p1isaac(20);
+			Static6.outboundBuffer.p4(1057001181);
 		}
 		if (!Static230.aBoolean250) {
 			@Pc(815) int local815 = (Static52.anInt1695 + 6) / 8;
@@ -296,8 +296,8 @@ public final class Static78 {
 			Static196.method3534(10);
 		} else {
 			Static196.method3534(30);
-			if (Static124.aClass95_2 != null) {
-				Static6.aClass3_Sub15_Sub1_1.method2242(110);
+			if (Static124.socket != null) {
+				Static6.outboundBuffer.p1isaac(110);
 			}
 		}
 		Static141.method2720();

@@ -21,7 +21,7 @@ public final class Static154 {
 	public static final short[][] aShortArrayArray6 = new short[][] { { 6798, 107, 10283, 16, 4797, 7744, 5799, 4634, -31839, 22433, 2983, -11343, 8, 5281, 10438, 3650, -27322, -21845, 200, 571, 908, 21830, 28946, -15701, -14010 }, { 8741, 12, -1506, -22374, 7735, 8404, 1701, -27106, 24094, 10153, -8915, 4783, 1341, 16578, -30533, 25239, 8, 5281, 10438, 3650, -27322, -21845, 200, 571, 908, 21830, 28946, -15701, -14010 }, { 25238, 8742, 12, -1506, -22374, 7735, 8404, 1701, -27106, 24094, 10153, -8915, 4783, 1341, 16578, -30533, 8, 5281, 10438, 3650, -27322, -21845, 200, 571, 908, 21830, 28946, -15701, -14010 }, { 4626, 11146, 6439, 12, 4758, 10270 }, { 4550, 4537, 5681, 5673, 5790, 6806, 8076, 4574 } };
 
 	@OriginalMember(owner = "client!md", name = "W", descriptor = "I")
-	public static int anInt3711 = -1;
+	public static int topLevelInterace = -1;
 
 	@OriginalMember(owner = "client!md", name = "a", descriptor = "(Lclient!be;I)Z")
 	public static boolean method2926(@OriginalArg(0) Component arg0) {
@@ -62,7 +62,7 @@ public final class Static154 {
 		Static62.anInt1941++;
 		Static26.anIntArray67[0] = arg1;
 		Static153.aClass100Array112[0] = arg4;
-		Static49.anInt1464 = Static119.anInt3028;
+		Static49.anInt1464 = Static119.transmitTimer;
 		Static241.anIntArray521[0] = arg0;
 		Static230.aClass100Array158[0] = arg2;
 		Static64.aClass100Array62[0] = arg3;

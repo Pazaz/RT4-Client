@@ -76,7 +76,7 @@ public final class Static64 {
 				return;
 			}
 		}
-		if (local35.method3108(Static173.aClass8_Sub4_Sub1_2.aClass100_364)) {
+		if (local35.method3108(Static173.self.aClass100_364)) {
 			Static103.method2231(Static186.aClass100_827, 0, LocalizedText.FRIENDCANTADDSELF);
 			return;
 		}
@@ -87,8 +87,8 @@ public final class Static64 {
 		Static106.anIntArray258[Static9.anInt178] = 0;
 		Static3.aBooleanArray135[Static9.anInt178] = false;
 		Static9.anInt178++;
-		Static185.anInt4369 = Static119.anInt3028;
-		Static6.aClass3_Sub15_Sub1_1.method2242(120);
-		Static6.aClass3_Sub15_Sub1_1.p8(arg0);
+		Static185.anInt4369 = Static119.transmitTimer;
+		Static6.outboundBuffer.p1isaac(120);
+		Static6.outboundBuffer.p8(arg0);
 	}
 }

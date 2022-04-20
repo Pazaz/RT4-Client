@@ -91,7 +91,7 @@ public final class Static53 {
 		if (local19 != null && local19.anObjectArray27 != null) {
 			@Pc(29) HookRequest local29 = new HookRequest();
 			local29.anObjectArray31 = local19.anObjectArray27;
-			local29.aClass13_17 = local19;
+			local29.source = local19;
 			Static82.method1767(local29);
 		}
 		Static241.aBoolean302 = false;

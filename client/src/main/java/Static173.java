@@ -14,7 +14,7 @@ public final class Static173 {
 	public static SoftwareSprite[] aClass3_Sub2_Sub1_Sub1Array9;
 
 	@OriginalMember(owner = "client!nk", name = "O", descriptor = "Lclient!e;")
-	public static Player aClass8_Sub4_Sub1_2;
+	public static Player self;
 
 	@OriginalMember(owner = "client!nk", name = "n", descriptor = "[Lclient!sl;")
 	public static final SynthSound[] aClass138Array1 = new SynthSound[50];
@@ -128,8 +128,8 @@ public final class Static173 {
 				if (!local16.aClass96_1.aBoolean183) {
 					local262 |= Long.MIN_VALUE;
 				}
-				local16.anInt3424 = Static207.method3685(Static55.anInt1735, local16.anInt3412, local16.anInt3421);
-				Static43.method1141(Static55.anInt1735, local16.anInt3412, local16.anInt3421, local16.anInt3424, local107 * 64 + 60 - 64, local16, local16.anInt3381, local262, local16.aBoolean171);
+				local16.anInt3424 = Static207.method3685(Static55.level, local16.anInt3412, local16.anInt3421);
+				Static43.method1141(Static55.level, local16.anInt3412, local16.anInt3421, local16.anInt3424, local107 * 64 + 60 - 64, local16, local16.anInt3381, local262, local16.aBoolean171);
 			}
 		}
 	}

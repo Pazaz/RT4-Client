@@ -76,7 +76,7 @@ public final class Static80 {
 				Static231.method3983(1L);
 			}
 			if (local78.status == 1) {
-				local48 = (FileOnDisk) local78.anObject6;
+				local48 = (FileOnDisk) local78.result;
 				@Pc(106) byte[] local106 = new byte[(int) local48.method5137()];
 				@Pc(128) int local128;
 				for (@Pc(108) int local108 = 0; local108 < local106.length; local108 += local128) {
@@ -100,22 +100,22 @@ public final class Static80 {
 	@OriginalMember(owner = "client!gf", name = "a", descriptor = "(BII)V")
 	public static void method3616(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
 		Static142.anInt3482 = arg0 - Static158.anInt3846;
-		@Pc(24) int local24 = Static142.anInt3482 - (int) ((float) Static24.aClass13_8.anInt445 / Static83.aFloat3);
-		@Pc(33) int local33 = Static142.anInt3482 + (int) ((float) Static24.aClass13_8.anInt445 / Static83.aFloat3);
+		@Pc(24) int local24 = Static142.anInt3482 - (int) ((float) Static24.component.anInt445 / Static83.aFloat3);
+		@Pc(33) int local33 = Static142.anInt3482 + (int) ((float) Static24.component.anInt445 / Static83.aFloat3);
 		if (local24 < 0) {
-			Static142.anInt3482 = (int) ((float) Static24.aClass13_8.anInt445 / Static83.aFloat3);
+			Static142.anInt3482 = (int) ((float) Static24.component.anInt445 / Static83.aFloat3);
 		}
 		Static217.anInt4901 = Static181.anInt4296 + Static2.anInt13 - arg1 - 1;
-		@Pc(61) int local61 = (int) ((float) Static24.aClass13_8.anInt459 / Static83.aFloat3) + Static217.anInt4901;
-		@Pc(70) int local70 = Static217.anInt4901 - (int) ((float) Static24.aClass13_8.anInt459 / Static83.aFloat3);
+		@Pc(61) int local61 = (int) ((float) Static24.component.anInt459 / Static83.aFloat3) + Static217.anInt4901;
+		@Pc(70) int local70 = Static217.anInt4901 - (int) ((float) Static24.component.anInt459 / Static83.aFloat3);
 		if (local33 > Static48.anInt1449) {
-			Static142.anInt3482 = Static48.anInt1449 - (int) ((float) Static24.aClass13_8.anInt445 / Static83.aFloat3);
+			Static142.anInt3482 = Static48.anInt1449 - (int) ((float) Static24.component.anInt445 / Static83.aFloat3);
 		}
 		if (local70 < 0) {
-			Static217.anInt4901 = (int) ((float) Static24.aClass13_8.anInt459 / Static83.aFloat3);
+			Static217.anInt4901 = (int) ((float) Static24.component.anInt459 / Static83.aFloat3);
 		}
 		if (Static181.anInt4296 < local61) {
-			Static217.anInt4901 = Static181.anInt4296 - (int) ((float) Static24.aClass13_8.anInt459 / Static83.aFloat3);
+			Static217.anInt4901 = Static181.anInt4296 - (int) ((float) Static24.component.anInt459 / Static83.aFloat3);
 		}
 	}
 
@@ -123,6 +123,6 @@ public final class Static80 {
 	public static void method3617(@OriginalArg(0) JagString arg0, @OriginalArg(2) int arg1) {
 		@Pc(6) DelayedStateChange local6 = Static238.method4143(3, arg1);
 		local6.method1017();
-		local6.aClass100_254 = arg0;
+		local6.stringArg = arg0;
 	}
 }

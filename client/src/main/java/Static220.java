@@ -18,9 +18,9 @@ public final class Static220 {
 
 	@OriginalMember(owner = "client!rm", name = "a", descriptor = "(IBI)V")
 	public static void method3797(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		@Pc(9) LinkedList local9 = Static159.aClass69ArrayArrayArray1[Static55.anInt1735][arg1][arg0];
+		@Pc(9) LinkedList local9 = Static159.aClass69ArrayArrayArray1[Static55.level][arg1][arg0];
 		if (local9 == null) {
-			Static187.method3420(Static55.anInt1735, arg1, arg0);
+			Static187.method3420(Static55.level, arg1, arg0);
 			return;
 		}
 		@Pc(28) int local28 = -99999999;
@@ -38,7 +38,7 @@ public final class Static220 {
 			}
 		}
 		if (local30 == null) {
-			Static187.method3420(Static55.anInt1735, arg1, arg0);
+			Static187.method3420(Static55.level, arg1, arg0);
 			return;
 		}
 		local9.method2283(local30);
@@ -56,7 +56,7 @@ public final class Static220 {
 			}
 		}
 		@Pc(152) long local152 = (long) ((arg0 << 7) + arg1 + 1610612736);
-		Static69.method1543(Static55.anInt1735, arg1, arg0, Static207.method3685(Static55.anInt1735, arg1 * 128 + 64, arg0 * 128 + 64), local30.aClass8_Sub7_1, local152, local89, local91);
+		Static69.method1543(Static55.level, arg1, arg0, Static207.method3685(Static55.level, arg1 * 128 + 64, arg0 * 128 + 64), local30.aClass8_Sub7_1, local152, local89, local91);
 	}
 
 	@OriginalMember(owner = "client!rm", name = "a", descriptor = "(JB)V")
@@ -90,18 +90,18 @@ public final class Static220 {
 		@Pc(94) int local94;
 		if (Static239.aBoolean269) {
 			@Pc(68) GlModel local68 = (GlModel) local10;
-			if (arg5 != Static207.method3685(Static55.anInt1735, arg3 + local42, arg1 + local48) || arg5 != Static207.method3685(Static55.anInt1735, arg3 + local45, local51 + arg1)) {
+			if (arg5 != Static207.method3685(Static55.level, arg3 + local42, arg1 + local48) || arg5 != Static207.method3685(Static55.level, arg3 + local45, local51 + arg1)) {
 				for (local94 = 0; local94 < local68.anInt5295; local94++) {
-					local68.anIntArray465[local94] += Static207.method3685(Static55.anInt1735, local68.anIntArray461[local94] + arg3, local68.anIntArray466[local94] + arg1) - arg5;
+					local68.anIntArray465[local94] += Static207.method3685(Static55.level, local68.anIntArray461[local94] + arg3, local68.anIntArray466[local94] + arg1) - arg5;
 				}
 				local68.aClass127_4.aBoolean235 = false;
 				local68.aClass5_1.aBoolean3 = false;
 			}
 		} else {
 			@Pc(142) SoftwareModel local142 = (SoftwareModel) local10;
-			if (arg5 != Static207.method3685(Static55.anInt1735, local42 + arg3, local48 + arg1) || arg5 != Static207.method3685(Static55.anInt1735, arg3 + local45, local51 + arg1)) {
+			if (arg5 != Static207.method3685(Static55.level, local42 + arg3, local48 + arg1) || arg5 != Static207.method3685(Static55.level, arg3 + local45, local51 + arg1)) {
 				for (local94 = 0; local94 < local142.anInt5788; local94++) {
-					local142.anIntArray527[local94] += Static207.method3685(Static55.anInt1735, arg3 + local142.anIntArray528[local94], local142.anIntArray531[local94] + arg1) - arg5;
+					local142.anIntArray527[local94] += Static207.method3685(Static55.level, arg3 + local142.anIntArray528[local94], local142.anIntArray531[local94] + arg1) - arg5;
 				}
 				local142.aBoolean305 = false;
 			}

@@ -61,7 +61,7 @@ public final class Static48 {
 	}
 
 	@OriginalMember(owner = "client!dl", name = "a", descriptor = "(II)V")
-	public static void method1197(@OriginalArg(1) int arg0) {
+	public static void setIdleLoops(@OriginalArg(1) int arg0) {
 		@Pc(10) Mouse local10 = Static93.aClass150_1;
 		synchronized (Static93.aClass150_1) {
 			Static93.anInt2467 = arg0;

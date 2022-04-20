@@ -29,7 +29,7 @@ public final class Static260 {
 		if (Static233.anInt5217 >= 100) {
 			@Pc(30) int local30 = Static251.anInt5449 * 128 + 64;
 			@Pc(36) int local36 = Static265.anInt5765 * 128 + 64;
-			@Pc(44) int local44 = Static207.method3685(Static55.anInt1735, local30, local36) - Static57.anInt1744;
+			@Pc(44) int local44 = Static207.method3685(Static55.level, local30, local36) - Static57.anInt1744;
 			@Pc(49) int local49 = local44 - Static5.anInt40;
 			@Pc(54) int local54 = local30 - Static138.anInt3439;
 			@Pc(59) int local59 = local36 - Static134.anInt3302;

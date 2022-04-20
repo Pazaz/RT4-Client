@@ -28,25 +28,25 @@ public final class Static73 {
 	@OriginalMember(owner = "client!fm", name = "a", descriptor = "(ZI)V")
 	public static void method1596(@OriginalArg(0) boolean arg0) {
 		if (arg0) {
-			if (Static154.anInt3711 != -1) {
-				Static109.method2275(Static154.anInt3711);
+			if (Static154.topLevelInterace != -1) {
+				Static109.method2275(Static154.topLevelInterace);
 			}
 			for (@Pc(18) Class3_Sub31 local18 = (Class3_Sub31) Static119.aClass133_9.method3859(); local18 != null; local18 = (Class3_Sub31) Static119.aClass133_9.method3861()) {
 				Static132.method2605(true, local18);
 			}
-			Static154.anInt3711 = -1;
+			Static154.topLevelInterace = -1;
 			Static119.aClass133_9 = new HashTable(8);
 			Static52.method1287();
-			Static154.anInt3711 = Static156.anInt3783;
+			Static154.topLevelInterace = Static156.anInt3783;
 			Static210.method3712(false);
 			Static87.method1807();
-			Static74.method1626(Static154.anInt3711);
+			Static74.method1626(Static154.topLevelInterace);
 		}
 		Static35.anInt1092 = -1;
 		Static81.method1750(Static270.anInt5794);
-		Static173.aClass8_Sub4_Sub1_2 = new Player();
-		Static173.aClass8_Sub4_Sub1_2.anInt3421 = 3000;
-		Static173.aClass8_Sub4_Sub1_2.anInt3412 = 3000;
+		Static173.self = new Player();
+		Static173.self.anInt3421 = 3000;
+		Static173.self.anInt3412 = 3000;
 		if (!Static239.aBoolean269) {
 			Static145.method2743(Static209.aClass153_86);
 			Static196.method3534(10);

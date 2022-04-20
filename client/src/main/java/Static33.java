@@ -12,7 +12,7 @@ public final class Static33 {
 	public static boolean aBoolean63;
 
 	@OriginalMember(owner = "client!cj", name = "n", descriptor = "Lsignlink!im;")
-	public static PrivilegedRequest aClass212_1;
+	public static PrivilegedRequest openUrlRequest;
 
 	@OriginalMember(owner = "client!cj", name = "i", descriptor = "[I")
 	public static final int[] anIntArray79 = new int[32768];

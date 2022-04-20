@@ -27,7 +27,7 @@ public final class Js5CacheQueue implements Runnable {
 		if (local20.status == 2) {
 			throw new RuntimeException();
 		}
-		this.aThread2 = (Thread) local20.anObject6;
+		this.aThread2 = (Thread) local20.result;
 	}
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(Lclient!c;I)V")

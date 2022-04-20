@@ -50,7 +50,7 @@ public final class Static233 {
 	public static final JagString aClass100_994 = Static28.parse(")3");
 
 	@OriginalMember(owner = "client!t", name = "E", descriptor = "[I")
-	public static final int[] anIntArray452 = new int[32];
+	public static final int[] updatedVarcstrs = new int[32];
 
 	@OriginalMember(owner = "client!t", name = "F", descriptor = "I")
 	public static int js5PrevErrors = 0;
@@ -67,7 +67,7 @@ public final class Static233 {
 		while (local5.length > local3) {
 			@Pc(17) Class102 local17 = local5[local3];
 			if (local17 != null && local17.anInt4058 == 2) {
-				Static198.method1026(arg0 >> 1, arg4, (local17.anInt4046 - Static142.anInt3483 << 7) + local17.anInt4047, local17.anInt4050 * 2, arg2 >> 1, local17.anInt4045 + (local17.anInt4053 - Static225.anInt5068 << 7), arg3);
+				Static198.method1026(arg0 >> 1, arg4, (local17.anInt4046 - Static142.originZ << 7) + local17.anInt4047, local17.anInt4050 * 2, arg2 >> 1, local17.anInt4045 + (local17.anInt4053 - Static225.originX << 7), arg3);
 				if (Static65.anInt1951 > -1 && Static83.anInt372 % 20 < 10) {
 					Static276.aClass3_Sub2_Sub1Array11[local17.anInt4048].method1423(arg1 + Static65.anInt1951 - 12, arg5 + -28 - -Static16.anInt548);
 				}
@@ -139,19 +139,19 @@ public final class Static233 {
 			if (local24 != 0) {
 				local73 = (local73 << local24 & 0xF) + (local73 >> 4 - local24);
 			}
-			Static102.method2075(Static173.aClass8_Sub4_Sub1_2.anIntArray317[0], 0, local59, true, local73, arg2, local62, 0, 2, arg1, Static173.aClass8_Sub4_Sub1_2.anIntArray318[0]);
+			Static102.method2075(Static173.self.movementQueueZ[0], 0, local59, true, local73, arg2, local62, 0, 2, arg1, Static173.self.movementQueueX[0]);
 		} else {
-			Static102.method2075(Static173.aClass8_Sub4_Sub1_2.anIntArray317[0], local24, 0, true, 0, arg2, 0, local12 + 1, 2, arg1, Static173.aClass8_Sub4_Sub1_2.anIntArray318[0]);
+			Static102.method2075(Static173.self.movementQueueZ[0], local24, 0, true, 0, arg2, 0, local12 + 1, 2, arg1, Static173.self.movementQueueX[0]);
 		}
-		Static25.anInt826 = Static60.anInt1893;
-		Static17.anInt577 = 0;
-		Static70.anInt2013 = 2;
-		Static122.anInt3047 = Static7.anInt985;
+		Static25.y = Static60.clickY;
+		Static17.milliseconds = 0;
+		Static70.type = 2;
+		Static122.x = Static7.clickX;
 		return true;
 	}
 
 	@OriginalMember(owner = "client!t", name = "a", descriptor = "(Lclient!i;II)V")
-	public static void method4005(@OriginalArg(0) Packet arg0) {
+	public static void loop(@OriginalArg(0) Packet arg0) {
 		while (true) {
 			@Pc(18) ReflectionCheck local18 = (ReflectionCheck) Static204.aClass69_113.method2289();
 			if (local18 == null) {
@@ -180,7 +180,7 @@ public final class Static233 {
 			if (local23) {
 				return;
 			}
-			arg0.method2242(163);
+			arg0.p1isaac(163);
 			arg0.p1(0);
 			local25 = arg0.offset;
 			arg0.p4(local18.anInt1732);
@@ -191,23 +191,23 @@ public final class Static233 {
 						@Pc(168) Field local168;
 						@Pc(195) int local195;
 						if (local151 == 0) {
-							local168 = (Field) local18.aClass212Array2[local121].anObject6;
+							local168 = (Field) local18.aClass212Array2[local121].result;
 							local195 = local168.getInt(null);
 							arg0.p1(0);
 							arg0.p4(local195);
 						} else if (local151 == 1) {
-							local168 = (Field) local18.aClass212Array2[local121].anObject6;
+							local168 = (Field) local18.aClass212Array2[local121].result;
 							local168.setInt(null, local18.anIntArray137[local121]);
 							arg0.p1(0);
 						} else if (local151 == 2) {
-							local168 = (Field) local18.aClass212Array2[local121].anObject6;
+							local168 = (Field) local18.aClass212Array2[local121].result;
 							local195 = local168.getModifiers();
 							arg0.p1(0);
 							arg0.p4(local195);
 						}
 						@Pc(234) Method local234;
 						if (local151 == 3) {
-							local234 = (Method) local18.aClass212Array1[local121].anObject6;
+							local234 = (Method) local18.aClass212Array1[local121].result;
 							@Pc(239) byte[][] local239 = local18.aByteArrayArrayArray6[local121];
 							@Pc(243) Object[] local243 = new Object[local239.length];
 							for (@Pc(245) int local245 = 0; local245 < local239.length; local245++) {
@@ -227,7 +227,7 @@ public final class Static233 {
 								arg0.p1(4);
 							}
 						} else if (local151 == 4) {
-							local234 = (Method) local18.aClass212Array1[local121].anObject6;
+							local234 = (Method) local18.aClass212Array1[local121].result;
 							local195 = local234.getModifiers();
 							arg0.p1(0);
 							arg0.p4(local195);
