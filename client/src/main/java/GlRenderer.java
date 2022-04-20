@@ -125,6 +125,8 @@ public final class GlRenderer {
 	@OriginalMember(owner = "client!tf", name = "I", descriptor = "Lclient!na;")
 	private static final JagString RADEON = Static28.parse("radeon");
 
+	private static JAWTWindow window;
+
 	@OriginalMember(owner = "client!tf", name = "a", descriptor = "(Ljava/lang/String;)Lclient!na;")
 	private static JagString method4147(@OriginalArg(0) String arg0) {
 		@Pc(3) byte[] local3;
@@ -322,7 +324,7 @@ public final class GlRenderer {
 	}
 
 	@OriginalMember(owner = "client!tf", name = "a", descriptor = "(Ljava/awt/Canvas;)V")
-	public static void method4161(@OriginalArg(0) Canvas canvas) {
+	public static void createAndDestroyContext(@OriginalArg(0) Canvas canvas) {
 		try {
 			if (!canvas.isDisplayable()) {
 				return;
@@ -341,7 +343,7 @@ public final class GlRenderer {
 			glContext.release();
 			glContext.destroy();
 			glDrawable.setRealized(false);
-		} catch (@Pc(30) Throwable local30) {
+		} catch (@Pc(30) Throwable ex) {
 		}
 	}
 
@@ -394,10 +396,10 @@ public final class GlRenderer {
 		vendor = gl.glGetString(GL2.GL_VENDOR);
 		renderer = gl.glGetString(GL2.GL_RENDERER);
 		@Pc(12) String vendor = GlRenderer.vendor.toLowerCase();
-		if (vendor.indexOf("microsoft") != -1) {
+		if (vendor.contains("microsoft")) {
 			result = 1;
 		}
-		if (vendor.indexOf("brian paul") != -1 || vendor.indexOf("mesa") != -1) {
+		if (vendor.contains("brian paul") || vendor.contains("mesa")) {
 			result |= 0x1;
 		}
 		@Pc(39) String version = gl.glGetString(GL2.GL_VERSION);
@@ -483,29 +485,38 @@ public final class GlRenderer {
 				Static172.quit(); // MaterialManager
 			} catch (@Pc(5) Throwable local5) {
 			}
-			gl = null;
 		}
-		if (context != null) {
-			Static63.clear(); // GlCleaner
-			try {
-				if (GLContext.getCurrent() == context) {
-					context.release();
+
+		if (window != null) {
+			if (!window.getLock().isLocked()) {
+				window.lockSurface();
+			}
+
+			if (context != null) {
+				Static63.clear(); // GlCleaner
+				try {
+					if (GLContext.getCurrent() == context) {
+						context.release();
+					}
+				} catch (@Pc(17) Throwable ex) {
 				}
-			} catch (@Pc(17) Throwable ex) {
+				try {
+					context.destroy();
+				} catch (@Pc(21) Throwable ex) {
+				}
 			}
-			try {
-				context.destroy();
-			} catch (@Pc(21) Throwable ex) {
-			}
-			context = null;
 		}
+
 		if (drawable != null) {
 			try {
 				drawable.setRealized(false);
 			} catch (@Pc(30) Throwable ex) {
 			}
-			drawable = null;
 		}
+		window = null;
+		gl = null;
+		context = null;
+		drawable = null;
 		Static120.method2398(); // LightingManager
 		enabled = false;
 	}
@@ -659,9 +670,16 @@ public final class GlRenderer {
 			}
 			@Pc(18) GLDrawableFactory factory = GLDrawableFactory.getFactory(profile);
 			AWTGraphicsConfiguration config = AWTGraphicsConfiguration.create(canvas.getGraphicsConfiguration(), capabilities, capabilities);
-			JAWTWindow window = NewtFactoryAWT.getNativeWindow(canvas, config);
-			drawable = factory.createGLDrawable(window);
-			drawable.setRealized(true);
+			window = NewtFactoryAWT.getNativeWindow(canvas, config);
+			if (!window.getLock().isLocked()) {
+				window.lockSurface();
+			}
+			try {
+				drawable = factory.createGLDrawable(window);
+				drawable.setRealized(true);
+			} finally {
+				window.unlockSurface();
+			}
 			@Pc(29) int swapBuffersAttempts = 0;
 			@Pc(36) int result;
 			while (true) {
@@ -677,6 +695,9 @@ public final class GlRenderer {
 					return -2;
 				}
 				Static231.sleep(1000L);
+			}
+			if (window.getLock().isLocked()) {
+				window.unlockSurface();
 			}
             gl = GLContext.getCurrentGL().getGL2();
             new GLUgl2es1();
