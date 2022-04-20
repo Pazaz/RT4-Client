@@ -57,7 +57,7 @@ public final class Static44 {
 	@OriginalMember(owner = "client!dh", name = "b", descriptor = "(I)Lclient!q;")
 	public static Class22 method1147() {
 		try {
-			return (Class22) Class.forName("Class22_Sub1").getDeclaredConstructor().newInstance();
+			return (Class22) Class.forName("SoftReferenceNodeFactory").getDeclaredConstructor().newInstance();
 		} catch (@Pc(15) Throwable local15) {
 			return null;
 		}
