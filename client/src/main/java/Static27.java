@@ -14,22 +14,16 @@ public final class Static27 {
 	public static final SoftLruHashTable aClass99_4 = new SoftLruHashTable(64);
 
 	@OriginalMember(owner = "client!cb", name = "ab", descriptor = "Lclient!na;")
-	public static final JagString aClass100_164 = Static28.method790(" )2> <col=00ffff>");
+	public static final JagString aClass100_164 = Static28.parse(" )2> <col=00ffff>");
 
 	@OriginalMember(owner = "client!cb", name = "cb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_165 = Static28.method790("titlebg");
-
-	@OriginalMember(owner = "client!cb", name = "gb", descriptor = "Lclient!na;")
-	private static final JagString aClass100_169 = Static28.method790("Loaded title screen");
-
-	@OriginalMember(owner = "client!cb", name = "db", descriptor = "Lclient!na;")
-	public static JagString aClass100_166 = aClass100_169;
+	public static final JagString aClass100_165 = Static28.parse("titlebg");
 
 	@OriginalMember(owner = "client!cb", name = "eb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_167 = Static28.method790("name_icons");
+	public static final JagString aClass100_167 = Static28.parse("name_icons");
 
 	@OriginalMember(owner = "client!cb", name = "fb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_168 = Static28.method790(": ");
+	public static final JagString aClass100_168 = Static28.parse(": ");
 
 	@OriginalMember(owner = "client!cb", name = "b", descriptor = "(III)V")
 	public static void method766(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {

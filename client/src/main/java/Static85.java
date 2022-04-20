@@ -16,9 +16,6 @@ public final class Static85 {
 	@OriginalMember(owner = "client!gl", name = "f", descriptor = "I")
 	public static int anInt2263;
 
-	@OriginalMember(owner = "client!gl", name = "c", descriptor = "Lclient!na;")
-	public static final JagString aClass100_484 = Static28.method790("Monde de jeu cr-B-B");
-
 	@OriginalMember(owner = "client!gl", name = "a", descriptor = "(Lclient!ve;I)V")
 	public static void method1774(@OriginalArg(0) Js5 arg0) {
 		Static84.aClass153_35 = arg0;

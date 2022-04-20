@@ -14,10 +14,10 @@ public final class Static279 {
 	public static final SoftLruHashTable aClass99_38 = new SoftLruHashTable(64);
 
 	@OriginalMember(owner = "client!wk", name = "u", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1106 = Static28.method790("::clientjs5drop");
+	public static final JagString aClass100_1106 = Static28.parse("::clientjs5drop");
 
 	@OriginalMember(owner = "client!wk", name = "x", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1107 = Static28.method790(")4l=");
+	public static final JagString aClass100_1107 = Static28.parse(")4l=");
 
 	@OriginalMember(owner = "client!wk", name = "b", descriptor = "(II)V")
 	public static void method4662() {

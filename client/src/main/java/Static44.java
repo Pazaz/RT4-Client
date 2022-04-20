@@ -14,10 +14,10 @@ public final class Static44 {
 	public static final int[] anIntArray106 = new int[2048];
 
 	@OriginalMember(owner = "client!dh", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_335 = Static28.method790("Number of player models in cache:");
+	public static final JagString aClass100_335 = Static28.parse("Number of player models in cache:");
 
 	@OriginalMember(owner = "client!dh", name = "i", descriptor = "Lclient!na;")
-	public static final JagString aClass100_336 = Static28.method790("<img=1>");
+	public static final JagString aClass100_336 = Static28.parse("<img=1>");
 
 	@OriginalMember(owner = "client!dh", name = "a", descriptor = "(Z)V")
 	public static void method1146() {
@@ -90,7 +90,7 @@ public final class Static44 {
 			Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
 		} else {
 			Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
-			local53 = Static280.aClass3_Sub2_Sub9_43.method2858(Static234.aClass100_998);
+			local53 = Static280.aClass3_Sub2_Sub9_43.method2858(LocalizedText.CHOOSE_OPTION);
 			for (@Pc(95) int local95 = 0; local95 < Static231.anInt5204; local95++) {
 				@Pc(104) int local104 = Static280.aClass3_Sub2_Sub9_43.method2858(Static269.method2228(local95));
 				if (local104 > local53) {

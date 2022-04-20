@@ -10,17 +10,14 @@ public final class Static176 {
 	@OriginalMember(owner = "client!ob", name = "a", descriptor = "[Z")
 	public static final boolean[] aBooleanArray95 = new boolean[5];
 
-	@OriginalMember(owner = "client!ob", name = "c", descriptor = "Lclient!na;")
-	public static final JagString aClass100_799 = Static28.method790("Fertigkeit: ");
-
 	@OriginalMember(owner = "client!ob", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_800 = Static28.method790("");
+	public static final JagString aClass100_800 = Static28.parse("");
 
 	@OriginalMember(owner = "client!ob", name = "o", descriptor = "Lclient!na;")
-	private static final JagString aClass100_801 = Static28.method790(")4a=");
+	private static final JagString aClass100_801 = Static28.parse(")4a=");
 
 	@OriginalMember(owner = "client!ob", name = "p", descriptor = "Lclient!na;")
-	public static final JagString aClass100_802 = Static28.method790("(U0a )2 non)2existant gosub script)2num: ");
+	public static final JagString aClass100_802 = Static28.parse("(U0a )2 non)2existant gosub script)2num: ");
 
 	@OriginalMember(owner = "client!ob", name = "a", descriptor = "(B)V")
 	public static void method3302() {
@@ -83,7 +80,7 @@ public final class Static176 {
 				}
 			} else {
 				if (Static266.anInt5343 == 1) {
-					Static98.method1966(-1, 0L, Static186.aClass100_827, local33, (short) 36, Static224.aClass100_957, local47);
+					Static98.method1966(-1, 0L, Static186.aClass100_827, local33, (short) 36, LocalizedText.FACEHERE, local47);
 				}
 				Static98.method1966(-1, 0L, Static186.aClass100_827, local33, (short) 60, Static195.aClass100_859, local47);
 			}
@@ -107,7 +104,7 @@ public final class Static176 {
 						continue;
 					}
 					if (Static260.anInt5014 == 1) {
-						Static98.method1966(Static169.anInt4075, local121, Static34.method882(new JagString[] { Static34.aClass100_203, Static27.aClass100_164, local172.aClass100_830 }), local47, (short) 14, Static222.aClass100_937, local147);
+						Static98.method1966(Static169.anInt4075, local121, Static34.method882(new JagString[] { Static34.aClass100_203, Static27.aClass100_164, local172.aClass100_830 }), local47, (short) 14, LocalizedText.USE, local147);
 					} else if (Static241.aBoolean302) {
 						@Pc(363) Class3_Sub2_Sub12 local363 = Static121.anInt3039 == -1 ? null : Static110.method2277(Static121.anInt3039);
 						if ((Static274.anInt4999 & 0x4) != 0 && (local363 == null || local172.method3423(local363.anInt2667, Static121.anInt3039) != local363.anInt2667)) {
@@ -148,7 +145,7 @@ public final class Static176 {
 								}
 							}
 						}
-						Static98.method1966(Static225.anInt5073, (long) local172.anInt4426, Static34.method882(new JagString[] { Static240.aClass100_1008, local172.aClass100_830 }), local47, (short) 1004, Static148.aClass100_675, local147);
+						Static98.method1966(Static225.anInt5073, (long) local172.anInt4426, Static34.method882(new JagString[] { Static240.aClass100_1008, local172.aClass100_830 }), local47, (short) 1004, LocalizedText.EXAMINE, local147);
 					}
 				}
 				@Pc(514) int local514;
@@ -212,7 +209,7 @@ public final class Static176 {
 							local240 = local940.aClass8_Sub7_1.anInt5555;
 							@Pc(951) ObjType local951 = Static71.method1439(local240);
 							if (Static260.anInt5014 == 1) {
-								Static98.method1966(Static169.anInt4075, (long) local240, Static34.method882(new JagString[] { Static34.aClass100_203, Static223.aClass100_947, local951.aClass100_495 }), local47, (short) 33, Static222.aClass100_937, local147);
+								Static98.method1966(Static169.anInt4075, (long) local240, Static34.method882(new JagString[] { Static34.aClass100_203, Static223.aClass100_947, local951.aClass100_495 }), local47, (short) 33, LocalizedText.USE, local147);
 							} else if (Static241.aBoolean302) {
 								@Pc(1142) Class3_Sub2_Sub12 local1142 = Static121.anInt3039 == -1 ? null : Static110.method2277(Static121.anInt3039);
 								if ((Static274.anInt4999 & 0x1) != 0 && (local1142 == null || local951.method1829(local1142.anInt2667, Static121.anInt3039) != local1142.anInt2667)) {
@@ -251,7 +248,7 @@ public final class Static176 {
 										Static98.method1966(local1041, (long) local240, Static34.method882(new JagString[] { Static8.aClass100_32, local951.aClass100_495 }), local47, local1025, local997[local514], local147);
 									}
 								}
-								Static98.method1966(Static225.anInt5073, (long) local240, Static34.method882(new JagString[] { Static8.aClass100_32, local951.aClass100_495 }), local47, (short) 1002, Static148.aClass100_675, local147);
+								Static98.method1966(Static225.anInt5073, (long) local240, Static34.method882(new JagString[] { Static8.aClass100_32, local951.aClass100_495 }), local47, (short) 1002, LocalizedText.EXAMINE, local147);
 							}
 						}
 					}

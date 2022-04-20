@@ -7,18 +7,6 @@ public final class Static170 {
 	@OriginalMember(owner = "client!nh", name = "eb", descriptor = "I")
 	public static int anInt3245;
 
-	@OriginalMember(owner = "client!nh", name = "S", descriptor = "Lclient!na;")
-	public static final JagString aClass100_619 = Static28.method790("Lade)3)3)3");
-
-	@OriginalMember(owner = "client!nh", name = "V", descriptor = "Lclient!na;")
-	public static final JagString aClass100_620 = Static28.method790("sch-Utteln:");
-
-	@OriginalMember(owner = "client!nh", name = "bb", descriptor = "Lclient!na;")
-	private static final JagString aClass100_622 = Static28.method790("Loading )2 please wait)3");
-
-	@OriginalMember(owner = "client!nh", name = "W", descriptor = "Lclient!na;")
-	public static JagString aClass100_621 = aClass100_622;
-
 	@OriginalMember(owner = "client!nh", name = "Z", descriptor = "I")
 	public static int anInt3241 = 128;
 
@@ -26,7 +14,7 @@ public final class Static170 {
 	public static final int[] anIntArray306 = new int[] { 4, 4, 1, 2, 6, 4, 2, 49, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
 
 	@OriginalMember(owner = "client!nh", name = "hb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_623 = Static28.method790("::fps ");
+	public static final JagString aClass100_623 = Static28.parse("::fps ");
 
 	@OriginalMember(owner = "client!nh", name = "a", descriptor = "(IIIII)I")
 	public static int method2569(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {

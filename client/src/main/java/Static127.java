@@ -20,14 +20,8 @@ public final class Static127 {
 	@OriginalMember(owner = "client!k", name = "m", descriptor = "Z")
 	public static boolean aBoolean160 = false;
 
-	@OriginalMember(owner = "client!k", name = "n", descriptor = "Lclient!na;")
-	public static final JagString aClass100_604 = Static28.method790("brillant1:");
-
 	@OriginalMember(owner = "client!k", name = "t", descriptor = "I")
 	public static int anInt3132 = 0;
-
-	@OriginalMember(owner = "client!k", name = "u", descriptor = "Lclient!na;")
-	public static final JagString aClass100_605 = Static28.method790("Chargement des sprites )2 ");
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(IIBLclient!ve;Lclient!ve;)Lclient!rk;")
 	public static Font method2462(@OriginalArg(1) int arg0, @OriginalArg(3) Js5 arg1, @OriginalArg(4) Js5 arg2) {
@@ -50,7 +44,7 @@ public final class Static127 {
 		} else {
 			Static196.method3534(25);
 		}
-		Static114.method4636(true, Static170.aClass100_621);
+		Static114.method4636(true, LocalizedText.LOADING);
 		@Pc(53) int local53 = Static142.anInt3483;
 		@Pc(55) int local55 = Static225.anInt5068;
 		Static142.anInt3483 = arg1 * 8 - 48;

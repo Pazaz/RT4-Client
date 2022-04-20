@@ -13,9 +13,6 @@ public final class Static183 {
 	@OriginalMember(owner = "client!ok", name = "f", descriptor = "J")
 	public static long aLong139 = 0L;
 
-	@OriginalMember(owner = "client!ok", name = "g", descriptor = "Lclient!na;")
-	public static final JagString aClass100_809 = Static28.method790("Lade Titelbild )2 ");
-
 	@OriginalMember(owner = "client!ok", name = "a", descriptor = "(Lclient!ab;Lclient!ab;I)V")
 	public static void method3331(@OriginalArg(0) Node arg0, @OriginalArg(1) Node arg1) {
 		if (arg0.aClass3_223 != null) {

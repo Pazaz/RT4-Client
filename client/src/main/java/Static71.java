@@ -16,26 +16,11 @@ public final class Static71 {
 	@OriginalMember(owner = "client!fk", name = "q", descriptor = "Lclient!uc;")
 	public static MouseWheel aClass111_2;
 
-	@OriginalMember(owner = "client!fk", name = "b", descriptor = "Lclient!na;")
-	private static final JagString aClass100_415 = Static28.method790("Please remove ");
-
-	@OriginalMember(owner = "client!fk", name = "c", descriptor = "Lclient!na;")
-	public static final JagString aClass100_416 = Static28.method790("V-Brification des mises -9 jour )2 ");
-
 	@OriginalMember(owner = "client!fk", name = "g", descriptor = "Z")
 	public static boolean aBoolean107 = true;
 
-	@OriginalMember(owner = "client!fk", name = "h", descriptor = "Lclient!na;")
-	public static JagString aClass100_417 = aClass100_415;
-
 	@OriginalMember(owner = "client!fk", name = "k", descriptor = "[I")
 	public static final int[] anIntArray147 = new int[14];
-
-	@OriginalMember(owner = "client!fk", name = "o", descriptor = "Lclient!na;")
-	public static JagString aClass100_418 = aClass100_415;
-
-	@OriginalMember(owner = "client!fk", name = "p", descriptor = "Lclient!na;")
-	public static final JagString aClass100_419 = Static28.method790("ondulation2:");
 
 	@OriginalMember(owner = "client!fk", name = "a", descriptor = "(IB)Lclient!h;")
 	public static ObjType method1439(@OriginalArg(0) int arg0) {
@@ -57,7 +42,7 @@ public final class Static71 {
 			local6.method1823(method1439(local6.anInt2363), method1439(local6.anInt2334));
 		}
 		if (!Static240.aBoolean276 && local6.aBoolean131) {
-			local6.aClass100_495 = Static199.aClass100_881;
+			local6.aClass100_495 = LocalizedText.MEMBERS_OBJECT;
 			local6.anInt2351 = 0;
 			local6.aClass100Array71 = Static143.aClass100Array104;
 			local6.aBoolean132 = false;

@@ -16,15 +16,6 @@ public final class Static2 {
 	@OriginalMember(owner = "client!aa", name = "a", descriptor = "I")
 	public static int anInt7 = 0;
 
-	@OriginalMember(owner = "client!aa", name = "r", descriptor = "Lclient!na;")
-	private static final JagString aClass100_5 = Static28.method790("glow1:");
-
-	@OriginalMember(owner = "client!aa", name = "d", descriptor = "Lclient!na;")
-	public static final JagString aClass100_3 = aClass100_5;
-
-	@OriginalMember(owner = "client!aa", name = "g", descriptor = "Lclient!na;")
-	public static JagString aClass100_4 = aClass100_5;
-
 	@OriginalMember(owner = "client!aa", name = "h", descriptor = "[S")
 	public static final short[] aShortArray1 = new short[] { 960, 957, -21568, -21571, 22464 };
 

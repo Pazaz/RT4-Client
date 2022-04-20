@@ -16,9 +16,6 @@ public final class Static84 {
 	@OriginalMember(owner = "client!gk", name = "l", descriptor = "Lclient!qf;")
 	public static Sprite aClass3_Sub2_Sub1_4;
 
-	@OriginalMember(owner = "client!gk", name = "a", descriptor = "Lclient!na;")
-	public static final JagString aClass100_483 = Static28.method790("leuchten2:");
-
 	@OriginalMember(owner = "client!gk", name = "c", descriptor = "[I")
 	public static final int[] anIntArray209 = new int[4096];
 

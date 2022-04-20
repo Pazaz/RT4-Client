@@ -14,7 +14,7 @@ public final class Static31 {
 	public static final byte[] aByteArray12 = new byte[] { 95, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57 };
 
 	@OriginalMember(owner = "client!ch", name = "x", descriptor = "Lclient!na;")
-	public static final JagString aClass100_193 = Static28.method790(":");
+	public static final JagString aClass100_193 = Static28.parse(":");
 
 	@OriginalMember(owner = "client!ch", name = "y", descriptor = "[Z")
 	public static final boolean[] aBooleanArray29 = new boolean[100];

@@ -16,15 +16,6 @@ public final class Static37 {
 	@OriginalMember(owner = "client!cm", name = "f", descriptor = "Lsignlink!im;")
 	public static PrivilegedRequest aClass212_2;
 
-	@OriginalMember(owner = "client!cm", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_236 = Static28.method790("Vous ne pouvez pas ajouter votre nom -9 votre liste d(Wamis)3");
-
-	@OriginalMember(owner = "client!cm", name = "h", descriptor = "Lclient!na;")
-	public static final JagString aClass100_237 = Static28.method790("Verbindung abgebrochen)3");
-
-	@OriginalMember(owner = "client!cm", name = "i", descriptor = "Lclient!na;")
-	public static final JagString aClass100_238 = Static28.method790("comp-Btence ");
-
 	@OriginalMember(owner = "client!cm", name = "a", descriptor = "(ILclient!fe;)V")
 	public static void method949(@OriginalArg(1) PathingEntity arg0) {
 		if (arg0.anInt3376 == 0) {

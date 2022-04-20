@@ -19,14 +19,8 @@ public final class Static214 {
 	@OriginalMember(owner = "client!rg", name = "s", descriptor = "I")
 	public static int anInt5574 = -1;
 
-	@OriginalMember(owner = "client!rg", name = "u", descriptor = "Lclient!na;")
-	private static final JagString aClass100_1063 = Static28.method790("Started 3d Library");
-
 	@OriginalMember(owner = "client!rg", name = "A", descriptor = "[I")
 	public static final int[] anIntArray492 = new int[14];
-
-	@OriginalMember(owner = "client!rg", name = "E", descriptor = "Lclient!na;")
-	public static JagString aClass100_1064 = aClass100_1063;
 
 	@OriginalMember(owner = "client!rg", name = "F", descriptor = "I")
 	public static int anInt5581 = 0;

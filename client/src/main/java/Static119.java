@@ -17,10 +17,10 @@ public final class Static119 {
 	public static HashTable aClass133_9 = new HashTable(8);
 
 	@OriginalMember(owner = "client!je", name = "U", descriptor = "Lclient!na;")
-	public static final JagString aClass100_588 = Static28.method790("showingVideoAd");
+	public static final JagString aClass100_588 = Static28.parse("showingVideoAd");
 
 	@OriginalMember(owner = "client!je", name = "db", descriptor = "Lclient!na;")
-	public static final JagString aClass100_589 = Static28.method790(" <col=ffffff>");
+	public static final JagString aClass100_589 = Static28.parse(" <col=ffffff>");
 
 	@OriginalMember(owner = "client!je", name = "fb", descriptor = "I")
 	public static int anInt3028 = 1;

@@ -13,11 +13,6 @@ public final class Static231 {
 	@OriginalMember(owner = "client!sk", name = "bb", descriptor = "Lclient!gn;")
 	public static final LruHashTable aClass54_13 = new LruHashTable(64);
 
-	@OriginalMember(owner = "client!sk", name = "cb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_984 = Static28.method790("Untersuchen");
-
-	@OriginalMember(owner = "client!sk", name = "eb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_985 = Static28.method790("Musik)2Engine vorbereitet)3");
 
 	@OriginalMember(owner = "client!sk", name = "gb", descriptor = "J")
 	public static long aLong174 = 0L;

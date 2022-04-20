@@ -11,7 +11,7 @@ public final class Static202 {
 	public static Js5 aClass153_84;
 
 	@OriginalMember(owner = "client!qg", name = "U", descriptor = "Lclient!na;")
-	public static final JagString aClass100_891 = Static28.method790("");
+	public static final JagString aClass100_891 = Static28.parse("");
 
 	@OriginalMember(owner = "client!qg", name = "W", descriptor = "Z")
 	public static boolean aBoolean233 = false;
@@ -20,7 +20,7 @@ public final class Static202 {
 	public static final int[] anIntArray424 = new int[5];
 
 	@OriginalMember(owner = "client!qg", name = "Z", descriptor = "Lclient!na;")
-	public static final JagString aClass100_892 = Static28.method790("mem=");
+	public static final JagString aClass100_892 = Static28.parse("mem=");
 
 	@OriginalMember(owner = "client!qg", name = "h", descriptor = "(I)V")
 	public static void method3653() {

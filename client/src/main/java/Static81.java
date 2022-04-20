@@ -15,23 +15,17 @@ public final class Static81 {
 	@OriginalMember(owner = "client!gg", name = "bb", descriptor = "I")
 	public static int anInt2223;
 
-	@OriginalMember(owner = "client!gg", name = "Q", descriptor = "Lclient!na;")
-	public static final JagString aClass100_474 = Static28.method790(" s(West connect-B)3");
-
 	@OriginalMember(owner = "client!gg", name = "U", descriptor = "I")
 	public static int anInt2219 = 0;
 
 	@OriginalMember(owner = "client!gg", name = "W", descriptor = "Lclient!na;")
-	public static final JagString aClass100_475 = Static28.method790("null");
+	public static final JagString aClass100_475 = Static28.parse("null");
 
 	@OriginalMember(owner = "client!gg", name = "Y", descriptor = "Lclient!na;")
-	public static final JagString aClass100_476 = Static28.method790("::gc");
+	public static final JagString aClass100_476 = Static28.parse("::gc");
 
 	@OriginalMember(owner = "client!gg", name = "db", descriptor = "I")
 	public static int anInt2225 = -1;
-
-	@OriginalMember(owner = "client!gg", name = "jb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_477 = Static28.method790(" est d-Bj-9 dans votre liste noire)3");
 
 	@OriginalMember(owner = "client!gg", name = "c", descriptor = "(II)V")
 	public static void method1750(@OriginalArg(0) int arg0) {

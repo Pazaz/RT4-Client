@@ -4,14 +4,11 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static54 {
 
-	@OriginalMember(owner = "client!ed", name = "r", descriptor = "Lclient!na;")
-	public static final JagString aClass100_373 = Static28.method790("Wordpack geladen)3");
-
 	@OriginalMember(owner = "client!ed", name = "D", descriptor = "Lclient!na;")
-	public static final JagString aClass100_374 = Static28.method790("details");
+	public static final JagString aClass100_374 = Static28.parse("details");
 
 	@OriginalMember(owner = "client!ed", name = "H", descriptor = "Lclient!na;")
-	public static final JagString aClass100_375 = Static28.method790("<)4col> x");
+	public static final JagString aClass100_375 = Static28.parse("<)4col> x");
 
 	@OriginalMember(owner = "client!ed", name = "a", descriptor = "(III)V")
 	public static void method1304(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {

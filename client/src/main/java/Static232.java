@@ -19,12 +19,6 @@ public final class Static232 {
 	@OriginalMember(owner = "client!sm", name = "c", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable aClass99_30 = new SoftLruHashTable(64);
 
-	@OriginalMember(owner = "client!sm", name = "f", descriptor = "Lclient!na;")
-	private static final JagString aClass100_987 = Static28.method790("Connection lost)3");
-
-	@OriginalMember(owner = "client!sm", name = "d", descriptor = "Lclient!na;")
-	public static JagString aClass100_986 = aClass100_987;
-
 	@OriginalMember(owner = "client!sm", name = "l", descriptor = "[S")
 	public static short[] aShortArray74 = new short[256];
 

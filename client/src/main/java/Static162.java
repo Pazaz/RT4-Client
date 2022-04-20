@@ -10,9 +10,6 @@ public final class Static162 {
 	@OriginalMember(owner = "client!ml", name = "Q", descriptor = "I")
 	public static int anInt3953 = 0;
 
-	@OriginalMember(owner = "client!ml", name = "S", descriptor = "Lclient!na;")
-	public static final JagString aClass100_765 = Static28.method790("T");
-
 	@OriginalMember(owner = "client!ml", name = "ab", descriptor = "Z")
 	public static boolean aBoolean190 = true;
 

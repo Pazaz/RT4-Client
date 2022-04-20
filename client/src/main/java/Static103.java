@@ -14,7 +14,7 @@ public final class Static103 {
 	public static final int[] anIntArray253 = new int[256];
 
 	@OriginalMember(owner = "client!i", name = "ic", descriptor = "Lclient!na;")
-	public static final JagString aClass100_558 = Static28.method790("m");
+	public static final JagString aClass100_558 = Static28.parse("m");
 
 	@OriginalMember(owner = "client!i", name = "a", descriptor = "(Lclient!na;ILclient!na;I)V")
 	public static void method2231(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) JagString arg2) {

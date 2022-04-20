@@ -20,16 +20,7 @@ public final class Static111 {
 	public static int anInt2901 = 0;
 
 	@OriginalMember(owner = "client!ii", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_570 = Static28.method790(")2");
-
-	@OriginalMember(owner = "client!ii", name = "g", descriptor = "Lclient!na;")
-	private static final JagString aClass100_571 = Static28.method790("You can(Wt add yourself to your own friend list)3");
-
-	@OriginalMember(owner = "client!ii", name = "j", descriptor = "Lclient!na;")
-	public static final JagString aClass100_572 = Static28.method790("Interfaces charg-Bes");
-
-	@OriginalMember(owner = "client!ii", name = "q", descriptor = "Lclient!na;")
-	public static JagString aClass100_573 = aClass100_571;
+	public static final JagString aClass100_570 = Static28.parse(")2");
 
 	@OriginalMember(owner = "client!ii", name = "a", descriptor = "(Lclient!be;III)V")
 	public static void method2291(@OriginalArg(0) Component arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {

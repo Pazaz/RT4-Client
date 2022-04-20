@@ -17,28 +17,22 @@ public final class Static165 {
 	public static int anInt4043;
 
 	@OriginalMember(owner = "client!nb", name = "a", descriptor = "Lclient!na;")
-	public static final JagString aClass100_772 = Static28.method790("um");
-
-	@OriginalMember(owner = "client!nb", name = "b", descriptor = "Lclient!na;")
-	private static final JagString aClass100_773 = Static28.method790("You can(Wt add yourself to your own ignore list)3");
-
-	@OriginalMember(owner = "client!nb", name = "c", descriptor = "Lclient!na;")
-	public static JagString aClass100_774 = aClass100_773;
+	public static final JagString aClass100_772 = Static28.parse("um");
 
 	@OriginalMember(owner = "client!nb", name = "d", descriptor = "I")
 	public static int anInt4035 = 0;
 
 	@OriginalMember(owner = "client!nb", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_775 = Static28.method790("::breakcon");
+	public static final JagString aClass100_775 = Static28.parse("::breakcon");
 
 	@OriginalMember(owner = "client!nb", name = "j", descriptor = "I")
 	public static volatile int anInt4039 = -1;
 
 	@OriginalMember(owner = "client!nb", name = "m", descriptor = "Lclient!na;")
-	public static final JagString aClass100_776 = Static28.method790("logo");
+	public static final JagString aClass100_776 = Static28.parse("logo");
 
 	@OriginalMember(owner = "client!nb", name = "n", descriptor = "Lclient!na;")
-	public static final JagString aClass100_777 = Static28.method790("details");
+	public static final JagString aClass100_777 = Static28.parse("details");
 
 	@OriginalMember(owner = "client!nb", name = "a", descriptor = "(IIIIIIIIII)V")
 	public static void method3162(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7, @OriginalArg(9) int arg8) {

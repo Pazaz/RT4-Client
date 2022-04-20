@@ -16,9 +16,6 @@ public final class Static146 {
 	@OriginalMember(owner = "client!lg", name = "c", descriptor = "[Lclient!tk;")
 	public static final SeqType[] aClass144Array1 = new SeqType[14];
 
-	@OriginalMember(owner = "client!lg", name = "j", descriptor = "Lclient!na;")
-	public static final JagString aClass100_669 = Static28.method790("gr-Un:");
-
 	@OriginalMember(owner = "client!lg", name = "k", descriptor = "I")
 	public static int anInt3508 = 99;
 

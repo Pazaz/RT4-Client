@@ -14,10 +14,7 @@ public final class Static98 {
 	public static Js5 aClass153_42;
 
 	@OriginalMember(owner = "client!hj", name = "d", descriptor = "Lclient!na;")
-	public static final JagString aClass100_524 = Static28.method790("hint_headicons");
-
-	@OriginalMember(owner = "client!hj", name = "i", descriptor = "Lclient!na;")
-	public static final JagString aClass100_525 = Static28.method790("Benutzen");
+	public static final JagString aClass100_524 = Static28.parse("hint_headicons");
 
 	@OriginalMember(owner = "client!hj", name = "a", descriptor = "(II)V")
 	public static void method1964(@OriginalArg(0) int arg0) {

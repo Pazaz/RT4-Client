@@ -34,7 +34,7 @@ public final class Static182 {
 			Static78.aClass3_Sub2_Sub1_3.method1419((Static48.anInt1448 - local15) / 2, 0, local15, local9);
 			Static243.aClass36_1.method3336(Static48.anInt1448 / 2 - Static243.aClass36_1.anInt4270 / 2, 18);
 		}
-		arg1.method2875(Static53.aClass100_370, Static48.anInt1448 / 2, Static254.anInt5554 / 2 - 26, 16777215, -1);
+		arg1.method2875(LocalizedText.GAME0_LOADING, Static48.anInt1448 / 2, Static254.anInt5554 / 2 - 26, 16777215, -1);
 		local9 = Static254.anInt5554 / 2 - 18;
 		if (Static239.aBoolean269) {
 			Static46.method1179(Static48.anInt1448 / 2 - 152, local9, 304, 34, 9179409);

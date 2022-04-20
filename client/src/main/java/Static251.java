@@ -19,9 +19,6 @@ public final class Static251 {
 	@OriginalMember(owner = "client!ug", name = "e", descriptor = "I")
 	public static int anInt5447 = 0;
 
-	@OriginalMember(owner = "client!ug", name = "f", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1044 = Static28.method790("weiss:");
-
 	@OriginalMember(owner = "client!ug", name = "m", descriptor = "I")
 	public static int anInt5454 = 0;
 

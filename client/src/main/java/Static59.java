@@ -16,9 +16,6 @@ public final class Static59 {
 	@OriginalMember(owner = "client!ej", name = "W", descriptor = "I")
 	public static int anInt1814 = 0;
 
-	@OriginalMember(owner = "client!ej", name = "cb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_400 = Static28.method790("clignotant2:");
-
 	@OriginalMember(owner = "client!ej", name = "h", descriptor = "(I)V")
 	public static void method1372() {
 		if (Static162.anInt3953 == 2) {

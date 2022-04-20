@@ -35,9 +35,9 @@ public final class Static70 {
 			local9 = Static34.method882(new JagString[] { local9.method3137(local21, 0), Static159.aClass100_760, local9.method3136(local21) });
 		}
 		if (local9.length() > 9) {
-			return Static34.method882(new JagString[] { Static250.aClass100_1043, local9.method3137(local9.length() - 8, 0), Static69.aClass100_444, Static123.aClass100_593, local9, Static116.aClass100_583 });
+			return Static34.method882(new JagString[] { Static250.aClass100_1043, local9.method3137(local9.length() - 8, 0), LocalizedText.MILLION_SHORT, Static123.aClass100_593, local9, Static116.aClass100_583 });
 		} else if (local9.length() > 6) {
-			return Static34.method882(new JagString[] { Static119.aClass100_589, local9.method3137(local9.length() - 4, 0), Static35.aClass100_220, Static123.aClass100_593, local9, Static116.aClass100_583 });
+			return Static34.method882(new JagString[] { Static119.aClass100_589, local9.method3137(local9.length() - 4, 0), LocalizedText.THOUSAND_SHORT, Static123.aClass100_593, local9, Static116.aClass100_583 });
 		} else {
 			return Static34.method882(new JagString[] { Static278.aClass100_1101, local9, Static230.aClass100_978 });
 		}

@@ -7,17 +7,14 @@ public final class Static272 {
 	@OriginalMember(owner = "client!wd", name = "a", descriptor = "Lclient!gn;")
 	public static final LruHashTable aClass54_14 = new LruHashTable(64);
 
-	@OriginalMember(owner = "client!wd", name = "c", descriptor = "Lclient!na;")
-	public static final JagString aClass100_988 = Static28.method790("Spieler kann nicht gefunden werden: ");
-
 	@OriginalMember(owner = "client!wd", name = "d", descriptor = "[I")
 	public static final int[] anIntArray451 = new int[] { 8, 11, 4, 6, 9, 7, 10, 0 };
 
 	@OriginalMember(owner = "client!wd", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_989 = Static28.method790("cookieprefix");
+	public static final JagString aClass100_989 = Static28.parse("cookieprefix");
 
 	@OriginalMember(owner = "client!wd", name = "f", descriptor = "Lclient!na;")
-	public static final JagString aClass100_990 = Static28.method790("::errortest");
+	public static final JagString aClass100_990 = Static28.parse("::errortest");
 
 	@OriginalMember(owner = "client!wd", name = "g", descriptor = "I")
 	public static int anInt5214 = 0;

@@ -26,18 +26,6 @@ public final class Static191 {
 	@OriginalMember(owner = "client!pg", name = "V", descriptor = "I")
 	public static final int anInt4504 = 50;
 
-	@OriginalMember(owner = "client!pg", name = "W", descriptor = "Lclient!na;")
-	public static final JagString aClass100_842 = Static28.method790(" loggt sich ein)3");
-
-	@OriginalMember(owner = "client!pg", name = "ib", descriptor = "Lclient!na;")
-	private static final JagString aClass100_847 = Static28.method790("wave2:");
-
-	@OriginalMember(owner = "client!pg", name = "X", descriptor = "Lclient!na;")
-	public static final JagString aClass100_843 = aClass100_847;
-
-	@OriginalMember(owner = "client!pg", name = "Y", descriptor = "Lclient!na;")
-	public static final JagString aClass100_844 = Static28.method790("leuchten1:");
-
 	@OriginalMember(owner = "client!pg", name = "Z", descriptor = "[I")
 	public static final int[] anIntArray387 = new int[anInt4506];
 
@@ -48,13 +36,10 @@ public final class Static191 {
 	public static final int[] anIntArray389 = new int[anInt4506];
 
 	@OriginalMember(owner = "client!pg", name = "db", descriptor = "Lclient!na;")
-	public static final JagString aClass100_845 = Static28.method790(":assistreq:");
+	public static final JagString aClass100_845 = Static28.parse(":assistreq:");
 
 	@OriginalMember(owner = "client!pg", name = "eb", descriptor = "[I")
 	public static final int[] anIntArray390 = new int[anInt4506];
-
-	@OriginalMember(owner = "client!pg", name = "hb", descriptor = "Lclient!na;")
-	public static JagString aClass100_846 = aClass100_847;
 
 	@OriginalMember(owner = "client!pg", name = "kb", descriptor = "[I")
 	public static final int[] anIntArray391 = new int[anInt4506];

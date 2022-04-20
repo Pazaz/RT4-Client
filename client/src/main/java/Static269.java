@@ -10,23 +10,11 @@ public final class Static269 {
 	@OriginalMember(owner = "client!wa", name = "ub", descriptor = "Lclient!bn;")
 	public static Map aClass3_Sub2_Sub4_2;
 
-	@OriginalMember(owner = "client!wa", name = "D", descriptor = "Lclient!na;")
-	private static final JagString aClass100_553 = Static28.method790("Loaded interfaces");
-
-	@OriginalMember(owner = "client!wa", name = "H", descriptor = "Lclient!na;")
-	public static final JagString aClass100_554 = Static28.method790("Polices charg-Bes");
-
 	@OriginalMember(owner = "client!wa", name = "X", descriptor = "[Lclient!na;")
 	public static JagString[] aClass100Array87 = null;
 
-	@OriginalMember(owner = "client!wa", name = "eb", descriptor = "Lclient!na;")
-	public static JagString aClass100_555 = aClass100_553;
-
 	@OriginalMember(owner = "client!wa", name = "pb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_556 = Static28.method790("<br>");
-
-	@OriginalMember(owner = "client!wa", name = "tb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_557 = Static28.method790("d-Broulement:");
+	public static final JagString aClass100_556 = Static28.parse("<br>");
 
 	@OriginalMember(owner = "client!wa", name = "Eb", descriptor = "[Lclient!bg;")
 	public static final Js5CachedResourceProvider[] aClass14_Sub1Array3 = new Js5CachedResourceProvider[28];
@@ -284,7 +272,7 @@ public final class Static269 {
 				Static129.method2495(local50 - 150, local61 + 2, Static41.anInt1309 * 3, 30, 9179409);
 				Static129.method2495(Static41.anInt1309 * 3 + local50 - 150, local61 - -2, 300 - Static41.anInt1309 * 3, 30, 0);
 			}
-			Static280.aClass3_Sub2_Sub9_43.method2875(Static49.aClass100_349, local50, local61 + 20, 16777215, -1);
+			Static280.aClass3_Sub2_Sub9_43.method2875(LocalizedText.LOADINGDOTDOTDOT, local50, local61 + 20, 16777215, -1);
 			return;
 		}
 		Static37.anInt1176 = (int) ((float) (arg2 * 2) / Static83.aFloat3);
@@ -337,6 +325,6 @@ public final class Static269 {
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(IZ)Lclient!na;")
 	public static JagString method2228(@OriginalArg(0) int arg0) {
-		return Static233.aClass100Array160[arg0].length() > 0 ? Static34.method882(new JagString[] { Static254.aClass100Array168[arg0], Static206.aClass100_901, Static233.aClass100Array160[arg0] }) : Static254.aClass100Array168[arg0];
+		return Static233.aClass100Array160[arg0].length() > 0 ? Static34.method882(new JagString[] { Static254.aClass100Array168[arg0], LocalizedText.MINISEPARATOR, Static233.aClass100Array160[arg0] }) : Static254.aClass100Array168[arg0];
 	}
 }

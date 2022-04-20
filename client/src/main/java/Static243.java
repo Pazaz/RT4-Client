@@ -22,9 +22,6 @@ public final class Static243 {
 	@OriginalMember(owner = "client!tk", name = "v", descriptor = "I")
 	public static int anInt5359 = 0;
 
-	@OriginalMember(owner = "client!tk", name = "x", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1012 = Static28.method790(" steht bereits auf Ihrer Freunde)2Liste(Q");
-
 	@OriginalMember(owner = "client!tk", name = "K", descriptor = "[I")
 	public static int[] anIntArray476 = new int[2];
 
@@ -158,7 +155,7 @@ public final class Static243 {
 		}
 		Static197.aBoolean228 = true;
 		Static189.anInt4443 = 0;
-		Static195.aClass100_859 = Static105.aClass100_560;
+		Static195.aClass100_859 = LocalizedText.WALKHERE;
 		Static127.aBoolean160 = false;
 		Static259.aShortArray88 = Static62.aShortArray19 = Static232.aShortArray74 = Static259.aShortArray87 = new short[256];
 		Static114.method4637();

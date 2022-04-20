@@ -16,15 +16,6 @@ public final class Static36 {
 	@OriginalMember(owner = "client!client", name = "U", descriptor = "Lclient!sc;")
 	public static final HashTable aClass133_3 = new HashTable(16);
 
-	@OriginalMember(owner = "client!client", name = "eb", descriptor = "Lclient!na;")
-	private static final JagString aClass100_235 = Static28.method790("cyan:");
-
-	@OriginalMember(owner = "client!client", name = "X", descriptor = "Lclient!na;")
-	public static JagString aClass100_233 = aClass100_235;
-
-	@OriginalMember(owner = "client!client", name = "cb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_234 = aClass100_235;
-
 	@OriginalMember(owner = "client!client", name = "a", descriptor = "(Lclient!be;)Lclient!be;")
 	public static Component method938(@OriginalArg(0) Component arg0) {
 		@Pc(4) int local4 = method940(arg0).method505();

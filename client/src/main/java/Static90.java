@@ -7,14 +7,8 @@ public final class Static90 {
 	@OriginalMember(owner = "client!hb", name = "v", descriptor = "[[[B")
 	public static byte[][][] aByteArrayArrayArray8;
 
-	@OriginalMember(owner = "client!hb", name = "p", descriptor = "Lclient!na;")
-	public static final JagString aClass100_501 = Static28.method790("M");
-
 	@OriginalMember(owner = "client!hb", name = "t", descriptor = "[I")
 	public static final int[] anIntArray215 = new int[] { 160, 192, 80, 96, 0, 144, 80, 48, 160 };
-
-	@OriginalMember(owner = "client!hb", name = "x", descriptor = "Lclient!na;")
-	public static final JagString aClass100_502 = Static28.method790("Bitte warten Sie)3)3)3");
 
 	@OriginalMember(owner = "client!hb", name = "b", descriptor = "(Lclient!na;I)V")
 	public static void method1853(@OriginalArg(0) JagString arg0) {

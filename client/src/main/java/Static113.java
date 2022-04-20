@@ -10,18 +10,6 @@ public final class Static113 {
 	@OriginalMember(owner = "client!il", name = "I", descriptor = "I")
 	public static int anInt4609 = 3;
 
-	@OriginalMember(owner = "client!il", name = "J", descriptor = "Lclient!na;")
-	private static final JagString aClass100_868 = Static28.method790("Created gameworld");
-
-	@OriginalMember(owner = "client!il", name = "M", descriptor = "Lclient!na;")
-	public static JagString aClass100_869 = aClass100_868;
-
-	@OriginalMember(owner = "client!il", name = "Q", descriptor = "Lclient!na;")
-	public static final JagString aClass100_870 = Static28.method790("Textures charg-Bes");
-
-	@OriginalMember(owner = "client!il", name = "R", descriptor = "Lclient!na;")
-	public static final JagString aClass100_871 = Static28.method790("Liste des serveurs charg-Be");
-
 	@OriginalMember(owner = "client!il", name = "a", descriptor = "(III)V")
 	public static void method3556(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		Static158.aBoolean187 = true;

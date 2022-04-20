@@ -123,7 +123,7 @@ public final class Static239 {
 	private static boolean aBoolean272 = true;
 
 	@OriginalMember(owner = "client!tf", name = "I", descriptor = "Lclient!na;")
-	private static final JagString aClass100_1007 = Static28.method790("radeon");
+	private static final JagString aClass100_1007 = Static28.parse("radeon");
 
 	@OriginalMember(owner = "client!tf", name = "a", descriptor = "(Ljava/lang/String;)Lclient!na;")
 	private static JagString method4147(@OriginalArg(0) String arg0) {

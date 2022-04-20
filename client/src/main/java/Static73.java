@@ -10,23 +10,20 @@ public final class Static73 {
 	@OriginalMember(owner = "client!fm", name = "S", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable aClass99_10 = new SoftLruHashTable(4);
 
-	@OriginalMember(owner = "client!fm", name = "T", descriptor = "Lclient!na;")
-	public static final JagString aClass100_452 = Static28.method790(" ");
-
 	@OriginalMember(owner = "client!fm", name = "W", descriptor = "Lclient!na;")
-	public static final JagString aClass100_453 = Static28.method790(")2");
+	public static final JagString aClass100_453 = Static28.parse(")2");
 
 	@OriginalMember(owner = "client!fm", name = "db", descriptor = "Lclient!gn;")
 	public static final LruHashTable aClass54_7 = new LruHashTable(64);
 
 	@OriginalMember(owner = "client!fm", name = "eb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_454 = Static28.method790("b12_full");
+	public static final JagString aClass100_454 = Static28.parse("b12_full");
 
 	@OriginalMember(owner = "client!fm", name = "fb", descriptor = "[I")
 	public static final int[] anIntArray183 = new int[14];
 
 	@OriginalMember(owner = "client!fm", name = "gb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_455 = Static28.method790("overlay2");
+	public static final JagString aClass100_455 = Static28.parse("overlay2");
 
 	@OriginalMember(owner = "client!fm", name = "a", descriptor = "(ZI)V")
 	public static void method1596(@OriginalArg(0) boolean arg0) {

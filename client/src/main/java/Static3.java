@@ -13,9 +13,6 @@ public final class Static3 {
 	@OriginalMember(owner = "client!ab", name = "j", descriptor = "[Lclient!na;")
 	public static final JagString[] aClass100Array176 = new JagString[1000];
 
-	@OriginalMember(owner = "client!ab", name = "m", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1105 = Static28.method790("Objet d(Wabonn-Bs");
-
 	@OriginalMember(owner = "client!ab", name = "n", descriptor = "Lclient!ih;")
 	public static final LinkedList aClass69_135 = new LinkedList();
 
@@ -38,9 +35,9 @@ public final class Static3 {
 			return;
 		}
 		if (arg0 == 1) {
-			Static150.method2805();
+			LocalizedText.switchToGerman();
 		} else if (arg0 == 2) {
-			Static12.method449();
+			LocalizedText.switchToFrench();
 		} else {
 			throw new RuntimeException();
 		}

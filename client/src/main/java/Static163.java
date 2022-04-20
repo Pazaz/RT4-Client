@@ -11,7 +11,7 @@ public final class Static163 {
 	public static byte[][][] aByteArrayArrayArray11;
 
 	@OriginalMember(owner = "client!n", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_767 = Static28.method790(")2");
+	public static final JagString aClass100_767 = Static28.parse(")2");
 
 	@OriginalMember(owner = "client!n", name = "a", descriptor = "(II)V")
 	public static void method3096(@OriginalArg(0) int arg0) {

@@ -5,79 +5,79 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static218 {
 
 	@OriginalMember(owner = "client!rk", name = "K", descriptor = "Lclient!na;")
-	public static final JagString aClass100_695 = Static28.method790("gt");
+	public static final JagString aClass100_695 = Static28.parse("gt");
 
 	@OriginalMember(owner = "client!rk", name = "L", descriptor = "Lclient!na;")
-	public static final JagString aClass100_696 = Static28.method790("lt");
+	public static final JagString aClass100_696 = Static28.parse("lt");
 
 	@OriginalMember(owner = "client!rk", name = "M", descriptor = "Lclient!na;")
-	public static final JagString aClass100_697 = Static28.method790("shad=");
+	public static final JagString aClass100_697 = Static28.parse("shad=");
 
 	@OriginalMember(owner = "client!rk", name = "N", descriptor = "Lclient!na;")
-	public static final JagString aClass100_698 = Static28.method790("shy");
+	public static final JagString aClass100_698 = Static28.parse("shy");
 
 	@OriginalMember(owner = "client!rk", name = "O", descriptor = "Lclient!na;")
-	public static final JagString aClass100_699 = Static28.method790("trans=");
+	public static final JagString aClass100_699 = Static28.parse("trans=");
 
 	@OriginalMember(owner = "client!rk", name = "P", descriptor = "Lclient!na;")
-	public static final JagString aClass100_700 = Static28.method790("u=");
+	public static final JagString aClass100_700 = Static28.parse("u=");
 
 	@OriginalMember(owner = "client!rk", name = "Q", descriptor = "Lclient!na;")
-	public static final JagString aClass100_701 = Static28.method790("str=");
+	public static final JagString aClass100_701 = Static28.parse("str=");
 
 	@OriginalMember(owner = "client!rk", name = "R", descriptor = "Lclient!na;")
-	public static final JagString aClass100_702 = Static28.method790("euro");
+	public static final JagString aClass100_702 = Static28.parse("euro");
 
 	@OriginalMember(owner = "client!rk", name = "T", descriptor = "Lclient!na;")
-	public static final JagString aClass100_703 = Static28.method790(")4col");
+	public static final JagString aClass100_703 = Static28.parse(")4col");
 
 	@OriginalMember(owner = "client!rk", name = "X", descriptor = "Lclient!na;")
-	public static final JagString aClass100_704 = Static28.method790(")4shad");
+	public static final JagString aClass100_704 = Static28.parse(")4shad");
 
 	@OriginalMember(owner = "client!rk", name = "Y", descriptor = "Lclient!na;")
-	public static final JagString aClass100_705 = Static28.method790("col=");
+	public static final JagString aClass100_705 = Static28.parse("col=");
 
 	@OriginalMember(owner = "client!rk", name = "Z", descriptor = "Lclient!na;")
-	private static final JagString aClass100_706 = Static28.method790("<gt>");
+	private static final JagString aClass100_706 = Static28.parse("<gt>");
 
 	@OriginalMember(owner = "client!rk", name = "bb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_707 = Static28.method790("u");
+	public static final JagString aClass100_707 = Static28.parse("u");
 
 	@OriginalMember(owner = "client!rk", name = "cb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_708 = Static28.method790("times");
+	public static final JagString aClass100_708 = Static28.parse("times");
 
 	@OriginalMember(owner = "client!rk", name = "eb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_709 = Static28.method790(")4trans");
+	public static final JagString aClass100_709 = Static28.parse(")4trans");
 
 	@OriginalMember(owner = "client!rk", name = "fb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_710 = Static28.method790("nbsp");
+	public static final JagString aClass100_710 = Static28.parse("nbsp");
 
 	@OriginalMember(owner = "client!rk", name = "hb", descriptor = "Lclient!na;")
-	private static final JagString aClass100_711 = Static28.method790("<lt>");
+	private static final JagString aClass100_711 = Static28.parse("<lt>");
 
 	@OriginalMember(owner = "client!rk", name = "ib", descriptor = "Lclient!na;")
-	public static final JagString aClass100_712 = Static28.method790(")4u");
+	public static final JagString aClass100_712 = Static28.parse(")4u");
 
 	@OriginalMember(owner = "client!rk", name = "kb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_713 = Static28.method790("br");
+	public static final JagString aClass100_713 = Static28.parse("br");
 
 	@OriginalMember(owner = "client!rk", name = "lb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_714 = Static28.method790("shad");
+	public static final JagString aClass100_714 = Static28.parse("shad");
 
 	@OriginalMember(owner = "client!rk", name = "mb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_715 = Static28.method790("img=");
+	public static final JagString aClass100_715 = Static28.parse("img=");
 
 	@OriginalMember(owner = "client!rk", name = "ob", descriptor = "Lclient!na;")
-	public static final JagString aClass100_716 = Static28.method790("copy");
+	public static final JagString aClass100_716 = Static28.parse("copy");
 
 	@OriginalMember(owner = "client!rk", name = "pb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_717 = Static28.method790(")4str");
+	public static final JagString aClass100_717 = Static28.parse(")4str");
 
 	@OriginalMember(owner = "client!rk", name = "qb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_718 = Static28.method790("reg");
+	public static final JagString aClass100_718 = Static28.parse("reg");
 
 	@OriginalMember(owner = "client!rk", name = "rb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_719 = Static28.method790("str");
+	public static final JagString aClass100_719 = Static28.parse("str");
 
 	@OriginalMember(owner = "client!rk", name = "sb", descriptor = "Lclient!na;")
 	public static final JagString aClass100_720 = Static87.method1804(100);

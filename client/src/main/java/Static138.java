@@ -26,46 +26,40 @@ public final class Static138 {
 	public static boolean aBoolean172 = false;
 
 	@OriginalMember(owner = "client!km", name = "tc", descriptor = "Lclient!na;")
-	private static final JagString aClass100_641 = Static28.method790("Dec");
+	private static final JagString aClass100_641 = Static28.parse("Dec");
 
 	@OriginalMember(owner = "client!km", name = "vc", descriptor = "Lclient!na;")
-	private static final JagString aClass100_642 = Static28.method790("Jul");
-
-	@OriginalMember(owner = "client!km", name = "Cc", descriptor = "Lclient!na;")
-	private static final JagString aClass100_647 = Static28.method790("flash3:");
-
-	@OriginalMember(owner = "client!km", name = "wc", descriptor = "Lclient!na;")
-	public static final JagString aClass100_643 = aClass100_647;
+	private static final JagString aClass100_642 = Static28.parse("Jul");
 
 	@OriginalMember(owner = "client!km", name = "xc", descriptor = "Lclient!na;")
-	private static final JagString aClass100_644 = Static28.method790("May");
+	private static final JagString aClass100_644 = Static28.parse("May");
 
 	@OriginalMember(owner = "client!km", name = "yc", descriptor = "Lclient!na;")
-	private static final JagString aClass100_645 = Static28.method790("Nov");
+	private static final JagString aClass100_645 = Static28.parse("Nov");
 
 	@OriginalMember(owner = "client!km", name = "zc", descriptor = "Lclient!na;")
-	private static final JagString aClass100_646 = Static28.method790("Mar");
+	private static final JagString aClass100_646 = Static28.parse("Mar");
 
 	@OriginalMember(owner = "client!km", name = "Gc", descriptor = "Lclient!na;")
-	private static final JagString aClass100_649 = Static28.method790("Jan");
+	private static final JagString aClass100_649 = Static28.parse("Jan");
 
 	@OriginalMember(owner = "client!km", name = "Hc", descriptor = "Lclient!na;")
-	private static final JagString aClass100_650 = Static28.method790("Feb");
+	private static final JagString aClass100_650 = Static28.parse("Feb");
 
 	@OriginalMember(owner = "client!km", name = "Tc", descriptor = "Lclient!na;")
-	private static final JagString aClass100_655 = Static28.method790("Apr");
+	private static final JagString aClass100_655 = Static28.parse("Apr");
 
 	@OriginalMember(owner = "client!km", name = "Wc", descriptor = "Lclient!na;")
-	private static final JagString aClass100_656 = Static28.method790("Jun");
+	private static final JagString aClass100_656 = Static28.parse("Jun");
 
 	@OriginalMember(owner = "client!km", name = "Qc", descriptor = "Lclient!na;")
-	private static final JagString aClass100_653 = Static28.method790("Aug");
+	private static final JagString aClass100_653 = Static28.parse("Aug");
 
 	@OriginalMember(owner = "client!km", name = "cd", descriptor = "Lclient!na;")
-	private static final JagString aClass100_657 = Static28.method790("Sep");
+	private static final JagString aClass100_657 = Static28.parse("Sep");
 
 	@OriginalMember(owner = "client!km", name = "dd", descriptor = "Lclient!na;")
-	private static final JagString aClass100_658 = Static28.method790("Oct");
+	private static final JagString aClass100_658 = Static28.parse("Oct");
 
 	@OriginalMember(owner = "client!km", name = "Ac", descriptor = "[Lclient!na;")
 	public static final JagString[] aClass100Array102 = new JagString[] { aClass100_649, aClass100_650, aClass100_646, aClass100_655, aClass100_644, aClass100_656, aClass100_642, aClass100_653, aClass100_657, aClass100_658, aClass100_645, aClass100_641 };
@@ -73,20 +67,14 @@ public final class Static138 {
 	@OriginalMember(owner = "client!km", name = "Bc", descriptor = "[I")
 	public static final int[] anIntArray323 = new int[32];
 
-	@OriginalMember(owner = "client!km", name = "Dc", descriptor = "Lclient!na;")
-	public static JagString aClass100_648 = aClass100_647;
-
-	@OriginalMember(owner = "client!km", name = "Ic", descriptor = "Lclient!na;")
-	public static final JagString aClass100_651 = Static28.method790("ondulation:");
-
 	@OriginalMember(owner = "client!km", name = "Mc", descriptor = "Lclient!na;")
-	public static final JagString aClass100_652 = Static28.method790("loginscreen");
+	public static final JagString aClass100_652 = Static28.parse("loginscreen");
 
 	@OriginalMember(owner = "client!km", name = "Rc", descriptor = "[I")
 	public static final int[] anIntArray324 = new int[] { 19, 55, 38, 155, 255, 110, 137, 205, 76 };
 
 	@OriginalMember(owner = "client!km", name = "Sc", descriptor = "Lclient!na;")
-	public static final JagString aClass100_654 = Static28.method790(":trade:");
+	public static final JagString aClass100_654 = Static28.parse(":trade:");
 
 	@OriginalMember(owner = "client!km", name = "ad", descriptor = "I")
 	public static int anInt3445 = 0;

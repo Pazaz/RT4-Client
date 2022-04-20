@@ -17,13 +17,10 @@ public final class Static266 {
 	public static int anInt5336 = -2;
 
 	@OriginalMember(owner = "client!vk", name = "d", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1010 = Static28.method790("null");
+	public static final JagString aClass100_1010 = Static28.parse("null");
 
 	@OriginalMember(owner = "client!vk", name = "h", descriptor = "I")
 	public static final int anInt5338 = (int) (Math.random() * 33.0D) - 16;
-
-	@OriginalMember(owner = "client!vk", name = "l", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1011 = Static28.method790("Lade Liste der Welten");
 
 	@OriginalMember(owner = "client!vk", name = "n", descriptor = "I")
 	public static int anInt5343 = 0;

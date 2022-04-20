@@ -19,26 +19,11 @@ public final class Static148 {
 	@OriginalMember(owner = "client!li", name = "x", descriptor = "I")
 	public static int anInt3535;
 
-	@OriginalMember(owner = "client!li", name = "b", descriptor = "Lclient!na;")
-	private static final JagString aClass100_673 = Static28.method790("Loading wordpack )2 ");
-
-	@OriginalMember(owner = "client!li", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_674 = Static28.method790("Veuillez patienter)3)3)3");
-
-	@OriginalMember(owner = "client!li", name = "u", descriptor = "Lclient!na;")
-	private static final JagString aClass100_678 = Static28.method790("Examine");
-
-	@OriginalMember(owner = "client!li", name = "f", descriptor = "Lclient!na;")
-	public static JagString aClass100_675 = aClass100_678;
-
 	@OriginalMember(owner = "client!li", name = "h", descriptor = "[Lclient!mj;")
 	public static final CollisionMap[] aClass97Array1 = new CollisionMap[4];
 
-	@OriginalMember(owner = "client!li", name = "i", descriptor = "Lclient!na;")
-	public static JagString aClass100_676 = aClass100_673;
-
 	@OriginalMember(owner = "client!li", name = "p", descriptor = "Lclient!na;")
-	public static final JagString aClass100_677 = Static28.method790("::rebuild");
+	public static final JagString aClass100_677 = Static28.parse("::rebuild");
 
 	@OriginalMember(owner = "client!li", name = "a", descriptor = "(ZI)V")
 	public static void method2765(@OriginalArg(1) int arg0) {

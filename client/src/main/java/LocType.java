@@ -458,7 +458,7 @@ public final class LocType {
 			this.anInt4405 = arg0.g1s() * 5;
 		} else if (arg1 >= 30 && arg1 < 35) {
 			this.aClass100Array130[arg1 - 30] = arg0.gjstr();
-			if (this.aClass100Array130[arg1 - 30].method3111(Static10.aClass100_64)) {
+			if (this.aClass100Array130[arg1 - 30].method3111(LocalizedText.HIDDEN)) {
 				this.aClass100Array130[arg1 - 30] = null;
 			}
 		} else if (arg1 == 40) {

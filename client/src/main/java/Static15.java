@@ -8,7 +8,7 @@ public final class Static15 {
 	public static float aFloat4;
 
 	@OriginalMember(owner = "client!be", name = "ib", descriptor = "Lclient!na;")
-	public static final JagString aClass100_83 = Static28.method790("event_opbase");
+	public static final JagString aClass100_83 = Static28.parse("event_opbase");
 
 	@OriginalMember(owner = "client!be", name = "Kb", descriptor = "Z")
 	public static boolean aBoolean33 = true;
@@ -21,9 +21,6 @@ public final class Static15 {
 
 	@OriginalMember(owner = "client!be", name = "Ec", descriptor = "I")
 	public static int anInt506 = -1;
-
-	@OriginalMember(owner = "client!be", name = "Zc", descriptor = "Lclient!na;")
-	public static final JagString aClass100_90 = Static28.method790("Nehmen");
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(Z)Lclient!na;")
 	public static JagString method479() {

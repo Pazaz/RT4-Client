@@ -21,7 +21,7 @@ public final class Static4 {
 	public static final BasType aClass20_1 = new BasType();
 
 	@OriginalMember(owner = "client!ac", name = "m", descriptor = "Lclient!na;")
-	public static final JagString aClass100_7 = Static28.method790("overlay");
+	public static final JagString aClass100_7 = Static28.parse("overlay");
 
 	@OriginalMember(owner = "client!ac", name = "n", descriptor = "I")
 	public static int anInt36 = 0;
@@ -154,7 +154,7 @@ public final class Static4 {
 					}
 				}
 				if (!local262 && Static11.anInt384 == 0) {
-					Static103.method2231(local156, 4, Static51.aClass100_367);
+					Static103.method2231(local156, 4, LocalizedText.TRADEREQ);
 				}
 			} else if (local245.method3130(Static61.aClass100_423)) {
 				local156 = local245.method3137(local245.method3131(Static264.aClass100_875), 0);
@@ -793,10 +793,10 @@ public final class Static4 {
 									if (local864 != Static104.anIntArray255[local1986]) {
 										Static104.anIntArray255[local1986] = local864;
 										if (local864 > 0) {
-											Static103.method2231(Static186.aClass100_827, 5, Static34.method882(new JagString[] { local2834, Static25.aClass100_155 }));
+											Static103.method2231(Static186.aClass100_827, 5, Static34.method882(new JagString[] { local2834, LocalizedText.FRIENDLOGIN}));
 										}
 										if (local864 == 0) {
-											Static103.method2231(Static186.aClass100_827, 5, Static34.method882(new JagString[] { local2834, Static92.aClass100_507 }));
+											Static103.method2231(Static186.aClass100_827, 5, Static34.method882(new JagString[] { local2834, LocalizedText.FRIENDLOGOUT}));
 										}
 									}
 									Static214.aClass100Array170[local1986] = local506;
@@ -851,7 +851,7 @@ public final class Static4 {
 							return true;
 						} else if (Static164.anInt3985 == 160) {
 							if (Static223.anInt5028 == 0) {
-								Static195.aClass100_859 = Static105.aClass100_560;
+								Static195.aClass100_859 = LocalizedText.WALKHERE;
 							} else {
 								Static195.aClass100_859 = Static57.aClass3_Sub15_Sub1_3.gjstr();
 							}

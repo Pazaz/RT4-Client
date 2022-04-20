@@ -14,23 +14,8 @@ public final class Static156 {
 	@OriginalMember(owner = "client!mf", name = "X", descriptor = "I")
 	public static int anInt3783;
 
-	@OriginalMember(owner = "client!mf", name = "q", descriptor = "Lclient!na;")
-	public static final JagString aClass100_742 = Static28.method790("Okay");
-
 	@OriginalMember(owner = "client!mf", name = "x", descriptor = "Lclient!ha;")
 	public static final GzipDecompressor aClass56_1 = new GzipDecompressor();
-
-	@OriginalMember(owner = "client!mf", name = "K", descriptor = "Lclient!na;")
-	public static final JagString aClass100_743 = Static28.method790("Poser");
-
-	@OriginalMember(owner = "client!mf", name = "S", descriptor = "Lclient!na;")
-	public static final JagString aClass100_744 = Static28.method790("Starte 3D)2Softwarebibliothek)3");
-
-	@OriginalMember(owner = "client!mf", name = "T", descriptor = "Lclient!na;")
-	private static final JagString aClass100_745 = Static28.method790("rating: ");
-
-	@OriginalMember(owner = "client!mf", name = "U", descriptor = "Lclient!na;")
-	public static JagString aClass100_746 = aClass100_745;
 
 	@OriginalMember(owner = "client!mf", name = "a", descriptor = "(IIIII[[[B[I[I[I[I[IIBII)V")
 	public static void method2954(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) byte[][][] arg5, @OriginalArg(6) int[] arg6, @OriginalArg(7) int[] arg7, @OriginalArg(8) int[] arg8, @OriginalArg(9) int[] arg9, @OriginalArg(10) int[] arg10, @OriginalArg(11) int arg11, @OriginalArg(12) byte arg12, @OriginalArg(13) int arg13, @OriginalArg(14) int arg14) {

@@ -12,12 +12,6 @@ public final class Static140 {
 	@OriginalMember(owner = "client!la", name = "f", descriptor = "Lclient!ce;")
 	public static final SecondaryLinkedList aClass16_7 = new SecondaryLinkedList();
 
-	@OriginalMember(owner = "client!la", name = "g", descriptor = "Lclient!na;")
-	public static final JagString aClass100_660 = Static28.method790(" steht bereits auf Ihrer Ignorieren)2Liste(Q");
-
-	@OriginalMember(owner = "client!la", name = "k", descriptor = "Lclient!na;")
-	public static final JagString aClass100_661 = Static28.method790("Chargement du module texte )2 ");
-
 	@OriginalMember(owner = "client!la", name = "a", descriptor = "(Lclient!wa;Z)V")
 	public static void method2705(@OriginalArg(0) Buffer arg0) {
 		@Pc(15) byte[] local15 = new byte[24];
@@ -60,25 +54,25 @@ public final class Static140 {
 			return;
 		}
 		if (Static35.anInt1093 >= 100) {
-			Static103.method2231(Static186.aClass100_827, 0, Static246.aClass100_1028);
+			Static103.method2231(Static186.aClass100_827, 0, LocalizedText.IGNORELISTFULL);
 			return;
 		}
 		@Pc(34) JagString local34 = Static79.method1702(arg0).method3125();
 		@Pc(36) int local36;
 		for (local36 = 0; local36 < Static35.anInt1093; local36++) {
 			if (Static190.aLongArray6[local36] == arg0) {
-				Static103.method2231(Static186.aClass100_827, 0, Static34.method882(new JagString[] { local34, Static184.aClass100_820 }));
+				Static103.method2231(Static186.aClass100_827, 0, Static34.method882(new JagString[] { local34, LocalizedText.IGNORELISTDUPE}));
 				return;
 			}
 		}
 		for (local36 = 0; local36 < Static9.anInt178; local36++) {
 			if (Static92.aLongArray3[local36] == arg0) {
-				Static103.method2231(Static186.aClass100_827, 0, Static34.method882(new JagString[] { Static71.aClass100_418, local34, Static197.aClass100_873 }));
+				Static103.method2231(Static186.aClass100_827, 0, Static34.method882(new JagString[] { LocalizedText.REMOVESOCIAL2, local34, LocalizedText.REMOVEFRIEND}));
 				return;
 			}
 		}
 		if (local34.method3108(Static173.aClass8_Sub4_Sub1_2.aClass100_364)) {
-			Static103.method2231(Static186.aClass100_827, 0, Static165.aClass100_774);
+			Static103.method2231(Static186.aClass100_827, 0, LocalizedText.IGNORECANTADDSELF);
 			return;
 		}
 		Static190.aLongArray6[Static35.anInt1093] = arg0;

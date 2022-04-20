@@ -20,16 +20,16 @@ public final class Static276 {
 	public static final int[] anIntArray564 = new int[5];
 
 	@OriginalMember(owner = "client!wh", name = "n", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1095 = Static28.method790("; version=1; path=)4; domain=");
+	public static final JagString aClass100_1095 = Static28.parse("; version=1; path=)4; domain=");
 
 	@OriginalMember(owner = "client!wh", name = "o", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1096 = Static28.method790("rect_debug=");
+	public static final JagString aClass100_1096 = Static28.parse("rect_debug=");
 
 	@OriginalMember(owner = "client!wh", name = "s", descriptor = "I")
 	public static int anInt5816 = 0;
 
 	@OriginalMember(owner = "client!wh", name = "u", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1097 = Static28.method790("(U2");
+	public static final JagString aClass100_1097 = Static28.parse("(U2");
 
 	@OriginalMember(owner = "client!wh", name = "a", descriptor = "(IIII)Z")
 	public static boolean method4611(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
@@ -76,7 +76,7 @@ public final class Static276 {
 			}
 		}
 		if (!local13) {
-			Static103.method2231(Static186.aClass100_827, 0, Static34.method882(new JagString[] { Static82.aClass100_478, local7 }));
+			Static103.method2231(Static186.aClass100_827, 0, Static34.method882(new JagString[] { LocalizedText.UNABLETOFIND, local7 }));
 		}
 	}
 

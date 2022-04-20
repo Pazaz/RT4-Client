@@ -26,16 +26,16 @@ public final class Static72 {
 	public static int anInt2036 = 0;
 
 	@OriginalMember(owner = "client!fl", name = "H", descriptor = "Lclient!na;")
-	public static final JagString aClass100_446 = Static28.method790("<img=0>");
+	public static final JagString aClass100_446 = Static28.parse("<img=0>");
 
 	@OriginalMember(owner = "client!fl", name = "P", descriptor = "I")
 	public static int anInt2043 = 0;
 
 	@OriginalMember(owner = "client!fl", name = "Q", descriptor = "Lclient!na;")
-	public static final JagString aClass100_447 = Static28.method790("");
+	public static final JagString aClass100_447 = Static28.parse("");
 
 	@OriginalMember(owner = "client!fl", name = "V", descriptor = "Lclient!na;")
-	public static final JagString aClass100_448 = Static28.method790("(Y");
+	public static final JagString aClass100_448 = Static28.parse("(Y");
 
 	@OriginalMember(owner = "client!fl", name = "b", descriptor = "(II)Lclient!cl;")
 	public static AnimFrameset method1566(@OriginalArg(0) int arg0) {

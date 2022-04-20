@@ -7,9 +7,6 @@ public final class Static134 {
 	@OriginalMember(owner = "client!kh", name = "f", descriptor = "I")
 	public static int anInt3302;
 
-	@OriginalMember(owner = "client!kh", name = "a", descriptor = "Lclient!na;")
-	public static final JagString aClass100_630 = Static28.method790("Attaquer");
-
 	@OriginalMember(owner = "client!kh", name = "g", descriptor = "Lclient!hh;")
 	public static final Class59 aClass59_2 = new Class59();
 

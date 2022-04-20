@@ -409,7 +409,7 @@ public final class Component {
 	public int anInt522 = -1;
 
 	@OriginalMember(owner = "client!be", name = "Rc", descriptor = "Lclient!na;")
-	public JagString aClass100_89 = Static192.aClass100_849;
+	public JagString aClass100_89 = LocalizedText.OK;
 
 	@OriginalMember(owner = "client!be", name = "Gc", descriptor = "I")
 	public int anInt508 = 0;
@@ -742,16 +742,16 @@ public final class Component {
 			this.aClass100_89 = arg0.gjstr();
 			if (this.aClass100_89.length() == 0) {
 				if (this.anInt530 == 1) {
-					this.aClass100_89 = Static192.aClass100_849;
+					this.aClass100_89 = LocalizedText.OK;
 				}
 				if (this.anInt530 == 4) {
-					this.aClass100_89 = Static225.aClass100_960;
+					this.aClass100_89 = LocalizedText.SELECT;
 				}
 				if (this.anInt530 == 5) {
-					this.aClass100_89 = Static225.aClass100_960;
+					this.aClass100_89 = LocalizedText.SELECT;
 				}
 				if (this.anInt530 == 6) {
-					this.aClass100_89 = Static109.aClass100_569;
+					this.aClass100_89 = LocalizedText.CONTINUE;
 				}
 			}
 		}

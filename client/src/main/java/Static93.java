@@ -20,7 +20,7 @@ public final class Static93 {
 	public static Mouse aClass150_1 = new Mouse();
 
 	@OriginalMember(owner = "client!he", name = "db", descriptor = "Lclient!na;")
-	public static final JagString aClass100_517 = Static28.method790("");
+	public static final JagString aClass100_517 = Static28.parse("");
 
 	@OriginalMember(owner = "client!he", name = "eb", descriptor = "[I")
 	public static final int[] anIntArray219 = new int[1000];
@@ -29,7 +29,7 @@ public final class Static93 {
 	public static final SoftLruHashTable aClass99_14 = new SoftLruHashTable(30);
 
 	@OriginalMember(owner = "client!he", name = "gb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_518 = Static28.method790("www");
+	public static final JagString aClass100_518 = Static28.parse("www");
 
 	@OriginalMember(owner = "client!he", name = "c", descriptor = "(II)V")
 	public static void method1906(@OriginalArg(1) int arg0) {
