@@ -38,7 +38,7 @@ public final class SoftLruHashTable {
 		} else {
 			this.anInt3966--;
 		}
-		@Pc(44) Class3_Sub2_Sub10_Sub1 local44 = new Class3_Sub2_Sub10_Sub1(arg0);
+		@Pc(44) HardReferenceNode local44 = new HardReferenceNode(arg0);
 		this.aClass133_18.method3862(local44, arg1);
 		this.aClass16_8.method798(local44);
 		local44.aLong185 = 0L;
@@ -119,7 +119,7 @@ public final class SoftLruHashTable {
 			return null;
 		}
 		if (local12.method3619()) {
-			@Pc(53) Class3_Sub2_Sub10_Sub1 local53 = new Class3_Sub2_Sub10_Sub1(local27);
+			@Pc(53) HardReferenceNode local53 = new HardReferenceNode(local27);
 			this.aClass133_18.method3862(local53, local12.aLong192);
 			this.aClass16_8.method798(local53);
 			local53.aLong185 = 0L;
