@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!qd")
-public final class Class3_Sub2_Sub10_Sub2 extends Class3_Sub2_Sub10 {
+public final class Class3_Sub2_Sub10_Sub2 extends ReferenceNode {
 
 	@OriginalMember(owner = "client!qd", name = "U", descriptor = "Ljava/lang/ref/SoftReference;")
 	private final SoftReference aSoftReference1;
