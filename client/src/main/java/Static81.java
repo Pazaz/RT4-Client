@@ -16,7 +16,7 @@ public final class Static81 {
 	public static int anInt2223;
 
 	@OriginalMember(owner = "client!gg", name = "U", descriptor = "I")
-	public static int anInt2219 = 0;
+	public static int modeWhat = 0;
 
 	@OriginalMember(owner = "client!gg", name = "W", descriptor = "Lclient!na;")
 	public static final JagString aClass100_475 = Static28.parse("null");
@@ -41,12 +41,12 @@ public final class Static81 {
 			if (local28 == null) {
 				arg0 = -1;
 			} else {
-				Static71.aClass213_3.method5113(local28.method301(), local28.anInt1860, Static154.aCanvas1, new Point(local24.anInt2852, local24.anInt2850), local28.anInt1866);
+				Static71.signLink.method5113(local28.method301(), local28.anInt1860, Static154.canvas, new Point(local24.anInt2852, local24.anInt2850), local28.anInt1866);
 				Static115.anInt2941 = arg0;
 			}
 		}
 		if (arg0 == -1 && Static115.anInt2941 != -1) {
-			Static71.aClass213_3.method5113(null, -1, Static154.aCanvas1, new Point(), -1);
+			Static71.signLink.method5113(null, -1, Static154.canvas, new Point(), -1);
 			Static115.anInt2941 = -1;
 		}
 	}
@@ -599,7 +599,7 @@ public final class Static81 {
 												Static48.method1197(14500);
 												Static6.aClass3_Sub15_Sub1_1.method2242(245);
 											}
-											if (Static33.aClass212_1 != null && Static33.aClass212_1.anInt5925 == 1) {
+											if (Static33.aClass212_1 != null && Static33.aClass212_1.status == 1) {
 												if (Static33.aClass212_1.anObject6 != null) {
 													Static169.method3175(Static175.aClass100_797, Static164.aBoolean194);
 												}
@@ -672,7 +672,7 @@ public final class Static81 {
 											}
 											try {
 												if (Static124.aClass95_2 != null && Static6.aClass3_Sub15_Sub1_1.offset > 0) {
-													Static124.aClass95_2.method2830(Static6.aClass3_Sub15_Sub1_1.data, Static6.aClass3_Sub15_Sub1_1.offset);
+													Static124.aClass95_2.write(Static6.aClass3_Sub15_Sub1_1.data, Static6.aClass3_Sub15_Sub1_1.offset);
 													Static131.anInt3251 = 0;
 													Static6.aClass3_Sub15_Sub1_1.offset = 0;
 												}

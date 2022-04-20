@@ -38,10 +38,10 @@ public final class Js5NetQueue {
 	private byte aByte8 = 0;
 
 	@OriginalMember(owner = "client!jb", name = "I", descriptor = "I")
-	public volatile int anInt2964 = 0;
+	public volatile int errors = 0;
 
 	@OriginalMember(owner = "client!jb", name = "H", descriptor = "I")
-	public volatile int anInt2963 = 0;
+	public volatile int response = 0;
 
 	@OriginalMember(owner = "client!jb", name = "F", descriptor = "Lclient!wa;")
 	private final Buffer aClass3_Sub15_5 = new Buffer(8);
@@ -52,10 +52,10 @@ public final class Js5NetQueue {
 	}
 
 	@OriginalMember(owner = "client!jb", name = "b", descriptor = "(B)Z")
-	public final boolean method2318() {
+	public final boolean loop() {
 		@Pc(19) int local19;
 		if (this.aClass95_1 != null) {
-			@Pc(12) long local12 = MonotonicClock.method5096();
+			@Pc(12) long local12 = MonotonicClock.currentTimeMillis();
 			local19 = (int) (local12 - this.aLong104);
 			this.aLong104 = local12;
 			if (local19 > 200) {
@@ -80,18 +80,18 @@ public final class Js5NetQueue {
 				this.aClass3_Sub15_4.offset = 0;
 				this.aClass3_Sub15_4.p1(1);
 				this.aClass3_Sub15_4.p3((int) local75.aLong185);
-				this.aClass95_1.method2830(this.aClass3_Sub15_4.data, 4);
+				this.aClass95_1.write(this.aClass3_Sub15_4.data, 4);
 				this.aClass16_3.method798(local75);
 			}
 			for (local75 = (Js5NetRequest) this.aClass16_4.method795(); local75 != null; local75 = (Js5NetRequest) this.aClass16_4.method797()) {
 				this.aClass3_Sub15_4.offset = 0;
 				this.aClass3_Sub15_4.p1(0);
 				this.aClass3_Sub15_4.p3((int) local75.aLong185);
-				this.aClass95_1.method2830(this.aClass3_Sub15_4.data, 4);
+				this.aClass95_1.write(this.aClass3_Sub15_4.data, 4);
 				this.aClass16_5.method798(local75);
 			}
 			for (@Pc(172) int local172 = 0; local172 < 100; local172++) {
-				local19 = this.aClass95_1.method2831();
+				local19 = this.aClass95_1.available();
 				if (local19 < 0) {
 					throw new IOException();
 				}
@@ -189,8 +189,8 @@ public final class Js5NetQueue {
 				this.aClass95_1.method2834();
 			} catch (@Pc(650) Exception local650) {
 			}
-			this.anInt2963 = -2;
-			this.anInt2964++;
+			this.response = -2;
+			this.errors++;
 			this.aClass95_1 = null;
 			return this.method2328() == 0 && this.method2321() == 0;
 		}
@@ -205,14 +205,14 @@ public final class Js5NetQueue {
 			this.aClass3_Sub15_4.offset = 0;
 			this.aClass3_Sub15_4.p1(7);
 			this.aClass3_Sub15_4.p3(0);
-			this.aClass95_1.method2830(this.aClass3_Sub15_4.data, 4);
+			this.aClass95_1.write(this.aClass3_Sub15_4.data, 4);
 		} catch (@Pc(39) IOException local39) {
 			try {
 				this.aClass95_1.method2834();
 			} catch (@Pc(45) Exception local45) {
 			}
-			this.anInt2964++;
-			this.anInt2963 = -2;
+			this.errors++;
+			this.response = -2;
 			this.aClass95_1 = null;
 		}
 	}
@@ -231,14 +231,14 @@ public final class Js5NetQueue {
 			this.aClass3_Sub15_4.offset = 0;
 			this.aClass3_Sub15_4.p1(arg0 ? 2 : 3);
 			this.aClass3_Sub15_4.p3(0);
-			this.aClass95_1.method2830(this.aClass3_Sub15_4.data, 4);
+			this.aClass95_1.write(this.aClass3_Sub15_4.data, 4);
 		} catch (@Pc(42) IOException local42) {
 			try {
 				this.aClass95_1.method2834();
 			} catch (@Pc(48) Exception local48) {
 			}
-			this.anInt2964++;
-			this.anInt2963 = -2;
+			this.errors++;
+			this.response = -2;
 			this.aClass95_1 = null;
 		}
 	}
@@ -251,7 +251,7 @@ public final class Js5NetQueue {
 	}
 
 	@OriginalMember(owner = "client!jb", name = "a", descriptor = "(ZLclient!ma;I)V")
-	public final void method2324(@OriginalArg(0) boolean arg0, @OriginalArg(1) BufferedSocket arg1) {
+	public final void loggedOut(@OriginalArg(0) boolean arg0, @OriginalArg(1) BufferedSocket arg1) {
 		if (this.aClass95_1 != null) {
 			try {
 				this.aClass95_1.method2834();
@@ -276,19 +276,19 @@ public final class Js5NetQueue {
 								this.aClass3_Sub15_4.p1(4);
 								this.aClass3_Sub15_4.p1(this.aByte8);
 								this.aClass3_Sub15_4.p2(0);
-								this.aClass95_1.method2830(this.aClass3_Sub15_4.data, 4);
+								this.aClass95_1.write(this.aClass3_Sub15_4.data, 4);
 							} catch (@Pc(107) IOException local107) {
 								try {
 									this.aClass95_1.method2834();
 								} catch (@Pc(113) Exception local113) {
 								}
-								this.anInt2963 = -2;
-								this.anInt2964++;
+								this.response = -2;
+								this.errors++;
 								this.aClass95_1 = null;
 							}
 						}
 						this.anInt2962 = 0;
-						this.aLong104 = MonotonicClock.method5096();
+						this.aLong104 = MonotonicClock.currentTimeMillis();
 						return;
 					}
 					this.aClass16_4.method798(local44);
@@ -309,10 +309,10 @@ public final class Js5NetQueue {
 			this.aClass95_1.method2834();
 		} catch (@Pc(17) Exception local17) {
 		}
-		this.anInt2963 = -1;
+		this.response = -1;
 		this.aByte8 = (byte) (Math.random() * 255.0D + 1.0D);
 		this.aClass95_1 = null;
-		this.anInt2964++;
+		this.errors++;
 	}
 
 	@OriginalMember(owner = "client!jb", name = "d", descriptor = "(I)I")
@@ -356,15 +356,15 @@ public final class Js5NetQueue {
 			this.aClass3_Sub15_4.offset = 0;
 			this.aClass3_Sub15_4.p1(6);
 			this.aClass3_Sub15_4.p3(3);
-			this.aClass95_1.method2830(this.aClass3_Sub15_4.data, 4);
+			this.aClass95_1.write(this.aClass3_Sub15_4.data, 4);
 		} catch (@Pc(37) IOException local37) {
 			try {
 				this.aClass95_1.method2834();
 			} catch (@Pc(43) Exception local43) {
 			}
-			this.anInt2964++;
+			this.errors++;
 			this.aClass95_1 = null;
-			this.anInt2963 = -2;
+			this.response = -2;
 		}
 	}
 }

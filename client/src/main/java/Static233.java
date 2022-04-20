@@ -53,7 +53,7 @@ public final class Static233 {
 	public static final int[] anIntArray452 = new int[32];
 
 	@OriginalMember(owner = "client!t", name = "F", descriptor = "I")
-	public static int anInt5226 = 0;
+	public static int js5PrevErrors = 0;
 
 	@OriginalMember(owner = "client!t", name = "b", descriptor = "(I)V")
 	public static void method3999() {
@@ -161,18 +161,18 @@ public final class Static233 {
 			@Pc(25) int local25;
 			for (local25 = 0; local25 < local18.anInt1725; local25++) {
 				if (local18.aClass212Array2[local25] != null) {
-					if (local18.aClass212Array2[local25].anInt5925 == 2) {
+					if (local18.aClass212Array2[local25].status == 2) {
 						local18.anIntArray138[local25] = -5;
 					}
-					if (local18.aClass212Array2[local25].anInt5925 == 0) {
+					if (local18.aClass212Array2[local25].status == 0) {
 						local23 = true;
 					}
 				}
 				if (local18.aClass212Array1[local25] != null) {
-					if (local18.aClass212Array1[local25].anInt5925 == 2) {
+					if (local18.aClass212Array1[local25].status == 2) {
 						local18.anIntArray138[local25] = -6;
 					}
-					if (local18.aClass212Array1[local25].anInt5925 == 0) {
+					if (local18.aClass212Array1[local25].status == 0) {
 						local23 = true;
 					}
 				}

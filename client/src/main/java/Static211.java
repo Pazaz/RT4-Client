@@ -45,9 +45,9 @@ public final class Static211 {
 			Static147.aClass62_2.method3575();
 		}
 		Static41.method1045(Static99.aBoolean143);
-		Static11.aClass62_1 = Static107.method2262(22050, Static71.aClass213_3, Static154.aCanvas1, 0);
+		Static11.aClass62_1 = Static107.method2262(22050, Static71.signLink, Static154.canvas, 0);
 		Static11.aClass62_1.method3566(Static148.aClass3_Sub3_Sub4_1);
-		Static147.aClass62_2 = Static107.method2262(2048, Static71.aClass213_3, Static154.aCanvas1, 1);
+		Static147.aClass62_2 = Static107.method2262(2048, Static71.signLink, Static154.canvas, 1);
 		Static147.aClass62_2.method3566(Static204.aClass3_Sub3_Sub2_1);
 	}
 }

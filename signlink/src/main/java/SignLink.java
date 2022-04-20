@@ -63,7 +63,7 @@ public final class SignLink implements Runnable {
 	private AudioSource anInterface10_2;
 
 	@OriginalMember(owner = "signlink!ll", name = "g", descriptor = "Lsignlink!qm;")
-	public FileOnDisk aClass214_2 = null;
+	public FileOnDisk cacheData = null;
 
 	@OriginalMember(owner = "signlink!ll", name = "p", descriptor = "Lsignlink!im;")
 	private PrivilegedRequest aClass212_7 = null;
@@ -72,10 +72,10 @@ public final class SignLink implements Runnable {
 	private boolean aBoolean360 = false;
 
 	@OriginalMember(owner = "signlink!ll", name = "h", descriptor = "Lsignlink!qm;")
-	public FileOnDisk aClass214_3 = null;
+	public FileOnDisk cacheMasterIndex = null;
 
 	@OriginalMember(owner = "signlink!ll", name = "d", descriptor = "Lsignlink!qm;")
-	public FileOnDisk aClass214_4 = null;
+	public FileOnDisk uid = null;
 
 	@OriginalMember(owner = "signlink!ll", name = "y", descriptor = "Lsignlink!im;")
 	private PrivilegedRequest aClass212_8 = null;
@@ -93,7 +93,7 @@ public final class SignLink implements Runnable {
 	public EventQueue anEventQueue1;
 
 	@OriginalMember(owner = "signlink!ll", name = "c", descriptor = "[Lsignlink!qm;")
-	public FileOnDisk[] aClass214Array1;
+	public FileOnDisk[] cacheIndexes;
 
 	@OriginalMember(owner = "signlink!ll", name = "t", descriptor = "Lsignlink!e;")
 	private FullScreenManager aClass210_1;
@@ -223,12 +223,12 @@ public final class SignLink implements Runnable {
 			}
 		} catch (@Pc(153) Exception local153) {
 		}
-		this.aClass214_4 = new FileOnDisk(method5127(null, this.anInt5929, "random.dat"), "rw", 25L);
-		this.aClass214_2 = new FileOnDisk(method5127(this.aString19, this.anInt5929, "main_file_cache.dat2"), "rw", 104857600L);
-		this.aClass214_3 = new FileOnDisk(method5127(this.aString19, this.anInt5929, "main_file_cache.idx255"), "rw", 1048576L);
-		this.aClass214Array1 = new FileOnDisk[arg3];
+		this.uid = new FileOnDisk(method5127(null, this.anInt5929, "random.dat"), "rw", 25L);
+		this.cacheData = new FileOnDisk(method5127(this.aString19, this.anInt5929, "main_file_cache.dat2"), "rw", 104857600L);
+		this.cacheMasterIndex = new FileOnDisk(method5127(this.aString19, this.anInt5929, "main_file_cache.idx255"), "rw", 1048576L);
+		this.cacheIndexes = new FileOnDisk[arg3];
 		for (@Pc(200) int local200 = 0; local200 < arg3; local200++) {
-			this.aClass214Array1[local200] = new FileOnDisk(method5127(this.aString19, this.anInt5929, "main_file_cache.idx" + local200), "rw", 1048576L);
+			this.cacheIndexes[local200] = new FileOnDisk(method5127(this.aString19, this.anInt5929, "main_file_cache.idx" + local200), "rw", 1048576L);
 		}
 		try {
 			this.aClass210_1 = new FullScreenManager();
@@ -258,7 +258,7 @@ public final class SignLink implements Runnable {
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(I)V")
 	public final void method5110() {
-		aLong1314 = MonotonicClock.method5096() + 5000L;
+		aLong1314 = MonotonicClock.currentTimeMillis() + 5000L;
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(Z)Z")
@@ -306,7 +306,7 @@ public final class SignLink implements Runnable {
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(BLjava/lang/String;I)Lsignlink!im;")
-	public final PrivilegedRequest method5120(@OriginalArg(1) String arg0, @OriginalArg(2) int arg1) {
+	public final PrivilegedRequest openSocket(@OriginalArg(1) String arg0, @OriginalArg(2) int arg1) {
 		return this.method5114(1, 0, arg0, arg1);
 	}
 
@@ -347,7 +347,7 @@ public final class SignLink implements Runnable {
 			try {
 				@Pc(45) int local45 = local16.anInt5924;
 				if (local45 == 1) {
-					if (aLong1314 > MonotonicClock.method5096()) {
+					if (aLong1314 > MonotonicClock.currentTimeMillis()) {
 						throw new IOException();
 					}
 					local16.anObject6 = new Socket(InetAddress.getByName((String) local16.anObject7), local16.anInt5926);
@@ -358,7 +358,7 @@ public final class SignLink implements Runnable {
 					local813.setPriority(local16.anInt5926);
 					local16.anObject6 = local813;
 				} else if (local45 == 4) {
-					if (aLong1314 > MonotonicClock.method5096()) {
+					if (aLong1314 > MonotonicClock.currentTimeMillis()) {
 						throw new IOException();
 					}
 					local16.anObject6 = new DataInputStream(((URL) local16.anObject7).openStream());
@@ -379,7 +379,7 @@ public final class SignLink implements Runnable {
 					} else {
 						@Pc(147) String local147;
 						if (local45 == 3) {
-							if (MonotonicClock.method5096() < aLong1314) {
+							if (MonotonicClock.currentTimeMillis() < aLong1314) {
 								throw new IOException();
 							}
 							local147 = (local16.anInt5926 >> 24 & 0xFF) + "." + (local16.anInt5926 >> 16 & 0xFF) + "." + (local16.anInt5926 >> 8 & 0xFF) + "." + (local16.anInt5926 & 0xFF);
@@ -481,11 +481,11 @@ public final class SignLink implements Runnable {
 						}
 					}
 				}
-				local16.anInt5925 = 1;
+				local16.status = 1;
 			} catch (@Pc(830) ThreadDeath local830) {
 				throw local830;
 			} catch (@Pc(833) Throwable local833) {
-				local16.anInt5925 = 2;
+				local16.status = 2;
 			}
 		}
 	}
@@ -505,31 +505,31 @@ public final class SignLink implements Runnable {
 			this.aThread3.join();
 		} catch (@Pc(21) InterruptedException local21) {
 		}
-		if (this.aClass214_2 != null) {
+		if (this.cacheData != null) {
 			try {
-				this.aClass214_2.method5136();
+				this.cacheData.method5136();
 			} catch (@Pc(39) IOException local39) {
 			}
 		}
-		if (this.aClass214_3 != null) {
+		if (this.cacheMasterIndex != null) {
 			try {
-				this.aClass214_3.method5136();
+				this.cacheMasterIndex.method5136();
 			} catch (@Pc(49) IOException local49) {
 			}
 		}
-		if (this.aClass214Array1 != null) {
-			for (@Pc(55) int local55 = 0; local55 < this.aClass214Array1.length; local55++) {
-				if (this.aClass214Array1[local55] != null) {
+		if (this.cacheIndexes != null) {
+			for (@Pc(55) int local55 = 0; local55 < this.cacheIndexes.length; local55++) {
+				if (this.cacheIndexes[local55] != null) {
 					try {
-						this.aClass214Array1[local55].method5136();
+						this.cacheIndexes[local55].method5136();
 					} catch (@Pc(79) IOException local79) {
 					}
 				}
 			}
 		}
-		if (this.aClass214_4 != null) {
+		if (this.uid != null) {
 			try {
-				this.aClass214_4.method5136();
+				this.uid.method5136();
 			} catch (@Pc(93) IOException local93) {
 			}
 		}

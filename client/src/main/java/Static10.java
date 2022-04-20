@@ -37,10 +37,10 @@ public final class Static10 {
 			return arg0;
 		}
 		Static82.anInt2231 = 0;
-		if (Static208.anInt4784 == Static249.anInt5428) {
-			Static208.anInt4784 = Static97.anInt2508;
+		if (Static208.worldListPort == Static249.worldListDefaultPort) {
+			Static208.worldListPort = Static97.worldListAlternatePort;
 		} else {
-			Static208.anInt4784 = Static249.anInt5428;
+			Static208.worldListPort = Static249.worldListDefaultPort;
 		}
 		return -1;
 	}

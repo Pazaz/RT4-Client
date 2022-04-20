@@ -12,7 +12,7 @@ public final class Static107 {
 	public static int anInt2878;
 
 	@OriginalMember(owner = "client!id", name = "l", descriptor = "Lclient!jb;")
-	public static Js5NetQueue aClass73_3;
+	public static Js5NetQueue js5NetQueue;
 
 	@OriginalMember(owner = "client!id", name = "b", descriptor = "I")
 	public static int anInt2875 = -1;

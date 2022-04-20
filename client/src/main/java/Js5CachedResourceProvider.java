@@ -277,7 +277,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 				this.aClass69_17 = null;
 			}
 		}
-		if (!this.aBoolean37 || this.aLong20 > MonotonicClock.method5096()) {
+		if (!this.aBoolean37 || this.aLong20 > MonotonicClock.currentTimeMillis()) {
 			return;
 		}
 		for (@Pc(331) Js5Request local331 = (Js5Request) this.aClass133_1.method3859(); local331 != null; local331 = (Js5Request) this.aClass133_1.method3861()) {
@@ -292,7 +292,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 				}
 			}
 		}
-		this.aLong20 = MonotonicClock.method5096() + 1000L;
+		this.aLong20 = MonotonicClock.currentTimeMillis() + 1000L;
 	}
 
 	@OriginalMember(owner = "client!bg", name = "b", descriptor = "(II)I")
@@ -362,8 +362,8 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 				if (this.aClass70_1.anIntArray268[arg1] != local199) {
 					throw new RuntimeException();
 				}
-				this.aClass73_2.anInt2964 = 0;
-				this.aClass73_2.anInt2963 = 0;
+				this.aClass73_2.errors = 0;
+				this.aClass73_2.response = 0;
 			} catch (@Pc(225) RuntimeException local225) {
 				this.aClass73_2.method2327();
 				local13.method4658();

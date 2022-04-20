@@ -30,7 +30,7 @@ public final class Static203 {
 		if (Static69.aFrame2 != null) {
 			local8 = Static69.aFrame2;
 		} else if (Static39.aFrame1 == null) {
-			local8 = Static71.aClass213_3.anApplet2;
+			local8 = Static71.signLink.anApplet2;
 		} else {
 			local8 = Static39.aFrame1;
 		}
@@ -56,12 +56,12 @@ public final class Static203 {
 		if (Static239.aBoolean269) {
 			Static239.method4181(Static48.anInt1448, Static254.anInt5554);
 		}
-		Static154.aCanvas1.setSize(Static48.anInt1448, Static254.anInt5554);
+		Static154.canvas.setSize(Static48.anInt1448, Static254.anInt5554);
 		if (local8 == Static39.aFrame1) {
 			local35 = Static39.aFrame1.getInsets();
-			Static154.aCanvas1.setLocation(local35.left + Static145.anInt3497, Static178.anInt4246 + local35.top);
+			Static154.canvas.setLocation(local35.left + Static145.anInt3497, Static178.anInt4246 + local35.top);
 		} else {
-			Static154.aCanvas1.setLocation(Static145.anInt3497, Static178.anInt4246);
+			Static154.canvas.setLocation(Static145.anInt3497, Static178.anInt4246);
 		}
 		if (Static154.anInt3711 != -1) {
 			Static210.method3712(true);
@@ -74,10 +74,10 @@ public final class Static203 {
 		@Pc(11) FileOnDisk local11 = null;
 		try {
 			@Pc(16) PrivilegedRequest local16 = arg0.method5112("runescape");
-			while (local16.anInt5925 == 0) {
+			while (local16.status == 0) {
 				Static231.method3983(1L);
 			}
-			if (local16.anInt5925 == 1) {
+			if (local16.status == 1) {
 				local11 = (FileOnDisk) local16.anObject6;
 				@Pc(39) Buffer local39 = Static48.method1196();
 				local11.method5134(local39.data, local39.offset, 0);

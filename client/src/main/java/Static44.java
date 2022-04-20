@@ -119,7 +119,7 @@ public final class Static44 {
 	}
 
 	@OriginalMember(owner = "client!dh", name = "a", descriptor = "(B)Lclient!uc;")
-	public static MouseWheel method1150() {
+	public static MouseWheel create() {
 		try {
 			return (MouseWheel) Class.forName("JavaMouseWheel").getDeclaredConstructor().newInstance();
 		} catch (@Pc(15) Throwable local15) {

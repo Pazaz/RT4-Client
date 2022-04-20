@@ -131,12 +131,12 @@ public final class BufferedSocket implements Runnable {
 	}
 
 	@OriginalMember(owner = "client!ma", name = "a", descriptor = "(I)I")
-	public final int method2828() throws IOException {
+	public final int read() throws IOException {
 		return this.aBoolean177 ? 0 : this.anInputStream1.read();
 	}
 
 	@OriginalMember(owner = "client!ma", name = "a", descriptor = "(ZI[BI)V")
-	public final void method2830(@OriginalArg(2) byte[] arg0, @OriginalArg(3) int arg1) throws IOException {
+	public final void write(@OriginalArg(2) byte[] arg0, @OriginalArg(3) int arg1) throws IOException {
 		if (this.aBoolean177) {
 			return;
 		}
@@ -169,7 +169,7 @@ public final class BufferedSocket implements Runnable {
 	}
 
 	@OriginalMember(owner = "client!ma", name = "c", descriptor = "(I)I")
-	public final int method2831() throws IOException {
+	public final int available() throws IOException {
 		return this.aBoolean177 ? 0 : this.anInputStream1.available();
 	}
 
@@ -199,10 +199,10 @@ public final class BufferedSocket implements Runnable {
 			this.notifyAll();
 		}
 		if (this.aClass212_4 != null) {
-			while (this.aClass212_4.anInt5925 == 0) {
+			while (this.aClass212_4.status == 0) {
 				Static231.method3983(1L);
 			}
-			if (this.aClass212_4.anInt5925 == 1) {
+			if (this.aClass212_4.status == 1) {
 				try {
 					((Thread) this.aClass212_4.anObject6).join();
 				} catch (@Pc(59) InterruptedException local59) {

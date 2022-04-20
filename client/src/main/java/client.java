@@ -4,6 +4,7 @@ import java.awt.Insets;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.GregorianCalendar;
+
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
@@ -19,14 +20,14 @@ public final class client extends GameShell {
 				Static131.method2577("argument count");
 			}
 			@Pc(15) int local15 = -1;
-			Static187.anInt4413 = Integer.parseInt(arg0[0]);
-			Static83.anInt370 = 2;
+			Static187.worldListId = Integer.parseInt(arg0[0]);
+			Static83.modeWhere = 2;
 			if (arg0[1].equals("live")) {
-				Static81.anInt2219 = 0;
+				Static81.modeWhat = 0;
 			} else if (arg0[1].equals("rc")) {
-				Static81.anInt2219 = 1;
+				Static81.modeWhat = 1;
 			} else if (arg0[1].equals("wip")) {
-				Static81.anInt2219 = 2;
+				Static81.modeWhat = 2;
 			} else {
 				Static131.method2577("modewhat");
 			}
@@ -49,9 +50,9 @@ public final class client extends GameShell {
 			Static233.aBoolean254 = false;
 			Static150.aBoolean175 = false;
 			if (arg0[3].equals("game0")) {
-				Static266.anInt5343 = 0;
+				Static266.game = 0;
 			} else if (arg0[3].equals("game1")) {
-				Static266.anInt5343 = 1;
+				Static266.game = 1;
 			} else {
 				Static131.method2577("game");
 			}
@@ -61,7 +62,7 @@ public final class client extends GameShell {
 			Static47.aClass100_991 = Static186.aClass100_827;
 			@Pc(146) client local146 = new client();
 			Static215.aClient1 = local146;
-			local146.method936(Static81.anInt2219 + 32, "runescape");
+			local146.method936(Static81.modeWhat + 32, "runescape");
 			Static39.aFrame1.setLocation(40, 40);
 		} catch (@Pc(167) Exception local167) {
 			Static89.method1839(null, local167);
@@ -78,7 +79,7 @@ public final class client extends GameShell {
 		if (local15 && Static144.aBoolean173 && Static11.aClass62_1 != null) {
 			Static11.aClass62_1.method3570();
 		}
-		if ((Static244.anInt5370 == 30 || Static244.anInt5370 == 10) && (Static35.aBoolean66 || Static97.aLong89 != 0L && Static97.aLong89 < MonotonicClock.method5096())) {
+		if ((Static244.anInt5370 == 30 || Static244.anInt5370 == 10) && (Static35.aBoolean66 || Static97.aLong89 != 0L && Static97.aLong89 < MonotonicClock.currentTimeMillis())) {
 			Static241.method4540(Static35.aBoolean66, Static144.method2736(), Static114.anInt5831, Static22.anInt729);
 		}
 		@Pc(80) int local80;
@@ -88,7 +89,7 @@ public final class client extends GameShell {
 			if (Static69.aFrame2 != null) {
 				local65 = Static69.aFrame2;
 			} else if (Static39.aFrame1 == null) {
-				local65 = Static71.aClass213_3.anApplet2;
+				local65 = Static71.signLink.anApplet2;
 			} else {
 				local65 = Static39.aFrame1;
 			}
@@ -101,7 +102,7 @@ public final class client extends GameShell {
 			}
 			if (local80 != Static72.anInt2046 || local84 != Static122.anInt3045) {
 				Static203.method3662();
-				Static97.aLong89 = MonotonicClock.method5096() + 500L;
+				Static97.aLong89 = MonotonicClock.currentTimeMillis() + 500L;
 			}
 		}
 		if (Static69.aFrame2 != null && !Static26.aBoolean59 && (Static244.anInt5370 == 30 || Static244.anInt5370 == 10)) {
@@ -156,7 +157,7 @@ public final class client extends GameShell {
 			@Pc(388) Graphics local388;
 			if ((Static244.anInt5370 == 30 || Static244.anInt5370 == 10) && Static199.anInt4672 == 0 && !local158) {
 				try {
-					local388 = Static154.aCanvas1.getGraphics();
+					local388 = Static154.canvas.getGraphics();
 					for (local84 = 0; local84 < Static24.anInt766; local84++) {
 						if (Static31.aBooleanArray29[local84]) {
 							Static260.aClass27_2.method4191(Static224.anIntArray443[local84], Static264.anIntArray410[local84], Static67.anIntArray320[local84], local388, Static50.anIntArray133[local84]);
@@ -164,17 +165,17 @@ public final class client extends GameShell {
 						}
 					}
 				} catch (@Pc(423) Exception local423) {
-					Static154.aCanvas1.repaint();
+					Static154.canvas.repaint();
 				}
 			} else if (Static244.anInt5370 != 0) {
 				try {
-					local388 = Static154.aCanvas1.getGraphics();
+					local388 = Static154.canvas.getGraphics();
 					Static260.aClass27_2.method4186(local388);
 					for (local84 = 0; local84 < Static24.anInt766; local84++) {
 						Static31.aBooleanArray29[local84] = false;
 					}
 				} catch (@Pc(453) Exception local453) {
-					Static154.aCanvas1.repaint();
+					Static154.canvas.repaint();
 				}
 			}
 		}
@@ -183,7 +184,7 @@ public final class client extends GameShell {
 		}
 		if (Static164.aBoolean191 && Static244.anInt5370 == 10 && Static154.anInt3711 != -1) {
 			Static164.aBoolean191 = false;
-			Static203.method3663(Static71.aClass213_3);
+			Static203.method3663(Static71.signLink);
 		}
 	}
 
@@ -194,11 +195,11 @@ public final class client extends GameShell {
 			Static239.method4169();
 		}
 		if (Static69.aFrame2 != null) {
-			Static25.method714(Static69.aFrame2, Static71.aClass213_3);
+			Static25.method714(Static69.aFrame2, Static71.signLink);
 			Static69.aFrame2 = null;
 		}
-		if (Static71.aClass213_3 != null) {
-			Static71.aClass213_3.method5121(this.getClass());
+		if (Static71.signLink != null) {
+			Static71.signLink.method5121(this.getClass());
 		}
 		if (Static178.aClass74_1 != null) {
 			Static178.aClass74_1.aBoolean151 = false;
@@ -208,38 +209,38 @@ public final class client extends GameShell {
 			Static124.aClass95_2.method2834();
 			Static124.aClass95_2 = null;
 		}
-		Static31.method847(Static154.aCanvas1);
-		Static223.method3866(Static154.aCanvas1);
-		if (Static71.aClass111_2 != null) {
-			Static71.aClass111_2.method3291(Static154.aCanvas1);
+		Static31.method847(Static154.canvas);
+		Static223.method3866(Static154.canvas);
+		if (Static71.mouseWheel != null) {
+			Static71.mouseWheel.method3291(Static154.canvas);
 		}
 		Static6.method82();
 		Static251.method4277();
-		Static71.aClass111_2 = null;
+		Static71.mouseWheel = null;
 		if (Static11.aClass62_1 != null) {
 			Static11.aClass62_1.method3575();
 		}
 		if (Static147.aClass62_2 != null) {
 			Static147.aClass62_2.method3575();
 		}
-		Static107.aClass73_3.method2329();
-		Static86.aClass80_3.method2466();
+		Static107.js5NetQueue.method2329();
+		Static86.js5CacheQueue.method2466();
 		try {
-			if (Static172.aClass38_4 != null) {
-				Static172.aClass38_4.method1455();
+			if (Static172.cacheData != null) {
+				Static172.cacheData.method1455();
 			}
-			if (Static47.aClass38Array2 != null) {
-				for (@Pc(95) int local95 = 0; local95 < Static47.aClass38Array2.length; local95++) {
-					if (Static47.aClass38Array2[local95] != null) {
-						Static47.aClass38Array2[local95].method1455();
+			if (Static47.cacheIndexes != null) {
+				for (@Pc(95) int local95 = 0; local95 < Static47.cacheIndexes.length; local95++) {
+					if (Static47.cacheIndexes[local95] != null) {
+						Static47.cacheIndexes[local95].method1455();
 					}
 				}
 			}
-			if (Static190.aClass38_5 != null) {
-				Static190.aClass38_5.method1455();
+			if (Static190.cacheMasterIndex != null) {
+				Static190.cacheMasterIndex.method1455();
 			}
-			if (Static121.aClass38_3 != null) {
-				Static121.aClass38_3.method1455();
+			if (Static121.uid != null) {
+				Static121.uid.method1455();
 			}
 		} catch (@Pc(129) IOException local129) {
 		}
@@ -251,14 +252,14 @@ public final class client extends GameShell {
 		if (!this.method925()) {
 			return;
 		}
-		Static187.anInt4413 = Integer.parseInt(this.getParameter("worldid"));
-		Static83.anInt370 = Integer.parseInt(this.getParameter("modewhere"));
-		if (Static83.anInt370 < 0 || Static83.anInt370 > 1) {
-			Static83.anInt370 = 0;
+		Static187.worldListId = Integer.parseInt(this.getParameter("worldid"));
+		Static83.modeWhere = Integer.parseInt(this.getParameter("modewhere"));
+		if (Static83.modeWhere < 0 || Static83.modeWhere > 1) {
+			Static83.modeWhere = 0;
 		}
-		Static81.anInt2219 = Integer.parseInt(this.getParameter("modewhat"));
-		if (Static81.anInt2219 < 0 || Static81.anInt2219 > 2) {
-			Static81.anInt2219 = 0;
+		Static81.modeWhat = Integer.parseInt(this.getParameter("modewhat"));
+		if (Static81.modeWhat < 0 || Static81.modeWhat > 2) {
+			Static81.modeWhat = 0;
 		}
 		@Pc(50) String local50 = this.getParameter("advertsuppressed");
 		if (local50 != null && local50.equals("1")) {
@@ -286,9 +287,9 @@ public final class client extends GameShell {
 		}
 		@Pc(111) String local111 = this.getParameter("game");
 		if (local111 != null && local111.equals("1")) {
-			Static266.anInt5343 = 1;
+			Static266.game = 1;
 		} else {
-			Static266.anInt5343 = 0;
+			Static266.game = 0;
 		}
 		try {
 			Static204.anInt4760 = Integer.parseInt(this.getParameter("affid"));
@@ -314,34 +315,34 @@ public final class client extends GameShell {
 			Static178.aBoolean203 = false;
 		}
 		Static215.aClient1 = this;
-		this.method937(Static81.anInt2219 + 32);
+		this.method937(Static81.modeWhat + 32);
 	}
 
 	@OriginalMember(owner = "client!client", name = "g", descriptor = "(I)V")
 	@Override
 	protected final void method935() {
 		Static203.method3662();
-		Static86.aClass80_3 = new Js5CacheQueue();
-		Static107.aClass73_3 = new Js5NetQueue();
-		if (Static81.anInt2219 != 0) {
+		Static86.js5CacheQueue = new Js5CacheQueue();
+		Static107.js5NetQueue = new Js5NetQueue();
+		if (Static81.modeWhat != 0) {
 			Static51.aByteArrayArray8 = new byte[50][];
 		}
-		Static80.method3615(Static71.aClass213_3);
-		if (Static83.anInt370 == 0) {
-			Static143.aString4 = this.getCodeBase().getHost();
-			Static97.anInt2508 = 443;
-			Static249.anInt5428 = 43594;
-		} else if (Static83.anInt370 == 1) {
-			Static143.aString4 = this.getCodeBase().getHost();
-			Static97.anInt2508 = Static187.anInt4413 + 50000;
-			Static249.anInt5428 = Static187.anInt4413 + 40000;
-		} else if (Static83.anInt370 == 2) {
-			Static143.aString4 = "127.0.0.1";
-			Static97.anInt2508 = Static187.anInt4413 + 50000;
-			Static249.anInt5428 = Static187.anInt4413 + 40000;
+		Static80.read(Static71.signLink); // preferences
+		if (Static83.modeWhere == 0) {
+			Static143.worldListHostname = this.getCodeBase().getHost();
+			Static97.worldListAlternatePort = GlobalConfig.ALTERNATE_PORT + 1;
+			Static249.worldListDefaultPort = GlobalConfig.DEFAULT_PORT + 1;
+		} else if (Static83.modeWhere == 1) {
+			Static143.worldListHostname = this.getCodeBase().getHost();
+			Static97.worldListAlternatePort = GlobalConfig.ALTERNATE_PORT + Static187.worldListId;
+			Static249.worldListDefaultPort = GlobalConfig.DEFAULT_PORT + Static187.worldListId;
+		} else if (Static83.modeWhere == 2) {
+			Static143.worldListHostname = "127.0.0.1";
+			Static97.worldListAlternatePort = GlobalConfig.ALTERNATE_PORT + Static187.worldListId;
+			Static249.worldListDefaultPort = GlobalConfig.DEFAULT_PORT + Static187.worldListId;
 		}
-		if (Static266.anInt5343 == 1) {
-			Static172.aBoolean199 = true;
+		if (Static266.game == 1) {
+			Static172.shiftClick = true;
 			Static161.anInt3923 = 16777215;
 			Static161.anInt3922 = 0;
 			Static33.aShortArrayArray2 = Static198.aShortArrayArray4;
@@ -354,46 +355,46 @@ public final class client extends GameShell {
 			Static172.aShortArrayArray7 = Static43.aShortArrayArray5;
 			Static200.aShortArray65 = Static260.aShortArray71;
 		}
-		Static55.anInt1738 = Static97.anInt2508;
-		Static271.anInt5800 = Static249.anInt5428;
-		Static60.aString1 = Static143.aString4;
-		Static208.anInt4784 = Static249.anInt5428;
+		Static55.alternatePort = Static97.worldListAlternatePort;
+		Static271.defaultPort = Static249.worldListDefaultPort;
+		Static60.hostname = Static143.worldListHostname;
+		Static208.worldListPort = Static249.worldListDefaultPort;
 		Static259.aShortArray88 = Static62.aShortArray19 = Static232.aShortArray74 = Static259.aShortArray87 = new short[256];
-		Static209.anInt4794 = Static208.anInt4784;
-		if (SignLink.anInt5928 == 3 && Static83.anInt370 != 2) {
-			Static125.anInt3103 = Static187.anInt4413;
+		Static209.port = Static208.worldListPort;
+		if ((SignLink.anInt5928 == 3 && Static83.modeWhere != 2) || GlobalConfig.SELECT_DEFAULT_WORLD) {
+			Static125.worldId = Static187.worldListId;
 		}
-		Static156.method2958();
-		Static19.method591(Static154.aCanvas1);
-		Static88.method1833(Static154.aCanvas1);
-		Static71.aClass111_2 = Static44.method1150();
-		if (Static71.aClass111_2 != null) {
-			Static71.aClass111_2.method3293(Static154.aCanvas1);
+		Static156.init(); // keyboard
+		Static19.start(Static154.canvas); // keyboard
+		Static88.start(Static154.canvas); // mouse
+		Static71.mouseWheel = Static44.create();
+		if (Static71.mouseWheel != null) {
+			Static71.mouseWheel.start(Static154.canvas);
 		}
 		Static7.anInt986 = SignLink.anInt5928;
 		try {
-			if (Static71.aClass213_3.aClass214_2 != null) {
-				Static172.aClass38_4 = new BufferedFile(Static71.aClass213_3.aClass214_2, 5200, 0);
-				for (@Pc(162) int local162 = 0; local162 < 28; local162++) {
-					Static47.aClass38Array2[local162] = new BufferedFile(Static71.aClass213_3.aClass214Array1[local162], 6000, 0);
+			if (Static71.signLink.cacheData != null) {
+				Static172.cacheData = new BufferedFile(Static71.signLink.cacheData, 5200, 0);
+				for (@Pc(162) int i = 0; i < 28; i++) {
+					Static47.cacheIndexes[i] = new BufferedFile(Static71.signLink.cacheIndexes[i], 6000, 0);
 				}
-				Static190.aClass38_5 = new BufferedFile(Static71.aClass213_3.aClass214_3, 6000, 0);
-				Static148.aClass49_4 = new Cache(255, Static172.aClass38_4, Static190.aClass38_5, 500000);
-				Static121.aClass38_3 = new BufferedFile(Static71.aClass213_3.aClass214_4, 24, 0);
-				Static71.aClass213_3.aClass214Array1 = null;
-				Static71.aClass213_3.aClass214_3 = null;
-				Static71.aClass213_3.aClass214_4 = null;
-				Static71.aClass213_3.aClass214_2 = null;
+				Static190.cacheMasterIndex = new BufferedFile(Static71.signLink.cacheMasterIndex, 6000, 0);
+				Static148.masterCache = new Cache(255, Static172.cacheData, Static190.cacheMasterIndex, 500000);
+				Static121.uid = new BufferedFile(Static71.signLink.uid, 24, 0);
+				Static71.signLink.cacheIndexes = null;
+				Static71.signLink.cacheMasterIndex = null;
+				Static71.signLink.uid = null;
+				Static71.signLink.cacheData = null;
 			}
-		} catch (@Pc(220) IOException local220) {
-			Static121.aClass38_3 = null;
-			Static172.aClass38_4 = null;
-			Static190.aClass38_5 = null;
-			Static148.aClass49_4 = null;
+		} catch (@Pc(220) IOException ex) {
+			Static121.uid = null;
+			Static172.cacheData = null;
+			Static190.cacheMasterIndex = null;
+			Static148.masterCache = null;
 		}
-		Static278.aClass100_1102 = LocalizedText.GAME0_LOADING;
-		if (Static83.anInt370 != 0) {
-			Static43.aBoolean82 = true;
+		Static278.mainLoadPrimaryText = LocalizedText.GAME0_LOADING;
+		if (Static83.modeWhere != 0) {
+			Static43.displayFps = true;
 		}
 	}
 
@@ -403,12 +404,12 @@ public final class client extends GameShell {
 	}
 
 	@OriginalMember(owner = "client!client", name = "a", descriptor = "(ZI)V")
-	private void method942(@OriginalArg(1) int arg0) {
-		Static107.aClass73_3.anInt2964++;
-		Static37.aClass212_2 = null;
-		Static107.aClass73_3.anInt2963 = arg0;
-		Static206.aClass95_3 = null;
-		Static4.anInt30 = 0;
+	private void setJs5Response(@OriginalArg(1) int arg0) {
+		Static107.js5NetQueue.errors++;
+		Static37.js5SocketRequest = null;
+		Static107.js5NetQueue.response = arg0;
+		Static206.js5Socket = null;
+		Static4.js5ConnectState = 0;
 	}
 
 	@OriginalMember(owner = "client!client", name = "d", descriptor = "(B)V")
@@ -486,7 +487,7 @@ public final class client extends GameShell {
 											if (Static105.aClass13_14 != null) {
 												Static4.method28();
 											}
-											if (Static33.aClass212_1 != null && Static33.aClass212_1.anInt5925 == 1) {
+											if (Static33.aClass212_1 != null && Static33.aClass212_1.status == 1) {
 												if (Static33.aClass212_1.anObject6 != null) {
 													Static169.method3175(Static175.aClass100_797, Static164.aBoolean194);
 												}
@@ -528,39 +529,39 @@ public final class client extends GameShell {
 	}
 
 	@OriginalMember(owner = "client!client", name = "d", descriptor = "(Z)V")
-	private void method944() {
-		@Pc(3) boolean local3 = Static107.aClass73_3.method2318();
-		if (!local3) {
-			this.method945();
+	private void js5NetworkLoop() {
+		@Pc(3) boolean idle = Static107.js5NetQueue.loop();
+		if (!idle) {
+			this.js5Connect();
 		}
 	}
 
 	@OriginalMember(owner = "client!client", name = "h", descriptor = "(I)V")
-	private void method945() {
-		if (Static233.anInt5226 < Static107.aClass73_3.anInt2964) {
-			Static22.anInt722 = 5 * 50 * (Static107.aClass73_3.anInt2964 - 1);
-			if (Static271.anInt5800 == Static209.anInt4794) {
-				Static209.anInt4794 = Static55.anInt1738;
+	private void js5Connect() {
+		if (Static233.js5PrevErrors < Static107.js5NetQueue.errors) {
+			Static22.js5ConnectDelay = 5 * 50 * (Static107.js5NetQueue.errors - 1);
+			if (Static271.defaultPort == Static209.port) {
+				Static209.port = Static55.alternatePort;
 			} else {
-				Static209.anInt4794 = Static271.anInt5800;
+				Static209.port = Static271.defaultPort;
 			}
-			if (Static22.anInt722 > 3000) {
-				Static22.anInt722 = 3000;
+			if (Static22.js5ConnectDelay > 3000) {
+				Static22.js5ConnectDelay = 3000;
 			}
-			if (Static107.aClass73_3.anInt2964 >= 2 && Static107.aClass73_3.anInt2963 == 6) {
+			if (Static107.js5NetQueue.errors >= 2 && Static107.js5NetQueue.response == 6) {
 				this.method927("js5connect_outofdate");
 				Static244.anInt5370 = 1000;
 				return;
 			}
-			if (Static107.aClass73_3.anInt2964 >= 4 && Static107.aClass73_3.anInt2963 == -1) {
+			if (Static107.js5NetQueue.errors >= 4 && Static107.js5NetQueue.response == -1) {
 				this.method927("js5crc");
 				Static244.anInt5370 = 1000;
 				return;
 			}
-			if (Static107.aClass73_3.anInt2964 >= 4 && (Static244.anInt5370 == 0 || Static244.anInt5370 == 5)) {
-				if (Static107.aClass73_3.anInt2963 == 7 || Static107.aClass73_3.anInt2963 == 9) {
+			if (Static107.js5NetQueue.errors >= 4 && (Static244.anInt5370 == 0 || Static244.anInt5370 == 5)) {
+				if (Static107.js5NetQueue.response == 7 || Static107.js5NetQueue.response == 9) {
 					this.method927("js5connect_full");
-				} else if (Static107.aClass73_3.anInt2963 > 0) {
+				} else if (Static107.js5NetQueue.response > 0) {
 					this.method927("js5connect");
 				} else {
 					this.method927("js5io");
@@ -569,56 +570,56 @@ public final class client extends GameShell {
 				return;
 			}
 		}
-		Static233.anInt5226 = Static107.aClass73_3.anInt2964;
-		if (Static22.anInt722 > 0) {
-			Static22.anInt722--;
+		Static233.js5PrevErrors = Static107.js5NetQueue.errors;
+		if (Static22.js5ConnectDelay > 0) {
+			Static22.js5ConnectDelay--;
 			return;
 		}
 		try {
-			if (Static4.anInt30 == 0) {
-				Static37.aClass212_2 = Static71.aClass213_3.method5120(Static60.aString1, Static209.anInt4794);
-				Static4.anInt30++;
+			if (Static4.js5ConnectState == 0) {
+				Static37.js5SocketRequest = Static71.signLink.openSocket(Static60.hostname, Static209.port);
+				Static4.js5ConnectState++;
 			}
-			if (Static4.anInt30 == 1) {
-				if (Static37.aClass212_2.anInt5925 == 2) {
-					this.method942(1000);
+			if (Static4.js5ConnectState == 1) {
+				if (Static37.js5SocketRequest.status == 2) {
+					this.setJs5Response(1000);
 					return;
 				}
-				if (Static37.aClass212_2.anInt5925 == 1) {
-					Static4.anInt30++;
+				if (Static37.js5SocketRequest.status == 1) {
+					Static4.js5ConnectState++;
 				}
 			}
-			if (Static4.anInt30 == 2) {
-				Static206.aClass95_3 = new BufferedSocket((Socket) Static37.aClass212_2.anObject6, Static71.aClass213_3);
-				@Pc(194) Buffer local194 = new Buffer(5);
-				local194.p1(15);
-				local194.p4(530);
-				Static206.aClass95_3.method2830(local194.data, 5);
-				Static4.anInt30++;
-				Static217.aLong165 = MonotonicClock.method5096();
+			if (Static4.js5ConnectState == 2) {
+				Static206.js5Socket = new BufferedSocket((Socket) Static37.js5SocketRequest.anObject6, Static71.signLink);
+				@Pc(194) Buffer buffer = new Buffer(5);
+				buffer.p1(15);
+				buffer.p4(530);
+				Static206.js5Socket.write(buffer.data, 5);
+				Static4.js5ConnectState++;
+				Static217.js5ConnectTime = MonotonicClock.currentTimeMillis();
 			}
-			if (Static4.anInt30 == 3) {
-				if (Static244.anInt5370 == 0 || Static244.anInt5370 == 5 || Static206.aClass95_3.method2831() > 0) {
-					@Pc(258) int local258 = Static206.aClass95_3.method2828();
-					if (local258 != 0) {
-						this.method942(local258);
+			if (Static4.js5ConnectState == 3) {
+				if (Static244.anInt5370 == 0 || Static244.anInt5370 == 5 || Static206.js5Socket.available() > 0) {
+					@Pc(258) int response = Static206.js5Socket.read();
+					if (response != 0) {
+						this.setJs5Response(response);
 						return;
 					}
-					Static4.anInt30++;
-				} else if (MonotonicClock.method5096() - Static217.aLong165 > 30000L) {
-					this.method942(1001);
+					Static4.js5ConnectState++;
+				} else if (MonotonicClock.currentTimeMillis() - Static217.js5ConnectTime > 30000L) {
+					this.setJs5Response(1001);
 					return;
 				}
 			}
-			if (Static4.anInt30 == 4) {
-				@Pc(296) boolean local296 = Static244.anInt5370 == 5 || Static244.anInt5370 == 10 || Static244.anInt5370 == 28;
-				Static107.aClass73_3.method2324(!local296, Static206.aClass95_3);
-				Static206.aClass95_3 = null;
-				Static37.aClass212_2 = null;
-				Static4.anInt30 = 0;
+			if (Static4.js5ConnectState == 4) {
+				@Pc(296) boolean loggedOut = Static244.anInt5370 == 5 || Static244.anInt5370 == 10 || Static244.anInt5370 == 28;
+				Static107.js5NetQueue.loggedOut(!loggedOut, Static206.js5Socket);
+				Static206.js5Socket = null;
+				Static37.js5SocketRequest = null;
+				Static4.js5ConnectState = 0;
 			}
-		} catch (@Pc(315) IOException local315) {
-			this.method942(1002);
+		} catch (@Pc(315) IOException ex) {
+			this.setJs5Response(1002);
 		}
 	}
 
@@ -638,7 +639,7 @@ public final class client extends GameShell {
 		if (Static166.anInt4051 == 0) {
 			@Pc(34) Runtime local34 = Runtime.getRuntime();
 			local43 = (int) (0L / 1024L);
-			@Pc(46) long local46 = MonotonicClock.method5096();
+			@Pc(46) long local46 = MonotonicClock.currentTimeMillis();
 			if (Static175.aLong138 == 0L) {
 				Static175.aLong138 = local46;
 			}
@@ -667,7 +668,7 @@ public final class client extends GameShell {
 			Static126.aClass100_602 = LocalizedText.MAINLOAD10B;
 		} else if (Static166.anInt4051 == 30) {
 			if (Static257.aClass9_2 == null) {
-				Static257.aClass9_2 = new Js5MasterIndex(Static107.aClass73_3, Static86.aClass80_3);
+				Static257.aClass9_2 = new Js5MasterIndex(Static107.js5NetQueue, Static86.js5CacheQueue);
 			}
 			if (Static257.aClass9_2.method178()) {
 				Static213.aClass153_88 = Static9.method183(false, true, true, 0);
@@ -727,10 +728,10 @@ public final class client extends GameShell {
 			Static41.method1045(Static99.aBoolean143);
 			Static148.aClass3_Sub3_Sub4_1 = new MidiPcmStream();
 			Static148.aClass3_Sub3_Sub4_1.method4420();
-			Static11.aClass62_1 = Static107.method2262(22050, Static71.aClass213_3, Static154.aCanvas1, 0);
+			Static11.aClass62_1 = Static107.method2262(22050, Static71.signLink, Static154.canvas, 0);
 			Static11.aClass62_1.method3566(Static148.aClass3_Sub3_Sub4_1);
 			Static34.method876(Static148.aClass3_Sub3_Sub4_1, Static138.aClass153_51, Static137.aClass153_49, Static248.aClass153_75);
-			Static147.aClass62_2 = Static107.method2262(2048, Static71.aClass213_3, Static154.aCanvas1, 1);
+			Static147.aClass62_2 = Static107.method2262(2048, Static71.signLink, Static154.canvas, 1);
 			Static204.aClass3_Sub3_Sub2_1 = new MixerPcmStream();
 			Static147.aClass62_2.method3566(Static204.aClass3_Sub3_Sub2_1);
 			Static56.aClass156_1 = new Resampler(22050, Static44.anInt1404);
@@ -860,7 +861,7 @@ public final class client extends GameShell {
 			}
 		} else if (Static166.anInt4051 == 110) {
 			Static178.aClass74_1 = new MouseRecorder();
-			Static71.aClass213_3.method5130(10, Static178.aClass74_1);
+			Static71.signLink.method5130(10, Static178.aClass74_1);
 			Static126.aClass100_602 = LocalizedText.MAINLOAD110B;
 			Static199.anInt4670 = 75;
 			Static166.anInt4051 = 120;
@@ -931,7 +932,7 @@ public final class client extends GameShell {
 				Static141.anInt3474 = 0;
 			}
 			Static164.aBoolean191 = true;
-			Static203.method3663(Static71.aClass213_3);
+			Static203.method3663(Static71.signLink);
 			Static241.method4540(false, Static214.anInt5581, -1, -1);
 			Static199.anInt4670 = 100;
 			Static166.anInt4051 = 160;
@@ -953,7 +954,7 @@ public final class client extends GameShell {
 			Static60.anInt1895 = local24.get(11) * 600 + local24.get(12) * 10 + local24.get(13) / 6;
 			Static39.aRandom1.setSeed((long) Static60.anInt1895);
 		}
-		this.method944();
+		this.js5NetworkLoop();
 		if (Static257.aClass9_2 != null) {
 			Static257.aClass9_2.method179();
 		}
@@ -964,8 +965,8 @@ public final class client extends GameShell {
 		if (Static239.aBoolean269) {
 			Static63.method1490();
 		}
-		if (Static71.aClass111_2 != null) {
-			@Pc(75) int local75 = Static71.aClass111_2.method3287();
+		if (Static71.mouseWheel != null) {
+			@Pc(75) int local75 = Static71.mouseWheel.method3287();
 			Static58.anInt1766 = local75;
 		}
 		if (Static244.anInt5370 == 0) {

@@ -14,7 +14,7 @@ public final class Static37 {
 	public static int anInt1176;
 
 	@OriginalMember(owner = "client!cm", name = "f", descriptor = "Lsignlink!im;")
-	public static PrivilegedRequest aClass212_2;
+	public static PrivilegedRequest js5SocketRequest;
 
 	@OriginalMember(owner = "client!cm", name = "a", descriptor = "(ILclient!fe;)V")
 	public static void method949(@OriginalArg(1) PathingEntity arg0) {

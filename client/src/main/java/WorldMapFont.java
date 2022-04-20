@@ -224,7 +224,7 @@ public final class WorldMapFont {
 		@Pc(48) int local48 = arg1.getMaxAscent();
 		@Pc(54) int local54 = arg1.getMaxAscent() + arg1.getMaxDescent();
 		@Pc(57) int local57 = arg1.getHeight();
-		@Pc(62) Image local62 = Static154.aCanvas1.createImage(local3, local54);
+		@Pc(62) Image local62 = Static154.canvas.createImage(local3, local54);
 		@Pc(65) Graphics local65 = local62.getGraphics();
 		local65.setColor(Color.black);
 		local65.fillRect(0, 0, local3, local54);

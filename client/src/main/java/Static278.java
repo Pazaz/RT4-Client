@@ -8,7 +8,7 @@ public final class Static278 {
 	public static final JagString aClass100_1101 = Static28.parse(" <col=ffff00>");
 
 	@OriginalMember(owner = "client!wj", name = "e", descriptor = "Lclient!na;")
-	public static JagString aClass100_1102 = null;
+	public static JagString mainLoadPrimaryText = null;
 
 	@OriginalMember(owner = "client!wj", name = "f", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1103 = Static28.parse("ul");

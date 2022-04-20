@@ -84,7 +84,7 @@ public final class Static225 {
 		Static186.aClass100_829 = arg0;
 		if (Static186.aClass100_829.method3108(Static186.aClass100_827) || Static186.aClass100_828.method3108(Static186.aClass100_827)) {
 			Static266.anInt5336 = 3;
-		} else if (Static125.anInt3103 == -1) {
+		} else if (Static125.worldId == -1) {
 			Static20.anInt673 = 0;
 			Static196.anInt4587 = 0;
 			Static266.anInt5336 = -3;

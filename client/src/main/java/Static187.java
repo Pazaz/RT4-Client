@@ -11,7 +11,7 @@ public final class Static187 {
 	public static final int[][][] anIntArrayArrayArray18 = new int[4][13][13];
 
 	@OriginalMember(owner = "client!pb", name = "Q", descriptor = "I")
-	public static int anInt4413 = 1;
+	public static int worldListId = 1;
 
 	@OriginalMember(owner = "client!pb", name = "ab", descriptor = "I")
 	public static int anInt4422 = 0;

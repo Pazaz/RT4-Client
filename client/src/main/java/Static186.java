@@ -119,42 +119,42 @@ public final class Static186 {
 			Static41.anInt1309 = 70;
 			Static234.method4020();
 		} else if (Static41.anInt1309 == 70) {
-			Static273.aClass41_7 = new WorldMapFont(11, true, Static154.aCanvas1);
+			Static273.aClass41_7 = new WorldMapFont(11, true, Static154.canvas);
 			Static41.anInt1309 = 73;
 			Static7.method842(true);
 			Static234.method4020();
 		} else if (Static41.anInt1309 == 73) {
-			Static152.aClass41_3 = new WorldMapFont(12, true, Static154.aCanvas1);
+			Static152.aClass41_3 = new WorldMapFont(12, true, Static154.canvas);
 			Static41.anInt1309 = 76;
 			Static7.method842(true);
 			Static234.method4020();
 		} else if (Static41.anInt1309 == 76) {
-			Static169.aClass41_5 = new WorldMapFont(14, true, Static154.aCanvas1);
+			Static169.aClass41_5 = new WorldMapFont(14, true, Static154.canvas);
 			Static41.anInt1309 = 79;
 			Static7.method842(true);
 			Static234.method4020();
 		} else if (Static41.anInt1309 == 79) {
-			Static130.aClass41_1 = new WorldMapFont(17, true, Static154.aCanvas1);
+			Static130.aClass41_1 = new WorldMapFont(17, true, Static154.canvas);
 			Static41.anInt1309 = 82;
 			Static7.method842(true);
 			Static234.method4020();
 		} else if (Static41.anInt1309 == 82) {
-			Static203.aClass41_8 = new WorldMapFont(19, true, Static154.aCanvas1);
+			Static203.aClass41_8 = new WorldMapFont(19, true, Static154.canvas);
 			Static41.anInt1309 = 85;
 			Static7.method842(true);
 			Static234.method4020();
 		} else if (Static41.anInt1309 == 85) {
-			Static130.aClass41_2 = new WorldMapFont(22, true, Static154.aCanvas1);
+			Static130.aClass41_2 = new WorldMapFont(22, true, Static154.canvas);
 			Static41.anInt1309 = 88;
 			Static7.method842(true);
 			Static234.method4020();
 		} else if (Static41.anInt1309 == 88) {
-			Static270.aClass41_9 = new WorldMapFont(26, true, Static154.aCanvas1);
+			Static270.aClass41_9 = new WorldMapFont(26, true, Static154.canvas);
 			Static41.anInt1309 = 91;
 			Static7.method842(true);
 			Static234.method4020();
 		} else {
-			Static160.aClass41_4 = new WorldMapFont(30, true, Static154.aCanvas1);
+			Static160.aClass41_4 = new WorldMapFont(30, true, Static154.canvas);
 			Static41.anInt1309 = 100;
 			Static7.method842(true);
 			Static234.method4020();

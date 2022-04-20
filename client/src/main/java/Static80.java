@@ -35,7 +35,7 @@ public final class Static80 {
 	}
 
 	@OriginalMember(owner = "client!gf", name = "a", descriptor = "(Lsignlink!ll;I)V")
-	public static void method3615(@OriginalArg(0) SignLink arg0) {
+	public static void read(@OriginalArg(0) SignLink arg0) {
 		Static113.anInt4609 = 3;
 		Static53.method1293(true);
 		aBoolean231 = true;
@@ -72,10 +72,10 @@ public final class Static80 {
 		Static214.anInt5581 = 0;
 		try {
 			@Pc(78) PrivilegedRequest local78 = arg0.method5112("runescape");
-			while (local78.anInt5925 == 0) {
+			while (local78.status == 0) {
 				Static231.method3983(1L);
 			}
-			if (local78.anInt5925 == 1) {
+			if (local78.status == 1) {
 				local48 = (FileOnDisk) local78.anObject6;
 				@Pc(106) byte[] local106 = new byte[(int) local48.method5137()];
 				@Pc(128) int local128;

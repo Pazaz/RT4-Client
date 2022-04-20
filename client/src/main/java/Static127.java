@@ -173,7 +173,7 @@ public final class Static127 {
 			if (local10 == null) {
 				return null;
 			}
-			if (local10.method1009() > MonotonicClock.method5096()) {
+			if (local10.method1009() > MonotonicClock.currentTimeMillis()) {
 				return null;
 			}
 			local10.method4658();
@@ -281,15 +281,15 @@ public final class Static127 {
 				Static175.method3279();
 			}
 			if (arg0.method3111(Static279.aClass100_1106)) {
-				Static107.aClass73_3.method2329();
+				Static107.js5NetQueue.method2329();
 			}
 			if (arg0.method3111(Static185.aClass100_823)) {
-				Static107.aClass73_3.method2319();
+				Static107.js5NetQueue.method2319();
 			}
 			if (arg0.method3111(Static165.aClass100_775)) {
-				Static71.aClass213_3.method5110();
+				Static71.signLink.method5110();
 				Static124.aClass95_2.method2833();
-				Static107.aClass73_3.method2323();
+				Static107.js5NetQueue.method2323();
 			}
 			if (arg0.method3111(Static114.aClass100_1100)) {
 				Static35.aBoolean66 = true;
@@ -298,10 +298,10 @@ public final class Static127 {
 				Static196.method3534(25);
 			}
 			if (arg0.method3111(Static107.aClass100_566)) {
-				Static43.aBoolean82 = true;
+				Static43.displayFps = true;
 			}
 			if (arg0.method3111(Static61.aClass100_422)) {
-				Static43.aBoolean82 = false;
+				Static43.displayFps = false;
 			}
 			if (arg0.method3111(Static96.aClass100_522)) {
 				Static241.method4540(false, 0, -1, -1);
@@ -326,10 +326,10 @@ public final class Static127 {
 			}
 			if (arg0.method3138(Static241.aClass100_1088)) {
 				Static76.method1645(arg0.method3136(15).method3132());
-				Static203.method3663(Static71.aClass213_3);
+				Static203.method3663(Static71.signLink);
 				Static18.aBoolean39 = false;
 			}
-			if (arg0.method3138(Static170.aClass100_623) && Static83.anInt370 != 0) {
+			if (arg0.method3138(Static170.aClass100_623) && Static83.modeWhere != 0) {
 				Static115.method2312(arg0.method3136(6).method3132());
 			}
 			if (arg0.method3111(Static272.aClass100_990)) {
@@ -352,12 +352,12 @@ public final class Static127 {
 				}
 			}
 			if (arg0.method3111(Static114.aClass100_1099)) {
-				if (Static172.aBoolean199) {
+				if (Static172.shiftClick) {
 					Static154.aClass100_736.method3129();
-					Static172.aBoolean199 = false;
+					Static172.shiftClick = false;
 				} else {
 					Static43.aClass100_333.method3129();
-					Static172.aBoolean199 = true;
+					Static172.shiftClick = true;
 				}
 			}
 		}

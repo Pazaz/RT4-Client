@@ -8,7 +8,7 @@ public final class Static60 {
 	public static int[][][] anIntArrayArrayArray6;
 
 	@OriginalMember(owner = "client!em", name = "v", descriptor = "Ljava/lang/String;")
-	public static String aString1;
+	public static String hostname;
 
 	@OriginalMember(owner = "client!em", name = "w", descriptor = "I")
 	public static int anInt1892;

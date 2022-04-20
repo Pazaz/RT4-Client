@@ -23,5 +23,5 @@ public final class PrivilegedRequest {
 	public int anInt5927;
 
 	@OriginalMember(owner = "signlink!im", name = "d", descriptor = "I")
-	public volatile int anInt5925 = 0;
+	public volatile int status = 0;
 }

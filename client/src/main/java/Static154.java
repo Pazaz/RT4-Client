@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static154 {
 
 	@OriginalMember(owner = "client!md", name = "L", descriptor = "Ljava/awt/Canvas;")
-	public static Canvas aCanvas1;
+	public static Canvas canvas;
 
 	@OriginalMember(owner = "client!md", name = "S", descriptor = "I")
 	public static int anInt3709;

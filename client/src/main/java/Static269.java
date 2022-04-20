@@ -306,7 +306,7 @@ public final class Static269 {
 				Static201.anInt1864--;
 			}
 		}
-		if (!Static43.aBoolean82) {
+		if (!Static43.displayFps) {
 			return;
 		}
 		@Pc(405) int local405 = arg1 + arg2 - 8;

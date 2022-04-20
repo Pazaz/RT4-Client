@@ -9,7 +9,7 @@ public final class Static55 {
 	public static int anInt1736;
 
 	@OriginalMember(owner = "client!ee", name = "g", descriptor = "I")
-	public static int anInt1738;
+	public static int alternatePort;
 
 	@OriginalMember(owner = "client!ee", name = "a", descriptor = "Lclient!na;")
 	public static final JagString aClass100_376 = Static28.parse(" GMT");
