@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!lc")
-public final class Class88 {
+public final class Texture {
 
 	@OriginalMember(owner = "client!lc", name = "k", descriptor = "[I")
 	private final int[] anIntArray328;
@@ -22,7 +22,7 @@ public final class Class88 {
 	private final TextureOp[] aClass3_Sub1Array22;
 
 	@OriginalMember(owner = "client!lc", name = "<init>", descriptor = "(Lclient!wa;)V")
-	public Class88(@OriginalArg(0) Buffer arg0) {
+	public Texture(@OriginalArg(0) Buffer arg0) {
 		@Pc(7) int local7 = arg0.method2229();
 		this.aClass3_Sub1Array22 = new TextureOp[local7];
 		@Pc(14) int[][] local14 = new int[local7][];
