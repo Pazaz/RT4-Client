@@ -12,7 +12,6 @@
 
 	<modules>
         <module>deob-annotations</module>
-        <module>gl</module>
         <module>client</module>
         <module>signlink</module>
     </modules>

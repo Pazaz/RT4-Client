@@ -28,9 +28,64 @@
             <version>1.0</version>
         </dependency>
         <dependency>
-            <groupId>com.jagex</groupId>
-            <artifactId>gl</artifactId>
-            <version>1.0</version>
+            <groupId>jogamp</groupId>
+            <artifactId>gluegen</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jogamp</groupId>
+            <artifactId>gluegen-win32</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jogamp</groupId>
+            <artifactId>gluegen-win64</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jogamp</groupId>
+            <artifactId>gluegen-mac</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jogamp</groupId>
+            <artifactId>gluegen-linux32</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jogamp</groupId>
+            <artifactId>gluegen-linux64</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jogamp</groupId>
+            <artifactId>jogl</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jogamp</groupId>
+            <artifactId>jogl-win32</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jogamp</groupId>
+            <artifactId>jogl-win64</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jogamp</groupId>
+            <artifactId>jogl-mac</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jogamp</groupId>
+            <artifactId>jogl-linux32</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jogamp</groupId>
+            <artifactId>jogl-linux64</artifactId>
+            <version>2.4.0</version>
         </dependency>
     </dependencies>
 

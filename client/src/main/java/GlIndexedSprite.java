@@ -1,5 +1,5 @@
 import java.nio.ByteBuffer;
-import javax.media.opengl.GL;
+import com.jogamp.opengl.*;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
@@ -64,7 +64,7 @@ public final class GlIndexedSprite extends IndexedSprite {
 			local22 += (this.anInt4287 - this.anInt4270) * 4;
 		}
 		@Pc(93) ByteBuffer local93 = ByteBuffer.wrap(local20);
-		@Pc(95) GL local95 = Static239.aGL1;
+		@Pc(95) GL2 local95 = Static239.gl;
 		if (this.anInt4281 == -1) {
 			@Pc(102) int[] local102 = new int[1];
 			local95.glGenTextures(1, local102, 0);
@@ -72,7 +72,7 @@ public final class GlIndexedSprite extends IndexedSprite {
 			this.anInt4285 = Static63.anInt1943;
 		}
 		Static239.method4177(this.anInt4281);
-		local95.glTexImage2D(GL.GL_TEXTURE_2D, 0, GL.GL_RGBA, this.anInt4287, this.anInt4286, 0, GL.GL_RGBA, GL.GL_UNSIGNED_BYTE, local93);
+		local95.glTexImage2D(GL2.GL_TEXTURE_2D, 0, GL2.GL_RGBA, this.anInt4287, this.anInt4286, 0, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, local93);
 		Static63.anInt1944 += local93.limit() - this.anInt4284;
 		this.anInt4284 = local93.limit();
 	}
@@ -83,7 +83,7 @@ public final class GlIndexedSprite extends IndexedSprite {
 		Static239.method4155();
 		@Pc(5) int local5 = arg0 + this.anInt4280;
 		@Pc(10) int local10 = arg1 + this.anInt4273;
-		@Pc(12) GL local12 = Static239.aGL1;
+		@Pc(12) GL2 local12 = Static239.gl;
 		Static239.method4177(this.anInt4281);
 		this.method3338();
 		local12.glColor4f(1.0F, 1.0F, 1.0F, (float) arg2 / 256.0F);
@@ -96,9 +96,9 @@ public final class GlIndexedSprite extends IndexedSprite {
 	private void method3338() {
 		if (this.anInt4283 != 1) {
 			this.anInt4283 = 1;
-			@Pc(9) GL local9 = Static239.aGL1;
-			local9.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_MIN_FILTER, GL.GL_NEAREST);
-			local9.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_MAG_FILTER, GL.GL_NEAREST);
+			@Pc(9) GL2 local9 = Static239.gl;
+			local9.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_NEAREST);
+			local9.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_NEAREST);
 		}
 	}
 
@@ -108,7 +108,7 @@ public final class GlIndexedSprite extends IndexedSprite {
 		Static239.method4149();
 		@Pc(5) int local5 = arg0 + this.anInt4280;
 		@Pc(10) int local10 = arg1 + this.anInt4273;
-		@Pc(12) GL local12 = Static239.aGL1;
+		@Pc(12) GL2 local12 = Static239.gl;
 		Static239.method4177(this.anInt4281);
 		this.method3338();
 		local12.glTranslatef((float) local5, (float) (Static239.anInt5329 - local10), 0.0F);
@@ -135,13 +135,13 @@ public final class GlIndexedSprite extends IndexedSprite {
 	private void method3339() {
 		@Pc(7) float local7 = (float) this.anInt4270 / (float) this.anInt4287;
 		@Pc(15) float local15 = (float) this.anInt4278 / (float) this.anInt4286;
-		@Pc(17) GL local17 = Static239.aGL1;
+		@Pc(17) GL2 local17 = Static239.gl;
 		if (this.anInt4282 == -1) {
 			this.anInt4282 = local17.glGenLists(1);
 			this.anInt4285 = Static63.anInt1943;
 		}
-		local17.glNewList(this.anInt4282, GL.GL_COMPILE);
-		local17.glBegin(GL.GL_TRIANGLE_FAN);
+		local17.glNewList(this.anInt4282, GL2.GL_COMPILE);
+		local17.glBegin(GL2.GL_TRIANGLE_FAN);
 		local17.glTexCoord2f(local7, 0.0F);
 		local17.glVertex2f((float) this.anInt4270, 0.0F);
 		local17.glTexCoord2f(0.0F, 0.0F);

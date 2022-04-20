@@ -1,4 +1,4 @@
-import javax.media.opengl.GL;
+import com.jogamp.opengl.*;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
@@ -153,12 +153,12 @@ public final class Static156 {
 
 	@OriginalMember(owner = "client!mf", name = "a", descriptor = "()V")
 	public static void method2959() {
-		@Pc(1) GL local1 = Static239.aGL1;
-		local1.glDisableClientState(GL.GL_COLOR_ARRAY);
+		@Pc(1) GL2 local1 = Static239.gl;
+		local1.glDisableClientState(GL2.GL_COLOR_ARRAY);
 		Static239.method4164(false);
-		local1.glDisable(GL.GL_DEPTH_TEST);
-		local1.glPushAttrib(GL.GL_FOG_BIT);
-		local1.glFogf(GL.GL_FOG_START, 3072.0F);
+		local1.glDisable(GL2.GL_DEPTH_TEST);
+		local1.glPushAttrib(GL2.GL_FOG_BIT);
+		local1.glFogf(GL2.GL_FOG_START, 3072.0F);
 		Static239.method4178();
 		for (@Pc(19) int local19 = 0; local19 < Static36.aClass3_Sub14ArrayArray1[0].length; local19++) {
 			@Pc(31) Class3_Sub14 local31 = Static36.aClass3_Sub14ArrayArray1[0][local19];
@@ -168,9 +168,9 @@ public final class Static156 {
 				local31.method1944(Static130.aClass3_Sub5ArrayArrayArray1, local57, true);
 			}
 		}
-		local1.glEnableClientState(GL.GL_COLOR_ARRAY);
+		local1.glEnableClientState(GL2.GL_COLOR_ARRAY);
 		Static239.method4173();
-		local1.glEnable(GL.GL_DEPTH_TEST);
+		local1.glEnable(GL2.GL_DEPTH_TEST);
 		local1.glPopAttrib();
 		Static239.method4157();
 	}

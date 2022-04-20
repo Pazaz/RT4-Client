@@ -1,5 +1,5 @@
 import java.nio.ByteBuffer;
-import javax.media.opengl.GL;
+import com.jogamp.opengl.*;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
@@ -802,7 +802,7 @@ public final class GlModel extends Model {
 				}
 			}
 		}
-		@Pc(744) GL local744 = Static239.aGL1;
+		@Pc(744) GL2 local744 = Static239.gl;
 		local744.glPushMatrix();
 		local744.glTranslatef((float) arg5, (float) arg6, (float) arg7);
 		local744.glRotatef((float) arg0 * 0.17578125F, 0.0F, 1.0F, 0.0F);
@@ -1060,7 +1060,7 @@ public final class GlModel extends Model {
 		if (this.anInt5296 == 0) {
 			return;
 		}
-		@Pc(5) GL local5 = Static239.aGL1;
+		@Pc(5) GL2 local5 = Static239.gl;
 		local5.glPushMatrix();
 		if (arg2 != 0) {
 			local5.glRotatef((float) arg2 * 0.17578125F, 1.0F, 0.0F, 0.0F);
@@ -2966,7 +2966,7 @@ public final class GlModel extends Model {
 
 	@OriginalMember(owner = "client!td", name = "w", descriptor = "()V")
 	private void method4121() {
-		@Pc(1) GL local1 = Static239.aGL1;
+		@Pc(1) GL2 local1 = Static239.gl;
 		if (this.anInt5297 == 0) {
 			return;
 		}
@@ -3010,55 +3010,55 @@ public final class GlModel extends Model {
 		if (this.aClass127_4.aClass155_4 != null) {
 			this.aClass127_4.aClass155_4.method4516();
 			local172 = this.aClass127_4.aClass155_4;
-			local1.glVertexPointer(3, GL.GL_FLOAT, this.aClass127_4.anInt4782, (long) this.aClass127_4.anInt4777);
+			local1.glVertexPointer(3, GL2.GL_FLOAT, this.aClass127_4.anInt4782, (long) this.aClass127_4.anInt4777);
 		}
 		if (this.aClass127_1.aClass155_4 != null) {
 			if (local172 != this.aClass127_1.aClass155_4) {
 				this.aClass127_1.aClass155_4.method4516();
 				local172 = this.aClass127_1.aClass155_4;
 			}
-			local1.glColorPointer(4, GL.GL_UNSIGNED_BYTE, this.aClass127_1.anInt4782, (long) this.aClass127_1.anInt4777);
+			local1.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, this.aClass127_1.anInt4782, (long) this.aClass127_1.anInt4777);
 		}
 		if (Static178.aBoolean202 && this.aClass127_2.aClass155_4 != null) {
 			if (local172 != this.aClass127_2.aClass155_4) {
 				this.aClass127_2.aClass155_4.method4516();
 				local172 = this.aClass127_2.aClass155_4;
 			}
-			local1.glNormalPointer(GL.GL_FLOAT, this.aClass127_2.anInt4782, (long) this.aClass127_2.anInt4777);
+			local1.glNormalPointer(GL2.GL_FLOAT, this.aClass127_2.anInt4782, (long) this.aClass127_2.anInt4777);
 		}
 		if (this.aClass127_3.aClass155_4 != null) {
 			if (local172 != this.aClass127_3.aClass155_4) {
 				this.aClass127_3.aClass155_4.method4516();
 				local172 = this.aClass127_3.aClass155_4;
 			}
-			local1.glTexCoordPointer(2, GL.GL_FLOAT, this.aClass127_3.anInt4782, (long) this.aClass127_3.anInt4777);
+			local1.glTexCoordPointer(2, GL2.GL_FLOAT, this.aClass127_3.anInt4782, (long) this.aClass127_3.anInt4777);
 		}
 		if (this.aClass127_5.aClass155_4 != null) {
 			this.aClass127_5.aClass155_4.method4518();
 		}
 		if (this.aClass127_4.aClass155_4 == null || this.aClass127_1.aClass155_4 == null || Static178.aBoolean202 && this.aClass127_2.aClass155_4 == null || this.aClass127_3.aClass155_4 == null) {
 			if (Static239.aBoolean271) {
-				local1.glBindBufferARB(GL.GL_ARRAY_BUFFER, 0);
+				local1.glBindBuffer(GL2.GL_ARRAY_BUFFER, 0);
 			}
 			if (this.aClass127_4.aClass155_4 == null) {
 				this.aClass127_4.aByteBuffer8.position(this.aClass127_4.anInt4777);
-				local1.glVertexPointer(3, GL.GL_FLOAT, this.aClass127_4.anInt4782, this.aClass127_4.aByteBuffer8);
+				local1.glVertexPointer(3, GL2.GL_FLOAT, this.aClass127_4.anInt4782, this.aClass127_4.aByteBuffer8);
 			}
 			if (this.aClass127_1.aClass155_4 == null) {
 				this.aClass127_1.aByteBuffer8.position(this.aClass127_1.anInt4777);
-				local1.glColorPointer(4, GL.GL_UNSIGNED_BYTE, this.aClass127_1.anInt4782, this.aClass127_1.aByteBuffer8);
+				local1.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, this.aClass127_1.anInt4782, this.aClass127_1.aByteBuffer8);
 			}
 			if (Static178.aBoolean202 && this.aClass127_2.aClass155_4 == null) {
 				this.aClass127_2.aByteBuffer8.position(this.aClass127_2.anInt4777);
-				local1.glNormalPointer(GL.GL_FLOAT, this.aClass127_2.anInt4782, this.aClass127_2.aByteBuffer8);
+				local1.glNormalPointer(GL2.GL_FLOAT, this.aClass127_2.anInt4782, this.aClass127_2.aByteBuffer8);
 			}
 			if (this.aClass127_3.aClass155_4 == null) {
 				this.aClass127_3.aByteBuffer8.position(this.aClass127_3.anInt4777);
-				local1.glTexCoordPointer(2, GL.GL_FLOAT, this.aClass127_3.anInt4782, this.aClass127_3.aByteBuffer8);
+				local1.glTexCoordPointer(2, GL2.GL_FLOAT, this.aClass127_3.anInt4782, this.aClass127_3.aByteBuffer8);
 			}
 		}
 		if (this.aClass127_5.aClass155_4 == null && Static239.aBoolean271) {
-			local1.glBindBufferARB(GL.GL_ELEMENT_ARRAY_BUFFER, 0);
+			local1.glBindBuffer(GL2.GL_ELEMENT_ARRAY_BUFFER, 0);
 		}
 		@Pc(417) int local417 = this.anIntArray463.length - 1;
 		for (@Pc(419) int local419 = 0; local419 < local417; local419++) {
@@ -3073,9 +3073,9 @@ public final class GlModel extends Model {
 			}
 			if (this.aClass127_5.aClass155_4 == null) {
 				this.aClass127_5.aByteBuffer8.position(local427 * 12);
-				local1.glDrawElements(GL.GL_TRIANGLES, (local434 - local427) * 3, GL.GL_UNSIGNED_INT, this.aClass127_5.aByteBuffer8);
+				local1.glDrawElements(GL2.GL_TRIANGLES, (local434 - local427) * 3, GL2.GL_UNSIGNED_INT, this.aClass127_5.aByteBuffer8);
 			} else {
-				local1.glDrawElements(GL.GL_TRIANGLES, (local434 - local427) * 3, GL.GL_UNSIGNED_INT, (long) (local427 * 12));
+				local1.glDrawElements(GL2.GL_TRIANGLES, (local434 - local427) * 3, GL2.GL_UNSIGNED_INT, (long) (local427 * 12));
 			}
 		}
 	}

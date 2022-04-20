@@ -2,12 +2,12 @@ import java.awt.Canvas;
 import java.io.UnsupportedEncodingException;
 import java.nio.ByteOrder;
 import java.nio.IntBuffer;
-import javax.media.opengl.GL;
-import javax.media.opengl.GLCapabilities;
-import javax.media.opengl.GLContext;
-import javax.media.opengl.GLDrawable;
-import javax.media.opengl.GLDrawableFactory;
-import javax.media.opengl.glu.GLU;
+
+import com.jogamp.nativewindow.awt.AWTGraphicsConfiguration;
+import com.jogamp.nativewindow.awt.JAWTWindow;
+import com.jogamp.opengl.*;
+import com.jogamp.opengl.glu.gl2es1.GLUgl2es1;
+import jogamp.newt.awt.NewtFactoryAWT;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
@@ -39,7 +39,7 @@ public final class Static239 {
 	public static boolean aBoolean267;
 
 	@OriginalMember(owner = "client!tf", name = "t", descriptor = "Lgl!javax/media/opengl/GL;")
-	public static GL aGL1;
+	public static GL2 gl;
 
 	@OriginalMember(owner = "client!tf", name = "v", descriptor = "I")
 	private static int anInt5327;
@@ -156,9 +156,9 @@ public final class Static239 {
 	@OriginalMember(owner = "client!tf", name = "b", descriptor = "()V")
 	public static void method4150() {
 		if (aBoolean262) {
-			aGL1.glMatrixMode(GL.GL_TEXTURE);
-			aGL1.glLoadIdentity();
-			aGL1.glMatrixMode(GL.GL_MODELVIEW);
+			gl.glMatrixMode(GL2.GL_TEXTURE);
+			gl.glLoadIdentity();
+			gl.glMatrixMode(GL2.GL_MODELVIEW);
 			aBoolean262 = false;
 		}
 	}
@@ -192,9 +192,9 @@ public final class Static239 {
 			aFloatArray27[10] = aFloat30 + local42;
 			aFloatArray27[14] = aFloat32 * local29;
 		}
-		aGL1.glMatrixMode(GL.GL_PROJECTION);
-		aGL1.glLoadMatrixf(aFloatArray27, 0);
-		aGL1.glMatrixMode(GL.GL_MODELVIEW);
+		gl.glMatrixMode(GL2.GL_PROJECTION);
+		gl.glLoadMatrixf(aFloatArray27, 0);
+		gl.glMatrixMode(GL2.GL_MODELVIEW);
 	}
 
 	@OriginalMember(owner = "client!tf", name = "d", descriptor = "()V")
@@ -211,9 +211,9 @@ public final class Static239 {
 			return;
 		}
 		if (arg0) {
-			aGL1.glEnable(GL.GL_FOG);
+			gl.glEnable(GL2.GL_FOG);
 		} else {
-			aGL1.glDisable(GL.GL_FOG);
+			gl.glDisable(GL2.GL_FOG);
 		}
 		aBoolean272 = arg0;
 	}
@@ -233,54 +233,54 @@ public final class Static239 {
 	@OriginalMember(owner = "client!tf", name = "f", descriptor = "()V")
 	private static void method4156() {
 		aBoolean266 = false;
-		aGL1.glDisable(GL.GL_TEXTURE_2D);
+		gl.glDisable(GL2.GL_TEXTURE_2D);
 		anInt5326 = -1;
-		aGL1.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_TEXTURE_ENV_MODE, GL.GL_COMBINE);
-		aGL1.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_COMBINE_RGB, GL.GL_MODULATE);
+		gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_MODE, GL2.GL_COMBINE);
+		gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_MODULATE);
 		anInt5325 = 0;
-		aGL1.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_COMBINE_ALPHA, GL.GL_MODULATE);
+		gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_ALPHA, GL2.GL_MODULATE);
 		anInt5324 = 0;
-		aGL1.glEnable(GL.GL_LIGHTING);
-		aGL1.glEnable(GL.GL_FOG);
-		aGL1.glEnable(GL.GL_DEPTH_TEST);
+		gl.glEnable(GL2.GL_LIGHTING);
+		gl.glEnable(GL2.GL_FOG);
+		gl.glEnable(GL2.GL_DEPTH_TEST);
 		aBoolean264 = true;
 		aBoolean268 = true;
 		aBoolean272 = true;
 		Static83.method440();
-		aGL1.glActiveTexture(GL.GL_TEXTURE1);
-		aGL1.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_TEXTURE_ENV_MODE, GL.GL_COMBINE);
-		aGL1.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_COMBINE_RGB, GL.GL_MODULATE);
-		aGL1.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_COMBINE_ALPHA, GL.GL_MODULATE);
-		aGL1.glActiveTexture(GL.GL_TEXTURE0);
-		aGL1.setSwapInterval(0);
-		aGL1.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
-		aGL1.glShadeModel(GL.GL_SMOOTH);
-		aGL1.glClearDepth(1.0D);
-		aGL1.glDepthFunc(GL.GL_LEQUAL);
+		gl.glActiveTexture(GL2.GL_TEXTURE1);
+		gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_MODE, GL2.GL_COMBINE);
+		gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_MODULATE);
+		gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_ALPHA, GL2.GL_MODULATE);
+		gl.glActiveTexture(GL2.GL_TEXTURE0);
+		gl.setSwapInterval(0);
+		gl.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
+		gl.glShadeModel(GL2.GL_SMOOTH);
+		gl.glClearDepth(1.0D);
+		gl.glDepthFunc(GL2.GL_LEQUAL);
 		method4157();
-		aGL1.glMatrixMode(GL.GL_TEXTURE);
-		aGL1.glLoadIdentity();
-		aGL1.glPolygonMode(GL.GL_FRONT, GL.GL_FILL);
-		aGL1.glEnable(GL.GL_CULL_FACE);
-		aGL1.glCullFace(GL.GL_BACK);
-		aGL1.glEnable(GL.GL_BLEND);
-		aGL1.glBlendFunc(GL.GL_SRC_ALPHA, GL.GL_ONE_MINUS_SRC_ALPHA);
-		aGL1.glEnable(GL.GL_ALPHA_TEST);
-		aGL1.glAlphaFunc(GL.GL_GREATER, 0.0F);
-		aGL1.glEnableClientState(GL.GL_VERTEX_ARRAY);
-		aGL1.glEnableClientState(GL.GL_NORMAL_ARRAY);
+		gl.glMatrixMode(GL2.GL_TEXTURE);
+		gl.glLoadIdentity();
+		gl.glPolygonMode(GL2.GL_FRONT, GL2.GL_FILL);
+		gl.glEnable(GL2.GL_CULL_FACE);
+		gl.glCullFace(GL2.GL_BACK);
+		gl.glEnable(GL2.GL_BLEND);
+		gl.glBlendFunc(GL2.GL_SRC_ALPHA, GL2.GL_ONE_MINUS_SRC_ALPHA);
+		gl.glEnable(GL2.GL_ALPHA_TEST);
+		gl.glAlphaFunc(GL2.GL_GREATER, 0.0F);
+		gl.glEnableClientState(GL2.GL_VERTEX_ARRAY);
+		gl.glEnableClientState(GL2.GL_NORMAL_ARRAY);
 		aBoolean265 = true;
-		aGL1.glEnableClientState(GL.GL_COLOR_ARRAY);
-		aGL1.glEnableClientState(GL.GL_TEXTURE_COORD_ARRAY);
-		aGL1.glMatrixMode(GL.GL_MODELVIEW);
-		aGL1.glLoadIdentity();
+		gl.glEnableClientState(GL2.GL_COLOR_ARRAY);
+		gl.glEnableClientState(GL2.GL_TEXTURE_COORD_ARRAY);
+		gl.glMatrixMode(GL2.GL_MODELVIEW);
+		gl.glLoadIdentity();
 		Static161.method3065();
 		Static120.method2400();
 	}
 
 	@OriginalMember(owner = "client!tf", name = "g", descriptor = "()V")
 	public static void method4157() {
-		aGL1.glDepthMask(true);
+		gl.glDepthMask(true);
 	}
 
 	@OriginalMember(owner = "client!tf", name = "b", descriptor = "(Z)V")
@@ -289,9 +289,9 @@ public final class Static239 {
 			return;
 		}
 		if (arg0) {
-			aGL1.glEnable(GL.GL_DEPTH_TEST);
+			gl.glEnable(GL2.GL_DEPTH_TEST);
 		} else {
-			aGL1.glDisable(GL.GL_DEPTH_TEST);
+			gl.glDisable(GL2.GL_DEPTH_TEST);
 		}
 		aBoolean268 = arg0;
 	}
@@ -304,37 +304,43 @@ public final class Static239 {
 	@OriginalMember(owner = "client!tf", name = "h", descriptor = "()V")
 	public static void method4160() {
 		@Pc(2) int[] local2 = new int[2];
-		aGL1.glGetIntegerv(GL.GL_DRAW_BUFFER, local2, 0);
-		aGL1.glGetIntegerv(GL.GL_READ_BUFFER, local2, 1);
-		aGL1.glDrawBuffer(GL.GL_BACK_LEFT);
-		aGL1.glReadBuffer(GL.GL_FRONT_LEFT);
+		gl.glGetIntegerv(GL2.GL_DRAW_BUFFER, local2, 0);
+		gl.glGetIntegerv(GL2.GL_READ_BUFFER, local2, 1);
+		gl.glDrawBuffer(GL2.GL_BACK_LEFT);
+		gl.glReadBuffer(GL2.GL_FRONT_LEFT);
 		method4177(-1);
-		aGL1.glPushAttrib(GL.GL_ENABLE_BIT);
-		aGL1.glDisable(GL.GL_FOG);
-		aGL1.glDisable(GL.GL_BLEND);
-		aGL1.glDisable(GL.GL_DEPTH_TEST);
-		aGL1.glDisable(GL.GL_ALPHA_TEST);
-		aGL1.glRasterPos2i(0, 0);
-		aGL1.glCopyPixels(0, 0, anInt5332, anInt5329, GL.GL_COLOR);
-		aGL1.glPopAttrib();
-		aGL1.glDrawBuffer(local2[0]);
-		aGL1.glReadBuffer(local2[1]);
+		gl.glPushAttrib(GL2.GL_ENABLE_BIT);
+		gl.glDisable(GL2.GL_FOG);
+		gl.glDisable(GL2.GL_BLEND);
+		gl.glDisable(GL2.GL_DEPTH_TEST);
+		gl.glDisable(GL2.GL_ALPHA_TEST);
+		gl.glRasterPos2i(0, 0);
+		gl.glCopyPixels(0, 0, anInt5332, anInt5329, GL2.GL_COLOR);
+		gl.glPopAttrib();
+		gl.glDrawBuffer(local2[0]);
+		gl.glReadBuffer(local2[1]);
 	}
 
 	@OriginalMember(owner = "client!tf", name = "a", descriptor = "(Ljava/awt/Canvas;)V")
-	public static void method4161(@OriginalArg(0) Canvas arg0) {
+	public static void method4161(@OriginalArg(0) Canvas canvas) {
 		try {
-			if (!arg0.isDisplayable()) {
+			if (!canvas.isDisplayable()) {
 				return;
 			}
-			@Pc(5) GLDrawableFactory local5 = GLDrawableFactory.getFactory();
-			@Pc(11) GLDrawable local11 = local5.getGLDrawable(arg0, null, null);
-			local11.setRealized(true);
-			@Pc(18) GLContext local18 = local11.createContext(null);
-			local18.makeCurrent();
-			local18.release();
-			local18.destroy();
-			local11.setRealized(false);
+			GLProfile profile = GLProfile.getDefault();
+
+			GLCapabilities glCaps = new GLCapabilities(profile);
+			AWTGraphicsConfiguration config = AWTGraphicsConfiguration.create(canvas.getGraphicsConfiguration(), glCaps, glCaps);
+			JAWTWindow jawtWindow = NewtFactoryAWT.getNativeWindow(canvas, config);
+			@Pc(5) GLDrawableFactory glDrawableFactory = GLDrawableFactory.getFactory(profile);
+			@Pc(11) GLDrawable glDrawable = glDrawableFactory.createGLDrawable(jawtWindow);
+
+			glDrawable.setRealized(true);
+			@Pc(18) GLContext glContext = glDrawable.createContext(null);
+			glContext.makeCurrent();
+			glContext.release();
+			glContext.destroy();
+			glDrawable.setRealized(false);
 		} catch (@Pc(30) Throwable local30) {
 		}
 	}
@@ -355,12 +361,12 @@ public final class Static239 {
 		if (aBoolean266) {
 			return;
 		}
-		aGL1.glMatrixMode(GL.GL_PROJECTION);
-		aGL1.glLoadIdentity();
-		aGL1.glOrtho(0.0D, (double) anInt5332, 0.0D, (double) anInt5329, -1.0D, 1.0D);
-		aGL1.glViewport(0, 0, anInt5332, anInt5329);
-		aGL1.glMatrixMode(GL.GL_MODELVIEW);
-		aGL1.glLoadIdentity();
+		gl.glMatrixMode(GL2.GL_PROJECTION);
+		gl.glLoadIdentity();
+		gl.glOrtho(0.0D, (double) anInt5332, 0.0D, (double) anInt5329, -1.0D, 1.0D);
+		gl.glViewport(0, 0, anInt5332, anInt5329);
+		gl.glMatrixMode(GL2.GL_MODELVIEW);
+		gl.glLoadIdentity();
 		aBoolean266 = true;
 	}
 
@@ -370,9 +376,9 @@ public final class Static239 {
 			return;
 		}
 		if (arg0) {
-			aGL1.glEnable(GL.GL_LIGHTING);
+			gl.glEnable(GL2.GL_LIGHTING);
 		} else {
-			aGL1.glDisable(GL.GL_LIGHTING);
+			gl.glDisable(GL2.GL_LIGHTING);
 		}
 		aBoolean264 = arg0;
 	}
@@ -385,8 +391,8 @@ public final class Static239 {
 	@OriginalMember(owner = "client!tf", name = "m", descriptor = "()I")
 	private static int method4167() {
 		@Pc(1) int local1 = 0;
-		aString5 = aGL1.glGetString(GL.GL_VENDOR);
-		aString6 = aGL1.glGetString(GL.GL_RENDERER);
+		aString5 = gl.glGetString(GL2.GL_VENDOR);
+		aString6 = gl.glGetString(GL2.GL_RENDERER);
 		@Pc(12) String local12 = aString5.toLowerCase();
 		if (local12.indexOf("microsoft") != -1) {
 			local1 = 1;
@@ -394,7 +400,7 @@ public final class Static239 {
 		if (local12.indexOf("brian paul") != -1 || local12.indexOf("mesa") != -1) {
 			local1 |= 0x1;
 		}
-		@Pc(39) String local39 = aGL1.glGetString(GL.GL_VERSION);
+		@Pc(39) String local39 = gl.glGetString(GL2.GL_VERSION);
 		@Pc(43) String[] local43 = local39.split("[. ]");
 		if (local43.length >= 2) {
 			try {
@@ -410,18 +416,18 @@ public final class Static239 {
 		if (anInt5330 < 12) {
 			local1 |= 0x2;
 		}
-		if (!aGL1.isExtensionAvailable("GL_ARB_multitexture")) {
+		if (!gl.isExtensionAvailable("GL_ARB_multitexture")) {
 			local1 |= 0x8;
 		}
-		if (!aGL1.isExtensionAvailable("GL_ARB_texture_env_combine")) {
+		if (!gl.isExtensionAvailable("GL_ARB_texture_env_combine")) {
 			local1 |= 0x20;
 		}
 		@Pc(100) int[] local100 = new int[1];
-		aGL1.glGetIntegerv(GL.GL_MAX_TEXTURE_UNITS, local100, 0);
+		gl.glGetIntegerv(GL2.GL_MAX_TEXTURE_UNITS, local100, 0);
 		anInt5322 = local100[0];
-		aGL1.glGetIntegerv(GL.GL_MAX_TEXTURE_COORDS, local100, 0);
+		gl.glGetIntegerv(GL2.GL_MAX_TEXTURE_COORDS, local100, 0);
 		anInt5331 = local100[0];
-		aGL1.glGetIntegerv(GL.GL_MAX_TEXTURE_IMAGE_UNITS, local100, 0);
+		gl.glGetIntegerv(GL2.GL_MAX_TEXTURE_IMAGE_UNITS, local100, 0);
 		anInt5327 = local100[0];
 		if (anInt5322 < 2 || anInt5331 < 2 || anInt5327 < 2) {
 			local1 |= 0x10;
@@ -430,11 +436,11 @@ public final class Static239 {
 			return local1;
 		}
 		aBoolean263 = ByteOrder.nativeOrder() == ByteOrder.BIG_ENDIAN;
-		aBoolean271 = aGL1.isExtensionAvailable("GL_ARB_vertex_buffer_object");
-		aBoolean270 = aGL1.isExtensionAvailable("GL_ARB_multisample");
-		aBoolean275 = aGL1.isExtensionAvailable("GL_ARB_texture_cube_map");
-		aBoolean274 = aGL1.isExtensionAvailable("GL_ARB_vertex_program");
-		aBoolean267 = aGL1.isExtensionAvailable("GL_EXT_texture3D");
+		aBoolean271 = gl.isExtensionAvailable("GL_ARB_vertex_buffer_object");
+		aBoolean270 = gl.isExtensionAvailable("GL_ARB_multisample");
+		aBoolean275 = gl.isExtensionAvailable("GL_ARB_texture_cube_map");
+		aBoolean274 = gl.isExtensionAvailable("GL_ARB_vertex_program");
+		aBoolean267 = gl.isExtensionAvailable("GL_EXT_texture3D");
 		@Pc(176) JagString local176 = method4147(aString6).method3114();
 		if (local176.method3131(aClass100_1007) != -1) {
 			@Pc(184) int local184 = 0;
@@ -457,7 +463,7 @@ public final class Static239 {
 		if (aBoolean271) {
 			try {
 				@Pc(250) int[] local250 = new int[1];
-				aGL1.glGenBuffersARB(1, local250, 0);
+				gl.glGenBuffers(1, local250, 0);
 			} catch (@Pc(257) Throwable local257) {
 				return -4;
 			}
@@ -467,17 +473,17 @@ public final class Static239 {
 
 	@OriginalMember(owner = "client!tf", name = "n", descriptor = "()V")
 	public static void method4168() {
-		aGL1.glClear(GL.GL_DEPTH_BUFFER_BIT);
+		gl.glClear(GL2.GL_DEPTH_BUFFER_BIT);
 	}
 
 	@OriginalMember(owner = "client!tf", name = "o", descriptor = "()V")
 	public static void method4169() {
-		if (aGL1 != null) {
+		if (gl != null) {
 			try {
 				Static172.method3225();
 			} catch (@Pc(5) Throwable local5) {
 			}
-			aGL1 = null;
+			gl = null;
 		}
 		if (aGLContext1 != null) {
 			Static63.method1488();
@@ -506,12 +512,12 @@ public final class Static239 {
 
 	@OriginalMember(owner = "client!tf", name = "a", descriptor = "(FFF)V")
 	public static void method4170(@OriginalArg(0) float arg0, @OriginalArg(1) float arg1, @OriginalArg(2) float arg2) {
-		aGL1.glMatrixMode(GL.GL_TEXTURE);
+		gl.glMatrixMode(GL2.GL_TEXTURE);
 		if (aBoolean262) {
-			aGL1.glLoadIdentity();
+			gl.glLoadIdentity();
 		}
-		aGL1.glTranslatef(arg0, arg1, arg2);
-		aGL1.glMatrixMode(GL.GL_MODELVIEW);
+		gl.glTranslatef(arg0, arg1, arg2);
+		gl.glMatrixMode(GL2.GL_MODELVIEW);
 		aBoolean262 = true;
 	}
 
@@ -521,18 +527,18 @@ public final class Static239 {
 		@Pc(17) int local17 = (arg0 + arg2 - arg4 << 8) / arg8;
 		@Pc(25) int local25 = (arg1 - arg5 << 8) / arg9;
 		@Pc(35) int local35 = (arg1 + arg3 - arg5 << 8) / arg9;
-		aGL1.glMatrixMode(GL.GL_PROJECTION);
-		aGL1.glLoadIdentity();
+		gl.glMatrixMode(GL2.GL_PROJECTION);
+		gl.glLoadIdentity();
 		method4175((float) local7 * aFloat34, (float) local17 * aFloat34, (float) -local35 * aFloat34, (float) -local25 * aFloat34, 50.0F, 3584.0F);
-		aGL1.glViewport(arg0, anInt5329 - arg1 - arg3, arg2, arg3);
-		aGL1.glMatrixMode(GL.GL_MODELVIEW);
-		aGL1.glLoadIdentity();
-		aGL1.glRotatef(180.0F, 1.0F, 0.0F, 0.0F);
+		gl.glViewport(arg0, anInt5329 - arg1 - arg3, arg2, arg3);
+		gl.glMatrixMode(GL2.GL_MODELVIEW);
+		gl.glLoadIdentity();
+		gl.glRotatef(180.0F, 1.0F, 0.0F, 0.0F);
 		if (arg6 != 0.0F) {
-			aGL1.glRotatef(arg6, 1.0F, 0.0F, 0.0F);
+			gl.glRotatef(arg6, 1.0F, 0.0F, 0.0F);
 		}
 		if (arg7 != 0.0F) {
-			aGL1.glRotatef(arg7, 0.0F, 1.0F, 0.0F);
+			gl.glRotatef(arg7, 0.0F, 1.0F, 0.0F);
 		}
 		aBoolean266 = false;
 		Static240.anInt5334 = local7;
@@ -547,9 +553,9 @@ public final class Static239 {
 			return;
 		}
 		if (arg0) {
-			aGL1.glEnableClientState(GL.GL_NORMAL_ARRAY);
+			gl.glEnableClientState(GL2.GL_NORMAL_ARRAY);
 		} else {
-			aGL1.glDisableClientState(GL.GL_NORMAL_ARRAY);
+			gl.glDisableClientState(GL2.GL_NORMAL_ARRAY);
 		}
 		aBoolean265 = arg0;
 	}
@@ -571,13 +577,13 @@ public final class Static239 {
 			return;
 		}
 		if (arg0 == 0) {
-			aGL1.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_COMBINE_ALPHA, GL.GL_MODULATE);
+			gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_ALPHA, GL2.GL_MODULATE);
 		}
 		if (arg0 == 1) {
-			aGL1.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_COMBINE_ALPHA, GL.GL_REPLACE);
+			gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_ALPHA, GL2.GL_REPLACE);
 		}
 		if (arg0 == 2) {
-			aGL1.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_COMBINE_ALPHA, GL.GL_ADD);
+			gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_ALPHA, GL2.GL_ADD);
 		}
 		anInt5324 = arg0;
 	}
@@ -601,16 +607,16 @@ public final class Static239 {
 		aFloatArray27[13] = 0.0F;
 		aFloatArray27[14] = aFloat32 = -(local3 * arg5) / (arg5 - arg4);
 		aFloatArray27[15] = 0.0F;
-		aGL1.glLoadMatrixf(aFloatArray27, 0);
+		gl.glLoadMatrixf(aFloatArray27, 0);
 		aFloat33 = 0.0F;
 		aFloat31 = 0.0F;
 	}
 
 	@OriginalMember(owner = "client!tf", name = "b", descriptor = "(I)V")
 	public static void method4176(@OriginalArg(0) int arg0) {
-		aGL1.glClearColor((float) (arg0 >> 16 & 0xFF) / 255.0F, (float) (arg0 >> 8 & 0xFF) / 255.0F, (float) (arg0 & 0xFF) / 255.0F, 0.0F);
-		aGL1.glClear(GL.GL_DEPTH_BUFFER_BIT | GL.GL_COLOR_BUFFER_BIT);
-		aGL1.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
+		gl.glClearColor((float) (arg0 >> 16 & 0xFF) / 255.0F, (float) (arg0 >> 8 & 0xFF) / 255.0F, (float) (arg0 & 0xFF) / 255.0F, 0.0F);
+		gl.glClear(GL2.GL_DEPTH_BUFFER_BIT | GL2.GL_COLOR_BUFFER_BIT);
+		gl.glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
 	}
 
 	@OriginalMember(owner = "client!tf", name = "c", descriptor = "(I)V")
@@ -619,19 +625,19 @@ public final class Static239 {
 			return;
 		}
 		if (arg0 == -1) {
-			aGL1.glDisable(GL.GL_TEXTURE_2D);
+			gl.glDisable(GL2.GL_TEXTURE_2D);
 		} else {
 			if (anInt5326 == -1) {
-				aGL1.glEnable(GL.GL_TEXTURE_2D);
+				gl.glEnable(GL2.GL_TEXTURE_2D);
 			}
-			aGL1.glBindTexture(GL.GL_TEXTURE_2D, arg0);
+			gl.glBindTexture(GL2.GL_TEXTURE_2D, arg0);
 		}
 		anInt5326 = arg0;
 	}
 
 	@OriginalMember(owner = "client!tf", name = "q", descriptor = "()V")
 	public static void method4178() {
-		aGL1.glDepthMask(false);
+		gl.glDepthMask(false);
 	}
 
 	@OriginalMember(owner = "client!tf", name = "r", descriptor = "()F")
@@ -640,18 +646,21 @@ public final class Static239 {
 	}
 
 	@OriginalMember(owner = "client!tf", name = "a", descriptor = "(Ljava/awt/Canvas;I)I")
-	public static int method4180(@OriginalArg(0) Canvas arg0, @OriginalArg(1) int arg1) {
+	public static int method4180(@OriginalArg(0) Canvas canvas, @OriginalArg(1) int arg1) {
 		try {
-			if (!arg0.isDisplayable()) {
+			if (!canvas.isDisplayable()) {
 				return -1;
 			}
-			@Pc(8) GLCapabilities local8 = new GLCapabilities();
+			GLProfile glProfile = GLProfile.get(GLProfile.GL2);
+			@Pc(8) GLCapabilities glCaps = new GLCapabilities(glProfile);
 			if (arg1 > 0) {
-				local8.setSampleBuffers(true);
-				local8.setNumSamples(arg1);
+				glCaps.setSampleBuffers(true);
+				glCaps.setNumSamples(arg1);
 			}
-			@Pc(18) GLDrawableFactory local18 = GLDrawableFactory.getFactory();
-			aGLDrawable1 = local18.getGLDrawable(arg0, local8, null);
+			@Pc(18) GLDrawableFactory glDrawableFactory = GLDrawableFactory.getFactory(glProfile);
+			AWTGraphicsConfiguration config = AWTGraphicsConfiguration.create(canvas.getGraphicsConfiguration(), glCaps, glCaps);
+			JAWTWindow jawtWindow = NewtFactoryAWT.getNativeWindow(canvas, config);
+			aGLDrawable1 = glDrawableFactory.createGLDrawable(jawtWindow);
 			aGLDrawable1.setRealized(true);
 			@Pc(29) int local29 = 0;
 			@Pc(36) int var5;
@@ -669,11 +678,11 @@ public final class Static239 {
 				}
 				Static231.method3983(1000L);
 			}
-			aGL1 = aGLContext1.getGL();
-			new GLU();
+            gl = GLContext.getCurrentGL().getGL2();
+            new GLUgl2es1();
 			aBoolean269 = true;
-			anInt5332 = arg0.getSize().width;
-			anInt5329 = arg0.getSize().height;
+			anInt5332 = canvas.getSize().width;
+			anInt5329 = canvas.getSize().height;
 			var5 = method4167();
 			if (var5 != 0) {
 				method4169();
@@ -681,7 +690,7 @@ public final class Static239 {
 			}
 			method4184();
 			method4156();
-			aGL1.glClear(GL.GL_COLOR_BUFFER_BIT);
+			gl.glClear(GL2.GL_COLOR_BUFFER_BIT);
 			local29 = 0;
 			while (true) {
 				try {
@@ -695,7 +704,7 @@ public final class Static239 {
 					Static231.method3983(100L);
 				}
 			}
-			aGL1.glClear(GL.GL_COLOR_BUFFER_BIT);
+			gl.glClear(GL2.GL_COLOR_BUFFER_BIT);
 			return 0;
 		} catch (@Pc(103) Throwable local103) {
 			method4169();
@@ -716,16 +725,16 @@ public final class Static239 {
 		@Pc(6) int local6 = anInt5332 - arg0;
 		@Pc(9) int local9 = -arg1;
 		@Pc(13) int local13 = anInt5329 - arg1;
-		aGL1.glMatrixMode(GL.GL_PROJECTION);
-		aGL1.glLoadIdentity();
+		gl.glMatrixMode(GL2.GL_PROJECTION);
+		gl.glLoadIdentity();
 		@Pc(23) float local23 = (float) arg2 / 512.0F;
 		@Pc(30) float local30 = local23 * (256.0F / (float) arg4);
 		@Pc(37) float local37 = local23 * (256.0F / (float) arg5);
-		aGL1.glOrtho((double) ((float) local2 * local30), (double) ((float) local6 * local30), (double) ((float) -local13 * local37), (double) ((float) -local9 * local37), (double) (50 - arg3), (double) (3584 - arg3));
-		aGL1.glViewport(0, 0, anInt5332, anInt5329);
-		aGL1.glMatrixMode(GL.GL_MODELVIEW);
-		aGL1.glLoadIdentity();
-		aGL1.glRotatef(180.0F, 1.0F, 0.0F, 0.0F);
+		gl.glOrtho((double) ((float) local2 * local30), (double) ((float) local6 * local30), (double) ((float) -local13 * local37), (double) ((float) -local9 * local37), (double) (50 - arg3), (double) (3584 - arg3));
+		gl.glViewport(0, 0, anInt5332, anInt5329);
+		gl.glMatrixMode(GL2.GL_MODELVIEW);
+		gl.glLoadIdentity();
+		gl.glRotatef(180.0F, 1.0F, 0.0F, 0.0F);
 		aBoolean266 = false;
 	}
 
@@ -735,22 +744,22 @@ public final class Static239 {
 			return;
 		}
 		if (arg0 == 0) {
-			aGL1.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_COMBINE_RGB, GL.GL_MODULATE);
+			gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_MODULATE);
 		}
 		if (arg0 == 1) {
-			aGL1.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_COMBINE_RGB, GL.GL_REPLACE);
+			gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_REPLACE);
 		}
 		if (arg0 == 2) {
-			aGL1.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_COMBINE_RGB, GL.GL_ADD);
+			gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_ADD);
 		}
 		if (arg0 == 3) {
-			aGL1.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_COMBINE_RGB, GL.GL_SUBTRACT);
+			gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_SUBTRACT);
 		}
 		if (arg0 == 4) {
-			aGL1.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_COMBINE_RGB, GL.GL_ADD_SIGNED);
+			gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_ADD_SIGNED);
 		}
 		if (arg0 == 5) {
-			aGL1.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_COMBINE_RGB, GL.GL_INTERPOLATE);
+			gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_INTERPOLATE);
 		}
 		anInt5325 = arg0;
 	}
@@ -758,10 +767,10 @@ public final class Static239 {
 	@OriginalMember(owner = "client!tf", name = "s", descriptor = "()V")
 	private static void method4184() {
 		@Pc(2) int[] local2 = new int[1];
-		aGL1.glGenTextures(1, local2, 0);
+		gl.glGenTextures(1, local2, 0);
 		anInt5328 = local2[0];
-		aGL1.glBindTexture(GL.GL_TEXTURE_2D, anInt5328);
-		aGL1.glTexImage2D(GL.GL_TEXTURE_2D, 0, 4, 1, 1, 0, GL.GL_RGBA, GL.GL_UNSIGNED_BYTE, IntBuffer.wrap(new int[] { -1 }));
+		gl.glBindTexture(GL2.GL_TEXTURE_2D, anInt5328);
+		gl.glTexImage2D(GL2.GL_TEXTURE_2D, 0, 4, 1, 1, 0, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, IntBuffer.wrap(new int[] { -1 }));
 		Static120.method2401();
 		Static238.method4145();
 	}

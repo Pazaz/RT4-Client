@@ -1,4 +1,4 @@
-import javax.media.opengl.GL;
+import com.jogamp.opengl.*;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
@@ -97,7 +97,7 @@ public final class Static248 {
 		}
 		@Pc(240) boolean local240 = Static83.anIntArrayArrayArray4 == Static80.anIntArrayArrayArray19;
 		if (Static239.aBoolean269) {
-			@Pc(244) GL local244 = Static239.aGL1;
+			@Pc(244) GL2 local244 = Static239.gl;
 			local244.glPushMatrix();
 			local244.glTranslatef((float) -arg0, (float) -arg1, (float) -arg2);
 			if (local240) {

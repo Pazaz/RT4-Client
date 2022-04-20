@@ -1,5 +1,5 @@
 import java.nio.ByteBuffer;
-import javax.media.opengl.GL;
+import com.jogamp.opengl.*;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
@@ -181,22 +181,22 @@ public final class Class45 {
 
 	@OriginalMember(owner = "client!fj", name = "c", descriptor = "()V")
 	public final void method1556() {
-		@Pc(1) GL local1 = Static239.aGL1;
+		@Pc(1) GL2 local1 = Static239.gl;
 		if (Static239.aBoolean271) {
 			this.aClass155_1.method4516();
-			local1.glInterleavedArrays(GL.GL_C4UB_V3F, 16, 0L);
+			local1.glInterleavedArrays(GL2.GL_C4UB_V3F, 16, 0L);
 			Static239.aBoolean265 = false;
 			this.aClass155_2.method4518();
-			local1.glDrawElements(GL.GL_TRIANGLES, this.anInt2018, GL.GL_UNSIGNED_INT, 0L);
+			local1.glDrawElements(GL2.GL_TRIANGLES, this.anInt2018, GL2.GL_UNSIGNED_INT, 0L);
 			return;
 		}
 		if (Static239.aBoolean271) {
-			local1.glBindBufferARB(GL.GL_ARRAY_BUFFER, 0);
-			local1.glBindBufferARB(GL.GL_ELEMENT_ARRAY_BUFFER, 0);
+			local1.glBindBuffer(GL2.GL_ARRAY_BUFFER, 0);
+			local1.glBindBuffer(GL2.GL_ELEMENT_ARRAY_BUFFER, 0);
 		}
-		local1.glInterleavedArrays(GL.GL_C4UB_V3F, 16, this.aByteBuffer1);
+		local1.glInterleavedArrays(GL2.GL_C4UB_V3F, 16, this.aByteBuffer1);
 		Static239.aBoolean265 = false;
-		local1.glDrawElements(GL.GL_TRIANGLES, this.anInt2018, GL.GL_UNSIGNED_INT, this.aByteBuffer2);
+		local1.glDrawElements(GL2.GL_TRIANGLES, this.anInt2018, GL2.GL_UNSIGNED_INT, this.aByteBuffer2);
 	}
 
 	@OriginalMember(owner = "client!fj", name = "a", descriptor = "([I)V")

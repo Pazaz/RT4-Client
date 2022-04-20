@@ -1,6 +1,6 @@
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
-import javax.media.opengl.GL;
+import com.jogamp.opengl.*;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
@@ -32,16 +32,16 @@ public final class Class165 {
 
 	@OriginalMember(owner = "client!wm", name = "<init>", descriptor = "()V")
 	public Class165() {
-		@Pc(9) GL local9 = Static239.aGL1;
+		@Pc(9) GL2 local9 = Static239.gl;
 		@Pc(12) int[] local12 = new int[1];
 		local9.glGenTextures(1, local12, 0);
 		this.anInt5901 = local12[0];
 		Static63.anInt1942 += 16384;
 		Static239.method4177(this.anInt5901);
-		local9.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_MIN_FILTER, GL.GL_LINEAR);
-		local9.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_MAG_FILTER, GL.GL_LINEAR);
-		local9.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_WRAP_S, GL.GL_CLAMP_TO_EDGE);
-		local9.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_WRAP_T, GL.GL_CLAMP_TO_EDGE);
+		local9.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR);
+		local9.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
+		local9.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_WRAP_S, GL2.GL_CLAMP_TO_EDGE);
+		local9.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_WRAP_T, GL2.GL_CLAMP_TO_EDGE);
 	}
 
 	@OriginalMember(owner = "client!wm", name = "a", descriptor = "([[III)V")
@@ -152,37 +152,37 @@ public final class Class165 {
 			}
 			local19 += local5 - 128;
 		}
-		@Pc(145) GL local145 = Static239.aGL1;
+		@Pc(145) GL2 local145 = Static239.gl;
 		@Pc(148) ByteBuffer local148 = ByteBuffer.wrap(Static281.aByteArray82);
 		local148.limit(16384);
 		Static239.method4177(this.anInt5901);
-		local145.glTexImage2D(GL.GL_TEXTURE_2D, 0, GL.GL_ALPHA, 128, 128, 0, GL.GL_ALPHA, GL.GL_UNSIGNED_BYTE, local148);
+		local145.glTexImage2D(GL2.GL_TEXTURE_2D, 0, GL2.GL_ALPHA, 128, 128, 0, GL2.GL_ALPHA, GL2.GL_UNSIGNED_BYTE, local148);
 		return true;
 	}
 
 	@OriginalMember(owner = "client!wm", name = "b", descriptor = "()V")
 	public final void method4679() {
-		@Pc(1) GL local1 = Static239.aGL1;
+		@Pc(1) GL2 local1 = Static239.gl;
 		Static239.method4177(this.anInt5901);
 		if (this.aClass155_7 == null) {
 			if (Static239.aBoolean271) {
-				local1.glBindBufferARB(GL.GL_ARRAY_BUFFER, 0);
+				local1.glBindBuffer(GL2.GL_ARRAY_BUFFER, 0);
 			}
-			local1.glInterleavedArrays(GL.GL_T2F_V3F, 20, this.aByteBuffer12);
+			local1.glInterleavedArrays(GL2.GL_T2F_V3F, 20, this.aByteBuffer12);
 			Static239.aBoolean265 = false;
 		} else {
 			this.aClass155_7.method4516();
-			local1.glInterleavedArrays(GL.GL_T2F_V3F, 20, 0L);
+			local1.glInterleavedArrays(GL2.GL_T2F_V3F, 20, 0L);
 			Static239.aBoolean265 = false;
 		}
 		if (this.aClass155_6 == null) {
 			if (Static239.aBoolean271) {
-				local1.glBindBufferARB(GL.GL_ELEMENT_ARRAY_BUFFER, 0);
+				local1.glBindBuffer(GL2.GL_ELEMENT_ARRAY_BUFFER, 0);
 			}
-			local1.glDrawElements(GL.GL_TRIANGLES, 384, GL.GL_UNSIGNED_INT, this.aByteBuffer11);
+			local1.glDrawElements(GL2.GL_TRIANGLES, 384, GL2.GL_UNSIGNED_INT, this.aByteBuffer11);
 		} else {
 			this.aClass155_6.method4518();
-			local1.glDrawElements(GL.GL_TRIANGLES, 384, GL.GL_UNSIGNED_INT, 0L);
+			local1.glDrawElements(GL2.GL_TRIANGLES, 384, GL2.GL_UNSIGNED_INT, 0L);
 		}
 	}
 }

@@ -1,4 +1,4 @@
-import javax.media.opengl.GL;
+import com.jogamp.opengl.*;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
@@ -76,13 +76,13 @@ public final class Static63 {
 
 	@OriginalMember(owner = "client!fa", name = "c", descriptor = "()V")
 	public static synchronized void method1490() {
-		@Pc(1) GL local1 = Static239.aGL1;
+		@Pc(1) GL2 local1 = Static239.gl;
 		@Pc(3) int local3 = 0;
 		while (true) {
 			@Pc(8) IntNode local8 = (IntNode) aClass69_48.method2287();
 			if (local8 == null) {
 				if (local3 > 0) {
-					local1.glDeleteBuffersARB(local3, anIntArray151, 0);
+					local1.glDeleteBuffers(local3, anIntArray151, 0);
 					local3 = 0;
 				}
 				while (true) {
@@ -126,7 +126,7 @@ public final class Static63 {
 			anIntArray151[local3++] = (int) local8.aLong192;
 			anInt1945 -= local8.anInt3141;
 			if (local3 == 1000) {
-				local1.glDeleteBuffersARB(local3, anIntArray151, 0);
+				local1.glDeleteBuffers(local3, anIntArray151, 0);
 				local3 = 0;
 			}
 		}
