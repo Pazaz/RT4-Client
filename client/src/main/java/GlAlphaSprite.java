@@ -1,5 +1,5 @@
 import java.nio.ByteBuffer;
-import javax.media.opengl.GL;
+import com.jogamp.opengl.*;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
@@ -42,14 +42,14 @@ public final class GlAlphaSprite extends GlSprite {
 			local22 += local32;
 		}
 		@Pc(94) ByteBuffer local94 = ByteBuffer.wrap(local20);
-		@Pc(96) GL local96 = Static239.aGL1;
+		@Pc(96) GL2 local96 = Static239.gl;
 		if (this.anInt1872 == -1) {
 			@Pc(103) int[] local103 = new int[1];
 			local96.glGenTextures(1, local103, 0);
 			this.anInt1872 = local103[0];
 		}
 		Static239.method4177(this.anInt1872);
-		local96.glTexImage2D(GL.GL_TEXTURE_2D, 0, GL.GL_RGBA, this.anInt1870, this.anInt1874, 0, GL.GL_RGBA, GL.GL_UNSIGNED_BYTE, local94);
+		local96.glTexImage2D(GL2.GL_TEXTURE_2D, 0, GL2.GL_RGBA, this.anInt1870, this.anInt1874, 0, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, local94);
 		Static63.anInt1944 += local94.limit() - this.anInt1869;
 		this.anInt1869 = local94.limit();
 	}

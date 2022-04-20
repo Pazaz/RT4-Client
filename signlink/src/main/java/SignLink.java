@@ -15,6 +15,7 @@ import java.net.Socket;
 import java.net.URL;
 import java.util.Hashtable;
 import java.util.Vector;
+import com.jogamp.opengl.*;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
@@ -394,34 +395,7 @@ public final class SignLink implements Runnable {
 						} else if (local45 == 7) {
 							this.aClass210_1.method5106();
 						} else if (local45 == 10) {
-							@Pc(217) Class[] local217 = new Class[] { Class.forName("java.lang.Class"), Class.forName("java.lang.String") };
-							@Pc(219) Runtime local219 = Runtime.getRuntime();
-							@Pc(230) Method local230;
-							if (!aString15.startsWith("mac")) {
-								local230 = Class.forName("java.lang.Runtime").getDeclaredMethod("loadLibrary0", local217);
-								local230.setAccessible(true);
-								local230.invoke(local219, local16.anObject7, "jawt");
-								local230.setAccessible(false);
-							}
-							local230 = Class.forName("java.lang.Runtime").getDeclaredMethod("load0", local217);
-							local230.setAccessible(true);
-							if (aString15.startsWith("linux") || aString15.startsWith("sunos")) {
-								local230.invoke(local219, local16.anObject7, method5127(this.aString19, this.anInt5929, "libgluegen-rt.so").toString());
-								@Pc(399) Class local399 = ((Class) local16.anObject7).getClassLoader().loadClass("com.sun.opengl.impl.x11.DRIHack");
-								local399.getMethod("begin").invoke(null);
-								local230.invoke(local219, local16.anObject7, method5127(this.aString19, this.anInt5929, "libjogl.so").toString());
-								local399.getMethod("end").invoke(null);
-								local230.invoke(local219, local16.anObject7, method5127(this.aString19, this.anInt5929, "libjogl_awt.so").toString());
-							} else if (aString15.startsWith("mac")) {
-								local230.invoke(local219, local16.anObject7, method5127(this.aString19, this.anInt5929, "libjogl.jnilib").toString());
-								local230.invoke(local219, local16.anObject7, method5127(this.aString19, this.anInt5929, "libjogl_awt.jnilib").toString());
-							} else if (aString15.startsWith("win")) {
-								local230.invoke(local219, local16.anObject7, method5127(this.aString19, this.anInt5929, "jogl.dll").toString());
-								local230.invoke(local219, local16.anObject7, method5127(this.aString19, this.anInt5929, "jogl_awt.dll").toString());
-							} else {
-								throw new Exception();
-							}
-							local230.setAccessible(false);
+                            GLProfile.initSingleton();
 						} else {
 							@Pc(490) int local490;
 							if (local45 == 11) {

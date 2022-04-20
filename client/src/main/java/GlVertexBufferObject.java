@@ -1,5 +1,5 @@
 import java.nio.ByteBuffer;
-import javax.media.opengl.GL;
+import com.jogamp.opengl.*;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
@@ -29,9 +29,9 @@ public final class GlVertexBufferObject {
 	public GlVertexBufferObject(@OriginalArg(0) boolean arg0) {
 		this.anInt5760 = -1;
 		this.anInt5762 = 0;
-		@Pc(9) GL local9 = Static239.aGL1;
+		@Pc(9) GL2 local9 = Static239.gl;
 		@Pc(12) int[] local12 = new int[1];
-		local9.glGenBuffersARB(1, local12, 0);
+		local9.glGenBuffers(1, local12, 0);
 		this.aBoolean300 = arg0;
 		this.anInt5760 = local12[0];
 		this.anInt5761 = Static63.anInt1943;
@@ -40,9 +40,9 @@ public final class GlVertexBufferObject {
 	@OriginalMember(owner = "client!vi", name = "a", descriptor = "(Ljava/nio/ByteBuffer;)V")
 	public final void method4515(@OriginalArg(0) ByteBuffer arg0) {
 		if (arg0.limit() <= this.anInt5762) {
-			@Pc(6) GL local6 = Static239.aGL1;
-			local6.glBindBufferARB(GL.GL_ARRAY_BUFFER, this.anInt5760);
-			local6.glBufferSubDataARB(GL.GL_ARRAY_BUFFER, 0, arg0.limit(), arg0);
+			@Pc(6) GL2 local6 = Static239.gl;
+			local6.glBindBuffer(GL2.GL_ARRAY_BUFFER, this.anInt5760);
+			local6.glBufferSubData(GL2.GL_ARRAY_BUFFER, 0, arg0.limit(), arg0);
 		} else {
 			this.method4519(arg0);
 		}
@@ -61,30 +61,30 @@ public final class GlVertexBufferObject {
 
 	@OriginalMember(owner = "client!vi", name = "a", descriptor = "()V")
 	public final void method4516() {
-		@Pc(1) GL local1 = Static239.aGL1;
-		local1.glBindBufferARB(GL.GL_ARRAY_BUFFER, this.anInt5760);
+		@Pc(1) GL2 local1 = Static239.gl;
+		local1.glBindBuffer(GL2.GL_ARRAY_BUFFER, this.anInt5760);
 	}
 
 	@OriginalMember(owner = "client!vi", name = "b", descriptor = "(Ljava/nio/ByteBuffer;)V")
 	public final void method4517(@OriginalArg(0) ByteBuffer arg0) {
-		@Pc(1) GL local1 = Static239.aGL1;
-		local1.glBindBufferARB(GL.GL_ELEMENT_ARRAY_BUFFER, this.anInt5760);
-		local1.glBufferDataARB(GL.GL_ELEMENT_ARRAY_BUFFER, arg0.limit(), arg0, this.aBoolean300 ? GL.GL_STREAM_DRAW : GL.GL_STATIC_DRAW);
+		@Pc(1) GL2 local1 = Static239.gl;
+		local1.glBindBuffer(GL2.GL_ELEMENT_ARRAY_BUFFER, this.anInt5760);
+		local1.glBufferData(GL2.GL_ELEMENT_ARRAY_BUFFER, arg0.limit(), arg0, this.aBoolean300 ? GL2.GL_STREAM_DRAW : GL2.GL_STATIC_DRAW);
 		Static63.anInt1945 += arg0.limit() - this.anInt5762;
 		this.anInt5762 = arg0.limit();
 	}
 
 	@OriginalMember(owner = "client!vi", name = "b", descriptor = "()V")
 	public final void method4518() {
-		@Pc(1) GL local1 = Static239.aGL1;
-		local1.glBindBufferARB(GL.GL_ELEMENT_ARRAY_BUFFER, this.anInt5760);
+		@Pc(1) GL2 local1 = Static239.gl;
+		local1.glBindBuffer(GL2.GL_ELEMENT_ARRAY_BUFFER, this.anInt5760);
 	}
 
 	@OriginalMember(owner = "client!vi", name = "c", descriptor = "(Ljava/nio/ByteBuffer;)V")
 	public final void method4519(@OriginalArg(0) ByteBuffer arg0) {
-		@Pc(1) GL local1 = Static239.aGL1;
-		local1.glBindBufferARB(GL.GL_ARRAY_BUFFER, this.anInt5760);
-		local1.glBufferDataARB(GL.GL_ARRAY_BUFFER, arg0.limit(), arg0, this.aBoolean300 ? GL.GL_STREAM_DRAW : GL.GL_STATIC_DRAW);
+		@Pc(1) GL2 local1 = Static239.gl;
+		local1.glBindBuffer(GL2.GL_ARRAY_BUFFER, this.anInt5760);
+		local1.glBufferData(GL2.GL_ARRAY_BUFFER, arg0.limit(), arg0, this.aBoolean300 ? GL2.GL_STREAM_DRAW : GL2.GL_STATIC_DRAW);
 		Static63.anInt1945 += arg0.limit() - this.anInt5762;
 		this.anInt5762 = arg0.limit();
 	}

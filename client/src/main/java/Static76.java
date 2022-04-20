@@ -1,5 +1,5 @@
 import java.nio.FloatBuffer;
-import javax.media.opengl.GL;
+import com.jogamp.opengl.*;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
@@ -11,18 +11,18 @@ public final class Static76 {
 
 	@OriginalMember(owner = "client!ga", name = "a", descriptor = "()V")
 	public static void method1642() {
-		@Pc(1) GL local1 = Static239.aGL1;
+		@Pc(1) GL2 local1 = Static239.gl;
 		if (local1.isExtensionAvailable("GL_ARB_point_parameters")) {
 			@Pc(20) float[] local20 = new float[] { 1.0F, 0.0F, 5.0E-4F };
-			local1.glPointParameterfvARB(GL.GL_POINT_DISTANCE_ATTENUATION, local20, 0);
+			local1.glPointParameterfv(GL2.GL_POINT_DISTANCE_ATTENUATION, local20, 0);
 			@Pc(28) FloatBuffer local28 = FloatBuffer.allocate(1);
-			local1.glGetFloatv(GL.GL_POINT_SIZE_MAX, local28);
+			local1.glGetFloatv(GL2.GL_POINT_SIZE_MAX, local28);
 			@Pc(36) float local36 = local28.get(0);
 			if (local36 > 1024.0F) {
 				local36 = 1024.0F;
 			}
-			local1.glPointParameterfARB(GL.GL_POINT_SIZE_MIN, 1.0F);
-			local1.glPointParameterfARB(GL.GL_POINT_SIZE_MAX, local36);
+			local1.glPointParameterf(GL2.GL_POINT_SIZE_MIN, 1.0F);
+			local1.glPointParameterf(GL2.GL_POINT_SIZE_MAX, local36);
 		}
 		if (local1.isExtensionAvailable("GL_ARB_point_sprite")) {
 		}

@@ -1,4 +1,4 @@
-import javax.media.opengl.GL;
+import com.jogamp.opengl.*;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
@@ -294,7 +294,7 @@ public final class Static120 {
 		if (aBooleanArray65[arg0]) {
 			aBooleanArray65[arg0] = false;
 			@Pc(14) int local14 = arg0 + 16384 + 4;
-			@Pc(16) GL local16 = Static239.aGL1;
+			@Pc(16) GL2 local16 = Static239.gl;
 			local16.glDisable(local14);
 		}
 	}
@@ -341,13 +341,13 @@ public final class Static120 {
 
 	@OriginalMember(owner = "client!jf", name = "e", descriptor = "()V")
 	public static void method2400() {
-		@Pc(1) GL local1 = Static239.aGL1;
+		@Pc(1) GL2 local1 = Static239.gl;
 		@Pc(3) int local3;
 		for (local3 = 0; local3 < 4; local3++) {
 			@Pc(10) int local10 = local3 + 16388;
-			local1.glLightfv(local10, GL.GL_AMBIENT, new float[] { 0.0F, 0.0F, 0.0F, 1.0F }, 0);
-			local1.glLightf(local10, GL.GL_LINEAR_ATTENUATION, 0.0F);
-			local1.glLightf(local10, GL.GL_CONSTANT_ATTENUATION, 0.0F);
+			local1.glLightfv(local10, GL2.GL_AMBIENT, new float[] { 0.0F, 0.0F, 0.0F, 1.0F }, 0);
+			local1.glLightf(local10, GL2.GL_LINEAR_ATTENUATION, 0.0F);
+			local1.glLightf(local10, GL2.GL_CONSTANT_ATTENUATION, 0.0F);
 		}
 		for (local3 = 0; local3 < 4; local3++) {
 			anIntArray284[local3] = -1;
@@ -370,17 +370,17 @@ public final class Static120 {
 		if (!Static178.aBoolean202) {
 			return;
 		}
-		@Pc(4) GL local4 = Static239.aGL1;
+		@Pc(4) GL2 local4 = Static239.gl;
 		Static27.method766(0, 0);
 		Static239.method4183(0);
 		Static239.method4150();
 		Static239.method4177(Static239.anInt5328);
 		local4.glDepthMask(false);
 		Static239.method4164(false);
-		local4.glBlendFunc(GL.GL_DST_COLOR, GL.GL_ONE);
-		local4.glFogfv(GL.GL_FOG_COLOR, new float[] { 0.0F, 0.0F, 0.0F, 0.0F }, 0);
-		local4.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_SRC0_RGB, GL.GL_CONSTANT);
-		local4.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_OPERAND0_RGB, GL.GL_SRC_ALPHA);
+		local4.glBlendFunc(GL2.GL_DST_COLOR, GL2.GL_ONE);
+		local4.glFogfv(GL2.GL_FOG_COLOR, new float[] { 0.0F, 0.0F, 0.0F, 0.0F }, 0);
+		local4.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_SRC0_RGB, GL2.GL_CONSTANT);
+		local4.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_OPERAND0_RGB, GL2.GL_SRC_ALPHA);
 		label71: for (@Pc(56) int local56 = 0; local56 < anInt3034; local56++) {
 			@Pc(63) Light local63 = aClass51Array1[local56];
 			@Pc(66) int local66 = local63.anInt2241;
@@ -415,7 +415,7 @@ public final class Static120 {
 						}
 						if (local66 < 0 || local160 != null && local160.aBoolean45) {
 							Static239.method4159(201.5F - (float) local63.anInt2241 * 50.0F - 1.5F);
-							local4.glTexEnvfv(GL.GL_TEXTURE_ENV, GL.GL_TEXTURE_ENV_COLOR, new float[] { 0.0F, 0.0F, 0.0F, local63.aFloat8 }, 0);
+							local4.glTexEnvfv(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_COLOR, new float[] { 0.0F, 0.0F, 0.0F, local63.aFloat8 }, 0);
 							local63.aClass45_1.method1556();
 							continue label71;
 						}
@@ -423,29 +423,29 @@ public final class Static120 {
 				}
 			}
 		}
-		local4.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_SRC0_RGB, GL.GL_TEXTURE);
-		local4.glTexEnvi(GL.GL_TEXTURE_ENV, GL.GL_OPERAND0_RGB, GL.GL_SRC_COLOR);
-		local4.glBlendFunc(GL.GL_SRC_ALPHA, GL.GL_ONE_MINUS_SRC_ALPHA);
+		local4.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_SRC0_RGB, GL2.GL_TEXTURE);
+		local4.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_OPERAND0_RGB, GL2.GL_SRC_COLOR);
+		local4.glBlendFunc(GL2.GL_SRC_ALPHA, GL2.GL_ONE_MINUS_SRC_ALPHA);
 		local4.glDepthMask(true);
-		local4.glFogfv(GL.GL_FOG_COLOR, Static161.aFloatArray19, 0);
-		local4.glEnableClientState(GL.GL_TEXTURE_COORD_ARRAY);
+		local4.glFogfv(GL2.GL_FOG_COLOR, Static161.aFloatArray19, 0);
+		local4.glEnableClientState(GL2.GL_TEXTURE_COORD_ARRAY);
 		Static239.method4173();
 	}
 
 	@OriginalMember(owner = "client!jf", name = "a", descriptor = "(ILclient!gi;III)V")
 	private static void method2403(@OriginalArg(0) int arg0, @OriginalArg(1) Light arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		@Pc(5) int local5 = arg0 + 16384 + 4;
-		@Pc(7) GL local7 = Static239.aGL1;
+		@Pc(7) GL2 local7 = Static239.gl;
 		if (!aBooleanArray65[arg0]) {
 			local7.glEnable(local5);
 			aBooleanArray65[arg0] = true;
 		}
-		local7.glLightf(local5, GL.GL_QUADRATIC_ATTENUATION, arg1.aFloat9);
-		local7.glLightfv(local5, GL.GL_DIFFUSE, arg1.aFloatArray3, 0);
+		local7.glLightf(local5, GL2.GL_QUADRATIC_ATTENUATION, arg1.aFloat9);
+		local7.glLightfv(local5, GL2.GL_DIFFUSE, arg1.aFloatArray3, 0);
 		aFloatArray17[0] = arg1.anInt2240 - arg2;
 		aFloatArray17[1] = arg1.anInt2235 - arg3;
 		aFloatArray17[2] = arg1.anInt2245 - arg4;
-		local7.glLightfv(local5, GL.GL_POSITION, aFloatArray17, 0);
+		local7.glLightfv(local5, GL2.GL_POSITION, aFloatArray17, 0);
 	}
 
 	@OriginalMember(owner = "client!jf", name = "g", descriptor = "()V")

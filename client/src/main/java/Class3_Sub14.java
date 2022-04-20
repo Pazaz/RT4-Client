@@ -1,6 +1,6 @@
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
-import javax.media.opengl.GL;
+import com.jogamp.opengl.*;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
@@ -275,7 +275,7 @@ public final class Class3_Sub14 extends Node {
 		if (Static95.aClass3_Sub15_3.offset == 0 && Static95.aClass3_Sub15_2.offset == 0) {
 			return;
 		}
-		@Pc(257) GL local257 = Static239.aGL1;
+		@Pc(257) GL2 local257 = Static239.gl;
 		if (this.anInt2485 == -1 || arg2) {
 			Static239.method4177(-1);
 			Static27.method766(0, 0);
@@ -285,40 +285,40 @@ public final class Class3_Sub14 extends Node {
 		@Pc(282) int local282 = this.aBoolean139 ? 40 : 36;
 		if (this.aClass155_3 == null) {
 			if (Static239.aBoolean271) {
-				local257.glBindBufferARB(GL.GL_ARRAY_BUFFER, 0);
+				local257.glBindBuffer(GL2.GL_ARRAY_BUFFER, 0);
 			}
 			this.aByteBuffer3.position(0);
-			local257.glVertexPointer(3, GL.GL_FLOAT, local282, this.aByteBuffer3);
+			local257.glVertexPointer(3, GL2.GL_FLOAT, local282, this.aByteBuffer3);
 			this.aByteBuffer3.position(12);
-			local257.glColorPointer(4, GL.GL_UNSIGNED_BYTE, local282, this.aByteBuffer3);
+			local257.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, local282, this.aByteBuffer3);
 			if (Static178.aBoolean202) {
 				this.aByteBuffer3.position(16);
-				local257.glNormalPointer(GL.GL_FLOAT, local282, this.aByteBuffer3);
+				local257.glNormalPointer(GL2.GL_FLOAT, local282, this.aByteBuffer3);
 			}
 			this.aByteBuffer3.position(28);
-			local257.glTexCoordPointer(2, GL.GL_FLOAT, local282, this.aByteBuffer3);
+			local257.glTexCoordPointer(2, GL2.GL_FLOAT, local282, this.aByteBuffer3);
 			if (this.aBoolean139) {
 				local257.glClientActiveTexture(Static275.method4607());
 				this.aByteBuffer3.position(36);
-				local257.glTexCoordPointer(1, GL.GL_FLOAT, local282, this.aByteBuffer3);
-				local257.glClientActiveTexture(GL.GL_TEXTURE0);
+				local257.glTexCoordPointer(1, GL2.GL_FLOAT, local282, this.aByteBuffer3);
+				local257.glClientActiveTexture(GL2.GL_TEXTURE0);
 			}
 		} else {
 			this.aClass155_3.method4516();
-			local257.glVertexPointer(3, GL.GL_FLOAT, local282, 0L);
-			local257.glColorPointer(4, GL.GL_UNSIGNED_BYTE, local282, 12L);
+			local257.glVertexPointer(3, GL2.GL_FLOAT, local282, 0L);
+			local257.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, local282, 12L);
 			if (Static178.aBoolean202) {
-				local257.glNormalPointer(GL.GL_FLOAT, local282, 16L);
+				local257.glNormalPointer(GL2.GL_FLOAT, local282, 16L);
 			}
-			local257.glTexCoordPointer(2, GL.GL_FLOAT, local282, 28L);
+			local257.glTexCoordPointer(2, GL2.GL_FLOAT, local282, 28L);
 			if (this.aBoolean139) {
 				local257.glClientActiveTexture(Static275.method4607());
-				local257.glTexCoordPointer(1, GL.GL_FLOAT, local282, 36L);
-				local257.glClientActiveTexture(GL.GL_TEXTURE0);
+				local257.glTexCoordPointer(1, GL2.GL_FLOAT, local282, 36L);
+				local257.glClientActiveTexture(GL2.GL_TEXTURE0);
 			}
 		}
 		if (Static239.aBoolean271) {
-			local257.glBindBufferARB(GL.GL_ELEMENT_ARRAY_BUFFER, 0);
+			local257.glBindBuffer(GL2.GL_ELEMENT_ARRAY_BUFFER, 0);
 		}
 		if (Static95.aClass3_Sub15_3.offset != 0) {
 			if (Static95.aByteBuffer5 == null || Static95.aByteBuffer5.capacity() < Static95.aClass3_Sub15_3.offset) {
@@ -329,7 +329,7 @@ public final class Class3_Sub14 extends Node {
 			Static95.aByteBuffer5.put(Static95.aClass3_Sub15_3.data, 0, Static95.aClass3_Sub15_3.offset);
 			Static95.aByteBuffer5.flip();
 			Static239.method4159(arg1);
-			local257.glDrawElements(GL.GL_TRIANGLES, Static95.aClass3_Sub15_3.offset / 4, GL.GL_UNSIGNED_INT, Static95.aByteBuffer5);
+			local257.glDrawElements(GL2.GL_TRIANGLES, Static95.aClass3_Sub15_3.offset / 4, GL2.GL_UNSIGNED_INT, Static95.aByteBuffer5);
 		}
 		if (Static95.aClass3_Sub15_2.offset == 0) {
 			return;
@@ -343,7 +343,7 @@ public final class Class3_Sub14 extends Node {
 		Static95.aByteBuffer4.flip();
 		Static239.method4159(arg1 - 100.0F);
 		Static239.method4178();
-		local257.glDrawElements(GL.GL_TRIANGLES, Static95.aClass3_Sub15_2.offset / 4, GL.GL_UNSIGNED_INT, Static95.aByteBuffer4);
+		local257.glDrawElements(GL2.GL_TRIANGLES, Static95.aClass3_Sub15_2.offset / 4, GL2.GL_UNSIGNED_INT, Static95.aByteBuffer4);
 		Static239.method4157();
 	}
 

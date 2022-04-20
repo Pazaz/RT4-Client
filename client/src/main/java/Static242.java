@@ -1,4 +1,4 @@
-import javax.media.opengl.GL;
+import com.jogamp.opengl.*;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
@@ -121,7 +121,7 @@ public final class Static242 {
 
 	@OriginalMember(owner = "client!tj", name = "a", descriptor = "(IIII[[Z[[I)V")
 	public static void method4198(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean[][] arg4, @OriginalArg(5) int[][] arg5) {
-		@Pc(1) GL local1 = Static239.aGL1;
+		@Pc(1) GL2 local1 = Static239.gl;
 		Static239.method4183(1);
 		Static239.method4174(1);
 		Static239.method4150();
@@ -150,7 +150,7 @@ public final class Static242 {
 				}
 			}
 		}
-		local1.glEnableClientState(GL.GL_COLOR_ARRAY);
+		local1.glEnableClientState(GL2.GL_COLOR_ARRAY);
 		local1.glDepthMask(true);
 		Static239.method4173();
 	}

@@ -1,6 +1,6 @@
 import java.nio.ByteBuffer;
-import javax.media.opengl.GL;
-import javax.media.opengl.glu.GLU;
+import com.jogamp.opengl.*;
+import com.jogamp.opengl.glu.gl2es1.GLUgl2es1;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
@@ -172,7 +172,7 @@ public final class GlTexture extends SecondaryNode {
 		if (!this.aClass88_1.method2729(arg1, arg0)) {
 			return false;
 		}
-		@Pc(22) GL local22 = Static239.aGL1;
+		@Pc(22) GL2 local22 = Static239.gl;
 		@Pc(28) int local28 = arg2 ? 64 : 128;
 		@Pc(31) int local31 = Static56.method1314();
 		if ((local31 & 0x1) == 0) {
@@ -184,20 +184,20 @@ public final class GlTexture extends SecondaryNode {
 				Static239.method4177(this.anInt5493);
 				@Pc(82) ByteBuffer local82 = ByteBuffer.wrap(this.aClass88_1.method2728(local28, local28, this.aBoolean288, arg1, 0.7D, arg0));
 				if (this.anInt5489 == 2) {
-					@Pc(201) GLU local201 = new GLU();
+					@Pc(201) GLUgl2es1 local201 = new GLUgl2es1();
 					local201.gluBuild2DMipmaps(3553, 6408, local28, local28, 6408, 5121, local82);
-					local22.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_MIN_FILTER, GL.GL_LINEAR_MIPMAP_LINEAR);
-					local22.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_MAG_FILTER, GL.GL_LINEAR);
+					local22.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR_MIPMAP_LINEAR);
+					local22.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
 					Static63.anInt1942 += local82.limit() * 4 / 3 - this.anInt5495;
 					this.anInt5495 = local82.limit() * 4 / 3;
 				} else if (this.anInt5489 == 1) {
 					@Pc(129) int local129 = 0;
 					while (true) {
-						local22.glTexImage2D(GL.GL_TEXTURE_2D, local129++, GL.GL_RGBA, local28, local28, 0, GL.GL_RGBA, GL.GL_UNSIGNED_BYTE, local82);
+						local22.glTexImage2D(GL2.GL_TEXTURE_2D, local129++, GL2.GL_RGBA, local28, local28, 0, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, local82);
 						local28 >>= 0x1;
 						if (local28 == 0) {
-							local22.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_MIN_FILTER, GL.GL_LINEAR_MIPMAP_LINEAR);
-							local22.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_MAG_FILTER, GL.GL_LINEAR);
+							local22.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR_MIPMAP_LINEAR);
+							local22.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
 							Static63.anInt1942 += local82.limit() * 4 / 3 - this.anInt5495;
 							this.anInt5495 = local82.limit() * 4 / 3;
 							break;
@@ -205,14 +205,14 @@ public final class GlTexture extends SecondaryNode {
 						local82 = ByteBuffer.wrap(this.aClass88_1.method2728(local28, local28, this.aBoolean288, arg1, 0.7D, arg0));
 					}
 				} else {
-					local22.glTexImage2D(GL.GL_TEXTURE_2D, 0, GL.GL_RGBA, local28, local28, 0, GL.GL_RGBA, GL.GL_UNSIGNED_BYTE, local82);
-					local22.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_MIN_FILTER, GL.GL_LINEAR);
-					local22.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_MAG_FILTER, GL.GL_LINEAR);
+					local22.glTexImage2D(GL2.GL_TEXTURE_2D, 0, GL2.GL_RGBA, local28, local28, 0, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, local82);
+					local22.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR);
+					local22.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
 					Static63.anInt1942 += local82.limit() - this.anInt5495;
 					this.anInt5495 = local82.limit();
 				}
-				local22.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_WRAP_S, this.aBoolean285 ? GL.GL_REPEAT : GL.GL_CLAMP_TO_EDGE);
-				local22.glTexParameteri(GL.GL_TEXTURE_2D, GL.GL_TEXTURE_WRAP_T, this.aBoolean284 ? GL.GL_REPEAT : GL.GL_CLAMP_TO_EDGE);
+				local22.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_WRAP_S, this.aBoolean285 ? GL2.GL_REPEAT : GL2.GL_CLAMP_TO_EDGE);
+				local22.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_WRAP_T, this.aBoolean284 ? GL2.GL_REPEAT : GL2.GL_CLAMP_TO_EDGE);
 			} else {
 				Static239.method4177(this.anInt5493);
 			}
