@@ -2,7 +2,7 @@ import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
-public final class Static177 {
+public final class Bzip2Decompressor {
 
 	@OriginalMember(owner = "client!oc", name = "a", descriptor = "Lclient!bb;")
 	private static final Bzip2DState aClass11_1 = new Bzip2DState();
