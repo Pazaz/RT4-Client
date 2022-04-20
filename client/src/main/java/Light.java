@@ -71,22 +71,22 @@ public final class Light {
 		if (Static62.anIntArray150 == null) {
 			Static84.method1771();
 		}
-		this.anInt2241 = arg0.method2229();
+		this.anInt2241 = arg0.g1();
 		this.aBoolean124 = (this.anInt2241 & 0x10) != 0;
 		this.aBoolean126 = (this.anInt2241 & 0x8) != 0;
 		this.anInt2241 &= 0x7;
-		this.anInt2240 = arg0.method2163();
-		this.anInt2245 = arg0.method2163();
-		this.anInt2235 = arg0.method2163();
-		this.anInt2236 = arg0.method2229();
+		this.anInt2240 = arg0.g2();
+		this.anInt2245 = arg0.g2();
+		this.anInt2235 = arg0.g2();
+		this.anInt2236 = arg0.g1();
 		this.method1763();
 		this.aShortArray30 = new short[this.anInt2236 * 2 + 1];
 		@Pc(87) int local87;
 		for (local87 = 0; local87 < this.aShortArray30.length; local87++) {
-			this.aShortArray30[local87] = (short) arg0.method2163();
+			this.aShortArray30[local87] = (short) arg0.g2();
 		}
-		this.anInt2247 = Rasteriser.anIntArray220[arg0.method2163()];
-		local87 = arg0.method2229();
+		this.anInt2247 = Rasteriser.anIntArray220[arg0.g2()];
+		local87 = arg0.g1();
 		this.anInt2249 = (local87 & 0xE0) << 3;
 		this.anInt2243 = local87 & 0x1F;
 		if (this.anInt2243 != 31) {

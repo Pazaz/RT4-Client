@@ -23,7 +23,7 @@ public final class Texture {
 
 	@OriginalMember(owner = "client!lc", name = "<init>", descriptor = "(Lclient!wa;)V")
 	public Texture(@OriginalArg(0) Buffer arg0) {
-		@Pc(7) int local7 = arg0.method2229();
+		@Pc(7) int local7 = arg0.g1();
 		this.aClass3_Sub1Array22 = new TextureOp[local7];
 		@Pc(14) int[][] local14 = new int[local7][];
 		@Pc(16) int local16 = 0;
@@ -43,7 +43,7 @@ public final class Texture {
 			local45 = local27.aClass3_Sub1Array42.length;
 			local14[local20] = new int[local45];
 			for (local52 = 0; local52 < local45; local52++) {
-				local14[local20][local52] = arg0.method2229();
+				local14[local20][local52] = arg0.g1();
 			}
 			this.aClass3_Sub1Array22[local20] = local27;
 		}
@@ -67,9 +67,9 @@ public final class Texture {
 			}
 			local14[local20] = null;
 		}
-		this.aClass3_Sub1_1 = this.aClass3_Sub1Array22[arg0.method2229()];
+		this.aClass3_Sub1_1 = this.aClass3_Sub1Array22[arg0.g1()];
 		local14 = null;
-		this.aClass3_Sub1_2 = this.aClass3_Sub1Array22[arg0.method2229()];
+		this.aClass3_Sub1_2 = this.aClass3_Sub1Array22[arg0.g1()];
 	}
 
 	@OriginalMember(owner = "client!lc", name = "a", descriptor = "(IZIDILclient!ve;Lclient!m;Z)[I")

@@ -59,53 +59,53 @@ public final class Static263 {
 		}
 		if (arg2 == 1) {
 			Static6.aClass3_Sub15_Sub1_1.method2242(155);
-			Static6.aClass3_Sub15_Sub1_1.method2164(arg3);
-			Static6.aClass3_Sub15_Sub1_1.method2230(arg1);
+			Static6.aClass3_Sub15_Sub1_1.p4(arg3);
+			Static6.aClass3_Sub15_Sub1_1.p2(arg1);
 		}
 		if (arg2 == 2) {
 			Static6.aClass3_Sub15_Sub1_1.method2242(196);
-			Static6.aClass3_Sub15_Sub1_1.method2164(arg3);
-			Static6.aClass3_Sub15_Sub1_1.method2230(arg1);
+			Static6.aClass3_Sub15_Sub1_1.p4(arg3);
+			Static6.aClass3_Sub15_Sub1_1.p2(arg1);
 		}
 		if (arg2 == 3) {
 			Static6.aClass3_Sub15_Sub1_1.method2242(124);
-			Static6.aClass3_Sub15_Sub1_1.method2164(arg3);
-			Static6.aClass3_Sub15_Sub1_1.method2230(arg1);
+			Static6.aClass3_Sub15_Sub1_1.p4(arg3);
+			Static6.aClass3_Sub15_Sub1_1.p2(arg1);
 		}
 		if (arg2 == 4) {
 			Static6.aClass3_Sub15_Sub1_1.method2242(199);
-			Static6.aClass3_Sub15_Sub1_1.method2164(arg3);
-			Static6.aClass3_Sub15_Sub1_1.method2230(arg1);
+			Static6.aClass3_Sub15_Sub1_1.p4(arg3);
+			Static6.aClass3_Sub15_Sub1_1.p2(arg1);
 		}
 		if (arg2 == 5) {
 			Static6.aClass3_Sub15_Sub1_1.method2242(234);
-			Static6.aClass3_Sub15_Sub1_1.method2164(arg3);
-			Static6.aClass3_Sub15_Sub1_1.method2230(arg1);
+			Static6.aClass3_Sub15_Sub1_1.p4(arg3);
+			Static6.aClass3_Sub15_Sub1_1.p2(arg1);
 		}
 		if (arg2 == 6) {
 			Static6.aClass3_Sub15_Sub1_1.method2242(168);
-			Static6.aClass3_Sub15_Sub1_1.method2164(arg3);
-			Static6.aClass3_Sub15_Sub1_1.method2230(arg1);
+			Static6.aClass3_Sub15_Sub1_1.p4(arg3);
+			Static6.aClass3_Sub15_Sub1_1.p2(arg1);
 		}
 		if (arg2 == 7) {
 			Static6.aClass3_Sub15_Sub1_1.method2242(166);
-			Static6.aClass3_Sub15_Sub1_1.method2164(arg3);
-			Static6.aClass3_Sub15_Sub1_1.method2230(arg1);
+			Static6.aClass3_Sub15_Sub1_1.p4(arg3);
+			Static6.aClass3_Sub15_Sub1_1.p2(arg1);
 		}
 		if (arg2 == 8) {
 			Static6.aClass3_Sub15_Sub1_1.method2242(64);
-			Static6.aClass3_Sub15_Sub1_1.method2164(arg3);
-			Static6.aClass3_Sub15_Sub1_1.method2230(arg1);
+			Static6.aClass3_Sub15_Sub1_1.p4(arg3);
+			Static6.aClass3_Sub15_Sub1_1.p2(arg1);
 		}
 		if (arg2 == 9) {
 			Static6.aClass3_Sub15_Sub1_1.method2242(53);
-			Static6.aClass3_Sub15_Sub1_1.method2164(arg3);
-			Static6.aClass3_Sub15_Sub1_1.method2230(arg1);
+			Static6.aClass3_Sub15_Sub1_1.p4(arg3);
+			Static6.aClass3_Sub15_Sub1_1.p2(arg1);
 		}
 		if (arg2 == 10) {
 			Static6.aClass3_Sub15_Sub1_1.method2242(9);
-			Static6.aClass3_Sub15_Sub1_1.method2164(arg3);
-			Static6.aClass3_Sub15_Sub1_1.method2230(arg1);
+			Static6.aClass3_Sub15_Sub1_1.p4(arg3);
+			Static6.aClass3_Sub15_Sub1_1.p2(arg1);
 		}
 	}
 

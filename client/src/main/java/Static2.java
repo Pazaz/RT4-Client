@@ -260,8 +260,8 @@ public final class Static2 {
 	@OriginalMember(owner = "client!aa", name = "a", descriptor = "(IZI)V")
 	public static void method10(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
 		Static6.aClass3_Sub15_Sub1_1.method2242(132);
-		Static6.aClass3_Sub15_Sub1_1.method2201(arg1);
-		Static6.aClass3_Sub15_Sub1_1.method2222(arg0);
+		Static6.aClass3_Sub15_Sub1_1.p4rme(arg1);
+		Static6.aClass3_Sub15_Sub1_1.p2le(arg0);
 	}
 
 	@OriginalMember(owner = "client!aa", name = "a", descriptor = "(BLclient!be;)V")

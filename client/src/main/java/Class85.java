@@ -18,7 +18,7 @@ public final class Class85 {
 	@OriginalMember(owner = "client!kk", name = "a", descriptor = "(Lclient!wa;I)V")
 	public final void method2651(@OriginalArg(0) Buffer arg0) {
 		while (true) {
-			@Pc(9) int local9 = arg0.method2229();
+			@Pc(9) int local9 = arg0.g1();
 			if (local9 == 0) {
 				return;
 			}
@@ -29,9 +29,9 @@ public final class Class85 {
 	@OriginalMember(owner = "client!kk", name = "a", descriptor = "(Lclient!wa;II)V")
 	private void method2653(@OriginalArg(0) Buffer arg0, @OriginalArg(2) int arg1) {
 		if (arg1 == 1) {
-			this.anInt3327 = arg0.method2163();
-			this.anInt3318 = arg0.method2229();
-			this.anInt3323 = arg0.method2229();
+			this.anInt3327 = arg0.g2();
+			this.anInt3318 = arg0.g1();
+			this.anInt3323 = arg0.g1();
 		}
 	}
 }

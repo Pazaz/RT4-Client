@@ -32,7 +32,7 @@ public final class Static228 {
 	public static final long[] aLongArray8 = new long[32];
 
 	@OriginalMember(owner = "client!sh", name = "a", descriptor = "(II)[B")
-	public static synchronized byte[] method3907(@OriginalArg(1) int arg0) {
+	public static synchronized byte[] allocate(@OriginalArg(1) int arg0) {
 		@Pc(22) byte[] local22;
 		if (arg0 == 100 && Static115.anInt2937 > 0) {
 			local22 = Static277.aByteArrayArray16[--Static115.anInt2937];

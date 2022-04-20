@@ -29,12 +29,12 @@ public final class StockMarketOffer {
 
 	@OriginalMember(owner = "client!sg", name = "<init>", descriptor = "(Lclient!wa;)V")
 	public StockMarketOffer(@OriginalArg(0) Buffer arg0) {
-		this.aByte17 = arg0.method2186();
-		this.anInt5094 = arg0.method2163();
-		this.anInt5099 = arg0.method2174();
-		this.anInt5090 = arg0.method2174();
-		this.anInt5089 = arg0.method2174();
-		this.anInt5092 = arg0.method2174();
+		this.aByte17 = arg0.g1s();
+		this.anInt5094 = arg0.g2();
+		this.anInt5099 = arg0.g4();
+		this.anInt5090 = arg0.g4();
+		this.anInt5089 = arg0.g4();
+		this.anInt5092 = arg0.g4();
 	}
 
 	@OriginalMember(owner = "client!sg", name = "a", descriptor = "(Z)I")

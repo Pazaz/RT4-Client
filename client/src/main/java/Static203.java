@@ -80,7 +80,7 @@ public final class Static203 {
 			if (local16.anInt5925 == 1) {
 				local11 = (FileOnDisk) local16.anObject6;
 				@Pc(39) Buffer local39 = Static48.method1196();
-				local11.method5134(local39.aByteArray40, local39.anInt2792, 0);
+				local11.method5134(local39.data, local39.offset, 0);
 			}
 		} catch (@Pc(49) Exception local49) {
 		}

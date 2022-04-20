@@ -75,7 +75,7 @@ public final class Static71 {
 
 	@OriginalMember(owner = "client!fk", name = "a", descriptor = "([BIZ)I")
 	public static int method1442(@OriginalArg(0) byte[] arg0, @OriginalArg(1) int arg1) {
-		return Static169.method3178(0, arg1, arg0);
+		return Static169.crc32(0, arg1, arg0);
 	}
 
 	@OriginalMember(owner = "client!fk", name = "b", descriptor = "(IB)V")
@@ -102,6 +102,6 @@ public final class Static71 {
 	@OriginalMember(owner = "client!fk", name = "c", descriptor = "(I)V")
 	public static void method1445() {
 		Static6.aClass3_Sub15_Sub1_1.method2242(177);
-		Static6.aClass3_Sub15_Sub1_1.method2230(Static189.anInt4443);
+		Static6.aClass3_Sub15_Sub1_1.p2(Static189.anInt4443);
 	}
 }

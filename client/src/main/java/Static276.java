@@ -58,19 +58,19 @@ public final class Static276 {
 				Static102.method2075(Static173.aClass8_Sub4_Sub1_2.anIntArray317[0], 0, 1, false, 0, local28.anIntArray318[0], 1, 0, 2, local28.anIntArray317[0], Static173.aClass8_Sub4_Sub1_2.anIntArray318[0]);
 				if (arg0 == 1) {
 					Static6.aClass3_Sub15_Sub1_1.method2242(68);
-					Static6.aClass3_Sub15_Sub1_1.method2191(Static105.anIntArray256[local15]);
+					Static6.aClass3_Sub15_Sub1_1.p2leadd(Static105.anIntArray256[local15]);
 				} else if (arg0 == 4) {
 					Static6.aClass3_Sub15_Sub1_1.method2242(180);
-					Static6.aClass3_Sub15_Sub1_1.method2191(Static105.anIntArray256[local15]);
+					Static6.aClass3_Sub15_Sub1_1.p2leadd(Static105.anIntArray256[local15]);
 				} else if (arg0 == 5) {
 					Static6.aClass3_Sub15_Sub1_1.method2242(4);
-					Static6.aClass3_Sub15_Sub1_1.method2222(Static105.anIntArray256[local15]);
+					Static6.aClass3_Sub15_Sub1_1.p2le(Static105.anIntArray256[local15]);
 				} else if (arg0 == 6) {
 					Static6.aClass3_Sub15_Sub1_1.method2242(133);
-					Static6.aClass3_Sub15_Sub1_1.method2222(Static105.anIntArray256[local15]);
+					Static6.aClass3_Sub15_Sub1_1.p2le(Static105.anIntArray256[local15]);
 				} else if (arg0 == 7) {
 					Static6.aClass3_Sub15_Sub1_1.method2242(114);
-					Static6.aClass3_Sub15_Sub1_1.method2191(Static105.anIntArray256[local15]);
+					Static6.aClass3_Sub15_Sub1_1.p2leadd(Static105.anIntArray256[local15]);
 				}
 				break;
 			}

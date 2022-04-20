@@ -77,17 +77,17 @@ public final class Js5NetQueue {
 			this.aClass95_1.method2832();
 			@Pc(75) Js5NetRequest local75;
 			for (local75 = (Js5NetRequest) this.aClass16_2.method795(); local75 != null; local75 = (Js5NetRequest) this.aClass16_2.method797()) {
-				this.aClass3_Sub15_4.anInt2792 = 0;
-				this.aClass3_Sub15_4.method2178(1);
-				this.aClass3_Sub15_4.method2205((int) local75.aLong185);
-				this.aClass95_1.method2830(this.aClass3_Sub15_4.aByteArray40, 4);
+				this.aClass3_Sub15_4.offset = 0;
+				this.aClass3_Sub15_4.p1(1);
+				this.aClass3_Sub15_4.p3((int) local75.aLong185);
+				this.aClass95_1.method2830(this.aClass3_Sub15_4.data, 4);
 				this.aClass16_3.method798(local75);
 			}
 			for (local75 = (Js5NetRequest) this.aClass16_4.method795(); local75 != null; local75 = (Js5NetRequest) this.aClass16_4.method797()) {
-				this.aClass3_Sub15_4.anInt2792 = 0;
-				this.aClass3_Sub15_4.method2178(0);
-				this.aClass3_Sub15_4.method2205((int) local75.aLong185);
-				this.aClass95_1.method2830(this.aClass3_Sub15_4.aByteArray40, 4);
+				this.aClass3_Sub15_4.offset = 0;
+				this.aClass3_Sub15_4.p1(0);
+				this.aClass3_Sub15_4.p3((int) local75.aLong185);
+				this.aClass95_1.method2830(this.aClass3_Sub15_4.data, 4);
 				this.aClass16_5.method798(local75);
 			}
 			for (@Pc(172) int local172 = 0; local172 < 100; local172++) {
@@ -109,23 +109,23 @@ public final class Js5NetQueue {
 				@Pc(235) int local235;
 				@Pc(283) int local283;
 				if (local196 <= 0) {
-					local228 = this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.aByteArray40.length - this.aClass3_Sub2_Sub5_Sub2_2.aByte16;
+					local228 = this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.data.length - this.aClass3_Sub2_Sub5_Sub2_2.aByte16;
 					local235 = 512 - this.aClass3_Sub2_Sub5_Sub2_2.anInt4617;
-					if (local235 > local228 - this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.anInt2792) {
-						local235 = local228 - this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.anInt2792;
+					if (local235 > local228 - this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.offset) {
+						local235 = local228 - this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.offset;
 					}
 					if (local235 > local19) {
 						local235 = local19;
 					}
-					this.aClass95_1.method2827(this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.anInt2792, local235, this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.aByteArray40);
+					this.aClass95_1.method2827(this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.offset, local235, this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.data);
 					if (this.aByte8 != 0) {
 						for (local283 = 0; local283 < local235; local283++) {
-							this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.aByteArray40[this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.anInt2792 + local283] = (byte) (this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.aByteArray40[this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.anInt2792 + local283] ^ this.aByte8);
+							this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.data[this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.offset + local283] = (byte) (this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.data[this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.offset + local283] ^ this.aByte8);
 						}
 					}
 					this.aClass3_Sub2_Sub5_Sub2_2.anInt4617 += local235;
-					this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.anInt2792 += local235;
-					if (this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.anInt2792 == local228) {
+					this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.offset += local235;
+					if (this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.offset == local228) {
 						this.aClass3_Sub2_Sub5_Sub2_2.method4365();
 						this.aClass3_Sub2_Sub5_Sub2_2.aBoolean226 = false;
 						this.aClass3_Sub2_Sub5_Sub2_2 = null;
@@ -133,24 +133,24 @@ public final class Js5NetQueue {
 						this.aClass3_Sub2_Sub5_Sub2_2.anInt4617 = 0;
 					}
 				} else {
-					local228 = local196 - this.aClass3_Sub15_5.anInt2792;
+					local228 = local196 - this.aClass3_Sub15_5.offset;
 					if (local19 < local228) {
 						local228 = local19;
 					}
-					this.aClass95_1.method2827(this.aClass3_Sub15_5.anInt2792, local228, this.aClass3_Sub15_5.aByteArray40);
+					this.aClass95_1.method2827(this.aClass3_Sub15_5.offset, local228, this.aClass3_Sub15_5.data);
 					if (this.aByte8 != 0) {
 						for (local235 = 0; local235 < local228; local235++) {
-							this.aClass3_Sub15_5.aByteArray40[local235 + this.aClass3_Sub15_5.anInt2792] ^= this.aByte8;
+							this.aClass3_Sub15_5.data[local235 + this.aClass3_Sub15_5.offset] ^= this.aByte8;
 						}
 					}
-					this.aClass3_Sub15_5.anInt2792 += local228;
-					if (this.aClass3_Sub15_5.anInt2792 >= local196) {
+					this.aClass3_Sub15_5.offset += local228;
+					if (this.aClass3_Sub15_5.offset >= local196) {
 						if (this.aClass3_Sub2_Sub5_Sub2_2 == null) {
-							this.aClass3_Sub15_5.anInt2792 = 0;
-							local235 = this.aClass3_Sub15_5.method2229();
-							local283 = this.aClass3_Sub15_5.method2163();
-							@Pc(471) int local471 = this.aClass3_Sub15_5.method2229();
-							@Pc(476) int local476 = this.aClass3_Sub15_5.method2174();
+							this.aClass3_Sub15_5.offset = 0;
+							local235 = this.aClass3_Sub15_5.g1();
+							local283 = this.aClass3_Sub15_5.g2();
+							@Pc(471) int local471 = this.aClass3_Sub15_5.g1();
+							@Pc(476) int local476 = this.aClass3_Sub15_5.g4();
 							@Pc(480) int local480 = local471 & 0x7F;
 							@Pc(491) boolean local491 = (local471 & 0x80) != 0;
 							@Pc(501) long local501 = (long) ((local235 << 16) + local283);
@@ -168,15 +168,15 @@ public final class Js5NetQueue {
 							@Pc(568) int local568 = local480 == 0 ? 5 : 9;
 							this.aClass3_Sub2_Sub5_Sub2_2 = local509;
 							this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7 = new Buffer(local476 + local568 + this.aClass3_Sub2_Sub5_Sub2_2.aByte16);
-							this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.method2178(local480);
-							this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.method2164(local476);
+							this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.p1(local480);
+							this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.p4(local476);
 							this.aClass3_Sub2_Sub5_Sub2_2.anInt4617 = 8;
-							this.aClass3_Sub15_5.anInt2792 = 0;
+							this.aClass3_Sub15_5.offset = 0;
 						} else if (this.aClass3_Sub2_Sub5_Sub2_2.anInt4617 != 0) {
 							throw new IOException();
-						} else if (this.aClass3_Sub15_5.aByteArray40[0] == -1) {
+						} else if (this.aClass3_Sub15_5.data[0] == -1) {
 							this.aClass3_Sub2_Sub5_Sub2_2.anInt4617 = 1;
-							this.aClass3_Sub15_5.anInt2792 = 0;
+							this.aClass3_Sub15_5.offset = 0;
 						} else {
 							this.aClass3_Sub2_Sub5_Sub2_2 = null;
 						}
@@ -202,10 +202,10 @@ public final class Js5NetQueue {
 			return;
 		}
 		try {
-			this.aClass3_Sub15_4.anInt2792 = 0;
-			this.aClass3_Sub15_4.method2178(7);
-			this.aClass3_Sub15_4.method2205(0);
-			this.aClass95_1.method2830(this.aClass3_Sub15_4.aByteArray40, 4);
+			this.aClass3_Sub15_4.offset = 0;
+			this.aClass3_Sub15_4.p1(7);
+			this.aClass3_Sub15_4.p3(0);
+			this.aClass95_1.method2830(this.aClass3_Sub15_4.data, 4);
 		} catch (@Pc(39) IOException local39) {
 			try {
 				this.aClass95_1.method2834();
@@ -228,10 +228,10 @@ public final class Js5NetQueue {
 			return;
 		}
 		try {
-			this.aClass3_Sub15_4.anInt2792 = 0;
-			this.aClass3_Sub15_4.method2178(arg0 ? 2 : 3);
-			this.aClass3_Sub15_4.method2205(0);
-			this.aClass95_1.method2830(this.aClass3_Sub15_4.aByteArray40, 4);
+			this.aClass3_Sub15_4.offset = 0;
+			this.aClass3_Sub15_4.p1(arg0 ? 2 : 3);
+			this.aClass3_Sub15_4.p3(0);
+			this.aClass95_1.method2830(this.aClass3_Sub15_4.data, 4);
 		} catch (@Pc(42) IOException local42) {
 			try {
 				this.aClass95_1.method2834();
@@ -262,7 +262,7 @@ public final class Js5NetQueue {
 		this.aClass95_1 = arg1;
 		this.method2331();
 		this.method2322(arg0);
-		this.aClass3_Sub15_5.anInt2792 = 0;
+		this.aClass3_Sub15_5.offset = 0;
 		this.aClass3_Sub2_Sub5_Sub2_2 = null;
 		while (true) {
 			@Pc(44) Js5NetRequest local44 = (Js5NetRequest) this.aClass16_3.method796();
@@ -272,11 +272,11 @@ public final class Js5NetQueue {
 					if (local44 == null) {
 						if (this.aByte8 != 0) {
 							try {
-								this.aClass3_Sub15_4.anInt2792 = 0;
-								this.aClass3_Sub15_4.method2178(4);
-								this.aClass3_Sub15_4.method2178(this.aByte8);
-								this.aClass3_Sub15_4.method2230(0);
-								this.aClass95_1.method2830(this.aClass3_Sub15_4.aByteArray40, 4);
+								this.aClass3_Sub15_4.offset = 0;
+								this.aClass3_Sub15_4.p1(4);
+								this.aClass3_Sub15_4.p1(this.aByte8);
+								this.aClass3_Sub15_4.p2(0);
+								this.aClass95_1.method2830(this.aClass3_Sub15_4.data, 4);
 							} catch (@Pc(107) IOException local107) {
 								try {
 									this.aClass95_1.method2834();
@@ -353,10 +353,10 @@ public final class Js5NetQueue {
 			return;
 		}
 		try {
-			this.aClass3_Sub15_4.anInt2792 = 0;
-			this.aClass3_Sub15_4.method2178(6);
-			this.aClass3_Sub15_4.method2205(3);
-			this.aClass95_1.method2830(this.aClass3_Sub15_4.aByteArray40, 4);
+			this.aClass3_Sub15_4.offset = 0;
+			this.aClass3_Sub15_4.p1(6);
+			this.aClass3_Sub15_4.p3(3);
+			this.aClass95_1.method2830(this.aClass3_Sub15_4.data, 4);
 		} catch (@Pc(37) IOException local37) {
 			try {
 				this.aClass95_1.method2834();

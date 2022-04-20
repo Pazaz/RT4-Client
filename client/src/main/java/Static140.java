@@ -37,7 +37,7 @@ public final class Static140 {
 				}
 			}
 		}
-		arg0.method2179(local15, 24);
+		arg0.pBytes(local15, 24);
 	}
 
 	@OriginalMember(owner = "client!la", name = "a", descriptor = "(ILclient!e;)I")
@@ -85,7 +85,7 @@ public final class Static140 {
 		Static193.aClass100Array134[Static35.anInt1093++] = Static79.method1702(arg0);
 		Static185.anInt4369 = Static119.anInt3028;
 		Static6.aClass3_Sub15_Sub1_1.method2242(34);
-		Static6.aClass3_Sub15_Sub1_1.method2166(arg0);
+		Static6.aClass3_Sub15_Sub1_1.p8(arg0);
 	}
 
 	@OriginalMember(owner = "client!la", name = "a", descriptor = "(Lsignlink!ll;Ljava/lang/Object;I)V")
@@ -126,11 +126,11 @@ public final class Static140 {
 		@Pc(35) Class134 local35 = new Class134(local29.length);
 		for (@Pc(37) int local37 = 0; local37 < local35.anInt5074; local37++) {
 			@Pc(56) Buffer local56 = new Buffer(arg1.method4495(local10, local29[local37]));
-			local35.aClass100Array153[local37] = local56.method2202();
-			local35.aByteArray69[local37] = local56.method2186();
-			local35.aShortArray73[local37] = (short) local56.method2163();
-			local35.aShortArray72[local37] = (short) local56.method2163();
-			local35.anIntArray444[local37] = local56.method2174();
+			local35.aClass100Array153[local37] = local56.gjstr();
+			local35.aByteArray69[local37] = local56.g1s();
+			local35.aShortArray73[local37] = (short) local56.g2();
+			local35.aShortArray72[local37] = (short) local56.g2();
+			local35.anIntArray444[local37] = local56.g4();
 		}
 		return local35;
 	}

@@ -55,8 +55,8 @@ public final class Static7 {
 		if (!Static224.aBoolean247 && Static124.aClass95_2 != null) {
 			Static6.aClass3_Sub15_Sub1_1.method2242(93);
 			try {
-				Static124.aClass95_2.method2830(Static6.aClass3_Sub15_Sub1_1.aByteArray40, Static6.aClass3_Sub15_Sub1_1.anInt2792);
-				Static6.aClass3_Sub15_Sub1_1.anInt2792 = 0;
+				Static124.aClass95_2.method2830(Static6.aClass3_Sub15_Sub1_1.data, Static6.aClass3_Sub15_Sub1_1.offset);
+				Static6.aClass3_Sub15_Sub1_1.offset = 0;
 			} catch (@Pc(53) IOException local53) {
 				Static224.aBoolean247 = true;
 			}

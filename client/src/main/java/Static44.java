@@ -21,7 +21,7 @@ public final class Static44 {
 
 	@OriginalMember(owner = "client!dh", name = "a", descriptor = "(Z)V")
 	public static void method1146() {
-		Static6.aClass3_Sub15_Sub1_1.anInt2792 = 0;
+		Static6.aClass3_Sub15_Sub1_1.offset = 0;
 		Static5.anInt45 = -1;
 		Static60.aBoolean108 = false;
 		Static223.anInt5028 = 0;
@@ -31,7 +31,7 @@ public final class Static44 {
 		Static270.anInt5795 = 0;
 		Static60.anInt1894 = 0;
 		Static49.anInt1462 = -1;
-		Static57.aClass3_Sub15_Sub1_3.anInt2792 = 0;
+		Static57.aClass3_Sub15_Sub1_3.offset = 0;
 		Static201.anInt1862 = 0;
 		Static164.anInt3985 = -1;
 		@Pc(35) int local35;

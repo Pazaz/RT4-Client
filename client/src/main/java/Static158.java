@@ -59,7 +59,7 @@ public final class Static158 {
 				}
 				Static124.aClass95_2 = new BufferedSocket((Socket) Static72.aClass212_3.anObject6, Static71.aClass213_3);
 				Static72.aClass212_3 = null;
-				Static124.aClass95_2.method2830(Static6.aClass3_Sub15_Sub1_1.aByteArray40, Static6.aClass3_Sub15_Sub1_1.anInt2792);
+				Static124.aClass95_2.method2830(Static6.aClass3_Sub15_Sub1_1.data, Static6.aClass3_Sub15_Sub1_1.offset);
 				if (Static11.aClass62_1 != null) {
 					Static11.aClass62_1.method3571();
 				}
@@ -93,10 +93,10 @@ public final class Static158 {
 				if (Static124.aClass95_2.method2831() < Static229.aClass100Array156.length * 8) {
 					return;
 				}
-				Static57.aClass3_Sub15_Sub1_3.anInt2792 = 0;
-				Static124.aClass95_2.method2827(0, Static229.aClass100Array156.length * 8, Static57.aClass3_Sub15_Sub1_3.aByteArray40);
+				Static57.aClass3_Sub15_Sub1_3.offset = 0;
+				Static124.aClass95_2.method2827(0, Static229.aClass100Array156.length * 8, Static57.aClass3_Sub15_Sub1_3.data);
 				for (local120 = 0; local120 < Static229.aClass100Array156.length; local120++) {
-					Static229.aClass100Array156[local120] = Static79.method1702(Static57.aClass3_Sub15_Sub1_3.method2182());
+					Static229.aClass100Array156[local120] = Static79.method1702(Static57.aClass3_Sub15_Sub1_3.g8());
 				}
 				Static223.anInt5034 = 21;
 				Static179.anInt4261 = 0;
@@ -148,15 +148,15 @@ public final class Static158 {
 				}
 				@Pc(67) int local67 = 0;
 				@Pc(74) Buffer local74 = new Buffer(Static191.aByteArrayArray15[local16]);
-				while (local74.anInt2792 < Static191.aByteArrayArray15[local16].length && local67 < 511) {
+				while (local74.offset < Static191.aByteArrayArray15[local16].length && local67 < 511) {
 					@Pc(97) int local97 = local67++ << 6 | local25;
-					@Pc(103) int local103 = local74.method2163();
+					@Pc(103) int local103 = local74.g2();
 					@Pc(107) int local107 = local103 >> 14;
 					@Pc(113) int local113 = local103 >> 7 & 0x3F;
 					@Pc(125) int local125 = local113 + (Static238.anIntArray470[local16] >> 8) * 64 - Static225.anInt5068;
 					@Pc(129) int local129 = local103 & 0x3F;
 					@Pc(142) int local142 = local129 + (Static238.anIntArray470[local16] & 0xFF) * 64 - Static142.anInt3483;
-					@Pc(148) NpcType local148 = Static214.method4363(local74.method2163());
+					@Pc(148) NpcType local148 = Static214.method4363(local74.g2());
 					if (Static175.aClass8_Sub4_Sub2Array1[local97] == null && (local148.aByte10 & 0x1) > 0 && local107 == Static41.anInt1316 && local125 >= 0 && local148.anInt3713 + local125 < 104 && local142 >= 0 && local142 + local148.anInt3713 < 104) {
 						Static175.aClass8_Sub4_Sub2Array1[local97] = new Npc();
 						@Pc(198) Npc local198 = Static175.aClass8_Sub4_Sub2Array1[local97];

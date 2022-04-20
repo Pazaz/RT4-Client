@@ -25,7 +25,7 @@ public final class TextureOp20 extends TextureOp {
 	@Override
 	public final void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		if (arg0 == 0) {
-			this.anInt3894 = (arg1.method2229() << 12) / 255;
+			this.anInt3894 = (arg1.g1() << 12) / 255;
 		}
 	}
 

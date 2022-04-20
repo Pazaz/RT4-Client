@@ -80,7 +80,7 @@ public final class Static169 {
 	}
 
 	@OriginalMember(owner = "client!nf", name = "a", descriptor = "(II[BB)I")
-	public static int method3178(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) byte[] arg2) {
+	public static int crc32(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) byte[] arg2) {
 		@Pc(5) int local5 = -1;
 		for (@Pc(15) int local15 = arg0; local15 < arg1; local15++) {
 			local5 = local5 >>> 8 ^ HuffmanCodec.anIntArray175[(local5 ^ arg2[local15]) & 0xFF];

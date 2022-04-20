@@ -30,15 +30,15 @@ public final class TextureOp30 extends TextureOp {
 	@Override
 	public final void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		if (arg0 == 0) {
-			this.anInt5195 = arg1.method2163();
+			this.anInt5195 = arg1.g2();
 		} else if (arg0 == 1) {
-			this.anInt5196 = arg1.method2163();
+			this.anInt5196 = arg1.g2();
 		} else if (arg0 == 2) {
-			this.anInt5197 = arg1.method2163();
+			this.anInt5197 = arg1.g2();
 		} else if (arg0 == 3) {
-			this.anInt5201 = arg1.method2163();
+			this.anInt5201 = arg1.g2();
 		} else if (arg0 == 4) {
-			@Pc(65) int local65 = arg1.method2220();
+			@Pc(65) int local65 = arg1.g3();
 			this.anIntArray450[2] = local65 >> 12 & 0x0;
 			this.anIntArray450[1] = local65 >> 4 & 0xFF0;
 			this.anIntArray450[0] = (local65 & 0xFF0000) << 4;

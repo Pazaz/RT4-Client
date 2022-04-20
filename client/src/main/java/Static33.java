@@ -64,17 +64,17 @@ public final class Static33 {
 		@Pc(33) int local33;
 		@Pc(102) int local102;
 		@Pc(114) int local114;
-		while (arg0.anInt2792 < arg0.aByteArray40.length) {
+		while (arg0.offset < arg0.data.length) {
 			@Pc(31) int local31 = 0;
 			local33 = 0;
 			@Pc(35) boolean local35 = false;
-			if (arg0.method2229() == 1) {
-				local33 = arg0.method2229();
-				local31 = arg0.method2229();
+			if (arg0.g1() == 1) {
+				local33 = arg0.g1();
+				local31 = arg0.g1();
 				local35 = true;
 			}
-			@Pc(57) int local57 = arg0.method2229();
-			@Pc(61) int local61 = arg0.method2229();
+			@Pc(57) int local57 = arg0.g1();
+			@Pc(61) int local61 = arg0.g1();
 			@Pc(68) int local68 = local57 * 64 - Static158.anInt3846;
 			@Pc(78) int local78 = Static181.anInt4296 + Static2.anInt13 - local61 * 64 - 1;
 			if (local68 >= 0 && local78 - 63 >= 0 && Static48.anInt1449 > local68 + 63 && Static181.anInt4296 > local78) {
@@ -82,14 +82,14 @@ public final class Static33 {
 					@Pc(112) byte[] local112 = local23[local68 + local102];
 					for (local114 = 0; local114 < 64; local114++) {
 						if (!local35 || local102 >= local33 * 8 && local33 * 8 + 8 > local102 && local114 >= local31 * 8 && local114 < local31 * 8 + 8) {
-							local112[local78 - local114] = arg0.method2186();
+							local112[local78 - local114] = arg0.g1s();
 						}
 					}
 				}
 			} else if (local35) {
-				arg0.anInt2792 += 64;
+				arg0.offset += 64;
 			} else {
-				arg0.anInt2792 += 4096;
+				arg0.offset += 4096;
 			}
 		}
 		@Pc(175) int local175 = Static48.anInt1449;

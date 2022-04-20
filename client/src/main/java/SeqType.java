@@ -63,7 +63,7 @@ public final class SeqType {
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(Lclient!wa;B)V")
 	public final void method4213(@OriginalArg(0) Buffer arg0) {
 		while (true) {
-			@Pc(19) int local19 = arg0.method2229();
+			@Pc(19) int local19 = arg0.g1();
 			if (local19 == 0) {
 				return;
 			}
@@ -289,61 +289,61 @@ public final class SeqType {
 		@Pc(8) int local8;
 		@Pc(14) int local14;
 		if (arg0 == 1) {
-			local8 = arg1.method2163();
+			local8 = arg1.g2();
 			this.anIntArray474 = new int[local8];
 			for (local14 = 0; local14 < local8; local14++) {
-				this.anIntArray474[local14] = arg1.method2163();
+				this.anIntArray474[local14] = arg1.g2();
 			}
 			this.anIntArray473 = new int[local8];
 			for (local14 = 0; local14 < local8; local14++) {
-				this.anIntArray473[local14] = arg1.method2163();
+				this.anIntArray473[local14] = arg1.g2();
 			}
 			for (local14 = 0; local14 < local8; local14++) {
-				this.anIntArray473[local14] += arg1.method2163() << 16;
+				this.anIntArray473[local14] += arg1.g2() << 16;
 			}
 		} else if (arg0 == 2) {
-			this.anInt5362 = arg1.method2163();
+			this.anInt5362 = arg1.g2();
 		} else if (arg0 == 3) {
 			this.aBooleanArray123 = new boolean[256];
-			local8 = arg1.method2229();
+			local8 = arg1.g1();
 			for (local14 = 0; local14 < local8; local14++) {
-				this.aBooleanArray123[arg1.method2229()] = true;
+				this.aBooleanArray123[arg1.g1()] = true;
 			}
 		} else if (arg0 == 4) {
 			this.aBoolean279 = true;
 		} else if (arg0 == 5) {
-			this.anInt5355 = arg1.method2229();
+			this.anInt5355 = arg1.g1();
 		} else if (arg0 == 6) {
-			this.anInt5353 = arg1.method2163();
+			this.anInt5353 = arg1.g2();
 		} else if (arg0 == 7) {
-			this.anInt5348 = arg1.method2163();
+			this.anInt5348 = arg1.g2();
 		} else if (arg0 == 8) {
-			this.anInt5357 = arg1.method2229();
+			this.anInt5357 = arg1.g1();
 		} else if (arg0 == 9) {
-			this.anInt5363 = arg1.method2229();
+			this.anInt5363 = arg1.g1();
 		} else if (arg0 == 10) {
-			this.anInt5349 = arg1.method2229();
+			this.anInt5349 = arg1.g1();
 		} else if (arg0 == 11) {
-			this.anInt5347 = arg1.method2229();
+			this.anInt5347 = arg1.g1();
 		} else if (arg0 == 12) {
-			local8 = arg1.method2229();
+			local8 = arg1.g1();
 			this.anIntArray475 = new int[local8];
 			for (local14 = 0; local14 < local8; local14++) {
-				this.anIntArray475[local14] = arg1.method2163();
+				this.anIntArray475[local14] = arg1.g2();
 			}
 			for (local14 = 0; local14 < local8; local14++) {
-				this.anIntArray475[local14] += arg1.method2163() << 16;
+				this.anIntArray475[local14] += arg1.g2() << 16;
 			}
 		} else if (arg0 == 13) {
-			local8 = arg1.method2163();
+			local8 = arg1.g2();
 			this.anIntArrayArray38 = new int[local8][];
 			for (local14 = 0; local14 < local8; local14++) {
-				@Pc(163) int local163 = arg1.method2229();
+				@Pc(163) int local163 = arg1.g1();
 				if (local163 > 0) {
 					this.anIntArrayArray38[local14] = new int[local163];
-					this.anIntArrayArray38[local14][0] = arg1.method2220();
+					this.anIntArrayArray38[local14][0] = arg1.g3();
 					for (@Pc(182) int local182 = 1; local182 < local163; local182++) {
-						this.anIntArrayArray38[local14][local182] = arg1.method2163();
+						this.anIntArrayArray38[local14][local182] = arg1.g2();
 					}
 				}
 			}

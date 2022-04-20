@@ -71,37 +71,37 @@ public final class IdkType {
 	@OriginalMember(owner = "client!dm", name = "a", descriptor = "(BLclient!wa;I)V")
 	private void method1203(@OriginalArg(1) Buffer arg0, @OriginalArg(2) int arg1) {
 		if (arg1 == 1) {
-			this.anInt1457 = arg0.method2229();
+			this.anInt1457 = arg0.g1();
 			return;
 		}
 		@Pc(22) int local22;
 		@Pc(28) int local28;
 		if (arg1 == 2) {
-			local22 = arg0.method2229();
+			local22 = arg0.g1();
 			this.anIntArray112 = new int[local22];
 			for (local28 = 0; local28 < local22; local28++) {
-				this.anIntArray112[local28] = arg0.method2163();
+				this.anIntArray112[local28] = arg0.g2();
 			}
 		} else if (arg1 == 3) {
 			this.aBoolean85 = true;
 		} else if (arg1 == 40) {
-			local22 = arg0.method2229();
+			local22 = arg0.g1();
 			this.aShortArray11 = new short[local22];
 			this.aShortArray12 = new short[local22];
 			for (local28 = 0; local28 < local22; local28++) {
-				this.aShortArray12[local28] = (short) arg0.method2163();
-				this.aShortArray11[local28] = (short) arg0.method2163();
+				this.aShortArray12[local28] = (short) arg0.g2();
+				this.aShortArray11[local28] = (short) arg0.g2();
 			}
 		} else if (arg1 == 41) {
-			local22 = arg0.method2229();
+			local22 = arg0.g1();
 			this.aShortArray14 = new short[local22];
 			this.aShortArray13 = new short[local22];
 			for (local28 = 0; local28 < local22; local28++) {
-				this.aShortArray14[local28] = (short) arg0.method2163();
-				this.aShortArray13[local28] = (short) arg0.method2163();
+				this.aShortArray14[local28] = (short) arg0.g2();
+				this.aShortArray13[local28] = (short) arg0.g2();
 			}
 		} else if (arg1 >= 60 && arg1 < 70) {
-			this.anIntArray113[arg1 - 60] = arg0.method2163();
+			this.anIntArray113[arg1 - 60] = arg0.g2();
 		}
 	}
 
@@ -148,7 +148,7 @@ public final class IdkType {
 	@OriginalMember(owner = "client!dm", name = "a", descriptor = "(ILclient!wa;)V")
 	public final void method1209(@OriginalArg(1) Buffer arg0) {
 		while (true) {
-			@Pc(13) int local13 = arg0.method2229();
+			@Pc(13) int local13 = arg0.g1();
 			if (local13 == 0) {
 				return;
 			}

@@ -117,44 +117,44 @@ public final class Class45 {
 		@Pc(19) int local19;
 		if (Static239.aBoolean263) {
 			for (local19 = 0; local19 < this.anInt2017; local19++) {
-				local15.method2178(this.aByteArray25[local19]);
-				local15.method2178(this.aByteArray23[local19]);
-				local15.method2178(this.aByteArray24[local19]);
-				local15.method2178(255);
-				local15.method2227((float) this.anIntArray178[local19]);
-				local15.method2227((float) this.anIntArray180[local19]);
-				local15.method2227((float) this.anIntArray179[local19]);
+				local15.p1(this.aByteArray25[local19]);
+				local15.p1(this.aByteArray23[local19]);
+				local15.p1(this.aByteArray24[local19]);
+				local15.p1(255);
+				local15.pFloat((float) this.anIntArray178[local19]);
+				local15.pFloat((float) this.anIntArray180[local19]);
+				local15.pFloat((float) this.anIntArray179[local19]);
 			}
 			for (local19 = 0; local19 < this.anInt2018; local19++) {
-				local7.method2164(this.anIntArray177[local19]);
+				local7.p4(this.anIntArray177[local19]);
 			}
 		} else {
 			for (local19 = 0; local19 < this.anInt2017; local19++) {
-				local15.method2178(this.aByteArray25[local19]);
-				local15.method2178(this.aByteArray23[local19]);
-				local15.method2178(this.aByteArray24[local19]);
-				local15.method2178(255);
-				local15.method2188((float) this.anIntArray178[local19]);
-				local15.method2188((float) this.anIntArray180[local19]);
-				local15.method2188((float) this.anIntArray179[local19]);
+				local15.p1(this.aByteArray25[local19]);
+				local15.p1(this.aByteArray23[local19]);
+				local15.p1(this.aByteArray24[local19]);
+				local15.p1(255);
+				local15.gFloat((float) this.anIntArray178[local19]);
+				local15.gFloat((float) this.anIntArray180[local19]);
+				local15.gFloat((float) this.anIntArray179[local19]);
 			}
 			for (local19 = 0; local19 < this.anInt2018; local19++) {
-				local7.method2183(this.anIntArray177[local19]);
+				local7.p4le(this.anIntArray177[local19]);
 			}
 		}
 		if (Static239.aBoolean271) {
 			this.aClass155_1 = new GlVertexBufferObject();
-			@Pc(173) ByteBuffer local173 = ByteBuffer.wrap(local15.aByteArray40);
+			@Pc(173) ByteBuffer local173 = ByteBuffer.wrap(local15.data);
 			this.aClass155_1.method4519(local173);
 			this.aClass155_2 = new GlVertexBufferObject();
-			@Pc(186) ByteBuffer local186 = ByteBuffer.wrap(local7.aByteArray40);
+			@Pc(186) ByteBuffer local186 = ByteBuffer.wrap(local7.data);
 			this.aClass155_2.method4517(local186);
 		} else {
-			this.aByteBuffer1 = ByteBuffer.allocateDirect(local15.anInt2792);
-			this.aByteBuffer1.put(local15.aByteArray40);
+			this.aByteBuffer1 = ByteBuffer.allocateDirect(local15.offset);
+			this.aByteBuffer1.put(local15.data);
 			this.aByteBuffer1.flip();
-			this.aByteBuffer2 = ByteBuffer.allocateDirect(local7.anInt2792);
-			this.aByteBuffer2.put(local7.aByteArray40);
+			this.aByteBuffer2 = ByteBuffer.allocateDirect(local7.offset);
+			this.aByteBuffer2.put(local7.data);
 			this.aByteBuffer2.flip();
 		}
 		this.anIntArray178 = null;

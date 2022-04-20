@@ -117,7 +117,7 @@ public final class Static218 {
 
 	@OriginalMember(owner = "client!rk", name = "c", descriptor = "(Lclient!na;)Lclient!na;")
 	public static JagString method2862(@OriginalArg(0) JagString arg0) {
-		@Pc(3) int local3 = arg0.method3120();
+		@Pc(3) int local3 = arg0.length();
 		@Pc(5) int local5 = 0;
 		@Pc(15) int local15;
 		for (@Pc(7) int local7 = 0; local7 < local3; local7++) {

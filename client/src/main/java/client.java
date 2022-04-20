@@ -33,7 +33,7 @@ public final class client extends GameShell {
 			Static249.aBoolean282 = false;
 			try {
 				@Pc(63) byte[] local63 = arg0[2].getBytes("ISO-8859-1");
-				local15 = Static101.method2053(Static10.method346(local63, local63.length, 0));
+				local15 = Static101.method2053(Static10.decodeString(local63, local63.length, 0));
 			} catch (@Pc(74) Exception local74) {
 			}
 			if (local15 != -1) {
@@ -591,9 +591,9 @@ public final class client extends GameShell {
 			if (Static4.anInt30 == 2) {
 				Static206.aClass95_3 = new BufferedSocket((Socket) Static37.aClass212_2.anObject6, Static71.aClass213_3);
 				@Pc(194) Buffer local194 = new Buffer(5);
-				local194.method2178(15);
-				local194.method2164(530);
-				Static206.aClass95_3.method2830(local194.aByteArray40, 5);
+				local194.p1(15);
+				local194.p4(530);
+				Static206.aClass95_3.method2830(local194.data, 5);
 				Static4.anInt30++;
 				Static217.aLong165 = MonotonicClock.method5096();
 			}

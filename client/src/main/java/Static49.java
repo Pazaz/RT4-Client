@@ -40,7 +40,7 @@ public final class Static49 {
 		@Pc(17) int local17 = -1;
 		@Pc(22) Buffer local22 = new Buffer(arg2);
 		label70: while (true) {
-			@Pc(26) int local26 = local22.method2199();
+			@Pc(26) int local26 = local22.gVarSmart();
 			if (local26 == 0) {
 				return local15;
 			}
@@ -59,13 +59,13 @@ public final class Static49 {
 								do {
 									@Pc(45) int local45;
 									while (local39) {
-										local45 = local22.method2204();
+										local45 = local22.gSmart1or2();
 										if (local45 == 0) {
 											continue label70;
 										}
-										local22.method2229();
+										local22.g1();
 									}
-									local45 = local22.method2204();
+									local45 = local22.gSmart1or2();
 									if (local45 == 0) {
 										continue label70;
 									}
@@ -74,7 +74,7 @@ public final class Static49 {
 									@Pc(64) int local64 = local33 >> 6 & 0x3F;
 									local68 = arg1 + local58;
 									local72 = arg0 + local64;
-									local78 = local22.method2229() >> 2;
+									local78 = local22.g1() >> 2;
 								} while (local72 <= 0);
 							} while (local68 <= 0);
 						} while (local72 >= 103);

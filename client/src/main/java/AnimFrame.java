@@ -41,19 +41,19 @@ public final class AnimFrame {
 		this.aClass3_Sub20_1 = arg1;
 		@Pc(21) Buffer local21 = new Buffer(arg0);
 		@Pc(26) Buffer local26 = new Buffer(arg0);
-		local21.anInt2792 = 2;
-		@Pc(33) int local33 = local21.method2229();
+		local21.offset = 2;
+		@Pc(33) int local33 = local21.g1();
 		@Pc(35) int local35 = 0;
 		@Pc(37) int local37 = -1;
 		@Pc(39) int local39 = -1;
-		local26.anInt2792 = local21.anInt2792 + local33;
+		local26.offset = local21.offset + local33;
 		@Pc(47) int local47;
 		for (local47 = 0; local47 < local33; local47++) {
 			@Pc(56) int local56 = this.aClass3_Sub20_1.anIntArray291[local47];
 			if (local56 == 0) {
 				local37 = local47;
 			}
-			@Pc(64) int local64 = local21.method2229();
+			@Pc(64) int local64 = local21.g1();
 			if (local64 > 0) {
 				if (local56 == 0) {
 					local39 = local47;
@@ -66,17 +66,17 @@ public final class AnimFrame {
 				if ((local64 & 0x1) == 0) {
 					Static168.aShortArray48[local35] = local77;
 				} else {
-					Static168.aShortArray48[local35] = (short) local26.method2223();
+					Static168.aShortArray48[local35] = (short) local26.gSmart1or2s();
 				}
 				if ((local64 & 0x2) == 0) {
 					Static168.aShortArray46[local35] = local77;
 				} else {
-					Static168.aShortArray46[local35] = (short) local26.method2223();
+					Static168.aShortArray46[local35] = (short) local26.gSmart1or2s();
 				}
 				if ((local64 & 0x4) == 0) {
 					Static168.aShortArray45[local35] = local77;
 				} else {
-					Static168.aShortArray45[local35] = (short) local26.method2223();
+					Static168.aShortArray45[local35] = (short) local26.gSmart1or2s();
 				}
 				Static168.aByteArray54[local35] = (byte) (local64 >>> 3 & 0x3);
 				if (local56 == 2) {
@@ -98,7 +98,7 @@ public final class AnimFrame {
 				local35++;
 			}
 		}
-		if (local26.anInt2792 != arg0.length) {
+		if (local26.offset != arg0.length) {
 			throw new RuntimeException();
 		}
 		this.anInt4070 = local35;

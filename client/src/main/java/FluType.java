@@ -94,7 +94,7 @@ public final class FluType {
 	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(ILclient!wa;I)V")
 	public final void method3217(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		while (true) {
-			@Pc(7) int local7 = arg1.method2229();
+			@Pc(7) int local7 = arg1.g1();
 			if (local7 == 0) {
 				return;
 			}
@@ -105,15 +105,15 @@ public final class FluType {
 	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(BILclient!wa;I)V")
 	private void method3220(@OriginalArg(1) int arg0, @OriginalArg(2) Buffer arg1, @OriginalArg(3) int arg2) {
 		if (arg0 == 1) {
-			this.anInt4147 = arg1.method2220();
+			this.anInt4147 = arg1.g3();
 			this.method3216(this.anInt4147);
 		} else if (arg0 == 2) {
-			this.anInt4155 = arg1.method2163();
+			this.anInt4155 = arg1.g2();
 			if (this.anInt4155 == 65535) {
 				this.anInt4155 = -1;
 			}
 		} else if (arg0 == 3) {
-			this.anInt4156 = arg1.method2163();
+			this.anInt4156 = arg1.g2();
 		} else if (arg0 == 4) {
 			this.aBoolean198 = false;
 		}

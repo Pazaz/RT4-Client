@@ -96,25 +96,25 @@ public final class VorbisSound extends Node {
 	@OriginalMember(owner = "client!jc", name = "a", descriptor = "([B)V")
 	private void method2342(@OriginalArg(0) byte[] arg0) {
 		@Pc(4) Buffer local4 = new Buffer(arg0);
-		this.anInt2980 = local4.method2174();
-		this.anInt2974 = local4.method2174();
-		this.anInt2976 = local4.method2174();
-		this.anInt2977 = local4.method2174();
+		this.anInt2980 = local4.g4();
+		this.anInt2974 = local4.g4();
+		this.anInt2976 = local4.g4();
+		this.anInt2977 = local4.g4();
 		if (this.anInt2977 < 0) {
 			this.anInt2977 = ~this.anInt2977;
 			this.aBoolean148 = true;
 		}
-		@Pc(40) int local40 = local4.method2174();
+		@Pc(40) int local40 = local4.g4();
 		this.aByteArrayArray10 = new byte[local40][];
 		for (@Pc(46) int local46 = 0; local46 < local40; local46++) {
 			@Pc(51) int local51 = 0;
 			@Pc(55) int local55;
 			do {
-				local55 = local4.method2229();
+				local55 = local4.g1();
 				local51 += local55;
 			} while (local55 >= 255);
 			@Pc(67) byte[] local67 = new byte[local51];
-			local4.method2190(local51, local67);
+			local4.gBytes(local51, local67);
 			this.aByteArrayArray10[local46] = local67;
 		}
 	}

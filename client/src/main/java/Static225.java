@@ -105,18 +105,18 @@ public final class Static225 {
 			Static266.anInt5336 = -3;
 			Static219.anInt4937 = 1;
 			@Pc(43) Buffer local43 = new Buffer(128);
-			local43.method2178(10);
-			local43.method2230((int) (Math.random() * 99999.0D));
-			local43.method2230(530);
-			local43.method2166(Static186.aClass100_829.method3158());
-			local43.method2164((int) (Math.random() * 9.9999999E7D));
-			local43.method2171(Static186.aClass100_828);
-			local43.method2164((int) (Math.random() * 9.9999999E7D));
-			local43.method2226(Static86.aBigInteger1, Static256.aBigInteger2);
-			Static6.aClass3_Sub15_Sub1_1.anInt2792 = 0;
-			Static6.aClass3_Sub15_Sub1_1.method2178(210);
-			Static6.aClass3_Sub15_Sub1_1.method2178(local43.anInt2792);
-			Static6.aClass3_Sub15_Sub1_1.method2179(local43.aByteArray40, local43.anInt2792);
+			local43.p1(10);
+			local43.p2((int) (Math.random() * 99999.0D));
+			local43.p2(530);
+			local43.p8(Static186.aClass100_829.method3158());
+			local43.p4((int) (Math.random() * 9.9999999E7D));
+			local43.pjstr(Static186.aClass100_828);
+			local43.p4((int) (Math.random() * 9.9999999E7D));
+			local43.encryptRsa(Static86.aBigInteger1, Static256.aBigInteger2);
+			Static6.aClass3_Sub15_Sub1_1.offset = 0;
+			Static6.aClass3_Sub15_Sub1_1.p1(210);
+			Static6.aClass3_Sub15_Sub1_1.p1(local43.offset);
+			Static6.aClass3_Sub15_Sub1_1.pBytes(local43.data, local43.offset);
 		} else {
 			Static49.method1208();
 		}

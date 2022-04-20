@@ -4,486 +4,522 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
+// Buffer access nomenclature:
+// Operation
+//   g - get
+//   p - put
+// Type
+//   bytes or special type i.e. 8, VarLong, Bytes, jstr, ...
+// Endianness (optional)
+//   (none) - Big Endian
+//   le - Little Endian
+//   me - "Middle" Endian, only used with ints
+//   rme - "Reverse-Middle" Endian, only used with ints
+// Signedness
+//   (none) - Unsigned
+//   s - Signed
+// Transformation (optional)
+//   add - add 128 to the lowest byte
+//   sub - subtract lowest byte from 128
+//   neg - negate, only used on bytes
+//   Rev - reverse, only used on byte arrays
+
+// Types:
+//  1 - byte
+//  2 - short
+//  3 - medium
+//  4 - int
+//  8 - long
+//  Float - 4-byte float
+//  Smart1or2 - byte if below 128, short otherwise, holds exactly half the capacity (0-128, 0-32768)
+//  Bytes - byte array
+//  jstr - Jagex string (null terminated)
+//  VarLong - variable long
+//  VarInt - variable int
+//  Crc32 - checksum
+
 @OriginalClass("client!wa")
 public class Buffer extends Node {
 
 	@OriginalMember(owner = "client!wa", name = "y", descriptor = "[B")
-	public byte[] aByteArray40;
+	public byte[] data;
 
 	@OriginalMember(owner = "client!wa", name = "T", descriptor = "I")
-	public int anInt2792;
+	public int offset;
 
 	@OriginalMember(owner = "client!wa", name = "<init>", descriptor = "(I)V")
-	public Buffer(@OriginalArg(0) int arg0) {
-		this.aByteArray40 = Static228.method3907(arg0);
-		this.anInt2792 = 0;
+	public Buffer(@OriginalArg(0) int size) {
+		this.data = Static228.allocate(size);
+		this.offset = 0;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "<init>", descriptor = "([B)V")
-	public Buffer(@OriginalArg(0) byte[] arg0) {
-		this.anInt2792 = 0;
-		this.aByteArray40 = arg0;
+	public Buffer(@OriginalArg(0) byte[] src) {
+		this.offset = 0;
+		this.data = src;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "c", descriptor = "(I)I")
-	public final int method2163() {
-		this.anInt2792 += 2;
-		return ((this.aByteArray40[this.anInt2792 - 2] & 0xFF) << 8) + (this.aByteArray40[this.anInt2792 - 1] & 0xFF);
+	public final int g2() {
+		this.offset += 2;
+		return ((this.data[this.offset - 2] & 0xFF) << 8) + (this.data[this.offset - 1] & 0xFF);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "b", descriptor = "(II)V")
-	public final void method2164(@OriginalArg(1) int arg0) {
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 24);
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 16);
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 8);
-		this.aByteArray40[this.anInt2792++] = (byte) arg0;
+	public final void p4(@OriginalArg(1) int value) {
+		this.data[this.offset++] = (byte) (value >> 24);
+		this.data[this.offset++] = (byte) (value >> 16);
+		this.data[this.offset++] = (byte) (value >> 8);
+		this.data[this.offset++] = (byte) value;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(IIJ)V")
-	public final void method2165(@OriginalArg(1) int arg0, @OriginalArg(2) long arg1) {
-		@Pc(2) int local2 = arg0 - 1;
-		if (local2 < 0 || local2 > 7) {
+	public final void pVarLong(@OriginalArg(1) int size, @OriginalArg(2) long value) {
+		@Pc(2) int bytes = size - 1;
+		if (bytes < 0 || bytes > 7) {
 			throw new IllegalArgumentException();
 		}
-		for (@Pc(27) int local27 = local2 * 8; local27 >= 0; local27 -= 8) {
-			this.aByteArray40[this.anInt2792++] = (byte) (arg1 >> local27);
+		for (@Pc(27) int shift = bytes * 8; shift >= 0; shift -= 8) {
+			this.data[this.offset++] = (byte) (value >> shift);
 		}
 	}
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(JI)V")
-	public final void method2166(@OriginalArg(0) long arg0) {
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 56);
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 48);
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 40);
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 32);
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 24);
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 16);
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 8);
-		this.aByteArray40[this.anInt2792++] = (byte) arg0;
+	public final void p8(@OriginalArg(0) long value) {
+		this.data[this.offset++] = (byte) (value >> 56);
+		this.data[this.offset++] = (byte) (value >> 48);
+		this.data[this.offset++] = (byte) (value >> 40);
+		this.data[this.offset++] = (byte) (value >> 32);
+		this.data[this.offset++] = (byte) (value >> 24);
+		this.data[this.offset++] = (byte) (value >> 16);
+		this.data[this.offset++] = (byte) (value >> 8);
+		this.data[this.offset++] = (byte) value;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "d", descriptor = "(B)I")
-	public final int method2167() {
-		@Pc(12) byte local12 = this.aByteArray40[this.anInt2792++];
-		@Pc(24) int local24 = 0;
-		while (local12 < 0) {
-			local24 = (local12 & 0x7F | local24) << 7;
-			local12 = this.aByteArray40[this.anInt2792++];
+	public final int gVarInt() {
+		@Pc(12) byte b = this.data[this.offset++];
+		@Pc(24) int value = 0;
+		while (b < 0) {
+			value = (b & 0x7F | value) << 7;
+			b = this.data[this.offset++];
 		}
-		return local12 | local24;
+		return b | value;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "c", descriptor = "(II)V")
-	public final void method2168(@OriginalArg(1) int arg0) {
-		this.aByteArray40[this.anInt2792 - arg0 - 4] = (byte) (arg0 >> 24);
-		this.aByteArray40[this.anInt2792 - arg0 - 3] = (byte) (arg0 >> 16);
-		this.aByteArray40[this.anInt2792 - arg0 - 2] = (byte) (arg0 >> 8);
-		this.aByteArray40[this.anInt2792 - arg0 - 1] = (byte) arg0;
+	public final void p4len(@OriginalArg(1) int len) {
+		this.data[this.offset - len - 4] = (byte) (len >> 24);
+		this.data[this.offset - len - 3] = (byte) (len >> 16);
+		this.data[this.offset - len - 2] = (byte) (len >> 8);
+		this.data[this.offset - len - 1] = (byte) len;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "d", descriptor = "(II)V")
-	public final void method2169(@OriginalArg(1) int arg0) {
-		this.aByteArray40[this.anInt2792++] = (byte) (128 - arg0);
+	public final void p1sub(@OriginalArg(1) int value) {
+		this.data[this.offset++] = (byte) (128 - value);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(ILclient!na;)V")
-	public final void method2171(@OriginalArg(1) JagString arg0) {
-		this.anInt2792 += arg0.method3160(this.aByteArray40, this.anInt2792, arg0.method3120());
-		this.aByteArray40[this.anInt2792++] = 0;
+	public final void pjstr(@OriginalArg(1) JagString value) {
+		this.offset += value.encodeString(this.data, this.offset, value.length());
+		this.data[this.offset++] = 0;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "d", descriptor = "(I)I")
-	public final int method2173() {
-		this.anInt2792 += 2;
-		@Pc(34) int local34 = ((this.aByteArray40[this.anInt2792 - 2] & 0xFF) << 8) + (this.aByteArray40[this.anInt2792 - 1] - 128 & 0xFF);
-		if (local34 > 32767) {
-			local34 -= 65536;
+	public final int g2sadd() {
+		this.offset += 2;
+		@Pc(34) int value = ((this.data[this.offset - 2] & 0xFF) << 8) + (this.data[this.offset - 1] - 128 & 0xFF);
+		if (value > 32767) {
+			value -= 65536;
 		}
-		return local34;
+		return value;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "e", descriptor = "(I)I")
-	public final int method2174() {
-		this.anInt2792 += 4;
-		return ((this.aByteArray40[this.anInt2792 - 4] & 0xFF) << 24) + ((this.aByteArray40[this.anInt2792 - 3] & 0xFF) << 16) + ((this.aByteArray40[this.anInt2792 - 2] & 0xFF) << 8) + (this.aByteArray40[this.anInt2792 - 1] & 0xFF);
+	public final int g4() {
+		this.offset += 4;
+		return ((this.data[this.offset - 4] & 0xFF) << 24) + ((this.data[this.offset - 3] & 0xFF) << 16) + ((this.data[this.offset - 2] & 0xFF) << 8) + (this.data[this.offset - 1] & 0xFF);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "b", descriptor = "(Z)B")
-	public final byte method2175() {
-		return (byte) (128 - this.aByteArray40[this.anInt2792++]);
+	public final byte g1sub() {
+		return (byte) (128 - this.data[this.offset++]);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "f", descriptor = "(B)Lclient!na;")
-	public final JagString method2176() {
-		if (this.aByteArray40[this.anInt2792] == 0) {
-			this.anInt2792++;
+	public final JagString gjstrFast() {
+		if (this.data[this.offset] == 0) {
+			this.offset++;
 			return null;
 		} else {
-			return this.method2202();
+			return this.gjstr();
 		}
 	}
 
 	@OriginalMember(owner = "client!wa", name = "g", descriptor = "(B)I")
-	public final int method2177() {
-		return this.aByteArray40[this.anInt2792++] - 128 & 0xFF;
+	public final int g1add() {
+		return this.data[this.offset++] - 128 & 0xFF;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(BI)V")
-	public final void method2178(@OriginalArg(1) int arg0) {
-		this.aByteArray40[this.anInt2792++] = (byte) arg0;
+	public final void p1(@OriginalArg(1) int value) {
+		this.data[this.offset++] = (byte) value;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "([BIII)V")
-	public final void method2179(@OriginalArg(0) byte[] arg0, @OriginalArg(2) int arg1) {
-		for (@Pc(7) int local7 = 0; local7 < arg1; local7++) {
-			this.aByteArray40[this.anInt2792++] = arg0[local7];
+	public final void pBytes(@OriginalArg(0) byte[] src, @OriginalArg(2) int len) {
+		for (@Pc(7) int i = 0; i < len; i++) {
+			this.data[this.offset++] = src[i];
 		}
 	}
 
 	@OriginalMember(owner = "client!wa", name = "c", descriptor = "(Z)I")
-	public final int method2180() {
-		return 128 - this.aByteArray40[this.anInt2792++] & 0xFF;
+	public final int g1ssub() {
+		return 128 - this.data[this.offset++] & 0xFF;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "h", descriptor = "(B)I")
-	public final int method2181() {
-		this.anInt2792 += 3;
-		return ((this.aByteArray40[this.anInt2792 - 2] & 0xFF) << 8) + ((this.aByteArray40[this.anInt2792 - 1] & 0xFF) << 16) + (this.aByteArray40[this.anInt2792 + -3] & 0xFF);
+	public final int g3le() {
+		this.offset += 3;
+		return (((this.data[this.offset - 1] & 0xFF) << 16) + (this.data[this.offset - 2] & 0xFF) << 8) + (this.data[this.offset - 3] & 0xFF);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "f", descriptor = "(I)J")
-	public final long method2182() {
-		@Pc(11) long local11 = (long) this.method2174() & 0xFFFFFFFFL;
-		@Pc(18) long local18 = (long) this.method2174() & 0xFFFFFFFFL;
-		return local18 + (local11 << 32);
+	public final long g8() {
+		@Pc(11) long low = (long) this.g4() & 0xFFFFFFFFL;
+		@Pc(18) long high = (long) this.g4() & 0xFFFFFFFFL;
+		return high + (low << 32);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "e", descriptor = "(II)V")
-	public final void method2183(@OriginalArg(0) int arg0) {
-		this.aByteArray40[this.anInt2792++] = (byte) arg0;
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 8);
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 16);
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 24);
+	public final void p4le(@OriginalArg(0) int value) {
+		this.data[this.offset++] = (byte) value;
+		this.data[this.offset++] = (byte) (value >> 8);
+		this.data[this.offset++] = (byte) (value >> 16);
+		this.data[this.offset++] = (byte) (value >> 24);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "g", descriptor = "(I)I")
-	public final int method2184() {
-		this.anInt2792 += 2;
-		return (this.aByteArray40[this.anInt2792 - 1] - 128 & 0xFF) + ((this.aByteArray40[this.anInt2792 - 2] & 0xFF) << 8);
+	public final int g2sub() {
+		this.offset += 2;
+		return ((this.data[this.offset - 2] & 0xFF) << 8) + (this.data[this.offset - 1] - 128 & 0xFF);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "f", descriptor = "(II)V")
-	public final void method2185(@OriginalArg(1) int arg0) {
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 16);
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 24);
-		this.aByteArray40[this.anInt2792++] = (byte) arg0;
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 8);
+	public final void p4me(@OriginalArg(1) int value) {
+		this.data[this.offset++] = (byte) (value >> 16);
+		this.data[this.offset++] = (byte) (value >> 24);
+		this.data[this.offset++] = (byte) value;
+		this.data[this.offset++] = (byte) (value >> 8);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "d", descriptor = "(Z)B")
-	public final byte method2186() {
-		return this.aByteArray40[this.anInt2792++];
+	public final byte g1s() {
+		return this.data[this.offset++];
 	}
 
 	@OriginalMember(owner = "client!wa", name = "h", descriptor = "(I)Lclient!na;")
-	public final JagString method2187() {
-		@Pc(10) byte local10 = this.aByteArray40[this.anInt2792++];
-		if (local10 != 0) {
+	public final JagString gjstr2() {
+		@Pc(10) byte version = this.data[this.offset++];
+		if (version != 0) {
 			throw new IllegalStateException("Bad version number in gjstr2");
 		}
-		@Pc(32) int local32 = this.anInt2792;
-		while (this.aByteArray40[this.anInt2792++] != 0) {
+		@Pc(32) int off = this.offset;
+		while (this.data[this.offset++] != 0) {
 		}
-		return Static10.method346(this.aByteArray40, this.anInt2792 - local32 - 1, local32);
+		return Static10.decodeString(this.data, this.offset - off - 1, off);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(FB)V")
-	public final void method2188(@OriginalArg(0) float arg0) {
-		@Pc(2) int local2 = Float.floatToRawIntBits(arg0);
-		this.aByteArray40[this.anInt2792++] = (byte) local2;
-		this.aByteArray40[this.anInt2792++] = (byte) (local2 >> 8);
-		this.aByteArray40[this.anInt2792++] = (byte) (local2 >> 16);
-		this.aByteArray40[this.anInt2792++] = (byte) (local2 >> 24);
+	public final void gFloat(@OriginalArg(0) float value) {
+		@Pc(2) int valueInt = Float.floatToRawIntBits(value);
+		this.data[this.offset++] = (byte) valueInt;
+		this.data[this.offset++] = (byte) (valueInt >> 8);
+		this.data[this.offset++] = (byte) (valueInt >> 16);
+		this.data[this.offset++] = (byte) (valueInt >> 24);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "i", descriptor = "(B)B")
-	public final byte method2189() {
-		return (byte) -this.aByteArray40[this.anInt2792++];
+	public final byte g1neg() {
+		return (byte) -this.data[this.offset++];
 	}
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(II[BB)V")
-	public final void method2190(@OriginalArg(1) int arg0, @OriginalArg(2) byte[] arg1) {
-		for (@Pc(8) int local8 = 0; local8 < arg0; local8++) {
-			arg1[local8] = this.aByteArray40[this.anInt2792++];
+	public final void gBytes(@OriginalArg(1) int len, @OriginalArg(2) byte[] dest) {
+		for (@Pc(8) int i = 0; i < len; i++) {
+			dest[i] = this.data[this.offset++];
 		}
 	}
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(IB)V")
-	public final void method2191(@OriginalArg(0) int arg0) {
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 + 128);
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 8);
+	public final void p2leadd(@OriginalArg(0) int value) {
+		this.data[this.offset++] = (byte) (value + 128);
+		this.data[this.offset++] = (byte) (value >> 8);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "i", descriptor = "(I)I")
-	public final int method2192() {
-		this.anInt2792 += 2;
-		return (this.aByteArray40[this.anInt2792 - 2] & 0xFF) + ((this.aByteArray40[this.anInt2792 - 1] & 0xFF) << 8);
+	public final int g2le() {
+		this.offset += 2;
+		return ((this.data[this.offset - 1] & 0xFF) << 8) + (this.data[this.offset - 2] & 0xFF);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "g", descriptor = "(II)V")
-	public final void method2194(@OriginalArg(1) int arg0) {
-		if (arg0 >= 0 && arg0 < 128) {
-			this.method2178(arg0);
-		} else if (arg0 >= 0 && arg0 < 32768) {
-			this.method2230(arg0 + 32768);
+	public final void pSmart1or2(@OriginalArg(1) int value) {
+		if (value >= 0 && value < 128) {
+			this.p1(value);
+		} else if (value >= 0 && value < 0x8000) {
+			this.p2(value + 0x8000);
 		} else {
 			throw new IllegalArgumentException();
 		}
 	}
 
 	@OriginalMember(owner = "client!wa", name = "b", descriptor = "(BI)V")
-	public final void method2195(@OriginalArg(1) int arg0) {
-		this.aByteArray40[this.anInt2792 - arg0 - 1] = (byte) arg0;
+	public final void p1len(@OriginalArg(1) int length) {
+		this.data[this.offset - length - 1] = (byte) length;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "([IIII)V")
-	public final void method2196(@OriginalArg(0) int[] arg0, @OriginalArg(3) int arg1) {
-		@Pc(6) int local6 = this.anInt2792;
-		this.anInt2792 = 5;
-		@Pc(16) int local16 = (arg1 - 5) / 8;
-		for (@Pc(18) int local18 = 0; local18 < local16; local18++) {
-			@Pc(23) int local23 = -957401312;
-			@Pc(27) int local27 = this.method2174();
-			@Pc(31) int local31 = this.method2174();
-			@Pc(33) int local33 = 32;
-			while (local33-- > 0) {
-				local31 -= arg0[local23 >>> 11 & 0x3] + local23 ^ local27 + (local27 >>> 5 ^ local27 << 4);
-				local23 -= -1640531527;
-				local27 -= (local31 >>> 5 ^ local31 << 4) + local31 ^ arg0[local23 & 0x3] + local23;
+	public final void decryptXtea(@OriginalArg(0) int[] key, @OriginalArg(3) int len) {
+		@Pc(6) int start = this.offset;
+		this.offset = 5;
+		@Pc(16) int blocks = (len - 5) / 8;
+		for (@Pc(18) int i = 0; i < blocks; i++) {
+			@Pc(23) int sum = -957401312;
+			@Pc(27) int v0 = this.g4();
+			@Pc(31) int v1 = this.g4();
+			@Pc(33) int rounds = 32;
+			while (rounds-- > 0) {
+				v1 -= key[sum >>> 11 & 0x3] + sum ^ v0 + (v0 >>> 5 ^ v0 << 4);
+				sum -= -1640531527;
+				v0 -= (v1 >>> 5 ^ v1 << 4) + v1 ^ key[sum & 0x3] + sum;
 			}
-			this.anInt2792 -= 8;
-			this.method2164(local27);
-			this.method2164(local31);
+			this.offset -= 8;
+			this.p4(v0);
+			this.p4(v1);
 		}
-		this.anInt2792 = local6;
+		this.offset = start;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "h", descriptor = "(II)V")
-	public final void method2197(@OriginalArg(1) int arg0) {
-		if ((arg0 & 0xFFFFFF80) != 0) {
-			if ((-16384 & arg0) != 0) {
-				if ((arg0 & 0xFFE00000) != 0) {
-					if ((arg0 & 0xF0000000) != 0) {
-						this.method2178(arg0 >>> 28 | 0x80);
+	public final void pVarInt(@OriginalArg(1) int value) {
+		if ((value & 0xFFFFFF80) != 0) {
+			if ((-16384 & value) != 0) {
+				if ((value & 0xFFE00000) != 0) {
+					if ((value & 0xF0000000) != 0) {
+						this.p1(value >>> 28 | 0x80);
 					}
-					this.method2178(arg0 >>> 21 | 0x80);
+					this.p1(value >>> 21 | 0x80);
 				}
-				this.method2178(arg0 >>> 14 | 0x80);
+				this.p1(value >>> 14 | 0x80);
 			}
-			this.method2178(arg0 >>> 7 | 0x80);
+			this.p1(value >>> 7 | 0x80);
 		}
-		this.method2178(arg0 & 0x7F);
+		this.p1(value & 0x7F);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "i", descriptor = "(II)J")
-	public final long method2198(@OriginalArg(0) int arg0) {
-		@Pc(2) int local2 = arg0 - 1;
-		if (local2 < 0 || local2 > 7) {
+	public final long gVarLong(@OriginalArg(0) int len) {
+		@Pc(2) int bytes = len - 1;
+		if (bytes < 0 || bytes > 7) {
 			throw new IllegalArgumentException();
 		}
-		@Pc(21) long local21 = 0L;
-		for (@Pc(25) int local25 = local2 * 8; local25 >= 0; local25 -= 8) {
-			local21 |= ((long) this.aByteArray40[this.anInt2792++] & 0xFFL) << local25;
+		@Pc(21) long value = 0L;
+		for (@Pc(25) int shift = bytes * 8; shift >= 0; shift -= 8) {
+			value |= ((long) this.data[this.offset++] & 0xFFL) << shift;
 		}
-		return local21;
+		return value;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "j", descriptor = "(B)I")
-	public final int method2199() {
-		@Pc(14) int local14 = this.method2204();
-		@Pc(16) int local16 = 0;
-		while (local14 == 32767) {
-			local14 = this.method2204();
-			local16 += 32767;
+	public final int gVarSmart() {
+		@Pc(14) int value = this.gSmart1or2();
+		@Pc(16) int value2 = 0;
+		while (value == 32767) {
+			value = this.gSmart1or2();
+			value2 += 32767;
 		}
-		return local16 + local14;
+		return value2 + value;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(II[BI)V")
-	public final void method2200(@OriginalArg(1) int arg0, @OriginalArg(2) byte[] arg1) {
-		for (@Pc(12) int local12 = arg0 - 1; local12 >= 0; local12--) {
-			arg1[local12] = this.aByteArray40[this.anInt2792++];
+	public final void gBytesRev(@OriginalArg(1) int offset, @OriginalArg(2) byte[] dest) {
+		for (@Pc(12) int i = offset - 1; i >= 0; i--) {
+			dest[i] = this.data[this.offset++];
 		}
 	}
 
 	@OriginalMember(owner = "client!wa", name = "j", descriptor = "(II)V")
-	public final void method2201(@OriginalArg(0) int arg0) {
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 8);
-		this.aByteArray40[this.anInt2792++] = (byte) arg0;
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 24);
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 16);
+	public final void p4rme(@OriginalArg(0) int value) {
+		this.data[this.offset++] = (byte) (value >> 8);
+		this.data[this.offset++] = (byte) value;
+		this.data[this.offset++] = (byte) (value >> 24);
+		this.data[this.offset++] = (byte) (value >> 16);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "e", descriptor = "(Z)Lclient!na;")
-	public final JagString method2202() {
-		@Pc(12) int local12 = this.anInt2792;
-		while (this.aByteArray40[this.anInt2792++] != 0) {
+	public final JagString gjstr() {
+		@Pc(12) int local12 = this.offset;
+		while (this.data[this.offset++] != 0) {
 		}
-		return Static10.method346(this.aByteArray40, this.anInt2792 - local12 - 1, local12);
+		return Static10.decodeString(this.data, this.offset - local12 - 1, local12);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "f", descriptor = "(Z)I")
-	public final int method2204() {
-		@Pc(17) int local17 = this.aByteArray40[this.anInt2792] & 0xFF;
-		return local17 >= 128 ? this.method2163() - 32768 : this.method2229();
+	public final int gSmart1or2() {
+		@Pc(17) int local17 = this.data[this.offset] & 0xFF;
+		return local17 >= 128 ? this.g2() - 0x8000 : this.g1();
 	}
 
 	@OriginalMember(owner = "client!wa", name = "k", descriptor = "(II)V")
-	public final void method2205(@OriginalArg(0) int arg0) {
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 16);
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 8);
-		this.aByteArray40[this.anInt2792++] = (byte) arg0;
+	public final void p3(@OriginalArg(0) int value) {
+		this.data[this.offset++] = (byte) (value >> 16);
+		this.data[this.offset++] = (byte) (value >> 8);
+		this.data[this.offset++] = (byte) value;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "k", descriptor = "(I)I")
-	public final int method2206() {
-		this.anInt2792 += 4;
-		return ((this.aByteArray40[this.anInt2792 - 2] & 0xFF) << 24) + ((this.aByteArray40[this.anInt2792 - 1] & 0xFF) << 16) + ((this.aByteArray40[this.anInt2792 + -4] & 0xFF) << 8) + (this.aByteArray40[this.anInt2792 + -3] & 0xFF);
+	public final int g4rme() {
+		this.offset += 4;
+		return ((this.data[this.offset - 2] & 0xFF) << 24) + ((this.data[this.offset - 1] & 0xFF) << 16) + ((this.data[this.offset - 4] & 0xFF) << 8) + (this.data[this.offset - 3] & 0xFF);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "k", descriptor = "(B)I")
-	public final int method2207() {
-		this.anInt2792 += 2;
-		return ((this.aByteArray40[this.anInt2792 - 1] & 0xFF) << 8) + (this.aByteArray40[this.anInt2792 - 2] - 128 & 0xFF);
+	public final int g2leadd() {
+		this.offset += 2;
+		return ((this.data[this.offset - 1] & 0xFF) << 8) + (this.data[this.offset - 2] - 128 & 0xFF);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "l", descriptor = "(I)I")
-	public final int method2208() {
-		this.anInt2792 += 4;
-		return (this.aByteArray40[this.anInt2792 - 4] & 0xFF) + ((this.aByteArray40[this.anInt2792 - 2] & 0xFF) << 16) + ((this.aByteArray40[this.anInt2792 + -1] & 0xFF) << 24) + ((this.aByteArray40[this.anInt2792 + -3] & 0xFF) << 8);
+	public final int g4me() {
+		this.offset += 4;
+		return ((this.data[this.offset - 2] & 0xFF) << 16) + ((this.data[this.offset - 1] & 0xFF) << 24) + ((this.data[this.offset - 3] & 0xFF) << 8) + (this.data[this.offset - 4] & 0xFF);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "l", descriptor = "(II)V")
-	public final void method2209(@OriginalArg(0) int arg0) {
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 8);
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 + 128);
+	public final void p2add(@OriginalArg(0) int value) {
+		this.data[this.offset++] = (byte) (value >> 8);
+		this.data[this.offset++] = (byte) (value + 128);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "b", descriptor = "(IB)V")
-	public final void method2211(@OriginalArg(0) int arg0) {
-		this.aByteArray40[this.anInt2792++] = (byte) arg0;
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 8);
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 16);
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 24);
+	public final void p4le2(@OriginalArg(0) int value) {
+		this.data[this.offset++] = (byte) value;
+		this.data[this.offset++] = (byte) (value >> 8);
+		this.data[this.offset++] = (byte) (value >> 16);
+		this.data[this.offset++] = (byte) (value >> 24);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "g", descriptor = "(Z)I")
-	public final int method2212() {
-		return -this.aByteArray40[this.anInt2792++] & 0xFF;
+	public final int p1neg() {
+		return -this.data[this.offset++] & 0xFF;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "l", descriptor = "(B)I")
-	public final int method2213() {
-		this.anInt2792 += 2;
-		@Pc(27) int local27 = (this.aByteArray40[this.anInt2792 - 1] & 0xFF) + ((this.aByteArray40[this.anInt2792 - 2] & 0xFF) << 8);
-		if (local27 > 32767) {
-			local27 -= 65536;
+	public final int g2s() {
+		this.offset += 2;
+		@Pc(27) int value = ((this.data[this.offset - 2] & 0xFF) << 8) + (this.data[this.offset - 1] & 0xFF);
+		if (value > 32767) {
+			value -= 0x10000;
 		}
-		return local27;
+		return value;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "m", descriptor = "(I)I")
-	public final int method2214() {
-		this.anInt2792 += 2;
-		@Pc(34) int local34 = ((this.aByteArray40[this.anInt2792 - 1] & 0xFF) << 8) + (this.aByteArray40[this.anInt2792 - 2] - 128 & 0xFF);
-		if (local34 > 32767) {
-			local34 -= 65536;
+	public final int g2lesadd() {
+		this.offset += 2;
+		@Pc(34) int value = ((this.data[this.offset - 1] & 0xFF) << 8) + (this.data[this.offset - 2] - 128 & 0xFF);
+		if (value > 32767) {
+			value -= 0x10000;
 		}
-		return local34;
+		return value;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "n", descriptor = "(I)B")
-	public final byte method2215() {
-		return (byte) (this.aByteArray40[this.anInt2792++] - 128);
+	public final byte p1sub() {
+		return (byte) (this.data[this.offset++] - 128);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "m", descriptor = "(II)V")
-	public final void method2216(@OriginalArg(0) int arg0) {
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 + 128);
+	public final void p1a(@OriginalArg(0) int value) {
+		this.data[this.offset++] = (byte) (value + 128);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "m", descriptor = "(B)I")
-	public final int method2217() {
-		this.anInt2792 += 2;
-		@Pc(38) int local38 = (this.aByteArray40[this.anInt2792 - 2] & 0xFF) + ((this.aByteArray40[this.anInt2792 - 1] & 0xFF) << 8);
-		if (local38 > 32767) {
-			local38 -= 65536;
+	public final int g2les() {
+		this.offset += 2;
+		@Pc(38) int value = (this.data[this.offset - 2] & 0xFF) + ((this.data[this.offset - 1] & 0xFF) << 8);
+		if (value > 32767) {
+			value -= 0x10000;
 		}
-		return local38;
+		return value;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "c", descriptor = "(BI)I")
-	public final int method2219(@OriginalArg(1) int arg0) {
-		@Pc(16) int local16 = Static169.method3178(arg0, this.anInt2792, this.aByteArray40);
-		this.method2164(local16);
-		return local16;
+	public final int pCrc32(@OriginalArg(1) int off) {
+		@Pc(16) int checksum = Static169.crc32(off, this.offset, this.data);
+		this.p4(checksum);
+		return checksum;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "n", descriptor = "(B)I")
-	public final int method2220() {
-		this.anInt2792 += 3;
-		return ((this.aByteArray40[this.anInt2792 - 3] & 0xFF) << 16) + ((this.aByteArray40[this.anInt2792 - 2] << 8 & 0xFF00) + (this.aByteArray40[this.anInt2792 - 1] & 0xFF));
+	public final int g3() {
+		this.offset += 3;
+		return ((this.data[this.offset - 3] & 0xFF) << 16) + ((this.data[this.offset - 2] << 8 & 0xFF00) + (this.data[this.offset - 1] & 0xFF));
 	}
 
 	@OriginalMember(owner = "client!wa", name = "n", descriptor = "(II)V")
-	public final void method2222(@OriginalArg(1) int arg0) {
-		this.aByteArray40[this.anInt2792++] = (byte) arg0;
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 8);
+	public final void p2le(@OriginalArg(1) int value) {
+		this.data[this.offset++] = (byte) value;
+		this.data[this.offset++] = (byte) (value >> 8);
 	}
 
+	// range: -16384 to 16383
 	@OriginalMember(owner = "client!wa", name = "p", descriptor = "(I)I")
-	public final int method2223() {
-		@Pc(11) int local11 = this.aByteArray40[this.anInt2792] & 0xFF;
-		return local11 < 128 ? this.method2229() - 64 : this.method2163() - 49152;
+	public final int gSmart1or2s() {
+		@Pc(11) int value = this.data[this.offset] & 0xFF;
+		return value < 128 ? this.g1() - 64 : this.g2() - 0xc000;
 	}
 
+	// reverse "middle-endian"
 	@OriginalMember(owner = "client!wa", name = "o", descriptor = "(B)I")
-	public final int method2224() {
-		this.anInt2792 += 4;
-		return ((this.aByteArray40[this.anInt2792 - 3] & 0xFF) << 24) + ((this.aByteArray40[this.anInt2792 - 4] & 0xFF) << 16) + ((this.aByteArray40[this.anInt2792 + -1] & 0xFF) << 8) + (this.aByteArray40[this.anInt2792 + -2] & 0xFF);
+	public final int p4rme() {
+		this.offset += 4;
+		return ((this.data[this.offset - 3] & 0xFF) << 24) + ((this.data[this.offset - 4] & 0xFF) << 16) + ((this.data[this.offset - 1] & 0xFF) << 8) + (this.data[this.offset - 2] & 0xFF);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(Ljava/math/BigInteger;Ljava/math/BigInteger;I)V")
-	public final void method2226(@OriginalArg(0) BigInteger arg0, @OriginalArg(1) BigInteger arg1) {
-		@Pc(2) int local2 = this.anInt2792;
-		this.anInt2792 = 0;
-		@Pc(8) byte[] local8 = new byte[local2];
-		this.method2190(local2, local8);
-		@Pc(23) BigInteger local23 = new BigInteger(local8);
-		@Pc(28) BigInteger local28 = local23.modPow(arg0, arg1);
-		@Pc(38) byte[] local38 = local28.toByteArray();
-		this.anInt2792 = 0;
-		this.method2178(local38.length);
-		this.method2179(local38, local38.length);
+	public final void encryptRsa(@OriginalArg(0) BigInteger exp, @OriginalArg(1) BigInteger mod) {
+		@Pc(2) int len = this.offset;
+		this.offset = 0;
+		@Pc(8) byte[] plaintextBytes = new byte[len];
+		this.gBytes(len, plaintextBytes);
+		@Pc(23) BigInteger plaintext = new BigInteger(plaintextBytes);
+		@Pc(28) BigInteger ciphertext = plaintext.modPow(exp, mod);
+		@Pc(38) byte[] ciphertextBytes = ciphertext.toByteArray();
+		this.offset = 0;
+		this.p1(ciphertextBytes.length);
+		this.pBytes(ciphertextBytes, ciphertextBytes.length);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(IF)V")
-	public final void method2227(@OriginalArg(1) float arg0) {
-		@Pc(6) int local6 = Float.floatToRawIntBits(arg0);
-		this.aByteArray40[this.anInt2792++] = (byte) (local6 >> 24);
-		this.aByteArray40[this.anInt2792++] = (byte) (local6 >> 16);
-		this.aByteArray40[this.anInt2792++] = (byte) (local6 >> 8);
-		this.aByteArray40[this.anInt2792++] = (byte) local6;
+	public final void pFloat(@OriginalArg(1) float value) {
+		@Pc(6) int floatInt = Float.floatToRawIntBits(value);
+		this.data[this.offset++] = (byte) (floatInt >> 24);
+		this.data[this.offset++] = (byte) (floatInt >> 16);
+		this.data[this.offset++] = (byte) (floatInt >> 8);
+		this.data[this.offset++] = (byte) floatInt;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "p", descriptor = "(B)I")
-	public final int method2229() {
-		return this.aByteArray40[this.anInt2792++] & 0xFF;
+	public final int g1() {
+		return this.data[this.offset++] & 0xFF;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "o", descriptor = "(II)V")
-	public final void method2230(@OriginalArg(1) int arg0) {
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 >> 8);
-		this.aByteArray40[this.anInt2792++] = (byte) arg0;
+	public final void p2(@OriginalArg(1) int value) {
+		this.data[this.offset++] = (byte) (value >> 8);
+		this.data[this.offset++] = (byte) value;
 	}
 }

@@ -34,11 +34,11 @@ public final class Static271 {
 		if (Static121.aClass38_3 != null) {
 			try {
 				Static121.aClass38_3.method1459(0L);
-				Static121.aClass38_3.method1458(arg0.aByteArray40, arg0.anInt2792, 24);
+				Static121.aClass38_3.method1458(arg0.data, arg0.offset, 24);
 			} catch (@Pc(16) Exception local16) {
 			}
 		}
-		arg0.anInt2792 += 24;
+		arg0.offset += 24;
 	}
 
 	@OriginalMember(owner = "client!wc", name = "a", descriptor = "(ZI)V")

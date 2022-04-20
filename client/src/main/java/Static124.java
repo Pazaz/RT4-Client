@@ -48,14 +48,14 @@ public final class Static124 {
 		@Pc(10) Buffer local10 = new Buffer(arg2);
 		@Pc(12) int local12 = -1;
 		while (true) {
-			@Pc(16) int local16 = local10.method2199();
+			@Pc(16) int local16 = local10.gVarSmart();
 			if (local16 == 0) {
 				return;
 			}
 			local12 += local16;
 			@Pc(27) int local27 = 0;
 			while (true) {
-				@Pc(31) int local31 = local10.method2204();
+				@Pc(31) int local31 = local10.gSmart1or2();
 				if (local31 == 0) {
 					break;
 				}
@@ -63,7 +63,7 @@ public final class Static124 {
 				@Pc(46) int local46 = local27 & 0x3F;
 				@Pc(50) int local50 = local27 >> 12;
 				@Pc(56) int local56 = local27 >> 6 & 0x3F;
-				@Pc(60) int local60 = local10.method2229();
+				@Pc(60) int local60 = local10.g1();
 				@Pc(64) int local64 = local60 >> 2;
 				@Pc(68) int local68 = local60 & 0x3;
 				@Pc(72) int local72 = arg0 + local56;

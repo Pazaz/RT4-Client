@@ -59,7 +59,7 @@ public final class TextureOp28 extends TextureOp {
 	@Override
 	public final void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		if (arg0 == 0) {
-			this.anInt4971 = arg1.method2163();
+			this.anInt4971 = arg1.g2();
 		}
 	}
 }

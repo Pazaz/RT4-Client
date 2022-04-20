@@ -15,7 +15,7 @@ public final class Static137 {
 
 	@OriginalMember(owner = "client!kl", name = "a", descriptor = "(Lclient!wa;B)Lclient!kc;")
 	public static TextureOp29SubOp2 method2664(@OriginalArg(0) Buffer arg0) {
-		return new TextureOp29SubOp2(arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2213(), arg0.method2220(), arg0.method2220(), arg0.method2229());
+		return new TextureOp29SubOp2(arg0.g2s(), arg0.g2s(), arg0.g2s(), arg0.g2s(), arg0.g3(), arg0.g3(), arg0.g1());
 	}
 
 	@OriginalMember(owner = "client!kl", name = "b", descriptor = "(II)Z")

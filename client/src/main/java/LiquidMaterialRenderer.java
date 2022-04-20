@@ -37,20 +37,20 @@ public final class LiquidMaterialRenderer implements MaterialRenderer {
 				@Pc(71) int[] local71 = local53[local60];
 				for (@Pc(73) int local73 = 0; local73 < 64; local73++) {
 					if (Static239.aBoolean263) {
-						local58.method2227((float) local67[local73] / 4096.0F);
-						local58.method2227((float) local71[local73] / 4096.0F);
-						local58.method2227(1.0F);
-						local58.method2227(1.0F);
+						local58.pFloat((float) local67[local73] / 4096.0F);
+						local58.pFloat((float) local71[local73] / 4096.0F);
+						local58.pFloat(1.0F);
+						local58.pFloat(1.0F);
 					} else {
-						local58.method2188((float) local67[local73] / 4096.0F);
-						local58.method2188((float) local71[local73] / 4096.0F);
-						local58.method2188(1.0F);
-						local58.method2188(1.0F);
+						local58.gFloat((float) local67[local73] / 4096.0F);
+						local58.gFloat((float) local71[local73] / 4096.0F);
+						local58.gFloat(1.0F);
+						local58.gFloat(1.0F);
 					}
 				}
 			}
-			@Pc(141) ByteBuffer local141 = ByteBuffer.allocateDirect(local58.anInt2792).order(ByteOrder.nativeOrder());
-			local141.put(local58.aByteArray40, 0, local58.anInt2792);
+			@Pc(141) ByteBuffer local141 = ByteBuffer.allocateDirect(local58.offset).order(ByteOrder.nativeOrder());
+			local141.put(local58.data, 0, local58.offset);
 			local141.flip();
 			this.aFloatBuffer1 = local141.asFloatBuffer().asReadOnlyBuffer();
 			this.method3719();

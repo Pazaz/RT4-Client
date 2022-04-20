@@ -39,7 +39,7 @@ public final class FloType {
 	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(ILclient!wa;I)V")
 	public final void method4669(@OriginalArg(1) Buffer arg0, @OriginalArg(2) int arg1) {
 		while (true) {
-			@Pc(5) int local5 = arg0.method2229();
+			@Pc(5) int local5 = arg0.g1();
 			if (local5 == 0) {
 				return;
 			}
@@ -50,32 +50,32 @@ public final class FloType {
 	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(IILclient!wa;I)V")
 	private void method4674(@OriginalArg(1) int arg0, @OriginalArg(2) Buffer arg1, @OriginalArg(3) int arg2) {
 		if (arg0 == 1) {
-			this.anInt5899 = Static15.method492(arg1.method2220());
+			this.anInt5899 = Static15.method492(arg1.g3());
 		} else if (arg0 == 2) {
-			this.anInt5892 = arg1.method2229();
+			this.anInt5892 = arg1.g1();
 		} else if (arg0 == 3) {
-			this.anInt5892 = arg1.method2163();
+			this.anInt5892 = arg1.g2();
 			if (this.anInt5892 == 65535) {
 				this.anInt5892 = -1;
 			}
 		} else if (arg0 == 5) {
 			this.aBoolean312 = false;
 		} else if (arg0 == 7) {
-			this.anInt5894 = Static15.method492(arg1.method2220());
+			this.anInt5894 = Static15.method492(arg1.g3());
 		} else if (arg0 == 8) {
 			Static26.anInt865 = arg2;
 		} else if (arg0 == 9) {
-			this.anInt5885 = arg1.method2163();
+			this.anInt5885 = arg1.g2();
 		} else if (arg0 == 10) {
 			this.aBoolean311 = false;
 		} else if (arg0 == 11) {
-			this.anInt5897 = arg1.method2229();
+			this.anInt5897 = arg1.g1();
 		} else if (arg0 == 12) {
 			this.aBoolean310 = true;
 		} else if (arg0 == 13) {
-			this.anInt5889 = arg1.method2220();
+			this.anInt5889 = arg1.g3();
 		} else if (arg0 == 14) {
-			this.anInt5898 = arg1.method2229();
+			this.anInt5898 = arg1.g1();
 		}
 	}
 }

@@ -133,7 +133,7 @@ public final class Static239 {
 		} catch (@Pc(5) UnsupportedEncodingException local5) {
 			local3 = arg0.getBytes();
 		}
-		return Static10.method346(local3, local3.length, 0);
+		return Static10.decodeString(local3, local3.length, 0);
 	}
 
 	@OriginalMember(owner = "client!tf", name = "a", descriptor = "(IIII)V")
@@ -441,7 +441,7 @@ public final class Static239 {
 			@Pc(193) JagString[] local193 = local176.method3145().method3147(32);
 			for (@Pc(195) int local195 = 0; local195 < local193.length; local195++) {
 				@Pc(203) JagString local203 = local193[local195];
-				if (local203.method3120() >= 4 && local203.method3137(4, 0).method3123()) {
+				if (local203.length() >= 4 && local203.method3137(4, 0).method3123()) {
 					local184 = local203.method3137(4, 0).method3132();
 					break;
 				}

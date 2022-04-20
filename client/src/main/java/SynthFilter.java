@@ -20,22 +20,22 @@ public final class SynthFilter {
 
 	@OriginalMember(owner = "client!nl", name = "a", descriptor = "(Lclient!wa;Lclient!ff;)V")
 	public final void method3249(@OriginalArg(0) Buffer arg0, @OriginalArg(1) SynthEnvelope arg1) {
-		@Pc(3) int local3 = arg0.method2229();
+		@Pc(3) int local3 = arg0.g1();
 		this.anIntArray368[0] = local3 >> 4;
 		this.anIntArray368[1] = local3 & 0xF;
 		if (local3 == 0) {
 			this.anIntArray369[0] = this.anIntArray369[1] = 0;
 			return;
 		}
-		this.anIntArray369[0] = arg0.method2163();
-		this.anIntArray369[1] = arg0.method2163();
-		@Pc(37) int local37 = arg0.method2229();
+		this.anIntArray369[0] = arg0.g2();
+		this.anIntArray369[1] = arg0.g2();
+		@Pc(37) int local37 = arg0.g1();
 		@Pc(39) int local39;
 		@Pc(44) int local44;
 		for (local39 = 0; local39 < 2; local39++) {
 			for (local44 = 0; local44 < this.anIntArray368[local39]; local44++) {
-				this.anIntArrayArrayArray14[local39][0][local44] = arg0.method2163();
-				this.anIntArrayArrayArray15[local39][0][local44] = arg0.method2163();
+				this.anIntArrayArrayArray14[local39][0][local44] = arg0.g2();
+				this.anIntArrayArrayArray15[local39][0][local44] = arg0.g2();
 			}
 		}
 		for (local39 = 0; local39 < 2; local39++) {
@@ -44,8 +44,8 @@ public final class SynthFilter {
 					this.anIntArrayArrayArray14[local39][1][local44] = this.anIntArrayArrayArray14[local39][0][local44];
 					this.anIntArrayArrayArray15[local39][1][local44] = this.anIntArrayArrayArray15[local39][0][local44];
 				} else {
-					this.anIntArrayArrayArray14[local39][1][local44] = arg0.method2163();
-					this.anIntArrayArrayArray15[local39][1][local44] = arg0.method2163();
+					this.anIntArrayArrayArray14[local39][1][local44] = arg0.g2();
+					this.anIntArrayArrayArray15[local39][1][local44] = arg0.g2();
 				}
 			}
 		}

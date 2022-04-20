@@ -58,7 +58,7 @@ public final class Static69 {
 				}
 				Static185.anInt4369 = Static119.anInt3028;
 				Static6.aClass3_Sub15_Sub1_1.method2242(213);
-				Static6.aClass3_Sub15_Sub1_1.method2166(arg0);
+				Static6.aClass3_Sub15_Sub1_1.p8(arg0);
 				break;
 			}
 		}
@@ -181,8 +181,8 @@ public final class Static69 {
 	@OriginalMember(owner = "client!fh", name = "a", descriptor = "(Lclient!wa;I)V")
 	public static void method1546(@OriginalArg(0) Buffer arg0) {
 		for (@Pc(7) int local7 = 0; local7 < Static106.anInt2871; local7++) {
-			@Pc(18) int local18 = arg0.method2204();
-			@Pc(22) int local22 = arg0.method2163();
+			@Pc(18) int local18 = arg0.gSmart1or2();
+			@Pc(22) int local22 = arg0.g2();
 			if (local22 == 65535) {
 				local22 = -1;
 			}

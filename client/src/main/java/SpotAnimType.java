@@ -48,7 +48,7 @@ public final class SpotAnimType {
 	@OriginalMember(owner = "client!eg", name = "a", descriptor = "(Lclient!wa;B)V")
 	public final void method1316(@OriginalArg(0) Buffer arg0) {
 		while (true) {
-			@Pc(17) int local17 = arg0.method2229();
+			@Pc(17) int local17 = arg0.g1();
 			if (local17 == 0) {
 				return;
 			}
@@ -59,39 +59,39 @@ public final class SpotAnimType {
 	@OriginalMember(owner = "client!eg", name = "a", descriptor = "(Lclient!wa;II)V")
 	private void method1318(@OriginalArg(0) Buffer arg0, @OriginalArg(1) int arg1) {
 		if (arg1 == 1) {
-			this.anInt1753 = arg0.method2163();
+			this.anInt1753 = arg0.g2();
 		} else if (arg1 == 2) {
-			this.anInt1754 = arg0.method2163();
+			this.anInt1754 = arg0.g2();
 		} else if (arg1 == 4) {
-			this.anInt1745 = arg0.method2163();
+			this.anInt1745 = arg0.g2();
 		} else if (arg1 == 5) {
-			this.anInt1752 = arg0.method2163();
+			this.anInt1752 = arg0.g2();
 		} else if (arg1 == 6) {
-			this.anInt1755 = arg0.method2163();
+			this.anInt1755 = arg0.g2();
 		} else if (arg1 == 7) {
-			this.anInt1749 = arg0.method2229();
+			this.anInt1749 = arg0.g1();
 		} else if (arg1 == 8) {
-			this.anInt1748 = arg0.method2229();
+			this.anInt1748 = arg0.g1();
 		} else if (arg1 == 9) {
 			this.aBoolean100 = true;
 		} else {
 			@Pc(78) int local78;
 			@Pc(88) int local88;
 			if (arg1 == 40) {
-				local78 = arg0.method2229();
+				local78 = arg0.g1();
 				this.aShortArray15 = new short[local78];
 				this.aShortArray18 = new short[local78];
 				for (local88 = 0; local88 < local78; local88++) {
-					this.aShortArray15[local88] = (short) arg0.method2163();
-					this.aShortArray18[local88] = (short) arg0.method2163();
+					this.aShortArray15[local88] = (short) arg0.g2();
+					this.aShortArray18[local88] = (short) arg0.g2();
 				}
 			} else if (arg1 == 41) {
-				local78 = arg0.method2229();
+				local78 = arg0.g1();
 				this.aShortArray16 = new short[local78];
 				this.aShortArray17 = new short[local78];
 				for (local88 = 0; local88 < local78; local88++) {
-					this.aShortArray16[local88] = (short) arg0.method2163();
-					this.aShortArray17[local88] = (short) arg0.method2163();
+					this.aShortArray16[local88] = (short) arg0.g2();
+					this.aShortArray17[local88] = (short) arg0.g2();
 				}
 			}
 		}

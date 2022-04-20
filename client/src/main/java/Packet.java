@@ -19,13 +19,13 @@ public final class Packet extends Buffer {
 
 	@OriginalMember(owner = "client!i", name = "q", descriptor = "(B)V")
 	public final void method2233() {
-		this.anInt2846 = this.anInt2792 * 8;
+		this.anInt2846 = this.offset * 8;
 	}
 
 	@OriginalMember(owner = "client!i", name = "a", descriptor = "(BI[BI)V")
 	public final void method2237(@OriginalArg(2) byte[] arg0, @OriginalArg(3) int arg1) {
 		for (@Pc(17) int local17 = 0; local17 < arg1; local17++) {
-			arg0[local17] = (byte) (this.aByteArray40[this.anInt2792++] - this.aClass71_1.method2295());
+			arg0[local17] = (byte) (this.data[this.offset++] - this.aClass71_1.method2295());
 		}
 	}
 
@@ -36,14 +36,14 @@ public final class Packet extends Buffer {
 		@Pc(16) int local16 = 0;
 		this.anInt2846 += arg0;
 		while (local14 < arg0) {
-			local16 += (Static18.anIntArray57[local14] & this.aByteArray40[local6++]) << arg0 - local14;
+			local16 += (Static18.anIntArray57[local14] & this.data[local6++]) << arg0 - local14;
 			arg0 -= local14;
 			local14 = 8;
 		}
 		if (local14 == arg0) {
-			local16 += this.aByteArray40[local6] & Static18.anIntArray57[local14];
+			local16 += this.data[local6] & Static18.anIntArray57[local14];
 		} else {
-			local16 += this.aByteArray40[local6] >> local14 - arg0 & Static18.anIntArray57[arg0];
+			local16 += this.data[local6] >> local14 - arg0 & Static18.anIntArray57[arg0];
 		}
 		return local16;
 	}
@@ -60,16 +60,16 @@ public final class Packet extends Buffer {
 
 	@OriginalMember(owner = "client!i", name = "r", descriptor = "(II)V")
 	public final void method2242(@OriginalArg(1) int arg0) {
-		this.aByteArray40[this.anInt2792++] = (byte) (arg0 + this.aClass71_1.method2295());
+		this.data[this.offset++] = (byte) (arg0 + this.aClass71_1.method2295());
 	}
 
 	@OriginalMember(owner = "client!i", name = "s", descriptor = "(I)I")
 	public final int method2243() {
-		return this.aByteArray40[this.anInt2792++] - this.aClass71_1.method2295() & 0xFF;
+		return this.data[this.offset++] - this.aClass71_1.method2295() & 0xFF;
 	}
 
 	@OriginalMember(owner = "client!i", name = "h", descriptor = "(Z)V")
 	public final void method2244() {
-		this.anInt2792 = (this.anInt2846 + 7) / 8;
+		this.offset = (this.anInt2846 + 7) / 8;
 	}
 }

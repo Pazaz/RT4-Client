@@ -75,20 +75,20 @@ public final class SynthEnvelope {
 
 	@OriginalMember(owner = "client!ff", name = "a", descriptor = "(Lclient!wa;)V")
 	public final void method1514(@OriginalArg(0) Buffer arg0) {
-		this.anInt1957 = arg0.method2229();
+		this.anInt1957 = arg0.g1();
 		this.anIntArray157 = new int[this.anInt1957];
 		this.anIntArray156 = new int[this.anInt1957];
 		for (@Pc(16) int local16 = 0; local16 < this.anInt1957; local16++) {
-			this.anIntArray157[local16] = arg0.method2163();
-			this.anIntArray156[local16] = arg0.method2163();
+			this.anIntArray157[local16] = arg0.g2();
+			this.anIntArray156[local16] = arg0.g2();
 		}
 	}
 
 	@OriginalMember(owner = "client!ff", name = "b", descriptor = "(Lclient!wa;)V")
 	public final void method1515(@OriginalArg(0) Buffer arg0) {
-		this.anInt1958 = arg0.method2229();
-		this.anInt1959 = arg0.method2174();
-		this.anInt1960 = arg0.method2174();
+		this.anInt1958 = arg0.g1();
+		this.anInt1959 = arg0.g4();
+		this.anInt1960 = arg0.g4();
 		this.method1514(arg0);
 	}
 }

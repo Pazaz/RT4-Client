@@ -157,11 +157,11 @@ public final class TextureOpCurve extends TextureOp {
 		if (arg0 != 0) {
 			return;
 		}
-		this.anInt5852 = arg1.method2229();
-		this.anIntArrayArray47 = new int[arg1.method2229()][2];
+		this.anInt5852 = arg1.g1();
+		this.anIntArrayArray47 = new int[arg1.g1()][2];
 		for (@Pc(23) int local23 = 0; local23 < this.anIntArrayArray47.length; local23++) {
-			this.anIntArrayArray47[local23][0] = arg1.method2163();
-			this.anIntArrayArray47[local23][1] = arg1.method2163();
+			this.anIntArrayArray47[local23][0] = arg1.g2();
+			this.anIntArrayArray47[local23][1] = arg1.g2();
 		}
 	}
 

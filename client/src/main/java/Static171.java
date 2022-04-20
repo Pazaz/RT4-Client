@@ -25,7 +25,7 @@ public final class Static171 {
 
 	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(ILclient!na;)I")
 	public static int method3218(@OriginalArg(1) JagString arg0) {
-		if (Static203.aClass134_1 == null || arg0.method3120() == 0) {
+		if (Static203.aClass134_1 == null || arg0.length() == 0) {
 			return -1;
 		}
 		for (@Pc(20) int local20 = 0; local20 < Static203.aClass134_1.anInt5074; local20++) {
@@ -55,7 +55,7 @@ public final class Static171 {
 	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(ILclient!na;I)V")
 	public static void method3221(@OriginalArg(1) JagString arg0, @OriginalArg(2) int arg1) {
 		Static6.aClass3_Sub15_Sub1_1.method2242(188);
-		Static6.aClass3_Sub15_Sub1_1.method2216(arg1);
-		Static6.aClass3_Sub15_Sub1_1.method2166(arg0.method3158());
+		Static6.aClass3_Sub15_Sub1_1.p1a(arg1);
+		Static6.aClass3_Sub15_Sub1_1.p8(arg0.method3158());
 	}
 }

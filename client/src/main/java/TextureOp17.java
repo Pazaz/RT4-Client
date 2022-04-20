@@ -64,21 +64,21 @@ public final class TextureOp17 extends TextureOp {
 	@Override
 	public final void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		if (arg0 == 0) {
-			this.anInt3685 = arg1.method2229();
+			this.anInt3685 = arg1.g1();
 		} else if (arg0 == 1) {
-			this.anInt3677 = arg1.method2229();
+			this.anInt3677 = arg1.g1();
 		} else if (arg0 == 2) {
-			this.anInt3681 = arg1.method2163();
+			this.anInt3681 = arg1.g2();
 		} else if (arg0 == 3) {
-			this.anInt3667 = arg1.method2163();
+			this.anInt3667 = arg1.g2();
 		} else if (arg0 == 4) {
-			this.anInt3678 = arg1.method2163();
+			this.anInt3678 = arg1.g2();
 		} else if (arg0 == 5) {
-			this.anInt3675 = arg1.method2163();
+			this.anInt3675 = arg1.g2();
 		} else if (arg0 == 6) {
-			this.anInt3672 = arg1.method2163();
+			this.anInt3672 = arg1.g2();
 		} else if (arg0 == 7) {
-			this.anInt3673 = arg1.method2163();
+			this.anInt3673 = arg1.g2();
 		}
 	}
 

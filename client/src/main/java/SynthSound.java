@@ -18,15 +18,15 @@ public final class SynthSound {
 	@OriginalMember(owner = "client!sl", name = "<init>", descriptor = "(Lclient!wa;)V")
 	public SynthSound(@OriginalArg(0) Buffer arg0) {
 		for (@Pc(7) int local7 = 0; local7 < 10; local7++) {
-			@Pc(14) int local14 = arg0.method2229();
+			@Pc(14) int local14 = arg0.g1();
 			if (local14 != 0) {
-				arg0.anInt2792--;
+				arg0.offset--;
 				this.aClass123Array1[local7] = new SynthInstrument();
 				this.aClass123Array1[local7].method3506(arg0);
 			}
 		}
-		this.anInt5207 = arg0.method2163();
-		this.anInt5206 = arg0.method2163();
+		this.anInt5207 = arg0.g2();
+		this.anInt5206 = arg0.g2();
 	}
 
 	@OriginalMember(owner = "client!sl", name = "a", descriptor = "()[B")

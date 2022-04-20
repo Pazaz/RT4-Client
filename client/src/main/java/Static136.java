@@ -42,10 +42,10 @@ public final class Static136 {
 
 	@OriginalMember(owner = "client!kk", name = "b", descriptor = "(Lclient!wa;I)V")
 	public static void method2654(@OriginalArg(0) Buffer arg0) {
-		if (arg0.aByteArray40.length - arg0.anInt2792 < 1) {
+		if (arg0.data.length - arg0.offset < 1) {
 			return;
 		}
-		@Pc(21) int local21 = arg0.method2229();
+		@Pc(21) int local21 = arg0.g1();
 		if (local21 < 0 || local21 > 11) {
 			return;
 		}
@@ -75,84 +75,84 @@ public final class Static136 {
 		} else {
 			local34 = 19;
 		}
-		if (arg0.aByteArray40.length - arg0.anInt2792 < local34) {
+		if (arg0.data.length - arg0.offset < local34) {
 			return;
 		}
-		Static113.anInt4609 = arg0.method2229();
+		Static113.anInt4609 = arg0.g1();
 		if (Static113.anInt4609 < 1) {
 			Static113.anInt4609 = 1;
 		} else if (Static113.anInt4609 > 4) {
 			Static113.anInt4609 = 4;
 		}
-		Static53.method1293(arg0.method2229() == 1);
-		Static80.aBoolean231 = arg0.method2229() == 1;
-		Static250.aBoolean283 = arg0.method2229() == 1;
-		Static53.aBoolean99 = arg0.method2229() == 1;
-		Static15.aBoolean33 = arg0.method2229() == 1;
-		Static11.aBoolean15 = arg0.method2229() == 1;
-		Static159.aBoolean189 = arg0.method2229() == 1;
-		Static209.aBoolean240 = arg0.method2229() == 1;
-		Static139.anInt3451 = arg0.method2229();
+		Static53.method1293(arg0.g1() == 1);
+		Static80.aBoolean231 = arg0.g1() == 1;
+		Static250.aBoolean283 = arg0.g1() == 1;
+		Static53.aBoolean99 = arg0.g1() == 1;
+		Static15.aBoolean33 = arg0.g1() == 1;
+		Static11.aBoolean15 = arg0.g1() == 1;
+		Static159.aBoolean189 = arg0.g1() == 1;
+		Static209.aBoolean240 = arg0.g1() == 1;
+		Static139.anInt3451 = arg0.g1();
 		if (Static139.anInt3451 > 2) {
 			Static139.anInt3451 = 2;
 		}
 		if (local21 < 2) {
-			Static178.aBoolean202 = arg0.method2229() == 1;
-			arg0.method2229();
+			Static178.aBoolean202 = arg0.g1() == 1;
+			arg0.g1();
 		} else {
-			Static178.aBoolean202 = arg0.method2229() == 1;
+			Static178.aBoolean202 = arg0.g1() == 1;
 		}
-		Static220.aBoolean244 = arg0.method2229() == 1;
-		Static71.aBoolean107 = arg0.method2229() == 1;
-		Static102.anInt2679 = arg0.method2229();
+		Static220.aBoolean244 = arg0.g1() == 1;
+		Static71.aBoolean107 = arg0.g1() == 1;
+		Static102.anInt2679 = arg0.g1();
 		if (Static102.anInt2679 > 2) {
 			Static102.anInt2679 = 2;
 		}
 		Static186.anInt4392 = Static102.anInt2679;
-		Static99.aBoolean143 = arg0.method2229() == 1;
-		Static125.anInt3104 = arg0.method2229();
+		Static99.aBoolean143 = arg0.g1() == 1;
+		Static125.anInt3104 = arg0.g1();
 		if (Static125.anInt3104 > 127) {
 			Static125.anInt3104 = 127;
 		}
-		Static12.anInt391 = arg0.method2229();
-		Static30.anInt978 = arg0.method2229();
+		Static12.anInt391 = arg0.g1();
+		Static30.anInt978 = arg0.g1();
 		if (Static30.anInt978 > 127) {
 			Static30.anInt978 = 127;
 		}
 		if (local21 >= 1) {
-			Static114.anInt5831 = arg0.method2163();
-			Static22.anInt729 = arg0.method2163();
+			Static114.anInt5831 = arg0.g2();
+			Static22.anInt729 = arg0.g2();
 		}
 		if (local21 >= 3 && local21 < 6) {
-			arg0.method2229();
+			arg0.g1();
 		}
 		if (local21 >= 4) {
-			@Pc(386) int local386 = arg0.method2229();
+			@Pc(386) int local386 = arg0.g1();
 			if (Static238.anInt5316 < 96) {
 				local386 = 0;
 			}
 			Static76.method1645(local386);
 		}
 		if (local21 >= 5) {
-			Static164.anInt3988 = arg0.method2174();
+			Static164.anInt3988 = arg0.g4();
 		}
 		if (local21 >= 6) {
-			Static214.anInt5581 = arg0.method2229();
+			Static214.anInt5581 = arg0.g1();
 		}
 		if (local21 >= 7) {
-			Static164.aBoolean191 = arg0.method2229() == 1;
+			Static164.aBoolean191 = arg0.g1() == 1;
 		}
 		if (local21 >= 8) {
-			Static33.aBoolean63 = arg0.method2229() == 1;
+			Static33.aBoolean63 = arg0.g1() == 1;
 		}
 		if (local21 >= 9) {
-			Static141.anInt3474 = arg0.method2229();
+			Static141.anInt3474 = arg0.g1();
 		}
 		if (local21 >= 10) {
-			Static127.aBoolean159 = arg0.method2229() != 0;
+			Static127.aBoolean159 = arg0.g1() != 0;
 		}
 		if (local21 >= 11) {
-			Static64.aBoolean111 = arg0.method2229() != 0;
+			Static64.aBoolean111 = arg0.g1() != 0;
 		}
 	}
 

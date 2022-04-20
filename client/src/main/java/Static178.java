@@ -43,7 +43,7 @@ public final class Static178 {
 		}
 		if (local24 < Static199.aClass3_Sub22Array1.length && Static199.aClass3_Sub22Array1[local24] != null) {
 			Static6.aClass3_Sub15_Sub1_1.method2242(162);
-			Static6.aClass3_Sub15_Sub1_1.method2166(Static199.aClass3_Sub22Array1[local24].aLong192);
+			Static6.aClass3_Sub15_Sub1_1.p8(Static199.aClass3_Sub22Array1[local24].aLong192);
 		}
 	}
 

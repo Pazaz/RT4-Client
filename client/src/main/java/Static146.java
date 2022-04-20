@@ -24,11 +24,11 @@ public final class Static146 {
 
 	@OriginalMember(owner = "client!lg", name = "a", descriptor = "(ZLclient!wa;Lclient!na;)I")
 	public static int method2748(@OriginalArg(1) Buffer arg0, @OriginalArg(2) JagString arg1) {
-		@Pc(6) int local6 = arg0.anInt2792;
+		@Pc(6) int local6 = arg0.offset;
 		@Pc(14) byte[] local14 = arg1.method3148();
-		arg0.method2194(local14.length);
-		arg0.anInt2792 += Static62.aClass44_1.method1550(local14.length, arg0.aByteArray40, local14, 0, arg0.anInt2792);
-		return arg0.anInt2792 - local6;
+		arg0.pSmart1or2(local14.length);
+		arg0.offset += Static62.aClass44_1.method1550(local14.length, arg0.data, local14, 0, arg0.offset);
+		return arg0.offset - local6;
 	}
 
 	@OriginalMember(owner = "client!lg", name = "a", descriptor = "(Lclient!ve;BII)[Lclient!ok;")

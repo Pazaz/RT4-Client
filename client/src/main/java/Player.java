@@ -68,8 +68,8 @@ public final class Player extends PathingEntity {
 
 	@OriginalMember(owner = "client!e", name = "a", descriptor = "(ILclient!wa;)V")
 	public final void method1262(@OriginalArg(1) Buffer arg0) {
-		arg0.anInt2792 = 0;
-		@Pc(20) int local20 = arg0.method2229();
+		arg0.offset = 0;
+		@Pc(20) int local20 = arg0.g1();
 		@Pc(22) int local22 = -1;
 		@Pc(26) int local26 = local20 & 0x1;
 		@Pc(37) boolean local37 = (local20 & 0x4) != 0;
@@ -79,23 +79,23 @@ public final class Player extends PathingEntity {
 		this.anInt1651 = local20 >> 6 & 0x3;
 		this.anInt3412 += (this.method2693() - local41) * 64;
 		this.anInt3421 += (this.method2693() - local41) * 64;
-		this.anInt1669 = arg0.method2186();
-		this.anInt1649 = arg0.method2186();
+		this.anInt1669 = arg0.g1s();
+		this.anInt1649 = arg0.g1s();
 		this.anInt1650 = 0;
 		@Pc(111) int local111;
 		@Pc(127) int local127;
 		@Pc(134) int local134;
 		@Pc(175) int local175;
 		for (@Pc(102) int local102 = 0; local102 < 12; local102++) {
-			local111 = arg0.method2229();
+			local111 = arg0.g1();
 			if (local111 == 0) {
 				local44[local102] = 0;
 			} else {
-				local127 = arg0.method2229();
+				local127 = arg0.g1();
 				local134 = (local111 << 8) + local127;
 				if (local102 == 0 && local134 == 65535) {
-					local22 = arg0.method2163();
-					this.anInt1650 = arg0.method2229();
+					local22 = arg0.g2();
+					this.anInt1650 = arg0.g1();
 					break;
 				}
 				if (local134 >= 32768) {
@@ -112,30 +112,30 @@ public final class Player extends PathingEntity {
 		}
 		@Pc(197) int[] local197 = new int[5];
 		for (local111 = 0; local111 < 5; local111++) {
-			local127 = arg0.method2229();
+			local127 = arg0.g1();
 			if (local127 < 0 || local127 >= Static33.aShortArrayArray2[local111].length) {
 				local127 = 0;
 			}
 			local197[local111] = local127;
 		}
-		this.anInt3365 = arg0.method2163();
-		@Pc(236) long local236 = arg0.method2182();
+		this.anInt3365 = arg0.g2();
+		@Pc(236) long local236 = arg0.g8();
 		this.aClass100_364 = Static79.method1702(local236).method3125();
-		this.anInt1652 = arg0.method2229();
+		this.anInt1652 = arg0.g1();
 		if (local37) {
-			this.anInt1671 = arg0.method2163();
+			this.anInt1671 = arg0.g2();
 			this.anInt1656 = this.anInt1652;
 			this.anInt1667 = -1;
 		} else {
 			this.anInt1671 = 0;
-			this.anInt1656 = arg0.method2229();
-			this.anInt1667 = arg0.method2229();
+			this.anInt1656 = arg0.g1();
+			this.anInt1667 = arg0.g1();
 			if (this.anInt1667 == 255) {
 				this.anInt1667 = -1;
 			}
 		}
 		local134 = this.anInt1664;
-		this.anInt1664 = arg0.method2229();
+		this.anInt1664 = arg0.g1();
 		if (this.anInt1664 == 0) {
 			Static271.method4597(this);
 		} else {
@@ -143,10 +143,10 @@ public final class Player extends PathingEntity {
 			@Pc(312) int local312 = this.anInt1654;
 			@Pc(315) int local315 = this.anInt1670;
 			local175 = this.anInt1648;
-			this.anInt1648 = arg0.method2163();
-			this.anInt1658 = arg0.method2163();
-			this.anInt1654 = arg0.method2163();
-			this.anInt1670 = arg0.method2163();
+			this.anInt1648 = arg0.g2();
+			this.anInt1658 = arg0.g2();
+			this.anInt1654 = arg0.g2();
+			this.anInt1670 = arg0.g2();
 			if (this.anInt1664 != local134 || this.anInt1648 != local175 || this.anInt1658 != local309 || local312 != this.anInt1654 || this.anInt1670 != local315) {
 				Static214.method4359(this);
 			}

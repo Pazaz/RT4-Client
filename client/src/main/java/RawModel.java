@@ -834,32 +834,32 @@ public final class RawModel extends Entity {
 		@Pc(24) Buffer local24 = new Buffer(arg0);
 		@Pc(29) Buffer local29 = new Buffer(arg0);
 		@Pc(34) Buffer local34 = new Buffer(arg0);
-		local4.anInt2792 = arg0.length - 23;
-		@Pc(44) int local44 = local4.method2163();
-		@Pc(48) int local48 = local4.method2163();
-		@Pc(52) int local52 = local4.method2229();
-		@Pc(56) int local56 = local4.method2229();
+		local4.offset = arg0.length - 23;
+		@Pc(44) int local44 = local4.g2();
+		@Pc(48) int local48 = local4.g2();
+		@Pc(52) int local52 = local4.g1();
+		@Pc(56) int local56 = local4.g1();
 		@Pc(65) boolean local65 = (local56 & 0x1) == 1;
 		@Pc(74) boolean local74 = (local56 & 0x2) == 2;
-		@Pc(78) int local78 = local4.method2229();
-		@Pc(82) int local82 = local4.method2229();
-		@Pc(86) int local86 = local4.method2229();
-		@Pc(90) int local90 = local4.method2229();
-		@Pc(94) int local94 = local4.method2229();
-		@Pc(98) int local98 = local4.method2163();
-		@Pc(102) int local102 = local4.method2163();
-		@Pc(106) int local106 = local4.method2163();
-		@Pc(110) int local110 = local4.method2163();
-		@Pc(114) int local114 = local4.method2163();
+		@Pc(78) int local78 = local4.g1();
+		@Pc(82) int local82 = local4.g1();
+		@Pc(86) int local86 = local4.g1();
+		@Pc(90) int local90 = local4.g1();
+		@Pc(94) int local94 = local4.g1();
+		@Pc(98) int local98 = local4.g2();
+		@Pc(102) int local102 = local4.g2();
+		@Pc(106) int local106 = local4.g2();
+		@Pc(110) int local110 = local4.g2();
+		@Pc(114) int local114 = local4.g2();
 		@Pc(116) int local116 = 0;
 		@Pc(118) int local118 = 0;
 		@Pc(120) int local120 = 0;
 		@Pc(131) int local131;
 		if (local52 > 0) {
 			this.aByteArray29 = new byte[local52];
-			local4.anInt2792 = 0;
+			local4.offset = 0;
 			for (local131 = 0; local131 < local52; local131++) {
-				@Pc(143) byte local143 = this.aByteArray29[local131] = local4.method2186();
+				@Pc(143) byte local143 = this.aByteArray29[local131] = local4.g1s();
 				if (local143 == 0) {
 					local116++;
 				}
@@ -972,11 +972,11 @@ public final class RawModel extends Entity {
 				this.aByteArray33 = new byte[local120];
 			}
 		}
-		local4.anInt2792 = local52;
-		local9.anInt2792 = local250;
-		local14.anInt2792 = local256;
-		local19.anInt2792 = local262;
-		local24.anInt2792 = local201;
+		local4.offset = local52;
+		local9.offset = local250;
+		local14.offset = local256;
+		local19.offset = local262;
+		local24.offset = local201;
 		@Pc(473) int local473 = 0;
 		@Pc(475) int local475 = 0;
 		@Pc(477) int local477 = 0;
@@ -986,18 +986,18 @@ public final class RawModel extends Entity {
 		@Pc(498) int local498;
 		@Pc(508) int local508;
 		for (local479 = 0; local479 < local44; local479++) {
-			local486 = local4.method2229();
+			local486 = local4.g1();
 			local488 = 0;
 			if ((local486 & 0x1) != 0) {
-				local488 = local9.method2223();
+				local488 = local9.gSmart1or2s();
 			}
 			local498 = 0;
 			if ((local486 & 0x2) != 0) {
-				local498 = local14.method2223();
+				local498 = local14.gSmart1or2s();
 			}
 			local508 = 0;
 			if ((local486 & 0x4) != 0) {
-				local508 = local19.method2223();
+				local508 = local19.gSmart1or2s();
 			}
 			this.anIntArray202[local479] = local473 + local488;
 			this.anIntArray201[local479] = local475 + local498;
@@ -1006,54 +1006,54 @@ public final class RawModel extends Entity {
 			local475 = this.anIntArray201[local479];
 			local477 = this.anIntArray203[local479];
 			if (local94 == 1) {
-				this.anIntArray193[local479] = local24.method2229();
+				this.anIntArray193[local479] = local24.g1();
 			}
 		}
-		local4.anInt2792 = local242;
-		local9.anInt2792 = local169;
-		local14.anInt2792 = local183;
-		local19.anInt2792 = local210;
-		local24.anInt2792 = local192;
-		local29.anInt2792 = local225;
-		local34.anInt2792 = local236;
+		local4.offset = local242;
+		local9.offset = local169;
+		local14.offset = local183;
+		local19.offset = local210;
+		local24.offset = local192;
+		local29.offset = local225;
+		local34.offset = local236;
 		for (local479 = 0; local479 < local48; local479++) {
-			this.aShortArray24[local479] = (short) local4.method2163();
+			this.aShortArray24[local479] = (short) local4.g2();
 			if (local65) {
-				this.aByteArray30[local479] = local9.method2186();
+				this.aByteArray30[local479] = local9.g1s();
 			}
 			if (local78 == 255) {
-				this.aByteArray35[local479] = local14.method2186();
+				this.aByteArray35[local479] = local14.g1s();
 			}
 			if (local82 == 1) {
-				this.aByteArray26[local479] = local19.method2186();
+				this.aByteArray26[local479] = local19.g1s();
 			}
 			if (local86 == 1) {
-				this.anIntArray192[local479] = local24.method2229();
+				this.anIntArray192[local479] = local24.g1();
 			}
 			if (local90 == 1) {
-				this.aShortArray23[local479] = (short) (local29.method2163() - 1);
+				this.aShortArray23[local479] = (short) (local29.g2() - 1);
 			}
 			if (this.aByteArray31 != null) {
 				if (this.aShortArray23[local479] == -1) {
 					this.aByteArray31[local479] = -1;
 				} else {
-					this.aByteArray31[local479] = (byte) (local34.method2229() - 1);
+					this.aByteArray31[local479] = (byte) (local34.g1() - 1);
 				}
 			}
 		}
-		local4.anInt2792 = local219;
-		local9.anInt2792 = local177;
+		local4.offset = local219;
+		local9.offset = local177;
 		local479 = 0;
 		local486 = 0;
 		local488 = 0;
 		local498 = 0;
 		@Pc(700) int local700;
 		for (local508 = 0; local508 < local48; local508++) {
-			local700 = local9.method2229();
+			local700 = local9.g1();
 			if (local700 == 1) {
-				local479 = local4.method2223() + local498;
-				local486 = local4.method2223() + local479;
-				local488 = local4.method2223() + local486;
+				local479 = local4.gSmart1or2s() + local498;
+				local486 = local4.gSmart1or2s() + local479;
+				local488 = local4.gSmart1or2s() + local486;
 				local498 = local488;
 				this.anIntArray197[local508] = local479;
 				this.anIntArray200[local508] = local486;
@@ -1061,7 +1061,7 @@ public final class RawModel extends Entity {
 			}
 			if (local700 == 2) {
 				local486 = local488;
-				local488 = local4.method2223() + local498;
+				local488 = local4.gSmart1or2s() + local498;
 				local498 = local488;
 				this.anIntArray197[local508] = local479;
 				this.anIntArray200[local508] = local486;
@@ -1069,7 +1069,7 @@ public final class RawModel extends Entity {
 			}
 			if (local700 == 3) {
 				local479 = local488;
-				local488 = local4.method2223() + local498;
+				local488 = local4.gSmart1or2s() + local498;
 				local498 = local488;
 				this.anIntArray197[local508] = local479;
 				this.anIntArray200[local508] = local486;
@@ -1079,73 +1079,73 @@ public final class RawModel extends Entity {
 				@Pc(803) int local803 = local479;
 				local479 = local486;
 				local486 = local803;
-				local488 = local4.method2223() + local498;
+				local488 = local4.gSmart1or2s() + local498;
 				local498 = local488;
 				this.anIntArray197[local508] = local479;
 				this.anIntArray200[local508] = local803;
 				this.anIntArray196[local508] = local488;
 			}
 		}
-		local4.anInt2792 = local268;
-		local9.anInt2792 = local276;
-		local14.anInt2792 = local284;
-		local19.anInt2792 = local292;
-		local24.anInt2792 = local298;
-		local29.anInt2792 = local304;
+		local4.offset = local268;
+		local9.offset = local276;
+		local14.offset = local284;
+		local19.offset = local292;
+		local24.offset = local298;
+		local29.offset = local304;
 		for (local508 = 0; local508 < local52; local508++) {
 			local700 = this.aByteArray29[local508] & 0xFF;
 			if (local700 == 0) {
-				this.aShortArray26[local508] = (short) local4.method2163();
-				this.aShortArray20[local508] = (short) local4.method2163();
-				this.aShortArray28[local508] = (short) local4.method2163();
+				this.aShortArray26[local508] = (short) local4.g2();
+				this.aShortArray20[local508] = (short) local4.g2();
+				this.aShortArray28[local508] = (short) local4.g2();
 			}
 			if (local700 == 1) {
-				this.aShortArray26[local508] = (short) local9.method2163();
-				this.aShortArray20[local508] = (short) local9.method2163();
-				this.aShortArray28[local508] = (short) local9.method2163();
-				this.aShortArray27[local508] = (short) local14.method2163();
-				this.aShortArray25[local508] = (short) local14.method2163();
-				this.aShortArray21[local508] = (short) local14.method2163();
-				this.aByteArray27[local508] = local19.method2186();
-				this.aByteArray32[local508] = local24.method2186();
-				this.aByteArray34[local508] = local29.method2186();
+				this.aShortArray26[local508] = (short) local9.g2();
+				this.aShortArray20[local508] = (short) local9.g2();
+				this.aShortArray28[local508] = (short) local9.g2();
+				this.aShortArray27[local508] = (short) local14.g2();
+				this.aShortArray25[local508] = (short) local14.g2();
+				this.aShortArray21[local508] = (short) local14.g2();
+				this.aByteArray27[local508] = local19.g1s();
+				this.aByteArray32[local508] = local24.g1s();
+				this.aByteArray34[local508] = local29.g1s();
 			}
 			if (local700 == 2) {
-				this.aShortArray26[local508] = (short) local9.method2163();
-				this.aShortArray20[local508] = (short) local9.method2163();
-				this.aShortArray28[local508] = (short) local9.method2163();
-				this.aShortArray27[local508] = (short) local14.method2163();
-				this.aShortArray25[local508] = (short) local14.method2163();
-				this.aShortArray21[local508] = (short) local14.method2163();
-				this.aByteArray27[local508] = local19.method2186();
-				this.aByteArray32[local508] = local24.method2186();
-				this.aByteArray34[local508] = local29.method2186();
-				this.aByteArray28[local508] = local29.method2186();
-				this.aByteArray33[local508] = local29.method2186();
+				this.aShortArray26[local508] = (short) local9.g2();
+				this.aShortArray20[local508] = (short) local9.g2();
+				this.aShortArray28[local508] = (short) local9.g2();
+				this.aShortArray27[local508] = (short) local14.g2();
+				this.aShortArray25[local508] = (short) local14.g2();
+				this.aShortArray21[local508] = (short) local14.g2();
+				this.aByteArray27[local508] = local19.g1s();
+				this.aByteArray32[local508] = local24.g1s();
+				this.aByteArray34[local508] = local29.g1s();
+				this.aByteArray28[local508] = local29.g1s();
+				this.aByteArray33[local508] = local29.g1s();
 			}
 			if (local700 == 3) {
-				this.aShortArray26[local508] = (short) local9.method2163();
-				this.aShortArray20[local508] = (short) local9.method2163();
-				this.aShortArray28[local508] = (short) local9.method2163();
-				this.aShortArray27[local508] = (short) local14.method2163();
-				this.aShortArray25[local508] = (short) local14.method2163();
-				this.aShortArray21[local508] = (short) local14.method2163();
-				this.aByteArray27[local508] = local19.method2186();
-				this.aByteArray32[local508] = local24.method2186();
-				this.aByteArray34[local508] = local29.method2186();
+				this.aShortArray26[local508] = (short) local9.g2();
+				this.aShortArray20[local508] = (short) local9.g2();
+				this.aShortArray28[local508] = (short) local9.g2();
+				this.aShortArray27[local508] = (short) local14.g2();
+				this.aShortArray25[local508] = (short) local14.g2();
+				this.aShortArray21[local508] = (short) local14.g2();
+				this.aByteArray27[local508] = local19.g1s();
+				this.aByteArray32[local508] = local24.g1s();
+				this.aByteArray34[local508] = local29.g1s();
 			}
 		}
 		if (!local74) {
 			return;
 		}
-		local4.anInt2792 = local131;
-		local508 = local4.method2229();
+		local4.offset = local131;
+		local508 = local4.g1();
 		if (local508 > 0) {
-			local4.anInt2792 += local508 * 4;
+			local4.offset += local508 * 4;
 		}
-		local700 = local4.method2229();
+		local700 = local4.g1();
 		if (local700 > 0) {
-			local4.anInt2792 += local700 * 4;
+			local4.offset += local700 * 4;
 		}
 	}
 
@@ -1466,19 +1466,19 @@ public final class RawModel extends Entity {
 		@Pc(18) Buffer local18 = new Buffer(arg0);
 		@Pc(23) Buffer local23 = new Buffer(arg0);
 		@Pc(28) Buffer local28 = new Buffer(arg0);
-		local8.anInt2792 = arg0.length - 18;
-		@Pc(38) int local38 = local8.method2163();
-		@Pc(42) int local42 = local8.method2163();
-		@Pc(46) int local46 = local8.method2229();
-		@Pc(50) int local50 = local8.method2229();
-		@Pc(54) int local54 = local8.method2229();
-		@Pc(58) int local58 = local8.method2229();
-		@Pc(62) int local62 = local8.method2229();
-		@Pc(66) int local66 = local8.method2229();
-		@Pc(70) int local70 = local8.method2163();
-		@Pc(74) int local74 = local8.method2163();
-		@Pc(78) int local78 = local8.method2163();
-		@Pc(82) int local82 = local8.method2163();
+		local8.offset = arg0.length - 18;
+		@Pc(38) int local38 = local8.g2();
+		@Pc(42) int local42 = local8.g2();
+		@Pc(46) int local46 = local8.g1();
+		@Pc(50) int local50 = local8.g1();
+		@Pc(54) int local54 = local8.g1();
+		@Pc(58) int local58 = local8.g1();
+		@Pc(62) int local62 = local8.g1();
+		@Pc(66) int local66 = local8.g1();
+		@Pc(70) int local70 = local8.g2();
+		@Pc(74) int local74 = local8.g2();
+		@Pc(78) int local78 = local8.g2();
+		@Pc(82) int local82 = local8.g2();
 		@Pc(90) int local90 = local38;
 		@Pc(92) int local92 = local90;
 		local90 += local42;
@@ -1547,11 +1547,11 @@ public final class RawModel extends Entity {
 			this.anIntArray192 = new int[local42];
 		}
 		this.aShortArray24 = new short[local42];
-		local8.anInt2792 = 0;
-		local13.anInt2792 = local165;
-		local18.anInt2792 = local171;
-		local23.anInt2792 = local90;
-		local28.anInt2792 = local125;
+		local8.offset = 0;
+		local13.offset = local165;
+		local18.offset = local171;
+		local23.offset = local90;
+		local28.offset = local125;
 		@Pc(301) int local301 = 0;
 		@Pc(303) int local303 = 0;
 		@Pc(305) int local305 = 0;
@@ -1561,18 +1561,18 @@ public final class RawModel extends Entity {
 		@Pc(326) int local326;
 		@Pc(336) int local336;
 		for (local307 = 0; local307 < local38; local307++) {
-			local314 = local8.method2229();
+			local314 = local8.g1();
 			local316 = 0;
 			if ((local314 & 0x1) != 0) {
-				local316 = local13.method2223();
+				local316 = local13.gSmart1or2s();
 			}
 			local326 = 0;
 			if ((local314 & 0x2) != 0) {
-				local326 = local18.method2223();
+				local326 = local18.gSmart1or2s();
 			}
 			local336 = 0;
 			if ((local314 & 0x4) != 0) {
-				local336 = local23.method2223();
+				local336 = local23.gSmart1or2s();
 			}
 			this.anIntArray202[local307] = local301 + local316;
 			this.anIntArray201[local307] = local303 + local326;
@@ -1581,18 +1581,18 @@ public final class RawModel extends Entity {
 			local303 = this.anIntArray201[local307];
 			local305 = this.anIntArray203[local307];
 			if (local66 == 1) {
-				this.anIntArray193[local307] = local28.method2229();
+				this.anIntArray193[local307] = local28.g1();
 			}
 		}
-		local8.anInt2792 = local149;
-		local13.anInt2792 = local116;
-		local18.anInt2792 = local98;
-		local23.anInt2792 = local134;
-		local28.anInt2792 = local107;
+		local8.offset = local149;
+		local13.offset = local116;
+		local18.offset = local98;
+		local23.offset = local134;
+		local28.offset = local107;
 		for (local307 = 0; local307 < local42; local307++) {
-			this.aShortArray24[local307] = (short) local8.method2163();
+			this.aShortArray24[local307] = (short) local8.g2();
 			if (local50 == 1) {
-				local314 = local13.method2229();
+				local314 = local13.g1();
 				if ((local314 & 0x1) == 1) {
 					this.aByteArray30[local307] = 1;
 					local1 = true;
@@ -1612,17 +1612,17 @@ public final class RawModel extends Entity {
 				}
 			}
 			if (local54 == 255) {
-				this.aByteArray35[local307] = local18.method2186();
+				this.aByteArray35[local307] = local18.g1s();
 			}
 			if (local58 == 1) {
-				this.aByteArray26[local307] = local23.method2186();
+				this.aByteArray26[local307] = local23.g1s();
 			}
 			if (local62 == 1) {
-				this.anIntArray192[local307] = local28.method2229();
+				this.anIntArray192[local307] = local28.g1();
 			}
 		}
-		local8.anInt2792 = local143;
-		local13.anInt2792 = local92;
+		local8.offset = local143;
+		local13.offset = local92;
 		local307 = 0;
 		local314 = 0;
 		local316 = 0;
@@ -1630,11 +1630,11 @@ public final class RawModel extends Entity {
 		@Pc(545) int local545;
 		@Pc(648) int local648;
 		for (local336 = 0; local336 < local42; local336++) {
-			local545 = local13.method2229();
+			local545 = local13.g1();
 			if (local545 == 1) {
-				local307 = local8.method2223() + local326;
-				local314 = local8.method2223() + local307;
-				local316 = local8.method2223() + local314;
+				local307 = local8.gSmart1or2s() + local326;
+				local314 = local8.gSmart1or2s() + local307;
+				local316 = local8.gSmart1or2s() + local314;
 				local326 = local316;
 				this.anIntArray197[local336] = local307;
 				this.anIntArray200[local336] = local314;
@@ -1642,7 +1642,7 @@ public final class RawModel extends Entity {
 			}
 			if (local545 == 2) {
 				local314 = local316;
-				local316 = local8.method2223() + local326;
+				local316 = local8.gSmart1or2s() + local326;
 				local326 = local316;
 				this.anIntArray197[local336] = local307;
 				this.anIntArray200[local336] = local314;
@@ -1650,7 +1650,7 @@ public final class RawModel extends Entity {
 			}
 			if (local545 == 3) {
 				local307 = local316;
-				local316 = local8.method2223() + local326;
+				local316 = local8.gSmart1or2s() + local326;
 				local326 = local316;
 				this.anIntArray197[local336] = local307;
 				this.anIntArray200[local336] = local314;
@@ -1660,19 +1660,19 @@ public final class RawModel extends Entity {
 				local648 = local307;
 				local307 = local314;
 				local314 = local648;
-				local316 = local8.method2223() + local326;
+				local316 = local8.gSmart1or2s() + local326;
 				local326 = local316;
 				this.anIntArray197[local336] = local307;
 				this.anIntArray200[local336] = local648;
 				this.anIntArray196[local336] = local316;
 			}
 		}
-		local8.anInt2792 = local157;
+		local8.offset = local157;
 		for (local336 = 0; local336 < local46; local336++) {
 			this.aByteArray29[local336] = 0;
-			this.aShortArray26[local336] = (short) local8.method2163();
-			this.aShortArray20[local336] = (short) local8.method2163();
-			this.aShortArray28[local336] = (short) local8.method2163();
+			this.aShortArray26[local336] = (short) local8.g2();
+			this.aShortArray20[local336] = (short) local8.g2();
+			this.aShortArray28[local336] = (short) local8.g2();
 		}
 		if (this.aByteArray31 != null) {
 			@Pc(721) boolean local721 = false;

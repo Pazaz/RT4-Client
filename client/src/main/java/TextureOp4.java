@@ -158,25 +158,25 @@ public final class TextureOp4 extends TextureOp {
 	@Override
 	public final void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		if (arg0 == 0) {
-			this.aBoolean44 = arg1.method2229() == 1;
+			this.aBoolean44 = arg1.g1() == 1;
 		} else if (arg0 == 1) {
-			this.anInt642 = arg1.method2229();
+			this.anInt642 = arg1.g1();
 		} else if (arg0 == 2) {
-			this.anInt648 = arg1.method2213();
+			this.anInt648 = arg1.g2s();
 			if (this.anInt648 < 0) {
 				this.aShortArray4 = new short[this.anInt642];
 				for (@Pc(93) int local93 = 0; local93 < this.anInt642; local93++) {
-					this.aShortArray4[local93] = (short) arg1.method2213();
+					this.aShortArray4[local93] = (short) arg1.g2s();
 				}
 			}
 		} else if (arg0 == 3) {
-			this.anInt646 = this.anInt641 = arg1.method2229();
+			this.anInt646 = this.anInt641 = arg1.g1();
 		} else if (arg0 == 4) {
-			this.anInt650 = arg1.method2229();
+			this.anInt650 = arg1.g1();
 		} else if (arg0 == 5) {
-			this.anInt646 = arg1.method2229();
+			this.anInt646 = arg1.g1();
 		} else if (arg0 == 6) {
-			this.anInt641 = arg1.method2229();
+			this.anInt641 = arg1.g1();
 		}
 	}
 

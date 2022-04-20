@@ -139,19 +139,19 @@ public final class TextureOp14 extends TextureOp {
 	@Override
 	public final void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		if (arg0 == 0) {
-			this.anInt2645 = this.anInt2646 = arg1.method2229();
+			this.anInt2645 = this.anInt2646 = arg1.g1();
 		} else if (arg0 == 1) {
-			this.anInt2639 = arg1.method2229();
+			this.anInt2639 = arg1.g1();
 		} else if (arg0 == 2) {
-			this.anInt2636 = arg1.method2163();
+			this.anInt2636 = arg1.g2();
 		} else if (arg0 == 3) {
-			this.anInt2635 = arg1.method2229();
+			this.anInt2635 = arg1.g1();
 		} else if (arg0 == 4) {
-			this.anInt2638 = arg1.method2229();
+			this.anInt2638 = arg1.g1();
 		} else if (arg0 == 5) {
-			this.anInt2645 = arg1.method2229();
+			this.anInt2645 = arg1.g1();
 		} else if (arg0 == 6) {
-			this.anInt2646 = arg1.method2229();
+			this.anInt2646 = arg1.g1();
 		}
 	}
 }

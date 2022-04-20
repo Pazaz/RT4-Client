@@ -266,43 +266,43 @@ public final class SynthInstrument {
 		this.aClass42_5.method1515(arg0);
 		this.aClass42_3 = new SynthEnvelope();
 		this.aClass42_3.method1515(arg0);
-		@Pc(21) int local21 = arg0.method2229();
+		@Pc(21) int local21 = arg0.g1();
 		if (local21 != 0) {
-			arg0.anInt2792--;
+			arg0.offset--;
 			this.aClass42_9 = new SynthEnvelope();
 			this.aClass42_9.method1515(arg0);
 			this.aClass42_8 = new SynthEnvelope();
 			this.aClass42_8.method1515(arg0);
 		}
-		local21 = arg0.method2229();
+		local21 = arg0.g1();
 		if (local21 != 0) {
-			arg0.anInt2792--;
+			arg0.offset--;
 			this.aClass42_7 = new SynthEnvelope();
 			this.aClass42_7.method1515(arg0);
 			this.aClass42_1 = new SynthEnvelope();
 			this.aClass42_1.method1515(arg0);
 		}
-		local21 = arg0.method2229();
+		local21 = arg0.g1();
 		if (local21 != 0) {
-			arg0.anInt2792--;
+			arg0.offset--;
 			this.aClass42_2 = new SynthEnvelope();
 			this.aClass42_2.method1515(arg0);
 			this.aClass42_4 = new SynthEnvelope();
 			this.aClass42_4.method1515(arg0);
 		}
 		for (@Pc(109) int local109 = 0; local109 < 10; local109++) {
-			@Pc(116) int local116 = arg0.method2204();
+			@Pc(116) int local116 = arg0.gSmart1or2();
 			if (local116 == 0) {
 				break;
 			}
 			this.anIntArray396[local109] = local116;
-			this.anIntArray404[local109] = arg0.method2223();
-			this.anIntArray397[local109] = arg0.method2204();
+			this.anIntArray404[local109] = arg0.gSmart1or2s();
+			this.anIntArray397[local109] = arg0.gSmart1or2();
 		}
-		this.anInt4547 = arg0.method2204();
-		this.anInt4549 = arg0.method2204();
-		this.anInt4546 = arg0.method2163();
-		this.anInt4548 = arg0.method2163();
+		this.anInt4547 = arg0.gSmart1or2();
+		this.anInt4549 = arg0.gSmart1or2();
+		this.anInt4546 = arg0.g2();
+		this.anInt4548 = arg0.g2();
 		this.aClass110_1 = new SynthFilter();
 		this.aClass42_6 = new SynthEnvelope();
 		this.aClass110_1.method3249(arg0, this.aClass42_6);
