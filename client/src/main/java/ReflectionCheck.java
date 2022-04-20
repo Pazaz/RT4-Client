@@ -2,7 +2,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!ed")
-public final class Class3_Sub11 extends Node {
+public final class ReflectionCheck extends Node {
 
 	@OriginalMember(owner = "client!ed", name = "p", descriptor = "I")
 	public int anInt1725;
