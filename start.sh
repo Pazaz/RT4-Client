@@ -1,3 +1,3 @@
 #!/bin/sh
-mvn package
-java -jar ./client/target/runescape-1.0.jar 1 live english game0
+./gradlew build
+java -jar ./build/libs/RT4-Client-1.0.0.jar 1 live english game0

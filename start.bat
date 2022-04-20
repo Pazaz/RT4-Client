@@ -1,2 +1,3 @@
 @echo off
-mvn package && java -jar .\client\target\runescape-1.0.jar 1 live english game0
+call .\gradlew.bat build
+java -jar .\build\libs\RT4-Client-1.0.0.jar 1 live english game0
