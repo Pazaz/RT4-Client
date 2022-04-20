@@ -54,11 +54,11 @@ public final class Static216 {
 				Static124.aClass95_2 = new BufferedSocket((Socket) Static72.aClass212_3.anObject6, Static71.aClass213_3);
 				Static72.aClass212_3 = null;
 				@Pc(106) long local106 = Static101.aLong98 = Static186.aClass100_829.method3158();
-				Static6.aClass3_Sub15_Sub1_1.anInt2792 = 0;
-				Static6.aClass3_Sub15_Sub1_1.method2178(14);
+				Static6.aClass3_Sub15_Sub1_1.offset = 0;
+				Static6.aClass3_Sub15_Sub1_1.p1(14);
 				@Pc(120) int local120 = (int) (local106 >> 16 & 0x1FL);
-				Static6.aClass3_Sub15_Sub1_1.method2178(local120);
-				Static124.aClass95_2.method2830(Static6.aClass3_Sub15_Sub1_1.aByteArray40, 2);
+				Static6.aClass3_Sub15_Sub1_1.p1(local120);
+				Static124.aClass95_2.method2830(Static6.aClass3_Sub15_Sub1_1.data, 2);
 				if (Static11.aClass62_1 != null) {
 					Static11.aClass62_1.method3571();
 				}
@@ -85,74 +85,74 @@ public final class Static216 {
 				if (Static124.aClass95_2.method2831() < 8) {
 					return;
 				}
-				Static124.aClass95_2.method2827(0, 8, Static57.aClass3_Sub15_Sub1_3.aByteArray40);
-				Static57.aClass3_Sub15_Sub1_3.anInt2792 = 0;
-				Static193.aLong147 = Static57.aClass3_Sub15_Sub1_3.method2182();
+				Static124.aClass95_2.method2827(0, 8, Static57.aClass3_Sub15_Sub1_3.data);
+				Static57.aClass3_Sub15_Sub1_3.offset = 0;
+				Static193.aLong147 = Static57.aClass3_Sub15_Sub1_3.g8();
 				@Pc(210) int[] local210 = new int[4];
-				Static6.aClass3_Sub15_Sub1_1.anInt2792 = 0;
+				Static6.aClass3_Sub15_Sub1_1.offset = 0;
 				local210[2] = (int) (Static193.aLong147 >> 32);
 				local210[3] = (int) Static193.aLong147;
 				local210[1] = (int) (Math.random() * 9.9999999E7D);
 				local210[0] = (int) (Math.random() * 9.9999999E7D);
-				Static6.aClass3_Sub15_Sub1_1.method2178(10);
-				Static6.aClass3_Sub15_Sub1_1.method2164(local210[0]);
-				Static6.aClass3_Sub15_Sub1_1.method2164(local210[1]);
-				Static6.aClass3_Sub15_Sub1_1.method2164(local210[2]);
-				Static6.aClass3_Sub15_Sub1_1.method2164(local210[3]);
-				Static6.aClass3_Sub15_Sub1_1.method2166(Static186.aClass100_829.method3158());
-				Static6.aClass3_Sub15_Sub1_1.method2171(Static186.aClass100_828);
-				Static6.aClass3_Sub15_Sub1_1.method2226(Static86.aBigInteger1, Static256.aBigInteger2);
-				Static17.aClass3_Sub15_Sub1_2.anInt2792 = 0;
+				Static6.aClass3_Sub15_Sub1_1.p1(10);
+				Static6.aClass3_Sub15_Sub1_1.p4(local210[0]);
+				Static6.aClass3_Sub15_Sub1_1.p4(local210[1]);
+				Static6.aClass3_Sub15_Sub1_1.p4(local210[2]);
+				Static6.aClass3_Sub15_Sub1_1.p4(local210[3]);
+				Static6.aClass3_Sub15_Sub1_1.p8(Static186.aClass100_829.method3158());
+				Static6.aClass3_Sub15_Sub1_1.pjstr(Static186.aClass100_828);
+				Static6.aClass3_Sub15_Sub1_1.encryptRsa(Static86.aBigInteger1, Static256.aBigInteger2);
+				Static17.aClass3_Sub15_Sub1_2.offset = 0;
 				if (Static244.anInt5370 == 40) {
-					Static17.aClass3_Sub15_Sub1_2.method2178(18);
+					Static17.aClass3_Sub15_Sub1_2.p1(18);
 				} else {
-					Static17.aClass3_Sub15_Sub1_2.method2178(16);
+					Static17.aClass3_Sub15_Sub1_2.p1(16);
 				}
-				Static17.aClass3_Sub15_Sub1_2.method2230(Static6.aClass3_Sub15_Sub1_1.anInt2792 + Static229.method3937(Static47.aClass100_991) + 159);
-				Static17.aClass3_Sub15_Sub1_2.method2164(530);
-				Static17.aClass3_Sub15_Sub1_2.method2178(Static5.anInt39);
-				Static17.aClass3_Sub15_Sub1_2.method2178(Static249.aBoolean282 ? 1 : 0);
-				Static17.aClass3_Sub15_Sub1_2.method2178(1);
-				Static17.aClass3_Sub15_Sub1_2.method2178(Static144.method2736());
-				Static17.aClass3_Sub15_Sub1_2.method2230(Static48.anInt1448);
-				Static17.aClass3_Sub15_Sub1_2.method2230(Static254.anInt5554);
-				Static17.aClass3_Sub15_Sub1_2.method2178(Static186.anInt4392);
+				Static17.aClass3_Sub15_Sub1_2.p2(Static6.aClass3_Sub15_Sub1_1.offset + Static229.method3937(Static47.aClass100_991) + 159);
+				Static17.aClass3_Sub15_Sub1_2.p4(530);
+				Static17.aClass3_Sub15_Sub1_2.p1(Static5.anInt39);
+				Static17.aClass3_Sub15_Sub1_2.p1(Static249.aBoolean282 ? 1 : 0);
+				Static17.aClass3_Sub15_Sub1_2.p1(1);
+				Static17.aClass3_Sub15_Sub1_2.p1(Static144.method2736());
+				Static17.aClass3_Sub15_Sub1_2.p2(Static48.anInt1448);
+				Static17.aClass3_Sub15_Sub1_2.p2(Static254.anInt5554);
+				Static17.aClass3_Sub15_Sub1_2.p1(Static186.anInt4392);
 				Static140.method2705(Static17.aClass3_Sub15_Sub1_2);
-				Static17.aClass3_Sub15_Sub1_2.method2171(Static47.aClass100_991);
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static204.anInt4760);
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static145.method2746());
+				Static17.aClass3_Sub15_Sub1_2.pjstr(Static47.aClass100_991);
+				Static17.aClass3_Sub15_Sub1_2.p4(Static204.anInt4760);
+				Static17.aClass3_Sub15_Sub1_2.p4(Static145.method2746());
 				Static18.aBoolean39 = true;
-				Static17.aClass3_Sub15_Sub1_2.method2230(Static189.anInt4443);
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static213.aClass153_88.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static249.aClass153_100.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static274.aClass153_90.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static41.aClass153_25.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static248.aClass153_75.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static26.aClass153_16.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static130.aClass153_47.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static267.aClass153_109.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static209.aClass153_86.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static195.aClass153_80.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static184.aClass153_78.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static214.aClass153_106.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static16.aClass153_9.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static261.aClass153_107.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static137.aClass153_49.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static138.aClass153_51.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static280.aClass153_110.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static138.aClass153_50.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static172.aClass153_71.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static171.aClass153_68.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static253.aClass153_104.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static122.aClass153_46.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static156.aClass153_59.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static227.aClass153_94.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static254.aClass153_105.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static28.aClass153_18.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static167.aClass153_63.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2164(Static226.aClass153_93.method4480());
-				Static17.aClass3_Sub15_Sub1_2.method2179(Static6.aClass3_Sub15_Sub1_1.aByteArray40, Static6.aClass3_Sub15_Sub1_1.anInt2792);
-				Static124.aClass95_2.method2830(Static17.aClass3_Sub15_Sub1_2.aByteArray40, Static17.aClass3_Sub15_Sub1_2.anInt2792);
+				Static17.aClass3_Sub15_Sub1_2.p2(Static189.anInt4443);
+				Static17.aClass3_Sub15_Sub1_2.p4(Static213.aClass153_88.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static249.aClass153_100.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static274.aClass153_90.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static41.aClass153_25.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static248.aClass153_75.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static26.aClass153_16.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static130.aClass153_47.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static267.aClass153_109.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static209.aClass153_86.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static195.aClass153_80.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static184.aClass153_78.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static214.aClass153_106.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static16.aClass153_9.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static261.aClass153_107.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static137.aClass153_49.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static138.aClass153_51.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static280.aClass153_110.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static138.aClass153_50.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static172.aClass153_71.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static171.aClass153_68.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static253.aClass153_104.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static122.aClass153_46.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static156.aClass153_59.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static227.aClass153_94.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static254.aClass153_105.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static28.aClass153_18.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static167.aClass153_63.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static226.aClass153_93.method4480());
+				Static17.aClass3_Sub15_Sub1_2.pBytes(Static6.aClass3_Sub15_Sub1_1.data, Static6.aClass3_Sub15_Sub1_1.offset);
+				Static124.aClass95_2.method2830(Static17.aClass3_Sub15_Sub1_2.data, Static17.aClass3_Sub15_Sub1_2.offset);
 				Static6.aClass3_Sub15_Sub1_1.method2240(local210);
 				for (@Pc(583) int local583 = 0; local583 < 4; local583++) {
 					local210[local583] += 50;
@@ -195,9 +195,9 @@ public final class Static216 {
 				}
 			}
 			if (Static184.anInt4348 == 6) {
-				Static6.aClass3_Sub15_Sub1_1.anInt2792 = 0;
+				Static6.aClass3_Sub15_Sub1_1.offset = 0;
 				Static6.aClass3_Sub15_Sub1_1.method2242(17);
-				Static124.aClass95_2.method2830(Static6.aClass3_Sub15_Sub1_1.aByteArray40, Static6.aClass3_Sub15_Sub1_1.anInt2792);
+				Static124.aClass95_2.method2830(Static6.aClass3_Sub15_Sub1_1.data, Static6.aClass3_Sub15_Sub1_1.offset);
 				Static184.anInt4348 = 4;
 				return;
 			}
@@ -227,18 +227,18 @@ public final class Static216 {
 				if (Static124.aClass95_2.method2831() < 14) {
 					return;
 				}
-				Static124.aClass95_2.method2827(0, 14, Static57.aClass3_Sub15_Sub1_3.aByteArray40);
-				Static57.aClass3_Sub15_Sub1_3.anInt2792 = 0;
-				Static191.anInt4502 = Static57.aClass3_Sub15_Sub1_3.method2229();
-				Static249.anInt5431 = Static57.aClass3_Sub15_Sub1_3.method2229();
-				Static124.aBoolean157 = Static57.aClass3_Sub15_Sub1_3.method2229() == 1;
-				Static207.aBoolean236 = Static57.aClass3_Sub15_Sub1_3.method2229() == 1;
-				Static25.aBoolean57 = Static57.aClass3_Sub15_Sub1_3.method2229() == 1;
-				Static86.aBoolean129 = Static57.aClass3_Sub15_Sub1_3.method2229() == 1;
-				Static245.aBoolean281 = Static57.aClass3_Sub15_Sub1_3.method2229() == 1;
-				Static16.anInt549 = Static57.aClass3_Sub15_Sub1_3.method2163();
-				Static202.aBoolean233 = Static57.aClass3_Sub15_Sub1_3.method2229() == 1;
-				Static2.aBoolean1 = Static57.aClass3_Sub15_Sub1_3.method2229() == 1;
+				Static124.aClass95_2.method2827(0, 14, Static57.aClass3_Sub15_Sub1_3.data);
+				Static57.aClass3_Sub15_Sub1_3.offset = 0;
+				Static191.anInt4502 = Static57.aClass3_Sub15_Sub1_3.g1();
+				Static249.anInt5431 = Static57.aClass3_Sub15_Sub1_3.g1();
+				Static124.aBoolean157 = Static57.aClass3_Sub15_Sub1_3.g1() == 1;
+				Static207.aBoolean236 = Static57.aClass3_Sub15_Sub1_3.g1() == 1;
+				Static25.aBoolean57 = Static57.aClass3_Sub15_Sub1_3.g1() == 1;
+				Static86.aBoolean129 = Static57.aClass3_Sub15_Sub1_3.g1() == 1;
+				Static245.aBoolean281 = Static57.aClass3_Sub15_Sub1_3.g1() == 1;
+				Static16.anInt549 = Static57.aClass3_Sub15_Sub1_3.g2();
+				Static202.aBoolean233 = Static57.aClass3_Sub15_Sub1_3.g1() == 1;
+				Static2.aBoolean1 = Static57.aClass3_Sub15_Sub1_3.g1() == 1;
 				Static189.method3438(Static2.aBoolean1);
 				Static9.method186(Static2.aBoolean1);
 				if (!Static249.aBoolean282) {
@@ -255,15 +255,15 @@ public final class Static216 {
 					}
 				}
 				Static164.anInt3985 = Static57.aClass3_Sub15_Sub1_3.method2243();
-				Static223.anInt5028 = Static57.aClass3_Sub15_Sub1_3.method2163();
+				Static223.anInt5028 = Static57.aClass3_Sub15_Sub1_3.g2();
 				Static184.anInt4348 = 9;
 			}
 			if (Static184.anInt4348 == 9) {
 				if (Static124.aClass95_2.method2831() < Static223.anInt5028) {
 					return;
 				}
-				Static57.aClass3_Sub15_Sub1_3.anInt2792 = 0;
-				Static124.aClass95_2.method2827(0, Static223.anInt5028, Static57.aClass3_Sub15_Sub1_3.aByteArray40);
+				Static57.aClass3_Sub15_Sub1_3.offset = 0;
+				Static124.aClass95_2.method2827(0, Static223.anInt5028, Static57.aClass3_Sub15_Sub1_3.data);
 				Static266.anInt5336 = 2;
 				Static184.anInt4348 = 0;
 				Static243.method4221();

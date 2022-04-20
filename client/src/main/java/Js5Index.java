@@ -60,23 +60,23 @@ public final class Js5Index {
 	@OriginalMember(owner = "client!ii", name = "a", descriptor = "(I[B)V")
 	private void method2293(@OriginalArg(1) byte[] arg0) {
 		@Pc(12) Buffer local12 = new Buffer(Static162.method3092(arg0));
-		@Pc(16) int local16 = local12.method2229();
+		@Pc(16) int local16 = local12.g1();
 		if (local16 != 5 && local16 != 6) {
 			throw new RuntimeException();
 		}
 		if (local16 >= 6) {
-			this.anInt2908 = local12.method2174();
+			this.anInt2908 = local12.g4();
 		} else {
 			this.anInt2908 = 0;
 		}
-		@Pc(48) int local48 = local12.method2229();
+		@Pc(48) int local48 = local12.g1();
 		@Pc(50) int local50 = 0;
-		this.anInt2902 = local12.method2163();
+		this.anInt2902 = local12.g2();
 		@Pc(59) int local59 = -1;
 		this.anIntArray269 = new int[this.anInt2902];
 		@Pc(66) int local66;
 		for (local66 = 0; local66 < this.anInt2902; local66++) {
-			this.anIntArray269[local66] = local50 += local12.method2163();
+			this.anIntArray269[local66] = local50 += local12.g2();
 			if (this.anIntArray269[local66] > local59) {
 				local59 = this.anIntArray269[local66];
 			}
@@ -93,18 +93,18 @@ public final class Js5Index {
 				this.anIntArray271[local66] = -1;
 			}
 			for (local66 = 0; local66 < this.anInt2902; local66++) {
-				this.anIntArray271[this.anIntArray269[local66]] = local12.method2174();
+				this.anIntArray271[this.anIntArray269[local66]] = local12.g4();
 			}
 			this.aClass76_1 = new IntHashTable(this.anIntArray271);
 		}
 		for (local66 = 0; local66 < this.anInt2902; local66++) {
-			this.anIntArray268[this.anIntArray269[local66]] = local12.method2174();
+			this.anIntArray268[this.anIntArray269[local66]] = local12.g4();
 		}
 		for (local66 = 0; local66 < this.anInt2902; local66++) {
-			this.anIntArray273[this.anIntArray269[local66]] = local12.method2174();
+			this.anIntArray273[this.anIntArray269[local66]] = local12.g4();
 		}
 		for (local66 = 0; local66 < this.anInt2902; local66++) {
-			this.anIntArray272[this.anIntArray269[local66]] = local12.method2163();
+			this.anIntArray272[this.anIntArray269[local66]] = local12.g2();
 		}
 		@Pc(273) int local273;
 		@Pc(278) int local278;
@@ -117,7 +117,7 @@ public final class Js5Index {
 			local280 = -1;
 			this.anIntArrayArray22[local273] = new int[local278];
 			for (local288 = 0; local288 < local278; local288++) {
-				@Pc(306) int local306 = this.anIntArrayArray22[local273][local288] = local50 += local12.method2163();
+				@Pc(306) int local306 = this.anIntArrayArray22[local273][local288] = local50 += local12.g2();
 				if (local306 > local280) {
 					local280 = local306;
 				}
@@ -145,7 +145,7 @@ public final class Js5Index {
 				} else {
 					local288 = this.anIntArrayArray22[local273][local280];
 				}
-				this.anIntArrayArray21[local273][local288] = local12.method2174();
+				this.anIntArrayArray21[local273][local288] = local12.g4();
 			}
 			this.aClass76Array1[local273] = new IntHashTable(this.anIntArrayArray21[local273]);
 		}

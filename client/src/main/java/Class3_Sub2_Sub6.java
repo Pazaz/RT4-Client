@@ -29,7 +29,7 @@ public final class Class3_Sub2_Sub6 extends SecondaryNode {
 		for (@Pc(14) int local14 = 0; this.anIntArray71.length > local14 && local14 < arg1.length; local14++) {
 			@Pc(38) int local38 = Static143.anIntArray329[this.method765(local14)];
 			if (local38 > 0) {
-				arg0.method2165(local38, (long) arg1[local14]);
+				arg0.pVarLong(local38, (long) arg1[local14]);
 			}
 		}
 	}
@@ -37,7 +37,7 @@ public final class Class3_Sub2_Sub6 extends SecondaryNode {
 	@OriginalMember(owner = "client!cb", name = "a", descriptor = "(Lclient!wa;I)V")
 	public final void method761(@OriginalArg(0) Buffer arg0) {
 		while (true) {
-			@Pc(9) int local9 = arg0.method2229();
+			@Pc(9) int local9 = arg0.g1();
 			if (local9 == 0) {
 				return;
 			}
@@ -78,27 +78,27 @@ public final class Class3_Sub2_Sub6 extends SecondaryNode {
 	@OriginalMember(owner = "client!cb", name = "a", descriptor = "(Lclient!wa;II)V")
 	private void method768(@OriginalArg(0) Buffer arg0, @OriginalArg(1) int arg1) {
 		if (arg1 == 1) {
-			this.aClass100Array35 = arg0.method2202().method3147(60);
+			this.aClass100Array35 = arg0.gjstr().method3147(60);
 			return;
 		}
 		@Pc(32) int local32;
 		@Pc(42) int local42;
 		if (arg1 == 2) {
-			local32 = arg0.method2229();
+			local32 = arg0.g1();
 			this.anIntArray72 = new int[local32];
 			for (local42 = 0; local42 < local32; local42++) {
-				this.anIntArray72[local42] = arg0.method2163();
+				this.anIntArray72[local42] = arg0.g2();
 			}
 		} else if (arg1 == 3) {
-			local32 = arg0.method2229();
+			local32 = arg0.g1();
 			this.anIntArray71 = new int[local32];
 			this.anIntArrayArray5 = new int[local32][];
 			for (local42 = 0; local42 < local32; local42++) {
-				@Pc(49) int local49 = arg0.method2163();
+				@Pc(49) int local49 = arg0.g2();
 				this.anIntArray71[local42] = local49;
 				this.anIntArrayArray5[local42] = new int[Static264.anIntArray412[local49]];
 				for (@Pc(64) int local64 = 0; local64 < Static264.anIntArray412[local49]; local64++) {
-					this.anIntArrayArray5[local42][local64] = arg0.method2163();
+					this.anIntArrayArray5[local42][local64] = arg0.g2();
 				}
 			}
 		} else if (arg1 == 4) {
@@ -126,7 +126,7 @@ public final class Class3_Sub2_Sub6 extends SecondaryNode {
 		if (this.anIntArray71 != null) {
 			for (@Pc(22) int local22 = 0; local22 < this.anIntArray71.length; local22++) {
 				local17.method3113(this.aClass100Array35[local22]);
-				local17.method3113(Static89.method1838(this.anIntArrayArray5[local22], arg0.method2198(Static16.anIntArray51[this.anIntArray71[local22]]), this.anIntArray71[local22]));
+				local17.method3113(Static89.method1838(this.anIntArrayArray5[local22], arg0.gVarLong(Static16.anIntArray51[this.anIntArray71[local22]]), this.anIntArray71[local22]));
 			}
 		}
 		local17.method3113(this.aClass100Array35[this.aClass100Array35.length - 1]);

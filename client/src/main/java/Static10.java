@@ -21,7 +21,7 @@ public final class Static10 {
 	public static final JagString aClass100_65 = Static28.method790("Lade Schrifts-=tze )2 ");
 
 	@OriginalMember(owner = "client!an", name = "a", descriptor = "([BIII)Lclient!na;")
-	public static JagString method346(@OriginalArg(0) byte[] arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
+	public static JagString decodeString(@OriginalArg(0) byte[] arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
 		@Pc(7) JagString local7 = new JagString();
 		local7.aByteArray52 = new byte[arg1];
 		local7.anInt4030 = 0;
@@ -90,7 +90,7 @@ public final class Static10 {
 		} catch (@Pc(19) Exception local19) {
 			@Pc(61) String local61 = "T2 - " + Static164.anInt3985 + "," + Static5.anInt45 + "," + Static49.anInt1462 + " - " + Static223.anInt5028 + "," + (Static225.anInt5068 + Static173.aClass8_Sub4_Sub1_2.anIntArray318[0]) + "," + (Static173.aClass8_Sub4_Sub1_2.anIntArray317[0] + Static142.anInt3483) + " - ";
 			for (@Pc(63) int local63 = 0; local63 < Static223.anInt5028 && local63 < 50; local63++) {
-				local61 = local61 + Static57.aClass3_Sub15_Sub1_3.aByteArray40[local63] + ",";
+				local61 = local61 + Static57.aClass3_Sub15_Sub1_3.data[local63] + ",";
 			}
 			Static89.method1839(local61, local19);
 			Static278.method4653();

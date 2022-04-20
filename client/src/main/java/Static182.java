@@ -93,7 +93,7 @@ public final class Static182 {
 			}
 			local137 = local95;
 		}
-		if (local59.method3120() > 0) {
+		if (local59.length() > 0) {
 			local59.method3113(local28);
 		}
 		return Static34.method882(new JagString[] { local9, local137.method3124(), local59.method3124() });

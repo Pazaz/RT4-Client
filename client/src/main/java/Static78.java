@@ -35,9 +35,9 @@ public final class Static78 {
 
 	@OriginalMember(owner = "client!gd", name = "a", descriptor = "(JI)V")
 	public static void method1691(@OriginalArg(0) long arg0) {
-		Static6.aClass3_Sub15_Sub1_1.anInt2792 = 0;
-		Static6.aClass3_Sub15_Sub1_1.method2178(186);
-		Static6.aClass3_Sub15_Sub1_1.method2166(arg0);
+		Static6.aClass3_Sub15_Sub1_1.offset = 0;
+		Static6.aClass3_Sub15_Sub1_1.p1(186);
+		Static6.aClass3_Sub15_Sub1_1.p8(arg0);
 		Static179.anInt4261 = 1;
 		Static226.anInt5079 = 0;
 		Static57.anInt1758 = 0;
@@ -276,7 +276,7 @@ public final class Static78 {
 		Static231.aBoolean252 = false;
 		if (Static39.aFrame1 != null && Static124.aClass95_2 != null && Static244.anInt5370 == 25) {
 			Static6.aClass3_Sub15_Sub1_1.method2242(20);
-			Static6.aClass3_Sub15_Sub1_1.method2164(1057001181);
+			Static6.aClass3_Sub15_Sub1_1.p4(1057001181);
 		}
 		if (!Static230.aBoolean250) {
 			@Pc(815) int local815 = (Static52.anInt1695 + 6) / 8;

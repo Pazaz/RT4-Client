@@ -219,7 +219,7 @@ public final class Static127 {
 														try {
 															if (Static232.aClass212_5.anObject6 != null) {
 																@Pc(265) byte[] local265 = ((String) Static232.aClass212_5.anObject6).getBytes("ISO-8859-1");
-																local246 = Static10.method346(local265, local265.length, 0);
+																local246 = Static10.decodeString(local265, local265.length, 0);
 															}
 														} catch (@Pc(274) UnsupportedEncodingException local274) {
 														}
@@ -368,7 +368,7 @@ public final class Static127 {
 			}
 		}
 		Static6.aClass3_Sub15_Sub1_1.method2242(44);
-		Static6.aClass3_Sub15_Sub1_1.method2178(arg0.method3120() - 1);
-		Static6.aClass3_Sub15_Sub1_1.method2171(arg0.method3136(2));
+		Static6.aClass3_Sub15_Sub1_1.p1(arg0.length() - 1);
+		Static6.aClass3_Sub15_Sub1_1.pjstr(arg0.method3136(2));
 	}
 }

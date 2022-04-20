@@ -24,20 +24,20 @@ public final class StructType extends SecondaryNode {
 		if (arg1 != 249) {
 			return;
 		}
-		@Pc(17) int local17 = arg0.method2229();
+		@Pc(17) int local17 = arg0.g1();
 		@Pc(25) int local25;
 		if (this.aClass133_14 == null) {
 			local25 = Static165.method3164(local17);
 			this.aClass133_14 = new HashTable(local25);
 		}
 		for (local25 = 0; local25 < local17; local25++) {
-			@Pc(45) boolean local45 = arg0.method2229() == 1;
-			@Pc(49) int local49 = arg0.method2220();
+			@Pc(45) boolean local45 = arg0.g1() == 1;
+			@Pc(49) int local49 = arg0.g3();
 			@Pc(58) Node local58;
 			if (local45) {
-				local58 = new StringNode(arg0.method2202());
+				local58 = new StringNode(arg0.gjstr());
 			} else {
-				local58 = new IntNode(arg0.method2174());
+				local58 = new IntNode(arg0.g4());
 			}
 			this.aClass133_14.method3862(local58, (long) local49);
 		}
@@ -56,7 +56,7 @@ public final class StructType extends SecondaryNode {
 	@OriginalMember(owner = "client!lk", name = "a", descriptor = "(ILclient!wa;)V")
 	public final void method2806(@OriginalArg(1) Buffer arg0) {
 		while (true) {
-			@Pc(5) int local5 = arg0.method2229();
+			@Pc(5) int local5 = arg0.g1();
 			if (local5 == 0) {
 				return;
 			}

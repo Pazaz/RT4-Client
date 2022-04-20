@@ -63,8 +63,8 @@ public final class Static86 {
 				Static175.aClass8_Sub4_Sub2Array1[local30] = null;
 			}
 		}
-		if (Static223.anInt5028 != Static57.aClass3_Sub15_Sub1_3.anInt2792) {
-			throw new RuntimeException("gnp1 pos:" + Static57.aClass3_Sub15_Sub1_3.anInt2792 + " psize:" + Static223.anInt5028);
+		if (Static223.anInt5028 != Static57.aClass3_Sub15_Sub1_3.offset) {
+			throw new RuntimeException("gnp1 pos:" + Static57.aClass3_Sub15_Sub1_3.offset + " psize:" + Static223.anInt5028);
 		}
 		for (local19 = 0; local19 < Static272.anInt5214; local19++) {
 			if (Static175.aClass8_Sub4_Sub2Array1[Static33.anIntArray79[local19]] == null) {

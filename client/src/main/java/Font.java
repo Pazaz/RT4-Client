@@ -76,7 +76,7 @@ public abstract class Font extends SecondaryNode {
 		@Pc(4) int local4 = arg2 - this.anInt3626;
 		@Pc(6) int local6 = -1;
 		@Pc(8) int local8 = 0;
-		@Pc(12) int local12 = arg0.method3120();
+		@Pc(12) int local12 = arg0.length();
 		for (@Pc(14) int local14 = 0; local14 < local12; local14++) {
 			@Pc(22) int local22 = arg0.method3149(local14);
 			if (local22 == 60) {
@@ -204,7 +204,7 @@ public abstract class Font extends SecondaryNode {
 		@Pc(5) int local5 = -1;
 		@Pc(7) int local7 = 0;
 		@Pc(9) int local9 = 0;
-		@Pc(13) int local13 = arg0.method3120();
+		@Pc(13) int local13 = arg0.length();
 		for (@Pc(15) int local15 = 0; local15 < local13; local15++) {
 			@Pc(23) int local23 = arg0.method3149(local15);
 			if (local23 == 60) {
@@ -261,7 +261,7 @@ public abstract class Font extends SecondaryNode {
 		}
 		arg3.setSeed((long) arg4);
 		this.method2877(16777215, 0, (arg3.nextInt() & 0x1F) + 192);
-		@Pc(21) int local21 = arg0.method3120();
+		@Pc(21) int local21 = arg0.length();
 		@Pc(24) int[] local24 = new int[local21];
 		@Pc(26) int local26 = 0;
 		for (@Pc(28) int local28 = 0; local28 < local21; local28++) {
@@ -332,7 +332,7 @@ public abstract class Font extends SecondaryNode {
 	private void method2866(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1) {
 		@Pc(1) int local1 = 0;
 		@Pc(3) boolean local3 = false;
-		@Pc(7) int local7 = arg0.method3120();
+		@Pc(7) int local7 = arg0.length();
 		for (@Pc(9) int local9 = 0; local9 < local7; local9++) {
 			@Pc(17) int local17 = arg0.method3149(local9);
 			if (local17 == 60) {
@@ -362,7 +362,7 @@ public abstract class Font extends SecondaryNode {
 		@Pc(19) int local19 = -1;
 		@Pc(21) int local21 = 0;
 		@Pc(23) int local23 = 0;
-		@Pc(27) int local27 = arg0.method3120();
+		@Pc(27) int local27 = arg0.length();
 		for (@Pc(29) int local29 = 0; local29 < local27; local29++) {
 			@Pc(37) int local37 = arg0.method3149(local29);
 			if (local37 == 60) {
@@ -376,13 +376,13 @@ public abstract class Font extends SecondaryNode {
 					Static218.aClass100_720.method3152(62);
 					if (local57.method3108(Static218.aClass100_713)) {
 						if (arg2[local23] == null) {
-							arg2[local23] = Static218.aClass100_720.method3143().method3137(Static218.aClass100_720.method3120(), local11);
+							arg2[local23] = Static218.aClass100_720.method3143().method3137(Static218.aClass100_720.length(), local11);
 						} else {
 							arg2[local23].method3133(0);
-							arg2[local23].method3122(Static218.aClass100_720, local11, Static218.aClass100_720.method3120());
+							arg2[local23].method3122(Static218.aClass100_720, local11, Static218.aClass100_720.length());
 						}
 						local23++;
-						local11 = Static218.aClass100_720.method3120();
+						local11 = Static218.aClass100_720.length();
 						local9 = 0;
 						local13 = -1;
 						local21 = 0;
@@ -454,7 +454,7 @@ public abstract class Font extends SecondaryNode {
 						local21 = local37;
 					}
 					if (local37 == 32) {
-						local13 = Static218.aClass100_720.method3120();
+						local13 = Static218.aClass100_720.length();
 						local15 = local9;
 						local17 = 1;
 					}
@@ -472,19 +472,19 @@ public abstract class Font extends SecondaryNode {
 						local21 = 0;
 					}
 					if (local37 == 45) {
-						local13 = Static218.aClass100_720.method3120();
+						local13 = Static218.aClass100_720.length();
 						local15 = local9;
 						local17 = 0;
 					}
 				}
 			}
 		}
-		if (Static218.aClass100_720.method3120() > local11) {
+		if (Static218.aClass100_720.length() > local11) {
 			if (arg2[local23] == null) {
-				arg2[local23] = Static218.aClass100_720.method3143().method3137(Static218.aClass100_720.method3120(), local11);
+				arg2[local23] = Static218.aClass100_720.method3143().method3137(Static218.aClass100_720.length(), local11);
 			} else {
 				arg2[local23].method3133(0);
-				arg2[local23] = arg2[local23].method3122(Static218.aClass100_720, local11, Static218.aClass100_720.method3120());
+				arg2[local23] = arg2[local23].method3122(Static218.aClass100_720, local11, Static218.aClass100_720.length());
 			}
 			local23++;
 		}
@@ -501,7 +501,7 @@ public abstract class Font extends SecondaryNode {
 		if (local13 < 0.0D) {
 			local13 = 0.0D;
 		}
-		@Pc(23) int local23 = arg0.method3120();
+		@Pc(23) int local23 = arg0.length();
 		@Pc(26) int[] local26 = new int[local23];
 		for (@Pc(28) int local28 = 0; local28 < local23; local28++) {
 			local26[local28] = (int) (Math.sin((double) local28 / 1.5D + (double) arg4 / 1.0D) * local13);
@@ -567,7 +567,7 @@ public abstract class Font extends SecondaryNode {
 			return;
 		}
 		this.method2874(arg3, 0);
-		@Pc(10) int local10 = arg0.method3120();
+		@Pc(10) int local10 = arg0.length();
 		@Pc(13) int[] local13 = new int[local10];
 		@Pc(16) int[] local16 = new int[local10];
 		for (@Pc(18) int local18 = 0; local18 < local10; local18++) {
@@ -583,7 +583,7 @@ public abstract class Font extends SecondaryNode {
 			return;
 		}
 		this.method2874(arg3, 0);
-		@Pc(10) int local10 = arg0.method3120();
+		@Pc(10) int local10 = arg0.length();
 		@Pc(13) int[] local13 = new int[local10];
 		for (@Pc(15) int local15 = 0; local15 < local10; local15++) {
 			local13[local15] = (int) (Math.sin((double) local15 / 2.0D + (double) arg4 / 5.0D) * 5.0D);
@@ -700,7 +700,7 @@ public abstract class Font extends SecondaryNode {
 		}
 		arg9.setSeed((long) arg10);
 		this.method2877(arg5, arg6, (arg9.nextInt() & 0x1F) + 192);
-		@Pc(21) int local21 = arg0.method3120();
+		@Pc(21) int local21 = arg0.length();
 		@Pc(24) int[] local24 = new int[local21];
 		@Pc(26) int local26 = 0;
 		@Pc(28) int local28;
@@ -744,7 +744,7 @@ public abstract class Font extends SecondaryNode {
 		@Pc(6) int local6 = -1;
 		@Pc(8) int local8 = 0;
 		@Pc(10) int local10 = 0;
-		@Pc(14) int local14 = arg0.method3120();
+		@Pc(14) int local14 = arg0.length();
 		for (@Pc(16) int local16 = 0; local16 < local14; local16++) {
 			@Pc(24) int local24 = arg0.method3149(local16);
 			if (local24 == 60) {

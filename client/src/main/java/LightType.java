@@ -21,7 +21,7 @@ public final class LightType {
 	@OriginalMember(owner = "client!ic", name = "a", descriptor = "(ILclient!wa;I)V")
 	public final void method2257(@OriginalArg(1) Buffer arg0, @OriginalArg(2) int arg1) {
 		while (true) {
-			@Pc(5) int local5 = arg0.method2229();
+			@Pc(5) int local5 = arg0.g1();
 			if (local5 == 0) {
 				return;
 			}
@@ -32,13 +32,13 @@ public final class LightType {
 	@OriginalMember(owner = "client!ic", name = "a", descriptor = "(ILclient!wa;IZ)V")
 	private void method2258(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1, @OriginalArg(2) int arg2) {
 		if (arg0 == 1) {
-			this.anInt2865 = arg1.method2229();
+			this.anInt2865 = arg1.g1();
 		} else if (arg0 == 2) {
-			this.anInt2873 = arg1.method2163();
+			this.anInt2873 = arg1.g2();
 		} else if (arg0 == 3) {
-			this.anInt2867 = arg1.method2163();
+			this.anInt2867 = arg1.g2();
 		} else if (arg0 == 4) {
-			this.anInt2872 = arg1.method2213();
+			this.anInt2872 = arg1.g2s();
 		}
 	}
 }

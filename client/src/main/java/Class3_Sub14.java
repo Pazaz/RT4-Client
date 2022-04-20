@@ -159,40 +159,40 @@ public final class Class3_Sub14 extends Node {
 		@Pc(12) Buffer local12 = new Buffer((this.aBoolean139 ? 40 : 36) * this.anInt2483);
 		for (@Pc(14) int local14 = 0; local14 < this.anInt2483; local14++) {
 			if (Static239.aBoolean263) {
-				local12.method2227((float) this.anIntArray232[local14]);
-				local12.method2227((float) this.anIntArray230[local14]);
-				local12.method2227((float) this.anIntArray229[local14]);
-				local12.method2164(this.anIntArray226[local14]);
-				local12.method2227(this.aFloatArray7[local14]);
-				local12.method2227(this.aFloatArray6[local14]);
-				local12.method2227(this.aFloatArray5[local14]);
-				local12.method2227((float) this.anIntArray232[local14] / this.aFloat12);
-				local12.method2227((float) this.anIntArray229[local14] / this.aFloat12);
+				local12.pFloat((float) this.anIntArray232[local14]);
+				local12.pFloat((float) this.anIntArray230[local14]);
+				local12.pFloat((float) this.anIntArray229[local14]);
+				local12.p4(this.anIntArray226[local14]);
+				local12.pFloat(this.aFloatArray7[local14]);
+				local12.pFloat(this.aFloatArray6[local14]);
+				local12.pFloat(this.aFloatArray5[local14]);
+				local12.pFloat((float) this.anIntArray232[local14] / this.aFloat12);
+				local12.pFloat((float) this.anIntArray229[local14] / this.aFloat12);
 				if (this.aBoolean139) {
-					local12.method2227(this.aFloatArray4[local14]);
+					local12.pFloat(this.aFloatArray4[local14]);
 				}
 			} else {
-				local12.method2188((float) this.anIntArray232[local14]);
-				local12.method2188((float) this.anIntArray230[local14]);
-				local12.method2188((float) this.anIntArray229[local14]);
-				local12.method2164(this.anIntArray226[local14]);
-				local12.method2188(this.aFloatArray7[local14]);
-				local12.method2188(this.aFloatArray6[local14]);
-				local12.method2188(this.aFloatArray5[local14]);
-				local12.method2188((float) this.anIntArray232[local14] / this.aFloat12);
-				local12.method2188((float) this.anIntArray229[local14] / this.aFloat12);
+				local12.gFloat((float) this.anIntArray232[local14]);
+				local12.gFloat((float) this.anIntArray230[local14]);
+				local12.gFloat((float) this.anIntArray229[local14]);
+				local12.p4(this.anIntArray226[local14]);
+				local12.gFloat(this.aFloatArray7[local14]);
+				local12.gFloat(this.aFloatArray6[local14]);
+				local12.gFloat(this.aFloatArray5[local14]);
+				local12.gFloat((float) this.anIntArray232[local14] / this.aFloat12);
+				local12.gFloat((float) this.anIntArray229[local14] / this.aFloat12);
 				if (this.aBoolean139) {
-					local12.method2188(this.aFloatArray4[local14]);
+					local12.gFloat(this.aFloatArray4[local14]);
 				}
 			}
 		}
 		if (Static239.aBoolean271) {
-			@Pc(200) ByteBuffer local200 = ByteBuffer.wrap(local12.aByteArray40, 0, local12.anInt2792);
+			@Pc(200) ByteBuffer local200 = ByteBuffer.wrap(local12.data, 0, local12.offset);
 			this.aClass155_3 = new GlVertexBufferObject();
 			this.aClass155_3.method4519(local200);
 		} else {
-			this.aByteBuffer3 = ByteBuffer.allocateDirect(local12.anInt2792).order(ByteOrder.nativeOrder());
-			this.aByteBuffer3.put(local12.aByteArray40, 0, local12.anInt2792);
+			this.aByteBuffer3 = ByteBuffer.allocateDirect(local12.offset).order(ByteOrder.nativeOrder());
+			this.aByteBuffer3.put(local12.data, 0, local12.offset);
 			this.aByteBuffer3.flip();
 		}
 		this.anIntArray232 = null;
@@ -208,15 +208,15 @@ public final class Class3_Sub14 extends Node {
 
 	@OriginalMember(owner = "client!hg", name = "a", descriptor = "([[[Lclient!bj;FZ)V")
 	public final void method1944(@OriginalArg(0) Tile[][][] arg0, @OriginalArg(1) float arg1, @OriginalArg(2) boolean arg2) {
-		if (Static95.aClass3_Sub15_3 == null || Static95.aClass3_Sub15_3.aByteArray40.length < this.anInt2488 * 4) {
+		if (Static95.aClass3_Sub15_3 == null || Static95.aClass3_Sub15_3.data.length < this.anInt2488 * 4) {
 			Static95.aClass3_Sub15_3 = new Buffer(this.anInt2488 * 4);
 		} else {
-			Static95.aClass3_Sub15_3.anInt2792 = 0;
+			Static95.aClass3_Sub15_3.offset = 0;
 		}
-		if (Static95.aClass3_Sub15_2 == null || Static95.aClass3_Sub15_2.aByteArray40.length < this.anInt2487 * 4) {
+		if (Static95.aClass3_Sub15_2 == null || Static95.aClass3_Sub15_2.data.length < this.anInt2487 * 4) {
 			Static95.aClass3_Sub15_2 = new Buffer(this.anInt2487 * 4);
 		} else {
-			Static95.aClass3_Sub15_2.anInt2792 = 0;
+			Static95.aClass3_Sub15_2.offset = 0;
 		}
 		@Pc(47) int local47;
 		@Pc(68) Tile local68;
@@ -234,7 +234,7 @@ public final class Class3_Sub14 extends Node {
 						local86 = this.anIntArrayArray18[local47];
 						if (local86 != null) {
 							for (local90 = 0; local90 < local86.length; local90++) {
-								Static95.aClass3_Sub15_2.method2164(local86[local90]);
+								Static95.aClass3_Sub15_2.p4(local86[local90]);
 							}
 						}
 						local111 = this.aBooleanArray54[local47] ? Static95.aClass3_Sub15_2 : Static95.aClass3_Sub15_3;
@@ -242,9 +242,9 @@ public final class Class3_Sub14 extends Node {
 						local111 = Static95.aClass3_Sub15_3;
 					}
 					for (local116 = 1; local116 < local78.length - 1; local116++) {
-						local111.method2164(local78[0]);
-						local111.method2164(local78[local116]);
-						local111.method2164(local78[local116 + 1]);
+						local111.p4(local78[0]);
+						local111.p4(local78[local116]);
+						local111.p4(local78[local116 + 1]);
 					}
 				}
 			}
@@ -257,7 +257,7 @@ public final class Class3_Sub14 extends Node {
 						local86 = this.anIntArrayArray18[local47];
 						if (local86 != null) {
 							for (local90 = 0; local90 < local86.length; local90++) {
-								Static95.aClass3_Sub15_2.method2183(local86[local90]);
+								Static95.aClass3_Sub15_2.p4le(local86[local90]);
 							}
 						}
 						local111 = this.aBooleanArray54[local47] ? Static95.aClass3_Sub15_2 : Static95.aClass3_Sub15_3;
@@ -265,14 +265,14 @@ public final class Class3_Sub14 extends Node {
 						local111 = Static95.aClass3_Sub15_3;
 					}
 					for (local116 = 1; local116 < local78.length - 1; local116++) {
-						local111.method2183(local78[0]);
-						local111.method2183(local78[local116]);
-						local111.method2183(local78[local116 + 1]);
+						local111.p4le(local78[0]);
+						local111.p4le(local78[local116]);
+						local111.p4le(local78[local116 + 1]);
 					}
 				}
 			}
 		}
-		if (Static95.aClass3_Sub15_3.anInt2792 == 0 && Static95.aClass3_Sub15_2.anInt2792 == 0) {
+		if (Static95.aClass3_Sub15_3.offset == 0 && Static95.aClass3_Sub15_2.offset == 0) {
 			return;
 		}
 		@Pc(257) GL local257 = Static239.aGL1;
@@ -320,30 +320,30 @@ public final class Class3_Sub14 extends Node {
 		if (Static239.aBoolean271) {
 			local257.glBindBufferARB(GL.GL_ELEMENT_ARRAY_BUFFER, 0);
 		}
-		if (Static95.aClass3_Sub15_3.anInt2792 != 0) {
-			if (Static95.aByteBuffer5 == null || Static95.aByteBuffer5.capacity() < Static95.aClass3_Sub15_3.anInt2792) {
-				Static95.aByteBuffer5 = ByteBuffer.allocateDirect(Static95.aClass3_Sub15_3.anInt2792).order(ByteOrder.nativeOrder());
+		if (Static95.aClass3_Sub15_3.offset != 0) {
+			if (Static95.aByteBuffer5 == null || Static95.aByteBuffer5.capacity() < Static95.aClass3_Sub15_3.offset) {
+				Static95.aByteBuffer5 = ByteBuffer.allocateDirect(Static95.aClass3_Sub15_3.offset).order(ByteOrder.nativeOrder());
 			} else {
 				Static95.aByteBuffer5.clear();
 			}
-			Static95.aByteBuffer5.put(Static95.aClass3_Sub15_3.aByteArray40, 0, Static95.aClass3_Sub15_3.anInt2792);
+			Static95.aByteBuffer5.put(Static95.aClass3_Sub15_3.data, 0, Static95.aClass3_Sub15_3.offset);
 			Static95.aByteBuffer5.flip();
 			Static239.method4159(arg1);
-			local257.glDrawElements(GL.GL_TRIANGLES, Static95.aClass3_Sub15_3.anInt2792 / 4, GL.GL_UNSIGNED_INT, Static95.aByteBuffer5);
+			local257.glDrawElements(GL.GL_TRIANGLES, Static95.aClass3_Sub15_3.offset / 4, GL.GL_UNSIGNED_INT, Static95.aByteBuffer5);
 		}
-		if (Static95.aClass3_Sub15_2.anInt2792 == 0) {
+		if (Static95.aClass3_Sub15_2.offset == 0) {
 			return;
 		}
-		if (Static95.aByteBuffer4 == null || Static95.aByteBuffer4.capacity() < Static95.aClass3_Sub15_2.anInt2792) {
-			Static95.aByteBuffer4 = ByteBuffer.allocateDirect(Static95.aClass3_Sub15_2.anInt2792).order(ByteOrder.nativeOrder());
+		if (Static95.aByteBuffer4 == null || Static95.aByteBuffer4.capacity() < Static95.aClass3_Sub15_2.offset) {
+			Static95.aByteBuffer4 = ByteBuffer.allocateDirect(Static95.aClass3_Sub15_2.offset).order(ByteOrder.nativeOrder());
 		} else {
 			Static95.aByteBuffer4.clear();
 		}
-		Static95.aByteBuffer4.put(Static95.aClass3_Sub15_2.aByteArray40, 0, Static95.aClass3_Sub15_2.anInt2792);
+		Static95.aByteBuffer4.put(Static95.aClass3_Sub15_2.data, 0, Static95.aClass3_Sub15_2.offset);
 		Static95.aByteBuffer4.flip();
 		Static239.method4159(arg1 - 100.0F);
 		Static239.method4178();
-		local257.glDrawElements(GL.GL_TRIANGLES, Static95.aClass3_Sub15_2.anInt2792 / 4, GL.GL_UNSIGNED_INT, Static95.aByteBuffer4);
+		local257.glDrawElements(GL.GL_TRIANGLES, Static95.aClass3_Sub15_2.offset / 4, GL.GL_UNSIGNED_INT, Static95.aByteBuffer4);
 		Static239.method4157();
 	}
 

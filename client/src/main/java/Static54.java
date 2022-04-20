@@ -339,7 +339,7 @@ public final class Static54 {
 			Static144.aBoolean173 = false;
 		} else if (Static12.anInt391 != 0 && Static221.anInt4363 != -1 && !Static136.method2655()) {
 			Static6.aClass3_Sub15_Sub1_1.method2242(137);
-			Static6.aClass3_Sub15_Sub1_1.method2164(Static221.anInt4363);
+			Static6.aClass3_Sub15_Sub1_1.p4(Static221.anInt4363);
 			Static221.anInt4363 = -1;
 		}
 	}

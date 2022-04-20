@@ -282,7 +282,7 @@ public final class Js5 {
 			} else {
 				local114 = Static138.method2696(this.anObjectArray32[arg0], true);
 				@Pc(128) Buffer local128 = new Buffer(local114);
-				local128.method2196(arg1, local128.aByteArray40.length);
+				local128.decryptXtea(arg1, local128.data.length);
 			}
 			@Pc(140) byte[] local140;
 			try {
@@ -301,14 +301,14 @@ public final class Js5 {
 				@Pc(220) int local220 = local140[local216] & 0xFF;
 				@Pc(228) int local228 = local216 - local31 * local220 * 4;
 				@Pc(233) Buffer local233 = new Buffer(local140);
-				local233.anInt2792 = local228;
+				local233.offset = local228;
 				@Pc(239) int[] local239 = new int[local31];
 				@Pc(250) int local250;
 				@Pc(252) int local252;
 				for (@Pc(241) int local241 = 0; local241 < local220; local241++) {
 					local250 = 0;
 					for (local252 = 0; local252 < local31; local252++) {
-						local250 += local233.method2174();
+						local250 += local233.g4();
 						if (local25 == null) {
 						}
 						local239[local252] += local250;
@@ -319,13 +319,13 @@ public final class Js5 {
 					local282[local250] = new byte[local239[local250]];
 					local239[local250] = 0;
 				}
-				local233.anInt2792 = local228;
+				local233.offset = local228;
 				local250 = 0;
 				@Pc(320) int local320;
 				for (local252 = 0; local252 < local220; local252++) {
 					local320 = 0;
 					for (@Pc(322) int local322 = 0; local322 < local31; local322++) {
-						local320 += local233.method2174();
+						local320 += local233.g4();
 						Static289.method2612(local140, local250, local282[local322], local239[local322], local320);
 						local250 += local320;
 						local239[local322] += local320;

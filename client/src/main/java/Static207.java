@@ -112,15 +112,15 @@ public final class Static207 {
 					return -1;
 				}
 				Static124.aClass95_2 = new BufferedSocket((Socket) Static72.aClass212_3.anObject6, Static71.aClass213_3);
-				Static6.aClass3_Sub15_Sub1_1.anInt2792 = 0;
+				Static6.aClass3_Sub15_Sub1_1.offset = 0;
 				Static72.aClass212_3 = null;
 				local82 = 0;
 				if (Static61.aBoolean109) {
 					local82 = Static80.anInt4702;
 				}
-				Static6.aClass3_Sub15_Sub1_1.method2178(255);
-				Static6.aClass3_Sub15_Sub1_1.method2164(local82);
-				Static124.aClass95_2.method2830(Static6.aClass3_Sub15_Sub1_1.aByteArray40, Static6.aClass3_Sub15_Sub1_1.anInt2792);
+				Static6.aClass3_Sub15_Sub1_1.p1(255);
+				Static6.aClass3_Sub15_Sub1_1.p4(local82);
+				Static124.aClass95_2.method2830(Static6.aClass3_Sub15_Sub1_1.data, Static6.aClass3_Sub15_Sub1_1.offset);
 				if (Static11.aClass62_1 != null) {
 					Static11.aClass62_1.method3571();
 				}

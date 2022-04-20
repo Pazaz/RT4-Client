@@ -32,17 +32,17 @@ public final class Static47 {
 	@OriginalMember(owner = "client!dk", name = "a", descriptor = "(Lclient!wa;Z)V")
 	public static void method3998(@OriginalArg(0) Buffer arg0) {
 		label87: while (true) {
-			if (arg0.anInt2792 < arg0.aByteArray40.length) {
+			if (arg0.offset < arg0.data.length) {
 				@Pc(22) int local22 = 0;
 				@Pc(24) boolean local24 = false;
 				@Pc(26) int local26 = 0;
-				if (arg0.method2229() == 1) {
+				if (arg0.g1() == 1) {
 					local24 = true;
-					local22 = arg0.method2229();
-					local26 = arg0.method2229();
+					local22 = arg0.g1();
+					local26 = arg0.g1();
 				}
-				@Pc(46) int local46 = arg0.method2229();
-				@Pc(50) int local50 = arg0.method2229();
+				@Pc(46) int local46 = arg0.g1();
+				@Pc(50) int local50 = arg0.g1();
 				@Pc(62) int local62 = Static2.anInt13 + Static181.anInt4296 - local50 * 64 - 1;
 				@Pc(69) int local69 = local46 * 64 - Static158.anInt3846;
 				@Pc(147) byte local147;
@@ -57,13 +57,13 @@ public final class Static47 {
 						}
 						for (@Pc(104) int local104 = 0; local104 < 64; local104++) {
 							if (!local24 || local97 >= local22 * 8 && local97 < local22 * 8 + 8 && local104 >= local26 * 8 && local104 < local26 * 8 + 8) {
-								local147 = arg0.method2186();
+								local147 = arg0.g1s();
 								if (local147 != 0) {
 									if (Static34.aByteArrayArrayArray3[local91][local95] == null) {
 										Static34.aByteArrayArrayArray3[local91][local95] = new byte[4096];
 									}
 									Static34.aByteArrayArrayArray3[local91][local95][local97 + (63 - local104 << 6)] = local147;
-									@Pc(186) byte local186 = arg0.method2186();
+									@Pc(186) byte local186 = arg0.g1s();
 									if (Static90.aByteArrayArrayArray8[local91][local95] == null) {
 										Static90.aByteArrayArrayArray8[local91][local95] = new byte[4096];
 									}
@@ -79,9 +79,9 @@ public final class Static47 {
 					if ((local24 ? 64 : 4096) <= local91) {
 						continue label87;
 					}
-					local147 = arg0.method2186();
+					local147 = arg0.g1s();
 					if (local147 != 0) {
-						arg0.anInt2792++;
+						arg0.offset++;
 					}
 					local91++;
 				}

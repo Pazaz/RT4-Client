@@ -52,7 +52,7 @@ public final class Static229 {
 
 	@OriginalMember(owner = "client!si", name = "a", descriptor = "(BLclient!na;)I")
 	public static int method3937(@OriginalArg(1) JagString arg0) {
-		return arg0.method3120() + 1;
+		return arg0.length() + 1;
 	}
 
 	@OriginalMember(owner = "client!si", name = "b", descriptor = "(IIB)V")

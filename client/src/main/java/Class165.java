@@ -51,56 +51,56 @@ public final class Class165 {
 		for (@Pc(6) int local6 = 0; local6 <= 8; local6++) {
 			for (local11 = 0; local11 <= 8; local11++) {
 				if (Static239.aBoolean263) {
-					local4.method2227((float) local11 / 8.0F);
-					local4.method2227((float) local6 / 8.0F);
-					local4.method2227((float) (local11 * 128));
-					local4.method2227((float) arg0[local11 + arg1][local6 + arg2]);
-					local4.method2227((float) (local6 * 128));
+					local4.pFloat((float) local11 / 8.0F);
+					local4.pFloat((float) local6 / 8.0F);
+					local4.pFloat((float) (local11 * 128));
+					local4.pFloat((float) arg0[local11 + arg1][local6 + arg2]);
+					local4.pFloat((float) (local6 * 128));
 				} else {
-					local4.method2188((float) local11 / 8.0F);
-					local4.method2188((float) local6 / 8.0F);
-					local4.method2188((float) (local11 * 128));
-					local4.method2188((float) arg0[local11 + arg1][local6 + arg2]);
-					local4.method2188((float) (local6 * 128));
+					local4.gFloat((float) local11 / 8.0F);
+					local4.gFloat((float) local6 / 8.0F);
+					local4.gFloat((float) (local11 * 128));
+					local4.gFloat((float) arg0[local11 + arg1][local6 + arg2]);
+					local4.gFloat((float) (local6 * 128));
 				}
 			}
 		}
 		if (Static239.aBoolean271) {
-			@Pc(112) ByteBuffer local112 = ByteBuffer.wrap(local4.aByteArray40, 0, local4.anInt2792);
+			@Pc(112) ByteBuffer local112 = ByteBuffer.wrap(local4.data, 0, local4.offset);
 			this.aClass155_7 = new GlVertexBufferObject();
 			this.aClass155_7.method4519(local112);
 		} else {
-			this.aByteBuffer12 = ByteBuffer.allocateDirect(local4.anInt2792).order(ByteOrder.nativeOrder());
-			this.aByteBuffer12.put(local4.aByteArray40, 0, local4.anInt2792);
+			this.aByteBuffer12 = ByteBuffer.allocateDirect(local4.offset).order(ByteOrder.nativeOrder());
+			this.aByteBuffer12.put(local4.data, 0, local4.offset);
 			this.aByteBuffer12.flip();
 		}
 		@Pc(147) Buffer local147 = new Buffer(1536);
 		for (local11 = 0; local11 < 8; local11++) {
 			for (@Pc(154) int local154 = 0; local154 < 8; local154++) {
 				if (Static239.aBoolean263) {
-					local147.method2164(local154 + (local11 + 1) * 9);
-					local147.method2164(local154 + local11 * 9);
-					local147.method2164(local154 + local11 * 9 + 1);
-					local147.method2164(local154 + (local11 + 1) * 9);
-					local147.method2164(local154 + local11 * 9 + 1);
-					local147.method2164(local154 + (local11 + 1) * 9 + 1);
+					local147.p4(local154 + (local11 + 1) * 9);
+					local147.p4(local154 + local11 * 9);
+					local147.p4(local154 + local11 * 9 + 1);
+					local147.p4(local154 + (local11 + 1) * 9);
+					local147.p4(local154 + local11 * 9 + 1);
+					local147.p4(local154 + (local11 + 1) * 9 + 1);
 				} else {
-					local147.method2183(local154 + (local11 + 1) * 9);
-					local147.method2183(local154 + local11 * 9);
-					local147.method2183(local154 + local11 * 9 + 1);
-					local147.method2183(local154 + (local11 + 1) * 9);
-					local147.method2183(local154 + local11 * 9 + 1);
-					local147.method2183(local154 + (local11 + 1) * 9 + 1);
+					local147.p4le(local154 + (local11 + 1) * 9);
+					local147.p4le(local154 + local11 * 9);
+					local147.p4le(local154 + local11 * 9 + 1);
+					local147.p4le(local154 + (local11 + 1) * 9);
+					local147.p4le(local154 + local11 * 9 + 1);
+					local147.p4le(local154 + (local11 + 1) * 9 + 1);
 				}
 			}
 		}
 		if (Static239.aBoolean271) {
-			@Pc(293) ByteBuffer local293 = ByteBuffer.wrap(local147.aByteArray40, 0, local147.anInt2792);
+			@Pc(293) ByteBuffer local293 = ByteBuffer.wrap(local147.data, 0, local147.offset);
 			this.aClass155_6 = new GlVertexBufferObject();
 			this.aClass155_6.method4517(local293);
 		} else {
-			this.aByteBuffer11 = ByteBuffer.allocateDirect(local147.anInt2792).order(ByteOrder.nativeOrder());
-			this.aByteBuffer11.put(local147.aByteArray40, 0, local147.anInt2792);
+			this.aByteBuffer11 = ByteBuffer.allocateDirect(local147.offset).order(ByteOrder.nativeOrder());
+			this.aByteBuffer11.put(local147.data, 0, local147.offset);
 			this.aByteBuffer11.flip();
 		}
 	}

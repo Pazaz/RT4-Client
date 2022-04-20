@@ -27,23 +27,23 @@ public final class EnumType extends SecondaryNode {
 	@OriginalMember(owner = "client!ml", name = "a", descriptor = "(ILclient!wa;B)V")
 	private void method3084(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		if (arg0 == 1) {
-			this.anInt3957 = arg1.method2229();
+			this.anInt3957 = arg1.g1();
 		} else if (arg0 == 2) {
-			this.anInt3950 = arg1.method2229();
+			this.anInt3950 = arg1.g1();
 		} else if (arg0 == 3) {
-			this.aClass100_766 = arg1.method2202();
+			this.aClass100_766 = arg1.gjstr();
 		} else if (arg0 == 4) {
-			this.anInt3960 = arg1.method2174();
+			this.anInt3960 = arg1.g4();
 		} else if (arg0 == 5 || arg0 == 6) {
-			@Pc(41) int local41 = arg1.method2163();
+			@Pc(41) int local41 = arg1.g2();
 			this.aClass133_16 = new HashTable(Static165.method3164(local41));
 			for (@Pc(51) int local51 = 0; local51 < local41; local51++) {
-				@Pc(58) int local58 = arg1.method2174();
+				@Pc(58) int local58 = arg1.g4();
 				@Pc(70) Node local70;
 				if (arg0 == 5) {
-					local70 = new StringNode(arg1.method2202());
+					local70 = new StringNode(arg1.gjstr());
 				} else {
-					local70 = new IntNode(arg1.method2174());
+					local70 = new IntNode(arg1.g4());
 				}
 				this.aClass133_16.method3862(local70, (long) local58);
 			}
@@ -119,7 +119,7 @@ public final class EnumType extends SecondaryNode {
 	@OriginalMember(owner = "client!ml", name = "a", descriptor = "(Lclient!wa;I)V")
 	public final void method3094(@OriginalArg(0) Buffer arg0) {
 		while (true) {
-			@Pc(9) int local9 = arg0.method2229();
+			@Pc(9) int local9 = arg0.g1();
 			if (local9 == 0) {
 				return;
 			}

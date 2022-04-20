@@ -37,45 +37,45 @@ public final class Static91 {
 		}
 		local12 = new ClientScript();
 		@Pc(42) Buffer local42 = new Buffer(local22);
-		local42.anInt2792 = local42.aByteArray40.length - 2;
-		@Pc(53) int local53 = local42.method2163();
-		@Pc(63) int local63 = local42.aByteArray40.length - local53 - 12 - 2;
-		local42.anInt2792 = local63;
-		@Pc(70) int local70 = local42.method2174();
-		local12.anInt4667 = local42.method2163();
-		local12.anInt4671 = local42.method2163();
-		local12.anInt4665 = local42.method2163();
-		local12.anInt4669 = local42.method2163();
-		@Pc(98) int local98 = local42.method2229();
+		local42.offset = local42.data.length - 2;
+		@Pc(53) int local53 = local42.g2();
+		@Pc(63) int local63 = local42.data.length - local53 - 12 - 2;
+		local42.offset = local63;
+		@Pc(70) int local70 = local42.g4();
+		local12.anInt4667 = local42.g2();
+		local12.anInt4671 = local42.g2();
+		local12.anInt4665 = local42.g2();
+		local12.anInt4669 = local42.g2();
+		@Pc(98) int local98 = local42.g1();
 		@Pc(107) int local107;
 		@Pc(114) int local114;
 		if (local98 > 0) {
 			local12.aClass133Array1 = new HashTable[local98];
 			for (local107 = 0; local107 < local98; local107++) {
-				local114 = local42.method2163();
+				local114 = local42.g2();
 				@Pc(121) HashTable local121 = new HashTable(Static165.method3164(local114));
 				local12.aClass133Array1[local107] = local121;
 				while (local114-- > 0) {
-					@Pc(136) int local136 = local42.method2174();
-					@Pc(140) int local140 = local42.method2174();
+					@Pc(136) int local136 = local42.g4();
+					@Pc(140) int local140 = local42.g4();
 					local121.method3862(new IntNode(local140), (long) local136);
 				}
 			}
 		}
-		local42.anInt2792 = 0;
-		local12.aClass100_880 = local42.method2176();
+		local42.offset = 0;
+		local12.aClass100_880 = local42.gjstrFast();
 		local12.anIntArray415 = new int[local70];
 		local12.aClass100Array140 = new JagString[local70];
 		local107 = 0;
 		local12.anIntArray416 = new int[local70];
-		while (local63 > local42.anInt2792) {
-			local114 = local42.method2163();
+		while (local63 > local42.offset) {
+			local114 = local42.g2();
 			if (local114 == 3) {
-				local12.aClass100Array140[local107] = local42.method2202();
+				local12.aClass100Array140[local107] = local42.gjstr();
 			} else if (local114 >= 100 || local114 == 21 || local114 == 38 || local114 == 39) {
-				local12.anIntArray416[local107] = local42.method2229();
+				local12.anIntArray416[local107] = local42.g1();
 			} else {
-				local12.anIntArray416[local107] = local42.method2174();
+				local12.anIntArray416[local107] = local42.g4();
 			}
 			local12.anIntArray415[local107++] = local114;
 		}
@@ -104,7 +104,7 @@ public final class Static91 {
 
 	@OriginalMember(owner = "client!hc", name = "a", descriptor = "(Lclient!na;Z)I")
 	public static int method1879(@OriginalArg(0) JagString arg0) {
-		if (Static203.aClass134_1 == null || arg0.method3120() == 0) {
+		if (Static203.aClass134_1 == null || arg0.length() == 0) {
 			return -1;
 		}
 		for (@Pc(20) int local20 = 0; local20 < Static203.aClass134_1.anInt5074; local20++) {

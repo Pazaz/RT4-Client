@@ -73,9 +73,9 @@ public final class Static245 {
 		for (@Pc(7) int local7 = 0; local7 < Static116.anInt2951; local7++) {
 			@Pc(31) int local31 = Static44.anIntArray106[local7];
 			@Pc(35) Player local35 = Static159.aClass8_Sub4_Sub1Array1[local31];
-			@Pc(39) int local39 = Static57.aClass3_Sub15_Sub1_3.method2229();
+			@Pc(39) int local39 = Static57.aClass3_Sub15_Sub1_3.g1();
 			if ((local39 & 0x10) != 0) {
-				local39 += Static57.aClass3_Sub15_Sub1_3.method2229() << 8;
+				local39 += Static57.aClass3_Sub15_Sub1_3.g1() << 8;
 			}
 			Static84.method1768(local39, local31, local35);
 		}
@@ -118,14 +118,14 @@ public final class Static245 {
 		@Pc(255) int local255;
 		@Pc(266) int local266;
 		@Pc(316) int local316;
-		while (local96.aByteArray40.length > local96.anInt2792) {
-			local103 = local96.method2229();
+		while (local96.data.length > local96.offset) {
+			local103 = local96.g1();
 			if (local103 != 129) {
-				local96.anInt2792--;
+				local96.offset--;
 				break;
 			}
 			for (local108 = 0; local108 < 4; local108++) {
-				@Pc(223) byte local223 = local96.method2186();
+				@Pc(223) byte local223 = local96.g1s();
 				@Pc(237) int local237;
 				if (local223 == 0) {
 					if (local108 <= arg6) {
@@ -164,7 +164,7 @@ public final class Static245 {
 				} else if (local223 == 1) {
 					for (local232 = 0; local232 < 64; local232 += 4) {
 						for (local237 = 0; local237 < 64; local237 += 4) {
-							@Pc(246) byte local246 = local96.method2186();
+							@Pc(246) byte local246 = local96.g1s();
 							if (local108 <= arg6) {
 								for (local255 = local232; local255 < local232 + 4; local255++) {
 									for (local266 = local237; local266 < local237 + 4; local266++) {
@@ -189,13 +189,13 @@ public final class Static245 {
 			@Pc(472) Environment local472 = null;
 			label207: while (true) {
 				label200: do {
-					while (local96.aByteArray40.length > local96.anInt2792) {
-						local108 = local96.method2229();
+					while (local96.data.length > local96.offset) {
+						local108 = local96.g1();
 						if (local108 != 0) {
 							if (local108 != 1) {
 								throw new IllegalStateException();
 							}
-							local497 = local96.method2229();
+							local497 = local96.g1();
 							continue label200;
 						}
 						local472 = new Environment(local96);
@@ -209,7 +209,7 @@ public final class Static245 {
 				for (local232 = 0; local232 < local497; local232++) {
 					@Pc(517) Light local517 = new Light(local96);
 					if (local517.anInt2243 == 31) {
-						@Pc(529) LightType local529 = Static140.method2709(local96.method2163());
+						@Pc(529) LightType local529 = Static140.method2709(local96.g2());
 						local517.method1762(local529.anInt2865, local529.anInt2873, local529.anInt2867, local529.anInt2872);
 					}
 					local417 = local517.anInt2240 >> 7;

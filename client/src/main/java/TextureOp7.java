@@ -21,11 +21,11 @@ public final class TextureOp7 extends TextureOp {
 	@Override
 	public final void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		if (arg0 == 0) {
-			this.aBoolean104 = arg1.method2229() == 1;
+			this.aBoolean104 = arg1.g1() == 1;
 		} else if (arg0 == 1) {
-			this.aBoolean105 = arg1.method2229() == 1;
+			this.aBoolean105 = arg1.g1() == 1;
 		} else if (arg0 == 2) {
-			this.aBoolean309 = arg1.method2229() == 1;
+			this.aBoolean309 = arg1.g1() == 1;
 		}
 	}
 

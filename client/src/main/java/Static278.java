@@ -121,16 +121,16 @@ public final class Static278 {
 		@Pc(32) int local32;
 		if (arg5 < 0 || arg5 >= 104 || arg4 < 0 || arg4 >= 104) {
 			while (true) {
-				local32 = arg3.method2229();
+				local32 = arg3.g1();
 				if (local32 == 0) {
 					break;
 				}
 				if (local32 == 1) {
-					arg3.method2229();
+					arg3.g1();
 					break;
 				}
 				if (local32 <= 49) {
-					arg3.method2229();
+					arg3.g1();
 				}
 			}
 			return;
@@ -139,7 +139,7 @@ public final class Static278 {
 			Static12.aByteArrayArrayArray2[arg7][arg5][arg4] = 0;
 		}
 		while (true) {
-			local32 = arg3.method2229();
+			local32 = arg3.g1();
 			if (local32 == 0) {
 				if (arg2) {
 					Static83.anIntArrayArrayArray4[0][arg5][arg4] = Static107.anIntArrayArrayArray10[0][arg5][arg4];
@@ -151,7 +151,7 @@ public final class Static278 {
 				break;
 			}
 			if (local32 == 1) {
-				@Pc(111) int local111 = arg3.method2229();
+				@Pc(111) int local111 = arg3.g1();
 				if (arg2) {
 					Static83.anIntArrayArrayArray4[0][arg5][arg4] = Static107.anIntArrayArrayArray10[0][arg5][arg4] + local111 * 8;
 				} else {
@@ -167,7 +167,7 @@ public final class Static278 {
 				break;
 			}
 			if (local32 <= 49) {
-				Static240.aByteArrayArrayArray14[arg7][arg5][arg4] = arg3.method2186();
+				Static240.aByteArrayArrayArray14[arg7][arg5][arg4] = arg3.g1s();
 				Static163.aByteArrayArrayArray11[arg7][arg5][arg4] = (byte) ((local32 - 2) / 4);
 				Static4.aByteArrayArrayArray1[arg7][arg5][arg4] = (byte) (local32 + arg6 - 2 & 0x3);
 			} else if (local32 > 81) {

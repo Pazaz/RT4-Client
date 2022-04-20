@@ -45,7 +45,7 @@ public final class Js5MasterIndex {
 			return false;
 		} else {
 			this.aClass3_Sub15_1 = new Buffer(this.aClass3_Sub2_Sub5_Sub2_1.method3554());
-			this.aClass14_Sub1Array1 = new Js5CachedResourceProvider[(this.aClass3_Sub15_1.aByteArray40.length - 5) / 8];
+			this.aClass14_Sub1Array1 = new Js5CachedResourceProvider[(this.aClass3_Sub15_1.data.length - 5) / 8];
 			return true;
 		}
 	}
@@ -78,12 +78,12 @@ public final class Js5MasterIndex {
 		if (this.aClass3_Sub15_1 == null) {
 			throw new RuntimeException();
 		}
-		this.aClass3_Sub15_1.anInt2792 = arg1 * 8 + 5;
-		if (this.aClass3_Sub15_1.aByteArray40.length <= this.aClass3_Sub15_1.anInt2792) {
+		this.aClass3_Sub15_1.offset = arg1 * 8 + 5;
+		if (this.aClass3_Sub15_1.data.length <= this.aClass3_Sub15_1.offset) {
 			throw new RuntimeException();
 		} else if (this.aClass14_Sub1Array1[arg1] == null) {
-			@Pc(56) int local56 = this.aClass3_Sub15_1.method2174();
-			@Pc(61) int local61 = this.aClass3_Sub15_1.method2174();
+			@Pc(56) int local56 = this.aClass3_Sub15_1.g4();
+			@Pc(61) int local61 = this.aClass3_Sub15_1.g4();
 			@Pc(75) Js5CachedResourceProvider local75 = new Js5CachedResourceProvider(arg1, arg0, arg2, this.aClass73_1, this.aClass80_1, local56, local61, true);
 			this.aClass14_Sub1Array1[arg1] = local75;
 			return local75;

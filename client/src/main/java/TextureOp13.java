@@ -42,11 +42,11 @@ public final class TextureOp13 extends TextureOp {
 	@Override
 	public final void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		if (arg0 == 0) {
-			this.anInt2546 = arg1.method2213();
+			this.anInt2546 = arg1.g2s();
 		} else if (arg0 == 1) {
-			this.anInt2549 = (arg1.method2186() << 12) / 100;
+			this.anInt2549 = (arg1.g1s() << 12) / 100;
 		} else if (arg0 == 2) {
-			this.anInt2547 = (arg1.method2186() << 12) / 100;
+			this.anInt2547 = (arg1.g1s() << 12) / 100;
 		}
 	}
 

@@ -163,7 +163,7 @@ public final class Static230 {
 			@Pc(17) JagString local17 = Static272.aClass100_989.method3153(Static71.aClass213_3.anApplet2);
 			@Pc(23) JagString local23 = Static246.aClass100_1029.method3153(Static71.aClass213_3.anApplet2);
 			@Pc(48) JagString local48 = Static34.method882(new JagString[] { local17, Static142.aClass100_667, arg0, Static276.aClass100_1095, local23 });
-			if (arg0.method3120() == 0) {
+			if (arg0.length() == 0) {
 				local48 = Static34.method882(new JagString[] { local48, Static245.aClass100_1018 });
 			} else {
 				local48 = Static34.method882(new JagString[] { local48, Static263.aClass100_1082, Static33.method873(MonotonicClock.method5096() + 94608000000L), Static64.aClass100_431, Static154.method2929(94608000L) });

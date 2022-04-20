@@ -226,17 +226,17 @@ public final class TextureOpColorGradient extends TextureOp {
 		if (arg0 != 0) {
 			return;
 		}
-		@Pc(15) int local15 = arg1.method2229();
+		@Pc(15) int local15 = arg1.g1();
 		if (local15 != 0) {
 			this.method4390(local15);
 			return;
 		}
-		this.anIntArrayArray39 = new int[arg1.method2229()][4];
+		this.anIntArrayArray39 = new int[arg1.g1()][4];
 		for (@Pc(35) int local35 = 0; local35 < this.anIntArrayArray39.length; local35++) {
-			this.anIntArrayArray39[local35][0] = arg1.method2163();
-			this.anIntArrayArray39[local35][1] = arg1.method2229() << 4;
-			this.anIntArrayArray39[local35][2] = arg1.method2229() << 4;
-			this.anIntArrayArray39[local35][3] = arg1.method2229() << 4;
+			this.anIntArrayArray39[local35][0] = arg1.g2();
+			this.anIntArrayArray39[local35][1] = arg1.g1() << 4;
+			this.anIntArrayArray39[local35][2] = arg1.g1() << 4;
+			this.anIntArrayArray39[local35][3] = arg1.g1() << 4;
 		}
 	}
 

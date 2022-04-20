@@ -47,10 +47,10 @@ public final class Static59 {
 	@OriginalMember(owner = "client!ej", name = "i", descriptor = "(I)V")
 	public static void method1373() {
 		Static6.aClass3_Sub15_Sub1_1.method2242(243);
-		Static6.aClass3_Sub15_Sub1_1.method2178(Static144.method2736());
-		Static6.aClass3_Sub15_Sub1_1.method2230(Static48.anInt1448);
-		Static6.aClass3_Sub15_Sub1_1.method2230(Static254.anInt5554);
-		Static6.aClass3_Sub15_Sub1_1.method2178(Static186.anInt4392);
+		Static6.aClass3_Sub15_Sub1_1.p1(Static144.method2736());
+		Static6.aClass3_Sub15_Sub1_1.p2(Static48.anInt1448);
+		Static6.aClass3_Sub15_Sub1_1.p2(Static254.anInt5554);
+		Static6.aClass3_Sub15_Sub1_1.p1(Static186.anInt4392);
 	}
 
 	@OriginalMember(owner = "client!ej", name = "a", descriptor = "(Lclient!ve;ILclient!ve;Lclient!of;)V")

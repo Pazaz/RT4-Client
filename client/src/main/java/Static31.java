@@ -81,7 +81,7 @@ public final class Static31 {
 				}
 				Static124.aClass95_2 = new BufferedSocket((Socket) Static72.aClass212_3.anObject6, Static71.aClass213_3);
 				Static72.aClass212_3 = null;
-				Static124.aClass95_2.method2830(Static6.aClass3_Sub15_Sub1_1.aByteArray40, Static6.aClass3_Sub15_Sub1_1.anInt2792);
+				Static124.aClass95_2.method2830(Static6.aClass3_Sub15_Sub1_1.data, Static6.aClass3_Sub15_Sub1_1.offset);
 				if (Static11.aClass62_1 != null) {
 					Static11.aClass62_1.method3571();
 				}

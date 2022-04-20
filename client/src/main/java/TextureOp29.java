@@ -53,9 +53,9 @@ public final class TextureOp29 extends TextureOp {
 	@Override
 	public final void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		if (arg0 == 0) {
-			this.aClass18Array1 = new TextureOp29SubOp[arg1.method2229()];
+			this.aClass18Array1 = new TextureOp29SubOp[arg1.g1()];
 			for (@Pc(11) int local11 = 0; local11 < this.aClass18Array1.length; local11++) {
-				@Pc(24) int local24 = arg1.method2229();
+				@Pc(24) int local24 = arg1.g1();
 				if (local24 == 0) {
 					this.aClass18Array1[local11] = Static9.method184(arg1);
 				} else if (local24 == 1) {
@@ -67,7 +67,7 @@ public final class TextureOp29 extends TextureOp {
 				}
 			}
 		} else if (arg0 == 1) {
-			this.aBoolean309 = arg1.method2229() == 1;
+			this.aBoolean309 = arg1.g1() == 1;
 		}
 	}
 

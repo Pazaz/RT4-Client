@@ -37,17 +37,17 @@ public final class Static231 {
 	@OriginalMember(owner = "client!sk", name = "a", descriptor = "(ILclient!wa;)V")
 	public static void method3980(@OriginalArg(1) Buffer arg0) {
 		label83: while (true) {
-			if (arg0.anInt2792 < arg0.aByteArray40.length) {
+			if (arg0.offset < arg0.data.length) {
 				@Pc(23) int local23 = 0;
 				@Pc(25) boolean local25 = false;
 				@Pc(27) int local27 = 0;
-				if (arg0.method2229() == 1) {
+				if (arg0.g1() == 1) {
 					local25 = true;
-					local23 = arg0.method2229();
-					local27 = arg0.method2229();
+					local23 = arg0.g1();
+					local27 = arg0.g1();
 				}
-				@Pc(46) int local46 = arg0.method2229();
-				@Pc(50) int local50 = arg0.method2229();
+				@Pc(46) int local46 = arg0.g1();
+				@Pc(50) int local50 = arg0.g1();
 				@Pc(57) int local57 = local46 * 64 - Static158.anInt3846;
 				@Pc(68) int local68 = Static181.anInt4296 + Static2.anInt13 - local50 * 64 - 1;
 				@Pc(146) byte local146;
@@ -62,13 +62,13 @@ public final class Static231 {
 						}
 						for (@Pc(107) int local107 = 0; local107 < 64; local107++) {
 							if (!local25 || local23 * 8 <= local102 && local23 * 8 + 8 > local102 && local107 >= local27 * 8 && local27 * 8 + 8 > local107) {
-								local146 = arg0.method2186();
+								local146 = arg0.g1s();
 								if (local146 != 0) {
 									if (Static229.aByteArrayArrayArray12[local96][local100] == null) {
 										Static229.aByteArrayArrayArray12[local96][local100] = new byte[4096];
 									}
 									Static229.aByteArrayArrayArray12[local96][local100][(63 - local107 << 6) + local102] = local146;
-									@Pc(182) byte local182 = arg0.method2186();
+									@Pc(182) byte local182 = arg0.g1s();
 									if (Static125.aByteArrayArrayArray10[local96][local100] == null) {
 										Static125.aByteArrayArrayArray10[local96][local100] = new byte[4096];
 									}
@@ -84,9 +84,9 @@ public final class Static231 {
 					if (local96 >= (local25 ? 64 : 4096)) {
 						continue label83;
 					}
-					local146 = arg0.method2186();
+					local146 = arg0.g1s();
 					if (local146 != 0) {
-						arg0.anInt2792++;
+						arg0.offset++;
 					}
 					local96++;
 				}

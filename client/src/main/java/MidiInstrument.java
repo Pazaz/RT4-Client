@@ -35,39 +35,39 @@ public final class MidiInstrument extends Node {
 		@Pc(29) int local29 = 0;
 		this.aByteArray44 = new byte[128];
 		@Pc(38) Buffer local38 = new Buffer(arg0);
-		while (local38.aByteArray40[local29 + local38.anInt2792] != 0) {
+		while (local38.data[local29 + local38.offset] != 0) {
 			local29++;
 		}
 		@Pc(55) byte[] local55 = new byte[local29];
 		@Pc(57) int local57;
 		for (local57 = 0; local57 < local29; local57++) {
-			local55[local57] = local38.method2186();
+			local55[local57] = local38.g1s();
 		}
-		local38.anInt2792++;
+		local38.offset++;
 		local29++;
-		local57 = local38.anInt2792;
-		local38.anInt2792 += local29;
+		local57 = local38.offset;
+		local38.offset += local29;
 		@Pc(91) int local91;
-		for (local91 = 0; local38.aByteArray40[local38.anInt2792 + local91] != 0; local91++) {
+		for (local91 = 0; local38.data[local38.offset + local91] != 0; local91++) {
 		}
 		@Pc(106) byte[] local106 = new byte[local91];
 		@Pc(108) int local108;
 		for (local108 = 0; local108 < local91; local108++) {
-			local106[local108] = local38.method2186();
+			local106[local108] = local38.g1s();
 		}
-		local38.anInt2792++;
+		local38.offset++;
 		local91++;
 		@Pc(133) int local133 = 0;
-		local108 = local38.anInt2792;
-		local38.anInt2792 += local91;
-		while (local38.aByteArray40[local133 + local38.anInt2792] != 0) {
+		local108 = local38.offset;
+		local38.offset += local91;
+		while (local38.data[local133 + local38.offset] != 0) {
 			local133++;
 		}
 		@Pc(159) byte[] local159 = new byte[local133];
 		for (@Pc(161) int local161 = 0; local161 < local133; local161++) {
-			local159[local161] = local38.method2186();
+			local159[local161] = local38.g1s();
 		}
-		local38.anInt2792++;
+		local38.offset++;
 		local133++;
 		@Pc(187) byte[] local187 = new byte[local133];
 		@Pc(194) int local194;
@@ -79,7 +79,7 @@ public final class MidiInstrument extends Node {
 			local187[1] = 1;
 			@Pc(204) int local204 = 1;
 			for (local206 = 2; local206 < local133; local206++) {
-				@Pc(217) int local217 = local38.method2229();
+				@Pc(217) int local217 = local38.g1();
 				if (local217 == 0) {
 					local204 = local194++;
 				} else {
@@ -94,39 +94,39 @@ public final class MidiInstrument extends Node {
 		@Pc(242) Class162[] local242 = new Class162[local194];
 		for (local206 = 0; local206 < local242.length; local206++) {
 			@Pc(256) Class162 local256 = local242[local206] = new Class162();
-			@Pc(260) int local260 = local38.method2229();
+			@Pc(260) int local260 = local38.g1();
 			if (local260 > 0) {
 				local256.aByteArray80 = new byte[local260 * 2];
 			}
-			local260 = local38.method2229();
+			local260 = local38.g1();
 			if (local260 > 0) {
 				local256.aByteArray81 = new byte[local260 * 2 + 2];
 				local256.aByteArray81[1] = 64;
 			}
 		}
-		local206 = local38.method2229();
+		local206 = local38.g1();
 		@Pc(311) byte[] local311 = local206 > 0 ? new byte[local206 * 2] : null;
-		local206 = local38.method2229();
+		local206 = local38.g1();
 		@Pc(327) byte[] local327 = local206 > 0 ? new byte[local206 * 2] : null;
 		@Pc(329) int local329;
-		for (local329 = 0; local38.aByteArray40[local329 + local38.anInt2792] != 0; local329++) {
+		for (local329 = 0; local38.data[local329 + local38.offset] != 0; local329++) {
 		}
 		@Pc(346) byte[] local346 = new byte[local329];
 		@Pc(348) int local348;
 		for (local348 = 0; local348 < local329; local348++) {
-			local346[local348] = local38.method2186();
+			local346[local348] = local38.g1s();
 		}
-		local38.anInt2792++;
+		local38.offset++;
 		local329++;
 		local348 = 0;
 		@Pc(375) int local375;
 		for (local375 = 0; local375 < 128; local375++) {
-			local348 += local38.method2229();
+			local348 += local38.g1();
 			this.aShortArray36[local375] = (short) local348;
 		}
 		local348 = 0;
 		for (local375 = 0; local375 < 128; local375++) {
-			local348 += local38.method2229();
+			local348 += local38.g1();
 			this.aShortArray36[local375] = (short) (this.aShortArray36[local375] + (local348 << 8));
 		}
 		local375 = 0;
@@ -140,7 +140,7 @@ public final class MidiInstrument extends Node {
 				} else {
 					local375 = -1;
 				}
-				local430 = local38.method2167();
+				local430 = local38.gVarInt();
 			}
 			this.aShortArray36[local432] = (short) (this.aShortArray36[local432] + ((local430 - 1 & 0x2) << 14));
 			this.anIntArray289[local432] = local430;
@@ -153,7 +153,7 @@ public final class MidiInstrument extends Node {
 		for (local496 = 0; local496 < 128; local496++) {
 			if (this.anIntArray289[local496] != 0) {
 				if (local375 == 0) {
-					local432 = local38.aByteArray40[local57++] - 1;
+					local432 = local38.data[local57++] - 1;
 					if (local55.length > local428) {
 						local375 = local55[local428++];
 					} else {
@@ -170,7 +170,7 @@ public final class MidiInstrument extends Node {
 		for (@Pc(550) int local550 = 0; local550 < 128; local550++) {
 			if (this.anIntArray289[local550] != 0) {
 				if (local375 == 0) {
-					local496 = local38.aByteArray40[local108++] + 16 << 2;
+					local496 = local38.data[local108++] + 16 << 2;
 					if (local428 < local106.length) {
 						local375 = local106[local428++];
 					} else {
@@ -211,36 +211,36 @@ public final class MidiInstrument extends Node {
 					local375 = -1;
 				}
 				if (this.anIntArray289[local664] > 0) {
-					local611 = local38.method2229() + 1;
+					local611 = local38.g1() + 1;
 				}
 			}
 			local375--;
 			this.aByteArray45[local664] = (byte) local611;
 		}
-		this.anInt3078 = local38.method2229() + 1;
+		this.anInt3078 = local38.g1() + 1;
 		@Pc(729) Class162 local729;
 		@Pc(734) int local734;
 		for (local664 = 0; local664 < local194; local664++) {
 			local729 = local242[local664];
 			if (local729.aByteArray80 != null) {
 				for (local734 = 1; local734 < local729.aByteArray80.length; local734 += 2) {
-					local729.aByteArray80[local734] = local38.method2186();
+					local729.aByteArray80[local734] = local38.g1s();
 				}
 			}
 			if (local729.aByteArray81 != null) {
 				for (local734 = 3; local734 < local729.aByteArray81.length - 2; local734 += 2) {
-					local729.aByteArray81[local734] = local38.method2186();
+					local729.aByteArray81[local734] = local38.g1s();
 				}
 			}
 		}
 		if (local311 != null) {
 			for (local664 = 1; local664 < local311.length; local664 += 2) {
-				local311[local664] = local38.method2186();
+				local311[local664] = local38.g1s();
 			}
 		}
 		if (local327 != null) {
 			for (local664 = 1; local664 < local327.length; local664 += 2) {
-				local327[local664] = local38.method2186();
+				local327[local664] = local38.g1s();
 			}
 		}
 		for (local664 = 0; local664 < local194; local664++) {
@@ -248,7 +248,7 @@ public final class MidiInstrument extends Node {
 			if (local729.aByteArray81 != null) {
 				local348 = 0;
 				for (local734 = 2; local734 < local729.aByteArray81.length; local734 += 2) {
-					local348 -= -local38.method2229() - 1;
+					local348 -= -local38.g1() - 1;
 					local729.aByteArray81[local734] = (byte) local348;
 				}
 			}
@@ -258,7 +258,7 @@ public final class MidiInstrument extends Node {
 			if (local729.aByteArray80 != null) {
 				local348 = 0;
 				for (local734 = 2; local734 < local729.aByteArray80.length; local734 += 2) {
-					local348 = local348 + local38.method2229() + 1;
+					local348 = local348 + local38.g1() + 1;
 					local729.aByteArray80[local734] = (byte) local348;
 				}
 			}
@@ -270,10 +270,10 @@ public final class MidiInstrument extends Node {
 		@Pc(1066) int local1066;
 		@Pc(954) byte local954;
 		if (local311 != null) {
-			local348 = local38.method2229();
+			local348 = local38.g1();
 			local311[0] = (byte) local348;
 			for (local664 = 2; local664 < local311.length; local664 += 2) {
-				local348 = local348 + local38.method2229() + 1;
+				local348 = local348 + local38.g1() + 1;
 				local311[local664] = (byte) local348;
 			}
 			local954 = local311[0];
@@ -300,10 +300,10 @@ public final class MidiInstrument extends Node {
 			}
 		}
 		if (local327 != null) {
-			local348 = local38.method2229();
+			local348 = local38.g1();
 			local327[0] = (byte) local348;
 			for (local664 = 2; local664 < local327.length; local664 += 2) {
-				local348 = local348 + local38.method2229() + 1;
+				local348 = local348 + local38.g1() + 1;
 				local327[local664] = (byte) local348;
 			}
 			local954 = local327[0];
@@ -352,33 +352,33 @@ public final class MidiInstrument extends Node {
 			}
 		}
 		for (local664 = 0; local664 < local194; local664++) {
-			local242[local664].anInt5815 = local38.method2229();
+			local242[local664].anInt5815 = local38.g1();
 		}
 		for (local664 = 0; local664 < local194; local664++) {
 			local729 = local242[local664];
 			if (local729.aByteArray80 != null) {
-				local729.anInt5810 = local38.method2229();
+				local729.anInt5810 = local38.g1();
 			}
 			if (local729.aByteArray81 != null) {
-				local729.anInt5813 = local38.method2229();
+				local729.anInt5813 = local38.g1();
 			}
 			if (local729.anInt5815 > 0) {
-				local729.anInt5807 = local38.method2229();
+				local729.anInt5807 = local38.g1();
 			}
 		}
 		for (local664 = 0; local664 < local194; local664++) {
-			local242[local664].anInt5814 = local38.method2229();
+			local242[local664].anInt5814 = local38.g1();
 		}
 		for (local664 = 0; local664 < local194; local664++) {
 			local729 = local242[local664];
 			if (local729.anInt5814 > 0) {
-				local729.anInt5809 = local38.method2229();
+				local729.anInt5809 = local38.g1();
 			}
 		}
 		for (local664 = 0; local664 < local194; local664++) {
 			local729 = local242[local664];
 			if (local729.anInt5809 > 0) {
-				local729.anInt5811 = local38.method2229();
+				local729.anInt5811 = local38.g1();
 			}
 		}
 	}

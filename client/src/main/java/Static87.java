@@ -540,7 +540,7 @@ public final class Static87 {
 												if (Static180.aClass13_22 == local30 && local30.anInt475 != 0) {
 													local276 = local30.anInt475;
 												}
-												if (local30.aClass100_82.method3120() > 0) {
+												if (local30.aClass100_82.length() > 0) {
 													local1934 = local30.aClass100_82;
 												}
 											} else {
@@ -808,7 +808,7 @@ public final class Static87 {
 												@Pc(3299) Font local3299 = Static215.aClass3_Sub2_Sub9_32;
 												local3297 = Static127.method2465(local30, local3297);
 												@Pc(3325) JagString local3325;
-												while (local3297.method3120() > 0) {
+												while (local3297.length() > 0) {
 													local518 = local3297.method3131(Static269.aClass100_556);
 													if (local518 == -1) {
 														local3325 = local3297;
@@ -846,7 +846,7 @@ public final class Static87 {
 												local3297 = local30.aClass100_84;
 												local545 = local556 + local3299.anInt3626 + 2;
 												local3297 = Static127.method2465(local30, local3297);
-												while (local3297.method3120() > 0) {
+												while (local3297.length() > 0) {
 													local563 = local3297.method3131(Static269.aClass100_556);
 													if (local563 == -1) {
 														local3325 = local3297;

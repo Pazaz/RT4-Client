@@ -24,16 +24,16 @@ public final class Static162 {
 	@OriginalMember(owner = "client!ml", name = "a", descriptor = "(B[B)[B")
 	public static byte[] method3092(@OriginalArg(1) byte[] arg0) {
 		@Pc(17) Buffer local17 = new Buffer(arg0);
-		@Pc(21) int local21 = local17.method2229();
-		@Pc(25) int local25 = local17.method2174();
+		@Pc(21) int local21 = local17.g1();
+		@Pc(25) int local25 = local17.g4();
 		if (local25 < 0 || Static133.anInt5233 != 0 && Static133.anInt5233 < local25) {
 			throw new RuntimeException();
 		} else if (local21 == 0) {
 			@Pc(53) byte[] local53 = new byte[local25];
-			local17.method2190(local25, local53);
+			local17.gBytes(local25, local53);
 			return local53;
 		} else {
-			@Pc(65) int local65 = local17.method2174();
+			@Pc(65) int local65 = local17.g4();
 			if (local65 < 0 || Static133.anInt5233 != 0 && Static133.anInt5233 < local65) {
 				throw new RuntimeException();
 			}
