@@ -112,7 +112,7 @@ public final class Static43 {
 				arg5.method3053(arg0, arg1);
 			}
 		}
-		if (!Static239.aBoolean269 || !local74.aBoolean212) {
+		if (!GlRenderer.enabled || !local74.aBoolean212) {
 			return;
 		}
 		if (local57 == 2) {

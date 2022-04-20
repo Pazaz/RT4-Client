@@ -88,7 +88,7 @@ public final class Static220 {
 			local10.method4554(arg0);
 		}
 		@Pc(94) int local94;
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			@Pc(68) GlModel local68 = (GlModel) local10;
 			if (arg5 != Static207.method3685(Static55.level, arg3 + local42, arg1 + local48) || arg5 != Static207.method3685(Static55.level, arg3 + local45, local51 + arg1)) {
 				for (local94 = 0; local94 < local68.anInt5295; local94++) {

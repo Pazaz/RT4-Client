@@ -962,7 +962,7 @@ public final class Component {
 		if (this.anInt513 != 0) {
 			local85.method314(this.anInt513);
 		}
-		if (!Static239.aBoolean269) {
+		if (!GlRenderer.enabled) {
 			local72 = local85;
 		} else if (local85 instanceof SoftwareAlphaSprite) {
 			local72 = new GlAlphaSprite(local85);

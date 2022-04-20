@@ -296,7 +296,7 @@ public final class Class59 {
 					}
 				}
 				local154 = local740.method1679(64, 850, -30, -50, -30);
-				if (Static239.aBoolean269) {
+				if (GlRenderer.enabled) {
 					((GlModel) local154).method4111(false, false, true, false, false, true);
 				}
 				Static250.aClass99_33.method3095(local154, local41);

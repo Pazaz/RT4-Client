@@ -28,7 +28,7 @@ public final class Static82 {
 			local20[local28] = Static259.anIntArray513[local9[local28] & 0xFF];
 		}
 		@Pc(69) Sprite local69;
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			local69 = new GlSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[0], Static269.anIntArray252[0], Static254.anIntArray488[0], Static26.anIntArray66[0], local20);
 		} else {
 			local69 = new SoftwareSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[0], Static269.anIntArray252[0], Static254.anIntArray488[0], Static26.anIntArray66[0], local20);

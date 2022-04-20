@@ -87,7 +87,7 @@ public final class Static233 {
 	public static void method4002(@OriginalArg(0) boolean arg0) {
 		@Pc(19) byte local19;
 		@Pc(21) byte[][] local21;
-		if (Static239.aBoolean269 && arg0) {
+		if (GlRenderer.enabled && arg0) {
 			local21 = Static19.aByteArrayArray4;
 			local19 = 1;
 		} else {

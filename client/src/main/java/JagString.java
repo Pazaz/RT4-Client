@@ -144,7 +144,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(I)Lclient!na;")
-	public final JagString method3114() {
+	public final JagString toLowerCase() {
 		@Pc(14) JagString local14 = new JagString();
 		local14.anInt4030 = this.anInt4030;
 		local14.aByteArray52 = new byte[this.anInt4030];
@@ -360,7 +360,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(Lclient!na;I)I")
-	public final int method3131(@OriginalArg(0) JagString arg0) {
+	public final int indexOf(@OriginalArg(0) JagString arg0) {
 		return this.method3146(arg0, 0);
 	}
 
@@ -416,11 +416,11 @@ public final class JagString implements StringInterface {
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(IB)Lclient!na;")
 	public final JagString method3136(@OriginalArg(0) int arg0) {
-		return this.method3137(this.anInt4030, arg0);
+		return this.substring(this.anInt4030, arg0);
 	}
 
 	@OriginalMember(owner = "client!na", name = "b", descriptor = "(III)Lclient!na;")
-	public final JagString method3137(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
+	public final JagString substring(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
 		@Pc(7) JagString local7 = new JagString();
 		local7.anInt4030 = arg0 - arg1;
 		local7.aByteArray52 = new byte[arg0 - arg1];
@@ -673,10 +673,10 @@ public final class JagString implements StringInterface {
 			@Pc(68) int local68;
 			for (local68 = 0; arg0 != this.aByteArray52[local68 + local49]; local68++) {
 			}
-			local37[local47++] = this.method3137(local49 + local68, local49);
+			local37[local47++] = this.substring(local49 + local68, local49);
 			local49 += local68 + 1;
 		}
-		local37[local7] = this.method3137(this.anInt4030, local49);
+		local37[local7] = this.substring(this.anInt4030, local49);
 		return local37;
 	}
 

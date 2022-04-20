@@ -271,7 +271,7 @@ public final class Static231 {
 	}
 
 	@OriginalMember(owner = "client!sk", name = "a", descriptor = "(JI)V")
-	public static void method3983(@OriginalArg(0) long arg0) {
+	public static void sleep(@OriginalArg(0) long arg0) {
 		if (arg0 <= 0L) {
 			return;
 		}

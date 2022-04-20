@@ -29,7 +29,7 @@ public final class AudioThread implements Runnable {
 						local19.method3565();
 					}
 				}
-				Static231.method3983(10L);
+				Static231.sleep(10L);
 				Static140.method2708(this.aClass213_1, null);
 			}
 		} catch (@Pc(43) Exception local43) {

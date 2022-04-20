@@ -26,7 +26,7 @@ public final class Static197 {
 		}
 		@Pc(17) PrivilegedRequest local17 = arg0.method5132();
 		while (local17.status == 0) {
-			Static231.method3983(10L);
+			Static231.sleep(10L);
 		}
 		if (local17.status == 2) {
 			return new Class114[0];
@@ -47,7 +47,7 @@ public final class Static197 {
 	@OriginalMember(owner = "client!pm", name = "a", descriptor = "(ZIZIZII)V")
 	public static void method3560(@OriginalArg(0) boolean arg0, @OriginalArg(1) int arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
 		if (arg2) {
-			Static239.method4169();
+			GlRenderer.quit();
 		}
 		if (Static69.aFrame2 != null && (arg1 != 3 || arg4 != Static114.anInt5831 || arg5 != Static22.anInt729)) {
 			Static25.method714(Static69.aFrame2, Static71.signLink);
@@ -105,8 +105,8 @@ public final class Static197 {
 				Static71.mouseWheel.start(Static154.canvas);
 			}
 		} else {
-			if (Static239.aBoolean269) {
-				Static239.method4181(Static48.anInt1448, Static254.anInt5554);
+			if (GlRenderer.enabled) {
+				GlRenderer.setCanvasSize(Static48.anInt1448, Static254.anInt5554);
 			}
 			Static154.canvas.setSize(Static48.anInt1448, Static254.anInt5554);
 			if (Static39.aFrame1 == local85) {
@@ -117,7 +117,7 @@ public final class Static197 {
 			}
 		}
 		if (arg1 == 0 && arg3 > 0) {
-			Static239.method4161(Static154.canvas);
+			GlRenderer.method4161(Static154.canvas);
 		}
 		if (arg2 && arg1 > 0) {
 			Static154.canvas.setIgnoreRepaint(true);
@@ -144,17 +144,17 @@ public final class Static197 {
 				}
 				@Pc(300) PrivilegedRequest local300 = Static71.signLink.method5123(Static215.aClient1.getClass());
 				while (local300.status == 0) {
-					Static231.method3983(100L);
+					Static231.sleep(100L);
 				}
 				if (local300.status == 1) {
 					Static211.aBoolean73 = true;
 				}
 			}
 			if (Static211.aBoolean73) {
-				Static239.method4180(Static154.canvas, Static186.anInt4392 * 2);
+				GlRenderer.init(Static154.canvas, Static186.anInt4392 * 2);
 			}
 		}
-		if (!Static239.aBoolean269 && arg1 > 0) {
+		if (!GlRenderer.enabled && arg1 > 0) {
 			method3560(true, 0, true, arg3, -1, -1);
 			return;
 		}
@@ -163,7 +163,7 @@ public final class Static197 {
 			Static260.aClass27_2 = null;
 			Static268.method4580();
 			((Js5GlTextureProvider) Rasteriser.anInterface1_2).method3248(200);
-			if (Static178.aBoolean202) {
+			if (Static178.highDetailLighting) {
 				Rasteriser.method1911(0.7F);
 			}
 			Static114.method4637();
@@ -173,7 +173,7 @@ public final class Static197 {
 			Static268.method4583();
 			Static76.method1643();
 			((Js5GlTextureProvider) Rasteriser.anInterface1_2).method3248(20);
-			if (Static178.aBoolean202) {
+			if (Static178.highDetailLighting) {
 				if (Static113.anInt4609 == 1) {
 					Rasteriser.method1911(0.9F);
 				}

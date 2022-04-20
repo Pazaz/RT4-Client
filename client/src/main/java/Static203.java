@@ -53,8 +53,8 @@ public final class Static203 {
 			Static254.anInt5554 = 503;
 			Static48.anInt1448 = 765;
 		}
-		if (Static239.aBoolean269) {
-			Static239.method4181(Static48.anInt1448, Static254.anInt5554);
+		if (GlRenderer.enabled) {
+			GlRenderer.setCanvasSize(Static48.anInt1448, Static254.anInt5554);
 		}
 		Static154.canvas.setSize(Static48.anInt1448, Static254.anInt5554);
 		if (local8 == Static39.aFrame1) {
@@ -75,7 +75,7 @@ public final class Static203 {
 		try {
 			@Pc(16) PrivilegedRequest local16 = arg0.method5112("runescape");
 			while (local16.status == 0) {
-				Static231.method3983(1L);
+				Static231.sleep(1L);
 			}
 			if (local16.status == 1) {
 				local11 = (FileOnDisk) local16.result;

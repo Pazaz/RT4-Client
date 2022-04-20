@@ -264,9 +264,9 @@ public final class Static144 {
 	public static int method2736() {
 		if (Static69.aFrame2 != null) {
 			return 3;
-		} else if (Static239.aBoolean269 && Static124.aBoolean156) {
+		} else if (GlRenderer.enabled && Static124.aBoolean156) {
 			return 2;
-		} else if (Static239.aBoolean269 && !Static124.aBoolean156) {
+		} else if (GlRenderer.enabled && !Static124.aBoolean156) {
 			return 1;
 		} else {
 			return 0;

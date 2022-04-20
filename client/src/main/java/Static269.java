@@ -154,7 +154,7 @@ public final class Static269 {
 			local146 = true;
 		}
 		@Pc(515) int local515;
-		if (Static239.aBoolean269 && !arg1) {
+		if (GlRenderer.enabled && !arg1) {
 			@Pc(490) Environment local490 = null;
 			label270: while (true) {
 				label263: do {
@@ -249,7 +249,7 @@ public final class Static269 {
 		if (Static41.anInt1309 < 100) {
 			Static186.method3413();
 		}
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static46.method1187(arg0, arg1, arg0 + arg3, arg2 + arg1);
 		} else {
 			Static129.method2496(arg0, arg1, arg0 + arg3, arg2 + arg1);
@@ -259,7 +259,7 @@ public final class Static269 {
 		if (Static41.anInt1309 < 100) {
 			local50 = arg0 + arg3 / 2;
 			local61 = arg2 / 2 + arg1 - 18 - 20;
-			if (Static239.aBoolean269) {
+			if (GlRenderer.enabled) {
 				Static46.method1186(arg0, arg1, arg3, arg2, 0);
 				Static46.method1179(local50 - 152, local61, 304, 34, 9179409);
 				Static46.method1179(local50 - 151, local61 + 1, 302, 32, 0);
@@ -283,7 +283,7 @@ public final class Static269 {
 		@Pc(236) int local236 = Static28.anInt919 + (int) ((float) arg2 / Static83.aFloat3);
 		local61 = (int) ((float) arg3 / Static83.aFloat3) + Static13.anInt435;
 		Static89.anInt2387 = (int) ((float) (arg3 * 2) / Static83.aFloat3);
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			if (Static153.aClass3_Sub2_Sub1_Sub1_2 == null || Static153.aClass3_Sub2_Sub1_Sub1_2.anInt1867 != arg3 || Static153.aClass3_Sub2_Sub1_Sub1_2.anInt1859 != arg2) {
 				Static153.aClass3_Sub2_Sub1_Sub1_2 = null;
 				Static153.aClass3_Sub2_Sub1_Sub1_2 = new SoftwareSprite(arg3, arg2);

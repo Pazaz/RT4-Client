@@ -307,7 +307,7 @@ public class AudioChannel {
 			if (local6) {
 				Static60.aClass19_1.aBoolean62 = true;
 				while (Static60.aClass19_1.aBoolean64) {
-					Static231.method3983(50L);
+					Static231.sleep(50L);
 				}
 				Static60.aClass19_1 = null;
 			}

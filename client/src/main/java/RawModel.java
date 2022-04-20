@@ -1231,7 +1231,7 @@ public final class RawModel extends Entity {
 
 	@OriginalMember(owner = "client!gb", name = "c", descriptor = "(IIIII)Lclient!ak;")
 	public final Model method1679(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			@Pc(9) GlModel local9 = new GlModel(this, arg0, arg1, true);
 			local9.method4099();
 			return local9;

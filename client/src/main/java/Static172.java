@@ -69,7 +69,7 @@ public final class Static172 {
 	}
 
 	@OriginalMember(owner = "client!nj", name = "a", descriptor = "(I)V")
-	public static void method3225() {
+	public static void quit() {
 		Static2.anInterface4Array1 = null;
 		Static151.method2808();
 	}

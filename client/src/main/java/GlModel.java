@@ -205,7 +205,7 @@ public final class GlModel extends Model {
 		this.aClass5_1 = new Class5();
 		this.aClass127_4 = new GlBuffer();
 		this.aClass127_1 = new GlBuffer();
-		if (Static178.aBoolean202) {
+		if (Static178.highDetailLighting) {
 			this.aClass127_2 = new GlBuffer();
 		}
 		this.aClass127_3 = new GlBuffer();
@@ -802,7 +802,7 @@ public final class GlModel extends Model {
 				}
 			}
 		}
-		@Pc(744) GL2 local744 = Static239.gl;
+		@Pc(744) GL2 local744 = GlRenderer.gl;
 		local744.glPushMatrix();
 		local744.glTranslatef((float) arg5, (float) arg6, (float) arg7);
 		local744.glRotatef((float) arg0 * 0.17578125F, 0.0F, 1.0F, 0.0F);
@@ -1060,7 +1060,7 @@ public final class GlModel extends Model {
 		if (this.anInt5296 == 0) {
 			return;
 		}
-		@Pc(5) GL2 local5 = Static239.gl;
+		@Pc(5) GL2 local5 = GlRenderer.gl;
 		local5.glPushMatrix();
 		if (arg2 != 0) {
 			local5.glRotatef((float) arg2 * 0.17578125F, 1.0F, 0.0F, 0.0F);
@@ -1678,7 +1678,7 @@ public final class GlModel extends Model {
 			Static237.aClass3_Sub15_8.offset = 0;
 		}
 		@Pc(25) int local25;
-		if (Static239.aBoolean263) {
+		if (GlRenderer.bigEndian) {
 			for (local25 = 0; local25 < this.anInt5297; local25++) {
 				Static237.aClass3_Sub15_8.p4(this.aShortArray77[local25]);
 				Static237.aClass3_Sub15_8.p4(this.aShortArray82[local25]);
@@ -1691,7 +1691,7 @@ public final class GlModel extends Model {
 				Static237.aClass3_Sub15_8.p4le(this.aShortArray83[local25]);
 			}
 		}
-		if (!Static239.aBoolean271) {
+		if (!GlRenderer.arbVboSupported) {
 			@Pc(115) ByteBuffer local115 = ByteBuffer.allocateDirect(Static237.aClass3_Sub15_8.offset);
 			local115.put(Static237.aClass3_Sub15_8.data, 0, Static237.aClass3_Sub15_8.offset);
 			local115.flip();
@@ -1937,7 +1937,7 @@ public final class GlModel extends Model {
 			throw new IllegalArgumentException();
 		} else if (this.anInt5296 != 0) {
 			if (arg5) {
-				@Pc(26) boolean local26 = !this.aClass127_1.aBoolean235 && (arg1 || arg2 && !Static178.aBoolean202);
+				@Pc(26) boolean local26 = !this.aClass127_1.aBoolean235 && (arg1 || arg2 && !Static178.highDetailLighting);
 				this.method4113(false, !this.aClass127_4.aBoolean235 && arg0, local26, this.aClass127_2 != null && !this.aClass127_2.aBoolean235 && arg2, !this.aClass127_3.aBoolean235);
 				if (!this.aClass127_5.aBoolean235 && arg3 && arg1) {
 					this.method4103();
@@ -1965,7 +1965,7 @@ public final class GlModel extends Model {
 					this.aByte19 = (byte) (this.aByte19 | 0x2);
 				}
 			}
-			if (arg2 && Static178.aBoolean202) {
+			if (arg2 && Static178.highDetailLighting) {
 				if (this.aClass127_2.aBoolean235) {
 					this.aShortArray76 = null;
 					this.aShortArray79 = null;
@@ -2035,7 +2035,7 @@ public final class GlModel extends Model {
 		@Pc(99) int local99;
 		if (arg1) {
 			@Pc(109) int local109;
-			if (Static239.aBoolean263) {
+			if (GlRenderer.bigEndian) {
 				for (local60 = 0; local60 < this.anInt5295; local60++) {
 					local71 = Float.floatToRawIntBits((float) this.anIntArray461[local60]);
 					local78 = Float.floatToRawIntBits((float) this.anIntArray465[local60]);
@@ -2074,7 +2074,7 @@ public final class GlModel extends Model {
 			}
 		}
 		if (arg2) {
-			if (Static178.aBoolean202) {
+			if (Static178.highDetailLighting) {
 				for (local60 = 0; local60 < this.anInt5297; local60++) {
 					local71 = Static237.method4096(this.aShortArray75[local60], this.aShortArray80[local60], this.aShort29, this.aByteArray71[local60]);
 					Static237.aClass3_Sub15_8.offset = this.aClass127_1.anInt4777 + this.aShortArray77[local60] * local1;
@@ -2167,7 +2167,7 @@ public final class GlModel extends Model {
 			Static237.aClass3_Sub15_8.offset = this.aClass127_2.anInt4777;
 			@Pc(752) short local752;
 			@Pc(790) float local790;
-			if (Static239.aBoolean263) {
+			if (GlRenderer.bigEndian) {
 				for (local78 = 0; local78 < this.anInt5296; local78++) {
 					local752 = this.aShortArray86[local78];
 					if (local752 == 0) {
@@ -2201,7 +2201,7 @@ public final class GlModel extends Model {
 		}
 		if (arg4) {
 			Static237.aClass3_Sub15_8.offset = this.aClass127_3.anInt4777;
-			if (Static239.aBoolean263) {
+			if (GlRenderer.bigEndian) {
 				for (local60 = 0; local60 < this.anInt5296; local60++) {
 					Static237.aClass3_Sub15_8.pFloat(this.aFloatArray25[local60]);
 					Static237.aClass3_Sub15_8.pFloat(this.aFloatArray26[local60]);
@@ -2218,7 +2218,7 @@ public final class GlModel extends Model {
 		Static237.aClass3_Sub15_8.offset = local1 * this.anInt5296;
 		@Pc(1007) ByteBuffer local1007;
 		if (arg0) {
-			if (Static239.aBoolean273) {
+			if (GlRenderer.aBoolean273) {
 				local1007 = ByteBuffer.wrap(Static237.aClass3_Sub15_8.data, 0, Static237.aClass3_Sub15_8.offset);
 				if (this.aClass155_5 == null) {
 					this.aClass155_5 = new GlVertexBufferObject(true);
@@ -2283,7 +2283,7 @@ public final class GlModel extends Model {
 					this.aClass127_3.anInt4782 = local1;
 				}
 			}
-		} else if (Static239.aBoolean271) {
+		} else if (GlRenderer.arbVboSupported) {
 			@Pc(1211) GlVertexBufferObject local1211 = new GlVertexBufferObject();
 			@Pc(1218) ByteBuffer local1218 = ByteBuffer.wrap(Static237.aClass3_Sub15_8.data, 0, Static237.aClass3_Sub15_8.offset);
 			local1211.method4519(local1218);
@@ -2423,7 +2423,7 @@ public final class GlModel extends Model {
 				arg3.aShortArray85[local69] = this.aShortArray85[local69];
 				arg3.aShortArray86[local69] = this.aShortArray86[local69];
 			}
-			if (Static178.aBoolean202) {
+			if (Static178.highDetailLighting) {
 				if (arg4.aClass127_2 == null) {
 					arg4.aClass127_2 = new GlBuffer();
 				}
@@ -2528,7 +2528,7 @@ public final class GlModel extends Model {
 			local3.aShortArray75 = Static263.method4511(this.aShortArray75);
 		}
 		local3.aByteArray71 = this.aByteArray71;
-		if (arg2 && arg3 && (arg6 && arg4 || Static178.aBoolean202)) {
+		if (arg2 && arg3 && (arg6 && arg4 || Static178.highDetailLighting)) {
 			local3.aClass127_1 = this.aClass127_1;
 		} else {
 			local3.aClass127_1 = new GlBuffer();
@@ -2544,7 +2544,7 @@ public final class GlModel extends Model {
 			local3.aShortArray85 = Static263.method4511(this.aShortArray85);
 			local3.aShortArray86 = Static263.method4511(this.aShortArray86);
 		}
-		if (!Static178.aBoolean202) {
+		if (!Static178.highDetailLighting) {
 			local3.aClass127_2 = null;
 		} else if (arg4 && arg5 && arg6) {
 			local3.aClass127_2 = this.aClass127_2;
@@ -2966,7 +2966,7 @@ public final class GlModel extends Model {
 
 	@OriginalMember(owner = "client!td", name = "w", descriptor = "()V")
 	private void method4121() {
-		@Pc(1) GL2 local1 = Static239.gl;
+		@Pc(1) GL2 local1 = GlRenderer.gl;
 		if (this.anInt5297 == 0) {
 			return;
 		}
@@ -3019,7 +3019,7 @@ public final class GlModel extends Model {
 			}
 			local1.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, this.aClass127_1.anInt4782, (long) this.aClass127_1.anInt4777);
 		}
-		if (Static178.aBoolean202 && this.aClass127_2.aClass155_4 != null) {
+		if (Static178.highDetailLighting && this.aClass127_2.aClass155_4 != null) {
 			if (local172 != this.aClass127_2.aClass155_4) {
 				this.aClass127_2.aClass155_4.method4516();
 				local172 = this.aClass127_2.aClass155_4;
@@ -3036,8 +3036,8 @@ public final class GlModel extends Model {
 		if (this.aClass127_5.aClass155_4 != null) {
 			this.aClass127_5.aClass155_4.method4518();
 		}
-		if (this.aClass127_4.aClass155_4 == null || this.aClass127_1.aClass155_4 == null || Static178.aBoolean202 && this.aClass127_2.aClass155_4 == null || this.aClass127_3.aClass155_4 == null) {
-			if (Static239.aBoolean271) {
+		if (this.aClass127_4.aClass155_4 == null || this.aClass127_1.aClass155_4 == null || Static178.highDetailLighting && this.aClass127_2.aClass155_4 == null || this.aClass127_3.aClass155_4 == null) {
+			if (GlRenderer.arbVboSupported) {
 				local1.glBindBuffer(GL2.GL_ARRAY_BUFFER, 0);
 			}
 			if (this.aClass127_4.aClass155_4 == null) {
@@ -3048,7 +3048,7 @@ public final class GlModel extends Model {
 				this.aClass127_1.aByteBuffer8.position(this.aClass127_1.anInt4777);
 				local1.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, this.aClass127_1.anInt4782, this.aClass127_1.aByteBuffer8);
 			}
-			if (Static178.aBoolean202 && this.aClass127_2.aClass155_4 == null) {
+			if (Static178.highDetailLighting && this.aClass127_2.aClass155_4 == null) {
 				this.aClass127_2.aByteBuffer8.position(this.aClass127_2.anInt4777);
 				local1.glNormalPointer(GL2.GL_FLOAT, this.aClass127_2.anInt4782, this.aClass127_2.aByteBuffer8);
 			}
@@ -3057,7 +3057,7 @@ public final class GlModel extends Model {
 				local1.glTexCoordPointer(2, GL2.GL_FLOAT, this.aClass127_3.anInt4782, this.aClass127_3.aByteBuffer8);
 			}
 		}
-		if (this.aClass127_5.aClass155_4 == null && Static239.aBoolean271) {
+		if (this.aClass127_5.aClass155_4 == null && GlRenderer.arbVboSupported) {
 			local1.glBindBuffer(GL2.GL_ELEMENT_ARRAY_BUFFER, 0);
 		}
 		@Pc(417) int local417 = this.anIntArray463.length - 1;
@@ -3066,8 +3066,8 @@ public final class GlModel extends Model {
 			@Pc(434) int local434 = this.anIntArray463[local419 + 1];
 			@Pc(439) short local439 = this.aShortArray80[local427];
 			if (local439 == -1) {
-				Static239.method4177(-1);
-				Static27.method766(0, 0);
+				GlRenderer.setTextureId(-1);
+				Static27.setMaterial(0, 0);
 			} else {
 				Rasteriser.anInterface1_2.method3227(local439 & 0xFFFF);
 			}

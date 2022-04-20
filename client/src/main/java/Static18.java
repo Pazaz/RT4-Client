@@ -56,7 +56,7 @@ public final class Static18 {
 	public static void method555(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6) {
 		@Pc(5) int local5;
 		@Pc(29) int local29;
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			local5 = arg1 - 334;
 			if (local5 < 0) {
 				local5 = 0;

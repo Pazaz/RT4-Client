@@ -172,7 +172,7 @@ public final class GlTexture extends SecondaryNode {
 		if (!this.aClass88_1.method2729(arg1, arg0)) {
 			return false;
 		}
-		@Pc(22) GL2 local22 = Static239.gl;
+		@Pc(22) GL2 local22 = GlRenderer.gl;
 		@Pc(28) int local28 = arg2 ? 64 : 128;
 		@Pc(31) int local31 = Static56.method1314();
 		if ((local31 & 0x1) == 0) {
@@ -181,7 +181,7 @@ public final class GlTexture extends SecondaryNode {
 				local22.glGenTextures(1, local53, 0);
 				this.anInt5492 = Static63.anInt1943;
 				this.anInt5493 = local53[0];
-				Static239.method4177(this.anInt5493);
+				GlRenderer.setTextureId(this.anInt5493);
 				@Pc(82) ByteBuffer local82 = ByteBuffer.wrap(this.aClass88_1.method2728(local28, local28, this.aBoolean288, arg1, 0.7D, arg0));
 				if (this.anInt5489 == 2) {
 					@Pc(201) GLUgl2es1 local201 = new GLUgl2es1();
@@ -214,22 +214,22 @@ public final class GlTexture extends SecondaryNode {
 				local22.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_WRAP_S, this.aBoolean285 ? GL2.GL_REPEAT : GL2.GL_CLAMP_TO_EDGE);
 				local22.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_WRAP_T, this.aBoolean284 ? GL2.GL_REPEAT : GL2.GL_CLAMP_TO_EDGE);
 			} else {
-				Static239.method4177(this.anInt5493);
+				GlRenderer.setTextureId(this.anInt5493);
 			}
 		}
 		if ((local31 & 0x2) == 0) {
-			Static239.method4183(this.anInt5486);
+			GlRenderer.setTextureCombineRgbMode(this.anInt5486);
 		}
 		if ((local31 & 0x4) == 0) {
-			Static239.method4174(0);
+			GlRenderer.setTextureCombineAlphaMode(0);
 		}
 		if ((local31 & 0x8) == 0) {
 			if (this.anInt5497 == 0 && this.anInt5485 == 0) {
-				Static239.method4150();
+				GlRenderer.resetTextureMatrix();
 			} else {
-				@Pc(303) float local303 = (float) (this.anInt5497 * Static239.anInt5323) / (float) local28;
-				@Pc(312) float local312 = (float) (this.anInt5485 * Static239.anInt5323) / (float) local28;
-				Static239.method4170(local312, local303, 0.0F);
+				@Pc(303) float local303 = (float) (this.anInt5497 * GlRenderer.anInt5323) / (float) local28;
+				@Pc(312) float local312 = (float) (this.anInt5485 * GlRenderer.anInt5323) / (float) local28;
+				GlRenderer.translateTextureMatrix(local312, local303, 0.0F);
 			}
 		}
 		return true;

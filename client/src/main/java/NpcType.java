@@ -331,7 +331,7 @@ public final class NpcType {
 				}
 			}
 			local40 = local593.method1679(this.anInt3715 + 64, this.anInt3738 + 850, -30, -50, -30);
-			if (Static239.aBoolean269) {
+			if (GlRenderer.enabled) {
 				((GlModel) local40).method4111(false, false, false, false, false, true);
 			}
 			Static125.aClass99_18.method3095(local40, (long) this.anInt3741);

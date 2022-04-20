@@ -293,7 +293,7 @@ public abstract class PathingEntity extends Entity {
 		this.anInt3405 = 0;
 		this.anInt3421 = arg0 * 64 + this.movementQueueZ[0] * 128;
 		this.anInt3412 = arg0 * 64 + this.movementQueueX[0] * 128;
-		if (Static239.aBoolean269 && Static173.self == this) {
+		if (GlRenderer.enabled && Static173.self == this) {
 			Static86.method1799();
 		}
 	}

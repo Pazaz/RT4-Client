@@ -175,7 +175,7 @@ public final class Player extends PathingEntity {
 		@Pc(54) SeqType local54 = this.anInt3366 == -1 || this.aBoolean98 || this.anInt3366 == this.method2681().anInt1037 && local25 != null ? null : Static36.method941(this.anInt3366);
 		@Pc(76) Model local76 = this.aClass59_1.method1954(this.aClass147Array3, this.anInt3373, local54, local25, this.anInt3396, this.anInt3388, this.anInt3360, this.anInt3425, this.anInt3407);
 		@Pc(79) int local79 = Static198.method1029();
-		if (Static239.aBoolean269 && Static238.anInt5316 < 96 && local79 > 50) {
+		if (GlRenderer.enabled && Static238.anInt5316 < 96 && local79 > 50) {
 			Static16.method501();
 		}
 		@Pc(102) int local102;
@@ -197,14 +197,14 @@ public final class Player extends PathingEntity {
 		@Pc(184) Model local184;
 		if (Static209.aBoolean240 && (this.aClass59_1.anInt2492 == -1 || Static214.method4363(this.aClass59_1.anInt2492).aBoolean180)) {
 			local184 = Static41.method1043(160, this.aBoolean171, local54 == null ? local25 : local54, this.anInt3412, 0, this.anInt3421, 0, 1, local76, arg0, local54 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, 240);
-			if (Static239.aBoolean269) {
-				@Pc(188) float local188 = Static239.method4179();
-				@Pc(190) float local190 = Static239.method4166();
-				Static239.method4178();
-				Static239.method4152(local188, local190 - 150.0F);
+			if (GlRenderer.enabled) {
+				@Pc(188) float local188 = GlRenderer.method4179();
+				@Pc(190) float local190 = GlRenderer.method4166();
+				GlRenderer.disableDepthMask();
+				GlRenderer.method4152(local188, local190 - 150.0F);
 				local184.method4546(0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, -1L, arg9, null);
-				Static239.method4157();
-				Static239.method4152(local188, local190);
+				GlRenderer.enableDepthMask();
+				GlRenderer.method4152(local188, local190);
 			} else {
 				local184.method4546(0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, -1L, arg9, null);
 			}
@@ -281,7 +281,7 @@ public final class Player extends PathingEntity {
 				}
 			}
 		}
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			local76.aBoolean303 = true;
 			local76.method4546(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.aClass47_Sub1_5);
 			if (local184 != null) {
@@ -322,17 +322,17 @@ public final class Player extends PathingEntity {
 		if (local46 == null) {
 			return;
 		}
-		if (!Static239.aBoolean269) {
+		if (!GlRenderer.enabled) {
 			local46.method4546(0, arg10, arg12, arg9, arg8, arg4, arg13, arg7, -1L, arg5, arg0);
 			return;
 		}
-		@Pc(52) float local52 = Static239.method4179();
-		@Pc(54) float local54 = Static239.method4166();
-		Static239.method4178();
-		Static239.method4152(local52, local54 - 150.0F);
+		@Pc(52) float local52 = GlRenderer.method4179();
+		@Pc(54) float local54 = GlRenderer.method4166();
+		GlRenderer.disableDepthMask();
+		GlRenderer.method4152(local52, local54 - 150.0F);
 		local46.method4546(0, arg10, arg12, arg9, arg8, arg4, arg13, arg7, -1L, arg5, arg0);
-		Static239.method4157();
-		Static239.method4152(local52, local54);
+		GlRenderer.enableDepthMask();
+		GlRenderer.method4152(local52, local54);
 	}
 
 	@OriginalMember(owner = "client!e", name = "a", descriptor = "(B)Z")

@@ -27,11 +27,11 @@ public final class Static160 {
 
 	@OriginalMember(owner = "client!mj", name = "a", descriptor = "(IILclient!be;IB)V")
 	public static void method3047(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Component arg2, @OriginalArg(3) int arg3) {
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static46.method1187(arg0, arg1, arg2.anInt445 + arg0, arg2.anInt459 + arg1);
 		}
 		if (Static270.anInt5795 >= 3) {
-			if (Static239.aBoolean269) {
+			if (GlRenderer.enabled) {
 				@Pc(44) Sprite local44 = arg2.method489(false);
 				if (local44 != null) {
 					local44.method1423(arg0, arg1);
@@ -39,7 +39,7 @@ public final class Static160 {
 			} else {
 				Static129.method2504(arg0, arg1, arg2.anIntArray37, arg2.anIntArray45);
 			}
-		} else if (Static239.aBoolean269) {
+		} else if (GlRenderer.enabled) {
 			((GlSprite) Static106.aClass3_Sub2_Sub1_7).method1427(arg0, arg1, arg2.anInt445, arg2.anInt459, Static106.aClass3_Sub2_Sub1_7.anInt1867 / 2, Static106.aClass3_Sub2_Sub1_7.anInt1859 / 2, Static57.anInt1747, 256, (GlSprite) arg2.method489(false));
 		} else {
 			((SoftwareSprite) Static106.aClass3_Sub2_Sub1_7).method313(arg0, arg1, arg2.anInt445, arg2.anInt459, Static106.aClass3_Sub2_Sub1_7.anInt1867 / 2, Static106.aClass3_Sub2_Sub1_7.anInt1859 / 2, Static57.anInt1747, arg2.anIntArray37, arg2.anIntArray45);

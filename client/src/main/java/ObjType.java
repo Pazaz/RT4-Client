@@ -338,7 +338,7 @@ public final class ObjType {
 				local76.method4559(this.anInt2373, this.anInt2350, this.anInt2368);
 			}
 			local76.aBoolean303 = true;
-			if (Static239.aBoolean269) {
+			if (GlRenderer.enabled) {
 				((GlModel) local76).method4111(false, false, false, false, false, true);
 			}
 			Static244.aClass99_32.method3095(local76, (long) this.anInt2354);

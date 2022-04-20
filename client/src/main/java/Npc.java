@@ -40,14 +40,14 @@ public final class Npc extends PathingEntity {
 		@Pc(140) Model local140;
 		if (Static209.aBoolean240 && local84.aBoolean180) {
 			local140 = Static41.method1043(this.aClass96_1.aByte13, this.aBoolean171, local53 == null ? local29 : local53, this.anInt3412, this.aClass96_1.aShort23, this.anInt3421, this.aClass96_1.aShort24, this.aClass96_1.anInt3713, local74, arg0, local53 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, this.aClass96_1.aByte12);
-			if (Static239.aBoolean269) {
-				@Pc(144) float local144 = Static239.method4179();
-				@Pc(146) float local146 = Static239.method4166();
-				Static239.method4178();
-				Static239.method4152(local144, local146 - 150.0F);
+			if (GlRenderer.enabled) {
+				@Pc(144) float local144 = GlRenderer.method4179();
+				@Pc(146) float local146 = GlRenderer.method4166();
+				GlRenderer.disableDepthMask();
+				GlRenderer.method4152(local144, local146 - 150.0F);
 				local140.method4546(0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, -1L, arg9, this.aClass47_Sub1_5);
-				Static239.method4157();
-				Static239.method4152(local144, local146);
+				GlRenderer.enableDepthMask();
+				GlRenderer.method4152(local144, local146);
 			} else {
 				local140.method4546(0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, -1L, arg9, this.aClass47_Sub1_5);
 			}
@@ -73,7 +73,7 @@ public final class Npc extends PathingEntity {
 				}
 			}
 		}
-		if (!Static239.aBoolean269) {
+		if (!GlRenderer.enabled) {
 			if (local140 != null) {
 				local74 = ((SoftwareModel) local74).method4588(local140);
 			}

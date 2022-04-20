@@ -83,7 +83,7 @@ public final class Static276 {
 	@OriginalMember(owner = "client!wh", name = "b", descriptor = "(B)Lclient!ok;")
 	public static IndexedSprite method4614() {
 		@Pc(27) IndexedSprite local27;
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			local27 = new GlIndexedSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[0], Static269.anIntArray252[0], Static254.anIntArray488[0], Static26.anIntArray66[0], Static7.aByteArrayArray5[0], Static259.anIntArray513);
 		} else {
 			local27 = new SoftwareIndexedSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[0], Static269.anIntArray252[0], Static254.anIntArray488[0], Static26.anIntArray66[0], Static7.aByteArrayArray5[0], Static259.anIntArray513);

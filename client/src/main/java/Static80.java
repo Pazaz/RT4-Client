@@ -52,7 +52,7 @@ public final class Static80 {
 		Static114.anInt5831 = 0;
 		Static139.anInt3451 = 2;
 		Static159.aBoolean189 = true;
-		Static178.aBoolean202 = true;
+		Static178.highDetailLighting = true;
 		Static12.anInt391 = 255;
 		Static53.aBoolean99 = true;
 		Static186.anInt4392 = 0;
@@ -73,7 +73,7 @@ public final class Static80 {
 		try {
 			@Pc(78) PrivilegedRequest local78 = arg0.method5112("runescape");
 			while (local78.status == 0) {
-				Static231.method3983(1L);
+				Static231.sleep(1L);
 			}
 			if (local78.status == 1) {
 				local48 = (FileOnDisk) local78.result;

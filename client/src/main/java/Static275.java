@@ -14,7 +14,7 @@ public final class Static275 {
 
 	@OriginalMember(owner = "client!wg", name = "f", descriptor = "()V")
 	public static void method4608() {
-		@Pc(1) GL2 local1 = Static239.gl;
+		@Pc(1) GL2 local1 = GlRenderer.gl;
 		local1.glClientActiveTexture(method4607());
 		local1.glDisableClientState(GL2.GL_TEXTURE_COORD_ARRAY);
 		local1.glClientActiveTexture(GL2.GL_TEXTURE0);
@@ -22,7 +22,7 @@ public final class Static275 {
 
 	@OriginalMember(owner = "client!wg", name = "g", descriptor = "()V")
 	public static void method4609() {
-		@Pc(1) GL2 local1 = Static239.gl;
+		@Pc(1) GL2 local1 = GlRenderer.gl;
 		local1.glClientActiveTexture(method4607());
 		local1.glEnableClientState(GL2.GL_TEXTURE_COORD_ARRAY);
 		local1.glClientActiveTexture(GL2.GL_TEXTURE0);

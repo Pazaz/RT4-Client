@@ -38,7 +38,7 @@ public final class Static30 {
 		Static114.aClass3_Sub2_Sub9_42.method2873(Static159.aClass36Array12, null);
 		Static215.aClass3_Sub2_Sub9_32.method2873(Static159.aClass36Array12, null);
 		Static280.aClass3_Sub2_Sub9_43.method2873(Static159.aClass36Array12, null);
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static242.aClass36_Sub1Array2 = method837(Static84.anInt2257, arg0);
 			for (@Pc(101) int local101 = 0; local101 < Static242.aClass36_Sub1Array2.length; local101++) {
 				Static242.aClass36_Sub1Array2[local101].method1396();
@@ -46,7 +46,7 @@ public final class Static30 {
 		}
 		@Pc(124) SoftwareSprite local124 = Static78.method1693(0, arg0, Static163.anInt3962);
 		local124.method311();
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static106.aClass3_Sub2_Sub1_7 = new GlSprite(local124);
 		} else {
 			Static106.aClass3_Sub2_Sub1_7 = local124;
@@ -56,7 +56,7 @@ public final class Static30 {
 		for (local145 = 0; local145 < local143.length; local145++) {
 			local143[local145].method311();
 		}
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static277.aClass3_Sub2_Sub1Array12 = new Sprite[local143.length];
 			for (local145 = 0; local145 < local143.length; local145++) {
 				Static277.aClass3_Sub2_Sub1Array12[local145] = new GlSprite(local143[local145]);
@@ -72,7 +72,7 @@ public final class Static30 {
 		for (local219 = 0; local219 < Static173.aClass3_Sub2_Sub1_Sub1Array9.length; local219++) {
 			Static173.aClass3_Sub2_Sub1_Sub1Array9[local219].method315(local145 + local217, local217 + local196, local217 + local210);
 		}
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static67.aClass3_Sub2_Sub1Array4 = new Sprite[Static173.aClass3_Sub2_Sub1_Sub1Array9.length];
 			for (local219 = 0; local219 < Static173.aClass3_Sub2_Sub1_Sub1Array9.length; local219++) {
 				Static67.aClass3_Sub2_Sub1Array4[local219] = new GlSprite(Static173.aClass3_Sub2_Sub1_Sub1Array9[local219]);

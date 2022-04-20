@@ -78,7 +78,7 @@ public final class Loc extends Entity {
 		this.anInt1299 = arg0;
 		this.anInt1300 = arg5;
 		@Pc(67) LocType local67;
-		if (Static239.aBoolean269 && arg8 != null) {
+		if (GlRenderer.enabled && arg8 != null) {
 			if (arg8 instanceof Loc) {
 				((Loc) arg8).method1046();
 			} else {
@@ -124,7 +124,7 @@ public final class Loc extends Entity {
 				this.anInt1320 = Static83.anInt372 - this.anInt1317;
 			}
 		}
-		if (Static239.aBoolean269 && arg8 != null) {
+		if (GlRenderer.enabled && arg8 != null) {
 			this.method1048(true);
 		}
 		if (arg8 == null) {
@@ -138,7 +138,7 @@ public final class Loc extends Entity {
 	@OriginalMember(owner = "client!dc", name = "a", descriptor = "(IIIII)V")
 	@Override
 	public final void method4545(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			this.method1048(true);
 		} else {
 			this.method1047(arg4, arg3);
@@ -228,7 +228,7 @@ public final class Loc extends Entity {
 			local19 = local19.method3417();
 		}
 		if (local19 == null) {
-			if (Static239.aBoolean269 && !local12) {
+			if (GlRenderer.enabled && !local12) {
 				this.method1046();
 			}
 			return null;
@@ -283,7 +283,7 @@ public final class Loc extends Entity {
 		} else if (this.anInt1303 < 3) {
 			local314 = Static83.anIntArrayArrayArray4[this.anInt1303 + 1];
 		}
-		if (Static239.aBoolean269 && local256) {
+		if (GlRenderer.enabled && local256) {
 			Static242.method4207(this.aClass36_Sub1_2, this.anInt1296, this.anInt1294, this.anInt1319);
 		}
 		@Pc(356) boolean local356 = this.aClass36_Sub1_2 == null;
@@ -296,7 +296,7 @@ public final class Loc extends Entity {
 		if (local389 == null) {
 			return null;
 		}
-		if (Static239.aBoolean269 && local256) {
+		if (GlRenderer.enabled && local256) {
 			if (local356) {
 				Static32.aClass36_Sub1_1 = local389.aClass36_Sub1_3;
 			}

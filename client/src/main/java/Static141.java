@@ -52,7 +52,7 @@ public final class Static141 {
 				local46.anObject5 = null;
 			}
 		}
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static242.method4201();
 			Static76.method1642();
 		}

@@ -61,7 +61,7 @@ public final class Js5GlTextureProvider implements GlTextureProvider {
 		this.anInt4186 = arg3;
 		this.aClass153_73 = arg0;
 		this.aClass54_12 = new LruHashTable(this.anInt4186);
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			this.aClass54_11 = new LruHashTable(this.anInt4186);
 		} else {
 			this.aClass54_11 = null;
@@ -149,7 +149,7 @@ public final class Js5GlTextureProvider implements GlTextureProvider {
 	@OriginalMember(owner = "client!nk", name = "a", descriptor = "(IZ)V")
 	@Override
 	public final void method3227(@OriginalArg(0) int arg0) {
-		Static27.method766(this.aByteArray61[arg0] & 0xFF, this.aByteArray62[arg0] & 0xFF);
+		Static27.setMaterial(this.aByteArray61[arg0] & 0xFF, this.aByteArray62[arg0] & 0xFF);
 		@Pc(23) boolean local23 = false;
 		@Pc(28) GlTexture local28 = this.method3242(arg0);
 		if (local28 != null) {
@@ -263,7 +263,7 @@ public final class Js5GlTextureProvider implements GlTextureProvider {
 	public final void method3248(@OriginalArg(0) int arg0) {
 		this.anInt4186 = arg0;
 		this.aClass54_12 = new LruHashTable(this.anInt4186);
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			this.aClass54_11 = new LruHashTable(this.anInt4186);
 		} else {
 			this.aClass54_11 = null;

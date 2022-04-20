@@ -29,7 +29,7 @@ public final class Static89 {
 	public static void method1835(@OriginalArg(0) boolean arg0) {
 		@Pc(11) byte local11;
 		@Pc(13) byte[][] local13;
-		if (Static239.aBoolean269 && arg0) {
+		if (GlRenderer.enabled && arg0) {
 			local11 = 1;
 			local13 = Static186.aByteArrayArray14;
 		} else {
@@ -132,7 +132,7 @@ public final class Static89 {
 			}
 			@Pc(109) PrivilegedRequest local109 = Static69.aClass213_4.method5118(new URL(Static69.aClass213_4.anApplet2.getCodeBase(), "clienterror.ws?c=" + Static131.anInt3252 + "&u=" + Static101.aLong98 + "&v1=" + SignLink.aString20 + "&v2=" + SignLink.aString14 + "&e=" + local13));
 			while (local109.status == 0) {
-				Static231.method3983(1L);
+				Static231.sleep(1L);
 			}
 			if (local109.status == 1) {
 				@Pc(128) DataInputStream local128 = (DataInputStream) local109.result;
@@ -183,7 +183,7 @@ public final class Static89 {
 		Static97.anInt2503 = -1;
 		Static214.anInt5574 = -1;
 		Static169.aClass13_18 = null;
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static263.aBoolean299 = true;
 		}
 		Static182.anInt4311 = Static83.anInt372;
@@ -191,7 +191,7 @@ public final class Static89 {
 			Static24.anInt766 = 0;
 			Static9.method182();
 		}
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static46.method1177();
 		} else {
 			Static129.method2503();
@@ -222,13 +222,13 @@ public final class Static89 {
 		if (Static199.anInt4672 == 3) {
 			for (@Pc(189) int local189 = 0; local189 < Static24.anInt766; local189++) {
 				if (Static223.aBooleanArray116[local189]) {
-					if (Static239.aBoolean269) {
+					if (GlRenderer.enabled) {
 						Static46.method1182(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711935, 128);
 					} else {
 						Static129.method2484(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711935, 128);
 					}
 				} else if (Static31.aBooleanArray29[local189]) {
-					if (Static239.aBoolean269) {
+					if (GlRenderer.enabled) {
 						Static46.method1182(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711680, 128);
 					} else {
 						Static129.method2484(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711680, 128);

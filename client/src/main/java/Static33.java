@@ -201,7 +201,7 @@ public final class Static33 {
 			for (@Pc(39) int local39 = 0; local39 < local30; local39++) {
 				local37[local39] = Static259.anIntArray513[local34[local39] & 0xFF];
 			}
-			if (Static239.aBoolean269) {
+			if (GlRenderer.enabled) {
 				local6[local15] = new GlSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local15], Static269.anIntArray252[local15], Static254.anIntArray488[local15], Static26.anIntArray66[local15], local37);
 			} else {
 				local6[local15] = new SoftwareSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local15], Static269.anIntArray252[local15], Static254.anIntArray488[local15], Static26.anIntArray66[local15], local37);

@@ -119,7 +119,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 	public final void destroy() {
 		if (Static230.anApplet_Sub1_1 == this && !Static58.aBoolean101) {
 			Static72.aLong74 = MonotonicClock.currentTimeMillis();
-			Static231.method3983(5000L);
+			Static231.sleep(5000L);
 			Static69.aClass213_4 = null;
 			this.method931(false);
 		}
@@ -167,7 +167,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			return;
 		}
 		Static69.aBoolean115 = true;
-		if (Static236.aBoolean256 && !Static239.aBoolean269 && MonotonicClock.currentTimeMillis() - Static243.aLong178 > 1000L) {
+		if (Static236.aBoolean256 && !GlRenderer.enabled && MonotonicClock.currentTimeMillis() - Static243.aLong178 > 1000L) {
 			@Pc(29) Rectangle local29 = arg0.getClipBounds();
 			if (local29 == null || local29.width >= Static72.anInt2046 && Static122.anInt3045 <= local29.height) {
 				Static35.aBoolean66 = true;
@@ -384,7 +384,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			Static69.aClass213_4 = Static71.signLink = new SignLink(null, arg0, arg1, 28);
 			@Pc(76) PrivilegedRequest local76 = Static71.signLink.method5130(1, this);
 			while (local76.status == 0) {
-				Static231.method3983(10L);
+				Static231.sleep(10L);
 			}
 			Static37.aThread1 = (Thread) local76.result;
 		} catch (@Pc(91) Exception local91) {
@@ -436,7 +436,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			}
 			@Pc(86) PrivilegedRequest local86 = Static71.signLink.method5130(1, this);
 			while (local86.status == 0) {
-				Static231.method3983(10L);
+				Static231.sleep(10L);
 			}
 			Static37.aThread1 = (Thread) local86.result;
 		} catch (@Pc(103) Exception local103) {

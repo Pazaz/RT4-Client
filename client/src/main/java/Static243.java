@@ -150,7 +150,7 @@ public final class Static243 {
 			Static141.anIntArray326[local3506] = 0;
 			Static227.anIntArray446[local3506] = 0;
 		}
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static86.method1799();
 		}
 		Static197.aBoolean228 = true;

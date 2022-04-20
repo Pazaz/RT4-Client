@@ -66,7 +66,7 @@ public final class Static221 {
 			}
 			local24 += Static129.anInt3144 - 128;
 		}
-		if (Static239.aBoolean269) {
+		if (GlRenderer.enabled) {
 			Static46.method1178(Static167.aClass3_Sub2_Sub1_Sub1_3.anIntArray20, arg0, arg1, Static167.aClass3_Sub2_Sub1_Sub1_3.anInt1867, Static167.aClass3_Sub2_Sub1_Sub1_3.anInt1859);
 		} else {
 			Static167.aClass3_Sub2_Sub1_Sub1_3.method1415(arg0, arg1);

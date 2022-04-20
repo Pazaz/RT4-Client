@@ -121,12 +121,12 @@ public final class Static242 {
 
 	@OriginalMember(owner = "client!tj", name = "a", descriptor = "(IIII[[Z[[I)V")
 	public static void method4198(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean[][] arg4, @OriginalArg(5) int[][] arg5) {
-		@Pc(1) GL2 local1 = Static239.gl;
-		Static239.method4183(1);
-		Static239.method4174(1);
-		Static239.method4150();
-		Static239.method4164(false);
-		Static27.method766(0, 0);
+		@Pc(1) GL2 local1 = GlRenderer.gl;
+		GlRenderer.setTextureCombineRgbMode(1);
+		GlRenderer.setTextureCombineAlphaMode(1);
+		GlRenderer.resetTextureMatrix();
+		GlRenderer.setLightingEnabled(false);
+		Static27.setMaterial(0, 0);
 		local1.glDepthMask(false);
 		for (@Pc(17) int local17 = 0; local17 < anInt5346; local17++) {
 			label52: for (@Pc(22) int local22 = 0; local22 < anInt5345; local22++) {
@@ -152,7 +152,7 @@ public final class Static242 {
 		}
 		local1.glEnableClientState(GL2.GL_COLOR_ARRAY);
 		local1.glDepthMask(true);
-		Static239.method4173();
+		GlRenderer.method4173();
 	}
 
 	@OriginalMember(owner = "client!tj", name = "a", descriptor = "([BIIIII)Z")
