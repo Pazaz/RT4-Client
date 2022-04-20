@@ -3,13 +3,13 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!he")
-public final class Class3_Sub2_Sub10_Sub1 extends ReferenceNode {
+public final class HardReferenceNode extends ReferenceNode {
 
 	@OriginalMember(owner = "client!he", name = "X", descriptor = "Ljava/lang/Object;")
 	private final Object anObject3;
 
 	@OriginalMember(owner = "client!he", name = "<init>", descriptor = "(Ljava/lang/Object;)V")
-	public Class3_Sub2_Sub10_Sub1(@OriginalArg(0) Object arg0) {
+	public HardReferenceNode(@OriginalArg(0) Object arg0) {
 		this.anObject3 = arg0;
 	}
 
