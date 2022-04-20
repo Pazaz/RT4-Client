@@ -8,7 +8,7 @@ public final class Static152 {
 	public static int anInt3594;
 
 	@OriginalMember(owner = "client!ma", name = "q", descriptor = "Lclient!fd;")
-	public static Class41 aClass41_3;
+	public static WorldMapFont aClass41_3;
 
 	@OriginalMember(owner = "client!ma", name = "x", descriptor = "Lclient!ih;")
 	public static final LinkedList aClass69_87 = new LinkedList();

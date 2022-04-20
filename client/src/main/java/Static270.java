@@ -8,7 +8,7 @@ public final class Static270 {
 	public static int[] anIntArray562;
 
 	@OriginalMember(owner = "client!wb", name = "l", descriptor = "Lclient!fd;")
-	public static Class41 aClass41_9;
+	public static WorldMapFont aClass41_9;
 
 	@OriginalMember(owner = "client!wb", name = "a", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1089 = Static28.method790(")2");

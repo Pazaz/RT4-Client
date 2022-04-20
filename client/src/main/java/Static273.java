@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static273 {
 
 	@OriginalMember(owner = "client!we", name = "v", descriptor = "Lclient!fd;")
-	public static Class41 aClass41_7;
+	public static WorldMapFont aClass41_7;
 
 	@OriginalMember(owner = "client!we", name = "H", descriptor = "[[B")
 	public static byte[][] aByteArrayArray13;

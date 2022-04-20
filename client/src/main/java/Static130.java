@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class Static130 {
 
 	@OriginalMember(owner = "client!kc", name = "n", descriptor = "Lclient!fd;")
-	public static Class41 aClass41_1;
+	public static WorldMapFont aClass41_1;
 
 	@OriginalMember(owner = "client!kc", name = "o", descriptor = "[[[Lclient!bj;")
 	public static Tile[][][] aClass3_Sub5ArrayArrayArray1;
@@ -19,7 +19,7 @@ public final class Static130 {
 	public static Js5 aClass153_47;
 
 	@OriginalMember(owner = "client!kc", name = "C", descriptor = "Lclient!fd;")
-	public static Class41 aClass41_2;
+	public static WorldMapFont aClass41_2;
 
 	@OriginalMember(owner = "client!kc", name = "r", descriptor = "Lclient!na;")
 	public static final JagString aClass100_607 = Static28.method790("K");
