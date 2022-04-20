@@ -20,7 +20,7 @@ public final class Static87 {
 	public static boolean method1802() {
 		if (Static150.aBoolean175) {
 			try {
-				Static9.aClass100_35.method3157(Static71.aClass213_3.anApplet2);
+				Static9.aClass100_35.method3157(Static71.signLink.anApplet2);
 				return true;
 			} catch (@Pc(14) Throwable local14) {
 			}
@@ -255,7 +255,7 @@ public final class Static87 {
 									}
 									continue;
 								}
-								if (Static266.anInt5343 == 1) {
+								if (Static266.game == 1) {
 									Static98.method1966(-1, 1L, Static186.aClass100_827, local563, (short) 36, LocalizedText.FACEHERE, local571);
 								}
 								Static98.method1966(-1, 1L, Static186.aClass100_827, local563, (short) 60, Static195.aClass100_859, local571);
@@ -303,7 +303,7 @@ public final class Static87 {
 								continue;
 							}
 							if (local30.anInt453 == 1405) {
-								if (!Static43.aBoolean82) {
+								if (!Static43.displayFps) {
 									continue;
 								}
 								local270 = local30.anInt445 + local123;

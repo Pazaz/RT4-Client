@@ -47,7 +47,7 @@ public final class Static267 {
 	public static boolean method4527() {
 		if (Static150.aBoolean175) {
 			try {
-				return !((Boolean) Static119.aClass100_588.method3157(Static71.aClass213_3.anApplet2));
+				return !((Boolean) Static119.aClass100_588.method3157(Static71.signLink.anApplet2));
 			} catch (@Pc(21) Throwable local21) {
 			}
 		}

@@ -11,7 +11,7 @@ public final class Static172 {
 	public static MidiPcmStream aClass3_Sub3_Sub4_2;
 
 	@OriginalMember(owner = "client!nj", name = "f", descriptor = "Lclient!en;")
-	public static BufferedFile aClass38_4;
+	public static BufferedFile cacheData;
 
 	@OriginalMember(owner = "client!nj", name = "g", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_70;
@@ -29,7 +29,7 @@ public final class Static172 {
 	public static short[][] aShortArrayArray7;
 
 	@OriginalMember(owner = "client!nj", name = "a", descriptor = "Z")
-	public static boolean aBoolean199 = false;
+	public static boolean shiftClick = false;
 
 	@OriginalMember(owner = "client!nj", name = "h", descriptor = "Lclient!ih;")
 	public static final LinkedList aClass69_97 = new LinkedList();

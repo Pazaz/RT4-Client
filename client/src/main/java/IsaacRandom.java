@@ -159,11 +159,15 @@ public final class IsaacRandom {
 
 	@OriginalMember(owner = "client!ij", name = "a", descriptor = "(I)I")
 	public final int method2295() {
-		if (this.anInt2916-- == 0) {
-			this.method2296();
-			this.anInt2916 = 255;
+		if (GlobalConfig.USE_ISAAC) {
+			if (this.anInt2916-- == 0) {
+				this.method2296();
+				this.anInt2916 = 255;
+			}
+			return this.anIntArray274[this.anInt2916];
+		} else {
+			return 0;
 		}
-		return this.anIntArray274[this.anInt2916];
 	}
 
 	@OriginalMember(owner = "client!ij", name = "b", descriptor = "(I)V")

@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static148 {
 
 	@OriginalMember(owner = "client!li", name = "l", descriptor = "Lclient!ge;")
-	public static Cache aClass49_4;
+	public static Cache masterCache;
 
 	@OriginalMember(owner = "client!li", name = "t", descriptor = "I")
 	public static int anInt3534;
@@ -40,10 +40,10 @@ public final class Static148 {
 		Static7.anIntArray75[arg0] = arg1;
 		@Pc(21) LongNode local21 = (LongNode) Static199.aClass133_20.method3863((long) arg0);
 		if (local21 == null) {
-			local21 = new LongNode(MonotonicClock.method5096() + 500L);
+			local21 = new LongNode(MonotonicClock.currentTimeMillis() + 500L);
 			Static199.aClass133_20.method3862(local21, (long) arg0);
 		} else {
-			local21.aLong55 = MonotonicClock.method5096() + 500L;
+			local21.aLong55 = MonotonicClock.currentTimeMillis() + 500L;
 		}
 	}
 

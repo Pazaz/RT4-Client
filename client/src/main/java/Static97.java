@@ -10,7 +10,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static97 {
 
 	@OriginalMember(owner = "client!hi", name = "g", descriptor = "I")
-	public static int anInt2508;
+	public static int worldListAlternatePort;
 
 	@OriginalMember(owner = "client!hi", name = "a", descriptor = "I")
 	public static int anInt2503 = -1;

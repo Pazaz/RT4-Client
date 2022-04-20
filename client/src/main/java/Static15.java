@@ -26,7 +26,7 @@ public final class Static15 {
 	public static JagString method479() {
 		@Pc(8) JagString local8 = Static93.aClass100_518;
 		@Pc(10) JagString local10 = Static186.aClass100_827;
-		if (Static83.anInt370 != 0) {
+		if (Static83.modeWhere != 0) {
 			local8 = Static50.aClass100_365;
 		}
 		if (Static47.aClass100_991 != null) {

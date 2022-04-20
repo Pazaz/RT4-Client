@@ -116,7 +116,7 @@ public final class Static156 {
 	}
 
 	@OriginalMember(owner = "client!mf", name = "e", descriptor = "(I)V")
-	public static void method2958() {
+	public static void init() {
 		if (SignLink.aString20.toLowerCase().indexOf("microsoft") != -1) {
 			Static196.anIntArray407[187] = 27;
 			Static196.anIntArray407[223] = 28;

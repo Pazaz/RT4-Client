@@ -9,7 +9,7 @@ public final class Static4 {
 	public static byte[][][] aByteArrayArrayArray1;
 
 	@OriginalMember(owner = "client!ac", name = "c", descriptor = "I")
-	public static int anInt30 = 0;
+	public static int js5ConnectState = 0;
 
 	@OriginalMember(owner = "client!ac", name = "i", descriptor = "Lclient!ih;")
 	public static final LinkedList aClass69_2 = new LinkedList();
@@ -70,7 +70,7 @@ public final class Static4 {
 		if (Static124.aClass95_2 == null) {
 			return false;
 		}
-		@Pc(14) int local14 = Static124.aClass95_2.method2831();
+		@Pc(14) int local14 = Static124.aClass95_2.available();
 		if (local14 == 0) {
 			return false;
 		}
@@ -398,7 +398,7 @@ public final class Static4 {
 				return true;
 			} else if (Static164.anInt3985 == 164) {
 				local133 = Static57.aClass3_Sub15_Sub1_3.g4rme();
-				Static232.aClass212_5 = Static71.aClass213_3.method5128(local133);
+				Static232.aClass212_5 = Static71.signLink.method5128(local133);
 				Static164.anInt3985 = -1;
 				return true;
 			} else if (Static164.anInt3985 == 225) {
@@ -821,7 +821,7 @@ public final class Static4 {
 								local908--;
 								@Pc(2961) boolean local2961 = true;
 								for (local916 = 0; local916 < local908; local916++) {
-									if (Static104.anIntArray255[local916] != Static125.anInt3103 && Static125.anInt3103 == Static104.anIntArray255[local916 + 1] || Static104.anIntArray255[local916] == 0 && Static104.anIntArray255[local916 + 1] != 0) {
+									if (Static104.anIntArray255[local916] != Static125.worldId && Static125.worldId == Static104.anIntArray255[local916 + 1] || Static104.anIntArray255[local916] == 0 && Static104.anIntArray255[local916 + 1] != 0) {
 										local2961 = false;
 										local3002 = Static104.anIntArray255[local916];
 										Static104.anIntArray255[local916] = Static104.anIntArray255[local916 + 1];
@@ -983,7 +983,7 @@ public final class Static4 {
 								Static209.anInt4808 = Static119.anInt3028;
 								return true;
 							} else if (Static164.anInt3985 == 114) {
-								Static202.method3654(Static71.aClass213_3, Static57.aClass3_Sub15_Sub1_3, Static223.anInt5028);
+								Static202.method3654(Static71.signLink, Static57.aClass3_Sub15_Sub1_3, Static223.anInt5028);
 								Static164.anInt3985 = -1;
 								return true;
 							} else if (Static164.anInt3985 == 65) {
@@ -1047,7 +1047,7 @@ public final class Static4 {
 								} else {
 									Static175.aClass100_797 = local156;
 									Static164.aBoolean194 = true;
-									Static33.aClass212_1 = Static71.aClass213_3.method5131(new String(local156.method3148(), "ISO-8859-1"));
+									Static33.aClass212_1 = Static71.signLink.method5131(new String(local156.method3148(), "ISO-8859-1"));
 								}
 								Static164.anInt3985 = -1;
 								return true;

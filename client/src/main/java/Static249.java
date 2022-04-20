@@ -7,7 +7,7 @@ public final class Static249 {
 	public static Js5 aClass153_100;
 
 	@OriginalMember(owner = "client!ud", name = "K", descriptor = "I")
-	public static int anInt5428;
+	public static int worldListDefaultPort;
 
 	@OriginalMember(owner = "client!ud", name = "O", descriptor = "I")
 	public static int anInt5431 = 0;

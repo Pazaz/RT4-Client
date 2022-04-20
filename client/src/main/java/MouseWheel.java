@@ -13,5 +13,5 @@ public abstract class MouseWheel {
 	public abstract void method3291(@OriginalArg(1) Component arg0);
 
 	@OriginalMember(owner = "client!uc", name = "a", descriptor = "(Ljava/awt/Component;I)V")
-	public abstract void method3293(@OriginalArg(0) Component arg0);
+	public abstract void start(@OriginalArg(0) Component arg0);
 }

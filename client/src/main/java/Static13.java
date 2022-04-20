@@ -30,7 +30,7 @@ public final class Static13 {
 			local32 = Static34.method882(new JagString[] { LocalizedText.USE, LocalizedText.MINISEPARATOR, Static34.aClass100_203, Static225.aClass100_961 });
 		} else if (Static241.aBoolean302 && Static231.anInt5204 < 2) {
 			local32 = Static34.method882(new JagString[] { Static102.aClass100_545, LocalizedText.MINISEPARATOR, Static78.aClass100_466, Static225.aClass100_961 });
-		} else if (Static172.aBoolean199 && Static187.aBooleanArray101[81] && Static231.anInt5204 > 2) {
+		} else if (Static172.shiftClick && Static187.aBooleanArray101[81] && Static231.anInt5204 > 2) {
 			local32 = Static269.method2228(Static231.anInt5204 - 2);
 		} else {
 			local32 = Static269.method2228(Static231.anInt5204 - 1);
@@ -52,10 +52,10 @@ public final class Static13 {
 	@OriginalMember(owner = "client!bc", name = "a", descriptor = "(Ljava/awt/Color;ZZLclient!na;I)V")
 	public static void method473(@OriginalArg(0) Color arg0, @OriginalArg(2) boolean arg1, @OriginalArg(3) JagString arg2, @OriginalArg(4) int arg3) {
 		try {
-			@Pc(6) Graphics local6 = Static154.aCanvas1.getGraphics();
+			@Pc(6) Graphics local6 = Static154.canvas.getGraphics();
 			if (Static222.aFont1 == null) {
 				Static222.aFont1 = new Font("Helvetica", 1, 13);
-				Static240.aFontMetrics1 = Static154.aCanvas1.getFontMetrics(Static222.aFont1);
+				Static240.aFontMetrics1 = Static154.canvas.getFontMetrics(Static222.aFont1);
 			}
 			if (arg1) {
 				local6.setColor(Color.black);
@@ -66,7 +66,7 @@ public final class Static13 {
 			}
 			try {
 				if (Static149.anImage3 == null) {
-					Static149.anImage3 = Static154.aCanvas1.createImage(304, 34);
+					Static149.anImage3 = Static154.canvas.createImage(304, 34);
 				}
 				@Pc(56) Graphics local56 = Static149.anImage3.getGraphics();
 				local56.setColor(arg0);
@@ -92,13 +92,13 @@ public final class Static13 {
 				local6.setColor(Color.white);
 				arg2.method3112(local146 + 22, local140 + (-arg2.method3155(Static240.aFontMetrics1) + 304) / 2, local6);
 			}
-			if (Static278.aClass100_1102 != null) {
+			if (Static278.mainLoadPrimaryText != null) {
 				local6.setFont(Static222.aFont1);
 				local6.setColor(Color.white);
-				Static278.aClass100_1102.method3112(Static254.anInt5554 / 2 - 26, Static48.anInt1448 / 2 - Static278.aClass100_1102.method3155(Static240.aFontMetrics1) / 2, local6);
+				Static278.mainLoadPrimaryText.method3112(Static254.anInt5554 / 2 - 26, Static48.anInt1448 / 2 - Static278.mainLoadPrimaryText.method3155(Static240.aFontMetrics1) / 2, local6);
 			}
 		} catch (@Pc(252) Exception local252) {
-			Static154.aCanvas1.repaint();
+			Static154.canvas.repaint();
 		}
 	}
 }

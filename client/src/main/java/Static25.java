@@ -36,10 +36,10 @@ public final class Static25 {
 	public static void method714(@OriginalArg(0) Frame arg0, @OriginalArg(2) SignLink arg1) {
 		while (true) {
 			@Pc(16) PrivilegedRequest local16 = arg1.method5115(arg0);
-			while (local16.anInt5925 == 0) {
+			while (local16.status == 0) {
 				Static231.method3983(10L);
 			}
-			if (local16.anInt5925 == 1) {
+			if (local16.status == 1) {
 				arg0.setVisible(false);
 				arg0.dispose();
 				return;

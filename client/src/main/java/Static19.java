@@ -118,7 +118,7 @@ public final class Static19 {
 	}
 
 	@OriginalMember(owner = "client!bi", name = "a", descriptor = "(BLjava/awt/Component;)V")
-	public static void method591(@OriginalArg(1) Component arg0) {
+	public static void start(@OriginalArg(1) Component arg0) {
 		@Pc(10) Method local10 = SignLink.aMethod6;
 		if (local10 != null) {
 			try {

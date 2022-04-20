@@ -49,7 +49,7 @@ public final class Static246 {
 		}
 		@Pc(35) JagString local35 = arg0.aClass100_738;
 		if (arg0.anInt3726 != 0) {
-			@Pc(47) JagString local47 = Static266.anInt5343 == 1 ? LocalizedText.RATING : LocalizedText.LEVEL;
+			@Pc(47) JagString local47 = Static266.game == 1 ? LocalizedText.RATING : LocalizedText.LEVEL;
 			local35 = Static34.method882(new JagString[] { local35, Static123.method2420(arg0.anInt3726, Static173.aClass8_Sub4_Sub1_2.anInt1652), Static123.aClass100_593, local47, Static123.method2423(arg0.anInt3726), Static72.aClass100_448 });
 		}
 		if (Static260.anInt5014 == 1) {
@@ -67,7 +67,7 @@ public final class Static246 {
 			@Pc(140) int local140;
 			if (local129 != null) {
 				for (local140 = 4; local140 >= 0; local140--) {
-					if (local129[local140] != null && (Static266.anInt5343 != 0 || !local129[local140].method3111(LocalizedText.ATTACK))) {
+					if (local129[local140] != null && (Static266.game != 0 || !local129[local140].method3111(LocalizedText.ATTACK))) {
 						@Pc(161) byte local161 = 0;
 						if (local140 == 0) {
 							local161 = 17;
@@ -95,7 +95,7 @@ public final class Static246 {
 					}
 				}
 			}
-			if (Static266.anInt5343 == 0 && local129 != null) {
+			if (Static266.game == 0 && local129 != null) {
 				for (local140 = 4; local140 >= 0; local140--) {
 					if (local129[local140] != null && local129[local140].method3111(LocalizedText.ATTACK)) {
 						@Pc(271) short local271 = 0;

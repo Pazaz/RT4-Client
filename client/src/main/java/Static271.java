@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static271 {
 
 	@OriginalMember(owner = "client!wc", name = "c", descriptor = "I")
-	public static int anInt5800;
+	public static int defaultPort;
 
 	@OriginalMember(owner = "client!wc", name = "g", descriptor = "I")
 	public static int anInt5804 = 0;
@@ -31,10 +31,10 @@ public final class Static271 {
 
 	@OriginalMember(owner = "client!wc", name = "a", descriptor = "(Lclient!wa;I)V")
 	public static void method4598(@OriginalArg(0) Buffer arg0) {
-		if (Static121.aClass38_3 != null) {
+		if (Static121.uid != null) {
 			try {
-				Static121.aClass38_3.method1459(0L);
-				Static121.aClass38_3.method1458(arg0.data, arg0.offset, 24);
+				Static121.uid.method1459(0L);
+				Static121.uid.method1458(arg0.data, arg0.offset, 24);
 			} catch (@Pc(16) Exception local16) {
 			}
 		}

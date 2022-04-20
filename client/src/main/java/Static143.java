@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class Static143 {
 
 	@OriginalMember(owner = "client!ld", name = "k", descriptor = "Ljava/lang/String;")
-	public static String aString4;
+	public static String worldListHostname;
 
 	@OriginalMember(owner = "client!ld", name = "a", descriptor = "[I")
 	public static final int[] anIntArray329 = new int[] { 2, 2, 4, 0, 1, 8, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0 };

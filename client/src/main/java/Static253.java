@@ -154,7 +154,7 @@ public final class Static253 {
 		Static5.anInt40 = local57;
 		Static138.anInt3439 = local59;
 		Static184.anInt4358 = local125;
-		if (Static19.aBoolean43 && Static107.aClass73_3.method2328() == 0) {
+		if (Static19.aBoolean43 && Static107.js5NetQueue.method2328() == 0) {
 			Static19.aBoolean43 = false;
 		}
 		if (Static19.aBoolean43) {

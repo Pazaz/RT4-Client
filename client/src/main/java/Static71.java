@@ -11,10 +11,10 @@ public final class Static71 {
 	public static int[][] anIntArrayArray10;
 
 	@OriginalMember(owner = "client!fk", name = "l", descriptor = "Lsignlink!ll;")
-	public static SignLink aClass213_3;
+	public static SignLink signLink;
 
 	@OriginalMember(owner = "client!fk", name = "q", descriptor = "Lclient!uc;")
-	public static MouseWheel aClass111_2;
+	public static MouseWheel mouseWheel;
 
 	@OriginalMember(owner = "client!fk", name = "g", descriptor = "Z")
 	public static boolean aBoolean107 = true;

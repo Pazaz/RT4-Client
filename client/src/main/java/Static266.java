@@ -23,7 +23,7 @@ public final class Static266 {
 	public static final int anInt5338 = (int) (Math.random() * 33.0D) - 16;
 
 	@OriginalMember(owner = "client!vk", name = "n", descriptor = "I")
-	public static int anInt5343 = 0;
+	public static int game = 0;
 
 	@OriginalMember(owner = "client!vk", name = "a", descriptor = "(Lclient!ve;Lclient!ve;I)V")
 	public static void method4187(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {

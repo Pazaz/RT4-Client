@@ -17,7 +17,7 @@ public final class Static125 {
 	public static final SoftLruHashTable aClass99_19 = new SoftLruHashTable(64);
 
 	@OriginalMember(owner = "client!jl", name = "H", descriptor = "I")
-	public static int anInt3103 = -1;
+	public static int worldId = -1;
 
 	@OriginalMember(owner = "client!jl", name = "J", descriptor = "I")
 	public static int anInt3104 = 127;

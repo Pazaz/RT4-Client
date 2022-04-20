@@ -20,11 +20,11 @@ public final class Js5CacheQueue implements Runnable {
 
 	@OriginalMember(owner = "client!k", name = "<init>", descriptor = "()V")
 	public Js5CacheQueue() {
-		@Pc(20) PrivilegedRequest local20 = Static71.aClass213_3.method5130(5, this);
-		while (local20.anInt5925 == 0) {
+		@Pc(20) PrivilegedRequest local20 = Static71.signLink.method5130(5, this);
+		while (local20.status == 0) {
 			Static231.method3983(10L);
 		}
-		if (local20.anInt5925 == 2) {
+		if (local20.status == 2) {
 			throw new RuntimeException();
 		}
 		this.aThread2 = (Thread) local20.anObject6;

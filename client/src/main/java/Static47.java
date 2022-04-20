@@ -8,7 +8,7 @@ public final class Static47 {
 	public static JagString aClass100_991 = null;
 
 	@OriginalMember(owner = "client!dk", name = "j", descriptor = "[Lclient!en;")
-	public static final BufferedFile[] aClass38Array2 = new BufferedFile[28];
+	public static final BufferedFile[] cacheIndexes = new BufferedFile[28];
 
 	@OriginalMember(owner = "client!dk", name = "a", descriptor = "(III)Lclient!ec;")
 	public static Scenery method3996(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {

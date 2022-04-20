@@ -36,7 +36,7 @@ public final class Static123 {
 
 	@OriginalMember(owner = "client!jj", name = "a", descriptor = "(Z)V")
 	public static void method2418() {
-		if (!Static249.aBoolean282 && Static83.anInt370 != 2) {
+		if (!Static249.aBoolean282 && Static83.modeWhere != 2) {
 			try {
 				Static206.aClass100_900.method3157(Static215.aClient1);
 			} catch (@Pc(26) Throwable local26) {

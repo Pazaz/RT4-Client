@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static190 {
 
 	@OriginalMember(owner = "client!pf", name = "f", descriptor = "Lclient!en;")
-	public static BufferedFile aClass38_5;
+	public static BufferedFile cacheMasterIndex;
 
 	@OriginalMember(owner = "client!pf", name = "b", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable aClass99_26 = new SoftLruHashTable(200);

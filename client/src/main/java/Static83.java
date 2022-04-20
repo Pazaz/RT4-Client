@@ -14,7 +14,7 @@ public final class Static83 {
 	public static float aFloat3;
 
 	@OriginalMember(owner = "client!gj", name = "b", descriptor = "I")
-	public static int anInt370 = 0;
+	public static int modeWhere = 0;
 
 	@OriginalMember(owner = "client!gj", name = "d", descriptor = "I")
 	public static int anInt372 = 0;
