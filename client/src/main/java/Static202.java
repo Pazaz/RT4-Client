@@ -30,7 +30,7 @@ public final class Static202 {
 
 	@OriginalMember(owner = "client!qg", name = "a", descriptor = "(Lsignlink!ll;Lclient!wa;IB)V")
 	public static void method3654(@OriginalArg(0) SignLink arg0, @OriginalArg(1) Buffer arg1, @OriginalArg(2) int arg2) {
-		@Pc(17) Class3_Sub11 local17 = new Class3_Sub11();
+		@Pc(17) ReflectionCheck local17 = new ReflectionCheck();
 		local17.anInt1725 = arg1.method2229();
 		local17.anInt1732 = arg1.method2174();
 		local17.aClass212Array1 = new PrivilegedRequest[local17.anInt1725];
