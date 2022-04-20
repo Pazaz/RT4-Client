@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Packet extends Buffer {
 
 	@OriginalMember(owner = "client!i", name = "Xb", descriptor = "Lclient!ij;")
-	private Class71 aClass71_1;
+	private IsaacRandom aClass71_1;
 
 	@OriginalMember(owner = "client!i", name = "fc", descriptor = "I")
 	private int anInt2846;
@@ -50,7 +50,7 @@ public final class Packet extends Buffer {
 
 	@OriginalMember(owner = "client!i", name = "a", descriptor = "([IZ)V")
 	public final void method2240(@OriginalArg(0) int[] arg0) {
-		this.aClass71_1 = new Class71(arg0);
+		this.aClass71_1 = new IsaacRandom(arg0);
 	}
 
 	@OriginalMember(owner = "client!i", name = "q", descriptor = "(II)I")
