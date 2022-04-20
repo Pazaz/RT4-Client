@@ -27,7 +27,7 @@ public final class Static178 {
 		if (Static199.aClass3_Sub22Array1 == null) {
 			return;
 		}
-		@Pc(22) long local22 = arg0.method3158();
+		@Pc(22) long local22 = arg0.encode37();
 		@Pc(24) int local24 = 0;
 		if (local22 == 0L) {
 			return;

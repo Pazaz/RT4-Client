@@ -57,7 +57,7 @@ public final class Static140 {
 			Static103.method2231(Static186.aClass100_827, 0, LocalizedText.IGNORELISTFULL);
 			return;
 		}
-		@Pc(34) JagString local34 = Static79.method1702(arg0).method3125();
+		@Pc(34) JagString local34 = Static79.decode37(arg0).method3125();
 		@Pc(36) int local36;
 		for (local36 = 0; local36 < Static35.anInt1093; local36++) {
 			if (Static190.aLongArray6[local36] == arg0) {
@@ -76,7 +76,7 @@ public final class Static140 {
 			return;
 		}
 		Static190.aLongArray6[Static35.anInt1093] = arg0;
-		Static193.aClass100Array134[Static35.anInt1093++] = Static79.method1702(arg0);
+		Static193.aClass100Array134[Static35.anInt1093++] = Static79.decode37(arg0);
 		Static185.anInt4369 = Static119.transmitTimer;
 		Static6.outboundBuffer.p1isaac(34);
 		Static6.outboundBuffer.p8(arg0);

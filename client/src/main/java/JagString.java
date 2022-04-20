@@ -787,7 +787,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "j", descriptor = "(I)J")
-	public final long method3158() {
+	public final long encode37() {
 		@Pc(7) long local7 = 0L;
 		for (@Pc(14) int local14 = 0; this.anInt4030 > local14 && local14 < 12; local14++) {
 			@Pc(32) byte local32 = this.aByteArray52[local14];
@@ -808,7 +808,7 @@ public final class JagString implements StringInterface {
 
 	@OriginalMember(owner = "client!na", name = "k", descriptor = "(I)Lclient!na;")
 	public final JagString method3159() {
-		@Pc(9) JagString local9 = Static79.method1702(this.method3158());
+		@Pc(9) JagString local9 = Static79.decode37(this.encode37());
 		return local9 == null ? Static228.aClass100_967 : local9;
 	}
 

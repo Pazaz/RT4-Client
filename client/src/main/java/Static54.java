@@ -127,7 +127,7 @@ public final class Static54 {
 				if (local591 != null && local591.method2682()) {
 					local154 = local591.anInt3421 / 32 - Static173.self.anInt3421 / 32;
 					local150 = local591.anInt3412 / 32 - Static173.self.anInt3412 / 32;
-					@Pc(624) long local624 = local591.aClass100_364.method3158();
+					@Pc(624) long local624 = local591.aClass100_364.encode37();
 					@Pc(626) boolean local626 = false;
 					for (local239 = 0; local239 < Static9.anInt178; local239++) {
 						if (local624 == Static92.aLongArray3[local239] && Static104.anIntArray255[local239] != 0) {

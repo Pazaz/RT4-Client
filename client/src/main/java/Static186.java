@@ -17,13 +17,13 @@ public final class Static186 {
 	public static final JagString aClass100_827 = Static28.parse("");
 
 	@OriginalMember(owner = "client!pa", name = "P", descriptor = "Lclient!na;")
-	public static JagString aClass100_828 = aClass100_827;
+	public static JagString password = aClass100_827;
 
 	@OriginalMember(owner = "client!pa", name = "R", descriptor = "[Z")
 	public static final boolean[] aBooleanArray100 = new boolean[100];
 
 	@OriginalMember(owner = "client!pa", name = "S", descriptor = "Lclient!na;")
-	public static JagString aClass100_829 = aClass100_827;
+	public static JagString username = aClass100_827;
 
 	@OriginalMember(owner = "client!pa", name = "d", descriptor = "(I)V")
 	public static void method3413() {

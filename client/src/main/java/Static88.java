@@ -1253,7 +1253,7 @@ public final class Static88 {
 										local26--;
 										local609 = Static3.aClass100Array176[local26];
 										Static6.outboundBuffer.p1isaac(244);
-										Static6.outboundBuffer.p8(local609.method3158());
+										Static6.outboundBuffer.p8(local609.encode37());
 										continue;
 									}
 									if (local226 == 3106) {
@@ -1634,25 +1634,25 @@ public final class Static88 {
 									if (local226 == 3605) {
 										local26--;
 										local609 = Static3.aClass100Array176[local26];
-										Static64.method1496(local609.method3158());
+										Static64.method1496(local609.encode37());
 										continue;
 									}
 									if (local226 == 3606) {
 										local26--;
 										local609 = Static3.aClass100Array176[local26];
-										Static193.method3500(local609.method3158());
+										Static193.method3500(local609.encode37());
 										continue;
 									}
 									if (local226 == 3607) {
 										local26--;
 										local609 = Static3.aClass100Array176[local26];
-										Static140.method2707(local609.method3158());
+										Static140.method2707(local609.encode37());
 										continue;
 									}
 									if (local226 == 3608) {
 										local26--;
 										local609 = Static3.aClass100Array176[local26];
-										Static69.method1542(local609.method3158());
+										Static69.method1542(local609.encode37());
 										continue;
 									}
 									if (local226 == 3609) {
@@ -1737,7 +1737,7 @@ public final class Static88 {
 									if (local226 == 3619) {
 										local26--;
 										local609 = Static3.aClass100Array176[local26];
-										Static156.method2956(local609.method3158());
+										Static156.method2956(local609.encode37());
 										continue;
 									}
 									if (local226 == 3620) {
@@ -1756,7 +1756,7 @@ public final class Static88 {
 										local28--;
 										local809 = Static254.anIntArray487[local28];
 										if (Static166.anInt4054 != 0 && Static35.anInt1093 > local809) {
-											Static3.aClass100Array176[local26++] = Static79.method1702(Static190.aLongArray6[local809]).method3125();
+											Static3.aClass100Array176[local26++] = Static79.decode37(Static190.aLongArray6[local809]).method3125();
 											continue;
 										}
 										Static3.aClass100Array176[local26++] = Static72.aClass100_447;
@@ -2181,7 +2181,7 @@ public final class Static88 {
 													local803 = Static254.anIntArray487[local28];
 													local1052 = Static254.anIntArray487[local28 + 1];
 													Static6.outboundBuffer.p1isaac(99);
-													Static6.outboundBuffer.p8(local609.method3158());
+													Static6.outboundBuffer.p8(local609.encode37());
 													Static6.outboundBuffer.p1(local803 - 1);
 													Static6.outboundBuffer.p1(local1052);
 													continue;
@@ -2352,7 +2352,7 @@ public final class Static88 {
 														Static6.outboundBuffer.p1isaac(201);
 														Static6.outboundBuffer.p1(0);
 														local1052 = Static6.outboundBuffer.offset;
-														Static6.outboundBuffer.p8(local609.method3158());
+														Static6.outboundBuffer.p8(local609.encode37());
 														Static146.method2748(Static6.outboundBuffer, local2522);
 														Static6.outboundBuffer.p1len(Static6.outboundBuffer.offset - local1052);
 													}
@@ -2396,7 +2396,7 @@ public final class Static88 {
 												}
 												if (local226 == 5015) {
 													if (Static173.self == null || Static173.self.aClass100_364 == null) {
-														local609 = Static186.aClass100_829;
+														local609 = Static186.username;
 													} else {
 														local609 = Static173.self.method1264();
 													}
@@ -2504,7 +2504,7 @@ public final class Static88 {
 													Static6.outboundBuffer.p1isaac(178);
 													Static6.outboundBuffer.p1(0);
 													local803 = Static6.outboundBuffer.offset;
-													Static6.outboundBuffer.p8(local609.method3158());
+													Static6.outboundBuffer.p8(local609.encode37());
 													Static6.outboundBuffer.p2(Static122.aClass12_1.anInt439);
 													Static122.aClass12_1.aClass3_Sub2_Sub6_1.method760(Static6.outboundBuffer, Static122.aClass12_1.anIntArray33);
 													Static6.outboundBuffer.p1len(Static6.outboundBuffer.offset - local803);
@@ -3151,7 +3151,7 @@ public final class Static88 {
 													if (local226 == 5604) {
 														local26--;
 														if (Static244.anInt5370 == 10 && Static219.anInt4937 == 0 && Static184.anInt4348 == 0 && Static179.anInt4261 == 0 && Static82.anInt2231 == 0) {
-															Static78.method1691(Static3.aClass100Array176[local26].method3158());
+															Static78.method1691(Static3.aClass100Array176[local26].encode37());
 														}
 														continue;
 													}
@@ -3159,7 +3159,7 @@ public final class Static88 {
 														local28 -= 4;
 														local26 -= 2;
 														if (Static244.anInt5370 == 10 && Static219.anInt4937 == 0 && Static184.anInt4348 == 0 && Static179.anInt4261 == 0 && Static82.anInt2231 == 0) {
-															Static40.method1016(Static254.anIntArray487[local28], Static254.anIntArray487[local28 + 3], Static254.anIntArray487[local28 + 1], Static3.aClass100Array176[local26 + 1], Static3.aClass100Array176[local26].method3158(), Static254.anIntArray487[local28 + 2]);
+															Static40.method1016(Static254.anIntArray487[local28], Static254.anIntArray487[local28 + 3], Static254.anIntArray487[local28 + 1], Static3.aClass100Array176[local26 + 1], Static3.aClass100Array176[local26].encode37(), Static254.anIntArray487[local28 + 2]);
 														}
 														continue;
 													}

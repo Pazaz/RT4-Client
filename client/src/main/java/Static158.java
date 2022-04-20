@@ -96,7 +96,7 @@ public final class Static158 {
 				Static57.aClass3_Sub15_Sub1_3.offset = 0;
 				Static124.socket.method2827(0, Static229.aClass100Array156.length * 8, Static57.aClass3_Sub15_Sub1_3.data);
 				for (local120 = 0; local120 < Static229.aClass100Array156.length; local120++) {
-					Static229.aClass100Array156[local120] = Static79.method1702(Static57.aClass3_Sub15_Sub1_3.g8());
+					Static229.aClass100Array156[local120] = Static79.decode37(Static57.aClass3_Sub15_Sub1_3.g8());
 				}
 				Static223.anInt5034 = 21;
 				Static179.anInt4261 = 0;

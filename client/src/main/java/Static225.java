@@ -79,10 +79,10 @@ public final class Static225 {
 
 	@OriginalMember(owner = "client!se", name = "a", descriptor = "(Lclient!na;Lclient!na;IB)V")
 	public static void method3896(@OriginalArg(0) JagString arg0, @OriginalArg(1) JagString arg1, @OriginalArg(2) int arg2) {
-		Static186.aClass100_828 = arg1;
+		Static186.password = arg1;
 		Static5.anInt39 = arg2;
-		Static186.aClass100_829 = arg0;
-		if (Static186.aClass100_829.method3108(Static186.aClass100_827) || Static186.aClass100_828.method3108(Static186.aClass100_827)) {
+		Static186.username = arg0;
+		if (Static186.username.method3108(Static186.aClass100_827) || Static186.password.method3108(Static186.aClass100_827)) {
 			Static266.anInt5336 = 3;
 		} else if (Static125.worldId == -1) {
 			Static20.anInt673 = 0;
@@ -93,11 +93,11 @@ public final class Static225 {
 			local43.p1(10);
 			local43.p2((int) (Math.random() * 99999.0D));
 			local43.p2(530);
-			local43.p8(Static186.aClass100_829.method3158());
+			local43.p8(Static186.username.encode37());
 			local43.p4((int) (Math.random() * 9.9999999E7D));
-			local43.pjstr(Static186.aClass100_828);
+			local43.pjstr(Static186.password);
 			local43.p4((int) (Math.random() * 9.9999999E7D));
-			local43.encryptRsa(Static86.aBigInteger1, Static256.aBigInteger2);
+			local43.encryptRsa(GlobalConfig.RSA_EXPONENT, GlobalConfig.RSA_MODULUS);
 			Static6.outboundBuffer.offset = 0;
 			Static6.outboundBuffer.p1(210);
 			Static6.outboundBuffer.p1(local43.offset);

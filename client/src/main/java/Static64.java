@@ -62,7 +62,7 @@ public final class Static64 {
 			Static103.method2231(Static186.aClass100_827, 0, LocalizedText.FRIENDLISTFULL);
 			return;
 		}
-		@Pc(35) JagString local35 = Static79.method1702(arg0).method3125();
+		@Pc(35) JagString local35 = Static79.decode37(arg0).method3125();
 		@Pc(42) int local42;
 		for (local42 = 0; local42 < Static9.anInt178; local42++) {
 			if (Static92.aLongArray3[local42] == arg0) {

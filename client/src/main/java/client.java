@@ -329,15 +329,15 @@ public final class client extends GameShell {
 		}
 		Static80.read(Static71.signLink); // preferences
 		if (Static83.modeWhere == 0) {
-			Static143.worldListHostname = this.getCodeBase().getHost();
+			Static143.worldListHostname = GlobalConfig.DEFAULT_HOSTNAME; // this.getCodeBase().getHost();
 			Static97.worldListAlternatePort = GlobalConfig.ALTERNATE_PORT + 1;
 			Static249.worldListDefaultPort = GlobalConfig.DEFAULT_PORT + 1;
 		} else if (Static83.modeWhere == 1) {
-			Static143.worldListHostname = this.getCodeBase().getHost();
+			Static143.worldListHostname = GlobalConfig.DEFAULT_HOSTNAME; // this.getCodeBase().getHost();
 			Static97.worldListAlternatePort = GlobalConfig.ALTERNATE_PORT + Static187.worldListId;
 			Static249.worldListDefaultPort = GlobalConfig.DEFAULT_PORT + Static187.worldListId;
 		} else if (Static83.modeWhere == 2) {
-			Static143.worldListHostname = "127.0.0.1";
+			Static143.worldListHostname = GlobalConfig.DEFAULT_HOSTNAME; // "127.0.0.1";
 			Static97.worldListAlternatePort = GlobalConfig.ALTERNATE_PORT + Static187.worldListId;
 			Static249.worldListDefaultPort = GlobalConfig.DEFAULT_PORT + Static187.worldListId;
 		}
