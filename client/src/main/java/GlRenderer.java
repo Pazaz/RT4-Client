@@ -361,7 +361,7 @@ public final class GlRenderer {
 		}
 		gl.glMatrixMode(GL2.GL_PROJECTION);
 		gl.glLoadIdentity();
-		gl.glOrtho(0.0D, (double) canvasWidth, 0.0D, (double) canvasHeight, -1.0D, 1.0D);
+		gl.glOrtho(0, canvasWidth, 0, canvasHeight, -1.0D, 1.0D);
 		setViewportBounds(0, 0, canvasWidth, canvasHeight);
 		gl.glMatrixMode(GL2.GL_MODELVIEW);
 		gl.glLoadIdentity();
@@ -755,8 +755,8 @@ public final class GlRenderer {
 
 	@OriginalMember(owner = "client!gi", name = "b", descriptor = "()V")
 	private static void resizeViewport() {
-		gl.glViewport((int) (leftMargin * GameShell.canvasScale + 0.5d), (int) (topMargin * GameShell.canvasScale + 0.5d),
-			(int) (viewportWidth * GameShell.canvasScale + 0.5d), (int) (viewportHeight * GameShell.canvasScale + 0.5d));
+		gl.glViewport((int) (leftMargin * GameShell.canvasScale), (int) (topMargin * GameShell.canvasScale - 0.5d),
+			(int) (viewportWidth * GameShell.canvasScale), (int) (viewportHeight * GameShell.canvasScale - 0.5d));
 	}
 
 	@OriginalMember(owner = "client!tf", name = "a", descriptor = "(IIIIII)V")
