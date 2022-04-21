@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = 'client'
+version = '1.0.0'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    compileOnly project(':deob-annotations')
+    implementation project(':signlink')
+
+    implementation 'lib:gluegen-rt'
+    implementation 'lib:gluegen-rt-natives-windows-amd64'
+    implementation 'lib:gluegen-rt-natives-windows-i586'
+    implementation 'lib:gluegen-rt-natives-linux-amd64'
+    implementation 'lib:gluegen-rt-natives-linux-i586'
+    implementation 'lib:gluegen-rt-natives-macosx-universal'
+
+    implementation 'lib:jogl-all'
+    implementation 'lib:jogl-all-natives-windows-amd64'
+    implementation 'lib:jogl-all-natives-windows-i586'
+    implementation 'lib:jogl-all-natives-linux-amd64'
+    implementation 'lib:jogl-all-natives-linux-i586'
+    implementation 'lib:jogl-all-natives-macosx-universal'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': "$mainClassName"
+    }
+    from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+}
