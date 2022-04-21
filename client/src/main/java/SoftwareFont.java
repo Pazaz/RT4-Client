@@ -22,7 +22,7 @@ public final class SoftwareFont extends Font {
 
 	@OriginalMember(owner = "client!dd", name = "a", descriptor = "(IIIIIIIZ)V")
 	@Override
-	protected final void method2855(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6) {
+	protected final void renderGlyphTransparent(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6) {
 		@Pc(5) int local5 = arg1 + arg2 * Static129.anInt3144;
 		@Pc(9) int local9 = Static129.anInt3144 - arg3;
 		@Pc(11) int local11 = 0;
@@ -60,7 +60,7 @@ public final class SoftwareFont extends Font {
 
 	@OriginalMember(owner = "client!dd", name = "a", descriptor = "(IIIIIIZ)V")
 	@Override
-	protected final void method2854(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
+	protected final void renderGlyph(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
 		@Pc(5) int local5 = arg1 + arg2 * Static129.anInt3144;
 		@Pc(9) int local9 = Static129.anInt3144 - arg3;
 		@Pc(11) int local11 = 0;

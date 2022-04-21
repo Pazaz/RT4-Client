@@ -117,6 +117,8 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 	@OriginalMember(owner = "client!rc", name = "b", descriptor = "Z")
 	private boolean error = false;
 
+	public static double canvasScale = 1.0d;
+
 	@OriginalMember(owner = "client!rc", name = "providesignlink", descriptor = "(Lsignlink!ll;)V")
 	public static void providesignlink(@OriginalArg(0) SignLink signLink) {
 		GameShell.signLink = signLink;
@@ -223,6 +225,15 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 		container.add(canvas);
 		canvas.setSize(canvasWidth, canvasHeight);
 		canvas.setVisible(true);
+		Graphics g = canvas.getGraphics();
+		if (g != null) {
+			if (g instanceof Graphics2D) {
+				canvasScale = ((Graphics2D) g).getTransform().getScaleX();
+			} else {
+				canvasScale = 1.0d;
+			}
+			System.out.println("Scaling factor: " + canvasScale);
+		}
 		if (container == frame) {
 			@Pc(66) Insets insets = frame.getInsets();
 			canvas.setLocation(leftMargin + insets.left, insets.top + topMargin);
@@ -376,6 +387,14 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			partialRedraws -= 50;
 			canvas.setSize(canvasWidth, canvasHeight);
 			canvas.setVisible(true);
+			Graphics g = canvas.getGraphics();
+			if (g != null) {
+				if (g instanceof Graphics2D) {
+					canvasScale = ((Graphics2D) g).getTransform().getScaleX();
+				} else {
+					canvasScale = 1.0;
+				}
+			}
 			if (frame != null && fullScreenFrame == null) {
 				@Pc(84) Insets insets = frame.getInsets();
 				canvas.setLocation(insets.left + leftMargin, topMargin + insets.top);
@@ -502,6 +521,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			frame.setResizable(true);
 			frame.addWindowListener(this);
 			frame.setVisible(true);
+			frame.setBackground(Color.black);
 			frame.toFront();
 			@Pc(44) Insets insets = frame.getInsets();
 			frame.setSize(insets.left + frameWidth + insets.right, insets.top + frameHeight + insets.bottom);

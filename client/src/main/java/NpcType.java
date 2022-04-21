@@ -716,7 +716,7 @@ public final class NpcType {
 			} else if (arg0 == 249) {
 				local12 = arg1.g1();
 				if (this.aClass133_15 == null) {
-					local18 = Static165.method3164(local12);
+					local18 = Static165.clp2(local12);
 					this.aClass133_15 = new HashTable(local18);
 				}
 				for (local18 = 0; local18 < local12; local18++) {

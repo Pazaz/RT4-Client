@@ -23,7 +23,7 @@ public final class GlSolidColorTexture extends SecondaryNode {
 		@Pc(12) int[] local12 = new int[1];
 		local9.glGenTextures(1, local12, 0);
 		this.anInt5058 = local12[0];
-		this.anInt5059 = Static63.anInt1943;
+		this.anInt5059 = Static63.contextId;
 		GlRenderer.setTextureId(this.anInt5058);
 		@Pc(32) int local32 = Rasteriser.anIntArray220[arg0];
 		@Pc(58) byte[] local58 = new byte[] { (byte) (local32 >> 16), (byte) (local32 >> 8), (byte) local32, -1 };

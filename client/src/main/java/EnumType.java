@@ -36,7 +36,7 @@ public final class EnumType extends SecondaryNode {
 			this.anInt3960 = arg1.g4();
 		} else if (arg0 == 5 || arg0 == 6) {
 			@Pc(41) int local41 = arg1.g2();
-			this.aClass133_16 = new HashTable(Static165.method3164(local41));
+			this.aClass133_16 = new HashTable(Static165.clp2(local41));
 			for (@Pc(51) int local51 = 0; local51 < local41; local51++) {
 				@Pc(58) int local58 = arg1.g4();
 				@Pc(70) Node local70;

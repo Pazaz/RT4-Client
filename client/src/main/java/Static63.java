@@ -12,13 +12,13 @@ public final class Static63 {
 	private static final LinkedList aClass69_48 = new LinkedList();
 
 	@OriginalMember(owner = "client!fa", name = "c", descriptor = "I")
-	public static int anInt1943 = 0;
+	public static int contextId = 0;
 
 	@OriginalMember(owner = "client!fa", name = "d", descriptor = "J")
 	private static long aLong71 = 0L;
 
 	@OriginalMember(owner = "client!fa", name = "e", descriptor = "I")
-	public static int anInt1944 = 0;
+	public static int onCard2d = 0;
 
 	@OriginalMember(owner = "client!fa", name = "f", descriptor = "I")
 	public static int anInt1945 = 0;
@@ -37,7 +37,7 @@ public final class Static63 {
 
 	@OriginalMember(owner = "client!fa", name = "a", descriptor = "(III)V")
 	public static synchronized void method1485(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		if (arg2 == anInt1943) {
+		if (arg2 == contextId) {
 			@Pc(8) IntNode local8 = new IntNode(arg1);
 			local8.aLong192 = arg0;
 			aClass69_50.method2282(local8);
@@ -45,8 +45,8 @@ public final class Static63 {
 	}
 
 	@OriginalMember(owner = "client!fa", name = "a", descriptor = "(II)V")
-	public static synchronized void method1486(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		if (arg1 == anInt1943) {
+	public static synchronized void deleteList(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+		if (arg1 == contextId) {
 			@Pc(7) IntNode local7 = new IntNode();
 			local7.aLong192 = arg0;
 			aClass69_51.method2282(local7);
@@ -55,19 +55,19 @@ public final class Static63 {
 
 	@OriginalMember(owner = "client!fa", name = "b", descriptor = "()V")
 	public static synchronized void clear() {
-		anInt1943++;
+		contextId++;
 		aClass69_48.method2278();
 		aClass69_49.method2278();
 		aClass69_50.method2278();
 		aClass69_51.method2278();
 		anInt1945 = 0;
-		anInt1944 = 0;
+		onCard2d = 0;
 		anInt1942 = 0;
 	}
 
 	@OriginalMember(owner = "client!fa", name = "b", descriptor = "(III)V")
 	public static synchronized void method1489(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		if (arg2 == anInt1943) {
+		if (arg2 == contextId) {
 			@Pc(8) IntNode local8 = new IntNode(arg1);
 			local8.aLong192 = arg0;
 			aClass69_48.method2282(local8);
@@ -97,7 +97,7 @@ public final class Static63 {
 								while (true) {
 									local8 = (IntNode) aClass69_51.method2287();
 									if (local8 == null) {
-										if (anInt1945 + anInt1944 + anInt1942 > 100663296 && MonotonicClock.currentTimeMillis() > aLong71 + 60000L) {
+										if (anInt1945 + onCard2d + anInt1942 > 100663296 && MonotonicClock.currentTimeMillis() > aLong71 + 60000L) {
 											System.gc();
 											aLong71 = MonotonicClock.currentTimeMillis();
 										}
@@ -116,7 +116,7 @@ public final class Static63 {
 						}
 					}
 					anIntArray151[local3++] = (int) local8.aLong192;
-					anInt1944 -= local8.anInt3141;
+					onCard2d -= local8.anInt3141;
 					if (local3 == 1000) {
 						local1.glDeleteTextures(local3, anIntArray151, 0);
 						local3 = 0;
@@ -133,8 +133,8 @@ public final class Static63 {
 	}
 
 	@OriginalMember(owner = "client!fa", name = "c", descriptor = "(III)V")
-	public static synchronized void method1491(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		if (arg2 == anInt1943) {
+	public static synchronized void deleteTexture2d(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+		if (arg2 == contextId) {
 			@Pc(8) IntNode local8 = new IntNode(arg1);
 			local8.aLong192 = arg0;
 			aClass69_49.method2282(local8);

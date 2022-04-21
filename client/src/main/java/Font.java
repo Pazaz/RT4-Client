@@ -29,10 +29,10 @@ public abstract class Font extends SecondaryNode {
 	private int[] anIntArray347;
 
 	@OriginalMember(owner = "client!rk", name = "I", descriptor = "[I")
-	protected int[] anIntArray343;
+	protected int[] spriteInnerWidths;
 
 	@OriginalMember(owner = "client!rk", name = "U", descriptor = "[I")
-	protected int[] anIntArray345;
+	protected int[] spriteInnerHeights;
 
 	@OriginalMember(owner = "client!rk", name = "V", descriptor = "I")
 	private int anInt3625;
@@ -44,17 +44,17 @@ public abstract class Font extends SecondaryNode {
 	protected Font(@OriginalArg(0) byte[] arg0, @OriginalArg(1) int[] arg1, @OriginalArg(2) int[] arg2, @OriginalArg(3) int[] arg3, @OriginalArg(4) int[] arg4) {
 		this.anIntArray344 = arg1;
 		this.anIntArray347 = arg2;
-		this.anIntArray343 = arg3;
-		this.anIntArray345 = arg4;
+		this.spriteInnerWidths = arg3;
+		this.spriteInnerHeights = arg4;
 		this.method2876(arg0);
 		@Pc(21) int local21 = Integer.MAX_VALUE;
 		@Pc(23) int local23 = Integer.MIN_VALUE;
 		for (@Pc(25) int local25 = 0; local25 < 256; local25++) {
-			if (this.anIntArray347[local25] < local21 && this.anIntArray345[local25] != 0) {
+			if (this.anIntArray347[local25] < local21 && this.spriteInnerHeights[local25] != 0) {
 				local21 = this.anIntArray347[local25];
 			}
-			if (this.anIntArray347[local25] + this.anIntArray345[local25] > local23) {
-				local23 = this.anIntArray347[local25] + this.anIntArray345[local25];
+			if (this.anIntArray347[local25] + this.spriteInnerHeights[local25] > local23) {
+				local23 = this.anIntArray347[local25] + this.spriteInnerHeights[local25];
 			}
 		}
 		this.anInt3625 = this.anInt3626 - local21;
@@ -128,8 +128,8 @@ public abstract class Font extends SecondaryNode {
 					if (this.aByteArray50 != null && local8 != 0) {
 						arg1 += this.aByteArray50[(local8 << 8) + local22];
 					}
-					@Pc(197) int local197 = this.anIntArray343[local22];
-					local120 = this.anIntArray345[local22];
+					@Pc(197) int local197 = this.spriteInnerWidths[local22];
+					local120 = this.spriteInnerHeights[local22];
 					if (local22 == 32) {
 						if (Static218.anInt3636 > 0) {
 							Static218.anInt3629 += Static218.anInt3636;
@@ -138,14 +138,14 @@ public abstract class Font extends SecondaryNode {
 						}
 					} else if (Static218.anInt3631 == 256) {
 						if (Static218.anInt3634 != -1) {
-							this.method2854(local22, arg1 + this.anIntArray344[local22] + 1, local4 + this.anIntArray347[local22] + 1, local197, local120, Static218.anInt3634);
+							this.renderGlyph(local22, arg1 + this.anIntArray344[local22] + 1, local4 + this.anIntArray347[local22] + 1, local197, local120, Static218.anInt3634);
 						}
-						this.method2854(local22, arg1 + this.anIntArray344[local22], local4 + this.anIntArray347[local22], local197, local120, Static218.anInt3635);
+						this.renderGlyph(local22, arg1 + this.anIntArray344[local22], local4 + this.anIntArray347[local22], local197, local120, Static218.anInt3635);
 					} else {
 						if (Static218.anInt3634 != -1) {
-							this.method2855(local22, arg1 + this.anIntArray344[local22] + 1, local4 + this.anIntArray347[local22] + 1, local197, local120, Static218.anInt3634, Static218.anInt3631);
+							this.renderGlyphTransparent(local22, arg1 + this.anIntArray344[local22] + 1, local4 + this.anIntArray347[local22] + 1, local197, local120, Static218.anInt3634, Static218.anInt3631);
 						}
-						this.method2855(local22, arg1 + this.anIntArray344[local22], local4 + this.anIntArray347[local22], local197, local120, Static218.anInt3635, Static218.anInt3631);
+						this.renderGlyphTransparent(local22, arg1 + this.anIntArray344[local22], local4 + this.anIntArray347[local22], local197, local120, Static218.anInt3635, Static218.anInt3631);
 					}
 					@Pc(323) int local323 = this.anIntArray348[local22];
 					if (Static218.anInt3627 != -1) {
@@ -170,10 +170,10 @@ public abstract class Font extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "a", descriptor = "(IIIIIIZ)V")
-	protected abstract void method2854(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5);
+	protected abstract void renderGlyph(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5);
 
 	@OriginalMember(owner = "client!rk", name = "a", descriptor = "(IIIIIIIZ)V")
-	protected abstract void method2855(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6);
+	protected abstract void renderGlyphTransparent(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6);
 
 	@OriginalMember(owner = "client!rk", name = "b", descriptor = "(Lclient!na;I)I")
 	public final int method2856(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1) {
@@ -809,8 +809,8 @@ public abstract class Font extends SecondaryNode {
 					if (this.aByteArray50 != null && local8 != 0) {
 						arg1 += this.aByteArray50[(local8 << 8) + local24];
 					}
-					@Pc(226) int local226 = this.anIntArray343[local24];
-					local121 = this.anIntArray345[local24];
+					@Pc(226) int local226 = this.spriteInnerWidths[local24];
+					local121 = this.spriteInnerHeights[local24];
 					if (arg3 == null) {
 						local130 = 0;
 					} else {
@@ -830,14 +830,14 @@ public abstract class Font extends SecondaryNode {
 						}
 					} else if (Static218.anInt3631 == 256) {
 						if (Static218.anInt3634 != -1) {
-							this.method2854(local24, arg1 + this.anIntArray344[local24] + local130 + 1, local4 + this.anIntArray347[local24] + 1 + local141, local226, local121, Static218.anInt3634);
+							this.renderGlyph(local24, arg1 + this.anIntArray344[local24] + local130 + 1, local4 + this.anIntArray347[local24] + 1 + local141, local226, local121, Static218.anInt3634);
 						}
-						this.method2854(local24, arg1 + this.anIntArray344[local24] + local130, local4 + this.anIntArray347[local24] + local141, local226, local121, Static218.anInt3635);
+						this.renderGlyph(local24, arg1 + this.anIntArray344[local24] + local130, local4 + this.anIntArray347[local24] + local141, local226, local121, Static218.anInt3635);
 					} else {
 						if (Static218.anInt3634 != -1) {
-							this.method2855(local24, arg1 + this.anIntArray344[local24] + local130 + 1, local4 + this.anIntArray347[local24] + 1 + local141, local226, local121, Static218.anInt3634, Static218.anInt3631);
+							this.renderGlyphTransparent(local24, arg1 + this.anIntArray344[local24] + local130 + 1, local4 + this.anIntArray347[local24] + 1 + local141, local226, local121, Static218.anInt3634, Static218.anInt3631);
 						}
-						this.method2855(local24, arg1 + this.anIntArray344[local24] + local130, local4 + this.anIntArray347[local24] + local141, local226, local121, Static218.anInt3635, Static218.anInt3631);
+						this.renderGlyphTransparent(local24, arg1 + this.anIntArray344[local24] + local130, local4 + this.anIntArray347[local24] + local141, local226, local121, Static218.anInt3635, Static218.anInt3631);
 					}
 					@Pc(387) int local387 = this.anIntArray348[local24];
 					if (Static218.anInt3627 != -1) {

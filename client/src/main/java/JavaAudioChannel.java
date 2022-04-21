@@ -69,7 +69,7 @@ public final class JavaAudioChannel extends AudioChannel {
 				this.aSourceDataLine1 = null;
 				throw local36;
 			} else {
-				this.method3562(Static165.method3164(arg0));
+				this.method3562(Static165.clp2(arg0));
 			}
 		}
 	}

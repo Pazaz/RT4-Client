@@ -27,7 +27,7 @@ public final class StructType extends SecondaryNode {
 		@Pc(17) int local17 = arg0.g1();
 		@Pc(25) int local25;
 		if (this.aClass133_14 == null) {
-			local25 = Static165.method3164(local17);
+			local25 = Static165.clp2(local17);
 			this.aClass133_14 = new HashTable(local25);
 		}
 		for (local25 = 0; local25 < local17; local25++) {

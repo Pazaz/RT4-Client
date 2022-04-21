@@ -34,7 +34,7 @@ public final class GlVertexBufferObject {
 		local9.glGenBuffers(1, local12, 0);
 		this.aBoolean300 = arg0;
 		this.anInt5760 = local12[0];
-		this.anInt5761 = Static63.anInt1943;
+		this.anInt5761 = Static63.contextId;
 	}
 
 	@OriginalMember(owner = "client!vi", name = "a", descriptor = "(Ljava/nio/ByteBuffer;)V")
