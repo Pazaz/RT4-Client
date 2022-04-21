@@ -13,14 +13,11 @@ public final class Static70 {
 	@OriginalMember(owner = "client!fi", name = "k", descriptor = "I")
 	public static int type = 0;
 
-	@OriginalMember(owner = "client!fi", name = "l", descriptor = "I")
-	public static int anInt2014 = 0;
-
 	@OriginalMember(owner = "client!fi", name = "n", descriptor = "I")
 	public static int updatedVarpsWriterIndex = 0;
 
 	@OriginalMember(owner = "client!fi", name = "a", descriptor = "(B)Lclient!s;")
-	public static Timer method1547() {
+	public static Timer create() {
 		try {
 			return (Timer) Class.forName("NanoTimer").getDeclaredConstructor().newInstance();
 		} catch (@Pc(15) Throwable local15) {

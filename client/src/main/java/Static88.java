@@ -2821,11 +2821,11 @@ public final class Static88 {
 														local803 = Static254.anIntArray487[local28 + 1];
 														local809 = Static254.anIntArray487[local28];
 														Static241.method4540(false, 3, local809, local803);
-														Static254.anIntArray487[local28++] = Static69.aFrame2 == null ? 0 : 1;
+														Static254.anIntArray487[local28++] = GameShell.fullScreenFrame == null ? 0 : 1;
 														continue;
 													}
 													if (local226 == 5301) {
-														if (Static69.aFrame2 != null) {
+														if (GameShell.fullScreenFrame != null) {
 															Static241.method4540(false, Static214.anInt5581, -1, -1);
 														}
 														continue;
@@ -2882,7 +2882,7 @@ public final class Static88 {
 															local809 = 0;
 														}
 														Static214.anInt5581 = local809;
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														continue;
 													}
 												} else if (local226 < 5500) {
@@ -2940,10 +2940,10 @@ public final class Static88 {
 														continue;
 													}
 													if (local226 == 5411) {
-														if (Static69.aFrame2 != null) {
+														if (GameShell.fullScreenFrame != null) {
 															Static241.method4540(false, Static214.anInt5581, -1, -1);
 														}
-														if (Static39.aFrame1 == null) {
+														if (GameShell.frame == null) {
 															Static169.openUrl(Static15.method479(), false);
 														} else {
 															System.exit(0);
@@ -2970,7 +2970,7 @@ public final class Static88 {
 														continue;
 													}
 													if (local226 == 5421) {
-														if (Static69.aFrame2 != null) {
+														if (GameShell.fullScreenFrame != null) {
 															Static241.method4540(false, Static214.anInt5581, -1, -1);
 														}
 														local28--;
@@ -2978,10 +2978,10 @@ public final class Static88 {
 														local26--;
 														local609 = Static3.aClass100Array176[local26];
 														@Pc(8356) JagString local8356 = Static34.method882(new JagString[] { Static15.method479(), local609 });
-														if (Static39.aFrame1 != null || local1552 && SignLink.anInt5928 != 3 && SignLink.aString15.startsWith("win") && !Static178.aBoolean203) {
+														if (GameShell.frame != null || local1552 && SignLink.anInt5928 != 3 && SignLink.aString15.startsWith("win") && !Static178.aBoolean203) {
 															Static164.newTab = local1552;
 															Static175.url = local8356;
-															Static33.openUrlRequest = Static71.signLink.method5131(new String(local8356.method3148(), "ISO-8859-1"));
+															Static33.openUrlRequest = GameShell.signLink.method5131(new String(local8356.method3148(), "ISO-8859-1"));
 															continue;
 														}
 														Static169.openUrl(local8356, local1552);
@@ -3224,7 +3224,7 @@ public final class Static88 {
 															}
 														}
 														Static269.method2172();
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														Static18.sentToServer = false;
 														continue;
 													}
@@ -3234,7 +3234,7 @@ public final class Static88 {
 														Static90.method1854();
 														Static145.method2742();
 														Static269.method2218();
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														Static18.sentToServer = false;
 														continue;
 													}
@@ -3242,7 +3242,7 @@ public final class Static88 {
 														local28--;
 														Static80.aBoolean231 = Static254.anIntArray487[local28] == 1;
 														Static269.method2218();
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														Static18.sentToServer = false;
 														continue;
 													}
@@ -3250,7 +3250,7 @@ public final class Static88 {
 														local28--;
 														Static250.aBoolean283 = Static254.anIntArray487[local28] == 1;
 														Static145.method2742();
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														Static18.sentToServer = false;
 														continue;
 													}
@@ -3258,35 +3258,35 @@ public final class Static88 {
 														local28--;
 														Static53.aBoolean99 = Static254.anIntArray487[local28] == 1;
 														((Js5GlTextureProvider) Rasteriser.anInterface1_2).method3245(!Static53.aBoolean99);
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														Static18.sentToServer = false;
 														continue;
 													}
 													if (local226 == 6007) {
 														local28--;
 														Static15.aBoolean33 = Static254.anIntArray487[local28] == 1;
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														Static18.sentToServer = false;
 														continue;
 													}
 													if (local226 == 6008) {
 														local28--;
 														Static11.aBoolean15 = Static254.anIntArray487[local28] == 1;
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														Static18.sentToServer = false;
 														continue;
 													}
 													if (local226 == 6009) {
 														local28--;
 														Static159.aBoolean189 = Static254.anIntArray487[local28] == 1;
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														Static18.sentToServer = false;
 														continue;
 													}
 													if (local226 == 6010) {
 														local28--;
 														Static209.aBoolean240 = Static254.anIntArray487[local28] == 1;
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														Static18.sentToServer = false;
 														continue;
 													}
@@ -3297,7 +3297,7 @@ public final class Static88 {
 															local809 = 0;
 														}
 														Static139.anInt3451 = local809;
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														Static18.sentToServer = false;
 														continue;
 													}
@@ -3324,7 +3324,7 @@ public final class Static88 {
 															}
 														}
 														Static145.method2742();
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														Static18.sentToServer = false;
 														continue;
 													}
@@ -3334,7 +3334,7 @@ public final class Static88 {
 														if (GlRenderer.enabled) {
 															Static145.method2742();
 														}
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														Static18.sentToServer = false;
 														continue;
 													}
@@ -3344,7 +3344,7 @@ public final class Static88 {
 														if (GlRenderer.enabled) {
 															Static86.method1799();
 														}
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														Static18.sentToServer = false;
 														continue;
 													}
@@ -3352,7 +3352,7 @@ public final class Static88 {
 														local28--;
 														local809 = Static254.anIntArray487[local28];
 														if (GlRenderer.enabled) {
-															Static35.aBoolean66 = true;
+															GameShell.replaceCanvas = true;
 														}
 														if (local809 < 0 || local809 > 2) {
 															local809 = 0;
@@ -3364,7 +3364,7 @@ public final class Static88 {
 														local28--;
 														Static99.aBoolean143 = Static254.anIntArray487[local28] == 1;
 														Static211.method930();
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														Static18.sentToServer = false;
 														continue;
 													}
@@ -3378,7 +3378,7 @@ public final class Static88 {
 															local809 = 127;
 														}
 														Static125.anInt3104 = local809;
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														Static18.sentToServer = false;
 														continue;
 													}
@@ -3403,7 +3403,7 @@ public final class Static88 {
 															}
 															Static12.anInt391 = local809;
 														}
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														Static18.sentToServer = false;
 														continue;
 													}
@@ -3417,7 +3417,7 @@ public final class Static88 {
 															local809 = 127;
 														}
 														Static30.anInt978 = local809;
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														Static18.sentToServer = false;
 														continue;
 													}
@@ -3437,12 +3437,12 @@ public final class Static88 {
 															local809 = 2;
 														}
 														local1552 = false;
-														if (Static238.anInt5316 < 96) {
+														if (GameShell.maxMemory < 96) {
 															local1552 = true;
 															local809 = 0;
 														}
 														Static76.method1645(local809);
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														Static18.sentToServer = false;
 														Static254.anIntArray487[local28++] = local1552 ? 0 : 1;
 														continue;
@@ -3454,13 +3454,13 @@ public final class Static88 {
 															local809 = 0;
 														}
 														Static102.anInt2679 = local809;
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														continue;
 													}
 													if (local226 == 6028) {
 														local28--;
 														Static64.aBoolean111 = Static254.anIntArray487[local28] != 0;
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														continue;
 													}
 												} else if (local226 < 6200) {
@@ -3738,7 +3738,7 @@ public final class Static88 {
 													if (local226 == 6504) {
 														local28--;
 														Static164.anInt3988 = Static254.anIntArray487[local28];
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														continue;
 													}
 													if (local226 == 6505) {
@@ -3778,7 +3778,7 @@ public final class Static88 {
 													if (local226 == 6600) {
 														local28--;
 														Static33.aBoolean63 = Static254.anIntArray487[local28] == 1;
-														Static203.method3663(Static71.signLink);
+														Static203.method3663(GameShell.signLink);
 														continue;
 													}
 													if (local226 == 6601) {
@@ -4121,7 +4121,7 @@ public final class Static88 {
 				if (Static83.modeWhere != 0) {
 					Static103.method2231(Static72.aClass100_447, 0, Static136.aClass100_633);
 				}
-				Static89.method1839("CS2 - scr:" + local14.aLong192 + " op:" + local44, local14378);
+				Static89.report("CS2 - scr:" + local14.aLong192 + " op:" + local44, local14378);
 			} else {
 				@Pc(14385) JagString local14385 = Static87.method1804(30);
 				local14385.method3113(Static219.aClass100_928).method3113(local14.aClass100_880);
@@ -4135,7 +4135,7 @@ public final class Static88 {
 				if (Static83.modeWhere != 0) {
 					Static103.method2231(Static72.aClass100_447, 0, Static34.method882(new JagString[] { Static167.aClass100_780, local14.aClass100_880 }));
 				}
-				Static89.method1839("CS2 - scr:" + local14.aLong192 + " op:" + local44 + new String(local14385.method3148()), local14378);
+				Static89.report("CS2 - scr:" + local14.aLong192 + " op:" + local44 + new String(local14385.method3148()), local14378);
 			}
 		}
 	}

@@ -164,14 +164,14 @@ public final class Static234 {
 
 	@OriginalMember(owner = "client!ta", name = "a", descriptor = "(Z)V")
 	public static void method4020() {
-		Static200.aClass93_1.method3394();
+		GameShell.timer.method3394();
 		@Pc(10) int local10;
 		for (local10 = 0; local10 < 32; local10++) {
-			Static7.aLongArray2[local10] = 0L;
+			GameShell.redrawTimes[local10] = 0L;
 		}
 		for (local10 = 0; local10 < 32; local10++) {
-			Static228.aLongArray8[local10] = 0L;
+			GameShell.logicTimes[local10] = 0L;
 		}
-		Static227.anInt5097 = 0;
+		GameShell.logicCycles = 0;
 	}
 }

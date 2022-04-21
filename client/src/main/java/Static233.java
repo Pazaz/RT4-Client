@@ -25,10 +25,7 @@ public final class Static233 {
 	@OriginalMember(owner = "client!t", name = "G", descriptor = "[Lclient!ek;")
 	public static SoftwareIndexedSprite[] aClass36_Sub1Array1;
 
-	@OriginalMember(owner = "client!t", name = "m", descriptor = "Z")
-	public static volatile boolean aBoolean253 = true;
-
-	@OriginalMember(owner = "client!t", name = "p", descriptor = "Lclient!n;")
+    @OriginalMember(owner = "client!t", name = "p", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable aClass99_31 = new SoftLruHashTable(64);
 
 	@OriginalMember(owner = "client!t", name = "v", descriptor = "[Lclient!na;")

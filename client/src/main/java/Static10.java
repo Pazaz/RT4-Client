@@ -83,7 +83,7 @@ public final class Static10 {
 			for (@Pc(63) int local63 = 0; local63 < Static223.anInt5028 && local63 < 50; local63++) {
 				local61 = local61 + Static57.aClass3_Sub15_Sub1_3.data[local63] + ",";
 			}
-			Static89.method1839(local61, local19);
+			Static89.report(local61, local19);
 			Static278.method4653();
 			return true;
 		}

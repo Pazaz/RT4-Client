@@ -8,13 +8,12 @@ import java.io.DataInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
-import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.URL;
 import java.util.Hashtable;
-import java.util.Vector;
+
 import com.jogamp.opengl.*;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
@@ -25,7 +24,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class SignLink implements Runnable {
 
 	@OriginalMember(owner = "signlink!ll", name = "o", descriptor = "Ljava/lang/String;")
-	public static String aString14;
+	public static String javaVersion;
 
 	@OriginalMember(owner = "signlink!ll", name = "n", descriptor = "Ljava/lang/String;")
 	public static String aString15;
@@ -40,13 +39,13 @@ public final class SignLink implements Runnable {
 	private static String aString18;
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "Ljava/lang/String;")
-	public static String aString20;
+	public static String javaVendor;
 
 	@OriginalMember(owner = "signlink!ll", name = "b", descriptor = "Ljava/lang/String;")
 	private static String aString21;
 
 	@OriginalMember(owner = "signlink!ll", name = "u", descriptor = "Ljava/lang/reflect/Method;")
-	public static Method aMethod5;
+	public static Method setFocusCycleRoot;
 
 	@OriginalMember(owner = "signlink!ll", name = "r", descriptor = "Ljava/lang/reflect/Method;")
 	public static Method aMethod6;
@@ -82,7 +81,7 @@ public final class SignLink implements Runnable {
 	private PrivilegedRequest aClass212_8 = null;
 
 	@OriginalMember(owner = "signlink!ll", name = "i", descriptor = "Ljava/applet/Applet;")
-	public Applet anApplet2 = null;
+	public Applet applet = null;
 
 	@OriginalMember(owner = "signlink!ll", name = "x", descriptor = "Ljava/lang/String;")
 	private final String aString19;
@@ -91,7 +90,7 @@ public final class SignLink implements Runnable {
 	private final int anInt5929;
 
 	@OriginalMember(owner = "signlink!ll", name = "k", descriptor = "Ljava/awt/EventQueue;")
-	public EventQueue anEventQueue1;
+	public EventQueue eventQueue;
 
 	@OriginalMember(owner = "signlink!ll", name = "c", descriptor = "[Lsignlink!qm;")
 	public FileOnDisk[] cacheIndexes;
@@ -168,14 +167,14 @@ public final class SignLink implements Runnable {
 
 	@OriginalMember(owner = "signlink!ll", name = "<init>", descriptor = "(Ljava/applet/Applet;ILjava/lang/String;I)V")
 	public SignLink(@OriginalArg(0) Applet arg0, @OriginalArg(1) int arg1, @OriginalArg(2) String arg2, @OriginalArg(3) int arg3) throws Exception {
-		aString14 = "1.1";
+		javaVersion = "1.1";
 		this.aString19 = arg2;
 		this.anInt5929 = arg1;
-		this.anApplet2 = arg0;
-		aString20 = "Unknown";
+		this.applet = arg0;
+		javaVendor = "Unknown";
 		try {
-			aString20 = System.getProperty("java.vendor");
-			aString14 = System.getProperty("java.version");
+			javaVendor = System.getProperty("java.vendor");
+			javaVersion = System.getProperty("java.version");
 		} catch (@Pc(43) Exception local43) {
 		}
 		try {
@@ -205,7 +204,7 @@ public final class SignLink implements Runnable {
 			aString17 = "~/";
 		}
 		try {
-			this.anEventQueue1 = Toolkit.getDefaultToolkit().getSystemEventQueue();
+			this.eventQueue = Toolkit.getDefaultToolkit().getSystemEventQueue();
 		} catch (@Pc(97) Throwable local97) {
 		}
 		try {
@@ -218,9 +217,9 @@ public final class SignLink implements Runnable {
 		}
 		try {
 			if (arg0 == null) {
-				aMethod5 = Class.forName("java.awt.Container").getDeclaredMethod("setFocusCycleRoot", Boolean.TYPE);
+				setFocusCycleRoot = Class.forName("java.awt.Container").getDeclaredMethod("setFocusCycleRoot", Boolean.TYPE);
 			} else {
-				aMethod5 = arg0.getClass().getMethod("setFocusCycleRoot", Boolean.TYPE);
+				setFocusCycleRoot = arg0.getClass().getMethod("setFocusCycleRoot", Boolean.TYPE);
 			}
 		} catch (@Pc(153) Exception local153) {
 		}
@@ -456,7 +455,7 @@ public final class SignLink implements Runnable {
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "b", descriptor = "(I)V")
-	public final void method5124() {
+	public final void stop() {
 		synchronized (this) {
 			this.aBoolean360 = true;
 			this.notifyAll();
@@ -516,7 +515,7 @@ public final class SignLink implements Runnable {
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(IILjava/lang/Runnable;)Lsignlink!im;")
-	public final PrivilegedRequest method5130(@OriginalArg(1) int arg0, @OriginalArg(2) Runnable arg1) {
+	public final PrivilegedRequest startThread(@OriginalArg(1) int arg0, @OriginalArg(2) Runnable arg1) {
 		return this.method5114(2, 0, arg1, arg0);
 	}
 

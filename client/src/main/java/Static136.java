@@ -125,7 +125,7 @@ public final class Static136 {
 		}
 		if (local21 >= 4) {
 			@Pc(386) int local386 = arg0.g1();
-			if (Static238.anInt5316 < 96) {
+			if (GameShell.maxMemory < 96) {
 				local386 = 0;
 			}
 			Static76.method1645(local386);

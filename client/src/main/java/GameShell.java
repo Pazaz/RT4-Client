@@ -1,14 +1,7 @@
 import java.applet.Applet;
 import java.applet.AppletContext;
-import java.awt.Container;
-import java.awt.Frame;
-import java.awt.Graphics;
-import java.awt.Insets;
-import java.awt.Rectangle;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
+import java.awt.*;
+import java.awt.event.*;
 import java.lang.reflect.Method;
 import java.net.URL;
 import org.openrs2.deob.annotation.OriginalArg;
@@ -19,45 +12,176 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!rc")
 public abstract class GameShell extends Applet implements Runnable, FocusListener, WindowListener {
 
+	@OriginalMember(owner = "client!sh", name = "l", descriptor = "[J")
+	public static final long[] logicTimes = new long[32];
+
+	@OriginalMember(owner = "client!ah", name = "k", descriptor = "[J")
+	public static final long[] redrawTimes = new long[32];
+
+	@OriginalMember(owner = "client!fk", name = "l", descriptor = "Lsignlink!ll;")
+	public static SignLink signLink;
+
+	@OriginalMember(owner = "client!d", name = "Y", descriptor = "Ljava/awt/Frame;")
+	public static Frame frame;
+
+	@OriginalMember(owner = "client!t", name = "m", descriptor = "Z")
+	public static volatile boolean focusIn = true;
+
+	@OriginalMember(owner = "client!fh", name = "P", descriptor = "Z")
+	public static volatile boolean fullRedraw = true;
+
+	@OriginalMember(owner = "client!md", name = "L", descriptor = "Ljava/awt/Canvas;")
+	public static Canvas canvas;
+
+	@OriginalMember(owner = "client!fh", name = "Y", descriptor = "Ljava/awt/Frame;")
+	public static Frame fullScreenFrame;
+
+	@OriginalMember(owner = "client!dl", name = "d", descriptor = "I")
+	public static int canvasWidth;
+
+	@OriginalMember(owner = "client!uj", name = "B", descriptor = "I")
+	public static int canvasHeight;
+
+	@OriginalMember(owner = "client!lf", name = "f", descriptor = "I")
+	public static int leftMargin = 0;
+
+	@OriginalMember(owner = "client!od", name = "e", descriptor = "I")
+	public static int topMargin = 0;
+
+	@OriginalMember(owner = "client!ca", name = "ab", descriptor = "Z")
+	public static boolean focus;
+
+	@OriginalMember(owner = "client!cl", name = "bb", descriptor = "Z")
+	public static volatile boolean replaceCanvas = false;
+
+	@OriginalMember(owner = "client!tk", name = "c", descriptor = "J")
+	public static volatile long lastCanvasReplace = 0L;
+
+	@OriginalMember(owner = "client!sj", name = "F", descriptor = "Lclient!rc;")
+	public static GameShell instance = null;
+
+	@OriginalMember(owner = "client!eh", name = "a", descriptor = "Z")
+	public static boolean shutdown = false;
+
+	@OriginalMember(owner = "client!ve", name = "F", descriptor = "I")
+	public static int logicTimePointer;
+
+	@OriginalMember(owner = "client!jh", name = "c", descriptor = "I")
+	public static int frameHeight;
+
+	@OriginalMember(owner = "client!kd", name = "pb", descriptor = "I")
+	public static int anInt3252;
+
+	@OriginalMember(owner = "client!fl", name = "U", descriptor = "I")
+	public static int frameWidth;
+
+	@OriginalMember(owner = "client!tc", name = "f", descriptor = "Z")
+	public static boolean isJava5OrLater = false;
+
+	@OriginalMember(owner = "client!sf", name = "d", descriptor = "I")
+	public static int minimumDelay = 1;
+
+	@OriginalMember(owner = "client!ba", name = "B", descriptor = "I")
+	public static int timePerFrame = 20;
+
+	@OriginalMember(owner = "client!cm", name = "b", descriptor = "Ljava/lang/Thread;")
+	public static Thread thread;
+
+	@OriginalMember(owner = "client!fl", name = "w", descriptor = "J")
+	public static long killTime = 0L;
+
+	@OriginalMember(owner = "client!da", name = "M", descriptor = "Z")
+	public static boolean openWindowJavaScript;
+
+	@OriginalMember(owner = "client!fi", name = "l", descriptor = "I")
+	public static int instances = 0;
+
+	@OriginalMember(owner = "client!qe", name = "v", descriptor = "Lclient!s;")
+	public static Timer timer;
+
+	@OriginalMember(owner = "client!sg", name = "p", descriptor = "I")
+	public static int logicCycles;
+
+	@OriginalMember(owner = "client!ii", name = "i", descriptor = "I")
+	public static int redrawTimePointer;
+
+	@OriginalMember(owner = "client!ol", name = "fb", descriptor = "I")
+	public static int partialRedraws = 500;
+
+	@OriginalMember(owner = "client!tk", name = "v", descriptor = "I")
+	public static int framesPerSecond = 0;
+
+	@OriginalMember(owner = "client!te", name = "C", descriptor = "I")
+	public static int maxMemory = 64;
+
 	@OriginalMember(owner = "client!rc", name = "b", descriptor = "Z")
-	private boolean aBoolean71 = false;
+	private boolean error = false;
 
 	@OriginalMember(owner = "client!rc", name = "providesignlink", descriptor = "(Lsignlink!ll;)V")
-	public static void providesignlink(@OriginalArg(0) SignLink arg0) {
-		Static71.signLink = arg0;
-		Static69.aClass213_4 = arg0;
+	public static void providesignlink(@OriginalArg(0) SignLink signLink) {
+		GameShell.signLink = signLink;
+		Static69.signLink = signLink;
+	}
+
+	@OriginalMember(owner = "client!sd", name = "e", descriptor = "(I)V")
+	public static void getMaxMemory() {
+		try {
+			@Pc(12) Method method = Runtime.class.getMethod("maxMemory");
+			if (method != null) {
+				try {
+					@Pc(17) Runtime runtime = Runtime.getRuntime();
+					@Pc(24) Long bytes = (Long) method.invoke(runtime, (Object[]) null);
+					maxMemory = (int) (bytes / 1048576L) + 1;
+				} catch (@Pc(34) Throwable ex) {
+				}
+			}
+		} catch (@Pc(36) Exception ex) {
+		}
+	}
+
+	@OriginalMember(owner = "client!la", name = "a", descriptor = "(Lsignlink!ll;Ljava/lang/Object;I)V")
+	public static void flush(@OriginalArg(0) SignLink signLink, @OriginalArg(1) Object source) {
+		if (signLink.eventQueue == null) {
+			return;
+		}
+		for (@Pc(19) int i = 0; i < 50 && signLink.eventQueue.peekEvent() != null; i++) {
+			Static231.sleep(1L);
+		}
+		if (source != null) {
+			signLink.eventQueue.postEvent(new ActionEvent(source, 1001, "dummy"));
+		}
 	}
 
 	@OriginalMember(owner = "client!rc", name = "focusLost", descriptor = "(Ljava/awt/event/FocusEvent;)V")
 	@Override
-	public final void focusLost(@OriginalArg(0) FocusEvent arg0) {
-		Static233.aBoolean253 = false;
+	public final void focusLost(@OriginalArg(0) FocusEvent event) {
+		focusIn = false;
 	}
 
 	@OriginalMember(owner = "client!rc", name = "a", descriptor = "(B)V")
-	protected abstract void method921();
+	protected abstract void mainLoop();
 
 	@OriginalMember(owner = "client!rc", name = "windowClosing", descriptor = "(Ljava/awt/event/WindowEvent;)V")
 	@Override
-	public final void windowClosing(@OriginalArg(0) WindowEvent arg0) {
+	public final void windowClosing(@OriginalArg(0) WindowEvent event) {
 		this.destroy();
 	}
 
 	@OriginalMember(owner = "client!rc", name = "windowIconified", descriptor = "(Ljava/awt/event/WindowEvent;)V")
 	@Override
-	public final void windowIconified(@OriginalArg(0) WindowEvent arg0) {
+	public final void windowIconified(@OriginalArg(0) WindowEvent event) {
 	}
 
 	@OriginalMember(owner = "client!rc", name = "windowDeactivated", descriptor = "(Ljava/awt/event/WindowEvent;)V")
 	@Override
-	public final void windowDeactivated(@OriginalArg(0) WindowEvent arg0) {
+	public final void windowDeactivated(@OriginalArg(0) WindowEvent event) {
 	}
 
 	@OriginalMember(owner = "client!rc", name = "getAppletContext", descriptor = "()Ljava/applet/AppletContext;")
 	@Override
 	public final AppletContext getAppletContext() {
-		if (Static39.aFrame1 == null) {
-			return Static71.signLink == null || Static71.signLink.anApplet2 == this ? super.getAppletContext() : Static71.signLink.anApplet2.getAppletContext();
+		if (frame == null) {
+			return signLink == null || signLink.applet == this ? super.getAppletContext() : signLink.applet.getAppletContext();
 		} else {
 			return null;
 		}
@@ -65,96 +189,96 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 
 	@OriginalMember(owner = "client!rc", name = "focusGained", descriptor = "(Ljava/awt/event/FocusEvent;)V")
 	@Override
-	public final void focusGained(@OriginalArg(0) FocusEvent arg0) {
-		Static233.aBoolean253 = true;
-		Static69.aBoolean115 = true;
+	public final void focusGained(@OriginalArg(0) FocusEvent event) {
+		focusIn = true;
+		fullRedraw = true;
 	}
 
 	@OriginalMember(owner = "client!rc", name = "windowClosed", descriptor = "(Ljava/awt/event/WindowEvent;)V")
 	@Override
-	public final void windowClosed(@OriginalArg(0) WindowEvent arg0) {
+	public final void windowClosed(@OriginalArg(0) WindowEvent event) {
 	}
 
 	@OriginalMember(owner = "client!rc", name = "b", descriptor = "(I)Z")
-	protected final boolean method925() {
+	protected final boolean isHostnameValid() {
 		return true;
 	}
 
 	@OriginalMember(owner = "client!rc", name = "b", descriptor = "(B)V")
-	public final synchronized void method926() {
-		if (Static154.canvas != null) {
-			Static154.canvas.removeFocusListener(this);
-			Static154.canvas.getParent().remove(Static154.canvas);
+	public final synchronized void addCanvas() {
+		if (canvas != null) {
+			canvas.removeFocusListener(this);
+			canvas.getParent().remove(canvas);
 		}
-		@Pc(19) Container local19;
-		if (Static69.aFrame2 != null) {
-			local19 = Static69.aFrame2;
-		} else if (Static39.aFrame1 == null) {
-			local19 = Static71.signLink.anApplet2;
+		@Pc(19) Container container;
+		if (fullScreenFrame != null) {
+			container = fullScreenFrame;
+		} else if (frame == null) {
+			container = signLink.applet;
 		} else {
-			local19 = Static39.aFrame1;
+			container = frame;
 		}
-		local19.setLayout(null);
-		Static154.canvas = new GameCanvas(this);
-		local19.add(Static154.canvas);
-		Static154.canvas.setSize(Static48.anInt1448, Static254.anInt5554);
-		Static154.canvas.setVisible(true);
-		if (local19 == Static39.aFrame1) {
-			@Pc(66) Insets local66 = Static39.aFrame1.getInsets();
-			Static154.canvas.setLocation(Static145.anInt3497 + local66.left, local66.top + Static178.anInt4246);
+		container.setLayout(null);
+		canvas = new GameCanvas(this);
+		container.add(canvas);
+		canvas.setSize(canvasWidth, canvasHeight);
+		canvas.setVisible(true);
+		if (container == frame) {
+			@Pc(66) Insets insets = frame.getInsets();
+			canvas.setLocation(leftMargin + insets.left, insets.top + topMargin);
 		} else {
-			Static154.canvas.setLocation(Static145.anInt3497, Static178.anInt4246);
+			canvas.setLocation(leftMargin, topMargin);
 		}
-		Static154.canvas.addFocusListener(this);
-		Static154.canvas.requestFocus();
-		Static233.aBoolean253 = true;
-		Static69.aBoolean115 = true;
-		Static26.focus = true;
-		Static35.aBoolean66 = false;
-		Static243.aLong178 = MonotonicClock.currentTimeMillis();
+		canvas.addFocusListener(this);
+		canvas.requestFocus();
+		focusIn = true;
+		fullRedraw = true;
+		focus = true;
+		replaceCanvas = false;
+		lastCanvasReplace = MonotonicClock.currentTimeMillis();
 	}
 
 	@OriginalMember(owner = "client!rc", name = "destroy", descriptor = "()V")
 	@Override
 	public final void destroy() {
-		if (Static230.anApplet_Sub1_1 == this && !Static58.aBoolean101) {
-			Static72.aLong74 = MonotonicClock.currentTimeMillis();
+		if (instance == this && !shutdown) {
+			killTime = MonotonicClock.currentTimeMillis();
 			Static231.sleep(5000L);
-			Static69.aClass213_4 = null;
-			this.method931(false);
+			Static69.signLink = null;
+			this.shutdown(false);
 		}
 	}
 
 	@OriginalMember(owner = "client!rc", name = "update", descriptor = "(Ljava/awt/Graphics;)V")
 	@Override
-	public final void update(@OriginalArg(0) Graphics arg0) {
-		this.paint(arg0);
+	public final void update(@OriginalArg(0) Graphics graphics) {
+		this.paint(graphics);
 	}
 
 	@OriginalMember(owner = "client!rc", name = "a", descriptor = "(Ljava/lang/String;I)V")
-	protected final void method927(@OriginalArg(0) String arg0) {
-		if (this.aBoolean71) {
+	protected final void error(@OriginalArg(0) String error) {
+		if (this.error) {
 			return;
 		}
-		this.aBoolean71 = true;
-		System.out.println("error_game_" + arg0);
+		this.error = true;
+		System.out.println("error_game_" + error);
 		try {
-			this.getAppletContext().showDocument(new URL(this.getCodeBase(), "error_game_" + arg0 + ".ws"), "_top");
-		} catch (@Pc(47) Exception local47) {
+			this.getAppletContext().showDocument(new URL(this.getCodeBase(), "error_game_" + error + ".ws"), "_top");
+		} catch (@Pc(47) Exception ex) {
 		}
 	}
 
 	@OriginalMember(owner = "client!rc", name = "c", descriptor = "(B)V")
-	protected abstract void method928();
+	protected abstract void mainQuit();
 
 	@OriginalMember(owner = "client!rc", name = "c", descriptor = "(I)V")
-	protected abstract void method929();
+	protected abstract void reset();
 
 	@OriginalMember(owner = "client!rc", name = "getDocumentBase", descriptor = "()Ljava/net/URL;")
 	@Override
 	public final URL getDocumentBase() {
-		if (Static39.aFrame1 == null) {
-			return Static71.signLink == null || Static71.signLink.anApplet2 == this ? super.getDocumentBase() : Static71.signLink.anApplet2.getDocumentBase();
+		if (frame == null) {
+			return signLink == null || signLink.applet == this ? super.getDocumentBase() : signLink.applet.getDocumentBase();
 		} else {
 			return null;
 		}
@@ -162,114 +286,114 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 
 	@OriginalMember(owner = "client!rc", name = "paint", descriptor = "(Ljava/awt/Graphics;)V")
 	@Override
-	public final synchronized void paint(@OriginalArg(0) Graphics arg0) {
-		if (Static230.anApplet_Sub1_1 != this || Static58.aBoolean101) {
+	public final synchronized void paint(@OriginalArg(0) Graphics graphics) {
+		if (instance != this || shutdown) {
 			return;
 		}
-		Static69.aBoolean115 = true;
-		if (Static236.aBoolean256 && !GlRenderer.enabled && MonotonicClock.currentTimeMillis() - Static243.aLong178 > 1000L) {
-			@Pc(29) Rectangle local29 = arg0.getClipBounds();
-			if (local29 == null || local29.width >= Static72.anInt2046 && Static122.anInt3045 <= local29.height) {
-				Static35.aBoolean66 = true;
+		fullRedraw = true;
+		if (isJava5OrLater && !GlRenderer.enabled && MonotonicClock.currentTimeMillis() - lastCanvasReplace > 1000L) {
+			@Pc(29) Rectangle clipBounds = graphics.getClipBounds();
+			if (clipBounds == null || clipBounds.width >= frameWidth && frameHeight <= clipBounds.height) {
+				replaceCanvas = true;
 			}
 		}
 	}
 
 	@OriginalMember(owner = "client!rc", name = "windowDeiconified", descriptor = "(Ljava/awt/event/WindowEvent;)V")
 	@Override
-	public final void windowDeiconified(@OriginalArg(0) WindowEvent arg0) {
+	public final void windowDeiconified(@OriginalArg(0) WindowEvent event) {
 	}
 
 	@OriginalMember(owner = "client!rc", name = "a", descriptor = "(IZ)V")
-	private void method931(@OriginalArg(1) boolean arg0) {
+	private void shutdown(@OriginalArg(1) boolean clean) {
 		synchronized (this) {
-			if (Static58.aBoolean101) {
+			if (shutdown) {
 				return;
 			}
-			Static58.aBoolean101 = true;
+			shutdown = true;
 		}
-		if (Static71.signLink.anApplet2 != null) {
-			Static71.signLink.anApplet2.destroy();
+		if (signLink.applet != null) {
+			signLink.applet.destroy();
 		}
 		try {
-			this.method928();
-		} catch (@Pc(34) Exception local34) {
+			this.mainQuit();
+		} catch (@Pc(34) Exception ex) {
 		}
-		if (Static154.canvas != null) {
+		if (canvas != null) {
 			try {
-				Static154.canvas.removeFocusListener(this);
-				Static154.canvas.getParent().remove(Static154.canvas);
-			} catch (@Pc(45) Exception local45) {
+				canvas.removeFocusListener(this);
+				canvas.getParent().remove(canvas);
+			} catch (@Pc(45) Exception ex) {
 			}
 		}
-		if (Static71.signLink != null) {
+		if (signLink != null) {
 			try {
-				Static71.signLink.method5124();
-			} catch (@Pc(53) Exception local53) {
+				signLink.stop();
+			} catch (@Pc(53) Exception ex) {
 			}
 		}
-		this.method929();
-		if (Static39.aFrame1 != null) {
+		this.reset();
+		if (frame != null) {
 			try {
 				System.exit(0);
-			} catch (@Pc(77) Throwable local77) {
+			} catch (@Pc(77) Throwable ex) {
 			}
 		}
-		System.out.println("Shutdown complete - clean:" + arg0);
+		System.out.println("Shutdown complete - clean:" + clean);
 	}
 
 	@OriginalMember(owner = "client!rc", name = "windowActivated", descriptor = "(Ljava/awt/event/WindowEvent;)V")
 	@Override
-	public final void windowActivated(@OriginalArg(0) WindowEvent arg0) {
+	public final void windowActivated(@OriginalArg(0) WindowEvent event) {
 	}
 
 	@OriginalMember(owner = "client!rc", name = "b", descriptor = "(Z)V")
-	private void method932() {
-		@Pc(6) long local6 = MonotonicClock.currentTimeMillis();
-		@Pc(10) long local10 = Static228.aLongArray8[Static261.anInt5741];
-		Static228.aLongArray8[Static261.anInt5741] = local6;
-		Static261.anInt5741 = Static261.anInt5741 + 1 & 0x1F;
+	private void mainLoopWrapper() {
+		@Pc(6) long now = MonotonicClock.currentTimeMillis();
+		@Pc(10) long previous = logicTimes[logicTimePointer];
+		logicTimes[logicTimePointer] = now;
+		logicTimePointer = logicTimePointer + 1 & 0x1F;
 		synchronized (this) {
-			Static26.focus = Static233.aBoolean253;
+			focus = focusIn;
 		}
-		this.method921();
-		if (local10 != 0L && local6 <= local10) {
+		this.mainLoop();
+		if (previous != 0L && now <= previous) {
 		}
 	}
 
 	@OriginalMember(owner = "client!rc", name = "e", descriptor = "(I)V")
-	private void method933() {
-		@Pc(2) long local2 = MonotonicClock.currentTimeMillis();
-		@Pc(6) long local6 = Static7.aLongArray2[Static111.anInt2903];
-		Static7.aLongArray2[Static111.anInt2903] = local2;
-		Static111.anInt2903 = Static111.anInt2903 + 1 & 0x1F;
-		if (local6 != 0L && local2 > local6) {
-			@Pc(41) int local41 = (int) (local2 - local6);
-			Static243.anInt5359 = ((local41 >> 1) + 32000) / local41;
+	private void mainRedrawWrapper() {
+		@Pc(2) long now = MonotonicClock.currentTimeMillis();
+		@Pc(6) long previous = redrawTimes[redrawTimePointer];
+		redrawTimes[redrawTimePointer] = now;
+		redrawTimePointer = redrawTimePointer + 1 & 0x1F;
+		if (previous != 0L && now > previous) {
+			@Pc(41) int duration = (int) (now - previous);
+			framesPerSecond = ((duration >> 1) + 32000) / duration;
 		}
-		if (Static184.anInt4355++ > 50) {
-			Static69.aBoolean115 = true;
-			Static184.anInt4355 -= 50;
-			Static154.canvas.setSize(Static48.anInt1448, Static254.anInt5554);
-			Static154.canvas.setVisible(true);
-			if (Static39.aFrame1 != null && Static69.aFrame2 == null) {
-				@Pc(84) Insets local84 = Static39.aFrame1.getInsets();
-				Static154.canvas.setLocation(local84.left + Static145.anInt3497, Static178.anInt4246 + local84.top);
+		if (partialRedraws++ > 50) {
+			fullRedraw = true;
+			partialRedraws -= 50;
+			canvas.setSize(canvasWidth, canvasHeight);
+			canvas.setVisible(true);
+			if (frame != null && fullScreenFrame == null) {
+				@Pc(84) Insets insets = frame.getInsets();
+				canvas.setLocation(insets.left + leftMargin, topMargin + insets.top);
 			} else {
-				Static154.canvas.setLocation(Static145.anInt3497, Static178.anInt4246);
+				canvas.setLocation(leftMargin, topMargin);
 			}
 		}
-		this.method934();
+		this.mainRedraw();
 	}
 
 	@OriginalMember(owner = "client!rc", name = "f", descriptor = "(I)V")
-	protected abstract void method934();
+	protected abstract void mainRedraw();
 
 	@OriginalMember(owner = "client!rc", name = "getCodeBase", descriptor = "()Ljava/net/URL;")
 	@Override
 	public final URL getCodeBase() {
-		if (Static39.aFrame1 == null) {
-			return Static71.signLink == null || Static71.signLink.anApplet2 == this ? super.getCodeBase() : Static71.signLink.anApplet2.getCodeBase();
+		if (frame == null) {
+			return signLink == null || signLink.applet == this ? super.getCodeBase() : signLink.applet.getCodeBase();
 		} else {
 			return null;
 		}
@@ -279,83 +403,83 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 	@Override
 	public final void run() {
 		try {
-			if (SignLink.aString20 != null) {
-				@Pc(12) String local12 = SignLink.aString20.toLowerCase();
-				if (local12.indexOf("sun") != -1 || local12.indexOf("apple") != -1) {
-					@Pc(24) String local24 = SignLink.aString14;
-					if (local24.equals("1.1") || local24.startsWith("1.1.") || local24.equals("1.2") || local24.startsWith("1.2.")) {
-						this.method927("wrongjava");
+			if (SignLink.javaVendor != null) {
+				@Pc(12) String javaVendor = SignLink.javaVendor.toLowerCase();
+				if (javaVendor.contains("sun") || javaVendor.contains("apple")) {
+					@Pc(24) String javaVersion = SignLink.javaVersion;
+					if (javaVersion.equals("1.1") || javaVersion.startsWith("1.1.") || javaVersion.equals("1.2") || javaVersion.startsWith("1.2.")) {
+						this.error("wrongjava");
 						return;
 					}
-					Static226.anInt5081 = 5;
-				} else if (local12.indexOf("ibm") != -1 && (SignLink.aString14 == null || SignLink.aString14.equals("1.4.2"))) {
-					this.method927("wrongjava");
+					minimumDelay = 5;
+				} else if (javaVendor.contains("ibm") && (SignLink.javaVersion == null || SignLink.javaVersion.equals("1.4.2"))) {
+					this.error("wrongjava");
 					return;
 				}
 			}
-			@Pc(76) int local76;
-			if (SignLink.aString14 != null && SignLink.aString14.startsWith("1.")) {
-				local76 = 2;
-				@Pc(78) int local78 = 0;
-				while (local76 < SignLink.aString14.length()) {
-					@Pc(90) char local90 = SignLink.aString14.charAt(local76);
-					if (local90 < '0' || local90 > '9') {
+			@Pc(76) int i;
+			if (SignLink.javaVersion != null && SignLink.javaVersion.startsWith("1.")) {
+				i = 2;
+				@Pc(78) int minorVersion = 0;
+				while (i < SignLink.javaVersion.length()) {
+					@Pc(90) char c = SignLink.javaVersion.charAt(i);
+					if (c < '0' || c > '9') {
 						break;
 					}
-					local78 = local78 * 10 + local90 - 48;
-					local76++;
+					minorVersion = minorVersion * 10 + c - '0';
+					i++;
 				}
-				if (local78 >= 5) {
-					Static236.aBoolean256 = true;
+				if (minorVersion >= 5) {
+					isJava5OrLater = true;
 				}
 			}
-			if (Static71.signLink.anApplet2 != null) {
-				@Pc(125) Method local125 = SignLink.aMethod5;
-				if (local125 != null) {
+			if (signLink.applet != null) {
+				@Pc(125) Method setFocusCycleRoot = SignLink.setFocusCycleRoot;
+				if (setFocusCycleRoot != null) {
 					try {
-						local125.invoke(Static71.signLink.anApplet2, Boolean.TRUE);
-					} catch (@Pc(142) Throwable local142) {
+						setFocusCycleRoot.invoke(signLink.applet, Boolean.TRUE);
+					} catch (@Pc(142) Throwable ex) {
 					}
 				}
 			}
-			Static224.method3888();
-			this.method926();
-			Static260.aClass27_2 = Static131.method2579(Static254.anInt5554, Static48.anInt1448, Static154.canvas);
-			this.method935();
-			Static200.aClass93_1 = Static70.method1547();
-			while (Static72.aLong74 == 0L || Static72.aLong74 > MonotonicClock.currentTimeMillis()) {
-				Static227.anInt5097 = Static200.aClass93_1.method3391(Static226.anInt5081, Static11.anInt386);
-				for (local76 = 0; local76 < Static227.anInt5097; local76++) {
-					this.method932();
+			getMaxMemory();
+			this.addCanvas();
+			Static260.frameBuffer = Static131.create(canvasHeight, canvasWidth, canvas);
+			this.mainInit();
+			timer = Static70.create();
+			while (killTime == 0L || killTime > MonotonicClock.currentTimeMillis()) {
+				logicCycles = timer.sleep(minimumDelay, timePerFrame);
+				for (i = 0; i < logicCycles; i++) {
+					this.mainLoopWrapper();
 				}
-				this.method933();
-				Static140.method2708(Static71.signLink, Static154.canvas);
+				this.mainRedrawWrapper();
+				flush(signLink, canvas);
 			}
-		} catch (@Pc(198) Exception local198) {
-			Static89.method1839(null, local198);
-			this.method927("crash");
+		} catch (@Pc(198) Exception ex) {
+			Static89.report(null, ex);
+			this.error("crash");
 		}
-		this.method931(true);
+		this.shutdown(true);
 	}
 
 	@OriginalMember(owner = "client!rc", name = "getParameter", descriptor = "(Ljava/lang/String;)Ljava/lang/String;")
 	@Override
-	public final String getParameter(@OriginalArg(0) String arg0) {
-		if (Static39.aFrame1 == null) {
-			return Static71.signLink == null || Static71.signLink.anApplet2 == this ? super.getParameter(arg0) : Static71.signLink.anApplet2.getParameter(arg0);
+	public final String getParameter(@OriginalArg(0) String name) {
+		if (frame == null) {
+			return signLink == null || signLink.applet == this ? super.getParameter(name) : signLink.applet.getParameter(name);
 		} else {
 			return null;
 		}
 	}
 
 	@OriginalMember(owner = "client!rc", name = "g", descriptor = "(I)V")
-	protected abstract void method935();
+	protected abstract void mainInit();
 
 	@OriginalMember(owner = "client!rc", name = "stop", descriptor = "()V")
 	@Override
 	public final void stop() {
-		if (Static230.anApplet_Sub1_1 == this && !Static58.aBoolean101) {
-			Static72.aLong74 = MonotonicClock.currentTimeMillis() + 4000L;
+		if (instance == this && !shutdown) {
+			killTime = MonotonicClock.currentTimeMillis() + 4000L;
 		}
 	}
 
@@ -363,85 +487,85 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 	public abstract void init();
 
 	@OriginalMember(owner = "client!rc", name = "a", descriptor = "(IIZILjava/lang/String;III)V")
-	protected final void method936(@OriginalArg(0) int arg0, @OriginalArg(4) String arg1) {
+	protected final void startApplication(@OriginalArg(0) int cacheId, @OriginalArg(4) String cacheSubDir) {
 		try {
-			Static254.anInt5554 = 768;
-			Static122.anInt3045 = 768;
-			Static145.anInt3497 = 0;
-			Static131.anInt3252 = 530;
-			Static48.anInt1448 = 1024;
-			Static72.anInt2046 = 1024;
-			Static178.anInt4246 = 0;
-			Static230.anApplet_Sub1_1 = this;
-			Static39.aFrame1 = new Frame();
-			Static39.aFrame1.setTitle("Jagex");
-			Static39.aFrame1.setResizable(true);
-			Static39.aFrame1.addWindowListener(this);
-			Static39.aFrame1.setVisible(true);
-			Static39.aFrame1.toFront();
-			@Pc(44) Insets local44 = Static39.aFrame1.getInsets();
-			Static39.aFrame1.setSize(local44.left + Static72.anInt2046 + local44.right, local44.top + Static122.anInt3045 + local44.bottom);
-			Static69.aClass213_4 = Static71.signLink = new SignLink(null, arg0, arg1, 28);
-			@Pc(76) PrivilegedRequest local76 = Static71.signLink.method5130(1, this);
-			while (local76.status == 0) {
+			canvasHeight = 768;
+			frameHeight = 768;
+			leftMargin = 0;
+			anInt3252 = 530;
+			canvasWidth = 1024;
+			frameWidth = 1024;
+			topMargin = 0;
+			instance = this;
+			frame = new Frame();
+			frame.setTitle("Jagex");
+			frame.setResizable(true);
+			frame.addWindowListener(this);
+			frame.setVisible(true);
+			frame.toFront();
+			@Pc(44) Insets insets = frame.getInsets();
+			frame.setSize(insets.left + frameWidth + insets.right, insets.top + frameHeight + insets.bottom);
+			Static69.signLink = signLink = new SignLink(null, cacheId, cacheSubDir, 28);
+			@Pc(76) PrivilegedRequest request = signLink.startThread(1, this);
+			while (request.status == 0) {
 				Static231.sleep(10L);
 			}
-			Static37.aThread1 = (Thread) local76.result;
-		} catch (@Pc(91) Exception local91) {
-			Static89.method1839(null, local91);
+			thread = (Thread) request.result;
+		} catch (@Pc(91) Exception ex) {
+			Static89.report(null, ex);
 		}
 	}
 
 	@OriginalMember(owner = "client!rc", name = "windowOpened", descriptor = "(Ljava/awt/event/WindowEvent;)V")
 	@Override
-	public final void windowOpened(@OriginalArg(0) WindowEvent arg0) {
+	public final void windowOpened(@OriginalArg(0) WindowEvent event) {
 	}
 
 	@OriginalMember(owner = "client!rc", name = "start", descriptor = "()V")
 	@Override
 	public final void start() {
-		if (Static230.anApplet_Sub1_1 == this && !Static58.aBoolean101) {
-			Static72.aLong74 = 0L;
+		if (instance == this && !shutdown) {
+			killTime = 0L;
 		}
 	}
 
 	@OriginalMember(owner = "client!rc", name = "a", descriptor = "(BIIII)V")
-	protected final void method937(@OriginalArg(2) int arg0) {
+	protected final void startApplet(@OriginalArg(2) int cacheId) {
 		try {
-			if (Static230.anApplet_Sub1_1 != null) {
-				Static70.anInt2014++;
-				if (Static70.anInt2014 >= 3) {
-					this.method927("alreadyloaded");
+			if (instance != null) {
+				instances++;
+				if (instances >= 3) {
+					this.error("alreadyloaded");
 					return;
 				}
 				this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
 				return;
 			}
-			Static230.anApplet_Sub1_1 = this;
-			Static178.anInt4246 = 0;
-			Static131.anInt3252 = 1530;
-			Static48.anInt1448 = 765;
-			Static72.anInt2046 = 765;
-			Static145.anInt3497 = 0;
-			Static254.anInt5554 = 503;
-			Static122.anInt3045 = 503;
-			@Pc(54) String local54 = this.getParameter("openwinjs");
-			if (local54 != null && local54.equals("1")) {
-				Static40.aBoolean78 = true;
+			instance = this;
+			topMargin = 0;
+			anInt3252 = 1530;
+			canvasWidth = 765;
+			frameWidth = 765;
+			leftMargin = 0;
+			canvasHeight = 503;
+			frameHeight = 503;
+			@Pc(54) String openWindowJavaScriptStr = this.getParameter("openwinjs");
+			if (openWindowJavaScriptStr != null && openWindowJavaScriptStr.equals("1")) {
+				openWindowJavaScript = true;
 			} else {
-				Static40.aBoolean78 = false;
+				openWindowJavaScript = false;
 			}
-			if (Static71.signLink == null) {
-				Static69.aClass213_4 = Static71.signLink = new SignLink(this, arg0, null, 0);
+			if (signLink == null) {
+				Static69.signLink = signLink = new SignLink(this, cacheId, null, 0);
 			}
-			@Pc(86) PrivilegedRequest local86 = Static71.signLink.method5130(1, this);
-			while (local86.status == 0) {
+			@Pc(86) PrivilegedRequest request = signLink.startThread(1, this);
+			while (request.status == 0) {
 				Static231.sleep(10L);
 			}
-			Static37.aThread1 = (Thread) local86.result;
-		} catch (@Pc(103) Exception local103) {
-			Static89.method1839(null, local103);
-			this.method927("crash");
+			thread = (Thread) request.result;
+		} catch (@Pc(103) Exception ex) {
+			Static89.report(null, ex);
+			this.error("crash");
 		}
 	}
 }

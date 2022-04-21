@@ -41,7 +41,7 @@ public final class MillisTimer extends Timer {
 
 	@OriginalMember(owner = "client!lj", name = "a", descriptor = "(III)I")
 	@Override
-	public final int method3391(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
+	public final int sleep(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
 		@Pc(17) int local17 = this.anInt3552;
 		@Pc(20) int local20 = this.anInt3550;
 		this.anInt3550 = 300;

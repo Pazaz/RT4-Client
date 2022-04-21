@@ -10,10 +10,7 @@ public final class Static26 {
 	@OriginalMember(owner = "client!ca", name = "Z", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_16;
 
-	@OriginalMember(owner = "client!ca", name = "ab", descriptor = "Z")
-	public static boolean focus;
-
-	@OriginalMember(owner = "client!ca", name = "X", descriptor = "Lclient!ih;")
+    @OriginalMember(owner = "client!ca", name = "X", descriptor = "Lclient!ih;")
 	public static LinkedList aClass69_27 = new LinkedList();
 
 	@OriginalMember(owner = "client!ca", name = "cb", descriptor = "Lclient!na;")

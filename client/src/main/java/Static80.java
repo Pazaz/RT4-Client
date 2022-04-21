@@ -58,7 +58,7 @@ public final class Static80 {
 		Static186.anInt4392 = 0;
 		@Pc(48) FileOnDisk local48 = null;
 		Static125.anInt3104 = 127;
-		if (Static238.anInt5316 >= 96) {
+		if (GameShell.maxMemory >= 96) {
 			Static76.method1645(2);
 		} else {
 			Static76.method1645(0);

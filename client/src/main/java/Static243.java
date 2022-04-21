@@ -16,12 +16,6 @@ public final class Static243 {
 	@OriginalMember(owner = "client!tk", name = "D", descriptor = "[Lclient!ec;")
 	public static Scenery[] aClass31Array3;
 
-	@OriginalMember(owner = "client!tk", name = "c", descriptor = "J")
-	public static volatile long aLong178 = 0L;
-
-	@OriginalMember(owner = "client!tk", name = "v", descriptor = "I")
-	public static int anInt5359 = 0;
-
 	@OriginalMember(owner = "client!tk", name = "K", descriptor = "[I")
 	public static int[] anIntArray476 = new int[2];
 
@@ -42,7 +36,7 @@ public final class Static243 {
 		Static67.prevFocus = true;
 		Static183.prevClickTime = 0L;
 		Static178.instance.samples = 0;
-		Static26.focus = true;
+		GameShell.focus = true;
 		Static114.method4625();
 		Static49.anInt1462 = -1;
 		Static5.anInt45 = -1;

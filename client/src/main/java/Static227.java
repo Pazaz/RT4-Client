@@ -14,10 +14,7 @@ public final class Static227 {
 	@OriginalMember(owner = "client!sg", name = "o", descriptor = "I")
 	public static int anInt5096;
 
-	@OriginalMember(owner = "client!sg", name = "p", descriptor = "I")
-	public static int anInt5097;
-
-	@OriginalMember(owner = "client!sg", name = "b", descriptor = "[I")
+    @OriginalMember(owner = "client!sg", name = "b", descriptor = "[I")
 	public static final int[] anIntArray446 = new int[25];
 
 	@OriginalMember(owner = "client!sg", name = "c", descriptor = "I")

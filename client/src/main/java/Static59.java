@@ -45,8 +45,8 @@ public final class Static59 {
 	public static void method1373() {
 		Static6.outboundBuffer.p1isaac(243);
 		Static6.outboundBuffer.p1(Static144.method2736());
-		Static6.outboundBuffer.p2(Static48.anInt1448);
-		Static6.outboundBuffer.p2(Static254.anInt5554);
+		Static6.outboundBuffer.p2(GameShell.canvasWidth);
+		Static6.outboundBuffer.p2(GameShell.canvasHeight);
 		Static6.outboundBuffer.p1(Static186.anInt4392);
 	}
 

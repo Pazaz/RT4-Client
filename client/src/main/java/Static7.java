@@ -17,10 +17,7 @@ public final class Static7 {
 	@OriginalMember(owner = "client!ah", name = "j", descriptor = "[I")
 	public static final int[] anIntArray75 = new int[2500];
 
-	@OriginalMember(owner = "client!ah", name = "k", descriptor = "[J")
-	public static final long[] aLongArray2 = new long[32];
-
-	@OriginalMember(owner = "client!ah", name = "n", descriptor = "I")
+    @OriginalMember(owner = "client!ah", name = "n", descriptor = "I")
 	public static int anInt983 = 0;
 
 	@OriginalMember(owner = "client!ah", name = "p", descriptor = "Lclient!ih;")

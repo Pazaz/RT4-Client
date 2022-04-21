@@ -46,7 +46,7 @@ public final class Static3 {
 	@OriginalMember(owner = "client!ab", name = "c", descriptor = "(B)[Lclient!od;")
 	public static Class114[] method4660() {
 		if (Static105.aClass114Array1 == null) {
-			@Pc(16) Class114[] local16 = Static197.method3558(Static71.signLink);
+			@Pc(16) Class114[] local16 = Static197.method3558(GameShell.signLink);
 			@Pc(20) Class114[] local20 = new Class114[local16.length];
 			@Pc(22) int local22 = 0;
 			label52: for (@Pc(24) int local24 = 0; local24 < local16.length; local24++) {

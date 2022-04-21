@@ -46,7 +46,7 @@ public final class Static158 {
 				}
 			}
 			if (Static179.anInt4261 == 1) {
-				Static72.aClass212_3 = Static71.signLink.openSocket(Static60.hostname, Static209.port);
+				Static72.aClass212_3 = GameShell.signLink.openSocket(Static60.hostname, Static209.port);
 				Static179.anInt4261 = 2;
 			}
 			@Pc(120) int local120;
@@ -57,7 +57,7 @@ public final class Static158 {
 				if (Static72.aClass212_3.status != 1) {
 					return;
 				}
-				Static124.socket = new BufferedSocket((Socket) Static72.aClass212_3.result, Static71.signLink);
+				Static124.socket = new BufferedSocket((Socket) Static72.aClass212_3.result, GameShell.signLink);
 				Static72.aClass212_3 = null;
 				Static124.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
 				if (Static11.aClass62_1 != null) {

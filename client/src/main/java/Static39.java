@@ -1,4 +1,3 @@
-import java.awt.Frame;
 import java.util.Random;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
@@ -6,10 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static39 {
 
-	@OriginalMember(owner = "client!d", name = "Y", descriptor = "Ljava/awt/Frame;")
-	public static Frame aFrame1;
-
-	@OriginalMember(owner = "client!d", name = "hb", descriptor = "Lclient!ve;")
+    @OriginalMember(owner = "client!d", name = "hb", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_23;
 
 	@OriginalMember(owner = "client!d", name = "ib", descriptor = "Lclient!qf;")

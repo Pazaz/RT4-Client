@@ -5,10 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static131 {
 
-	@OriginalMember(owner = "client!kd", name = "pb", descriptor = "I")
-	public static int anInt3252;
-
-	@OriginalMember(owner = "client!kd", name = "ub", descriptor = "I")
+    @OriginalMember(owner = "client!kd", name = "ub", descriptor = "I")
 	public static int anInt3255;
 
 	@OriginalMember(owner = "client!kd", name = "Cb", descriptor = "I")
@@ -136,7 +133,7 @@ public final class Static131 {
 	}
 
 	@OriginalMember(owner = "client!kd", name = "a", descriptor = "(IIZLjava/awt/Component;)Lclient!vk;")
-	public static FrameBuffer method2579(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) Component arg2) {
+	public static FrameBuffer create(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) Component arg2) {
 		try {
 			@Pc(12) Class local12 = Class.forName("BufferedImageFrameBuffer");
 			@Pc(16) FrameBuffer local16 = (FrameBuffer) local12.getDeclaredConstructor().newInstance();

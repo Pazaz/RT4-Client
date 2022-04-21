@@ -10,10 +10,7 @@ public final class Static71 {
 	@OriginalMember(owner = "client!fk", name = "j", descriptor = "[[I")
 	public static int[][] anIntArrayArray10;
 
-	@OriginalMember(owner = "client!fk", name = "l", descriptor = "Lsignlink!ll;")
-	public static SignLink signLink;
-
-	@OriginalMember(owner = "client!fk", name = "q", descriptor = "Lclient!uc;")
+    @OriginalMember(owner = "client!fk", name = "q", descriptor = "Lclient!uc;")
 	public static MouseWheel mouseWheel;
 
 	@OriginalMember(owner = "client!fk", name = "g", descriptor = "Z")

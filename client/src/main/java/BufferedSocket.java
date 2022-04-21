@@ -111,7 +111,7 @@ public final class BufferedSocket implements Runnable {
 				}
 			}
 		} catch (@Pc(124) Exception local124) {
-			Static89.method1839(null, local124);
+			Static89.report(null, local124);
 		}
 	}
 
@@ -156,7 +156,7 @@ public final class BufferedSocket implements Runnable {
 				}
 			}
 			if (this.aClass212_4 == null) {
-				this.aClass212_4 = this.aClass213_5.method5130(3, this);
+				this.aClass212_4 = this.aClass213_5.startThread(3, this);
 			}
 			this.notifyAll();
 		}

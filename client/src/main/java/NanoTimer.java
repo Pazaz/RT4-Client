@@ -17,7 +17,7 @@ public final class NanoTimer extends Timer {
 
 	@OriginalMember(owner = "client!om", name = "a", descriptor = "(III)I")
 	@Override
-	public final int method3391(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
+	public final int sleep(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
 		@Pc(9) long local9 = (long) arg0 * 1000000L;
 		@Pc(14) long local14 = this.aLong142 - System.nanoTime();
 		if (local9 > local14) {

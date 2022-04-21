@@ -10,9 +10,6 @@ public final class Static58 {
 	@OriginalMember(owner = "client!eh", name = "g", descriptor = "[[[I")
 	public static int[][][] anIntArrayArrayArray5;
 
-	@OriginalMember(owner = "client!eh", name = "a", descriptor = "Z")
-	public static boolean aBoolean101 = false;
-
 	@OriginalMember(owner = "client!eh", name = "j", descriptor = "I")
 	public static int wheelRotation = 0;
 

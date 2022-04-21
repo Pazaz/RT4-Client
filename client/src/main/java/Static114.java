@@ -61,10 +61,10 @@ public final class Static114 {
 			GlRenderer.method4153();
 		} else {
 			try {
-				@Pc(159) Graphics local159 = Static154.canvas.getGraphics();
-				Static260.aClass27_2.method4186(local159);
+				@Pc(159) Graphics local159 = GameShell.canvas.getGraphics();
+				Static260.frameBuffer.method4186(local159);
 			} catch (@Pc(167) Exception local167) {
-				Static154.canvas.repaint();
+				GameShell.canvas.repaint();
 			}
 		}
 	}

@@ -175,7 +175,7 @@ public final class Player extends PathingEntity {
 		@Pc(54) SeqType local54 = this.anInt3366 == -1 || this.aBoolean98 || this.anInt3366 == this.method2681().anInt1037 && local25 != null ? null : Static36.method941(this.anInt3366);
 		@Pc(76) Model local76 = this.aClass59_1.method1954(this.aClass147Array3, this.anInt3373, local54, local25, this.anInt3396, this.anInt3388, this.anInt3360, this.anInt3425, this.anInt3407);
 		@Pc(79) int local79 = Static198.method1029();
-		if (GlRenderer.enabled && Static238.anInt5316 < 96 && local79 > 50) {
+		if (GlRenderer.enabled && GameShell.maxMemory < 96 && local79 > 50) {
 			Static16.method501();
 		}
 		@Pc(102) int local102;

@@ -27,20 +27,20 @@ public final class Static169 {
 	public static void openUrl(@OriginalArg(0) JagString arg0, @OriginalArg(2) boolean arg1) {
 		if (!arg1) {
 			try {
-				Static230.anApplet_Sub1_1.getAppletContext().showDocument(arg0.method3127(Static230.anApplet_Sub1_1.getCodeBase()), "_top");
+				GameShell.instance.getAppletContext().showDocument(arg0.method3127(GameShell.instance.getCodeBase()), "_top");
 			} catch (@Pc(22) Exception local22) {
 			}
 			return;
 		}
-		if (GlRenderer.enabled && Static40.aBoolean78) {
+		if (GlRenderer.enabled && GameShell.openWindowJavaScript) {
 			try {
-				Static287.method1758(Static71.signLink.anApplet2, "openjs", new Object[] { arg0.method3127(Static230.anApplet_Sub1_1.getCodeBase()).toString() });
+				Static287.method1758(GameShell.signLink.applet, "openjs", new Object[] { arg0.method3127(GameShell.instance.getCodeBase()).toString() });
 				return;
 			} catch (@Pc(48) Throwable local48) {
 			}
 		}
 		try {
-			Static230.anApplet_Sub1_1.getAppletContext().showDocument(arg0.method3127(Static230.anApplet_Sub1_1.getCodeBase()), "_blank");
+			GameShell.instance.getAppletContext().showDocument(arg0.method3127(GameShell.instance.getCodeBase()), "_blank");
 		} catch (@Pc(59) Exception local59) {
 		}
 	}

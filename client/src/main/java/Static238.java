@@ -13,9 +13,6 @@ public final class Static238 {
 	@OriginalMember(owner = "client!te", name = "B", descriptor = "[I")
 	public static final int[] anIntArray469 = new int[] { 0, -1, 0, 1 };
 
-	@OriginalMember(owner = "client!te", name = "C", descriptor = "I")
-	public static int anInt5316 = 64;
-
 	@OriginalMember(owner = "client!te", name = "a", descriptor = "(IZ)V")
 	public static void method4142() {
 		Static67.aClass99_20.method3102(5);

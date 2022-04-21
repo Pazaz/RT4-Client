@@ -41,12 +41,12 @@ public final class Static81 {
 			if (local28 == null) {
 				arg0 = -1;
 			} else {
-				Static71.signLink.method5113(local28.method301(), local28.anInt1860, Static154.canvas, new Point(local24.anInt2852, local24.anInt2850), local28.anInt1866);
+				GameShell.signLink.method5113(local28.method301(), local28.anInt1860, GameShell.canvas, new Point(local24.anInt2852, local24.anInt2850), local28.anInt1866);
 				Static115.anInt2941 = arg0;
 			}
 		}
 		if (arg0 == -1 && Static115.anInt2941 != -1) {
-			Static71.signLink.method5113(null, -1, Static154.canvas, new Point(), -1);
+			GameShell.signLink.method5113(null, -1, GameShell.canvas, new Point(), -1);
 			Static115.anInt2941 = -1;
 		}
 	}
@@ -246,12 +246,12 @@ public final class Static81 {
 			Static6.outboundBuffer.p2add(Static72.anInt2031);
 			Static6.outboundBuffer.p2le(Static57.anInt1747);
 		}
-		if (Static26.focus && !Static67.prevFocus) {
+		if (GameShell.focus && !Static67.prevFocus) {
 			Static67.prevFocus = true;
 			Static6.outboundBuffer.p1isaac(22);
 			Static6.outboundBuffer.p1(1);
 		}
-		if (!Static26.focus && Static67.prevFocus) {
+		if (!GameShell.focus && Static67.prevFocus) {
 			Static67.prevFocus = false;
 			Static6.outboundBuffer.p1isaac(22);
 			Static6.outboundBuffer.p1(0);
@@ -489,7 +489,7 @@ public final class Static81 {
 		// WorldMap.component
 		Static24.component = null;
 		if (Static154.topLevelInterace != -1) {
-			Static57.method1320(0, 0, 0, Static48.anInt1448, Static154.topLevelInterace, 0, Static254.anInt5554);
+			Static57.method1320(0, 0, 0, GameShell.canvasWidth, Static154.topLevelInterace, 0, GameShell.canvasHeight);
 		}
 		Static119.transmitTimer++;
 		while (true) {
