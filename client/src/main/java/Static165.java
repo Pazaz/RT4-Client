@@ -83,7 +83,7 @@ public final class Static165 {
 	}
 
 	@OriginalMember(owner = "client!nb", name = "a", descriptor = "(BI)I")
-	public static int method3164(@OriginalArg(1) int arg0) {
+	public static int clp2(@OriginalArg(1) int arg0) {
 		@Pc(0) int local0 = arg0 - 1;
 		@Pc(6) int local6 = local0 | local0 >>> 1;
 		@Pc(22) int local22 = local6 | local6 >>> 2;

@@ -179,7 +179,7 @@ public final class GlTexture extends SecondaryNode {
 			if (this.anInt5493 == -1) {
 				@Pc(53) int[] local53 = new int[1];
 				local22.glGenTextures(1, local53, 0);
-				this.anInt5492 = Static63.anInt1943;
+				this.anInt5492 = Static63.contextId;
 				this.anInt5493 = local53[0];
 				GlRenderer.setTextureId(this.anInt5493);
 				@Pc(82) ByteBuffer local82 = ByteBuffer.wrap(this.aClass88_1.method2728(local28, local28, this.aBoolean288, arg1, 0.7D, arg0));

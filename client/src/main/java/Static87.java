@@ -320,7 +320,7 @@ public final class Static87 {
 								local276 += 15;
 								if (GlRenderer.enabled) {
 									local514 = 16776960;
-									local518 = (Static63.anInt1942 + Static63.anInt1945 + Static63.anInt1944) / 1024;
+									local518 = (Static63.anInt1942 + Static63.anInt1945 + Static63.onCard2d) / 1024;
 									if (local518 > 65536) {
 										local514 = 16711680;
 									}
@@ -446,7 +446,7 @@ public final class Static87 {
 															@Pc(1575) int local1575;
 															if (GlRenderer.enabled) {
 																local1575 = Static46.anInt1441;
-																local1577 = Static46.anInt1438;
+																local1577 = Static46.clipY;
 															} else {
 																local1577 = Static129.anInt3147;
 																local1575 = Static129.anInt3149;

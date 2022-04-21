@@ -500,7 +500,7 @@ public final class ObjType {
 			} else if (arg1 == 249) {
 				local169 = arg0.g1();
 				if (this.aClass133_6 == null) {
-					local179 = Static165.method3164(local169);
+					local179 = Static165.clp2(local169);
 					this.aClass133_6 = new HashTable(local179);
 				}
 				for (local179 = 0; local179 < local169; local179++) {

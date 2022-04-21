@@ -2983,7 +2983,7 @@ public final class Rasteriser {
 		anInt2470 = arg3 - arg1;
 		method1915();
 		if (anIntArray221.length < anInt2470) {
-			anIntArray221 = new int[Static165.method3164(anInt2470)];
+			anIntArray221 = new int[Static165.clp2(anInt2470)];
 		}
 		@Pc(23) int local23 = arg1 * Static129.anInt3144 + arg0;
 		for (@Pc(25) int local25 = 0; local25 < anInt2470; local25++) {

@@ -53,7 +53,7 @@ public final class Static91 {
 			local12.aClass133Array1 = new HashTable[local98];
 			for (local107 = 0; local107 < local98; local107++) {
 				local114 = local42.g2();
-				@Pc(121) HashTable local121 = new HashTable(Static165.method3164(local114));
+				@Pc(121) HashTable local121 = new HashTable(Static165.clp2(local114));
 				local12.aClass133Array1[local107] = local121;
 				while (local114-- > 0) {
 					@Pc(136) int local136 = local42.g4();

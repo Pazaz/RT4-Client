@@ -7,13 +7,13 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static46 {
 
 	@OriginalMember(owner = "client!dj", name = "a", descriptor = "Lclient!cf;")
-	public static GlSprite aClass3_Sub2_Sub1_Sub2_1 = null;
+	public static GlSprite mask = null;
 
 	@OriginalMember(owner = "client!dj", name = "b", descriptor = "I")
-	public static int anInt1438 = 0;
+	public static int clipY = 0;
 
 	@OriginalMember(owner = "client!dj", name = "c", descriptor = "I")
-	public static int anInt1439 = 0;
+	public static int clipX = 0;
 
 	@OriginalMember(owner = "client!dj", name = "d", descriptor = "I")
 	private static int anInt1440 = 0;
@@ -23,7 +23,7 @@ public final class Static46 {
 
 	@OriginalMember(owner = "client!dj", name = "a", descriptor = "()V")
 	public static void method1173() {
-		aClass3_Sub2_Sub1_Sub2_1 = null;
+		mask = null;
 	}
 
 	@OriginalMember(owner = "client!dj", name = "a", descriptor = "(IIII)V")
@@ -56,8 +56,8 @@ public final class Static46 {
 
 	@OriginalMember(owner = "client!dj", name = "c", descriptor = "()V")
 	public static void method1177() {
-		anInt1439 = 0;
-		anInt1438 = 0;
+		clipX = 0;
+		clipY = 0;
 		anInt1440 = GlRenderer.canvasWidth;
 		anInt1441 = GlRenderer.canvasHeight;
 		@Pc(9) GL2 local9 = GlRenderer.gl;
@@ -66,17 +66,17 @@ public final class Static46 {
 	}
 
 	@OriginalMember(owner = "client!dj", name = "a", descriptor = "([IIIII)V")
-	public static void method1178(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+	public static void method1178(@OriginalArg(0) int[] arg0, @OriginalArg(1) int x, @OriginalArg(2) int y, @OriginalArg(3) int width, @OriginalArg(4) int height) {
 		GlRenderer.method4162();
-		@Pc(2) GL2 local2 = GlRenderer.gl;
-		local2.glRasterPos2i(arg1, GlRenderer.canvasHeight - arg2);
-		local2.glPixelZoom(1.0F, -1.0F);
-		local2.glDisable(GL2.GL_BLEND);
-		local2.glDisable(GL2.GL_ALPHA_TEST);
-		local2.glDrawPixels(arg3, arg4, GL2.GL_BGRA, GlRenderer.bigEndian ? GL2.GL_UNSIGNED_INT_8_8_8_8_REV : GL2.GL_UNSIGNED_BYTE, IntBuffer.wrap(arg0));
-		local2.glEnable(GL2.GL_ALPHA_TEST);
-		local2.glEnable(GL2.GL_BLEND);
-		local2.glPixelZoom(1.0F, 1.0F);
+		@Pc(2) GL2 gl = GlRenderer.gl;
+		gl.glRasterPos2i(x, GlRenderer.canvasHeight - y - height);
+		gl.glDisable(GL2.GL_BLEND);
+		gl.glDisable(GL2.GL_ALPHA_TEST);
+		gl.glPixelZoom((float) GameShell.canvasScale, (float) GameShell.canvasScale);
+		gl.glDrawPixels(width, height, GL2.GL_BGRA, GlRenderer.bigEndian ? GL2.GL_UNSIGNED_INT_8_8_8_8_REV : GL2.GL_UNSIGNED_BYTE, IntBuffer.wrap(arg0));
+		gl.glPixelZoom(1.0F, 1.0F);
+		gl.glEnable(GL2.GL_ALPHA_TEST);
+		gl.glEnable(GL2.GL_BLEND);
 	}
 
 	@OriginalMember(owner = "client!dj", name = "a", descriptor = "(IIIII)V")
@@ -182,11 +182,11 @@ public final class Static46 {
 
 	@OriginalMember(owner = "client!dj", name = "c", descriptor = "(IIII)V")
 	public static void method1183(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		if (anInt1439 < arg0) {
-			anInt1439 = arg0;
+		if (clipX < arg0) {
+			clipX = arg0;
 		}
-		if (anInt1438 < arg1) {
-			anInt1438 = arg1;
+		if (clipY < arg1) {
+			clipY = arg1;
 		}
 		if (anInt1440 > arg2) {
 			anInt1440 = arg2;
@@ -196,8 +196,8 @@ public final class Static46 {
 		}
 		@Pc(21) GL2 local21 = GlRenderer.gl;
 		local21.glEnable(GL2.GL_SCISSOR_TEST);
-		if (anInt1439 <= anInt1440 && anInt1438 <= anInt1441) {
-			local21.glScissor(anInt1439, GlRenderer.canvasHeight - anInt1441, anInt1440 - anInt1439, anInt1441 - anInt1438);
+		if (clipX <= anInt1440 && clipY <= anInt1441) {
+			local21.glScissor((int)(clipX * GameShell.canvasScale + 0.5d), (int)((GlRenderer.canvasHeight - anInt1441) * GameShell.canvasScale + 0.5d), (int)((anInt1440 - clipX) * GameShell.canvasScale + 0.5d), (int)((anInt1441 - clipY) * GameShell.canvasScale + 0.5d));
 		} else {
 			local21.glScissor(0, 0, 0, 0);
 		}
@@ -255,14 +255,14 @@ public final class Static46 {
 		if (arg3 > GlRenderer.canvasHeight) {
 			arg3 = GlRenderer.canvasHeight;
 		}
-		anInt1439 = arg0;
-		anInt1438 = arg1;
+		clipX = arg0;
+		clipY = arg1;
 		anInt1440 = arg2;
 		anInt1441 = arg3;
 		@Pc(27) GL2 local27 = GlRenderer.gl;
 		local27.glEnable(GL2.GL_SCISSOR_TEST);
-		if (anInt1439 <= anInt1440 && anInt1438 <= anInt1441) {
-			local27.glScissor(anInt1439, GlRenderer.canvasHeight - anInt1441, anInt1440 - anInt1439, anInt1441 - anInt1438);
+		if (clipX <= anInt1440 && clipY <= anInt1441) {
+			local27.glScissor((int)(clipX * GameShell.canvasScale + 0.5d), (int)((GlRenderer.canvasHeight - anInt1441) * GameShell.canvasScale + 0.5d), (int)((anInt1440 - clipX) * GameShell.canvasScale + 0.5d), (int)((anInt1441 - clipY) * GameShell.canvasScale + 0.5d));
 		} else {
 			local27.glScissor(0, 0, 0, 0);
 		}
@@ -271,9 +271,9 @@ public final class Static46 {
 
 	@OriginalMember(owner = "client!dj", name = "a", descriptor = "(Lclient!cf;)V")
 	public static void method1188(@OriginalArg(0) GlSprite arg0) {
-		if (arg0.anInt1859 != anInt1441 - anInt1438) {
+		if (arg0.anInt1859 != anInt1441 - clipY) {
 			throw new IllegalArgumentException();
 		}
-		aClass3_Sub2_Sub1_Sub2_1 = arg0;
+		mask = arg0;
 	}
 }

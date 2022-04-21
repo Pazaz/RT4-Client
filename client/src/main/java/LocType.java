@@ -585,7 +585,7 @@ public final class LocType {
 		} else if (arg1 == 249) {
 			local18 = arg0.g1();
 			if (this.aClass133_19 == null) {
-				local38 = Static165.method3164(local18);
+				local38 = Static165.clp2(local18);
 				this.aClass133_19 = new HashTable(local38);
 			}
 			for (local38 = 0; local38 < local18; local38++) {

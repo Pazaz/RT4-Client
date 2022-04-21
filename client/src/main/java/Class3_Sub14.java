@@ -118,7 +118,7 @@ public final class Class3_Sub14 extends Node {
 		this.anIntArray227 = new int[this.anInt2484];
 		this.anIntArray231 = new int[this.anInt2484];
 		this.anIntArrayArray17 = new int[this.anInt2484][];
-		this.aClass133_8 = new HashTable(Static165.method3164(this.anInt2482));
+		this.aClass133_8 = new HashTable(Static165.clp2(this.anInt2482));
 		if (this.aBoolean140) {
 			this.anIntArrayArray18 = new int[this.anInt2484][];
 			this.aBooleanArray54 = new boolean[this.anInt2484];
