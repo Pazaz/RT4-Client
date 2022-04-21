@@ -69,10 +69,10 @@ public final class Static46 {
 	public static void method1178(@OriginalArg(0) int[] arg0, @OriginalArg(1) int x, @OriginalArg(2) int y, @OriginalArg(3) int width, @OriginalArg(4) int height) {
 		GlRenderer.method4162();
 		@Pc(2) GL2 gl = GlRenderer.gl;
-		gl.glRasterPos2i(x, GlRenderer.canvasHeight - y - height);
+		gl.glRasterPos2i(x, GlRenderer.canvasHeight - y);
+	 	gl.glPixelZoom((float) GameShell.canvasScale, (float) -GameShell.canvasScale);
 		gl.glDisable(GL2.GL_BLEND);
 		gl.glDisable(GL2.GL_ALPHA_TEST);
-		gl.glPixelZoom((float) GameShell.canvasScale, (float) GameShell.canvasScale);
 		gl.glDrawPixels(width, height, GL2.GL_BGRA, GlRenderer.bigEndian ? GL2.GL_UNSIGNED_INT_8_8_8_8_REV : GL2.GL_UNSIGNED_BYTE, IntBuffer.wrap(arg0));
 		gl.glPixelZoom(1.0F, 1.0F);
 		gl.glEnable(GL2.GL_ALPHA_TEST);
@@ -194,12 +194,12 @@ public final class Static46 {
 		if (anInt1441 > arg3) {
 			anInt1441 = arg3;
 		}
-		@Pc(21) GL2 local21 = GlRenderer.gl;
-		local21.glEnable(GL2.GL_SCISSOR_TEST);
+		@Pc(21) GL2 gl = GlRenderer.gl;
+		gl.glEnable(GL2.GL_SCISSOR_TEST);
 		if (clipX <= anInt1440 && clipY <= anInt1441) {
-			local21.glScissor((int)(clipX * GameShell.canvasScale + 0.5d), (int)((GlRenderer.canvasHeight - anInt1441) * GameShell.canvasScale + 0.5d), (int)((anInt1440 - clipX) * GameShell.canvasScale + 0.5d), (int)((anInt1441 - clipY) * GameShell.canvasScale + 0.5d));
+			gl.glScissor((int)(clipX * GameShell.canvasScale + 0.5d), (int)((GlRenderer.canvasHeight - anInt1441) * GameShell.canvasScale + 0.5d), (int)((anInt1440 - clipX) * GameShell.canvasScale + 0.5d), (int)((anInt1441 - clipY) * GameShell.canvasScale + 0.5d));
 		} else {
-			local21.glScissor(0, 0, 0, 0);
+			gl.glScissor(0, 0, 0, 0);
 		}
 		method1173();
 	}
