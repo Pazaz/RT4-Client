@@ -17,7 +17,12 @@ public final class client extends GameShell {
 	public static void main(@OriginalArg(0) String[] arg0) {
 		try {
 			if (arg0.length != 4) {
-				Static131.method2577("argument count");
+				arg0 = new String[4];
+				arg0[0] = "1";
+				arg0[1] = "live";
+				arg0[2] = "english";
+				arg0[3] = "game0";
+				// Static131.method2577("argument count");
 			}
 			@Pc(15) int local15 = -1;
 			Static187.worldListId = Integer.parseInt(arg0[0]);
