@@ -119,6 +119,10 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 
 	public static double canvasScale = 1.0d;
 
+	public static double subpixelX = 0.5d;
+
+	public static double subpixelY = 0.5d;
+
 	@OriginalMember(owner = "client!rc", name = "providesignlink", descriptor = "(Lsignlink!ll;)V")
 	public static void providesignlink(@OriginalArg(0) SignLink signLink) {
 		GameShell.signLink = signLink;
@@ -232,7 +236,14 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			} else {
 				canvasScale = 1.0d;
 			}
-			System.out.println("Scaling factor: " + canvasScale);
+			if (Math.floor(canvasScale) != canvasScale) {
+				subpixelX = 0.0d;
+				subpixelY = -0.5d;
+			} else {
+				subpixelX = 0.5d;
+				subpixelY = 0.5d;
+			}
+			System.out.println("Scaling factor: " + canvasScale + "x, using fractional scaling");
 		}
 		if (container == frame) {
 			@Pc(66) Insets insets = frame.getInsets();
@@ -391,6 +402,13 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			if (g != null) {
 				if (g instanceof Graphics2D) {
 					canvasScale = ((Graphics2D) g).getTransform().getScaleX();
+					if (Math.floor(canvasScale) != canvasScale) {
+						subpixelX = 0.0d;
+						subpixelY = -0.5d;
+					} else {
+						subpixelX = 0.5d;
+						subpixelY = 0.5d;
+					}
 				} else {
 					canvasScale = 1.0;
 				}
