@@ -7,10 +7,7 @@ public final class Static111 {
 	@OriginalMember(owner = "client!ii", name = "a", descriptor = "I")
 	public static int anInt2900;
 
-	@OriginalMember(owner = "client!ii", name = "i", descriptor = "I")
-	public static int anInt2903;
-
-	@OriginalMember(owner = "client!ii", name = "l", descriptor = "I")
+    @OriginalMember(owner = "client!ii", name = "l", descriptor = "I")
 	public static int anInt2905;
 
 	@OriginalMember(owner = "client!ii", name = "y", descriptor = "I")

@@ -16,10 +16,7 @@ public final class Static145 {
 	@OriginalMember(owner = "client!lf", name = "d", descriptor = "[I")
 	public static final int[] anIntArray331 = new int[1000];
 
-	@OriginalMember(owner = "client!lf", name = "f", descriptor = "I")
-	public static int anInt3497 = 0;
-
-	@OriginalMember(owner = "client!lf", name = "k", descriptor = "I")
+    @OriginalMember(owner = "client!lf", name = "k", descriptor = "I")
 	public static int anInt3502 = -1;
 
 	@OriginalMember(owner = "client!lf", name = "a", descriptor = "(I)V")

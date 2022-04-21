@@ -41,7 +41,7 @@ public final class Static216 {
 				Static276.anInt5816++;
 			}
 			if (Static184.anInt4348 == 1) {
-				Static72.aClass212_3 = Static71.signLink.openSocket(Static60.hostname, Static209.port);
+				Static72.aClass212_3 = GameShell.signLink.openSocket(Static60.hostname, Static209.port);
 				Static184.anInt4348 = 2;
 			}
 			if (Static184.anInt4348 == 2) {
@@ -51,7 +51,7 @@ public final class Static216 {
 				if (Static72.aClass212_3.status != 1) {
 					return;
 				}
-				Static124.socket = new BufferedSocket((Socket) Static72.aClass212_3.result, Static71.signLink);
+				Static124.socket = new BufferedSocket((Socket) Static72.aClass212_3.result, GameShell.signLink);
 				Static72.aClass212_3 = null;
 				@Pc(106) long local106 = Static101.aLong98 = Static186.username.encode37();
 				Static6.outboundBuffer.offset = 0;
@@ -124,8 +124,8 @@ public final class Static216 {
 				Static17.aClass3_Sub15_Sub1_2.p1(Static249.aBoolean282 ? 1 : 0);
 				Static17.aClass3_Sub15_Sub1_2.p1(1);
 				Static17.aClass3_Sub15_Sub1_2.p1(Static144.method2736());
-				Static17.aClass3_Sub15_Sub1_2.p2(Static48.anInt1448);
-				Static17.aClass3_Sub15_Sub1_2.p2(Static254.anInt5554);
+				Static17.aClass3_Sub15_Sub1_2.p2(GameShell.canvasWidth);
+				Static17.aClass3_Sub15_Sub1_2.p2(GameShell.canvasHeight);
 				Static17.aClass3_Sub15_Sub1_2.p1(Static186.anInt4392);
 				Static140.method2705(Static17.aClass3_Sub15_Sub1_2);
 				Static17.aClass3_Sub15_Sub1_2.pjstr(Static47.aClass100_991);
@@ -257,12 +257,12 @@ public final class Static216 {
 				if (!Static249.aBoolean282) {
 					if (Static124.aBoolean157 && !Static25.aBoolean57 || Static202.aBoolean233) {
 						try {
-							Static167.aClass100_781.method3157(Static71.signLink.anApplet2);
+							Static167.aClass100_781.method3157(GameShell.signLink.applet);
 						} catch (@Pc(910) Throwable local910) {
 						}
 					} else {
 						try {
-							Static56.aClass100_380.method3157(Static71.signLink.anApplet2);
+							Static56.aClass100_380.method3157(GameShell.signLink.applet);
 						} catch (@Pc(920) Throwable local920) {
 						}
 					}

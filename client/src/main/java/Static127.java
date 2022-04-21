@@ -287,12 +287,12 @@ public final class Static127 {
 				Static107.js5NetQueue.method2319();
 			}
 			if (arg0.method3111(Static165.aClass100_775)) {
-				Static71.signLink.method5110();
+				GameShell.signLink.method5110();
 				Static124.socket.method2833();
 				Static107.js5NetQueue.method2323();
 			}
 			if (arg0.method3111(Static114.aClass100_1100)) {
-				Static35.aBoolean66 = true;
+				GameShell.replaceCanvas = true;
 			}
 			if (arg0.method3111(Static148.aClass100_677)) {
 				Static196.method3534(25);
@@ -326,7 +326,7 @@ public final class Static127 {
 			}
 			if (arg0.method3138(Static241.aClass100_1088)) {
 				Static76.method1645(arg0.method3136(15).method3132());
-				Static203.method3663(Static71.signLink);
+				Static203.method3663(GameShell.signLink);
 				Static18.sentToServer = false;
 			}
 			if (arg0.method3138(Static170.aClass100_623) && Static83.modeWhere != 0) {

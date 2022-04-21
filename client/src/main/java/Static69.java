@@ -1,20 +1,13 @@
-import java.awt.Frame;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 public final class Static69 {
 
-	@OriginalMember(owner = "client!fh", name = "Y", descriptor = "Ljava/awt/Frame;")
-	public static Frame aFrame2;
-
 	@OriginalMember(owner = "client!fh", name = "cb", descriptor = "Lsignlink!ll;")
-	public static SignLink aClass213_4;
+	public static SignLink signLink;
 
-	@OriginalMember(owner = "client!fh", name = "P", descriptor = "Z")
-	public static volatile boolean aBoolean115 = true;
-
-	@OriginalMember(owner = "client!fh", name = "U", descriptor = "[[Z")
+    @OriginalMember(owner = "client!fh", name = "U", descriptor = "[[Z")
 	public static final boolean[][] aBooleanArrayArray2 = new boolean[][] { new boolean[0], { true, false, true }, { true, false, false, true }, { false, false, true, true }, { true, true, false }, { false, true, true }, { true, false, false, true }, { false, false, false, true, true }, { false, true, true }, { true, false, true, true, true }, { false, true, true, true, true }, { false, true, true, true, true, false } };
 
 	@OriginalMember(owner = "client!fh", name = "ab", descriptor = "Lclient!na;")

@@ -73,7 +73,7 @@ public final class Static115 {
 
 	@OriginalMember(owner = "client!ja", name = "a", descriptor = "(II)V")
 	public static void method2312(@OriginalArg(0) int arg0) {
-		Static11.anInt386 = 1000 / arg0;
+		GameShell.timePerFrame = 1000 / arg0;
 	}
 
 	@OriginalMember(owner = "client!ja", name = "a", descriptor = "(IIIIIZ)V")

@@ -16,9 +16,6 @@ public final class Static226 {
 	@OriginalMember(owner = "client!sf", name = "a", descriptor = "I")
 	public static int anInt5079 = 0;
 
-	@OriginalMember(owner = "client!sf", name = "d", descriptor = "I")
-	public static int anInt5081 = 1;
-
 	@OriginalMember(owner = "client!sf", name = "g", descriptor = "Lclient!na;")
 	public static final JagString aClass100_965 = Static28.parse("<col=ffff00>");
 
@@ -76,11 +73,11 @@ public final class Static226 {
 		@Pc(43) int local43 = Static60.anInt1892;
 		local16 += 8;
 		local27 = Static155.anInt3751 - local16 / 2;
-		if (local43 + local18 > Static254.anInt5554) {
-			local43 = Static254.anInt5554 - local18;
+		if (local43 + local18 > GameShell.canvasHeight) {
+			local43 = GameShell.canvasHeight - local18;
 		}
-		if (Static48.anInt1448 < local27 + local16) {
-			local27 = Static48.anInt1448 - local16;
+		if (GameShell.canvasWidth < local27 + local16) {
+			local27 = GameShell.canvasWidth - local16;
 		}
 		if (local27 < 0) {
 			local27 = 0;

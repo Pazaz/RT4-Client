@@ -20,7 +20,7 @@ public final class Js5CacheQueue implements Runnable {
 
 	@OriginalMember(owner = "client!k", name = "<init>", descriptor = "()V")
 	public Js5CacheQueue() {
-		@Pc(20) PrivilegedRequest local20 = Static71.signLink.method5130(5, this);
+		@Pc(20) PrivilegedRequest local20 = GameShell.signLink.startThread(5, this);
 		while (local20.status == 0) {
 			Static231.sleep(10L);
 		}
@@ -126,7 +126,7 @@ public final class Js5CacheQueue implements Runnable {
 					local19.aByteArray11 = local19.aClass49_3.method1701((int) local19.aLong185);
 				}
 			} catch (@Pc(83) Exception local83) {
-				Static89.method1839(null, local83);
+				Static89.report(null, local83);
 			}
 			local19.aBoolean226 = false;
 		}

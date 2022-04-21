@@ -28,9 +28,6 @@ public final class Static228 {
 	@OriginalMember(owner = "client!sh", name = "k", descriptor = "Z")
 	public static final boolean aBoolean248 = false;
 
-	@OriginalMember(owner = "client!sh", name = "l", descriptor = "[J")
-	public static final long[] aLongArray8 = new long[32];
-
 	@OriginalMember(owner = "client!sh", name = "a", descriptor = "(II)[B")
 	public static synchronized byte[] allocate(@OriginalArg(1) int arg0) {
 		@Pc(22) byte[] local22;

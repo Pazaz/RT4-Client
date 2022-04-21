@@ -46,11 +46,11 @@ public final class Static181 {
 			Static129.method2492();
 		}
 		Static78.aClass3_Sub2_Sub1_3 = Static130.method2514(arg0, Static262.anInt5754);
-		@Pc(20) int local20 = Static254.anInt5554;
+		@Pc(20) int local20 = GameShell.canvasHeight;
 		@Pc(26) int local26 = local20 * 956 / 503;
-		Static78.aClass3_Sub2_Sub1_3.method1419((Static48.anInt1448 - local26) / 2, 0, local26, local20);
+		Static78.aClass3_Sub2_Sub1_3.method1419((GameShell.canvasWidth - local26) / 2, 0, local26, local20);
 		Static243.aClass36_1 = Static40.method1010(Static136.anInt3322, arg0);
-		Static243.aClass36_1.method3336(Static48.anInt1448 / 2 - Static243.aClass36_1.anInt4270 / 2, 18);
+		Static243.aClass36_1.method3336(GameShell.canvasWidth / 2 - Static243.aClass36_1.anInt4270 / 2, 18);
 		Static18.aBoolean40 = true;
 	}
 

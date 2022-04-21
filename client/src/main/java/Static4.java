@@ -398,7 +398,7 @@ public final class Static4 {
 				return true;
 			} else if (Static164.anInt3985 == 164) {
 				local133 = Static57.aClass3_Sub15_Sub1_3.g4rme();
-				Static232.aClass212_5 = Static71.signLink.method5128(local133);
+				Static232.aClass212_5 = GameShell.signLink.method5128(local133);
 				Static164.anInt3985 = -1;
 				return true;
 			} else if (Static164.anInt3985 == 225) {
@@ -983,7 +983,7 @@ public final class Static4 {
 								Static209.miscTransmitAt = Static119.transmitTimer;
 								return true;
 							} else if (Static164.anInt3985 == 114) {
-								Static202.method3654(Static71.signLink, Static57.aClass3_Sub15_Sub1_3, Static223.anInt5028);
+								Static202.method3654(GameShell.signLink, Static57.aClass3_Sub15_Sub1_3, Static223.anInt5028);
 								Static164.anInt3985 = -1;
 								return true;
 							} else if (Static164.anInt3985 == 65) {
@@ -1036,18 +1036,18 @@ public final class Static4 {
 								Static164.anInt3985 = -1;
 								return true;
 							} else if (Static164.anInt3985 == 42) {
-								if (Static69.aFrame2 != null) {
+								if (GameShell.fullScreenFrame != null) {
 									Static241.method4540(false, Static214.anInt5581, -1, -1);
 								}
 								@Pc(3848) byte[] local3848 = new byte[Static223.anInt5028];
 								Static57.aClass3_Sub15_Sub1_3.method2237(local3848, Static223.anInt5028);
 								local156 = Static10.decodeString(local3848, Static223.anInt5028, 0);
-								if (Static39.aFrame1 == null && (SignLink.anInt5928 == 3 || !SignLink.aString15.startsWith("win") || Static178.aBoolean203)) {
+								if (GameShell.frame == null && (SignLink.anInt5928 == 3 || !SignLink.aString15.startsWith("win") || Static178.aBoolean203)) {
 									Static169.openUrl(local156, true);
 								} else {
 									Static175.url = local156;
 									Static164.newTab = true;
-									Static33.openUrlRequest = Static71.signLink.method5131(new String(local156.method3148(), "ISO-8859-1"));
+									Static33.openUrlRequest = GameShell.signLink.method5131(new String(local156.method3148(), "ISO-8859-1"));
 								}
 								Static164.anInt3985 = -1;
 								return true;
@@ -1584,7 +1584,7 @@ public final class Static4 {
 									Static164.anInt3985 = -1;
 									return true;
 								} else {
-									Static89.method1839("T1 - " + Static164.anInt3985 + "," + Static5.anInt45 + "," + Static49.anInt1462 + " - " + Static223.anInt5028, null);
+									Static89.report("T1 - " + Static164.anInt3985 + "," + Static5.anInt45 + "," + Static49.anInt1462 + " - " + Static223.anInt5028, null);
 									Static278.method4653();
 									return true;
 								}

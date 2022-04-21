@@ -10,10 +10,7 @@ public final class Static178 {
 	@OriginalMember(owner = "client!od", name = "c", descriptor = "Z")
 	public static boolean highDetailLighting = true;
 
-	@OriginalMember(owner = "client!od", name = "e", descriptor = "I")
-	public static int anInt4246 = 0;
-
-	@OriginalMember(owner = "client!od", name = "g", descriptor = "S")
+    @OriginalMember(owner = "client!od", name = "g", descriptor = "S")
 	public static short aShort25 = 256;
 
 	@OriginalMember(owner = "client!od", name = "i", descriptor = "I")

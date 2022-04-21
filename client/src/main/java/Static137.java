@@ -105,7 +105,7 @@ public final class Static137 {
 					if (GlRenderer.enabled) {
 						Static129.anIntArray297 = null;
 					} else {
-						Static260.aClass27_2.method4189();
+						Static260.frameBuffer.method4189();
 					}
 					return false;
 				}
@@ -113,7 +113,7 @@ public final class Static137 {
 					if (GlRenderer.enabled) {
 						Static129.anIntArray297 = null;
 					} else {
-						Static260.aClass27_2.method4189();
+						Static260.frameBuffer.method4189();
 					}
 					return false;
 				}
@@ -134,7 +134,7 @@ public final class Static137 {
 		if (GlRenderer.enabled) {
 			Static129.anIntArray297 = null;
 		} else {
-			Static260.aClass27_2.method4189();
+			Static260.frameBuffer.method4189();
 		}
 		Static56.aClass3_Sub2_Sub1_Sub1_1 = null;
 		return true;

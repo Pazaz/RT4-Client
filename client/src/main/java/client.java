@@ -67,16 +67,16 @@ public final class client extends GameShell {
 			Static47.aClass100_991 = Static186.aClass100_827;
 			@Pc(146) client local146 = new client();
 			Static215.aClient1 = local146;
-			local146.method936(Static81.modeWhat + 32, "runescape");
-			Static39.aFrame1.setLocation(40, 40);
+			local146.startApplication(Static81.modeWhat + 32, "runescape");
+			GameShell.frame.setLocation(40, 40);
 		} catch (@Pc(167) Exception local167) {
-			Static89.method1839(null, local167);
+			Static89.report(null, local167);
 		}
 	}
 
 	@OriginalMember(owner = "client!client", name = "f", descriptor = "(I)V")
 	@Override
-	protected final void method934() {
+	protected final void mainRedraw() {
 		if (Static244.anInt5370 == 1000) {
 			return;
 		}
@@ -84,39 +84,39 @@ public final class client extends GameShell {
 		if (local15 && Static144.aBoolean173 && Static11.aClass62_1 != null) {
 			Static11.aClass62_1.method3570();
 		}
-		if ((Static244.anInt5370 == 30 || Static244.anInt5370 == 10) && (Static35.aBoolean66 || Static97.aLong89 != 0L && Static97.aLong89 < MonotonicClock.currentTimeMillis())) {
-			Static241.method4540(Static35.aBoolean66, Static144.method2736(), Static114.anInt5831, Static22.anInt729);
+		if ((Static244.anInt5370 == 30 || Static244.anInt5370 == 10) && (GameShell.replaceCanvas || Static97.aLong89 != 0L && Static97.aLong89 < MonotonicClock.currentTimeMillis())) {
+			Static241.method4540(GameShell.replaceCanvas, Static144.method2736(), Static114.anInt5831, Static22.anInt729);
 		}
 		@Pc(80) int local80;
 		@Pc(84) int local84;
-		if (Static69.aFrame2 == null) {
+		if (GameShell.fullScreenFrame == null) {
 			@Pc(65) Container local65;
-			if (Static69.aFrame2 != null) {
-				local65 = Static69.aFrame2;
-			} else if (Static39.aFrame1 == null) {
-				local65 = Static71.signLink.anApplet2;
+			if (GameShell.fullScreenFrame != null) {
+				local65 = GameShell.fullScreenFrame;
+			} else if (GameShell.frame == null) {
+				local65 = GameShell.signLink.applet;
 			} else {
-				local65 = Static39.aFrame1;
+				local65 = GameShell.frame;
 			}
 			local80 = local65.getSize().width;
 			local84 = local65.getSize().height;
-			if (local65 == Static39.aFrame1) {
-				@Pc(90) Insets local90 = Static39.aFrame1.getInsets();
+			if (local65 == GameShell.frame) {
+				@Pc(90) Insets local90 = GameShell.frame.getInsets();
 				local80 -= local90.right + local90.left;
 				local84 -= local90.top + local90.bottom;
 			}
-			if (local80 != Static72.anInt2046 || local84 != Static122.anInt3045) {
+			if (local80 != GameShell.frameWidth || local84 != GameShell.frameHeight) {
 				Static203.method3662();
 				Static97.aLong89 = MonotonicClock.currentTimeMillis() + 500L;
 			}
 		}
-		if (Static69.aFrame2 != null && !Static26.focus && (Static244.anInt5370 == 30 || Static244.anInt5370 == 10)) {
+		if (GameShell.fullScreenFrame != null && !GameShell.focus && (Static244.anInt5370 == 30 || Static244.anInt5370 == 10)) {
 			Static241.method4540(false, Static214.anInt5581, -1, -1);
 		}
 		@Pc(158) boolean local158 = false;
-		if (Static69.aBoolean115) {
+		if (GameShell.fullRedraw) {
 			local158 = true;
-			Static69.aBoolean115 = false;
+			GameShell.fullRedraw = false;
 		}
 		if (local158) {
 			Static139.method2704();
@@ -162,25 +162,25 @@ public final class client extends GameShell {
 			@Pc(388) Graphics local388;
 			if ((Static244.anInt5370 == 30 || Static244.anInt5370 == 10) && Static199.anInt4672 == 0 && !local158) {
 				try {
-					local388 = Static154.canvas.getGraphics();
+					local388 = GameShell.canvas.getGraphics();
 					for (local84 = 0; local84 < Static24.anInt766; local84++) {
 						if (Static31.aBooleanArray29[local84]) {
-							Static260.aClass27_2.method4191(Static224.anIntArray443[local84], Static264.anIntArray410[local84], Static67.anIntArray320[local84], local388, Static50.anIntArray133[local84]);
+							Static260.frameBuffer.method4191(Static224.anIntArray443[local84], Static264.anIntArray410[local84], Static67.anIntArray320[local84], local388, Static50.anIntArray133[local84]);
 							Static31.aBooleanArray29[local84] = false;
 						}
 					}
 				} catch (@Pc(423) Exception local423) {
-					Static154.canvas.repaint();
+					GameShell.canvas.repaint();
 				}
 			} else if (Static244.anInt5370 != 0) {
 				try {
-					local388 = Static154.canvas.getGraphics();
-					Static260.aClass27_2.method4186(local388);
+					local388 = GameShell.canvas.getGraphics();
+					Static260.frameBuffer.method4186(local388);
 					for (local84 = 0; local84 < Static24.anInt766; local84++) {
 						Static31.aBooleanArray29[local84] = false;
 					}
 				} catch (@Pc(453) Exception local453) {
-					Static154.canvas.repaint();
+					GameShell.canvas.repaint();
 				}
 			}
 		}
@@ -189,22 +189,22 @@ public final class client extends GameShell {
 		}
 		if (Static164.aBoolean191 && Static244.anInt5370 == 10 && Static154.topLevelInterace != -1) {
 			Static164.aBoolean191 = false;
-			Static203.method3663(Static71.signLink);
+			Static203.method3663(GameShell.signLink);
 		}
 	}
 
 	@OriginalMember(owner = "client!client", name = "c", descriptor = "(B)V")
 	@Override
-	protected final void method928() {
+	protected final void mainQuit() {
 		if (GlRenderer.enabled) {
 			GlRenderer.quit();
 		}
-		if (Static69.aFrame2 != null) {
-			Static25.method714(Static69.aFrame2, Static71.signLink);
-			Static69.aFrame2 = null;
+		if (GameShell.fullScreenFrame != null) {
+			Static25.method714(GameShell.fullScreenFrame, GameShell.signLink);
+			GameShell.fullScreenFrame = null;
 		}
-		if (Static71.signLink != null) {
-			Static71.signLink.method5121(this.getClass());
+		if (GameShell.signLink != null) {
+			GameShell.signLink.method5121(this.getClass());
 		}
 		if (Static178.instance != null) {
 			Static178.instance.aBoolean151 = false;
@@ -214,10 +214,10 @@ public final class client extends GameShell {
 			Static124.socket.method2834();
 			Static124.socket = null;
 		}
-		Static31.method847(Static154.canvas);
-		Static223.method3866(Static154.canvas);
+		Static31.method847(GameShell.canvas);
+		Static223.method3866(GameShell.canvas);
 		if (Static71.mouseWheel != null) {
-			Static71.mouseWheel.method3291(Static154.canvas);
+			Static71.mouseWheel.method3291(GameShell.canvas);
 		}
 		Static6.method82();
 		Static251.method4277();
@@ -254,7 +254,7 @@ public final class client extends GameShell {
 	@OriginalMember(owner = "client!client", name = "init", descriptor = "()V")
 	@Override
 	public final void init() {
-		if (!this.method925()) {
+		if (!this.isHostnameValid()) {
 			return;
 		}
 		Static187.worldListId = Integer.parseInt(this.getParameter("worldid"));
@@ -320,19 +320,19 @@ public final class client extends GameShell {
 			Static178.aBoolean203 = false;
 		}
 		Static215.aClient1 = this;
-		this.method937(Static81.modeWhat + 32);
+		this.startApplet(Static81.modeWhat + 32);
 	}
 
 	@OriginalMember(owner = "client!client", name = "g", descriptor = "(I)V")
 	@Override
-	protected final void method935() {
+	protected final void mainInit() {
 		Static203.method3662();
 		Static86.js5CacheQueue = new Js5CacheQueue();
 		Static107.js5NetQueue = new Js5NetQueue();
 		if (Static81.modeWhat != 0) {
 			Static51.aByteArrayArray8 = new byte[50][];
 		}
-		Static80.read(Static71.signLink); // preferences
+		Static80.read(GameShell.signLink); // preferences
 		if (Static83.modeWhere == 0) {
 			Static143.worldListHostname = GlobalConfig.DEFAULT_HOSTNAME; // this.getCodeBase().getHost();
 			Static97.worldListAlternatePort = GlobalConfig.ALTERNATE_PORT + 1;
@@ -370,26 +370,26 @@ public final class client extends GameShell {
 			Static125.worldId = Static187.worldListId;
 		}
 		Static156.init(); // keyboard
-		Static19.start(Static154.canvas); // keyboard
-		Static88.start(Static154.canvas); // mouse
+		Static19.start(GameShell.canvas); // keyboard
+		Static88.start(GameShell.canvas); // mouse
 		Static71.mouseWheel = Static44.create();
 		if (Static71.mouseWheel != null) {
-			Static71.mouseWheel.start(Static154.canvas);
+			Static71.mouseWheel.start(GameShell.canvas);
 		}
 		Static7.anInt986 = SignLink.anInt5928;
 		try {
-			if (Static71.signLink.cacheData != null) {
-				Static172.cacheData = new BufferedFile(Static71.signLink.cacheData, 5200, 0);
+			if (GameShell.signLink.cacheData != null) {
+				Static172.cacheData = new BufferedFile(GameShell.signLink.cacheData, 5200, 0);
 				for (@Pc(162) int i = 0; i < 28; i++) {
-					Static47.cacheIndexes[i] = new BufferedFile(Static71.signLink.cacheIndexes[i], 6000, 0);
+					Static47.cacheIndexes[i] = new BufferedFile(GameShell.signLink.cacheIndexes[i], 6000, 0);
 				}
-				Static190.cacheMasterIndex = new BufferedFile(Static71.signLink.cacheMasterIndex, 6000, 0);
+				Static190.cacheMasterIndex = new BufferedFile(GameShell.signLink.cacheMasterIndex, 6000, 0);
 				Static148.masterCache = new Cache(255, Static172.cacheData, Static190.cacheMasterIndex, 500000);
-				Static121.uid = new BufferedFile(Static71.signLink.uid, 24, 0);
-				Static71.signLink.cacheIndexes = null;
-				Static71.signLink.cacheMasterIndex = null;
-				Static71.signLink.uid = null;
-				Static71.signLink.cacheData = null;
+				Static121.uid = new BufferedFile(GameShell.signLink.uid, 24, 0);
+				GameShell.signLink.cacheIndexes = null;
+				GameShell.signLink.cacheMasterIndex = null;
+				GameShell.signLink.uid = null;
+				GameShell.signLink.cacheData = null;
 			}
 		} catch (@Pc(220) IOException ex) {
 			Static121.uid = null;
@@ -405,7 +405,7 @@ public final class client extends GameShell {
 
 	@OriginalMember(owner = "client!client", name = "c", descriptor = "(I)V")
 	@Override
-	protected final void method929() {
+	protected final void reset() {
 	}
 
 	@OriginalMember(owner = "client!client", name = "a", descriptor = "(ZI)V")
@@ -425,7 +425,7 @@ public final class client extends GameShell {
 		}
 		Static178.anInt4247++;
 		if (Static154.topLevelInterace != -1) {
-			Static57.method1320(0, 0, 0, Static48.anInt1448, Static154.topLevelInterace, 0, Static254.anInt5554);
+			Static57.method1320(0, 0, 0, GameShell.canvasWidth, Static154.topLevelInterace, 0, GameShell.canvasHeight);
 		}
 		Static119.transmitTimer++;
 		if (GlRenderer.enabled) {
@@ -554,22 +554,22 @@ public final class client extends GameShell {
 				Static22.js5ConnectDelay = 3000;
 			}
 			if (Static107.js5NetQueue.errors >= 2 && Static107.js5NetQueue.response == 6) {
-				this.method927("js5connect_outofdate");
+				this.error("js5connect_outofdate");
 				Static244.anInt5370 = 1000;
 				return;
 			}
 			if (Static107.js5NetQueue.errors >= 4 && Static107.js5NetQueue.response == -1) {
-				this.method927("js5crc");
+				this.error("js5crc");
 				Static244.anInt5370 = 1000;
 				return;
 			}
 			if (Static107.js5NetQueue.errors >= 4 && (Static244.anInt5370 == 0 || Static244.anInt5370 == 5)) {
 				if (Static107.js5NetQueue.response == 7 || Static107.js5NetQueue.response == 9) {
-					this.method927("js5connect_full");
+					this.error("js5connect_full");
 				} else if (Static107.js5NetQueue.response > 0) {
-					this.method927("js5connect");
+					this.error("js5connect");
 				} else {
-					this.method927("js5io");
+					this.error("js5io");
 				}
 				Static244.anInt5370 = 1000;
 				return;
@@ -582,7 +582,7 @@ public final class client extends GameShell {
 		}
 		try {
 			if (Static4.js5ConnectState == 0) {
-				Static37.js5SocketRequest = Static71.signLink.openSocket(Static60.hostname, Static209.port);
+				Static37.js5SocketRequest = GameShell.signLink.openSocket(Static60.hostname, Static209.port);
 				Static4.js5ConnectState++;
 			}
 			if (Static4.js5ConnectState == 1) {
@@ -595,7 +595,7 @@ public final class client extends GameShell {
 				}
 			}
 			if (Static4.js5ConnectState == 2) {
-				Static206.js5Socket = new BufferedSocket((Socket) Static37.js5SocketRequest.result, Static71.signLink);
+				Static206.js5Socket = new BufferedSocket((Socket) Static37.js5SocketRequest.result, GameShell.signLink);
 				@Pc(194) Buffer buffer = new Buffer(5);
 				buffer.p1(15);
 				buffer.p4(530);
@@ -733,10 +733,10 @@ public final class client extends GameShell {
 			Static41.method1045(Static99.aBoolean143);
 			Static148.aClass3_Sub3_Sub4_1 = new MidiPcmStream();
 			Static148.aClass3_Sub3_Sub4_1.method4420();
-			Static11.aClass62_1 = Static107.method2262(22050, Static71.signLink, Static154.canvas, 0);
+			Static11.aClass62_1 = Static107.method2262(22050, GameShell.signLink, GameShell.canvas, 0);
 			Static11.aClass62_1.method3566(Static148.aClass3_Sub3_Sub4_1);
 			Static34.method876(Static148.aClass3_Sub3_Sub4_1, Static138.aClass153_51, Static137.aClass153_49, Static248.aClass153_75);
-			Static147.aClass62_2 = Static107.method2262(2048, Static71.signLink, Static154.canvas, 1);
+			Static147.aClass62_2 = Static107.method2262(2048, GameShell.signLink, GameShell.canvas, 1);
 			Static204.aClass3_Sub3_Sub2_1 = new MixerPcmStream();
 			Static147.aClass62_2.method3566(Static204.aClass3_Sub3_Sub2_1);
 			Static56.aClass156_1 = new Resampler(22050, Static44.anInt1404);
@@ -866,7 +866,7 @@ public final class client extends GameShell {
 			}
 		} else if (Static166.anInt4051 == 110) {
 			Static178.instance = new MouseRecorder();
-			Static71.signLink.method5130(10, Static178.instance);
+			GameShell.signLink.startThread(10, Static178.instance);
 			Static126.aClass100_602 = LocalizedText.MAINLOAD110B;
 			Static199.anInt4670 = 75;
 			Static166.anInt4051 = 120;
@@ -906,14 +906,14 @@ public final class client extends GameShell {
 				Static199.anInt4670 = 95;
 				Static126.aClass100_602 = LocalizedText.MAINLOAD135;
 			} else if (local98 == 7 || local98 == 9) {
-				this.method927("worldlistfull");
+				this.error("worldlistfull");
 				Static196.method3534(1000);
 			} else if (Static61.aBoolean109) {
 				Static126.aClass100_602 = LocalizedText.MAINLOAD135B;
 				Static166.anInt4051 = 140;
 				Static199.anInt4670 = 96;
 			} else {
-				this.method927("worldlistio_" + local98);
+				this.error("worldlistio_" + local98);
 				Static196.method3534(1000);
 			}
 		} else if (Static166.anInt4051 == 140) {
@@ -937,7 +937,7 @@ public final class client extends GameShell {
 				Static141.anInt3474 = 0;
 			}
 			Static164.aBoolean191 = true;
-			Static203.method3663(Static71.signLink);
+			Static203.method3663(GameShell.signLink);
 			Static241.method4540(false, Static214.anInt5581, -1, -1);
 			Static199.anInt4670 = 100;
 			Static166.anInt4051 = 160;
@@ -949,7 +949,7 @@ public final class client extends GameShell {
 
 	@OriginalMember(owner = "client!client", name = "a", descriptor = "(B)V")
 	@Override
-	protected final void method921() {
+	protected final void mainLoop() {
 		if (Static244.anInt5370 == 1000) {
 			return;
 		}

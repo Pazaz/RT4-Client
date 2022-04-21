@@ -262,7 +262,7 @@ public final class Static144 {
 
 	@OriginalMember(owner = "client!le", name = "a", descriptor = "(I)I")
 	public static int method2736() {
-		if (Static69.aFrame2 != null) {
+		if (GameShell.fullScreenFrame != null) {
 			return 3;
 		} else if (GlRenderer.enabled && Static124.aBoolean156) {
 			return 2;

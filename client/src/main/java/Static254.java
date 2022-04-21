@@ -7,10 +7,7 @@ public final class Static254 {
 	@OriginalMember(owner = "client!uj", name = "x", descriptor = "[I")
 	public static int[] anIntArray488;
 
-	@OriginalMember(owner = "client!uj", name = "B", descriptor = "I")
-	public static int anInt5554;
-
-	@OriginalMember(owner = "client!uj", name = "E", descriptor = "I")
+    @OriginalMember(owner = "client!uj", name = "E", descriptor = "I")
 	public static int anInt5556;
 
 	@OriginalMember(owner = "client!uj", name = "H", descriptor = "I")

@@ -26,9 +26,6 @@ public final class Static230 {
 	@OriginalMember(owner = "client!sj", name = "w", descriptor = "Lclient!na;")
 	public static final JagString aClass100_978 = Static28.parse("<)4col>");
 
-	@OriginalMember(owner = "client!sj", name = "F", descriptor = "Lclient!rc;")
-	public static GameShell anApplet_Sub1_1 = null;
-
 	@OriginalMember(owner = "client!sj", name = "H", descriptor = "I")
 	public static int anInt5161 = 0;
 
@@ -153,19 +150,19 @@ public final class Static230 {
 	@OriginalMember(owner = "client!sj", name = "a", descriptor = "(ILclient!na;)V")
 	public static void method3954(@OriginalArg(1) JagString arg0) {
 		Static47.aClass100_991 = arg0;
-		if (Static71.signLink.anApplet2 == null) {
+		if (GameShell.signLink.applet == null) {
 			return;
 		}
 		try {
-			@Pc(17) JagString local17 = Static272.aClass100_989.method3153(Static71.signLink.anApplet2);
-			@Pc(23) JagString local23 = Static246.aClass100_1029.method3153(Static71.signLink.anApplet2);
+			@Pc(17) JagString local17 = Static272.aClass100_989.method3153(GameShell.signLink.applet);
+			@Pc(23) JagString local23 = Static246.aClass100_1029.method3153(GameShell.signLink.applet);
 			@Pc(48) JagString local48 = Static34.method882(new JagString[] { local17, Static142.aClass100_667, arg0, Static276.aClass100_1095, local23 });
 			if (arg0.length() == 0) {
 				local48 = Static34.method882(new JagString[] { local48, Static245.aClass100_1018 });
 			} else {
 				local48 = Static34.method882(new JagString[] { local48, Static263.aClass100_1082, Static33.method873(MonotonicClock.currentTimeMillis() + 94608000000L), Static64.aClass100_431, Static154.method2929(94608000L) });
 			}
-			Static34.method882(new JagString[] { Static221.aClass100_821, local48, Static223.aClass100_946 }).method3134(Static71.signLink.anApplet2);
+			Static34.method882(new JagString[] { Static221.aClass100_821, local48, Static223.aClass100_946 }).method3134(GameShell.signLink.applet);
 		} catch (@Pc(124) Throwable local124) {
 		}
 	}

@@ -110,7 +110,7 @@ public final class Static89 {
 	}
 
 	@OriginalMember(owner = "client!ha", name = "a", descriptor = "(Ljava/lang/String;Ljava/lang/Throwable;B)V")
-	public static void method1839(@OriginalArg(0) String arg0, @OriginalArg(1) Throwable arg1) {
+	public static void report(@OriginalArg(0) String arg0, @OriginalArg(1) Throwable arg1) {
 		try {
 			@Pc(13) String local13 = "";
 			if (arg1 != null) {
@@ -127,10 +127,10 @@ public final class Static89 {
 			local13 = Static40.method1014("@", "%40", local13);
 			local13 = Static40.method1014("&", "%26", local13);
 			local13 = Static40.method1014("#", "%23", local13);
-			if (Static69.aClass213_4.anApplet2 == null) {
+			if (Static69.signLink.applet == null) {
 				return;
 			}
-			@Pc(109) PrivilegedRequest local109 = Static69.aClass213_4.method5118(new URL(Static69.aClass213_4.anApplet2.getCodeBase(), "clienterror.ws?c=" + Static131.anInt3252 + "&u=" + Static101.aLong98 + "&v1=" + SignLink.aString20 + "&v2=" + SignLink.aString14 + "&e=" + local13));
+			@Pc(109) PrivilegedRequest local109 = Static69.signLink.method5118(new URL(Static69.signLink.applet.getCodeBase(), "clienterror.ws?c=" + GameShell.anInt3252 + "&u=" + Static101.aLong98 + "&v1=" + SignLink.javaVendor + "&v2=" + SignLink.javaVersion + "&e=" + local13));
 			while (local109.status == 0) {
 				Static231.sleep(1L);
 			}

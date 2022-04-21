@@ -30,10 +30,10 @@ public final class AudioThread implements Runnable {
 					}
 				}
 				Static231.sleep(10L);
-				Static140.method2708(this.aClass213_1, null);
+				GameShell.flush(this.aClass213_1, null);
 			}
 		} catch (@Pc(43) Exception local43) {
-			Static89.method1839(null, local43);
+			Static89.report(null, local43);
 		} finally {
 			this.aBoolean64 = false;
 		}
