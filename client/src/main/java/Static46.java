@@ -197,7 +197,7 @@ public final class Static46 {
 		@Pc(21) GL2 gl = GlRenderer.gl;
 		gl.glEnable(GL2.GL_SCISSOR_TEST);
 		if (clipX <= anInt1440 && clipY <= anInt1441) {
-			gl.glScissor((int)(clipX * GameShell.canvasScale + 0.5d), (int)((GlRenderer.canvasHeight - anInt1441) * GameShell.canvasScale + 0.5d), (int)((anInt1440 - clipX) * GameShell.canvasScale + 0.5d), (int)((anInt1441 - clipY) * GameShell.canvasScale + 0.5d));
+			gl.glScissor((int)(clipX * GameShell.canvasScale), (int)((GlRenderer.canvasHeight - anInt1441) * GameShell.canvasScale - 0.5d), (int)((anInt1440 - clipX) * GameShell.canvasScale), (int)((anInt1441 - clipY) * GameShell.canvasScale - 0.5d));
 		} else {
 			gl.glScissor(0, 0, 0, 0);
 		}
@@ -262,7 +262,7 @@ public final class Static46 {
 		@Pc(27) GL2 local27 = GlRenderer.gl;
 		local27.glEnable(GL2.GL_SCISSOR_TEST);
 		if (clipX <= anInt1440 && clipY <= anInt1441) {
-			local27.glScissor((int)(clipX * GameShell.canvasScale + 0.5d), (int)((GlRenderer.canvasHeight - anInt1441) * GameShell.canvasScale + 0.5d), (int)((anInt1440 - clipX) * GameShell.canvasScale + 0.5d), (int)((anInt1441 - clipY) * GameShell.canvasScale + 0.5d));
+			local27.glScissor((int)(clipX * GameShell.canvasScale), (int)((GlRenderer.canvasHeight - anInt1441) * GameShell.canvasScale - 0.5d), (int)((anInt1440 - clipX) * GameShell.canvasScale), (int)((anInt1441 - clipY) * GameShell.canvasScale - 0.5d));
 		} else {
 			local27.glScissor(0, 0, 0, 0);
 		}
