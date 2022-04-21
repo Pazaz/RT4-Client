@@ -1,7 +1,7 @@
 import java.awt.Canvas;
-import java.io.UnsupportedEncodingException;
 import java.nio.ByteOrder;
 import java.nio.IntBuffer;
+import java.nio.charset.StandardCharsets;
 
 import com.jogamp.nativewindow.awt.AWTGraphicsConfiguration;
 import com.jogamp.nativewindow.awt.JAWTWindow;
@@ -87,7 +87,7 @@ public final class GlRenderer {
 	private static int textureCombineAlphaMode = 0;
 
 	@OriginalMember(owner = "client!tf", name = "i", descriptor = "I")
-	private static int textureCombineeRgbMode = 0;
+	private static int textureCombineRgbMode = 0;
 
 	@OriginalMember(owner = "client!tf", name = "j", descriptor = "F")
 	private static float aFloat31 = 0.0F;
@@ -130,11 +130,7 @@ public final class GlRenderer {
 	@OriginalMember(owner = "client!tf", name = "a", descriptor = "(Ljava/lang/String;)Lclient!na;")
 	private static JagString method4147(@OriginalArg(0) String arg0) {
 		@Pc(3) byte[] local3;
-		try {
-			local3 = arg0.getBytes("ISO-8859-1");
-		} catch (@Pc(5) UnsupportedEncodingException local5) {
-			local3 = arg0.getBytes();
-		}
+		local3 = arg0.getBytes(StandardCharsets.ISO_8859_1);
 		return Static10.decodeString(local3, local3.length, 0);
 	}
 
@@ -239,7 +235,7 @@ public final class GlRenderer {
 		textureId = -1;
 		gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_MODE, GL2.GL_COMBINE);
 		gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_MODULATE);
-		textureCombineeRgbMode = 0;
+		textureCombineRgbMode = 0;
 		gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_ALPHA, GL2.GL_MODULATE);
 		textureCombineAlphaMode = 0;
 		gl.glEnable(GL2.GL_LIGHTING);
@@ -286,16 +282,16 @@ public final class GlRenderer {
 	}
 
 	@OriginalMember(owner = "client!tf", name = "b", descriptor = "(Z)V")
-	public static void setDepthTestEnabled(@OriginalArg(0) boolean arg0) {
-		if (arg0 == depthTestEnabled) {
+	public static void setDepthTestEnabled(@OriginalArg(0) boolean enabled) {
+		if (enabled == depthTestEnabled) {
 			return;
 		}
-		if (arg0) {
+		if (enabled) {
 			gl.glEnable(GL2.GL_DEPTH_TEST);
 		} else {
 			gl.glDisable(GL2.GL_DEPTH_TEST);
 		}
-		depthTestEnabled = arg0;
+		depthTestEnabled = enabled;
 	}
 
 	@OriginalMember(owner = "client!tf", name = "a", descriptor = "(F)V")
@@ -373,16 +369,16 @@ public final class GlRenderer {
 	}
 
 	@OriginalMember(owner = "client!tf", name = "c", descriptor = "(Z)V")
-	public static void setLightingEnabled(@OriginalArg(0) boolean arg0) {
-		if (arg0 == lightingEnabled) {
+	public static void setLightingEnabled(@OriginalArg(0) boolean enabled) {
+		if (enabled == lightingEnabled) {
 			return;
 		}
-		if (arg0) {
+		if (enabled) {
 			gl.glEnable(GL2.GL_LIGHTING);
 		} else {
 			gl.glDisable(GL2.GL_LIGHTING);
 		}
-		lightingEnabled = arg0;
+		lightingEnabled = enabled;
 	}
 
 	@OriginalMember(owner = "client!tf", name = "l", descriptor = "()F")
@@ -700,6 +696,7 @@ public final class GlRenderer {
 				window.unlockSurface();
 			}
             gl = GLContext.getCurrentGL().getGL2();
+			gl.glLineWidth((float) GameShell.canvasScale);
             new GLUgl2es1();
 			enabled = true;
 			canvasWidth = canvas.getSize().width;
@@ -744,10 +741,6 @@ public final class GlRenderer {
 
 	public static int topMargin;
 
-	public static int topPadding;
-
-	public static int leftPadding;
-
 	public static int viewportWidth;
 
 	public static int viewportHeight;
@@ -786,29 +779,29 @@ public final class GlRenderer {
 	}
 
 	@OriginalMember(owner = "client!tf", name = "d", descriptor = "(I)V")
-	public static void setTextureCombineRgbMode(@OriginalArg(0) int arg0) {
-		if (arg0 == textureCombineeRgbMode) {
+	public static void setTextureCombineRgbMode(@OriginalArg(0) int mode) {
+		if (mode == textureCombineRgbMode) {
 			return;
 		}
-		if (arg0 == 0) {
+		if (mode == 0) {
 			gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_MODULATE);
 		}
-		if (arg0 == 1) {
+		if (mode == 1) {
 			gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_REPLACE);
 		}
-		if (arg0 == 2) {
+		if (mode == 2) {
 			gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_ADD);
 		}
-		if (arg0 == 3) {
+		if (mode == 3) {
 			gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_SUBTRACT);
 		}
-		if (arg0 == 4) {
+		if (mode == 4) {
 			gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_ADD_SIGNED);
 		}
-		if (arg0 == 5) {
+		if (mode == 5) {
 			gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_INTERPOLATE);
 		}
-		textureCombineeRgbMode = arg0;
+		textureCombineRgbMode = mode;
 	}
 
 	@OriginalMember(owner = "client!tf", name = "s", descriptor = "()V")
