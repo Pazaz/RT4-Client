@@ -755,8 +755,8 @@ public final class GlRenderer {
 
 	@OriginalMember(owner = "client!gi", name = "b", descriptor = "()V")
 	private static void resizeViewport() {
-		gl.glViewport((int) (leftMargin * GameShell.canvasScale), (int) (topMargin * GameShell.canvasScale - 0.5d),
-			(int) (viewportWidth * GameShell.canvasScale), (int) (viewportHeight * GameShell.canvasScale - 0.5d));
+		gl.glViewport((int) (leftMargin * GameShell.canvasScale + GameShell.subpixelX), (int) (topMargin * GameShell.canvasScale + GameShell.subpixelY),
+			(int) (viewportWidth * GameShell.canvasScale + GameShell.subpixelX), (int) (viewportHeight * GameShell.canvasScale + GameShell.subpixelY));
 	}
 
 	@OriginalMember(owner = "client!tf", name = "a", descriptor = "(IIIIII)V")
