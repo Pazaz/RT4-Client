@@ -33,8 +33,8 @@ public final class Static271 {
 	public static void method4598(@OriginalArg(0) Buffer arg0) {
 		if (Static121.uid != null) {
 			try {
-				Static121.uid.method1459(0L);
-				Static121.uid.method1458(arg0.data, arg0.offset, 24);
+				Static121.uid.seek(0L);
+				Static121.uid.write(arg0.data, arg0.offset, 24);
 			} catch (@Pc(16) Exception local16) {
 			}
 		}

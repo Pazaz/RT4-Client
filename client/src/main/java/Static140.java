@@ -16,8 +16,8 @@ public final class Static140 {
 		@Pc(15) byte[] local15 = new byte[24];
 		if (Static121.uid != null) {
 			try {
-				Static121.uid.method1459(0L);
-				Static121.uid.method1457(local15);
+				Static121.uid.seek(0L);
+				Static121.uid.read(local15);
 				@Pc(28) int local28;
 				for (local28 = 0; local28 < 24 && local15[local28] == 0; local28++) {
 				}

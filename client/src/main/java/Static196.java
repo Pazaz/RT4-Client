@@ -32,7 +32,7 @@ public final class Static196 {
 		}
 		@Pc(37) boolean local37 = arg0 == 5 || arg0 == 10 || arg0 == 28;
 		if (arg0 != 40 && Static233.aClass95_4 != null) {
-			Static233.aClass95_4.method2834();
+			Static233.aClass95_4.close();
 			Static233.aClass95_4 = null;
 		}
 		if (arg0 == 25 || arg0 == 28) {

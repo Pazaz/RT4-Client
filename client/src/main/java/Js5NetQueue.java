@@ -64,7 +64,7 @@ public final class Js5NetQueue {
 			this.anInt2962 += local19;
 			if (this.anInt2962 > 30000) {
 				try {
-					this.aClass95_1.method2834();
+					this.aClass95_1.close();
 				} catch (@Pc(43) Exception local43) {
 				}
 				this.aClass95_1 = null;
@@ -74,7 +74,7 @@ public final class Js5NetQueue {
 			return this.method2328() == 0 && this.method2321() == 0;
 		}
 		try {
-			this.aClass95_1.method2832();
+			this.aClass95_1.checkError();
 			@Pc(75) Js5NetRequest local75;
 			for (local75 = (Js5NetRequest) this.aClass16_2.method795(); local75 != null; local75 = (Js5NetRequest) this.aClass16_2.method797()) {
 				this.aClass3_Sub15_4.offset = 0;
@@ -117,7 +117,7 @@ public final class Js5NetQueue {
 					if (local235 > local19) {
 						local235 = local19;
 					}
-					this.aClass95_1.method2827(this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.offset, local235, this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.data);
+					this.aClass95_1.read(this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.offset, local235, this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.data);
 					if (this.aByte8 != 0) {
 						for (local283 = 0; local283 < local235; local283++) {
 							this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.data[this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.offset + local283] = (byte) (this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.data[this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.offset + local283] ^ this.aByte8);
@@ -137,7 +137,7 @@ public final class Js5NetQueue {
 					if (local19 < local228) {
 						local228 = local19;
 					}
-					this.aClass95_1.method2827(this.aClass3_Sub15_5.offset, local228, this.aClass3_Sub15_5.data);
+					this.aClass95_1.read(this.aClass3_Sub15_5.offset, local228, this.aClass3_Sub15_5.data);
 					if (this.aByte8 != 0) {
 						for (local235 = 0; local235 < local228; local235++) {
 							this.aClass3_Sub15_5.data[local235 + this.aClass3_Sub15_5.offset] ^= this.aByte8;
@@ -186,7 +186,7 @@ public final class Js5NetQueue {
 			return true;
 		} catch (@Pc(644) IOException local644) {
 			try {
-				this.aClass95_1.method2834();
+				this.aClass95_1.close();
 			} catch (@Pc(650) Exception local650) {
 			}
 			this.response = -2;
@@ -208,7 +208,7 @@ public final class Js5NetQueue {
 			this.aClass95_1.write(this.aClass3_Sub15_4.data, 4);
 		} catch (@Pc(39) IOException local39) {
 			try {
-				this.aClass95_1.method2834();
+				this.aClass95_1.close();
 			} catch (@Pc(45) Exception local45) {
 			}
 			this.errors++;
@@ -234,7 +234,7 @@ public final class Js5NetQueue {
 			this.aClass95_1.write(this.aClass3_Sub15_4.data, 4);
 		} catch (@Pc(42) IOException local42) {
 			try {
-				this.aClass95_1.method2834();
+				this.aClass95_1.close();
 			} catch (@Pc(48) Exception local48) {
 			}
 			this.errors++;
@@ -246,7 +246,7 @@ public final class Js5NetQueue {
 	@OriginalMember(owner = "client!jb", name = "c", descriptor = "(I)V")
 	public final void method2323() {
 		if (this.aClass95_1 != null) {
-			this.aClass95_1.method2833();
+			this.aClass95_1.breakConnection();
 		}
 	}
 
@@ -254,7 +254,7 @@ public final class Js5NetQueue {
 	public final void loggedOut(@OriginalArg(0) boolean arg0, @OriginalArg(1) BufferedSocket arg1) {
 		if (this.aClass95_1 != null) {
 			try {
-				this.aClass95_1.method2834();
+				this.aClass95_1.close();
 			} catch (@Pc(14) Exception local14) {
 			}
 			this.aClass95_1 = null;
@@ -279,7 +279,7 @@ public final class Js5NetQueue {
 								this.aClass95_1.write(this.aClass3_Sub15_4.data, 4);
 							} catch (@Pc(107) IOException local107) {
 								try {
-									this.aClass95_1.method2834();
+									this.aClass95_1.close();
 								} catch (@Pc(113) Exception local113) {
 								}
 								this.response = -2;
@@ -306,7 +306,7 @@ public final class Js5NetQueue {
 	@OriginalMember(owner = "client!jb", name = "d", descriptor = "(B)V")
 	public final void method2327() {
 		try {
-			this.aClass95_1.method2834();
+			this.aClass95_1.close();
 		} catch (@Pc(17) Exception local17) {
 		}
 		this.response = -1;
@@ -323,7 +323,7 @@ public final class Js5NetQueue {
 	@OriginalMember(owner = "client!jb", name = "b", descriptor = "(Z)V")
 	public final void method2329() {
 		if (this.aClass95_1 != null) {
-			this.aClass95_1.method2834();
+			this.aClass95_1.close();
 		}
 	}
 
@@ -359,7 +359,7 @@ public final class Js5NetQueue {
 			this.aClass95_1.write(this.aClass3_Sub15_4.data, 4);
 		} catch (@Pc(37) IOException local37) {
 			try {
-				this.aClass95_1.method2834();
+				this.aClass95_1.close();
 			} catch (@Pc(43) Exception local43) {
 			}
 			this.errors++;

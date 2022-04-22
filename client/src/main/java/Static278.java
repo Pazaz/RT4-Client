@@ -196,7 +196,7 @@ public final class Static278 {
 	@OriginalMember(owner = "client!wj", name = "b", descriptor = "(B)V")
 	public static void method4653() {
 		if (Static124.socket != null) {
-			Static124.socket.method2834();
+			Static124.socket.close();
 			Static124.socket = null;
 		}
 		Static217.method3768();

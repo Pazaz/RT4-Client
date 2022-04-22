@@ -175,7 +175,7 @@ public final class client extends GameShell {
 			} else if (Static244.anInt5370 != 0) {
 				try {
 					local388 = GameShell.canvas.getGraphics();
-					Static260.frameBuffer.method4186(local388);
+					Static260.frameBuffer.draw(local388);
 					for (local84 = 0; local84 < Static24.anInt766; local84++) {
 						Static31.aBooleanArray29[local84] = false;
 					}
@@ -211,7 +211,7 @@ public final class client extends GameShell {
 		}
 		Static178.instance = null;
 		if (Static124.socket != null) {
-			Static124.socket.method2834();
+			Static124.socket.close();
 			Static124.socket = null;
 		}
 		Static31.method847(GameShell.canvas);
