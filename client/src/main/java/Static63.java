@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static63 {
 
 	@OriginalMember(owner = "client!fa", name = "a", descriptor = "I")
-	public static int anInt1942 = 0;
+	public static int onCardTexture = 0;
 
 	@OriginalMember(owner = "client!fa", name = "b", descriptor = "Lclient!ih;")
 	private static final LinkedList aClass69_48 = new LinkedList();
@@ -62,7 +62,7 @@ public final class Static63 {
 		aClass69_51.method2278();
 		anInt1945 = 0;
 		onCard2d = 0;
-		anInt1942 = 0;
+		onCardTexture = 0;
 	}
 
 	@OriginalMember(owner = "client!fa", name = "b", descriptor = "(III)V")
@@ -97,7 +97,7 @@ public final class Static63 {
 								while (true) {
 									local8 = (IntNode) aClass69_51.method2287();
 									if (local8 == null) {
-										if (anInt1945 + onCard2d + anInt1942 > 100663296 && MonotonicClock.currentTimeMillis() > aLong71 + 60000L) {
+										if (anInt1945 + onCard2d + onCardTexture > 100663296 && MonotonicClock.currentTimeMillis() > aLong71 + 60000L) {
 											System.gc();
 											aLong71 = MonotonicClock.currentTimeMillis();
 										}
@@ -108,7 +108,7 @@ public final class Static63 {
 								}
 							}
 							anIntArray151[local3++] = (int) local8.aLong192;
-							anInt1942 -= local8.anInt3141;
+							onCardTexture -= local8.anInt3141;
 							if (local3 == 1000) {
 								local1.glDeleteTextures(local3, anIntArray151, 0);
 								local3 = 0;

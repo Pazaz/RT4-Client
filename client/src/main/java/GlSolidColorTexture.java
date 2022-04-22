@@ -31,7 +31,7 @@ public final class GlSolidColorTexture extends SecondaryNode {
 		local9.glTexImage2D(GL2.GL_TEXTURE_2D, 0, GL2.GL_RGBA, 1, 1, 0, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, local61);
 		local9.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR);
 		local9.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
-		Static63.anInt1942 += local61.limit() - this.anInt5065;
+		Static63.onCardTexture += local61.limit() - this.anInt5065;
 		this.anInt5065 = local61.limit();
 	}
 

@@ -6,7 +6,6 @@ import java.nio.charset.StandardCharsets;
 import com.jogamp.nativewindow.awt.AWTGraphicsConfiguration;
 import com.jogamp.nativewindow.awt.JAWTWindow;
 import com.jogamp.opengl.*;
-import com.jogamp.opengl.glu.gl2es1.GLUgl2es1;
 import jogamp.newt.awt.NewtFactoryAWT;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
@@ -694,7 +693,6 @@ public final class GlRenderer {
 			}
             gl = GLContext.getCurrentGL().getGL2();
 			gl.glLineWidth((float) GameShell.canvasScale);
-            new GLUgl2es1();
 			enabled = true;
 			canvasWidth = canvas.getSize().width;
 			canvasHeight = canvas.getSize().height;
