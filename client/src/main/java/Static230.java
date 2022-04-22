@@ -114,11 +114,11 @@ public final class Static230 {
 			local14 = arg0.getBytes();
 		}
 		@Pc(23) JagString local23 = new JagString();
-		local23.aByteArray52 = local14;
-		local23.anInt4030 = 0;
+		local23.chars = local14;
+		local23.length = 0;
 		for (@Pc(31) int local31 = 0; local31 < local14.length; local31++) {
 			if (local14[local31] != 0) {
-				local14[local23.anInt4030++] = local14[local31];
+				local14[local23.length++] = local14[local31];
 			}
 		}
 		return local23;

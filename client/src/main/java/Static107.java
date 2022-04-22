@@ -44,19 +44,19 @@ public final class Static107 {
 
 	@OriginalMember(owner = "client!id", name = "a", descriptor = "(ILsignlink!ll;Ljava/awt/Component;II)Lclient!vh;")
 	public static AudioChannel method2262(@OriginalArg(0) int arg0, @OriginalArg(1) SignLink arg1, @OriginalArg(2) Component arg2, @OriginalArg(3) int arg3) {
-		if (Static44.anInt1404 == 0) {
+		if (Static44.sampleRate == 0) {
 			throw new IllegalStateException();
 		}
 		try {
 			@Pc(33) AudioChannel local33 = (AudioChannel) Class.forName("JavaAudioChannel").getDeclaredConstructor().newInstance();
 			local33.anInt4641 = arg0;
-			local33.anIntArray411 = new int[(Static164.aBoolean192 ? 2 : 1) * 256];
-			local33.method3576(arg2);
+			local33.anIntArray411 = new int[(AudioChannel.stereo ? 2 : 1) * 256];
+			local33.init(arg2);
 			local33.anInt4644 = (arg0 & -1024) + 1024;
 			if (local33.anInt4644 > 16384) {
 				local33.anInt4644 = 16384;
 			}
-			local33.method3562(local33.anInt4644);
+			local33.open(local33.anInt4644);
 			if (Static258.anInt5637 > 0 && Static60.aClass19_1 == null) {
 				Static60.aClass19_1 = new AudioThread();
 				Static60.aClass19_1.aClass213_1 = arg1;
@@ -72,11 +72,11 @@ public final class Static107 {
 		} catch (@Pc(109) Throwable local109) {
 			try {
 				@Pc(120) SignLinkAudioChannel local120 = new SignLinkAudioChannel(arg1, arg3);
-				local120.anIntArray411 = new int[(Static164.aBoolean192 ? 2 : 1) * 256];
+				local120.anIntArray411 = new int[(AudioChannel.stereo ? 2 : 1) * 256];
 				local120.anInt4641 = arg0;
-				local120.method3576(arg2);
+				local120.init(arg2);
 				local120.anInt4644 = 16384;
-				local120.method3562(local120.anInt4644);
+				local120.open(local120.anInt4644);
 				if (Static258.anInt5637 > 0 && Static60.aClass19_1 == null) {
 					Static60.aClass19_1 = new AudioThread();
 					Static60.aClass19_1.aClass213_1 = arg1;

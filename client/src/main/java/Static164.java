@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static164 {
 
-	@OriginalMember(owner = "client!na", name = "w", descriptor = "Z")
-	public static boolean aBoolean192;
-
 	@OriginalMember(owner = "client!na", name = "W", descriptor = "Z")
 	public static boolean newTab;
 

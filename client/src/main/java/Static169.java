@@ -47,7 +47,7 @@ public final class Static169 {
 
 	@OriginalMember(owner = "client!nf", name = "a", descriptor = "(IIIIILsignlink!ll;)Ljava/awt/Frame;")
 	public static Frame method3176(@OriginalArg(2) int arg0, @OriginalArg(3) int arg1, @OriginalArg(4) int arg2, @OriginalArg(5) SignLink arg3) {
-		if (!arg3.method5111()) {
+		if (!arg3.isFullScreenSupported()) {
 			return null;
 		}
 		@Pc(20) Class114[] local20 = Static197.method3558(arg3);
@@ -64,7 +64,7 @@ public final class Static169 {
 		if (!local27) {
 			return null;
 		}
-		@Pc(90) PrivilegedRequest local90 = arg3.method5129(arg0, arg1, arg2);
+		@Pc(90) PrivilegedRequest local90 = arg3.enterFullScreen(arg0, arg1, arg2);
 		while (local90.status == 0) {
 			Static231.sleep(10L);
 		}

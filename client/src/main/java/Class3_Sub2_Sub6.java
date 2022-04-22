@@ -78,7 +78,7 @@ public final class Class3_Sub2_Sub6 extends SecondaryNode {
 	@OriginalMember(owner = "client!cb", name = "a", descriptor = "(Lclient!wa;II)V")
 	private void method768(@OriginalArg(0) Buffer arg0, @OriginalArg(1) int arg1) {
 		if (arg1 == 1) {
-			this.aClass100Array35 = arg0.gjstr().method3147(60);
+			this.aClass100Array35 = arg0.gjstr().split(60);
 			return;
 		}
 		@Pc(32) int local32;

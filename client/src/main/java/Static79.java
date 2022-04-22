@@ -88,8 +88,8 @@ public final class Static79 {
 				local48[local32] = Static31.aByteArray12[(int) (local65 - arg0 * 37L)];
 			}
 			@Pc(88) JagString local88 = new JagString();
-			local88.aByteArray52 = local48;
-			local88.anInt4030 = local48.length;
+			local88.chars = local48;
+			local88.length = local48.length;
 			return local88;
 		}
 	}

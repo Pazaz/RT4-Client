@@ -132,7 +132,7 @@ public final class Static156 {
 			Static196.anIntArray407[189] = 26;
 			return;
 		}
-		if (SignLink.aMethod6 == null) {
+		if (SignLink.setFocusTraversalKeysEnabled == null) {
 			Static196.anIntArray407[192] = 58;
 			Static196.anIntArray407[222] = 59;
 		} else {

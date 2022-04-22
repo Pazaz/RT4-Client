@@ -7,7 +7,10 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!vh")
 public class AudioChannel {
 
-	@OriginalMember(owner = "client!vh", name = "h", descriptor = "Lclient!qb;")
+    @OriginalMember(owner = "client!na", name = "w", descriptor = "Z")
+    public static boolean stereo;
+
+    @OriginalMember(owner = "client!vh", name = "h", descriptor = "Lclient!qb;")
 	private PcmStream aClass3_Sub3_6;
 
 	@OriginalMember(owner = "client!vh", name = "n", descriptor = "[I")
@@ -56,27 +59,27 @@ public class AudioChannel {
 	private int anInt4636 = 0;
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "()V")
-	protected void method3561() throws Exception {
+	protected void write() throws Exception {
 	}
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "(I)V")
-	public void method3562(@OriginalArg(0) int arg0) throws Exception {
+	public void open(@OriginalArg(0) int arg0) throws Exception {
 	}
 
 	@OriginalMember(owner = "client!vh", name = "b", descriptor = "()V")
-	protected void method3563() throws Exception {
+	protected void close() throws Exception {
 	}
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "([II)V")
 	private void method3564(@OriginalArg(0) int[] arg0) {
 		@Pc(1) short local1 = 256;
-		if (Static164.aBoolean192) {
+		if (stereo) {
 			local1 = 512;
 		}
 		Static289.method2618(arg0, 0, local1);
 		this.anInt4638 -= 256;
 		if (this.aClass3_Sub3_6 != null && this.anInt4638 <= 0) {
-			this.anInt4638 += Static44.anInt1404 >> 4;
+			this.anInt4638 += Static44.sampleRate >> 4;
 			Static167.method3170(this.aClass3_Sub3_6);
 			this.method3567(this.aClass3_Sub3_6, this.aClass3_Sub3_6.method4407());
 			@Pc(45) int local45 = 0;
@@ -175,11 +178,11 @@ public class AudioChannel {
 				if (local14 < this.aLong153) {
 					return;
 				}
-				this.method3562(this.anInt4644);
+				this.open(this.anInt4644);
 				this.aBoolean229 = true;
 				this.aLong153 = 0L;
 			}
-			@Pc(38) int local38 = this.method3569();
+			@Pc(38) int local38 = this.getBufferSize();
 			if (this.anInt4634 < this.anInt4636 - local38) {
 				this.anInt4634 = this.anInt4636 - local38;
 			}
@@ -192,9 +195,9 @@ public class AudioChannel {
 				if (this.anInt4644 > 16384) {
 					this.anInt4644 = 16384;
 				}
-				this.method3572();
+				this.flush();
 				local38 = 0;
-				this.method3562(this.anInt4644);
+				this.open(this.anInt4644);
 				if (this.anInt4644 < local65 + 256) {
 					local65 = this.anInt4644 - 256;
 					this.anInt4637 = local65 - this.anInt4641;
@@ -204,13 +207,13 @@ public class AudioChannel {
 			while (local65 > local38) {
 				local38 += 256;
 				this.method3564(this.anIntArray411);
-				this.method3561();
+				this.write();
 			}
 			if (local14 > this.aLong152) {
 				if (this.aBoolean229) {
 					this.aBoolean229 = false;
 				} else if (this.anInt4634 == 0 && this.anInt4640 == 0) {
-					this.method3572();
+					this.flush();
 					this.aLong153 = local14 + 2000L;
 					return;
 				} else {
@@ -222,7 +225,7 @@ public class AudioChannel {
 			}
 			this.anInt4636 = local38;
 		} catch (@Pc(202) Exception local202) {
-			this.method3572();
+			this.flush();
 			this.aLong153 = local14 + 2000L;
 		}
 		try {
@@ -231,7 +234,7 @@ public class AudioChannel {
 			}
 			while (local14 > this.aLong151 + 5000L) {
 				this.method3573();
-				this.aLong151 += 256000 / Static44.anInt1404;
+				this.aLong151 += 256000 / Static44.sampleRate;
 			}
 		} catch (@Pc(247) Exception local247) {
 			this.aLong151 = local14;
@@ -257,7 +260,7 @@ public class AudioChannel {
 	}
 
 	@OriginalMember(owner = "client!vh", name = "c", descriptor = "()I")
-	protected int method3569() throws Exception {
+	protected int getBufferSize() throws Exception {
 		return this.anInt4644;
 	}
 
@@ -265,9 +268,9 @@ public class AudioChannel {
 	public final synchronized void method3570() {
 		this.aBoolean229 = true;
 		try {
-			this.method3563();
+			this.close();
 		} catch (@Pc(10) Exception local10) {
-			this.method3572();
+			this.flush();
 			this.aLong153 = MonotonicClock.currentTimeMillis() + 2000L;
 		}
 	}
@@ -278,7 +281,7 @@ public class AudioChannel {
 	}
 
 	@OriginalMember(owner = "client!vh", name = "d", descriptor = "()V")
-	protected void method3572() {
+	protected void flush() {
 	}
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "(II)V")
@@ -312,11 +315,11 @@ public class AudioChannel {
 				Static60.aClass19_1 = null;
 			}
 		}
-		this.method3572();
+		this.flush();
 		this.anIntArray411 = null;
 	}
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "(Ljava/awt/Component;)V")
-	public void method3576(@OriginalArg(0) Component arg0) throws Exception {
+	public void init(@OriginalArg(0) Component arg0) throws Exception {
 	}
 }

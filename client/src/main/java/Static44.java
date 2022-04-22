@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static44 {
 
 	@OriginalMember(owner = "client!dh", name = "h", descriptor = "I")
-	public static int anInt1404;
+	public static int sampleRate;
 
 	@OriginalMember(owner = "client!dh", name = "a", descriptor = "Z")
 	public static boolean aBoolean83 = false;

@@ -71,16 +71,16 @@ public final class Static80 {
 		Static127.aBoolean159 = false;
 		Static214.anInt5581 = 0;
 		try {
-			@Pc(78) PrivilegedRequest local78 = arg0.method5112("runescape");
+			@Pc(78) PrivilegedRequest local78 = arg0.openPreferences("runescape");
 			while (local78.status == 0) {
 				Static231.sleep(1L);
 			}
 			if (local78.status == 1) {
 				local48 = (FileOnDisk) local78.result;
-				@Pc(106) byte[] local106 = new byte[(int) local48.method5137()];
+				@Pc(106) byte[] local106 = new byte[(int) local48.length()];
 				@Pc(128) int local128;
 				for (@Pc(108) int local108 = 0; local108 < local106.length; local108 += local128) {
-					local128 = local48.method5135(local108, local106.length - local108, local106);
+					local128 = local48.read(local108, local106.length - local108, local106);
 					if (local128 == -1) {
 						throw new IOException("EOF");
 					}
@@ -91,7 +91,7 @@ public final class Static80 {
 		}
 		try {
 			if (local48 != null) {
-				local48.method5136();
+				local48.close();
 			}
 		} catch (@Pc(158) Exception local158) {
 		}

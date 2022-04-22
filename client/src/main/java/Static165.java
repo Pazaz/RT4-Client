@@ -96,9 +96,9 @@ public final class Static165 {
 	@OriginalMember(owner = "client!nb", name = "a", descriptor = "(II)Lclient!na;")
 	public static JagString method3165() {
 		@Pc(21) JagString local21 = new JagString();
-		local21.anInt4030 = 1;
-		local21.aByteArray52 = new byte[1];
-		local21.aByteArray52[0] = -96;
+		local21.length = 1;
+		local21.chars = new byte[1];
+		local21.chars[0] = -96;
 		return local21;
 	}
 }

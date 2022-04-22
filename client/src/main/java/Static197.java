@@ -21,10 +21,10 @@ public final class Static197 {
 
 	@OriginalMember(owner = "client!pm", name = "a", descriptor = "(ILsignlink!ll;)[Lclient!od;")
 	public static Class114[] method3558(@OriginalArg(1) SignLink arg0) {
-		if (!arg0.method5111()) {
+		if (!arg0.isFullScreenSupported()) {
 			return new Class114[0];
 		}
-		@Pc(17) PrivilegedRequest local17 = arg0.method5132();
+		@Pc(17) PrivilegedRequest local17 = arg0.getDisplayModes();
 		while (local17.status == 0) {
 			Static231.sleep(10L);
 		}
@@ -142,7 +142,7 @@ public final class Static197 {
 				} else {
 					Static260.frameBuffer = null;
 				}
-				@Pc(300) PrivilegedRequest local300 = GameShell.signLink.method5123(Static215.aClient1.getClass());
+				@Pc(300) PrivilegedRequest local300 = GameShell.signLink.loadGlNatives(Static215.aClient1.getClass());
 				while (local300.status == 0) {
 					Static231.sleep(100L);
 				}

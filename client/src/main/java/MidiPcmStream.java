@@ -215,7 +215,7 @@ public final class MidiPcmStream extends PcmStream {
 		for (@Pc(20) MidiNote local20 = (MidiNote) this.aClass3_Sub3_Sub3_1.aClass69_126.method2289(); local20 != null; local20 = (MidiNote) this.aClass3_Sub3_Sub3_1.aClass69_126.method2288()) {
 			if (arg0 < 0 || local20.anInt3773 == arg0) {
 				if (local20.aClass3_Sub3_Sub1_3 != null) {
-					local20.aClass3_Sub3_Sub1_3.method384(Static44.anInt1404 / 100);
+					local20.aClass3_Sub3_Sub1_3.method384(Static44.sampleRate / 100);
 					if (local20.aClass3_Sub3_Sub1_3.method412()) {
 						this.aClass3_Sub3_Sub3_1.aClass3_Sub3_Sub2_2.method1343(local20.aClass3_Sub3_Sub1_3);
 					}
@@ -493,7 +493,7 @@ public final class MidiPcmStream extends PcmStream {
 	@Override
 	public final synchronized void method4408(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		if (this.aClass84_1.method2628()) {
-			@Pc(18) int local18 = this.aClass84_1.anInt3303 * this.anInt5646 / Static44.anInt1404;
+			@Pc(18) int local18 = this.aClass84_1.anInt3303 * this.anInt5646 / Static44.sampleRate;
 			do {
 				@Pc(28) long local28 = this.aLong189 + (long) arg2 * (long) local18;
 				if (this.aLong188 - local28 >= 0L) {
@@ -513,7 +513,7 @@ public final class MidiPcmStream extends PcmStream {
 
 	@OriginalMember(owner = "client!va", name = "a", descriptor = "(IILclient!mf;B[I)Z")
 	public final boolean method4433(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) MidiNote arg2, @OriginalArg(4) int[] arg3) {
-		arg2.anInt3771 = Static44.anInt1404 / 100;
+		arg2.anInt3771 = Static44.sampleRate / 100;
 		if (arg2.anInt3767 >= 0 && (arg2.aClass3_Sub3_Sub1_3 == null || arg2.aClass3_Sub3_Sub1_3.method411())) {
 			arg2.method2957();
 			arg2.method4658();
@@ -686,7 +686,7 @@ public final class MidiPcmStream extends PcmStream {
 	@Override
 	public final synchronized void method4410(@OriginalArg(0) int arg0) {
 		if (this.aClass84_1.method2628()) {
-			@Pc(15) int local15 = this.aClass84_1.anInt3303 * this.anInt5646 / Static44.anInt1404;
+			@Pc(15) int local15 = this.aClass84_1.anInt3303 * this.anInt5646 / Static44.sampleRate;
 			do {
 				@Pc(25) long local25 = this.aLong189 + (long) arg0 * (long) local15;
 				if (this.aLong188 - local25 >= 0L) {
@@ -731,7 +731,7 @@ public final class MidiPcmStream extends PcmStream {
 			@Pc(102) double local102 = Math.sin((double) (arg0.anInt3768 & 0x1FF) * 0.01227184630308513D);
 			local17 += (int) ((double) local62 * local102);
 		}
-		local62 = (int) ((double) (arg0.aClass3_Sub16_Sub1_1.anInt3316 * 256) * Math.pow(2.0D, (double) local17 * 3.255208333333333E-4D) / (double) Static44.anInt1404 + 0.5D);
+		local62 = (int) ((double) (arg0.aClass3_Sub16_Sub1_1.anInt3316 * 256) * Math.pow(2.0D, (double) local17 * 3.255208333333333E-4D) / (double) Static44.sampleRate + 0.5D);
 		return local62 >= 1 ? local62 : 1;
 	}
 

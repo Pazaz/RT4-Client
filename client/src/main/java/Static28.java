@@ -70,7 +70,7 @@ public final class Static28 {
 		@Pc(9) int local9 = local6.length;
 		@Pc(13) JagString local13 = new JagString();
 		@Pc(15) int local15 = 0;
-		local13.aByteArray52 = new byte[local9];
+		local13.chars = new byte[local9];
 		while (local9 > local15) {
 			@Pc(29) int local29 = local6[local15++] & 0xFF;
 			if (local29 <= 45 && local29 >= 40) {
@@ -78,9 +78,9 @@ public final class Static28 {
 					break;
 				}
 				@Pc(51) int local51 = local6[local15++] & 0xFF;
-				local13.aByteArray52[local13.anInt4030++] = (byte) (local51 + (local29 + -40) * 43 - 48);
+				local13.chars[local13.length++] = (byte) (local51 + (local29 + -40) * 43 - 48);
 			} else if (local29 != 0) {
-				local13.aByteArray52[local13.anInt4030++] = (byte) local29;
+				local13.chars[local13.length++] = (byte) local29;
 			}
 		}
 		local13.method3156();

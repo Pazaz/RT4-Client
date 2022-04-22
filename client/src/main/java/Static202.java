@@ -54,7 +54,7 @@ public final class Static202 {
 					}
 					local17.anIntArray139[local59] = local71;
 					local17.anIntArray137[local59] = local95;
-					local17.aClass212Array2[local59] = arg0.method5126(local104, Static6.method85(local93));
+					local17.aClass212Array2[local59] = arg0.getDeclaredField(local104, Static6.method85(local93));
 				} else if (local71 == 3 || local71 == 4) {
 					local93 = new String(arg1.gjstr().method3148());
 					local104 = new String(arg1.gjstr().method3148());
@@ -77,7 +77,7 @@ public final class Static202 {
 					for (local210 = 0; local210 < local95; local210++) {
 						local234[local210] = Static6.method85(local171[local210]);
 					}
-					local17.aClass212Array1[local59] = arg0.method5122(Static6.method85(local93), local234, local104);
+					local17.aClass212Array1[local59] = arg0.getDeclaredMethod(Static6.method85(local93), local234, local104);
 					local17.aByteArrayArrayArray6[local59] = local193;
 				}
 			} catch (@Pc(269) ClassNotFoundException local269) {

@@ -91,8 +91,8 @@ public final class Static59 {
 			local61[local51 - local79 - 1] = (byte) (local92 + 48);
 		}
 		@Pc(126) JagString local126 = new JagString();
-		local126.aByteArray52 = local61;
-		local126.anInt4030 = local51;
+		local126.chars = local61;
+		local126.length = local51;
 		return local126;
 	}
 }

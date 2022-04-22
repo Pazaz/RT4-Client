@@ -162,8 +162,8 @@ public final class Static41 {
 	@OriginalMember(owner = "client!dc", name = "a", descriptor = "(IIIZ)V")
 	public static void method1045(@OriginalArg(3) boolean arg0) {
 		Static258.anInt5637 = 2;
-		Static164.aBoolean192 = arg0;
-		Static44.anInt1404 = 22050;
+		AudioChannel.stereo = arg0;
+		Static44.sampleRate = 22050;
 	}
 
 	@OriginalMember(owner = "client!dc", name = "b", descriptor = "(Z)V")

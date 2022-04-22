@@ -8,7 +8,10 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!td")
 public final class GlModel extends Model {
 
-	@OriginalMember(owner = "client!td", name = "t", descriptor = "[S")
+    @OriginalMember(owner = "client!tf", name = "G", descriptor = "Z")
+    public static boolean arbVboSupported;
+
+    @OriginalMember(owner = "client!td", name = "t", descriptor = "[S")
 	private short[] aShortArray75;
 
 	@OriginalMember(owner = "client!td", name = "v", descriptor = "[S")
@@ -2218,7 +2221,7 @@ public final class GlModel extends Model {
 		Static237.aClass3_Sub15_8.offset = local1 * this.anInt5296;
 		@Pc(1007) ByteBuffer local1007;
 		if (arg0) {
-			if (GlRenderer.aBoolean273) {
+			if (arbVboSupported) {
 				local1007 = ByteBuffer.wrap(Static237.aClass3_Sub15_8.data, 0, Static237.aClass3_Sub15_8.offset);
 				if (this.aClass155_5 == null) {
 					this.aClass155_5 = new GlVertexBufferObject(true);

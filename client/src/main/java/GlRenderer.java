@@ -65,9 +65,6 @@ public final class GlRenderer {
 	@OriginalMember(owner = "client!tf", name = "E", descriptor = "Lgl!javax/media/opengl/GLDrawable;")
 	private static GLDrawable drawable;
 
-	@OriginalMember(owner = "client!tf", name = "G", descriptor = "Z")
-	public static boolean aBoolean273;
-
 	@OriginalMember(owner = "client!tf", name = "H", descriptor = "Z")
 	public static boolean arbVertexProgramSupported;
 
@@ -442,11 +439,11 @@ public final class GlRenderer {
 		@Pc(176) JagString renderer = method4147(GlRenderer.renderer).toLowerCase();
 		if (renderer.indexOf(RADEON) != -1) {
 			@Pc(184) int v = 0;
-			@Pc(193) JagString[] rendererParts = renderer.method3145().method3147(32);
+			@Pc(193) JagString[] rendererParts = renderer.replaceSlashWithSpace().split(32);
 			for (@Pc(195) int i = 0; i < rendererParts.length; i++) {
 				@Pc(203) JagString part = rendererParts[i];
-				if (part.length() >= 4 && part.substring(4, 0).method3123()) {
-					v = part.substring(4, 0).method3132();
+				if (part.length() >= 4 && part.substring(4, 0).isInt()) {
+					v = part.substring(4, 0).parseInt();
 					break;
 				}
 			}
@@ -456,7 +453,7 @@ public final class GlRenderer {
 			if (v >= 7000 && v <= 9250) {
 				extTexture3dSupported = false;
 			}
-			aBoolean273 = arbVboSupported;
+			GlModel.arbVboSupported = arbVboSupported;
 		}
 		if (arbVboSupported) {
 			try {

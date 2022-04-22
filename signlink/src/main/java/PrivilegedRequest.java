@@ -8,19 +8,19 @@ public final class PrivilegedRequest {
 	public volatile Object result;
 
 	@OriginalMember(owner = "signlink!im", name = "f", descriptor = "I")
-	public int anInt5924;
+	public int type;
 
 	@OriginalMember(owner = "signlink!im", name = "b", descriptor = "Lsignlink!im;")
-	public PrivilegedRequest aClass212_6;
+	public PrivilegedRequest next;
 
 	@OriginalMember(owner = "signlink!im", name = "c", descriptor = "Ljava/lang/Object;")
-	public Object anObject7;
+	public Object objectArg;
 
 	@OriginalMember(owner = "signlink!im", name = "a", descriptor = "I")
-	public int anInt5926;
+	public int intArg2;
 
 	@OriginalMember(owner = "signlink!im", name = "g", descriptor = "I")
-	public int anInt5927;
+	public int intArg1;
 
 	@OriginalMember(owner = "signlink!im", name = "d", descriptor = "I")
 	public volatile int status = 0;

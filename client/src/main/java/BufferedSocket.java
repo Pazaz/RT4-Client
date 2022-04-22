@@ -15,7 +15,7 @@ public final class BufferedSocket implements Runnable {
 	private byte[] aByteArray49;
 
 	@OriginalMember(owner = "client!ma", name = "n", descriptor = "Lsignlink!im;")
-	private PrivilegedRequest aClass212_4;
+	private PrivilegedRequest thread;
 
 	@OriginalMember(owner = "client!ma", name = "l", descriptor = "I")
 	private int anInt3596 = 0;
@@ -155,8 +155,8 @@ public final class BufferedSocket implements Runnable {
 					throw new IOException();
 				}
 			}
-			if (this.aClass212_4 == null) {
-				this.aClass212_4 = this.aClass213_5.startThread(3, this);
+			if (this.thread == null) {
+				this.thread = this.aClass213_5.startThread(3, this);
 			}
 			this.notifyAll();
 		}
@@ -198,17 +198,17 @@ public final class BufferedSocket implements Runnable {
 			this.aBoolean177 = true;
 			this.notifyAll();
 		}
-		if (this.aClass212_4 != null) {
-			while (this.aClass212_4.status == 0) {
+		if (this.thread != null) {
+			while (this.thread.status == 0) {
 				Static231.sleep(1L);
 			}
-			if (this.aClass212_4.status == 1) {
+			if (this.thread.status == 1) {
 				try {
-					((Thread) this.aClass212_4.result).join();
+					((Thread) this.thread.result).join();
 				} catch (@Pc(59) InterruptedException local59) {
 				}
 			}
 		}
-		this.aClass212_4 = null;
+		this.thread = null;
 	}
 }

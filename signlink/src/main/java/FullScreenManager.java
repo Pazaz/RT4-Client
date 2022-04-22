@@ -12,21 +12,21 @@ import org.openrs2.deob.annotation.Pc;
 public final class FullScreenManager {
 
 	@OriginalMember(owner = "signlink!e", name = "b", descriptor = "Ljava/awt/DisplayMode;")
-	private DisplayMode aDisplayMode1;
+	private DisplayMode previousDisplayMode;
 
 	@OriginalMember(owner = "signlink!e", name = "a", descriptor = "Ljava/awt/GraphicsDevice;")
-	private GraphicsDevice aGraphicsDevice1;
+	private GraphicsDevice device;
 
 	@OriginalMember(owner = "signlink!e", name = "<init>", descriptor = "()V")
 	public FullScreenManager() throws Exception {
-		@Pc(3) GraphicsEnvironment local3 = GraphicsEnvironment.getLocalGraphicsEnvironment();
-		this.aGraphicsDevice1 = local3.getDefaultScreenDevice();
-		if (!this.aGraphicsDevice1.isFullScreenSupported()) {
-			@Pc(15) GraphicsDevice[] local15 = local3.getScreenDevices();
-			for (@Pc(19) int local19 = 0; local19 < local15.length; local19++) {
-				@Pc(27) GraphicsDevice local27 = local15[local19];
-				if (local27 != null && local27.isFullScreenSupported()) {
-					this.aGraphicsDevice1 = local27;
+		@Pc(3) GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
+		this.device = env.getDefaultScreenDevice();
+		if (!this.device.isFullScreenSupported()) {
+			@Pc(15) GraphicsDevice[] devices = env.getScreenDevices();
+			for (@Pc(19) int i = 0; i < devices.length; i++) {
+				@Pc(27) GraphicsDevice d = devices[i];
+				if (d != null && d.isFullScreenSupported()) {
+					this.device = d;
 					return;
 				}
 			}
@@ -35,82 +35,82 @@ public final class FullScreenManager {
 	}
 
 	@OriginalMember(owner = "signlink!e", name = "a", descriptor = "(Ljava/awt/Frame;B)V")
-	private void method5103(@OriginalArg(0) Frame arg0) {
-		@Pc(1) boolean local1 = false;
+	private void setFullScreenWindow(@OriginalArg(0) Frame frame) {
+		@Pc(1) boolean wasValid = false;
 		try {
-			@Pc(6) Field local6 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-			local6.setAccessible(true);
-			@Pc(16) boolean local16 = (Boolean) local6.get(this.aGraphicsDevice1);
-			if (local16) {
-				local6.set(this.aGraphicsDevice1, Boolean.FALSE);
-				local1 = true;
+			@Pc(6) Field valid = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
+			valid.setAccessible(true);
+			@Pc(16) boolean v = (Boolean) valid.get(this.device);
+			if (v) {
+				valid.set(this.device, Boolean.FALSE);
+				wasValid = true;
 			}
-		} catch (@Pc(27) Throwable local27) {
+		} catch (@Pc(27) Throwable ex) {
 		}
 		try {
-			this.aGraphicsDevice1.setFullScreenWindow(arg0);
+			this.device.setFullScreenWindow(frame);
 		} finally {
-			if (local1) {
+			if (wasValid) {
 				try {
-					@Pc(66) Field local66 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-					local66.set(this.aGraphicsDevice1, Boolean.TRUE);
-				} catch (@Pc(73) Throwable local73) {
+					@Pc(66) Field valid = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
+					valid.set(this.device, Boolean.TRUE);
+				} catch (@Pc(73) Throwable ex) {
 				}
 			}
 		}
 	}
 
 	@OriginalMember(owner = "signlink!e", name = "a", descriptor = "(IIIILjava/awt/Frame;I)V")
-	public final void method5104(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Frame arg3, @OriginalArg(5) int arg4) {
-		this.aDisplayMode1 = this.aGraphicsDevice1.getDisplayMode();
-		if (this.aDisplayMode1 == null) {
+	public final void enter(@OriginalArg(1) int refreshRate, @OriginalArg(2) int bitDepth, @OriginalArg(3) int height, @OriginalArg(4) Frame frame, @OriginalArg(5) int width) {
+		this.previousDisplayMode = this.device.getDisplayMode();
+		if (this.previousDisplayMode == null) {
 			throw new NullPointerException();
 		}
-		arg3.setUndecorated(true);
-		arg3.enableInputMethods(false);
-		this.method5103(arg3);
-		if (arg0 == 0) {
-			@Pc(37) int local37 = this.aDisplayMode1.getRefreshRate();
-			@Pc(41) DisplayMode[] local41 = this.aGraphicsDevice1.getDisplayModes();
-			@Pc(43) boolean local43 = false;
-			for (@Pc(45) int local45 = 0; local45 < local41.length; local45++) {
-				if (local41[local45].getWidth() == arg4 && local41[local45].getHeight() == arg2 && arg1 == local41[local45].getBitDepth()) {
-					@Pc(77) int local77 = local41[local45].getRefreshRate();
-					if (!local43 || Math.abs(local77 - local37) < Math.abs(arg0 - local37)) {
-						local43 = true;
-						arg0 = local77;
+		frame.setUndecorated(true);
+		frame.enableInputMethods(false);
+		this.setFullScreenWindow(frame);
+		if (refreshRate == 0) {
+			@Pc(37) int previousRefreshRate = this.previousDisplayMode.getRefreshRate();
+			@Pc(41) DisplayMode[] displayModes = this.device.getDisplayModes();
+			@Pc(43) boolean foundMode = false;
+			for (@Pc(45) int i = 0; i < displayModes.length; i++) {
+				if (displayModes[i].getWidth() == width && displayModes[i].getHeight() == height && bitDepth == displayModes[i].getBitDepth()) {
+					@Pc(77) int r = displayModes[i].getRefreshRate();
+					if (!foundMode || Math.abs(r - previousRefreshRate) < Math.abs(refreshRate - previousRefreshRate)) {
+						foundMode = true;
+						refreshRate = r;
 					}
 				}
 			}
-			if (!local43) {
-				arg0 = local37;
+			if (!foundMode) {
+				refreshRate = previousRefreshRate;
 			}
 		}
-		this.aGraphicsDevice1.setDisplayMode(new DisplayMode(arg4, arg2, arg1, arg0));
+		this.device.setDisplayMode(new DisplayMode(width, height, bitDepth, refreshRate));
 	}
 
 	@OriginalMember(owner = "signlink!e", name = "a", descriptor = "(Z)[I")
-	public final int[] method5105() {
-		@Pc(9) DisplayMode[] local9 = this.aGraphicsDevice1.getDisplayModes();
-		@Pc(15) int[] local15 = new int[local9.length << 2];
-		for (@Pc(17) int local17 = 0; local17 < local9.length; local17++) {
-			local15[local17 << 2] = local9[local17].getWidth();
-			local15[(local17 << 2) + 1] = local9[local17].getHeight();
-			local15[(local17 << 2) + 2] = local9[local17].getBitDepth();
-			local15[(local17 << 2) + 3] = local9[local17].getRefreshRate();
+	public final int[] getDisplayModes() {
+		@Pc(9) DisplayMode[] displayModes = this.device.getDisplayModes();
+		@Pc(15) int[] result = new int[displayModes.length << 2];
+		for (@Pc(17) int i = 0; i < displayModes.length; i++) {
+			result[i << 2] = displayModes[i].getWidth();
+			result[(i << 2) + 1] = displayModes[i].getHeight();
+			result[(i << 2) + 2] = displayModes[i].getBitDepth();
+			result[(i << 2) + 3] = displayModes[i].getRefreshRate();
 		}
-		return local15;
+		return result;
 	}
 
 	@OriginalMember(owner = "signlink!e", name = "a", descriptor = "(I)V")
-	public final void method5106() {
-		if (this.aDisplayMode1 != null) {
-			this.aGraphicsDevice1.setDisplayMode(this.aDisplayMode1);
-			if (!this.aGraphicsDevice1.getDisplayMode().equals(this.aDisplayMode1)) {
+	public final void exit() {
+		if (this.previousDisplayMode != null) {
+			this.device.setDisplayMode(this.previousDisplayMode);
+			if (!this.device.getDisplayMode().equals(this.previousDisplayMode)) {
 				throw new RuntimeException("Did not return to correct resolution!");
 			}
-			this.aDisplayMode1 = null;
+			this.previousDisplayMode = null;
 		}
-		this.method5103(null);
+		this.setFullScreenWindow(null);
 	}
 }

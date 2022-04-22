@@ -204,7 +204,7 @@ public final class client extends GameShell {
 			GameShell.fullScreenFrame = null;
 		}
 		if (GameShell.signLink != null) {
-			GameShell.signLink.method5121(this.getClass());
+			GameShell.signLink.unloadGlNatives(this.getClass());
 		}
 		if (Static178.instance != null) {
 			Static178.instance.aBoolean151 = false;
@@ -739,7 +739,7 @@ public final class client extends GameShell {
 			Static147.aClass62_2 = Static107.method2262(2048, GameShell.signLink, GameShell.canvas, 1);
 			Static204.aClass3_Sub3_Sub2_1 = new MixerPcmStream();
 			Static147.aClass62_2.method3566(Static204.aClass3_Sub3_Sub2_1);
-			Static56.aClass156_1 = new Resampler(22050, Static44.anInt1404);
+			Static56.aClass156_1 = new Resampler(22050, Static44.sampleRate);
 			Static250.anInt5441 = Static130.aClass153_47.method4482(Static1.aClass100_1);
 			Static199.anInt4670 = 30;
 			Static166.anInt4051 = 50;

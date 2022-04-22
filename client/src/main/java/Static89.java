@@ -130,7 +130,7 @@ public final class Static89 {
 			if (Static69.signLink.applet == null) {
 				return;
 			}
-			@Pc(109) PrivilegedRequest local109 = Static69.signLink.method5118(new URL(Static69.signLink.applet.getCodeBase(), "clienterror.ws?c=" + GameShell.anInt3252 + "&u=" + Static101.aLong98 + "&v1=" + SignLink.javaVendor + "&v2=" + SignLink.javaVersion + "&e=" + local13));
+			@Pc(109) PrivilegedRequest local109 = Static69.signLink.openUrlStream(new URL(Static69.signLink.applet.getCodeBase(), "clienterror.ws?c=" + GameShell.anInt3252 + "&u=" + Static101.aLong98 + "&v1=" + SignLink.javaVendor + "&v2=" + SignLink.javaVersion + "&e=" + local13));
 			while (local109.status == 0) {
 				Static231.sleep(1L);
 			}
