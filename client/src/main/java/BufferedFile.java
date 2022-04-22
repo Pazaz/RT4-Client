@@ -45,7 +45,7 @@ public final class BufferedFile {
 	@OriginalMember(owner = "client!en", name = "<init>", descriptor = "(Lsignlink!qm;II)V")
 	public BufferedFile(@OriginalArg(0) FileOnDisk arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) throws IOException {
 		this.aClass214_1 = arg0;
-		this.aLong65 = this.aLong64 = arg0.method5137();
+		this.aLong65 = this.aLong64 = arg0.length();
 		this.aByteArray20 = new byte[arg2];
 		this.aByteArray19 = new byte[arg1];
 		this.aLong66 = 0L;
@@ -57,10 +57,10 @@ public final class BufferedFile {
 			return;
 		}
 		if (this.aLong68 != this.aLong67) {
-			this.aClass214_1.method5133(this.aLong68);
+			this.aClass214_1.seek(this.aLong68);
 			this.aLong67 = this.aLong68;
 		}
-		this.aClass214_1.method5134(this.aByteArray20, this.anInt1899, 0);
+		this.aClass214_1.write(this.aByteArray20, this.anInt1899, 0);
 		@Pc(45) long local45 = -1L;
 		if (this.aLong69 <= this.aLong68 && this.aLong69 + (long) this.anInt1906 > this.aLong68) {
 			local45 = this.aLong68;
@@ -92,7 +92,7 @@ public final class BufferedFile {
 
 	@OriginalMember(owner = "client!en", name = "b", descriptor = "(I)Ljava/io/File;")
 	private File method1452() {
-		return this.aClass214_1.method5138();
+		return this.aClass214_1.getFile();
 	}
 
 	@OriginalMember(owner = "client!en", name = "a", descriptor = "(I[BII)V")
@@ -120,10 +120,10 @@ public final class BufferedFile {
 				this.aLong66 += local102;
 			}
 			if (this.aByteArray19.length < arg2) {
-				this.aClass214_1.method5133(this.aLong66);
+				this.aClass214_1.seek(this.aLong66);
 				this.aLong67 = this.aLong66;
 				while (arg2 > 0) {
-					local102 = this.aClass214_1.method5135(arg0, arg2, arg1);
+					local102 = this.aClass214_1.read(arg0, arg2, arg1);
 					if (local102 == -1) {
 						break;
 					}
@@ -188,14 +188,14 @@ public final class BufferedFile {
 	@OriginalMember(owner = "client!en", name = "b", descriptor = "(Z)V")
 	public final void method1455() throws IOException {
 		this.method1450();
-		this.aClass214_1.method5136();
+		this.aClass214_1.close();
 	}
 
 	@OriginalMember(owner = "client!en", name = "c", descriptor = "(I)V")
 	private void method1456() throws IOException {
 		this.anInt1906 = 0;
 		if (this.aLong67 != this.aLong66) {
-			this.aClass214_1.method5133(this.aLong66);
+			this.aClass214_1.seek(this.aLong66);
 			this.aLong67 = this.aLong66;
 		}
 		this.aLong69 = this.aLong66;
@@ -204,7 +204,7 @@ public final class BufferedFile {
 			if (local49 > 200000000) {
 				local49 = 200000000;
 			}
-			@Pc(66) int local66 = this.aClass214_1.method5135(this.anInt1906, local49, this.aByteArray19);
+			@Pc(66) int local66 = this.aClass214_1.read(this.anInt1906, local49, this.aByteArray19);
 			if (local66 == -1) {
 				break;
 			}
@@ -238,10 +238,10 @@ public final class BufferedFile {
 			}
 			if (this.aByteArray20.length < arg2) {
 				if (this.aLong66 != this.aLong67) {
-					this.aClass214_1.method5133(this.aLong66);
+					this.aClass214_1.seek(this.aLong66);
 					this.aLong67 = this.aLong66;
 				}
-				this.aClass214_1.method5134(arg0, arg2, arg1);
+				this.aClass214_1.write(arg0, arg2, arg1);
 				@Pc(165) long local165 = -1L;
 				if (this.aLong69 <= this.aLong66 && (long) this.anInt1906 + this.aLong69 > this.aLong66) {
 					local165 = this.aLong66;

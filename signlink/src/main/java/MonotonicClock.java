@@ -6,18 +6,18 @@ import org.openrs2.deob.annotation.Pc;
 public final class MonotonicClock {
 
 	@OriginalMember(owner = "signlink!ad", name = "a", descriptor = "J")
-	private static long aLong1312;
+	private static long leapMillis;
 
 	@OriginalMember(owner = "signlink!ad", name = "b", descriptor = "J")
-	private static long aLong1313;
+	private static long previous;
 
 	@OriginalMember(owner = "signlink!ad", name = "a", descriptor = "(B)J")
 	public static synchronized long currentTimeMillis() {
-		@Pc(1) long local1 = System.currentTimeMillis();
-		if (aLong1313 > local1) {
-			aLong1312 += aLong1313 - local1;
+		@Pc(1) long now = System.currentTimeMillis();
+		if (previous > now) {
+			leapMillis += previous - now;
 		}
-		aLong1313 = local1;
-		return aLong1312 + local1;
+		previous = now;
+		return leapMillis + now;
 	}
 }

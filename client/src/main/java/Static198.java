@@ -43,8 +43,8 @@ public final class Static198 {
 			arg1 /= 10;
 		}
 		@Pc(112) JagString local112 = new JagString();
-		local112.aByteArray52 = local46;
-		local112.anInt4030 = local38;
+		local112.chars = local46;
+		local112.length = local38;
 		return local112;
 	}
 

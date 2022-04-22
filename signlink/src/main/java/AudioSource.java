@@ -7,20 +7,20 @@ import org.openrs2.deob.annotation.OriginalMember;
 public interface AudioSource {
 
 	@OriginalMember(owner = "signlink!ai", name = "a", descriptor = "(II)V")
-	void method5097(@OriginalArg(0) int arg0);
+	void close(@OriginalArg(0) int channel);
 
 	@OriginalMember(owner = "signlink!ai", name = "b", descriptor = "(BI)I")
-	int method5098(@OriginalArg(1) int arg0);
+	int getBufferSize(@OriginalArg(1) int channel);
 
 	@OriginalMember(owner = "signlink!ai", name = "a", descriptor = "(III)V")
-	void method5099(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) throws Exception;
+	void open(@OriginalArg(0) int channel, @OriginalArg(2) int bufferCapacity) throws Exception;
 
 	@OriginalMember(owner = "signlink!ai", name = "a", descriptor = "(BI)V")
-	void method5100(@OriginalArg(1) int arg0);
+	void flush(@OriginalArg(1) int channel);
 
 	@OriginalMember(owner = "signlink!ai", name = "a", descriptor = "(IBLjava/awt/Component;Z)V")
-	void method5101(@OriginalArg(0) int arg0, @OriginalArg(2) Component arg1, @OriginalArg(3) boolean arg2) throws Exception;
+	void init(@OriginalArg(0) int sampleRate, @OriginalArg(2) Component component, @OriginalArg(3) boolean stereo) throws Exception;
 
 	@OriginalMember(owner = "signlink!ai", name = "a", descriptor = "(I[I)V")
-	void method5102(@OriginalArg(0) int arg0, @OriginalArg(1) int[] arg1);
+	void write(@OriginalArg(0) int channel, @OriginalArg(1) int[] samples);
 }

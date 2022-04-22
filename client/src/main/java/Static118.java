@@ -98,18 +98,18 @@ public final class Static118 {
 			if (arg2[arg0 + local7] == null) {
 				arg2[local7 + arg0] = Static193.aClass100_853;
 			}
-			local5 += arg2[local7 + arg0].anInt4030;
+			local5 += arg2[local7 + arg0].length;
 		}
 		@Pc(39) byte[] local39 = new byte[local5];
 		@Pc(41) int local41 = 0;
 		for (@Pc(43) int local43 = 0; local43 < arg1; local43++) {
 			@Pc(52) JagString local52 = arg2[local43 + arg0];
-			Static289.method2612(local52.aByteArray52, 0, local39, local41, local52.anInt4030);
-			local41 += local52.anInt4030;
+			Static289.method2612(local52.chars, 0, local39, local41, local52.length);
+			local41 += local52.length;
 		}
 		@Pc(71) JagString local71 = new JagString();
-		local71.anInt4030 = local5;
-		local71.aByteArray52 = local39;
+		local71.length = local5;
+		local71.chars = local39;
 		return local71;
 	}
 

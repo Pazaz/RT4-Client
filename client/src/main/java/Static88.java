@@ -1242,8 +1242,8 @@ public final class Static88 {
 										local26--;
 										local609 = Static3.aClass100Array176[local26];
 										local803 = 0;
-										if (local609.method3123()) {
-											local803 = local609.method3132();
+										if (local609.isInt()) {
+											local803 = local609.parseInt();
 										}
 										Static6.outboundBuffer.p1isaac(23);
 										Static6.outboundBuffer.p4(local803);
@@ -2953,7 +2953,7 @@ public final class Static88 {
 													if (local226 == 5419) {
 														local609 = Static72.aClass100_447;
 														if (Static232.aClass212_5 != null) {
-															local609 = Static181.method3341(Static232.aClass212_5.anInt5926);
+															local609 = Static181.method3341(Static232.aClass212_5.intArg2);
 															try {
 																if (Static232.aClass212_5.result != null) {
 																	@Pc(8281) byte[] local8281 = ((String) Static232.aClass212_5.result).getBytes("ISO-8859-1");
@@ -2978,10 +2978,10 @@ public final class Static88 {
 														local26--;
 														local609 = Static3.aClass100Array176[local26];
 														@Pc(8356) JagString local8356 = Static34.method882(new JagString[] { Static15.method479(), local609 });
-														if (GameShell.frame != null || local1552 && SignLink.anInt5928 != 3 && SignLink.aString15.startsWith("win") && !Static178.aBoolean203) {
+														if (GameShell.frame != null || local1552 && SignLink.anInt5928 != 3 && SignLink.osName.startsWith("win") && !Static178.aBoolean203) {
 															Static164.newTab = local1552;
 															Static175.url = local8356;
-															Static33.openUrlRequest = GameShell.signLink.method5131(new String(local8356.method3148(), "ISO-8859-1"));
+															Static33.openUrlRequest = GameShell.signLink.openUrl(new String(local8356.method3148(), "ISO-8859-1"));
 															continue;
 														}
 														Static169.openUrl(local8356, local1552);
