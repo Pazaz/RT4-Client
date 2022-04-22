@@ -275,7 +275,7 @@ public final class Static127 {
 			if (GlRenderer.enabled && arg0.method3111(Static201.aClass100_406)) {
 				System.out.println("oncard_geometry:" + Static63.anInt1945);
 				System.out.println("oncard_2d:" + Static63.onCard2d);
-				System.out.println("oncard_texture:" + Static63.anInt1942);
+				System.out.println("oncard_texture:" + Static63.onCardTexture);
 			}
 			if (arg0.method3111(Static257.aClass100_99)) {
 				Static175.method3279();

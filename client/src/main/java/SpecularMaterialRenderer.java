@@ -228,7 +228,7 @@ public final class SpecularMaterialRenderer implements MaterialRenderer {
 			local1.glTexImage2D(local27 + GL2.GL_TEXTURE_CUBE_MAP_POSITIVE_X, 0, GL2.GL_ALPHA, 64, 64, 0, GL2.GL_ALPHA, GL2.GL_UNSIGNED_BYTE, ByteBuffer.wrap(local25));
 			local1.glBindTexture(GL2.GL_TEXTURE_CUBE_MAP, this.anIntArray519[2]);
 			local1.glTexImage2D(local27 + GL2.GL_TEXTURE_CUBE_MAP_POSITIVE_X, 0, GL2.GL_ALPHA, 64, 64, 0, GL2.GL_ALPHA, GL2.GL_UNSIGNED_BYTE, ByteBuffer.wrap(local19));
-			Static63.anInt1942 += 12288;
+			Static63.onCardTexture += 12288;
 		}
 	}
 }

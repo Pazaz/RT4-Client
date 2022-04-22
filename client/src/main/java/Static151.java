@@ -57,26 +57,26 @@ public final class Static151 {
 			local11 = new int[] { anInt3587 };
 			local4.glDeleteTextures(1, local11, 0);
 			anInt3587 = -1;
-			Static63.anInt1942 -= aByteBuffer7.limit() * 2;
+			Static63.onCardTexture -= aByteBuffer7.limit() * 2;
 		}
 		if (anIntArray341 != null) {
 			local4 = GlRenderer.gl;
 			local4.glDeleteTextures(64, anIntArray341, 0);
 			anIntArray341 = null;
-			Static63.anInt1942 -= aByteBuffer7.limit() * 2;
+			Static63.onCardTexture -= aByteBuffer7.limit() * 2;
 		}
 		if (anInt3588 != -1) {
 			local4 = GlRenderer.gl;
 			local11 = new int[] { anInt3588 };
 			local4.glDeleteTextures(1, local11, 0);
 			anInt3588 = -1;
-			Static63.anInt1942 -= aByteBuffer6.limit() * 2;
+			Static63.onCardTexture -= aByteBuffer6.limit() * 2;
 		}
 		if (anIntArray340 != null) {
 			local4 = GlRenderer.gl;
 			local4.glDeleteTextures(64, anIntArray340, 0);
 			anIntArray340 = null;
-			Static63.anInt1942 -= aByteBuffer6.limit() * 2;
+			Static63.onCardTexture -= aByteBuffer6.limit() * 2;
 		}
 	}
 
@@ -100,7 +100,7 @@ public final class Static151 {
 			local1.glTexParameteri(GL2.GL_TEXTURE_3D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR);
 			local1.glTexParameteri(GL2.GL_TEXTURE_3D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
 			anInt3587 = local6[0];
-			Static63.anInt1942 += aByteBuffer7.limit() * 2;
+			Static63.onCardTexture += aByteBuffer7.limit() * 2;
 			return;
 		}
 		anIntArray341 = new int[64];
@@ -112,7 +112,7 @@ public final class Static151 {
 			local1.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR);
 			local1.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
 		}
-		Static63.anInt1942 += aByteBuffer7.limit() * 2;
+		Static63.onCardTexture += aByteBuffer7.limit() * 2;
 	}
 
 	@OriginalMember(owner = "client!lm", name = "f", descriptor = "()V")
@@ -127,7 +127,7 @@ public final class Static151 {
 			local1.glTexParameteri(GL2.GL_TEXTURE_3D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR);
 			local1.glTexParameteri(GL2.GL_TEXTURE_3D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
 			anInt3588 = local6[0];
-			Static63.anInt1942 += aByteBuffer6.limit() * 2;
+			Static63.onCardTexture += aByteBuffer6.limit() * 2;
 			return;
 		}
 		anIntArray340 = new int[64];
@@ -139,6 +139,6 @@ public final class Static151 {
 			local1.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR);
 			local1.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
 		}
-		Static63.anInt1942 += aByteBuffer6.limit() * 2;
+		Static63.onCardTexture += aByteBuffer6.limit() * 2;
 	}
 }
