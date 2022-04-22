@@ -654,7 +654,7 @@ public final class GlRenderer {
 			if (!canvas.isDisplayable()) {
 				return -1;
 			}
-			GLProfile profile = GLProfile.get(GLProfile.GL2);
+			GLProfile profile = GLProfile.get(GLProfile.GL3bc);
 			@Pc(8) GLCapabilities capabilities = new GLCapabilities(profile);
 			if (numSamples > 0) {
 				capabilities.setSampleBuffers(true);
