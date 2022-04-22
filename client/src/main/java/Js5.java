@@ -326,7 +326,7 @@ public final class Js5 {
 					local320 = 0;
 					for (@Pc(322) int local322 = 0; local322 < local31; local322++) {
 						local320 += local233.g4();
-						Static289.method2612(local140, local250, local282[local322], local239[local322], local320);
+						Static289.copy(local140, local250, local282[local322], local239[local322], local320);
 						local250 += local320;
 						local239[local322] += local320;
 					}

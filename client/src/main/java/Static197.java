@@ -133,7 +133,7 @@ public final class Static197 {
 				}
 				try {
 					@Pc(269) Graphics local269 = GameShell.canvas.getGraphics();
-					Static260.frameBuffer.method4186(local269);
+					Static260.frameBuffer.draw(local269);
 				} catch (@Pc(277) Exception local277) {
 				}
 				Static139.method2704();

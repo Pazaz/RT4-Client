@@ -50,7 +50,7 @@ public final class Static31 {
 		try {
 			if (++Static20.anInt673 > 1500) {
 				if (Static124.socket != null) {
-					Static124.socket.method2834();
+					Static124.socket.close();
 					Static124.socket = null;
 				}
 				if (Static196.anInt4587 >= 1) {
@@ -98,7 +98,7 @@ public final class Static31 {
 				if (local126 != 101) {
 					Static266.anInt5336 = local126;
 					Static219.anInt4937 = 0;
-					Static124.socket.method2834();
+					Static124.socket.close();
 					Static124.socket = null;
 					return;
 				}
@@ -113,19 +113,19 @@ public final class Static31 {
 				if (Static125.worldId == -1) {
 					Static219.anInt4937 = 0;
 					Static266.anInt5336 = 6;
-					Static124.socket.method2834();
+					Static124.socket.close();
 					Static124.socket = null;
 					return;
 				}
 				Static219.anInt4937 = 0;
-				Static124.socket.method2834();
+				Static124.socket.close();
 				Static124.socket = null;
 				Static49.method1208();
 				return;
 			}
 		} catch (@Pc(210) IOException local210) {
 			if (Static124.socket != null) {
-				Static124.socket.method2834();
+				Static124.socket.close();
 				Static124.socket = null;
 			}
 			if (Static196.anInt4587 < 1) {

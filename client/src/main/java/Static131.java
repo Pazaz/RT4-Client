@@ -137,11 +137,11 @@ public final class Static131 {
 		try {
 			@Pc(12) Class local12 = Class.forName("BufferedImageFrameBuffer");
 			@Pc(16) FrameBuffer local16 = (FrameBuffer) local12.getDeclaredConstructor().newInstance();
-			local16.method4192(arg0, arg1, arg2);
+			local16.init(arg0, arg1, arg2);
 			return local16;
 		} catch (@Pc(25) Throwable local25) {
 			@Pc(29) ImageProducerFrameBuffer local29 = new ImageProducerFrameBuffer();
-			local29.method4192(arg0, arg1, arg2);
+			local29.init(arg0, arg1, arg2);
 			return local29;
 		}
 	}

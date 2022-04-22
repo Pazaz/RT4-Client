@@ -158,7 +158,7 @@ public final class Static207 {
 			if (local82 > Static116.anInt2961 - Static141.anInt3469) {
 				local82 = Static116.anInt2961 - Static141.anInt3469;
 			}
-			Static124.socket.method2827(Static141.anInt3469, local82, Static229.aByteArray70);
+			Static124.socket.read(Static141.anInt3469, local82, Static229.aByteArray70);
 			Static141.anInt3469 += local82;
 			if (Static141.anInt3469 < Static116.anInt2961) {
 				return -1;
@@ -171,7 +171,7 @@ public final class Static207 {
 						Static101.aClass10_Sub1Array1[local124++] = local247;
 					}
 				}
-				Static124.socket.method2834();
+				Static124.socket.close();
 				Static124.socket = null;
 				Static127.anInt3132 = 0;
 				Static82.anInt2231 = 0;

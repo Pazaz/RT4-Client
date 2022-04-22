@@ -104,7 +104,7 @@ public final class Static118 {
 		@Pc(41) int local41 = 0;
 		for (@Pc(43) int local43 = 0; local43 < arg1; local43++) {
 			@Pc(52) JagString local52 = arg2[local43 + arg0];
-			Static289.method2612(local52.chars, 0, local39, local41, local52.length);
+			Static289.copy(local52.chars, 0, local39, local41, local52.length);
 			local41 += local52.length;
 		}
 		@Pc(71) JagString local71 = new JagString();

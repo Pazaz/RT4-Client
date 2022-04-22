@@ -28,7 +28,7 @@ public final class Static158 {
 		try {
 			if (++Static226.anInt5079 > 2000) {
 				if (Static124.socket != null) {
-					Static124.socket.method2834();
+					Static124.socket.close();
 					Static124.socket = null;
 				}
 				if (Static57.anInt1758 >= 1) {
@@ -76,7 +76,7 @@ public final class Static158 {
 				if (local120 != 21) {
 					Static223.anInt5034 = local120;
 					Static179.anInt4261 = 0;
-					Static124.socket.method2834();
+					Static124.socket.close();
 					Static124.socket = null;
 					return;
 				}
@@ -94,19 +94,19 @@ public final class Static158 {
 					return;
 				}
 				Static57.aClass3_Sub15_Sub1_3.offset = 0;
-				Static124.socket.method2827(0, Static229.aClass100Array156.length * 8, Static57.aClass3_Sub15_Sub1_3.data);
+				Static124.socket.read(0, Static229.aClass100Array156.length * 8, Static57.aClass3_Sub15_Sub1_3.data);
 				for (local120 = 0; local120 < Static229.aClass100Array156.length; local120++) {
 					Static229.aClass100Array156[local120] = Static79.decode37(Static57.aClass3_Sub15_Sub1_3.g8());
 				}
 				Static223.anInt5034 = 21;
 				Static179.anInt4261 = 0;
-				Static124.socket.method2834();
+				Static124.socket.close();
 				Static124.socket = null;
 				return;
 			}
 		} catch (@Pc(238) IOException local238) {
 			if (Static124.socket != null) {
-				Static124.socket.method2834();
+				Static124.socket.close();
 				Static124.socket = null;
 			}
 			if (Static57.anInt1758 < 1) {

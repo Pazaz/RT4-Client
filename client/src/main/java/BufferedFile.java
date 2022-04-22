@@ -10,280 +10,280 @@ import org.openrs2.deob.annotation.Pc;
 public final class BufferedFile {
 
 	@OriginalMember(owner = "client!en", name = "m", descriptor = "J")
-	private long aLong67;
+	private long physicalPosition;
 
 	@OriginalMember(owner = "client!en", name = "v", descriptor = "I")
-	private int anInt1906;
+	private int readLen;
 
 	@OriginalMember(owner = "client!en", name = "p", descriptor = "J")
-	private long aLong68 = -1L;
+	private long writePosition = -1L;
 
 	@OriginalMember(owner = "client!en", name = "g", descriptor = "I")
-	private int anInt1899 = 0;
+	private int writeLen = 0;
 
 	@OriginalMember(owner = "client!en", name = "w", descriptor = "J")
-	private long aLong69 = -1L;
+	private long readPosition = -1L;
 
 	@OriginalMember(owner = "client!en", name = "s", descriptor = "Lsignlink!qm;")
-	private final FileOnDisk aClass214_1;
+	private final FileOnDisk file;
 
 	@OriginalMember(owner = "client!en", name = "a", descriptor = "J")
-	private long aLong64;
+	private long physicalLength;
 
 	@OriginalMember(owner = "client!en", name = "j", descriptor = "J")
-	private long aLong65;
+	private long virtualLength;
 
 	@OriginalMember(owner = "client!en", name = "q", descriptor = "[B")
-	private final byte[] aByteArray20;
+	private final byte[] writeBuffer;
 
 	@OriginalMember(owner = "client!en", name = "b", descriptor = "[B")
-	private final byte[] aByteArray19;
+	private final byte[] readBuffer;
 
 	@OriginalMember(owner = "client!en", name = "k", descriptor = "J")
-	private long aLong66;
+	private long virtualPosition;
 
 	@OriginalMember(owner = "client!en", name = "<init>", descriptor = "(Lsignlink!qm;II)V")
-	public BufferedFile(@OriginalArg(0) FileOnDisk arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) throws IOException {
-		this.aClass214_1 = arg0;
-		this.aLong65 = this.aLong64 = arg0.length();
-		this.aByteArray20 = new byte[arg2];
-		this.aByteArray19 = new byte[arg1];
-		this.aLong66 = 0L;
+	public BufferedFile(@OriginalArg(0) FileOnDisk file, @OriginalArg(1) int readBufferSize, @OriginalArg(2) int writeBufferSize) throws IOException {
+		this.file = file;
+		this.virtualLength = this.physicalLength = file.length();
+		this.writeBuffer = new byte[writeBufferSize];
+		this.readBuffer = new byte[readBufferSize];
+		this.virtualPosition = 0L;
 	}
 
 	@OriginalMember(owner = "client!en", name = "a", descriptor = "(B)V")
-	private void method1450() throws IOException {
-		if (this.aLong68 == -1L) {
+	private void flush() throws IOException {
+		if (this.writePosition == -1L) {
 			return;
 		}
-		if (this.aLong68 != this.aLong67) {
-			this.aClass214_1.seek(this.aLong68);
-			this.aLong67 = this.aLong68;
+		if (this.writePosition != this.physicalPosition) {
+			this.file.seek(this.writePosition);
+			this.physicalPosition = this.writePosition;
 		}
-		this.aClass214_1.write(this.aByteArray20, this.anInt1899, 0);
-		@Pc(45) long local45 = -1L;
-		if (this.aLong69 <= this.aLong68 && this.aLong69 + (long) this.anInt1906 > this.aLong68) {
-			local45 = this.aLong68;
-		} else if (this.aLong68 <= this.aLong69 && this.aLong69 < this.aLong68 + (long) this.anInt1899) {
-			local45 = this.aLong69;
+		this.file.write(this.writeBuffer, this.writeLen, 0);
+		@Pc(45) long start = -1L;
+		if (this.readPosition <= this.writePosition && this.readPosition + (long) this.readLen > this.writePosition) {
+			start = this.writePosition;
+		} else if (this.writePosition <= this.readPosition && this.readPosition < this.writePosition + (long) this.writeLen) {
+			start = this.readPosition;
 		}
-		this.aLong67 += this.anInt1899;
-		if (this.aLong64 < this.aLong67) {
-			this.aLong64 = this.aLong67;
+		this.physicalPosition += this.writeLen;
+		if (this.physicalLength < this.physicalPosition) {
+			this.physicalLength = this.physicalPosition;
 		}
-		@Pc(118) long local118 = -1L;
-		if (this.aLong69 < this.aLong68 + (long) this.anInt1899 && (long) this.anInt1906 + this.aLong69 >= (long) this.anInt1899 + this.aLong68) {
-			local118 = this.aLong68 + (long) this.anInt1899;
-		} else if (this.aLong69 + (long) this.anInt1906 > this.aLong68 && (long) this.anInt1899 + this.aLong68 >= (long) this.anInt1906 + this.aLong69) {
-			local118 = (long) this.anInt1906 + this.aLong69;
+		@Pc(118) long end = -1L;
+		if (this.readPosition < this.writePosition + (long) this.writeLen && (long) this.readLen + this.readPosition >= (long) this.writeLen + this.writePosition) {
+			end = this.writePosition + (long) this.writeLen;
+		} else if (this.readPosition + (long) this.readLen > this.writePosition && (long) this.writeLen + this.writePosition >= (long) this.readLen + this.readPosition) {
+			end = (long) this.readLen + this.readPosition;
 		}
-		if (local45 > -1L && local118 > local45) {
-			@Pc(208) int local208 = (int) (local118 - local45);
-			Static289.method2612(this.aByteArray20, (int) (local45 - this.aLong68), this.aByteArray19, (int) (local45 - this.aLong69), local208);
+		if (start > -1L && end > start) {
+			@Pc(208) int copyLen = (int) (end - start);
+			Static289.copy(this.writeBuffer, (int) (start - this.writePosition), this.readBuffer, (int) (start - this.readPosition), copyLen);
 		}
-		this.anInt1899 = 0;
-		this.aLong68 = -1L;
+		this.writeLen = 0;
+		this.writePosition = -1L;
 	}
 
 	@OriginalMember(owner = "client!en", name = "a", descriptor = "(I)J")
-	public final long method1451() {
-		return this.aLong65;
+	public final long length() {
+		return this.virtualLength;
 	}
 
 	@OriginalMember(owner = "client!en", name = "b", descriptor = "(I)Ljava/io/File;")
-	private File method1452() {
-		return this.aClass214_1.getFile();
+	private File getFile() {
+		return this.file.getFile();
 	}
 
 	@OriginalMember(owner = "client!en", name = "a", descriptor = "(I[BII)V")
-	public final void method1453(@OriginalArg(0) int arg0, @OriginalArg(1) byte[] arg1, @OriginalArg(2) int arg2) throws IOException {
+	public final void read(@OriginalArg(0) int off, @OriginalArg(1) byte[] b, @OriginalArg(2) int len) throws IOException {
 		try {
-			if (arg2 > arg1.length) {
-				throw new ArrayIndexOutOfBoundsException(arg2 - arg1.length);
+			if (len > b.length) {
+				throw new ArrayIndexOutOfBoundsException(len - b.length);
 			}
-			if (this.aLong68 != -1L && this.aLong66 >= this.aLong68 && (long) this.anInt1899 + this.aLong68 >= (long) arg2 + this.aLong66) {
-				Static289.method2612(this.aByteArray20, (int) (this.aLong66 - this.aLong68), arg1, 0, arg2);
-				this.aLong66 += arg2;
+			if (this.writePosition != -1L && this.virtualPosition >= this.writePosition && (long) this.writeLen + this.writePosition >= (long) len + this.virtualPosition) {
+				Static289.copy(this.writeBuffer, (int) (this.virtualPosition - this.writePosition), b, 0, len);
+				this.virtualPosition += len;
 				return;
 			}
-			@Pc(71) long local71 = this.aLong66;
-			@Pc(75) int local75 = arg2;
-			@Pc(102) int local102;
-			if (this.aLong69 <= this.aLong66 && this.aLong69 + (long) this.anInt1906 > this.aLong66) {
-				local102 = (int) ((long) this.anInt1906 + this.aLong69 - this.aLong66);
-				if (local102 > arg2) {
-					local102 = arg2;
+			@Pc(71) long originalPosition = this.virtualPosition;
+			@Pc(75) int originalLen = len;
+			@Pc(102) int n;
+			if (this.readPosition <= this.virtualPosition && this.readPosition + (long) this.readLen > this.virtualPosition) {
+				n = (int) ((long) this.readLen + this.readPosition - this.virtualPosition);
+				if (n > len) {
+					n = len;
 				}
-				Static289.method2612(this.aByteArray19, (int) (this.aLong66 - this.aLong69), arg1, 0, local102);
-				arg0 = local102;
-				arg2 -= local102;
-				this.aLong66 += local102;
+				Static289.copy(this.readBuffer, (int) (this.virtualPosition - this.readPosition), b, 0, n);
+				off = n;
+				len -= n;
+				this.virtualPosition += n;
 			}
-			if (this.aByteArray19.length < arg2) {
-				this.aClass214_1.seek(this.aLong66);
-				this.aLong67 = this.aLong66;
-				while (arg2 > 0) {
-					local102 = this.aClass214_1.read(arg0, arg2, arg1);
-					if (local102 == -1) {
+			if (this.readBuffer.length < len) {
+				this.file.seek(this.virtualPosition);
+				this.physicalPosition = this.virtualPosition;
+				while (len > 0) {
+					n = this.file.read(off, len, b);
+					if (n == -1) {
 						break;
 					}
-					this.aLong67 += local102;
-					arg2 -= local102;
-					arg0 += local102;
-					this.aLong66 += local102;
+					this.physicalPosition += n;
+					len -= n;
+					off += n;
+					this.virtualPosition += n;
 				}
-			} else if (arg2 > 0) {
-				this.method1456();
-				local102 = arg2;
-				if (arg2 > this.anInt1906) {
-					local102 = this.anInt1906;
+			} else if (len > 0) {
+				this.fill();
+				n = len;
+				if (len > this.readLen) {
+					n = this.readLen;
 				}
-				Static289.method2612(this.aByteArray19, 0, arg1, arg0, local102);
-				arg2 -= local102;
-				arg0 += local102;
-				this.aLong66 += local102;
+				Static289.copy(this.readBuffer, 0, b, off, n);
+				len -= n;
+				off += n;
+				this.virtualPosition += n;
 			}
-			if (this.aLong68 != -1L) {
-				if (this.aLong66 < this.aLong68 && arg2 > 0) {
-					local102 = (int) (this.aLong68 - this.aLong66) + arg0;
-					if (arg0 + arg2 < local102) {
-						local102 = arg0 + arg2;
+			if (this.writePosition != -1L) {
+				if (this.virtualPosition < this.writePosition && len > 0) {
+					n = (int) (this.writePosition - this.virtualPosition) + off;
+					if (off + len < n) {
+						n = off + len;
 					}
-					while (arg0 < local102) {
-						arg1[arg0++] = 0;
-						this.aLong66++;
-						arg2--;
+					while (off < n) {
+						b[off++] = 0;
+						this.virtualPosition++;
+						len--;
 					}
 				}
-				@Pc(298) long local298 = -1L;
-				@Pc(300) long local300 = -1L;
-				if ((long) this.anInt1899 + this.aLong68 > local71 && (long) local75 + local71 >= (long) this.anInt1899 + this.aLong68) {
-					local300 = (long) this.anInt1899 + this.aLong68;
-				} else if (this.aLong68 < (long) local75 + local71 && (long) this.anInt1899 + this.aLong68 >= (long) local75 + local71) {
-					local300 = (long) local75 + local71;
+				@Pc(298) long end = -1L;
+				@Pc(300) long start = -1L;
+				if ((long) this.writeLen + this.writePosition > originalPosition && (long) originalLen + originalPosition >= (long) this.writeLen + this.writePosition) {
+					start = (long) this.writeLen + this.writePosition;
+				} else if (this.writePosition < (long) originalLen + originalPosition && (long) this.writeLen + this.writePosition >= (long) originalLen + originalPosition) {
+					start = (long) originalLen + originalPosition;
 				}
-				if (local71 <= this.aLong68 && local71 + (long) local75 > this.aLong68) {
-					local298 = this.aLong68;
-				} else if (local71 >= this.aLong68 && local71 < (long) this.anInt1899 + this.aLong68) {
-					local298 = local71;
+				if (originalPosition <= this.writePosition && originalPosition + (long) originalLen > this.writePosition) {
+					end = this.writePosition;
+				} else if (originalPosition >= this.writePosition && originalPosition < (long) this.writeLen + this.writePosition) {
+					end = originalPosition;
 				}
-				if (local298 > -1L && local300 > local298) {
-					@Pc(426) int local426 = (int) (local300 - local298);
-					Static289.method2612(this.aByteArray20, (int) (local298 - this.aLong68), arg1, (int) (local298 - local71), local426);
-					if (this.aLong66 < local300) {
-						arg2 = (int) ((long) arg2 + this.aLong66 - local300);
-						this.aLong66 = local300;
+				if (end > -1L && start > end) {
+					@Pc(426) int copyLen = (int) (start - end);
+					Static289.copy(this.writeBuffer, (int) (end - this.writePosition), b, (int) (end - originalPosition), copyLen);
+					if (this.virtualPosition < start) {
+						len = (int) ((long) len + this.virtualPosition - start);
+						this.virtualPosition = start;
 					}
 				}
 			}
-		} catch (@Pc(464) IOException local464) {
-			this.aLong67 = -1L;
-			throw local464;
+		} catch (@Pc(464) IOException ex) {
+			this.physicalPosition = -1L;
+			throw ex;
 		}
-		if (arg2 > 0) {
+		if (len > 0) {
 			throw new EOFException();
 		}
 	}
 
 	@OriginalMember(owner = "client!en", name = "b", descriptor = "(Z)V")
 	public final void method1455() throws IOException {
-		this.method1450();
-		this.aClass214_1.close();
+		this.flush();
+		this.file.close();
 	}
 
 	@OriginalMember(owner = "client!en", name = "c", descriptor = "(I)V")
-	private void method1456() throws IOException {
-		this.anInt1906 = 0;
-		if (this.aLong67 != this.aLong66) {
-			this.aClass214_1.seek(this.aLong66);
-			this.aLong67 = this.aLong66;
+	private void fill() throws IOException {
+		this.readLen = 0;
+		if (this.physicalPosition != this.virtualPosition) {
+			this.file.seek(this.virtualPosition);
+			this.physicalPosition = this.virtualPosition;
 		}
-		this.aLong69 = this.aLong66;
-		while (this.aByteArray19.length > this.anInt1906) {
-			@Pc(49) int local49 = this.aByteArray19.length - this.anInt1906;
-			if (local49 > 200000000) {
-				local49 = 200000000;
+		this.readPosition = this.virtualPosition;
+		while (this.readBuffer.length > this.readLen) {
+			@Pc(49) int len = this.readBuffer.length - this.readLen;
+			if (len > 200000000) {
+				len = 200000000;
 			}
-			@Pc(66) int local66 = this.aClass214_1.read(this.anInt1906, local49, this.aByteArray19);
-			if (local66 == -1) {
+			@Pc(66) int n = this.file.read(this.readLen, len, this.readBuffer);
+			if (n == -1) {
 				break;
 			}
-			this.aLong67 += local66;
-			this.anInt1906 += local66;
+			this.physicalPosition += n;
+			this.readLen += n;
 		}
 	}
 
 	@OriginalMember(owner = "client!en", name = "a", descriptor = "(Z[B)V")
-	public final void method1457(@OriginalArg(1) byte[] arg0) throws IOException {
-		this.method1453(0, arg0, arg0.length);
+	public final void read(@OriginalArg(1) byte[] b) throws IOException {
+		this.read(0, b, b.length);
 	}
 
 	@OriginalMember(owner = "client!en", name = "a", descriptor = "([BIII)V")
-	public final void method1458(@OriginalArg(0) byte[] arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2) throws IOException {
+	public final void write(@OriginalArg(0) byte[] b, @OriginalArg(1) int off, @OriginalArg(3) int len) throws IOException {
 		try {
-			if (this.aLong65 < (long) arg2 + this.aLong66) {
-				this.aLong65 = (long) arg2 + this.aLong66;
+			if (this.virtualLength < (long) len + this.virtualPosition) {
+				this.virtualLength = (long) len + this.virtualPosition;
 			}
-			if (this.aLong68 != -1L && (this.aLong68 > this.aLong66 || this.aLong66 > (long) this.anInt1899 + this.aLong68)) {
-				this.method1450();
+			if (this.writePosition != -1L && (this.writePosition > this.virtualPosition || this.virtualPosition > (long) this.writeLen + this.writePosition)) {
+				this.flush();
 			}
-			if (this.aLong68 != -1L && (long) this.aByteArray20.length + this.aLong68 < (long) arg2 + this.aLong66) {
-				@Pc(90) int local90 = (int) ((long) this.aByteArray20.length + this.aLong68 - this.aLong66);
-				arg2 -= local90;
-				Static289.method2612(arg0, arg1, this.aByteArray20, (int) (this.aLong66 - this.aLong68), local90);
-				this.aLong66 += local90;
-				this.anInt1899 = this.aByteArray20.length;
-				this.method1450();
-				arg1 += local90;
+			if (this.writePosition != -1L && (long) this.writeBuffer.length + this.writePosition < (long) len + this.virtualPosition) {
+				@Pc(90) int n = (int) ((long) this.writeBuffer.length + this.writePosition - this.virtualPosition);
+				len -= n;
+				Static289.copy(b, off, this.writeBuffer, (int) (this.virtualPosition - this.writePosition), n);
+				this.virtualPosition += n;
+				this.writeLen = this.writeBuffer.length;
+				this.flush();
+				off += n;
 			}
-			if (this.aByteArray20.length < arg2) {
-				if (this.aLong66 != this.aLong67) {
-					this.aClass214_1.seek(this.aLong66);
-					this.aLong67 = this.aLong66;
+			if (this.writeBuffer.length < len) {
+				if (this.virtualPosition != this.physicalPosition) {
+					this.file.seek(this.virtualPosition);
+					this.physicalPosition = this.virtualPosition;
 				}
-				this.aClass214_1.write(arg0, arg2, arg1);
-				@Pc(165) long local165 = -1L;
-				if (this.aLong69 <= this.aLong66 && (long) this.anInt1906 + this.aLong69 > this.aLong66) {
-					local165 = this.aLong66;
-				} else if (this.aLong66 <= this.aLong69 && (long) arg2 + this.aLong66 > this.aLong69) {
-					local165 = this.aLong69;
+				this.file.write(b, len, off);
+				@Pc(165) long start = -1L;
+				if (this.readPosition <= this.virtualPosition && (long) this.readLen + this.readPosition > this.virtualPosition) {
+					start = this.virtualPosition;
+				} else if (this.virtualPosition <= this.readPosition && (long) len + this.virtualPosition > this.readPosition) {
+					start = this.readPosition;
 				}
-				this.aLong67 += arg2;
-				@Pc(226) long local226 = -1L;
-				if (this.aLong64 < this.aLong67) {
-					this.aLong64 = this.aLong67;
+				this.physicalPosition += len;
+				@Pc(226) long end = -1L;
+				if (this.physicalLength < this.physicalPosition) {
+					this.physicalLength = this.physicalPosition;
 				}
-				if (this.aLong66 + (long) arg2 > this.aLong69 && this.aLong66 + (long) arg2 <= this.aLong69 - -((long) this.anInt1906)) {
-					local226 = (long) arg2 + this.aLong66;
-				} else if (this.aLong69 + (long) this.anInt1906 > this.aLong66 && this.aLong66 + (long) arg2 >= (long) this.anInt1906 + this.aLong69) {
-					local226 = (long) this.anInt1906 + this.aLong69;
+				if (this.virtualPosition + (long) len > this.readPosition && this.virtualPosition + (long) len <= this.readPosition - -((long) this.readLen)) {
+					end = (long) len + this.virtualPosition;
+				} else if (this.readPosition + (long) this.readLen > this.virtualPosition && this.virtualPosition + (long) len >= (long) this.readLen + this.readPosition) {
+					end = (long) this.readLen + this.readPosition;
 				}
-				if (local165 > -1L && local226 > local165) {
-					@Pc(324) int local324 = (int) (local226 - local165);
-					Static289.method2612(arg0, (int) (local165 + (long) arg1 - this.aLong66), this.aByteArray19, (int) (local165 - this.aLong69), local324);
+				if (start > -1L && end > start) {
+					@Pc(324) int copyLen = (int) (end - start);
+					Static289.copy(b, (int) (start + (long) off - this.virtualPosition), this.readBuffer, (int) (start - this.readPosition), copyLen);
 				}
-				this.aLong66 += arg2;
-			} else if (arg2 > 0) {
-				if (this.aLong68 == -1L) {
-					this.aLong68 = this.aLong66;
+				this.virtualPosition += len;
+			} else if (len > 0) {
+				if (this.writePosition == -1L) {
+					this.writePosition = this.virtualPosition;
 				}
-				Static289.method2612(arg0, arg1, this.aByteArray20, (int) (this.aLong66 - this.aLong68), arg2);
-				this.aLong66 += arg2;
-				if ((long) this.anInt1899 < this.aLong66 - this.aLong68) {
-					this.anInt1899 = (int) (this.aLong66 - this.aLong68);
+				Static289.copy(b, off, this.writeBuffer, (int) (this.virtualPosition - this.writePosition), len);
+				this.virtualPosition += len;
+				if ((long) this.writeLen < this.virtualPosition - this.writePosition) {
+					this.writeLen = (int) (this.virtualPosition - this.writePosition);
 				}
 			}
-		} catch (@Pc(414) IOException local414) {
-			this.aLong67 = -1L;
-			throw local414;
+		} catch (@Pc(414) IOException ex) {
+			this.physicalPosition = -1L;
+			throw ex;
 		}
 	}
 
 	@OriginalMember(owner = "client!en", name = "a", descriptor = "(IJ)V")
-	public final void method1459(@OriginalArg(1) long arg0) throws IOException {
-		if (arg0 < 0L) {
-			throw new IOException("Invalid seek to " + arg0 + " in file " + this.method1452());
+	public final void seek(@OriginalArg(1) long offset) throws IOException {
+		if (offset < 0L) {
+			throw new IOException("Invalid seek to " + offset + " in file " + this.getFile());
 		}
-		this.aLong66 = arg0;
+		this.virtualPosition = offset;
 	}
 }

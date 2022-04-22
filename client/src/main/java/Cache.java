@@ -55,18 +55,18 @@ public final class Cache {
 		synchronized (this.aClass38_1) {
 			try {
 				@Pc(27) Object local27;
-				if (this.aClass38_2.method1451() < (long) (arg0 * 6 + 6)) {
+				if (this.aClass38_2.length() < (long) (arg0 * 6 + 6)) {
 					local27 = null;
 					return (byte[]) local27;
 				}
-				this.aClass38_2.method1459((long) (arg0 * 6));
-				this.aClass38_2.method1453(0, Static271.aByteArray79, 6);
+				this.aClass38_2.seek((long) (arg0 * 6));
+				this.aClass38_2.read(0, Static271.aByteArray79, 6);
 				@Pc(69) int local69 = ((Static271.aByteArray79[3] & 0xFF) << 16) - (-((Static271.aByteArray79[4] & 0xFF) << 8) - (Static271.aByteArray79[5] & 0xFF));
 				@Pc(99) int local99 = (Static271.aByteArray79[2] & 0xFF) + ((Static271.aByteArray79[1] & 0xFF) << 8) + ((Static271.aByteArray79[0] & 0xFF) << 16);
 				if (local99 < 0 || this.anInt2156 < local99) {
 					local27 = null;
 					return (byte[]) local27;
-				} else if (local69 <= 0 || (long) local69 > this.aClass38_1.method1451() / 520L) {
+				} else if (local69 <= 0 || (long) local69 > this.aClass38_1.length() / 520L) {
 					local27 = null;
 					return (byte[]) local27;
 				} else {
@@ -79,11 +79,11 @@ public final class Cache {
 							return (byte[]) local27;
 						}
 						@Pc(157) int local157 = local99 - local136;
-						this.aClass38_1.method1459((long) (local69 * 520));
+						this.aClass38_1.seek((long) (local69 * 520));
 						if (local157 > 512) {
 							local157 = 512;
 						}
-						this.aClass38_1.method1453(0, Static271.aByteArray79, local157 + 8);
+						this.aClass38_1.read(0, Static271.aByteArray79, local157 + 8);
 						@Pc(197) int local197 = ((Static271.aByteArray79[0] & 0xFF) << 8) + (Static271.aByteArray79[1] & 0xFF);
 						@Pc(211) int local211 = (Static271.aByteArray79[3] & 0xFF) + ((Static271.aByteArray79[2] & 0xFF) << 8);
 						@Pc(217) int local217 = Static271.aByteArray79[7] & 0xFF;
@@ -92,7 +92,7 @@ public final class Cache {
 							local27 = null;
 							return (byte[]) local27;
 						}
-						if (local239 < 0 || (long) local239 > this.aClass38_1.method1451() / 520L) {
+						if (local239 < 0 || (long) local239 > this.aClass38_1.length() / 520L) {
 							local27 = null;
 							return (byte[]) local27;
 						}
@@ -119,19 +119,19 @@ public final class Cache {
 				@Pc(67) int local67;
 				@Pc(27) boolean local27;
 				if (arg3) {
-					if (this.aClass38_2.method1451() < (long) (arg1 * 6 + 6)) {
+					if (this.aClass38_2.length() < (long) (arg1 * 6 + 6)) {
 						local27 = false;
 						return local27;
 					}
-					this.aClass38_2.method1459((long) (arg1 * 6));
-					this.aClass38_2.method1453(0, Static271.aByteArray79, 6);
+					this.aClass38_2.seek((long) (arg1 * 6));
+					this.aClass38_2.read(0, Static271.aByteArray79, 6);
 					local67 = ((Static271.aByteArray79[3] & 0xFF) << 16) + (Static271.aByteArray79[4] << 8 & 0xFF00) + (Static271.aByteArray79[5] & 0xFF);
-					if (local67 <= 0 || this.aClass38_1.method1451() / 520L < (long) local67) {
+					if (local67 <= 0 || this.aClass38_1.length() / 520L < (long) local67) {
 						local27 = false;
 						return local27;
 					}
 				} else {
-					local67 = (int) ((this.aClass38_1.method1451() + 519L) / 520L);
+					local67 = (int) ((this.aClass38_1.length() + 519L) / 520L);
 					if (local67 == 0) {
 						local67 = 1;
 					}
@@ -144,17 +144,17 @@ public final class Cache {
 				Static271.aByteArray79[3] = (byte) (local67 >> 16);
 				@Pc(156) int local156 = 0;
 				Static271.aByteArray79[1] = (byte) (arg0 >> 8);
-				this.aClass38_2.method1459((long) (arg1 * 6));
-				this.aClass38_2.method1458(Static271.aByteArray79, 0, 6);
+				this.aClass38_2.seek((long) (arg1 * 6));
+				this.aClass38_2.write(Static271.aByteArray79, 0, 6);
 				while (true) {
 					if (local125 < arg0) {
 						label134: {
 							@Pc(189) int local189 = 0;
 							@Pc(248) int local248;
 							if (arg3) {
-								this.aClass38_1.method1459((long) (local67 * 520));
+								this.aClass38_1.seek((long) (local67 * 520));
 								try {
-									this.aClass38_1.method1453(0, Static271.aByteArray79, 8);
+									this.aClass38_1.read(0, Static271.aByteArray79, 8);
 								} catch (@Pc(209) EOFException local209) {
 									break label134;
 								}
@@ -166,7 +166,7 @@ public final class Cache {
 									local27 = false;
 									return local27;
 								}
-								if (local189 < 0 || (long) local189 > this.aClass38_1.method1451() / 520L) {
+								if (local189 < 0 || (long) local189 > this.aClass38_1.length() / 520L) {
 									local27 = false;
 									return local27;
 								}
@@ -174,7 +174,7 @@ public final class Cache {
 							local248 = arg0 - local125;
 							if (local189 == 0) {
 								arg3 = false;
-								local189 = (int) ((this.aClass38_1.method1451() + 519L) / 520L);
+								local189 = (int) ((this.aClass38_1.length() + 519L) / 520L);
 								if (local189 == 0) {
 									local189++;
 								}
@@ -197,10 +197,10 @@ public final class Cache {
 							Static271.aByteArray79[3] = (byte) local156;
 							local156++;
 							Static271.aByteArray79[5] = (byte) (local189 >> 8);
-							this.aClass38_1.method1459((long) (local67 * 520));
+							this.aClass38_1.seek((long) (local67 * 520));
 							local67 = local189;
-							this.aClass38_1.method1458(Static271.aByteArray79, 0, 8);
-							this.aClass38_1.method1458(arg2, local125, local248);
+							this.aClass38_1.write(Static271.aByteArray79, 0, 8);
+							this.aClass38_1.write(arg2, local125, local248);
 							local125 += local248;
 							continue;
 						}

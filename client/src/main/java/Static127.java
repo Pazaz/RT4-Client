@@ -288,7 +288,7 @@ public final class Static127 {
 			}
 			if (arg0.method3111(Static165.aClass100_775)) {
 				GameShell.signLink.breakConnection();
-				Static124.socket.method2833();
+				Static124.socket.breakConnection();
 				Static107.js5NetQueue.method2323();
 			}
 			if (arg0.method3111(Static114.aClass100_1100)) {

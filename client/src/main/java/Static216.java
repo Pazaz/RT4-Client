@@ -23,7 +23,7 @@ public final class Static216 {
 		try {
 			if (++Static92.anInt2430 > 2000) {
 				if (Static124.socket != null) {
-					Static124.socket.method2834();
+					Static124.socket.close();
 					Static124.socket = null;
 				}
 				if (Static276.anInt5816 >= 1) {
@@ -75,7 +75,7 @@ public final class Static216 {
 				if (local150 != 0) {
 					Static266.anInt5336 = local150;
 					Static184.anInt4348 = 0;
-					Static124.socket.method2834();
+					Static124.socket.close();
 					Static124.socket = null;
 					return;
 				}
@@ -85,7 +85,7 @@ public final class Static216 {
 				if (Static124.socket.available() < 8) {
 					return;
 				}
-				Static124.socket.method2827(0, 8, Static57.aClass3_Sub15_Sub1_3.data);
+				Static124.socket.read(0, 8, Static57.aClass3_Sub15_Sub1_3.data);
 				Static57.aClass3_Sub15_Sub1_3.offset = 0;
 				Static193.aLong147 = Static57.aClass3_Sub15_Sub1_3.g8();
 				@Pc(210) int[] local210 = new int[4];
@@ -196,13 +196,13 @@ public final class Static216 {
 					Static184.anInt4348 = 1;
 					Static276.anInt5816++;
 					Static92.anInt2430 = 0;
-					Static124.socket.method2834();
+					Static124.socket.close();
 					Static124.socket = null;
 					return;
 				} else {
 					Static266.anInt5336 = local623;
 					Static184.anInt4348 = 0;
-					Static124.socket.method2834();
+					Static124.socket.close();
 					Static124.socket = null;
 					return;
 				}
@@ -219,7 +219,7 @@ public final class Static216 {
 					Static231.anInt5202 = (Static124.socket.read() + 3) * 60;
 					Static184.anInt4348 = 0;
 					Static266.anInt5336 = 21;
-					Static124.socket.method2834();
+					Static124.socket.close();
 					Static124.socket = null;
 					return;
 				}
@@ -230,7 +230,7 @@ public final class Static216 {
 					Static204.anInt4765 = Static124.socket.read();
 					Static184.anInt4348 = 0;
 					Static266.anInt5336 = 29;
-					Static124.socket.method2834();
+					Static124.socket.close();
 					Static124.socket = null;
 					return;
 				}
@@ -240,7 +240,7 @@ public final class Static216 {
 				if (Static124.socket.available() < 14) {
 					return;
 				}
-				Static124.socket.method2827(0, 14, Static57.aClass3_Sub15_Sub1_3.data);
+				Static124.socket.read(0, 14, Static57.aClass3_Sub15_Sub1_3.data);
 				Static57.aClass3_Sub15_Sub1_3.offset = 0;
 				Static191.staffModLevel = Static57.aClass3_Sub15_Sub1_3.g1();
 				Static249.anInt5431 = Static57.aClass3_Sub15_Sub1_3.g1();
@@ -276,7 +276,7 @@ public final class Static216 {
 					return;
 				}
 				Static57.aClass3_Sub15_Sub1_3.offset = 0;
-				Static124.socket.method2827(0, Static223.anInt5028, Static57.aClass3_Sub15_Sub1_3.data);
+				Static124.socket.read(0, Static223.anInt5028, Static57.aClass3_Sub15_Sub1_3.data);
 				Static266.anInt5336 = 2;
 				Static184.anInt4348 = 0;
 				Static243.method4221();
@@ -287,7 +287,7 @@ public final class Static216 {
 			}
 		} catch (@Pc(977) IOException local977) {
 			if (Static124.socket != null) {
-				Static124.socket.method2834();
+				Static124.socket.close();
 				Static124.socket = null;
 			}
 			if (Static276.anInt5816 >= 1) {
