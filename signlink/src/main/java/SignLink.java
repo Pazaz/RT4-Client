@@ -1,4 +1,5 @@
 import java.applet.Applet;
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.Frame;
@@ -375,6 +376,7 @@ public final class SignLink implements Runnable {
 					@Pc(168) Frame frame = new Frame("Jagex Full Screen");
 					request.result = frame;
 					frame.setResizable(false);
+					frame.setBackground(Color.black);
 					this.fullScreenManager.enter(request.intArg1 & 0xFFFF, request.intArg1 >> 16, request.intArg2 & 0xFFFF, frame, request.intArg2 >>> 16);
 				} else if (type == 7) {
 					this.fullScreenManager.exit();
