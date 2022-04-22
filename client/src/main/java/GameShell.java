@@ -229,22 +229,6 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 		container.add(canvas);
 		canvas.setSize(canvasWidth, canvasHeight);
 		canvas.setVisible(true);
-		Graphics g = canvas.getGraphics();
-		if (g != null) {
-			if (g instanceof Graphics2D) {
-				canvasScale = ((Graphics2D) g).getTransform().getScaleX();
-			} else {
-				canvasScale = 1.0d;
-			}
-			if (Math.floor(canvasScale) != canvasScale) {
-				subpixelX = 0.0d;
-				subpixelY = -0.5d;
-			} else {
-				subpixelX = 0.5d;
-				subpixelY = 0.5d;
-			}
-			System.out.println("Scaling factor: " + canvasScale + "x, using fractional scaling");
-		}
 		if (container == frame) {
 			@Pc(66) Insets insets = frame.getInsets();
 			canvas.setLocation(leftMargin + insets.left, insets.top + topMargin);
@@ -383,6 +367,19 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 		}
 	}
 
+	public GraphicsDevice getCurrentDevice() {
+		GraphicsConfiguration config = frame.getGraphicsConfiguration();
+		GraphicsDevice myScreen = config.getDevice();
+		GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
+		GraphicsDevice[] allScreens = env.getScreenDevices();
+		for (int i = 0; i < allScreens.length; i++) {
+			if (allScreens[i].equals(myScreen)) {
+				return allScreens[i];
+			}
+		}
+		return null;
+	}
+
 	@OriginalMember(owner = "client!rc", name = "e", descriptor = "(I)V")
 	private void mainRedrawWrapper() {
 		@Pc(2) long now = MonotonicClock.currentTimeMillis();
@@ -398,21 +395,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			partialRedraws -= 50;
 			canvas.setSize(canvasWidth, canvasHeight);
 			canvas.setVisible(true);
-			Graphics g = canvas.getGraphics();
-			if (g != null) {
-				if (g instanceof Graphics2D) {
-					canvasScale = ((Graphics2D) g).getTransform().getScaleX();
-					if (Math.floor(canvasScale) != canvasScale) {
-						subpixelX = 0.0d;
-						subpixelY = -0.5d;
-					} else {
-						subpixelX = 0.5d;
-						subpixelY = 0.5d;
-					}
-				} else {
-					canvasScale = 1.0;
-				}
-			}
+			canvasScale = getCurrentDevice().getDefaultConfiguration().getDefaultTransform().getScaleX();
 			if (frame != null && fullScreenFrame == null) {
 				@Pc(84) Insets insets = frame.getInsets();
 				canvas.setLocation(insets.left + leftMargin, topMargin + insets.top);
