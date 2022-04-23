@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static276 {
 
 	@OriginalMember(owner = "client!wh", name = "c", descriptor = "[[[Lclient!bj;")
-	public static Tile[][][] aClass3_Sub5ArrayArrayArray3;
+	public static Tile[][][] underWaterGroundTiles;
 
 	@OriginalMember(owner = "client!wh", name = "l", descriptor = "[Lclient!qf;")
 	public static Sprite[] aClass3_Sub2_Sub1Array11;
@@ -36,7 +36,7 @@ public final class Static276 {
 		if (Static9.method187(arg0, arg1, arg2)) {
 			@Pc(10) int local10 = arg1 << 7;
 			@Pc(14) int local14 = arg2 << 7;
-			return Static256.method4394(local10 + 1, Static83.anIntArrayArrayArray4[arg0][arg1][arg2] + arg3, local14 + 1) && Static256.method4394(local10 + 128 - 1, Static83.anIntArrayArrayArray4[arg0][arg1 + 1][arg2] + arg3, local14 + 1) && Static256.method4394(local10 + 128 - 1, Static83.anIntArrayArrayArray4[arg0][arg1 + 1][arg2 + 1] + arg3, local14 + 128 - 1) && Static256.method4394(local10 + 1, Static83.anIntArrayArrayArray4[arg0][arg1][arg2 + 1] + arg3, local14 + 128 - 1);
+			return Static256.method4394(local10 + 1, Static83.activeTileHeightMap[arg0][arg1][arg2] + arg3, local14 + 1) && Static256.method4394(local10 + 128 - 1, Static83.activeTileHeightMap[arg0][arg1 + 1][arg2] + arg3, local14 + 1) && Static256.method4394(local10 + 128 - 1, Static83.activeTileHeightMap[arg0][arg1 + 1][arg2 + 1] + arg3, local14 + 128 - 1) && Static256.method4394(local10 + 1, Static83.activeTileHeightMap[arg0][arg1][arg2 + 1] + arg3, local14 + 128 - 1);
 		} else {
 			return false;
 		}

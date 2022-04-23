@@ -17,7 +17,7 @@ public final class Static138 {
 	public static Js5 js5Archive15;
 
 	@OriginalMember(owner = "client!km", name = "Pc", descriptor = "I")
-	public static int anInt3439;
+	public static int renderX;
 
 	@OriginalMember(owner = "client!km", name = "Yc", descriptor = "I")
 	public static int anInt3443;
@@ -77,7 +77,7 @@ public final class Static138 {
 	public static final JagString aClass100_654 = Static28.parse(":trade:");
 
 	@OriginalMember(owner = "client!km", name = "ad", descriptor = "I")
-	public static int anInt3445 = 0;
+	public static int fp = 0;
 
 	@OriginalMember(owner = "client!km", name = "b", descriptor = "(III)I")
 	public static int method2695(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
@@ -103,7 +103,7 @@ public final class Static138 {
 	}
 
 	@OriginalMember(owner = "client!km", name = "f", descriptor = "(I)Z")
-	public static boolean method2697() {
+	public static boolean allLevelsAreVisible() {
 		return GlRenderer.enabled ? true : Static162.aBoolean190;
 	}
 

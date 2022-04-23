@@ -25,7 +25,7 @@ public final class Static110 {
 		if (local6 != null) {
 			return local6;
 		}
-		@Pc(30) byte[] local30 = Static39.aClass153_23.method4495(11, arg0);
+		@Pc(30) byte[] local30 = Static39.aClass153_23.getFile(11, arg0);
 		local6 = new Class3_Sub2_Sub12();
 		if (local30 != null) {
 			local6.method2076(new Buffer(local30));
@@ -35,7 +35,7 @@ public final class Static110 {
 	}
 
 	@OriginalMember(owner = "client!ih", name = "a", descriptor = "(I[Lclient!hg;)V")
-	public static void method2280(@OriginalArg(0) int arg0, @OriginalArg(1) Class3_Sub14[] arg1) {
+	public static void method2280(@OriginalArg(0) int arg0, @OriginalArg(1) GlTile[] arg1) {
 		Static182.aClass3_Sub14ArrayArray2[arg0] = arg1;
 	}
 

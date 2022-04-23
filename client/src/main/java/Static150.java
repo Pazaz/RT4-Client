@@ -87,9 +87,9 @@ public final class Static150 {
 		}
 		if (arg3 && arg2.anObjectArray17 != null && (local4 != arg2.anInt445 || arg2.anInt459 != local7)) {
 			@Pc(305) HookRequest local305 = new HookRequest();
-			local305.anObjectArray31 = arg2.anObjectArray17;
+			local305.arguments = arg2.anObjectArray17;
 			local305.source = arg2;
-			Static185.aClass69_101.method2282(local305);
+			Static185.lowPriorityRequests.method2282(local305);
 		}
 	}
 

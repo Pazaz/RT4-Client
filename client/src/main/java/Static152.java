@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static152 {
 
 	@OriginalMember(owner = "client!ma", name = "i", descriptor = "I")
-	public static int anInt3594;
+	public static int mapSizeX;
 
 	@OriginalMember(owner = "client!ma", name = "q", descriptor = "Lclient!fd;")
 	public static WorldMapFont aClass41_3;

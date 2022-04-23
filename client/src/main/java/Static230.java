@@ -21,7 +21,7 @@ public final class Static230 {
 	public static int anInt5152 = 0;
 
 	@OriginalMember(owner = "client!sj", name = "u", descriptor = "Z")
-	public static boolean aBoolean250 = false;
+	public static boolean dynamicMapRegion = false;
 
 	@OriginalMember(owner = "client!sj", name = "w", descriptor = "Lclient!na;")
 	public static final JagString aClass100_978 = Static28.parse("<)4col>");
@@ -132,9 +132,9 @@ public final class Static230 {
 		}
 		@Pc(27) byte[] local27;
 		if (arg0 < 32768) {
-			local27 = Static238.aClass153_96.method4495(1, arg0);
+			local27 = Static238.aClass153_96.getFile(1, arg0);
 		} else {
-			local27 = Static262.aClass153_108.method4495(1, arg0 & 0x7FFF);
+			local27 = Static262.aClass153_108.getFile(1, arg0 & 0x7FFF);
 		}
 		local10 = new Class3_Sub2_Sub6();
 		if (local27 != null) {

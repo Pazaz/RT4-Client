@@ -5,14 +5,14 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class GoSubFrame {
 
 	@OriginalMember(owner = "client!hj", name = "b", descriptor = "[I")
-	public int[] anIntArray237;
+	public int[] intLocals;
 
 	@OriginalMember(owner = "client!hj", name = "f", descriptor = "[Lclient!na;")
-	public JagString[] aClass100Array79;
+	public JagString[] stringLocals;
 
 	@OriginalMember(owner = "client!hj", name = "h", descriptor = "Lclient!qc;")
-	public ClientScript aClass3_Sub2_Sub17_1;
+	public ClientScript script;
 
 	@OriginalMember(owner = "client!hj", name = "k", descriptor = "I")
-	public int anInt2515 = -1;
+	public int pc = -1;
 }

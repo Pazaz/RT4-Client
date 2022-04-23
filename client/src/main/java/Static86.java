@@ -39,7 +39,7 @@ public final class Static86 {
 		@Pc(19) int local19;
 		for (local19 = 0; local19 < Static240.anInt5335; local19++) {
 			@Pc(30) int local30 = Static52.anIntArray136[local19];
-			if (Static175.aClass8_Sub4_Sub2Array1[local30].anInt3430 != Static83.anInt372) {
+			if (Static175.aClass8_Sub4_Sub2Array1[local30].anInt3430 != Static83.loop) {
 				if (Static175.aClass8_Sub4_Sub2Array1[local30].aClass96_1.method2935()) {
 					Static91.method1877(Static175.aClass8_Sub4_Sub2Array1[local30]);
 				}

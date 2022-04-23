@@ -8,7 +8,7 @@ public final class Static244 {
 	public static final SoftLruHashTable aClass99_32 = new SoftLruHashTable(50);
 
 	@OriginalMember(owner = "client!tl", name = "d", descriptor = "I")
-	public static int anInt5370 = 0;
+	public static int gameState = 0;
 
 
 	@OriginalMember(owner = "client!tl", name = "f", descriptor = "Lclient!na;")

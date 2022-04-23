@@ -8,7 +8,7 @@ public final class Static83 {
 	public static int[][][] anIntArrayArrayArray3;
 
 	@OriginalMember(owner = "client!gj", name = "m", descriptor = "[[[I")
-	public static int[][][] anIntArrayArrayArray4;
+	public static int[][][] activeTileHeightMap;
 
 	@OriginalMember(owner = "client!gj", name = "r", descriptor = "F")
 	public static float aFloat3;
@@ -17,7 +17,7 @@ public final class Static83 {
 	public static int modeWhere = 0;
 
 	@OriginalMember(owner = "client!gj", name = "d", descriptor = "I")
-	public static int anInt372 = 0;
+	public static int loop = 0;
 
 	@OriginalMember(owner = "client!gj", name = "p", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable aClass99_3 = new SoftLruHashTable(64);

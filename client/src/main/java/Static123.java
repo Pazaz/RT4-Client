@@ -25,7 +25,7 @@ public final class Static123 {
 		if (local10 != null) {
 			return local10;
 		}
-		@Pc(26) byte[] local26 = Static23.aClass153_11.method4495(26, arg0);
+		@Pc(26) byte[] local26 = Static23.aClass153_11.getFile(26, arg0);
 		local10 = new StructType();
 		if (local26 != null) {
 			local10.method2806(new Buffer(local26));
@@ -35,7 +35,7 @@ public final class Static123 {
 	}
 
 	@OriginalMember(owner = "client!jj", name = "a", descriptor = "(Z)V")
-	public static void method2418() {
+	public static void topBannerRefresh() {
 		if (!Static249.aBoolean282 && Static83.modeWhere != 2) {
 			try {
 				Static206.aClass100_900.method3157(Static215.aClient1);
@@ -62,15 +62,15 @@ public final class Static123 {
 			@Pc(158) int local158;
 			@Pc(137) boolean local137;
 			if (local10.anInt4453 == 1) {
-				local14 = local10.anInt4452 + Static277.anInt5855 - Static167.anInt4069;
-				if (local14 >= 0 && local14 <= Static277.anInt5855 + Static277.anInt5855) {
-					local115 = local10.anInt4461 + Static277.anInt5855 - Static193.anInt4539;
+				local14 = local10.anInt4452 + Static277.tileVisibilityDistance - Static167.anInt4069;
+				if (local14 >= 0 && local14 <= Static277.tileVisibilityDistance + Static277.tileVisibilityDistance) {
+					local115 = local10.anInt4461 + Static277.tileVisibilityDistance - Static193.anInt4539;
 					if (local115 < 0) {
 						local115 = 0;
 					}
-					local126 = local10.anInt4464 + Static277.anInt5855 - Static193.anInt4539;
-					if (local126 > Static277.anInt5855 + Static277.anInt5855) {
-						local126 = Static277.anInt5855 + Static277.anInt5855;
+					local126 = local10.anInt4464 + Static277.tileVisibilityDistance - Static193.anInt4539;
+					if (local126 > Static277.tileVisibilityDistance + Static277.tileVisibilityDistance) {
+						local126 = Static277.tileVisibilityDistance + Static277.tileVisibilityDistance;
 					}
 					local137 = false;
 					while (local115 <= local126) {
@@ -98,15 +98,15 @@ public final class Static123 {
 					}
 				}
 			} else if (local10.anInt4453 == 2) {
-				local14 = local10.anInt4461 + Static277.anInt5855 - Static193.anInt4539;
-				if (local14 >= 0 && local14 <= Static277.anInt5855 + Static277.anInt5855) {
-					local115 = local10.anInt4452 + Static277.anInt5855 - Static167.anInt4069;
+				local14 = local10.anInt4461 + Static277.tileVisibilityDistance - Static193.anInt4539;
+				if (local14 >= 0 && local14 <= Static277.tileVisibilityDistance + Static277.tileVisibilityDistance) {
+					local115 = local10.anInt4452 + Static277.tileVisibilityDistance - Static167.anInt4069;
 					if (local115 < 0) {
 						local115 = 0;
 					}
-					local126 = local10.anInt4446 + Static277.anInt5855 - Static167.anInt4069;
-					if (local126 > Static277.anInt5855 + Static277.anInt5855) {
-						local126 = Static277.anInt5855 + Static277.anInt5855;
+					local126 = local10.anInt4446 + Static277.tileVisibilityDistance - Static167.anInt4069;
+					if (local126 > Static277.tileVisibilityDistance + Static277.tileVisibilityDistance) {
+						local126 = Static277.tileVisibilityDistance + Static277.tileVisibilityDistance;
 					}
 					local137 = false;
 					while (local115 <= local126) {
@@ -136,22 +136,22 @@ public final class Static123 {
 			} else if (local10.anInt4453 == 4) {
 				local14 = local10.anInt4444 - Static162.anInt3947;
 				if (local14 > 128) {
-					local115 = local10.anInt4461 + Static277.anInt5855 - Static193.anInt4539;
+					local115 = local10.anInt4461 + Static277.tileVisibilityDistance - Static193.anInt4539;
 					if (local115 < 0) {
 						local115 = 0;
 					}
-					local126 = local10.anInt4464 + Static277.anInt5855 - Static193.anInt4539;
-					if (local126 > Static277.anInt5855 + Static277.anInt5855) {
-						local126 = Static277.anInt5855 + Static277.anInt5855;
+					local126 = local10.anInt4464 + Static277.tileVisibilityDistance - Static193.anInt4539;
+					if (local126 > Static277.tileVisibilityDistance + Static277.tileVisibilityDistance) {
+						local126 = Static277.tileVisibilityDistance + Static277.tileVisibilityDistance;
 					}
 					if (local115 <= local126) {
-						@Pc(408) int local408 = local10.anInt4452 + Static277.anInt5855 - Static167.anInt4069;
+						@Pc(408) int local408 = local10.anInt4452 + Static277.tileVisibilityDistance - Static167.anInt4069;
 						if (local408 < 0) {
 							local408 = 0;
 						}
-						local158 = local10.anInt4446 + Static277.anInt5855 - Static167.anInt4069;
-						if (local158 > Static277.anInt5855 + Static277.anInt5855) {
-							local158 = Static277.anInt5855 + Static277.anInt5855;
+						local158 = local10.anInt4446 + Static277.tileVisibilityDistance - Static167.anInt4069;
+						if (local158 > Static277.tileVisibilityDistance + Static277.tileVisibilityDistance) {
+							local158 = Static277.tileVisibilityDistance + Static277.tileVisibilityDistance;
 						}
 						@Pc(430) boolean local430 = false;
 						label166: for (@Pc(432) int local432 = local408; local432 <= local158; local432++) {

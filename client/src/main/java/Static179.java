@@ -16,7 +16,7 @@ public final class Static179 {
 	public static final SoftLruHashTable aClass99_25 = new SoftLruHashTable(64);
 
 	@OriginalMember(owner = "client!oe", name = "l", descriptor = "I")
-	public static int anInt4261 = 0;
+	public static int accountCreationStep = 0;
 
 	@OriginalMember(owner = "client!oe", name = "n", descriptor = "I")
 	public static int anInt4262 = 1;

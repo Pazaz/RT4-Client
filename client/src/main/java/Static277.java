@@ -11,7 +11,7 @@ public final class Static277 {
 	public static int anInt5853;
 
 	@OriginalMember(owner = "client!wi", name = "db", descriptor = "I")
-	public static int anInt5855;
+	public static int tileVisibilityDistance;
 
 	@OriginalMember(owner = "client!wi", name = "W", descriptor = "I")
 	public static int anInt5850 = 0;

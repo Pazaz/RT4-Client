@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class Static215 {
 
 	@OriginalMember(owner = "client!rh", name = "a", descriptor = "[I")
-	public static int[] anIntArray432;
+	public static int[] intLocals;
 
 	@OriginalMember(owner = "client!rh", name = "d", descriptor = "I")
 	public static int anInt4866;

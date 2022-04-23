@@ -7,7 +7,7 @@ public final class Static240 {
 	public static FontMetrics aFontMetrics1;
 
 	@OriginalMember(owner = "client!tg", name = "b", descriptor = "I")
-	public static int anInt5333;
+	public static int cameraPitch;
 
 	@OriginalMember(owner = "client!tg", name = "c", descriptor = "I")
 	public static int screenLowerX;

@@ -42,7 +42,7 @@ public final class Static78 {
 		} else {
 			Static6.outboundBuffer.p8(name);
 		}
-		Static179.anInt4261 = 1;
+		Static179.accountCreationStep = 1;
 		Static226.anInt5079 = 0;
 		Static57.anInt1758 = 0;
 		Static223.anInt5034 = -3;
@@ -64,128 +64,135 @@ public final class Static78 {
 	}
 
 	@OriginalMember(owner = "client!gd", name = "c", descriptor = "(I)V")
-	public static void method1696() {
-		Static7.method842(false);
-		Static175.anInt4220 = 0;
-		@Pc(12) boolean local12 = true;
-		@Pc(14) int local14;
-		for (local14 = 0; local14 < Static273.aByteArrayArray13.length; local14++) {
-			if (Static36.anIntArray84[local14] != -1 && Static273.aByteArrayArray13[local14] == null) {
-				Static273.aByteArrayArray13[local14] = Static26.js5Archive5.method4495(Static36.anIntArray84[local14], 0);
-				if (Static273.aByteArrayArray13[local14] == null) {
-					Static175.anInt4220++;
-					local12 = false;
+	public static void rebuildMap() {
+		Static7.ping(false);
+		Static175.mapFilesMissingCount = 0;
+		@Pc(12) boolean fileExists = true;
+		@Pc(14) int id;
+		for (id = 0; id < Static273.mapFilesBuffer.length; id++) {
+			if (Static36.mapFileIds[id] != -1 && Static273.mapFilesBuffer[id] == null) {
+				Static273.mapFilesBuffer[id] = Static26.js5Archive5.getFile(Static36.mapFileIds[id], 0);
+				if (Static273.mapFilesBuffer[id] == null) {
+					Static175.mapFilesMissingCount++;
+					fileExists = false;
 				}
 			}
-			if (Static172.anIntArray366[local14] != -1 && Static156.aByteArrayArray11[local14] == null) {
-				Static156.aByteArrayArray11[local14] = Static26.js5Archive5.method4488(Static172.anIntArray366[local14], Static72.anIntArrayArray14[local14], 0);
-				if (Static156.aByteArrayArray11[local14] == null) {
-					local12 = false;
-					Static175.anInt4220++;
+			if (Static172.locationsMapFileIds[id] != -1 && Static156.locationMapFilesBuffer[id] == null) {
+				Static156.locationMapFilesBuffer[id] = Static26.js5Archive5.getFileXTEA(Static172.locationsMapFileIds[id], Static72.regionsXteaKeys[id], 0);
+				if (Static156.locationMapFilesBuffer[id] == null) {
+					fileExists = false;
+					Static175.mapFilesMissingCount++;
 				}
 			}
+
 			if (GlRenderer.enabled) {
-				if (Static99.anIntArray239[local14] != -1 && Static186.aByteArrayArray14[local14] == null) {
-					Static186.aByteArrayArray14[local14] = Static26.js5Archive5.method4495(Static99.anIntArray239[local14], 0);
-					if (Static186.aByteArrayArray14[local14] == null) {
-						local12 = false;
-						Static175.anInt4220++;
+				if (Static99.underWaterMapFileIds[id] != -1 && Static186.underWaterMapFilesBuffer[id] == null) {
+					Static186.underWaterMapFilesBuffer[id] = Static26.js5Archive5.getFile(Static99.underWaterMapFileIds[id], 0);
+					if (Static186.underWaterMapFilesBuffer[id] == null) {
+						fileExists = false;
+						Static175.mapFilesMissingCount++;
 					}
 				}
-				if (Static35.anIntArray82[local14] != -1 && Static19.aByteArrayArray4[local14] == null) {
-					Static19.aByteArrayArray4[local14] = Static26.js5Archive5.method4495(Static35.anIntArray82[local14], 0);
-					if (Static19.aByteArrayArray4[local14] == null) {
-						Static175.anInt4220++;
-						local12 = false;
+				if (Static35.underWaterLocationsMapFileIds[id] != -1 && Static19.underWaterLocationsMapFilesBuffer[id] == null) {
+					Static19.underWaterLocationsMapFilesBuffer[id] = Static26.js5Archive5.getFile(Static35.underWaterLocationsMapFileIds[id], 0);
+					if (Static19.underWaterLocationsMapFilesBuffer[id] == null) {
+						Static175.mapFilesMissingCount++;
+						fileExists = false;
 					}
 				}
 			}
-			if (Static175.anIntArray371 != null && Static191.aByteArrayArray15[local14] == null && Static175.anIntArray371[local14] != -1) {
-				Static191.aByteArrayArray15[local14] = Static26.js5Archive5.method4488(Static175.anIntArray371[local14], Static72.anIntArrayArray14[local14], 0);
-				if (Static191.aByteArrayArray15[local14] == null) {
-					Static175.anInt4220++;
-					local12 = false;
+
+			if (Static175.npcSpawnsFileIds != null && Static191.npcSpawnsFilesBuffer[id] == null && Static175.npcSpawnsFileIds[id] != -1) {
+				Static191.npcSpawnsFilesBuffer[id] = Static26.js5Archive5.getFileXTEA(Static175.npcSpawnsFileIds[id], Static72.regionsXteaKeys[id], 0);
+				if (Static191.npcSpawnsFilesBuffer[id] == null) {
+					Static175.mapFilesMissingCount++;
+					fileExists = false;
 				}
 			}
 		}
-		if (Static235.aClass134_2 == null) {
+
+		if (Static235.mapFunctionGroup == null) {
 			if (Static158.aClass3_Sub2_Sub4_3 == null || !Static227.js5Archive23.method4497(Static34.concatenate(new JagString[] { Static158.aClass3_Sub2_Sub4_3.aClass100_138, Static50.aClass100_363 }))) {
-				Static235.aClass134_2 = new Class134(0);
-			} else if (Static227.js5Archive23.method4489(Static34.concatenate(new JagString[] { Static158.aClass3_Sub2_Sub4_3.aClass100_138, Static50.aClass100_363 }))) {
-				Static235.aClass134_2 = Static140.method2711(Static34.concatenate(new JagString[] { Static158.aClass3_Sub2_Sub4_3.aClass100_138, Static50.aClass100_363 }), Static227.js5Archive23);
+				Static235.mapFunctionGroup = new Class134(0);
+			} else if (Static227.js5Archive23.allFilesComplete(Static34.concatenate(new JagString[] { Static158.aClass3_Sub2_Sub4_3.aClass100_138, Static50.aClass100_363 }))) {
+				Static235.mapFunctionGroup = Static140.createMapFunctionGroup(Static34.concatenate(new JagString[] { Static158.aClass3_Sub2_Sub4_3.aClass100_138, Static50.aClass100_363 }), Static227.js5Archive23);
 			} else {
-				local12 = false;
-				Static175.anInt4220++;
+				fileExists = false;
+				Static175.mapFilesMissingCount++;
 			}
 		}
-		if (!local12) {
-			Static233.anInt5223 = 1;
+
+		if (!fileExists) {
+			Static233.loadingScreenState = 1;
 			return;
 		}
+
 		Static271.anInt5804 = 0;
-		local12 = true;
-		@Pc(320) int local320;
-		@Pc(309) int local309;
-		for (local14 = 0; local14 < Static273.aByteArrayArray13.length; local14++) {
-			@Pc(294) byte[] local294 = Static156.aByteArrayArray11[local14];
+		fileExists = true;
+		@Pc(320) int chunkX;
+		@Pc(309) int chunkZ;
+		for (id = 0; id < Static273.mapFilesBuffer.length; id++) {
+			@Pc(294) byte[] local294 = Static156.locationMapFilesBuffer[id];
 			if (local294 != null) {
-				local309 = (Static238.anIntArray470[local14] & 0xFF) * 64 - Static142.originZ;
-				local320 = (Static238.anIntArray470[local14] >> 8) * 64 - Static225.originX;
-				if (Static230.aBoolean250) {
-					local309 = 10;
-					local320 = 10;
+				chunkZ = (Static238.regionBitPacked[id] & 0xFF) * 64 - Static142.originZ;
+				chunkX = (Static238.regionBitPacked[id] >> 8) * 64 - Static225.originX;
+				if (Static230.dynamicMapRegion) {
+					chunkZ = 10;
+					chunkX = 10;
 				}
-				local12 &= Static49.method1201(local320, local309, local294);
+				fileExists &= Static49.method1201(chunkX, chunkZ, local294);
 			}
 			if (GlRenderer.enabled) {
-				local294 = Static19.aByteArrayArray4[local14];
+				local294 = Static19.underWaterLocationsMapFilesBuffer[id];
 				if (local294 != null) {
-					local320 = (Static238.anIntArray470[local14] >> 8) * 64 - Static225.originX;
-					local309 = (Static238.anIntArray470[local14] & 0xFF) * 64 - Static142.originZ;
-					if (Static230.aBoolean250) {
-						local309 = 10;
-						local320 = 10;
+					chunkX = (Static238.regionBitPacked[id] >> 8) * 64 - Static225.originX;
+					chunkZ = (Static238.regionBitPacked[id] & 0xFF) * 64 - Static142.originZ;
+					if (Static230.dynamicMapRegion) {
+						chunkZ = 10;
+						chunkX = 10;
 					}
-					local12 &= Static49.method1201(local320, local309, local294);
+					fileExists &= Static49.method1201(chunkX, chunkZ, local294);
 				}
 			}
 		}
-		if (!local12) {
-			Static233.anInt5223 = 2;
+		if (!fileExists) {
+			Static233.loadingScreenState = 2;
 			return;
 		}
-		if (Static233.anInt5223 != 0) {
-			Static114.method4636(true, Static34.concatenate(new JagString[] { LocalizedText.LOADING, Static18.aClass100_108 }));
+
+		if (Static233.loadingScreenState != 0) {
+			Static114.drawTextOnScreen(true, Static34.concatenate(new JagString[] { LocalizedText.LOADING, Static18.COMPLETE_PERCENT}));
 		}
+
 		Static107.method2261();
 		Static217.method3768();
-		@Pc(420) boolean local420 = false;
-		@Pc(427) int local427;
-		if (GlRenderer.enabled && Static220.aBoolean244) {
-			for (local427 = 0; local427 < Static273.aByteArrayArray13.length; local427++) {
-				if (Static19.aByteArrayArray4[local427] != null || Static186.aByteArrayArray14[local427] != null) {
-					local420 = true;
+		@Pc(420) boolean hasUnderWaterMap = false;
+		@Pc(427) int i;
+		if (GlRenderer.enabled && Static220.highWaterDetail) {
+			for (i = 0; i < Static273.mapFilesBuffer.length; i++) {
+				if (Static19.underWaterLocationsMapFilesBuffer[i] != null || Static186.underWaterMapFilesBuffer[i] != null) {
+					hasUnderWaterMap = true;
 					break;
 				}
 			}
 		}
-		Static28.method792(GlRenderer.enabled ? 28 : 25, local420);
-		for (local427 = 0; local427 < 4; local427++) {
-			Static148.collisionMaps[local427].method3050();
+		Static28.method792(GlRenderer.enabled ? 28 : 25, hasUnderWaterMap);
+		for (i = 0; i < 4; i++) {
+			Static148.collisionMaps[i].resetFlags();
 		}
-		for (local427 = 0; local427 < 4; local427++) {
-			for (local320 = 0; local320 < 104; local320++) {
-				for (local309 = 0; local309 < 104; local309++) {
-					Static12.aByteArrayArrayArray2[local427][local320][local309] = 0;
+		for (i = 0; i < 4; i++) {
+			for (chunkX = 0; chunkX < 104; chunkX++) {
+				for (chunkZ = 0; chunkZ < 104; chunkZ++) {
+					Static12.tileSettings[i][chunkX][chunkZ] = 0;
 				}
 			}
 		}
-		Static260.method3852(false);
+		Static260.clearAmbientSounds(false);
 		if (GlRenderer.enabled) {
-			Static242.aClass36_Sub1_4.method1392();
-			for (local427 = 0; local427 < 13; local427++) {
-				for (local320 = 0; local320 < 13; local320++) {
-					Static242.aClass165ArrayArray1[local427][local320].aBoolean313 = true;
+			Static242.shadowMapImage.method1392();
+			for (i = 0; i < 13; i++) {
+				for (chunkX = 0; chunkX < 13; chunkX++) {
+					Static242.shadows[i][chunkX].outputToSprite = true;
 				}
 			}
 		}
@@ -193,84 +200,84 @@ public final class Static78 {
 			Static120.method2404();
 		}
 		if (GlRenderer.enabled) {
-			Static75.method1632();
+			Static75.setDefaultChunksAtmosphere();
 		}
 		Static107.method2261();
 		System.gc();
-		Static7.method842(true);
+		Static7.ping(true);
 		Static196.method3535(false);
-		if (!Static230.aBoolean250) {
+		if (!Static230.dynamicMapRegion) {
 			Static87.method1805(false);
-			Static7.method842(true);
+			Static7.ping(true);
 			if (GlRenderer.enabled) {
-				local427 = Static173.self.movementQueueX[0] >> 3;
-				local320 = Static173.self.movementQueueZ[0] >> 3;
-				Static73.method1597(local320, local427);
+				i = Static173.self.movementQueueX[0] >> 3;
+				chunkX = Static173.self.movementQueueZ[0] >> 3;
+				Static73.setLightPosition(chunkX, i);
 			}
 			Static26.method743(false);
-			if (Static191.aByteArrayArray15 != null) {
-				Static158.method3013();
+			if (Static191.npcSpawnsFilesBuffer != null) {
+				Static158.decodeNpcFiles();
 			}
 		}
-		if (Static230.aBoolean250) {
+		if (Static230.dynamicMapRegion) {
 			Static89.method1835(false);
-			Static7.method842(true);
+			Static7.ping(true);
 			if (GlRenderer.enabled) {
-				local427 = Static173.self.movementQueueX[0] >> 3;
-				local320 = Static173.self.movementQueueZ[0] >> 3;
-				Static73.method1597(local320, local427);
+				i = Static173.self.movementQueueX[0] >> 3;
+				chunkX = Static173.self.movementQueueZ[0] >> 3;
+				Static73.setLightPosition(chunkX, i);
 			}
 			Static233.method4002(false);
 		}
 		Static217.method3768();
-		Static7.method842(true);
+		Static7.ping(true);
 		Static45.method1169(Static148.collisionMaps, false);
 		if (GlRenderer.enabled) {
 			Static120.method2395();
 		}
-		Static7.method842(true);
-		local427 = Static146.anInt3508;
-		if (local427 > Static55.level) {
-			local427 = Static55.level;
+		Static7.ping(true);
+		i = Static146.anInt3508;
+		if (i > Static55.level) {
+			i = Static55.level;
 		}
-		if (local427 < Static55.level - 1) {
+		if (i < Static55.level - 1) {
 		}
-		if (Static138.method2697()) {
+		if (Static138.allLevelsAreVisible()) {
 			Static146.method2750(0);
 		} else {
 			Static146.method2750(Static146.anInt3508);
 		}
 		Static105.method2255();
-		if (GlRenderer.enabled && local420) {
-			Static278.method4648(true);
+		if (GlRenderer.enabled && hasUnderWaterMap) {
+			Static278.setRenderTiles(true);
 			Static196.method3535(true);
-			if (!Static230.aBoolean250) {
+			if (!Static230.dynamicMapRegion) {
 				Static87.method1805(true);
-				Static7.method842(true);
+				Static7.ping(true);
 				Static26.method743(true);
 			}
-			if (Static230.aBoolean250) {
+			if (Static230.dynamicMapRegion) {
 				Static89.method1835(true);
-				Static7.method842(true);
+				Static7.ping(true);
 				Static233.method4002(true);
 			}
 			Static217.method3768();
-			Static7.method842(true);
+			Static7.ping(true);
 			Static45.method1169(Static148.collisionMaps, true);
-			Static7.method842(true);
+			Static7.ping(true);
 			Static105.method2255();
-			Static278.method4648(false);
+			Static278.setRenderTiles(false);
 		}
 		if (GlRenderer.enabled) {
-			for (local320 = 0; local320 < 13; local320++) {
-				for (local309 = 0; local309 < 13; local309++) {
-					Static242.aClass165ArrayArray1[local320][local309].method4676(Static83.anIntArrayArrayArray4[0], local320 * 8, local309 * 8);
+			for (chunkX = 0; chunkX < 13; chunkX++) {
+				for (chunkZ = 0; chunkZ < 13; chunkZ++) {
+					Static242.shadows[chunkX][chunkZ].method4676(Static83.activeTileHeightMap[0], chunkX * 8, chunkZ * 8);
 				}
 			}
 		}
-		for (local320 = 0; local320 < 104; local320++) {
-			for (local309 = 0; local309 < 104; local309++) {
-				Static220.method3797(local309, local320);
+		for (chunkX = 0; chunkX < 104; chunkX++) {
+			for (chunkZ = 0; chunkZ < 104; chunkZ++) {
+				Static220.spawnGroundObject(chunkZ, chunkX);
 			}
 		}
 		Static269.method2218();
@@ -278,28 +285,28 @@ public final class Static78 {
 		Static219.method3796();
 		Static217.method3768();
 		Static231.aBoolean252 = false;
-		if (GameShell.frame != null && Static124.socket != null && Static244.anInt5370 == 25) {
+		if (GameShell.frame != null && Static124.socket != null && Static244.gameState == 25) {
 			Static6.outboundBuffer.p1isaac(20);
 			Static6.outboundBuffer.p4(1057001181);
 		}
-		if (!Static230.aBoolean250) {
+		if (!Static230.dynamicMapRegion) {
 			@Pc(815) int local815 = (Static52.anInt1695 + 6) / 8;
 			@Pc(821) int local821 = (Static52.anInt1695 - 6) / 8;
-			local320 = (Static80.anInt4701 - 6) / 8;
-			local309 = (Static80.anInt4701 + 6) / 8;
-			for (@Pc(837) int local837 = local320 - 1; local837 <= local309 + 1; local837++) {
+			chunkX = (Static80.anInt4701 - 6) / 8;
+			chunkZ = (Static80.anInt4701 + 6) / 8;
+			for (@Pc(837) int local837 = chunkX - 1; local837 <= chunkZ + 1; local837++) {
 				for (@Pc(850) int local850 = local821 - 1; local850 <= local815 + 1; local850++) {
-					if (local837 < local320 || local837 > local309 || local850 < local821 || local850 > local815) {
+					if (local837 < chunkX || local837 > chunkZ || local850 < local821 || local850 > local815) {
 						Static26.js5Archive5.method4486(Static34.concatenate(new JagString[] { Static103.aClass100_558, Static123.parseInt(local837), Static86.aClass100_488, Static123.parseInt(local850) }));
 						Static26.js5Archive5.method4486(Static34.concatenate(new JagString[] { Static270.aClass100_1090, Static123.parseInt(local837), Static86.aClass100_488, Static123.parseInt(local850) }));
 					}
 				}
 			}
 		}
-		if (Static244.anInt5370 == 28) {
-			Static196.method3534(10);
+		if (Static244.gameState == 28) {
+			Static196.setGameState(10);
 		} else {
-			Static196.method3534(30);
+			Static196.setGameState(30);
 			if (Static124.socket != null) {
 				Static6.outboundBuffer.p1isaac(110);
 			}

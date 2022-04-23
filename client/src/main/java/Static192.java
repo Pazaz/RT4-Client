@@ -9,7 +9,7 @@ public final class Static192 {
 	@OriginalMember(owner = "client!ph", name = "a", descriptor = "(B)V")
 	public static void loop() {
 		while (true) {
-			@Pc(17) Class3_Sub8 local17 = (Class3_Sub8) Static128.aClass69_77.method2287();
+			@Pc(17) Class3_Sub8 local17 = (Class3_Sub8) Static128.aClass69_77.removeHead();
 			if (local17 == null) {
 				return;
 			}
@@ -43,7 +43,7 @@ public final class Static192 {
 				@Pc(110) int local110 = (local86 >> 1) + local17.anInt1190;
 				@Pc(117) int local117 = (local83 >> 1) + local17.anInt1204;
 				@Pc(126) int local126 = (local83 + 1 >> 1) + local17.anInt1204;
-				@Pc(130) int[][] local130 = Static83.anIntArrayArrayArray4[Static55.level];
+				@Pc(130) int[][] local130 = Static83.activeTileHeightMap[Static55.level];
 				@Pc(157) int local157 = local130[local103][local126] + local130[local110][local126] + local130[local110][local117] + local130[local103][local117] >> 2;
 				@Pc(159) Entity local159 = null;
 				@Pc(164) int local164 = Static133.anIntArray453[local17.anInt1198];
@@ -70,13 +70,13 @@ public final class Static192 {
 				}
 				if (local159 != null) {
 					Static29.method800(Static55.level, local17.anInt1204, 0, local17.anInt1190, local17.anInt1205 + 1, -1, local164, 0, local17.anInt1187 + 1);
-					local40.anInt3375 = local17.anInt1205 + Static83.anInt372;
+					local40.anInt3375 = local17.anInt1205 + Static83.loop;
 					local40.anInt3426 = local83 * 64 + local17.anInt1204 * 128;
 					local40.anInt3379 = local86 * 64 + local17.anInt1190 * 128;
 					local40.anObject5 = local159;
 					@Pc(292) int local292 = local17.anInt1188;
 					local40.anInt3406 = local157;
-					local40.anInt3390 = Static83.anInt372 + local17.anInt1187;
+					local40.anInt3390 = Static83.loop + local17.anInt1187;
 					@Pc(304) int local304 = local17.anInt1191;
 					@Pc(307) int local307 = local17.anInt1197;
 					@Pc(310) int local310 = local17.anInt1200;

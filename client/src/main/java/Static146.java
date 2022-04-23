@@ -36,8 +36,8 @@ public final class Static146 {
 	@OriginalMember(owner = "client!lg", name = "a", descriptor = "(I)V")
 	public static void method2750(@OriginalArg(0) int arg0) {
 		Static235.anInt5276 = arg0;
-		for (@Pc(3) int local3 = 0; local3 < Static152.anInt3594; local3++) {
-			for (@Pc(8) int local8 = 0; local8 < Static99.anInt2550; local8++) {
+		for (@Pc(3) int local3 = 0; local3 < Static152.mapSizeX; local3++) {
+			for (@Pc(8) int local8 = 0; local8 < Static99.mapSizeZ; local8++) {
 				if (Static130.aClass3_Sub5ArrayArrayArray1[arg0][local3][local8] == null) {
 					Static130.aClass3_Sub5ArrayArrayArray1[arg0][local3][local8] = new Tile(arg0, local3, local8);
 				}

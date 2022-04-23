@@ -20,11 +20,11 @@ public final class Static243 {
 	public static int[] anIntArray476 = new int[2];
 
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(Lclient!sc;ZLclient!wl;)Lclient!hg;")
-	public static Class3_Sub14 method4212(@OriginalArg(0) HashTable arg0, @OriginalArg(2) FloType arg1) {
+	public static GlTile method4212(@OriginalArg(0) HashTable arg0, @OriginalArg(2) FloType arg1) {
 		@Pc(23) long local23 = (long) ((arg1.anInt5892 + 1 << 16) + arg1.anInt5885) + ((long) arg1.anInt5897 << 56) + ((long) arg1.anInt5889 << 32);
-		@Pc(38) Class3_Sub14 local38 = (Class3_Sub14) arg0.method3863(local23);
+		@Pc(38) GlTile local38 = (GlTile) arg0.method3863(local23);
 		if (local38 == null) {
-			local38 = new Class3_Sub14(arg1.anInt5892, (float) arg1.anInt5885, true, false, arg1.anInt5889);
+			local38 = new GlTile(arg1.anInt5892, (float) arg1.anInt5885, true, false, arg1.anInt5889);
 			arg0.method3862(local38, local23);
 		}
 		return local38;
@@ -60,7 +60,7 @@ public final class Static243 {
 		Static260.anInt5014 = 0;
 		Static132.anInt3291 = (int) (Math.random() * 100.0D) - 50;
 		Static84.anInt2255 = 0;
-		Static57.anInt1747 = (int) (Math.random() * 20.0D) - 10 & 0x7FF;
+		Static57.yawTarget = (int) (Math.random() * 20.0D) - 10 & 0x7FF;
 		Static107.anInt2875 = -1;
 		Static267.anInt5774 = 0;
 		Static270.anInt5795 = 0;
@@ -110,13 +110,13 @@ public final class Static243 {
 		for (local3506 = 0; local3506 < Static155.varcs.length; local3506++) {
 			Static155.varcs[local3506] = -1;
 		}
-		if (Static154.topLevelInterace != -1) {
-			Static109.method2275(Static154.topLevelInterace);
+		if (Static154.topLevelInterface != -1) {
+			Static109.method2275(Static154.topLevelInterface);
 		}
 		for (@Pc(3755) Class3_Sub31 local3755 = (Class3_Sub31) Static119.aClass133_9.method3859(); local3755 != null; local3755 = (Class3_Sub31) Static119.aClass133_9.method3861()) {
 			Static132.method2605(true, local3755);
 		}
-		Static154.topLevelInterace = -1;
+		Static154.topLevelInterface = -1;
 		Static119.aClass133_9 = new HashTable(8);
 		Static52.method1287();
 		Static39.aClass13_10 = null;

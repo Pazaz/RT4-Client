@@ -25,7 +25,7 @@ public final class Static246 {
 			@Pc(15) SpotAnim local15 = local9.aClass8_Sub2_1;
 			if (local15.anInt606 != Static55.level || local15.aBoolean41) {
 				local9.method4658();
-			} else if (local15.anInt590 <= Static83.anInt372) {
+			} else if (local15.anInt590 <= Static83.loop) {
 				local15.method558(Static178.anInt4247);
 				if (local15.aBoolean41) {
 					local9.method4658();
@@ -135,7 +135,7 @@ public final class Static246 {
 		if (local16 != null) {
 			return local16;
 		}
-		@Pc(27) byte[] local27 = Static9.aClass153_2.method4495(5, arg0);
+		@Pc(27) byte[] local27 = Static9.aClass153_2.getFile(5, arg0);
 		local16 = new Class3_Sub2_Sub14();
 		if (local27 != null) {
 			local16.method2927(new Buffer(local27));

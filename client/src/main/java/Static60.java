@@ -17,7 +17,7 @@ public final class Static60 {
 	public static AudioThread aClass19_1;
 
 	@OriginalMember(owner = "client!em", name = "D", descriptor = "I")
-	public static int anInt1895;
+	public static int gregorianDateSeed;
 
 	@OriginalMember(owner = "client!em", name = "u", descriptor = "Lclient!na;")
 	public static final JagString aClass100_420 = Static28.parse(")1o");
@@ -37,7 +37,7 @@ public final class Static60 {
 			return;
 		}
 		@Pc(21) int local21 = arg3 * arg3 + arg2 * arg2;
-		@Pc(27) int local27 = Static59.anInt1814 + Static57.anInt1747 & 0x7FF;
+		@Pc(27) int local27 = Static59.anInt1814 + Static57.yawTarget & 0x7FF;
 		@Pc(39) int local39 = Math.max(arg0.anInt445 / 2, arg0.anInt459 / 2) + 10;
 		if (local39 * local39 < local21) {
 			return;

@@ -20,14 +20,14 @@ public final class Static18 {
 	public static boolean sentToServer = true;
 
 	@OriginalMember(owner = "client!bh", name = "C", descriptor = "Lclient!na;")
-	public static final JagString aClass100_108 = Static28.parse("<br>(X100(U(Y");
+	public static final JagString COMPLETE_PERCENT = Static28.parse("<br>(X100(U(Y");
 
 	@OriginalMember(owner = "client!bh", name = "G", descriptor = "[I")
 	public static final int[] anIntArray57 = new int[] { 0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, Integer.MAX_VALUE, -1 };
 
 	@OriginalMember(owner = "client!bh", name = "a", descriptor = "(Lclient!fe;Z)V")
 	public static void method553(@OriginalArg(0) PathingEntity arg0) {
-		@Pc(8) int local8 = arg0.anInt3395 - Static83.anInt372;
+		@Pc(8) int local8 = arg0.anInt3395 - Static83.loop;
 		@Pc(20) int local20 = arg0.anInt3380 * 128 + arg0.method2693() * 64;
 		@Pc(36) int local36 = arg0.anInt3428 * 128 + arg0.method2693() * 64;
 		if (arg0.anInt3431 == 0) {
@@ -85,10 +85,10 @@ public final class Static18 {
 			local55 = local72 * local57 >> 16;
 			local57 = local57 * local68 >> 16;
 		}
-		Static240.anInt5333 = arg6;
-		Static184.anInt4358 = arg4;
-		Static134.anInt3302 = arg5 - local57;
-		Static138.anInt3439 = arg0 - local55;
+		Static240.cameraPitch = arg6;
+		Static184.cameraYaw = arg4;
+		Static134.renderZ = arg5 - local57;
+		Static138.renderX = arg0 - local55;
 		Static5.anInt40 = arg2 - local59;
 	}
 

@@ -87,7 +87,7 @@ public final class Static140 {
 		if (local10 != null) {
 			return local10;
 		}
-		@Pc(26) byte[] local26 = Static85.aClass153_36.method4495(31, arg0);
+		@Pc(26) byte[] local26 = Static85.aClass153_36.getFile(31, arg0);
 		local10 = new LightType();
 		if (local26 != null) {
 			local10.method2257(new Buffer(local26), arg0);
@@ -97,7 +97,7 @@ public final class Static140 {
 	}
 
 	@OriginalMember(owner = "client!la", name = "a", descriptor = "(ILclient!na;Lclient!ve;)Lclient!se;")
-	public static Class134 method2711(@OriginalArg(1) JagString arg0, @OriginalArg(2) Js5 arg1) {
+	public static Class134 createMapFunctionGroup(@OriginalArg(1) JagString arg0, @OriginalArg(2) Js5 arg1) {
 		@Pc(10) int local10 = arg1.getGroupId(arg0);
 		if (local10 == -1) {
 			return new Class134(0);
@@ -105,7 +105,7 @@ public final class Static140 {
 		@Pc(29) int[] local29 = arg1.method4503(local10);
 		@Pc(35) Class134 local35 = new Class134(local29.length);
 		for (@Pc(37) int local37 = 0; local37 < local35.anInt5074; local37++) {
-			@Pc(56) Buffer local56 = new Buffer(arg1.method4495(local10, local29[local37]));
+			@Pc(56) Buffer local56 = new Buffer(arg1.getFile(local10, local29[local37]));
 			local35.aClass100Array153[local37] = local56.gjstr();
 			local35.aByteArray69[local37] = local56.g1s();
 			local35.aShortArray73[local37] = (short) local56.g2();

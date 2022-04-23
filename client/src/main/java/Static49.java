@@ -95,19 +95,19 @@ public final class Static49 {
 			@Pc(70) int local70 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
 			if (local70 == 0) {
 				Static33.anIntArray79[Static272.anInt5214++] = local61;
-				local65.anInt3430 = Static83.anInt372;
+				local65.anInt3430 = Static83.loop;
 			} else {
 				@Pc(92) int local92 = Static57.aClass3_Sub15_Sub1_3.method2238(2);
 				if (local92 == 0) {
 					Static33.anIntArray79[Static272.anInt5214++] = local61;
-					local65.anInt3430 = Static83.anInt372;
+					local65.anInt3430 = Static83.loop;
 					Static44.anIntArray106[Static116.anInt2951++] = local61;
 				} else {
 					@Pc(139) int local139;
 					@Pc(149) int local149;
 					if (local92 == 1) {
 						Static33.anIntArray79[Static272.anInt5214++] = local61;
-						local65.anInt3430 = Static83.anInt372;
+						local65.anInt3430 = Static83.loop;
 						local139 = Static57.aClass3_Sub15_Sub1_3.method2238(3);
 						local65.method2684(1, local139);
 						local149 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
@@ -116,7 +116,7 @@ public final class Static49 {
 						}
 					} else if (local92 == 2) {
 						Static33.anIntArray79[Static272.anInt5214++] = local61;
-						local65.anInt3430 = Static83.anInt372;
+						local65.anInt3430 = Static83.loop;
 						if (Static57.aClass3_Sub15_Sub1_3.method2238(1) == 1) {
 							local139 = Static57.aClass3_Sub15_Sub1_3.method2238(3);
 							local65.method2684(2, local139);
@@ -175,7 +175,7 @@ public final class Static49 {
 		}
 		@Pc(24) JagString local24 = Static13.method471();
 		if (arg0 == null) {
-			@Pc(40) int local40 = Static280.aClass3_Sub2_Sub9_43.method2859(local24, arg2 + 4, arg1 - -15, Static39.aRandom1, Static60.anInt1895);
+			@Pc(40) int local40 = Static280.aClass3_Sub2_Sub9_43.method2859(local24, arg2 + 4, arg1 - -15, Static39.aRandom1, Static60.gregorianDateSeed);
 			Static133.method4012(arg2 + 4, Static280.aClass3_Sub2_Sub9_43.method2858(local24) + local40, arg1, 15);
 			return;
 		}
@@ -183,7 +183,7 @@ public final class Static49 {
 		if (local59 == null) {
 			local59 = Static280.aClass3_Sub2_Sub9_43;
 		}
-		local59.method2878(local24, arg2, arg1, arg0.anInt445, arg0.anInt459, arg0.anInt474, arg0.anInt513, arg0.anInt460, arg0.anInt478, Static39.aRandom1, Static60.anInt1895, Static50.anIntArray132);
+		local59.method2878(local24, arg2, arg1, arg0.anInt445, arg0.anInt459, arg0.anInt474, arg0.anInt513, arg0.anInt460, arg0.anInt478, Static39.aRandom1, Static60.gregorianDateSeed, Static50.anIntArray132);
 		Static133.method4012(Static50.anIntArray132[0], Static50.anIntArray132[2], Static50.anIntArray132[1], Static50.anIntArray132[3]);
 	}
 
@@ -191,9 +191,9 @@ public final class Static49 {
 	public static void method1208() {
 		Static224.aBoolean247 = false;
 		Static231.anInt5202 = 0;
-		Static266.anInt5336 = -3;
+		Static266.returnCode = -3;
 		Static92.anInt2430 = 0;
-		Static184.anInt4348 = 1;
+		Static184.loginStep = 1;
 		Static276.anInt5816 = 0;
 		Static204.anInt4765 = -1;
 	}

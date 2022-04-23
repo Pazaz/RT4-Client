@@ -8,7 +8,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static197 {
 
 	@OriginalMember(owner = "client!pm", name = "cb", descriptor = "[[[Lclient!bj;")
-	public static Tile[][][] aClass3_Sub5ArrayArrayArray2;
+	public static Tile[][][] surfaceGroundTiles;
 
 	@OriginalMember(owner = "client!pm", name = "hb", descriptor = "I")
 	public static int anInt4620;
@@ -126,10 +126,10 @@ public final class Static197 {
 				Static260.frameBuffer = null;
 				Static260.frameBuffer = Static131.create(GameShell.canvasHeight, GameShell.canvasWidth, GameShell.canvas);
 				Static129.method2492();
-				if (Static244.anInt5370 == 5) {
+				if (Static244.gameState == 5) {
 					Static182.method3359(true, Static280.aClass3_Sub2_Sub9_43);
 				} else {
-					Static114.method4636(false, LocalizedText.LOADING);
+					Static114.drawTextOnScreen(false, LocalizedText.LOADING);
 				}
 				try {
 					@Pc(269) Graphics local269 = GameShell.canvas.getGraphics();
@@ -190,7 +190,7 @@ public final class Static197 {
 			Static95.method1939();
 			Static114.method4637();
 		}
-		Static87.aBoolean130 = !Static138.method2697();
+		Static87.aBoolean130 = !Static138.allLevelsAreVisible();
 		if (arg2) {
 			Static141.method2721();
 		}
@@ -199,10 +199,10 @@ public final class Static197 {
 		} else {
 			Static124.aBoolean156 = false;
 		}
-		if (Static154.topLevelInterace != -1) {
+		if (Static154.topLevelInterface != -1) {
 			Static210.method3712(true);
 		}
-		if (Static124.socket != null && (Static244.anInt5370 == 30 || Static244.anInt5370 == 25)) {
+		if (Static124.socket != null && (Static244.gameState == 30 || Static244.gameState == 25)) {
 			Static59.method1373();
 		}
 		for (@Pc(466) int local466 = 0; local466 < 100; local466++) {

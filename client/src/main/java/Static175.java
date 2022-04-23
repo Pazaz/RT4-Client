@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class Static175 {
 
 	@OriginalMember(owner = "client!nm", name = "P", descriptor = "[I")
-	public static int[] anIntArray371;
+	public static int[] npcSpawnsFileIds;
 
 	@OriginalMember(owner = "client!nm", name = "W", descriptor = "Lclient!na;")
 	public static JagString url;
@@ -12,7 +12,7 @@ public final class Static175 {
 	public static final Npc[] aClass8_Sub4_Sub2Array1 = new Npc[32768];
 
 	@OriginalMember(owner = "client!nm", name = "U", descriptor = "I")
-	public static int anInt4220 = 0;
+	public static int mapFilesMissingCount = 0;
 
 	@OriginalMember(owner = "client!nm", name = "Y", descriptor = "J")
 	public static long firstGc = 0L;
@@ -23,11 +23,11 @@ public final class Static175 {
 	@OriginalMember(owner = "client!nm", name = "a", descriptor = "(Z)V")
 	public static void method3279() {
 		if (Static267.anInt5775 > 0) {
-			Static278.method4653();
+			Static278.processLogout();
 		} else {
 			Static233.aClass95_4 = Static124.socket;
 			Static124.socket = null;
-			Static196.method3534(40);
+			Static196.setGameState(40);
 		}
 	}
 }

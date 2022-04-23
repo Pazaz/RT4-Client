@@ -8,7 +8,7 @@ public final class Static238 {
 	public static Js5 aClass153_96;
 
 	@OriginalMember(owner = "client!te", name = "H", descriptor = "[I")
-	public static int[] anIntArray470;
+	public static int[] regionBitPacked;
 
 	@OriginalMember(owner = "client!te", name = "B", descriptor = "[I")
 	public static final int[] anIntArray469 = new int[] { 0, -1, 0, 1 };

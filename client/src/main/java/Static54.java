@@ -26,7 +26,7 @@ public final class Static54 {
 			Static129.method2496(arg2, arg1, arg2 + arg3.anInt445, arg1 + arg3.anInt459);
 		}
 		if (Static270.anInt5795 != 2 && Static270.anInt5795 != 5 && Static89.aClass3_Sub2_Sub1_5 != null) {
-			@Pc(48) int local48 = Static59.anInt1814 + Static57.anInt1747 & 0x7FF;
+			@Pc(48) int local48 = Static59.anInt1814 + Static57.yawTarget & 0x7FF;
 			@Pc(57) int local57 = Static173.self.anInt3412 / 32 + 48;
 			@Pc(67) int local67 = 464 - Static173.self.anInt3421 / 32;
 			if (GlRenderer.enabled) {
@@ -42,37 +42,37 @@ public final class Static54 {
 			@Pc(200) int local200;
 			@Pc(239) int local239;
 			@Pc(271) int local271;
-			if (Static235.aClass134_2 != null) {
-				for (@Pc(117) int local117 = 0; local117 < Static235.aClass134_2.anInt5074; local117++) {
-					if (Static235.aClass134_2.method3892(local117)) {
-						local146 = (Static235.aClass134_2.aShortArray73[local117] - Static225.originX) * 4 + 2 - Static173.self.anInt3412 / 32;
+			if (Static235.mapFunctionGroup != null) {
+				for (@Pc(117) int local117 = 0; local117 < Static235.mapFunctionGroup.anInt5074; local117++) {
+					if (Static235.mapFunctionGroup.method3892(local117)) {
+						local146 = (Static235.mapFunctionGroup.aShortArray73[local117] - Static225.originX) * 4 + 2 - Static173.self.anInt3412 / 32;
 						local150 = MathUtils.anIntArray223[local48];
 						local154 = MathUtils.anIntArray225[local48];
 						@Pc(156) Font local156 = Static114.aClass3_Sub2_Sub9_42;
 						@Pc(164) int local164 = local150 * 256 / (Static273.anInt4130 + 256);
-						local181 = (Static235.aClass134_2.aShortArray72[local117] - Static142.originZ) * 4 + 2 - Static173.self.anInt3421 / 32;
+						local181 = (Static235.mapFunctionGroup.aShortArray72[local117] - Static142.originZ) * 4 + 2 - Static173.self.anInt3421 / 32;
 						@Pc(189) int local189 = local154 * 256 / (Static273.anInt4130 + 256);
 						local200 = local181 * local189 - local146 * local164 >> 16;
-						if (Static235.aClass134_2.method3894(local117) == 1) {
+						if (Static235.mapFunctionGroup.method3894(local117) == 1) {
 							local156 = Static215.aClass3_Sub2_Sub9_32;
 						}
-						if (Static235.aClass134_2.method3894(local117) == 2) {
+						if (Static235.mapFunctionGroup.method3894(local117) == 2) {
 							local156 = Static280.aClass3_Sub2_Sub9_43;
 						}
 						local231 = local164 * local181 + local189 * local146 >> 16;
-						local239 = local156.method2856(Static235.aClass134_2.aClass100Array153[local117], 100);
+						local239 = local156.method2856(Static235.mapFunctionGroup.aClass100Array153[local117], 100);
 						@Pc(245) int local245 = local231 - local239 / 2;
 						if (local245 >= -arg3.anInt445 && local245 <= arg3.anInt445 && local200 >= -arg3.anInt459 && local200 <= arg3.anInt459) {
 							local271 = 16777215;
-							if (Static235.aClass134_2.anIntArray444[local117] != -1) {
-								local271 = Static235.aClass134_2.anIntArray444[local117];
+							if (Static235.mapFunctionGroup.anIntArray444[local117] != -1) {
+								local271 = Static235.mapFunctionGroup.anIntArray444[local117];
 							}
 							if (GlRenderer.enabled) {
 								Static46.method1188((GlSprite) arg3.method489(false));
 							} else {
 								Static129.method2486(arg3.anIntArray37, arg3.anIntArray45);
 							}
-							local156.method2869(Static235.aClass134_2.aClass100Array153[local117], arg2 + local245 + arg3.anInt445 / 2, arg1 + arg3.anInt459 / 2 + -local200, local239, 50, local271, 0, 1, 0, 0);
+							local156.method2869(Static235.mapFunctionGroup.aClass100Array153[local117], arg2 + local245 + arg3.anInt445 / 2, arg1 + arg3.anInt459 / 2 + -local200, local239, 50, local271, 0, 1, 0, 0);
 							if (GlRenderer.enabled) {
 								Static46.method1173();
 							} else {
@@ -160,7 +160,7 @@ public final class Static54 {
 			@Pc(756) Class102[] local756 = Static143.aClass102Array1;
 			for (local181 = 0; local181 < local756.length; local181++) {
 				@Pc(770) Class102 local770 = local756[local181];
-				if (local770 != null && local770.anInt4058 != 0 && Static83.anInt372 % 20 < 10) {
+				if (local770 != null && local770.anInt4058 != 0 && Static83.loop % 20 < 10) {
 					if (local770.anInt4058 == 1 && local770.anInt4057 >= 0 && local770.anInt4057 < Static175.aClass8_Sub4_Sub2Array1.length) {
 						@Pc(804) Npc local804 = Static175.aClass8_Sub4_Sub2Array1[local770.anInt4057];
 						if (local804 != null) {

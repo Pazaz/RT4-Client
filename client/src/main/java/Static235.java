@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static235 {
 
 	@OriginalMember(owner = "client!tb", name = "X", descriptor = "Lclient!se;")
-	public static Class134 aClass134_2;
+	public static Class134 mapFunctionGroup;
 
 	@OriginalMember(owner = "client!tb", name = "P", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1002 = Static28.parse("(U5");
@@ -26,9 +26,9 @@ public final class Static235 {
 		}
 		@Pc(24) byte[] local24;
 		if (arg0 < 32768) {
-			local24 = Static87.aClass153_38.method4495(0, arg0);
+			local24 = Static87.aClass153_38.getFile(0, arg0);
 		} else {
-			local24 = Static29.aClass153_19.method4495(0, arg0 & 0x7FFF);
+			local24 = Static29.aClass153_19.getFile(0, arg0 & 0x7FFF);
 		}
 		local10 = new Class3_Sub2_Sub2();
 		if (local24 != null) {

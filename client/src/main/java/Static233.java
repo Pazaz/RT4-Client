@@ -38,7 +38,7 @@ public final class Static233 {
 	public static boolean aBoolean254 = false;
 
 	@OriginalMember(owner = "client!t", name = "y", descriptor = "I")
-	public static int anInt5223 = 0;
+	public static int loadingScreenState = 0;
 
 	@OriginalMember(owner = "client!t", name = "z", descriptor = "I")
 	public static int anInt5224 = 0;
@@ -65,7 +65,7 @@ public final class Static233 {
 			@Pc(17) Class102 local17 = local5[local3];
 			if (local17 != null && local17.anInt4058 == 2) {
 				Static198.method1026(arg0 >> 1, arg4, (local17.anInt4046 - Static142.originZ << 7) + local17.anInt4047, local17.anInt4050 * 2, arg2 >> 1, local17.anInt4045 + (local17.anInt4053 - Static225.originX << 7), arg3);
-				if (Static65.anInt1951 > -1 && Static83.anInt372 % 20 < 10) {
+				if (Static65.anInt1951 > -1 && Static83.loop % 20 < 10) {
 					Static276.aClass3_Sub2_Sub1Array11[local17.anInt4048].method1423(arg1 + Static65.anInt1951 - 12, arg5 + -28 - -Static16.anInt548);
 				}
 			}
@@ -85,11 +85,11 @@ public final class Static233 {
 		@Pc(19) byte local19;
 		@Pc(21) byte[][] local21;
 		if (GlRenderer.enabled && arg0) {
-			local21 = Static19.aByteArrayArray4;
+			local21 = Static19.underWaterLocationsMapFilesBuffer;
 			local19 = 1;
 		} else {
 			local19 = 4;
-			local21 = Static156.aByteArrayArray11;
+			local21 = Static156.locationMapFilesBuffer;
 		}
 		for (@Pc(29) int local29 = 0; local29 < local19; local29++) {
 			Static107.method2261();
@@ -103,8 +103,8 @@ public final class Static233 {
 							@Pc(83) int local83 = local56 >> 14 & 0x3FF;
 							@Pc(89) int local89 = local56 >> 3 & 0x7FF;
 							@Pc(99) int local99 = local89 / 8 + (local83 / 8 << 8);
-							for (@Pc(101) int local101 = 0; local101 < Static238.anIntArray470.length; local101++) {
-								if (Static238.anIntArray470[local101] == local99 && local21[local101] != null) {
+							for (@Pc(101) int local101 = 0; local101 < Static238.regionBitPacked.length; local101++) {
+								if (Static238.regionBitPacked[local101] == local99 && local21[local101] != null) {
 									Static217.method3771(Static148.collisionMaps, local29, local21[local101], local67, local77, local36 * 8, local43 * 8, arg0, (local83 & 0x7) * 8, (local89 & 0x7) * 8);
 									break;
 								}

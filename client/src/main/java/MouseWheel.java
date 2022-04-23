@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public abstract class MouseWheel {
 
 	@OriginalMember(owner = "client!uc", name = "a", descriptor = "(I)I")
-	public abstract int method3287();
+	public abstract int getRotation();
 
 	@OriginalMember(owner = "client!uc", name = "a", descriptor = "(ZLjava/awt/Component;)V")
 	public abstract void method3291(@OriginalArg(1) Component arg0);

@@ -27,7 +27,7 @@ public final class Static31 {
 
 	@OriginalMember(owner = "client!ch", name = "c", descriptor = "(I)V")
 	public static void method846() {
-		if (!Static138.method2697() && Static41.anInt1316 != Static55.level) {
+		if (!Static138.allLevelsAreVisible() && Static41.anInt1316 != Static55.level) {
 			Static127.method2463(Static55.level, Static52.anInt1695, Static80.anInt4701, Static173.self.movementQueueZ[0], false, Static173.self.movementQueueX[0]);
 		} else if (Static55.level != Static107.anInt2875 && Static137.method2665(Static55.level)) {
 			Static107.anInt2875 = Static55.level;
@@ -54,7 +54,7 @@ public final class Static31 {
 					Static124.socket = null;
 				}
 				if (Static196.anInt4587 >= 1) {
-					Static266.anInt5336 = -5;
+					Static266.returnCode = -5;
 					Static219.anInt4937 = 0;
 					return;
 				}
@@ -96,7 +96,7 @@ public final class Static31 {
 					Static147.soundChannel.method3571();
 				}
 				if (local126 != 101) {
-					Static266.anInt5336 = local126;
+					Static266.returnCode = local126;
 					Static219.anInt4937 = 0;
 					Static124.socket.close();
 					Static124.socket = null;
@@ -112,7 +112,7 @@ public final class Static31 {
 				Static176.method3303(local126);
 				if (Static125.worldId == -1) {
 					Static219.anInt4937 = 0;
-					Static266.anInt5336 = 6;
+					Static266.returnCode = 6;
 					Static124.socket.close();
 					Static124.socket = null;
 					return;
@@ -138,7 +138,7 @@ public final class Static31 {
 				Static20.anInt673 = 0;
 				Static196.anInt4587++;
 			} else {
-				Static266.anInt5336 = -4;
+				Static266.returnCode = -4;
 				Static219.anInt4937 = 0;
 			}
 		}

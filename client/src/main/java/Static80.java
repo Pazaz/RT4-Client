@@ -12,7 +12,7 @@ public final class Static80 {
 	public static int anInt4698;
 
 	@OriginalMember(owner = "client!gf", name = "O", descriptor = "[[[I")
-	public static int[][][] anIntArrayArrayArray19;
+	public static int[][][] underWaterTileHeightMap;
 
 	@OriginalMember(owner = "client!gf", name = "R", descriptor = "I")
 	public static int anInt4701;
@@ -40,7 +40,7 @@ public final class Static80 {
 		Static53.method1293(true);
 		aBoolean231 = true;
 		Static99.stereo = true;
-		Static220.aBoolean244 = true;
+		Static220.highWaterDetail = true;
 		Static102.windowMode = 0;
 		Static22.anInt729 = 0;
 		Static250.aBoolean283 = true;

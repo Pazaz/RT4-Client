@@ -68,10 +68,10 @@ public final class Static87 {
 		@Pc(9) byte[][] local9;
 		if (GlRenderer.enabled && arg0) {
 			local7 = 1;
-			local9 = Static186.aByteArrayArray14;
+			local9 = Static186.underWaterMapFilesBuffer;
 		} else {
 			local7 = 4;
-			local9 = Static273.aByteArrayArray13;
+			local9 = Static273.mapFilesBuffer;
 		}
 		@Pc(18) int local18 = local9.length;
 		@Pc(20) int local20;
@@ -79,8 +79,8 @@ public final class Static87 {
 		@Pc(49) int local49;
 		@Pc(53) byte[] local53;
 		for (local20 = 0; local20 < local18; local20++) {
-			local38 = (Static238.anIntArray470[local20] >> 8) * 64 - Static225.originX;
-			local49 = (Static238.anIntArray470[local20] & 0xFF) * 64 - Static142.originZ;
+			local38 = (Static238.regionBitPacked[local20] >> 8) * 64 - Static225.originX;
+			local49 = (Static238.regionBitPacked[local20] & 0xFF) * 64 - Static142.originZ;
 			local53 = local9[local20];
 			if (local53 != null) {
 				Static107.method2261();
@@ -88,8 +88,8 @@ public final class Static87 {
 			}
 		}
 		for (local20 = 0; local20 < local18; local20++) {
-			local38 = (Static238.anIntArray470[local20] >> 8) * 64 - Static225.originX;
-			local49 = (Static238.anIntArray470[local20] & 0xFF) * 64 - Static142.originZ;
+			local38 = (Static238.regionBitPacked[local20] >> 8) * 64 - Static225.originX;
+			local49 = (Static238.regionBitPacked[local20] & 0xFF) * 64 - Static142.originZ;
 			local53 = local9[local20];
 			if (local53 == null && Static52.anInt1695 < 800) {
 				Static107.method2261();
@@ -128,7 +128,7 @@ public final class Static87 {
 				} else {
 					local57 = arg8;
 				}
-				local30.anInt465 = Static83.anInt372;
+				local30.anInt465 = Static83.loop;
 				local30.anInt517 = local57;
 				if (!local30.aBoolean32 || !Static36.method947(local30)) {
 					if (local30.anInt453 > 0) {
@@ -236,7 +236,7 @@ public final class Static87 {
 									continue;
 								}
 								local276 -= local30.anInt459 / 2;
-								local503 = Static57.anInt1747 + Static59.anInt1814 & 0x7FF;
+								local503 = Static57.yawTarget + Static59.anInt1814 & 0x7FF;
 								local270 -= local30.anInt445 / 2;
 								local514 = MathUtils.anIntArray223[local503];
 								local518 = MathUtils.anIntArray225[local503];
@@ -893,14 +893,14 @@ public final class Static87 {
 	}
 
 	@OriginalMember(owner = "client!gn", name = "b", descriptor = "(B)V")
-	public static void method1812() {
-		if (Static72.anInt2031 < 128) {
-			Static72.anInt2031 = 128;
+	public static void clampCameraAngle() {
+		if (Static72.pitchTarget < 128) {
+			Static72.pitchTarget = 128;
 		}
-		if (Static72.anInt2031 > 383) {
-			Static72.anInt2031 = 383;
+		if (Static72.pitchTarget > 383) {
+			Static72.pitchTarget = 383;
 		}
-		Static57.anInt1747 &= 0x7FF;
+		Static57.yawTarget &= 0x7FF;
 		@Pc(33) int local33 = Static81.anInt2223 >> 7;
 		@Pc(37) int local37 = Static111.anInt2900 >> 7;
 		@Pc(43) int local43 = Static207.method3685(Static55.level, Static81.anInt2223, Static111.anInt2900);
@@ -910,10 +910,10 @@ public final class Static87 {
 			for (local64 = local33 - 4; local64 <= local33 + 4; local64++) {
 				for (@Pc(73) int local73 = local37 - 4; local73 <= local37 + 4; local73++) {
 					@Pc(80) int local80 = Static55.level;
-					if (local80 < 3 && (Static12.aByteArrayArrayArray2[1][local64][local73] & 0x2) == 2) {
+					if (local80 < 3 && (Static12.tileSettings[1][local64][local73] & 0x2) == 2) {
 						local80++;
 					}
-					@Pc(117) int local117 = (Static232.aByteArrayArrayArray13[local80][local64][local73] & 0xFF) * 8 + local43 - Static83.anIntArrayArrayArray4[local80][local64][local73];
+					@Pc(117) int local117 = (Static232.aByteArrayArrayArray13[local80][local64][local73] & 0xFF) * 8 + local43 - Static83.activeTileHeightMap[local80][local64][local73];
 					if (local117 > local45) {
 						local45 = local117;
 					}

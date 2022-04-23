@@ -48,17 +48,17 @@ public final class Static9 {
 			local96 = arg5 + (local28 >> 1);
 			local100 = (local28 + 1 >> 1) + arg5;
 		}
-		@Pc(120) int[][] local120 = Static83.anIntArrayArrayArray4[arg7];
+		@Pc(120) int[][] local120 = Static83.activeTileHeightMap[arg7];
 		@Pc(122) int local122 = 0;
 		@Pc(148) int local148 = local120[local96][local51] + local120[local96][local53] + local120[local100][local53] + local120[local100][local51] >> 2;
 		@Pc(158) int[][] local158;
 		if (arg7 != 0) {
-			local158 = Static83.anIntArrayArrayArray4[0];
+			local158 = Static83.activeTileHeightMap[0];
 			local122 = local148 - (local158[local96][local51] + local158[local100][local53] + local158[local96][local53] + local158[local100][local51] >> 2);
 		}
 		local158 = null;
 		if (arg7 < 3) {
-			local158 = Static83.anIntArrayArrayArray4[arg7 + 1];
+			local158 = Static83.activeTileHeightMap[arg7 + 1];
 		}
 		@Pc(215) Class139 local215 = arg0.method3428(arg2, local80, local120, arg4, local148, local158, false, null, true, local88);
 		Static242.method4207(local215.aClass36_Sub1_3, local80 - arg3, local122, local88 - arg1);
@@ -67,7 +67,7 @@ public final class Static9 {
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "(Z)V")
 	public static void method182() {
 		Static241.aClass13Array13 = null;
-		Static6.method86(Static154.topLevelInterace, 0, GameShell.canvasWidth, 0, -1, GameShell.canvasHeight, 0, 0);
+		Static6.method86(Static154.topLevelInterface, 0, GameShell.canvasWidth, 0, -1, GameShell.canvasHeight, 0, 0);
 		if (Static241.aClass13Array13 != null) {
 			Static87.method1809(0, Static127.anInt3126, Static80.anInt4696, Static241.aClass13Array13, GameShell.canvasWidth, -1412584499, 0, GameShell.canvasHeight, Static4.aClass13_1.anInt517);
 			Static241.aClass13Array13 = null;
@@ -124,7 +124,7 @@ public final class Static9 {
 		} else {
 			@Pc(22) int local22 = arg1 << 7;
 			@Pc(26) int local26 = arg2 << 7;
-			if (Static256.method4394(local22 + 1, Static83.anIntArrayArrayArray4[arg0][arg1][arg2], local26 + 1) && Static256.method4394(local22 + 128 - 1, Static83.anIntArrayArrayArray4[arg0][arg1 + 1][arg2], local26 + 1) && Static256.method4394(local22 + 128 - 1, Static83.anIntArrayArrayArray4[arg0][arg1 + 1][arg2 + 1], local26 + 128 - 1) && Static256.method4394(local22 + 1, Static83.anIntArrayArrayArray4[arg0][arg1][arg2 + 1], local26 + 128 - 1)) {
+			if (Static256.method4394(local22 + 1, Static83.activeTileHeightMap[arg0][arg1][arg2], local26 + 1) && Static256.method4394(local22 + 128 - 1, Static83.activeTileHeightMap[arg0][arg1 + 1][arg2], local26 + 1) && Static256.method4394(local22 + 128 - 1, Static83.activeTileHeightMap[arg0][arg1 + 1][arg2 + 1], local26 + 128 - 1) && Static256.method4394(local22 + 1, Static83.activeTileHeightMap[arg0][arg1][arg2 + 1], local26 + 128 - 1)) {
 				Static140.anIntArrayArrayArray12[arg0][arg1][arg2] = Static13.anInt437;
 				return true;
 			} else {

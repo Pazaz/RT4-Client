@@ -26,12 +26,12 @@ public final class Static91 {
 	}
 
 	@OriginalMember(owner = "client!hc", name = "a", descriptor = "(IB)Lclient!qc;")
-	public static ClientScript method1875(@OriginalArg(0) int arg0) {
+	public static ClientScript getCs2ById(@OriginalArg(0) int arg0) {
 		@Pc(12) ClientScript local12 = (ClientScript) Static105.aClass54_9.method1806((long) arg0);
 		if (local12 != null) {
 			return local12;
 		}
-		@Pc(22) byte[] local22 = Static16.js5Archive12.method4495(arg0, 0);
+		@Pc(22) byte[] local22 = Static16.js5Archive12.getFile(arg0, 0);
 		if (local22 == null) {
 			return null;
 		}
@@ -64,20 +64,20 @@ public final class Static91 {
 		}
 		local42.offset = 0;
 		local12.aClass100_880 = local42.gjstrFast();
-		local12.anIntArray415 = new int[local70];
-		local12.aClass100Array140 = new JagString[local70];
+		local12.opcodes = new int[local70];
+		local12.stringOperands = new JagString[local70];
 		local107 = 0;
-		local12.anIntArray416 = new int[local70];
+		local12.intOperands = new int[local70];
 		while (local63 > local42.offset) {
 			local114 = local42.g2();
 			if (local114 == 3) {
-				local12.aClass100Array140[local107] = local42.gjstr();
+				local12.stringOperands[local107] = local42.gjstr();
 			} else if (local114 >= 100 || local114 == 21 || local114 == 38 || local114 == 39) {
-				local12.anIntArray416[local107] = local42.g1();
+				local12.intOperands[local107] = local42.g1();
 			} else {
-				local12.anIntArray416[local107] = local42.g4();
+				local12.intOperands[local107] = local42.g4();
 			}
-			local12.anIntArray415[local107++] = local114;
+			local12.opcodes[local107++] = local114;
 		}
 		Static105.aClass54_9.method1811(local12, (long) arg0);
 		return local12;

@@ -11,7 +11,7 @@ public final class Static180 {
 	public static Component aClass13_22;
 
 	@OriginalMember(owner = "client!og", name = "g", descriptor = "[Lclient!na;")
-	public static JagString[] aClass100Array125;
+	public static JagString[] stringLocals;
 
 	@OriginalMember(owner = "client!og", name = "a", descriptor = "(Lclient!ve;Lclient!ve;B)V")
 	public static void init(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {

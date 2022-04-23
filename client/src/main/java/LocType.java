@@ -209,9 +209,9 @@ public final class LocType {
 	public final LocType method3417() {
 		@Pc(26) int local26 = -1;
 		if (this.anInt4425 != -1) {
-			local26 = Static155.method2945(this.anInt4425);
+			local26 = Static155.getVarbit(this.anInt4425);
 		} else if (this.anInt4431 != -1) {
-			local26 = Static7.anIntArray75[this.anInt4431];
+			local26 = Static7.varps[this.anInt4431];
 		}
 		if (local26 < 0 || local26 >= this.anIntArray380.length - 1 || this.anIntArray380[local26] == -1) {
 			@Pc(84) int local84 = this.anIntArray380[this.anIntArray380.length - 1];

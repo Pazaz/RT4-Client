@@ -20,7 +20,7 @@ public final class Static254 {
 	public static final JagString aClass100_1061 = Static28.parse("null");
 
 	@OriginalMember(owner = "client!uj", name = "t", descriptor = "[I")
-	public static final int[] anIntArray487 = new int[1000];
+	public static final int[] intStack = new int[1000];
 
 	@OriginalMember(owner = "client!uj", name = "A", descriptor = "[I")
 	public static final int[] anIntArray489 = new int[] { 2, 0, 0, 2, 0, 0, 0, 4, 4 };
@@ -44,7 +44,7 @@ public final class Static254 {
 		@Pc(14) byte local14 = arg0 ? 1 : (byte) (Static136.anInt3325 & 0xFF);
 		if (local14 == Static266.aByteArrayArrayArray15[Static55.level][arg1][arg2]) {
 			return false;
-		} else if ((Static12.aByteArrayArrayArray2[Static55.level][arg1][arg2] & 0x4) == 0) {
+		} else if ((Static12.tileSettings[Static55.level][arg1][arg2] & 0x4) == 0) {
 			return false;
 		} else {
 			@Pc(47) int local47 = 0;
@@ -62,13 +62,13 @@ public final class Static254 {
 				local47 = local47 + 1 & 0xFFF;
 				@Pc(130) boolean local130 = false;
 				@Pc(132) boolean local132 = false;
-				if ((Static12.aByteArrayArrayArray2[Static55.level][local108][local122] & 0x4) == 0) {
+				if ((Static12.tileSettings[Static55.level][local108][local122] & 0x4) == 0) {
 					local130 = true;
 				}
 				@Pc(150) int local150;
 				@Pc(191) int local191;
 				label238: for (local150 = Static55.level + 1; local150 <= 3; local150++) {
-					if ((Static12.aByteArrayArrayArray2[local150][local108][local122] & 0x8) == 0) {
+					if ((Static12.tileSettings[local150][local108][local122] & 0x8) == 0) {
 						@Pc(227) int local227;
 						@Pc(358) int local358;
 						if (local130 && arg3[local150][local108][local122] != null) {
@@ -122,8 +122,8 @@ public final class Static254 {
 					}
 				}
 				if (local132) {
-					if (Static83.anIntArrayArrayArray4[Static55.level + 1][local108][local122] > Static79.anIntArray205[arg4]) {
-						Static79.anIntArray205[arg4] = Static83.anIntArrayArrayArray4[Static55.level + 1][local108][local122];
+					if (Static83.activeTileHeightMap[Static55.level + 1][local108][local122] > Static79.anIntArray205[arg4]) {
+						Static79.anIntArray205[arg4] = Static83.activeTileHeightMap[Static55.level + 1][local108][local122];
 					}
 					local150 = local108 << 7;
 					if (local150 < Static149.anIntArray338[arg4]) {
@@ -147,7 +147,7 @@ public final class Static254 {
 					}
 					local122++;
 					if (local122 < 104) {
-						if (local108 - 1 >= 0 && local14 != Static266.aByteArrayArrayArray15[Static55.level][local108 - 1][local122] && (Static12.aByteArrayArrayArray2[Static55.level][local108][local122] & 0x4) == 0 && (Static12.aByteArrayArrayArray2[Static55.level][local108 - 1][local122 - 1] & 0x4) == 0) {
+						if (local108 - 1 >= 0 && local14 != Static266.aByteArrayArrayArray15[Static55.level][local108 - 1][local122] && (Static12.tileSettings[Static55.level][local108][local122] & 0x4) == 0 && (Static12.tileSettings[Static55.level][local108 - 1][local122 - 1] & 0x4) == 0) {
 							Static259.anIntArray514[local69] = 0x52000000 | 0x120000 | local108 - 1;
 							Static84.anIntArray209[local69] = local122 | 0x130000;
 							Static266.aByteArrayArrayArray15[Static55.level][local108 - 1][local122] = local14;
@@ -159,7 +159,7 @@ public final class Static254 {
 							local69 = local69 + 1 & 0xFFF;
 							Static266.aByteArrayArrayArray15[Static55.level][local108][local122] = local14;
 						}
-						if (local108 + 1 < 104 && Static266.aByteArrayArrayArray15[Static55.level][local108 + 1][local122] != local14 && (Static12.aByteArrayArrayArray2[Static55.level][local108][local122] & 0x4) == 0 && (Static12.aByteArrayArrayArray2[Static55.level][local108 + 1][local122 - 1] & 0x4) == 0) {
+						if (local108 + 1 < 104 && Static266.aByteArrayArrayArray15[Static55.level][local108 + 1][local122] != local14 && (Static12.tileSettings[Static55.level][local108][local122] & 0x4) == 0 && (Static12.tileSettings[Static55.level][local108 + 1][local122 - 1] & 0x4) == 0) {
 							Static259.anIntArray514[local69] = 0x92000000 | 0x520000 | local108 + 1;
 							Static84.anIntArray209[local69] = local122 | 0x530000;
 							Static266.aByteArrayArrayArray15[Static55.level][local108 + 1][local122] = local14;
@@ -175,7 +175,7 @@ public final class Static254 {
 					}
 					local122--;
 					if (local122 >= 0) {
-						if (local108 - 1 >= 0 && Static266.aByteArrayArrayArray15[Static55.level][local108 - 1][local122] != local14 && (Static12.aByteArrayArrayArray2[Static55.level][local108][local122] & 0x4) == 0 && (Static12.aByteArrayArrayArray2[Static55.level][local108 - 1][local122 + 1] & 0x4) == 0) {
+						if (local108 - 1 >= 0 && Static266.aByteArrayArrayArray15[Static55.level][local108 - 1][local122] != local14 && (Static12.tileSettings[Static55.level][local108][local122] & 0x4) == 0 && (Static12.tileSettings[Static55.level][local108 - 1][local122 + 1] & 0x4) == 0) {
 							Static259.anIntArray514[local69] = local108 - 1 | 0xD20000 | 0x12000000;
 							Static84.anIntArray209[local69] = local122 | 0xD30000;
 							Static266.aByteArrayArrayArray15[Static55.level][local108 - 1][local122] = local14;
@@ -187,7 +187,7 @@ public final class Static254 {
 							local69 = local69 + 1 & 0xFFF;
 							Static266.aByteArrayArrayArray15[Static55.level][local108][local122] = local14;
 						}
-						if (local108 + 1 < 104 && Static266.aByteArrayArrayArray15[Static55.level][local108 + 1][local122] != local14 && (Static12.aByteArrayArrayArray2[Static55.level][local108][local122] & 0x4) == 0 && (Static12.aByteArrayArrayArray2[Static55.level][local108 + 1][local122 + 1] & 0x4) == 0) {
+						if (local108 + 1 < 104 && Static266.aByteArrayArrayArray15[Static55.level][local108 + 1][local122] != local14 && (Static12.tileSettings[Static55.level][local108][local122] & 0x4) == 0 && (Static12.tileSettings[Static55.level][local108 + 1][local122 + 1] & 0x4) == 0) {
 							Static259.anIntArray514[local69] = local108 + 1 | 0xD2000000 | 0x920000;
 							Static84.anIntArray209[local69] = local122 | 0x930000;
 							Static266.aByteArrayArrayArray15[Static55.level][local108 + 1][local122] = local14;

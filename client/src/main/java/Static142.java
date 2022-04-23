@@ -66,7 +66,7 @@ public final class Static142 {
 					@Pc(308) Class102[] local308 = Static143.aClass102Array1;
 					for (local310 = 0; local310 < local308.length; local310++) {
 						@Pc(322) Class102 local322 = local308[local310];
-						if (local322 != null && local322.anInt4058 == 1 && local322.anInt4057 == Static33.anIntArray79[local5 - Static267.anInt5774] && Static83.anInt372 % 20 < 10) {
+						if (local322 != null && local322.anInt4058 == 1 && local322.anInt4057 == Static33.anIntArray79[local5 - Static267.anInt5774] && Static83.loop % 20 < 10) {
 							if (local58.anInt3730 == -1) {
 								local359 = local17.method2691() + 15;
 							} else {
@@ -121,7 +121,7 @@ public final class Static142 {
 						Static277.anInt5854++;
 					}
 				}
-				if (local17.anInt3378 > Static83.anInt372) {
+				if (local17.anInt3378 > Static83.loop) {
 					@Pc(508) Sprite local508 = Static116.aClass3_Sub2_Sub1Array3[0];
 					@Pc(512) Sprite local512 = Static116.aClass3_Sub2_Sub1Array3[1];
 					if (local17 instanceof Npc) {
@@ -167,7 +167,7 @@ public final class Static142 {
 					}
 				}
 				for (local74 = 0; local74 < 4; local74++) {
-					if (local17.anIntArray319[local74] > Static83.anInt372) {
+					if (local17.anIntArray319[local74] > Static83.loop) {
 						if (local17 instanceof Npc) {
 							@Pc(725) Npc local725 = (Npc) local17;
 							@Pc(728) NpcType local728 = local725.aClass96_1;

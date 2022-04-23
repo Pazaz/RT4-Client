@@ -8,7 +8,7 @@ public final class Static273 {
 	public static WorldMapFont aClass41_7;
 
 	@OriginalMember(owner = "client!we", name = "H", descriptor = "[[B")
-	public static byte[][] aByteArrayArray13;
+	public static byte[][] mapFilesBuffer;
 
 	@OriginalMember(owner = "client!we", name = "w", descriptor = "I")
 	public static int anInt4130 = 0;
@@ -74,13 +74,13 @@ public final class Static273 {
 					}
 				}
 				if (local46 == 5) {
-					local41 = Static7.anIntArray75[local33[local39++]];
+					local41 = Static7.varps[local33[local39++]];
 				}
 				if (local46 == 6) {
 					local41 = ObjType.anIntArray213[Static141.anIntArray326[local33[local39++]] - 1];
 				}
 				if (local46 == 7) {
-					local41 = Static7.anIntArray75[local33[local39++]] * 100 / 46875;
+					local41 = Static7.varps[local33[local39++]] * 100 / 46875;
 				}
 				if (local46 == 8) {
 					local41 = Static173.self.anInt1652;
@@ -113,13 +113,13 @@ public final class Static273 {
 					local41 = Static251.anInt5456;
 				}
 				if (local46 == 13) {
-					local124 = Static7.anIntArray75[local33[local39++]];
+					local124 = Static7.varps[local33[local39++]];
 					@Pc(353) int local353 = local33[local39++];
 					local41 = (0x1 << local353 & local124) == 0 ? 0 : 1;
 				}
 				if (local46 == 14) {
 					local124 = local33[local39++];
-					local41 = Static155.method2945(local124);
+					local41 = Static155.getVarbit(local124);
 				}
 				if (local46 == 18) {
 					local41 = (Static173.self.anInt3412 >> 7) + Static225.originX;

@@ -53,7 +53,7 @@ public final class Static271 {
 		if (local15 != null) {
 			return local15;
 		}
-		@Pc(30) byte[] local30 = Static146.aClass153_54.method4495(Static253.method4328(arg0), Static33.method872(arg0));
+		@Pc(30) byte[] local30 = Static146.aClass153_54.getFile(Static253.method4328(arg0), Static33.method872(arg0));
 		local15 = new LocType();
 		local15.anInt4426 = arg0;
 		if (local30 != null) {

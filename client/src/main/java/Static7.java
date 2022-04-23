@@ -15,7 +15,7 @@ public final class Static7 {
 	public static final SoftLruHashTable aClass99_5 = new SoftLruHashTable(2);
 
 	@OriginalMember(owner = "client!ah", name = "j", descriptor = "[I")
-	public static final int[] anIntArray75 = new int[2500];
+	public static final int[] varps = new int[2500];
 
     @OriginalMember(owner = "client!ah", name = "n", descriptor = "I")
 	public static int anInt983 = 0;
@@ -27,9 +27,9 @@ public final class Static7 {
 	public static int clickX = 0;
 
 	@OriginalMember(owner = "client!ah", name = "a", descriptor = "(BZ)V")
-	public static void method842(@OriginalArg(1) boolean arg0) {
+	public static void ping(@OriginalArg(1) boolean arg0) {
 		Static107.method2261();
-		if (Static244.anInt5370 != 30 && Static244.anInt5370 != 25) {
+		if (Static244.gameState != 30 && Static244.gameState != 25) {
 			return;
 		}
 		Static131.anInt3251++;

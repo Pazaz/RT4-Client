@@ -14,7 +14,7 @@ public final class ClientScript extends SecondaryNode {
 	public int anInt4669;
 
 	@OriginalMember(owner = "client!qc", name = "O", descriptor = "[I")
-	public int[] anIntArray415;
+	public int[] opcodes;
 
 	@OriginalMember(owner = "client!qc", name = "Q", descriptor = "[Lclient!sc;")
 	public HashTable[] aClass133Array1;
@@ -26,8 +26,8 @@ public final class ClientScript extends SecondaryNode {
 	public int anInt4671;
 
 	@OriginalMember(owner = "client!qc", name = "T", descriptor = "[Lclient!na;")
-	public JagString[] aClass100Array140;
+	public JagString[] stringOperands;
 
 	@OriginalMember(owner = "client!qc", name = "W", descriptor = "[I")
-	public int[] anIntArray416;
+	public int[] intOperands;
 }

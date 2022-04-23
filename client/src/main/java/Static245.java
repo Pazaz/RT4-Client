@@ -37,7 +37,7 @@ public final class Static245 {
 			}
 			for (@Pc(46) int local46 = 0; local46 < local25; local46++) {
 				if (Static241.components[arg0][local46] == null) {
-					@Pc(62) byte[] local62 = Static202.aClass153_84.method4495(arg0, local46);
+					@Pc(62) byte[] local62 = Static202.aClass153_84.getFile(arg0, local46);
 					if (local62 != null) {
 						@Pc(74) Component local74 = Static241.components[arg0][local46] = new Component();
 						local74.anInt507 = local46 + (arg0 << 16);
@@ -210,8 +210,8 @@ public final class Static245 {
 						local417 = local517.anInt2240 >> 7;
 						local255 = local517.anInt2245 >> 7;
 						if (local417 >= 0 && local255 >= 0 && local417 < 104 && local255 < 104) {
-							local517.aBoolean125 = (Static12.aByteArrayArrayArray2[1][local417][local255] & 0x2) != 0;
-							local517.anInt2235 = Static83.anIntArrayArrayArray4[local517.anInt2241][local417][local255] - local517.anInt2235;
+							local517.aBoolean125 = (Static12.tileSettings[1][local417][local255] & 0x2) != 0;
+							local517.anInt2235 = Static83.activeTileHeightMap[local517.anInt2241][local417][local255] - local517.anInt2235;
 							Static120.method2389(local517);
 						}
 					}

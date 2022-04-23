@@ -31,9 +31,9 @@ public final class Static89 {
 		@Pc(13) byte[][] local13;
 		if (GlRenderer.enabled && arg0) {
 			local11 = 1;
-			local13 = Static186.aByteArrayArray14;
+			local13 = Static186.underWaterMapFilesBuffer;
 		} else {
-			local13 = Static273.aByteArrayArray13;
+			local13 = Static273.mapFilesBuffer;
 			local11 = 4;
 		}
 		for (@Pc(21) int local21 = 0; local21 < local11; local21++) {
@@ -49,8 +49,8 @@ public final class Static89 {
 							@Pc(82) int local82 = local52 >> 1 & 0x3;
 							@Pc(88) int local88 = local52 >> 14 & 0x3FF;
 							@Pc(98) int local98 = (local88 / 8 << 8) + local76 / 8;
-							for (@Pc(100) int local100 = 0; local100 < Static238.anIntArray470.length; local100++) {
-								if (Static238.anIntArray470[local100] == local98 && local13[local100] != null) {
+							for (@Pc(100) int local100 = 0; local100 < Static238.regionBitPacked.length; local100++) {
+								if (Static238.regionBitPacked[local100] == local98 && local13[local100] != null) {
 									Static245.method4228(local82, local32 * 8, local21, Static148.collisionMaps, local39 * 8, local13[local100], local65, (local76 & 0x7) * 8, (local88 & 0x7) * 8, arg0);
 									local54 = true;
 									break;
@@ -168,8 +168,8 @@ public final class Static89 {
 			Static39.aShortArray6[0] = 1005;
 			Static190.anIntArray382[0] = Static35.anInt1092;
 		}
-		if (Static154.topLevelInterace != -1) {
-			Static96.method1949(Static154.topLevelInterace);
+		if (Static154.topLevelInterface != -1) {
+			Static96.method1949(Static154.topLevelInterface);
 		}
 		@Pc(60) int local60;
 		for (local60 = 0; local60 < Static24.anInt766; local60++) {
@@ -186,8 +186,8 @@ public final class Static89 {
 		if (GlRenderer.enabled) {
 			Static263.aBoolean299 = true;
 		}
-		Static182.anInt4311 = Static83.anInt372;
-		if (Static154.topLevelInterace != -1) {
+		Static182.anInt4311 = Static83.loop;
+		if (Static154.topLevelInterface != -1) {
 			Static24.anInt766 = 0;
 			Static9.method182();
 		}

@@ -37,7 +37,7 @@ public final class Static148 {
 
 	@OriginalMember(owner = "client!li", name = "a", descriptor = "(III)V")
 	public static void method2766(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		Static7.anIntArray75[arg0] = arg1;
+		Static7.varps[arg0] = arg1;
 		@Pc(21) LongNode local21 = (LongNode) Static199.aClass133_20.method3863((long) arg0);
 		if (local21 == null) {
 			local21 = new LongNode(MonotonicClock.currentTimeMillis() + 500L);
@@ -53,7 +53,7 @@ public final class Static148 {
 		if (local16 != null) {
 			return local16;
 		}
-		@Pc(26) byte[] local26 = Static261.js5Archive13.method4495(arg0, 0);
+		@Pc(26) byte[] local26 = Static261.js5Archive13.getFile(arg0, 0);
 		local16 = new SoftwareFont(local26);
 		local16.method2873(Static159.aClass36Array12, null);
 		Static139.aClass99_22.method3095(local16, (long) arg0);

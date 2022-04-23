@@ -11,10 +11,10 @@ public final class Static72 {
 	public static PrivilegedRequest aClass212_3;
 
 	@OriginalMember(owner = "client!fl", name = "D", descriptor = "[[I")
-	public static int[][] anIntArrayArray14;
+	public static int[][] regionsXteaKeys;
 
     @OriginalMember(owner = "client!fl", name = "s", descriptor = "I")
-	public static int anInt2031 = 128;
+	public static int pitchTarget = 128;
 
     @OriginalMember(owner = "client!fl", name = "B", descriptor = "I")
 	public static int updatedVarcstrsWriterIndex = 0;

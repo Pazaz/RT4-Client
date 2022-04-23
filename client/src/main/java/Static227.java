@@ -12,7 +12,7 @@ public final class Static227 {
 	public static Js5 js5Archive23;
 
 	@OriginalMember(owner = "client!sg", name = "o", descriptor = "I")
-	public static int anInt5096;
+	public static int cameraType;
 
     @OriginalMember(owner = "client!sg", name = "b", descriptor = "[I")
 	public static final int[] anIntArray446 = new int[25];

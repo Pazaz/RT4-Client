@@ -194,8 +194,8 @@ public final class Static269 {
 					local194 = local529.anInt2245 >> 7;
 					local190 = local529.anInt2240 >> 7;
 					if (local190 >= 0 && local194 >= 0 && local190 < 104 && local194 < 104) {
-						local529.aBoolean125 = (Static12.aByteArrayArrayArray2[1][local190][local194] & 0x2) != 0;
-						local529.anInt2235 = Static83.anIntArrayArrayArray4[local529.anInt2241][local190][local194] - local529.anInt2235;
+						local529.aBoolean125 = (Static12.tileSettings[1][local190][local194] & 0x2) != 0;
+						local529.anInt2235 = Static83.activeTileHeightMap[local529.anInt2241][local190][local194] - local529.anInt2235;
 						Static120.method2389(local529);
 					}
 				}
