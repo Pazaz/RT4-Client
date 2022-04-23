@@ -532,6 +532,13 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 					this.mainInputLoop();
 					this.mainRedrawWrapper();
 					lastDrawTime = currentTime;
+
+					if (VARIABLE_RENDER_RATE > minimumDelay) {
+						timer.sleep(minimumDelay, (int) VARIABLE_RENDER_RATE);
+					} else {
+						// encourage thread switching
+						Thread.yield();
+					}
 				}
 			}
 		} catch (@Pc(198) Exception ex) {
