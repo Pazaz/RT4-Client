@@ -47,7 +47,7 @@ public final class Static111 {
 		} else {
 			arg0.x = arg2 - (arg2 * arg0.baseX >> 14) - arg0.anInt445;
 		}
-		if (!Static121.aBoolean154 || Static36.method940(arg0).anInt546 == 0 && arg0.anInt452 != 0) {
+		if (!Static121.aBoolean154 || Static36.method940(arg0).anInt546 == 0 && arg0.type != 0) {
 			return;
 		}
 		if (arg0.y < 0) {

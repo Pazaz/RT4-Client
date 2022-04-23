@@ -70,7 +70,7 @@ public final class Static203 {
 	}
 
 	@OriginalMember(owner = "client!qh", name = "a", descriptor = "(Lsignlink!ll;B)V")
-	public static void write(@OriginalArg(0) SignLink arg0) {
+	public static void savePreferences(@OriginalArg(0) SignLink arg0) {
 		@Pc(11) FileOnDisk local11 = null;
 		try {
 			@Pc(16) PrivilegedRequest local16 = arg0.openPreferences("runescape");

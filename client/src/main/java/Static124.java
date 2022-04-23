@@ -30,13 +30,13 @@ public final class Static124 {
 
 	@OriginalMember(owner = "client!jk", name = "e", descriptor = "(B)V")
 	public static void method2433() {
-		Static262.aClass99_34.method3104();
+		Static262.aClass99_34.clear();
 	}
 
 	@OriginalMember(owner = "client!jk", name = "a", descriptor = "(ILclient!na;)Lclient!bn;")
 	public static Map method2434(@OriginalArg(1) JagString arg0) {
 		for (@Pc(15) Map local15 = (Map) Static228.aClass69_120.method2289(); local15 != null; local15 = (Map) Static228.aClass69_120.method2288()) {
-			if (local15.aClass100_138.method3108(arg0)) {
+			if (local15.aClass100_138.strEquals(arg0)) {
 				return local15;
 			}
 		}

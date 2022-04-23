@@ -24,8 +24,8 @@ public final class Static74 {
 
 	@OriginalMember(owner = "client!fn", name = "a", descriptor = "(BIIIII)V")
 	public static void method1624(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
-		Static241.aClass36Array16[0].method3336(arg2, arg3);
-		Static241.aClass36Array16[1].method3336(arg2, arg4 + arg3 - 16);
+		Static241.aClass36Array16[0].renderTransparent(arg2, arg3);
+		Static241.aClass36Array16[1].renderTransparent(arg2, arg4 + arg3 - 16);
 		@Pc(35) int local35 = arg4 * (arg4 - 32) / arg1;
 		if (local35 < 8) {
 			local35 = 8;
@@ -57,7 +57,7 @@ public final class Static74 {
 	}
 
 	@OriginalMember(owner = "client!fn", name = "a", descriptor = "(ILclient!be;)V")
-	public static void method1625(@OriginalArg(1) Component arg0) {
+	public static void update(@OriginalArg(1) Component arg0) {
 		@Pc(7) Component local7 = Static280.method4668(arg0);
 		@Pc(19) int local19;
 		@Pc(17) int local17;
@@ -92,22 +92,22 @@ public final class Static74 {
 	@OriginalMember(owner = "client!fn", name = "a", descriptor = "(Lclient!ve;Lclient!ve;Z)I")
 	public static int getReady(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {
 		@Pc(5) int local5 = 0;
-		if (arg0.method4506(Static166.anInt4049)) {
+		if (arg0.isFileReady(Static166.anInt4049)) {
 			local5++;
 		}
-		if (arg0.method4506(Static130.anInt3161)) {
+		if (arg0.isFileReady(Static130.anInt3161)) {
 			local5++;
 		}
-		if (arg0.method4506(Static73.anInt2077)) {
+		if (arg0.isFileReady(Static73.anInt2077)) {
 			local5++;
 		}
-		if (arg1.method4506(Static166.anInt4049)) {
+		if (arg1.isFileReady(Static166.anInt4049)) {
 			local5++;
 		}
-		if (arg1.method4506(Static130.anInt3161)) {
+		if (arg1.isFileReady(Static130.anInt3161)) {
 			local5++;
 		}
-		if (arg1.method4506(Static73.anInt2077)) {
+		if (arg1.isFileReady(Static73.anInt2077)) {
 			local5++;
 		}
 		return local5;

@@ -78,7 +78,7 @@ public abstract class Font extends SecondaryNode {
 		@Pc(8) int local8 = 0;
 		@Pc(12) int local12 = arg0.length();
 		for (@Pc(14) int local14 = 0; local14 < local12; local14++) {
-			@Pc(22) int local22 = arg0.method3149(local14);
+			@Pc(22) int local22 = arg0.charAt(local14);
 			if (local22 == 60) {
 				local6 = local14;
 			} else {
@@ -86,29 +86,29 @@ public abstract class Font extends SecondaryNode {
 				if (local22 == 62 && local6 != -1) {
 					@Pc(42) JagString local42 = arg0.substring(local14, local6 + 1);
 					local6 = -1;
-					if (local42.method3108(Static218.aClass100_696)) {
+					if (local42.strEquals(Static218.aClass100_696)) {
 						local22 = 60;
-					} else if (local42.method3108(Static218.aClass100_695)) {
+					} else if (local42.strEquals(Static218.aClass100_695)) {
 						local22 = 62;
-					} else if (local42.method3108(Static218.aClass100_710)) {
+					} else if (local42.strEquals(Static218.aClass100_710)) {
 						local22 = 160;
-					} else if (local42.method3108(Static218.aClass100_698)) {
+					} else if (local42.strEquals(Static218.aClass100_698)) {
 						local22 = 173;
-					} else if (local42.method3108(Static218.aClass100_708)) {
+					} else if (local42.strEquals(Static218.aClass100_708)) {
 						local22 = 215;
-					} else if (local42.method3108(Static218.aClass100_702)) {
+					} else if (local42.strEquals(Static218.aClass100_702)) {
 						local22 = 128;
-					} else if (local42.method3108(Static218.aClass100_716)) {
+					} else if (local42.strEquals(Static218.aClass100_716)) {
 						local22 = 169;
 					} else {
-						if (!local42.method3108(Static218.aClass100_718)) {
+						if (!local42.strEquals(Static218.aClass100_718)) {
 							if (local42.method3138(Static218.aClass100_715)) {
 								try {
 									local120 = local42.method3136(4).parseInt();
 									@Pc(125) IndexedSprite local125 = this.aClass36Array11[local120];
 									@Pc(136) int local136 = this.anIntArray346 == null ? local125.anInt4276 : this.anIntArray346[local120];
 									if (Static218.anInt3631 == 256) {
-										local125.method3336(arg1, local4 + this.anInt3626 - local136);
+										local125.renderTransparent(arg1, local4 + this.anInt3626 - local136);
 									} else {
 										local125.method3335(arg1, local4 + this.anInt3626 - local136, Static218.anInt3631);
 									}
@@ -206,29 +206,29 @@ public abstract class Font extends SecondaryNode {
 		@Pc(9) int local9 = 0;
 		@Pc(13) int local13 = arg0.length();
 		for (@Pc(15) int local15 = 0; local15 < local13; local15++) {
-			@Pc(23) int local23 = arg0.method3149(local15);
+			@Pc(23) int local23 = arg0.charAt(local15);
 			if (local23 == 60) {
 				local5 = local15;
 			} else {
 				if (local23 == 62 && local5 != -1) {
 					@Pc(43) JagString local43 = arg0.substring(local15, local5 + 1);
 					local5 = -1;
-					if (local43.method3108(Static218.aClass100_696)) {
+					if (local43.strEquals(Static218.aClass100_696)) {
 						local23 = 60;
-					} else if (local43.method3108(Static218.aClass100_695)) {
+					} else if (local43.strEquals(Static218.aClass100_695)) {
 						local23 = 62;
-					} else if (local43.method3108(Static218.aClass100_710)) {
+					} else if (local43.strEquals(Static218.aClass100_710)) {
 						local23 = 160;
-					} else if (local43.method3108(Static218.aClass100_698)) {
+					} else if (local43.strEquals(Static218.aClass100_698)) {
 						local23 = 173;
-					} else if (local43.method3108(Static218.aClass100_708)) {
+					} else if (local43.strEquals(Static218.aClass100_708)) {
 						local23 = 215;
-					} else if (local43.method3108(Static218.aClass100_702)) {
+					} else if (local43.strEquals(Static218.aClass100_702)) {
 						local23 = 128;
-					} else if (local43.method3108(Static218.aClass100_716)) {
+					} else if (local43.strEquals(Static218.aClass100_716)) {
 						local23 = 169;
 					} else {
-						if (!local43.method3108(Static218.aClass100_718)) {
+						if (!local43.strEquals(Static218.aClass100_718)) {
 							if (local43.method3138(Static218.aClass100_715)) {
 								try {
 									@Pc(121) int local121 = local43.method3136(4).parseInt();
@@ -284,31 +284,31 @@ public abstract class Font extends SecondaryNode {
 		try {
 			if (arg0.method3138(Static218.aClass100_705)) {
 				Static218.anInt3635 = arg0.method3136(4).method3110(16);
-			} else if (arg0.method3108(Static218.aClass100_703)) {
+			} else if (arg0.strEquals(Static218.aClass100_703)) {
 				Static218.anInt3635 = Static218.anInt3630;
 			} else if (arg0.method3138(Static218.aClass100_699)) {
 				Static218.anInt3631 = arg0.method3136(6).parseInt();
-			} else if (arg0.method3108(Static218.aClass100_709)) {
+			} else if (arg0.strEquals(Static218.aClass100_709)) {
 				Static218.anInt3631 = Static218.anInt3632;
 			} else if (arg0.method3138(Static218.aClass100_701)) {
 				Static218.anInt3627 = arg0.method3136(4).method3110(16);
-			} else if (arg0.method3108(Static218.aClass100_719)) {
+			} else if (arg0.strEquals(Static218.aClass100_719)) {
 				Static218.anInt3627 = 8388608;
-			} else if (arg0.method3108(Static218.aClass100_717)) {
+			} else if (arg0.strEquals(Static218.aClass100_717)) {
 				Static218.anInt3627 = -1;
 			} else if (arg0.method3138(Static218.aClass100_700)) {
 				Static218.anInt3628 = arg0.method3136(2).method3110(16);
-			} else if (arg0.method3108(Static218.aClass100_707)) {
+			} else if (arg0.strEquals(Static218.aClass100_707)) {
 				Static218.anInt3628 = 0;
-			} else if (arg0.method3108(Static218.aClass100_712)) {
+			} else if (arg0.strEquals(Static218.aClass100_712)) {
 				Static218.anInt3628 = -1;
 			} else if (arg0.method3138(Static218.aClass100_697)) {
 				Static218.anInt3634 = arg0.method3136(5).method3110(16);
-			} else if (arg0.method3108(Static218.aClass100_714)) {
+			} else if (arg0.strEquals(Static218.aClass100_714)) {
 				Static218.anInt3634 = 0;
-			} else if (arg0.method3108(Static218.aClass100_704)) {
+			} else if (arg0.strEquals(Static218.aClass100_704)) {
 				Static218.anInt3634 = Static218.anInt3633;
-			} else if (arg0.method3108(Static218.aClass100_713)) {
+			} else if (arg0.strEquals(Static218.aClass100_713)) {
 				this.method2877(Static218.anInt3630, Static218.anInt3633, Static218.anInt3632);
 			}
 		} catch (@Pc(144) Exception local144) {
@@ -334,7 +334,7 @@ public abstract class Font extends SecondaryNode {
 		@Pc(3) boolean local3 = false;
 		@Pc(7) int local7 = arg0.length();
 		for (@Pc(9) int local9 = 0; local9 < local7; local9++) {
-			@Pc(17) int local17 = arg0.method3149(local9);
+			@Pc(17) int local17 = arg0.charAt(local9);
 			if (local17 == 60) {
 				local3 = true;
 			} else if (local17 == 62) {
@@ -364,17 +364,17 @@ public abstract class Font extends SecondaryNode {
 		@Pc(23) int local23 = 0;
 		@Pc(27) int local27 = arg0.length();
 		for (@Pc(29) int local29 = 0; local29 < local27; local29++) {
-			@Pc(37) int local37 = arg0.method3149(local29);
+			@Pc(37) int local37 = arg0.charAt(local29);
 			if (local37 == 60) {
 				local19 = local29;
 			} else {
 				if (local37 == 62 && local19 != -1) {
 					@Pc(57) JagString local57 = arg0.substring(local29, local19 + 1);
 					local19 = -1;
-					Static218.aClass100_720.method3152(60);
+					Static218.aClass100_720.append(60);
 					Static218.aClass100_720.method3113(local57);
-					Static218.aClass100_720.method3152(62);
-					if (local57.method3108(Static218.aClass100_713)) {
+					Static218.aClass100_720.append(62);
+					if (local57.strEquals(Static218.aClass100_713)) {
 						if (arg2[local23] == null) {
 							arg2[local23] = Static218.aClass100_720.method3143().substring(Static218.aClass100_720.length(), local11);
 						} else {
@@ -386,49 +386,49 @@ public abstract class Font extends SecondaryNode {
 						local9 = 0;
 						local13 = -1;
 						local21 = 0;
-					} else if (local57.method3108(Static218.aClass100_696)) {
+					} else if (local57.strEquals(Static218.aClass100_696)) {
 						local9 += this.method2863(60);
 						if (this.aByteArray50 != null && local21 != 0) {
 							local9 += this.aByteArray50[(local21 << 8) + 60];
 						}
 						local21 = 60;
-					} else if (local57.method3108(Static218.aClass100_695)) {
+					} else if (local57.strEquals(Static218.aClass100_695)) {
 						local9 += this.method2863(62);
 						if (this.aByteArray50 != null && local21 != 0) {
 							local9 += this.aByteArray50[(local21 << 8) + 62];
 						}
 						local21 = 62;
-					} else if (local57.method3108(Static218.aClass100_710)) {
+					} else if (local57.strEquals(Static218.aClass100_710)) {
 						local9 += this.method2863(160);
 						if (this.aByteArray50 != null && local21 != 0) {
 							local9 += this.aByteArray50[(local21 << 8) + 160];
 						}
 						local21 = 160;
-					} else if (local57.method3108(Static218.aClass100_698)) {
+					} else if (local57.strEquals(Static218.aClass100_698)) {
 						local9 += this.method2863(173);
 						if (this.aByteArray50 != null && local21 != 0) {
 							local9 += this.aByteArray50[(local21 << 8) + 173];
 						}
 						local21 = 173;
-					} else if (local57.method3108(Static218.aClass100_708)) {
+					} else if (local57.strEquals(Static218.aClass100_708)) {
 						local9 += this.method2863(215);
 						if (this.aByteArray50 != null && local21 != 0) {
 							local9 += this.aByteArray50[(local21 << 8) + 215];
 						}
 						local21 = 215;
-					} else if (local57.method3108(Static218.aClass100_702)) {
+					} else if (local57.strEquals(Static218.aClass100_702)) {
 						local9 += this.method2863(128);
 						if (this.aByteArray50 != null && local21 != 0) {
 							local9 += this.aByteArray50[(local21 << 8) + 128];
 						}
 						local21 = 128;
-					} else if (local57.method3108(Static218.aClass100_716)) {
+					} else if (local57.strEquals(Static218.aClass100_716)) {
 						local9 += this.method2863(169);
 						if (this.aByteArray50 != null && local21 != 0) {
 							local9 += this.aByteArray50[(local21 << 8) + 169];
 						}
 						local21 = 169;
-					} else if (local57.method3108(Static218.aClass100_718)) {
+					} else if (local57.strEquals(Static218.aClass100_718)) {
 						local9 += this.method2863(174);
 						if (this.aByteArray50 != null && local21 != 0) {
 							local9 += this.aByteArray50[(local21 << 8) + 174];
@@ -446,7 +446,7 @@ public abstract class Font extends SecondaryNode {
 				}
 				if (local19 == -1) {
 					if (local37 != 0) {
-						Static218.aClass100_720.method3152(local37);
+						Static218.aClass100_720.append(local37);
 						local9 += this.anIntArray348[local37];
 						if (this.aByteArray50 != null && local21 != 0) {
 							local9 += this.aByteArray50[(local21 << 8) + local37];
@@ -746,7 +746,7 @@ public abstract class Font extends SecondaryNode {
 		@Pc(10) int local10 = 0;
 		@Pc(14) int local14 = arg0.length();
 		for (@Pc(16) int local16 = 0; local16 < local14; local16++) {
-			@Pc(24) int local24 = arg0.method3149(local16);
+			@Pc(24) int local24 = arg0.charAt(local16);
 			if (local24 == 60) {
 				local6 = local16;
 			} else {
@@ -756,22 +756,22 @@ public abstract class Font extends SecondaryNode {
 				if (local24 == 62 && local6 != -1) {
 					@Pc(44) JagString local44 = arg0.substring(local16, local6 + 1);
 					local6 = -1;
-					if (local44.method3108(Static218.aClass100_696)) {
+					if (local44.strEquals(Static218.aClass100_696)) {
 						local24 = 60;
-					} else if (local44.method3108(Static218.aClass100_695)) {
+					} else if (local44.strEquals(Static218.aClass100_695)) {
 						local24 = 62;
-					} else if (local44.method3108(Static218.aClass100_710)) {
+					} else if (local44.strEquals(Static218.aClass100_710)) {
 						local24 = 160;
-					} else if (local44.method3108(Static218.aClass100_698)) {
+					} else if (local44.strEquals(Static218.aClass100_698)) {
 						local24 = 173;
-					} else if (local44.method3108(Static218.aClass100_708)) {
+					} else if (local44.strEquals(Static218.aClass100_708)) {
 						local24 = 215;
-					} else if (local44.method3108(Static218.aClass100_702)) {
+					} else if (local44.strEquals(Static218.aClass100_702)) {
 						local24 = 128;
-					} else if (local44.method3108(Static218.aClass100_716)) {
+					} else if (local44.strEquals(Static218.aClass100_716)) {
 						local24 = 169;
 					} else {
-						if (!local44.method3108(Static218.aClass100_718)) {
+						if (!local44.strEquals(Static218.aClass100_718)) {
 							if (local44.method3138(Static218.aClass100_715)) {
 								try {
 									if (arg3 == null) {
@@ -789,7 +789,7 @@ public abstract class Font extends SecondaryNode {
 									@Pc(146) IndexedSprite local146 = this.aClass36Array11[local141];
 									@Pc(157) int local157 = this.anIntArray346 == null ? local146.anInt4276 : this.anIntArray346[local141];
 									if (Static218.anInt3631 == 256) {
-										local146.method3336(arg1 + local121, local4 + this.anInt3626 - local157 + local130);
+										local146.renderTransparent(arg1 + local121, local4 + this.anInt3626 - local157 + local130);
 									} else {
 										local146.method3335(arg1 + local121, local4 + this.anInt3626 - local157 + local130, Static218.anInt3631);
 									}

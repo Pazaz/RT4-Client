@@ -104,7 +104,7 @@ public final class Static185 {
 		@Pc(387) Entity local387;
 		@Pc(403) Class139 local403;
 		if (arg6 == 22) {
-			if (Static250.aBoolean283 || local62.anInt4429 != 0 || local62.anInt4435 == 1 || local62.aBoolean206) {
+			if (Static250.showGroundDecorations || local62.anInt4429 != 0 || local62.anInt4435 == 1 || local62.aBoolean206) {
 				if (local62.anInt4430 == -1 && local62.anIntArray380 == null && !local62.aBoolean214) {
 					local403 = local62.method3428(arg9, local165, local153, 22, local199, local213, arg1, null, local330, local173);
 					if (GlRenderer.enabled && local330) {

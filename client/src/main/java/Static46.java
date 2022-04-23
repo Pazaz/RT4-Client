@@ -205,7 +205,7 @@ public final class Static46 {
 	}
 
 	@OriginalMember(owner = "client!dj", name = "d", descriptor = "()V")
-	public static void method1184() {
+	public static void clear() {
 		GlRenderer.gl.glClear(GL2.GL_DEPTH_BUFFER_BIT | GL2.GL_COLOR_BUFFER_BIT);
 	}
 

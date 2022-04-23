@@ -674,7 +674,7 @@ public final class Static247 {
 		Static241.aBoolean302 = true;
 		Static246.anInt5393 = arg4;
 		Static35.anInt1092 = arg5;
-		Static43.method1143(local8);
+		Static43.redraw(local8);
 	}
 
 	@OriginalMember(owner = "client!ub", name = "a", descriptor = "(IB)I")
@@ -699,7 +699,7 @@ public final class Static247 {
 
 	@OriginalMember(owner = "client!ub", name = "a", descriptor = "(Z)V")
 	public static void method4249() {
-		Static279.aClass99_38.method3104();
-		Static56.aClass99_9.method3104();
+		Static279.aClass99_38.clear();
+		Static56.aClass99_9.clear();
 	}
 }

@@ -38,7 +38,7 @@ public final class Npc extends PathingEntity {
 			local84 = local84.method2932();
 		}
 		@Pc(140) Model local140;
-		if (Static209.aBoolean240 && local84.aBoolean180) {
+		if (Static209.characterShadowsOn && local84.aBoolean180) {
 			local140 = Static41.method1043(this.aClass96_1.aByte13, this.aBoolean171, local53 == null ? local29 : local53, this.anInt3412, this.aClass96_1.aShort23, this.anInt3421, this.aClass96_1.aShort24, this.aClass96_1.anInt3713, local74, arg0, local53 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, this.aClass96_1.aByte12);
 			if (GlRenderer.enabled) {
 				@Pc(144) float local144 = GlRenderer.method4179();

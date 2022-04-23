@@ -36,6 +36,6 @@ public final class Static249 {
 
 	@OriginalMember(owner = "client!ud", name = "d", descriptor = "(I)V")
 	public static void method4266() {
-		Static232.aClass99_30.method3104();
+		Static232.aClass99_30.clear();
 	}
 }

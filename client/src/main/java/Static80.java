@@ -24,7 +24,7 @@ public final class Static80 {
 	public static final JagString aClass100_886 = Static28.parse(")3runescape)3com)4l=");
 
 	@OriginalMember(owner = "client!gf", name = "N", descriptor = "Z")
-	public static boolean aBoolean231 = true;
+	public static boolean removeRoofsSelectively = true;
 
 	@OriginalMember(owner = "client!gf", name = "S", descriptor = "[I")
 	public static final int[] anIntArray419 = new int[] { 0, 2, 2, 2, 1, 1, 2, 2, 1, 3, 1, 1 };
@@ -37,36 +37,36 @@ public final class Static80 {
 	@OriginalMember(owner = "client!gf", name = "a", descriptor = "(Lsignlink!ll;I)V")
 	public static void read(@OriginalArg(0) SignLink arg0) {
 		Static113.brightness = 3;
-		Static53.method1293(true);
-		aBoolean231 = true;
+		Static53.setAllVisibleLevels(true);
+		removeRoofsSelectively = true;
 		Static99.stereo = true;
 		Static220.highWaterDetail = true;
 		Static102.windowMode = 0;
 		Static22.anInt729 = 0;
-		Static250.aBoolean283 = true;
-		Static11.aBoolean15 = true;
-		Static15.aBoolean33 = true;
-		Static30.anInt978 = 127;
-		Static71.aBoolean107 = true;
-		Static209.aBoolean240 = true;
+		Static250.showGroundDecorations = true;
+		Static11.flickeringEffectsOn = true;
+		Static15.manyIdleAnimations = true;
+		Static30.ambientSoundsVolume = 127;
+		Static71.fogEnabled = true;
+		Static209.characterShadowsOn = true;
 		Static114.anInt5831 = 0;
-		Static139.anInt3451 = 2;
-		Static159.aBoolean189 = true;
+		Static139.sceneryShadowsType = 2;
+		Static159.manyGroundTextures = true;
 		Static178.highDetailLighting = true;
-		Static12.anInt391 = 255;
+		Static12.musicVolume = 255;
 		Static53.highDetailTextures = true;
 		Static186.antiAliasingMode = 0;
 		@Pc(48) FileOnDisk local48 = null;
-		Static125.anInt3104 = 127;
+		Static125.soundEffectVolume = 127;
 		if (GameShell.maxMemory >= 96) {
-			Static76.method1645(2);
+			Static76.setParticles(2);
 		} else {
-			Static76.method1645(0);
+			Static76.setParticles(0);
 		}
-		Static164.anInt3988 = 0;
+		Static164.lastWorldId = 0;
 		Static141.buildArea = 0;
 		Static33.aBoolean63 = false;
-		Static64.aBoolean111 = true;
+		Static64.cursorsEnabled = true;
 		Static164.safeMode = false;
 		Static127.aBoolean159 = false;
 		Static214.windowMode = 0;

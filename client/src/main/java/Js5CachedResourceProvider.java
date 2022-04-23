@@ -92,12 +92,12 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 		}
 		@Pc(15) Node local15;
 		for (local15 = this.aClass69_16.method2289(); local15 != null; local15 = this.aClass69_16.method2288()) {
-			if (local15.aLong192 == (long) arg0) {
+			if (local15.uid == (long) arg0) {
 				return;
 			}
 		}
 		local15 = new Node();
-		local15.aLong192 = arg0;
+		local15.uid = arg0;
 		this.aClass69_16.method2282(local15);
 	}
 
@@ -184,7 +184,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 			return 0;
 		} else if (this.aBoolean35) {
 			@Pc(25) Node local25 = this.aClass69_17.method2289();
-			return local25 == null ? 0 : (int) local25.aLong192;
+			return local25 == null ? 0 : (int) local25.uid;
 		} else {
 			return this.aClass70_1.anInt2902;
 		}
@@ -202,7 +202,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 			if (this.aBoolean35) {
 				local32 = true;
 				for (local37 = this.aClass69_17.method2289(); local37 != null; local37 = this.aClass69_17.method2288()) {
-					local43 = (int) local37.aLong192;
+					local43 = (int) local37.uid;
 					if (this.aByteArray9[local43] == 0) {
 						this.method536(1, local43);
 					}
@@ -226,7 +226,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 						if (this.aByteArray9[this.anInt578] == 0) {
 							local32 = false;
 							local37 = new Node();
-							local37.aLong192 = this.anInt578;
+							local37.uid = this.anInt578;
 							this.aClass69_17.method2282(local37);
 						}
 						this.anInt578++;
@@ -239,7 +239,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 			} else if (this.aBoolean36) {
 				local32 = true;
 				for (local37 = this.aClass69_17.method2289(); local37 != null; local37 = this.aClass69_17.method2288()) {
-					local43 = (int) local37.aLong192;
+					local43 = (int) local37.uid;
 					if (this.aByteArray9[local43] != 1) {
 						this.method536(2, local43);
 					}
@@ -262,7 +262,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 						}
 						if (this.aByteArray9[this.anInt578] != 1) {
 							local37 = new Node();
-							local37.aLong192 = this.anInt578;
+							local37.uid = this.anInt578;
 							this.aClass69_17.method2282(local37);
 							local32 = false;
 						}
@@ -428,7 +428,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 			return;
 		}
 		for (@Pc(21) Node local21 = this.aClass69_16.method2289(); local21 != null; local21 = this.aClass69_16.method2288()) {
-			@Pc(28) int local28 = (int) local21.aLong192;
+			@Pc(28) int local28 = (int) local21.uid;
 			if (local28 < 0 || this.aClass70_1.anInt2907 <= local28 || this.aClass70_1.anIntArray272[local28] == 0) {
 				local21.method4658();
 			} else {

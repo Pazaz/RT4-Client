@@ -69,7 +69,7 @@ public final class EnumType extends SecondaryNode {
 			this.method3087();
 		}
 		for (@Pc(38) Class3_Sub13 local38 = (Class3_Sub13) this.aClass133_17.method3863(arg0.method3118()); local38 != null; local38 = (Class3_Sub13) this.aClass133_17.method3867()) {
-			if (local38.aClass100_503.method3108(arg0)) {
+			if (local38.aClass100_503.strEquals(arg0)) {
 				return true;
 			}
 		}
@@ -80,7 +80,7 @@ public final class EnumType extends SecondaryNode {
 	private void method3087() {
 		this.aClass133_17 = new HashTable(this.aClass133_16.method3868());
 		for (@Pc(22) StringNode local22 = (StringNode) this.aClass133_16.method3859(); local22 != null; local22 = (StringNode) this.aClass133_16.method3861()) {
-			@Pc(36) Class3_Sub13 local36 = new Class3_Sub13(local22.aClass100_980, (int) local22.aLong192);
+			@Pc(36) Class3_Sub13 local36 = new Class3_Sub13(local22.aClass100_980, (int) local22.uid);
 			this.aClass133_17.method3862(local36, local22.aClass100_980.method3118());
 		}
 	}
@@ -111,7 +111,7 @@ public final class EnumType extends SecondaryNode {
 	private void method3091() {
 		this.aClass133_17 = new HashTable(this.aClass133_16.method3868());
 		for (@Pc(24) IntNode local24 = (IntNode) this.aClass133_16.method3859(); local24 != null; local24 = (IntNode) this.aClass133_16.method3861()) {
-			@Pc(34) IntNode local34 = new IntNode((int) local24.aLong192);
+			@Pc(34) IntNode local34 = new IntNode((int) local24.uid);
 			this.aClass133_17.method3862(local34, (long) local24.anInt3141);
 		}
 	}

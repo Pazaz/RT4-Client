@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static18 {
 
 	@OriginalMember(owner = "client!bh", name = "M", descriptor = "Z")
-	public static boolean aBoolean40;
+	public static boolean loaded;
 
 	@OriginalMember(owner = "client!bh", name = "s", descriptor = "Lclient!na;")
 	public static final JagString aClass100_106 = Static28.parse("p11_full");
@@ -17,7 +17,7 @@ public final class Static18 {
 	public static final JagString aClass100_107 = Static28.parse("floorshadows");
 
 	@OriginalMember(owner = "client!bh", name = "z", descriptor = "Z")
-	public static boolean sentToServer = true;
+	public static boolean serverUpdatedPreferences = true;
 
 	@OriginalMember(owner = "client!bh", name = "C", descriptor = "Lclient!na;")
 	public static final JagString COMPLETE_PERCENT = Static28.parse("<br>(X100(U(Y");
@@ -93,9 +93,9 @@ public final class Static18 {
 	}
 
 	@OriginalMember(owner = "client!bh", name = "a", descriptor = "(B)Lclient!ba;")
-	public static World method556() {
-		Static51.anInt1682 = 0;
-		return Static88.method1821();
+	public static World getFirstWorld() {
+		Static51.worldPos = 0;
+		return Static88.getNextWorld();
 	}
 
 	@OriginalMember(owner = "client!bh", name = "a", descriptor = "(IIII)V")

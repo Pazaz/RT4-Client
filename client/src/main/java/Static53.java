@@ -77,7 +77,7 @@ public final class Static53 {
 	}
 
 	@OriginalMember(owner = "client!ec", name = "a", descriptor = "(IZ)V")
-	public static void method1293(@OriginalArg(1) boolean arg0) {
+	public static void setAllVisibleLevels(@OriginalArg(1) boolean arg0) {
 		Static162.aBoolean190 = arg0;
 		Static87.aBoolean130 = !Static138.allLevelsAreVisible();
 	}
@@ -96,11 +96,11 @@ public final class Static53 {
 		}
 		Static241.aBoolean302 = false;
 		Static35.anInt1092 = -1;
-		Static43.method1143(local19);
+		Static43.redraw(local19);
 	}
 
 	@OriginalMember(owner = "client!ec", name = "b", descriptor = "(I)V")
 	public static void method1295() {
-		Static125.aClass99_19.method3104();
+		Static125.aClass99_19.clear();
 	}
 }

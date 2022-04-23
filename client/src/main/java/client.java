@@ -190,7 +190,7 @@ public final class client extends GameShell {
 		}
 		if (Static164.safeMode && Static244.gameState == 10 && Static154.topLevelInterface != -1) {
 			Static164.safeMode = false;
-			Static203.write(GameShell.signLink);
+			Static203.savePreferences(GameShell.signLink);
 		}
 	}
 
@@ -464,7 +464,7 @@ public final class client extends GameShell {
 			}
 		}
 		if (!GlRenderer.enabled) {
-			Static269.method2170();
+			Static269.updateFlames();
 		} else if (Static184.loginStep == 0 && Static179.accountCreationStep == 0) {
 			if (Static227.cameraType == 2) {
 				Static125.updateLockedCamera();
@@ -507,29 +507,29 @@ public final class client extends GameShell {
 											return;
 										}
 										prioritySource = priorityRequest.source;
-										if (prioritySource.componentId < 0) {
+										if (prioritySource.createdComponentId < 0) {
 											break;
 										}
 										priorityComponent = Static5.getComponent(prioritySource.layer);
-									} while (priorityComponent == null || priorityComponent.createdComponents == null || priorityComponent.createdComponents.length <= prioritySource.componentId || prioritySource != priorityComponent.createdComponents[prioritySource.componentId]);
+									} while (priorityComponent == null || priorityComponent.createdComponents == null || priorityComponent.createdComponents.length <= prioritySource.createdComponentId || prioritySource != priorityComponent.createdComponents[prioritySource.createdComponentId]);
 									Static82.method1767(priorityRequest);
 								}
 							}
 							prioritySource = priorityRequest.source;
-							if (prioritySource.componentId < 0) {
+							if (prioritySource.createdComponentId < 0) {
 								break;
 							}
 							priorityComponent = Static5.getComponent(prioritySource.layer);
-						} while (priorityComponent == null || priorityComponent.createdComponents == null || prioritySource.componentId >= priorityComponent.createdComponents.length || prioritySource != priorityComponent.createdComponents[prioritySource.componentId]);
+						} while (priorityComponent == null || priorityComponent.createdComponents == null || prioritySource.createdComponentId >= priorityComponent.createdComponents.length || prioritySource != priorityComponent.createdComponents[prioritySource.createdComponentId]);
 						Static82.method1767(priorityRequest);
 					}
 				}
 				prioritySource = priorityRequest.source;
-				if (prioritySource.componentId < 0) {
+				if (prioritySource.createdComponentId < 0) {
 					break;
 				}
 				priorityComponent = Static5.getComponent(prioritySource.layer);
-			} while (priorityComponent == null || priorityComponent.createdComponents == null || priorityComponent.createdComponents.length <= prioritySource.componentId || prioritySource != priorityComponent.createdComponents[prioritySource.componentId]);
+			} while (priorityComponent == null || priorityComponent.createdComponents == null || priorityComponent.createdComponents.length <= prioritySource.createdComponentId || prioritySource != priorityComponent.createdComponents[prioritySource.createdComponentId]);
 			Static82.method1767(priorityRequest);
 		}
 	}
@@ -939,7 +939,7 @@ public final class client extends GameShell {
 				Static141.buildArea = 0;
 			}
 			Static164.safeMode = true;
-			Static203.write(GameShell.signLink);
+			Static203.savePreferences(GameShell.signLink);
 			Static241.setWindowMode(false, Static214.windowMode, -1, -1);
 			Static199.mainLoadPercentage = 100;
 			Static166.mainLoadState = 160;

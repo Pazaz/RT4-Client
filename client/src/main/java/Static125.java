@@ -20,7 +20,7 @@ public final class Static125 {
 	public static int worldId = -1;
 
 	@OriginalMember(owner = "client!jl", name = "J", descriptor = "I")
-	public static int anInt3104 = 127;
+	public static int soundEffectVolume = 127;
 
 	@OriginalMember(owner = "client!jl", name = "a", descriptor = "(ILclient!ve;Lclient!ve;)V")
 	public static void init(@OriginalArg(1) Js5 arg0, @OriginalArg(2) Js5 arg1) {

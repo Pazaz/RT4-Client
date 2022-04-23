@@ -17,11 +17,11 @@ public final class Static90 {
 	}
 
 	@OriginalMember(owner = "client!hb", name = "c", descriptor = "(I)V")
-	public static void method1854() {
-		Static179.aClass99_25.method3104();
-		Static169.aClass99_24.method3104();
-		Static93.aClass99_14.method3104();
-		Static262.aClass99_36.method3104();
+	public static void clearLocCache() {
+		Static179.aClass99_25.clear();
+		Static169.aClass99_24.clear();
+		Static93.aClass99_14.clear();
+		Static262.aClass99_36.clear();
 	}
 
 	@OriginalMember(owner = "client!hb", name = "b", descriptor = "(II)Z")
@@ -47,6 +47,6 @@ public final class Static90 {
 
 	@OriginalMember(owner = "client!hb", name = "a", descriptor = "(Z)V")
 	public static void method1857() {
-		Static45.aClass99_6.method3104();
+		Static45.aClass99_6.clear();
 	}
 }

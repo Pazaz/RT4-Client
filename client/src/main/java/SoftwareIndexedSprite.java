@@ -18,7 +18,7 @@ public final class SoftwareIndexedSprite extends IndexedSprite {
 		this.anInt4276 = arg1;
 		this.anInt4280 = arg2;
 		this.anInt4273 = arg3;
-		this.anInt4270 = arg4;
+		this.width = arg4;
 		this.anInt4278 = arg5;
 		this.aByteArray18 = arg6;
 		this.anIntArray144 = arg7;
@@ -26,7 +26,7 @@ public final class SoftwareIndexedSprite extends IndexedSprite {
 
 	@OriginalMember(owner = "client!ek", name = "<init>", descriptor = "(III)V")
 	public SoftwareIndexedSprite(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		this.anInt4279 = this.anInt4270 = arg0;
+		this.anInt4279 = this.width = arg0;
 		this.anInt4276 = this.anInt4278 = arg1;
 		this.anInt4280 = this.anInt4273 = 0;
 		this.aByteArray18 = new byte[arg0 * arg1];
@@ -63,7 +63,7 @@ public final class SoftwareIndexedSprite extends IndexedSprite {
 
 	@OriginalMember(owner = "client!ek", name = "a", descriptor = "(IIIII)V")
 	public final void method1390(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
-		@Pc(2) int local2 = this.anInt4270;
+		@Pc(2) int local2 = this.width;
 		@Pc(5) int local5 = this.anInt4278;
 		@Pc(7) int local7 = 0;
 		@Pc(9) int local9 = 0;
@@ -137,12 +137,12 @@ public final class SoftwareIndexedSprite extends IndexedSprite {
 
 	@OriginalMember(owner = "client!ek", name = "b", descriptor = "()V")
 	public final void method1395() {
-		@Pc(6) byte[] local6 = new byte[this.anInt4270 * this.anInt4278];
+		@Pc(6) byte[] local6 = new byte[this.width * this.anInt4278];
 		@Pc(8) int local8 = 0;
 		@Pc(10) int local10;
-		for (local10 = 0; local10 < this.anInt4270; local10++) {
+		for (local10 = 0; local10 < this.width; local10++) {
 			for (@Pc(19) int local19 = this.anInt4278 - 1; local19 >= 0; local19--) {
-				local6[local8++] = this.aByteArray18[local10 + local19 * this.anInt4270];
+				local6[local8++] = this.aByteArray18[local10 + local19 * this.width];
 			}
 		}
 		this.aByteArray18 = local6;
@@ -150,8 +150,8 @@ public final class SoftwareIndexedSprite extends IndexedSprite {
 		this.anInt4273 = this.anInt4280;
 		this.anInt4280 = this.anInt4276 - this.anInt4278 - local10;
 		local10 = this.anInt4278;
-		this.anInt4278 = this.anInt4270;
-		this.anInt4270 = local10;
+		this.anInt4278 = this.width;
+		this.width = local10;
 		local10 = this.anInt4276;
 		this.anInt4276 = this.anInt4279;
 		this.anInt4279 = local10;
@@ -165,7 +165,7 @@ public final class SoftwareIndexedSprite extends IndexedSprite {
 		@Pc(15) int local15 = arg0 + arg1 * Static129.width;
 		@Pc(17) int local17 = 0;
 		@Pc(20) int local20 = this.anInt4278;
-		@Pc(23) int local23 = this.anInt4270;
+		@Pc(23) int local23 = this.width;
 		@Pc(27) int local27 = Static129.width - local23;
 		@Pc(29) int local29 = 0;
 		@Pc(36) int local36;
@@ -201,18 +201,18 @@ public final class SoftwareIndexedSprite extends IndexedSprite {
 
 	@OriginalMember(owner = "client!ek", name = "c", descriptor = "()V")
 	public final void method1396() {
-		if (this.anInt4270 == this.anInt4279 && this.anInt4278 == this.anInt4276) {
+		if (this.width == this.anInt4279 && this.anInt4278 == this.anInt4276) {
 			return;
 		}
 		@Pc(17) byte[] local17 = new byte[this.anInt4279 * this.anInt4276];
 		@Pc(19) int local19 = 0;
 		for (@Pc(21) int local21 = 0; local21 < this.anInt4278; local21++) {
-			for (@Pc(27) int local27 = 0; local27 < this.anInt4270; local27++) {
+			for (@Pc(27) int local27 = 0; local27 < this.width; local27++) {
 				local17[local27 + this.anInt4280 + (local21 + this.anInt4273) * this.anInt4279] = this.aByteArray18[local19++];
 			}
 		}
 		this.aByteArray18 = local17;
-		this.anInt4270 = this.anInt4279;
+		this.width = this.anInt4279;
 		this.anInt4278 = this.anInt4276;
 		this.anInt4280 = 0;
 		this.anInt4273 = 0;
@@ -220,7 +220,7 @@ public final class SoftwareIndexedSprite extends IndexedSprite {
 
 	@OriginalMember(owner = "client!ek", name = "a", descriptor = "(IIII)V")
 	public final void method1398(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		@Pc(2) int local2 = this.anInt4270;
+		@Pc(2) int local2 = this.width;
 		@Pc(5) int local5 = this.anInt4278;
 		@Pc(7) int local7 = 0;
 		@Pc(9) int local9 = 0;
@@ -274,13 +274,13 @@ public final class SoftwareIndexedSprite extends IndexedSprite {
 
 	@OriginalMember(owner = "client!ek", name = "a", descriptor = "(II)V")
 	@Override
-	public final void method3336(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+	public final void renderTransparent(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		arg0 += this.anInt4280;
 		arg1 += this.anInt4273;
 		@Pc(15) int local15 = arg0 + arg1 * Static129.width;
 		@Pc(17) int local17 = 0;
 		@Pc(20) int local20 = this.anInt4278;
-		@Pc(23) int local23 = this.anInt4270;
+		@Pc(23) int local23 = this.width;
 		@Pc(27) int local27 = Static129.width - local23;
 		@Pc(29) int local29 = 0;
 		@Pc(36) int local36;

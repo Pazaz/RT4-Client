@@ -40,11 +40,11 @@ public final class Static2 {
 		for (@Pc(11) int local11 = 0; local11 < arg0.length; local11++) {
 			@Pc(23) Component local23 = arg0[local11];
 			if (local23 != null) {
-				if (local23.anInt452 == 0) {
+				if (local23.type == 0) {
 					if (local23.createdComponents != null) {
 						method7(local23.createdComponents, arg1);
 					}
-					@Pc(49) Class3_Sub31 local49 = (Class3_Sub31) Static119.aClass133_9.method3863((long) local23.anInt507);
+					@Pc(49) Class3_Sub31 local49 = (Class3_Sub31) Static119.aClass133_9.method3863((long) local23.id);
 					if (local49 != null) {
 						Static54.method1304(arg1, local49.anInt5878);
 					}
@@ -57,9 +57,9 @@ public final class Static2 {
 					Static82.method1767(local72);
 				}
 				if (arg1 == 1 && local23.anObjectArray8 != null) {
-					if (local23.componentId >= 0) {
-						@Pc(103) Component local103 = Static5.getComponent(local23.anInt507);
-						if (local103 == null || local103.createdComponents == null || local23.componentId >= local103.createdComponents.length || local103.createdComponents[local23.componentId] != local23) {
+					if (local23.createdComponentId >= 0) {
+						@Pc(103) Component local103 = Static5.getComponent(local23.id);
+						if (local103 == null || local103.createdComponents == null || local23.createdComponentId >= local103.createdComponents.length || local103.createdComponents[local23.createdComponentId] != local23) {
 							continue;
 						}
 					}

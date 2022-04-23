@@ -547,11 +547,11 @@ public final class Static280 {
 		if (arg0.layer != -1) {
 			return Static5.getComponent(arg0.layer);
 		}
-		@Pc(28) int local28 = arg0.anInt507 >>> 16;
+		@Pc(28) int local28 = arg0.id >>> 16;
 		@Pc(33) HashTableIterator local33 = new HashTableIterator(Static119.aClass133_9);
 		for (@Pc(38) Class3_Sub31 local38 = (Class3_Sub31) local33.method2701(); local38 != null; local38 = (Class3_Sub31) local33.method2700()) {
 			if (local28 == local38.anInt5878) {
-				return Static5.getComponent((int) local38.aLong192);
+				return Static5.getComponent((int) local38.uid);
 			}
 		}
 		return null;

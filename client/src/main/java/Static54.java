@@ -137,7 +137,7 @@ public final class Static54 {
 					}
 					@Pc(660) boolean local660 = false;
 					for (local271 = 0; local271 < Static214.anInt5577; local271++) {
-						if (local624 == Static199.aClass3_Sub22Array1[local271].aLong192) {
+						if (local624 == Static199.aClass3_Sub22Array1[local271].uid) {
 							local660 = true;
 							break;
 						}
@@ -247,7 +247,7 @@ public final class Static54 {
 
 	@OriginalMember(owner = "client!ed", name = "c", descriptor = "(I)V")
 	public static void method1308() {
-		Static83.aClass99_3.method3104();
+		Static83.aClass99_3.clear();
 	}
 
 	@OriginalMember(owner = "client!ed", name = "a", descriptor = "(IIII)I")
@@ -265,7 +265,7 @@ public final class Static54 {
 	}
 
 	@OriginalMember(owner = "client!ed", name = "b", descriptor = "(II)Lclient!ba;")
-	public static World method1310(@OriginalArg(1) int arg0) {
+	public static World getWorld(@OriginalArg(1) int arg0) {
 		return Static61.aBoolean109 && arg0 >= Static19.anInt636 && arg0 <= Static171.anInt4157 ? Static196.aClass10_Sub1Array2[arg0 - Static19.anInt636] : null;
 	}
 
@@ -286,7 +286,7 @@ public final class Static54 {
 				if (Static164.anIntArray362[local5] < 0) {
 					@Pc(209) int local209;
 					if (Static26.anIntArray68[local5] == 0) {
-						local209 = Static125.anInt3104;
+						local209 = Static125.soundEffectVolume;
 					} else {
 						@Pc(125) int local125 = (Static26.anIntArray68[local5] & 0xFF) * 128;
 						@Pc(133) int local133 = Static26.anIntArray68[local5] >> 8 & 0xFF;
@@ -307,7 +307,7 @@ public final class Static54 {
 						if (local180 < 0) {
 							local180 = 0;
 						}
-						local209 = Static30.anInt978 * (local125 - local180) / local125;
+						local209 = Static30.ambientSoundsVolume * (local125 - local180) / local125;
 					}
 					if (local209 > 0) {
 						@Pc(223) PcmSound local223 = local79.method3989().method2648(Static56.resampler);
@@ -330,11 +330,11 @@ public final class Static54 {
 			}
 		}
 		if (Static144.aBoolean173 && !Static136.method2655()) {
-			if (Static12.anInt391 != 0 && Static221.anInt4363 != -1) {
-				Static122.method2410(Static130.js5Archive6, Static221.anInt4363, Static12.anInt391);
+			if (Static12.musicVolume != 0 && Static221.anInt4363 != -1) {
+				Static122.method2410(Static130.js5Archive6, Static221.anInt4363, Static12.musicVolume);
 			}
 			Static144.aBoolean173 = false;
-		} else if (Static12.anInt391 != 0 && Static221.anInt4363 != -1 && !Static136.method2655()) {
+		} else if (Static12.musicVolume != 0 && Static221.anInt4363 != -1 && !Static136.method2655()) {
 			Static6.outboundBuffer.p1isaac(137);
 			Static6.outboundBuffer.p4(Static221.anInt4363);
 			Static221.anInt4363 = -1;

@@ -13,7 +13,7 @@ public final class Static250 {
 	public static Js5 aClass153_101;
 
 	@OriginalMember(owner = "client!uf", name = "b", descriptor = "Z")
-	public static boolean aBoolean283 = true;
+	public static boolean showGroundDecorations = true;
 
 	@OriginalMember(owner = "client!uf", name = "e", descriptor = "I")
 	public static int anInt5434 = 0;

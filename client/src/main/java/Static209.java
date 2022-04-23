@@ -14,7 +14,7 @@ public final class Static209 {
 	public static int miscTransmitAt = 0;
 
 	@OriginalMember(owner = "client!ra", name = "R", descriptor = "Z")
-	public static boolean aBoolean240 = true;
+	public static boolean characterShadowsOn = true;
 
 	@OriginalMember(owner = "client!ra", name = "jb", descriptor = "J")
 	public static volatile long aLong161 = 0L;

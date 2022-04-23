@@ -125,7 +125,7 @@ public final class Static84 {
 		}
 		if ((arg0 & 0x20) != 0) {
 			arg2.aClass100_640 = Static57.aClass3_Sub15_Sub1_3.gjstr();
-			if (arg2.aClass100_640.method3149(0) == 126) {
+			if (arg2.aClass100_640.charAt(0) == 126) {
 				arg2.aClass100_640 = arg2.aClass100_640.method3136(1);
 				Static103.method2231(arg2.method1264(), 2, arg2.aClass100_640);
 			} else if (arg2 == Static173.self) {

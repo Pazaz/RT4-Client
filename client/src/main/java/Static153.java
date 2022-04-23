@@ -74,7 +74,7 @@ public final class Static153 {
 			}
 		}
 		if (Static39.aClass13_10 != null) {
-			Static43.method1143(Static39.aClass13_10);
+			Static43.redraw(Static39.aClass13_10);
 			Static39.aClass13_10 = null;
 		}
 	}

@@ -12,7 +12,7 @@ public final class Static222 {
 	public static final int[] anIntArray437 = new int[5];
 
 	@OriginalMember(owner = "client!sa", name = "W", descriptor = "Z")
-	public static boolean aBoolean246 = true;
+	public static boolean instantScreenFade = true;
 
 	@OriginalMember(owner = "client!sa", name = "Y", descriptor = "I")
 	public static volatile int anInt4973 = 0;

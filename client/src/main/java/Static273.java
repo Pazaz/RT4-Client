@@ -167,7 +167,7 @@ public final class Static273 {
 	@OriginalMember(owner = "client!we", name = "b", descriptor = "(BI)V")
 	public static void method3214(@OriginalArg(1) int arg0) {
 		for (@Pc(11) Node local11 = Static210.aClass133_21.method3859(); local11 != null; local11 = Static210.aClass133_21.method3861()) {
-			if ((local11.aLong192 >> 48 & 0xFFFFL) == (long) arg0) {
+			if ((local11.uid >> 48 & 0xFFFFL) == (long) arg0) {
 				local11.method4658();
 			}
 		}

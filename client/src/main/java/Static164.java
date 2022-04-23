@@ -14,7 +14,7 @@ public final class Static164 {
 	public static int anInt3985 = 0;
 
 	@OriginalMember(owner = "client!na", name = "o", descriptor = "I")
-	public static int anInt3988 = 0;
+	public static int lastWorldId = 0;
 
 	@OriginalMember(owner = "client!na", name = "cb", descriptor = "Lclient!na;")
 	public static final JagString aClass100_770 = Static28.parse(":allyreq:");

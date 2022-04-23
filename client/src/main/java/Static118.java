@@ -11,7 +11,7 @@ public final class Static118 {
 	public static Component aClass13_15;
 
 	@OriginalMember(owner = "client!jd", name = "c", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_16 = new SoftLruHashTable(100);
+	public static final SoftLruHashTable objectSpriteCache = new SoftLruHashTable(100);
 
 	@OriginalMember(owner = "client!jd", name = "a", descriptor = "(B)I")
 	public static int method2352() {
@@ -30,20 +30,20 @@ public final class Static118 {
 		for (@Pc(7) int local7 = 0; local7 < arg1.length; local7++) {
 			@Pc(15) Component local15 = arg1[local7];
 			if (local15 != null && local15.layer == arg0 && (!local15.aBoolean32 || !Static36.method947(local15))) {
-				if (local15.anInt452 == 0) {
+				if (local15.type == 0) {
 					if (!local15.aBoolean32 && Static36.method947(local15) && local15 != Static180.aClass13_22) {
 						continue;
 					}
-					method2354(local15.anInt507, arg1);
+					method2354(local15.id, arg1);
 					if (local15.createdComponents != null) {
-						method2354(local15.anInt507, local15.createdComponents);
+						method2354(local15.id, local15.createdComponents);
 					}
-					@Pc(73) Class3_Sub31 local73 = (Class3_Sub31) Static119.aClass133_9.method3863((long) local15.anInt507);
+					@Pc(73) Class3_Sub31 local73 = (Class3_Sub31) Static119.aClass133_9.method3863((long) local15.id);
 					if (local73 != null) {
 						Static96.method1949(local73.anInt5878);
 					}
 				}
-				if (local15.anInt452 == 6) {
+				if (local15.type == 6) {
 					@Pc(105) int local105;
 					if (local15.anInt522 != -1 || local15.anInt462 != -1) {
 						@Pc(100) boolean local100 = Static154.method2926(local15);
@@ -72,7 +72,7 @@ public final class Static118 {
 											local15.anInt496 = -1;
 										}
 									}
-									Static43.method1143(local15);
+									Static43.redraw(local15);
 								}
 							}
 						}
@@ -84,7 +84,7 @@ public final class Static118 {
 						local15.modelXAngle = local243 + local15.modelXAngle & 0x7FF;
 						local105 *= Static178.anInt4247;
 						local15.modelYAngle = local15.modelYAngle + local105 & 0x7FF;
-						Static43.method1143(local15);
+						Static43.redraw(local15);
 					}
 				}
 			}

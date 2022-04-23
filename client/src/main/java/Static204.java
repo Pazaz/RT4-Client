@@ -33,9 +33,9 @@ public final class Static204 {
 
 	@OriginalMember(owner = "client!qi", name = "e", descriptor = "(B)V")
 	public static void method3673() {
-		Static93.aClass99_13.method3104();
-		Static125.aClass99_18.method3104();
-		Static262.aClass99_35.method3104();
+		Static93.aClass99_13.clear();
+		Static125.aClass99_18.clear();
+		Static262.aClass99_35.clear();
 	}
 
 	@OriginalMember(owner = "client!qi", name = "b", descriptor = "(II)I")

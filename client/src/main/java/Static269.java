@@ -20,13 +20,13 @@ public final class Static269 {
 	public static final Js5CachedResourceProvider[] js5Providers = new Js5CachedResourceProvider[28];
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(Z)V")
-	public static void method2170() {
+	public static void updateFlames() {
 		Static250.anInt5434++;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "e", descriptor = "(B)V")
-	public static void method2172() {
-		Static118.aClass99_16.method3104();
+	public static void clearObjectSpriteCache() {
+		Static118.objectSpriteCache.clear();
 	}
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "([Lclient!mj;ZIIIII[B)V")

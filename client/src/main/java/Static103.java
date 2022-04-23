@@ -256,7 +256,7 @@ public final class Static103 {
 		if (local23 == 41 && Static39.aClass13_10 == null) {
 			Static2.method10(local15, local19);
 			Static39.aClass13_10 = Static201.method1418(local19, local15);
-			Static43.method1143(Static39.aClass13_10);
+			Static43.redraw(Static39.aClass13_10);
 		}
 		if (local23 == 49) {
 			Static233.method4003(local31, local19, local15);
@@ -594,7 +594,7 @@ public final class Static103 {
 			Static185.anInt4370 = local15;
 			Static260.anInt5014 = 1;
 			Static274.anInt4997 = local36;
-			Static43.method1143(local693);
+			Static43.redraw(local693);
 			Static34.aClass100_203 = Static34.concatenate(new JagString[] { Static8.aClass100_32, Static71.method1439(local36).aClass100_495, Static204.aClass100_896 });
 			if (Static34.aClass100_203 == null) {
 				Static34.aClass100_203 = Static92.aClass100_510;
@@ -717,21 +717,21 @@ public final class Static103 {
 		}
 		if (Static260.anInt5014 != 0) {
 			Static260.anInt5014 = 0;
-			Static43.method1143(Static5.getComponent(Static224.anInt5062));
+			Static43.redraw(Static5.getComponent(Static224.anInt5062));
 		}
 		if (Static241.aBoolean302) {
 			Static53.method1294();
 		}
 		if (Static257.aClass13_7 != null && Static72.anInt2043 == 0) {
-			Static43.method1143(Static257.aClass13_7);
+			Static43.redraw(Static257.aClass13_7);
 		}
 	}
 
 	@OriginalMember(owner = "client!i", name = "b", descriptor = "(IIIII)I")
 	public static int method2235(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		if (Static222.aBoolean246) {
+		if (Static222.instantScreenFade) {
 			arg0 = 1000000;
-			Static222.aBoolean246 = false;
+			Static222.instantScreenFade = false;
 		}
 		@Pc(15) Environment local15 = Static192.aClass92ArrayArray1[arg3][arg1];
 		@Pc(25) float local25 = ((float) arg2 * 0.1F + 0.7F) * local15.aFloat16;
@@ -739,7 +739,7 @@ public final class Static103 {
 		@Pc(31) int local31 = local15.anInt3526;
 		@Pc(34) int local34 = local15.anInt3529;
 		@Pc(37) int local37 = local15.anInt3525;
-		if (!Static71.aBoolean107) {
+		if (!Static71.fogEnabled) {
 			local34 = 0;
 		}
 		@Pc(44) float local44 = local15.aFloat17;
@@ -790,7 +790,7 @@ public final class Static103 {
 	public static void method2239() {
 		Static27.aClass99_4.method3103();
 		Static244.aClass99_32.method3103();
-		Static118.aClass99_16.method3103();
+		Static118.objectSpriteCache.method3103();
 	}
 
 	@OriginalMember(owner = "client!i", name = "i", descriptor = "(Z)V")
@@ -808,10 +808,10 @@ public final class Static103 {
 					}
 				}
 				if (!local21) {
-					local27 = (int) local6.aLong192;
+					local27 = (int) local6.uid;
 					@Pc(60) Component local60 = Static5.getComponent(local27);
 					if (local60 != null) {
-						Static43.method1143(local60);
+						Static43.redraw(local60);
 					}
 				}
 			}

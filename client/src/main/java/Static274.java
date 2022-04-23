@@ -16,7 +16,7 @@ public final class Static274 {
 	public static Js5 js5Archive2;
 
 	@OriginalMember(owner = "client!wf", name = "j", descriptor = "Lclient!be;")
-	public static Component aClass13_24;
+	public static Component staticActiveComponent1;
 
 	@OriginalMember(owner = "client!wf", name = "o", descriptor = "[Lclient!gb;")
 	public static final RawModel[] aClass8_Sub5Array5 = new RawModel[4];

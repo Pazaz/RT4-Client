@@ -47,7 +47,7 @@ public final class Static196 {
 			Static123.topBannerRefresh();
 		}
 		if (arg0 == 5) {
-			Static181.method3344(Static209.js5Archive8);
+			Static181.load(Static209.js5Archive8);
 		} else {
 			Static119.method2381();
 		}
@@ -55,7 +55,7 @@ public final class Static196 {
 		if (local106 != local37) {
 			if (local37) {
 				Static221.anInt4363 = Static250.titleSong;
-				if (Static12.anInt391 == 0) {
+				if (Static12.musicVolume == 0) {
 					Static29.method801();
 				} else {
 					Static257.method526(Static250.titleSong, Static130.js5Archive6, 255);

@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public class Node {
 
 	@OriginalMember(owner = "client!ab", name = "a", descriptor = "J")
-	public long aLong192;
+	public long uid;
 
 	@OriginalMember(owner = "client!ab", name = "d", descriptor = "Lclient!ab;")
 	public Node aClass3_222;

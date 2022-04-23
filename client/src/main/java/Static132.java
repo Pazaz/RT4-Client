@@ -18,7 +18,7 @@ public final class Static132 {
 
 	@OriginalMember(owner = "client!ke", name = "a", descriptor = "(ZLclient!wk;Z)V")
 	public static void method2605(@OriginalArg(0) boolean arg0, @OriginalArg(1) Class3_Sub31 arg1) {
-		@Pc(9) int local9 = (int) arg1.aLong192;
+		@Pc(9) int local9 = (int) arg1.uid;
 		@Pc(16) int local16 = arg1.anInt5878;
 		arg1.method4658();
 		if (arg0) {
@@ -27,7 +27,7 @@ public final class Static132 {
 		Static273.method3214(local16);
 		@Pc(32) Component local32 = Static5.getComponent(local9);
 		if (local32 != null) {
-			Static43.method1143(local32);
+			Static43.redraw(local32);
 		}
 		@Pc(41) int local41 = Static231.anInt5204;
 		@Pc(43) int local43;
@@ -160,7 +160,7 @@ public final class Static132 {
 					if (arg0.anInt4865 != 12345678) {
 						Rasteriser.fillGouraudTriangle(local315, local331, local299, local307, local323, local291, arg0.anInt4865, arg0.anInt4864, arg0.anInt4867);
 					}
-				} else if (!Static159.aBoolean189) {
+				} else if (!Static159.manyGroundTextures) {
 					local475 = Rasteriser.textureProvider.getAverageColor(arg0.anInt4869);
 					Rasteriser.fillGouraudTriangle(local315, local331, local299, local307, local323, local291, Static216.method1640(local475, arg0.anInt4865), Static216.method1640(local475, arg0.anInt4864), Static216.method1640(local475, arg0.anInt4867));
 				} else if (arg0.aBoolean241) {
@@ -188,7 +188,7 @@ public final class Static132 {
 			if (arg0.anInt4872 != 12345678) {
 				Rasteriser.fillGouraudTriangle(local283, local299, local331, local275, local291, local323, arg0.anInt4872, arg0.anInt4867, arg0.anInt4864);
 			}
-		} else if (Static159.aBoolean189) {
+		} else if (Static159.manyGroundTextures) {
 			Rasteriser.fillTexturedTriangle(local283, local299, local331, local275, local291, local323, arg0.anInt4872, arg0.anInt4867, arg0.anInt4864, local97, local21, local241, local119, local49, local85, local117, local165, local261, arg0.anInt4869);
 		} else {
 			local475 = Rasteriser.textureProvider.getAverageColor(arg0.anInt4869);

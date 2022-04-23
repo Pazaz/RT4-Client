@@ -52,7 +52,7 @@ public final class Component {
 	public int[] anIntArray35;
 
 	@OriginalMember(owner = "client!be", name = "I", descriptor = "I")
-	public int anInt452;
+	public int type;
 
 	@OriginalMember(owner = "client!be", name = "V", descriptor = "[I")
 	public int[] anIntArray36;
@@ -181,7 +181,7 @@ public final class Component {
 	public boolean aBoolean23 = false;
 
 	@OriginalMember(owner = "client!be", name = "f", descriptor = "I")
-	public int anInt442 = 1;
+	public int aspectHeight = 1;
 
 	@OriginalMember(owner = "client!be", name = "R", descriptor = "I")
 	public int anInt459 = 0;
@@ -241,7 +241,7 @@ public final class Component {
 	public int anInt484 = -1;
 
 	@OriginalMember(owner = "client!be", name = "O", descriptor = "I")
-	public int componentId = -1;
+	public int createdComponentId = -1;
 
 	@OriginalMember(owner = "client!be", name = "J", descriptor = "Z")
 	public boolean aBoolean24 = false;
@@ -265,7 +265,7 @@ public final class Component {
 	public int anInt499 = -1;
 
 	@OriginalMember(owner = "client!be", name = "Qb", descriptor = "B")
-	public byte aByte3 = 0;
+	public byte dynamicHeightValue = 0;
 
 	@OriginalMember(owner = "client!be", name = "bc", descriptor = "I")
 	public int anInt491 = 0;
@@ -304,7 +304,7 @@ public final class Component {
 	public int anInt489 = 0;
 
 	@OriginalMember(owner = "client!be", name = "sb", descriptor = "Z")
-	public boolean aBoolean29 = false;
+	public boolean noClickThrough = false;
 
 	@OriginalMember(owner = "client!be", name = "U", descriptor = "I")
 	private int anInt461 = -1;
@@ -313,7 +313,7 @@ public final class Component {
 	public int layer = -1;
 
 	@OriginalMember(owner = "client!be", name = "pb", descriptor = "I")
-	public int anInt473 = 1;
+	public int aspectWidth = 1;
 
 	@OriginalMember(owner = "client!be", name = "Q", descriptor = "I")
 	public int objId = -1;
@@ -376,10 +376,10 @@ public final class Component {
 	public int anInt516 = 0;
 
 	@OriginalMember(owner = "client!be", name = "Tb", descriptor = "I")
-	public int anInt488 = 0;
+	public int baseHeight = 0;
 
 	@OriginalMember(owner = "client!be", name = "Fc", descriptor = "I")
-	public int anInt507 = -1;
+	public int id = -1;
 
 	@OriginalMember(owner = "client!be", name = "Yc", descriptor = "I")
 	public int anInt519 = -1;
@@ -439,7 +439,7 @@ public final class Component {
 	public boolean aBoolean34 = false;
 
 	@OriginalMember(owner = "client!be", name = "hd", descriptor = "B")
-	public byte aByte5 = 0;
+	public byte dynamicWidthValue = 0;
 
 	@OriginalMember(owner = "client!be", name = "Wc", descriptor = "I")
 	private int anInt518 = 1;
@@ -509,16 +509,16 @@ public final class Component {
 		this.anIntArray45 = new int[local18.anInt4278];
 		for (@Pc(37) int local37 = 0; local37 < local18.anInt4278; local37++) {
 			@Pc(47) int local47 = 0;
-			@Pc(50) int local50 = local18.anInt4270;
+			@Pc(50) int local50 = local18.width;
 			@Pc(52) int local52;
-			for (local52 = 0; local52 < local18.anInt4270; local52++) {
-				if (local18.aByteArray18[local18.anInt4270 * local37 + local52] != 0) {
+			for (local52 = 0; local52 < local18.width; local52++) {
+				if (local18.aByteArray18[local18.width * local37 + local52] != 0) {
 					local47 = local52;
 					break;
 				}
 			}
-			for (local52 = local47; local52 < local18.anInt4270; local52++) {
-				if (local18.aByteArray18[local37 * local18.anInt4270 + local52] == 0) {
+			for (local52 = local47; local52 < local18.width; local52++) {
+				if (local18.aByteArray18[local37 * local18.width + local52] == 0) {
 					local50 = local52;
 					break;
 				}
@@ -546,15 +546,15 @@ public final class Component {
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(ILclient!wa;)V")
 	public final void method481(@OriginalArg(1) Buffer arg0) {
 		this.aBoolean32 = false;
-		this.anInt452 = arg0.g1();
+		this.type = arg0.g1();
 		this.anInt530 = arg0.g1();
 		this.anInt453 = arg0.g2();
 		this.baseX = arg0.g2s();
 		this.baseY = arg0.g2s();
 		this.baseWidth = arg0.g2();
-		this.anInt488 = arg0.g2();
-		this.aByte5 = 0;
-		this.aByte3 = 0;
+		this.baseHeight = arg0.g2();
+		this.dynamicWidthValue = 0;
+		this.dynamicHeightValue = 0;
 		this.yMode = 0;
 		this.xMode = 0;
 		this.anInt476 = arg0.g1();
@@ -562,7 +562,7 @@ public final class Component {
 		if (this.layer == 65535) {
 			this.layer = -1;
 		} else {
-			this.layer += this.anInt507 & 0xFFFF0000;
+			this.layer += this.id & 0xFFFF0000;
 		}
 		this.anInt470 = arg0.g2();
 		if (this.anInt470 == 65535) {
@@ -595,20 +595,20 @@ public final class Component {
 				}
 			}
 		}
-		if (this.anInt452 == 0) {
+		if (this.type == 0) {
 			this.anInt491 = arg0.g2();
 			this.hidden = arg0.g1() == 1;
 		}
-		if (this.anInt452 == 1) {
+		if (this.type == 1) {
 			arg0.g2();
 			arg0.g1();
 		}
 		local164 = 0;
-		if (this.anInt452 == 2) {
-			this.aByte3 = 3;
-			this.objCounts = new int[this.baseWidth * this.anInt488];
-			this.objTypes = new int[this.anInt488 * this.baseWidth];
-			this.aByte5 = 3;
+		if (this.type == 2) {
+			this.dynamicHeightValue = 3;
+			this.objCounts = new int[this.baseWidth * this.baseHeight];
+			this.objTypes = new int[this.baseHeight * this.baseWidth];
+			this.dynamicWidthValue = 3;
 			local175 = arg0.g1();
 			local183 = arg0.g1();
 			if (local175 == 1) {
@@ -650,10 +650,10 @@ public final class Component {
 				}
 			}
 		}
-		if (this.anInt452 == 3) {
+		if (this.type == 3) {
 			this.aBoolean30 = arg0.g1() == 1;
 		}
-		if (this.anInt452 == 4 || this.anInt452 == 1) {
+		if (this.type == 4 || this.type == 1) {
 			this.anInt460 = arg0.g1();
 			this.anInt478 = arg0.g1();
 			this.anInt467 = arg0.g1();
@@ -663,23 +663,23 @@ public final class Component {
 			}
 			this.aBoolean28 = arg0.g1() == 1;
 		}
-		if (this.anInt452 == 4) {
+		if (this.type == 4) {
 			this.aClass100_84 = arg0.gjstr();
 			this.aClass100_82 = arg0.gjstr();
 		}
-		if (this.anInt452 == 1 || this.anInt452 == 3 || this.anInt452 == 4) {
+		if (this.type == 1 || this.type == 3 || this.type == 4) {
 			this.anInt474 = arg0.g4();
 		}
-		if (this.anInt452 == 3 || this.anInt452 == 4) {
+		if (this.type == 3 || this.type == 4) {
 			this.anInt492 = arg0.g4();
 			this.anInt480 = arg0.g4();
 			this.anInt475 = arg0.g4();
 		}
-		if (this.anInt452 == 5) {
+		if (this.type == 5) {
 			this.anInt477 = arg0.g4();
 			this.anInt519 = arg0.g4();
 		}
-		if (this.anInt452 == 6) {
+		if (this.type == 6) {
 			this.modelType = 1;
 			this.modelId = arg0.g2();
 			this.anInt518 = 1;
@@ -702,11 +702,11 @@ public final class Component {
 			this.modelXAngle = arg0.g2();
 			this.modelYAngle = arg0.g2();
 		}
-		if (this.anInt452 == 7) {
-			this.aByte3 = 3;
-			this.aByte5 = 3;
-			this.objCounts = new int[this.anInt488 * this.baseWidth];
-			this.objTypes = new int[this.baseWidth * this.anInt488];
+		if (this.type == 7) {
+			this.dynamicHeightValue = 3;
+			this.dynamicWidthValue = 3;
+			this.objCounts = new int[this.baseHeight * this.baseWidth];
+			this.objTypes = new int[this.baseWidth * this.baseHeight];
 			this.anInt460 = arg0.g1();
 			this.anInt502 = arg0.g2();
 			if (this.anInt502 == 65535) {
@@ -729,10 +729,10 @@ public final class Component {
 				}
 			}
 		}
-		if (this.anInt452 == 8) {
+		if (this.type == 8) {
 			this.aClass100_84 = arg0.gjstr();
 		}
-		if (this.anInt530 == 2 || this.anInt452 == 2) {
+		if (this.anInt530 == 2 || this.type == 2) {
 			this.aClass100_86 = arg0.gjstr();
 			this.aClass100_85 = arg0.gjstr();
 			local175 = arg0.g2() & 0x3F;
@@ -977,34 +977,34 @@ public final class Component {
 	public final void method490(@OriginalArg(1) Buffer arg0) {
 		this.aBoolean32 = true;
 		arg0.offset++;
-		this.anInt452 = arg0.g1();
-		if ((this.anInt452 & 0x80) != 0) {
-			this.anInt452 &= 0x7F;
+		this.type = arg0.g1();
+		if ((this.type & 0x80) != 0) {
+			this.type &= 0x7F;
 			arg0.gjstr();
 		}
 		this.anInt453 = arg0.g2();
 		this.baseX = arg0.g2s();
 		this.baseY = arg0.g2s();
 		this.baseWidth = arg0.g2();
-		this.anInt488 = arg0.g2();
-		this.aByte5 = arg0.g1s();
-		this.aByte3 = arg0.g1s();
+		this.baseHeight = arg0.g2();
+		this.dynamicWidthValue = arg0.g1s();
+		this.dynamicHeightValue = arg0.g1s();
 		this.yMode = arg0.g1s();
 		this.xMode = arg0.g1s();
 		this.layer = arg0.g2();
 		if (this.layer == 65535) {
 			this.layer = -1;
 		} else {
-			this.layer = (this.anInt507 & 0xFFFF0000) + this.layer;
+			this.layer = (this.id & 0xFFFF0000) + this.layer;
 		}
 		this.hidden = arg0.g1() == 1;
-		if (this.anInt452 == 0) {
+		if (this.type == 0) {
 			this.anInt486 = arg0.g2();
 			this.anInt491 = arg0.g2();
-			this.aBoolean29 = arg0.g1() == 1;
+			this.noClickThrough = arg0.g1() == 1;
 		}
 		@Pc(175) int local175;
-		if (this.anInt452 == 5) {
+		if (this.type == 5) {
 			this.anInt477 = arg0.g4();
 			this.anInt521 = arg0.g2();
 			local175 = arg0.g1();
@@ -1016,7 +1016,7 @@ public final class Component {
 			this.aBoolean21 = arg0.g1() == 1;
 			this.aBoolean26 = arg0.g1() == 1;
 		}
-		if (this.anInt452 == 6) {
+		if (this.type == 6) {
 			this.modelType = 1;
 			this.modelId = arg0.g2();
 			if (this.modelId == 65535) {
@@ -1036,14 +1036,14 @@ public final class Component {
 			this.aShort11 = (short) arg0.g2();
 			this.aShort10 = (short) arg0.g2();
 			this.aBoolean34 = arg0.g1() == 1;
-			if (this.aByte5 != 0) {
+			if (this.dynamicWidthValue != 0) {
 				this.anInt451 = arg0.g2();
 			}
-			if (this.aByte3 != 0) {
+			if (this.dynamicHeightValue != 0) {
 				this.anInt526 = arg0.g2();
 			}
 		}
-		if (this.anInt452 == 4) {
+		if (this.type == 4) {
 			this.anInt502 = arg0.g2();
 			if (this.anInt502 == 65535) {
 				this.anInt502 = -1;
@@ -1055,12 +1055,12 @@ public final class Component {
 			this.aBoolean28 = arg0.g1() == 1;
 			this.anInt474 = arg0.g4();
 		}
-		if (this.anInt452 == 3) {
+		if (this.type == 3) {
 			this.anInt474 = arg0.g4();
 			this.aBoolean30 = arg0.g1() == 1;
 			this.anInt476 = arg0.g1();
 		}
-		if (this.anInt452 == 9) {
+		if (this.type == 9) {
 			this.anInt490 = arg0.g1();
 			this.anInt474 = arg0.g4();
 			this.aBoolean20 = arg0.g1() == 1;

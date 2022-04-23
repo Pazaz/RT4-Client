@@ -64,7 +64,7 @@ public final class Static141 {
 		Static165.aClass3_Sub2_Sub1_8 = null;
 		Static181.aClass3_Sub2_Sub1_9 = null;
 		if (Static244.gameState == 5) {
-			Static181.method3344(Static209.js5Archive8);
+			Static181.load(Static209.js5Archive8);
 		}
 		if (Static244.gameState == 10) {
 			Static73.method1596(false);

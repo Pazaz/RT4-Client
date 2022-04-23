@@ -32,11 +32,11 @@ public final class Class2 {
 		if (local17 != null) {
 			return local17;
 		}
-		Static250.aClass153_101.method4506(this.anInt12);
+		Static250.aClass153_101.isFileReady(this.anInt12);
 		local17 = Static164.method3119(this.anInt12, Static250.aClass153_101);
 		if (local17 != null) {
 			local17.method1389(Static173.anInt4183, Static85.anInt2262, Static266.anInt5344);
-			local17.anInt4279 = local17.anInt4270;
+			local17.anInt4279 = local17.width;
 			local17.anInt4276 = local17.anInt4278;
 			for (@Pc(59) int local59 = 0; local59 < arg0; local59++) {
 				local17.method1395();

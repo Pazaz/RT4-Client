@@ -109,7 +109,7 @@ public final class Static31 {
 					return;
 				}
 				local126 = Static124.socket.read() << 8 | Static124.socket.read();
-				Static176.method3303(local126);
+				Static176.hopWorld(local126);
 				if (Static125.worldId == -1) {
 					Static219.anInt4937 = 0;
 					Static266.returnCode = 6;

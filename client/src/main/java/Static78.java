@@ -11,7 +11,7 @@ public final class Static78 {
 	public static Js5 aClass153_32;
 
 	@OriginalMember(owner = "client!gd", name = "n", descriptor = "Lclient!qf;")
-	public static Sprite aClass3_Sub2_Sub1_3;
+	public static Sprite titleBg;
 
 	@OriginalMember(owner = "client!gd", name = "b", descriptor = "Lclient!na;")
 	public static final JagString aClass100_464 = Static28.parse("null");
@@ -60,7 +60,7 @@ public final class Static78 {
 
 	@OriginalMember(owner = "client!gd", name = "b", descriptor = "(I)V")
 	public static void method1695() {
-		Static220.aClass99_28.method3104();
+		Static220.aClass99_28.clear();
 	}
 
 	@OriginalMember(owner = "client!gd", name = "c", descriptor = "(I)V")

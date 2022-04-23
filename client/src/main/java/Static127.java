@@ -18,7 +18,7 @@ public final class Static127 {
 	public static int anInt3125 = 0;
 
 	@OriginalMember(owner = "client!k", name = "m", descriptor = "Z")
-	public static boolean aBoolean160 = false;
+	public static boolean neverRemoveRoofs = false;
 
 	@OriginalMember(owner = "client!k", name = "t", descriptor = "I")
 	public static int anInt3132 = 0;
@@ -153,7 +153,7 @@ public final class Static127 {
 			Static115.anInt2939 -= local86;
 		}
 		if (GlRenderer.enabled && arg4 && (Math.abs(local86) > 104 || Math.abs(local81) > 104)) {
-			Static86.method1799();
+			Static86.setInstantFade();
 		}
 		Static107.anInt2875 = -1;
 		Static99.aClass69_64.method2278();
@@ -325,9 +325,9 @@ public final class Static127 {
 				}
 			}
 			if (arg0.method3138(Static241.aClass100_1088)) {
-				Static76.method1645(arg0.method3136(15).parseInt());
-				Static203.write(GameShell.signLink);
-				Static18.sentToServer = false;
+				Static76.setParticles(arg0.method3136(15).parseInt());
+				Static203.savePreferences(GameShell.signLink);
+				Static18.serverUpdatedPreferences = false;
 			}
 			if (arg0.method3138(Static170.aClass100_623) && Static83.modeWhere != 0) {
 				Static115.method2312(arg0.method3136(6).parseInt());

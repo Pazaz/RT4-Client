@@ -79,7 +79,7 @@ public final class SoftLruHashTable {
 				}
 			} else if (++local9.aLong185 > (long) arg0) {
 				@Pc(33) ReferenceNode local33 = Static252.aClass22_1.method1027(local9);
-				this.aClass133_18.method3862(local33, local9.aLong192);
+				this.aClass133_18.method3862(local33, local9.uid);
 				Static84.method1772(local9, local33);
 				local9.method4658();
 				local9.method4365();
@@ -99,7 +99,7 @@ public final class SoftLruHashTable {
 	}
 
 	@OriginalMember(owner = "client!n", name = "c", descriptor = "(I)V")
-	public final void method3104() {
+	public final void clear() {
 		this.aClass16_8.method802();
 		this.aClass133_18.method3856();
 		this.anInt3966 = this.anInt3970;
@@ -120,7 +120,7 @@ public final class SoftLruHashTable {
 		}
 		if (local12.method3619()) {
 			@Pc(53) HardReferenceNode local53 = new HardReferenceNode(local27);
-			this.aClass133_18.method3862(local53, local12.aLong192);
+			this.aClass133_18.method3862(local53, local12.uid);
 			this.aClass16_8.method798(local53);
 			local53.aLong185 = 0L;
 			local12.method4658();

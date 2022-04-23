@@ -39,7 +39,7 @@ public final class Static109 {
 		@Pc(27) boolean local27 = true;
 		for (@Pc(29) int local29 = 0; local29 < Static241.components[arg0].length; local29++) {
 			if (Static241.components[arg0][local29] != null) {
-				if (Static241.components[arg0][local29].anInt452 == 2) {
+				if (Static241.components[arg0][local29].type == 2) {
 					local27 = false;
 				} else {
 					Static241.components[arg0][local29] = null;

@@ -105,7 +105,7 @@ public final class Static152 {
 			if (arg3) {
 				Static26.method744(local73, local40, 0);
 			}
-		} else if (Static30.anInt978 != 0) {
+		} else if (Static30.ambientSoundsVolume != 0) {
 			Static200.anIntArray421[Static189.anInt4451] = local40;
 			Static276.anIntArray563[Static189.anInt4451] = local73;
 			@Pc(111) int local111 = (arg0 - 64) / 128;

@@ -13,7 +13,7 @@ public final class Static12 {
 	public static final JagString aClass100_73 = Static28.parse("runes");
 
 	@OriginalMember(owner = "client!bb", name = "n", descriptor = "I")
-	public static int anInt391 = 255;
+	public static int musicVolume = 255;
 
 	@OriginalMember(owner = "client!bb", name = "t", descriptor = "[[B")
 	public static final byte[][] aByteArrayArray2 = new byte[250][];

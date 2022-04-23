@@ -481,7 +481,7 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "f", descriptor = "(II)Z")
-	public final boolean method4506(@OriginalArg(1) int arg0) {
+	public final boolean isFileReady(@OriginalArg(1) int arg0) {
 		if (!this.method4484()) {
 			return false;
 		} else if (this.aClass70_2.anIntArray270.length == 1) {

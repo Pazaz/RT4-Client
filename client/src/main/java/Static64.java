@@ -17,7 +17,7 @@ public final class Static64 {
 	public static final JagString[] aClass100Array62 = new JagString[100];
 
 	@OriginalMember(owner = "client!fb", name = "m", descriptor = "Z")
-	public static boolean aBoolean111 = true;
+	public static boolean cursorsEnabled = true;
 
 	@OriginalMember(owner = "client!fb", name = "p", descriptor = "Lclient!na;")
 	public static final JagString aClass100_433 = Static28.parse("<col=ff3000>");
@@ -76,7 +76,7 @@ public final class Static64 {
 				return;
 			}
 		}
-		if (local35.method3108(Static173.self.aClass100_364)) {
+		if (local35.strEquals(Static173.self.aClass100_364)) {
 			Static103.method2231(Static186.EMPTY_FILE, 0, LocalizedText.FRIENDCANTADDSELF);
 			return;
 		}

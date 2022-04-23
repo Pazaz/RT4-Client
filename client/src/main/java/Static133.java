@@ -45,7 +45,7 @@ public final class Static133 {
 	@OriginalMember(owner = "client!kf", name = "a", descriptor = "(Lclient!na;I)V")
 	public static void method4011(@OriginalArg(0) JagString arg0) {
 		for (@Pc(15) Map local15 = (Map) Static228.aClass69_120.method2289(); local15 != null; local15 = (Map) Static228.aClass69_120.method2288()) {
-			if (local15.aClass100_138.method3108(arg0)) {
+			if (local15.aClass100_138.strEquals(arg0)) {
 				Static269.aClass3_Sub2_Sub4_2 = local15;
 				return;
 			}

@@ -5,28 +5,28 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class HookRequest extends Node {
 
 	@OriginalMember(owner = "client!jl", name = "q", descriptor = "Lclient!be;")
-	public Component aClass13_16;
+	public Component target;
 
 	@OriginalMember(owner = "client!jl", name = "r", descriptor = "Lclient!na;")
-	public JagString aClass100_598;
+	public JagString opBase;
 
 	@OriginalMember(owner = "client!jl", name = "w", descriptor = "I")
-	public int anInt3097;
+	public int mouseY;
 
 	@OriginalMember(owner = "client!jl", name = "z", descriptor = "I")
-	public int anInt3099;
+	public int keyChar;
 
 	@OriginalMember(owner = "client!jl", name = "A", descriptor = "I")
-	public int anInt3100;
+	public int keyCode;
 
 	@OriginalMember(owner = "client!jl", name = "B", descriptor = "I")
-	public int anInt3101;
+	public int op;
 
 	@OriginalMember(owner = "client!jl", name = "C", descriptor = "Z")
 	public boolean aBoolean158;
 
 	@OriginalMember(owner = "client!jl", name = "D", descriptor = "I")
-	public int anInt3102;
+	public int mouseX;
 
 	@OriginalMember(owner = "client!jl", name = "E", descriptor = "[Ljava/lang/Object;")
 	public Object[] arguments;

@@ -11,11 +11,11 @@ public final class Static11 {
 	public static int anInt384 = 0;
 
 	@OriginalMember(owner = "client!ba", name = "x", descriptor = "Z")
-	public static boolean aBoolean15 = true;
+	public static boolean flickeringEffectsOn = true;
 
 	@OriginalMember(owner = "client!ba", name = "e", descriptor = "(I)V")
 	public static void method443() {
-		Static262.aClass99_35.method3104();
+		Static262.aClass99_35.clear();
 	}
 
 	@OriginalMember(owner = "client!ba", name = "a", descriptor = "(IB)I")

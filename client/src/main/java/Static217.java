@@ -93,7 +93,7 @@ public final class Static217 {
 		Static276.method4612();
 		Static54.method1308();
 		Static233.method3999();
-		Static90.method1854();
+		Static90.clearLocCache();
 		Static204.method3673();
 		Static176.method3302();
 		Static10.method350();
@@ -114,7 +114,7 @@ public final class Static217 {
 		}
 		Static181.method3347();
 		Static90.method1857();
-		Static139.aClass99_22.method3104();
+		Static139.aClass99_22.clear();
 		if (!GlRenderer.enabled) {
 			((Js5GlTextureProvider) Rasteriser.textureProvider).method3247();
 		}
@@ -130,7 +130,7 @@ public final class Static217 {
 		Static184.js5Archive10.method4499();
 		Static214.js5Archive11.method4499();
 		Static16.js5Archive12.method4499();
-		Static73.aClass99_10.method3104();
+		Static73.aClass99_10.clear();
 	}
 
 	@OriginalMember(owner = "client!rj", name = "a", descriptor = "([Lclient!mj;I[BIIIIZIIB)V")

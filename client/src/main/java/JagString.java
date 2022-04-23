@@ -27,7 +27,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(BLclient!na;)Z")
-	public final boolean method3108(@OriginalArg(1) JagString arg0) {
+	public final boolean strEquals(@OriginalArg(1) JagString arg0) {
 		if (arg0 == null) {
 			return false;
 		} else if (arg0 == this) {
@@ -361,7 +361,7 @@ public final class JagString implements StringInterface {
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(Lclient!na;I)I")
 	public final int indexOf(@OriginalArg(0) JagString arg0) {
-		return this.method3146(arg0, 0);
+		return this.indexOf(arg0, 0);
 	}
 
 	@OriginalMember(owner = "client!na", name = "b", descriptor = "(B)I")
@@ -404,7 +404,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(III)I")
-	public final int method3135(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+	public final int indexOf(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		@Pc(4) byte local4 = (byte) arg0;
 		for (@Pc(15) int local15 = arg1; local15 < this.length; local15++) {
 			if (this.chars[local15] == local4) {
@@ -447,7 +447,7 @@ public final class JagString implements StringInterface {
 		if (!(arg0 instanceof JagString)) {
 			throw new IllegalArgumentException();
 		}
-		return this.method3108((JagString) arg0);
+		return this.strEquals((JagString) arg0);
 	}
 
 	@OriginalMember(owner = "client!na", name = "c", descriptor = "(Lclient!na;I)I")
@@ -481,20 +481,20 @@ public final class JagString implements StringInterface {
 		@Pc(14) int local14 = arg0.length - arg1.length;
 		@Pc(16) int local16 = 0;
 		while (true) {
-			@Pc(22) int local22 = this.method3146(arg1, local16);
+			@Pc(22) int local22 = this.indexOf(arg1, local16);
 			if (local22 < 0) {
 				local16 = 0;
-				@Pc(45) JagString local45 = Static87.method1804(local8);
+				@Pc(45) JagString local45 = Static87.allocate(local8);
 				while (true) {
-					@Pc(51) int local51 = this.method3146(arg1, local16);
+					@Pc(51) int local51 = this.indexOf(arg1, local16);
 					if (local51 < 0) {
 						while (local16 < this.length) {
-							local45.method3152(this.chars[local16++] & 0xFF);
+							local45.append(this.chars[local16++] & 0xFF);
 						}
 						return local45;
 					}
 					while (local16 < local51) {
-						local45.method3152(this.chars[local16++] & 0xFF);
+						local45.append(this.chars[local16++] & 0xFF);
 					}
 					local45.method3113(arg0);
 					local16 += arg1.length;
@@ -615,7 +615,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(Lclient!na;II)I")
-	public final int method3146(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1) {
+	public final int indexOf(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1) {
 		@Pc(8) int local8 = arg0.length;
 		if (arg1 >= this.length) {
 			return local8 == 0 ? this.length : -1;
@@ -688,7 +688,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "c", descriptor = "(IB)I")
-	public final int method3149(@OriginalArg(0) int arg0) {
+	public final int charAt(@OriginalArg(0) int arg0) {
 		return this.chars[arg0] & 0xFF;
 	}
 
@@ -702,7 +702,7 @@ public final class JagString implements StringInterface {
 				Static148.aClass133_13 = new HashTable(4096);
 			} else {
 				for (local30 = (StringNode) Static148.aClass133_13.method3863(local9); local30 != null; local30 = (StringNode) Static148.aClass133_13.method3867()) {
-					if (this.method3108(local30.aClass100_980)) {
+					if (this.strEquals(local30.aClass100_980)) {
 						return local30.aClass100_980;
 					}
 				}
@@ -716,7 +716,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "d", descriptor = "(IB)Lclient!na;")
-	public final JagString method3152(@OriginalArg(0) int arg0) {
+	public final JagString append(@OriginalArg(0) int arg0) {
 		if (arg0 <= 0 || arg0 > 255) {
 			throw new IllegalArgumentException("invalid char:" + arg0);
 		} else if (this.aBoolean193) {

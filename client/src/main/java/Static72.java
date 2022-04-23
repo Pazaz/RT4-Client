@@ -26,7 +26,7 @@ public final class Static72 {
 	public static int anInt2043 = 0;
 
 	@OriginalMember(owner = "client!fl", name = "Q", descriptor = "Lclient!na;")
-	public static final JagString aClass100_447 = Static28.parse("");
+	public static final JagString EMPTY_STRING = Static28.parse("");
 
 	@OriginalMember(owner = "client!fl", name = "V", descriptor = "Lclient!na;")
 	public static final JagString aClass100_448 = Static28.parse("(Y");

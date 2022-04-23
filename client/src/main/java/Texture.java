@@ -251,7 +251,7 @@ public final class Texture {
 			}
 		} else {
 			for (local10 = 0; local10 < this.anIntArray327.length; local10++) {
-				if (!arg1.method4506(this.anIntArray327[local10])) {
+				if (!arg1.isFileReady(this.anIntArray327[local10])) {
 					return false;
 				}
 			}

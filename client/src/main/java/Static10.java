@@ -91,14 +91,14 @@ public final class Static10 {
 
 	@OriginalMember(owner = "client!an", name = "a", descriptor = "(Z)V")
 	public static void method350() {
-		Static142.aClass99_23.method3104();
-		Static267.aClass99_37.method3104();
+		Static142.aClass99_23.clear();
+		Static267.aClass99_37.clear();
 	}
 
 	@OriginalMember(owner = "client!an", name = "i", descriptor = "(I)V")
 	public static void method351() {
-		Static79.aClass99_11.method3104();
-		Static7.aClass99_5.method3104();
+		Static79.aClass99_11.clear();
+		Static7.aClass99_5.clear();
 	}
 
 	@OriginalMember(owner = "client!an", name = "a", descriptor = "(IIIIIII)V")

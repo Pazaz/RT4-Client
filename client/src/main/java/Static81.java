@@ -29,7 +29,7 @@ public final class Static81 {
 
 	@OriginalMember(owner = "client!gg", name = "c", descriptor = "(II)V")
 	public static void method1750(@OriginalArg(0) int arg0) {
-		if (!Static64.aBoolean111) {
+		if (!Static64.cursorsEnabled) {
 			arg0 = -1;
 		}
 		if (arg0 == Static115.anInt2941) {
@@ -256,10 +256,10 @@ public final class Static81 {
 			Static6.outboundBuffer.p1isaac(22);
 			Static6.outboundBuffer.p1(0);
 		}
-		if (!Static18.sentToServer) {
+		if (!Static18.serverUpdatedPreferences) {
 			Static6.outboundBuffer.p1isaac(98);
 			Static6.outboundBuffer.p4(Static145.method2746());
-			Static18.sentToServer = true;
+			Static18.serverUpdatedPreferences = true;
 		}
 		Static31.method846();
 		if (Static244.gameState != 30) {
@@ -299,9 +299,9 @@ public final class Static81 {
 				@Pc(773) Component component;
 				if (samples == 3) {
 					component = Static5.getComponent(i);
-					if (!change.stringArg.method3108(component.aClass100_84)) {
+					if (!change.stringArg.strEquals(component.aClass100_84)) {
 						component.aClass100_84 = change.stringArg;
-						Static43.method1143(component);
+						Static43.redraw(component);
 					}
 				} else if (samples == 4) {
 					component = Static5.getComponent(i);
@@ -312,7 +312,7 @@ public final class Static81 {
 						component.modelId = modelId;
 						component.anInt498 = dx;
 						component.modelType = x;
-						Static43.method1143(component);
+						Static43.redraw(component);
 					}
 				} else if (samples == 5) {
 					component = Static5.getComponent(i);
@@ -321,7 +321,7 @@ public final class Static81 {
 						component.anInt500 = 0;
 						component.anInt522 = change.intArg1;
 						component.anInt510 = 0;
-						Static43.method1143(component);
+						Static43.redraw(component);
 					}
 				} else if (samples == 6) {
 					y = change.intArg1;
@@ -332,7 +332,7 @@ public final class Static81 {
 					dy = (dx << 3) + (modelId << 11) + (x << 19);
 					if (dy != local1189.anInt474) {
 						local1189.anInt474 = dy;
-						Static43.method1143(local1189);
+						Static43.redraw(local1189);
 					}
 				} else if (samples == 7) {
 					component = Static5.getComponent(i);
@@ -341,7 +341,7 @@ public final class Static81 {
 						@Pc(1145) boolean hidden = change.intArg1 == 1;
 						if (hidden != component.hidden) {
 							component.hidden = hidden;
-							Static43.method1143(component);
+							Static43.redraw(component);
 						}
 					}
 				} else if (samples == 8) {
@@ -357,14 +357,14 @@ public final class Static81 {
 								component.modelZoom = component.modelZoom * 32 / component.baseWidth;
 							}
 						}
-						Static43.method1143(component);
+						Static43.redraw(component);
 					}
 				} else if (samples == 9) {
 					component = Static5.getComponent(i);
 					if (change.intArg1 != component.objId || component.objCount != change.intArg3) {
 						component.objId = change.intArg1;
 						component.objCount = change.intArg3;
-						Static43.method1143(component);
+						Static43.redraw(component);
 					}
 				} else if (samples == 10) {
 					component = Static5.getComponent(i);
@@ -372,7 +372,7 @@ public final class Static81 {
 						component.modelZOffset = change.intArg3;
 						component.modelYOffset = change.intArg2;
 						component.modelXOffset = change.intArg1;
-						Static43.method1143(component);
+						Static43.redraw(component);
 					}
 				} else if (samples == 11) {
 					component = Static5.getComponent(i);
@@ -380,11 +380,11 @@ public final class Static81 {
 					component.yMode = 0;
 					component.xMode = 0;
 					component.y = component.baseY = change.intArg3;
-					Static43.method1143(component);
+					Static43.redraw(component);
 				} else if (samples == 12) {
 					component = Static5.getComponent(i);
 					x = change.intArg1;
-					if (component != null && component.anInt452 == 0) {
+					if (component != null && component.type == 0) {
 						if (x > component.anInt491 - component.anInt459) {
 							x = component.anInt491 - component.anInt459;
 						}
@@ -393,7 +393,7 @@ public final class Static81 {
 						}
 						if (x != component.scrollY) {
 							component.scrollY = x;
-							Static43.method1143(component);
+							Static43.redraw(component);
 						}
 					}
 				} else if (samples == 13) {
@@ -413,13 +413,13 @@ public final class Static81 {
 		if (Static257.aClass13_7 != null) {
 			Static72.anInt2043++;
 			if (Static72.anInt2043 >= 15) {
-				Static43.method1143(Static257.aClass13_7);
+				Static43.redraw(Static257.aClass13_7);
 				Static257.aClass13_7 = null;
 			}
 		}
 		@Pc(1361) Component local1361;
 		if (Static118.aClass13_15 != null) {
-			Static43.method1143(Static118.aClass13_15);
+			Static43.redraw(Static118.aClass13_15);
 			if (Static149.anInt3554 + 5 < Static215.anInt4873 || Static215.anInt4873 < Static149.anInt3554 - 5 || Static206.anInt4773 + 5 < Static223.anInt5032 || Static206.anInt4773 - 5 > Static223.anInt5032) {
 				Static123.aBoolean155 = true;
 			}
@@ -459,7 +459,7 @@ public final class Static81 {
 						}
 						Static6.outboundBuffer.p1isaac(231);
 						Static6.outboundBuffer.p2(Static4.anInt36);
-						Static6.outboundBuffer.p4le2(Static118.aClass13_15.anInt507);
+						Static6.outboundBuffer.p4le2(Static118.aClass13_15.id);
 						Static6.outboundBuffer.p2add(Static18.anInt588);
 						Static6.outboundBuffer.p1sub(local1363);
 					}
@@ -566,18 +566,18 @@ public final class Static81 {
 											Static7.method843();
 											if (Static180.aClass13_22 != local1361) {
 												if (local1361 != null) {
-													Static43.method1143(local1361);
+													Static43.redraw(local1361);
 												}
 												if (Static180.aClass13_22 != null) {
-													Static43.method1143(Static180.aClass13_22);
+													Static43.redraw(Static180.aClass13_22);
 												}
 											}
 											if (local1508 != Static43.aClass13_11 && Static191.anInt4504 == Static133.anInt5235) {
 												if (local1508 != null) {
-													Static43.method1143(local1508);
+													Static43.redraw(local1508);
 												}
 												if (Static43.aClass13_11 != null) {
-													Static43.method1143(Static43.aClass13_11);
+													Static43.redraw(Static43.aClass13_11);
 												}
 											}
 											if (Static43.aClass13_11 == null) {
@@ -587,7 +587,7 @@ public final class Static81 {
 											} else if (Static133.anInt5235 < Static191.anInt4504) {
 												Static133.anInt5235++;
 												if (Static191.anInt4504 == Static133.anInt5235) {
-													Static43.method1143(Static43.aClass13_11);
+													Static43.redraw(Static43.aClass13_11);
 												}
 											}
 											if (Static227.cameraType == 1) {
@@ -690,29 +690,29 @@ public final class Static81 {
 											return;
 										}
 										prioritySource = priorityRequest.source;
-										if (prioritySource.componentId < 0) {
+										if (prioritySource.createdComponentId < 0) {
 											break;
 										}
 										priorityComponent = Static5.getComponent(prioritySource.layer);
-									} while (priorityComponent == null || priorityComponent.createdComponents == null || prioritySource.componentId >= priorityComponent.createdComponents.length || prioritySource != priorityComponent.createdComponents[prioritySource.componentId]);
+									} while (priorityComponent == null || priorityComponent.createdComponents == null || prioritySource.createdComponentId >= priorityComponent.createdComponents.length || prioritySource != priorityComponent.createdComponents[prioritySource.createdComponentId]);
 									Static82.method1767(priorityRequest);
 								}
 							}
 							prioritySource = priorityRequest.source;
-							if (prioritySource.componentId < 0) {
+							if (prioritySource.createdComponentId < 0) {
 								break;
 							}
 							priorityComponent = Static5.getComponent(prioritySource.layer);
-						} while (priorityComponent == null || priorityComponent.createdComponents == null || priorityComponent.createdComponents.length <= prioritySource.componentId || priorityComponent.createdComponents[prioritySource.componentId] != prioritySource);
+						} while (priorityComponent == null || priorityComponent.createdComponents == null || priorityComponent.createdComponents.length <= prioritySource.createdComponentId || priorityComponent.createdComponents[prioritySource.createdComponentId] != prioritySource);
 						Static82.method1767(priorityRequest);
 					}
 				}
 				prioritySource = priorityRequest.source;
-				if (prioritySource.componentId < 0) {
+				if (prioritySource.createdComponentId < 0) {
 					break;
 				}
 				priorityComponent = Static5.getComponent(prioritySource.layer);
-			} while (priorityComponent == null || priorityComponent.createdComponents == null || prioritySource.componentId >= priorityComponent.createdComponents.length || priorityComponent.createdComponents[prioritySource.componentId] != prioritySource);
+			} while (priorityComponent == null || priorityComponent.createdComponents == null || prioritySource.createdComponentId >= priorityComponent.createdComponents.length || priorityComponent.createdComponents[prioritySource.createdComponentId] != prioritySource);
 			Static82.method1767(priorityRequest);
 		}
 	}
