@@ -4147,8 +4147,8 @@ public final class Static88 {
 
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(Ljava/awt/Component;Z)V")
 	public static void start(@OriginalArg(0) java.awt.Component arg0) {
-		arg0.addMouseListener(Static93.aClass150_1);
-		arg0.addMouseMotionListener(Static93.aClass150_1);
-		arg0.addFocusListener(Static93.aClass150_1);
+		arg0.addMouseListener(Static93.instance);
+		arg0.addMouseMotionListener(Static93.instance);
+		arg0.addFocusListener(Static93.instance);
 	}
 }

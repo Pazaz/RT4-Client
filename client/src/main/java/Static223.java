@@ -161,9 +161,9 @@ public final class Static223 {
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(ILjava/awt/Component;)V")
 	public static void method3866(@OriginalArg(1) Component arg0) {
-		arg0.removeMouseListener(Static93.aClass150_1);
-		arg0.removeMouseMotionListener(Static93.aClass150_1);
-		arg0.removeFocusListener(Static93.aClass150_1);
+		arg0.removeMouseListener(Static93.instance);
+		arg0.removeMouseMotionListener(Static93.instance);
+		arg0.removeFocusListener(Static93.instance);
 		Static57.anInt1759 = 0;
 	}
 }

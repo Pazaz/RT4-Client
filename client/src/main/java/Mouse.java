@@ -8,13 +8,18 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
+import javax.swing.*;
+
 @OriginalClass("client!ug")
 public final class Mouse implements MouseListener, MouseMotionListener, FocusListener {
+
+	public int mouseWheelX;
+	public int mouseWheelY;
 
 	@OriginalMember(owner = "client!ug", name = "mouseMoved", descriptor = "(Ljava/awt/event/MouseEvent;)V")
 	@Override
 	public final synchronized void mouseMoved(@OriginalArg(0) MouseEvent arg0) {
-		if (Static93.aClass150_1 != null) {
+		if (Static93.instance != null) {
 			Static93.anInt2467 = 0;
 			Static147.anInt3521 = arg0.getX();
 			Static165.anInt4039 = arg0.getY();
@@ -24,25 +29,36 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
 	@OriginalMember(owner = "client!ug", name = "focusLost", descriptor = "(Ljava/awt/event/FocusEvent;)V")
 	@Override
 	public final synchronized void focusLost(@OriginalArg(0) FocusEvent arg0) {
-		if (Static93.aClass150_1 != null) {
+		if (Static93.instance != null) {
 			Static57.anInt1759 = 0;
 		}
 	}
 
 	@OriginalMember(owner = "client!ug", name = "mouseDragged", descriptor = "(Ljava/awt/event/MouseEvent;)V")
 	@Override
-	public final synchronized void mouseDragged(@OriginalArg(0) MouseEvent arg0) {
-		if (Static93.aClass150_1 != null) {
+	public final synchronized void mouseDragged(@OriginalArg(0) MouseEvent event) {
+		int x = event.getX();
+		int y = event.getY();
+		if (SwingUtilities.isMiddleMouseButton(event)) {
+			int accelX = this.mouseWheelX - x;
+			int accelY = this.mouseWheelY - y;
+			this.mouseWheelX = x;
+			this.mouseWheelY = y;
+			Static57.yawTarget += accelX * 2;
+			Static72.pitchTarget -= (accelY << 1);
+			return;
+		}
+		if (Static93.instance != null) {
 			Static93.anInt2467 = 0;
-			Static147.anInt3521 = arg0.getX();
-			Static165.anInt4039 = arg0.getY();
+			Static147.anInt3521 = x;
+			Static165.anInt4039 = x;
 		}
 	}
 
 	@OriginalMember(owner = "client!ug", name = "mouseReleased", descriptor = "(Ljava/awt/event/MouseEvent;)V")
 	@Override
 	public final synchronized void mouseReleased(@OriginalArg(0) MouseEvent arg0) {
-		if (Static93.aClass150_1 != null) {
+		if (Static93.instance != null) {
 			Static93.anInt2467 = 0;
 			Static57.anInt1759 = 0;
 			@Pc(14) int local14 = arg0.getModifiers();
@@ -73,20 +89,26 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
 
 	@OriginalMember(owner = "client!ug", name = "mousePressed", descriptor = "(Ljava/awt/event/MouseEvent;)V")
 	@Override
-	public final synchronized void mousePressed(@OriginalArg(0) MouseEvent arg0) {
-		if (Static93.aClass150_1 != null) {
+	public final synchronized void mousePressed(@OriginalArg(0) MouseEvent event) {
+		if (SwingUtilities.isMiddleMouseButton(event)) {
+			this.mouseWheelX = event.getX();
+			this.mouseWheelY = event.getY();
+			return;
+		}
+
+		if (Static93.instance != null) {
 			Static93.anInt2467 = 0;
-			Static34.anInt1034 = arg0.getX();
-			Static222.anInt4973 = arg0.getY();
+			Static34.anInt1034 = event.getX();
+			Static222.anInt4973 = event.getY();
 			Static209.aLong161 = MonotonicClock.currentTimeMillis();
-			if ((arg0.getModifiersEx() & MouseEvent.BUTTON3_DOWN_MASK) == 0) {
+			if ((event.getModifiersEx() & MouseEvent.BUTTON3_DOWN_MASK) == 0) {
 				Static41.anInt1313 = 1;
 				Static57.anInt1759 = 1;
 			} else {
 				Static41.anInt1313 = 2;
 				Static57.anInt1759 = 2;
 			}
-			@Pc(29) int local29 = arg0.getModifiers();
+			@Pc(29) int local29 = event.getModifiers();
 			if ((local29 & 0x10) == 0) {
 			}
 			if ((local29 & 0x4) != 0) {
@@ -94,15 +116,15 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
 			if ((local29 & 0x8) != 0) {
 			}
 		}
-		if (arg0.isPopupTrigger()) {
-			arg0.consume();
+		if (event.isPopupTrigger()) {
+			event.consume();
 		}
 	}
 
 	@OriginalMember(owner = "client!ug", name = "mouseExited", descriptor = "(Ljava/awt/event/MouseEvent;)V")
 	@Override
 	public final synchronized void mouseExited(@OriginalArg(0) MouseEvent arg0) {
-		if (Static93.aClass150_1 != null) {
+		if (Static93.instance != null) {
 			Static93.anInt2467 = 0;
 			Static147.anInt3521 = -1;
 			Static165.anInt4039 = -1;
@@ -112,7 +134,7 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
 	@OriginalMember(owner = "client!ug", name = "mouseEntered", descriptor = "(Ljava/awt/event/MouseEvent;)V")
 	@Override
 	public final synchronized void mouseEntered(@OriginalArg(0) MouseEvent arg0) {
-		if (Static93.aClass150_1 != null) {
+		if (Static93.instance != null) {
 			Static93.anInt2467 = 0;
 			Static147.anInt3521 = arg0.getX();
 			Static165.anInt4039 = arg0.getY();
