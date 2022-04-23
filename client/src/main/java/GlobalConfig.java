@@ -40,4 +40,6 @@ public class GlobalConfig {
     //endregion
 
     public static boolean ANIMATED_SD_BACKGROUND = true;
+
+    public static boolean USE_TWEENING = true;
 }
