@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!aa")
-public final class Class2 {
+public final class MsiType {
 
 	@OriginalMember(owner = "client!aa", name = "f", descriptor = "I")
 	public int anInt11;
