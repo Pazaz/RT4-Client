@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static122 {
 
     @OriginalMember(owner = "client!jh", name = "n", descriptor = "Lclient!bd;")
-	public static Class12 aClass12_1;
+	public static QuickChatPhrase aClass12_1;
 
 	@OriginalMember(owner = "client!jh", name = "p", descriptor = "Lclient!ve;")
 	public static Js5 js5Archive21;

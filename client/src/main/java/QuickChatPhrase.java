@@ -2,7 +2,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!bd")
-public final class Class12 {
+public final class QuickChatPhrase {
 
 	@OriginalMember(owner = "client!bd", name = "c", descriptor = "I")
 	public int anInt439;

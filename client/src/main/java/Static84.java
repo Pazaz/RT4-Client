@@ -61,7 +61,7 @@ public final class Static84 {
 					@Pc(106) int local106 = -1;
 					@Pc(127) JagString local127;
 					if (local35) {
-						@Pc(112) Class12 local112 = Static264.method3568(Static270.aClass3_Sub15_9);
+						@Pc(112) QuickChatPhrase local112 = Static264.method3568(Static270.aClass3_Sub15_9);
 						local13 &= 0x7FFF;
 						local106 = local112.anInt439;
 						local127 = local112.aClass3_Sub2_Sub6_1.method770(Static270.aClass3_Sub15_9);
