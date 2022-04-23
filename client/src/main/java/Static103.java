@@ -177,7 +177,7 @@ public final class Static103 {
 				Static6.outboundBuffer.p1isaac(92);
 				Static6.outboundBuffer.p2leadd(local36);
 			} else {
-				method2231(Static186.EMPTY, 0, Static34.concatenate(new JagString[] { Static123.parseInt(local693.objCounts[local15]), Static249.aClass100_1039, Static71.method1439(local36).aClass100_495 }));
+				method2231(Static186.EMPTY, 0, Static34.concatenate(new JagString[] { Static123.parseInt(local693.objCounts[local15]), Static249.aClass100_1039, Static71.get(local36).name}));
 			}
 			Static72.anInt2043 = 0;
 			Static257.aClass13_7 = Static5.getComponent(local19);
@@ -212,12 +212,12 @@ public final class Static103 {
 			local192 = Static175.npcs[local36];
 			if (local192 != null) {
 				@Pc(884) NpcType local884 = local192.type;
-				if (local884.anIntArray357 != null) {
+				if (local884.multiNpcs != null) {
 					local884 = local884.getMultiNpc();
 				}
 				if (local884 != null) {
 					Static6.outboundBuffer.p1isaac(72);
-					Static6.outboundBuffer.p2(local884.anInt3741);
+					Static6.outboundBuffer.p2(local884.id);
 				}
 			}
 		}
@@ -595,7 +595,7 @@ public final class Static103 {
 			Static260.anInt5014 = 1;
 			Static274.anInt4997 = local36;
 			Static43.redraw(local693);
-			Static34.aClass100_203 = Static34.concatenate(new JagString[] { Static8.aClass100_32, Static71.method1439(local36).aClass100_495, Static204.aClass100_896 });
+			Static34.aClass100_203 = Static34.concatenate(new JagString[] { Static8.aClass100_32, Static71.get(local36).name, Static204.aClass100_896 });
 			if (Static34.aClass100_203 == null) {
 				Static34.aClass100_203 = Static92.aClass100_510;
 			}
@@ -789,7 +789,7 @@ public final class Static103 {
 	@OriginalMember(owner = "client!i", name = "r", descriptor = "(I)V")
 	public static void method2239() {
 		Static27.aClass99_4.method3103();
-		Static244.aClass99_32.method3103();
+		Static244.models.method3103();
 		Static118.objectSpriteCache.method3103();
 	}
 

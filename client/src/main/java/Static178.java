@@ -47,9 +47,9 @@ public final class Static178 {
 		@Pc(27) int local27 = 0;
 		for (@Pc(29) int local29 = 0; local29 < local19.objectIds.length; local29++) {
 			if (local19.objectIds[local29] >= 0 && Static170.anInt3245 > local19.objectIds[local29]) {
-				@Pc(56) ObjType local56 = Static71.method1439(local19.objectIds[local29]);
-				if (local56.aClass133_6 != null) {
-					@Pc(68) IntNode local68 = (IntNode) local56.aClass133_6.get((long) arg2);
+				@Pc(56) ObjType local56 = Static71.get(local19.objectIds[local29]);
+				if (local56.params != null) {
+					@Pc(68) IntNode local68 = (IntNode) local56.params.get((long) arg2);
 					if (local68 != null) {
 						if (arg0) {
 							local27 += local19.anIntArray422[local29] * local68.value;

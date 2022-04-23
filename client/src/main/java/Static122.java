@@ -46,15 +46,15 @@ public final class Static122 {
 			local13.locType = arg1;
 			local13.sound = arg1.sound;
 			local13.anInt2032 = arg1.anInt4419;
-			@Pc(57) int local57 = arg1.anInt4397;
-			@Pc(60) int local60 = arg1.anInt4403;
+			@Pc(57) int local57 = arg1.width;
+			@Pc(60) int local60 = arg1.length;
 			if (arg2 == 1 || arg2 == 3) {
-				local57 = arg1.anInt4403;
-				local60 = arg1.anInt4397;
+				local57 = arg1.length;
+				local60 = arg1.width;
 			}
 			local13.anInt2028 = (local60 + arg0) * 128;
 			local13.anInt2037 = (arg4 + local57) * 128;
-			if (arg1.anIntArray380 != null) {
+			if (arg1.multiLocs != null) {
 				local13.multiLocOrNpc = true;
 				local13.update();
 			}
@@ -65,13 +65,13 @@ public final class Static122 {
 		} else if (arg3 != null) {
 			local13.npc = arg3;
 			@Pc(138) NpcType local138 = arg3.type;
-			if (local138.anIntArray357 != null) {
+			if (local138.multiNpcs != null) {
 				local13.multiLocOrNpc = true;
 				local138 = local138.getMultiNpc();
 			}
 			if (local138 != null) {
-				local13.anInt2028 = (local138.anInt3713 + arg0) * 128;
-				local13.anInt2037 = (arg4 + local138.anInt3713) * 128;
+				local13.anInt2028 = (local138.soze + arg0) * 128;
+				local13.anInt2037 = (arg4 + local138.soze) * 128;
 				local13.sound = Static112.getSound(arg3);
 				local13.radius = local138.soundRadius * 128;
 			}

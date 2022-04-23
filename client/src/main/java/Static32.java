@@ -25,7 +25,7 @@ public final class Static32 {
 					if (local20 == -1) {
 						arg2.aClass147Array3[local30] = null;
 					} else {
-						@Pc(68) SeqType local68 = Static36.method941(local20);
+						@Pc(68) SeqType local68 = Static36.get(local20);
 						@Pc(71) int local71 = local68.anInt5347;
 						@Pc(76) Class147 local76 = arg2.aClass147Array3[local30];
 						if (local76 != null) {
@@ -42,7 +42,7 @@ public final class Static32 {
 								} else if (local71 == 2) {
 									local76.anInt5400 = 0;
 								}
-							} else if (local68.anInt5355 >= Static36.method941(local76.anInt5396).anInt5355) {
+							} else if (local68.anInt5355 >= Static36.get(local76.anInt5396).anInt5355) {
 								local76 = arg2.aClass147Array3[local30] = null;
 							}
 						}

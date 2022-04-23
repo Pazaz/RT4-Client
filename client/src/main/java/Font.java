@@ -106,7 +106,7 @@ public abstract class Font extends SecondaryNode {
 								try {
 									local120 = local42.substring(4).parseInt();
 									@Pc(125) IndexedSprite local125 = this.nameIcons[local120];
-									@Pc(136) int local136 = this.nameIconHeights == null ? local125.anInt4276 : this.nameIconHeights[local120];
+									@Pc(136) int local136 = this.nameIconHeights == null ? local125.innerHeight : this.nameIconHeights[local120];
 									if (Static218.alphaOverride == 256) {
 										local125.renderTransparent(arg1, local4 + this.lineHeight - local136);
 									} else {
@@ -787,7 +787,7 @@ public abstract class Font extends SecondaryNode {
 									local10++;
 									local141 = local44.substring(4).parseInt();
 									@Pc(146) IndexedSprite local146 = this.nameIcons[local141];
-									@Pc(157) int local157 = this.nameIconHeights == null ? local146.anInt4276 : this.nameIconHeights[local141];
+									@Pc(157) int local157 = this.nameIconHeights == null ? local146.innerHeight : this.nameIconHeights[local141];
 									if (Static218.alphaOverride == 256) {
 										local146.renderTransparent(arg1 + local121, local4 + this.lineHeight - local157 + local130);
 									} else {

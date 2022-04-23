@@ -10,7 +10,7 @@ public final class Static250 {
 	public static int anInt5443;
 
 	@OriginalMember(owner = "client!uf", name = "r", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_101;
+	public static Js5 spritesArchive;
 
 	@OriginalMember(owner = "client!uf", name = "b", descriptor = "Z")
 	public static boolean showGroundDecorations = true;

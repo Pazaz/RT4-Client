@@ -53,7 +53,7 @@ public final class Static276 {
 		@Pc(13) boolean local13 = false;
 		for (@Pc(15) int local15 = 0; local15 < Static267.anInt5774; local15++) {
 			@Pc(28) Player local28 = Static159.players[Static105.anIntArray256[local15]];
-			if (local28 != null && local28.aClass100_364 != null && local28.aClass100_364.method3111(local7)) {
+			if (local28 != null && local28.aClass100_364 != null && local28.aClass100_364.equalsIgnoreCase(local7)) {
 				local13 = true;
 				Static102.method2075(Static173.self.movementQueueZ[0], 0, 1, false, 0, local28.movementQueueX[0], 1, 0, 2, local28.movementQueueZ[0], Static173.self.movementQueueX[0]);
 				if (arg0 == 1) {
@@ -95,6 +95,6 @@ public final class Static276 {
 	@OriginalMember(owner = "client!wh", name = "a", descriptor = "(II)V")
 	public static void method4615() {
 		Static231.aClass99_29.method3102(5);
-		Static219.aClass99_27.method3102(5);
+		Static219.sprites.method3102(5);
 	}
 }

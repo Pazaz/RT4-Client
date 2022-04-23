@@ -77,7 +77,7 @@ public final class Static233 {
 	public static void method4001() {
 		Static93.aClass99_13.method3103();
 		Static125.aClass99_18.method3103();
-		Static262.aClass99_35.method3103();
+		Static262.headModels.method3103();
 	}
 
 	@OriginalMember(owner = "client!t", name = "a", descriptor = "(ZB)V")
@@ -122,17 +122,17 @@ public final class Static233 {
 		@Pc(24) int local24 = (int) arg0 >> 20 & 0x3;
 		@Pc(31) int local31 = (int) (arg0 >>> 32) & Integer.MAX_VALUE;
 		if (local12 == 10 || local12 == 11 || local12 == 22) {
-			@Pc(46) LocType local46 = Static271.method4601(local31);
+			@Pc(46) LocType local46 = Static271.get(local31);
 			@Pc(62) int local62;
 			@Pc(59) int local59;
 			if (local24 == 0 || local24 == 2) {
-				local59 = local46.anInt4403;
-				local62 = local46.anInt4397;
+				local59 = local46.length;
+				local62 = local46.width;
 			} else {
-				local59 = local46.anInt4397;
-				local62 = local46.anInt4403;
+				local59 = local46.width;
+				local62 = local46.length;
 			}
-			@Pc(73) int local73 = local46.anInt4433;
+			@Pc(73) int local73 = local46.blockedSides;
 			if (local24 != 0) {
 				local73 = (local73 << local24 & 0xF) + (local73 >> 4 - local24);
 			}

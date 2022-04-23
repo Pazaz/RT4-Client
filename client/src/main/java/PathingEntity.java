@@ -265,7 +265,7 @@ public abstract class PathingEntity extends Entity {
 
 	@OriginalMember(owner = "client!fe", name = "a", descriptor = "(IIIIZ)V")
 	public final void method2683(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) boolean arg3) {
-		if (this.anInt3369 != -1 && Static36.method941(this.anInt3369).anInt5349 == 1) {
+		if (this.anInt3369 != -1 && Static36.get(this.anInt3369).anInt5349 == 1) {
 			this.anInt3369 = -1;
 		}
 		if (!arg3) {
@@ -306,7 +306,7 @@ public abstract class PathingEntity extends Entity {
 			local10--;
 			local15++;
 		}
-		if (this.anInt3369 != -1 && Static36.method941(this.anInt3369).anInt5349 == 1) {
+		if (this.anInt3369 != -1 && Static36.get(this.anInt3369).anInt5349 == 1) {
 			this.anInt3369 = -1;
 		}
 		if (this.movementQueueSize < 9) {

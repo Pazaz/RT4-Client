@@ -65,7 +65,7 @@ public final class Static81 {
 		@Pc(21) byte[] local21 = Static216.aClass153_31.getFile(3, arg0);
 		local10 = new IdkType();
 		if (local21 != null) {
-			local10.method1209(new Buffer(local21));
+			local10.decode(new Buffer(local21));
 		}
 		Static67.aClass99_20.put(local10, (long) arg0);
 		return local10;

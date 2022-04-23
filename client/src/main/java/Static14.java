@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static14 {
 
 	@OriginalMember(owner = "client!bd", name = "g", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_8;
+	public static Js5 modelsArchive;
 
 	@OriginalMember(owner = "client!bd", name = "b", descriptor = "Lclient!na;")
 	public static final JagString aClass100_80 = Static28.parse("(U(Y");

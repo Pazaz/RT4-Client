@@ -104,11 +104,11 @@ public final class ProjAnim extends Entity {
 		this.anInt4797 = arg8;
 		this.anInt4822 = arg5;
 		this.anInt4813 = arg4;
-		@Pc(58) int local58 = Static34.method877(this.anInt4816).anInt1754;
+		@Pc(58) int local58 = Static34.method877(this.anInt4816).seqId;
 		if (local58 == -1) {
 			this.aClass144_3 = null;
 		} else {
-			this.aClass144_3 = Static36.method941(local58);
+			this.aClass144_3 = Static36.get(local58);
 		}
 	}
 
@@ -154,16 +154,16 @@ public final class ProjAnim extends Entity {
 					}
 					this.anInt4796 -= this.aClass144_3.anIntArray474[this.anInt4820];
 					this.anInt4820++;
-					if (this.anInt4820 >= this.aClass144_3.anIntArray473.length) {
+					if (this.anInt4820 >= this.aClass144_3.frames.length) {
 						this.anInt4820 -= this.aClass144_3.anInt5362;
-						if (this.anInt4820 < 0 || this.aClass144_3.anIntArray473.length <= this.anInt4820) {
+						if (this.anInt4820 < 0 || this.aClass144_3.frames.length <= this.anInt4820) {
 							this.anInt4820 = 0;
 						}
 					}
 					this.anInt4798 = this.anInt4820 + 1;
-				} while (this.aClass144_3.anIntArray473.length > this.anInt4798);
+				} while (this.aClass144_3.frames.length > this.anInt4798);
 				this.anInt4798 -= this.aClass144_3.anInt5362;
-			} while (this.anInt4798 >= 0 && this.anInt4798 < this.aClass144_3.anIntArray473.length);
+			} while (this.anInt4798 >= 0 && this.anInt4798 < this.aClass144_3.frames.length);
 			this.anInt4798 = -1;
 		}
 	}

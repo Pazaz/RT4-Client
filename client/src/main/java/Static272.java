@@ -22,9 +22,9 @@ public final class Static272 {
 	@OriginalMember(owner = "client!wd", name = "a", descriptor = "(BII)V")
 	public static void method3995(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
 		@Pc(14) VarbitType local14 = Static125.method2449(arg1);
-		@Pc(17) int local17 = local14.anInt3327;
-		@Pc(20) int local20 = local14.anInt3323;
-		@Pc(23) int local23 = local14.anInt3318;
+		@Pc(17) int local17 = local14.baseVar;
+		@Pc(20) int local20 = local14.endBit;
+		@Pc(23) int local23 = local14.startBit;
 		@Pc(29) int local29 = Class3_Sub9.anIntArray135[local20 - local23];
 		if (arg0 < 0 || local29 < arg0) {
 			arg0 = 0;

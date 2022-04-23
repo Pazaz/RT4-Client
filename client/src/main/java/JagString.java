@@ -91,7 +91,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(ILclient!na;)Z")
-	public final boolean method3111(@OriginalArg(1) JagString arg0) {
+	public final boolean equalsIgnoreCase(@OriginalArg(1) JagString arg0) {
 		if (arg0 == null) {
 			return false;
 		} else if (this.length == arg0.length) {

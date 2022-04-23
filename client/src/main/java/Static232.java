@@ -56,7 +56,7 @@ public final class Static232 {
 								@Pc(203) int local203 = (local50 + arg4 & 0x3F) + ((arg6 + local119 & 0x3F) << 6);
 								@Pc(209) int local209 = local116[local163][local203];
 								if (local209 != 0) {
-									@Pc(222) LocType local222 = Static271.method4601(local209 - 1);
+									@Pc(222) LocType local222 = Static271.get(local209 - 1);
 									if (!Static258.aBooleanArray130[local222.anInt4400]) {
 										if (local11 != -1 && local222.anInt4400 == Static9.anInt172) {
 											@Pc(243) Class3_Sub26 local243 = new Class3_Sub26();

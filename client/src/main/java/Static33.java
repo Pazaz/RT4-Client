@@ -19,28 +19,28 @@ public final class Static33 {
 
 	@OriginalMember(owner = "client!cj", name = "a", descriptor = "(ILclient!pb;ZIIII)Z")
 	public static boolean method867(@OriginalArg(0) int arg0, @OriginalArg(1) LocType arg1, @OriginalArg(5) int arg2, @OriginalArg(6) int arg3) {
-		@Pc(10) MsiType local10 = Static40.method1013(arg1.anInt4415);
-		if (local10.anInt12 == -1) {
+		@Pc(10) MsiType local10 = Static40.method1013(arg1.mapSceneId);
+		if (local10.spriteId == -1) {
 			return true;
 		}
-		if (arg1.aBoolean218) {
-			@Pc(24) int local24 = arg3 + arg1.anInt4395;
+		if (arg1.mapSceneRotated) {
+			@Pc(24) int local24 = arg3 + arg1.mapSceneAngleOffset;
 			arg3 = local24 & 0x3;
 		} else {
 			arg3 = 0;
 		}
-		@Pc(42) SoftwareIndexedSprite local42 = local10.method9(arg3);
+		@Pc(42) SoftwareIndexedSprite local42 = local10.getSprite(arg3);
 		if (local42 == null) {
 			return false;
 		}
-		@Pc(49) int local49 = arg1.anInt4397;
-		@Pc(52) int local52 = arg1.anInt4403;
+		@Pc(49) int local49 = arg1.width;
+		@Pc(52) int local52 = arg1.length;
 		if ((arg3 & 0x1) == 1) {
-			local49 = arg1.anInt4403;
-			local52 = arg1.anInt4397;
+			local49 = arg1.length;
+			local52 = arg1.width;
 		}
 		@Pc(66) int local66 = local42.innerWidth;
-		@Pc(69) int local69 = local42.anInt4276;
+		@Pc(69) int local69 = local42.innerHeight;
 		if (local10.aBoolean2) {
 			local69 = local52 * 4;
 			local66 = local49 * 4;

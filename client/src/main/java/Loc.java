@@ -82,8 +82,8 @@ public final class Loc extends Entity {
 			if (arg8 instanceof Loc) {
 				((Loc) arg8).method1046();
 			} else {
-				local67 = Static271.method4601(this.anInt1299);
-				if (local67.anIntArray380 != null) {
+				local67 = Static271.get(this.anInt1299);
+				if (local67.multiLocs != null) {
 					local67 = local67.getMultiLoc();
 				}
 				if (local67 != null) {
@@ -92,9 +92,9 @@ public final class Loc extends Entity {
 			}
 		}
 		if (arg6 != -1) {
-			this.aClass144_2 = Static36.method941(arg6);
+			this.aClass144_2 = Static36.get(arg6);
 			this.anInt1297 = 0;
-			if (this.aClass144_2.anIntArray473.length <= 1) {
+			if (this.aClass144_2.frames.length <= 1) {
 				this.anInt1304 = 0;
 			} else {
 				this.anInt1304 = 1;
@@ -112,11 +112,11 @@ public final class Loc extends Entity {
 				}
 			}
 			if (arg7 && this.aClass144_2.anInt5362 != -1) {
-				this.anInt1297 = (int) (Math.random() * (double) this.aClass144_2.anIntArray473.length);
+				this.anInt1297 = (int) (Math.random() * (double) this.aClass144_2.frames.length);
 				this.anInt1304 = this.anInt1297 + 1;
-				if (this.anInt1304 >= this.aClass144_2.anIntArray473.length) {
+				if (this.anInt1304 >= this.aClass144_2.frames.length) {
 					this.anInt1304 -= this.aClass144_2.anInt5362;
-					if (this.anInt1304 < 0 || this.anInt1304 >= this.aClass144_2.anIntArray473.length) {
+					if (this.anInt1304 < 0 || this.anInt1304 >= this.aClass144_2.frames.length) {
 						this.anInt1304 = -1;
 					}
 				}
@@ -128,8 +128,8 @@ public final class Loc extends Entity {
 			this.method1048(true);
 		}
 		if (arg8 == null) {
-			local67 = Static271.method4601(this.anInt1299);
-			if (local67.anIntArray380 != null) {
+			local67 = Static271.get(this.anInt1299);
+			if (local67.multiLocs != null) {
 				this.aBoolean80 = true;
 			}
 		}
@@ -176,22 +176,22 @@ public final class Loc extends Entity {
 		}
 		@Pc(10) int local10 = Static83.loop - this.anInt1320;
 		if (local10 > 100 && this.aClass144_2.anInt5362 > 0) {
-			@Pc(29) int local29 = this.aClass144_2.anIntArray473.length - this.aClass144_2.anInt5362;
+			@Pc(29) int local29 = this.aClass144_2.frames.length - this.aClass144_2.anInt5362;
 			while (this.anInt1297 < local29 && this.aClass144_2.anIntArray474[this.anInt1297] < local10) {
 				local10 -= this.aClass144_2.anIntArray474[this.anInt1297];
 				this.anInt1297++;
 			}
 			if (this.anInt1297 >= local29) {
 				@Pc(77) int local77 = 0;
-				for (@Pc(79) int local79 = local29; local79 < this.aClass144_2.anIntArray473.length; local79++) {
+				for (@Pc(79) int local79 = local29; local79 < this.aClass144_2.frames.length; local79++) {
 					local77 += this.aClass144_2.anIntArray474[local79];
 				}
 				local10 %= local77;
 			}
 			this.anInt1304 = this.anInt1297 + 1;
-			if (this.anInt1304 >= this.aClass144_2.anIntArray473.length) {
+			if (this.anInt1304 >= this.aClass144_2.frames.length) {
 				this.anInt1304 -= this.aClass144_2.anInt5362;
-				if (this.anInt1304 < 0 || this.aClass144_2.anIntArray473.length <= this.anInt1304) {
+				if (this.anInt1304 < 0 || this.aClass144_2.frames.length <= this.anInt1304) {
 					this.anInt1304 = -1;
 				}
 			}
@@ -200,17 +200,17 @@ public final class Loc extends Entity {
 			Static152.method2836(arg0, this.aClass144_2, arg1, false, this.anInt1297);
 			local10 -= this.aClass144_2.anIntArray474[this.anInt1297];
 			this.anInt1297++;
-			if (this.aClass144_2.anIntArray473.length <= this.anInt1297) {
+			if (this.aClass144_2.frames.length <= this.anInt1297) {
 				this.anInt1297 -= this.aClass144_2.anInt5362;
-				if (this.anInt1297 < 0 || this.aClass144_2.anIntArray473.length <= this.anInt1297) {
+				if (this.anInt1297 < 0 || this.aClass144_2.frames.length <= this.anInt1297) {
 					this.aClass144_2 = null;
 					break;
 				}
 			}
 			this.anInt1304 = this.anInt1297 + 1;
-			if (this.aClass144_2.anIntArray473.length <= this.anInt1304) {
+			if (this.aClass144_2.frames.length <= this.anInt1304) {
 				this.anInt1304 -= this.aClass144_2.anInt5362;
-				if (this.anInt1304 < 0 || this.anInt1304 >= this.aClass144_2.anIntArray473.length) {
+				if (this.anInt1304 < 0 || this.anInt1304 >= this.aClass144_2.frames.length) {
 					this.anInt1304 = -1;
 				}
 			}
@@ -222,9 +222,9 @@ public final class Loc extends Entity {
 	@OriginalMember(owner = "client!dc", name = "a", descriptor = "(ZI)Lclient!th;")
 	private Entity method1048(@OriginalArg(0) boolean arg0) {
 		@Pc(12) boolean local12 = Static107.surfaceTileHeightMap != Static83.activeTileHeightMap;
-		@Pc(19) LocType local19 = Static271.method4601(this.anInt1299);
+		@Pc(19) LocType local19 = Static271.get(this.anInt1299);
 		@Pc(22) int local22 = local19.anInt4430;
-		if (local19.anIntArray380 != null) {
+		if (local19.multiLocs != null) {
 			local19 = local19.getMultiLoc();
 		}
 		if (local19 == null) {
@@ -242,11 +242,11 @@ public final class Loc extends Entity {
 			if (local69 == -1) {
 				this.aClass144_2 = null;
 			} else {
-				this.aClass144_2 = Static36.method941(local69);
+				this.aClass144_2 = Static36.get(local69);
 			}
 			if (this.aClass144_2 != null) {
 				if (local19.aBoolean209 && this.aClass144_2.anInt5362 != -1) {
-					this.anInt1297 = (int) (Math.random() * (double) this.aClass144_2.anIntArray473.length);
+					this.anInt1297 = (int) (Math.random() * (double) this.aClass144_2.frames.length);
 					this.anInt1320 -= (int) (Math.random() * (double) this.aClass144_2.anIntArray474[this.anInt1297]);
 				} else {
 					this.anInt1297 = 0;
@@ -258,11 +258,11 @@ public final class Loc extends Entity {
 		@Pc(160) int local160;
 		@Pc(157) int local157;
 		if (local69 == 1 || local69 == 3) {
-			local157 = local19.anInt4397;
-			local160 = local19.anInt4403;
+			local157 = local19.width;
+			local160 = local19.length;
 		} else {
-			local160 = local19.anInt4397;
-			local157 = local19.anInt4403;
+			local160 = local19.width;
+			local157 = local19.length;
 		}
 		@Pc(178) int local178 = this.anInt1308 + (local160 + 1 >> 1);
 		@Pc(185) int local185 = (local160 >> 1) + this.anInt1308;

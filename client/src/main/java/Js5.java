@@ -166,7 +166,7 @@ public final class Js5 {
 		@Pc(30) int local30 = this.aClass70_2.aClass76_1.method2405(local17.method3154());
 		if (this.method4492(local30)) {
 			@Pc(49) int local49 = this.aClass70_2.aClass76Array1[local30].method2405(local21.method3154());
-			return this.method4491(local49, local30);
+			return this.isFileReady(local49, local30);
 		} else {
 			return false;
 		}
@@ -216,7 +216,7 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(BII)Z")
-	public final boolean method4491(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
+	public final boolean isFileReady(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
 		if (!this.method4501(arg1, arg0)) {
 			return false;
 		} else if (this.anObjectArrayArray1[arg1] != null && this.anObjectArrayArray1[arg1][arg0] != null) {
@@ -485,11 +485,11 @@ public final class Js5 {
 		if (!this.method4484()) {
 			return false;
 		} else if (this.aClass70_2.anIntArray270.length == 1) {
-			return this.method4491(arg0, 0);
+			return this.isFileReady(arg0, 0);
 		} else if (!this.method4492(arg0)) {
 			return false;
 		} else if (this.aClass70_2.anIntArray270[arg0] == 1) {
-			return this.method4491(0, arg0);
+			return this.isFileReady(0, arg0);
 		} else {
 			throw new RuntimeException();
 		}

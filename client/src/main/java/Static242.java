@@ -26,7 +26,7 @@ public final class Static242 {
 		arg3 += arg0.anInt4273;
 		@Pc(16) int local16 = arg2 + arg3 * arg1.width;
 		@Pc(18) int local18 = 0;
-		@Pc(21) int local21 = arg0.anInt4278;
+		@Pc(21) int local21 = arg0.height;
 		@Pc(24) int local24 = arg0.width;
 		@Pc(29) int local29 = arg1.width - local24;
 		@Pc(31) int local31 = 0;
@@ -38,8 +38,8 @@ public final class Static242 {
 			local16 += local37 * arg1.width;
 			arg3 = 1;
 		}
-		if (arg3 + local21 >= arg1.anInt4278) {
-			local37 = arg3 + local21 + 1 - arg1.anInt4278;
+		if (arg3 + local21 >= arg1.height) {
+			local37 = arg3 + local21 + 1 - arg1.height;
 			local21 -= local37;
 		}
 		if (arg2 <= 0) {
@@ -187,7 +187,7 @@ public final class Static242 {
 		arg2 += arg0.anInt4280;
 		arg3 += arg0.anInt4273;
 		@Pc(16) int local16 = arg2 + arg3 * arg1.width;
-		@Pc(19) int local19 = arg0.anInt4278;
+		@Pc(19) int local19 = arg0.height;
 		@Pc(22) int local22 = arg0.width;
 		@Pc(27) int local27 = arg1.width - local22;
 		@Pc(33) int local33;
@@ -197,8 +197,8 @@ public final class Static242 {
 			local16 += local33 * arg1.width;
 			arg3 = 1;
 		}
-		if (arg3 + local19 >= arg1.anInt4278) {
-			local33 = arg3 + local19 + 1 - arg1.anInt4278;
+		if (arg3 + local19 >= arg1.height) {
+			local33 = arg3 + local19 + 1 - arg1.height;
 			local19 -= local33;
 		}
 		if (arg2 <= 0) {
@@ -241,7 +241,7 @@ public final class Static242 {
 		arg3 += arg0.anInt4273;
 		@Pc(16) int local16 = arg2 + arg3 * arg1.width;
 		@Pc(18) int local18 = 0;
-		@Pc(21) int local21 = arg0.anInt4278;
+		@Pc(21) int local21 = arg0.height;
 		@Pc(24) int local24 = arg0.width;
 		@Pc(29) int local29 = arg1.width - local24;
 		@Pc(31) int local31 = 0;
@@ -253,8 +253,8 @@ public final class Static242 {
 			local16 += local37 * arg1.width;
 			arg3 = 1;
 		}
-		if (arg3 + local21 >= arg1.anInt4278) {
-			local37 = arg3 + local21 + 1 - arg1.anInt4278;
+		if (arg3 + local21 >= arg1.height) {
+			local37 = arg3 + local21 + 1 - arg1.height;
 			local21 -= local37;
 		}
 		if (arg2 <= 0) {
@@ -377,7 +377,7 @@ public final class Static242 {
 
 	@OriginalMember(owner = "client!tj", name = "a", descriptor = "(Lclient!ek;Lclient!ek;IIIZ)V")
 	private static void method4210(@OriginalArg(0) SoftwareIndexedSprite arg0, @OriginalArg(1) SoftwareIndexedSprite arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) boolean arg5) {
-		if (arg2 <= 0 || arg3 <= 0 || arg2 + 16 >= arg1.width || arg3 + 16 >= arg1.anInt4278) {
+		if (arg2 <= 0 || arg3 <= 0 || arg2 + 16 >= arg1.width || arg3 + 16 >= arg1.height) {
 			return;
 		}
 		@Pc(23) int local23 = arg2 + arg3 * arg1.width;

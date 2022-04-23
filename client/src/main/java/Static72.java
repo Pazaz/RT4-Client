@@ -29,7 +29,7 @@ public final class Static72 {
 	public static final JagString aClass100_448 = Static28.parse("(Y");
 
 	@OriginalMember(owner = "client!fl", name = "b", descriptor = "(II)Lclient!cl;")
-	public static AnimFrameset method1566(@OriginalArg(0) int arg0) {
+	public static AnimFrameset getAnimFrameset(@OriginalArg(0) int arg0) {
 		@Pc(19) AnimFrameset local19 = (AnimFrameset) Static267.aClass99_37.get((long) arg0);
 		if (local19 != null) {
 			return local19;

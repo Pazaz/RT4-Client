@@ -17,7 +17,7 @@ public final class Static121 {
 	public static int anInt3041;
 
 	@OriginalMember(owner = "client!jg", name = "j", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_45;
+	public static Js5 modelsArchive;
 
 	@OriginalMember(owner = "client!jg", name = "e", descriptor = "Z")
 	public static boolean aBoolean154 = false;

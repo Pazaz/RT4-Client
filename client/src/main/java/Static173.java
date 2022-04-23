@@ -8,7 +8,7 @@ public final class Static173 {
 	public static int[] anIntArray367;
 
 	@OriginalMember(owner = "client!nk", name = "E", descriptor = "I")
-	public static int anInt4183;
+	public static int redDelta;
 
 	@OriginalMember(owner = "client!nk", name = "L", descriptor = "[Lclient!mm;")
 	public static SoftwareSprite[] aClass3_Sub2_Sub1_Sub1Array9;
@@ -31,7 +31,7 @@ public final class Static173 {
 		@Pc(171) int local171;
 		for (local7 = 0; local7 < Static272.anInt5214; local7++) {
 			local16 = Static175.npcs[Static33.anIntArray79[local7]];
-			if (local16 != null && local16.method2682() && local16.type.aBoolean182 == arg0 && local16.type.method2933()) {
+			if (local16 != null && local16.method2682() && local16.type.aBoolean182 == arg0 && local16.type.isMultiNpcValid()) {
 				@Pc(42) int local42 = local16.getSize();
 				@Pc(97) int local97;
 				if (local42 == 1) {
@@ -70,7 +70,7 @@ public final class Static173 {
 		label200: for (local7 = 0; local7 < Static272.anInt5214; local7++) {
 			local16 = Static175.npcs[Static33.anIntArray79[local7]];
 			@Pc(262) long local262 = (long) Static33.anIntArray79[local7] << 32 | 0x20000000L;
-			if (local16 != null && local16.method2682() && local16.type.aBoolean182 == arg0 && local16.type.method2933()) {
+			if (local16 != null && local16.method2682() && local16.type.aBoolean182 == arg0 && local16.type.isMultiNpcValid()) {
 				local107 = local16.getSize();
 				if (local107 == 1) {
 					if ((local16.xFine & 0x7F) == 64 && (local16.zFine & 0x7F) == 64) {

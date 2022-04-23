@@ -481,7 +481,7 @@ public final class RawModel extends Entity {
 	@OriginalMember(owner = "client!gb", name = "a", descriptor = "(III)Lclient!th;")
 	@Override
 	public final Entity method4539() {
-		return this.method1679(this.aShort19, this.aShort18, -50, -10, -50);
+		return this.createModel(this.aShort19, this.aShort18, -50, -10, -50);
 	}
 
 	@OriginalMember(owner = "client!gb", name = "a", descriptor = "(Lclient!gb;IS)I")
@@ -541,7 +541,7 @@ public final class RawModel extends Entity {
 		}
 		local149 = (local149 >> 1) - arg2;
 		if (local149 != 0) {
-			this.method1672(0, local149, 0);
+			this.translate(0, local149, 0);
 		}
 	}
 
@@ -619,7 +619,7 @@ public final class RawModel extends Entity {
 	}
 
 	@OriginalMember(owner = "client!gb", name = "a", descriptor = "(SS)V")
-	public final void method1669(@OriginalArg(0) short arg0, @OriginalArg(1) short arg1) {
+	public final void retexture(@OriginalArg(0) short arg0, @OriginalArg(1) short arg1) {
 		if (this.aShortArray23 == null) {
 			return;
 		}
@@ -786,7 +786,7 @@ public final class RawModel extends Entity {
 	}
 
 	@OriginalMember(owner = "client!gb", name = "b", descriptor = "(IIIII)Lclient!w;")
-	public final SoftwareModel method1671(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+	public final SoftwareModel createSoftwareModel(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		return new SoftwareModel(this, arg0, arg1, -50, -10, -50);
 	}
 
@@ -796,7 +796,7 @@ public final class RawModel extends Entity {
 	}
 
 	@OriginalMember(owner = "client!gb", name = "c", descriptor = "(III)V")
-	public final void method1672(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+	public final void translate(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		for (@Pc(1) int local1 = 0; local1 < this.anInt2139; local1++) {
 			this.anIntArray202[local1] += arg0;
 			this.anIntArray201[local1] += arg1;
@@ -1230,7 +1230,7 @@ public final class RawModel extends Entity {
 	}
 
 	@OriginalMember(owner = "client!gb", name = "c", descriptor = "(IIIII)Lclient!ak;")
-	public final Model method1679(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+	public final Model createModel(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		if (GlRenderer.enabled) {
 			@Pc(9) GlModel local9 = new GlModel(this, arg0, arg1, true);
 			local9.method4099();
@@ -1449,7 +1449,7 @@ public final class RawModel extends Entity {
 	}
 
 	@OriginalMember(owner = "client!gb", name = "b", descriptor = "(SS)V")
-	public final void method1687(@OriginalArg(0) short arg0, @OriginalArg(1) short arg1) {
+	public final void recolor(@OriginalArg(0) short arg0, @OriginalArg(1) short arg1) {
 		for (@Pc(1) int local1 = 0; local1 < this.anInt2136; local1++) {
 			if (this.aShortArray24[local1] == arg0) {
 				this.aShortArray24[local1] = arg1;

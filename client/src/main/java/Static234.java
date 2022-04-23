@@ -60,7 +60,7 @@ public final class Static234 {
 				}
 				local47 = Static57.aClass3_Sub15_Sub1_3.g4me();
 				@Pc(147) boolean local147 = true;
-				if (local43 != -1 && local14.anInt3432 != -1 && Static36.method941(Static34.method877(local43).anInt1754).anInt5355 < Static36.method941(Static34.method877(local14.anInt3432).anInt1754).anInt5355) {
+				if (local43 != -1 && local14.anInt3432 != -1 && Static36.get(Static34.method877(local43).seqId).anInt5355 < Static36.get(Static34.method877(local14.anInt3432).seqId).anInt5355) {
 					local147 = false;
 				}
 				if (local147) {
@@ -74,10 +74,10 @@ public final class Static234 {
 						local14.anInt3399 = -1;
 					}
 					if (local14.anInt3432 != -1 && local14.anInt3359 == Static83.loop) {
-						@Pc(227) int local227 = Static34.method877(local14.anInt3432).anInt1754;
+						@Pc(227) int local227 = Static34.method877(local14.anInt3432).seqId;
 						if (local227 != -1) {
-							@Pc(236) SeqType local236 = Static36.method941(local227);
-							if (local236 != null && local236.anIntArray473 != null) {
+							@Pc(236) SeqType local236 = Static36.get(local227);
+							if (local236 != null && local236.frames != null) {
 								Static152.method2836(local14.zFine, local236, local14.xFine, false, 0);
 							}
 						}
@@ -85,13 +85,13 @@ public final class Static234 {
 				}
 			}
 			if ((local18 & 0x1) != 0) {
-				if (local14.type.method2935()) {
+				if (local14.type.hasAreaSound()) {
 					Static91.method1877(local14);
 				}
-				local14.method2698(Static214.method4363(Static57.aClass3_Sub15_Sub1_3.g2le()));
-				local14.method2692(local14.type.anInt3713);
-				local14.anInt3365 = local14.type.anInt3737;
-				if (local14.type.method2935()) {
+				local14.method2698(Static214.get(Static57.aClass3_Sub15_Sub1_3.g2le()));
+				local14.method2692(local14.type.soze);
+				local14.anInt3365 = local14.type.basId;
+				if (local14.type.hasAreaSound()) {
 					Static122.method2411(local14.movementQueueZ[0], null, 0, local14, local14.movementQueueX[0], Static55.level, null);
 				}
 			}

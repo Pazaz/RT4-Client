@@ -41,33 +41,33 @@ public final class Static246 {
 		if (Static231.anInt5204 >= 400) {
 			return;
 		}
-		if (arg0.anIntArray357 != null) {
+		if (arg0.multiNpcs != null) {
 			arg0 = arg0.getMultiNpc();
 		}
 		if (arg0 == null || !arg0.aBoolean183) {
 			return;
 		}
-		@Pc(35) JagString local35 = arg0.aClass100_738;
-		if (arg0.anInt3726 != 0) {
+		@Pc(35) JagString local35 = arg0.name;
+		if (arg0.combatLevel != 0) {
 			@Pc(47) JagString local47 = Static266.game == 1 ? LocalizedText.RATING : LocalizedText.LEVEL;
-			local35 = Static34.concatenate(new JagString[] { local35, Static123.method2420(arg0.anInt3726, Static173.self.anInt1652), Static123.aClass100_593, local47, Static123.parseInt(arg0.anInt3726), Static72.aClass100_448 });
+			local35 = Static34.concatenate(new JagString[] { local35, Static123.method2420(arg0.combatLevel, Static173.self.anInt1652), Static123.aClass100_593, local47, Static123.parseInt(arg0.combatLevel), Static72.aClass100_448 });
 		}
 		if (Static260.anInt5014 == 1) {
 			Static98.method1966(Static169.anInt4075, (long) arg2, Static34.concatenate(new JagString[] { Static34.aClass100_203, Static201.aClass100_407, local35 }), arg1, (short) 26, LocalizedText.USE, arg3);
 		} else if (Static241.aBoolean302) {
 			@Pc(378) ParamType local378 = Static121.anInt3039 == -1 ? null : Static110.method2277(Static121.anInt3039);
-			if ((Static274.anInt4999 & 0x2) != 0 && (local378 == null || arg0.method2936(Static121.anInt3039, local378.anInt2667) != local378.anInt2667)) {
+			if ((Static274.anInt4999 & 0x2) != 0 && (local378 == null || arg0.getParam(Static121.anInt3039, local378.defaultInt) != local378.defaultInt)) {
 				Static98.method1966(anInt5393, (long) arg2, Static34.concatenate(new JagString[] { Static78.aClass100_466, Static201.aClass100_407, local35 }), arg1, (short) 45, Static102.aClass100_545, arg3);
 			}
 		} else {
-			@Pc(129) JagString[] local129 = arg0.aClass100Array116;
+			@Pc(129) JagString[] local129 = arg0.ops;
 			if (Static208.aBoolean237) {
 				local129 = Static279.method4664(local129);
 			}
 			@Pc(140) int local140;
 			if (local129 != null) {
 				for (local140 = 4; local140 >= 0; local140--) {
-					if (local129[local140] != null && (Static266.game != 0 || !local129[local140].method3111(LocalizedText.ATTACK))) {
+					if (local129[local140] != null && (Static266.game != 0 || !local129[local140].equalsIgnoreCase(LocalizedText.ATTACK))) {
 						@Pc(161) byte local161 = 0;
 						if (local140 == 0) {
 							local161 = 17;
@@ -82,11 +82,11 @@ public final class Static246 {
 						if (local140 == 3) {
 							local161 = 19;
 						}
-						if (arg0.anInt3750 == local140) {
-							local176 = arg0.anInt3719;
+						if (arg0.cursor1Op == local140) {
+							local176 = arg0.cursor1;
 						}
-						if (local140 == arg0.anInt3743) {
-							local176 = arg0.anInt3735;
+						if (local140 == arg0.cursor2Op) {
+							local176 = arg0.cursor2;
 						}
 						if (local140 == 4) {
 							local161 = 2;
@@ -97,9 +97,9 @@ public final class Static246 {
 			}
 			if (Static266.game == 0 && local129 != null) {
 				for (local140 = 4; local140 >= 0; local140--) {
-					if (local129[local140] != null && local129[local140].method3111(LocalizedText.ATTACK)) {
+					if (local129[local140] != null && local129[local140].equalsIgnoreCase(LocalizedText.ATTACK)) {
 						@Pc(271) short local271 = 0;
-						if (arg0.anInt3726 > Static173.self.anInt1652) {
+						if (arg0.combatLevel > Static173.self.anInt1652) {
 							local271 = 2000;
 						}
 						@Pc(281) short local281 = 0;

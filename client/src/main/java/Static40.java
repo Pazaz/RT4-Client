@@ -88,7 +88,7 @@ public final class Static40 {
 		@Pc(20) byte[] local20 = Static98.aClass153_42.getFile(34, arg0);
 		local10 = new MsiType();
 		if (local20 != null) {
-			local10.method6(new Buffer(local20), arg0);
+			local10.decode(new Buffer(local20), arg0);
 		}
 		Static231.aClass99_29.put(local10, (long) arg0);
 		return local10;

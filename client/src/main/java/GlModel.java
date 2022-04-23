@@ -1646,7 +1646,7 @@ public final class GlModel extends Model {
 
 	@OriginalMember(owner = "client!td", name = "b", descriptor = "(III)V")
 	@Override
-	public final void method4559(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+	public final void resize(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		for (@Pc(1) int local1 = 0; local1 < this.anInt5295; local1++) {
 			this.anIntArray461[local1] = this.anIntArray461[local1] * arg0 >> 7;
 			this.anIntArray465[local1] = this.anIntArray465[local1] * arg1 >> 7;
@@ -3194,7 +3194,7 @@ public final class GlModel extends Model {
 		} else {
 			local151 = arg0;
 			arg0.innerWidth = arg0.width = local134;
-			arg0.anInt4276 = arg0.anInt4278 = local140;
+			arg0.innerHeight = arg0.height = local140;
 			arg0.method1392();
 		}
 		local151.anInt4280 = local26;

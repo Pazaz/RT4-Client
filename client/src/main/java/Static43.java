@@ -70,8 +70,8 @@ public final class Static43 {
 		}
 		@Pc(57) int local57 = (int) local9 >> 14 & 0x1F;
 		@Pc(70) int local70 = (int) (local9 >>> 32) & Integer.MAX_VALUE;
-		@Pc(74) LocType local74 = Static271.method4601(local70);
-		if (local74.method3422()) {
+		@Pc(74) LocType local74 = Static271.get(local70);
+		if (local74.hasAreaSound()) {
 			Static209.method3701(arg1, local74, arg0, arg2);
 		}
 		@Pc(92) int local92 = (int) local9 >> 20 & 0x3;
@@ -100,8 +100,8 @@ public final class Static43 {
 			if (local148 != null) {
 				local100 = local148.aClass8_4;
 			}
-			if (local74.anInt4435 != 0 && local74.anInt4397 + arg1 < 104 && local74.anInt4397 + arg0 < 104 && arg1 + local74.anInt4403 < 104 && arg0 + local74.anInt4403 < 104) {
-				arg5.unflagScenery(arg1, local74.anInt4397, local74.aBoolean207, local92, local74.anInt4403, arg0);
+			if (local74.anInt4435 != 0 && local74.width + arg1 < 104 && local74.width + arg0 < 104 && arg1 + local74.length < 104 && arg0 + local74.length < 104) {
+				arg5.unflagScenery(arg1, local74.width, local74.aBoolean207, local92, local74.length, arg0);
 			}
 		} else if (arg3 == 3) {
 			@Pc(211) GroundDecor local211 = Static267.method4526(arg2, arg1, arg0);

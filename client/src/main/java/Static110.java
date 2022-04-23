@@ -28,7 +28,7 @@ public final class Static110 {
 		@Pc(30) byte[] local30 = Static39.aClass153_23.getFile(11, arg0);
 		local6 = new ParamType();
 		if (local30 != null) {
-			local6.method2076(new Buffer(local30));
+			local6.decode(new Buffer(local30));
 		}
 		Static272.aClass54_14.put(local6, (long) arg0);
 		return local6;
