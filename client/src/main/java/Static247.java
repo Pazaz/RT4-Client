@@ -59,7 +59,7 @@ public final class Static247 {
 										@Pc(1179) Tile var32;
 										while (true) {
 											do {
-												local8 = (Tile) Static7.aClass69_32.method2287();
+												local8 = (Tile) Static7.aClass69_32.removeHead();
 												if (local8 == null) {
 													return;
 												}
@@ -71,7 +71,7 @@ public final class Static247 {
 											local31 = Static130.aClass3_Sub5ArrayArrayArray1[local24];
 											@Pc(33) float local33 = 0.0F;
 											if (GlRenderer.enabled) {
-												if (Static80.anIntArrayArrayArray19 == Static83.anIntArrayArrayArray4) {
+												if (Static80.underWaterTileHeightMap == Static83.activeTileHeightMap) {
 													var9 = Static62.anIntArrayArray11[local18][local21];
 													var10 = var9 & 0xFFFFFF;
 													if (var10 != Static152.anInt3604) {
@@ -84,7 +84,7 @@ public final class Static247 {
 														Static22.anInt730 = local65;
 														Static147.method2761(local65);
 													}
-													local115 = Static107.anIntArrayArrayArray10[0][local18][local21] + Static107.anIntArrayArrayArray10[0][local18 + 1][local21] + Static107.anIntArrayArrayArray10[0][local18][local21 + 1] + Static107.anIntArrayArrayArray10[0][local18 + 1][local21 + 1] >> 2;
+													local115 = Static107.surfaceTileHeightMap[0][local18][local21] + Static107.surfaceTileHeightMap[0][local18 + 1][local21] + Static107.surfaceTileHeightMap[0][local18][local21 + 1] + Static107.surfaceTileHeightMap[0][local18 + 1][local21 + 1] >> 2;
 													Static27.setMaterial(-local115, 3);
 													local33 = 201.5F;
 													GlRenderer.method4159(local33);
@@ -377,21 +377,21 @@ public final class Static247 {
 																if (local1332 == 0) {
 																	local65 -= 64;
 																	local115 += 64;
-																	if (local115 < local65 && local18 > 0 && local21 < Static99.anInt2550 - 1) {
+																	if (local115 < local65 && local18 > 0 && local21 < Static99.mapSizeZ - 1) {
 																		Static120.method2393(Static149.anInt3555, Static162.anInt3947, Static217.anInt4903, local24, local18 - 1, local21 + 1);
 																		break label882;
 																	}
 																} else if (local1332 == 1) {
 																	local65 += 64;
 																	local115 += 64;
-																	if (local115 < -local65 && local18 < Static152.anInt3594 - 1 && local21 < Static99.anInt2550 - 1) {
+																	if (local115 < -local65 && local18 < Static152.mapSizeX - 1 && local21 < Static99.mapSizeZ - 1) {
 																		Static120.method2393(Static149.anInt3555, Static162.anInt3947, Static217.anInt4903, local24, local18 + 1, local21 + 1);
 																		break label882;
 																	}
 																} else if (local1332 == 2) {
 																	local65 += 64;
 																	local115 -= 64;
-																	if (local115 > local65 && local18 < Static152.anInt3594 - 1 && local21 > 0) {
+																	if (local115 > local65 && local18 < Static152.mapSizeX - 1 && local21 > 0) {
 																		Static120.method2393(Static149.anInt3555, Static162.anInt3947, Static217.anInt4903, local24, local18 + 1, local21 - 1);
 																		break label882;
 																	}
@@ -664,7 +664,7 @@ public final class Static247 {
 		if (local8 != null && local8.anObjectArray11 != null) {
 			@Pc(19) HookRequest local19 = new HookRequest();
 			local19.source = local8;
-			local19.anObjectArray31 = local8.anObjectArray11;
+			local19.arguments = local8.anObjectArray11;
 			Static82.method1767(local19);
 		}
 		Static15.anInt506 = arg1;
@@ -688,7 +688,7 @@ public final class Static247 {
 		if (local10 != null) {
 			return local10;
 		}
-		@Pc(20) byte[] local20 = Static81.aClass153_34.method4495(16, arg0);
+		@Pc(20) byte[] local20 = Static81.aClass153_34.getFile(16, arg0);
 		local10 = new Class35();
 		if (local20 != null) {
 			local10.method1323(new Buffer(local20));

@@ -46,8 +46,8 @@ public final class Static44 {
 			}
 		}
 		Static102.method2073();
-		Static227.anInt5096 = 1;
-		Static196.method3534(30);
+		Static227.cameraType = 1;
+		Static196.setGameState(30);
 		for (local35 = 0; local35 < 100; local35++) {
 			Static186.aBooleanArray100[local35] = true;
 		}
@@ -104,8 +104,8 @@ public final class Static44 {
 			Static17.method531(local28, false);
 		}
 		Static74.method1626(arg0);
-		if (Static154.topLevelInterace != -1) {
-			Static54.method1304(1, Static154.topLevelInterace);
+		if (Static154.topLevelInterface != -1) {
+			Static54.method1304(1, Static154.topLevelInterface);
 		}
 		return local9;
 	}

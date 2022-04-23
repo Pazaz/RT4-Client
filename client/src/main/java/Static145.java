@@ -21,11 +21,11 @@ public final class Static145 {
 
 	@OriginalMember(owner = "client!lf", name = "a", descriptor = "(I)V")
 	public static void method2742() {
-		if (Static244.anInt5370 == 10 && GlRenderer.enabled) {
-			Static196.method3534(28);
+		if (Static244.gameState == 10 && GlRenderer.enabled) {
+			Static196.setGameState(28);
 		}
-		if (Static244.anInt5370 == 30) {
-			Static196.method3534(25);
+		if (Static244.gameState == 30) {
+			Static196.setGameState(25);
 		}
 	}
 
@@ -102,6 +102,6 @@ public final class Static145 {
 
 	@OriginalMember(owner = "client!lf", name = "c", descriptor = "(I)I")
 	public static int method2746() {
-		return ((Static99.stereo ? 1 : 0) << 19) + (((Static71.aBoolean107 ? 1 : 0) << 16) + ((Static220.aBoolean244 ? 1 : 0) << 15) + ((Static178.highDetailLighting ? 1 : 0) << 13) + ((Static209.aBoolean240 ? 1 : 0) << 10) + ((Static159.aBoolean189 ? 1 : 0) << 9) + ((Static15.aBoolean33 ? 1 : 0) << 7) + ((Static53.highDetailTextures ? 1 : 0) << 6) + ((Static250.aBoolean283 ? 1 : 0) << 5) + (((Static162.aBoolean190 ? 1 : 0) << 3) + (Static113.brightness & 0x7) - (-((Static80.aBoolean231 ? 1 : 0) << 4) + -((Static11.aBoolean15 ? 1 : 0) << 8)) - (-((Static139.anInt3451 & 0x3) << 11) + -((Static125.anInt3104 == 0 ? 0 : 1) << 20) - (((Static12.anInt391 == 0 ? 0 : 1) << 21) + ((Static30.anInt978 == 0 ? 0 : 1) << 22)))) + (Static76.method1644() << 23));
+		return ((Static99.stereo ? 1 : 0) << 19) + (((Static71.aBoolean107 ? 1 : 0) << 16) + ((Static220.highWaterDetail ? 1 : 0) << 15) + ((Static178.highDetailLighting ? 1 : 0) << 13) + ((Static209.aBoolean240 ? 1 : 0) << 10) + ((Static159.aBoolean189 ? 1 : 0) << 9) + ((Static15.aBoolean33 ? 1 : 0) << 7) + ((Static53.highDetailTextures ? 1 : 0) << 6) + ((Static250.aBoolean283 ? 1 : 0) << 5) + (((Static162.aBoolean190 ? 1 : 0) << 3) + (Static113.brightness & 0x7) - (-((Static80.aBoolean231 ? 1 : 0) << 4) + -((Static11.aBoolean15 ? 1 : 0) << 8)) - (-((Static139.anInt3451 & 0x3) << 11) + -((Static125.anInt3104 == 0 ? 0 : 1) << 20) - (((Static12.anInt391 == 0 ? 0 : 1) << 21) + ((Static30.anInt978 == 0 ? 0 : 1) << 22)))) + (Static76.method1644() << 23));
 	}
 }

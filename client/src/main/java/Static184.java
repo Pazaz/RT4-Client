@@ -8,10 +8,10 @@ public final class Static184 {
 	public static Js5 js5Archive10;
 
 	@OriginalMember(owner = "client!ol", name = "ib", descriptor = "I")
-	public static int anInt4358;
+	public static int cameraYaw;
 
 	@OriginalMember(owner = "client!ol", name = "V", descriptor = "I")
-	public static int anInt4348 = 0;
+	public static int loginStep = 0;
 
 	@OriginalMember(owner = "client!ol", name = "Y", descriptor = "Lclient!na;")
 	public static final JagString aClass100_819 = Static28.parse("<col=00ff80>");

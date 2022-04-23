@@ -44,7 +44,7 @@ public final class Static263 {
 		}
 		if (local8.anObjectArray29 != null) {
 			@Pc(19) HookRequest local19 = new HookRequest();
-			local19.anObjectArray31 = local8.anObjectArray29;
+			local19.arguments = local8.anObjectArray29;
 			local19.source = local8;
 			local19.aClass100_598 = arg0;
 			local19.anInt3101 = arg2;
@@ -111,9 +111,9 @@ public final class Static263 {
 
 	@OriginalMember(owner = "client!vg", name = "a", descriptor = "(IILclient!fe;)V")
 	public static void method4514(@OriginalArg(0) int arg0, @OriginalArg(2) PathingEntity arg1) {
-		if (Static83.anInt372 < arg1.anInt3395) {
+		if (Static83.loop < arg1.anInt3395) {
 			Static18.method553(arg1);
-		} else if (arg1.anInt3386 >= Static83.anInt372) {
+		} else if (arg1.anInt3386 >= Static83.loop) {
 			Static280.method4665(arg1);
 		} else {
 			Static104.method2247(arg1);

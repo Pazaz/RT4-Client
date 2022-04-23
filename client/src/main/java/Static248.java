@@ -51,7 +51,7 @@ public final class Static248 {
 				for (local37 = Static80.anInt4698; local37 < Static215.anInt4866; local37++) {
 					@Pc(46) Tile local46 = local30[local32][local37];
 					if (local46 != null) {
-						if (Static48.aBooleanArrayArray1[local32 + Static277.anInt5855 - Static167.anInt4069][local37 + Static277.anInt5855 - Static193.anInt4539] && (arg3 == null || local23 < arg4 || arg3[local23][local32][local37] != arg5)) {
+						if (Static48.aBooleanArrayArray1[local32 + Static277.tileVisibilityDistance - Static167.anInt4069][local37 + Static277.tileVisibilityDistance - Static193.anInt4539] && (arg3 == null || local23 < arg4 || arg3[local23][local32][local37] != arg5)) {
 							local46.aBoolean45 = true;
 							local46.aBoolean46 = true;
 							if (local46.anInt662 > 0) {
@@ -95,7 +95,7 @@ public final class Static248 {
 				}
 			}
 		}
-		@Pc(240) boolean local240 = Static83.anIntArrayArrayArray4 == Static80.anIntArrayArrayArray19;
+		@Pc(240) boolean local240 = Static83.activeTileHeightMap == Static80.underWaterTileHeightMap;
 		if (GlRenderer.enabled) {
 			@Pc(244) GL2 local244 = GlRenderer.gl;
 			local244.glPushMatrix();
@@ -108,7 +108,7 @@ public final class Static248 {
 				Static152.anInt3604 = -1;
 				Static22.anInt730 = -1;
 				for (local32 = 0; local32 < Static182.aClass3_Sub14ArrayArray2[0].length; local32++) {
-					@Pc(285) Class3_Sub14 local285 = Static182.aClass3_Sub14ArrayArray2[0][local32];
+					@Pc(285) GlTile local285 = Static182.aClass3_Sub14ArrayArray2[0][local32];
 					@Pc(294) float local294 = 251.5F - (local285.aBoolean140 ? 1.0F : 0.5F);
 					if (local285.anInt2486 != Static152.anInt3604) {
 						Static152.anInt3604 = local285.anInt2486;
@@ -126,16 +126,16 @@ public final class Static248 {
 						break;
 					}
 					for (local37 = 0; local37 < Static182.aClass3_Sub14ArrayArray2[local32].length; local37++) {
-						@Pc(336) Class3_Sub14 local336 = Static182.aClass3_Sub14ArrayArray2[local32][local37];
+						@Pc(336) GlTile local336 = Static182.aClass3_Sub14ArrayArray2[local32][local37];
 						@Pc(350) float local350 = 201.5F - (float) local32 * 50.0F - (local336.aBoolean140 ? 1.0F : 0.5F);
-						if (local336.anInt2485 != -1 && Rasteriser.textureProvider.method3237(local336.anInt2485) == 4 && Static220.aBoolean244) {
+						if (local336.anInt2485 != -1 && Rasteriser.textureProvider.method3237(local336.anInt2485) == 4 && Static220.highWaterDetail) {
 							Static21.method619(local336.anInt2486);
 						}
 						local336.method1944(Static130.aClass3_Sub5ArrayArrayArray1, local350, false);
 					}
 					if (local32 == 0 && Static139.anInt3451 > 0) {
 						GlRenderer.method4159(101.5F);
-						Static242.method4198(Static167.anInt4069, Static193.anInt4539, Static277.anInt5855, arg1, Static48.aBooleanArrayArray1, Static83.anIntArrayArrayArray4[0]);
+						Static242.method4198(Static167.anInt4069, Static193.anInt4539, Static277.tileVisibilityDistance, arg1, Static48.aBooleanArrayArray1, Static83.activeTileHeightMap[0]);
 					}
 					local32++;
 				}
@@ -151,11 +151,11 @@ public final class Static248 {
 		@Pc(428) int local428;
 		for (local399 = Static235.anInt5276; local399 < Static126.anInt3114; local399++) {
 			local406 = Static130.aClass3_Sub5ArrayArrayArray1[local399];
-			for (local37 = -Static277.anInt5855; local37 <= 0; local37++) {
+			for (local37 = -Static277.tileVisibilityDistance; local37 <= 0; local37++) {
 				local415 = Static167.anInt4069 + local37;
 				local183 = Static167.anInt4069 - local37;
 				if (local415 >= Static31.anInt987 || local183 < Static2.anInt15) {
-					for (local428 = -Static277.anInt5855; local428 <= 0; local428++) {
+					for (local428 = -Static277.tileVisibilityDistance; local428 <= 0; local428++) {
 						local434 = Static193.anInt4539 + local428;
 						local438 = Static193.anInt4539 - local428;
 						if (local415 >= Static31.anInt987) {
@@ -198,11 +198,11 @@ public final class Static248 {
 		}
 		for (local399 = Static235.anInt5276; local399 < Static126.anInt3114; local399++) {
 			local406 = Static130.aClass3_Sub5ArrayArrayArray1[local399];
-			for (local37 = -Static277.anInt5855; local37 <= 0; local37++) {
+			for (local37 = -Static277.tileVisibilityDistance; local37 <= 0; local37++) {
 				local415 = Static167.anInt4069 + local37;
 				local183 = Static167.anInt4069 - local37;
 				if (local415 >= Static31.anInt987 || local183 < Static2.anInt15) {
-					for (local428 = -Static277.anInt5855; local428 <= 0; local428++) {
+					for (local428 = -Static277.tileVisibilityDistance; local428 <= 0; local428++) {
 						local434 = Static193.anInt4539 + local428;
 						local438 = Static193.anInt4539 - local428;
 						if (local415 >= Static31.anInt987) {

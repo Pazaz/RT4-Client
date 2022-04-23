@@ -30,14 +30,14 @@ public final class Static234 {
 			if ((local18 & 0x40) != 0) {
 				local43 = Static57.aClass3_Sub15_Sub1_3.g1();
 				local47 = Static57.aClass3_Sub15_Sub1_3.p1neg();
-				local14.method2686(local47, Static83.anInt372, local43);
-				local14.anInt3378 = Static83.anInt372 + 300;
+				local14.method2686(local47, Static83.loop, local43);
+				local14.anInt3378 = Static83.loop + 300;
 				local14.anInt3372 = Static57.aClass3_Sub15_Sub1_3.g1ssub();
 			}
 			if ((local18 & 0x2) != 0) {
 				local43 = Static57.aClass3_Sub15_Sub1_3.p1neg();
 				local47 = Static57.aClass3_Sub15_Sub1_3.g1ssub();
-				local14.method2686(local47, Static83.anInt372, local43);
+				local14.method2686(local47, Static83.loop, local43);
 			}
 			if ((local18 & 0x10) != 0) {
 				local43 = Static57.aClass3_Sub15_Sub1_3.g2();
@@ -65,15 +65,15 @@ public final class Static234 {
 				}
 				if (local147) {
 					local14.anInt3432 = local43;
-					local14.anInt3359 = (local47 & 0xFFFF) + Static83.anInt372;
+					local14.anInt3359 = (local47 & 0xFFFF) + Static83.loop;
 					local14.anInt3361 = 0;
 					local14.anInt3399 = 0;
 					local14.anInt3394 = local47 >> 16;
 					local14.anInt3418 = 1;
-					if (local14.anInt3359 > Static83.anInt372) {
+					if (local14.anInt3359 > Static83.loop) {
 						local14.anInt3399 = -1;
 					}
-					if (local14.anInt3432 != -1 && local14.anInt3359 == Static83.anInt372) {
+					if (local14.anInt3432 != -1 && local14.anInt3359 == Static83.loop) {
 						@Pc(227) int local227 = Static34.method877(local14.anInt3432).anInt1754;
 						if (local227 != -1) {
 							@Pc(236) SeqType local236 = Static36.method941(local227);
@@ -124,7 +124,7 @@ public final class Static234 {
 
 	@OriginalMember(owner = "client!ta", name = "a", descriptor = "(Lclient!ve;III)Z")
 	public static boolean method4016(@OriginalArg(0) Js5 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		@Pc(9) byte[] local9 = arg0.method4495(arg2, arg1);
+		@Pc(9) byte[] local9 = arg0.getFile(arg2, arg1);
 		if (local9 == null) {
 			return false;
 		} else {
@@ -149,7 +149,7 @@ public final class Static234 {
 		@Pc(25) int local25 = Static119.aClass153_44.getGroupId(Static54.aClass100_374);
 		@Pc(30) int[] local30 = Static119.aClass153_44.method4503(local25);
 		for (@Pc(32) int local32 = 0; local32 < local30.length; local32++) {
-			Static228.aClass69_120.method2282(Static210.method3713(new Buffer(Static119.aClass153_44.method4495(local25, local30[local32]))));
+			Static228.aClass69_120.method2282(Static210.method3713(new Buffer(Static119.aClass153_44.getFile(local25, local30[local32]))));
 		}
 	}
 

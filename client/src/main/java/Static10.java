@@ -84,7 +84,7 @@ public final class Static10 {
 				local61 = local61 + Static57.aClass3_Sub15_Sub1_3.data[local63] + ",";
 			}
 			Static89.report(local61, local19);
-			Static278.method4653();
+			Static278.processLogout();
 			return true;
 		}
 	}

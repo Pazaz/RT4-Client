@@ -88,39 +88,39 @@ public final class Static28 {
 	}
 
 	@OriginalMember(owner = "client!cd", name = "a", descriptor = "(IIIIZ)V")
-	public static void method792(@OriginalArg(3) int arg0, @OriginalArg(4) boolean arg1) {
-		Static152.anInt3594 = 104;
-		Static99.anInt2550 = 104;
-		Static277.anInt5855 = arg0;
-		Static197.aClass3_Sub5ArrayArrayArray2 = new Tile[4][Static152.anInt3594][Static99.anInt2550];
-		Static107.anIntArrayArrayArray10 = new int[4][Static152.anInt3594 + 1][Static99.anInt2550 + 1];
+	public static void method792(@OriginalArg(3) int tileVisibility, @OriginalArg(4) boolean hasUnderWaterMap) {
+		Static152.mapSizeX = 104;
+		Static99.mapSizeZ = 104;
+		Static277.tileVisibilityDistance = tileVisibility;
+		Static197.surfaceGroundTiles = new Tile[4][Static152.mapSizeX][Static99.mapSizeZ];
+		Static107.surfaceTileHeightMap = new int[4][Static152.mapSizeX + 1][Static99.mapSizeZ + 1];
 		if (GlRenderer.enabled) {
-			Static36.aClass3_Sub14ArrayArray1 = new Class3_Sub14[4][];
+			Static36.surfaceHdTiles = new GlTile[4][];
 		}
-		if (arg1) {
-			Static276.aClass3_Sub5ArrayArrayArray3 = new Tile[1][Static152.anInt3594][Static99.anInt2550];
-			Static62.anIntArrayArray11 = new int[Static152.anInt3594][Static99.anInt2550];
-			Static80.anIntArrayArrayArray19 = new int[1][Static152.anInt3594 + 1][Static99.anInt2550 + 1];
+		if (hasUnderWaterMap) {
+			Static276.underWaterGroundTiles = new Tile[1][Static152.mapSizeX][Static99.mapSizeZ];
+			Static62.anIntArrayArray11 = new int[Static152.mapSizeX][Static99.mapSizeZ];
+			Static80.underWaterTileHeightMap = new int[1][Static152.mapSizeX + 1][Static99.mapSizeZ + 1];
 			if (GlRenderer.enabled) {
-				Static195.aClass3_Sub14ArrayArray3 = new Class3_Sub14[1][];
+				Static195.underWaterHdTiles = new GlTile[1][];
 			}
 		} else {
-			Static276.aClass3_Sub5ArrayArrayArray3 = null;
+			Static276.underWaterGroundTiles = null;
 			Static62.anIntArrayArray11 = null;
-			Static80.anIntArrayArrayArray19 = null;
-			Static195.aClass3_Sub14ArrayArray3 = null;
+			Static80.underWaterTileHeightMap = null;
+			Static195.underWaterHdTiles = null;
 		}
-		Static278.method4648(false);
+		Static278.setRenderTiles(false);
 		Static91.aClass120Array1 = new Class120[500];
 		anInt917 = 0;
 		Static247.aClass120Array2 = new Class120[500];
 		Static215.anInt4870 = 0;
-		Static140.anIntArrayArrayArray12 = new int[4][Static152.anInt3594 + 1][Static99.anInt2550 + 1];
+		Static140.anIntArrayArrayArray12 = new int[4][Static152.mapSizeX + 1][Static99.mapSizeZ + 1];
 		Static243.aClass31Array3 = new Scenery[5000];
 		Static22.anInt726 = 0;
 		Static25.aClass31Array2 = new Scenery[100];
-		Static48.aBooleanArrayArray1 = new boolean[Static277.anInt5855 + Static277.anInt5855 + 1][Static277.anInt5855 + Static277.anInt5855 + 1];
-		Static89.aBooleanArrayArray3 = new boolean[Static277.anInt5855 + Static277.anInt5855 + 2][Static277.anInt5855 + Static277.anInt5855 + 2];
-		Static232.aByteArrayArrayArray13 = new byte[4][Static152.anInt3594][Static99.anInt2550];
+		Static48.aBooleanArrayArray1 = new boolean[Static277.tileVisibilityDistance + Static277.tileVisibilityDistance + 1][Static277.tileVisibilityDistance + Static277.tileVisibilityDistance + 1];
+		Static89.aBooleanArrayArray3 = new boolean[Static277.tileVisibilityDistance + Static277.tileVisibilityDistance + 2][Static277.tileVisibilityDistance + Static277.tileVisibilityDistance + 2];
+		Static232.aByteArrayArrayArray13 = new byte[4][Static152.mapSizeX][Static99.mapSizeZ];
 	}
 }

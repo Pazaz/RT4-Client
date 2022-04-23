@@ -98,7 +98,7 @@ public final class Static256 {
 		if (local6 != null) {
 			return local6;
 		}
-		@Pc(30) byte[] local30 = Static35.aClass153_22.method4495(4, arg0);
+		@Pc(30) byte[] local30 = Static35.aClass153_22.getFile(4, arg0);
 		local6 = new FloType();
 		if (local30 != null) {
 			local6.method4669(new Buffer(local30), arg0);

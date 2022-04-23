@@ -29,7 +29,7 @@ public final class HookRequest extends Node {
 	public int anInt3102;
 
 	@OriginalMember(owner = "client!jl", name = "E", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray31;
+	public Object[] arguments;
 
 	@OriginalMember(owner = "client!jl", name = "F", descriptor = "Lclient!be;")
 	public Component source;

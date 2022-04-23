@@ -20,7 +20,7 @@ public final class JavaMouseWheel extends MouseWheel implements MouseWheelListen
 
 	@OriginalMember(owner = "client!o", name = "a", descriptor = "(I)I")
 	@Override
-	public final synchronized int method3287() {
+	public final synchronized int getRotation() {
 		@Pc(2) int local2 = this.anInt4233;
 		this.anInt4233 = 0;
 		return local2;

@@ -8,7 +8,7 @@ public final class Static115 {
 	public static int anInt2940;
 
 	@OriginalMember(owner = "client!ja", name = "f", descriptor = "Lclient!ih;")
-	public static final LinkedList aClass69_70 = new LinkedList();
+	public static final LinkedList mediumPriorityRequests = new LinkedList();
 
 	@OriginalMember(owner = "client!ja", name = "j", descriptor = "I")
 	public static int anInt2937 = 0;

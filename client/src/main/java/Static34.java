@@ -91,7 +91,7 @@ public final class Static34 {
 		if (local10 != null) {
 			return local10;
 		}
-		@Pc(26) byte[] local26 = Static132.aClass153_48.method4495(Static206.method3681(arg0), Static133.method4010(arg0));
+		@Pc(26) byte[] local26 = Static132.aClass153_48.getFile(Static206.method3681(arg0), Static133.method4010(arg0));
 		local10 = new SpotAnimType();
 		local10.anInt1751 = arg0;
 		if (local26 != null) {
@@ -129,7 +129,7 @@ public final class Static34 {
 			}
 		}
 		@Pc(156) int local156;
-		if (arg0.anInt3432 != -1 && Static83.anInt372 >= arg0.anInt3359) {
+		if (arg0.anInt3432 != -1 && Static83.loop >= arg0.anInt3359) {
 			local156 = method877(arg0.anInt3432).anInt1754;
 			if (local156 == -1) {
 				arg0.anInt3432 = -1;
@@ -160,7 +160,7 @@ public final class Static34 {
 		}
 		if (arg0.anInt3369 != -1 && arg0.anInt3420 <= 1) {
 			local18 = Static36.method941(arg0.anInt3369);
-			if (local18.anInt5363 == 1 && arg0.anInt3405 > 0 && Static83.anInt372 >= arg0.anInt3395 && Static83.anInt372 > arg0.anInt3386) {
+			if (local18.anInt5363 == 1 && arg0.anInt3405 > 0 && Static83.loop >= arg0.anInt3395 && Static83.loop > arg0.anInt3386) {
 				arg0.anInt3420 = 1;
 				return;
 			}

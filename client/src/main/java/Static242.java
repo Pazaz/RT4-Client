@@ -6,10 +6,10 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static242 {
 
 	@OriginalMember(owner = "client!tj", name = "a", descriptor = "Lclient!ek;")
-	public static SoftwareIndexedSprite aClass36_Sub1_4;
+	public static SoftwareIndexedSprite shadowMapImage;
 
 	@OriginalMember(owner = "client!tj", name = "b", descriptor = "[[Lclient!wm;")
-	public static Class165[][] aClass165ArrayArray1;
+	public static Class165[][] shadows;
 
 	@OriginalMember(owner = "client!tj", name = "c", descriptor = "I")
 	private static int anInt5345;
@@ -97,7 +97,7 @@ public final class Static242 {
 		@Pc(31) int local31 = arg1 + arg3 - 1 - 1 >> 7;
 		for (@Pc(33) int local33 = local5; local33 <= local15; local33++) {
 			for (@Pc(38) int local38 = local21; local38 <= local31; local38++) {
-				aClass165ArrayArray1[local33][local38].aBoolean313 = true;
+				shadows[local33][local38].outputToSprite = true;
 			}
 		}
 	}
@@ -113,9 +113,9 @@ public final class Static242 {
 		@Pc(43) int local43 = local19 - (local29 * Static161.anInt3920 >> 8) >> 3;
 		@Pc(53) int local53 = local33 - (local29 * Static161.anInt3921 >> 8) >> 3;
 		if (arg0 != 0 && arg0 != 1 && (arg2 || arg3)) {
-			method4210(aClass36_Sub1Array2[arg0], aClass36_Sub1_4, local43 + 1, local53 + 1, arg1, arg2);
+			method4210(aClass36_Sub1Array2[arg0], shadowMapImage, local43 + 1, local53 + 1, arg1, arg2);
 		} else {
-			method4194(aClass36_Sub1Array2[1], aClass36_Sub1_4, local43 + 1, local53 + 1);
+			method4194(aClass36_Sub1Array2[1], shadowMapImage, local43 + 1, local53 + 1);
 		}
 	}
 
@@ -134,10 +134,10 @@ public final class Static242 {
 					if (local29 - arg0 >= -arg2 && local29 - arg0 <= arg2) {
 						for (@Pc(51) int local51 = local22 * 8; local51 < local22 * 8 + 8; local51++) {
 							if (local51 - arg1 >= -arg2 && local51 - arg1 <= arg2 && arg4[local29 + arg2 - arg0][local51 + arg2 - arg1]) {
-								@Pc(89) Class165 local89 = aClass165ArrayArray1[local17][local22];
-								if (local89.aBoolean313) {
-									local89.method4677(aClass36_Sub1_4, local17, local22);
-									local89.aBoolean313 = false;
+								@Pc(89) Class165 local89 = shadows[local17][local22];
+								if (local89.outputToSprite) {
+									local89.method4677(shadowMapImage, local17, local22);
+									local89.outputToSprite = false;
 								}
 								local1.glPushMatrix();
 								local1.glTranslatef((float) (local17 * 1024), 0.0F, (float) (local22 * 1024));
@@ -226,11 +226,11 @@ public final class Static242 {
 	public static void method4201() {
 		anInt5346 = 13;
 		anInt5345 = 13;
-		aClass36_Sub1_4 = new SoftwareIndexedSprite(anInt5346 * 128 + 2, anInt5345 * 128 + 2, 0);
-		aClass165ArrayArray1 = new Class165[anInt5346][anInt5345];
+		shadowMapImage = new SoftwareIndexedSprite(anInt5346 * 128 + 2, anInt5345 * 128 + 2, 0);
+		shadows = new Class165[anInt5346][anInt5345];
 		for (@Pc(32) int local32 = 0; local32 < anInt5346; local32++) {
 			for (@Pc(37) int local37 = 0; local37 < anInt5345; local37++) {
-				aClass165ArrayArray1[local32][local37] = new Class165();
+				shadows[local32][local37] = new Class165();
 			}
 		}
 	}
@@ -280,9 +280,9 @@ public final class Static242 {
 
 	@OriginalMember(owner = "client!tj", name = "a", descriptor = "()V")
 	public static void method4203() {
-		aClass36_Sub1_4 = null;
+		shadowMapImage = null;
 		aClass36_Sub1Array2 = null;
-		aClass165ArrayArray1 = null;
+		shadows = null;
 	}
 
 	@OriginalMember(owner = "client!tj", name = "b", descriptor = "([B[BIIIIII)V")
@@ -338,7 +338,7 @@ public final class Static242 {
 		if (arg0 != null) {
 			@Pc(12) int local12 = arg1 - (arg2 * Static161.anInt3920 >> 8) >> 3;
 			@Pc(22) int local22 = arg3 - (arg2 * Static161.anInt3921 >> 8) >> 3;
-			method4202(arg0, aClass36_Sub1_4, local12 + 1, local22 + 1);
+			method4202(arg0, shadowMapImage, local12 + 1, local22 + 1);
 		}
 	}
 
@@ -371,7 +371,7 @@ public final class Static242 {
 		} else {
 			@Pc(13) int local13 = arg1 - (arg2 * Static161.anInt3920 >> 8) >> 3;
 			@Pc(23) int local23 = arg3 - (arg2 * Static161.anInt3921 >> 8) >> 3;
-			return method4200(arg0, aClass36_Sub1_4, local13 + 1, local23 + 1);
+			return method4200(arg0, shadowMapImage, local13 + 1, local23 + 1);
 		}
 	}
 
@@ -415,7 +415,7 @@ public final class Static242 {
 		if (arg0 != null) {
 			@Pc(12) int local12 = arg1 - (arg2 * Static161.anInt3920 >> 8) >> 3;
 			@Pc(22) int local22 = arg3 - (arg2 * Static161.anInt3921 >> 8) >> 3;
-			method4194(arg0, aClass36_Sub1_4, local12 + 1, local22 + 1);
+			method4194(arg0, shadowMapImage, local12 + 1, local22 + 1);
 		}
 	}
 }

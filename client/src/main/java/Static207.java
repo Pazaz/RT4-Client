@@ -19,7 +19,7 @@ public final class Static207 {
 	public static final JagString aClass100_904 = Static28.parse("::wm2");
 
 	@OriginalMember(owner = "client!ql", name = "a", descriptor = "(IFII[[I[[II[[FIBIZLclient!hg;[[FII[[FI)I")
-	public static int method3683(@OriginalArg(0) int arg0, @OriginalArg(1) float arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int[][] arg4, @OriginalArg(5) int[][] arg5, @OriginalArg(6) int arg6, @OriginalArg(7) float[][] arg7, @OriginalArg(8) int arg8, @OriginalArg(10) int arg9, @OriginalArg(11) boolean arg10, @OriginalArg(12) Class3_Sub14 arg11, @OriginalArg(13) float[][] arg12, @OriginalArg(14) int arg13, @OriginalArg(15) int arg14, @OriginalArg(16) float[][] arg15, @OriginalArg(17) int arg16) {
+	public static int method3683(@OriginalArg(0) int arg0, @OriginalArg(1) float arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int[][] arg4, @OriginalArg(5) int[][] arg5, @OriginalArg(6) int arg6, @OriginalArg(7) float[][] arg7, @OriginalArg(8) int arg8, @OriginalArg(10) int arg9, @OriginalArg(11) boolean arg10, @OriginalArg(12) GlTile arg11, @OriginalArg(13) float[][] arg12, @OriginalArg(14) int arg13, @OriginalArg(15) int arg14, @OriginalArg(16) float[][] arg15, @OriginalArg(17) int arg16) {
 		@Pc(20) int local20;
 		if (arg9 == 1) {
 			local20 = arg14;
@@ -188,7 +188,7 @@ public final class Static207 {
 
 	@OriginalMember(owner = "client!ql", name = "a", descriptor = "(IIII)I")
 	public static int method3685(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-		if (Static83.anIntArrayArrayArray4 == null) {
+		if (Static83.activeTileHeightMap == null) {
 			return 0;
 		}
 		@Pc(12) int local12 = arg1 >> 7;
@@ -199,11 +199,11 @@ public final class Static207 {
 		@Pc(36) int local36 = arg1 & 0x7F;
 		@Pc(40) int local40 = arg2 & 0x7F;
 		@Pc(42) int local42 = arg0;
-		if (arg0 < 3 && (Static12.aByteArrayArrayArray2[1][local12][local16] & 0x2) == 2) {
+		if (arg0 < 3 && (Static12.tileSettings[1][local12][local16] & 0x2) == 2) {
 			local42 = arg0 + 1;
 		}
-		@Pc(91) int local91 = local36 * Static83.anIntArrayArrayArray4[local42][local12 + 1][local16 + 1] + Static83.anIntArrayArrayArray4[local42][local12][local16 + 1] * (128 - local36) >> 7;
-		@Pc(118) int local118 = local36 * Static83.anIntArrayArrayArray4[local42][local12 + 1][local16] + (128 - local36) * Static83.anIntArrayArrayArray4[local42][local12][local16] >> 7;
+		@Pc(91) int local91 = local36 * Static83.activeTileHeightMap[local42][local12 + 1][local16 + 1] + Static83.activeTileHeightMap[local42][local12][local16 + 1] * (128 - local36) >> 7;
+		@Pc(118) int local118 = local36 * Static83.activeTileHeightMap[local42][local12 + 1][local16] + (128 - local36) * Static83.activeTileHeightMap[local42][local12][local16] >> 7;
 		return local40 * local91 + (128 - local40) * local118 >> 7;
 	}
 }

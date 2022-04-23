@@ -11,7 +11,7 @@ public final class Static3 {
 	public static final boolean[] aBooleanArray135 = new boolean[200];
 
 	@OriginalMember(owner = "client!ab", name = "j", descriptor = "[Lclient!na;")
-	public static final JagString[] aClass100Array176 = new JagString[1000];
+	public static final JagString[] stringStack = new JagString[1000];
 
 	@OriginalMember(owner = "client!ab", name = "n", descriptor = "Lclient!ih;")
 	public static final LinkedList aClass69_135 = new LinkedList();

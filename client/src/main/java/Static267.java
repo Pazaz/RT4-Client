@@ -102,7 +102,7 @@ public final class Static267 {
 			Static1.anInt6++;
 		}
 		Static226.anInt5084 += arg0;
-		local60 = (arg0 + (Static83.anInt372 & 0x1)) / 2;
+		local60 = (arg0 + (Static83.loop & 0x1)) / 2;
 		if (local60 <= 0) {
 			return;
 		}

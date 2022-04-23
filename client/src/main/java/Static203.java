@@ -63,7 +63,7 @@ public final class Static203 {
 		} else {
 			GameShell.canvas.setLocation(GameShell.leftMargin, GameShell.topMargin);
 		}
-		if (Static154.topLevelInterace != -1) {
+		if (Static154.topLevelInterface != -1) {
 			Static210.method3712(true);
 		}
 		Static139.method2704();

@@ -11,12 +11,12 @@ public final class Static40 {
 	public static final JagString aClass100_253 = Static28.parse("(U0a )2 via: ");
 
 	@OriginalMember(owner = "client!da", name = "d", descriptor = "(I)V")
-	public static void method1008() {
+	public static void updateLoginScreenCamera() {
 		if (Static155.anInt3718 == -1 || Static52.anInt1694 == -1) {
 			return;
 		}
 		@Pc(27) int local27 = (Static233.anInt5224 * (Static114.anInt5843 - Static228.anInt5101) >> 16) + Static228.anInt5101;
-		@Pc(30) float[] local30 = new float[3];
+		@Pc(30) float[] renderCoordinates = new float[3];
 		Static233.anInt5224 += local27;
 		if (Static233.anInt5224 >= 65535) {
 			Static233.anInt5224 = 65535;
@@ -47,11 +47,11 @@ public final class Static40 {
 			local146 = local131 - local141;
 			local155 = local111 + local141 - local131 * 2;
 			local173 = Static107.anIntArrayArrayArray9[Static155.anInt3718][local70 + 2][local72] + local131 - local119 - local111;
-			local30[local72] = (float) local119 + (((float) local173 * local66 + (float) local155) * local66 + (float) local146) * local66;
+			renderCoordinates[local72] = (float) local119 + (((float) local173 * local66 + (float) local155) * local66 + (float) local146) * local66;
 		}
-		Static5.anInt40 = (int) local30[1] * -1;
-		Static138.anInt3439 = (int) local30[0] - Static225.originX * 128;
-		Static134.anInt3302 = (int) local30[2] - Static142.originZ * 128;
+		Static5.anInt40 = (int) renderCoordinates[1] * -1;
+		Static138.renderX = (int) renderCoordinates[0] - Static225.originX * 128;
+		Static134.renderZ = (int) renderCoordinates[2] - Static142.originZ * 128;
 		@Pc(226) float[] local226 = new float[3];
 		local141 = Static75.anInt2119 * 2;
 		for (local131 = 0; local131 < 3; local131++) {
@@ -64,14 +64,14 @@ public final class Static40 {
 			@Pc(331) int local331 = Static107.anIntArrayArrayArray9[Static52.anInt1694][local141 + 2][local131] + local119 - local146 - local155;
 			local226[local131] = (float) local155 + local66 * (local66 * (local66 * (float) local331 + (float) local313) + (float) local173);
 		}
-		@Pc(363) float local363 = local226[0] - local30[0];
-		@Pc(371) float local371 = local226[2] - local30[2];
-		@Pc(382) float local382 = (local226[1] - local30[1]) * -1.0F;
+		@Pc(363) float local363 = local226[0] - renderCoordinates[0];
+		@Pc(371) float local371 = local226[2] - renderCoordinates[2];
+		@Pc(382) float local382 = (local226[1] - renderCoordinates[1]) * -1.0F;
 		@Pc(392) double local392 = Math.sqrt((double) (local371 * local371 + local363 * local363));
 		Static146.aFloat15 = (float) Math.atan2((double) local382, local392);
 		Static84.aFloat10 = -((float) Math.atan2((double) local363, (double) local371));
-		Static240.anInt5333 = (int) ((double) Static146.aFloat15 * 325.949D) & 0x7FF;
-		Static184.anInt4358 = (int) ((double) Static84.aFloat10 * 325.949D) & 0x7FF;
+		Static240.cameraPitch = (int) ((double) Static146.aFloat15 * 325.949D) & 0x7FF;
+		Static184.cameraYaw = (int) ((double) Static84.aFloat10 * 325.949D) & 0x7FF;
 	}
 
 	@OriginalMember(owner = "client!da", name = "a", descriptor = "(ILclient!ve;Z)Lclient!ok;")
@@ -85,7 +85,7 @@ public final class Static40 {
 		if (local10 != null) {
 			return local10;
 		}
-		@Pc(20) byte[] local20 = Static98.aClass153_42.method4495(34, arg0);
+		@Pc(20) byte[] local20 = Static98.aClass153_42.getFile(34, arg0);
 		local10 = new Class2();
 		if (local20 != null) {
 			local10.method6(new Buffer(local20), arg0);
@@ -142,7 +142,7 @@ public final class Static40 {
 		Static6.outboundBuffer.p1(local8.offset);
 		Static6.outboundBuffer.pBytes(local8.data, local8.offset);
 		Static223.anInt5034 = -3;
-		Static179.anInt4261 = 1;
+		Static179.accountCreationStep = 1;
 		Static226.anInt5079 = 0;
 		Static57.anInt1758 = 0;
 	}

@@ -85,12 +85,12 @@ public final class Static69 {
 		for (@Pc(17) int local17 = arg1; local17 <= arg1 + 1; local17++) {
 			if (local17 != Static126.anInt3114) {
 				for (@Pc(28) int local28 = local3; local28 <= local7; local28++) {
-					if (local28 >= 0 && local28 < Static152.anInt3594) {
+					if (local28 >= 0 && local28 < Static152.mapSizeX) {
 						for (@Pc(39) int local39 = local11; local39 <= local15; local39++) {
-							if (local39 >= 0 && local39 < Static99.anInt2550 && (!local1 || local28 >= local7 || local39 >= local15 || local39 < arg3 && local28 != arg2)) {
+							if (local39 >= 0 && local39 < Static99.mapSizeZ && (!local1 || local28 >= local7 || local39 >= local15 || local39 < arg3 && local28 != arg2)) {
 								@Pc(71) Tile local71 = Static130.aClass3_Sub5ArrayArrayArray1[local17][local28][local39];
 								if (local71 != null) {
-									@Pc(158) int local158 = (Static83.anIntArrayArrayArray4[local17][local28][local39] + Static83.anIntArrayArrayArray4[local17][local28 + 1][local39] + Static83.anIntArrayArrayArray4[local17][local28][local39 + 1] + Static83.anIntArrayArrayArray4[local17][local28 + 1][local39 + 1]) / 4 - (Static83.anIntArrayArrayArray4[arg1][arg2][arg3] + Static83.anIntArrayArrayArray4[arg1][arg2 + 1][arg3] + Static83.anIntArrayArrayArray4[arg1][arg2][arg3 + 1] + Static83.anIntArrayArrayArray4[arg1][arg2 + 1][arg3 + 1]) / 4;
+									@Pc(158) int local158 = (Static83.activeTileHeightMap[local17][local28][local39] + Static83.activeTileHeightMap[local17][local28 + 1][local39] + Static83.activeTileHeightMap[local17][local28][local39 + 1] + Static83.activeTileHeightMap[local17][local28 + 1][local39 + 1]) / 4 - (Static83.activeTileHeightMap[arg1][arg2][arg3] + Static83.activeTileHeightMap[arg1][arg2 + 1][arg3] + Static83.activeTileHeightMap[arg1][arg2][arg3 + 1] + Static83.activeTileHeightMap[arg1][arg2 + 1][arg3 + 1]) / 4;
 									@Pc(161) Wall local161 = local71.aClass77_1;
 									if (local161 != null) {
 										if (local161.aClass8_5.method4543()) {

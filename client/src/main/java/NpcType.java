@@ -157,9 +157,9 @@ public final class NpcType {
 	public final NpcType method2932() {
 		@Pc(5) int local5 = -1;
 		if (this.anInt3723 != -1) {
-			local5 = Static155.method2945(this.anInt3723);
+			local5 = Static155.getVarbit(this.anInt3723);
 		} else if (this.anInt3749 != -1) {
-			local5 = Static7.anIntArray75[this.anInt3749];
+			local5 = Static7.varps[this.anInt3749];
 		}
 		if (local5 < 0 || local5 >= this.anIntArray357.length - 1 || this.anIntArray357[local5] == -1) {
 			@Pc(55) int local55 = this.anIntArray357[this.anIntArray357.length - 1];
@@ -176,9 +176,9 @@ public final class NpcType {
 		}
 		@Pc(16) int local16 = -1;
 		if (this.anInt3723 != -1) {
-			local16 = Static155.method2945(this.anInt3723);
+			local16 = Static155.getVarbit(this.anInt3723);
 		} else if (this.anInt3749 != -1) {
-			local16 = Static7.anIntArray75[this.anInt3749];
+			local16 = Static7.varps[this.anInt3749];
 		}
 		if (local16 < 0 || local16 >= this.anIntArray357.length - 1 || this.anIntArray357[local16] == -1) {
 			@Pc(62) int local62 = this.anIntArray357[this.anIntArray357.length - 1];

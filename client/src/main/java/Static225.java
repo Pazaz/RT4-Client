@@ -35,7 +35,7 @@ public final class Static225 {
 					}
 					Static105.anIntArray256[Static267.anInt5774++] = local20;
 					@Pc(65) Player local65 = Static159.aClass8_Sub4_Sub1Array1[local20];
-					local65.anInt3430 = Static83.anInt372;
+					local65.anInt3430 = Static83.loop;
 					@Pc(73) int local73 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
 					if (local73 == 1) {
 						Static44.anIntArray106[Static116.anInt2951++] = local20;
@@ -83,11 +83,11 @@ public final class Static225 {
 		Static5.anInt39 = arg2;
 		Static186.username = arg0;
 		if (Static186.username.method3108(Static186.EMPTY_FILE) || Static186.password.method3108(Static186.EMPTY_FILE)) {
-			Static266.anInt5336 = 3;
+			Static266.returnCode = 3;
 		} else if (Static125.worldId == -1) {
 			Static20.anInt673 = 0;
 			Static196.anInt4587 = 0;
-			Static266.anInt5336 = -3;
+			Static266.returnCode = -3;
 			Static219.anInt4937 = 1;
 			@Pc(43) Buffer local43 = new Buffer(128);
 			local43.p1(10);

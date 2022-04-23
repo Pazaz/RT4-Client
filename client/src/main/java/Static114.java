@@ -43,7 +43,7 @@ public final class Static114 {
 	}
 
 	@OriginalMember(owner = "client!j", name = "a", descriptor = "(BZLclient!na;)V")
-	public static void method4636(@OriginalArg(1) boolean arg0, @OriginalArg(2) JagString arg1) {
+	public static void drawTextOnScreen(@OriginalArg(1) boolean arg0, @OriginalArg(2) JagString arg1) {
 		@Pc(24) int local24 = Static215.aClass3_Sub2_Sub9_32.method2856(arg1, 250);
 		@Pc(31) int local31 = Static215.aClass3_Sub2_Sub9_32.method2860(arg1, 250) * 13;
 		if (GlRenderer.enabled) {

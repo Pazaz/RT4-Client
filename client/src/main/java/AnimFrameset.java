@@ -16,7 +16,7 @@ public final class AnimFrameset extends SecondaryNode {
 		this.aClass104Array1 = new AnimFrame[local10];
 		@Pc(19) int[] local19 = arg0.method4503(arg2);
 		for (@Pc(21) int local21 = 0; local21 < local19.length; local21++) {
-			@Pc(37) byte[] local37 = arg0.method4495(arg2, local19[local21]);
+			@Pc(37) byte[] local37 = arg0.getFile(arg2, local19[local21]);
 			@Pc(51) int local51 = local37[1] & 0xFF | (local37[0] & 0xFF) << 8;
 			@Pc(56) AnimBase local56 = (AnimBase) local5.method2289();
 			@Pc(58) AnimBase local58 = null;

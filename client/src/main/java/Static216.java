@@ -16,8 +16,8 @@ public final class Static216 {
 	public static final int[] anIntArray187 = new int[14];
 
 	@OriginalMember(owner = "client!ri", name = "a", descriptor = "(B)V")
-	public static void method1639() {
-		if (Static184.anInt4348 == 0 || Static184.anInt4348 == 5) {
+	public static void handleLogin() {
+		if (Static184.loginStep == 0 || Static184.loginStep == 5) {
 			return;
 		}
 		try {
@@ -27,8 +27,8 @@ public final class Static216 {
 					Static124.socket = null;
 				}
 				if (Static276.anInt5816 >= 1) {
-					Static266.anInt5336 = -5;
-					Static184.anInt4348 = 0;
+					Static266.returnCode = -5;
+					Static184.loginStep = 0;
 					return;
 				}
 				Static92.anInt2430 = 0;
@@ -37,14 +37,14 @@ public final class Static216 {
 				} else {
 					Static209.port = Static271.defaultPort;
 				}
-				Static184.anInt4348 = 1;
+				Static184.loginStep = 1;
 				Static276.anInt5816++;
 			}
-			if (Static184.anInt4348 == 1) {
+			if (Static184.loginStep == 1) {
 				Static72.aClass212_3 = GameShell.signLink.openSocket(Static60.hostname, Static209.port);
-				Static184.anInt4348 = 2;
+				Static184.loginStep = 2;
 			}
-			if (Static184.anInt4348 == 2) {
+			if (Static184.loginStep == 2) {
 				if (Static72.aClass212_3.status == 2) {
 					throw new IOException();
 				}
@@ -73,15 +73,15 @@ public final class Static216 {
 					Static147.soundChannel.method3571();
 				}
 				if (local150 != 0) {
-					Static266.anInt5336 = local150;
-					Static184.anInt4348 = 0;
+					Static266.returnCode = local150;
+					Static184.loginStep = 0;
 					Static124.socket.close();
 					Static124.socket = null;
 					return;
 				}
-				Static184.anInt4348 = 3;
+				Static184.loginStep = 3;
 			}
-			if (Static184.anInt4348 == 3) {
+			if (Static184.loginStep == 3) {
 				if (Static124.socket.available() < 8) {
 					return;
 				}
@@ -108,7 +108,7 @@ public final class Static216 {
 				}
 				Static6.outboundBuffer.encryptRsa(GlobalConfig.RSA_EXPONENT, GlobalConfig.RSA_MODULUS);
 				Static17.aClass3_Sub15_Sub1_2.offset = 0;
-				if (Static244.anInt5370 == 40) {
+				if (Static244.gameState == 40) {
 					Static17.aClass3_Sub15_Sub1_2.p1(18);
 				} else {
 					Static17.aClass3_Sub15_Sub1_2.p1(16);
@@ -171,72 +171,72 @@ public final class Static216 {
 					local210[local583] += 50;
 				}
 				Static57.aClass3_Sub15_Sub1_3.method2240(local210);
-				Static184.anInt4348 = 4;
+				Static184.loginStep = 4;
 			}
-			if (Static184.anInt4348 == 4) {
+			if (Static184.loginStep == 4) {
 				if (Static124.socket.available() < 1) {
 					return;
 				}
 				@Pc(623) int local623 = Static124.socket.read();
 				if (local623 == 21) {
-					Static184.anInt4348 = 7;
+					Static184.loginStep = 7;
 				} else if (local623 == 29) {
-					Static184.anInt4348 = 10;
+					Static184.loginStep = 10;
 				} else if (local623 == 1) {
-					Static184.anInt4348 = 5;
-					Static266.anInt5336 = local623;
+					Static184.loginStep = 5;
+					Static266.returnCode = local623;
 					return;
 				} else if (local623 == 2) {
-					Static184.anInt4348 = 8;
+					Static184.loginStep = 8;
 				} else if (local623 == 15) {
-					Static184.anInt4348 = 0;
-					Static266.anInt5336 = local623;
+					Static184.loginStep = 0;
+					Static266.returnCode = local623;
 					return;
 				} else if (local623 == 23 && Static276.anInt5816 < 1) {
-					Static184.anInt4348 = 1;
+					Static184.loginStep = 1;
 					Static276.anInt5816++;
 					Static92.anInt2430 = 0;
 					Static124.socket.close();
 					Static124.socket = null;
 					return;
 				} else {
-					Static266.anInt5336 = local623;
-					Static184.anInt4348 = 0;
+					Static266.returnCode = local623;
+					Static184.loginStep = 0;
 					Static124.socket.close();
 					Static124.socket = null;
 					return;
 				}
 			}
-			if (Static184.anInt4348 == 6) {
+			if (Static184.loginStep == 6) {
 				Static6.outboundBuffer.offset = 0;
 				Static6.outboundBuffer.p1isaac(17);
 				Static124.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
-				Static184.anInt4348 = 4;
+				Static184.loginStep = 4;
 				return;
 			}
-			if (Static184.anInt4348 == 7) {
+			if (Static184.loginStep == 7) {
 				if (Static124.socket.available() >= 1) {
 					Static231.anInt5202 = (Static124.socket.read() + 3) * 60;
-					Static184.anInt4348 = 0;
-					Static266.anInt5336 = 21;
+					Static184.loginStep = 0;
+					Static266.returnCode = 21;
 					Static124.socket.close();
 					Static124.socket = null;
 					return;
 				}
 				return;
 			}
-			if (Static184.anInt4348 == 10) {
+			if (Static184.loginStep == 10) {
 				if (Static124.socket.available() >= 1) {
 					Static204.anInt4765 = Static124.socket.read();
-					Static184.anInt4348 = 0;
-					Static266.anInt5336 = 29;
+					Static184.loginStep = 0;
+					Static266.returnCode = 29;
 					Static124.socket.close();
 					Static124.socket = null;
 					return;
 				}
 				return;
 			}
-			if (Static184.anInt4348 == 8) {
+			if (Static184.loginStep == 8) {
 				if (Static124.socket.available() < 14) {
 					return;
 				}
@@ -269,16 +269,16 @@ public final class Static216 {
 				}
 				Static164.anInt3985 = Static57.aClass3_Sub15_Sub1_3.method2243();
 				Static223.anInt5028 = Static57.aClass3_Sub15_Sub1_3.g2();
-				Static184.anInt4348 = 9;
+				Static184.loginStep = 9;
 			}
-			if (Static184.anInt4348 == 9) {
+			if (Static184.loginStep == 9) {
 				if (Static124.socket.available() < Static223.anInt5028) {
 					return;
 				}
 				Static57.aClass3_Sub15_Sub1_3.offset = 0;
 				Static124.socket.read(0, Static223.anInt5028, Static57.aClass3_Sub15_Sub1_3.data);
-				Static266.anInt5336 = 2;
-				Static184.anInt4348 = 0;
+				Static266.returnCode = 2;
+				Static184.loginStep = 0;
 				Static243.method4221();
 				Static80.anInt4701 = -1;
 				Static75.method1629(false);
@@ -291,10 +291,10 @@ public final class Static216 {
 				Static124.socket = null;
 			}
 			if (Static276.anInt5816 >= 1) {
-				Static184.anInt4348 = 0;
-				Static266.anInt5336 = -4;
+				Static184.loginStep = 0;
+				Static266.returnCode = -4;
 			} else {
-				Static184.anInt4348 = 1;
+				Static184.loginStep = 1;
 				Static92.anInt2430 = 0;
 				Static276.anInt5816++;
 				if (Static271.defaultPort == Static209.port) {

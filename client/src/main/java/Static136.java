@@ -99,7 +99,7 @@ public final class Static136 {
 		} else {
 			Static178.highDetailLighting = arg0.g1() == 1;
 		}
-		Static220.aBoolean244 = arg0.g1() == 1;
+		Static220.highWaterDetail = arg0.g1() == 1;
 		Static71.aBoolean107 = arg0.g1() == 1;
 		Static102.windowMode = arg0.g1();
 		if (Static102.windowMode > 2) {

@@ -141,7 +141,7 @@ public final class Js5 {
 		@Pc(28) int local28 = this.aClass70_2.aClass76_1.method2405(local15.method3154());
 		if (this.method4492(local28)) {
 			@Pc(53) int local53 = this.aClass70_2.aClass76Array1[local28].method2405(local19.method3154());
-			return this.method4495(local28, local53);
+			return this.getFile(local28, local53);
 		} else {
 			return null;
 		}
@@ -173,7 +173,7 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(I[III)[B")
-	public final byte[] method4488(@OriginalArg(0) int arg0, @OriginalArg(1) int[] arg1, @OriginalArg(3) int arg2) {
+	public final byte[] getFileXTEA(@OriginalArg(0) int arg0, @OriginalArg(1) int[] arg1, @OriginalArg(3) int arg2) {
 		if (!this.method4501(arg0, arg2)) {
 			return null;
 		}
@@ -198,7 +198,7 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(BLclient!na;)Z")
-	public final boolean method4489(@OriginalArg(1) JagString arg0) {
+	public final boolean allFilesComplete(@OriginalArg(1) JagString arg0) {
 		if (this.method4484()) {
 			@Pc(14) JagString local14 = arg0.toLowerCase();
 			@Pc(25) int local25 = this.aClass70_2.aClass76_1.method2405(local14.method3154());
@@ -360,8 +360,8 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(IBI)[B")
-	public final byte[] method4495(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		return this.method4488(arg0, null, arg1);
+	public final byte[] getFile(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
+		return this.getFileXTEA(arg0, null, arg1);
 	}
 
 	@OriginalMember(owner = "client!ve", name = "b", descriptor = "(ZI)V")
@@ -418,11 +418,11 @@ public final class Js5 {
 		if (!this.method4484()) {
 			return null;
 		} else if (this.aClass70_2.anIntArray270.length == 1) {
-			return this.method4495(0, arg0);
+			return this.getFile(0, arg0);
 		} else if (!this.method4492(arg0)) {
 			return null;
 		} else if (this.aClass70_2.anIntArray270[arg0] == 1) {
-			return this.method4495(arg0, 0);
+			return this.getFile(arg0, 0);
 		} else {
 			throw new RuntimeException();
 		}

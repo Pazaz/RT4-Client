@@ -10,7 +10,7 @@ public final class Static35 {
 	public static Js5 aClass153_22;
 
 	@OriginalMember(owner = "client!cl", name = "V", descriptor = "[I")
-	public static int[] anIntArray82;
+	public static int[] underWaterLocationsMapFileIds;
 
 	@OriginalMember(owner = "client!cl", name = "X", descriptor = "I")
 	public static int anInt1091;
@@ -104,7 +104,7 @@ public final class Static35 {
 	}
 
 	@OriginalMember(owner = "client!cl", name = "e", descriptor = "(I)V")
-	public static void method902() {
+	public static void resetCameraEffects() {
 		for (@Pc(3) int local3 = 0; local3 < 5; local3++) {
 			Static176.aBooleanArray95[local3] = false;
 		}
@@ -112,6 +112,6 @@ public final class Static35 {
 		Static233.anInt5217 = 0;
 		Static155.anInt3718 = -1;
 		Static52.anInt1694 = -1;
-		Static227.anInt5096 = 1;
+		Static227.cameraType = 1;
 	}
 }

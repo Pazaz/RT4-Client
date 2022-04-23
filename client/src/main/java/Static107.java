@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class Static107 {
 
 	@OriginalMember(owner = "client!id", name = "i", descriptor = "[[[I")
-	public static int[][][] anIntArrayArrayArray10;
+	public static int[][][] surfaceTileHeightMap;
 
 	@OriginalMember(owner = "client!id", name = "k", descriptor = "I")
 	public static int anInt2878;

@@ -11,13 +11,13 @@ public final class Static220 {
 	public static final SoftLruHashTable aClass99_28 = new SoftLruHashTable(64);
 
 	@OriginalMember(owner = "client!rm", name = "g", descriptor = "Z")
-	public static boolean aBoolean244 = true;
+	public static boolean highWaterDetail = true;
 
 	@OriginalMember(owner = "client!rm", name = "i", descriptor = "Lclient!na;")
 	public static final JagString aClass100_930 = Static28.parse("(Z");
 
 	@OriginalMember(owner = "client!rm", name = "a", descriptor = "(IBI)V")
-	public static void method3797(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
+	public static void spawnGroundObject(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
 		@Pc(9) LinkedList local9 = Static159.aClass69ArrayArrayArray1[Static55.level][arg1][arg0];
 		if (local9 == null) {
 			Static187.method3420(Static55.level, arg1, arg0);
@@ -112,8 +112,8 @@ public final class Static220 {
 	@OriginalMember(owner = "client!rm", name = "a", descriptor = "(III)V")
 	public static void method3801() {
 		for (@Pc(1) int local1 = 0; local1 < Static126.anInt3114; local1++) {
-			for (@Pc(6) int local6 = 0; local6 < Static152.anInt3594; local6++) {
-				for (@Pc(11) int local11 = 0; local11 < Static99.anInt2550; local11++) {
+			for (@Pc(6) int local6 = 0; local6 < Static152.mapSizeX; local6++) {
+				for (@Pc(11) int local11 = 0; local11 < Static99.mapSizeZ; local11++) {
 					@Pc(22) Tile local22 = Static130.aClass3_Sub5ArrayArrayArray1[local1][local6][local11];
 					if (local22 != null) {
 						@Pc(27) Wall local27 = local22.aClass77_1;

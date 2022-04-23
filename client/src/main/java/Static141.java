@@ -63,14 +63,14 @@ public final class Static141 {
 		Static92.aClass3_Sub2_Sub1_6 = null;
 		Static165.aClass3_Sub2_Sub1_8 = null;
 		Static181.aClass3_Sub2_Sub1_9 = null;
-		if (Static244.anInt5370 == 5) {
+		if (Static244.gameState == 5) {
 			Static181.method3344(Static209.js5Archive8);
 		}
-		if (Static244.anInt5370 == 10) {
+		if (Static244.gameState == 10) {
 			Static73.method1596(false);
 		}
-		if (Static244.anInt5370 == 30) {
-			Static196.method3534(25);
+		if (Static244.gameState == 30) {
+			Static196.setGameState(25);
 		}
 	}
 
@@ -82,11 +82,11 @@ public final class Static141 {
 		Static233.anInt5225 = arg1;
 		Static248.anInt4232 = arg4;
 		if (arg0 && Static113.anInt4612 >= 100) {
-			Static138.anInt3439 = Static245.anInt5375 * 128 + 64;
-			Static134.anInt3302 = Static248.anInt4232 * 128 + 64;
-			Static5.anInt40 = Static207.method3685(Static55.level, Static138.anInt3439, Static134.anInt3302) - Static231.anInt5203;
+			Static138.renderX = Static245.anInt5375 * 128 + 64;
+			Static134.renderZ = Static248.anInt4232 * 128 + 64;
+			Static5.anInt40 = Static207.method3685(Static55.level, Static138.renderX, Static134.renderZ) - Static231.anInt5203;
 		}
-		Static227.anInt5096 = 2;
+		Static227.cameraType = 2;
 	}
 
 	@OriginalMember(owner = "client!lb", name = "a", descriptor = "(Lclient!ve;Lclient!ve;ILclient!ve;)V")

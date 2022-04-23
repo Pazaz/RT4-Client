@@ -75,27 +75,27 @@ public final class Static63 {
 	}
 
 	@OriginalMember(owner = "client!fa", name = "c", descriptor = "()V")
-	public static synchronized void method1490() {
+	public static synchronized void process() {
 		@Pc(1) GL2 local1 = GlRenderer.gl;
 		@Pc(3) int local3 = 0;
 		while (true) {
-			@Pc(8) IntNode local8 = (IntNode) aClass69_48.method2287();
+			@Pc(8) IntNode local8 = (IntNode) aClass69_48.removeHead();
 			if (local8 == null) {
 				if (local3 > 0) {
 					local1.glDeleteBuffers(local3, anIntArray151, 0);
 					local3 = 0;
 				}
 				while (true) {
-					local8 = (IntNode) aClass69_49.method2287();
+					local8 = (IntNode) aClass69_49.removeHead();
 					if (local8 == null) {
 						while (true) {
-							local8 = (IntNode) aClass69_50.method2287();
+							local8 = (IntNode) aClass69_50.removeHead();
 							if (local8 == null) {
 								if (local3 > 0) {
 									local1.glDeleteTextures(local3, anIntArray151, 0);
 								}
 								while (true) {
-									local8 = (IntNode) aClass69_51.method2287();
+									local8 = (IntNode) aClass69_51.removeHead();
 									if (local8 == null) {
 										if (anInt1945 + onCard2d + onCardTexture > 100663296 && MonotonicClock.currentTimeMillis() > aLong71 + 60000L) {
 											System.gc();

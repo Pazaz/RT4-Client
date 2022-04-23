@@ -28,7 +28,7 @@ public final class CollisionMap {
 		this.anInt3912 = 0;
 		this.anInt3899 = arg0;
 		this.anIntArrayArray30 = new int[this.anInt3899][this.anInt3904];
-		this.method3050();
+		this.resetFlags();
 	}
 
 	@OriginalMember(owner = "client!mj", name = "a", descriptor = "(IZIIII)V")
@@ -759,7 +759,7 @@ public final class CollisionMap {
 	}
 
 	@OriginalMember(owner = "client!mj", name = "a", descriptor = "(I)V")
-	public final void method3050() {
+	public final void resetFlags() {
 		for (@Pc(3) int local3 = 0; local3 < this.anInt3899; local3++) {
 			for (@Pc(13) int local13 = 0; local13 < this.anInt3904; local13++) {
 				if (local3 == 0 || local13 == 0 || local3 >= this.anInt3899 - 5 || this.anInt3904 - 5 <= local13) {
@@ -772,7 +772,7 @@ public final class CollisionMap {
 	}
 
 	@OriginalMember(owner = "client!mj", name = "a", descriptor = "(III)V")
-	public final void method3051(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
+	public final void addRangeableFlag(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
 		@Pc(12) int local12 = arg0 - this.anInt3907;
 		@Pc(17) int local17 = arg1 - this.anInt3912;
 		this.anIntArrayArray30[local17][local12] |= 0x200000;

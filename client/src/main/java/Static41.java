@@ -178,19 +178,19 @@ public final class Static41 {
 			@Pc(84) int local84 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
 			if (local84 == 0) {
 				Static105.anIntArray256[Static267.anInt5774++] = local75;
-				local79.anInt3430 = Static83.anInt372;
+				local79.anInt3430 = Static83.loop;
 			} else {
 				@Pc(107) int local107 = Static57.aClass3_Sub15_Sub1_3.method2238(2);
 				if (local107 == 0) {
 					Static105.anIntArray256[Static267.anInt5774++] = local75;
-					local79.anInt3430 = Static83.anInt372;
+					local79.anInt3430 = Static83.loop;
 					Static44.anIntArray106[Static116.anInt2951++] = local75;
 				} else {
 					@Pc(153) int local153;
 					@Pc(163) int local163;
 					if (local107 == 1) {
 						Static105.anIntArray256[Static267.anInt5774++] = local75;
-						local79.anInt3430 = Static83.anInt372;
+						local79.anInt3430 = Static83.loop;
 						local153 = Static57.aClass3_Sub15_Sub1_3.method2238(3);
 						local79.method2684(1, local153);
 						local163 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
@@ -199,7 +199,7 @@ public final class Static41 {
 						}
 					} else if (local107 == 2) {
 						Static105.anIntArray256[Static267.anInt5774++] = local75;
-						local79.anInt3430 = Static83.anInt372;
+						local79.anInt3430 = Static83.loop;
 						if (Static57.aClass3_Sub15_Sub1_3.method2238(1) == 1) {
 							local153 = Static57.aClass3_Sub15_Sub1_3.method2238(3);
 							local79.method2684(2, local153);

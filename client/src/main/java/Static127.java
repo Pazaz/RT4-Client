@@ -25,26 +25,26 @@ public final class Static127 {
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(IIBLclient!ve;Lclient!ve;)Lclient!rk;")
 	public static Font method2462(@OriginalArg(1) int arg0, @OriginalArg(3) Js5 arg1, @OriginalArg(4) Js5 arg2) {
-		return Static234.method4016(arg1, 0, arg0) ? Static29.method799(arg2.method4495(arg0, 0)) : null;
+		return Static234.method4016(arg1, 0, arg0) ? Static29.method799(arg2.getFile(arg0, 0)) : null;
 	}
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(IIIIZIZ)V")
 	public static void method2463(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4, @OriginalArg(5) int arg5) {
-		if (Static80.anInt4701 == arg2 && arg1 == Static52.anInt1695 && (Static41.anInt1316 == arg0 || Static138.method2697())) {
+		if (Static80.anInt4701 == arg2 && arg1 == Static52.anInt1695 && (Static41.anInt1316 == arg0 || Static138.allLevelsAreVisible())) {
 			return;
 		}
 		Static80.anInt4701 = arg2;
 		Static52.anInt1695 = arg1;
 		Static41.anInt1316 = arg0;
-		if (Static138.method2697()) {
+		if (Static138.allLevelsAreVisible()) {
 			Static41.anInt1316 = 0;
 		}
 		if (arg4) {
-			Static196.method3534(28);
+			Static196.setGameState(28);
 		} else {
-			Static196.method3534(25);
+			Static196.setGameState(25);
 		}
-		Static114.method4636(true, LocalizedText.LOADING);
+		Static114.drawTextOnScreen(true, LocalizedText.LOADING);
 		@Pc(53) int local53 = Static142.originZ;
 		@Pc(55) int local55 = Static225.originX;
 		Static142.originZ = arg1 * 8 - 48;
@@ -52,7 +52,7 @@ public final class Static127 {
 		Static158.aClass3_Sub2_Sub4_3 = Static29.method803(Static80.anInt4701 * 8, Static52.anInt1695 * 8);
 		@Pc(81) int local81 = Static142.originZ - local53;
 		@Pc(86) int local86 = Static225.originX - local55;
-		Static235.aClass134_2 = null;
+		Static235.mapFunctionGroup = null;
 		@Pc(96) int local96;
 		@Pc(103) Npc local103;
 		@Pc(109) int local109;
@@ -138,14 +138,14 @@ public final class Static127 {
 			}
 		}
 		if (arg4) {
-			Static138.anInt3439 -= local86 * 128;
-			Static134.anInt3302 -= local81 * 128;
+			Static138.renderX -= local86 * 128;
+			Static134.renderZ -= local81 * 128;
 			Static248.anInt4232 -= local81;
 			Static251.anInt5449 -= local86;
 			Static265.anInt5765 -= local81;
 			Static245.anInt5375 -= local86;
 		} else {
-			Static227.anInt5096 = 1;
+			Static227.cameraType = 1;
 		}
 		Static189.anInt4451 = 0;
 		if (Static115.anInt2939 != 0) {
@@ -295,7 +295,7 @@ public final class Static127 {
 				GameShell.replaceCanvas = true;
 			}
 			if (arg0.method3111(Static148.aClass100_677)) {
-				Static196.method3534(25);
+				Static196.setGameState(25);
 			}
 			if (arg0.method3111(Static107.aClass100_566)) {
 				Static43.displayFps = true;

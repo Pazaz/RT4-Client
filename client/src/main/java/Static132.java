@@ -51,8 +51,8 @@ public final class Static132 {
 			Static13.anInt436 = Static231.anInt5204 * 15 + (Static261.aBoolean298 ? 26 : 22);
 			Static24.anInt761 = local43 + 8;
 		}
-		if (Static154.topLevelInterace != -1) {
-			Static54.method1304(1, Static154.topLevelInterace);
+		if (Static154.topLevelInterface != -1) {
+			Static54.method1304(1, Static154.topLevelInterface);
 		}
 	}
 
@@ -97,10 +97,10 @@ public final class Static132 {
 		@Pc(21) int local21 = local20 = local7 + 128;
 		@Pc(26) int local26;
 		@Pc(27) int local27 = local26 = local15 + 128;
-		@Pc(37) int local37 = Static83.anIntArrayArrayArray4[arg1][arg6][arg7] - Static162.anInt3947;
-		@Pc(49) int local49 = Static83.anIntArrayArrayArray4[arg1][arg6 + 1][arg7] - Static162.anInt3947;
-		@Pc(63) int local63 = Static83.anIntArrayArrayArray4[arg1][arg6 + 1][arg7 + 1] - Static162.anInt3947;
-		@Pc(75) int local75 = Static83.anIntArrayArrayArray4[arg1][arg6][arg7 + 1] - Static162.anInt3947;
+		@Pc(37) int local37 = Static83.activeTileHeightMap[arg1][arg6][arg7] - Static162.anInt3947;
+		@Pc(49) int local49 = Static83.activeTileHeightMap[arg1][arg6 + 1][arg7] - Static162.anInt3947;
+		@Pc(63) int local63 = Static83.activeTileHeightMap[arg1][arg6 + 1][arg7 + 1] - Static162.anInt3947;
+		@Pc(75) int local75 = Static83.activeTileHeightMap[arg1][arg6][arg7 + 1] - Static162.anInt3947;
 		@Pc(85) int local85 = local15 * arg4 + local7 * arg5 >> 16;
 		@Pc(95) int local95 = local15 * arg5 - local7 * arg4 >> 16;
 		@Pc(97) int local97 = local85;

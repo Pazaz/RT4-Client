@@ -51,13 +51,13 @@ public final class Static250 {
 			for (@Pc(93) int local93 = 0; local93 < Static182.keyQueueSize; local93++) {
 				@Pc(104) int local104 = Static227.keyCodes[local93];
 				if (local104 == 98) {
-					Static72.anInt2031 = Static72.anInt2031 + 47 & 0xFFFFFFF0;
+					Static72.pitchTarget = Static72.pitchTarget + 47 & 0xFFFFFFF0;
 				} else if (local104 == 99) {
-					Static72.anInt2031 = Static72.anInt2031 - 17 & 0xFFFFFFF0;
+					Static72.pitchTarget = Static72.pitchTarget - 17 & 0xFFFFFFF0;
 				} else if (local104 == 96) {
-					Static57.anInt1747 = Static57.anInt1747 - 65 & 0xFFFFFF80;
+					Static57.yawTarget = Static57.yawTarget - 65 & 0xFFFFFF80;
 				} else if (local104 == 97) {
-					Static57.anInt1747 = Static57.anInt1747 + 191 & 0xFFFFFF80;
+					Static57.yawTarget = Static57.yawTarget + 191 & 0xFFFFFF80;
 				}
 			}
 		} else {
@@ -75,9 +75,9 @@ public final class Static250 {
 			} else {
 				Static38.anInt1203 /= 2;
 			}
-			Static72.anInt2031 += Static56.anInt1743 / 2;
-			Static57.anInt1747 += Static38.anInt1203 / 2;
+			Static72.pitchTarget += Static56.anInt1743 / 2;
+			Static57.yawTarget += Static38.anInt1203 / 2;
 		}
-		Static87.method1812();
+		Static87.clampCameraAngle();
 	}
 }

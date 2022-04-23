@@ -11,7 +11,7 @@ public final class Static185 {
 	public static float aFloat23;
 
 	@OriginalMember(owner = "client!p", name = "c", descriptor = "Lclient!ih;")
-	public static final LinkedList aClass69_101 = new LinkedList();
+	public static final LinkedList lowPriorityRequests = new LinkedList();
 
 	@OriginalMember(owner = "client!p", name = "d", descriptor = "I")
 	public static int anInt4369 = 0;
@@ -21,15 +21,15 @@ public final class Static185 {
 
 	@OriginalMember(owner = "client!p", name = "a", descriptor = "(I)V")
 	public static void method3395() {
-		if (Static184.anInt4348 == 5) {
-			Static184.anInt4348 = 6;
+		if (Static184.loginStep == 5) {
+			Static184.loginStep = 6;
 		}
 	}
 
 	@OriginalMember(owner = "client!p", name = "a", descriptor = "(IZIZLclient!mj;IIIBII)V")
 	public static void method3397(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(3) boolean arg3, @OriginalArg(4) CollisionMap arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(9) int arg8, @OriginalArg(10) int arg9) {
-		if (arg1 && !Static138.method2697() && (Static12.aByteArrayArrayArray2[0][arg7][arg8] & 0x2) == 0) {
-			if ((Static12.aByteArrayArrayArray2[arg2][arg7][arg8] & 0x10) != 0) {
+		if (arg1 && !Static138.allLevelsAreVisible() && (Static12.tileSettings[0][arg7][arg8] & 0x2) == 0) {
+			if ((Static12.tileSettings[arg2][arg7][arg8] & 0x10) != 0) {
 				return;
 			}
 			if (Static4.method22(arg8, arg7, arg2) != Static41.anInt1316) {
@@ -70,22 +70,22 @@ public final class Static185 {
 			local129 = (local81 >> 1) + arg8;
 			local133 = arg8 + (local81 + 1 >> 1);
 		}
-		@Pc(153) int[][] local153 = Static83.anIntArrayArrayArray4[arg0];
+		@Pc(153) int[][] local153 = Static83.activeTileHeightMap[arg0];
 		@Pc(165) int local165 = (local84 << 6) + (arg7 << 7);
 		@Pc(173) int local173 = (local81 << 6) + (arg8 << 7);
 		@Pc(199) int local199 = local153[local103][local133] + local153[local112][local129] + local153[local103][local129] + local153[local112][local133] >> 2;
 		@Pc(201) int local201 = 0;
 		@Pc(213) int[][] local213;
 		if (GlRenderer.enabled && arg0 != 0) {
-			local213 = Static83.anIntArrayArrayArray4[0];
+			local213 = Static83.activeTileHeightMap[0];
 			local201 = local199 - (local213[local112][local133] + local213[local112][local129] + local213[local103][local129] + local213[local103][local133] >> 2);
 		}
 		local213 = null;
 		@Pc(261) long local261 = (long) (arg7 | 0x40000000 | arg8 << 7 | arg6 << 14 | arg9 << 20);
 		if (arg3) {
-			local213 = Static107.anIntArrayArrayArray10[0];
+			local213 = Static107.surfaceTileHeightMap[0];
 		} else if (arg0 < 3) {
-			local213 = Static83.anIntArrayArrayArray4[arg0 + 1];
+			local213 = Static83.activeTileHeightMap[arg0 + 1];
 		}
 		if (local62.anInt4429 == 0 || arg3) {
 			local261 |= Long.MIN_VALUE;

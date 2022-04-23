@@ -37,7 +37,7 @@ public final class Static48 {
 		local4.p1(Static209.aBoolean240 ? 1 : 0);
 		local4.p1(Static139.anInt3451);
 		local4.p1(Static178.highDetailLighting ? 1 : 0);
-		local4.p1(Static220.aBoolean244 ? 1 : 0);
+		local4.p1(Static220.highWaterDetail ? 1 : 0);
 		local4.p1(Static71.aBoolean107 ? 1 : 0);
 		local4.p1(Static102.windowMode);
 		local4.p1(Static99.stereo ? 1 : 0);

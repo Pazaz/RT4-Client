@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class Static191 {
 
 	@OriginalMember(owner = "client!pg", name = "jb", descriptor = "[[B")
-	public static byte[][] aByteArrayArray15;
+	public static byte[][] npcSpawnsFilesBuffer;
 
 	@OriginalMember(owner = "client!pg", name = "fb", descriptor = "I")
 	public static final int anInt4506 = 50;

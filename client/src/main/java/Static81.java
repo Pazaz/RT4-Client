@@ -62,7 +62,7 @@ public final class Static81 {
 		if (local10 != null) {
 			return local10;
 		}
-		@Pc(21) byte[] local21 = Static216.aClass153_31.method4495(3, arg0);
+		@Pc(21) byte[] local21 = Static216.aClass153_31.getFile(3, arg0);
 		local10 = new IdkType();
 		if (local21 != null) {
 			local10.method1209(new Buffer(local21));
@@ -109,7 +109,7 @@ public final class Static81 {
 		}
 		for (@Pc(34) int i = 0; i < 100 && Static10.readPacket(); i++) {
 		}
-		if (Static244.anInt5370 != 30) {
+		if (Static244.gameState != 30) {
 			return;
 		}
 		Static233.loop(Static6.outboundBuffer); // ReflectionCheck
@@ -243,8 +243,8 @@ public final class Static81 {
 			Static16.anInt551 = 20;
 			Static197.aBoolean228 = false;
 			Static6.outboundBuffer.p1isaac(21);
-			Static6.outboundBuffer.p2add(Static72.anInt2031);
-			Static6.outboundBuffer.p2le(Static57.anInt1747);
+			Static6.outboundBuffer.p2add(Static72.pitchTarget);
+			Static6.outboundBuffer.p2le(Static57.yawTarget);
 		}
 		if (GameShell.focus && !Static67.prevFocus) {
 			Static67.prevFocus = true;
@@ -262,7 +262,7 @@ public final class Static81 {
 			Static18.sentToServer = true;
 		}
 		Static31.method846();
-		if (Static244.anInt5370 != 30) {
+		if (Static244.gameState != 30) {
 			return;
 		}
 		Static251.loop(); // ChangeLocRequest
@@ -488,26 +488,25 @@ public final class Static81 {
 		}
 		// WorldMap.component
 		Static24.component = null;
-		if (Static154.topLevelInterace != -1) {
-			Static57.method1320(0, 0, 0, GameShell.canvasWidth, Static154.topLevelInterace, 0, GameShell.canvasHeight);
+		if (Static154.topLevelInterface != -1) {
+			Static57.method1320(0, 0, 0, GameShell.canvasWidth, Static154.topLevelInterface, 0, GameShell.canvasHeight);
 		}
 		Static119.transmitTimer++;
 		while (true) {
-			// todo: this is actually split up into low/medium/high
-			@Pc(1569) Component highPriorityComponent;
-			@Pc(1560) Component highPrioritySource;
-			@Pc(1555) HookRequest highPriorityRequest;
+			@Pc(1569) Component priorityComponent;
+			@Pc(1560) Component prioritySource;
+			@Pc(1555) HookRequest priorityRequest;
 			do {
-				highPriorityRequest = (HookRequest) Static4.aClass69_2.method2287();
-				if (highPriorityRequest == null) {
+				priorityRequest = (HookRequest) Static4.highPriorityRequests.removeHead();
+				if (priorityRequest == null) {
 					while (true) {
 						do {
-							highPriorityRequest = (HookRequest) Static115.aClass69_70.method2287();
-							if (highPriorityRequest == null) {
+							priorityRequest = (HookRequest) Static115.mediumPriorityRequests.removeHead();
+							if (priorityRequest == null) {
 								while (true) {
 									do {
-										highPriorityRequest = (HookRequest) Static185.aClass69_101.method2287();
-										if (highPriorityRequest == null) {
+										priorityRequest = (HookRequest) Static185.lowPriorityRequests.removeHead();
+										if (priorityRequest == null) {
 											if (Static24.component == null) {
 												Static137.anInt3337 = 0;
 											}
@@ -591,12 +590,12 @@ public final class Static81 {
 													Static43.method1143(Static43.aClass13_11);
 												}
 											}
-											if (Static227.anInt5096 == 1) {
+											if (Static227.cameraType == 1) {
 												Static250.method4273();
-											} else if (Static227.anInt5096 == 2) {
-												Static125.method2450();
+											} else if (Static227.cameraType == 2) {
+												Static125.updateLockedCamera();
 											} else {
-												Static40.method1008();
+												Static40.updateLoginScreenCamera();
 											}
 											for (y = 0; y < 5; y++) {
 												@Pc(2001) int local2001 = Static31.anIntArray76[y]++;
@@ -690,32 +689,31 @@ public final class Static81 {
 											}
 											return;
 										}
-										// low priority actually
-										highPrioritySource = highPriorityRequest.source;
-										if (highPrioritySource.componentId < 0) {
+										prioritySource = priorityRequest.source;
+										if (prioritySource.componentId < 0) {
 											break;
 										}
-										highPriorityComponent = Static5.getComponent(highPrioritySource.layer);
-									} while (highPriorityComponent == null || highPriorityComponent.createdComponents == null || highPrioritySource.componentId >= highPriorityComponent.createdComponents.length || highPrioritySource != highPriorityComponent.createdComponents[highPrioritySource.componentId]);
-									Static82.method1767(highPriorityRequest);
+										priorityComponent = Static5.getComponent(prioritySource.layer);
+									} while (priorityComponent == null || priorityComponent.createdComponents == null || prioritySource.componentId >= priorityComponent.createdComponents.length || prioritySource != priorityComponent.createdComponents[prioritySource.componentId]);
+									Static82.method1767(priorityRequest);
 								}
 							}
-							highPrioritySource = highPriorityRequest.source;
-							if (highPrioritySource.componentId < 0) {
+							prioritySource = priorityRequest.source;
+							if (prioritySource.componentId < 0) {
 								break;
 							}
-							highPriorityComponent = Static5.getComponent(highPrioritySource.layer);
-						} while (highPriorityComponent == null || highPriorityComponent.createdComponents == null || highPriorityComponent.createdComponents.length <= highPrioritySource.componentId || highPriorityComponent.createdComponents[highPrioritySource.componentId] != highPrioritySource);
-						Static82.method1767(highPriorityRequest);
+							priorityComponent = Static5.getComponent(prioritySource.layer);
+						} while (priorityComponent == null || priorityComponent.createdComponents == null || priorityComponent.createdComponents.length <= prioritySource.componentId || priorityComponent.createdComponents[prioritySource.componentId] != prioritySource);
+						Static82.method1767(priorityRequest);
 					}
 				}
-				highPrioritySource = highPriorityRequest.source;
-				if (highPrioritySource.componentId < 0) {
+				prioritySource = priorityRequest.source;
+				if (prioritySource.componentId < 0) {
 					break;
 				}
-				highPriorityComponent = Static5.getComponent(highPrioritySource.layer);
-			} while (highPriorityComponent == null || highPriorityComponent.createdComponents == null || highPrioritySource.componentId >= highPriorityComponent.createdComponents.length || highPriorityComponent.createdComponents[highPrioritySource.componentId] != highPrioritySource);
-			Static82.method1767(highPriorityRequest);
+				priorityComponent = Static5.getComponent(prioritySource.layer);
+			} while (priorityComponent == null || priorityComponent.createdComponents == null || prioritySource.componentId >= priorityComponent.createdComponents.length || priorityComponent.createdComponents[prioritySource.componentId] != prioritySource);
+			Static82.method1767(priorityRequest);
 		}
 	}
 }

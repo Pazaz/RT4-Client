@@ -22,7 +22,7 @@ public final class Class165 {
 	private GlVertexBufferObject aClass155_7;
 
 	@OriginalMember(owner = "client!wm", name = "b", descriptor = "Z")
-	public boolean aBoolean313 = true;
+	public boolean outputToSprite = true;
 
 	@OriginalMember(owner = "client!wm", name = "h", descriptor = "I")
 	private int anInt5902 = -1;

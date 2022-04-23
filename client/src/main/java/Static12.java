@@ -7,7 +7,7 @@ public final class Static12 {
 	public static int anInt406;
 
 	@OriginalMember(owner = "client!bb", name = "g", descriptor = "[[[B")
-	public static final byte[][][] aByteArrayArrayArray2 = new byte[4][104][104];
+	public static final byte[][][] tileSettings = new byte[4][104][104];
 
 	@OriginalMember(owner = "client!bb", name = "m", descriptor = "Lclient!na;")
 	public static final JagString aClass100_73 = Static28.parse("runes");

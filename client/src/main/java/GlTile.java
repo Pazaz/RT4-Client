@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!hg")
-public final class Class3_Sub14 extends Node {
+public final class GlTile extends Node {
 
 	@OriginalMember(owner = "client!hg", name = "s", descriptor = "Ljava/nio/ByteBuffer;")
 	private ByteBuffer aByteBuffer3;
@@ -94,7 +94,7 @@ public final class Class3_Sub14 extends Node {
 	public final int anInt2486;
 
 	@OriginalMember(owner = "client!hg", name = "<init>", descriptor = "(IFZZI)V")
-	public Class3_Sub14(@OriginalArg(0) int arg0, @OriginalArg(1) float arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) boolean arg3, @OriginalArg(4) int arg4) {
+	public GlTile(@OriginalArg(0) int arg0, @OriginalArg(1) float arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) boolean arg3, @OriginalArg(4) int arg4) {
 		this.anInt2485 = arg0;
 		this.aFloat12 = arg1;
 		this.aBoolean140 = arg2;

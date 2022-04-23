@@ -20,11 +20,11 @@ public final class Static196 {
 	public static int anInt4587 = 0;
 
 	@OriginalMember(owner = "client!pl", name = "a", descriptor = "(II)V")
-	public static void method3534(@OriginalArg(0) int arg0) {
-		if (Static244.anInt5370 == arg0) {
+	public static void setGameState(@OriginalArg(0) int arg0) {
+		if (Static244.gameState == arg0) {
 			return;
 		}
-		if (Static244.anInt5370 == 0) {
+		if (Static244.gameState == 0) {
 			Static163.method3097();
 		}
 		if (arg0 == 40) {
@@ -38,20 +38,20 @@ public final class Static196 {
 		if (arg0 == 25 || arg0 == 28) {
 			Static271.anInt5804 = 0;
 			Static230.anInt5150 = 1;
-			Static233.anInt5223 = 0;
+			Static233.loadingScreenState = 0;
 			Static38.anInt1196 = 1;
-			Static175.anInt4220 = 0;
+			Static175.mapFilesMissingCount = 0;
 			Static116.method2325(true);
 		}
 		if (arg0 == 25 || arg0 == 10) {
-			Static123.method2418();
+			Static123.topBannerRefresh();
 		}
 		if (arg0 == 5) {
 			Static181.method3344(Static209.js5Archive8);
 		} else {
 			Static119.method2381();
 		}
-		@Pc(106) boolean local106 = Static244.anInt5370 == 5 || Static244.anInt5370 == 10 || Static244.anInt5370 == 28;
+		@Pc(106) boolean local106 = Static244.gameState == 5 || Static244.gameState == 10 || Static244.gameState == 28;
 		if (local106 != local37) {
 			if (local37) {
 				Static221.anInt4363 = Static250.titleSong;
@@ -69,7 +69,7 @@ public final class Static196 {
 		if (GlRenderer.enabled && (arg0 == 25 || arg0 == 28 || arg0 == 40)) {
 			GlRenderer.method4160();
 		}
-		Static244.anInt5370 = arg0;
+		Static244.gameState = arg0;
 	}
 
 	@OriginalMember(owner = "client!pl", name = "a", descriptor = "(ZI)V")

@@ -30,7 +30,7 @@ public final class Static6 {
 	public static void method84() {
 		Static65.method1500();
 		for (@Pc(9) int local9 = 0; local9 < 4; local9++) {
-			Static148.collisionMaps[local9].method3050();
+			Static148.collisionMaps[local9].resetFlags();
 		}
 		System.gc();
 	}
