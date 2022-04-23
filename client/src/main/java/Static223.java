@@ -43,7 +43,7 @@ public final class Static223 {
 				arg2.anInt3360 = 0;
 				arg2.anInt3371 = 0;
 				arg2.anInt3420 = arg0;
-				Static152.method2836(arg2.anInt3421, local10, arg2.anInt3412, false, arg2.anInt3425);
+				Static152.method2836(arg2.zFine, local10, arg2.xFine, false, arg2.anInt3425);
 			}
 			if (local13 == 2) {
 				arg2.anInt3371 = 0;
@@ -54,10 +54,10 @@ public final class Static223 {
 			arg2.anInt3373 = 1;
 			arg2.anInt3371 = 0;
 			arg2.anInt3420 = arg0;
-			arg2.anInt3405 = arg2.anInt3409;
+			arg2.anInt3405 = arg2.movementQueueSize;
 			arg2.anInt3425 = 0;
 			if (arg2.anInt3369 != -1) {
-				Static152.method2836(arg2.anInt3421, Static36.method941(arg2.anInt3369), arg2.anInt3412, false, arg2.anInt3425);
+				Static152.method2836(arg2.zFine, Static36.method941(arg2.anInt3369), arg2.xFine, false, arg2.anInt3425);
 			}
 		}
 	}
@@ -160,7 +160,7 @@ public final class Static223 {
 	}
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(ILjava/awt/Component;)V")
-	public static void method3866(@OriginalArg(1) Component arg0) {
+	public static void stop(@OriginalArg(1) Component arg0) {
 		arg0.removeMouseListener(Static93.instance);
 		arg0.removeMouseMotionListener(Static93.instance);
 		arg0.removeFocusListener(Static93.instance);

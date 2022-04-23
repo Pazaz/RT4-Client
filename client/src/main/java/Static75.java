@@ -400,7 +400,7 @@ public final class Static75 {
 								local1184 = local39 - 1;
 								local1188 = local1184 & 0x7FF;
 								local1194 = local1184 >> 11 & 0xF;
-								local1198 = Static175.aClass8_Sub4_Sub2Array1[local1188];
+								local1198 = Static175.npcs[local1188];
 							} else {
 								local1184 = -local39 - 1;
 								local1194 = local1184 >> 11 & 0xF;
@@ -413,10 +413,10 @@ public final class Static75 {
 							}
 							if (local1198 != null) {
 								@Pc(1232) BasType local1232 = local1198.method2681();
-								if (local1232.anIntArrayArray7 != null && local1232.anIntArrayArray7[local1194] != null) {
-									local1188 = local1232.anIntArrayArray7[local1194][0];
-									local224 -= local1232.anIntArrayArray7[local1194][1];
-									@Pc(1264) int local1264 = local1232.anIntArrayArray7[local1194][2];
+								if (local1232.modelRotateTranslate != null && local1232.modelRotateTranslate[local1194] != null) {
+									local1188 = local1232.modelRotateTranslate[local1194][0];
+									local224 -= local1232.modelRotateTranslate[local1194][1];
+									@Pc(1264) int local1264 = local1232.modelRotateTranslate[local1194][2];
 									@Pc(1269) int local1269 = MathUtils.anIntArray223[local1198.anInt3381];
 									@Pc(1274) int local1274 = MathUtils.anIntArray225[local1198.anInt3381];
 									@Pc(1284) int local1284 = local1188 * local1274 + local1264 * local1269 >> 16;
@@ -463,7 +463,7 @@ public final class Static75 {
 						if (local1565 != null) {
 							for (@Pc(1572) ObjStackNode local1572 = (ObjStackNode) local1565.method2289(); local1572 != null; local1572 = (ObjStackNode) local1565.method2288()) {
 								if (local1572.aClass8_Sub7_1.anInt5555 == (local27 & 0x7FFF)) {
-									local1572.method4658();
+									local1572.unlink();
 									break;
 								}
 							}

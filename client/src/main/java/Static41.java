@@ -34,7 +34,7 @@ public final class Static41 {
 	@OriginalMember(owner = "client!dc", name = "a", descriptor = "(IZLclient!tk;IIIIILclient!ak;IIIIB)Lclient!ak;")
 	public static Model method1043(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) SeqType arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) Model arg8, @OriginalArg(9) int arg9, @OriginalArg(10) int arg10, @OriginalArg(11) int arg11, @OriginalArg(12) int arg12) {
 		@Pc(23) long local23 = ((long) arg4 << 48) + (long) (arg7 + (arg0 << 16) + (arg12 << 24)) + ((long) arg6 << 32);
-		@Pc(33) Model local33 = (Model) Static45.aClass99_6.method3106(local23);
+		@Pc(33) Model local33 = (Model) Static45.aClass99_6.get(local23);
 		@Pc(109) int local109;
 		@Pc(115) int local115;
 		@Pc(126) int local126;
@@ -82,7 +82,7 @@ public final class Static41 {
 				}
 			}
 			local33 = local103.method1679(64, 768, -50, -10, -50);
-			Static45.aClass99_6.method3095(local33, local23);
+			Static45.aClass99_6.put(local33, local23);
 		}
 		@Pc(367) int local367 = arg7 * 64 - 1;
 		@Pc(376) int local376 = -local367;
@@ -130,7 +130,7 @@ public final class Static41 {
 			local33.method4559((local115 - local384) / 2, 128, (local130 - local126) / 2);
 			local33.method4575((local384 + local115) / 2, 0, (local126 + local130) / 2);
 		} else {
-			local33 = local33.method4560(!local386.method901(arg10), !local386.method903(arg10), true);
+			local33 = local33.method4560(!local386.isAlphaTransformed(arg10), !local386.isColorTransformed(arg10), true);
 			local33.method4559((local115 - local384) / 2, 128, (local130 - local126) / 2);
 			local33.method4575((local384 + local115) / 2, 0, (local126 + local130) / 2);
 			local33.method4555(local386, arg10);

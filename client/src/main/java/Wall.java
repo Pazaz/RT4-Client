@@ -26,5 +26,5 @@ public final class Wall {
 	public int anInt3052;
 
 	@OriginalMember(owner = "client!jh", name = "d", descriptor = "J")
-	public long aLong107 = 0L;
+	public long key = 0L;
 }

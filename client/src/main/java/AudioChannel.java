@@ -11,56 +11,56 @@ public class AudioChannel {
     public static boolean stereo;
 
     @OriginalMember(owner = "client!vh", name = "h", descriptor = "Lclient!qb;")
-	private PcmStream aClass3_Sub3_6;
+	private PcmStream stream;
 
 	@OriginalMember(owner = "client!vh", name = "n", descriptor = "[I")
-	public int[] anIntArray411;
+	public int[] samples;
 
 	@OriginalMember(owner = "client!vh", name = "D", descriptor = "I")
 	private int anInt4637;
 
 	@OriginalMember(owner = "client!vh", name = "H", descriptor = "I")
-	public int anInt4641;
+	public int sampleRate;
 
 	@OriginalMember(owner = "client!vh", name = "K", descriptor = "I")
-	public int anInt4644;
+	public int bufferCapacity;
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "I")
 	private final int anInt4621 = 32;
 
 	@OriginalMember(owner = "client!vh", name = "f", descriptor = "J")
-	private long aLong151 = MonotonicClock.currentTimeMillis();
+	private long time = MonotonicClock.currentTimeMillis();
 
 	@OriginalMember(owner = "client!vh", name = "w", descriptor = "[Lclient!qb;")
 	private final PcmStream[] aClass3_Sub3Array5 = new PcmStream[8];
 
 	@OriginalMember(owner = "client!vh", name = "x", descriptor = "I")
-	private int anInt4634 = 0;
+	private int consumedSamples = 0;
 
 	@OriginalMember(owner = "client!vh", name = "v", descriptor = "J")
-	private long aLong152 = 0L;
+	private long calculateConsumptionAt = 0L;
 
 	@OriginalMember(owner = "client!vh", name = "E", descriptor = "I")
 	private int anInt4638 = 0;
 
 	@OriginalMember(owner = "client!vh", name = "A", descriptor = "Z")
-	private boolean aBoolean229 = true;
+	private boolean skipConsumptionCheck = true;
 
 	@OriginalMember(owner = "client!vh", name = "z", descriptor = "[Lclient!qb;")
 	private final PcmStream[] aClass3_Sub3Array6 = new PcmStream[8];
 
 	@OriginalMember(owner = "client!vh", name = "y", descriptor = "J")
-	private long aLong153 = 0L;
+	private long closeUntil = 0L;
 
 	@OriginalMember(owner = "client!vh", name = "G", descriptor = "I")
-	private int anInt4640 = 0;
+	private int prevConsumedSamples = 0;
 
 	@OriginalMember(owner = "client!vh", name = "C", descriptor = "I")
-	private int anInt4636 = 0;
+	private int prevBufferSize = 0;
 
     @OriginalMember(owner = "client!dc", name = "a", descriptor = "(IIIZ)V")
     public static void init(@OriginalArg(3) boolean arg0) {
-        Static258.anInt5637 = 2;
+        Static258.threadPriority = 2;
         stereo = arg0;
         Static44.sampleRate = 22050;
     }
@@ -72,44 +72,44 @@ public class AudioChannel {
 		}
 		try {
 			@Pc(33) AudioChannel local33 = (AudioChannel) Class.forName("JavaAudioChannel").getDeclaredConstructor().newInstance();
-			local33.anInt4641 = arg0;
-			local33.anIntArray411 = new int[(stereo ? 2 : 1) * 256];
+			local33.sampleRate = arg0;
+			local33.samples = new int[(stereo ? 2 : 1) * 256];
 			local33.init(arg2);
-			local33.anInt4644 = (arg0 & -1024) + 1024;
-			if (local33.anInt4644 > 16384) {
-				local33.anInt4644 = 16384;
+			local33.bufferCapacity = (arg0 & -1024) + 1024;
+			if (local33.bufferCapacity > 16384) {
+				local33.bufferCapacity = 16384;
 			}
-			local33.open(local33.anInt4644);
-			if (Static258.anInt5637 > 0 && Static60.aClass19_1 == null) {
-				Static60.aClass19_1 = new AudioThread();
-				Static60.aClass19_1.signLink = arg1;
-				arg1.startThread(Static258.anInt5637, Static60.aClass19_1);
+			local33.open(local33.bufferCapacity);
+			if (Static258.threadPriority > 0 && Static60.thread == null) {
+				Static60.thread = new AudioThread();
+				Static60.thread.signLink = arg1;
+				arg1.startThread(Static258.threadPriority, Static60.thread);
 			}
-			if (Static60.aClass19_1 != null) {
-				if (Static60.aClass19_1.channels[arg3] != null) {
+			if (Static60.thread != null) {
+				if (Static60.thread.channels[arg3] != null) {
 					throw new IllegalArgumentException();
 				}
-				Static60.aClass19_1.channels[arg3] = local33;
+				Static60.thread.channels[arg3] = local33;
 			}
 			return local33;
 		} catch (@Pc(109) Throwable local109) {
 			try {
 				@Pc(120) SignLinkAudioChannel local120 = new SignLinkAudioChannel(arg1, arg3);
-				local120.anIntArray411 = new int[(stereo ? 2 : 1) * 256];
-				local120.anInt4641 = arg0;
+				local120.samples = new int[(stereo ? 2 : 1) * 256];
+				local120.sampleRate = arg0;
 				local120.init(arg2);
-				local120.anInt4644 = 16384;
-				local120.open(local120.anInt4644);
-				if (Static258.anInt5637 > 0 && Static60.aClass19_1 == null) {
-					Static60.aClass19_1 = new AudioThread();
-					Static60.aClass19_1.signLink = arg1;
-					arg1.startThread(Static258.anInt5637, Static60.aClass19_1);
+				local120.bufferCapacity = 16384;
+				local120.open(local120.bufferCapacity);
+				if (Static258.threadPriority > 0 && Static60.thread == null) {
+					Static60.thread = new AudioThread();
+					Static60.thread.signLink = arg1;
+					arg1.startThread(Static258.threadPriority, Static60.thread);
 				}
-				if (Static60.aClass19_1 != null) {
-					if (Static60.aClass19_1.channels[arg3] != null) {
+				if (Static60.thread != null) {
+					if (Static60.thread.channels[arg3] != null) {
 						throw new IllegalArgumentException();
 					}
-					Static60.aClass19_1.channels[arg3] = local120;
+					Static60.thread.channels[arg3] = local120;
 				}
 				return local120;
 			} catch (@Pc(186) Throwable local186) {
@@ -131,17 +131,17 @@ public class AudioChannel {
 	}
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "([II)V")
-	private void method3564(@OriginalArg(0) int[] arg0) {
+	private void read(@OriginalArg(0) int[] arg0) {
 		@Pc(1) short local1 = 256;
 		if (stereo) {
 			local1 = 512;
 		}
-		Static289.method2618(arg0, 0, local1);
+		Static289.clear(arg0, 0, local1);
 		this.anInt4638 -= 256;
-		if (this.aClass3_Sub3_6 != null && this.anInt4638 <= 0) {
+		if (this.stream != null && this.anInt4638 <= 0) {
 			this.anInt4638 += Static44.sampleRate >> 4;
-			Static167.method3170(this.aClass3_Sub3_6);
-			this.method3567(this.aClass3_Sub3_6, this.aClass3_Sub3_6.method4407());
+			Static167.setInactive(this.stream);
+			this.method3567(this.stream, this.stream.method4407());
 			@Pc(45) int local45 = 0;
 			@Pc(47) int local47 = 255;
 			@Pc(49) int local49 = 7;
@@ -221,89 +221,89 @@ public class AudioChannel {
 		if (this.anInt4638 < 0) {
 			this.anInt4638 = 0;
 		}
-		if (this.aClass3_Sub3_6 != null) {
-			this.aClass3_Sub3_6.method4408(arg0, 0, 256);
+		if (this.stream != null) {
+			this.stream.read(arg0, 0, 256);
 		}
-		this.aLong151 = MonotonicClock.currentTimeMillis();
+		this.time = MonotonicClock.currentTimeMillis();
 	}
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "(B)V")
 	public final synchronized void loop() {
-		if (this.anIntArray411 == null) {
+		if (this.samples == null) {
 			return;
 		}
-		@Pc(14) long local14 = MonotonicClock.currentTimeMillis();
+		@Pc(14) long now = MonotonicClock.currentTimeMillis();
 		try {
-			if (this.aLong153 != 0L) {
-				if (local14 < this.aLong153) {
+			if (this.closeUntil != 0L) {
+				if (now < this.closeUntil) {
 					return;
 				}
-				this.open(this.anInt4644);
-				this.aBoolean229 = true;
-				this.aLong153 = 0L;
+				this.open(this.bufferCapacity);
+				this.skipConsumptionCheck = true;
+				this.closeUntil = 0L;
 			}
 			@Pc(38) int local38 = this.getBufferSize();
-			if (this.anInt4634 < this.anInt4636 - local38) {
-				this.anInt4634 = this.anInt4636 - local38;
+			if (this.consumedSamples < this.prevBufferSize - local38) {
+				this.consumedSamples = this.prevBufferSize - local38;
 			}
-			@Pc(65) int local65 = this.anInt4641 + this.anInt4637;
+			@Pc(65) int local65 = this.sampleRate + this.anInt4637;
 			if (local65 + 256 > 16384) {
 				local65 = 16128;
 			}
-			if (this.anInt4644 < local65 + 256) {
-				this.anInt4644 += 1024;
-				if (this.anInt4644 > 16384) {
-					this.anInt4644 = 16384;
+			if (this.bufferCapacity < local65 + 256) {
+				this.bufferCapacity += 1024;
+				if (this.bufferCapacity > 16384) {
+					this.bufferCapacity = 16384;
 				}
 				this.flush();
 				local38 = 0;
-				this.open(this.anInt4644);
-				if (this.anInt4644 < local65 + 256) {
-					local65 = this.anInt4644 - 256;
-					this.anInt4637 = local65 - this.anInt4641;
+				this.open(this.bufferCapacity);
+				if (this.bufferCapacity < local65 + 256) {
+					local65 = this.bufferCapacity - 256;
+					this.anInt4637 = local65 - this.sampleRate;
 				}
-				this.aBoolean229 = true;
+				this.skipConsumptionCheck = true;
 			}
 			while (local65 > local38) {
 				local38 += 256;
-				this.method3564(this.anIntArray411);
+				this.read(this.samples);
 				this.write();
 			}
-			if (local14 > this.aLong152) {
-				if (this.aBoolean229) {
-					this.aBoolean229 = false;
-				} else if (this.anInt4634 == 0 && this.anInt4640 == 0) {
+			if (now > this.calculateConsumptionAt) {
+				if (this.skipConsumptionCheck) {
+					this.skipConsumptionCheck = false;
+				} else if (this.consumedSamples == 0 && this.prevConsumedSamples == 0) {
 					this.flush();
-					this.aLong153 = local14 + 2000L;
+					this.closeUntil = now + 2000L;
 					return;
 				} else {
-					this.anInt4637 = Math.min(this.anInt4640, this.anInt4634);
-					this.anInt4640 = this.anInt4634;
+					this.anInt4637 = Math.min(this.prevConsumedSamples, this.consumedSamples);
+					this.prevConsumedSamples = this.consumedSamples;
 				}
-				this.aLong152 = local14 + 2000L;
-				this.anInt4634 = 0;
+				this.calculateConsumptionAt = now + 2000L;
+				this.consumedSamples = 0;
 			}
-			this.anInt4636 = local38;
+			this.prevBufferSize = local38;
 		} catch (@Pc(202) Exception local202) {
 			this.flush();
-			this.aLong153 = local14 + 2000L;
+			this.closeUntil = now + 2000L;
 		}
 		try {
-			if (local14 > this.aLong151 + 500000L) {
-				local14 = this.aLong151;
+			if (now > this.time + 500000L) {
+				now = this.time;
 			}
-			while (local14 > this.aLong151 + 5000L) {
-				this.method3573();
-				this.aLong151 += 256000 / Static44.sampleRate;
+			while (now > this.time + 5000L) {
+				this.skip();
+				this.time += 256000 / Static44.sampleRate;
 			}
 		} catch (@Pc(247) Exception local247) {
-			this.aLong151 = local14;
+			this.time = now;
 		}
 	}
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "(ILclient!qb;)V")
 	public final synchronized void setStream(@OriginalArg(1) PcmStream arg0) {
-		this.aClass3_Sub3_6 = arg0;
+		this.stream = arg0;
 	}
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "(Lclient!qb;IB)V")
@@ -321,23 +321,23 @@ public class AudioChannel {
 
 	@OriginalMember(owner = "client!vh", name = "c", descriptor = "()I")
 	protected int getBufferSize() throws Exception {
-		return this.anInt4644;
+		return this.bufferCapacity;
 	}
 
 	@OriginalMember(owner = "client!vh", name = "b", descriptor = "(B)V")
 	public final synchronized void method3570() {
-		this.aBoolean229 = true;
+		this.skipConsumptionCheck = true;
 		try {
 			this.close();
 		} catch (@Pc(10) Exception local10) {
 			this.flush();
-			this.aLong153 = MonotonicClock.currentTimeMillis() + 2000L;
+			this.closeUntil = MonotonicClock.currentTimeMillis() + 2000L;
 		}
 	}
 
 	@OriginalMember(owner = "client!vh", name = "b", descriptor = "(I)V")
 	public final void method3571() {
-		this.aBoolean229 = true;
+		this.skipConsumptionCheck = true;
 	}
 
 	@OriginalMember(owner = "client!vh", name = "d", descriptor = "()V")
@@ -345,38 +345,38 @@ public class AudioChannel {
 	}
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "(II)V")
-	private void method3573() {
+	private void skip() {
 		this.anInt4638 -= 256;
 		if (this.anInt4638 < 0) {
 			this.anInt4638 = 0;
 		}
-		if (this.aClass3_Sub3_6 != null) {
-			this.aClass3_Sub3_6.method4410(256);
+		if (this.stream != null) {
+			this.stream.skip(256);
 		}
 	}
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "(Z)V")
-	public final synchronized void method3575() {
-		if (Static60.aClass19_1 != null) {
+	public final synchronized void quit() {
+		if (Static60.thread != null) {
 			@Pc(6) boolean local6 = true;
 			for (@Pc(8) int local8 = 0; local8 < 2; local8++) {
-				if (Static60.aClass19_1.channels[local8] == this) {
-					Static60.aClass19_1.channels[local8] = null;
+				if (Static60.thread.channels[local8] == this) {
+					Static60.thread.channels[local8] = null;
 				}
-				if (Static60.aClass19_1.channels[local8] != null) {
+				if (Static60.thread.channels[local8] != null) {
 					local6 = false;
 				}
 			}
 			if (local6) {
-				Static60.aClass19_1.stop = true;
-				while (Static60.aClass19_1.running) {
+				Static60.thread.stop = true;
+				while (Static60.thread.running) {
 					Static231.sleep(50L);
 				}
-				Static60.aClass19_1 = null;
+				Static60.thread = null;
 			}
 		}
 		this.flush();
-		this.anIntArray411 = null;
+		this.samples = null;
 	}
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "(Ljava/awt/Component;)V")

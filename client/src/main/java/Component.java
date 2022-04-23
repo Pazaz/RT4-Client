@@ -774,7 +774,7 @@ public final class Component {
 		if (local29 == -1) {
 			return null;
 		}
-		@Pc(43) Sprite local43 = (Sprite) Static190.aClass99_26.method3106((long) local29);
+		@Pc(43) Sprite local43 = (Sprite) Static190.aClass99_26.get((long) local29);
 		if (local43 != null) {
 			return local43;
 		}
@@ -782,7 +782,7 @@ public final class Component {
 		if (local43 == null) {
 			Static211.aBoolean72 = true;
 		} else {
-			Static190.aClass99_26.method3095(local43, (long) local29);
+			Static190.aClass99_26.put(local43, (long) local29);
 		}
 		return local43;
 	}
@@ -848,7 +848,7 @@ public final class Component {
 		} else {
 			@Pc(61) Model local61;
 			if (local10 == 1) {
-				local61 = (Model) Static124.aClass99_17.method3106((long) ((local10 << 16) + local13));
+				local61 = (Model) Static124.aClass99_17.get((long) ((local10 << 16) + local13));
 				if (local61 == null) {
 					@Pc(69) RawModel local69 = Static77.method1686(Static203.aClass153_85, local13);
 					if (local69 == null) {
@@ -856,7 +856,7 @@ public final class Component {
 						return null;
 					}
 					local61 = local69.method1679(64, 768, -50, -10, -50);
-					Static124.aClass99_17.method3095(local61, (long) (local13 + (local10 << 16)));
+					Static124.aClass99_17.put(local61, (long) (local13 + (local10 << 16)));
 				}
 				if (arg1 != null) {
 					local61 = arg1.method4215(local61, arg0, arg3, arg2);
@@ -930,13 +930,13 @@ public final class Component {
 			return null;
 		}
 		@Pc(66) long local66 = ((this.aBoolean21 ? 1L : 0L) << 38) + ((this.aBoolean18 ? 1L : 0L) << 35) + (long) local12 + ((long) this.anInt514 << 36) + ((this.aBoolean26 ? 1L : 0L) << 39) + ((long) this.anInt513 << 40);
-		@Pc(72) Sprite local72 = (Sprite) Static190.aClass99_26.method3106(local66);
+		@Pc(72) Sprite local72 = (Sprite) Static190.aClass99_26.get(local66);
 		if (local72 != null) {
 			return local72;
 		}
 		@Pc(85) SoftwareSprite local85;
 		if (this.aBoolean18) {
-			local85 = Static80.method3613(Static23.aClass153_12, local12);
+			local85 = Static80.loadSoftwareAlphaSprite(Static23.aClass153_12, local12);
 		} else {
 			local85 = Static78.method1693(0, Static23.aClass153_12, local12);
 		}
@@ -969,7 +969,7 @@ public final class Component {
 		} else {
 			local72 = new GlSprite(local85);
 		}
-		Static190.aClass99_26.method3095(local72, local66);
+		Static190.aClass99_26.put(local72, local66);
 		return local72;
 	}
 
@@ -1162,7 +1162,7 @@ public final class Component {
 		if (this.anInt502 == -1) {
 			return null;
 		}
-		@Pc(21) Font local21 = (Font) Static87.aClass99_12.method3106((long) this.anInt502);
+		@Pc(21) Font local21 = (Font) Static87.aClass99_12.get((long) this.anInt502);
 		if (local21 != null) {
 			return local21;
 		}
@@ -1170,8 +1170,8 @@ public final class Component {
 		if (local21 == null) {
 			Static211.aBoolean72 = true;
 		} else {
-			local21.method2873(arg0, null);
-			Static87.aClass99_12.method3095(local21, (long) this.anInt502);
+			local21.setNameIcons(arg0, null);
+			Static87.aClass99_12.put(local21, (long) this.anInt502);
 		}
 		return local21;
 	}

@@ -27,7 +27,7 @@ public final class SignLinkAudioChannel extends AudioChannel {
 	@OriginalMember(owner = "client!hl", name = "a", descriptor = "()V")
 	@Override
 	protected final void write() {
-		audioSource.write(this.channel, this.anIntArray411);
+		audioSource.write(this.channel, this.samples);
 	}
 
 	@OriginalMember(owner = "client!hl", name = "a", descriptor = "(Ljava/awt/Component;)V")

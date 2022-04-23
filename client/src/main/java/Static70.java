@@ -29,7 +29,7 @@ public final class Static70 {
 	public static JagString method1548(@OriginalArg(1) int arg0) {
 		@Pc(9) JagString local9 = Static123.parseInt(arg0);
 		for (@Pc(21) int local21 = local9.length() - 3; local21 > 0; local21 -= 3) {
-			local9 = Static34.concatenate(new JagString[] { local9.substring(local21, 0), Static159.aClass100_760, local9.method3136(local21) });
+			local9 = Static34.concatenate(new JagString[] { local9.substring(local21, 0), Static159.aClass100_760, local9.substring(local21) });
 		}
 		if (local9.length() > 9) {
 			return Static34.concatenate(new JagString[] { Static250.aClass100_1043, local9.substring(local9.length() - 8, 0), LocalizedText.MILLION_SHORT, Static123.aClass100_593, local9, Static116.aClass100_583 });
@@ -45,7 +45,7 @@ public final class Static70 {
 		for (@Pc(11) int local11 = 0; local11 < Static98.anInt2510; local11++) {
 			@Pc(18) FloType local18 = Static256.method4395(local11);
 			if (local18 != null) {
-				@Pc(24) int local24 = local18.anInt5892;
+				@Pc(24) int local24 = local18.texture;
 				if (local24 >= 0 && !Rasteriser.textureProvider.method3236(local24)) {
 					local24 = -1;
 				}

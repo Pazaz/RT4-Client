@@ -360,7 +360,7 @@ public final class Song extends Node {
 							@Pc(187) Class3_Sub9 local187 = (Class3_Sub9) this.aClass133_22.get((long) local179);
 							if (local187 == null) {
 								local187 = new Class3_Sub9(new byte[128]);
-								this.aClass133_22.method3862(local187, (long) local179);
+								this.aClass133_22.put(local187, (long) local179);
 							}
 							local187.aByteArray17[local98] = 1;
 						}

@@ -91,7 +91,7 @@ public final class Static49 {
 		Static272.anInt5214 = 0;
 		for (local22 = 0; local22 < local13; local22++) {
 			@Pc(61) int local61 = Static33.anIntArray79[local22];
-			@Pc(65) Npc local65 = Static175.aClass8_Sub4_Sub2Array1[local61];
+			@Pc(65) Npc local65 = Static175.npcs[local61];
 			@Pc(70) int local70 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
 			if (local70 == 0) {
 				Static33.anIntArray79[Static272.anInt5214++] = local61;
@@ -176,7 +176,7 @@ public final class Static49 {
 		@Pc(24) JagString local24 = Static13.method471();
 		if (arg0 == null) {
 			@Pc(40) int local40 = Static280.aClass3_Sub2_Sub9_43.method2859(local24, arg2 + 4, arg1 - -15, Static39.aRandom1, Static60.gregorianDateSeed);
-			Static133.method4012(arg2 + 4, Static280.aClass3_Sub2_Sub9_43.method2858(local24) + local40, arg1, 15);
+			Static133.method4012(arg2 + 4, Static280.aClass3_Sub2_Sub9_43.getStringWidth(local24) + local40, arg1, 15);
 			return;
 		}
 		@Pc(59) Font local59 = arg0.method491(Static159.aClass36Array12);
@@ -191,7 +191,7 @@ public final class Static49 {
 	public static void method1208() {
 		Static224.aBoolean247 = false;
 		Static231.anInt5202 = 0;
-		Static266.returnCode = -3;
+		Static266.reply = -3;
 		Static92.anInt2430 = 0;
 		Static184.loginStep = 1;
 		Static276.anInt5816 = 0;

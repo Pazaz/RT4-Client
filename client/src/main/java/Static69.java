@@ -168,7 +168,7 @@ public final class Static69 {
 				local22 = -1;
 			}
 			if (Static196.aClass10_Sub1Array2[local18] != null) {
-				Static196.aClass10_Sub1Array2[local18].anInt379 = local22;
+				Static196.aClass10_Sub1Array2[local18].players = local22;
 			}
 		}
 	}

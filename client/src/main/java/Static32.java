@@ -38,7 +38,7 @@ public final class Static32 {
 									local76.anInt5399 = 0;
 									local76.anInt5408 = local28;
 									local76.anInt5404 = 0;
-									Static152.method2836(arg2.anInt3421, local68, arg2.anInt3412, arg2 == Static173.self, 0);
+									Static152.method2836(arg2.zFine, local68, arg2.xFine, arg2 == Static173.self, 0);
 								} else if (local71 == 2) {
 									local76.anInt5400 = 0;
 								}
@@ -54,7 +54,7 @@ public final class Static32 {
 							local76.anInt5408 = local28;
 							local76.anInt5399 = 0;
 							local76.anInt5400 = 0;
-							Static152.method2836(arg2.anInt3421, local68, arg2.anInt3412, arg2 == Static173.self, 0);
+							Static152.method2836(arg2.zFine, local68, arg2.xFine, arg2 == Static173.self, 0);
 						}
 					}
 				}

@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class StringNode extends Node {
 
 	@OriginalMember(owner = "client!sj", name = "A", descriptor = "Lclient!na;")
-	public JagString aClass100_980;
+	public JagString value;
 
 	@OriginalMember(owner = "client!sj", name = "<init>", descriptor = "()V")
 	public StringNode() {
@@ -14,6 +14,6 @@ public final class StringNode extends Node {
 
 	@OriginalMember(owner = "client!sj", name = "<init>", descriptor = "(Lclient!na;)V")
 	public StringNode(@OriginalArg(0) JagString arg0) {
-		this.aClass100_980 = arg0;
+		this.value = arg0;
 	}
 }

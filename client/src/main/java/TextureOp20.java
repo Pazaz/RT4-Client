@@ -33,7 +33,7 @@ public final class TextureOp20 extends TextureOp {
 	@Override
 	public final int[] method4626(@OriginalArg(0) int arg0) {
 		@Pc(17) int[] local17 = this.aClass121_41.method3445(arg0);
-		if (this.aClass121_41.aBoolean221) {
+		if (this.aClass121_41.invalid) {
 			Static289.method2614(local17, 0, Static189.anInt4457, this.anInt3894);
 		}
 		return local17;

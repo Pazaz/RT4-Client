@@ -93,7 +93,7 @@ public final class SynthInstrument {
 
 	@OriginalMember(owner = "client!pj", name = "a", descriptor = "(II)[I")
 	public final int[] method3505(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		Static289.method2618(Static194.anIntArray398, 0, arg0);
+		Static289.clear(Static194.anIntArray398, 0, arg0);
 		if (arg1 < 10) {
 			return Static194.anIntArray398;
 		}

@@ -272,7 +272,7 @@ public final class Static269 {
 				Static129.method2495(local50 - 150, local61 + 2, Static41.anInt1309 * 3, 30, 9179409);
 				Static129.method2495(Static41.anInt1309 * 3 + local50 - 150, local61 - -2, 300 - Static41.anInt1309 * 3, 30, 0);
 			}
-			Static280.aClass3_Sub2_Sub9_43.method2875(LocalizedText.LOADINGDOTDOTDOT, local50, local61 + 20, 16777215, -1);
+			Static280.aClass3_Sub2_Sub9_43.renderCenter(LocalizedText.LOADINGDOTDOTDOT, local50, local61 + 20, 16777215, -1);
 			return;
 		}
 		Static37.anInt1176 = (int) ((float) (arg2 * 2) / Static83.aFloat3);
@@ -311,7 +311,7 @@ public final class Static269 {
 		}
 		@Pc(405) int local405 = arg1 + arg2 - 8;
 		@Pc(412) int local412 = arg0 + arg3 - 5;
-		Static215.aClass3_Sub2_Sub9_32.method2864(Static34.concatenate(new JagString[] { Static115.aClass100_579, Static123.parseInt(GameShell.framesPerSecond) }), local412, local405, 16776960, -1);
+		Static215.aClass3_Sub2_Sub9_32.renderRight(Static34.concatenate(new JagString[] { Static115.aClass100_579, Static123.parseInt(GameShell.framesPerSecond) }), local412, local405, 16776960, -1);
 		@Pc(434) Runtime local434 = Runtime.getRuntime();
 		@Pc(443) int local443 = (int) ((local434.totalMemory() - local434.freeMemory()) / 1024L);
 		@Pc(445) int local445 = 16776960;
@@ -319,7 +319,7 @@ public final class Static269 {
 		if (local443 > 65536) {
 			local445 = 16711680;
 		}
-		Static215.aClass3_Sub2_Sub9_32.method2864(Static34.concatenate(new JagString[] { Static203.aClass100_894, Static123.parseInt(local443), Static19.aClass100_112 }), local412, local446, local445, -1);
+		Static215.aClass3_Sub2_Sub9_32.renderRight(Static34.concatenate(new JagString[] { Static203.aClass100_894, Static123.parseInt(local443), Static19.aClass100_112 }), local412, local446, local445, -1);
 		local405 = local446 - 15;
 	}
 

@@ -37,7 +37,7 @@ public final class Static89 {
 			local11 = 4;
 		}
 		for (@Pc(21) int local21 = 0; local21 < local11; local21++) {
-			Static107.method2261();
+			Static107.loop();
 			for (@Pc(32) int local32 = 0; local32 < 13; local32++) {
 				for (@Pc(39) int local39 = 0; local39 < 13; local39++) {
 					@Pc(52) int local52 = Static187.anIntArrayArrayArray18[local21][local32][local39];
@@ -146,7 +146,7 @@ public final class Static89 {
 	@OriginalMember(owner = "client!ha", name = "b", descriptor = "(II)V")
 	public static void method1840(@OriginalArg(1) int arg0) {
 		@Pc(8) DelayedStateChange local8 = Static238.method4143(2, arg0);
-		local8.method1007();
+		local8.pushClient();
 	}
 
 	@OriginalMember(owner = "client!ha", name = "a", descriptor = "(I)V")
@@ -164,7 +164,7 @@ public final class Static89 {
 			}
 			Static231.anInt5204 = 1;
 			Static254.aClass100Array168[0] = LocalizedText.CANCEL;
-			Static233.aClass100Array160[0] = Static186.EMPTY_FILE;
+			Static233.aClass100Array160[0] = Static186.EMPTY;
 			Static39.aShortArray6[0] = 1005;
 			Static190.anIntArray382[0] = Static35.anInt1092;
 		}
@@ -174,7 +174,7 @@ public final class Static89 {
 		@Pc(60) int local60;
 		for (local60 = 0; local60 < Static24.anInt766; local60++) {
 			if (Static186.aBooleanArray100[local60]) {
-				Static31.aBooleanArray29[local60] = true;
+				Static31.rectangleRedraw[local60] = true;
 			}
 			Static223.aBooleanArray116[local60] = Static186.aBooleanArray100[local60];
 			Static186.aBooleanArray100[local60] = false;
@@ -219,7 +219,7 @@ public final class Static89 {
 		if (Static187.anInt4422 == 1) {
 			Static187.anInt4422 = 2;
 		}
-		if (Static199.anInt4672 == 3) {
+		if (Static199.rectDebug == 3) {
 			for (@Pc(189) int local189 = 0; local189 < Static24.anInt766; local189++) {
 				if (Static223.aBooleanArray116[local189]) {
 					if (GlRenderer.enabled) {
@@ -227,7 +227,7 @@ public final class Static89 {
 					} else {
 						Static129.method2484(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711935, 128);
 					}
-				} else if (Static31.aBooleanArray29[local189]) {
+				} else if (Static31.rectangleRedraw[local189]) {
 					if (GlRenderer.enabled) {
 						Static46.method1182(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711680, 128);
 					} else {
@@ -236,7 +236,7 @@ public final class Static89 {
 				}
 			}
 		}
-		Static110.method2281(Static178.anInt4247, Static173.self.anInt3412, Static173.self.anInt3421, Static55.level);
+		Static110.method2281(Static178.anInt4247, Static173.self.xFine, Static173.self.zFine, Static55.level);
 		Static178.anInt4247 = 0;
 	}
 

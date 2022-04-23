@@ -113,8 +113,8 @@ public final class Static97 {
 		for (local14 = 0; local14 < Static106.anInt2871; local14++) {
 			@Pc(77) int local77 = arg0.gSmart1or2();
 			@Pc(85) World local85 = Static196.aClass10_Sub1Array2[local77] = new World();
-			local85.anInt377 = arg0.g1();
-			local85.anInt381 = arg0.g4();
+			local85.country = arg0.g1();
+			local85.flags = arg0.g4();
 			local85.anInt382 = local77 + Static19.anInt636;
 			local85.aClass100_69 = arg0.gjstr2();
 			local85.aClass100_71 = arg0.gjstr2();

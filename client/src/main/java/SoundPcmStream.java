@@ -79,9 +79,9 @@ public final class SoundPcmStream extends PcmStream {
 
 	@OriginalMember(owner = "client!b", name = "b", descriptor = "([III)V")
 	@Override
-	public final synchronized void method4408(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+	public final synchronized void read(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		if (this.anInt343 == 0 && this.anInt351 == 0) {
-			this.method4410(arg2);
+			this.skip(arg2);
 			return;
 		}
 		@Pc(13) PcmSound local13 = (PcmSound) this.aClass3_Sub16_5;
@@ -97,7 +97,7 @@ public final class SoundPcmStream extends PcmStream {
 		if (this.anInt346 < 0) {
 			if (this.anInt342 <= 0) {
 				this.method406();
-				this.method4658();
+				this.unlink();
 				return;
 			}
 			this.anInt346 = 0;
@@ -105,7 +105,7 @@ public final class SoundPcmStream extends PcmStream {
 		if (this.anInt346 >= local29) {
 			if (this.anInt342 >= 0) {
 				this.method406();
-				this.method4658();
+				this.unlink();
 				return;
 			}
 			this.anInt346 = local29 - 1;
@@ -183,14 +183,14 @@ public final class SoundPcmStream extends PcmStream {
 				if (this.anInt346 < 0) {
 					this.anInt346 = -1;
 					this.method406();
-					this.method4658();
+					this.unlink();
 				}
 			} else {
 				this.method385(arg0, local40, local29, local44, 0);
 				if (this.anInt346 >= local29) {
 					this.anInt346 = local29;
 					this.method406();
-					this.method4658();
+					this.unlink();
 				}
 			}
 		} else if (this.aBoolean14) {
@@ -288,7 +288,7 @@ public final class SoundPcmStream extends PcmStream {
 		} else if (this.anInt343 == Integer.MIN_VALUE) {
 			this.anInt343 = 0;
 			this.anInt348 = this.anInt355 = this.anInt352 = 0;
-			this.method4658();
+			this.unlink();
 			return true;
 		} else {
 			this.method416();
@@ -300,12 +300,12 @@ public final class SoundPcmStream extends PcmStream {
 	public final synchronized void method384(@OriginalArg(0) int arg0) {
 		if (arg0 == 0) {
 			this.method397();
-			this.method4658();
+			this.unlink();
 		} else if (this.anInt355 == 0 && this.anInt352 == 0) {
 			this.anInt351 = 0;
 			this.anInt343 = 0;
 			this.anInt348 = 0;
-			this.method4658();
+			this.unlink();
 		} else {
 			@Pc(31) int local31 = -this.anInt348;
 			if (this.anInt348 > local31) {
@@ -407,13 +407,13 @@ public final class SoundPcmStream extends PcmStream {
 
 	@OriginalMember(owner = "client!b", name = "c", descriptor = "(I)V")
 	@Override
-	public final synchronized void method4410(@OriginalArg(0) int arg0) {
+	public final synchronized void skip(@OriginalArg(0) int arg0) {
 		if (this.anInt351 > 0) {
 			if (arg0 >= this.anInt351) {
 				if (this.anInt343 == Integer.MIN_VALUE) {
 					this.anInt343 = 0;
 					this.anInt348 = this.anInt355 = this.anInt352 = 0;
-					this.method4658();
+					this.unlink();
 					arg0 = this.anInt351;
 				}
 				this.anInt351 = 0;
@@ -436,7 +436,7 @@ public final class SoundPcmStream extends PcmStream {
 		if (this.anInt346 < 0) {
 			if (this.anInt342 <= 0) {
 				this.method406();
-				this.method4658();
+				this.unlink();
 				return;
 			}
 			this.anInt346 = 0;
@@ -444,7 +444,7 @@ public final class SoundPcmStream extends PcmStream {
 		if (this.anInt346 >= local87) {
 			if (this.anInt342 >= 0) {
 				this.method406();
-				this.method4658();
+				this.unlink();
 				return;
 			}
 			this.anInt346 = local87 - 1;
@@ -515,12 +515,12 @@ public final class SoundPcmStream extends PcmStream {
 				if (this.anInt346 < 0) {
 					this.anInt346 = -1;
 					this.method406();
-					this.method4658();
+					this.unlink();
 				}
 			} else if (this.anInt346 >= local87) {
 				this.anInt346 = local87;
 				this.method406();
-				this.method4658();
+				this.unlink();
 			}
 		} else if (this.aBoolean14) {
 			if (this.anInt342 < 0) {

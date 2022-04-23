@@ -23,14 +23,14 @@ public final class Static278 {
 				@Pc(14) int local14 = Static57.aClass3_Sub15_Sub1_3.method2238(15);
 				if (local14 != 32767) {
 					@Pc(19) boolean local19 = false;
-					if (Static175.aClass8_Sub4_Sub2Array1[local14] == null) {
+					if (Static175.npcs[local14] == null) {
 						local19 = true;
-						Static175.aClass8_Sub4_Sub2Array1[local14] = new Npc();
+						Static175.npcs[local14] = new Npc();
 					}
-					@Pc(37) Npc local37 = Static175.aClass8_Sub4_Sub2Array1[local14];
+					@Pc(37) Npc local37 = Static175.npcs[local14];
 					Static33.anIntArray79[Static272.anInt5214++] = local14;
 					local37.anInt3430 = Static83.loop;
-					if (local37.aClass96_1 != null && local37.aClass96_1.method2935()) {
+					if (local37.type != null && local37.type.method2935()) {
 						Static91.method1877(local37);
 					}
 					@Pc(66) int local66 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
@@ -51,14 +51,14 @@ public final class Static278 {
 					if (local124 > 15) {
 						local124 -= 32;
 					}
-					local37.method2692(local37.aClass96_1.anInt3713);
-					local37.anInt3365 = local37.aClass96_1.anInt3737;
-					local37.anInt3376 = local37.aClass96_1.anInt3733;
+					local37.method2692(local37.type.anInt3713);
+					local37.anInt3365 = local37.type.anInt3737;
+					local37.anInt3376 = local37.type.anInt3733;
 					if (local37.anInt3376 == 0) {
 						local37.anInt3381 = 0;
 					}
-					local37.method2683(local37.method2693(), Static173.self.movementQueueX[0] + local124, local105 + Static173.self.movementQueueZ[0], local66 == 1);
-					if (local37.aClass96_1.method2935()) {
+					local37.method2683(local37.getSize(), Static173.self.movementQueueX[0] + local124, local105 + Static173.self.movementQueueZ[0], local66 == 1);
+					if (local37.type.method2935()) {
 						Static122.method2411(local37.movementQueueZ[0], null, 0, local37, local37.movementQueueX[0], Static55.level, null);
 					}
 					continue;
@@ -226,7 +226,7 @@ public final class Static278 {
 			Static115.aClass3_Sub15Array1[local19] = null;
 		}
 		for (local19 = 0; local19 < 32768; local19++) {
-			Static175.aClass8_Sub4_Sub2Array1[local19] = null;
+			Static175.npcs[local19] = null;
 		}
 		for (local19 = 0; local19 < 4; local19++) {
 			for (@Pc(115) int local115 = 0; local115 < 104; local115++) {

@@ -14,16 +14,16 @@ public final class Static186 {
 	public static int antiAliasingMode = 0;
 
 	@OriginalMember(owner = "client!pa", name = "O", descriptor = "Lclient!na;")
-	public static final JagString EMPTY_FILE = Static28.parse("");
+	public static final JagString EMPTY = Static28.parse("");
 
 	@OriginalMember(owner = "client!pa", name = "P", descriptor = "Lclient!na;")
-	public static JagString password = EMPTY_FILE;
+	public static JagString password = EMPTY;
 
 	@OriginalMember(owner = "client!pa", name = "R", descriptor = "[Z")
 	public static final boolean[] aBooleanArray100 = new boolean[100];
 
 	@OriginalMember(owner = "client!pa", name = "S", descriptor = "Lclient!na;")
-	public static JagString username = EMPTY_FILE;
+	public static JagString username = EMPTY;
 
 	@OriginalMember(owner = "client!pa", name = "d", descriptor = "(I)V")
 	public static void method3413() {
@@ -62,9 +62,9 @@ public final class Static186 {
 				Static83.aFloat3 = 8.0F;
 				Static138.aFloat14 = 8.0F;
 			}
-			@Pc(144) int local144 = (Static173.self.anInt3412 >> 7) + Static225.originX - Static158.anInt3846;
+			@Pc(144) int local144 = (Static173.self.xFine >> 7) + Static225.originX - Static158.anInt3846;
 			@Pc(153) int local153 = local144 + (int) (Math.random() * 10.0D) - 5;
-			@Pc(168) int local168 = Static2.anInt13 + Static181.anInt4296 - Static142.originZ - (Static173.self.anInt3421 >> 7) - 1;
+			@Pc(168) int local168 = Static2.anInt13 + Static181.anInt4296 - Static142.originZ - (Static173.self.zFine >> 7) - 1;
 			@Pc(177) int local177 = local168 + (int) (Math.random() * 10.0D) - 5;
 			if (local153 >= 0 && Static48.anInt1449 > local153 && local177 >= 0 && local177 < Static181.anInt4296) {
 				Static13.anInt435 = local153;
@@ -93,20 +93,20 @@ public final class Static186 {
 			Static33.method868(new Buffer(Static119.aClass153_44.fetchFile(Static166.aClass100_779, Static269.aClass3_Sub2_Sub4_2.aClass100_138)));
 			Static41.anInt1309 = 30;
 			Static7.ping(true);
-			Static234.method4020();
+			Static234.resetTimer();
 		} else if (Static41.anInt1309 == 30) {
 			Static47.method3998(new Buffer(Static119.aClass153_44.fetchFile(Static4.aClass100_7, Static269.aClass3_Sub2_Sub4_2.aClass100_138)));
 			Static41.anInt1309 = 40;
-			Static234.method4020();
+			Static234.resetTimer();
 		} else if (Static41.anInt1309 == 40) {
 			Static231.method3980(new Buffer(Static119.aClass153_44.fetchFile(Static73.aClass100_455, Static269.aClass3_Sub2_Sub4_2.aClass100_138)));
 			Static41.anInt1309 = 50;
-			Static234.method4020();
+			Static234.resetTimer();
 		} else if (Static41.anInt1309 == 50) {
 			Static166.method3166(new Buffer(Static119.aClass153_44.fetchFile(Static42.aClass100_331, Static269.aClass3_Sub2_Sub4_2.aClass100_138)));
 			Static41.anInt1309 = 60;
 			Static7.ping(true);
-			Static234.method4020();
+			Static234.resetTimer();
 		} else if (Static41.anInt1309 == 60) {
 			if (Static119.aClass153_44.method4497(Static34.concatenate(new JagString[] { Static269.aClass3_Sub2_Sub4_2.aClass100_138, Static265.aClass100_1086 }))) {
 				if (!Static119.aClass153_44.allFilesComplete(Static34.concatenate(new JagString[] { Static269.aClass3_Sub2_Sub4_2.aClass100_138, Static265.aClass100_1086 }))) {
@@ -117,47 +117,47 @@ public final class Static186 {
 				Static203.aClass134_1 = new MapFunctionGroup(0);
 			}
 			Static41.anInt1309 = 70;
-			Static234.method4020();
+			Static234.resetTimer();
 		} else if (Static41.anInt1309 == 70) {
 			Static273.aClass41_7 = new WorldMapFont(11, true, GameShell.canvas);
 			Static41.anInt1309 = 73;
 			Static7.ping(true);
-			Static234.method4020();
+			Static234.resetTimer();
 		} else if (Static41.anInt1309 == 73) {
 			Static152.aClass41_3 = new WorldMapFont(12, true, GameShell.canvas);
 			Static41.anInt1309 = 76;
 			Static7.ping(true);
-			Static234.method4020();
+			Static234.resetTimer();
 		} else if (Static41.anInt1309 == 76) {
 			Static169.aClass41_5 = new WorldMapFont(14, true, GameShell.canvas);
 			Static41.anInt1309 = 79;
 			Static7.ping(true);
-			Static234.method4020();
+			Static234.resetTimer();
 		} else if (Static41.anInt1309 == 79) {
 			Static130.aClass41_1 = new WorldMapFont(17, true, GameShell.canvas);
 			Static41.anInt1309 = 82;
 			Static7.ping(true);
-			Static234.method4020();
+			Static234.resetTimer();
 		} else if (Static41.anInt1309 == 82) {
 			Static203.aClass41_8 = new WorldMapFont(19, true, GameShell.canvas);
 			Static41.anInt1309 = 85;
 			Static7.ping(true);
-			Static234.method4020();
+			Static234.resetTimer();
 		} else if (Static41.anInt1309 == 85) {
 			Static130.aClass41_2 = new WorldMapFont(22, true, GameShell.canvas);
 			Static41.anInt1309 = 88;
 			Static7.ping(true);
-			Static234.method4020();
+			Static234.resetTimer();
 		} else if (Static41.anInt1309 == 88) {
 			Static270.aClass41_9 = new WorldMapFont(26, true, GameShell.canvas);
 			Static41.anInt1309 = 91;
 			Static7.ping(true);
-			Static234.method4020();
+			Static234.resetTimer();
 		} else {
 			Static160.aClass41_4 = new WorldMapFont(30, true, GameShell.canvas);
 			Static41.anInt1309 = 100;
 			Static7.ping(true);
-			Static234.method4020();
+			Static234.resetTimer();
 			System.gc();
 		}
 	}
@@ -173,7 +173,7 @@ public final class Static186 {
 				arg2.anInt3373 = 1;
 				arg2.anInt3425 = 0;
 				arg2.anInt3371 = 0;
-				Static152.method2836(arg2.anInt3421, local89, arg2.anInt3412, Static173.self == arg2, arg2.anInt3425);
+				Static152.method2836(arg2.zFine, local89, arg2.xFine, Static173.self == arg2, arg2.anInt3425);
 			}
 			if (local92 == 2) {
 				arg2.anInt3371 = 0;
@@ -182,12 +182,12 @@ public final class Static186 {
 			arg2.anInt3373 = 1;
 			arg2.anInt3425 = 0;
 			arg2.anInt3420 = arg0;
-			arg2.anInt3405 = arg2.anInt3409;
+			arg2.anInt3405 = arg2.movementQueueSize;
 			arg2.anInt3371 = 0;
 			arg2.anInt3360 = 0;
 			arg2.anInt3369 = arg1;
 			if (arg2.anInt3369 != -1) {
-				Static152.method2836(arg2.anInt3421, Static36.method941(arg2.anInt3369), arg2.anInt3412, arg2 == Static173.self, arg2.anInt3425);
+				Static152.method2836(arg2.zFine, Static36.method941(arg2.anInt3369), arg2.xFine, arg2 == Static173.self, arg2.anInt3425);
 			}
 		}
 	}

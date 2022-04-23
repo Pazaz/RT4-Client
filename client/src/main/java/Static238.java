@@ -23,7 +23,7 @@ public final class Static238 {
 		@Pc(13) DelayedStateChange local13 = (DelayedStateChange) Static36.aClass133_3.get((long) arg1 | (long) arg0 << 32);
 		if (local13 == null) {
 			local13 = new DelayedStateChange(arg0, arg1);
-			Static36.aClass133_3.method3862(local13, local13.uid);
+			Static36.aClass133_3.put(local13, local13.key);
 		}
 		return local13;
 	}

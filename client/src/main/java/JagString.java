@@ -47,7 +47,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(BI)I")
-	public final int method3110(@OriginalArg(1) int arg0) {
+	public final int parseHexString(@OriginalArg(1) int arg0) {
 		@Pc(14) boolean local14 = false;
 		@Pc(20) boolean local20 = false;
 		@Pc(22) int local22 = 0;
@@ -189,7 +189,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "c", descriptor = "(I)J")
-	public final long method3118() {
+	public final long longHashCode() {
 		@Pc(1) long local1 = 0L;
 		for (@Pc(9) int local9 = 0; local9 < this.length; local9++) {
 			local1 = (long) (this.chars[local9] & 0xFF) + (local1 << 5) - local1;
@@ -366,7 +366,7 @@ public final class JagString implements StringInterface {
 
 	@OriginalMember(owner = "client!na", name = "b", descriptor = "(B)I")
 	public final int parseInt() {
-		return this.method3110(10);
+		return this.parseHexString(10);
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(IZ)V")
@@ -415,7 +415,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(IB)Lclient!na;")
-	public final JagString method3136(@OriginalArg(0) int arg0) {
+	public final JagString substring(@OriginalArg(0) int arg0) {
 		return this.substring(this.length, arg0);
 	}
 
@@ -429,7 +429,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "b", descriptor = "(Lclient!na;I)Z")
-	public final boolean method3138(@OriginalArg(0) JagString arg0) {
+	public final boolean startsWith(@OriginalArg(0) JagString arg0) {
 		if (this.length < arg0.length) {
 			return false;
 		}
@@ -574,7 +574,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "g", descriptor = "(I)Lclient!na;")
-	public final JagString method3143() {
+	public final JagString asString() {
 		return this;
 	}
 
@@ -694,23 +694,23 @@ public final class JagString implements StringInterface {
 
 	@OriginalMember(owner = "client!na", name = "c", descriptor = "(B)Lclient!na;")
 	public final JagString method3151() {
-		@Pc(9) long local9 = this.method3118();
+		@Pc(9) long local9 = this.longHashCode();
 		@Pc(19) Class local19 = JagString.class;
 		synchronized (local19) {
 			@Pc(30) StringNode local30;
 			if (Static148.aClass133_13 == null) {
 				Static148.aClass133_13 = new HashTable(4096);
 			} else {
-				for (local30 = (StringNode) Static148.aClass133_13.get(local9); local30 != null; local30 = (StringNode) Static148.aClass133_13.method3867()) {
-					if (this.strEquals(local30.aClass100_980)) {
-						return local30.aClass100_980;
+				for (local30 = (StringNode) Static148.aClass133_13.get(local9); local30 != null; local30 = (StringNode) Static148.aClass133_13.nextWithKey()) {
+					if (this.strEquals(local30.value)) {
+						return local30.value;
 					}
 				}
 			}
 			local30 = new StringNode();
-			local30.aClass100_980 = this;
+			local30.value = this;
 			this.aBoolean193 = false;
-			Static148.aClass133_13.method3862(local30, local9);
+			Static148.aClass133_13.put(local30, local9);
 			return this;
 		}
 	}
@@ -736,7 +736,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(BLjava/applet/Applet;)Lclient!na;")
-	public final JagString method3153(@OriginalArg(1) Applet arg0) {
+	public final JagString fromParameters(@OriginalArg(1) Applet arg0) {
 		@Pc(19) String local19 = new String(this.chars, 0, this.length);
 		@Pc(23) String local23 = arg0.getParameter(local19);
 		return local23 == null ? null : Static230.method3952(local23);

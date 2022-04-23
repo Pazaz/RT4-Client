@@ -24,9 +24,9 @@ public final class Static257 {
 		@Pc(7) Tile local7 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
 		if (local7 == null) {
 			return false;
-		} else if (local7.aClass77_1 != null && local7.aClass77_1.aLong107 == arg3) {
+		} else if (local7.aClass77_1 != null && local7.aClass77_1.key == arg3) {
 			return true;
-		} else if (local7.aClass24_1 != null && local7.aClass24_1.aLong52 == arg3) {
+		} else if (local7.aClass24_1 != null && local7.aClass24_1.key == arg3) {
 			return true;
 		} else if (local7.aClass15_1 != null && local7.aClass15_1.aLong26 == arg3) {
 			return true;

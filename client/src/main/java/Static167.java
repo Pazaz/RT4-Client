@@ -35,13 +35,13 @@ public final class Static167 {
 	public static final JagString aClass100_783 = Static28.parse(")4p=");
 
 	@OriginalMember(owner = "client!nd", name = "a", descriptor = "(ZLclient!qb;)V")
-	public static void method3170(@OriginalArg(1) PcmStream arg0) {
+	public static void setInactive(@OriginalArg(1) PcmStream arg0) {
 		if (arg0.aClass3_Sub16_5 != null) {
 			arg0.aClass3_Sub16_5.anInt3313 = 0;
 		}
 		arg0.aBoolean292 = false;
 		for (@Pc(14) PcmStream local14 = arg0.method4406(); local14 != null; local14 = arg0.method4409()) {
-			method3170(local14);
+			setInactive(local14);
 		}
 	}
 

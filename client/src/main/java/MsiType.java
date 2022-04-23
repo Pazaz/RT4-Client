@@ -28,7 +28,7 @@ public final class MsiType {
 
 	@OriginalMember(owner = "client!aa", name = "a", descriptor = "(IB)Lclient!ek;")
 	public final SoftwareIndexedSprite method9(@OriginalArg(0) int arg0) {
-		@Pc(17) SoftwareIndexedSprite local17 = (SoftwareIndexedSprite) Static219.aClass99_27.method3106((long) (arg0 << 16 | this.anInt12));
+		@Pc(17) SoftwareIndexedSprite local17 = (SoftwareIndexedSprite) Static219.aClass99_27.get((long) (arg0 << 16 | this.anInt12));
 		if (local17 != null) {
 			return local17;
 		}
@@ -36,12 +36,12 @@ public final class MsiType {
 		local17 = Static164.method3119(this.anInt12, Static250.aClass153_101);
 		if (local17 != null) {
 			local17.method1389(Static173.anInt4183, Static85.anInt2262, Static266.anInt5344);
-			local17.anInt4279 = local17.width;
+			local17.innerWidth = local17.width;
 			local17.anInt4276 = local17.anInt4278;
 			for (@Pc(59) int local59 = 0; local59 < arg0; local59++) {
 				local17.method1395();
 			}
-			Static219.aClass99_27.method3095(local17, (long) (arg0 << 16 | this.anInt12));
+			Static219.aClass99_27.put(local17, (long) (arg0 << 16 | this.anInt12));
 		}
 		return local17;
 	}

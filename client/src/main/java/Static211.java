@@ -39,10 +39,10 @@ public final class Static211 {
 	@OriginalMember(owner = "client!rc", name = "d", descriptor = "(I)V")
 	public static void method930() {
 		if (Static11.musicChannel != null) {
-			Static11.musicChannel.method3575();
+			Static11.musicChannel.quit();
 		}
 		if (Static147.soundChannel != null) {
-			Static147.soundChannel.method3575();
+			Static147.soundChannel.quit();
 		}
 		AudioChannel.init(Static99.stereo);
 		Static11.musicChannel = AudioChannel.create(22050, GameShell.signLink, GameShell.canvas, 0);

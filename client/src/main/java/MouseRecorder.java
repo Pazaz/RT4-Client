@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class MouseRecorder implements Runnable {
 
 	@OriginalMember(owner = "client!jd", name = "e", descriptor = "Z")
-	public boolean aBoolean151 = true;
+	public boolean running = true;
 
 	@OriginalMember(owner = "client!jd", name = "f", descriptor = "Ljava/lang/Object;")
 	public final Object lock = new Object();
@@ -23,7 +23,7 @@ public final class MouseRecorder implements Runnable {
 	@OriginalMember(owner = "client!jd", name = "run", descriptor = "()V")
 	@Override
 	public final void run() {
-		while (this.aBoolean151) {
+		while (this.running) {
 			@Pc(12) Object local12 = this.lock;
 			synchronized (this.lock) {
 				if (this.samples < 500) {

@@ -7,19 +7,19 @@ import org.openrs2.deob.annotation.Pc;
 public final class FluType {
 
 	@OriginalMember(owner = "client!ni", name = "d", descriptor = "I")
-	public int anInt4149;
+	public int saturation;
 
 	@OriginalMember(owner = "client!ni", name = "i", descriptor = "I")
-	public int anInt4154;
+	public int weightedHue;
 
 	@OriginalMember(owner = "client!ni", name = "r", descriptor = "I")
-	public int anInt4158;
+	public int lightness;
 
 	@OriginalMember(owner = "client!ni", name = "u", descriptor = "I")
-	public int anInt4161;
+	public int chroma;
 
 	@OriginalMember(owner = "client!ni", name = "b", descriptor = "I")
-	private int anInt4147 = 0;
+	private int color = 0;
 
 	@OriginalMember(owner = "client!ni", name = "m", descriptor = "I")
 	public int anInt4155 = -1;
@@ -31,7 +31,7 @@ public final class FluType {
 	public boolean aBoolean198 = true;
 
 	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(IB)V")
-	private void method3216(@OriginalArg(0) int arg0) {
+	private void rgbToHsl(@OriginalArg(0) int arg0) {
 		@Pc(8) double local8 = (double) (arg0 >> 16 & 0xFF) / 256.0D;
 		@Pc(21) double local21 = (double) (arg0 >> 8 & 0xFF) / 256.0D;
 		@Pc(23) double local23 = local8;
@@ -68,26 +68,26 @@ public final class FluType {
 			}
 		}
 		if (local74 > 0.5D) {
-			this.anInt4161 = (int) (local68 * (1.0D - local74) * 512.0D);
+			this.chroma = (int) (local68 * (1.0D - local74) * 512.0D);
 		} else {
-			this.anInt4161 = (int) (local68 * local74 * 512.0D);
+			this.chroma = (int) (local68 * local74 * 512.0D);
 		}
-		if (this.anInt4161 < 1) {
-			this.anInt4161 = 1;
+		if (this.chroma < 1) {
+			this.chroma = 1;
 		}
-		this.anInt4149 = (int) (local68 * 256.0D);
-		this.anInt4158 = (int) (local74 * 256.0D);
-		if (this.anInt4158 < 0) {
-			this.anInt4158 = 0;
-		} else if (this.anInt4158 > 255) {
-			this.anInt4158 = 255;
+		this.saturation = (int) (local68 * 256.0D);
+		this.lightness = (int) (local74 * 256.0D);
+		if (this.lightness < 0) {
+			this.lightness = 0;
+		} else if (this.lightness > 255) {
+			this.lightness = 255;
 		}
 		local54 /= 6.0D;
-		this.anInt4154 = (int) ((double) this.anInt4161 * local54);
-		if (this.anInt4149 < 0) {
-			this.anInt4149 = 0;
-		} else if (this.anInt4149 > 255) {
-			this.anInt4149 = 255;
+		this.weightedHue = (int) ((double) this.chroma * local54);
+		if (this.saturation < 0) {
+			this.saturation = 0;
+		} else if (this.saturation > 255) {
+			this.saturation = 255;
 		}
 	}
 
@@ -105,8 +105,8 @@ public final class FluType {
 	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(BILclient!wa;I)V")
 	private void method3220(@OriginalArg(1) int arg0, @OriginalArg(2) Buffer arg1, @OriginalArg(3) int arg2) {
 		if (arg0 == 1) {
-			this.anInt4147 = arg1.g3();
-			this.method3216(this.anInt4147);
+			this.color = arg1.g3();
+			this.rgbToHsl(this.color);
 		} else if (arg0 == 2) {
 			this.anInt4155 = arg1.g2();
 			if (this.anInt4155 == 65535) {

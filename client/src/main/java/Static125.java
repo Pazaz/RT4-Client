@@ -45,7 +45,7 @@ public final class Static125 {
 
 	@OriginalMember(owner = "client!jl", name = "a", descriptor = "(IB)Lclient!kk;")
 	public static VarbitType method2449(@OriginalArg(0) int arg0) {
-		@Pc(10) VarbitType local10 = (VarbitType) aClass99_19.method3106((long) arg0);
+		@Pc(10) VarbitType local10 = (VarbitType) aClass99_19.get((long) arg0);
 		if (local10 != null) {
 			return local10;
 		}
@@ -54,7 +54,7 @@ public final class Static125 {
 		if (local31 != null) {
 			local10.method2651(new Buffer(local31));
 		}
-		aClass99_19.method3095(local10, (long) arg0);
+		aClass99_19.put(local10, (long) arg0);
 		return local10;
 	}
 

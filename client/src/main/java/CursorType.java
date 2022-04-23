@@ -7,45 +7,45 @@ import org.openrs2.deob.annotation.Pc;
 public final class CursorType {
 
 	@OriginalMember(owner = "client!ia", name = "a", descriptor = "I")
-	public int anInt2850;
+	public int hotSpotY;
 
 	@OriginalMember(owner = "client!ia", name = "c", descriptor = "I")
-	public int anInt2852;
+	public int hotSpotX;
 
 	@OriginalMember(owner = "client!ia", name = "i", descriptor = "I")
-	private int anInt2857;
+	private int spriteId;
 
 	@OriginalMember(owner = "client!ia", name = "a", descriptor = "(B)Lclient!mm;")
-	public final SoftwareSprite method2246() {
-		@Pc(7) SoftwareSprite local7 = (SoftwareSprite) Static7.aClass99_5.method3106((long) this.anInt2857);
+	public final SoftwareSprite getSprite() {
+		@Pc(7) SoftwareSprite local7 = (SoftwareSprite) Static7.sprites.get((long) this.spriteId);
 		if (local7 != null) {
 			return local7;
 		}
-		local7 = Static80.method3613(Static243.aClass153_97, this.anInt2857);
+		local7 = Static80.loadSoftwareAlphaSprite(Static243.spritesArchive, this.spriteId);
 		if (local7 != null) {
-			Static7.aClass99_5.method3095(local7, (long) this.anInt2857);
+			Static7.sprites.put(local7, (long) this.spriteId);
 		}
 		return local7;
 	}
 
 	@OriginalMember(owner = "client!ia", name = "a", descriptor = "(Lclient!wa;IB)V")
-	public final void method2249(@OriginalArg(0) Buffer arg0, @OriginalArg(1) int arg1) {
+	public final void decode(@OriginalArg(0) Buffer arg0, @OriginalArg(1) int arg1) {
 		while (true) {
 			@Pc(18) int local18 = arg0.g1();
 			if (local18 == 0) {
 				return;
 			}
-			this.method2250(arg1, local18, arg0);
+			this.decode(arg1, local18, arg0);
 		}
 	}
 
 	@OriginalMember(owner = "client!ia", name = "a", descriptor = "(IIILclient!wa;)V")
-	private void method2250(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Buffer arg2) {
+	private void decode(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Buffer arg2) {
 		if (arg1 == 1) {
-			this.anInt2857 = arg2.g2();
+			this.spriteId = arg2.g2();
 		} else if (arg1 == 2) {
-			this.anInt2852 = arg2.g1();
-			this.anInt2850 = arg2.g1();
+			this.hotSpotX = arg2.g1();
+			this.hotSpotY = arg2.g1();
 		}
 	}
 }

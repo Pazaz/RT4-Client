@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public class SecondaryNode extends Node {
 
 	@OriginalMember(owner = "client!rg", name = "v", descriptor = "J")
-	public long aLong185;
+	public long secondaryKey;
 
 	@OriginalMember(owner = "client!rg", name = "w", descriptor = "Lclient!rg;")
 	public SecondaryNode aClass3_Sub2_66;

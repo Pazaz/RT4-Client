@@ -44,7 +44,7 @@ public final class HashTable {
 				if (local14 == local17) {
 					break;
 				}
-				local17.method4658();
+				local17.unlink();
 			}
 		}
 		this.aClass3_193 = null;
@@ -52,13 +52,13 @@ public final class HashTable {
 	}
 
 	@OriginalMember(owner = "client!sc", name = "c", descriptor = "(I)Lclient!ab;")
-	public final Node method3859() {
+	public final Node head() {
 		this.anInt5037 = 0;
-		return this.method3861();
+		return this.next();
 	}
 
 	@OriginalMember(owner = "client!sc", name = "d", descriptor = "(I)Lclient!ab;")
-	public final Node method3861() {
+	public final Node next() {
 		@Pc(24) Node local24;
 		if (this.anInt5037 > 0 && this.aClass3_193 != this.aClass3Array1[this.anInt5037 - 1]) {
 			local24 = this.aClass3_193;
@@ -76,13 +76,13 @@ public final class HashTable {
 	}
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(ILclient!ab;J)V")
-	public final void method3862(@OriginalArg(1) Node arg0, @OriginalArg(2) long arg1) {
+	public final void put(@OriginalArg(1) Node arg0, @OriginalArg(2) long arg1) {
 		if (arg0.aClass3_223 != null) {
-			arg0.method4658();
+			arg0.unlink();
 		}
 		@Pc(21) Node local21 = this.aClass3Array1[(int) (arg1 & (long) (this.anInt5023 - 1))];
 		arg0.aClass3_222 = local21;
-		arg0.uid = arg1;
+		arg0.key = arg1;
 		arg0.aClass3_223 = local21.aClass3_223;
 		arg0.aClass3_223.aClass3_222 = arg0;
 		arg0.aClass3_222.aClass3_223 = arg0;
@@ -93,7 +93,7 @@ public final class HashTable {
 		this.aLong168 = arg0;
 		@Pc(24) Node local24 = this.aClass3Array1[(int) (arg0 & (long) (this.anInt5023 - 1))];
 		for (this.aClass3_192 = local24.aClass3_222; this.aClass3_192 != local24; this.aClass3_192 = this.aClass3_192.aClass3_222) {
-			if (arg0 == this.aClass3_192.uid) {
+			if (arg0 == this.aClass3_192.key) {
 				@Pc(46) Node local46 = this.aClass3_192;
 				this.aClass3_192 = this.aClass3_192.aClass3_222;
 				return local46;
@@ -130,13 +130,13 @@ public final class HashTable {
 	}
 
 	@OriginalMember(owner = "client!sc", name = "f", descriptor = "(I)Lclient!ab;")
-	public final Node method3867() {
+	public final Node nextWithKey() {
 		if (this.aClass3_192 == null) {
 			return null;
 		}
 		@Pc(23) Node local23 = this.aClass3Array1[(int) (this.aLong168 & (long) (this.anInt5023 - 1))];
 		while (local23 != this.aClass3_192) {
-			if (this.aClass3_192.uid == this.aLong168) {
+			if (this.aClass3_192.key == this.aLong168) {
 				@Pc(45) Node local45 = this.aClass3_192;
 				this.aClass3_192 = this.aClass3_192.aClass3_222;
 				return local45;
@@ -148,7 +148,7 @@ public final class HashTable {
 	}
 
 	@OriginalMember(owner = "client!sc", name = "g", descriptor = "(I)I")
-	public final int method3868() {
+	public final int getBucketCount() {
 		return this.anInt5023;
 	}
 }

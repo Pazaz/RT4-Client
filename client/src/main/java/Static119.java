@@ -81,13 +81,13 @@ public final class Static119 {
 	public static void method2386() {
 		@Pc(6) AreaSound local6;
 		for (local6 = (AreaSound) Static3.aClass69_135.method2289(); local6 != null; local6 = (AreaSound) Static3.aClass69_135.method2288()) {
-			if (local6.aBoolean117) {
-				local6.method1567();
+			if (local6.multiLocOrNpc) {
+				local6.update();
 			}
 		}
 		for (local6 = (AreaSound) Static152.aClass69_87.method2289(); local6 != null; local6 = (AreaSound) Static152.aClass69_87.method2288()) {
-			if (local6.aBoolean117) {
-				local6.method1567();
+			if (local6.multiLocOrNpc) {
+				local6.update();
 			}
 		}
 	}

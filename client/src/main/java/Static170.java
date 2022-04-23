@@ -79,7 +79,7 @@ public final class Static170 {
 		@Pc(20) LongNode local20 = (LongNode) Static199.aClass133_20.get((long) arg1);
 		if (local20 == null) {
 			local20 = new LongNode(4611686018427387905L);
-			Static199.aClass133_20.method3862(local20, (long) arg1);
+			Static199.aClass133_20.put(local20, (long) arg1);
 		} else if (local20.aLong55 != 4611686018427387905L) {
 			local20.aLong55 = MonotonicClock.currentTimeMillis() + 500L | 0x4000000000000000L;
 		}

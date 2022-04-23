@@ -60,11 +60,11 @@ public final class Static226 {
 
 	@OriginalMember(owner = "client!sf", name = "b", descriptor = "(B)V")
 	public static void method3901() {
-		@Pc(16) int local16 = Static280.aClass3_Sub2_Sub9_43.method2858(LocalizedText.CHOOSE_OPTION);
+		@Pc(16) int local16 = Static280.aClass3_Sub2_Sub9_43.getStringWidth(LocalizedText.CHOOSE_OPTION);
 		@Pc(18) int local18;
 		@Pc(27) int local27;
 		for (local18 = 0; local18 < Static231.anInt5204; local18++) {
-			local27 = Static280.aClass3_Sub2_Sub9_43.method2858(Static269.method2228(local18));
+			local27 = Static280.aClass3_Sub2_Sub9_43.getStringWidth(Static269.method2228(local18));
 			if (local27 > local16) {
 				local16 = local27;
 			}

@@ -52,7 +52,7 @@ public final class Static219 {
 				local10.anInt925 = 0;
 				Static226.method3898(local10);
 			} else {
-				local10.method4658();
+				local10.unlink();
 			}
 		}
 	}

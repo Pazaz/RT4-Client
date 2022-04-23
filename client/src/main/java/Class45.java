@@ -63,7 +63,7 @@ public final class Class45 {
 			local1 = arg1 + (arg3 << 16);
 			@Pc(23) IntNode local23 = (IntNode) this.aClass133_4.get(local1);
 			if (local23 != null) {
-				return local23.anInt3141;
+				return local23.value;
 			}
 		}
 		@Pc(31) int local31 = arg0.anInt2247;
@@ -106,7 +106,7 @@ public final class Class45 {
 		this.anIntArray178[this.anInt2017] = arg1;
 		this.anIntArray180[this.anInt2017] = arg2;
 		this.anIntArray179[this.anInt2017] = arg3;
-		this.aClass133_4.method3862(new IntNode(this.anInt2017), local1);
+		this.aClass133_4.put(new IntNode(this.anInt2017), local1);
 		return this.anInt2017++;
 	}
 

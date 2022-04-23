@@ -41,7 +41,7 @@ public final class Static148 {
 		@Pc(21) LongNode local21 = (LongNode) Static199.aClass133_20.get((long) arg0);
 		if (local21 == null) {
 			local21 = new LongNode(MonotonicClock.currentTimeMillis() + 500L);
-			Static199.aClass133_20.method3862(local21, (long) arg0);
+			Static199.aClass133_20.put(local21, (long) arg0);
 		} else {
 			local21.aLong55 = MonotonicClock.currentTimeMillis() + 500L;
 		}
@@ -49,14 +49,14 @@ public final class Static148 {
 
 	@OriginalMember(owner = "client!li", name = "a", descriptor = "(II)Lclient!dd;")
 	public static SoftwareFont method2768(@OriginalArg(1) int arg0) {
-		@Pc(16) SoftwareFont local16 = (SoftwareFont) Static139.aClass99_22.method3106((long) arg0);
+		@Pc(16) SoftwareFont local16 = (SoftwareFont) Static139.aClass99_22.get((long) arg0);
 		if (local16 != null) {
 			return local16;
 		}
 		@Pc(26) byte[] local26 = Static261.js5Archive13.getFile(arg0, 0);
 		local16 = new SoftwareFont(local26);
-		local16.method2873(Static159.aClass36Array12, null);
-		Static139.aClass99_22.method3095(local16, (long) arg0);
+		local16.setNameIcons(Static159.aClass36Array12, null);
+		Static139.aClass99_22.put(local16, (long) arg0);
 		return local16;
 	}
 }

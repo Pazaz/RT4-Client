@@ -17,14 +17,14 @@ public final class Static199 {
 	public static int mainLoadPercentage = 10;
 
 	@OriginalMember(owner = "client!qc", name = "U", descriptor = "I")
-	public static int anInt4672 = 0;
+	public static int rectDebug = 0;
 
 	@OriginalMember(owner = "client!qc", name = "ab", descriptor = "[I")
 	public static final int[] anIntArray417 = new int[1000];
 
 	@OriginalMember(owner = "client!qc", name = "a", descriptor = "(ZI)Lclient!ni;")
 	public static FluType method3593(@OriginalArg(1) int arg0) {
-		@Pc(10) FluType local10 = (FluType) Static83.aClass99_3.method3106((long) arg0);
+		@Pc(10) FluType local10 = (FluType) Static83.aClass99_3.get((long) arg0);
 		if (local10 != null) {
 			return local10;
 		}
@@ -33,7 +33,7 @@ public final class Static199 {
 		if (local27 != null) {
 			local10.method3217(arg0, new Buffer(local27));
 		}
-		Static83.aClass99_3.method3095(local10, (long) arg0);
+		Static83.aClass99_3.put(local10, (long) arg0);
 		return local10;
 	}
 

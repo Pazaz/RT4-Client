@@ -178,32 +178,32 @@ public final class Static260 {
 	public static void clearAmbientSounds(@OriginalArg(1) boolean arg0) {
 		@Pc(14) AreaSound local14;
 		for (local14 = (AreaSound) Static3.aClass69_135.method2289(); local14 != null; local14 = (AreaSound) Static3.aClass69_135.method2288()) {
-			if (local14.aClass3_Sub3_Sub1_1 != null) {
-				Static204.soundStream.method1347(local14.aClass3_Sub3_Sub1_1);
-				local14.aClass3_Sub3_Sub1_1 = null;
+			if (local14.primaryStream != null) {
+				Static204.soundStream.removeSubStream(local14.primaryStream);
+				local14.primaryStream = null;
 			}
-			if (local14.aClass3_Sub3_Sub1_2 != null) {
-				Static204.soundStream.method1347(local14.aClass3_Sub3_Sub1_2);
-				local14.aClass3_Sub3_Sub1_2 = null;
+			if (local14.secondaryStream != null) {
+				Static204.soundStream.removeSubStream(local14.secondaryStream);
+				local14.secondaryStream = null;
 			}
-			local14.method4658();
+			local14.unlink();
 		}
 		if (!arg0) {
 			return;
 		}
 		for (local14 = (AreaSound) Static152.aClass69_87.method2289(); local14 != null; local14 = (AreaSound) Static152.aClass69_87.method2288()) {
-			if (local14.aClass3_Sub3_Sub1_1 != null) {
-				Static204.soundStream.method1347(local14.aClass3_Sub3_Sub1_1);
-				local14.aClass3_Sub3_Sub1_1 = null;
+			if (local14.primaryStream != null) {
+				Static204.soundStream.removeSubStream(local14.primaryStream);
+				local14.primaryStream = null;
 			}
-			local14.method4658();
+			local14.unlink();
 		}
-		for (local14 = (AreaSound) Static93.aClass133_7.method3859(); local14 != null; local14 = (AreaSound) Static93.aClass133_7.method3861()) {
-			if (local14.aClass3_Sub3_Sub1_1 != null) {
-				Static204.soundStream.method1347(local14.aClass3_Sub3_Sub1_1);
-				local14.aClass3_Sub3_Sub1_1 = null;
+		for (local14 = (AreaSound) Static93.aClass133_7.head(); local14 != null; local14 = (AreaSound) Static93.aClass133_7.next()) {
+			if (local14.primaryStream != null) {
+				Static204.soundStream.removeSubStream(local14.primaryStream);
+				local14.primaryStream = null;
 			}
-			local14.method4658();
+			local14.unlink();
 		}
 	}
 }

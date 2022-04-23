@@ -73,7 +73,7 @@ public final class Static225 {
 	@OriginalMember(owner = "client!se", name = "a", descriptor = "(III)V")
 	public static void method3893(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		@Pc(14) DelayedStateChange local14 = Static238.method4143(5, arg0);
-		local14.method1017();
+		local14.pushServer();
 		local14.intArg1 = arg1;
 	}
 
@@ -82,12 +82,12 @@ public final class Static225 {
 		Static186.password = arg1;
 		Static5.anInt39 = arg2;
 		Static186.username = arg0;
-		if (Static186.username.strEquals(Static186.EMPTY_FILE) || Static186.password.strEquals(Static186.EMPTY_FILE)) {
-			Static266.returnCode = 3;
+		if (Static186.username.strEquals(Static186.EMPTY) || Static186.password.strEquals(Static186.EMPTY)) {
+			Static266.reply = 3;
 		} else if (Static125.worldId == -1) {
 			Static20.anInt673 = 0;
 			Static196.anInt4587 = 0;
-			Static266.returnCode = -3;
+			Static266.reply = -3;
 			Static219.anInt4937 = 1;
 			@Pc(43) Buffer local43 = new Buffer(128);
 			local43.p1(10);

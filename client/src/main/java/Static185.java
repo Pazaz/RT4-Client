@@ -149,7 +149,7 @@ public final class Static185 {
 				}
 			}
 			if (local62.anInt4435 != 0 && arg4 != null) {
-				arg4.method3043(arg7, local62.aBoolean207, arg8, local84, local81);
+				arg4.flagScenery(arg7, local62.aBoolean207, arg8, local84, local81);
 			}
 		} else if (arg6 >= 12) {
 			if (local62.anInt4430 == -1 && local62.anIntArray380 == null && !local62.aBoolean214) {
@@ -166,7 +166,7 @@ public final class Static185 {
 				Static60.anIntArrayArrayArray6[arg2][arg7][arg8] |= 0x4;
 			}
 			if (local62.anInt4435 != 0 && arg4 != null) {
-				arg4.method3043(arg7, local62.aBoolean207, arg8, local84, local81);
+				arg4.flagScenery(arg7, local62.aBoolean207, arg8, local84, local81);
 			}
 		} else if (arg6 == 0) {
 			if (local62.anInt4430 == -1 && local62.anIntArray380 == null && !local62.aBoolean214) {
@@ -325,7 +325,7 @@ public final class Static185 {
 				}
 				Static5.method35(arg2, arg7, arg8, local199, 1, 1, local387, local261);
 				if (local62.anInt4435 != 0 && arg4 != null) {
-					arg4.method3043(arg7, local62.aBoolean207, arg8, local84, local81);
+					arg4.flagScenery(arg7, local62.aBoolean207, arg8, local84, local81);
 				}
 				if (local62.anInt4428 != 16) {
 					Static18.method559(arg2, arg7, arg8, local62.anInt4428);

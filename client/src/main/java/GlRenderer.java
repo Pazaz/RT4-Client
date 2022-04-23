@@ -192,7 +192,7 @@ public final class GlRenderer {
 	}
 
 	@OriginalMember(owner = "client!tf", name = "d", descriptor = "()V")
-	public static void method4153() {
+	public static void swapBuffers() {
 		try {
 			drawable.swapBuffers();
 		} catch (@Pc(3) Exception local3) {

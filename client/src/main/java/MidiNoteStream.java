@@ -65,7 +65,7 @@ public final class MidiNoteStream extends PcmStream {
 				arg1 = arg0.anInt3775 / local27;
 			}
 		}
-		arg0.aClass3_Sub3_Sub1_3.method4410(arg1);
+		arg0.aClass3_Sub3_Sub1_3.skip(arg1);
 	}
 
 	@OriginalMember(owner = "client!te", name = "a", descriptor = "()I")
@@ -76,8 +76,8 @@ public final class MidiNoteStream extends PcmStream {
 
 	@OriginalMember(owner = "client!te", name = "c", descriptor = "(I)V")
 	@Override
-	public final void method4410(@OriginalArg(0) int arg0) {
-		this.aClass3_Sub3_Sub2_2.method4410(arg0);
+	public final void skip(@OriginalArg(0) int arg0) {
+		this.aClass3_Sub3_Sub2_2.skip(arg0);
 		for (@Pc(15) MidiNote local15 = (MidiNote) this.aClass69_126.method2289(); local15 != null; local15 = (MidiNote) this.aClass69_126.method2288()) {
 			if (!this.aClass3_Sub3_Sub4_3.method4445(local15)) {
 				@Pc(27) int local27 = arg0;
@@ -96,8 +96,8 @@ public final class MidiNoteStream extends PcmStream {
 
 	@OriginalMember(owner = "client!te", name = "b", descriptor = "([III)V")
 	@Override
-	public final void method4408(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		this.aClass3_Sub3_Sub2_2.method4408(arg0, arg1, arg2);
+	public final void read(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+		this.aClass3_Sub3_Sub2_2.read(arg0, arg1, arg2);
 		for (@Pc(17) MidiNote local17 = (MidiNote) this.aClass69_126.method2289(); local17 != null; local17 = (MidiNote) this.aClass69_126.method2288()) {
 			if (!this.aClass3_Sub3_Sub4_3.method4445(local17)) {
 				@Pc(29) int local29 = arg2;
@@ -127,7 +127,7 @@ public final class MidiNoteStream extends PcmStream {
 					break;
 				}
 				arg3 -= local36;
-				arg1.aClass3_Sub3_Sub1_3.method4408(arg0, arg2, local36);
+				arg1.aClass3_Sub3_Sub1_3.read(arg0, arg2, local36);
 				@Pc(55) int local55 = Static44.sampleRate / 100;
 				@Pc(58) SoundPcmStream local58 = arg1.aClass3_Sub3_Sub1_3;
 				@Pc(62) int local62 = 262144 / local26;
@@ -147,12 +147,12 @@ public final class MidiNoteStream extends PcmStream {
 				}
 				arg2 += local36;
 				local58.method384(local55);
-				local58.method4408(arg0, arg2, arg4 - arg2);
+				local58.read(arg0, arg2, arg4 - arg2);
 				if (local58.method412()) {
 					this.aClass3_Sub3_Sub2_2.method1343(local58);
 				}
 			}
 		}
-		arg1.aClass3_Sub3_Sub1_3.method4408(arg0, arg2, arg3);
+		arg1.aClass3_Sub3_Sub1_3.read(arg0, arg2, arg3);
 	}
 }

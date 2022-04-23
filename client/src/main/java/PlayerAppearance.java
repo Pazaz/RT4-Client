@@ -33,7 +33,7 @@ public final class PlayerAppearance {
 	@OriginalMember(owner = "client!hh", name = "a", descriptor = "(IIIILclient!tk;III)Lclient!ak;")
 	public final Model method1946(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) SeqType arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6) {
 		@Pc(24) long local24 = (long) arg2 | (long) (arg6 << 16) | (long) arg1 << 32;
-		@Pc(30) Model local30 = (Model) Static139.aClass99_21.method3106(local24);
+		@Pc(30) Model local30 = (Model) Static139.aClass99_21.get(local24);
 		if (local30 == null) {
 			@Pc(36) RawModel[] local36 = new RawModel[3];
 			@Pc(38) int local38 = 0;
@@ -63,7 +63,7 @@ public final class PlayerAppearance {
 				}
 			}
 			local30 = local66.method1679(64, 768, -50, -10, -50);
-			Static139.aClass99_21.method3095(local30, local24);
+			Static139.aClass99_21.put(local30, local24);
 		}
 		if (arg4 != null) {
 			local30 = arg4.method4215(local30, arg0, arg3, arg5);
@@ -176,7 +176,7 @@ public final class PlayerAppearance {
 				}
 			}
 		}
-		@Pc(154) Model local154 = (Model) Static250.aClass99_33.method3106(local41);
+		@Pc(154) Model local154 = (Model) Static250.aClass99_33.get(local41);
 		@Pc(158) boolean local158;
 		@Pc(353) int local353;
 		@Pc(360) int local360;
@@ -204,7 +204,7 @@ public final class PlayerAppearance {
 			}
 			if (local158) {
 				if (this.aLong87 != -1L) {
-					local154 = (Model) Static250.aClass99_33.method3106(this.aLong87);
+					local154 = (Model) Static250.aClass99_33.get(this.aLong87);
 				}
 				if (local154 == null) {
 					return null;
@@ -232,17 +232,17 @@ public final class PlayerAppearance {
 				if (this.anInt2497 != -1) {
 					local303 = Static90.method1856(this.anInt2497);
 				}
-				if (local303 != null && local303.anIntArrayArray7 != null) {
-					for (local250 = 0; local250 < local303.anIntArrayArray7.length; local250++) {
-						if (local303.anIntArrayArray7[local250] != null && local239[local250] != null) {
-							local346 = local303.anIntArrayArray7[local250][0];
-							local353 = local303.anIntArrayArray7[local250][1];
-							local360 = local303.anIntArrayArray7[local250][2];
-							local367 = local303.anIntArrayArray7[local250][4];
-							local374 = local303.anIntArrayArray7[local250][3];
-							local381 = local303.anIntArrayArray7[local250][5];
+				if (local303 != null && local303.modelRotateTranslate != null) {
+					for (local250 = 0; local250 < local303.modelRotateTranslate.length; local250++) {
+						if (local303.modelRotateTranslate[local250] != null && local239[local250] != null) {
+							local346 = local303.modelRotateTranslate[local250][0];
+							local353 = local303.modelRotateTranslate[local250][1];
+							local360 = local303.modelRotateTranslate[local250][2];
+							local367 = local303.modelRotateTranslate[local250][4];
+							local374 = local303.modelRotateTranslate[local250][3];
+							local381 = local303.modelRotateTranslate[local250][5];
 							if (this.anIntArrayArray19 == null) {
-								this.anIntArrayArray19 = new int[local303.anIntArrayArray7.length][];
+								this.anIntArrayArray19 = new int[local303.modelRotateTranslate.length][];
 							}
 							if (this.anIntArrayArray19[local250] == null) {
 								@Pc(404) int[] local404 = this.anIntArrayArray19[local250] = new int[15];
@@ -299,7 +299,7 @@ public final class PlayerAppearance {
 				if (GlRenderer.enabled) {
 					((GlModel) local154).method4111(false, false, true, false, false, true);
 				}
-				Static250.aClass99_33.method3095(local154, local41);
+				Static250.aClass99_33.put(local154, local41);
 				this.aLong87 = local41;
 			}
 		}
@@ -322,8 +322,8 @@ public final class PlayerAppearance {
 					local381 &= 0xFFFF;
 					Static241.anIntArray520[local353] = local381;
 					if (Static276.aClass3_Sub2_Sub7Array8[local353] != null) {
-						local836 |= Static276.aClass3_Sub2_Sub7Array8[local353].method903(local381);
-						local827 |= Static276.aClass3_Sub2_Sub7Array8[local353].method901(local381);
+						local836 |= Static276.aClass3_Sub2_Sub7Array8[local353].isColorTransformed(local381);
+						local827 |= Static276.aClass3_Sub2_Sub7Array8[local353].isAlphaTransformed(local381);
 						local838 |= local858.aBoolean278;
 					}
 					if ((local858.aBoolean277 || Static204.applyTweening) && local367 != -1 && local367 < local858.anIntArray473.length) {
@@ -334,8 +334,8 @@ public final class PlayerAppearance {
 						@Pc(991) int local991 = local979 & 0xFFFF;
 						Static216.anIntArray187[local353] = local991;
 						if (Static133.aClass3_Sub2_Sub7Array7[local353] != null) {
-							local836 |= Static133.aClass3_Sub2_Sub7Array7[local353].method903(local991);
-							local827 |= Static133.aClass3_Sub2_Sub7Array7[local353].method901(local991);
+							local836 |= Static133.aClass3_Sub2_Sub7Array7[local353].isColorTransformed(local991);
+							local827 |= Static133.aClass3_Sub2_Sub7Array7[local353].isAlphaTransformed(local991);
 						}
 					} else {
 						Static262.anIntArray515[local353] = 0;
@@ -360,8 +360,8 @@ public final class PlayerAppearance {
 			local1042 = Static72.method1566(local979);
 			local353 &= 0xFFFF;
 			if (local1042 != null) {
-				local836 |= local1042.method903(local353);
-				local827 |= local1042.method901(local353);
+				local836 |= local1042.isColorTransformed(local353);
+				local827 |= local1042.isAlphaTransformed(local353);
 				local838 |= arg3.aBoolean278;
 			}
 			if ((arg3.aBoolean277 || Static204.applyTweening) && arg1 != -1 && arg3.anIntArray473.length > arg1) {
@@ -375,8 +375,8 @@ public final class PlayerAppearance {
 					local1040 = Static72.method1566(local360 >>> 16);
 				}
 				if (local1040 != null) {
-					local836 |= local1040.method903(local360);
-					local827 |= local1040.method901(local360);
+					local836 |= local1040.isColorTransformed(local360);
+					local827 |= local1040.isAlphaTransformed(local360);
 				}
 			}
 		}
@@ -391,8 +391,8 @@ public final class PlayerAppearance {
 			local979 &= 0xFFFF;
 			local1154 = Static72.method1566(local475);
 			if (local1154 != null) {
-				local836 |= local1154.method903(local979);
-				local827 |= local1154.method901(local979);
+				local836 |= local1154.isColorTransformed(local979);
+				local827 |= local1154.isAlphaTransformed(local979);
 				local838 |= arg2.aBoolean278;
 			}
 			if ((arg2.aBoolean277 || Static204.applyTweening) && arg5 != -1 && arg2.anIntArray473.length > arg5) {
@@ -406,8 +406,8 @@ public final class PlayerAppearance {
 					local1156 = Static72.method1566(local451 >>> 16);
 				}
 				if (local1156 != null) {
-					local836 |= local1156.method903(local451);
-					local827 |= local1156.method901(local451);
+					local836 |= local1156.isColorTransformed(local451);
+					local827 |= local1156.isAlphaTransformed(local451);
 				}
 			}
 		}
@@ -441,7 +441,7 @@ public final class PlayerAppearance {
 		if (this.anInt2492 != -1) {
 			return Static214.method4363(this.anInt2492).method2943(arg1, arg0, arg3, arg2);
 		}
-		@Pc(30) Model local30 = (Model) Static139.aClass99_21.method3106(this.aLong88);
+		@Pc(30) Model local30 = (Model) Static139.aClass99_21.get(this.aLong88);
 		if (local30 == null) {
 			@Pc(42) boolean local42 = false;
 			@Pc(52) int local52;
@@ -486,7 +486,7 @@ public final class PlayerAppearance {
 				}
 			}
 			local30 = local171.method1679(64, 768, -50, -10, -50);
-			Static139.aClass99_21.method3095(local30, this.aLong88);
+			Static139.aClass99_21.put(local30, this.aLong88);
 		}
 		if (arg1 != null) {
 			local30 = arg1.method4215(local30, arg3, arg0, arg2);

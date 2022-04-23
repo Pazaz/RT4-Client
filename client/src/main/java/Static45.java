@@ -137,10 +137,10 @@ public final class Static45 {
 						local194 = Static253.aByteArrayArrayArray16[local152][local178][local173] & 0xFF;
 						if (local194 > 0) {
 							@Pc(693) FluType local693 = Static199.method3593(local194 - 1);
-							Static221.anIntArray376[local173] += local693.anInt4154;
-							Static139.anIntArray325[local173] += local693.anInt4149;
-							Static279.anIntArray568[local173] += local693.anInt4158;
-							Static251.anIntArray479[local173] += local693.anInt4161;
+							Static221.anIntArray376[local173] += local693.weightedHue;
+							Static139.anIntArray325[local173] += local693.saturation;
+							Static279.anIntArray568[local173] += local693.lightness;
+							Static251.anIntArray479[local173] += local693.chroma;
 							local729 = Static128.anIntArray293[local173]++;
 						}
 					}
@@ -149,10 +149,10 @@ public final class Static45 {
 						local200 = Static253.aByteArrayArrayArray16[local152][local194][local173] & 0xFF;
 						if (local200 > 0) {
 							@Pc(758) FluType local758 = Static199.method3593(local200 - 1);
-							Static221.anIntArray376[local173] -= local758.anInt4154;
-							Static139.anIntArray325[local173] -= local758.anInt4149;
-							Static279.anIntArray568[local173] -= local758.anInt4158;
-							Static251.anIntArray479[local173] -= local758.anInt4161;
+							Static221.anIntArray376[local173] -= local758.weightedHue;
+							Static139.anIntArray325[local173] -= local758.saturation;
+							Static279.anIntArray568[local173] -= local758.lightness;
+							Static251.anIntArray479[local173] -= local758.chroma;
 							local729 = Static128.anIntArray293[local173]--;
 						}
 					}
@@ -241,7 +241,7 @@ public final class Static45 {
 												@Pc(1834) int local1834 = Static240.aByteArrayArrayArray14[local152][local322][local1794] & 0xFF;
 												if (local1834 != 0) {
 													@Pc(1842) FloType local1842 = Static256.method4395(local1834 - 1);
-													if (local1842.anInt5892 != -1 && Rasteriser.textureProvider.method3237(local1842.anInt5892) == 4) {
+													if (local1842.texture != -1 && Rasteriser.textureProvider.method3237(local1842.texture) == 4) {
 														Static62.anIntArrayArray11[local168][local173] = local1842.anInt5889 + (local1842.anInt5898 << 24);
 														continue label771;
 													}
@@ -258,7 +258,7 @@ public final class Static45 {
 								@Pc(1353) int local1353;
 								@Pc(1288) int local1288;
 								if (GlRenderer.enabled && !underwater && Static62.anIntArrayArray11 != null && local152 == 0) {
-									if (local1248.anInt5892 != -1 && Rasteriser.textureProvider.method3237(local1248.anInt5892) == 4) {
+									if (local1248.texture != -1 && Rasteriser.textureProvider.method3237(local1248.texture) == 4) {
 										Static62.anIntArrayArray11[local168][local173] = (local1248.anInt5898 << 24) + local1248.anInt5889;
 									} else {
 										label737: for (local1288 = local168 - 1; local1288 <= local168 + 1; local1288++) {
@@ -267,7 +267,7 @@ public final class Static45 {
 													local1353 = Static240.aByteArrayArrayArray14[local152][local1288][local1301] & 0xFF;
 													if (local1353 != 0) {
 														@Pc(1366) FloType local1366 = Static256.method4395(local1353 - 1);
-														if (local1366.anInt5892 != -1 && Rasteriser.textureProvider.method3237(local1366.anInt5892) == 4) {
+														if (local1366.texture != -1 && Rasteriser.textureProvider.method3237(local1366.texture) == 4) {
 															Static62.anIntArrayArray11[local168][local173] = local1366.anInt5889 + (local1366.anInt5898 << 24);
 															break label737;
 														}
@@ -277,7 +277,7 @@ public final class Static45 {
 										}
 									}
 								}
-								local1288 = local1248.anInt5892;
+								local1288 = local1248.texture;
 								if (local1288 >= 0 && !Rasteriser.textureProvider.method3236(local1288)) {
 									local1288 = -1;
 								}

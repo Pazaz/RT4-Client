@@ -103,7 +103,7 @@ public final class JavaAudioChannel extends AudioChannel {
 			local1 = 512;
 		}
 		for (@Pc(9) int local9 = 0; local9 < local1; local9++) {
-			@Pc(17) int local17 = this.anIntArray411[local9];
+			@Pc(17) int local17 = this.samples[local9];
 			if ((local17 + 8388608 & 0xFF000000) != 0) {
 				local17 = local17 >> 31 ^ 0x7FFFFF;
 			}

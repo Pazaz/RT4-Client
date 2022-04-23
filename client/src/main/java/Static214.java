@@ -31,7 +31,7 @@ public final class Static214 {
 		if (local12 == null) {
 			Static122.method2411(arg0.movementQueueZ[0], null, 0, null, arg0.movementQueueX[0], Static55.level, arg0);
 		} else {
-			local12.method1567();
+			local12.update();
 		}
 	}
 
@@ -56,7 +56,7 @@ public final class Static214 {
 
 	@OriginalMember(owner = "client!rg", name = "b", descriptor = "(II)Lclient!me;")
 	public static NpcType method4363(@OriginalArg(0) int arg0) {
-		@Pc(10) NpcType local10 = (NpcType) Static93.aClass99_13.method3106((long) arg0);
+		@Pc(10) NpcType local10 = (NpcType) Static93.aClass99_13.get((long) arg0);
 		if (local10 != null) {
 			return local10;
 		}
@@ -67,7 +67,7 @@ public final class Static214 {
 			local10.method2939(new Buffer(local26));
 		}
 		local10.method2942();
-		Static93.aClass99_13.method3095(local10, (long) arg0);
+		Static93.aClass99_13.put(local10, (long) arg0);
 		return local10;
 	}
 

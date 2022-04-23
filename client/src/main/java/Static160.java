@@ -44,7 +44,7 @@ public final class Static160 {
 		} else {
 			((SoftwareSprite) Static106.aClass3_Sub2_Sub1_7).method313(arg0, arg1, arg2.anInt445, arg2.anInt459, Static106.aClass3_Sub2_Sub1_7.anInt1867 / 2, Static106.aClass3_Sub2_Sub1_7.anInt1859 / 2, Camera.getYaw(), arg2.anIntArray37, arg2.anIntArray45);
 		}
-		Static31.aBooleanArray29[arg3] = true;
+		Static31.rectangleRedraw[arg3] = true;
 	}
 
 	@OriginalMember(owner = "client!mj", name = "a", descriptor = "(IIIII)Z")

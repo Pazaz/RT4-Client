@@ -22,7 +22,7 @@ public final class Static126 {
 		}
 		for (@Pc(15) int local15 = 0; local15 < Static24.anInt766; local15++) {
 			if (Static186.aBooleanArray100[local15]) {
-				Static31.aBooleanArray29[local15] = true;
+				Static31.rectangleRedraw[local15] = true;
 			}
 			Static223.aBooleanArray116[local15] = Static186.aBooleanArray100[local15];
 			Static186.aBooleanArray100[local15] = false;

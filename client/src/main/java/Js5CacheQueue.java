@@ -34,14 +34,14 @@ public final class Js5CacheQueue implements Runnable {
 	private void method2461(@OriginalArg(0) Js5CacheRequest arg0) {
 		@Pc(7) SecondaryLinkedList local7 = this.aClass16_6;
 		synchronized (this.aClass16_6) {
-			this.aClass16_6.method798(arg0);
+			this.aClass16_6.addTail(arg0);
 			this.anInt3131++;
 			this.aClass16_6.notifyAll();
 		}
 	}
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(I)V")
-	public final void method2466() {
+	public final void quit() {
 		this.aBoolean161 = true;
 		@Pc(6) SecondaryLinkedList local6 = this.aClass16_6;
 		synchronized (this.aClass16_6) {
@@ -59,7 +59,7 @@ public final class Js5CacheQueue implements Runnable {
 		@Pc(7) Js5CacheRequest local7 = new Js5CacheRequest();
 		local7.aByteArray11 = arg1;
 		local7.aBoolean225 = false;
-		local7.aLong185 = arg2;
+		local7.secondaryKey = arg2;
 		local7.aClass49_3 = arg0;
 		local7.anInt824 = 2;
 		this.method2461(local7);
@@ -72,7 +72,7 @@ public final class Js5CacheQueue implements Runnable {
 		local7.aClass49_3 = arg1;
 		local7.anInt824 = 3;
 		local7.aBoolean225 = false;
-		local7.aLong185 = arg0;
+		local7.secondaryKey = arg0;
 		this.method2461(local7);
 		return local7;
 	}
@@ -88,7 +88,7 @@ public final class Js5CacheQueue implements Runnable {
 				if (local31 == null) {
 					break;
 				}
-				if (local31.aLong185 == (long) arg1 && local31.aClass49_3 == arg0 && local31.anInt824 == 2) {
+				if (local31.secondaryKey == (long) arg1 && local31.aClass49_3 == arg0 && local31.anInt824 == 2) {
 					local9.aByteArray11 = local31.aByteArray11;
 					local9.aBoolean226 = false;
 					return local9;
@@ -96,7 +96,7 @@ public final class Js5CacheQueue implements Runnable {
 				local31 = (Js5CacheRequest) this.aClass16_6.method797();
 			}
 		}
-		local9.aByteArray11 = arg0.method1701(arg1);
+		local9.aByteArray11 = arg0.read(arg1);
 		local9.aBoolean226 = false;
 		local9.aBoolean225 = true;
 		return local9;
@@ -121,9 +121,9 @@ public final class Js5CacheQueue implements Runnable {
 			}
 			try {
 				if (local19.anInt824 == 2) {
-					local19.aClass49_3.method1700((int) local19.aLong185, local19.aByteArray11.length, local19.aByteArray11);
+					local19.aClass49_3.write((int) local19.secondaryKey, local19.aByteArray11.length, local19.aByteArray11);
 				} else if (local19.anInt824 == 3) {
-					local19.aByteArray11 = local19.aClass49_3.method1701((int) local19.aLong185);
+					local19.aByteArray11 = local19.aClass49_3.read((int) local19.secondaryKey);
 				}
 			} catch (@Pc(83) Exception local83) {
 				Static89.report(null, local83);

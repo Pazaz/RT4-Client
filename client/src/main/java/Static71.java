@@ -21,7 +21,7 @@ public final class Static71 {
 
 	@OriginalMember(owner = "client!fk", name = "a", descriptor = "(IB)Lclient!h;")
 	public static ObjType method1439(@OriginalArg(0) int arg0) {
-		@Pc(6) ObjType local6 = (ObjType) Static27.aClass99_4.method3106((long) arg0);
+		@Pc(6) ObjType local6 = (ObjType) Static27.aClass99_4.get((long) arg0);
 		if (local6 != null) {
 			return local6;
 		}
@@ -45,7 +45,7 @@ public final class Static71 {
 			local6.aBoolean132 = false;
 			local6.aClass100Array72 = Static269.aClass100Array87;
 		}
-		Static27.aClass99_4.method3095(local6, (long) arg0);
+		Static27.aClass99_4.put(local6, (long) arg0);
 		return local6;
 	}
 
@@ -76,7 +76,7 @@ public final class Static71 {
 			}
 			@Pc(31) Player local31 = Static159.players[local21];
 			if (local31 != null) {
-				Static263.method4514(local31.method2693(), local31);
+				Static263.method4514(local31.getSize(), local31);
 			}
 		}
 	}

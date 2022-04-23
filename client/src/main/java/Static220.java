@@ -41,7 +41,7 @@ public final class Static220 {
 			Static187.method3420(Static55.level, arg1, arg0);
 			return;
 		}
-		local9.method2283(local30);
+		local9.addHead(local30);
 		@Pc(89) ObjStack local89 = null;
 		@Pc(91) ObjStack local91 = null;
 		for (local35 = (ObjStackNode) local9.method2289(); local35 != null; local35 = (ObjStackNode) local9.method2288()) {
@@ -70,14 +70,14 @@ public final class Static220 {
 	@OriginalMember(owner = "client!rm", name = "a", descriptor = "(ZIIIILclient!ak;I)Lclient!ak;")
 	public static Model method3800(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) Model arg4, @OriginalArg(6) int arg5) {
 		@Pc(4) long local4 = (long) arg2;
-		@Pc(10) Model local10 = (Model) Static110.aClass99_15.method3106(local4);
+		@Pc(10) Model local10 = (Model) Static110.aClass99_15.get(local4);
 		if (local10 == null) {
 			@Pc(22) RawModel local22 = Static77.method1686(Static267.js5Archive7, arg2);
 			if (local22 == null) {
 				return null;
 			}
 			local10 = local22.method1679(64, 768, -50, -10, -50);
-			Static110.aClass99_15.method3095(local10, local4);
+			Static110.aClass99_15.put(local10, local4);
 		}
 		@Pc(42) int local42 = arg4.method4562();
 		@Pc(45) int local45 = arg4.method4561();

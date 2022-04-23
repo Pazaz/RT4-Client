@@ -39,7 +39,7 @@ public final class Static33 {
 			local49 = arg1.anInt4403;
 			local52 = arg1.anInt4397;
 		}
-		@Pc(66) int local66 = local42.anInt4279;
+		@Pc(66) int local66 = local42.innerWidth;
 		@Pc(69) int local69 = local42.anInt4276;
 		if (local10.aBoolean2) {
 			local69 = local52 * 4;
@@ -106,10 +106,10 @@ public final class Static33 {
 					local225 = local23[local114][local203] & 0xFF;
 					if (local225 > 0) {
 						@Pc(236) FluType local236 = Static199.method3593(local225 - 1);
-						local183[local203] += local236.anInt4154;
-						local180[local203] += local236.anInt4149;
-						local186[local203] += local236.anInt4158;
-						local189[local203] += local236.anInt4161;
+						local183[local203] += local236.weightedHue;
+						local180[local203] += local236.saturation;
+						local186[local203] += local236.lightness;
+						local189[local203] += local236.chroma;
 						local272 = local192[local203]++;
 					}
 				}
@@ -118,10 +118,10 @@ public final class Static33 {
 					local293 = local23[local225][local203] & 0xFF;
 					if (local293 > 0) {
 						@Pc(302) FluType local302 = Static199.method3593(local293 - 1);
-						local183[local203] -= local302.anInt4154;
-						local180[local203] -= local302.anInt4149;
-						local186[local203] -= local302.anInt4158;
-						local189[local203] -= local302.anInt4161;
+						local183[local203] -= local302.weightedHue;
+						local180[local203] -= local302.saturation;
+						local186[local203] -= local302.lightness;
+						local189[local203] -= local302.chroma;
 						local272 = local192[local203]--;
 					}
 				}

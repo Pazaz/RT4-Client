@@ -29,7 +29,7 @@ public final class Static180 {
 
 	@OriginalMember(owner = "client!og", name = "a", descriptor = "(BIILclient!fe;III)V")
 	public static void method3326(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) PathingEntity arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
-		Static198.method1026(arg5, arg1, arg2.anInt3421, arg4, arg0, arg2.anInt3412, arg3);
+		Static198.method1026(arg5, arg1, arg2.zFine, arg4, arg0, arg2.xFine, arg3);
 	}
 
 	@OriginalMember(owner = "client!og", name = "a", descriptor = "(Lclient!ve;I)V")
@@ -40,7 +40,7 @@ public final class Static180 {
 	@OriginalMember(owner = "client!og", name = "a", descriptor = "(II)V")
 	public static void method3328(@OriginalArg(0) int arg0) {
 		@Pc(12) DelayedStateChange local12 = Static238.method4143(10, arg0);
-		local12.method1007();
+		local12.pushClient();
 	}
 
 	@OriginalMember(owner = "client!og", name = "a", descriptor = "(I)V")

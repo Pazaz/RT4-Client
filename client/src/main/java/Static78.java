@@ -164,7 +164,7 @@ public final class Static78 {
 			Static114.drawTextOnScreen(true, Static34.concatenate(new JagString[] { LocalizedText.LOADING, Static18.COMPLETE_PERCENT}));
 		}
 
-		Static107.method2261();
+		Static107.loop();
 		Static217.method3768();
 		@Pc(420) boolean hasUnderWaterMap = false;
 		@Pc(427) int i;
@@ -202,7 +202,7 @@ public final class Static78 {
 		if (GlRenderer.enabled) {
 			Static75.setDefaultChunksAtmosphere();
 		}
-		Static107.method2261();
+		Static107.loop();
 		System.gc();
 		Static7.ping(true);
 		Static196.method3535(false);
@@ -281,7 +281,7 @@ public final class Static78 {
 			}
 		}
 		Static269.method2218();
-		Static107.method2261();
+		Static107.loop();
 		Static219.method3796();
 		Static217.method3768();
 		Static231.aBoolean252 = false;
@@ -312,7 +312,7 @@ public final class Static78 {
 			}
 		}
 		Static141.method2720();
-		Static107.method2261();
-		Static234.method4020();
+		Static107.loop();
+		Static234.resetTimer();
 	}
 }

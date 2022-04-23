@@ -38,7 +38,7 @@ public final class SoundBank {
 				return null;
 			}
 			local37 = local59.method3989();
-			this.aClass133_12.method3862(local37, local30);
+			this.aClass133_12.put(local37, local30);
 			if (arg0 != null) {
 				arg0[0] -= local37.aByteArray47.length;
 			}
@@ -74,14 +74,14 @@ public final class SoundBank {
 				if (local53 == null) {
 					return null;
 				}
-				this.aClass133_11.method3862(local53, local26);
+				this.aClass133_11.put(local53, local26);
 			}
 			local33 = local53.method2341(arg1);
 			if (local33 == null) {
 				return null;
 			} else {
-				local53.method4658();
-				this.aClass133_12.method3862(local33, local26);
+				local53.unlink();
+				this.aClass133_12.put(local33, local26);
 				return local33;
 			}
 		} else {

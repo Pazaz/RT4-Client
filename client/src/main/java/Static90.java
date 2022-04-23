@@ -31,7 +31,7 @@ public final class Static90 {
 
 	@OriginalMember(owner = "client!hb", name = "a", descriptor = "(ZI)Lclient!ck;")
 	public static BasType method1856(@OriginalArg(1) int arg0) {
-		@Pc(10) BasType local10 = (BasType) Static262.aClass99_34.method3106((long) arg0);
+		@Pc(10) BasType local10 = (BasType) Static262.aClass99_34.get((long) arg0);
 		if (local10 != null) {
 			return local10;
 		}
@@ -41,7 +41,7 @@ public final class Static90 {
 			local10.method880(new Buffer(local21));
 		}
 		local10.method878();
-		Static262.aClass99_34.method3095(local10, (long) arg0);
+		Static262.aClass99_34.put(local10, (long) arg0);
 		return local10;
 	}
 

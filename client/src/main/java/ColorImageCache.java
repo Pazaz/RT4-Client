@@ -7,88 +7,88 @@ import org.openrs2.deob.annotation.Pc;
 public final class ColorImageCache {
 
 	@OriginalMember(owner = "client!pf", name = "d", descriptor = "I")
-	private int anInt4467 = 0;
+	private int size = 0;
 
 	@OriginalMember(owner = "client!pf", name = "m", descriptor = "I")
-	private int anInt4471 = -1;
+	private int singleRow = -1;
 
 	@OriginalMember(owner = "client!pf", name = "p", descriptor = "Lclient!ih;")
-	private LinkedList aClass69_103 = new LinkedList();
+	private LinkedList recentlyUsed = new LinkedList();
 
 	@OriginalMember(owner = "client!pf", name = "t", descriptor = "Z")
-	public boolean aBoolean221 = false;
+	public boolean invalid = false;
 
 	@OriginalMember(owner = "client!pf", name = "a", descriptor = "I")
-	private final int anInt4465;
+	private final int height;
 
 	@OriginalMember(owner = "client!pf", name = "e", descriptor = "[Lclient!qi;")
-	private ColorImageCacheEntry[] aClass3_Sub28Array1;
+	private ColorImageCacheEntry[] entries;
 
 	@OriginalMember(owner = "client!pf", name = "s", descriptor = "I")
-	private final int anInt4475;
+	private final int capacity;
 
 	@OriginalMember(owner = "client!pf", name = "g", descriptor = "[[I")
-	private int[][] anIntArrayArray34;
+	private int[][] pixels;
 
 	@OriginalMember(owner = "client!pf", name = "<init>", descriptor = "(III)V")
-	public ColorImageCache(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		this.anInt4465 = arg1;
-		this.aClass3_Sub28Array1 = new ColorImageCacheEntry[this.anInt4465];
-		this.anInt4475 = arg0;
-		this.anIntArrayArray34 = new int[this.anInt4475][arg2];
+	public ColorImageCache(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int width) {
+		this.height = arg1;
+		this.entries = new ColorImageCacheEntry[this.height];
+		this.capacity = arg0;
+		this.pixels = new int[this.capacity][width];
 	}
 
 	@OriginalMember(owner = "client!pf", name = "b", descriptor = "(I)V")
-	public final void method3442() {
-		for (@Pc(3) int local3 = 0; local3 < this.anInt4475; local3++) {
-			this.anIntArrayArray34[local3] = null;
+	public final void clear() {
+		for (@Pc(3) int i = 0; i < this.capacity; i++) {
+			this.pixels[i] = null;
 		}
-		this.anIntArrayArray34 = null;
-		this.aClass3_Sub28Array1 = null;
-		this.aClass69_103.method2278();
-		this.aClass69_103 = null;
+		this.pixels = null;
+		this.entries = null;
+		this.recentlyUsed.clear();
+		this.recentlyUsed = null;
 	}
 
 	@OriginalMember(owner = "client!pf", name = "b", descriptor = "(II)[I")
-	public final int[] method3445(@OriginalArg(1) int arg0) {
-		if (this.anInt4465 == this.anInt4475) {
-			this.aBoolean221 = this.aClass3_Sub28Array1[arg0] == null;
-			this.aClass3_Sub28Array1[arg0] = Static105.aClass3_Sub28_1;
-			return this.anIntArrayArray34[arg0];
-		} else if (this.anInt4475 == 1) {
-			this.aBoolean221 = this.anInt4471 != arg0;
-			this.anInt4471 = arg0;
-			return this.anIntArrayArray34[0];
+	public final int[] method3445(@OriginalArg(1) int row) {
+		if (this.height == this.capacity) {
+			this.invalid = this.entries[row] == null;
+			this.entries[row] = Static105.VALID;
+			return this.pixels[row];
+		} else if (this.capacity == 1) {
+			this.invalid = this.singleRow != row;
+			this.singleRow = row;
+			return this.pixels[0];
 		} else {
-			@Pc(29) ColorImageCacheEntry local29 = this.aClass3_Sub28Array1[arg0];
+			@Pc(29) ColorImageCacheEntry local29 = this.entries[row];
 			if (local29 == null) {
-				this.aBoolean221 = true;
-				if (this.anInt4467 < this.anInt4475) {
-					local29 = new ColorImageCacheEntry(arg0, this.anInt4467);
-					this.anInt4467++;
+				this.invalid = true;
+				if (this.size < this.capacity) {
+					local29 = new ColorImageCacheEntry(row, this.size);
+					this.size++;
 				} else {
-					@Pc(66) ColorImageCacheEntry local66 = (ColorImageCacheEntry) this.aClass69_103.method2279();
-					local29 = new ColorImageCacheEntry(arg0, local66.anInt4761);
-					this.aClass3_Sub28Array1[local66.anInt4759] = null;
-					local66.method4658();
+					@Pc(66) ColorImageCacheEntry local66 = (ColorImageCacheEntry) this.recentlyUsed.method2279();
+					local29 = new ColorImageCacheEntry(row, local66.index);
+					this.entries[local66.row] = null;
+					local66.unlink();
 				}
-				this.aClass3_Sub28Array1[arg0] = local29;
+				this.entries[row] = local29;
 			} else {
-				this.aBoolean221 = false;
+				this.invalid = false;
 			}
-			this.aClass69_103.method2283(local29);
-			return this.anIntArrayArray34[local29.anInt4761];
+			this.recentlyUsed.addHead(local29);
+			return this.pixels[local29.index];
 		}
 	}
 
 	@OriginalMember(owner = "client!pf", name = "a", descriptor = "(B)[[I")
 	public final int[][] method3446() {
-		if (this.anInt4475 != this.anInt4465) {
+		if (this.capacity != this.height) {
 			throw new RuntimeException("Can only retrieve a full image cache");
 		}
-		for (@Pc(24) int local24 = 0; local24 < this.anInt4475; local24++) {
-			this.aClass3_Sub28Array1[local24] = Static105.aClass3_Sub28_1;
+		for (@Pc(24) int local24 = 0; local24 < this.capacity; local24++) {
+			this.entries[local24] = Static105.VALID;
 		}
-		return this.anIntArrayArray34;
+		return this.pixels;
 	}
 }

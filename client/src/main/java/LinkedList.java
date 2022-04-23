@@ -19,14 +19,14 @@ public final class LinkedList {
 	}
 
 	@OriginalMember(owner = "client!ih", name = "a", descriptor = "(I)V")
-	public final void method2278() {
+	public final void clear() {
 		while (true) {
 			@Pc(5) Node local5 = this.aClass3_109.aClass3_222;
 			if (local5 == this.aClass3_109) {
 				this.aClass3_110 = null;
 				return;
 			}
-			local5.method4658();
+			local5.unlink();
 		}
 	}
 
@@ -45,7 +45,7 @@ public final class LinkedList {
 	@OriginalMember(owner = "client!ih", name = "a", descriptor = "(ZLclient!ab;)V")
 	public final void method2282(@OriginalArg(1) Node arg0) {
 		if (arg0.aClass3_223 != null) {
-			arg0.method4658();
+			arg0.unlink();
 		}
 		arg0.aClass3_222 = this.aClass3_109;
 		arg0.aClass3_223 = this.aClass3_109.aClass3_223;
@@ -54,9 +54,9 @@ public final class LinkedList {
 	}
 
 	@OriginalMember(owner = "client!ih", name = "a", descriptor = "(ILclient!ab;)V")
-	public final void method2283(@OriginalArg(1) Node arg0) {
+	public final void addHead(@OriginalArg(1) Node arg0) {
 		if (arg0.aClass3_223 != null) {
-			arg0.method4658();
+			arg0.unlink();
 		}
 		arg0.aClass3_222 = this.aClass3_109.aClass3_222;
 		arg0.aClass3_223 = this.aClass3_109;
@@ -82,7 +82,7 @@ public final class LinkedList {
 		if (this.aClass3_109 == local3) {
 			return null;
 		} else {
-			local3.method4658();
+			local3.unlink();
 			return local3;
 		}
 	}

@@ -45,7 +45,7 @@ public final class Static16 {
 						if (local54.aClass24_1 != null) {
 							if (local54.aClass24_1.aClass8_3 instanceof GlModel) {
 								local71 = (GlModel) local54.aClass24_1.aClass8_3;
-								if ((local54.aClass24_1.aLong52 & Long.MIN_VALUE) == 0L) {
+								if ((local54.aClass24_1.key & Long.MIN_VALUE) == 0L) {
 									local71.method4111(false, true, true, false, true, true);
 								} else {
 									local71.method4111(true, true, true, true, true, true);
@@ -53,7 +53,7 @@ public final class Static16 {
 							}
 							if (local54.aClass24_1.aClass8_2 instanceof GlModel) {
 								local71 = (GlModel) local54.aClass24_1.aClass8_2;
-								if ((Long.MIN_VALUE & local54.aClass24_1.aLong52) == 0L) {
+								if ((Long.MIN_VALUE & local54.aClass24_1.key) == 0L) {
 									local71.method4111(false, true, true, false, true, true);
 								} else {
 									local71.method4111(true, true, true, true, true, true);
@@ -63,7 +63,7 @@ public final class Static16 {
 						if (local54.aClass77_1 != null) {
 							if (local54.aClass77_1.aClass8_5 instanceof GlModel) {
 								local71 = (GlModel) local54.aClass77_1.aClass8_5;
-								if ((local54.aClass77_1.aLong107 & Long.MIN_VALUE) == 0L) {
+								if ((local54.aClass77_1.key & Long.MIN_VALUE) == 0L) {
 									local71.method4111(false, true, true, false, true, true);
 								} else {
 									local71.method4111(true, true, true, true, true, true);
@@ -71,7 +71,7 @@ public final class Static16 {
 							}
 							if (local54.aClass77_1.aClass8_6 instanceof GlModel) {
 								local71 = (GlModel) local54.aClass77_1.aClass8_6;
-								if ((Long.MIN_VALUE & local54.aClass77_1.aLong107) == 0L) {
+								if ((Long.MIN_VALUE & local54.aClass77_1.key) == 0L) {
 									local71.method4111(false, true, true, false, true, true);
 								} else {
 									local71.method4111(true, true, true, true, true, true);

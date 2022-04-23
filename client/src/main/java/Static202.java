@@ -130,16 +130,16 @@ public final class Static202 {
 
 	@OriginalMember(owner = "client!qg", name = "d", descriptor = "(II)Lclient!ia;")
 	public static CursorType method3660(@OriginalArg(0) int arg0) {
-		@Pc(10) CursorType local10 = (CursorType) Static79.aClass99_11.method3106((long) arg0);
+		@Pc(10) CursorType local10 = (CursorType) Static79.aClass99_11.get((long) arg0);
 		if (local10 != null) {
 			return local10;
 		}
 		@Pc(20) byte[] local20 = Static153.aClass153_57.getFile(33, arg0);
 		local10 = new CursorType();
 		if (local20 != null) {
-			local10.method2249(new Buffer(local20), arg0);
+			local10.decode(new Buffer(local20), arg0);
 		}
-		Static79.aClass99_11.method3095(local10, (long) arg0);
+		Static79.aClass99_11.put(local10, (long) arg0);
 		return local10;
 	}
 }

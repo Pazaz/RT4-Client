@@ -37,11 +37,11 @@ public final class Static81 {
 		}
 		if (arg0 != -1) {
 			@Pc(24) CursorType local24 = Static202.method3660(arg0);
-			@Pc(28) SoftwareSprite local28 = local24.method2246();
+			@Pc(28) SoftwareSprite local28 = local24.getSprite();
 			if (local28 == null) {
 				arg0 = -1;
 			} else {
-				GameShell.signLink.setCursor(local28.method301(), local28.anInt1860, GameShell.canvas, new Point(local24.anInt2852, local24.anInt2850), local28.anInt1866);
+				GameShell.signLink.setCursor(local28.method301(), local28.anInt1860, GameShell.canvas, new Point(local24.hotSpotX, local24.hotSpotY), local28.anInt1866);
 				Static115.anInt2941 = arg0;
 			}
 		}
@@ -58,7 +58,7 @@ public final class Static81 {
 
 	@OriginalMember(owner = "client!gg", name = "d", descriptor = "(II)Lclient!dm;")
 	public static IdkType method1752(@OriginalArg(0) int arg0) {
-		@Pc(10) IdkType local10 = (IdkType) Static67.aClass99_20.method3106((long) arg0);
+		@Pc(10) IdkType local10 = (IdkType) Static67.aClass99_20.get((long) arg0);
 		if (local10 != null) {
 			return local10;
 		}
@@ -67,7 +67,7 @@ public final class Static81 {
 		if (local21 != null) {
 			local10.method1209(new Buffer(local21));
 		}
-		Static67.aClass99_20.method3095(local10, (long) arg0);
+		Static67.aClass99_20.put(local10, (long) arg0);
 		return local10;
 	}
 
@@ -287,8 +287,8 @@ public final class Static81 {
 		@Pc(782) int modelId;
 		// DelayedStateChange
 		for (@Pc(709) DelayedStateChange change = Static127.poll(); change != null; change = Static127.poll()) {
-			samples = change.method1011();
-			i = change.method1012();
+			samples = change.getType();
+			i = change.getId();
 			if (samples == 1) {
 				Static155.varcs[i] = change.intArg1;
 				Static138.updatedVarcs[Static4.updatedVarcsWriterIndex++ & 0x1F] = i;

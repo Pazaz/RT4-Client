@@ -10,7 +10,7 @@ public abstract class MouseWheel {
 	public abstract int getRotation();
 
 	@OriginalMember(owner = "client!uc", name = "a", descriptor = "(ZLjava/awt/Component;)V")
-	public abstract void method3291(@OriginalArg(1) Component arg0);
+	public abstract void stop(@OriginalArg(1) Component arg0);
 
 	@OriginalMember(owner = "client!uc", name = "a", descriptor = "(Ljava/awt/Component;I)V")
 	public abstract void start(@OriginalArg(0) Component arg0);

@@ -65,7 +65,7 @@ public final class SecondaryLinkedList {
 	}
 
 	@OriginalMember(owner = "client!ce", name = "a", descriptor = "(Lclient!rg;B)V")
-	public final void method798(@OriginalArg(0) SecondaryNode arg0) {
+	public final void addTail(@OriginalArg(0) SecondaryNode arg0) {
 		if (arg0.aClass3_Sub2_66 != null) {
 			arg0.method4365();
 		}

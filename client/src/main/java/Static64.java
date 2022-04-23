@@ -37,7 +37,7 @@ public final class Static64 {
 		for (local23 = 0; local23 < Static240.anInt5335; local23++) {
 			@Pc(30) int local30 = Static52.anIntArray136[local23];
 			if (Static83.loop != Static159.players[local30].anInt3430) {
-				if (Static159.players[local30].anInt1664 > 0) {
+				if (Static159.players[local30].soundRadius > 0) {
 					Static271.method4597(Static159.players[local30]);
 				}
 				Static159.players[local30] = null;
@@ -59,31 +59,31 @@ public final class Static64 {
 			return;
 		}
 		if (Static9.anInt178 >= 100 && !Static202.aBoolean233 || Static9.anInt178 >= 200) {
-			Static103.method2231(Static186.EMPTY_FILE, 0, LocalizedText.FRIENDLISTFULL);
+			Static103.method2231(Static186.EMPTY, 0, LocalizedText.FRIENDLISTFULL);
 			return;
 		}
 		@Pc(35) JagString local35 = Static79.decode37(arg0).method3125();
 		@Pc(42) int local42;
 		for (local42 = 0; local42 < Static9.anInt178; local42++) {
 			if (Static92.aLongArray3[local42] == arg0) {
-				Static103.method2231(Static186.EMPTY_FILE, 0, Static34.concatenate(new JagString[] { local35, LocalizedText.FRIENDLISTDUPE}));
+				Static103.method2231(Static186.EMPTY, 0, Static34.concatenate(new JagString[] { local35, LocalizedText.FRIENDLISTDUPE}));
 				return;
 			}
 		}
 		for (local42 = 0; local42 < Static35.anInt1093; local42++) {
 			if (arg0 == Static190.aLongArray6[local42]) {
-				Static103.method2231(Static186.EMPTY_FILE, 0, Static34.concatenate(new JagString[] { LocalizedText.REMOVESOCIAL1, local35, LocalizedText.REMOVEIGNORE}));
+				Static103.method2231(Static186.EMPTY, 0, Static34.concatenate(new JagString[] { LocalizedText.REMOVESOCIAL1, local35, LocalizedText.REMOVEIGNORE}));
 				return;
 			}
 		}
 		if (local35.strEquals(Static173.self.aClass100_364)) {
-			Static103.method2231(Static186.EMPTY_FILE, 0, LocalizedText.FRIENDCANTADDSELF);
+			Static103.method2231(Static186.EMPTY, 0, LocalizedText.FRIENDCANTADDSELF);
 			return;
 		}
 		Static122.aClass100Array92[Static9.anInt178] = local35;
 		Static92.aLongArray3[Static9.anInt178] = arg0;
 		Static104.anIntArray255[Static9.anInt178] = 0;
-		Static214.aClass100Array170[Static9.anInt178] = Static186.EMPTY_FILE;
+		Static214.aClass100Array170[Static9.anInt178] = Static186.EMPTY;
 		Static106.anIntArray258[Static9.anInt178] = 0;
 		Static3.aBooleanArray135[Static9.anInt178] = false;
 		Static9.anInt178++;

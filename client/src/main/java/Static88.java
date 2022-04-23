@@ -315,7 +315,7 @@ public final class Static88 {
 						isp--;
 						@Pc(1002) IntNode local1002 = (IntNode) local992.get((long) Static254.intStack[isp]);
 						if (local1002 != null) {
-							pc += local1002.anInt3141;
+							pc += local1002.value;
 						}
 						continue;
 					}
@@ -1364,8 +1364,8 @@ public final class Static88 {
 									}
 									if (opcode == 3308) {
 										type = Static55.level;
-										local803 = Static225.originX + (Static173.self.anInt3412 >> 7);
-										local1052 = (Static173.self.anInt3421 >> 7) + Static142.originZ;
+										local803 = Static225.originX + (Static173.self.xFine >> 7);
+										local1052 = (Static173.self.zFine >> 7) + Static142.originZ;
 										Static254.intStack[isp++] = (type << 28) - (-(local803 << 14) - local1052);
 										continue;
 									}
@@ -1497,7 +1497,7 @@ public final class Static88 {
 										continue;
 									}
 									if (opcode == 3335) {
-										Static254.intStack[isp++] = Static141.anInt3470;
+										Static254.intStack[isp++] = Static141.language;
 										continue;
 									}
 									if (opcode == 3336) {
@@ -1513,7 +1513,7 @@ public final class Static88 {
 										continue;
 									}
 									if (opcode == 3337) {
-										Static254.intStack[isp++] = Static204.anInt4760;
+										Static254.intStack[isp++] = Static204.affiliate;
 										continue;
 									}
 								} else if (opcode < 3500) {
@@ -1523,9 +1523,9 @@ public final class Static88 {
 										type = Static254.intStack[isp];
 										local803 = Static254.intStack[isp + 1];
 										local3422 = Static253.method4330(type);
-										if (local3422.anInt3950 == 115) {
+										if (local3422.valueType == 115) {
 										}
-										Static3.stringStack[ssp++] = local3422.method3085(local803);
+										Static3.stringStack[ssp++] = local3422.getString(local803);
 										continue;
 									}
 									if (opcode == 3408) {
@@ -1535,11 +1535,11 @@ public final class Static88 {
 										local652 = Static254.intStack[isp + 3];
 										local1052 = Static254.intStack[isp + 2];
 										@Pc(3469) EnumType local3469 = Static253.method4330(local1052);
-										if (local3469.anInt3957 == type && local3469.anInt3950 == local803) {
+										if (local3469.keyType == type && local3469.valueType == local803) {
 											if (local803 == 115) {
-												Static3.stringStack[ssp++] = local3469.method3085(local652);
+												Static3.stringStack[ssp++] = local3469.getString(local652);
 											} else {
-												Static254.intStack[isp++] = local3469.method3089(local652);
+												Static254.intStack[isp++] = local3469.getInt(local652);
 											}
 											continue;
 										}
@@ -1554,10 +1554,10 @@ public final class Static88 {
 											throw new RuntimeException("C3409-2");
 										}
 										@Pc(3549) EnumType local3549 = Static253.method4330(local803);
-										if (local3549.anInt3950 != type) {
+										if (local3549.valueType != type) {
 											throw new RuntimeException("C3409-1");
 										}
-										Static254.intStack[isp++] = local3549.method3090(local1052) ? 1 : 0;
+										Static254.intStack[isp++] = local3549.containsValue(local1052) ? 1 : 0;
 										continue;
 									}
 									if (opcode == 3410) {
@@ -1569,17 +1569,17 @@ public final class Static88 {
 											throw new RuntimeException("C3410-2");
 										}
 										local3422 = Static253.method4330(type);
-										if (local3422.anInt3950 != 115) {
+										if (local3422.valueType != 115) {
 											throw new RuntimeException("C3410-1");
 										}
-										Static254.intStack[isp++] = local3422.method3086(local2522) ? 1 : 0;
+										Static254.intStack[isp++] = local3422.containsValue(local2522) ? 1 : 0;
 										continue;
 									}
 									if (opcode == 3411) {
 										isp--;
 										type = Static254.intStack[isp];
 										@Pc(3645) EnumType local3645 = Static253.method4330(type);
-										Static254.intStack[isp++] = local3645.aClass133_16.method3864();
+										Static254.intStack[isp++] = local3645.table.method3864();
 										continue;
 									}
 								} else if (opcode < 3700) {
@@ -1658,8 +1658,8 @@ public final class Static88 {
 									if (opcode == 3609) {
 										ssp--;
 										string = Static3.stringStack[ssp];
-										if (string.method3138(Static72.aClass100_446) || string.method3138(Static101.aClass100_537)) {
-											string = string.method3136(7);
+										if (string.startsWith(Static72.aClass100_446) || string.startsWith(Static101.aClass100_537)) {
+											string = string.substring(7);
 										}
 										Static254.intStack[isp++] = Static98.method1965(string) ? 1 : 0;
 										continue;
@@ -1765,8 +1765,8 @@ public final class Static88 {
 									if (opcode == 3623) {
 										ssp--;
 										string = Static3.stringStack[ssp];
-										if (string.method3138(Static72.aClass100_446) || string.method3138(Static101.aClass100_537)) {
-											string = string.method3136(7);
+										if (string.startsWith(Static72.aClass100_446) || string.startsWith(Static101.aClass100_537)) {
+											string = string.substring(7);
 										}
 										Static254.intStack[isp++] = Static238.method4144(string) ? 1 : 0;
 										continue;
@@ -1812,14 +1812,14 @@ public final class Static88 {
 									if (opcode == 3628) {
 										ssp--;
 										string = Static3.stringStack[ssp];
-										if (string.method3138(Static72.aClass100_446) || string.method3138(Static101.aClass100_537)) {
-											string = string.method3136(7);
+										if (string.startsWith(Static72.aClass100_446) || string.startsWith(Static101.aClass100_537)) {
+											string = string.substring(7);
 										}
 										Static254.intStack[isp++] = Static4.method25(string);
 										continue;
 									}
 									if (opcode == 3629) {
-										Static254.intStack[isp++] = Static279.anInt5880;
+										Static254.intStack[isp++] = Static279.country;
 										continue;
 									}
 								} else if (opcode < 4000) {
@@ -2216,119 +2216,119 @@ public final class Static88 {
 												if (opcode == 5008) {
 													ssp--;
 													string = Static3.stringStack[ssp];
-													if (!string.method3138(Static12.aClass100_74)) {
+													if (!string.startsWith(Static12.aClass100_74)) {
 														if (Static191.staffModLevel == 0 && (Static124.aBoolean157 && !Static207.aBoolean236 || Static86.aBoolean129)) {
 															continue;
 														}
 														local2522 = string.toLowerCase();
 														@Pc(5555) byte local5555 = 0;
-														if (local2522.method3138(LocalizedText.STABLE_CHATCOL0)) {
+														if (local2522.startsWith(LocalizedText.STABLE_CHATCOL0)) {
 															local5555 = 0;
-															string = string.method3136(LocalizedText.STABLE_CHATCOL0.length());
-														} else if (local2522.method3138(LocalizedText.STABLE_CHATCOL1)) {
-															string = string.method3136(LocalizedText.STABLE_CHATCOL1.length());
+															string = string.substring(LocalizedText.STABLE_CHATCOL0.length());
+														} else if (local2522.startsWith(LocalizedText.STABLE_CHATCOL1)) {
+															string = string.substring(LocalizedText.STABLE_CHATCOL1.length());
 															local5555 = 1;
-														} else if (local2522.method3138(LocalizedText.STABLE_CHATCOL2)) {
-															string = string.method3136(LocalizedText.STABLE_CHATCOL2.length());
+														} else if (local2522.startsWith(LocalizedText.STABLE_CHATCOL2)) {
+															string = string.substring(LocalizedText.STABLE_CHATCOL2.length());
 															local5555 = 2;
-														} else if (local2522.method3138(LocalizedText.STABLE_CHATCOL3)) {
+														} else if (local2522.startsWith(LocalizedText.STABLE_CHATCOL3)) {
 															local5555 = 3;
-															string = string.method3136(LocalizedText.STABLE_CHATCOL3.length());
-														} else if (local2522.method3138(LocalizedText.STABLE_CHATCOL4)) {
-															string = string.method3136(LocalizedText.STABLE_CHATCOL4.length());
+															string = string.substring(LocalizedText.STABLE_CHATCOL3.length());
+														} else if (local2522.startsWith(LocalizedText.STABLE_CHATCOL4)) {
+															string = string.substring(LocalizedText.STABLE_CHATCOL4.length());
 															local5555 = 4;
-														} else if (local2522.method3138(LocalizedText.STABLE_CHATCOL5)) {
-															string = string.method3136(LocalizedText.STABLE_CHATCOL5.length());
+														} else if (local2522.startsWith(LocalizedText.STABLE_CHATCOL5)) {
+															string = string.substring(LocalizedText.STABLE_CHATCOL5.length());
 															local5555 = 5;
-														} else if (local2522.method3138(LocalizedText.STABLE_CHATCOL6)) {
+														} else if (local2522.startsWith(LocalizedText.STABLE_CHATCOL6)) {
 															local5555 = 6;
-															string = string.method3136(LocalizedText.STABLE_CHATCOL6.length());
-														} else if (local2522.method3138(LocalizedText.STABLE_CHATCOL7)) {
+															string = string.substring(LocalizedText.STABLE_CHATCOL6.length());
+														} else if (local2522.startsWith(LocalizedText.STABLE_CHATCOL7)) {
 															local5555 = 7;
-															string = string.method3136(LocalizedText.STABLE_CHATCOL7.length());
-														} else if (local2522.method3138(LocalizedText.STABLE_CHATCOL8)) {
-															string = string.method3136(LocalizedText.STABLE_CHATCOL8.length());
+															string = string.substring(LocalizedText.STABLE_CHATCOL7.length());
+														} else if (local2522.startsWith(LocalizedText.STABLE_CHATCOL8)) {
+															string = string.substring(LocalizedText.STABLE_CHATCOL8.length());
 															local5555 = 8;
-														} else if (local2522.method3138(LocalizedText.STABLE_CHATCOL9)) {
+														} else if (local2522.startsWith(LocalizedText.STABLE_CHATCOL9)) {
 															local5555 = 9;
-															string = string.method3136(LocalizedText.STABLE_CHATCOL9.length());
-														} else if (local2522.method3138(LocalizedText.STABLE_CHATCOL10)) {
+															string = string.substring(LocalizedText.STABLE_CHATCOL9.length());
+														} else if (local2522.startsWith(LocalizedText.STABLE_CHATCOL10)) {
 															local5555 = 10;
-															string = string.method3136(LocalizedText.STABLE_CHATCOL10.length());
-														} else if (local2522.method3138(LocalizedText.STABLE_CHATCOL11)) {
-															string = string.method3136(LocalizedText.STABLE_CHATCOL11.length());
+															string = string.substring(LocalizedText.STABLE_CHATCOL10.length());
+														} else if (local2522.startsWith(LocalizedText.STABLE_CHATCOL11)) {
+															string = string.substring(LocalizedText.STABLE_CHATCOL11.length());
 															local5555 = 11;
-														} else if (Static141.anInt3470 != 0) {
-															if (local2522.method3138(LocalizedText.CHATCOL0)) {
+														} else if (Static141.language != 0) {
+															if (local2522.startsWith(LocalizedText.CHATCOL0)) {
 																local5555 = 0;
-																string = string.method3136(LocalizedText.CHATCOL0.length());
-															} else if (local2522.method3138(LocalizedText.CHATCOL1)) {
-																string = string.method3136(LocalizedText.CHATCOL1.length());
+																string = string.substring(LocalizedText.CHATCOL0.length());
+															} else if (local2522.startsWith(LocalizedText.CHATCOL1)) {
+																string = string.substring(LocalizedText.CHATCOL1.length());
 																local5555 = 1;
-															} else if (local2522.method3138(LocalizedText.CHATCOL2)) {
-																string = string.method3136(LocalizedText.CHATCOL2.length());
+															} else if (local2522.startsWith(LocalizedText.CHATCOL2)) {
+																string = string.substring(LocalizedText.CHATCOL2.length());
 																local5555 = 2;
-															} else if (local2522.method3138(LocalizedText.CHATCOL3)) {
-																string = string.method3136(LocalizedText.CHATCOL3.length());
+															} else if (local2522.startsWith(LocalizedText.CHATCOL3)) {
+																string = string.substring(LocalizedText.CHATCOL3.length());
 																local5555 = 3;
-															} else if (local2522.method3138(LocalizedText.CHATCOL4)) {
-																string = string.method3136(LocalizedText.CHATCOL4.length());
+															} else if (local2522.startsWith(LocalizedText.CHATCOL4)) {
+																string = string.substring(LocalizedText.CHATCOL4.length());
 																local5555 = 4;
-															} else if (local2522.method3138(LocalizedText.CHATCOL5)) {
+															} else if (local2522.startsWith(LocalizedText.CHATCOL5)) {
 																local5555 = 5;
-																string = string.method3136(LocalizedText.CHATCOL5.length());
-															} else if (local2522.method3138(LocalizedText.CHATCOL6)) {
-																string = string.method3136(LocalizedText.CHATCOL6.length());
+																string = string.substring(LocalizedText.CHATCOL5.length());
+															} else if (local2522.startsWith(LocalizedText.CHATCOL6)) {
+																string = string.substring(LocalizedText.CHATCOL6.length());
 																local5555 = 6;
-															} else if (local2522.method3138(LocalizedText.CHATCOL7)) {
+															} else if (local2522.startsWith(LocalizedText.CHATCOL7)) {
 																local5555 = 7;
-																string = string.method3136(LocalizedText.CHATCOL7.length());
-															} else if (local2522.method3138(LocalizedText.CHATCOL8)) {
+																string = string.substring(LocalizedText.CHATCOL7.length());
+															} else if (local2522.startsWith(LocalizedText.CHATCOL8)) {
 																local5555 = 8;
-																string = string.method3136(LocalizedText.CHATCOL8.length());
-															} else if (local2522.method3138(LocalizedText.CHATCOL9)) {
+																string = string.substring(LocalizedText.CHATCOL8.length());
+															} else if (local2522.startsWith(LocalizedText.CHATCOL9)) {
 																local5555 = 9;
-																string = string.method3136(LocalizedText.CHATCOL9.length());
-															} else if (local2522.method3138(LocalizedText.CHATCOL10)) {
-																string = string.method3136(LocalizedText.CHATCOL10.length());
+																string = string.substring(LocalizedText.CHATCOL9.length());
+															} else if (local2522.startsWith(LocalizedText.CHATCOL10)) {
+																string = string.substring(LocalizedText.CHATCOL10.length());
 																local5555 = 10;
-															} else if (local2522.method3138(LocalizedText.CHATCOL11)) {
-																string = string.method3136(LocalizedText.CHATCOL11.length());
+															} else if (local2522.startsWith(LocalizedText.CHATCOL11)) {
+																string = string.substring(LocalizedText.CHATCOL11.length());
 																local5555 = 11;
 															}
 														}
 														@Pc(5943) byte local5943 = 0;
 														local2522 = string.toLowerCase();
-														if (local2522.method3138(LocalizedText.STABLE_CHATEFFECT1)) {
-															string = string.method3136(LocalizedText.STABLE_CHATEFFECT1.length());
+														if (local2522.startsWith(LocalizedText.STABLE_CHATEFFECT1)) {
+															string = string.substring(LocalizedText.STABLE_CHATEFFECT1.length());
 															local5943 = 1;
-														} else if (local2522.method3138(LocalizedText.STABLE_CHATEFFECT2)) {
+														} else if (local2522.startsWith(LocalizedText.STABLE_CHATEFFECT2)) {
 															local5943 = 2;
-															string = string.method3136(LocalizedText.STABLE_CHATEFFECT2.length());
-														} else if (local2522.method3138(LocalizedText.STABLE_CHATEFFECT3)) {
-															string = string.method3136(LocalizedText.STABLE_CHATEFFECT3.length());
+															string = string.substring(LocalizedText.STABLE_CHATEFFECT2.length());
+														} else if (local2522.startsWith(LocalizedText.STABLE_CHATEFFECT3)) {
+															string = string.substring(LocalizedText.STABLE_CHATEFFECT3.length());
 															local5943 = 3;
-														} else if (local2522.method3138(LocalizedText.STABLE_CHATEFFECT4)) {
+														} else if (local2522.startsWith(LocalizedText.STABLE_CHATEFFECT4)) {
 															local5943 = 4;
-															string = string.method3136(LocalizedText.STABLE_CHATEFFECT4.length());
-														} else if (local2522.method3138(LocalizedText.STABLE_CHATEFFECTC5)) {
+															string = string.substring(LocalizedText.STABLE_CHATEFFECT4.length());
+														} else if (local2522.startsWith(LocalizedText.STABLE_CHATEFFECTC5)) {
 															local5943 = 5;
-															string = string.method3136(LocalizedText.STABLE_CHATEFFECTC5.length());
-														} else if (Static141.anInt3470 != 0) {
-															if (local2522.method3138(LocalizedText.CHATEFFECT1)) {
-																string = string.method3136(LocalizedText.CHATEFFECT1.length());
+															string = string.substring(LocalizedText.STABLE_CHATEFFECTC5.length());
+														} else if (Static141.language != 0) {
+															if (local2522.startsWith(LocalizedText.CHATEFFECT1)) {
+																string = string.substring(LocalizedText.CHATEFFECT1.length());
 																local5943 = 1;
-															} else if (local2522.method3138(LocalizedText.CHATEFFECT2)) {
+															} else if (local2522.startsWith(LocalizedText.CHATEFFECT2)) {
 																local5943 = 2;
-																string = string.method3136(LocalizedText.CHATEFFECT2.length());
-															} else if (local2522.method3138(LocalizedText.CHATEFFECT3)) {
+																string = string.substring(LocalizedText.CHATEFFECT2.length());
+															} else if (local2522.startsWith(LocalizedText.CHATEFFECT3)) {
 																local5943 = 3;
-																string = string.method3136(LocalizedText.CHATEFFECT3.length());
-															} else if (local2522.method3138(LocalizedText.CHATEFFECT4)) {
+																string = string.substring(LocalizedText.CHATEFFECT3.length());
+															} else if (local2522.startsWith(LocalizedText.CHATEFFECT4)) {
 																local5943 = 4;
-																string = string.method3136(LocalizedText.CHATEFFECT4.length());
-															} else if (local2522.method3138(LocalizedText.CHATEFFECT5)) {
-																string = string.method3136(LocalizedText.CHATEFFECT5.length());
+																string = string.substring(LocalizedText.CHATEFFECT4.length());
+															} else if (local2522.startsWith(LocalizedText.CHATEFFECT5)) {
+																string = string.substring(LocalizedText.CHATEFFECT5.length());
 																local5943 = 5;
 															}
 														}
@@ -2859,7 +2859,7 @@ public final class Static88 {
 														continue;
 													}
 													if (opcode == 5306) {
-														Static254.intStack[isp++] = Static144.method2736();
+														Static254.intStack[isp++] = Static144.getWindowMode();
 														continue;
 													}
 													if (opcode == 5307) {
@@ -2978,7 +2978,7 @@ public final class Static88 {
 														ssp--;
 														string = Static3.stringStack[ssp];
 														@Pc(8356) JagString local8356 = Static34.concatenate(new JagString[] { Static15.method479(), string });
-														if (GameShell.frame != null || local1552 && SignLink.anInt5928 != 3 && SignLink.osName.startsWith("win") && !Static178.aBoolean203) {
+														if (GameShell.frame != null || local1552 && SignLink.anInt5928 != 3 && SignLink.osName.startsWith("win") && !Static178.haveIe6) {
 															Static164.newTab = local1552;
 															Static175.url = local8356;
 															Static33.openUrlRequest = GameShell.signLink.openUrl(new String(local8356.method3148(), "ISO-8859-1"));
@@ -3137,7 +3137,7 @@ public final class Static88 {
 													}
 													if (opcode == 5602) {
 														if (Static184.loginStep == 0) {
-															Static266.returnCode = -2;
+															Static266.reply = -2;
 														}
 														continue;
 													}
@@ -3170,7 +3170,7 @@ public final class Static88 {
 														continue;
 													}
 													if (opcode == 5607) {
-														Static254.intStack[isp++] = Static266.returnCode;
+														Static254.intStack[isp++] = Static266.reply;
 														continue;
 													}
 													if (opcode == 5608) {
@@ -3696,12 +3696,12 @@ public final class Static88 {
 															Static254.intStack[isp++] = 0;
 														} else {
 															Static254.intStack[isp++] = world.anInt382;
-															Static254.intStack[isp++] = world.anInt381;
+															Static254.intStack[isp++] = world.flags;
 															Static3.stringStack[ssp++] = world.aClass100_69;
 															local10247 = world.getWorldInfo();
 															Static254.intStack[isp++] = local10247.anInt1739;
 															Static3.stringStack[ssp++] = local10247.aClass100_378;
-															Static254.intStack[isp++] = world.anInt379;
+															Static254.intStack[isp++] = world.players;
 														}
 														continue;
 													}
@@ -3716,12 +3716,12 @@ public final class Static88 {
 															Static254.intStack[isp++] = 0;
 														} else {
 															Static254.intStack[isp++] = world.anInt382;
-															Static254.intStack[isp++] = world.anInt381;
+															Static254.intStack[isp++] = world.flags;
 															Static3.stringStack[ssp++] = world.aClass100_69;
 															local10247 = world.getWorldInfo();
 															Static254.intStack[isp++] = local10247.anInt1739;
 															Static3.stringStack[ssp++] = local10247.aClass100_378;
-															Static254.intStack[isp++] = world.anInt379;
+															Static254.intStack[isp++] = world.players;
 														}
 														continue;
 													}
@@ -3756,12 +3756,12 @@ public final class Static88 {
 															Static3.stringStack[ssp++] = Static72.EMPTY_STRING;
 															Static254.intStack[isp++] = 0;
 														} else {
-															Static254.intStack[isp++] = local10440.anInt381;
+															Static254.intStack[isp++] = local10440.flags;
 															Static3.stringStack[ssp++] = local10440.aClass100_69;
 															@Pc(10458) Class32 local10458 = local10440.getWorldInfo();
 															Static254.intStack[isp++] = local10458.anInt1739;
 															Static3.stringStack[ssp++] = local10458.aClass100_378;
-															Static254.intStack[isp++] = local10440.anInt379;
+															Static254.intStack[isp++] = local10440.players;
 														}
 														continue;
 													}
@@ -3880,7 +3880,7 @@ public final class Static88 {
 										isp -= 2;
 										local1052 = Static254.intStack[isp + 1];
 										local803 = Static254.intStack[isp];
-										Static254.intStack[isp++] = Static148.method2768(local1052).method2860(string, local803);
+										Static254.intStack[isp++] = Static148.method2768(local1052).getParagraphLineCount(string, local803);
 										continue;
 									}
 									if (opcode == 4109) {
@@ -4018,7 +4018,7 @@ public final class Static88 {
 										local12388 = Static254.intStack[isp] != 0;
 										isp--;
 										local803 = Static254.intStack[isp];
-										Static3.stringStack[ssp++] = Static182.valueToBase10String(Static141.anInt3470, local12388, 0, (long) local803);
+										Static3.stringStack[ssp++] = Static182.valueToBase10String(Static141.language, local12388, 0, (long) local803);
 										continue;
 									}
 								}
@@ -4121,7 +4121,7 @@ public final class Static88 {
 				if (Static83.modeWhere != 0) {
 					Static103.method2231(Static72.EMPTY_STRING, 0, Static136.CS_ERROR);
 				}
-				Static89.report("CS2 - scr:" + script.uid + " op:" + op, ex);
+				Static89.report("CS2 - scr:" + script.key + " op:" + op, ex);
 			} else {
 				@Pc(14385) JagString str = Static87.allocate(30);
 				str.method3113(Static219.aClass100_928).method3113(script.name);
@@ -4135,7 +4135,7 @@ public final class Static88 {
 				if (Static83.modeWhere != 0) {
 					Static103.method2231(Static72.EMPTY_STRING, 0, Static34.concatenate(new JagString[] { Static167.aClass100_780, script.name}));
 				}
-				Static89.report("CS2 - scr:" + script.uid + " op:" + op + new String(str.method3148()), ex);
+				Static89.report("CS2 - scr:" + script.key + " op:" + op + new String(str.method3148()), ex);
 			}
 		}
 	}

@@ -11,7 +11,7 @@ public final class Static204 {
 	public static MixerPcmStream soundStream;
 
 	@OriginalMember(owner = "client!qi", name = "r", descriptor = "I")
-	public static int anInt4760 = 0;
+	public static int affiliate = 0;
 
 	@OriginalMember(owner = "client!qi", name = "t", descriptor = "I")
 	public static int anInt4762 = 0;

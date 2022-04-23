@@ -250,7 +250,7 @@ public final class Static1 {
 			}
 		}
 		@Pc(1161) GlTile local1161;
-		for (local1161 = (GlTile) local10.method3859(); local1161 != null; local1161 = (GlTile) local10.method3861()) {
+		for (local1161 = (GlTile) local10.head(); local1161 != null; local1161 = (GlTile) local10.next()) {
 			local1161.method1940();
 		}
 		for (local12 = 1; local12 <= 102; local12++) {
@@ -272,10 +272,10 @@ public final class Static1 {
 					@Pc(1261) GlTile local1261 = Static243.method4212(local10, local1250);
 					@Pc(1267) byte local1267 = arg7[local12][local17];
 					@Pc(1273) byte local1273 = arg5[local12][local17];
-					local168 = Static19.method588(local1250.anInt5892, local1250.anInt5899, arg6[local12][local17]);
-					local143 = Static19.method588(local1250.anInt5892, local1250.anInt5899, arg6[local12 + 1][local17]);
-					local163 = Static19.method588(local1250.anInt5892, local1250.anInt5899, arg6[local12 + 1][local17 + 1]);
-					local153 = Static19.method588(local1250.anInt5892, local1250.anInt5899, arg6[local12][local17 + 1]);
+					local168 = Static19.method588(local1250.texture, local1250.anInt5899, arg6[local12][local17]);
+					local143 = Static19.method588(local1250.texture, local1250.anInt5899, arg6[local12 + 1][local17]);
+					local163 = Static19.method588(local1250.texture, local1250.anInt5899, arg6[local12 + 1][local17 + 1]);
+					local153 = Static19.method588(local1250.texture, local1250.anInt5899, arg6[local12][local17 + 1]);
 					Static58.method1324(local168, arg2, arg1, local12, arg0, local143, local1273, local30, local163, local38 != 0 && local1250.aBoolean310, local1267, local17, arg4, local153, local1261);
 				}
 				if ((arg8[local12][local17] & 0xFF) != 0 || local127 != 0 && arg7[local12][local17] == 0) {
@@ -470,10 +470,10 @@ public final class Static1 {
 						@Pc(2318) boolean[] local2318 = Static277.aBooleanArrayArray4[local2003 == local180 ? local143 : 0];
 						@Pc(2324) FloType local2324 = Static256.method4395(local2003 - 1);
 						@Pc(2329) GlTile local2329 = Static243.method4212(local10, local2324);
-						@Pc(2345) int local2345 = Static19.method588(local2324.anInt5892, local2324.anInt5899, arg6[local12][local17]) << 8 | 0xFF;
-						@Pc(2365) int local2365 = Static19.method588(local2324.anInt5892, local2324.anInt5899, arg6[local12 + 1][local17]) << 8 | 0xFF;
-						@Pc(2385) int local2385 = Static19.method588(local2324.anInt5892, local2324.anInt5899, arg6[local12 + 1][local17 + 1]) << 8 | 0xFF;
-						@Pc(2403) int local2403 = Static19.method588(local2324.anInt5892, local2324.anInt5899, arg6[local12][local17 + 1]) << 8 | 0xFF;
+						@Pc(2345) int local2345 = Static19.method588(local2324.texture, local2324.anInt5899, arg6[local12][local17]) << 8 | 0xFF;
+						@Pc(2365) int local2365 = Static19.method588(local2324.texture, local2324.anInt5899, arg6[local12 + 1][local17]) << 8 | 0xFF;
+						@Pc(2385) int local2385 = Static19.method588(local2324.texture, local2324.anInt5899, arg6[local12 + 1][local17 + 1]) << 8 | 0xFF;
+						@Pc(2403) int local2403 = Static19.method588(local2324.texture, local2324.anInt5899, arg6[local12][local17 + 1]) << 8 | 0xFF;
 						@Pc(2422) boolean local2422 = local2003 != local202 && local1086[0] && local1068[1];
 						@Pc(2441) boolean local2441 = local2003 != local1035 && local1055[0] && local2318[1];
 						@Pc(2456) boolean local2456 = local214 != local2003 && local1068[0] && local1055[1];
@@ -515,9 +515,9 @@ public final class Static1 {
 				}
 			}
 		}
-		for (local1161 = (GlTile) local10.method3859(); local1161 != null; local1161 = (GlTile) local10.method3861()) {
+		for (local1161 = (GlTile) local10.head(); local1161 != null; local1161 = (GlTile) local10.next()) {
 			if (local1161.anInt2483 == 0) {
-				local1161.method4658();
+				local1161.unlink();
 			} else {
 				local1161.method1943();
 			}
@@ -527,7 +527,7 @@ public final class Static1 {
 		@Pc(2826) long[] local2826 = new long[local12];
 		local10.method3865(local2823);
 		for (local38 = 0; local38 < local12; local38++) {
-			local2826[local38] = local2823[local38].uid;
+			local2826[local38] = local2823[local38].key;
 		}
 		Static4.method23(local2826, local2823);
 		return local2823;

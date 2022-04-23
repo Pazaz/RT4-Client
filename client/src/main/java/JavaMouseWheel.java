@@ -14,7 +14,7 @@ public final class JavaMouseWheel extends MouseWheel implements MouseWheelListen
 
 	@OriginalMember(owner = "client!o", name = "a", descriptor = "(ZLjava/awt/Component;)V")
 	@Override
-	public final void method3291(@OriginalArg(1) Component arg0) {
+	public final void stop(@OriginalArg(1) Component arg0) {
 		arg0.removeMouseWheelListener(this);
 	}
 

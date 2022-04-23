@@ -22,16 +22,16 @@ public final class Static209 {
 	@OriginalMember(owner = "client!ra", name = "a", descriptor = "(ILclient!pb;BII)V")
 	public static void method3701(@OriginalArg(0) int arg0, @OriginalArg(1) LocType arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		for (@Pc(10) AreaSound local10 = (AreaSound) Static3.aClass69_135.method2289(); local10 != null; local10 = (AreaSound) Static3.aClass69_135.method2288()) {
-			if (arg3 == local10.anInt2033 && local10.anInt2041 == arg0 * 128 && local10.anInt2029 == arg2 * 128 && arg1.anInt4426 == local10.aClass118_1.anInt4426) {
-				if (local10.aClass3_Sub3_Sub1_1 != null) {
-					Static204.soundStream.method1347(local10.aClass3_Sub3_Sub1_1);
-					local10.aClass3_Sub3_Sub1_1 = null;
+			if (arg3 == local10.anInt2033 && local10.anInt2041 == arg0 * 128 && local10.anInt2029 == arg2 * 128 && arg1.anInt4426 == local10.locType.anInt4426) {
+				if (local10.primaryStream != null) {
+					Static204.soundStream.removeSubStream(local10.primaryStream);
+					local10.primaryStream = null;
 				}
-				if (local10.aClass3_Sub3_Sub1_2 != null) {
-					Static204.soundStream.method1347(local10.aClass3_Sub3_Sub1_2);
-					local10.aClass3_Sub3_Sub1_2 = null;
+				if (local10.secondaryStream != null) {
+					Static204.soundStream.removeSubStream(local10.secondaryStream);
+					local10.secondaryStream = null;
 				}
-				local10.method4658();
+				local10.unlink();
 				return;
 			}
 		}
@@ -52,7 +52,7 @@ public final class Static209 {
 	@OriginalMember(owner = "client!ra", name = "a", descriptor = "(BIII)V")
 	public static void method3707(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
 		@Pc(12) DelayedStateChange local12 = Static238.method4143(9, arg0);
-		local12.method1017();
+		local12.pushServer();
 		local12.intArg1 = arg2;
 		local12.intArg3 = arg1;
 	}

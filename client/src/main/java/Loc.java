@@ -84,7 +84,7 @@ public final class Loc extends Entity {
 			} else {
 				local67 = Static271.method4601(this.anInt1299);
 				if (local67.anIntArray380 != null) {
-					local67 = local67.method3417();
+					local67 = local67.getMultiLoc();
 				}
 				if (local67 != null) {
 					Static9.method181(local67, 0, this.anInt1295, 0, this.anInt1307, this.anInt1308, this.anInt1300, this.anInt1303);
@@ -225,7 +225,7 @@ public final class Loc extends Entity {
 		@Pc(19) LocType local19 = Static271.method4601(this.anInt1299);
 		@Pc(22) int local22 = local19.anInt4430;
 		if (local19.anIntArray380 != null) {
-			local19 = local19.method3417();
+			local19 = local19.getMultiLoc();
 		}
 		if (local19 == null) {
 			if (GlRenderer.enabled && !local12) {

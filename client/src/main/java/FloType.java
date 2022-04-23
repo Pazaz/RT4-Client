@@ -13,7 +13,7 @@ public final class FloType {
 	public boolean aBoolean311 = true;
 
 	@OriginalMember(owner = "client!wl", name = "p", descriptor = "I")
-	public int anInt5892 = -1;
+	public int texture = -1;
 
 	@OriginalMember(owner = "client!wl", name = "f", descriptor = "I")
 	public int anInt5885 = 128;
@@ -52,11 +52,11 @@ public final class FloType {
 		if (arg0 == 1) {
 			this.anInt5899 = Static15.method492(arg1.g3());
 		} else if (arg0 == 2) {
-			this.anInt5892 = arg1.g1();
+			this.texture = arg1.g1();
 		} else if (arg0 == 3) {
-			this.anInt5892 = arg1.g2();
-			if (this.anInt5892 == 65535) {
-				this.anInt5892 = -1;
+			this.texture = arg1.g2();
+			if (this.texture == 65535) {
+				this.texture = -1;
 			}
 		} else if (arg0 == 5) {
 			this.aBoolean312 = false;

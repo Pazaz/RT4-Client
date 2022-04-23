@@ -58,13 +58,13 @@ public abstract class PathingEntity extends Entity {
 	public int anInt3411;
 
 	@OriginalMember(owner = "client!fe", name = "Qb", descriptor = "I")
-	public int anInt3412;
+	public int xFine;
 
 	@OriginalMember(owner = "client!fe", name = "Ub", descriptor = "I")
 	public int anInt3416;
 
 	@OriginalMember(owner = "client!fe", name = "ac", descriptor = "I")
-	public int anInt3421;
+	public int zFine;
 
 	@OriginalMember(owner = "client!fe", name = "dc", descriptor = "I")
 	public int anInt3424;
@@ -127,7 +127,7 @@ public abstract class PathingEntity extends Entity {
 	public int anInt3390 = 0;
 
 	@OriginalMember(owner = "client!fe", name = "mb", descriptor = "[B")
-	public final byte[] aByteArray48 = new byte[10];
+	public final byte[] movementQueueSpeed = new byte[10];
 
 	@OriginalMember(owner = "client!fe", name = "W", descriptor = "I")
 	public int anInt3376 = 32;
@@ -163,7 +163,7 @@ public abstract class PathingEntity extends Entity {
 	protected int anInt3413 = -32768;
 
 	@OriginalMember(owner = "client!fe", name = "Nb", descriptor = "I")
-	public int anInt3409 = 0;
+	public int movementQueueSize = 0;
 
 	@OriginalMember(owner = "client!fe", name = "Zb", descriptor = "I")
 	public int anInt3420 = 0;
@@ -272,15 +272,15 @@ public abstract class PathingEntity extends Entity {
 			@Pc(32) int local32 = arg1 - this.movementQueueX[0];
 			@Pc(40) int local40 = arg2 - this.movementQueueZ[0];
 			if (local32 >= -8 && local32 <= 8 && local40 >= -8 && local40 <= 8) {
-				if (this.anInt3409 < 9) {
-					this.anInt3409++;
+				if (this.movementQueueSize < 9) {
+					this.movementQueueSize++;
 				}
-				for (@Pc(72) int local72 = this.anInt3409; local72 > 0; local72--) {
+				for (@Pc(72) int local72 = this.movementQueueSize; local72 > 0; local72--) {
 					this.movementQueueX[local72] = this.movementQueueX[local72 - 1];
 					this.movementQueueZ[local72] = this.movementQueueZ[local72 - 1];
-					this.aByteArray48[local72] = this.aByteArray48[local72 - 1];
+					this.movementQueueSpeed[local72] = this.movementQueueSpeed[local72 - 1];
 				}
-				this.aByteArray48[0] = 1;
+				this.movementQueueSpeed[0] = 1;
 				this.movementQueueX[0] = arg1;
 				this.movementQueueZ[0] = arg2;
 				return;
@@ -289,10 +289,10 @@ public abstract class PathingEntity extends Entity {
 		this.anInt3417 = 0;
 		this.movementQueueX[0] = arg1;
 		this.movementQueueZ[0] = arg2;
-		this.anInt3409 = 0;
+		this.movementQueueSize = 0;
 		this.anInt3405 = 0;
-		this.anInt3421 = arg0 * 64 + this.movementQueueZ[0] * 128;
-		this.anInt3412 = arg0 * 64 + this.movementQueueX[0] * 128;
+		this.zFine = arg0 * 64 + this.movementQueueZ[0] * 128;
+		this.xFine = arg0 * 64 + this.movementQueueX[0] * 128;
 		if (GlRenderer.enabled && Static173.self == this) {
 			Static86.setInstantFade();
 		}
@@ -309,18 +309,18 @@ public abstract class PathingEntity extends Entity {
 		if (this.anInt3369 != -1 && Static36.method941(this.anInt3369).anInt5349 == 1) {
 			this.anInt3369 = -1;
 		}
-		if (this.anInt3409 < 9) {
-			this.anInt3409++;
+		if (this.movementQueueSize < 9) {
+			this.movementQueueSize++;
 		}
-		for (@Pc(50) int local50 = this.anInt3409; local50 > 0; local50--) {
+		for (@Pc(50) int local50 = this.movementQueueSize; local50 > 0; local50--) {
 			this.movementQueueX[local50] = this.movementQueueX[local50 - 1];
 			this.movementQueueZ[local50] = this.movementQueueZ[local50 - 1];
-			this.aByteArray48[local50] = this.aByteArray48[local50 - 1];
+			this.movementQueueSpeed[local50] = this.movementQueueSpeed[local50 - 1];
 		}
 		if (arg1 == 1) {
 			local15++;
 		}
-		this.aByteArray48[0] = (byte) arg0;
+		this.movementQueueSpeed[0] = (byte) arg0;
 		if (arg1 == 2) {
 			local15++;
 			local10++;
@@ -363,13 +363,13 @@ public abstract class PathingEntity extends Entity {
 		@Pc(53) int local53 = -local27 / 2;
 		@Pc(64) int local64 = local53 * local43 - local48 * local39 >> 16;
 		@Pc(75) int local75 = local39 * local53 + local43 * local48 >> 16;
-		@Pc(87) int local87 = Static207.method3685(Static55.level, local75 + this.anInt3412, this.anInt3421 + local64);
+		@Pc(87) int local87 = Static207.method3685(Static55.level, local75 + this.xFine, this.zFine + local64);
 		@Pc(91) int local91 = local24 / 2;
 		@Pc(96) int local96 = -local27 / 2;
 		@Pc(106) int local106 = local91 * local43 + local96 * local39 >> 16;
 		@Pc(110) int local110 = local27 / 2;
 		@Pc(121) int local121 = local96 * local43 - local91 * local39 >> 16;
-		@Pc(134) int local134 = Static207.method3685(Static55.level, local106 + this.anInt3412, this.anInt3421 - -local121);
+		@Pc(134) int local134 = Static207.method3685(Static55.level, local106 + this.xFine, this.zFine - -local121);
 		@Pc(139) int local139 = -local24 / 2;
 		@Pc(150) int local150 = local110 * local43 - local39 * local139 >> 16;
 		@Pc(154) int local154 = local27 / 2;
@@ -377,9 +377,9 @@ public abstract class PathingEntity extends Entity {
 		@Pc(169) int local169 = local39 * local110 + local43 * local139 >> 16;
 		@Pc(179) int local179 = local154 * local43 - local39 * local158 >> 16;
 		@Pc(189) int local189 = local39 * local154 + local43 * local158 >> 16;
-		@Pc(201) int local201 = Static207.method3685(Static55.level, this.anInt3412 + local169, local150 + this.anInt3421);
+		@Pc(201) int local201 = Static207.method3685(Static55.level, this.xFine + local169, local150 + this.zFine);
 		@Pc(212) int local212 = local134 > local87 ? local87 : local134;
-		@Pc(224) int local224 = Static207.method3685(Static55.level, local189 + this.anInt3412, local179 + this.anInt3421);
+		@Pc(224) int local224 = Static207.method3685(Static55.level, local189 + this.xFine, local179 + this.zFine);
 		@Pc(231) int local231 = local224 > local201 ? local201 : local224;
 		@Pc(238) int local238 = local224 > local134 ? local134 : local224;
 		@Pc(245) int local245 = local201 <= local87 ? local201 : local87;
@@ -619,7 +619,7 @@ public abstract class PathingEntity extends Entity {
 
 	@OriginalMember(owner = "client!fe", name = "c", descriptor = "(I)V")
 	public final void method2689() {
-		this.anInt3409 = 0;
+		this.movementQueueSize = 0;
 		this.anInt3405 = 0;
 	}
 
@@ -634,7 +634,7 @@ public abstract class PathingEntity extends Entity {
 	}
 
 	@OriginalMember(owner = "client!fe", name = "c", descriptor = "(B)I")
-	public int method2693() {
+	public int getSize() {
 		return this.anInt3415;
 	}
 }

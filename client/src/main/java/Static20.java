@@ -25,8 +25,8 @@ public final class Static20 {
 	@OriginalMember(owner = "client!bj", name = "d", descriptor = "(B)V")
 	public static void method601() {
 		Static36.aClass133_3.method3856();
-		Static140.aClass16_7.method802();
-		Static215.aClass16_9.method802();
+		Static140.clientQueue.method802();
+		Static215.serverQueue.method802();
 	}
 
 	@OriginalMember(owner = "client!bj", name = "a", descriptor = "(III)J")
