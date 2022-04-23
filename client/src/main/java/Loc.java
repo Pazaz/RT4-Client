@@ -269,7 +269,7 @@ public final class Loc extends Entity {
 		@Pc(192) int local192 = (local157 >> 1) + this.anInt1300;
 		@Pc(201) int local201 = (local157 + 1 >> 1) + this.anInt1300;
 		this.method1047(local192 * 128, local185 * 128);
-		@Pc(256) boolean local256 = !local12 && local19.aBoolean212 && (local19.anInt4426 != this.anInt1321 || (this.anInt1297 != this.anInt1322 || this.aClass144_2 != null && (this.aClass144_2.aBoolean280 || Static204.aBoolean234) && this.anInt1297 != this.anInt1304) && Static139.sceneryShadowsType >= 2);
+		@Pc(256) boolean local256 = !local12 && local19.aBoolean212 && (local19.anInt4426 != this.anInt1321 || (this.anInt1297 != this.anInt1322 || this.aClass144_2 != null && (this.aClass144_2.aBoolean280 || Static204.applyTweening) && this.anInt1297 != this.anInt1304) && Static139.sceneryShadowsType >= 2);
 		if (arg0 && !local256) {
 			return null;
 		}

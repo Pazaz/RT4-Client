@@ -343,11 +343,11 @@ public final class Static127 {
 				Static121.aBoolean154 = true;
 			}
 			if (arg0.method3111(Static124.aClass100_596)) {
-				if (Static204.aBoolean234) {
-					Static204.aBoolean234 = false;
+				if (Static204.applyTweening) {
+					Static204.applyTweening = false;
 					Static103.method2231(null, 0, Static274.aClass100_943);
 				} else {
-					Static204.aBoolean234 = true;
+					Static204.applyTweening = true;
 					Static103.method2231(null, 0, Static50.aClass100_362);
 				}
 			}

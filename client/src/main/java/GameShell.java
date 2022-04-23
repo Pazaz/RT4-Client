@@ -84,6 +84,8 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 	@OriginalMember(owner = "client!ba", name = "B", descriptor = "I")
 	public static int timePerFrame = 20;
 
+	public static int FIXED_UPDATE_RATE = 20;
+
 	@OriginalMember(owner = "client!cm", name = "b", descriptor = "Ljava/lang/Thread;")
 	public static Thread thread;
 
@@ -150,6 +152,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 		if (signLink.eventQueue == null) {
 			return;
 		}
+
 		for (@Pc(19) int i = 0; i < 50 && signLink.eventQueue.peekEvent() != null; i++) {
 			Static231.sleep(1L);
 		}
@@ -367,7 +370,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 		}
 	}
 
-	public GraphicsDevice getCurrentDevice() {
+	public static GraphicsDevice getCurrentDevice() {
 		GraphicsConfiguration config = frame.getGraphicsConfiguration();
 		GraphicsDevice myScreen = config.getDevice();
 		GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment();
@@ -467,13 +470,24 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			Static260.frameBuffer = Static131.create(canvasHeight, canvasWidth, canvas);
 			this.mainInit();
 			timer = Static70.create();
-			while (killTime == 0L || killTime > MonotonicClock.currentTimeMillis()) {
-				logicCycles = timer.sleep(minimumDelay, timePerFrame);
-				for (i = 0; i < logicCycles; i++) {
-					this.mainLoopWrapper();
+
+			long lastUpdateTime = 0;
+			long lastDrawTime = 0;
+			while (killTime == 0L) {
+				long currentTime = MonotonicClock.currentTimeMillis();
+				if (GameShell.killTime > currentTime) {
+					break;
 				}
-				this.mainRedrawWrapper();
-				flush(signLink, canvas);
+
+				if (currentTime - lastUpdateTime >= FIXED_UPDATE_RATE) {
+					this.mainLoopWrapper();
+					lastUpdateTime = currentTime;
+				}
+
+				if (currentTime - lastDrawTime >= timePerFrame) {
+					this.mainRedrawWrapper();
+					lastDrawTime = currentTime;
+				}
 			}
 		} catch (@Pc(198) Exception ex) {
 			Static89.report(null, ex);

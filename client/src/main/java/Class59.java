@@ -326,7 +326,7 @@ public final class Class59 {
 						local827 |= Static276.aClass3_Sub2_Sub7Array8[local353].method901(local381);
 						local838 |= local858.aBoolean278;
 					}
-					if ((local858.aBoolean277 || Static204.aBoolean234) && local367 != -1 && local367 < local858.anIntArray473.length) {
+					if ((local858.aBoolean277 || Static204.applyTweening) && local367 != -1 && local367 < local858.anIntArray473.length) {
 						Static262.anIntArray515[local353] = local858.anIntArray474[local374];
 						Static73.anIntArray183[local353] = arg0[local353].anInt5404;
 						local979 = local858.anIntArray473[local367];
@@ -364,7 +364,7 @@ public final class Class59 {
 				local827 |= local1042.method901(local353);
 				local838 |= arg3.aBoolean278;
 			}
-			if ((arg3.aBoolean277 || Static204.aBoolean234) && arg1 != -1 && arg3.anIntArray473.length > arg1) {
+			if ((arg3.aBoolean277 || Static204.applyTweening) && arg1 != -1 && arg3.anIntArray473.length > arg1) {
 				local360 = arg3.anIntArray473[arg1];
 				local451 = local360 >>> 16;
 				local360 &= 0xFFFF;
@@ -395,7 +395,7 @@ public final class Class59 {
 				local827 |= local1154.method901(local979);
 				local838 |= arg2.aBoolean278;
 			}
-			if ((arg2.aBoolean277 || Static204.aBoolean234) && arg5 != -1 && arg2.anIntArray473.length > arg5) {
+			if ((arg2.aBoolean277 || Static204.applyTweening) && arg5 != -1 && arg2.anIntArray473.length > arg5) {
 				local457 = arg2.anIntArray474[arg8];
 				local451 = arg2.anIntArray473[arg5];
 				local481 = local451 >>> 16;
