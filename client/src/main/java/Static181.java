@@ -75,7 +75,7 @@ public final class Static181 {
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(ILclient!ve;Lclient!ve;Z)V")
 	public static void init(@OriginalArg(1) Js5 arg0, @OriginalArg(2) Js5 arg1) {
 		Static30.aBoolean61 = true;
-		Static121.aClass153_45 = arg1;
+		Static121.modelsArchive = arg1;
 		Static146.aClass153_54 = arg0;
 	}
 }

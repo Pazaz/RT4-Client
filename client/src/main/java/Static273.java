@@ -65,7 +65,7 @@ public final class Static273 {
 					@Pc(131) int local131 = local124 + local33[local39++];
 					local135 = Static5.getComponent(local131);
 					local140 = local33[local39++];
-					if (local140 != -1 && (!Static71.method1439(local140).aBoolean131 || Static2.aBoolean1)) {
+					if (local140 != -1 && (!Static71.get(local140).members || Static2.aBoolean1)) {
 						for (local152 = 0; local152 < local135.objTypes.length; local152++) {
 							if (local140 + 1 == local135.objTypes[local152]) {
 								local41 += local135.objCounts[local152];
@@ -97,7 +97,7 @@ public final class Static273 {
 					local124 += local33[local39++];
 					local135 = Static5.getComponent(local124);
 					local140 = local33[local39++];
-					if (local140 != -1 && (!Static71.method1439(local140).aBoolean131 || Static2.aBoolean1)) {
+					if (local140 != -1 && (!Static71.get(local140).members || Static2.aBoolean1)) {
 						for (local152 = 0; local152 < local135.objTypes.length; local152++) {
 							if (local135.objTypes[local152] == local140 + 1) {
 								local41 = 999999999;

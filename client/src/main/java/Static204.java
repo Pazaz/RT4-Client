@@ -35,7 +35,7 @@ public final class Static204 {
 	public static void method3673() {
 		Static93.aClass99_13.clear();
 		Static125.aClass99_18.clear();
-		Static262.aClass99_35.clear();
+		Static262.headModels.clear();
 	}
 
 	@OriginalMember(owner = "client!qi", name = "b", descriptor = "(II)I")

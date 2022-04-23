@@ -46,7 +46,7 @@ public final class Static209 {
 	public static void method3706() {
 		Static93.aClass99_13.method3102(5);
 		Static125.aClass99_18.method3102(5);
-		Static262.aClass99_35.method3102(5);
+		Static262.headModels.method3102(5);
 	}
 
 	@OriginalMember(owner = "client!ra", name = "a", descriptor = "(BIII)V")

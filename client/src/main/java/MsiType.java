@@ -10,13 +10,13 @@ public final class MsiType {
 	public int anInt11;
 
 	@OriginalMember(owner = "client!aa", name = "i", descriptor = "I")
-	public int anInt12;
+	public int spriteId;
 
 	@OriginalMember(owner = "client!aa", name = "s", descriptor = "Z")
 	public boolean aBoolean2 = false;
 
 	@OriginalMember(owner = "client!aa", name = "a", descriptor = "(BLclient!wa;I)V")
-	public final void method6(@OriginalArg(1) Buffer arg0, @OriginalArg(2) int arg1) {
+	public final void decode(@OriginalArg(1) Buffer arg0, @OriginalArg(2) int arg1) {
 		while (true) {
 			@Pc(5) int local5 = arg0.g1();
 			if (local5 == 0) {
@@ -27,21 +27,21 @@ public final class MsiType {
 	}
 
 	@OriginalMember(owner = "client!aa", name = "a", descriptor = "(IB)Lclient!ek;")
-	public final SoftwareIndexedSprite method9(@OriginalArg(0) int arg0) {
-		@Pc(17) SoftwareIndexedSprite local17 = (SoftwareIndexedSprite) Static219.aClass99_27.get((long) (arg0 << 16 | this.anInt12));
+	public final SoftwareIndexedSprite getSprite(@OriginalArg(0) int arg0) {
+		@Pc(17) SoftwareIndexedSprite local17 = (SoftwareIndexedSprite) Static219.sprites.get((long) (arg0 << 16 | this.spriteId));
 		if (local17 != null) {
 			return local17;
 		}
-		Static250.aClass153_101.isFileReady(this.anInt12);
-		local17 = Static164.method3119(this.anInt12, Static250.aClass153_101);
+		Static250.spritesArchive.isFileReady(this.spriteId);
+		local17 = Static164.loadSoftwareIndexedSprite(this.spriteId, Static250.spritesArchive);
 		if (local17 != null) {
-			local17.method1389(Static173.anInt4183, Static85.anInt2262, Static266.anInt5344);
+			local17.adjustPalette(Static173.redDelta, Static85.greenDelta, Static266.blueDelta);
 			local17.innerWidth = local17.width;
-			local17.anInt4276 = local17.anInt4278;
+			local17.innerHeight = local17.height;
 			for (@Pc(59) int local59 = 0; local59 < arg0; local59++) {
-				local17.method1395();
+				local17.flipVertical();
 			}
-			Static219.aClass99_27.put(local17, (long) (arg0 << 16 | this.anInt12));
+			Static219.sprites.put(local17, (long) (arg0 << 16 | this.spriteId));
 		}
 		return local17;
 	}
@@ -49,13 +49,13 @@ public final class MsiType {
 	@OriginalMember(owner = "client!aa", name = "a", descriptor = "(ILclient!wa;II)V")
 	private void method11(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1, @OriginalArg(2) int arg2) {
 		if (arg0 == 1) {
-			this.anInt12 = arg1.g2();
+			this.spriteId = arg1.g2();
 		} else if (arg0 == 2) {
 			this.anInt11 = arg1.g3();
 		} else if (arg0 == 3) {
 			this.aBoolean2 = true;
 		} else if (arg0 == 4) {
-			this.anInt12 = -1;
+			this.spriteId = -1;
 		}
 	}
 }

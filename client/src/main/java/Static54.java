@@ -85,8 +85,8 @@ public final class Static54 {
 			for (local146 = 0; local146 < Static251.anInt5454; local146++) {
 				local181 = Static145.anIntArray331[local146] * 4 + 2 - Static173.self.xFine / 32;
 				local150 = Static93.anIntArray219[local146] * 4 + 2 - Static173.self.zFine / 32;
-				@Pc(382) LocType local382 = Static271.method4601(Static199.anIntArray417[local146]);
-				if (local382.anIntArray380 != null) {
+				@Pc(382) LocType local382 = Static271.get(Static199.anIntArray417[local146]);
+				if (local382.multiLocs != null) {
 					local382 = local382.getMultiLoc();
 					if (local382 == null || local382.anInt4400 == -1) {
 						continue;
@@ -108,7 +108,7 @@ public final class Static54 {
 				@Pc(498) Npc local498 = Static175.npcs[Static33.anIntArray79[local146]];
 				if (local498 != null && local498.method2682()) {
 					@Pc(507) NpcType local507 = local498.type;
-					if (local507 != null && local507.anIntArray357 != null) {
+					if (local507 != null && local507.multiNpcs != null) {
 						local507 = local507.getMultiNpc();
 					}
 					if (local507 != null && local507.aBoolean184 && local507.aBoolean183) {

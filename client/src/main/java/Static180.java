@@ -15,16 +15,16 @@ public final class Static180 {
 
 	@OriginalMember(owner = "client!og", name = "a", descriptor = "(Lclient!ve;Lclient!ve;B)V")
 	public static void init(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {
-		Static250.aClass153_101 = arg1;
+		Static250.spritesArchive = arg1;
 		@Pc(12) int local12 = (int) (Math.random() * 21.0D) - 10;
 		Static98.aClass153_42 = arg0;
 		@Pc(21) int local21 = (int) (Math.random() * 21.0D) - 10;
 		Static98.aClass153_42.method4504(34);
 		@Pc(33) int local33 = (int) (Math.random() * 21.0D) - 10;
 		@Pc(40) int local40 = (int) (Math.random() * 41.0D) - 20;
-		Static266.anInt5344 = local40 + local21;
-		Static85.anInt2262 = local12 + local40;
-		Static173.anInt4183 = local40 + local33;
+		Static266.blueDelta = local40 + local21;
+		Static85.greenDelta = local12 + local40;
+		Static173.redDelta = local40 + local33;
 	}
 
 	@OriginalMember(owner = "client!og", name = "a", descriptor = "(BIILclient!fe;III)V")

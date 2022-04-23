@@ -17,7 +17,7 @@ public final class Static262 {
 	public static final int[] anIntArray515 = new int[14];
 
 	@OriginalMember(owner = "client!vf", name = "k", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_35 = new SoftLruHashTable(5);
+	public static final SoftLruHashTable headModels = new SoftLruHashTable(5);
 
 	@OriginalMember(owner = "client!vf", name = "l", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable aClass99_36 = new SoftLruHashTable(50);

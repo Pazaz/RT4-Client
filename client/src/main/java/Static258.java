@@ -59,18 +59,18 @@ public final class Static258 {
 						Static18.anInt588 = local171;
 						if (arg2.objTypes[local171] > 0) {
 							@Pc(267) ServerActiveProperties local267 = Static36.method940(arg2);
-							@Pc(276) ObjType local276 = Static71.method1439(arg2.objTypes[local171] - 1);
+							@Pc(276) ObjType local276 = Static71.get(arg2.objTypes[local171] - 1);
 							if (Static260.anInt5014 == 1 && local267.method510()) {
 								if (Static224.anInt5062 != arg2.id || Static185.anInt4370 != local171) {
-									Static98.method1966(-1, (long) local276.anInt2354, Static34.concatenate(new JagString[] { Static34.aClass100_203, Static223.aClass100_947, local276.aClass100_495 }), local171, (short) 40, LocalizedText.USE, arg2.id);
+									Static98.method1966(-1, (long) local276.anInt2354, Static34.concatenate(new JagString[] { Static34.aClass100_203, Static223.aClass100_947, local276.name}), local171, (short) 40, LocalizedText.USE, arg2.id);
 								}
 							} else if (Static241.aBoolean302 && local267.method510()) {
 								@Pc(596) ParamType local596 = Static121.anInt3039 == -1 ? null : Static110.method2277(Static121.anInt3039);
-								if ((Static274.anInt4999 & 0x10) != 0 && (local596 == null || local276.method1829(local596.anInt2667, Static121.anInt3039) != local596.anInt2667)) {
-									Static98.method1966(Static246.anInt5393, (long) local276.anInt2354, Static34.concatenate(new JagString[] { Static78.aClass100_466, Static223.aClass100_947, local276.aClass100_495 }), local171, (short) 3, Static102.aClass100_545, arg2.id);
+								if ((Static274.anInt4999 & 0x10) != 0 && (local596 == null || local276.getParam(local596.defaultInt, Static121.anInt3039) != local596.defaultInt)) {
+									Static98.method1966(Static246.anInt5393, (long) local276.anInt2354, Static34.concatenate(new JagString[] { Static78.aClass100_466, Static223.aClass100_947, local276.name}), local171, (short) 3, Static102.aClass100_545, arg2.id);
 								}
 							} else {
-								@Pc(296) JagString[] local296 = local276.aClass100Array71;
+								@Pc(296) JagString[] local296 = local276.inventoryOps;
 								if (Static208.aBoolean237) {
 									local296 = Static279.method4664(local296);
 								}
@@ -84,12 +84,12 @@ public final class Static258 {
 											} else {
 												local334 = 58;
 											}
-											Static98.method1966(-1, (long) local276.anInt2354, Static34.concatenate(new JagString[] { Static8.aClass100_32, local276.aClass100_495 }), local171, local334, local296[local309], arg2.id);
+											Static98.method1966(-1, (long) local276.anInt2354, Static34.concatenate(new JagString[] { Static8.aClass100_32, local276.name}), local171, local334, local296[local309], arg2.id);
 										}
 									}
 								}
 								if (local267.method507()) {
-									Static98.method1966(Static169.anInt4075, (long) local276.anInt2354, Static34.concatenate(new JagString[] { Static8.aClass100_32, local276.aClass100_495 }), local171, (short) 22, LocalizedText.USE, arg2.id);
+									Static98.method1966(Static169.anInt4075, (long) local276.anInt2354, Static34.concatenate(new JagString[] { Static8.aClass100_32, local276.name}), local171, (short) 22, LocalizedText.USE, arg2.id);
 								}
 								if (local267.method510() && local296 != null) {
 									for (local309 = 2; local309 >= 0; local309--) {
@@ -104,7 +104,7 @@ public final class Static258 {
 											if (local309 == 2) {
 												local334 = 43;
 											}
-											Static98.method1966(-1, (long) local276.anInt2354, Static34.concatenate(new JagString[] { Static8.aClass100_32, local276.aClass100_495 }), local171, local334, local296[local309], arg2.id);
+											Static98.method1966(-1, (long) local276.anInt2354, Static34.concatenate(new JagString[] { Static8.aClass100_32, local276.name}), local171, local334, local296[local309], arg2.id);
 										}
 									}
 								}
@@ -131,11 +131,11 @@ public final class Static258 {
 											if (local309 == 4) {
 												local334 = 13;
 											}
-											Static98.method1966(-1, (long) local276.anInt2354, Static34.concatenate(new JagString[] { Static8.aClass100_32, local276.aClass100_495 }), local171, local334, local296[local309], arg2.id);
+											Static98.method1966(-1, (long) local276.anInt2354, Static34.concatenate(new JagString[] { Static8.aClass100_32, local276.name}), local171, local334, local296[local309], arg2.id);
 										}
 									}
 								}
-								Static98.method1966(Static225.anInt5073, (long) local276.anInt2354, Static34.concatenate(new JagString[] { Static8.aClass100_32, local276.aClass100_495 }), local171, (short) 1006, LocalizedText.EXAMINE, arg2.id);
+								Static98.method1966(Static225.anInt5073, (long) local276.anInt2354, Static34.concatenate(new JagString[] { Static8.aClass100_32, local276.name}), local171, (short) 1006, LocalizedText.EXAMINE, arg2.id);
 							}
 						}
 					}

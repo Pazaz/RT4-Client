@@ -19,7 +19,7 @@ public final class Static274 {
 	public static Component staticActiveComponent1;
 
 	@OriginalMember(owner = "client!wf", name = "o", descriptor = "[Lclient!gb;")
-	public static final RawModel[] aClass8_Sub5Array5 = new RawModel[4];
+	public static final RawModel[] tempModels = new RawModel[4];
 
 	@OriginalMember(owner = "client!wf", name = "s", descriptor = "Lclient!na;")
 	public static final JagString aClass100_943 = Static28.parse("Forced tweening disabled)3");

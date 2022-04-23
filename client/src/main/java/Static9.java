@@ -22,11 +22,11 @@ public final class Static9 {
 		@Pc(28) int local28;
 		@Pc(31) int local31;
 		if (local5 == 1 || local5 == 3) {
-			local28 = arg0.anInt4403;
-			local31 = arg0.anInt4397;
+			local28 = arg0.length;
+			local31 = arg0.width;
 		} else {
-			local31 = arg0.anInt4403;
-			local28 = arg0.anInt4397;
+			local31 = arg0.length;
+			local28 = arg0.width;
 		}
 		@Pc(53) int local53;
 		@Pc(51) int local51;

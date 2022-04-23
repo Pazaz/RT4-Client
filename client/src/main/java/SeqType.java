@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class SeqType {
 
 	@OriginalMember(owner = "client!tk", name = "g", descriptor = "[I")
-	public int[] anIntArray473;
+	public int[] frames;
 
 	@OriginalMember(owner = "client!tk", name = "n", descriptor = "[Z")
 	public boolean[] aBooleanArray123;
@@ -28,7 +28,7 @@ public final class SeqType {
 	public int anInt5347 = 2;
 
 	@OriginalMember(owner = "client!tk", name = "b", descriptor = "Z")
-	public boolean aBoolean277 = false;
+	public boolean tween = false;
 
 	@OriginalMember(owner = "client!tk", name = "f", descriptor = "I")
 	public int anInt5349 = -1;
@@ -61,30 +61,30 @@ public final class SeqType {
 	public boolean aBoolean280 = false;
 
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(Lclient!wa;B)V")
-	public final void method4213(@OriginalArg(0) Buffer arg0) {
+	public final void decode(@OriginalArg(0) Buffer arg0) {
 		while (true) {
 			@Pc(19) int local19 = arg0.g1();
 			if (local19 == 0) {
 				return;
 			}
-			this.method4220(local19, arg0);
+			this.decode(local19, arg0);
 		}
 	}
 
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(IIILclient!ak;II)Lclient!ak;")
 	public final Model method4214(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Model arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
 		@Pc(10) int local10 = this.anIntArray474[arg0];
-		@Pc(15) int local15 = this.anIntArray473[arg0];
-		@Pc(23) AnimFrameset local23 = Static72.method1566(local15 >> 16);
+		@Pc(15) int local15 = this.frames[arg0];
+		@Pc(23) AnimFrameset local23 = Static72.getAnimFrameset(local15 >> 16);
 		@Pc(27) int local27 = local15 & 0xFFFF;
 		if (local23 == null) {
 			return arg2.method4568(true, true, true);
 		}
 		@Pc(39) int local39 = arg3 & 0x3;
 		@Pc(41) AnimFrameset local41 = null;
-		if ((this.aBoolean277 || Static204.applyTweening) && arg1 != -1 && this.anIntArray473.length > arg1) {
-			@Pc(69) int local69 = this.anIntArray473[arg1];
-			local41 = Static72.method1566(local69 >> 16);
+		if ((this.tween || Static204.applyTweening) && arg1 != -1 && this.frames.length > arg1) {
+			@Pc(69) int local69 = this.frames[arg1];
+			local41 = Static72.getAnimFrameset(local69 >> 16);
 			arg1 = local69 & 0xFFFF;
 		}
 		@Pc(124) Model local124;
@@ -129,17 +129,17 @@ public final class SeqType {
 
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(Lclient!ak;BIII)Lclient!ak;")
 	public final Model method4215(@OriginalArg(0) Model arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
-		@Pc(8) int local8 = this.anIntArray473[arg3];
+		@Pc(8) int local8 = this.frames[arg3];
 		@Pc(13) int local13 = this.anIntArray474[arg3];
-		@Pc(19) AnimFrameset local19 = Static72.method1566(local8 >> 16);
+		@Pc(19) AnimFrameset local19 = Static72.getAnimFrameset(local8 >> 16);
 		@Pc(23) int local23 = local8 & 0xFFFF;
 		if (local19 == null) {
 			return arg0.method4572(true, true, true);
 		}
 		@Pc(34) AnimFrameset local34 = null;
-		if ((this.aBoolean277 || Static204.applyTweening) && arg1 != -1 && arg1 < this.anIntArray473.length) {
-			@Pc(59) int local59 = this.anIntArray473[arg1];
-			local34 = Static72.method1566(local59 >> 16);
+		if ((this.tween || Static204.applyTweening) && arg1 != -1 && arg1 < this.frames.length) {
+			@Pc(59) int local59 = this.frames[arg1];
+			local34 = Static72.getAnimFrameset(local59 >> 16);
 			arg1 = local59 & 0xFFFF;
 		}
 		@Pc(71) AnimFrameset local71 = null;
@@ -150,14 +150,14 @@ public final class SeqType {
 			if (this.anIntArray475.length > arg3) {
 				local83 = this.anIntArray475[arg3];
 				if (local83 != 65535) {
-					local71 = Static72.method1566(local83 >> 16);
+					local71 = Static72.getAnimFrameset(local83 >> 16);
 					local83 &= 0xFFFF;
 				}
 			}
-			if ((this.aBoolean277 || Static204.applyTweening) && arg1 != -1 && this.anIntArray475.length > arg1) {
+			if ((this.tween || Static204.applyTweening) && arg1 != -1 && this.anIntArray475.length > arg1) {
 				local85 = this.anIntArray475[arg1];
 				if (local85 != 65535) {
-					local81 = Static72.method1566(local85 >> 16);
+					local81 = Static72.getAnimFrameset(local85 >> 16);
 					local85 &= 0xFFFF;
 				}
 			}
@@ -187,17 +187,17 @@ public final class SeqType {
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(IIIILclient!ak;I)Lclient!ak;")
 	public final Model method4216(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Model arg4) {
 		@Pc(6) int local6 = this.anIntArray474[arg1];
-		@Pc(11) int local11 = this.anIntArray473[arg1];
-		@Pc(19) AnimFrameset local19 = Static72.method1566(local11 >> 16);
+		@Pc(11) int local11 = this.frames[arg1];
+		@Pc(19) AnimFrameset local19 = Static72.getAnimFrameset(local11 >> 16);
 		@Pc(27) int local27 = local11 & 0xFFFF;
 		if (local19 == null) {
 			return arg4.method4572(true, true, true);
 		}
 		@Pc(40) int local40 = arg3 & 0x3;
 		@Pc(42) AnimFrameset local42 = null;
-		if ((this.aBoolean277 || Static204.applyTweening) && arg0 != -1 && arg0 < this.anIntArray473.length) {
-			@Pc(66) int local66 = this.anIntArray473[arg0];
-			local42 = Static72.method1566(local66 >> 16);
+		if ((this.tween || Static204.applyTweening) && arg0 != -1 && arg0 < this.frames.length) {
+			@Pc(66) int local66 = this.frames[arg0];
+			local42 = Static72.getAnimFrameset(local66 >> 16);
 			arg0 = local66 & 0xFFFF;
 		}
 		@Pc(106) Model local106;
@@ -241,7 +241,7 @@ public final class SeqType {
 	}
 
 	@OriginalMember(owner = "client!tk", name = "b", descriptor = "(B)V")
-	public final void method4218() {
+	public final void postDecode() {
 		if (this.anInt5363 == -1) {
 			if (this.aBooleanArray123 == null) {
 				this.anInt5363 = 0;
@@ -262,16 +262,16 @@ public final class SeqType {
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(IIIBLclient!ak;)Lclient!ak;")
 	public final Model method4219(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) Model arg3) {
 		@Pc(16) int local16 = this.anIntArray474[arg2];
-		@Pc(21) int local21 = this.anIntArray473[arg2];
-		@Pc(27) AnimFrameset local27 = Static72.method1566(local21 >> 16);
+		@Pc(21) int local21 = this.frames[arg2];
+		@Pc(27) AnimFrameset local27 = Static72.getAnimFrameset(local21 >> 16);
 		@Pc(31) int local31 = local21 & 0xFFFF;
 		if (local27 == null) {
 			return arg3.method4560(true, true, true);
 		}
 		@Pc(42) AnimFrameset local42 = null;
-		if ((this.aBoolean277 || Static204.applyTweening) && arg0 != -1 && this.anIntArray473.length > arg0) {
-			@Pc(65) int local65 = this.anIntArray473[arg0];
-			local42 = Static72.method1566(local65 >> 16);
+		if ((this.tween || Static204.applyTweening) && arg0 != -1 && this.frames.length > arg0) {
+			@Pc(65) int local65 = this.frames[arg0];
+			local42 = Static72.getAnimFrameset(local65 >> 16);
 			arg0 = local65 & 0xFFFF;
 		}
 		@Pc(103) Model local103;
@@ -285,7 +285,7 @@ public final class SeqType {
 	}
 
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(IBLclient!wa;)V")
-	private void method4220(@OriginalArg(0) int arg0, @OriginalArg(2) Buffer arg1) {
+	private void decode(@OriginalArg(0) int arg0, @OriginalArg(2) Buffer arg1) {
 		@Pc(8) int local8;
 		@Pc(14) int local14;
 		if (arg0 == 1) {
@@ -294,12 +294,12 @@ public final class SeqType {
 			for (local14 = 0; local14 < local8; local14++) {
 				this.anIntArray474[local14] = arg1.g2();
 			}
-			this.anIntArray473 = new int[local8];
+			this.frames = new int[local8];
 			for (local14 = 0; local14 < local8; local14++) {
-				this.anIntArray473[local14] = arg1.g2();
+				this.frames[local14] = arg1.g2();
 			}
 			for (local14 = 0; local14 < local8; local14++) {
-				this.anIntArray473[local14] += arg1.g2() << 16;
+				this.frames[local14] += arg1.g2() << 16;
 			}
 		} else if (arg0 == 2) {
 			this.anInt5362 = arg1.g2();
@@ -350,7 +350,7 @@ public final class SeqType {
 		} else if (arg0 == 14) {
 			this.aBoolean278 = true;
 		} else if (arg0 == 15) {
-			this.aBoolean277 = true;
+			this.tween = true;
 		} else if (arg0 == 16) {
 			this.aBoolean280 = true;
 		}

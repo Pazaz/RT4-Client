@@ -27,17 +27,17 @@ public final class Static192 {
 				local40 = Static175.npcs[local29];
 			}
 			if (local40 != null) {
-				@Pc(63) LocType local63 = Static271.method4601(local17.anInt1189);
+				@Pc(63) LocType local63 = Static271.get(local17.anInt1189);
 				if (Static55.level < 3) {
 				}
 				@Pc(86) int local86;
 				@Pc(83) int local83;
 				if (local17.anInt1206 == 1 || local17.anInt1206 == 3) {
-					local83 = local63.anInt4397;
-					local86 = local63.anInt4403;
+					local83 = local63.width;
+					local86 = local63.length;
 				} else {
-					local86 = local63.anInt4397;
-					local83 = local63.anInt4403;
+					local86 = local63.width;
+					local83 = local63.length;
 				}
 				@Pc(103) int local103 = (local86 + 1 >> 1) + local17.anInt1190;
 				@Pc(110) int local110 = (local86 >> 1) + local17.anInt1190;

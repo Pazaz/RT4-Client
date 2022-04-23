@@ -30,7 +30,7 @@ public final class Static278 {
 					@Pc(37) Npc local37 = Static175.npcs[local14];
 					Static33.anIntArray79[Static272.anInt5214++] = local14;
 					local37.anInt3430 = Static83.loop;
-					if (local37.type != null && local37.type.method2935()) {
+					if (local37.type != null && local37.type.hasAreaSound()) {
 						Static91.method1877(local37);
 					}
 					@Pc(66) int local66 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
@@ -43,7 +43,7 @@ public final class Static278 {
 						Static44.anIntArray106[Static116.anInt2951++] = local14;
 					}
 					@Pc(105) int local105 = Static57.aClass3_Sub15_Sub1_3.method2238(5);
-					local37.method2698(Static214.method4363(Static57.aClass3_Sub15_Sub1_3.method2238(14)));
+					local37.method2698(Static214.get(Static57.aClass3_Sub15_Sub1_3.method2238(14)));
 					if (local105 > 15) {
 						local105 -= 32;
 					}
@@ -51,14 +51,14 @@ public final class Static278 {
 					if (local124 > 15) {
 						local124 -= 32;
 					}
-					local37.method2692(local37.type.anInt3713);
-					local37.anInt3365 = local37.type.anInt3737;
+					local37.method2692(local37.type.soze);
+					local37.anInt3365 = local37.type.basId;
 					local37.anInt3376 = local37.type.anInt3733;
 					if (local37.anInt3376 == 0) {
 						local37.anInt3381 = 0;
 					}
 					local37.method2683(local37.getSize(), Static173.self.movementQueueX[0] + local124, local105 + Static173.self.movementQueueZ[0], local66 == 1);
-					if (local37.type.method2935()) {
+					if (local37.type.hasAreaSound()) {
 						Static122.method2411(local37.movementQueueZ[0], null, 0, local37, local37.movementQueueX[0], Static55.level, null);
 					}
 					continue;

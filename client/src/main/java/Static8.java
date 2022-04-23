@@ -118,7 +118,7 @@ public final class Static8 {
 	public static void method121() {
 		for (@Pc(3) int local3 = 0; local3 < Static165.anInt4043; local3++) {
 			@Pc(19) VarpType local19 = Static247.method4248(local3);
-			if (local19 != null && local19.anInt1765 == 0) {
+			if (local19 != null && local19.clientCode == 0) {
 				Static106.anIntArray257[local3] = 0;
 				Static7.varps[local3] = 0;
 			}

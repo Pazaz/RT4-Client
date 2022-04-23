@@ -115,20 +115,20 @@ public final class Static112 {
 	@OriginalMember(owner = "client!ij", name = "a", descriptor = "(Lclient!km;I)I")
 	public static int getSound(@OriginalArg(0) Npc arg0) {
 		@Pc(13) NpcType local13 = arg0.type;
-		if (local13.anIntArray357 != null) {
+		if (local13.multiNpcs != null) {
 			local13 = local13.getMultiNpc();
 			if (local13 == null) {
 				return -1;
 			}
 		}
-		@Pc(29) int local29 = local13.anInt3747;
+		@Pc(29) int local29 = local13.walkSound;
 		@Pc(33) BasType local33 = arg0.method2681();
 		if (local33.idleAnimationId == arg0.anInt3366) {
-			local29 = local13.anInt3728;
+			local29 = local13.idleSound;
 		} else if (arg0.anInt3366 == local33.runAnimationId || local33.runAnimationId2 == arg0.anInt3366 || arg0.anInt3366 == local33.runAnimationId4 || arg0.anInt3366 == local33.runAnimationId3) {
-			local29 = local13.anInt3734;
+			local29 = local13.runSound;
 		} else if (local33.anInt1062 == arg0.anInt3366 || arg0.anInt3366 == local33.anInt1042 || arg0.anInt3366 == local33.anInt1048 || arg0.anInt3366 == local33.anInt1066) {
-			local29 = local13.anInt3745;
+			local29 = local13.crawlSound;
 		}
 		return local29;
 	}

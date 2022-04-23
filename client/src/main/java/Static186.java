@@ -165,7 +165,7 @@ public final class Static186 {
 	@OriginalMember(owner = "client!pa", name = "a", descriptor = "(IIILclient!e;)V")
 	public static void method3415(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Player arg2) {
 		if (arg1 == arg2.anInt3369 && arg1 != -1) {
-			@Pc(89) SeqType local89 = Static36.method941(arg1);
+			@Pc(89) SeqType local89 = Static36.get(arg1);
 			@Pc(92) int local92 = local89.anInt5347;
 			if (local92 == 1) {
 				arg2.anInt3420 = arg0;
@@ -178,7 +178,7 @@ public final class Static186 {
 			if (local92 == 2) {
 				arg2.anInt3371 = 0;
 			}
-		} else if (arg1 == -1 || arg2.anInt3369 == -1 || Static36.method941(arg1).anInt5355 >= Static36.method941(arg2.anInt3369).anInt5355) {
+		} else if (arg1 == -1 || arg2.anInt3369 == -1 || Static36.get(arg1).anInt5355 >= Static36.get(arg2.anInt3369).anInt5355) {
 			arg2.anInt3373 = 1;
 			arg2.anInt3425 = 0;
 			arg2.anInt3420 = arg0;
@@ -187,7 +187,7 @@ public final class Static186 {
 			arg2.anInt3360 = 0;
 			arg2.anInt3369 = arg1;
 			if (arg2.anInt3369 != -1) {
-				Static152.method2836(arg2.zFine, Static36.method941(arg2.anInt3369), arg2.xFine, arg2 == Static173.self, arg2.anInt3425);
+				Static152.method2836(arg2.zFine, Static36.get(arg2.anInt3369), arg2.xFine, arg2 == Static173.self, arg2.anInt3425);
 			}
 		}
 	}

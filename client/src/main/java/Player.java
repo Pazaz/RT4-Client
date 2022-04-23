@@ -57,7 +57,7 @@ public final class Player extends PathingEntity {
 	@OriginalMember(owner = "client!e", name = "c", descriptor = "(B)I")
 	@Override
 	public final int getSize() {
-		return this.aClass59_1 == null || this.aClass59_1.anInt2492 == -1 ? super.getSize() : Static214.method4363(this.aClass59_1.anInt2492).anInt3713;
+		return this.aClass59_1 == null || this.aClass59_1.anInt2492 == -1 ? super.getSize() : Static214.get(this.aClass59_1.anInt2492).soze;
 	}
 
 	@OriginalMember(owner = "client!e", name = "b", descriptor = "(I)I")
@@ -101,7 +101,7 @@ public final class Player extends PathingEntity {
 				if (local134 >= 32768) {
 					local134 = Static234.anIntArray455[local134 - 32768];
 					local44[local102] = local134 | 0x40000000;
-					local175 = Static71.method1439(local134).anInt2351;
+					local175 = Static71.get(local134).team;
 					if (local175 != 0) {
 						this.anInt1650 = local175;
 					}
@@ -171,8 +171,8 @@ public final class Player extends PathingEntity {
 		if (this.aClass59_1 == null) {
 			return;
 		}
-		@Pc(25) SeqType local25 = this.anInt3369 != -1 && this.anInt3420 == 0 ? Static36.method941(this.anInt3369) : null;
-		@Pc(54) SeqType local54 = this.anInt3366 == -1 || this.aBoolean98 || this.anInt3366 == this.method2681().idleAnimationId && local25 != null ? null : Static36.method941(this.anInt3366);
+		@Pc(25) SeqType local25 = this.anInt3369 != -1 && this.anInt3420 == 0 ? Static36.get(this.anInt3369) : null;
+		@Pc(54) SeqType local54 = this.anInt3366 == -1 || this.aBoolean98 || this.anInt3366 == this.method2681().idleAnimationId && local25 != null ? null : Static36.get(this.anInt3366);
 		@Pc(76) Model local76 = this.aClass59_1.method1954(this.aClass147Array3, this.anInt3373, local54, local25, this.anInt3396, this.anInt3388, this.anInt3360, this.anInt3425, this.anInt3407);
 		@Pc(79) int local79 = Static198.method1029();
 		if (GlRenderer.enabled && GameShell.maxMemory < 96 && local79 > 50) {
@@ -195,7 +195,7 @@ public final class Player extends PathingEntity {
 		}
 		this.anInt3413 = local76.method4549();
 		@Pc(184) Model local184;
-		if (Static209.characterShadowsOn && (this.aClass59_1.anInt2492 == -1 || Static214.method4363(this.aClass59_1.anInt2492).aBoolean180)) {
+		if (Static209.characterShadowsOn && (this.aClass59_1.anInt2492 == -1 || Static214.get(this.aClass59_1.anInt2492).shadow)) {
 			local184 = Static41.method1043(160, this.aBoolean171, local54 == null ? local25 : local54, this.xFine, 0, this.zFine, 0, 1, local76, arg0, local54 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, 240);
 			if (GlRenderer.enabled) {
 				@Pc(188) float local188 = GlRenderer.method4179();

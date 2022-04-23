@@ -57,7 +57,7 @@ public final class Static190 {
 	@OriginalMember(owner = "client!pf", name = "c", descriptor = "(II)V")
 	public static void method3447() {
 		Static27.aClass99_4.method3102(5);
-		Static244.aClass99_32.method3102(5);
+		Static244.models.method3102(5);
 		Static118.objectSpriteCache.method3102(5);
 	}
 }

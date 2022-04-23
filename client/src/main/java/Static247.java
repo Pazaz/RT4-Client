@@ -691,7 +691,7 @@ public final class Static247 {
 		@Pc(20) byte[] local20 = Static81.aClass153_34.getFile(16, arg0);
 		local10 = new VarpType();
 		if (local20 != null) {
-			local10.method1323(new Buffer(local20));
+			local10.decode(new Buffer(local20));
 		}
 		Static232.aClass99_30.put(local10, (long) arg0);
 		return local10;
@@ -700,6 +700,6 @@ public final class Static247 {
 	@OriginalMember(owner = "client!ub", name = "a", descriptor = "(Z)V")
 	public static void method4249() {
 		Static279.aClass99_38.clear();
-		Static56.aClass99_9.clear();
+		Static56.models.clear();
 	}
 }

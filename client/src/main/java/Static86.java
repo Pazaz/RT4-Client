@@ -7,7 +7,7 @@ public final class Static86 {
 	public static Js5CacheQueue js5CacheQueue;
 
 	@OriginalMember(owner = "client!gm", name = "ib", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_37;
+	public static Js5 modelsArchive;
 
 	@OriginalMember(owner = "client!gm", name = "R", descriptor = "I")
 	public static int anInt2293 = (int) (Math.random() * 17.0D) - 8;
@@ -40,7 +40,7 @@ public final class Static86 {
 		for (local19 = 0; local19 < Static240.anInt5335; local19++) {
 			@Pc(30) int local30 = Static52.anIntArray136[local19];
 			if (Static175.npcs[local30].anInt3430 != Static83.loop) {
-				if (Static175.npcs[local30].type.method2935()) {
+				if (Static175.npcs[local30].type.hasAreaSound()) {
 					Static91.method1877(Static175.npcs[local30]);
 				}
 				Static175.npcs[local30].method2698(null);

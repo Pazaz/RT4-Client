@@ -12,10 +12,10 @@ public abstract class IndexedSprite {
 	public int anInt4273;
 
 	@OriginalMember(owner = "client!ok", name = "i", descriptor = "I")
-	public int anInt4276;
+	public int innerHeight;
 
 	@OriginalMember(owner = "client!ok", name = "k", descriptor = "I")
-	public int anInt4278;
+	public int height;
 
 	@OriginalMember(owner = "client!ok", name = "l", descriptor = "I")
 	public int innerWidth;

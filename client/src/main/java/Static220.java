@@ -27,9 +27,9 @@ public final class Static220 {
 		@Pc(30) ObjStackNode local30 = null;
 		@Pc(35) ObjStackNode local35;
 		for (local35 = (ObjStackNode) local9.method2289(); local35 != null; local35 = (ObjStackNode) local9.method2288()) {
-			@Pc(44) ObjType local44 = Static71.method1439(local35.aClass8_Sub7_1.anInt5555);
-			@Pc(47) int local47 = local44.anInt2325;
-			if (local44.anInt2336 == 1) {
+			@Pc(44) ObjType local44 = Static71.get(local35.aClass8_Sub7_1.anInt5555);
+			@Pc(47) int local47 = local44.cost;
+			if (local44.stackable == 1) {
 				local47 *= local35.aClass8_Sub7_1.anInt5550 + 1;
 			}
 			if (local28 < local47) {
@@ -72,11 +72,11 @@ public final class Static220 {
 		@Pc(4) long local4 = (long) arg2;
 		@Pc(10) Model local10 = (Model) Static110.aClass99_15.get(local4);
 		if (local10 == null) {
-			@Pc(22) RawModel local22 = Static77.method1686(Static267.js5Archive7, arg2);
+			@Pc(22) RawModel local22 = Static77.create(Static267.js5Archive7, arg2);
 			if (local22 == null) {
 				return null;
 			}
-			local10 = local22.method1679(64, 768, -50, -10, -50);
+			local10 = local22.createModel(64, 768, -50, -10, -50);
 			Static110.aClass99_15.put(local10, local4);
 		}
 		@Pc(42) int local42 = arg4.method4562();

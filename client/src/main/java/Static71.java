@@ -20,7 +20,7 @@ public final class Static71 {
 	public static final int[] anIntArray147 = new int[14];
 
 	@OriginalMember(owner = "client!fk", name = "a", descriptor = "(IB)Lclient!h;")
-	public static ObjType method1439(@OriginalArg(0) int arg0) {
+	public static ObjType get(@OriginalArg(0) int arg0) {
 		@Pc(6) ObjType local6 = (ObjType) Static27.aClass99_4.get((long) arg0);
 		if (local6 != null) {
 			return local6;
@@ -29,21 +29,21 @@ public final class Static71 {
 		local6 = new ObjType();
 		local6.anInt2354 = arg0;
 		if (local25 != null) {
-			local6.method1827(new Buffer(local25));
+			local6.decode(new Buffer(local25));
 		}
 		local6.method1826();
-		if (local6.anInt2358 != -1) {
-			local6.method1832(method1439(local6.anInt2356), method1439(local6.anInt2358));
+		if (local6.certificateTemplate != -1) {
+			local6.generateCertificate(get(local6.certificateLink), get(local6.certificateTemplate));
 		}
-		if (local6.anInt2334 != -1) {
-			local6.method1823(method1439(local6.anInt2363), method1439(local6.anInt2334));
+		if (local6.lentTemplate != -1) {
+			local6.method1823(get(local6.lentLink), get(local6.lentTemplate));
 		}
-		if (!Static240.aBoolean276 && local6.aBoolean131) {
-			local6.aClass100_495 = LocalizedText.MEMBERS_OBJECT;
-			local6.anInt2351 = 0;
-			local6.aClass100Array71 = Static143.aClass100Array104;
-			local6.aBoolean132 = false;
-			local6.aClass100Array72 = Static269.aClass100Array87;
+		if (!Static240.aBoolean276 && local6.members) {
+			local6.name = LocalizedText.MEMBERS_OBJECT;
+			local6.team = 0;
+			local6.inventoryOps = Static143.aClass100Array104;
+			local6.stockMarket = false;
+			local6.ops = Static269.aClass100Array87;
 		}
 		Static27.aClass99_4.put(local6, (long) arg0);
 		return local6;
@@ -52,7 +52,7 @@ public final class Static71 {
 	@OriginalMember(owner = "client!fk", name = "a", descriptor = "(B)V")
 	public static void method1441() {
 		Static279.aClass99_38.method3103();
-		Static56.aClass99_9.method3103();
+		Static56.models.method3103();
 	}
 
 	@OriginalMember(owner = "client!fk", name = "a", descriptor = "([BIZ)I")

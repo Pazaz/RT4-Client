@@ -82,7 +82,7 @@ public final class Static241 {
 	@OriginalMember(owner = "client!th", name = "a", descriptor = "(ZBLclient!ve;Lclient!dd;Lclient!ve;)V")
 	public static void init(@OriginalArg(2) Js5 arg0, @OriginalArg(3) SoftwareFont arg1, @OriginalArg(4) Js5 arg2) {
 		Static240.aBoolean276 = true;
-		Static230.aClass153_95 = arg2;
+		Static230.modelsArchive = arg2;
 		Static167.aClass153_61 = arg0;
 		@Pc(23) int local23 = Static167.aClass153_61.method4483() - 1;
 		Static170.anInt3245 = Static167.aClass153_61.method4504(local23) + local23 * 256;

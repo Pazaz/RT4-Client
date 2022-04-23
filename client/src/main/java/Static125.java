@@ -24,7 +24,7 @@ public final class Static125 {
 
 	@OriginalMember(owner = "client!jl", name = "a", descriptor = "(ILclient!ve;Lclient!ve;)V")
 	public static void init(@OriginalArg(1) Js5 arg0, @OriginalArg(2) Js5 arg1) {
-		Static14.aClass153_8 = arg0;
+		Static14.modelsArchive = arg0;
 		Static216.aClass153_31 = arg1;
 		Static53.anInt1716 = Static216.aClass153_31.method4504(3);
 	}
@@ -52,7 +52,7 @@ public final class Static125 {
 		@Pc(31) byte[] local31 = Static172.aClass153_69.getFile(Static254.method4349(arg0), Static274.method3845(arg0));
 		local10 = new VarbitType();
 		if (local31 != null) {
-			local10.method2651(new Buffer(local31));
+			local10.decode(new Buffer(local31));
 		}
 		aClass99_19.put(local10, (long) arg0);
 		return local10;

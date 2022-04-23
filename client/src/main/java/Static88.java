@@ -8,7 +8,7 @@ public final class Static88 {
 
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(Lclient!ve;Lclient!ve;Z)V")
 	public static void init(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {
-		Static86.aClass153_37 = arg0;
+		Static86.modelsArchive = arg0;
 		Static58.aClass153_28 = arg1;
 	}
 
@@ -698,13 +698,13 @@ public final class Static88 {
 									} else {
 										component.objId = local803;
 										component.objCount = local1052;
-										@Pc(13416) ObjType local13416 = Static71.method1439(local803);
-										component.modelYOffset = local13416.anInt2339;
-										component.modelXOffset = local13416.anInt2359;
-										component.modelXAngle = local13416.anInt2353;
-										component.modelZOffset = local13416.anInt2319;
-										component.modelYAngle = local13416.anInt2369;
-										component.modelZoom = local13416.anInt2375;
+										@Pc(13416) ObjType local13416 = Static71.get(local803);
+										component.modelYOffset = local13416.zAngle2d;
+										component.modelXOffset = local13416.xOffset2d;
+										component.modelXAngle = local13416.xAngle2d;
+										component.modelZOffset = local13416.yOffset2d;
+										component.modelYAngle = local13416.yAngle2d;
+										component.modelZoom = local13416.zoom2d;
 										if (component.anInt451 > 0) {
 											component.modelZoom = component.modelZoom * 32 / component.anInt451;
 										} else if (component.baseWidth > 0) {
@@ -1774,7 +1774,7 @@ public final class Static88 {
 									if (opcode == 3624) {
 										isp--;
 										type = Static254.intStack[isp];
-										if (Static199.aClass3_Sub22Array1 != null && Static214.anInt5577 > type && Static199.aClass3_Sub22Array1[type].aClass100_636.method3111(Static173.self.aClass100_364)) {
+										if (Static199.aClass3_Sub22Array1 != null && Static214.anInt5577 > type && Static199.aClass3_Sub22Array1[type].aClass100_636.equalsIgnoreCase(Static173.self.aClass100_364)) {
 											Static254.intStack[isp++] = 1;
 											continue;
 										}
@@ -2041,7 +2041,7 @@ public final class Static88 {
 										if (opcode == 4200) {
 											isp--;
 											type = Static254.intStack[isp];
-											Static3.stringStack[ssp++] = Static71.method1439(type).aClass100_495;
+											Static3.stringStack[ssp++] = Static71.get(type).name;
 											continue;
 										}
 										@Pc(11269) ObjType local11269;
@@ -2049,9 +2049,9 @@ public final class Static88 {
 											isp -= 2;
 											type = Static254.intStack[isp];
 											local803 = Static254.intStack[isp + 1];
-											local11269 = Static71.method1439(type);
-											if (local803 >= 1 && local803 <= 5 && local11269.aClass100Array72[local803 - 1] != null) {
-												Static3.stringStack[ssp++] = local11269.aClass100Array72[local803 - 1];
+											local11269 = Static71.get(type);
+											if (local803 >= 1 && local803 <= 5 && local11269.ops[local803 - 1] != null) {
+												Static3.stringStack[ssp++] = local11269.ops[local803 - 1];
 												continue;
 											}
 											Static3.stringStack[ssp++] = Static72.EMPTY_STRING;
@@ -2061,9 +2061,9 @@ public final class Static88 {
 											isp -= 2;
 											type = Static254.intStack[isp];
 											local803 = Static254.intStack[isp + 1];
-											local11269 = Static71.method1439(type);
-											if (local803 >= 1 && local803 <= 5 && local11269.aClass100Array71[local803 - 1] != null) {
-												Static3.stringStack[ssp++] = local11269.aClass100Array71[local803 - 1];
+											local11269 = Static71.get(type);
+											if (local803 >= 1 && local803 <= 5 && local11269.inventoryOps[local803 - 1] != null) {
+												Static3.stringStack[ssp++] = local11269.inventoryOps[local803 - 1];
 												continue;
 											}
 											Static3.stringStack[ssp++] = Static72.EMPTY_STRING;
@@ -2072,22 +2072,22 @@ public final class Static88 {
 										if (opcode == 4203) {
 											isp--;
 											type = Static254.intStack[isp];
-											Static254.intStack[isp++] = Static71.method1439(type).anInt2325;
+											Static254.intStack[isp++] = Static71.get(type).cost;
 											continue;
 										}
 										if (opcode == 4204) {
 											isp--;
 											type = Static254.intStack[isp];
-											Static254.intStack[isp++] = Static71.method1439(type).anInt2336 == 1 ? 1 : 0;
+											Static254.intStack[isp++] = Static71.get(type).stackable == 1 ? 1 : 0;
 											continue;
 										}
 										@Pc(11417) ObjType local11417;
 										if (opcode == 4205) {
 											isp--;
 											type = Static254.intStack[isp];
-											local11417 = Static71.method1439(type);
-											if (local11417.anInt2358 == -1 && local11417.anInt2356 >= 0) {
-												Static254.intStack[isp++] = local11417.anInt2356;
+											local11417 = Static71.get(type);
+											if (local11417.certificateTemplate == -1 && local11417.certificateLink >= 0) {
+												Static254.intStack[isp++] = local11417.certificateLink;
 												continue;
 											}
 											Static254.intStack[isp++] = type;
@@ -2096,9 +2096,9 @@ public final class Static88 {
 										if (opcode == 4206) {
 											isp--;
 											type = Static254.intStack[isp];
-											local11417 = Static71.method1439(type);
-											if (local11417.anInt2358 >= 0 && local11417.anInt2356 >= 0) {
-												Static254.intStack[isp++] = local11417.anInt2356;
+											local11417 = Static71.get(type);
+											if (local11417.certificateTemplate >= 0 && local11417.certificateLink >= 0) {
+												Static254.intStack[isp++] = local11417.certificateLink;
 												continue;
 											}
 											Static254.intStack[isp++] = type;
@@ -2107,7 +2107,7 @@ public final class Static88 {
 										if (opcode == 4207) {
 											isp--;
 											type = Static254.intStack[isp];
-											Static254.intStack[isp++] = Static71.method1439(type).aBoolean131 ? 1 : 0;
+											Static254.intStack[isp++] = Static71.get(type).members ? 1 : 0;
 											continue;
 										}
 										if (opcode == 4208) {
@@ -2115,10 +2115,10 @@ public final class Static88 {
 											type = Static254.intStack[isp];
 											local803 = Static254.intStack[isp + 1];
 											local5294 = Static110.method2277(local803);
-											if (local5294.method2078()) {
-												Static3.stringStack[ssp++] = Static71.method1439(type).method1819(local5294.aClass100_544, local803);
+											if (local5294.isString()) {
+												Static3.stringStack[ssp++] = Static71.get(type).method1819(local5294.defaultString, local803);
 											} else {
-												Static254.intStack[isp++] = Static71.method1439(type).method1829(local5294.anInt2667, local803);
+												Static254.intStack[isp++] = Static71.get(type).getParam(local5294.defaultInt, local803);
 											}
 											continue;
 										}
@@ -2149,10 +2149,10 @@ public final class Static88 {
 											type = Static254.intStack[isp];
 											local803 = Static254.intStack[isp + 1];
 											local5294 = Static110.method2277(local803);
-											if (local5294.method2078()) {
-												Static3.stringStack[ssp++] = Static214.method4363(type).method2938(local803, local5294.aClass100_544);
+											if (local5294.isString()) {
+												Static3.stringStack[ssp++] = Static214.get(type).getParam(local803, local5294.defaultString);
 											} else {
-												Static254.intStack[isp++] = Static214.method4363(type).method2936(local803, local5294.anInt2667);
+												Static254.intStack[isp++] = Static214.get(type).getParam(local803, local5294.defaultInt);
 											}
 											continue;
 										}
@@ -2769,7 +2769,7 @@ public final class Static88 {
 														local7566 = false;
 														@Pc(7577) SecondaryLinkedList local7577 = Static183.method3333(type >> 14 & 0x3FFF, type & 0x3FFF);
 														for (@Pc(7582) Map local7582 = (Map) local7577.method795(); local7582 != null; local7582 = (Map) local7577.method797()) {
-															if (local7582.aClass100_138.method3111(local2522)) {
+															if (local7582.aClass100_138.equalsIgnoreCase(local2522)) {
 																local7566 = true;
 																break;
 															}
@@ -3792,10 +3792,10 @@ public final class Static88 {
 											type = Static254.intStack[isp];
 											local803 = Static254.intStack[isp + 1];
 											local5294 = Static110.method2277(local803);
-											if (local5294.method2078()) {
-												Static3.stringStack[ssp++] = Static123.method2417(type).method2802(local5294.aClass100_544, local803);
+											if (local5294.isString()) {
+												Static3.stringStack[ssp++] = Static123.method2417(type).method2802(local5294.defaultString, local803);
 											} else {
-												Static254.intStack[isp++] = Static123.method2417(type).method2798(local803, local5294.anInt2667);
+												Static254.intStack[isp++] = Static123.method2417(type).method2798(local803, local5294.defaultInt);
 											}
 											continue;
 										}
@@ -3804,10 +3804,10 @@ public final class Static88 {
 										local803 = Static254.intStack[isp + 1];
 										type = Static254.intStack[isp];
 										local5294 = Static110.method2277(local803);
-										if (local5294.method2078()) {
-											Static3.stringStack[ssp++] = Static271.method4601(type).method3430(local5294.aClass100_544, local803);
+										if (local5294.isString()) {
+											Static3.stringStack[ssp++] = Static271.get(type).method3430(local5294.defaultString, local803);
 										} else {
-											Static254.intStack[isp++] = Static271.method4601(type).method3423(local5294.anInt2667, local803);
+											Static254.intStack[isp++] = Static271.get(type).getParam(local5294.defaultInt, local803);
 										}
 										continue;
 									}

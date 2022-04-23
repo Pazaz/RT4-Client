@@ -45,7 +45,7 @@ public final class Static271 {
 	}
 
 	@OriginalMember(owner = "client!wc", name = "a", descriptor = "(II)Lclient!pb;")
-	public static LocType method4601(@OriginalArg(1) int arg0) {
+	public static LocType get(@OriginalArg(1) int arg0) {
 		@Pc(15) LocType local15 = (LocType) Static179.aClass99_25.get((long) arg0);
 		if (local15 != null) {
 			return local15;
@@ -54,11 +54,11 @@ public final class Static271 {
 		local15 = new LocType();
 		local15.anInt4426 = arg0;
 		if (local30 != null) {
-			local15.method3424(new Buffer(local30));
+			local15.decode(new Buffer(local30));
 		}
-		local15.method3421();
-		if (!Static30.aBoolean61 && local15.aBoolean208) {
-			local15.aClass100Array130 = null;
+		local15.postDecode();
+		if (!Static30.aBoolean61 && local15.members) {
+			local15.ops = null;
 		}
 		if (local15.aBoolean210) {
 			local15.anInt4435 = 0;

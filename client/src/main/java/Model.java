@@ -218,7 +218,7 @@ public abstract class Model extends Entity {
 	}
 
 	@OriginalMember(owner = "client!ak", name = "b", descriptor = "(III)V")
-	public abstract void method4559(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2);
+	public abstract void resize(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2);
 
 	@OriginalMember(owner = "client!ak", name = "a", descriptor = "(ZZZ)Lclient!ak;")
 	public abstract Model method4560(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2);

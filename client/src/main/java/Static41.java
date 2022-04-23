@@ -81,7 +81,7 @@ public final class Static41 {
 					}
 				}
 			}
-			local33 = local103.method1679(64, 768, -50, -10, -50);
+			local33 = local103.createModel(64, 768, -50, -10, -50);
 			Static45.aClass99_6.put(local33, local23);
 		}
 		@Pc(367) int local367 = arg7 * 64 - 1;
@@ -94,8 +94,8 @@ public final class Static41 {
 		local126 = arg8.method4576();
 		local130 = arg8.method4550();
 		if (arg2 != null) {
-			@Pc(403) int local403 = arg2.anIntArray473[arg10];
-			local386 = Static72.method1566(local403 >> 16);
+			@Pc(403) int local403 = arg2.frames[arg10];
+			local386 = Static72.getAnimFrameset(local403 >> 16);
 			arg10 = local403 & 0xFFFF;
 		}
 		local109 = local367;
@@ -127,11 +127,11 @@ public final class Static41 {
 		}
 		if (local386 == null) {
 			local33 = local33.method4560(true, true, true);
-			local33.method4559((local115 - local384) / 2, 128, (local130 - local126) / 2);
+			local33.resize((local115 - local384) / 2, 128, (local130 - local126) / 2);
 			local33.method4575((local384 + local115) / 2, 0, (local126 + local130) / 2);
 		} else {
 			local33 = local33.method4560(!local386.isAlphaTransformed(arg10), !local386.isColorTransformed(arg10), true);
-			local33.method4559((local115 - local384) / 2, 128, (local130 - local126) / 2);
+			local33.resize((local115 - local384) / 2, 128, (local130 - local126) / 2);
 			local33.method4575((local384 + local115) / 2, 0, (local126 + local130) / 2);
 			local33.method4555(local386, arg10);
 		}

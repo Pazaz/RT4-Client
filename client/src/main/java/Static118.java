@@ -53,22 +53,22 @@ public final class Static118 {
 							local105 = local15.anInt522;
 						}
 						if (local105 != -1) {
-							@Pc(118) SeqType local118 = Static36.method941(local105);
+							@Pc(118) SeqType local118 = Static36.get(local105);
 							if (local118 != null) {
 								local15.anInt500 += Static178.anInt4247;
 								while (local15.anInt500 > local118.anIntArray474[local15.anInt510]) {
 									local15.anInt500 -= local118.anIntArray474[local15.anInt510];
 									local15.anInt510++;
-									if (local118.anIntArray473.length <= local15.anInt510) {
+									if (local118.frames.length <= local15.anInt510) {
 										local15.anInt510 -= local118.anInt5362;
-										if (local15.anInt510 < 0 || local118.anIntArray473.length <= local15.anInt510) {
+										if (local15.anInt510 < 0 || local118.frames.length <= local15.anInt510) {
 											local15.anInt510 = 0;
 										}
 									}
 									local15.anInt496 = local15.anInt510 + 1;
-									if (local118.anIntArray473.length <= local15.anInt496) {
+									if (local118.frames.length <= local15.anInt496) {
 										local15.anInt496 -= local118.anInt5362;
-										if (local15.anInt496 < 0 || local118.anIntArray473.length <= local15.anInt496) {
+										if (local15.anInt496 < 0 || local118.frames.length <= local15.anInt496) {
 											local15.anInt496 = -1;
 										}
 									}

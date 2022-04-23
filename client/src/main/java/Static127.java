@@ -243,7 +243,7 @@ public final class Static127 {
 			@Pc(18) int local18;
 			@Pc(38) int local38;
 			@Pc(29) Runtime local29;
-			if (arg0.method3111(Static81.aClass100_476)) {
+			if (arg0.equalsIgnoreCase(Static81.aClass100_476)) {
 				Static119.method2380();
 				for (local18 = 0; local18 < 10; local18++) {
 					System.gc();
@@ -253,7 +253,7 @@ public final class Static127 {
 				Static103.method2231(null, 0, Static34.concatenate(new JagString[] { Static202.aClass100_892, Static123.parseInt(local38), Static17.aClass100_101 }));
 			}
 			@Pc(117) int local117;
-			if (arg0.method3111(Static154.aClass100_735)) {
+			if (arg0.equalsIgnoreCase(Static154.aClass100_735)) {
 				Static119.method2380();
 				for (local18 = 0; local18 < 10; local18++) {
 					System.gc();
@@ -269,53 +269,53 @@ public final class Static127 {
 				local38 = (int) ((local29.totalMemory() - local29.freeMemory()) / 1024L);
 				Static103.method2231(null, 0, Static34.concatenate(new JagString[] { Static270.aClass100_1093, Static123.parseInt(local38), Static17.aClass100_101 }));
 			}
-			if (arg0.method3111(Static240.aClass100_1009)) {
+			if (arg0.equalsIgnoreCase(Static240.aClass100_1009)) {
 				Static103.method2231(null, 0, Static34.concatenate(new JagString[] { Static44.aClass100_335, Static123.parseInt(Static198.method1029()) }));
 			}
-			if (GlRenderer.enabled && arg0.method3111(Static201.aClass100_406)) {
+			if (GlRenderer.enabled && arg0.equalsIgnoreCase(Static201.aClass100_406)) {
 				System.out.println("oncard_geometry:" + Static63.anInt1945);
 				System.out.println("oncard_2d:" + Static63.onCard2d);
 				System.out.println("oncard_texture:" + Static63.onCardTexture);
 			}
-			if (arg0.method3111(Static257.aClass100_99)) {
+			if (arg0.equalsIgnoreCase(Static257.aClass100_99)) {
 				Static175.method3279();
 			}
-			if (arg0.method3111(Static279.aClass100_1106)) {
+			if (arg0.equalsIgnoreCase(Static279.aClass100_1106)) {
 				Static107.js5NetQueue.quit();
 			}
-			if (arg0.method3111(Static185.aClass100_823)) {
+			if (arg0.equalsIgnoreCase(Static185.aClass100_823)) {
 				Static107.js5NetQueue.method2319();
 			}
-			if (arg0.method3111(Static165.aClass100_775)) {
+			if (arg0.equalsIgnoreCase(Static165.aClass100_775)) {
 				GameShell.signLink.breakConnection();
 				Static124.socket.breakConnection();
 				Static107.js5NetQueue.method2323();
 			}
-			if (arg0.method3111(Static114.aClass100_1100)) {
+			if (arg0.equalsIgnoreCase(Static114.aClass100_1100)) {
 				GameShell.replaceCanvas = true;
 			}
-			if (arg0.method3111(Static148.aClass100_677)) {
+			if (arg0.equalsIgnoreCase(Static148.aClass100_677)) {
 				Static196.setGameState(25);
 			}
-			if (arg0.method3111(Static107.aClass100_566)) {
+			if (arg0.equalsIgnoreCase(Static107.aClass100_566)) {
 				Static43.displayFps = true;
 			}
-			if (arg0.method3111(Static61.aClass100_422)) {
+			if (arg0.equalsIgnoreCase(Static61.aClass100_422)) {
 				Static43.displayFps = false;
 			}
-			if (arg0.method3111(Static96.aClass100_522)) {
+			if (arg0.equalsIgnoreCase(Static96.aClass100_522)) {
 				Static241.setWindowMode(false, 0, -1, -1);
 			}
-			if (arg0.method3111(Static181.aClass100_811)) {
+			if (arg0.equalsIgnoreCase(Static181.aClass100_811)) {
 				Static241.setWindowMode(false, 1, -1, -1);
 			}
-			if (arg0.method3111(Static207.aClass100_904)) {
+			if (arg0.equalsIgnoreCase(Static207.aClass100_904)) {
 				Static241.setWindowMode(false, 2, -1, -1);
 			}
-			if (arg0.method3111(Static99.aClass100_529)) {
+			if (arg0.equalsIgnoreCase(Static99.aClass100_529)) {
 				Static241.setWindowMode(false, 3, 1024, 768);
 			}
-			if (arg0.method3111(Static69.aClass100_443)) {
+			if (arg0.equalsIgnoreCase(Static69.aClass100_443)) {
 				for (local18 = 0; local18 < 4; local18++) {
 					for (local38 = 1; local38 < 103; local38++) {
 						for (local117 = 1; local117 < 103; local117++) {
@@ -332,17 +332,17 @@ public final class Static127 {
 			if (arg0.startsWith(Static170.aClass100_623) && Static83.modeWhere != 0) {
 				Static115.method2312(arg0.substring(6).parseInt());
 			}
-			if (arg0.method3111(Static272.aClass100_990)) {
+			if (arg0.equalsIgnoreCase(Static272.aClass100_990)) {
 				throw new RuntimeException();
 			}
 			if (arg0.startsWith(Static211.aClass100_232)) {
 				Static199.rectDebug = arg0.substring(12).method3144().parseInt();
 				Static103.method2231(null, 0, Static34.concatenate(new JagString[] { Static276.aClass100_1096, Static123.parseInt(Static199.rectDebug) }));
 			}
-			if (arg0.method3111(Static181.aClass100_810)) {
+			if (arg0.equalsIgnoreCase(Static181.aClass100_810)) {
 				Static121.aBoolean154 = true;
 			}
-			if (arg0.method3111(Static124.aClass100_596)) {
+			if (arg0.equalsIgnoreCase(Static124.aClass100_596)) {
 				if (Static204.applyTweening) {
 					Static204.applyTweening = false;
 					Static103.method2231(null, 0, Static274.aClass100_943);
@@ -351,7 +351,7 @@ public final class Static127 {
 					Static103.method2231(null, 0, Static50.aClass100_362);
 				}
 			}
-			if (arg0.method3111(Static114.aClass100_1099)) {
+			if (arg0.equalsIgnoreCase(Static114.aClass100_1099)) {
 				if (Static172.shiftClick) {
 					Static154.aClass100_736.method3129();
 					Static172.shiftClick = false;

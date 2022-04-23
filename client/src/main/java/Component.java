@@ -500,14 +500,14 @@ public final class Component {
 		if (this.anIntArray37 != null) {
 			return true;
 		}
-		@Pc(18) SoftwareIndexedSprite local18 = Static164.method3119(this.anInt477, Static23.aClass153_12);
+		@Pc(18) SoftwareIndexedSprite local18 = Static164.loadSoftwareIndexedSprite(this.anInt477, Static23.aClass153_12);
 		if (local18 == null) {
 			return false;
 		}
 		local18.method1396();
-		this.anIntArray37 = new int[local18.anInt4278];
-		this.anIntArray45 = new int[local18.anInt4278];
-		for (@Pc(37) int local37 = 0; local37 < local18.anInt4278; local37++) {
+		this.anIntArray37 = new int[local18.height];
+		this.anIntArray45 = new int[local18.height];
+		for (@Pc(37) int local37 = 0; local37 < local18.height; local37++) {
 			@Pc(47) int local47 = 0;
 			@Pc(50) int local50 = local18.width;
 			@Pc(52) int local52;
@@ -850,12 +850,12 @@ public final class Component {
 			if (local10 == 1) {
 				local61 = (Model) Static124.aClass99_17.get((long) ((local10 << 16) + local13));
 				if (local61 == null) {
-					@Pc(69) RawModel local69 = Static77.method1686(Static203.aClass153_85, local13);
+					@Pc(69) RawModel local69 = Static77.create(Static203.aClass153_85, local13);
 					if (local69 == null) {
 						Static211.aBoolean72 = true;
 						return null;
 					}
-					local61 = local69.method1679(64, 768, -50, -10, -50);
+					local61 = local69.createModel(64, 768, -50, -10, -50);
 					Static124.aClass99_17.put(local61, (long) (local13 + (local10 << 16)));
 				}
 				if (arg1 != null) {
@@ -863,7 +863,7 @@ public final class Component {
 				}
 				return local61;
 			} else if (local10 == 2) {
-				local61 = Static214.method4363(local13).method2943(arg1, arg3, arg0, arg2);
+				local61 = Static214.get(local13).getHeadModel(arg1, arg3, arg0, arg2);
 				if (local61 == null) {
 					Static211.aBoolean72 = true;
 					return null;
@@ -882,8 +882,8 @@ public final class Component {
 					return local61;
 				}
 			} else if (local10 == 4) {
-				@Pc(164) ObjType local164 = Static71.method1439(local13);
-				@Pc(173) Model local173 = local164.method1824(arg0, arg3, arg1, 10, arg2);
+				@Pc(164) ObjType local164 = Static71.get(local13);
+				@Pc(173) Model local173 = local164.getModel(arg0, arg3, arg1, 10, arg2);
 				if (local173 == null) {
 					Static211.aBoolean72 = true;
 					return null;
@@ -891,7 +891,7 @@ public final class Component {
 					return local173;
 				}
 			} else if (local10 == 6) {
-				local61 = Static214.method4363(local13).method2937(null, 0, 0, arg0, arg3, arg2, null, 0, arg1);
+				local61 = Static214.get(local13).getBodyModel(null, 0, 0, arg0, arg3, arg2, null, 0, arg1);
 				if (local61 == null) {
 					Static211.aBoolean72 = true;
 					return null;

@@ -1150,7 +1150,7 @@ public final class SoftwareModel extends Model {
 
 	@OriginalMember(owner = "client!w", name = "b", descriptor = "(III)V")
 	@Override
-	public final void method4559(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+	public final void resize(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		for (@Pc(1) int local1 = 0; local1 < this.anInt5788; local1++) {
 			this.anIntArray528[local1] = this.anIntArray528[local1] * arg0 / 128;
 			this.anIntArray527[local1] = this.anIntArray527[local1] * arg1 / 128;

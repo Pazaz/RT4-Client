@@ -12,7 +12,7 @@ public final class Static56 {
 	public static final int[] anIntArray141 = new int[] { 768, 1024, 1280, 512, 1536, 256, 0, 1792 };
 
 	@OriginalMember(owner = "client!ef", name = "b", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_9 = new SoftLruHashTable(30);
+	public static final SoftLruHashTable models = new SoftLruHashTable(30);
 
 	@OriginalMember(owner = "client!ef", name = "c", descriptor = "[I")
 	public static final int[] anIntArray142 = new int[500];

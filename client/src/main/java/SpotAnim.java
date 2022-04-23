@@ -53,12 +53,12 @@ public final class SpotAnim extends Entity {
 		this.anInt590 = arg6 + arg5;
 		this.anInt596 = arg0;
 		this.anInt599 = arg4;
-		@Pc(42) int local42 = Static34.method877(this.anInt596).anInt1754;
+		@Pc(42) int local42 = Static34.method877(this.anInt596).seqId;
 		if (local42 == -1) {
 			this.aBoolean41 = true;
 		} else {
 			this.aBoolean41 = false;
-			this.aClass144_1 = Static36.method941(local42);
+			this.aClass144_1 = Static36.get(local42);
 		}
 	}
 
@@ -99,7 +99,7 @@ public final class SpotAnim extends Entity {
 		while (this.anInt607 > this.aClass144_1.anIntArray474[this.anInt593]) {
 			this.anInt607 -= this.aClass144_1.anIntArray474[this.anInt593];
 			this.anInt593++;
-			if (this.aClass144_1.anIntArray473.length <= this.anInt593) {
+			if (this.aClass144_1.frames.length <= this.anInt593) {
 				this.aBoolean41 = true;
 				break;
 			}
