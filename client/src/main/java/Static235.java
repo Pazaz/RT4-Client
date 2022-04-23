@@ -19,8 +19,8 @@ public final class Static235 {
 	}
 
 	@OriginalMember(owner = "client!tb", name = "b", descriptor = "(IB)Lclient!bc;")
-	public static Class3_Sub2_Sub2 method4045(@OriginalArg(0) int arg0) {
-		@Pc(10) Class3_Sub2_Sub2 local10 = (Class3_Sub2_Sub2) Static73.aClass54_7.method1806((long) arg0);
+	public static QuickChatCatType method4045(@OriginalArg(0) int arg0) {
+		@Pc(10) QuickChatCatType local10 = (QuickChatCatType) Static73.aClass54_7.method1806((long) arg0);
 		if (local10 != null) {
 			return local10;
 		}
@@ -30,7 +30,7 @@ public final class Static235 {
 		} else {
 			local24 = Static29.aClass153_19.getFile(0, arg0 & 0x7FFF);
 		}
-		local10 = new Class3_Sub2_Sub2();
+		local10 = new QuickChatCatType();
 		if (local24 != null) {
 			local10.method470(new Buffer(local24));
 		}

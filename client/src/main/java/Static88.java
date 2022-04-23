@@ -2417,7 +2417,7 @@ public final class Static88 {
 													Static3.stringStack[ssp++] = Static235.method4045(local809).aClass100_79;
 													continue;
 												}
-												@Pc(6378) Class3_Sub2_Sub2 local6378;
+												@Pc(6378) QuickChatCatType local6378;
 												if (opcode == 5051) {
 													isp--;
 													local809 = Static254.intStack[isp];
@@ -2433,7 +2433,7 @@ public final class Static88 {
 													isp -= 2;
 													local809 = Static254.intStack[isp];
 													local803 = Static254.intStack[isp + 1];
-													@Pc(6416) Class3_Sub2_Sub2 local6416 = Static235.method4045(local809);
+													@Pc(6416) QuickChatCatType local6416 = Static235.method4045(local809);
 													local652 = local6416.anIntArray30[local803];
 													Static254.intStack[isp++] = local652;
 													continue;
