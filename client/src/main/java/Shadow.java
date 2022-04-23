@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!wm")
-public final class Class165 {
+public final class Shadow {
 
 	@OriginalMember(owner = "client!wm", name = "a", descriptor = "Lclient!vi;")
 	private GlVertexBufferObject aClass155_6;
@@ -31,7 +31,7 @@ public final class Class165 {
 	private final int anInt5901;
 
 	@OriginalMember(owner = "client!wm", name = "<init>", descriptor = "()V")
-	public Class165() {
+	public Shadow() {
 		@Pc(9) GL2 local9 = GlRenderer.gl;
 		@Pc(12) int[] local12 = new int[1];
 		local9.glGenTextures(1, local12, 0);
