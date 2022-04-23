@@ -11,7 +11,7 @@ public final class Static148 {
 	public static int anInt3534;
 
 	@OriginalMember(owner = "client!li", name = "v", descriptor = "Lclient!va;")
-	public static MidiPcmStream aClass3_Sub3_Sub4_1;
+	public static MidiPcmStream musicStream;
 
 	@OriginalMember(owner = "client!li", name = "w", descriptor = "Lclient!sc;")
 	public static HashTable aClass133_13;
@@ -20,7 +20,7 @@ public final class Static148 {
 	public static int screenUpperY;
 
 	@OriginalMember(owner = "client!li", name = "h", descriptor = "[Lclient!mj;")
-	public static final CollisionMap[] aClass97Array1 = new CollisionMap[4];
+	public static final CollisionMap[] collisionMaps = new CollisionMap[4];
 
 	@OriginalMember(owner = "client!li", name = "p", descriptor = "Lclient!na;")
 	public static final JagString aClass100_677 = Static28.parse("::rebuild");
@@ -30,7 +30,7 @@ public final class Static148 {
 		if (arg0 == -1 && !Static144.aBoolean173) {
 			Static241.method4548();
 		} else if (arg0 != -1 && (Static221.anInt4363 != arg0 || !Static136.method2655()) && Static12.anInt391 != 0 && !Static144.aBoolean173) {
-			Static257.method526(arg0, Static130.aClass153_47, Static12.anInt391);
+			Static257.method526(arg0, Static130.js5Archive6, Static12.anInt391);
 		}
 		Static221.anInt4363 = arg0;
 	}
@@ -53,7 +53,7 @@ public final class Static148 {
 		if (local16 != null) {
 			return local16;
 		}
-		@Pc(26) byte[] local26 = Static261.aClass153_107.method4495(arg0, 0);
+		@Pc(26) byte[] local26 = Static261.js5Archive13.method4495(arg0, 0);
 		local16 = new SoftwareFont(local26);
 		local16.method2873(Static159.aClass36Array12, null);
 		Static139.aClass99_22.method3095(local16, (long) arg0);

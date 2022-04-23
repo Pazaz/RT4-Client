@@ -47,11 +47,11 @@ public final class Static59 {
 		Static6.outboundBuffer.p1(Static144.method2736());
 		Static6.outboundBuffer.p2(GameShell.canvasWidth);
 		Static6.outboundBuffer.p2(GameShell.canvasHeight);
-		Static6.outboundBuffer.p1(Static186.anInt4392);
+		Static6.outboundBuffer.p1(Static186.antiAliasingMode);
 	}
 
 	@OriginalMember(owner = "client!ej", name = "a", descriptor = "(Lclient!ve;ILclient!ve;Lclient!of;)V")
-	public static void method1374(@OriginalArg(0) Js5 arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) QuickChatCommandDecoder arg2) {
+	public static void init(@OriginalArg(0) Js5 arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) QuickChatCommandDecoder arg2) {
 		Static262.aClass153_108 = arg0;
 		Static107.anInterface3_1 = arg2;
 		Static238.aClass153_96 = arg1;

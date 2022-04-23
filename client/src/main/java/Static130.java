@@ -16,7 +16,7 @@ public final class Static130 {
 	public static int anInt3161;
 
 	@OriginalMember(owner = "client!kc", name = "w", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_47;
+	public static Js5 js5Archive6;
 
 	@OriginalMember(owner = "client!kc", name = "C", descriptor = "Lclient!fd;")
 	public static WorldMapFont aClass41_2;

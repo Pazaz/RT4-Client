@@ -88,8 +88,8 @@ public final class Static81 {
 	}
 
 	@OriginalMember(owner = "client!gg", name = "a", descriptor = "(ILclient!ve;)V")
-	public static void method1754(@OriginalArg(1) Js5 arg0) {
-		Static138.anInt3443 = arg0.method4482(Static12.aClass100_73);
+	public static void init(@OriginalArg(1) Js5 arg0) {
+		Static138.anInt3443 = arg0.getGroupId(Static12.aClass100_73);
 	}
 
 	@OriginalMember(owner = "client!gg", name = "a", descriptor = "(Z)V")

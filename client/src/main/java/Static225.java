@@ -82,7 +82,7 @@ public final class Static225 {
 		Static186.password = arg1;
 		Static5.anInt39 = arg2;
 		Static186.username = arg0;
-		if (Static186.username.method3108(Static186.aClass100_827) || Static186.password.method3108(Static186.aClass100_827)) {
+		if (Static186.username.method3108(Static186.EMPTY_FILE) || Static186.password.method3108(Static186.EMPTY_FILE)) {
 			Static266.anInt5336 = 3;
 		} else if (Static125.worldId == -1) {
 			Static20.anInt673 = 0;

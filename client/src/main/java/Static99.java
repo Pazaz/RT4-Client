@@ -15,7 +15,7 @@ public final class Static99 {
 	public static final JagString aClass100_529 = Static28.parse("::wm3");
 
 	@OriginalMember(owner = "client!hk", name = "eb", descriptor = "Z")
-	public static boolean aBoolean143 = true;
+	public static boolean stereo = true;
 
 	@OriginalMember(owner = "client!hk", name = "fb", descriptor = "[I")
 	public static final int[] anIntArray240 = new int[25];

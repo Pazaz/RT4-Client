@@ -82,18 +82,18 @@ public final class Static31 {
 				Static124.socket = new BufferedSocket((Socket) Static72.aClass212_3.result, GameShell.signLink);
 				Static72.aClass212_3 = null;
 				Static124.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
-				if (Static11.aClass62_1 != null) {
-					Static11.aClass62_1.method3571();
+				if (Static11.musicChannel != null) {
+					Static11.musicChannel.method3571();
 				}
-				if (Static147.aClass62_2 != null) {
-					Static147.aClass62_2.method3571();
+				if (Static147.soundChannel != null) {
+					Static147.soundChannel.method3571();
 				}
 				local126 = Static124.socket.read();
-				if (Static11.aClass62_1 != null) {
-					Static11.aClass62_1.method3571();
+				if (Static11.musicChannel != null) {
+					Static11.musicChannel.method3571();
 				}
-				if (Static147.aClass62_2 != null) {
-					Static147.aClass62_2.method3571();
+				if (Static147.soundChannel != null) {
+					Static147.soundChannel.method3571();
 				}
 				if (local126 != 101) {
 					Static266.anInt5336 = local126;

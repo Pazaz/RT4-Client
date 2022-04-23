@@ -66,7 +66,7 @@ public final class Static115 {
 	}
 
 	@OriginalMember(owner = "client!ja", name = "a", descriptor = "(Lclient!ve;Lclient!ve;I)V")
-	public static void method2311(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {
+	public static void init(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {
 		Static87.aClass153_38 = arg1;
 		Static29.aClass153_19 = arg0;
 	}
@@ -146,7 +146,7 @@ public final class Static115 {
 		Static213.aClass3_Sub2_Sub1Array8 = null;
 		Static240.aClass3_Sub2_Sub1Array10 = null;
 		Static159.aClass36Array12 = null;
-		Static265.aClass3_Sub2_Sub9_Sub1_2 = null;
+		Static265.p11FullSoftware = null;
 		Static173.aClass3_Sub2_Sub1_Sub1Array9 = null;
 		Static67.aClass3_Sub2_Sub1Array4 = null;
 		Static149.aClass3_Sub2_Sub1Array7 = null;

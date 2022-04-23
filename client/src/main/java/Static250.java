@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static250 {
 
 	@OriginalMember(owner = "client!uf", name = "m", descriptor = "I")
-	public static int anInt5441;
+	public static int titleSong;
 
 	@OriginalMember(owner = "client!uf", name = "p", descriptor = "I")
 	public static int anInt5443;

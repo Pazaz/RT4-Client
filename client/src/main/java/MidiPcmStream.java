@@ -183,7 +183,7 @@ public final class MidiPcmStream extends PcmStream {
 	}
 
 	@OriginalMember(owner = "client!va", name = "a", descriptor = "(BII)V")
-	public final synchronized void method4420() {
+	public final synchronized void init() {
 		this.method4413();
 	}
 

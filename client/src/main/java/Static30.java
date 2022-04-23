@@ -22,7 +22,7 @@ public final class Static30 {
 	}
 
 	@OriginalMember(owner = "client!cg", name = "a", descriptor = "(ILclient!ve;)V")
-	public static void method839(@OriginalArg(1) Js5 arg0) {
+	public static void load(@OriginalArg(1) Js5 arg0) {
 		Static173.aClass3_Sub2_Sub1_Sub1Array9 = Static265.method4523(Static280.anInt5900, arg0);
 		Static213.aClass3_Sub2_Sub1Array8 = Static209.method3708(Static131.anInt3261, arg0);
 		Static116.aClass3_Sub2_Sub1Array3 = Static209.method3708(Static36.anInt1165, arg0);

@@ -75,16 +75,16 @@ public final class Static136 {
 		if (arg0.data.length - arg0.offset < local34) {
 			return;
 		}
-		Static113.anInt4609 = arg0.g1();
-		if (Static113.anInt4609 < 1) {
-			Static113.anInt4609 = 1;
-		} else if (Static113.anInt4609 > 4) {
-			Static113.anInt4609 = 4;
+		Static113.brightness = arg0.g1();
+		if (Static113.brightness < 1) {
+			Static113.brightness = 1;
+		} else if (Static113.brightness > 4) {
+			Static113.brightness = 4;
 		}
 		Static53.method1293(arg0.g1() == 1);
 		Static80.aBoolean231 = arg0.g1() == 1;
 		Static250.aBoolean283 = arg0.g1() == 1;
-		Static53.aBoolean99 = arg0.g1() == 1;
+		Static53.highDetailTextures = arg0.g1() == 1;
 		Static15.aBoolean33 = arg0.g1() == 1;
 		Static11.aBoolean15 = arg0.g1() == 1;
 		Static159.aBoolean189 = arg0.g1() == 1;
@@ -101,12 +101,12 @@ public final class Static136 {
 		}
 		Static220.aBoolean244 = arg0.g1() == 1;
 		Static71.aBoolean107 = arg0.g1() == 1;
-		Static102.anInt2679 = arg0.g1();
-		if (Static102.anInt2679 > 2) {
-			Static102.anInt2679 = 2;
+		Static102.windowMode = arg0.g1();
+		if (Static102.windowMode > 2) {
+			Static102.windowMode = 2;
 		}
-		Static186.anInt4392 = Static102.anInt2679;
-		Static99.aBoolean143 = arg0.g1() == 1;
+		Static186.antiAliasingMode = Static102.windowMode;
+		Static99.stereo = arg0.g1() == 1;
 		Static125.anInt3104 = arg0.g1();
 		if (Static125.anInt3104 > 127) {
 			Static125.anInt3104 = 127;
@@ -134,16 +134,16 @@ public final class Static136 {
 			Static164.anInt3988 = arg0.g4();
 		}
 		if (local21 >= 6) {
-			Static214.anInt5581 = arg0.g1();
+			Static214.windowMode = arg0.g1();
 		}
 		if (local21 >= 7) {
-			Static164.aBoolean191 = arg0.g1() == 1;
+			Static164.safeMode = arg0.g1() == 1;
 		}
 		if (local21 >= 8) {
 			Static33.aBoolean63 = arg0.g1() == 1;
 		}
 		if (local21 >= 9) {
-			Static141.anInt3474 = arg0.g1();
+			Static141.buildArea = arg0.g1();
 		}
 		if (local21 >= 10) {
 			Static127.aBoolean159 = arg0.g1() != 0;

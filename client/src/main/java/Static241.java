@@ -44,7 +44,7 @@ public final class Static241 {
 	}
 
 	@OriginalMember(owner = "client!th", name = "a", descriptor = "(ZIIII)V")
-	public static void method4540(@OriginalArg(0) boolean arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
+	public static void setWindowMode(@OriginalArg(0) boolean arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		Static97.aLong89 = 0L;
 		@Pc(4) int local4 = Static144.method2736();
 		if (arg1 == 3 || local4 == 3) {
@@ -80,7 +80,7 @@ public final class Static241 {
 	}
 
 	@OriginalMember(owner = "client!th", name = "a", descriptor = "(ZBLclient!ve;Lclient!dd;Lclient!ve;)V")
-	public static void method4542(@OriginalArg(2) Js5 arg0, @OriginalArg(3) SoftwareFont arg1, @OriginalArg(4) Js5 arg2) {
+	public static void init(@OriginalArg(2) Js5 arg0, @OriginalArg(3) SoftwareFont arg1, @OriginalArg(4) Js5 arg2) {
 		Static240.aBoolean276 = true;
 		Static230.aClass153_95 = arg2;
 		Static167.aClass153_61 = arg0;

@@ -8,7 +8,7 @@ public final class Static122 {
 	public static Class12 aClass12_1;
 
 	@OriginalMember(owner = "client!jh", name = "p", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_46;
+	public static Js5 js5Archive21;
 
 	@OriginalMember(owner = "client!jh", name = "b", descriptor = "[Lclient!na;")
 	public static final JagString[] aClass100Array92 = new JagString[200];

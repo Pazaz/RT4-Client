@@ -129,7 +129,7 @@ public final class Static36 {
 									if (local9.anIntArray49 == null || Static83.anInt372 >= local9.anIntArray49[local243]) {
 										@Pc(279) byte local279 = local9.aByteArray7[local243];
 										if (local279 == 0 || ((local279 & 0x2) == 0 || Static187.pressedKeys[86]) && ((local279 & 0x1) == 0 || Static187.pressedKeys[82]) && ((local279 & 0x4) == 0 || Static187.pressedKeys[81])) {
-											Static263.method4512(Static186.aClass100_827, -1, local243 + 1, local9.anInt507);
+											Static263.method4512(Static186.EMPTY_FILE, -1, local243 + 1, local9.anInt507);
 											local322 = local9.anIntArray46[local243];
 											if (local9.anIntArray49 == null) {
 												local9.anIntArray49 = new int[local9.aByteArray8.length];

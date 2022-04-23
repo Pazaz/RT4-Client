@@ -62,10 +62,10 @@ public final class Static75 {
 						Static35.anIntArray82[local20] = -1;
 					} else {
 						Static238.anIntArray470[local20] = local169;
-						Static36.anIntArray84[local20] = Static26.aClass153_16.method4482(Static34.method882(new JagString[] { Static103.aClass100_558, Static123.method2423(local138), Static86.aClass100_488, Static123.method2423(local151) }));
-						Static172.anIntArray366[local20] = Static26.aClass153_16.method4482(Static34.method882(new JagString[] { Static270.aClass100_1090, Static123.method2423(local138), Static86.aClass100_488, Static123.method2423(local151) }));
-						Static99.anIntArray239[local20] = Static26.aClass153_16.method4482(Static34.method882(new JagString[] { Static165.aClass100_772, Static123.method2423(local138), Static86.aClass100_488, Static123.method2423(local151) }));
-						Static35.anIntArray82[local20] = Static26.aClass153_16.method4482(Static34.method882(new JagString[] { Static278.aClass100_1103, Static123.method2423(local138), Static86.aClass100_488, Static123.method2423(local151) }));
+						Static36.anIntArray84[local20] = Static26.js5Archive5.getGroupId(Static34.concatenate(new JagString[] { Static103.aClass100_558, Static123.parseInt(local138), Static86.aClass100_488, Static123.parseInt(local151) }));
+						Static172.anIntArray366[local20] = Static26.js5Archive5.getGroupId(Static34.concatenate(new JagString[] { Static270.aClass100_1090, Static123.parseInt(local138), Static86.aClass100_488, Static123.parseInt(local151) }));
+						Static99.anIntArray239[local20] = Static26.js5Archive5.getGroupId(Static34.concatenate(new JagString[] { Static165.aClass100_772, Static123.parseInt(local138), Static86.aClass100_488, Static123.parseInt(local151) }));
+						Static35.anIntArray82[local20] = Static26.js5Archive5.getGroupId(Static34.concatenate(new JagString[] { Static278.aClass100_1103, Static123.parseInt(local138), Static86.aClass100_488, Static123.parseInt(local151) }));
 					}
 					local20++;
 				}
@@ -131,10 +131,10 @@ public final class Static75 {
 							Static238.anIntArray470[local60] = local571;
 							@Pc(609) int local609 = local571 & 0xFF;
 							local573 = local571 >> 8 & 0xFF;
-							Static36.anIntArray84[local60] = Static26.aClass153_16.method4482(Static34.method882(new JagString[] { Static103.aClass100_558, Static123.method2423(local573), Static86.aClass100_488, Static123.method2423(local609) }));
-							Static172.anIntArray366[local60] = Static26.aClass153_16.method4482(Static34.method882(new JagString[] { Static270.aClass100_1090, Static123.method2423(local573), Static86.aClass100_488, Static123.method2423(local609) }));
-							Static99.anIntArray239[local60] = Static26.aClass153_16.method4482(Static34.method882(new JagString[] { Static165.aClass100_772, Static123.method2423(local573), Static86.aClass100_488, Static123.method2423(local609) }));
-							Static35.anIntArray82[local60] = Static26.aClass153_16.method4482(Static34.method882(new JagString[] { Static278.aClass100_1103, Static123.method2423(local573), Static86.aClass100_488, Static123.method2423(local609) }));
+							Static36.anIntArray84[local60] = Static26.js5Archive5.getGroupId(Static34.concatenate(new JagString[] { Static103.aClass100_558, Static123.parseInt(local573), Static86.aClass100_488, Static123.parseInt(local609) }));
+							Static172.anIntArray366[local60] = Static26.js5Archive5.getGroupId(Static34.concatenate(new JagString[] { Static270.aClass100_1090, Static123.parseInt(local573), Static86.aClass100_488, Static123.parseInt(local609) }));
+							Static99.anIntArray239[local60] = Static26.js5Archive5.getGroupId(Static34.concatenate(new JagString[] { Static165.aClass100_772, Static123.parseInt(local573), Static86.aClass100_488, Static123.parseInt(local609) }));
+							Static35.anIntArray82[local60] = Static26.js5Archive5.getGroupId(Static34.concatenate(new JagString[] { Static278.aClass100_1103, Static123.parseInt(local573), Static86.aClass100_488, Static123.parseInt(local609) }));
 							local60++;
 						}
 					}
@@ -479,24 +479,24 @@ public final class Static75 {
 	}
 
 	@OriginalMember(owner = "client!g", name = "a", descriptor = "(ILclient!ve;)V")
-	public static void method1635(@OriginalArg(1) Js5 arg0) {
-		Static166.anInt4049 = arg0.method4482(Static18.aClass100_106);
-		Static130.anInt3161 = arg0.method4482(Static55.aClass100_377);
-		Static73.anInt2077 = arg0.method4482(Static73.aClass100_454);
-		Static280.anInt5900 = arg0.method4482(Static17.aClass100_102);
-		Static131.anInt3261 = arg0.method4482(Static219.aClass100_920);
-		Static36.anInt1165 = arg0.method4482(Static260.aClass100_944);
-		Static214.anInt5579 = arg0.method4482(Static123.aClass100_592);
-		Static34.anInt1049 = arg0.method4482(Static228.aClass100_968);
-		Static202.anInt4741 = arg0.method4482(Static98.aClass100_524);
-		Static149.anInt3551 = arg0.method4482(Static189.aClass100_835);
-		Static19.anInt647 = arg0.method4482(Static259.aClass100_1075);
-		Static32.anInt1016 = arg0.method4482(Static86.aClass100_490);
-		Static78.anInt2147 = arg0.method4482(Static189.aClass100_837);
-		Static124.anInt3083 = arg0.method4482(Static250.aClass100_1041);
-		Static224.anInt5057 = arg0.method4482(Static27.aClass100_167);
-		Static84.anInt2257 = arg0.method4482(Static18.aClass100_107);
-		Static163.anInt3962 = arg0.method4482(Static280.aClass100_1108);
-		Static128.anInt3143 = arg0.method4482(Static5.aClass100_9);
+	public static void init(@OriginalArg(1) Js5 arg0) {
+		Static166.anInt4049 = arg0.getGroupId(Static18.aClass100_106);
+		Static130.anInt3161 = arg0.getGroupId(Static55.aClass100_377);
+		Static73.anInt2077 = arg0.getGroupId(Static73.aClass100_454);
+		Static280.anInt5900 = arg0.getGroupId(Static17.aClass100_102);
+		Static131.anInt3261 = arg0.getGroupId(Static219.aClass100_920);
+		Static36.anInt1165 = arg0.getGroupId(Static260.aClass100_944);
+		Static214.anInt5579 = arg0.getGroupId(Static123.aClass100_592);
+		Static34.anInt1049 = arg0.getGroupId(Static228.aClass100_968);
+		Static202.anInt4741 = arg0.getGroupId(Static98.aClass100_524);
+		Static149.anInt3551 = arg0.getGroupId(Static189.aClass100_835);
+		Static19.anInt647 = arg0.getGroupId(Static259.aClass100_1075);
+		Static32.anInt1016 = arg0.getGroupId(Static86.aClass100_490);
+		Static78.anInt2147 = arg0.getGroupId(Static189.aClass100_837);
+		Static124.anInt3083 = arg0.getGroupId(Static250.aClass100_1041);
+		Static224.anInt5057 = arg0.getGroupId(Static27.aClass100_167);
+		Static84.anInt2257 = arg0.getGroupId(Static18.aClass100_107);
+		Static163.anInt3962 = arg0.getGroupId(Static280.aClass100_1108);
+		Static128.anInt3143 = arg0.getGroupId(Static5.aClass100_9);
 	}
 }

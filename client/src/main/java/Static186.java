@@ -11,19 +11,19 @@ public final class Static186 {
 	public static boolean aBoolean205 = false;
 
 	@OriginalMember(owner = "client!pa", name = "N", descriptor = "I")
-	public static int anInt4392 = 0;
+	public static int antiAliasingMode = 0;
 
 	@OriginalMember(owner = "client!pa", name = "O", descriptor = "Lclient!na;")
-	public static final JagString aClass100_827 = Static28.parse("");
+	public static final JagString EMPTY_FILE = Static28.parse("");
 
 	@OriginalMember(owner = "client!pa", name = "P", descriptor = "Lclient!na;")
-	public static JagString password = aClass100_827;
+	public static JagString password = EMPTY_FILE;
 
 	@OriginalMember(owner = "client!pa", name = "R", descriptor = "[Z")
 	public static final boolean[] aBooleanArray100 = new boolean[100];
 
 	@OriginalMember(owner = "client!pa", name = "S", descriptor = "Lclient!na;")
-	public static JagString username = aClass100_827;
+	public static JagString username = EMPTY_FILE;
 
 	@OriginalMember(owner = "client!pa", name = "d", descriptor = "(I)V")
 	public static void method3413() {
@@ -32,7 +32,7 @@ public final class Static186 {
 		}
 		if (Static41.anInt1309 < 10) {
 			if (!Static119.aClass153_44.method4489(Static269.aClass3_Sub2_Sub4_2.aClass100_138)) {
-				Static41.anInt1309 = Static227.aClass153_94.method4478(Static269.aClass3_Sub2_Sub4_2.aClass100_138) / 10;
+				Static41.anInt1309 = Static227.js5Archive23.method4478(Static269.aClass3_Sub2_Sub4_2.aClass100_138) / 10;
 				return;
 			}
 			Static6.method84();
@@ -90,29 +90,29 @@ public final class Static186 {
 			Static70.method1549(local273, local249);
 			Static41.anInt1309 = 20;
 		} else if (Static41.anInt1309 == 20) {
-			Static33.method868(new Buffer(Static119.aClass153_44.method4485(Static166.aClass100_779, Static269.aClass3_Sub2_Sub4_2.aClass100_138)));
+			Static33.method868(new Buffer(Static119.aClass153_44.fetchFile(Static166.aClass100_779, Static269.aClass3_Sub2_Sub4_2.aClass100_138)));
 			Static41.anInt1309 = 30;
 			Static7.method842(true);
 			Static234.method4020();
 		} else if (Static41.anInt1309 == 30) {
-			Static47.method3998(new Buffer(Static119.aClass153_44.method4485(Static4.aClass100_7, Static269.aClass3_Sub2_Sub4_2.aClass100_138)));
+			Static47.method3998(new Buffer(Static119.aClass153_44.fetchFile(Static4.aClass100_7, Static269.aClass3_Sub2_Sub4_2.aClass100_138)));
 			Static41.anInt1309 = 40;
 			Static234.method4020();
 		} else if (Static41.anInt1309 == 40) {
-			Static231.method3980(new Buffer(Static119.aClass153_44.method4485(Static73.aClass100_455, Static269.aClass3_Sub2_Sub4_2.aClass100_138)));
+			Static231.method3980(new Buffer(Static119.aClass153_44.fetchFile(Static73.aClass100_455, Static269.aClass3_Sub2_Sub4_2.aClass100_138)));
 			Static41.anInt1309 = 50;
 			Static234.method4020();
 		} else if (Static41.anInt1309 == 50) {
-			Static166.method3166(new Buffer(Static119.aClass153_44.method4485(Static42.aClass100_331, Static269.aClass3_Sub2_Sub4_2.aClass100_138)));
+			Static166.method3166(new Buffer(Static119.aClass153_44.fetchFile(Static42.aClass100_331, Static269.aClass3_Sub2_Sub4_2.aClass100_138)));
 			Static41.anInt1309 = 60;
 			Static7.method842(true);
 			Static234.method4020();
 		} else if (Static41.anInt1309 == 60) {
-			if (Static119.aClass153_44.method4497(Static34.method882(new JagString[] { Static269.aClass3_Sub2_Sub4_2.aClass100_138, Static265.aClass100_1086 }))) {
-				if (!Static119.aClass153_44.method4489(Static34.method882(new JagString[] { Static269.aClass3_Sub2_Sub4_2.aClass100_138, Static265.aClass100_1086 }))) {
+			if (Static119.aClass153_44.method4497(Static34.concatenate(new JagString[] { Static269.aClass3_Sub2_Sub4_2.aClass100_138, Static265.aClass100_1086 }))) {
+				if (!Static119.aClass153_44.method4489(Static34.concatenate(new JagString[] { Static269.aClass3_Sub2_Sub4_2.aClass100_138, Static265.aClass100_1086 }))) {
 					return;
 				}
-				Static203.aClass134_1 = Static140.method2711(Static34.method882(new JagString[] { Static269.aClass3_Sub2_Sub4_2.aClass100_138, Static265.aClass100_1086 }), Static119.aClass153_44);
+				Static203.aClass134_1 = Static140.method2711(Static34.concatenate(new JagString[] { Static269.aClass3_Sub2_Sub4_2.aClass100_138, Static265.aClass100_1086 }), Static119.aClass153_44);
 			} else {
 				Static203.aClass134_1 = new Class134(0);
 			}

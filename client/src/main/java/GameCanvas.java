@@ -9,22 +9,22 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class GameCanvas extends Canvas {
 
 	@OriginalMember(owner = "client!tm", name = "m", descriptor = "Ljava/awt/Component;")
-	private final Component aComponent2;
+	private final Component component;
 
 	@OriginalMember(owner = "client!tm", name = "<init>", descriptor = "(Ljava/awt/Component;)V")
-	public GameCanvas(@OriginalArg(0) Component arg0) {
-		this.aComponent2 = arg0;
+	public GameCanvas(@OriginalArg(0) Component component) {
+		this.component = component;
 	}
 
 	@OriginalMember(owner = "client!tm", name = "update", descriptor = "(Ljava/awt/Graphics;)V")
 	@Override
-	public final void update(@OriginalArg(0) Graphics arg0) {
-		this.aComponent2.update(arg0);
+	public final void update(@OriginalArg(0) Graphics graphics) {
+		this.component.update(graphics);
 	}
 
 	@OriginalMember(owner = "client!tm", name = "paint", descriptor = "(Ljava/awt/Graphics;)V")
 	@Override
-	public final void paint(@OriginalArg(0) Graphics arg0) {
-		this.aComponent2.paint(arg0);
+	public final void paint(@OriginalArg(0) Graphics graphics) {
+		this.component.paint(graphics);
 	}
 }

@@ -75,16 +75,16 @@ public final class Static9 {
 	}
 
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "(ZZZIZ)Lclient!ve;")
-	public static Js5 method183(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) int arg3) {
+	public static Js5 createJs5(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) int arg3) {
 		@Pc(7) Cache local7 = null;
 		if (Static172.cacheData != null) {
 			local7 = new Cache(arg3, Static172.cacheData, Static47.cacheIndexes[arg3], 1000000);
 		}
-		Static269.aClass14_Sub1Array3[arg3] = Static257.aClass9_2.method180(arg3, Static148.masterCache, local7);
+		Static269.js5Providers[arg3] = Static257.js5MasterIndex.method180(arg3, Static148.masterCache, local7);
 		if (arg1) {
-			Static269.aClass14_Sub1Array3[arg3].method528();
+			Static269.js5Providers[arg3].method528();
 		}
-		return new Js5(Static269.aClass14_Sub1Array3[arg3], arg0, arg2);
+		return new Js5(Static269.js5Providers[arg3], arg0, arg2);
 	}
 
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "(ILclient!wa;)Lclient!ci;")

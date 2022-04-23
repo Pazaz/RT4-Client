@@ -8,7 +8,7 @@ public final class Static214 {
 	public static int anInt5577;
 
 	@OriginalMember(owner = "client!rg", name = "z", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_106;
+	public static Js5 js5Archive11;
 
 	@OriginalMember(owner = "client!rg", name = "C", descriptor = "I")
 	public static int anInt5579;
@@ -23,7 +23,7 @@ public final class Static214 {
 	public static final int[] anIntArray492 = new int[14];
 
 	@OriginalMember(owner = "client!rg", name = "F", descriptor = "I")
-	public static int anInt5581 = 0;
+	public static int windowMode = 0;
 
 	@OriginalMember(owner = "client!rg", name = "a", descriptor = "(Lclient!e;I)V")
 	public static void method4359(@OriginalArg(0) Player arg0) {

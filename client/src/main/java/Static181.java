@@ -27,7 +27,7 @@ public final class Static181 {
 
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(II)Lclient!na;")
 	public static JagString method3341(@OriginalArg(0) int arg0) {
-		return Static34.method882(new JagString[] { Static123.method2423(arg0 >> 24 & 0xFF), Static233.aClass100_994, Static123.method2423(arg0 >> 16 & 0xFF), Static233.aClass100_994, Static123.method2423(arg0 >> 8 & 0xFF), Static233.aClass100_994, Static123.method2423(arg0 & 0xFF) });
+		return Static34.concatenate(new JagString[] { Static123.parseInt(arg0 >> 24 & 0xFF), Static233.aClass100_994, Static123.parseInt(arg0 >> 16 & 0xFF), Static233.aClass100_994, Static123.parseInt(arg0 >> 8 & 0xFF), Static233.aClass100_994, Static123.parseInt(arg0 & 0xFF) });
 	}
 
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(I)V")
@@ -71,7 +71,7 @@ public final class Static181 {
 	}
 
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(ILclient!ve;Lclient!ve;Z)V")
-	public static void method3349(@OriginalArg(1) Js5 arg0, @OriginalArg(2) Js5 arg1) {
+	public static void init(@OriginalArg(1) Js5 arg0, @OriginalArg(2) Js5 arg1) {
 		Static30.aBoolean61 = true;
 		Static121.aClass153_45 = arg1;
 		Static146.aClass153_54 = arg0;

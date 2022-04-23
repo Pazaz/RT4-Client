@@ -21,7 +21,7 @@ public abstract class FrameBuffer {
 	protected int width;
 
 	@OriginalMember(owner = "client!vk", name = "a", descriptor = "(IILjava/awt/Graphics;I)V")
-	public abstract void draw(@OriginalArg(2) Graphics arg0);
+	public abstract void draw(@OriginalArg(2) Graphics graphics);
 
 	@OriginalMember(owner = "client!vk", name = "a", descriptor = "(I)V")
 	public final void makeTarget() {
@@ -29,8 +29,8 @@ public abstract class FrameBuffer {
 	}
 
 	@OriginalMember(owner = "client!vk", name = "a", descriptor = "(IIIILjava/awt/Graphics;I)V")
-	public abstract void method4191(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Graphics arg3, @OriginalArg(5) int arg4);
+	public abstract void drawAt(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Graphics graphics, @OriginalArg(5) int arg4);
 
 	@OriginalMember(owner = "client!vk", name = "a", descriptor = "(IZILjava/awt/Component;)V")
-	public abstract void init(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Component arg2);
+	public abstract void init(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Component component);
 }

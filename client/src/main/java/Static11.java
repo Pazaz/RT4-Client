@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static11 {
 
 	@OriginalMember(owner = "client!ba", name = "D", descriptor = "Lclient!vh;")
-	public static AudioChannel aClass62_1;
+	public static AudioChannel musicChannel;
 
 	@OriginalMember(owner = "client!ba", name = "w", descriptor = "I")
 	public static int anInt384 = 0;

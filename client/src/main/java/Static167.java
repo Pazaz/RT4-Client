@@ -14,7 +14,7 @@ public final class Static167 {
 	public static int anInt4069;
 
 	@OriginalMember(owner = "client!nd", name = "t", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_63;
+	public static Js5 js5Archive26;
 
 	@OriginalMember(owner = "client!nd", name = "v", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_64;
@@ -46,8 +46,8 @@ public final class Static167 {
 	}
 
 	@OriginalMember(owner = "client!nd", name = "a", descriptor = "(ILclient!ve;)V")
-	public static void method3172(@OriginalArg(1) Js5 arg0) {
-		Static262.anInt5754 = arg0.method4482(Static27.aClass100_165);
-		Static136.anInt3322 = arg0.method4482(Static165.aClass100_776);
+	public static void init(@OriginalArg(1) Js5 arg0) {
+		Static262.anInt5754 = arg0.getGroupId(Static27.aClass100_165);
+		Static136.anInt3322 = arg0.getGroupId(Static165.aClass100_776);
 	}
 }

@@ -8,7 +8,7 @@ public final class Static265 {
 	public static int anInt5765;
 
 	@OriginalMember(owner = "client!vj", name = "j", descriptor = "Lclient!dd;")
-	public static SoftwareFont aClass3_Sub2_Sub9_Sub1_2;
+	public static SoftwareFont p11FullSoftware;
 
 	@OriginalMember(owner = "client!vj", name = "m", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1086 = Static28.parse("_labels");

@@ -11,7 +11,7 @@ public final class Static49 {
 	public static int anInt1459 = 0;
 
 	@OriginalMember(owner = "client!dm", name = "n", descriptor = "Lclient!na;")
-	public static final JagString aClass100_352 = Static28.parse("(U");
+	public static final JagString PERCENT_SIGN = Static28.parse("(U");
 
 	@OriginalMember(owner = "client!dm", name = "q", descriptor = "I")
 	public static int anInt1462 = 0;

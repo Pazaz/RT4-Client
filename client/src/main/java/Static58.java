@@ -14,7 +14,7 @@ public final class Static58 {
 	public static int wheelRotation = 0;
 
 	@OriginalMember(owner = "client!eh", name = "a", descriptor = "(I)V")
-	public static void method1321() {
+	public static void init() {
 		@Pc(8) int[] local8 = new int[Static170.anInt3245];
 		@Pc(10) int local10 = 0;
 		@Pc(12) int local12;
@@ -31,7 +31,7 @@ public final class Static58 {
 	}
 
 	@OriginalMember(owner = "client!eh", name = "a", descriptor = "(Lclient!ve;I)V")
-	public static void method1322(@OriginalArg(0) Js5 arg0) {
+	public static void init(@OriginalArg(0) Js5 arg0) {
 		Static23.aClass153_11 = arg0;
 	}
 

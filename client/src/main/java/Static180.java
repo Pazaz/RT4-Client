@@ -14,7 +14,7 @@ public final class Static180 {
 	public static JagString[] aClass100Array125;
 
 	@OriginalMember(owner = "client!og", name = "a", descriptor = "(Lclient!ve;Lclient!ve;B)V")
-	public static void method3324(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {
+	public static void init(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {
 		Static250.aClass153_101 = arg1;
 		@Pc(12) int local12 = (int) (Math.random() * 21.0D) - 10;
 		Static98.aClass153_42 = arg0;
@@ -33,7 +33,7 @@ public final class Static180 {
 	}
 
 	@OriginalMember(owner = "client!og", name = "a", descriptor = "(Lclient!ve;I)V")
-	public static void method3327(@OriginalArg(0) Js5 arg0) {
+	public static void init(@OriginalArg(0) Js5 arg0) {
 		Static172.aClass153_69 = arg0;
 	}
 

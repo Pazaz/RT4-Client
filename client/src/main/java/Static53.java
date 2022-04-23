@@ -14,7 +14,7 @@ public final class Static53 {
 	public static final int anInt1704 = 5063219;
 
 	@OriginalMember(owner = "client!ec", name = "n", descriptor = "Z")
-	public static boolean aBoolean99 = true;
+	public static boolean highDetailTextures = true;
 
 	@OriginalMember(owner = "client!ec", name = "q", descriptor = "I")
 	public static int anInt1708 = 0;

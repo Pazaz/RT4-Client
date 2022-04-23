@@ -21,7 +21,7 @@ public final class Static62 {
 	public static int anInt1941 = 0;
 
 	@OriginalMember(owner = "client!f", name = "h", descriptor = "(I)I")
-	public static int method1483() {
+	public static int total() {
 		return 15;
 	}
 }

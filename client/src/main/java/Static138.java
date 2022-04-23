@@ -11,10 +11,10 @@ public final class Static138 {
 	public static float aFloat14;
 
 	@OriginalMember(owner = "client!km", name = "Nc", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_50;
+	public static Js5 js5Archive17;
 
 	@OriginalMember(owner = "client!km", name = "Oc", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_51;
+	public static Js5 js5Archive15;
 
 	@OriginalMember(owner = "client!km", name = "Pc", descriptor = "I")
 	public static int anInt3439;
@@ -68,7 +68,7 @@ public final class Static138 {
 	public static final int[] updatedVarcs = new int[32];
 
 	@OriginalMember(owner = "client!km", name = "Mc", descriptor = "Lclient!na;")
-	public static final JagString aClass100_652 = Static28.parse("loginscreen");
+	public static final JagString LOGINSCREEN = Static28.parse("loginscreen");
 
 	@OriginalMember(owner = "client!km", name = "Rc", descriptor = "[I")
 	public static final int[] anIntArray324 = new int[] { 19, 55, 38, 155, 255, 110, 137, 205, 76 };
@@ -96,7 +96,7 @@ public final class Static138 {
 			return arg1 ? Static23.method648(local14) : local14;
 		} else if (arg0 instanceof ByteArray) {
 			@Pc(34) ByteArray local34 = (ByteArray) arg0;
-			return local34.method4236();
+			return local34.get();
 		} else {
 			throw new IllegalArgumentException();
 		}

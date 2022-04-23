@@ -9,10 +9,10 @@ public final class Static156 {
 	public static byte[][] aByteArrayArray11;
 
 	@OriginalMember(owner = "client!mf", name = "W", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_59;
+	public static Js5 js5Archive22;
 
 	@OriginalMember(owner = "client!mf", name = "X", descriptor = "I")
-	public static int anInt3783;
+	public static int loginScreenId;
 
 	@OriginalMember(owner = "client!mf", name = "x", descriptor = "Lclient!ha;")
 	public static final GzipDecompressor aClass56_1 = new GzipDecompressor();

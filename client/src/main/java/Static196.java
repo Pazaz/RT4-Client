@@ -47,18 +47,18 @@ public final class Static196 {
 			Static123.method2418();
 		}
 		if (arg0 == 5) {
-			Static181.method3344(Static209.aClass153_86);
+			Static181.method3344(Static209.js5Archive8);
 		} else {
 			Static119.method2381();
 		}
 		@Pc(106) boolean local106 = Static244.anInt5370 == 5 || Static244.anInt5370 == 10 || Static244.anInt5370 == 28;
 		if (local106 != local37) {
 			if (local37) {
-				Static221.anInt4363 = Static250.anInt5441;
+				Static221.anInt4363 = Static250.titleSong;
 				if (Static12.anInt391 == 0) {
 					Static29.method801();
 				} else {
-					Static257.method526(Static250.anInt5441, Static130.aClass153_47, 255);
+					Static257.method526(Static250.titleSong, Static130.js5Archive6, 255);
 				}
 				Static107.js5NetQueue.method2322(false);
 			} else {

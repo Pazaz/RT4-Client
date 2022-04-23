@@ -276,7 +276,7 @@ public final class Static54 {
 			if (Static164.anIntArray362[local5] >= -10) {
 				@Pc(79) SynthSound local79 = Static173.aClass138Array1[local5];
 				if (local79 == null) {
-					local79 = Static292.method3988(Static248.aClass153_75, Static200.anIntArray421[local5], 0);
+					local79 = Static292.method3988(Static248.js5Archive4, Static200.anIntArray421[local5], 0);
 					if (local79 == null) {
 						continue;
 					}
@@ -310,10 +310,10 @@ public final class Static54 {
 						local209 = Static30.anInt978 * (local125 - local180) / local125;
 					}
 					if (local209 > 0) {
-						@Pc(223) PcmSound local223 = local79.method3989().method2648(Static56.aClass156_1);
+						@Pc(223) PcmSound local223 = local79.method3989().method2648(Static56.resampler);
 						@Pc(228) SoundPcmStream local228 = Static284.method404(local223, local209);
 						local228.method396(Static276.anIntArray563[local5] - 1);
-						Static204.aClass3_Sub3_Sub2_1.method1343(local228);
+						Static204.soundStream.method1343(local228);
 					}
 					Static164.anIntArray362[local5] = -100;
 				}
@@ -331,7 +331,7 @@ public final class Static54 {
 		}
 		if (Static144.aBoolean173 && !Static136.method2655()) {
 			if (Static12.anInt391 != 0 && Static221.anInt4363 != -1) {
-				Static122.method2410(Static130.aClass153_47, Static221.anInt4363, Static12.anInt391);
+				Static122.method2410(Static130.js5Archive6, Static221.anInt4363, Static12.anInt391);
 			}
 			Static144.aBoolean173 = false;
 		} else if (Static12.anInt391 != 0 && Static221.anInt4363 != -1 && !Static136.method2655()) {

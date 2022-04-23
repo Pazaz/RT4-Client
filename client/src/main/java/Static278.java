@@ -108,7 +108,7 @@ public final class Static278 {
 	@OriginalMember(owner = "client!wj", name = "a", descriptor = "(IIB)V")
 	public static void method4650(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		if (Static12.anInt391 != 0 && arg1 != -1) {
-			Static122.method2410(Static214.aClass153_106, arg1, Static12.anInt391);
+			Static122.method2410(Static214.js5Archive11, arg1, Static12.anInt391);
 			Static144.aBoolean173 = true;
 		}
 	}
@@ -203,7 +203,7 @@ public final class Static278 {
 		Static65.method1500();
 		@Pc(19) int local19;
 		for (local19 = 0; local19 < 4; local19++) {
-			Static148.aClass97Array1[local19].method3050();
+			Static148.collisionMaps[local19].method3050();
 		}
 		Static116.method2325(false);
 		System.gc();

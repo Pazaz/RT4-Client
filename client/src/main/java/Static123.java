@@ -214,7 +214,7 @@ public final class Static123 {
 	}
 
 	@OriginalMember(owner = "client!jj", name = "b", descriptor = "(BI)Lclient!na;")
-	public static JagString method2423(@OriginalArg(1) int arg0) {
+	public static JagString parseInt(@OriginalArg(1) int arg0) {
 		return Static198.method1025(false, arg0);
 	}
 }

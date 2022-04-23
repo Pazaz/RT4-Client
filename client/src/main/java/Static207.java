@@ -86,7 +86,7 @@ public final class Static207 {
 	}
 
 	@OriginalMember(owner = "client!ql", name = "b", descriptor = "(I)I")
-	public static int method3684() {
+	public static int fetch() {
 		try {
 			if (Static82.anInt2231 == 0) {
 				if (MonotonicClock.currentTimeMillis() - 5000L < Static231.aLong174) {
@@ -119,18 +119,18 @@ public final class Static207 {
 				Static6.outboundBuffer.p1(255);
 				Static6.outboundBuffer.p4(local82);
 				Static124.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
-				if (Static11.aClass62_1 != null) {
-					Static11.aClass62_1.method3571();
+				if (Static11.musicChannel != null) {
+					Static11.musicChannel.method3571();
 				}
-				if (Static147.aClass62_2 != null) {
-					Static147.aClass62_2.method3571();
+				if (Static147.soundChannel != null) {
+					Static147.soundChannel.method3571();
 				}
 				local124 = Static124.socket.read();
-				if (Static11.aClass62_1 != null) {
-					Static11.aClass62_1.method3571();
+				if (Static11.musicChannel != null) {
+					Static11.musicChannel.method3571();
 				}
-				if (Static147.aClass62_2 != null) {
-					Static147.aClass62_2.method3571();
+				if (Static147.soundChannel != null) {
+					Static147.soundChannel.method3571();
 				}
 				if (local124 != 0) {
 					return Static10.method347(local124);

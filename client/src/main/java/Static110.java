@@ -62,7 +62,7 @@ public final class Static110 {
 				local141 = Static112.method2299(local6.aClass8_Sub4_Sub2_1);
 				if (local141 != local6.anInt2044) {
 					if (local6.aClass3_Sub3_Sub1_1 != null) {
-						Static204.aClass3_Sub3_Sub2_1.method1347(local6.aClass3_Sub3_Sub1_1);
+						Static204.soundStream.method1347(local6.aClass3_Sub3_Sub1_1);
 						local6.aClass3_Sub3_Sub1_1 = null;
 					}
 					local6.anInt2044 = local141;
@@ -89,7 +89,7 @@ public final class Static110 {
 				local141 = Static140.method2706(local6.aClass8_Sub4_Sub1_1);
 				if (local6.anInt2044 != local141) {
 					if (local6.aClass3_Sub3_Sub1_1 != null) {
-						Static204.aClass3_Sub3_Sub2_1.method1347(local6.aClass3_Sub3_Sub1_1);
+						Static204.soundStream.method1347(local6.aClass3_Sub3_Sub1_1);
 						local6.aClass3_Sub3_Sub1_1 = null;
 					}
 					local6.anInt2044 = local141;

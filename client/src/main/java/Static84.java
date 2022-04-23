@@ -73,9 +73,9 @@ public final class Static84 {
 					arg2.anInt3408 = 150;
 					arg2.anInt3429 = local13 >> 8;
 					if (local17 == 2) {
-						Static154.method2928(local106, local35 ? 17 : 1, local127, null, Static34.method882(new JagString[] { Static44.aClass100_336, arg2.method1264() }));
+						Static154.method2928(local106, local35 ? 17 : 1, local127, null, Static34.concatenate(new JagString[] { Static44.aClass100_336, arg2.method1264() }));
 					} else if (local17 == 1) {
-						Static154.method2928(local106, local35 ? 17 : 1, local127, null, Static34.method882(new JagString[] { Static65.aClass100_435, arg2.method1264() }));
+						Static154.method2928(local106, local35 ? 17 : 1, local127, null, Static34.concatenate(new JagString[] { Static65.aClass100_435, arg2.method1264() }));
 					} else {
 						Static154.method2928(local106, local35 ? 17 : 2, local127, null, arg2.method1264());
 					}

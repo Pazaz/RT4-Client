@@ -11,7 +11,7 @@ public final class Static1 {
 	public static int anInt5;
 
 	@OriginalMember(owner = "client!a", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1 = Static28.parse("scape main");
+	public static final JagString TITLE_SONG = Static28.parse("scape main");
 
 	@OriginalMember(owner = "client!a", name = "f", descriptor = "[Z")
 	public static final boolean[] aBooleanArray1 = new boolean[8];

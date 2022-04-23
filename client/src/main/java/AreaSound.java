@@ -96,7 +96,7 @@ public final class AreaSound extends Node {
 			this.anInt2042 = this.aClass8_Sub4_Sub1_1.anInt1664 * 128;
 		}
 		if (this.anInt2044 != local8 && this.aClass3_Sub3_Sub1_1 != null) {
-			Static204.aClass3_Sub3_Sub2_1.method1347(this.aClass3_Sub3_Sub1_1);
+			Static204.soundStream.method1347(this.aClass3_Sub3_Sub1_1);
 			this.aClass3_Sub3_Sub1_1 = null;
 		}
 	}
