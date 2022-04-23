@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ie")
-public final class Class67 {
+public final class VorbisRange {
 
 	@OriginalMember(owner = "client!ie", name = "e", descriptor = "[I")
 	private final int[] anIntArray262;
@@ -28,7 +28,7 @@ public final class Class67 {
 	private final int[] anIntArray261;
 
 	@OriginalMember(owner = "client!ie", name = "<init>", descriptor = "()V")
-	public Class67() {
+	public VorbisRange() {
 		@Pc(4) int local4 = Static117.method2350(16);
 		if (local4 != 1) {
 			throw new RuntimeException();
