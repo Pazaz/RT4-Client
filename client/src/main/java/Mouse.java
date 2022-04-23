@@ -55,7 +55,7 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
 		if (Static93.instance != null) {
 			Static93.anInt2467 = 0;
 			Static147.anInt3521 = x;
-			Static165.anInt4039 = x;
+			Static165.anInt4039 = y;
 		}
 	}
 

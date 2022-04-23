@@ -46,8 +46,8 @@ public final class Static253 {
 		@Pc(59) int local59;
 		@Pc(57) int local57;
 		if (Static227.cameraType == 1) {
-			local57 = Static230.anInt5161 + Camera.getYaw() & 0x7FF;
-			local59 = Camera.getPitch();
+			local57 = Static230.anInt5161 + (int)Camera.yawTarget & 0x7FF;
+			local59 = (int)Camera.pitchTarget;
 			if (local59 < Static234.anInt5245 / 256) {
 				local59 = Static234.anInt5245 / 256;
 			}

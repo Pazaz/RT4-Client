@@ -40,9 +40,9 @@ public final class Static160 {
 				Static129.method2504(arg0, arg1, arg2.anIntArray37, arg2.anIntArray45);
 			}
 		} else if (GlRenderer.enabled) {
-			((GlSprite) Static106.aClass3_Sub2_Sub1_7).method1427(arg0, arg1, arg2.anInt445, arg2.anInt459, Static106.aClass3_Sub2_Sub1_7.anInt1867 / 2, Static106.aClass3_Sub2_Sub1_7.anInt1859 / 2, Camera.getYaw(), 256, (GlSprite) arg2.method489(false));
+			((GlSprite) Static106.aClass3_Sub2_Sub1_7).method1427(arg0, arg1, arg2.anInt445, arg2.anInt459, Static106.aClass3_Sub2_Sub1_7.anInt1867 / 2, Static106.aClass3_Sub2_Sub1_7.anInt1859 / 2, (int)Camera.yawTarget, 256, (GlSprite) arg2.method489(false));
 		} else {
-			((SoftwareSprite) Static106.aClass3_Sub2_Sub1_7).method313(arg0, arg1, arg2.anInt445, arg2.anInt459, Static106.aClass3_Sub2_Sub1_7.anInt1867 / 2, Static106.aClass3_Sub2_Sub1_7.anInt1859 / 2, Camera.getYaw(), arg2.anIntArray37, arg2.anIntArray45);
+			((SoftwareSprite) Static106.aClass3_Sub2_Sub1_7).method313(arg0, arg1, arg2.anInt445, arg2.anInt459, Static106.aClass3_Sub2_Sub1_7.anInt1867 / 2, Static106.aClass3_Sub2_Sub1_7.anInt1859 / 2, (int)Camera.yawTarget, arg2.anIntArray37, arg2.anIntArray45);
 		}
 		Static31.rectangleRedraw[arg3] = true;
 	}

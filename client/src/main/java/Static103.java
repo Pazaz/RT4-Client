@@ -192,7 +192,7 @@ public final class Static103 {
 				} else if (Static102.method2075(Static173.self.movementQueueZ[0], 0, 0, true, 0, local15, 0, 0, 1, local19, Static173.self.movementQueueX[0])) {
 					Static6.outboundBuffer.p1(Static1.anInt5);
 					Static6.outboundBuffer.p1(Static107.anInt2878);
-					Static6.outboundBuffer.p2(Camera.getYaw());
+					Static6.outboundBuffer.p2((int)Camera.yawTarget);
 					Static6.outboundBuffer.p1(57);
 					Static6.outboundBuffer.p1(Static59.anInt1814);
 					Static6.outboundBuffer.p1(Static273.anInt4130);

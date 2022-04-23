@@ -700,8 +700,8 @@ public final class Static4 {
 							Camera.yawTarget = local133;
 							Camera.pitchTarget = local864;
 							if (Static227.cameraType == 2) {
-								Static240.cameraPitch = Camera.getPitch();
-								Static184.cameraYaw = Camera.getYaw();
+								Static240.cameraPitch = (int)Camera.pitchTarget;
+								Static184.cameraYaw = (int)Camera.yawTarget;
 							}
 							Camera.clampCameraAngle();
 						}
