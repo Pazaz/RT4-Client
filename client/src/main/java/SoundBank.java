@@ -29,7 +29,7 @@ public final class SoundBank {
 		@Pc(21) int local21 = arg2 ^ (arg1 >>> 12 | arg1 << 4 & 0xFFF3);
 		@Pc(27) int local27 = local21 | arg1 << 16;
 		@Pc(30) long local30 = (long) local27;
-		@Pc(37) PcmSound local37 = (PcmSound) this.aClass133_12.method3863(local30);
+		@Pc(37) PcmSound local37 = (PcmSound) this.aClass133_12.get(local30);
 		if (local37 != null) {
 			return local37;
 		} else if (arg0 == null || arg0[0] > 0) {
@@ -64,11 +64,11 @@ public final class SoundBank {
 		@Pc(15) int local15 = arg2 ^ (arg0 >>> 12 | arg0 << 4 & 0xFFF3);
 		@Pc(21) int local21 = local15 | arg0 << 16;
 		@Pc(26) long local26 = (long) local21 ^ 0x100000000L;
-		@Pc(33) PcmSound local33 = (PcmSound) this.aClass133_12.method3863(local26);
+		@Pc(33) PcmSound local33 = (PcmSound) this.aClass133_12.get(local26);
 		if (local33 != null) {
 			return local33;
 		} else if (arg1 == null || arg1[0] > 0) {
-			@Pc(53) VorbisSound local53 = (VorbisSound) this.aClass133_11.method3863(local26);
+			@Pc(53) VorbisSound local53 = (VorbisSound) this.aClass133_11.get(local26);
 			if (local53 == null) {
 				local53 = Static117.method2345(this.aClass153_53, arg0, arg2);
 				if (local53 == null) {

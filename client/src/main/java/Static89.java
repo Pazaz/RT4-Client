@@ -20,7 +20,7 @@ public final class Static89 {
 	public static int anInt2385 = 0;
 
 	@OriginalMember(owner = "client!ha", name = "p", descriptor = "Lclient!gn;")
-	public static final LruHashTable aClass54_8 = new LruHashTable(64);
+	public static final LruHashTable recentUse = new LruHashTable(64);
 
 	@OriginalMember(owner = "client!ha", name = "q", descriptor = "I")
 	public static int anInt2388 = 0;
@@ -77,7 +77,7 @@ public final class Static89 {
 
 	@OriginalMember(owner = "client!ha", name = "a", descriptor = "(II)[B")
 	public static byte[] method1837(@OriginalArg(1) int arg0) {
-		@Pc(10) ByteArrayNode local10 = (ByteArrayNode) Static53.aClass54_5.method1806((long) arg0);
+		@Pc(10) ByteArrayNode local10 = (ByteArrayNode) Static53.aClass54_5.get((long) arg0);
 		if (local10 == null) {
 			@Pc(24) Random local24 = new Random((long) arg0);
 			@Pc(27) byte[] local27 = new byte[512];
@@ -93,7 +93,7 @@ public final class Static89 {
 				local27[local53] = local27[511 - local29] = local62;
 			}
 			local10 = new ByteArrayNode(local27);
-			Static53.aClass54_5.method1811(local10, (long) arg0);
+			Static53.aClass54_5.put(local10, (long) arg0);
 		}
 		return local10.aByteArray37;
 	}

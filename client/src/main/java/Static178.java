@@ -39,17 +39,17 @@ public final class Static178 {
 	}
 
 	@OriginalMember(owner = "client!od", name = "a", descriptor = "(IZII)I")
-	public static int method3319(@OriginalArg(1) boolean arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-		@Pc(19) Inv local19 = (Inv) Static20.aClass133_2.method3863((long) arg1);
+	public static int getTotalParam(@OriginalArg(1) boolean arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
+		@Pc(19) Inv local19 = (Inv) Static20.objectContainerCache.get((long) arg1);
 		if (local19 == null) {
 			return 0;
 		}
 		@Pc(27) int local27 = 0;
-		for (@Pc(29) int local29 = 0; local29 < local19.anIntArray420.length; local29++) {
-			if (local19.anIntArray420[local29] >= 0 && Static170.anInt3245 > local19.anIntArray420[local29]) {
-				@Pc(56) ObjType local56 = Static71.method1439(local19.anIntArray420[local29]);
+		for (@Pc(29) int local29 = 0; local29 < local19.objectIds.length; local29++) {
+			if (local19.objectIds[local29] >= 0 && Static170.anInt3245 > local19.objectIds[local29]) {
+				@Pc(56) ObjType local56 = Static71.method1439(local19.objectIds[local29]);
 				if (local56.aClass133_6 != null) {
-					@Pc(68) IntNode local68 = (IntNode) local56.aClass133_6.method3863((long) arg2);
+					@Pc(68) IntNode local68 = (IntNode) local56.aClass133_6.get((long) arg2);
 					if (local68 != null) {
 						if (arg0) {
 							local27 += local19.anIntArray422[local29] * local68.anInt3141;

@@ -21,7 +21,7 @@ public final class Static110 {
 
 	@OriginalMember(owner = "client!ih", name = "a", descriptor = "(II)Lclient!hn;")
 	public static ParamType method2277(@OriginalArg(1) int arg0) {
-		@Pc(6) ParamType local6 = (ParamType) Static272.aClass54_14.method1806((long) arg0);
+		@Pc(6) ParamType local6 = (ParamType) Static272.aClass54_14.get((long) arg0);
 		if (local6 != null) {
 			return local6;
 		}
@@ -30,7 +30,7 @@ public final class Static110 {
 		if (local30 != null) {
 			local6.method2076(new Buffer(local30));
 		}
-		Static272.aClass54_14.method1811(local6, (long) arg0);
+		Static272.aClass54_14.put(local6, (long) arg0);
 		return local6;
 	}
 

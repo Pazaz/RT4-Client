@@ -89,7 +89,7 @@ public final class HashTable {
 	}
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(JI)Lclient!ab;")
-	public final Node method3863(@OriginalArg(0) long arg0) {
+	public final Node get(@OriginalArg(0) long arg0) {
 		this.aLong168 = arg0;
 		@Pc(24) Node local24 = this.aClass3Array1[(int) (arg0 & (long) (this.anInt5023 - 1))];
 		for (this.aClass3_192 = local24.aClass3_222; this.aClass3_192 != local24; this.aClass3_192 = this.aClass3_192.aClass3_222) {

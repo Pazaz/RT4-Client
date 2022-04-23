@@ -379,7 +379,7 @@ public final class Static87 {
 							if (local30.createdComponents != null) {
 								method1809(local166, local114 - local30.scrollY, -local30.anInt489 + local123, local30.createdComponents, local302, local30.id, local164, local291, local57);
 							}
-							@Pc(1186) Class3_Sub31 local1186 = (Class3_Sub31) Static119.aClass133_9.method3863((long) local30.id);
+							@Pc(1186) Class3_Sub31 local1186 = (Class3_Sub31) Static119.aClass133_9.get((long) local30.id);
 							if (local1186 != null) {
 								if (local1186.anInt5879 == 0 && !Static60.aBoolean108 && Static155.anInt3751 >= local166 && local164 <= Static60.anInt1892 && local302 > Static155.anInt3751 && Static60.anInt1892 < local291 && !Static121.aBoolean154) {
 									Static254.aClass100Array168[0] = LocalizedText.CANCEL;

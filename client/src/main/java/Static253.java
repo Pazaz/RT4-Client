@@ -177,7 +177,7 @@ public final class Static253 {
 
 	@OriginalMember(owner = "client!ui", name = "a", descriptor = "(IZ)Lclient!ml;")
 	public static EnumType method4330(@OriginalArg(0) int arg0) {
-		@Pc(10) EnumType local10 = (EnumType) Static149.aClass54_10.method1806((long) arg0);
+		@Pc(10) EnumType local10 = (EnumType) Static149.aClass54_10.get((long) arg0);
 		if (local10 != null) {
 			return local10;
 		}
@@ -186,7 +186,7 @@ public final class Static253 {
 		if (local24 != null) {
 			local10.method3094(new Buffer(local24));
 		}
-		Static149.aClass54_10.method1811(local10, (long) arg0);
+		Static149.aClass54_10.put(local10, (long) arg0);
 		return local10;
 	}
 

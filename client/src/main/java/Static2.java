@@ -44,7 +44,7 @@ public final class Static2 {
 					if (local23.createdComponents != null) {
 						method7(local23.createdComponents, arg1);
 					}
-					@Pc(49) Class3_Sub31 local49 = (Class3_Sub31) Static119.aClass133_9.method3863((long) local23.id);
+					@Pc(49) Class3_Sub31 local49 = (Class3_Sub31) Static119.aClass133_9.get((long) local23.id);
 					if (local49 != null) {
 						Static54.method1304(arg1, local49.anInt5878);
 					}

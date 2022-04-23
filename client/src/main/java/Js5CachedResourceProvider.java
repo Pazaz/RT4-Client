@@ -298,7 +298,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 	@OriginalMember(owner = "client!bg", name = "b", descriptor = "(II)I")
 	@Override
 	public final int method524(@OriginalArg(0) int arg0) {
-		@Pc(15) Js5Request local15 = (Js5Request) this.aClass133_1.method3863((long) arg0);
+		@Pc(15) Js5Request local15 = (Js5Request) this.aClass133_1.get((long) arg0);
 		return local15 == null ? 0 : local15.method3553();
 	}
 
@@ -309,7 +309,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 
 	@OriginalMember(owner = "client!bg", name = "a", descriptor = "(III)Lclient!il;")
 	private Js5Request method536(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		@Pc(13) Js5Request local13 = (Js5Request) this.aClass133_1.method3863((long) arg1);
+		@Pc(13) Js5Request local13 = (Js5Request) this.aClass133_1.get((long) arg1);
 		if (local13 != null && arg0 == 0 && !local13.aBoolean225 && local13.aBoolean226) {
 			local13.method4658();
 			local13 = null;

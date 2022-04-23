@@ -207,7 +207,7 @@ public final class ObjType {
 		if (this.aClass133_6 == null) {
 			return arg0;
 		} else {
-			@Pc(21) StringNode local21 = (StringNode) this.aClass133_6.method3863((long) arg1);
+			@Pc(21) StringNode local21 = (StringNode) this.aClass133_6.get((long) arg1);
 			return local21 == null ? arg0 : local21.aClass100_980;
 		}
 	}
@@ -523,7 +523,7 @@ public final class ObjType {
 		if (this.aClass133_6 == null) {
 			return arg0;
 		} else {
-			@Pc(25) IntNode local25 = (IntNode) this.aClass133_6.method3863((long) arg1);
+			@Pc(25) IntNode local25 = (IntNode) this.aClass133_6.get((long) arg1);
 			return local25 == null ? arg0 : local25.anInt3141;
 		}
 	}

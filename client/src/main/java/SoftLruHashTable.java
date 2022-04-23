@@ -46,7 +46,7 @@ public final class SoftLruHashTable {
 
 	@OriginalMember(owner = "client!n", name = "a", descriptor = "(JB)V")
 	public final void method3098(@OriginalArg(0) long arg0) {
-		@Pc(6) ReferenceNode local6 = (ReferenceNode) this.aClass133_18.method3863(arg0);
+		@Pc(6) ReferenceNode local6 = (ReferenceNode) this.aClass133_18.get(arg0);
 		if (local6 != null) {
 			local6.method4658();
 			local6.method4365();
@@ -107,7 +107,7 @@ public final class SoftLruHashTable {
 
 	@OriginalMember(owner = "client!n", name = "b", descriptor = "(JB)Ljava/lang/Object;")
 	public final Object method3106(@OriginalArg(0) long arg0) {
-		@Pc(12) ReferenceNode local12 = (ReferenceNode) this.aClass133_18.method3863(arg0);
+		@Pc(12) ReferenceNode local12 = (ReferenceNode) this.aClass133_18.get(arg0);
 		if (local12 == null) {
 			return null;
 		}

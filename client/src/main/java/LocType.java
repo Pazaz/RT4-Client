@@ -377,7 +377,7 @@ public final class LocType {
 		if (this.aClass133_19 == null) {
 			return arg0;
 		} else {
-			@Pc(21) IntNode local21 = (IntNode) this.aClass133_19.method3863((long) arg1);
+			@Pc(21) IntNode local21 = (IntNode) this.aClass133_19.get((long) arg1);
 			return local21 == null ? arg0 : local21.anInt3141;
 		}
 	}
@@ -910,7 +910,7 @@ public final class LocType {
 		if (this.aClass133_19 == null) {
 			return arg0;
 		} else {
-			@Pc(26) StringNode local26 = (StringNode) this.aClass133_19.method3863((long) arg1);
+			@Pc(26) StringNode local26 = (StringNode) this.aClass133_19.get((long) arg1);
 			return local26 == null ? arg0 : local26.aClass100_980;
 		}
 	}

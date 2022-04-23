@@ -177,7 +177,7 @@ public final class Static278 {
 
 	@OriginalMember(owner = "client!wj", name = "a", descriptor = "(BII)I")
 	public static int method4652(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
-		@Pc(8) Inv local8 = (Inv) Static20.aClass133_2.method3863((long) arg0);
+		@Pc(8) Inv local8 = (Inv) Static20.objectContainerCache.get((long) arg0);
 		if (local8 == null) {
 			return 0;
 		} else if (arg1 == -1) {
@@ -185,7 +185,7 @@ public final class Static278 {
 		} else {
 			@Pc(25) int local25 = 0;
 			for (@Pc(27) int local27 = 0; local27 < local8.anIntArray422.length; local27++) {
-				if (arg1 == local8.anIntArray420[local27]) {
+				if (arg1 == local8.objectIds[local27]) {
 					local25 += local8.anIntArray422[local27];
 				}
 			}

@@ -126,7 +126,7 @@ public final class Static230 {
 
 	@OriginalMember(owner = "client!sj", name = "b", descriptor = "(II)Lclient!cb;")
 	public static QuickChatPhraseType method3953(@OriginalArg(1) int arg0) {
-		@Pc(10) QuickChatPhraseType local10 = (QuickChatPhraseType) Static249.aClass54_15.method1806((long) arg0);
+		@Pc(10) QuickChatPhraseType local10 = (QuickChatPhraseType) Static249.aClass54_15.get((long) arg0);
 		if (local10 != null) {
 			return local10;
 		}
@@ -143,7 +143,7 @@ public final class Static230 {
 		if (arg0 >= 32768) {
 			local10.method763();
 		}
-		Static249.aClass54_15.method1811(local10, (long) arg0);
+		Static249.aClass54_15.put(local10, (long) arg0);
 		return local10;
 	}
 
