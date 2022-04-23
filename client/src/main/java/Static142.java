@@ -31,7 +31,7 @@ public final class Static142 {
 			if (local5 == -1) {
 				local17 = Static173.self;
 			} else if (Static267.anInt5774 > local5) {
-				local17 = Static159.aClass8_Sub4_Sub1Array1[Static105.anIntArray256[local5]];
+				local17 = Static159.players[Static105.anIntArray256[local5]];
 			} else {
 				local17 = Static175.aClass8_Sub4_Sub2Array1[Static33.anIntArray79[local5 - Static267.anInt5774]];
 			}

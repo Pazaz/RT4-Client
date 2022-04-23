@@ -49,7 +49,7 @@ public final class Static5 {
 
 	@OriginalMember(owner = "client!af", name = "b", descriptor = "(B)V")
 	public static void method34() {
-		Static116.method2325(false);
+		Static116.clear(false);
 		System.gc();
 		Static196.setGameState(25);
 	}

@@ -26,15 +26,15 @@ public final class Static225 {
 				@Pc(20) int local20 = Static57.aClass3_Sub15_Sub1_3.method2238(11);
 				if (local20 != 2047) {
 					@Pc(27) boolean local27 = false;
-					if (Static159.aClass8_Sub4_Sub1Array1[local20] == null) {
-						Static159.aClass8_Sub4_Sub1Array1[local20] = new Player();
+					if (Static159.players[local20] == null) {
+						Static159.players[local20] = new Player();
 						local27 = true;
 						if (Static115.aClass3_Sub15Array1[local20] != null) {
-							Static159.aClass8_Sub4_Sub1Array1[local20].method1262(Static115.aClass3_Sub15Array1[local20]);
+							Static159.players[local20].method1262(Static115.aClass3_Sub15Array1[local20]);
 						}
 					}
 					Static105.anIntArray256[Static267.anInt5774++] = local20;
-					@Pc(65) Player local65 = Static159.aClass8_Sub4_Sub1Array1[local20];
+					@Pc(65) Player local65 = Static159.players[local20];
 					local65.anInt3430 = Static83.loop;
 					@Pc(73) int local73 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
 					if (local73 == 1) {

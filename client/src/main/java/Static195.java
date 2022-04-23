@@ -42,7 +42,7 @@ public final class Static195 {
 					if (Static16.anInt549 == local102) {
 						local107 = Static173.self;
 					} else {
-						local107 = Static159.aClass8_Sub4_Sub1Array1[local102];
+						local107 = Static159.players[local102];
 					}
 					if (local107 != null && local107.anInt3412 >= 0 && local107.anInt3412 < 13312 && local107.anInt3421 >= 0 && local107.anInt3421 < 13312) {
 						local21.method3705(local107.anInt3421, Static83.loop, Static207.method3685(local21.anInt4810, local107.anInt3412, local107.anInt3421) - local21.anInt4805, local107.anInt3412);

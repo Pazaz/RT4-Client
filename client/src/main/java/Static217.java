@@ -116,9 +116,9 @@ public final class Static217 {
 		Static90.method1857();
 		Static139.aClass99_22.clear();
 		if (!GlRenderer.enabled) {
-			((Js5GlTextureProvider) Rasteriser.textureProvider).method3247();
+			((Js5GlTextureProvider) Rasteriser.textureProvider).clear();
 		}
-		Static105.aClass54_9.method1815();
+		Static105.aClass54_9.clear();
 		Static213.js5Archive0.method4499();
 		Static249.js5Archive1.method4499();
 		Static41.js5Archive3.method4499();

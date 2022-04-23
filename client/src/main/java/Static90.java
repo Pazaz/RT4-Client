@@ -12,7 +12,7 @@ public final class Static90 {
 
 	@OriginalMember(owner = "client!hb", name = "b", descriptor = "(Lclient!na;I)V")
 	public static void method1853(@OriginalArg(0) JagString arg0) {
-		Static116.method2325(false);
+		Static116.clear(false);
 		Static133.method4011(arg0);
 	}
 

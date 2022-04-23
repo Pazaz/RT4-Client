@@ -141,7 +141,7 @@ public final class Static115 {
 	}
 
 	@OriginalMember(owner = "client!ja", name = "a", descriptor = "(Z)V")
-	public static void method2315() {
+	public static void clear() {
 		Static215.aClass3_Sub2_Sub9_32 = null;
 		Static213.aClass3_Sub2_Sub1Array8 = null;
 		Static240.aClass3_Sub2_Sub1Array10 = null;

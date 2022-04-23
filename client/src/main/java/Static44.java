@@ -35,9 +35,9 @@ public final class Static44 {
 		Static201.anInt1862 = 0;
 		Static164.anInt3985 = -1;
 		@Pc(35) int local35;
-		for (local35 = 0; local35 < Static159.aClass8_Sub4_Sub1Array1.length; local35++) {
-			if (Static159.aClass8_Sub4_Sub1Array1[local35] != null) {
-				Static159.aClass8_Sub4_Sub1Array1[local35].anInt3370 = -1;
+		for (local35 = 0; local35 < Static159.players.length; local35++) {
+			if (Static159.players[local35] != null) {
+				Static159.players[local35].anInt3370 = -1;
 			}
 		}
 		for (local35 = 0; local35 < Static175.aClass8_Sub4_Sub2Array1.length; local35++) {

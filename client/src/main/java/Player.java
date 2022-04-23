@@ -228,8 +228,8 @@ public final class Player extends PathingEntity {
 						local291 = (local245.anInt4046 - Static142.originZ) * 4 + 2 - Static173.self.anInt3421 / 32;
 						this.method1263(null, local291, local76, local340, arg5, arg9, arg0, arg7, arg4, arg3, arg1, local245.anInt4052, arg2, arg6);
 					}
-					if (local245.anInt4058 == 10 && local245.anInt4057 >= 0 && Static159.aClass8_Sub4_Sub1Array1.length > local245.anInt4057) {
-						@Pc(395) Player local395 = Static159.aClass8_Sub4_Sub1Array1[local245.anInt4057];
+					if (local245.anInt4058 == 10 && local245.anInt4057 >= 0 && Static159.players.length > local245.anInt4057) {
+						@Pc(395) Player local395 = Static159.players[local245.anInt4057];
 						if (local395 != null) {
 							local291 = local395.anInt3412 / 32 - Static173.self.anInt3412 / 32;
 							local302 = local395.anInt3421 / 32 - Static173.self.anInt3421 / 32;
@@ -261,15 +261,15 @@ public final class Player extends PathingEntity {
 			}
 		}
 		@Pc(515) Model local515 = null;
-		if (!this.aBoolean98 && this.anObject5 != null) {
+		if (!this.aBoolean98 && this.attachment != null) {
 			if (Static83.loop >= this.anInt3375) {
-				this.anObject5 = null;
+				this.attachment = null;
 			}
 			if (this.anInt3390 <= Static83.loop && this.anInt3375 > Static83.loop) {
-				if (this.anObject5 instanceof Loc) {
-					local515 = (Model) ((Loc) this.anObject5).method1049();
+				if (this.attachment instanceof Loc) {
+					local515 = (Model) ((Loc) this.attachment).method1049();
 				} else {
-					local515 = (Model) this.anObject5;
+					local515 = (Model) this.attachment;
 				}
 				local515.method4575(this.anInt3379 - this.anInt3412, this.anInt3406 + -this.anInt3424, this.anInt3426 - this.anInt3421);
 				if (this.anInt3400 == 512) {

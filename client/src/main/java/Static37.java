@@ -38,7 +38,7 @@ public final class Static37 {
 			if (local70 == Static16.anInt549) {
 				local70 = 2047;
 			}
-			@Pc(83) Player local83 = Static159.aClass8_Sub4_Sub1Array1[local70];
+			@Pc(83) Player local83 = Static159.players[local70];
 			if (local83 != null) {
 				local94 = arg0.anInt3421 - local83.anInt3421;
 				local36 = arg0.anInt3412 - local83.anInt3412;

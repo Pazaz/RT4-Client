@@ -17,7 +17,7 @@ public final class Static159 {
 	public static final JagString aClass100_760 = Static28.parse(")1");
 
 	@OriginalMember(owner = "client!mi", name = "S", descriptor = "[Lclient!e;")
-	public static final Player[] aClass8_Sub4_Sub1Array1 = new Player[2048];
+	public static final Player[] players = new Player[2048];
 
 	@OriginalMember(owner = "client!mi", name = "U", descriptor = "[J")
 	public static final long[] aLongArray5 = new long[500];

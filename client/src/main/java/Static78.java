@@ -113,7 +113,7 @@ public final class Static78 {
 
 		if (Static235.mapFunctionGroup == null) {
 			if (Static158.aClass3_Sub2_Sub4_3 == null || !Static227.js5Archive23.method4497(Static34.concatenate(new JagString[] { Static158.aClass3_Sub2_Sub4_3.aClass100_138, Static50.aClass100_363 }))) {
-				Static235.mapFunctionGroup = new Class134(0);
+				Static235.mapFunctionGroup = new MapFunctionGroup(0);
 			} else if (Static227.js5Archive23.allFilesComplete(Static34.concatenate(new JagString[] { Static158.aClass3_Sub2_Sub4_3.aClass100_138, Static50.aClass100_363 }))) {
 				Static235.mapFunctionGroup = Static140.createMapFunctionGroup(Static34.concatenate(new JagString[] { Static158.aClass3_Sub2_Sub4_3.aClass100_138, Static50.aClass100_363 }), Static227.js5Archive23);
 			} else {

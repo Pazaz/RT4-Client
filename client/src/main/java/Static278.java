@@ -205,7 +205,7 @@ public final class Static278 {
 		for (local19 = 0; local19 < 4; local19++) {
 			Static148.collisionMaps[local19].resetFlags();
 		}
-		Static116.method2325(false);
+		Static116.clear(false);
 		System.gc();
 		Static29.method801();
 		Static144.aBoolean173 = false;
@@ -222,7 +222,7 @@ public final class Static278 {
 		Static267.anInt5774 = 0;
 		Static272.anInt5214 = 0;
 		for (local19 = 0; local19 < 2048; local19++) {
-			Static159.aClass8_Sub4_Sub1Array1[local19] = null;
+			Static159.players[local19] = null;
 			Static115.aClass3_Sub15Array1[local19] = null;
 		}
 		for (local19 = 0; local19 < 32768; local19++) {

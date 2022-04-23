@@ -123,7 +123,7 @@ public final class Static54 {
 				}
 			}
 			for (local146 = 0; local146 < Static267.anInt5774; local146++) {
-				@Pc(591) Player local591 = Static159.aClass8_Sub4_Sub1Array1[Static105.anIntArray256[local146]];
+				@Pc(591) Player local591 = Static159.players[Static105.anIntArray256[local146]];
 				if (local591 != null && local591.method2682()) {
 					local154 = local591.anInt3421 / 32 - Static173.self.anInt3421 / 32;
 					local150 = local591.anInt3412 / 32 - Static173.self.anInt3412 / 32;
@@ -174,8 +174,8 @@ public final class Static54 {
 						local231 = (-Static142.originZ + local770.anInt4046) * 4 + 2 - Static173.self.anInt3421 / 32;
 						Static97.method1960(local770.anInt4048, arg1, arg2, local154, local231, arg3);
 					}
-					if (local770.anInt4058 == 10 && local770.anInt4057 >= 0 && Static159.aClass8_Sub4_Sub1Array1.length > local770.anInt4057) {
-						@Pc(905) Player local905 = Static159.aClass8_Sub4_Sub1Array1[local770.anInt4057];
+					if (local770.anInt4058 == 10 && local770.anInt4057 >= 0 && Static159.players.length > local770.anInt4057) {
+						@Pc(905) Player local905 = Static159.players[local770.anInt4057];
 						if (local905 != null) {
 							local200 = local905.anInt3421 / 32 - Static173.self.anInt3421 / 32;
 							local231 = local905.anInt3412 / 32 - Static173.self.anInt3412 / 32;

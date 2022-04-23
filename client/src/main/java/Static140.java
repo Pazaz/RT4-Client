@@ -97,13 +97,13 @@ public final class Static140 {
 	}
 
 	@OriginalMember(owner = "client!la", name = "a", descriptor = "(ILclient!na;Lclient!ve;)Lclient!se;")
-	public static Class134 createMapFunctionGroup(@OriginalArg(1) JagString arg0, @OriginalArg(2) Js5 arg1) {
+	public static MapFunctionGroup createMapFunctionGroup(@OriginalArg(1) JagString arg0, @OriginalArg(2) Js5 arg1) {
 		@Pc(10) int local10 = arg1.getGroupId(arg0);
 		if (local10 == -1) {
-			return new Class134(0);
+			return new MapFunctionGroup(0);
 		}
 		@Pc(29) int[] local29 = arg1.method4503(local10);
-		@Pc(35) Class134 local35 = new Class134(local29.length);
+		@Pc(35) MapFunctionGroup local35 = new MapFunctionGroup(local29.length);
 		for (@Pc(37) int local37 = 0; local37 < local35.anInt5074; local37++) {
 			@Pc(56) Buffer local56 = new Buffer(arg1.getFile(local10, local29[local37]));
 			local35.aClass100Array153[local37] = local56.gjstr();
