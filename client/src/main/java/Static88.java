@@ -3205,16 +3205,16 @@ public final class Static88 {
 														Static113.anInt4609 = local809;
 														if (!GlRenderer.enabled || !Static178.highDetailLighting) {
 															if (Static113.anInt4609 == 1) {
-																Rasteriser.method1911(0.9F);
+																Rasteriser.setBrightness(0.9F);
 															}
 															if (Static113.anInt4609 == 2) {
-																Rasteriser.method1911(0.8F);
+																Rasteriser.setBrightness(0.8F);
 															}
 															if (Static113.anInt4609 == 3) {
-																Rasteriser.method1911(0.7F);
+																Rasteriser.setBrightness(0.7F);
 															}
 															if (Static113.anInt4609 == 4) {
-																Rasteriser.method1911(0.6F);
+																Rasteriser.setBrightness(0.6F);
 															}
 														}
 														if (GlRenderer.enabled) {
@@ -3257,7 +3257,7 @@ public final class Static88 {
 													if (local226 == 6006) {
 														local28--;
 														Static53.aBoolean99 = Static254.anIntArray487[local28] == 1;
-														((Js5GlTextureProvider) Rasteriser.anInterface1_2).method3245(!Static53.aBoolean99);
+														((Js5GlTextureProvider) Rasteriser.textureProvider).method3245(!Static53.aBoolean99);
 														Static203.method3663(GameShell.signLink);
 														Static18.sentToServer = false;
 														continue;
@@ -3308,19 +3308,19 @@ public final class Static88 {
 														local28--;
 														Static178.highDetailLighting = Static254.anIntArray487[local28] == 1;
 														if (GlRenderer.enabled && Static178.highDetailLighting) {
-															Rasteriser.method1911(0.7F);
+															Rasteriser.setBrightness(0.7F);
 														} else {
 															if (Static113.anInt4609 == 1) {
-																Rasteriser.method1911(0.9F);
+																Rasteriser.setBrightness(0.9F);
 															}
 															if (Static113.anInt4609 == 2) {
-																Rasteriser.method1911(0.8F);
+																Rasteriser.setBrightness(0.8F);
 															}
 															if (Static113.anInt4609 == 3) {
-																Rasteriser.method1911(0.7F);
+																Rasteriser.setBrightness(0.7F);
 															}
 															if (Static113.anInt4609 == 4) {
-																Rasteriser.method1911(0.6F);
+																Rasteriser.setBrightness(0.6F);
 															}
 														}
 														Static145.method2742();

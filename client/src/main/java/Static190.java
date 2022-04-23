@@ -39,9 +39,9 @@ public final class Static190 {
 		if (local43 != null) {
 			return local43;
 		}
-		Rasteriser.aBoolean134 = false;
+		Rasteriser.textureHasTransparency = false;
 		local43 = Static164.method3150(arg4, false, arg1, arg2, arg0, arg3, false);
-		if (local43 != null && !Rasteriser.aBoolean134) {
+		if (local43 != null && !Rasteriser.textureHasTransparency) {
 			Static118.aClass99_16.method3095(local43, local37);
 		}
 		return local43;

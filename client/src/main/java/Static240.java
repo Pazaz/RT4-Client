@@ -10,7 +10,7 @@ public final class Static240 {
 	public static int anInt5333;
 
 	@OriginalMember(owner = "client!tg", name = "c", descriptor = "I")
-	public static int anInt5334;
+	public static int screenLowerX;
 
 	@OriginalMember(owner = "client!tg", name = "d", descriptor = "[Lclient!qf;")
 	public static Sprite[] aClass3_Sub2_Sub1Array10;

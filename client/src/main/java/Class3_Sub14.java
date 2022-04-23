@@ -280,7 +280,7 @@ public final class Class3_Sub14 extends Node {
 			GlRenderer.setTextureId(-1);
 			Static27.setMaterial(0, 0);
 		} else {
-			Rasteriser.anInterface1_2.method3227(this.anInt2485);
+			Rasteriser.textureProvider.method3227(this.anInt2485);
 		}
 		@Pc(282) int local282 = this.aBoolean139 ? 40 : 36;
 		if (this.aClass155_3 == null) {

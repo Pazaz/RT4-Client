@@ -85,7 +85,7 @@ public final class Light {
 		for (local87 = 0; local87 < this.aShortArray30.length; local87++) {
 			this.aShortArray30[local87] = (short) arg0.g2();
 		}
-		this.anInt2247 = Rasteriser.anIntArray220[arg0.g2()];
+		this.anInt2247 = Rasteriser.palette[arg0.g2()];
 		local87 = arg0.g1();
 		this.anInt2249 = (local87 & 0xE0) << 3;
 		this.anInt2243 = local87 & 0x1F;

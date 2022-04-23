@@ -544,10 +544,10 @@ public final class GlRenderer {
 			gl.glRotatef(arg7, 0.0F, 1.0F, 0.0F);
 		}
 		aBoolean266 = false;
-		Static240.anInt5334 = local7;
-		Static247.anInt5405 = local17;
-		Static1.anInt4 = local25;
-		Static148.anInt3535 = local35;
+		Static240.screenLowerX = local7;
+		Static247.screenUpperX = local17;
+		Static1.screenLowerY = local25;
+		Static148.screenUpperY = local35;
 	}
 
 	@OriginalMember(owner = "client!tf", name = "d", descriptor = "(Z)V")
@@ -658,7 +658,7 @@ public final class GlRenderer {
 			@Pc(8) GLCapabilities capabilities = new GLCapabilities(profile);
 			if (numSamples > 0) {
 				capabilities.setSampleBuffers(true);
-				capabilities.setNumSamples(numSamples);
+				capabilities.setNumSamples(numSamples * 4);
 			}
 			@Pc(18) GLDrawableFactory factory = GLDrawableFactory.getFactory(profile);
 			AWTGraphicsConfiguration config = AWTGraphicsConfiguration.create(canvas.getGraphicsConfiguration(), capabilities, capabilities);

@@ -78,7 +78,7 @@ public final class GlTexture extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!uh", name = "a", descriptor = "(Lclient!m;IFLclient!ve;Z)[I")
-	public final int[] method4295(@OriginalArg(0) GlTextureProvider arg0, @OriginalArg(2) float arg1, @OriginalArg(3) Js5 arg2, @OriginalArg(4) boolean arg3) {
+	public final int[] method4295(@OriginalArg(0) TextureProvider arg0, @OriginalArg(2) float arg1, @OriginalArg(3) Js5 arg2, @OriginalArg(4) boolean arg3) {
 		if (this.anIntArray481 == null || this.aFloat35 != arg1) {
 			if (!this.aClass88_1.method2729(arg0, arg2)) {
 				return null;
@@ -167,7 +167,7 @@ public final class GlTexture extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!uh", name = "a", descriptor = "(Lclient!ve;Lclient!m;IZ)Z")
-	public final boolean method4296(@OriginalArg(0) Js5 arg0, @OriginalArg(1) GlTextureProvider arg1, @OriginalArg(3) boolean arg2) {
+	public final boolean method4296(@OriginalArg(0) Js5 arg0, @OriginalArg(1) TextureProvider arg1, @OriginalArg(3) boolean arg2) {
 		if (!this.aClass88_1.method2729(arg1, arg0)) {
 			return false;
 		}
@@ -184,12 +184,12 @@ public final class GlTexture extends SecondaryNode {
 				@Pc(82) ByteBuffer pixels = ByteBuffer.wrap(this.aClass88_1.method2728(size, size, this.aBoolean288, arg1, 0.7D, arg0));
 				if (this.anInt5489 == 2) {
 					// Old GLU code:
-					// @Pc(201) GLUgl2es1 local201 = new GLUgl2es1();
-					// local201.gluBuild2DMipmaps(3553, 6408, size, size, 6408, 5121, pixels);
-					// gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR_MIPMAP_LINEAR);
-					// gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
+//					 @Pc(201) GLUgl2es1 local201 = new GLUgl2es1();
+//					 local201.gluBuild2DMipmaps(3553, 6408, size, size, 6408, 5121, pixels);
+//					 gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR_MIPMAP_LINEAR);
+//					 gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
 
-					// New code (OpenGL 3.0+) w/ texStorage
+					// New code (OpenGL 4+?) w/ texStorage
 					int num_mipmaps = 4;
 					gl.glTexStorage2D(GL2.GL_TEXTURE_2D, num_mipmaps, GL2.GL_RGBA8, size, size);
 					gl.glTexSubImage2D(GL2.GL_TEXTURE_2D, 0, 0, 0, size, size, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, pixels);
@@ -263,7 +263,7 @@ public final class GlTexture extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!uh", name = "a", descriptor = "(ZZLclient!m;Lclient!ve;)[I")
-	public final int[] method4297(@OriginalArg(1) boolean arg0, @OriginalArg(2) GlTextureProvider arg1, @OriginalArg(3) Js5 arg2) {
+	public final int[] method4297(@OriginalArg(1) boolean arg0, @OriginalArg(2) TextureProvider arg1, @OriginalArg(3) Js5 arg2) {
 		if (this.aClass88_1.method2729(arg1, arg2)) {
 			@Pc(24) int local24 = arg0 ? 64 : 128;
 			return this.aClass88_1.method2725(local24, this.aBoolean288, local24, 1.0D, arg2, arg1, false);
@@ -273,7 +273,7 @@ public final class GlTexture extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!uh", name = "a", descriptor = "(ILclient!m;Lclient!ve;)Z")
-	public final boolean method4299(@OriginalArg(1) GlTextureProvider arg0, @OriginalArg(2) Js5 arg1) {
+	public final boolean method4299(@OriginalArg(1) TextureProvider arg0, @OriginalArg(2) Js5 arg1) {
 		return this.aClass88_1.method2729(arg0, arg1);
 	}
 

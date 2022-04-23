@@ -65,10 +65,10 @@ public final class Static176 {
 		@Pc(15) int local15;
 		@Pc(47) int local47;
 		if (Static260.anInt5014 == 0) {
-			@Pc(13) int local13 = Static148.anInt3535;
-			local15 = Static1.anInt4;
-			@Pc(17) int local17 = Static247.anInt5405;
-			@Pc(19) int local19 = Static240.anInt5334;
+			@Pc(13) int local13 = Static148.screenUpperY;
+			local15 = Static1.screenLowerY;
+			@Pc(17) int local17 = Static247.screenUpperX;
+			@Pc(19) int local19 = Static240.screenLowerX;
 			@Pc(33) int local33 = (arg5 - arg3) * (local17 - local19) / arg1 + local19;
 			local47 = local15 + (local13 - local15) * (arg4 - arg0) / arg2;
 			if (Static241.aBoolean302 && (Static274.anInt4999 & 0x40) != 0) {

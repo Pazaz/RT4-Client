@@ -17,7 +17,7 @@ public final class Static148 {
 	public static HashTable aClass133_13;
 
 	@OriginalMember(owner = "client!li", name = "x", descriptor = "I")
-	public static int anInt3535;
+	public static int screenUpperY;
 
 	@OriginalMember(owner = "client!li", name = "h", descriptor = "[Lclient!mj;")
 	public static final CollisionMap[] aClass97Array1 = new CollisionMap[4];

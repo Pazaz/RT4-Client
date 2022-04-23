@@ -8,7 +8,7 @@ public final class Static247 {
 	public static Class120[] aClass120Array2;
 
 	@OriginalMember(owner = "client!ub", name = "m", descriptor = "I")
-	public static int anInt5405;
+	public static int screenUpperX;
 
 	@OriginalMember(owner = "client!ub", name = "a", descriptor = "(IIIIIII)V")
 	public static void method4244(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
