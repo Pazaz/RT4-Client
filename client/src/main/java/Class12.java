@@ -8,7 +8,7 @@ public final class Class12 {
 	public int anInt439;
 
 	@OriginalMember(owner = "client!bd", name = "f", descriptor = "Lclient!cb;")
-	public Class3_Sub2_Sub6 aClass3_Sub2_Sub6_1;
+	public QuickChatPhraseType aClass3_Sub2_Sub6_1;
 
 	@OriginalMember(owner = "client!bd", name = "h", descriptor = "[I")
 	public int[] anIntArray33;

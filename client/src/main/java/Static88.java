@@ -2465,7 +2465,7 @@ public final class Static88 {
 												if (opcode == 5056) {
 													isp--;
 													local809 = Static254.intStack[isp];
-													@Pc(6527) Class3_Sub2_Sub6 local6527 = Static230.method3953(local809);
+													@Pc(6527) QuickChatPhraseType local6527 = Static230.method3953(local809);
 													if (local6527.anIntArray72 == null) {
 														Static254.intStack[isp++] = 0;
 													} else {
@@ -2589,7 +2589,7 @@ public final class Static88 {
 													local809 = Static254.intStack[isp];
 													local1052 = Static254.intStack[isp + 2];
 													local803 = Static254.intStack[isp + 1];
-													@Pc(6996) Class3_Sub2_Sub6 local6996 = Static230.method3953(local809);
+													@Pc(6996) QuickChatPhraseType local6996 = Static230.method3953(local809);
 													if (local6996.method765(local803) != 0) {
 														throw new RuntimeException("bad command");
 													}
