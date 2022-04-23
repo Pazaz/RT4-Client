@@ -44,7 +44,7 @@ public final class Static117 {
 	public static VorbisCodebook[] aClass78Array1;
 
 	@OriginalMember(owner = "client!jc", name = "J", descriptor = "[Lclient!ie;")
-	public static Class67[] aClass67Array1;
+	public static VorbisRange[] aClass67Array1;
 
 	@OriginalMember(owner = "client!jc", name = "L", descriptor = "[I")
 	public static int[] anIntArray277;
@@ -176,9 +176,9 @@ public final class Static117 {
 			method2350(16);
 		}
 		local26 = method2350(6) + 1;
-		aClass67Array1 = new Class67[local26];
+		aClass67Array1 = new VorbisRange[local26];
 		for (local30 = 0; local30 < local26; local30++) {
-			aClass67Array1[local30] = new Class67();
+			aClass67Array1[local30] = new VorbisRange();
 		}
 		local30 = method2350(6) + 1;
 		aClass152Array1 = new VorbisResidue[local30];
