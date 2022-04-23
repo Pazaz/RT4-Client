@@ -8,7 +8,7 @@ public final class Static134 {
 	public static int renderZ;
 
 	@OriginalMember(owner = "client!kh", name = "g", descriptor = "Lclient!hh;")
-	public static final Class59 aClass59_2 = new Class59();
+	public static final PlayerAppearance aClass59_2 = new PlayerAppearance();
 
 	@OriginalMember(owner = "client!kh", name = "a", descriptor = "(B)Lclient!ek;")
 	public static SoftwareIndexedSprite method2619() {

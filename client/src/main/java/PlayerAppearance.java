@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!hh")
-public final class Class59 {
+public final class PlayerAppearance {
 
 	@OriginalMember(owner = "client!hh", name = "e", descriptor = "I")
 	public int anInt2492;
