@@ -52,16 +52,16 @@ public final class Static250 {
 				@Pc(104) int code = Static227.keyCodes[local93];
 				if (code == Keyboard.KEY_UP) {
 					Camera.pitchDirection = 1;
-					Camera.pitchTarget = Camera.getPitch() + 47 & 0xFFFFFFF0;
+					Camera.pitchTarget += 47;
 				} else if (code == Keyboard.KEY_DOWN) {
 					Camera.pitchDirection = 0;
-					Camera.pitchTarget = Camera.getPitch() - 17 & 0xFFFFFFF0;
+					Camera.pitchTarget -= 17;
 				} else if (code == Keyboard.KEY_LEFT) {
 					Camera.yawDirection = 1;
-					Camera.yawTarget = Camera.getYaw() - 65 & 0xFFFFFF80;
+					Camera.yawTarget -= 65;
 				} else if (code == Keyboard.KEY_RIGHT) {
 					Camera.yawDirection = 0;
-					Camera.yawTarget = Camera.getYaw() + 191 & 0xFFFFFF80;
+					Camera.yawTarget += 191;
 				}
 			}
 			Camera.clampCameraAngle();

@@ -26,7 +26,7 @@ public final class Static54 {
 			Static129.method2496(arg2, arg1, arg2 + arg3.anInt445, arg1 + arg3.anInt459);
 		}
 		if (Static270.anInt5795 != 2 && Static270.anInt5795 != 5 && Static89.aClass3_Sub2_Sub1_5 != null) {
-			@Pc(48) int local48 = Static59.anInt1814 + Camera.getYaw() & 0x7FF;
+			@Pc(48) int local48 = Static59.anInt1814 + (int)Camera.yawTarget & 0x7FF;
 			@Pc(57) int local57 = Static173.self.xFine / 32 + 48;
 			@Pc(67) int local67 = 464 - Static173.self.zFine / 32;
 			if (GlRenderer.enabled) {

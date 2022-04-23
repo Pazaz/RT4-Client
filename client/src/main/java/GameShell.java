@@ -524,6 +524,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 				if (updateDelta >= FIXED_UPDATE_RATE * 1_000_000) {
 					this.mainLoopWrapper();
 					lastUpdateTime = currentTime;
+					flush(signLink, canvas);
 				}
 
 				renderDelta = currentTime - lastDrawTime;

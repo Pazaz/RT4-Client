@@ -236,7 +236,7 @@ public final class Static87 {
 									continue;
 								}
 								local276 -= local30.anInt459 / 2;
-								local503 = Camera.getYaw() + Static59.anInt1814 & 0x7FF;
+								local503 = (int)Camera.yawTarget + Static59.anInt1814 & 0x7FF;
 								local270 -= local30.anInt445 / 2;
 								local514 = MathUtils.anIntArray223[local503];
 								local518 = MathUtils.anIntArray225[local503];
