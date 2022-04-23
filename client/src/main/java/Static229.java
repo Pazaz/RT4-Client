@@ -22,9 +22,6 @@ public final class Static229 {
 	@OriginalMember(owner = "client!si", name = "Z", descriptor = "Lclient!na;")
 	public static final JagString aClass100_972 = Static28.parse("<col=ffb000>");
 
-	@OriginalMember(owner = "client!si", name = "eb", descriptor = "I")
-	public static volatile int anInt5140 = 0;
-
 	@OriginalMember(owner = "client!si", name = "gb", descriptor = "Lclient!na;")
 	public static final JagString aClass100_974 = Static28.parse("<br>(X");
 

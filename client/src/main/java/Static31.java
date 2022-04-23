@@ -35,13 +35,6 @@ public final class Static31 {
 		}
 	}
 
-	@OriginalMember(owner = "client!ch", name = "a", descriptor = "(Ljava/awt/Component;I)V")
-	public static void method847(@OriginalArg(0) Component arg0) {
-		arg0.removeKeyListener(Static10.aClass149_1);
-		arg0.removeFocusListener(Static10.aClass149_1);
-		Static114.anInt5844 = -1;
-	}
-
 	@OriginalMember(owner = "client!ch", name = "b", descriptor = "(B)V")
 	public static void method848() {
 		if (Static219.anInt4937 == 0) {

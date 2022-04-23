@@ -187,7 +187,7 @@ public final class Static103 {
 			if (local36 == 0) {
 				Static113.method3556(Static55.level, local15, local19);
 			} else if (local36 == 1) {
-				if (Static191.staffModLevel > 0 && Static187.pressedKeys[82] && Static187.pressedKeys[81]) {
+				if (Static191.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT]) {
 					Static61.teleport(Static225.originX + local15, Static142.originZ + local19, Static55.level);
 				} else if (Static102.method2075(Static173.self.movementQueueZ[0], 0, 0, true, 0, local15, 0, 0, 1, local19, Static173.self.movementQueueX[0])) {
 					Static6.outboundBuffer.p1(Static1.anInt5);
@@ -665,7 +665,7 @@ public final class Static103 {
 			if (local36 == 0) {
 				Static187.anInt4422 = 1;
 				Static113.method3556(Static55.level, local15, local19);
-			} else if (Static191.staffModLevel > 0 && Static187.pressedKeys[82] && Static187.pressedKeys[81]) {
+			} else if (Static191.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT]) {
 				Static61.teleport(local15 + Static225.originX, Static142.originZ - -local19, Static55.level);
 			} else {
 				Static6.outboundBuffer.p1isaac(179);

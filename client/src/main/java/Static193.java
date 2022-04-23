@@ -7,9 +7,6 @@ public final class Static193 {
 	@OriginalMember(owner = "client!pi", name = "U", descriptor = "I")
 	public static int anInt4539;
 
-	@OriginalMember(owner = "client!pi", name = "Y", descriptor = "I")
-	public static int keyChar;
-
 	@OriginalMember(owner = "client!pi", name = "P", descriptor = "J")
 	public static long aLong147 = 0L;
 
@@ -295,7 +292,7 @@ public final class Static193 {
 			Static6.outboundBuffer.p1isaac(77);
 			Static6.outboundBuffer.p1(local13 + local13 + 3);
 		}
-		Static6.outboundBuffer.p1a(Static187.pressedKeys[82] ? 1 : 0);
+		Static6.outboundBuffer.p1a(Keyboard.pressedKeys[Keyboard.KEY_CTRL] ? 1 : 0);
 		Static6.outboundBuffer.p2(Static225.originX + local23);
 		Static6.outboundBuffer.p2add(Static142.originZ + local27);
 		Static84.anInt2255 = Static84.anIntArray209[0];

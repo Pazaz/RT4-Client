@@ -10,9 +10,6 @@ public final class Static17 {
 	@OriginalMember(owner = "client!bg", name = "z", descriptor = "Lclient!na;")
 	public static final JagString aClass100_101 = Static28.parse("k");
 
-	@OriginalMember(owner = "client!bg", name = "A", descriptor = "[I")
-	public static final int[] anIntArray53 = new int[128];
-
 	@OriginalMember(owner = "client!bg", name = "M", descriptor = "I")
 	public static int milliseconds = 0;
 

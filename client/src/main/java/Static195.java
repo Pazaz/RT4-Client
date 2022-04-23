@@ -20,7 +20,7 @@ public final class Static195 {
 
 	@OriginalMember(owner = "client!pk", name = "f", descriptor = "(B)I")
 	public static int getIdleLoops() {
-		return Static229.anInt5140;
+		return Keyboard.idleLoops;
 	}
 
 	@OriginalMember(owner = "client!pk", name = "i", descriptor = "(I)V")

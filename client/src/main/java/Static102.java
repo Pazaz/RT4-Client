@@ -5,14 +5,8 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static102 {
 
-	@OriginalMember(owner = "client!hn", name = "Z", descriptor = "I")
-	public static int keyCode;
-
 	@OriginalMember(owner = "client!hn", name = "K", descriptor = "Ljava/util/Calendar;")
 	public static final Calendar aCalendar2 = Calendar.getInstance();
-
-	@OriginalMember(owner = "client!hn", name = "V", descriptor = "I")
-	public static int anInt2678 = 0;
 
 	@OriginalMember(owner = "client!hn", name = "W", descriptor = "Lclient!na;")
 	public static JagString aClass100_545 = null;

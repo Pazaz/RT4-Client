@@ -13,7 +13,7 @@ public final class Static81 {
 	public static Js5 aClass153_34;
 
 	@OriginalMember(owner = "client!gg", name = "bb", descriptor = "I")
-	public static int anInt2223;
+	public static int cameraX;
 
 	@OriginalMember(owner = "client!gg", name = "U", descriptor = "I")
 	public static int modeWhat = 0;
@@ -236,7 +236,7 @@ public final class Static81 {
 					break;
 				}
 			}
-		} else if (Static187.pressedKeys[96] || Static187.pressedKeys[97] || Static187.pressedKeys[98] || Static187.pressedKeys[99]) {
+		} else if (Keyboard.pressedKeys[Keyboard.KEY_LEFT] || Keyboard.pressedKeys[Keyboard.KEY_RIGHT] || Keyboard.pressedKeys[Keyboard.KEY_UP] || Keyboard.pressedKeys[Keyboard.KEY_DOWN]) {
 			Static197.aBoolean228 = true;
 		}
 		if (Static197.aBoolean228 && Static16.anInt551 <= 0) {
@@ -481,9 +481,9 @@ public final class Static81 {
 		Static180.aClass13_22 = null;
 		@Pc(1508) Component local1508 = Static43.aClass13_11;
 		Static43.aClass13_11 = null;
-		while (Static25.nextKey() && Static182.keyQueueSize < 128) {
-			Static227.keyCodes[Static182.keyQueueSize] = Static102.keyCode;
-			Static205.keyChars[Static182.keyQueueSize] = Static193.keyChar;
+		while (Keyboard.nextKey() && Static182.keyQueueSize < 128) {
+			Static227.keyCodes[Static182.keyQueueSize] = Keyboard.keyCode;
+			Static205.keyChars[Static182.keyQueueSize] = Keyboard.keyChar;
 			Static182.keyQueueSize++;
 		}
 		// WorldMap.component
@@ -513,7 +513,7 @@ public final class Static81 {
 											if (Static105.aClass13_14 != null) {
 												Static4.method28();
 											}
-											if (Static191.staffModLevel > 0 && Static187.pressedKeys[82] && Static187.pressedKeys[81] && Static58.wheelRotation != 0) {
+											if (Static191.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static58.wheelRotation != 0) {
 												y = Static55.level - Static58.wheelRotation;
 												if (y < 0) {
 													y = 0;
@@ -523,7 +523,7 @@ public final class Static81 {
 												// Cheat
 												Static61.teleport(Static173.self.movementQueueX[0] + Static225.originX, Static173.self.movementQueueZ[0] + Static142.originZ, y);
 											}
-											if (Static191.staffModLevel > 0 && Static187.pressedKeys[82] && Static187.pressedKeys[81]) {
+											if (Static191.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT]) {
 												if (Static56.anInt1742 != -1) {
 													Static61.teleport(Static225.originX + Static56.anInt1742, Static142.originZ - -Static116.anInt2954, Static55.level);
 												}

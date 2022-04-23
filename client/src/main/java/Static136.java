@@ -24,19 +24,6 @@ public final class Static136 {
 		local4.intArg1 = arg0;
 	}
 
-	@OriginalMember(owner = "client!kk", name = "a", descriptor = "(ZLjava/awt/event/KeyEvent;)I")
-	public static int method2650(@OriginalArg(1) KeyEvent arg0) {
-		@Pc(6) int local6 = arg0.getKeyChar();
-		if (local6 == 8364) {
-			return 128;
-		} else {
-			if (local6 <= 0 || local6 >= 256) {
-				local6 = -1;
-			}
-			return local6;
-		}
-	}
-
 	@OriginalMember(owner = "client!kk", name = "b", descriptor = "(Lclient!wa;I)V")
 	public static void method2654(@OriginalArg(0) Buffer arg0) {
 		if (arg0.data.length - arg0.offset < 1) {

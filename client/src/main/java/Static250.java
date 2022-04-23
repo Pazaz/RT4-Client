@@ -35,42 +35,42 @@ public final class Static250 {
 
 	@OriginalMember(owner = "client!uf", name = "a", descriptor = "(B)V")
 	public static void method4273() {
-		@Pc(14) int local14 = Static173.self.anInt3412 + Static132.anInt3291;
-		@Pc(20) int local20 = Static173.self.anInt3421 + Static206.anInt4774;
-		if (Static81.anInt2223 - local14 < -500 || Static81.anInt2223 - local14 > 500 || Static111.anInt2900 - local20 < -500 || Static111.anInt2900 - local20 > 500) {
-			Static81.anInt2223 = local14;
-			Static111.anInt2900 = local20;
+		@Pc(14) int playerX = Static173.self.anInt3412 + Static132.anInt3291;
+		@Pc(20) int playerZ = Static173.self.anInt3421 + Static206.anInt4774;
+		if (Static81.cameraX - playerX < -500 || Static81.cameraX - playerX > 500 || Static111.cameraZ - playerZ < -500 || Static111.cameraZ - playerZ > 500) {
+			Static81.cameraX = playerX;
+			Static111.cameraZ = playerZ;
 		}
-		if (Static111.anInt2900 != local20) {
-			Static111.anInt2900 += (local20 - Static111.anInt2900) / 16;
+		if (Static111.cameraZ != playerZ) {
+			Static111.cameraZ += (playerZ - Static111.cameraZ) / 16;
 		}
-		if (Static81.anInt2223 != local14) {
-			Static81.anInt2223 += (local14 - Static81.anInt2223) / 16;
+		if (Static81.cameraX != playerX) {
+			Static81.cameraX += (playerX - Static81.cameraX) / 16;
 		}
 		if (Static33.aBoolean63) {
 			for (@Pc(93) int local93 = 0; local93 < Static182.keyQueueSize; local93++) {
-				@Pc(104) int local104 = Static227.keyCodes[local93];
-				if (local104 == 98) {
+				@Pc(104) int code = Static227.keyCodes[local93];
+				if (code == Keyboard.KEY_UP) {
 					Static72.pitchTarget = Static72.pitchTarget + 47 & 0xFFFFFFF0;
-				} else if (local104 == 99) {
+				} else if (code == Keyboard.KEY_DOWN) {
 					Static72.pitchTarget = Static72.pitchTarget - 17 & 0xFFFFFFF0;
-				} else if (local104 == 96) {
+				} else if (code == Keyboard.KEY_LEFT) {
 					Static57.yawTarget = Static57.yawTarget - 65 & 0xFFFFFF80;
-				} else if (local104 == 97) {
+				} else if (code == Keyboard.KEY_RIGHT) {
 					Static57.yawTarget = Static57.yawTarget + 191 & 0xFFFFFF80;
 				}
 			}
 		} else {
-			if (Static187.pressedKeys[98]) {
+			if (Keyboard.pressedKeys[Keyboard.KEY_UP]) {
 				Static56.anInt1743 += (12 - Static56.anInt1743) / 2;
-			} else if (Static187.pressedKeys[99]) {
+			} else if (Keyboard.pressedKeys[Keyboard.KEY_DOWN]) {
 				Static56.anInt1743 += (-Static56.anInt1743 - 12) / 2;
 			} else {
 				Static56.anInt1743 /= 2;
 			}
-			if (Static187.pressedKeys[96]) {
+			if (Keyboard.pressedKeys[Keyboard.KEY_LEFT]) {
 				Static38.anInt1203 += (-Static38.anInt1203 - 24) / 2;
-			} else if (Static187.pressedKeys[97]) {
+			} else if (Keyboard.pressedKeys[Keyboard.KEY_RIGHT]) {
 				Static38.anInt1203 += (24 - Static38.anInt1203) / 2;
 			} else {
 				Static38.anInt1203 /= 2;

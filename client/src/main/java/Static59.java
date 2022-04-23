@@ -2,6 +2,8 @@ import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
+import java.awt.event.KeyEvent;
+
 public final class Static59 {
 
 	@OriginalMember(owner = "client!ej", name = "X", descriptor = "I")
@@ -21,7 +23,7 @@ public final class Static59 {
 		if (Static162.anInt3953 == 2) {
 			if (Static155.anInt3751 == Static277.anInt5850 && Static60.anInt1892 == Static280.anInt5895) {
 				Static162.anInt3953 = 0;
-				if (Static172.shiftClick && Static187.pressedKeys[81] && Static231.anInt5204 > 2) {
+				if (Static172.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static231.anInt5204 > 2) {
 					Static103.method2232(Static231.anInt5204 - 2);
 				} else {
 					Static103.method2232(Static231.anInt5204 - 1);
@@ -29,7 +31,7 @@ public final class Static59 {
 			}
 		} else if (Static155.anInt3751 == Static7.clickX && Static60.anInt1892 == Static60.clickY) {
 			Static162.anInt3953 = 0;
-			if (Static172.shiftClick && Static187.pressedKeys[81] && Static231.anInt5204 > 2) {
+			if (Static172.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static231.anInt5204 > 2) {
 				Static103.method2232(Static231.anInt5204 - 2);
 			} else {
 				Static103.method2232(Static231.anInt5204 - 1);

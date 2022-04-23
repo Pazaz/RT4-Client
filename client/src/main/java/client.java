@@ -215,7 +215,7 @@ public final class client extends GameShell {
 			Static124.socket.close();
 			Static124.socket = null;
 		}
-		Static31.method847(GameShell.canvas);
+		Keyboard.stop(GameShell.canvas);
 		Static223.method3866(GameShell.canvas);
 		if (Static71.mouseWheel != null) {
 			Static71.mouseWheel.method3291(GameShell.canvas);
@@ -420,9 +420,9 @@ public final class client extends GameShell {
 
 	@OriginalMember(owner = "client!client", name = "d", descriptor = "(B)V")
 	private void method943() {
-		for (Static182.keyQueueSize = 0; Static25.nextKey() && Static182.keyQueueSize < 128; Static182.keyQueueSize++) {
-			Static227.keyCodes[Static182.keyQueueSize] = Static102.keyCode;
-			Static205.keyChars[Static182.keyQueueSize] = Static193.keyChar;
+		for (Static182.keyQueueSize = 0; Keyboard.nextKey() && Static182.keyQueueSize < 128; Static182.keyQueueSize++) {
+			Static227.keyCodes[Static182.keyQueueSize] = Keyboard.keyCode;
+			Static205.keyChars[Static182.keyQueueSize] = Keyboard.keyChar;
 		}
 		Static178.anInt4247++;
 		if (Static154.topLevelInterface != -1) {
@@ -634,10 +634,10 @@ public final class client extends GameShell {
 		if (!Static164.safeMode) {
 			noSafeMode: while (true) {
 				do {
-					if (!Static25.nextKey()) {
+					if (!Keyboard.nextKey()) {
 						break noSafeMode;
 					}
-				} while (Static193.keyChar != 115 && Static193.keyChar != 83);
+				} while (Keyboard.keyChar != 115 && Keyboard.keyChar != 83);
 				Static164.safeMode = true;
 			}
 		}
@@ -967,7 +967,7 @@ public final class client extends GameShell {
 		}
 		Static230.method3948();
 		Static107.method2261();
-		Static65.handleKeyboard();
+		Keyboard.loop();
 		Static111.handleMouse();
 		if (GlRenderer.enabled) {
 			Static63.process();

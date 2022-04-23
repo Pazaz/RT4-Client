@@ -126,7 +126,7 @@ public final class Static19 {
 			} catch (@Pc(25) Throwable local25) {
 			}
 		}
-		arg0.addKeyListener(Static10.aClass149_1);
-		arg0.addFocusListener(Static10.aClass149_1);
+		arg0.addKeyListener(Keyboard.instance);
+		arg0.addFocusListener(Keyboard.instance);
 	}
 }

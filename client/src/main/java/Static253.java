@@ -54,7 +54,7 @@ public final class Static253 {
 			if (Static176.aBooleanArray95[4] && Static276.anIntArray564[4] + 128 > local59) {
 				local59 = Static276.anIntArray564[4] + 128;
 			}
-			Static18.method555(Static81.anInt2223, arg0, Static207.method3685(Static55.level, Static173.self.anInt3412, Static173.self.anInt3421) - 50, 600 - -(local59 * 3), local57, Static111.anInt2900, local59);
+			Static18.method555(Static81.cameraX, arg0, Static207.method3685(Static55.level, Static173.self.anInt3412, Static173.self.anInt3421) - 50, 600 - -(local59 * 3), local57, Static111.cameraZ, local59);
 		}
 		local57 = Static5.anInt40;
 		local59 = Static138.renderX;
