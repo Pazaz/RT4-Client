@@ -37,7 +37,7 @@ public final class Static60 {
 			return;
 		}
 		@Pc(21) int local21 = arg3 * arg3 + arg2 * arg2;
-		@Pc(27) int local27 = Static59.anInt1814 + (int)Static57.yawTarget & 0x7FF;
+		@Pc(27) int local27 = Static59.anInt1814 + Camera.getYaw() & 0x7FF;
 		@Pc(39) int local39 = Math.max(arg0.anInt445 / 2, arg0.anInt459 / 2) + 10;
 		if (local39 * local39 < local21) {
 			return;

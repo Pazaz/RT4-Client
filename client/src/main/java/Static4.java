@@ -697,13 +697,13 @@ public final class Static4 {
 						local786 = Static57.aClass3_Sub15_Sub1_3.g2();
 						local864 = Static57.aClass3_Sub15_Sub1_3.g2();
 						if (Static248.method3288(local786)) {
-							Static57.yawTarget = local133;
-							Static72.pitchTarget = local864;
+							Camera.yawTarget = local133;
+							Camera.pitchTarget = local864;
 							if (Static227.cameraType == 2) {
-								Static240.cameraPitch = (int)Static72.pitchTarget;
-								Static184.cameraYaw = (int)Static57.yawTarget;
+								Static240.cameraPitch = Camera.getPitch();
+								Static184.cameraYaw = Camera.getYaw();
 							}
-							Static87.clampCameraAngle();
+							Camera.clampCameraAngle();
 						}
 						Static164.anInt3985 = -1;
 						return true;

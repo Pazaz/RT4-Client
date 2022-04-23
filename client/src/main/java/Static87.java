@@ -236,7 +236,7 @@ public final class Static87 {
 									continue;
 								}
 								local276 -= local30.anInt459 / 2;
-								local503 = (int)Static57.yawTarget + Static59.anInt1814 & 0x7FF;
+								local503 = Camera.getYaw() + Static59.anInt1814 & 0x7FF;
 								local270 -= local30.anInt445 / 2;
 								local514 = MathUtils.anIntArray223[local503];
 								local518 = MathUtils.anIntArray225[local503];
@@ -889,48 +889,6 @@ public final class Static87 {
 					}
 				}
 			}
-		}
-	}
-
-	@OriginalMember(owner = "client!gn", name = "b", descriptor = "(B)V")
-	public static void clampCameraAngle() {
-		if (Static72.pitchTarget < 128) {
-			Static72.pitchTarget = 128;
-		}
-		if (Static72.pitchTarget > 383) {
-			Static72.pitchTarget = 383;
-		}
-		Static57.yawTarget = (int)Static57.yawTarget & 2047;
-		@Pc(33) int local33 = Static81.cameraX >> 7;
-		@Pc(37) int local37 = Static111.cameraZ >> 7;
-		@Pc(43) int local43 = Static207.method3685(Static55.level, Static81.cameraX, Static111.cameraZ);
-		@Pc(45) int local45 = 0;
-		@Pc(64) int local64;
-		if (local33 > 3 && local37 > 3 && local33 < 100 && local37 < 100) {
-			for (local64 = local33 - 4; local64 <= local33 + 4; local64++) {
-				for (@Pc(73) int local73 = local37 - 4; local73 <= local37 + 4; local73++) {
-					@Pc(80) int local80 = Static55.level;
-					if (local80 < 3 && (Static12.tileSettings[1][local64][local73] & 0x2) == 2) {
-						local80++;
-					}
-					@Pc(117) int local117 = (Static232.aByteArrayArrayArray13[local80][local64][local73] & 0xFF) * 8 + local43 - Static83.activeTileHeightMap[local80][local64][local73];
-					if (local117 > local45) {
-						local45 = local117;
-					}
-				}
-			}
-		}
-		local64 = local45 * 192;
-		if (local64 > 98048) {
-			local64 = 98048;
-		}
-		if (local64 < 32768) {
-			local64 = 32768;
-		}
-		if (Static234.anInt5245 < local64) {
-			Static234.anInt5245 += (local64 - Static234.anInt5245) / 24;
-		} else if (local64 < Static234.anInt5245) {
-			Static234.anInt5245 += (local64 - Static234.anInt5245) / 80;
 		}
 	}
 

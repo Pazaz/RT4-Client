@@ -51,16 +51,20 @@ public final class Static250 {
 			for (@Pc(93) int local93 = 0; local93 < Static182.keyQueueSize; local93++) {
 				@Pc(104) int code = Static227.keyCodes[local93];
 				if (code == Keyboard.KEY_UP) {
-					Static72.pitchTarget = (int)Static72.pitchTarget + 47 & 0xFFFFFFF0;
+					Camera.pitchDirection = 1;
+					Camera.pitchTarget = Camera.getPitch() + 47 & 0xFFFFFFF0;
 				} else if (code == Keyboard.KEY_DOWN) {
-					Static72.pitchTarget = (int)Static72.pitchTarget - 17 & 0xFFFFFFF0;
+					Camera.pitchDirection = 0;
+					Camera.pitchTarget = Camera.getPitch() - 17 & 0xFFFFFFF0;
 				} else if (code == Keyboard.KEY_LEFT) {
-					Static57.yawTarget = (int)Static57.yawTarget - 65 & 0xFFFFFF80;
+					Camera.yawDirection = 1;
+					Camera.yawTarget = Camera.getYaw() - 65 & 0xFFFFFF80;
 				} else if (code == Keyboard.KEY_RIGHT) {
-					Static57.yawTarget = (int)Static57.yawTarget + 191 & 0xFFFFFF80;
+					Camera.yawDirection = 0;
+					Camera.yawTarget = Camera.getYaw() + 191 & 0xFFFFFF80;
 				}
 			}
-			Static87.clampCameraAngle();
+			Camera.clampCameraAngle();
 		}
 	}
 }

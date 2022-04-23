@@ -60,7 +60,7 @@ public final class Static243 {
 		Static260.anInt5014 = 0;
 		Static132.anInt3291 = (int) (Math.random() * 100.0D) - 50;
 		Static84.anInt2255 = 0;
-		Static57.yawTarget = (int) (Math.random() * 20.0D) - 10 & 0x7FF;
+		Camera.yawTarget = (int) (Math.random() * 20.0D) - 10 & 0x7FF;
 		Static107.anInt2875 = -1;
 		Static267.anInt5774 = 0;
 		Static270.anInt5795 = 0;
