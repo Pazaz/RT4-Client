@@ -438,19 +438,27 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 		if (Keyboard.pressedKeys[Keyboard.KEY_UP] || Keyboard.pressedKeys[Keyboard.KEY_DOWN] || Keyboard.pressedKeys[Keyboard.KEY_LEFT] || Keyboard.pressedKeys[Keyboard.KEY_RIGHT]) {
 			double vertical = calcRenderDelta(18.0d);
 			if (Keyboard.pressedKeys[Keyboard.KEY_UP]) {
-				Static72.pitchTarget += vertical;
+				Camera.pitchDirection = 0;
+				Camera.pitchTarget += vertical;
 			} else if (Keyboard.pressedKeys[Keyboard.KEY_DOWN]) {
-				Static72.pitchTarget -= vertical;
+				Camera.pitchDirection = 1;
+				Camera.pitchTarget -= vertical;
+			} else {
+				Camera.pitchDirection = -1;
 			}
 
 			double horizontal = calcRenderDelta(24.0d);
 			if (Keyboard.pressedKeys[Keyboard.KEY_LEFT]) {
-				Static57.yawTarget -= horizontal;
+				Camera.yawDirection = 1;
+				Camera.yawTarget -= horizontal;
 			} else if (Keyboard.pressedKeys[Keyboard.KEY_RIGHT]) {
-				Static57.yawTarget += horizontal;
+				Camera.yawDirection = 0;
+				Camera.yawTarget += horizontal;
+			} else {
+				Camera.yawDirection = -1;
 			}
 
-			Static87.clampCameraAngle();
+			Camera.clampCameraAngle();
 		}
 	}
 

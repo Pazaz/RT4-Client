@@ -243,8 +243,8 @@ public final class Static81 {
 			Static16.anInt551 = 20;
 			Static197.aBoolean228 = false;
 			Static6.outboundBuffer.p1isaac(21);
-			Static6.outboundBuffer.p2add((int)Static72.pitchTarget);
-			Static6.outboundBuffer.p2le((int)Static57.yawTarget);
+			Static6.outboundBuffer.p2add(Camera.getPitch());
+			Static6.outboundBuffer.p2le(Camera.getYaw());
 		}
 		if (GameShell.focus && !Static67.prevFocus) {
 			Static67.prevFocus = true;

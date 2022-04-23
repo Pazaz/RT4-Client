@@ -44,10 +44,14 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
 			int accelY = this.mouseWheelY - y;
 			this.mouseWheelX = x;
 			this.mouseWheelY = y;
-			Static57.yawTarget += accelX * 2;
-			Static72.pitchTarget -= (accelY << 1);
+			Camera.yawDirection = -1;
+			Camera.yawTarget += accelX * 2;
+			Camera.pitchDirection = -1;
+			Camera.pitchTarget -= accelY * 2;
+			Camera.clampCameraAngle();
 			return;
 		}
+
 		if (Static93.instance != null) {
 			Static93.anInt2467 = 0;
 			Static147.anInt3521 = x;
