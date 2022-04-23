@@ -9,7 +9,7 @@ public final class Static242 {
 	public static SoftwareIndexedSprite shadowMapImage;
 
 	@OriginalMember(owner = "client!tj", name = "b", descriptor = "[[Lclient!wm;")
-	public static Class165[][] shadows;
+	public static Shadow[][] shadows;
 
 	@OriginalMember(owner = "client!tj", name = "c", descriptor = "I")
 	private static int anInt5345;
@@ -134,7 +134,7 @@ public final class Static242 {
 					if (local29 - arg0 >= -arg2 && local29 - arg0 <= arg2) {
 						for (@Pc(51) int local51 = local22 * 8; local51 < local22 * 8 + 8; local51++) {
 							if (local51 - arg1 >= -arg2 && local51 - arg1 <= arg2 && arg4[local29 + arg2 - arg0][local51 + arg2 - arg1]) {
-								@Pc(89) Class165 local89 = shadows[local17][local22];
+								@Pc(89) Shadow local89 = shadows[local17][local22];
 								if (local89.outputToSprite) {
 									local89.method4677(shadowMapImage, local17, local22);
 									local89.outputToSprite = false;
@@ -227,10 +227,10 @@ public final class Static242 {
 		anInt5346 = 13;
 		anInt5345 = 13;
 		shadowMapImage = new SoftwareIndexedSprite(anInt5346 * 128 + 2, anInt5345 * 128 + 2, 0);
-		shadows = new Class165[anInt5346][anInt5345];
+		shadows = new Shadow[anInt5346][anInt5345];
 		for (@Pc(32) int local32 = 0; local32 < anInt5346; local32++) {
 			for (@Pc(37) int local37 = 0; local37 < anInt5345; local37++) {
-				shadows[local32][local37] = new Class165();
+				shadows[local32][local37] = new Shadow();
 			}
 		}
 	}
