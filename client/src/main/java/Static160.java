@@ -69,14 +69,14 @@ public final class Static160 {
 			return false;
 		} else if (local29 > arg4 && local66 > arg4) {
 			return false;
-		} else if (local50 < Static240.anInt5334 && local87 < Static240.anInt5334) {
+		} else if (local50 < Static240.screenLowerX && local87 < Static240.screenLowerX) {
 			return false;
-		} else if (local50 > Static247.anInt5405 && local87 > Static247.anInt5405) {
+		} else if (local50 > Static247.screenUpperX && local87 > Static247.screenUpperX) {
 			return false;
-		} else if (local56 < Static1.anInt4 && local93 < Static1.anInt4) {
+		} else if (local56 < Static1.screenLowerY && local93 < Static1.screenLowerY) {
 			return false;
 		} else {
-			return local56 <= Static148.anInt3535 || local93 <= Static148.anInt3535;
+			return local56 <= Static148.screenUpperY || local93 <= Static148.screenUpperY;
 		}
 	}
 }

@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static1 {
 
 	@OriginalMember(owner = "client!a", name = "g", descriptor = "I")
-	public static int anInt4;
+	public static int screenLowerY;
 
 	@OriginalMember(owner = "client!a", name = "h", descriptor = "I")
 	public static int anInt5;
@@ -555,7 +555,7 @@ public final class Static1 {
 				Static70.aClass3_Sub2_Sub1_2 = local63;
 			}
 			if (GlRenderer.enabled) {
-				Static129.anIntArray297 = null;
+				Static129.pixels = null;
 			} else {
 				Static260.frameBuffer.makeTarget();
 			}

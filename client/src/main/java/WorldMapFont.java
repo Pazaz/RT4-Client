@@ -118,31 +118,31 @@ public final class WorldMapFont {
 		@Pc(21) int local21 = arg4[arg0 + 3];
 		@Pc(27) int local27 = arg4[arg0 + 4];
 		@Pc(47) int local47 = arg4[arg0] * 16384 + arg4[arg0 + 1] * 128 + arg4[arg0 + 2];
-		@Pc(53) int local53 = local7 + local15 * Static129.anInt3144;
-		@Pc(57) int local57 = Static129.anInt3144 - local21;
+		@Pc(53) int local53 = local7 + local15 * Static129.width;
+		@Pc(57) int local57 = Static129.width - local21;
 		@Pc(59) int local59 = 0;
 		@Pc(66) int local66;
-		if (local15 < Static129.anInt3147) {
-			local66 = Static129.anInt3147 - local15;
+		if (local15 < Static129.clipTop) {
+			local66 = Static129.clipTop - local15;
 			local27 -= local66;
-			local15 = Static129.anInt3147;
+			local15 = Static129.clipTop;
 			local47 += local66 * local21;
-			local53 += local66 * Static129.anInt3144;
+			local53 += local66 * Static129.width;
 		}
-		if (local15 + local27 >= Static129.anInt3149) {
-			local27 -= local15 + local27 + 1 - Static129.anInt3149;
+		if (local15 + local27 >= Static129.clipBottom) {
+			local27 -= local15 + local27 + 1 - Static129.clipBottom;
 		}
-		if (local7 < Static129.anInt3145) {
-			local66 = Static129.anInt3145 - local7;
+		if (local7 < Static129.clipLeft) {
+			local66 = Static129.clipLeft - local7;
 			local21 -= local66;
-			local7 = Static129.anInt3145;
+			local7 = Static129.clipLeft;
 			local47 += local66;
 			local53 += local66;
 			local59 = local66;
 			local57 += local66;
 		}
-		if (local7 + local21 >= Static129.anInt3148) {
-			local66 = local7 + local21 + 1 - Static129.anInt3148;
+		if (local7 + local21 >= Static129.clipRight) {
+			local66 = local7 + local21 + 1 - Static129.clipRight;
 			local21 -= local66;
 			local59 += local66;
 			local57 += local66;
@@ -151,9 +151,9 @@ public final class WorldMapFont {
 			return;
 		}
 		if (this.aBoolean112) {
-			this.method1505(Static129.anIntArray297, arg4, arg3, local47, local53, local21, local27, local57, local59);
+			this.method1505(Static129.pixels, arg4, arg3, local47, local53, local21, local27, local57, local59);
 		} else {
-			this.method1507(Static129.anIntArray297, arg4, arg3, local47, local53, local21, local27, local57, local59);
+			this.method1507(Static129.pixels, arg4, arg3, local47, local53, local21, local27, local57, local59);
 		}
 	}
 
@@ -201,7 +201,7 @@ public final class WorldMapFont {
 	public final void method1508(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		@Pc(5) int local5 = this.method1510(arg0) / 2;
 		@Pc(8) int local8 = this.method1511();
-		if (arg1 - local5 <= Static129.anInt3148 && (arg1 + local5 >= Static129.anInt3145 && (arg2 - local8 <= Static129.anInt3149 && arg2 >= 0))) {
+		if (arg1 - local5 <= Static129.clipRight && (arg1 + local5 >= Static129.clipLeft && (arg2 - local8 <= Static129.clipBottom && arg2 >= 0))) {
 			this.method1502(arg0, arg1 - local5, arg2, arg3, true);
 		}
 	}

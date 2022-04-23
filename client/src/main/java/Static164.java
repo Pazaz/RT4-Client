@@ -42,7 +42,7 @@ public final class Static164 {
 				if (local14 > 0L) {
 					local65 = arg3;
 				}
-				local75 = Static129.anIntArray297;
+				local75 = Static129.pixels;
 				local90 = (52736 - arg2 * 512) * 4 + arg0 * 4 + 24624;
 				if (local35 == 0 || local35 == 2) {
 					if (local28 == 0) {
@@ -118,7 +118,7 @@ public final class Static164 {
 						local65 = 15597568;
 					}
 					local90 = arg0 * 4 + (103 - arg2) * 2048 + 24624;
-					local75 = Static129.anIntArray297;
+					local75 = Static129.pixels;
 					if (local28 == 0 || local28 == 2) {
 						local75[local90 + 1536] = local65;
 						local75[local90 + 1025] = local65;
@@ -200,17 +200,17 @@ public final class Static164 {
 				return null;
 			}
 		}
-		@Pc(118) int[] local118 = Static129.anIntArray297;
-		@Pc(120) int local120 = Static129.anInt3144;
+		@Pc(118) int[] local118 = Static129.pixels;
+		@Pc(120) int local120 = Static129.width;
 		@Pc(122) int local122 = Static129.anInt3146;
 		@Pc(125) int[] local125 = new int[4];
 		Static129.method2497(local125);
 		@Pc(133) SoftwareSprite local133 = new SoftwareSprite(36, 32);
 		Static129.method2491(local133.anIntArray20, 36, 32);
-		Rasteriser.method1908();
-		Rasteriser.method1919(16, 16);
+		Rasteriser.prepare();
+		Rasteriser.setBounds(16, 16);
 		@Pc(145) int local145 = local5.anInt2375;
-		Rasteriser.aBoolean136 = false;
+		Rasteriser.jagged = false;
 		if (arg6) {
 			local145 = (int) ((double) local145 * 1.5D);
 		} else if (arg4 == 2) {
@@ -241,8 +241,8 @@ public final class Static164 {
 		}
 		Static129.method2491(local118, local120, local122);
 		Static129.method2488(local125);
-		Rasteriser.method1908();
-		Rasteriser.aBoolean136 = true;
+		Rasteriser.prepare();
+		Rasteriser.jagged = true;
 		return GlRenderer.enabled && !arg1 ? new GlSprite(local133) : local133;
 	}
 }

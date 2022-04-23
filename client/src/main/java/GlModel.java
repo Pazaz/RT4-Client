@@ -140,7 +140,7 @@ public final class GlModel extends Model {
 		@Pc(23) int[] local23 = new int[arg0.anInt2136];
 		this.anIntArray462 = new int[arg0.anInt2139 + 1];
 		for (@Pc(32) int local32 = 0; local32 < arg0.anInt2136; local32++) {
-			if ((arg0.aByteArray30 == null || arg0.aByteArray30[local32] != 2) && (arg0.aShortArray23 == null || arg0.aShortArray23[local32] == -1 || !Rasteriser.anInterface1_2.method3231(arg0.aShortArray23[local32] & 0xFFFF))) {
+			if ((arg0.aByteArray30 == null || arg0.aByteArray30[local32] != 2) && (arg0.aShortArray23 == null || arg0.aShortArray23[local32] == -1 || !Rasteriser.textureProvider.method3231(arg0.aShortArray23[local32] & 0xFFFF))) {
 				local23[this.anInt5297++] = local32;
 				this.anIntArray462[arg0.anIntArray197[local32]]++;
 				this.anIntArray462[arg0.anIntArray200[local32]]++;
@@ -162,11 +162,11 @@ public final class GlModel extends Model {
 			if (arg0.aShortArray23 != null) {
 				local135 = arg0.aShortArray23[local125];
 				if (local135 != -1) {
-					local131 = Rasteriser.anInterface1_2.method3237(local135 & 0xFFFF);
-					local133 = Rasteriser.anInterface1_2.method3228(local135 & 0xFFFF);
+					local131 = Rasteriser.textureProvider.method3237(local135 & 0xFFFF);
+					local133 = Rasteriser.textureProvider.method3228(local135 & 0xFFFF);
 				}
 			}
-			@Pc(182) boolean local182 = arg0.aByteArray26 != null && arg0.aByteArray26[local125] != 0 || local135 != -1 && !Rasteriser.anInterface1_2.method3226(local135 & 0xFFFF);
+			@Pc(182) boolean local182 = arg0.aByteArray26 != null && arg0.aByteArray26[local125] != 0 || local135 != -1 && !Rasteriser.textureProvider.isOpaque(local135 & 0xFFFF);
 			if ((arg3 || local182) && arg0.aByteArray35 != null) {
 				local127 += arg0.aByteArray35[local125] << 17;
 			}
@@ -648,20 +648,20 @@ public final class GlModel extends Model {
 		}
 		@Pc(84) int local84 = arg7 * arg3 + arg5 * arg4 >> 16;
 		@Pc(90) int local90 = local84 + local13 << 9;
-		if (local90 / local53 <= Static240.anInt5334) {
+		if (local90 / local53 <= Static240.screenLowerX) {
 			return;
 		}
 		@Pc(102) int local102 = local84 - local13 << 9;
-		if (local102 / local53 >= Static247.anInt5405) {
+		if (local102 / local53 >= Static247.screenUpperX) {
 			return;
 		}
 		@Pc(118) int local118 = arg6 * arg2 - local31 * arg1 >> 16;
 		@Pc(132) int local132 = local118 + (local13 * arg1 + local21 * arg2 >> 16) << 9;
-		if (local132 / local53 <= Static1.anInt4) {
+		if (local132 / local53 <= Static1.screenLowerY) {
 			return;
 		}
 		@Pc(153) int local153 = local118 + (-local13 * arg1 + local17 * arg2 >> 16) << 9;
-		if (local153 / local53 >= Static148.anInt3535) {
+		if (local153 / local53 >= Static148.screenUpperY) {
 			return;
 		}
 		@Pc(161) int local161 = 0;
@@ -1745,14 +1745,14 @@ public final class GlModel extends Model {
 		local1 = 0;
 		@Pc(22) int local22 = 0;
 		if (arg0 != -1) {
-			local1 = Rasteriser.anInterface1_2.method3238(arg0 & 0xFFFF);
-			local22 = Rasteriser.anInterface1_2.method3229(arg0 & 0xFFFF);
+			local1 = Rasteriser.textureProvider.method3238(arg0 & 0xFFFF);
+			local22 = Rasteriser.textureProvider.method3229(arg0 & 0xFFFF);
 		}
 		@Pc(41) int local41 = 0;
 		@Pc(43) int local43 = 0;
 		if (arg1 != -1) {
-			local41 = Rasteriser.anInterface1_2.method3238(arg1 & 0xFFFF);
-			local43 = Rasteriser.anInterface1_2.method3229(arg1 & 0xFFFF);
+			local41 = Rasteriser.textureProvider.method3238(arg1 & 0xFFFF);
+			local43 = Rasteriser.textureProvider.method3229(arg1 & 0xFFFF);
 		}
 		if (local1 != local41 || local22 != local43) {
 			this.aClass127_1.aBoolean235 = false;
@@ -3072,7 +3072,7 @@ public final class GlModel extends Model {
 				GlRenderer.setTextureId(-1);
 				Static27.setMaterial(0, 0);
 			} else {
-				Rasteriser.anInterface1_2.method3227(local439 & 0xFFFF);
+				Rasteriser.textureProvider.method3227(local439 & 0xFFFF);
 			}
 			if (this.aClass127_5.aClass155_4 == null) {
 				this.aClass127_5.aByteBuffer8.position(local427 * 12);
@@ -3233,7 +3233,7 @@ public final class GlModel extends Model {
 				@Pc(322) int local322 = Static237.anIntArray467[local297];
 				@Pc(326) int local326 = Static237.anIntArray467[local302];
 				if ((local246 - local248) * (local322 - local326) - (local322 - local318) * (local258 - local248) > 0) {
-					Rasteriser.method1921(local151.aByteArray18, local318, local322, local326, local246, local248, local258, local134);
+					Rasteriser.fillSpriteTriangle(local151.aByteArray18, local318, local322, local326, local246, local248, local258, local134);
 				}
 			}
 		}

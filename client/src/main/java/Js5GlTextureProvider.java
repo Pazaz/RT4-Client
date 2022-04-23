@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!nk")
-public final class Js5GlTextureProvider implements GlTextureProvider {
+public final class Js5GlTextureProvider implements TextureProvider {
 
 	@OriginalMember(owner = "client!nk", name = "z", descriptor = "Z")
 	private boolean aBoolean200 = false;
@@ -198,7 +198,7 @@ public final class Js5GlTextureProvider implements GlTextureProvider {
 
 	@OriginalMember(owner = "client!nk", name = "a", descriptor = "(BI)Z")
 	@Override
-	public final boolean method3226(@OriginalArg(1) int arg0) {
+	public final boolean isOpaque(@OriginalArg(1) int arg0) {
 		return this.aBooleanArray91[arg0];
 	}
 
@@ -249,13 +249,13 @@ public final class Js5GlTextureProvider implements GlTextureProvider {
 
 	@OriginalMember(owner = "client!nk", name = "d", descriptor = "(II)I")
 	@Override
-	public final int method3234(@OriginalArg(0) int arg0) {
+	public final int getAverageColor(@OriginalArg(0) int arg0) {
 		return this.aShortArray59[arg0] & 0xFFFF;
 	}
 
 	@OriginalMember(owner = "client!nk", name = "b", descriptor = "(BI)Z")
 	@Override
-	public final boolean method3233(@OriginalArg(1) int arg0) {
+	public final boolean isLowDetail(@OriginalArg(1) int arg0) {
 		return this.aBoolean200 || this.aBooleanArray89[arg0];
 	}
 

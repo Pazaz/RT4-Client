@@ -101,7 +101,7 @@ public final class Static253 {
 			GlRenderer.method4171(arg2, arg4, arg3, arg0, arg3 / 2 + arg2, arg4 - -(arg0 / 2), local248, local253, Static223.anInt5029, Static223.anInt5029);
 		} else {
 			Static129.method2496(arg2, arg4, arg3 + arg2, arg0 + arg4);
-			Rasteriser.method1908();
+			Rasteriser.prepare();
 		}
 		if (Static60.aBoolean108 || Static155.anInt3751 < arg2 || Static155.anInt3751 >= arg3 + arg2 || arg4 > Static60.anInt1892 || arg0 + arg4 <= Static60.anInt1892) {
 			Static39.aBoolean77 = false;
@@ -109,11 +109,11 @@ public final class Static253 {
 		} else {
 			Static39.aBoolean77 = true;
 			Static2.anInt7 = 0;
-			local171 = Static247.anInt5405;
-			@Pc(344) int local344 = Static1.anInt4;
-			local127 = Static240.anInt5334;
+			local171 = Static247.screenUpperX;
+			@Pc(344) int local344 = Static1.screenLowerY;
+			local127 = Static240.screenLowerX;
 			Static150.anInt3582 = local127 + (local171 - local127) * (-arg2 + Static155.anInt3751) / arg3;
-			@Pc(361) int local361 = Static148.anInt3535;
+			@Pc(361) int local361 = Static148.screenUpperY;
 			Static34.anInt1053 = (local361 - local344) * (Static60.anInt1892 - arg4) / arg0 + local344;
 		}
 		Static107.method2261();
@@ -147,7 +147,7 @@ public final class Static253 {
 			Static142.method2726(arg4, arg3, arg2, 256, arg0, 256);
 			Static233.method4000(arg3, arg2, arg0, 256, 256, arg4);
 		}
-		((Js5GlTextureProvider) Rasteriser.anInterface1_2).method3239(Static178.anInt4247);
+		((Js5GlTextureProvider) Rasteriser.textureProvider).method3239(Static178.anInt4247);
 		Static115.method2310(arg3, arg4, arg0, arg2);
 		Static240.anInt5333 = local123;
 		Static134.anInt3302 = local121;

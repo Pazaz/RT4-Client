@@ -162,7 +162,7 @@ public final class Static156 {
 		GlRenderer.disableDepthMask();
 		for (@Pc(19) int local19 = 0; local19 < Static36.aClass3_Sub14ArrayArray1[0].length; local19++) {
 			@Pc(31) Class3_Sub14 local31 = Static36.aClass3_Sub14ArrayArray1[0][local19];
-			if (local31.anInt2485 >= 0 && Rasteriser.anInterface1_2.method3237(local31.anInt2485) == 4) {
+			if (local31.anInt2485 >= 0 && Rasteriser.textureProvider.method3237(local31.anInt2485) == 4) {
 				local1.glColor4fv(Static190.method3441(local31.anInt2486), 0);
 				@Pc(57) float local57 = 201.5F - (local31.aBoolean140 ? 1.0F : 0.5F);
 				local31.method1944(Static130.aClass3_Sub5ArrayArrayArray1, local57, true);

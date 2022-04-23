@@ -103,7 +103,7 @@ public final class Static137 {
 			for (local76 = 1; local76 < 103; local76++) {
 				if ((Static12.aByteArrayArrayArray2[arg0][local76][local37] & 0x18) == 0 && !Static164.method3109(local76, local455, local37, local35, arg0)) {
 					if (GlRenderer.enabled) {
-						Static129.anIntArray297 = null;
+						Static129.pixels = null;
 					} else {
 						Static260.frameBuffer.makeTarget();
 					}
@@ -111,7 +111,7 @@ public final class Static137 {
 				}
 				if (arg0 < 3 && (Static12.aByteArrayArrayArray2[arg0 + 1][local76][local37] & 0x8) != 0 && !Static164.method3109(local76, local455, local37, local35, arg0 + 1)) {
 					if (GlRenderer.enabled) {
-						Static129.anIntArray297 = null;
+						Static129.pixels = null;
 					} else {
 						Static260.frameBuffer.makeTarget();
 					}
@@ -132,7 +132,7 @@ public final class Static137 {
 			Static89.aClass3_Sub2_Sub1_5 = Static56.aClass3_Sub2_Sub1_Sub1_1;
 		}
 		if (GlRenderer.enabled) {
-			Static129.anIntArray297 = null;
+			Static129.pixels = null;
 		} else {
 			Static260.frameBuffer.makeTarget();
 		}
