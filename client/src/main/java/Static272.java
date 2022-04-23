@@ -21,7 +21,7 @@ public final class Static272 {
 
 	@OriginalMember(owner = "client!wd", name = "a", descriptor = "(BII)V")
 	public static void method3995(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
-		@Pc(14) Class85 local14 = Static125.method2449(arg1);
+		@Pc(14) VarbitType local14 = Static125.method2449(arg1);
 		@Pc(17) int local17 = local14.anInt3327;
 		@Pc(20) int local20 = local14.anInt3323;
 		@Pc(23) int local23 = local14.anInt3318;

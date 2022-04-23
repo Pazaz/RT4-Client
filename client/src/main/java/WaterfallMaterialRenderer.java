@@ -58,7 +58,7 @@ public final class WaterfallMaterialRenderer implements MaterialRenderer {
 		this.aFloatArray21[1] = local36;
 		local7.glTexGenfv(GL2.GL_T, GL2.GL_EYE_PLANE, this.aFloatArray21, 0);
 		local7.glPopMatrix();
-		if (Static151.aBoolean176) {
+		if (Static151.allows3DTextureMapping) {
 			this.aFloatArray21[3] = (float) GlRenderer.anInt5323 * local18;
 			this.aFloatArray21[1] = 0.0F;
 			this.aFloatArray21[0] = 0.0F;
@@ -66,7 +66,7 @@ public final class WaterfallMaterialRenderer implements MaterialRenderer {
 			local7.glTexGenfv(GL2.GL_R, GL2.GL_OBJECT_PLANE, this.aFloatArray21, 0);
 		} else {
 			@Pc(189) int local189 = (int) ((float) GlRenderer.anInt5323 * local18 * 64.0F);
-			local7.glBindTexture(GL2.GL_TEXTURE_2D, Static151.anIntArray340[local189 % 64]);
+			local7.glBindTexture(GL2.GL_TEXTURE_2D, Static151.waterfallTextures[local189 % 64]);
 		}
 		local7.glActiveTexture(GL2.GL_TEXTURE0);
 	}
@@ -91,8 +91,8 @@ public final class WaterfallMaterialRenderer implements MaterialRenderer {
 		this.anInt4236 = local3.glGenLists(2);
 		local3.glNewList(this.anInt4236, GL2.GL_COMPILE);
 		local3.glActiveTexture(GL2.GL_TEXTURE1);
-		if (Static151.aBoolean176) {
-			local3.glBindTexture(GL2.GL_TEXTURE_3D, Static151.anInt3588);
+		if (Static151.allows3DTextureMapping) {
+			local3.glBindTexture(GL2.GL_TEXTURE_3D, Static151.waterfallTextureId);
 			local3.glTexGeni(GL2.GL_R, GL2.GL_TEXTURE_GEN_MODE, GL2.GL_OBJECT_LINEAR);
 			local3.glEnable(GL2.GL_TEXTURE_GEN_R);
 			local3.glEnable(GL2.GL_TEXTURE_3D);
@@ -107,7 +107,7 @@ public final class WaterfallMaterialRenderer implements MaterialRenderer {
 		local3.glEndList();
 		local3.glNewList(this.anInt4236 + 1, GL2.GL_COMPILE);
 		local3.glActiveTexture(GL2.GL_TEXTURE1);
-		if (Static151.aBoolean176) {
+		if (Static151.allows3DTextureMapping) {
 			local3.glDisable(GL2.GL_TEXTURE_3D);
 			local3.glDisable(GL2.GL_TEXTURE_GEN_R);
 		} else {
