@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Player extends PathingEntity {
 
 	@OriginalMember(owner = "client!e", name = "Bc", descriptor = "Lclient!hh;")
-	public Class59 aClass59_1;
+	public PlayerAppearance aClass59_1;
 
 	@OriginalMember(owner = "client!e", name = "Mc", descriptor = "Lclient!na;")
 	public JagString aClass100_364;
@@ -152,7 +152,7 @@ public final class Player extends PathingEntity {
 			}
 		}
 		if (this.aClass59_1 == null) {
-			this.aClass59_1 = new Class59();
+			this.aClass59_1 = new PlayerAppearance();
 		}
 		local175 = this.aClass59_1.anInt2492;
 		this.aClass59_1.method1950(local197, local22, local26 == 1, local44, this.anInt3365);
