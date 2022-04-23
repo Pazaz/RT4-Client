@@ -59,31 +59,31 @@ public final class Static64 {
 			return;
 		}
 		if (Static9.anInt178 >= 100 && !Static202.aBoolean233 || Static9.anInt178 >= 200) {
-			Static103.method2231(Static186.aClass100_827, 0, LocalizedText.FRIENDLISTFULL);
+			Static103.method2231(Static186.EMPTY_FILE, 0, LocalizedText.FRIENDLISTFULL);
 			return;
 		}
 		@Pc(35) JagString local35 = Static79.decode37(arg0).method3125();
 		@Pc(42) int local42;
 		for (local42 = 0; local42 < Static9.anInt178; local42++) {
 			if (Static92.aLongArray3[local42] == arg0) {
-				Static103.method2231(Static186.aClass100_827, 0, Static34.method882(new JagString[] { local35, LocalizedText.FRIENDLISTDUPE}));
+				Static103.method2231(Static186.EMPTY_FILE, 0, Static34.concatenate(new JagString[] { local35, LocalizedText.FRIENDLISTDUPE}));
 				return;
 			}
 		}
 		for (local42 = 0; local42 < Static35.anInt1093; local42++) {
 			if (arg0 == Static190.aLongArray6[local42]) {
-				Static103.method2231(Static186.aClass100_827, 0, Static34.method882(new JagString[] { LocalizedText.REMOVESOCIAL1, local35, LocalizedText.REMOVEIGNORE}));
+				Static103.method2231(Static186.EMPTY_FILE, 0, Static34.concatenate(new JagString[] { LocalizedText.REMOVESOCIAL1, local35, LocalizedText.REMOVEIGNORE}));
 				return;
 			}
 		}
 		if (local35.method3108(Static173.self.aClass100_364)) {
-			Static103.method2231(Static186.aClass100_827, 0, LocalizedText.FRIENDCANTADDSELF);
+			Static103.method2231(Static186.EMPTY_FILE, 0, LocalizedText.FRIENDCANTADDSELF);
 			return;
 		}
 		Static122.aClass100Array92[Static9.anInt178] = local35;
 		Static92.aLongArray3[Static9.anInt178] = arg0;
 		Static104.anIntArray255[Static9.anInt178] = 0;
-		Static214.aClass100Array170[Static9.anInt178] = Static186.aClass100_827;
+		Static214.aClass100Array170[Static9.anInt178] = Static186.EMPTY_FILE;
 		Static106.anIntArray258[Static9.anInt178] = 0;
 		Static3.aBooleanArray135[Static9.anInt178] = false;
 		Static9.anInt178++;

@@ -8,7 +8,7 @@ public final class Static257 {
 	public static Component aClass13_7;
 
 	@OriginalMember(owner = "client!v", name = "f", descriptor = "Lclient!al;")
-	public static Js5MasterIndex aClass9_2;
+	public static Js5MasterIndex js5MasterIndex;
 
 	@OriginalMember(owner = "client!v", name = "a", descriptor = "Lclient!na;")
 	public static final JagString aClass100_98 = Static28.parse(")4a=");

@@ -39,15 +39,15 @@ public final class Static182 {
 		if (GlRenderer.enabled) {
 			Static46.method1179(GameShell.canvasWidth / 2 - 152, local9, 304, 34, 9179409);
 			Static46.method1179(GameShell.canvasWidth / 2 - 151, local9 - -1, 302, 32, 0);
-			Static46.method1186(GameShell.canvasWidth / 2 - 150, local9 + 2, Static199.anInt4670 * 3, 30, 9179409);
-			Static46.method1186(GameShell.canvasWidth / 2 + Static199.anInt4670 * 3 - 150, local9 + 2, 300 - Static199.anInt4670 * 3, 30, 0);
+			Static46.method1186(GameShell.canvasWidth / 2 - 150, local9 + 2, Static199.mainLoadPercentage * 3, 30, 9179409);
+			Static46.method1186(GameShell.canvasWidth / 2 + Static199.mainLoadPercentage * 3 - 150, local9 + 2, 300 - Static199.mainLoadPercentage * 3, 30, 0);
 		} else {
 			Static129.method2483(GameShell.canvasWidth / 2 - 152, local9, 304, 34, 9179409);
 			Static129.method2483(GameShell.canvasWidth / 2 - 151, local9 + 1, 302, 32, 0);
-			Static129.method2495(GameShell.canvasWidth / 2 - 150, local9 + 2, Static199.anInt4670 * 3, 30, 9179409);
-			Static129.method2495(Static199.anInt4670 * 3 + GameShell.canvasWidth / 2 - 150, local9 + 2, 300 - Static199.anInt4670 * 3, 30, 0);
+			Static129.method2495(GameShell.canvasWidth / 2 - 150, local9 + 2, Static199.mainLoadPercentage * 3, 30, 9179409);
+			Static129.method2495(Static199.mainLoadPercentage * 3 + GameShell.canvasWidth / 2 - 150, local9 + 2, 300 - Static199.mainLoadPercentage * 3, 30, 0);
 		}
-		arg1.method2875(Static126.aClass100_602, GameShell.canvasWidth / 2, GameShell.canvasHeight / 2 + 4, 16777215, -1);
+		arg1.method2875(Static126.mainLoadSecondaryText, GameShell.canvasWidth / 2, GameShell.canvasHeight / 2 + 4, 16777215, -1);
 	}
 
 	@OriginalMember(owner = "client!oj", name = "a", descriptor = "(IZIJI)Lclient!na;")
@@ -74,7 +74,7 @@ public final class Static182 {
 		@Pc(59) JagString local59 = Static87.method1804(0);
 		@Pc(61) int local61;
 		for (local61 = 0; local61 < arg2; local61++) {
-			local59.method3113(Static123.method2423((int) (arg3 % 10L)));
+			local59.method3113(Static123.parseInt((int) (arg3 % 10L)));
 			arg3 /= 10L;
 		}
 		local61 = 0;
@@ -87,7 +87,7 @@ public final class Static182 {
 				if (arg1 && local61 != 0 && local61 % 3 == 0) {
 					local95.method3113(local26);
 				}
-				local95.method3113(Static123.method2423((int) (arg3 % 10L)));
+				local95.method3113(Static123.parseInt((int) (arg3 % 10L)));
 				local61++;
 				arg3 /= 10L;
 			}
@@ -96,7 +96,7 @@ public final class Static182 {
 		if (local59.length() > 0) {
 			local59.method3113(local28);
 		}
-		return Static34.method882(new JagString[] { local9, local137.method3124(), local59.method3124() });
+		return Static34.concatenate(new JagString[] { local9, local137.method3124(), local59.method3124() });
 	}
 
 	@OriginalMember(owner = "client!oj", name = "a", descriptor = "(IBI[[III)I")

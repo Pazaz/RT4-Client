@@ -15,7 +15,7 @@ public final class Static175 {
 	public static int anInt4220 = 0;
 
 	@OriginalMember(owner = "client!nm", name = "Y", descriptor = "J")
-	public static long aLong138 = 0L;
+	public static long firstGc = 0L;
 
 	@OriginalMember(owner = "client!nm", name = "bb", descriptor = "Lclient!na;")
 	public static final JagString aClass100_798 = Static28.parse("<col=ff0000>");

@@ -58,11 +58,11 @@ public final class Static197 {
 			if (GameShell.fullScreenFrame != null) {
 				Static22.anInt729 = arg5;
 				Static114.anInt5831 = arg4;
-				Static203.method3663(GameShell.signLink);
+				Static203.write(GameShell.signLink);
 			}
 		}
 		if (arg1 == 3 && GameShell.fullScreenFrame == null) {
-			method3560(true, Static214.anInt5581, true, arg3, -1, -1);
+			method3560(true, Static214.windowMode, true, arg3, -1, -1);
 			return;
 		}
 		@Pc(85) Container local85;
@@ -151,7 +151,7 @@ public final class Static197 {
 				}
 			}
 			if (Static211.aBoolean73) {
-				GlRenderer.init(GameShell.canvas, Static186.anInt4392 * 2);
+				GlRenderer.init(GameShell.canvas, Static186.antiAliasingMode * 2);
 			}
 		}
 		if (!GlRenderer.enabled && arg1 > 0) {
@@ -174,16 +174,16 @@ public final class Static197 {
 			Static76.method1643();
 			((Js5GlTextureProvider) Rasteriser.textureProvider).method3248(20);
 			if (Static178.highDetailLighting) {
-				if (Static113.anInt4609 == 1) {
+				if (Static113.brightness == 1) {
 					Rasteriser.setBrightness(0.9F);
 				}
-				if (Static113.anInt4609 == 2) {
+				if (Static113.brightness == 2) {
 					Rasteriser.setBrightness(0.8F);
 				}
-				if (Static113.anInt4609 == 3) {
+				if (Static113.brightness == 3) {
 					Rasteriser.setBrightness(0.7F);
 				}
-				if (Static113.anInt4609 == 4) {
+				if (Static113.brightness == 4) {
 					Rasteriser.setBrightness(0.6F);
 				}
 			}

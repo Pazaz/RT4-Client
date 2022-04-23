@@ -20,7 +20,7 @@ public final class Static141 {
 	public static int anInt3470 = 0;
 
 	@OriginalMember(owner = "client!lb", name = "A", descriptor = "I")
-	public static int anInt3474 = 0;
+	public static int buildArea = 0;
 
 	@OriginalMember(owner = "client!lb", name = "d", descriptor = "(B)V")
 	public static void method2720() {
@@ -56,15 +56,15 @@ public final class Static141 {
 			Static242.method4201();
 			Static76.method1642();
 		}
-		Static102.method2074(Static261.aClass153_107, Static209.aClass153_86);
-		Static30.method839(Static209.aClass153_86);
+		Static102.load(Static261.js5Archive13, Static209.js5Archive8);
+		Static30.load(Static209.js5Archive8);
 		Static204.aClass3_Sub2_Sub1_10 = null;
 		Static39.aClass3_Sub2_Sub1_1 = null;
 		Static92.aClass3_Sub2_Sub1_6 = null;
 		Static165.aClass3_Sub2_Sub1_8 = null;
 		Static181.aClass3_Sub2_Sub1_9 = null;
 		if (Static244.anInt5370 == 5) {
-			Static181.method3344(Static209.aClass153_86);
+			Static181.method3344(Static209.js5Archive8);
 		}
 		if (Static244.anInt5370 == 10) {
 			Static73.method1596(false);
@@ -90,7 +90,7 @@ public final class Static141 {
 	}
 
 	@OriginalMember(owner = "client!lb", name = "a", descriptor = "(Lclient!ve;Lclient!ve;ILclient!ve;)V")
-	public static void method2724(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1, @OriginalArg(3) Js5 arg2) {
+	public static void init(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1, @OriginalArg(3) Js5 arg2) {
 		Static243.aClass153_98 = arg1;
 		Static5.aClass153_1 = arg0;
 		Static225.aClass153_92 = arg2;

@@ -234,7 +234,7 @@ public final class Static104 {
 	}
 
 	@OriginalMember(owner = "client!ia", name = "a", descriptor = "(I)I")
-	public static int method2252() {
+	public static int getTotal() {
 		return 2;
 	}
 }

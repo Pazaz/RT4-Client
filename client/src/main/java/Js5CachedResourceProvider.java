@@ -446,7 +446,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 	}
 
 	@OriginalMember(owner = "client!bg", name = "f", descriptor = "(I)I")
-	public final int method538() {
+	public final int getIndexPercentageComplete() {
 		if (this.method521() == null) {
 			return this.aClass3_Sub2_Sub5_1 == null ? 0 : this.aClass3_Sub2_Sub5_1.method3553();
 		} else {

@@ -58,6 +58,66 @@ public class AudioChannel {
 	@OriginalMember(owner = "client!vh", name = "C", descriptor = "I")
 	private int anInt4636 = 0;
 
+    @OriginalMember(owner = "client!dc", name = "a", descriptor = "(IIIZ)V")
+    public static void init(@OriginalArg(3) boolean arg0) {
+        Static258.anInt5637 = 2;
+        stereo = arg0;
+        Static44.sampleRate = 22050;
+    }
+
+	@OriginalMember(owner = "client!id", name = "a", descriptor = "(ILsignlink!ll;Ljava/awt/Component;II)Lclient!vh;")
+	public static AudioChannel create(@OriginalArg(0) int arg0, @OriginalArg(1) SignLink arg1, @OriginalArg(2) Component arg2, @OriginalArg(3) int arg3) {
+		if (Static44.sampleRate == 0) {
+			throw new IllegalStateException();
+		}
+		try {
+			@Pc(33) AudioChannel local33 = (AudioChannel) Class.forName("JavaAudioChannel").getDeclaredConstructor().newInstance();
+			local33.anInt4641 = arg0;
+			local33.anIntArray411 = new int[(stereo ? 2 : 1) * 256];
+			local33.init(arg2);
+			local33.anInt4644 = (arg0 & -1024) + 1024;
+			if (local33.anInt4644 > 16384) {
+				local33.anInt4644 = 16384;
+			}
+			local33.open(local33.anInt4644);
+			if (Static258.anInt5637 > 0 && Static60.aClass19_1 == null) {
+				Static60.aClass19_1 = new AudioThread();
+				Static60.aClass19_1.signLink = arg1;
+				arg1.startThread(Static258.anInt5637, Static60.aClass19_1);
+			}
+			if (Static60.aClass19_1 != null) {
+				if (Static60.aClass19_1.channels[arg3] != null) {
+					throw new IllegalArgumentException();
+				}
+				Static60.aClass19_1.channels[arg3] = local33;
+			}
+			return local33;
+		} catch (@Pc(109) Throwable local109) {
+			try {
+				@Pc(120) SignLinkAudioChannel local120 = new SignLinkAudioChannel(arg1, arg3);
+				local120.anIntArray411 = new int[(stereo ? 2 : 1) * 256];
+				local120.anInt4641 = arg0;
+				local120.init(arg2);
+				local120.anInt4644 = 16384;
+				local120.open(local120.anInt4644);
+				if (Static258.anInt5637 > 0 && Static60.aClass19_1 == null) {
+					Static60.aClass19_1 = new AudioThread();
+					Static60.aClass19_1.signLink = arg1;
+					arg1.startThread(Static258.anInt5637, Static60.aClass19_1);
+				}
+				if (Static60.aClass19_1 != null) {
+					if (Static60.aClass19_1.channels[arg3] != null) {
+						throw new IllegalArgumentException();
+					}
+					Static60.aClass19_1.channels[arg3] = local120;
+				}
+				return local120;
+			} catch (@Pc(186) Throwable local186) {
+				return new AudioChannel();
+			}
+		}
+	}
+
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "()V")
 	protected void write() throws Exception {
 	}
@@ -168,7 +228,7 @@ public class AudioChannel {
 	}
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "(B)V")
-	public final synchronized void method3565() {
+	public final synchronized void loop() {
 		if (this.anIntArray411 == null) {
 			return;
 		}
@@ -242,7 +302,7 @@ public class AudioChannel {
 	}
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "(ILclient!qb;)V")
-	public final synchronized void method3566(@OriginalArg(1) PcmStream arg0) {
+	public final synchronized void setStream(@OriginalArg(1) PcmStream arg0) {
 		this.aClass3_Sub3_6 = arg0;
 	}
 
@@ -300,16 +360,16 @@ public class AudioChannel {
 		if (Static60.aClass19_1 != null) {
 			@Pc(6) boolean local6 = true;
 			for (@Pc(8) int local8 = 0; local8 < 2; local8++) {
-				if (Static60.aClass19_1.aClass62Array1[local8] == this) {
-					Static60.aClass19_1.aClass62Array1[local8] = null;
+				if (Static60.aClass19_1.channels[local8] == this) {
+					Static60.aClass19_1.channels[local8] = null;
 				}
-				if (Static60.aClass19_1.aClass62Array1[local8] != null) {
+				if (Static60.aClass19_1.channels[local8] != null) {
 					local6 = false;
 				}
 			}
 			if (local6) {
-				Static60.aClass19_1.aBoolean62 = true;
-				while (Static60.aClass19_1.aBoolean64) {
+				Static60.aClass19_1.stop = true;
+				while (Static60.aClass19_1.running) {
 					Static231.sleep(50L);
 				}
 				Static60.aClass19_1 = null;

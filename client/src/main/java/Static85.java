@@ -17,7 +17,7 @@ public final class Static85 {
 	public static int anInt2263;
 
 	@OriginalMember(owner = "client!gl", name = "a", descriptor = "(Lclient!ve;I)V")
-	public static void method1774(@OriginalArg(0) Js5 arg0) {
+	public static void init(@OriginalArg(0) Js5 arg0) {
 		Static84.aClass153_35 = arg0;
 	}
 

@@ -297,7 +297,7 @@ public final class Static231 {
 	}
 
 	@OriginalMember(owner = "client!sk", name = "a", descriptor = "(Lclient!ve;I)Z")
-	public static boolean method3986(@OriginalArg(0) Js5 arg0) {
+	public static boolean isReady(@OriginalArg(0) Js5 arg0) {
 		return arg0.method4506(Static138.anInt3443);
 	}
 }

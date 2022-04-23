@@ -53,25 +53,25 @@ public final class Static140 {
 			return;
 		}
 		if (Static35.anInt1093 >= 100) {
-			Static103.method2231(Static186.aClass100_827, 0, LocalizedText.IGNORELISTFULL);
+			Static103.method2231(Static186.EMPTY_FILE, 0, LocalizedText.IGNORELISTFULL);
 			return;
 		}
 		@Pc(34) JagString local34 = Static79.decode37(arg0).method3125();
 		@Pc(36) int local36;
 		for (local36 = 0; local36 < Static35.anInt1093; local36++) {
 			if (Static190.aLongArray6[local36] == arg0) {
-				Static103.method2231(Static186.aClass100_827, 0, Static34.method882(new JagString[] { local34, LocalizedText.IGNORELISTDUPE}));
+				Static103.method2231(Static186.EMPTY_FILE, 0, Static34.concatenate(new JagString[] { local34, LocalizedText.IGNORELISTDUPE}));
 				return;
 			}
 		}
 		for (local36 = 0; local36 < Static9.anInt178; local36++) {
 			if (Static92.aLongArray3[local36] == arg0) {
-				Static103.method2231(Static186.aClass100_827, 0, Static34.method882(new JagString[] { LocalizedText.REMOVESOCIAL2, local34, LocalizedText.REMOVEFRIEND}));
+				Static103.method2231(Static186.EMPTY_FILE, 0, Static34.concatenate(new JagString[] { LocalizedText.REMOVESOCIAL2, local34, LocalizedText.REMOVEFRIEND}));
 				return;
 			}
 		}
 		if (local34.method3108(Static173.self.aClass100_364)) {
-			Static103.method2231(Static186.aClass100_827, 0, LocalizedText.IGNORECANTADDSELF);
+			Static103.method2231(Static186.EMPTY_FILE, 0, LocalizedText.IGNORECANTADDSELF);
 			return;
 		}
 		Static190.aLongArray6[Static35.anInt1093] = arg0;
@@ -98,7 +98,7 @@ public final class Static140 {
 
 	@OriginalMember(owner = "client!la", name = "a", descriptor = "(ILclient!na;Lclient!ve;)Lclient!se;")
 	public static Class134 method2711(@OriginalArg(1) JagString arg0, @OriginalArg(2) Js5 arg1) {
-		@Pc(10) int local10 = arg1.method4482(arg0);
+		@Pc(10) int local10 = arg1.getGroupId(arg0);
 		if (local10 == -1) {
 			return new Class134(0);
 		}

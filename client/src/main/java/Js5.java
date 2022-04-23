@@ -32,7 +32,7 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(B)Z")
-	public final boolean method4475() {
+	public final boolean fetchAll() {
 		if (!this.method4484()) {
 			return false;
 		}
@@ -59,7 +59,7 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(IZZ)V")
-	public final void method4477(@OriginalArg(1) boolean arg0) {
+	public final void discardNames(@OriginalArg(1) boolean arg0) {
 		if (!this.method4484()) {
 			return;
 		}
@@ -103,7 +103,7 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(Lclient!na;B)I")
-	public final int method4482(@OriginalArg(0) JagString arg0) {
+	public final int getGroupId(@OriginalArg(0) JagString arg0) {
 		if (this.method4484()) {
 			@Pc(16) JagString local16 = arg0.toLowerCase();
 			@Pc(27) int local27 = this.aClass70_2.aClass76_1.method2405(local16.method3154());
@@ -132,7 +132,7 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(ILclient!na;Lclient!na;)[B")
-	public final byte[] method4485(@OriginalArg(1) JagString arg0, @OriginalArg(2) JagString arg1) {
+	public final byte[] fetchFile(@OriginalArg(1) JagString arg0, @OriginalArg(2) JagString arg1) {
 		if (!this.method4484()) {
 			return null;
 		}
@@ -157,7 +157,7 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(Lclient!na;BLclient!na;)Z")
-	public final boolean method4487(@OriginalArg(0) JagString arg0, @OriginalArg(2) JagString arg1) {
+	public final boolean isFileReady(@OriginalArg(0) JagString arg0, @OriginalArg(2) JagString arg1) {
 		if (!this.method4484()) {
 			return false;
 		}
@@ -385,7 +385,7 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "c", descriptor = "(B)I")
-	public final int method4498() {
+	public final int getPercentageComplete() {
 		if (!this.method4484()) {
 			return 0;
 		}

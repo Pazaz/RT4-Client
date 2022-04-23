@@ -77,7 +77,7 @@ public final class Static34 {
 	public static boolean verifyIdChanged = false;
 
 	@OriginalMember(owner = "client!ck", name = "a", descriptor = "(ILclient!va;Lclient!ve;Lclient!ve;Lclient!ve;)Z")
-	public static boolean method876(@OriginalArg(1) MidiPcmStream arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) Js5 arg2, @OriginalArg(4) Js5 arg3) {
+	public static boolean init(@OriginalArg(1) MidiPcmStream arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) Js5 arg2, @OriginalArg(4) Js5 arg3) {
 		Static210.aClass153_87 = arg1;
 		Static78.aClass153_32 = arg3;
 		Static252.aClass153_103 = arg2;
@@ -245,7 +245,7 @@ public final class Static34 {
 	}
 
 	@OriginalMember(owner = "client!ck", name = "a", descriptor = "([Lclient!na;B)Lclient!na;")
-	public static JagString method882(@OriginalArg(0) JagString[] arg0) {
+	public static JagString concatenate(@OriginalArg(0) JagString[] arg0) {
 		if (arg0.length < 2) {
 			throw new IllegalArgumentException();
 		}

@@ -26,7 +26,7 @@ public final class Static266 {
 	public static int game = 0;
 
 	@OriginalMember(owner = "client!vk", name = "a", descriptor = "(Lclient!ve;Lclient!ve;I)V")
-	public static void method4187(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {
+	public static void init(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {
 		Static93.aClass153_41 = arg0;
 		Static132.aClass153_48 = arg1;
 	}

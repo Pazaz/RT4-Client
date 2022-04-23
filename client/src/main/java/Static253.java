@@ -14,7 +14,7 @@ public final class Static253 {
 	public static float aFloat36;
 
 	@OriginalMember(owner = "client!ui", name = "cb", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_104;
+	public static Js5 js5Archive20;
 
 	@OriginalMember(owner = "client!ui", name = "eb", descriptor = "[[[B")
 	public static byte[][][] aByteArrayArrayArray16;
@@ -123,9 +123,9 @@ public final class Static253 {
 			GlRenderer.setDepthTestEnabled(true);
 			GlRenderer.setFogEnabled(true);
 			if (Static244.anInt5370 == 10) {
-				local171 = Static103.method2235(Static178.anInt4247, Static134.anInt3302 >> 10, Static113.anInt4609, Static138.anInt3439 >> 10);
+				local171 = Static103.method2235(Static178.anInt4247, Static134.anInt3302 >> 10, Static113.brightness, Static138.anInt3439 >> 10);
 			} else {
-				local171 = Static103.method2235(Static178.anInt4247, Static173.self.movementQueueZ[0] >> 3, Static113.anInt4609, Static173.self.movementQueueX[0] >> 3);
+				local171 = Static103.method2235(Static178.anInt4247, Static173.self.movementQueueZ[0] >> 3, Static113.brightness, Static173.self.movementQueueX[0] >> 3);
 			}
 			Static120.method2394(Static83.anInt372, !Static11.aBoolean15);
 			GlRenderer.clearColorAndDepthBuffers(local171);

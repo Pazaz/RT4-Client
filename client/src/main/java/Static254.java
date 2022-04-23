@@ -14,7 +14,7 @@ public final class Static254 {
 	public static int anInt5559;
 
 	@OriginalMember(owner = "client!uj", name = "J", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_105;
+	public static Js5 js5Archive24;
 
 	@OriginalMember(owner = "client!uj", name = "s", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1061 = Static28.parse("null");

@@ -8,7 +8,7 @@ public final class Static164 {
 	public static boolean newTab;
 
 	@OriginalMember(owner = "client!na", name = "h", descriptor = "Z")
-	public static boolean aBoolean191 = false;
+	public static boolean safeMode = false;
 
 	@OriginalMember(owner = "client!na", name = "l", descriptor = "I")
 	public static int anInt3985 = 0;

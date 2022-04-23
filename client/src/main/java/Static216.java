@@ -59,18 +59,18 @@ public final class Static216 {
 				@Pc(120) int local120 = (int) (local106 >> 16 & 0x1FL);
 				Static6.outboundBuffer.p1(local120);
 				Static124.socket.write(Static6.outboundBuffer.data, 2);
-				if (Static11.aClass62_1 != null) {
-					Static11.aClass62_1.method3571();
+				if (Static11.musicChannel != null) {
+					Static11.musicChannel.method3571();
 				}
-				if (Static147.aClass62_2 != null) {
-					Static147.aClass62_2.method3571();
+				if (Static147.soundChannel != null) {
+					Static147.soundChannel.method3571();
 				}
 				@Pc(150) int local150 = Static124.socket.read();
-				if (Static11.aClass62_1 != null) {
-					Static11.aClass62_1.method3571();
+				if (Static11.musicChannel != null) {
+					Static11.musicChannel.method3571();
 				}
-				if (Static147.aClass62_2 != null) {
-					Static147.aClass62_2.method3571();
+				if (Static147.soundChannel != null) {
+					Static147.soundChannel.method3571();
 				}
 				if (local150 != 0) {
 					Static266.anInt5336 = local150;
@@ -126,41 +126,41 @@ public final class Static216 {
 				Static17.aClass3_Sub15_Sub1_2.p1(Static144.method2736());
 				Static17.aClass3_Sub15_Sub1_2.p2(GameShell.canvasWidth);
 				Static17.aClass3_Sub15_Sub1_2.p2(GameShell.canvasHeight);
-				Static17.aClass3_Sub15_Sub1_2.p1(Static186.anInt4392);
+				Static17.aClass3_Sub15_Sub1_2.p1(Static186.antiAliasingMode);
 				Static140.method2705(Static17.aClass3_Sub15_Sub1_2);
 				Static17.aClass3_Sub15_Sub1_2.pjstr(Static47.aClass100_991);
 				Static17.aClass3_Sub15_Sub1_2.p4(Static204.anInt4760);
 				Static17.aClass3_Sub15_Sub1_2.p4(Static145.method2746());
 				Static18.sentToServer = true;
 				Static17.aClass3_Sub15_Sub1_2.p2(Static189.anInt4443);
-				Static17.aClass3_Sub15_Sub1_2.p4(Static213.aClass153_88.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static249.aClass153_100.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static274.aClass153_90.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static41.aClass153_25.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static248.aClass153_75.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static26.aClass153_16.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static130.aClass153_47.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static267.aClass153_109.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static209.aClass153_86.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static195.aClass153_80.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static184.aClass153_78.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static214.aClass153_106.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static16.aClass153_9.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static261.aClass153_107.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static137.aClass153_49.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static138.aClass153_51.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static280.aClass153_110.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static138.aClass153_50.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static172.aClass153_71.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static171.aClass153_68.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static253.aClass153_104.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static122.aClass153_46.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static156.aClass153_59.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static227.aClass153_94.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static254.aClass153_105.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static28.aClass153_18.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static167.aClass153_63.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static226.aClass153_93.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static213.js5Archive0.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static249.js5Archive1.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static274.js5Archive2.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static41.js5Archive3.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static248.js5Archive4.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static26.js5Archive5.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static130.js5Archive6.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static267.js5Archive7.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static209.js5Archive8.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static195.js5Archive9.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static184.js5Archive10.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static214.js5Archive11.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static16.js5Archive12.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static261.js5Archive13.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static137.js5Archive14.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static138.js5Archive15.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static280.js5Archive16.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static138.js5Archive17.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static172.js5Archive18.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static171.js5Archive19.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static253.js5Archive20.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static122.js5Archive21.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static156.js5Archive22.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static227.js5Archive23.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static254.js5Archive24.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static28.js5Archive25.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static167.js5Archive26.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(Static226.js5Archive27.method4480());
 				if (GlobalConfig.LOGIN_FAKE_IDX28) {
 					Static17.aClass3_Sub15_Sub1_2.p4(0);
 				}

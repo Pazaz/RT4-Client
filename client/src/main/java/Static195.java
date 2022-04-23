@@ -10,7 +10,7 @@ public final class Static195 {
 	public static int anInt4581;
 
 	@OriginalMember(owner = "client!pk", name = "Z", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_80;
+	public static Js5 js5Archive9;
 
 	@OriginalMember(owner = "client!pk", name = "bb", descriptor = "Lclient!na;")
 	public static JagString aClass100_859;

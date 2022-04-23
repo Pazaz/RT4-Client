@@ -128,7 +128,7 @@ public final class Static142 {
 						@Pc(518) Npc local518 = (Npc) local17;
 						@Pc(528) Sprite[] local528 = (Sprite[]) Static73.aClass99_10.method3106((long) local518.aClass96_1.anInt3736);
 						if (local528 == null) {
-							local528 = Static209.method3708(local518.aClass96_1.anInt3736, Static209.aClass153_86);
+							local528 = Static209.method3708(local518.aClass96_1.anInt3736, Static209.js5Archive8);
 							if (local528 != null) {
 								Static73.aClass99_10.method3095(local528, (long) local518.aClass96_1.anInt3736);
 							}
@@ -193,7 +193,7 @@ public final class Static142 {
 								Static65.anInt1951 += 15;
 							}
 							Static213.aClass3_Sub2_Sub1Array8[local17.anIntArray321[local74]].method1423(arg2 + Static65.anInt1951 - 12, arg0 + Static16.anInt548 - 12);
-							Static114.aClass3_Sub2_Sub9_42.method2875(Static123.method2423(local17.anIntArray322[local74]), Static65.anInt1951 + arg2 - 1, Static16.anInt548 + 3 + arg0, 16777215, 0);
+							Static114.aClass3_Sub2_Sub9_42.method2875(Static123.parseInt(local17.anIntArray322[local74]), Static65.anInt1951 + arg2 - 1, Static16.anInt548 + 3 + arg0, 16777215, 0);
 						}
 					}
 				}

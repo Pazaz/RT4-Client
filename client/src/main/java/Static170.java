@@ -11,7 +11,7 @@ public final class Static170 {
 	public static int anInt3241 = 128;
 
 	@OriginalMember(owner = "client!nh", name = "fb", descriptor = "[I")
-	public static final int[] anIntArray306 = new int[] { 4, 4, 1, 2, 6, 4, 2, 49, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+	public static final int[] JS5_ARCHIVE_WEIGHTS = new int[] { 4, 4, 1, 2, 6, 4, 2, 49, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
 
 	@OriginalMember(owner = "client!nh", name = "hb", descriptor = "Lclient!na;")
 	public static final JagString aClass100_623 = Static28.parse("::fps ");

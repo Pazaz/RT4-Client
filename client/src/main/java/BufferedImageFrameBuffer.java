@@ -40,7 +40,7 @@ public final class BufferedImageFrameBuffer extends FrameBuffer {
 
 	@OriginalMember(owner = "client!ti", name = "a", descriptor = "(IIIILjava/awt/Graphics;I)V")
 	@Override
-	public final void method4191(@OriginalArg(0) int width, @OriginalArg(1) int x, @OriginalArg(3) int height, @OriginalArg(4) Graphics graphics, @OriginalArg(5) int y) {
+	public final void drawAt(@OriginalArg(0) int width, @OriginalArg(1) int x, @OriginalArg(3) int height, @OriginalArg(4) Graphics graphics, @OriginalArg(5) int y) {
 		@Pc(2) Shape clip = graphics.getClip();
 		graphics.clipRect(x, y, width, height);
 		graphics.drawImage(this.image, 0, 0, this.component);

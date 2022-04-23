@@ -36,12 +36,12 @@ public final class Static80 {
 
 	@OriginalMember(owner = "client!gf", name = "a", descriptor = "(Lsignlink!ll;I)V")
 	public static void read(@OriginalArg(0) SignLink arg0) {
-		Static113.anInt4609 = 3;
+		Static113.brightness = 3;
 		Static53.method1293(true);
 		aBoolean231 = true;
-		Static99.aBoolean143 = true;
+		Static99.stereo = true;
 		Static220.aBoolean244 = true;
-		Static102.anInt2679 = 0;
+		Static102.windowMode = 0;
 		Static22.anInt729 = 0;
 		Static250.aBoolean283 = true;
 		Static11.aBoolean15 = true;
@@ -54,8 +54,8 @@ public final class Static80 {
 		Static159.aBoolean189 = true;
 		Static178.highDetailLighting = true;
 		Static12.anInt391 = 255;
-		Static53.aBoolean99 = true;
-		Static186.anInt4392 = 0;
+		Static53.highDetailTextures = true;
+		Static186.antiAliasingMode = 0;
 		@Pc(48) FileOnDisk local48 = null;
 		Static125.anInt3104 = 127;
 		if (GameShell.maxMemory >= 96) {
@@ -64,12 +64,12 @@ public final class Static80 {
 			Static76.method1645(0);
 		}
 		Static164.anInt3988 = 0;
-		Static141.anInt3474 = 0;
+		Static141.buildArea = 0;
 		Static33.aBoolean63 = false;
 		Static64.aBoolean111 = true;
-		Static164.aBoolean191 = false;
+		Static164.safeMode = false;
 		Static127.aBoolean159 = false;
-		Static214.anInt5581 = 0;
+		Static214.windowMode = 0;
 		try {
 			@Pc(78) PrivilegedRequest local78 = arg0.openPreferences("runescape");
 			while (local78.status == 0) {

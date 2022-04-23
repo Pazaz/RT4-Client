@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static267 {
 
 	@OriginalMember(owner = "client!vl", name = "g", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_109;
+	public static Js5 js5Archive7;
 
 	@OriginalMember(owner = "client!vl", name = "a", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable aClass99_37 = new SoftLruHashTable(100);

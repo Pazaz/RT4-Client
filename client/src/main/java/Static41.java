@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static41 {
 
 	@OriginalMember(owner = "client!dc", name = "z", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_25;
+	public static Js5 js5Archive3;
 
 	@OriginalMember(owner = "client!dc", name = "v", descriptor = "Lclient!na;")
 	public static final JagString aClass100_266 = Static28.parse("<col=c0ff00>");
@@ -157,13 +157,6 @@ public final class Static41 {
 			}
 		}
 		return local33;
-	}
-
-	@OriginalMember(owner = "client!dc", name = "a", descriptor = "(IIIZ)V")
-	public static void method1045(@OriginalArg(3) boolean arg0) {
-		Static258.anInt5637 = 2;
-		AudioChannel.stereo = arg0;
-		Static44.sampleRate = 22050;
 	}
 
 	@OriginalMember(owner = "client!dc", name = "b", descriptor = "(Z)V")

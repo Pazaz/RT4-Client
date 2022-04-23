@@ -23,7 +23,7 @@ public final class Static160 {
 	public static int anInt3902 = 0;
 
 	@OriginalMember(owner = "client!mj", name = "A", descriptor = "J")
-	public static long aLong134 = 0L;
+	public static long prevGc = 0L;
 
 	@OriginalMember(owner = "client!mj", name = "a", descriptor = "(IILclient!be;IB)V")
 	public static void method3047(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Component arg2, @OriginalArg(3) int arg3) {

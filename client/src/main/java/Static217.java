@@ -44,16 +44,16 @@ public final class Static217 {
 			}
 			@Pc(95) JagString local95 = Static266.game == 1 ? LocalizedText.RATING : LocalizedText.LEVEL;
 			if (arg2.anInt1652 < arg2.anInt1656) {
-				local158 = Static34.method882(new JagString[] { arg2.method1264(), local22 ? Static123.method2420(arg2.anInt1652, Static173.self.anInt1652) : Static204.aClass100_896, Static123.aClass100_593, local95, Static123.method2423(arg2.anInt1652), Static78.aClass100_465, Static123.method2423(arg2.anInt1656 - arg2.anInt1652), Static72.aClass100_448 });
+				local158 = Static34.concatenate(new JagString[] { arg2.method1264(), local22 ? Static123.method2420(arg2.anInt1652, Static173.self.anInt1652) : Static204.aClass100_896, Static123.aClass100_593, local95, Static123.parseInt(arg2.anInt1652), Static78.aClass100_465, Static123.parseInt(arg2.anInt1656 - arg2.anInt1652), Static72.aClass100_448 });
 			} else {
-				local158 = Static34.method882(new JagString[] { arg2.method1264(), local22 ? Static123.method2420(arg2.anInt1652, Static173.self.anInt1652) : Static204.aClass100_896, Static123.aClass100_593, local95, Static123.method2423(arg2.anInt1652), Static72.aClass100_448 });
+				local158 = Static34.concatenate(new JagString[] { arg2.method1264(), local22 ? Static123.method2420(arg2.anInt1652, Static173.self.anInt1652) : Static204.aClass100_896, Static123.aClass100_593, local95, Static123.parseInt(arg2.anInt1652), Static72.aClass100_448 });
 			}
 		} else {
-			local158 = Static34.method882(new JagString[] { arg2.method1264(), Static123.aClass100_593, LocalizedText.SKILL, Static123.method2423(arg2.anInt1671), Static72.aClass100_448 });
+			local158 = Static34.concatenate(new JagString[] { arg2.method1264(), Static123.aClass100_593, LocalizedText.SKILL, Static123.parseInt(arg2.anInt1671), Static72.aClass100_448 });
 		}
 		@Pc(275) int local275;
 		if (Static260.anInt5014 == 1) {
-			Static98.method1966(Static169.anInt4075, (long) arg0, Static34.method882(new JagString[] { Static34.aClass100_203, Static105.aClass100_561, local158 }), arg3, (short) 1, LocalizedText.USE, arg1);
+			Static98.method1966(Static169.anInt4075, (long) arg0, Static34.concatenate(new JagString[] { Static34.aClass100_203, Static105.aClass100_561, local158 }), arg3, (short) 1, LocalizedText.USE, arg1);
 		} else if (!Static241.aBoolean302) {
 			for (local275 = 7; local275 >= 0; local275--) {
 				if (Static160.aClass100Array121[local275] != null) {
@@ -74,15 +74,15 @@ public final class Static217 {
 					}
 					@Pc(353) short local353 = Static5.aShortArray2[local275];
 					@Pc(358) short local358 = (short) (local353 + local291);
-					Static98.method1966(Static191.anIntArray388[local275], (long) arg0, Static34.method882(new JagString[] { Static204.aClass100_896, local158 }), arg3, local358, Static160.aClass100Array121[local275], arg1);
+					Static98.method1966(Static191.anIntArray388[local275], (long) arg0, Static34.concatenate(new JagString[] { Static204.aClass100_896, local158 }), arg3, local358, Static160.aClass100Array121[local275], arg1);
 				}
 			}
 		} else if ((Static274.anInt4999 & 0x8) != 0) {
-			Static98.method1966(Static246.anInt5393, (long) arg0, Static34.method882(new JagString[] { Static78.aClass100_466, Static105.aClass100_561, local158 }), arg3, (short) 15, Static102.aClass100_545, arg1);
+			Static98.method1966(Static246.anInt5393, (long) arg0, Static34.concatenate(new JagString[] { Static78.aClass100_466, Static105.aClass100_561, local158 }), arg3, (short) 15, Static102.aClass100_545, arg1);
 		}
 		for (local275 = 0; local275 < Static231.anInt5204; local275++) {
 			if (Static39.aShortArray6[local275] == 60) {
-				Static233.aClass100Array160[local275] = Static34.method882(new JagString[] { Static204.aClass100_896, local158 });
+				Static233.aClass100Array160[local275] = Static34.concatenate(new JagString[] { Static204.aClass100_896, local158 });
 				break;
 			}
 		}
@@ -119,17 +119,17 @@ public final class Static217 {
 			((Js5GlTextureProvider) Rasteriser.textureProvider).method3247();
 		}
 		Static105.aClass54_9.method1815();
-		Static213.aClass153_88.method4499();
-		Static249.aClass153_100.method4499();
-		Static41.aClass153_25.method4499();
-		Static248.aClass153_75.method4499();
-		Static26.aClass153_16.method4499();
-		Static130.aClass153_47.method4499();
-		Static267.aClass153_109.method4499();
-		Static209.aClass153_86.method4499();
-		Static184.aClass153_78.method4499();
-		Static214.aClass153_106.method4499();
-		Static16.aClass153_9.method4499();
+		Static213.js5Archive0.method4499();
+		Static249.js5Archive1.method4499();
+		Static41.js5Archive3.method4499();
+		Static248.js5Archive4.method4499();
+		Static26.js5Archive5.method4499();
+		Static130.js5Archive6.method4499();
+		Static267.js5Archive7.method4499();
+		Static209.js5Archive8.method4499();
+		Static184.js5Archive10.method4499();
+		Static214.js5Archive11.method4499();
+		Static16.js5Archive12.method4499();
 		Static73.aClass99_10.method3104();
 	}
 

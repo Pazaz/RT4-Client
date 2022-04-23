@@ -37,7 +37,7 @@ public final class Static73 {
 			Static154.topLevelInterace = -1;
 			Static119.aClass133_9 = new HashTable(8);
 			Static52.method1287();
-			Static154.topLevelInterace = Static156.anInt3783;
+			Static154.topLevelInterace = Static156.loginScreenId;
 			Static210.method3712(false);
 			Static87.method1807();
 			Static74.method1626(Static154.topLevelInterace);
@@ -48,7 +48,7 @@ public final class Static73 {
 		Static173.self.anInt3421 = 3000;
 		Static173.self.anInt3412 = 3000;
 		if (!GlRenderer.enabled) {
-			Static145.method2743(Static209.aClass153_86);
+			Static145.method2743(Static209.js5Archive8);
 			Static196.method3534(10);
 			return;
 		}

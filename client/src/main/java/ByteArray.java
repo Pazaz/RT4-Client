@@ -6,8 +6,8 @@ import org.openrs2.deob.annotation.OriginalMember;
 public abstract class ByteArray {
 
 	@OriginalMember(owner = "client!u", name = "a", descriptor = "(I)[B")
-	public abstract byte[] method4236();
+	public abstract byte[] get();
 
 	@OriginalMember(owner = "client!u", name = "a", descriptor = "(I[B)V")
-	public abstract void method4238(@OriginalArg(1) byte[] arg0);
+	public abstract void set(@OriginalArg(1) byte[] bytes);
 }

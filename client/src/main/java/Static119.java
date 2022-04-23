@@ -59,7 +59,7 @@ public final class Static119 {
 	}
 
 	@OriginalMember(owner = "client!je", name = "a", descriptor = "(ILclient!ve;)V")
-	public static void method2384(@OriginalArg(1) Js5 arg0) {
+	public static void init(@OriginalArg(1) Js5 arg0) {
 		Static9.aClass153_2 = arg0;
 	}
 

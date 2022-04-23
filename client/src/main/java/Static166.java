@@ -14,7 +14,7 @@ public final class Static166 {
 	public static final JagString aClass100_779 = Static28.parse("underlay");
 
 	@OriginalMember(owner = "client!nc", name = "j", descriptor = "I")
-	public static int anInt4051 = 0;
+	public static int mainLoadState = 0;
 
 	@OriginalMember(owner = "client!nc", name = "m", descriptor = "I")
 	public static int anInt4054 = 0;

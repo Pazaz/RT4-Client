@@ -90,7 +90,7 @@ public final class Static74 {
 	}
 
 	@OriginalMember(owner = "client!fn", name = "a", descriptor = "(Lclient!ve;Lclient!ve;Z)I")
-	public static int method1628(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {
+	public static int getReady(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {
 		@Pc(5) int local5 = 0;
 		if (arg0.method4506(Static166.anInt4049)) {
 			local5++;
