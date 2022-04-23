@@ -701,7 +701,7 @@ public final class JagString implements StringInterface {
 			if (Static148.aClass133_13 == null) {
 				Static148.aClass133_13 = new HashTable(4096);
 			} else {
-				for (local30 = (StringNode) Static148.aClass133_13.method3863(local9); local30 != null; local30 = (StringNode) Static148.aClass133_13.method3867()) {
+				for (local30 = (StringNode) Static148.aClass133_13.get(local9); local30 != null; local30 = (StringNode) Static148.aClass133_13.method3867()) {
 					if (this.strEquals(local30.aClass100_980)) {
 						return local30.aClass100_980;
 					}

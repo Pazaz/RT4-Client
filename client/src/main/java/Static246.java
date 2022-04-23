@@ -130,17 +130,17 @@ public final class Static246 {
 	}
 
 	@OriginalMember(owner = "client!u", name = "a", descriptor = "(II)Lclient!md;")
-	public static Class3_Sub2_Sub14 method4241(@OriginalArg(0) int arg0) {
-		@Pc(16) Class3_Sub2_Sub14 local16 = (Class3_Sub2_Sub14) Static89.aClass54_8.method1806((long) arg0);
-		if (local16 != null) {
-			return local16;
+	public static InvType list(@OriginalArg(0) int id) {
+		@Pc(16) InvType invType = (InvType) Static89.recentUse.get((long) id);
+		if (invType != null) {
+			return invType;
 		}
-		@Pc(27) byte[] local27 = Static9.aClass153_2.getFile(5, arg0);
-		local16 = new Class3_Sub2_Sub14();
-		if (local27 != null) {
-			local16.method2927(new Buffer(local27));
+		@Pc(27) byte[] data = Static9.aClass153_2.getFile(5, id);
+		invType = new InvType();
+		if (data != null) {
+			invType.decode(new Buffer(data));
 		}
-		Static89.aClass54_8.method1811(local16, (long) arg0);
-		return local16;
+		Static89.recentUse.put(invType, (long) id);
+		return invType;
 	}
 }

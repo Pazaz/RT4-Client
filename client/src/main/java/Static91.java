@@ -27,7 +27,7 @@ public final class Static91 {
 
 	@OriginalMember(owner = "client!hc", name = "a", descriptor = "(IB)Lclient!qc;")
 	public static ClientScript getCs2ById(@OriginalArg(0) int arg0) {
-		@Pc(12) ClientScript local12 = (ClientScript) Static105.aClass54_9.method1806((long) arg0);
+		@Pc(12) ClientScript local12 = (ClientScript) Static105.aClass54_9.get((long) arg0);
 		if (local12 != null) {
 			return local12;
 		}
@@ -79,7 +79,7 @@ public final class Static91 {
 			}
 			local12.opcodes[local107++] = local114;
 		}
-		Static105.aClass54_9.method1811(local12, (long) arg0);
+		Static105.aClass54_9.put(local12, (long) arg0);
 		return local12;
 	}
 

@@ -61,7 +61,7 @@ public final class Class45 {
 		@Pc(1) long local1 = 0L;
 		if ((arg1 & 0x7F) == 0 || (arg3 & 0x7F) == 0) {
 			local1 = arg1 + (arg3 << 16);
-			@Pc(23) IntNode local23 = (IntNode) this.aClass133_4.method3863(local1);
+			@Pc(23) IntNode local23 = (IntNode) this.aClass133_4.get(local1);
 			if (local23 != null) {
 				return local23.anInt3141;
 			}

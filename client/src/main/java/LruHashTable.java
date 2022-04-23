@@ -33,8 +33,8 @@ public final class LruHashTable {
 	}
 
 	@OriginalMember(owner = "client!gn", name = "a", descriptor = "(JI)Lclient!rg;")
-	public final SecondaryNode method1806(@OriginalArg(0) long arg0) {
-		@Pc(16) SecondaryNode local16 = (SecondaryNode) this.aClass133_5.method3863(arg0);
+	public final SecondaryNode get(@OriginalArg(0) long arg0) {
+		@Pc(16) SecondaryNode local16 = (SecondaryNode) this.aClass133_5.get(arg0);
 		if (local16 != null) {
 			this.aClass16_1.method798(local16);
 		}
@@ -47,7 +47,7 @@ public final class LruHashTable {
 	}
 
 	@OriginalMember(owner = "client!gn", name = "a", descriptor = "(Lclient!rg;JB)V")
-	public final void method1811(@OriginalArg(0) SecondaryNode arg0, @OriginalArg(1) long arg1) {
+	public final void put(@OriginalArg(0) SecondaryNode arg0, @OriginalArg(1) long arg1) {
 		if (this.anInt2314 == 0) {
 			@Pc(14) SecondaryNode local14 = this.aClass16_1.method796();
 			local14.method4658();

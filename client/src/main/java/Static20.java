@@ -14,7 +14,7 @@ public final class Static20 {
 	public static final short[] aShortArray5 = new short[] { -4160, -4163, -8256, -8259, 22461 };
 
 	@OriginalMember(owner = "client!bj", name = "v", descriptor = "Lclient!sc;")
-	public static HashTable aClass133_2 = new HashTable(32);
+	public static HashTable objectContainerCache = new HashTable(32);
 
 	@OriginalMember(owner = "client!bj", name = "V", descriptor = "I")
 	public static final int anInt671 = 3353893;

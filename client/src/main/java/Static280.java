@@ -675,27 +675,27 @@ public final class Static280 {
 
 	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(IIIIB)V")
 	public static void method4672(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		@Pc(12) Inv local12 = (Inv) Static20.aClass133_2.method3863((long) arg3);
+		@Pc(12) Inv local12 = (Inv) Static20.objectContainerCache.get((long) arg3);
 		if (local12 == null) {
 			local12 = new Inv();
-			Static20.aClass133_2.method3862(local12, (long) arg3);
+			Static20.objectContainerCache.method3862(local12, (long) arg3);
 		}
-		if (arg1 >= local12.anIntArray420.length) {
+		if (arg1 >= local12.objectIds.length) {
 			@Pc(39) int[] local39 = new int[arg1 + 1];
 			@Pc(44) int[] local44 = new int[arg1 + 1];
 			@Pc(46) int local46;
-			for (local46 = 0; local46 < local12.anIntArray420.length; local46++) {
-				local39[local46] = local12.anIntArray420[local46];
+			for (local46 = 0; local46 < local12.objectIds.length; local46++) {
+				local39[local46] = local12.objectIds[local46];
 				local44[local46] = local12.anIntArray422[local46];
 			}
-			for (local46 = local12.anIntArray420.length; local46 < arg1; local46++) {
+			for (local46 = local12.objectIds.length; local46 < arg1; local46++) {
 				local39[local46] = -1;
 				local44[local46] = 0;
 			}
-			local12.anIntArray420 = local39;
+			local12.objectIds = local39;
 			local12.anIntArray422 = local44;
 		}
-		local12.anIntArray420[arg1] = arg0;
+		local12.objectIds[arg1] = arg0;
 		local12.anIntArray422[arg1] = arg2;
 	}
 

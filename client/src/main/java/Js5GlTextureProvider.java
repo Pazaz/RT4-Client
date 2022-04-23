@@ -163,7 +163,7 @@ public final class Js5GlTextureProvider implements TextureProvider {
 
 	@OriginalMember(owner = "client!nk", name = "i", descriptor = "(II)Lclient!uh;")
 	private GlTexture method3242(@OriginalArg(0) int arg0) {
-		@Pc(14) GlTexture local14 = (GlTexture) this.aClass54_12.method1806((long) arg0);
+		@Pc(14) GlTexture local14 = (GlTexture) this.aClass54_12.get((long) arg0);
 		if (local14 != null) {
 			return local14;
 		}
@@ -173,7 +173,7 @@ public final class Js5GlTextureProvider implements TextureProvider {
 		} else {
 			@Pc(41) Buffer local41 = new Buffer(local30);
 			local14 = new GlTexture(local41);
-			this.aClass54_12.method1811(local14, (long) arg0);
+			this.aClass54_12.put(local14, (long) arg0);
 			return local14;
 		}
 	}
@@ -204,10 +204,10 @@ public final class Js5GlTextureProvider implements TextureProvider {
 
 	@OriginalMember(owner = "client!nk", name = "j", descriptor = "(II)Lclient!sd;")
 	private GlSolidColorTexture method3244(@OriginalArg(1) int arg0) {
-		@Pc(19) GlSolidColorTexture local19 = (GlSolidColorTexture) this.aClass54_11.method1806((long) arg0);
+		@Pc(19) GlSolidColorTexture local19 = (GlSolidColorTexture) this.aClass54_11.get((long) arg0);
 		if (local19 == null) {
 			local19 = new GlSolidColorTexture(this.aShortArray59[arg0] & 0xFFFF);
-			this.aClass54_11.method1811(local19, (long) arg0);
+			this.aClass54_11.put(local19, (long) arg0);
 			return local19;
 		} else {
 			return local19;

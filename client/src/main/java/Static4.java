@@ -538,7 +538,7 @@ public final class Static4 {
 						if (Static248.method3288(local864)) {
 							for (local277 = local1146; local277 <= local171; local277++) {
 								local904 = (long) local277 + ((long) local786 << 32);
-								local1804 = (ServerActiveProperties) Static210.aClass133_21.method3863(local904);
+								local1804 = (ServerActiveProperties) Static210.aClass133_21.get(local904);
 								if (local1804 != null) {
 									local1814 = new ServerActiveProperties(local1804.anInt546, local133);
 									local1804.method4658();
@@ -681,7 +681,7 @@ public final class Static4 {
 						local133 = Static57.aClass3_Sub15_Sub1_3.g2();
 						local786 = Static57.aClass3_Sub15_Sub1_3.g4();
 						if (Static248.method3288(local133)) {
-							@Pc(2441) Class3_Sub31 local2441 = (Class3_Sub31) Static119.aClass133_9.method3863((long) local786);
+							@Pc(2441) Class3_Sub31 local2441 = (Class3_Sub31) Static119.aClass133_9.get((long) local786);
 							if (local2441 != null) {
 								Static132.method2605(true, local2441);
 							}
@@ -928,8 +928,8 @@ public final class Static4 {
 								local786 = Static57.aClass3_Sub15_Sub1_3.g2sub();
 								local864 = Static57.aClass3_Sub15_Sub1_3.g4rme();
 								if (Static248.method3288(local786)) {
-									@Pc(3449) Class3_Sub31 local3449 = (Class3_Sub31) Static119.aClass133_9.method3863((long) local133);
-									local3456 = (Class3_Sub31) Static119.aClass133_9.method3863((long) local864);
+									@Pc(3449) Class3_Sub31 local3449 = (Class3_Sub31) Static119.aClass133_9.get((long) local133);
+									local3456 = (Class3_Sub31) Static119.aClass133_9.get((long) local864);
 									if (local3456 != null) {
 										Static132.method2605(local3449 == null || local3456.anInt5878 != local3449.anInt5878, local3456);
 									}
@@ -1074,7 +1074,7 @@ public final class Static4 {
 								local864 = Static57.aClass3_Sub15_Sub1_3.g2sub();
 								local171 = Static57.aClass3_Sub15_Sub1_3.g2();
 								if (Static248.method3288(local864)) {
-									local3456 = (Class3_Sub31) Static119.aClass133_9.method3863((long) local786);
+									local3456 = (Class3_Sub31) Static119.aClass133_9.get((long) local786);
 									if (local3456 != null) {
 										Static132.method2605(local3456.anInt5878 != local171, local3456);
 									}
@@ -1400,7 +1400,7 @@ public final class Static4 {
 									if (Static248.method3288(local133)) {
 										for (local277 = local171; local277 <= local786; local277++) {
 											local904 = ((long) local864 << 32) + ((long) local277);
-											local1804 = (ServerActiveProperties) Static210.aClass133_21.method3863(local904);
+											local1804 = (ServerActiveProperties) Static210.aClass133_21.get(local904);
 											if (local1804 != null) {
 												local1814 = new ServerActiveProperties(local1146, local1804.anInt540);
 												local1804.method4658();

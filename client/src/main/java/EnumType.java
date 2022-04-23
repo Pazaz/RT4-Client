@@ -55,7 +55,7 @@ public final class EnumType extends SecondaryNode {
 		if (this.aClass133_16 == null) {
 			return this.aClass100_766;
 		} else {
-			@Pc(26) StringNode local26 = (StringNode) this.aClass133_16.method3863((long) arg0);
+			@Pc(26) StringNode local26 = (StringNode) this.aClass133_16.get((long) arg0);
 			return local26 == null ? this.aClass100_766 : local26.aClass100_980;
 		}
 	}
@@ -68,7 +68,7 @@ public final class EnumType extends SecondaryNode {
 		if (this.aClass133_17 == null) {
 			this.method3087();
 		}
-		for (@Pc(38) Class3_Sub13 local38 = (Class3_Sub13) this.aClass133_17.method3863(arg0.method3118()); local38 != null; local38 = (Class3_Sub13) this.aClass133_17.method3867()) {
+		for (@Pc(38) Class3_Sub13 local38 = (Class3_Sub13) this.aClass133_17.get(arg0.method3118()); local38 != null; local38 = (Class3_Sub13) this.aClass133_17.method3867()) {
 			if (local38.aClass100_503.strEquals(arg0)) {
 				return true;
 			}
@@ -90,7 +90,7 @@ public final class EnumType extends SecondaryNode {
 		if (this.aClass133_16 == null) {
 			return this.anInt3960;
 		} else {
-			@Pc(18) IntNode local18 = (IntNode) this.aClass133_16.method3863((long) arg0);
+			@Pc(18) IntNode local18 = (IntNode) this.aClass133_16.get((long) arg0);
 			return local18 == null ? this.anInt3960 : local18.anInt3141;
 		}
 	}
@@ -103,7 +103,7 @@ public final class EnumType extends SecondaryNode {
 		if (this.aClass133_17 == null) {
 			this.method3091();
 		}
-		@Pc(34) IntNode local34 = (IntNode) this.aClass133_17.method3863((long) arg0);
+		@Pc(34) IntNode local34 = (IntNode) this.aClass133_17.get((long) arg0);
 		return local34 != null;
 	}
 

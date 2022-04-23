@@ -20,7 +20,7 @@ public final class Static235 {
 
 	@OriginalMember(owner = "client!tb", name = "b", descriptor = "(IB)Lclient!bc;")
 	public static QuickChatCatType method4045(@OriginalArg(0) int arg0) {
-		@Pc(10) QuickChatCatType local10 = (QuickChatCatType) Static73.aClass54_7.method1806((long) arg0);
+		@Pc(10) QuickChatCatType local10 = (QuickChatCatType) Static73.aClass54_7.get((long) arg0);
 		if (local10 != null) {
 			return local10;
 		}
@@ -37,7 +37,7 @@ public final class Static235 {
 		if (arg0 >= 32768) {
 			local10.method465();
 		}
-		Static73.aClass54_7.method1811(local10, (long) arg0);
+		Static73.aClass54_7.put(local10, (long) arg0);
 		return local10;
 	}
 }

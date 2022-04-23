@@ -33,7 +33,7 @@ public final class Static36 {
 
 	@OriginalMember(owner = "client!client", name = "b", descriptor = "(Lclient!be;)Lclient!bf;")
 	public static ServerActiveProperties method940(@OriginalArg(0) Component arg0) {
-		@Pc(13) ServerActiveProperties local13 = (ServerActiveProperties) Static210.aClass133_21.method3863(((long) arg0.id << 32) + (long) arg0.createdComponentId);
+		@Pc(13) ServerActiveProperties local13 = (ServerActiveProperties) Static210.aClass133_21.get(((long) arg0.id << 32) + (long) arg0.createdComponentId);
 		return local13 == null ? arg0.aClass3_Sub4_1 : local13;
 	}
 
@@ -494,7 +494,7 @@ public final class Static36 {
 						if (local9.createdComponents != null) {
 							method946(local9.createdComponents, local9.id, local61, local63, local65, local67, local50 - local9.anInt489, local55 - local9.scrollY);
 						}
-						@Pc(1595) Class3_Sub31 local1595 = (Class3_Sub31) Static119.aClass133_9.method3863((long) local9.id);
+						@Pc(1595) Class3_Sub31 local1595 = (Class3_Sub31) Static119.aClass133_9.get((long) local9.id);
 						if (local1595 != null) {
 							Static57.method1320(local50, local63, local55, local65, local1595.anInt5878, local61, local67);
 						}

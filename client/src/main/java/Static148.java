@@ -38,7 +38,7 @@ public final class Static148 {
 	@OriginalMember(owner = "client!li", name = "a", descriptor = "(III)V")
 	public static void method2766(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
 		Static7.varps[arg0] = arg1;
-		@Pc(21) LongNode local21 = (LongNode) Static199.aClass133_20.method3863((long) arg0);
+		@Pc(21) LongNode local21 = (LongNode) Static199.aClass133_20.get((long) arg0);
 		if (local21 == null) {
 			local21 = new LongNode(MonotonicClock.currentTimeMillis() + 500L);
 			Static199.aClass133_20.method3862(local21, (long) arg0);

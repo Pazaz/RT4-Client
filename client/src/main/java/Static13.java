@@ -43,7 +43,7 @@ public final class Static13 {
 
 	@OriginalMember(owner = "client!bc", name = "d", descriptor = "(II)V")
 	public static void method472(@OriginalArg(0) int arg0) {
-		@Pc(14) Inv local14 = (Inv) Static20.aClass133_2.method3863((long) arg0);
+		@Pc(14) Inv local14 = (Inv) Static20.objectContainerCache.get((long) arg0);
 		if (local14 != null) {
 			local14.method4658();
 		}

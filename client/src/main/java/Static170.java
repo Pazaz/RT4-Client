@@ -76,7 +76,7 @@ public final class Static170 {
 	@OriginalMember(owner = "client!nh", name = "a", descriptor = "(BII)V")
 	public static void method2575(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
 		Static106.anIntArray257[arg1] = arg0;
-		@Pc(20) LongNode local20 = (LongNode) Static199.aClass133_20.method3863((long) arg1);
+		@Pc(20) LongNode local20 = (LongNode) Static199.aClass133_20.get((long) arg1);
 		if (local20 == null) {
 			local20 = new LongNode(4611686018427387905L);
 			Static199.aClass133_20.method3862(local20, (long) arg1);
