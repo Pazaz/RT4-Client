@@ -55,7 +55,7 @@ public final class WaterMaterialRenderer implements MaterialRenderer {
 		local1.glTexGenfv(GL2.GL_T, GL2.GL_OBJECT_PLANE, new float[] { 0.0F, 0.0F, 9.765625E-4F, 0.0F }, 0);
 		local1.glEnable(GL2.GL_TEXTURE_GEN_S);
 		local1.glEnable(GL2.GL_TEXTURE_GEN_T);
-		if (Static151.aBoolean176) {
+		if (Static151.allows3DTextureMapping) {
 			local1.glBindTexture(GL2.GL_TEXTURE_3D, Static151.anInt3587);
 			local1.glTexGeni(GL2.GL_R, GL2.GL_TEXTURE_GEN_MODE, GL2.GL_OBJECT_LINEAR);
 			local1.glTexGeni(GL2.GL_Q, GL2.GL_TEXTURE_GEN_MODE, GL2.GL_OBJECT_LINEAR);
@@ -95,7 +95,7 @@ public final class WaterMaterialRenderer implements MaterialRenderer {
 		local1.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2GL3.GL_SRC1_ALPHA, GL2.GL_PREVIOUS);
 		local1.glDisable(GL2.GL_TEXTURE_GEN_S);
 		local1.glDisable(GL2.GL_TEXTURE_GEN_T);
-		if (Static151.aBoolean176) {
+		if (Static151.allows3DTextureMapping) {
 			local1.glDisable(GL2.GL_TEXTURE_GEN_R);
 			local1.glDisable(GL2.GL_TEXTURE_GEN_Q);
 			local1.glDisable(GL2.GL_TEXTURE_3D);
@@ -117,7 +117,7 @@ public final class WaterMaterialRenderer implements MaterialRenderer {
 		local1.glTexEnvfv(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_COLOR, Static257.aFloatArray2, 0);
 		local1.glActiveTexture(GL2.GL_TEXTURE0);
 		if ((arg0 & 0x1) == 1) {
-			if (!Static151.aBoolean176) {
+			if (!Static151.allows3DTextureMapping) {
 				GlRenderer.setTextureId(Static151.anIntArray341[GlRenderer.anInt5323 * 64 / 100 % 64]);
 			} else if (this.anInt4442 != GlRenderer.anInt5323) {
 				this.aFloatArray23[0] = 0.0F;
@@ -127,7 +127,7 @@ public final class WaterMaterialRenderer implements MaterialRenderer {
 				local1.glTexGenfv(GL2.GL_R, GL2.GL_OBJECT_PLANE, this.aFloatArray23, 0);
 				this.anInt4442 = GlRenderer.anInt5323;
 			}
-		} else if (Static151.aBoolean176) {
+		} else if (Static151.allows3DTextureMapping) {
 			this.aFloatArray23[0] = 0.0F;
 			this.aFloatArray23[1] = 0.0F;
 			this.aFloatArray23[2] = 0.0F;

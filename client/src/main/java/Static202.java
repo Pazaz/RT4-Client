@@ -97,7 +97,7 @@ public final class Static202 {
 
 	@OriginalMember(owner = "client!qg", name = "a", descriptor = "(IZI)V")
 	public static void setVarbitClient(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		@Pc(7) Class85 local7 = Static125.method2449(arg0);
+		@Pc(7) VarbitType local7 = Static125.method2449(arg0);
 		@Pc(10) int local10 = local7.anInt3323;
 		@Pc(16) int local16 = local7.anInt3318;
 		@Pc(19) int local19 = local7.anInt3327;
