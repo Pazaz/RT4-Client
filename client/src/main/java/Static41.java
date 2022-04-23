@@ -174,7 +174,7 @@ public final class Static41 {
 		Static267.anInt5774 = 0;
 		for (local20 = 0; local20 < local6; local20++) {
 			@Pc(75) int local75 = Static105.anIntArray256[local20];
-			@Pc(79) Player local79 = Static159.aClass8_Sub4_Sub1Array1[local75];
+			@Pc(79) Player local79 = Static159.players[local75];
 			@Pc(84) int local84 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
 			if (local84 == 0) {
 				Static105.anIntArray256[Static267.anInt5774++] = local75;

@@ -599,7 +599,7 @@ public final class Static4 {
 								if (Static16.anInt549 == local1146) {
 									local2033 = Static173.self;
 								} else {
-									local2033 = Static159.aClass8_Sub4_Sub1Array1[local1146];
+									local2033 = Static159.players[local1146];
 								}
 								if (local2033 != null) {
 									if (local171 == 65535) {
@@ -1083,9 +1083,9 @@ public final class Static4 {
 								Static164.anInt3985 = -1;
 								return true;
 							} else if (Static164.anInt3985 == 131) {
-								for (local133 = 0; local133 < Static159.aClass8_Sub4_Sub1Array1.length; local133++) {
-									if (Static159.aClass8_Sub4_Sub1Array1[local133] != null) {
-										Static159.aClass8_Sub4_Sub1Array1[local133].anInt3369 = -1;
+								for (local133 = 0; local133 < Static159.players.length; local133++) {
+									if (Static159.players[local133] != null) {
+										Static159.players[local133].anInt3369 = -1;
 									}
 								}
 								for (local133 = 0; local133 < Static175.aClass8_Sub4_Sub2Array1.length; local133++) {

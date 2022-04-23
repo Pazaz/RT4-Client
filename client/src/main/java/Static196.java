@@ -38,7 +38,7 @@ public final class Static196 {
 			Static233.loadingScreenState = 0;
 			Static38.anInt1196 = 1;
 			Static175.mapFilesMissingCount = 0;
-			Static116.method2325(true);
+			Static116.clear(true);
 		}
 		if (arg0 == 25 || arg0 == 10) {
 			Static123.topBannerRefresh();

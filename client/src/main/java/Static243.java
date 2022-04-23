@@ -74,13 +74,13 @@ public final class Static243 {
 		Static230.anInt5161 = (int) (Math.random() * 80.0D) - 40;
 		Static272.anInt5214 = 0;
 		for (local3506 = 0; local3506 < 2048; local3506++) {
-			Static159.aClass8_Sub4_Sub1Array1[local3506] = null;
+			Static159.players[local3506] = null;
 			Static115.aClass3_Sub15Array1[local3506] = null;
 		}
 		for (local3506 = 0; local3506 < 32768; local3506++) {
 			Static175.aClass8_Sub4_Sub2Array1[local3506] = null;
 		}
-		Static173.self = Static159.aClass8_Sub4_Sub1Array1[2047] = new Player();
+		Static173.self = Static159.players[2047] = new Player();
 		Static217.aClass69_116.method2278();
 		Static99.aClass69_64.method2278();
 		if (Static159.aClass69ArrayArrayArray1 != null) {

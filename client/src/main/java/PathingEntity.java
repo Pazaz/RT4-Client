@@ -31,7 +31,7 @@ public abstract class PathingEntity extends Entity {
 	public int anInt3386;
 
 	@OriginalMember(owner = "client!fe", name = "nb", descriptor = "Ljava/lang/Object;")
-	public Object anObject5;
+	public Object attachment;
 
 	@OriginalMember(owner = "client!fe", name = "rb", descriptor = "I")
 	public int anInt3392;

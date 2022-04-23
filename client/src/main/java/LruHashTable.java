@@ -70,7 +70,7 @@ public final class LruHashTable {
 	}
 
 	@OriginalMember(owner = "client!gn", name = "c", descriptor = "(I)V")
-	public final void method1815() {
+	public final void clear() {
 		this.aClass16_1.method802();
 		this.aClass133_5.method3856();
 		this.aClass3_Sub2_37 = new SecondaryNode();

@@ -89,7 +89,7 @@ public final class Static127 {
 			}
 		}
 		for (local96 = 0; local96 < 2048; local96++) {
-			@Pc(265) Player local265 = Static159.aClass8_Sub4_Sub1Array1[local96];
+			@Pc(265) Player local265 = Static159.players[local96];
 			if (local265 != null) {
 				for (local109 = 0; local109 < 10; local109++) {
 					local265.movementQueueX[local109] -= local86;

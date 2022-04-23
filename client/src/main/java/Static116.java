@@ -29,7 +29,7 @@ public final class Static116 {
 	}
 
 	@OriginalMember(owner = "client!jb", name = "a", descriptor = "(IZ)V")
-	public static void method2325(@OriginalArg(1) boolean arg0) {
+	public static void clear(@OriginalArg(1) boolean arg0) {
 		Static90.aByteArrayArrayArray8 = null;
 		Static83.anIntArrayArrayArray3 = null;
 		Static24.component = null;

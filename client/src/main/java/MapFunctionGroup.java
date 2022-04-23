@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!se")
-public final class Class134 {
+public final class MapFunctionGroup {
 
 	@OriginalMember(owner = "client!se", name = "i", descriptor = "I")
 	public final int anInt5074;
@@ -24,7 +24,7 @@ public final class Class134 {
 	public final short[] aShortArray73;
 
 	@OriginalMember(owner = "client!se", name = "<init>", descriptor = "(I)V")
-	public Class134(@OriginalArg(0) int arg0) {
+	public MapFunctionGroup(@OriginalArg(0) int arg0) {
 		this.anInt5074 = arg0;
 		this.aClass100Array153 = new JagString[this.anInt5074];
 		this.aShortArray72 = new short[this.anInt5074];

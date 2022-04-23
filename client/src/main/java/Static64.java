@@ -36,18 +36,18 @@ public final class Static64 {
 		@Pc(23) int local23;
 		for (local23 = 0; local23 < Static240.anInt5335; local23++) {
 			@Pc(30) int local30 = Static52.anIntArray136[local23];
-			if (Static83.loop != Static159.aClass8_Sub4_Sub1Array1[local30].anInt3430) {
-				if (Static159.aClass8_Sub4_Sub1Array1[local30].anInt1664 > 0) {
-					Static271.method4597(Static159.aClass8_Sub4_Sub1Array1[local30]);
+			if (Static83.loop != Static159.players[local30].anInt3430) {
+				if (Static159.players[local30].anInt1664 > 0) {
+					Static271.method4597(Static159.players[local30]);
 				}
-				Static159.aClass8_Sub4_Sub1Array1[local30] = null;
+				Static159.players[local30] = null;
 			}
 		}
 		if (Static223.anInt5028 != Static57.aClass3_Sub15_Sub1_3.offset) {
 			throw new RuntimeException("gpp1 pos:" + Static57.aClass3_Sub15_Sub1_3.offset + " psize:" + Static223.anInt5028);
 		}
 		for (local23 = 0; local23 < Static267.anInt5774; local23++) {
-			if (Static159.aClass8_Sub4_Sub1Array1[Static105.anIntArray256[local23]] == null) {
+			if (Static159.players[Static105.anIntArray256[local23]] == null) {
 				throw new RuntimeException("gpp2 pos:" + local23 + " size:" + Static267.anInt5774);
 			}
 		}

@@ -36,20 +36,20 @@ public final class Static141 {
 		Static89.aClass3_Sub2_Sub1_5 = null;
 		Static107.anInt2875 = -1;
 		Static217.method3768();
-		Static255.aClass54_16.method1815();
+		Static255.cache.clear();
 		Static171.aClass139_1 = new Class139();
-		((Js5GlTextureProvider) Rasteriser.textureProvider).method3247();
-		Static120.anInt3034 = 0;
-		Static120.aClass51Array1 = new Light[255];
+		((Js5GlTextureProvider) Rasteriser.textureProvider).clear();
+		Static120.lightCount = 0;
+		Static120.lights = new Light[255];
 		Static237.method4120();
 		Static242.method4203();
-		Static115.method2315();
-		Static116.method2325(false);
+		Static115.clear();
+		Static116.clear(false);
 		Static119.method2381();
 		for (@Pc(39) int local39 = 0; local39 < 2048; local39++) {
-			@Pc(46) Player local46 = Static159.aClass8_Sub4_Sub1Array1[local39];
-			if (local46 != null) {
-				local46.anObject5 = null;
+			@Pc(46) Player player = Static159.players[local39];
+			if (player != null) {
+				player.attachment = null;
 			}
 		}
 		if (GlRenderer.enabled) {

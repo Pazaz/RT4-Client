@@ -408,7 +408,7 @@ public final class Static75 {
 								if (Static16.anInt549 == local1188) {
 									local1198 = Static173.self;
 								} else {
-									local1198 = Static159.aClass8_Sub4_Sub1Array1[local1188];
+									local1198 = Static159.players[local1188];
 								}
 							}
 							if (local1198 != null) {

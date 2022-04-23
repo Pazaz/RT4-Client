@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static203 {
 
 	@OriginalMember(owner = "client!qh", name = "a", descriptor = "Lclient!se;")
-	public static Class134 aClass134_1;
+	public static MapFunctionGroup aClass134_1;
 
 	@OriginalMember(owner = "client!qh", name = "d", descriptor = "Lclient!fd;")
 	public static WorldMapFont aClass41_8;

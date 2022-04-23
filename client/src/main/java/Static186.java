@@ -114,7 +114,7 @@ public final class Static186 {
 				}
 				Static203.aClass134_1 = Static140.createMapFunctionGroup(Static34.concatenate(new JagString[] { Static269.aClass3_Sub2_Sub4_2.aClass100_138, Static265.aClass100_1086 }), Static119.aClass153_44);
 			} else {
-				Static203.aClass134_1 = new Class134(0);
+				Static203.aClass134_1 = new MapFunctionGroup(0);
 			}
 			Static41.anInt1309 = 70;
 			Static234.method4020();

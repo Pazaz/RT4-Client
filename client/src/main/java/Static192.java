@@ -20,7 +20,7 @@ public final class Static192 {
 				if (local29 == Static16.anInt549) {
 					local40 = Static173.self;
 				} else {
-					local40 = Static159.aClass8_Sub4_Sub1Array1[local29];
+					local40 = Static159.players[local29];
 				}
 			} else {
 				local29 = local17.anInt1192 - 1;
@@ -73,7 +73,7 @@ public final class Static192 {
 					local40.anInt3375 = local17.anInt1205 + Static83.loop;
 					local40.anInt3426 = local83 * 64 + local17.anInt1204 * 128;
 					local40.anInt3379 = local86 * 64 + local17.anInt1190 * 128;
-					local40.anObject5 = local159;
+					local40.attachment = local159;
 					@Pc(292) int local292 = local17.anInt1188;
 					local40.anInt3406 = local157;
 					local40.anInt3390 = Static83.loop + local17.anInt1187;
