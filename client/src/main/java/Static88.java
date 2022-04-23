@@ -2481,7 +2481,7 @@ public final class Static88 {
 													continue;
 												}
 												if (opcode == 5058) {
-													Static122.aClass12_1 = new Class12();
+													Static122.aClass12_1 = new QuickChatPhrase();
 													isp--;
 													Static122.aClass12_1.anInt439 = Static254.intStack[isp];
 													Static122.aClass12_1.aClass3_Sub2_Sub6_1 = Static230.method3953(Static122.aClass12_1.anInt439);

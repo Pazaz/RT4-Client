@@ -20,8 +20,8 @@ public final class Static264 {
 	public static int mouseRecorderPrevX = 0;
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "(ILclient!wa;)Lclient!bd;")
-	public static Class12 method3568(@OriginalArg(1) Buffer arg0) {
-		@Pc(3) Class12 local3 = new Class12();
+	public static QuickChatPhrase method3568(@OriginalArg(1) Buffer arg0) {
+		@Pc(3) QuickChatPhrase local3 = new QuickChatPhrase();
 		local3.anInt439 = arg0.g2();
 		local3.aClass3_Sub2_Sub6_1 = Static230.method3953(local3.anInt439);
 		return local3;
