@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ia")
-public final class Class63 {
+public final class CursorType {
 
 	@OriginalMember(owner = "client!ia", name = "a", descriptor = "I")
 	public int anInt2850;

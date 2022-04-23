@@ -36,7 +36,7 @@ public final class Static81 {
 			return;
 		}
 		if (arg0 != -1) {
-			@Pc(24) Class63 local24 = Static202.method3660(arg0);
+			@Pc(24) CursorType local24 = Static202.method3660(arg0);
 			@Pc(28) SoftwareSprite local28 = local24.method2246();
 			if (local28 == null) {
 				arg0 = -1;
