@@ -52,9 +52,9 @@ public final class Rasteriser {
 	}
 
 	@OriginalMember(owner = "client!hf", name = "a", descriptor = "(IIIIIIIIIIIIIIIIIII)V")
-	public static void fillTexturedTriangle(@OriginalArg(0) int yA, @OriginalArg(1) int yB, @OriginalArg(2) int yC, @OriginalArg(3) int xA, @OriginalArg(4) int xB, @OriginalArg(5) int xC, @OriginalArg(6) int colorA, @OriginalArg(7) int colorB, @OriginalArg(8) int colorC, @OriginalArg(9) int arg9, @OriginalArg(10) int arg10, @OriginalArg(11) int arg11, @OriginalArg(12) int arg12, @OriginalArg(13) int arg13, @OriginalArg(14) int arg14, @OriginalArg(15) int arg15, @OriginalArg(16) int arg16, @OriginalArg(17) int arg17, @OriginalArg(18) int textureId) {
-		@Pc(5) int[] texture = textureProvider.method3232(textureId, brightness);
-		if (texture == null) {
+	public static void fillTexturedTriangle(@OriginalArg(0) int yA, @OriginalArg(1) int yB, @OriginalArg(2) int yC, @OriginalArg(3) int xA, @OriginalArg(4) int xB, @OriginalArg(5) int xC, @OriginalArg(6) int colorA, @OriginalArg(7) int colorB, @OriginalArg(8) int colorC, @OriginalArg(9) int viewXA, @OriginalArg(10) int viewXB, @OriginalArg(11) int viewXC, @OriginalArg(12) int viewYA, @OriginalArg(13) int viewYB, @OriginalArg(14) int viewYC, @OriginalArg(15) int viewZA, @OriginalArg(16) int viewZB, @OriginalArg(17) int viewZC, @OriginalArg(18) int textureId) {
+		@Pc(5) int[] texels = textureProvider.method3232(textureId, brightness);
+		if (texels == null) {
 			int averageColor = textureProvider.getAverageColor(textureId);
 			fillGouraudTriangle(yA, yB, yC, xA, xB, xC, multiplyLightness(averageColor, colorA), multiplyLightness(averageColor, colorB), multiplyLightness(averageColor, colorC));
 			return;
@@ -92,18 +92,22 @@ public final class Rasteriser {
 		@Pc(131) int colorStepA = (colorStepAB * dyAC - colorStepAC * dyAB << 9) / length;
 		@Pc(143) int colorStepB = (colorStepAC * dxAB - colorStepAB * dxAC << 9) / length;
 
-		@Pc(147) int local147 = arg9 - arg10;
-		@Pc(151) int local151 = arg12 - arg13;
-		@Pc(155) int local155 = arg15 - arg16;
-		@Pc(159) int local159 = arg11 - arg9;
-		@Pc(163) int local163 = arg14 - arg12;
-		@Pc(167) int local167 = arg17 - arg15;
-		@Pc(177) int local177 = local159 * arg12 - local163 * arg9 << 14;
-		@Pc(187) int local187 = local163 * arg15 - local167 * arg12 << 5;
-		@Pc(197) int local197 = local167 * arg9 - local159 * arg15 << 5;
-		@Pc(207) int local207 = local147 * arg12 - local151 * arg9 << 14;
-		@Pc(217) int local217 = local151 * arg15 - local155 * arg12 << 5;
-		@Pc(227) int local227 = local155 * arg9 - local147 * arg15 << 5;
+		@Pc(147) int local147 = viewXA - viewXB;
+		@Pc(151) int local151 = viewYA - viewYB;
+		@Pc(155) int local155 = viewZA - viewZB;
+
+		@Pc(159) int local159 = viewXC - viewXA;
+		@Pc(163) int local163 = viewYC - viewYA;
+		@Pc(167) int local167 = viewZC - viewZA;
+
+		@Pc(177) int local177 = local159 * viewYA - local163 * viewXA << 14;
+		@Pc(187) int local187 = local163 * viewZA - local167 * viewYA << 5;
+		@Pc(197) int local197 = local167 * viewXA - local159 * viewZA << 5;
+
+		@Pc(207) int local207 = local147 * viewYA - local151 * viewXA << 14;
+		@Pc(217) int local217 = local151 * viewZA - local155 * viewYA << 5;
+		@Pc(227) int local227 = local155 * viewXA - local147 * viewZA << 5;
+
 		@Pc(237) int local237 = local151 * local159 - local147 * local163 << 14;
 		@Pc(247) int local247 = local155 * local163 - local151 * local167 << 5;
 		@Pc(257) int local257 = local147 * local167 - local155 * local159 << 5;
@@ -152,7 +156,7 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedScanline(Static129.pixels, texture, yA, xC >> 16, xB >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
+									drawTexturedScanline(Static129.pixels, texels, yA, xC >> 16, xB >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
 									xC += xStepAC;
 									xB += xStepBC;
 									colorA += colorStepB;
@@ -163,7 +167,7 @@ public final class Rasteriser {
 								}
 							}
 
-							drawTexturedScanline(Static129.pixels, texture, yA, xC >> 16, xA >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
+							drawTexturedScanline(Static129.pixels, texels, yA, xC >> 16, xA >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
 							xC += xStepAC;
 							xA += xStepAB;
 							colorA += colorStepB;
@@ -185,7 +189,7 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedScanline(Static129.pixels, texture, yA, xB >> 16, xC >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
+									drawTexturedScanline(Static129.pixels, texels, yA, xB >> 16, xC >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
 									xC += xStepAC;
 									xB += xStepBC;
 									colorA += colorStepB;
@@ -196,7 +200,7 @@ public final class Rasteriser {
 								}
 							}
 
-							drawTexturedScanline(Static129.pixels, texture, yA, xA >> 16, xC >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
+							drawTexturedScanline(Static129.pixels, texels, yA, xA >> 16, xC >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
 							xC += xStepAC;
 							xA += xStepAB;
 							colorA += colorStepB;
@@ -237,7 +241,7 @@ public final class Rasteriser {
 									if (yB < 0) {
 										return;
 									}
-									drawTexturedScanline(Static129.pixels, texture, yA, xA >> 16, xC >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
+									drawTexturedScanline(Static129.pixels, texels, yA, xA >> 16, xC >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
 									xC += xStepBC;
 									xA += xStepAB;
 									colorA += colorStepB;
@@ -248,7 +252,7 @@ public final class Rasteriser {
 								}
 							}
 
-							drawTexturedScanline(Static129.pixels, texture, yA, xA >> 16, xB >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
+							drawTexturedScanline(Static129.pixels, texels, yA, xA >> 16, xB >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
 							xB += xStepAC;
 							xA += xStepAB;
 							colorA += colorStepB;
@@ -270,7 +274,7 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedScanline(Static129.pixels, texture, yA, xC >> 16, xA >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
+									drawTexturedScanline(Static129.pixels, texels, yA, xC >> 16, xA >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
 									xC += xStepBC;
 									xA += xStepAB;
 									colorA += colorStepB;
@@ -281,7 +285,7 @@ public final class Rasteriser {
 								}
 							}
 
-							drawTexturedScanline(Static129.pixels, texture, yA, xB >> 16, xA >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
+							drawTexturedScanline(Static129.pixels, texels, yA, xB >> 16, xA >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
 							xB += xStepAC;
 							xA += xStepAB;
 							colorA += colorStepB;
@@ -336,7 +340,7 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedScanline(Static129.pixels, texture, yB, xA >> 16, xC >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
+									drawTexturedScanline(Static129.pixels, texels, yB, xA >> 16, xC >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
 									xA += xStepAB;
 									xC += xStepAC;
 									colorB += colorStepB;
@@ -347,7 +351,7 @@ public final class Rasteriser {
 								}
 							}
 
-							drawTexturedScanline(Static129.pixels, texture, yB, xA >> 16, xB >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
+							drawTexturedScanline(Static129.pixels, texels, yB, xA >> 16, xB >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
 							xA += xStepAB;
 							xB += xStepBC;
 							colorB += colorStepB;
@@ -369,7 +373,7 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedScanline(Static129.pixels, texture, yB, xC >> 16, xA >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
+									drawTexturedScanline(Static129.pixels, texels, yB, xC >> 16, xA >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
 									xA += xStepAB;
 									xC += xStepAC;
 									colorB += colorStepB;
@@ -380,7 +384,7 @@ public final class Rasteriser {
 								}
 							}
 
-							drawTexturedScanline(Static129.pixels, texture, yB, xB >> 16, xA >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
+							drawTexturedScanline(Static129.pixels, texels, yB, xB >> 16, xA >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
 							xA += xStepAB;
 							xB += xStepBC;
 							colorB += colorStepB;
@@ -422,7 +426,7 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedScanline(Static129.pixels, texture, yB, xA >> 16, xB >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
+									drawTexturedScanline(Static129.pixels, texels, yB, xA >> 16, xB >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
 									xA += xStepAC;
 									xB += xStepBC;
 									colorB += colorStepB;
@@ -433,7 +437,7 @@ public final class Rasteriser {
 								}
 							}
 
-							drawTexturedScanline(Static129.pixels, texture, yB, xC >> 16, xB >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
+							drawTexturedScanline(Static129.pixels, texels, yB, xC >> 16, xB >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
 							xC += xStepAB;
 							xB += xStepBC;
 							colorB += colorStepB;
@@ -455,7 +459,7 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedScanline(Static129.pixels, texture, yB, xB >> 16, xA >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
+									drawTexturedScanline(Static129.pixels, texels, yB, xB >> 16, xA >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
 									xA += xStepAC;
 									xB += xStepBC;
 									colorB += colorStepB;
@@ -466,7 +470,7 @@ public final class Rasteriser {
 								}
 							}
 
-							drawTexturedScanline(Static129.pixels, texture, yB, xB >> 16, xC >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
+							drawTexturedScanline(Static129.pixels, texels, yB, xB >> 16, xC >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
 							xC += xStepAB;
 							xB += xStepBC;
 							colorB += colorStepB;
@@ -520,7 +524,7 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawTexturedScanline(Static129.pixels, texture, yC, xB >> 16, xA >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
+								drawTexturedScanline(Static129.pixels, texels, yC, xB >> 16, xA >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
 								xB += xStepBC;
 								xA += xStepAB;
 								colorC += colorStepB;
@@ -531,7 +535,7 @@ public final class Rasteriser {
 							}
 						}
 
-						drawTexturedScanline(Static129.pixels, texture, yC, xB >> 16, xC >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
+						drawTexturedScanline(Static129.pixels, texels, yC, xB >> 16, xC >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
 						xB += xStepBC;
 						xC += xStepAC;
 						colorC += colorStepB;
@@ -553,7 +557,7 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawTexturedScanline(Static129.pixels, texture, yC, xA >> 16, xB >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
+								drawTexturedScanline(Static129.pixels, texels, yC, xA >> 16, xB >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
 								xB += xStepBC;
 								xA += xStepAB;
 								colorC += colorStepB;
@@ -564,7 +568,7 @@ public final class Rasteriser {
 							}
 						}
 
-						drawTexturedScanline(Static129.pixels, texture, yC, xC >> 16, xB >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
+						drawTexturedScanline(Static129.pixels, texels, yC, xC >> 16, xB >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
 						xB += xStepBC;
 						xC += xStepAC;
 						colorC += colorStepB;
@@ -606,7 +610,7 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawTexturedScanline(Static129.pixels, texture, yC, xB >> 16, xC >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
+								drawTexturedScanline(Static129.pixels, texels, yC, xB >> 16, xC >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
 								xB += xStepAB;
 								xC += xStepAC;
 								colorC += colorStepB;
@@ -617,7 +621,7 @@ public final class Rasteriser {
 							}
 						}
 
-						drawTexturedScanline(Static129.pixels, texture, yC, xA >> 16, xC >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
+						drawTexturedScanline(Static129.pixels, texels, yC, xA >> 16, xC >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
 						xA += xStepBC;
 						xC += xStepAC;
 						colorC += colorStepB;
@@ -639,7 +643,7 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawTexturedScanline(Static129.pixels, texture, yC, xC >> 16, xB >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
+								drawTexturedScanline(Static129.pixels, texels, yC, xC >> 16, xB >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
 								xB += xStepAB;
 								xC += xStepAC;
 								colorC += colorStepB;
@@ -650,7 +654,7 @@ public final class Rasteriser {
 							}
 						}
 
-						drawTexturedScanline(Static129.pixels, texture, yC, xC >> 16, xA >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
+						drawTexturedScanline(Static129.pixels, texels, yC, xC >> 16, xA >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
 						xA += xStepBC;
 						xC += xStepAC;
 						colorC += colorStepB;
@@ -682,9 +686,9 @@ public final class Rasteriser {
 	}
 
 	@OriginalMember(owner = "client!hf", name = "b", descriptor = "(IIIIIIIIIIIIIIIIIII)V")
-	public static void fillTexturedAlphaTriangle(@OriginalArg(0) int yA, @OriginalArg(1) int yB, @OriginalArg(2) int yC, @OriginalArg(3) int xA, @OriginalArg(4) int xB, @OriginalArg(5) int xC, @OriginalArg(6) int colorA, @OriginalArg(7) int colorB, @OriginalArg(8) int colorC, @OriginalArg(9) int arg9, @OriginalArg(10) int arg10, @OriginalArg(11) int arg11, @OriginalArg(12) int arg12, @OriginalArg(13) int arg13, @OriginalArg(14) int arg14, @OriginalArg(15) int arg15, @OriginalArg(16) int arg16, @OriginalArg(17) int arg17, @OriginalArg(18) int textureId) {
-		@Pc(5) int[] texture = textureProvider.method3232(textureId, brightness);
-		if (texture == null || alpha > 10) {
+	public static void fillTexturedAlphaTriangle(@OriginalArg(0) int yA, @OriginalArg(1) int yB, @OriginalArg(2) int yC, @OriginalArg(3) int xA, @OriginalArg(4) int xB, @OriginalArg(5) int xC, @OriginalArg(6) int colorA, @OriginalArg(7) int colorB, @OriginalArg(8) int colorC, @OriginalArg(9) int viewXA, @OriginalArg(10) int viewXB, @OriginalArg(11) int viewXC, @OriginalArg(12) int viewYA, @OriginalArg(13) int viewYB, @OriginalArg(14) int viewYC, @OriginalArg(15) int viewZA, @OriginalArg(16) int viewZB, @OriginalArg(17) int viewZC, @OriginalArg(18) int textureId) {
+		@Pc(5) int[] texels = textureProvider.method3232(textureId, brightness);
+		if (texels == null || alpha > 10) {
 			int average = textureProvider.getAverageColor(textureId);
 			textureHasTransparency = true;
 			fillGouraudTriangle(yA, yB, yC, xA, xB, xC, multiplyLightness(average, colorA), multiplyLightness(average, colorB), multiplyLightness(average, colorC));
@@ -723,18 +727,20 @@ public final class Rasteriser {
 		@Pc(136) int colorStepA = (colorStepAB * dyAC - colorStepAC * dyAB << 9) / length;
 		@Pc(148) int colorStepB = (colorStepAC * dxAB - colorStepAB * dxAC << 9) / length;
 
-		@Pc(152) int local152 = arg9 - arg10;
-		@Pc(156) int local156 = arg12 - arg13;
-		@Pc(160) int local160 = arg15 - arg16;
-		@Pc(164) int local164 = arg11 - arg9;
-		@Pc(168) int local168 = arg14 - arg12;
-		@Pc(172) int local172 = arg17 - arg15;
-		@Pc(182) int local182 = local164 * arg12 - local168 * arg9 << 14;
-		@Pc(192) int local192 = local168 * arg15 - local172 * arg12 << 8;
-		@Pc(202) int local202 = local172 * arg9 - local164 * arg15 << 5;
-		@Pc(212) int local212 = local152 * arg12 - local156 * arg9 << 14;
-		@Pc(222) int local222 = local156 * arg15 - local160 * arg12 << 8;
-		@Pc(232) int local232 = local160 * arg9 - local152 * arg15 << 5;
+		@Pc(152) int local152 = viewXA - viewXB;
+		@Pc(156) int local156 = viewYA - viewYB;
+		@Pc(160) int local160 = viewZA - viewZB;
+
+		@Pc(164) int local164 = viewXC - viewXA;
+		@Pc(168) int local168 = viewYC - viewYA;
+		@Pc(172) int local172 = viewZC - viewZA;
+
+		@Pc(182) int local182 = local164 * viewYA - local168 * viewXA << 14;
+		@Pc(192) int local192 = local168 * viewZA - local172 * viewYA << 8;
+		@Pc(202) int local202 = local172 * viewXA - local164 * viewZA << 5;
+		@Pc(212) int local212 = local152 * viewYA - local156 * viewXA << 14;
+		@Pc(222) int local222 = local156 * viewZA - local160 * viewYA << 8;
+		@Pc(232) int local232 = local160 * viewXA - local152 * viewZA << 5;
 		@Pc(242) int local242 = local156 * local164 - local152 * local168 << 14;
 		@Pc(252) int local252 = local160 * local168 - local156 * local172 << 8;
 		@Pc(262) int local262 = local152 * local172 - local160 * local164 << 5;
@@ -782,7 +788,7 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedAlphaScanline(Static129.pixels, texture, yA, xC >> 16, xB >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
+									drawTexturedAlphaScanline(Static129.pixels, texels, yA, xC >> 16, xB >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
 									xC += xStepAC;
 									xB += xStepBC;
 									colorA += colorStepB;
@@ -793,7 +799,7 @@ public final class Rasteriser {
 								}
 							}
 
-							drawTexturedAlphaScanline(Static129.pixels, texture, yA, xC >> 16, xA >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
+							drawTexturedAlphaScanline(Static129.pixels, texels, yA, xC >> 16, xA >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
 							xC += xStepAC;
 							xA += xStepAB;
 							colorA += colorStepB;
@@ -815,7 +821,7 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedAlphaScanline(Static129.pixels, texture, yA, xB >> 16, xC >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
+									drawTexturedAlphaScanline(Static129.pixels, texels, yA, xB >> 16, xC >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
 									xC += xStepAC;
 									xB += xStepBC;
 									colorA += colorStepB;
@@ -826,7 +832,7 @@ public final class Rasteriser {
 								}
 							}
 
-							drawTexturedAlphaScanline(Static129.pixels, texture, yA, xA >> 16, xC >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
+							drawTexturedAlphaScanline(Static129.pixels, texels, yA, xA >> 16, xC >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
 							xC += xStepAC;
 							xA += xStepAB;
 							colorA += colorStepB;
@@ -868,7 +874,7 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedAlphaScanline(Static129.pixels, texture, yA, xA >> 16, xC >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
+									drawTexturedAlphaScanline(Static129.pixels, texels, yA, xA >> 16, xC >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
 									xC += xStepBC;
 									xA += xStepAB;
 									colorA += colorStepB;
@@ -879,7 +885,7 @@ public final class Rasteriser {
 								}
 							}
 
-							drawTexturedAlphaScanline(Static129.pixels, texture, yA, xA >> 16, xB >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
+							drawTexturedAlphaScanline(Static129.pixels, texels, yA, xA >> 16, xB >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
 							xB += xStepAC;
 							xA += xStepAB;
 							colorA += colorStepB;
@@ -901,7 +907,7 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedAlphaScanline(Static129.pixels, texture, yA, xC >> 16, xA >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
+									drawTexturedAlphaScanline(Static129.pixels, texels, yA, xC >> 16, xA >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
 									xC += xStepBC;
 									xA += xStepAB;
 									colorA += colorStepB;
@@ -912,7 +918,7 @@ public final class Rasteriser {
 								}
 							}
 
-							drawTexturedAlphaScanline(Static129.pixels, texture, yA, xB >> 16, xA >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
+							drawTexturedAlphaScanline(Static129.pixels, texels, yA, xB >> 16, xA >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
 							xB += xStepAC;
 							xA += xStepAB;
 							colorA += colorStepB;
@@ -965,7 +971,7 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedAlphaScanline(Static129.pixels, texture, yB, xA >> 16, xC >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
+									drawTexturedAlphaScanline(Static129.pixels, texels, yB, xA >> 16, xC >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
 									xA += xStepAB;
 									xC += xStepAC;
 									colorB += colorStepB;
@@ -976,7 +982,7 @@ public final class Rasteriser {
 								}
 							}
 
-							drawTexturedAlphaScanline(Static129.pixels, texture, yB, xA >> 16, xB >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
+							drawTexturedAlphaScanline(Static129.pixels, texels, yB, xA >> 16, xB >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
 							xA += xStepAB;
 							xB += xStepBC;
 							colorB += colorStepB;
@@ -998,7 +1004,7 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedAlphaScanline(Static129.pixels, texture, yB, xC >> 16, xA >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
+									drawTexturedAlphaScanline(Static129.pixels, texels, yB, xC >> 16, xA >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
 									xA += xStepAB;
 									xC += xStepAC;
 									colorB += colorStepB;
@@ -1009,7 +1015,7 @@ public final class Rasteriser {
 								}
 							}
 
-							drawTexturedAlphaScanline(Static129.pixels, texture, yB, xB >> 16, xA >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
+							drawTexturedAlphaScanline(Static129.pixels, texels, yB, xB >> 16, xA >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
 							xA += xStepAB;
 							xB += xStepBC;
 							colorB += colorStepB;
@@ -1051,7 +1057,7 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedAlphaScanline(Static129.pixels, texture, yB, xA >> 16, xB >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
+									drawTexturedAlphaScanline(Static129.pixels, texels, yB, xA >> 16, xB >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
 									xA += xStepAC;
 									xB += xStepBC;
 									colorB += colorStepB;
@@ -1062,7 +1068,7 @@ public final class Rasteriser {
 								}
 							}
 
-							drawTexturedAlphaScanline(Static129.pixels, texture, yB, xC >> 16, xB >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
+							drawTexturedAlphaScanline(Static129.pixels, texels, yB, xC >> 16, xB >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
 							xC += xStepAB;
 							xB += xStepBC;
 							colorB += colorStepB;
@@ -1084,7 +1090,7 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedAlphaScanline(Static129.pixels, texture, yB, xB >> 16, xA >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
+									drawTexturedAlphaScanline(Static129.pixels, texels, yB, xB >> 16, xA >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
 									xA += xStepAC;
 									xB += xStepBC;
 									colorB += colorStepB;
@@ -1095,7 +1101,7 @@ public final class Rasteriser {
 								}
 							}
 
-							drawTexturedAlphaScanline(Static129.pixels, texture, yB, xB >> 16, xC >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
+							drawTexturedAlphaScanline(Static129.pixels, texels, yB, xB >> 16, xC >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
 							xC += xStepAB;
 							xB += xStepBC;
 							colorB += colorStepB;
@@ -1147,7 +1153,7 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawTexturedAlphaScanline(Static129.pixels, texture, yC, xB >> 16, xA >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
+								drawTexturedAlphaScanline(Static129.pixels, texels, yC, xB >> 16, xA >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
 								xB += xStepBC;
 								xA += xStepAB;
 								colorC += colorStepB;
@@ -1158,7 +1164,7 @@ public final class Rasteriser {
 							}
 						}
 
-						drawTexturedAlphaScanline(Static129.pixels, texture, yC, xB >> 16, xC >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
+						drawTexturedAlphaScanline(Static129.pixels, texels, yC, xB >> 16, xC >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
 						xB += xStepBC;
 						xC += xStepAC;
 						colorC += colorStepB;
@@ -1180,7 +1186,7 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawTexturedAlphaScanline(Static129.pixels, texture, yC, xA >> 16, xB >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
+								drawTexturedAlphaScanline(Static129.pixels, texels, yC, xA >> 16, xB >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
 								xB += xStepBC;
 								xA += xStepAB;
 								colorC += colorStepB;
@@ -1191,7 +1197,7 @@ public final class Rasteriser {
 							}
 						}
 
-						drawTexturedAlphaScanline(Static129.pixels, texture, yC, xC >> 16, xB >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
+						drawTexturedAlphaScanline(Static129.pixels, texels, yC, xC >> 16, xB >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
 						xB += xStepBC;
 						xC += xStepAC;
 						colorC += colorStepB;
@@ -1233,7 +1239,7 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawTexturedAlphaScanline(Static129.pixels, texture, yC, xB >> 16, xC >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
+								drawTexturedAlphaScanline(Static129.pixels, texels, yC, xB >> 16, xC >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
 								xB += xStepAB;
 								xC += xStepAC;
 								colorC += colorStepB;
@@ -1244,7 +1250,7 @@ public final class Rasteriser {
 							}
 						}
 
-						drawTexturedAlphaScanline(Static129.pixels, texture, yC, xA >> 16, xC >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
+						drawTexturedAlphaScanline(Static129.pixels, texels, yC, xA >> 16, xC >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
 						xA += xStepBC;
 						xC += xStepAC;
 						colorC += colorStepB;
@@ -1266,7 +1272,7 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawTexturedAlphaScanline(Static129.pixels, texture, yC, xC >> 16, xB >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
+								drawTexturedAlphaScanline(Static129.pixels, texels, yC, xC >> 16, xB >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
 								xB += xStepAB;
 								xC += xStepAC;
 								colorC += colorStepB;
@@ -1277,7 +1283,7 @@ public final class Rasteriser {
 							}
 						}
 
-						drawTexturedAlphaScanline(Static129.pixels, texture, yC, xC >> 16, xA >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
+						drawTexturedAlphaScanline(Static129.pixels, texels, yC, xC >> 16, xA >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
 						xA += xStepBC;
 						xC += xStepAC;
 						colorC += colorStepB;
