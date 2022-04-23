@@ -106,7 +106,7 @@ public final class Static176 {
 					if (Static260.anInt5014 == 1) {
 						Static98.method1966(Static169.anInt4075, local121, Static34.concatenate(new JagString[] { Static34.aClass100_203, Static27.aClass100_164, local172.aClass100_830 }), local47, (short) 14, LocalizedText.USE, local147);
 					} else if (Static241.aBoolean302) {
-						@Pc(363) Class3_Sub2_Sub12 local363 = Static121.anInt3039 == -1 ? null : Static110.method2277(Static121.anInt3039);
+						@Pc(363) ParamType local363 = Static121.anInt3039 == -1 ? null : Static110.method2277(Static121.anInt3039);
 						if ((Static274.anInt4999 & 0x4) != 0 && (local363 == null || local172.method3423(local363.anInt2667, Static121.anInt3039) != local363.anInt2667)) {
 							Static98.method1966(Static246.anInt5393, local121, Static34.concatenate(new JagString[] { Static78.aClass100_466, Static27.aClass100_164, local172.aClass100_830 }), local47, (short) 38, Static102.aClass100_545, local147);
 						}
@@ -211,7 +211,7 @@ public final class Static176 {
 							if (Static260.anInt5014 == 1) {
 								Static98.method1966(Static169.anInt4075, (long) local240, Static34.concatenate(new JagString[] { Static34.aClass100_203, Static223.aClass100_947, local951.aClass100_495 }), local47, (short) 33, LocalizedText.USE, local147);
 							} else if (Static241.aBoolean302) {
-								@Pc(1142) Class3_Sub2_Sub12 local1142 = Static121.anInt3039 == -1 ? null : Static110.method2277(Static121.anInt3039);
+								@Pc(1142) ParamType local1142 = Static121.anInt3039 == -1 ? null : Static110.method2277(Static121.anInt3039);
 								if ((Static274.anInt4999 & 0x1) != 0 && (local1142 == null || local951.method1829(local1142.anInt2667, Static121.anInt3039) != local1142.anInt2667)) {
 									Static98.method1966(Static246.anInt5393, (long) local240, Static34.concatenate(new JagString[] { Static78.aClass100_466, Static223.aClass100_947, local951.aClass100_495 }), local47, (short) 39, Static102.aClass100_545, local147);
 								}

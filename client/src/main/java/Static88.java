@@ -2036,7 +2036,7 @@ public final class Static88 {
 										continue;
 									}
 								} else if (opcode >= 4200) {
-									@Pc(5294) Class3_Sub2_Sub12 local5294;
+									@Pc(5294) ParamType local5294;
 									if (opcode < 4300) {
 										if (opcode == 4200) {
 											isp--;
