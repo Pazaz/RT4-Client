@@ -370,8 +370,8 @@ public final class client extends GameShell {
 		if ((SignLink.anInt5928 == 3 && Static83.modeWhere != 2) || GlobalConfig.SELECT_DEFAULT_WORLD) {
 			Static125.worldId = Static187.worldListId;
 		}
-		Static156.init(); // keyboard
-		Static19.start(GameShell.canvas); // keyboard
+		Keyboard.init(); // keyboard
+		Keyboard.start(GameShell.canvas); // keyboard
 		Static88.start(GameShell.canvas); // mouse
 		Static71.mouseWheel = Static44.create();
 		if (Static71.mouseWheel != null) {

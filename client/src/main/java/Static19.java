@@ -117,16 +117,4 @@ public final class Static19 {
 		return local19;
 	}
 
-	@OriginalMember(owner = "client!bi", name = "a", descriptor = "(BLjava/awt/Component;)V")
-	public static void start(@OriginalArg(1) Component arg0) {
-		@Pc(10) Method local10 = SignLink.setFocusTraversalKeysEnabled;
-		if (local10 != null) {
-			try {
-				local10.invoke(arg0, Boolean.FALSE);
-			} catch (@Pc(25) Throwable local25) {
-			}
-		}
-		arg0.addKeyListener(Keyboard.instance);
-		arg0.addFocusListener(Keyboard.instance);
-	}
 }
