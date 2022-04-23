@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!eh")
-public final class Class35 {
+public final class VarpType {
 
 	@OriginalMember(owner = "client!eh", name = "e", descriptor = "I")
 	public int anInt1765 = 0;

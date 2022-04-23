@@ -683,13 +683,13 @@ public final class Static247 {
 	}
 
 	@OriginalMember(owner = "client!ub", name = "a", descriptor = "(II)Lclient!eh;")
-	public static Class35 method4248(@OriginalArg(1) int arg0) {
-		@Pc(10) Class35 local10 = (Class35) Static232.aClass99_30.method3106((long) arg0);
+	public static VarpType method4248(@OriginalArg(1) int arg0) {
+		@Pc(10) VarpType local10 = (VarpType) Static232.aClass99_30.method3106((long) arg0);
 		if (local10 != null) {
 			return local10;
 		}
 		@Pc(20) byte[] local20 = Static81.aClass153_34.getFile(16, arg0);
-		local10 = new Class35();
+		local10 = new VarpType();
 		if (local20 != null) {
 			local10.method1323(new Buffer(local20));
 		}
