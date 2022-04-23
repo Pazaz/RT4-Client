@@ -99,7 +99,7 @@ public final class Static197 {
 				Static71.mouseWheel.method3291(GameShell.canvas);
 			}
 			Static215.aClient1.addCanvas();
-			Static19.start(GameShell.canvas);
+			Keyboard.start(GameShell.canvas);
 			Static88.start(GameShell.canvas);
 			if (Static71.mouseWheel != null) {
 				Static71.mouseWheel.start(GameShell.canvas);

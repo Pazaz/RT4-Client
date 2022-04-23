@@ -115,42 +115,6 @@ public final class Static156 {
 		}
 	}
 
-	@OriginalMember(owner = "client!mf", name = "e", descriptor = "(I)V")
-	public static void init() {
-		if (SignLink.javaVendor.toLowerCase().indexOf("microsoft") != -1) {
-			Keyboard.CODE_MAP[187] = 27;
-			Keyboard.CODE_MAP[223] = 28;
-			Keyboard.CODE_MAP[221] = 43;
-			Keyboard.CODE_MAP[188] = 71;
-			Keyboard.CODE_MAP[222] = 59;
-			Keyboard.CODE_MAP[192] = 58;
-			Keyboard.CODE_MAP[191] = 73;
-			Keyboard.CODE_MAP[219] = 42;
-			Keyboard.CODE_MAP[190] = 72;
-			Keyboard.CODE_MAP[186] = 57;
-			Keyboard.CODE_MAP[220] = 74;
-			Keyboard.CODE_MAP[189] = 26;
-			return;
-		}
-		if (SignLink.setFocusTraversalKeysEnabled == null) {
-			Keyboard.CODE_MAP[192] = 58;
-			Keyboard.CODE_MAP[222] = 59;
-		} else {
-			Keyboard.CODE_MAP[222] = 58;
-			Keyboard.CODE_MAP[192] = 28;
-			Keyboard.CODE_MAP[520] = 59;
-		}
-		Keyboard.CODE_MAP[45] = 26;
-		Keyboard.CODE_MAP[61] = 27;
-		Keyboard.CODE_MAP[91] = 42;
-		Keyboard.CODE_MAP[59] = 57;
-		Keyboard.CODE_MAP[93] = 43;
-		Keyboard.CODE_MAP[44] = 71;
-		Keyboard.CODE_MAP[92] = 74;
-		Keyboard.CODE_MAP[46] = 72;
-		Keyboard.CODE_MAP[47] = 73;
-	}
-
 	@OriginalMember(owner = "client!mf", name = "a", descriptor = "()V")
 	public static void method2959() {
 		@Pc(1) GL2 local1 = GlRenderer.gl;
