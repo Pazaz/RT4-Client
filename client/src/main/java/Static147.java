@@ -73,7 +73,7 @@ public final class Static147 {
 						if (arg0.anIntArray167[local5] != 12345678) {
 							Rasteriser.fillGouraudTriangle(local156, local160, local164, local39, local148, local152, arg0.anIntArray167[local5], arg0.anIntArray172[local5], arg0.anIntArray171[local5]);
 						}
-					} else if (!Static159.aBoolean189) {
+					} else if (!Static159.manyGroundTextures) {
 						@Pc(373) int local373 = Rasteriser.textureProvider.getAverageColor(arg0.anIntArray161[local5]);
 						Rasteriser.fillGouraudTriangle(local156, local160, local164, local39, local148, local152, Static216.method1640(local373, arg0.anIntArray167[local5]), Static216.method1640(local373, arg0.anIntArray172[local5]), Static216.method1640(local373, arg0.anIntArray171[local5]));
 					} else if (arg0.aBoolean113) {
@@ -88,8 +88,8 @@ public final class Static147 {
 
 	@OriginalMember(owner = "client!lh", name = "d", descriptor = "(B)V")
 	public static void method2764() {
-		Static190.aClass99_26.method3104();
-		Static124.aClass99_17.method3104();
-		Static87.aClass99_12.method3104();
+		Static190.aClass99_26.clear();
+		Static124.aClass99_17.clear();
+		Static87.aClass99_12.clear();
 	}
 }

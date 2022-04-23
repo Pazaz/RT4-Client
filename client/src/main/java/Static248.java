@@ -133,7 +133,7 @@ public final class Static248 {
 						}
 						local336.method1944(Static130.aClass3_Sub5ArrayArrayArray1, local350, false);
 					}
-					if (local32 == 0 && Static139.anInt3451 > 0) {
+					if (local32 == 0 && Static139.sceneryShadowsType > 0) {
 						GlRenderer.method4159(101.5F);
 						Static242.method4198(Static167.anInt4069, Static193.anInt4539, Static277.tileVisibilityDistance, arg1, Static48.aBooleanArrayArray1, Static83.activeTileHeightMap[0]);
 					}

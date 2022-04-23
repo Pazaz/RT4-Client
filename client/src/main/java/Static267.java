@@ -44,7 +44,7 @@ public final class Static267 {
 	}
 
 	@OriginalMember(owner = "client!vl", name = "a", descriptor = "(I)Z")
-	public static boolean method4527() {
+	public static boolean isShowingVideoAd() {
 		if (Static150.aBoolean175) {
 			try {
 				return !((Boolean) Static119.aClass100_588.method3157(GameShell.signLink.applet));

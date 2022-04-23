@@ -70,7 +70,7 @@ public final class Static140 {
 				return;
 			}
 		}
-		if (local34.method3108(Static173.self.aClass100_364)) {
+		if (local34.strEquals(Static173.self.aClass100_364)) {
 			Static103.method2231(Static186.EMPTY_FILE, 0, LocalizedText.IGNORECANTADDSELF);
 			return;
 		}

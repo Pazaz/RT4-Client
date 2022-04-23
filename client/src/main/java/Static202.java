@@ -24,8 +24,8 @@ public final class Static202 {
 
 	@OriginalMember(owner = "client!qg", name = "h", descriptor = "(I)V")
 	public static void method3653() {
-		Static231.aClass99_29.method3104();
-		Static219.aClass99_27.method3104();
+		Static231.aClass99_29.clear();
+		Static219.aClass99_27.clear();
 	}
 
 	@OriginalMember(owner = "client!qg", name = "a", descriptor = "(Lsignlink!ll;Lclient!wa;IB)V")

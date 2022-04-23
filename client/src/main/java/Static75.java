@@ -444,7 +444,7 @@ public final class Static75 {
 					local45 = local31 & 0x7;
 					if (local23 >= 0 && local19 >= 0 && local23 < 104 && local19 < 104) {
 						local224 = local39 + 1;
-						if (Static173.self.movementQueueX[0] >= local23 - local224 && local224 + local23 >= Static173.self.movementQueueX[0] && Static173.self.movementQueueZ[0] >= local19 - local224 && Static173.self.movementQueueZ[0] <= local224 + local19 && Static30.anInt978 != 0 && local45 > 0 && Static189.anInt4451 < 50 && local27 != -1) {
+						if (Static173.self.movementQueueX[0] >= local23 - local224 && local224 + local23 >= Static173.self.movementQueueX[0] && Static173.self.movementQueueZ[0] >= local19 - local224 && Static173.self.movementQueueZ[0] <= local224 + local19 && Static30.ambientSoundsVolume != 0 && local45 > 0 && Static189.anInt4451 < 50 && local27 != -1) {
 							Static200.anIntArray421[Static189.anInt4451] = local27;
 							Static276.anIntArray563[Static189.anInt4451] = local45;
 							Static164.anIntArray362[Static189.anInt4451] = local218;

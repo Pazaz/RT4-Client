@@ -58,7 +58,7 @@ public final class Static197 {
 			if (GameShell.fullScreenFrame != null) {
 				Static22.anInt729 = arg5;
 				Static114.anInt5831 = arg4;
-				Static203.write(GameShell.signLink);
+				Static203.savePreferences(GameShell.signLink);
 			}
 		}
 		if (arg1 == 3 && GameShell.fullScreenFrame == null) {
@@ -125,7 +125,7 @@ public final class Static197 {
 				Static65.method1500();
 				Static260.frameBuffer = null;
 				Static260.frameBuffer = Static131.create(GameShell.canvasHeight, GameShell.canvasWidth, GameShell.canvas);
-				Static129.method2492();
+				Static129.clear();
 				if (Static244.gameState == 5) {
 					Static182.method3359(true, Static280.aClass3_Sub2_Sub9_43);
 				} else {

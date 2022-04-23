@@ -148,17 +148,17 @@ public final class Static270 {
 			}
 			return local11 - local14;
 		} else if (arg1 == 2) {
-			return arg0.method445().aClass100_378.method3126(arg2.method445().aClass100_378);
+			return arg0.getWorldInfo().aClass100_378.method3126(arg2.getWorldInfo().aClass100_378);
 		} else if (arg1 == 3) {
-			if (arg0.aClass100_69.method3108(Static111.aClass100_570)) {
-				if (arg2.aClass100_69.method3108(Static111.aClass100_570)) {
+			if (arg0.aClass100_69.strEquals(Static111.aClass100_570)) {
+				if (arg2.aClass100_69.strEquals(Static111.aClass100_570)) {
 					return 0;
 				} else if (arg3) {
 					return -1;
 				} else {
 					return 1;
 				}
-			} else if (arg2.aClass100_69.method3108(Static111.aClass100_570)) {
+			} else if (arg2.aClass100_69.strEquals(Static111.aClass100_570)) {
 				return arg3 ? 1 : -1;
 			} else {
 				return arg0.aClass100_69.method3126(arg2.aClass100_69);

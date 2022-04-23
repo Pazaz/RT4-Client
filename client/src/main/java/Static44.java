@@ -72,10 +72,10 @@ public final class Static44 {
 		Static81.method1753(arg0);
 		@Pc(28) Component local28 = Static5.getComponent(arg1);
 		if (local28 != null) {
-			Static43.method1143(local28);
+			Static43.redraw(local28);
 		}
 		if (Static39.aClass13_10 != null) {
-			Static43.method1143(Static39.aClass13_10);
+			Static43.redraw(Static39.aClass13_10);
 			Static39.aClass13_10 = null;
 		}
 		@Pc(45) int local45 = Static231.anInt5204;

@@ -58,7 +58,7 @@ public final class Static73 {
 		} else {
 			Static40.updateLoginScreenCamera();
 		}
-		Static86.method1799();
+		Static86.setInstantFade();
 		Static26.setupLoadingScreenRegion();
 		Static196.setGameState(28);
 	}

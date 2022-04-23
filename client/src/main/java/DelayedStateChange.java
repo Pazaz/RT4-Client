@@ -19,7 +19,7 @@ public final class DelayedStateChange extends SecondaryNode {
 
 	@OriginalMember(owner = "client!da", name = "<init>", descriptor = "(II)V")
 	public DelayedStateChange(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		this.aLong192 = (long) arg0 << 32 | (long) arg1;
+		this.uid = (long) arg0 << 32 | (long) arg1;
 	}
 
 	@OriginalMember(owner = "client!da", name = "a", descriptor = "(Z)V")
@@ -35,12 +35,12 @@ public final class DelayedStateChange extends SecondaryNode {
 
 	@OriginalMember(owner = "client!da", name = "e", descriptor = "(I)I")
 	public final int method1011() {
-		return (int) (this.aLong192 >>> 32 & 0xFFL);
+		return (int) (this.uid >>> 32 & 0xFFL);
 	}
 
 	@OriginalMember(owner = "client!da", name = "f", descriptor = "(B)I")
 	public final int method1012() {
-		return (int) this.aLong192;
+		return (int) this.uid;
 	}
 
 	@OriginalMember(owner = "client!da", name = "g", descriptor = "(B)V")

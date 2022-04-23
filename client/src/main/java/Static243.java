@@ -8,7 +8,7 @@ public final class Static243 {
 	public static Js5 aClass153_97;
 
 	@OriginalMember(owner = "client!tk", name = "o", descriptor = "Lclient!ok;")
-	public static IndexedSprite aClass36_1;
+	public static IndexedSprite logo;
 
 	@OriginalMember(owner = "client!tk", name = "s", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_98;
@@ -145,12 +145,12 @@ public final class Static243 {
 			Static227.anIntArray446[local3506] = 0;
 		}
 		if (GlRenderer.enabled) {
-			Static86.method1799();
+			Static86.setInstantFade();
 		}
 		Static197.aBoolean228 = true;
 		Static189.anInt4443 = 0;
 		Static195.aClass100_859 = LocalizedText.WALKHERE;
-		Static127.aBoolean160 = false;
+		Static127.neverRemoveRoofs = false;
 		Static259.aShortArray88 = Static62.aShortArray19 = Static232.aShortArray74 = Static259.aShortArray87 = new short[256];
 		Static114.method4637();
 		Static261.aBoolean298 = false;

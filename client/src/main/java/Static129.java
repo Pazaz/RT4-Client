@@ -155,7 +155,7 @@ public final class Static129 {
 	}
 
 	@OriginalMember(owner = "client!kb", name = "b", descriptor = "()V")
-	public static void method2492() {
+	public static void clear() {
 		@Pc(1) int local1 = 0;
 		@Pc(7) int local7 = width * anInt3146 - 7;
 		while (local1 < local7) {

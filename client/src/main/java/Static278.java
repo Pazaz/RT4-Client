@@ -102,13 +102,13 @@ public final class Static278 {
 
 	@OriginalMember(owner = "client!wj", name = "b", descriptor = "(I)V")
 	public static void method4649() {
-		Static125.aClass99_18.method3104();
+		Static125.aClass99_18.clear();
 	}
 
 	@OriginalMember(owner = "client!wj", name = "a", descriptor = "(IIB)V")
 	public static void method4650(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		if (Static12.anInt391 != 0 && arg1 != -1) {
-			Static122.method2410(Static214.js5Archive11, arg1, Static12.anInt391);
+		if (Static12.musicVolume != 0 && arg1 != -1) {
+			Static122.method2410(Static214.js5Archive11, arg1, Static12.musicVolume);
 			Static144.aBoolean173 = true;
 		}
 	}

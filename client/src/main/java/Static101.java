@@ -20,7 +20,7 @@ public final class Static101 {
 	public static int anInt2640 = 0;
 
 	@OriginalMember(owner = "client!hm", name = "fb", descriptor = "[Lclient!ba;")
-	public static World[] aClass10_Sub1Array1 = new World[0];
+	public static World[] worlds = new World[0];
 
 	@OriginalMember(owner = "client!hm", name = "a", descriptor = "(Lclient!na;B)I")
 	public static int method2053(@OriginalArg(0) JagString arg0) {

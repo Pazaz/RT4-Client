@@ -284,7 +284,7 @@ public final class Static231 {
 	}
 
 	@OriginalMember(owner = "client!sk", name = "c", descriptor = "(II)I")
-	public static int method3984(@OriginalArg(1) int arg0) {
+	public static int toLowerCase(@OriginalArg(1) int arg0) {
 		if (arg0 >= 65 && arg0 <= 90 || arg0 >= 192 && arg0 <= 222 && arg0 != 215) {
 			return arg0 + 32;
 		} else if (arg0 == 159) {
@@ -298,6 +298,6 @@ public final class Static231 {
 
 	@OriginalMember(owner = "client!sk", name = "a", descriptor = "(Lclient!ve;I)Z")
 	public static boolean isReady(@OriginalArg(0) Js5 arg0) {
-		return arg0.method4506(Static138.anInt3443);
+		return arg0.isFileReady(Static138.anInt3443);
 	}
 }

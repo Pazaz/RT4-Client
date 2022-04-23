@@ -69,13 +69,13 @@ public final class Static7 {
 						Static78.anInt2145 = 0;
 						Static123.aBoolean155 = false;
 						if (Static118.aClass13_15 != null) {
-							Static43.method1143(Static118.aClass13_15);
+							Static43.redraw(Static118.aClass13_15);
 						}
 						Static118.aClass13_15 = Static5.getComponent(local99);
 						Static149.anInt3554 = clickX;
 						Static206.anInt4773 = Static60.clickY;
 						Static4.anInt36 = local93;
-						Static43.method1143(Static118.aClass13_15);
+						Static43.redraw(Static118.aClass13_15);
 						return;
 					}
 				}

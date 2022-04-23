@@ -141,7 +141,7 @@ public final class Static38 {
 		for (@Pc(28) LongNode local28 = arg0 ? (LongNode) Static199.aClass133_20.method3859() : (LongNode) Static199.aClass133_20.method3861(); local28 != null; local28 = (LongNode) Static199.aClass133_20.method3861()) {
 			if ((local28.aLong55 & 0x3FFFFFFFFFFFFFFFL) < local4) {
 				if ((local28.aLong55 & 0x4000000000000000L) != 0L) {
-					@Pc(58) int local58 = (int) local28.aLong192;
+					@Pc(58) int local58 = (int) local28.uid;
 					Static7.varps[local58] = Static106.anIntArray257[local58];
 					local28.method4658();
 					return local58;
@@ -222,7 +222,7 @@ public final class Static38 {
 			}
 			if (local39 != null && local39.method2682()) {
 				local39.aBoolean98 = false;
-				if ((Static15.aBoolean33 && Static267.anInt5774 > 200 || Static267.anInt5774 > 50) && !arg0 && local39.anInt3366 == local39.method2681().anInt1037) {
+				if ((Static15.manyIdleAnimations && Static267.anInt5774 > 200 || Static267.anInt5774 > 50) && !arg0 && local39.anInt3366 == local39.method2681().anInt1037) {
 					local39.aBoolean98 = true;
 				}
 				local82 = local39.method2693();

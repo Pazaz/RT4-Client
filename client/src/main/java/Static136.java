@@ -9,13 +9,13 @@ public final class Static136 {
 	public static int anInt3324;
 
 	@OriginalMember(owner = "client!kk", name = "g", descriptor = "I")
-	public static int anInt3322 = -1;
+	public static int logoId = -1;
 
 	@OriginalMember(owner = "client!kk", name = "j", descriptor = "I")
 	public static int anInt3325 = 0;
 
 	@OriginalMember(owner = "client!kk", name = "m", descriptor = "Lclient!na;")
-	public static final JagString aClass100_633 = Static28.parse("Clientscript error )2 check log for details");
+	public static final JagString CS_ERROR = Static28.parse("Clientscript error )2 check log for details");
 
 	@OriginalMember(owner = "client!kk", name = "a", descriptor = "(IIB)V")
 	public static void method2649(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
@@ -81,17 +81,17 @@ public final class Static136 {
 		} else if (Static113.brightness > 4) {
 			Static113.brightness = 4;
 		}
-		Static53.method1293(arg0.g1() == 1);
-		Static80.aBoolean231 = arg0.g1() == 1;
-		Static250.aBoolean283 = arg0.g1() == 1;
+		Static53.setAllVisibleLevels(arg0.g1() == 1);
+		Static80.removeRoofsSelectively = arg0.g1() == 1;
+		Static250.showGroundDecorations = arg0.g1() == 1;
 		Static53.highDetailTextures = arg0.g1() == 1;
-		Static15.aBoolean33 = arg0.g1() == 1;
-		Static11.aBoolean15 = arg0.g1() == 1;
-		Static159.aBoolean189 = arg0.g1() == 1;
-		Static209.aBoolean240 = arg0.g1() == 1;
-		Static139.anInt3451 = arg0.g1();
-		if (Static139.anInt3451 > 2) {
-			Static139.anInt3451 = 2;
+		Static15.manyIdleAnimations = arg0.g1() == 1;
+		Static11.flickeringEffectsOn = arg0.g1() == 1;
+		Static159.manyGroundTextures = arg0.g1() == 1;
+		Static209.characterShadowsOn = arg0.g1() == 1;
+		Static139.sceneryShadowsType = arg0.g1();
+		if (Static139.sceneryShadowsType > 2) {
+			Static139.sceneryShadowsType = 2;
 		}
 		if (local21 < 2) {
 			Static178.highDetailLighting = arg0.g1() == 1;
@@ -100,21 +100,21 @@ public final class Static136 {
 			Static178.highDetailLighting = arg0.g1() == 1;
 		}
 		Static220.highWaterDetail = arg0.g1() == 1;
-		Static71.aBoolean107 = arg0.g1() == 1;
+		Static71.fogEnabled = arg0.g1() == 1;
 		Static102.windowMode = arg0.g1();
 		if (Static102.windowMode > 2) {
 			Static102.windowMode = 2;
 		}
 		Static186.antiAliasingMode = Static102.windowMode;
 		Static99.stereo = arg0.g1() == 1;
-		Static125.anInt3104 = arg0.g1();
-		if (Static125.anInt3104 > 127) {
-			Static125.anInt3104 = 127;
+		Static125.soundEffectVolume = arg0.g1();
+		if (Static125.soundEffectVolume > 127) {
+			Static125.soundEffectVolume = 127;
 		}
-		Static12.anInt391 = arg0.g1();
-		Static30.anInt978 = arg0.g1();
-		if (Static30.anInt978 > 127) {
-			Static30.anInt978 = 127;
+		Static12.musicVolume = arg0.g1();
+		Static30.ambientSoundsVolume = arg0.g1();
+		if (Static30.ambientSoundsVolume > 127) {
+			Static30.ambientSoundsVolume = 127;
 		}
 		if (local21 >= 1) {
 			Static114.anInt5831 = arg0.g2();
@@ -128,10 +128,10 @@ public final class Static136 {
 			if (GameShell.maxMemory < 96) {
 				local386 = 0;
 			}
-			Static76.method1645(local386);
+			Static76.setParticles(local386);
 		}
 		if (local21 >= 5) {
-			Static164.anInt3988 = arg0.g4();
+			Static164.lastWorldId = arg0.g4();
 		}
 		if (local21 >= 6) {
 			Static214.windowMode = arg0.g1();
@@ -149,7 +149,7 @@ public final class Static136 {
 			Static127.aBoolean159 = arg0.g1() != 0;
 		}
 		if (local21 >= 11) {
-			Static64.aBoolean111 = arg0.g1() != 0;
+			Static64.cursorsEnabled = arg0.g1() != 0;
 		}
 	}
 

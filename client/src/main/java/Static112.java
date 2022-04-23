@@ -14,7 +14,7 @@ public final class Static112 {
 		@Pc(11) int local11 = Static13.anInt436;
 		@Pc(13) int local13 = Static24.anInt761;
 		if (Static39.aClass3_Sub2_Sub1_1 == null || Static181.aClass3_Sub2_Sub1_9 == null) {
-			if (Static209.js5Archive8.method4506(Static55.anInt1736) && Static209.js5Archive8.method4506(Static169.anInt4073)) {
+			if (Static209.js5Archive8.isFileReady(Static55.anInt1736) && Static209.js5Archive8.isFileReady(Static169.anInt4073)) {
 				Static39.aClass3_Sub2_Sub1_1 = Static80.method3613(Static209.js5Archive8, Static55.anInt1736);
 				Static181.aClass3_Sub2_Sub1_9 = Static80.method3613(Static209.js5Archive8, Static169.anInt4073);
 				if (GlRenderer.enabled) {
@@ -65,7 +65,7 @@ public final class Static112 {
 				}
 			}
 		}
-		if ((Static165.aClass3_Sub2_Sub1_8 == null || Static92.aClass3_Sub2_Sub1_6 == null || Static204.aClass3_Sub2_Sub1_10 == null) && Static209.js5Archive8.method4506(Static85.anInt2261) && Static209.js5Archive8.method4506(Static136.anInt3324) && Static209.js5Archive8.method4506(Static254.anInt5556)) {
+		if ((Static165.aClass3_Sub2_Sub1_8 == null || Static92.aClass3_Sub2_Sub1_6 == null || Static204.aClass3_Sub2_Sub1_10 == null) && Static209.js5Archive8.isFileReady(Static85.anInt2261) && Static209.js5Archive8.isFileReady(Static136.anInt3324) && Static209.js5Archive8.isFileReady(Static254.anInt5556)) {
 			Static165.aClass3_Sub2_Sub1_8 = Static80.method3613(Static209.js5Archive8, Static85.anInt2261);
 			Static92.aClass3_Sub2_Sub1_6 = Static80.method3613(Static209.js5Archive8, Static136.anInt3324);
 			Static204.aClass3_Sub2_Sub1_10 = Static80.method3613(Static209.js5Archive8, Static254.anInt5556);

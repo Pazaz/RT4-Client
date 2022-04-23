@@ -11,7 +11,7 @@ public final class Static30 {
 	public static final JagString aClass100_184 = Static28.parse("1");
 
 	@OriginalMember(owner = "client!cg", name = "f", descriptor = "I")
-	public static int anInt978 = 127;
+	public static int ambientSoundsVolume = 127;
 
 	@OriginalMember(owner = "client!cg", name = "h", descriptor = "Lclient!na;")
 	public static final JagString aClass100_185 = Static28.parse(")3");

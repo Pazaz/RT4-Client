@@ -33,12 +33,12 @@ public final class Static76 {
 	}
 
 	@OriginalMember(owner = "client!ga", name = "c", descriptor = "()I")
-	public static int method1644() {
+	public static int getParticleSetting() {
 		return anInt2126;
 	}
 
 	@OriginalMember(owner = "client!ga", name = "b", descriptor = "(I)V")
-	public static void method1645(@OriginalArg(0) int arg0) {
+	public static void setParticles(@OriginalArg(0) int arg0) {
 		anInt2126 = arg0;
 	}
 }

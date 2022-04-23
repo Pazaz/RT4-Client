@@ -29,8 +29,8 @@ public final class Static148 {
 	public static void method2765(@OriginalArg(1) int arg0) {
 		if (arg0 == -1 && !Static144.aBoolean173) {
 			Static241.method4548();
-		} else if (arg0 != -1 && (Static221.anInt4363 != arg0 || !Static136.method2655()) && Static12.anInt391 != 0 && !Static144.aBoolean173) {
-			Static257.method526(arg0, Static130.js5Archive6, Static12.anInt391);
+		} else if (arg0 != -1 && (Static221.anInt4363 != arg0 || !Static136.method2655()) && Static12.musicVolume != 0 && !Static144.aBoolean173) {
+			Static257.method526(arg0, Static130.js5Archive6, Static12.musicVolume);
 		}
 		Static221.anInt4363 = arg0;
 	}

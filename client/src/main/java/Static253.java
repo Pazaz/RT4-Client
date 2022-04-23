@@ -127,7 +127,7 @@ public final class Static253 {
 			} else {
 				local171 = Static103.method2235(Static178.anInt4247, Static173.self.movementQueueZ[0] >> 3, Static113.brightness, Static173.self.movementQueueX[0] >> 3);
 			}
-			Static120.method2394(Static83.loop, !Static11.aBoolean15);
+			Static120.method2394(Static83.loop, !Static11.flickeringEffectsOn);
 			GlRenderer.clearColorAndDepthBuffers(local171);
 			Static143.method2731(Static240.cameraPitch, Static134.renderZ, Static5.anInt40, Static138.renderX, Static184.cameraYaw);
 			GlRenderer.anInt5323 = Static83.loop;

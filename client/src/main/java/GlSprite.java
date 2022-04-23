@@ -255,7 +255,7 @@ public class GlSprite extends Sprite {
 
 	@OriginalMember(owner = "client!cf", name = "a", descriptor = "(IIII)V")
 	@Override
-	public final void method1419(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	public final void renderResizedTransparent(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		if (arg2 <= 0 || arg3 <= 0) {
 			return;
 		}

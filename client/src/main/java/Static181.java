@@ -36,22 +36,24 @@ public final class Static181 {
 	}
 
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(Lclient!ve;B)V")
-	public static void method3344(@OriginalArg(0) Js5 arg0) {
-		if (Static18.aBoolean40) {
+	public static void load(@OriginalArg(0) Js5 archive) {
+		if (Static18.loaded) {
 			return;
 		}
+
 		if (GlRenderer.enabled) {
-			Static46.method1184();
+			Static46.clear();
 		} else {
-			Static129.method2492();
+			Static129.clear();
 		}
-		Static78.aClass3_Sub2_Sub1_3 = Static130.method2514(arg0, Static262.anInt5754);
-		@Pc(20) int local20 = GameShell.canvasHeight;
-		@Pc(26) int local26 = local20 * 956 / 503;
-		Static78.aClass3_Sub2_Sub1_3.method1419((GameShell.canvasWidth - local26) / 2, 0, local26, local20);
-		Static243.aClass36_1 = Static40.method1010(Static136.anInt3322, arg0);
-		Static243.aClass36_1.method3336(GameShell.canvasWidth / 2 - Static243.aClass36_1.anInt4270 / 2, 18);
-		Static18.aBoolean40 = true;
+
+		@Pc(20) int height = GameShell.canvasHeight;
+		@Pc(26) int width = height * 956 / 503;
+		Static78.titleBg = Static130.loadSpriteAutoDetect(archive, Static262.bgId);
+		Static78.titleBg.renderResizedTransparent((GameShell.canvasWidth - width) / 2, 0, width, height);
+		Static243.logo = Static40.loadIndexedSpriteAutoDetect(Static136.logoId, archive);
+		Static243.logo.renderTransparent(GameShell.canvasWidth / 2 - Static243.logo.width / 2, 18);
+		Static18.loaded = true;
 	}
 
 	@OriginalMember(owner = "client!oi", name = "b", descriptor = "(II)V")
@@ -67,7 +69,7 @@ public final class Static181 {
 
 	@OriginalMember(owner = "client!oi", name = "b", descriptor = "(I)V")
 	public static void method3347() {
-		Static110.aClass99_15.method3104();
+		Static110.aClass99_15.clear();
 	}
 
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(ILclient!ve;Lclient!ve;Z)V")

@@ -50,7 +50,7 @@ public final class Static266 {
 				if (local19.anInt489 < 0) {
 					local19.anInt489 = 0;
 				}
-				if (local19.anInt452 == 0) {
+				if (local19.type == 0) {
 					Static17.method531(local19, arg1);
 				}
 			}

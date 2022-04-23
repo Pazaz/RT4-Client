@@ -20,7 +20,7 @@ public final class ClientScript extends SecondaryNode {
 	public HashTable[] aClass133Array1;
 
 	@OriginalMember(owner = "client!qc", name = "R", descriptor = "Lclient!na;")
-	public JagString aClass100_880;
+	public JagString name;
 
 	@OriginalMember(owner = "client!qc", name = "S", descriptor = "I")
 	public int anInt4671;

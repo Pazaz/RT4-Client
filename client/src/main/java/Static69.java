@@ -148,7 +148,7 @@ public final class Static69 {
 		}
 		local5 = 0;
 		for (local36 = 0; local36 < arg0.anInt4278; local36++) {
-			for (local66 = 0; local66 < arg0.anInt4270; local66++) {
+			for (local66 = 0; local66 < arg0.width; local66++) {
 				if (arg0.aByteArray18[local5++] != 0) {
 					local76 = arg0.anInt4280 + local66 + 16;
 					@Pc(162) int local162 = arg0.anInt4273 + local36 + 16;

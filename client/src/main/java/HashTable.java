@@ -82,7 +82,7 @@ public final class HashTable {
 		}
 		@Pc(21) Node local21 = this.aClass3Array1[(int) (arg1 & (long) (this.anInt5023 - 1))];
 		arg0.aClass3_222 = local21;
-		arg0.aLong192 = arg1;
+		arg0.uid = arg1;
 		arg0.aClass3_223 = local21.aClass3_223;
 		arg0.aClass3_223.aClass3_222 = arg0;
 		arg0.aClass3_222.aClass3_223 = arg0;
@@ -93,7 +93,7 @@ public final class HashTable {
 		this.aLong168 = arg0;
 		@Pc(24) Node local24 = this.aClass3Array1[(int) (arg0 & (long) (this.anInt5023 - 1))];
 		for (this.aClass3_192 = local24.aClass3_222; this.aClass3_192 != local24; this.aClass3_192 = this.aClass3_192.aClass3_222) {
-			if (arg0 == this.aClass3_192.aLong192) {
+			if (arg0 == this.aClass3_192.uid) {
 				@Pc(46) Node local46 = this.aClass3_192;
 				this.aClass3_192 = this.aClass3_192.aClass3_222;
 				return local46;
@@ -136,7 +136,7 @@ public final class HashTable {
 		}
 		@Pc(23) Node local23 = this.aClass3Array1[(int) (this.aLong168 & (long) (this.anInt5023 - 1))];
 		while (local23 != this.aClass3_192) {
-			if (this.aClass3_192.aLong192 == this.aLong168) {
+			if (this.aClass3_192.uid == this.aLong168) {
 				@Pc(45) Node local45 = this.aClass3_192;
 				this.aClass3_192 = this.aClass3_192.aClass3_222;
 				return local45;

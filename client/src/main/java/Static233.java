@@ -54,7 +54,7 @@ public final class Static233 {
 
 	@OriginalMember(owner = "client!t", name = "b", descriptor = "(I)V")
 	public static void method3999() {
-		Static67.aClass99_20.method3104();
+		Static67.aClass99_20.clear();
 	}
 
 	@OriginalMember(owner = "client!t", name = "a", descriptor = "(IIIZIII)V")

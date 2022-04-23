@@ -46,8 +46,8 @@ public final class Static263 {
 			@Pc(19) HookRequest local19 = new HookRequest();
 			local19.arguments = local8.anObjectArray29;
 			local19.source = local8;
-			local19.aClass100_598 = arg0;
-			local19.anInt3101 = arg2;
+			local19.opBase = arg0;
+			local19.op = arg2;
 			Static82.method1767(local19);
 		}
 		@Pc(37) boolean local37 = true;

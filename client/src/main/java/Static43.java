@@ -50,7 +50,7 @@ public final class Static43 {
 	}
 
 	@OriginalMember(owner = "client!dg", name = "a", descriptor = "(ILclient!be;)V")
-	public static void method1143(@OriginalArg(1) Component arg0) {
+	public static void redraw(@OriginalArg(1) Component arg0) {
 		if (Static182.anInt4311 == arg0.anInt465) {
 			Static186.aBooleanArray100[arg0.anInt517] = true;
 		}

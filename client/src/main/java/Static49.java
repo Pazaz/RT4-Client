@@ -65,7 +65,7 @@ public final class Static49 {
 						} while (local72 >= 103);
 					} while (local68 >= 103);
 					local95 = Static271.method4601(local17);
-				} while (local78 == 22 && !Static250.aBoolean283 && local95.anInt4429 == 0 && local95.anInt4435 != 1 && !local95.aBoolean206);
+				} while (local78 == 22 && !Static250.showGroundDecorations && local95.anInt4429 == 0 && local95.anInt4435 != 1 && !local95.aBoolean206);
 				local39 = true;
 				if (!local95.method3426()) {
 					local15 = false;

@@ -26,7 +26,7 @@ public final class Static159 {
 	public static final LinkedList[][][] aClass69ArrayArrayArray1 = new LinkedList[4][104][104];
 
 	@OriginalMember(owner = "client!mi", name = "ab", descriptor = "Z")
-	public static boolean aBoolean189 = true;
+	public static boolean manyGroundTextures = true;
 
 	@OriginalMember(owner = "client!mi", name = "a", descriptor = "([IBLclient!km;[I[I)V")
 	public static void method3037(@OriginalArg(0) int[] arg0, @OriginalArg(2) Npc arg1, @OriginalArg(3) int[] arg2, @OriginalArg(4) int[] arg3) {

@@ -14,7 +14,7 @@ public final class Static71 {
 	public static MouseWheel mouseWheel;
 
 	@OriginalMember(owner = "client!fk", name = "g", descriptor = "Z")
-	public static boolean aBoolean107 = true;
+	public static boolean fogEnabled = true;
 
 	@OriginalMember(owner = "client!fk", name = "k", descriptor = "[I")
 	public static final int[] anIntArray147 = new int[14];

@@ -33,7 +33,7 @@ public final class Static211 {
 
 	@OriginalMember(owner = "client!rc", name = "a", descriptor = "(Z)V")
 	public static void method924() {
-		Static244.aClass99_32.method3104();
+		Static244.aClass99_32.clear();
 	}
 
 	@OriginalMember(owner = "client!rc", name = "d", descriptor = "(I)V")

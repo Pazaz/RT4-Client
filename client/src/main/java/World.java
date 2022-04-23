@@ -14,7 +14,7 @@ public final class World extends AbstractWorld {
 	public JagString aClass100_71;
 
 	@OriginalMember(owner = "client!ba", name = "g", descriptor = "(I)Lclient!ee;")
-	public final Class32 method445() {
+	public final Class32 getWorldInfo() {
 		return Static203.aClass32Array1[this.anInt377];
 	}
 }

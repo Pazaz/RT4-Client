@@ -6,5 +6,5 @@ public final class Static51 {
 	public static byte[][] aByteArrayArray8;
 
 	@OriginalMember(owner = "client!ea", name = "w", descriptor = "I")
-	public static int anInt1682 = 1;
+	public static int worldPos = 1;
 }

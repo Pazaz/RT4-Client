@@ -8,10 +8,10 @@ public final class Static15 {
 	public static float aFloat4;
 
 	@OriginalMember(owner = "client!be", name = "ib", descriptor = "Lclient!na;")
-	public static final JagString aClass100_83 = Static28.parse("event_opbase");
+	public static final JagString EVENT_OPBASE = Static28.parse("event_opbase");
 
 	@OriginalMember(owner = "client!be", name = "Kb", descriptor = "Z")
-	public static boolean aBoolean33 = true;
+	public static boolean manyIdleAnimations = true;
 
 	@OriginalMember(owner = "client!be", name = "ac", descriptor = "Lclient!na;")
 	public static JagString aClass100_87 = null;

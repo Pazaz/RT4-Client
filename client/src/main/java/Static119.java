@@ -51,10 +51,10 @@ public final class Static119 {
 
 	@OriginalMember(owner = "client!je", name = "f", descriptor = "(B)V")
 	public static void method2381() {
-		if (Static18.aBoolean40) {
-			Static243.aClass36_1 = null;
-			Static18.aBoolean40 = false;
-			Static78.aClass3_Sub2_Sub1_3 = null;
+		if (Static18.loaded) {
+			Static243.logo = null;
+			Static18.loaded = false;
+			Static78.titleBg = null;
 		}
 	}
 

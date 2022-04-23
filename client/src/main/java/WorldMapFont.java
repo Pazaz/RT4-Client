@@ -77,7 +77,7 @@ public final class WorldMapFont {
 			arg4 = false;
 		}
 		for (@Pc(8) int local8 = 0; local8 < arg0.length(); local8++) {
-			@Pc(20) int local20 = anIntArray155[arg0.method3149(local8)];
+			@Pc(20) int local20 = anIntArray155[arg0.charAt(local8)];
 			if (arg4) {
 				this.method1506(local20, arg1 + 1, arg2, 1, this.aByteArray21);
 				this.method1506(local20, arg1, arg2 + 1, 1, this.aByteArray21);
@@ -308,12 +308,12 @@ public final class WorldMapFont {
 	private int method1510(@OriginalArg(0) JagString arg0) {
 		@Pc(1) int local1 = 0;
 		for (@Pc(3) int local3 = 0; local3 < arg0.length(); local3++) {
-			if (arg0.method3149(local3) == 64 && local3 + 4 < arg0.length() && arg0.method3149(local3 + 4) == 64) {
+			if (arg0.charAt(local3) == 64 && local3 + 4 < arg0.length() && arg0.charAt(local3 + 4) == 64) {
 				local3 += 4;
-			} else if (arg0.method3149(local3) == 126 && local3 + 4 < arg0.length() && arg0.method3149(local3 + 4) == 126) {
+			} else if (arg0.charAt(local3) == 126 && local3 + 4 < arg0.length() && arg0.charAt(local3 + 4) == 126) {
 				local3 += 4;
 			} else {
-				local1 += this.aByteArray21[anIntArray155[arg0.method3149(local3)] + 7];
+				local1 += this.aByteArray21[anIntArray155[arg0.charAt(local3)] + 7];
 			}
 		}
 		return local1;

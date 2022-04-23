@@ -63,7 +63,7 @@ public final class Static91 {
 			}
 		}
 		local42.offset = 0;
-		local12.aClass100_880 = local42.gjstrFast();
+		local12.name = local42.gjstrFast();
 		local12.opcodes = new int[local70];
 		local12.stringOperands = new JagString[local70];
 		local107 = 0;
@@ -108,7 +108,7 @@ public final class Static91 {
 			return -1;
 		}
 		for (@Pc(20) int local20 = 0; local20 < Static203.aClass134_1.anInt5074; local20++) {
-			if (Static203.aClass134_1.aClass100Array153[local20].method3140(Static101.aClass100_538, Static197.aClass100_872).method3108(arg0)) {
+			if (Static203.aClass134_1.aClass100Array153[local20].method3140(Static101.aClass100_538, Static197.aClass100_872).strEquals(arg0)) {
 				return local20;
 			}
 		}

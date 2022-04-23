@@ -25,8 +25,8 @@ public final class Static86 {
 	public static final int[] anIntArray211 = new int[] { 0, 4, 4, 8, 0, 0, 8, 0, 0 };
 
 	@OriginalMember(owner = "client!gm", name = "f", descriptor = "(B)V")
-	public static void method1799() {
-		Static222.aBoolean246 = true;
+	public static void setInstantFade() {
+		Static222.instantScreenFade = true;
 	}
 
 	@OriginalMember(owner = "client!gm", name = "h", descriptor = "(I)V")

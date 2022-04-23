@@ -29,12 +29,12 @@ public final class Static178 {
 		if (local22 == 0L) {
 			return;
 		}
-		while (Static199.aClass3_Sub22Array1.length > local24 && Static199.aClass3_Sub22Array1[local24].aLong192 != local22) {
+		while (Static199.aClass3_Sub22Array1.length > local24 && Static199.aClass3_Sub22Array1[local24].uid != local22) {
 			local24++;
 		}
 		if (local24 < Static199.aClass3_Sub22Array1.length && Static199.aClass3_Sub22Array1[local24] != null) {
 			Static6.outboundBuffer.p1isaac(162);
-			Static6.outboundBuffer.p8(Static199.aClass3_Sub22Array1[local24].aLong192);
+			Static6.outboundBuffer.p8(Static199.aClass3_Sub22Array1[local24].uid);
 		}
 	}
 

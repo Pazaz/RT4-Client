@@ -527,7 +527,7 @@ public final class Static1 {
 		@Pc(2826) long[] local2826 = new long[local12];
 		local10.method3865(local2823);
 		for (local38 = 0; local38 < local12; local38++) {
-			local2826[local38] = local2823[local38].aLong192;
+			local2826[local38] = local2823[local38].uid;
 		}
 		Static4.method23(local2826, local2823);
 		return local2823;

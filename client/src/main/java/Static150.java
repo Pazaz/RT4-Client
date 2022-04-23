@@ -17,15 +17,15 @@ public final class Static150 {
 	public static int clickButton = 0;
 
 	@OriginalMember(owner = "client!lk", name = "a", descriptor = "(ILclient!ve;)I")
-	public static int getReady(@OriginalArg(1) Js5 arg0) {
-		@Pc(1) int local1 = 0;
-		if (arg0.method4506(Static262.anInt5754)) {
-			local1++;
+	public static int getReady(@OriginalArg(1) Js5 archive) {
+		@Pc(1) int ready = 0;
+		if (archive.isFileReady(Static262.bgId)) {
+			ready++;
 		}
-		if (arg0.method4506(Static136.anInt3322)) {
-			local1++;
+		if (archive.isFileReady(Static136.logoId)) {
+			ready++;
 		}
-		return local1;
+		return ready;
 	}
 
 	@OriginalMember(owner = "client!lk", name = "a", descriptor = "(IIBLclient!ve;)Lclient!qf;")
@@ -37,39 +37,39 @@ public final class Static150 {
 	public static void method2801(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Component arg2, @OriginalArg(4) boolean arg3) {
 		@Pc(4) int local4 = arg2.anInt445;
 		@Pc(7) int local7 = arg2.anInt459;
-		if (arg2.aByte5 == 0) {
+		if (arg2.dynamicWidthValue == 0) {
 			arg2.anInt445 = arg2.baseWidth;
-		} else if (arg2.aByte5 == 1) {
+		} else if (arg2.dynamicWidthValue == 1) {
 			arg2.anInt445 = arg1 - arg2.baseWidth;
-		} else if (arg2.aByte5 == 2) {
+		} else if (arg2.dynamicWidthValue == 2) {
 			arg2.anInt445 = arg2.baseWidth * arg1 >> 14;
-		} else if (arg2.aByte5 == 3) {
-			if (arg2.anInt452 == 2) {
+		} else if (arg2.dynamicWidthValue == 3) {
+			if (arg2.type == 2) {
 				arg2.anInt445 = arg2.baseWidth * 32 + (arg2.baseWidth - 1) * arg2.anInt512;
-			} else if (arg2.anInt452 == 7) {
+			} else if (arg2.type == 7) {
 				arg2.anInt445 = arg2.baseWidth * 115 + arg2.anInt512 * (arg2.baseWidth - 1);
 			}
 		}
-		if (arg2.aByte3 == 0) {
-			arg2.anInt459 = arg2.anInt488;
-		} else if (arg2.aByte3 == 1) {
-			arg2.anInt459 = arg0 - arg2.anInt488;
-		} else if (arg2.aByte3 == 2) {
-			arg2.anInt459 = arg0 * arg2.anInt488 >> 14;
-		} else if (arg2.aByte3 == 3) {
-			if (arg2.anInt452 == 2) {
-				arg2.anInt459 = (arg2.anInt488 - 1) * arg2.anInt516 + arg2.anInt488 * 32;
-			} else if (arg2.anInt452 == 7) {
-				arg2.anInt459 = arg2.anInt488 * 12 + (arg2.anInt488 - 1) * arg2.anInt516;
+		if (arg2.dynamicHeightValue == 0) {
+			arg2.anInt459 = arg2.baseHeight;
+		} else if (arg2.dynamicHeightValue == 1) {
+			arg2.anInt459 = arg0 - arg2.baseHeight;
+		} else if (arg2.dynamicHeightValue == 2) {
+			arg2.anInt459 = arg0 * arg2.baseHeight >> 14;
+		} else if (arg2.dynamicHeightValue == 3) {
+			if (arg2.type == 2) {
+				arg2.anInt459 = (arg2.baseHeight - 1) * arg2.anInt516 + arg2.baseHeight * 32;
+			} else if (arg2.type == 7) {
+				arg2.anInt459 = arg2.baseHeight * 12 + (arg2.baseHeight - 1) * arg2.anInt516;
 			}
 		}
-		if (arg2.aByte5 == 4) {
-			arg2.anInt445 = arg2.anInt473 * arg2.anInt459 / arg2.anInt442;
+		if (arg2.dynamicWidthValue == 4) {
+			arg2.anInt445 = arg2.aspectWidth * arg2.anInt459 / arg2.aspectHeight;
 		}
-		if (arg2.aByte3 == 4) {
-			arg2.anInt459 = arg2.anInt442 * arg2.anInt445 / arg2.anInt473;
+		if (arg2.dynamicHeightValue == 4) {
+			arg2.anInt459 = arg2.aspectHeight * arg2.anInt445 / arg2.aspectWidth;
 		}
-		if (Static121.aBoolean154 && (Static36.method940(arg2).anInt546 != 0 || arg2.anInt452 == 0)) {
+		if (Static121.aBoolean154 && (Static36.method940(arg2).anInt546 != 0 || arg2.type == 0)) {
 			if (arg2.anInt459 < 5 && arg2.anInt445 < 5) {
 				arg2.anInt459 = 5;
 				arg2.anInt445 = 5;
@@ -109,7 +109,7 @@ public final class Static150 {
 		} else if (arg4 < arg1.anInt2029) {
 			local20 += arg1.anInt2029 - arg4;
 		}
-		if (arg1.anInt2042 == 0 || arg1.anInt2042 < local20 - 64 || Static30.anInt978 == 0 || arg2 != arg1.anInt2033) {
+		if (arg1.anInt2042 == 0 || arg1.anInt2042 < local20 - 64 || Static30.ambientSoundsVolume == 0 || arg2 != arg1.anInt2033) {
 			if (arg1.aClass3_Sub3_Sub1_1 != null) {
 				Static204.soundStream.method1347(arg1.aClass3_Sub3_Sub1_1);
 				arg1.aClass3_Sub3_Sub1_1 = null;
@@ -124,7 +124,7 @@ public final class Static150 {
 		if (local20 < 0) {
 			local20 = 0;
 		}
-		@Pc(134) int local134 = (arg1.anInt2042 - local20) * Static30.anInt978 / arg1.anInt2042;
+		@Pc(134) int local134 = (arg1.anInt2042 - local20) * Static30.ambientSoundsVolume / arg1.anInt2042;
 		if (arg1.aClass3_Sub3_Sub1_1 != null) {
 			arg1.aClass3_Sub3_Sub1_1.method386(local134);
 		} else if (arg1.anInt2044 >= 0) {
