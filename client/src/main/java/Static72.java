@@ -14,7 +14,7 @@ public final class Static72 {
 	public static int[][] regionsXteaKeys;
 
     @OriginalMember(owner = "client!fl", name = "s", descriptor = "I")
-	public static int pitchTarget = 128;
+	public static double pitchTarget = 128;
 
     @OriginalMember(owner = "client!fl", name = "B", descriptor = "I")
 	public static int updatedVarcstrsWriterIndex = 0;

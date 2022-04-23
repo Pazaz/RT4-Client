@@ -51,33 +51,16 @@ public final class Static250 {
 			for (@Pc(93) int local93 = 0; local93 < Static182.keyQueueSize; local93++) {
 				@Pc(104) int code = Static227.keyCodes[local93];
 				if (code == Keyboard.KEY_UP) {
-					Static72.pitchTarget = Static72.pitchTarget + 47 & 0xFFFFFFF0;
+					Static72.pitchTarget = (int)Static72.pitchTarget + 47 & 0xFFFFFFF0;
 				} else if (code == Keyboard.KEY_DOWN) {
-					Static72.pitchTarget = Static72.pitchTarget - 17 & 0xFFFFFFF0;
+					Static72.pitchTarget = (int)Static72.pitchTarget - 17 & 0xFFFFFFF0;
 				} else if (code == Keyboard.KEY_LEFT) {
-					Static57.yawTarget = Static57.yawTarget - 65 & 0xFFFFFF80;
+					Static57.yawTarget = (int)Static57.yawTarget - 65 & 0xFFFFFF80;
 				} else if (code == Keyboard.KEY_RIGHT) {
-					Static57.yawTarget = Static57.yawTarget + 191 & 0xFFFFFF80;
+					Static57.yawTarget = (int)Static57.yawTarget + 191 & 0xFFFFFF80;
 				}
 			}
-		} else {
-			if (Keyboard.pressedKeys[Keyboard.KEY_UP]) {
-				Static56.anInt1743 += (12 - Static56.anInt1743) / 2;
-			} else if (Keyboard.pressedKeys[Keyboard.KEY_DOWN]) {
-				Static56.anInt1743 += (-Static56.anInt1743 - 12) / 2;
-			} else {
-				Static56.anInt1743 /= 2;
-			}
-			if (Keyboard.pressedKeys[Keyboard.KEY_LEFT]) {
-				Static38.anInt1203 += (-Static38.anInt1203 - 24) / 2;
-			} else if (Keyboard.pressedKeys[Keyboard.KEY_RIGHT]) {
-				Static38.anInt1203 += (24 - Static38.anInt1203) / 2;
-			} else {
-				Static38.anInt1203 /= 2;
-			}
-			Static72.pitchTarget += Static56.anInt1743 / 2;
-			Static57.yawTarget += Static38.anInt1203 / 2;
+			Static87.clampCameraAngle();
 		}
-		Static87.clampCameraAngle();
 	}
 }

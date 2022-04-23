@@ -10,7 +10,7 @@ public final class Static57 {
 	public static int anInt1757;
 
 	@OriginalMember(owner = "client!eg", name = "d", descriptor = "I")
-	public static int yawTarget = 0;
+	public static double yawTarget = 0;
 
 	@OriginalMember(owner = "client!eg", name = "e", descriptor = "Lclient!i;")
 	public static final Packet aClass3_Sub15_Sub1_3 = new Packet(65536);

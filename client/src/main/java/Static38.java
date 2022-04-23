@@ -8,7 +8,7 @@ public final class Static38 {
 	public static int anInt1196 = 1;
 
 	@OriginalMember(owner = "client!cn", name = "L", descriptor = "I")
-	public static int anInt1203 = 0;
+	public static double yawAccel = 0;
 
 	@OriginalMember(owner = "client!cn", name = "a", descriptor = "(BIIIIIIII)V")
 	public static void method959(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7) {

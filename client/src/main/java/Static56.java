@@ -27,7 +27,7 @@ public final class Static56 {
 	public static final JagString aClass100_380 = Static28.parse("unzap");
 
 	@OriginalMember(owner = "client!ef", name = "i", descriptor = "I")
-	public static int anInt1743 = 0;
+	public static double pitchAccel = 0;
 
 	@OriginalMember(owner = "client!ef", name = "r", descriptor = "Lclient!be;")
 	public static Component aClass13_12 = null;
