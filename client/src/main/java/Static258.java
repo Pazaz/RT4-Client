@@ -65,7 +65,7 @@ public final class Static258 {
 									Static98.method1966(-1, (long) local276.anInt2354, Static34.concatenate(new JagString[] { Static34.aClass100_203, Static223.aClass100_947, local276.aClass100_495 }), local171, (short) 40, LocalizedText.USE, arg2.id);
 								}
 							} else if (Static241.aBoolean302 && local267.method510()) {
-								@Pc(596) Class3_Sub2_Sub12 local596 = Static121.anInt3039 == -1 ? null : Static110.method2277(Static121.anInt3039);
+								@Pc(596) ParamType local596 = Static121.anInt3039 == -1 ? null : Static110.method2277(Static121.anInt3039);
 								if ((Static274.anInt4999 & 0x10) != 0 && (local596 == null || local276.method1829(local596.anInt2667, Static121.anInt3039) != local596.anInt2667)) {
 									Static98.method1966(Static246.anInt5393, (long) local276.anInt2354, Static34.concatenate(new JagString[] { Static78.aClass100_466, Static223.aClass100_947, local276.aClass100_495 }), local171, (short) 3, Static102.aClass100_545, arg2.id);
 								}
