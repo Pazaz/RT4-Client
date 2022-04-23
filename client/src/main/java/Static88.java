@@ -3105,18 +3105,18 @@ public final class Static88 {
 														Static72.pitchTarget = Static254.intStack[isp];
 														Static57.yawTarget = Static254.intStack[isp + 1];
 														if (Static227.cameraType == 2) {
-															Static184.cameraYaw = Static57.yawTarget;
-															Static240.cameraPitch = Static72.pitchTarget;
+															Static184.cameraYaw = (int)Static57.yawTarget;
+															Static240.cameraPitch = (int)Static72.pitchTarget;
 														}
 														Static87.clampCameraAngle();
 														continue;
 													}
 													if (opcode == 5505) {
-														Static254.intStack[isp++] = Static72.pitchTarget;
+														Static254.intStack[isp++] = (int)Static72.pitchTarget;
 														continue;
 													}
 													if (opcode == 5506) {
-														Static254.intStack[isp++] = Static57.yawTarget;
+														Static254.intStack[isp++] = (int)Static57.yawTarget;
 														continue;
 													}
 												} else if (opcode < 5700) {

@@ -12,6 +12,8 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!rc")
 public abstract class GameShell extends Applet implements Runnable, FocusListener, WindowListener {
 
+	public static final long FIXED_UPDATE_RATE = 20;
+
 	@OriginalMember(owner = "client!sh", name = "l", descriptor = "[J")
 	public static final long[] logicTimes = new long[32];
 
@@ -82,9 +84,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 	public static int minimumDelay = 1;
 
 	@OriginalMember(owner = "client!ba", name = "B", descriptor = "I")
-	public static int timePerFrame = 20;
-
-	public static int FIXED_UPDATE_RATE = 20;
+	public static long VARIABLE_RENDER_RATE = 20;
 
 	@OriginalMember(owner = "client!cm", name = "b", descriptor = "Ljava/lang/Thread;")
 	public static Thread thread;
@@ -124,6 +124,10 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 	public static double subpixelX = 0.5d;
 
 	public static double subpixelY = 0.5d;
+
+	public static long updateDelta = 0;
+
+	public static long renderDelta = 0;
 
 	@OriginalMember(owner = "client!rc", name = "providesignlink", descriptor = "(Lsignlink!ll;)V")
 	public static void providesignlink(@OriginalArg(0) SignLink signLink) {
@@ -422,6 +426,34 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 		}
 	}
 
+	public double calcUpdateDelta(double value) {
+		return value / 1_000_000_000.0d * (double) updateDelta * value;
+	}
+
+	public double calcRenderDelta(double value) {
+		return value / 1_000_000_000.0d * (double) renderDelta * value;
+	}
+
+	public void mainInputLoop() {
+		if (Keyboard.pressedKeys[Keyboard.KEY_UP] || Keyboard.pressedKeys[Keyboard.KEY_DOWN] || Keyboard.pressedKeys[Keyboard.KEY_LEFT] || Keyboard.pressedKeys[Keyboard.KEY_RIGHT]) {
+			double vertical = calcRenderDelta(18.0d);
+			if (Keyboard.pressedKeys[Keyboard.KEY_UP]) {
+				Static72.pitchTarget += vertical;
+			} else if (Keyboard.pressedKeys[Keyboard.KEY_DOWN]) {
+				Static72.pitchTarget -= vertical;
+			}
+
+			double horizontal = calcRenderDelta(24.0d);
+			if (Keyboard.pressedKeys[Keyboard.KEY_LEFT]) {
+				Static57.yawTarget -= horizontal;
+			} else if (Keyboard.pressedKeys[Keyboard.KEY_RIGHT]) {
+				Static57.yawTarget += horizontal;
+			}
+
+			Static87.clampCameraAngle();
+		}
+	}
+
 	@OriginalMember(owner = "client!rc", name = "run", descriptor = "()V")
 	@Override
 	public final void run() {
@@ -474,17 +506,21 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			long lastUpdateTime = 0;
 			long lastDrawTime = 0;
 			while (killTime == 0L) {
-				long currentTime = MonotonicClock.currentTimeMillis();
-				if (GameShell.killTime > currentTime) {
+				if (GameShell.killTime > MonotonicClock.currentTimeMillis()) {
 					break;
 				}
 
-				if (currentTime - lastUpdateTime >= FIXED_UPDATE_RATE) {
+				long currentTime = System.nanoTime();
+
+				updateDelta = currentTime - lastUpdateTime;
+				if (updateDelta >= FIXED_UPDATE_RATE * 1_000_000) {
 					this.mainLoopWrapper();
 					lastUpdateTime = currentTime;
 				}
 
-				if (currentTime - lastDrawTime >= timePerFrame) {
+				renderDelta = currentTime - lastDrawTime;
+				if (renderDelta >= VARIABLE_RENDER_RATE * 1_000_000) {
+					this.mainInputLoop();
 					this.mainRedrawWrapper();
 					lastDrawTime = currentTime;
 				}

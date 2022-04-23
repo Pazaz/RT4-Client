@@ -236,7 +236,7 @@ public final class Static87 {
 									continue;
 								}
 								local276 -= local30.anInt459 / 2;
-								local503 = Static57.yawTarget + Static59.anInt1814 & 0x7FF;
+								local503 = (int)Static57.yawTarget + Static59.anInt1814 & 0x7FF;
 								local270 -= local30.anInt445 / 2;
 								local514 = MathUtils.anIntArray223[local503];
 								local518 = MathUtils.anIntArray225[local503];
@@ -900,7 +900,7 @@ public final class Static87 {
 		if (Static72.pitchTarget > 383) {
 			Static72.pitchTarget = 383;
 		}
-		Static57.yawTarget &= 0x7FF;
+		Static57.yawTarget = (int)Static57.yawTarget & 2047;
 		@Pc(33) int local33 = Static81.cameraX >> 7;
 		@Pc(37) int local37 = Static111.cameraZ >> 7;
 		@Pc(43) int local43 = Static207.method3685(Static55.level, Static81.cameraX, Static111.cameraZ);
