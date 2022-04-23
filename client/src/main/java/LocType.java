@@ -151,7 +151,7 @@ public final class LocType {
 	private int anInt4411 = 0;
 
 	@OriginalMember(owner = "client!pb", name = "k", descriptor = "I")
-	public int anInt4402 = 0;
+	public int soundRadius = 0;
 
 	@OriginalMember(owner = "client!pb", name = "p", descriptor = "I")
 	private int anInt4405 = 0;
@@ -163,7 +163,7 @@ public final class LocType {
 	public boolean aBoolean213 = false;
 
 	@OriginalMember(owner = "client!pb", name = "O", descriptor = "I")
-	public int anInt4412 = -1;
+	public int sound = -1;
 
 	@OriginalMember(owner = "client!pb", name = "ub", descriptor = "I")
 	public int anInt4435 = 2;
@@ -206,7 +206,7 @@ public final class LocType {
 	}
 
 	@OriginalMember(owner = "client!pb", name = "a", descriptor = "(I)Lclient!pb;")
-	public final LocType method3417() {
+	public final LocType getMultiLoc() {
 		@Pc(26) int local26 = -1;
 		if (this.anInt4425 != -1) {
 			local26 = Static155.getVarbit(this.anInt4425);
@@ -243,7 +243,7 @@ public final class LocType {
 				if (local10) {
 					local60 += 65536;
 				}
-				local7 = (RawModel) Static169.aClass99_24.method3106((long) local60);
+				local7 = (RawModel) Static169.aClass99_24.get((long) local60);
 				if (local7 == null) {
 					local7 = Static77.method1686(Static121.aClass153_45, local60 & 0xFFFF);
 					if (local7 == null) {
@@ -252,7 +252,7 @@ public final class LocType {
 					if (local10) {
 						local7.method1673();
 					}
-					Static169.aClass99_24.method3095(local7, (long) local60);
+					Static169.aClass99_24.put(local7, (long) local60);
 				}
 				if (local46 > 1) {
 					Static274.aClass8_Sub5Array5[local48] = local7;
@@ -276,7 +276,7 @@ public final class LocType {
 			if (local10) {
 				local48 += 65536;
 			}
-			local7 = (RawModel) Static169.aClass99_24.method3106((long) local48);
+			local7 = (RawModel) Static169.aClass99_24.get((long) local48);
 			if (local7 == null) {
 				local7 = Static77.method1686(Static121.aClass153_45, local48 & 0xFFFF);
 				if (local7 == null) {
@@ -285,7 +285,7 @@ public final class LocType {
 				if (local10) {
 					local7.method1673();
 				}
-				Static169.aClass99_24.method3095(local7, (long) local48);
+				Static169.aClass99_24.put(local7, (long) local48);
 			}
 		}
 		@Pc(211) boolean local211;
@@ -359,12 +359,12 @@ public final class LocType {
 	@OriginalMember(owner = "client!pb", name = "d", descriptor = "(I)Z")
 	public final boolean method3422() {
 		if (this.anIntArray380 == null) {
-			return this.anInt4412 != -1 || this.anIntArray381 != null;
+			return this.sound != -1 || this.anIntArray381 != null;
 		}
 		for (@Pc(44) int local44 = 0; local44 < this.anIntArray380.length; local44++) {
 			if (this.anIntArray380[local44] != -1) {
 				@Pc(70) LocType local70 = Static271.method4601(this.anIntArray380[local44]);
-				if (local70.anInt4412 != -1 || local70.anIntArray381 != null) {
+				if (local70.sound != -1 || local70.anIntArray381 != null) {
 					return true;
 				}
 			}
@@ -378,7 +378,7 @@ public final class LocType {
 			return arg0;
 		} else {
 			@Pc(21) IntNode local21 = (IntNode) this.aClass133_19.get((long) arg1);
-			return local21 == null ? arg0 : local21.anInt3141;
+			return local21 == null ? arg0 : local21.value;
 		}
 	}
 
@@ -535,12 +535,12 @@ public final class LocType {
 			}
 			this.anIntArray380[local38 + 1] = local18;
 		} else if (arg1 == 78) {
-			this.anInt4412 = arg0.g2();
-			this.anInt4402 = arg0.g1();
+			this.sound = arg0.g2();
+			this.soundRadius = arg0.g1();
 		} else if (arg1 == 79) {
 			this.anInt4419 = arg0.g2();
 			this.anInt4414 = arg0.g2();
-			this.anInt4402 = arg0.g1();
+			this.soundRadius = arg0.g1();
 			local18 = arg0.g1();
 			this.anIntArray381 = new int[local18];
 			for (local38 = 0; local38 < local18; local38++) {
@@ -597,7 +597,7 @@ public final class LocType {
 				} else {
 					local589 = new IntNode(arg0.g4());
 				}
-				this.aClass133_19.method3862(local589, (long) local580);
+				this.aClass133_19.put(local589, (long) local580);
 			}
 		}
 	}
@@ -639,7 +639,7 @@ public final class LocType {
 			if (arg1) {
 				local135 = ~local135;
 			}
-			local79 = (GlModel) Static169.aClass99_24.method3106(local135);
+			local79 = (GlModel) Static169.aClass99_24.get(local135);
 			if (local79 == null) {
 				@Pc(175) RawModel local175 = null;
 				for (local177 = 0; local177 < local24; local177++) {
@@ -655,7 +655,7 @@ public final class LocType {
 					local175 = new RawModel(Static274.aClass8_Sub5Array5, local24);
 				}
 				local79 = new GlModel(local175, local10, local17, arg1);
-				Static169.aClass99_24.method3095(local79, local135);
+				Static169.aClass99_24.put(local79, local135);
 			}
 		} else {
 			local24 = -1;
@@ -673,14 +673,14 @@ public final class LocType {
 			if (arg1) {
 				local26 += 65536;
 			}
-			local79 = (GlModel) Static169.aClass99_24.method3106((long) local26);
+			local79 = (GlModel) Static169.aClass99_24.get((long) local26);
 			if (local79 == null) {
 				@Pc(90) RawModel local90 = Static77.method1686(Static121.aClass153_45, local26 & 0xFFFF);
 				if (local90 == null) {
 					return null;
 				}
 				local79 = new GlModel(local90, local10, local17, arg1);
-				Static169.aClass99_24.method3095(local79, (long) local26);
+				Static169.aClass99_24.put(local79, (long) local26);
 			}
 		}
 		@Pc(236) boolean local236 = this.aBoolean217;
@@ -739,7 +739,7 @@ public final class LocType {
 			} else {
 				local29 = arg0 + (this.anInt4426 << 10) + (arg3 << 3);
 			}
-			@Pc(225) Class139 local225 = (Class139) Static93.aClass99_14.method3106(local29);
+			@Pc(225) Class139 local225 = (Class139) Static93.aClass99_14.get(local29);
 			@Pc(235) GlModel local235;
 			@Pc(265) SoftwareIndexedSprite local265;
 			if (local225 == null) {
@@ -760,7 +760,7 @@ public final class LocType {
 				local225 = new Class139();
 				local225.aClass8_10 = local235;
 				local225.aClass36_Sub1_3 = local265;
-				Static93.aClass99_14.method3095(local225, local29);
+				Static93.aClass99_14.put(local225, local29);
 			} else {
 				local235 = (GlModel) local225.aClass8_10;
 				local265 = local225.aClass36_Sub1_3;
@@ -788,7 +788,7 @@ public final class LocType {
 		} else {
 			local50 = false;
 		}
-		@Pc(60) Entity local60 = (Entity) Static93.aClass99_14.method3106(local29);
+		@Pc(60) Entity local60 = (Entity) Static93.aClass99_14.get(local29);
 		if (local60 == null) {
 			@Pc(69) RawModel local69 = this.method3418(arg0, arg3);
 			if (local69 == null) {
@@ -807,7 +807,7 @@ public final class LocType {
 			} else {
 				local60 = new SoftwareModel(local69, this.anInt4407 + 64, this.anInt4405 * 5 + 768, -50, -10, -50);
 			}
-			Static93.aClass99_14.method3095(local60, local29);
+			Static93.aClass99_14.put(local60, local29);
 		}
 		if (local50) {
 			local60 = ((RawModel) local60).method1675();
@@ -832,14 +832,14 @@ public final class LocType {
 			} else {
 				local30 = arg5 + (this.anInt4426 << 10) + (arg11 << 3);
 			}
-			@Pc(195) SoftwareModel local195 = (SoftwareModel) Static262.aClass99_36.method3106(local30);
+			@Pc(195) SoftwareModel local195 = (SoftwareModel) Static262.aClass99_36.get(local30);
 			if (local195 == null) {
 				@Pc(204) RawModel local204 = this.method3418(arg5, arg11);
 				if (local204 == null) {
 					return null;
 				}
 				local195 = new SoftwareModel(local204, this.anInt4407 + 64, this.anInt4405 * 5 + 768, -50, -10, -50);
-				Static262.aClass99_36.method3095(local195, local30);
+				Static262.aClass99_36.put(local195, local30);
 			}
 			@Pc(234) boolean local234 = false;
 			if (arg4 != null) {
@@ -867,7 +867,7 @@ public final class LocType {
 		} else {
 			local30 = (arg11 << 3) + ((this.anInt4426 << 10) + arg5);
 		}
-		@Pc(46) GlModel local46 = (GlModel) Static262.aClass99_36.method3106(local30);
+		@Pc(46) GlModel local46 = (GlModel) Static262.aClass99_36.get(local30);
 		if (local46 == null) {
 			local46 = this.method3427(arg5, true, arg11);
 			if (local46 == null) {
@@ -875,7 +875,7 @@ public final class LocType {
 			}
 			local46.method4099();
 			local46.method4111(false, false, false, false, false, true);
-			Static262.aClass99_36.method3095(local46, local30);
+			Static262.aClass99_36.put(local46, local30);
 		}
 		@Pc(80) boolean local80 = false;
 		@Pc(82) GlModel local82 = local46;
@@ -911,7 +911,7 @@ public final class LocType {
 			return arg0;
 		} else {
 			@Pc(26) StringNode local26 = (StringNode) this.aClass133_19.get((long) arg1);
-			return local26 == null ? arg0 : local26.aClass100_980;
+			return local26 == null ? arg0 : local26.value;
 		}
 	}
 }

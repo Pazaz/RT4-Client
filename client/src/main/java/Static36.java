@@ -39,7 +39,7 @@ public final class Static36 {
 
 	@OriginalMember(owner = "client!client", name = "a", descriptor = "(IB)Lclient!tk;")
 	public static SeqType method941(@OriginalArg(0) int arg0) {
-		@Pc(17) SeqType local17 = (SeqType) Static142.aClass99_23.method3106((long) arg0);
+		@Pc(17) SeqType local17 = (SeqType) Static142.aClass99_23.get((long) arg0);
 		if (local17 != null) {
 			return local17;
 		}
@@ -50,7 +50,7 @@ public final class Static36 {
 			local17.method4213(new Buffer(local32));
 		}
 		local17.method4218();
-		Static142.aClass99_23.method3095(local17, (long) arg0);
+		Static142.aClass99_23.put(local17, (long) arg0);
 		return local17;
 	}
 
@@ -95,7 +95,7 @@ public final class Static36 {
 						if (local9.noClickThrough && Static215.anInt4873 >= local61 && Static223.anInt5032 >= local63 && Static215.anInt4873 < local65 && Static223.anInt5032 < local67) {
 							for (@Pc(164) HookRequest local164 = (HookRequest) Static185.lowPriorityRequests.method2289(); local164 != null; local164 = (HookRequest) Static185.lowPriorityRequests.method2288()) {
 								if (local164.aBoolean158) {
-									local164.method4658();
+									local164.unlink();
 									local164.source.aBoolean19 = false;
 								}
 							}
@@ -129,7 +129,7 @@ public final class Static36 {
 									if (local9.anIntArray49 == null || Static83.loop >= local9.anIntArray49[local243]) {
 										@Pc(279) byte local279 = local9.aByteArray7[local243];
 										if (local279 == 0 || ((local279 & 0x2) == 0 || Keyboard.pressedKeys[Keyboard.KEY_ALT]) && ((local279 & 0x1) == 0 || Keyboard.pressedKeys[Keyboard.KEY_CTRL]) && ((local279 & 0x4) == 0 || Keyboard.pressedKeys[Keyboard.KEY_SHIFT])) {
-											Static263.method4512(Static186.EMPTY_FILE, -1, local243 + 1, local9.id);
+											Static263.method4512(Static186.EMPTY, -1, local243 + 1, local9.id);
 											local322 = local9.anIntArray46[local243];
 											if (local9.anIntArray49 == null) {
 												local9.anIntArray49 = new int[local9.aByteArray8.length];

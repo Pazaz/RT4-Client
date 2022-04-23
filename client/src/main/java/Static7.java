@@ -12,7 +12,7 @@ public final class Static7 {
 	public static int anInt986;
 
 	@OriginalMember(owner = "client!ah", name = "i", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_5 = new SoftLruHashTable(2);
+	public static final SoftLruHashTable sprites = new SoftLruHashTable(2);
 
 	@OriginalMember(owner = "client!ah", name = "j", descriptor = "[I")
 	public static final int[] varps = new int[2500];
@@ -28,7 +28,7 @@ public final class Static7 {
 
 	@OriginalMember(owner = "client!ah", name = "a", descriptor = "(BZ)V")
 	public static void ping(@OriginalArg(1) boolean arg0) {
-		Static107.method2261();
+		Static107.loop();
 		if (Static244.gameState != 30 && Static244.gameState != 25) {
 			return;
 		}
@@ -46,7 +46,7 @@ public final class Static7 {
 				Static224.aBoolean247 = true;
 			}
 		}
-		Static107.method2261();
+		Static107.loop();
 	}
 
 	@OriginalMember(owner = "client!ah", name = "b", descriptor = "(I)V")

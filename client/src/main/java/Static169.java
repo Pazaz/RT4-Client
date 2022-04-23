@@ -72,7 +72,7 @@ public final class Static169 {
 		if (local103 == null) {
 			return null;
 		} else if (local90.status == 2) {
-			Static25.method714(local103, arg3);
+			Static25.exitFullScreen(local103, arg3);
 			return null;
 		} else {
 			return local103;

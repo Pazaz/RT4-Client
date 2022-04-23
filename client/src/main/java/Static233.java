@@ -35,7 +35,7 @@ public final class Static233 {
 	public static final long[] aLongArray9 = new long[100];
 
 	@OriginalMember(owner = "client!t", name = "x", descriptor = "Z")
-	public static boolean aBoolean254 = false;
+	public static boolean javaScript = false;
 
 	@OriginalMember(owner = "client!t", name = "y", descriptor = "I")
 	public static int loadingScreenState = 0;
@@ -92,7 +92,7 @@ public final class Static233 {
 			local21 = Static156.locationMapFilesBuffer;
 		}
 		for (@Pc(29) int local29 = 0; local29 < local19; local29++) {
-			Static107.method2261();
+			Static107.loop();
 			for (@Pc(36) int local36 = 0; local36 < 13; local36++) {
 				for (@Pc(43) int local43 = 0; local43 < 13; local43++) {
 					@Pc(56) int local56 = Static187.anIntArrayArrayArray18[local29][local36][local43];
@@ -260,7 +260,7 @@ public final class Static233 {
 			}
 			arg0.pCrc32(local25);
 			arg0.p1len(arg0.offset - local25);
-			local18.method4658();
+			local18.unlink();
 		}
 	}
 }

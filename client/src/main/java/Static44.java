@@ -40,9 +40,9 @@ public final class Static44 {
 				Static159.players[local35].anInt3370 = -1;
 			}
 		}
-		for (local35 = 0; local35 < Static175.aClass8_Sub4_Sub2Array1.length; local35++) {
-			if (Static175.aClass8_Sub4_Sub2Array1[local35] != null) {
-				Static175.aClass8_Sub4_Sub2Array1[local35].anInt3370 = -1;
+		for (local35 = 0; local35 < Static175.npcs.length; local35++) {
+			if (Static175.npcs[local35] != null) {
+				Static175.npcs[local35].anInt3370 = -1;
 			}
 		}
 		Static102.method2073();
@@ -68,7 +68,7 @@ public final class Static44 {
 		@Pc(9) Class3_Sub31 local9 = new Class3_Sub31();
 		local9.anInt5879 = arg2;
 		local9.anInt5878 = arg0;
-		Static119.aClass133_9.method3862(local9, (long) arg1);
+		Static119.aClass133_9.put(local9, (long) arg1);
 		Static81.method1753(arg0);
 		@Pc(28) Component local28 = Static5.getComponent(arg1);
 		if (local28 != null) {
@@ -90,9 +90,9 @@ public final class Static44 {
 			Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
 		} else {
 			Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
-			local53 = Static280.aClass3_Sub2_Sub9_43.method2858(LocalizedText.CHOOSE_OPTION);
+			local53 = Static280.aClass3_Sub2_Sub9_43.getStringWidth(LocalizedText.CHOOSE_OPTION);
 			for (@Pc(95) int local95 = 0; local95 < Static231.anInt5204; local95++) {
-				@Pc(104) int local104 = Static280.aClass3_Sub2_Sub9_43.method2858(Static269.method2228(local95));
+				@Pc(104) int local104 = Static280.aClass3_Sub2_Sub9_43.getStringWidth(Static269.method2228(local95));
 				if (local104 > local53) {
 					local53 = local104;
 				}

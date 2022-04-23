@@ -21,7 +21,7 @@ public final class Static158 {
 	public static int anInt3857 = 0;
 
 	@OriginalMember(owner = "client!mh", name = "f", descriptor = "(B)V")
-	public static void handleAccountCreation() {
+	public static void loop() {
 		if (Static179.accountCreationStep == 0) {
 			return;
 		}
@@ -157,20 +157,20 @@ public final class Static158 {
 					@Pc(129) int local129 = local103 & 0x3F;
 					@Pc(142) int local142 = local129 + (Static238.regionBitPacked[local16] & 0xFF) * 64 - Static142.originZ;
 					@Pc(148) NpcType local148 = Static214.method4363(local74.g2());
-					if (Static175.aClass8_Sub4_Sub2Array1[local97] == null && (local148.aByte10 & 0x1) > 0 && local107 == Static41.anInt1316 && local125 >= 0 && local148.anInt3713 + local125 < 104 && local142 >= 0 && local142 + local148.anInt3713 < 104) {
-						Static175.aClass8_Sub4_Sub2Array1[local97] = new Npc();
-						@Pc(198) Npc local198 = Static175.aClass8_Sub4_Sub2Array1[local97];
+					if (Static175.npcs[local97] == null && (local148.aByte10 & 0x1) > 0 && local107 == Static41.anInt1316 && local125 >= 0 && local148.anInt3713 + local125 < 104 && local142 >= 0 && local142 + local148.anInt3713 < 104) {
+						Static175.npcs[local97] = new Npc();
+						@Pc(198) Npc local198 = Static175.npcs[local97];
 						Static33.anIntArray79[Static272.anInt5214++] = local97;
 						local198.anInt3430 = Static83.loop;
 						local198.method2698(local148);
-						local198.method2692(local198.aClass96_1.anInt3713);
-						local198.anInt3400 = local198.anInt3381 = Static56.anIntArray141[local198.aClass96_1.aByte11];
-						local198.anInt3376 = local198.aClass96_1.anInt3733;
+						local198.method2692(local198.type.anInt3713);
+						local198.anInt3400 = local198.anInt3381 = Static56.anIntArray141[local198.type.aByte11];
+						local198.anInt3376 = local198.type.anInt3733;
 						if (local198.anInt3376 == 0) {
 							local198.anInt3381 = 0;
 						}
-						local198.anInt3365 = local198.aClass96_1.anInt3737;
-						local198.method2683(local198.method2693(), local125, local142, true);
+						local198.anInt3365 = local198.type.anInt3737;
+						local198.method2683(local198.getSize(), local125, local142, true);
 					}
 				}
 			}

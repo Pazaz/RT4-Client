@@ -30,7 +30,7 @@ public final class Static80 {
 	public static final int[] anIntArray419 = new int[] { 0, 2, 2, 2, 1, 1, 2, 2, 1, 3, 1, 1 };
 
 	@OriginalMember(owner = "client!gf", name = "a", descriptor = "(Lclient!ve;IIB)Lclient!mm;")
-	public static SoftwareSprite method3613(@OriginalArg(0) Js5 arg0, @OriginalArg(2) int arg1) {
+	public static SoftwareSprite loadSoftwareAlphaSprite(@OriginalArg(0) Js5 arg0, @OriginalArg(2) int arg1) {
 		return Static234.method4016(arg0, 0, arg1) ? Static102.method2071() : null;
 	}
 
@@ -122,7 +122,7 @@ public final class Static80 {
 	@OriginalMember(owner = "client!gf", name = "a", descriptor = "(Lclient!na;II)V")
 	public static void method3617(@OriginalArg(0) JagString arg0, @OriginalArg(2) int arg1) {
 		@Pc(6) DelayedStateChange local6 = Static238.method4143(3, arg1);
-		local6.method1017();
+		local6.pushServer();
 		local6.stringArg = arg0;
 	}
 }

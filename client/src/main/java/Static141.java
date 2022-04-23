@@ -17,7 +17,7 @@ public final class Static141 {
 	public static int anInt3469 = 0;
 
 	@OriginalMember(owner = "client!lb", name = "v", descriptor = "I")
-	public static int anInt3470 = 0;
+	public static int language = 0;
 
 	@OriginalMember(owner = "client!lb", name = "A", descriptor = "I")
 	public static int buildArea = 0;

@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static47 {
 
 	@OriginalMember(owner = "client!dk", name = "h", descriptor = "Lclient!na;")
-	public static JagString aClass100_991 = null;
+	public static JagString settings = null;
 
 	@OriginalMember(owner = "client!dk", name = "j", descriptor = "[Lclient!en;")
 	public static final BufferedFile[] cacheIndexes = new BufferedFile[28];

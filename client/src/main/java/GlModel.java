@@ -3193,7 +3193,7 @@ public final class GlModel extends Model {
 			local151 = new SoftwareIndexedSprite(local134, local140, 0);
 		} else {
 			local151 = arg0;
-			arg0.anInt4279 = arg0.width = local134;
+			arg0.innerWidth = arg0.width = local134;
 			arg0.anInt4276 = arg0.anInt4278 = local140;
 			arg0.method1392();
 		}

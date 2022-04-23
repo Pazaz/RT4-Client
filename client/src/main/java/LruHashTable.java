@@ -36,37 +36,37 @@ public final class LruHashTable {
 	public final SecondaryNode get(@OriginalArg(0) long arg0) {
 		@Pc(16) SecondaryNode local16 = (SecondaryNode) this.aClass133_5.get(arg0);
 		if (local16 != null) {
-			this.aClass16_1.method798(local16);
+			this.aClass16_1.addTail(local16);
 		}
 		return local16;
 	}
 
 	@OriginalMember(owner = "client!gn", name = "a", descriptor = "(I)Lclient!ab;")
 	public final Node method1808() {
-		return this.aClass133_5.method3859();
+		return this.aClass133_5.head();
 	}
 
 	@OriginalMember(owner = "client!gn", name = "a", descriptor = "(Lclient!rg;JB)V")
 	public final void put(@OriginalArg(0) SecondaryNode arg0, @OriginalArg(1) long arg1) {
 		if (this.anInt2314 == 0) {
 			@Pc(14) SecondaryNode local14 = this.aClass16_1.method796();
-			local14.method4658();
+			local14.unlink();
 			local14.method4365();
 			if (this.aClass3_Sub2_37 == local14) {
 				local14 = this.aClass16_1.method796();
-				local14.method4658();
+				local14.unlink();
 				local14.method4365();
 			}
 		} else {
 			this.anInt2314--;
 		}
-		this.aClass133_5.method3862(arg0, arg1);
-		this.aClass16_1.method798(arg0);
+		this.aClass133_5.put(arg0, arg1);
+		this.aClass16_1.addTail(arg0);
 	}
 
 	@OriginalMember(owner = "client!gn", name = "b", descriptor = "(I)Lclient!ab;")
 	public final Node method1813() {
-		return this.aClass133_5.method3861();
+		return this.aClass133_5.next();
 	}
 
 	@OriginalMember(owner = "client!gn", name = "c", descriptor = "(I)V")

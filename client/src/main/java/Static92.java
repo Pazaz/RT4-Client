@@ -28,7 +28,7 @@ public final class Static92 {
 		if (arg4 == 0) {
 			@Pc(28) Wall local28 = Static262.method4509(arg0, arg5, arg3);
 			if (local28 != null) {
-				local38 = Integer.MAX_VALUE & (int) (local28.aLong107 >>> 32);
+				local38 = Integer.MAX_VALUE & (int) (local28.key >>> 32);
 				if (arg2 == 2) {
 					local28.aClass8_5 = new Loc(local38, 2, arg1 + 4, arg0, arg5, arg3, arg6, false, local28.aClass8_5);
 					local28.aClass8_6 = new Loc(local38, 2, arg1 + 1 & 0x3, arg0, arg5, arg3, arg6, false, local28.aClass8_6);
@@ -40,7 +40,7 @@ public final class Static92 {
 		if (arg4 == 1) {
 			@Pc(106) WallDecor local106 = Static83.method435(arg0, arg5, arg3);
 			if (local106 != null) {
-				local38 = (int) (local106.aLong52 >>> 32) & Integer.MAX_VALUE;
+				local38 = (int) (local106.key >>> 32) & Integer.MAX_VALUE;
 				if (arg2 == 4 || arg2 == 5) {
 					local106.aClass8_3 = new Loc(local38, 4, arg1, arg0, arg5, arg3, arg6, false, local106.aClass8_3);
 				} else if (arg2 == 6) {

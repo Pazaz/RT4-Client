@@ -58,7 +58,7 @@ public final class Static91 {
 				while (local114-- > 0) {
 					@Pc(136) int local136 = local42.g4();
 					@Pc(140) int local140 = local42.g4();
-					local121.method3862(new IntNode(local140), (long) local136);
+					local121.put(new IntNode(local140), (long) local136);
 				}
 			}
 		}
@@ -86,12 +86,12 @@ public final class Static91 {
 	@OriginalMember(owner = "client!hc", name = "a", descriptor = "(Lclient!km;Z)V")
 	public static void method1877(@OriginalArg(0) Npc arg0) {
 		for (@Pc(13) AreaSound local13 = (AreaSound) Static152.aClass69_87.method2289(); local13 != null; local13 = (AreaSound) Static152.aClass69_87.method2288()) {
-			if (arg0 == local13.aClass8_Sub4_Sub2_1) {
-				if (local13.aClass3_Sub3_Sub1_1 != null) {
-					Static204.soundStream.method1347(local13.aClass3_Sub3_Sub1_1);
-					local13.aClass3_Sub3_Sub1_1 = null;
+			if (arg0 == local13.npc) {
+				if (local13.primaryStream != null) {
+					Static204.soundStream.removeSubStream(local13.primaryStream);
+					local13.primaryStream = null;
 				}
-				local13.method4658();
+				local13.unlink();
 				return;
 			}
 		}
@@ -121,7 +121,7 @@ public final class Static91 {
 			return;
 		}
 		@Pc(6) WallDecor local6 = new WallDecor();
-		local6.aLong52 = arg10;
+		local6.key = arg10;
 		local6.anInt1390 = arg1 * 128 + 64;
 		local6.anInt1393 = arg2 * 128 + 64;
 		local6.anInt1391 = arg3;

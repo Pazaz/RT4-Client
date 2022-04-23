@@ -208,7 +208,7 @@ public final class ObjType {
 			return arg0;
 		} else {
 			@Pc(21) StringNode local21 = (StringNode) this.aClass133_6.get((long) arg1);
-			return local21 == null ? arg0 : local21.aClass100_980;
+			return local21 == null ? arg0 : local21.value;
 		}
 	}
 
@@ -312,7 +312,7 @@ public final class ObjType {
 				return Static71.method1439(local22).method1824(arg0, arg1, arg2, 1, arg4);
 			}
 		}
-		@Pc(76) Model local76 = (Model) Static244.aClass99_32.method3106((long) this.anInt2354);
+		@Pc(76) Model local76 = (Model) Static244.aClass99_32.get((long) this.anInt2354);
 		if (local76 == null) {
 			@Pc(85) RawModel local85 = Static77.method1686(Static230.aClass153_95, this.anInt2320);
 			if (local85 == null) {
@@ -341,7 +341,7 @@ public final class ObjType {
 			if (GlRenderer.enabled) {
 				((GlModel) local76).method4111(false, false, false, false, false, true);
 			}
-			Static244.aClass99_32.method3095(local76, (long) this.anInt2354);
+			Static244.aClass99_32.put(local76, (long) this.anInt2354);
 		}
 		if (arg2 != null) {
 			local76 = arg2.method4215(local76, arg0, arg1, arg4);
@@ -512,7 +512,7 @@ public final class ObjType {
 					} else {
 						local523 = new IntNode(arg0.g4());
 					}
-					this.aClass133_6.method3862(local523, (long) local514);
+					this.aClass133_6.put(local523, (long) local514);
 				}
 			}
 		}
@@ -524,7 +524,7 @@ public final class ObjType {
 			return arg0;
 		} else {
 			@Pc(25) IntNode local25 = (IntNode) this.aClass133_6.get((long) arg1);
-			return local25 == null ? arg0 : local25.anInt3141;
+			return local25 == null ? arg0 : local25.value;
 		}
 	}
 

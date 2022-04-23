@@ -30,7 +30,7 @@ public final class Static3 {
 	}
 
 	@OriginalMember(owner = "client!ab", name = "a", descriptor = "(II)V")
-	public static void method4659(@OriginalArg(1) int arg0) {
+	public static void setLanguage(@OriginalArg(1) int arg0) {
 		if (arg0 == 0) {
 			return;
 		}

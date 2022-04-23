@@ -16,7 +16,7 @@ public final class Static246 {
 	@OriginalMember(owner = "client!u", name = "a", descriptor = "(BLclient!ve;Lclient!ve;)V")
 	public static void init(@OriginalArg(1) Js5 arg0, @OriginalArg(2) Js5 arg1) {
 		Static153.aClass153_57 = arg0;
-		Static243.aClass153_97 = arg1;
+		Static243.spritesArchive = arg1;
 	}
 
 	@OriginalMember(owner = "client!u", name = "a", descriptor = "(Z)V")
@@ -24,11 +24,11 @@ public final class Static246 {
 		for (@Pc(9) SpotAnimNode local9 = (SpotAnimNode) Static99.aClass69_64.method2289(); local9 != null; local9 = (SpotAnimNode) Static99.aClass69_64.method2288()) {
 			@Pc(15) SpotAnim local15 = local9.aClass8_Sub2_1;
 			if (local15.anInt606 != Static55.level || local15.aBoolean41) {
-				local9.method4658();
+				local9.unlink();
 			} else if (local15.anInt590 <= Static83.loop) {
 				local15.method558(Static178.anInt4247);
 				if (local15.aBoolean41) {
-					local9.method4658();
+					local9.unlink();
 				} else {
 					Static43.method1141(local15.anInt606, local15.anInt604, local15.anInt598, local15.anInt599, 60, local15, 0, -1L, false);
 				}
@@ -42,7 +42,7 @@ public final class Static246 {
 			return;
 		}
 		if (arg0.anIntArray357 != null) {
-			arg0 = arg0.method2932();
+			arg0 = arg0.getMultiNpc();
 		}
 		if (arg0 == null || !arg0.aBoolean183) {
 			return;

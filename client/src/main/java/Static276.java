@@ -76,7 +76,7 @@ public final class Static276 {
 			}
 		}
 		if (!local13) {
-			Static103.method2231(Static186.EMPTY_FILE, 0, Static34.concatenate(new JagString[] { LocalizedText.UNABLETOFIND, local7 }));
+			Static103.method2231(Static186.EMPTY, 0, Static34.concatenate(new JagString[] { LocalizedText.UNABLETOFIND, local7 }));
 		}
 	}
 

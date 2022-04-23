@@ -87,7 +87,7 @@ public final class Static34 {
 
 	@OriginalMember(owner = "client!ck", name = "a", descriptor = "(BI)Lclient!eg;")
 	public static SpotAnimType method877(@OriginalArg(1) int arg0) {
-		@Pc(10) SpotAnimType local10 = (SpotAnimType) Static279.aClass99_38.method3106((long) arg0);
+		@Pc(10) SpotAnimType local10 = (SpotAnimType) Static279.aClass99_38.get((long) arg0);
 		if (local10 != null) {
 			return local10;
 		}
@@ -97,7 +97,7 @@ public final class Static34 {
 		if (local26 != null) {
 			local10.method1316(new Buffer(local26));
 		}
-		Static279.aClass99_38.method3095(local10, (long) arg0);
+		Static279.aClass99_38.put(local10, (long) arg0);
 		return local10;
 	}
 
@@ -115,12 +115,12 @@ public final class Static34 {
 					arg0.anInt3396 = 1;
 					arg0.anInt3407++;
 					arg0.anInt3388++;
-					Static152.method2836(arg0.anInt3421, local18, arg0.anInt3412, arg0 == Static173.self, arg0.anInt3407);
+					Static152.method2836(arg0.zFine, local18, arg0.xFine, arg0 == Static173.self, arg0.anInt3407);
 				}
 				if (arg0.anInt3407 >= local18.anIntArray473.length) {
 					arg0.anInt3407 = 0;
 					arg0.anInt3396 = 0;
-					Static152.method2836(arg0.anInt3421, local18, arg0.anInt3412, Static173.self == arg0, arg0.anInt3407);
+					Static152.method2836(arg0.zFine, local18, arg0.xFine, Static173.self == arg0, arg0.anInt3407);
 				}
 				arg0.anInt3388 = arg0.anInt3407 + 1;
 				if (arg0.anInt3388 >= local18.anIntArray473.length) {
@@ -140,13 +140,13 @@ public final class Static34 {
 				} else {
 					if (arg0.anInt3399 < 0) {
 						arg0.anInt3399 = 0;
-						Static152.method2836(arg0.anInt3421, local165, arg0.anInt3412, Static173.self == arg0, 0);
+						Static152.method2836(arg0.zFine, local165, arg0.xFine, Static173.self == arg0, 0);
 					}
 					arg0.anInt3361++;
 					if (arg0.anInt3399 < local165.anIntArray473.length && local165.anIntArray474[arg0.anInt3399] < arg0.anInt3361) {
 						arg0.anInt3399++;
 						arg0.anInt3361 = 1;
-						Static152.method2836(arg0.anInt3421, local165, arg0.anInt3412, Static173.self == arg0, arg0.anInt3399);
+						Static152.method2836(arg0.zFine, local165, arg0.xFine, Static173.self == arg0, arg0.anInt3399);
 					}
 					if (arg0.anInt3399 >= local165.anIntArray473.length) {
 						arg0.anInt3432 = -1;
@@ -174,7 +174,7 @@ public final class Static34 {
 				if (arg0.anInt3425 < local18.anIntArray473.length && arg0.anInt3360 > local18.anIntArray474[arg0.anInt3425]) {
 					arg0.anInt3360 = 1;
 					arg0.anInt3425++;
-					Static152.method2836(arg0.anInt3421, local18, arg0.anInt3412, arg0 == Static173.self, arg0.anInt3425);
+					Static152.method2836(arg0.zFine, local18, arg0.xFine, arg0 == Static173.self, arg0.anInt3425);
 				}
 				if (local18.anIntArray473.length <= arg0.anInt3425) {
 					arg0.anInt3425 -= local18.anInt5362;
@@ -182,7 +182,7 @@ public final class Static34 {
 					if (arg0.anInt3371 >= local18.anInt5357) {
 						arg0.anInt3369 = -1;
 					} else if (arg0.anInt3425 >= 0 && local18.anIntArray473.length > arg0.anInt3425) {
-						Static152.method2836(arg0.anInt3421, local18, arg0.anInt3412, Static173.self == arg0, arg0.anInt3425);
+						Static152.method2836(arg0.zFine, local18, arg0.xFine, Static173.self == arg0, arg0.anInt3425);
 					} else {
 						arg0.anInt3369 = -1;
 					}
@@ -216,7 +216,7 @@ public final class Static34 {
 						if (local545.anInt5399 < local570.anIntArray473.length && local545.anInt5404 > local570.anIntArray474[local545.anInt5399]) {
 							local545.anInt5399++;
 							local545.anInt5404 = 1;
-							Static152.method2836(arg0.anInt3421, local570, arg0.anInt3412, arg0 == Static173.self, local545.anInt5399);
+							Static152.method2836(arg0.zFine, local570, arg0.xFine, arg0 == Static173.self, local545.anInt5399);
 						}
 						if (local570.anIntArray473.length <= local545.anInt5399) {
 							local545.anInt5400++;
@@ -224,7 +224,7 @@ public final class Static34 {
 							if (local570.anInt5357 <= local545.anInt5400) {
 								arg0.aClass147Array3[local156] = null;
 							} else if (local545.anInt5399 >= 0 && local545.anInt5399 < local570.anIntArray473.length) {
-								Static152.method2836(arg0.anInt3421, local570, arg0.anInt3412, Static173.self == arg0, local545.anInt5399);
+								Static152.method2836(arg0.zFine, local570, arg0.xFine, Static173.self == arg0, local545.anInt5399);
 							} else {
 								arg0.aClass147Array3[local156] = null;
 							}

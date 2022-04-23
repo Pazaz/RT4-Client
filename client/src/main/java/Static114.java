@@ -42,7 +42,7 @@ public final class Static114 {
 	@OriginalMember(owner = "client!j", name = "a", descriptor = "(BZLclient!na;)V")
 	public static void drawTextOnScreen(@OriginalArg(1) boolean arg0, @OriginalArg(2) JagString arg1) {
 		@Pc(24) int local24 = Static215.aClass3_Sub2_Sub9_32.method2856(arg1, 250);
-		@Pc(31) int local31 = Static215.aClass3_Sub2_Sub9_32.method2860(arg1, 250) * 13;
+		@Pc(31) int local31 = Static215.aClass3_Sub2_Sub9_32.getParagraphLineCount(arg1, 250) * 13;
 		if (GlRenderer.enabled) {
 			Static46.method1186(6, 6, local24 + 4 + 4, local31 + 8, 0);
 			Static46.method1179(6, 6, local24 + 4 + 4, local31 + 4 + 4, 16777215);
@@ -55,7 +55,7 @@ public final class Static114 {
 		if (!arg0) {
 			Static121.method2407(10, 10, local31, local24);
 		} else if (GlRenderer.enabled) {
-			GlRenderer.method4153();
+			GlRenderer.swapBuffers();
 		} else {
 			try {
 				@Pc(159) Graphics local159 = GameShell.canvas.getGraphics();

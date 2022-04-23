@@ -95,7 +95,7 @@ public final class Static10 {
 	@OriginalMember(owner = "client!an", name = "i", descriptor = "(I)V")
 	public static void method351() {
 		Static79.aClass99_11.clear();
-		Static7.aClass99_5.clear();
+		Static7.sprites.clear();
 	}
 
 	@OriginalMember(owner = "client!an", name = "a", descriptor = "(IIIIIII)V")

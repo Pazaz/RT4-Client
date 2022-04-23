@@ -8,7 +8,7 @@ public final class Static105 {
 	public static Class114[] aClass114Array1;
 
 	@OriginalMember(owner = "client!ib", name = "c", descriptor = "Lclient!qi;")
-	public static final ColorImageCacheEntry aClass3_Sub28_1 = new ColorImageCacheEntry(0, 0);
+	public static final ColorImageCacheEntry VALID = new ColorImageCacheEntry(0, 0);
 
 	@OriginalMember(owner = "client!ib", name = "d", descriptor = "Lclient!gn;")
 	public static final LruHashTable aClass54_9 = new LruHashTable(128);

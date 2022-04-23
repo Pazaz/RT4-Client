@@ -79,16 +79,16 @@ public final class Js5NetQueue {
 			for (local75 = (Js5NetRequest) this.aClass16_2.method795(); local75 != null; local75 = (Js5NetRequest) this.aClass16_2.method797()) {
 				this.aClass3_Sub15_4.offset = 0;
 				this.aClass3_Sub15_4.p1(1);
-				this.aClass3_Sub15_4.p3((int) local75.aLong185);
+				this.aClass3_Sub15_4.p3((int) local75.secondaryKey);
 				this.aClass95_1.write(this.aClass3_Sub15_4.data, 4);
-				this.aClass16_3.method798(local75);
+				this.aClass16_3.addTail(local75);
 			}
 			for (local75 = (Js5NetRequest) this.aClass16_4.method795(); local75 != null; local75 = (Js5NetRequest) this.aClass16_4.method797()) {
 				this.aClass3_Sub15_4.offset = 0;
 				this.aClass3_Sub15_4.p1(0);
-				this.aClass3_Sub15_4.p3((int) local75.aLong185);
+				this.aClass3_Sub15_4.p3((int) local75.secondaryKey);
 				this.aClass95_1.write(this.aClass3_Sub15_4.data, 4);
-				this.aClass16_5.method798(local75);
+				this.aClass16_5.addTail(local75);
 			}
 			for (@Pc(172) int local172 = 0; local172 < 100; local172++) {
 				local19 = this.aClass95_1.available();
@@ -156,10 +156,10 @@ public final class Js5NetQueue {
 							@Pc(501) long local501 = (long) ((local235 << 16) + local283);
 							@Pc(509) Js5NetRequest local509;
 							if (local491) {
-								for (local509 = (Js5NetRequest) this.aClass16_5.method795(); local509 != null && local509.aLong185 != local501; local509 = (Js5NetRequest) this.aClass16_5.method797()) {
+								for (local509 = (Js5NetRequest) this.aClass16_5.method795(); local509 != null && local509.secondaryKey != local501; local509 = (Js5NetRequest) this.aClass16_5.method797()) {
 								}
 							} else {
-								for (local509 = (Js5NetRequest) this.aClass16_3.method795(); local509 != null && local501 != local509.aLong185; local509 = (Js5NetRequest) this.aClass16_3.method797()) {
+								for (local509 = (Js5NetRequest) this.aClass16_3.method795(); local509 != null && local501 != local509.secondaryKey; local509 = (Js5NetRequest) this.aClass16_3.method797()) {
 								}
 							}
 							if (local509 == null) {
@@ -291,10 +291,10 @@ public final class Js5NetQueue {
 						this.aLong104 = MonotonicClock.currentTimeMillis();
 						return;
 					}
-					this.aClass16_4.method798(local44);
+					this.aClass16_4.addTail(local44);
 				}
 			}
-			this.aClass16_2.method798(local44);
+			this.aClass16_2.addTail(local44);
 		}
 	}
 
@@ -321,7 +321,7 @@ public final class Js5NetQueue {
 	}
 
 	@OriginalMember(owner = "client!jb", name = "b", descriptor = "(Z)V")
-	public final void method2329() {
+	public final void quit() {
 		if (this.aClass95_1 != null) {
 			this.aClass95_1.close();
 		}
@@ -332,15 +332,15 @@ public final class Js5NetQueue {
 		@Pc(7) Js5NetRequest local7 = new Js5NetRequest();
 		@Pc(14) long local14 = (long) (arg2 + (arg0 << 16));
 		local7.aBoolean225 = arg3;
-		local7.aLong185 = local14;
+		local7.secondaryKey = local14;
 		local7.aByte16 = arg1;
 		if (arg3) {
 			if (this.method2328() >= 20) {
 				throw new RuntimeException();
 			}
-			this.aClass16_2.method798(local7);
+			this.aClass16_2.addTail(local7);
 		} else if (this.method2321() < 20) {
-			this.aClass16_4.method798(local7);
+			this.aClass16_4.addTail(local7);
 		} else {
 			throw new RuntimeException();
 		}

@@ -99,7 +99,7 @@ public final class SpotAnimType {
 
 	@OriginalMember(owner = "client!eg", name = "a", descriptor = "(IBII)Lclient!ak;")
 	public final Model method1319(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-		@Pc(13) Model local13 = (Model) Static56.aClass99_9.method3106((long) this.anInt1751);
+		@Pc(13) Model local13 = (Model) Static56.aClass99_9.get((long) this.anInt1751);
 		if (local13 == null) {
 			@Pc(28) RawModel local28 = Static77.method1686(Static93.aClass153_41, this.anInt1753);
 			if (local28 == null) {
@@ -117,7 +117,7 @@ public final class SpotAnimType {
 				}
 			}
 			local13 = local28.method1679(this.anInt1749 + 64, this.anInt1748 + 850, -30, -50, -30);
-			Static56.aClass99_9.method3095(local13, (long) this.anInt1751);
+			Static56.aClass99_9.put(local13, (long) this.anInt1751);
 		}
 		@Pc(118) Model local118;
 		if (this.anInt1754 == -1 || arg1 == -1) {

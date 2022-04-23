@@ -10,8 +10,8 @@ public final class Static256 {
 	@OriginalMember(owner = "client!um", name = "a", descriptor = "(Z)V")
 	public static void method4392() {
 		Static11.anInt384 = 0;
-		@Pc(17) int local17 = Static225.originX + (Static173.self.anInt3412 >> 7);
-		@Pc(25) int local25 = (Static173.self.anInt3421 >> 7) + Static142.originZ;
+		@Pc(17) int local17 = Static225.originX + (Static173.self.xFine >> 7);
+		@Pc(25) int local25 = (Static173.self.zFine >> 7) + Static142.originZ;
 		if (local17 >= 3053 && local17 <= 3156 && local25 >= 3056 && local25 <= 3136) {
 			Static11.anInt384 = 1;
 		}
@@ -94,7 +94,7 @@ public final class Static256 {
 
 	@OriginalMember(owner = "client!um", name = "a", descriptor = "(BI)Lclient!wl;")
 	public static FloType method4395(@OriginalArg(1) int arg0) {
-		@Pc(6) FloType local6 = (FloType) Static233.aClass99_31.method3106((long) arg0);
+		@Pc(6) FloType local6 = (FloType) Static233.aClass99_31.get((long) arg0);
 		if (local6 != null) {
 			return local6;
 		}
@@ -103,7 +103,7 @@ public final class Static256 {
 		if (local30 != null) {
 			local6.method4669(new Buffer(local30), arg0);
 		}
-		Static233.aClass99_31.method3095(local6, (long) arg0);
+		Static233.aClass99_31.put(local6, (long) arg0);
 		return local6;
 	}
 }

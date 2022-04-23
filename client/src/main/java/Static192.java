@@ -24,7 +24,7 @@ public final class Static192 {
 				}
 			} else {
 				local29 = local17.anInt1192 - 1;
-				local40 = Static175.aClass8_Sub4_Sub2Array1[local29];
+				local40 = Static175.npcs[local29];
 			}
 			if (local40 != null) {
 				@Pc(63) LocType local63 = Static271.method4601(local17.anInt1189);

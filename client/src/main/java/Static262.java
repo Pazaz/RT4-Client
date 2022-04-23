@@ -31,7 +31,7 @@ public final class Static262 {
 			return;
 		}
 		@Pc(8) Wall local8 = new Wall();
-		local8.aLong107 = arg8;
+		local8.key = arg8;
 		local8.anInt3048 = arg1 * 128 + 64;
 		local8.anInt3044 = arg2 * 128 + 64;
 		local8.anInt3051 = arg3;

@@ -122,10 +122,10 @@ public final class Static273 {
 					local41 = Static155.getVarbit(local124);
 				}
 				if (local46 == 18) {
-					local41 = (Static173.self.anInt3412 >> 7) + Static225.originX;
+					local41 = (Static173.self.xFine >> 7) + Static225.originX;
 				}
 				if (local46 == 19) {
-					local41 = (Static173.self.anInt3421 >> 7) + Static142.originZ;
+					local41 = (Static173.self.zFine >> 7) + Static142.originZ;
 				}
 				if (local46 == 20) {
 					local41 = local33[local39++];
@@ -166,9 +166,9 @@ public final class Static273 {
 
 	@OriginalMember(owner = "client!we", name = "b", descriptor = "(BI)V")
 	public static void method3214(@OriginalArg(1) int arg0) {
-		for (@Pc(11) Node local11 = Static210.aClass133_21.method3859(); local11 != null; local11 = Static210.aClass133_21.method3861()) {
-			if ((local11.uid >> 48 & 0xFFFFL) == (long) arg0) {
-				local11.method4658();
+		for (@Pc(11) Node local11 = Static210.aClass133_21.head(); local11 != null; local11 = Static210.aClass133_21.next()) {
+			if ((local11.key >> 48 & 0xFFFFL) == (long) arg0) {
+				local11.unlink();
 			}
 		}
 	}

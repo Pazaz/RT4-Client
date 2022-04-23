@@ -68,7 +68,7 @@ public final class Static103 {
 		}
 		@Pc(192) Npc local192;
 		if (local23 == 19) {
-			local192 = Static175.aClass8_Sub4_Sub2Array1[local36];
+			local192 = Static175.npcs[local36];
 			if (local192 != null) {
 				Static102.method2075(Static173.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], Static173.self.movementQueueX[0]);
 				Static122.x = Static7.clickX;
@@ -80,7 +80,7 @@ public final class Static103 {
 			}
 		}
 		if (local23 == 17) {
-			local192 = Static175.aClass8_Sub4_Sub2Array1[local36];
+			local192 = Static175.npcs[local36];
 			if (local192 != null) {
 				Static102.method2075(Static173.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], Static173.self.movementQueueX[0]);
 				Static122.x = Static7.clickX;
@@ -123,7 +123,7 @@ public final class Static103 {
 			Static153.method2909();
 		}
 		if (local23 == 45) {
-			local192 = Static175.aClass8_Sub4_Sub2Array1[local36];
+			local192 = Static175.npcs[local36];
 			if (local192 != null) {
 				Static102.method2075(Static173.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], Static173.self.movementQueueX[0]);
 				Static122.x = Static7.clickX;
@@ -177,7 +177,7 @@ public final class Static103 {
 				Static6.outboundBuffer.p1isaac(92);
 				Static6.outboundBuffer.p2leadd(local36);
 			} else {
-				method2231(Static186.EMPTY_FILE, 0, Static34.concatenate(new JagString[] { Static123.parseInt(local693.objCounts[local15]), Static249.aClass100_1039, Static71.method1439(local36).aClass100_495 }));
+				method2231(Static186.EMPTY, 0, Static34.concatenate(new JagString[] { Static123.parseInt(local693.objCounts[local15]), Static249.aClass100_1039, Static71.method1439(local36).aClass100_495 }));
 			}
 			Static72.anInt2043 = 0;
 			Static257.aClass13_7 = Static5.getComponent(local19);
@@ -197,8 +197,8 @@ public final class Static103 {
 					Static6.outboundBuffer.p1(Static59.anInt1814);
 					Static6.outboundBuffer.p1(Static273.anInt4130);
 					Static6.outboundBuffer.p1(89);
-					Static6.outboundBuffer.p2(Static173.self.anInt3412);
-					Static6.outboundBuffer.p2(Static173.self.anInt3421);
+					Static6.outboundBuffer.p2(Static173.self.xFine);
+					Static6.outboundBuffer.p2(Static173.self.zFine);
 					Static6.outboundBuffer.p1(Static221.anInt4364);
 					Static6.outboundBuffer.p1(63);
 				}
@@ -209,11 +209,11 @@ public final class Static103 {
 			Static70.type = 2;
 			Static25.y = Static60.clickY;
 			Static122.x = Static7.clickX;
-			local192 = Static175.aClass8_Sub4_Sub2Array1[local36];
+			local192 = Static175.npcs[local36];
 			if (local192 != null) {
-				@Pc(884) NpcType local884 = local192.aClass96_1;
+				@Pc(884) NpcType local884 = local192.type;
 				if (local884.anIntArray357 != null) {
-					local884 = local884.method2932();
+					local884 = local884.getMultiNpc();
 				}
 				if (local884 != null) {
 					Static6.outboundBuffer.p1isaac(72);
@@ -326,7 +326,7 @@ public final class Static103 {
 			Static6.outboundBuffer.p2leadd(Static142.originZ + local19);
 		}
 		if (local23 == 4) {
-			local192 = Static175.aClass8_Sub4_Sub2Array1[local36];
+			local192 = Static175.npcs[local36];
 			if (local192 != null) {
 				Static102.method2075(Static173.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], Static173.self.movementQueueX[0]);
 				Static70.type = 2;
@@ -419,7 +419,7 @@ public final class Static103 {
 			Static250.anInt5444 = local15;
 		}
 		if (local23 == 2) {
-			local192 = Static175.aClass8_Sub4_Sub2Array1[local36];
+			local192 = Static175.npcs[local36];
 			if (local192 != null) {
 				Static102.method2075(Static173.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], Static173.self.movementQueueX[0]);
 				Static25.y = Static60.clickY;
@@ -444,7 +444,7 @@ public final class Static103 {
 			}
 		}
 		if (local23 == 26) {
-			local192 = Static175.aClass8_Sub4_Sub2Array1[local36];
+			local192 = Static175.npcs[local36];
 			if (local192 != null) {
 				Static102.method2075(Static173.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], Static173.self.movementQueueX[0]);
 				Static70.type = 2;
@@ -704,7 +704,7 @@ public final class Static103 {
 			Static6.outboundBuffer.p2le(Static142.originZ + local19);
 		}
 		if (local23 == 16) {
-			local192 = Static175.aClass8_Sub4_Sub2Array1[local36];
+			local192 = Static175.npcs[local36];
 			if (local192 != null) {
 				Static102.method2075(Static173.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], Static173.self.movementQueueX[0]);
 				Static122.x = Static7.clickX;
@@ -795,7 +795,7 @@ public final class Static103 {
 
 	@OriginalMember(owner = "client!i", name = "i", descriptor = "(Z)V")
 	public static void method2245() {
-		for (@Pc(6) Class3_Sub31 local6 = (Class3_Sub31) Static119.aClass133_9.method3859(); local6 != null; local6 = (Class3_Sub31) Static119.aClass133_9.method3861()) {
+		for (@Pc(6) Class3_Sub31 local6 = (Class3_Sub31) Static119.aClass133_9.head(); local6 != null; local6 = (Class3_Sub31) Static119.aClass133_9.next()) {
 			@Pc(14) int local14 = local6.anInt5878;
 			if (Static245.load(local14)) {
 				@Pc(21) boolean local21 = true;
@@ -808,7 +808,7 @@ public final class Static103 {
 					}
 				}
 				if (!local21) {
-					local27 = (int) local6.uid;
+					local27 = (int) local6.key;
 					@Pc(60) Component local60 = Static5.getComponent(local27);
 					if (local60 != null) {
 						Static43.redraw(local60);

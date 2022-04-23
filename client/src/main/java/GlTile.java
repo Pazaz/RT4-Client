@@ -132,10 +132,10 @@ public final class GlTile extends Node {
 			local1 = (long) (arg0 + (arg2 << 16)) + ((long) arg6 << 32);
 			@Pc(28) IntNode local28 = (IntNode) this.aClass133_8.get(local1);
 			if (local28 != null) {
-				if (arg1 < this.anIntArray230[local28.anInt3141]) {
-					this.anIntArray230[local28.anInt3141] = arg1;
+				if (arg1 < this.anIntArray230[local28.value]) {
+					this.anIntArray230[local28.value] = arg1;
 				}
-				return local28.anInt3141;
+				return local28.value;
 			}
 		}
 		this.anIntArray232[this.anInt2483] = arg0;
@@ -149,7 +149,7 @@ public final class GlTile extends Node {
 		this.aFloatArray5[this.anInt2483] = arg5;
 		this.anIntArray226[this.anInt2483] = arg6;
 		if (local1 != 0L) {
-			this.aClass133_8.method3862(new IntNode(this.anInt2483), local1);
+			this.aClass133_8.put(new IntNode(this.anInt2483), local1);
 		}
 		return this.anInt2483++;
 	}

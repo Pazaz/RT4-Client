@@ -31,7 +31,7 @@ public final class Static107 {
 	public static QuickChatCommandDecoder anInterface3_1 = null;
 
 	@OriginalMember(owner = "client!id", name = "b", descriptor = "(I)V")
-	public static void method2261() {
+	public static void loop() {
 		if (Static147.soundChannel != null) {
 			Static147.soundChannel.loop();
 		}

@@ -1,7 +1,6 @@
-import java.awt.Component;
 import java.io.IOException;
 import java.net.Socket;
-import org.openrs2.deob.annotation.OriginalArg;
+
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
@@ -17,7 +16,7 @@ public final class Static31 {
 	public static final JagString aClass100_193 = Static28.parse(":");
 
 	@OriginalMember(owner = "client!ch", name = "y", descriptor = "[Z")
-	public static final boolean[] aBooleanArray29 = new boolean[100];
+	public static final boolean[] rectangleRedraw = new boolean[100];
 
 	@OriginalMember(owner = "client!ch", name = "z", descriptor = "[I")
 	public static final int[] anIntArray76 = new int[5];
@@ -36,7 +35,7 @@ public final class Static31 {
 	}
 
 	@OriginalMember(owner = "client!ch", name = "b", descriptor = "(B)V")
-	public static void method848() {
+	public static void loopAuto() {
 		if (Static219.anInt4937 == 0) {
 			return;
 		}
@@ -47,7 +46,7 @@ public final class Static31 {
 					Static124.socket = null;
 				}
 				if (Static196.anInt4587 >= 1) {
-					Static266.returnCode = -5;
+					Static266.reply = -5;
 					Static219.anInt4937 = 0;
 					return;
 				}
@@ -89,7 +88,7 @@ public final class Static31 {
 					Static147.soundChannel.method3571();
 				}
 				if (local126 != 101) {
-					Static266.returnCode = local126;
+					Static266.reply = local126;
 					Static219.anInt4937 = 0;
 					Static124.socket.close();
 					Static124.socket = null;
@@ -105,7 +104,7 @@ public final class Static31 {
 				Static176.hopWorld(local126);
 				if (Static125.worldId == -1) {
 					Static219.anInt4937 = 0;
-					Static266.returnCode = 6;
+					Static266.reply = 6;
 					Static124.socket.close();
 					Static124.socket = null;
 					return;
@@ -131,7 +130,7 @@ public final class Static31 {
 				Static20.anInt673 = 0;
 				Static196.anInt4587++;
 			} else {
-				Static266.returnCode = -4;
+				Static266.reply = -4;
 				Static219.anInt4937 = 0;
 			}
 		}

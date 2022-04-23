@@ -36,7 +36,7 @@ public final class Static230 {
 	}
 
 	@OriginalMember(owner = "client!sj", name = "a", descriptor = "(Z)V")
-	public static void method3948() {
+	public static void loop() {
 		try {
 			if (Static14.anInt441 == 1) {
 				@Pc(16) int local16 = Static172.aClass3_Sub3_Sub4_2.method4440();
@@ -149,13 +149,13 @@ public final class Static230 {
 
 	@OriginalMember(owner = "client!sj", name = "a", descriptor = "(ILclient!na;)V")
 	public static void method3954(@OriginalArg(1) JagString arg0) {
-		Static47.aClass100_991 = arg0;
+		Static47.settings = arg0;
 		if (GameShell.signLink.applet == null) {
 			return;
 		}
 		try {
-			@Pc(17) JagString local17 = Static272.aClass100_989.method3153(GameShell.signLink.applet);
-			@Pc(23) JagString local23 = Static246.aClass100_1029.method3153(GameShell.signLink.applet);
+			@Pc(17) JagString local17 = Static272.aClass100_989.fromParameters(GameShell.signLink.applet);
+			@Pc(23) JagString local23 = Static246.aClass100_1029.fromParameters(GameShell.signLink.applet);
 			@Pc(48) JagString local48 = Static34.concatenate(new JagString[] { local17, Static142.aClass100_667, arg0, Static276.aClass100_1095, local23 });
 			if (arg0.length() == 0) {
 				local48 = Static34.concatenate(new JagString[] { local48, Static245.aClass100_1018 });

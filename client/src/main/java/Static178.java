@@ -17,7 +17,7 @@ public final class Static178 {
 	public static int anInt4247 = 0;
 
 	@OriginalMember(owner = "client!od", name = "n", descriptor = "Z")
-	public static boolean aBoolean203 = false;
+	public static boolean haveIe6 = false;
 
 	@OriginalMember(owner = "client!od", name = "a", descriptor = "(ILclient!na;)V")
 	public static void method3318(@OriginalArg(1) JagString arg0) {
@@ -29,12 +29,12 @@ public final class Static178 {
 		if (local22 == 0L) {
 			return;
 		}
-		while (Static199.aClass3_Sub22Array1.length > local24 && Static199.aClass3_Sub22Array1[local24].uid != local22) {
+		while (Static199.aClass3_Sub22Array1.length > local24 && Static199.aClass3_Sub22Array1[local24].key != local22) {
 			local24++;
 		}
 		if (local24 < Static199.aClass3_Sub22Array1.length && Static199.aClass3_Sub22Array1[local24] != null) {
 			Static6.outboundBuffer.p1isaac(162);
-			Static6.outboundBuffer.p8(Static199.aClass3_Sub22Array1[local24].uid);
+			Static6.outboundBuffer.p8(Static199.aClass3_Sub22Array1[local24].key);
 		}
 	}
 
@@ -52,9 +52,9 @@ public final class Static178 {
 					@Pc(68) IntNode local68 = (IntNode) local56.aClass133_6.get((long) arg2);
 					if (local68 != null) {
 						if (arg0) {
-							local27 += local19.anIntArray422[local29] * local68.anInt3141;
+							local27 += local19.anIntArray422[local29] * local68.value;
 						} else {
-							local27 += local68.anInt3141;
+							local27 += local68.value;
 						}
 					}
 				}

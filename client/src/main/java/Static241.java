@@ -46,7 +46,7 @@ public final class Static241 {
 	@OriginalMember(owner = "client!th", name = "a", descriptor = "(ZIIII)V")
 	public static void setWindowMode(@OriginalArg(0) boolean arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		Static97.aLong89 = 0L;
-		@Pc(4) int local4 = Static144.method2736();
+		@Pc(4) int local4 = Static144.getWindowMode();
 		if (arg1 == 3 || local4 == 3) {
 			arg0 = true;
 		}

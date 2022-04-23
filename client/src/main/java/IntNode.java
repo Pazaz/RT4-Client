@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class IntNode extends Node {
 
 	@OriginalMember(owner = "client!ka", name = "p", descriptor = "I")
-	public int anInt3141;
+	public int value;
 
 	@OriginalMember(owner = "client!ka", name = "<init>", descriptor = "()V")
 	public IntNode() {
@@ -14,6 +14,6 @@ public final class IntNode extends Node {
 
 	@OriginalMember(owner = "client!ka", name = "<init>", descriptor = "(I)V")
 	public IntNode(@OriginalArg(0) int arg0) {
-		this.anInt3141 = arg0;
+		this.value = arg0;
 	}
 }

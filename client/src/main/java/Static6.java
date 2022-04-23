@@ -17,7 +17,7 @@ public final class Static6 {
 	public static final AnimFrameset[] aClass3_Sub2_Sub7Array1 = new AnimFrameset[14];
 
 	@OriginalMember(owner = "client!ag", name = "h", descriptor = "(I)V")
-	public static void method82() {
+	public static void quit() {
 		if (Keyboard.instance != null) {
 			@Pc(4) Keyboard local4 = Keyboard.instance;
 			synchronized (Keyboard.instance) {

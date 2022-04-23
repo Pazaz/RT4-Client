@@ -19,7 +19,7 @@ public final class Static193 {
 	@OriginalMember(owner = "client!pi", name = "a", descriptor = "(Lclient!na;BI)V")
 	public static void method3498(@OriginalArg(0) JagString arg0, @OriginalArg(2) int arg1) {
 		@Pc(10) DelayedStateChange local10 = Static238.method4143(2, arg1);
-		local10.method1017();
+		local10.pushServer();
 		local10.stringArg = arg0;
 	}
 
@@ -101,7 +101,7 @@ public final class Static193 {
 					@Pc(233) GlTile local233 = (GlTile) local103.get(local227);
 					if (local233 == null) {
 						local233 = new GlTile((local161 >> 16) - 1, (float) (local161 & 0xFFFF), false, arg13 != null, local155);
-						local103.method3862(local233, local227);
+						local103.put(local233, local227);
 					}
 					local233.anInt2484++;
 					local233.anInt2482 += local219;
@@ -109,7 +109,7 @@ public final class Static193 {
 						local233 = (GlTile) local103.get(local188);
 						if (local233 == null) {
 							local233 = new GlTile((local169 >> 16) - 1, (float) (local169 & 0xFFFF), false, arg13 != null, local155);
-							local103.method3862(local233, local188);
+							local103.put(local233, local188);
 						}
 						local233.anInt2484++;
 						local233.anInt2482 += local219;
@@ -119,7 +119,7 @@ public final class Static193 {
 						local233 = (GlTile) local103.get(local340);
 						if (local233 == null) {
 							local233 = new GlTile((local206 >> 16) - 1, (float) (local206 & 0xFFFF), false, arg13 != null, local155);
-							local103.method3862(local233, local340);
+							local103.put(local233, local340);
 						}
 						local233.anInt2482 += local219;
 						local233.anInt2484++;
@@ -128,7 +128,7 @@ public final class Static193 {
 						local233 = (GlTile) local103.get(local214);
 						if (local233 == null) {
 							local233 = new GlTile((local196 >> 16) - 1, (float) (local196 & 0xFFFF), false, arg13 != null, local155);
-							local103.method3862(local233, local214);
+							local103.put(local233, local214);
 						}
 						local233.anInt2484++;
 						local233.anInt2482 += local219;
@@ -137,7 +137,7 @@ public final class Static193 {
 			}
 		}
 		@Pc(493) GlTile local493;
-		for (local493 = (GlTile) local103.method3859(); local493 != null; local493 = (GlTile) local103.method3861()) {
+		for (local493 = (GlTile) local103.head(); local493 != null; local493 = (GlTile) local103.next()) {
 			local493.method1940();
 		}
 		for (local16 = 1; local16 <= 102; local16++) {
@@ -253,9 +253,9 @@ public final class Static193 {
 				}
 			}
 		}
-		for (local493 = (GlTile) local103.method3859(); local493 != null; local493 = (GlTile) local103.method3861()) {
+		for (local493 = (GlTile) local103.head(); local493 != null; local493 = (GlTile) local103.next()) {
 			if (local493.anInt2483 == 0) {
-				local493.method4658();
+				local493.unlink();
 			} else {
 				local493.method1943();
 			}
@@ -265,7 +265,7 @@ public final class Static193 {
 		local103.method3865(local1348);
 		@Pc(1358) long[] local1358 = new long[local16];
 		for (local155 = 0; local155 < local16; local155++) {
-			local1358[local155] = local1348[local155].uid;
+			local1358[local155] = local1348[local155].key;
 		}
 		Static4.method23(local1358, local1348);
 		return local1348;

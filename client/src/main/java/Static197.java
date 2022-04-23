@@ -50,7 +50,7 @@ public final class Static197 {
 			GlRenderer.quit();
 		}
 		if (GameShell.fullScreenFrame != null && (arg1 != 3 || arg4 != Static114.anInt5831 || arg5 != Static22.anInt729)) {
-			Static25.method714(GameShell.fullScreenFrame, GameShell.signLink);
+			Static25.exitFullScreen(GameShell.fullScreenFrame, GameShell.signLink);
 			GameShell.fullScreenFrame = null;
 		}
 		if (arg1 == 3 && GameShell.fullScreenFrame == null) {
@@ -94,11 +94,11 @@ public final class Static197 {
 		}
 		if (arg0) {
 			Keyboard.stop(GameShell.canvas);
-			Static223.method3866(GameShell.canvas);
+			Static223.stop(GameShell.canvas);
 			if (Static71.mouseWheel != null) {
-				Static71.mouseWheel.method3291(GameShell.canvas);
+				Static71.mouseWheel.stop(GameShell.canvas);
 			}
-			Static215.aClient1.addCanvas();
+			Static215.instance.addCanvas();
 			Keyboard.start(GameShell.canvas);
 			Static88.start(GameShell.canvas);
 			if (Static71.mouseWheel != null) {
@@ -127,7 +127,7 @@ public final class Static197 {
 				Static260.frameBuffer = Static131.create(GameShell.canvasHeight, GameShell.canvasWidth, GameShell.canvas);
 				Static129.clear();
 				if (Static244.gameState == 5) {
-					Static182.method3359(true, Static280.aClass3_Sub2_Sub9_43);
+					Static182.render(true, Static280.aClass3_Sub2_Sub9_43);
 				} else {
 					Static114.drawTextOnScreen(false, LocalizedText.LOADING);
 				}
@@ -142,7 +142,7 @@ public final class Static197 {
 				} else {
 					Static260.frameBuffer = null;
 				}
-				@Pc(300) PrivilegedRequest local300 = GameShell.signLink.loadGlNatives(Static215.aClient1.getClass());
+				@Pc(300) PrivilegedRequest local300 = GameShell.signLink.loadGlNatives(Static215.instance.getClass());
 				while (local300.status == 0) {
 					Static231.sleep(100L);
 				}

@@ -28,13 +28,13 @@ public final class Static18 {
 	@OriginalMember(owner = "client!bh", name = "a", descriptor = "(Lclient!fe;Z)V")
 	public static void method553(@OriginalArg(0) PathingEntity arg0) {
 		@Pc(8) int local8 = arg0.anInt3395 - Static83.loop;
-		@Pc(20) int local20 = arg0.anInt3380 * 128 + arg0.method2693() * 64;
-		@Pc(36) int local36 = arg0.anInt3428 * 128 + arg0.method2693() * 64;
+		@Pc(20) int local20 = arg0.anInt3380 * 128 + arg0.getSize() * 64;
+		@Pc(36) int local36 = arg0.anInt3428 * 128 + arg0.getSize() * 64;
 		if (arg0.anInt3431 == 0) {
 			arg0.anInt3400 = 1024;
 		}
-		arg0.anInt3412 += (local20 - arg0.anInt3412) / local8;
-		arg0.anInt3421 += (local36 - arg0.anInt3421) / local8;
+		arg0.xFine += (local20 - arg0.xFine) / local8;
+		arg0.zFine += (local36 - arg0.zFine) / local8;
 		if (arg0.anInt3431 == 1) {
 			arg0.anInt3400 = 1536;
 		}

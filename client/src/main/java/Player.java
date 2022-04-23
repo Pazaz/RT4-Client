@@ -34,7 +34,7 @@ public final class Player extends PathingEntity {
 	public int anInt1648 = -1;
 
 	@OriginalMember(owner = "client!e", name = "Pc", descriptor = "I")
-	public int anInt1664 = 0;
+	public int soundRadius = 0;
 
 	@OriginalMember(owner = "client!e", name = "Hc", descriptor = "I")
 	public int anInt1658 = -1;
@@ -56,8 +56,8 @@ public final class Player extends PathingEntity {
 
 	@OriginalMember(owner = "client!e", name = "c", descriptor = "(B)I")
 	@Override
-	public final int method2693() {
-		return this.aClass59_1 == null || this.aClass59_1.anInt2492 == -1 ? super.method2693() : Static214.method4363(this.aClass59_1.anInt2492).anInt3713;
+	public final int getSize() {
+		return this.aClass59_1 == null || this.aClass59_1.anInt2492 == -1 ? super.getSize() : Static214.method4363(this.aClass59_1.anInt2492).anInt3713;
 	}
 
 	@OriginalMember(owner = "client!e", name = "b", descriptor = "(I)I")
@@ -73,12 +73,12 @@ public final class Player extends PathingEntity {
 		@Pc(22) int local22 = -1;
 		@Pc(26) int local26 = local20 & 0x1;
 		@Pc(37) boolean local37 = (local20 & 0x4) != 0;
-		@Pc(41) int local41 = super.method2693();
+		@Pc(41) int local41 = super.getSize();
 		@Pc(44) int[] local44 = new int[12];
 		this.method2692((local20 >> 3 & 0x7) + 1);
 		this.anInt1651 = local20 >> 6 & 0x3;
-		this.anInt3412 += (this.method2693() - local41) * 64;
-		this.anInt3421 += (this.method2693() - local41) * 64;
+		this.xFine += (this.getSize() - local41) * 64;
+		this.zFine += (this.getSize() - local41) * 64;
 		this.anInt1669 = arg0.g1s();
 		this.anInt1649 = arg0.g1s();
 		this.anInt1650 = 0;
@@ -134,9 +134,9 @@ public final class Player extends PathingEntity {
 				this.anInt1667 = -1;
 			}
 		}
-		local134 = this.anInt1664;
-		this.anInt1664 = arg0.g1();
-		if (this.anInt1664 == 0) {
+		local134 = this.soundRadius;
+		this.soundRadius = arg0.g1();
+		if (this.soundRadius == 0) {
 			Static271.method4597(this);
 		} else {
 			@Pc(309) int local309 = this.anInt1658;
@@ -147,7 +147,7 @@ public final class Player extends PathingEntity {
 			this.anInt1658 = arg0.g2();
 			this.anInt1654 = arg0.g2();
 			this.anInt1670 = arg0.g2();
-			if (this.anInt1664 != local134 || this.anInt1648 != local175 || this.anInt1658 != local309 || local312 != this.anInt1654 || this.anInt1670 != local315) {
+			if (this.soundRadius != local134 || this.anInt1648 != local175 || this.anInt1658 != local309 || local312 != this.anInt1654 || this.anInt1670 != local315) {
 				Static214.method4359(this);
 			}
 		}
@@ -157,8 +157,8 @@ public final class Player extends PathingEntity {
 		local175 = this.aClass59_1.anInt2492;
 		this.aClass59_1.method1950(local197, local22, local26 == 1, local44, this.anInt3365);
 		if (local175 != local22) {
-			this.anInt3412 = this.movementQueueX[0] * 128 + this.method2693() * 64;
-			this.anInt3421 = this.movementQueueZ[0] * 128 + this.method2693() * 64;
+			this.xFine = this.movementQueueX[0] * 128 + this.getSize() * 64;
+			this.zFine = this.movementQueueZ[0] * 128 + this.getSize() * 64;
 		}
 		if (this.aClass47_Sub1_5 != null) {
 			this.aClass47_Sub1_5.method1646();
@@ -172,7 +172,7 @@ public final class Player extends PathingEntity {
 			return;
 		}
 		@Pc(25) SeqType local25 = this.anInt3369 != -1 && this.anInt3420 == 0 ? Static36.method941(this.anInt3369) : null;
-		@Pc(54) SeqType local54 = this.anInt3366 == -1 || this.aBoolean98 || this.anInt3366 == this.method2681().anInt1037 && local25 != null ? null : Static36.method941(this.anInt3366);
+		@Pc(54) SeqType local54 = this.anInt3366 == -1 || this.aBoolean98 || this.anInt3366 == this.method2681().idleAnimationId && local25 != null ? null : Static36.method941(this.anInt3366);
 		@Pc(76) Model local76 = this.aClass59_1.method1954(this.aClass147Array3, this.anInt3373, local54, local25, this.anInt3396, this.anInt3388, this.anInt3360, this.anInt3425, this.anInt3407);
 		@Pc(79) int local79 = Static198.method1029();
 		if (GlRenderer.enabled && GameShell.maxMemory < 96 && local79 > 50) {
@@ -196,7 +196,7 @@ public final class Player extends PathingEntity {
 		this.anInt3413 = local76.method4549();
 		@Pc(184) Model local184;
 		if (Static209.characterShadowsOn && (this.aClass59_1.anInt2492 == -1 || Static214.method4363(this.aClass59_1.anInt2492).aBoolean180)) {
-			local184 = Static41.method1043(160, this.aBoolean171, local54 == null ? local25 : local54, this.anInt3412, 0, this.anInt3421, 0, 1, local76, arg0, local54 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, 240);
+			local184 = Static41.method1043(160, this.aBoolean171, local54 == null ? local25 : local54, this.xFine, 0, this.zFine, 0, 1, local76, arg0, local54 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, 240);
 			if (GlRenderer.enabled) {
 				@Pc(188) float local188 = GlRenderer.method4179();
 				@Pc(190) float local190 = GlRenderer.method4166();
@@ -215,24 +215,24 @@ public final class Player extends PathingEntity {
 				if (local245 != null && local245.anInt4052 != -1) {
 					@Pc(291) int local291;
 					@Pc(302) int local302;
-					if (local245.anInt4058 == 1 && local245.anInt4057 >= 0 && Static175.aClass8_Sub4_Sub2Array1.length > local245.anInt4057) {
-						@Pc(278) Npc local278 = Static175.aClass8_Sub4_Sub2Array1[local245.anInt4057];
+					if (local245.anInt4058 == 1 && local245.anInt4057 >= 0 && Static175.npcs.length > local245.anInt4057) {
+						@Pc(278) Npc local278 = Static175.npcs[local245.anInt4057];
 						if (local278 != null) {
-							local291 = local278.anInt3412 / 32 - Static173.self.anInt3412 / 32;
-							local302 = local278.anInt3421 / 32 - Static173.self.anInt3421 / 32;
+							local291 = local278.xFine / 32 - Static173.self.xFine / 32;
+							local302 = local278.zFine / 32 - Static173.self.zFine / 32;
 							this.method1263(null, local302, local76, local291, arg5, arg9, arg0, arg7, arg4, arg3, arg1, local245.anInt4052, arg2, arg6);
 						}
 					}
 					if (local245.anInt4058 == 2) {
-						@Pc(340) int local340 = (local245.anInt4053 - Static225.originX) * 4 + 2 - Static173.self.anInt3412 / 32;
-						local291 = (local245.anInt4046 - Static142.originZ) * 4 + 2 - Static173.self.anInt3421 / 32;
+						@Pc(340) int local340 = (local245.anInt4053 - Static225.originX) * 4 + 2 - Static173.self.xFine / 32;
+						local291 = (local245.anInt4046 - Static142.originZ) * 4 + 2 - Static173.self.zFine / 32;
 						this.method1263(null, local291, local76, local340, arg5, arg9, arg0, arg7, arg4, arg3, arg1, local245.anInt4052, arg2, arg6);
 					}
 					if (local245.anInt4058 == 10 && local245.anInt4057 >= 0 && Static159.players.length > local245.anInt4057) {
 						@Pc(395) Player local395 = Static159.players[local245.anInt4057];
 						if (local395 != null) {
-							local291 = local395.anInt3412 / 32 - Static173.self.anInt3412 / 32;
-							local302 = local395.anInt3421 / 32 - Static173.self.anInt3421 / 32;
+							local291 = local395.xFine / 32 - Static173.self.xFine / 32;
+							local302 = local395.zFine / 32 - Static173.self.zFine / 32;
 							this.method1263(null, local302, local76, local291, arg5, arg9, arg0, arg7, arg4, arg3, arg1, local245.anInt4052, arg2, arg6);
 						}
 					}
@@ -271,7 +271,7 @@ public final class Player extends PathingEntity {
 				} else {
 					local515 = (Model) this.attachment;
 				}
-				local515.method4575(this.anInt3379 - this.anInt3412, this.anInt3406 + -this.anInt3424, this.anInt3426 - this.anInt3421);
+				local515.method4575(this.anInt3379 - this.xFine, this.anInt3406 + -this.anInt3424, this.anInt3426 - this.zFine);
 				if (this.anInt3400 == 512) {
 					local515.method4578();
 				} else if (this.anInt3400 == 1024) {
@@ -308,7 +308,7 @@ public final class Player extends PathingEntity {
 		} else if (this.anInt3400 == 1536) {
 			local515.method4578();
 		}
-		local515.method4575(this.anInt3412 - this.anInt3379, -this.anInt3406 + this.anInt3424, this.anInt3421 - this.anInt3426);
+		local515.method4575(this.xFine - this.anInt3379, -this.anInt3406 + this.anInt3424, this.zFine - this.anInt3426);
 	}
 
 	@OriginalMember(owner = "client!e", name = "a", descriptor = "(Lclient!ga;ILclient!ak;IIIIIIIIIIII)V")
@@ -318,7 +318,7 @@ public final class Player extends PathingEntity {
 			return;
 		}
 		@Pc(34) int local34 = (int) (Math.atan2((double) arg3, (double) arg1) * 325.949D) & 0x7FF;
-		@Pc(46) Model local46 = Static220.method3800(local34, this.anInt3421, arg11, this.anInt3412, arg2, this.anInt3424);
+		@Pc(46) Model local46 = Static220.method3800(local34, this.zFine, arg11, this.xFine, arg2, this.anInt3424);
 		if (local46 == null) {
 			return;
 		}
@@ -360,7 +360,7 @@ public final class Player extends PathingEntity {
 
 	@OriginalMember(owner = "client!e", name = "a", descriptor = "(BIZI)V")
 	public final void method1265(@OriginalArg(1) int arg0, @OriginalArg(2) boolean arg1, @OriginalArg(3) int arg2) {
-		super.method2683(this.method2693(), arg0, arg2, arg1);
+		super.method2683(this.getSize(), arg0, arg2, arg1);
 	}
 
 	@OriginalMember(owner = "client!e", name = "finalize", descriptor = "()V")

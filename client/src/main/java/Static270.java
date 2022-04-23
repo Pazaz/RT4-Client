@@ -136,8 +136,8 @@ public final class Static270 {
 	@OriginalMember(owner = "client!wb", name = "a", descriptor = "(Lclient!ba;IILclient!ba;Z)I")
 	public static int method4595(@OriginalArg(0) World arg0, @OriginalArg(1) int arg1, @OriginalArg(3) World arg2, @OriginalArg(4) boolean arg3) {
 		if (arg1 == 1) {
-			@Pc(11) int local11 = arg0.anInt379;
-			@Pc(14) int local14 = arg2.anInt379;
+			@Pc(11) int local11 = arg0.players;
+			@Pc(14) int local14 = arg2.players;
 			if (!arg3) {
 				if (local14 == -1) {
 					local14 = 2001;
@@ -164,13 +164,13 @@ public final class Static270 {
 				return arg0.aClass100_69.method3126(arg2.aClass100_69);
 			}
 		} else if (arg1 == 4) {
-			return arg0.method441() ? (arg2.method441() ? 0 : 1) : arg2.method441() ? -1 : 0;
+			return arg0.isLootShare() ? (arg2.isLootShare() ? 0 : 1) : arg2.isLootShare() ? -1 : 0;
 		} else if (arg1 == 5) {
-			return arg0.method442() ? (arg2.method442() ? 0 : 1) : (arg2.method442() ? -1 : 0);
+			return arg0.isQuickChat() ? (arg2.isQuickChat() ? 0 : 1) : (arg2.isQuickChat() ? -1 : 0);
 		} else if (arg1 == 6) {
-			return arg0.method439() ? (arg2.method439() ? 0 : 1) : (arg2.method439() ? -1 : 0);
+			return arg0.isPvp() ? (arg2.isPvp() ? 0 : 1) : (arg2.isPvp() ? -1 : 0);
 		} else if (arg1 == 7) {
-			return arg0.method437() ? (arg2.method437() ? 0 : 1) : (arg2.method437() ? -1 : 0);
+			return arg0.isMembers() ? (arg2.isMembers() ? 0 : 1) : (arg2.isMembers() ? -1 : 0);
 		} else {
 			return arg0.anInt382 - arg2.anInt382;
 		}

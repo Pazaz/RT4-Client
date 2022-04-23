@@ -538,7 +538,7 @@ public final class CollisionMap {
 	}
 
 	@OriginalMember(owner = "client!mj", name = "a", descriptor = "(IZBIII)V")
-	public final void method3043(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
+	public final void flagScenery(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
 		@Pc(6) int local6 = arg2 - this.anInt3907;
 		@Pc(11) int local11 = arg0 - this.anInt3912;
 		@Pc(17) int local17 = 256;
@@ -903,7 +903,7 @@ public final class CollisionMap {
 	}
 
 	@OriginalMember(owner = "client!mj", name = "a", descriptor = "(IIIZIII)V")
-	public final void method3056(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) boolean arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
+	public final void unflagScenery(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) boolean arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
 		@Pc(6) int local6 = arg0 - this.anInt3912;
 		@Pc(11) int local11 = arg5 - this.anInt3907;
 		@Pc(13) int local13 = 256;

@@ -31,7 +31,7 @@ public final class Static73 {
 			if (Static154.topLevelInterface != -1) {
 				Static109.method2275(Static154.topLevelInterface);
 			}
-			for (@Pc(18) Class3_Sub31 local18 = (Class3_Sub31) Static119.aClass133_9.method3859(); local18 != null; local18 = (Class3_Sub31) Static119.aClass133_9.method3861()) {
+			for (@Pc(18) Class3_Sub31 local18 = (Class3_Sub31) Static119.aClass133_9.head(); local18 != null; local18 = (Class3_Sub31) Static119.aClass133_9.next()) {
 				Static132.method2605(true, local18);
 			}
 			Static154.topLevelInterface = -1;
@@ -45,8 +45,8 @@ public final class Static73 {
 		Static35.anInt1092 = -1;
 		Static81.method1750(Static270.anInt5794);
 		Static173.self = new Player();
-		Static173.self.anInt3421 = 3000;
-		Static173.self.anInt3412 = 3000;
+		Static173.self.zFine = 3000;
+		Static173.self.xFine = 3000;
 		if (!GlRenderer.enabled) {
 			Static145.method2743(Static209.js5Archive8);
 			Static196.setGameState(10);

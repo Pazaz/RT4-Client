@@ -27,12 +27,12 @@ public final class Static280 {
 		if (Static83.loop == arg0.anInt3386 || arg0.anInt3369 == -1 || arg0.anInt3420 != 0 || arg0.anInt3360 + 1 > Static36.method941(arg0.anInt3369).anIntArray474[arg0.anInt3425]) {
 			@Pc(35) int local35 = arg0.anInt3386 - arg0.anInt3395;
 			@Pc(41) int local41 = Static83.loop - arg0.anInt3395;
-			@Pc(52) int local52 = arg0.anInt3380 * 128 + arg0.method2693() * 64;
-			@Pc(64) int local64 = arg0.anInt3428 * 128 + arg0.method2693() * 64;
-			@Pc(75) int local75 = arg0.anInt3416 * 128 + arg0.method2693() * 64;
-			@Pc(86) int local86 = arg0.anInt3392 * 128 + arg0.method2693() * 64;
-			arg0.anInt3412 = (local41 * local75 + local52 * (local35 - local41)) / local35;
-			arg0.anInt3421 = (local86 * local41 + local64 * (local35 - local41)) / local35;
+			@Pc(52) int local52 = arg0.anInt3380 * 128 + arg0.getSize() * 64;
+			@Pc(64) int local64 = arg0.anInt3428 * 128 + arg0.getSize() * 64;
+			@Pc(75) int local75 = arg0.anInt3416 * 128 + arg0.getSize() * 64;
+			@Pc(86) int local86 = arg0.anInt3392 * 128 + arg0.getSize() * 64;
+			arg0.xFine = (local41 * local75 + local52 * (local35 - local41)) / local35;
+			arg0.zFine = (local86 * local41 + local64 * (local35 - local41)) / local35;
 		}
 		arg0.anInt3417 = 0;
 		if (arg0.anInt3431 == 0) {
@@ -53,7 +53,7 @@ public final class Static280 {
 	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(IIII)V")
 	public static void method4666(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2) {
 		@Pc(18) DelayedStateChange local18 = Static238.method4143(11, arg1);
-		local18.method1017();
+		local18.pushServer();
 		local18.intArg3 = arg2;
 		local18.intArg1 = arg0;
 	}
@@ -551,7 +551,7 @@ public final class Static280 {
 		@Pc(33) HashTableIterator local33 = new HashTableIterator(Static119.aClass133_9);
 		for (@Pc(38) Class3_Sub31 local38 = (Class3_Sub31) local33.method2701(); local38 != null; local38 = (Class3_Sub31) local33.method2700()) {
 			if (local28 == local38.anInt5878) {
-				return Static5.getComponent((int) local38.uid);
+				return Static5.getComponent((int) local38.key);
 			}
 		}
 		return null;
@@ -678,7 +678,7 @@ public final class Static280 {
 		@Pc(12) Inv local12 = (Inv) Static20.objectContainerCache.get((long) arg3);
 		if (local12 == null) {
 			local12 = new Inv();
-			Static20.objectContainerCache.method3862(local12, (long) arg3);
+			Static20.objectContainerCache.put(local12, (long) arg3);
 		}
 		if (arg1 >= local12.objectIds.length) {
 			@Pc(39) int[] local39 = new int[arg1 + 1];
@@ -736,6 +736,6 @@ public final class Static280 {
 	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(II)V")
 	public static void method4675(@OriginalArg(1) int arg0) {
 		@Pc(17) DelayedStateChange local17 = Static238.method4143(11, arg0);
-		local17.method1007();
+		local17.pushClient();
 	}
 }

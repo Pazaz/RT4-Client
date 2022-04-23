@@ -42,14 +42,14 @@ public final class Static251 {
 					Static79.method1698(local10.anInt929, local10.anInt928, local10.anInt918, local10.anInt922, local10.anInt916, local10.anInt926, local10.anInt927);
 					local10.anInt925 = -1;
 					if (local10.anInt921 == local10.anInt929 && local10.anInt921 == -1) {
-						local10.method4658();
+						local10.unlink();
 					} else if (local10.anInt929 == local10.anInt921 && local10.anInt922 == local10.anInt923 && local10.anInt920 == local10.anInt926) {
-						local10.method4658();
+						local10.unlink();
 					}
 				}
 			} else if (local10.anInt921 < 0 || Static113.method3557(local10.anInt921, local10.anInt920)) {
 				Static79.method1698(local10.anInt921, local10.anInt928, local10.anInt918, local10.anInt923, local10.anInt916, local10.anInt920, local10.anInt927);
-				local10.method4658();
+				local10.unlink();
 			}
 		}
 	}
@@ -60,7 +60,7 @@ public final class Static251 {
 	}
 
 	@OriginalMember(owner = "client!ug", name = "a", descriptor = "(I)V")
-	public static void method4277() {
+	public static void quit() {
 		if (Static93.instance != null) {
 			@Pc(5) Mouse local5 = Static93.instance;
 			synchronized (Static93.instance) {
@@ -79,6 +79,6 @@ public final class Static251 {
 	@OriginalMember(owner = "client!ug", name = "a", descriptor = "(IB)V")
 	public static void method4279(@OriginalArg(0) int arg0) {
 		@Pc(14) DelayedStateChange local14 = Static238.method4143(9, arg0);
-		local14.method1007();
+		local14.pushClient();
 	}
 }

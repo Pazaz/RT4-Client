@@ -110,8 +110,8 @@ public final class MidiPcmStream extends PcmStream {
 		arg0.method3741();
 		@Pc(5) boolean local5 = true;
 		@Pc(20) int[] local20 = new int[] { 22050 };
-		for (@Pc(34) Class3_Sub9 local34 = (Class3_Sub9) arg0.aClass133_22.method3859(); local34 != null; local34 = (Class3_Sub9) arg0.aClass133_22.method3861()) {
-			@Pc(40) int local40 = (int) local34.uid;
+		for (@Pc(34) Class3_Sub9 local34 = (Class3_Sub9) arg0.aClass133_22.head(); local34 != null; local34 = (Class3_Sub9) arg0.aClass133_22.next()) {
+			@Pc(40) int local40 = (int) local34.key;
 			@Pc(48) MidiInstrument local48 = (MidiInstrument) this.aClass133_23.get((long) local40);
 			if (local48 == null) {
 				local48 = Static116.method2320(arg1, local40);
@@ -119,7 +119,7 @@ public final class MidiPcmStream extends PcmStream {
 					local5 = false;
 					continue;
 				}
-				this.aClass133_23.method3862(local48, (long) local40);
+				this.aClass133_23.put(local48, (long) local40);
 			}
 			if (!local48.method2436(local20, arg2, local34.aByteArray17)) {
 				local5 = false;
@@ -133,7 +133,7 @@ public final class MidiPcmStream extends PcmStream {
 
 	@OriginalMember(owner = "client!va", name = "d", descriptor = "(B)V")
 	public final synchronized void method4412() {
-		for (@Pc(15) MidiInstrument local15 = (MidiInstrument) this.aClass133_23.method3859(); local15 != null; local15 = (MidiInstrument) this.aClass133_23.method3861()) {
+		for (@Pc(15) MidiInstrument local15 = (MidiInstrument) this.aClass133_23.head(); local15 != null; local15 = (MidiInstrument) this.aClass133_23.next()) {
 			local15.method2432();
 		}
 	}
@@ -224,7 +224,7 @@ public final class MidiPcmStream extends PcmStream {
 				if (local20.anInt3767 < 0) {
 					this.aClass3_Sub25ArrayArray1[local20.anInt3773][local20.anInt3779] = null;
 				}
-				local20.method4658();
+				local20.unlink();
 			}
 		}
 	}
@@ -254,8 +254,8 @@ public final class MidiPcmStream extends PcmStream {
 
 	@OriginalMember(owner = "client!va", name = "e", descriptor = "(I)V")
 	public final synchronized void method4426() {
-		for (@Pc(7) MidiInstrument local7 = (MidiInstrument) this.aClass133_23.method3859(); local7 != null; local7 = (MidiInstrument) this.aClass133_23.method3861()) {
-			local7.method4658();
+		for (@Pc(7) MidiInstrument local7 = (MidiInstrument) this.aClass133_23.head(); local7 != null; local7 = (MidiInstrument) this.aClass133_23.next()) {
+			local7.unlink();
 		}
 	}
 
@@ -491,7 +491,7 @@ public final class MidiPcmStream extends PcmStream {
 
 	@OriginalMember(owner = "client!va", name = "b", descriptor = "([III)V")
 	@Override
-	public final synchronized void method4408(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+	public final synchronized void read(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		if (this.aClass84_1.method2628()) {
 			@Pc(18) int local18 = this.aClass84_1.anInt3303 * this.anInt5646 / Static44.sampleRate;
 			do {
@@ -502,13 +502,13 @@ public final class MidiPcmStream extends PcmStream {
 				}
 				@Pc(59) int local59 = (int) ((this.aLong188 + (long) local18 - this.aLong189 - 1L) / (long) local18);
 				this.aLong189 += (long) local18 * (long) local59;
-				this.aClass3_Sub3_Sub3_1.method4408(arg0, arg1, local59);
+				this.aClass3_Sub3_Sub3_1.read(arg0, arg1, local59);
 				arg2 -= local59;
 				arg1 += local59;
 				this.method4435();
 			} while (this.aClass84_1.method2628());
 		}
-		this.aClass3_Sub3_Sub3_1.method4408(arg0, arg1, arg2);
+		this.aClass3_Sub3_Sub3_1.read(arg0, arg1, arg2);
 	}
 
 	@OriginalMember(owner = "client!va", name = "a", descriptor = "(IILclient!mf;B[I)Z")
@@ -516,7 +516,7 @@ public final class MidiPcmStream extends PcmStream {
 		arg2.anInt3771 = Static44.sampleRate / 100;
 		if (arg2.anInt3767 >= 0 && (arg2.aClass3_Sub3_Sub1_3 == null || arg2.aClass3_Sub3_Sub1_3.method411())) {
 			arg2.method2957();
-			arg2.method4658();
+			arg2.unlink();
 			if (arg2.anInt3776 > 0 && arg2 == this.aClass3_Sub25ArrayArray2[arg2.anInt3773][arg2.anInt3776]) {
 				this.aClass3_Sub25ArrayArray2[arg2.anInt3773][arg2.anInt3776] = null;
 			}
@@ -578,16 +578,16 @@ public final class MidiPcmStream extends PcmStream {
 		}
 		arg2.aClass3_Sub3_Sub1_3.method384(arg2.anInt3771);
 		if (arg3 == null) {
-			arg2.aClass3_Sub3_Sub1_3.method4410(arg0);
+			arg2.aClass3_Sub3_Sub1_3.skip(arg0);
 		} else {
-			arg2.aClass3_Sub3_Sub1_3.method4408(arg3, arg1, arg0);
+			arg2.aClass3_Sub3_Sub1_3.read(arg3, arg1, arg0);
 		}
 		if (arg2.aClass3_Sub3_Sub1_3.method412()) {
 			this.aClass3_Sub3_Sub3_1.aClass3_Sub3_Sub2_2.method1343(arg2.aClass3_Sub3_Sub1_3);
 		}
 		arg2.method2957();
 		if (arg2.anInt3767 >= 0) {
-			arg2.method4658();
+			arg2.unlink();
 			if (arg2.anInt3776 > 0 && this.aClass3_Sub25ArrayArray2[arg2.anInt3773][arg2.anInt3776] == arg2) {
 				this.aClass3_Sub25ArrayArray2[arg2.anInt3773][arg2.anInt3776] = null;
 			}
@@ -684,7 +684,7 @@ public final class MidiPcmStream extends PcmStream {
 
 	@OriginalMember(owner = "client!va", name = "c", descriptor = "(I)V")
 	@Override
-	public final synchronized void method4410(@OriginalArg(0) int arg0) {
+	public final synchronized void skip(@OriginalArg(0) int arg0) {
 		if (this.aClass84_1.method2628()) {
 			@Pc(15) int local15 = this.aClass84_1.anInt3303 * this.anInt5646 / Static44.sampleRate;
 			do {
@@ -696,11 +696,11 @@ public final class MidiPcmStream extends PcmStream {
 				@Pc(57) int local57 = (int) (((long) local15 + this.aLong188 - this.aLong189 - 1L) / (long) local15);
 				arg0 -= local57;
 				this.aLong189 += (long) local57 * (long) local15;
-				this.aClass3_Sub3_Sub3_1.method4410(local57);
+				this.aClass3_Sub3_Sub3_1.skip(local57);
 				this.method4435();
 			} while (this.aClass84_1.method2628());
 		}
-		this.aClass3_Sub3_Sub3_1.method4410(arg0);
+		this.aClass3_Sub3_Sub3_1.skip(arg0);
 	}
 
 	@OriginalMember(owner = "client!va", name = "e", descriptor = "(II)V")
@@ -793,7 +793,7 @@ public final class MidiPcmStream extends PcmStream {
 			return false;
 		}
 		if (arg0.anInt3767 >= 0) {
-			arg0.method4658();
+			arg0.unlink();
 			if (arg0.anInt3776 > 0 && this.aClass3_Sub25ArrayArray2[arg0.anInt3773][arg0.anInt3776] == arg0) {
 				this.aClass3_Sub25ArrayArray2[arg0.anInt3773][arg0.anInt3776] = null;
 			}

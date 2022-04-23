@@ -16,7 +16,7 @@ public final class Static216 {
 	public static final int[] anIntArray187 = new int[14];
 
 	@OriginalMember(owner = "client!ri", name = "a", descriptor = "(B)V")
-	public static void handleLogin() {
+	public static void loop() {
 		if (Static184.loginStep == 0 || Static184.loginStep == 5) {
 			return;
 		}
@@ -27,7 +27,7 @@ public final class Static216 {
 					Static124.socket = null;
 				}
 				if (Static276.anInt5816 >= 1) {
-					Static266.returnCode = -5;
+					Static266.reply = -5;
 					Static184.loginStep = 0;
 					return;
 				}
@@ -73,7 +73,7 @@ public final class Static216 {
 					Static147.soundChannel.method3571();
 				}
 				if (local150 != 0) {
-					Static266.returnCode = local150;
+					Static266.reply = local150;
 					Static184.loginStep = 0;
 					Static124.socket.close();
 					Static124.socket = null;
@@ -118,18 +118,18 @@ public final class Static216 {
 					// pretend that we're loading the archive so we don't throw the packet size off
 					offset = 4;
 				}
-				Static17.aClass3_Sub15_Sub1_2.p2(Static6.outboundBuffer.offset + Static229.method3937(Static47.aClass100_991) + (159 + offset));
+				Static17.aClass3_Sub15_Sub1_2.p2(Static6.outboundBuffer.offset + Static229.method3937(Static47.settings) + (159 + offset));
 				Static17.aClass3_Sub15_Sub1_2.p4(530);
 				Static17.aClass3_Sub15_Sub1_2.p1(Static5.anInt39);
-				Static17.aClass3_Sub15_Sub1_2.p1(Static249.aBoolean282 ? 1 : 0);
+				Static17.aClass3_Sub15_Sub1_2.p1(Static249.advertSuppressed ? 1 : 0);
 				Static17.aClass3_Sub15_Sub1_2.p1(1);
-				Static17.aClass3_Sub15_Sub1_2.p1(Static144.method2736());
+				Static17.aClass3_Sub15_Sub1_2.p1(Static144.getWindowMode());
 				Static17.aClass3_Sub15_Sub1_2.p2(GameShell.canvasWidth);
 				Static17.aClass3_Sub15_Sub1_2.p2(GameShell.canvasHeight);
 				Static17.aClass3_Sub15_Sub1_2.p1(Static186.antiAliasingMode);
 				Static140.method2705(Static17.aClass3_Sub15_Sub1_2);
-				Static17.aClass3_Sub15_Sub1_2.pjstr(Static47.aClass100_991);
-				Static17.aClass3_Sub15_Sub1_2.p4(Static204.anInt4760);
+				Static17.aClass3_Sub15_Sub1_2.pjstr(Static47.settings);
+				Static17.aClass3_Sub15_Sub1_2.p4(Static204.affiliate);
 				Static17.aClass3_Sub15_Sub1_2.p4(Static145.method2746());
 				Static18.serverUpdatedPreferences = true;
 				Static17.aClass3_Sub15_Sub1_2.p2(Static189.anInt4443);
@@ -184,13 +184,13 @@ public final class Static216 {
 					Static184.loginStep = 10;
 				} else if (local623 == 1) {
 					Static184.loginStep = 5;
-					Static266.returnCode = local623;
+					Static266.reply = local623;
 					return;
 				} else if (local623 == 2) {
 					Static184.loginStep = 8;
 				} else if (local623 == 15) {
 					Static184.loginStep = 0;
-					Static266.returnCode = local623;
+					Static266.reply = local623;
 					return;
 				} else if (local623 == 23 && Static276.anInt5816 < 1) {
 					Static184.loginStep = 1;
@@ -200,7 +200,7 @@ public final class Static216 {
 					Static124.socket = null;
 					return;
 				} else {
-					Static266.returnCode = local623;
+					Static266.reply = local623;
 					Static184.loginStep = 0;
 					Static124.socket.close();
 					Static124.socket = null;
@@ -218,7 +218,7 @@ public final class Static216 {
 				if (Static124.socket.available() >= 1) {
 					Static231.anInt5202 = (Static124.socket.read() + 3) * 60;
 					Static184.loginStep = 0;
-					Static266.returnCode = 21;
+					Static266.reply = 21;
 					Static124.socket.close();
 					Static124.socket = null;
 					return;
@@ -229,7 +229,7 @@ public final class Static216 {
 				if (Static124.socket.available() >= 1) {
 					Static204.anInt4765 = Static124.socket.read();
 					Static184.loginStep = 0;
-					Static266.returnCode = 29;
+					Static266.reply = 29;
 					Static124.socket.close();
 					Static124.socket = null;
 					return;
@@ -254,7 +254,7 @@ public final class Static216 {
 				Static2.aBoolean1 = Static57.aClass3_Sub15_Sub1_3.g1() == 1;
 				Static189.method3438(Static2.aBoolean1);
 				Static9.method186(Static2.aBoolean1);
-				if (!Static249.aBoolean282) {
+				if (!Static249.advertSuppressed) {
 					if (Static124.aBoolean157 && !Static25.aBoolean57 || Static202.aBoolean233) {
 						try {
 							Static167.aClass100_781.method3157(GameShell.signLink.applet);
@@ -277,7 +277,7 @@ public final class Static216 {
 				}
 				Static57.aClass3_Sub15_Sub1_3.offset = 0;
 				Static124.socket.read(0, Static223.anInt5028, Static57.aClass3_Sub15_Sub1_3.data);
-				Static266.returnCode = 2;
+				Static266.reply = 2;
 				Static184.loginStep = 0;
 				Static243.method4221();
 				Static80.anInt4701 = -1;
@@ -292,7 +292,7 @@ public final class Static216 {
 			}
 			if (Static276.anInt5816 >= 1) {
 				Static184.loginStep = 0;
-				Static266.returnCode = -4;
+				Static266.reply = -4;
 			} else {
 				Static184.loginStep = 1;
 				Static92.anInt2430 = 0;

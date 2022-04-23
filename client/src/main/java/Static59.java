@@ -2,8 +2,6 @@ import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
-import java.awt.event.KeyEvent;
-
 public final class Static59 {
 
 	@OriginalMember(owner = "client!ej", name = "X", descriptor = "I")
@@ -46,7 +44,7 @@ public final class Static59 {
 	@OriginalMember(owner = "client!ej", name = "i", descriptor = "(I)V")
 	public static void method1373() {
 		Static6.outboundBuffer.p1isaac(243);
-		Static6.outboundBuffer.p1(Static144.method2736());
+		Static6.outboundBuffer.p1(Static144.getWindowMode());
 		Static6.outboundBuffer.p2(GameShell.canvasWidth);
 		Static6.outboundBuffer.p2(GameShell.canvasHeight);
 		Static6.outboundBuffer.p1(Static186.antiAliasingMode);

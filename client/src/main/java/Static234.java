@@ -20,7 +20,7 @@ public final class Static234 {
 	public static void method4014() {
 		for (@Pc(3) int local3 = 0; local3 < Static116.anInt2951; local3++) {
 			@Pc(10) int local10 = Static44.anIntArray106[local3];
-			@Pc(14) Npc local14 = Static175.aClass8_Sub4_Sub2Array1[local10];
+			@Pc(14) Npc local14 = Static175.npcs[local10];
 			@Pc(18) int local18 = Static57.aClass3_Sub15_Sub1_3.g1();
 			if ((local18 & 0x8) != 0) {
 				local18 += Static57.aClass3_Sub15_Sub1_3.g1() << 8;
@@ -78,20 +78,20 @@ public final class Static234 {
 						if (local227 != -1) {
 							@Pc(236) SeqType local236 = Static36.method941(local227);
 							if (local236 != null && local236.anIntArray473 != null) {
-								Static152.method2836(local14.anInt3421, local236, local14.anInt3412, false, 0);
+								Static152.method2836(local14.zFine, local236, local14.xFine, false, 0);
 							}
 						}
 					}
 				}
 			}
 			if ((local18 & 0x1) != 0) {
-				if (local14.aClass96_1.method2935()) {
+				if (local14.type.method2935()) {
 					Static91.method1877(local14);
 				}
 				local14.method2698(Static214.method4363(Static57.aClass3_Sub15_Sub1_3.g2le()));
-				local14.method2692(local14.aClass96_1.anInt3713);
-				local14.anInt3365 = local14.aClass96_1.anInt3737;
-				if (local14.aClass96_1.method2935()) {
+				local14.method2692(local14.type.anInt3713);
+				local14.anInt3365 = local14.type.anInt3737;
+				if (local14.type.method2935()) {
 					Static122.method2411(local14.movementQueueZ[0], null, 0, local14, local14.movementQueueX[0], Static55.level, null);
 				}
 			}
@@ -145,7 +145,7 @@ public final class Static234 {
 		Static119.aClass153_44 = arg1;
 		Static241.aClass3_Sub2_Sub1_Sub1Array13 = arg0;
 		Static258.aBooleanArray130 = new boolean[Static241.aClass3_Sub2_Sub1_Sub1Array13.length];
-		Static228.aClass69_120.method2278();
+		Static228.aClass69_120.clear();
 		@Pc(25) int local25 = Static119.aClass153_44.getGroupId(Static54.aClass100_374);
 		@Pc(30) int[] local30 = Static119.aClass153_44.method4503(local25);
 		for (@Pc(32) int local32 = 0; local32 < local30.length; local32++) {
@@ -163,7 +163,7 @@ public final class Static234 {
 	}
 
 	@OriginalMember(owner = "client!ta", name = "a", descriptor = "(Z)V")
-	public static void method4020() {
+	public static void resetTimer() {
 		GameShell.timer.method3394();
 		@Pc(10) int local10;
 		for (local10 = 0; local10 < 32; local10++) {

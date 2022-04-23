@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static243 {
 
 	@OriginalMember(owner = "client!tk", name = "j", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_97;
+	public static Js5 spritesArchive;
 
 	@OriginalMember(owner = "client!tk", name = "o", descriptor = "Lclient!ok;")
 	public static IndexedSprite logo;
@@ -21,11 +21,11 @@ public final class Static243 {
 
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(Lclient!sc;ZLclient!wl;)Lclient!hg;")
 	public static GlTile method4212(@OriginalArg(0) HashTable arg0, @OriginalArg(2) FloType arg1) {
-		@Pc(23) long local23 = (long) ((arg1.anInt5892 + 1 << 16) + arg1.anInt5885) + ((long) arg1.anInt5897 << 56) + ((long) arg1.anInt5889 << 32);
+		@Pc(23) long local23 = (long) ((arg1.texture + 1 << 16) + arg1.anInt5885) + ((long) arg1.anInt5897 << 56) + ((long) arg1.anInt5889 << 32);
 		@Pc(38) GlTile local38 = (GlTile) arg0.get(local23);
 		if (local38 == null) {
-			local38 = new GlTile(arg1.anInt5892, (float) arg1.anInt5885, true, false, arg1.anInt5889);
-			arg0.method3862(local38, local23);
+			local38 = new GlTile(arg1.texture, (float) arg1.anInt5885, true, false, arg1.anInt5889);
+			arg0.put(local38, local23);
 		}
 		return local38;
 	}
@@ -78,11 +78,11 @@ public final class Static243 {
 			Static115.aClass3_Sub15Array1[local3506] = null;
 		}
 		for (local3506 = 0; local3506 < 32768; local3506++) {
-			Static175.aClass8_Sub4_Sub2Array1[local3506] = null;
+			Static175.npcs[local3506] = null;
 		}
 		Static173.self = Static159.players[2047] = new Player();
-		Static217.aClass69_116.method2278();
-		Static99.aClass69_64.method2278();
+		Static217.aClass69_116.clear();
+		Static99.aClass69_64.clear();
 		if (Static159.aClass69ArrayArrayArray1 != null) {
 			for (local3506 = 0; local3506 < 4; local3506++) {
 				for (@Pc(3663) int local3663 = 0; local3663 < 104; local3663++) {
@@ -113,7 +113,7 @@ public final class Static243 {
 		if (Static154.topLevelInterface != -1) {
 			Static109.method2275(Static154.topLevelInterface);
 		}
-		for (@Pc(3755) Class3_Sub31 local3755 = (Class3_Sub31) Static119.aClass133_9.method3859(); local3755 != null; local3755 = (Class3_Sub31) Static119.aClass133_9.method3861()) {
+		for (@Pc(3755) Class3_Sub31 local3755 = (Class3_Sub31) Static119.aClass133_9.head(); local3755 != null; local3755 = (Class3_Sub31) Static119.aClass133_9.next()) {
 			Static132.method2605(true, local3755);
 		}
 		Static154.topLevelInterface = -1;

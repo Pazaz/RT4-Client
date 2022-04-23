@@ -71,7 +71,7 @@ public final class MonochromeImageCache {
 		}
 		this.aClass3_Sub23Array1 = null;
 		this.anIntArrayArrayArray13 = null;
-		this.aClass69_96.method2278();
+		this.aClass69_96.clear();
 		this.aClass69_96 = null;
 	}
 
@@ -96,13 +96,13 @@ public final class MonochromeImageCache {
 					@Pc(80) Class3_Sub23 local80 = (Class3_Sub23) this.aClass69_96.method2279();
 					local44 = new Class3_Sub23(arg0, local80.anInt3468);
 					this.aClass3_Sub23Array1[local80.anInt3476] = null;
-					local80.method4658();
+					local80.unlink();
 				}
 				this.aClass3_Sub23Array1[arg0] = local44;
 			} else {
 				this.aBoolean195 = false;
 			}
-			this.aClass69_96.method2283(local44);
+			this.aClass69_96.addHead(local44);
 			return this.anIntArrayArrayArray13[local44.anInt3468];
 		}
 	}

@@ -18,9 +18,9 @@ public final class Static132 {
 
 	@OriginalMember(owner = "client!ke", name = "a", descriptor = "(ZLclient!wk;Z)V")
 	public static void method2605(@OriginalArg(0) boolean arg0, @OriginalArg(1) Class3_Sub31 arg1) {
-		@Pc(9) int local9 = (int) arg1.uid;
+		@Pc(9) int local9 = (int) arg1.key;
 		@Pc(16) int local16 = arg1.anInt5878;
-		arg1.method4658();
+		arg1.unlink();
 		if (arg0) {
 			Static109.method2275(local16);
 		}
@@ -41,9 +41,9 @@ public final class Static132 {
 			Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
 		} else {
 			Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
-			local43 = Static280.aClass3_Sub2_Sub9_43.method2858(LocalizedText.CHOOSE_OPTION);
+			local43 = Static280.aClass3_Sub2_Sub9_43.getStringWidth(LocalizedText.CHOOSE_OPTION);
 			for (@Pc(75) int local75 = 0; local75 < Static231.anInt5204; local75++) {
-				@Pc(88) int local88 = Static280.aClass3_Sub2_Sub9_43.method2858(Static269.method2228(local75));
+				@Pc(88) int local88 = Static280.aClass3_Sub2_Sub9_43.getStringWidth(Static269.method2228(local75));
 				if (local43 < local88) {
 					local43 = local88;
 				}
@@ -59,14 +59,14 @@ public final class Static132 {
 	@OriginalMember(owner = "client!ke", name = "c", descriptor = "(III)V")
 	public static void method2606(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		@Pc(8) DelayedStateChange local8 = Static238.method4143(1, arg0);
-		local8.method1017();
+		local8.pushServer();
 		local8.intArg1 = arg1;
 	}
 
 	@OriginalMember(owner = "client!ke", name = "a", descriptor = "(IIIBI)V")
 	public static void method2607(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {
 		@Pc(8) DelayedStateChange local8 = Static238.method4143(4, arg2);
-		local8.method1017();
+		local8.pushServer();
 		local8.intArg3 = arg3;
 		local8.intArg2 = arg0;
 		local8.intArg1 = arg1;

@@ -89,9 +89,9 @@ public final class SeqType {
 		}
 		@Pc(124) Model local124;
 		if (local41 == null) {
-			local124 = arg2.method4568(!local23.method901(local27), !local23.method903(local27), !this.aBoolean278);
+			local124 = arg2.method4568(!local23.isAlphaTransformed(local27), !local23.isColorTransformed(local27), !this.aBoolean278);
 		} else {
-			local124 = arg2.method4568(!local23.method901(local27) & !local41.method901(arg1), !local23.method903(local27) & !local41.method903(arg1), !this.aBoolean278);
+			local124 = arg2.method4568(!local23.isAlphaTransformed(local27) & !local41.isAlphaTransformed(arg1), !local23.isColorTransformed(local27) & !local41.isColorTransformed(arg1), !this.aBoolean278);
 		}
 		if (GlRenderer.enabled && this.aBoolean278) {
 			if (local39 == 1) {
@@ -162,19 +162,19 @@ public final class SeqType {
 				}
 			}
 		}
-		@Pc(163) boolean local163 = !local19.method901(local23);
-		@Pc(172) boolean local172 = !local19.method903(local23);
+		@Pc(163) boolean local163 = !local19.isAlphaTransformed(local23);
+		@Pc(172) boolean local172 = !local19.isColorTransformed(local23);
 		if (local71 != null) {
-			local163 &= !local71.method901(local83);
-			local172 &= !local71.method903(local83);
+			local163 &= !local71.isAlphaTransformed(local83);
+			local172 &= !local71.isColorTransformed(local83);
 		}
 		if (local34 != null) {
-			local163 &= !local34.method901(arg1);
-			local172 &= !local34.method903(arg1);
+			local163 &= !local34.isAlphaTransformed(arg1);
+			local172 &= !local34.isColorTransformed(arg1);
 		}
 		if (local81 != null) {
-			local163 &= !local81.method901(local85);
-			local172 &= !local81.method903(local85);
+			local163 &= !local81.isAlphaTransformed(local85);
+			local172 &= !local81.isColorTransformed(local85);
 		}
 		@Pc(258) Model local258 = arg0.method4572(local163, local172, !this.aBoolean278);
 		local258.method4558(local19, local23, local34, arg1, arg2 - 1, local13, this.aBoolean278);
@@ -202,9 +202,9 @@ public final class SeqType {
 		}
 		@Pc(106) Model local106;
 		if (local42 == null) {
-			local106 = arg4.method4572(!local19.method901(local27), !local19.method903(local27), !this.aBoolean278);
+			local106 = arg4.method4572(!local19.isAlphaTransformed(local27), !local19.isColorTransformed(local27), !this.aBoolean278);
 		} else {
-			local106 = arg4.method4572(!local19.method901(local27) & !local42.method901(arg0), !local19.method903(local27) & !local42.method903(arg0), !this.aBoolean278);
+			local106 = arg4.method4572(!local19.isAlphaTransformed(local27) & !local42.isAlphaTransformed(arg0), !local19.isColorTransformed(local27) & !local42.isColorTransformed(arg0), !this.aBoolean278);
 		}
 		if (this.aBoolean278 && GlRenderer.enabled) {
 			if (local40 == 1) {
@@ -276,9 +276,9 @@ public final class SeqType {
 		}
 		@Pc(103) Model local103;
 		if (local42 == null) {
-			local103 = arg3.method4560(!local27.method901(local31), !local27.method903(local31), !this.aBoolean278);
+			local103 = arg3.method4560(!local27.isAlphaTransformed(local31), !local27.isColorTransformed(local31), !this.aBoolean278);
 		} else {
-			local103 = arg3.method4560(!local27.method901(local31) & !local42.method901(arg0), !local27.method903(local31) & !local42.method903(arg0), !this.aBoolean278);
+			local103 = arg3.method4560(!local27.isAlphaTransformed(local31) & !local42.isAlphaTransformed(arg0), !local27.isColorTransformed(local31) & !local42.isColorTransformed(arg0), !this.aBoolean278);
 		}
 		local103.method4558(local27, local31, local42, arg0, arg1 - 1, local16, this.aBoolean278);
 		return local103;

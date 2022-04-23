@@ -74,7 +74,7 @@ public final class Static26 {
 	@OriginalMember(owner = "client!ca", name = "a", descriptor = "(Z)V")
 	public static void method741() {
 		Static79.aClass99_11.method3103();
-		Static7.aClass99_5.method3103();
+		Static7.sprites.method3103();
 	}
 
 	@OriginalMember(owner = "client!ca", name = "a", descriptor = "(ZI)V")
@@ -91,7 +91,7 @@ public final class Static26 {
 			if (local32 != null) {
 				@Pc(45) int local45 = (Static238.regionBitPacked[local25] >> 8) * 64 - Static225.originX;
 				@Pc(56) int local56 = (Static238.regionBitPacked[local25] & 0xFF) * 64 - Static142.originZ;
-				Static107.method2261();
+				Static107.loop();
 				Static124.method2437(local45, arg0, local32, local56, Static148.collisionMaps);
 			}
 		}

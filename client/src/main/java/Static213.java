@@ -13,7 +13,7 @@ public final class Static213 {
 	public static Js5 js5Archive0;
 
 	@OriginalMember(owner = "client!re", name = "a", descriptor = "(I)V")
-	public static void method3729() {
+	public static void clean() {
 		Static8.method119();
 		Static71.method1443();
 		Static238.method4142();

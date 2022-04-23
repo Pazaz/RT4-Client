@@ -45,12 +45,12 @@ public final class Static13 {
 	public static void method472(@OriginalArg(0) int arg0) {
 		@Pc(14) Inv local14 = (Inv) Static20.objectContainerCache.get((long) arg0);
 		if (local14 != null) {
-			local14.method4658();
+			local14.unlink();
 		}
 	}
 
 	@OriginalMember(owner = "client!bc", name = "a", descriptor = "(Ljava/awt/Color;ZZLclient!na;I)V")
-	public static void method473(@OriginalArg(0) Color arg0, @OriginalArg(2) boolean arg1, @OriginalArg(3) JagString arg2, @OriginalArg(4) int arg3) {
+	public static void render(@OriginalArg(0) Color arg0, @OriginalArg(2) boolean arg1, @OriginalArg(3) JagString arg2, @OriginalArg(4) int arg3) {
 		try {
 			@Pc(6) Graphics local6 = GameShell.canvas.getGraphics();
 			if (Static222.aFont1 == null) {

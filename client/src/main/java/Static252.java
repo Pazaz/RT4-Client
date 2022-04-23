@@ -48,13 +48,13 @@ public final class Static252 {
 			}
 			return;
 		}
-		if ((Static12.tileSettings[Static55.level][Static173.self.anInt3412 >> 7][Static173.self.anInt3421 >> 7] & 0x4) != 0) {
-			Static254.method4348(false, Static173.self.anInt3412 >> 7, Static173.self.anInt3421 >> 7, Static130.aClass3_Sub5ArrayArrayArray1, 0);
+		if ((Static12.tileSettings[Static55.level][Static173.self.xFine >> 7][Static173.self.zFine >> 7] & 0x4) != 0) {
+			Static254.method4348(false, Static173.self.xFine >> 7, Static173.self.zFine >> 7, Static130.aClass3_Sub5ArrayArrayArray1, 0);
 		}
 		if (Static240.cameraPitch >= 310) {
 			return;
 		}
-		@Pc(135) int local135 = Static173.self.anInt3421 >> 7;
+		@Pc(135) int local135 = Static173.self.zFine >> 7;
 		local40 = Static134.renderZ >> 7;
 		@Pc(146) int local146;
 		if (local40 < local135) {
@@ -63,7 +63,7 @@ public final class Static252 {
 			local146 = local40 - local135;
 		}
 		local33 = Static138.renderX >> 7;
-		@Pc(162) int local162 = Static173.self.anInt3412 >> 7;
+		@Pc(162) int local162 = Static173.self.xFine >> 7;
 		@Pc(174) int local174;
 		if (local162 > local33) {
 			local174 = local162 - local33;

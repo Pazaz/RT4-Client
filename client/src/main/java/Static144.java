@@ -261,7 +261,7 @@ public final class Static144 {
 	}
 
 	@OriginalMember(owner = "client!le", name = "a", descriptor = "(I)I")
-	public static int method2736() {
+	public static int getWindowMode() {
 		if (GameShell.fullScreenFrame != null) {
 			return 3;
 		} else if (GlRenderer.enabled && Static124.aBoolean156) {

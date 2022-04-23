@@ -68,7 +68,7 @@ public abstract class TextureOp extends Node {
 	@OriginalMember(owner = "client!j", name = "e", descriptor = "(B)V")
 	public void method4633() {
 		if (this.aBoolean309) {
-			this.aClass121_41.method3442();
+			this.aClass121_41.clear();
 			this.aClass121_41 = null;
 		} else {
 			this.aClass103_41.method3169();

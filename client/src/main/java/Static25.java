@@ -18,7 +18,7 @@ public final class Static25 {
 	public static boolean aBoolean57 = false;
 
 	@OriginalMember(owner = "client!c", name = "a", descriptor = "(Ljava/awt/Frame;ZLsignlink!ll;)V")
-	public static void method714(@OriginalArg(0) Frame arg0, @OriginalArg(2) SignLink arg1) {
+	public static void exitFullScreen(@OriginalArg(0) Frame arg0, @OriginalArg(2) SignLink arg1) {
 		while (true) {
 			@Pc(16) PrivilegedRequest local16 = arg1.exitFullScreen(arg0);
 			while (local16.status == 0) {
@@ -41,6 +41,6 @@ public final class Static25 {
 	@OriginalMember(owner = "client!c", name = "d", descriptor = "(II)V")
 	public static void method716() {
 		Static79.aClass99_11.method3102(5);
-		Static7.aClass99_5.method3102(5);
+		Static7.sprites.method3102(5);
 	}
 }

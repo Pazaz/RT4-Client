@@ -35,8 +35,8 @@ public final class Static250 {
 
 	@OriginalMember(owner = "client!uf", name = "a", descriptor = "(B)V")
 	public static void method4273() {
-		@Pc(14) int playerX = Static173.self.anInt3412 + Static132.anInt3291;
-		@Pc(20) int playerZ = Static173.self.anInt3421 + Static206.anInt4774;
+		@Pc(14) int playerX = Static173.self.xFine + Static132.anInt3291;
+		@Pc(20) int playerZ = Static173.self.zFine + Static206.anInt4774;
 		if (Static81.cameraX - playerX < -500 || Static81.cameraX - playerX > 500 || Static111.cameraZ - playerZ < -500 || Static111.cameraZ - playerZ > 500) {
 			Static81.cameraX = playerX;
 			Static111.cameraZ = playerZ;
