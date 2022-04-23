@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!cb")
-public final class Class3_Sub2_Sub6 extends SecondaryNode {
+public final class QuickChatPhraseType extends SecondaryNode {
 
 	@OriginalMember(owner = "client!cb", name = "L", descriptor = "[I")
 	private int[] anIntArray71;
