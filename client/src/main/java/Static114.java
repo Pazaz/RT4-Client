@@ -17,9 +17,6 @@ public final class Static114 {
 	@OriginalMember(owner = "client!j", name = "K", descriptor = "I")
 	public static int anInt5843 = 0;
 
-	@OriginalMember(owner = "client!j", name = "L", descriptor = "I")
-	public static int anInt5844 = 0;
-
 	@OriginalMember(owner = "client!j", name = "M", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1100 = Static28.parse("::replacecanvas");
 

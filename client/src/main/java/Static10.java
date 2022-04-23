@@ -5,9 +5,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static10 {
 
-	@OriginalMember(owner = "client!an", name = "ab", descriptor = "Lclient!uf;")
-	public static Keyboard aClass149_1 = new Keyboard();
-
 	@OriginalMember(owner = "client!an", name = "db", descriptor = "S")
 	public static short aShort9 = 205;
 

@@ -2619,7 +2619,7 @@ public final class Static88 {
 												}
 											} else if (opcode < 5200) {
 												if (opcode == 5100) {
-													if (Static187.pressedKeys[86]) {
+													if (Keyboard.pressedKeys[Keyboard.KEY_ALT]) {
 														Static254.intStack[isp++] = 1;
 													} else {
 														Static254.intStack[isp++] = 0;
@@ -2627,7 +2627,7 @@ public final class Static88 {
 													continue;
 												}
 												if (opcode == 5101) {
-													if (Static187.pressedKeys[82]) {
+													if (Keyboard.pressedKeys[Keyboard.KEY_CTRL]) {
 														Static254.intStack[isp++] = 1;
 													} else {
 														Static254.intStack[isp++] = 0;
@@ -2635,7 +2635,7 @@ public final class Static88 {
 													continue;
 												}
 												if (opcode == 5102) {
-													if (Static187.pressedKeys[81]) {
+													if (Keyboard.pressedKeys[Keyboard.KEY_SHIFT]) {
 														Static254.intStack[isp++] = 1;
 													} else {
 														Static254.intStack[isp++] = 0;

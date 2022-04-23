@@ -30,7 +30,7 @@ public final class Static13 {
 			local32 = Static34.concatenate(new JagString[] { LocalizedText.USE, LocalizedText.MINISEPARATOR, Static34.aClass100_203, Static225.aClass100_961 });
 		} else if (Static241.aBoolean302 && Static231.anInt5204 < 2) {
 			local32 = Static34.concatenate(new JagString[] { Static102.aClass100_545, LocalizedText.MINISEPARATOR, Static78.aClass100_466, Static225.aClass100_961 });
-		} else if (Static172.shiftClick && Static187.pressedKeys[81] && Static231.anInt5204 > 2) {
+		} else if (Static172.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static231.anInt5204 > 2) {
 			local32 = Static269.method2228(Static231.anInt5204 - 2);
 		} else {
 			local32 = Static269.method2228(Static231.anInt5204 - 1);

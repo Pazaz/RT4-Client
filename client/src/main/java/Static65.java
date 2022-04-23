@@ -71,30 +71,4 @@ public final class Static65 {
 		}
 	}
 
-	@OriginalMember(owner = "client!fc", name = "b", descriptor = "(I)V")
-	public static void handleKeyboard() {
-		@Pc(12) Keyboard local12 = Static10.aClass149_1;
-		synchronized (Static10.aClass149_1) {
-			Static102.anInt2678 = Static228.anInt5105;
-			Static229.anInt5140++;
-			@Pc(23) int local23;
-			if (Static114.anInt5844 < 0) {
-				for (local23 = 0; local23 < 112; local23++) {
-					Static187.pressedKeys[local23] = false;
-				}
-				Static114.anInt5844 = Static227.anInt5087;
-			} else {
-				while (Static114.anInt5844 != Static227.anInt5087) {
-					local23 = Static17.anIntArray53[Static227.anInt5087];
-					Static227.anInt5087 = Static227.anInt5087 + 1 & 0x7F;
-					if (local23 >= 0) {
-						Static187.pressedKeys[local23] = true;
-					} else {
-						Static187.pressedKeys[~local23] = false;
-					}
-				}
-			}
-			Static228.anInt5105 = Static53.anInt1708;
-		}
-	}
 }

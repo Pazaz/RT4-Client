@@ -16,9 +16,6 @@ public final class Static53 {
 	@OriginalMember(owner = "client!ec", name = "n", descriptor = "Z")
 	public static boolean highDetailTextures = true;
 
-	@OriginalMember(owner = "client!ec", name = "q", descriptor = "I")
-	public static int anInt1708 = 0;
-
 	@OriginalMember(owner = "client!ec", name = "B", descriptor = "[[I")
 	public static final int[][] anIntArrayArray8 = new int[][] { new int[0], { 128, 0, 128, 128, 0, 128 }, { 0, 0, 128, 0, 128, 128, 64, 128 }, { 0, 128, 0, 0, 128, 0, 64, 128 }, { 0, 0, 64, 128, 0, 128 }, { 128, 128, 64, 128, 128, 0 }, { 64, 0, 128, 0, 128, 128, 64, 128 }, { 128, 0, 128, 128, 0, 128, 0, 64, 64, 0 }, { 0, 0, 64, 0, 0, 64 }, { 0, 0, 128, 0, 128, 128, 64, 96, 32, 64 }, { 0, 128, 0, 0, 32, 64, 64, 96, 128, 128 }, { 0, 128, 0, 0, 32, 32, 96, 32, 128, 0, 128, 128 } };
 

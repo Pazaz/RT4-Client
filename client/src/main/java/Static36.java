@@ -125,10 +125,10 @@ public final class Static36 {
 						@Pc(322) int local322;
 						if (local9.aByteArray8 != null) {
 							for (local243 = 0; local243 < local9.aByteArray8.length; local243++) {
-								if (Static187.pressedKeys[local9.aByteArray8[local243]]) {
+								if (Keyboard.pressedKeys[local9.aByteArray8[local243]]) {
 									if (local9.anIntArray49 == null || Static83.loop >= local9.anIntArray49[local243]) {
 										@Pc(279) byte local279 = local9.aByteArray7[local243];
-										if (local279 == 0 || ((local279 & 0x2) == 0 || Static187.pressedKeys[86]) && ((local279 & 0x1) == 0 || Static187.pressedKeys[82]) && ((local279 & 0x4) == 0 || Static187.pressedKeys[81])) {
+										if (local279 == 0 || ((local279 & 0x2) == 0 || Keyboard.pressedKeys[Keyboard.KEY_ALT]) && ((local279 & 0x1) == 0 || Keyboard.pressedKeys[Keyboard.KEY_CTRL]) && ((local279 & 0x4) == 0 || Keyboard.pressedKeys[Keyboard.KEY_SHIFT])) {
 											Static263.method4512(Static186.EMPTY_FILE, -1, local243 + 1, local9.id);
 											local322 = local9.anIntArray46[local243];
 											if (local9.anIntArray49 == null) {
@@ -189,7 +189,7 @@ public final class Static36 {
 								if (local9.anInt453 == 1400) {
 									Static24.component = local9;
 									if (local221) {
-										if (Static187.pressedKeys[82] && Static191.staffModLevel > 0) {
+										if (Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Static191.staffModLevel > 0) {
 											local243 = (int) ((double) (Static7.clickX - local50 - local9.anInt445 / 2) * 2.0D / (double) Static83.aFloat3);
 											local508 = (int) ((double) (Static60.clickY - local55 - local9.anInt459 / 2) * 2.0D / (double) Static83.aFloat3);
 											local322 = Static13.anInt435 + local243;

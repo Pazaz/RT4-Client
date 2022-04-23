@@ -93,7 +93,7 @@ public final class Static197 {
 			GameShell.canvasHeight = 503;
 		}
 		if (arg0) {
-			Static31.method847(GameShell.canvas);
+			Keyboard.stop(GameShell.canvas);
 			Static223.method3866(GameShell.canvas);
 			if (Static71.mouseWheel != null) {
 				Static71.mouseWheel.method3291(GameShell.canvas);

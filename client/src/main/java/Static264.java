@@ -19,9 +19,6 @@ public final class Static264 {
 	@OriginalMember(owner = "client!vh", name = "s", descriptor = "I")
 	public static int mouseRecorderPrevX = 0;
 
-	@OriginalMember(owner = "client!vh", name = "u", descriptor = "[I")
-	public static final int[] anIntArray413 = new int[128];
-
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "(ILclient!wa;)Lclient!bd;")
 	public static Class12 method3568(@OriginalArg(1) Buffer arg0) {
 		@Pc(3) Class12 local3 = new Class12();

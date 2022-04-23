@@ -16,9 +16,6 @@ public final class Static221 {
 	@OriginalMember(owner = "client!s", name = "d", descriptor = "I")
 	public static int anInt4364 = 0;
 
-	@OriginalMember(owner = "client!s", name = "e", descriptor = "[I")
-	public static final int[] anIntArray375 = new int[128];
-
 	@OriginalMember(owner = "client!s", name = "g", descriptor = "Lclient!na;")
 	public static final JagString aClass100_821 = Static28.parse("document)3cookie=(R");
 

@@ -901,9 +901,9 @@ public final class Static87 {
 			Static72.pitchTarget = 383;
 		}
 		Static57.yawTarget &= 0x7FF;
-		@Pc(33) int local33 = Static81.anInt2223 >> 7;
-		@Pc(37) int local37 = Static111.anInt2900 >> 7;
-		@Pc(43) int local43 = Static207.method3685(Static55.level, Static81.anInt2223, Static111.anInt2900);
+		@Pc(33) int local33 = Static81.cameraX >> 7;
+		@Pc(37) int local37 = Static111.cameraZ >> 7;
+		@Pc(43) int local43 = Static207.method3685(Static55.level, Static81.cameraX, Static111.cameraZ);
 		@Pc(45) int local45 = 0;
 		@Pc(64) int local64;
 		if (local33 > 3 && local37 > 3 && local33 < 100 && local37 < 100) {

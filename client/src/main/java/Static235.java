@@ -15,7 +15,7 @@ public final class Static235 {
 
 	@OriginalMember(owner = "client!tb", name = "h", descriptor = "(I)I")
 	public static int method4044() {
-		return Static172.shiftClick && Static187.pressedKeys[81] && Static231.anInt5204 > 2 ? Static190.anIntArray382[Static231.anInt5204 - 2] : Static190.anIntArray382[Static231.anInt5204 - 1];
+		return Static172.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static231.anInt5204 > 2 ? Static190.anIntArray382[Static231.anInt5204 - 2] : Static190.anIntArray382[Static231.anInt5204 - 1];
 	}
 
 	@OriginalMember(owner = "client!tb", name = "b", descriptor = "(IB)Lclient!bc;")
