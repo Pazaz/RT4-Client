@@ -80,13 +80,13 @@ public final class Static40 {
 	}
 
 	@OriginalMember(owner = "client!da", name = "c", descriptor = "(II)Lclient!aa;")
-	public static Class2 method1013(@OriginalArg(0) int arg0) {
-		@Pc(10) Class2 local10 = (Class2) Static231.aClass99_29.method3106((long) arg0);
+	public static MsiType method1013(@OriginalArg(0) int arg0) {
+		@Pc(10) MsiType local10 = (MsiType) Static231.aClass99_29.method3106((long) arg0);
 		if (local10 != null) {
 			return local10;
 		}
 		@Pc(20) byte[] local20 = Static98.aClass153_42.getFile(34, arg0);
-		local10 = new Class2();
+		local10 = new MsiType();
 		if (local20 != null) {
 			local10.method6(new Buffer(local20), arg0);
 		}
