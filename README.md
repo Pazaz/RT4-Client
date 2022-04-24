@@ -18,13 +18,13 @@ That mapping can be used to generate a new deob with everything renamed for you.
 ## Instructions
 
 Build requirements:
-Java 8+
+* Java 8+
 
 Runtime requirements:
-SD: Java 8+
-HD on Windows, use Java 15 or lower. There is a JOGL issue on 16+ related to how they grab the WGL context from the window.
-HD on Linux: Java 8+
-HD on macOS: Not possible yet on latest macOS. Might work for earlier OS versions.
+* SD: Java 8+
+* HD on Windows, use Java 15 or lower. There is a JOGL issue on 16+ related to how they grab the WGL context from the window.
+* HD on Linux: Java 8+
+* HD on macOS: Not possible yet on latest macOS. Might work for earlier OS versions.
 
 ```
 git clone https://github.com/Pazaz/RT4-Client.git
