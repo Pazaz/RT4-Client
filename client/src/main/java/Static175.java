@@ -25,8 +25,8 @@ public final class Static175 {
 		if (Static267.anInt5775 > 0) {
 			Static278.processLogout();
 		} else {
-			Static233.aClass95_4 = Static124.socket;
-			Static124.socket = null;
+			Static233.aClass95_4 = Protocol.socket;
+			Protocol.socket = null;
 			Static196.setGameState(40);
 		}
 	}

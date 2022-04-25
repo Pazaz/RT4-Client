@@ -4,10 +4,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static78 {
 
-	@OriginalMember(owner = "client!gd", name = "l", descriptor = "I")
-	public static int anInt2147;
-
-	@OriginalMember(owner = "client!gd", name = "m", descriptor = "Lclient!ve;")
+    @OriginalMember(owner = "client!gd", name = "m", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_32;
 
 	@OriginalMember(owner = "client!gd", name = "n", descriptor = "Lclient!qf;")
@@ -46,11 +43,6 @@ public final class Static78 {
 		Static226.anInt5079 = 0;
 		Static57.anInt1758 = 0;
 		Static223.anInt5034 = -3;
-	}
-
-	@OriginalMember(owner = "client!gd", name = "a", descriptor = "(ILclient!ve;II)Lclient!mm;")
-	public static SoftwareSprite method1693(@OriginalArg(0) int arg0, @OriginalArg(1) Js5 arg1, @OriginalArg(3) int arg2) {
-		return Static234.method4016(arg1, arg0, arg2) ? Static196.method3537() : null;
 	}
 
 	@OriginalMember(owner = "client!gd", name = "a", descriptor = "(I)V")
@@ -111,11 +103,11 @@ public final class Static78 {
 			}
 		}
 
-		if (Static235.mapFunctionGroup == null) {
-			if (Static158.aClass3_Sub2_Sub4_3 == null || !Static227.js5Archive23.method4497(Static34.concatenate(new JagString[] { Static158.aClass3_Sub2_Sub4_3.aClass100_138, Static50.aClass100_363 }))) {
-				Static235.mapFunctionGroup = new MapFunctionGroup(0);
-			} else if (Static227.js5Archive23.allFilesComplete(Static34.concatenate(new JagString[] { Static158.aClass3_Sub2_Sub4_3.aClass100_138, Static50.aClass100_363 }))) {
-				Static235.mapFunctionGroup = Static140.createMapFunctionGroup(Static34.concatenate(new JagString[] { Static158.aClass3_Sub2_Sub4_3.aClass100_138, Static50.aClass100_363 }), Static227.js5Archive23);
+		if (Static235.mapElementList == null) {
+			if (Static158.aClass3_Sub2_Sub4_3 == null || !client.js5Archive23.isGroupNameValid(JagString.concatenate(new JagString[] { Static158.aClass3_Sub2_Sub4_3.group, Static50.aClass100_363 }))) {
+				Static235.mapElementList = new MapElementList(0);
+			} else if (client.js5Archive23.allFilesComplete(JagString.concatenate(new JagString[] { Static158.aClass3_Sub2_Sub4_3.group, Static50.aClass100_363 }))) {
+				Static235.mapElementList = MapElementList.create(JagString.concatenate(new JagString[] { Static158.aClass3_Sub2_Sub4_3.group, Static50.aClass100_363 }), client.js5Archive23);
 			} else {
 				fileExists = false;
 				Static175.mapFilesMissingCount++;
@@ -161,14 +153,14 @@ public final class Static78 {
 		}
 
 		if (Static233.loadingScreenState != 0) {
-			Static114.drawTextOnScreen(true, Static34.concatenate(new JagString[] { LocalizedText.LOADING, Static18.COMPLETE_PERCENT}));
+			Static114.drawTextOnScreen(true, JagString.concatenate(new JagString[] { LocalizedText.LOADING, Static18.COMPLETE_PERCENT}));
 		}
 
 		Static107.loop();
 		Static217.method3768();
 		@Pc(420) boolean hasUnderWaterMap = false;
 		@Pc(427) int i;
-		if (GlRenderer.enabled && Static220.highWaterDetail) {
+		if (GlRenderer.enabled && Preferences.highWaterDetail) {
 			for (i = 0; i < Static273.mapFilesBuffer.length; i++) {
 				if (Static19.underWaterLocationsMapFilesBuffer[i] != null || Static186.underWaterMapFilesBuffer[i] != null) {
 					hasUnderWaterMap = true;
@@ -210,8 +202,8 @@ public final class Static78 {
 			Static87.method1805(false);
 			Static7.ping(true);
 			if (GlRenderer.enabled) {
-				i = Static173.self.movementQueueX[0] >> 3;
-				chunkX = Static173.self.movementQueueZ[0] >> 3;
+				i = PlayerList.self.movementQueueX[0] >> 3;
+				chunkX = PlayerList.self.movementQueueZ[0] >> 3;
 				Static73.setLightPosition(chunkX, i);
 			}
 			Static26.method743(false);
@@ -223,8 +215,8 @@ public final class Static78 {
 			Static89.method1835(false);
 			Static7.ping(true);
 			if (GlRenderer.enabled) {
-				i = Static173.self.movementQueueX[0] >> 3;
-				chunkX = Static173.self.movementQueueZ[0] >> 3;
+				i = PlayerList.self.movementQueueX[0] >> 3;
+				chunkX = PlayerList.self.movementQueueZ[0] >> 3;
 				Static73.setLightPosition(chunkX, i);
 			}
 			Static233.method4002(false);
@@ -242,7 +234,7 @@ public final class Static78 {
 		}
 		if (i < Static55.level - 1) {
 		}
-		if (Static138.allLevelsAreVisible()) {
+		if (SceneGraph.allLevelsAreVisible()) {
 			Static146.method2750(0);
 		} else {
 			Static146.method2750(Static146.anInt3508);
@@ -285,7 +277,7 @@ public final class Static78 {
 		Static219.method3796();
 		Static217.method3768();
 		Static231.aBoolean252 = false;
-		if (GameShell.frame != null && Static124.socket != null && Static244.gameState == 25) {
+		if (GameShell.frame != null && Protocol.socket != null && client.gameState == 25) {
 			Static6.outboundBuffer.p1isaac(20);
 			Static6.outboundBuffer.p4(1057001181);
 		}
@@ -297,22 +289,22 @@ public final class Static78 {
 			for (@Pc(837) int local837 = chunkX - 1; local837 <= chunkZ + 1; local837++) {
 				for (@Pc(850) int local850 = local821 - 1; local850 <= local815 + 1; local850++) {
 					if (local837 < chunkX || local837 > chunkZ || local850 < local821 || local850 > local815) {
-						Static26.js5Archive5.method4486(Static34.concatenate(new JagString[] { Static103.aClass100_558, Static123.parseInt(local837), Static86.aClass100_488, Static123.parseInt(local850) }));
-						Static26.js5Archive5.method4486(Static34.concatenate(new JagString[] { Static270.aClass100_1090, Static123.parseInt(local837), Static86.aClass100_488, Static123.parseInt(local850) }));
+						Static26.js5Archive5.method4486(JagString.concatenate(new JagString[] { Static103.aClass100_558, Static123.parseInt(local837), Static86.aClass100_488, Static123.parseInt(local850) }));
+						Static26.js5Archive5.method4486(JagString.concatenate(new JagString[] { Static270.aClass100_1090, Static123.parseInt(local837), Static86.aClass100_488, Static123.parseInt(local850) }));
 					}
 				}
 			}
 		}
-		if (Static244.gameState == 28) {
+		if (client.gameState == 28) {
 			Static196.setGameState(10);
 		} else {
 			Static196.setGameState(30);
-			if (Static124.socket != null) {
+			if (Protocol.socket != null) {
 				Static6.outboundBuffer.p1isaac(110);
 			}
 		}
 		Static141.method2720();
 		Static107.loop();
-		Static234.resetTimer();
+		GameShell.resetTimer();
 	}
 }

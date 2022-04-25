@@ -95,7 +95,7 @@ public final class Static45 {
 						local146[local194][local178] = local200 - local273;
 					}
 				}
-			} else if (Static178.highDetailLighting) {
+			} else if (Preferences.highDetailLighting) {
 				for (local168 = 1; local168 < 103; local168++) {
 					for (local173 = 1; local173 < 103; local173++) {
 						local194 = (local159[local173 + 1][local168] >> 3) + (local159[local173 - 1][local168] >> 2) + (local159[local173][local168 + -1] >> 2) + (local159[local173][local168 + 1] >> 3) + (local159[local173][local168] >> 1);
@@ -188,7 +188,7 @@ public final class Static45 {
 			}
 			for (local168 = 1; local168 < 103; local168++) {
 				label771: for (local173 = 1; local173 < 103; local173++) {
-					if (underwater || Static138.allLevelsAreVisible() || (Static12.tileSettings[0][local168][local173] & 0x2) != 0 || (Static12.tileSettings[local152][local168][local173] & 0x10) == 0 && Static4.method22(local173, local168, local152) == Static41.anInt1316) {
+					if (underwater || SceneGraph.allLevelsAreVisible() || (Static12.tileSettings[0][local168][local173] & 0x2) != 0 || (Static12.tileSettings[local152][local168][local173] & 0x10) == 0 && Static4.method22(local173, local168, local152) == Static41.anInt1316) {
 						if (Static146.anInt3508 > local152) {
 							Static146.anInt3508 = local152;
 						}

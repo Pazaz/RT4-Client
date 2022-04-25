@@ -35,7 +35,7 @@ public final class Static243 {
 		Static204.anInt4762 = 0;
 		Static67.prevFocus = true;
 		Static183.prevClickTime = 0L;
-		Static178.instance.samples = 0;
+		MouseRecorder.instance.samples = 0;
 		GameShell.focus = true;
 		Static114.method4625();
 		Static49.anInt1462 = -1;
@@ -80,7 +80,7 @@ public final class Static243 {
 		for (local3506 = 0; local3506 < 32768; local3506++) {
 			Static175.npcs[local3506] = null;
 		}
-		Static173.self = Static159.players[2047] = new Player();
+		PlayerList.self = Static159.players[2047] = new Player();
 		Static217.aClass69_116.clear();
 		Static99.aClass69_64.clear();
 		if (Static159.aClass69ArrayArrayArray1 != null) {
@@ -96,7 +96,7 @@ public final class Static243 {
 		Static166.anInt4054 = 0;
 		Static9.anInt178 = 0;
 		Static8.method121();
-		Static20.method601();
+		DelayedStateChange.clear();
 		Static133.anInt5230 = 0;
 		Static233.anInt5217 = 0;
 		Static265.anInt5765 = 0;
@@ -110,13 +110,13 @@ public final class Static243 {
 		for (local3506 = 0; local3506 < Static155.varcs.length; local3506++) {
 			Static155.varcs[local3506] = -1;
 		}
-		if (Static154.topLevelInterface != -1) {
-			Static109.method2275(Static154.topLevelInterface);
+		if (InterfaceList.topLevelInterface != -1) {
+			Static109.method2275(InterfaceList.topLevelInterface);
 		}
 		for (@Pc(3755) Class3_Sub31 local3755 = (Class3_Sub31) Static119.aClass133_9.head(); local3755 != null; local3755 = (Class3_Sub31) Static119.aClass133_9.next()) {
 			Static132.method2605(true, local3755);
 		}
-		Static154.topLevelInterface = -1;
+		InterfaceList.topLevelInterface = -1;
 		Static119.aClass133_9 = new HashTable(8);
 		Static52.method1287();
 		Static39.aClass13_10 = null;

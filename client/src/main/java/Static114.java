@@ -5,12 +5,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static114 {
 
-	@OriginalMember(owner = "client!j", name = "x", descriptor = "Lclient!rk;")
-	public static Font aClass3_Sub2_Sub9_42;
-
-	@OriginalMember(owner = "client!j", name = "v", descriptor = "I")
-	public static int anInt5831 = 0;
-
 	@OriginalMember(owner = "client!j", name = "z", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1099 = Static28.parse("::shiftclick");
 
@@ -33,24 +27,24 @@ public final class Static114 {
 		if (arg0 == null) {
 			return null;
 		} else {
-			@Pc(22) SoftwareFont local22 = new SoftwareFont(arg0, Static274.anIntArray440, Static269.anIntArray252, Static254.anIntArray488, Static26.anIntArray66, Static7.aByteArrayArray5);
-			Static75.method1631();
+			@Pc(22) SoftwareFont local22 = new SoftwareFont(arg0, SpriteLoader.xOffsets, SpriteLoader.yOffsets, SpriteLoader.innerWidths, SpriteLoader.innerHeights, SpriteLoader.pixels);
+			SpriteLoader.clear();
 			return local22;
 		}
 	}
 
 	@OriginalMember(owner = "client!j", name = "a", descriptor = "(BZLclient!na;)V")
 	public static void drawTextOnScreen(@OriginalArg(1) boolean arg0, @OriginalArg(2) JagString arg1) {
-		@Pc(24) int local24 = Static215.aClass3_Sub2_Sub9_32.method2856(arg1, 250);
-		@Pc(31) int local31 = Static215.aClass3_Sub2_Sub9_32.getParagraphLineCount(arg1, 250) * 13;
+		@Pc(24) int local24 = Fonts.p12Full.method2856(arg1, 250);
+		@Pc(31) int local31 = Fonts.p12Full.getParagraphLineCount(arg1, 250) * 13;
 		if (GlRenderer.enabled) {
 			Static46.method1186(6, 6, local24 + 4 + 4, local31 + 8, 0);
 			Static46.method1179(6, 6, local24 + 4 + 4, local31 + 4 + 4, 16777215);
 		} else {
-			Static129.method2495(6, 6, local24 + 4 + 4, local31 + 8, 0);
-			Static129.method2483(6, 6, local24 + 8, 4 + 4 + local31, 16777215);
+			SoftwareRaster.fillRect(6, 6, local24 + 4 + 4, local31 + 8, 0);
+			SoftwareRaster.drawRect(6, 6, local24 + 8, 4 + 4 + local31, 16777215);
 		}
-		Static215.aClass3_Sub2_Sub9_32.method2852(arg1, 10, 10, local24, local31, 16777215, -1, 1, 1, 0);
+		Fonts.p12Full.method2852(arg1, 10, 10, local24, local31, 16777215, -1, 1, 1, 0);
 		Static133.method4012(6, local24 + 8, 6, local31 + 4 + 4);
 		if (!arg0) {
 			Static121.method2407(10, 10, local31, local24);
@@ -59,7 +53,7 @@ public final class Static114 {
 		} else {
 			try {
 				@Pc(159) Graphics local159 = GameShell.canvas.getGraphics();
-				Static260.frameBuffer.draw(local159);
+				client.frameBuffer.draw(local159);
 			} catch (@Pc(167) Exception local167) {
 				GameShell.canvas.repaint();
 			}

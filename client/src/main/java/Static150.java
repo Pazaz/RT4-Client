@@ -7,10 +7,7 @@ public final class Static150 {
 	@OriginalMember(owner = "client!lk", name = "J", descriptor = "Lclient!na;")
 	public static final JagString aClass100_687 = Static28.parse(")4p=");
 
-	@OriginalMember(owner = "client!lk", name = "U", descriptor = "Z")
-	public static boolean objectTag = false;
-
-	@OriginalMember(owner = "client!lk", name = "V", descriptor = "I")
+    @OriginalMember(owner = "client!lk", name = "V", descriptor = "I")
 	public static int anInt3582 = 0;
 
 	@OriginalMember(owner = "client!lk", name = "Z", descriptor = "I")
@@ -26,11 +23,6 @@ public final class Static150 {
 			ready++;
 		}
 		return ready;
-	}
-
-	@OriginalMember(owner = "client!lk", name = "a", descriptor = "(IIBLclient!ve;)Lclient!qf;")
-	public static Sprite method2800(@OriginalArg(1) int arg0, @OriginalArg(3) Js5 arg1) {
-		return Static234.method4016(arg1, 0, arg0) ? Static82.method1764() : null;
 	}
 
 	@OriginalMember(owner = "client!lk", name = "a", descriptor = "(IIILclient!be;Z)V")
@@ -89,7 +81,7 @@ public final class Static150 {
 			@Pc(305) HookRequest local305 = new HookRequest();
 			local305.arguments = arg2.anObjectArray17;
 			local305.source = arg2;
-			Static185.lowPriorityRequests.method2282(local305);
+			InterfaceList.lowPriorityRequests.addTail(local305);
 		}
 	}
 
@@ -109,7 +101,7 @@ public final class Static150 {
 		} else if (arg4 < arg1.anInt2029) {
 			local20 += arg1.anInt2029 - arg4;
 		}
-		if (arg1.radius == 0 || arg1.radius < local20 - 64 || Static30.ambientSoundsVolume == 0 || arg2 != arg1.anInt2033) {
+		if (arg1.radius == 0 || arg1.radius < local20 - 64 || Preferences.ambientSoundsVolume == 0 || arg2 != arg1.anInt2033) {
 			if (arg1.primaryStream != null) {
 				Static204.soundStream.removeSubStream(arg1.primaryStream);
 				arg1.primaryStream = null;
@@ -124,11 +116,11 @@ public final class Static150 {
 		if (local20 < 0) {
 			local20 = 0;
 		}
-		@Pc(134) int local134 = (arg1.radius - local20) * Static30.ambientSoundsVolume / arg1.radius;
+		@Pc(134) int local134 = (arg1.radius - local20) * Preferences.ambientSoundsVolume / arg1.radius;
 		if (arg1.primaryStream != null) {
 			arg1.primaryStream.method386(local134);
 		} else if (arg1.sound >= 0) {
-			@Pc(150) SynthSound local150 = Static292.method3988(Static248.js5Archive4, arg1.sound, 0);
+			@Pc(150) SynthSound local150 = SynthSound.create(Static248.js5Archive4, arg1.sound, 0);
 			if (local150 != null) {
 				@Pc(158) PcmSound local158 = local150.method3989().method2648(Static56.resampler);
 				@Pc(163) SoundPcmStream local163 = Static284.method404(local158, local134);
@@ -144,7 +136,7 @@ public final class Static150 {
 			}
 		} else if (arg1.sounds != null && (arg1.anInt2034 -= arg3) <= 0) {
 			@Pc(219) int local219 = (int) ((double) arg1.sounds.length * Math.random());
-			@Pc(227) SynthSound local227 = Static292.method3988(Static248.js5Archive4, arg1.sounds[local219], 0);
+			@Pc(227) SynthSound local227 = SynthSound.create(Static248.js5Archive4, arg1.sounds[local219], 0);
 			if (local227 != null) {
 				@Pc(236) PcmSound local236 = local227.method3989().method2648(Static56.resampler);
 				@Pc(241) SoundPcmStream local241 = Static284.method404(local236, local134);

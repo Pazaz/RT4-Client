@@ -2,16 +2,10 @@ import org.openrs2.deob.annotation.OriginalMember;
 
 public final class Static227 {
 
-	@OriginalMember(owner = "client!sg", name = "h", descriptor = "I")
-	public static int anInt5091;
-
 	@OriginalMember(owner = "client!sg", name = "i", descriptor = "Lclient!be;")
 	public static Component staticActiveComponent2;
 
-	@OriginalMember(owner = "client!sg", name = "k", descriptor = "Lclient!ve;")
-	public static Js5 js5Archive23;
-
-	@OriginalMember(owner = "client!sg", name = "o", descriptor = "I")
+    @OriginalMember(owner = "client!sg", name = "o", descriptor = "I")
 	public static int cameraType;
 
     @OriginalMember(owner = "client!sg", name = "b", descriptor = "[I")

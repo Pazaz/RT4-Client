@@ -6,7 +6,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!wl")
 public final class FloType {
 
-	@OriginalMember(owner = "client!wl", name = "j", descriptor = "Z")
+    @OriginalMember(owner = "client!ca", name = "db", descriptor = "I")
+    public static int anInt865 = 0;
+    @OriginalMember(owner = "client!wl", name = "j", descriptor = "Z")
 	public boolean aBoolean310 = false;
 
 	@OriginalMember(owner = "client!wl", name = "l", descriptor = "Z")
@@ -63,7 +65,7 @@ public final class FloType {
 		} else if (arg0 == 7) {
 			this.anInt5894 = Static15.method492(arg1.g3());
 		} else if (arg0 == 8) {
-			Static26.anInt865 = arg2;
+			anInt865 = arg2;
 		} else if (arg0 == 9) {
 			this.anInt5885 = arg1.g2();
 		} else if (arg0 == 10) {

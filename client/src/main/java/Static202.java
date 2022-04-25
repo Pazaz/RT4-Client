@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static202 {
 
-	@OriginalMember(owner = "client!qg", name = "R", descriptor = "I")
-	public static int anInt4741;
-
 	@OriginalMember(owner = "client!qg", name = "ab", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_84;
 
@@ -92,7 +89,7 @@ public final class Static202 {
 				local17.anIntArray138[local59] = -5;
 			}
 		}
-		Static204.aClass69_113.method2282(local17);
+		Static204.aClass69_113.addTail(local17);
 	}
 
 	@OriginalMember(owner = "client!qg", name = "a", descriptor = "(IZI)V")

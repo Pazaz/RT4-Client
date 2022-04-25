@@ -28,7 +28,7 @@ public final class Static211 {
 	@OriginalMember(owner = "client!rc", name = "a", descriptor = "(Lclient!na;Z)Lclient!na;")
 	public static JagString method923(@OriginalArg(0) JagString arg0) {
 		@Pc(12) int local12 = Static171.method3218(arg0);
-		return local12 == -1 ? Static93.aClass100_517 : Static203.aClass134_1.aClass100Array153[local12].method3140(Static101.aClass100_538, Static197.aClass100_872);
+		return local12 == -1 ? Static93.aClass100_517 : WorldMap.labels.aClass100Array153[local12].method3140(Static101.aClass100_538, Static197.aClass100_872);
 	}
 
 	@OriginalMember(owner = "client!rc", name = "a", descriptor = "(Z)V")
@@ -38,16 +38,16 @@ public final class Static211 {
 
 	@OriginalMember(owner = "client!rc", name = "d", descriptor = "(I)V")
 	public static void method930() {
-		if (Static11.musicChannel != null) {
-			Static11.musicChannel.quit();
+		if (client.musicChannel != null) {
+			client.musicChannel.quit();
 		}
-		if (Static147.soundChannel != null) {
-			Static147.soundChannel.quit();
+		if (client.soundChannel != null) {
+			client.soundChannel.quit();
 		}
-		AudioChannel.init(Static99.stereo);
-		Static11.musicChannel = AudioChannel.create(22050, GameShell.signLink, GameShell.canvas, 0);
-		Static11.musicChannel.setStream(Static148.musicStream);
-		Static147.soundChannel = AudioChannel.create(2048, GameShell.signLink, GameShell.canvas, 1);
-		Static147.soundChannel.setStream(Static204.soundStream);
+		AudioChannel.init(Preferences.stereo);
+		client.musicChannel = AudioChannel.create(22050, GameShell.signLink, GameShell.canvas, 0);
+		client.musicChannel.setStream(Static148.musicStream);
+		client.soundChannel = AudioChannel.create(2048, GameShell.signLink, GameShell.canvas, 1);
+		client.soundChannel.setStream(Static204.soundStream);
 	}
 }

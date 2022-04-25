@@ -25,32 +25,7 @@ public final class Static182 {
 	@OriginalMember(owner = "client!oj", name = "z", descriptor = "[Z")
 	public static final boolean[] aBooleanArray97 = new boolean[] { true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false };
 
-	@OriginalMember(owner = "client!oj", name = "a", descriptor = "(BZLclient!rk;)V")
-	public static void render(@OriginalArg(1) boolean arg0, @OriginalArg(2) Font arg1) {
-		@Pc(9) int local9;
-		if (GlRenderer.enabled || arg0) {
-			local9 = GameShell.canvasHeight;
-			@Pc(15) int local15 = local9 * 956 / 503;
-			Static78.titleBg.renderResizedTransparent((GameShell.canvasWidth - local15) / 2, 0, local15, local9);
-			Static243.logo.renderTransparent(GameShell.canvasWidth / 2 - Static243.logo.width / 2, 18);
-		}
-		arg1.renderCenter(LocalizedText.GAME0_LOADING, GameShell.canvasWidth / 2, GameShell.canvasHeight / 2 - 26, 16777215, -1);
-		local9 = GameShell.canvasHeight / 2 - 18;
-		if (GlRenderer.enabled) {
-			Static46.method1179(GameShell.canvasWidth / 2 - 152, local9, 304, 34, 9179409);
-			Static46.method1179(GameShell.canvasWidth / 2 - 151, local9 - -1, 302, 32, 0);
-			Static46.method1186(GameShell.canvasWidth / 2 - 150, local9 + 2, Static199.mainLoadPercentage * 3, 30, 9179409);
-			Static46.method1186(GameShell.canvasWidth / 2 + Static199.mainLoadPercentage * 3 - 150, local9 + 2, 300 - Static199.mainLoadPercentage * 3, 30, 0);
-		} else {
-			Static129.method2483(GameShell.canvasWidth / 2 - 152, local9, 304, 34, 9179409);
-			Static129.method2483(GameShell.canvasWidth / 2 - 151, local9 + 1, 302, 32, 0);
-			Static129.method2495(GameShell.canvasWidth / 2 - 150, local9 + 2, Static199.mainLoadPercentage * 3, 30, 9179409);
-			Static129.method2495(Static199.mainLoadPercentage * 3 + GameShell.canvasWidth / 2 - 150, local9 + 2, 300 - Static199.mainLoadPercentage * 3, 30, 0);
-		}
-		arg1.renderCenter(Static126.mainLoadSecondaryText, GameShell.canvasWidth / 2, GameShell.canvasHeight / 2 + 4, 16777215, -1);
-	}
-
-	@OriginalMember(owner = "client!oj", name = "a", descriptor = "(IZIJI)Lclient!na;")
+    @OriginalMember(owner = "client!oj", name = "a", descriptor = "(IZIJI)Lclient!na;")
 	public static JagString valueToBase10String(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(3) long arg3) {
 		@Pc(9) JagString local9 = Static87.allocate(0);
 		if (arg3 < 0L) {
@@ -96,7 +71,7 @@ public final class Static182 {
 		if (local59.length() > 0) {
 			local59.method3113(local28);
 		}
-		return Static34.concatenate(new JagString[] { local9, local137.method3124(), local59.method3124() });
+		return JagString.concatenate(new JagString[] { local9, local137.method3124(), local59.method3124() });
 	}
 
 	@OriginalMember(owner = "client!oj", name = "a", descriptor = "(IBI[[III)I")

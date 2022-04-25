@@ -10,10 +10,7 @@ public final class Static204 {
 	@OriginalMember(owner = "client!qi", name = "C", descriptor = "Lclient!ei;")
 	public static MixerPcmStream soundStream;
 
-	@OriginalMember(owner = "client!qi", name = "r", descriptor = "I")
-	public static int affiliate = 0;
-
-	@OriginalMember(owner = "client!qi", name = "t", descriptor = "I")
+    @OriginalMember(owner = "client!qi", name = "t", descriptor = "I")
 	public static int anInt4762 = 0;
 
 	@OriginalMember(owner = "client!qi", name = "u", descriptor = "Lclient!ih;")

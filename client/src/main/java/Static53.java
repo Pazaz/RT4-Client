@@ -13,9 +13,6 @@ public final class Static53 {
 	@OriginalMember(owner = "client!ec", name = "l", descriptor = "I")
 	public static final int anInt1704 = 5063219;
 
-	@OriginalMember(owner = "client!ec", name = "n", descriptor = "Z")
-	public static boolean highDetailTextures = true;
-
 	@OriginalMember(owner = "client!ec", name = "B", descriptor = "[[I")
 	public static final int[][] anIntArrayArray8 = new int[][] { new int[0], { 128, 0, 128, 128, 0, 128 }, { 0, 0, 128, 0, 128, 128, 64, 128 }, { 0, 128, 0, 0, 128, 0, 64, 128 }, { 0, 0, 64, 128, 0, 128 }, { 128, 128, 64, 128, 128, 0 }, { 64, 0, 128, 0, 128, 128, 64, 128 }, { 128, 0, 128, 128, 0, 128, 0, 64, 64, 0 }, { 0, 0, 64, 0, 0, 64 }, { 0, 0, 128, 0, 128, 128, 64, 96, 32, 64 }, { 0, 128, 0, 0, 32, 64, 64, 96, 128, 128 }, { 0, 128, 0, 0, 32, 32, 96, 32, 128, 0, 128, 128 } };
 
@@ -73,13 +70,7 @@ public final class Static53 {
 		method1292(arg0, arg1, arg2, local17 + 1);
 	}
 
-	@OriginalMember(owner = "client!ec", name = "a", descriptor = "(IZ)V")
-	public static void setAllVisibleLevels(@OriginalArg(1) boolean arg0) {
-		Static162.aBoolean190 = arg0;
-		Static87.aBoolean130 = !Static138.allLevelsAreVisible();
-	}
-
-	@OriginalMember(owner = "client!ec", name = "a", descriptor = "(B)V")
+    @OriginalMember(owner = "client!ec", name = "a", descriptor = "(B)V")
 	public static void method1294() {
 		if (!Static241.aBoolean302) {
 			return;

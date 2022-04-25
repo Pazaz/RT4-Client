@@ -25,7 +25,7 @@ public abstract class FrameBuffer {
 
 	@OriginalMember(owner = "client!vk", name = "a", descriptor = "(I)V")
 	public final void makeTarget() {
-		Static129.method2491(this.pixels, this.width, this.height);
+		SoftwareRaster.method2491(this.pixels, this.width, this.height);
 	}
 
 	@OriginalMember(owner = "client!vk", name = "a", descriptor = "(IIIILjava/awt/Graphics;I)V")

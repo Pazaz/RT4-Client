@@ -30,7 +30,7 @@ public final class AnimFrameset extends SecondaryNode {
 			if (local58 == null) {
 				@Pc(85) byte[] local85 = arg1.method4502(0, local51);
 				local58 = new AnimBase(local51, local85);
-				local5.method2282(local58);
+				local5.addTail(local58);
 			}
 			this.frames[local19[local21]] = new AnimFrame(local37, local58);
 		}

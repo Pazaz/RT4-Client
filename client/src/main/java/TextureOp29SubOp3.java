@@ -43,7 +43,12 @@ public final class TextureOp29SubOp3 extends TextureOp29SubOp {
 		this.anInt4854 = arg2;
 	}
 
-	@OriginalMember(owner = "client!re", name = "a", descriptor = "(IZI)V")
+    @OriginalMember(owner = "client!bk", name = "a", descriptor = "(BLclient!wa;)Lclient!re;")
+    public static TextureOp29SubOp3 create(@OriginalArg(1) Buffer arg0) {
+        return new TextureOp29SubOp3(arg0.g2s(), arg0.g2s(), arg0.g2s(), arg0.g2s(), arg0.g2s(), arg0.g2s(), arg0.g2s(), arg0.g2s(), arg0.g3(), arg0.g1());
+    }
+
+    @OriginalMember(owner = "client!re", name = "a", descriptor = "(IZI)V")
 	@Override
 	public final void method4009(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
 		@Pc(6) int local6 = arg1 * this.anInt4846 >> 12;

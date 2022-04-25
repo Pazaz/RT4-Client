@@ -10,10 +10,7 @@ public final class Static172 {
 	@OriginalMember(owner = "client!nj", name = "e", descriptor = "Lclient!va;")
 	public static MidiPcmStream aClass3_Sub3_Sub4_2;
 
-	@OriginalMember(owner = "client!nj", name = "f", descriptor = "Lclient!en;")
-	public static BufferedFile cacheData;
-
-	@OriginalMember(owner = "client!nj", name = "g", descriptor = "Lclient!ve;")
+    @OriginalMember(owner = "client!nj", name = "g", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_70;
 
 	@OriginalMember(owner = "client!nj", name = "j", descriptor = "[I")

@@ -7,10 +7,7 @@ public final class Static181 {
 	@OriginalMember(owner = "client!oi", name = "h", descriptor = "Lclient!qf;")
 	public static Sprite aClass3_Sub2_Sub1_9;
 
-	@OriginalMember(owner = "client!oi", name = "m", descriptor = "I")
-	public static int anInt4296;
-
-	@OriginalMember(owner = "client!oi", name = "b", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!oi", name = "b", descriptor = "Lclient!na;")
 	public static final JagString aClass100_810 = Static28.parse("::qa_op_test");
 
 	@OriginalMember(owner = "client!oi", name = "j", descriptor = "Lclient!na;")
@@ -27,7 +24,7 @@ public final class Static181 {
 
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(II)Lclient!na;")
 	public static JagString method3341(@OriginalArg(0) int arg0) {
-		return Static34.concatenate(new JagString[] { Static123.parseInt(arg0 >> 24 & 0xFF), Static233.aClass100_994, Static123.parseInt(arg0 >> 16 & 0xFF), Static233.aClass100_994, Static123.parseInt(arg0 >> 8 & 0xFF), Static233.aClass100_994, Static123.parseInt(arg0 & 0xFF) });
+		return JagString.concatenate(new JagString[] { Static123.parseInt(arg0 >> 24 & 0xFF), Static233.aClass100_994, Static123.parseInt(arg0 >> 16 & 0xFF), Static233.aClass100_994, Static123.parseInt(arg0 >> 8 & 0xFF), Static233.aClass100_994, Static123.parseInt(arg0 & 0xFF) });
 	}
 
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(I)V")
@@ -44,7 +41,7 @@ public final class Static181 {
 		if (GlRenderer.enabled) {
 			Static46.clear();
 		} else {
-			Static129.clear();
+			SoftwareRaster.clear();
 		}
 
 		@Pc(20) int height = GameShell.canvasHeight;

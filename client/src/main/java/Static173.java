@@ -10,12 +10,6 @@ public final class Static173 {
 	@OriginalMember(owner = "client!nk", name = "E", descriptor = "I")
 	public static int redDelta;
 
-	@OriginalMember(owner = "client!nk", name = "L", descriptor = "[Lclient!mm;")
-	public static SoftwareSprite[] aClass3_Sub2_Sub1_Sub1Array9;
-
-	@OriginalMember(owner = "client!nk", name = "O", descriptor = "Lclient!e;")
-	public static Player self;
-
 	@OriginalMember(owner = "client!nk", name = "n", descriptor = "[Lclient!sl;")
 	public static final SynthSound[] aClass138Array1 = new SynthSound[50];
 

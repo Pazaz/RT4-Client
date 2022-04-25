@@ -16,9 +16,6 @@ public final class Static41 {
 	@OriginalMember(owner = "client!dc", name = "M", descriptor = "Lclient!na;")
 	public static final JagString aClass100_268 = Static28.parse(")4");
 
-	@OriginalMember(owner = "client!dc", name = "O", descriptor = "I")
-	public static int anInt1309 = 0;
-
 	@OriginalMember(owner = "client!dc", name = "R", descriptor = "Lclient!na;")
 	private static final JagString aClass100_269 = Static28.parse("Drop");
 

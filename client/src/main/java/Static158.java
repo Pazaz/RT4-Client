@@ -5,9 +5,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static158 {
 
-	@OriginalMember(owner = "client!mh", name = "S", descriptor = "I")
-	public static int anInt3846;
-
 	@OriginalMember(owner = "client!mh", name = "hb", descriptor = "Lclient!bn;")
 	public static Map aClass3_Sub2_Sub4_3;
 
@@ -27,9 +24,9 @@ public final class Static158 {
 		}
 		try {
 			if (++Static226.anInt5079 > 2000) {
-				if (Static124.socket != null) {
-					Static124.socket.close();
-					Static124.socket = null;
+				if (Protocol.socket != null) {
+					Protocol.socket.close();
+					Protocol.socket = null;
 				}
 				if (Static57.anInt1758 >= 1) {
 					Static223.anInt5034 = -5;
@@ -57,57 +54,57 @@ public final class Static158 {
 				if (Static72.aClass212_3.status != 1) {
 					return;
 				}
-				Static124.socket = new BufferedSocket((Socket) Static72.aClass212_3.result, GameShell.signLink);
+				Protocol.socket = new BufferedSocket((Socket) Static72.aClass212_3.result, GameShell.signLink);
 				Static72.aClass212_3 = null;
-				Static124.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
-				if (Static11.musicChannel != null) {
-					Static11.musicChannel.method3571();
+				Protocol.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
+				if (client.musicChannel != null) {
+					client.musicChannel.method3571();
 				}
-				if (Static147.soundChannel != null) {
-					Static147.soundChannel.method3571();
+				if (client.soundChannel != null) {
+					client.soundChannel.method3571();
 				}
-				local120 = Static124.socket.read();
-				if (Static11.musicChannel != null) {
-					Static11.musicChannel.method3571();
+				local120 = Protocol.socket.read();
+				if (client.musicChannel != null) {
+					client.musicChannel.method3571();
 				}
-				if (Static147.soundChannel != null) {
-					Static147.soundChannel.method3571();
+				if (client.soundChannel != null) {
+					client.soundChannel.method3571();
 				}
 				if (local120 != 21) {
 					Static223.anInt5034 = local120;
 					Static179.accountCreationStep = 0;
-					Static124.socket.close();
-					Static124.socket = null;
+					Protocol.socket.close();
+					Protocol.socket = null;
 					return;
 				}
 				Static179.accountCreationStep = 3;
 			}
 			if (Static179.accountCreationStep == 3) {
-				if (Static124.socket.available() < 1) {
+				if (Protocol.socket.available() < 1) {
 					return;
 				}
-				Static229.aClass100Array156 = new JagString[Static124.socket.read()];
+				Static229.aClass100Array156 = new JagString[Protocol.socket.read()];
 				Static179.accountCreationStep = 4;
 			}
 			if (Static179.accountCreationStep == 4) {
-				if (Static124.socket.available() < Static229.aClass100Array156.length * 8) {
+				if (Protocol.socket.available() < Static229.aClass100Array156.length * 8) {
 					return;
 				}
 				Static57.aClass3_Sub15_Sub1_3.offset = 0;
-				Static124.socket.read(0, Static229.aClass100Array156.length * 8, Static57.aClass3_Sub15_Sub1_3.data);
+				Protocol.socket.read(0, Static229.aClass100Array156.length * 8, Static57.aClass3_Sub15_Sub1_3.data);
 				for (local120 = 0; local120 < Static229.aClass100Array156.length; local120++) {
 					Static229.aClass100Array156[local120] = Static79.decode37(Static57.aClass3_Sub15_Sub1_3.g8());
 				}
 				Static223.anInt5034 = 21;
 				Static179.accountCreationStep = 0;
-				Static124.socket.close();
-				Static124.socket = null;
+				Protocol.socket.close();
+				Protocol.socket = null;
 				return;
 			}
 		} catch (@Pc(238) IOException local238) {
-			if (Static124.socket != null) {
-				Static124.socket.close();
-				Static124.socket = null;
+			if (Protocol.socket != null) {
+				Protocol.socket.close();
+				Protocol.socket = null;
 			}
 			if (Static57.anInt1758 < 1) {
 				Static57.anInt1758++;

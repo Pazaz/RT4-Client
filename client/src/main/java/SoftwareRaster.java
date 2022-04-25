@@ -2,13 +2,13 @@ import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
-public final class Static129 {
+public final class SoftwareRaster {
 
 	@OriginalMember(owner = "client!kb", name = "a", descriptor = "I")
 	public static int width;
 
 	@OriginalMember(owner = "client!kb", name = "c", descriptor = "I")
-	public static int anInt3146;
+	public static int height;
 
 	@OriginalMember(owner = "client!kb", name = "f", descriptor = "[I")
 	public static int[] anIntArray295;
@@ -38,11 +38,11 @@ public final class Static129 {
 	}
 
 	@OriginalMember(owner = "client!kb", name = "a", descriptor = "(IIIII)V")
-	public static void method2483(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
-		method2489(arg0, arg1, arg2, arg4);
-		method2489(arg0, arg1 + arg3 - 1, arg2, arg4);
-		method2490(arg0, arg1, arg3, arg4);
-		method2490(arg0 + arg2 - 1, arg1, arg3, arg4);
+	public static void drawRect(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+		drawHorizontalLine(arg0, arg1, arg2, arg4);
+		drawHorizontalLine(arg0, arg1 + arg3 - 1, arg2, arg4);
+		drawVerticalLine(arg0, arg1, arg3, arg4);
+		drawVerticalLine(arg0 + arg2 - 1, arg1, arg3, arg4);
 	}
 
 	@OriginalMember(owner = "client!kb", name = "a", descriptor = "(IIIIII)V")
@@ -111,7 +111,7 @@ public final class Static129 {
 	}
 
 	@OriginalMember(owner = "client!kb", name = "a", descriptor = "(IIII)V")
-	public static void method2489(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	public static void drawHorizontalLine(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		if (arg1 < clipTop || arg1 >= clipBottom) {
 			return;
 		}
@@ -129,7 +129,7 @@ public final class Static129 {
 	}
 
 	@OriginalMember(owner = "client!kb", name = "b", descriptor = "(IIII)V")
-	public static void method2490(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	public static void drawVerticalLine(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		if (arg0 < clipLeft || arg0 >= clipRight) {
 			return;
 		}
@@ -150,14 +150,14 @@ public final class Static129 {
 	public static void method2491(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		pixels = arg0;
 		width = arg1;
-		anInt3146 = arg2;
+		height = arg2;
 		method2496(0, 0, arg1, arg2);
 	}
 
 	@OriginalMember(owner = "client!kb", name = "b", descriptor = "()V")
 	public static void clear() {
 		@Pc(1) int local1 = 0;
-		@Pc(7) int local7 = width * anInt3146 - 7;
+		@Pc(7) int local7 = width * height - 7;
 		while (local1 < local7) {
 			pixels[local1++] = 0;
 			pixels[local1++] = 0;
@@ -241,7 +241,7 @@ public final class Static129 {
 	}
 
 	@OriginalMember(owner = "client!kb", name = "c", descriptor = "(IIIII)V")
-	public static void method2495(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+	public static void fillRect(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		if (arg0 < clipLeft) {
 			arg2 -= clipLeft - arg0;
 			arg0 = clipLeft;
@@ -277,8 +277,8 @@ public final class Static129 {
 		if (arg2 > width) {
 			arg2 = width;
 		}
-		if (arg3 > anInt3146) {
-			arg3 = anInt3146;
+		if (arg3 > height) {
+			arg3 = height;
 		}
 		clipLeft = arg0;
 		clipTop = arg1;
@@ -345,9 +345,9 @@ public final class Static129 {
 		arg3 -= arg1;
 		if (arg3 == 0) {
 			if (arg2 >= 0) {
-				method2489(arg0, arg1, arg2 + 1, arg4);
+				drawHorizontalLine(arg0, arg1, arg2 + 1, arg4);
 			} else {
-				method2489(arg0 + arg2, arg1, 1 - arg2, arg4);
+				drawHorizontalLine(arg0 + arg2, arg1, 1 - arg2, arg4);
 			}
 		} else if (arg2 != 0) {
 			if (arg2 + arg3 < 0) {
@@ -402,9 +402,9 @@ public final class Static129 {
 				}
 			}
 		} else if (arg3 >= 0) {
-			method2490(arg0, arg1, arg3 + 1, arg4);
+			drawVerticalLine(arg0, arg1, arg3 + 1, arg4);
 		} else {
-			method2490(arg0, arg1 + arg3, -arg3 + 1, arg4);
+			drawVerticalLine(arg0, arg1 + arg3, -arg3 + 1, arg4);
 		}
 	}
 
@@ -587,7 +587,7 @@ public final class Static129 {
 		clipLeft = 0;
 		clipTop = 0;
 		clipRight = width;
-		clipBottom = anInt3146;
+		clipBottom = height;
 		method2482();
 	}
 

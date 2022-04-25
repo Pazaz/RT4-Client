@@ -100,8 +100,8 @@ public final class SoftLruHashTable {
 
 	@OriginalMember(owner = "client!n", name = "c", descriptor = "(I)V")
 	public final void clear() {
-		this.aClass16_8.method802();
-		this.aClass133_18.method3856();
+		this.aClass16_8.clear();
+		this.aClass133_18.clear();
 		this.anInt3966 = this.anInt3970;
 	}
 

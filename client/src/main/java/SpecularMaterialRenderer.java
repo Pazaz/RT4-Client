@@ -126,7 +126,7 @@ public final class SpecularMaterialRenderer implements MaterialRenderer {
 	@Override
 	public final void method4602() {
 		@Pc(1) GL2 local1 = GlRenderer.gl;
-		if (Static178.highDetailLighting) {
+		if (Preferences.highDetailLighting) {
 			local1.glCallList(this.anInt5777 + 1);
 		} else {
 			local1.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_SRC0_ALPHA, GL2.GL_TEXTURE);
@@ -144,7 +144,7 @@ public final class SpecularMaterialRenderer implements MaterialRenderer {
 	public final void method4603() {
 		@Pc(1) GL2 local1 = GlRenderer.gl;
 		GlRenderer.setTextureCombineAlphaMode(1);
-		if (Static178.highDetailLighting) {
+		if (Preferences.highDetailLighting) {
 			local1.glCallList(this.anInt5777);
 		} else {
 			local1.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_SRC0_ALPHA, GL2.GL_PRIMARY_COLOR);
@@ -155,7 +155,7 @@ public final class SpecularMaterialRenderer implements MaterialRenderer {
 	@Override
 	public final void method4604(@OriginalArg(0) int arg0) {
 		@Pc(1) GL2 local1 = GlRenderer.gl;
-		if (Static178.highDetailLighting && this.anIntArray519 != null) {
+		if (Preferences.highDetailLighting && this.anIntArray519 != null) {
 			local1.glActiveTexture(GL2.GL_TEXTURE1);
 			local1.glBindTexture(GL2.GL_TEXTURE_CUBE_MAP, this.anIntArray519[arg0 - 1]);
 			local1.glActiveTexture(GL2.GL_TEXTURE0);

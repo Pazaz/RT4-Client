@@ -1,3 +1,4 @@
+import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
@@ -62,7 +63,7 @@ public final class VorbisCodebook {
 			@Pc(118) boolean local118 = Static117.method2346() != 0;
 			@Pc(127) int local127;
 			if (local27 == 1) {
-				local127 = Static288.method2416(this.anInt3056, this.anInt3055);
+				local127 = lookup1Values(this.anInt3056, this.anInt3055);
 			} else {
 				local127 = this.anInt3056 * this.anInt3055;
 			}
@@ -106,7 +107,15 @@ public final class VorbisCodebook {
 		}
 	}
 
-	@OriginalMember(owner = "client!ji", name = "a", descriptor = "()[F")
+    @OriginalMember(owner = "client!ji", name = "a", descriptor = "(II)I")
+    public static int lookup1Values(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+        @Pc(10) int returnValue;
+        for (returnValue = (int) Math.pow((double) arg0, 1.0D / (double) arg1) + 1; IntUtils.pow(arg1, returnValue) > arg0; returnValue--) {
+        }
+        return returnValue;
+    }
+
+    @OriginalMember(owner = "client!ji", name = "a", descriptor = "()[F")
 	public final float[] method2413() {
 		return this.aFloatArrayArray1[this.method2415()];
 	}

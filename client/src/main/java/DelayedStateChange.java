@@ -5,6 +5,12 @@ import org.openrs2.deob.annotation.OriginalMember;
 @OriginalClass("client!da")
 public final class DelayedStateChange extends SecondaryNode {
 
+	@OriginalMember(owner = "client!client", name = "U", descriptor = "Lclient!sc;")
+	public static final HashTable changes = new HashTable(16);
+	@OriginalMember(owner = "client!la", name = "f", descriptor = "Lclient!ce;")
+	public static final SecondaryLinkedList clientQueue = new SecondaryLinkedList();
+	@OriginalMember(owner = "client!rh", name = "e", descriptor = "Lclient!ce;")
+	public static final SecondaryLinkedList serverQueue = new SecondaryLinkedList();
 	@OriginalMember(owner = "client!da", name = "T", descriptor = "I")
 	public int intArg2;
 
@@ -22,10 +28,17 @@ public final class DelayedStateChange extends SecondaryNode {
 		this.key = (long) arg0 << 32 | (long) arg1;
 	}
 
-	@OriginalMember(owner = "client!da", name = "a", descriptor = "(Z)V")
+    @OriginalMember(owner = "client!bj", name = "d", descriptor = "(B)V")
+    public static void clear() {
+        changes.clear();
+        clientQueue.clear();
+        serverQueue.clear();
+    }
+
+    @OriginalMember(owner = "client!da", name = "a", descriptor = "(Z)V")
 	public final void pushClient() {
 		this.secondaryKey = MonotonicClock.currentTimeMillis() + 500L | Long.MIN_VALUE & this.secondaryKey;
-		Static140.clientQueue.addTail(this);
+		clientQueue.addTail(this);
 	}
 
 	@OriginalMember(owner = "client!da", name = "b", descriptor = "(Z)J")
@@ -47,7 +60,7 @@ public final class DelayedStateChange extends SecondaryNode {
 	public final void pushServer() {
 		this.secondaryKey |= Long.MIN_VALUE;
 		if (this.getTime() == 0L) {
-			Static215.serverQueue.addTail(this);
+			serverQueue.addTail(this);
 		}
 	}
 }

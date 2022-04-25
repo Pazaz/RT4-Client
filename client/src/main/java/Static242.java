@@ -14,9 +14,6 @@ public final class Static242 {
 	@OriginalMember(owner = "client!tj", name = "c", descriptor = "I")
 	private static int anInt5345;
 
-	@OriginalMember(owner = "client!tj", name = "d", descriptor = "[Lclient!ek;")
-	public static SoftwareIndexedSprite[] aClass36_Sub1Array2;
-
 	@OriginalMember(owner = "client!tj", name = "e", descriptor = "I")
 	private static int anInt5346;
 
@@ -113,9 +110,9 @@ public final class Static242 {
 		@Pc(43) int local43 = local19 - (local29 * Static161.anInt3920 >> 8) >> 3;
 		@Pc(53) int local53 = local33 - (local29 * Static161.anInt3921 >> 8) >> 3;
 		if (arg0 != 0 && arg0 != 1 && (arg2 || arg3)) {
-			method4210(aClass36_Sub1Array2[arg0], shadowMapImage, local43 + 1, local53 + 1, arg1, arg2);
+			method4210(Sprites.floorShadows[arg0], shadowMapImage, local43 + 1, local53 + 1, arg1, arg2);
 		} else {
-			method4194(aClass36_Sub1Array2[1], shadowMapImage, local43 + 1, local53 + 1);
+			method4194(Sprites.floorShadows[1], shadowMapImage, local43 + 1, local53 + 1);
 		}
 	}
 
@@ -281,7 +278,7 @@ public final class Static242 {
 	@OriginalMember(owner = "client!tj", name = "a", descriptor = "()V")
 	public static void method4203() {
 		shadowMapImage = null;
-		aClass36_Sub1Array2 = null;
+		Sprites.floorShadows = null;
 		shadows = null;
 	}
 

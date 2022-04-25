@@ -14,9 +14,6 @@ public final class Static156 {
 	@OriginalMember(owner = "client!mf", name = "X", descriptor = "I")
 	public static int loginScreenId;
 
-	@OriginalMember(owner = "client!mf", name = "x", descriptor = "Lclient!ha;")
-	public static final GzipDecompressor aClass56_1 = new GzipDecompressor();
-
 	@OriginalMember(owner = "client!mf", name = "a", descriptor = "(IIIII[[[B[I[I[I[I[IIBII)V")
 	public static void method2954(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) byte[][][] arg5, @OriginalArg(6) int[] arg6, @OriginalArg(7) int[] arg7, @OriginalArg(8) int[] arg8, @OriginalArg(9) int[] arg9, @OriginalArg(10) int[] arg10, @OriginalArg(11) int arg11, @OriginalArg(12) byte arg12, @OriginalArg(13) int arg13, @OriginalArg(14) int arg14) {
 		if (arg0 < 0) {
@@ -34,7 +31,7 @@ public final class Static156 {
 		Static231.anInt5205 = MathUtils.sin[arg4];
 		Static81.anInt2222 = MathUtils.cos[arg4];
 		Static149.anInt3555 = arg0;
-		Static162.anInt3947 = arg1;
+		Static123.anInt3947 = arg1;
 		Static217.anInt4903 = arg2;
 		Static167.anInt4069 = arg0 / 128;
 		Static193.anInt4539 = arg2 / 128;
@@ -71,11 +68,11 @@ public final class Static156 {
 				if (local146 >= 0 && local152 >= 0 && local146 < Static152.mapSizeX && local152 < Static99.mapSizeZ) {
 					@Pc(176) int local176;
 					if (Static80.underWaterTileHeightMap == null) {
-						local176 = Static107.surfaceTileHeightMap[0][local146][local152] + 128 - Static162.anInt3947;
+						local176 = Static107.surfaceTileHeightMap[0][local146][local152] + 128 - Static123.anInt3947;
 					} else {
-						local176 = Static80.underWaterTileHeightMap[0][local146][local152] + 128 - Static162.anInt3947;
+						local176 = Static80.underWaterTileHeightMap[0][local146][local152] + 128 - Static123.anInt3947;
 					}
-					@Pc(201) int local201 = Static107.surfaceTileHeightMap[3][local146][local152] - Static162.anInt3947 - 1000;
+					@Pc(201) int local201 = Static107.surfaceTileHeightMap[3][local146][local152] - Static123.anInt3947 - 1000;
 					Static89.aBooleanArrayArray3[local104][local113] = Static160.method3049(local130, local201, local176, local140, local99);
 				} else {
 					Static89.aBooleanArrayArray3[local104][local113] = false;

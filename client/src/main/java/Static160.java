@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static160 {
 
-	@OriginalMember(owner = "client!mj", name = "n", descriptor = "Lclient!fd;")
-	public static WorldMapFont aClass41_4;
-
 	@OriginalMember(owner = "client!mj", name = "u", descriptor = "B")
 	public static byte aByte14;
 
@@ -37,14 +34,14 @@ public final class Static160 {
 					local44.method1423(arg0, arg1);
 				}
 			} else {
-				Static129.method2504(arg0, arg1, arg2.anIntArray37, arg2.anIntArray45);
+				SoftwareRaster.method2504(arg0, arg1, arg2.anIntArray37, arg2.anIntArray45);
 			}
 		} else if (GlRenderer.enabled) {
-			((GlSprite) Static106.aClass3_Sub2_Sub1_7).method1427(arg0, arg1, arg2.anInt445, arg2.anInt459, Static106.aClass3_Sub2_Sub1_7.anInt1867 / 2, Static106.aClass3_Sub2_Sub1_7.anInt1859 / 2, (int)Camera.yawTarget, 256, (GlSprite) arg2.method489(false));
+			((GlSprite) Static106.compass).method1427(arg0, arg1, arg2.anInt445, arg2.anInt459, Static106.compass.anInt1867 / 2, Static106.compass.anInt1859 / 2, (int)Camera.yawTarget, 256, (GlSprite) arg2.method489(false));
 		} else {
-			((SoftwareSprite) Static106.aClass3_Sub2_Sub1_7).method313(arg0, arg1, arg2.anInt445, arg2.anInt459, Static106.aClass3_Sub2_Sub1_7.anInt1867 / 2, Static106.aClass3_Sub2_Sub1_7.anInt1859 / 2, (int)Camera.yawTarget, arg2.anIntArray37, arg2.anIntArray45);
+			((SoftwareSprite) Static106.compass).method313(arg0, arg1, arg2.anInt445, arg2.anInt459, Static106.compass.anInt1867 / 2, Static106.compass.anInt1859 / 2, (int)Camera.yawTarget, arg2.anIntArray37, arg2.anIntArray45);
 		}
-		Static31.rectangleRedraw[arg3] = true;
+		InterfaceList.rectangleRedraw[arg3] = true;
 	}
 
 	@OriginalMember(owner = "client!mj", name = "a", descriptor = "(IIIII)Z")

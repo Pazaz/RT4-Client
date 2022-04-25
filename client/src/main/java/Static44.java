@@ -90,9 +90,9 @@ public final class Static44 {
 			Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
 		} else {
 			Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
-			local53 = Static280.aClass3_Sub2_Sub9_43.getStringWidth(LocalizedText.CHOOSE_OPTION);
+			local53 = Fonts.b12Full.getStringWidth(LocalizedText.CHOOSE_OPTION);
 			for (@Pc(95) int local95 = 0; local95 < Static231.anInt5204; local95++) {
-				@Pc(104) int local104 = Static280.aClass3_Sub2_Sub9_43.getStringWidth(Static269.method2228(local95));
+				@Pc(104) int local104 = Fonts.b12Full.getStringWidth(Static269.method2228(local95));
 				if (local104 > local53) {
 					local53 = local104;
 				}
@@ -104,8 +104,8 @@ public final class Static44 {
 			Static17.method531(local28, false);
 		}
 		Static74.method1626(arg0);
-		if (Static154.topLevelInterface != -1) {
-			Static54.method1304(1, Static154.topLevelInterface);
+		if (InterfaceList.topLevelInterface != -1) {
+			Static54.method1304(1, InterfaceList.topLevelInterface);
 		}
 		return local9;
 	}
@@ -114,7 +114,7 @@ public final class Static44 {
 	public static void method1149(@OriginalArg(0) JagString arg0) {
 		@Pc(7) int local7 = Static91.method1879(arg0);
 		if (local7 != -1) {
-			Static80.method3616(Static203.aClass134_1.aShortArray73[local7], Static203.aClass134_1.aShortArray72[local7]);
+			Static80.method3616(WorldMap.labels.aShortArray73[local7], WorldMap.labels.aShortArray72[local7]);
 		}
 	}
 

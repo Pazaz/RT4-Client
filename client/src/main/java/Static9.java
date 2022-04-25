@@ -67,7 +67,7 @@ public final class Static9 {
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "(Z)V")
 	public static void method182() {
 		Static241.aClass13Array13 = null;
-		Static6.method86(Static154.topLevelInterface, 0, GameShell.canvasWidth, 0, -1, GameShell.canvasHeight, 0, 0);
+		Static6.method86(InterfaceList.topLevelInterface, 0, GameShell.canvasWidth, 0, -1, GameShell.canvasHeight, 0, 0);
 		if (Static241.aClass13Array13 != null) {
 			Static87.method1809(0, Static127.anInt3126, Static80.anInt4696, Static241.aClass13Array13, GameShell.canvasWidth, -1412584499, 0, GameShell.canvasHeight, Static4.aClass13_1.anInt517);
 			Static241.aClass13Array13 = null;
@@ -77,8 +77,8 @@ public final class Static9 {
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "(ZZZIZ)Lclient!ve;")
 	public static Js5 createJs5(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) int arg3) {
 		@Pc(7) Cache local7 = null;
-		if (Static172.cacheData != null) {
-			local7 = new Cache(arg3, Static172.cacheData, Static47.cacheIndexes[arg3], 1000000);
+		if (client.cacheData != null) {
+			local7 = new Cache(arg3, client.cacheData, client.cacheIndexes[arg3], 1000000);
 		}
 		Static269.js5Providers[arg3] = Static257.js5MasterIndex.method180(arg3, Static148.masterCache, local7);
 		if (arg1) {

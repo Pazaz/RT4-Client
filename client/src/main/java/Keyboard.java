@@ -275,7 +275,17 @@ public final class Keyboard implements KeyListener, FocusListener {
 		component.addFocusListener(instance);
 	}
 
-	@OriginalMember(owner = "client!uf", name = "keyPressed", descriptor = "(Ljava/awt/event/KeyEvent;)V")
+    @OriginalMember(owner = "client!ag", name = "h", descriptor = "(I)V")
+    public static void quit() {
+        if (instance != null) {
+            @Pc(4) Keyboard local4 = instance;
+            synchronized (instance) {
+                instance = null;
+            }
+        }
+    }
+
+    @OriginalMember(owner = "client!uf", name = "keyPressed", descriptor = "(Ljava/awt/event/KeyEvent;)V")
 	@Override
 	public final synchronized void keyPressed(@OriginalArg(0) KeyEvent event) {
 		if (instance == null) {

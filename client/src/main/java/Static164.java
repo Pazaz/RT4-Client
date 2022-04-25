@@ -7,14 +7,8 @@ public final class Static164 {
 	@OriginalMember(owner = "client!na", name = "W", descriptor = "Z")
 	public static boolean newTab;
 
-	@OriginalMember(owner = "client!na", name = "h", descriptor = "Z")
-	public static boolean safeMode = false;
-
-	@OriginalMember(owner = "client!na", name = "l", descriptor = "I")
+    @OriginalMember(owner = "client!na", name = "l", descriptor = "I")
 	public static int anInt3985 = 0;
-
-	@OriginalMember(owner = "client!na", name = "o", descriptor = "I")
-	public static int lastWorldId = 0;
 
 	@OriginalMember(owner = "client!na", name = "cb", descriptor = "Lclient!na;")
 	public static final JagString aClass100_770 = Static28.parse(":allyreq:");
@@ -42,7 +36,7 @@ public final class Static164 {
 				if (local14 > 0L) {
 					local65 = arg3;
 				}
-				local75 = Static129.pixels;
+				local75 = SoftwareRaster.pixels;
 				local90 = (52736 - arg2 * 512) * 4 + arg0 * 4 + 24624;
 				if (local35 == 0 || local35 == 2) {
 					if (local28 == 0) {
@@ -118,7 +112,7 @@ public final class Static164 {
 						local65 = 15597568;
 					}
 					local90 = arg0 * 4 + (103 - arg2) * 2048 + 24624;
-					local75 = Static129.pixels;
+					local75 = SoftwareRaster.pixels;
 					if (local28 == 0 || local28 == 2) {
 						local75[local90 + 1536] = local65;
 						local75[local90 + 1025] = local65;
@@ -162,12 +156,12 @@ public final class Static164 {
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(Lclient!ve;IZ)Lclient!mm;")
 	public static SoftwareSprite method3117(@OriginalArg(0) Js5 arg0, @OriginalArg(1) int arg1) {
-		return Static254.method4346(arg0, arg1) ? Static196.method3537() : null;
+		return SpriteLoader.decode(arg0, arg1) ? SpriteLoader.method3537() : null;
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(IZILclient!ve;)Lclient!ek;")
 	public static SoftwareIndexedSprite loadSoftwareIndexedSprite(@OriginalArg(2) int arg0, @OriginalArg(3) Js5 arg1) {
-		return Static234.method4016(arg1, 0, arg0) ? Static134.method2619() : null;
+		return SpriteLoader.decode(arg1, 0, arg0) ? Static134.method2619() : null;
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(IBZIZIIZ)Lclient!qf;")
@@ -200,13 +194,13 @@ public final class Static164 {
 				return null;
 			}
 		}
-		@Pc(118) int[] local118 = Static129.pixels;
-		@Pc(120) int local120 = Static129.width;
-		@Pc(122) int local122 = Static129.anInt3146;
+		@Pc(118) int[] local118 = SoftwareRaster.pixels;
+		@Pc(120) int local120 = SoftwareRaster.width;
+		@Pc(122) int local122 = SoftwareRaster.height;
 		@Pc(125) int[] local125 = new int[4];
-		Static129.method2497(local125);
+		SoftwareRaster.method2497(local125);
 		@Pc(133) SoftwareSprite local133 = new SoftwareSprite(36, 32);
-		Static129.method2491(local133.anIntArray20, 36, 32);
+		SoftwareRaster.method2491(local133.anIntArray20, 36, 32);
 		Rasteriser.prepare();
 		Rasteriser.setBounds(16, 16);
 		@Pc(145) int local145 = local5.zoom2d;
@@ -224,7 +218,7 @@ public final class Static164 {
 			if (arg4 >= 2) {
 				local133.method303(16777215);
 			}
-			Static129.method2491(local133.anIntArray20, 36, 32);
+			SoftwareRaster.method2491(local133.anIntArray20, 36, 32);
 		}
 		if (arg0 != 0) {
 			local133.method314(arg0);
@@ -232,15 +226,15 @@ public final class Static164 {
 		if (local5.certificateTemplate != -1) {
 			local71.method1423(0, 0);
 		} else if (local5.lentTemplate != -1) {
-			Static129.method2491(local71.anIntArray20, 36, 32);
+			SoftwareRaster.method2491(local71.anIntArray20, 36, 32);
 			local133.method1423(0, 0);
 			local133 = local71;
 		}
 		if (arg3 && (local5.stackable == 1 || arg5 != 1) && arg5 != -1) {
 			Static256.aClass3_Sub2_Sub9_Sub1_1.method2857(Static52.method1288(arg5), 0, 9, 16776960, 1);
 		}
-		Static129.method2491(local118, local120, local122);
-		Static129.method2488(local125);
+		SoftwareRaster.method2491(local118, local120, local122);
+		SoftwareRaster.method2488(local125);
 		Rasteriser.prepare();
 		Rasteriser.jagged = true;
 		return GlRenderer.enabled && !arg1 ? new GlSprite(local133) : local133;

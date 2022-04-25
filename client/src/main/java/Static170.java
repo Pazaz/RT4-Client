@@ -70,7 +70,7 @@ public final class Static170 {
 		local7.anInt1188 = arg7;
 		local7.anInt1191 = arg0;
 		local7.anInt1198 = arg9;
-		Static128.aClass69_77.method2282(local7);
+		Static128.aClass69_77.addTail(local7);
 	}
 
 	@OriginalMember(owner = "client!nh", name = "a", descriptor = "(BII)V")
@@ -80,8 +80,8 @@ public final class Static170 {
 		if (local20 == null) {
 			local20 = new LongNode(4611686018427387905L);
 			Static199.aClass133_20.put(local20, (long) arg1);
-		} else if (local20.aLong55 != 4611686018427387905L) {
-			local20.aLong55 = MonotonicClock.currentTimeMillis() + 500L | 0x4000000000000000L;
+		} else if (local20.value != 4611686018427387905L) {
+			local20.value = MonotonicClock.currentTimeMillis() + 500L | 0x4000000000000000L;
 		}
 	}
 }

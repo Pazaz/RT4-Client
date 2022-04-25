@@ -19,13 +19,7 @@ public final class Static266 {
 	@OriginalMember(owner = "client!vk", name = "d", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1010 = Static28.parse("null");
 
-	@OriginalMember(owner = "client!vk", name = "h", descriptor = "I")
-	public static final int anInt5338 = (int) (Math.random() * 33.0D) - 16;
-
-	@OriginalMember(owner = "client!vk", name = "n", descriptor = "I")
-	public static int game = 0;
-
-	@OriginalMember(owner = "client!vk", name = "a", descriptor = "(Lclient!ve;Lclient!ve;I)V")
+    @OriginalMember(owner = "client!vk", name = "a", descriptor = "(Lclient!ve;Lclient!ve;I)V")
 	public static void init(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {
 		Static93.modelsArchive = arg0;
 		Static132.aClass153_48 = arg1;

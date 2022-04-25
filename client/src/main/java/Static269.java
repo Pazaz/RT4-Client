@@ -4,12 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static269 {
 
-	@OriginalMember(owner = "client!wa", name = "z", descriptor = "[I")
-	public static int[] anIntArray252;
-
-	@OriginalMember(owner = "client!wa", name = "ub", descriptor = "Lclient!bn;")
-	public static Map aClass3_Sub2_Sub4_2;
-
 	@OriginalMember(owner = "client!wa", name = "X", descriptor = "[Lclient!na;")
 	public static JagString[] aClass100Array87 = null;
 
@@ -246,54 +240,54 @@ public final class Static269 {
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(IIIII)V")
 	public static void method2225(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
-		if (Static41.anInt1309 < 100) {
-			Static186.method3413();
+		if (WorldMap.loadPercentage < 100) {
+			WorldMap.method3413();
 		}
 		if (GlRenderer.enabled) {
 			Static46.method1187(arg0, arg1, arg0 + arg3, arg2 + arg1);
 		} else {
-			Static129.method2496(arg0, arg1, arg0 + arg3, arg2 + arg1);
+			SoftwareRaster.method2496(arg0, arg1, arg0 + arg3, arg2 + arg1);
 		}
 		@Pc(50) int local50;
 		@Pc(61) int local61;
-		if (Static41.anInt1309 < 100) {
+		if (WorldMap.loadPercentage < 100) {
 			local50 = arg0 + arg3 / 2;
 			local61 = arg2 / 2 + arg1 - 18 - 20;
 			if (GlRenderer.enabled) {
 				Static46.method1186(arg0, arg1, arg3, arg2, 0);
 				Static46.method1179(local50 - 152, local61, 304, 34, 9179409);
 				Static46.method1179(local50 - 151, local61 + 1, 302, 32, 0);
-				Static46.method1186(local50 - 150, local61 + 2, Static41.anInt1309 * 3, 30, 9179409);
-				Static46.method1186(local50 + Static41.anInt1309 * 3 - 150, local61 - -2, 300 - Static41.anInt1309 * 3, 30, 0);
+				Static46.method1186(local50 - 150, local61 + 2, WorldMap.loadPercentage * 3, 30, 9179409);
+				Static46.method1186(local50 + WorldMap.loadPercentage * 3 - 150, local61 - -2, 300 - WorldMap.loadPercentage * 3, 30, 0);
 			} else {
-				Static129.method2495(arg0, arg1, arg3, arg2, 0);
-				Static129.method2483(local50 - 152, local61, 304, 34, 9179409);
-				Static129.method2483(local50 - 151, local61 + 1, 302, 32, 0);
-				Static129.method2495(local50 - 150, local61 + 2, Static41.anInt1309 * 3, 30, 9179409);
-				Static129.method2495(Static41.anInt1309 * 3 + local50 - 150, local61 - -2, 300 - Static41.anInt1309 * 3, 30, 0);
+				SoftwareRaster.fillRect(arg0, arg1, arg3, arg2, 0);
+				SoftwareRaster.drawRect(local50 - 152, local61, 304, 34, 9179409);
+				SoftwareRaster.drawRect(local50 - 151, local61 + 1, 302, 32, 0);
+				SoftwareRaster.fillRect(local50 - 150, local61 + 2, WorldMap.loadPercentage * 3, 30, 9179409);
+				SoftwareRaster.fillRect(WorldMap.loadPercentage * 3 + local50 - 150, local61 - -2, 300 - WorldMap.loadPercentage * 3, 30, 0);
 			}
-			Static280.aClass3_Sub2_Sub9_43.renderCenter(LocalizedText.LOADINGDOTDOTDOT, local50, local61 + 20, 16777215, -1);
+			Fonts.b12Full.renderCenter(LocalizedText.LOADINGDOTDOTDOT, local50, local61 + 20, 16777215, -1);
 			return;
 		}
-		Static37.anInt1176 = (int) ((float) (arg2 * 2) / Static83.aFloat3);
-		Static109.anInt2882 = Static13.anInt435 - (int) ((float) arg3 / Static83.aFloat3);
-		@Pc(211) int local211 = Static13.anInt435 - (int) ((float) arg3 / Static83.aFloat3);
-		local50 = Static28.anInt919 - (int) ((float) arg2 / Static83.aFloat3);
-		Static109.anInt2884 = Static28.anInt919 - (int) ((float) arg2 / Static83.aFloat3);
-		@Pc(236) int local236 = Static28.anInt919 + (int) ((float) arg2 / Static83.aFloat3);
-		local61 = (int) ((float) arg3 / Static83.aFloat3) + Static13.anInt435;
-		Static89.anInt2387 = (int) ((float) (arg3 * 2) / Static83.aFloat3);
+		Static37.anInt1176 = (int) ((float) (arg2 * 2) / WorldMap.zoom);
+		Static109.anInt2882 = WorldMap.anInt435 - (int) ((float) arg3 / WorldMap.zoom);
+		@Pc(211) int local211 = WorldMap.anInt435 - (int) ((float) arg3 / WorldMap.zoom);
+		local50 = WorldMap.anInt919 - (int) ((float) arg2 / WorldMap.zoom);
+		Static109.anInt2884 = WorldMap.anInt919 - (int) ((float) arg2 / WorldMap.zoom);
+		@Pc(236) int local236 = WorldMap.anInt919 + (int) ((float) arg2 / WorldMap.zoom);
+		local61 = (int) ((float) arg3 / WorldMap.zoom) + WorldMap.anInt435;
+		Static89.anInt2387 = (int) ((float) (arg3 * 2) / WorldMap.zoom);
 		if (GlRenderer.enabled) {
 			if (Static153.aClass3_Sub2_Sub1_Sub1_2 == null || Static153.aClass3_Sub2_Sub1_Sub1_2.anInt1867 != arg3 || Static153.aClass3_Sub2_Sub1_Sub1_2.anInt1859 != arg2) {
 				Static153.aClass3_Sub2_Sub1_Sub1_2 = null;
 				Static153.aClass3_Sub2_Sub1_Sub1_2 = new SoftwareSprite(arg3, arg2);
 			}
-			Static129.method2491(Static153.aClass3_Sub2_Sub1_Sub1_2.anIntArray20, arg3, arg2);
+			SoftwareRaster.method2491(Static153.aClass3_Sub2_Sub1_Sub1_2.anIntArray20, arg3, arg2);
 			Static214.method4364(arg3, 0, local61, local50, 0, local236, arg2, local211);
 			Static48.method1195(arg3, 0, local61, local236, arg2, 0, local211, local50);
 			Static38.method959(0, 0, local211, arg3, local236, local50, local61, arg2);
 			Static46.method1178(Static153.aClass3_Sub2_Sub1_Sub1_2.anIntArray20, arg0, arg1, arg3, arg2);
-			Static129.pixels = null;
+			SoftwareRaster.pixels = null;
 		} else {
 			Static214.method4364(arg3 + arg0, arg1, local61, local50, arg0, local236, arg1 + arg2, local211);
 			Static48.method1195(arg0 + arg3, arg0, local61, local236, arg2 + arg1, arg1, local211, local50);
@@ -306,12 +300,12 @@ public final class Static269 {
 				Static201.anInt1864--;
 			}
 		}
-		if (!Static43.displayFps) {
+		if (!Cheat.displayFps) {
 			return;
 		}
 		@Pc(405) int local405 = arg1 + arg2 - 8;
 		@Pc(412) int local412 = arg0 + arg3 - 5;
-		Static215.aClass3_Sub2_Sub9_32.renderRight(Static34.concatenate(new JagString[] { Static115.aClass100_579, Static123.parseInt(GameShell.framesPerSecond) }), local412, local405, 16776960, -1);
+		Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Static115.aClass100_579, Static123.parseInt(GameShell.framesPerSecond) }), local412, local405, 16776960, -1);
 		@Pc(434) Runtime local434 = Runtime.getRuntime();
 		@Pc(443) int local443 = (int) ((local434.totalMemory() - local434.freeMemory()) / 1024L);
 		@Pc(445) int local445 = 16776960;
@@ -319,12 +313,12 @@ public final class Static269 {
 		if (local443 > 65536) {
 			local445 = 16711680;
 		}
-		Static215.aClass3_Sub2_Sub9_32.renderRight(Static34.concatenate(new JagString[] { Static203.aClass100_894, Static123.parseInt(local443), Static19.aClass100_112 }), local412, local446, local445, -1);
+		Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Static203.aClass100_894, Static123.parseInt(local443), Static19.aClass100_112 }), local412, local446, local445, -1);
 		local405 = local446 - 15;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(IZ)Lclient!na;")
 	public static JagString method2228(@OriginalArg(0) int arg0) {
-		return Static233.aClass100Array160[arg0].length() > 0 ? Static34.concatenate(new JagString[] { Static254.aClass100Array168[arg0], LocalizedText.MINISEPARATOR, Static233.aClass100Array160[arg0] }) : Static254.aClass100Array168[arg0];
+		return Static233.aClass100Array160[arg0].length() > 0 ? JagString.concatenate(new JagString[] { Static254.aClass100Array168[arg0], LocalizedText.MINISEPARATOR, Static233.aClass100Array160[arg0] }) : Static254.aClass100Array168[arg0];
 	}
 }

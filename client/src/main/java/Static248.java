@@ -8,10 +8,7 @@ public final class Static248 {
 	@OriginalMember(owner = "client!uc", name = "c", descriptor = "Lclient!ve;")
 	public static Js5 js5Archive4;
 
-	@OriginalMember(owner = "client!uc", name = "d", descriptor = "[[[I")
-	public static int[][][] anIntArrayArrayArray17;
-
-	@OriginalMember(owner = "client!uc", name = "f", descriptor = "I")
+    @OriginalMember(owner = "client!uc", name = "f", descriptor = "I")
 	public static int anInt4232;
 
 	@OriginalMember(owner = "client!uc", name = "a", descriptor = "I")
@@ -113,7 +110,7 @@ public final class Static248 {
 					if (local285.anInt2486 != Static152.anInt3604) {
 						Static152.anInt3604 = local285.anInt2486;
 						Static21.method619(local285.anInt2486);
-						Static161.method3066(Static123.method2422());
+						Static161.method3066(WaterMaterialRenderer.method2422());
 					}
 					local285.method1944(Static130.aClass3_Sub5ArrayArrayArray1, local294, false);
 				}
@@ -128,12 +125,12 @@ public final class Static248 {
 					for (local37 = 0; local37 < Static182.aClass3_Sub14ArrayArray2[local32].length; local37++) {
 						@Pc(336) GlTile local336 = Static182.aClass3_Sub14ArrayArray2[local32][local37];
 						@Pc(350) float local350 = 201.5F - (float) local32 * 50.0F - (local336.aBoolean140 ? 1.0F : 0.5F);
-						if (local336.anInt2485 != -1 && Rasteriser.textureProvider.method3237(local336.anInt2485) == 4 && Static220.highWaterDetail) {
+						if (local336.anInt2485 != -1 && Rasteriser.textureProvider.method3237(local336.anInt2485) == 4 && Preferences.highWaterDetail) {
 							Static21.method619(local336.anInt2486);
 						}
 						local336.method1944(Static130.aClass3_Sub5ArrayArrayArray1, local350, false);
 					}
-					if (local32 == 0 && Static139.sceneryShadowsType > 0) {
+					if (local32 == 0 && Preferences.sceneryShadowsType > 0) {
 						GlRenderer.method4159(101.5F);
 						Static242.method4198(Static167.anInt4069, Static193.anInt4539, Static277.tileVisibilityDistance, arg1, Static48.aBooleanArrayArray1, Static83.activeTileHeightMap[0]);
 					}

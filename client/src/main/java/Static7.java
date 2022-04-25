@@ -5,10 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static7 {
 
-	@OriginalMember(owner = "client!ah", name = "l", descriptor = "[[B")
-	public static byte[][] aByteArrayArray5;
-
-	@OriginalMember(owner = "client!ah", name = "t", descriptor = "I")
+    @OriginalMember(owner = "client!ah", name = "t", descriptor = "I")
 	public static int anInt986;
 
 	@OriginalMember(owner = "client!ah", name = "i", descriptor = "Lclient!n;")
@@ -29,7 +26,7 @@ public final class Static7 {
 	@OriginalMember(owner = "client!ah", name = "a", descriptor = "(BZ)V")
 	public static void ping(@OriginalArg(1) boolean arg0) {
 		Static107.loop();
-		if (Static244.gameState != 30 && Static244.gameState != 25) {
+		if (client.gameState != 30 && client.gameState != 25) {
 			return;
 		}
 		Static131.anInt3251++;
@@ -37,10 +34,10 @@ public final class Static7 {
 			return;
 		}
 		Static131.anInt3251 = 0;
-		if (!Static224.aBoolean247 && Static124.socket != null) {
+		if (!Static224.aBoolean247 && Protocol.socket != null) {
 			Static6.outboundBuffer.p1isaac(93);
 			try {
-				Static124.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
+				Protocol.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
 				Static6.outboundBuffer.offset = 0;
 			} catch (@Pc(53) IOException local53) {
 				Static224.aBoolean247 = true;
@@ -83,10 +80,10 @@ public final class Static7 {
 			if (local20 == 1 && (Static116.anInt2952 == 1 && Static231.anInt5204 > 2 || Static277.method4640(Static231.anInt5204 - 1))) {
 				local20 = 2;
 			}
-			if (local20 == 2 && Static231.anInt5204 > 0 || Static162.anInt3953 == 1) {
+			if (local20 == 2 && Static231.anInt5204 > 0 || Static226.anInt3953 == 1) {
 				Static226.method3901();
 			}
-			if (local20 == 1 && Static231.anInt5204 > 0 || Static162.anInt3953 == 2) {
+			if (local20 == 1 && Static231.anInt5204 > 0 || Static226.anInt3953 == 2) {
 				Static59.method1372();
 			}
 			return;

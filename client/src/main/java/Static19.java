@@ -10,10 +10,7 @@ public final class Static19 {
 	@OriginalMember(owner = "client!bi", name = "Y", descriptor = "[[B")
 	public static byte[][] underWaterLocationsMapFilesBuffer;
 
-	@OriginalMember(owner = "client!bi", name = "fb", descriptor = "I")
-	public static int anInt647;
-
-	@OriginalMember(owner = "client!bi", name = "W", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!bi", name = "W", descriptor = "Lclient!na;")
 	public static final JagString aClass100_112 = Static28.parse("k");
 
 	@OriginalMember(owner = "client!bi", name = "jb", descriptor = "Z")

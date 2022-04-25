@@ -12,13 +12,13 @@ public final class Static91 {
 
 	@OriginalMember(owner = "client!hc", name = "d", descriptor = "(I)I")
 	public static int method1874() {
-		if ((double) Static138.aFloat14 == 3.0D) {
+		if ((double) WorldMap.targetZoom == 3.0D) {
 			return 37;
-		} else if ((double) Static138.aFloat14 == 4.0D) {
+		} else if ((double) WorldMap.targetZoom == 4.0D) {
 			return 50;
-		} else if ((double) Static138.aFloat14 == 6.0D) {
+		} else if ((double) WorldMap.targetZoom == 6.0D) {
 			return 75;
-		} else if ((double) Static138.aFloat14 == 8.0D) {
+		} else if ((double) WorldMap.targetZoom == 8.0D) {
 			return 100;
 		} else {
 			return 200;
@@ -104,11 +104,11 @@ public final class Static91 {
 
 	@OriginalMember(owner = "client!hc", name = "a", descriptor = "(Lclient!na;Z)I")
 	public static int method1879(@OriginalArg(0) JagString arg0) {
-		if (Static203.aClass134_1 == null || arg0.length() == 0) {
+		if (WorldMap.labels == null || arg0.length() == 0) {
 			return -1;
 		}
-		for (@Pc(20) int local20 = 0; local20 < Static203.aClass134_1.anInt5074; local20++) {
-			if (Static203.aClass134_1.aClass100Array153[local20].method3140(Static101.aClass100_538, Static197.aClass100_872).strEquals(arg0)) {
+		for (@Pc(20) int local20 = 0; local20 < WorldMap.labels.anInt5074; local20++) {
+			if (WorldMap.labels.aClass100Array153[local20].method3140(Static101.aClass100_538, Static197.aClass100_872).strEquals(arg0)) {
 				return local20;
 			}
 		}

@@ -4,16 +4,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static124 {
 
-	@OriginalMember(owner = "client!jk", name = "x", descriptor = "I")
-	public static int anInt3080;
-
-	@OriginalMember(owner = "client!jk", name = "B", descriptor = "Lclient!ma;")
-	public static BufferedSocket socket;
-
-	@OriginalMember(owner = "client!jk", name = "J", descriptor = "I")
-	public static int anInt3083;
-
-	@OriginalMember(owner = "client!jk", name = "p", descriptor = "I")
+    @OriginalMember(owner = "client!jk", name = "p", descriptor = "I")
 	public static int anInt3075 = -1;
 
 	@OriginalMember(owner = "client!jk", name = "y", descriptor = "Z")
@@ -36,7 +27,7 @@ public final class Static124 {
 	@OriginalMember(owner = "client!jk", name = "a", descriptor = "(ILclient!na;)Lclient!bn;")
 	public static Map method2434(@OriginalArg(1) JagString arg0) {
 		for (@Pc(15) Map local15 = (Map) Static228.aClass69_120.method2289(); local15 != null; local15 = (Map) Static228.aClass69_120.method2288()) {
-			if (local15.aClass100_138.strEquals(arg0)) {
+			if (local15.group.strEquals(arg0)) {
 				return local15;
 			}
 		}

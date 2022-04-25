@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static2 {
 
-	@OriginalMember(owner = "client!aa", name = "j", descriptor = "I")
-	public static int anInt13;
-
 	@OriginalMember(owner = "client!aa", name = "m", descriptor = "I")
 	public static int anInt15;
 
@@ -284,17 +281,17 @@ public final class Static2 {
 			arg0.modelType = 5;
 			arg0.modelId = -1;
 		} else if (local16 == 328) {
-			if (Static173.self.aClass100_364 == null) {
+			if (PlayerList.self.aClass100_364 == null) {
 				arg0.modelId = 0;
 			} else {
 				arg0.modelXAngle = 150;
 				arg0.modelYAngle = (int) (Math.sin((double) Static83.loop / 40.0D) * 256.0D) & 0x7FF;
 				arg0.modelType = 5;
-				arg0.modelId = ((int) Static173.self.aClass100_364.encode37() << 11) + 2047;
-				arg0.anInt496 = Static173.self.anInt3388;
+				arg0.modelId = ((int) PlayerList.self.aClass100_364.encode37() << 11) + 2047;
+				arg0.anInt496 = PlayerList.self.anInt3388;
 				arg0.anInt500 = 0;
-				arg0.anInt522 = Static173.self.anInt3366;
-				arg0.anInt510 = Static173.self.anInt3407;
+				arg0.anInt522 = PlayerList.self.anInt3366;
+				arg0.anInt510 = PlayerList.self.anInt3407;
 			}
 		}
 	}

@@ -53,7 +53,7 @@ public final class Static225 {
 					if (local121 > 15) {
 						local121 -= 32;
 					}
-					local65.method1265(local92 + Static173.self.movementQueueX[0], local116 == 1, Static173.self.movementQueueZ[0] + local121);
+					local65.method1265(local92 + PlayerList.self.movementQueueX[0], local116 == 1, PlayerList.self.movementQueueZ[0] + local121);
 					continue;
 				}
 			}
@@ -79,10 +79,10 @@ public final class Static225 {
 
 	@OriginalMember(owner = "client!se", name = "a", descriptor = "(Lclient!na;Lclient!na;IB)V")
 	public static void method3896(@OriginalArg(0) JagString arg0, @OriginalArg(1) JagString arg1, @OriginalArg(2) int arg2) {
-		Static186.password = arg1;
+		Player.password = arg1;
 		Static5.anInt39 = arg2;
-		Static186.username = arg0;
-		if (Static186.username.strEquals(Static186.EMPTY) || Static186.password.strEquals(Static186.EMPTY)) {
+		Player.username = arg0;
+		if (Player.username.strEquals(JagString.EMPTY) || Player.password.strEquals(JagString.EMPTY)) {
 			Static266.reply = 3;
 		} else if (Static125.worldId == -1) {
 			Static20.anInt673 = 0;
@@ -93,9 +93,9 @@ public final class Static225 {
 			local43.p1(10);
 			local43.p2((int) (Math.random() * 99999.0D));
 			local43.p2(530);
-			local43.p8(Static186.username.encode37());
+			local43.p8(Player.username.encode37());
 			local43.p4((int) (Math.random() * 9.9999999E7D));
-			local43.pjstr(Static186.password);
+			local43.pjstr(Player.password);
 			local43.p4((int) (Math.random() * 9.9999999E7D));
 			local43.encryptRsa(GlobalConfig.RSA_EXPONENT, GlobalConfig.RSA_MODULUS);
 			Static6.outboundBuffer.offset = 0;

@@ -4,16 +4,10 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static11 {
 
-	@OriginalMember(owner = "client!ba", name = "D", descriptor = "Lclient!vh;")
-	public static AudioChannel musicChannel;
-
-	@OriginalMember(owner = "client!ba", name = "w", descriptor = "I")
+    @OriginalMember(owner = "client!ba", name = "w", descriptor = "I")
 	public static int anInt384 = 0;
 
-	@OriginalMember(owner = "client!ba", name = "x", descriptor = "Z")
-	public static boolean flickeringEffectsOn = true;
-
-	@OriginalMember(owner = "client!ba", name = "e", descriptor = "(I)V")
+    @OriginalMember(owner = "client!ba", name = "e", descriptor = "(I)V")
 	public static void method443() {
 		Static262.headModels.clear();
 	}

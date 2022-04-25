@@ -12,10 +12,7 @@ public final class Static22 {
 	@OriginalMember(owner = "client!bl", name = "T", descriptor = "I")
 	public static int anInt726 = 0;
 
-	@OriginalMember(owner = "client!bl", name = "W", descriptor = "I")
-	public static int anInt729 = 0;
-
-	@OriginalMember(owner = "client!bl", name = "X", descriptor = "I")
+    @OriginalMember(owner = "client!bl", name = "X", descriptor = "I")
 	public static int anInt730 = -1;
 
 	@OriginalMember(owner = "client!bl", name = "a", descriptor = "(IIIIIIII)V")

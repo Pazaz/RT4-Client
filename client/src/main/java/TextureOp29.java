@@ -59,7 +59,7 @@ public final class TextureOp29 extends TextureOp {
 				if (local24 == 0) {
 					this.aClass18Array1[local11] = Static9.method184(arg1);
 				} else if (local24 == 1) {
-					this.aClass18Array1[local11] = Static21.method620(arg1);
+					this.aClass18Array1[local11] = TextureOp29SubOp3.create(arg1);
 				} else if (local24 == 2) {
 					this.aClass18Array1[local11] = Static156.method2960(arg1);
 				} else if (local24 == 3) {

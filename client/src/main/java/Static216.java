@@ -22,9 +22,9 @@ public final class Static216 {
 		}
 		try {
 			if (++Static92.anInt2430 > 2000) {
-				if (Static124.socket != null) {
-					Static124.socket.close();
-					Static124.socket = null;
+				if (Protocol.socket != null) {
+					Protocol.socket.close();
+					Protocol.socket = null;
 				}
 				if (Static276.anInt5816 >= 1) {
 					Static266.reply = -5;
@@ -51,41 +51,41 @@ public final class Static216 {
 				if (Static72.aClass212_3.status != 1) {
 					return;
 				}
-				Static124.socket = new BufferedSocket((Socket) Static72.aClass212_3.result, GameShell.signLink);
+				Protocol.socket = new BufferedSocket((Socket) Static72.aClass212_3.result, GameShell.signLink);
 				Static72.aClass212_3 = null;
-				@Pc(106) long local106 = Static101.aLong98 = Static186.username.encode37();
+				@Pc(106) long local106 = Static101.aLong98 = Player.username.encode37();
 				Static6.outboundBuffer.offset = 0;
 				Static6.outboundBuffer.p1(14);
 				@Pc(120) int local120 = (int) (local106 >> 16 & 0x1FL);
 				Static6.outboundBuffer.p1(local120);
-				Static124.socket.write(Static6.outboundBuffer.data, 2);
-				if (Static11.musicChannel != null) {
-					Static11.musicChannel.method3571();
+				Protocol.socket.write(Static6.outboundBuffer.data, 2);
+				if (client.musicChannel != null) {
+					client.musicChannel.method3571();
 				}
-				if (Static147.soundChannel != null) {
-					Static147.soundChannel.method3571();
+				if (client.soundChannel != null) {
+					client.soundChannel.method3571();
 				}
-				@Pc(150) int local150 = Static124.socket.read();
-				if (Static11.musicChannel != null) {
-					Static11.musicChannel.method3571();
+				@Pc(150) int local150 = Protocol.socket.read();
+				if (client.musicChannel != null) {
+					client.musicChannel.method3571();
 				}
-				if (Static147.soundChannel != null) {
-					Static147.soundChannel.method3571();
+				if (client.soundChannel != null) {
+					client.soundChannel.method3571();
 				}
 				if (local150 != 0) {
 					Static266.reply = local150;
 					Static184.loginStep = 0;
-					Static124.socket.close();
-					Static124.socket = null;
+					Protocol.socket.close();
+					Protocol.socket = null;
 					return;
 				}
 				Static184.loginStep = 3;
 			}
 			if (Static184.loginStep == 3) {
-				if (Static124.socket.available() < 8) {
+				if (Protocol.socket.available() < 8) {
 					return;
 				}
-				Static124.socket.read(0, 8, Static57.aClass3_Sub15_Sub1_3.data);
+				Protocol.socket.read(0, 8, Static57.aClass3_Sub15_Sub1_3.data);
 				Static57.aClass3_Sub15_Sub1_3.offset = 0;
 				Static193.aLong147 = Static57.aClass3_Sub15_Sub1_3.g8();
 				@Pc(210) int[] local210 = new int[4];
@@ -99,8 +99,8 @@ public final class Static216 {
 				Static6.outboundBuffer.p4(local210[1]);
 				Static6.outboundBuffer.p4(local210[2]);
 				Static6.outboundBuffer.p4(local210[3]);
-				Static6.outboundBuffer.p8(Static186.username.encode37());
-				Static6.outboundBuffer.pjstr(Static186.password);
+				Static6.outboundBuffer.p8(Player.username.encode37());
+				Static6.outboundBuffer.pjstr(Player.password);
 				if (GlobalConfig.LOGIN_EXTRA_INFO) {
 					Static6.outboundBuffer.pjstr(Static28.parse(""));
 					Static6.outboundBuffer.pjstr(Static28.parse(""));
@@ -108,7 +108,7 @@ public final class Static216 {
 				}
 				Static6.outboundBuffer.encryptRsa(GlobalConfig.RSA_EXPONENT, GlobalConfig.RSA_MODULUS);
 				Static17.aClass3_Sub15_Sub1_2.offset = 0;
-				if (Static244.gameState == 40) {
+				if (client.gameState == 40) {
 					Static17.aClass3_Sub15_Sub1_2.p1(18);
 				} else {
 					Static17.aClass3_Sub15_Sub1_2.p1(16);
@@ -118,18 +118,18 @@ public final class Static216 {
 					// pretend that we're loading the archive so we don't throw the packet size off
 					offset = 4;
 				}
-				Static17.aClass3_Sub15_Sub1_2.p2(Static6.outboundBuffer.offset + Static229.method3937(Static47.settings) + (159 + offset));
+				Static17.aClass3_Sub15_Sub1_2.p2(Static6.outboundBuffer.offset + Static229.method3937(client.settings) + (159 + offset));
 				Static17.aClass3_Sub15_Sub1_2.p4(530);
 				Static17.aClass3_Sub15_Sub1_2.p1(Static5.anInt39);
-				Static17.aClass3_Sub15_Sub1_2.p1(Static249.advertSuppressed ? 1 : 0);
+				Static17.aClass3_Sub15_Sub1_2.p1(client.advertSuppressed ? 1 : 0);
 				Static17.aClass3_Sub15_Sub1_2.p1(1);
 				Static17.aClass3_Sub15_Sub1_2.p1(Static144.getWindowMode());
 				Static17.aClass3_Sub15_Sub1_2.p2(GameShell.canvasWidth);
 				Static17.aClass3_Sub15_Sub1_2.p2(GameShell.canvasHeight);
-				Static17.aClass3_Sub15_Sub1_2.p1(Static186.antiAliasingMode);
+				Static17.aClass3_Sub15_Sub1_2.p1(Preferences.antiAliasingMode);
 				Static140.method2705(Static17.aClass3_Sub15_Sub1_2);
-				Static17.aClass3_Sub15_Sub1_2.pjstr(Static47.settings);
-				Static17.aClass3_Sub15_Sub1_2.p4(Static204.affiliate);
+				Static17.aClass3_Sub15_Sub1_2.pjstr(client.settings);
+				Static17.aClass3_Sub15_Sub1_2.p4(client.affiliate);
 				Static17.aClass3_Sub15_Sub1_2.p4(Static145.method2746());
 				Static18.serverUpdatedPreferences = true;
 				Static17.aClass3_Sub15_Sub1_2.p2(Static189.anInt4443);
@@ -156,7 +156,7 @@ public final class Static216 {
 				Static17.aClass3_Sub15_Sub1_2.p4(Static253.js5Archive20.method4480());
 				Static17.aClass3_Sub15_Sub1_2.p4(Static122.js5Archive21.method4480());
 				Static17.aClass3_Sub15_Sub1_2.p4(Static156.js5Archive22.method4480());
-				Static17.aClass3_Sub15_Sub1_2.p4(Static227.js5Archive23.method4480());
+				Static17.aClass3_Sub15_Sub1_2.p4(client.js5Archive23.method4480());
 				Static17.aClass3_Sub15_Sub1_2.p4(Static254.js5Archive24.method4480());
 				Static17.aClass3_Sub15_Sub1_2.p4(Static28.js5Archive25.method4480());
 				Static17.aClass3_Sub15_Sub1_2.p4(Static167.js5Archive26.method4480());
@@ -165,7 +165,7 @@ public final class Static216 {
 					Static17.aClass3_Sub15_Sub1_2.p4(0);
 				}
 				Static17.aClass3_Sub15_Sub1_2.pBytes(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
-				Static124.socket.write(Static17.aClass3_Sub15_Sub1_2.data, Static17.aClass3_Sub15_Sub1_2.offset);
+				Protocol.socket.write(Static17.aClass3_Sub15_Sub1_2.data, Static17.aClass3_Sub15_Sub1_2.offset);
 				Static6.outboundBuffer.method2240(local210);
 				for (@Pc(583) int local583 = 0; local583 < 4; local583++) {
 					local210[local583] += 50;
@@ -174,10 +174,10 @@ public final class Static216 {
 				Static184.loginStep = 4;
 			}
 			if (Static184.loginStep == 4) {
-				if (Static124.socket.available() < 1) {
+				if (Protocol.socket.available() < 1) {
 					return;
 				}
-				@Pc(623) int local623 = Static124.socket.read();
+				@Pc(623) int local623 = Protocol.socket.read();
 				if (local623 == 21) {
 					Static184.loginStep = 7;
 				} else if (local623 == 29) {
@@ -196,51 +196,51 @@ public final class Static216 {
 					Static184.loginStep = 1;
 					Static276.anInt5816++;
 					Static92.anInt2430 = 0;
-					Static124.socket.close();
-					Static124.socket = null;
+					Protocol.socket.close();
+					Protocol.socket = null;
 					return;
 				} else {
 					Static266.reply = local623;
 					Static184.loginStep = 0;
-					Static124.socket.close();
-					Static124.socket = null;
+					Protocol.socket.close();
+					Protocol.socket = null;
 					return;
 				}
 			}
 			if (Static184.loginStep == 6) {
 				Static6.outboundBuffer.offset = 0;
 				Static6.outboundBuffer.p1isaac(17);
-				Static124.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
+				Protocol.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
 				Static184.loginStep = 4;
 				return;
 			}
 			if (Static184.loginStep == 7) {
-				if (Static124.socket.available() >= 1) {
-					Static231.anInt5202 = (Static124.socket.read() + 3) * 60;
+				if (Protocol.socket.available() >= 1) {
+					Static231.anInt5202 = (Protocol.socket.read() + 3) * 60;
 					Static184.loginStep = 0;
 					Static266.reply = 21;
-					Static124.socket.close();
-					Static124.socket = null;
+					Protocol.socket.close();
+					Protocol.socket = null;
 					return;
 				}
 				return;
 			}
 			if (Static184.loginStep == 10) {
-				if (Static124.socket.available() >= 1) {
-					Static204.anInt4765 = Static124.socket.read();
+				if (Protocol.socket.available() >= 1) {
+					Static204.anInt4765 = Protocol.socket.read();
 					Static184.loginStep = 0;
 					Static266.reply = 29;
-					Static124.socket.close();
-					Static124.socket = null;
+					Protocol.socket.close();
+					Protocol.socket = null;
 					return;
 				}
 				return;
 			}
 			if (Static184.loginStep == 8) {
-				if (Static124.socket.available() < 14) {
+				if (Protocol.socket.available() < 14) {
 					return;
 				}
-				Static124.socket.read(0, 14, Static57.aClass3_Sub15_Sub1_3.data);
+				Protocol.socket.read(0, 14, Static57.aClass3_Sub15_Sub1_3.data);
 				Static57.aClass3_Sub15_Sub1_3.offset = 0;
 				Static191.staffModLevel = Static57.aClass3_Sub15_Sub1_3.g1();
 				Static249.anInt5431 = Static57.aClass3_Sub15_Sub1_3.g1();
@@ -254,7 +254,7 @@ public final class Static216 {
 				Static2.aBoolean1 = Static57.aClass3_Sub15_Sub1_3.g1() == 1;
 				Static189.method3438(Static2.aBoolean1);
 				Static9.method186(Static2.aBoolean1);
-				if (!Static249.advertSuppressed) {
+				if (!client.advertSuppressed) {
 					if (Static124.aBoolean157 && !Static25.aBoolean57 || Static202.aBoolean233) {
 						try {
 							Static167.aClass100_781.method3157(GameShell.signLink.applet);
@@ -272,11 +272,11 @@ public final class Static216 {
 				Static184.loginStep = 9;
 			}
 			if (Static184.loginStep == 9) {
-				if (Static124.socket.available() < Static223.anInt5028) {
+				if (Protocol.socket.available() < Static223.anInt5028) {
 					return;
 				}
 				Static57.aClass3_Sub15_Sub1_3.offset = 0;
-				Static124.socket.read(0, Static223.anInt5028, Static57.aClass3_Sub15_Sub1_3.data);
+				Protocol.socket.read(0, Static223.anInt5028, Static57.aClass3_Sub15_Sub1_3.data);
 				Static266.reply = 2;
 				Static184.loginStep = 0;
 				Static243.method4221();
@@ -286,9 +286,9 @@ public final class Static216 {
 				return;
 			}
 		} catch (@Pc(977) IOException local977) {
-			if (Static124.socket != null) {
-				Static124.socket.close();
-				Static124.socket = null;
+			if (Protocol.socket != null) {
+				Protocol.socket.close();
+				Protocol.socket = null;
 			}
 			if (Static276.anInt5816 >= 1) {
 				Static184.loginStep = 0;

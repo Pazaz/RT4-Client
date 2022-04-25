@@ -78,7 +78,7 @@ public final class Static234 {
 						if (local227 != -1) {
 							@Pc(236) SeqType local236 = Static36.get(local227);
 							if (local236 != null && local236.frames != null) {
-								Static152.method2836(local14.zFine, local236, local14.xFine, false, 0);
+								SoundPlayer.playSeqSound(local14.zFine, local236, local14.xFine, false, 0);
 							}
 						}
 					}
@@ -122,17 +122,6 @@ public final class Static234 {
 		}
 	}
 
-	@OriginalMember(owner = "client!ta", name = "a", descriptor = "(Lclient!ve;III)Z")
-	public static boolean method4016(@OriginalArg(0) Js5 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		@Pc(9) byte[] local9 = arg0.getFile(arg2, arg1);
-		if (local9 == null) {
-			return false;
-		} else {
-			Static84.method1770(local9);
-			return true;
-		}
-	}
-
 	@OriginalMember(owner = "client!ta", name = "a", descriptor = "(IZIII)V")
 	public static void method4017(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		if (Static245.load(arg2)) {
@@ -142,14 +131,14 @@ public final class Static234 {
 
 	@OriginalMember(owner = "client!ta", name = "a", descriptor = "([Lclient!mm;ILclient!ve;)V")
 	public static void method4018(@OriginalArg(0) SoftwareSprite[] arg0, @OriginalArg(2) Js5 arg1) {
-		Static119.aClass153_44 = arg1;
+		MapList.archive = arg1;
 		Static241.aClass3_Sub2_Sub1_Sub1Array13 = arg0;
 		Static258.aBooleanArray130 = new boolean[Static241.aClass3_Sub2_Sub1_Sub1Array13.length];
 		Static228.aClass69_120.clear();
-		@Pc(25) int local25 = Static119.aClass153_44.getGroupId(Static54.aClass100_374);
-		@Pc(30) int[] local30 = Static119.aClass153_44.method4503(local25);
+		@Pc(25) int local25 = MapList.archive.getGroupId(Static54.aClass100_374);
+		@Pc(30) int[] local30 = MapList.archive.method4503(local25);
 		for (@Pc(32) int local32 = 0; local32 < local30.length; local32++) {
-			Static228.aClass69_120.method2282(Static210.method3713(new Buffer(Static119.aClass153_44.getFile(local25, local30[local32]))));
+			Static228.aClass69_120.addTail(Static210.method3713(new Buffer(MapList.archive.getFile(local25, local30[local32]))));
 		}
 	}
 
@@ -162,16 +151,4 @@ public final class Static234 {
 		}
 	}
 
-	@OriginalMember(owner = "client!ta", name = "a", descriptor = "(Z)V")
-	public static void resetTimer() {
-		GameShell.timer.method3394();
-		@Pc(10) int local10;
-		for (local10 = 0; local10 < 32; local10++) {
-			GameShell.redrawTimes[local10] = 0L;
-		}
-		for (local10 = 0; local10 < 32; local10++) {
-			GameShell.logicTimes[local10] = 0L;
-		}
-		GameShell.logicCycles = 0;
-	}
 }

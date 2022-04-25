@@ -45,7 +45,7 @@ public final class Static79 {
 			return;
 		}
 		@Pc(39) int local39;
-		if (!Static138.allLevelsAreVisible() && (Static12.tileSettings[0][arg1][arg4] & 0x2) == 0) {
+		if (!SceneGraph.allLevelsAreVisible() && (Static12.tileSettings[0][arg1][arg4] & 0x2) == 0) {
 			local39 = arg2;
 			if ((Static12.tileSettings[arg2][arg1][arg4] & 0x8) != 0) {
 				local39 = 0;
@@ -60,10 +60,10 @@ public final class Static79 {
 		}
 		Static43.method1144(arg4, arg1, arg2, arg6, local39, Static148.collisionMaps[arg2]);
 		if (arg0 >= 0) {
-			@Pc(92) boolean local92 = Static250.showGroundDecorations;
-			Static250.showGroundDecorations = true;
+			@Pc(92) boolean local92 = Preferences.showGroundDecorations;
+			Preferences.showGroundDecorations = true;
 			Static185.method3397(local39, false, arg2, false, Static148.collisionMaps[arg2], arg0, arg5, arg1, arg4, arg3);
-			Static250.showGroundDecorations = local92;
+			Preferences.showGroundDecorations = local92;
 		}
 	}
 

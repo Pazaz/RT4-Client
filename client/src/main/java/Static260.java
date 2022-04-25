@@ -4,13 +4,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static260 {
 
-	@OriginalMember(owner = "client!vd", name = "w", descriptor = "Lclient!vk;")
-	public static FrameBuffer frameBuffer;
-
-	@OriginalMember(owner = "client!vd", name = "v", descriptor = "Lclient!na;")
-	public static final JagString aClass100_944 = Static28.parse("hitbar_default");
-
-	@OriginalMember(owner = "client!vd", name = "B", descriptor = "[S")
+    @OriginalMember(owner = "client!vd", name = "B", descriptor = "[S")
 	public static final short[] aShortArray71 = new short[] { 6798, 8741, 25238, 4626, 4550 };
 
 	@OriginalMember(owner = "client!vd", name = "C", descriptor = "I")

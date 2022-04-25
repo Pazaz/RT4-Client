@@ -18,9 +18,9 @@ public final class Static59 {
 
 	@OriginalMember(owner = "client!ej", name = "h", descriptor = "(I)V")
 	public static void method1372() {
-		if (Static162.anInt3953 == 2) {
+		if (Static226.anInt3953 == 2) {
 			if (Static155.anInt3751 == Static277.anInt5850 && Static60.anInt1892 == Static280.anInt5895) {
-				Static162.anInt3953 = 0;
+				Static226.anInt3953 = 0;
 				if (Static172.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static231.anInt5204 > 2) {
 					Static103.method2232(Static231.anInt5204 - 2);
 				} else {
@@ -28,7 +28,7 @@ public final class Static59 {
 				}
 			}
 		} else if (Static155.anInt3751 == Static7.clickX && Static60.anInt1892 == Static60.clickY) {
-			Static162.anInt3953 = 0;
+			Static226.anInt3953 = 0;
 			if (Static172.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static231.anInt5204 > 2) {
 				Static103.method2232(Static231.anInt5204 - 2);
 			} else {
@@ -36,7 +36,7 @@ public final class Static59 {
 			}
 		} else {
 			Static280.anInt5895 = Static60.clickY;
-			Static162.anInt3953 = 2;
+			Static226.anInt3953 = 2;
 			Static277.anInt5850 = Static7.clickX;
 		}
 	}
@@ -47,7 +47,7 @@ public final class Static59 {
 		Static6.outboundBuffer.p1(Static144.getWindowMode());
 		Static6.outboundBuffer.p2(GameShell.canvasWidth);
 		Static6.outboundBuffer.p2(GameShell.canvasHeight);
-		Static6.outboundBuffer.p1(Static186.antiAliasingMode);
+		Static6.outboundBuffer.p1(Preferences.antiAliasingMode);
 	}
 
 	@OriginalMember(owner = "client!ej", name = "a", descriptor = "(Lclient!ve;ILclient!ve;Lclient!of;)V")

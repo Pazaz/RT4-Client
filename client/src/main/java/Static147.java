@@ -4,10 +4,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static147 {
 
-	@OriginalMember(owner = "client!lh", name = "s", descriptor = "Lclient!vh;")
-	public static AudioChannel soundChannel;
-
-	@OriginalMember(owner = "client!lh", name = "u", descriptor = "I")
+    @OriginalMember(owner = "client!lh", name = "u", descriptor = "I")
 	public static volatile int anInt3521 = -1;
 
 	@OriginalMember(owner = "client!lh", name = "z", descriptor = "Lclient!na;")
@@ -30,7 +27,7 @@ public final class Static147 {
 		@Pc(39) int local39;
 		for (local5 = 0; local5 < local3; local5++) {
 			local15 = arg0.anIntArray168[local5] - Static149.anInt3555;
-			local22 = arg0.anIntArray160[local5] - Static162.anInt3947;
+			local22 = arg0.anIntArray160[local5] - Static123.anInt3947;
 			local29 = arg0.anIntArray163[local5] - Static217.anInt4903;
 			local39 = local29 * arg3 + local15 * arg4 >> 16;
 			@Pc(49) int local49 = local29 * arg4 - local15 * arg3 >> 16;
@@ -73,7 +70,7 @@ public final class Static147 {
 						if (arg0.anIntArray167[local5] != 12345678) {
 							Rasteriser.fillGouraudTriangle(local156, local160, local164, local39, local148, local152, arg0.anIntArray167[local5], arg0.anIntArray172[local5], arg0.anIntArray171[local5]);
 						}
-					} else if (!Static159.manyGroundTextures) {
+					} else if (!Preferences.manyGroundTextures) {
 						@Pc(373) int local373 = Rasteriser.textureProvider.getAverageColor(arg0.anIntArray161[local5]);
 						Rasteriser.fillGouraudTriangle(local156, local160, local164, local39, local148, local152, Static216.method1640(local373, arg0.anIntArray167[local5]), Static216.method1640(local373, arg0.anIntArray172[local5]), Static216.method1640(local373, arg0.anIntArray171[local5]));
 					} else if (arg0.aBoolean113) {

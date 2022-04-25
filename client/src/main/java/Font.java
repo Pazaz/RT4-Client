@@ -152,14 +152,14 @@ public abstract class Font extends SecondaryNode {
 						if (GlRenderer.enabled) {
 							Static46.method1174(arg1, local4 + (int) ((double) this.lineHeight * 0.7D), local323, Static218.strikethroughColor);
 						} else {
-							Static129.method2489(arg1, local4 + (int) ((double) this.lineHeight * 0.7D), local323, Static218.strikethroughColor);
+							SoftwareRaster.drawHorizontalLine(arg1, local4 + (int) ((double) this.lineHeight * 0.7D), local323, Static218.strikethroughColor);
 						}
 					}
 					if (Static218.underlineColor != -1) {
 						if (GlRenderer.enabled) {
 							Static46.method1174(arg1, local4 + this.lineHeight + 1, local323, Static218.underlineColor);
 						} else {
-							Static129.method2489(arg1, local4 + this.lineHeight + 1, local323, Static218.underlineColor);
+							SoftwareRaster.drawHorizontalLine(arg1, local4 + this.lineHeight + 1, local323, Static218.underlineColor);
 						}
 					}
 					arg1 += local323;
@@ -844,14 +844,14 @@ public abstract class Font extends SecondaryNode {
 						if (GlRenderer.enabled) {
 							Static46.method1174(arg1, local4 + (int) ((double) this.lineHeight * 0.7D), local387, Static218.strikethroughColor);
 						} else {
-							Static129.method2489(arg1, local4 + (int) ((double) this.lineHeight * 0.7D), local387, Static218.strikethroughColor);
+							SoftwareRaster.drawHorizontalLine(arg1, local4 + (int) ((double) this.lineHeight * 0.7D), local387, Static218.strikethroughColor);
 						}
 					}
 					if (Static218.underlineColor != -1) {
 						if (GlRenderer.enabled) {
 							Static46.method1174(arg1, local4 + this.lineHeight, local387, Static218.underlineColor);
 						} else {
-							Static129.method2489(arg1, local4 + this.lineHeight, local387, Static218.underlineColor);
+							SoftwareRaster.drawHorizontalLine(arg1, local4 + this.lineHeight, local387, Static218.underlineColor);
 						}
 					}
 					arg1 += local387;

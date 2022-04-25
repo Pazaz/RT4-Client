@@ -76,22 +76,7 @@ public final class Static40 {
 
 	@OriginalMember(owner = "client!da", name = "a", descriptor = "(ILclient!ve;Z)Lclient!ok;")
 	public static IndexedSprite loadIndexedSpriteAutoDetect(@OriginalArg(0) int arg0, @OriginalArg(1) Js5 arg1) {
-		return Static254.method4346(arg1, arg0) ? Static276.method4614() : null;
-	}
-
-	@OriginalMember(owner = "client!da", name = "c", descriptor = "(II)Lclient!aa;")
-	public static MsiType method1013(@OriginalArg(0) int arg0) {
-		@Pc(10) MsiType local10 = (MsiType) Static231.aClass99_29.get((long) arg0);
-		if (local10 != null) {
-			return local10;
-		}
-		@Pc(20) byte[] local20 = Static98.aClass153_42.getFile(34, arg0);
-		local10 = new MsiType();
-		if (local20 != null) {
-			local10.decode(new Buffer(local20), arg0);
-		}
-		Static231.aClass99_29.put(local10, (long) arg0);
-		return local10;
+		return SpriteLoader.decode(arg1, arg0) ? Static276.method4614() : null;
 	}
 
 	@OriginalMember(owner = "client!da", name = "a", descriptor = "(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;")
@@ -129,7 +114,7 @@ public final class Static40 {
 		local8.p4((int) (Math.random() * 9.9999999E7D));
 		local8.pjstr(password);
 		local8.p4((int) (Math.random() * 9.9999999E7D));
-		local8.p2(Static204.affiliate);
+		local8.p2(client.affiliate);
 		local8.p1(arg0);
 		local8.p1(arg2);
 		local8.p4((int) (Math.random() * 9.9999999E7D));

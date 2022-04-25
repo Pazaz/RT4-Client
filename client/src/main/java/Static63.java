@@ -40,7 +40,7 @@ public final class Static63 {
 		if (arg2 == contextId) {
 			@Pc(8) IntNode local8 = new IntNode(arg1);
 			local8.key = arg0;
-			aClass69_50.method2282(local8);
+			aClass69_50.addTail(local8);
 		}
 	}
 
@@ -49,7 +49,7 @@ public final class Static63 {
 		if (arg1 == contextId) {
 			@Pc(7) IntNode local7 = new IntNode();
 			local7.key = arg0;
-			aClass69_51.method2282(local7);
+			aClass69_51.addTail(local7);
 		}
 	}
 
@@ -70,7 +70,7 @@ public final class Static63 {
 		if (arg2 == contextId) {
 			@Pc(8) IntNode local8 = new IntNode(arg1);
 			local8.key = arg0;
-			aClass69_48.method2282(local8);
+			aClass69_48.addTail(local8);
 		}
 	}
 
@@ -137,7 +137,7 @@ public final class Static63 {
 		if (arg2 == contextId) {
 			@Pc(8) IntNode local8 = new IntNode(arg1);
 			local8.key = arg0;
-			aClass69_49.method2282(local8);
+			aClass69_49.addTail(local8);
 		}
 	}
 }

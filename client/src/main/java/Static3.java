@@ -20,7 +20,7 @@ public final class Static3 {
 	public static void method4656(@OriginalArg(0) JagString arg0) {
 		@Pc(9) int local9 = Static171.method3218(arg0);
 		if (local9 != -1) {
-			Static80.method3616(Static203.aClass134_1.aShortArray73[local9], Static203.aClass134_1.aShortArray72[local9]);
+			Static80.method3616(WorldMap.labels.aShortArray73[local9], WorldMap.labels.aShortArray72[local9]);
 		}
 	}
 
@@ -29,21 +29,7 @@ public final class Static3 {
 		Static232.aClass99_30.method3103();
 	}
 
-	@OriginalMember(owner = "client!ab", name = "a", descriptor = "(II)V")
-	public static void setLanguage(@OriginalArg(1) int arg0) {
-		if (arg0 == 0) {
-			return;
-		}
-		if (arg0 == 1) {
-			LocalizedText.switchToGerman();
-		} else if (arg0 == 2) {
-			LocalizedText.switchToFrench();
-		} else {
-			throw new RuntimeException();
-		}
-	}
-
-	@OriginalMember(owner = "client!ab", name = "c", descriptor = "(B)[Lclient!od;")
+    @OriginalMember(owner = "client!ab", name = "c", descriptor = "(B)[Lclient!od;")
 	public static Class114[] method4660() {
 		if (Static105.aClass114Array1 == null) {
 			@Pc(16) Class114[] local16 = Static197.method3558(GameShell.signLink);

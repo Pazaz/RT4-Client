@@ -49,15 +49,15 @@ public final class Static246 {
 		}
 		@Pc(35) JagString local35 = arg0.name;
 		if (arg0.combatLevel != 0) {
-			@Pc(47) JagString local47 = Static266.game == 1 ? LocalizedText.RATING : LocalizedText.LEVEL;
-			local35 = Static34.concatenate(new JagString[] { local35, Static123.method2420(arg0.combatLevel, Static173.self.anInt1652), Static123.aClass100_593, local47, Static123.parseInt(arg0.combatLevel), Static72.aClass100_448 });
+			@Pc(47) JagString local47 = client.game == 1 ? LocalizedText.RATING : LocalizedText.LEVEL;
+			local35 = JagString.concatenate(new JagString[] { local35, Static123.method2420(arg0.combatLevel, PlayerList.self.anInt1652), Static123.aClass100_593, local47, Static123.parseInt(arg0.combatLevel), Static72.aClass100_448 });
 		}
 		if (Static260.anInt5014 == 1) {
-			Static98.method1966(Static169.anInt4075, (long) arg2, Static34.concatenate(new JagString[] { Static34.aClass100_203, Static201.aClass100_407, local35 }), arg1, (short) 26, LocalizedText.USE, arg3);
+			Static98.method1966(Static169.anInt4075, (long) arg2, JagString.concatenate(new JagString[] { Static34.aClass100_203, Static201.aClass100_407, local35 }), arg1, (short) 26, LocalizedText.USE, arg3);
 		} else if (Static241.aBoolean302) {
 			@Pc(378) ParamType local378 = Static121.anInt3039 == -1 ? null : Static110.method2277(Static121.anInt3039);
 			if ((Static274.anInt4999 & 0x2) != 0 && (local378 == null || arg0.getParam(Static121.anInt3039, local378.defaultInt) != local378.defaultInt)) {
-				Static98.method1966(anInt5393, (long) arg2, Static34.concatenate(new JagString[] { Static78.aClass100_466, Static201.aClass100_407, local35 }), arg1, (short) 45, Static102.aClass100_545, arg3);
+				Static98.method1966(anInt5393, (long) arg2, JagString.concatenate(new JagString[] { Static78.aClass100_466, Static201.aClass100_407, local35 }), arg1, (short) 45, Static102.aClass100_545, arg3);
 			}
 		} else {
 			@Pc(129) JagString[] local129 = arg0.ops;
@@ -67,7 +67,7 @@ public final class Static246 {
 			@Pc(140) int local140;
 			if (local129 != null) {
 				for (local140 = 4; local140 >= 0; local140--) {
-					if (local129[local140] != null && (Static266.game != 0 || !local129[local140].equalsIgnoreCase(LocalizedText.ATTACK))) {
+					if (local129[local140] != null && (client.game != 0 || !local129[local140].equalsIgnoreCase(LocalizedText.ATTACK))) {
 						@Pc(161) byte local161 = 0;
 						if (local140 == 0) {
 							local161 = 17;
@@ -91,15 +91,15 @@ public final class Static246 {
 						if (local140 == 4) {
 							local161 = 2;
 						}
-						Static98.method1966(local176, (long) arg2, Static34.concatenate(new JagString[] { Static226.aClass100_965, local35 }), arg1, local161, local129[local140], arg3);
+						Static98.method1966(local176, (long) arg2, JagString.concatenate(new JagString[] { Static226.aClass100_965, local35 }), arg1, local161, local129[local140], arg3);
 					}
 				}
 			}
-			if (Static266.game == 0 && local129 != null) {
+			if (client.game == 0 && local129 != null) {
 				for (local140 = 4; local140 >= 0; local140--) {
 					if (local129[local140] != null && local129[local140].equalsIgnoreCase(LocalizedText.ATTACK)) {
 						@Pc(271) short local271 = 0;
-						if (arg0.combatLevel > Static173.self.anInt1652) {
+						if (arg0.combatLevel > PlayerList.self.anInt1652) {
 							local271 = 2000;
 						}
 						@Pc(281) short local281 = 0;
@@ -121,11 +121,11 @@ public final class Static246 {
 						if (local281 != 0) {
 							local281 += local271;
 						}
-						Static98.method1966(arg0.anInt3752, (long) arg2, Static34.concatenate(new JagString[] { Static226.aClass100_965, local35 }), arg1, local281, local129[local140], arg3);
+						Static98.method1966(arg0.anInt3752, (long) arg2, JagString.concatenate(new JagString[] { Static226.aClass100_965, local35 }), arg1, local281, local129[local140], arg3);
 					}
 				}
 			}
-			Static98.method1966(Static225.anInt5073, (long) arg2, Static34.concatenate(new JagString[] { Static226.aClass100_965, local35 }), arg1, (short) 1007, LocalizedText.EXAMINE, arg3);
+			Static98.method1966(Static225.anInt5073, (long) arg2, JagString.concatenate(new JagString[] { Static226.aClass100_965, local35 }), arg1, (short) 1007, LocalizedText.EXAMINE, arg3);
 		}
 	}
 

@@ -4,24 +4,18 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static98 {
 
-	@OriginalMember(owner = "client!hj", name = "a", descriptor = "I")
-	public static int anInt2510;
-
 	@OriginalMember(owner = "client!hj", name = "e", descriptor = "I")
 	public static int anInt2512;
 
 	@OriginalMember(owner = "client!hj", name = "m", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_42;
 
-	@OriginalMember(owner = "client!hj", name = "d", descriptor = "Lclient!na;")
-	public static final JagString aClass100_524 = Static28.parse("hint_headicons");
-
 	@OriginalMember(owner = "client!hj", name = "a", descriptor = "(II)V")
 	public static void method1964(@OriginalArg(0) int arg0) {
-		Static217.anInt4901 = -1;
-		Static142.anInt3482 = -1;
-		Static13.anInt435 = arg0;
-		Static38.method965();
+		WorldMap.anInt4901 = -1;
+		WorldMap.anInt3482 = -1;
+		WorldMap.anInt435 = arg0;
+		WorldMap.method965();
 	}
 
 	@OriginalMember(owner = "client!hj", name = "a", descriptor = "(Lclient!na;B)Z")
@@ -34,7 +28,7 @@ public final class Static98 {
 				return true;
 			}
 		}
-		if (arg0.equalsIgnoreCase(Static173.self.aClass100_364)) {
+		if (arg0.equalsIgnoreCase(PlayerList.self.aClass100_364)) {
 			return true;
 		} else {
 			return false;

@@ -1,3 +1,4 @@
+import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 
 public class LocalizedText {
@@ -1303,6 +1304,20 @@ public class LocalizedText {
         USE = FR_USE;
         CHATEFFECT4 = FR_CHATEFFECT4;
         MAINLOAD135 = FR_MAINLOAD135;
+    }
+
+    @OriginalMember(owner = "client!ab", name = "a", descriptor = "(II)V")
+    public static void setLanguage(@OriginalArg(1) int arg0) {
+        if (arg0 == 0) {
+            return;
+        }
+        if (arg0 == 1) {
+            switchToGerman();
+        } else if (arg0 == 2) {
+            switchToFrench();
+        } else {
+            throw new RuntimeException();
+        }
     }
     //endregion
 }

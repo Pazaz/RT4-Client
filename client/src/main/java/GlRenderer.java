@@ -565,7 +565,7 @@ public final class GlRenderer {
 
 	@OriginalMember(owner = "client!tf", name = "p", descriptor = "()V")
 	public static void method4173() {
-		if (Static178.highDetailLighting) {
+		if (Preferences.highDetailLighting) {
 			setLightingEnabled(true);
 			setNormalArrayEnabled(true);
 		} else {
@@ -686,7 +686,7 @@ public final class GlRenderer {
 				if (swapBuffersAttempts++ > 5) {
 					return -2;
 				}
-				Static231.sleep(1000L);
+				ThreadUtils.sleep(1000L);
 			}
 			if (window.getLock().isLocked()) {
 				window.unlockSurface();
@@ -714,7 +714,7 @@ public final class GlRenderer {
 						quit();
 						return -3;
 					}
-					Static231.sleep(100L);
+					ThreadUtils.sleep(100L);
 				}
 			}
 			gl.glClear(GL2.GL_COLOR_BUFFER_BIT);

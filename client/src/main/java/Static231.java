@@ -29,67 +29,6 @@ public final class Static231 {
 	@OriginalMember(owner = "client!sk", name = "lb", descriptor = "Z")
 	public static boolean aBoolean252 = false;
 
-	@OriginalMember(owner = "client!sk", name = "a", descriptor = "(ILclient!wa;)V")
-	public static void method3980(@OriginalArg(1) Buffer arg0) {
-		label83: while (true) {
-			if (arg0.offset < arg0.data.length) {
-				@Pc(23) int local23 = 0;
-				@Pc(25) boolean local25 = false;
-				@Pc(27) int local27 = 0;
-				if (arg0.g1() == 1) {
-					local25 = true;
-					local23 = arg0.g1();
-					local27 = arg0.g1();
-				}
-				@Pc(46) int local46 = arg0.g1();
-				@Pc(50) int local50 = arg0.g1();
-				@Pc(57) int local57 = local46 * 64 - Static158.anInt3846;
-				@Pc(68) int local68 = Static181.anInt4296 + Static2.anInt13 - local50 * 64 - 1;
-				@Pc(146) byte local146;
-				@Pc(96) int local96;
-				if (local57 >= 0 && local68 - 63 >= 0 && Static48.anInt1449 > local57 + 63 && local68 < Static181.anInt4296) {
-					local96 = local57 >> 6;
-					@Pc(100) int local100 = local68 >> 6;
-					@Pc(102) int local102 = 0;
-					while (true) {
-						if (local102 >= 64) {
-							continue label83;
-						}
-						for (@Pc(107) int local107 = 0; local107 < 64; local107++) {
-							if (!local25 || local23 * 8 <= local102 && local23 * 8 + 8 > local102 && local107 >= local27 * 8 && local27 * 8 + 8 > local107) {
-								local146 = arg0.g1s();
-								if (local146 != 0) {
-									if (Static229.aByteArrayArrayArray12[local96][local100] == null) {
-										Static229.aByteArrayArrayArray12[local96][local100] = new byte[4096];
-									}
-									Static229.aByteArrayArrayArray12[local96][local100][(63 - local107 << 6) + local102] = local146;
-									@Pc(182) byte local182 = arg0.g1s();
-									if (Static125.aByteArrayArrayArray10[local96][local100] == null) {
-										Static125.aByteArrayArrayArray10[local96][local100] = new byte[4096];
-									}
-									Static125.aByteArrayArrayArray10[local96][local100][local102 + (63 - local107 << 6)] = local182;
-								}
-							}
-						}
-						local102++;
-					}
-				}
-				local96 = 0;
-				while (true) {
-					if (local96 >= (local25 ? 64 : 4096)) {
-						continue label83;
-					}
-					local146 = arg0.g1s();
-					if (local146 != 0) {
-						arg0.offset++;
-					}
-					local96++;
-				}
-			}
-			return;
-		}
-	}
-
 	@OriginalMember(owner = "client!sk", name = "a", descriptor = "(IIIIBIII)V")
 	public static void method3981(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6) {
 		@Pc(7) int local7 = 0;
@@ -270,20 +209,7 @@ public final class Static231 {
 		}
 	}
 
-	@OriginalMember(owner = "client!sk", name = "a", descriptor = "(JI)V")
-	public static void sleep(@OriginalArg(0) long arg0) {
-		if (arg0 <= 0L) {
-			return;
-		}
-		if (arg0 % 10L == 0L) {
-			Static220.method3799(arg0 - 1L);
-			Static220.method3799(1L);
-		} else {
-			Static220.method3799(arg0);
-		}
-	}
-
-	@OriginalMember(owner = "client!sk", name = "c", descriptor = "(II)I")
+    @OriginalMember(owner = "client!sk", name = "c", descriptor = "(II)I")
 	public static int toLowerCase(@OriginalArg(1) int arg0) {
 		if (arg0 >= 65 && arg0 <= 90 || arg0 >= 192 && arg0 <= 222 && arg0 != 215) {
 			return arg0 + 32;

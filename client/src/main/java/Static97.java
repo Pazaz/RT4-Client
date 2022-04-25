@@ -31,7 +31,7 @@ public final class Static97 {
 		}
 		@Pc(30) int local30 = Math.min(arg5.anInt445 / 2, arg5.anInt459 / 2);
 		if (local30 * local30 >= local13) {
-			Static60.method1446(arg5, Static149.aClass3_Sub2_Sub1Array7[arg0], arg4, arg3, arg1, arg2);
+			Static60.method1446(arg5, Sprites.mapmarkhints[arg0], arg4, arg3, arg1, arg2);
 			return;
 		}
 		local30 -= 10;
@@ -46,9 +46,9 @@ public final class Static97 {
 		@Pc(117) int local117 = (int) (Math.sin(local110) * (double) local30);
 		@Pc(124) int local124 = (int) (Math.cos(local110) * (double) local30);
 		if (GlRenderer.enabled) {
-			((GlSprite) Static277.aClass3_Sub2_Sub1Array12[arg0]).method1428((arg5.anInt445 / 2 + arg2 + local117) * 16, (arg5.anInt459 / 2 + arg1 - local124) * 16, (int) (local110 * 10430.378D));
+			((GlSprite) Static277.hintMapEdge[arg0]).method1428((arg5.anInt445 / 2 + arg2 + local117) * 16, (arg5.anInt459 / 2 + arg1 - local124) * 16, (int) (local110 * 10430.378D));
 		} else {
-			((SoftwareSprite) Static277.aClass3_Sub2_Sub1Array12[arg0]).method306(local117 + arg5.anInt445 / 2 + arg2 - 10, arg5.anInt459 / 2 + -10 + arg1 + -local124, local110);
+			((SoftwareSprite) Static277.hintMapEdge[arg0]).method306(local117 + arg5.anInt445 / 2 + arg2 - 10, arg5.anInt459 / 2 + -10 + arg1 + -local124, local110);
 		}
 	}
 

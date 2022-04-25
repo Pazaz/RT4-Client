@@ -25,13 +25,13 @@ public final class Map extends SecondaryNode {
 	public boolean aBoolean50 = true;
 
 	@OriginalMember(owner = "client!bn", name = "db", descriptor = "I")
-	public int anInt772 = -1;
+	public int defaultZoom = -1;
 
 	@OriginalMember(owner = "client!bn", name = "T", descriptor = "I")
 	public final int anInt764;
 
 	@OriginalMember(owner = "client!bn", name = "bb", descriptor = "Lclient!na;")
-	public final JagString aClass100_138;
+	public final JagString group;
 
 	@OriginalMember(owner = "client!bn", name = "Q", descriptor = "Lclient!na;")
 	public final JagString aClass100_137;
@@ -47,12 +47,12 @@ public final class Map extends SecondaryNode {
 		this.anInt764 = arg3;
 		this.anInt759 = arg4;
 		this.aBoolean50 = arg5;
-		this.aClass100_138 = arg0;
+		this.group = arg0;
 		this.aClass100_137 = arg1;
-		this.anInt772 = arg6;
+		this.defaultZoom = arg6;
 		this.anInt769 = arg2;
-		if (this.anInt772 == 255) {
-			this.anInt772 = 0;
+		if (this.defaultZoom == 255) {
+			this.defaultZoom = 0;
 		}
 		this.aClass69_23 = new LinkedList();
 	}

@@ -9,7 +9,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!wm")
 public final class Shadow {
 
-	@OriginalMember(owner = "client!wm", name = "a", descriptor = "Lclient!vi;")
+    @OriginalMember(owner = "client!wm", name = "g", descriptor = "[B")
+    public static final byte[] pixels = new byte[16384];
+    @OriginalMember(owner = "client!wm", name = "a", descriptor = "Lclient!vi;")
 	private GlVertexBufferObject aClass155_6;
 
 	@OriginalMember(owner = "client!wm", name = "c", descriptor = "Ljava/nio/ByteBuffer;")
@@ -144,16 +146,16 @@ public final class Shadow {
 					if (local2[local19 + local5] != 0) {
 						local96++;
 					}
-					Static281.aByteArray82[local23++] = (byte) (local96 * 17);
+					pixels[local23++] = (byte) (local96 * 17);
 				} else {
-					Static281.aByteArray82[local23++] = 68;
+					pixels[local23++] = 68;
 				}
 				local19++;
 			}
 			local19 += local5 - 128;
 		}
 		@Pc(145) GL2 local145 = GlRenderer.gl;
-		@Pc(148) ByteBuffer local148 = ByteBuffer.wrap(Static281.aByteArray82);
+		@Pc(148) ByteBuffer local148 = ByteBuffer.wrap(pixels);
 		local148.limit(16384);
 		GlRenderer.setTextureId(this.anInt5901);
 		local145.glTexImage2D(GL2.GL_TEXTURE_2D, 0, GL2.GL_ALPHA, 128, 128, 0, GL2.GL_ALPHA, GL2.GL_UNSIGNED_BYTE, local148);

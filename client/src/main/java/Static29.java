@@ -14,11 +14,11 @@ public final class Static29 {
 		}
 		@Pc(27) Font local27;
 		if (GlRenderer.enabled) {
-			local27 = new GlFont(arg0, Static274.anIntArray440, Static269.anIntArray252, Static254.anIntArray488, Static26.anIntArray66, Static7.aByteArrayArray5);
+			local27 = new GlFont(arg0, SpriteLoader.xOffsets, SpriteLoader.yOffsets, SpriteLoader.innerWidths, SpriteLoader.innerHeights, SpriteLoader.pixels);
 		} else {
-			local27 = new SoftwareFont(arg0, Static274.anIntArray440, Static269.anIntArray252, Static254.anIntArray488, Static26.anIntArray66, Static7.aByteArrayArray5);
+			local27 = new SoftwareFont(arg0, SpriteLoader.xOffsets, SpriteLoader.yOffsets, SpriteLoader.innerWidths, SpriteLoader.innerHeights, SpriteLoader.pixels);
 		}
-		Static75.method1631();
+		SpriteLoader.clear();
 		return local27;
 	}
 
@@ -38,7 +38,7 @@ public final class Static29 {
 			local9.anInt918 = arg0;
 			local9.anInt927 = arg6;
 			Static226.method3898(local9);
-			Static26.aClass69_27.method2282(local9);
+			Static26.aClass69_27.addTail(local9);
 		}
 		local9.anInt926 = arg7;
 		local9.anInt925 = arg8;

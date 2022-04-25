@@ -55,7 +55,7 @@ public final class Static120 {
 
 	@OriginalMember(owner = "client!jf", name = "a", descriptor = "(IIIIIII)V")
 	public static void method2388(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6) {
-		if (!Static178.highDetailLighting) {
+		if (!Preferences.highDetailLighting) {
 			return;
 		}
 		if (arg0 == 1 && arg5 > 0) {
@@ -96,7 +96,7 @@ public final class Static120 {
 
 	@OriginalMember(owner = "client!jf", name = "a", descriptor = "(IIIIIIII)V")
 	public static void method2391(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7) {
-		if (!Static178.highDetailLighting || anInt3031 == arg3 && anInt3033 == arg4 && anInt3029 == arg5 && anInt3035 == arg6 && anInt3030 == arg7) {
+		if (!Preferences.highDetailLighting || anInt3031 == arg3 && anInt3033 == arg4 && anInt3029 == arg5 && anInt3035 == arg6 && anInt3030 == arg7) {
 			return;
 		}
 		@Pc(20) int local20;
@@ -179,7 +179,7 @@ public final class Static120 {
 
 	@OriginalMember(owner = "client!jf", name = "a", descriptor = "(IIIIII)V")
 	public static void method2393(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
-		if (!Static178.highDetailLighting || anInt3031 == arg3 && anInt3033 == arg4 && anInt3029 == arg5 && anInt3035 == arg4 && anInt3030 == arg5) {
+		if (!Preferences.highDetailLighting || anInt3031 == arg3 && anInt3033 == arg4 && anInt3029 == arg5 && anInt3035 == arg4 && anInt3030 == arg5) {
 			return;
 		}
 		@Pc(20) int local20;
@@ -301,7 +301,7 @@ public final class Static120 {
 
 	@OriginalMember(owner = "client!jf", name = "a", descriptor = "(IIIII)V")
 	public static void method2397(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
-		if (!Static178.highDetailLighting) {
+		if (!Preferences.highDetailLighting) {
 			return;
 		}
 		label43: for (@Pc(4) int local4 = 0; local4 < 4; local4++) {
@@ -367,7 +367,7 @@ public final class Static120 {
 
 	@OriginalMember(owner = "client!jf", name = "a", descriptor = "(II[[[Lclient!bj;)V")
 	public static void method2402(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Tile[][][] arg2) {
-		if (!Static178.highDetailLighting) {
+		if (!Preferences.highDetailLighting) {
 			return;
 		}
 		@Pc(4) GL2 local4 = GlRenderer.gl;

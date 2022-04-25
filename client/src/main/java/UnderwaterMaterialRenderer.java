@@ -152,7 +152,7 @@ public final class UnderwaterMaterialRenderer implements MaterialRenderer {
 				local1.glTexGenfv(GL2.GL_R, GL2.GL_EYE_PLANE, this.aFloatArray29, 0);
 				local1.glActiveTexture(GL2.GL_TEXTURE2);
 			}
-			local1.glTexEnvfv(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_COLOR, Static123.method2422(), 0);
+			local1.glTexEnvfv(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_COLOR, WaterMaterialRenderer.method2422(), 0);
 			if (arg0 >= 0) {
 				this.aFloatArray29[0] = 0.0F;
 				this.aFloatArray29[1] = 1.0F / (float) Static170.anInt3241;

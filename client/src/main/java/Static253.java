@@ -54,7 +54,7 @@ public final class Static253 {
 			if (Static176.aBooleanArray95[4] && Static276.anIntArray564[4] + 128 > local59) {
 				local59 = Static276.anIntArray564[4] + 128;
 			}
-			Static18.method555(Static81.cameraX, arg0, Static207.method3685(Static55.level, Static173.self.xFine, Static173.self.zFine) - 50, 600 - -(local59 * 3), local57, Static111.cameraZ, local59);
+			Static18.method555(Static81.cameraX, arg0, Static207.method3685(Static55.level, PlayerList.self.xFine, PlayerList.self.zFine) - 50, 600 - -(local59 * 3), local57, Static111.cameraZ, local59);
 		}
 		local57 = Static5.anInt40;
 		local59 = Static138.renderX;
@@ -100,7 +100,7 @@ public final class Static253 {
 			}
 			GlRenderer.method4171(arg2, arg4, arg3, arg0, arg3 / 2 + arg2, arg4 - -(arg0 / 2), local248, local253, Static223.anInt5029, Static223.anInt5029);
 		} else {
-			Static129.method2496(arg2, arg4, arg3 + arg2, arg0 + arg4);
+			SoftwareRaster.method2496(arg2, arg4, arg3 + arg2, arg0 + arg4);
 			Rasteriser.prepare();
 		}
 		if (Static60.aBoolean108 || Static155.anInt3751 < arg2 || Static155.anInt3751 >= arg3 + arg2 || arg4 > Static60.anInt1892 || arg0 + arg4 <= Static60.anInt1892) {
@@ -122,16 +122,16 @@ public final class Static253 {
 			GlRenderer.method4173();
 			GlRenderer.setDepthTestEnabled(true);
 			GlRenderer.setFogEnabled(true);
-			if (Static244.gameState == 10) {
-				local171 = Static103.method2235(Static178.anInt4247, Static134.renderZ >> 10, Static113.brightness, Static138.renderX >> 10);
+			if (client.gameState == 10) {
+				local171 = Static103.method2235(Static178.anInt4247, Static134.renderZ >> 10, Preferences.brightness, Static138.renderX >> 10);
 			} else {
-				local171 = Static103.method2235(Static178.anInt4247, Static173.self.movementQueueZ[0] >> 3, Static113.brightness, Static173.self.movementQueueX[0] >> 3);
+				local171 = Static103.method2235(Static178.anInt4247, PlayerList.self.movementQueueZ[0] >> 3, Preferences.brightness, PlayerList.self.movementQueueX[0] >> 3);
 			}
-			Static120.method2394(Static83.loop, !Static11.flickeringEffectsOn);
+			Static120.method2394(Static83.loop, !Preferences.flickeringEffectsOn);
 			GlRenderer.clearColorAndDepthBuffers(local171);
 			Static143.method2731(Static240.cameraPitch, Static134.renderZ, Static5.anInt40, Static138.renderX, Static184.cameraYaw);
 			GlRenderer.anInt5323 = Static83.loop;
-			Static156.method2954(Static138.renderX, Static5.anInt40, Static134.renderZ, Static240.cameraPitch, Static184.cameraYaw, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Static55.level + 1, local387, Static173.self.xFine >> 7, Static173.self.zFine >> 7);
+			Static156.method2954(Static138.renderX, Static5.anInt40, Static134.renderZ, Static240.cameraPitch, Static184.cameraYaw, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Static55.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
 			Static263.aBoolean299 = true;
 			Static120.method2390();
 			Static143.method2731(0, 0, 0, 0, 0);
@@ -140,8 +140,8 @@ public final class Static253 {
 			Static142.method2726(arg4, arg3, arg2, Static223.anInt5029, arg0, Static223.anInt5029);
 			Static233.method4000(arg3, arg2, arg0, Static223.anInt5029, Static223.anInt5029, arg4);
 		} else {
-			Static129.method2495(arg2, arg4, arg3, arg0, 0);
-			Static156.method2954(Static138.renderX, Static5.anInt40, Static134.renderZ, Static240.cameraPitch, Static184.cameraYaw, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Static55.level + 1, local387, Static173.self.xFine >> 7, Static173.self.zFine >> 7);
+			SoftwareRaster.fillRect(arg2, arg4, arg3, arg0, 0);
+			Static156.method2954(Static138.renderX, Static5.anInt40, Static134.renderZ, Static240.cameraPitch, Static184.cameraYaw, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Static55.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
 			Static107.loop();
 			Static223.method3858();
 			Static142.method2726(arg4, arg3, arg2, 256, arg0, 256);
@@ -154,14 +154,14 @@ public final class Static253 {
 		Static5.anInt40 = local57;
 		Static138.renderX = local59;
 		Static184.cameraYaw = local125;
-		if (Static19.aBoolean43 && Static107.js5NetQueue.method2328() == 0) {
+		if (Static19.aBoolean43 && client.js5NetQueue.method2328() == 0) {
 			Static19.aBoolean43 = false;
 		}
 		if (Static19.aBoolean43) {
 			if (GlRenderer.enabled) {
 				Static46.method1186(arg2, arg4, arg3, arg0, 0);
 			} else {
-				Static129.method2495(arg2, arg4, arg3, arg0, 0);
+				SoftwareRaster.fillRect(arg2, arg4, arg3, arg0, 0);
 			}
 			Static114.drawTextOnScreen(false, LocalizedText.LOADING);
 		}
@@ -190,21 +190,7 @@ public final class Static253 {
 		return local10;
 	}
 
-	@OriginalMember(owner = "client!ui", name = "h", descriptor = "(I)[Lclient!ok;")
-	public static IndexedSprite[] method4331() {
-		@Pc(8) IndexedSprite[] local8 = new IndexedSprite[Static165.anInt4038];
-		for (@Pc(10) int local10 = 0; local10 < Static165.anInt4038; local10++) {
-			if (GlRenderer.enabled) {
-				local8[local10] = new GlIndexedSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local10], Static269.anIntArray252[local10], Static254.anIntArray488[local10], Static26.anIntArray66[local10], Static7.aByteArrayArray5[local10], Static259.anIntArray513);
-			} else {
-				local8[local10] = new SoftwareIndexedSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[local10], Static269.anIntArray252[local10], Static254.anIntArray488[local10], Static26.anIntArray66[local10], Static7.aByteArrayArray5[local10], Static259.anIntArray513);
-			}
-		}
-		Static75.method1631();
-		return local8;
-	}
-
-	@OriginalMember(owner = "client!ui", name = "d", descriptor = "(II)V")
+    @OriginalMember(owner = "client!ui", name = "d", descriptor = "(II)V")
 	public static void method4332(@OriginalArg(0) int arg0) {
 		if (arg0 >= 0 && Static258.aBooleanArray130.length > arg0) {
 			Static258.aBooleanArray130[arg0] = !Static258.aBooleanArray130[arg0];

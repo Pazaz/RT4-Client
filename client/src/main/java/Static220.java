@@ -10,10 +10,7 @@ public final class Static220 {
 	@OriginalMember(owner = "client!rm", name = "d", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable aClass99_28 = new SoftLruHashTable(64);
 
-	@OriginalMember(owner = "client!rm", name = "g", descriptor = "Z")
-	public static boolean highWaterDetail = true;
-
-	@OriginalMember(owner = "client!rm", name = "i", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!rm", name = "i", descriptor = "Lclient!na;")
 	public static final JagString aClass100_930 = Static28.parse("(Z");
 
 	@OriginalMember(owner = "client!rm", name = "a", descriptor = "(IBI)V")
@@ -57,14 +54,6 @@ public final class Static220 {
 		}
 		@Pc(152) long local152 = (long) ((arg0 << 7) + arg1 + 1610612736);
 		Static69.method1543(Static55.level, arg1, arg0, Static207.method3685(Static55.level, arg1 * 128 + 64, arg0 * 128 + 64), local30.aClass8_Sub7_1, local152, local89, local91);
-	}
-
-	@OriginalMember(owner = "client!rm", name = "a", descriptor = "(JB)V")
-	public static void method3799(@OriginalArg(0) long arg0) {
-		try {
-			Thread.sleep(arg0);
-		} catch (@Pc(11) InterruptedException local11) {
-		}
 	}
 
 	@OriginalMember(owner = "client!rm", name = "a", descriptor = "(ZIIIILclient!ak;I)Lclient!ak;")

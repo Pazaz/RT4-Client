@@ -4,10 +4,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static90 {
 
-	@OriginalMember(owner = "client!hb", name = "v", descriptor = "[[[B")
-	public static byte[][][] aByteArrayArrayArray8;
-
-	@OriginalMember(owner = "client!hb", name = "t", descriptor = "[I")
+    @OriginalMember(owner = "client!hb", name = "t", descriptor = "[I")
 	public static final int[] anIntArray215 = new int[] { 160, 192, 80, 96, 0, 144, 80, 48, 160 };
 
 	@OriginalMember(owner = "client!hb", name = "b", descriptor = "(Lclient!na;I)V")

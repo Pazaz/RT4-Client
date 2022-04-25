@@ -12,8 +12,8 @@ public final class Static134 {
 
 	@OriginalMember(owner = "client!kh", name = "a", descriptor = "(B)Lclient!ek;")
 	public static SoftwareIndexedSprite method2619() {
-		@Pc(25) SoftwareIndexedSprite local25 = new SoftwareIndexedSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[0], Static269.anIntArray252[0], Static254.anIntArray488[0], Static26.anIntArray66[0], Static7.aByteArrayArray5[0], Static259.anIntArray513);
-		Static75.method1631();
+		@Pc(25) SoftwareIndexedSprite local25 = new SoftwareIndexedSprite(SpriteLoader.width, SpriteLoader.height, SpriteLoader.xOffsets[0], SpriteLoader.yOffsets[0], SpriteLoader.innerWidths[0], SpriteLoader.innerHeights[0], SpriteLoader.pixels[0], SpriteLoader.palette);
+		SpriteLoader.clear();
 		return local25;
 	}
 

@@ -4,10 +4,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static125 {
 
-	@OriginalMember(owner = "client!jl", name = "I", descriptor = "[[[B")
-	public static byte[][][] aByteArrayArrayArray10;
-
-	@OriginalMember(owner = "client!jl", name = "v", descriptor = "I")
+    @OriginalMember(owner = "client!jl", name = "v", descriptor = "I")
 	public static int anInt3096 = 0;
 
 	@OriginalMember(owner = "client!jl", name = "x", descriptor = "Lclient!n;")
@@ -19,10 +16,7 @@ public final class Static125 {
 	@OriginalMember(owner = "client!jl", name = "H", descriptor = "I")
 	public static int worldId = -1;
 
-	@OriginalMember(owner = "client!jl", name = "J", descriptor = "I")
-	public static int soundEffectVolume = 127;
-
-	@OriginalMember(owner = "client!jl", name = "a", descriptor = "(ILclient!ve;Lclient!ve;)V")
+    @OriginalMember(owner = "client!jl", name = "a", descriptor = "(ILclient!ve;Lclient!ve;)V")
 	public static void init(@OriginalArg(1) Js5 arg0, @OriginalArg(2) Js5 arg1) {
 		Static14.modelsArchive = arg0;
 		Static216.aClass153_31 = arg1;

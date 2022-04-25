@@ -9,9 +9,6 @@ public final class Static107 {
 	@OriginalMember(owner = "client!id", name = "k", descriptor = "I")
 	public static int anInt2878;
 
-	@OriginalMember(owner = "client!id", name = "l", descriptor = "Lclient!jb;")
-	public static Js5NetQueue js5NetQueue;
-
 	@OriginalMember(owner = "client!id", name = "b", descriptor = "I")
 	public static int anInt2875 = -1;
 
@@ -24,19 +21,16 @@ public final class Static107 {
 	@OriginalMember(owner = "client!id", name = "e", descriptor = "[I")
 	public static final int[] anIntArray259 = new int[14];
 
-	@OriginalMember(owner = "client!id", name = "f", descriptor = "Z")
-	public static boolean clean = false;
-
 	@OriginalMember(owner = "client!id", name = "j", descriptor = "Lclient!of;")
 	public static QuickChatCommandDecoder anInterface3_1 = null;
 
 	@OriginalMember(owner = "client!id", name = "b", descriptor = "(I)V")
 	public static void loop() {
-		if (Static147.soundChannel != null) {
-			Static147.soundChannel.loop();
+		if (client.soundChannel != null) {
+			client.soundChannel.loop();
 		}
-		if (Static11.musicChannel != null) {
-			Static11.musicChannel.loop();
+		if (client.musicChannel != null) {
+			client.musicChannel.loop();
 		}
 	}
 

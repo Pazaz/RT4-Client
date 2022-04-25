@@ -7,9 +7,6 @@ public final class Static270 {
 	@OriginalMember(owner = "client!wb", name = "b", descriptor = "[I")
 	public static int[] anIntArray562;
 
-	@OriginalMember(owner = "client!wb", name = "l", descriptor = "Lclient!fd;")
-	public static WorldMapFont aClass41_9;
-
 	@OriginalMember(owner = "client!wb", name = "a", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1089 = Static28.parse(")2");
 

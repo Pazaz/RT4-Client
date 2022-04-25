@@ -208,7 +208,7 @@ public final class GlModel extends Model {
 		this.aClass5_1 = new Class5();
 		this.aClass127_4 = new GlBuffer();
 		this.aClass127_1 = new GlBuffer();
-		if (Static178.highDetailLighting) {
+		if (Preferences.highDetailLighting) {
 			this.aClass127_2 = new GlBuffer();
 		}
 		this.aClass127_3 = new GlBuffer();
@@ -1940,7 +1940,7 @@ public final class GlModel extends Model {
 			throw new IllegalArgumentException();
 		} else if (this.anInt5296 != 0) {
 			if (arg5) {
-				@Pc(26) boolean local26 = !this.aClass127_1.aBoolean235 && (arg1 || arg2 && !Static178.highDetailLighting);
+				@Pc(26) boolean local26 = !this.aClass127_1.aBoolean235 && (arg1 || arg2 && !Preferences.highDetailLighting);
 				this.method4113(false, !this.aClass127_4.aBoolean235 && arg0, local26, this.aClass127_2 != null && !this.aClass127_2.aBoolean235 && arg2, !this.aClass127_3.aBoolean235);
 				if (!this.aClass127_5.aBoolean235 && arg3 && arg1) {
 					this.method4103();
@@ -1968,7 +1968,7 @@ public final class GlModel extends Model {
 					this.aByte19 = (byte) (this.aByte19 | 0x2);
 				}
 			}
-			if (arg2 && Static178.highDetailLighting) {
+			if (arg2 && Preferences.highDetailLighting) {
 				if (this.aClass127_2.aBoolean235) {
 					this.aShortArray76 = null;
 					this.aShortArray79 = null;
@@ -2077,7 +2077,7 @@ public final class GlModel extends Model {
 			}
 		}
 		if (arg2) {
-			if (Static178.highDetailLighting) {
+			if (Preferences.highDetailLighting) {
 				for (local60 = 0; local60 < this.anInt5297; local60++) {
 					local71 = Static237.method4096(this.aShortArray75[local60], this.aShortArray80[local60], this.aShort29, this.aByteArray71[local60]);
 					Static237.aClass3_Sub15_8.offset = this.aClass127_1.anInt4777 + this.aShortArray77[local60] * local1;
@@ -2426,7 +2426,7 @@ public final class GlModel extends Model {
 				arg3.aShortArray85[local69] = this.aShortArray85[local69];
 				arg3.aShortArray86[local69] = this.aShortArray86[local69];
 			}
-			if (Static178.highDetailLighting) {
+			if (Preferences.highDetailLighting) {
 				if (arg4.aClass127_2 == null) {
 					arg4.aClass127_2 = new GlBuffer();
 				}
@@ -2531,7 +2531,7 @@ public final class GlModel extends Model {
 			local3.aShortArray75 = Static263.method4511(this.aShortArray75);
 		}
 		local3.aByteArray71 = this.aByteArray71;
-		if (arg2 && arg3 && (arg6 && arg4 || Static178.highDetailLighting)) {
+		if (arg2 && arg3 && (arg6 && arg4 || Preferences.highDetailLighting)) {
 			local3.aClass127_1 = this.aClass127_1;
 		} else {
 			local3.aClass127_1 = new GlBuffer();
@@ -2547,7 +2547,7 @@ public final class GlModel extends Model {
 			local3.aShortArray85 = Static263.method4511(this.aShortArray85);
 			local3.aShortArray86 = Static263.method4511(this.aShortArray86);
 		}
-		if (!Static178.highDetailLighting) {
+		if (!Preferences.highDetailLighting) {
 			local3.aClass127_2 = null;
 		} else if (arg4 && arg5 && arg6) {
 			local3.aClass127_2 = this.aClass127_2;
@@ -3022,7 +3022,7 @@ public final class GlModel extends Model {
 			}
 			local1.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, this.aClass127_1.anInt4782, (long) this.aClass127_1.anInt4777);
 		}
-		if (Static178.highDetailLighting && this.aClass127_2.aClass155_4 != null) {
+		if (Preferences.highDetailLighting && this.aClass127_2.aClass155_4 != null) {
 			if (local172 != this.aClass127_2.aClass155_4) {
 				this.aClass127_2.aClass155_4.method4516();
 				local172 = this.aClass127_2.aClass155_4;
@@ -3039,7 +3039,7 @@ public final class GlModel extends Model {
 		if (this.aClass127_5.aClass155_4 != null) {
 			this.aClass127_5.aClass155_4.method4518();
 		}
-		if (this.aClass127_4.aClass155_4 == null || this.aClass127_1.aClass155_4 == null || Static178.highDetailLighting && this.aClass127_2.aClass155_4 == null || this.aClass127_3.aClass155_4 == null) {
+		if (this.aClass127_4.aClass155_4 == null || this.aClass127_1.aClass155_4 == null || Preferences.highDetailLighting && this.aClass127_2.aClass155_4 == null || this.aClass127_3.aClass155_4 == null) {
 			if (GlRenderer.arbVboSupported) {
 				local1.glBindBuffer(GL2.GL_ARRAY_BUFFER, 0);
 			}
@@ -3051,7 +3051,7 @@ public final class GlModel extends Model {
 				this.aClass127_1.aByteBuffer8.position(this.aClass127_1.anInt4777);
 				local1.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, this.aClass127_1.anInt4782, this.aClass127_1.aByteBuffer8);
 			}
-			if (Static178.highDetailLighting && this.aClass127_2.aClass155_4 == null) {
+			if (Preferences.highDetailLighting && this.aClass127_2.aClass155_4 == null) {
 				this.aClass127_2.aByteBuffer8.position(this.aClass127_2.anInt4777);
 				local1.glNormalPointer(GL2.GL_FLOAT, this.aClass127_2.anInt4782, this.aClass127_2.aByteBuffer8);
 			}

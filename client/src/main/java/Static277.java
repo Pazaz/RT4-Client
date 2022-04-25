@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static277 {
 
 	@OriginalMember(owner = "client!wi", name = "R", descriptor = "[Lclient!qf;")
-	public static Sprite[] aClass3_Sub2_Sub1Array12;
+	public static Sprite[] hintMapEdge;
 
 	@OriginalMember(owner = "client!wi", name = "ab", descriptor = "I")
 	public static int anInt5853;
@@ -39,9 +39,9 @@ public final class Static277 {
 
 	@OriginalMember(owner = "client!wi", name = "d", descriptor = "(II)V")
 	public static void method4641(@OriginalArg(1) int arg0) {
-		Static217.anInt4901 = -1;
-		Static217.anInt4901 = -1;
-		Static28.anInt919 = arg0;
-		Static38.method965();
+		WorldMap.anInt4901 = -1;
+		WorldMap.anInt4901 = -1;
+		WorldMap.anInt919 = arg0;
+		WorldMap.method965();
 	}
 }

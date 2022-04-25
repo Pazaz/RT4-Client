@@ -61,7 +61,7 @@ public final class Static122 {
 			if (local13.sounds != null) {
 				local13.anInt2034 = local13.anInt2032 + (int) (Math.random() * (double) (local13.anInt2040 - local13.anInt2032));
 			}
-			Static3.aClass69_135.method2282(local13);
+			Static3.aClass69_135.addTail(local13);
 		} else if (arg3 != null) {
 			local13.npc = arg3;
 			@Pc(138) NpcType local138 = arg3.type;
@@ -75,7 +75,7 @@ public final class Static122 {
 				local13.sound = Static112.getSound(arg3);
 				local13.radius = local138.soundRadius * 128;
 			}
-			Static152.aClass69_87.method2282(local13);
+			Static152.aClass69_87.addTail(local13);
 		} else if (arg6 != null) {
 			local13.player = arg6;
 			local13.anInt2037 = (arg6.getSize() + arg4) * 128;
@@ -88,6 +88,6 @@ public final class Static122 {
 
 	@OriginalMember(owner = "client!jh", name = "a", descriptor = "(IILclient!ve;Lclient!ve;I)Lclient!dd;")
 	public static SoftwareFont method2412(@OriginalArg(0) int arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) Js5 arg2) {
-		return Static234.method4016(arg2, 0, arg0) ? Static114.method4635(arg1.getFile(arg0, 0)) : null;
+		return SpriteLoader.decode(arg2, 0, arg0) ? Static114.method4635(arg1.getFile(arg0, 0)) : null;
 	}
 }

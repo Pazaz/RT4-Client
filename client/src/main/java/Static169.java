@@ -8,9 +8,6 @@ public final class Static169 {
 	@OriginalMember(owner = "client!nf", name = "c", descriptor = "[S")
 	public static short[] aShortArray52;
 
-	@OriginalMember(owner = "client!nf", name = "d", descriptor = "Lclient!fd;")
-	public static WorldMapFont aClass41_5;
-
 	@OriginalMember(owner = "client!nf", name = "e", descriptor = "I")
 	public static int anInt4073;
 
@@ -66,13 +63,13 @@ public final class Static169 {
 		}
 		@Pc(90) PrivilegedRequest local90 = arg3.enterFullScreen(arg0, arg1, arg2);
 		while (local90.status == 0) {
-			Static231.sleep(10L);
+			ThreadUtils.sleep(10L);
 		}
 		@Pc(103) Frame local103 = (Frame) local90.result;
 		if (local103 == null) {
 			return null;
 		} else if (local90.status == 2) {
-			Static25.exitFullScreen(local103, arg3);
+			DisplayMode.exitFullScreen(local103, arg3);
 			return null;
 		} else {
 			return local103;

@@ -5,7 +5,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!jd")
 public final class MouseRecorder implements Runnable {
 
-	@OriginalMember(owner = "client!jd", name = "e", descriptor = "Z")
+    @OriginalMember(owner = "client!od", name = "f", descriptor = "Lclient!jd;")
+    public static MouseRecorder instance;
+    @OriginalMember(owner = "client!jd", name = "e", descriptor = "Z")
 	public boolean running = true;
 
 	@OriginalMember(owner = "client!jd", name = "f", descriptor = "Ljava/lang/Object;")
@@ -32,7 +34,7 @@ public final class MouseRecorder implements Runnable {
 					this.samples++;
 				}
 			}
-			Static231.sleep(50L);
+			ThreadUtils.sleep(50L);
 		}
 	}
 }

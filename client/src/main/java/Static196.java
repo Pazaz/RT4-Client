@@ -18,10 +18,10 @@ public final class Static196 {
 
 	@OriginalMember(owner = "client!pl", name = "a", descriptor = "(II)V")
 	public static void setGameState(@OriginalArg(0) int arg0) {
-		if (Static244.gameState == arg0) {
+		if (client.gameState == arg0) {
 			return;
 		}
-		if (Static244.gameState == 0) {
+		if (client.gameState == 0) {
 			Static163.method3097();
 		}
 		if (arg0 == 40) {
@@ -48,25 +48,25 @@ public final class Static196 {
 		} else {
 			Static119.method2381();
 		}
-		@Pc(106) boolean local106 = Static244.gameState == 5 || Static244.gameState == 10 || Static244.gameState == 28;
+		@Pc(106) boolean local106 = client.gameState == 5 || client.gameState == 10 || client.gameState == 28;
 		if (local106 != local37) {
 			if (local37) {
 				Static221.anInt4363 = Static250.titleSong;
-				if (Static12.musicVolume == 0) {
+				if (Preferences.musicVolume == 0) {
 					Static29.method801();
 				} else {
 					Static257.method526(Static250.titleSong, Static130.js5Archive6, 255);
 				}
-				Static107.js5NetQueue.method2322(false);
+				client.js5NetQueue.method2322(false);
 			} else {
 				Static29.method801();
-				Static107.js5NetQueue.method2322(true);
+				client.js5NetQueue.method2322(true);
 			}
 		}
 		if (GlRenderer.enabled && (arg0 == 25 || arg0 == 28 || arg0 == 40)) {
 			GlRenderer.method4160();
 		}
-		Static244.gameState = arg0;
+		client.gameState = arg0;
 	}
 
 	@OriginalMember(owner = "client!pl", name = "a", descriptor = "(ZI)V")
@@ -91,16 +91,4 @@ public final class Static196 {
 		Static253.aByteArrayArrayArray16 = new byte[local14][104][104];
 	}
 
-	@OriginalMember(owner = "client!pl", name = "a", descriptor = "(I)Lclient!mm;")
-	public static SoftwareSprite method3537() {
-		@Pc(13) int local13 = Static254.anIntArray488[0] * Static26.anIntArray66[0];
-		@Pc(17) byte[] local17 = Static7.aByteArrayArray5[0];
-		@Pc(20) int[] local20 = new int[local13];
-		for (@Pc(22) int local22 = 0; local22 < local13; local22++) {
-			local20[local22] = Static259.anIntArray513[local17[local22] & 0xFF];
-		}
-		@Pc(57) SoftwareSprite local57 = new SoftwareSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[0], Static269.anIntArray252[0], Static254.anIntArray488[0], Static26.anIntArray66[0], local20);
-		Static75.method1631();
-		return local57;
-	}
 }

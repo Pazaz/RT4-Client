@@ -316,7 +316,7 @@ public final class MidiPcmStream extends PcmStream {
 			}
 			this.aClass3_Sub25ArrayArray2[arg1][local133.anInt3776] = local133;
 		}
-		this.aClass3_Sub3_Sub3_1.aClass69_126.method2282(local133);
+		this.aClass3_Sub3_Sub3_1.aClass69_126.addTail(local133);
 		this.aClass3_Sub25ArrayArray1[arg1][arg2] = local133;
 	}
 

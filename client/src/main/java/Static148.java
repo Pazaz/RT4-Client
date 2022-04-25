@@ -27,10 +27,10 @@ public final class Static148 {
 
 	@OriginalMember(owner = "client!li", name = "a", descriptor = "(ZI)V")
 	public static void method2765(@OriginalArg(1) int arg0) {
-		if (arg0 == -1 && !Static144.aBoolean173) {
+		if (arg0 == -1 && !MidiPlayer.jingle) {
 			Static241.method4548();
-		} else if (arg0 != -1 && (Static221.anInt4363 != arg0 || !Static136.method2655()) && Static12.musicVolume != 0 && !Static144.aBoolean173) {
-			Static257.method526(arg0, Static130.js5Archive6, Static12.musicVolume);
+		} else if (arg0 != -1 && (Static221.anInt4363 != arg0 || !Static136.method2655()) && Preferences.musicVolume != 0 && !MidiPlayer.jingle) {
+			Static257.method526(arg0, Static130.js5Archive6, Preferences.musicVolume);
 		}
 		Static221.anInt4363 = arg0;
 	}
@@ -43,7 +43,7 @@ public final class Static148 {
 			local21 = new LongNode(MonotonicClock.currentTimeMillis() + 500L);
 			Static199.aClass133_20.put(local21, (long) arg0);
 		} else {
-			local21.aLong55 = MonotonicClock.currentTimeMillis() + 500L;
+			local21.value = MonotonicClock.currentTimeMillis() + 500L;
 		}
 	}
 
@@ -55,7 +55,7 @@ public final class Static148 {
 		}
 		@Pc(26) byte[] local26 = Static261.js5Archive13.getFile(arg0, 0);
 		local16 = new SoftwareFont(local26);
-		local16.setNameIcons(Static159.aClass36Array12, null);
+		local16.setNameIcons(Sprites.nameIcons, null);
 		Static139.aClass99_22.put(local16, (long) arg0);
 		return local16;
 	}

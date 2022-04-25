@@ -8,19 +8,13 @@ public final class Static131 {
     @OriginalMember(owner = "client!kd", name = "ub", descriptor = "I")
 	public static int anInt3255;
 
-	@OriginalMember(owner = "client!kd", name = "Cb", descriptor = "I")
-	public static int anInt3261;
-
-	@OriginalMember(owner = "client!kd", name = "mb", descriptor = "[Lclient!cl;")
+    @OriginalMember(owner = "client!kd", name = "mb", descriptor = "[Lclient!cl;")
 	public static final AnimFrameset[] aClass3_Sub2_Sub7Array5 = new AnimFrameset[14];
 
 	@OriginalMember(owner = "client!kd", name = "ob", descriptor = "I")
 	public static int anInt3251 = 0;
 
-	@OriginalMember(owner = "client!kd", name = "rb", descriptor = "I")
-	public static final int anInt3254 = (int) (Math.random() * 17.0D) - 8;
-
-	@OriginalMember(owner = "client!kd", name = "sb", descriptor = "[I")
+    @OriginalMember(owner = "client!kd", name = "sb", descriptor = "[I")
 	public static final int[] anIntArray307 = new int[] { 1, 1, 0, 0, 0, 8, 0, 0, 8 };
 
 	@OriginalMember(owner = "client!kd", name = "yb", descriptor = "S")
@@ -59,12 +53,6 @@ public final class Static131 {
 			arg1++;
 			arg0[arg1] = arg3;
 		}
-	}
-
-	@OriginalMember(owner = "client!kd", name = "a", descriptor = "(Ljava/lang/String;B)V")
-	public static void method2577(@OriginalArg(0) String arg0) {
-		System.out.println("Bad " + arg0 + ", Usage: worldid, <live/rc/wip>, <english/german>, <game0/game1>");
-		System.exit(1);
 	}
 
 	@OriginalMember(owner = "client!kd", name = "a", descriptor = "([[F[[II[[FI[ILclient!fj;BLclient!gi;[[FI)V")
@@ -146,8 +134,4 @@ public final class Static131 {
 		}
 	}
 
-	@OriginalMember(owner = "client!kd", name = "a", descriptor = "(IIILclient!ve;)[Lclient!qf;")
-	public static Sprite[] method2580(@OriginalArg(2) int arg0, @OriginalArg(3) Js5 arg1) {
-		return Static234.method4016(arg1, 0, arg0) ? Static33.method870() : null;
-	}
 }

@@ -43,8 +43,8 @@ public final class Static232 {
 			if (local80 > 0) {
 				@Pc(91) int local91 = arg4 + local50 >> 6;
 				local65 += arg0;
-				if (local91 >= 0 && local91 <= Static83.anIntArrayArrayArray3.length - 1) {
-					@Pc(116) int[][] local116 = Static83.anIntArrayArrayArray3[local91];
+				if (local91 >= 0 && local91 <= WorldMap.underlayColors.length - 1) {
+					@Pc(116) int[][] local116 = WorldMap.underlayColors[local91];
 					for (@Pc(119) int local119 = -local47; local119 < local39 + local47; local119++) {
 						@Pc(136) int local136 = arg3 * (local119 + 1) >> 16;
 						@Pc(144) int local144 = local119 * arg3 >> 16;
@@ -57,15 +57,15 @@ public final class Static232 {
 								@Pc(209) int local209 = local116[local163][local203];
 								if (local209 != 0) {
 									@Pc(222) LocType local222 = Static271.get(local209 - 1);
-									if (!Static258.aBooleanArray130[local222.anInt4400]) {
-										if (local11 != -1 && local222.anInt4400 == Static9.anInt172) {
-											@Pc(243) Class3_Sub26 local243 = new Class3_Sub26();
+									if (!Static258.aBooleanArray130[local222.mapElement]) {
+										if (local11 != -1 && local222.mapElement == Static9.anInt172) {
+											@Pc(243) MapElement local243 = new MapElement();
 											local243.anInt4307 = local65;
 											local243.anInt4314 = local144;
-											local243.anInt4308 = local222.anInt4400;
-											Static172.aClass69_97.method2282(local243);
+											local243.id = local222.mapElement;
+											Static172.aClass69_97.addTail(local243);
 										} else {
-											Static241.aClass3_Sub2_Sub1_Sub1Array13[local222.anInt4400].method1423(local65 - 7, local144 + -7);
+											Static241.aClass3_Sub2_Sub1_Sub1Array13[local222.mapElement].method1423(local65 - 7, local144 + -7);
 										}
 									}
 								}
@@ -75,12 +75,12 @@ public final class Static232 {
 				}
 			}
 		}
-		for (@Pc(285) Class3_Sub26 local285 = (Class3_Sub26) Static172.aClass69_97.method2289(); local285 != null; local285 = (Class3_Sub26) Static172.aClass69_97.method2288()) {
-			Static129.method2502(local285.anInt4307, local285.anInt4314, 15, local11);
-			Static129.method2502(local285.anInt4307, local285.anInt4314, 13, local11);
-			Static129.method2502(local285.anInt4307, local285.anInt4314, 11, local11);
-			Static129.method2502(local285.anInt4307, local285.anInt4314, 9, local11);
-			Static241.aClass3_Sub2_Sub1_Sub1Array13[local285.anInt4308].method1423(local285.anInt4307 - 7, local285.anInt4314 + -7);
+		for (@Pc(285) MapElement local285 = (MapElement) Static172.aClass69_97.method2289(); local285 != null; local285 = (MapElement) Static172.aClass69_97.method2288()) {
+			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 15, local11);
+			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 13, local11);
+			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 11, local11);
+			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 9, local11);
+			Static241.aClass3_Sub2_Sub1_Sub1Array13[local285.id].method1423(local285.anInt4307 - 7, local285.anInt4314 + -7);
 		}
 		Static172.aClass69_97.clear();
 	}
