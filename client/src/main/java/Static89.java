@@ -95,7 +95,7 @@ public final class Static89 {
 			local10 = new ByteArrayNode(local27);
 			Static53.aClass54_5.put(local10, (long) arg0);
 		}
-		return local10.aByteArray37;
+		return local10.value;
 	}
 
 	@OriginalMember(owner = "client!ha", name = "a", descriptor = "([IJIZ)Lclient!na;")
