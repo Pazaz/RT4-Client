@@ -36,7 +36,7 @@ public final class Static162 {
 			}
 			@Pc(85) byte[] local85 = new byte[local65];
 			if (local21 == 1) {
-				Bzip2Decompressor.method3316(local85, local65, arg0, local25);
+				Bzip2Decompressor.bunzip2(local85, local65, arg0, local25);
 			} else {
 				Static156.aClass56_1.method1842(local85, local17);
 			}
