@@ -4,22 +4,13 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static178 {
 
-	@OriginalMember(owner = "client!od", name = "f", descriptor = "Lclient!jd;")
-	public static MouseRecorder instance;
-
-	@OriginalMember(owner = "client!od", name = "c", descriptor = "Z")
-	public static boolean highDetailLighting = true;
-
     @OriginalMember(owner = "client!od", name = "g", descriptor = "S")
 	public static short aShort25 = 256;
 
 	@OriginalMember(owner = "client!od", name = "i", descriptor = "I")
 	public static int anInt4247 = 0;
 
-	@OriginalMember(owner = "client!od", name = "n", descriptor = "Z")
-	public static boolean haveIe6 = false;
-
-	@OriginalMember(owner = "client!od", name = "a", descriptor = "(ILclient!na;)V")
+    @OriginalMember(owner = "client!od", name = "a", descriptor = "(ILclient!na;)V")
 	public static void method3318(@OriginalArg(1) JagString arg0) {
 		if (Static199.aClass3_Sub22Array1 == null) {
 			return;

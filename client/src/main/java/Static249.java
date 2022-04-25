@@ -18,10 +18,7 @@ public final class Static249 {
 	@OriginalMember(owner = "client!ud", name = "Q", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1039 = Static28.parse(" x ");
 
-	@OriginalMember(owner = "client!ud", name = "S", descriptor = "Z")
-	public static boolean advertSuppressed = false;
-
-	@OriginalMember(owner = "client!ud", name = "T", descriptor = "[I")
+    @OriginalMember(owner = "client!ud", name = "T", descriptor = "[I")
 	public static final int[] anIntArray478 = new int[32];
 
 	@OriginalMember(owner = "client!ud", name = "a", descriptor = "(ILclient!be;)Z")

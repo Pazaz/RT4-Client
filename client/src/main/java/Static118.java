@@ -91,28 +91,6 @@ public final class Static118 {
 		}
 	}
 
-	@OriginalMember(owner = "client!jd", name = "a", descriptor = "(II[Lclient!na;I)Lclient!na;")
-	public static JagString method2355(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) JagString[] arg2) {
-		@Pc(5) int local5 = 0;
-		for (@Pc(7) int local7 = 0; local7 < arg1; local7++) {
-			if (arg2[arg0 + local7] == null) {
-				arg2[local7 + arg0] = Static193.aClass100_853;
-			}
-			local5 += arg2[local7 + arg0].length;
-		}
-		@Pc(39) byte[] local39 = new byte[local5];
-		@Pc(41) int local41 = 0;
-		for (@Pc(43) int local43 = 0; local43 < arg1; local43++) {
-			@Pc(52) JagString local52 = arg2[local43 + arg0];
-			Static289.copy(local52.chars, 0, local39, local41, local52.length);
-			local41 += local52.length;
-		}
-		@Pc(71) JagString local71 = new JagString();
-		local71.length = local5;
-		local71.chars = local39;
-		return local71;
-	}
-
 	@OriginalMember(owner = "client!jd", name = "a", descriptor = "(II)I")
 	public static int method2356(@OriginalArg(1) int arg0) {
 		return arg0 & 0x7F;

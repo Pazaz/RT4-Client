@@ -13,10 +13,7 @@ public final class Static17 {
 	@OriginalMember(owner = "client!bg", name = "M", descriptor = "I")
 	public static int milliseconds = 0;
 
-	@OriginalMember(owner = "client!bg", name = "N", descriptor = "Lclient!na;")
-	public static final JagString aClass100_102 = Static28.parse("mapfunction");
-
-	@OriginalMember(owner = "client!bg", name = "a", descriptor = "(B)V")
+    @OriginalMember(owner = "client!bg", name = "a", descriptor = "(B)V")
 	public static void method527() {
 		Static57.aClass3_Sub15_Sub1_3.method2233();
 		@Pc(11) int local11 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
@@ -32,7 +29,7 @@ public final class Static17 {
 		@Pc(64) int local64;
 		if (local23 == 1) {
 			local54 = Static57.aClass3_Sub15_Sub1_3.method2238(3);
-			Static173.self.method2684(1, local54);
+			PlayerList.self.method2684(1, local54);
 			local64 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
 			if (local64 == 1) {
 				Static44.anIntArray106[Static116.anInt2951++] = 2047;
@@ -40,12 +37,12 @@ public final class Static17 {
 		} else if (local23 == 2) {
 			if (Static57.aClass3_Sub15_Sub1_3.method2238(1) == 1) {
 				local54 = Static57.aClass3_Sub15_Sub1_3.method2238(3);
-				Static173.self.method2684(2, local54);
+				PlayerList.self.method2684(2, local54);
 				local64 = Static57.aClass3_Sub15_Sub1_3.method2238(3);
-				Static173.self.method2684(2, local64);
+				PlayerList.self.method2684(2, local64);
 			} else {
 				local54 = Static57.aClass3_Sub15_Sub1_3.method2238(3);
-				Static173.self.method2684(0, local54);
+				PlayerList.self.method2684(0, local54);
 			}
 			local54 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
 			if (local54 == 1) {
@@ -60,7 +57,7 @@ public final class Static17 {
 				Static44.anIntArray106[Static116.anInt2951++] = 2047;
 			}
 			@Pc(181) int local181 = Static57.aClass3_Sub15_Sub1_3.method2238(7);
-			Static173.self.method1265(local181, local64 == 1, local54);
+			PlayerList.self.method1265(local181, local64 == 1, local54);
 		}
 	}
 

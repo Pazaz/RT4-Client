@@ -29,11 +29,11 @@ public final class AudioThread implements Runnable {
 						channel.loop();
 					}
 				}
-				Static231.sleep(10L);
+				ThreadUtils.sleep(10L);
 				GameShell.flush(this.signLink, null);
 			}
 		} catch (@Pc(43) Exception ex) {
-			Static89.report(null, ex);
+			TracingException.report(null, ex);
 		} finally {
 			this.running = false;
 		}

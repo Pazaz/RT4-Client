@@ -3,16 +3,10 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static219 {
 
-	@OriginalMember(owner = "client!rl", name = "V", descriptor = "[Lclient!qf;")
-	public static Sprite[] aClass3_Sub2_Sub1Array9;
-
 	@OriginalMember(owner = "client!rl", name = "P", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable sprites = new SoftLruHashTable(64);
 
-	@OriginalMember(owner = "client!rl", name = "S", descriptor = "Lclient!na;")
-	public static final JagString aClass100_920 = Static28.parse("hitmarks");
-
-	@OriginalMember(owner = "client!rl", name = "T", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!rl", name = "T", descriptor = "Lclient!na;")
 	private static final JagString aClass100_921 = Static28.parse("Sat");
 
 	@OriginalMember(owner = "client!rl", name = "U", descriptor = "Lclient!na;")

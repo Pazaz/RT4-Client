@@ -10,10 +10,7 @@ public final class Static24 {
 	@OriginalMember(owner = "client!bn", name = "O", descriptor = "I")
 	public static int anInt761;
 
-	@OriginalMember(owner = "client!bn", name = "V", descriptor = "I")
-	public static int anInt766 = 0;
-
-	@OriginalMember(owner = "client!bn", name = "eb", descriptor = "I")
+    @OriginalMember(owner = "client!bn", name = "eb", descriptor = "I")
 	public static int anInt773 = 0;
 
 	@OriginalMember(owner = "client!bn", name = "c", descriptor = "(II)V")

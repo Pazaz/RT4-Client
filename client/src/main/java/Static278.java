@@ -57,7 +57,7 @@ public final class Static278 {
 					if (local37.anInt3376 == 0) {
 						local37.anInt3381 = 0;
 					}
-					local37.method2683(local37.getSize(), Static173.self.movementQueueX[0] + local124, local105 + Static173.self.movementQueueZ[0], local66 == 1);
+					local37.method2683(local37.getSize(), PlayerList.self.movementQueueX[0] + local124, local105 + PlayerList.self.movementQueueZ[0], local66 == 1);
 					if (local37.type.hasAreaSound()) {
 						Static122.method2411(local37.movementQueueZ[0], null, 0, local37, local37.movementQueueX[0], Static55.level, null);
 					}
@@ -107,9 +107,9 @@ public final class Static278 {
 
 	@OriginalMember(owner = "client!wj", name = "a", descriptor = "(IIB)V")
 	public static void method4650(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		if (Static12.musicVolume != 0 && arg1 != -1) {
-			Static122.method2410(Static214.js5Archive11, arg1, Static12.musicVolume);
-			Static144.aBoolean173 = true;
+		if (Preferences.musicVolume != 0 && arg1 != -1) {
+			Static122.method2410(Static214.js5Archive11, arg1, Preferences.musicVolume);
+			MidiPlayer.jingle = true;
 		}
 	}
 
@@ -195,9 +195,9 @@ public final class Static278 {
 
 	@OriginalMember(owner = "client!wj", name = "b", descriptor = "(B)V")
 	public static void processLogout() {
-		if (Static124.socket != null) {
-			Static124.socket.close();
-			Static124.socket = null;
+		if (Protocol.socket != null) {
+			Protocol.socket.close();
+			Protocol.socket = null;
 		}
 		Static217.method3768();
 		Static65.method1500();
@@ -208,7 +208,7 @@ public final class Static278 {
 		Static116.clear(false);
 		System.gc();
 		Static29.method801();
-		Static144.aBoolean173 = false;
+		MidiPlayer.jingle = false;
 		Static221.anInt4363 = -1;
 		Static260.clearAmbientSounds(true);
 		Static230.dynamicMapRegion = false;

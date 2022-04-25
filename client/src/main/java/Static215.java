@@ -8,15 +8,6 @@ public final class Static215 {
 	@OriginalMember(owner = "client!rh", name = "d", descriptor = "I")
 	public static int anInt4866;
 
-	@OriginalMember(owner = "client!rh", name = "h", descriptor = "Lclient!rk;")
-	public static Font aClass3_Sub2_Sub9_32;
-
-	@OriginalMember(owner = "client!rh", name = "j", descriptor = "Lclient!client;")
-	public static client instance;
-
-	@OriginalMember(owner = "client!rh", name = "e", descriptor = "Lclient!ce;")
-	public static final SecondaryLinkedList serverQueue = new SecondaryLinkedList();
-
 	@OriginalMember(owner = "client!rh", name = "g", descriptor = "I")
 	public static final int anInt4868 = -1;
 

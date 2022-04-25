@@ -76,7 +76,7 @@ public final class SecondaryLinkedList {
 	}
 
 	@OriginalMember(owner = "client!ce", name = "d", descriptor = "(I)V")
-	public final void method802() {
+	public final void clear() {
 		while (true) {
 			@Pc(15) SecondaryNode local15 = this.aClass3_Sub2_21.aClass3_Sub2_67;
 			if (this.aClass3_Sub2_21 == local15) {

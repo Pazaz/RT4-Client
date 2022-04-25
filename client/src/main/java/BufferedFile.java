@@ -79,7 +79,7 @@ public final class BufferedFile {
 		}
 		if (start > -1L && end > start) {
 			@Pc(208) int copyLen = (int) (end - start);
-			Static289.copy(this.writeBuffer, (int) (start - this.writePosition), this.readBuffer, (int) (start - this.readPosition), copyLen);
+			JagString.copy(this.writeBuffer, (int) (start - this.writePosition), this.readBuffer, (int) (start - this.readPosition), copyLen);
 		}
 		this.writeLen = 0;
 		this.writePosition = -1L;
@@ -102,7 +102,7 @@ public final class BufferedFile {
 				throw new ArrayIndexOutOfBoundsException(len - b.length);
 			}
 			if (this.writePosition != -1L && this.virtualPosition >= this.writePosition && (long) this.writeLen + this.writePosition >= (long) len + this.virtualPosition) {
-				Static289.copy(this.writeBuffer, (int) (this.virtualPosition - this.writePosition), b, 0, len);
+				JagString.copy(this.writeBuffer, (int) (this.virtualPosition - this.writePosition), b, 0, len);
 				this.virtualPosition += len;
 				return;
 			}
@@ -114,7 +114,7 @@ public final class BufferedFile {
 				if (n > len) {
 					n = len;
 				}
-				Static289.copy(this.readBuffer, (int) (this.virtualPosition - this.readPosition), b, 0, n);
+				JagString.copy(this.readBuffer, (int) (this.virtualPosition - this.readPosition), b, 0, n);
 				off = n;
 				len -= n;
 				this.virtualPosition += n;
@@ -138,7 +138,7 @@ public final class BufferedFile {
 				if (len > this.readLen) {
 					n = this.readLen;
 				}
-				Static289.copy(this.readBuffer, 0, b, off, n);
+				JagString.copy(this.readBuffer, 0, b, off, n);
 				len -= n;
 				off += n;
 				this.virtualPosition += n;
@@ -169,7 +169,7 @@ public final class BufferedFile {
 				}
 				if (end > -1L && start > end) {
 					@Pc(426) int copyLen = (int) (start - end);
-					Static289.copy(this.writeBuffer, (int) (end - this.writePosition), b, (int) (end - originalPosition), copyLen);
+					JagString.copy(this.writeBuffer, (int) (end - this.writePosition), b, (int) (end - originalPosition), copyLen);
 					if (this.virtualPosition < start) {
 						len = (int) ((long) len + this.virtualPosition - start);
 						this.virtualPosition = start;
@@ -230,7 +230,7 @@ public final class BufferedFile {
 			if (this.writePosition != -1L && (long) this.writeBuffer.length + this.writePosition < (long) len + this.virtualPosition) {
 				@Pc(90) int n = (int) ((long) this.writeBuffer.length + this.writePosition - this.virtualPosition);
 				len -= n;
-				Static289.copy(b, off, this.writeBuffer, (int) (this.virtualPosition - this.writePosition), n);
+				JagString.copy(b, off, this.writeBuffer, (int) (this.virtualPosition - this.writePosition), n);
 				this.virtualPosition += n;
 				this.writeLen = this.writeBuffer.length;
 				this.flush();
@@ -260,14 +260,14 @@ public final class BufferedFile {
 				}
 				if (start > -1L && end > start) {
 					@Pc(324) int copyLen = (int) (end - start);
-					Static289.copy(b, (int) (start + (long) off - this.virtualPosition), this.readBuffer, (int) (start - this.readPosition), copyLen);
+					JagString.copy(b, (int) (start + (long) off - this.virtualPosition), this.readBuffer, (int) (start - this.readPosition), copyLen);
 				}
 				this.virtualPosition += len;
 			} else if (len > 0) {
 				if (this.writePosition == -1L) {
 					this.writePosition = this.virtualPosition;
 				}
-				Static289.copy(b, off, this.writeBuffer, (int) (this.virtualPosition - this.writePosition), len);
+				JagString.copy(b, off, this.writeBuffer, (int) (this.virtualPosition - this.writePosition), len);
 				this.virtualPosition += len;
 				if ((long) this.writeLen < this.virtualPosition - this.writePosition) {
 					this.writeLen = (int) (this.virtualPosition - this.writePosition);

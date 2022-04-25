@@ -7,9 +7,6 @@ public final class Static276 {
 	@OriginalMember(owner = "client!wh", name = "c", descriptor = "[[[Lclient!bj;")
 	public static Tile[][][] underWaterGroundTiles;
 
-	@OriginalMember(owner = "client!wh", name = "l", descriptor = "[Lclient!qf;")
-	public static Sprite[] aClass3_Sub2_Sub1Array11;
-
 	@OriginalMember(owner = "client!wh", name = "g", descriptor = "[I")
 	public static final int[] anIntArray563 = new int[50];
 
@@ -55,7 +52,7 @@ public final class Static276 {
 			@Pc(28) Player local28 = Static159.players[Static105.anIntArray256[local15]];
 			if (local28 != null && local28.aClass100_364 != null && local28.aClass100_364.equalsIgnoreCase(local7)) {
 				local13 = true;
-				Static102.method2075(Static173.self.movementQueueZ[0], 0, 1, false, 0, local28.movementQueueX[0], 1, 0, 2, local28.movementQueueZ[0], Static173.self.movementQueueX[0]);
+				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local28.movementQueueX[0], 1, 0, 2, local28.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
 				if (arg0 == 1) {
 					Static6.outboundBuffer.p1isaac(68);
 					Static6.outboundBuffer.p2leadd(Static105.anIntArray256[local15]);
@@ -76,7 +73,7 @@ public final class Static276 {
 			}
 		}
 		if (!local13) {
-			Static103.method2231(Static186.EMPTY, 0, Static34.concatenate(new JagString[] { LocalizedText.UNABLETOFIND, local7 }));
+			Static103.method2231(JagString.EMPTY, 0, JagString.concatenate(new JagString[] { LocalizedText.UNABLETOFIND, local7 }));
 		}
 	}
 
@@ -84,11 +81,11 @@ public final class Static276 {
 	public static IndexedSprite method4614() {
 		@Pc(27) IndexedSprite local27;
 		if (GlRenderer.enabled) {
-			local27 = new GlIndexedSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[0], Static269.anIntArray252[0], Static254.anIntArray488[0], Static26.anIntArray66[0], Static7.aByteArrayArray5[0], Static259.anIntArray513);
+			local27 = new GlIndexedSprite(SpriteLoader.width, SpriteLoader.height, SpriteLoader.xOffsets[0], SpriteLoader.yOffsets[0], SpriteLoader.innerWidths[0], SpriteLoader.innerHeights[0], SpriteLoader.pixels[0], SpriteLoader.palette);
 		} else {
-			local27 = new SoftwareIndexedSprite(Static124.anInt3080, Static227.anInt5091, Static274.anIntArray440[0], Static269.anIntArray252[0], Static254.anIntArray488[0], Static26.anIntArray66[0], Static7.aByteArrayArray5[0], Static259.anIntArray513);
+			local27 = new SoftwareIndexedSprite(SpriteLoader.width, SpriteLoader.height, SpriteLoader.xOffsets[0], SpriteLoader.yOffsets[0], SpriteLoader.innerWidths[0], SpriteLoader.innerHeights[0], SpriteLoader.pixels[0], SpriteLoader.palette);
 		}
-		Static75.method1631();
+		SpriteLoader.clear();
 		return local27;
 	}
 

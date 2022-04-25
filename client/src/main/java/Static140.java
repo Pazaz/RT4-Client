@@ -8,16 +8,13 @@ public final class Static140 {
 	@OriginalMember(owner = "client!la", name = "i", descriptor = "[[[I")
 	public static int[][][] anIntArrayArrayArray12;
 
-	@OriginalMember(owner = "client!la", name = "f", descriptor = "Lclient!ce;")
-	public static final SecondaryLinkedList clientQueue = new SecondaryLinkedList();
-
-	@OriginalMember(owner = "client!la", name = "a", descriptor = "(Lclient!wa;Z)V")
+    @OriginalMember(owner = "client!la", name = "a", descriptor = "(Lclient!wa;Z)V")
 	public static void method2705(@OriginalArg(0) Buffer arg0) {
 		@Pc(15) byte[] local15 = new byte[24];
-		if (Static121.uid != null) {
+		if (client.uid != null) {
 			try {
-				Static121.uid.seek(0L);
-				Static121.uid.read(local15);
+				client.uid.seek(0L);
+				client.uid.read(local15);
 				@Pc(28) int local28;
 				for (local28 = 0; local28 < 24 && local15[local28] == 0; local28++) {
 				}
@@ -53,25 +50,25 @@ public final class Static140 {
 			return;
 		}
 		if (Static35.anInt1093 >= 100) {
-			Static103.method2231(Static186.EMPTY, 0, LocalizedText.IGNORELISTFULL);
+			Static103.method2231(JagString.EMPTY, 0, LocalizedText.IGNORELISTFULL);
 			return;
 		}
 		@Pc(34) JagString local34 = Static79.decode37(arg0).method3125();
 		@Pc(36) int local36;
 		for (local36 = 0; local36 < Static35.anInt1093; local36++) {
 			if (Static190.aLongArray6[local36] == arg0) {
-				Static103.method2231(Static186.EMPTY, 0, Static34.concatenate(new JagString[] { local34, LocalizedText.IGNORELISTDUPE}));
+				Static103.method2231(JagString.EMPTY, 0, JagString.concatenate(new JagString[] { local34, LocalizedText.IGNORELISTDUPE}));
 				return;
 			}
 		}
 		for (local36 = 0; local36 < Static9.anInt178; local36++) {
 			if (Static92.aLongArray3[local36] == arg0) {
-				Static103.method2231(Static186.EMPTY, 0, Static34.concatenate(new JagString[] { LocalizedText.REMOVESOCIAL2, local34, LocalizedText.REMOVEFRIEND}));
+				Static103.method2231(JagString.EMPTY, 0, JagString.concatenate(new JagString[] { LocalizedText.REMOVESOCIAL2, local34, LocalizedText.REMOVEFRIEND}));
 				return;
 			}
 		}
-		if (local34.strEquals(Static173.self.aClass100_364)) {
-			Static103.method2231(Static186.EMPTY, 0, LocalizedText.IGNORECANTADDSELF);
+		if (local34.strEquals(PlayerList.self.aClass100_364)) {
+			Static103.method2231(JagString.EMPTY, 0, LocalizedText.IGNORECANTADDSELF);
 			return;
 		}
 		Static190.aLongArray6[Static35.anInt1093] = arg0;
@@ -96,22 +93,4 @@ public final class Static140 {
 		return local10;
 	}
 
-	@OriginalMember(owner = "client!la", name = "a", descriptor = "(ILclient!na;Lclient!ve;)Lclient!se;")
-	public static MapFunctionGroup createMapFunctionGroup(@OriginalArg(1) JagString arg0, @OriginalArg(2) Js5 arg1) {
-		@Pc(10) int local10 = arg1.getGroupId(arg0);
-		if (local10 == -1) {
-			return new MapFunctionGroup(0);
-		}
-		@Pc(29) int[] local29 = arg1.method4503(local10);
-		@Pc(35) MapFunctionGroup local35 = new MapFunctionGroup(local29.length);
-		for (@Pc(37) int local37 = 0; local37 < local35.anInt5074; local37++) {
-			@Pc(56) Buffer local56 = new Buffer(arg1.getFile(local10, local29[local37]));
-			local35.aClass100Array153[local37] = local56.gjstr();
-			local35.aByteArray69[local37] = local56.g1s();
-			local35.aShortArray73[local37] = (short) local56.g2();
-			local35.aShortArray72[local37] = (short) local56.g2();
-			local35.anIntArray444[local37] = local56.g4();
-		}
-		return local35;
-	}
 }

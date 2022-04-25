@@ -33,7 +33,7 @@ public final class SoundBank {
 		if (local37 != null) {
 			return local37;
 		} else if (arg0 == null || arg0[0] > 0) {
-			@Pc(59) SynthSound local59 = Static292.method3988(this.aClass153_52, arg1, arg2);
+			@Pc(59) SynthSound local59 = SynthSound.create(this.aClass153_52, arg1, arg2);
 			if (local59 == null) {
 				return null;
 			}

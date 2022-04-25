@@ -34,10 +34,7 @@ public final class Static233 {
 	@OriginalMember(owner = "client!t", name = "w", descriptor = "[J")
 	public static final long[] aLongArray9 = new long[100];
 
-	@OriginalMember(owner = "client!t", name = "x", descriptor = "Z")
-	public static boolean javaScript = false;
-
-	@OriginalMember(owner = "client!t", name = "y", descriptor = "I")
+    @OriginalMember(owner = "client!t", name = "y", descriptor = "I")
 	public static int loadingScreenState = 0;
 
 	@OriginalMember(owner = "client!t", name = "z", descriptor = "I")
@@ -66,7 +63,7 @@ public final class Static233 {
 			if (local17 != null && local17.anInt4058 == 2) {
 				Static198.method1026(arg0 >> 1, arg4, (local17.anInt4046 - Static142.originZ << 7) + local17.anInt4047, local17.anInt4050 * 2, arg2 >> 1, local17.anInt4045 + (local17.anInt4053 - Static225.originX << 7), arg3);
 				if (Static65.anInt1951 > -1 && Static83.loop % 20 < 10) {
-					Static276.aClass3_Sub2_Sub1Array11[local17.anInt4048].method1423(arg1 + Static65.anInt1951 - 12, arg5 + -28 - -Static16.anInt548);
+					Sprites.headhints[local17.anInt4048].method1423(arg1 + Static65.anInt1951 - 12, arg5 + -28 - -Static16.anInt548);
 				}
 			}
 			local3++;
@@ -136,9 +133,9 @@ public final class Static233 {
 			if (local24 != 0) {
 				local73 = (local73 << local24 & 0xF) + (local73 >> 4 - local24);
 			}
-			Static102.method2075(Static173.self.movementQueueZ[0], 0, local59, true, local73, arg2, local62, 0, 2, arg1, Static173.self.movementQueueX[0]);
+			Static102.method2075(PlayerList.self.movementQueueZ[0], 0, local59, true, local73, arg2, local62, 0, 2, arg1, PlayerList.self.movementQueueX[0]);
 		} else {
-			Static102.method2075(Static173.self.movementQueueZ[0], local24, 0, true, 0, arg2, 0, local12 + 1, 2, arg1, Static173.self.movementQueueX[0]);
+			Static102.method2075(PlayerList.self.movementQueueZ[0], local24, 0, true, 0, arg2, 0, local12 + 1, 2, arg1, PlayerList.self.movementQueueX[0]);
 		}
 		Static25.y = Static60.clickY;
 		Static17.milliseconds = 0;

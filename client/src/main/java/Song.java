@@ -297,7 +297,13 @@ public final class Song extends Node {
 		}
 	}
 
-	@OriginalMember(owner = "client!rf", name = "a", descriptor = "()V")
+    @OriginalMember(owner = "client!rf", name = "a", descriptor = "(Lclient!ve;II)Lclient!rf;")
+    public static Song create(@OriginalArg(0) Js5 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+        @Pc(5) byte[] local5 = arg0.getFile(arg1, arg2);
+        return local5 == null ? null : new Song(new Buffer(local5));
+    }
+
+    @OriginalMember(owner = "client!rf", name = "a", descriptor = "()V")
 	public final void method3740() {
 		this.aClass133_22 = null;
 	}

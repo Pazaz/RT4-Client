@@ -36,7 +36,7 @@ public final class HashTable {
 	}
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(I)V")
-	public final void method3856() {
+	public final void clear() {
 		for (@Pc(5) int local5 = 0; local5 < this.anInt5023; local5++) {
 			@Pc(14) Node local14 = this.aClass3Array1[local5];
 			while (true) {

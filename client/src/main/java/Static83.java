@@ -4,19 +4,10 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static83 {
 
-	@OriginalMember(owner = "client!gj", name = "i", descriptor = "[[[I")
-	public static int[][][] anIntArrayArrayArray3;
-
-	@OriginalMember(owner = "client!gj", name = "m", descriptor = "[[[I")
+    @OriginalMember(owner = "client!gj", name = "m", descriptor = "[[[I")
 	public static int[][][] activeTileHeightMap;
 
-	@OriginalMember(owner = "client!gj", name = "r", descriptor = "F")
-	public static float aFloat3;
-
-	@OriginalMember(owner = "client!gj", name = "b", descriptor = "I")
-	public static int modeWhere = 0;
-
-	@OriginalMember(owner = "client!gj", name = "d", descriptor = "I")
+    @OriginalMember(owner = "client!gj", name = "d", descriptor = "I")
 	public static int loop = 0;
 
 	@OriginalMember(owner = "client!gj", name = "p", descriptor = "Lclient!n;")

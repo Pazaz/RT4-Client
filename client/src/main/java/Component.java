@@ -504,7 +504,7 @@ public final class Component {
 		if (local18 == null) {
 			return false;
 		}
-		local18.method1396();
+		local18.trim();
 		this.anIntArray37 = new int[local18.height];
 		this.anIntArray45 = new int[local18.height];
 		for (@Pc(37) int local37 = 0; local37 < local18.height; local37++) {
@@ -778,7 +778,7 @@ public final class Component {
 		if (local43 != null) {
 			return local43;
 		}
-		local43 = Static150.method2800(local29, Static23.aClass153_12);
+		local43 = SpriteLoader.loadSprites(local29, Static23.aClass153_12);
 		if (local43 == null) {
 			Static211.aBoolean72 = true;
 		} else {
@@ -938,7 +938,7 @@ public final class Component {
 		if (this.aBoolean18) {
 			local85 = Static80.loadSoftwareAlphaSprite(Static23.aClass153_12, local12);
 		} else {
-			local85 = Static78.method1693(0, Static23.aClass153_12, local12);
+			local85 = SpriteLoader.loadSoftwareSprite(0, Static23.aClass153_12, local12);
 		}
 		if (local85 == null) {
 			Static211.aBoolean72 = true;

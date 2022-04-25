@@ -24,24 +24,24 @@ public final class Static74 {
 
 	@OriginalMember(owner = "client!fn", name = "a", descriptor = "(BIIIII)V")
 	public static void method1624(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
-		Static241.aClass36Array16[0].renderTransparent(arg2, arg3);
-		Static241.aClass36Array16[1].renderTransparent(arg2, arg4 + arg3 - 16);
+		Sprites.scrollbars[0].renderTransparent(arg2, arg3);
+		Sprites.scrollbars[1].renderTransparent(arg2, arg4 + arg3 - 16);
 		@Pc(35) int local35 = arg4 * (arg4 - 32) / arg1;
 		if (local35 < 8) {
 			local35 = 8;
 		}
 		@Pc(54) int local54 = arg0 * (arg4 - local35 - 32) / (arg1 - arg4);
 		if (!GlRenderer.enabled) {
-			Static129.method2495(arg2, arg3 + 16, 16, arg4 - 32, Static182.anInt4306);
-			Static129.method2495(arg2, local54 + arg3 + 16, 16, local35, Static53.anInt1704);
-			Static129.method2490(arg2, local54 + arg3 + 16, local35, Static219.anInt4938);
-			Static129.method2490(arg2 + 1, local54 + 16 + arg3, local35, Static219.anInt4938);
-			Static129.method2489(arg2, arg3 + local54 + 16, 16, Static219.anInt4938);
-			Static129.method2489(arg2, arg3 + local54 + 17, 16, Static219.anInt4938);
-			Static129.method2490(arg2 + 15, local54 + 16 + arg3, local35, Static20.anInt671);
-			Static129.method2490(arg2 + 14, arg3 - -17 - -local54, local35 - 1, Static20.anInt671);
-			Static129.method2489(arg2, local35 + arg3 + local54 + 15, 16, Static20.anInt671);
-			Static129.method2489(arg2 + 1, local35 + arg3 - (-local54 + -14), 15, Static20.anInt671);
+			SoftwareRaster.fillRect(arg2, arg3 + 16, 16, arg4 - 32, Static182.anInt4306);
+			SoftwareRaster.fillRect(arg2, local54 + arg3 + 16, 16, local35, Static53.anInt1704);
+			SoftwareRaster.drawVerticalLine(arg2, local54 + arg3 + 16, local35, Static219.anInt4938);
+			SoftwareRaster.drawVerticalLine(arg2 + 1, local54 + 16 + arg3, local35, Static219.anInt4938);
+			SoftwareRaster.drawHorizontalLine(arg2, arg3 + local54 + 16, 16, Static219.anInt4938);
+			SoftwareRaster.drawHorizontalLine(arg2, arg3 + local54 + 17, 16, Static219.anInt4938);
+			SoftwareRaster.drawVerticalLine(arg2 + 15, local54 + 16 + arg3, local35, Static20.anInt671);
+			SoftwareRaster.drawVerticalLine(arg2 + 14, arg3 - -17 - -local54, local35 - 1, Static20.anInt671);
+			SoftwareRaster.drawHorizontalLine(arg2, local35 + arg3 + local54 + 15, 16, Static20.anInt671);
+			SoftwareRaster.drawHorizontalLine(arg2 + 1, local35 + arg3 - (-local54 + -14), 15, Static20.anInt671);
 			return;
 		}
 		Static46.method1186(arg2, arg3 + 16, 16, arg4 - 32, Static182.anInt4306);
@@ -89,27 +89,4 @@ public final class Static74 {
 		}
 	}
 
-	@OriginalMember(owner = "client!fn", name = "a", descriptor = "(Lclient!ve;Lclient!ve;Z)I")
-	public static int getReady(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {
-		@Pc(5) int local5 = 0;
-		if (arg0.isFileReady(Static166.anInt4049)) {
-			local5++;
-		}
-		if (arg0.isFileReady(Static130.anInt3161)) {
-			local5++;
-		}
-		if (arg0.isFileReady(Static73.anInt2077)) {
-			local5++;
-		}
-		if (arg1.isFileReady(Static166.anInt4049)) {
-			local5++;
-		}
-		if (arg1.isFileReady(Static130.anInt3161)) {
-			local5++;
-		}
-		if (arg1.isFileReady(Static73.anInt2077)) {
-			local5++;
-		}
-		return local5;
-	}
 }

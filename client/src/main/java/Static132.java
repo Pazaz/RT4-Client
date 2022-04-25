@@ -41,9 +41,9 @@ public final class Static132 {
 			Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
 		} else {
 			Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
-			local43 = Static280.aClass3_Sub2_Sub9_43.getStringWidth(LocalizedText.CHOOSE_OPTION);
+			local43 = Fonts.b12Full.getStringWidth(LocalizedText.CHOOSE_OPTION);
 			for (@Pc(75) int local75 = 0; local75 < Static231.anInt5204; local75++) {
-				@Pc(88) int local88 = Static280.aClass3_Sub2_Sub9_43.getStringWidth(Static269.method2228(local75));
+				@Pc(88) int local88 = Fonts.b12Full.getStringWidth(Static269.method2228(local75));
 				if (local43 < local88) {
 					local43 = local88;
 				}
@@ -51,8 +51,8 @@ public final class Static132 {
 			Static13.anInt436 = Static231.anInt5204 * 15 + (Static261.aBoolean298 ? 26 : 22);
 			Static24.anInt761 = local43 + 8;
 		}
-		if (Static154.topLevelInterface != -1) {
-			Static54.method1304(1, Static154.topLevelInterface);
+		if (InterfaceList.topLevelInterface != -1) {
+			Static54.method1304(1, InterfaceList.topLevelInterface);
 		}
 	}
 
@@ -97,10 +97,10 @@ public final class Static132 {
 		@Pc(21) int local21 = local20 = local7 + 128;
 		@Pc(26) int local26;
 		@Pc(27) int local27 = local26 = local15 + 128;
-		@Pc(37) int local37 = Static83.activeTileHeightMap[arg1][arg6][arg7] - Static162.anInt3947;
-		@Pc(49) int local49 = Static83.activeTileHeightMap[arg1][arg6 + 1][arg7] - Static162.anInt3947;
-		@Pc(63) int local63 = Static83.activeTileHeightMap[arg1][arg6 + 1][arg7 + 1] - Static162.anInt3947;
-		@Pc(75) int local75 = Static83.activeTileHeightMap[arg1][arg6][arg7 + 1] - Static162.anInt3947;
+		@Pc(37) int local37 = Static83.activeTileHeightMap[arg1][arg6][arg7] - Static123.anInt3947;
+		@Pc(49) int local49 = Static83.activeTileHeightMap[arg1][arg6 + 1][arg7] - Static123.anInt3947;
+		@Pc(63) int local63 = Static83.activeTileHeightMap[arg1][arg6 + 1][arg7 + 1] - Static123.anInt3947;
+		@Pc(75) int local75 = Static83.activeTileHeightMap[arg1][arg6][arg7 + 1] - Static123.anInt3947;
 		@Pc(85) int local85 = local15 * arg4 + local7 * arg5 >> 16;
 		@Pc(95) int local95 = local15 * arg5 - local7 * arg4 >> 16;
 		@Pc(97) int local97 = local85;
@@ -160,7 +160,7 @@ public final class Static132 {
 					if (arg0.anInt4865 != 12345678) {
 						Rasteriser.fillGouraudTriangle(local315, local331, local299, local307, local323, local291, arg0.anInt4865, arg0.anInt4864, arg0.anInt4867);
 					}
-				} else if (!Static159.manyGroundTextures) {
+				} else if (!Preferences.manyGroundTextures) {
 					local475 = Rasteriser.textureProvider.getAverageColor(arg0.anInt4869);
 					Rasteriser.fillGouraudTriangle(local315, local331, local299, local307, local323, local291, Static216.method1640(local475, arg0.anInt4865), Static216.method1640(local475, arg0.anInt4864), Static216.method1640(local475, arg0.anInt4867));
 				} else if (arg0.aBoolean241) {
@@ -188,7 +188,7 @@ public final class Static132 {
 			if (arg0.anInt4872 != 12345678) {
 				Rasteriser.fillGouraudTriangle(local283, local299, local331, local275, local291, local323, arg0.anInt4872, arg0.anInt4867, arg0.anInt4864);
 			}
-		} else if (Static159.manyGroundTextures) {
+		} else if (Preferences.manyGroundTextures) {
 			Rasteriser.fillTexturedTriangle(local283, local299, local331, local275, local291, local323, arg0.anInt4872, arg0.anInt4867, arg0.anInt4864, local97, local21, local241, local119, local49, local85, local117, local165, local261, arg0.anInt4869);
 		} else {
 			local475 = Rasteriser.textureProvider.getAverageColor(arg0.anInt4869);

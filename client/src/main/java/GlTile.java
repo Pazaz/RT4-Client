@@ -291,7 +291,7 @@ public final class GlTile extends Node {
 			local257.glVertexPointer(3, GL2.GL_FLOAT, local282, this.aByteBuffer3);
 			this.aByteBuffer3.position(12);
 			local257.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, local282, this.aByteBuffer3);
-			if (Static178.highDetailLighting) {
+			if (Preferences.highDetailLighting) {
 				this.aByteBuffer3.position(16);
 				local257.glNormalPointer(GL2.GL_FLOAT, local282, this.aByteBuffer3);
 			}
@@ -307,7 +307,7 @@ public final class GlTile extends Node {
 			this.aClass155_3.method4516();
 			local257.glVertexPointer(3, GL2.GL_FLOAT, local282, 0L);
 			local257.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, local282, 12L);
-			if (Static178.highDetailLighting) {
+			if (Preferences.highDetailLighting) {
 				local257.glNormalPointer(GL2.GL_FLOAT, local282, 16L);
 			}
 			local257.glTexCoordPointer(2, GL2.GL_FLOAT, local282, 28L);

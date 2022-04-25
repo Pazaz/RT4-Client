@@ -10,12 +10,6 @@ public final class Static84 {
 	@OriginalMember(owner = "client!gk", name = "e", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_35;
 
-	@OriginalMember(owner = "client!gk", name = "j", descriptor = "I")
-	public static int anInt2257;
-
-	@OriginalMember(owner = "client!gk", name = "l", descriptor = "Lclient!qf;")
-	public static Sprite aClass3_Sub2_Sub1_4;
-
 	@OriginalMember(owner = "client!gk", name = "c", descriptor = "[I")
 	public static final int[] anIntArray209 = new int[4096];
 
@@ -39,7 +33,7 @@ public final class Static84 {
 			@Pc(21) int local21 = Static57.aClass3_Sub15_Sub1_3.g1();
 			local24 = Static57.aClass3_Sub15_Sub1_3.offset;
 			@Pc(35) boolean local35 = (local13 & 0x8000) != 0;
-			if (arg2.aClass100_364 != null && arg2.aClass59_1 != null) {
+			if (arg2.aClass100_364 != null && arg2.appearance != null) {
 				@Pc(48) long local48 = arg2.aClass100_364.encode37();
 				@Pc(50) boolean local50 = false;
 				if (local17 <= 1) {
@@ -73,9 +67,9 @@ public final class Static84 {
 					arg2.anInt3408 = 150;
 					arg2.anInt3429 = local13 >> 8;
 					if (local17 == 2) {
-						Static154.method2928(local106, local35 ? 17 : 1, local127, null, Static34.concatenate(new JagString[] { Static44.aClass100_336, arg2.method1264() }));
+						Static154.method2928(local106, local35 ? 17 : 1, local127, null, JagString.concatenate(new JagString[] { Static44.aClass100_336, arg2.method1264() }));
 					} else if (local17 == 1) {
-						Static154.method2928(local106, local35 ? 17 : 1, local127, null, Static34.concatenate(new JagString[] { Static65.aClass100_435, arg2.method1264() }));
+						Static154.method2928(local106, local35 ? 17 : 1, local127, null, JagString.concatenate(new JagString[] { Static65.aClass100_435, arg2.method1264() }));
 					} else {
 						Static154.method2928(local106, local35 ? 17 : 2, local127, null, arg2.method1264());
 					}
@@ -96,7 +90,7 @@ public final class Static84 {
 				local13 = -1;
 			}
 			local17 = Static57.aClass3_Sub15_Sub1_3.g1();
-			Static186.method3415(local17, local13, arg2);
+			Player.animate(local17, local13, arg2);
 		}
 		if ((arg0 & 0x4) != 0) {
 			local13 = Static57.aClass3_Sub15_Sub1_3.g1add();
@@ -128,7 +122,7 @@ public final class Static84 {
 			if (arg2.aClass100_640.charAt(0) == 126) {
 				arg2.aClass100_640 = arg2.aClass100_640.substring(1);
 				Static103.method2231(arg2.method1264(), 2, arg2.aClass100_640);
-			} else if (arg2 == Static173.self) {
+			} else if (arg2 == PlayerList.self) {
 				Static103.method2231(arg2.method1264(), 2, arg2.aClass100_640);
 			}
 			arg2.anInt3352 = 0;
@@ -181,7 +175,7 @@ public final class Static84 {
 					if (local24 != -1) {
 						@Pc(663) SeqType local663 = Static36.get(local24);
 						if (local663 != null && local663.frames != null) {
-							Static152.method2836(arg2.zFine, local663, arg2.xFine, arg2 == Static173.self, 0);
+							SoundPlayer.playSeqSound(arg2.zFine, local663, arg2.xFine, arg2 == PlayerList.self, 0);
 						}
 					}
 				}
@@ -190,95 +184,6 @@ public final class Static84 {
 		if ((arg0 & 0x40) != 0) {
 			arg2.anInt3382 = Static57.aClass3_Sub15_Sub1_3.g2();
 			arg2.anInt3363 = Static57.aClass3_Sub15_Sub1_3.g2leadd();
-		}
-	}
-
-	@OriginalMember(owner = "client!gk", name = "a", descriptor = "([BI)V")
-	public static void method1770(@OriginalArg(0) byte[] arg0) {
-		@Pc(4) Buffer local4 = new Buffer(arg0);
-		local4.offset = arg0.length - 2;
-		Static165.anInt4038 = local4.g2();
-		Static26.anIntArray66 = new int[Static165.anInt4038];
-		Static254.anIntArray488 = new int[Static165.anInt4038];
-		Static274.anIntArray440 = new int[Static165.anInt4038];
-		Static159.aBooleanArray87 = new boolean[Static165.anInt4038];
-		Static64.aByteArrayArray9 = new byte[Static165.anInt4038][];
-		Static269.anIntArray252 = new int[Static165.anInt4038];
-		Static7.aByteArrayArray5 = new byte[Static165.anInt4038][];
-		local4.offset = arg0.length - Static165.anInt4038 * 8 - 7;
-		Static124.anInt3080 = local4.g2();
-		Static227.anInt5091 = local4.g2();
-		@Pc(66) int local66 = (local4.g1() & 0xFF) + 1;
-		@Pc(68) int local68;
-		for (local68 = 0; local68 < Static165.anInt4038; local68++) {
-			Static274.anIntArray440[local68] = local4.g2();
-		}
-		for (local68 = 0; local68 < Static165.anInt4038; local68++) {
-			Static269.anIntArray252[local68] = local4.g2();
-		}
-		for (local68 = 0; local68 < Static165.anInt4038; local68++) {
-			Static254.anIntArray488[local68] = local4.g2();
-		}
-		for (local68 = 0; local68 < Static165.anInt4038; local68++) {
-			Static26.anIntArray66[local68] = local4.g2();
-		}
-		local4.offset = arg0.length + 3 - Static165.anInt4038 * 8 - local66 * 3 - 7;
-		Static259.anIntArray513 = new int[local66];
-		for (local68 = 1; local68 < local66; local68++) {
-			Static259.anIntArray513[local68] = local4.g3();
-			if (Static259.anIntArray513[local68] == 0) {
-				Static259.anIntArray513[local68] = 1;
-			}
-		}
-		local4.offset = 0;
-		for (local68 = 0; local68 < Static165.anInt4038; local68++) {
-			@Pc(195) int local195 = Static254.anIntArray488[local68];
-			@Pc(199) int local199 = Static26.anIntArray66[local68];
-			@Pc(203) int local203 = local195 * local199;
-			@Pc(206) byte[] local206 = new byte[local203];
-			@Pc(208) boolean local208 = false;
-			Static7.aByteArrayArray5[local68] = local206;
-			@Pc(215) byte[] local215 = new byte[local203];
-			Static64.aByteArrayArray9[local68] = local215;
-			@Pc(223) int local223 = local4.g1();
-			@Pc(232) int local232;
-			if ((local223 & 0x1) == 0) {
-				for (local232 = 0; local232 < local203; local232++) {
-					local206[local232] = local4.g1s();
-				}
-				if ((local223 & 0x2) != 0) {
-					for (local232 = 0; local232 < local203; local232++) {
-						@Pc(343) byte local343 = local215[local232] = local4.g1s();
-						local208 |= local343 != -1;
-					}
-				}
-			} else {
-				local232 = 0;
-				label88: while (true) {
-					@Pc(241) int local241;
-					if (local232 >= local195) {
-						if ((local223 & 0x2) == 0) {
-							break;
-						}
-						local232 = 0;
-						while (true) {
-							if (local232 >= local195) {
-								break label88;
-							}
-							for (local241 = 0; local241 < local199; local241++) {
-								@Pc(291) byte local291 = local215[local195 * local241 + local232] = local4.g1s();
-								local208 |= local291 != -1;
-							}
-							local232++;
-						}
-					}
-					for (local241 = 0; local241 < local199; local241++) {
-						local206[local232 + local241 * local195] = local4.g1s();
-					}
-					local232++;
-				}
-			}
-			Static159.aBooleanArray87[local68] = local208;
 		}
 	}
 

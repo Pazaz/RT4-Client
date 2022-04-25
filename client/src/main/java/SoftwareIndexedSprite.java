@@ -88,31 +88,31 @@ public final class SoftwareIndexedSprite extends IndexedSprite {
 		if (local5 < local15) {
 			arg3 = ((local5 << 16) + local27 - local9 - 1) / local27;
 		}
-		local41 = arg0 + arg1 * Static129.width;
-		@Pc(125) int local125 = Static129.width - arg2;
-		if (arg1 + arg3 > Static129.clipBottom) {
-			arg3 -= arg1 + arg3 - Static129.clipBottom;
+		local41 = arg0 + arg1 * SoftwareRaster.width;
+		@Pc(125) int local125 = SoftwareRaster.width - arg2;
+		if (arg1 + arg3 > SoftwareRaster.clipBottom) {
+			arg3 -= arg1 + arg3 - SoftwareRaster.clipBottom;
 		}
 		@Pc(145) int local145;
-		if (arg1 < Static129.clipTop) {
-			local145 = Static129.clipTop - arg1;
+		if (arg1 < SoftwareRaster.clipTop) {
+			local145 = SoftwareRaster.clipTop - arg1;
 			arg3 -= local145;
-			local41 += local145 * Static129.width;
+			local41 += local145 * SoftwareRaster.width;
 			local9 += local27 * local145;
 		}
-		if (arg0 + arg2 > Static129.clipRight) {
-			local145 = arg0 + arg2 - Static129.clipRight;
+		if (arg0 + arg2 > SoftwareRaster.clipRight) {
+			local145 = arg0 + arg2 - SoftwareRaster.clipRight;
 			arg2 -= local145;
 			local125 += local145;
 		}
-		if (arg0 < Static129.clipLeft) {
-			local145 = Static129.clipLeft - arg0;
+		if (arg0 < SoftwareRaster.clipLeft) {
+			local145 = SoftwareRaster.clipLeft - arg0;
 			arg2 -= local145;
 			local41 += local145;
 			local7 += local21 * local145;
 			local125 += local145;
 		}
-		Static286.method1394(Static129.pixels, this.aByteArray18, this.anIntArray144, local7, local9, local41, local125, arg2, arg3, local21, local27, local2, arg4);
+		Static286.method1394(SoftwareRaster.pixels, this.aByteArray18, this.anIntArray144, local7, local9, local41, local125, arg2, arg3, local21, local27, local2, arg4);
 	}
 
 	@OriginalMember(owner = "client!ek", name = "a", descriptor = "()V")
@@ -162,45 +162,45 @@ public final class SoftwareIndexedSprite extends IndexedSprite {
 	public final void method3335(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		arg0 += this.anInt4280;
 		arg1 += this.anInt4273;
-		@Pc(15) int local15 = arg0 + arg1 * Static129.width;
+		@Pc(15) int local15 = arg0 + arg1 * SoftwareRaster.width;
 		@Pc(17) int local17 = 0;
 		@Pc(20) int local20 = this.height;
 		@Pc(23) int local23 = this.width;
-		@Pc(27) int local27 = Static129.width - local23;
+		@Pc(27) int local27 = SoftwareRaster.width - local23;
 		@Pc(29) int local29 = 0;
 		@Pc(36) int local36;
-		if (arg1 < Static129.clipTop) {
-			local36 = Static129.clipTop - arg1;
+		if (arg1 < SoftwareRaster.clipTop) {
+			local36 = SoftwareRaster.clipTop - arg1;
 			local20 -= local36;
-			arg1 = Static129.clipTop;
+			arg1 = SoftwareRaster.clipTop;
 			local17 = local36 * local23;
-			local15 += local36 * Static129.width;
+			local15 += local36 * SoftwareRaster.width;
 		}
-		if (arg1 + local20 > Static129.clipBottom) {
-			local20 -= arg1 + local20 - Static129.clipBottom;
+		if (arg1 + local20 > SoftwareRaster.clipBottom) {
+			local20 -= arg1 + local20 - SoftwareRaster.clipBottom;
 		}
-		if (arg0 < Static129.clipLeft) {
-			local36 = Static129.clipLeft - arg0;
+		if (arg0 < SoftwareRaster.clipLeft) {
+			local36 = SoftwareRaster.clipLeft - arg0;
 			local23 -= local36;
-			arg0 = Static129.clipLeft;
+			arg0 = SoftwareRaster.clipLeft;
 			local17 += local36;
 			local15 += local36;
 			local29 = local36;
 			local27 += local36;
 		}
-		if (arg0 + local23 > Static129.clipRight) {
-			local36 = arg0 + local23 - Static129.clipRight;
+		if (arg0 + local23 > SoftwareRaster.clipRight) {
+			local36 = arg0 + local23 - SoftwareRaster.clipRight;
 			local23 -= local36;
 			local29 += local36;
 			local27 += local36;
 		}
 		if (local23 > 0 && local20 > 0) {
-			Static286.method1397(Static129.pixels, this.aByteArray18, this.anIntArray144, local17, local15, local23, local20, local27, local29, arg2);
+			Static286.method1397(SoftwareRaster.pixels, this.aByteArray18, this.anIntArray144, local17, local15, local23, local20, local27, local29, arg2);
 		}
 	}
 
 	@OriginalMember(owner = "client!ek", name = "c", descriptor = "()V")
-	public final void method1396() {
+	public final void trim() {
 		if (this.width == this.innerWidth && this.height == this.innerHeight) {
 			return;
 		}
@@ -245,31 +245,31 @@ public final class SoftwareIndexedSprite extends IndexedSprite {
 		if (local5 < local15) {
 			arg3 = ((local5 << 16) + local27 - local9 - 1) / local27;
 		}
-		local41 = arg0 + arg1 * Static129.width;
-		@Pc(125) int local125 = Static129.width - arg2;
-		if (arg1 + arg3 > Static129.clipBottom) {
-			arg3 -= arg1 + arg3 - Static129.clipBottom;
+		local41 = arg0 + arg1 * SoftwareRaster.width;
+		@Pc(125) int local125 = SoftwareRaster.width - arg2;
+		if (arg1 + arg3 > SoftwareRaster.clipBottom) {
+			arg3 -= arg1 + arg3 - SoftwareRaster.clipBottom;
 		}
 		@Pc(145) int local145;
-		if (arg1 < Static129.clipTop) {
-			local145 = Static129.clipTop - arg1;
+		if (arg1 < SoftwareRaster.clipTop) {
+			local145 = SoftwareRaster.clipTop - arg1;
 			arg3 -= local145;
-			local41 += local145 * Static129.width;
+			local41 += local145 * SoftwareRaster.width;
 			local9 += local27 * local145;
 		}
-		if (arg0 + arg2 > Static129.clipRight) {
-			local145 = arg0 + arg2 - Static129.clipRight;
+		if (arg0 + arg2 > SoftwareRaster.clipRight) {
+			local145 = arg0 + arg2 - SoftwareRaster.clipRight;
 			arg2 -= local145;
 			local125 += local145;
 		}
-		if (arg0 < Static129.clipLeft) {
-			local145 = Static129.clipLeft - arg0;
+		if (arg0 < SoftwareRaster.clipLeft) {
+			local145 = SoftwareRaster.clipLeft - arg0;
 			arg2 -= local145;
 			local41 += local145;
 			local7 += local21 * local145;
 			local125 += local145;
 		}
-		Static286.method1391(Static129.pixels, this.aByteArray18, this.anIntArray144, local7, local9, local41, local125, arg2, arg3, local21, local27, local2);
+		Static286.method1391(SoftwareRaster.pixels, this.aByteArray18, this.anIntArray144, local7, local9, local41, local125, arg2, arg3, local21, local27, local2);
 	}
 
 	@OriginalMember(owner = "client!ek", name = "a", descriptor = "(II)V")
@@ -277,40 +277,40 @@ public final class SoftwareIndexedSprite extends IndexedSprite {
 	public final void renderTransparent(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		arg0 += this.anInt4280;
 		arg1 += this.anInt4273;
-		@Pc(15) int local15 = arg0 + arg1 * Static129.width;
+		@Pc(15) int local15 = arg0 + arg1 * SoftwareRaster.width;
 		@Pc(17) int local17 = 0;
 		@Pc(20) int local20 = this.height;
 		@Pc(23) int local23 = this.width;
-		@Pc(27) int local27 = Static129.width - local23;
+		@Pc(27) int local27 = SoftwareRaster.width - local23;
 		@Pc(29) int local29 = 0;
 		@Pc(36) int local36;
-		if (arg1 < Static129.clipTop) {
-			local36 = Static129.clipTop - arg1;
+		if (arg1 < SoftwareRaster.clipTop) {
+			local36 = SoftwareRaster.clipTop - arg1;
 			local20 -= local36;
-			arg1 = Static129.clipTop;
+			arg1 = SoftwareRaster.clipTop;
 			local17 = local36 * local23;
-			local15 += local36 * Static129.width;
+			local15 += local36 * SoftwareRaster.width;
 		}
-		if (arg1 + local20 > Static129.clipBottom) {
-			local20 -= arg1 + local20 - Static129.clipBottom;
+		if (arg1 + local20 > SoftwareRaster.clipBottom) {
+			local20 -= arg1 + local20 - SoftwareRaster.clipBottom;
 		}
-		if (arg0 < Static129.clipLeft) {
-			local36 = Static129.clipLeft - arg0;
+		if (arg0 < SoftwareRaster.clipLeft) {
+			local36 = SoftwareRaster.clipLeft - arg0;
 			local23 -= local36;
-			arg0 = Static129.clipLeft;
+			arg0 = SoftwareRaster.clipLeft;
 			local17 += local36;
 			local15 += local36;
 			local29 = local36;
 			local27 += local36;
 		}
-		if (arg0 + local23 > Static129.clipRight) {
-			local36 = arg0 + local23 - Static129.clipRight;
+		if (arg0 + local23 > SoftwareRaster.clipRight) {
+			local36 = arg0 + local23 - SoftwareRaster.clipRight;
 			local23 -= local36;
 			local29 += local36;
 			local27 += local36;
 		}
 		if (local23 > 0 && local20 > 0) {
-			Static286.method1393(Static129.pixels, this.aByteArray18, this.anIntArray144, local17, local15, local23, local20, local27, local29);
+			Static286.method1393(SoftwareRaster.pixels, this.aByteArray18, this.anIntArray144, local17, local15, local23, local20, local27, local29);
 		}
 	}
 }

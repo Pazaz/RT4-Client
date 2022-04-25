@@ -40,7 +40,7 @@ public final class Static195 {
 					@Pc(102) int local102 = -local21.anInt4819 - 1;
 					@Pc(107) Player local107;
 					if (Static16.anInt549 == local102) {
-						local107 = Static173.self;
+						local107 = PlayerList.self;
 					} else {
 						local107 = Static159.players[local102];
 					}

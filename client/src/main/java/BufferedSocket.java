@@ -111,7 +111,7 @@ public final class BufferedSocket implements Runnable {
 				}
 			}
 		} catch (@Pc(124) Exception ex) {
-			Static89.report(null, ex);
+			TracingException.report(null, ex);
 		}
 	}
 
@@ -200,7 +200,7 @@ public final class BufferedSocket implements Runnable {
 		}
 		if (this.thread != null) {
 			while (this.thread.status == 0) {
-				Static231.sleep(1L);
+				ThreadUtils.sleep(1L);
 			}
 			if (this.thread.status == 1) {
 				try {

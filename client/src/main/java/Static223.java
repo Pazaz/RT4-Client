@@ -1,4 +1,3 @@
-import java.awt.Component;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
@@ -34,7 +33,7 @@ public final class Static223 {
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(IIILclient!km;)V")
 	public static void method3855(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) Npc arg2) {
-		if (arg2.anInt3369 == arg1 && arg1 != -1) {
+		if (arg2.seqId == arg1 && arg1 != -1) {
 			@Pc(10) SeqType local10 = Static36.get(arg1);
 			@Pc(13) int local13 = local10.anInt5347;
 			if (local13 == 1) {
@@ -43,21 +42,21 @@ public final class Static223 {
 				arg2.anInt3360 = 0;
 				arg2.anInt3371 = 0;
 				arg2.anInt3420 = arg0;
-				Static152.method2836(arg2.zFine, local10, arg2.xFine, false, arg2.anInt3425);
+				SoundPlayer.playSeqSound(arg2.zFine, local10, arg2.xFine, false, arg2.anInt3425);
 			}
 			if (local13 == 2) {
 				arg2.anInt3371 = 0;
 			}
-		} else if (arg1 == -1 || arg2.anInt3369 == -1 || Static36.get(arg1).anInt5355 >= Static36.get(arg2.anInt3369).anInt5355) {
+		} else if (arg1 == -1 || arg2.seqId == -1 || Static36.get(arg1).anInt5355 >= Static36.get(arg2.seqId).anInt5355) {
 			arg2.anInt3360 = 0;
-			arg2.anInt3369 = arg1;
+			arg2.seqId = arg1;
 			arg2.anInt3373 = 1;
 			arg2.anInt3371 = 0;
 			arg2.anInt3420 = arg0;
 			arg2.anInt3405 = arg2.movementQueueSize;
 			arg2.anInt3425 = 0;
-			if (arg2.anInt3369 != -1) {
-				Static152.method2836(arg2.zFine, Static36.get(arg2.anInt3369), arg2.xFine, false, arg2.anInt3425);
+			if (arg2.seqId != -1) {
+				SoundPlayer.playSeqSound(arg2.zFine, Static36.get(arg2.seqId), arg2.xFine, false, arg2.anInt3425);
 			}
 		}
 	}
@@ -159,11 +158,4 @@ public final class Static223 {
 		}
 	}
 
-	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(ILjava/awt/Component;)V")
-	public static void stop(@OriginalArg(1) Component arg0) {
-		arg0.removeMouseListener(Static93.instance);
-		arg0.removeMouseMotionListener(Static93.instance);
-		arg0.removeFocusListener(Static93.instance);
-		Static57.anInt1759 = 0;
-	}
 }

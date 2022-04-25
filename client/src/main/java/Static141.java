@@ -16,13 +16,7 @@ public final class Static141 {
 	@OriginalMember(owner = "client!lb", name = "u", descriptor = "I")
 	public static int anInt3469 = 0;
 
-	@OriginalMember(owner = "client!lb", name = "v", descriptor = "I")
-	public static int language = 0;
-
-	@OriginalMember(owner = "client!lb", name = "A", descriptor = "I")
-	public static int buildArea = 0;
-
-	@OriginalMember(owner = "client!lb", name = "d", descriptor = "(B)V")
+    @OriginalMember(owner = "client!lb", name = "d", descriptor = "(B)V")
 	public static void method2720() {
 		if (Static153.aClass100_724 != null) {
 			Static90.method1853(Static153.aClass100_724);
@@ -57,19 +51,19 @@ public final class Static141 {
 			Static76.method1642();
 		}
 		Static102.load(Static261.js5Archive13, Static209.js5Archive8);
-		Static30.load(Static209.js5Archive8);
+		Sprites.load(Static209.js5Archive8);
 		Static204.aClass3_Sub2_Sub1_10 = null;
 		Static39.aClass3_Sub2_Sub1_1 = null;
 		Static92.aClass3_Sub2_Sub1_6 = null;
 		Static165.aClass3_Sub2_Sub1_8 = null;
 		Static181.aClass3_Sub2_Sub1_9 = null;
-		if (Static244.gameState == 5) {
+		if (client.gameState == 5) {
 			Static181.load(Static209.js5Archive8);
 		}
-		if (Static244.gameState == 10) {
+		if (client.gameState == 10) {
 			Static73.method1596(false);
 		}
-		if (Static244.gameState == 30) {
+		if (client.gameState == 30) {
 			Static196.setGameState(25);
 		}
 	}

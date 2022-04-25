@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static119 {
 
-	@OriginalMember(owner = "client!je", name = "W", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_44;
-
 	@OriginalMember(owner = "client!je", name = "eb", descriptor = "[I")
 	public static int[] anIntArray282;
 
@@ -65,11 +62,11 @@ public final class Static119 {
 
 	@OriginalMember(owner = "client!je", name = "j", descriptor = "(I)I")
 	public static int method2385() {
-		if (Static203.aClass134_1 == null) {
+		if (WorldMap.labels == null) {
 			return -1;
 		}
-		while (Static232.anInt5212 < Static203.aClass134_1.anInt5074) {
-			if (Static203.aClass134_1.method3897(Static232.anInt5212)) {
+		while (Static232.anInt5212 < WorldMap.labels.anInt5074) {
+			if (WorldMap.labels.method3897(Static232.anInt5212)) {
 				return Static232.anInt5212++;
 			}
 			Static232.anInt5212++;
@@ -94,10 +91,10 @@ public final class Static119 {
 
 	@OriginalMember(owner = "client!je", name = "a", descriptor = "(IIIII)V")
 	public static void method2387(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
-		Static13.anInt435 = Static48.anInt1449 * arg2 / arg0;
-		Static28.anInt919 = Static181.anInt4296 * arg1 / arg3;
-		Static142.anInt3482 = -1;
-		Static217.anInt4901 = -1;
-		Static38.method965();
+		WorldMap.anInt435 = WorldMap.width * arg2 / arg0;
+		WorldMap.anInt919 = WorldMap.length * arg1 / arg3;
+		WorldMap.anInt3482 = -1;
+		WorldMap.anInt4901 = -1;
+		WorldMap.method965();
 	}
 }

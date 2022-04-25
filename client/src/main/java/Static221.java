@@ -31,7 +31,7 @@ public final class Static221 {
 			Static250.anInt5434 = 0;
 		}
 		@Pc(20) int local20 = 0;
-		@Pc(24) int local24 = Static129.width * arg1;
+		@Pc(24) int local24 = SoftwareRaster.width * arg1;
 		@Pc(26) int local26 = 0;
 		for (@Pc(28) int local28 = 1; local28 < 255; local28++) {
 			@Pc(43) int local43 = (256 - local28) * Static35.anIntArray83[local28] / 256;
@@ -41,7 +41,7 @@ public final class Static221 {
 			local20 += local43;
 			@Pc(55) int local55;
 			for (local55 = local43; local55 < 128; local55++) {
-				@Pc(65) int local65 = Static129.pixels[local24++ + arg0];
+				@Pc(65) int local65 = SoftwareRaster.pixels[local24++ + arg0];
 				@Pc(70) int local70 = Static216.anIntArray188[local20++];
 				if (local70 == 0) {
 					Static167.aClass3_Sub2_Sub1_Sub1_3.anIntArray20[local26++] = local65;
@@ -59,9 +59,9 @@ public final class Static221 {
 				}
 			}
 			for (local55 = 0; local55 < local43; local55++) {
-				Static167.aClass3_Sub2_Sub1_Sub1_3.anIntArray20[local26++] = Static129.pixels[arg0 + local24++];
+				Static167.aClass3_Sub2_Sub1_Sub1_3.anIntArray20[local26++] = SoftwareRaster.pixels[arg0 + local24++];
 			}
-			local24 += Static129.width - 128;
+			local24 += SoftwareRaster.width - 128;
 		}
 		if (GlRenderer.enabled) {
 			Static46.method1178(Static167.aClass3_Sub2_Sub1_Sub1_3.anIntArray20, arg0, arg1, Static167.aClass3_Sub2_Sub1_Sub1_3.anInt1867, Static167.aClass3_Sub2_Sub1_Sub1_3.anInt1859);

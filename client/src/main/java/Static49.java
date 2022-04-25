@@ -65,7 +65,7 @@ public final class Static49 {
 						} while (local72 >= 103);
 					} while (local68 >= 103);
 					local95 = Static271.get(local17);
-				} while (local78 == 22 && !Static250.showGroundDecorations && local95.anInt4429 == 0 && local95.anInt4435 != 1 && !local95.aBoolean206);
+				} while (local78 == 22 && !Preferences.showGroundDecorations && local95.anInt4429 == 0 && local95.anInt4435 != 1 && !local95.aBoolean206);
 				local39 = true;
 				if (!local95.isReady()) {
 					local15 = false;
@@ -175,13 +175,13 @@ public final class Static49 {
 		}
 		@Pc(24) JagString local24 = Static13.method471();
 		if (arg0 == null) {
-			@Pc(40) int local40 = Static280.aClass3_Sub2_Sub9_43.method2859(local24, arg2 + 4, arg1 - -15, Static39.aRandom1, Static60.gregorianDateSeed);
-			Static133.method4012(arg2 + 4, Static280.aClass3_Sub2_Sub9_43.getStringWidth(local24) + local40, arg1, 15);
+			@Pc(40) int local40 = Fonts.b12Full.method2859(local24, arg2 + 4, arg1 - -15, Static39.aRandom1, Static60.gregorianDateSeed);
+			Static133.method4012(arg2 + 4, Fonts.b12Full.getStringWidth(local24) + local40, arg1, 15);
 			return;
 		}
-		@Pc(59) Font local59 = arg0.method491(Static159.aClass36Array12);
+		@Pc(59) Font local59 = arg0.method491(Sprites.nameIcons);
 		if (local59 == null) {
-			local59 = Static280.aClass3_Sub2_Sub9_43;
+			local59 = Fonts.b12Full;
 		}
 		local59.method2878(local24, arg2, arg1, arg0.anInt445, arg0.anInt459, arg0.anInt474, arg0.anInt513, arg0.anInt460, arg0.anInt478, Static39.aRandom1, Static60.gregorianDateSeed, Static50.anIntArray132);
 		Static133.method4012(Static50.anIntArray132[0], Static50.anIntArray132[2], Static50.anIntArray132[1], Static50.anIntArray132[3]);

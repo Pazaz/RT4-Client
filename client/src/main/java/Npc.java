@@ -26,7 +26,7 @@ public final class Npc extends PathingEntity {
 		if (this.type == null) {
 			return;
 		}
-		@Pc(29) SeqType local29 = this.anInt3369 != -1 && this.anInt3420 == 0 ? Static36.get(this.anInt3369) : null;
+		@Pc(29) SeqType local29 = this.seqId != -1 && this.anInt3420 == 0 ? Static36.get(this.seqId) : null;
 		@Pc(53) SeqType local53 = this.anInt3366 == -1 || this.anInt3366 == this.method2681().idleAnimationId && local29 != null ? null : Static36.get(this.anInt3366);
 		@Pc(74) Model local74 = this.type.getBodyModel(this.aClass147Array3, this.anInt3388, this.anInt3407, this.anInt3373, this.anInt3360, this.anInt3425, local53, this.anInt3396, local29);
 		if (local74 == null) {
@@ -38,7 +38,7 @@ public final class Npc extends PathingEntity {
 			local84 = local84.getMultiNpc();
 		}
 		@Pc(140) Model local140;
-		if (Static209.characterShadowsOn && local84.shadow) {
+		if (Preferences.characterShadowsOn && local84.shadow) {
 			local140 = Static41.method1043(this.type.aByte13, this.aBoolean171, local53 == null ? local29 : local53, this.xFine, this.type.aShort23, this.zFine, this.type.aShort24, this.type.soze, local74, arg0, local53 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, this.type.aByte12);
 			if (GlRenderer.enabled) {
 				@Pc(144) float local144 = GlRenderer.method4179();
@@ -98,7 +98,7 @@ public final class Npc extends PathingEntity {
 	@OriginalMember(owner = "client!km", name = "b", descriptor = "(I)I")
 	@Override
 	protected final int method2688() {
-		if (Static266.game != 0 && this.type.multiNpcs != null) {
+		if (client.game != 0 && this.type.multiNpcs != null) {
 			@Pc(17) NpcType local17 = this.type.getMultiNpc();
 			if (local17 != null && local17.basId != -1) {
 				return local17.basId;

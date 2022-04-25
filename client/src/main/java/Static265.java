@@ -10,17 +10,10 @@ public final class Static265 {
 	@OriginalMember(owner = "client!vj", name = "j", descriptor = "Lclient!dd;")
 	public static SoftwareFont p11FullSoftware;
 
-	@OriginalMember(owner = "client!vj", name = "m", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1086 = Static28.parse("_labels");
-
 	@OriginalMember(owner = "client!vj", name = "a", descriptor = "(III)J")
 	public static long method4521(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		@Pc(7) Tile local7 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
 		return local7 == null || local7.aClass77_1 == null ? 0L : local7.aClass77_1.key;
 	}
 
-	@OriginalMember(owner = "client!vj", name = "a", descriptor = "(IIILclient!ve;)[Lclient!mm;")
-	public static SoftwareSprite[] method4523(@OriginalArg(2) int arg0, @OriginalArg(3) Js5 arg1) {
-		return Static234.method4016(arg1, 0, arg0) ? Static14.method474() : null;
-	}
 }

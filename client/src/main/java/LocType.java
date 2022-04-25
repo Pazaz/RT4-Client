@@ -85,7 +85,7 @@ public final class LocType {
 	public int anInt4419 = 0;
 
 	@OriginalMember(owner = "client!pb", name = "h", descriptor = "I")
-	public int anInt4400 = -1;
+	public int mapElement = -1;
 
 	@OriginalMember(owner = "client!pb", name = "L", descriptor = "Z")
 	public boolean aBoolean214 = false;
@@ -484,7 +484,7 @@ public final class LocType {
 				this.aByteArray63[len] = arg0.g1s();
 			}
 		} else if (arg1 == 60) {
-			this.anInt4400 = arg0.g2();
+			this.mapElement = arg0.g2();
 		} else if (arg1 == 62) {
 			this.aBoolean217 = true;
 		} else if (arg1 == 64) {

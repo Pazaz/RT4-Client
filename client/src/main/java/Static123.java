@@ -4,10 +4,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static123 {
 
-	@OriginalMember(owner = "client!jj", name = "d", descriptor = "Lclient!na;")
-	public static final JagString aClass100_592 = Static28.parse("headicons_pk");
-
-	@OriginalMember(owner = "client!jj", name = "e", descriptor = "I")
+    @OriginalMember(owner = "client!jj", name = "e", descriptor = "I")
 	public static int anInt3058 = 0;
 
 	@OriginalMember(owner = "client!jj", name = "g", descriptor = "Lclient!na;")
@@ -18,6 +15,8 @@ public final class Static123 {
 
 	@OriginalMember(owner = "client!jj", name = "m", descriptor = "Lclient!na;")
 	public static final JagString aClass100_594 = Static28.parse("<)4col>");
+	@OriginalMember(owner = "client!ml", name = "K", descriptor = "I")
+	public static int anInt3947;
 
 	@OriginalMember(owner = "client!jj", name = "a", descriptor = "(BI)Lclient!lk;")
 	public static StructType method2417(@OriginalArg(1) int arg0) {
@@ -28,7 +27,7 @@ public final class Static123 {
 		@Pc(26) byte[] local26 = Static23.aClass153_11.getFile(26, arg0);
 		local10 = new StructType();
 		if (local26 != null) {
-			local10.method2806(new Buffer(local26));
+			local10.decode(new Buffer(local26));
 		}
 		Static231.aClass54_13.put(local10, (long) arg0);
 		return local10;
@@ -36,9 +35,9 @@ public final class Static123 {
 
 	@OriginalMember(owner = "client!jj", name = "a", descriptor = "(Z)V")
 	public static void topBannerRefresh() {
-		if (!Static249.advertSuppressed && Static83.modeWhere != 2) {
+		if (!client.advertSuppressed && client.modeWhere != 2) {
 			try {
-				Static206.aClass100_900.method3157(Static215.instance);
+				Static206.aClass100_900.method3157(client.instance);
 			} catch (@Pc(26) Throwable local26) {
 			}
 		}
@@ -92,8 +91,8 @@ public final class Static123 {
 						}
 						local10.anInt4454 = (local10.anInt4458 - Static217.anInt4903 << 8) / local158;
 						local10.anInt4450 = (local10.anInt4449 - Static217.anInt4903 << 8) / local158;
-						local10.anInt4459 = (local10.anInt4444 - Static162.anInt3947 << 8) / local158;
-						local10.anInt4463 = (local10.anInt4447 - Static162.anInt3947 << 8) / local158;
+						local10.anInt4459 = (local10.anInt4444 - anInt3947 << 8) / local158;
+						local10.anInt4463 = (local10.anInt4447 - anInt3947 << 8) / local158;
 						Static247.aClass120Array2[Static215.anInt4870++] = local10;
 					}
 				}
@@ -128,13 +127,13 @@ public final class Static123 {
 						}
 						local10.anInt4448 = (local10.anInt4460 - Static149.anInt3555 << 8) / local158;
 						local10.anInt4456 = (local10.anInt4445 - Static149.anInt3555 << 8) / local158;
-						local10.anInt4459 = (local10.anInt4444 - Static162.anInt3947 << 8) / local158;
-						local10.anInt4463 = (local10.anInt4447 - Static162.anInt3947 << 8) / local158;
+						local10.anInt4459 = (local10.anInt4444 - anInt3947 << 8) / local158;
+						local10.anInt4463 = (local10.anInt4447 - anInt3947 << 8) / local158;
 						Static247.aClass120Array2[Static215.anInt4870++] = local10;
 					}
 				}
 			} else if (local10.anInt4453 == 4) {
-				local14 = local10.anInt4444 - Static162.anInt3947;
+				local14 = local10.anInt4444 - anInt3947;
 				if (local14 > 128) {
 					local115 = local10.anInt4461 + Static277.tileVisibilityDistance - Static193.anInt4539;
 					if (local115 < 0) {
@@ -188,7 +187,7 @@ public final class Static123 {
 		} else if (local4 < 0) {
 			return Static229.aClass100_972;
 		} else if (local4 > 9) {
-			return Static42.aClass100_332;
+			return MiniMenu.COLOR_GREEN;
 		} else if (local4 > 6) {
 			return Static6.aClass100_18;
 		} else if (local4 <= 3) {
@@ -196,21 +195,6 @@ public final class Static123 {
 		} else {
 			return Static263.aClass100_1081;
 		}
-	}
-
-	@OriginalMember(owner = "client!jj", name = "a", descriptor = "(B)[F")
-	public static float[] method2422() {
-		@Pc(3) float local3 = Static161.method3068() + Static161.method3059();
-		@Pc(9) int local9 = Static161.method3064();
-		@Pc(18) float local18 = (float) (local9 >> 16 & 0xFF) / 255.0F;
-		Static251.aFloatArray28[3] = 1.0F;
-		@Pc(37) float local37 = (float) (local9 >> 8 & 0xFF) / 255.0F;
-		@Pc(39) float local39 = 0.58823526F;
-		@Pc(46) float local46 = (float) (local9 & 0xFF) / 255.0F;
-		Static251.aFloatArray28[2] = Static257.aFloatArray2[2] * local46 * local39 * local3;
-		Static251.aFloatArray28[0] = Static257.aFloatArray2[0] * local18 * local39 * local3;
-		Static251.aFloatArray28[1] = local3 * local39 * local37 * Static257.aFloatArray2[1];
-		return Static251.aFloatArray28;
 	}
 
 	@OriginalMember(owner = "client!jj", name = "b", descriptor = "(BI)Lclient!na;")

@@ -6,7 +6,7 @@ public final class Static67 {
 	public static int anInt3356;
 
 	@OriginalMember(owner = "client!fe", name = "lc", descriptor = "[Lclient!qf;")
-	public static Sprite[] aClass3_Sub2_Sub1Array4;
+	public static Sprite[] mapfuncs;
 
 	@OriginalMember(owner = "client!fe", name = "I", descriptor = "Lclient!na;")
 	public static final JagString aClass100_639 = Static28.parse(" ");

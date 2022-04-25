@@ -45,6 +45,6 @@ public final class Static199 {
 	@OriginalMember(owner = "client!qc", name = "a", descriptor = "(ZLclient!ve;)V")
 	public static void init(@OriginalArg(1) Js5 arg0) {
 		Static35.aClass153_22 = arg0;
-		Static98.anInt2510 = Static35.aClass153_22.method4504(4);
+		FloTypeList.capacity = Static35.aClass153_22.method4504(4);
 	}
 }

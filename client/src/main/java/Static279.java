@@ -7,10 +7,7 @@ public final class Static279 {
 	@OriginalMember(owner = "client!wk", name = "v", descriptor = "[I")
 	public static int[] anIntArray568;
 
-	@OriginalMember(owner = "client!wk", name = "w", descriptor = "I")
-	public static int country;
-
-	@OriginalMember(owner = "client!wk", name = "t", descriptor = "Lclient!n;")
+    @OriginalMember(owner = "client!wk", name = "t", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable aClass99_38 = new SoftLruHashTable(64);
 
 	@OriginalMember(owner = "client!wk", name = "u", descriptor = "Lclient!na;")
@@ -29,9 +26,9 @@ public final class Static279 {
 	public static JagString[] method4664(@OriginalArg(1) JagString[] arg0) {
 		@Pc(8) JagString[] local8 = new JagString[5];
 		for (@Pc(15) int local15 = 0; local15 < 5; local15++) {
-			local8[local15] = Static34.concatenate(new JagString[] { Static123.parseInt(local15), Static27.aClass100_168 });
+			local8[local15] = JagString.concatenate(new JagString[] { Static123.parseInt(local15), Static27.aClass100_168 });
 			if (arg0 != null && arg0[local15] != null) {
-				local8[local15] = Static34.concatenate(new JagString[] { local8[local15], arg0[local15] });
+				local8[local15] = JagString.concatenate(new JagString[] { local8[local15], arg0[local15] });
 			}
 		}
 		return local8;

@@ -33,7 +33,7 @@ public final class MillisTimer extends Timer {
 
 	@OriginalMember(owner = "client!lj", name = "b", descriptor = "(I)V")
 	@Override
-	public final void method3394() {
+	public final void reset() {
 		for (@Pc(7) int local7 = 0; local7 < 10; local7++) {
 			this.aLongArray4[local7] = 0L;
 		}
@@ -76,7 +76,7 @@ public final class MillisTimer extends Timer {
 		if (arg0 > this.anInt3552) {
 			this.anInt3552 = arg0;
 		}
-		Static231.sleep((long) this.anInt3552);
+		ThreadUtils.sleep((long) this.anInt3552);
 		local139 = 0;
 		while (this.anInt3553 < 256) {
 			this.anInt3553 += this.anInt3550;

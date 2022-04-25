@@ -109,7 +109,7 @@ public final class Static207 {
 				if (Static72.aClass212_3.status != 1) {
 					return -1;
 				}
-				Static124.socket = new BufferedSocket((Socket) Static72.aClass212_3.result, GameShell.signLink);
+				Protocol.socket = new BufferedSocket((Socket) Static72.aClass212_3.result, GameShell.signLink);
 				Static6.outboundBuffer.offset = 0;
 				Static72.aClass212_3 = null;
 				local82 = 0;
@@ -118,19 +118,19 @@ public final class Static207 {
 				}
 				Static6.outboundBuffer.p1(255);
 				Static6.outboundBuffer.p4(local82);
-				Static124.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
-				if (Static11.musicChannel != null) {
-					Static11.musicChannel.method3571();
+				Protocol.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
+				if (client.musicChannel != null) {
+					client.musicChannel.method3571();
 				}
-				if (Static147.soundChannel != null) {
-					Static147.soundChannel.method3571();
+				if (client.soundChannel != null) {
+					client.soundChannel.method3571();
 				}
-				local124 = Static124.socket.read();
-				if (Static11.musicChannel != null) {
-					Static11.musicChannel.method3571();
+				local124 = Protocol.socket.read();
+				if (client.musicChannel != null) {
+					client.musicChannel.method3571();
 				}
-				if (Static147.soundChannel != null) {
-					Static147.soundChannel.method3571();
+				if (client.soundChannel != null) {
+					client.soundChannel.method3571();
 				}
 				if (local124 != 0) {
 					return Static10.method347(local124);
@@ -138,12 +138,12 @@ public final class Static207 {
 				Static82.anInt2231 = 2;
 			}
 			if (Static82.anInt2231 == 2) {
-				if (Static124.socket.available() < 2) {
+				if (Protocol.socket.available() < 2) {
 					return -1;
 				}
-				Static116.anInt2961 = Static124.socket.read();
+				Static116.anInt2961 = Protocol.socket.read();
 				Static116.anInt2961 <<= 0x8;
-				Static116.anInt2961 += Static124.socket.read();
+				Static116.anInt2961 += Protocol.socket.read();
 				Static82.anInt2231 = 3;
 				Static141.anInt3469 = 0;
 				Static229.aByteArray70 = new byte[Static116.anInt2961];
@@ -151,14 +151,14 @@ public final class Static207 {
 			if (Static82.anInt2231 != 3) {
 				return -1;
 			}
-			local82 = Static124.socket.available();
+			local82 = Protocol.socket.available();
 			if (local82 < 1) {
 				return -1;
 			}
 			if (local82 > Static116.anInt2961 - Static141.anInt3469) {
 				local82 = Static116.anInt2961 - Static141.anInt3469;
 			}
-			Static124.socket.read(Static141.anInt3469, local82, Static229.aByteArray70);
+			Protocol.socket.read(Static141.anInt3469, local82, Static229.aByteArray70);
 			Static141.anInt3469 += local82;
 			if (Static141.anInt3469 < Static116.anInt2961) {
 				return -1;
@@ -171,8 +171,8 @@ public final class Static207 {
 						Static101.worlds[local124++] = local247;
 					}
 				}
-				Static124.socket.close();
-				Static124.socket = null;
+				Protocol.socket.close();
+				Protocol.socket = null;
 				Static127.anInt3132 = 0;
 				Static82.anInt2231 = 0;
 				Static229.aByteArray70 = null;

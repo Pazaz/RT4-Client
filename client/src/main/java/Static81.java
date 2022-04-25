@@ -15,10 +15,7 @@ public final class Static81 {
 	@OriginalMember(owner = "client!gg", name = "bb", descriptor = "I")
 	public static int cameraX;
 
-	@OriginalMember(owner = "client!gg", name = "U", descriptor = "I")
-	public static int modeWhat = 0;
-
-	@OriginalMember(owner = "client!gg", name = "W", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!gg", name = "W", descriptor = "Lclient!na;")
 	public static final JagString aClass100_475 = Static28.parse("null");
 
 	@OriginalMember(owner = "client!gg", name = "Y", descriptor = "Lclient!na;")
@@ -29,7 +26,7 @@ public final class Static81 {
 
 	@OriginalMember(owner = "client!gg", name = "c", descriptor = "(II)V")
 	public static void method1750(@OriginalArg(0) int arg0) {
-		if (!Static64.cursorsEnabled) {
+		if (!Preferences.cursorsEnabled) {
 			arg0 = -1;
 		}
 		if (arg0 == Static115.anInt2941) {
@@ -109,11 +106,11 @@ public final class Static81 {
 		}
 		for (@Pc(34) int i = 0; i < 100 && Static10.readPacket(); i++) {
 		}
-		if (Static244.gameState != 30) {
+		if (client.gameState != 30) {
 			return;
 		}
 		Static233.loop(Static6.outboundBuffer); // ReflectionCheck
-		@Pc(60) Object mouseRecorder = Static178.instance.lock;
+		@Pc(60) Object mouseRecorder = MouseRecorder.instance.lock;
 		@Pc(86) int offset;
 		@Pc(79) int samples;
 		@Pc(88) int i;
@@ -123,16 +120,16 @@ public final class Static81 {
 		@Pc(189) int dy;
 		synchronized (mouseRecorder) {
 			if (!Static245.enabled) {
-				Static178.instance.samples = 0;
-			} else if (Static150.clickButton != 0 || Static178.instance.samples >= 40) {
+				MouseRecorder.instance.samples = 0;
+			} else if (Static150.clickButton != 0 || MouseRecorder.instance.samples >= 40) {
 				Static6.outboundBuffer.p1isaac(123);
 				samples = 0;
 				Static6.outboundBuffer.p1(0);
 				offset = Static6.outboundBuffer.offset;
-				for (i = 0; Static178.instance.samples > i && Static6.outboundBuffer.offset - offset < 240; i++) {
+				for (i = 0; MouseRecorder.instance.samples > i && Static6.outboundBuffer.offset - offset < 240; i++) {
 					samples++;
-					y = Static178.instance.y[i];
-					x = Static178.instance.x[i];
+					y = MouseRecorder.instance.y[i];
+					x = MouseRecorder.instance.x[i];
 					if (y < 0) {
 						y = 0;
 					} else if (y > 65534) {
@@ -144,7 +141,7 @@ public final class Static81 {
 						x = 65534;
 					}
 					@Pc(142) boolean outsideWindow = false;
-					if (Static178.instance.y[i] == -1 && Static178.instance.x[i] == -1) {
+					if (MouseRecorder.instance.y[i] == -1 && MouseRecorder.instance.x[i] == -1) {
 						outsideWindow = true;
 						y = -1;
 						x = -1;
@@ -187,14 +184,14 @@ public final class Static81 {
 					}
 				}
 				Static6.outboundBuffer.p1len(Static6.outboundBuffer.offset - offset);
-				if (Static178.instance.samples > samples) {
-					Static178.instance.samples -= samples;
-					for (i = 0; i < Static178.instance.samples; i++) {
-						Static178.instance.x[i] = Static178.instance.x[samples + i];
-						Static178.instance.y[i] = Static178.instance.y[samples + i];
+				if (MouseRecorder.instance.samples > samples) {
+					MouseRecorder.instance.samples -= samples;
+					for (i = 0; i < MouseRecorder.instance.samples; i++) {
+						MouseRecorder.instance.x[i] = MouseRecorder.instance.x[samples + i];
+						MouseRecorder.instance.y[i] = MouseRecorder.instance.y[samples + i];
 					}
 				} else {
-					Static178.instance.samples = 0;
+					MouseRecorder.instance.samples = 0;
 				}
 			}
 		}
@@ -228,7 +225,7 @@ public final class Static81 {
 		if (Static16.anInt551 > 0) {
 			Static16.anInt551--;
 		}
-		if (Static33.aBoolean63) {
+		if (Preferences.aBoolean63) {
 			for (i = 0; i < Static182.keyQueueSize; i++) {
 				offset = Static227.keyCodes[i];
 				if (offset == 98 || offset == 99 || offset == 96 || offset == 97) {
@@ -262,7 +259,7 @@ public final class Static81 {
 			Static18.serverUpdatedPreferences = true;
 		}
 		Static31.method846();
-		if (Static244.gameState != 30) {
+		if (client.gameState != 30) {
 			return;
 		}
 		Static251.loop(); // ChangeLocRequest
@@ -488,8 +485,8 @@ public final class Static81 {
 		}
 		// WorldMap.component
 		Static24.component = null;
-		if (Static154.topLevelInterface != -1) {
-			Static57.method1320(0, 0, 0, GameShell.canvasWidth, Static154.topLevelInterface, 0, GameShell.canvasHeight);
+		if (InterfaceList.topLevelInterface != -1) {
+			Static57.method1320(0, 0, 0, GameShell.canvasWidth, InterfaceList.topLevelInterface, 0, GameShell.canvasHeight);
 		}
 		Static119.transmitTimer++;
 		while (true) {
@@ -505,7 +502,7 @@ public final class Static81 {
 							if (priorityRequest == null) {
 								while (true) {
 									do {
-										priorityRequest = (HookRequest) Static185.lowPriorityRequests.removeHead();
+										priorityRequest = (HookRequest) InterfaceList.lowPriorityRequests.removeHead();
 										if (priorityRequest == null) {
 											if (Static24.component == null) {
 												Static137.anInt3337 = 0;
@@ -521,7 +518,7 @@ public final class Static81 {
 													y = 3;
 												}
 												// Cheat
-												Static61.teleport(Static173.self.movementQueueX[0] + Static225.originX, Static173.self.movementQueueZ[0] + Static142.originZ, y);
+												Static61.teleport(PlayerList.self.movementQueueX[0] + Static225.originX, PlayerList.self.movementQueueZ[0] + Static142.originZ, y);
 											}
 											if (Static191.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT]) {
 												if (Static56.anInt1742 != -1) {
@@ -554,7 +551,7 @@ public final class Static81 {
 												}
 												Static187.anInt4422 = 0;
 											} else if (Static56.anInt1742 != -1 && Static125.anInt3096 == 0 && Static187.anInt4422 == 0) {
-												@Pc(1871) boolean local1871 = Static102.method2075(Static173.self.movementQueueZ[0], 0, 0, true, 0, Static56.anInt1742, 0, 0, 0, Static116.anInt2954, Static173.self.movementQueueX[0]);
+												@Pc(1871) boolean local1871 = Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 0, true, 0, Static56.anInt1742, 0, 0, 0, Static116.anInt2954, PlayerList.self.movementQueueX[0]);
 												if (local1871) {
 													Static25.y = Static60.clickY;
 													Static17.milliseconds = 0;
@@ -679,8 +676,8 @@ public final class Static81 {
 												Static34.verifyIdChanged = false;
 											}
 											try {
-												if (Static124.socket != null && Static6.outboundBuffer.offset > 0) {
-													Static124.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
+												if (Protocol.socket != null && Static6.outboundBuffer.offset > 0) {
+													Protocol.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
 													Static131.anInt3251 = 0;
 													Static6.outboundBuffer.offset = 0;
 												}

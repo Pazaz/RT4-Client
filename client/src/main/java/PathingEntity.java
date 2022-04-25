@@ -97,7 +97,7 @@ public abstract class PathingEntity extends Entity {
 	public int anInt3360 = 0;
 
 	@OriginalMember(owner = "client!fe", name = "O", descriptor = "I")
-	public int anInt3369 = -1;
+	public int seqId = -1;
 
 	@OriginalMember(owner = "client!fe", name = "ab", descriptor = "Z")
 	private boolean aBoolean169 = false;
@@ -265,8 +265,8 @@ public abstract class PathingEntity extends Entity {
 
 	@OriginalMember(owner = "client!fe", name = "a", descriptor = "(IIIIZ)V")
 	public final void method2683(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) boolean arg3) {
-		if (this.anInt3369 != -1 && Static36.get(this.anInt3369).anInt5349 == 1) {
-			this.anInt3369 = -1;
+		if (this.seqId != -1 && Static36.get(this.seqId).anInt5349 == 1) {
+			this.seqId = -1;
 		}
 		if (!arg3) {
 			@Pc(32) int local32 = arg1 - this.movementQueueX[0];
@@ -293,7 +293,7 @@ public abstract class PathingEntity extends Entity {
 		this.anInt3405 = 0;
 		this.zFine = arg0 * 64 + this.movementQueueZ[0] * 128;
 		this.xFine = arg0 * 64 + this.movementQueueX[0] * 128;
-		if (GlRenderer.enabled && Static173.self == this) {
+		if (GlRenderer.enabled && PlayerList.self == this) {
 			Static86.setInstantFade();
 		}
 	}
@@ -306,8 +306,8 @@ public abstract class PathingEntity extends Entity {
 			local10--;
 			local15++;
 		}
-		if (this.anInt3369 != -1 && Static36.get(this.anInt3369).anInt5349 == 1) {
-			this.anInt3369 = -1;
+		if (this.seqId != -1 && Static36.get(this.seqId).anInt5349 == 1) {
+			this.seqId = -1;
 		}
 		if (this.movementQueueSize < 9) {
 			this.movementQueueSize++;

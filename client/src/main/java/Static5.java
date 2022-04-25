@@ -13,9 +13,6 @@ public final class Static5 {
 	@OriginalMember(owner = "client!af", name = "c", descriptor = "I")
 	public static int anInt39 = -1;
 
-	@OriginalMember(owner = "client!af", name = "g", descriptor = "Lclient!na;")
-	public static final JagString aClass100_9 = Static28.parse("hint_mapedge");
-
 	@OriginalMember(owner = "client!af", name = "k", descriptor = "I")
 	public static int anInt45 = 0;
 

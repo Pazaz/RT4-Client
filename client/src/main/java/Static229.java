@@ -4,10 +4,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static229 {
 
-	@OriginalMember(owner = "client!si", name = "R", descriptor = "[[[B")
-	public static byte[][][] aByteArrayArrayArray12;
-
-	@OriginalMember(owner = "client!si", name = "S", descriptor = "[Lclient!na;")
+    @OriginalMember(owner = "client!si", name = "S", descriptor = "[Lclient!na;")
 	public static JagString[] aClass100Array156;
 
 	@OriginalMember(owner = "client!si", name = "ab", descriptor = "I")

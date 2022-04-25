@@ -62,10 +62,10 @@ public final class Static75 {
 						Static35.underWaterLocationsMapFileIds[local20] = -1;
 					} else {
 						Static238.regionBitPacked[local20] = local169;
-						Static36.mapFileIds[local20] = Static26.js5Archive5.getGroupId(Static34.concatenate(new JagString[] { Static103.aClass100_558, Static123.parseInt(local138), Static86.aClass100_488, Static123.parseInt(local151) }));
-						Static172.locationsMapFileIds[local20] = Static26.js5Archive5.getGroupId(Static34.concatenate(new JagString[] { Static270.aClass100_1090, Static123.parseInt(local138), Static86.aClass100_488, Static123.parseInt(local151) }));
-						Static99.underWaterMapFileIds[local20] = Static26.js5Archive5.getGroupId(Static34.concatenate(new JagString[] { Static165.aClass100_772, Static123.parseInt(local138), Static86.aClass100_488, Static123.parseInt(local151) }));
-						Static35.underWaterLocationsMapFileIds[local20] = Static26.js5Archive5.getGroupId(Static34.concatenate(new JagString[] { Static278.aClass100_1103, Static123.parseInt(local138), Static86.aClass100_488, Static123.parseInt(local151) }));
+						Static36.mapFileIds[local20] = Static26.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static103.aClass100_558, Static123.parseInt(local138), Static86.aClass100_488, Static123.parseInt(local151) }));
+						Static172.locationsMapFileIds[local20] = Static26.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static270.aClass100_1090, Static123.parseInt(local138), Static86.aClass100_488, Static123.parseInt(local151) }));
+						Static99.underWaterMapFileIds[local20] = Static26.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static165.aClass100_772, Static123.parseInt(local138), Static86.aClass100_488, Static123.parseInt(local151) }));
+						Static35.underWaterLocationsMapFileIds[local20] = Static26.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static278.aClass100_1103, Static123.parseInt(local138), Static86.aClass100_488, Static123.parseInt(local151) }));
 					}
 					local20++;
 				}
@@ -131,10 +131,10 @@ public final class Static75 {
 							Static238.regionBitPacked[local60] = local571;
 							@Pc(609) int local609 = local571 & 0xFF;
 							local573 = local571 >> 8 & 0xFF;
-							Static36.mapFileIds[local60] = Static26.js5Archive5.getGroupId(Static34.concatenate(new JagString[] { Static103.aClass100_558, Static123.parseInt(local573), Static86.aClass100_488, Static123.parseInt(local609) }));
-							Static172.locationsMapFileIds[local60] = Static26.js5Archive5.getGroupId(Static34.concatenate(new JagString[] { Static270.aClass100_1090, Static123.parseInt(local573), Static86.aClass100_488, Static123.parseInt(local609) }));
-							Static99.underWaterMapFileIds[local60] = Static26.js5Archive5.getGroupId(Static34.concatenate(new JagString[] { Static165.aClass100_772, Static123.parseInt(local573), Static86.aClass100_488, Static123.parseInt(local609) }));
-							Static35.underWaterLocationsMapFileIds[local60] = Static26.js5Archive5.getGroupId(Static34.concatenate(new JagString[] { Static278.aClass100_1103, Static123.parseInt(local573), Static86.aClass100_488, Static123.parseInt(local609) }));
+							Static36.mapFileIds[local60] = Static26.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static103.aClass100_558, Static123.parseInt(local573), Static86.aClass100_488, Static123.parseInt(local609) }));
+							Static172.locationsMapFileIds[local60] = Static26.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static270.aClass100_1090, Static123.parseInt(local573), Static86.aClass100_488, Static123.parseInt(local609) }));
+							Static99.underWaterMapFileIds[local60] = Static26.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static165.aClass100_772, Static123.parseInt(local573), Static86.aClass100_488, Static123.parseInt(local609) }));
+							Static35.underWaterLocationsMapFileIds[local60] = Static26.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static278.aClass100_1103, Static123.parseInt(local573), Static86.aClass100_488, Static123.parseInt(local609) }));
 							local60++;
 						}
 					}
@@ -142,16 +142,6 @@ public final class Static75 {
 			}
 		}
 		Static127.method2463(local26, local64, local20, local31, false, local13);
-	}
-
-	@OriginalMember(owner = "client!g", name = "a", descriptor = "(B)V")
-	public static void method1631() {
-		Static254.anIntArray488 = null;
-		Static269.anIntArray252 = null;
-		Static26.anIntArray66 = null;
-		Static7.aByteArrayArray5 = null;
-		Static274.anIntArray440 = null;
-		Static259.anIntArray513 = null;
 	}
 
 	@OriginalMember(owner = "client!g", name = "b", descriptor = "(I)V")
@@ -209,7 +199,7 @@ public final class Static75 {
 				if (Static159.aClass69ArrayArrayArray1[Static55.level][local19][local27] == null) {
 					Static159.aClass69ArrayArrayArray1[Static55.level][local19][local27] = new LinkedList();
 				}
-				Static159.aClass69ArrayArrayArray1[Static55.level][local19][local27].method2282(new ObjStackNode(local122));
+				Static159.aClass69ArrayArrayArray1[Static55.level][local19][local27].addTail(new ObjStackNode(local122));
 				Static220.spawnGroundObject(local27, local19);
 			}
 		} else {
@@ -244,7 +234,7 @@ public final class Static75 {
 					local23 = local23 * 64;
 					local317 = new ProjAnim(local45, Static55.level, local23, local19, Static207.method3685(Static55.level, local23, local19) - local218, Static83.loop + local228, local232 + Static83.loop, local236, local247, local39, local224);
 					local317.method3705(local31, Static83.loop + local228, -local224 + Static207.method3685(Static55.level, local27, local31), local27);
-					Static217.aClass69_116.method2282(new ProjAnimNode(local317));
+					Static217.aClass69_116.addTail(new ProjAnimNode(local317));
 				}
 			} else if (Static164.anInt3985 == 17) {
 				local15 = Static57.aClass3_Sub15_Sub1_3.g1();
@@ -257,7 +247,7 @@ public final class Static75 {
 					local23 = local23 * 128 + 64;
 					local19 = local19 * 128 + 64;
 					@Pc(427) SpotAnim local427 = new SpotAnim(local27, Static55.level, local23, local19, Static207.method3685(Static55.level, local23, local19) - local31, local39, Static83.loop);
-					Static99.aClass69_64.method2282(new SpotAnimNode(local427));
+					Static99.aClass69_64.addTail(new SpotAnimNode(local427));
 				}
 			} else if (Static164.anInt3985 == 179) {
 				local15 = Static57.aClass3_Sub15_Sub1_3.g1add();
@@ -339,7 +329,7 @@ public final class Static75 {
 						if (Static159.aClass69ArrayArrayArray1[Static55.level][local19][local27] == null) {
 							Static159.aClass69ArrayArrayArray1[Static55.level][local19][local27] = new LinkedList();
 						}
-						Static159.aClass69ArrayArrayArray1[Static55.level][local19][local27].method2282(new ObjStackNode(local812));
+						Static159.aClass69ArrayArrayArray1[Static55.level][local19][local27].addTail(new ObjStackNode(local812));
 						Static220.spawnGroundObject(local27, local19);
 					}
 				} else if (Static164.anInt3985 == 16) {
@@ -366,7 +356,7 @@ public final class Static75 {
 						local27 = local27 * 128 + 64;
 						local317 = new ProjAnim(local45, Static55.level, local23, local19, Static207.method3685(Static55.level, local23, local19) - local218, local228 + Static83.loop, local232 + Static83.loop, local236, local247, local39, local224);
 						local317.method3705(local31, Static83.loop + local228, Static207.method3685(Static55.level, local27, local31) - local224, local27);
-						Static217.aClass69_116.method2282(new ProjAnimNode(local317));
+						Static217.aClass69_116.addTail(new ProjAnimNode(local317));
 					}
 				} else if (Static164.anInt3985 == 104) {
 					local15 = Static57.aClass3_Sub15_Sub1_3.g1();
@@ -406,7 +396,7 @@ public final class Static75 {
 								local1194 = local1184 >> 11 & 0xF;
 								local1188 = local1184 & 0x7FF;
 								if (Static16.anInt549 == local1188) {
-									local1198 = Static173.self;
+									local1198 = PlayerList.self;
 								} else {
 									local1198 = Static159.players[local1188];
 								}
@@ -428,7 +418,7 @@ public final class Static75 {
 						}
 						@Pc(1331) ProjAnim local1331 = new ProjAnim(local218, Static55.level, local23, local19, Static207.method3685(Static55.level, local23, local19) - local224, local232 + Static83.loop, local236 + Static83.loop, local247, local633, local45, local228);
 						local1331.method3705(local31, local232 + Static83.loop, -local228 + Static207.method3685(Static55.level, local27, local31), local27);
-						Static217.aClass69_116.method2282(new ProjAnimNode(local1331));
+						Static217.aClass69_116.addTail(new ProjAnimNode(local1331));
 					}
 				} else if (Static164.anInt3985 == 97) {
 					local15 = Static57.aClass3_Sub15_Sub1_3.g1();
@@ -444,7 +434,7 @@ public final class Static75 {
 					local45 = local31 & 0x7;
 					if (local23 >= 0 && local19 >= 0 && local23 < 104 && local19 < 104) {
 						local224 = local39 + 1;
-						if (Static173.self.movementQueueX[0] >= local23 - local224 && local224 + local23 >= Static173.self.movementQueueX[0] && Static173.self.movementQueueZ[0] >= local19 - local224 && Static173.self.movementQueueZ[0] <= local224 + local19 && Static30.ambientSoundsVolume != 0 && local45 > 0 && Static189.anInt4451 < 50 && local27 != -1) {
+						if (PlayerList.self.movementQueueX[0] >= local23 - local224 && local224 + local23 >= PlayerList.self.movementQueueX[0] && PlayerList.self.movementQueueZ[0] >= local19 - local224 && PlayerList.self.movementQueueZ[0] <= local224 + local19 && Preferences.ambientSoundsVolume != 0 && local45 > 0 && Static189.anInt4451 < 50 && local27 != -1) {
 							Static200.anIntArray421[Static189.anInt4451] = local27;
 							Static276.anIntArray563[Static189.anInt4451] = local45;
 							Static164.anIntArray362[Static189.anInt4451] = local218;
@@ -478,25 +468,4 @@ public final class Static75 {
 		}
 	}
 
-	@OriginalMember(owner = "client!g", name = "a", descriptor = "(ILclient!ve;)V")
-	public static void init(@OriginalArg(1) Js5 arg0) {
-		Static166.anInt4049 = arg0.getGroupId(Static18.aClass100_106);
-		Static130.anInt3161 = arg0.getGroupId(Static55.aClass100_377);
-		Static73.anInt2077 = arg0.getGroupId(Static73.aClass100_454);
-		Static280.anInt5900 = arg0.getGroupId(Static17.aClass100_102);
-		Static131.anInt3261 = arg0.getGroupId(Static219.aClass100_920);
-		Static36.anInt1165 = arg0.getGroupId(Static260.aClass100_944);
-		Static214.anInt5579 = arg0.getGroupId(Static123.aClass100_592);
-		Static34.anInt1049 = arg0.getGroupId(Static228.aClass100_968);
-		Static202.anInt4741 = arg0.getGroupId(Static98.aClass100_524);
-		Static149.anInt3551 = arg0.getGroupId(Static189.aClass100_835);
-		Static19.anInt647 = arg0.getGroupId(Static259.aClass100_1075);
-		Static32.anInt1016 = arg0.getGroupId(Static86.aClass100_490);
-		Static78.anInt2147 = arg0.getGroupId(Static189.aClass100_837);
-		Static124.anInt3083 = arg0.getGroupId(Static250.aClass100_1041);
-		Static224.anInt5057 = arg0.getGroupId(Static27.aClass100_167);
-		Static84.anInt2257 = arg0.getGroupId(Static18.aClass100_107);
-		Static163.anInt3962 = arg0.getGroupId(Static280.aClass100_1108);
-		Static128.anInt3143 = arg0.getGroupId(Static5.aClass100_9);
-	}
 }

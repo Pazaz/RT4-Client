@@ -4,12 +4,15 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static236 {
 
+	@OriginalMember(owner = "client!df", name = "n", descriptor = "I")
+	public static int anInt1396 = 0;
+
 	@OriginalMember(owner = "client!tc", name = "a", descriptor = "(B)I")
 	public static int method4047() {
 		if (Static127.neverRemoveRoofs) {
 			return 0;
-		} else if (Static138.allLevelsAreVisible()) {
-			return Static80.removeRoofsSelectively ? 2 : 1;
+		} else if (SceneGraph.allLevelsAreVisible()) {
+			return Preferences.removeRoofsSelectively ? 2 : 1;
 		} else {
 			return 1;
 		}
@@ -18,9 +21,9 @@ public final class Static236 {
 	@OriginalMember(owner = "client!tc", name = "a", descriptor = "(IILclient!be;BIIII)V")
 	public static void method4049(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Component arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6) {
 		if (Static45.aBoolean84) {
-			Static42.anInt1396 = 32;
+			anInt1396 = 32;
 		} else {
-			Static42.anInt1396 = 0;
+			anInt1396 = 0;
 		}
 		Static45.aBoolean84 = false;
 		@Pc(139) int local139;
@@ -31,7 +34,7 @@ public final class Static236 {
 			} else if (arg3 >= arg4 && arg3 < arg4 + 16 && arg0 >= arg1 + arg5 - 16 && arg1 + arg5 > arg0) {
 				arg2.scrollY += 4;
 				Static43.redraw(arg2);
-			} else if (arg3 >= arg4 - Static42.anInt1396 && arg3 < arg4 + Static42.anInt1396 + 16 && arg0 >= arg5 + 16 && arg1 + arg5 - 16 > arg0) {
+			} else if (arg3 >= arg4 - anInt1396 && arg3 < arg4 + anInt1396 + 16 && arg0 >= arg5 + 16 && arg1 + arg5 - 16 > arg0) {
 				local139 = arg1 * (arg1 - 32) / arg6;
 				if (local139 < 8) {
 					local139 = 8;

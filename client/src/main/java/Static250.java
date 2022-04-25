@@ -12,19 +12,13 @@ public final class Static250 {
 	@OriginalMember(owner = "client!uf", name = "r", descriptor = "Lclient!ve;")
 	public static Js5 spritesArchive;
 
-	@OriginalMember(owner = "client!uf", name = "b", descriptor = "Z")
-	public static boolean showGroundDecorations = true;
-
-	@OriginalMember(owner = "client!uf", name = "e", descriptor = "I")
+    @OriginalMember(owner = "client!uf", name = "e", descriptor = "I")
 	public static int anInt5434 = 0;
 
 	@OriginalMember(owner = "client!uf", name = "j", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable aClass99_33 = new SoftLruHashTable(260);
 
-	@OriginalMember(owner = "client!uf", name = "o", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1041 = Static28.parse("scrollbar");
-
-	@OriginalMember(owner = "client!uf", name = "q", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!uf", name = "q", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1042 = Static28.parse("Null");
 
 	@OriginalMember(owner = "client!uf", name = "s", descriptor = "Lclient!na;")
@@ -35,8 +29,8 @@ public final class Static250 {
 
 	@OriginalMember(owner = "client!uf", name = "a", descriptor = "(B)V")
 	public static void method4273() {
-		@Pc(14) int playerX = Static173.self.xFine + Static132.anInt3291;
-		@Pc(20) int playerZ = Static173.self.zFine + Static206.anInt4774;
+		@Pc(14) int playerX = PlayerList.self.xFine + Static132.anInt3291;
+		@Pc(20) int playerZ = PlayerList.self.zFine + Static206.anInt4774;
 		if (Static81.cameraX - playerX < -500 || Static81.cameraX - playerX > 500 || Static111.cameraZ - playerZ < -500 || Static111.cameraZ - playerZ > 500) {
 			Static81.cameraX = playerX;
 			Static111.cameraZ = playerZ;
@@ -47,7 +41,7 @@ public final class Static250 {
 		if (Static81.cameraX != playerX) {
 			Static81.cameraX += (playerX - Static81.cameraX) / 16;
 		}
-		if (Static33.aBoolean63) {
+		if (Preferences.aBoolean63) {
 			for (@Pc(93) int local93 = 0; local93 < Static182.keyQueueSize; local93++) {
 				@Pc(104) int code = Static227.keyCodes[local93];
 				if (code == Keyboard.KEY_UP) {

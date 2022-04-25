@@ -48,7 +48,7 @@ public final class Rasteriser {
 
 	@OriginalMember(owner = "client!hf", name = "a", descriptor = "()V")
 	public static void prepare() {
-		prepareOffsets(Static129.clipLeft, Static129.clipTop, Static129.clipRight, Static129.clipBottom);
+		prepareOffsets(SoftwareRaster.clipLeft, SoftwareRaster.clipTop, SoftwareRaster.clipRight, SoftwareRaster.clipBottom);
 	}
 
 	@OriginalMember(owner = "client!hf", name = "a", descriptor = "(IIIIIIIIIIIIIIIIIII)V")
@@ -156,22 +156,22 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedScanline(Static129.pixels, texels, yA, xC >> 16, xB >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
+									drawTexturedScanline(SoftwareRaster.pixels, texels, yA, xC >> 16, xB >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
 									xC += xStepAC;
 									xB += xStepBC;
 									colorA += colorStepB;
-									yA += Static129.width;
+									yA += SoftwareRaster.width;
 									local177 += local197;
 									local207 += local227;
 									local237 += local257;
 								}
 							}
 
-							drawTexturedScanline(Static129.pixels, texels, yA, xC >> 16, xA >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
+							drawTexturedScanline(SoftwareRaster.pixels, texels, yA, xC >> 16, xA >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
 							xC += xStepAC;
 							xA += xStepAB;
 							colorA += colorStepB;
-							yA += Static129.width;
+							yA += SoftwareRaster.width;
 							local177 += local197;
 							local207 += local227;
 							local237 += local257;
@@ -189,22 +189,22 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedScanline(Static129.pixels, texels, yA, xB >> 16, xC >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
+									drawTexturedScanline(SoftwareRaster.pixels, texels, yA, xB >> 16, xC >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
 									xC += xStepAC;
 									xB += xStepBC;
 									colorA += colorStepB;
-									yA += Static129.width;
+									yA += SoftwareRaster.width;
 									local177 += local197;
 									local207 += local227;
 									local237 += local257;
 								}
 							}
 
-							drawTexturedScanline(Static129.pixels, texels, yA, xA >> 16, xC >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
+							drawTexturedScanline(SoftwareRaster.pixels, texels, yA, xA >> 16, xC >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
 							xC += xStepAC;
 							xA += xStepAB;
 							colorA += colorStepB;
-							yA += Static129.width;
+							yA += SoftwareRaster.width;
 							local177 += local197;
 							local207 += local227;
 							local237 += local257;
@@ -241,22 +241,22 @@ public final class Rasteriser {
 									if (yB < 0) {
 										return;
 									}
-									drawTexturedScanline(Static129.pixels, texels, yA, xA >> 16, xC >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
+									drawTexturedScanline(SoftwareRaster.pixels, texels, yA, xA >> 16, xC >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
 									xC += xStepBC;
 									xA += xStepAB;
 									colorA += colorStepB;
-									yA += Static129.width;
+									yA += SoftwareRaster.width;
 									local177 += local197;
 									local207 += local227;
 									local237 += local257;
 								}
 							}
 
-							drawTexturedScanline(Static129.pixels, texels, yA, xA >> 16, xB >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
+							drawTexturedScanline(SoftwareRaster.pixels, texels, yA, xA >> 16, xB >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
 							xB += xStepAC;
 							xA += xStepAB;
 							colorA += colorStepB;
-							yA += Static129.width;
+							yA += SoftwareRaster.width;
 							local177 += local197;
 							local207 += local227;
 							local237 += local257;
@@ -274,22 +274,22 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedScanline(Static129.pixels, texels, yA, xC >> 16, xA >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
+									drawTexturedScanline(SoftwareRaster.pixels, texels, yA, xC >> 16, xA >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
 									xC += xStepBC;
 									xA += xStepAB;
 									colorA += colorStepB;
-									yA += Static129.width;
+									yA += SoftwareRaster.width;
 									local177 += local197;
 									local207 += local227;
 									local237 += local257;
 								}
 							}
 
-							drawTexturedScanline(Static129.pixels, texels, yA, xB >> 16, xA >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
+							drawTexturedScanline(SoftwareRaster.pixels, texels, yA, xB >> 16, xA >> 16, colorA, colorStepA, local177, local207, local237, local187, local217, local247);
 							xB += xStepAC;
 							xA += xStepAB;
 							colorA += colorStepB;
-							yA += Static129.width;
+							yA += SoftwareRaster.width;
 							local177 += local197;
 							local207 += local227;
 							local237 += local257;
@@ -340,22 +340,22 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedScanline(Static129.pixels, texels, yB, xA >> 16, xC >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
+									drawTexturedScanline(SoftwareRaster.pixels, texels, yB, xA >> 16, xC >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
 									xA += xStepAB;
 									xC += xStepAC;
 									colorB += colorStepB;
-									yB += Static129.width;
+									yB += SoftwareRaster.width;
 									local177 += local197;
 									local207 += local227;
 									local237 += local257;
 								}
 							}
 
-							drawTexturedScanline(Static129.pixels, texels, yB, xA >> 16, xB >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
+							drawTexturedScanline(SoftwareRaster.pixels, texels, yB, xA >> 16, xB >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
 							xA += xStepAB;
 							xB += xStepBC;
 							colorB += colorStepB;
-							yB += Static129.width;
+							yB += SoftwareRaster.width;
 							local177 += local197;
 							local207 += local227;
 							local237 += local257;
@@ -373,22 +373,22 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedScanline(Static129.pixels, texels, yB, xC >> 16, xA >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
+									drawTexturedScanline(SoftwareRaster.pixels, texels, yB, xC >> 16, xA >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
 									xA += xStepAB;
 									xC += xStepAC;
 									colorB += colorStepB;
-									yB += Static129.width;
+									yB += SoftwareRaster.width;
 									local177 += local197;
 									local207 += local227;
 									local237 += local257;
 								}
 							}
 
-							drawTexturedScanline(Static129.pixels, texels, yB, xB >> 16, xA >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
+							drawTexturedScanline(SoftwareRaster.pixels, texels, yB, xB >> 16, xA >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
 							xA += xStepAB;
 							xB += xStepBC;
 							colorB += colorStepB;
-							yB += Static129.width;
+							yB += SoftwareRaster.width;
 							local177 += local197;
 							local207 += local227;
 							local237 += local257;
@@ -426,22 +426,22 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedScanline(Static129.pixels, texels, yB, xA >> 16, xB >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
+									drawTexturedScanline(SoftwareRaster.pixels, texels, yB, xA >> 16, xB >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
 									xA += xStepAC;
 									xB += xStepBC;
 									colorB += colorStepB;
-									yB += Static129.width;
+									yB += SoftwareRaster.width;
 									local177 += local197;
 									local207 += local227;
 									local237 += local257;
 								}
 							}
 
-							drawTexturedScanline(Static129.pixels, texels, yB, xC >> 16, xB >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
+							drawTexturedScanline(SoftwareRaster.pixels, texels, yB, xC >> 16, xB >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
 							xC += xStepAB;
 							xB += xStepBC;
 							colorB += colorStepB;
-							yB += Static129.width;
+							yB += SoftwareRaster.width;
 							local177 += local197;
 							local207 += local227;
 							local237 += local257;
@@ -459,22 +459,22 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedScanline(Static129.pixels, texels, yB, xB >> 16, xA >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
+									drawTexturedScanline(SoftwareRaster.pixels, texels, yB, xB >> 16, xA >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
 									xA += xStepAC;
 									xB += xStepBC;
 									colorB += colorStepB;
-									yB += Static129.width;
+									yB += SoftwareRaster.width;
 									local177 += local197;
 									local207 += local227;
 									local237 += local257;
 								}
 							}
 
-							drawTexturedScanline(Static129.pixels, texels, yB, xB >> 16, xC >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
+							drawTexturedScanline(SoftwareRaster.pixels, texels, yB, xB >> 16, xC >> 16, colorB, colorStepA, local177, local207, local237, local187, local217, local247);
 							xC += xStepAB;
 							xB += xStepBC;
 							colorB += colorStepB;
-							yB += Static129.width;
+							yB += SoftwareRaster.width;
 							local177 += local197;
 							local207 += local227;
 							local237 += local257;
@@ -524,22 +524,22 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawTexturedScanline(Static129.pixels, texels, yC, xB >> 16, xA >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
+								drawTexturedScanline(SoftwareRaster.pixels, texels, yC, xB >> 16, xA >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
 								xB += xStepBC;
 								xA += xStepAB;
 								colorC += colorStepB;
-								yC += Static129.width;
+								yC += SoftwareRaster.width;
 								local177 += local197;
 								local207 += local227;
 								local237 += local257;
 							}
 						}
 
-						drawTexturedScanline(Static129.pixels, texels, yC, xB >> 16, xC >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
+						drawTexturedScanline(SoftwareRaster.pixels, texels, yC, xB >> 16, xC >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
 						xB += xStepBC;
 						xC += xStepAC;
 						colorC += colorStepB;
-						yC += Static129.width;
+						yC += SoftwareRaster.width;
 						local177 += local197;
 						local207 += local227;
 						local237 += local257;
@@ -557,22 +557,22 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawTexturedScanline(Static129.pixels, texels, yC, xA >> 16, xB >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
+								drawTexturedScanline(SoftwareRaster.pixels, texels, yC, xA >> 16, xB >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
 								xB += xStepBC;
 								xA += xStepAB;
 								colorC += colorStepB;
-								yC += Static129.width;
+								yC += SoftwareRaster.width;
 								local177 += local197;
 								local207 += local227;
 								local237 += local257;
 							}
 						}
 
-						drawTexturedScanline(Static129.pixels, texels, yC, xC >> 16, xB >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
+						drawTexturedScanline(SoftwareRaster.pixels, texels, yC, xC >> 16, xB >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
 						xB += xStepBC;
 						xC += xStepAC;
 						colorC += colorStepB;
-						yC += Static129.width;
+						yC += SoftwareRaster.width;
 						local177 += local197;
 						local207 += local227;
 						local237 += local257;
@@ -610,22 +610,22 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawTexturedScanline(Static129.pixels, texels, yC, xB >> 16, xC >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
+								drawTexturedScanline(SoftwareRaster.pixels, texels, yC, xB >> 16, xC >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
 								xB += xStepAB;
 								xC += xStepAC;
 								colorC += colorStepB;
-								yC += Static129.width;
+								yC += SoftwareRaster.width;
 								local177 += local197;
 								local207 += local227;
 								local237 += local257;
 							}
 						}
 
-						drawTexturedScanline(Static129.pixels, texels, yC, xA >> 16, xC >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
+						drawTexturedScanline(SoftwareRaster.pixels, texels, yC, xA >> 16, xC >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
 						xA += xStepBC;
 						xC += xStepAC;
 						colorC += colorStepB;
-						yC += Static129.width;
+						yC += SoftwareRaster.width;
 						local177 += local197;
 						local207 += local227;
 						local237 += local257;
@@ -643,22 +643,22 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawTexturedScanline(Static129.pixels, texels, yC, xC >> 16, xB >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
+								drawTexturedScanline(SoftwareRaster.pixels, texels, yC, xC >> 16, xB >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
 								xB += xStepAB;
 								xC += xStepAC;
 								colorC += colorStepB;
-								yC += Static129.width;
+								yC += SoftwareRaster.width;
 								local177 += local197;
 								local207 += local227;
 								local237 += local257;
 							}
 						}
 
-						drawTexturedScanline(Static129.pixels, texels, yC, xC >> 16, xA >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
+						drawTexturedScanline(SoftwareRaster.pixels, texels, yC, xC >> 16, xA >> 16, colorC, colorStepA, local177, local207, local237, local187, local217, local247);
 						xA += xStepBC;
 						xC += xStepAC;
 						colorC += colorStepB;
-						yC += Static129.width;
+						yC += SoftwareRaster.width;
 						local177 += local197;
 						local207 += local227;
 						local237 += local257;
@@ -788,22 +788,22 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedAlphaScanline(Static129.pixels, texels, yA, xC >> 16, xB >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
+									drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yA, xC >> 16, xB >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
 									xC += xStepAC;
 									xB += xStepBC;
 									colorA += colorStepB;
-									yA += Static129.width;
+									yA += SoftwareRaster.width;
 									local182 += local202;
 									local212 += local232;
 									local242 += local262;
 								}
 							}
 
-							drawTexturedAlphaScanline(Static129.pixels, texels, yA, xC >> 16, xA >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
+							drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yA, xC >> 16, xA >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
 							xC += xStepAC;
 							xA += xStepAB;
 							colorA += colorStepB;
-							yA += Static129.width;
+							yA += SoftwareRaster.width;
 							local182 += local202;
 							local212 += local232;
 							local242 += local262;
@@ -821,22 +821,22 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedAlphaScanline(Static129.pixels, texels, yA, xB >> 16, xC >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
+									drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yA, xB >> 16, xC >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
 									xC += xStepAC;
 									xB += xStepBC;
 									colorA += colorStepB;
-									yA += Static129.width;
+									yA += SoftwareRaster.width;
 									local182 += local202;
 									local212 += local232;
 									local242 += local262;
 								}
 							}
 
-							drawTexturedAlphaScanline(Static129.pixels, texels, yA, xA >> 16, xC >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
+							drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yA, xA >> 16, xC >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
 							xC += xStepAC;
 							xA += xStepAB;
 							colorA += colorStepB;
-							yA += Static129.width;
+							yA += SoftwareRaster.width;
 							local182 += local202;
 							local212 += local232;
 							local242 += local262;
@@ -874,22 +874,22 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedAlphaScanline(Static129.pixels, texels, yA, xA >> 16, xC >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
+									drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yA, xA >> 16, xC >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
 									xC += xStepBC;
 									xA += xStepAB;
 									colorA += colorStepB;
-									yA += Static129.width;
+									yA += SoftwareRaster.width;
 									local182 += local202;
 									local212 += local232;
 									local242 += local262;
 								}
 							}
 
-							drawTexturedAlphaScanline(Static129.pixels, texels, yA, xA >> 16, xB >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
+							drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yA, xA >> 16, xB >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
 							xB += xStepAC;
 							xA += xStepAB;
 							colorA += colorStepB;
-							yA += Static129.width;
+							yA += SoftwareRaster.width;
 							local182 += local202;
 							local212 += local232;
 							local242 += local262;
@@ -907,22 +907,22 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedAlphaScanline(Static129.pixels, texels, yA, xC >> 16, xA >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
+									drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yA, xC >> 16, xA >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
 									xC += xStepBC;
 									xA += xStepAB;
 									colorA += colorStepB;
-									yA += Static129.width;
+									yA += SoftwareRaster.width;
 									local182 += local202;
 									local212 += local232;
 									local242 += local262;
 								}
 							}
 
-							drawTexturedAlphaScanline(Static129.pixels, texels, yA, xB >> 16, xA >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
+							drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yA, xB >> 16, xA >> 16, colorA, colorStepA, local182, local212, local242, local192, local222, local252);
 							xB += xStepAC;
 							xA += xStepAB;
 							colorA += colorStepB;
-							yA += Static129.width;
+							yA += SoftwareRaster.width;
 							local182 += local202;
 							local212 += local232;
 							local242 += local262;
@@ -971,22 +971,22 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedAlphaScanline(Static129.pixels, texels, yB, xA >> 16, xC >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
+									drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yB, xA >> 16, xC >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
 									xA += xStepAB;
 									xC += xStepAC;
 									colorB += colorStepB;
-									yB += Static129.width;
+									yB += SoftwareRaster.width;
 									local182 += local202;
 									local212 += local232;
 									local242 += local262;
 								}
 							}
 
-							drawTexturedAlphaScanline(Static129.pixels, texels, yB, xA >> 16, xB >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
+							drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yB, xA >> 16, xB >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
 							xA += xStepAB;
 							xB += xStepBC;
 							colorB += colorStepB;
-							yB += Static129.width;
+							yB += SoftwareRaster.width;
 							local182 += local202;
 							local212 += local232;
 							local242 += local262;
@@ -1004,22 +1004,22 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedAlphaScanline(Static129.pixels, texels, yB, xC >> 16, xA >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
+									drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yB, xC >> 16, xA >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
 									xA += xStepAB;
 									xC += xStepAC;
 									colorB += colorStepB;
-									yB += Static129.width;
+									yB += SoftwareRaster.width;
 									local182 += local202;
 									local212 += local232;
 									local242 += local262;
 								}
 							}
 
-							drawTexturedAlphaScanline(Static129.pixels, texels, yB, xB >> 16, xA >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
+							drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yB, xB >> 16, xA >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
 							xA += xStepAB;
 							xB += xStepBC;
 							colorB += colorStepB;
-							yB += Static129.width;
+							yB += SoftwareRaster.width;
 							local182 += local202;
 							local212 += local232;
 							local242 += local262;
@@ -1057,22 +1057,22 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedAlphaScanline(Static129.pixels, texels, yB, xA >> 16, xB >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
+									drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yB, xA >> 16, xB >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
 									xA += xStepAC;
 									xB += xStepBC;
 									colorB += colorStepB;
-									yB += Static129.width;
+									yB += SoftwareRaster.width;
 									local182 += local202;
 									local212 += local232;
 									local242 += local262;
 								}
 							}
 
-							drawTexturedAlphaScanline(Static129.pixels, texels, yB, xC >> 16, xB >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
+							drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yB, xC >> 16, xB >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
 							xC += xStepAB;
 							xB += xStepBC;
 							colorB += colorStepB;
-							yB += Static129.width;
+							yB += SoftwareRaster.width;
 							local182 += local202;
 							local212 += local232;
 							local242 += local262;
@@ -1090,22 +1090,22 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawTexturedAlphaScanline(Static129.pixels, texels, yB, xB >> 16, xA >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
+									drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yB, xB >> 16, xA >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
 									xA += xStepAC;
 									xB += xStepBC;
 									colorB += colorStepB;
-									yB += Static129.width;
+									yB += SoftwareRaster.width;
 									local182 += local202;
 									local212 += local232;
 									local242 += local262;
 								}
 							}
 
-							drawTexturedAlphaScanline(Static129.pixels, texels, yB, xB >> 16, xC >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
+							drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yB, xB >> 16, xC >> 16, colorB, colorStepA, local182, local212, local242, local192, local222, local252);
 							xC += xStepAB;
 							xB += xStepBC;
 							colorB += colorStepB;
-							yB += Static129.width;
+							yB += SoftwareRaster.width;
 							local182 += local202;
 							local212 += local232;
 							local242 += local262;
@@ -1153,22 +1153,22 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawTexturedAlphaScanline(Static129.pixels, texels, yC, xB >> 16, xA >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
+								drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yC, xB >> 16, xA >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
 								xB += xStepBC;
 								xA += xStepAB;
 								colorC += colorStepB;
-								yC += Static129.width;
+								yC += SoftwareRaster.width;
 								local182 += local202;
 								local212 += local232;
 								local242 += local262;
 							}
 						}
 
-						drawTexturedAlphaScanline(Static129.pixels, texels, yC, xB >> 16, xC >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
+						drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yC, xB >> 16, xC >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
 						xB += xStepBC;
 						xC += xStepAC;
 						colorC += colorStepB;
-						yC += Static129.width;
+						yC += SoftwareRaster.width;
 						local182 += local202;
 						local212 += local232;
 						local242 += local262;
@@ -1186,22 +1186,22 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawTexturedAlphaScanline(Static129.pixels, texels, yC, xA >> 16, xB >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
+								drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yC, xA >> 16, xB >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
 								xB += xStepBC;
 								xA += xStepAB;
 								colorC += colorStepB;
-								yC += Static129.width;
+								yC += SoftwareRaster.width;
 								local182 += local202;
 								local212 += local232;
 								local242 += local262;
 							}
 						}
 
-						drawTexturedAlphaScanline(Static129.pixels, texels, yC, xC >> 16, xB >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
+						drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yC, xC >> 16, xB >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
 						xB += xStepBC;
 						xC += xStepAC;
 						colorC += colorStepB;
-						yC += Static129.width;
+						yC += SoftwareRaster.width;
 						local182 += local202;
 						local212 += local232;
 						local242 += local262;
@@ -1239,22 +1239,22 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawTexturedAlphaScanline(Static129.pixels, texels, yC, xB >> 16, xC >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
+								drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yC, xB >> 16, xC >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
 								xB += xStepAB;
 								xC += xStepAC;
 								colorC += colorStepB;
-								yC += Static129.width;
+								yC += SoftwareRaster.width;
 								local182 += local202;
 								local212 += local232;
 								local242 += local262;
 							}
 						}
 
-						drawTexturedAlphaScanline(Static129.pixels, texels, yC, xA >> 16, xC >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
+						drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yC, xA >> 16, xC >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
 						xA += xStepBC;
 						xC += xStepAC;
 						colorC += colorStepB;
-						yC += Static129.width;
+						yC += SoftwareRaster.width;
 						local182 += local202;
 						local212 += local232;
 						local242 += local262;
@@ -1272,22 +1272,22 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawTexturedAlphaScanline(Static129.pixels, texels, yC, xC >> 16, xB >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
+								drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yC, xC >> 16, xB >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
 								xB += xStepAB;
 								xC += xStepAC;
 								colorC += colorStepB;
-								yC += Static129.width;
+								yC += SoftwareRaster.width;
 								local182 += local202;
 								local212 += local232;
 								local242 += local262;
 							}
 						}
 
-						drawTexturedAlphaScanline(Static129.pixels, texels, yC, xC >> 16, xA >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
+						drawTexturedAlphaScanline(SoftwareRaster.pixels, texels, yC, xC >> 16, xA >> 16, colorC, colorStepA, local182, local212, local242, local192, local222, local252);
 						xA += xStepBC;
 						xC += xStepAC;
 						colorC += colorStepB;
-						yC += Static129.width;
+						yC += SoftwareRaster.width;
 						local182 += local202;
 						local212 += local232;
 						local242 += local262;
@@ -1299,7 +1299,7 @@ public final class Rasteriser {
 
 	@OriginalMember(owner = "client!hf", name = "b", descriptor = "()I")
 	public static int getOffsetRemainder() {
-		return offsets[0] % Static129.width;
+		return offsets[0] % SoftwareRaster.width;
 	}
 
 	@OriginalMember(owner = "client!hf", name = "a", descriptor = "(Lclient!m;)V")
@@ -2121,17 +2121,17 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawScanline(Static129.pixels, yA, color, xC >> 16, xB >> 16);
+									drawScanline(SoftwareRaster.pixels, yA, color, xC >> 16, xB >> 16);
 									xC += mAC;
 									xB += mBC;
-									yA += Static129.width;
+									yA += SoftwareRaster.width;
 								}
 							}
 
-							drawScanline(Static129.pixels, yA, color, xC >> 16, xA >> 16);
+							drawScanline(SoftwareRaster.pixels, yA, color, xC >> 16, xA >> 16);
 							xC += mAC;
 							xA += mAB;
-							yA += Static129.width;
+							yA += SoftwareRaster.width;
 						}
 					} else {
 						yC -= yB;
@@ -2146,17 +2146,17 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawScanline(Static129.pixels, yA, color, xB >> 16, xC >> 16);
+									drawScanline(SoftwareRaster.pixels, yA, color, xB >> 16, xC >> 16);
 									xC += mAC;
 									xB += mBC;
-									yA += Static129.width;
+									yA += SoftwareRaster.width;
 								}
 							}
 
-							drawScanline(Static129.pixels, yA, color, xA >> 16, xC >> 16);
+							drawScanline(SoftwareRaster.pixels, yA, color, xA >> 16, xC >> 16);
 							xC += mAC;
 							xA += mAB;
-							yA += Static129.width;
+							yA += SoftwareRaster.width;
 						}
 					}
 				} else {
@@ -2186,17 +2186,17 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawScanline(Static129.pixels, yA, color, xC >> 16, xA >> 16);
+									drawScanline(SoftwareRaster.pixels, yA, color, xC >> 16, xA >> 16);
 									xC += mBC;
 									xA += mAB;
-									yA += Static129.width;
+									yA += SoftwareRaster.width;
 								}
 							}
 
-							drawScanline(Static129.pixels, yA, color, xB >> 16, xA >> 16);
+							drawScanline(SoftwareRaster.pixels, yA, color, xB >> 16, xA >> 16);
 							xB += mAC;
 							xA += mAB;
-							yA += Static129.width;
+							yA += SoftwareRaster.width;
 						}
 					} else {
 						yB -= yC;
@@ -2211,17 +2211,17 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawScanline(Static129.pixels, yA, color, xA >> 16, xC >> 16);
+									drawScanline(SoftwareRaster.pixels, yA, color, xA >> 16, xC >> 16);
 									xC += mBC;
 									xA += mAB;
-									yA += Static129.width;
+									yA += SoftwareRaster.width;
 								}
 							}
 
-							drawScanline(Static129.pixels, yA, color, xA >> 16, xB >> 16);
+							drawScanline(SoftwareRaster.pixels, yA, color, xA >> 16, xB >> 16);
 							xB += mAC;
 							xA += mAB;
-							yA += Static129.width;
+							yA += SoftwareRaster.width;
 						}
 					}
 				}
@@ -2263,17 +2263,17 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawScanline(Static129.pixels, yB, color, xA >> 16, xC >> 16);
+									drawScanline(SoftwareRaster.pixels, yB, color, xA >> 16, xC >> 16);
 									xA += mAB;
 									xC += mAC;
-									yB += Static129.width;
+									yB += SoftwareRaster.width;
 								}
 							}
 
-							drawScanline(Static129.pixels, yB, color, xA >> 16, xB >> 16);
+							drawScanline(SoftwareRaster.pixels, yB, color, xA >> 16, xB >> 16);
 							xA += mAB;
 							xB += mBC;
-							yB += Static129.width;
+							yB += SoftwareRaster.width;
 						}
 					} else {
 						yA -= yC;
@@ -2288,17 +2288,17 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawScanline(Static129.pixels, yB, color, xC >> 16, xA >> 16);
+									drawScanline(SoftwareRaster.pixels, yB, color, xC >> 16, xA >> 16);
 									xA += mAB;
 									xC += mAC;
-									yB += Static129.width;
+									yB += SoftwareRaster.width;
 								}
 							}
 
-							drawScanline(Static129.pixels, yB, color, xB >> 16, xA >> 16);
+							drawScanline(SoftwareRaster.pixels, yB, color, xB >> 16, xA >> 16);
 							xA += mAB;
 							xB += mBC;
-							yB += Static129.width;
+							yB += SoftwareRaster.width;
 						}
 					}
 				} else {
@@ -2328,17 +2328,17 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawScanline(Static129.pixels, yB, color, xA >> 16, xB >> 16);
+									drawScanline(SoftwareRaster.pixels, yB, color, xA >> 16, xB >> 16);
 									xA += mAC;
 									xB += mBC;
-									yB += Static129.width;
+									yB += SoftwareRaster.width;
 								}
 							}
 
-							drawScanline(Static129.pixels, yB, color, xC >> 16, xB >> 16);
+							drawScanline(SoftwareRaster.pixels, yB, color, xC >> 16, xB >> 16);
 							xC += mAB;
 							xB += mBC;
-							yB += Static129.width;
+							yB += SoftwareRaster.width;
 						}
 					} else {
 						yC -= yA;
@@ -2353,17 +2353,17 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawScanline(Static129.pixels, yB, color, xB >> 16, xA >> 16);
+									drawScanline(SoftwareRaster.pixels, yB, color, xB >> 16, xA >> 16);
 									xA += mAC;
 									xB += mBC;
-									yB += Static129.width;
+									yB += SoftwareRaster.width;
 								}
 							}
 
-							drawScanline(Static129.pixels, yB, color, xB >> 16, xC >> 16);
+							drawScanline(SoftwareRaster.pixels, yB, color, xB >> 16, xC >> 16);
 							xC += mAB;
 							xB += mBC;
-							yB += Static129.width;
+							yB += SoftwareRaster.width;
 						}
 					}
 				}
@@ -2404,17 +2404,17 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawScanline(Static129.pixels, yC, color, xB >> 16, xA >> 16);
+								drawScanline(SoftwareRaster.pixels, yC, color, xB >> 16, xA >> 16);
 								xB += mBC;
 								xA += mAB;
-								yC += Static129.width;
+								yC += SoftwareRaster.width;
 							}
 						}
 
-						drawScanline(Static129.pixels, yC, color, xB >> 16, xC >> 16);
+						drawScanline(SoftwareRaster.pixels, yC, color, xB >> 16, xC >> 16);
 						xB += mBC;
 						xC += mAC;
-						yC += Static129.width;
+						yC += SoftwareRaster.width;
 					}
 				} else {
 					yB -= yA;
@@ -2429,17 +2429,17 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawScanline(Static129.pixels, yC, color, xA >> 16, xB >> 16);
+								drawScanline(SoftwareRaster.pixels, yC, color, xA >> 16, xB >> 16);
 								xB += mBC;
 								xA += mAB;
-								yC += Static129.width;
+								yC += SoftwareRaster.width;
 							}
 						}
 
-						drawScanline(Static129.pixels, yC, color, xC >> 16, xB >> 16);
+						drawScanline(SoftwareRaster.pixels, yC, color, xC >> 16, xB >> 16);
 						xB += mBC;
 						xC += mAC;
-						yC += Static129.width;
+						yC += SoftwareRaster.width;
 					}
 				}
 			} else {
@@ -2469,17 +2469,17 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawScanline(Static129.pixels, yC, color, xB >> 16, xC >> 16);
+								drawScanline(SoftwareRaster.pixels, yC, color, xB >> 16, xC >> 16);
 								xB += mAB;
 								xC += mAC;
-								yC += Static129.width;
+								yC += SoftwareRaster.width;
 							}
 						}
 
-						drawScanline(Static129.pixels, yC, color, xA >> 16, xC >> 16);
+						drawScanline(SoftwareRaster.pixels, yC, color, xA >> 16, xC >> 16);
 						xA += mBC;
 						xC += mAC;
-						yC += Static129.width;
+						yC += SoftwareRaster.width;
 					}
 				} else {
 					yA -= yB;
@@ -2494,17 +2494,17 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawScanline(Static129.pixels, yC, color, xC >> 16, xB >> 16);
+								drawScanline(SoftwareRaster.pixels, yC, color, xC >> 16, xB >> 16);
 								xB += mAB;
 								xC += mAC;
-								yC += Static129.width;
+								yC += SoftwareRaster.width;
 							}
 						}
 
-						drawScanline(Static129.pixels, yC, color, xC >> 16, xA >> 16);
+						drawScanline(SoftwareRaster.pixels, yC, color, xC >> 16, xA >> 16);
 						xA += mBC;
 						xC += mAC;
-						yC += Static129.width;
+						yC += SoftwareRaster.width;
 					}
 				}
 			}
@@ -2514,8 +2514,8 @@ public final class Rasteriser {
 	@OriginalMember(owner = "client!hf", name = "b", descriptor = "(II)V")
 	public static void setBounds(@OriginalArg(0) int right, @OriginalArg(1) int bottom) {
 		@Pc(3) int offset = offsets[0];
-		@Pc(7) int top = offset / Static129.width;
-		@Pc(13) int left = offset - top * Static129.width;
+		@Pc(7) int top = offset / SoftwareRaster.width;
+		@Pc(13) int left = offset - top * SoftwareRaster.width;
 		centerX = right - left;
 		centerY = bottom - top;
 		Static240.screenLowerX = -centerX;
@@ -3234,10 +3234,10 @@ public final class Rasteriser {
 		if (offsets.length < height) {
 			offsets = new int[Static165.clp2(height)];
 		}
-		@Pc(23) int x = top * Static129.width + left;
+		@Pc(23) int x = top * SoftwareRaster.width + left;
 		for (@Pc(25) int y = 0; y < height; y++) {
 			offsets[y] = x;
-			x += Static129.width;
+			x += SoftwareRaster.width;
 		}
 	}
 
@@ -3249,7 +3249,7 @@ public final class Rasteriser {
 
 	@OriginalMember(owner = "client!hf", name = "d", descriptor = "()I")
 	public static int getOffset() {
-		return offsets[0] / Static129.width;
+		return offsets[0] / SoftwareRaster.width;
 	}
 
 	@OriginalMember(owner = "client!hf", name = "a", descriptor = "(IIIIIIIII)V")
@@ -3327,19 +3327,19 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawGouraudScanline(Static129.pixels, yA, xB >> 16, xC >> 16, colorA, colorStepA);
+									drawGouraudScanline(SoftwareRaster.pixels, yA, xB >> 16, xC >> 16, colorA, colorStepA);
 									xC += xStepAC;
 									xB += xStepBC;
 									colorA += colorStepB;
-									yA += Static129.width;
+									yA += SoftwareRaster.width;
 								}
 							}
 
-							drawGouraudScanline(Static129.pixels, yA, xA >> 16, xC >> 16, colorA, colorStepA);
+							drawGouraudScanline(SoftwareRaster.pixels, yA, xA >> 16, xC >> 16, colorA, colorStepA);
 							xC += xStepAC;
 							xA += xStepAB;
 							colorA += colorStepB;
-							yA += Static129.width;
+							yA += SoftwareRaster.width;
 						}
 					} else {
 						yC -= yB;
@@ -3354,19 +3354,19 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawGouraudScanline(Static129.pixels, yA, xC >> 16, xB >> 16, colorA, colorStepA);
+									drawGouraudScanline(SoftwareRaster.pixels, yA, xC >> 16, xB >> 16, colorA, colorStepA);
 									xC += xStepAC;
 									xB += xStepBC;
 									colorA += colorStepB;
-									yA += Static129.width;
+									yA += SoftwareRaster.width;
 								}
 							}
 
-							drawGouraudScanline(Static129.pixels, yA, xC >> 16, xA >> 16, colorA, colorStepA);
+							drawGouraudScanline(SoftwareRaster.pixels, yA, xC >> 16, xA >> 16, colorA, colorStepA);
 							xC += xStepAC;
 							xA += xStepAB;
 							colorA += colorStepB;
-							yA += Static129.width;
+							yA += SoftwareRaster.width;
 						}
 					}
 				} else {
@@ -3397,19 +3397,19 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawGouraudScanline(Static129.pixels, yA, xC >> 16, xA >> 16, colorA, colorStepA);
+									drawGouraudScanline(SoftwareRaster.pixels, yA, xC >> 16, xA >> 16, colorA, colorStepA);
 									xC += xStepBC;
 									xA += xStepAB;
 									colorA += colorStepB;
-									yA += Static129.width;
+									yA += SoftwareRaster.width;
 								}
 							}
 
-							drawGouraudScanline(Static129.pixels, yA, xB >> 16, xA >> 16, colorA, colorStepA);
+							drawGouraudScanline(SoftwareRaster.pixels, yA, xB >> 16, xA >> 16, colorA, colorStepA);
 							xB += xStepAC;
 							xA += xStepAB;
 							colorA += colorStepB;
-							yA += Static129.width;
+							yA += SoftwareRaster.width;
 						}
 					} else {
 						yB -= yC;
@@ -3424,19 +3424,19 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawGouraudScanline(Static129.pixels, yA, xA >> 16, xC >> 16, colorA, colorStepA);
+									drawGouraudScanline(SoftwareRaster.pixels, yA, xA >> 16, xC >> 16, colorA, colorStepA);
 									xC += xStepBC;
 									xA += xStepAB;
 									colorA += colorStepB;
-									yA += Static129.width;
+									yA += SoftwareRaster.width;
 								}
 							}
 
-							drawGouraudScanline(Static129.pixels, yA, xA >> 16, xB >> 16, colorA, colorStepA);
+							drawGouraudScanline(SoftwareRaster.pixels, yA, xA >> 16, xB >> 16, colorA, colorStepA);
 							xB += xStepAC;
 							xA += xStepAB;
 							colorA += colorStepB;
-							yA += Static129.width;
+							yA += SoftwareRaster.width;
 						}
 					}
 				}
@@ -3477,19 +3477,19 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawGouraudScanline(Static129.pixels, yB, xC >> 16, xA >> 16, colorB, colorStepA);
+									drawGouraudScanline(SoftwareRaster.pixels, yB, xC >> 16, xA >> 16, colorB, colorStepA);
 									xA += xStepAB;
 									xC += xStepAC;
 									colorB += colorStepB;
-									yB += Static129.width;
+									yB += SoftwareRaster.width;
 								}
 							}
 
-							drawGouraudScanline(Static129.pixels, yB, xB >> 16, xA >> 16, colorB, colorStepA);
+							drawGouraudScanline(SoftwareRaster.pixels, yB, xB >> 16, xA >> 16, colorB, colorStepA);
 							xA += xStepAB;
 							xB += xStepBC;
 							colorB += colorStepB;
-							yB += Static129.width;
+							yB += SoftwareRaster.width;
 						}
 					} else {
 						yA -= yC;
@@ -3504,19 +3504,19 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawGouraudScanline(Static129.pixels, yB, xA >> 16, xC >> 16, colorB, colorStepA);
+									drawGouraudScanline(SoftwareRaster.pixels, yB, xA >> 16, xC >> 16, colorB, colorStepA);
 									xA += xStepAB;
 									xC += xStepAC;
 									colorB += colorStepB;
-									yB += Static129.width;
+									yB += SoftwareRaster.width;
 								}
 							}
 
-							drawGouraudScanline(Static129.pixels, yB, xA >> 16, xB >> 16, colorB, colorStepA);
+							drawGouraudScanline(SoftwareRaster.pixels, yB, xA >> 16, xB >> 16, colorB, colorStepA);
 							xA += xStepAB;
 							xB += xStepBC;
 							colorB += colorStepB;
-							yB += Static129.width;
+							yB += SoftwareRaster.width;
 						}
 					}
 				} else {
@@ -3547,19 +3547,19 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawGouraudScanline(Static129.pixels, yB, xA >> 16, xB >> 16, colorB, colorStepA);
+									drawGouraudScanline(SoftwareRaster.pixels, yB, xA >> 16, xB >> 16, colorB, colorStepA);
 									xA += xStepAC;
 									xB += xStepBC;
 									colorB += colorStepB;
-									yB += Static129.width;
+									yB += SoftwareRaster.width;
 								}
 							}
 
-							drawGouraudScanline(Static129.pixels, yB, xC >> 16, xB >> 16, colorB, colorStepA);
+							drawGouraudScanline(SoftwareRaster.pixels, yB, xC >> 16, xB >> 16, colorB, colorStepA);
 							xC += xStepAB;
 							xB += xStepBC;
 							colorB += colorStepB;
-							yB += Static129.width;
+							yB += SoftwareRaster.width;
 						}
 					} else {
 						yC -= yA;
@@ -3574,19 +3574,19 @@ public final class Rasteriser {
 										return;
 									}
 
-									drawGouraudScanline(Static129.pixels, yB, xB >> 16, xA >> 16, colorB, colorStepA);
+									drawGouraudScanline(SoftwareRaster.pixels, yB, xB >> 16, xA >> 16, colorB, colorStepA);
 									xA += xStepAC;
 									xB += xStepBC;
 									colorB += colorStepB;
-									yB += Static129.width;
+									yB += SoftwareRaster.width;
 								}
 							}
 
-							drawGouraudScanline(Static129.pixels, yB, xB >> 16, xC >> 16, colorB, colorStepA);
+							drawGouraudScanline(SoftwareRaster.pixels, yB, xB >> 16, xC >> 16, colorB, colorStepA);
 							xC += xStepAB;
 							xB += xStepBC;
 							colorB += colorStepB;
-							yB += Static129.width;
+							yB += SoftwareRaster.width;
 						}
 					}
 				}
@@ -3628,19 +3628,19 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawGouraudScanline(Static129.pixels, yC, xB >> 16, xA >> 16, colorC, colorStepA);
+								drawGouraudScanline(SoftwareRaster.pixels, yC, xB >> 16, xA >> 16, colorC, colorStepA);
 								xB += xStepBC;
 								xA += xStepAB;
 								colorC += colorStepB;
-								yC += Static129.width;
+								yC += SoftwareRaster.width;
 							}
 						}
 
-						drawGouraudScanline(Static129.pixels, yC, xB >> 16, xC >> 16, colorC, colorStepA);
+						drawGouraudScanline(SoftwareRaster.pixels, yC, xB >> 16, xC >> 16, colorC, colorStepA);
 						xB += xStepBC;
 						xC += xStepAC;
 						colorC += colorStepB;
-						yC += Static129.width;
+						yC += SoftwareRaster.width;
 					}
 				} else {
 					yB -= yA;
@@ -3655,19 +3655,19 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawGouraudScanline(Static129.pixels, yC, xA >> 16, xB >> 16, colorC, colorStepA);
+								drawGouraudScanline(SoftwareRaster.pixels, yC, xA >> 16, xB >> 16, colorC, colorStepA);
 								xB += xStepBC;
 								xA += xStepAB;
 								colorC += colorStepB;
-								yC += Static129.width;
+								yC += SoftwareRaster.width;
 							}
 						}
 
-						drawGouraudScanline(Static129.pixels, yC, xC >> 16, xB >> 16, colorC, colorStepA);
+						drawGouraudScanline(SoftwareRaster.pixels, yC, xC >> 16, xB >> 16, colorC, colorStepA);
 						xB += xStepBC;
 						xC += xStepAC;
 						colorC += colorStepB;
-						yC += Static129.width;
+						yC += SoftwareRaster.width;
 					}
 				}
 			} else {
@@ -3698,19 +3698,19 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawGouraudScanline(Static129.pixels, yC, xB >> 16, xC >> 16, colorC, colorStepA);
+								drawGouraudScanline(SoftwareRaster.pixels, yC, xB >> 16, xC >> 16, colorC, colorStepA);
 								xB += xStepAB;
 								xC += xStepAC;
 								colorC += colorStepB;
-								yC += Static129.width;
+								yC += SoftwareRaster.width;
 							}
 						}
 
-						drawGouraudScanline(Static129.pixels, yC, xA >> 16, xC >> 16, colorC, colorStepA);
+						drawGouraudScanline(SoftwareRaster.pixels, yC, xA >> 16, xC >> 16, colorC, colorStepA);
 						xA += xStepBC;
 						xC += xStepAC;
 						colorC += colorStepB;
-						yC += Static129.width;
+						yC += SoftwareRaster.width;
 					}
 				} else {
 					yA -= yB;
@@ -3725,19 +3725,19 @@ public final class Rasteriser {
 									return;
 								}
 
-								drawGouraudScanline(Static129.pixels, yC, xC >> 16, xB >> 16, colorC, colorStepA);
+								drawGouraudScanline(SoftwareRaster.pixels, yC, xC >> 16, xB >> 16, colorC, colorStepA);
 								xB += xStepAB;
 								xC += xStepAC;
 								colorC += colorStepB;
-								yC += Static129.width;
+								yC += SoftwareRaster.width;
 							}
 						}
 
-						drawGouraudScanline(Static129.pixels, yC, xC >> 16, xA >> 16, colorC, colorStepA);
+						drawGouraudScanline(SoftwareRaster.pixels, yC, xC >> 16, xA >> 16, colorC, colorStepA);
 						xA += xStepBC;
 						xC += xStepAC;
 						colorC += colorStepB;
-						yC += Static129.width;
+						yC += SoftwareRaster.width;
 					}
 				}
 			}

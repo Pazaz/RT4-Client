@@ -23,9 +23,9 @@ public final class Static10 {
 
 	@OriginalMember(owner = "client!an", name = "a", descriptor = "(BI)I")
 	public static int method347(@OriginalArg(1) int arg0) {
-		if (Static124.socket != null) {
-			Static124.socket.close();
-			Static124.socket = null;
+		if (Protocol.socket != null) {
+			Protocol.socket.close();
+			Protocol.socket = null;
 		}
 		Static127.anInt3132++;
 		if (Static127.anInt3132 > 4) {
@@ -76,11 +76,11 @@ public final class Static10 {
 			Static175.method3279();
 			return true;
 		} catch (@Pc(19) Exception local19) {
-			@Pc(61) String local61 = "T2 - " + Static164.anInt3985 + "," + Static5.anInt45 + "," + Static49.anInt1462 + " - " + Static223.anInt5028 + "," + (Static225.originX + Static173.self.movementQueueX[0]) + "," + (Static173.self.movementQueueZ[0] + Static142.originZ) + " - ";
+			@Pc(61) String local61 = "T2 - " + Static164.anInt3985 + "," + Static5.anInt45 + "," + Static49.anInt1462 + " - " + Static223.anInt5028 + "," + (Static225.originX + PlayerList.self.movementQueueX[0]) + "," + (PlayerList.self.movementQueueZ[0] + Static142.originZ) + " - ";
 			for (@Pc(63) int local63 = 0; local63 < Static223.anInt5028 && local63 < 50; local63++) {
 				local61 = local61 + Static57.aClass3_Sub15_Sub1_3.data[local63] + ",";
 			}
-			Static89.report(local61, local19);
+			TracingException.report(local61, local19);
 			Static278.processLogout();
 			return true;
 		}

@@ -18,7 +18,7 @@ public final class Static192 {
 			if (local17.anInt1192 < 0) {
 				local29 = -local17.anInt1192 - 1;
 				if (local29 == Static16.anInt549) {
-					local40 = Static173.self;
+					local40 = PlayerList.self;
 				} else {
 					local40 = Static159.players[local29];
 				}

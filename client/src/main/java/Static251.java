@@ -59,16 +59,6 @@ public final class Static251 {
 		Static45.aClass99_6.method3103();
 	}
 
-	@OriginalMember(owner = "client!ug", name = "a", descriptor = "(I)V")
-	public static void quit() {
-		if (Static93.instance != null) {
-			@Pc(5) Mouse local5 = Static93.instance;
-			synchronized (Static93.instance) {
-				Static93.instance = null;
-			}
-		}
-	}
-
 	@OriginalMember(owner = "client!ug", name = "a", descriptor = "(II)V")
 	public static void method4278(@OriginalArg(0) int arg0) {
 		if (Static241.anIntArray522 == null || Static241.anIntArray522.length < arg0) {

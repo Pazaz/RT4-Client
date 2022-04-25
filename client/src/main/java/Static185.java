@@ -10,14 +10,8 @@ public final class Static185 {
 	@OriginalMember(owner = "client!p", name = "g", descriptor = "F")
 	public static float aFloat23;
 
-	@OriginalMember(owner = "client!p", name = "c", descriptor = "Lclient!ih;")
-	public static final LinkedList lowPriorityRequests = new LinkedList();
-
 	@OriginalMember(owner = "client!p", name = "d", descriptor = "I")
 	public static int anInt4369 = 0;
-
-	@OriginalMember(owner = "client!p", name = "f", descriptor = "Lclient!na;")
-	public static final JagString aClass100_823 = Static28.parse("::serverjs5drop");
 
 	@OriginalMember(owner = "client!p", name = "a", descriptor = "(I)V")
 	public static void method3395() {
@@ -28,7 +22,7 @@ public final class Static185 {
 
 	@OriginalMember(owner = "client!p", name = "a", descriptor = "(IZIZLclient!mj;IIIBII)V")
 	public static void method3397(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(3) boolean arg3, @OriginalArg(4) CollisionMap arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(9) int arg8, @OriginalArg(10) int arg9) {
-		if (arg1 && !Static138.allLevelsAreVisible() && (Static12.tileSettings[0][arg7][arg8] & 0x2) == 0) {
+		if (arg1 && !SceneGraph.allLevelsAreVisible() && (Static12.tileSettings[0][arg7][arg8] & 0x2) == 0) {
 			if ((Static12.tileSettings[arg2][arg7][arg8] & 0x10) != 0) {
 				return;
 			}
@@ -104,7 +98,7 @@ public final class Static185 {
 		@Pc(387) Entity local387;
 		@Pc(403) Class139 local403;
 		if (arg6 == 22) {
-			if (Static250.showGroundDecorations || local62.anInt4429 != 0 || local62.anInt4435 == 1 || local62.aBoolean206) {
+			if (Preferences.showGroundDecorations || local62.anInt4429 != 0 || local62.anInt4435 == 1 || local62.aBoolean206) {
 				if (local62.anInt4430 == -1 && local62.multiLocs == null && !local62.aBoolean214) {
 					local403 = local62.method3428(arg9, local165, local153, 22, local199, local213, arg1, null, local330, local173);
 					if (GlRenderer.enabled && local330) {

@@ -1,7 +1,4 @@
-import java.awt.Frame;
-import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
-import org.openrs2.deob.annotation.Pc;
 
 public final class Static25 {
 
@@ -17,23 +14,7 @@ public final class Static25 {
 	@OriginalMember(owner = "client!c", name = "hb", descriptor = "Z")
 	public static boolean aBoolean57 = false;
 
-	@OriginalMember(owner = "client!c", name = "a", descriptor = "(Ljava/awt/Frame;ZLsignlink!ll;)V")
-	public static void exitFullScreen(@OriginalArg(0) Frame arg0, @OriginalArg(2) SignLink arg1) {
-		while (true) {
-			@Pc(16) PrivilegedRequest local16 = arg1.exitFullScreen(arg0);
-			while (local16.status == 0) {
-				Static231.sleep(10L);
-			}
-			if (local16.status == 1) {
-				arg0.setVisible(false);
-				arg0.dispose();
-				return;
-			}
-			Static231.sleep(100L);
-		}
-	}
-
-	@OriginalMember(owner = "client!c", name = "c", descriptor = "(II)V")
+    @OriginalMember(owner = "client!c", name = "c", descriptor = "(II)V")
 	public static void method715() {
 		Static220.aClass99_28.method3102(5);
 	}

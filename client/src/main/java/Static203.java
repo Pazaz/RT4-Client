@@ -1,16 +1,10 @@
 import java.awt.Container;
 import java.awt.Insets;
-import org.openrs2.deob.annotation.OriginalArg;
+
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 public final class Static203 {
-
-	@OriginalMember(owner = "client!qh", name = "a", descriptor = "Lclient!se;")
-	public static MapFunctionGroup aClass134_1;
-
-	@OriginalMember(owner = "client!qh", name = "d", descriptor = "Lclient!fd;")
-	public static WorldMapFont aClass41_8;
 
 	@OriginalMember(owner = "client!qh", name = "e", descriptor = "[Lclient!ee;")
 	public static Class32[] aClass32Array1;
@@ -63,32 +57,10 @@ public final class Static203 {
 		} else {
 			GameShell.canvas.setLocation(GameShell.leftMargin, GameShell.topMargin);
 		}
-		if (Static154.topLevelInterface != -1) {
+		if (InterfaceList.topLevelInterface != -1) {
 			Static210.method3712(true);
 		}
 		Static139.method2704();
 	}
 
-	@OriginalMember(owner = "client!qh", name = "a", descriptor = "(Lsignlink!ll;B)V")
-	public static void savePreferences(@OriginalArg(0) SignLink arg0) {
-		@Pc(11) FileOnDisk local11 = null;
-		try {
-			@Pc(16) PrivilegedRequest local16 = arg0.openPreferences("runescape");
-			while (local16.status == 0) {
-				Static231.sleep(1L);
-			}
-			if (local16.status == 1) {
-				local11 = (FileOnDisk) local16.result;
-				@Pc(39) Buffer local39 = Static48.method1196();
-				local11.write(local39.data, local39.offset, 0);
-			}
-		} catch (@Pc(49) Exception local49) {
-		}
-		try {
-			if (local11 != null) {
-				local11.close();
-			}
-		} catch (@Pc(56) Exception local56) {
-		}
-	}
 }

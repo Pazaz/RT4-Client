@@ -7,10 +7,7 @@ public final class Static128 {
 	@OriginalMember(owner = "client!ka", name = "r", descriptor = "[I")
 	public static int[] anIntArray293;
 
-	@OriginalMember(owner = "client!ka", name = "u", descriptor = "I")
-	public static int anInt3143;
-
-	@OriginalMember(owner = "client!ka", name = "q", descriptor = "Lclient!ih;")
+    @OriginalMember(owner = "client!ka", name = "q", descriptor = "Lclient!ih;")
 	public static final LinkedList aClass69_77 = new LinkedList();
 
 	@OriginalMember(owner = "client!ka", name = "t", descriptor = "[I")

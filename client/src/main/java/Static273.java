@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static273 {
 
-	@OriginalMember(owner = "client!we", name = "v", descriptor = "Lclient!fd;")
-	public static WorldMapFont aClass41_7;
-
 	@OriginalMember(owner = "client!we", name = "H", descriptor = "[[B")
 	public static byte[][] mapFilesBuffer;
 
@@ -83,7 +80,7 @@ public final class Static273 {
 					local41 = Static7.varps[local33[local39++]] * 100 / 46875;
 				}
 				if (local46 == 8) {
-					local41 = Static173.self.anInt1652;
+					local41 = PlayerList.self.anInt1652;
 				}
 				if (local46 == 9) {
 					for (local124 = 0; local124 < 25; local124++) {
@@ -122,10 +119,10 @@ public final class Static273 {
 					local41 = Static155.getVarbit(local124);
 				}
 				if (local46 == 18) {
-					local41 = (Static173.self.xFine >> 7) + Static225.originX;
+					local41 = (PlayerList.self.xFine >> 7) + Static225.originX;
 				}
 				if (local46 == 19) {
-					local41 = (Static173.self.zFine >> 7) + Static142.originZ;
+					local41 = (PlayerList.self.zFine >> 7) + Static142.originZ;
 				}
 				if (local46 == 20) {
 					local41 = local33[local39++];

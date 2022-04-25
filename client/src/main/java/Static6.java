@@ -16,17 +16,7 @@ public final class Static6 {
 	@OriginalMember(owner = "client!ag", name = "cb", descriptor = "[Lclient!cl;")
 	public static final AnimFrameset[] aClass3_Sub2_Sub7Array1 = new AnimFrameset[14];
 
-	@OriginalMember(owner = "client!ag", name = "h", descriptor = "(I)V")
-	public static void quit() {
-		if (Keyboard.instance != null) {
-			@Pc(4) Keyboard local4 = Keyboard.instance;
-			synchronized (Keyboard.instance) {
-				Keyboard.instance = null;
-			}
-		}
-	}
-
-	@OriginalMember(owner = "client!ag", name = "j", descriptor = "(I)V")
+    @OriginalMember(owner = "client!ag", name = "j", descriptor = "(I)V")
 	public static void method84() {
 		Static65.method1500();
 		for (@Pc(9) int local9 = 0; local9 < 4; local9++) {

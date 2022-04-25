@@ -8,7 +8,7 @@ public final class UnlitMaterialRenderer implements MaterialRenderer {
 	@OriginalMember(owner = "client!ue", name = "b", descriptor = "()V")
 	@Override
 	public final void method4603() {
-		if (Static178.highDetailLighting) {
+		if (Preferences.highDetailLighting) {
 			GlRenderer.setLightingEnabled(false);
 		}
 	}
@@ -27,7 +27,7 @@ public final class UnlitMaterialRenderer implements MaterialRenderer {
 	@OriginalMember(owner = "client!ue", name = "a", descriptor = "()V")
 	@Override
 	public final void method4602() {
-		if (Static178.highDetailLighting) {
+		if (Preferences.highDetailLighting) {
 			GlRenderer.setLightingEnabled(true);
 		}
 	}

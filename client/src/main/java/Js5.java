@@ -72,7 +72,7 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(ILclient!na;)I")
-	public final int method4478(@OriginalArg(1) JagString arg0) {
+	public final int getPercentageComplete(@OriginalArg(1) JagString arg0) {
 		if (this.method4484()) {
 			@Pc(15) JagString local15 = arg0.toLowerCase();
 			@Pc(29) int local29 = this.aClass70_2.aClass76_1.method2405(local15.method3154());
@@ -286,7 +286,7 @@ public final class Js5 {
 			}
 			@Pc(140) byte[] local140;
 			try {
-				local140 = Static162.method3092(local114);
+				local140 = Js5Compression.uncompress(local114);
 			} catch (@Pc(142) RuntimeException local142) {
 				System.out.println("T3 - " + (arg1 != null) + "," + arg0 + "," + local114.length + "," + Static71.method1442(local114, local114.length) + "," + Static71.method1442(local114, local114.length - 2) + "," + this.aClass70_2.anIntArray268[arg0] + "," + this.aClass70_2.anInt2911);
 				local140 = new byte[] { 0 };
@@ -326,7 +326,7 @@ public final class Js5 {
 					local320 = 0;
 					for (@Pc(322) int local322 = 0; local322 < local31; local322++) {
 						local320 += local233.g4();
-						Static289.copy(local140, local250, local282[local322], local239[local322], local320);
+						JagString.copy(local140, local250, local282[local322], local239[local322], local320);
 						local250 += local320;
 						local239[local322] += local320;
 					}
@@ -374,7 +374,7 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(Lclient!na;I)Z")
-	public final boolean method4497(@OriginalArg(0) JagString arg0) {
+	public final boolean isGroupNameValid(@OriginalArg(0) JagString arg0) {
 		if (this.method4484()) {
 			@Pc(19) JagString local19 = arg0.toLowerCase();
 			@Pc(28) int local28 = this.aClass70_2.aClass76_1.method2405(local19.method3154());

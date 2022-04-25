@@ -98,7 +98,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 		}
 		local15 = new Node();
 		local15.key = arg0;
-		this.aClass69_16.method2282(local15);
+		this.aClass69_16.addTail(local15);
 	}
 
 	@OriginalMember(owner = "client!bg", name = "b", descriptor = "(I)Lclient!ii;")
@@ -227,7 +227,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 							local32 = false;
 							local37 = new Node();
 							local37.key = this.anInt578;
-							this.aClass69_17.method2282(local37);
+							this.aClass69_17.addTail(local37);
 						}
 						this.anInt578++;
 					}
@@ -263,7 +263,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 						if (this.aByteArray9[this.anInt578] != 1) {
 							local37 = new Node();
 							local37.key = this.anInt578;
-							this.aClass69_17.method2282(local37);
+							this.aClass69_17.addTail(local37);
 							local32 = false;
 						}
 						this.anInt578++;

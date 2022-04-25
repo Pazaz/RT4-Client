@@ -3,10 +3,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static86 {
 
-	@OriginalMember(owner = "client!gm", name = "T", descriptor = "Lclient!k;")
-	public static Js5CacheQueue js5CacheQueue;
-
-	@OriginalMember(owner = "client!gm", name = "ib", descriptor = "Lclient!ve;")
+    @OriginalMember(owner = "client!gm", name = "ib", descriptor = "Lclient!ve;")
 	public static Js5 modelsArchive;
 
 	@OriginalMember(owner = "client!gm", name = "R", descriptor = "I")
@@ -18,10 +15,7 @@ public final class Static86 {
 	@OriginalMember(owner = "client!gm", name = "bb", descriptor = "Z")
 	public static boolean aBoolean129 = false;
 
-	@OriginalMember(owner = "client!gm", name = "db", descriptor = "Lclient!na;")
-	public static final JagString aClass100_490 = Static28.parse("cross");
-
-	@OriginalMember(owner = "client!gm", name = "gb", descriptor = "[I")
+    @OriginalMember(owner = "client!gm", name = "gb", descriptor = "[I")
 	public static final int[] anIntArray211 = new int[] { 0, 4, 4, 8, 0, 0, 8, 0, 0 };
 
 	@OriginalMember(owner = "client!gm", name = "f", descriptor = "(B)V")

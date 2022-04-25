@@ -7,62 +7,8 @@ public final class Static28 {
 	@OriginalMember(owner = "client!cd", name = "s", descriptor = "I")
 	public static int anInt917;
 
-	@OriginalMember(owner = "client!cd", name = "u", descriptor = "I")
-	public static int anInt919;
-
-	@OriginalMember(owner = "client!cd", name = "B", descriptor = "Lclient!ve;")
+    @OriginalMember(owner = "client!cd", name = "B", descriptor = "Lclient!ve;")
 	public static Js5 js5Archive25;
-
-	@OriginalMember(owner = "client!cd", name = "a", descriptor = "(Lclient!ve;B)I")
-	public static int getReady(@OriginalArg(0) Js5 arg0) {
-		@Pc(5) int local5 = 0;
-		if (arg0.isFileReady(Static280.anInt5900)) {
-			local5++;
-		}
-		if (arg0.isFileReady(Static131.anInt3261)) {
-			local5++;
-		}
-		if (arg0.isFileReady(Static36.anInt1165)) {
-			local5++;
-		}
-		if (arg0.isFileReady(Static214.anInt5579)) {
-			local5++;
-		}
-		if (arg0.isFileReady(Static34.anInt1049)) {
-			local5++;
-		}
-		if (arg0.isFileReady(Static202.anInt4741)) {
-			local5++;
-		}
-		if (arg0.isFileReady(Static149.anInt3551)) {
-			local5++;
-		}
-		if (arg0.isFileReady(Static19.anInt647)) {
-			local5++;
-		}
-		if (arg0.isFileReady(Static32.anInt1016)) {
-			local5++;
-		}
-		if (arg0.isFileReady(Static78.anInt2147)) {
-			local5++;
-		}
-		if (arg0.isFileReady(Static124.anInt3083)) {
-			local5++;
-		}
-		if (arg0.isFileReady(Static224.anInt5057)) {
-			local5++;
-		}
-		if (arg0.isFileReady(Static84.anInt2257)) {
-			local5++;
-		}
-		if (arg0.isFileReady(Static163.anInt3962)) {
-			local5++;
-		}
-		if (arg0.isFileReady(Static128.anInt3143)) {
-			local5++;
-		}
-		return local5;
-	}
 
 	@OriginalMember(owner = "client!cd", name = "a", descriptor = "(Ljava/lang/String;B)Lclient!na;")
 	public static JagString parse(@OriginalArg(0) String arg0) {

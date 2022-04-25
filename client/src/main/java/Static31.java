@@ -15,9 +15,6 @@ public final class Static31 {
 	@OriginalMember(owner = "client!ch", name = "x", descriptor = "Lclient!na;")
 	public static final JagString aClass100_193 = Static28.parse(":");
 
-	@OriginalMember(owner = "client!ch", name = "y", descriptor = "[Z")
-	public static final boolean[] rectangleRedraw = new boolean[100];
-
 	@OriginalMember(owner = "client!ch", name = "z", descriptor = "[I")
 	public static final int[] anIntArray76 = new int[5];
 
@@ -26,8 +23,8 @@ public final class Static31 {
 
 	@OriginalMember(owner = "client!ch", name = "c", descriptor = "(I)V")
 	public static void method846() {
-		if (!Static138.allLevelsAreVisible() && Static41.anInt1316 != Static55.level) {
-			Static127.method2463(Static55.level, Static52.anInt1695, Static80.anInt4701, Static173.self.movementQueueZ[0], false, Static173.self.movementQueueX[0]);
+		if (!SceneGraph.allLevelsAreVisible() && Static41.anInt1316 != Static55.level) {
+			Static127.method2463(Static55.level, Static52.anInt1695, Static80.anInt4701, PlayerList.self.movementQueueZ[0], false, PlayerList.self.movementQueueX[0]);
 		} else if (Static55.level != Static107.anInt2875 && Static137.method2665(Static55.level)) {
 			Static107.anInt2875 = Static55.level;
 			Static269.method2218();
@@ -41,9 +38,9 @@ public final class Static31 {
 		}
 		try {
 			if (++Static20.anInt673 > 1500) {
-				if (Static124.socket != null) {
-					Static124.socket.close();
-					Static124.socket = null;
+				if (Protocol.socket != null) {
+					Protocol.socket.close();
+					Protocol.socket = null;
 				}
 				if (Static196.anInt4587 >= 1) {
 					Static266.reply = -5;
@@ -71,54 +68,54 @@ public final class Static31 {
 				if (Static72.aClass212_3.status != 1) {
 					return;
 				}
-				Static124.socket = new BufferedSocket((Socket) Static72.aClass212_3.result, GameShell.signLink);
+				Protocol.socket = new BufferedSocket((Socket) Static72.aClass212_3.result, GameShell.signLink);
 				Static72.aClass212_3 = null;
-				Static124.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
-				if (Static11.musicChannel != null) {
-					Static11.musicChannel.method3571();
+				Protocol.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
+				if (client.musicChannel != null) {
+					client.musicChannel.method3571();
 				}
-				if (Static147.soundChannel != null) {
-					Static147.soundChannel.method3571();
+				if (client.soundChannel != null) {
+					client.soundChannel.method3571();
 				}
-				local126 = Static124.socket.read();
-				if (Static11.musicChannel != null) {
-					Static11.musicChannel.method3571();
+				local126 = Protocol.socket.read();
+				if (client.musicChannel != null) {
+					client.musicChannel.method3571();
 				}
-				if (Static147.soundChannel != null) {
-					Static147.soundChannel.method3571();
+				if (client.soundChannel != null) {
+					client.soundChannel.method3571();
 				}
 				if (local126 != 101) {
 					Static266.reply = local126;
 					Static219.anInt4937 = 0;
-					Static124.socket.close();
-					Static124.socket = null;
+					Protocol.socket.close();
+					Protocol.socket = null;
 					return;
 				}
 				Static219.anInt4937 = 3;
 			}
 			if (Static219.anInt4937 == 3) {
-				if (Static124.socket.available() < 2) {
+				if (Protocol.socket.available() < 2) {
 					return;
 				}
-				local126 = Static124.socket.read() << 8 | Static124.socket.read();
+				local126 = Protocol.socket.read() << 8 | Protocol.socket.read();
 				Static176.hopWorld(local126);
 				if (Static125.worldId == -1) {
 					Static219.anInt4937 = 0;
 					Static266.reply = 6;
-					Static124.socket.close();
-					Static124.socket = null;
+					Protocol.socket.close();
+					Protocol.socket = null;
 					return;
 				}
 				Static219.anInt4937 = 0;
-				Static124.socket.close();
-				Static124.socket = null;
+				Protocol.socket.close();
+				Protocol.socket = null;
 				Static49.method1208();
 				return;
 			}
 		} catch (@Pc(210) IOException local210) {
-			if (Static124.socket != null) {
-				Static124.socket.close();
-				Static124.socket = null;
+			if (Protocol.socket != null) {
+				Protocol.socket.close();
+				Protocol.socket = null;
 			}
 			if (Static196.anInt4587 < 1) {
 				if (Static208.worldListPort == Static249.worldListDefaultPort) {

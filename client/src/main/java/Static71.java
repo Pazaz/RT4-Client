@@ -10,13 +10,7 @@ public final class Static71 {
 	@OriginalMember(owner = "client!fk", name = "j", descriptor = "[[I")
 	public static int[][] anIntArrayArray10;
 
-    @OriginalMember(owner = "client!fk", name = "q", descriptor = "Lclient!uc;")
-	public static MouseWheel mouseWheel;
-
-	@OriginalMember(owner = "client!fk", name = "g", descriptor = "Z")
-	public static boolean fogEnabled = true;
-
-	@OriginalMember(owner = "client!fk", name = "k", descriptor = "[I")
+    @OriginalMember(owner = "client!fk", name = "k", descriptor = "[I")
 	public static final int[] anIntArray147 = new int[14];
 
 	@OriginalMember(owner = "client!fk", name = "a", descriptor = "(IB)Lclient!h;")

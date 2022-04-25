@@ -7,14 +7,8 @@ public final class Static18 {
 	@OriginalMember(owner = "client!bh", name = "M", descriptor = "Z")
 	public static boolean loaded;
 
-	@OriginalMember(owner = "client!bh", name = "s", descriptor = "Lclient!na;")
-	public static final JagString aClass100_106 = Static28.parse("p11_full");
-
 	@OriginalMember(owner = "client!bh", name = "t", descriptor = "I")
 	public static int anInt588 = 0;
-
-	@OriginalMember(owner = "client!bh", name = "v", descriptor = "Lclient!na;")
-	public static final JagString aClass100_107 = Static28.parse("floorshadows");
 
 	@OriginalMember(owner = "client!bh", name = "z", descriptor = "Z")
 	public static boolean serverUpdatedPreferences = true;

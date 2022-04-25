@@ -6,7 +6,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!hh")
 public final class PlayerAppearance {
 
-	@OriginalMember(owner = "client!hh", name = "e", descriptor = "I")
+    @OriginalMember(owner = "client!bj", name = "t", descriptor = "[S")
+    public static final short[] aShortArray5 = new short[] { -4160, -4163, -8256, -8259, 22461 };
+    @OriginalMember(owner = "client!hh", name = "e", descriptor = "I")
 	public int anInt2492;
 
 	@OriginalMember(owner = "client!hh", name = "i", descriptor = "J")

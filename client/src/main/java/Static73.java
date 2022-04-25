@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static73 {
 
-	@OriginalMember(owner = "client!fm", name = "V", descriptor = "I")
-	public static int anInt2077;
-
 	@OriginalMember(owner = "client!fm", name = "S", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable aClass99_10 = new SoftLruHashTable(4);
 
@@ -16,37 +13,31 @@ public final class Static73 {
 	@OriginalMember(owner = "client!fm", name = "db", descriptor = "Lclient!gn;")
 	public static final LruHashTable aClass54_7 = new LruHashTable(64);
 
-	@OriginalMember(owner = "client!fm", name = "eb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_454 = Static28.parse("b12_full");
-
 	@OriginalMember(owner = "client!fm", name = "fb", descriptor = "[I")
 	public static final int[] anIntArray183 = new int[14];
-
-	@OriginalMember(owner = "client!fm", name = "gb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_455 = Static28.parse("overlay2");
 
 	@OriginalMember(owner = "client!fm", name = "a", descriptor = "(ZI)V")
 	public static void method1596(@OriginalArg(0) boolean arg0) {
 		if (arg0) {
-			if (Static154.topLevelInterface != -1) {
-				Static109.method2275(Static154.topLevelInterface);
+			if (InterfaceList.topLevelInterface != -1) {
+				Static109.method2275(InterfaceList.topLevelInterface);
 			}
 			for (@Pc(18) Class3_Sub31 local18 = (Class3_Sub31) Static119.aClass133_9.head(); local18 != null; local18 = (Class3_Sub31) Static119.aClass133_9.next()) {
 				Static132.method2605(true, local18);
 			}
-			Static154.topLevelInterface = -1;
+			InterfaceList.topLevelInterface = -1;
 			Static119.aClass133_9 = new HashTable(8);
 			Static52.method1287();
-			Static154.topLevelInterface = Static156.loginScreenId;
+			InterfaceList.topLevelInterface = Static156.loginScreenId;
 			Static210.method3712(false);
 			Static87.method1807();
-			Static74.method1626(Static154.topLevelInterface);
+			Static74.method1626(InterfaceList.topLevelInterface);
 		}
 		Static35.anInt1092 = -1;
 		Static81.method1750(Static270.anInt5794);
-		Static173.self = new Player();
-		Static173.self.zFine = 3000;
-		Static173.self.xFine = 3000;
+		PlayerList.self = new Player();
+		PlayerList.self.zFine = 3000;
+		PlayerList.self.xFine = 3000;
 		if (!GlRenderer.enabled) {
 			Static145.method2743(Static209.js5Archive8);
 			Static196.setGameState(10);

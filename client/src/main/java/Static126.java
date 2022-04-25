@@ -17,12 +17,12 @@ public final class Static126 {
 
 	@OriginalMember(owner = "client!jm", name = "a", descriptor = "(Z)V")
 	public static void method2460() {
-		if (Static154.topLevelInterface != -1) {
-			Static96.method1949(Static154.topLevelInterface);
+		if (InterfaceList.topLevelInterface != -1) {
+			Static96.method1949(InterfaceList.topLevelInterface);
 		}
-		for (@Pc(15) int local15 = 0; local15 < Static24.anInt766; local15++) {
+		for (@Pc(15) int local15 = 0; local15 < InterfaceList.anInt766; local15++) {
 			if (Static186.aBooleanArray100[local15]) {
-				Static31.rectangleRedraw[local15] = true;
+				InterfaceList.rectangleRedraw[local15] = true;
 			}
 			Static223.aBooleanArray116[local15] = Static186.aBooleanArray100[local15];
 			Static186.aBooleanArray100[local15] = false;
@@ -34,14 +34,14 @@ public final class Static126 {
 			Static263.aBoolean299 = true;
 		}
 		Static214.anInt5574 = -1;
-		if (Static154.topLevelInterface != -1) {
-			Static24.anInt766 = 0;
+		if (InterfaceList.topLevelInterface != -1) {
+			InterfaceList.anInt766 = 0;
 			Static9.method182();
 		}
 		if (GlRenderer.enabled) {
 			Static46.method1177();
 		} else {
-			Static129.method2503();
+			SoftwareRaster.method2503();
 		}
 		Static178.anInt4247 = 0;
 	}

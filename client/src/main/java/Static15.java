@@ -10,9 +10,6 @@ public final class Static15 {
 	@OriginalMember(owner = "client!be", name = "ib", descriptor = "Lclient!na;")
 	public static final JagString EVENT_OPBASE = Static28.parse("event_opbase");
 
-	@OriginalMember(owner = "client!be", name = "Kb", descriptor = "Z")
-	public static boolean manyIdleAnimations = true;
-
 	@OriginalMember(owner = "client!be", name = "ac", descriptor = "Lclient!na;")
 	public static JagString aClass100_87 = null;
 
@@ -25,14 +22,14 @@ public final class Static15 {
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(Z)Lclient!na;")
 	public static JagString method479() {
 		@Pc(8) JagString local8 = Static93.aClass100_518;
-		@Pc(10) JagString local10 = Static186.EMPTY;
-		if (Static83.modeWhere != 0) {
+		@Pc(10) JagString local10 = JagString.EMPTY;
+		if (client.modeWhere != 0) {
 			local8 = Static50.aClass100_365;
 		}
-		if (Static47.settings != null) {
-			local10 = Static34.concatenate(new JagString[] { Static150.aClass100_687, Static47.settings});
+		if (client.settings != null) {
+			local10 = JagString.concatenate(new JagString[] { Static150.aClass100_687, client.settings});
 		}
-		return Static34.concatenate(new JagString[] { Static61.aClass100_424, local8, Static80.aClass100_886, Static123.parseInt(Static141.language), Static257.aClass100_98, Static123.parseInt(Static204.affiliate), local10, Static41.aClass100_268 });
+		return JagString.concatenate(new JagString[] { Static61.aClass100_424, local8, Static80.aClass100_886, Static123.parseInt(client.language), Static257.aClass100_98, Static123.parseInt(client.affiliate), local10, Static41.aClass100_268 });
 	}
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(III)I")

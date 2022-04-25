@@ -15,8 +15,8 @@ public final class Static104 {
 			arg0.anInt3417 = 0;
 			return;
 		}
-		if (arg0.anInt3369 != -1 && arg0.anInt3420 == 0) {
-			@Pc(40) SeqType local40 = Static36.get(arg0.anInt3369);
+		if (arg0.seqId != -1 && arg0.anInt3420 == 0) {
+			@Pc(40) SeqType local40 = Static36.get(arg0.seqId);
 			if (arg0.anInt3405 > 0 && local40.anInt5363 == 0) {
 				arg0.anInt3417++;
 				return;

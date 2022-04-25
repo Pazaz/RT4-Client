@@ -4,14 +4,8 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static145 {
 
-	@OriginalMember(owner = "client!lf", name = "b", descriptor = "[I")
-	public static int[] anIntArray330;
-
 	@OriginalMember(owner = "client!lf", name = "a", descriptor = "[[I")
 	public static final int[][] anIntArrayArray25 = new int[104][104];
-
-	@OriginalMember(owner = "client!lf", name = "c", descriptor = "Lclient!ih;")
-	public static final LinkedList aClass69_84 = new LinkedList();
 
 	@OriginalMember(owner = "client!lf", name = "d", descriptor = "[I")
 	public static final int[] anIntArray331 = new int[1000];
@@ -21,17 +15,17 @@ public final class Static145 {
 
 	@OriginalMember(owner = "client!lf", name = "a", descriptor = "(I)V")
 	public static void method2742() {
-		if (Static244.gameState == 10 && GlRenderer.enabled) {
+		if (client.gameState == 10 && GlRenderer.enabled) {
 			Static196.setGameState(28);
 		}
-		if (Static244.gameState == 30) {
+		if (client.gameState == 30) {
 			Static196.setGameState(25);
 		}
 	}
 
 	@OriginalMember(owner = "client!lf", name = "a", descriptor = "(ILclient!ve;)V")
 	public static void method2743(@OriginalArg(1) Js5 arg0) {
-		Static233.aClass36_Sub1Array1 = Static162.method3088(Static138.anInt3443, arg0);
+		Static233.aClass36_Sub1Array1 = SpriteLoader.method3088(Static138.anInt3443, arg0);
 		Static96.anIntArray235 = new int[256];
 		@Pc(15) int local15;
 		for (local15 = 0; local15 < 3; local15++) {
@@ -73,11 +67,11 @@ public final class Static145 {
 			Static46.method1186(local11 + 1, local3 + 1, local9 - 2, 16, 0);
 			Static46.method1179(local11 + 1, local3 + 18, local9 - 2, local15 + -19, 0);
 		} else {
-			Static129.method2495(local11, local3, local9, local15, 6116423);
-			Static129.method2495(local11 + 1, local3 + 1, local9 - 2, 16, 0);
-			Static129.method2483(local11 + 1, local3 + 18, local9 - 2, local15 + -19, 0);
+			SoftwareRaster.fillRect(local11, local3, local9, local15, 6116423);
+			SoftwareRaster.fillRect(local11 + 1, local3 + 1, local9 - 2, 16, 0);
+			SoftwareRaster.drawRect(local11 + 1, local3 + 18, local9 - 2, local15 + -19, 0);
 		}
-		Static280.aClass3_Sub2_Sub9_43.method2857(LocalizedText.CHOOSE_OPTION, local11 + 3, local3 + 14, 6116423, -1);
+		Fonts.b12Full.method2857(LocalizedText.CHOOSE_OPTION, local11 + 3, local3 + 14, 6116423, -1);
 		@Pc(96) int local96 = Static223.anInt5032;
 		@Pc(98) int local98 = Static215.anInt4873;
 		for (@Pc(107) int local107 = 0; local107 < Static231.anInt5204; local107++) {
@@ -86,7 +80,7 @@ public final class Static145 {
 			if (local11 < local98 && local98 < local11 + local9 && local127 - 13 < local96 && local96 < local127 + 3) {
 				local129 = 16776960;
 			}
-			Static280.aClass3_Sub2_Sub9_43.method2857(Static269.method2228(local107), local11 + 3, local127, local129, 0);
+			Fonts.b12Full.method2857(Static269.method2228(local107), local11 + 3, local127, local129, 0);
 		}
 		Static121.method2407(Static183.anInt4271, Static229.anInt5138, Static13.anInt436, Static24.anInt761);
 	}
@@ -102,6 +96,6 @@ public final class Static145 {
 
 	@OriginalMember(owner = "client!lf", name = "c", descriptor = "(I)I")
 	public static int method2746() {
-		return ((Static99.stereo ? 1 : 0) << 19) + (((Static71.fogEnabled ? 1 : 0) << 16) + ((Static220.highWaterDetail ? 1 : 0) << 15) + ((Static178.highDetailLighting ? 1 : 0) << 13) + ((Static209.characterShadowsOn ? 1 : 0) << 10) + ((Static159.manyGroundTextures ? 1 : 0) << 9) + ((Static15.manyIdleAnimations ? 1 : 0) << 7) + ((Static53.highDetailTextures ? 1 : 0) << 6) + ((Static250.showGroundDecorations ? 1 : 0) << 5) + (((Static162.aBoolean190 ? 1 : 0) << 3) + (Static113.brightness & 0x7) - (-((Static80.removeRoofsSelectively ? 1 : 0) << 4) + -((Static11.flickeringEffectsOn ? 1 : 0) << 8)) - (-((Static139.sceneryShadowsType & 0x3) << 11) + -((Static125.soundEffectVolume == 0 ? 0 : 1) << 20) - (((Static12.musicVolume == 0 ? 0 : 1) << 21) + ((Static30.ambientSoundsVolume == 0 ? 0 : 1) << 22)))) + (Static76.getParticleSetting() << 23));
+		return ((Preferences.stereo ? 1 : 0) << 19) + (((Preferences.fogEnabled ? 1 : 0) << 16) + ((Preferences.highWaterDetail ? 1 : 0) << 15) + ((Preferences.highDetailLighting ? 1 : 0) << 13) + ((Preferences.characterShadowsOn ? 1 : 0) << 10) + ((Preferences.manyGroundTextures ? 1 : 0) << 9) + ((Preferences.manyIdleAnimations ? 1 : 0) << 7) + ((Preferences.highDetailTextures ? 1 : 0) << 6) + ((Preferences.showGroundDecorations ? 1 : 0) << 5) + (((Preferences.allLevelsVisible ? 1 : 0) << 3) + (Preferences.brightness & 0x7) - (-((Preferences.removeRoofsSelectively ? 1 : 0) << 4) + -((Preferences.flickeringEffectsOn ? 1 : 0) << 8)) - (-((Preferences.sceneryShadowsType & 0x3) << 11) + -((Preferences.soundEffectVolume == 0 ? 0 : 1) << 20) - (((Preferences.musicVolume == 0 ? 0 : 1) << 21) + ((Preferences.ambientSoundsVolume == 0 ? 0 : 1) << 22)))) + (Preferences.getParticleSetting() << 23));
 	}
 }

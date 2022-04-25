@@ -539,42 +539,42 @@ public final class Static1 {
 			Static46.method1187(arg0, arg3, arg2 + arg0, arg1 + arg3);
 			Static46.method1186(arg0, arg3, arg2, arg1, 0);
 		} else {
-			Static129.method2496(arg0, arg3, arg2 + arg0, arg3 + arg1);
-			Static129.method2495(arg0, arg3, arg2, arg1, 0);
+			SoftwareRaster.method2496(arg0, arg3, arg2 + arg0, arg3 + arg1);
+			SoftwareRaster.fillRect(arg0, arg3, arg2, arg1, 0);
 		}
-		if (Static41.anInt1309 < 100) {
+		if (WorldMap.loadPercentage < 100) {
 			return;
 		}
 		if (Static70.aClass3_Sub2_Sub1_2 == null || arg2 != Static70.aClass3_Sub2_Sub1_2.anInt1867 || Static70.aClass3_Sub2_Sub1_2.anInt1859 != arg1) {
 			@Pc(63) SoftwareSprite local63 = new SoftwareSprite(arg2, arg1);
-			Static129.method2491(local63.anIntArray20, arg2, arg1);
-			Static214.method4364(arg2, 0, Static48.anInt1449, 0, 0, Static181.anInt4296, arg1, 0);
+			SoftwareRaster.method2491(local63.anIntArray20, arg2, arg1);
+			Static214.method4364(arg2, 0, WorldMap.width, 0, 0, WorldMap.length, arg1, 0);
 			if (GlRenderer.enabled) {
 				Static70.aClass3_Sub2_Sub1_2 = new GlSprite(local63);
 			} else {
 				Static70.aClass3_Sub2_Sub1_2 = local63;
 			}
 			if (GlRenderer.enabled) {
-				Static129.pixels = null;
+				SoftwareRaster.pixels = null;
 			} else {
-				Static260.frameBuffer.makeTarget();
+				client.frameBuffer.makeTarget();
 			}
 		}
 		Static70.aClass3_Sub2_Sub1_2.method1415(arg0, arg3);
-		@Pc(147) int local147 = arg1 * Static109.anInt2884 / Static181.anInt4296 + arg3;
-		@Pc(153) int local153 = Static37.anInt1176 * arg1 / Static181.anInt4296;
-		@Pc(161) int local161 = arg0 + arg2 * Static109.anInt2882 / Static48.anInt1449;
-		@Pc(167) int local167 = arg2 * Static89.anInt2387 / Static48.anInt1449;
+		@Pc(147) int local147 = arg1 * Static109.anInt2884 / WorldMap.length + arg3;
+		@Pc(153) int local153 = Static37.anInt1176 * arg1 / WorldMap.length;
+		@Pc(161) int local161 = arg0 + arg2 * Static109.anInt2882 / WorldMap.width;
+		@Pc(167) int local167 = arg2 * Static89.anInt2387 / WorldMap.width;
 		@Pc(169) int local169 = 16711680;
-		if (Static266.game == 1) {
+		if (client.game == 1) {
 			local169 = 16777215;
 		}
 		if (GlRenderer.enabled) {
 			Static46.method1182(local161, local147, local167, local153, local169, 128);
 			Static46.method1179(local161, local147, local167, local153, local169);
 		} else {
-			Static129.method2484(local161, local147, local167, local153, local169, 128);
-			Static129.method2483(local161, local147, local167, local153, local169);
+			SoftwareRaster.method2484(local161, local147, local167, local153, local169, 128);
+			SoftwareRaster.drawRect(local161, local147, local167, local153, local169);
 		}
 		if (Static201.anInt1864 <= 0) {
 			return;
@@ -585,14 +585,14 @@ public final class Static1 {
 		} else {
 			local225 = Static91.anInt2428 * 25;
 		}
-		for (@Pc(238) Class3_Sub26 local238 = (Class3_Sub26) Static145.aClass69_84.method2289(); local238 != null; local238 = (Class3_Sub26) Static145.aClass69_84.method2288()) {
-			if (local238.anInt4308 == Static9.anInt172) {
-				@Pc(258) int local258 = arg3 + local238.anInt4314 * arg1 / Static181.anInt4296;
-				@Pc(267) int local267 = arg2 * local238.anInt4307 / Static48.anInt1449 + arg0;
+		for (@Pc(238) MapElement local238 = (MapElement) WorldMap.mapElements.method2289(); local238 != null; local238 = (MapElement) WorldMap.mapElements.method2288()) {
+			if (local238.id == Static9.anInt172) {
+				@Pc(258) int local258 = arg3 + local238.anInt4314 * arg1 / WorldMap.length;
+				@Pc(267) int local267 = arg2 * local238.anInt4307 / WorldMap.width + arg0;
 				if (GlRenderer.enabled) {
 					Static46.method1182(local267 - 2, local258 + -2, 4, 4, 16776960, local225);
 				} else {
-					Static129.method2484(local267 - 2, local258 + -2, 4, 4, 16776960, local225);
+					SoftwareRaster.method2484(local267 - 2, local258 + -2, 4, 4, 16776960, local225);
 				}
 			}
 		}

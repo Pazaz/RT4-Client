@@ -197,7 +197,7 @@ public final class Loc extends Entity {
 			}
 		}
 		while (local10 > this.aClass144_2.anIntArray474[this.anInt1297]) {
-			Static152.method2836(arg0, this.aClass144_2, arg1, false, this.anInt1297);
+			SoundPlayer.playSeqSound(arg0, this.aClass144_2, arg1, false, this.anInt1297);
 			local10 -= this.aClass144_2.anIntArray474[this.anInt1297];
 			this.anInt1297++;
 			if (this.aClass144_2.frames.length <= this.anInt1297) {
@@ -234,7 +234,7 @@ public final class Loc extends Entity {
 			return null;
 		}
 		@Pc(69) int local69;
-		if (Static266.game != 0 && this.aBoolean80 && (this.aClass144_2 == null || this.aClass144_2 != null && this.aClass144_2.anInt5361 != local19.anInt4430)) {
+		if (client.game != 0 && this.aBoolean80 && (this.aClass144_2 == null || this.aClass144_2 != null && this.aClass144_2.anInt5361 != local19.anInt4430)) {
 			local69 = local19.anInt4430;
 			if (local19.anInt4430 == -1) {
 				local69 = local22;
@@ -269,7 +269,7 @@ public final class Loc extends Entity {
 		@Pc(192) int local192 = (local157 >> 1) + this.anInt1300;
 		@Pc(201) int local201 = (local157 + 1 >> 1) + this.anInt1300;
 		this.method1047(local192 * 128, local185 * 128);
-		@Pc(256) boolean local256 = !local12 && local19.aBoolean212 && (local19.anInt4426 != this.anInt1321 || (this.anInt1297 != this.anInt1322 || this.aClass144_2 != null && (this.aClass144_2.aBoolean280 || Static204.applyTweening) && this.anInt1297 != this.anInt1304) && Static139.sceneryShadowsType >= 2);
+		@Pc(256) boolean local256 = !local12 && local19.aBoolean212 && (local19.anInt4426 != this.anInt1321 || (this.anInt1297 != this.anInt1322 || this.aClass144_2 != null && (this.aClass144_2.aBoolean280 || Static204.applyTweening) && this.anInt1297 != this.anInt1304) && Preferences.sceneryShadowsType >= 2);
 		if (arg0 && !local256) {
 			return null;
 		}

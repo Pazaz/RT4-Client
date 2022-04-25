@@ -53,14 +53,14 @@ public final class Static137 {
 					@Pc(169) long local169 = Static20.method602(Static55.level, local37 + 0, local76);
 					if (local169 != 0L) {
 						@Pc(184) LocType local184 = Static271.get((int) (local169 >>> 32) & Integer.MAX_VALUE);
-						@Pc(187) int local187 = local184.anInt4400;
+						@Pc(187) int local187 = local184.mapElement;
 						@Pc(194) int local194;
 						if (local184.multiLocs != null) {
 							for (local194 = 0; local194 < local184.multiLocs.length; local194++) {
 								if (local184.multiLocs[local194] != -1) {
 									@Pc(216) LocType local216 = Static271.get(local184.multiLocs[local194]);
-									if (local216.anInt4400 >= 0) {
-										local187 = local216.anInt4400;
+									if (local216.mapElement >= 0) {
+										local187 = local216.mapElement;
 										break;
 									}
 								}
@@ -103,17 +103,17 @@ public final class Static137 {
 			for (local76 = 1; local76 < 103; local76++) {
 				if ((Static12.tileSettings[arg0][local76][local37] & 0x18) == 0 && !Static164.method3109(local76, local455, local37, local35, arg0)) {
 					if (GlRenderer.enabled) {
-						Static129.pixels = null;
+						SoftwareRaster.pixels = null;
 					} else {
-						Static260.frameBuffer.makeTarget();
+						client.frameBuffer.makeTarget();
 					}
 					return false;
 				}
 				if (arg0 < 3 && (Static12.tileSettings[arg0 + 1][local76][local37] & 0x8) != 0 && !Static164.method3109(local76, local455, local37, local35, arg0 + 1)) {
 					if (GlRenderer.enabled) {
-						Static129.pixels = null;
+						SoftwareRaster.pixels = null;
 					} else {
-						Static260.frameBuffer.makeTarget();
+						client.frameBuffer.makeTarget();
 					}
 					return false;
 				}
@@ -132,9 +132,9 @@ public final class Static137 {
 			Static89.aClass3_Sub2_Sub1_5 = Static56.aClass3_Sub2_Sub1_Sub1_1;
 		}
 		if (GlRenderer.enabled) {
-			Static129.pixels = null;
+			SoftwareRaster.pixels = null;
 		} else {
-			Static260.frameBuffer.makeTarget();
+			client.frameBuffer.makeTarget();
 		}
 		Static56.aClass3_Sub2_Sub1_Sub1_1 = null;
 		return true;

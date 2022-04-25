@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static241 {
 
-	@OriginalMember(owner = "client!th", name = "f", descriptor = "[Lclient!ok;")
-	public static IndexedSprite[] aClass36Array16;
-
 	@OriginalMember(owner = "client!th", name = "j", descriptor = "[[Lclient!be;")
 	public static Component[][] components;
 

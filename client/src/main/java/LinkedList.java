@@ -43,7 +43,7 @@ public final class LinkedList {
 	}
 
 	@OriginalMember(owner = "client!ih", name = "a", descriptor = "(ZLclient!ab;)V")
-	public final void method2282(@OriginalArg(1) Node arg0) {
+	public final void addTail(@OriginalArg(1) Node arg0) {
 		if (arg0.aClass3_223 != null) {
 			arg0.unlink();
 		}

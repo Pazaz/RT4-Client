@@ -4,10 +4,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static254 {
 
-	@OriginalMember(owner = "client!uj", name = "x", descriptor = "[I")
-	public static int[] anIntArray488;
-
-    @OriginalMember(owner = "client!uj", name = "E", descriptor = "I")
+	@OriginalMember(owner = "client!uj", name = "E", descriptor = "I")
 	public static int anInt5556;
 
 	@OriginalMember(owner = "client!uj", name = "H", descriptor = "I")
@@ -27,17 +24,6 @@ public final class Static254 {
 
 	@OriginalMember(owner = "client!uj", name = "C", descriptor = "[Lclient!na;")
 	public static final JagString[] aClass100Array168 = new JagString[500];
-
-	@OriginalMember(owner = "client!uj", name = "a", descriptor = "(BLclient!ve;I)Z")
-	public static boolean method4346(@OriginalArg(1) Js5 arg0, @OriginalArg(2) int arg1) {
-		@Pc(13) byte[] local13 = arg0.method4500(arg1);
-		if (local13 == null) {
-			return false;
-		} else {
-			Static84.method1770(local13);
-			return true;
-		}
-	}
 
 	@OriginalMember(owner = "client!uj", name = "a", descriptor = "(BZII[[[Lclient!bj;I)Z")
 	public static boolean method4348(@OriginalArg(1) boolean arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Tile[][][] arg3, @OriginalArg(5) int arg4) {

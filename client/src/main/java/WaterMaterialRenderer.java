@@ -8,7 +8,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!pd")
 public final class WaterMaterialRenderer implements MaterialRenderer {
 
-	@OriginalMember(owner = "client!pd", name = "a", descriptor = "I")
+    @OriginalMember(owner = "client!v", name = "c", descriptor = "[F")
+    public static final float[] aFloatArray2 = new float[] { 0.073F, 0.169F, 0.24F, 1.0F };
+    @OriginalMember(owner = "client!pd", name = "a", descriptor = "I")
 	private int anInt4440 = -1;
 
 	@OriginalMember(owner = "client!pd", name = "c", descriptor = "[F")
@@ -24,6 +26,21 @@ public final class WaterMaterialRenderer implements MaterialRenderer {
 	public WaterMaterialRenderer() {
 		this.method3435();
 		this.method3437();
+	}
+
+	@OriginalMember(owner = "client!jj", name = "a", descriptor = "(B)[F")
+	public static float[] method2422() {
+		@Pc(3) float local3 = Static161.method3068() + Static161.method3059();
+		@Pc(9) int local9 = Static161.method3064();
+		@Pc(18) float local18 = (float) (local9 >> 16 & 0xFF) / 255.0F;
+		Static251.aFloatArray28[3] = 1.0F;
+		@Pc(37) float local37 = (float) (local9 >> 8 & 0xFF) / 255.0F;
+		@Pc(39) float local39 = 0.58823526F;
+		@Pc(46) float local46 = (float) (local9 & 0xFF) / 255.0F;
+		Static251.aFloatArray28[2] = aFloatArray2[2] * local46 * local39 * local3;
+		Static251.aFloatArray28[0] = aFloatArray2[0] * local18 * local39 * local3;
+		Static251.aFloatArray28[1] = local3 * local39 * local37 * aFloatArray2[1];
+		return Static251.aFloatArray28;
 	}
 
 	@OriginalMember(owner = "client!pd", name = "d", descriptor = "()V")
@@ -114,7 +131,7 @@ public final class WaterMaterialRenderer implements MaterialRenderer {
 	public final void method4604(@OriginalArg(0) int arg0) {
 		@Pc(1) GL2 local1 = GlRenderer.gl;
 		local1.glActiveTexture(GL2.GL_TEXTURE1);
-		local1.glTexEnvfv(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_COLOR, Static257.aFloatArray2, 0);
+		local1.glTexEnvfv(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_COLOR, aFloatArray2, 0);
 		local1.glActiveTexture(GL2.GL_TEXTURE0);
 		if ((arg0 & 0x1) == 1) {
 			if (!Static151.allows3DTextureMapping) {

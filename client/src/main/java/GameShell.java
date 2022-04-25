@@ -158,14 +158,27 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 		}
 
 		for (@Pc(19) int i = 0; i < 50 && signLink.eventQueue.peekEvent() != null; i++) {
-			Static231.sleep(1L);
+			ThreadUtils.sleep(1L);
 		}
 		if (source != null) {
 			signLink.eventQueue.postEvent(new ActionEvent(source, 1001, "dummy"));
 		}
 	}
 
-	@OriginalMember(owner = "client!rc", name = "focusLost", descriptor = "(Ljava/awt/event/FocusEvent;)V")
+    @OriginalMember(owner = "client!ta", name = "a", descriptor = "(Z)V")
+    public static void resetTimer() {
+        timer.reset();
+        @Pc(10) int local10;
+        for (local10 = 0; local10 < 32; local10++) {
+            redrawTimes[local10] = 0L;
+        }
+        for (local10 = 0; local10 < 32; local10++) {
+            logicTimes[local10] = 0L;
+        }
+        logicCycles = 0;
+    }
+
+    @OriginalMember(owner = "client!rc", name = "focusLost", descriptor = "(Ljava/awt/event/FocusEvent;)V")
 	@Override
 	public final void focusLost(@OriginalArg(0) FocusEvent event) {
 		focusIn = false;
@@ -256,7 +269,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 	public final void destroy() {
 		if (instance == this && !shutdown) {
 			killTime = MonotonicClock.currentTimeMillis();
-			Static231.sleep(5000L);
+			ThreadUtils.sleep(5000L);
 			Static69.signLink = null;
 			this.shutdown(false);
 		}
@@ -507,9 +520,9 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			}
 			getMaxMemory();
 			this.addCanvas();
-			Static260.frameBuffer = Static131.create(canvasHeight, canvasWidth, canvas);
+			client.frameBuffer = Static131.create(canvasHeight, canvasWidth, canvas);
 			this.mainInit();
-			timer = Static70.create();
+			timer = Timer.create();
 
 			long lastUpdateTime = 0;
 			long lastDrawTime = 0;
@@ -542,7 +555,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 				}
 			}
 		} catch (@Pc(198) Exception ex) {
-			Static89.report(null, ex);
+			TracingException.report(null, ex);
 			this.error("crash");
 		}
 		this.shutdown(true);
@@ -595,11 +608,11 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			Static69.signLink = signLink = new SignLink(null, cacheId, cacheSubDir, 28);
 			@Pc(76) PrivilegedRequest request = signLink.startThread(1, this);
 			while (request.status == 0) {
-				Static231.sleep(10L);
+				ThreadUtils.sleep(10L);
 			}
 			thread = (Thread) request.result;
 		} catch (@Pc(91) Exception ex) {
-			Static89.report(null, ex);
+			TracingException.report(null, ex);
 		}
 	}
 
@@ -647,11 +660,11 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			}
 			@Pc(86) PrivilegedRequest request = signLink.startThread(1, this);
 			while (request.status == 0) {
-				Static231.sleep(10L);
+				ThreadUtils.sleep(10L);
 			}
 			thread = (Thread) request.result;
 		} catch (@Pc(103) Exception ex) {
-			Static89.report(null, ex);
+			TracingException.report(null, ex);
 			this.error("crash");
 		}
 	}

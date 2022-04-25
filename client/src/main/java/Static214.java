@@ -10,9 +10,6 @@ public final class Static214 {
 	@OriginalMember(owner = "client!rg", name = "z", descriptor = "Lclient!ve;")
 	public static Js5 js5Archive11;
 
-	@OriginalMember(owner = "client!rg", name = "C", descriptor = "I")
-	public static int anInt5579;
-
 	@OriginalMember(owner = "client!rg", name = "r", descriptor = "[Lclient!na;")
 	public static final JagString[] aClass100Array170 = new JagString[200];
 
@@ -21,9 +18,6 @@ public final class Static214 {
 
 	@OriginalMember(owner = "client!rg", name = "A", descriptor = "[I")
 	public static final int[] anIntArray492 = new int[14];
-
-	@OriginalMember(owner = "client!rg", name = "F", descriptor = "I")
-	public static int windowMode = 0;
 
 	@OriginalMember(owner = "client!rg", name = "a", descriptor = "(Lclient!e;I)V")
 	public static void method4359(@OriginalArg(0) Player arg0) {
@@ -51,7 +45,7 @@ public final class Static214 {
 
 	@OriginalMember(owner = "client!rg", name = "d", descriptor = "(B)Lclient!bn;")
 	public static Map method4361() {
-		return Static269.aClass3_Sub2_Sub4_2;
+		return WorldMap.currentMap;
 	}
 
 	@OriginalMember(owner = "client!rg", name = "b", descriptor = "(II)Lclient!me;")
@@ -77,6 +71,6 @@ public final class Static214 {
 		@Pc(16) int local16 = (arg0 - arg4 << 16) / local7;
 		@Pc(21) int local21 = arg5 - arg3;
 		@Pc(30) int local30 = (arg6 - arg1 << 16) / local21;
-		Static144.method2735(arg1, arg5, arg3, arg2, arg4, arg7, local30, local16);
+		WorldMap.method2735(arg1, arg5, arg3, arg2, arg4, arg7, local30, local16);
 	}
 }

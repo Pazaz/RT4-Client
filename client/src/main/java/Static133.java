@@ -16,9 +16,6 @@ public final class Static133 {
 	@OriginalMember(owner = "client!kf", name = "h", descriptor = "[I")
 	public static final int[] anIntArray453 = new int[] { 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3 };
 
-	@OriginalMember(owner = "client!kf", name = "j", descriptor = "I")
-	public static final int anInt5233 = 0;
-
 	@OriginalMember(owner = "client!kf", name = "l", descriptor = "I")
 	public static int anInt5235 = 0;
 
@@ -45,8 +42,8 @@ public final class Static133 {
 	@OriginalMember(owner = "client!kf", name = "a", descriptor = "(Lclient!na;I)V")
 	public static void method4011(@OriginalArg(0) JagString arg0) {
 		for (@Pc(15) Map local15 = (Map) Static228.aClass69_120.method2289(); local15 != null; local15 = (Map) Static228.aClass69_120.method2288()) {
-			if (local15.aClass100_138.strEquals(arg0)) {
-				Static269.aClass3_Sub2_Sub4_2 = local15;
+			if (local15.group.strEquals(arg0)) {
+				WorldMap.currentMap = local15;
 				return;
 			}
 		}
@@ -54,7 +51,7 @@ public final class Static133 {
 
 	@OriginalMember(owner = "client!kf", name = "a", descriptor = "(IIBII)V")
 	public static void method4012(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
-		for (@Pc(12) int local12 = 0; local12 < Static24.anInt766; local12++) {
+		for (@Pc(12) int local12 = 0; local12 < InterfaceList.anInt766; local12++) {
 			if (Static224.anIntArray443[local12] + Static264.anIntArray410[local12] > arg0 && arg1 + arg0 > Static264.anIntArray410[local12] && arg2 < Static67.anIntArray320[local12] + Static50.anIntArray133[local12] && Static50.anIntArray133[local12] < arg2 + arg3) {
 				Static186.aBooleanArray100[local12] = true;
 			}

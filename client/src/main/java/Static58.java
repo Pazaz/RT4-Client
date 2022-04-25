@@ -7,10 +7,7 @@ public final class Static58 {
 	@OriginalMember(owner = "client!eh", name = "f", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_28;
 
-	@OriginalMember(owner = "client!eh", name = "g", descriptor = "[[[I")
-	public static int[][][] anIntArrayArrayArray5;
-
-	@OriginalMember(owner = "client!eh", name = "j", descriptor = "I")
+    @OriginalMember(owner = "client!eh", name = "j", descriptor = "I")
 	public static int wheelRotation = 0;
 
 	@OriginalMember(owner = "client!eh", name = "a", descriptor = "(I)V")

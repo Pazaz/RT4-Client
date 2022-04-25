@@ -13,10 +13,7 @@ public final class Static209 {
 	@OriginalMember(owner = "client!ra", name = "J", descriptor = "I")
 	public static int miscTransmitAt = 0;
 
-	@OriginalMember(owner = "client!ra", name = "R", descriptor = "Z")
-	public static boolean characterShadowsOn = true;
-
-	@OriginalMember(owner = "client!ra", name = "jb", descriptor = "J")
+    @OriginalMember(owner = "client!ra", name = "jb", descriptor = "J")
 	public static volatile long aLong161 = 0L;
 
 	@OriginalMember(owner = "client!ra", name = "a", descriptor = "(ILclient!pb;BII)V")
@@ -57,25 +54,4 @@ public final class Static209 {
 		local12.intArg3 = arg1;
 	}
 
-	@OriginalMember(owner = "client!ra", name = "a", descriptor = "(IBILclient!ve;)[Lclient!qf;")
-	public static Sprite[] method3708(@OriginalArg(2) int arg0, @OriginalArg(3) Js5 arg1) {
-		return Static234.method4016(arg1, 0, arg0) ? Static213.method3730() : null;
-	}
-
-	@OriginalMember(owner = "client!ra", name = "b", descriptor = "(III)I")
-	public static int method3709(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		@Pc(15) int local15 = 1;
-		while (arg0 > 1) {
-			if ((arg0 & 0x1) != 0) {
-				local15 *= arg1;
-			}
-			arg1 *= arg1;
-			arg0 >>= 0x1;
-		}
-		if (arg0 == 1) {
-			return local15 * arg1;
-		} else {
-			return local15;
-		}
-	}
 }

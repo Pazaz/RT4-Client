@@ -370,7 +370,7 @@ public class AudioChannel {
 			if (local6) {
 				Static60.thread.stop = true;
 				while (Static60.thread.running) {
-					Static231.sleep(50L);
+					ThreadUtils.sleep(50L);
 				}
 				Static60.thread = null;
 			}

@@ -57,10 +57,10 @@ public final class Static115 {
 	@OriginalMember(owner = "client!ja", name = "a", descriptor = "(IIIIB)V")
 	public static void method2310(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		if (Static70.type == 1) {
-			Static240.aClass3_Sub2_Sub1Array10[Static17.milliseconds / 100].method1423(Static122.x - 8, Static25.y + -8);
+			Sprites.crosses[Static17.milliseconds / 100].method1423(Static122.x - 8, Static25.y + -8);
 		}
 		if (Static70.type == 2) {
-			Static240.aClass3_Sub2_Sub1Array10[Static17.milliseconds / 100 + 4].method1423(Static122.x - 8, Static25.y + -8);
+			Sprites.crosses[Static17.milliseconds / 100 + 4].method1423(Static122.x - 8, Static25.y + -8);
 		}
 		Static256.method4392();
 	}
@@ -142,24 +142,24 @@ public final class Static115 {
 
 	@OriginalMember(owner = "client!ja", name = "a", descriptor = "(Z)V")
 	public static void clear() {
-		Static215.aClass3_Sub2_Sub9_32 = null;
-		Static213.aClass3_Sub2_Sub1Array8 = null;
-		Static240.aClass3_Sub2_Sub1Array10 = null;
-		Static159.aClass36Array12 = null;
+		Fonts.p12Full = null;
+		Sprites.hitmarks = null;
+		Sprites.crosses = null;
+		Sprites.nameIcons = null;
 		Static265.p11FullSoftware = null;
-		Static173.aClass3_Sub2_Sub1_Sub1Array9 = null;
-		Static67.aClass3_Sub2_Sub1Array4 = null;
-		Static149.aClass3_Sub2_Sub1Array7 = null;
-		Static138.aClass3_Sub2_Sub1Array5 = null;
-		Static280.aClass3_Sub2_Sub9_43 = null;
-		Static106.aClass3_Sub2_Sub1_7 = null;
-		Static139.aClass3_Sub2_Sub1Array6 = null;
-		Static114.aClass3_Sub2_Sub9_42 = null;
-		Static84.aClass3_Sub2_Sub1_4 = null;
-		Static116.aClass3_Sub2_Sub1Array3 = null;
-		Static277.aClass3_Sub2_Sub1Array12 = null;
-		Static276.aClass3_Sub2_Sub1Array11 = null;
-		Static219.aClass3_Sub2_Sub1Array9 = null;
-		Static241.aClass36Array16 = null;
+		Sprites.mapfunctions = null;
+		Static67.mapfuncs = null;
+		Sprites.mapmarkhints = null;
+		Sprites.headiconPrayers = null;
+		Fonts.b12Full = null;
+		Static106.compass = null;
+		Sprites.mapdots = null;
+		Fonts.p11Full = null;
+		Sprites.mapflags = null;
+		Sprites.hitbars = null;
+		Static277.hintMapEdge = null;
+		Sprites.headhints = null;
+		Sprites.headiconPks = null;
+		Sprites.scrollbars = null;
 	}
 }

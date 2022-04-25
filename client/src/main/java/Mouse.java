@@ -1,3 +1,4 @@
+import java.awt.Component;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.MouseEvent;
@@ -15,6 +16,24 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
 
 	public int mouseWheelX;
 	public int mouseWheelY;
+
+    @OriginalMember(owner = "client!sc", name = "a", descriptor = "(ILjava/awt/Component;)V")
+    public static void stop(@OriginalArg(1) Component arg0) {
+        arg0.removeMouseListener(Static93.instance);
+        arg0.removeMouseMotionListener(Static93.instance);
+        arg0.removeFocusListener(Static93.instance);
+        Static57.anInt1759 = 0;
+    }
+
+	@OriginalMember(owner = "client!ug", name = "a", descriptor = "(I)V")
+	public static void quit() {
+		if (Static93.instance != null) {
+			@Pc(5) Mouse local5 = Static93.instance;
+			synchronized (Static93.instance) {
+				Static93.instance = null;
+			}
+		}
+	}
 
 	@OriginalMember(owner = "client!ug", name = "mouseMoved", descriptor = "(Ljava/awt/event/MouseEvent;)V")
 	@Override

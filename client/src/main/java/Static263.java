@@ -119,7 +119,7 @@ public final class Static263 {
 			Static104.method2247(arg1);
 		}
 		if (arg1.xFine < 128 || arg1.zFine < 128 || arg1.xFine >= 13184 || arg1.zFine >= 13184) {
-			arg1.anInt3369 = -1;
+			arg1.seqId = -1;
 			arg1.anInt3432 = -1;
 			arg1.anInt3395 = 0;
 			arg1.anInt3386 = 0;
@@ -127,11 +127,11 @@ public final class Static263 {
 			arg1.zFine = arg1.movementQueueZ[0] * 128 + arg1.getSize() * 64;
 			arg1.method2689();
 		}
-		if (arg1 == Static173.self && (arg1.xFine < 1536 || arg1.zFine < 1536 || arg1.xFine >= 11776 || arg1.zFine >= 11776)) {
+		if (arg1 == PlayerList.self && (arg1.xFine < 1536 || arg1.zFine < 1536 || arg1.xFine >= 11776 || arg1.zFine >= 11776)) {
 			arg1.anInt3432 = -1;
 			arg1.anInt3395 = 0;
 			arg1.anInt3386 = 0;
-			arg1.anInt3369 = -1;
+			arg1.seqId = -1;
 			arg1.xFine = arg1.movementQueueX[0] * 128 + arg1.getSize() * 64;
 			arg1.zFine = arg1.movementQueueZ[0] * 128 + arg1.getSize() * 64;
 			arg1.method2689();

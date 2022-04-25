@@ -7,11 +7,8 @@ public final class Static244 {
 	@OriginalMember(owner = "client!tl", name = "c", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable models = new SoftLruHashTable(50);
 
-	@OriginalMember(owner = "client!tl", name = "d", descriptor = "I")
-	public static int gameState = 0;
 
-
-	@OriginalMember(owner = "client!tl", name = "f", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!tl", name = "f", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1014 = Static28.parse(":assist:");
 
 	@OriginalMember(owner = "client!tl", name = "i", descriptor = "Lclient!na;")
