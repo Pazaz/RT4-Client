@@ -160,7 +160,7 @@ public class WorldMap {
         } else if (loadPercentage == 20) {
             readUnderlay(new Buffer(MapList.archive.fetchFile(UNDERLAY, currentMap.group)));
             loadPercentage = 30;
-            Static7.ping(true);
+            ClientProt.ping(true);
             GameShell.resetTimer();
         } else if (loadPercentage == 30) {
             readOverlay(new Buffer(MapList.archive.fetchFile(OVERLAY, currentMap.group)));
@@ -173,7 +173,7 @@ public class WorldMap {
         } else if (loadPercentage == 50) {
             readLocs(new Buffer(MapList.archive.fetchFile(LOC, currentMap.group)));
             loadPercentage = 60;
-            Static7.ping(true);
+            ClientProt.ping(true);
             GameShell.resetTimer();
         } else if (loadPercentage == 60) {
             if (MapList.archive.isGroupNameValid(JagString.concatenate(new JagString[] { currentMap.group, LABELS}))) {
@@ -189,42 +189,42 @@ public class WorldMap {
         } else if (loadPercentage == 70) {
             font11 = new WorldMapFont(11, true, GameShell.canvas);
             loadPercentage = 73;
-            Static7.ping(true);
+            ClientProt.ping(true);
             GameShell.resetTimer();
         } else if (loadPercentage == 73) {
             font12 = new WorldMapFont(12, true, GameShell.canvas);
             loadPercentage = 76;
-            Static7.ping(true);
+            ClientProt.ping(true);
             GameShell.resetTimer();
         } else if (loadPercentage == 76) {
             font14 = new WorldMapFont(14, true, GameShell.canvas);
             loadPercentage = 79;
-            Static7.ping(true);
+            ClientProt.ping(true);
             GameShell.resetTimer();
         } else if (loadPercentage == 79) {
             font17 = new WorldMapFont(17, true, GameShell.canvas);
             loadPercentage = 82;
-            Static7.ping(true);
+            ClientProt.ping(true);
             GameShell.resetTimer();
         } else if (loadPercentage == 82) {
             font19 = new WorldMapFont(19, true, GameShell.canvas);
             loadPercentage = 85;
-            Static7.ping(true);
+            ClientProt.ping(true);
             GameShell.resetTimer();
         } else if (loadPercentage == 85) {
             font22 = new WorldMapFont(22, true, GameShell.canvas);
             loadPercentage = 88;
-            Static7.ping(true);
+            ClientProt.ping(true);
             GameShell.resetTimer();
         } else if (loadPercentage == 88) {
             font26 = new WorldMapFont(26, true, GameShell.canvas);
             loadPercentage = 91;
-            Static7.ping(true);
+            ClientProt.ping(true);
             GameShell.resetTimer();
         } else {
             font30 = new WorldMapFont(30, true, GameShell.canvas);
             loadPercentage = 100;
-            Static7.ping(true);
+            ClientProt.ping(true);
             GameShell.resetTimer();
             System.gc();
         }

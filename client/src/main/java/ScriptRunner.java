@@ -1238,7 +1238,7 @@ public final class ScriptRunner {
 										continue;
 									}
 									if (opcode == 3103) {
-										Static153.method2909();
+										ClientProt.method2909();
 										continue;
 									}
 									if (opcode == 3104) {
@@ -1272,7 +1272,7 @@ public final class ScriptRunner {
 										int1 = intStack[isp];
 										ssp--;
 										local2522 = stringStack[ssp];
-										Static276.method4613(int1, local2522);
+										ClientProt.method4613(int1, local2522);
 										continue;
 									}
 									if (opcode == 3108) {
@@ -3154,7 +3154,7 @@ public final class ScriptRunner {
 													if (opcode == 5604) {
 														ssp--;
 														if (client.gameState == 10 && LoginManager.anInt4937 == 0 && LoginManager.step == 0 && CreateManager.step == 0 && WorldList.step == 0) {
-															Static78.method1691(stringStack[ssp].encode37());
+															ClientProt.method1691(stringStack[ssp].encode37());
 														}
 														continue;
 													}

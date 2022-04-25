@@ -614,7 +614,7 @@ public final class client extends GameShell {
         aShortArray88 = aShortArray19 = aShortArray74 = aShortArray87 = new short[256];
         Static114.method4637();
         Static261.aBoolean298 = false;
-        Static59.method1373();
+        ClientProt.method1373();
     }
 
     @OriginalMember(owner = "client!client", name = "f", descriptor = "(I)V")
@@ -1034,7 +1034,7 @@ public final class client extends GameShell {
 										priorityRequest = (HookRequest) InterfaceList.lowPriorityRequests.removeHead();
 										if (priorityRequest == null) {
 											if (Static105.aClass13_14 != null) {
-												Static4.method28();
+												ClientProt.method28();
 											}
 											if (Static33.openUrlRequest != null && Static33.openUrlRequest.status == 1) {
 												if (Static33.openUrlRequest.result != null) {
@@ -1526,7 +1526,7 @@ public final class client extends GameShell {
 			this.mainLoad();
 			GameShell.resetTimer();
 		} else if (gameState == 25 || gameState == 28) {
-			Static78.rebuildMap();
+			ClientProt.rebuildMap();
 		}
 		if (gameState == 10) {
 			this.mainUpdate();

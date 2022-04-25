@@ -227,20 +227,13 @@ public final class Static2 {
 			local193 = Static145.anIntArrayArray25[local3][local8];
 		}
 		if (local61 > 0) {
-			Static193.method3502(local61, arg9);
+			ClientProt.method3502(local61, arg9);
 			return true;
 		} else if (arg9 == 1) {
 			return false;
 		} else {
 			return true;
 		}
-	}
-
-	@OriginalMember(owner = "client!aa", name = "a", descriptor = "(IZI)V")
-	public static void method10(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		Protocol.outboundBuffer.p1isaac(132);
-		Protocol.outboundBuffer.p4rme(arg1);
-		Protocol.outboundBuffer.p2le(arg0);
 	}
 
 	@OriginalMember(owner = "client!aa", name = "a", descriptor = "(BLclient!be;)V")

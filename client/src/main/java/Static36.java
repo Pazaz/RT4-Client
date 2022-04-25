@@ -100,7 +100,7 @@ public final class Static36 {
 									if (component.anIntArray49 == null || client.loop >= component.anIntArray49[i]) {
 										@Pc(279) byte local279 = component.aByteArray7[i];
 										if (local279 == 0 || ((local279 & 0x2) == 0 || Keyboard.pressedKeys[Keyboard.KEY_ALT]) && ((local279 & 0x1) == 0 || Keyboard.pressedKeys[Keyboard.KEY_CTRL]) && ((local279 & 0x4) == 0 || Keyboard.pressedKeys[Keyboard.KEY_SHIFT])) {
-											Static263.method4512(JagString.EMPTY, -1, i + 1, component.id);
+											ClientProt.method4512(JagString.EMPTY, -1, i + 1, component.id);
 											k = component.anIntArray46[i];
 											if (component.anIntArray49 == null) {
 												component.anIntArray49 = new int[component.aByteArray8.length];
@@ -168,7 +168,7 @@ public final class Static36 {
 											@Pc(520) int local520 = k + WorldMap.originX;
 											@Pc(528) int local528 = WorldMap.length + WorldMap.originZ - local516 - 1;
 											Cheat.teleport(local520, local528, 0);
-											Static153.method2909();
+											ClientProt.method2909();
 											continue;
 										}
 										Static137.anInt3337 = 1;

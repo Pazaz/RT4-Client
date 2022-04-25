@@ -651,7 +651,7 @@ public final class Static45 {
 			local198 = Static145.anIntArrayArray25[local3][local10];
 		}
 		if (local64 > 0) {
-			Static193.method3502(local64, arg4);
+			ClientProt.method3502(local64, arg4);
 			return true;
 		} else if (arg4 == 1) {
 			return false;

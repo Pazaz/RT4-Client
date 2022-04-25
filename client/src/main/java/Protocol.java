@@ -33,6 +33,8 @@ public class Protocol {
     public static int removedCount = 0;
     @OriginalMember(owner = "client!qi", name = "t", descriptor = "I")
 	public static int anInt4762 = 0;
+    @OriginalMember(owner = "client!ck", name = "eb", descriptor = "Z")
+    public static boolean verifyIdChanged = false;
 
     @OriginalMember(owner = "client!g", name = "b", descriptor = "(B)V")
     public static void readLocationPacket() {
@@ -2798,7 +2800,7 @@ public class Protocol {
                                                 Static137.anInt3337 = 0;
                                             }
                                             if (Static105.aClass13_14 != null) {
-                                                Static4.method28();
+                                                ClientProt.method28();
                                             }
                                             if (LoginManager.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static58.wheelRotation != 0) {
                                                 y = Player.level - Static58.wheelRotation;
@@ -2961,9 +2963,9 @@ public class Protocol {
                                             if (Static131.anInt3251 > 50) {
                                                 outboundBuffer.p1isaac(93);
                                             }
-                                            if (Static34.verifyIdChanged) {
-                                                Static71.transmitVerifyId();
-                                                Static34.verifyIdChanged = false;
+                                            if (verifyIdChanged) {
+                                                transmitVerifyId();
+                                                verifyIdChanged = false;
                                             }
                                             try {
                                                 if (socket != null && outboundBuffer.offset > 0) {
@@ -3257,7 +3259,13 @@ public class Protocol {
     @OriginalMember(owner = "client!uc", name = "a", descriptor = "(IB)Z")
     public static boolean setVerifyId(@OriginalArg(0) int arg0) {
         verifyId = arg0 + 1 & 0xFFFF;
-        Static34.verifyIdChanged = true;
+        verifyIdChanged = true;
         return true;
+    }
+
+    @OriginalMember(owner = "client!fk", name = "c", descriptor = "(I)V")
+    public static void transmitVerifyId() {
+        outboundBuffer.p1isaac(177);
+        outboundBuffer.p2(verifyId);
     }
 }

@@ -19,17 +19,17 @@ public final class Static59 {
 			if (Static155.anInt3751 == Static277.anInt5850 && Static60.anInt1892 == Static280.anInt5895) {
 				Static226.anInt3953 = 0;
 				if (Cheat.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static231.anInt5204 > 2) {
-					Static103.method2232(Static231.anInt5204 - 2);
+					ClientProt.method2232(Static231.anInt5204 - 2);
 				} else {
-					Static103.method2232(Static231.anInt5204 - 1);
+					ClientProt.method2232(Static231.anInt5204 - 1);
 				}
 			}
 		} else if (Static155.anInt3751 == Mouse.clickX && Static60.anInt1892 == Mouse.clickY) {
 			Static226.anInt3953 = 0;
 			if (Cheat.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static231.anInt5204 > 2) {
-				Static103.method2232(Static231.anInt5204 - 2);
+				ClientProt.method2232(Static231.anInt5204 - 2);
 			} else {
-				Static103.method2232(Static231.anInt5204 - 1);
+				ClientProt.method2232(Static231.anInt5204 - 1);
 			}
 		} else {
 			Static280.anInt5895 = Mouse.clickY;
@@ -38,16 +38,7 @@ public final class Static59 {
 		}
 	}
 
-	@OriginalMember(owner = "client!ej", name = "i", descriptor = "(I)V")
-	public static void method1373() {
-		Protocol.outboundBuffer.p1isaac(243);
-		Protocol.outboundBuffer.p1(Static144.getWindowMode());
-		Protocol.outboundBuffer.p2(GameShell.canvasWidth);
-		Protocol.outboundBuffer.p2(GameShell.canvasHeight);
-		Protocol.outboundBuffer.p1(Preferences.antiAliasingMode);
-	}
-
-    @OriginalMember(owner = "client!ej", name = "a", descriptor = "(IZIJ)Lclient!na;")
+	@OriginalMember(owner = "client!ej", name = "a", descriptor = "(IZIJ)Lclient!na;")
 	public static JagString method1376(@OriginalArg(3) long arg0) {
 		@Pc(35) long local35 = arg0 / (long) 10;
 		@Pc(37) int local37 = 1;

@@ -34,9 +34,4 @@ public final class Static71 {
 		}
 	}
 
-	@OriginalMember(owner = "client!fk", name = "c", descriptor = "(I)V")
-	public static void transmitVerifyId() {
-		Protocol.outboundBuffer.p1isaac(177);
-		Protocol.outboundBuffer.p2(Protocol.verifyId);
-	}
 }

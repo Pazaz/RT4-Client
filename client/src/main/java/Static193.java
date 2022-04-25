@@ -237,36 +237,4 @@ public final class Static193 {
 		return local1348;
 	}
 
-	@OriginalMember(owner = "client!pi", name = "c", descriptor = "(III)V")
-	public static void method3502(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
-		@Pc(13) int local13 = arg0;
-		if (arg0 > 25) {
-			local13 = 25;
-		}
-		arg0--;
-		@Pc(23) int local23 = Static259.anIntArray514[arg0];
-		@Pc(27) int local27 = Static84.anIntArray209[arg0];
-		if (arg1 == 0) {
-			Protocol.outboundBuffer.p1isaac(215);
-			Protocol.outboundBuffer.p1(local13 + local13 + 3);
-		}
-		if (arg1 == 1) {
-			Protocol.outboundBuffer.p1isaac(39);
-			Protocol.outboundBuffer.p1(local13 + local13 + 3 + 14);
-		}
-		if (arg1 == 2) {
-			Protocol.outboundBuffer.p1isaac(77);
-			Protocol.outboundBuffer.p1(local13 + local13 + 3);
-		}
-		Protocol.outboundBuffer.p1a(Keyboard.pressedKeys[Keyboard.KEY_CTRL] ? 1 : 0);
-		Protocol.outboundBuffer.p2(Static225.originX + local23);
-		Protocol.outboundBuffer.p2add(Static142.originZ + local27);
-		Static84.anInt2255 = Static84.anIntArray209[0];
-		Static115.anInt2939 = Static259.anIntArray514[0];
-		for (@Pc(126) int local126 = 1; local126 < local13; local126++) {
-			arg0--;
-			Protocol.outboundBuffer.p1a(Static259.anIntArray514[arg0] - local23);
-			Protocol.outboundBuffer.p1sub(Static84.anIntArray209[arg0] - local27);
-		}
-	}
 }

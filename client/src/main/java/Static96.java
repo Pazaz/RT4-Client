@@ -262,7 +262,7 @@ public final class Static96 {
 			local201 = Static145.anIntArrayArray25[local3][local10];
 		}
 		if (local69 > 0) {
-			Static193.method3502(local69, arg2);
+			ClientProt.method3502(local69, arg2);
 			return true;
 		} else if (arg2 == 1) {
 			return false;
