@@ -19,6 +19,9 @@ dependencies {
     compileOnly project(':deob-annotations')
     implementation project(':signlink')
     implementation project(':client') // TODO: abstract client/engine code
+
+    implementation 'lib:gluegen-rt'
+    implementation 'lib:jogl-all'
 }
 
 jar {
