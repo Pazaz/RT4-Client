@@ -58,8 +58,8 @@ public class AreaSoundManager {
                 local138 = local138.getMultiNpc();
             }
             if (local138 != null) {
-                local13.anInt2028 = (local138.soze + arg0) * 128;
-                local13.anInt2037 = (arg4 + local138.soze) * 128;
+                local13.anInt2028 = (local138.size + arg0) * 128;
+                local13.anInt2037 = (arg4 + local138.size) * 128;
                 local13.sound = Static112.getSound(arg3);
                 local13.radius = local138.soundRadius * 128;
             }

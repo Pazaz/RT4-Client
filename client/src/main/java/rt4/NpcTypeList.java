@@ -28,7 +28,7 @@ public class NpcTypeList {
         if (local10 != null) {
             return local10;
         }
-        @Pc(26) byte[] local26 = archive.getFile(Static60.method1447(arg0), Static179.method3322(arg0));
+        @Pc(26) byte[] local26 = archive.getFile(method1447(arg0), method3322(arg0));
         local10 = new NpcType();
         local10.id = arg0;
         if (local26 != null) {
@@ -58,5 +58,15 @@ public class NpcTypeList {
         types.clean(5);
         aClass99_18.clean(5);
         headModels.clean(5);
+    }
+
+    @OriginalMember(owner = "client!em", name = "a", descriptor = "(II)I")
+    public static int method1447(@OriginalArg(0) int arg0) {
+        return arg0 >>> 7;
+    }
+
+    @OriginalMember(owner = "client!oe", name = "a", descriptor = "(IZ)I")
+    public static int method3322(@OriginalArg(0) int arg0) {
+        return arg0 & 0x7F;
     }
 }

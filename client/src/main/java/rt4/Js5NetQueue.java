@@ -129,7 +129,7 @@ public final class Js5NetQueue {
 					this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.offset += local235;
 					if (this.aClass3_Sub2_Sub5_Sub2_2.aClass3_Sub15_7.offset == local228) {
 						this.aClass3_Sub2_Sub5_Sub2_2.method4365();
-						this.aClass3_Sub2_Sub5_Sub2_2.aBoolean226 = false;
+						this.aClass3_Sub2_Sub5_Sub2_2.incomplete = false;
 						this.aClass3_Sub2_Sub5_Sub2_2 = null;
 					} else if (this.aClass3_Sub2_Sub5_Sub2_2.anInt4617 == 512) {
 						this.aClass3_Sub2_Sub5_Sub2_2.anInt4617 = 0;
@@ -253,7 +253,7 @@ public final class Js5NetQueue {
 	}
 
 	@OriginalMember(owner = "client!jb", name = "a", descriptor = "(ZLclient!ma;I)V")
-	public final void loggedOut(@OriginalArg(0) boolean arg0, @OriginalArg(1) BufferedSocket arg1) {
+	public final void start(@OriginalArg(0) boolean arg0, @OriginalArg(1) BufferedSocket arg1) {
 		if (this.aClass95_1 != null) {
 			try {
 				this.aClass95_1.close();
@@ -301,7 +301,7 @@ public final class Js5NetQueue {
 	}
 
 	@OriginalMember(owner = "client!jb", name = "c", descriptor = "(B)Z")
-	public final boolean method2326() {
+	public final boolean isUrgentRequestQueueFull() {
 		return this.method2328() >= 20;
 	}
 
@@ -330,7 +330,7 @@ public final class Js5NetQueue {
 	}
 
 	@OriginalMember(owner = "client!jb", name = "a", descriptor = "(IIBIZ)Lclient!pm;")
-	public final Js5NetRequest method2330(@OriginalArg(1) int arg0, @OriginalArg(2) byte arg1, @OriginalArg(3) int arg2, @OriginalArg(4) boolean arg3) {
+	public final Js5NetRequest read(@OriginalArg(1) int arg0, @OriginalArg(2) byte arg1, @OriginalArg(3) int arg2, @OriginalArg(4) boolean arg3) {
 		@Pc(7) Js5NetRequest local7 = new Js5NetRequest();
 		@Pc(14) long local14 = (long) (arg2 + (arg0 << 16));
 		local7.aBoolean225 = arg3;

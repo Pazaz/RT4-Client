@@ -115,15 +115,15 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 			return this.aClass70_1;
 		}
 		if (this.aClass3_Sub2_Sub5_1 == null) {
-			if (this.aClass73_2.method2326()) {
+			if (this.aClass73_2.isUrgentRequestQueueFull()) {
 				return null;
 			}
-			this.aClass3_Sub2_Sub5_1 = this.aClass73_2.method2330(255, (byte) 0, this.anInt576, true);
+			this.aClass3_Sub2_Sub5_1 = this.aClass73_2.read(255, (byte) 0, this.anInt576, true);
 		}
-		if (this.aClass3_Sub2_Sub5_1.aBoolean226) {
+		if (this.aClass3_Sub2_Sub5_1.incomplete) {
 			return null;
 		}
-		@Pc(52) byte[] local52 = this.aClass3_Sub2_Sub5_1.method3554();
+		@Pc(52) byte[] local52 = this.aClass3_Sub2_Sub5_1.getData();
 		if (this.aClass3_Sub2_Sub5_1 instanceof Js5CacheRequest) {
 			try {
 				if (local52 == null) {
@@ -135,10 +135,10 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 				}
 			} catch (@Pc(88) RuntimeException local88) {
 				this.aClass70_1 = null;
-				if (this.aClass73_2.method2326()) {
+				if (this.aClass73_2.isUrgentRequestQueueFull()) {
 					this.aClass3_Sub2_Sub5_1 = null;
 				} else {
-					this.aClass3_Sub2_Sub5_1 = this.aClass73_2.method2330(255, (byte) 0, this.anInt576, true);
+					this.aClass3_Sub2_Sub5_1 = this.aClass73_2.read(255, (byte) 0, this.anInt576, true);
 				}
 				return null;
 			}
@@ -151,10 +151,10 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 			} catch (@Pc(131) RuntimeException local131) {
 				this.aClass73_2.method2327();
 				this.aClass70_1 = null;
-				if (this.aClass73_2.method2326()) {
+				if (this.aClass73_2.isUrgentRequestQueueFull()) {
 					this.aClass3_Sub2_Sub5_1 = null;
 				} else {
-					this.aClass3_Sub2_Sub5_1 = this.aClass73_2.method2330(255, (byte) 0, this.anInt576, true);
+					this.aClass3_Sub2_Sub5_1 = this.aClass73_2.read(255, (byte) 0, this.anInt576, true);
 				}
 				return null;
 			}
@@ -288,7 +288,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 			return;
 		}
 		for (@Pc(331) Js5Request local331 = (Js5Request) this.aClass133_1.head(); local331 != null; local331 = (Js5Request) this.aClass133_1.next()) {
-			if (!local331.aBoolean226) {
+			if (!local331.incomplete) {
 				if (local331.aBoolean227) {
 					if (!local331.aBoolean225) {
 						throw new RuntimeException();
@@ -317,17 +317,17 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 	@OriginalMember(owner = "client!bg", name = "a", descriptor = "(III)Lclient!il;")
 	private Js5Request method536(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		@Pc(13) Js5Request local13 = (Js5Request) this.aClass133_1.get((long) arg1);
-		if (local13 != null && arg0 == 0 && !local13.aBoolean225 && local13.aBoolean226) {
+		if (local13 != null && arg0 == 0 && !local13.aBoolean225 && local13.incomplete) {
 			local13.unlink();
 			local13 = null;
 		}
 		if (local13 == null) {
 			if (arg0 == 0) {
 				if (this.aClass49_2 == null || this.aByteArray9[arg1] == -1) {
-					if (this.aClass73_2.method2326()) {
+					if (this.aClass73_2.isUrgentRequestQueueFull()) {
 						return null;
 					}
-					local13 = this.aClass73_2.method2330(this.anInt576, (byte) 2, arg1, true);
+					local13 = this.aClass73_2.read(this.anInt576, (byte) 2, arg1, true);
 				} else {
 					local13 = this.aClass80_2.method2471(this.aClass49_2, arg1);
 				}
@@ -346,16 +346,16 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 				if (this.aClass73_2.method2316()) {
 					return null;
 				}
-				local13 = this.aClass73_2.method2330(this.anInt576, (byte) 2, arg1, false);
+				local13 = this.aClass73_2.read(this.anInt576, (byte) 2, arg1, false);
 			} else {
 				throw new RuntimeException();
 			}
 			this.aClass133_1.put(local13, (long) arg1);
 		}
-		if (local13.aBoolean226) {
+		if (local13.incomplete) {
 			return null;
 		}
-		@Pc(161) byte[] local161 = local13.method3554();
+		@Pc(161) byte[] local161 = local13.getData();
 		@Pc(199) int local199;
 		@Pc(252) Js5NetRequest local252;
 		if (!(local13 instanceof Js5CacheRequest)) {
@@ -374,8 +374,8 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 			} catch (@Pc(225) RuntimeException local225) {
 				this.aClass73_2.method2327();
 				local13.unlink();
-				if (local13.aBoolean225 && !this.aClass73_2.method2326()) {
-					local252 = this.aClass73_2.method2330(this.anInt576, (byte) 2, arg1, true);
+				if (local13.aBoolean225 && !this.aClass73_2.isUrgentRequestQueueFull()) {
+					local252 = this.aClass73_2.read(this.anInt576, (byte) 2, arg1, true);
 					this.aClass133_1.put(local252, (long) arg1);
 				}
 				return null;
@@ -421,8 +421,8 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 		} catch (@Pc(437) Exception local437) {
 			this.aByteArray9[arg1] = -1;
 			local13.unlink();
-			if (local13.aBoolean225 && !this.aClass73_2.method2326()) {
-				local252 = this.aClass73_2.method2330(this.anInt576, (byte) 2, arg1, true);
+			if (local13.aBoolean225 && !this.aClass73_2.isUrgentRequestQueueFull()) {
+				local252 = this.aClass73_2.read(this.anInt576, (byte) 2, arg1, true);
 				this.aClass133_1.put(local252, (long) arg1);
 			}
 			return null;
@@ -468,7 +468,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 		if (local9 == null) {
 			return null;
 		} else {
-			@Pc(17) byte[] local17 = local9.method3554();
+			@Pc(17) byte[] local17 = local9.getData();
 			local9.unlink();
 			return local17;
 		}

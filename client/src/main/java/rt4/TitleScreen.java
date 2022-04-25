@@ -7,10 +7,12 @@ import org.openrs2.deob.annotation.Pc;
 public class TitleScreen {
     @OriginalMember(owner = "client!cb", name = "cb", descriptor = "Lclient!na;")
     public static final JagString aClass100_165 = JagString.parse("titlebg");
+    @OriginalMember(owner = "client!bh", name = "M", descriptor = "Z")
+    public static boolean loaded;
 
     @OriginalMember(owner = "client!oi", name = "a", descriptor = "(Lclient!ve;B)V")
     public static void load(@OriginalArg(0) Js5 archive) {
-        if (Static18.loaded) {
+        if (loaded) {
             return;
         }
 
@@ -26,14 +28,14 @@ public class TitleScreen {
         Static78.titleBg.renderResizedTransparent((GameShell.canvasWidth - width) / 2, 0, width, height);
         Static243.logo = Static40.loadIndexedSpriteAutoDetect(Static136.logoId, archive);
         Static243.logo.renderTransparent(GameShell.canvasWidth / 2 - Static243.logo.width / 2, 18);
-        Static18.loaded = true;
+        loaded = true;
     }
 
     @OriginalMember(owner = "client!je", name = "f", descriptor = "(B)V")
     public static void clear() {
-        if (Static18.loaded) {
+        if (loaded) {
             Static243.logo = null;
-            Static18.loaded = false;
+            loaded = false;
             Static78.titleBg = null;
         }
     }

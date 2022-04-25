@@ -18,82 +18,94 @@ public final class Npc extends PathingEntity {
 
 	@OriginalMember(owner = "client!km", name = "b", descriptor = "()I")
 	@Override
-	public final int method4549() {
+	public final int getMaxY() {
 		return this.anInt3413;
 	}
 
 	@OriginalMember(owner = "client!km", name = "a", descriptor = "(IIIIIIIIJILclient!ga;)V")
 	@Override
-	public final void method4546(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) long arg8, @OriginalArg(9) int arg9, @OriginalArg(10) ParticleSystem arg10) {
+	public final void render(@OriginalArg(0) int orientation, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int x, @OriginalArg(6) int z, @OriginalArg(7) int y, @OriginalArg(8) long arg8, @OriginalArg(9) int arg9, @OriginalArg(10) ParticleSystem arg10) {
 		if (this.type == null) {
 			return;
 		}
+
 		@Pc(29) SeqType local29 = this.seqId != -1 && this.anInt3420 == 0 ? SeqTypeList.get(this.seqId) : null;
 		@Pc(53) SeqType local53 = this.anInt3366 == -1 || this.anInt3366 == this.method2681().idleAnimationId && local29 != null ? null : SeqTypeList.get(this.anInt3366);
-		@Pc(74) Model local74 = this.type.getBodyModel(this.aClass147Array3, this.anInt3388, this.anInt3407, this.anInt3373, this.anInt3360, this.anInt3425, local53, this.anInt3396, local29);
-		if (local74 == null) {
+		@Pc(74) Model body = this.type.getBodyModel(this.aClass147Array3, this.anInt3388, this.anInt3407, this.anInt3373, this.anInt3360, this.anInt3425, local53, this.anInt3396, local29);
+		if (body == null) {
 			return;
 		}
-		this.anInt3413 = local74.method4549();
+
+		this.anInt3413 = body.getMaxY();
 		@Pc(84) NpcType local84 = this.type;
 		if (local84.multiNpcs != null) {
 			local84 = local84.getMultiNpc();
 		}
-		@Pc(140) Model local140;
+
+		@Pc(140) Model model;
 		if (Preferences.characterShadowsOn && local84.shadow) {
-			local140 = ShadowModelList.method1043(this.type.aByte13, this.aBoolean171, local53 == null ? local29 : local53, this.xFine, this.type.aShort23, this.zFine, this.type.aShort24, this.type.soze, local74, arg0, local53 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, this.type.aByte12);
+			model = ShadowModelList.method1043(this.type.aByte13, this.aBoolean171, local53 == null ? local29 : local53, this.xFine, this.type.aShort23, this.zFine, this.type.aShort24, this.type.size, body, orientation, local53 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, this.type.aByte12);
 			if (GlRenderer.enabled) {
 				@Pc(144) float local144 = GlRenderer.method4179();
 				@Pc(146) float local146 = GlRenderer.method4166();
 				GlRenderer.disableDepthMask();
 				GlRenderer.method4152(local144, local146 - 150.0F);
-				local140.method4546(0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, -1L, arg9, this.aClass47_Sub1_5);
+				model.render(0, arg1, arg2, arg3, arg4, x, z, y, -1L, arg9, this.aClass47_Sub1_5);
 				GlRenderer.enableDepthMask();
 				GlRenderer.method4152(local144, local146);
 			} else {
-				local140.method4546(0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, -1L, arg9, this.aClass47_Sub1_5);
+				model.render(0, arg1, arg2, arg3, arg4, x, z, y, -1L, arg9, this.aClass47_Sub1_5);
 			}
 		}
-		this.method2687(local74);
-		this.method2685(local74, arg0);
-		local140 = null;
+
+		this.method2687(body);
+		this.method2685(body, orientation);
+
+		model = null;
 		if (this.spotAnimId != -1 && this.anInt3399 != -1) {
-			@Pc(211) SpotAnimType local211 = SpotAnimTypeList.get(this.spotAnimId);
-			local140 = local211.method1319(this.anInt3418, this.anInt3399, this.anInt3361);
-			if (local140 != null) {
-				local140.method4575(0, -this.spotAnimY, 0);
-				if (local211.aBoolean100) {
+			@Pc(211) SpotAnimType spotAnimType = SpotAnimTypeList.get(this.spotAnimId);
+			model = spotAnimType.constructModel(this.anInt3418, this.anInt3399, this.anInt3361);
+			if (model != null) {
+				model.translate(0, -this.spotAnimY, 0);
+
+				if (spotAnimType.aBoolean100) {
 					if (Static101.anInt2640 != 0) {
-						local140.method4574(Static101.anInt2640);
+						model.rotateX(Static101.anInt2640);
 					}
 					if (Static102.anInt2680 != 0) {
-						local140.method4564(Static102.anInt2680);
+						model.rotateZ(Static102.anInt2680);
 					}
 					if (Static62.anInt1938 != 0) {
-						local140.method4575(0, Static62.anInt1938, 0);
+						model.translate(0, Static62.anInt1938, 0);
 					}
 				}
 			}
 		}
+
 		if (!GlRenderer.enabled) {
-			if (local140 != null) {
-				local74 = ((SoftwareModel) local74).method4588(local140);
+			if (model != null) {
+				body = ((SoftwareModel) body).method4588(model);
 			}
-			if (this.type.soze == 1) {
-				local74.aBoolean303 = true;
+
+			if (this.type.size == 1) {
+				body.aBoolean303 = true;
 			}
-			local74.method4546(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.aClass47_Sub1_5);
+
+			body.render(orientation, arg1, arg2, arg3, arg4, x, z, y, arg8, arg9, this.aClass47_Sub1_5);
 			return;
 		}
-		if (this.type.soze == 1) {
-			local74.aBoolean303 = true;
+
+		if (this.type.size == 1) {
+			body.aBoolean303 = true;
 		}
-		local74.method4546(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.aClass47_Sub1_5);
-		if (local140 != null) {
-			if (this.type.soze == 1) {
-				local140.aBoolean303 = true;
+
+		body.render(orientation, arg1, arg2, arg3, arg4, x, z, y, arg8, arg9, this.aClass47_Sub1_5);
+		if (model != null) {
+			if (this.type.size == 1) {
+				model.aBoolean303 = true;
 			}
-			local140.method4546(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.aClass47_Sub1_5);
+
+			model.render(orientation, arg1, arg2, arg3, arg4, x, z, y, arg8, arg9, this.aClass47_Sub1_5);
 		}
 	}
 
@@ -124,7 +136,7 @@ public final class Npc extends PathingEntity {
 	}
 
 	@OriginalMember(owner = "client!km", name = "a", descriptor = "(ILclient!me;)V")
-	public final void method2698(@OriginalArg(1) NpcType arg0) {
+	public final void setNpcType(@OriginalArg(1) NpcType arg0) {
 		this.type = arg0;
 		if (this.aClass47_Sub1_5 != null) {
 			this.aClass47_Sub1_5.method1646();

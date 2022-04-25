@@ -3080,8 +3080,8 @@ public class Protocol {
                 if (local14.type.hasAreaSound()) {
                     AreaSoundManager.remove(local14);
                 }
-                local14.method2698(NpcTypeList.get(inboundBuffer.g2le()));
-                local14.method2692(local14.type.soze);
+                local14.setNpcType(NpcTypeList.get(inboundBuffer.g2le()));
+                local14.method2692(local14.type.size);
                 local14.anInt3365 = local14.type.basId;
                 if (local14.type.hasAreaSound()) {
                     AreaSoundManager.add(local14.movementQueueZ[0], null, 0, local14, local14.movementQueueX[0], Player.level, null);
@@ -3128,7 +3128,7 @@ public class Protocol {
                 if (NpcList.npcs[local30].type.hasAreaSound()) {
                     AreaSoundManager.remove(NpcList.npcs[local30]);
                 }
-                NpcList.npcs[local30].method2698(null);
+                NpcList.npcs[local30].setNpcType(null);
                 NpcList.npcs[local30] = null;
             }
         }
@@ -3232,7 +3232,7 @@ public class Protocol {
                         extendedIds[extendedCount++] = local14;
                     }
                     @Pc(105) int local105 = inboundBuffer.gBits(5);
-                    local37.method2698(NpcTypeList.get(inboundBuffer.gBits(14)));
+                    local37.setNpcType(NpcTypeList.get(inboundBuffer.gBits(14)));
                     if (local105 > 15) {
                         local105 -= 32;
                     }
@@ -3240,7 +3240,7 @@ public class Protocol {
                     if (local124 > 15) {
                         local124 -= 32;
                     }
-                    local37.method2692(local37.type.soze);
+                    local37.method2692(local37.type.size);
                     local37.anInt3365 = local37.type.basId;
                     local37.anInt3376 = local37.type.anInt3733;
                     if (local37.anInt3376 == 0) {

@@ -506,7 +506,7 @@ public final class SoftwareModel extends Model {
 
 	@OriginalMember(owner = "client!w", name = "b", descriptor = "()I")
 	@Override
-	public final int method4549() {
+	public final int getMaxY() {
 		if (!this.boundsValid) {
 			this.method4592();
 		}
@@ -581,7 +581,7 @@ public final class SoftwareModel extends Model {
 
 	@OriginalMember(owner = "client!w", name = "d", descriptor = "(I)V")
 	@Override
-	public final void method4574(@OriginalArg(0) int arg0) {
+	public final void rotateX(@OriginalArg(0) int arg0) {
 		@Pc(3) int local3 = MathUtils.sin[arg0];
 		@Pc(7) int local7 = MathUtils.cos[arg0];
 		for (@Pc(9) int local9 = 0; local9 < this.vertexCount; local9++) {
@@ -607,7 +607,7 @@ public final class SoftwareModel extends Model {
 
 	@OriginalMember(owner = "client!w", name = "c", descriptor = "(I)V")
 	@Override
-	public final void method4564(@OriginalArg(0) int arg0) {
+	public final void rotateZ(@OriginalArg(0) int arg0) {
 		@Pc(3) int local3 = MathUtils.sin[arg0];
 		@Pc(7) int local7 = MathUtils.cos[arg0];
 		for (@Pc(9) int local9 = 0; local9 < this.vertexCount; local9++) {
@@ -620,7 +620,7 @@ public final class SoftwareModel extends Model {
 
 	@OriginalMember(owner = "client!w", name = "a", descriptor = "(IIIIIIIIJILclient!ga;)V")
 	@Override
-	public final void method4546(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) long arg8, @OriginalArg(9) int arg9, @OriginalArg(10) ParticleSystem arg10) {
+	public final void render(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) long arg8, @OriginalArg(9) int arg9, @OriginalArg(10) ParticleSystem arg10) {
 		if (!this.boundsValid) {
 			this.method4592();
 		}
@@ -766,7 +766,8 @@ public final class SoftwareModel extends Model {
 		}
 		try {
 			this.method4590(local154, local190, arg8, local24 - local53, local38 - local53 + 2, arg10);
-		} catch (@Pc(713) Exception local713) {
+		} catch (@Pc(713) Exception ex) {
+			ex.printStackTrace();
 		}
 	}
 
@@ -2337,7 +2338,7 @@ public final class SoftwareModel extends Model {
 
 	@OriginalMember(owner = "client!w", name = "c", descriptor = "(III)V")
 	@Override
-	public final void method4575(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+	public final void translate(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		for (@Pc(1) int local1 = 0; local1 < this.vertexCount; local1++) {
 			this.anIntArray528[local1] += arg0;
 			this.anIntArray527[local1] += arg1;

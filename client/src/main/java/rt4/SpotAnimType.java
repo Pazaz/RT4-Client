@@ -100,7 +100,7 @@ public final class SpotAnimType {
 	}
 
 	@OriginalMember(owner = "client!eg", name = "a", descriptor = "(IBII)Lclient!ak;")
-	public final Model method1319(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
+	public final Model constructModel(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
 		@Pc(13) Model local13 = (Model) SpotAnimTypeList.models.get((long) this.id);
 		if (local13 == null) {
 			@Pc(28) RawModel local28 = Static77.create(SpotAnimTypeList.modelsArchive, this.modelId);

@@ -40,7 +40,7 @@ public final class Static69 {
 			for (@Pc(46) int local46 = 0; local46 < local42.anInt662; local46++) {
 				@Pc(55) Scenery local55 = local42.aClass31Array1[local46];
 				if ((local55.aLong56 & 0x400000L) == 4194304L) {
-					@Pc(66) int local66 = local55.aClass8_4.method4549();
+					@Pc(66) int local66 = local55.aClass8_4.getMaxY();
 					if (local66 != -32768 && local66 < local34) {
 						local34 = local66;
 					}
