@@ -33,18 +33,21 @@ public final class SoftwareRaster {
 	@OriginalMember(owner = "client!kb", name = "h", descriptor = "I")
 	public static int clipBottom = 0;
 
-	@OriginalMember(owner = "client!kb", name = "a", descriptor = "()V")
+    @OriginalMember(owner = "client!vd", name = "w", descriptor = "Lclient!vk;")
+    public static FrameBuffer frameBuffer;
+
+    @OriginalMember(owner = "client!kb", name = "a", descriptor = "()V")
 	public static void method2482() {
 		anIntArray295 = null;
 		anIntArray296 = null;
 	}
 
 	@OriginalMember(owner = "client!kb", name = "a", descriptor = "(IIIII)V")
-	public static void drawRect(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
-		drawHorizontalLine(arg0, arg1, arg2, arg4);
-		drawHorizontalLine(arg0, arg1 + arg3 - 1, arg2, arg4);
-		drawVerticalLine(arg0, arg1, arg3, arg4);
-		drawVerticalLine(arg0 + arg2 - 1, arg1, arg3, arg4);
+	public static void drawRect(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int color) {
+		drawHorizontalLine(arg0, arg1, arg2, color);
+		drawHorizontalLine(arg0, arg1 + arg3 - 1, arg2, color);
+		drawVerticalLine(arg0, arg1, arg3, color);
+		drawVerticalLine(arg0 + arg2 - 1, arg1, arg3, color);
 	}
 
 	@OriginalMember(owner = "client!kb", name = "a", descriptor = "(IIIIII)V")
@@ -113,20 +116,20 @@ public final class SoftwareRaster {
 	}
 
 	@OriginalMember(owner = "client!kb", name = "a", descriptor = "(IIII)V")
-	public static void drawHorizontalLine(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		if (arg1 < clipTop || arg1 >= clipBottom) {
+	public static void drawHorizontalLine(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int length, @OriginalArg(3) int color) {
+		if (y < clipTop || y >= clipBottom) {
 			return;
 		}
-		if (arg0 < clipLeft) {
-			arg2 -= clipLeft - arg0;
-			arg0 = clipLeft;
+		if (x < clipLeft) {
+			length -= clipLeft - x;
+			x = clipLeft;
 		}
-		if (arg0 + arg2 > clipRight) {
-			arg2 = clipRight - arg0;
+		if (x + length > clipRight) {
+			length = clipRight - x;
 		}
-		@Pc(32) int local32 = arg0 + arg1 * width;
-		for (@Pc(34) int local34 = 0; local34 < arg2; local34++) {
-			pixels[local32 + local34] = arg3;
+		@Pc(32) int local32 = x + y * width;
+		for (@Pc(34) int local34 = 0; local34 < length; local34++) {
+			pixels[local32 + local34] = color;
 		}
 	}
 

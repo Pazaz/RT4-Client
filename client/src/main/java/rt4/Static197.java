@@ -125,8 +125,8 @@ public final class Static197 {
 			GameShell.canvas.setIgnoreRepaint(true);
 			if (!Static211.aBoolean73) {
 				SceneGraph.clear();
-				client.frameBuffer = null;
-				client.frameBuffer = Static131.create(GameShell.canvasHeight, GameShell.canvasWidth, GameShell.canvas);
+				SoftwareRaster.frameBuffer = null;
+				SoftwareRaster.frameBuffer = Static131.create(GameShell.canvasHeight, GameShell.canvasWidth, GameShell.canvas);
 				SoftwareRaster.clear();
 				if (client.gameState == 5) {
 					LoadingBar.render(true, Fonts.b12Full);
@@ -135,14 +135,14 @@ public final class Static197 {
 				}
 				try {
 					@Pc(269) Graphics local269 = GameShell.canvas.getGraphics();
-					client.frameBuffer.draw(local269);
+					SoftwareRaster.frameBuffer.draw(local269);
 				} catch (@Pc(277) Exception local277) {
 				}
 				Static139.method2704();
 				if (arg3 == 0) {
-					client.frameBuffer = Static131.create(503, 765, GameShell.canvas);
+					SoftwareRaster.frameBuffer = Static131.create(503, 765, GameShell.canvas);
 				} else {
-					client.frameBuffer = null;
+					SoftwareRaster.frameBuffer = null;
 				}
 				@Pc(300) PrivilegedRequest local300 = GameShell.signLink.loadGlNatives(client.instance.getClass());
 				while (local300.status == 0) {
@@ -162,7 +162,7 @@ public final class Static197 {
 		}
 		if (arg1 > 0 && arg3 == 0) {
 			GameShell.thread.setPriority(5);
-			client.frameBuffer = null;
+			SoftwareRaster.frameBuffer = null;
 			Static268.method4580();
 			((Js5GlTextureProvider) Rasteriser.textureProvider).method3248(200);
 			if (Preferences.highDetailLighting) {
@@ -171,7 +171,7 @@ public final class Static197 {
 			Static114.method4637();
 		} else if (arg1 == 0 && arg3 > 0) {
 			GameShell.thread.setPriority(1);
-			client.frameBuffer = Static131.create(503, 765, GameShell.canvas);
+			SoftwareRaster.frameBuffer = Static131.create(503, 765, GameShell.canvas);
 			Static268.method4583();
 			Static76.method1643();
 			((Js5GlTextureProvider) Rasteriser.textureProvider).method3248(20);

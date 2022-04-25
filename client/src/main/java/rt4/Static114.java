@@ -55,7 +55,7 @@ public final class Static114 {
 		} else {
 			try {
 				@Pc(159) Graphics local159 = GameShell.canvas.getGraphics();
-				client.frameBuffer.draw(local159);
+				SoftwareRaster.frameBuffer.draw(local159);
 			} catch (@Pc(167) Exception local167) {
 				GameShell.canvas.repaint();
 			}

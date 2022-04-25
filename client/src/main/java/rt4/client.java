@@ -73,8 +73,6 @@ public final class client extends GameShell {
 	public static BufferedFile uid;
 	@OriginalMember(owner = "client!tl", name = "d", descriptor = "I")
 	public static int gameState = 0;
-	@OriginalMember(owner = "client!vd", name = "w", descriptor = "Lclient!vk;")
-	public static FrameBuffer frameBuffer;
 	@OriginalMember(owner = "client!id", name = "f", descriptor = "Z")
 	public static boolean clean = false;
     @OriginalMember(owner = "client!bl", name = "P", descriptor = "I")
@@ -710,7 +708,7 @@ public final class client extends GameShell {
 					local388 = GameShell.canvas.getGraphics();
 					for (local84 = 0; local84 < InterfaceList.anInt766; local84++) {
 						if (InterfaceList.rectangleRedraw[local84]) {
-							frameBuffer.drawAt(Static224.anIntArray443[local84], Static264.anIntArray410[local84], Static67.anIntArray320[local84], local388, Static50.anIntArray133[local84]);
+							SoftwareRaster.frameBuffer.drawAt(Static224.anIntArray443[local84], Static264.anIntArray410[local84], Static67.anIntArray320[local84], local388, Static50.anIntArray133[local84]);
 							InterfaceList.rectangleRedraw[local84] = false;
 						}
 					}
@@ -720,7 +718,7 @@ public final class client extends GameShell {
 			} else if (gameState != 0) {
 				try {
 					local388 = GameShell.canvas.getGraphics();
-					frameBuffer.draw(local388);
+					SoftwareRaster.frameBuffer.draw(local388);
 					for (local84 = 0; local84 < InterfaceList.anInt766; local84++) {
 						InterfaceList.rectangleRedraw[local84] = false;
 					}

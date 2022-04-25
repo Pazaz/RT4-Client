@@ -169,7 +169,7 @@ public class MiniMap {
                     if (GlRenderer.enabled) {
                         SoftwareRaster.pixels = null;
                     } else {
-                        client.frameBuffer.makeTarget();
+                        SoftwareRaster.frameBuffer.makeTarget();
                     }
                     return false;
                 }
@@ -177,7 +177,7 @@ public class MiniMap {
                     if (GlRenderer.enabled) {
                         SoftwareRaster.pixels = null;
                     } else {
-                        client.frameBuffer.makeTarget();
+                        SoftwareRaster.frameBuffer.makeTarget();
                     }
                     return false;
                 }
@@ -198,7 +198,7 @@ public class MiniMap {
         if (GlRenderer.enabled) {
             SoftwareRaster.pixels = null;
         } else {
-            client.frameBuffer.makeTarget();
+            SoftwareRaster.frameBuffer.makeTarget();
         }
         softwareSprite = null;
         return true;
