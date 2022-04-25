@@ -2,7 +2,12 @@ package com.itspazaz.rt4;
 
 import rt4.*;
 
-import java.awt.image.Raster;
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.color.ColorSpace;
+import java.awt.event.KeyEvent;
+import java.awt.image.*;
+import java.io.File;
 import java.io.IOException;
 import java.net.Socket;
 
@@ -75,13 +80,7 @@ public class Playground extends GameShell {
     public NpcType npcType;
     public Npc npc;
 
-    @Override
-    protected void mainLoop() {
-        Keyboard.loop();
-        Mouse.loop();
-
-        js5NetLoop();
-
+    public void stateLoop() {
         if (state == 0) {
             LoadingBarAwt.render(null, true, JagString.parse("Connecting to update server"), 1);
 
@@ -166,7 +165,7 @@ public class Playground extends GameShell {
                 Sprites.load(archives[8]);
                 state++;
             }
-        }else if (state == 7) {
+        } else if (state == 7) {
             LoadingBarAwt.render(null, true, JagString.parse("Preparing to draw model"), 1);
             Js5GlTextureProvider textureProvider = new Js5GlTextureProvider(archives[9], archives[26], archives[8], 20, false);
             LoadingBarAwt.clear();
@@ -182,8 +181,53 @@ public class Playground extends GameShell {
             npc.setNpcType(npcType);
             state++;
         }
+    }
 
-        GameShell.frame.setTitle(state + "");
+    private void exportImage(int[] pixels, String filename) {
+        byte[] raw = new byte[pixels.length * 4];
+        int offset = 0;
+        for (int rgb : pixels) {
+            raw[offset++] = (byte) (rgb >> 16); // red
+            raw[offset++] = (byte) (rgb >> 8); // green
+            raw[offset++] = (byte) (rgb); // blue
+
+            // set transparency for background color
+            if (rgb >> 24 == 0x7F) {
+                raw[offset++] = (byte) 0;
+            } else {
+                raw[offset++] = (byte) 0xFF;
+            }
+        }
+
+        try {
+            DataBuffer buffer = new DataBufferByte(raw, raw.length);
+            int samplesPerPixel = 4;
+            int[] bandOffsets = { 0, 1, 2, 3 };
+            ColorModel colorModel = new ComponentColorModel(ColorSpace.getInstance(ColorSpace.CS_sRGB), true, false, Transparency.TRANSLUCENT, DataBuffer.TYPE_BYTE);
+            WritableRaster raster = Raster.createInterleavedRaster(buffer, GameShell.canvasWidth, GameShell.canvasHeight, samplesPerPixel * GameShell.canvasWidth, samplesPerPixel, bandOffsets, null);
+            BufferedImage image = new BufferedImage(colorModel, raster, colorModel.isAlphaPremultiplied(), null);
+            ImageIO.write(image, "PNG", new File(filename + ".png"));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    int exportCounter = 0;
+
+    public void inputLoop() {
+        if (Keyboard.getKey(KeyEvent.VK_BACK_SLASH)) {
+            exportImage(SoftwareRaster.pixels, "dump/" + exportCounter++);
+        }
+    }
+
+    @Override
+    protected void mainLoop() {
+        Keyboard.loop();
+        Mouse.loop();
+
+        js5NetLoop();
+        stateLoop();
+        inputLoop();
     }
 
     public int js5ConnectState = 0;
@@ -254,13 +298,13 @@ public class Playground extends GameShell {
     @Override
     protected void mainRedraw() {
         if (state == 8) {
-            SoftwareRaster.clear();
+            SoftwareRaster.clear(0x7F333333);
 
             if (npc != null) {
-                int orientation = 512;
-                int x = 256;
-                int z = 256;
-                int y = 256;
+                int orientation = 384;
+                int x = 128;
+                int z = 192;
+                int y = 128;
                 npc.render(orientation, 25079, 60547, -44308, 48222, x, z, y, 0L, 0, null);
             }
 

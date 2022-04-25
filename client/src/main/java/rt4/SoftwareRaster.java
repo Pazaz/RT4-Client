@@ -179,6 +179,12 @@ public final class SoftwareRaster {
 		}
 	}
 
+	public static void clear(int color) {
+		for (int i = 0; i < width * height; ++i) {
+			pixels[i] = color;
+		}
+	}
+
 	@OriginalMember(owner = "client!kb", name = "b", descriptor = "(IIIII)V")
 	private static void method2493(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		if (arg1 < clipTop || arg1 >= clipBottom) {
