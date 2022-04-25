@@ -128,6 +128,10 @@ public final class Keyboard implements KeyListener, FocusListener {
 		CODE_MAP[KeyEvent.VK_INSERT] = 100;
 	}
 
+	public static boolean getKey(int key) {
+		return pressedKeys[CODE_MAP[key]];
+	}
+
 	@OriginalMember(owner = "client!s", name = "e", descriptor = "[I")
 	public static final int[] typedCodeQueue = new int[128];
 
