@@ -56,9 +56,4 @@ public final class Static172 {
 		method3223(local24 + 1, arg1, arg2, arg3);
 	}
 
-	@OriginalMember(owner = "client!nj", name = "a", descriptor = "(I)V")
-	public static void quit() {
-		Static2.anInterface4Array1 = null;
-		Static151.method2808();
-	}
 }

@@ -20,13 +20,13 @@ public final class WaterfallMaterialRenderer implements MaterialRenderer {
 
 	@OriginalMember(owner = "client!ob", name = "c", descriptor = "()I")
 	@Override
-	public final int method4605() {
+	public final int getFlags() {
 		return 0;
 	}
 
 	@OriginalMember(owner = "client!ob", name = "a", descriptor = "(I)V")
 	@Override
-	public final void method4604(@OriginalArg(0) int arg0) {
+	public final void setArgument(@OriginalArg(0) int arg0) {
 		@Pc(7) GL2 local7 = GlRenderer.gl;
 		@Pc(18) float local18 = (float) ((arg0 >> 3 & 0x3) + 1) * 0.01F;
 		@Pc(27) float local27 = -0.01F * (float) ((arg0 & 0x3) + 1);
@@ -73,14 +73,14 @@ public final class WaterfallMaterialRenderer implements MaterialRenderer {
 
 	@OriginalMember(owner = "client!ob", name = "a", descriptor = "()V")
 	@Override
-	public final void method4602() {
+	public final void unbind() {
 		@Pc(1) GL2 local1 = GlRenderer.gl;
 		local1.glCallList(this.anInt4236 + 1);
 	}
 
 	@OriginalMember(owner = "client!ob", name = "b", descriptor = "()V")
 	@Override
-	public final void method4603() {
+	public final void bind() {
 		@Pc(5) GL2 local5 = GlRenderer.gl;
 		local5.glCallList(this.anInt4236);
 	}

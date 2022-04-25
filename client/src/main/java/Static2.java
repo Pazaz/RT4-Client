@@ -7,9 +7,6 @@ public final class Static2 {
 	@OriginalMember(owner = "client!aa", name = "m", descriptor = "I")
 	public static int anInt15;
 
-	@OriginalMember(owner = "client!aa", name = "t", descriptor = "[Lclient!pc;")
-	public static MaterialRenderer[] anInterface4Array1;
-
 	@OriginalMember(owner = "client!aa", name = "a", descriptor = "I")
 	public static int anInt7 = 0;
 

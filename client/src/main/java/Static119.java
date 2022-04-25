@@ -6,9 +6,6 @@ public final class Static119 {
 	@OriginalMember(owner = "client!je", name = "eb", descriptor = "[I")
 	public static int[] anIntArray282;
 
-	@OriginalMember(owner = "client!je", name = "R", descriptor = "Z")
-	public static boolean aBoolean153 = false;
-
 	@OriginalMember(owner = "client!je", name = "T", descriptor = "Lclient!sc;")
 	public static HashTable aClass133_9 = new HashTable(8);
 

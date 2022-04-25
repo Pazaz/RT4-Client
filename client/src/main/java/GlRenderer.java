@@ -137,7 +137,7 @@ public final class GlRenderer {
 
 	@OriginalMember(owner = "client!tf", name = "a", descriptor = "()V")
 	public static void method4149() {
-		Static27.setMaterial(0, 0);
+		MaterialManager.setMaterial(0, 0);
 		method4163();
 		setTextureCombineRgbMode(1);
 		setTextureCombineAlphaMode(1);
@@ -159,7 +159,7 @@ public final class GlRenderer {
 
 	@OriginalMember(owner = "client!tf", name = "c", descriptor = "()V")
 	public static void method4151() {
-		Static27.setMaterial(0, 0); // MaterialManager
+		MaterialManager.setMaterial(0, 0); // MaterialManager
 		method4163();
 		setTextureCombineRgbMode(0);
 		setTextureCombineAlphaMode(0);
@@ -214,7 +214,7 @@ public final class GlRenderer {
 
 	@OriginalMember(owner = "client!tf", name = "e", descriptor = "()V")
 	public static void method4155() {
-		Static27.setMaterial(0, 0);
+		MaterialManager.setMaterial(0, 0);
 		method4163();
 		setTextureCombineRgbMode(0);
 		setTextureCombineAlphaMode(0);
@@ -341,7 +341,7 @@ public final class GlRenderer {
 
 	@OriginalMember(owner = "client!tf", name = "i", descriptor = "()V")
 	public static void method4162() {
-		Static27.setMaterial(0, 0);
+		MaterialManager.setMaterial(0, 0);
 		method4163();
 		setTextureId(-1);
 		setLightingEnabled(false);
@@ -474,7 +474,7 @@ public final class GlRenderer {
 	public static void quit() {
 		if (gl != null) {
 			try {
-				Static172.quit(); // MaterialManager
+				MaterialManager.quit(); // MaterialManager
 			} catch (@Pc(5) Throwable local5) {
 			}
 		}
@@ -807,6 +807,6 @@ public final class GlRenderer {
 		gl.glBindTexture(GL2.GL_TEXTURE_2D, anInt5328);
 		gl.glTexImage2D(GL2.GL_TEXTURE_2D, 0, 4, 1, 1, 0, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, IntBuffer.wrap(new int[] { -1 }));
 		Static120.method2401();
-		Static238.method4145();
+		MaterialManager.init();
 	}
 }

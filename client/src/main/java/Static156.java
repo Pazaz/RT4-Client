@@ -91,8 +91,8 @@ public final class Static156 {
 			Static278.setRenderTiles(true);
 			Static248.method3292(arg0, arg1, arg2, null, 0, (byte) 0, arg13, arg14);
 			if (GlRenderer.enabled) {
-				Static119.aBoolean153 = false;
-				Static27.setMaterial(0, 0);
+				MaterialManager.renderingUnderwater = false;
+				MaterialManager.setMaterial(0, 0);
 				Static161.method3066(null);
 				Static120.method2390();
 			}

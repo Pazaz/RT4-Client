@@ -13,8 +13,8 @@ public final class Static147 {
 	@OriginalMember(owner = "client!lh", name = "b", descriptor = "(II)V")
 	public static void method2761(@OriginalArg(0) int arg0) {
 		Static170.anInt3241 = arg0;
-		Static128.method2481(3);
-		Static128.method2481(4);
+		MaterialManager.resetArgument(3);
+		MaterialManager.resetArgument(4);
 	}
 
 	@OriginalMember(owner = "client!lh", name = "a", descriptor = "(Lclient!fg;IIIIIIZ)V")

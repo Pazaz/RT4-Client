@@ -3297,7 +3297,7 @@ public final class Static88 {
 													}
 													if (opcode == 6012) {
 														if (GlRenderer.enabled) {
-															Static27.setMaterial(0, 0);
+															MaterialManager.setMaterial(0, 0);
 														}
 														isp--;
 														Preferences.highDetailLighting = Static254.intStack[isp] == 1;
