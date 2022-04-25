@@ -298,7 +298,7 @@ public final class GlTile extends Node {
 			this.aByteBuffer3.position(28);
 			local257.glTexCoordPointer(2, GL2.GL_FLOAT, local282, this.aByteBuffer3);
 			if (this.aBoolean139) {
-				local257.glClientActiveTexture(Static275.method4607());
+				local257.glClientActiveTexture(UnderwaterMaterialRenderer.method4607());
 				this.aByteBuffer3.position(36);
 				local257.glTexCoordPointer(1, GL2.GL_FLOAT, local282, this.aByteBuffer3);
 				local257.glClientActiveTexture(GL2.GL_TEXTURE0);
@@ -312,7 +312,7 @@ public final class GlTile extends Node {
 			}
 			local257.glTexCoordPointer(2, GL2.GL_FLOAT, local282, 28L);
 			if (this.aBoolean139) {
-				local257.glClientActiveTexture(Static275.method4607());
+				local257.glClientActiveTexture(UnderwaterMaterialRenderer.method4607());
 				local257.glTexCoordPointer(1, GL2.GL_FLOAT, local282, 36L);
 				local257.glClientActiveTexture(GL2.GL_TEXTURE0);
 			}

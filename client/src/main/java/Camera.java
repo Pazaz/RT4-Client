@@ -35,7 +35,7 @@ public class Camera {
         yawTarget = mod(yawTarget, 2047.0d);
         @Pc(33) int local33 = Static81.cameraX >> 7;
         @Pc(37) int local37 = Static111.cameraZ >> 7;
-        @Pc(43) int local43 = Static207.method3685(Static55.level, Static81.cameraX, Static111.cameraZ);
+        @Pc(43) int local43 = SceneGraph.getTileHeight(Static55.level, Static81.cameraX, Static111.cameraZ);
         @Pc(45) int local45 = 0;
         @Pc(64) int local64;
         if (local33 > 3 && local37 > 3 && local33 < 100 && local37 < 100) {

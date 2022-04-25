@@ -31,7 +31,7 @@ public final class Js5MasterIndex {
 	}
 
 	@OriginalMember(owner = "client!al", name = "b", descriptor = "(I)Z")
-	public final boolean method178() {
+	public final boolean isReady() {
 		if (this.aClass3_Sub15_1 != null) {
 			return true;
 		}
@@ -69,7 +69,7 @@ public final class Js5MasterIndex {
 	}
 
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "(IILclient!ge;Lclient!ge;)Lclient!bg;")
-	public final Js5CachedResourceProvider method180(@OriginalArg(1) int arg0, @OriginalArg(2) Cache arg1, @OriginalArg(3) Cache arg2) {
+	public final Js5CachedResourceProvider getResourceProvider(@OriginalArg(1) int arg0, @OriginalArg(2) Cache arg1, @OriginalArg(3) Cache arg2) {
 		return this.method188(arg2, arg0, arg1);
 	}
 

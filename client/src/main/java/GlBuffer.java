@@ -12,7 +12,7 @@ public final class GlBuffer {
 	public ByteBuffer aByteBuffer8;
 
 	@OriginalMember(owner = "client!ql", name = "b", descriptor = "Z")
-	public boolean aBoolean235 = false;
+	public boolean valid = false;
 
 	@OriginalMember(owner = "client!ql", name = "a", descriptor = "I")
 	public int anInt4777 = 0;

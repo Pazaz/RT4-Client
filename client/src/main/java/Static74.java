@@ -9,7 +9,7 @@ public final class Static74 {
 	public static final CRC32 aCRC32_1 = new CRC32();
 
 	@OriginalMember(owner = "client!fn", name = "Z", descriptor = "Lclient!na;")
-	public static final JagString aClass100_461 = Static28.parse(")1 ");
+	public static final JagString aClass100_461 = JagString.parse(")1 ");
 
 	@OriginalMember(owner = "client!fn", name = "a", descriptor = "(ZIIIIIII)V")
 	public static void method1623(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6) {
@@ -74,10 +74,10 @@ public final class Static74 {
 
 	@OriginalMember(owner = "client!fn", name = "c", descriptor = "(II)V")
 	public static void method1626(@OriginalArg(0) int arg0) {
-		if (arg0 == -1 || !Static245.load(arg0)) {
+		if (arg0 == -1 || !InterfaceList.load(arg0)) {
 			return;
 		}
-		@Pc(31) Component[] local31 = Static241.components[arg0];
+		@Pc(31) Component[] local31 = InterfaceList.components[arg0];
 		for (@Pc(33) int local33 = 0; local33 < local31.length; local33++) {
 			@Pc(41) Component local41 = local31[local33];
 			if (local41.anObjectArray3 != null) {

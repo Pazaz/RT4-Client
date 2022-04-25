@@ -5,13 +5,13 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static49 {
 
 	@OriginalMember(owner = "client!dm", name = "j", descriptor = "Lclient!na;")
-	public static final JagString aClass100_351 = Static28.parse(" ");
+	public static final JagString aClass100_351 = JagString.parse(" ");
 
 	@OriginalMember(owner = "client!dm", name = "m", descriptor = "I")
 	public static int anInt1459 = 0;
 
 	@OriginalMember(owner = "client!dm", name = "n", descriptor = "Lclient!na;")
-	public static final JagString PERCENT_SIGN = Static28.parse("(U");
+	public static final JagString PERCENT_SIGN = JagString.parse("(U");
 
 	@OriginalMember(owner = "client!dm", name = "q", descriptor = "I")
 	public static int anInt1462 = 0;
@@ -64,7 +64,7 @@ public final class Static49 {
 							} while (local68 <= 0);
 						} while (local72 >= 103);
 					} while (local68 >= 103);
-					local95 = Static271.get(local17);
+					local95 = LocTypeList.get(local17);
 				} while (local78 == 22 && !Preferences.showGroundDecorations && local95.anInt4429 == 0 && local95.anInt4435 != 1 && !local95.aBoolean206);
 				local39 = true;
 				if (!local95.isReady()) {
@@ -77,8 +77,8 @@ public final class Static49 {
 
 	@OriginalMember(owner = "client!dm", name = "a", descriptor = "(B)V")
 	public static void method1202() {
-		Static57.aClass3_Sub15_Sub1_3.method2233();
-		@Pc(13) int local13 = Static57.aClass3_Sub15_Sub1_3.method2238(8);
+		Protocol.inboundBuffer.method2233();
+		@Pc(13) int local13 = Protocol.inboundBuffer.method2238(8);
 		@Pc(22) int local22;
 		if (Static272.anInt5214 > local13) {
 			for (local22 = local13; local22 < Static272.anInt5214; local22++) {
@@ -92,12 +92,12 @@ public final class Static49 {
 		for (local22 = 0; local22 < local13; local22++) {
 			@Pc(61) int local61 = Static33.anIntArray79[local22];
 			@Pc(65) Npc local65 = Static175.npcs[local61];
-			@Pc(70) int local70 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
+			@Pc(70) int local70 = Protocol.inboundBuffer.method2238(1);
 			if (local70 == 0) {
 				Static33.anIntArray79[Static272.anInt5214++] = local61;
 				local65.anInt3430 = Static83.loop;
 			} else {
-				@Pc(92) int local92 = Static57.aClass3_Sub15_Sub1_3.method2238(2);
+				@Pc(92) int local92 = Protocol.inboundBuffer.method2238(2);
 				if (local92 == 0) {
 					Static33.anIntArray79[Static272.anInt5214++] = local61;
 					local65.anInt3430 = Static83.loop;
@@ -108,25 +108,25 @@ public final class Static49 {
 					if (local92 == 1) {
 						Static33.anIntArray79[Static272.anInt5214++] = local61;
 						local65.anInt3430 = Static83.loop;
-						local139 = Static57.aClass3_Sub15_Sub1_3.method2238(3);
+						local139 = Protocol.inboundBuffer.method2238(3);
 						local65.method2684(1, local139);
-						local149 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
+						local149 = Protocol.inboundBuffer.method2238(1);
 						if (local149 == 1) {
 							Static44.anIntArray106[Static116.anInt2951++] = local61;
 						}
 					} else if (local92 == 2) {
 						Static33.anIntArray79[Static272.anInt5214++] = local61;
 						local65.anInt3430 = Static83.loop;
-						if (Static57.aClass3_Sub15_Sub1_3.method2238(1) == 1) {
-							local139 = Static57.aClass3_Sub15_Sub1_3.method2238(3);
+						if (Protocol.inboundBuffer.method2238(1) == 1) {
+							local139 = Protocol.inboundBuffer.method2238(3);
 							local65.method2684(2, local139);
-							local149 = Static57.aClass3_Sub15_Sub1_3.method2238(3);
+							local149 = Protocol.inboundBuffer.method2238(3);
 							local65.method2684(2, local149);
 						} else {
-							local139 = Static57.aClass3_Sub15_Sub1_3.method2238(3);
+							local139 = Protocol.inboundBuffer.method2238(3);
 							local65.method2684(0, local139);
 						}
-						local139 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
+						local139 = Protocol.inboundBuffer.method2238(1);
 						if (local139 == 1) {
 							Static44.anIntArray106[Static116.anInt2951++] = local61;
 						}
@@ -187,14 +187,4 @@ public final class Static49 {
 		Static133.method4012(Static50.anIntArray132[0], Static50.anIntArray132[2], Static50.anIntArray132[1], Static50.anIntArray132[3]);
 	}
 
-	@OriginalMember(owner = "client!dm", name = "d", descriptor = "(I)V")
-	public static void method1208() {
-		Static224.aBoolean247 = false;
-		Static231.anInt5202 = 0;
-		Static266.reply = -3;
-		Static92.anInt2430 = 0;
-		Static184.loginStep = 1;
-		Static276.anInt5816 = 0;
-		Static204.anInt4765 = -1;
-	}
 }

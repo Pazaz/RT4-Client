@@ -5,9 +5,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static230 {
 
-	@OriginalMember(owner = "client!sj", name = "r", descriptor = "Lclient!ve;")
-	public static Js5 modelsArchive;
-
 	@OriginalMember(owner = "client!sj", name = "D", descriptor = "I")
 	public static int anInt5158;
 
@@ -24,48 +21,15 @@ public final class Static230 {
 	public static boolean dynamicMapRegion = false;
 
 	@OriginalMember(owner = "client!sj", name = "w", descriptor = "Lclient!na;")
-	public static final JagString aClass100_978 = Static28.parse("<)4col>");
+	public static final JagString aClass100_978 = JagString.parse("<)4col>");
 
 	@OriginalMember(owner = "client!sj", name = "H", descriptor = "I")
 	public static int anInt5161 = 0;
 
 	@OriginalMember(owner = "client!sj", name = "c", descriptor = "(I)V")
 	public static void method3947() {
-		Static250.aClass99_33.clear();
-		Static139.aClass99_21.clear();
-	}
-
-	@OriginalMember(owner = "client!sj", name = "a", descriptor = "(Z)V")
-	public static void loop() {
-		try {
-			if (Static14.anInt441 == 1) {
-				@Pc(16) int local16 = Static172.aClass3_Sub3_Sub4_2.method4440();
-				if (local16 > 0 && Static172.aClass3_Sub3_Sub4_2.method4414()) {
-					local16 -= Static57.anInt1757;
-					if (local16 < 0) {
-						local16 = 0;
-					}
-					Static172.aClass3_Sub3_Sub4_2.method4447(local16);
-					return;
-				}
-				Static172.aClass3_Sub3_Sub4_2.method4446();
-				Static172.aClass3_Sub3_Sub4_2.method4426();
-				Static144.aClass3_Sub29_1 = null;
-				Static27.aClass89_1 = null;
-				if (Static172.aClass153_70 == null) {
-					Static14.anInt441 = 0;
-				} else {
-					Static14.anInt441 = 2;
-				}
-			}
-		} catch (@Pc(62) Exception local62) {
-			local62.printStackTrace();
-			Static172.aClass3_Sub3_Sub4_2.method4446();
-			Static172.aClass153_70 = null;
-			Static144.aClass3_Sub29_1 = null;
-			Static14.anInt441 = 0;
-			Static27.aClass89_1 = null;
-		}
+		PlayerAppearance.aClass99_33.clear();
+		PlayerAppearance.aClass99_21.clear();
 	}
 
 	@OriginalMember(owner = "client!sj", name = "a", descriptor = "(BII)I")
@@ -99,12 +63,6 @@ public final class Static230 {
 		}
 	}
 
-	@OriginalMember(owner = "client!sj", name = "a", descriptor = "(Lclient!ve;B)V")
-	public static void init(@OriginalArg(0) Js5 arg0) {
-		Static81.aClass153_34 = arg0;
-		Static165.anInt4043 = Static81.aClass153_34.method4504(16);
-	}
-
 	@OriginalMember(owner = "client!sj", name = "a", descriptor = "(Ljava/lang/String;I)Lclient!na;")
 	public static JagString method3952(@OriginalArg(0) String arg0) {
 		@Pc(14) byte[] local14;
@@ -122,29 +80,6 @@ public final class Static230 {
 			}
 		}
 		return local23;
-	}
-
-	@OriginalMember(owner = "client!sj", name = "b", descriptor = "(II)Lclient!cb;")
-	public static QuickChatPhraseType method3953(@OriginalArg(1) int arg0) {
-		@Pc(10) QuickChatPhraseType local10 = (QuickChatPhraseType) Static249.aClass54_15.get((long) arg0);
-		if (local10 != null) {
-			return local10;
-		}
-		@Pc(27) byte[] local27;
-		if (arg0 < 32768) {
-			local27 = Static238.aClass153_96.getFile(1, arg0);
-		} else {
-			local27 = Static262.aClass153_108.getFile(1, arg0 & 0x7FFF);
-		}
-		local10 = new QuickChatPhraseType();
-		if (local27 != null) {
-			local10.method761(new Buffer(local27));
-		}
-		if (arg0 >= 32768) {
-			local10.method763();
-		}
-		Static249.aClass54_15.put(local10, (long) arg0);
-		return local10;
 	}
 
 	@OriginalMember(owner = "client!sj", name = "a", descriptor = "(ILclient!na;)V")

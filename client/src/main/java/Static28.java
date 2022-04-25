@@ -1,37 +1,10 @@
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
-import org.openrs2.deob.annotation.Pc;
 
 public final class Static28 {
 
 	@OriginalMember(owner = "client!cd", name = "s", descriptor = "I")
 	public static int anInt917;
-
-    @OriginalMember(owner = "client!cd", name = "B", descriptor = "Lclient!ve;")
-	public static Js5 js5Archive25;
-
-	@OriginalMember(owner = "client!cd", name = "a", descriptor = "(Ljava/lang/String;B)Lclient!na;")
-	public static JagString parse(@OriginalArg(0) String arg0) {
-		@Pc(6) byte[] local6 = arg0.getBytes();
-		@Pc(9) int local9 = local6.length;
-		@Pc(13) JagString local13 = new JagString();
-		@Pc(15) int local15 = 0;
-		local13.chars = new byte[local9];
-		while (local9 > local15) {
-			@Pc(29) int local29 = local6[local15++] & 0xFF;
-			if (local29 <= 45 && local29 >= 40) {
-				if (local15 >= local9) {
-					break;
-				}
-				@Pc(51) int local51 = local6[local15++] & 0xFF;
-				local13.chars[local13.length++] = (byte) (local51 + (local29 + -40) * 43 - 48);
-			} else if (local29 != 0) {
-				local13.chars[local13.length++] = (byte) local29;
-			}
-		}
-		local13.method3156();
-		return local13.method3151();
-	}
 
 	@OriginalMember(owner = "client!cd", name = "a", descriptor = "(IIIIZ)V")
 	public static void method792(@OriginalArg(3) int tileVisibility, @OriginalArg(4) boolean hasUnderWaterMap) {

@@ -10,10 +10,7 @@ public final class Static118 {
 	@OriginalMember(owner = "client!jd", name = "i", descriptor = "Lclient!be;")
 	public static Component aClass13_15;
 
-	@OriginalMember(owner = "client!jd", name = "c", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable objectSpriteCache = new SoftLruHashTable(100);
-
-	@OriginalMember(owner = "client!jd", name = "a", descriptor = "(B)I")
+    @OriginalMember(owner = "client!jd", name = "a", descriptor = "(B)I")
 	public static int method2352() {
 		Static232.anInt5212 = 0;
 		return Static119.method2385();
@@ -53,7 +50,7 @@ public final class Static118 {
 							local105 = local15.anInt522;
 						}
 						if (local105 != -1) {
-							@Pc(118) SeqType local118 = Static36.get(local105);
+							@Pc(118) SeqType local118 = SeqTypeList.get(local105);
 							if (local118 != null) {
 								local15.anInt500 += Static178.anInt4247;
 								while (local15.anInt500 > local118.anIntArray474[local15.anInt510]) {
@@ -91,8 +88,4 @@ public final class Static118 {
 		}
 	}
 
-	@OriginalMember(owner = "client!jd", name = "a", descriptor = "(II)I")
-	public static int method2356(@OriginalArg(1) int arg0) {
-		return arg0 & 0x7F;
-	}
 }

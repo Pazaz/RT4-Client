@@ -7,22 +7,16 @@ public final class Static160 {
 	@OriginalMember(owner = "client!mj", name = "u", descriptor = "B")
 	public static byte aByte14;
 
-	@OriginalMember(owner = "client!mj", name = "C", descriptor = "[S")
-	public static short[] aShortArray41;
-
-	@OriginalMember(owner = "client!mj", name = "d", descriptor = "[Lclient!na;")
+    @OriginalMember(owner = "client!mj", name = "d", descriptor = "[Lclient!na;")
 	public static final JagString[] aClass100Array121 = new JagString[8];
 
 	@OriginalMember(owner = "client!mj", name = "g", descriptor = "Lclient!na;")
-	public static final JagString aClass100_761 = Static28.parse("(U3");
+	public static final JagString aClass100_761 = JagString.parse("(U3");
 
 	@OriginalMember(owner = "client!mj", name = "i", descriptor = "I")
 	public static int anInt3902 = 0;
 
-	@OriginalMember(owner = "client!mj", name = "A", descriptor = "J")
-	public static long prevGc = 0L;
-
-	@OriginalMember(owner = "client!mj", name = "a", descriptor = "(IILclient!be;IB)V")
+    @OriginalMember(owner = "client!mj", name = "a", descriptor = "(IILclient!be;IB)V")
 	public static void method3047(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Component arg2, @OriginalArg(3) int arg3) {
 		if (GlRenderer.enabled) {
 			Static46.method1187(arg0, arg1, arg2.anInt445 + arg0, arg2.anInt459 + arg1);

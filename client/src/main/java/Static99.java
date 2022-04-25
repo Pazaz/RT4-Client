@@ -12,7 +12,7 @@ public final class Static99 {
 	public static final LinkedList aClass69_64 = new LinkedList();
 
 	@OriginalMember(owner = "client!hk", name = "db", descriptor = "Lclient!na;")
-	public static final JagString aClass100_529 = Static28.parse("::wm3");
+	public static final JagString aClass100_529 = JagString.parse("::wm3");
 
     @OriginalMember(owner = "client!hk", name = "fb", descriptor = "[I")
 	public static final int[] anIntArray240 = new int[25];

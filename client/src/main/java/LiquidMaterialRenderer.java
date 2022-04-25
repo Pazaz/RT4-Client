@@ -10,7 +10,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!rd")
 public final class LiquidMaterialRenderer implements MaterialRenderer {
 
-	@OriginalMember(owner = "client!rd", name = "a", descriptor = "I")
+    @OriginalMember(owner = "client!rd", name = "d", descriptor = "[F")
+    public static final float[] aFloatArray24 = new float[4];
+    @OriginalMember(owner = "client!rd", name = "a", descriptor = "I")
 	private int anInt4829 = -1;
 
 	@OriginalMember(owner = "client!rd", name = "e", descriptor = "I")
@@ -171,8 +173,8 @@ public final class LiquidMaterialRenderer implements MaterialRenderer {
 		}
 		local5.glActiveTexture(GL2.GL_TEXTURE0);
 		if ((arg0 & 0x40) == 0) {
-			local5.glGetFloatv(GL2.GL_LIGHT_MODEL_AMBIENT, Static212.aFloatArray24, 0);
-			local5.glProgramLocalParameter4fvARB(GL2.GL_VERTEX_PROGRAM_ARB, 66, Static212.aFloatArray24, 0);
+			local5.glGetFloatv(GL2.GL_LIGHT_MODEL_AMBIENT, aFloatArray24, 0);
+			local5.glProgramLocalParameter4fvARB(GL2.GL_VERTEX_PROGRAM_ARB, 66, aFloatArray24, 0);
 		} else {
 			local5.glProgramLocalParameter4fARB(GL2.GL_VERTEX_PROGRAM_ARB, 66, 1.0F, 1.0F, 1.0F, 1.0F);
 		}

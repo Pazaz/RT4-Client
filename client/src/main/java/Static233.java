@@ -25,9 +25,6 @@ public final class Static233 {
 	@OriginalMember(owner = "client!t", name = "G", descriptor = "[Lclient!ek;")
 	public static SoftwareIndexedSprite[] aClass36_Sub1Array1;
 
-    @OriginalMember(owner = "client!t", name = "p", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_31 = new SoftLruHashTable(64);
-
 	@OriginalMember(owner = "client!t", name = "v", descriptor = "[Lclient!na;")
 	public static final JagString[] aClass100Array160 = new JagString[500];
 
@@ -41,18 +38,10 @@ public final class Static233 {
 	public static int anInt5224 = 0;
 
 	@OriginalMember(owner = "client!t", name = "C", descriptor = "Lclient!na;")
-	public static final JagString aClass100_994 = Static28.parse(")3");
+	public static final JagString aClass100_994 = JagString.parse(")3");
 
 	@OriginalMember(owner = "client!t", name = "E", descriptor = "[I")
 	public static final int[] updatedVarcstrs = new int[32];
-
-	@OriginalMember(owner = "client!t", name = "F", descriptor = "I")
-	public static int js5PrevErrors = 0;
-
-	@OriginalMember(owner = "client!t", name = "b", descriptor = "(I)V")
-	public static void method3999() {
-		Static67.aClass99_20.clear();
-	}
 
 	@OriginalMember(owner = "client!t", name = "a", descriptor = "(IIIZIII)V")
 	public static void method4000(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
@@ -70,13 +59,6 @@ public final class Static233 {
 		}
 	}
 
-	@OriginalMember(owner = "client!t", name = "b", descriptor = "(B)V")
-	public static void method4001() {
-		Static93.aClass99_13.method3103();
-		Static125.aClass99_18.method3103();
-		Static262.headModels.method3103();
-	}
-
 	@OriginalMember(owner = "client!t", name = "a", descriptor = "(ZB)V")
 	public static void method4002(@OriginalArg(0) boolean arg0) {
 		@Pc(19) byte local19;
@@ -89,7 +71,7 @@ public final class Static233 {
 			local21 = Static156.locationMapFilesBuffer;
 		}
 		for (@Pc(29) int local29 = 0; local29 < local19; local29++) {
-			Static107.loop();
+			client.audioLoop();
 			for (@Pc(36) int local36 = 0; local36 < 13; local36++) {
 				for (@Pc(43) int local43 = 0; local43 < 13; local43++) {
 					@Pc(56) int local56 = Static187.anIntArrayArrayArray18[local29][local36][local43];
@@ -102,7 +84,7 @@ public final class Static233 {
 							@Pc(99) int local99 = local89 / 8 + (local83 / 8 << 8);
 							for (@Pc(101) int local101 = 0; local101 < Static238.regionBitPacked.length; local101++) {
 								if (Static238.regionBitPacked[local101] == local99 && local21[local101] != null) {
-									Static217.method3771(Static148.collisionMaps, local29, local21[local101], local67, local77, local36 * 8, local43 * 8, arg0, (local83 & 0x7) * 8, (local89 & 0x7) * 8);
+									Static217.method3771(PathFinder.collisionMaps, local29, local21[local101], local67, local77, local36 * 8, local43 * 8, arg0, (local83 & 0x7) * 8, (local89 & 0x7) * 8);
 									break;
 								}
 							}
@@ -119,7 +101,7 @@ public final class Static233 {
 		@Pc(24) int local24 = (int) arg0 >> 20 & 0x3;
 		@Pc(31) int local31 = (int) (arg0 >>> 32) & Integer.MAX_VALUE;
 		if (local12 == 10 || local12 == 11 || local12 == 22) {
-			@Pc(46) LocType local46 = Static271.get(local31);
+			@Pc(46) LocType local46 = LocTypeList.get(local31);
 			@Pc(62) int local62;
 			@Pc(59) int local59;
 			if (local24 == 0 || local24 == 2) {

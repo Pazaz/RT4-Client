@@ -10,11 +10,8 @@ public final class Static254 {
 	@OriginalMember(owner = "client!uj", name = "H", descriptor = "I")
 	public static int anInt5559;
 
-	@OriginalMember(owner = "client!uj", name = "J", descriptor = "Lclient!ve;")
-	public static Js5 js5Archive24;
-
-	@OriginalMember(owner = "client!uj", name = "s", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1061 = Static28.parse("null");
+    @OriginalMember(owner = "client!uj", name = "s", descriptor = "Lclient!na;")
+	public static final JagString aClass100_1061 = JagString.parse("null");
 
 	@OriginalMember(owner = "client!uj", name = "t", descriptor = "[I")
 	public static final int[] intStack = new int[1000];
@@ -206,10 +203,10 @@ public final class Static254 {
 				local7 = 32767;
 			}
 			@Pc(15) byte[] local15 = new byte[local7];
-			arg0.offset += Static62.aClass44_1.method1552(0, local7, local15, arg0.data, arg0.offset);
+			arg0.offset += WordPack.codec.method1552(0, local7, local15, arg0.data, arg0.offset);
 			return Static10.decodeString(local15, local7, 0);
 		} catch (@Pc(47) Exception local47) {
-			return Static267.aClass100_1087;
+			return WordPack.CABBAGE;
 		}
 	}
 }

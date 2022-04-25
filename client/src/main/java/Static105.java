@@ -20,10 +20,10 @@ public final class Static105 {
 	public static final int[] anIntArray256 = new int[2048];
 
 	@OriginalMember(owner = "client!ib", name = "g", descriptor = "Lclient!na;")
-	public static final JagString aClass100_559 = Static28.parse("<col=ffff00>");
+	public static final JagString aClass100_559 = JagString.parse("<col=ffff00>");
 
 	@OriginalMember(owner = "client!ib", name = "k", descriptor = "Lclient!na;")
-	public static final JagString aClass100_561 = Static28.parse(" )2> <col=ffffff>");
+	public static final JagString aClass100_561 = JagString.parse(" )2> <col=ffffff>");
 
 	@OriginalMember(owner = "client!ib", name = "l", descriptor = "I")
 	public static int anInt2863 = 0;

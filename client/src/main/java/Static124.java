@@ -10,23 +10,12 @@ public final class Static124 {
 	@OriginalMember(owner = "client!jk", name = "y", descriptor = "Z")
 	public static boolean aBoolean156 = false;
 
-	@OriginalMember(owner = "client!jk", name = "z", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_17 = new SoftLruHashTable(50);
-
 	@OriginalMember(owner = "client!jk", name = "F", descriptor = "Lclient!na;")
-	public static final JagString aClass100_596 = Static28.parse("::tween");
+	public static final JagString aClass100_596 = JagString.parse("::tween");
 
-	@OriginalMember(owner = "client!jk", name = "G", descriptor = "Z")
-	public static boolean aBoolean157 = false;
-
-	@OriginalMember(owner = "client!jk", name = "e", descriptor = "(B)V")
-	public static void method2433() {
-		Static262.aClass99_34.clear();
-	}
-
-	@OriginalMember(owner = "client!jk", name = "a", descriptor = "(ILclient!na;)Lclient!bn;")
+    @OriginalMember(owner = "client!jk", name = "a", descriptor = "(ILclient!na;)Lclient!bn;")
 	public static Map method2434(@OriginalArg(1) JagString arg0) {
-		for (@Pc(15) Map local15 = (Map) Static228.aClass69_120.method2289(); local15 != null; local15 = (Map) Static228.aClass69_120.method2288()) {
+		for (@Pc(15) Map local15 = (Map) MapList.aClass69_120.method2289(); local15 != null; local15 = (Map) MapList.aClass69_120.method2288()) {
 			if (local15.group.strEquals(arg0)) {
 				return local15;
 			}

@@ -8,19 +8,12 @@ public final class Static163 {
 	public static byte[][][] aByteArrayArrayArray11;
 
 	@OriginalMember(owner = "client!n", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_767 = Static28.parse(")2");
+	public static final JagString aClass100_767 = JagString.parse(")2");
 
 	@OriginalMember(owner = "client!n", name = "a", descriptor = "(II)V")
 	public static void method3096(@OriginalArg(0) int arg0) {
 		@Pc(8) DelayedStateChange local8 = Static238.method4143(3, arg0);
 		local8.pushClient();
-	}
-
-	@OriginalMember(owner = "client!n", name = "a", descriptor = "(B)V")
-	public static void method3097() {
-		Static240.aFontMetrics1 = null;
-		Static222.aFont1 = null;
-		Static149.anImage3 = null;
 	}
 
 	@OriginalMember(owner = "client!n", name = "a", descriptor = "(IIIIII)V")

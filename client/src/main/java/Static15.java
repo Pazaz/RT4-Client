@@ -8,13 +8,10 @@ public final class Static15 {
 	public static float aFloat4;
 
 	@OriginalMember(owner = "client!be", name = "ib", descriptor = "Lclient!na;")
-	public static final JagString EVENT_OPBASE = Static28.parse("event_opbase");
+	public static final JagString EVENT_OPBASE = JagString.parse("event_opbase");
 
 	@OriginalMember(owner = "client!be", name = "ac", descriptor = "Lclient!na;")
 	public static JagString aClass100_87 = null;
-
-	@OriginalMember(owner = "client!be", name = "kc", descriptor = "J")
-	public static long aLong18 = 0L;
 
 	@OriginalMember(owner = "client!be", name = "Ec", descriptor = "I")
 	public static int anInt506 = -1;

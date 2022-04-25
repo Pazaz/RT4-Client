@@ -24,12 +24,7 @@ public final class Static3 {
 		}
 	}
 
-	@OriginalMember(owner = "client!ab", name = "b", descriptor = "(B)V")
-	public static void method4657() {
-		Static232.aClass99_30.method3103();
-	}
-
-    @OriginalMember(owner = "client!ab", name = "c", descriptor = "(B)[Lclient!od;")
+	@OriginalMember(owner = "client!ab", name = "c", descriptor = "(B)[Lclient!od;")
 	public static Class114[] method4660() {
 		if (Static105.aClass114Array1 == null) {
 			@Pc(16) Class114[] local16 = Static197.method3558(GameShell.signLink);
@@ -63,13 +58,4 @@ public final class Static3 {
 		return Static105.aClass114Array1;
 	}
 
-	@OriginalMember(owner = "client!ab", name = "a", descriptor = "(ZLclient!ve;Lclient!ve;Lclient!ve;Lclient!ve;)V")
-	public static void init(@OriginalArg(1) Js5 arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) Js5 arg2, @OriginalArg(4) Js5 arg3) {
-		Static23.aClass153_12 = arg1;
-		Static167.aClass153_64 = arg0;
-		Static202.aClass153_84 = arg2;
-		Static203.aClass153_85 = arg3;
-		Static241.components = new Component[Static202.aClass153_84.method4483()][];
-		Static223.aBooleanArray115 = new boolean[Static202.aClass153_84.method4483()];
-	}
 }

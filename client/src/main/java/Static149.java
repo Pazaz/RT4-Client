@@ -9,9 +9,6 @@ public final class Static149 {
 	@OriginalMember(owner = "client!lj", name = "B", descriptor = "I")
 	public static int anInt3555;
 
-	@OriginalMember(owner = "client!lj", name = "p", descriptor = "Lclient!gn;")
-	public static final LruHashTable aClass54_10 = new LruHashTable(128);
-
 	@OriginalMember(owner = "client!lj", name = "w", descriptor = "I")
 	public static int anInt3554 = 0;
 

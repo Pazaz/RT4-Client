@@ -7,6 +7,8 @@ public final class MouseRecorder implements Runnable {
 
     @OriginalMember(owner = "client!od", name = "f", descriptor = "Lclient!jd;")
     public static MouseRecorder instance;
+    @OriginalMember(owner = "client!tm", name = "e", descriptor = "Z")
+    public static boolean enabled = false;
     @OriginalMember(owner = "client!jd", name = "e", descriptor = "Z")
 	public boolean running = true;
 

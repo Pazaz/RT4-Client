@@ -8,7 +8,39 @@ public final class PlayerAppearance {
 
     @OriginalMember(owner = "client!bj", name = "t", descriptor = "[S")
     public static final short[] aShortArray5 = new short[] { -4160, -4163, -8256, -8259, 22461 };
-    @OriginalMember(owner = "client!hh", name = "e", descriptor = "I")
+    @OriginalMember(owner = "client!wd", name = "d", descriptor = "[I")
+    public static final int[] anIntArray451 = new int[] { 8, 11, 4, 6, 9, 7, 10, 0 };
+    @OriginalMember(owner = "client!r", name = "b", descriptor = "[Lclient!tk;")
+    public static final SeqType[] aClass144Array2 = new SeqType[14];
+	@OriginalMember(owner = "client!ri", name = "b", descriptor = "[I")
+	public static final int[] anIntArray187 = new int[14];
+	@OriginalMember(owner = "client!uf", name = "j", descriptor = "Lclient!n;")
+	public static final SoftLruHashTable aClass99_33 = new SoftLruHashTable(260);
+	@OriginalMember(owner = "client!l", name = "b", descriptor = "Lclient!n;")
+	public static final SoftLruHashTable aClass99_21 = new SoftLruHashTable(5);
+	@OriginalMember(owner = "client!aa", name = "h", descriptor = "[S")
+	public static final short[] aShortArray1 = new short[] { 960, 957, -21568, -21571, 22464 };
+	@OriginalMember(owner = "client!ci", name = "u", descriptor = "[[S")
+	public static final short[][] aShortArrayArray1 = new short[][] { { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24, 44, 64, 84, 104, 304, 678, 698, 550, 934, 954, 6448, 6946, 6966, 2352, 2726, 2746, 10544, 10918, 10938, 10304, 10550, 10570, 14640, 15014, 15034, 19760, 20134, 20154, -29392, -29018, -28998, 31024, 31270, 31290, -24272, -23898, -23878, -19152, -18778, -18758, -14032, -13658, -13638, -6864, -6490, -6470, 516, 536, 6788, 6808, 11012, 11032, 14980, 15000, 21124, 21144, -28924, -28904, -22012, -21992, -12924, -12904 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10339, 10574, 10425, 10398, 10345, 7512, 8507, 7378, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24, 44, 64, 84, 104, 304, 678, 698, 550, 934, 954, 6448, 6946, 6966, 2352, 2726, 2746, 10544, 10918, 10938, 10304, 10550, 10570, 14640, 15014, 15034, 19760, 20134, 20154, -29392, -29018, -28998, 31024, 31270, 31290, -24272, -23898, -23878, -19152, -18778, -18758, -14032, -13658, -13638, -6864, -6490, -6470, 516, 536, 6788, 6808, 11012, 11032, 14980, 15000, 21124, 21144, -28924, -28904, -22012, -21992, -12924, -12904 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13753, 13737, 13719, 13883, 13863, 13974, 19643, 18601, 16532, 23993, 25121, 24980, 26944, 26921, 24854, 27191, 27171, 26130, 26941, 28696, 30100, 12477, 10407, 10388, 10685, 10665, 10646, 6711, 6693, 6674, 6965, 7073, 7056, 2361, 4387, 3346, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 24, 44, 64, 84, 104, 304, 678, 698, 550, 934, 954, 6448, 6946, 6966, 2352, 2726, 2746, 10544, 10918, 10938, 10304, 10550, 10570, 14640, 15014, 15034, 19760, 20134, 20154, -29392, -29018, -28998, 31024, 31270, 31290, -24272, -23898, -23878, -19152, -18778, -18758, -14032, -13658, -13638, -6864, -6490, -6470, 516, 536, 6788, 6808, 11012, 11032, 14980, 15000, 21124, 21144, -28924, -28904, -22012, -21992, -12924, -12904 } };
+	@OriginalMember(owner = "client!q", name = "d", descriptor = "[[S")
+	public static final short[][] aShortArrayArray4 = new short[][] { { 10, 30, 50, 70, 90, 110, 310, 684, 704, 556, 940, 960, 6454, 6952, 6972, 2358, 2732, 2752, 10550, 10924, 10944, 10310, 10556, 10576, 14646, 15020, 15040, 19766, 20140, 20160, -29386, -29012, -28992, 31030, 31276, 31296, -24266, -23892, -23872, -19146, -18772, -18752, -14026, -13652, -13632, -6858, -6484, -6464, 522, 542, 6794, 6814, 11018, 11038, 14986, 15006, 21130, 21150, -28918, -28898, -22006, -21986, -12918, -12898, 10, 30, 50, 70, 90, 110, 310, 684, 704, 556, 940, 960, 6454, 6952, 6972, 2358, 2732, 2752, 10550, 10924, 10944, 10310, 10556, 10576, 14646, 15020, 15040, 19766, 20140, 20160, -29386, -29012, -28992, 31030, 31276, 31296, -24266, -23892, -23872, -19146, -18772, -18752, -14026, -13652, -13632, -6858, -6484, -6464, 522, 542, 6794, 6814, 11018, 11038, 14986, 15006, 21130, 21150, -28918, -28898, -22006, -21986, -12918, -12898, 10, 30, 50, 70, 90, 110, 310, 684, 704, 556, 940, 960, 6454, 6952, 6972, 2358, 2732, 2752, 10550, 10924, 10944, 10310, 10556, 10576, 14646, 15020, 15040, 19766, 20140, 20160, -29386, -29012, -28992, 31030, 31276, 31296, -24266, -23892, -23872, -19146, -18772, -18752, -14026, -13652, -13632, -6858, -6484, -6464, 522, 542, 6794, 6814, 11018, 11038, 14986, 15006, 21130, 21150, -28918, -28898, -22006, -21986, -12918, -12898, 10, 30, 50, 70, 90, 110, 310, 684, 704, 556, 940, 960, 6454, 6952, 6972, 2358, 2732, 2752, 10550, 10924, 10944, 10310, 10556, 10576, 14646, 15020, 15040, 19766, 20140, 20160, -29386, -29012, -28992, 31030, 31276, 31296, -24266, -23892, -23872, -19146, -18772, -18752, -14026, -13652, -13632, -6858, -6484, -6464, 522, 542, 6794, 6814, 11018, 11038, 14986, 15006, 21130, 21150, -28918, -28898, -22006, -21986, -12918, -12898 }, { 10, 30, 50, 70, 90, 110, 310, 684, 704, 556, 940, 960, 6454, 6952, 6972, 2358, 2732, 2752, 10550, 10924, 10944, 10310, 10556, 10576, 14646, 15020, 15040, 19766, 20140, 20160, -29386, -29012, -28992, 31030, 31276, 31296, -24266, -23892, -23872, -19146, -18772, -18752, -14026, -13652, -13632, -6858, -6484, -6464, 522, 542, 6794, 6814, 11018, 11038, 14986, 15006, 21130, 21150, -28918, -28898, -22006, -21986, -12918, -12898, 10, 30, 50, 70, 90, 110, 310, 684, 704, 556, 940, 960, 6454, 6952, 6972, 2358, 2732, 2752, 10550, 10924, 10944, 10310, 10556, 10576, 14646, 15020, 15040, 19766, 20140, 20160, -29386, -29012, -28992, 31030, 31276, 31296, -24266, -23892, -23872, -19146, -18772, -18752, -14026, -13652, -13632, -6858, -6484, -6464, 522, 542, 6794, 6814, 11018, 11038, 14986, 15006, 21130, 21150, -28918, -28898, -22006, -21986, -12918, -12898, 10, 30, 50, 70, 90, 110, 310, 684, 704, 556, 940, 960, 6454, 6952, 6972, 2358, 2732, 2752, 10550, 10924, 10944, 10310, 10556, 10576, 14646, 15020, 15040, 19766, 20140, 20160, -29386, -29012, -28992, 31030, 31276, 31296, -24266, -23892, -23872, -19146, -18772, -18752, -14026, -13652, -13632, -6858, -6484, -6464, 522, 542, 6794, 6814, 11018, 11038, 14986, 15006, 21130, 21150, -28918, -28898, -22006, -21986, -12918, -12898, 10347, 10582, 10429, 10407, 10359, 8414, 9540, 10456, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 10, 30, 50, 70, 90, 110, 310, 684, 704, 556, 940, 960, 6454, 6952, 6972, 2358, 2732, 2752, 10550, 10924, 10944, 10310, 10556, 10576, 14646, 15020, 15040, 19766, 20140, 20160, -29386, -29012, -28992, 31030, 31276, 31296, -24266, -23892, -23872, -19146, -18772, -18752, -14026, -13652, -13632, -6858, -6484, -6464, 522, 542, 6794, 6814, 11018, 11038, 14986, 15006, 21130, 21150, -28918, -28898, -22006, -21986, -12918, -12898, 10, 30, 50, 70, 90, 110, 310, 684, 704, 556, 940, 960, 6454, 6952, 6972, 2358, 2732, 2752, 10550, 10924, 10944, 10310, 10556, 10576, 14646, 15020, 15040, 19766, 20140, 20160, -29386, -29012, -28992, 31030, 31276, 31296, -24266, -23892, -23872, -19146, -18772, -18752, -14026, -13652, -13632, -6858, -6484, -6464, 522, 542, 6794, 6814, 11018, 11038, 14986, 15006, 21130, 21150, -28918, -28898, -22006, -21986, -12918, -12898, 10, 30, 50, 70, 90, 110, 310, 684, 704, 556, 940, 960, 6454, 6952, 6972, 2358, 2732, 2752, 10550, 10924, 10944, 10310, 10556, 10576, 14646, 15020, 15040, 19766, 20140, 20160, -29386, -29012, -28992, 31030, 31276, 31296, -24266, -23892, -23872, -19146, -18772, -18752, -14026, -13652, -13632, -6858, -6484, -6464, 522, 542, 6794, 6814, 11018, 11038, 14986, 15006, 21130, 21150, -28918, -28898, -22006, -21986, -12918, -12898, 10, 30, 50, 70, 90, 110, 310, 684, 704, 556, 940, 960, 6454, 6952, 6972, 2358, 2732, 2752, 10550, 10924, 10944, 10310, 10556, 10576, 14646, 15020, 15040, 19766, 20140, 20160, -29386, -29012, -28992, 31030, 31276, 31296, -24266, -23892, -23872, -19146, -18772, -18752, -14026, -13652, -13632, -6858, -6484, -6464, 522, 542, 6794, 6814, 11018, 11038, 14986, 15006, 21130, 21150, -28918, -28898, -22006, -21986, -12918, -12898 }, { 4300, 3294, 3303, 3264, 4506, 4382, 4387, 5293, 7622, 7384, 8412, 7496, 86, 123, 111, 99, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 30, 50, 70, 90, 110, 310, 684, 704, 556, 940, 960, 6454, 6952, 6972, 2358, 2732, 2752, 10550, 10924, 10944, 10310, 10556, 10576, 14646, 15020, 15040, 19766, 20140, 20160, -29386, -29012, -28992, 31030, 31276, 31296, -24266, -23892, -23872, -19146, -18772, -18752, -14026, -13652, -13632, -6858, -6484, -6464, 522, 542, 6794, 6814, 11018, 11038, 14986, 15006, 21130, 21150, -28918, -28898, -22006, -21986, -12918, -12898, 10, 30, 50, 70, 90, 110, 310, 684, 704, 556, 940, 960, 6454, 6952, 6972, 2358, 2732, 2752, 10550, 10924, 10944, 10310, 10556, 10576, 14646, 15020, 15040, 19766, 20140, 20160, -29386, -29012, -28992, 31030, 31276, 31296, -24266, -23892, -23872, -19146, -18772, -18752, -14026, -13652, -13632, -6858, -6484, -6464, 522, 542, 6794, 6814, 11018, 11038, 14986, 15006, 21130, 21150, -28918, -28898, -22006, -21986, -12918, -12898, 13766, 13745, 13726, 13890, 13743, 13852, 17602, 18605, 21660, 24000, 24997, 24088, 27972, 25903, 26904, 27193, 27175, 27156, 30020, 28975, 29976, 12482, 13485, 10392, 10692, 10669, 10776, 6717, 6695, 7830, 6971, 6951, 5910, 3389, 3369, 3356, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 10, 30, 50, 70, 90, 110, 310, 684, 704, 556, 940, 960, 6454, 6952, 6972, 2358, 2732, 2752, 10550, 10924, 10944, 10310, 10556, 10576, 14646, 15020, 15040, 19766, 20140, 20160, -29386, -29012, -28992, 31030, 31276, 31296, -24266, -23892, -23872, -19146, -18772, -18752, -14026, -13652, -13632, -6858, -6484, -6464, 522, 542, 6794, 6814, 11018, 11038, 14986, 15006, 21130, 21150, -28918, -28898, -22006, -21986, -12918, -12898, 10, 30, 50, 70, 90, 110, 310, 684, 704, 556, 940, 960, 6454, 6952, 6972, 2358, 2732, 2752, 10550, 10924, 10944, 10310, 10556, 10576, 14646, 15020, 15040, 19766, 20140, 20160, -29386, -29012, -28992, 31030, 31276, 31296, -24266, -23892, -23872, -19146, -18772, -18752, -14026, -13652, -13632, -6858, -6484, -6464, 522, 542, 6794, 6814, 11018, 11038, 14986, 15006, 21130, 21150, -28918, -28898, -22006, -21986, -12918, -12898, 10, 30, 50, 70, 90, 110, 310, 684, 704, 556, 940, 960, 6454, 6952, 6972, 2358, 2732, 2752, 10550, 10924, 10944, 10310, 10556, 10576, 14646, 15020, 15040, 19766, 20140, 20160, -29386, -29012, -28992, 31030, 31276, 31296, -24266, -23892, -23872, -19146, -18772, -18752, -14026, -13652, -13632, -6858, -6484, -6464, 522, 542, 6794, 6814, 11018, 11038, 14986, 15006, 21130, 21150, -28918, -28898, -22006, -21986, -12918, -12898, 10, 30, 50, 70, 90, 110, 310, 684, 704, 556, 940, 960, 6454, 6952, 6972, 2358, 2732, 2752, 10550, 10924, 10944, 10310, 10556, 10576, 14646, 15020, 15040, 19766, 20140, 20160, -29386, -29012, -28992, 31030, 31276, 31296, -24266, -23892, -23872, -19146, -18772, -18752, -14026, -13652, -13632, -6858, -6484, -6464, 522, 542, 6794, 6814, 11018, 11038, 14986, 15006, 21130, 21150, -28918, -28898, -22006, -21986, -12918, -12898 } };
+	@OriginalMember(owner = "client!md", name = "V", descriptor = "[[S")
+	public static final short[][] aShortArrayArray6 = new short[][] { { 6798, 107, 10283, 16, 4797, 7744, 5799, 4634, -31839, 22433, 2983, -11343, 8, 5281, 10438, 3650, -27322, -21845, 200, 571, 908, 21830, 28946, -15701, -14010 }, { 8741, 12, -1506, -22374, 7735, 8404, 1701, -27106, 24094, 10153, -8915, 4783, 1341, 16578, -30533, 25239, 8, 5281, 10438, 3650, -27322, -21845, 200, 571, 908, 21830, 28946, -15701, -14010 }, { 25238, 8742, 12, -1506, -22374, 7735, 8404, 1701, -27106, 24094, 10153, -8915, 4783, 1341, 16578, -30533, 8, 5281, 10438, 3650, -27322, -21845, 200, 571, 908, 21830, 28946, -15701, -14010 }, { 4626, 11146, 6439, 12, 4758, 10270 }, { 4550, 4537, 5681, 5673, 5790, 6806, 8076, 4574 } };
+	@OriginalMember(owner = "client!dg", name = "c", descriptor = "[[S")
+	public static final short[][] aShortArrayArray5 = new short[][] { { 6554, 115, 10304, 28, 5702, 7756, 5681, 4510, -31835, 22437, 2859, -11339, 16, 5157, 10446, 3658, -27314, -21965, 472, 580, 784, 21966, 28950, -15697, -14002 }, { 9104, 10275, 7595, 3610, 7975, 8526, 918, -26734, 24466, 10145, -6882, 5027, 1457, 16565, -30545, 25486, 24, 5392, 10429, 3673, -27335, -21957, 192, 687, 412, 21821, 28835, -15460, -14019 }, new short[0], new short[0], new short[0] };
+	@OriginalMember(owner = "client!pk", name = "V", descriptor = "[S")
+	public static final short[] aShortArray64 = new short[] { -10304, 9104, -1, -1, -1 };
+	@OriginalMember(owner = "client!vd", name = "B", descriptor = "[S")
+	public static final short[] aShortArray71 = new short[] { 6798, 8741, 25238, 4626, 4550 };
+	@OriginalMember(owner = "client!cj", name = "e", descriptor = "[[S")
+    public static short[][] aShortArrayArray2;
+	@OriginalMember(owner = "client!nj", name = "m", descriptor = "[[S")
+	public static short[][] aShortArrayArray7;
+	@OriginalMember(owner = "client!qe", name = "r", descriptor = "[S")
+	public static short[] aShortArray65;
+	@OriginalMember(owner = "client!mj", name = "C", descriptor = "[S")
+	public static short[] aShortArray41;
+	@OriginalMember(owner = "client!hh", name = "e", descriptor = "I")
 	public int anInt2492;
 
 	@OriginalMember(owner = "client!hh", name = "i", descriptor = "J")
@@ -32,40 +64,46 @@ public final class PlayerAppearance {
 	@OriginalMember(owner = "client!hh", name = "x", descriptor = "Z")
 	public boolean aBoolean141;
 
-	@OriginalMember(owner = "client!hh", name = "a", descriptor = "(IIIILclient!tk;III)Lclient!ak;")
+    @OriginalMember(owner = "client!wk", name = "b", descriptor = "(II)V")
+    public static void clean() {
+        aClass99_33.clean(5);
+        aClass99_21.clean(5);
+    }
+
+    @OriginalMember(owner = "client!hh", name = "a", descriptor = "(IIIILclient!tk;III)Lclient!ak;")
 	public final Model method1946(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) SeqType arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6) {
 		@Pc(24) long local24 = (long) arg2 | (long) (arg6 << 16) | (long) arg1 << 32;
-		@Pc(30) Model local30 = (Model) Static139.aClass99_21.get(local24);
+		@Pc(30) Model local30 = (Model) aClass99_21.get(local24);
 		if (local30 == null) {
 			@Pc(36) RawModel[] local36 = new RawModel[3];
 			@Pc(38) int local38 = 0;
-			if (!Static81.method1752(arg2).isHeadModelReady() || !Static81.method1752(arg6).isHeadModelReady() || !Static81.method1752(arg1).isHeadModelReady()) {
+			if (!IdkTypeList.get(arg2).isHeadModelReady() || !IdkTypeList.get(arg6).isHeadModelReady() || !IdkTypeList.get(arg1).isHeadModelReady()) {
 				return null;
 			}
-			@Pc(66) RawModel local66 = Static81.method1752(arg2).getHeadModel();
+			@Pc(66) RawModel local66 = IdkTypeList.get(arg2).getHeadModel();
 			if (local66 != null) {
 				local38++;
 				local36[0] = local66;
 			}
-			local66 = Static81.method1752(arg6).getHeadModel();
+			local66 = IdkTypeList.get(arg6).getHeadModel();
 			if (local66 != null) {
 				local36[local38++] = local66;
 			}
-			local66 = Static81.method1752(arg1).getHeadModel();
+			local66 = IdkTypeList.get(arg1).getHeadModel();
 			if (local66 != null) {
 				local36[local38++] = local66;
 			}
 			local66 = new RawModel(local36, local38);
 			for (@Pc(110) int local110 = 0; local110 < 5; local110++) {
-				if (this.anIntArray236[local110] < Static33.aShortArrayArray2[local110].length) {
-					local66.recolor(Static200.aShortArray65[local110], Static33.aShortArrayArray2[local110][this.anIntArray236[local110]]);
+				if (this.anIntArray236[local110] < aShortArrayArray2[local110].length) {
+					local66.recolor(aShortArray65[local110], aShortArrayArray2[local110][this.anIntArray236[local110]]);
 				}
-				if (Static172.aShortArrayArray7[local110].length > this.anIntArray236[local110]) {
-					local66.recolor(Static160.aShortArray41[local110], Static172.aShortArrayArray7[local110][this.anIntArray236[local110]]);
+				if (aShortArrayArray7[local110].length > this.anIntArray236[local110]) {
+					local66.recolor(aShortArray41[local110], aShortArrayArray7[local110][this.anIntArray236[local110]]);
 				}
 			}
 			local30 = local66.createModel(64, 768, -50, -10, -50);
-			Static139.aClass99_21.put(local30, local24);
+			aClass99_21.put(local30, local24);
 		}
 		if (arg4 != null) {
 			local30 = arg4.method4215(local30, arg0, arg3, arg5);
@@ -92,7 +130,7 @@ public final class PlayerAppearance {
 		}
 		this.aLong88 = local13[(int) (((long) (this.aBoolean141 ? 1 : 0) ^ this.aLong88) & 0xFFL)] ^ this.aLong88 >>> 8;
 		if (local8 != 0L && this.aLong88 != local8) {
-			Static250.aClass99_33.method3098(local8);
+			aClass99_33.method3098(local8);
 		}
 	}
 
@@ -111,10 +149,10 @@ public final class PlayerAppearance {
 		if (arg3 == null) {
 			arg3 = new int[12];
 			for (@Pc(24) int local24 = 0; local24 < 8; local24++) {
-				for (@Pc(31) int local31 = 0; local31 < Static53.anInt1716; local31++) {
-					@Pc(38) IdkType local38 = Static81.method1752(local31);
+				for (@Pc(31) int local31 = 0; local31 < IdkTypeList.anInt1716; local31++) {
+					@Pc(38) IdkType local38 = IdkTypeList.get(local31);
 					if (local38 != null && !local38.aBoolean85 && local38.feature == (arg2 ? Static153.anIntArray351[local24] : Static204.anIntArray425[local24])) {
-						arg3[Static272.anIntArray451[local24]] = Integer.MIN_VALUE | local31;
+						arg3[anIntArray451[local24]] = Integer.MIN_VALUE | local31;
 						break;
 					}
 				}
@@ -135,13 +173,13 @@ public final class PlayerAppearance {
 
 	@OriginalMember(owner = "client!hh", name = "b", descriptor = "(I)I")
 	public final int method1952() {
-		return this.anInt2492 == -1 ? (this.anIntArray233[8] << 10) + ((this.anIntArray236[0] << 25) + (this.anIntArray236[4] << 20)) + (this.anIntArray233[0] << 15) + (this.anIntArray233[11] << 5) + this.anIntArray233[1] : Static214.get(this.anInt2492).id + 305419896;
+		return this.anInt2492 == -1 ? (this.anIntArray233[8] << 10) + ((this.anIntArray236[0] << 25) + (this.anIntArray236[4] << 20)) + (this.anIntArray233[0] << 15) + (this.anIntArray233[11] << 5) + this.anIntArray233[1] : NpcTypeList.get(this.anInt2492).id + 305419896;
 	}
 
 	@OriginalMember(owner = "client!hh", name = "a", descriptor = "(III)V")
 	public final void method1953(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		@Pc(7) int local7 = Static272.anIntArray451[arg0];
-		if (0 != this.anIntArray233[local7] && Static81.method1752(arg1) != null) {
+		@Pc(7) int local7 = anIntArray451[arg0];
+		if (0 != this.anIntArray233[local7] && IdkTypeList.get(arg1) != null) {
 			this.anIntArray233[local7] = arg1 | Integer.MIN_VALUE;
 			this.method1947();
 		}
@@ -150,7 +188,7 @@ public final class PlayerAppearance {
 	@OriginalMember(owner = "client!hh", name = "a", descriptor = "([Lclient!ub;ILclient!tk;Lclient!tk;IIIIZII)Lclient!ak;")
 	public final Model method1954(@OriginalArg(0) Class147[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) SeqType arg2, @OriginalArg(3) SeqType arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(7) int arg6, @OriginalArg(9) int arg7, @OriginalArg(10) int arg8) {
 		if (this.anInt2492 != -1) {
-			return Static214.get(this.anInt2492).getBodyModel(arg0, arg5, arg8, arg1, arg6, arg7, arg2, arg4, arg3);
+			return NpcTypeList.get(this.anInt2492).getBodyModel(arg0, arg5, arg8, arg1, arg6, arg7, arg2, arg4, arg3);
 		}
 		@Pc(38) int[] local38 = this.anIntArray233;
 		@Pc(41) long local41 = this.aLong88;
@@ -178,7 +216,7 @@ public final class PlayerAppearance {
 				}
 			}
 		}
-		@Pc(154) Model local154 = (Model) Static250.aClass99_33.get(local41);
+		@Pc(154) Model local154 = (Model) aClass99_33.get(local41);
 		@Pc(158) boolean local158;
 		@Pc(353) int local353;
 		@Pc(360) int local360;
@@ -197,16 +235,16 @@ public final class PlayerAppearance {
 			for (@Pc(160) int local160 = 0; local160 < 12; local160++) {
 				local169 = local38[local160];
 				if ((local169 & 0x40000000) == 0) {
-					if ((local169 & Integer.MIN_VALUE) != 0 && !Static81.method1752(local169 & 0x3FFFFFFF).isBodyModelReady()) {
+					if ((local169 & Integer.MIN_VALUE) != 0 && !IdkTypeList.get(local169 & 0x3FFFFFFF).isBodyModelReady()) {
 						local158 = true;
 					}
-				} else if (!Static71.get(local169 & 0x3FFFFFFF).method1822(this.aBoolean141)) {
+				} else if (!ObjTypeList.get(local169 & 0x3FFFFFFF).method1822(this.aBoolean141)) {
 					local158 = true;
 				}
 			}
 			if (local158) {
 				if (this.aLong87 != -1L) {
-					local154 = (Model) Static250.aClass99_33.get(this.aLong87);
+					local154 = (Model) aClass99_33.get(this.aLong87);
 				}
 				if (local154 == null) {
 					return null;
@@ -219,12 +257,12 @@ public final class PlayerAppearance {
 					local250 = local38[local169];
 					@Pc(272) RawModel local272;
 					if ((local250 & 0x40000000) != 0) {
-						local272 = Static71.get(local250 & 0x3FFFFFFF).getBodyModel(this.aBoolean141);
+						local272 = ObjTypeList.get(local250 & 0x3FFFFFFF).getBodyModel(this.aBoolean141);
 						if (local272 != null) {
 							local239[local169] = local272;
 						}
 					} else if ((Integer.MIN_VALUE & local250) != 0) {
-						local272 = Static81.method1752(local250 & 0x3FFFFFFF).getBodyModel();
+						local272 = IdkTypeList.get(local250 & 0x3FFFFFFF).getBodyModel();
 						if (local272 != null) {
 							local239[local169] = local272;
 						}
@@ -232,7 +270,7 @@ public final class PlayerAppearance {
 				}
 				@Pc(303) BasType local303 = null;
 				if (this.anInt2497 != -1) {
-					local303 = Static90.method1856(this.anInt2497);
+					local303 = BasTypeList.get(this.anInt2497);
 				}
 				if (local303 != null && local303.modelRotateTranslate != null) {
 					for (local250 = 0; local250 < local303.modelRotateTranslate.length; local250++) {
@@ -290,18 +328,18 @@ public final class PlayerAppearance {
 				}
 				@Pc(740) RawModel local740 = new RawModel(local239, local239.length);
 				for (local346 = 0; local346 < 5; local346++) {
-					if (Static33.aShortArrayArray2[local346].length > this.anIntArray236[local346]) {
-						local740.recolor(Static200.aShortArray65[local346], Static33.aShortArrayArray2[local346][this.anIntArray236[local346]]);
+					if (aShortArrayArray2[local346].length > this.anIntArray236[local346]) {
+						local740.recolor(aShortArray65[local346], aShortArrayArray2[local346][this.anIntArray236[local346]]);
 					}
-					if (Static172.aShortArrayArray7[local346].length > this.anIntArray236[local346]) {
-						local740.recolor(Static160.aShortArray41[local346], Static172.aShortArrayArray7[local346][this.anIntArray236[local346]]);
+					if (aShortArrayArray7[local346].length > this.anIntArray236[local346]) {
+						local740.recolor(aShortArray41[local346], aShortArrayArray7[local346][this.anIntArray236[local346]]);
 					}
 				}
 				local154 = local740.createModel(64, 850, -30, -50, -30);
 				if (GlRenderer.enabled) {
 					((GlModel) local154).method4111(false, false, true, false, false, true);
 				}
-				Static250.aClass99_33.put(local154, local41);
+				aClass99_33.put(local154, local41);
 				this.aLong87 = local41;
 			}
 		}
@@ -313,10 +351,10 @@ public final class PlayerAppearance {
 		@Pc(979) int local979;
 		for (local353 = 0; local353 < local346; local353++) {
 			if (arg0[local353] != null) {
-				@Pc(858) SeqType local858 = Static36.get(arg0[local353].anInt5396);
+				@Pc(858) SeqType local858 = SeqTypeList.get(arg0[local353].anInt5396);
 				if (local858.frames != null) {
 					local158 = true;
-					Static208.aClass144Array2[local353] = local858;
+					aClass144Array2[local353] = local858;
 					local374 = arg0[local353].anInt5399;
 					local367 = arg0[local353].anInt5398;
 					local381 = local858.frames[local374];
@@ -334,7 +372,7 @@ public final class PlayerAppearance {
 						local979 = local858.frames[local367];
 						Static133.aClass3_Sub2_Sub7Array7[local353] = Static72.getAnimFrameset(local979 >>> 16);
 						@Pc(991) int local991 = local979 & 0xFFFF;
-						Static216.anIntArray187[local353] = local991;
+						anIntArray187[local353] = local991;
 						if (Static133.aClass3_Sub2_Sub7Array7[local353] != null) {
 							local836 |= Static133.aClass3_Sub2_Sub7Array7[local353].isColorTransformed(local991);
 							local827 |= Static133.aClass3_Sub2_Sub7Array7[local353].isAlphaTransformed(local991);
@@ -343,7 +381,7 @@ public final class PlayerAppearance {
 						Static262.anIntArray515[local353] = 0;
 						Static73.anIntArray183[local353] = 0;
 						Static133.aClass3_Sub2_Sub7Array7[local353] = null;
-						Static216.anIntArray187[local353] = -1;
+						anIntArray187[local353] = -1;
 					}
 				}
 			}
@@ -418,7 +456,7 @@ public final class PlayerAppearance {
 		local598 = 1;
 		while (local481 < local346) {
 			if (Static276.aClass3_Sub2_Sub7Array8[local481] != null) {
-				local1284.method4565(Static276.aClass3_Sub2_Sub7Array8[local481], Static241.anIntArray520[local481], Static133.aClass3_Sub2_Sub7Array7[local481], Static216.anIntArray187[local481], Static73.anIntArray183[local481] - 1, Static262.anIntArray515[local481], local598, Static208.aClass144Array2[local481].aBoolean278, this.anIntArrayArray19[local481]);
+				local1284.method4565(Static276.aClass3_Sub2_Sub7Array8[local481], Static241.anIntArray520[local481], Static133.aClass3_Sub2_Sub7Array7[local481], anIntArray187[local481], Static73.anIntArray183[local481] - 1, Static262.anIntArray515[local481], local598, aClass144Array2[local481].aBoolean278, this.anIntArrayArray19[local481]);
 			}
 			local481++;
 			local598 <<= 0x1;
@@ -433,7 +471,7 @@ public final class PlayerAppearance {
 		for (local481 = 0; local481 < local346; local481++) {
 			Static276.aClass3_Sub2_Sub7Array8[local481] = null;
 			Static133.aClass3_Sub2_Sub7Array7[local481] = null;
-			Static208.aClass144Array2[local481] = null;
+			aClass144Array2[local481] = null;
 		}
 		return local1284;
 	}
@@ -441,19 +479,19 @@ public final class PlayerAppearance {
 	@OriginalMember(owner = "client!hh", name = "a", descriptor = "(IBLclient!tk;II)Lclient!ak;")
 	public final Model method1956(@OriginalArg(0) int arg0, @OriginalArg(2) SeqType arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		if (this.anInt2492 != -1) {
-			return Static214.get(this.anInt2492).getHeadModel(arg1, arg0, arg3, arg2);
+			return NpcTypeList.get(this.anInt2492).getHeadModel(arg1, arg0, arg3, arg2);
 		}
-		@Pc(30) Model local30 = (Model) Static139.aClass99_21.get(this.aLong88);
+		@Pc(30) Model local30 = (Model) aClass99_21.get(this.aLong88);
 		if (local30 == null) {
 			@Pc(42) boolean local42 = false;
 			@Pc(52) int local52;
 			for (@Pc(44) int local44 = 0; local44 < 12; local44++) {
 				local52 = this.anIntArray233[local44];
 				if ((local52 & 0x40000000) == 0) {
-					if ((local52 & Integer.MIN_VALUE) != 0 && !Static81.method1752(local52 & 0x3FFFFFFF).isHeadModelReady()) {
+					if ((local52 & Integer.MIN_VALUE) != 0 && !IdkTypeList.get(local52 & 0x3FFFFFFF).isHeadModelReady()) {
 						local42 = true;
 					}
-				} else if (!Static71.get(local52 & 0x3FFFFFFF).method1816(this.aBoolean141)) {
+				} else if (!ObjTypeList.get(local52 & 0x3FFFFFFF).method1816(this.aBoolean141)) {
 					local42 = true;
 				}
 			}
@@ -467,12 +505,12 @@ public final class PlayerAppearance {
 				local114 = this.anIntArray233[local104];
 				@Pc(134) RawModel local134;
 				if ((local114 & 0x40000000) != 0) {
-					local134 = Static71.get(local114 & 0x3FFFFFFF).getHeadModel(this.aBoolean141);
+					local134 = ObjTypeList.get(local114 & 0x3FFFFFFF).getHeadModel(this.aBoolean141);
 					if (local134 != null) {
 						local100[local52++] = local134;
 					}
 				} else if ((Integer.MIN_VALUE & local114) != 0) {
-					local134 = Static81.method1752(local114 & 0x3FFFFFFF).getHeadModel();
+					local134 = IdkTypeList.get(local114 & 0x3FFFFFFF).getHeadModel();
 					if (local134 != null) {
 						local100[local52++] = local134;
 					}
@@ -480,15 +518,15 @@ public final class PlayerAppearance {
 			}
 			@Pc(171) RawModel local171 = new RawModel(local100, local52);
 			for (local114 = 0; local114 < 5; local114++) {
-				if (Static33.aShortArrayArray2[local114].length > this.anIntArray236[local114]) {
-					local171.recolor(Static200.aShortArray65[local114], Static33.aShortArrayArray2[local114][this.anIntArray236[local114]]);
+				if (aShortArrayArray2[local114].length > this.anIntArray236[local114]) {
+					local171.recolor(aShortArray65[local114], aShortArrayArray2[local114][this.anIntArray236[local114]]);
 				}
-				if (Static172.aShortArrayArray7[local114].length > this.anIntArray236[local114]) {
-					local171.recolor(Static160.aShortArray41[local114], Static172.aShortArrayArray7[local114][this.anIntArray236[local114]]);
+				if (aShortArrayArray7[local114].length > this.anIntArray236[local114]) {
+					local171.recolor(aShortArray41[local114], aShortArrayArray7[local114][this.anIntArray236[local114]]);
 				}
 			}
 			local30 = local171.createModel(64, 768, -50, -10, -50);
-			Static139.aClass99_21.put(local30, this.aLong88);
+			aClass99_21.put(local30, this.aLong88);
 		}
 		if (arg1 != null) {
 			local30 = arg1.method4215(local30, arg3, arg0, arg2);

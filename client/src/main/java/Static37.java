@@ -10,10 +10,7 @@ public final class Static37 {
 	@OriginalMember(owner = "client!cm", name = "c", descriptor = "I")
 	public static int anInt1176;
 
-	@OriginalMember(owner = "client!cm", name = "f", descriptor = "Lsignlink!im;")
-	public static PrivilegedRequest js5SocketRequest;
-
-	@OriginalMember(owner = "client!cm", name = "a", descriptor = "(ILclient!fe;)V")
+    @OriginalMember(owner = "client!cm", name = "a", descriptor = "(ILclient!fe;)V")
 	public static void method949(@OriginalArg(1) PathingEntity arg0) {
 		if (arg0.anInt3376 == 0) {
 			return;
@@ -35,7 +32,7 @@ public final class Static37 {
 		@Pc(70) int local70;
 		if (arg0.anInt3370 >= 32768) {
 			local70 = arg0.anInt3370 - 32768;
-			if (local70 == Static16.anInt549) {
+			if (local70 == PlayerList.selfId) {
 				local70 = 2047;
 			}
 			@Pc(83) Player local83 = Static159.players[local70];

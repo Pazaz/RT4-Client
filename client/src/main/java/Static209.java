@@ -4,12 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static209 {
 
-	@OriginalMember(owner = "client!ra", name = "s", descriptor = "I")
-	public static int port;
-
-	@OriginalMember(owner = "client!ra", name = "K", descriptor = "Lclient!ve;")
-	public static Js5 js5Archive8;
-
 	@OriginalMember(owner = "client!ra", name = "J", descriptor = "I")
 	public static int miscTransmitAt = 0;
 
@@ -19,13 +13,13 @@ public final class Static209 {
 	@OriginalMember(owner = "client!ra", name = "a", descriptor = "(ILclient!pb;BII)V")
 	public static void method3701(@OriginalArg(0) int arg0, @OriginalArg(1) LocType arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		for (@Pc(10) AreaSound local10 = (AreaSound) Static3.aClass69_135.method2289(); local10 != null; local10 = (AreaSound) Static3.aClass69_135.method2288()) {
-			if (arg3 == local10.anInt2033 && local10.anInt2041 == arg0 * 128 && local10.anInt2029 == arg2 * 128 && arg1.anInt4426 == local10.locType.anInt4426) {
+			if (arg3 == local10.anInt2033 && local10.anInt2041 == arg0 * 128 && local10.anInt2029 == arg2 * 128 && arg1.id == local10.locType.id) {
 				if (local10.primaryStream != null) {
-					Static204.soundStream.removeSubStream(local10.primaryStream);
+					client.soundStream.removeSubStream(local10.primaryStream);
 					local10.primaryStream = null;
 				}
 				if (local10.secondaryStream != null) {
-					Static204.soundStream.removeSubStream(local10.secondaryStream);
+					client.soundStream.removeSubStream(local10.secondaryStream);
 					local10.secondaryStream = null;
 				}
 				local10.unlink();
@@ -37,13 +31,6 @@ public final class Static209 {
 	@OriginalMember(owner = "client!ra", name = "a", descriptor = "(BI)Z")
 	public static boolean method3702(@OriginalArg(1) int arg0) {
 		return arg0 == (-arg0 & arg0);
-	}
-
-	@OriginalMember(owner = "client!ra", name = "c", descriptor = "(BI)V")
-	public static void method3706() {
-		Static93.aClass99_13.method3102(5);
-		Static125.aClass99_18.method3102(5);
-		Static262.headModels.method3102(5);
 	}
 
 	@OriginalMember(owner = "client!ra", name = "a", descriptor = "(BIII)V")

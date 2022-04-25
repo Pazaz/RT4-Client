@@ -17,10 +17,7 @@ public final class Static191 {
 	@OriginalMember(owner = "client!pg", name = "R", descriptor = "[I")
 	public static final int[] anIntArray385 = new int[anInt4506];
 
-	@OriginalMember(owner = "client!pg", name = "S", descriptor = "I")
-	public static int staffModLevel = 0;
-
-	@OriginalMember(owner = "client!pg", name = "T", descriptor = "[I")
+    @OriginalMember(owner = "client!pg", name = "T", descriptor = "[I")
 	public static final int[] anIntArray386 = new int[] { 76, 8, 137, 4, 0, 1, 38, 2, 19 };
 
 	@OriginalMember(owner = "client!pg", name = "V", descriptor = "I")
@@ -36,7 +33,7 @@ public final class Static191 {
 	public static final int[] anIntArray389 = new int[anInt4506];
 
 	@OriginalMember(owner = "client!pg", name = "db", descriptor = "Lclient!na;")
-	public static final JagString aClass100_845 = Static28.parse(":assistreq:");
+	public static final JagString aClass100_845 = JagString.parse(":assistreq:");
 
 	@OriginalMember(owner = "client!pg", name = "eb", descriptor = "[I")
 	public static final int[] anIntArray390 = new int[anInt4506];

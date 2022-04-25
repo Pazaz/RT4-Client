@@ -66,7 +66,7 @@ public final class SoftLruHashTable {
 	}
 
 	@OriginalMember(owner = "client!n", name = "c", descriptor = "(II)V")
-	public final void method3102(@OriginalArg(1) int arg0) {
+	public final void clean(@OriginalArg(1) int arg0) {
 		if (Static252.aClass22_1 == null) {
 			return;
 		}

@@ -4,22 +4,13 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static241 {
 
-	@OriginalMember(owner = "client!th", name = "j", descriptor = "[[Lclient!be;")
-	public static Component[][] components;
-
-	@OriginalMember(owner = "client!th", name = "m", descriptor = "[Lclient!be;")
+    @OriginalMember(owner = "client!th", name = "m", descriptor = "[Lclient!be;")
 	public static Component[] aClass13Array13;
 
 	@OriginalMember(owner = "client!th", name = "o", descriptor = "[I")
 	public static int[] anIntArray522;
 
-	@OriginalMember(owner = "client!th", name = "p", descriptor = "[Lclient!mm;")
-	public static SoftwareSprite[] aClass3_Sub2_Sub1_Sub1Array13;
-
-	@OriginalMember(owner = "client!th", name = "h", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1088 = Static28.parse("::setparticles");
-
-	@OriginalMember(owner = "client!th", name = "i", descriptor = "[I")
+    @OriginalMember(owner = "client!th", name = "i", descriptor = "[I")
 	public static final int[] anIntArray520 = new int[14];
 
 	@OriginalMember(owner = "client!th", name = "l", descriptor = "[I")
@@ -54,7 +45,7 @@ public final class Static241 {
 		if (arg0 && arg1 > 0) {
 			local44 = true;
 		}
-		Static197.method3560(arg0, arg1, local44, local4, arg2, arg3);
+		Static197.setWindowMode(arg0, arg1, local44, local4, arg2, arg3);
 	}
 
 	@OriginalMember(owner = "client!th", name = "a", descriptor = "(IIBIIII)I")
@@ -76,19 +67,7 @@ public final class Static241 {
 		}
 	}
 
-	@OriginalMember(owner = "client!th", name = "a", descriptor = "(ZBLclient!ve;Lclient!dd;Lclient!ve;)V")
-	public static void init(@OriginalArg(2) Js5 arg0, @OriginalArg(3) SoftwareFont arg1, @OriginalArg(4) Js5 arg2) {
-		Static240.aBoolean276 = true;
-		Static230.modelsArchive = arg2;
-		Static167.aClass153_61 = arg0;
-		@Pc(23) int local23 = Static167.aClass153_61.method4483() - 1;
-		Static170.anInt3245 = Static167.aClass153_61.method4504(local23) + local23 * 256;
-		Static143.aClass100Array104 = new JagString[] { null, null, null, null, LocalizedText.DROP};
-		Static269.aClass100Array87 = new JagString[] { null, null, LocalizedText.TAKE, null, null };
-		Static256.aClass3_Sub2_Sub9_Sub1_1 = arg1;
-	}
-
-	@OriginalMember(owner = "client!th", name = "a", descriptor = "(BIIIII)V")
+    @OriginalMember(owner = "client!th", name = "a", descriptor = "(BIIIII)V")
 	public static void method4547(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
 		@Pc(9) int local9 = arg1 - arg2;
 		@Pc(14) int local14 = arg3 - arg4;

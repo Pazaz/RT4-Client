@@ -10,9 +10,6 @@ public final class Static83 {
     @OriginalMember(owner = "client!gj", name = "d", descriptor = "I")
 	public static int loop = 0;
 
-	@OriginalMember(owner = "client!gj", name = "p", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_3 = new SoftLruHashTable(64);
-
 	@OriginalMember(owner = "client!gj", name = "q", descriptor = "[I")
 	public static final int[] updatedVarps = new int[32];
 

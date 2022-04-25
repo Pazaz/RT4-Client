@@ -4,10 +4,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static29 {
 
-	@OriginalMember(owner = "client!ce", name = "d", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_19;
-
-	@OriginalMember(owner = "client!ce", name = "a", descriptor = "(I[B)Lclient!rk;")
+    @OriginalMember(owner = "client!ce", name = "a", descriptor = "(I[B)Lclient!rk;")
 	public static Font method799(@OriginalArg(1) byte[] arg0) {
 		if (arg0 == null) {
 			return null;
@@ -47,20 +44,9 @@ public final class Static29 {
 		local9.anInt922 = arg2;
 	}
 
-	@OriginalMember(owner = "client!ce", name = "a", descriptor = "(II)V")
-	public static void method801() {
-		Static253.anInt5527 = 0;
-		Static226.anInt5085 = -1;
-		Static14.anInt441 = 1;
-		Static57.anInt1757 = 2;
-		Static72.aBoolean116 = false;
-		Static172.aClass153_70 = null;
-		Static277.anInt5853 = -1;
-	}
-
-	@OriginalMember(owner = "client!ce", name = "a", descriptor = "(IBI)Lclient!bn;")
+    @OriginalMember(owner = "client!ce", name = "a", descriptor = "(IBI)Lclient!bn;")
 	public static Map method803(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		for (@Pc(10) Map local10 = (Map) Static228.aClass69_120.method2289(); local10 != null; local10 = (Map) Static228.aClass69_120.method2288()) {
+		for (@Pc(10) Map local10 = (Map) MapList.aClass69_120.method2289(); local10 != null; local10 = (Map) MapList.aClass69_120.method2288()) {
 			if (local10.aBoolean50 && local10.method664(arg1, arg0)) {
 				return local10;
 			}

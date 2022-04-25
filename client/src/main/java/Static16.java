@@ -3,17 +3,11 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static16 {
 
-	@OriginalMember(owner = "client!bf", name = "s", descriptor = "Lclient!ve;")
-	public static Js5 js5Archive12;
-
-	@OriginalMember(owner = "client!bf", name = "B", descriptor = "I")
+    @OriginalMember(owner = "client!bf", name = "B", descriptor = "I")
 	public static int anInt548 = -1;
 
 	@OriginalMember(owner = "client!bf", name = "C", descriptor = "[I")
 	public static final int[] anIntArray51 = new int[] { 2, 2, 4, 2, 1, 8, 4, 1, 4, 4, 2, 1, 1, 1, 4, 1 };
-
-	@OriginalMember(owner = "client!bf", name = "E", descriptor = "I")
-	public static int anInt549 = -1;
 
 	@OriginalMember(owner = "client!bf", name = "G", descriptor = "I")
 	public static int anInt551 = 0;

@@ -5,10 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static248 {
 
-	@OriginalMember(owner = "client!uc", name = "c", descriptor = "Lclient!ve;")
-	public static Js5 js5Archive4;
-
-    @OriginalMember(owner = "client!uc", name = "f", descriptor = "I")
+	@OriginalMember(owner = "client!uc", name = "f", descriptor = "I")
 	public static int anInt4232;
 
 	@OriginalMember(owner = "client!uc", name = "a", descriptor = "I")
@@ -16,7 +13,7 @@ public final class Static248 {
 
 	@OriginalMember(owner = "client!uc", name = "a", descriptor = "(IB)Z")
 	public static boolean method3288(@OriginalArg(0) int arg0) {
-		Static189.anInt4443 = arg0 + 1 & 0xFFFF;
+		Protocol.verifyId = arg0 + 1 & 0xFFFF;
 		Static34.verifyIdChanged = true;
 		return true;
 	}
@@ -101,7 +98,7 @@ public final class Static248 {
 				Static156.method2959();
 				Static27.setMaterial(-1, 3);
 				Static119.aBoolean153 = true;
-				Static275.method4609();
+				UnderwaterMaterialRenderer.method4609();
 				Static152.anInt3604 = -1;
 				Static22.anInt730 = -1;
 				for (local32 = 0; local32 < Static182.aClass3_Sub14ArrayArray2[0].length; local32++) {
@@ -114,7 +111,7 @@ public final class Static248 {
 					}
 					local285.method1944(Static130.aClass3_Sub5ArrayArrayArray1, local294, false);
 				}
-				Static275.method4608();
+				UnderwaterMaterialRenderer.method4608();
 			} else {
 				local32 = Static235.anInt5276;
 				while (true) {

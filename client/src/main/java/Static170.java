@@ -4,17 +4,11 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static170 {
 
-	@OriginalMember(owner = "client!nh", name = "eb", descriptor = "I")
-	public static int anInt3245;
-
-	@OriginalMember(owner = "client!nh", name = "Z", descriptor = "I")
+    @OriginalMember(owner = "client!nh", name = "Z", descriptor = "I")
 	public static int anInt3241 = 128;
 
 	@OriginalMember(owner = "client!nh", name = "fb", descriptor = "[I")
 	public static final int[] JS5_ARCHIVE_WEIGHTS = new int[] { 4, 4, 1, 2, 6, 4, 2, 49, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
-
-	@OriginalMember(owner = "client!nh", name = "hb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_623 = Static28.parse("::fps ");
 
 	@OriginalMember(owner = "client!nh", name = "a", descriptor = "(IIIII)I")
 	public static int method2569(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {
@@ -38,21 +32,6 @@ public final class Static170 {
 			Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2] = new Tile(arg0, arg1, arg2);
 		}
 		Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2].aClass15_1 = local6;
-	}
-
-	@OriginalMember(owner = "client!nh", name = "a", descriptor = "(I[B)Z")
-	public static boolean method2572(@OriginalArg(1) byte[] arg0) {
-		@Pc(13) Buffer local13 = new Buffer(arg0);
-		@Pc(17) int local17 = local13.g1();
-		if (local17 != 1) {
-			return false;
-		}
-		@Pc(33) boolean local33 = local13.g1() == 1;
-		if (local33) {
-			Static97.method1962(local13);
-		}
-		Static69.method1546(local13);
-		return true;
 	}
 
 	@OriginalMember(owner = "client!nh", name = "a", descriptor = "(IIIIIIIIIIIII)V")

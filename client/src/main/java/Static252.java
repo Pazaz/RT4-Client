@@ -7,15 +7,10 @@ public final class Static252 {
 	public static Js5 aClass153_103;
 
 	@OriginalMember(owner = "client!uh", name = "Y", descriptor = "Lclient!na;")
-	public static final JagString HUFFMAN_GROUP = Static28.parse("huffman");
+	public static final JagString HUFFMAN_GROUP = JagString.parse("huffman");
 
 	@OriginalMember(owner = "client!uh", name = "ab", descriptor = "Lclient!q;")
 	public static final ReferenceNodeFactory aClass22_1 = Static44.method1147();
-
-	@OriginalMember(owner = "client!uh", name = "e", descriptor = "(I)V")
-	public static void method4301() {
-		Static233.aClass99_31.method3103();
-	}
 
 	@OriginalMember(owner = "client!uh", name = "f", descriptor = "(I)V")
 	public static void method4302() {
@@ -42,7 +37,7 @@ public final class Static252 {
 			Static50.anIntArray134[local33] = 0;
 		}
 		if (Static227.cameraType != 1) {
-			local33 = Static207.method3685(Static55.level, Static138.renderX, Static134.renderZ);
+			local33 = SceneGraph.getTileHeight(Static55.level, Static138.renderX, Static134.renderZ);
 			if (local33 - Static5.anInt40 < 800 && (Static12.tileSettings[Static55.level][Static138.renderX >> 7][Static134.renderZ >> 7] & 0x4) != 0) {
 				Static254.method4348(false, Static138.renderX >> 7, Static134.renderZ >> 7, Static130.aClass3_Sub5ArrayArrayArray1, 1);
 			}

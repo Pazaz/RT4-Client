@@ -28,20 +28,20 @@ public final class MsiType {
 
 	@OriginalMember(owner = "client!aa", name = "a", descriptor = "(IB)Lclient!ek;")
 	public final SoftwareIndexedSprite getSprite(@OriginalArg(0) int arg0) {
-		@Pc(17) SoftwareIndexedSprite local17 = (SoftwareIndexedSprite) Static219.sprites.get((long) (arg0 << 16 | this.spriteId));
+		@Pc(17) SoftwareIndexedSprite local17 = (SoftwareIndexedSprite) MsiTypeList.sprites.get((long) (arg0 << 16 | this.spriteId));
 		if (local17 != null) {
 			return local17;
 		}
-		Static250.spritesArchive.isFileReady(this.spriteId);
-		local17 = Static164.loadSoftwareIndexedSprite(this.spriteId, Static250.spritesArchive);
+		MsiTypeList.spritesArchive.isFileReady(this.spriteId);
+		local17 = Static164.loadSoftwareIndexedSprite(this.spriteId, MsiTypeList.spritesArchive);
 		if (local17 != null) {
-			local17.adjustPalette(Static173.redDelta, Static85.greenDelta, Static266.blueDelta);
+			local17.adjustPalette(MsiTypeList.redDelta, MsiTypeList.greenDelta, MsiTypeList.blueDelta);
 			local17.innerWidth = local17.width;
 			local17.innerHeight = local17.height;
 			for (@Pc(59) int local59 = 0; local59 < arg0; local59++) {
 				local17.flipVertical();
 			}
-			Static219.sprites.put(local17, (long) (arg0 << 16 | this.spriteId));
+			MsiTypeList.sprites.put(local17, (long) (arg0 << 16 | this.spriteId));
 		}
 		return local17;
 	}

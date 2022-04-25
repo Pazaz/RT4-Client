@@ -9,16 +9,10 @@ public final class Static195 {
 	@OriginalMember(owner = "client!pk", name = "Y", descriptor = "I")
 	public static int anInt4581;
 
-	@OriginalMember(owner = "client!pk", name = "Z", descriptor = "Lclient!ve;")
-	public static Js5 js5Archive9;
-
-	@OriginalMember(owner = "client!pk", name = "bb", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!pk", name = "bb", descriptor = "Lclient!na;")
 	public static JagString aClass100_859;
 
-	@OriginalMember(owner = "client!pk", name = "V", descriptor = "[S")
-	public static final short[] aShortArray64 = new short[] { -10304, 9104, -1, -1, -1 };
-
-	@OriginalMember(owner = "client!pk", name = "f", descriptor = "(B)I")
+    @OriginalMember(owner = "client!pk", name = "f", descriptor = "(B)I")
 	public static int getIdleLoops() {
 		return Keyboard.idleLoops;
 	}
@@ -33,19 +27,19 @@ public final class Static195 {
 				if (local21.anInt4819 > 0) {
 					@Pc(54) Npc local54 = Static175.npcs[local21.anInt4819 - 1];
 					if (local54 != null && local54.xFine >= 0 && local54.xFine < 13312 && local54.zFine >= 0 && local54.zFine < 13312) {
-						local21.method3705(local54.zFine, Static83.loop, Static207.method3685(local21.anInt4810, local54.xFine, local54.zFine) - local21.anInt4805, local54.xFine);
+						local21.method3705(local54.zFine, Static83.loop, SceneGraph.getTileHeight(local21.anInt4810, local54.xFine, local54.zFine) - local21.anInt4805, local54.xFine);
 					}
 				}
 				if (local21.anInt4819 < 0) {
 					@Pc(102) int local102 = -local21.anInt4819 - 1;
 					@Pc(107) Player local107;
-					if (Static16.anInt549 == local102) {
+					if (PlayerList.selfId == local102) {
 						local107 = PlayerList.self;
 					} else {
 						local107 = Static159.players[local102];
 					}
 					if (local107 != null && local107.xFine >= 0 && local107.xFine < 13312 && local107.zFine >= 0 && local107.zFine < 13312) {
-						local21.method3705(local107.zFine, Static83.loop, Static207.method3685(local21.anInt4810, local107.xFine, local107.zFine) - local21.anInt4805, local107.xFine);
+						local21.method3705(local107.zFine, Static83.loop, SceneGraph.getTileHeight(local21.anInt4810, local107.xFine, local107.zFine) - local21.anInt4805, local107.xFine);
 					}
 				}
 				local21.method3704(Static178.anInt4247);

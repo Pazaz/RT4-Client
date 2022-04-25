@@ -92,7 +92,7 @@ public final class FluType {
 	}
 
 	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(ILclient!wa;I)V")
-	public final void method3217(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
+	public final void decode(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		while (true) {
 			@Pc(7) int local7 = arg1.g1();
 			if (local7 == 0) {

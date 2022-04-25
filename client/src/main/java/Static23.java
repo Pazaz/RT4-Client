@@ -7,14 +7,8 @@ public final class Static23 {
 	@OriginalMember(owner = "client!bm", name = "a", descriptor = "F")
 	public static float aFloat5;
 
-	@OriginalMember(owner = "client!bm", name = "e", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_11;
-
-	@OriginalMember(owner = "client!bm", name = "f", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_12;
-
 	@OriginalMember(owner = "client!bm", name = "p", descriptor = "Lclient!na;")
-	public static final JagString aClass100_133 = Static28.parse("(U1");
+	public static final JagString aClass100_133 = JagString.parse("(U1");
 
 	@OriginalMember(owner = "client!bm", name = "a", descriptor = "(IBIIII)V")
 	public static void method645(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {

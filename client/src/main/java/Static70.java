@@ -4,10 +4,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static70 {
 
-	@OriginalMember(owner = "client!fi", name = "j", descriptor = "Lclient!qf;")
-	public static Sprite aClass3_Sub2_Sub1_2;
-
-	@OriginalMember(owner = "client!fi", name = "k", descriptor = "I")
+    @OriginalMember(owner = "client!fi", name = "k", descriptor = "I")
 	public static int type = 0;
 
 	@OriginalMember(owner = "client!fi", name = "n", descriptor = "I")
@@ -31,7 +28,7 @@ public final class Static70 {
 	@OriginalMember(owner = "client!fi", name = "a", descriptor = "(III)V")
 	public static void loadOverlayColors(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
 		for (@Pc(11) int local11 = 0; local11 < FloTypeList.capacity; local11++) {
-			@Pc(18) FloType local18 = Static256.method4395(local11);
+			@Pc(18) FloType local18 = FloTypeList.method4395(local11);
 			if (local18 != null) {
 				@Pc(24) int local24 = local18.texture;
 				if (local24 >= 0 && !Rasteriser.textureProvider.method3236(local24)) {

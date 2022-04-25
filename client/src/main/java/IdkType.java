@@ -36,7 +36,7 @@ public final class IdkType {
 		@Pc(16) RawModel[] local16 = new RawModel[5];
 		for (@Pc(18) int local18 = 0; local18 < 5; local18++) {
 			if (this.headModels[local18] != -1) {
-				local16[local13++] = Static77.create(Static14.modelsArchive, this.headModels[local18]);
+				local16[local13++] = Static77.create(IdkTypeList.modelsArchive, this.headModels[local18]);
 			}
 		}
 		@Pc(52) RawModel local52 = new RawModel(local16, local13);
@@ -61,7 +61,7 @@ public final class IdkType {
 		}
 		@Pc(13) boolean local13 = true;
 		for (@Pc(22) int local22 = 0; local22 < this.bodyModels.length; local22++) {
-			if (!Static14.modelsArchive.isFileReady(0, this.bodyModels[local22])) {
+			if (!IdkTypeList.modelsArchive.isFileReady(0, this.bodyModels[local22])) {
 				local13 = false;
 			}
 		}
@@ -112,7 +112,7 @@ public final class IdkType {
 		}
 		@Pc(16) RawModel[] local16 = new RawModel[this.bodyModels.length];
 		for (@Pc(18) int local18 = 0; local18 < this.bodyModels.length; local18++) {
-			local16[local18] = Static77.create(Static14.modelsArchive, this.bodyModels[local18]);
+			local16[local18] = Static77.create(IdkTypeList.modelsArchive, this.bodyModels[local18]);
 		}
 		@Pc(56) RawModel local56;
 		if (local16.length == 1) {
@@ -138,7 +138,7 @@ public final class IdkType {
 	public final boolean isHeadModelReady() {
 		@Pc(3) boolean local3 = true;
 		for (@Pc(12) int local12 = 0; local12 < 5; local12++) {
-			if (this.headModels[local12] != -1 && !Static14.modelsArchive.isFileReady(0, this.headModels[local12])) {
+			if (this.headModels[local12] != -1 && !IdkTypeList.modelsArchive.isFileReady(0, this.headModels[local12])) {
 				local3 = false;
 			}
 		}

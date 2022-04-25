@@ -16,13 +16,7 @@ public final class Static232 {
 	@OriginalMember(owner = "client!sm", name = "m", descriptor = "I")
 	public static int anInt5212;
 
-	@OriginalMember(owner = "client!sm", name = "c", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_30 = new SoftLruHashTable(64);
-
-	@OriginalMember(owner = "client!sm", name = "l", descriptor = "[S")
-	public static short[] aShortArray74 = new short[256];
-
-	@OriginalMember(owner = "client!sm", name = "a", descriptor = "(IIIIIIIIIII)V")
+    @OriginalMember(owner = "client!sm", name = "a", descriptor = "(IIIIIIIIIII)V")
 	public static void method3991(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(8) int arg5, @OriginalArg(9) int arg6, @OriginalArg(10) int arg7) {
 		@Pc(9) int local9 = arg2 - arg4;
 		@Pc(11) int local11 = -1;
@@ -56,8 +50,8 @@ public final class Static232 {
 								@Pc(203) int local203 = (local50 + arg4 & 0x3F) + ((arg6 + local119 & 0x3F) << 6);
 								@Pc(209) int local209 = local116[local163][local203];
 								if (local209 != 0) {
-									@Pc(222) LocType local222 = Static271.get(local209 - 1);
-									if (!Static258.aBooleanArray130[local222.mapElement]) {
+									@Pc(222) LocType local222 = LocTypeList.get(local209 - 1);
+									if (!MapList.aBooleanArray130[local222.mapElement]) {
 										if (local11 != -1 && local222.mapElement == Static9.anInt172) {
 											@Pc(243) MapElement local243 = new MapElement();
 											local243.anInt4307 = local65;
@@ -65,7 +59,7 @@ public final class Static232 {
 											local243.id = local222.mapElement;
 											Static172.aClass69_97.addTail(local243);
 										} else {
-											Static241.aClass3_Sub2_Sub1_Sub1Array13[local222.mapElement].method1423(local65 - 7, local144 + -7);
+											MapList.sprites[local222.mapElement].method1423(local65 - 7, local144 + -7);
 										}
 									}
 								}
@@ -80,7 +74,7 @@ public final class Static232 {
 			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 13, local11);
 			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 11, local11);
 			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 9, local11);
-			Static241.aClass3_Sub2_Sub1_Sub1Array13[local285.id].method1423(local285.anInt4307 - 7, local285.anInt4314 + -7);
+			MapList.sprites[local285.id].method1423(local285.anInt4307 - 7, local285.anInt4314 + -7);
 		}
 		Static172.aClass69_97.clear();
 	}

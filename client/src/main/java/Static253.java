@@ -13,9 +13,6 @@ public final class Static253 {
 	@OriginalMember(owner = "client!ui", name = "T", descriptor = "F")
 	public static float aFloat36;
 
-	@OriginalMember(owner = "client!ui", name = "cb", descriptor = "Lclient!ve;")
-	public static Js5 js5Archive20;
-
 	@OriginalMember(owner = "client!ui", name = "eb", descriptor = "[[[B")
 	public static byte[][][] aByteArrayArrayArray16;
 
@@ -54,7 +51,7 @@ public final class Static253 {
 			if (Static176.aBooleanArray95[4] && Static276.anIntArray564[4] + 128 > local59) {
 				local59 = Static276.anIntArray564[4] + 128;
 			}
-			Static18.method555(Static81.cameraX, arg0, Static207.method3685(Static55.level, PlayerList.self.xFine, PlayerList.self.zFine) - 50, 600 - -(local59 * 3), local57, Static111.cameraZ, local59);
+			Static18.method555(Static81.cameraX, arg0, SceneGraph.getTileHeight(Static55.level, PlayerList.self.xFine, PlayerList.self.zFine) - 50, 600 - -(local59 * 3), local57, Static111.cameraZ, local59);
 		}
 		local57 = Static5.anInt40;
 		local59 = Static138.renderX;
@@ -116,7 +113,7 @@ public final class Static253 {
 			@Pc(361) int local361 = Static148.screenUpperY;
 			Static34.anInt1053 = (local361 - local344) * (Static60.anInt1892 - arg4) / arg0 + local344;
 		}
-		Static107.loop();
+		client.audioLoop();
 		@Pc(387) byte local387 = Static236.method4047() == 2 ? (byte) Static136.anInt3325 : 1;
 		if (GlRenderer.enabled) {
 			GlRenderer.method4173();
@@ -135,14 +132,14 @@ public final class Static253 {
 			Static263.aBoolean299 = true;
 			Static120.method2390();
 			Static143.method2731(0, 0, 0, 0, 0);
-			Static107.loop();
+			client.audioLoop();
 			Static223.method3858();
 			Static142.method2726(arg4, arg3, arg2, Static223.anInt5029, arg0, Static223.anInt5029);
 			Static233.method4000(arg3, arg2, arg0, Static223.anInt5029, Static223.anInt5029, arg4);
 		} else {
 			SoftwareRaster.fillRect(arg2, arg4, arg3, arg0, 0);
 			Static156.method2954(Static138.renderX, Static5.anInt40, Static134.renderZ, Static240.cameraPitch, Static184.cameraYaw, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Static55.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
-			Static107.loop();
+			client.audioLoop();
 			Static223.method3858();
 			Static142.method2726(arg4, arg3, arg2, 256, arg0, 256);
 			Static233.method4000(arg3, arg2, arg0, 256, 256, arg4);
@@ -170,30 +167,10 @@ public final class Static253 {
 		}
 	}
 
-	@OriginalMember(owner = "client!ui", name = "c", descriptor = "(II)I")
-	public static int method4328(@OriginalArg(0) int arg0) {
-		return arg0 >>> 8;
-	}
-
-	@OriginalMember(owner = "client!ui", name = "a", descriptor = "(IZ)Lclient!ml;")
-	public static EnumType method4330(@OriginalArg(0) int arg0) {
-		@Pc(10) EnumType local10 = (EnumType) Static149.aClass54_10.get((long) arg0);
-		if (local10 != null) {
-			return local10;
-		}
-		@Pc(24) byte[] local24 = Static84.aClass153_35.getFile(Static97.method1959(arg0), Static103.method2236(arg0));
-		local10 = new EnumType();
-		if (local24 != null) {
-			local10.decode(new Buffer(local24));
-		}
-		Static149.aClass54_10.put(local10, (long) arg0);
-		return local10;
-	}
-
-    @OriginalMember(owner = "client!ui", name = "d", descriptor = "(II)V")
+	@OriginalMember(owner = "client!ui", name = "d", descriptor = "(II)V")
 	public static void method4332(@OriginalArg(0) int arg0) {
-		if (arg0 >= 0 && Static258.aBooleanArray130.length > arg0) {
-			Static258.aBooleanArray130[arg0] = !Static258.aBooleanArray130[arg0];
+		if (arg0 >= 0 && MapList.aBooleanArray130.length > arg0) {
+			MapList.aBooleanArray130[arg0] = !MapList.aBooleanArray130[arg0];
 		}
 	}
 }

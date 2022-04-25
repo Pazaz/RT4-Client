@@ -11,7 +11,7 @@ public final class Static8 {
 	public static int[] anIntArray8;
 
 	@OriginalMember(owner = "client!aj", name = "R", descriptor = "Lclient!na;")
-	public static final JagString aClass100_32 = Static28.parse("<col=ff9040>");
+	public static final JagString aClass100_32 = JagString.parse("<col=ff9040>");
 
 	@OriginalMember(owner = "client!aj", name = "a", descriptor = "(BILclient!be;)I")
 	public static int method118(@OriginalArg(1) int arg0, @OriginalArg(2) Component arg1) {
@@ -22,11 +22,6 @@ public final class Static8 {
 		} else {
 			return arg1.anIntArray39[arg0];
 		}
-	}
-
-	@OriginalMember(owner = "client!aj", name = "c", descriptor = "(II)V")
-	public static void method119() {
-		Static233.aClass99_31.method3102(5);
 	}
 
 	@OriginalMember(owner = "client!aj", name = "a", descriptor = "(IIIZIII)V")
@@ -116,8 +111,8 @@ public final class Static8 {
 
 	@OriginalMember(owner = "client!aj", name = "i", descriptor = "(I)V")
 	public static void method121() {
-		for (@Pc(3) int local3 = 0; local3 < Static165.anInt4043; local3++) {
-			@Pc(19) VarpType local19 = Static247.method4248(local3);
+		for (@Pc(3) int local3 = 0; local3 < VarpTypeList.anInt4043; local3++) {
+			@Pc(19) VarpType local19 = VarpTypeList.get(local3);
 			if (local19 != null && local19.clientCode == 0) {
 				Static106.anIntArray257[local3] = 0;
 				Static7.varps[local3] = 0;

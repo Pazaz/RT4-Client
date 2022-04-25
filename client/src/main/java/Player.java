@@ -61,7 +61,7 @@ public final class Player extends PathingEntity {
 	@OriginalMember(owner = "client!pa", name = "a", descriptor = "(IIILclient!e;)V")
 	public static void animate(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Player arg2) {
 		if (arg1 == arg2.seqId && arg1 != -1) {
-			@Pc(89) SeqType local89 = Static36.get(arg1);
+			@Pc(89) SeqType local89 = SeqTypeList.get(arg1);
 			@Pc(92) int local92 = local89.anInt5347;
 			if (local92 == 1) {
 				arg2.anInt3420 = arg0;
@@ -74,7 +74,7 @@ public final class Player extends PathingEntity {
 			if (local92 == 2) {
 				arg2.anInt3371 = 0;
 			}
-		} else if (arg1 == -1 || arg2.seqId == -1 || Static36.get(arg1).anInt5355 >= Static36.get(arg2.seqId).anInt5355) {
+		} else if (arg1 == -1 || arg2.seqId == -1 || SeqTypeList.get(arg1).anInt5355 >= SeqTypeList.get(arg2.seqId).anInt5355) {
 			arg2.anInt3373 = 1;
 			arg2.anInt3425 = 0;
 			arg2.anInt3420 = arg0;
@@ -83,7 +83,7 @@ public final class Player extends PathingEntity {
 			arg2.anInt3360 = 0;
 			arg2.seqId = arg1;
 			if (arg2.seqId != -1) {
-				SoundPlayer.playSeqSound(arg2.zFine, Static36.get(arg2.seqId), arg2.xFine, arg2 == PlayerList.self, arg2.anInt3425);
+				SoundPlayer.playSeqSound(arg2.zFine, SeqTypeList.get(arg2.seqId), arg2.xFine, arg2 == PlayerList.self, arg2.anInt3425);
 			}
 		}
 	}
@@ -91,7 +91,7 @@ public final class Player extends PathingEntity {
 	@OriginalMember(owner = "client!e", name = "c", descriptor = "(B)I")
 	@Override
 	public final int getSize() {
-		return this.appearance == null || this.appearance.anInt2492 == -1 ? super.getSize() : Static214.get(this.appearance.anInt2492).soze;
+		return this.appearance == null || this.appearance.anInt2492 == -1 ? super.getSize() : NpcTypeList.get(this.appearance.anInt2492).soze;
 	}
 
 	@OriginalMember(owner = "client!e", name = "b", descriptor = "(I)I")
@@ -133,9 +133,9 @@ public final class Player extends PathingEntity {
 					break;
 				}
 				if (local134 >= 32768) {
-					local134 = Static234.anIntArray455[local134 - 32768];
+					local134 = Equipment.anIntArray455[local134 - 32768];
 					local44[local102] = local134 | 0x40000000;
-					local175 = Static71.get(local134).team;
+					local175 = ObjTypeList.get(local134).team;
 					if (local175 != 0) {
 						this.anInt1650 = local175;
 					}
@@ -147,14 +147,14 @@ public final class Player extends PathingEntity {
 		@Pc(197) int[] local197 = new int[5];
 		for (local111 = 0; local111 < 5; local111++) {
 			local127 = arg0.g1();
-			if (local127 < 0 || local127 >= Static33.aShortArrayArray2[local111].length) {
+			if (local127 < 0 || local127 >= PlayerAppearance.aShortArrayArray2[local111].length) {
 				local127 = 0;
 			}
 			local197[local111] = local127;
 		}
 		this.anInt3365 = arg0.g2();
 		@Pc(236) long local236 = arg0.g8();
-		this.aClass100_364 = Static79.decode37(local236).method3125();
+		this.aClass100_364 = Base37.decodeLowerCase(local236).method3125();
 		this.anInt1652 = arg0.g1();
 		if (local37) {
 			this.anInt1671 = arg0.g2();
@@ -205,8 +205,8 @@ public final class Player extends PathingEntity {
 		if (this.appearance == null) {
 			return;
 		}
-		@Pc(25) SeqType local25 = this.seqId != -1 && this.anInt3420 == 0 ? Static36.get(this.seqId) : null;
-		@Pc(54) SeqType local54 = this.anInt3366 == -1 || this.aBoolean98 || this.anInt3366 == this.method2681().idleAnimationId && local25 != null ? null : Static36.get(this.anInt3366);
+		@Pc(25) SeqType local25 = this.seqId != -1 && this.anInt3420 == 0 ? SeqTypeList.get(this.seqId) : null;
+		@Pc(54) SeqType local54 = this.anInt3366 == -1 || this.aBoolean98 || this.anInt3366 == this.method2681().idleAnimationId && local25 != null ? null : SeqTypeList.get(this.anInt3366);
 		@Pc(76) Model local76 = this.appearance.method1954(this.aClass147Array3, this.anInt3373, local54, local25, this.anInt3396, this.anInt3388, this.anInt3360, this.anInt3425, this.anInt3407);
 		@Pc(79) int local79 = Static198.method1029();
 		if (GlRenderer.enabled && GameShell.maxMemory < 96 && local79 > 50) {
@@ -229,8 +229,8 @@ public final class Player extends PathingEntity {
 		}
 		this.anInt3413 = local76.method4549();
 		@Pc(184) Model local184;
-		if (Preferences.characterShadowsOn && (this.appearance.anInt2492 == -1 || Static214.get(this.appearance.anInt2492).shadow)) {
-			local184 = Static41.method1043(160, this.aBoolean171, local54 == null ? local25 : local54, this.xFine, 0, this.zFine, 0, 1, local76, arg0, local54 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, 240);
+		if (Preferences.characterShadowsOn && (this.appearance.anInt2492 == -1 || NpcTypeList.get(this.appearance.anInt2492).shadow)) {
+			local184 = ShadowModelList.method1043(160, this.aBoolean171, local54 == null ? local25 : local54, this.xFine, 0, this.zFine, 0, 1, local76, arg0, local54 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, 240);
 			if (GlRenderer.enabled) {
 				@Pc(188) float local188 = GlRenderer.method4179();
 				@Pc(190) float local190 = GlRenderer.method4166();
@@ -277,7 +277,7 @@ public final class Player extends PathingEntity {
 		this.method2685(local76, arg0);
 		local184 = null;
 		if (!this.aBoolean98 && this.anInt3432 != -1 && this.anInt3399 != -1) {
-			@Pc(471) SpotAnimType local471 = Static34.method877(this.anInt3432);
+			@Pc(471) SpotAnimType local471 = SpotAnimTypeList.get(this.anInt3432);
 			local184 = local471.method1319(this.anInt3418, this.anInt3399, this.anInt3361);
 			if (local184 != null) {
 				local184.method4575(0, -this.anInt3394, 0);
@@ -352,7 +352,7 @@ public final class Player extends PathingEntity {
 			return;
 		}
 		@Pc(34) int local34 = (int) (Math.atan2((double) arg3, (double) arg1) * 325.949D) & 0x7FF;
-		@Pc(46) Model local46 = Static220.method3800(local34, this.zFine, arg11, this.xFine, arg2, this.anInt3424);
+		@Pc(46) Model local46 = HintArrowManager.getModel(local34, this.zFine, arg11, this.xFine, arg2, this.anInt3424);
 		if (local46 == null) {
 			return;
 		}

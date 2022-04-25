@@ -8,12 +8,9 @@ public final class Static245 {
 	public static int anInt5375;
 
 	@OriginalMember(owner = "client!tm", name = "d", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1018 = Static28.parse("; Expires=Thu)1 01)2Jan)21970 00:00:00 GMT; Max)2Age=0");
+	public static final JagString aClass100_1018 = JagString.parse("; Expires=Thu)1 01)2Jan)21970 00:00:00 GMT; Max)2Age=0");
 
-	@OriginalMember(owner = "client!tm", name = "e", descriptor = "Z")
-	public static boolean enabled = false;
-
-	@OriginalMember(owner = "client!tm", name = "i", descriptor = "I")
+    @OriginalMember(owner = "client!tm", name = "i", descriptor = "I")
 	public static int anInt5377 = 0;
 
 	@OriginalMember(owner = "client!tm", name = "a", descriptor = "(II)V")
@@ -22,48 +19,14 @@ public final class Static245 {
 		local16.pushClient();
 	}
 
-	@OriginalMember(owner = "client!tm", name = "b", descriptor = "(II)Z")
-	public static boolean load(@OriginalArg(0) int arg0) {
-		if (Static223.aBooleanArray115[arg0]) {
-			return true;
-		} else if (Static202.aClass153_84.method4479(arg0)) {
-			@Pc(25) int local25 = Static202.aClass153_84.method4504(arg0);
-			if (local25 == 0) {
-				Static223.aBooleanArray115[arg0] = true;
-				return true;
-			}
-			if (Static241.components[arg0] == null) {
-				Static241.components[arg0] = new Component[local25];
-			}
-			for (@Pc(46) int local46 = 0; local46 < local25; local46++) {
-				if (Static241.components[arg0][local46] == null) {
-					@Pc(62) byte[] local62 = Static202.aClass153_84.getFile(arg0, local46);
-					if (local62 != null) {
-						@Pc(74) Component local74 = Static241.components[arg0][local46] = new Component();
-						local74.id = local46 + (arg0 << 16);
-						if (local62[0] == -1) {
-							local74.method490(new Buffer(local62));
-						} else {
-							local74.method481(new Buffer(local62));
-						}
-					}
-				}
-			}
-			Static223.aBooleanArray115[arg0] = true;
-			return true;
-		} else {
-			return false;
-		}
-	}
-
 	@OriginalMember(owner = "client!tm", name = "a", descriptor = "(I)V")
 	public static void method4226() {
 		for (@Pc(7) int local7 = 0; local7 < Static116.anInt2951; local7++) {
 			@Pc(31) int local31 = Static44.anIntArray106[local7];
 			@Pc(35) Player local35 = Static159.players[local31];
-			@Pc(39) int local39 = Static57.aClass3_Sub15_Sub1_3.g1();
+			@Pc(39) int local39 = Protocol.inboundBuffer.g1();
 			if ((local39 & 0x10) != 0) {
-				local39 += Static57.aClass3_Sub15_Sub1_3.g1() << 8;
+				local39 += Protocol.inboundBuffer.g1() << 8;
 			}
 			Static84.method1768(local39, local31, local35);
 		}
@@ -197,7 +160,7 @@ public final class Static245 {
 				for (local232 = 0; local232 < local497; local232++) {
 					@Pc(517) Light local517 = new Light(local96);
 					if (local517.anInt2243 == 31) {
-						@Pc(529) LightType local529 = Static140.method2709(local96.g2());
+						@Pc(529) LightType local529 = LightTypeList.get(local96.g2());
 						local517.method1762(local529.anInt2865, local529.anInt2873, local529.anInt2867, local529.anInt2872);
 					}
 					local417 = local517.anInt2240 >> 7;

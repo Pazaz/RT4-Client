@@ -5,79 +5,79 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static218 {
 
 	@OriginalMember(owner = "client!rk", name = "K", descriptor = "Lclient!na;")
-	public static final JagString TAG_GT = Static28.parse("gt");
+	public static final JagString TAG_GT = JagString.parse("gt");
 
 	@OriginalMember(owner = "client!rk", name = "L", descriptor = "Lclient!na;")
-	public static final JagString TAG_LT = Static28.parse("lt");
+	public static final JagString TAG_LT = JagString.parse("lt");
 
 	@OriginalMember(owner = "client!rk", name = "M", descriptor = "Lclient!na;")
-	public static final JagString TAG_SHAD1 = Static28.parse("shad=");
+	public static final JagString TAG_SHAD1 = JagString.parse("shad=");
 
 	@OriginalMember(owner = "client!rk", name = "N", descriptor = "Lclient!na;")
-	public static final JagString TAB_SHY = Static28.parse("shy");
+	public static final JagString TAB_SHY = JagString.parse("shy");
 
 	@OriginalMember(owner = "client!rk", name = "O", descriptor = "Lclient!na;")
-	public static final JagString TAG_TRANS1 = Static28.parse("trans=");
+	public static final JagString TAG_TRANS1 = JagString.parse("trans=");
 
 	@OriginalMember(owner = "client!rk", name = "P", descriptor = "Lclient!na;")
-	public static final JagString TAG_U1 = Static28.parse("u=");
+	public static final JagString TAG_U1 = JagString.parse("u=");
 
 	@OriginalMember(owner = "client!rk", name = "Q", descriptor = "Lclient!na;")
-	public static final JagString TAG_STR1 = Static28.parse("str=");
+	public static final JagString TAG_STR1 = JagString.parse("str=");
 
 	@OriginalMember(owner = "client!rk", name = "R", descriptor = "Lclient!na;")
-	public static final JagString TAB_EURO = Static28.parse("euro");
+	public static final JagString TAB_EURO = JagString.parse("euro");
 
 	@OriginalMember(owner = "client!rk", name = "T", descriptor = "Lclient!na;")
-	public static final JagString TAG_COL2 = Static28.parse(")4col");
+	public static final JagString TAG_COL2 = JagString.parse(")4col");
 
 	@OriginalMember(owner = "client!rk", name = "X", descriptor = "Lclient!na;")
-	public static final JagString TAG_SHAD3 = Static28.parse(")4shad");
+	public static final JagString TAG_SHAD3 = JagString.parse(")4shad");
 
 	@OriginalMember(owner = "client!rk", name = "Y", descriptor = "Lclient!na;")
-	public static final JagString TAG_COL1 = Static28.parse("col=");
+	public static final JagString TAG_COL1 = JagString.parse("col=");
 
 	@OriginalMember(owner = "client!rk", name = "Z", descriptor = "Lclient!na;")
-	private static final JagString aClass100_706 = Static28.parse("<gt>");
+	private static final JagString aClass100_706 = JagString.parse("<gt>");
 
 	@OriginalMember(owner = "client!rk", name = "bb", descriptor = "Lclient!na;")
-	public static final JagString TAG_U2 = Static28.parse("u");
+	public static final JagString TAG_U2 = JagString.parse("u");
 
 	@OriginalMember(owner = "client!rk", name = "cb", descriptor = "Lclient!na;")
-	public static final JagString TAB_TIMES = Static28.parse("times");
+	public static final JagString TAB_TIMES = JagString.parse("times");
 
 	@OriginalMember(owner = "client!rk", name = "eb", descriptor = "Lclient!na;")
-	public static final JagString TAG_TRANS2 = Static28.parse(")4trans");
+	public static final JagString TAG_TRANS2 = JagString.parse(")4trans");
 
 	@OriginalMember(owner = "client!rk", name = "fb", descriptor = "Lclient!na;")
-	public static final JagString TAG_NBSP = Static28.parse("nbsp");
+	public static final JagString TAG_NBSP = JagString.parse("nbsp");
 
 	@OriginalMember(owner = "client!rk", name = "hb", descriptor = "Lclient!na;")
-	private static final JagString aClass100_711 = Static28.parse("<lt>");
+	private static final JagString aClass100_711 = JagString.parse("<lt>");
 
 	@OriginalMember(owner = "client!rk", name = "ib", descriptor = "Lclient!na;")
-	public static final JagString TAG_U3 = Static28.parse(")4u");
+	public static final JagString TAG_U3 = JagString.parse(")4u");
 
 	@OriginalMember(owner = "client!rk", name = "kb", descriptor = "Lclient!na;")
-	public static final JagString TAG_BR = Static28.parse("br");
+	public static final JagString TAG_BR = JagString.parse("br");
 
 	@OriginalMember(owner = "client!rk", name = "lb", descriptor = "Lclient!na;")
-	public static final JagString TAG_SHAD2 = Static28.parse("shad");
+	public static final JagString TAG_SHAD2 = JagString.parse("shad");
 
 	@OriginalMember(owner = "client!rk", name = "mb", descriptor = "Lclient!na;")
-	public static final JagString TAG_IMG = Static28.parse("img=");
+	public static final JagString TAG_IMG = JagString.parse("img=");
 
 	@OriginalMember(owner = "client!rk", name = "ob", descriptor = "Lclient!na;")
-	public static final JagString TAB_COPY = Static28.parse("copy");
+	public static final JagString TAB_COPY = JagString.parse("copy");
 
 	@OriginalMember(owner = "client!rk", name = "pb", descriptor = "Lclient!na;")
-	public static final JagString TAG_STR3 = Static28.parse(")4str");
+	public static final JagString TAG_STR3 = JagString.parse(")4str");
 
 	@OriginalMember(owner = "client!rk", name = "qb", descriptor = "Lclient!na;")
-	public static final JagString TAG_REG = Static28.parse("reg");
+	public static final JagString TAG_REG = JagString.parse("reg");
 
 	@OriginalMember(owner = "client!rk", name = "rb", descriptor = "Lclient!na;")
-	public static final JagString TAG_STR2 = Static28.parse("str");
+	public static final JagString TAG_STR2 = JagString.parse("str");
 
 	@OriginalMember(owner = "client!rk", name = "sb", descriptor = "Lclient!na;")
 	public static final JagString buffer = Static87.allocate(100);

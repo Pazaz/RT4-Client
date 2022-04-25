@@ -8,21 +8,18 @@ public final class Static61 {
 	public static float aFloat7;
 
 	@OriginalMember(owner = "client!en", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_422 = Static28.parse("::fpsoff");
+	public static final JagString aClass100_422 = JagString.parse("::fpsoff");
 
 	@OriginalMember(owner = "client!en", name = "h", descriptor = "Lclient!na;")
-	public static final JagString aClass100_423 = Static28.parse(":chalreq:");
+	public static final JagString aClass100_423 = JagString.parse(":chalreq:");
 
 	@OriginalMember(owner = "client!en", name = "t", descriptor = "[I")
 	public static final int[] anIntArray148 = new int[14];
 
 	@OriginalMember(owner = "client!en", name = "x", descriptor = "Lclient!na;")
-	public static final JagString aClass100_424 = Static28.parse("http:)4)4");
+	public static final JagString aClass100_424 = JagString.parse("http:)4)4");
 
-	@OriginalMember(owner = "client!en", name = "A", descriptor = "Z")
-	public static boolean aBoolean109 = false;
-
-	@OriginalMember(owner = "client!en", name = "a", descriptor = "(IIIB)V")
+    @OriginalMember(owner = "client!en", name = "a", descriptor = "(IIIB)V")
 	public static void teleport(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		@Pc(66) JagString local66 = JagString.concatenate(new JagString[] { Static96.aClass100_521, Static123.parseInt(arg2), Static159.aClass100_760, Static123.parseInt(arg0 >> 6), Static159.aClass100_760, Static123.parseInt(arg1 >> 6), Static159.aClass100_760, Static123.parseInt(arg0 & 0x3F), Static159.aClass100_760, Static123.parseInt(arg1 & 0x3F) });
 		local66.method3129();

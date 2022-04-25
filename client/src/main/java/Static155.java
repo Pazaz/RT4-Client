@@ -35,8 +35,8 @@ public final class Static155 {
 		@Pc(8) short[] local8 = new short[16];
 		@Pc(12) JagString local12 = arg1.toLowerCase();
 		@Pc(14) int local14 = 0;
-		for (@Pc(16) int local16 = 0; local16 < Static170.anInt3245; local16++) {
-			@Pc(27) ObjType local27 = Static71.get(local16);
+		for (@Pc(16) int local16 = 0; local16 < ObjTypeList.anInt3245; local16++) {
+			@Pc(27) ObjType local27 = ObjTypeList.get(local16);
 			if ((!arg0 || local27.stockMarket) && local27.certificateTemplate == -1 && local27.lentTemplate == -1 && local27.dummyItem == 0 && local27.name.toLowerCase().indexOf(local12) != -1) {
 				if (local14 >= 250) {
 					Static169.aShortArray52 = null;
@@ -58,14 +58,14 @@ public final class Static155 {
 		Static111.anInt2905 = local14;
 		@Pc(117) JagString[] local117 = new JagString[Static111.anInt2905];
 		for (@Pc(119) int local119 = 0; local119 < Static111.anInt2905; local119++) {
-			local117[local119] = Static71.get(local8[local119]).name;
+			local117[local119] = ObjTypeList.get(local8[local119]).name;
 		}
 		Static202.method3656(local117, Static169.aShortArray52);
 	}
 
 	@OriginalMember(owner = "client!me", name = "a", descriptor = "(II)I")
 	public static int getVarbit(@OriginalArg(1) int arg0) {
-		@Pc(13) VarbitType local13 = Static125.method2449(arg0);
+		@Pc(13) VarbitType local13 = VarbitTypeList.get(arg0);
 		@Pc(16) int local16 = local13.baseVar;
 		@Pc(19) int local19 = local13.endBit;
 		@Pc(22) int local22 = local13.startBit;

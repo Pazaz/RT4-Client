@@ -178,7 +178,7 @@ public final class GlTexture extends SecondaryNode {
 			if (this.textureId == -1) {
 				@Pc(53) int[] temp = new int[1];
 				gl.glGenTextures(1, temp, 0);
-				this.anInt5492 = Static63.contextId;
+				this.anInt5492 = GlCleaner.contextId;
 				this.textureId = temp[0];
 				GlRenderer.setTextureId(this.textureId);
 				@Pc(82) ByteBuffer pixels = ByteBuffer.wrap(this.aClass88_1.method2728(size, size, this.aBoolean288, arg1, 0.7D, arg0));
@@ -215,7 +215,7 @@ public final class GlTexture extends SecondaryNode {
 //					gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_GENERATE_MIPMAP, GL2.GL_TRUE);
 //					gl.glTexImage2D(GL2.GL_TEXTURE_2D, 0, GL2.GL_RGBA8, size, size, 0, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, pixels);
 
-					Static63.onCardTexture += pixels.limit() * 4 / 3 - this.textureSize;
+					GlCleaner.onCardTexture += pixels.limit() * 4 / 3 - this.textureSize;
 					this.textureSize = pixels.limit() * 4 / 3;
 				} else if (this.anInt5489 == 1) {
 					@Pc(129) int local129 = 0;
@@ -225,7 +225,7 @@ public final class GlTexture extends SecondaryNode {
 						if (size == 0) {
 							gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR_MIPMAP_LINEAR);
 							gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
-							Static63.onCardTexture += pixels.limit() * 4 / 3 - this.textureSize;
+							GlCleaner.onCardTexture += pixels.limit() * 4 / 3 - this.textureSize;
 							this.textureSize = pixels.limit() * 4 / 3;
 							break;
 						}
@@ -235,7 +235,7 @@ public final class GlTexture extends SecondaryNode {
 					gl.glTexImage2D(GL2.GL_TEXTURE_2D, 0, GL2.GL_RGBA, size, size, 0, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, pixels);
 					gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR);
 					gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
-					Static63.onCardTexture += pixels.limit() - this.textureSize;
+					GlCleaner.onCardTexture += pixels.limit() - this.textureSize;
 					this.textureSize = pixels.limit();
 				}
 				gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_WRAP_S, this.aBoolean285 ? GL2.GL_REPEAT : GL2.GL_CLAMP_TO_EDGE);
@@ -308,7 +308,7 @@ public final class GlTexture extends SecondaryNode {
 	@Override
 	public final void finalize() throws Throwable {
 		if (this.textureId != -1) {
-			Static63.method1485(this.textureId, this.textureSize, this.anInt5492);
+			GlCleaner.method1485(this.textureId, this.textureSize, this.anInt5492);
 			this.textureSize = 0;
 			this.textureId = -1;
 		}

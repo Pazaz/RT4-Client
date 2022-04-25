@@ -95,7 +95,7 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "b", descriptor = "(B)I")
-	public final int method4480() {
+	public final int getChecksum() {
 		if (!this.method4484()) {
 			throw new IllegalStateException("");
 		}
@@ -460,7 +460,7 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(BI)[I")
-	public final int[] method4503(@OriginalArg(1) int arg0) {
+	public final int[] getFileIds(@OriginalArg(1) int arg0) {
 		if (!this.method4492(arg0)) {
 			return null;
 		}
@@ -476,7 +476,7 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(IB)I")
-	public final int method4504(@OriginalArg(0) int arg0) {
+	public final int getGroupCapacity(@OriginalArg(0) int arg0) {
 		return this.method4492(arg0) ? this.aClass70_2.anIntArray270[arg0] : 0;
 	}
 

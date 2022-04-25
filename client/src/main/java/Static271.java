@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static271 {
 
-	@OriginalMember(owner = "client!wc", name = "c", descriptor = "I")
-	public static int defaultPort;
-
 	@OriginalMember(owner = "client!wc", name = "g", descriptor = "I")
 	public static int anInt5804 = 0;
 
@@ -20,7 +17,7 @@ public final class Static271 {
 			return;
 		}
 		if (local10.primaryStream != null) {
-			Static204.soundStream.removeSubStream(local10.primaryStream);
+			client.soundStream.removeSubStream(local10.primaryStream);
 			local10.primaryStream = null;
 		}
 		local10.unlink();
@@ -44,27 +41,4 @@ public final class Static271 {
 		local8.pushClient();
 	}
 
-	@OriginalMember(owner = "client!wc", name = "a", descriptor = "(II)Lclient!pb;")
-	public static LocType get(@OriginalArg(1) int arg0) {
-		@Pc(15) LocType local15 = (LocType) Static179.aClass99_25.get((long) arg0);
-		if (local15 != null) {
-			return local15;
-		}
-		@Pc(30) byte[] local30 = Static146.aClass153_54.getFile(Static253.method4328(arg0), Static33.method872(arg0));
-		local15 = new LocType();
-		local15.anInt4426 = arg0;
-		if (local30 != null) {
-			local15.decode(new Buffer(local30));
-		}
-		local15.postDecode();
-		if (!Static30.aBoolean61 && local15.members) {
-			local15.ops = null;
-		}
-		if (local15.aBoolean210) {
-			local15.anInt4435 = 0;
-			local15.aBoolean207 = false;
-		}
-		Static179.aClass99_25.put(local15, (long) arg0);
-		return local15;
-	}
 }

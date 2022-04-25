@@ -11,7 +11,7 @@ public final class Static1 {
 	public static int anInt5;
 
 	@OriginalMember(owner = "client!a", name = "e", descriptor = "Lclient!na;")
-	public static final JagString TITLE_SONG = Static28.parse("scape main");
+	public static final JagString TITLE_SONG = JagString.parse("scape main");
 
 	@OriginalMember(owner = "client!a", name = "f", descriptor = "[Z")
 	public static final boolean[] aBooleanArray1 = new boolean[8];
@@ -20,12 +20,7 @@ public final class Static1 {
 	public static int anInt6 = 0;
 
 	@OriginalMember(owner = "client!a", name = "j", descriptor = "Lclient!na;")
-	public static final JagString aClass100_2 = Static28.parse("<col=ffffff> )4 ");
-
-	@OriginalMember(owner = "client!a", name = "a", descriptor = "(Lclient!fi;I)V")
-	public static void method1(@OriginalArg(0) HuffmanCodec arg0) {
-		Static62.aClass44_1 = arg0;
-	}
+	public static final JagString aClass100_2 = JagString.parse("<col=ffffff> )4 ");
 
 	@OriginalMember(owner = "client!a", name = "a", descriptor = "([[F[[F[[II[[F[[B[[II[[B[[B[[B[[[B)[Lclient!hg;")
 	public static GlTile[] method2(@OriginalArg(0) float[][] arg0, @OriginalArg(1) float[][] arg1, @OriginalArg(2) int[][] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) float[][] arg4, @OriginalArg(5) byte[][] arg5, @OriginalArg(6) int[][] arg6, @OriginalArg(8) byte[][] arg7, @OriginalArg(9) byte[][] arg8, @OriginalArg(10) byte[][] arg9, @OriginalArg(11) byte[][][] arg10) {
@@ -59,7 +54,7 @@ public final class Static1 {
 				local30 = arg8[local12][local17] & 0xFF;
 				local38 = arg9[local12][local17] & 0xFF;
 				if (local38 != 0) {
-					@Pc(50) FloType local50 = Static256.method4395(local38 - 1);
+					@Pc(50) FloType local50 = FloTypeList.method4395(local38 - 1);
 					if (local50.anInt5899 == -1) {
 						continue;
 					}
@@ -91,7 +86,7 @@ public final class Static1 {
 					@Pc(264) byte local264;
 					@Pc(287) int local287;
 					if (local180 != 0 && local38 != local180) {
-						local242 = Static256.method4395(local180 - 1);
+						local242 = FloTypeList.method4395(local180 - 1);
 						if (local242.aBoolean310 && local242.anInt5899 != -1) {
 							local264 = arg5[local12 - 1][local17 + 1];
 							local274 = arg7[local12 - 1][local17 + 1];
@@ -112,7 +107,7 @@ public final class Static1 {
 						}
 					}
 					if (local214 != 0 && local214 != local38) {
-						local242 = Static256.method4395(local214 - 1);
+						local242 = FloTypeList.method4395(local214 - 1);
 						if (local242.aBoolean310 && local242.anInt5899 != -1) {
 							local264 = arg5[local12 - 1][local17 - 1];
 							local274 = arg7[local12 - 1][local17 - 1];
@@ -132,7 +127,7 @@ public final class Static1 {
 						}
 					}
 					if (local202 != 0 && local38 != local202) {
-						local242 = Static256.method4395(local202 - 1);
+						local242 = FloTypeList.method4395(local202 - 1);
 						if (local242.aBoolean310 && local242.anInt5899 != -1) {
 							local264 = arg5[local12 + 1][local17 - 1];
 							local274 = arg7[local12 + 1][local17 - 1];
@@ -152,7 +147,7 @@ public final class Static1 {
 						}
 					}
 					if (local226 != 0 && local226 != local38) {
-						local242 = Static256.method4395(local226 - 1);
+						local242 = FloTypeList.method4395(local226 - 1);
 						if (local242.aBoolean310 && local242.anInt5899 != -1) {
 							local264 = arg5[local12 + 1][local17 + 1];
 							local274 = arg7[local12 + 1][local17 + 1];
@@ -172,7 +167,7 @@ public final class Static1 {
 						}
 					}
 					if (local143 != 0 && local38 != local143) {
-						local242 = Static256.method4395(local143 - 1);
+						local242 = FloTypeList.method4395(local143 - 1);
 						if (local242.aBoolean310 && local242.anInt5899 != -1) {
 							local129 = Static130.anIntArray300[arg7[local12][local17 + 1] * 4 + (arg5[local12][local17 + 1] + 2 & 0x3)];
 							for (local777 = 0; local777 < 8; local777++) {
@@ -187,7 +182,7 @@ public final class Static1 {
 						}
 					}
 					if (local163 != 0 && local38 != local163) {
-						local242 = Static256.method4395(local163 - 1);
+						local242 = FloTypeList.method4395(local163 - 1);
 						if (local242.aBoolean310 && local242.anInt5899 != -1) {
 							local133 = Static130.anIntArray300[(arg5[local12 - 1][local17] + 3 & 0x3) + arg7[local12 - 1][local17] * 4];
 							for (local777 = 0; local777 < 8; local777++) {
@@ -202,7 +197,7 @@ public final class Static1 {
 						}
 					}
 					if (local153 != 0 && local38 != local153) {
-						local242 = Static256.method4395(local153 - 1);
+						local242 = FloTypeList.method4395(local153 - 1);
 						if (local242.aBoolean310 && local242.anInt5899 != -1) {
 							local131 = Static130.anIntArray300[(arg5[local12][local17 - 1] & 0x3) + arg7[local12][local17 - 1] * 4];
 							for (local777 = 0; local777 < 8; local777++) {
@@ -217,7 +212,7 @@ public final class Static1 {
 						}
 					}
 					if (local190 != 0 && local38 != local190) {
-						local242 = Static256.method4395(local190 - 1);
+						local242 = FloTypeList.method4395(local190 - 1);
 						if (local242.aBoolean310 && local242.anInt5899 != -1) {
 							local168 = Static130.anIntArray300[(arg5[local12 + 1][local17] + 1 & 0x3) + arg7[local12 + 1][local17] * 4];
 							for (local777 = 0; local777 < 8; local777++) {
@@ -237,7 +232,7 @@ public final class Static1 {
 						local1068 = Static277.aBooleanArrayArray4[local777 == local153 ? local131 : 0];
 						@Pc(1077) boolean[] local1077 = Static277.aBooleanArrayArray4[local143 == local777 ? local129 : 0];
 						local1086 = Static277.aBooleanArrayArray4[local190 == local777 ? local168 : 0];
-						@Pc(1092) FloType local1092 = Static256.method4395(local777 - 1);
+						@Pc(1092) FloType local1092 = FloTypeList.method4395(local777 - 1);
 						@Pc(1097) GlTile local1097 = Static243.method4212(local10, local1092);
 						local1097.anInt2482 += 5;
 						local1097.anInt2482 += local1077.length - 2;
@@ -265,7 +260,7 @@ public final class Static1 {
 					local30 = arg3;
 				}
 				if (local127 != 0) {
-					@Pc(1250) FloType local1250 = Static256.method4395(local127 - 1);
+					@Pc(1250) FloType local1250 = FloTypeList.method4395(local127 - 1);
 					if (local1250.anInt5899 == -1) {
 						continue;
 					}
@@ -299,7 +294,7 @@ public final class Static1 {
 					if (local214 == 0 || local214 == local127) {
 						local214 = 0;
 					} else {
-						local1496 = Static256.method4395(local214 - 1);
+						local1496 = FloTypeList.method4395(local214 - 1);
 						if (local1496.aBoolean310 && local1496.anInt5899 != -1) {
 							local274 = arg5[local12 - 1][local17 + 1];
 							local1527 = arg7[local12 - 1][local17 + 1];
@@ -326,7 +321,7 @@ public final class Static1 {
 					if (local202 == 0 || local127 == local202) {
 						local202 = 0;
 					} else {
-						local1496 = Static256.method4395(local202 - 1);
+						local1496 = FloTypeList.method4395(local202 - 1);
 						if (local1496.aBoolean310 && local1496.anInt5899 != -1) {
 							local274 = arg5[local12 - 1][local17 - 1];
 							local1527 = arg7[local12 - 1][local17 - 1];
@@ -352,7 +347,7 @@ public final class Static1 {
 					if (local226 == 0 || local226 == local127) {
 						local226 = 0;
 					} else {
-						local1496 = Static256.method4395(local226 - 1);
+						local1496 = FloTypeList.method4395(local226 - 1);
 						if (local1496.aBoolean310 && local1496.anInt5899 != -1) {
 							local274 = arg5[local12 + 1][local17 - 1];
 							local1527 = arg7[local12 + 1][local17 - 1];
@@ -378,7 +373,7 @@ public final class Static1 {
 					if (local1035 == 0 || local127 == local1035) {
 						local1035 = 0;
 					} else {
-						local1496 = Static256.method4395(local1035 - 1);
+						local1496 = FloTypeList.method4395(local1035 - 1);
 						if (local1496.aBoolean310 && local1496.anInt5899 != -1) {
 							local1527 = arg7[local12 + 1][local17 + 1];
 							local274 = arg5[local12 + 1][local17 + 1];
@@ -403,7 +398,7 @@ public final class Static1 {
 					}
 					@Pc(2003) int local2003;
 					if (local163 != 0 && local163 != local127) {
-						local1496 = Static256.method4395(local163 - 1);
+						local1496 = FloTypeList.method4395(local163 - 1);
 						if (local1496.aBoolean310 && local1496.anInt5899 != -1) {
 							local133 = Static130.anIntArray300[arg7[local12][local17 + 1] * 4 + (arg5[local12][local17 + 1] + 2 & 0x3)];
 							for (local2003 = 0; local2003 < 8; local2003++) {
@@ -418,7 +413,7 @@ public final class Static1 {
 						}
 					}
 					if (local153 != 0 && local127 != local153) {
-						local1496 = Static256.method4395(local153 - 1);
+						local1496 = FloTypeList.method4395(local153 - 1);
 						if (local1496.aBoolean310 && local1496.anInt5899 != -1) {
 							local131 = Static130.anIntArray300[(arg5[local12 - 1][local17] + 3 & 0x3) + arg7[local12 - 1][local17] * 4];
 							for (local2003 = 0; local2003 < 8; local2003++) {
@@ -433,7 +428,7 @@ public final class Static1 {
 						}
 					}
 					if (local190 != 0 && local190 != local127) {
-						local1496 = Static256.method4395(local190 - 1);
+						local1496 = FloTypeList.method4395(local190 - 1);
 						if (local1496.aBoolean310 && local1496.anInt5899 != -1) {
 							local168 = Static130.anIntArray300[(arg5[local12][local17 - 1] & 0x3) + arg7[local12][local17 - 1] * 4];
 							for (local2003 = 0; local2003 < 8; local2003++) {
@@ -448,7 +443,7 @@ public final class Static1 {
 						}
 					}
 					if (local180 != 0 && local180 != local127) {
-						local1496 = Static256.method4395(local180 - 1);
+						local1496 = FloTypeList.method4395(local180 - 1);
 						if (local1496.aBoolean310 && local1496.anInt5899 != -1) {
 							local143 = Static130.anIntArray300[arg7[local12 + 1][local17] * 4 + (arg5[local12 + 1][local17] + 1 & 0x3)];
 							for (local2003 = 0; local2003 < 8; local2003++) {
@@ -468,7 +463,7 @@ public final class Static1 {
 						local1068 = Static277.aBooleanArrayArray4[local153 == local2003 ? local131 : 0];
 						local1086 = Static277.aBooleanArrayArray4[local2003 == local190 ? local168 : 0];
 						@Pc(2318) boolean[] local2318 = Static277.aBooleanArrayArray4[local2003 == local180 ? local143 : 0];
-						@Pc(2324) FloType local2324 = Static256.method4395(local2003 - 1);
+						@Pc(2324) FloType local2324 = FloTypeList.method4395(local2003 - 1);
 						@Pc(2329) GlTile local2329 = Static243.method4212(local10, local2324);
 						@Pc(2345) int local2345 = Static19.method588(local2324.texture, local2324.anInt5899, arg6[local12][local17]) << 8 | 0xFF;
 						@Pc(2365) int local2365 = Static19.method588(local2324.texture, local2324.anInt5899, arg6[local12 + 1][local17]) << 8 | 0xFF;
@@ -545,14 +540,14 @@ public final class Static1 {
 		if (WorldMap.loadPercentage < 100) {
 			return;
 		}
-		if (Static70.aClass3_Sub2_Sub1_2 == null || arg2 != Static70.aClass3_Sub2_Sub1_2.anInt1867 || Static70.aClass3_Sub2_Sub1_2.anInt1859 != arg1) {
+		if (WorldMap.aClass3_Sub2_Sub1_2 == null || arg2 != WorldMap.aClass3_Sub2_Sub1_2.anInt1867 || WorldMap.aClass3_Sub2_Sub1_2.anInt1859 != arg1) {
 			@Pc(63) SoftwareSprite local63 = new SoftwareSprite(arg2, arg1);
 			SoftwareRaster.method2491(local63.anIntArray20, arg2, arg1);
 			Static214.method4364(arg2, 0, WorldMap.width, 0, 0, WorldMap.length, arg1, 0);
 			if (GlRenderer.enabled) {
-				Static70.aClass3_Sub2_Sub1_2 = new GlSprite(local63);
+				WorldMap.aClass3_Sub2_Sub1_2 = new GlSprite(local63);
 			} else {
-				Static70.aClass3_Sub2_Sub1_2 = local63;
+				WorldMap.aClass3_Sub2_Sub1_2 = local63;
 			}
 			if (GlRenderer.enabled) {
 				SoftwareRaster.pixels = null;
@@ -560,7 +555,7 @@ public final class Static1 {
 				client.frameBuffer.makeTarget();
 			}
 		}
-		Static70.aClass3_Sub2_Sub1_2.method1415(arg0, arg3);
+		WorldMap.aClass3_Sub2_Sub1_2.method1415(arg0, arg3);
 		@Pc(147) int local147 = arg1 * Static109.anInt2884 / WorldMap.length + arg3;
 		@Pc(153) int local153 = Static37.anInt1176 * arg1 / WorldMap.length;
 		@Pc(161) int local161 = arg0 + arg2 * Static109.anInt2882 / WorldMap.width;

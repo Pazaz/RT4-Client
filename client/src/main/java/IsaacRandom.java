@@ -158,7 +158,7 @@ public final class IsaacRandom {
 	}
 
 	@OriginalMember(owner = "client!ij", name = "a", descriptor = "(I)I")
-	public final int method2295() {
+	public final int getNextKey() {
 		if (GlobalConfig.USE_ISAAC) {
 			if (this.anInt2916-- == 0) {
 				this.method2296();

@@ -92,7 +92,7 @@ public final class BasType {
 	}
 
 	@OriginalMember(owner = "client!ck", name = "a", descriptor = "(ILclient!wa;)V")
-	public final void method880(@OriginalArg(1) Buffer arg0) {
+	public final void decode(@OriginalArg(1) Buffer arg0) {
 		while (true) {
 			@Pc(16) int local16 = arg0.g1();
 			if (local16 == 0) {

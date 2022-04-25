@@ -3,9 +3,6 @@ import org.openrs2.deob.annotation.OriginalMember;
 
 public final class Static22 {
 
-	@OriginalMember(owner = "client!bl", name = "P", descriptor = "I")
-	public static int js5ConnectDelay = 0;
-
 	@OriginalMember(owner = "client!bl", name = "Q", descriptor = "I")
 	public static int anInt723 = 0;
 

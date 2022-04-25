@@ -4,33 +4,8 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static58 {
 
-	@OriginalMember(owner = "client!eh", name = "f", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_28;
-
-    @OriginalMember(owner = "client!eh", name = "j", descriptor = "I")
+	@OriginalMember(owner = "client!eh", name = "j", descriptor = "I")
 	public static int wheelRotation = 0;
-
-	@OriginalMember(owner = "client!eh", name = "a", descriptor = "(I)V")
-	public static void init() {
-		@Pc(8) int[] local8 = new int[Static170.anInt3245];
-		@Pc(10) int local10 = 0;
-		@Pc(12) int local12;
-		for (local12 = 0; local12 < Static170.anInt3245; local12++) {
-			@Pc(19) ObjType local19 = Static71.get(local12);
-			if (local19.manWear1 >= 0 || local19.womanWear1 >= 0) {
-				local8[local10++] = local12;
-			}
-		}
-		Static234.anIntArray455 = new int[local10];
-		for (local12 = 0; local12 < local10; local12++) {
-			Static234.anIntArray455[local12] = local8[local12];
-		}
-	}
-
-	@OriginalMember(owner = "client!eh", name = "a", descriptor = "(Lclient!ve;I)V")
-	public static void init(@OriginalArg(0) Js5 arg0) {
-		Static23.aClass153_11 = arg0;
-	}
 
 	@OriginalMember(owner = "client!eh", name = "a", descriptor = "(I[[I[[FI[[FIBIIBZBI[[FILclient!hg;)V")
 	public static void method1324(@OriginalArg(0) int arg0, @OriginalArg(1) int[][] arg1, @OriginalArg(2) float[][] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) float[][] arg4, @OriginalArg(5) int arg5, @OriginalArg(6) byte arg6, @OriginalArg(7) int arg7, @OriginalArg(8) int arg8, @OriginalArg(10) boolean arg9, @OriginalArg(11) byte arg10, @OriginalArg(12) int arg11, @OriginalArg(13) float[][] arg12, @OriginalArg(14) int arg13, @OriginalArg(15) GlTile arg14) {

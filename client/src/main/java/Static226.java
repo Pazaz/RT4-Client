@@ -4,20 +4,14 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static226 {
 
-	@OriginalMember(owner = "client!sf", name = "b", descriptor = "Lclient!ve;")
-	public static Js5 js5Archive27;
-
-	@OriginalMember(owner = "client!sf", name = "c", descriptor = "I")
+    @OriginalMember(owner = "client!sf", name = "c", descriptor = "I")
 	public static int anInt5080;
 
 	@OriginalMember(owner = "client!sf", name = "j", descriptor = "I")
 	public static int anInt5085;
 
-	@OriginalMember(owner = "client!sf", name = "a", descriptor = "I")
-	public static int anInt5079 = 0;
-
 	@OriginalMember(owner = "client!sf", name = "g", descriptor = "Lclient!na;")
-	public static final JagString aClass100_965 = Static28.parse("<col=ffff00>");
+	public static final JagString aClass100_965 = JagString.parse("<col=ffff00>");
 
 	@OriginalMember(owner = "client!sf", name = "h", descriptor = "[Lclient!na;")
 	public static final JagString[] varcstrs = new JagString[1000];
@@ -53,11 +47,6 @@ public final class Static226 {
 		arg0.anInt921 = local7;
 		arg0.anInt920 = local14;
 		arg0.anInt923 = local31;
-	}
-
-	@OriginalMember(owner = "client!sf", name = "a", descriptor = "(BLclient!ve;)V")
-	public static void init(@OriginalArg(1) Js5 arg0) {
-		Static39.aClass153_23 = arg0;
 	}
 
 	@OriginalMember(owner = "client!sf", name = "b", descriptor = "(B)V")

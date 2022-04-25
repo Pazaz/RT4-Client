@@ -32,12 +32,6 @@ public final class Static52 {
 		}
 	}
 
-	@OriginalMember(owner = "client!eb", name = "d", descriptor = "(I)V")
-	public static void method1287() {
-		Static241.components = new Component[Static202.aClass153_84.method4483()][];
-		Static223.aBooleanArray115 = new boolean[Static202.aClass153_84.method4483()];
-	}
-
 	@OriginalMember(owner = "client!eb", name = "b", descriptor = "(II)Lclient!na;")
 	public static JagString method1288(@OriginalArg(1) int arg0) {
 		if (arg0 < 100000) {

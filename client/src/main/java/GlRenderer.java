@@ -119,7 +119,7 @@ public final class GlRenderer {
 	private static boolean fogEnabled = true;
 
 	@OriginalMember(owner = "client!tf", name = "I", descriptor = "Lclient!na;")
-	private static final JagString RADEON = Static28.parse("radeon");
+	private static final JagString RADEON = JagString.parse("radeon");
 
 	private static JAWTWindow window;
 
@@ -485,7 +485,7 @@ public final class GlRenderer {
 			}
 
 			if (context != null) {
-				Static63.clear(); // GlCleaner
+				GlCleaner.clear(); // GlCleaner
 				try {
 					if (GLContext.getCurrent() == context) {
 						context.release();

@@ -4,15 +4,15 @@ import org.openrs2.deob.annotation.Pc;
 
 public class WorldMap {
     @OriginalMember(owner = "client!nc", name = "e", descriptor = "Lclient!na;")
-    public static final JagString UNDERLAY = Static28.parse("underlay");
+    public static final JagString UNDERLAY = JagString.parse("underlay");
     @OriginalMember(owner = "client!vj", name = "m", descriptor = "Lclient!na;")
-    public static final JagString LABELS = Static28.parse("_labels");
+    public static final JagString LABELS = JagString.parse("_labels");
     @OriginalMember(owner = "client!ac", name = "m", descriptor = "Lclient!na;")
-    public static final JagString OVERLAY = Static28.parse("overlay");
+    public static final JagString OVERLAY = JagString.parse("overlay");
     @OriginalMember(owner = "client!fm", name = "gb", descriptor = "Lclient!na;")
-    public static final JagString OVERLAY2 = Static28.parse("overlay2");
+    public static final JagString OVERLAY2 = JagString.parse("overlay2");
     @OriginalMember(owner = "client!df", name = "c", descriptor = "Lclient!na;")
-    public static final JagString LOC = Static28.parse("loc");
+    public static final JagString LOC = JagString.parse("loc");
     @OriginalMember(owner = "client!vk", name = "h", descriptor = "I")
     public static final int anInt5338 = (int) (Math.random() * 33.0D) - 16;
     @OriginalMember(owner = "client!kd", name = "rb", descriptor = "I")
@@ -79,6 +79,14 @@ public class WorldMap {
     public static int[][][] underlayColors;
     @OriginalMember(owner = "client!uc", name = "d", descriptor = "[[[I")
     public static int[][][] anIntArrayArrayArray17;
+    @OriginalMember(owner = "client!bn", name = "N", descriptor = "Lclient!be;")
+    public static Component component;
+    @OriginalMember(owner = "client!mc", name = "Q", descriptor = "Lclient!na;")
+    public static JagString aClass100_724;
+    @OriginalMember(owner = "client!fi", name = "j", descriptor = "Lclient!qf;")
+    public static Sprite aClass3_Sub2_Sub1_2;
+    @OriginalMember(owner = "client!mc", name = "S", descriptor = "Lclient!mm;")
+    public static SoftwareSprite aClass3_Sub2_Sub1_Sub1_2;
 
     @OriginalMember(owner = "client!pa", name = "d", descriptor = "(I)V")
     public static void method3413() {
@@ -298,7 +306,7 @@ public class WorldMap {
                 if (local175 > local114) {
                     local225 = underlays[local114][local203] & 0xFF;
                     if (local225 > 0) {
-                        @Pc(236) FluType local236 = Static199.method3593(local225 - 1);
+                        @Pc(236) FluType local236 = FluTypeList.get(local225 - 1);
                         local183[local203] += local236.weightedHue;
                         local180[local203] += local236.saturation;
                         local186[local203] += local236.lightness;
@@ -310,7 +318,7 @@ public class WorldMap {
                 if (local225 >= 0) {
                     local293 = underlays[local225][local203] & 0xFF;
                     if (local293 > 0) {
-                        @Pc(302) FluType local302 = Static199.method3593(local293 - 1);
+                        @Pc(302) FluType local302 = FluTypeList.get(local293 - 1);
                         local183[local203] -= local302.weightedHue;
                         local180[local203] -= local302.saturation;
                         local186[local203] -= local302.lightness;
@@ -540,14 +548,14 @@ public class WorldMap {
                                             underlayColors[local84][local95] = new int[4096];
                                         }
                                         id--;
-                                        @Pc(312) LocType local312 = Static271.get(id);
+                                        @Pc(312) LocType local312 = LocTypeList.get(id);
                                         if (local312.multiLocs != null) {
                                             local312 = local312.getMultiLoc();
                                             if (local312 == null || local312.mapElement == -1) {
                                                 continue;
                                             }
                                         }
-                                        underlayColors[local84][local95][(63 - local155 << 6) + local150] = local312.anInt4426 + 1;
+                                        underlayColors[local84][local95][(63 - local155 << 6) + local150] = local312.id + 1;
                                         @Pc(353) MapElement element = new MapElement();
                                         element.id = local312.mapElement;
                                         element.anInt4307 = local53;
@@ -829,5 +837,40 @@ public class WorldMap {
                 }
             }
         }
+    }
+
+    @OriginalMember(owner = "client!jb", name = "a", descriptor = "(IZ)V")
+    public static void clear(@OriginalArg(1) boolean arg0) {
+        aByteArrayArrayArray8 = null;
+        underlayColors = null;
+        component = null;
+        aByteArrayArrayArray3 = null;
+        overlayColors = null;
+        aByteArrayArrayArray10 = null;
+        if (arg0 && currentMap != null) {
+            aClass100_724 = currentMap.group;
+        } else {
+            aClass100_724 = null;
+        }
+        aByteArrayArrayArray7 = null;
+        aByteArrayArrayArray12 = null;
+        scenery = null;
+        anIntArrayArrayArray17 = null;
+        loadPercentage = 0;
+        currentMap = null;
+        mapElements.clear();
+        labels = null;
+        anInt4901 = -1;
+        font22 = null;
+        font30 = null;
+        font12 = null;
+        font26 = null;
+        font11 = null;
+        font14 = null;
+        font17 = null;
+        font19 = null;
+        aClass3_Sub2_Sub1_2 = null;
+        anInt3482 = -1;
+        aClass3_Sub2_Sub1_Sub1_2 = null;
     }
 }

@@ -8,36 +8,21 @@ public final class Static123 {
 	public static int anInt3058 = 0;
 
 	@OriginalMember(owner = "client!jj", name = "g", descriptor = "Lclient!na;")
-	public static final JagString aClass100_593 = Static28.parse(" (X");
+	public static final JagString aClass100_593 = JagString.parse(" (X");
 
 	@OriginalMember(owner = "client!jj", name = "j", descriptor = "Z")
 	public static boolean aBoolean155 = false;
 
 	@OriginalMember(owner = "client!jj", name = "m", descriptor = "Lclient!na;")
-	public static final JagString aClass100_594 = Static28.parse("<)4col>");
+	public static final JagString aClass100_594 = JagString.parse("<)4col>");
 	@OriginalMember(owner = "client!ml", name = "K", descriptor = "I")
 	public static int anInt3947;
-
-	@OriginalMember(owner = "client!jj", name = "a", descriptor = "(BI)Lclient!lk;")
-	public static StructType method2417(@OriginalArg(1) int arg0) {
-		@Pc(10) StructType local10 = (StructType) Static231.aClass54_13.get((long) arg0);
-		if (local10 != null) {
-			return local10;
-		}
-		@Pc(26) byte[] local26 = Static23.aClass153_11.getFile(26, arg0);
-		local10 = new StructType();
-		if (local26 != null) {
-			local10.decode(new Buffer(local26));
-		}
-		Static231.aClass54_13.put(local10, (long) arg0);
-		return local10;
-	}
 
 	@OriginalMember(owner = "client!jj", name = "a", descriptor = "(Z)V")
 	public static void topBannerRefresh() {
 		if (!client.advertSuppressed && client.modeWhere != 2) {
 			try {
-				Static206.aClass100_900.method3157(client.instance);
+				Static206.aClass100_900.browserControlCall(client.instance);
 			} catch (@Pc(26) Throwable local26) {
 			}
 		}

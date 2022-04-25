@@ -10,20 +10,8 @@ public final class Static231 {
 	@OriginalMember(owner = "client!sk", name = "mb", descriptor = "I")
 	public static int anInt5205;
 
-	@OriginalMember(owner = "client!sk", name = "bb", descriptor = "Lclient!gn;")
-	public static final LruHashTable aClass54_13 = new LruHashTable(64);
 
-
-	@OriginalMember(owner = "client!sk", name = "gb", descriptor = "J")
-	public static long aLong174 = 0L;
-
-	@OriginalMember(owner = "client!sk", name = "hb", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_29 = new SoftLruHashTable(64);
-
-	@OriginalMember(owner = "client!sk", name = "ib", descriptor = "I")
-	public static int anInt5202 = 0;
-
-	@OriginalMember(owner = "client!sk", name = "kb", descriptor = "I")
+    @OriginalMember(owner = "client!sk", name = "kb", descriptor = "I")
 	public static int anInt5204 = 0;
 
 	@OriginalMember(owner = "client!sk", name = "lb", descriptor = "Z")
@@ -222,8 +210,4 @@ public final class Static231 {
 		}
 	}
 
-	@OriginalMember(owner = "client!sk", name = "a", descriptor = "(Lclient!ve;I)Z")
-	public static boolean isReady(@OriginalArg(0) Js5 arg0) {
-		return arg0.isFileReady(Static138.anInt3443);
-	}
 }

@@ -8,7 +8,7 @@ public final class Static159 {
 	public static int anInt3893;
 
 	@OriginalMember(owner = "client!mi", name = "R", descriptor = "Lclient!na;")
-	public static final JagString aClass100_760 = Static28.parse(")1");
+	public static final JagString aClass100_760 = JagString.parse(")1");
 
 	@OriginalMember(owner = "client!mi", name = "S", descriptor = "[Lclient!e;")
 	public static final Player[] players = new Player[2048];
@@ -30,7 +30,7 @@ public final class Static159 {
 					if (local15 == -1) {
 						arg1.aClass147Array3[local25] = null;
 					} else {
-						@Pc(60) SeqType local60 = Static36.get(local15);
+						@Pc(60) SeqType local60 = SeqTypeList.get(local15);
 						@Pc(65) Class147 local65 = arg1.aClass147Array3[local25];
 						@Pc(68) int local68 = local60.anInt5347;
 						if (local65 != null) {
@@ -47,7 +47,7 @@ public final class Static159 {
 								} else if (local68 == 2) {
 									local65.anInt5400 = 0;
 								}
-							} else if (local60.anInt5355 >= Static36.get(local65.anInt5396).anInt5355) {
+							} else if (local60.anInt5355 >= SeqTypeList.get(local65.anInt5396).anInt5355) {
 								local65 = arg1.aClass147Array3[local25] = null;
 							}
 						}

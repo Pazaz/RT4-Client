@@ -4,20 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static258 {
 
-	@OriginalMember(owner = "client!va", name = "G", descriptor = "[Z")
-	public static boolean[] aBooleanArray130;
-
-	@OriginalMember(owner = "client!va", name = "O", descriptor = "I")
-	public static int threadPriority;
-
-	@OriginalMember(owner = "client!va", name = "b", descriptor = "(II)V")
-	public static void method4415() {
-		Static179.aClass99_25.method3102(5);
-		Static169.aClass99_24.method3102(5);
-		Static93.aClass99_14.method3102(5);
-		Static262.aClass99_36.method3102(5);
-	}
-
 	@OriginalMember(owner = "client!va", name = "a", descriptor = "(IZILclient!be;)V")
 	public static void method4418(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Component arg2) {
 		if (arg2.anInt530 == 1) {
@@ -59,13 +45,13 @@ public final class Static258 {
 						Static18.anInt588 = local171;
 						if (arg2.objTypes[local171] > 0) {
 							@Pc(267) ServerActiveProperties local267 = Static36.method940(arg2);
-							@Pc(276) ObjType local276 = Static71.get(arg2.objTypes[local171] - 1);
+							@Pc(276) ObjType local276 = ObjTypeList.get(arg2.objTypes[local171] - 1);
 							if (Static260.anInt5014 == 1 && local267.method510()) {
 								if (Static224.anInt5062 != arg2.id || Static185.anInt4370 != local171) {
 									Static98.method1966(-1, (long) local276.anInt2354, JagString.concatenate(new JagString[] { Static34.aClass100_203, Static223.aClass100_947, local276.name}), local171, (short) 40, LocalizedText.USE, arg2.id);
 								}
 							} else if (Static241.aBoolean302 && local267.method510()) {
-								@Pc(596) ParamType local596 = Static121.anInt3039 == -1 ? null : Static110.method2277(Static121.anInt3039);
+								@Pc(596) ParamType local596 = Static121.anInt3039 == -1 ? null : ParamTypeList.get(Static121.anInt3039);
 								if ((Static274.anInt4999 & 0x10) != 0 && (local596 == null || local276.getParam(local596.defaultInt, Static121.anInt3039) != local596.defaultInt)) {
 									Static98.method1966(Static246.anInt5393, (long) local276.anInt2354, JagString.concatenate(new JagString[] { Static78.aClass100_466, Static223.aClass100_947, local276.name}), local171, (short) 3, Static102.aClass100_545, arg2.id);
 								}

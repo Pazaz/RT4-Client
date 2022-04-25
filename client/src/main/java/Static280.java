@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static280 {
 
-	@OriginalMember(owner = "client!wl", name = "s", descriptor = "Lclient!ve;")
-	public static Js5 js5Archive16;
-
 	@OriginalMember(owner = "client!wl", name = "h", descriptor = "Lclient!be;")
 	public static Component aClass13_26 = null;
 
@@ -15,7 +12,7 @@ public final class Static280 {
 
 	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(Lclient!fe;B)V")
 	public static void method4665(@OriginalArg(0) PathingEntity arg0) {
-		if (Static83.loop == arg0.anInt3386 || arg0.seqId == -1 || arg0.anInt3420 != 0 || arg0.anInt3360 + 1 > Static36.get(arg0.seqId).anIntArray474[arg0.anInt3425]) {
+		if (Static83.loop == arg0.anInt3386 || arg0.seqId == -1 || arg0.anInt3420 != 0 || arg0.anInt3360 + 1 > SeqTypeList.get(arg0.seqId).anIntArray474[arg0.anInt3425]) {
 			@Pc(35) int local35 = arg0.anInt3386 - arg0.anInt3395;
 			@Pc(41) int local41 = Static83.loop - arg0.anInt3395;
 			@Pc(52) int local52 = arg0.anInt3380 * 128 + arg0.getSize() * 64;
@@ -536,13 +533,13 @@ public final class Static280 {
 	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(Lclient!be;I)Lclient!be;")
 	public static Component method4668(@OriginalArg(0) Component arg0) {
 		if (arg0.layer != -1) {
-			return Static5.getComponent(arg0.layer);
+			return InterfaceList.getComponent(arg0.layer);
 		}
 		@Pc(28) int local28 = arg0.id >>> 16;
 		@Pc(33) HashTableIterator local33 = new HashTableIterator(Static119.aClass133_9);
 		for (@Pc(38) Class3_Sub31 local38 = (Class3_Sub31) local33.method2701(); local38 != null; local38 = (Class3_Sub31) local33.method2700()) {
 			if (local28 == local38.anInt5878) {
-				return Static5.getComponent((int) local38.key);
+				return InterfaceList.getComponent((int) local38.key);
 			}
 		}
 		return null;

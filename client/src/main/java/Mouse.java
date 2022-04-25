@@ -35,7 +35,30 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
 		}
 	}
 
-	@OriginalMember(owner = "client!ug", name = "mouseMoved", descriptor = "(Ljava/awt/event/MouseEvent;)V")
+    @OriginalMember(owner = "client!ii", name = "b", descriptor = "(I)V")
+    public static void loop() {
+        @Pc(2) Mouse local2 = Static93.instance;
+        synchronized (Static93.instance) {
+            Static22.anInt723 = Static57.anInt1759;
+            Static215.anInt4873 = Static147.anInt3521;
+            Static223.anInt5032 = Static165.anInt4039;
+            Static150.clickButton = Static41.anInt1313;
+            Static7.clickX = Static34.anInt1034;
+            Static93.anInt2467++;
+            Static60.clickY = Static222.anInt4973;
+            Static133.clickTime = Static209.aLong161;
+            Static41.anInt1313 = 0;
+        }
+    }
+
+    @OriginalMember(owner = "client!h", name = "a", descriptor = "(Ljava/awt/Component;Z)V")
+    public static void start(@OriginalArg(0) Component arg0) {
+        arg0.addMouseListener(Static93.instance);
+        arg0.addMouseMotionListener(Static93.instance);
+        arg0.addFocusListener(Static93.instance);
+    }
+
+    @OriginalMember(owner = "client!ug", name = "mouseMoved", descriptor = "(Ljava/awt/event/MouseEvent;)V")
 	@Override
 	public final synchronized void mouseMoved(@OriginalArg(0) MouseEvent arg0) {
 		if (Static93.instance != null) {

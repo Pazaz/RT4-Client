@@ -163,9 +163,9 @@ public final class NpcType {
 		}
 		if (local5 < 0 || local5 >= this.multiNpcs.length - 1 || this.multiNpcs[local5] == -1) {
 			@Pc(55) int local55 = this.multiNpcs[this.multiNpcs.length - 1];
-			return local55 == -1 ? null : Static214.get(local55);
+			return local55 == -1 ? null : NpcTypeList.get(local55);
 		} else {
-			return Static214.get(this.multiNpcs[local5]);
+			return NpcTypeList.get(this.multiNpcs[local5]);
 		}
 	}
 
@@ -195,7 +195,7 @@ public final class NpcType {
 		}
 		for (@Pc(35) int local35 = 0; local35 < this.multiNpcs.length; local35++) {
 			if (this.multiNpcs[local35] != -1) {
-				@Pc(60) NpcType local60 = Static214.get(this.multiNpcs[local35]);
+				@Pc(60) NpcType local60 = NpcTypeList.get(this.multiNpcs[local35]);
 				if (local60.idleSound != -1 || local60.walkSound != -1 || local60.runSound != -1) {
 					return true;
 				}
@@ -220,7 +220,7 @@ public final class NpcType {
 			@Pc(13) NpcType local13 = this.getMultiNpc();
 			return local13 == null ? null : local13.getBodyModel(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 		}
-		@Pc(40) Model local40 = (Model) Static125.aClass99_18.get((long) this.id);
+		@Pc(40) Model local40 = (Model) NpcTypeList.aClass99_18.get((long) this.id);
 		@Pc(46) boolean local46;
 		@Pc(173) int local173;
 		@Pc(235) int local235;
@@ -236,7 +236,7 @@ public final class NpcType {
 		if (local40 == null) {
 			local46 = false;
 			for (@Pc(48) int local48 = 0; local48 < this.anIntArray356.length; local48++) {
-				if (this.anIntArray356[local48] != -1 && !Static86.modelsArchive.isFileReady(0, this.anIntArray356[local48])) {
+				if (this.anIntArray356[local48] != -1 && !NpcTypeList.modelsArchive.isFileReady(0, this.anIntArray356[local48])) {
 					local46 = true;
 				}
 			}
@@ -246,7 +246,7 @@ public final class NpcType {
 			@Pc(84) RawModel[] local84 = new RawModel[this.anIntArray356.length];
 			for (@Pc(86) int local86 = 0; local86 < this.anIntArray356.length; local86++) {
 				if (this.anIntArray356[local86] != -1) {
-					local84[local86] = Static77.create(Static86.modelsArchive, this.anIntArray356[local86]);
+					local84[local86] = Static77.create(NpcTypeList.modelsArchive, this.anIntArray356[local86]);
 					if (this.anIntArrayArray29 != null && this.anIntArrayArray29[local86] != null && local84[local86] != null) {
 						local84[local86].translate(this.anIntArrayArray29[local86][0], this.anIntArrayArray29[local86][1], this.anIntArrayArray29[local86][2]);
 					}
@@ -254,7 +254,7 @@ public final class NpcType {
 			}
 			@Pc(156) BasType local156 = null;
 			if (this.basId != -1) {
-				local156 = Static90.method1856(this.basId);
+				local156 = BasTypeList.get(this.basId);
 			}
 			if (local156 != null && local156.modelRotateTranslate != null) {
 				for (local173 = 0; local173 < local156.modelRotateTranslate.length; local173++) {
@@ -321,7 +321,7 @@ public final class NpcType {
 					if (this.aByteArray51 == null || this.aByteArray51.length <= local173) {
 						local593.recolor(this.recolorDestination[local173], this.recolorSource[local173]);
 					} else {
-						local593.recolor(this.recolorDestination[local173], Static232.aShortArray74[this.aByteArray51[local173] & 0xFF]);
+						local593.recolor(this.recolorDestination[local173], client.aShortArray74[this.aByteArray51[local173] & 0xFF]);
 					}
 				}
 			}
@@ -334,7 +334,7 @@ public final class NpcType {
 			if (GlRenderer.enabled) {
 				((GlModel) local40).method4111(false, false, false, false, false, true);
 			}
-			Static125.aClass99_18.put(local40, (long) this.id);
+			NpcTypeList.aClass99_18.put(local40, (long) this.id);
 		}
 		local46 = false;
 		@Pc(721) boolean local721 = false;
@@ -343,7 +343,7 @@ public final class NpcType {
 		local173 = arg0 == null ? 0 : arg0.length;
 		for (local235 = 0; local235 < local173; local235++) {
 			if (arg0[local235] != null) {
-				@Pc(753) SeqType local753 = Static36.get(arg0[local235].anInt5396);
+				@Pc(753) SeqType local753 = SeqTypeList.get(arg0[local235].anInt5396);
 				if (local753.frames != null) {
 					Static146.aClass144Array1[local235] = local753;
 					local207 = arg0[local235].anInt5398;
@@ -507,11 +507,11 @@ public final class NpcType {
 		} else if (this.anIntArray354 == null) {
 			return null;
 		} else {
-			@Pc(41) Model local41 = (Model) Static262.headModels.get((long) this.id);
+			@Pc(41) Model local41 = (Model) NpcTypeList.headModels.get((long) this.id);
 			if (local41 == null) {
 				@Pc(46) boolean local46 = false;
 				for (@Pc(48) int local48 = 0; local48 < this.anIntArray354.length; local48++) {
-					if (!Static86.modelsArchive.isFileReady(0, this.anIntArray354[local48])) {
+					if (!NpcTypeList.modelsArchive.isFileReady(0, this.anIntArray354[local48])) {
 						local46 = true;
 					}
 				}
@@ -520,7 +520,7 @@ public final class NpcType {
 				}
 				@Pc(82) RawModel[] local82 = new RawModel[this.anIntArray354.length];
 				for (@Pc(84) int local84 = 0; local84 < this.anIntArray354.length; local84++) {
-					local82[local84] = Static77.create(Static86.modelsArchive, this.anIntArray354[local84]);
+					local82[local84] = Static77.create(NpcTypeList.modelsArchive, this.anIntArray354[local84]);
 				}
 				@Pc(119) RawModel local119;
 				if (local82.length == 1) {
@@ -534,7 +534,7 @@ public final class NpcType {
 						if (this.aByteArray51 == null || local130 >= this.aByteArray51.length) {
 							local119.recolor(this.recolorDestination[local130], this.recolorSource[local130]);
 						} else {
-							local119.recolor(this.recolorDestination[local130], Static232.aShortArray74[this.aByteArray51[local130] & 0xFF]);
+							local119.recolor(this.recolorDestination[local130], client.aShortArray74[this.aByteArray51[local130] & 0xFF]);
 						}
 					}
 				}
@@ -544,7 +544,7 @@ public final class NpcType {
 					}
 				}
 				local41 = local119.createModel(64, 768, -50, -10, -50);
-				Static262.headModels.put(local41, (long) this.id);
+				NpcTypeList.headModels.put(local41, (long) this.id);
 			}
 			if (arg0 != null) {
 				local41 = arg0.method4215(local41, arg2, arg1, arg3);

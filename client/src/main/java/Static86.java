@@ -3,17 +3,11 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static86 {
 
-    @OriginalMember(owner = "client!gm", name = "ib", descriptor = "Lclient!ve;")
-	public static Js5 modelsArchive;
-
-	@OriginalMember(owner = "client!gm", name = "R", descriptor = "I")
+    @OriginalMember(owner = "client!gm", name = "R", descriptor = "I")
 	public static int anInt2293 = (int) (Math.random() * 17.0D) - 8;
 
 	@OriginalMember(owner = "client!gm", name = "W", descriptor = "Lclient!na;")
-	public static final JagString aClass100_488 = Static28.parse("_");
-
-	@OriginalMember(owner = "client!gm", name = "bb", descriptor = "Z")
-	public static boolean aBoolean129 = false;
+	public static final JagString aClass100_488 = JagString.parse("_");
 
     @OriginalMember(owner = "client!gm", name = "gb", descriptor = "[I")
 	public static final int[] anIntArray211 = new int[] { 0, 4, 4, 8, 0, 0, 8, 0, 0 };
@@ -41,8 +35,8 @@ public final class Static86 {
 				Static175.npcs[local30] = null;
 			}
 		}
-		if (Static223.anInt5028 != Static57.aClass3_Sub15_Sub1_3.offset) {
-			throw new RuntimeException("gnp1 pos:" + Static57.aClass3_Sub15_Sub1_3.offset + " psize:" + Static223.anInt5028);
+		if (Protocol.length != Protocol.inboundBuffer.offset) {
+			throw new RuntimeException("gnp1 pos:" + Protocol.inboundBuffer.offset + " psize:" + Protocol.length);
 		}
 		for (local19 = 0; local19 < Static272.anInt5214; local19++) {
 			if (Static175.npcs[Static33.anIntArray79[local19]] == null) {

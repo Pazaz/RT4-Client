@@ -11,7 +11,7 @@ public final class Static264 {
 	public static final int[] anIntArray410 = new int[100];
 
 	@OriginalMember(owner = "client!vh", name = "c", descriptor = "Lclient!na;")
-	public static final JagString aClass100_875 = Static28.parse(":");
+	public static final JagString aClass100_875 = JagString.parse(":");
 
 	@OriginalMember(owner = "client!vh", name = "p", descriptor = "[I")
 	public static final int[] anIntArray412 = new int[] { 1, 0, 0, 0, 1, 0, 2, 1, 1, 1, 0, 2, 0, 0, 1, 0 };
@@ -23,7 +23,7 @@ public final class Static264 {
 	public static QuickChatPhrase method3568(@OriginalArg(1) Buffer arg0) {
 		@Pc(3) QuickChatPhrase local3 = new QuickChatPhrase();
 		local3.anInt439 = arg0.g2();
-		local3.aClass3_Sub2_Sub6_1 = Static230.method3953(local3.anInt439);
+		local3.aClass3_Sub2_Sub6_1 = QuickChatPhraseTypeList.get(local3.anInt439);
 		return local3;
 	}
 

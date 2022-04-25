@@ -9,9 +9,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static97 {
 
-	@OriginalMember(owner = "client!hi", name = "g", descriptor = "I")
-	public static int worldListAlternatePort;
-
 	@OriginalMember(owner = "client!hi", name = "a", descriptor = "I")
 	public static int anInt2503 = -1;
 
@@ -94,33 +91,6 @@ public final class Static97 {
 			}
 			local24 = local24 + ' ';
 		}
-	}
-
-	@OriginalMember(owner = "client!hi", name = "a", descriptor = "(Lclient!wa;I)V")
-	public static void method1962(@OriginalArg(0) Buffer arg0) {
-		@Pc(9) int local9 = arg0.gSmart1or2();
-		Static203.aClass32Array1 = new Class32[local9];
-		@Pc(14) int local14;
-		for (local14 = 0; local14 < local9; local14++) {
-			Static203.aClass32Array1[local14] = new Class32();
-			Static203.aClass32Array1[local14].anInt1739 = arg0.gSmart1or2();
-			Static203.aClass32Array1[local14].aClass100_378 = arg0.gjstr2();
-		}
-		Static19.anInt636 = arg0.gSmart1or2();
-		Static171.anInt4157 = arg0.gSmart1or2();
-		Static106.anInt2871 = arg0.gSmart1or2();
-		Static196.aClass10_Sub1Array2 = new World[Static171.anInt4157 + 1 - Static19.anInt636];
-		for (local14 = 0; local14 < Static106.anInt2871; local14++) {
-			@Pc(77) int local77 = arg0.gSmart1or2();
-			@Pc(85) World local85 = Static196.aClass10_Sub1Array2[local77] = new World();
-			local85.country = arg0.g1();
-			local85.flags = arg0.g4();
-			local85.anInt382 = local77 + Static19.anInt636;
-			local85.aClass100_69 = arg0.gjstr2();
-			local85.aClass100_71 = arg0.gjstr2();
-		}
-		Static80.anInt4702 = arg0.g4();
-		Static61.aBoolean109 = true;
 	}
 
 	@OriginalMember(owner = "client!hi", name = "a", descriptor = "(Lclient!be;B)Lclient!na;")

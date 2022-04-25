@@ -5,21 +5,21 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static54 {
 
 	@OriginalMember(owner = "client!ed", name = "D", descriptor = "Lclient!na;")
-	public static final JagString aClass100_374 = Static28.parse("details");
+	public static final JagString aClass100_374 = JagString.parse("details");
 
 	@OriginalMember(owner = "client!ed", name = "H", descriptor = "Lclient!na;")
-	public static final JagString aClass100_375 = Static28.parse("<)4col> x");
+	public static final JagString aClass100_375 = JagString.parse("<)4col> x");
 
 	@OriginalMember(owner = "client!ed", name = "a", descriptor = "(III)V")
 	public static void method1304(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
-		if (Static245.load(arg1)) {
-			Static2.method7(Static241.components[arg1], arg0);
+		if (InterfaceList.load(arg1)) {
+			Static2.method7(InterfaceList.components[arg1], arg0);
 		}
 	}
 
 	@OriginalMember(owner = "client!ed", name = "a", descriptor = "(IBIILclient!be;)V")
 	public static void method1305(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Component arg3) {
-		Static107.loop();
+		client.audioLoop();
 		if (GlRenderer.enabled) {
 			Static46.method1187(arg2, arg1, arg2 + arg3.anInt445, arg1 + arg3.anInt459);
 		} else {
@@ -85,7 +85,7 @@ public final class Static54 {
 			for (local146 = 0; local146 < Static251.anInt5454; local146++) {
 				local181 = Static145.anIntArray331[local146] * 4 + 2 - PlayerList.self.xFine / 32;
 				local150 = Static93.anIntArray219[local146] * 4 + 2 - PlayerList.self.zFine / 32;
-				@Pc(382) LocType local382 = Static271.get(Static199.anIntArray417[local146]);
+				@Pc(382) LocType local382 = LocTypeList.get(Static199.anIntArray417[local146]);
 				if (local382.multiLocs != null) {
 					local382 = local382.getMultiLoc();
 					if (local382 == null || local382.mapElement == -1) {
@@ -245,11 +245,6 @@ public final class Static54 {
 		method1307(arg0, arg1, arg2, local14 + 1);
 	}
 
-	@OriginalMember(owner = "client!ed", name = "c", descriptor = "(I)V")
-	public static void method1308() {
-		Static83.aClass99_3.clear();
-	}
-
 	@OriginalMember(owner = "client!ed", name = "a", descriptor = "(IIII)I")
 	public static int method1309(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
 		if (arg0 > 243) {
@@ -266,31 +261,31 @@ public final class Static54 {
 
 	@OriginalMember(owner = "client!ed", name = "b", descriptor = "(II)Lclient!ba;")
 	public static World getWorld(@OriginalArg(1) int arg0) {
-		return Static61.aBoolean109 && arg0 >= Static19.anInt636 && arg0 <= Static171.anInt4157 ? Static196.aClass10_Sub1Array2[arg0 - Static19.anInt636] : null;
+		return WorldList.loaded && arg0 >= WorldList.minId && arg0 <= WorldList.maxId ? WorldList.worlds[arg0 - WorldList.minId] : null;
 	}
 
 	@OriginalMember(owner = "client!ed", name = "d", descriptor = "(B)V")
 	public static void loop() {
-		for (@Pc(5) int local5 = 0; local5 < Static189.anInt4451; local5++) {
-			@Pc(12) int local12 = Static164.anIntArray362[local5]--;
-			if (Static164.anIntArray362[local5] >= -10) {
-				@Pc(79) SynthSound local79 = Static173.aClass138Array1[local5];
+		for (@Pc(5) int local5 = 0; local5 < SoundPlayer.anInt4451; local5++) {
+			@Pc(12) int local12 = SoundPlayer.anIntArray362[local5]--;
+			if (SoundPlayer.anIntArray362[local5] >= -10) {
+				@Pc(79) SynthSound local79 = SoundPlayer.aClass138Array1[local5];
 				if (local79 == null) {
-					local79 = SynthSound.create(Static248.js5Archive4, Static200.anIntArray421[local5], 0);
+					local79 = SynthSound.create(client.js5Archive4, SoundPlayer.anIntArray421[local5], 0);
 					if (local79 == null) {
 						continue;
 					}
-					Static164.anIntArray362[local5] += local79.method3990();
-					Static173.aClass138Array1[local5] = local79;
+					SoundPlayer.anIntArray362[local5] += local79.method3990();
+					SoundPlayer.aClass138Array1[local5] = local79;
 				}
-				if (Static164.anIntArray362[local5] < 0) {
+				if (SoundPlayer.anIntArray362[local5] < 0) {
 					@Pc(209) int local209;
-					if (Static26.anIntArray68[local5] == 0) {
+					if (SoundPlayer.anIntArray68[local5] == 0) {
 						local209 = Preferences.soundEffectVolume;
 					} else {
-						@Pc(125) int local125 = (Static26.anIntArray68[local5] & 0xFF) * 128;
-						@Pc(133) int local133 = Static26.anIntArray68[local5] >> 8 & 0xFF;
-						@Pc(141) int local141 = Static26.anIntArray68[local5] >> 16 & 0xFF;
+						@Pc(125) int local125 = (SoundPlayer.anIntArray68[local5] & 0xFF) * 128;
+						@Pc(133) int local133 = SoundPlayer.anIntArray68[local5] >> 8 & 0xFF;
+						@Pc(141) int local141 = SoundPlayer.anIntArray68[local5] >> 16 & 0xFF;
 						@Pc(151) int local151 = local133 * 128 + 64 - PlayerList.self.zFine;
 						if (local151 < 0) {
 							local151 = -local151;
@@ -301,7 +296,7 @@ public final class Static54 {
 						}
 						@Pc(180) int local180 = local167 + local151 - 128;
 						if (local125 < local180) {
-							Static164.anIntArray362[local5] = -100;
+							SoundPlayer.anIntArray362[local5] = -100;
 							continue;
 						}
 						if (local180 < 0) {
@@ -310,34 +305,34 @@ public final class Static54 {
 						local209 = Preferences.ambientSoundsVolume * (local125 - local180) / local125;
 					}
 					if (local209 > 0) {
-						@Pc(223) PcmSound local223 = local79.method3989().method2648(Static56.resampler);
+						@Pc(223) PcmSound local223 = local79.method3989().method2648(client.resampler);
 						@Pc(228) SoundPcmStream local228 = Static284.method404(local223, local209);
-						local228.method396(Static276.anIntArray563[local5] - 1);
-						Static204.soundStream.method1343(local228);
+						local228.method396(SoundPlayer.anIntArray563[local5] - 1);
+						client.soundStream.method1343(local228);
 					}
-					Static164.anIntArray362[local5] = -100;
+					SoundPlayer.anIntArray362[local5] = -100;
 				}
 			} else {
-				Static189.anInt4451--;
-				for (@Pc(28) int local28 = local5; local28 < Static189.anInt4451; local28++) {
-					Static200.anIntArray421[local28] = Static200.anIntArray421[local28 + 1];
-					Static173.aClass138Array1[local28] = Static173.aClass138Array1[local28 + 1];
-					Static276.anIntArray563[local28] = Static276.anIntArray563[local28 + 1];
-					Static164.anIntArray362[local28] = Static164.anIntArray362[local28 + 1];
-					Static26.anIntArray68[local28] = Static26.anIntArray68[local28 + 1];
+				SoundPlayer.anInt4451--;
+				for (@Pc(28) int local28 = local5; local28 < SoundPlayer.anInt4451; local28++) {
+					SoundPlayer.anIntArray421[local28] = SoundPlayer.anIntArray421[local28 + 1];
+					SoundPlayer.aClass138Array1[local28] = SoundPlayer.aClass138Array1[local28 + 1];
+					SoundPlayer.anIntArray563[local28] = SoundPlayer.anIntArray563[local28 + 1];
+					SoundPlayer.anIntArray362[local28] = SoundPlayer.anIntArray362[local28 + 1];
+					SoundPlayer.anIntArray68[local28] = SoundPlayer.anIntArray68[local28 + 1];
 				}
 				local5--;
 			}
 		}
 		if (MidiPlayer.jingle && !Static136.method2655()) {
-			if (Preferences.musicVolume != 0 && Static221.anInt4363 != -1) {
-				Static122.method2410(Static130.js5Archive6, Static221.anInt4363, Preferences.musicVolume);
+			if (Preferences.musicVolume != 0 && MusicPlayer.groupId != -1) {
+				Static122.method2410(client.js5Archive6, MusicPlayer.groupId, Preferences.musicVolume);
 			}
 			MidiPlayer.jingle = false;
-		} else if (Preferences.musicVolume != 0 && Static221.anInt4363 != -1 && !Static136.method2655()) {
-			Static6.outboundBuffer.p1isaac(137);
-			Static6.outboundBuffer.p4(Static221.anInt4363);
-			Static221.anInt4363 = -1;
+		} else if (Preferences.musicVolume != 0 && MusicPlayer.groupId != -1 && !Static136.method2655()) {
+			Protocol.outboundBuffer.p1isaac(137);
+			Protocol.outboundBuffer.p4(MusicPlayer.groupId);
+			MusicPlayer.groupId = -1;
 		}
 	}
 }

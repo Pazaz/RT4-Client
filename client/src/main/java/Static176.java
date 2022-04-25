@@ -11,20 +11,13 @@ public final class Static176 {
 	public static final boolean[] aBooleanArray95 = new boolean[5];
 
 	@OriginalMember(owner = "client!ob", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_800 = Static28.parse("");
+	public static final JagString aClass100_800 = JagString.parse("");
 
 	@OriginalMember(owner = "client!ob", name = "o", descriptor = "Lclient!na;")
-	private static final JagString aClass100_801 = Static28.parse(")4a=");
+	private static final JagString aClass100_801 = JagString.parse(")4a=");
 
 	@OriginalMember(owner = "client!ob", name = "p", descriptor = "Lclient!na;")
-	public static final JagString aClass100_802 = Static28.parse("(U0a )2 non)2existant gosub script)2num: ");
-
-	@OriginalMember(owner = "client!ob", name = "a", descriptor = "(B)V")
-	public static void method3302() {
-		Static27.aClass99_4.clear();
-		Static244.models.clear();
-		Static118.objectSpriteCache.clear();
-	}
+	public static final JagString aClass100_802 = JagString.parse("(U0a )2 non)2existant gosub script)2num: ");
 
 	@OriginalMember(owner = "client!ob", name = "a", descriptor = "(IB)Z")
 	public static boolean hopWorld(@OriginalArg(0) int arg0) {
@@ -32,25 +25,25 @@ public final class Static176 {
 		if (local3 == null) {
 			return false;
 		} else if (SignLink.anInt5928 == 1 || SignLink.anInt5928 == 2 || client.modeWhere == 2) {
-			@Pc(31) byte[] local31 = local3.aClass100_71.method3148();
-			Static60.hostname = new String(local31, 0, local31.length);
-			Static125.worldId = local3.anInt382;
+			@Pc(31) byte[] local31 = local3.hostname.method3148();
+			client.hostname = new String(local31, 0, local31.length);
+			Static125.worldId = local3.id;
 			if (client.modeWhere != 0) {
-				Static271.defaultPort = Static125.worldId + 43594; // 40000;
-				Static209.port = Static271.defaultPort;
-				Static55.alternatePort = Static125.worldId + 43594; // 50000;
+				client.defaultPort = Static125.worldId + 43594; // 40000;
+				client.port = client.defaultPort;
+				client.alternatePort = Static125.worldId + 43594; // 50000;
 			}
 			return true;
 		} else {
 			@Pc(62) JagString local62 = Static211.aClass100_230;
 			if (client.modeWhere != 0) {
-				local62 = JagString.concatenate(new JagString[] { Static31.aClass100_193, Static123.parseInt(local3.anInt382 + 7000) });
+				local62 = JagString.concatenate(new JagString[] { Static31.aClass100_193, Static123.parseInt(local3.id + 7000) });
 			}
 			@Pc(89) JagString local89 = Static211.aClass100_230;
 			if (client.settings != null) {
 				local89 = JagString.concatenate(new JagString[] { Static167.aClass100_783, client.settings});
 			}
-			@Pc(182) JagString local182 = JagString.concatenate(new JagString[] { Static115.aClass100_582, local3.aClass100_71, local62, Static279.aClass100_1107, Static123.parseInt(client.language), aClass100_801, Static123.parseInt(client.affiliate), local89, Static139.aClass100_659, client.objectTag ? Static30.aClass100_184 : Static260.aClass100_945, Static60.aClass100_420, client.javaScript ? Static30.aClass100_184 : Static260.aClass100_945, Static198.aClass100_260, client.advertSuppressed ? Static30.aClass100_184 : Static260.aClass100_945 });
+			@Pc(182) JagString local182 = JagString.concatenate(new JagString[] { Static115.aClass100_582, local3.hostname, local62, Static279.aClass100_1107, Static123.parseInt(client.language), aClass100_801, Static123.parseInt(client.affiliate), local89, Static139.aClass100_659, client.objectTag ? Static30.aClass100_184 : Static260.aClass100_945, Static60.aClass100_420, client.javaScript ? Static30.aClass100_184 : Static260.aClass100_945, Static198.aClass100_260, client.advertSuppressed ? Static30.aClass100_184 : Static260.aClass100_945 });
 			try {
 				client.instance.getAppletContext().showDocument(local182.method3107(), "_self");
 				return true;
@@ -96,7 +89,7 @@ public final class Static176 {
 				local112 = local121;
 				@Pc(240) int local240;
 				if (local133 == 2 && Static257.method523(Static55.level, local47, local147, local121)) {
-					@Pc(172) LocType local172 = Static271.get(local140);
+					@Pc(172) LocType local172 = LocTypeList.get(local140);
 					if (local172.multiLocs != null) {
 						local172 = local172.getMultiLoc();
 					}
@@ -106,7 +99,7 @@ public final class Static176 {
 					if (Static260.anInt5014 == 1) {
 						Static98.method1966(Static169.anInt4075, local121, JagString.concatenate(new JagString[] { Static34.aClass100_203, Static27.aClass100_164, local172.name}), local47, (short) 14, LocalizedText.USE, local147);
 					} else if (Static241.aBoolean302) {
-						@Pc(363) ParamType local363 = Static121.anInt3039 == -1 ? null : Static110.method2277(Static121.anInt3039);
+						@Pc(363) ParamType local363 = Static121.anInt3039 == -1 ? null : ParamTypeList.get(Static121.anInt3039);
 						if ((Static274.anInt4999 & 0x4) != 0 && (local363 == null || local172.getParam(local363.defaultInt, Static121.anInt3039) != local363.defaultInt)) {
 							Static98.method1966(Static246.anInt5393, local121, JagString.concatenate(new JagString[] { Static78.aClass100_466, Static27.aClass100_164, local172.name}), local47, (short) 38, Static102.aClass100_545, local147);
 						}
@@ -145,7 +138,7 @@ public final class Static176 {
 								}
 							}
 						}
-						Static98.method1966(Static225.anInt5073, (long) local172.anInt4426, JagString.concatenate(new JagString[] { Static240.aClass100_1008, local172.name}), local47, (short) 1004, LocalizedText.EXAMINE, local147);
+						Static98.method1966(Static225.anInt5073, (long) local172.id, JagString.concatenate(new JagString[] { Static240.aClass100_1008, local172.name}), local47, (short) 1004, LocalizedText.EXAMINE, local147);
 					}
 				}
 				@Pc(514) int local514;
@@ -207,11 +200,11 @@ public final class Static176 {
 					if (local931 != null) {
 						for (@Pc(940) ObjStackNode local940 = (ObjStackNode) local931.method2279(); local940 != null; local940 = (ObjStackNode) local931.method2286()) {
 							local240 = local940.aClass8_Sub7_1.anInt5555;
-							@Pc(951) ObjType local951 = Static71.get(local240);
+							@Pc(951) ObjType local951 = ObjTypeList.get(local240);
 							if (Static260.anInt5014 == 1) {
 								Static98.method1966(Static169.anInt4075, (long) local240, JagString.concatenate(new JagString[] { Static34.aClass100_203, Static223.aClass100_947, local951.name}), local47, (short) 33, LocalizedText.USE, local147);
 							} else if (Static241.aBoolean302) {
-								@Pc(1142) ParamType local1142 = Static121.anInt3039 == -1 ? null : Static110.method2277(Static121.anInt3039);
+								@Pc(1142) ParamType local1142 = Static121.anInt3039 == -1 ? null : ParamTypeList.get(Static121.anInt3039);
 								if ((Static274.anInt4999 & 0x1) != 0 && (local1142 == null || local951.getParam(local1142.defaultInt, Static121.anInt3039) != local1142.defaultInt)) {
 									Static98.method1966(Static246.anInt5393, (long) local240, JagString.concatenate(new JagString[] { Static78.aClass100_466, Static223.aClass100_947, local951.name}), local47, (short) 39, Static102.aClass100_545, local147);
 								}

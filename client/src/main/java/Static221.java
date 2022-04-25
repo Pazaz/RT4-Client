@@ -10,19 +10,11 @@ public final class Static221 {
 	@OriginalMember(owner = "client!s", name = "i", descriptor = "[I")
 	public static int[] anIntArray376;
 
-	@OriginalMember(owner = "client!s", name = "c", descriptor = "I")
-	public static int anInt4363 = -1;
-
 	@OriginalMember(owner = "client!s", name = "d", descriptor = "I")
 	public static int anInt4364 = 0;
 
 	@OriginalMember(owner = "client!s", name = "g", descriptor = "Lclient!na;")
-	public static final JagString aClass100_821 = Static28.parse("document)3cookie=(R");
-
-	@OriginalMember(owner = "client!s", name = "a", descriptor = "(II)I")
-	public static int method3389(@OriginalArg(0) int arg0) {
-		return arg0 >>> 7;
-	}
+	public static final JagString aClass100_821 = JagString.parse("document)3cookie=(R");
 
 	@OriginalMember(owner = "client!s", name = "b", descriptor = "(III)V")
 	public static void method3392(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
@@ -116,7 +108,7 @@ public final class Static221 {
 							if (local133 == 0) {
 								continue;
 							}
-							local151 = Static256.method4395(local133 - 1);
+							local151 = FloTypeList.method4395(local133 - 1);
 							if (local151.anInt5899 == -1) {
 								continue;
 							}
@@ -127,7 +119,7 @@ public final class Static221 {
 								continue;
 							}
 						} else if (local133 != 0) {
-							local151 = Static256.method4395(local133 - 1);
+							local151 = FloTypeList.method4395(local133 - 1);
 							@Pc(224) byte local224;
 							if (local151.anInt5899 == -1) {
 								local224 = arg7[local114][local72];
@@ -244,7 +236,7 @@ public final class Static221 {
 							if (local775 == 0) {
 								continue;
 							}
-							local805 = Static256.method4395(local775 - 1);
+							local805 = FloTypeList.method4395(local775 - 1);
 							if (local805.anInt5899 == -1) {
 								continue;
 							}
@@ -253,7 +245,7 @@ public final class Static221 {
 								continue;
 							}
 						} else if (local775 != 0) {
-							local805 = Static256.method4395(local775 - 1);
+							local805 = FloTypeList.method4395(local775 - 1);
 							if (local805.anInt5899 == -1) {
 								Static131.method2578(arg0, arg9, local114, arg6, local72, Static53.anIntArrayArray8[arg7[local114][local72]], local28, local18, arg10, arg2[local114][local72]);
 								continue;

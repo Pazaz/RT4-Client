@@ -8,13 +8,13 @@ public final class Static64 {
 	public static int[] anIntArray153;
 
 	@OriginalMember(owner = "client!fb", name = "i", descriptor = "Lclient!na;")
-	public static final JagString aClass100_431 = Static28.parse("; Max)2Age=");
+	public static final JagString aClass100_431 = JagString.parse("; Max)2Age=");
 
 	@OriginalMember(owner = "client!fb", name = "l", descriptor = "[Lclient!na;")
 	public static final JagString[] aClass100Array62 = new JagString[100];
 
     @OriginalMember(owner = "client!fb", name = "p", descriptor = "Lclient!na;")
-	public static final JagString aClass100_433 = Static28.parse("<col=ff3000>");
+	public static final JagString aClass100_433 = JagString.parse("<col=ff3000>");
 
 	@OriginalMember(owner = "client!fb", name = "q", descriptor = "[I")
 	public static final int[] anIntArray154 = new int[] { -1, -1, 1, 1 };
@@ -37,8 +37,8 @@ public final class Static64 {
 				Static159.players[local30] = null;
 			}
 		}
-		if (Static223.anInt5028 != Static57.aClass3_Sub15_Sub1_3.offset) {
-			throw new RuntimeException("gpp1 pos:" + Static57.aClass3_Sub15_Sub1_3.offset + " psize:" + Static223.anInt5028);
+		if (Protocol.length != Protocol.inboundBuffer.offset) {
+			throw new RuntimeException("gpp1 pos:" + Protocol.inboundBuffer.offset + " psize:" + Protocol.length);
 		}
 		for (local23 = 0; local23 < Static267.anInt5774; local23++) {
 			if (Static159.players[Static105.anIntArray256[local23]] == null) {
@@ -52,11 +52,11 @@ public final class Static64 {
 		if (arg0 == 0L) {
 			return;
 		}
-		if (Static9.anInt178 >= 100 && !Static202.aBoolean233 || Static9.anInt178 >= 200) {
+		if (Static9.anInt178 >= 100 && !LoginManager.playerMember || Static9.anInt178 >= 200) {
 			Static103.method2231(JagString.EMPTY, 0, LocalizedText.FRIENDLISTFULL);
 			return;
 		}
-		@Pc(35) JagString local35 = Static79.decode37(arg0).method3125();
+		@Pc(35) JagString local35 = Base37.decodeLowerCase(arg0).method3125();
 		@Pc(42) int local42;
 		for (local42 = 0; local42 < Static9.anInt178; local42++) {
 			if (Static92.aLongArray3[local42] == arg0) {
@@ -81,8 +81,8 @@ public final class Static64 {
 		Static106.anIntArray258[Static9.anInt178] = 0;
 		Static3.aBooleanArray135[Static9.anInt178] = false;
 		Static9.anInt178++;
-		Static185.anInt4369 = Static119.transmitTimer;
-		Static6.outboundBuffer.p1isaac(120);
-		Static6.outboundBuffer.p8(arg0);
+		Static185.anInt4369 = InterfaceList.transmitTimer;
+		Protocol.outboundBuffer.p1isaac(120);
+		Protocol.outboundBuffer.p8(arg0);
 	}
 }

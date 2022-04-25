@@ -4,17 +4,8 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static267 {
 
-	@OriginalMember(owner = "client!vl", name = "g", descriptor = "Lclient!ve;")
-	public static Js5 js5Archive7;
-
-	@OriginalMember(owner = "client!vl", name = "a", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_37 = new SoftLruHashTable(100);
-
 	@OriginalMember(owner = "client!vl", name = "e", descriptor = "[I")
 	public static final int[] anIntArray517 = new int[] { 1, 2, 4, 8 };
-
-	@OriginalMember(owner = "client!vl", name = "f", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1087 = Static28.parse("Cabbage");
 
 	@OriginalMember(owner = "client!vl", name = "h", descriptor = "I")
 	public static int anInt5773 = 0;
@@ -47,7 +38,7 @@ public final class Static267 {
 	public static boolean isShowingVideoAd() {
 		if (client.objectTag) {
 			try {
-				return !((Boolean) Static119.aClass100_588.method3157(GameShell.signLink.applet));
+				return !((Boolean) Static119.aClass100_588.browserControlCall(GameShell.signLink.applet));
 			} catch (@Pc(21) Throwable local21) {
 			}
 		}
@@ -145,9 +136,4 @@ public final class Static267 {
 		}
 	}
 
-	@OriginalMember(owner = "client!vl", name = "b", descriptor = "(I)V")
-	public static void method4529() {
-		Static231.aClass99_29.method3103();
-		Static219.sprites.method3103();
-	}
 }

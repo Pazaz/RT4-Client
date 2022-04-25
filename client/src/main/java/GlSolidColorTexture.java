@@ -23,7 +23,7 @@ public final class GlSolidColorTexture extends SecondaryNode {
 		@Pc(12) int[] local12 = new int[1];
 		local9.glGenTextures(1, local12, 0);
 		this.anInt5058 = local12[0];
-		this.anInt5059 = Static63.contextId;
+		this.anInt5059 = GlCleaner.contextId;
 		GlRenderer.setTextureId(this.anInt5058);
 		@Pc(32) int local32 = Rasteriser.palette[arg0];
 		@Pc(58) byte[] local58 = new byte[] { (byte) (local32 >> 16), (byte) (local32 >> 8), (byte) local32, -1 };
@@ -31,7 +31,7 @@ public final class GlSolidColorTexture extends SecondaryNode {
 		local9.glTexImage2D(GL2.GL_TEXTURE_2D, 0, GL2.GL_RGBA, 1, 1, 0, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, local61);
 		local9.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR);
 		local9.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
-		Static63.onCardTexture += local61.limit() - this.anInt5065;
+		GlCleaner.onCardTexture += local61.limit() - this.anInt5065;
 		this.anInt5065 = local61.limit();
 	}
 
@@ -39,7 +39,7 @@ public final class GlSolidColorTexture extends SecondaryNode {
 	@Override
 	public final void finalize() throws Throwable {
 		if (this.anInt5058 != -1) {
-			Static63.method1485(this.anInt5058, this.anInt5065, this.anInt5059);
+			GlCleaner.method1485(this.anInt5058, this.anInt5065, this.anInt5059);
 			this.anInt5058 = -1;
 			this.anInt5065 = 0;
 		}

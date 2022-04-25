@@ -4,23 +4,17 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static229 {
 
-    @OriginalMember(owner = "client!si", name = "S", descriptor = "[Lclient!na;")
-	public static JagString[] aClass100Array156;
-
 	@OriginalMember(owner = "client!si", name = "ab", descriptor = "I")
 	public static int anInt5138;
-
-	@OriginalMember(owner = "client!si", name = "cb", descriptor = "[B")
-	public static byte[] aByteArray70;
 
 	@OriginalMember(owner = "client!si", name = "X", descriptor = "[Lclient!sg;")
 	public static final StockMarketOffer[] aClass136Array1 = new StockMarketOffer[6];
 
 	@OriginalMember(owner = "client!si", name = "Z", descriptor = "Lclient!na;")
-	public static final JagString aClass100_972 = Static28.parse("<col=ffb000>");
+	public static final JagString aClass100_972 = JagString.parse("<col=ffb000>");
 
 	@OriginalMember(owner = "client!si", name = "gb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_974 = Static28.parse("<br>(X");
+	public static final JagString aClass100_974 = JagString.parse("<br>(X");
 
 	@OriginalMember(owner = "client!si", name = "a", descriptor = "(ZB)I")
 	public static int method3933(@OriginalArg(1) byte arg0) {
@@ -35,12 +29,7 @@ public final class Static229 {
 		Static161.method3058();
 	}
 
-	@OriginalMember(owner = "client!si", name = "a", descriptor = "(BLclient!na;)I")
-	public static int method3937(@OriginalArg(1) JagString arg0) {
-		return arg0.length() + 1;
-	}
-
-	@OriginalMember(owner = "client!si", name = "b", descriptor = "(IIB)V")
+    @OriginalMember(owner = "client!si", name = "b", descriptor = "(IIB)V")
 	public static void method3938(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		@Pc(16) DelayedStateChange local16 = Static238.method4143(12, arg1);
 		local16.pushServer();

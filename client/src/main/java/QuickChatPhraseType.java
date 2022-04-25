@@ -35,7 +35,7 @@ public final class QuickChatPhraseType extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!cb", name = "a", descriptor = "(Lclient!wa;I)V")
-	public final void method761(@OriginalArg(0) Buffer arg0) {
+	public final void decode(@OriginalArg(0) Buffer arg0) {
 		while (true) {
 			@Pc(9) int local9 = arg0.g1();
 			if (local9 == 0) {

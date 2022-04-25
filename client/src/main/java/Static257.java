@@ -7,11 +7,8 @@ public final class Static257 {
 	@OriginalMember(owner = "client!v", name = "b", descriptor = "Lclient!be;")
 	public static Component aClass13_7;
 
-	@OriginalMember(owner = "client!v", name = "f", descriptor = "Lclient!al;")
-	public static Js5MasterIndex js5MasterIndex;
-
 	@OriginalMember(owner = "client!v", name = "a", descriptor = "Lclient!na;")
-	public static final JagString aClass100_98 = Static28.parse(")4a=");
+	public static final JagString aClass100_98 = JagString.parse(")4a=");
 
 	@OriginalMember(owner = "client!v", name = "a", descriptor = "(IIIJ)Z")
 	public static boolean method523(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) long arg3) {
@@ -34,14 +31,4 @@ public final class Static257 {
 		}
 	}
 
-	@OriginalMember(owner = "client!v", name = "a", descriptor = "(ZIILclient!ve;ZII)V")
-	public static void method526(@OriginalArg(1) int arg0, @OriginalArg(3) Js5 arg1, @OriginalArg(5) int arg2) {
-		Static172.aClass153_70 = arg1;
-		Static226.anInt5085 = 0;
-		Static277.anInt5853 = arg0;
-		Static72.aBoolean116 = false;
-		Static14.anInt441 = 1;
-		Static57.anInt1757 = 2;
-		Static253.anInt5527 = arg2;
-	}
 }

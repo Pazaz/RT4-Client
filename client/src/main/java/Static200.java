@@ -3,13 +3,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 
 public final class Static200 {
 
-	@OriginalMember(owner = "client!qe", name = "r", descriptor = "[S")
-	public static short[] aShortArray65;
-
-    @OriginalMember(owner = "client!qe", name = "t", descriptor = "[I")
-	public static final int[] anIntArray421 = new int[50];
-
-	@OriginalMember(owner = "client!qe", name = "b", descriptor = "(II)V")
+    @OriginalMember(owner = "client!qe", name = "b", descriptor = "(II)V")
 	public static void method3628(@OriginalArg(1) int arg0) {
 		Static231.anInt5204--;
 		if (Static231.anInt5204 == arg0) {

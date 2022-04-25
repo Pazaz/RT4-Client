@@ -17,9 +17,6 @@ public final class Static89 {
 	@OriginalMember(owner = "client!ha", name = "m", descriptor = "I")
 	public static int anInt2385 = 0;
 
-	@OriginalMember(owner = "client!ha", name = "p", descriptor = "Lclient!gn;")
-	public static final LruHashTable recentUse = new LruHashTable(64);
-
 	@OriginalMember(owner = "client!ha", name = "q", descriptor = "I")
 	public static int anInt2388 = 0;
 
@@ -35,7 +32,7 @@ public final class Static89 {
 			local11 = 4;
 		}
 		for (@Pc(21) int local21 = 0; local21 < local11; local21++) {
-			Static107.loop();
+			client.audioLoop();
 			for (@Pc(32) int local32 = 0; local32 < 13; local32++) {
 				for (@Pc(39) int local39 = 0; local39 < 13; local39++) {
 					@Pc(52) int local52 = Static187.anIntArrayArrayArray18[local21][local32][local39];
@@ -49,7 +46,7 @@ public final class Static89 {
 							@Pc(98) int local98 = (local88 / 8 << 8) + local76 / 8;
 							for (@Pc(100) int local100 = 0; local100 < Static238.regionBitPacked.length; local100++) {
 								if (Static238.regionBitPacked[local100] == local98 && local13[local100] != null) {
-									Static245.method4228(local82, local32 * 8, local21, Static148.collisionMaps, local39 * 8, local13[local100], local65, (local76 & 0x7) * 8, (local88 & 0x7) * 8, arg0);
+									Static245.method4228(local82, local32 * 8, local21, PathFinder.collisionMaps, local39 * 8, local13[local100], local65, (local76 & 0x7) * 8, (local88 & 0x7) * 8, arg0);
 									local54 = true;
 									break;
 								}
@@ -98,8 +95,8 @@ public final class Static89 {
 
 	@OriginalMember(owner = "client!ha", name = "a", descriptor = "([IJIZ)Lclient!na;")
 	public static JagString method1838(@OriginalArg(0) int[] arg0, @OriginalArg(1) long arg1, @OriginalArg(2) int arg2) {
-		if (Static107.anInterface3_1 != null) {
-			@Pc(17) JagString local17 = Static107.anInterface3_1.method30(arg2, arg0, arg1);
+		if (QuickChatPhraseTypeList.decoder != null) {
+			@Pc(17) JagString local17 = QuickChatPhraseTypeList.decoder.method30(arg2, arg0, arg1);
 			if (local17 != null) {
 				return local17;
 			}

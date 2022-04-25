@@ -5,16 +5,16 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class World extends AbstractWorld {
 
 	@OriginalMember(owner = "client!ba", name = "t", descriptor = "Lclient!na;")
-	public JagString aClass100_69;
+	public JagString activity;
 
 	@OriginalMember(owner = "client!ba", name = "u", descriptor = "I")
-	public int anInt382;
+	public int id;
 
 	@OriginalMember(owner = "client!ba", name = "A", descriptor = "Lclient!na;")
-	public JagString aClass100_71;
+	public JagString hostname;
 
 	@OriginalMember(owner = "client!ba", name = "g", descriptor = "(I)Lclient!ee;")
 	public final Class32 getWorldInfo() {
-		return Static203.aClass32Array1[this.country];
+		return WorldList.countries[this.country];
 	}
 }

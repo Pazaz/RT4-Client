@@ -280,11 +280,11 @@ public final class Static38 {
 					}
 				}
 				if (local39.attachment == null || Static83.loop < local39.anInt3390 || local39.anInt3375 <= Static83.loop) {
-					local39.anInt3424 = Static207.method3685(Static55.level, local39.xFine, local39.zFine);
+					local39.anInt3424 = SceneGraph.getTileHeight(Static55.level, local39.xFine, local39.zFine);
 					Static43.method1141(Static55.level, local39.xFine, local39.zFine, local39.anInt3424, (local82 - 1) * 64 + 60, local39, local39.anInt3381, local272, local39.aBoolean171);
 				} else {
 					local39.aBoolean98 = false;
-					local39.anInt3424 = Static207.method3685(Static55.level, local39.xFine, local39.zFine);
+					local39.anInt3424 = SceneGraph.getTileHeight(Static55.level, local39.xFine, local39.zFine);
 					Static184.method3387(Static55.level, local39.xFine, local39.zFine, local39.anInt3424, local39, local39.anInt3381, local272, local39.anInt3384, local39.anInt3374, local39.anInt3411, local39.anInt3410);
 				}
 			}

@@ -96,7 +96,7 @@ public final class AreaSound extends Node {
 			this.radius = this.player.soundRadius * 128;
 		}
 		if (this.sound != local8 && this.primaryStream != null) {
-			Static204.soundStream.removeSubStream(this.primaryStream);
+			client.soundStream.removeSubStream(this.primaryStream);
 			this.primaryStream = null;
 		}
 	}

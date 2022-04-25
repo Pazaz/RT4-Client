@@ -7,9 +7,6 @@ public final class Static72 {
 	@OriginalMember(owner = "client!fl", name = "u", descriptor = "Z")
 	public static boolean aBoolean116;
 
-	@OriginalMember(owner = "client!fl", name = "C", descriptor = "Lsignlink!im;")
-	public static PrivilegedRequest aClass212_3;
-
 	@OriginalMember(owner = "client!fl", name = "D", descriptor = "[[I")
 	public static int[][] regionsXteaKeys;
 
@@ -17,26 +14,26 @@ public final class Static72 {
 	public static int updatedVarcstrsWriterIndex = 0;
 
 	@OriginalMember(owner = "client!fl", name = "H", descriptor = "Lclient!na;")
-	public static final JagString aClass100_446 = Static28.parse("<img=0>");
+	public static final JagString aClass100_446 = JagString.parse("<img=0>");
 
 	@OriginalMember(owner = "client!fl", name = "P", descriptor = "I")
 	public static int anInt2043 = 0;
 
 	@OriginalMember(owner = "client!fl", name = "Q", descriptor = "Lclient!na;")
-	public static final JagString EMPTY_STRING = Static28.parse("");
+	public static final JagString EMPTY_STRING = JagString.parse("");
 
 	@OriginalMember(owner = "client!fl", name = "V", descriptor = "Lclient!na;")
-	public static final JagString aClass100_448 = Static28.parse("(Y");
+	public static final JagString aClass100_448 = JagString.parse("(Y");
 
 	@OriginalMember(owner = "client!fl", name = "b", descriptor = "(II)Lclient!cl;")
 	public static AnimFrameset getAnimFrameset(@OriginalArg(0) int arg0) {
-		@Pc(19) AnimFrameset local19 = (AnimFrameset) Static267.aClass99_37.get((long) arg0);
+		@Pc(19) AnimFrameset local19 = (AnimFrameset) SeqTypeList.aClass99_37.get((long) arg0);
 		if (local19 != null) {
 			return local19;
 		}
-		local19 = Static87.method1803(Static225.aClass153_92, Static5.aClass153_1, arg0);
+		local19 = Static87.method1803(SeqTypeList.aClass153_92, SeqTypeList.aClass153_1, arg0);
 		if (local19 != null) {
-			Static267.aClass99_37.put(local19, (long) arg0);
+			SeqTypeList.aClass99_37.put(local19, (long) arg0);
 		}
 		return local19;
 	}
@@ -90,9 +87,4 @@ public final class Static72 {
 		}
 	}
 
-	@OriginalMember(owner = "client!fl", name = "a", descriptor = "(IB)V")
-	public static void method1570() {
-		Static142.aClass99_23.method3102(5);
-		Static267.aClass99_37.method3102(5);
-	}
 }

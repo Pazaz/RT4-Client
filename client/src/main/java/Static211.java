@@ -14,13 +14,10 @@ public final class Static211 {
 	public static boolean aBoolean72 = false;
 
 	@OriginalMember(owner = "client!rc", name = "G", descriptor = "Lclient!na;")
-	public static final JagString aClass100_230 = Static28.parse("");
+	public static final JagString aClass100_230 = JagString.parse("");
 
 	@OriginalMember(owner = "client!rc", name = "I", descriptor = "Lclient!na;")
-	public static final JagString aClass100_231 = Static28.parse(")3)3)3");
-
-	@OriginalMember(owner = "client!rc", name = "K", descriptor = "Lclient!na;")
-	public static final JagString aClass100_232 = Static28.parse("::rect_debug");
+	public static final JagString aClass100_231 = JagString.parse(")3)3)3");
 
 	@OriginalMember(owner = "client!rc", name = "M", descriptor = "Z")
 	public static boolean aBoolean73 = false;
@@ -33,7 +30,7 @@ public final class Static211 {
 
 	@OriginalMember(owner = "client!rc", name = "a", descriptor = "(Z)V")
 	public static void method924() {
-		Static244.models.clear();
+		ObjTypeList.models.clear();
 	}
 
 	@OriginalMember(owner = "client!rc", name = "d", descriptor = "(I)V")
@@ -46,8 +43,8 @@ public final class Static211 {
 		}
 		AudioChannel.init(Preferences.stereo);
 		client.musicChannel = AudioChannel.create(22050, GameShell.signLink, GameShell.canvas, 0);
-		client.musicChannel.setStream(Static148.musicStream);
+		client.musicChannel.setStream(client.musicStream);
 		client.soundChannel = AudioChannel.create(2048, GameShell.signLink, GameShell.canvas, 1);
-		client.soundChannel.setStream(Static204.soundStream);
+		client.soundChannel.setStream(client.soundStream);
 	}
 }

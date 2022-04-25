@@ -43,27 +43,14 @@ public final class Static59 {
 
 	@OriginalMember(owner = "client!ej", name = "i", descriptor = "(I)V")
 	public static void method1373() {
-		Static6.outboundBuffer.p1isaac(243);
-		Static6.outboundBuffer.p1(Static144.getWindowMode());
-		Static6.outboundBuffer.p2(GameShell.canvasWidth);
-		Static6.outboundBuffer.p2(GameShell.canvasHeight);
-		Static6.outboundBuffer.p1(Preferences.antiAliasingMode);
+		Protocol.outboundBuffer.p1isaac(243);
+		Protocol.outboundBuffer.p1(Static144.getWindowMode());
+		Protocol.outboundBuffer.p2(GameShell.canvasWidth);
+		Protocol.outboundBuffer.p2(GameShell.canvasHeight);
+		Protocol.outboundBuffer.p1(Preferences.antiAliasingMode);
 	}
 
-	@OriginalMember(owner = "client!ej", name = "a", descriptor = "(Lclient!ve;ILclient!ve;Lclient!of;)V")
-	public static void init(@OriginalArg(0) Js5 arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) QuickChatCommandDecoder arg2) {
-		Static262.aClass153_108 = arg0;
-		Static107.anInterface3_1 = arg2;
-		Static238.aClass153_96 = arg1;
-		if (Static238.aClass153_96 != null) {
-			Static144.anInt3490 = Static238.aClass153_96.method4504(1);
-		}
-		if (Static262.aClass153_108 != null) {
-			Static34.anInt1047 = Static262.aClass153_108.method4504(1);
-		}
-	}
-
-	@OriginalMember(owner = "client!ej", name = "a", descriptor = "(IZIJ)Lclient!na;")
+    @OriginalMember(owner = "client!ej", name = "a", descriptor = "(IZIJ)Lclient!na;")
 	public static JagString method1376(@OriginalArg(3) long arg0) {
 		@Pc(35) long local35 = arg0 / (long) 10;
 		@Pc(37) int local37 = 1;

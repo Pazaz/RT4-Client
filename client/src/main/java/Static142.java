@@ -7,11 +7,8 @@ public final class Static142 {
 	@OriginalMember(owner = "client!lc", name = "n", descriptor = "I")
 	public static int originZ;
 
-	@OriginalMember(owner = "client!lc", name = "e", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_23 = new SoftLruHashTable(64);
-
-    @OriginalMember(owner = "client!lc", name = "m", descriptor = "Lclient!na;")
-	public static final JagString aClass100_667 = Static28.parse("settings=");
+	@OriginalMember(owner = "client!lc", name = "m", descriptor = "Lclient!na;")
+	public static final JagString aClass100_667 = JagString.parse("settings=");
 
 	@OriginalMember(owner = "client!lc", name = "a", descriptor = "(IIIIIII)V")
 	public static void method2726(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
@@ -123,11 +120,11 @@ public final class Static142 {
 					@Pc(512) Sprite local512 = Sprites.hitbars[1];
 					if (local17 instanceof Npc) {
 						@Pc(518) Npc local518 = (Npc) local17;
-						@Pc(528) Sprite[] local528 = (Sprite[]) Static73.aClass99_10.get((long) local518.type.hitBarId);
+						@Pc(528) Sprite[] local528 = (Sprite[]) HitBarList.hitBars.get((long) local518.type.hitBarId);
 						if (local528 == null) {
-							local528 = SpriteLoader.loadAlphaSprites(local518.type.hitBarId, Static209.js5Archive8);
+							local528 = SpriteLoader.loadAlphaSprites(local518.type.hitBarId, client.js5Archive8);
 							if (local528 != null) {
-								Static73.aClass99_10.put(local528, (long) local518.type.hitBarId);
+								HitBarList.hitBars.put(local528, (long) local518.type.hitBarId);
 							}
 						}
 						if (local528 != null && local528.length == 2) {

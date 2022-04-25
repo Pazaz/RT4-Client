@@ -59,7 +59,12 @@ public class Buffer extends Node {
 		this.data = src;
 	}
 
-	@OriginalMember(owner = "client!wa", name = "c", descriptor = "(I)I")
+    @OriginalMember(owner = "client!si", name = "a", descriptor = "(BLclient!na;)I")
+    public static int getStringLength(@OriginalArg(1) JagString arg0) {
+        return arg0.length() + 1;
+    }
+
+    @OriginalMember(owner = "client!wa", name = "c", descriptor = "(I)I")
 	public final int g2() {
 		this.offset += 2;
 		return ((this.data[this.offset - 2] & 0xFF) << 8) + (this.data[this.offset - 1] & 0xFF);

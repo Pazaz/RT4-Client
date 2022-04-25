@@ -4,14 +4,11 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static228 {
 
-	@OriginalMember(owner = "client!sh", name = "a", descriptor = "Lclient!ih;")
-	public static final LinkedList aClass69_120 = new LinkedList();
-
-	@OriginalMember(owner = "client!sh", name = "c", descriptor = "I")
+    @OriginalMember(owner = "client!sh", name = "c", descriptor = "I")
 	public static int anInt5101 = 0;
 
 	@OriginalMember(owner = "client!sh", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_967 = Static28.parse("");
+	public static final JagString aClass100_967 = JagString.parse("");
 
 	@OriginalMember(owner = "client!sh", name = "f", descriptor = "I")
 	public static int anInt5103 = -1;
@@ -44,7 +41,7 @@ public final class Static228 {
 
 	@OriginalMember(owner = "client!sh", name = "a", descriptor = "(IZBIZ)V")
 	public static void sortWorldList(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(3) int arg2, @OriginalArg(4) boolean arg3) {
-		Static79.method1697(arg0, arg2, Static101.worlds.length - 1, arg3, 0, arg1);
+		Static79.method1697(arg0, arg2, WorldList.sorted.length - 1, arg3, 0, arg1);
 	}
 
 	@OriginalMember(owner = "client!sh", name = "a", descriptor = "(I[JII[Ljava/lang/Object;)V")

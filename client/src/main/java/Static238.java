@@ -4,19 +4,11 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static238 {
 
-	@OriginalMember(owner = "client!te", name = "y", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_96;
-
-	@OriginalMember(owner = "client!te", name = "H", descriptor = "[I")
+    @OriginalMember(owner = "client!te", name = "H", descriptor = "[I")
 	public static int[] regionBitPacked;
 
 	@OriginalMember(owner = "client!te", name = "B", descriptor = "[I")
 	public static final int[] anIntArray469 = new int[] { 0, -1, 0, 1 };
-
-	@OriginalMember(owner = "client!te", name = "a", descriptor = "(IZ)V")
-	public static void method4142() {
-		Static67.aClass99_20.method3102(5);
-	}
 
 	@OriginalMember(owner = "client!te", name = "a", descriptor = "(III)Lclient!da;")
 	public static DelayedStateChange method4143(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {

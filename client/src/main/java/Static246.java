@@ -11,13 +11,7 @@ public final class Static246 {
 	public static int anInt5388 = 0;
 
 	@OriginalMember(owner = "client!u", name = "g", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1029 = Static28.parse("cookiehost");
-
-	@OriginalMember(owner = "client!u", name = "a", descriptor = "(BLclient!ve;Lclient!ve;)V")
-	public static void init(@OriginalArg(1) Js5 arg0, @OriginalArg(2) Js5 arg1) {
-		Static153.aClass153_57 = arg0;
-		Static243.spritesArchive = arg1;
-	}
+	public static final JagString aClass100_1029 = JagString.parse("cookiehost");
 
 	@OriginalMember(owner = "client!u", name = "a", descriptor = "(Z)V")
 	public static void method4239() {
@@ -55,7 +49,7 @@ public final class Static246 {
 		if (Static260.anInt5014 == 1) {
 			Static98.method1966(Static169.anInt4075, (long) arg2, JagString.concatenate(new JagString[] { Static34.aClass100_203, Static201.aClass100_407, local35 }), arg1, (short) 26, LocalizedText.USE, arg3);
 		} else if (Static241.aBoolean302) {
-			@Pc(378) ParamType local378 = Static121.anInt3039 == -1 ? null : Static110.method2277(Static121.anInt3039);
+			@Pc(378) ParamType local378 = Static121.anInt3039 == -1 ? null : ParamTypeList.get(Static121.anInt3039);
 			if ((Static274.anInt4999 & 0x2) != 0 && (local378 == null || arg0.getParam(Static121.anInt3039, local378.defaultInt) != local378.defaultInt)) {
 				Static98.method1966(anInt5393, (long) arg2, JagString.concatenate(new JagString[] { Static78.aClass100_466, Static201.aClass100_407, local35 }), arg1, (short) 45, Static102.aClass100_545, arg3);
 			}
@@ -129,18 +123,4 @@ public final class Static246 {
 		}
 	}
 
-	@OriginalMember(owner = "client!u", name = "a", descriptor = "(II)Lclient!md;")
-	public static InvType list(@OriginalArg(0) int id) {
-		@Pc(16) InvType invType = (InvType) Static89.recentUse.get((long) id);
-		if (invType != null) {
-			return invType;
-		}
-		@Pc(27) byte[] data = Static9.aClass153_2.getFile(5, id);
-		invType = new InvType();
-		if (data != null) {
-			invType.decode(new Buffer(data));
-		}
-		Static89.recentUse.put(invType, (long) id);
-		return invType;
-	}
 }

@@ -7,60 +7,32 @@ public final class Static125 {
     @OriginalMember(owner = "client!jl", name = "v", descriptor = "I")
 	public static int anInt3096 = 0;
 
-	@OriginalMember(owner = "client!jl", name = "x", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_18 = new SoftLruHashTable(50);
-
-	@OriginalMember(owner = "client!jl", name = "G", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_19 = new SoftLruHashTable(64);
-
 	@OriginalMember(owner = "client!jl", name = "H", descriptor = "I")
 	public static int worldId = -1;
 
-    @OriginalMember(owner = "client!jl", name = "a", descriptor = "(ILclient!ve;Lclient!ve;)V")
-	public static void init(@OriginalArg(1) Js5 arg0, @OriginalArg(2) Js5 arg1) {
-		Static14.modelsArchive = arg0;
-		Static216.aClass153_31 = arg1;
-		Static53.anInt1716 = Static216.aClass153_31.method4504(3);
-	}
-
-	@OriginalMember(owner = "client!jl", name = "a", descriptor = "(IIIII)V")
+    @OriginalMember(owner = "client!jl", name = "a", descriptor = "(IIIII)V")
 	public static void method2448(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		Static6.outboundBuffer.offset = 0;
-		Static6.outboundBuffer.p1(147);
-		Static6.outboundBuffer.p1(arg2);
-		Static6.outboundBuffer.p1(arg3);
-		Static6.outboundBuffer.p2(arg0);
-		Static6.outboundBuffer.p2(arg1);
-		Static226.anInt5079 = 0;
-		Static57.anInt1758 = 0;
-		Static179.accountCreationStep = 1;
-		Static223.anInt5034 = -3;
-	}
-
-	@OriginalMember(owner = "client!jl", name = "a", descriptor = "(IB)Lclient!kk;")
-	public static VarbitType method2449(@OriginalArg(0) int arg0) {
-		@Pc(10) VarbitType local10 = (VarbitType) aClass99_19.get((long) arg0);
-		if (local10 != null) {
-			return local10;
-		}
-		@Pc(31) byte[] local31 = Static172.aClass153_69.getFile(Static254.method4349(arg0), Static274.method3845(arg0));
-		local10 = new VarbitType();
-		if (local31 != null) {
-			local10.decode(new Buffer(local31));
-		}
-		aClass99_19.put(local10, (long) arg0);
-		return local10;
+		Protocol.outboundBuffer.offset = 0;
+		Protocol.outboundBuffer.p1(147);
+		Protocol.outboundBuffer.p1(arg2);
+		Protocol.outboundBuffer.p1(arg3);
+		Protocol.outboundBuffer.p2(arg0);
+		Protocol.outboundBuffer.p2(arg1);
+		CreateManager.loops = 0;
+		CreateManager.errors = 0;
+		CreateManager.step = 1;
+		CreateManager.reply = -3;
 	}
 
 	@OriginalMember(owner = "client!jl", name = "c", descriptor = "(I)V")
 	public static void updateLockedCamera() {
 		@Pc(9) int local9 = Static248.anInt4232 * 128 + 64;
 		@Pc(15) int local15 = Static245.anInt5375 * 128 + 64;
-		@Pc(23) int local23 = Static207.method3685(Static55.level, local15, local9) - Static231.anInt5203;
+		@Pc(23) int local23 = SceneGraph.getTileHeight(Static55.level, local15, local9) - Static231.anInt5203;
 		if (Static113.anInt4612 >= 100) {
 			Static138.renderX = Static245.anInt5375 * 128 + 64;
 			Static134.renderZ = Static248.anInt4232 * 128 + 64;
-			Static5.anInt40 = Static207.method3685(Static55.level, Static138.renderX, Static134.renderZ) - Static231.anInt5203;
+			Static5.anInt40 = SceneGraph.getTileHeight(Static55.level, Static138.renderX, Static134.renderZ) - Static231.anInt5203;
 		} else {
 			if (Static138.renderX < local15) {
 				Static138.renderX += Static233.anInt5225 + Static113.anInt4612 * (local15 - Static138.renderX) / 1000;
@@ -101,7 +73,7 @@ public final class Static125 {
 		}
 		local9 = Static265.anInt5765 * 128 + 64;
 		local15 = Static251.anInt5449 * 128 + 64;
-		local23 = Static207.method3685(Static55.level, local15, local9) - Static57.anInt1744;
+		local23 = SceneGraph.getTileHeight(Static55.level, local15, local9) - Static57.anInt1744;
 		@Pc(236) int local236 = local23 - Static5.anInt40;
 		@Pc(241) int local241 = local9 - Static134.renderZ;
 		@Pc(246) int local246 = local15 - Static138.renderX;

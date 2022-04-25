@@ -4,265 +4,265 @@ import org.openrs2.deob.annotation.OriginalMember;
 public class LocalizedText {
     //region English Translations
     @OriginalMember(owner = "client!ui", name = "ob", descriptor = "Lclient!na;")
-    private static final JagString ENG_ATTACK = Static28.parse("Attack");
+    private static final JagString ENG_ATTACK = JagString.parse("Attack");
 
     @OriginalMember(owner = "client!vf", name = "d", descriptor = "Lclient!na;")
-    private static final JagString ENG_ATTEMPT_TO_REESTABLISH = Static28.parse("Please wait )2 attempting to reestablish)3");
+    private static final JagString ENG_ATTEMPT_TO_REESTABLISH = JagString.parse("Please wait )2 attempting to reestablish)3");
 
     @OriginalMember(owner = "client!wb", name = "i", descriptor = "Lclient!na;")
-    private static final JagString ENG_CANCEL = Static28.parse("Cancel");
+    private static final JagString ENG_CANCEL = JagString.parse("Cancel");
 
     @OriginalMember(owner = "client!bk", name = "I", descriptor = "Lclient!na;")
-    private static final JagString ENG_CHATCOL0 = Static28.parse("yellow:");
+    private static final JagString ENG_CHATCOL0 = JagString.parse("yellow:");
 
     @OriginalMember(owner = "client!lb", name = "x", descriptor = "Lclient!na;")
-    private static final JagString ENG_CHATCOL1 = Static28.parse("red:");
+    private static final JagString ENG_CHATCOL1 = JagString.parse("red:");
 
     @OriginalMember(owner = "client!h", name = "Bb", descriptor = "Lclient!na;")
-    private static final JagString ENG_CHATCOL2 = Static28.parse("green:");
+    private static final JagString ENG_CHATCOL2 = JagString.parse("green:");
 
     @OriginalMember(owner = "client!client", name = "eb", descriptor = "Lclient!na;")
-    private static final JagString ENG_CHATCOL3 = Static28.parse("cyan:");
+    private static final JagString ENG_CHATCOL3 = JagString.parse("cyan:");
 
     @OriginalMember(owner = "client!hd", name = "h", descriptor = "Lclient!na;")
-    private static final JagString ENG_CHATCOL4 = Static28.parse("purple:");
+    private static final JagString ENG_CHATCOL4 = JagString.parse("purple:");
 
     @OriginalMember(owner = "client!bf", name = "y", descriptor = "Lclient!na;")
-    private static final JagString ENG_CHATCOL5 = Static28.parse("white:");
+    private static final JagString ENG_CHATCOL5 = JagString.parse("white:");
 
     @OriginalMember(owner = "client!mg", name = "U", descriptor = "Lclient!na;")
-    private static final JagString ENG_CHATCOL6 = Static28.parse("flash1:");
+    private static final JagString ENG_CHATCOL6 = JagString.parse("flash1:");
 
     @OriginalMember(owner = "client!tm", name = "n", descriptor = "Lclient!na;")
-    private static final JagString ENG_CHATCOL7 = Static28.parse("flash2:");
+    private static final JagString ENG_CHATCOL7 = JagString.parse("flash2:");
 
     @OriginalMember(owner = "client!km", name = "Cc", descriptor = "Lclient!na;")
-    private static final JagString ENG_CHATCOL8 = Static28.parse("flash3:");
+    private static final JagString ENG_CHATCOL8 = JagString.parse("flash3:");
 
     @OriginalMember(owner = "client!aa", name = "r", descriptor = "Lclient!na;")
-    private static final JagString ENG_CHATCOL9 = Static28.parse("glow1:");
+    private static final JagString ENG_CHATCOL9 = JagString.parse("glow1:");
 
     @OriginalMember(owner = "client!vf", name = "j", descriptor = "Lclient!na;")
-    private static final JagString ENG_CHATCOL10 = Static28.parse("glow2:");
+    private static final JagString ENG_CHATCOL10 = JagString.parse("glow2:");
 
     @OriginalMember(owner = "client!ah", name = "m", descriptor = "Lclient!na;")
-    private static final JagString ENG_CHATCOL11 = Static28.parse("glow3:");
+    private static final JagString ENG_CHATCOL11 = JagString.parse("glow3:");
 
     @OriginalMember(owner = "client!dc", name = "E", descriptor = "Lclient!na;")
-    private static final JagString ENG_CHATEFFECT1 = Static28.parse("wave:");
+    private static final JagString ENG_CHATEFFECT1 = JagString.parse("wave:");
 
     @OriginalMember(owner = "client!pg", name = "ib", descriptor = "Lclient!na;")
-    private static final JagString ENG_CHATEFFECT2 = Static28.parse("wave2:");
+    private static final JagString ENG_CHATEFFECT2 = JagString.parse("wave2:");
 
     @OriginalMember(owner = "client!rm", name = "h", descriptor = "Lclient!na;")
-    private static final JagString ENG_CHATEFFECT3 = Static28.parse("shake:");
+    private static final JagString ENG_CHATEFFECT3 = JagString.parse("shake:");
 
     @OriginalMember(owner = "client!ef", name = "m", descriptor = "Lclient!na;")
-    private static final JagString ENG_CHATEFFECT4 = Static28.parse("scroll:");
+    private static final JagString ENG_CHATEFFECT4 = JagString.parse("scroll:");
 
     @OriginalMember(owner = "client!eg", name = "B", descriptor = "Lclient!na;")
-    private static final JagString ENG_CHATEFFECT5 = Static28.parse("slide:");
+    private static final JagString ENG_CHATEFFECT5 = JagString.parse("slide:");
 
     @OriginalMember(owner = "client!bm", name = "d", descriptor = "Lclient!na;")
-    private static final JagString ENG_CHECKING_FOR_UPDATES = Static28.parse("Checking for updates )2 ");
+    private static final JagString ENG_CHECKING_FOR_UPDATES = JagString.parse("Checking for updates )2 ");
 
     @OriginalMember(owner = "client!ta", name = "q", descriptor = "Lclient!na;")
-    private static final JagString ENG_CHOOSE_OPTION = Static28.parse("Choose Option");
+    private static final JagString ENG_CHOOSE_OPTION = JagString.parse("Choose Option");
 
     @OriginalMember(owner = "client!d", name = "fb", descriptor = "Lclient!na;")
-    private static final JagString ENG_CLOSE = Static28.parse("Close");
+    private static final JagString ENG_CLOSE = JagString.parse("Close");
 
     @OriginalMember(owner = "client!sm", name = "f", descriptor = "Lclient!na;")
-    private static final JagString ENG_CONLOST = Static28.parse("Connection lost)3");
+    private static final JagString ENG_CONLOST = JagString.parse("Connection lost)3");
 
     @OriginalMember(owner = "client!ig", name = "c", descriptor = "Lclient!na;")
-    private static final JagString ENG_CONTINUE = Static28.parse("Continue");
+    private static final JagString ENG_CONTINUE = JagString.parse("Continue");
 
     @OriginalMember(owner = "client!dc", name = "R", descriptor = "Lclient!na;")
-    private static final JagString ENG_DROP = Static28.parse("Drop");
+    private static final JagString ENG_DROP = JagString.parse("Drop");
 
     @OriginalMember(owner = "client!li", name = "u", descriptor = "Lclient!na;")
-    private static final JagString ENG_EXAMINE = Static28.parse("Examine");
+    private static final JagString ENG_EXAMINE = JagString.parse("Examine");
 
     @OriginalMember(owner = "client!sd", name = "M", descriptor = "Lclient!na;")
-    private static final JagString ENG_FACEHERE = Static28.parse("Face here");
+    private static final JagString ENG_FACEHERE = JagString.parse("Face here");
 
     @OriginalMember(owner = "client!ii", name = "g", descriptor = "Lclient!na;")
-    private static final JagString ENG_FRIENDCANTADDSELF = Static28.parse("You can(Wt add yourself to your own friend list)3");
+    private static final JagString ENG_FRIENDCANTADDSELF = JagString.parse("You can(Wt add yourself to your own friend list)3");
 
     @OriginalMember(owner = "client!lk", name = "S", descriptor = "Lclient!na;")
-    private static final JagString ENG_FRIENDLISTDUPE = Static28.parse(" is already on your friend list)3");
+    private static final JagString ENG_FRIENDLISTDUPE = JagString.parse(" is already on your friend list)3");
 
     @OriginalMember(owner = "client!t", name = "B", descriptor = "Lclient!na;")
-    private static final JagString ENG_FRIENDLISTFULL = Static28.parse("Your friend list is full)3 Max of 100 for free users)1 and 200 for members)3");
+    private static final JagString ENG_FRIENDLISTFULL = JagString.parse("Your friend list is full)3 Max of 100 for free users)1 and 200 for members)3");
 
     @OriginalMember(owner = "client!c", name = "W", descriptor = "Lclient!na;")
-    private static final JagString ENG_FRIENDLOGIN = Static28.parse(" has logged in)3");
+    private static final JagString ENG_FRIENDLOGIN = JagString.parse(" has logged in)3");
 
     @OriginalMember(owner = "client!hd", name = "o", descriptor = "Lclient!na;")
-    private static final JagString ENG_FRIENDLOGOUT = Static28.parse(" has logged out)3");
+    private static final JagString ENG_FRIENDLOGOUT = JagString.parse(" has logged out)3");
 
     @OriginalMember(owner = "client!ec", name = "r", descriptor = "Lclient!na;")
-    private static final JagString ENG_GAME0_LOADING = Static28.parse("RuneScape is loading )2 please wait)3)3)3");
+    private static final JagString ENG_GAME0_LOADING = JagString.parse("RuneScape is loading )2 please wait)3)3)3");
 
     @OriginalMember(owner = "client!an", name = "Z", descriptor = "Lclient!na;")
-    private static final JagString ENG_HIDDEN = Static28.parse("Hidden");
+    private static final JagString ENG_HIDDEN = JagString.parse("Hidden");
 
     @OriginalMember(owner = "client!nb", name = "b", descriptor = "Lclient!na;")
-    private static final JagString ENG_IGNORECANTADDSELF = Static28.parse("You can(Wt add yourself to your own ignore list)3");
+    private static final JagString ENG_IGNORECANTADDSELF = JagString.parse("You can(Wt add yourself to your own ignore list)3");
 
     @OriginalMember(owner = "client!ol", name = "X", descriptor = "Lclient!na;")
-    private static final JagString ENG_IGNORELISTDUPE = Static28.parse(" is already on your ignore list)3");
+    private static final JagString ENG_IGNORELISTDUPE = JagString.parse(" is already on your ignore list)3");
 
     @OriginalMember(owner = "client!u", name = "l", descriptor = "Lclient!na;")
-    private static final JagString ENG_IGNORELISTFULL = Static28.parse("Your ignore list is full)3 Max of 100 users)3");
+    private static final JagString ENG_IGNORELISTFULL = JagString.parse("Your ignore list is full)3 Max of 100 users)3");
 
     @OriginalMember(owner = "client!ck", name = "b", descriptor = "Lclient!na;")
-    private static final JagString ENG_LENT_ITEM_RETURN = Static28.parse("Discard");
+    private static final JagString ENG_LENT_ITEM_RETURN = JagString.parse("Discard");
 
     @OriginalMember(owner = "client!ef", name = "s", descriptor = "Lclient!na;")
-    private static final JagString ENG_LEVEL = Static28.parse("level: ");
+    private static final JagString ENG_LEVEL = JagString.parse("level: ");
 
     @OriginalMember(owner = "client!nh", name = "bb", descriptor = "Lclient!na;")
-    private static final JagString ENG_LOADING = Static28.parse("Loading )2 please wait)3");
+    private static final JagString ENG_LOADING = JagString.parse("Loading )2 please wait)3");
 
     @OriginalMember(owner = "client!dm", name = "B", descriptor = "Lclient!na;")
-    private static final JagString ENG_LOADINGDOTDOTDOT = Static28.parse("Loading)3)3)3");
+    private static final JagString ENG_LOADINGDOTDOTDOT = JagString.parse("Loading)3)3)3");
 
     @OriginalMember(owner = "client!kd", name = "kb", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD0 = Static28.parse("Allocating memory");
+    private static final JagString ENG_MAINLOAD0 = JagString.parse("Allocating memory");
 
     @OriginalMember(owner = "client!na", name = "ob", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD0B = Static28.parse("Allocated memory");
+    private static final JagString ENG_MAINLOAD0B = JagString.parse("Allocated memory");
 
     @OriginalMember(owner = "client!il", name = "J", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD10B = Static28.parse("Created gameworld");
+    private static final JagString ENG_MAINLOAD10B = JagString.parse("Created gameworld");
 
     @OriginalMember(owner = "client!vj", name = "h", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD30 = Static28.parse("Connecting to update server");
+    private static final JagString ENG_MAINLOAD30 = JagString.parse("Connecting to update server");
 
     @OriginalMember(owner = "client!od", name = "b", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD30B = Static28.parse("Connected to update server");
+    private static final JagString ENG_MAINLOAD30B = JagString.parse("Connected to update server");
 
     @OriginalMember(owner = "client!ba", name = "s", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD40B = Static28.parse("Loaded update list");
+    private static final JagString ENG_MAINLOAD40B = JagString.parse("Loaded update list");
 
     @OriginalMember(owner = "client!se", name = "b", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD45B = Static28.parse("Prepared sound engine");
+    private static final JagString ENG_MAINLOAD45B = JagString.parse("Prepared sound engine");
 
     @OriginalMember(owner = "client!lk", name = "P", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD50 = Static28.parse("Loading fonts )2 ");
+    private static final JagString ENG_MAINLOAD50 = JagString.parse("Loading fonts )2 ");
 
     @OriginalMember(owner = "client!tl", name = "e", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD50B = Static28.parse("Loaded fonts");
+    private static final JagString ENG_MAINLOAD50B = JagString.parse("Loaded fonts");
 
     @OriginalMember(owner = "client!dm", name = "v", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD60 = Static28.parse("Loading title screen )2 ");
+    private static final JagString ENG_MAINLOAD60 = JagString.parse("Loading title screen )2 ");
 
     @OriginalMember(owner = "client!cb", name = "gb", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD60B = Static28.parse("Loaded title screen");
+    private static final JagString ENG_MAINLOAD60B = JagString.parse("Loaded title screen");
 
     @OriginalMember(owner = "client!dl", name = "j", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD65B = Static28.parse("Opened title screen");
+    private static final JagString ENG_MAINLOAD65B = JagString.parse("Opened title screen");
 
     @OriginalMember(owner = "client!bk", name = "K", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD70 = Static28.parse("Loading config )2 ");
+    private static final JagString ENG_MAINLOAD70 = JagString.parse("Loading config )2 ");
 
     @OriginalMember(owner = "client!fn", name = "P", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD70B = Static28.parse("Loaded config");
+    private static final JagString ENG_MAINLOAD70B = JagString.parse("Loaded config");
 
     @OriginalMember(owner = "client!vc", name = "X", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD80 = Static28.parse("Loading sprites )2 ");
+    private static final JagString ENG_MAINLOAD80 = JagString.parse("Loading sprites )2 ");
 
     @OriginalMember(owner = "client!sc", name = "w", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD80B = Static28.parse("Loaded sprites");
+    private static final JagString ENG_MAINLOAD80B = JagString.parse("Loaded sprites");
 
     @OriginalMember(owner = "client!ub", name = "n", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD90 = Static28.parse("Loading textures )2 ");
+    private static final JagString ENG_MAINLOAD90 = JagString.parse("Loading textures )2 ");
 
     @OriginalMember(owner = "client!gm", name = "fb", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD90B = Static28.parse("Loaded textures");
+    private static final JagString ENG_MAINLOAD90B = JagString.parse("Loaded textures");
 
     @OriginalMember(owner = "client!ni", name = "p", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD110B = Static28.parse("Loaded input handler");
+    private static final JagString ENG_MAINLOAD110B = JagString.parse("Loaded input handler");
 
     @OriginalMember(owner = "client!li", name = "b", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD120 = Static28.parse("Loading wordpack )2 ");
+    private static final JagString ENG_MAINLOAD120 = JagString.parse("Loading wordpack )2 ");
 
     @OriginalMember(owner = "client!pl", name = "b", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD120B = Static28.parse("Loaded wordpack");
+    private static final JagString ENG_MAINLOAD120B = JagString.parse("Loaded wordpack");
 
     @OriginalMember(owner = "client!bg", name = "O", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD130 = Static28.parse("Loading interfaces )2 ");
+    private static final JagString ENG_MAINLOAD130 = JagString.parse("Loading interfaces )2 ");
 
     @OriginalMember(owner = "client!wa", name = "D", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD130B = Static28.parse("Loaded interfaces");
+    private static final JagString ENG_MAINLOAD130B = JagString.parse("Loaded interfaces");
 
     @OriginalMember(owner = "client!r", name = "c", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD135 = Static28.parse("Loading world list data");
+    private static final JagString ENG_MAINLOAD135 = JagString.parse("Loading world list data");
 
     @OriginalMember(owner = "client!ck", name = "o", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD135B = Static28.parse("Loaded world list data");
+    private static final JagString ENG_MAINLOAD135B = JagString.parse("Loaded world list data");
 
     @OriginalMember(owner = "client!cn", name = "J", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD140 = Static28.parse("Starting 3d Library");
+    private static final JagString ENG_MAINLOAD140 = JagString.parse("Starting 3d Library");
 
     @OriginalMember(owner = "client!rg", name = "u", descriptor = "Lclient!na;")
-    private static final JagString ENG_MAINLOAD150B = Static28.parse("Started 3d Library");
+    private static final JagString ENG_MAINLOAD150B = JagString.parse("Started 3d Library");
 
     @OriginalMember(owner = "client!qc", name = "Z", descriptor = "Lclient!na;")
-    private static final JagString ENG_MEMBERS_OBJECT = Static28.parse("Members object");
+    private static final JagString ENG_MEMBERS_OBJECT = JagString.parse("Members object");
 
     @OriginalMember(owner = "client!fh", name = "W", descriptor = "Lclient!na;")
-    private static final JagString ENG_MILLION_SUFFIX = Static28.parse("M");
+    private static final JagString ENG_MILLION_SUFFIX = JagString.parse("M");
 
     @OriginalMember(owner = "client!qk", name = "l", descriptor = "Lclient!na;")
-    private static final JagString ENG_MINISEPARATOR = Static28.parse(" ");
+    private static final JagString ENG_MINISEPARATOR = JagString.parse(" ");
 
     @OriginalMember(owner = "client!ui", name = "ab", descriptor = "Lclient!na;")
-    private static final JagString ENG_MOREOPTIONS = Static28.parse(" more options");
+    private static final JagString ENG_MOREOPTIONS = JagString.parse(" more options");
 
     @OriginalMember(owner = "client!ph", name = "c", descriptor = "Lclient!na;")
-    private static final JagString ENG_OK = Static28.parse("Ok");
+    private static final JagString ENG_OK = JagString.parse("Ok");
 
     @OriginalMember(owner = "client!bj", name = "z", descriptor = "Lclient!na;")
-    private static final JagString ENG_PLEASEWAIT = Static28.parse("Please wait)3)3)3");
+    private static final JagString ENG_PLEASEWAIT = JagString.parse("Please wait)3)3)3");
 
     @OriginalMember(owner = "client!mf", name = "T", descriptor = "Lclient!na;")
-    private static final JagString ENG_RATING = Static28.parse("rating: ");
+    private static final JagString ENG_RATING = JagString.parse("rating: ");
 
     @OriginalMember(owner = "client!pm", name = "gb", descriptor = "Lclient!na;")
-    private static final JagString ENG_REMOVEFRIEND = Static28.parse(" from your friend list first)3");
+    private static final JagString ENG_REMOVEFRIEND = JagString.parse(" from your friend list first)3");
 
     @OriginalMember(owner = "client!rc", name = "v", descriptor = "Lclient!na;")
-    private static final JagString ENG_REMOVEIGNORE = Static28.parse(" from your ignore list first)3");
+    private static final JagString ENG_REMOVEIGNORE = JagString.parse(" from your ignore list first)3");
 
     @OriginalMember(owner = "client!fk", name = "b", descriptor = "Lclient!na;")
-    private static final JagString ENG_REMOVESOCIAL = Static28.parse("Please remove ");
+    private static final JagString ENG_REMOVESOCIAL = JagString.parse("Please remove ");
 
     @OriginalMember(owner = "client!se", name = "o", descriptor = "Lclient!na;")
-    private static final JagString ENG_SELECT = Static28.parse("Select");
+    private static final JagString ENG_SELECT = JagString.parse("Select");
 
     @OriginalMember(owner = "client!ef", name = "k", descriptor = "Lclient!na;")
-    private static final JagString ENG_SKILL = Static28.parse("skill: ");
+    private static final JagString ENG_SKILL = JagString.parse("skill: ");
 
     @OriginalMember(owner = "client!si", name = "hb", descriptor = "Lclient!na;")
-    private static final JagString ENG_TAKE = Static28.parse("Take");
+    private static final JagString ENG_TAKE = JagString.parse("Take");
 
     @OriginalMember(owner = "client!cl", name = "N", descriptor = "Lclient!na;")
-    private static final JagString ENG_THOUSAND_SUFFIX = Static28.parse("K");
+    private static final JagString ENG_THOUSAND_SUFFIX = JagString.parse("K");
 
     @OriginalMember(owner = "client!ea", name = "q", descriptor = "Lclient!na;")
-    private static final JagString ENG_TRADEREQ = Static28.parse("wishes to trade with you)3");
+    private static final JagString ENG_TRADEREQ = JagString.parse("wishes to trade with you)3");
 
     @OriginalMember(owner = "client!gi", name = "f", descriptor = "Lclient!na;")
-    private static final JagString ENG_UNABLETOFIND = Static28.parse("Unable to find ");
+    private static final JagString ENG_UNABLETOFIND = JagString.parse("Unable to find ");
 
     @OriginalMember(owner = "client!sa", name = "U", descriptor = "Lclient!na;")
-    private static final JagString ENG_USE = Static28.parse("Use");
+    private static final JagString ENG_USE = JagString.parse("Use");
 
     @OriginalMember(owner = "client!ib", name = "m", descriptor = "Lclient!na;")
-    private static final JagString ENG_WALKHERE = Static28.parse("Walk here");
+    private static final JagString ENG_WALKHERE = JagString.parse("Walk here");
     //endregion
 
     //region Stable Translations (chat effects/colors)
@@ -594,265 +594,265 @@ public class LocalizedText {
     // TODO: unsorted
     //region German Translations
     @OriginalMember(owner = "client!vk", name = "l", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD135 = Static28.parse("Lade Liste der Welten");
+    public static final JagString GER_MAINLOAD135 = JagString.parse("Lade Liste der Welten");
 
     @OriginalMember(owner = "client!eg", name = "A", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD80B = Static28.parse("Sprites geladen)3");
+    public static final JagString GER_MAINLOAD80B = JagString.parse("Sprites geladen)3");
 
     @OriginalMember(owner = "client!eh", name = "h", descriptor = "Lclient!na;")
-    public static final JagString GER_TRADEREQ = Static28.parse("m-Ochte mit Ihnen handeln)3");
+    public static final JagString GER_TRADEREQ = JagString.parse("m-Ochte mit Ihnen handeln)3");
 
     @OriginalMember(owner = "client!eh", name = "i", descriptor = "Lclient!na;")
-    public static final JagString GER_REMOVEFRIEND = Static28.parse(" zuerst von Ihrer Freunde)2Liste(Q");
+    public static final JagString GER_REMOVEFRIEND = JagString.parse(" zuerst von Ihrer Freunde)2Liste(Q");
 
     @OriginalMember(owner = "client!ed", name = "r", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD120B = Static28.parse("Wordpack geladen)3");
+    public static final JagString GER_MAINLOAD120B = JagString.parse("Wordpack geladen)3");
 
     @OriginalMember(owner = "client!dk", name = "i", descriptor = "Lclient!na;")
-    public static final JagString GER_CHATCOL6 = Static28.parse("blinken1:");
+    public static final JagString GER_CHATCOL6 = JagString.parse("blinken1:");
 
     @OriginalMember(owner = "client!dm", name = "h", descriptor = "Lclient!na;")
-    public static final JagString GER_REMOVESOCIAL = Static28.parse("Bitte entfernen Sie ");
+    public static final JagString GER_REMOVESOCIAL = JagString.parse("Bitte entfernen Sie ");
 
     @OriginalMember(owner = "client!ck", name = "c", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD70 = Static28.parse("Lade Konfiguration )2 ");
+    public static final JagString GER_MAINLOAD70 = JagString.parse("Lade Konfiguration )2 ");
 
     @OriginalMember(owner = "client!cm", name = "h", descriptor = "Lclient!na;")
-    public static final JagString GER_CONLOST = Static28.parse("Verbindung abgebrochen)3");
+    public static final JagString GER_CONLOST = JagString.parse("Verbindung abgebrochen)3");
 
     @OriginalMember(owner = "client!cn", name = "s", descriptor = "Lclient!na;")
-    public static final JagString GER_CHATCOL4 = Static28.parse("lila:");
+    public static final JagString GER_CHATCOL4 = JagString.parse("lila:");
 
     @OriginalMember(owner = "client!cn", name = "C", descriptor = "Lclient!na;")
-    public static final JagString GER_CHATCOL1 = Static28.parse("rot:");
+    public static final JagString GER_CHATCOL1 = JagString.parse("rot:");
 
     @OriginalMember(owner = "client!cd", name = "y", descriptor = "Lclient!na;")
-    public static final JagString GER_CHECKING_FOR_UPDATES = Static28.parse("Suche nach Updates )2 ");
+    public static final JagString GER_CHECKING_FOR_UPDATES = JagString.parse("Suche nach Updates )2 ");
 
     @OriginalMember(owner = "client!cd", name = "D", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD120 = Static28.parse("Lade Wordpack )2 ");
+    public static final JagString GER_MAINLOAD120 = JagString.parse("Lade Wordpack )2 ");
 
     @OriginalMember(owner = "client!ce", name = "m", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD90 = Static28.parse("Lade Texturen )2 ");
+    public static final JagString GER_MAINLOAD90 = JagString.parse("Lade Texturen )2 ");
 
     @OriginalMember(owner = "client!cg", name = "d", descriptor = "Lclient!na;")
-    public static final JagString GER_LENT_ITEM_RETURN = Static28.parse("Ablegen");
+    public static final JagString GER_LENT_ITEM_RETURN = JagString.parse("Ablegen");
 
     @OriginalMember(owner = "client!bj", name = "p", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD70B = Static28.parse("Konfig geladen)3");
+    public static final JagString GER_MAINLOAD70B = JagString.parse("Konfig geladen)3");
 
     @OriginalMember(owner = "client!bj", name = "U", descriptor = "Lclient!na;")
-    public static final JagString GER_CHATEFFECT2 = Static28.parse("welle2:");
+    public static final JagString GER_CHATEFFECT2 = JagString.parse("welle2:");
 
     @OriginalMember(owner = "client!bk", name = "P", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD0 = Static28.parse("Speicher wird zugewiesen)3");
+    public static final JagString GER_MAINLOAD0 = JagString.parse("Speicher wird zugewiesen)3");
 
     @OriginalMember(owner = "client!bd", name = "d", descriptor = "Lclient!na;")
-    public static final JagString GER_SELECT = Static28.parse("Ausw-=hlen");
+    public static final JagString GER_SELECT = JagString.parse("Ausw-=hlen");
 
     @OriginalMember(owner = "client!bb", name = "N", descriptor = "Lclient!na;")
-    public static final JagString GER_CHATCOL0 = Static28.parse("gelb:");
+    public static final JagString GER_CHATCOL0 = JagString.parse("gelb:");
 
     @OriginalMember(owner = "client!an", name = "eb", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD50 = Static28.parse("Lade Schrifts-=tze )2 ");
+    public static final JagString GER_MAINLOAD50 = JagString.parse("Lade Schrifts-=tze )2 ");
 
     @OriginalMember(owner = "client!ba", name = "E", descriptor = "Lclient!na;")
-    public static final JagString GER_LEVEL = Static28.parse("Stufe: ");
+    public static final JagString GER_LEVEL = JagString.parse("Stufe: ");
 
     @OriginalMember(owner = "client!af", name = "f", descriptor = "Lclient!na;")
-    public static final JagString GER_MEMBERS_OBJECT = Static28.parse("Gegenstand f-Ur Mitglieder");
+    public static final JagString GER_MEMBERS_OBJECT = JagString.parse("Gegenstand f-Ur Mitglieder");
 
     @OriginalMember(owner = "client!be", name = "Zc", descriptor = "Lclient!na;")
-    public static final JagString GER_TAKE = Static28.parse("Nehmen");
+    public static final JagString GER_TAKE = JagString.parse("Nehmen");
 
     @OriginalMember(owner = "client!se", name = "s", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD110B = Static28.parse("Eingabeprozedur geladen)3");
+    public static final JagString GER_MAINLOAD110B = JagString.parse("Eingabeprozedur geladen)3");
 
     @OriginalMember(owner = "client!gm", name = "eb", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD80 = Static28.parse("Lade Sprites )2 ");
+    public static final JagString GER_MAINLOAD80 = JagString.parse("Lade Sprites )2 ");
 
     @OriginalMember(owner = "client!qj", name = "h", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD90B = Static28.parse("Texturen geladen)3");
+    public static final JagString GER_MAINLOAD90B = JagString.parse("Texturen geladen)3");
 
     @OriginalMember(owner = "client!rb", name = "e", descriptor = "Lclient!na;")
-    public static final JagString GER_HIDDEN = Static28.parse("Versteckt");
+    public static final JagString GER_HIDDEN = JagString.parse("Versteckt");
 
     @OriginalMember(owner = "client!tk", name = "x", descriptor = "Lclient!na;")
-    public static final JagString GER_FRIENDLISTDUPE = Static28.parse(" steht bereits auf Ihrer Freunde)2Liste(Q");
+    public static final JagString GER_FRIENDLISTDUPE = JagString.parse(" steht bereits auf Ihrer Freunde)2Liste(Q");
 
     @OriginalMember(owner = "client!nk", name = "o", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD65B = Static28.parse("Titelbild ge-Offnet)3");
+    public static final JagString GER_MAINLOAD65B = JagString.parse("Titelbild ge-Offnet)3");
 
     @OriginalMember(owner = "client!nm", name = "R", descriptor = "Lclient!na;")
-    public static final JagString GER_CLOSE = Static28.parse("Schlie-8en");
+    public static final JagString GER_CLOSE = JagString.parse("Schlie-8en");
 
     @OriginalMember(owner = "client!s", name = "j", descriptor = "Lclient!na;")
-    public static final JagString GER_FRIENDCANTADDSELF = Static28.parse("Sie k-Onnen sich selbst nicht auf Ihre Freunde)2Liste setzen(Q");
+    public static final JagString GER_FRIENDCANTADDSELF = JagString.parse("Sie k-Onnen sich selbst nicht auf Ihre Freunde)2Liste setzen(Q");
 
     @OriginalMember(owner = "client!oe", name = "k", descriptor = "Lclient!na;")
-    public static final JagString GER_CHATCOL11 = Static28.parse("leuchten3:");
+    public static final JagString GER_CHATCOL11 = JagString.parse("leuchten3:");
 
     @OriginalMember(owner = "client!pg", name = "W", descriptor = "Lclient!na;")
-    public static final JagString GER_FRIENDLOGIN = Static28.parse(" loggt sich ein)3");
+    public static final JagString GER_FRIENDLOGIN = JagString.parse(" loggt sich ein)3");
 
     @OriginalMember(owner = "client!pg", name = "Y", descriptor = "Lclient!na;")
-    public static final JagString GER_CHATCOL9 = Static28.parse("leuchten1:");
+    public static final JagString GER_CHATCOL9 = JagString.parse("leuchten1:");
 
     @OriginalMember(owner = "client!g", name = "b", descriptor = "Lclient!na;")
-    public static final JagString GER_FRIENDLISTFULL = Static28.parse("Ihre Freunde)2Liste ist voll(Q Maximale Eintr-=ge: Mitglieder 200)4freie Spieler 100");
+    public static final JagString GER_FRIENDLISTFULL = JagString.parse("Ihre Freunde)2Liste ist voll(Q Maximale Eintr-=ge: Mitglieder 200)4freie Spieler 100");
 
     @OriginalMember(owner = "client!ui", name = "hb", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD50B = Static28.parse("Schrifts-=tze geladen)3");
+    public static final JagString GER_MAINLOAD50B = JagString.parse("Schrifts-=tze geladen)3");
 
     @OriginalMember(owner = "client!na", name = "p", descriptor = "Lclient!na;")
-    public static final JagString GER_ATTEMPT_TO_REESTABLISH = Static28.parse("Bitte warten Sie )2 es wird versucht)1 die Verbindung wiederherzustellen)3");
+    public static final JagString GER_ATTEMPT_TO_REESTABLISH = JagString.parse("Bitte warten Sie )2 es wird versucht)1 die Verbindung wiederherzustellen)3");
 
     @OriginalMember(owner = "client!fc", name = "d", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD130 = Static28.parse("Lade Benutzeroberfl-=che )2 ");
+    public static final JagString GER_MAINLOAD130 = JagString.parse("Lade Benutzeroberfl-=che )2 ");
 
     @OriginalMember(owner = "client!em", name = "A", descriptor = "Lclient!na;")
-    public static final JagString GER_CHATCOL8 = Static28.parse("blinken3:");
+    public static final JagString GER_CHATCOL8 = JagString.parse("blinken3:");
 
     @OriginalMember(owner = "client!q", name = "b", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD30B = Static28.parse("Verbindung zum Update)2Server hergestellt)3");
+    public static final JagString GER_MAINLOAD30B = JagString.parse("Verbindung zum Update)2Server hergestellt)3");
 
     @OriginalMember(owner = "client!gi", name = "l", descriptor = "Lclient!na;")
-    public static final JagString GER_CHATCOL3 = Static28.parse("blaugr-Un:");
+    public static final JagString GER_CHATCOL3 = JagString.parse("blaugr-Un:");
 
     @OriginalMember(owner = "client!jm", name = "w", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD150B = Static28.parse("3D)2Softwarebibliothek gestartet)3");
+    public static final JagString GER_MAINLOAD150B = JagString.parse("3D)2Softwarebibliothek gestartet)3");
 
     @OriginalMember(owner = "client!ig", name = "e", descriptor = "Lclient!na;")
-    public static final JagString GER_LOADING = Static28.parse("Ladevorgang )2 bitte warten Sie)3");
+    public static final JagString GER_LOADING = JagString.parse("Ladevorgang )2 bitte warten Sie)3");
 
     @OriginalMember(owner = "client!ta", name = "m", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD0B = Static28.parse("Zugewiesener Speicher)3");
+    public static final JagString GER_MAINLOAD0B = JagString.parse("Zugewiesener Speicher)3");
 
     @OriginalMember(owner = "client!sc", name = "k", descriptor = "Lclient!na;")
-    public static final JagString GER_FACEHERE = Static28.parse("Hierhin drehen");
+    public static final JagString GER_FACEHERE = JagString.parse("Hierhin drehen");
 
     @OriginalMember(owner = "client!ub", name = "a", descriptor = "Lclient!na;")
-    public static final JagString GER_CHATCOL7 = Static28.parse("blinken2:");
+    public static final JagString GER_CHATCOL7 = JagString.parse("blinken2:");
 
     @OriginalMember(owner = "client!h", name = "yb", descriptor = "Lclient!na;")
-    public static final JagString GER_REMOVEIGNORE = Static28.parse(" zuerst von Ihrer Ignorieren)2Liste(Q");
+    public static final JagString GER_REMOVEIGNORE = JagString.parse(" zuerst von Ihrer Ignorieren)2Liste(Q");
 
     @OriginalMember(owner = "client!nh", name = "S", descriptor = "Lclient!na;")
-    public static final JagString GER_LOADINGDOTDOTDOT = Static28.parse("Lade)3)3)3");
+    public static final JagString GER_LOADINGDOTDOTDOT = JagString.parse("Lade)3)3)3");
 
     @OriginalMember(owner = "client!nh", name = "V", descriptor = "Lclient!na;")
-    public static final JagString GER_CHATEFFECT3 = Static28.parse("sch-Utteln:");
+    public static final JagString GER_CHATEFFECT3 = JagString.parse("sch-Utteln:");
 
     @OriginalMember(owner = "client!pi", name = "bb", descriptor = "Lclient!na;")
-    public static final JagString GER_IGNORECANTADDSELF = Static28.parse("Sie k-Onnen sich selbst nicht selbst auf Ihre Ignorieren)2Liste setzen(Q");
+    public static final JagString GER_IGNORECANTADDSELF = JagString.parse("Sie k-Onnen sich selbst nicht selbst auf Ihre Ignorieren)2Liste setzen(Q");
 
     @OriginalMember(owner = "client!ug", name = "f", descriptor = "Lclient!na;")
-    public static final JagString GER_CHATCOL5 = Static28.parse("weiss:");
+    public static final JagString GER_CHATCOL5 = JagString.parse("weiss:");
 
     @OriginalMember(owner = "client!nc", name = "d", descriptor = "Lclient!na;")
-    public static final JagString GER_RATING = Static28.parse("Kampfstufe: ");
+    public static final JagString GER_RATING = JagString.parse("Kampfstufe: ");
 
     @OriginalMember(owner = "client!pk", name = "eb", descriptor = "Lclient!na;")
-    public static final JagString GER_ATTACK = Static28.parse("Angreifen");
+    public static final JagString GER_ATTACK = JagString.parse("Angreifen");
 
     @OriginalMember(owner = "client!pf", name = "l", descriptor = "Lclient!na;")
-    public static final JagString GER_MOREOPTIONS = Static28.parse(" weitere Optionen");
+    public static final JagString GER_MOREOPTIONS = JagString.parse(" weitere Optionen");
 
     @OriginalMember(owner = "client!la", name = "g", descriptor = "Lclient!na;")
-    public static final JagString GER_IGNORELISTDUPE = Static28.parse(" steht bereits auf Ihrer Ignorieren)2Liste(Q");
+    public static final JagString GER_IGNORELISTDUPE = JagString.parse(" steht bereits auf Ihrer Ignorieren)2Liste(Q");
 
     @OriginalMember(owner = "client!jg", name = "k", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD60B = Static28.parse("Titelbild geladen)3");
+    public static final JagString GER_MAINLOAD60B = JagString.parse("Titelbild geladen)3");
 
     @OriginalMember(owner = "client!lg", name = "j", descriptor = "Lclient!na;")
-    public static final JagString GER_CHATCOL2 = Static28.parse("gr-Un:");
+    public static final JagString GER_CHATCOL2 = JagString.parse("gr-Un:");
 
     @OriginalMember(owner = "client!nd", name = "u", descriptor = "Lclient!na;")
-    public static final JagString GER_CANCEL = Static28.parse("Abbrechen");
+    public static final JagString GER_CANCEL = JagString.parse("Abbrechen");
 
     @OriginalMember(owner = "client!uh", name = "fb", descriptor = "Lclient!na;")
-    public static final JagString GER_GAME0_LOADING = Static28.parse("RuneScape wird geladen )2 bitte warten)3)3)3");
+    public static final JagString GER_GAME0_LOADING = JagString.parse("RuneScape wird geladen )2 bitte warten)3)3)3");
 
     @OriginalMember(owner = "client!hb", name = "p", descriptor = "Lclient!na;")
-    public static final JagString GER_MILLION_SUFFIX = Static28.parse("M");
+    public static final JagString GER_MILLION_SUFFIX = JagString.parse("M");
 
     @OriginalMember(owner = "client!hb", name = "x", descriptor = "Lclient!na;")
-    public static final JagString GER_PLEASEWAIT = Static28.parse("Bitte warten Sie)3)3)3");
+    public static final JagString GER_PLEASEWAIT = JagString.parse("Bitte warten Sie)3)3)3");
 
     @OriginalMember(owner = "client!lj", name = "q", descriptor = "Lclient!na;")
-    public static final JagString GER_DROP = Static28.parse("Fallen lassen");
+    public static final JagString GER_DROP = JagString.parse("Fallen lassen");
 
     @OriginalMember(owner = "client!uh", name = "O", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD130B = Static28.parse("Benutzeroberfl-=che geladen)3");
+    public static final JagString GER_MAINLOAD130B = JagString.parse("Benutzeroberfl-=che geladen)3");
 
     @OriginalMember(owner = "client!pe", name = "q", descriptor = "Lclient!na;")
-    public static final JagString GER_MINISEPARATOR = Static28.parse(": ");
+    public static final JagString GER_MINISEPARATOR = JagString.parse(": ");
 
     @OriginalMember(owner = "client!pe", name = "d", descriptor = "Lclient!na;")
-    public static final JagString GER_CHATEFFECT1 = Static28.parse("welle:");
+    public static final JagString GER_CHATEFFECT1 = JagString.parse("welle:");
 
     @OriginalMember(owner = "client!si", name = "ib", descriptor = "Lclient!na;")
-    public static final JagString GER_CONTINUE = Static28.parse("Weiter");
+    public static final JagString GER_CONTINUE = JagString.parse("Weiter");
 
     @OriginalMember(owner = "client!ic", name = "i", descriptor = "Lclient!na;")
-    public static final JagString GER_IGNORELISTFULL = Static28.parse("Ihre Ignorieren)2Liste ist voll)1 Sie k-Onnen nur 100 Spieler darauf eintragen)3");
+    public static final JagString GER_IGNORELISTFULL = JagString.parse("Ihre Ignorieren)2Liste ist voll)1 Sie k-Onnen nur 100 Spieler darauf eintragen)3");
 
     @OriginalMember(owner = "client!mf", name = "S", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD140 = Static28.parse("Starte 3D)2Softwarebibliothek)3");
+    public static final JagString GER_MAINLOAD140 = JagString.parse("Starte 3D)2Softwarebibliothek)3");
 
     @OriginalMember(owner = "client!lh", name = "x", descriptor = "Lclient!na;")
-    public static final JagString GER_CHATEFFECT4 = Static28.parse("scrollen:");
+    public static final JagString GER_CHATEFFECT4 = JagString.parse("scrollen:");
 
     @OriginalMember(owner = "client!sk", name = "cb", descriptor = "Lclient!na;")
-    public static final JagString GER_EXAMINE = Static28.parse("Untersuchen");
+    public static final JagString GER_EXAMINE = JagString.parse("Untersuchen");
 
     @OriginalMember(owner = "client!sk", name = "eb", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD45B = Static28.parse("Musik)2Engine vorbereitet)3");
+    public static final JagString GER_MAINLOAD45B = JagString.parse("Musik)2Engine vorbereitet)3");
 
     @OriginalMember(owner = "client!sd", name = "P", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD135B = Static28.parse("Liste der Welten geladen");
+    public static final JagString GER_MAINLOAD135B = JagString.parse("Liste der Welten geladen");
 
     @OriginalMember(owner = "client!vh", name = "i", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD30 = Static28.parse("Verbindung mit Update)2Server)3)3)3");
+    public static final JagString GER_MAINLOAD30 = JagString.parse("Verbindung mit Update)2Server)3)3)3");
 
     @OriginalMember(owner = "client!re", name = "r", descriptor = "Lclient!na;")
-    public static final JagString GER_WALKHERE = Static28.parse("Hierhin gehen");
+    public static final JagString GER_WALKHERE = JagString.parse("Hierhin gehen");
 
     @OriginalMember(owner = "client!qf", name = "U", descriptor = "Lclient!na;")
-    public static final JagString GER_CHOOSE_OPTION = Static28.parse("W-=hlen Sie eine Option");
+    public static final JagString GER_CHOOSE_OPTION = JagString.parse("W-=hlen Sie eine Option");
 
     @OriginalMember(owner = "client!hj", name = "i", descriptor = "Lclient!na;")
-    public static final JagString GER_USE = Static28.parse("Benutzen");
+    public static final JagString GER_USE = JagString.parse("Benutzen");
 
     @OriginalMember(owner = "client!ql", name = "k", descriptor = "Lclient!na;")
-    public static final JagString GER_CHATEFFECT5 = Static28.parse("gleiten:");
+    public static final JagString GER_CHATEFFECT5 = JagString.parse("gleiten:");
 
     @OriginalMember(owner = "client!ok", name = "g", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD60 = Static28.parse("Lade Titelbild )2 ");
+    public static final JagString GER_MAINLOAD60 = JagString.parse("Lade Titelbild )2 ");
 
     @OriginalMember(owner = "client!gk", name = "a", descriptor = "Lclient!na;")
-    public static final JagString GER_CHATCOL10 = Static28.parse("leuchten2:");
+    public static final JagString GER_CHATCOL10 = JagString.parse("leuchten2:");
 
     @OriginalMember(owner = "client!wd", name = "c", descriptor = "Lclient!na;")
-    public static final JagString GER_UNABLETOFIND = Static28.parse("Spieler kann nicht gefunden werden: ");
+    public static final JagString GER_UNABLETOFIND = JagString.parse("Spieler kann nicht gefunden werden: ");
 
     @OriginalMember(owner = "client!og", name = "h", descriptor = "Lclient!na;")
-    public static final JagString GER_FRIENDLOGOUT = Static28.parse(" loggt sich aus)3");
+    public static final JagString GER_FRIENDLOGOUT = JagString.parse(" loggt sich aus)3");
 
     @OriginalMember(owner = "client!ml", name = "S", descriptor = "Lclient!na;")
-    public static final JagString GER_THOUSAND_SUFFIX = Static28.parse("T");
+    public static final JagString GER_THOUSAND_SUFFIX = JagString.parse("T");
 
     @OriginalMember(owner = "client!va", name = "v", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD10B = Static28.parse("Spielwelt erstellt)3");
+    public static final JagString GER_MAINLOAD10B = JagString.parse("Spielwelt erstellt)3");
 
     @OriginalMember(owner = "client!mf", name = "q", descriptor = "Lclient!na;")
-    public static final JagString GER_OK = Static28.parse("Okay");
+    public static final JagString GER_OK = JagString.parse("Okay");
 
     @OriginalMember(owner = "client!ob", name = "c", descriptor = "Lclient!na;")
-    public static final JagString GER_SKILL = Static28.parse("Fertigkeit: ");
+    public static final JagString GER_SKILL = JagString.parse("Fertigkeit: ");
 
     @OriginalMember(owner = "client!wf", name = "h", descriptor = "Lclient!na;")
-    public static final JagString GER_MAINLOAD40B = Static28.parse("Update)2Liste geladen)3");
+    public static final JagString GER_MAINLOAD40B = JagString.parse("Update)2Liste geladen)3");
 
     @OriginalMember(owner = "client!lk", name = "a", descriptor = "(Z)V")
     public static void switchToGerman() {
@@ -952,265 +952,265 @@ public class LocalizedText {
     // TODO: unsorted
     //region French Translations
     @OriginalMember(owner = "client!kc", name = "r", descriptor = "Lclient!na;")
-    public static final JagString FR_THOUSAND_SUFFIX = Static28.parse("K");
+    public static final JagString FR_THOUSAND_SUFFIX = JagString.parse("K");
 
     @OriginalMember(owner = "client!qj", name = "g", descriptor = "Lclient!na;")
-    public static final JagString FR_CHATCOL1 = Static28.parse("rouge:");
+    public static final JagString FR_CHATCOL1 = JagString.parse("rouge:");
 
     @OriginalMember(owner = "client!oe", name = "m", descriptor = "Lclient!na;")
-    public static final JagString FR_GAME0_LOADING = Static28.parse("Chargement de RuneScape en cours )2 veuillez patienter)3)3)3");
+    public static final JagString FR_GAME0_LOADING = JagString.parse("Chargement de RuneScape en cours )2 veuillez patienter)3)3)3");
 
     @OriginalMember(owner = "client!ii", name = "j", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD130B = Static28.parse("Interfaces charg-Bes");
+    public static final JagString FR_MAINLOAD130B = JagString.parse("Interfaces charg-Bes");
 
     @OriginalMember(owner = "client!pl", name = "d", descriptor = "Lclient!na;")
-    public static final JagString FR_RATING = Static28.parse("classement ");
+    public static final JagString FR_RATING = JagString.parse("classement ");
 
     @OriginalMember(owner = "client!ol", name = "S", descriptor = "Lclient!na;")
-    public static final JagString FR_CONLOST = Static28.parse("Connexion perdue)3");
+    public static final JagString FR_CONLOST = JagString.parse("Connexion perdue)3");
 
     @OriginalMember(owner = "client!ui", name = "nb", descriptor = "Lclient!na;")
-    public static final JagString FR_CHATCOL0 = Static28.parse("jaune:");
+    public static final JagString FR_CHATCOL0 = JagString.parse("jaune:");
 
     @OriginalMember(owner = "client!fm", name = "T", descriptor = "Lclient!na;")
-    public static final JagString FR_MINISEPARATOR = Static28.parse(" ");
+    public static final JagString FR_MINISEPARATOR = JagString.parse(" ");
 
     @OriginalMember(owner = "client!fk", name = "c", descriptor = "Lclient!na;")
-    public static final JagString FR_CHECKING_FOR_UPDATES = Static28.parse("V-Brification des mises -9 jour )2 ");
+    public static final JagString FR_CHECKING_FOR_UPDATES = JagString.parse("V-Brification des mises -9 jour )2 ");
 
     @OriginalMember(owner = "client!fk", name = "p", descriptor = "Lclient!na;")
-    public static final JagString FR_CHATEFFECT2 = Static28.parse("ondulation2:");
+    public static final JagString FR_CHATEFFECT2 = JagString.parse("ondulation2:");
 
     @OriginalMember(owner = "client!fh", name = "V", descriptor = "Lclient!na;")
-    public static final JagString FR_CHATCOL2 = Static28.parse("vert:");
+    public static final JagString FR_CHATCOL2 = JagString.parse("vert:");
 
     @OriginalMember(owner = "client!fc", name = "g", descriptor = "Lclient!na;")
-    public static final JagString FR_USE = Static28.parse("Utiliser");
+    public static final JagString FR_USE = JagString.parse("Utiliser");
 
     @OriginalMember(owner = "client!ab", name = "m", descriptor = "Lclient!na;")
-    public static final JagString FR_MEMBERS_OBJECT = Static28.parse("Objet d(Wabonn-Bs");
+    public static final JagString FR_MEMBERS_OBJECT = JagString.parse("Objet d(Wabonn-Bs");
 
     @OriginalMember(owner = "client!ah", name = "u", descriptor = "Lclient!na;")
-    public static final JagString FR_REMOVESOCIAL = Static28.parse("Veuillez commencer par supprimer ");
+    public static final JagString FR_REMOVESOCIAL = JagString.parse("Veuillez commencer par supprimer ");
 
     @OriginalMember(owner = "client!bf", name = "A", descriptor = "Lclient!na;")
-    public static final JagString FR_CHATCOL10 = Static28.parse("brillant2:");
+    public static final JagString FR_CHATCOL10 = JagString.parse("brillant2:");
 
     @OriginalMember(owner = "client!bg", name = "n", descriptor = "Lclient!na;")
-    public static final JagString FR_FRIENDLISTFULL = Static28.parse("Votre liste d(Wamis est pleine (X100 noms maximum pour la version gratuite et 200 pour les abonn-Bs(Y)3");
+    public static final JagString FR_FRIENDLISTFULL = JagString.parse("Votre liste d(Wamis est pleine (X100 noms maximum pour la version gratuite et 200 pour les abonn-Bs(Y)3");
 
     @OriginalMember(owner = "client!bm", name = "h", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD60B = Static28.parse(",Mcran)2titre charg-B");
+    public static final JagString FR_MAINLOAD60B = JagString.parse(",Mcran)2titre charg-B");
 
     @OriginalMember(owner = "client!ca", name = "bb", descriptor = "Lclient!na;")
-    public static final JagString FR_EXAMINE = Static28.parse("Examiner");
+    public static final JagString FR_EXAMINE = JagString.parse("Examiner");
 
     @OriginalMember(owner = "client!cd", name = "v", descriptor = "Lclient!na;")
-    public static final JagString FR_WALKHERE = Static28.parse("Atteindre");
+    public static final JagString FR_WALKHERE = JagString.parse("Atteindre");
 
     @OriginalMember(owner = "client!cj", name = "b", descriptor = "Lclient!na;")
-    public static final JagString FR_CHATCOL5 = Static28.parse("blanc:");
+    public static final JagString FR_CHATCOL5 = JagString.parse("blanc:");
 
     @OriginalMember(owner = "client!cl", name = "P", descriptor = "Lclient!na;")
-    public static final JagString FR_CHATCOL11 = Static28.parse("brillant3:");
+    public static final JagString FR_CHATCOL11 = JagString.parse("brillant3:");
 
     @OriginalMember(owner = "client!cl", name = "R", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD65B = Static28.parse(",Mcran)2titre ouvert");
+    public static final JagString FR_MAINLOAD65B = JagString.parse(",Mcran)2titre ouvert");
 
     @OriginalMember(owner = "client!cm", name = "e", descriptor = "Lclient!na;")
-    public static final JagString FR_FRIENDCANTADDSELF = Static28.parse("Vous ne pouvez pas ajouter votre nom -9 votre liste d(Wamis)3");
+    public static final JagString FR_FRIENDCANTADDSELF = JagString.parse("Vous ne pouvez pas ajouter votre nom -9 votre liste d(Wamis)3");
 
     @OriginalMember(owner = "client!cm", name = "i", descriptor = "Lclient!na;")
-    public static final JagString FR_SKILL = Static28.parse("comp-Btence ");
+    public static final JagString FR_SKILL = JagString.parse("comp-Btence ");
 
     @OriginalMember(owner = "client!cn", name = "x", descriptor = "Lclient!na;")
-    public static final JagString FR_IGNORECANTADDSELF = Static28.parse("Vous ne pouvez pas ajouter votre nom -9 votre liste noire)3");
+    public static final JagString FR_IGNORECANTADDSELF = JagString.parse("Vous ne pouvez pas ajouter votre nom -9 votre liste noire)3");
 
     @OriginalMember(owner = "client!e", name = "vc", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD110B = Static28.parse("Gestionnaire de saisie charg-B");
+    public static final JagString FR_MAINLOAD110B = JagString.parse("Gestionnaire de saisie charg-B");
 
     @OriginalMember(owner = "client!ef", name = "l", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD130 = Static28.parse("Chargement des interfaces )2 ");
+    public static final JagString FR_MAINLOAD130 = JagString.parse("Chargement des interfaces )2 ");
 
     @OriginalMember(owner = "client!eg", name = "y", descriptor = "Lclient!na;")
-    public static final JagString FR_LENT_ITEM_RETURN = Static28.parse("Jeter");
+    public static final JagString FR_LENT_ITEM_RETURN = JagString.parse("Jeter");
 
     @OriginalMember(owner = "client!ej", name = "cb", descriptor = "Lclient!na;")
-    public static final JagString FR_CHATCOL7 = Static28.parse("clignotant2:");
+    public static final JagString FR_CHATCOL7 = JagString.parse("clignotant2:");
 
     @OriginalMember(owner = "client!fb", name = "k", descriptor = "Lclient!na;")
-    public static final JagString FR_MILLION_SUFFIX = Static28.parse("M");
+    public static final JagString FR_MILLION_SUFFIX = JagString.parse("M");
 
     @OriginalMember(owner = "client!rc", name = "D", descriptor = "Lclient!na;")
-    public static final JagString FR_FRIENDLOGOUT = Static28.parse(" s(West d-Bconnect-B)3");
+    public static final JagString FR_FRIENDLOGOUT = JagString.parse(" s(West d-Bconnect-B)3");
 
     @OriginalMember(owner = "client!tm", name = "o", descriptor = "Lclient!na;")
-    public static final JagString FR_CANCEL = Static28.parse("Annuler");
+    public static final JagString FR_CANCEL = JagString.parse("Annuler");
 
     @OriginalMember(owner = "client!wa", name = "tb", descriptor = "Lclient!na;")
-    public static final JagString FR_CHATEFFECT4 = Static28.parse("d-Broulement:");
+    public static final JagString FR_CHATEFFECT4 = JagString.parse("d-Broulement:");
 
     @OriginalMember(owner = "client!wa", name = "H", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD50B = Static28.parse("Polices charg-Bes");
+    public static final JagString FR_MAINLOAD50B = JagString.parse("Polices charg-Bes");
 
     @OriginalMember(owner = "client!il", name = "Q", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD90B = Static28.parse("Textures charg-Bes");
+    public static final JagString FR_MAINLOAD90B = JagString.parse("Textures charg-Bes");
 
     @OriginalMember(owner = "client!il", name = "R", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD135B = Static28.parse("Liste des serveurs charg-Be");
+    public static final JagString FR_MAINLOAD135B = JagString.parse("Liste des serveurs charg-Be");
 
     @OriginalMember(owner = "client!u", name = "d", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD150B = Static28.parse("Librairie 3D d-Bmarr-Be");
+    public static final JagString FR_MAINLOAD150B = JagString.parse("Librairie 3D d-Bmarr-Be");
 
     @OriginalMember(owner = "client!kd", name = "tb", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD30B = Static28.parse("Connect-B au serveur de mise -9 jour");
+    public static final JagString FR_MAINLOAD30B = JagString.parse("Connect-B au serveur de mise -9 jour");
 
     @OriginalMember(owner = "client!mg", name = "Y", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD0B = Static28.parse("M-Bmoire attribu-Be");
+    public static final JagString FR_MAINLOAD0B = JagString.parse("M-Bmoire attribu-Be");
 
     @OriginalMember(owner = "client!km", name = "Ic", descriptor = "Lclient!na;")
-    public static final JagString FR_CHATEFFECT1 = Static28.parse("ondulation:");
+    public static final JagString FR_CHATEFFECT1 = JagString.parse("ondulation:");
 
     @OriginalMember(owner = "client!tl", name = "g", descriptor = "Lclient!na;")
-    public static final JagString FR_CHATEFFECT3 = Static28.parse("tremblement:");
+    public static final JagString FR_CHATEFFECT3 = JagString.parse("tremblement:");
 
     @OriginalMember(owner = "client!gm", name = "hb", descriptor = "Lclient!na;")
-    public static final JagString FR_FACEHERE = Static28.parse("Regarder dans cette direction");
+    public static final JagString FR_FACEHERE = JagString.parse("Regarder dans cette direction");
 
     @OriginalMember(owner = "client!li", name = "e", descriptor = "Lclient!na;")
-    public static final JagString FR_PLEASEWAIT = Static28.parse("Veuillez patienter)3)3)3");
+    public static final JagString FR_PLEASEWAIT = JagString.parse("Veuillez patienter)3)3)3");
 
     @OriginalMember(owner = "client!gi", name = "o", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD135 = Static28.parse("Chargement de la liste des serveurs");
+    public static final JagString FR_MAINLOAD135 = JagString.parse("Chargement de la liste des serveurs");
 
     @OriginalMember(owner = "client!jm", name = "t", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD120B = Static28.parse("Module texte charg-B");
+    public static final JagString FR_MAINLOAD120B = JagString.parse("Module texte charg-B");
 
     @OriginalMember(owner = "client!pb", name = "J", descriptor = "Lclient!na;")
-    public static final JagString FR_CHOOSE_OPTION = Static28.parse("Choisir une option");
+    public static final JagString FR_CHOOSE_OPTION = JagString.parse("Choisir une option");
 
     @OriginalMember(owner = "client!pb", name = "K", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD90 = Static28.parse("Chargement des textures )2 ");
+    public static final JagString FR_MAINLOAD90 = JagString.parse("Chargement des textures )2 ");
 
     @OriginalMember(owner = "client!pb", name = "cb", descriptor = "Lclient!na;")
-    public static final JagString FR_LOADING = Static28.parse("Chargement en cours)3 Veuillez patienter)3");
+    public static final JagString FR_LOADING = JagString.parse("Chargement en cours)3 Veuillez patienter)3");
 
     @OriginalMember(owner = "client!gi", name = "k", descriptor = "Lclient!na;")
-    public static final JagString FR_CHATCOL8 = Static28.parse("clignotant3:");
+    public static final JagString FR_CHATCOL8 = JagString.parse("clignotant3:");
 
     @OriginalMember(owner = "client!q", name = "f", descriptor = "Lclient!na;")
-    public static final JagString FR_HIDDEN = Static28.parse("Cach-B");
+    public static final JagString FR_HIDDEN = JagString.parse("Cach-B");
 
     @OriginalMember(owner = "client!q", name = "g", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD50 = Static28.parse("Chargement des polices )2 ");
+    public static final JagString FR_MAINLOAD50 = JagString.parse("Chargement des polices )2 ");
 
     @OriginalMember(owner = "client!gl", name = "c", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD10B = Static28.parse("Monde de jeu cr-B-B");
+    public static final JagString FR_MAINLOAD10B = JagString.parse("Monde de jeu cr-B-B");
 
     @OriginalMember(owner = "client!me", name = "T", descriptor = "Lclient!na;")
-    public static final JagString FR_CHATCOL4 = Static28.parse("violet:");
+    public static final JagString FR_CHATCOL4 = JagString.parse("violet:");
 
     @OriginalMember(owner = "client!me", name = "kb", descriptor = "Lclient!na;")
-    public static final JagString FR_IGNORELISTFULL = Static28.parse("Votre liste noire est pleine (X100 noms maximum(Y)3");
+    public static final JagString FR_IGNORELISTFULL = JagString.parse("Votre liste noire est pleine (X100 noms maximum(Y)3");
 
     @OriginalMember(owner = "client!ud", name = "I", descriptor = "Lclient!na;")
-    public static final JagString FR_LOADINGDOTDOTDOT = Static28.parse("Chargement en cours)3)3)3");
+    public static final JagString FR_LOADINGDOTDOTDOT = JagString.parse("Chargement en cours)3)3)3");
 
     @OriginalMember(owner = "client!ud", name = "L", descriptor = "Lclient!na;")
-    public static final JagString FR_CHATCOL6 = Static28.parse("clignotant1:");
+    public static final JagString FR_CHATCOL6 = JagString.parse("clignotant1:");
 
     @OriginalMember(owner = "client!ja", name = "o", descriptor = "Lclient!na;")
-    public static final JagString FR_TRADEREQ = Static28.parse("voudrait faire un -Bchange avec vous)3");
+    public static final JagString FR_TRADEREQ = JagString.parse("voudrait faire un -Bchange avec vous)3");
 
     @OriginalMember(owner = "client!ja", name = "p", descriptor = "Lclient!na;")
-    public static final JagString FR_FRIENDSLISTDUPE = Static28.parse(" est d-Bj-9 dans votre liste d(Wamis)3");
+    public static final JagString FR_FRIENDSLISTDUPE = JagString.parse(" est d-Bj-9 dans votre liste d(Wamis)3");
 
     @OriginalMember(owner = "client!ja", name = "b", descriptor = "Lclient!na;")
-    public static final JagString FR_SELECT = Static28.parse("S-Blectionner");
+    public static final JagString FR_SELECT = JagString.parse("S-Blectionner");
 
     @OriginalMember(owner = "client!ja", name = "d", descriptor = "Lclient!na;")
-    public static final JagString FR_LEVEL = Static28.parse("niveau ");
+    public static final JagString FR_LEVEL = JagString.parse("niveau ");
 
     @OriginalMember(owner = "client!md", name = "X", descriptor = "Lclient!na;")
-    public static final JagString FR_UNABLETOFIND = Static28.parse("Impossible de trouver ");
+    public static final JagString FR_UNABLETOFIND = JagString.parse("Impossible de trouver ");
 
     @OriginalMember(owner = "client!md", name = "J", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD140 = Static28.parse("D-Bmarrage de la librairie 3D");
+    public static final JagString FR_MAINLOAD140 = JagString.parse("D-Bmarrage de la librairie 3D");
 
     @OriginalMember(owner = "client!md", name = "O", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD70B = Static28.parse("Fichiers config charg-Bs");
+    public static final JagString FR_MAINLOAD70B = JagString.parse("Fichiers config charg-Bs");
 
     @OriginalMember(owner = "client!md", name = "P", descriptor = "Lclient!na;")
-    public static final JagString FR_CLOSE = Static28.parse("Fermer");
+    public static final JagString FR_CLOSE = JagString.parse("Fermer");
 
     @OriginalMember(owner = "client!vj", name = "l", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD70 = Static28.parse("Chargement des fichiers config )2 ");
+    public static final JagString FR_MAINLOAD70 = JagString.parse("Chargement des fichiers config )2 ");
 
     @OriginalMember(owner = "client!sd", name = "J", descriptor = "Lclient!na;")
-    public static final JagString FR_ATTEMPT_TO_REESTABLISH = Static28.parse("Veuillez patienter )2 tentative de r-Btablissement)3");
+    public static final JagString FR_ATTEMPT_TO_REESTABLISH = JagString.parse("Veuillez patienter )2 tentative de r-Btablissement)3");
 
     @OriginalMember(owner = "client!k", name = "n", descriptor = "Lclient!na;")
-    public static final JagString FR_CHATCOL9 = Static28.parse("brillant1:");
+    public static final JagString FR_CHATCOL9 = JagString.parse("brillant1:");
 
     @OriginalMember(owner = "client!k", name = "u", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD80 = Static28.parse("Chargement des sprites )2 ");
+    public static final JagString FR_MAINLOAD80 = JagString.parse("Chargement des sprites )2 ");
 
     @OriginalMember(owner = "client!ij", name = "n", descriptor = "Lclient!na;")
-    public static final JagString FR_REMOVEIGNORE = Static28.parse(" de votre liste noire)3");
+    public static final JagString FR_REMOVEIGNORE = JagString.parse(" de votre liste noire)3");
 
     @OriginalMember(owner = "client!ic", name = "d", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD40B = Static28.parse("Liste des mises -9 jour charg-Be");
+    public static final JagString FR_MAINLOAD40B = JagString.parse("Liste des mises -9 jour charg-Be");
 
     @OriginalMember(owner = "client!ic", name = "m", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD80B = Static28.parse("Sprites charg-Bs");
+    public static final JagString FR_MAINLOAD80B = JagString.parse("Sprites charg-Bs");
 
     @OriginalMember(owner = "client!mf", name = "K", descriptor = "Lclient!na;")
-    public static final JagString FR_DROP = Static28.parse("Poser");
+    public static final JagString FR_DROP = JagString.parse("Poser");
 
     @OriginalMember(owner = "client!rh", name = "q", descriptor = "Lclient!na;")
-    public static final JagString FR_OK = Static28.parse("OK");
+    public static final JagString FR_OK = JagString.parse("OK");
 
     @OriginalMember(owner = "client!pk", name = "Q", descriptor = "Lclient!na;")
-    public static final JagString FR_CHATEFFECT5 = Static28.parse("glissement:");
+    public static final JagString FR_CHATEFFECT5 = JagString.parse("glissement:");
 
     @OriginalMember(owner = "client!kh", name = "a", descriptor = "Lclient!na;")
-    public static final JagString FR_ATTACK = Static28.parse("Attaquer");
+    public static final JagString FR_ATTACK = JagString.parse("Attaquer");
 
     @OriginalMember(owner = "client!tc", name = "b", descriptor = "Lclient!na;")
-    public static final JagString FR_TAKE = Static28.parse("Prendre");
+    public static final JagString FR_TAKE = JagString.parse("Prendre");
 
     @OriginalMember(owner = "client!tc", name = "c", descriptor = "Lclient!na;")
-    public static final JagString FR_REMOVEFRIEND = Static28.parse(" de votre liste d(Wamis)3");
+    public static final JagString FR_REMOVEFRIEND = JagString.parse(" de votre liste d(Wamis)3");
 
     @OriginalMember(owner = "client!hm", name = "lb", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD45B = Static28.parse("Moteur son pr-Bpar-B");
+    public static final JagString FR_MAINLOAD45B = JagString.parse("Moteur son pr-Bpar-B");
 
     @OriginalMember(owner = "client!kk", name = "a", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD0 = Static28.parse("M-Bmoire en cours d(Wattribution");
+    public static final JagString FR_MAINLOAD0 = JagString.parse("M-Bmoire en cours d(Wattribution");
 
     @OriginalMember(owner = "client!wj", name = "k", descriptor = "Lclient!na;")
-    public static final JagString FR_CONTINUE = Static28.parse("Continuer");
+    public static final JagString FR_CONTINUE = JagString.parse("Continuer");
 
     @OriginalMember(owner = "client!oi", name = "k", descriptor = "Lclient!na;")
-    public static final JagString FR_CHATCOL3 = Static28.parse("cyan:");
+    public static final JagString FR_CHATCOL3 = JagString.parse("cyan:");
 
     @OriginalMember(owner = "client!sj", name = "x", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD30 = Static28.parse("Connexion au serveur de mise -9 jour en cours");
+    public static final JagString FR_MAINLOAD30 = JagString.parse("Connexion au serveur de mise -9 jour en cours");
 
     @OriginalMember(owner = "client!la", name = "k", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOLAD120 = Static28.parse("Chargement du module texte )2 ");
+    public static final JagString FR_MAINLOLAD120 = JagString.parse("Chargement du module texte )2 ");
 
     @OriginalMember(owner = "client!hi", name = "h", descriptor = "Lclient!na;")
-    public static final JagString FR_MAINLOAD60 = Static28.parse("Chargement de l(W-Bcran)2titre )2 ");
+    public static final JagString FR_MAINLOAD60 = JagString.parse("Chargement de l(W-Bcran)2titre )2 ");
 
     @OriginalMember(owner = "client!gg", name = "jb", descriptor = "Lclient!na;")
-    public static final JagString FR_IGNORELISTDUPE = Static28.parse(" est d-Bj-9 dans votre liste noire)3");
+    public static final JagString FR_IGNORELISTDUPE = JagString.parse(" est d-Bj-9 dans votre liste noire)3");
 
     @OriginalMember(owner = "client!uf", name = "d", descriptor = "Lclient!na;")
-    public static final JagString FR_MOREOPTIONS = Static28.parse(" autres options");
+    public static final JagString FR_MOREOPTIONS = JagString.parse(" autres options");
 
     @OriginalMember(owner = "client!gg", name = "Q", descriptor = "Lclient!na;")
-    public static final JagString FR_FRIENDLOGIN = Static28.parse(" s(West connect-B)3");
+    public static final JagString FR_FRIENDLOGIN = JagString.parse(" s(West connect-B)3");
 
     @OriginalMember(owner = "client!bb", name = "a", descriptor = "(B)V")
     public static void switchToFrench() {
