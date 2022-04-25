@@ -115,11 +115,11 @@ public class ShadowModelList {
         if (local386 == null) {
             local33 = local33.method4560(true, true, true);
             local33.resize((local115 - local384) / 2, 128, (local130 - local126) / 2);
-            local33.method4575((local384 + local115) / 2, 0, (local126 + local130) / 2);
+            local33.translate((local384 + local115) / 2, 0, (local126 + local130) / 2);
         } else {
             local33 = local33.method4560(!local386.isAlphaTransformed(arg10), !local386.isColorTransformed(arg10), true);
             local33.resize((local115 - local384) / 2, 128, (local130 - local126) / 2);
-            local33.method4575((local384 + local115) / 2, 0, (local126 + local130) / 2);
+            local33.translate((local384 + local115) / 2, 0, (local126 + local130) / 2);
             local33.method4555(local386, arg10);
         }
         if (arg9 != 0) {

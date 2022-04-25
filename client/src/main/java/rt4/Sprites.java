@@ -213,36 +213,36 @@ public class Sprites {
     }
 
     @OriginalMember(owner = "client!cg", name = "a", descriptor = "(ILclient!ve;)V")
-    public static void load(@OriginalArg(1) Js5 arg0) {
-        mapfunctions = SpriteLoader.loadSoftwareSprites(mapfunctionId, arg0);
-        hitmarks = SpriteLoader.loadAlphaSprites(hitmarksId, arg0);
-        hitbars = SpriteLoader.loadAlphaSprites(hitbarId, arg0);
-        headiconPks = SpriteLoader.loadAlphaSprites(headiconsPkId, arg0);
-        headiconPrayers = SpriteLoader.loadAlphaSprites(headiconsPrayerId, arg0);
-        headhints = SpriteLoader.loadAlphaSprites(hintHeadId, arg0);
-        mapmarkhints = SpriteLoader.loadAlphaSprites(hintMapMarkId, arg0);
-        mapflags = SpriteLoader.loadSprites(mapflagId, arg0);
-        crosses = SpriteLoader.method2580(crossId, arg0);
-        mapdots = SpriteLoader.method2580(mapdotsId, arg0);
-        scrollbars = SpriteLoader.loadIndexedSprites(arg0, scrollbarId);
-        nameIcons = SpriteLoader.loadIndexedSprites(arg0, nameIconsId);
+    public static void load(@OriginalArg(1) Js5 archive) {
+        mapfunctions = SpriteLoader.loadSoftwareSprites(mapfunctionId, archive);
+        hitmarks = SpriteLoader.loadAlphaSprites(hitmarksId, archive);
+        hitbars = SpriteLoader.loadAlphaSprites(hitbarId, archive);
+        headiconPks = SpriteLoader.loadAlphaSprites(headiconsPkId, archive);
+        headiconPrayers = SpriteLoader.loadAlphaSprites(headiconsPrayerId, archive);
+        headhints = SpriteLoader.loadAlphaSprites(hintHeadId, archive);
+        mapmarkhints = SpriteLoader.loadAlphaSprites(hintMapMarkId, archive);
+        mapflags = SpriteLoader.loadSprites(mapflagId, archive);
+        crosses = SpriteLoader.method2580(crossId, archive);
+        mapdots = SpriteLoader.method2580(mapdotsId, archive);
+        scrollbars = SpriteLoader.loadIndexedSprites(archive, scrollbarId);
+        nameIcons = SpriteLoader.loadIndexedSprites(archive, nameIconsId);
         Fonts.p11Full.setNameIcons(nameIcons, null);
         Fonts.p12Full.setNameIcons(nameIcons, null);
         Fonts.b12Full.setNameIcons(nameIcons, null);
         if (GlRenderer.enabled) {
-            floorShadows = SpriteLoader.loadSoftwareIndexedSprites(floorShadowsId, arg0);
+            floorShadows = SpriteLoader.loadSoftwareIndexedSprites(floorShadowsId, archive);
             for (@Pc(101) int local101 = 0; local101 < floorShadows.length; local101++) {
                 floorShadows[local101].trim();
             }
         }
-        @Pc(124) SoftwareSprite compass = SpriteLoader.loadSoftwareSprite(0, arg0, compassId);
+        @Pc(124) SoftwareSprite compass = SpriteLoader.loadSoftwareSprite(0, archive, compassId);
         compass.trim();
         if (GlRenderer.enabled) {
             Static106.compass = new GlSprite(compass);
         } else {
             Static106.compass = compass;
         }
-        @Pc(143) SoftwareSprite[] local143 = SpriteLoader.loadSoftwareSprites(hintMapEdgeId, arg0);
+        @Pc(143) SoftwareSprite[] local143 = SpriteLoader.loadSoftwareSprites(hintMapEdgeId, archive);
         @Pc(145) int local145;
         for (local145 = 0; local145 < local143.length; local145++) {
             local143[local145].trim();

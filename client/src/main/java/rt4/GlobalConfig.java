@@ -17,7 +17,7 @@ public class GlobalConfig {
     public static final BigInteger RSA_EXPONENT = new BigInteger("65537");
 
     // Server IP
-    public static String DEFAULT_HOSTNAME = "test.2009scape.org";
+    public static String DEFAULT_HOSTNAME = "play.2009scape.org";
 
     // Jagex had this at 40000+id
     public static int DEFAULT_PORT = 43594;
@@ -44,4 +44,6 @@ public class GlobalConfig {
     public static boolean ANIMATED_SD_BACKGROUND = true;
 
     public static boolean USE_TWEENING = true;
+
+    public static int JS5_RESPONSE_TIMEOUT = 5000;
 }

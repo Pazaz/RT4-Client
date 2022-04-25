@@ -156,7 +156,7 @@ public final class Player extends PathingEntity {
 	@OriginalMember(owner = "client!e", name = "c", descriptor = "(B)I")
 	@Override
 	public final int getSize() {
-		return this.appearance == null || this.appearance.anInt2492 == -1 ? super.getSize() : NpcTypeList.get(this.appearance.anInt2492).soze;
+		return this.appearance == null || this.appearance.anInt2492 == -1 ? super.getSize() : NpcTypeList.get(this.appearance.anInt2492).size;
 	}
 
 	@OriginalMember(owner = "client!e", name = "b", descriptor = "(I)I")
@@ -266,7 +266,7 @@ public final class Player extends PathingEntity {
 
 	@OriginalMember(owner = "client!e", name = "a", descriptor = "(IIIIIIIIJILclient!ga;)V")
 	@Override
-	public final void method4546(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) long arg8, @OriginalArg(9) int arg9, @OriginalArg(10) ParticleSystem arg10) {
+	public final void render(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) long arg8, @OriginalArg(9) int arg9, @OriginalArg(10) ParticleSystem arg10) {
 		if (this.appearance == null) {
 			return;
 		}
@@ -292,7 +292,7 @@ public final class Player extends PathingEntity {
 		if (local76 == null) {
 			return;
 		}
-		this.anInt3413 = local76.method4549();
+		this.anInt3413 = local76.getMaxY();
 		@Pc(184) Model local184;
 		if (Preferences.characterShadowsOn && (this.appearance.anInt2492 == -1 || NpcTypeList.get(this.appearance.anInt2492).shadow)) {
 			local184 = ShadowModelList.method1043(160, this.aBoolean171, local54 == null ? local25 : local54, this.xFine, 0, this.zFine, 0, 1, local76, arg0, local54 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, 240);
@@ -301,11 +301,11 @@ public final class Player extends PathingEntity {
 				@Pc(190) float local190 = GlRenderer.method4166();
 				GlRenderer.disableDepthMask();
 				GlRenderer.method4152(local188, local190 - 150.0F);
-				local184.method4546(0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, -1L, arg9, null);
+				local184.render(0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, -1L, arg9, null);
 				GlRenderer.enableDepthMask();
 				GlRenderer.method4152(local188, local190);
 			} else {
-				local184.method4546(0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, -1L, arg9, null);
+				local184.render(0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, -1L, arg9, null);
 			}
 		}
 		if (PlayerList.self == this) {
@@ -343,18 +343,18 @@ public final class Player extends PathingEntity {
 		local184 = null;
 		if (!this.aBoolean98 && this.spotAnimId != -1 && this.anInt3399 != -1) {
 			@Pc(471) SpotAnimType local471 = SpotAnimTypeList.get(this.spotAnimId);
-			local184 = local471.method1319(this.anInt3418, this.anInt3399, this.anInt3361);
+			local184 = local471.constructModel(this.anInt3418, this.anInt3399, this.anInt3361);
 			if (local184 != null) {
-				local184.method4575(0, -this.spotAnimY, 0);
+				local184.translate(0, -this.spotAnimY, 0);
 				if (local471.aBoolean100) {
 					if (Static101.anInt2640 != 0) {
-						local184.method4574(Static101.anInt2640);
+						local184.rotateX(Static101.anInt2640);
 					}
 					if (Static102.anInt2680 != 0) {
-						local184.method4564(Static102.anInt2680);
+						local184.rotateZ(Static102.anInt2680);
 					}
 					if (Static62.anInt1938 != 0) {
-						local184.method4575(0, Static62.anInt1938, 0);
+						local184.translate(0, Static62.anInt1938, 0);
 					}
 				}
 			}
@@ -370,7 +370,7 @@ public final class Player extends PathingEntity {
 				} else {
 					local515 = (Model) this.attachment;
 				}
-				local515.method4575(this.anInt3379 - this.xFine, this.anInt3406 + -this.anInt3424, this.anInt3426 - this.zFine);
+				local515.translate(this.anInt3379 - this.xFine, this.anInt3406 + -this.anInt3424, this.anInt3426 - this.zFine);
 				if (this.anInt3400 == 512) {
 					local515.method4578();
 				} else if (this.anInt3400 == 1024) {
@@ -382,10 +382,10 @@ public final class Player extends PathingEntity {
 		}
 		if (GlRenderer.enabled) {
 			local76.aBoolean303 = true;
-			local76.method4546(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.aClass47_Sub1_5);
+			local76.render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.aClass47_Sub1_5);
 			if (local184 != null) {
 				local184.aBoolean303 = true;
-				local184.method4546(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.aClass47_Sub1_5);
+				local184.render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.aClass47_Sub1_5);
 			}
 		} else {
 			if (local184 != null) {
@@ -395,7 +395,7 @@ public final class Player extends PathingEntity {
 				local76 = ((SoftwareModel) local76).method4588(local515);
 			}
 			local76.aBoolean303 = true;
-			local76.method4546(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.aClass47_Sub1_5);
+			local76.render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.aClass47_Sub1_5);
 		}
 		if (local515 == null) {
 			return;
@@ -407,7 +407,7 @@ public final class Player extends PathingEntity {
 		} else if (this.anInt3400 == 1536) {
 			local515.method4578();
 		}
-		local515.method4575(this.xFine - this.anInt3379, -this.anInt3406 + this.anInt3424, this.zFine - this.anInt3426);
+		local515.translate(this.xFine - this.anInt3379, -this.anInt3406 + this.anInt3424, this.zFine - this.anInt3426);
 	}
 
 	@OriginalMember(owner = "client!e", name = "a", descriptor = "(Lclient!ga;ILclient!ak;IIIIIIIIIIII)V")
@@ -422,14 +422,14 @@ public final class Player extends PathingEntity {
 			return;
 		}
 		if (!GlRenderer.enabled) {
-			local46.method4546(0, arg10, arg12, arg9, arg8, arg4, arg13, arg7, -1L, arg5, arg0);
+			local46.render(0, arg10, arg12, arg9, arg8, arg4, arg13, arg7, -1L, arg5, arg0);
 			return;
 		}
 		@Pc(52) float local52 = GlRenderer.method4179();
 		@Pc(54) float local54 = GlRenderer.method4166();
 		GlRenderer.disableDepthMask();
 		GlRenderer.method4152(local52, local54 - 150.0F);
-		local46.method4546(0, arg10, arg12, arg9, arg8, arg4, arg13, arg7, -1L, arg5, arg0);
+		local46.render(0, arg10, arg12, arg9, arg8, arg4, arg13, arg7, -1L, arg5, arg0);
 		GlRenderer.enableDepthMask();
 		GlRenderer.method4152(local52, local54);
 	}
@@ -469,7 +469,7 @@ public final class Player extends PathingEntity {
 
 	@OriginalMember(owner = "client!e", name = "b", descriptor = "()I")
 	@Override
-	public final int method4549() {
+	public final int getMaxY() {
 		return this.anInt3413;
 	}
 }

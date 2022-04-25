@@ -29,7 +29,7 @@ public abstract class Model extends Entity {
 	public abstract int method4550();
 
 	@OriginalMember(owner = "client!ak", name = "b", descriptor = "()I")
-	public abstract int method4549();
+	public abstract int getMaxY();
 
 	@OriginalMember(owner = "client!ak", name = "d", descriptor = "()Z")
 	protected abstract boolean method4551();
@@ -249,7 +249,7 @@ public abstract class Model extends Entity {
 	public abstract void method4563();
 
 	@OriginalMember(owner = "client!ak", name = "c", descriptor = "(I)V")
-	public abstract void method4564(@OriginalArg(0) int arg0);
+	public abstract void rotateZ(@OriginalArg(0) int arg0);
 
 	@OriginalMember(owner = "client!ak", name = "a", descriptor = "(Lclient!cl;ILclient!cl;IIIIZ[I)V")
 	public final void method4565(@OriginalArg(0) AnimFrameset arg0, @OriginalArg(1) int arg1, @OriginalArg(2) AnimFrameset arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) boolean arg7, @OriginalArg(8) int[] arg8) {
@@ -340,13 +340,13 @@ public abstract class Model extends Entity {
 		if (arg5 != 0) {
 			@Pc(120) int local120 = (int) (Math.atan2((double) (local84 - local91), (double) arg5) * 325.95D) & 0x7FF;
 			if (local120 != 0) {
-				this.method4574(local120);
+				this.rotateX(local120);
 			}
 		}
 		if (arg4 != 0) {
 			@Pc(140) int local140 = (int) (Math.atan2((double) (local105 - local98), (double) arg4) * 325.95D) & 0x7FF;
 			if (local140 != 0) {
-				this.method4564(local140);
+				this.rotateZ(local140);
 			}
 		}
 		@Pc(149) int local149 = local24 + local77;
@@ -355,12 +355,12 @@ public abstract class Model extends Entity {
 		}
 		local149 = (local149 >> 1) - arg2;
 		if (local149 != 0) {
-			this.method4575(0, local149, 0);
+			this.translate(0, local149, 0);
 		}
 	}
 
 	@OriginalMember(owner = "client!ak", name = "d", descriptor = "(I)V")
-	public abstract void method4574(@OriginalArg(0) int arg0);
+	public abstract void rotateX(@OriginalArg(0) int arg0);
 
 	@OriginalMember(owner = "client!ak", name = "a", descriptor = "(IIIII)V")
 	@Override
@@ -368,13 +368,13 @@ public abstract class Model extends Entity {
 	}
 
 	@OriginalMember(owner = "client!ak", name = "c", descriptor = "(III)V")
-	public abstract void method4575(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2);
+	public abstract void translate(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2);
 
 	@OriginalMember(owner = "client!ak", name = "k", descriptor = "()I")
 	public abstract int method4576();
 
 	@OriginalMember(owner = "client!ak", name = "a", descriptor = "(IIIIIIIIJILclient!ga;)V")
-	public abstract void method4546(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) long arg8, @OriginalArg(9) int arg9, @OriginalArg(10) ParticleSystem arg10);
+	public abstract void render(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) long arg8, @OriginalArg(9) int arg9, @OriginalArg(10) ParticleSystem arg10);
 
 	@OriginalMember(owner = "client!ak", name = "a", descriptor = "(I[IIIIZI[I)V")
 	protected abstract void method4577(@OriginalArg(0) int arg0, @OriginalArg(1) int[] arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) boolean arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int[] arg7);

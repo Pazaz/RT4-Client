@@ -18,19 +18,19 @@ public final class Js5 {
 	private Js5Index aClass70_2 = null;
 
 	@OriginalMember(owner = "client!ve", name = "i", descriptor = "Lclient!v;")
-	private final Js5ResourceProvider aClass14_1;
+	private final Js5ResourceProvider provider;
 
 	@OriginalMember(owner = "client!ve", name = "c", descriptor = "Z")
-	private final boolean aBoolean296;
+	private final boolean discardPacked;
 
 	@OriginalMember(owner = "client!ve", name = "g", descriptor = "Z")
-	private final boolean aBoolean297;
+	private final boolean discardUnpacked;
 
 	@OriginalMember(owner = "client!ve", name = "<init>", descriptor = "(Lclient!v;ZZ)V")
-	public Js5(@OriginalArg(0) Js5ResourceProvider arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
-		this.aClass14_1 = arg0;
-		this.aBoolean296 = arg1;
-		this.aBoolean297 = arg2;
+	public Js5(@OriginalArg(0) Js5ResourceProvider provider, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
+		this.provider = provider;
+		this.discardPacked = arg1;
+		this.discardUnpacked = arg2;
 	}
 
     @OriginalMember(owner = "client!km", name = "a", descriptor = "(ILjava/lang/Object;Z)[B")
@@ -69,7 +69,7 @@ public final class Js5 {
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(II)I")
 	private int method4476(@OriginalArg(0) int arg0) {
 		if (this.method4492(arg0)) {
-			return this.anObjectArray32[arg0] == null ? this.aClass14_1.method524(arg0) : 100;
+			return this.anObjectArray32[arg0] == null ? this.provider.method524(arg0) : 100;
 		} else {
 			return 0;
 		}
@@ -138,7 +138,7 @@ public final class Js5 {
 	@OriginalMember(owner = "client!ve", name = "c", descriptor = "(I)Z")
 	private boolean method4484() {
 		if (this.aClass70_2 == null) {
-			this.aClass70_2 = this.aClass14_1.method521();
+			this.aClass70_2 = this.provider.method521();
 			if (this.aClass70_2 == null) {
 				return false;
 			}
@@ -205,7 +205,7 @@ public final class Js5 {
 			}
 		}
 		@Pc(64) byte[] local64 = method2696(this.anObjectArrayArray1[arg0][arg2], false);
-		if (this.aBoolean297) {
+		if (this.discardUnpacked) {
 			this.anObjectArrayArray1[arg0][arg2] = null;
 			if (this.aClass70_2.anIntArray270[arg0] == 1) {
 				this.anObjectArrayArray1[arg0] = null;
@@ -261,7 +261,7 @@ public final class Js5 {
 
 	@OriginalMember(owner = "client!ve", name = "d", descriptor = "(II)V")
 	private void method4493(@OriginalArg(1) int arg0) {
-		this.aClass14_1.method522(arg0);
+		this.provider.method522(arg0);
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(IZ[I)Z")
@@ -308,7 +308,7 @@ public final class Js5 {
 				System.out.println("T3 - " + (arg1 != null) + "," + arg0 + "," + local114.length + "," + Static71.method1442(local114, local114.length) + "," + Static71.method1442(local114, local114.length - 2) + "," + this.aClass70_2.anIntArray268[arg0] + "," + this.aClass70_2.anInt2911);
 				local140 = new byte[] { 0 };
 			}
-			if (this.aBoolean296) {
+			if (this.discardPacked) {
 				this.anObjectArray32[arg0] = null;
 			}
 			@Pc(213) int local213;
@@ -354,7 +354,7 @@ public final class Js5 {
 					} else {
 						local320 = local25[local252];
 					}
-					if (this.aBoolean297) {
+					if (this.discardUnpacked) {
 						local53[local320] = local282[local252];
 					} else {
 						local53[local320] = Static33.method869(local282[local252]);
@@ -366,7 +366,7 @@ public final class Js5 {
 				} else {
 					local213 = local25[0];
 				}
-				if (this.aBoolean297) {
+				if (this.discardUnpacked) {
 					local53[local213] = local140;
 				} else {
 					local53[local213] = Static33.method869(local140);
@@ -383,10 +383,10 @@ public final class Js5 {
 
 	@OriginalMember(owner = "client!ve", name = "b", descriptor = "(ZI)V")
 	private void method4496(@OriginalArg(1) int arg0) {
-		if (this.aBoolean296) {
-			this.anObjectArray32[arg0] = this.aClass14_1.method525(arg0);
+		if (this.discardPacked) {
+			this.anObjectArray32[arg0] = this.provider.method525(arg0);
 		} else {
-			this.anObjectArray32[arg0] = Static33.method869(this.aClass14_1.method525(arg0));
+			this.anObjectArray32[arg0] = Static33.method869(this.provider.method525(arg0));
 		}
 	}
 

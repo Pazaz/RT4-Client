@@ -208,7 +208,7 @@ public final class Static164 {
 		}
 		@Pc(176) int local176 = MathUtils.cos[local5.xAngle2d] * local145 >> 16;
 		@Pc(185) int local185 = MathUtils.sin[local5.xAngle2d] * local145 >> 16;
-		local60.method4571(local5.yAngle2d, local5.zAngle2d, local5.xAngle2d, local5.xOffset2d, local185 + local5.yOffset2d - local60.method4549() / 2, local5.yOffset2d + local176, -1L);
+		local60.method4571(local5.yAngle2d, local5.zAngle2d, local5.xAngle2d, local5.xOffset2d, local185 + local5.yOffset2d - local60.getMaxY() / 2, local5.yOffset2d + local176, -1L);
 		if (arg4 >= 1) {
 			local133.method303(1);
 			if (arg4 >= 2) {

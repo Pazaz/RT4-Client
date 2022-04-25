@@ -6,10 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static18 {
 
-	@OriginalMember(owner = "client!bh", name = "M", descriptor = "Z")
-	public static boolean loaded;
-
-	@OriginalMember(owner = "client!bh", name = "t", descriptor = "I")
+    @OriginalMember(owner = "client!bh", name = "t", descriptor = "I")
 	public static int anInt588 = 0;
 
     @OriginalMember(owner = "client!bh", name = "C", descriptor = "Lclient!na;")

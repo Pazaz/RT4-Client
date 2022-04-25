@@ -697,7 +697,7 @@ public final class LocType {
 		}
 		if (arg2 == 4 && arg0 > 3) {
 			local351.method4123();
-			local351.method4575(45, 0, -45);
+			local351.translate(45, 0, -45);
 		}
 		@Pc(374) int local374 = arg0 & 0x3;
 		if (local374 == 1) {
@@ -721,7 +721,7 @@ public final class LocType {
 			local351.resize(this.resizeX, this.resizeY, this.resizeZ);
 		}
 		if (this.translateX != 0 || this.translateY != 0 || this.translateZ != 0) {
-			local351.method4575(this.translateX, this.translateY, this.translateZ);
+			local351.translate(this.translateX, this.translateY, this.translateZ);
 		}
 		if (local10 != local351.method4094()) {
 			local351.method4105(local10);

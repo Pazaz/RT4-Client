@@ -333,16 +333,16 @@ public final class client extends GameShell {
     }
 
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "(ZZZIZ)Lclient!ve;")
-	public static Js5 createJs5(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) int arg3) {
-		@Pc(7) Cache local7 = null;
+	public static Js5 createJs5(@OriginalArg(0) boolean discardPacked, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean discardUnpacked, @OriginalArg(3) int archive) {
+		@Pc(7) Cache cache = null;
 		if (cacheData != null) {
-			local7 = new Cache(arg3, cacheData, cacheIndexes[arg3], 1000000);
+			cache = new Cache(archive, cacheData, cacheIndexes[archive], 1000000);
 		}
-		js5Providers[arg3] = js5MasterIndex.getResourceProvider(arg3, masterCache, local7);
+		js5Providers[archive] = js5MasterIndex.getResourceProvider(archive, masterCache, cache);
 		if (arg1) {
-			js5Providers[arg3].prefetchAll();
+			js5Providers[archive].prefetchAll();
 		}
-		return new Js5(js5Providers[arg3], arg0, arg2);
+		return new Js5(js5Providers[archive], discardPacked, discardUnpacked);
 	}
 
 	@OriginalMember(owner = "client!je", name = "h", descriptor = "(I)V")
@@ -1162,7 +1162,7 @@ public final class client extends GameShell {
 			}
 			if (js5ConnectState == 4) {
 				@Pc(296) boolean loggedOut = gameState == 5 || gameState == 10 || gameState == 28;
-				js5NetQueue.loggedOut(!loggedOut, js5Socket);
+				js5NetQueue.start(!loggedOut, js5Socket);
 				js5Socket = null;
 				js5SocketRequest = null;
 				js5ConnectState = 0;

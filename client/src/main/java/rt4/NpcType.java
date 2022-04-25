@@ -51,7 +51,7 @@ public final class NpcType {
 	public boolean aBoolean183 = true;
 
 	@OriginalMember(owner = "client!me", name = "a", descriptor = "I")
-	public int soze = 1;
+	public int size = 1;
 
 	@OriginalMember(owner = "client!me", name = "q", descriptor = "Z")
 	public boolean aBoolean181 = true;
@@ -217,10 +217,10 @@ public final class NpcType {
 	}
 
 	@OriginalMember(owner = "client!me", name = "a", descriptor = "([Lclient!ub;IBIIIILclient!tk;ILclient!tk;)Lclient!ak;")
-	public final Model getBodyModel(@OriginalArg(0) Class147[] arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) SeqType arg6, @OriginalArg(8) int arg7, @OriginalArg(9) SeqType arg8) {
+	public final Model getBodyModel(@OriginalArg(0) Class147[] seqs, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) SeqType seqType1, @OriginalArg(8) int arg7, @OriginalArg(9) SeqType seqType2) {
 		if (this.multiNpcs != null) {
 			@Pc(13) NpcType local13 = this.getMultiNpc();
-			return local13 == null ? null : local13.getBodyModel(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+			return local13 == null ? null : local13.getBodyModel(seqs, arg1, arg2, arg3, arg4, arg5, seqType1, arg7, seqType2);
 		}
 		@Pc(40) Model local40 = (Model) NpcTypeList.aClass99_18.get((long) this.id);
 		@Pc(46) boolean local46;
@@ -342,15 +342,15 @@ public final class NpcType {
 		@Pc(721) boolean local721 = false;
 		@Pc(723) boolean local723 = false;
 		@Pc(725) boolean local725 = false;
-		local173 = arg0 == null ? 0 : arg0.length;
+		local173 = seqs == null ? 0 : seqs.length;
 		for (local235 = 0; local235 < local173; local235++) {
-			if (arg0[local235] != null) {
-				@Pc(753) SeqType local753 = SeqTypeList.get(arg0[local235].anInt5396);
+			if (seqs[local235] != null) {
+				@Pc(753) SeqType local753 = SeqTypeList.get(seqs[local235].anInt5396);
 				if (local753.frames != null) {
 					Static146.aClass144Array1[local235] = local753;
-					local207 = arg0[local235].anInt5398;
+					local207 = seqs[local235].anInt5398;
 					local46 = true;
-					local200 = arg0[local235].anInt5399;
+					local200 = seqs[local235].anInt5399;
 					local214 = local753.frames[local200];
 					Static6.aClass3_Sub2_Sub7Array1[local235] = Static72.getAnimFrameset(local214 >>> 16);
 					local214 &= 0xFFFF;
@@ -362,7 +362,7 @@ public final class NpcType {
 					}
 					if ((local753.tween || client.applyTweening) && local207 != -1 && local753.frames.length > local207) {
 						Static71.anIntArray147[local235] = local753.anIntArray474[local200];
-						Static214.anIntArray492[local235] = arg0[local235].anInt5404;
+						Static214.anIntArray492[local235] = seqs[local235].anInt5404;
 						local228 = local753.frames[local207];
 						Static131.aClass3_Sub2_Sub7Array5[local235] = Static72.getAnimFrameset(local228 >>> 16);
 						local228 &= 0xFFFF;
@@ -380,7 +380,7 @@ public final class NpcType {
 				}
 			}
 		}
-		if (!local46 && arg8 == null && arg6 == null) {
+		if (!local46 && seqType2 == null && seqType1 == null) {
 			@Pc(933) Model local933 = local40.method4572(true, true, true);
 			if (this.anInt3729 != 128 || this.anInt3731 != 128) {
 				local933.resize(this.anInt3729, this.anInt3731, this.anInt3729);
@@ -393,19 +393,19 @@ public final class NpcType {
 		@Pc(962) AnimFrameset local962 = null;
 		@Pc(964) AnimFrameset local964 = null;
 		@Pc(1040) int local1040;
-		if (arg8 != null) {
-			local235 = arg8.frames[arg5];
+		if (seqType2 != null) {
+			local235 = seqType2.frames[arg5];
 			local228 = local235 >>> 16;
 			local235 &= 0xFFFF;
 			local962 = Static72.getAnimFrameset(local228);
 			if (local962 != null) {
 				local723 |= local962.isColorTransformed(local235);
 				local721 |= local962.isAlphaTransformed(local235);
-				local725 |= arg8.aBoolean278;
+				local725 |= seqType2.aBoolean278;
 			}
-			if ((arg8.tween || client.applyTweening) && arg3 != -1 && arg8.frames.length > arg3) {
-				local200 = arg8.anIntArray474[arg5];
-				local221 = arg8.frames[arg3];
+			if ((seqType2.tween || client.applyTweening) && arg3 != -1 && seqType2.frames.length > arg3) {
+				local200 = seqType2.anIntArray474[arg5];
+				local221 = seqType2.frames[arg3];
 				local1040 = local221 >>> 16;
 				local221 &= 0xFFFF;
 				if (local228 == local1040) {
@@ -424,19 +424,19 @@ public final class NpcType {
 		@Pc(1088) AnimFrameset local1088 = null;
 		local300 = 0;
 		@Pc(1092) AnimFrameset local1092 = null;
-		if (arg6 != null) {
-			local228 = arg6.frames[arg2];
+		if (seqType1 != null) {
+			local228 = seqType1.frames[arg2];
 			local324 = local228 >>> 16;
 			local228 &= 0xFFFF;
 			local1088 = Static72.getAnimFrameset(local324);
 			if (local1088 != null) {
 				local723 |= local1088.isColorTransformed(local228);
 				local721 |= local1088.isAlphaTransformed(local228);
-				local725 |= arg6.aBoolean278;
+				local725 |= seqType1.aBoolean278;
 			}
-			if ((arg6.tween || client.applyTweening) && arg1 != -1 && arg1 < arg6.frames.length) {
-				local300 = arg6.anIntArray474[arg2];
-				local1040 = arg6.frames[arg1];
+			if ((seqType1.tween || client.applyTweening) && arg1 != -1 && arg1 < seqType1.frames.length) {
+				local300 = seqType1.anIntArray474[arg2];
+				local1040 = seqType1.frames[arg1];
 				local318 = local1040 >>> 16;
 				local1040 &= 0xFFFF;
 				if (local318 == local324) {
@@ -459,11 +459,11 @@ public final class NpcType {
 			local330 <<= 0x1;
 		}
 		if (local962 != null && local1088 != null) {
-			local1218.method4570(local962, local235, local964, local221, arg4 - 1, local200, local1088, local228, local1092, local1040, arg7 - 1, local300, arg8.aBooleanArray123, arg8.aBoolean278 | arg6.aBoolean278);
+			local1218.method4570(local962, local235, local964, local221, arg4 - 1, local200, local1088, local228, local1092, local1040, arg7 - 1, local300, seqType2.aBooleanArray123, seqType2.aBoolean278 | seqType1.aBoolean278);
 		} else if (local962 != null) {
-			local1218.method4558(local962, local235, local964, local221, arg4 - 1, local200, arg8.aBoolean278);
+			local1218.method4558(local962, local235, local964, local221, arg4 - 1, local200, seqType2.aBoolean278);
 		} else if (local1088 != null) {
-			local1218.method4558(local1088, local228, local1092, local1040, arg7 - 1, local300, arg6.aBoolean278);
+			local1218.method4558(local1088, local228, local1092, local1040, arg7 - 1, local300, seqType1.aBoolean278);
 		}
 		for (local318 = 0; local318 < local173; local318++) {
 			Static6.aClass3_Sub2_Sub7Array1[local318] = null;
@@ -571,7 +571,7 @@ public final class NpcType {
 		} else if (arg0 == 2) {
 			this.name = arg1.gjstr();
 		} else if (arg0 == 12) {
-			this.soze = arg1.g1();
+			this.size = arg1.g1();
 		} else if (arg0 >= 30 && arg0 < 35) {
 			this.ops[arg0 - 30] = arg1.gjstr();
 			if (this.ops[arg0 - 30].equalsIgnoreCase(LocalizedText.HIDDEN)) {

@@ -66,7 +66,7 @@ public final class Static127 {
 						}
 						Static33.anIntArray79[Static272.anInt5214++] = local96;
 					} else {
-						NpcList.npcs[local96].method2698(null);
+						NpcList.npcs[local96].setNpcType(null);
 						NpcList.npcs[local96] = null;
 					}
 				}

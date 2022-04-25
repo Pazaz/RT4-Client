@@ -13,11 +13,11 @@ public abstract class Js5Request extends SecondaryNode {
 	public boolean aBoolean227;
 
 	@OriginalMember(owner = "client!il", name = "P", descriptor = "Z")
-	public volatile boolean aBoolean226 = true;
+	public volatile boolean incomplete = true;
 
 	@OriginalMember(owner = "client!il", name = "a", descriptor = "(Z)I")
 	public abstract int method3553();
 
 	@OriginalMember(owner = "client!il", name = "b", descriptor = "(Z)[B")
-	public abstract byte[] method3554();
+	public abstract byte[] getData();
 }

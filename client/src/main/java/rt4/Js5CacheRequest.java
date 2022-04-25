@@ -17,8 +17,8 @@ public final class Js5CacheRequest extends Js5Request {
 
 	@OriginalMember(owner = "client!c", name = "b", descriptor = "(Z)[B")
 	@Override
-	public final byte[] method3554() {
-		if (this.aBoolean226) {
+	public final byte[] getData() {
+		if (this.incomplete) {
 			throw new RuntimeException();
 		}
 		return this.aByteArray11;
@@ -27,6 +27,6 @@ public final class Js5CacheRequest extends Js5Request {
 	@OriginalMember(owner = "client!c", name = "a", descriptor = "(Z)I")
 	@Override
 	public final int method3553() {
-		return this.aBoolean226 ? 0 : 100;
+		return this.incomplete ? 0 : 100;
 	}
 }

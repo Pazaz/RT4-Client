@@ -677,7 +677,7 @@ public final class Static87 {
 													if (local2589 == null) {
 														Static43.redraw(local30);
 													} else {
-														local503 = -local2589.method4549() / 2;
+														local503 = -local2589.getMaxY() / 2;
 													}
 												}
 											} else if (local30.modelType == 5) {
