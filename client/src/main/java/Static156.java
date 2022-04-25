@@ -29,10 +29,10 @@ public final class Static156 {
 		} else if (arg2 >= Static99.mapSizeZ * 128) {
 			arg2 = Static99.mapSizeZ * 128 - 1;
 		}
-		Static109.anInt2886 = MathUtils.anIntArray223[arg3];
-		Static121.anInt3038 = MathUtils.anIntArray225[arg3];
-		Static231.anInt5205 = MathUtils.anIntArray223[arg4];
-		Static81.anInt2222 = MathUtils.anIntArray225[arg4];
+		Static109.anInt2886 = MathUtils.sin[arg3];
+		Static121.anInt3038 = MathUtils.cos[arg3];
+		Static231.anInt5205 = MathUtils.sin[arg4];
+		Static81.anInt2222 = MathUtils.cos[arg4];
 		Static149.anInt3555 = arg0;
 		Static162.anInt3947 = arg1;
 		Static217.anInt4903 = arg2;

@@ -59,10 +59,10 @@ public final class Static198 {
 		@Pc(42) int local42 = arg2 - Static134.renderZ;
 		@Pc(46) int local46 = local38 - Static5.anInt40;
 		@Pc(50) int local50 = arg5 - Static138.renderX;
-		@Pc(54) int local54 = MathUtils.anIntArray223[Static240.cameraPitch];
-		@Pc(58) int local58 = MathUtils.anIntArray225[Static240.cameraPitch];
-		@Pc(62) int local62 = MathUtils.anIntArray223[Static184.cameraYaw];
-		@Pc(66) int local66 = MathUtils.anIntArray225[Static184.cameraYaw];
+		@Pc(54) int local54 = MathUtils.sin[Static240.cameraPitch];
+		@Pc(58) int local58 = MathUtils.cos[Static240.cameraPitch];
+		@Pc(62) int local62 = MathUtils.sin[Static184.cameraYaw];
+		@Pc(66) int local66 = MathUtils.cos[Static184.cameraYaw];
 		@Pc(76) int local76 = local50 * local66 + local62 * local42 >> 16;
 		@Pc(87) int local87 = local42 * local66 - local62 * local50 >> 16;
 		@Pc(89) int local89 = local76;
