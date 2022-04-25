@@ -11,6 +11,7 @@
 * Refactor code to improve behavior/readability
 * Modernize code/libraries (High DPI support, modern refresh rates, ...)
 * Support existing servers via global config flags that adjust packet behaviors
+* Organize classes into packages
 
 OpenRS2 annotations are left in the source to build a deob map from, in case some of my changes aren't desirable.  
 That mapping can be used to generate a new deob with everything renamed for you.
