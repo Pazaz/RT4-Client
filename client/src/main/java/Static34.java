@@ -61,10 +61,7 @@ public final class Static34 {
 	@OriginalMember(owner = "client!ck", name = "K", descriptor = "I")
 	public static int anInt1053 = 0;
 
-	@OriginalMember(owner = "client!ck", name = "eb", descriptor = "Z")
-	public static boolean verifyIdChanged = false;
-
-	@OriginalMember(owner = "client!ck", name = "a", descriptor = "(Lclient!fe;I)V")
+    @OriginalMember(owner = "client!ck", name = "a", descriptor = "(Lclient!fe;I)V")
 	public static void method879(@OriginalArg(0) PathingEntity arg0) {
 		arg0.aBoolean171 = false;
 		@Pc(18) SeqType local18;

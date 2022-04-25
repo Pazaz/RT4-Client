@@ -203,7 +203,7 @@ public final class Static197 {
 			Static210.method3712(true);
 		}
 		if (Protocol.socket != null && (client.gameState == 30 || client.gameState == 25)) {
-			Static59.method1373();
+			ClientProt.method1373();
 		}
 		for (@Pc(466) int local466 = 0; local466 < 100; local466++) {
 			Static186.aBooleanArray100[local466] = true;

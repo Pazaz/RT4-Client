@@ -30,39 +30,6 @@ public final class Static276 {
 		}
 	}
 
-	@OriginalMember(owner = "client!wh", name = "a", descriptor = "(IILclient!na;)V")
-	public static void method4613(@OriginalArg(0) int arg0, @OriginalArg(2) JagString arg1) {
-		@Pc(7) JagString local7 = arg1.method3159().toTitleCase();
-		@Pc(13) boolean local13 = false;
-		for (@Pc(15) int local15 = 0; local15 < PlayerList.size; local15++) {
-			@Pc(28) Player local28 = PlayerList.players[PlayerList.ids[local15]];
-			if (local28 != null && local28.username != null && local28.username.equalsIgnoreCase(local7)) {
-				local13 = true;
-				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local28.movementQueueX[0], 1, 0, 2, local28.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
-				if (arg0 == 1) {
-					Protocol.outboundBuffer.p1isaac(68);
-					Protocol.outboundBuffer.p2leadd(PlayerList.ids[local15]);
-				} else if (arg0 == 4) {
-					Protocol.outboundBuffer.p1isaac(180);
-					Protocol.outboundBuffer.p2leadd(PlayerList.ids[local15]);
-				} else if (arg0 == 5) {
-					Protocol.outboundBuffer.p1isaac(4);
-					Protocol.outboundBuffer.p2le(PlayerList.ids[local15]);
-				} else if (arg0 == 6) {
-					Protocol.outboundBuffer.p1isaac(133);
-					Protocol.outboundBuffer.p2le(PlayerList.ids[local15]);
-				} else if (arg0 == 7) {
-					Protocol.outboundBuffer.p1isaac(114);
-					Protocol.outboundBuffer.p2leadd(PlayerList.ids[local15]);
-				}
-				break;
-			}
-		}
-		if (!local13) {
-			Chat.add(JagString.EMPTY, 0, JagString.concatenate(new JagString[] { LocalizedText.UNABLETOFIND, local7 }));
-		}
-	}
-
 	@OriginalMember(owner = "client!wh", name = "b", descriptor = "(B)Lclient!ok;")
 	public static IndexedSprite method4614() {
 		@Pc(27) IndexedSprite local27;

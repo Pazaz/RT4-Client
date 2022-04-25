@@ -48,7 +48,7 @@ public final class Static44 {
 		for (local35 = 0; local35 < 100; local35++) {
 			Static186.aBooleanArray100[local35] = true;
 		}
-		Static59.method1373();
+		ClientProt.method1373();
 	}
 
 	@OriginalMember(owner = "client!dh", name = "b", descriptor = "(I)Lclient!q;")

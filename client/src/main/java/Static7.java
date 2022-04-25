@@ -1,5 +1,3 @@
-import java.io.IOException;
-import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
@@ -16,29 +14,6 @@ public final class Static7 {
 
 	@OriginalMember(owner = "client!ah", name = "p", descriptor = "Lclient!ih;")
 	public static final LinkedList aClass69_32 = new LinkedList();
-
-    @OriginalMember(owner = "client!ah", name = "a", descriptor = "(BZ)V")
-	public static void ping(@OriginalArg(1) boolean arg0) {
-		client.audioLoop();
-		if (client.gameState != 30 && client.gameState != 25) {
-			return;
-		}
-		Static131.anInt3251++;
-		if (Static131.anInt3251 < 50 && !arg0) {
-			return;
-		}
-		Static131.anInt3251 = 0;
-		if (!LoginManager.aBoolean247 && Protocol.socket != null) {
-			Protocol.outboundBuffer.p1isaac(93);
-			try {
-				Protocol.socket.write(Protocol.outboundBuffer.data, Protocol.outboundBuffer.offset);
-				Protocol.outboundBuffer.offset = 0;
-			} catch (@Pc(53) IOException local53) {
-				LoginManager.aBoolean247 = true;
-			}
-		}
-		client.audioLoop();
-	}
 
 	@OriginalMember(owner = "client!ah", name = "b", descriptor = "(I)V")
 	public static void method843() {
@@ -112,7 +87,7 @@ public final class Static7 {
 			}
 		}
 		if (local269 != -1) {
-			Static103.method2232(local269);
+			ClientProt.method2232(local269);
 		}
 		Static60.aBoolean108 = false;
 		Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
