@@ -4,7 +4,9 @@ import org.openrs2.deob.annotation.OriginalMember;
 @OriginalClass("client!qe")
 public final class Inv extends Node {
 
-	@OriginalMember(owner = "client!qe", name = "p", descriptor = "[I")
+    @OriginalMember(owner = "client!cb", name = "I", descriptor = "[I")
+    public static final int[] updatedInventories = new int[32];
+    @OriginalMember(owner = "client!qe", name = "p", descriptor = "[I")
 	public int[] objectIds = new int[] { -1 };
 
 	@OriginalMember(owner = "client!qe", name = "u", descriptor = "[I")

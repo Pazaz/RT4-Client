@@ -12,9 +12,6 @@ public final class Static158 {
 	@OriginalMember(owner = "client!mh", name = "Y", descriptor = "Z")
 	public static boolean aBoolean187 = false;
 
-	@OriginalMember(owner = "client!mh", name = "eb", descriptor = "I")
-	public static int anInt3857 = 0;
-
 	@OriginalMember(owner = "client!mh", name = "h", descriptor = "(B)V")
 	public static void decodeNpcFiles() {
 		@Pc(10) int local10 = Static191.npcSpawnsFilesBuffer.length;

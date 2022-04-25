@@ -3070,7 +3070,7 @@ public final class GlModel extends Model {
 			@Pc(439) short local439 = this.aShortArray80[local427];
 			if (local439 == -1) {
 				GlRenderer.setTextureId(-1);
-				Static27.setMaterial(0, 0);
+				MaterialManager.setMaterial(0, 0);
 			} else {
 				Rasteriser.textureProvider.method3227(local439 & 0xFFFF);
 			}

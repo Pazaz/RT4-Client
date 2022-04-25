@@ -76,7 +76,7 @@ public final class Static247 {
 													var10 = var9 & 0xFFFFFF;
 													if (var10 != Static152.anInt3604) {
 														Static152.anInt3604 = var10;
-														Static21.method619(var10);
+														WaterMaterialRenderer.method619(var10);
 														Static161.method3066(WaterMaterialRenderer.method2422());
 													}
 													local65 = var9 >>> 24 << 3;
@@ -85,7 +85,7 @@ public final class Static247 {
 														Static147.method2761(local65);
 													}
 													local115 = Static107.surfaceTileHeightMap[0][local18][local21] + Static107.surfaceTileHeightMap[0][local18 + 1][local21] + Static107.surfaceTileHeightMap[0][local18][local21 + 1] + Static107.surfaceTileHeightMap[0][local18 + 1][local21 + 1] >> 2;
-													Static27.setMaterial(-local115, 3);
+													MaterialManager.setMaterial(-local115, 3);
 													local33 = 201.5F;
 													GlRenderer.method4159(local33);
 												} else {

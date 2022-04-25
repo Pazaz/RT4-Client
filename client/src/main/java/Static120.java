@@ -371,7 +371,7 @@ public final class Static120 {
 			return;
 		}
 		@Pc(4) GL2 local4 = GlRenderer.gl;
-		Static27.setMaterial(0, 0);
+		MaterialManager.setMaterial(0, 0);
 		GlRenderer.setTextureCombineRgbMode(0);
 		GlRenderer.resetTextureMatrix();
 		GlRenderer.setTextureId(GlRenderer.anInt5328);

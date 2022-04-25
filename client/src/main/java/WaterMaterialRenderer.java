@@ -43,7 +43,16 @@ public final class WaterMaterialRenderer implements MaterialRenderer {
 		return Static251.aFloatArray28;
 	}
 
-	@OriginalMember(owner = "client!pd", name = "d", descriptor = "()V")
+    @OriginalMember(owner = "client!bk", name = "a", descriptor = "(BI)V")
+    public static void method619(@OriginalArg(1) int color) {
+        aFloatArray2[0] = (float) (color >> 16 & 0xFF) / 255.0F;
+        aFloatArray2[1] = (float) (color >> 8 & 0xFF) / 255.0F;
+        aFloatArray2[2] = (float) (color & 0xFF) / 255.0F;
+        MaterialManager.resetArgument(3);
+        MaterialManager.resetArgument(4);
+    }
+
+    @OriginalMember(owner = "client!pd", name = "d", descriptor = "()V")
 	private void method3435() {
 		@Pc(2) byte[] local2 = new byte[] { 0, -1 };
 		@Pc(12) GL2 local12 = GlRenderer.gl;
@@ -122,13 +131,13 @@ public final class WaterMaterialRenderer implements MaterialRenderer {
 
 	@OriginalMember(owner = "client!pd", name = "a", descriptor = "()V")
 	@Override
-	public final void method4602() {
+	public final void unbind() {
 		GlRenderer.gl.glCallList(this.anInt4440 + 1);
 	}
 
 	@OriginalMember(owner = "client!pd", name = "a", descriptor = "(I)V")
 	@Override
-	public final void method4604(@OriginalArg(0) int arg0) {
+	public final void setArgument(@OriginalArg(0) int arg0) {
 		@Pc(1) GL2 local1 = GlRenderer.gl;
 		local1.glActiveTexture(GL2.GL_TEXTURE1);
 		local1.glTexEnvfv(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_COLOR, aFloatArray2, 0);
@@ -157,7 +166,7 @@ public final class WaterMaterialRenderer implements MaterialRenderer {
 
 	@OriginalMember(owner = "client!pd", name = "b", descriptor = "()V")
 	@Override
-	public final void method4603() {
+	public final void bind() {
 		@Pc(1) GL2 local1 = GlRenderer.gl;
 		GlRenderer.setTextureCombineRgbMode(2);
 		GlRenderer.setTextureCombineAlphaMode(2);
@@ -180,7 +189,7 @@ public final class WaterMaterialRenderer implements MaterialRenderer {
 
 	@OriginalMember(owner = "client!pd", name = "c", descriptor = "()I")
 	@Override
-	public final int method4605() {
+	public final int getFlags() {
 		return 15;
 	}
 }

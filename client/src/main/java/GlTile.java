@@ -278,7 +278,7 @@ public final class GlTile extends Node {
 		@Pc(257) GL2 local257 = GlRenderer.gl;
 		if (this.anInt2485 == -1 || arg2) {
 			GlRenderer.setTextureId(-1);
-			Static27.setMaterial(0, 0);
+			MaterialManager.setMaterial(0, 0);
 		} else {
 			Rasteriser.textureProvider.method3227(this.anInt2485);
 		}

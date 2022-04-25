@@ -367,7 +367,7 @@ public final class Static36 {
 								} else {
 									outer:
 									for (i = component.updatedInventoriesReaderIndex; i < Static111.updatedInventoriesWriterIndex; i++) {
-										skill = Static27.updatedInventories[i & 0x1F];
+										skill = Inv.updatedInventories[i & 0x1F];
 										for (k = 0; k < component.inventoryTriggers.length; k++) {
 											if (component.inventoryTriggers[k] == skill) {
 												request2 = new HookRequest();

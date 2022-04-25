@@ -96,8 +96,8 @@ public final class Static248 {
 			local244.glTranslatef((float) -arg0, (float) -arg1, (float) -arg2);
 			if (local240) {
 				Static156.method2959();
-				Static27.setMaterial(-1, 3);
-				Static119.aBoolean153 = true;
+				MaterialManager.setMaterial(-1, 3);
+				MaterialManager.renderingUnderwater = true;
 				UnderwaterMaterialRenderer.method4609();
 				Static152.anInt3604 = -1;
 				Static22.anInt730 = -1;
@@ -106,7 +106,7 @@ public final class Static248 {
 					@Pc(294) float local294 = 251.5F - (local285.aBoolean140 ? 1.0F : 0.5F);
 					if (local285.anInt2486 != Static152.anInt3604) {
 						Static152.anInt3604 = local285.anInt2486;
-						Static21.method619(local285.anInt2486);
+						WaterMaterialRenderer.method619(local285.anInt2486);
 						Static161.method3066(WaterMaterialRenderer.method2422());
 					}
 					local285.method1944(Static130.aClass3_Sub5ArrayArrayArray1, local294, false);
@@ -123,7 +123,7 @@ public final class Static248 {
 						@Pc(336) GlTile local336 = Static182.aClass3_Sub14ArrayArray2[local32][local37];
 						@Pc(350) float local350 = 201.5F - (float) local32 * 50.0F - (local336.aBoolean140 ? 1.0F : 0.5F);
 						if (local336.anInt2485 != -1 && Rasteriser.textureProvider.method3237(local336.anInt2485) == 4 && Preferences.highWaterDetail) {
-							Static21.method619(local336.anInt2486);
+							WaterMaterialRenderer.method619(local336.anInt2486);
 						}
 						local336.method1944(Static130.aClass3_Sub5ArrayArrayArray1, local350, false);
 					}

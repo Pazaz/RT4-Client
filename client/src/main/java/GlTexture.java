@@ -173,7 +173,7 @@ public final class GlTexture extends SecondaryNode {
 		}
 		@Pc(22) GL2 gl = GlRenderer.gl;
 		@Pc(28) int size = arg2 ? 64 : 128;
-		@Pc(31) int local31 = Static56.method1314();
+		@Pc(31) int local31 = MaterialManager.getFlags();
 		if ((local31 & 0x1) == 0) {
 			if (this.textureId == -1) {
 				@Pc(53) int[] temp = new int[1];

@@ -57,6 +57,6 @@ public final class Static83 {
 
 	@OriginalMember(owner = "client!gj", name = "b", descriptor = "(I)V")
 	public static void method440() {
-		Static27.setMaterial(0, 0);
+		MaterialManager.setMaterial(0, 0);
 	}
 }

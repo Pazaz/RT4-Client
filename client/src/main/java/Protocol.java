@@ -1473,7 +1473,7 @@ public class Protocol {
                             } else if (opcode == 191) {
                                 local133 = inboundBuffer.g2le();
                                 Static13.method472(local133);
-                                Static27.updatedInventories[Static111.updatedInventoriesWriterIndex++ & 0x1F] = local133 & 0x7FFF;
+                                Inv.updatedInventories[Static111.updatedInventoriesWriterIndex++ & 0x1F] = local133 & 0x7FFF;
                                 opcode = -1;
                                 return true;
                             } else if (opcode == 102) {
@@ -1807,7 +1807,7 @@ public class Protocol {
                                         Static43.redraw(local4956);
                                     }
                                     InterfaceList.method2245();
-                                    Static27.updatedInventories[Static111.updatedInventoriesWriterIndex++ & 0x1F] = local786 & 0x7FFF;
+                                    Inv.updatedInventories[Static111.updatedInventoriesWriterIndex++ & 0x1F] = local786 & 0x7FFF;
                                     opcode = -1;
                                     return true;
                                 } else if (opcode == 24) {
@@ -2017,7 +2017,7 @@ public class Protocol {
                                         Static43.redraw(local4956);
                                     }
                                     InterfaceList.method2245();
-                                    Static27.updatedInventories[Static111.updatedInventoriesWriterIndex++ & 0x1F] = local786 & 0x7FFF;
+                                    Inv.updatedInventories[Static111.updatedInventoriesWriterIndex++ & 0x1F] = local786 & 0x7FFF;
                                     opcode = -1;
                                     return true;
                                 } else if (opcode == 142) {

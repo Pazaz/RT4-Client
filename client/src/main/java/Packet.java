@@ -6,6 +6,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!i")
 public final class Packet extends Buffer {
 
+	@OriginalMember(owner = "client!bh", name = "G", descriptor = "[I")
+	public static final int[] BIT_MASKS = new int[] { 0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, Integer.MAX_VALUE, -1 };
+
 	@OriginalMember(owner = "client!i", name = "Xb", descriptor = "Lclient!ij;")
 	private IsaacRandom aClass71_1;
 
@@ -36,14 +39,14 @@ public final class Packet extends Buffer {
 		@Pc(16) int local16 = 0;
 		this.anInt2846 += arg0;
 		while (local14 < arg0) {
-			local16 += (Static18.anIntArray57[local14] & this.data[local6++]) << arg0 - local14;
+			local16 += (BIT_MASKS[local14] & this.data[local6++]) << arg0 - local14;
 			arg0 -= local14;
 			local14 = 8;
 		}
 		if (local14 == arg0) {
-			local16 += this.data[local6] & Static18.anIntArray57[local14];
+			local16 += this.data[local6] & BIT_MASKS[local14];
 		} else {
-			local16 += this.data[local6] >> local14 - arg0 & Static18.anIntArray57[arg0];
+			local16 += this.data[local6] >> local14 - arg0 & BIT_MASKS[arg0];
 		}
 		return local16;
 	}
