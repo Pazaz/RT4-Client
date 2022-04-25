@@ -1,5 +1,8 @@
 package com.itspazaz.rt4;
 
+import com.jogamp.opengl.GL2;
+import com.jogamp.opengl.GLContext;
+import com.jogamp.opengl.util.GLBuffers;
 import rt4.*;
 
 import javax.imageio.ImageIO;
@@ -10,6 +13,7 @@ import java.awt.image.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.Socket;
+import java.nio.ByteBuffer;
 
 public class Playground extends GameShell {
     public static Playground instance;
@@ -166,10 +170,23 @@ public class Playground extends GameShell {
                 state++;
             }
         } else if (state == 7) {
-            LoadingBarAwt.render(null, true, JagString.parse("Preparing to draw model"), 1);
+            if (useGl) {
+                GlRenderer.init(GameShell.canvas, 16);
+                if (GlRenderer.enabled) {
+                    GlRenderer.setCanvasSize(GameShell.canvasWidth, GameShell.canvasHeight);
+                    GlRenderer.method4173();
+                    float yaw = 0.4f * 360.0F / 6.2831855F;
+                    float pitch = -0.4f * 360.0F / 6.2831855F;
+                    GlRenderer.method4171(0, 0, GameShell.canvasWidth, GameShell.canvasHeight, GameShell.canvasWidth / 2, GameShell.canvasHeight / 2, yaw, pitch, 471, 471);
+                    GlRenderer.setViewportBounds(0, 0, GameShell.canvasWidth, GameShell.canvasHeight);
+                    GlRenderer.setDepthTestEnabled(true);
+                    GlRenderer.setFogEnabled(true);
+                    Static241.setWindowMode(false, 2, GameShell.canvasWidth, GameShell.canvasHeight);
+                }
+            }
+            state++;
+        } else if (state == 8) {
             Js5GlTextureProvider textureProvider = new Js5GlTextureProvider(archives[9], archives[26], archives[8], 20, false);
-            LoadingBarAwt.clear();
-            SoftwareRaster.clear();
             Rasteriser.unpackTextures(textureProvider);
             Rasteriser.setBrightness(0.8F);
             Rasteriser.setBounds(GameShell.canvasWidth, GameShell.canvasHeight);
@@ -180,6 +197,35 @@ public class Playground extends GameShell {
             npc = new Npc();
             npc.setNpcType(npcType);
             state++;
+        }
+
+        GameShell.frame.setTitle("" + state);
+    }
+
+    public static boolean useGl = true;
+
+    private void exportGlImage(String filename) {
+        try {
+            GL2 gl = GLContext.getCurrentGL().getGL2();
+
+            BufferedImage image = new BufferedImage(GameShell.canvasWidth, GameShell.canvasHeight, BufferedImage.TYPE_INT_RGB);
+            Graphics graphics = image.getGraphics();
+
+            ByteBuffer buffer = GLBuffers.newDirectByteBuffer(GameShell.canvasWidth * GameShell.canvasHeight * 4);
+
+            gl.glReadBuffer(GL2.GL_BACK);
+            gl.glReadPixels(0, 0, GameShell.canvasWidth, GameShell.canvasHeight, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, buffer);
+
+            for (int h = 0; h < GameShell.canvasHeight; h++) {
+                for (int w = 0; w < GameShell.canvasWidth; w++) {
+                    graphics.setColor(new Color((buffer.get() & 0xff), (buffer.get() & 0xff), (buffer.get() & 0xff)));
+                    buffer.get();
+                    graphics.drawRect(w, GameShell.canvasHeight - h, 1, 1);
+                }
+            }
+
+            ImageIO.write(image, "PNG", new File(filename + ".png"));
+        } catch (IOException ex) {
         }
     }
 
@@ -216,7 +262,11 @@ public class Playground extends GameShell {
 
     public void inputLoop() {
         if (Keyboard.getKey(KeyEvent.VK_BACK_SLASH)) {
-            exportImage(SoftwareRaster.pixels, "dump/" + exportCounter++);
+            if (GlRenderer.enabled) {
+                exportGlImage("dump/" + exportCounter++);
+            } else {
+                exportImage(SoftwareRaster.pixels, "dump/" + exportCounter++);
+            }
         }
     }
 
@@ -297,23 +347,45 @@ public class Playground extends GameShell {
 
     @Override
     protected void mainRedraw() {
-        if (state == 8) {
-            SoftwareRaster.clear(0x7F333333);
+        if (state == 9) {
+            if (!GlRenderer.enabled) {
+                SoftwareRaster.clear(0x7F666666);
+            } else {
+                GlRenderer.clearColorAndDepthBuffers(0x7F333333);
+            }
 
             if (npc != null) {
                 int orientation = 384;
                 int x = 128;
                 int z = 192;
                 int y = 128;
+                if (GlRenderer.enabled) {
+                    x = 230;
+                    z = 400;
+                    y *= 4;
+                }
                 npc.render(orientation, 25079, 60547, -44308, 48222, x, z, y, 0L, 0, null);
             }
 
-            SoftwareRaster.frameBuffer.draw(GameShell.canvas.getGraphics());
+            if (!GlRenderer.enabled) {
+                SoftwareRaster.frameBuffer.draw(GameShell.canvas.getGraphics());
+            } else {
+                GlRenderer.method4160();
+                GlRenderer.swapBuffers();
+            }
         }
     }
 
     @Override
     protected void mainQuit() {
+        if (GlRenderer.enabled) {
+            GlRenderer.quit();
+        }
+
+        if (GameShell.signLink != null) {
+            GameShell.signLink.unloadGlNatives(this.getClass());
+        }
+
         Keyboard.stop(GameShell.canvas);
         Mouse.stop(GameShell.canvas);
         Keyboard.quit();
