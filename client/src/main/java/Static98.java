@@ -7,15 +7,7 @@ public final class Static98 {
 	@OriginalMember(owner = "client!hj", name = "e", descriptor = "I")
 	public static int anInt2512;
 
-	@OriginalMember(owner = "client!hj", name = "a", descriptor = "(II)V")
-	public static void method1964(@OriginalArg(0) int arg0) {
-		WorldMap.anInt4901 = -1;
-		WorldMap.anInt3482 = -1;
-		WorldMap.anInt435 = arg0;
-		WorldMap.method965();
-	}
-
-	@OriginalMember(owner = "client!hj", name = "a", descriptor = "(Lclient!na;B)Z")
+    @OriginalMember(owner = "client!hj", name = "a", descriptor = "(Lclient!na;B)Z")
 	public static boolean method1965(@OriginalArg(0) JagString arg0) {
 		if (arg0 == null) {
 			return false;
@@ -25,7 +17,7 @@ public final class Static98 {
 				return true;
 			}
 		}
-		if (arg0.equalsIgnoreCase(PlayerList.self.aClass100_364)) {
+		if (arg0.equalsIgnoreCase(PlayerList.self.username)) {
 			return true;
 		} else {
 			return false;

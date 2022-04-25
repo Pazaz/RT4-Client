@@ -219,10 +219,10 @@ public final class Static78 {
 		}
 		Static7.ping(true);
 		i = Static146.anInt3508;
-		if (i > Static55.level) {
-			i = Static55.level;
+		if (i > Player.level) {
+			i = Player.level;
 		}
-		if (i < Static55.level - 1) {
+		if (i < Player.level - 1) {
 		}
 		if (SceneGraph.allLevelsAreVisible()) {
 			Static146.method2750(0);

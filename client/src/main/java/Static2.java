@@ -83,7 +83,7 @@ public final class Static2 {
 		@Pc(61) int local61 = 0;
 		@Pc(64) int local64 = local53 + 1;
 		Static84.anIntArray209[0] = arg3;
-		@Pc(71) int[][] local71 = PathFinder.collisionMaps[Static55.level].anIntArrayArray30;
+		@Pc(71) int[][] local71 = PathFinder.collisionMaps[Player.level].anIntArrayArray30;
 		@Pc(193) int local193;
 		while (local61 != local64) {
 			local3 = Static259.anIntArray514[local61];
@@ -94,16 +94,16 @@ public final class Static2 {
 				break;
 			}
 			if (arg1 != 0) {
-				if ((arg1 < 5 || arg1 == 10) && PathFinder.collisionMaps[Static55.level].method3042(arg4, local3, local8, arg8, arg1 - 1, 2, arg7)) {
+				if ((arg1 < 5 || arg1 == 10) && PathFinder.collisionMaps[Player.level].method3042(arg4, local3, local8, arg8, arg1 - 1, 2, arg7)) {
 					local59 = true;
 					break;
 				}
-				if (arg1 < 10 && PathFinder.collisionMaps[Static55.level].method3046(arg4, arg1 - 1, arg8, local8, 2, arg7, local3)) {
+				if (arg1 < 10 && PathFinder.collisionMaps[Player.level].method3046(arg4, arg1 - 1, arg8, local8, 2, arg7, local3)) {
 					local59 = true;
 					break;
 				}
 			}
-			if (arg0 != 0 && arg6 != 0 && PathFinder.collisionMaps[Static55.level].method3052(arg8, local8, local3, 2, arg0, arg2, arg4, arg6)) {
+			if (arg0 != 0 && arg6 != 0 && PathFinder.collisionMaps[Player.level].method3052(arg8, local8, local3, 2, arg0, arg2, arg4, arg6)) {
 				local59 = true;
 				break;
 			}
@@ -271,17 +271,17 @@ public final class Static2 {
 			}
 		} else if (local16 == 327) {
 			arg0.modelXAngle = 150;
-			arg0.modelYAngle = (int) (Math.sin((double) Static83.loop / 40.0D) * 256.0D) & 0x7FF;
+			arg0.modelYAngle = (int) (Math.sin((double) client.loop / 40.0D) * 256.0D) & 0x7FF;
 			arg0.modelType = 5;
 			arg0.modelId = -1;
 		} else if (local16 == 328) {
-			if (PlayerList.self.aClass100_364 == null) {
+			if (PlayerList.self.username == null) {
 				arg0.modelId = 0;
 			} else {
 				arg0.modelXAngle = 150;
-				arg0.modelYAngle = (int) (Math.sin((double) Static83.loop / 40.0D) * 256.0D) & 0x7FF;
+				arg0.modelYAngle = (int) (Math.sin((double) client.loop / 40.0D) * 256.0D) & 0x7FF;
 				arg0.modelType = 5;
-				arg0.modelId = ((int) PlayerList.self.aClass100_364.encode37() << 11) + 2047;
+				arg0.modelId = ((int) PlayerList.self.username.encode37() << 11) + 2047;
 				arg0.anInt496 = PlayerList.self.anInt3388;
 				arg0.anInt500 = 0;
 				arg0.anInt522 = PlayerList.self.anInt3366;

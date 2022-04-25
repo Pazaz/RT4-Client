@@ -13,10 +13,7 @@ public final class Static223 {
     @OriginalMember(owner = "client!sc", name = "p", descriptor = "I")
 	public static int anInt5029 = 0;
 
-	@OriginalMember(owner = "client!sc", name = "v", descriptor = "I")
-	public static int anInt5032 = 0;
-
-	@OriginalMember(owner = "client!sc", name = "z", descriptor = "[Z")
+    @OriginalMember(owner = "client!sc", name = "z", descriptor = "[Z")
 	public static final boolean[] aBooleanArray116 = new boolean[100];
 
 	@OriginalMember(owner = "client!sc", name = "D", descriptor = "Lclient!na;")

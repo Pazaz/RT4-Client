@@ -10,10 +10,7 @@ public final class Static26 {
 	@OriginalMember(owner = "client!ca", name = "cb", descriptor = "Lclient!na;")
 	public static final JagString aClass100_160 = Static165.method3165();
 
-    @OriginalMember(owner = "client!ca", name = "eb", descriptor = "[I")
-	public static final int[] anIntArray67 = new int[100];
-
-	@OriginalMember(owner = "client!ca", name = "h", descriptor = "(I)V")
+    @OriginalMember(owner = "client!ca", name = "h", descriptor = "(I)V")
 	public static void setupLoadingScreenRegion() {
 		@Pc(10) int local10 = (Static138.renderX >> 10) + (Static225.originX >> 3);
 		@Pc(23) int local23 = (Static134.renderZ >> 10) + (Static142.originZ >> 3);

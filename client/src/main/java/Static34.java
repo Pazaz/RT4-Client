@@ -95,14 +95,14 @@ public final class Static34 {
 			}
 		}
 		@Pc(156) int local156;
-		if (arg0.anInt3432 != -1 && Static83.loop >= arg0.anInt3359) {
-			local156 = SpotAnimTypeList.get(arg0.anInt3432).seqId;
+		if (arg0.spotAnimId != -1 && client.loop >= arg0.spotAnimStart) {
+			local156 = SpotAnimTypeList.get(arg0.spotAnimId).seqId;
 			if (local156 == -1) {
-				arg0.anInt3432 = -1;
+				arg0.spotAnimId = -1;
 			} else {
 				@Pc(165) SeqType local165 = SeqTypeList.get(local156);
 				if (local165 == null || local165.frames == null) {
-					arg0.anInt3432 = -1;
+					arg0.spotAnimId = -1;
 				} else {
 					if (arg0.anInt3399 < 0) {
 						arg0.anInt3399 = 0;
@@ -115,7 +115,7 @@ public final class Static34 {
 						SoundPlayer.playSeqSound(arg0.zFine, local165, arg0.xFine, PlayerList.self == arg0, arg0.anInt3399);
 					}
 					if (arg0.anInt3399 >= local165.frames.length) {
-						arg0.anInt3432 = -1;
+						arg0.spotAnimId = -1;
 					}
 					arg0.anInt3418 = arg0.anInt3399 + 1;
 					if (local165.frames.length <= arg0.anInt3418) {
@@ -126,7 +126,7 @@ public final class Static34 {
 		}
 		if (arg0.seqId != -1 && arg0.anInt3420 <= 1) {
 			local18 = SeqTypeList.get(arg0.seqId);
-			if (local18.anInt5363 == 1 && arg0.anInt3405 > 0 && Static83.loop >= arg0.anInt3395 && Static83.loop > arg0.anInt3386) {
+			if (local18.anInt5363 == 1 && arg0.anInt3405 > 0 && client.loop >= arg0.anInt3395 && client.loop > arg0.anInt3386) {
 				arg0.anInt3420 = 1;
 				return;
 			}

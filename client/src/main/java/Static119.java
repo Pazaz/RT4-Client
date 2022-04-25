@@ -1,4 +1,3 @@
-import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
@@ -48,12 +47,4 @@ public final class Static119 {
 		}
 	}
 
-	@OriginalMember(owner = "client!je", name = "a", descriptor = "(IIIII)V")
-	public static void method2387(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
-		WorldMap.anInt435 = WorldMap.width * arg2 / arg0;
-		WorldMap.anInt919 = WorldMap.length * arg1 / arg3;
-		WorldMap.anInt3482 = -1;
-		WorldMap.anInt4901 = -1;
-		WorldMap.method965();
-	}
 }

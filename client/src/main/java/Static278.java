@@ -13,14 +13,11 @@ public final class Static278 {
 	@OriginalMember(owner = "client!wj", name = "f", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1103 = JagString.parse("ul");
 
-	@OriginalMember(owner = "client!wj", name = "l", descriptor = "I")
-	public static int anInt5867 = 0;
-
 	@OriginalMember(owner = "client!wj", name = "a", descriptor = "(I)V")
 	public static void method4645() {
 		while (true) {
 			if (Protocol.inboundBuffer.method2241(Protocol.length) >= 27) {
-				@Pc(14) int local14 = Protocol.inboundBuffer.method2238(15);
+				@Pc(14) int local14 = Protocol.inboundBuffer.gBits(15);
 				if (local14 != 32767) {
 					@Pc(19) boolean local19 = false;
 					if (Static175.npcs[local14] == null) {
@@ -29,25 +26,25 @@ public final class Static278 {
 					}
 					@Pc(37) Npc local37 = Static175.npcs[local14];
 					Static33.anIntArray79[Static272.anInt5214++] = local14;
-					local37.anInt3430 = Static83.loop;
+					local37.lastSeenLoop = client.loop;
 					if (local37.type != null && local37.type.hasAreaSound()) {
 						Static91.method1877(local37);
 					}
-					@Pc(66) int local66 = Protocol.inboundBuffer.method2238(1);
-					@Pc(73) int local73 = Static56.anIntArray141[Protocol.inboundBuffer.method2238(3)];
+					@Pc(66) int local66 = Protocol.inboundBuffer.gBits(1);
+					@Pc(73) int local73 = Static56.anIntArray141[Protocol.inboundBuffer.gBits(3)];
 					if (local19) {
 						local37.anInt3400 = local37.anInt3381 = local73;
 					}
-					@Pc(86) int local86 = Protocol.inboundBuffer.method2238(1);
+					@Pc(86) int local86 = Protocol.inboundBuffer.gBits(1);
 					if (local86 == 1) {
-						Static44.anIntArray106[Static116.anInt2951++] = local14;
+						Protocol.extendedIds[Protocol.extendedCount++] = local14;
 					}
-					@Pc(105) int local105 = Protocol.inboundBuffer.method2238(5);
-					local37.method2698(NpcTypeList.get(Protocol.inboundBuffer.method2238(14)));
+					@Pc(105) int local105 = Protocol.inboundBuffer.gBits(5);
+					local37.method2698(NpcTypeList.get(Protocol.inboundBuffer.gBits(14)));
 					if (local105 > 15) {
 						local105 -= 32;
 					}
-					@Pc(124) int local124 = Protocol.inboundBuffer.method2238(5);
+					@Pc(124) int local124 = Protocol.inboundBuffer.gBits(5);
 					if (local124 > 15) {
 						local124 -= 32;
 					}
@@ -59,12 +56,12 @@ public final class Static278 {
 					}
 					local37.method2683(local37.getSize(), PlayerList.self.movementQueueX[0] + local124, local105 + PlayerList.self.movementQueueZ[0], local66 == 1);
 					if (local37.type.hasAreaSound()) {
-						Static122.method2411(local37.movementQueueZ[0], null, 0, local37, local37.movementQueueX[0], Static55.level, null);
+						Static122.method2411(local37.movementQueueZ[0], null, 0, local37, local37.movementQueueX[0], Player.level, null);
 					}
 					continue;
 				}
 			}
-			Protocol.inboundBuffer.method2244();
+			Protocol.inboundBuffer.accessBytes();
 			return;
 		}
 	}
@@ -219,11 +216,11 @@ public final class Static278 {
 		for (local19 = 0; local19 < Static143.aClass102Array1.length; local19++) {
 			Static143.aClass102Array1[local19] = null;
 		}
-		Static267.anInt5774 = 0;
+		PlayerList.size = 0;
 		Static272.anInt5214 = 0;
 		for (local19 = 0; local19 < 2048; local19++) {
-			Static159.players[local19] = null;
-			Static115.aClass3_Sub15Array1[local19] = null;
+			PlayerList.players[local19] = null;
+			PlayerList.appearanceCache[local19] = null;
 		}
 		for (local19 = 0; local19 < 32768; local19++) {
 			Static175.npcs[local19] = null;

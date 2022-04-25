@@ -863,24 +863,24 @@ public final class Static88 {
 									}
 									component.aBoolean25 = true;
 									if (opcode == 1400) {
-										component.anObjectArray5 = local13000;
+										component.onClickRepeat = local13000;
 									} else if (opcode == 1401) {
-										component.anObjectArray9 = local13000;
+										component.onHold = local13000;
 									} else if (opcode == 1402) {
-										component.anObjectArray18 = local13000;
+										component.onRelease = local13000;
 									} else if (opcode == 1403) {
-										component.anObjectArray19 = local13000;
+										component.onMouseOver = local13000;
 									} else if (opcode == 1404) {
-										component.anObjectArray24 = local13000;
+										component.onMouseLeave = local13000;
 									} else if (opcode == 1405) {
 										component.anObjectArray26 = local13000;
 									} else if (opcode == 1406) {
 										component.anObjectArray27 = local13000;
 									} else if (opcode == 1407) {
-										component.anIntArray44 = local12937;
-										component.anObjectArray25 = local13000;
+										component.varpTriggers = local12937;
+										component.onVarpTransmit = local13000;
 									} else if (opcode == 1408) {
-										component.anObjectArray22 = local13000;
+										component.onTimer = local13000;
 									} else if (opcode == 1409) {
 										component.anObjectArray29 = local13000;
 									} else if (opcode == 1410) {
@@ -888,43 +888,43 @@ public final class Static88 {
 									} else if (opcode == 1411) {
 										component.anObjectArray6 = local13000;
 									} else if (opcode == 1412) {
-										component.anObjectArray23 = local13000;
+										component.onMouseRepeat = local13000;
 									} else if (opcode == 1414) {
-										component.anIntArray34 = local12937;
-										component.anObjectArray7 = local13000;
+										component.inventoryTriggers = local12937;
+										component.onInvTransmit = local13000;
 									} else if (opcode == 1415) {
-										component.anIntArray42 = local12937;
-										component.anObjectArray2 = local13000;
+										component.statTriggers = local12937;
+										component.onStatTransmit = local13000;
 									} else if (opcode == 1416) {
 										component.anObjectArray11 = local13000;
 									} else if (opcode == 1417) {
 										component.anObjectArray10 = local13000;
 									} else if (opcode == 1418) {
-										component.anObjectArray20 = local13000;
+										component.onChatTransmit = local13000;
 									} else if (opcode == 1419) {
-										component.anObjectArray14 = local13000;
+										component.onKey = local13000;
 									} else if (opcode == 1420) {
-										component.anObjectArray1 = local13000;
+										component.onFriendTransmit = local13000;
 									} else if (opcode == 1421) {
-										component.anObjectArray28 = local13000;
+										component.onClanTransmit = local13000;
 									} else if (opcode == 1422) {
-										component.anObjectArray30 = local13000;
+										component.onMiscTransmit = local13000;
 									} else if (opcode == 1423) {
 										component.anObjectArray12 = local13000;
 									} else if (opcode == 1424) {
 										component.anObjectArray8 = local13000;
 									} else if (opcode == 1425) {
-										component.anObjectArray21 = local13000;
+										component.onStockTransmit = local13000;
 									} else if (opcode == 1426) {
-										component.anObjectArray13 = local13000;
+										component.onCamFinished = local13000;
 									} else if (opcode == 1427) {
 										component.anObjectArray17 = local13000;
 									} else if (opcode == 1428) {
-										component.anObjectArray4 = local13000;
-										component.anIntArray38 = local12937;
+										component.onVarcTransmit = local13000;
+										component.varcTriggers = local12937;
 									} else if (opcode == 1429) {
-										component.anIntArray35 = local12937;
-										component.anObjectArray15 = local13000;
+										component.varcstrTriggers = local12937;
+										component.onVarcstrTransmit = local13000;
 									}
 									continue;
 								}
@@ -1220,7 +1220,7 @@ public final class Static88 {
 									if (opcode == 3100) {
 										ssp--;
 										string = Static3.stringStack[ssp];
-										Static103.method2231(Static72.EMPTY_STRING, 0, string);
+										Chat.add(Static72.EMPTY_STRING, 0, string);
 										continue;
 									}
 									if (opcode == 3101) {
@@ -1308,7 +1308,7 @@ public final class Static88 {
 									}
 								} else if (opcode < 3400) {
 									if (opcode == 3300) {
-										Static254.intStack[isp++] = Static83.loop;
+										Static254.intStack[isp++] = client.loop;
 										continue;
 									}
 									if (opcode == 3301) {
@@ -1357,7 +1357,7 @@ public final class Static88 {
 										continue;
 									}
 									if (opcode == 3308) {
-										type = Static55.level;
+										type = Player.level;
 										local803 = Static225.originX + (PlayerList.self.xFine >> 7);
 										local1052 = (PlayerList.self.zFine >> 7) + Static142.originZ;
 										Static254.intStack[isp++] = (type << 28) - (-(local803 << 14) - local1052);
@@ -1750,7 +1750,7 @@ public final class Static88 {
 										isp--;
 										type = Static254.intStack[isp];
 										if (Static166.anInt4054 != 0 && Static35.anInt1093 > type) {
-											Static3.stringStack[ssp++] = Base37.decodeLowerCase(Static190.aLongArray6[type]).method3125();
+											Static3.stringStack[ssp++] = Base37.decodeLowerCase(IgnoreList.encodedUsernames[type]).method3125();
 											continue;
 										}
 										Static3.stringStack[ssp++] = Static72.EMPTY_STRING;
@@ -1768,7 +1768,7 @@ public final class Static88 {
 									if (opcode == 3624) {
 										isp--;
 										type = Static254.intStack[isp];
-										if (Static199.aClass3_Sub22Array1 != null && Static214.anInt5577 > type && Static199.aClass3_Sub22Array1[type].aClass100_636.equalsIgnoreCase(PlayerList.self.aClass100_364)) {
+										if (Static199.aClass3_Sub22Array1 != null && Static214.anInt5577 > type && Static199.aClass3_Sub22Array1[type].aClass100_636.equalsIgnoreCase(PlayerList.self.username)) {
 											Static254.intStack[isp++] = 1;
 											continue;
 										}
@@ -1820,64 +1820,64 @@ public final class Static88 {
 									if (opcode == 3903) {
 										isp--;
 										type = Static254.intStack[isp];
-										Static254.intStack[isp++] = Static229.aClass136Array1[type].method3905();
+										Static254.intStack[isp++] = StockMarketManager.aClass136Array1[type].method3905();
 										continue;
 									}
 									if (opcode == 3904) {
 										isp--;
 										type = Static254.intStack[isp];
-										Static254.intStack[isp++] = Static229.aClass136Array1[type].anInt5094;
+										Static254.intStack[isp++] = StockMarketManager.aClass136Array1[type].anInt5094;
 										continue;
 									}
 									if (opcode == 3905) {
 										isp--;
 										type = Static254.intStack[isp];
-										Static254.intStack[isp++] = Static229.aClass136Array1[type].anInt5099;
+										Static254.intStack[isp++] = StockMarketManager.aClass136Array1[type].anInt5099;
 										continue;
 									}
 									if (opcode == 3906) {
 										isp--;
 										type = Static254.intStack[isp];
-										Static254.intStack[isp++] = Static229.aClass136Array1[type].anInt5090;
+										Static254.intStack[isp++] = StockMarketManager.aClass136Array1[type].anInt5090;
 										continue;
 									}
 									if (opcode == 3907) {
 										isp--;
 										type = Static254.intStack[isp];
-										Static254.intStack[isp++] = Static229.aClass136Array1[type].anInt5089;
+										Static254.intStack[isp++] = StockMarketManager.aClass136Array1[type].anInt5089;
 										continue;
 									}
 									if (opcode == 3908) {
 										isp--;
 										type = Static254.intStack[isp];
-										Static254.intStack[isp++] = Static229.aClass136Array1[type].anInt5092;
+										Static254.intStack[isp++] = StockMarketManager.aClass136Array1[type].anInt5092;
 										continue;
 									}
 									if (opcode == 3910) {
 										isp--;
 										type = Static254.intStack[isp];
-										local803 = Static229.aClass136Array1[type].method3904();
+										local803 = StockMarketManager.aClass136Array1[type].method3904();
 										Static254.intStack[isp++] = local803 == 0 ? 1 : 0;
 										continue;
 									}
 									if (opcode == 3911) {
 										isp--;
 										type = Static254.intStack[isp];
-										local803 = Static229.aClass136Array1[type].method3904();
+										local803 = StockMarketManager.aClass136Array1[type].method3904();
 										Static254.intStack[isp++] = local803 == 2 ? 1 : 0;
 										continue;
 									}
 									if (opcode == 3912) {
 										isp--;
 										type = Static254.intStack[isp];
-										local803 = Static229.aClass136Array1[type].method3904();
+										local803 = StockMarketManager.aClass136Array1[type].method3904();
 										Static254.intStack[isp++] = local803 == 5 ? 1 : 0;
 										continue;
 									}
 									if (opcode == 3913) {
 										isp--;
 										type = Static254.intStack[isp];
-										local803 = Static229.aClass136Array1[type].method3904();
+										local803 = StockMarketManager.aClass136Array1[type].method3904();
 										Static254.intStack[isp++] = local803 == 1 ? 1 : 0;
 										continue;
 									}
@@ -2185,7 +2185,7 @@ public final class Static88 {
 													isp--;
 													type = Static254.intStack[isp];
 													if (type < 100) {
-														local2522 = Static230.aClass100Array158[type];
+														local2522 = Chat.aClass100Array158[type];
 													}
 													if (local2522 == null) {
 														local2522 = Static72.EMPTY_STRING;
@@ -2197,8 +2197,8 @@ public final class Static88 {
 													isp--;
 													type = Static254.intStack[isp];
 													local803 = -1;
-													if (type < 100 && Static230.aClass100Array158[type] != null) {
-														local803 = Static26.anIntArray67[type];
+													if (type < 100 && Chat.aClass100Array158[type] != null) {
+														local803 = Chat.anIntArray67[type];
 													}
 													Static254.intStack[isp++] = local803;
 													continue;
@@ -2357,7 +2357,7 @@ public final class Static88 {
 													type = Static254.intStack[isp];
 													local2522 = null;
 													if (type < 100) {
-														local2522 = Static153.aClass100Array112[type];
+														local2522 = Chat.aClass100Array112[type];
 													}
 													if (local2522 == null) {
 														local2522 = Static72.EMPTY_STRING;
@@ -2370,7 +2370,7 @@ public final class Static88 {
 													type = Static254.intStack[isp];
 													local2522 = null;
 													if (type < 100) {
-														local2522 = Static64.aClass100Array62[type];
+														local2522 = Chat.aClass100Array62[type];
 													}
 													if (local2522 == null) {
 														local2522 = Static72.EMPTY_STRING;
@@ -2383,16 +2383,16 @@ public final class Static88 {
 													type = Static254.intStack[isp];
 													local803 = -1;
 													if (type < 100) {
-														local803 = Static241.anIntArray521[type];
+														local803 = Chat.anIntArray521[type];
 													}
 													Static254.intStack[isp++] = local803;
 													continue;
 												}
 												if (opcode == 5015) {
-													if (PlayerList.self == null || PlayerList.self.aClass100_364 == null) {
-														string = Player.username;
+													if (PlayerList.self == null || PlayerList.self.username == null) {
+														string = Player.usernameInput;
 													} else {
-														string = PlayerList.self.method1264();
+														string = PlayerList.self.getName();
 													}
 													Static3.stringStack[ssp++] = string;
 													continue;
@@ -2402,7 +2402,7 @@ public final class Static88 {
 													continue;
 												}
 												if (opcode == 5017) {
-													Static254.intStack[isp++] = Static62.anInt1941;
+													Static254.intStack[isp++] = Chat.anInt1941;
 													continue;
 												}
 												if (opcode == 5050) {
@@ -2477,9 +2477,9 @@ public final class Static88 {
 												if (opcode == 5058) {
 													Static122.aClass12_1 = new QuickChatPhrase();
 													isp--;
-													Static122.aClass12_1.anInt439 = Static254.intStack[isp];
-													Static122.aClass12_1.aClass3_Sub2_Sub6_1 = QuickChatPhraseTypeList.get(Static122.aClass12_1.anInt439);
-													Static122.aClass12_1.anIntArray33 = new int[Static122.aClass12_1.aClass3_Sub2_Sub6_1.method767()];
+													Static122.aClass12_1.id = Static254.intStack[isp];
+													Static122.aClass12_1.type = QuickChatPhraseTypeList.get(Static122.aClass12_1.id);
+													Static122.aClass12_1.anIntArray33 = new int[Static122.aClass12_1.type.method767()];
 													continue;
 												}
 												if (opcode == 5059) {
@@ -2487,8 +2487,8 @@ public final class Static88 {
 													Protocol.outboundBuffer.p1(0);
 													type = Protocol.outboundBuffer.offset;
 													Protocol.outboundBuffer.p1(0);
-													Protocol.outboundBuffer.p2(Static122.aClass12_1.anInt439);
-													Static122.aClass12_1.aClass3_Sub2_Sub6_1.method760(Protocol.outboundBuffer, Static122.aClass12_1.anIntArray33);
+													Protocol.outboundBuffer.p2(Static122.aClass12_1.id);
+													Static122.aClass12_1.type.method760(Protocol.outboundBuffer, Static122.aClass12_1.anIntArray33);
 													Protocol.outboundBuffer.p1len(Protocol.outboundBuffer.offset - type);
 													continue;
 												}
@@ -2499,8 +2499,8 @@ public final class Static88 {
 													Protocol.outboundBuffer.p1(0);
 													local803 = Protocol.outboundBuffer.offset;
 													Protocol.outboundBuffer.p8(string.encode37());
-													Protocol.outboundBuffer.p2(Static122.aClass12_1.anInt439);
-													Static122.aClass12_1.aClass3_Sub2_Sub6_1.method760(Protocol.outboundBuffer, Static122.aClass12_1.anIntArray33);
+													Protocol.outboundBuffer.p2(Static122.aClass12_1.id);
+													Static122.aClass12_1.type.method760(Protocol.outboundBuffer, Static122.aClass12_1.anIntArray33);
 													Protocol.outboundBuffer.p1len(Protocol.outboundBuffer.offset - local803);
 													continue;
 												}
@@ -2509,8 +2509,8 @@ public final class Static88 {
 													Protocol.outboundBuffer.p1(0);
 													type = Protocol.outboundBuffer.offset;
 													Protocol.outboundBuffer.p1(1);
-													Protocol.outboundBuffer.p2(Static122.aClass12_1.anInt439);
-													Static122.aClass12_1.aClass3_Sub2_Sub6_1.method760(Protocol.outboundBuffer, Static122.aClass12_1.anIntArray33);
+													Protocol.outboundBuffer.p2(Static122.aClass12_1.id);
+													Static122.aClass12_1.type.method760(Protocol.outboundBuffer, Static122.aClass12_1.anIntArray33);
 													Protocol.outboundBuffer.p1len(Protocol.outboundBuffer.offset - type);
 													continue;
 												}
@@ -3901,7 +3901,7 @@ public final class Static88 {
 									if (opcode == 4111) {
 										ssp--;
 										string = Static3.stringStack[ssp];
-										Static3.stringStack[ssp++] = Static218.method2862(string);
+										Static3.stringStack[ssp++] = Static218.escape(string);
 										continue;
 									}
 									if (opcode == 4112) {
@@ -4113,7 +4113,7 @@ public final class Static88 {
 		} catch (@Pc(14378) Exception ex) {
 			if (script.name == null) {
 				if (client.modeWhere != 0) {
-					Static103.method2231(Static72.EMPTY_STRING, 0, Static136.CS_ERROR);
+					Chat.add(Static72.EMPTY_STRING, 0, Static136.CS_ERROR);
 				}
 				TracingException.report("CS2 - scr:" + script.key + " op:" + op, ex);
 			} else {
@@ -4127,7 +4127,7 @@ public final class Static88 {
 					str.method3113(Static176.aClass100_802).method3113(Static123.parseInt(cycles));
 				}
 				if (client.modeWhere != 0) {
-					Static103.method2231(Static72.EMPTY_STRING, 0, JagString.concatenate(new JagString[] { Static167.aClass100_780, script.name}));
+					Chat.add(Static72.EMPTY_STRING, 0, JagString.concatenate(new JagString[] { Static167.aClass100_780, script.name}));
 				}
 				TracingException.report("CS2 - scr:" + script.key + " op:" + op + new String(str.method3148()), ex);
 			}

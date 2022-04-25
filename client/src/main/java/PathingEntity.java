@@ -7,10 +7,10 @@ import org.openrs2.deob.annotation.Pc;
 public abstract class PathingEntity extends Entity {
 
 	@OriginalMember(owner = "client!fe", name = "A", descriptor = "I")
-	public int anInt3359;
+	public int spotAnimStart;
 
 	@OriginalMember(owner = "client!fe", name = "S", descriptor = "I")
-	public int anInt3372;
+	public int hitpointsBar;
 
 	@OriginalMember(owner = "client!fe", name = "U", descriptor = "I")
 	public int anInt3374;
@@ -37,7 +37,7 @@ public abstract class PathingEntity extends Entity {
 	public int anInt3392;
 
 	@OriginalMember(owner = "client!fe", name = "tb", descriptor = "I")
-	public int anInt3394;
+	public int spotAnimY;
 
 	@OriginalMember(owner = "client!fe", name = "ub", descriptor = "I")
 	public int anInt3395;
@@ -106,13 +106,13 @@ public abstract class PathingEntity extends Entity {
 	public boolean aBoolean167 = false;
 
 	@OriginalMember(owner = "client!fe", name = "db", descriptor = "I")
-	public int anInt3382 = 0;
+	public int faceX = 0;
 
 	@OriginalMember(owner = "client!fe", name = "Q", descriptor = "I")
 	public int anInt3371 = 0;
 
 	@OriginalMember(owner = "client!fe", name = "E", descriptor = "I")
-	public int anInt3363 = 0;
+	public int faceY = 0;
 
 	@OriginalMember(owner = "client!fe", name = "yb", descriptor = "I")
 	private int anInt3398 = 0;
@@ -133,7 +133,7 @@ public abstract class PathingEntity extends Entity {
 	public int anInt3376 = 32;
 
 	@OriginalMember(owner = "client!fe", name = "P", descriptor = "I")
-	public int anInt3370 = -1;
+	public int faceEntity = -1;
 
 	@OriginalMember(owner = "client!fe", name = "Bb", descriptor = "Z")
 	private boolean aBoolean170 = false;
@@ -151,13 +151,13 @@ public abstract class PathingEntity extends Entity {
 	public final Class147[] aClass147Array3 = new Class147[12];
 
 	@OriginalMember(owner = "client!fe", name = "Lb", descriptor = "I")
-	public int anInt3408 = 100;
+	public int chatLoops = 100;
 
 	@OriginalMember(owner = "client!fe", name = "V", descriptor = "I")
 	public int anInt3375 = 0;
 
 	@OriginalMember(owner = "client!fe", name = "Y", descriptor = "I")
-	public int anInt3378 = -1000;
+	public int hitpointsBarVisibleUntil = -1000;
 
 	@OriginalMember(owner = "client!fe", name = "Rb", descriptor = "I")
 	protected int anInt3413 = -32768;
@@ -193,7 +193,7 @@ public abstract class PathingEntity extends Entity {
 	public int anInt3417 = 0;
 
 	@OriginalMember(owner = "client!fe", name = "s", descriptor = "I")
-	public int anInt3352 = 0;
+	public int chatEffect = 0;
 
 	@OriginalMember(owner = "client!fe", name = "T", descriptor = "I")
 	public int anInt3373 = -1;
@@ -235,19 +235,19 @@ public abstract class PathingEntity extends Entity {
 	public int anInt3396 = 0;
 
 	@OriginalMember(owner = "client!fe", name = "jc", descriptor = "I")
-	public int anInt3429 = 0;
+	public int chatColor = 0;
 
 	@OriginalMember(owner = "client!fe", name = "kc", descriptor = "I")
-	public int anInt3430 = 0;
+	public int lastSeenLoop = 0;
 
 	@OriginalMember(owner = "client!fe", name = "ec", descriptor = "I")
 	public int anInt3425 = 0;
 
 	@OriginalMember(owner = "client!fe", name = "Wb", descriptor = "Lclient!na;")
-	public JagString aClass100_640 = null;
+	public JagString chatMessage = null;
 
 	@OriginalMember(owner = "client!fe", name = "oc", descriptor = "I")
-	public int anInt3432 = -1;
+	public int spotAnimId = -1;
 
 	@OriginalMember(owner = "client!fe", name = "Xb", descriptor = "I")
 	public int anInt3418 = -1;
@@ -299,7 +299,7 @@ public abstract class PathingEntity extends Entity {
 	}
 
 	@OriginalMember(owner = "client!fe", name = "a", descriptor = "(IBI)V")
-	public final void method2684(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
+	public final void move(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
 		@Pc(10) int local10 = this.movementQueueX[0];
 		@Pc(15) int local15 = this.movementQueueZ[0];
 		if (arg1 == 0) {
@@ -363,13 +363,13 @@ public abstract class PathingEntity extends Entity {
 		@Pc(53) int local53 = -local27 / 2;
 		@Pc(64) int local64 = local53 * local43 - local48 * local39 >> 16;
 		@Pc(75) int local75 = local39 * local53 + local43 * local48 >> 16;
-		@Pc(87) int local87 = SceneGraph.getTileHeight(Static55.level, local75 + this.xFine, this.zFine + local64);
+		@Pc(87) int local87 = SceneGraph.getTileHeight(Player.level, local75 + this.xFine, this.zFine + local64);
 		@Pc(91) int local91 = local24 / 2;
 		@Pc(96) int local96 = -local27 / 2;
 		@Pc(106) int local106 = local91 * local43 + local96 * local39 >> 16;
 		@Pc(110) int local110 = local27 / 2;
 		@Pc(121) int local121 = local96 * local43 - local91 * local39 >> 16;
-		@Pc(134) int local134 = SceneGraph.getTileHeight(Static55.level, local106 + this.xFine, this.zFine - -local121);
+		@Pc(134) int local134 = SceneGraph.getTileHeight(Player.level, local106 + this.xFine, this.zFine - -local121);
 		@Pc(139) int local139 = -local24 / 2;
 		@Pc(150) int local150 = local110 * local43 - local39 * local139 >> 16;
 		@Pc(154) int local154 = local27 / 2;
@@ -377,9 +377,9 @@ public abstract class PathingEntity extends Entity {
 		@Pc(169) int local169 = local39 * local110 + local43 * local139 >> 16;
 		@Pc(179) int local179 = local154 * local43 - local39 * local158 >> 16;
 		@Pc(189) int local189 = local39 * local154 + local43 * local158 >> 16;
-		@Pc(201) int local201 = SceneGraph.getTileHeight(Static55.level, this.xFine + local169, local150 + this.zFine);
+		@Pc(201) int local201 = SceneGraph.getTileHeight(Player.level, this.xFine + local169, local150 + this.zFine);
 		@Pc(212) int local212 = local134 > local87 ? local87 : local134;
-		@Pc(224) int local224 = SceneGraph.getTileHeight(Static55.level, local189 + this.xFine, local179 + this.zFine);
+		@Pc(224) int local224 = SceneGraph.getTileHeight(Player.level, local189 + this.xFine, local179 + this.zFine);
 		@Pc(231) int local231 = local224 > local201 ? local201 : local224;
 		@Pc(238) int local238 = local224 > local134 ? local134 : local224;
 		@Pc(245) int local245 = local201 <= local87 ? local201 : local87;
@@ -402,7 +402,7 @@ public abstract class PathingEntity extends Entity {
 	}
 
 	@OriginalMember(owner = "client!fe", name = "a", descriptor = "(IIII)V")
-	public final void method2686(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
+	public final void addHit(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
 		for (@Pc(11) int local11 = 0; local11 < 4; local11++) {
 			if (arg1 >= this.anIntArray319[local11]) {
 				this.anIntArray322[local11] = arg2;

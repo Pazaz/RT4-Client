@@ -116,7 +116,7 @@ public final class Static218 {
 	public static int spaceWidth = 0;
 
 	@OriginalMember(owner = "client!rk", name = "c", descriptor = "(Lclient!na;)Lclient!na;")
-	public static JagString method2862(@OriginalArg(0) JagString arg0) {
+	public static JagString escape(@OriginalArg(0) JagString arg0) {
 		@Pc(3) int local3 = arg0.length();
 		@Pc(5) int local5 = 0;
 		@Pc(15) int local15;

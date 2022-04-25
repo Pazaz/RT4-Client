@@ -6,7 +6,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!dc")
 public final class Loc extends Entity {
 
-	@OriginalMember(owner = "client!dc", name = "U", descriptor = "Lclient!ga;")
+    @OriginalMember(owner = "client!ci", name = "q", descriptor = "Lclient!ek;")
+    public static SoftwareIndexedSprite aClass36_Sub1_1 = null;
+    @OriginalMember(owner = "client!dc", name = "U", descriptor = "Lclient!ga;")
 	private ParticleSystem aClass47_Sub1_2;
 
 	@OriginalMember(owner = "client!dc", name = "x", descriptor = "I")
@@ -100,7 +102,7 @@ public final class Loc extends Entity {
 				this.anInt1304 = 1;
 			}
 			this.anInt1317 = 1;
-			this.anInt1320 = Static83.loop - 1;
+			this.anInt1320 = client.loop - 1;
 			if (this.aClass144_2.anInt5347 == 0 && arg8 != null && arg8 instanceof Loc) {
 				@Pc(142) Loc local142 = (Loc) arg8;
 				if (this.aClass144_2 == local142.aClass144_2) {
@@ -121,7 +123,7 @@ public final class Loc extends Entity {
 					}
 				}
 				this.anInt1317 = (int) (Math.random() * (double) this.aClass144_2.anIntArray474[this.anInt1297]) + 1;
-				this.anInt1320 = Static83.loop - this.anInt1317;
+				this.anInt1320 = client.loop - this.anInt1317;
 			}
 		}
 		if (GlRenderer.enabled && arg8 != null) {
@@ -174,7 +176,7 @@ public final class Loc extends Entity {
 		if (this.aClass144_2 == null) {
 			return;
 		}
-		@Pc(10) int local10 = Static83.loop - this.anInt1320;
+		@Pc(10) int local10 = client.loop - this.anInt1320;
 		if (local10 > 100 && this.aClass144_2.anInt5362 > 0) {
 			@Pc(29) int local29 = this.aClass144_2.frames.length - this.aClass144_2.anInt5362;
 			while (this.anInt1297 < local29 && this.aClass144_2.anIntArray474[this.anInt1297] < local10) {
@@ -216,7 +218,7 @@ public final class Loc extends Entity {
 			}
 		}
 		this.anInt1317 = local10;
-		this.anInt1320 = Static83.loop - local10;
+		this.anInt1320 = client.loop - local10;
 	}
 
 	@OriginalMember(owner = "client!dc", name = "a", descriptor = "(ZI)Lclient!th;")
@@ -250,7 +252,7 @@ public final class Loc extends Entity {
 					this.anInt1320 -= (int) (Math.random() * (double) this.aClass144_2.anIntArray474[this.anInt1297]);
 				} else {
 					this.anInt1297 = 0;
-					this.anInt1320 = Static83.loop - 1;
+					this.anInt1320 = client.loop - 1;
 				}
 			}
 		}
@@ -289,16 +291,16 @@ public final class Loc extends Entity {
 		@Pc(356) boolean local356 = this.aClass36_Sub1_2 == null;
 		@Pc(389) Class139 local389;
 		if (this.aClass144_2 == null) {
-			local389 = local19.method3428(this.anInt1295, local302, local267, this.anInt1307, local293, local314, false, local356 ? Static32.aClass36_Sub1_1 : this.aClass36_Sub1_2, local256, local311);
+			local389 = local19.method3428(this.anInt1295, local302, local267, this.anInt1307, local293, local314, false, local356 ? aClass36_Sub1_1 : this.aClass36_Sub1_2, local256, local311);
 		} else {
-			local389 = local19.method3429(local311, local302, local356 ? Static32.aClass36_Sub1_1 : this.aClass36_Sub1_2, local293, this.aClass144_2, this.anInt1295, local267, local256, this.anInt1297, local314, this.anInt1304, this.anInt1307, this.anInt1317);
+			local389 = local19.method3429(local311, local302, local356 ? aClass36_Sub1_1 : this.aClass36_Sub1_2, local293, this.aClass144_2, this.anInt1295, local267, local256, this.anInt1297, local314, this.anInt1304, this.anInt1307, this.anInt1317);
 		}
 		if (local389 == null) {
 			return null;
 		}
 		if (GlRenderer.enabled && local256) {
 			if (local356) {
-				Static32.aClass36_Sub1_1 = local389.aClass36_Sub1_3;
+				aClass36_Sub1_1 = local389.aClass36_Sub1_3;
 			}
 			@Pc(429) int local429 = 0;
 			if (this.anInt1303 != 0) {
@@ -314,7 +316,7 @@ public final class Loc extends Entity {
 				this.aClass36_Sub1_2 = local471;
 				this.anInt1319 = local311;
 				if (local356) {
-					Static32.aClass36_Sub1_1 = null;
+					aClass36_Sub1_1 = null;
 				}
 				this.anInt1294 = local429;
 				this.anInt1296 = local302;

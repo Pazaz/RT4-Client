@@ -37,32 +37,32 @@ public final class Static276 {
 	public static void method4613(@OriginalArg(0) int arg0, @OriginalArg(2) JagString arg1) {
 		@Pc(7) JagString local7 = arg1.method3159().method3125();
 		@Pc(13) boolean local13 = false;
-		for (@Pc(15) int local15 = 0; local15 < Static267.anInt5774; local15++) {
-			@Pc(28) Player local28 = Static159.players[Static105.anIntArray256[local15]];
-			if (local28 != null && local28.aClass100_364 != null && local28.aClass100_364.equalsIgnoreCase(local7)) {
+		for (@Pc(15) int local15 = 0; local15 < PlayerList.size; local15++) {
+			@Pc(28) Player local28 = PlayerList.players[PlayerList.ids[local15]];
+			if (local28 != null && local28.username != null && local28.username.equalsIgnoreCase(local7)) {
 				local13 = true;
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local28.movementQueueX[0], 1, 0, 2, local28.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
 				if (arg0 == 1) {
 					Protocol.outboundBuffer.p1isaac(68);
-					Protocol.outboundBuffer.p2leadd(Static105.anIntArray256[local15]);
+					Protocol.outboundBuffer.p2leadd(PlayerList.ids[local15]);
 				} else if (arg0 == 4) {
 					Protocol.outboundBuffer.p1isaac(180);
-					Protocol.outboundBuffer.p2leadd(Static105.anIntArray256[local15]);
+					Protocol.outboundBuffer.p2leadd(PlayerList.ids[local15]);
 				} else if (arg0 == 5) {
 					Protocol.outboundBuffer.p1isaac(4);
-					Protocol.outboundBuffer.p2le(Static105.anIntArray256[local15]);
+					Protocol.outboundBuffer.p2le(PlayerList.ids[local15]);
 				} else if (arg0 == 6) {
 					Protocol.outboundBuffer.p1isaac(133);
-					Protocol.outboundBuffer.p2le(Static105.anIntArray256[local15]);
+					Protocol.outboundBuffer.p2le(PlayerList.ids[local15]);
 				} else if (arg0 == 7) {
 					Protocol.outboundBuffer.p1isaac(114);
-					Protocol.outboundBuffer.p2leadd(Static105.anIntArray256[local15]);
+					Protocol.outboundBuffer.p2leadd(PlayerList.ids[local15]);
 				}
 				break;
 			}
 		}
 		if (!local13) {
-			Static103.method2231(JagString.EMPTY, 0, JagString.concatenate(new JagString[] { LocalizedText.UNABLETOFIND, local7 }));
+			Chat.add(JagString.EMPTY, 0, JagString.concatenate(new JagString[] { LocalizedText.UNABLETOFIND, local7 }));
 		}
 	}
 

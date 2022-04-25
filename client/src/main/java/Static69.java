@@ -31,13 +31,13 @@ public final class Static69 {
 			return;
 		}
 		for (@Pc(12) int local12 = 0; local12 < Static35.anInt1093; local12++) {
-			if (Static190.aLongArray6[local12] == arg0) {
+			if (IgnoreList.encodedUsernames[local12] == arg0) {
 				Static35.anInt1093--;
 				for (@Pc(36) int local36 = local12; local36 < Static35.anInt1093; local36++) {
-					Static190.aLongArray6[local36] = Static190.aLongArray6[local36 + 1];
+					IgnoreList.encodedUsernames[local36] = IgnoreList.encodedUsernames[local36 + 1];
 					Static193.aClass100Array134[local36] = Static193.aClass100Array134[local36 + 1];
 				}
-				Static185.anInt4369 = InterfaceList.transmitTimer;
+				FriendsList.transmitAt = InterfaceList.transmitTimer;
 				Protocol.outboundBuffer.p1isaac(213);
 				Protocol.outboundBuffer.p8(arg0);
 				break;

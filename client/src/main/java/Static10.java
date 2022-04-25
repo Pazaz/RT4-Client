@@ -1,4 +1,3 @@
-import java.io.IOException;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
@@ -45,24 +44,6 @@ public final class Static10 {
 		}
 		Static172.anInt4165 = arg0;
 		Static141.anInt3473 = arg0 - 1;
-	}
-
-	@OriginalMember(owner = "client!an", name = "h", descriptor = "(I)Z")
-	public static boolean readPacket() {
-		try {
-			return Static4.method26();
-		} catch (@Pc(14) IOException local14) {
-			Static175.method3279();
-			return true;
-		} catch (@Pc(19) Exception local19) {
-			@Pc(61) String local61 = "T2 - " + Protocol.opcode + "," + Static5.anInt45 + "," + Static49.anInt1462 + " - " + Protocol.length + "," + (Static225.originX + PlayerList.self.movementQueueX[0]) + "," + (PlayerList.self.movementQueueZ[0] + Static142.originZ) + " - ";
-			for (@Pc(63) int local63 = 0; local63 < Protocol.length && local63 < 50; local63++) {
-				local61 = local61 + Protocol.inboundBuffer.data[local63] + ",";
-			}
-			TracingException.report(local61, local19);
-			Static278.processLogout();
-			return true;
-		}
 	}
 
 	@OriginalMember(owner = "client!an", name = "a", descriptor = "(IIIIIII)V")

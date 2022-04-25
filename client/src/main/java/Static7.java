@@ -17,10 +17,7 @@ public final class Static7 {
 	@OriginalMember(owner = "client!ah", name = "p", descriptor = "Lclient!ih;")
 	public static final LinkedList aClass69_32 = new LinkedList();
 
-	@OriginalMember(owner = "client!ah", name = "s", descriptor = "I")
-	public static int clickX = 0;
-
-	@OriginalMember(owner = "client!ah", name = "a", descriptor = "(BZ)V")
+    @OriginalMember(owner = "client!ah", name = "a", descriptor = "(BZ)V")
 	public static void ping(@OriginalArg(1) boolean arg0) {
 		client.audioLoop();
 		if (client.gameState != 30 && client.gameState != 25) {
@@ -66,8 +63,8 @@ public final class Static7 {
 							Static43.redraw(Static118.aClass13_15);
 						}
 						Static118.aClass13_15 = InterfaceList.getComponent(local99);
-						Static149.anInt3554 = clickX;
-						Static206.anInt4773 = Static60.clickY;
+						Static149.anInt3554 = Mouse.clickX;
+						Static206.anInt4773 = Mouse.clickY;
 						Static4.anInt36 = local93;
 						Static43.redraw(Static118.aClass13_15);
 						return;
@@ -87,8 +84,8 @@ public final class Static7 {
 		}
 		@Pc(204) int local204;
 		if (local20 != 1) {
-			local93 = Static223.anInt5032;
-			local204 = Static215.anInt4873;
+			local93 = Mouse.anInt5032;
+			local204 = Mouse.anInt4873;
 			if (local204 < Static183.anInt4271 - 10 || local204 > Static24.anInt761 + Static183.anInt4271 + 10 || Static229.anInt5138 - 10 > local93 || local93 > Static13.anInt436 + Static229.anInt5138 + 10) {
 				Static60.aBoolean108 = false;
 				Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
@@ -100,8 +97,8 @@ public final class Static7 {
 		local204 = Static183.anInt4271;
 		local93 = Static229.anInt5138;
 		local99 = Static24.anInt761;
-		@Pc(265) int local265 = clickX;
-		@Pc(267) int local267 = Static60.clickY;
+		@Pc(265) int local265 = Mouse.clickX;
+		@Pc(267) int local267 = Mouse.clickY;
 		@Pc(269) int local269 = -1;
 		for (@Pc(271) int local271 = 0; local271 < Static231.anInt5204; local271++) {
 			@Pc(289) int local289;

@@ -13,7 +13,7 @@ public final class Static111 {
 	public static int anInt2910;
 
 	@OriginalMember(owner = "client!ii", name = "c", descriptor = "I")
-	public static int anInt2901 = 0;
+	public static int updatedInventoriesWriterIndex = 0;
 
 	@OriginalMember(owner = "client!ii", name = "e", descriptor = "Lclient!na;")
 	public static final JagString aClass100_570 = JagString.parse(")2");

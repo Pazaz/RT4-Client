@@ -49,10 +49,7 @@ public final class Static138 {
 	@OriginalMember(owner = "client!km", name = "Ac", descriptor = "[Lclient!na;")
 	public static final JagString[] aClass100Array102 = new JagString[] { aClass100_649, aClass100_650, aClass100_646, aClass100_655, aClass100_644, aClass100_656, aClass100_642, aClass100_653, aClass100_657, aClass100_658, aClass100_645, aClass100_641 };
 
-	@OriginalMember(owner = "client!km", name = "Bc", descriptor = "[I")
-	public static final int[] updatedVarcs = new int[32];
-
-	@OriginalMember(owner = "client!km", name = "Mc", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!km", name = "Mc", descriptor = "Lclient!na;")
 	public static final JagString LOGINSCREEN = JagString.parse("loginscreen");
 
 	@OriginalMember(owner = "client!km", name = "Rc", descriptor = "[I")

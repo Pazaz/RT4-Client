@@ -52,7 +52,7 @@ public final class Static198 {
 			Static65.anInt1951 = -1;
 			return;
 		}
-		@Pc(38) int local38 = SceneGraph.getTileHeight(Static55.level, arg5, arg2) - arg3;
+		@Pc(38) int local38 = SceneGraph.getTileHeight(Player.level, arg5, arg2) - arg3;
 		@Pc(42) int local42 = arg2 - Static134.renderZ;
 		@Pc(46) int local46 = local38 - Static5.anInt40;
 		@Pc(50) int local50 = arg5 - Static138.renderX;

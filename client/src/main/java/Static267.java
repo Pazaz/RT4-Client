@@ -13,9 +13,6 @@ public final class Static267 {
 	@OriginalMember(owner = "client!vl", name = "i", descriptor = "[I")
 	public static int[] anIntArray518 = new int[2];
 
-	@OriginalMember(owner = "client!vl", name = "j", descriptor = "I")
-	public static int anInt5774 = 0;
-
 	@OriginalMember(owner = "client!vl", name = "k", descriptor = "I")
 	public static int anInt5775 = 0;
 
@@ -93,7 +90,7 @@ public final class Static267 {
 			Static1.anInt6++;
 		}
 		Static226.anInt5084 += arg0;
-		local60 = (arg0 + (Static83.loop & 0x1)) / 2;
+		local60 = (arg0 + (client.loop & 0x1)) / 2;
 		if (local60 <= 0) {
 			return;
 		}

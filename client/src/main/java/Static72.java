@@ -10,10 +10,7 @@ public final class Static72 {
 	@OriginalMember(owner = "client!fl", name = "D", descriptor = "[[I")
 	public static int[][] regionsXteaKeys;
 
-	@OriginalMember(owner = "client!fl", name = "B", descriptor = "I")
-	public static int updatedVarcstrsWriterIndex = 0;
-
-	@OriginalMember(owner = "client!fl", name = "H", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!fl", name = "H", descriptor = "Lclient!na;")
 	public static final JagString aClass100_446 = JagString.parse("<img=0>");
 
 	@OriginalMember(owner = "client!fl", name = "P", descriptor = "I")

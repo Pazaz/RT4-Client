@@ -873,4 +873,29 @@ public class WorldMap {
         anInt3482 = -1;
         aClass3_Sub2_Sub1_Sub1_2 = null;
     }
+
+    @OriginalMember(owner = "client!je", name = "a", descriptor = "(IIIII)V")
+    public static void method2387(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
+        anInt435 = width * arg2 / arg0;
+        anInt919 = length * arg1 / arg3;
+        anInt3482 = -1;
+        anInt4901 = -1;
+        method965();
+    }
+
+    @OriginalMember(owner = "client!wi", name = "d", descriptor = "(II)V")
+    public static void method4641(@OriginalArg(1) int arg0) {
+        anInt4901 = -1;
+        anInt4901 = -1;
+        anInt919 = arg0;
+        method965();
+    }
+
+    @OriginalMember(owner = "client!hj", name = "a", descriptor = "(II)V")
+    public static void method1964(@OriginalArg(0) int arg0) {
+        anInt4901 = -1;
+        anInt3482 = -1;
+        anInt435 = arg0;
+        method965();
+    }
 }

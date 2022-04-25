@@ -12,9 +12,9 @@ public final class Static220 {
 
 	@OriginalMember(owner = "client!rm", name = "a", descriptor = "(IBI)V")
 	public static void spawnGroundObject(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		@Pc(9) LinkedList local9 = Static159.aClass69ArrayArrayArray1[Static55.level][arg1][arg0];
+		@Pc(9) LinkedList local9 = Static159.aClass69ArrayArrayArray1[Player.level][arg1][arg0];
 		if (local9 == null) {
-			Static187.method3420(Static55.level, arg1, arg0);
+			Static187.method3420(Player.level, arg1, arg0);
 			return;
 		}
 		@Pc(28) int local28 = -99999999;
@@ -32,7 +32,7 @@ public final class Static220 {
 			}
 		}
 		if (local30 == null) {
-			Static187.method3420(Static55.level, arg1, arg0);
+			Static187.method3420(Player.level, arg1, arg0);
 			return;
 		}
 		local9.addHead(local30);
@@ -50,7 +50,7 @@ public final class Static220 {
 			}
 		}
 		@Pc(152) long local152 = (long) ((arg0 << 7) + arg1 + 1610612736);
-		Static69.method1543(Static55.level, arg1, arg0, SceneGraph.getTileHeight(Static55.level, arg1 * 128 + 64, arg0 * 128 + 64), local30.aClass8_Sub7_1, local152, local89, local91);
+		Static69.method1543(Player.level, arg1, arg0, SceneGraph.getTileHeight(Player.level, arg1 * 128 + 64, arg0 * 128 + 64), local30.aClass8_Sub7_1, local152, local89, local91);
 	}
 
 	@OriginalMember(owner = "client!rm", name = "a", descriptor = "(III)V")

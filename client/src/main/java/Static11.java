@@ -4,10 +4,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static11 {
 
-    @OriginalMember(owner = "client!ba", name = "w", descriptor = "I")
-	public static int anInt384 = 0;
-
-    @OriginalMember(owner = "client!ba", name = "e", descriptor = "(I)V")
+	@OriginalMember(owner = "client!ba", name = "e", descriptor = "(I)V")
 	public static void method443() {
 		NpcTypeList.headModels.clear();
 	}

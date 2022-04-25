@@ -8,7 +8,7 @@ public final class Static27 {
 	public static SoundBank aClass89_1;
 
 	@OriginalMember(owner = "client!cb", name = "I", descriptor = "[I")
-	public static final int[] anIntArray70 = new int[32];
+	public static final int[] updatedInventories = new int[32];
 
     @OriginalMember(owner = "client!cb", name = "ab", descriptor = "Lclient!na;")
 	public static final JagString aClass100_164 = JagString.parse(" )2> <col=00ffff>");

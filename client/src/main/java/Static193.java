@@ -36,7 +36,7 @@ public final class Static193 {
 					Static106.anIntArray258[local41] = Static106.anIntArray258[local41 + 1];
 					Static3.aBooleanArray135[local41] = Static3.aBooleanArray135[local41 + 1];
 				}
-				Static185.anInt4369 = InterfaceList.transmitTimer;
+				FriendsList.transmitAt = InterfaceList.transmitTimer;
 				Protocol.outboundBuffer.p1isaac(57);
 				Protocol.outboundBuffer.p8(arg0);
 				break;

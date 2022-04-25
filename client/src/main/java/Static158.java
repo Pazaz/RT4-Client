@@ -46,7 +46,7 @@ public final class Static158 {
 						Static175.npcs[local97] = new Npc();
 						@Pc(198) Npc local198 = Static175.npcs[local97];
 						Static33.anIntArray79[Static272.anInt5214++] = local97;
-						local198.anInt3430 = Static83.loop;
+						local198.lastSeenLoop = client.loop;
 						local198.method2698(local148);
 						local198.method2692(local198.type.soze);
 						local198.anInt3400 = local198.anInt3381 = Static56.anIntArray141[local198.type.aByte11];

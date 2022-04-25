@@ -18,8 +18,8 @@ public final class Static37 {
 		@Pc(13) BasType local13 = arg0.method2681();
 		@Pc(43) int local43;
 		@Pc(36) int local36;
-		if (arg0.anInt3370 != -1 && arg0.anInt3370 < 32768) {
-			@Pc(26) Npc local26 = Static175.npcs[arg0.anInt3370];
+		if (arg0.faceEntity != -1 && arg0.faceEntity < 32768) {
+			@Pc(26) Npc local26 = Static175.npcs[arg0.faceEntity];
 			if (local26 != null) {
 				local36 = arg0.zFine - local26.zFine;
 				local43 = arg0.xFine - local26.xFine;
@@ -30,12 +30,12 @@ public final class Static37 {
 		}
 		@Pc(94) int local94;
 		@Pc(70) int local70;
-		if (arg0.anInt3370 >= 32768) {
-			local70 = arg0.anInt3370 - 32768;
+		if (arg0.faceEntity >= 32768) {
+			local70 = arg0.faceEntity - 32768;
 			if (local70 == PlayerList.selfId) {
 				local70 = 2047;
 			}
-			@Pc(83) Player local83 = Static159.players[local70];
+			@Pc(83) Player local83 = PlayerList.players[local70];
 			if (local83 != null) {
 				local94 = arg0.zFine - local83.zFine;
 				local36 = arg0.xFine - local83.xFine;
@@ -44,14 +44,14 @@ public final class Static37 {
 				}
 			}
 		}
-		if ((arg0.anInt3382 != 0 || arg0.anInt3363 != 0) && (arg0.movementQueueSize == 0 || arg0.anInt3417 > 0)) {
-			local70 = arg0.xFine - (arg0.anInt3382 - Static225.originX - Static225.originX) * 64;
-			local43 = arg0.zFine - (arg0.anInt3363 - Static142.originZ - Static142.originZ) * 64;
+		if ((arg0.faceX != 0 || arg0.faceY != 0) && (arg0.movementQueueSize == 0 || arg0.anInt3417 > 0)) {
+			local70 = arg0.xFine - (arg0.faceX - Static225.originX - Static225.originX) * 64;
+			local43 = arg0.zFine - (arg0.faceY - Static142.originZ - Static142.originZ) * 64;
 			if (local70 != 0 || local43 != 0) {
 				arg0.anInt3400 = (int) (Math.atan2((double) local70, (double) local43) * 325.949D) & 0x7FF;
 			}
-			arg0.anInt3363 = 0;
-			arg0.anInt3382 = 0;
+			arg0.faceY = 0;
+			arg0.faceX = 0;
 		}
 		local70 = arg0.anInt3400 - arg0.anInt3381 & 0x7FF;
 		if (local70 == 0) {

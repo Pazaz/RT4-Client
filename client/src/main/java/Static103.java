@@ -16,11 +16,6 @@ public final class Static103 {
 	@OriginalMember(owner = "client!i", name = "ic", descriptor = "Lclient!na;")
 	public static final JagString aClass100_558 = JagString.parse("m");
 
-	@OriginalMember(owner = "client!i", name = "a", descriptor = "(Lclient!na;ILclient!na;I)V")
-	public static void method2231(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) JagString arg2) {
-		Static154.method2928(-1, arg1, arg2, null, arg0);
-	}
-
 	@OriginalMember(owner = "client!i", name = "p", descriptor = "(II)V")
 	public static void method2232(@OriginalArg(1) int arg0) {
 		if (arg0 < 0) {
@@ -36,13 +31,13 @@ public final class Static103 {
 		@Pc(36) int local36 = (int) Static159.aLongArray5[arg0];
 		@Pc(43) Player local43;
 		if (local23 == 31) {
-			local43 = Static159.players[local36];
+			local43 = PlayerList.players[local36];
 			if (local43 != null) {
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
 				Static70.type = 2;
 				Static17.milliseconds = 0;
-				Static122.x = Static7.clickX;
-				Static25.y = Static60.clickY;
+				Static122.x = Mouse.clickX;
+				Static25.y = Mouse.clickY;
 				Protocol.outboundBuffer.p1isaac(71);
 				Protocol.outboundBuffer.p2leadd(local36);
 			}
@@ -71,10 +66,10 @@ public final class Static103 {
 			local192 = Static175.npcs[local36];
 			if (local192 != null) {
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
-				Static122.x = Static7.clickX;
+				Static122.x = Mouse.clickX;
 				Static70.type = 2;
 				Static17.milliseconds = 0;
-				Static25.y = Static60.clickY;
+				Static25.y = Mouse.clickY;
 				Protocol.outboundBuffer.p1isaac(30);
 				Protocol.outboundBuffer.p2(local36);
 			}
@@ -83,21 +78,21 @@ public final class Static103 {
 			local192 = Static175.npcs[local36];
 			if (local192 != null) {
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
-				Static122.x = Static7.clickX;
+				Static122.x = Mouse.clickX;
 				Static17.milliseconds = 0;
 				Static70.type = 2;
-				Static25.y = Static60.clickY;
+				Static25.y = Mouse.clickY;
 				Protocol.outboundBuffer.p1isaac(78);
 				Protocol.outboundBuffer.p2le(local36);
 			}
 		}
 		if (local23 == 44) {
-			local43 = Static159.players[local36];
+			local43 = PlayerList.players[local36];
 			if (local43 != null) {
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
-				Static122.x = Static7.clickX;
+				Static122.x = Mouse.clickX;
 				Static70.type = 2;
-				Static25.y = Static60.clickY;
+				Static25.y = Mouse.clickY;
 				Static17.milliseconds = 0;
 				Protocol.outboundBuffer.p1isaac(133);
 				Protocol.outboundBuffer.p2le(local36);
@@ -126,10 +121,10 @@ public final class Static103 {
 			local192 = Static175.npcs[local36];
 			if (local192 != null) {
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
-				Static122.x = Static7.clickX;
+				Static122.x = Mouse.clickX;
 				Static70.type = 2;
 				Static17.milliseconds = 0;
-				Static25.y = Static60.clickY;
+				Static25.y = Mouse.clickY;
 				Protocol.outboundBuffer.p1isaac(239);
 				Protocol.outboundBuffer.p4le2(Static98.anInt2512);
 				Protocol.outboundBuffer.p2add(Static15.anInt506);
@@ -146,10 +141,10 @@ public final class Static103 {
 					Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
 				}
 			}
-			Static122.x = Static7.clickX;
+			Static122.x = Mouse.clickX;
 			Static17.milliseconds = 0;
 			Static70.type = 2;
-			Static25.y = Static60.clickY;
+			Static25.y = Mouse.clickY;
 			Protocol.outboundBuffer.p1isaac(66);
 			Protocol.outboundBuffer.p2le(Static225.originX + local15);
 			Protocol.outboundBuffer.p2(local36);
@@ -164,8 +159,8 @@ public final class Static103 {
 		}
 		if (local23 == 1002) {
 			Static70.type = 2;
-			Static122.x = Static7.clickX;
-			Static25.y = Static60.clickY;
+			Static122.x = Mouse.clickX;
+			Static25.y = Mouse.clickY;
 			Static17.milliseconds = 0;
 			Protocol.outboundBuffer.p1isaac(92);
 			Protocol.outboundBuffer.p2leadd(local36);
@@ -177,7 +172,7 @@ public final class Static103 {
 				Protocol.outboundBuffer.p1isaac(92);
 				Protocol.outboundBuffer.p2leadd(local36);
 			} else {
-				method2231(JagString.EMPTY, 0, JagString.concatenate(new JagString[] { Static123.parseInt(local693.objCounts[local15]), Static249.aClass100_1039, ObjTypeList.get(local36).name}));
+				Chat.add(JagString.EMPTY, 0, JagString.concatenate(new JagString[] { Static123.parseInt(local693.objCounts[local15]), Static249.aClass100_1039, ObjTypeList.get(local36).name}));
 			}
 			Static72.anInt2043 = 0;
 			Static257.aClass13_7 = InterfaceList.getComponent(local19);
@@ -185,10 +180,10 @@ public final class Static103 {
 		}
 		if (local23 == 60) {
 			if (local36 == 0) {
-				Static113.method3556(Static55.level, local15, local19);
+				Static113.method3556(Player.level, local15, local19);
 			} else if (local36 == 1) {
 				if (LoginManager.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT]) {
-					Static61.teleport(Static225.originX + local15, Static142.originZ + local19, Static55.level);
+					Cheat.teleport(Static225.originX + local15, Static142.originZ + local19, Player.level);
 				} else if (Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 0, true, 0, local15, 0, 0, 1, local19, PlayerList.self.movementQueueX[0])) {
 					Protocol.outboundBuffer.p1(Static1.anInt5);
 					Protocol.outboundBuffer.p1(Static107.anInt2878);
@@ -207,8 +202,8 @@ public final class Static103 {
 		if (local23 == 1007) {
 			Static17.milliseconds = 0;
 			Static70.type = 2;
-			Static25.y = Static60.clickY;
-			Static122.x = Static7.clickX;
+			Static25.y = Mouse.clickY;
+			Static122.x = Mouse.clickX;
 			local192 = Static175.npcs[local36];
 			if (local192 != null) {
 				@Pc(884) NpcType local884 = local192.type;
@@ -242,12 +237,12 @@ public final class Static103 {
 			Static250.anInt5444 = local15;
 		}
 		if (local23 == 10) {
-			local43 = Static159.players[local36];
+			local43 = PlayerList.players[local36];
 			if (local43 != null) {
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
 				Static70.type = 2;
-				Static25.y = Static60.clickY;
-				Static122.x = Static7.clickX;
+				Static25.y = Mouse.clickY;
+				Static122.x = Mouse.clickX;
 				Static17.milliseconds = 0;
 				Protocol.outboundBuffer.p1isaac(4);
 				Protocol.outboundBuffer.p2le(local36);
@@ -284,13 +279,13 @@ public final class Static103 {
 			Protocol.outboundBuffer.p2add((int) (local31 >>> 32) & Integer.MAX_VALUE);
 		}
 		if (local23 == 37) {
-			local43 = Static159.players[local36];
+			local43 = PlayerList.players[local36];
 			if (local43 != null) {
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
 				Static17.milliseconds = 0;
 				Static70.type = 2;
-				Static25.y = Static60.clickY;
-				Static122.x = Static7.clickX;
+				Static25.y = Mouse.clickY;
+				Static122.x = Mouse.clickX;
 				Protocol.outboundBuffer.p1isaac(114);
 				Protocol.outboundBuffer.p2leadd(local36);
 			}
@@ -317,9 +312,9 @@ public final class Static103 {
 				}
 			}
 			Static70.type = 2;
-			Static122.x = Static7.clickX;
+			Static122.x = Mouse.clickX;
 			Static17.milliseconds = 0;
-			Static25.y = Static60.clickY;
+			Static25.y = Mouse.clickY;
 			Protocol.outboundBuffer.p1isaac(228);
 			Protocol.outboundBuffer.p2(local36);
 			Protocol.outboundBuffer.p2le(Static225.originX + local15);
@@ -331,8 +326,8 @@ public final class Static103 {
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
 				Static70.type = 2;
 				Static17.milliseconds = 0;
-				Static25.y = Static60.clickY;
-				Static122.x = Static7.clickX;
+				Static25.y = Mouse.clickY;
+				Static122.x = Mouse.clickX;
 				Protocol.outboundBuffer.p1isaac(148);
 				Protocol.outboundBuffer.p2add(local36);
 			}
@@ -357,13 +352,13 @@ public final class Static103 {
 			return;
 		}
 		if (local23 == 29) {
-			local43 = Static159.players[local36];
+			local43 = PlayerList.players[local36];
 			if (local43 != null) {
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
-				Static25.y = Static60.clickY;
+				Static25.y = Mouse.clickY;
 				Static17.milliseconds = 0;
 				Static70.type = 2;
-				Static122.x = Static7.clickX;
+				Static122.x = Mouse.clickX;
 				Protocol.outboundBuffer.p1isaac(180);
 				Protocol.outboundBuffer.p2leadd(local36);
 			}
@@ -378,13 +373,13 @@ public final class Static103 {
 			Static250.anInt5444 = local15;
 		}
 		if (local23 == 15) {
-			local43 = Static159.players[local36];
+			local43 = PlayerList.players[local36];
 			if (local43 != null) {
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
 				Static17.milliseconds = 0;
 				Static70.type = 2;
-				Static122.x = Static7.clickX;
-				Static25.y = Static60.clickY;
+				Static122.x = Mouse.clickX;
+				Static25.y = Mouse.clickY;
 				Protocol.outboundBuffer.p1isaac(195);
 				Protocol.outboundBuffer.p2add(Static15.anInt506);
 				Protocol.outboundBuffer.p4le2(Static98.anInt2512);
@@ -400,9 +395,9 @@ public final class Static103 {
 					Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
 				}
 			}
-			Static122.x = Static7.clickX;
+			Static122.x = Mouse.clickX;
 			Static70.type = 2;
-			Static25.y = Static60.clickY;
+			Static25.y = Mouse.clickY;
 			Static17.milliseconds = 0;
 			Protocol.outboundBuffer.p1isaac(109);
 			Protocol.outboundBuffer.p2le(local19 + Static142.originZ);
@@ -422,9 +417,9 @@ public final class Static103 {
 			local192 = Static175.npcs[local36];
 			if (local192 != null) {
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
-				Static25.y = Static60.clickY;
+				Static25.y = Mouse.clickY;
 				Static70.type = 2;
-				Static122.x = Static7.clickX;
+				Static122.x = Mouse.clickX;
 				Static17.milliseconds = 0;
 				Protocol.outboundBuffer.p1isaac(218);
 				Protocol.outboundBuffer.p2le(local36);
@@ -449,8 +444,8 @@ public final class Static103 {
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
 				Static70.type = 2;
 				Static17.milliseconds = 0;
-				Static25.y = Static60.clickY;
-				Static122.x = Static7.clickX;
+				Static25.y = Mouse.clickY;
+				Static122.x = Mouse.clickX;
 				Protocol.outboundBuffer.p1isaac(115);
 				Protocol.outboundBuffer.p4me(Static224.anInt5062);
 				Protocol.outboundBuffer.p2le(Static185.anInt4370);
@@ -473,9 +468,9 @@ public final class Static103 {
 			if (!local560) {
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
 			}
-			Static122.x = Static7.clickX;
+			Static122.x = Mouse.clickX;
 			Static17.milliseconds = 0;
-			Static25.y = Static60.clickY;
+			Static25.y = Mouse.clickY;
 			Static70.type = 2;
 			Protocol.outboundBuffer.p1isaac(101);
 			Protocol.outboundBuffer.p2leadd(local15 + Static225.originX);
@@ -487,16 +482,16 @@ public final class Static103 {
 		}
 		if (local23 == 1004) {
 			Static17.milliseconds = 0;
-			Static122.x = Static7.clickX;
+			Static122.x = Mouse.clickX;
 			Static70.type = 2;
-			Static25.y = Static60.clickY;
+			Static25.y = Mouse.clickY;
 			Protocol.outboundBuffer.p1isaac(94);
 			Protocol.outboundBuffer.p2leadd(local36);
 		}
 		if (local23 == 11) {
 			if (local36 == 0) {
 				Static125.anInt3096 = 1;
-				Static113.method3556(Static55.level, local15, local19);
+				Static113.method3556(Player.level, local15, local19);
 			} else if (local36 == 1) {
 				Protocol.outboundBuffer.p1isaac(131);
 				Protocol.outboundBuffer.p4me(Static98.anInt2512);
@@ -517,13 +512,13 @@ public final class Static103 {
 			}
 		}
 		if (local23 == 1) {
-			local43 = Static159.players[local36];
+			local43 = PlayerList.players[local36];
 			if (local43 != null) {
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
 				Static17.milliseconds = 0;
-				Static25.y = Static60.clickY;
+				Static25.y = Mouse.clickY;
 				Static70.type = 2;
-				Static122.x = Static7.clickX;
+				Static122.x = Mouse.clickX;
 				Protocol.outboundBuffer.p1isaac(248);
 				Protocol.outboundBuffer.p2leadd(local36);
 				Protocol.outboundBuffer.p2(Static274.anInt4997);
@@ -550,8 +545,8 @@ public final class Static103 {
 				}
 			}
 			Static70.type = 2;
-			Static25.y = Static60.clickY;
-			Static122.x = Static7.clickX;
+			Static25.y = Mouse.clickY;
+			Static122.x = Mouse.clickX;
 			Static17.milliseconds = 0;
 			Protocol.outboundBuffer.p1isaac(48);
 			Protocol.outboundBuffer.p2add(local15 + Static225.originX);
@@ -576,12 +571,12 @@ public final class Static103 {
 			Static250.anInt5444 = local15;
 		}
 		if (local23 == 57) {
-			local43 = Static159.players[local36];
+			local43 = PlayerList.players[local36];
 			if (local43 != null) {
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
 				Static70.type = 2;
-				Static25.y = Static60.clickY;
-				Static122.x = Static7.clickX;
+				Static25.y = Mouse.clickY;
+				Static122.x = Mouse.clickX;
 				Static17.milliseconds = 0;
 				Protocol.outboundBuffer.p1isaac(175);
 				Protocol.outboundBuffer.p2add(local36);
@@ -618,12 +613,12 @@ public final class Static103 {
 			Static250.anInt5444 = local15;
 		}
 		if (local23 == 30) {
-			local43 = Static159.players[local36];
+			local43 = PlayerList.players[local36];
 			if (local43 != null) {
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
 				Static17.milliseconds = 0;
-				Static122.x = Static7.clickX;
-				Static25.y = Static60.clickY;
+				Static122.x = Mouse.clickX;
+				Static25.y = Mouse.clickY;
 				Static70.type = 2;
 				Protocol.outboundBuffer.p1isaac(68);
 				Protocol.outboundBuffer.p2leadd(local36);
@@ -643,8 +638,8 @@ public final class Static103 {
 			if (!local560) {
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
 			}
-			Static25.y = Static60.clickY;
-			Static122.x = Static7.clickX;
+			Static25.y = Mouse.clickY;
+			Static122.x = Mouse.clickX;
 			Static70.type = 2;
 			Static17.milliseconds = 0;
 			Protocol.outboundBuffer.p1isaac(73);
@@ -664,9 +659,9 @@ public final class Static103 {
 		if (local23 == 36) {
 			if (local36 == 0) {
 				Static187.anInt4422 = 1;
-				Static113.method3556(Static55.level, local15, local19);
+				Static113.method3556(Player.level, local15, local19);
 			} else if (LoginManager.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT]) {
-				Static61.teleport(local15 + Static225.originX, Static142.originZ - -local19, Static55.level);
+				Cheat.teleport(local15 + Static225.originX, Static142.originZ - -local19, Player.level);
 			} else {
 				Protocol.outboundBuffer.p1isaac(179);
 				Protocol.outboundBuffer.p2(local19 + Static142.originZ);
@@ -674,13 +669,13 @@ public final class Static103 {
 			}
 		}
 		if (local23 == 6) {
-			local43 = Static159.players[local36];
+			local43 = PlayerList.players[local36];
 			if (local43 != null) {
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
-				Static25.y = Static60.clickY;
+				Static25.y = Mouse.clickY;
 				Static17.milliseconds = 0;
 				Static70.type = 2;
-				Static122.x = Static7.clickX;
+				Static122.x = Mouse.clickX;
 				Protocol.outboundBuffer.p1isaac(106);
 				Protocol.outboundBuffer.p2(local36);
 			}
@@ -694,9 +689,9 @@ public final class Static103 {
 					Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
 				}
 			}
-			Static25.y = Static60.clickY;
+			Static25.y = Mouse.clickY;
 			Static17.milliseconds = 0;
-			Static122.x = Static7.clickX;
+			Static122.x = Mouse.clickX;
 			Static70.type = 2;
 			Protocol.outboundBuffer.p1isaac(33);
 			Protocol.outboundBuffer.p2(local36);
@@ -707,9 +702,9 @@ public final class Static103 {
 			local192 = Static175.npcs[local36];
 			if (local192 != null) {
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
-				Static122.x = Static7.clickX;
+				Static122.x = Mouse.clickX;
 				Static17.milliseconds = 0;
-				Static25.y = Static60.clickY;
+				Static25.y = Mouse.clickY;
 				Static70.type = 2;
 				Protocol.outboundBuffer.p1isaac(3);
 				Protocol.outboundBuffer.p2leadd(local36);

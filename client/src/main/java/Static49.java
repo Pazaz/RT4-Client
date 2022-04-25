@@ -14,10 +14,7 @@ public final class Static49 {
 	public static final JagString PERCENT_SIGN = JagString.parse("(U");
 
 	@OriginalMember(owner = "client!dm", name = "q", descriptor = "I")
-	public static int anInt1462 = 0;
-
-	@OriginalMember(owner = "client!dm", name = "u", descriptor = "I")
-	public static int anInt1464 = 0;
+	public static int opcode4 = 0;
 
 	@OriginalMember(owner = "client!dm", name = "a", descriptor = "(BII[B)Z")
 	public static boolean method1201(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) byte[] arg2) {
@@ -77,12 +74,12 @@ public final class Static49 {
 
 	@OriginalMember(owner = "client!dm", name = "a", descriptor = "(B)V")
 	public static void method1202() {
-		Protocol.inboundBuffer.method2233();
-		@Pc(13) int local13 = Protocol.inboundBuffer.method2238(8);
+		Protocol.inboundBuffer.accessBits();
+		@Pc(13) int local13 = Protocol.inboundBuffer.gBits(8);
 		@Pc(22) int local22;
 		if (Static272.anInt5214 > local13) {
 			for (local22 = local13; local22 < Static272.anInt5214; local22++) {
-				Static52.anIntArray136[Static240.anInt5335++] = Static33.anIntArray79[local22];
+				Protocol.removedIds[Protocol.removedCount++] = Static33.anIntArray79[local22];
 			}
 		}
 		if (Static272.anInt5214 < local13) {
@@ -92,46 +89,46 @@ public final class Static49 {
 		for (local22 = 0; local22 < local13; local22++) {
 			@Pc(61) int local61 = Static33.anIntArray79[local22];
 			@Pc(65) Npc local65 = Static175.npcs[local61];
-			@Pc(70) int local70 = Protocol.inboundBuffer.method2238(1);
+			@Pc(70) int local70 = Protocol.inboundBuffer.gBits(1);
 			if (local70 == 0) {
 				Static33.anIntArray79[Static272.anInt5214++] = local61;
-				local65.anInt3430 = Static83.loop;
+				local65.lastSeenLoop = client.loop;
 			} else {
-				@Pc(92) int local92 = Protocol.inboundBuffer.method2238(2);
+				@Pc(92) int local92 = Protocol.inboundBuffer.gBits(2);
 				if (local92 == 0) {
 					Static33.anIntArray79[Static272.anInt5214++] = local61;
-					local65.anInt3430 = Static83.loop;
-					Static44.anIntArray106[Static116.anInt2951++] = local61;
+					local65.lastSeenLoop = client.loop;
+					Protocol.extendedIds[Protocol.extendedCount++] = local61;
 				} else {
 					@Pc(139) int local139;
 					@Pc(149) int local149;
 					if (local92 == 1) {
 						Static33.anIntArray79[Static272.anInt5214++] = local61;
-						local65.anInt3430 = Static83.loop;
-						local139 = Protocol.inboundBuffer.method2238(3);
-						local65.method2684(1, local139);
-						local149 = Protocol.inboundBuffer.method2238(1);
+						local65.lastSeenLoop = client.loop;
+						local139 = Protocol.inboundBuffer.gBits(3);
+						local65.move(1, local139);
+						local149 = Protocol.inboundBuffer.gBits(1);
 						if (local149 == 1) {
-							Static44.anIntArray106[Static116.anInt2951++] = local61;
+							Protocol.extendedIds[Protocol.extendedCount++] = local61;
 						}
 					} else if (local92 == 2) {
 						Static33.anIntArray79[Static272.anInt5214++] = local61;
-						local65.anInt3430 = Static83.loop;
-						if (Protocol.inboundBuffer.method2238(1) == 1) {
-							local139 = Protocol.inboundBuffer.method2238(3);
-							local65.method2684(2, local139);
-							local149 = Protocol.inboundBuffer.method2238(3);
-							local65.method2684(2, local149);
+						local65.lastSeenLoop = client.loop;
+						if (Protocol.inboundBuffer.gBits(1) == 1) {
+							local139 = Protocol.inboundBuffer.gBits(3);
+							local65.move(2, local139);
+							local149 = Protocol.inboundBuffer.gBits(3);
+							local65.move(2, local149);
 						} else {
-							local139 = Protocol.inboundBuffer.method2238(3);
-							local65.method2684(0, local139);
+							local139 = Protocol.inboundBuffer.gBits(3);
+							local65.move(0, local139);
 						}
-						local139 = Protocol.inboundBuffer.method2238(1);
+						local139 = Protocol.inboundBuffer.gBits(1);
 						if (local139 == 1) {
-							Static44.anIntArray106[Static116.anInt2951++] = local61;
+							Protocol.extendedIds[Protocol.extendedCount++] = local61;
 						}
 					} else if (local92 == 3) {
-						Static52.anIntArray136[Static240.anInt5335++] = local61;
+						Protocol.removedIds[Protocol.removedCount++] = local61;
 					}
 				}
 			}

@@ -44,18 +44,18 @@ public class HintArrowManager {
         @Pc(94) int local94;
         if (GlRenderer.enabled) {
             @Pc(68) GlModel local68 = (GlModel) local10;
-            if (arg5 != SceneGraph.getTileHeight(Static55.level, arg3 + local42, arg1 + local48) || arg5 != SceneGraph.getTileHeight(Static55.level, arg3 + local45, local51 + arg1)) {
+            if (arg5 != SceneGraph.getTileHeight(Player.level, arg3 + local42, arg1 + local48) || arg5 != SceneGraph.getTileHeight(Player.level, arg3 + local45, local51 + arg1)) {
                 for (local94 = 0; local94 < local68.vertexCount; local94++) {
-                    local68.anIntArray465[local94] += SceneGraph.getTileHeight(Static55.level, local68.anIntArray461[local94] + arg3, local68.anIntArray466[local94] + arg1) - arg5;
+                    local68.anIntArray465[local94] += SceneGraph.getTileHeight(Player.level, local68.anIntArray461[local94] + arg3, local68.anIntArray466[local94] + arg1) - arg5;
                 }
                 local68.bounds.valid = false;
                 local68.vertexBuffer.valid = false;
             }
         } else {
             @Pc(142) SoftwareModel local142 = (SoftwareModel) local10;
-            if (arg5 != SceneGraph.getTileHeight(Static55.level, local42 + arg3, local48 + arg1) || arg5 != SceneGraph.getTileHeight(Static55.level, arg3 + local45, local51 + arg1)) {
+            if (arg5 != SceneGraph.getTileHeight(Player.level, local42 + arg3, local48 + arg1) || arg5 != SceneGraph.getTileHeight(Player.level, arg3 + local45, local51 + arg1)) {
                 for (local94 = 0; local94 < local142.vertexCount; local94++) {
-                    local142.anIntArray527[local94] += SceneGraph.getTileHeight(Static55.level, arg3 + local142.anIntArray528[local94], local142.anIntArray531[local94] + arg1) - arg5;
+                    local142.anIntArray527[local94] += SceneGraph.getTileHeight(Player.level, arg3 + local142.anIntArray528[local94], local142.anIntArray531[local94] + arg1) - arg5;
                 }
                 local142.boundsValid = false;
             }

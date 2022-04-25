@@ -18,9 +18,6 @@ public final class Static240 {
 	@OriginalMember(owner = "client!tg", name = "e", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1008 = JagString.parse("<col=00ffff>");
 
-	@OriginalMember(owner = "client!tg", name = "h", descriptor = "I")
-	public static int anInt5335 = 0;
-
-	@OriginalMember(owner = "client!tg", name = "i", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!tg", name = "i", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1009 = JagString.parse("::pcachesize");
 }

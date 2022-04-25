@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static207 {
 
-    @OriginalMember(owner = "client!ql", name = "d", descriptor = "I")
-	public static int anInt4778 = 0;
-
 	@OriginalMember(owner = "client!ql", name = "h", descriptor = "Lclient!na;")
 	public static final JagString aClass100_903 = JagString.parse("Hidden)2");
 

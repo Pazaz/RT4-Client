@@ -28,11 +28,11 @@ public final class Static125 {
 	public static void updateLockedCamera() {
 		@Pc(9) int local9 = Static248.anInt4232 * 128 + 64;
 		@Pc(15) int local15 = Static245.anInt5375 * 128 + 64;
-		@Pc(23) int local23 = SceneGraph.getTileHeight(Static55.level, local15, local9) - Static231.anInt5203;
+		@Pc(23) int local23 = SceneGraph.getTileHeight(Player.level, local15, local9) - Static231.anInt5203;
 		if (Static113.anInt4612 >= 100) {
 			Static138.renderX = Static245.anInt5375 * 128 + 64;
 			Static134.renderZ = Static248.anInt4232 * 128 + 64;
-			Static5.anInt40 = SceneGraph.getTileHeight(Static55.level, Static138.renderX, Static134.renderZ) - Static231.anInt5203;
+			Static5.anInt40 = SceneGraph.getTileHeight(Player.level, Static138.renderX, Static134.renderZ) - Static231.anInt5203;
 		} else {
 			if (Static138.renderX < local15) {
 				Static138.renderX += Static233.anInt5225 + Static113.anInt4612 * (local15 - Static138.renderX) / 1000;
@@ -73,7 +73,7 @@ public final class Static125 {
 		}
 		local9 = Static265.anInt5765 * 128 + 64;
 		local15 = Static251.anInt5449 * 128 + 64;
-		local23 = SceneGraph.getTileHeight(Static55.level, local15, local9) - Static57.anInt1744;
+		local23 = SceneGraph.getTileHeight(Player.level, local15, local9) - Static57.anInt1744;
 		@Pc(236) int local236 = local23 - Static5.anInt40;
 		@Pc(241) int local241 = local9 - Static134.renderZ;
 		@Pc(246) int local246 = local15 - Static138.renderX;

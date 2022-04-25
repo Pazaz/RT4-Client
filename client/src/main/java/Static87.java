@@ -122,7 +122,7 @@ public final class Static87 {
 				} else {
 					local57 = arg8;
 				}
-				local30.anInt465 = Static83.loop;
+				local30.anInt465 = client.loop;
 				local30.anInt517 = local57;
 				if (!local30.aBoolean32 || !Static36.method947(local30)) {
 					if (local30.anInt453 > 0) {
@@ -144,8 +144,8 @@ public final class Static87 {
 							continue;
 						}
 						if (Static138.aBoolean172 && Static146.aBoolean174) {
-							local164 = Static223.anInt5032;
-							local166 = Static215.anInt4873;
+							local164 = Mouse.anInt5032;
+							local166 = Mouse.anInt4873;
 							local164 -= Static165.anInt4035;
 							if (local164 < Static228.anInt5103) {
 								local164 = Static228.anInt5103;
@@ -421,8 +421,8 @@ public final class Static87 {
 													if (local1476 == null) {
 														Static43.redraw(local30);
 													} else if (Static118.aClass13_15 == local30 && local270 == Static4.anInt36) {
-														local518 = Static215.anInt4873 - Static149.anInt3554;
-														local556 = Static223.anInt5032 - Static206.anInt4773;
+														local518 = Mouse.anInt4873 - Static149.anInt3554;
+														local556 = Mouse.anInt5032 - Static206.anInt4773;
 														if (local556 < 5 && local556 > -5) {
 															local556 = 0;
 														}
@@ -686,9 +686,9 @@ public final class Static87 {
 													if (local514 == PlayerList.selfId) {
 														local514 = 2047;
 													}
-													@Pc(2751) Player local2751 = Static159.players[local514];
+													@Pc(2751) Player local2751 = PlayerList.players[local514];
 													@Pc(2760) SeqType local2760 = local276 == -1 ? null : SeqTypeList.get(local276);
-													if (local2751 != null && (int) local2751.aClass100_364.encode37() << 11 == (local30.modelId & 0xFFFFF800)) {
+													if (local2751 != null && (int) local2751.username.encode37() << 11 == (local30.modelId & 0xFFFFF800)) {
 														local2589 = local2751.appearance.method1954(null, -1, null, local2760, 0, -1, 0, local30.anInt510, 0);
 													}
 												}

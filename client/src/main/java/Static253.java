@@ -51,7 +51,7 @@ public final class Static253 {
 			if (Static176.aBooleanArray95[4] && Static276.anIntArray564[4] + 128 > local59) {
 				local59 = Static276.anIntArray564[4] + 128;
 			}
-			Static18.method555(Static81.cameraX, arg0, SceneGraph.getTileHeight(Static55.level, PlayerList.self.xFine, PlayerList.self.zFine) - 50, 600 - -(local59 * 3), local57, Static111.cameraZ, local59);
+			Static18.method555(Static81.cameraX, arg0, SceneGraph.getTileHeight(Player.level, PlayerList.self.xFine, PlayerList.self.zFine) - 50, 600 - -(local59 * 3), local57, Static111.cameraZ, local59);
 		}
 		local57 = Static5.anInt40;
 		local59 = Static138.renderX;
@@ -124,11 +124,11 @@ public final class Static253 {
 			} else {
 				local171 = Static103.method2235(Static178.anInt4247, PlayerList.self.movementQueueZ[0] >> 3, Preferences.brightness, PlayerList.self.movementQueueX[0] >> 3);
 			}
-			Static120.method2394(Static83.loop, !Preferences.flickeringEffectsOn);
+			Static120.method2394(client.loop, !Preferences.flickeringEffectsOn);
 			GlRenderer.clearColorAndDepthBuffers(local171);
 			Static143.method2731(Static240.cameraPitch, Static134.renderZ, Static5.anInt40, Static138.renderX, Static184.cameraYaw);
-			GlRenderer.anInt5323 = Static83.loop;
-			Static156.method2954(Static138.renderX, Static5.anInt40, Static134.renderZ, Static240.cameraPitch, Static184.cameraYaw, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Static55.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
+			GlRenderer.anInt5323 = client.loop;
+			Static156.method2954(Static138.renderX, Static5.anInt40, Static134.renderZ, Static240.cameraPitch, Static184.cameraYaw, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Player.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
 			Static263.aBoolean299 = true;
 			Static120.method2390();
 			Static143.method2731(0, 0, 0, 0, 0);
@@ -138,7 +138,7 @@ public final class Static253 {
 			Static233.method4000(arg3, arg2, arg0, Static223.anInt5029, Static223.anInt5029, arg4);
 		} else {
 			SoftwareRaster.fillRect(arg2, arg4, arg3, arg0, 0);
-			Static156.method2954(Static138.renderX, Static5.anInt40, Static134.renderZ, Static240.cameraPitch, Static184.cameraYaw, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Static55.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
+			Static156.method2954(Static138.renderX, Static5.anInt40, Static134.renderZ, Static240.cameraPitch, Static184.cameraYaw, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Player.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
 			client.audioLoop();
 			Static223.method3858();
 			Static142.method2726(arg4, arg3, arg2, 256, arg0, 256);

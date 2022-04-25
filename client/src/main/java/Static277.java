@@ -37,11 +37,4 @@ public final class Static277 {
 		return local12 == 1003;
 	}
 
-	@OriginalMember(owner = "client!wi", name = "d", descriptor = "(II)V")
-	public static void method4641(@OriginalArg(1) int arg0) {
-		WorldMap.anInt4901 = -1;
-		WorldMap.anInt4901 = -1;
-		WorldMap.anInt919 = arg0;
-		WorldMap.method965();
-	}
 }

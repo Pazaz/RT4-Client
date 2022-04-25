@@ -79,7 +79,7 @@ public final class Static122 {
 			local13.anInt2028 = (arg6.getSize() + arg0) * 128;
 			local13.sound = Static140.getSound(arg6);
 			local13.radius = arg6.soundRadius * 128;
-			Static93.aClass133_7.put(local13, arg6.aClass100_364.encode37());
+			Static93.aClass133_7.put(local13, arg6.username.encode37());
 		}
 	}
 

@@ -47,7 +47,7 @@ public final class Static75 {
 			local39 = (local31 >> 4 & 0x7) + Static115.anInt2940;
 			local45 = (local31 & 0x7) + Static180.anInt4264;
 			if (local39 >= 0 && local45 >= 0 && local39 < 104 && local45 < 104) {
-				Static29.method800(Static55.level, local45, local19, local39, -1, -1, local27, local23, 0);
+				Static29.method800(Player.level, local45, local19, local39, -1, -1, local27, local23, 0);
 			}
 		} else if (Protocol.opcode == 33) {
 			local15 = Protocol.inboundBuffer.g2le();
@@ -59,10 +59,10 @@ public final class Static75 {
 				@Pc(122) ObjStack local122 = new ObjStack();
 				local122.anInt5550 = local31;
 				local122.anInt5555 = local15;
-				if (Static159.aClass69ArrayArrayArray1[Static55.level][local19][local27] == null) {
-					Static159.aClass69ArrayArrayArray1[Static55.level][local19][local27] = new LinkedList();
+				if (Static159.aClass69ArrayArrayArray1[Player.level][local19][local27] == null) {
+					Static159.aClass69ArrayArrayArray1[Player.level][local19][local27] = new LinkedList();
 				}
-				Static159.aClass69ArrayArrayArray1[Static55.level][local19][local27].addTail(new ObjStackNode(local122));
+				Static159.aClass69ArrayArrayArray1[Player.level][local19][local27].addTail(new ObjStackNode(local122));
 				Static220.spawnGroundObject(local27, local19);
 			}
 		} else {
@@ -95,8 +95,8 @@ public final class Static75 {
 					local27 = local27 * 64;
 					local19 = local19 * 64;
 					local23 = local23 * 64;
-					local317 = new ProjAnim(local45, Static55.level, local23, local19, SceneGraph.getTileHeight(Static55.level, local23, local19) - local218, Static83.loop + local228, local232 + Static83.loop, local236, local247, local39, local224);
-					local317.method3705(local31, Static83.loop + local228, -local224 + SceneGraph.getTileHeight(Static55.level, local27, local31), local27);
+					local317 = new ProjAnim(local45, Player.level, local23, local19, SceneGraph.getTileHeight(Player.level, local23, local19) - local218, client.loop + local228, local232 + client.loop, local236, local247, local39, local224);
+					local317.method3705(local31, client.loop + local228, -local224 + SceneGraph.getTileHeight(Player.level, local27, local31), local27);
 					Static217.aClass69_116.addTail(new ProjAnimNode(local317));
 				}
 			} else if (Protocol.opcode == 17) {
@@ -109,7 +109,7 @@ public final class Static75 {
 				if (local23 >= 0 && local19 >= 0 && local23 < 104 && local19 < 104) {
 					local23 = local23 * 128 + 64;
 					local19 = local19 * 128 + 64;
-					@Pc(427) SpotAnim local427 = new SpotAnim(local27, Static55.level, local23, local19, SceneGraph.getTileHeight(Static55.level, local23, local19) - local31, local39, Static83.loop);
+					@Pc(427) SpotAnim local427 = new SpotAnim(local27, Player.level, local23, local19, SceneGraph.getTileHeight(Player.level, local23, local19) - local31, local39, client.loop);
 					Static99.aClass69_64.addTail(new SpotAnimNode(local427));
 				}
 			} else if (Protocol.opcode == 179) {
@@ -122,7 +122,7 @@ public final class Static75 {
 				local45 = (local31 & 0x7) + Static180.anInt4264;
 				local218 = Protocol.inboundBuffer.g2sub();
 				if (local39 >= 0 && local45 >= 0 && local39 < 104 && local45 < 104) {
-					Static29.method800(Static55.level, local45, local19, local39, -1, local218, local27, local23, 0);
+					Static29.method800(Player.level, local45, local19, local39, -1, local218, local27, local23, 0);
 				}
 			} else if (Protocol.opcode == 20) {
 				local15 = Protocol.inboundBuffer.g1ssub();
@@ -136,7 +136,7 @@ public final class Static75 {
 				if (local218 == 65535) {
 					local218 = -1;
 				}
-				Static92.method1881(Static55.level, local39, local31, local19, local45, local23, local218);
+				Static92.method1881(Player.level, local39, local31, local19, local45, local23, local218);
 			} else {
 				@Pc(633) int local633;
 				if (Protocol.opcode == 202) {
@@ -166,7 +166,7 @@ public final class Static75 {
 					local31 = Protocol.inboundBuffer.g2();
 					local39 = Protocol.inboundBuffer.g2();
 					if (local23 >= 0 && local19 >= 0 && local23 < 104 && local19 < 104) {
-						@Pc(710) LinkedList local710 = Static159.aClass69ArrayArrayArray1[Static55.level][local23][local19];
+						@Pc(710) LinkedList local710 = Static159.aClass69ArrayArrayArray1[Player.level][local23][local19];
 						if (local710 != null) {
 							for (@Pc(718) ObjStackNode local718 = (ObjStackNode) local710.method2289(); local718 != null; local718 = (ObjStackNode) local710.method2288()) {
 								@Pc(723) ObjStack local723 = local718.aClass8_Sub7_1;
@@ -189,10 +189,10 @@ public final class Static75 {
 						@Pc(812) ObjStack local812 = new ObjStack();
 						local812.anInt5550 = local31;
 						local812.anInt5555 = local39;
-						if (Static159.aClass69ArrayArrayArray1[Static55.level][local19][local27] == null) {
-							Static159.aClass69ArrayArrayArray1[Static55.level][local19][local27] = new LinkedList();
+						if (Static159.aClass69ArrayArrayArray1[Player.level][local19][local27] == null) {
+							Static159.aClass69ArrayArrayArray1[Player.level][local19][local27] = new LinkedList();
 						}
-						Static159.aClass69ArrayArrayArray1[Static55.level][local19][local27].addTail(new ObjStackNode(local812));
+						Static159.aClass69ArrayArrayArray1[Player.level][local19][local27].addTail(new ObjStackNode(local812));
 						Static220.spawnGroundObject(local27, local19);
 					}
 				} else if (Protocol.opcode == 16) {
@@ -217,8 +217,8 @@ public final class Static75 {
 						local19 = local19 * 128 + 64;
 						local23 = local23 * 128 + 64;
 						local27 = local27 * 128 + 64;
-						local317 = new ProjAnim(local45, Static55.level, local23, local19, SceneGraph.getTileHeight(Static55.level, local23, local19) - local218, local228 + Static83.loop, local232 + Static83.loop, local236, local247, local39, local224);
-						local317.method3705(local31, Static83.loop + local228, SceneGraph.getTileHeight(Static55.level, local27, local31) - local224, local27);
+						local317 = new ProjAnim(local45, Player.level, local23, local19, SceneGraph.getTileHeight(Player.level, local23, local19) - local218, local228 + client.loop, local232 + client.loop, local236, local247, local39, local224);
+						local317.method3705(local31, client.loop + local228, SceneGraph.getTileHeight(Player.level, local27, local31) - local224, local27);
 						Static217.aClass69_116.addTail(new ProjAnimNode(local317));
 					}
 				} else if (Protocol.opcode == 104) {
@@ -261,7 +261,7 @@ public final class Static75 {
 								if (PlayerList.selfId == local1188) {
 									local1198 = PlayerList.self;
 								} else {
-									local1198 = Static159.players[local1188];
+									local1198 = PlayerList.players[local1188];
 								}
 							}
 							if (local1198 != null) {
@@ -279,8 +279,8 @@ public final class Static75 {
 								}
 							}
 						}
-						@Pc(1331) ProjAnim local1331 = new ProjAnim(local218, Static55.level, local23, local19, SceneGraph.getTileHeight(Static55.level, local23, local19) - local224, local232 + Static83.loop, local236 + Static83.loop, local247, local633, local45, local228);
-						local1331.method3705(local31, local232 + Static83.loop, -local228 + SceneGraph.getTileHeight(Static55.level, local27, local31), local27);
+						@Pc(1331) ProjAnim local1331 = new ProjAnim(local218, Player.level, local23, local19, SceneGraph.getTileHeight(Player.level, local23, local19) - local224, local232 + client.loop, local236 + client.loop, local247, local633, local45, local228);
+						local1331.method3705(local31, local232 + client.loop, -local228 + SceneGraph.getTileHeight(Player.level, local27, local31), local27);
 						Static217.aClass69_116.addTail(new ProjAnimNode(local1331));
 					}
 				} else if (Protocol.opcode == 97) {
@@ -312,7 +312,7 @@ public final class Static75 {
 					local23 = (local15 >> 4 & 0x7) + Static115.anInt2940;
 					local27 = Protocol.inboundBuffer.g2();
 					if (local23 >= 0 && local19 >= 0 && local23 < 104 && local19 < 104) {
-						@Pc(1565) LinkedList local1565 = Static159.aClass69ArrayArrayArray1[Static55.level][local23][local19];
+						@Pc(1565) LinkedList local1565 = Static159.aClass69ArrayArrayArray1[Player.level][local23][local19];
 						if (local1565 != null) {
 							for (@Pc(1572) ObjStackNode local1572 = (ObjStackNode) local1565.method2289(); local1572 != null; local1572 = (ObjStackNode) local1565.method2288()) {
 								if (local1572.aClass8_Sub7_1.anInt5555 == (local27 & 0x7FFF)) {
@@ -321,7 +321,7 @@ public final class Static75 {
 								}
 							}
 							if (local1565.method2289() == null) {
-								Static159.aClass69ArrayArrayArray1[Static55.level][local23][local19] = null;
+								Static159.aClass69ArrayArrayArray1[Player.level][local23][local19] = null;
 							}
 							Static220.spawnGroundObject(local19, local23);
 						}
