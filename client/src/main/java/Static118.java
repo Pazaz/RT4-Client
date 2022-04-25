@@ -42,12 +42,12 @@ public final class Static118 {
 				}
 				if (local15.type == 6) {
 					@Pc(105) int local105;
-					if (local15.anInt522 != -1 || local15.anInt462 != -1) {
+					if (local15.modelSeqId != -1 || local15.anInt462 != -1) {
 						@Pc(100) boolean local100 = Static154.method2926(local15);
 						if (local100) {
 							local105 = local15.anInt462;
 						} else {
-							local105 = local15.anInt522;
+							local105 = local15.modelSeqId;
 						}
 						if (local105 != -1) {
 							@Pc(118) SeqType local118 = SeqTypeList.get(local105);

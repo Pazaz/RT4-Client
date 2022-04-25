@@ -12,7 +12,7 @@ public final class Static247 {
 
 	@OriginalMember(owner = "client!ub", name = "a", descriptor = "(IIIIIII)V")
 	public static void method4244(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
-		if (Static172.anInt4164 <= arg1 && Static224.anInt5063 >= arg3 && Static267.anInt5773 <= arg2 && arg4 <= Static106.anInt2869) {
+		if (TextureOp29.anInt4164 <= arg1 && TextureOp29.anInt5063 >= arg3 && TextureOp29.anInt5773 <= arg2 && arg4 <= TextureOp29.anInt2869) {
 			if (arg5 == 1) {
 				Static134.method2622(arg0, arg3, arg2, arg4, arg1);
 			} else {
@@ -68,7 +68,7 @@ public final class Static247 {
 											local21 = local8.anInt666;
 											local24 = local8.anInt672;
 											local27 = local8.anInt668;
-											local31 = Static130.aClass3_Sub5ArrayArrayArray1[local24];
+											local31 = SceneGraph.tiles[local24];
 											@Pc(33) float local33 = 0.0F;
 											if (GlRenderer.enabled) {
 												if (Static80.underWaterTileHeightMap == Static83.activeTileHeightMap) {
@@ -98,7 +98,7 @@ public final class Static247 {
 											}
 											if (arg1) {
 												if (local24 > 0) {
-													local153 = Static130.aClass3_Sub5ArrayArrayArray1[local24 - 1][local18][local21];
+													local153 = SceneGraph.tiles[local24 - 1][local18][local21];
 													if (local153 != null && local153.aBoolean46) {
 														continue;
 													}
@@ -136,18 +136,18 @@ public final class Static247 {
 												if (GlRenderer.enabled) {
 													GlRenderer.method4159(201.5F - (float) (local153.anInt668 + 1) * 50.0F);
 												}
-												if (local153.aClass131_1 == null) {
-													if (local153.aClass43_1 != null) {
+												if (local153.plainTile == null) {
+													if (local153.shapedTile != null) {
 														if (Static9.method187(0, local18, local21)) {
-															Static147.method2762(local153.aClass43_1, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local18, local21, true);
+															Static147.method2762(local153.shapedTile, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local18, local21, true);
 														} else {
-															Static147.method2762(local153.aClass43_1, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local18, local21, false);
+															Static147.method2762(local153.shapedTile, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local18, local21, false);
 														}
 													}
 												} else if (Static9.method187(0, local18, local21)) {
-													Static132.method2610(local153.aClass131_1, 0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local18, local21, true);
+													Static132.method2610(local153.plainTile, 0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local18, local21, true);
 												} else {
-													Static132.method2610(local153.aClass131_1, 0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local18, local21, false);
+													Static132.method2610(local153.plainTile, 0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local18, local21, false);
 												}
 												var22 = local153.aClass77_1;
 												if (var22 != null) {
@@ -174,21 +174,21 @@ public final class Static247 {
 												}
 											}
 											var24 = false;
-											if (local8.aClass131_1 == null) {
-												if (local8.aClass43_1 != null) {
+											if (local8.plainTile == null) {
+												if (local8.shapedTile != null) {
 													if (Static9.method187(local27, local18, local21)) {
-														Static147.method2762(local8.aClass43_1, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local18, local21, true);
+														Static147.method2762(local8.shapedTile, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local18, local21, true);
 													} else {
 														var24 = true;
-														Static147.method2762(local8.aClass43_1, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local18, local21, false);
+														Static147.method2762(local8.shapedTile, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local18, local21, false);
 													}
 												}
 											} else if (Static9.method187(local27, local18, local21)) {
-												Static132.method2610(local8.aClass131_1, local27, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local18, local21, true);
+												Static132.method2610(local8.plainTile, local27, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local18, local21, true);
 											} else {
 												var24 = true;
-												if (local8.aClass131_1.anInt4865 != 12345678 || Static158.aBoolean187 && local24 <= Static160.anInt3902) {
-													Static132.method2610(local8.aClass131_1, local27, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local18, local21, false);
+												if (local8.plainTile.anInt4865 != 12345678 || Static158.aBoolean187 && local24 <= Static160.anInt3902) {
+													Static132.method2610(local8.plainTile, local27, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local18, local21, false);
 												}
 											}
 											if (var24) {
@@ -626,7 +626,7 @@ public final class Static247 {
 			}
 			@Pc(2388) Tile local2388;
 			if (local24 < Static126.anInt3114 - 1) {
-				local2388 = Static130.aClass3_Sub5ArrayArrayArray1[local24 + 1][local18][local21];
+				local2388 = SceneGraph.tiles[local24 + 1][local18][local21];
 				if (local2388 != null && local2388.aBoolean46) {
 					Static7.aClass69_32.addTail(local2388);
 				}

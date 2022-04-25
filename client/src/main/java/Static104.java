@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static104 {
 
-	@OriginalMember(owner = "client!ia", name = "d", descriptor = "[I")
-	public static final int[] anIntArray255 = new int[200];
-
 	@OriginalMember(owner = "client!ia", name = "a", descriptor = "(BLclient!fe;)V")
 	public static void method2247(@OriginalArg(1) PathingEntity arg0) {
 		@Pc(9) BasType local9 = arg0.method2681();

@@ -13,16 +13,6 @@ public final class Static124 {
 	@OriginalMember(owner = "client!jk", name = "F", descriptor = "Lclient!na;")
 	public static final JagString aClass100_596 = JagString.parse("::tween");
 
-    @OriginalMember(owner = "client!jk", name = "a", descriptor = "(ILclient!na;)Lclient!bn;")
-	public static Map method2434(@OriginalArg(1) JagString arg0) {
-		for (@Pc(15) Map local15 = (Map) MapList.aClass69_120.method2289(); local15 != null; local15 = (Map) MapList.aClass69_120.method2288()) {
-			if (local15.group.strEquals(arg0)) {
-				return local15;
-			}
-		}
-		return null;
-	}
-
 	@OriginalMember(owner = "client!jk", name = "a", descriptor = "(IZ[BII[Lclient!mj;)V")
 	public static void method2437(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) byte[] arg2, @OriginalArg(3) int arg3, @OriginalArg(5) CollisionMap[] arg4) {
 		@Pc(10) Buffer local10 = new Buffer(arg2);

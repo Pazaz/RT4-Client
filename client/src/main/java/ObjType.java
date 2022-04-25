@@ -203,7 +203,7 @@ public final class ObjType {
 	}
 
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(ILclient!na;I)Lclient!na;")
-	public final JagString method1819(@OriginalArg(1) JagString arg0, @OriginalArg(2) int arg1) {
+	public final JagString getParam(@OriginalArg(1) JagString arg0, @OriginalArg(2) int arg1) {
 		if (this.params == null) {
 			return arg0;
 		} else {

@@ -13,10 +13,7 @@ public final class Static276 {
 	@OriginalMember(owner = "client!wh", name = "m", descriptor = "[I")
 	public static final int[] anIntArray564 = new int[5];
 
-	@OriginalMember(owner = "client!wh", name = "n", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1095 = JagString.parse("; version=1; path=)4; domain=");
-
-	@OriginalMember(owner = "client!wh", name = "o", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!wh", name = "o", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1096 = JagString.parse("rect_debug=");
 
     @OriginalMember(owner = "client!wh", name = "u", descriptor = "Lclient!na;")
@@ -35,7 +32,7 @@ public final class Static276 {
 
 	@OriginalMember(owner = "client!wh", name = "a", descriptor = "(IILclient!na;)V")
 	public static void method4613(@OriginalArg(0) int arg0, @OriginalArg(2) JagString arg1) {
-		@Pc(7) JagString local7 = arg1.method3159().method3125();
+		@Pc(7) JagString local7 = arg1.method3159().toTitleCase();
 		@Pc(13) boolean local13 = false;
 		for (@Pc(15) int local15 = 0; local15 < PlayerList.size; local15++) {
 			@Pc(28) Player local28 = PlayerList.players[PlayerList.ids[local15]];

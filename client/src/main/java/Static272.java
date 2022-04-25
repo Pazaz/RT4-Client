@@ -4,10 +4,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static272 {
 
-	@OriginalMember(owner = "client!wd", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_989 = JagString.parse("cookieprefix");
-
-	@OriginalMember(owner = "client!wd", name = "g", descriptor = "I")
+    @OriginalMember(owner = "client!wd", name = "g", descriptor = "I")
 	public static int anInt5214 = 0;
 
 	@OriginalMember(owner = "client!wd", name = "a", descriptor = "(BII)V")

@@ -9,6 +9,14 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!hg")
 public final class GlTile extends Node {
 
+    @OriginalMember(owner = "client!hg", name = "J", descriptor = "Ljava/nio/ByteBuffer;")
+    public static ByteBuffer aByteBuffer4;
+	@OriginalMember(owner = "client!hg", name = "U", descriptor = "Lclient!wa;")
+	public static Buffer aClass3_Sub15_3;
+	@OriginalMember(owner = "client!hg", name = "K", descriptor = "Lclient!wa;")
+	public static Buffer aClass3_Sub15_2;
+	@OriginalMember(owner = "client!hg", name = "Q", descriptor = "Ljava/nio/ByteBuffer;")
+	public static ByteBuffer aByteBuffer5;
 	@OriginalMember(owner = "client!hg", name = "s", descriptor = "Ljava/nio/ByteBuffer;")
 	private ByteBuffer aByteBuffer3;
 
@@ -100,6 +108,14 @@ public final class GlTile extends Node {
 		this.aBoolean140 = arg2;
 		this.aBoolean139 = arg3;
 		this.anInt2486 = arg4;
+	}
+
+	@OriginalMember(owner = "client!hg", name = "a", descriptor = "()V")
+	public static void method1939() {
+		aClass3_Sub15_3 = null;
+		aClass3_Sub15_2 = null;
+		aByteBuffer5 = null;
+		aByteBuffer4 = null;
 	}
 
 	@OriginalMember(owner = "client!hg", name = "b", descriptor = "()V")
@@ -208,15 +224,15 @@ public final class GlTile extends Node {
 
 	@OriginalMember(owner = "client!hg", name = "a", descriptor = "([[[Lclient!bj;FZ)V")
 	public final void method1944(@OriginalArg(0) Tile[][][] arg0, @OriginalArg(1) float arg1, @OriginalArg(2) boolean arg2) {
-		if (Static95.aClass3_Sub15_3 == null || Static95.aClass3_Sub15_3.data.length < this.anInt2488 * 4) {
-			Static95.aClass3_Sub15_3 = new Buffer(this.anInt2488 * 4);
+		if (aClass3_Sub15_3 == null || aClass3_Sub15_3.data.length < this.anInt2488 * 4) {
+			aClass3_Sub15_3 = new Buffer(this.anInt2488 * 4);
 		} else {
-			Static95.aClass3_Sub15_3.offset = 0;
+			aClass3_Sub15_3.offset = 0;
 		}
-		if (Static95.aClass3_Sub15_2 == null || Static95.aClass3_Sub15_2.data.length < this.anInt2487 * 4) {
-			Static95.aClass3_Sub15_2 = new Buffer(this.anInt2487 * 4);
+		if (aClass3_Sub15_2 == null || aClass3_Sub15_2.data.length < this.anInt2487 * 4) {
+			aClass3_Sub15_2 = new Buffer(this.anInt2487 * 4);
 		} else {
-			Static95.aClass3_Sub15_2.offset = 0;
+			aClass3_Sub15_2.offset = 0;
 		}
 		@Pc(47) int local47;
 		@Pc(68) Tile local68;
@@ -234,12 +250,12 @@ public final class GlTile extends Node {
 						local86 = this.anIntArrayArray18[local47];
 						if (local86 != null) {
 							for (local90 = 0; local90 < local86.length; local90++) {
-								Static95.aClass3_Sub15_2.p4(local86[local90]);
+								aClass3_Sub15_2.p4(local86[local90]);
 							}
 						}
-						local111 = this.aBooleanArray54[local47] ? Static95.aClass3_Sub15_2 : Static95.aClass3_Sub15_3;
+						local111 = this.aBooleanArray54[local47] ? aClass3_Sub15_2 : aClass3_Sub15_3;
 					} else {
-						local111 = Static95.aClass3_Sub15_3;
+						local111 = aClass3_Sub15_3;
 					}
 					for (local116 = 1; local116 < local78.length - 1; local116++) {
 						local111.p4(local78[0]);
@@ -257,12 +273,12 @@ public final class GlTile extends Node {
 						local86 = this.anIntArrayArray18[local47];
 						if (local86 != null) {
 							for (local90 = 0; local90 < local86.length; local90++) {
-								Static95.aClass3_Sub15_2.p4le(local86[local90]);
+								aClass3_Sub15_2.p4le(local86[local90]);
 							}
 						}
-						local111 = this.aBooleanArray54[local47] ? Static95.aClass3_Sub15_2 : Static95.aClass3_Sub15_3;
+						local111 = this.aBooleanArray54[local47] ? aClass3_Sub15_2 : aClass3_Sub15_3;
 					} else {
-						local111 = Static95.aClass3_Sub15_3;
+						local111 = aClass3_Sub15_3;
 					}
 					for (local116 = 1; local116 < local78.length - 1; local116++) {
 						local111.p4le(local78[0]);
@@ -272,7 +288,7 @@ public final class GlTile extends Node {
 				}
 			}
 		}
-		if (Static95.aClass3_Sub15_3.offset == 0 && Static95.aClass3_Sub15_2.offset == 0) {
+		if (aClass3_Sub15_3.offset == 0 && aClass3_Sub15_2.offset == 0) {
 			return;
 		}
 		@Pc(257) GL2 local257 = GlRenderer.gl;
@@ -320,30 +336,30 @@ public final class GlTile extends Node {
 		if (GlRenderer.arbVboSupported) {
 			local257.glBindBuffer(GL2.GL_ELEMENT_ARRAY_BUFFER, 0);
 		}
-		if (Static95.aClass3_Sub15_3.offset != 0) {
-			if (Static95.aByteBuffer5 == null || Static95.aByteBuffer5.capacity() < Static95.aClass3_Sub15_3.offset) {
-				Static95.aByteBuffer5 = ByteBuffer.allocateDirect(Static95.aClass3_Sub15_3.offset).order(ByteOrder.nativeOrder());
+		if (aClass3_Sub15_3.offset != 0) {
+			if (aByteBuffer5 == null || aByteBuffer5.capacity() < aClass3_Sub15_3.offset) {
+				aByteBuffer5 = ByteBuffer.allocateDirect(aClass3_Sub15_3.offset).order(ByteOrder.nativeOrder());
 			} else {
-				Static95.aByteBuffer5.clear();
+				aByteBuffer5.clear();
 			}
-			Static95.aByteBuffer5.put(Static95.aClass3_Sub15_3.data, 0, Static95.aClass3_Sub15_3.offset);
-			Static95.aByteBuffer5.flip();
+			aByteBuffer5.put(aClass3_Sub15_3.data, 0, aClass3_Sub15_3.offset);
+			aByteBuffer5.flip();
 			GlRenderer.method4159(arg1);
-			local257.glDrawElements(GL2.GL_TRIANGLES, Static95.aClass3_Sub15_3.offset / 4, GL2.GL_UNSIGNED_INT, Static95.aByteBuffer5);
+			local257.glDrawElements(GL2.GL_TRIANGLES, aClass3_Sub15_3.offset / 4, GL2.GL_UNSIGNED_INT, aByteBuffer5);
 		}
-		if (Static95.aClass3_Sub15_2.offset == 0) {
+		if (aClass3_Sub15_2.offset == 0) {
 			return;
 		}
-		if (Static95.aByteBuffer4 == null || Static95.aByteBuffer4.capacity() < Static95.aClass3_Sub15_2.offset) {
-			Static95.aByteBuffer4 = ByteBuffer.allocateDirect(Static95.aClass3_Sub15_2.offset).order(ByteOrder.nativeOrder());
+		if (aByteBuffer4 == null || aByteBuffer4.capacity() < aClass3_Sub15_2.offset) {
+			aByteBuffer4 = ByteBuffer.allocateDirect(aClass3_Sub15_2.offset).order(ByteOrder.nativeOrder());
 		} else {
-			Static95.aByteBuffer4.clear();
+			aByteBuffer4.clear();
 		}
-		Static95.aByteBuffer4.put(Static95.aClass3_Sub15_2.data, 0, Static95.aClass3_Sub15_2.offset);
-		Static95.aByteBuffer4.flip();
+		aByteBuffer4.put(aClass3_Sub15_2.data, 0, aClass3_Sub15_2.offset);
+		aByteBuffer4.flip();
 		GlRenderer.method4159(arg1 - 100.0F);
 		GlRenderer.disableDepthMask();
-		local257.glDrawElements(GL2.GL_TRIANGLES, Static95.aClass3_Sub15_2.offset / 4, GL2.GL_UNSIGNED_INT, Static95.aByteBuffer4);
+		local257.glDrawElements(GL2.GL_TRIANGLES, aClass3_Sub15_2.offset / 4, GL2.GL_UNSIGNED_INT, aByteBuffer4);
 		GlRenderer.enableDepthMask();
 	}
 

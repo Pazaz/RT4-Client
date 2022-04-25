@@ -10,94 +10,7 @@ public final class Static91 {
 	@OriginalMember(owner = "client!hc", name = "P", descriptor = "I")
 	public static int anInt2428;
 
-	@OriginalMember(owner = "client!hc", name = "d", descriptor = "(I)I")
-	public static int method1874() {
-		if ((double) WorldMap.targetZoom == 3.0D) {
-			return 37;
-		} else if ((double) WorldMap.targetZoom == 4.0D) {
-			return 50;
-		} else if ((double) WorldMap.targetZoom == 6.0D) {
-			return 75;
-		} else if ((double) WorldMap.targetZoom == 8.0D) {
-			return 100;
-		} else {
-			return 200;
-		}
-	}
-
-	@OriginalMember(owner = "client!hc", name = "a", descriptor = "(IB)Lclient!qc;")
-	public static ClientScript getCs2ById(@OriginalArg(0) int arg0) {
-		@Pc(12) ClientScript local12 = (ClientScript) Static105.aClass54_9.get((long) arg0);
-		if (local12 != null) {
-			return local12;
-		}
-		@Pc(22) byte[] local22 = client.js5Archive12.getFile(arg0, 0);
-		if (local22 == null) {
-			return null;
-		}
-		local12 = new ClientScript();
-		@Pc(42) Buffer local42 = new Buffer(local22);
-		local42.offset = local42.data.length - 2;
-		@Pc(53) int local53 = local42.g2();
-		@Pc(63) int local63 = local42.data.length - local53 - 12 - 2;
-		local42.offset = local63;
-		@Pc(70) int local70 = local42.g4();
-		local12.anInt4667 = local42.g2();
-		local12.anInt4671 = local42.g2();
-		local12.anInt4665 = local42.g2();
-		local12.anInt4669 = local42.g2();
-		@Pc(98) int local98 = local42.g1();
-		@Pc(107) int local107;
-		@Pc(114) int local114;
-		if (local98 > 0) {
-			local12.aClass133Array1 = new HashTable[local98];
-			for (local107 = 0; local107 < local98; local107++) {
-				local114 = local42.g2();
-				@Pc(121) HashTable local121 = new HashTable(Static165.clp2(local114));
-				local12.aClass133Array1[local107] = local121;
-				while (local114-- > 0) {
-					@Pc(136) int local136 = local42.g4();
-					@Pc(140) int local140 = local42.g4();
-					local121.put(new IntNode(local140), (long) local136);
-				}
-			}
-		}
-		local42.offset = 0;
-		local12.name = local42.gjstrFast();
-		local12.opcodes = new int[local70];
-		local12.stringOperands = new JagString[local70];
-		local107 = 0;
-		local12.intOperands = new int[local70];
-		while (local63 > local42.offset) {
-			local114 = local42.g2();
-			if (local114 == 3) {
-				local12.stringOperands[local107] = local42.gjstr();
-			} else if (local114 >= 100 || local114 == 21 || local114 == 38 || local114 == 39) {
-				local12.intOperands[local107] = local42.g1();
-			} else {
-				local12.intOperands[local107] = local42.g4();
-			}
-			local12.opcodes[local107++] = local114;
-		}
-		Static105.aClass54_9.put(local12, (long) arg0);
-		return local12;
-	}
-
-	@OriginalMember(owner = "client!hc", name = "a", descriptor = "(Lclient!km;Z)V")
-	public static void method1877(@OriginalArg(0) Npc arg0) {
-		for (@Pc(13) AreaSound local13 = (AreaSound) Static152.aClass69_87.method2289(); local13 != null; local13 = (AreaSound) Static152.aClass69_87.method2288()) {
-			if (arg0 == local13.npc) {
-				if (local13.primaryStream != null) {
-					client.soundStream.removeSubStream(local13.primaryStream);
-					local13.primaryStream = null;
-				}
-				local13.unlink();
-				return;
-			}
-		}
-	}
-
-	@OriginalMember(owner = "client!hc", name = "a", descriptor = "(Lclient!na;Z)I")
+    @OriginalMember(owner = "client!hc", name = "a", descriptor = "(Lclient!na;Z)I")
 	public static int method1879(@OriginalArg(0) JagString arg0) {
 		if (WorldMap.labels == null || arg0.length() == 0) {
 			return -1;
@@ -127,10 +40,10 @@ public final class Static91 {
 		local6.anInt1394 = arg8;
 		local6.anInt1392 = arg9;
 		for (@Pc(46) int local46 = arg0; local46 >= 0; local46--) {
-			if (Static130.aClass3_Sub5ArrayArrayArray1[local46][arg1][arg2] == null) {
-				Static130.aClass3_Sub5ArrayArrayArray1[local46][arg1][arg2] = new Tile(local46, arg1, arg2);
+			if (SceneGraph.tiles[local46][arg1][arg2] == null) {
+				SceneGraph.tiles[local46][arg1][arg2] = new Tile(local46, arg1, arg2);
 			}
 		}
-		Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2].aClass24_1 = local6;
+		SceneGraph.tiles[arg0][arg1][arg2].aClass24_1 = local6;
 	}
 }

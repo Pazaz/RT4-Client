@@ -16,14 +16,8 @@ public final class Static172 {
 	@OriginalMember(owner = "client!nj", name = "k", descriptor = "I")
 	public static int anInt4165;
 
-    @OriginalMember(owner = "client!nj", name = "a", descriptor = "Z")
-	public static boolean shiftClick = false;
-
-	@OriginalMember(owner = "client!nj", name = "h", descriptor = "Lclient!ih;")
+    @OriginalMember(owner = "client!nj", name = "h", descriptor = "Lclient!ih;")
 	public static final LinkedList aClass69_97 = new LinkedList();
-
-	@OriginalMember(owner = "client!nj", name = "i", descriptor = "I")
-	public static int anInt4164 = 0;
 
 	@OriginalMember(owner = "client!nj", name = "a", descriptor = "(IIZ[I[I)V")
 	public static void method3223(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int[] arg2, @OriginalArg(4) int[] arg3) {

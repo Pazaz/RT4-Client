@@ -10,9 +10,6 @@ public final class Static246 {
 	@OriginalMember(owner = "client!u", name = "a", descriptor = "I")
 	public static int anInt5388 = 0;
 
-	@OriginalMember(owner = "client!u", name = "g", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1029 = JagString.parse("cookiehost");
-
 	@OriginalMember(owner = "client!u", name = "a", descriptor = "(Z)V")
 	public static void method4239() {
 		for (@Pc(9) SpotAnimNode local9 = (SpotAnimNode) Static99.aClass69_64.method2289(); local9 != null; local9 = (SpotAnimNode) Static99.aClass69_64.method2288()) {
@@ -44,7 +41,7 @@ public final class Static246 {
 		@Pc(35) JagString local35 = arg0.name;
 		if (arg0.combatLevel != 0) {
 			@Pc(47) JagString local47 = client.game == 1 ? LocalizedText.RATING : LocalizedText.LEVEL;
-			local35 = JagString.concatenate(new JagString[] { local35, Static123.method2420(arg0.combatLevel, PlayerList.self.anInt1652), Static123.aClass100_593, local47, Static123.parseInt(arg0.combatLevel), Static72.aClass100_448 });
+			local35 = JagString.concatenate(new JagString[] { local35, Static123.method2420(arg0.combatLevel, PlayerList.self.combatLevel), Static123.aClass100_593, local47, Static123.parseInt(arg0.combatLevel), Static72.aClass100_448 });
 		}
 		if (Static260.anInt5014 == 1) {
 			Static98.method1966(Static169.anInt4075, (long) arg2, JagString.concatenate(new JagString[] { Static34.aClass100_203, Static201.aClass100_407, local35 }), arg1, (short) 26, LocalizedText.USE, arg3);
@@ -93,7 +90,7 @@ public final class Static246 {
 				for (local140 = 4; local140 >= 0; local140--) {
 					if (local129[local140] != null && local129[local140].equalsIgnoreCase(LocalizedText.ATTACK)) {
 						@Pc(271) short local271 = 0;
-						if (arg0.combatLevel > PlayerList.self.anInt1652) {
+						if (arg0.combatLevel > PlayerList.self.combatLevel) {
 							local271 = 2000;
 						}
 						@Pc(281) short local281 = 0;

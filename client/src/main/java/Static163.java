@@ -18,10 +18,10 @@ public final class Static163 {
 
 	@OriginalMember(owner = "client!n", name = "a", descriptor = "(IIIIII)V")
 	public static void method3105(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
-		@Pc(11) int local11 = Static78.method1690(Static106.anInt2869, arg2, Static267.anInt5773);
-		@Pc(17) int local17 = Static78.method1690(Static106.anInt2869, arg4, Static267.anInt5773);
-		@Pc(23) int local23 = Static78.method1690(Static224.anInt5063, arg3, Static172.anInt4164);
-		@Pc(35) int local35 = Static78.method1690(Static224.anInt5063, arg1, Static172.anInt4164);
+		@Pc(11) int local11 = Static78.method1690(TextureOp29.anInt2869, arg2, TextureOp29.anInt5773);
+		@Pc(17) int local17 = Static78.method1690(TextureOp29.anInt2869, arg4, TextureOp29.anInt5773);
+		@Pc(23) int local23 = Static78.method1690(TextureOp29.anInt5063, arg3, TextureOp29.anInt4164);
+		@Pc(35) int local35 = Static78.method1690(TextureOp29.anInt5063, arg1, TextureOp29.anInt4164);
 		for (@Pc(37) int local37 = local11; local37 <= local17; local37++) {
 			Static131.method2576(Static71.anIntArrayArray10[local37], local23, local35, arg0);
 		}

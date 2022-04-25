@@ -194,7 +194,7 @@ public final class Static164 {
 		@Pc(125) int[] local125 = new int[4];
 		SoftwareRaster.method2497(local125);
 		@Pc(133) SoftwareSprite local133 = new SoftwareSprite(36, 32);
-		SoftwareRaster.method2491(local133.anIntArray20, 36, 32);
+		SoftwareRaster.method2491(local133.pixels, 36, 32);
 		Rasteriser.prepare();
 		Rasteriser.setBounds(16, 16);
 		@Pc(145) int local145 = local5.zoom2d;
@@ -212,7 +212,7 @@ public final class Static164 {
 			if (arg4 >= 2) {
 				local133.method303(16777215);
 			}
-			SoftwareRaster.method2491(local133.anIntArray20, 36, 32);
+			SoftwareRaster.method2491(local133.pixels, 36, 32);
 		}
 		if (arg0 != 0) {
 			local133.method314(arg0);
@@ -220,7 +220,7 @@ public final class Static164 {
 		if (local5.certificateTemplate != -1) {
 			local71.method1423(0, 0);
 		} else if (local5.lentTemplate != -1) {
-			SoftwareRaster.method2491(local71.anIntArray20, 36, 32);
+			SoftwareRaster.method2491(local71.pixels, 36, 32);
 			local133.method1423(0, 0);
 			local133 = local71;
 		}

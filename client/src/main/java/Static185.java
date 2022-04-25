@@ -10,13 +10,6 @@ public final class Static185 {
 	@OriginalMember(owner = "client!p", name = "g", descriptor = "F")
 	public static float aFloat23;
 
-	@OriginalMember(owner = "client!p", name = "a", descriptor = "(I)V")
-	public static void method3395() {
-		if (LoginManager.step == 5) {
-			LoginManager.step = 6;
-		}
-	}
-
 	@OriginalMember(owner = "client!p", name = "a", descriptor = "(IZIZLclient!mj;IIIBII)V")
 	public static void method3397(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(3) boolean arg3, @OriginalArg(4) CollisionMap arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(9) int arg8, @OriginalArg(10) int arg9) {
 		if (arg1 && !SceneGraph.allLevelsAreVisible() && (Static12.tileSettings[0][arg7][arg8] & 0x2) == 0) {
@@ -88,7 +81,7 @@ public final class Static185 {
 			local261 |= 0x80000000L;
 		}
 		if (local62.hasAreaSound()) {
-			Static122.method2411(arg8, local62, arg9, null, arg7, arg2, null);
+			AreaSoundManager.add(arg8, local62, arg9, null, arg7, arg2, null);
 		}
 		@Pc(330) boolean local330 = local62.aBoolean212 & !arg3;
 		local261 |= (long) arg5 << 32;

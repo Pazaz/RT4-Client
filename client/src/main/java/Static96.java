@@ -13,12 +13,6 @@ public final class Static96 {
 	@OriginalMember(owner = "client!hh", name = "a", descriptor = "Lclient!na;")
 	public static final JagString aClass100_520 = JagString.parse("(U4");
 
-	@OriginalMember(owner = "client!hh", name = "b", descriptor = "Lclient!na;")
-	public static final JagString aClass100_521 = JagString.parse("::tele ");
-
-	@OriginalMember(owner = "client!hh", name = "k", descriptor = "Lclient!na;")
-	public static final JagString aClass100_522 = JagString.parse("::wm0");
-
 	@OriginalMember(owner = "client!hh", name = "a", descriptor = "(II)V")
 	public static void method1949(@OriginalArg(1) int arg0) {
 		if (InterfaceList.load(arg0)) {

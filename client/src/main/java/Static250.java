@@ -36,16 +36,12 @@ public final class Static250 {
 			for (@Pc(93) int local93 = 0; local93 < InterfaceList.keyQueueSize; local93++) {
 				@Pc(104) int code = InterfaceList.keyCodes[local93];
 				if (code == Keyboard.KEY_UP) {
-					Camera.pitchDirection = 1;
 					Camera.pitchTarget += 47;
 				} else if (code == Keyboard.KEY_DOWN) {
-					Camera.pitchDirection = 0;
 					Camera.pitchTarget -= 17;
 				} else if (code == Keyboard.KEY_LEFT) {
-					Camera.yawDirection = 1;
 					Camera.yawTarget -= 65;
 				} else if (code == Keyboard.KEY_RIGHT) {
-					Camera.yawDirection = 0;
 					Camera.yawTarget += 191;
 				}
 			}

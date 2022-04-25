@@ -7,10 +7,7 @@ public final class Static14 {
     @OriginalMember(owner = "client!bd", name = "b", descriptor = "Lclient!na;")
 	public static final JagString aClass100_80 = JagString.parse("(U(Y");
 
-	@OriginalMember(owner = "client!bd", name = "i", descriptor = "I")
-	public static int anInt441 = 0;
-
-    @OriginalMember(owner = "client!bd", name = "a", descriptor = "(BI)V")
+	@OriginalMember(owner = "client!bd", name = "a", descriptor = "(BI)V")
 	public static void method475(@OriginalArg(1) int arg0) {
 		@Pc(8) Inv local8 = (Inv) Static20.objectContainerCache.get((long) arg0);
 		if (local8 != null) {

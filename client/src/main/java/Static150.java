@@ -10,10 +10,7 @@ public final class Static150 {
     @OriginalMember(owner = "client!lk", name = "V", descriptor = "I")
 	public static int anInt3582 = 0;
 
-	@OriginalMember(owner = "client!lk", name = "Z", descriptor = "I")
-	public static int clickButton = 0;
-
-	@OriginalMember(owner = "client!lk", name = "a", descriptor = "(IIILclient!be;Z)V")
+    @OriginalMember(owner = "client!lk", name = "a", descriptor = "(IIILclient!be;Z)V")
 	public static void method2801(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Component arg2, @OriginalArg(4) boolean arg3) {
 		@Pc(4) int local4 = arg2.anInt445;
 		@Pc(7) int local7 = arg2.anInt459;
@@ -49,7 +46,7 @@ public final class Static150 {
 		if (arg2.dynamicHeightValue == 4) {
 			arg2.anInt459 = arg2.aspectHeight * arg2.anInt445 / arg2.aspectWidth;
 		}
-		if (Static121.aBoolean154 && (Static36.method940(arg2).anInt546 != 0 || arg2.type == 0)) {
+		if (Static121.aBoolean154 && (InterfaceList.getServerActiveProperties(arg2).anInt546 != 0 || arg2.type == 0)) {
 			if (arg2.anInt459 < 5 && arg2.anInt445 < 5) {
 				arg2.anInt459 = 5;
 				arg2.anInt445 = 5;

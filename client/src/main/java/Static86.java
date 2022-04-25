@@ -1,5 +1,4 @@
 import org.openrs2.deob.annotation.OriginalMember;
-import org.openrs2.deob.annotation.Pc;
 
 public final class Static86 {
 
@@ -17,31 +16,4 @@ public final class Static86 {
 		Static222.instantScreenFade = true;
 	}
 
-	@OriginalMember(owner = "client!gm", name = "h", descriptor = "(I)V")
-	public static void method1800() {
-		Protocol.extendedCount = 0;
-		Protocol.removedCount = 0;
-		Static49.method1202();
-		Static278.method4645();
-		Static234.method4014();
-		@Pc(19) int local19;
-		for (local19 = 0; local19 < Protocol.removedCount; local19++) {
-			@Pc(30) int local30 = Protocol.removedIds[local19];
-			if (Static175.npcs[local30].lastSeenLoop != client.loop) {
-				if (Static175.npcs[local30].type.hasAreaSound()) {
-					Static91.method1877(Static175.npcs[local30]);
-				}
-				Static175.npcs[local30].method2698(null);
-				Static175.npcs[local30] = null;
-			}
-		}
-		if (Protocol.length != Protocol.inboundBuffer.offset) {
-			throw new RuntimeException("gnp1 pos:" + Protocol.inboundBuffer.offset + " psize:" + Protocol.length);
-		}
-		for (local19 = 0; local19 < Static272.anInt5214; local19++) {
-			if (Static175.npcs[Static33.anIntArray79[local19]] == null) {
-				throw new RuntimeException("gnp2 pos:" + local19 + " size:" + Static272.anInt5214);
-			}
-		}
-	}
 }

@@ -107,7 +107,7 @@ public final class Static40 {
 		local8.p2((int) (Math.random() * 99999.0D));
 		local8.p2(530);
 		if (GlobalConfig.LOGIN_USE_STRINGS) {
-			local8.pjstr(Base37.decodeLowerCase(name));
+			local8.pjstr(Base37.decode37(name));
 		} else {
 			local8.p8(name);
 		}

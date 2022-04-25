@@ -95,7 +95,7 @@ public final class Static97 {
 
 	@OriginalMember(owner = "client!hi", name = "a", descriptor = "(Lclient!be;B)Lclient!na;")
 	public static JagString method1963(@OriginalArg(0) Component arg0) {
-		if (Static36.method940(arg0).method512() == 0) {
+		if (InterfaceList.getServerActiveProperties(arg0).getTargetMask() == 0) {
 			return null;
 		} else if (arg0.aClass100_86 == null || arg0.aClass100_86.trim().length() == 0) {
 			return Static121.aBoolean154 ? Static143.aClass100_668 : null;

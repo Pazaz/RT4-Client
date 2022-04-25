@@ -7,10 +7,7 @@ public final class Static245 {
 	@OriginalMember(owner = "client!tm", name = "g", descriptor = "I")
 	public static int anInt5375;
 
-	@OriginalMember(owner = "client!tm", name = "d", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1018 = JagString.parse("; Expires=Thu)1 01)2Jan)21970 00:00:00 GMT; Max)2Age=0");
-
-    @OriginalMember(owner = "client!tm", name = "i", descriptor = "I")
+	@OriginalMember(owner = "client!tm", name = "i", descriptor = "I")
 	public static int anInt5377 = 0;
 
 	@OriginalMember(owner = "client!tm", name = "a", descriptor = "(II)V")

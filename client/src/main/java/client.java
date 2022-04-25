@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.Random;
 
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
@@ -18,7 +19,9 @@ public final class client extends GameShell {
 	public static final BufferedFile[] cacheIndexes = new BufferedFile[28];
     @OriginalMember(owner = "client!wa", name = "Eb", descriptor = "[Lclient!bg;")
     public static final Js5CachedResourceProvider[] js5Providers = new Js5CachedResourceProvider[28];
-	@OriginalMember(owner = "client!jm", name = "A", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!d", name = "S", descriptor = "Ljava/util/Random;")
+    public static final Random aRandom1 = new Random();
+    @OriginalMember(owner = "client!jm", name = "A", descriptor = "Lclient!na;")
 	static final JagString aClass100_603 = JagString.parse("");
 	@OriginalMember(owner = "client!jm", name = "z", descriptor = "Lclient!na;")
 	public static JagString mainLoadSecondaryText = aClass100_603;
@@ -182,8 +185,10 @@ public final class client extends GameShell {
 	public static long prevGc = 0L;
     @OriginalMember(owner = "client!gj", name = "d", descriptor = "I")
 	public static int loop = 0;
+    @OriginalMember(owner = "client!qi", name = "v", descriptor = "Z")
+    public static boolean applyTweening = GlobalConfig.USE_TWEENING;
 
-    @OriginalMember(owner = "client!client", name = "main", descriptor = "([Ljava/lang/String;)V")
+	@OriginalMember(owner = "client!client", name = "main", descriptor = "([Ljava/lang/String;)V")
 	public static void main(@OriginalArg(0) String[] arg0) {
 		try {
 			if (arg0.length != 4) {
@@ -394,7 +399,7 @@ public final class client extends GameShell {
 		if (!GlRenderer.enabled) {
 			((Js5GlTextureProvider) Rasteriser.textureProvider).clear();
 		}
-		Static105.aClass54_9.clear();
+		ClientScriptList.scripts.clear();
 		js5Archive0.method4499();
 		js5Archive1.method4499();
 		js5Archive3.method4499();
@@ -441,7 +446,178 @@ public final class client extends GameShell {
 		arg0.pBytes(local15, 24);
 	}
 
-	@OriginalMember(owner = "client!client", name = "f", descriptor = "(I)V")
+    @OriginalMember(owner = "client!lb", name = "a", descriptor = "(Z)V")
+    public static void method2721() {
+        SceneGraph.clear();
+        MiniMap.sprite = null;
+        Static107.anInt2875 = -1;
+        method3768();
+        Static255.cache.clear();
+        Static171.aClass139_1 = new Class139();
+        ((Js5GlTextureProvider) Rasteriser.textureProvider).clear();
+        LightingManager.lightCount = 0;
+        LightingManager.lights = new Light[255];
+        GlModel.method4120();
+        Static242.method4203();
+        Static115.clear();
+        WorldMap.clear(false);
+        TitleScreen.clear();
+        for (@Pc(39) int local39 = 0; local39 < 2048; local39++) {
+            @Pc(46) Player player = PlayerList.players[local39];
+            if (player != null) {
+                player.attachment = null;
+            }
+        }
+        if (GlRenderer.enabled) {
+            Static242.method4201();
+            Static76.method1642();
+        }
+        Fonts.load(js5Archive13, js5Archive8);
+        Sprites.load(js5Archive8);
+        Static204.aClass3_Sub2_Sub1_10 = null;
+        Static39.aClass3_Sub2_Sub1_1 = null;
+        Static92.aClass3_Sub2_Sub1_6 = null;
+        Static165.aClass3_Sub2_Sub1_8 = null;
+        Static181.aClass3_Sub2_Sub1_9 = null;
+        if (gameState == 5) {
+            TitleScreen.load(js5Archive8);
+        }
+        if (gameState == 10) {
+            Static73.method1596(false);
+        }
+        if (gameState == 30) {
+            setGameState(25);
+        }
+    }
+
+    @OriginalMember(owner = "client!tk", name = "a", descriptor = "(Z)V")
+    public static void method4221() {
+        Protocol.anInt4762 = 0;
+        Static67.prevFocus = true;
+        Static183.prevClickTime = 0L;
+        MouseRecorder.instance.samples = 0;
+        focus = true;
+        Static114.method4625();
+        Static49.opcode4 = -1;
+        Static5.opcode3 = -1;
+        Protocol.opcode = -1;
+        Static267.anInt5775 = 0;
+        Player.rebootTimer = 0;
+        Protocol.outboundBuffer.offset = 0;
+        Static230.opcode2 = -1;
+        Static201.anInt1862 = 0;
+        Protocol.inboundBuffer.offset = 0;
+        @Pc(3506) int local3506;
+        for (local3506 = 0; local3506 < Static143.aClass102Array1.length; local3506++) {
+            Static143.aClass102Array1[local3506] = null;
+        }
+        Static231.anInt5204 = 0;
+        Static60.aBoolean108 = false;
+        Static48.setIdleLoops(0);
+        for (local3506 = 0; local3506 < 100; local3506++) {
+            Chat.messages[local3506] = null;
+        }
+        Static260.anInt5014 = 0;
+        Static132.anInt3291 = (int) (Math.random() * 100.0D) - 50;
+        Static84.anInt2255 = 0;
+        Camera.yawTarget = (int) (Math.random() * 20.0D) - 10 & 0x7FF;
+        Static107.anInt2875 = -1;
+        PlayerList.size = 0;
+        Static270.anInt5795 = 0;
+        Static206.anInt4774 = (int) (Math.random() * 110.0D) - 55;
+        Static241.aBoolean302 = false;
+        Static273.anInt4130 = (int) (Math.random() * 30.0D) - 20;
+        SoundPlayer.anInt4451 = 0;
+        Static115.anInt2939 = 0;
+        Static59.anInt1814 = (int) (Math.random() * 120.0D) - 60;
+        Chat.size = 0;
+        Static230.anInt5161 = (int) (Math.random() * 80.0D) - 40;
+        Static272.anInt5214 = 0;
+        for (local3506 = 0; local3506 < 2048; local3506++) {
+            PlayerList.players[local3506] = null;
+            PlayerList.appearanceCache[local3506] = null;
+        }
+        for (local3506 = 0; local3506 < 32768; local3506++) {
+            NpcList.npcs[local3506] = null;
+        }
+        PlayerList.self = PlayerList.players[2047] = new Player();
+        Static217.aClass69_116.clear();
+        Static99.aClass69_64.clear();
+        if (Static159.aClass69ArrayArrayArray1 != null) {
+            for (local3506 = 0; local3506 < 4; local3506++) {
+                for (@Pc(3663) int local3663 = 0; local3663 < 104; local3663++) {
+                    for (@Pc(3670) int local3670 = 0; local3670 < 104; local3670++) {
+                        Static159.aClass69ArrayArrayArray1[local3506][local3663][local3670] = null;
+                    }
+                }
+            }
+        }
+        Static26.aClass69_27 = new LinkedList();
+        FriendsList.state = 0;
+        FriendsList.size = 0;
+        Static8.method121();
+        DelayedStateChange.clear();
+        Static133.anInt5230 = 0;
+        Static233.anInt5217 = 0;
+        Static265.anInt5765 = 0;
+        Static231.anInt5203 = 0;
+        Static248.anInt4232 = 0;
+        Static245.anInt5375 = 0;
+        Static57.anInt1744 = 0;
+        Static251.anInt5449 = 0;
+        Static113.anInt4612 = 0;
+        Static233.anInt5225 = 0;
+        for (local3506 = 0; local3506 < VarcDomain.varcs.length; local3506++) {
+            VarcDomain.varcs[local3506] = -1;
+        }
+        if (InterfaceList.topLevelInterface != -1) {
+            InterfaceList.method2275(InterfaceList.topLevelInterface);
+        }
+        for (@Pc(3755) Class3_Sub31 local3755 = (Class3_Sub31) Static119.aClass133_9.head(); local3755 != null; local3755 = (Class3_Sub31) Static119.aClass133_9.next()) {
+            Static132.method2605(true, local3755);
+        }
+        InterfaceList.topLevelInterface = -1;
+        Static119.aClass133_9 = new HashTable(8);
+        InterfaceList.method1287();
+        Static39.aClass13_10 = null;
+        Static60.aBoolean108 = false;
+        Static231.anInt5204 = 0;
+        PlayerAppearance.DEFAULT.method1950(new int[] { 0, 0, 0, 0, 0 }, -1, false, null, -1);
+        for (local3506 = 0; local3506 < 8; local3506++) {
+            Static160.aClass100Array121[local3506] = null;
+            Static1.aBooleanArray1[local3506] = false;
+            Static191.anIntArray388[local3506] = -1;
+        }
+        Static102.method2073();
+        Static19.aBoolean43 = true;
+        for (local3506 = 0; local3506 < 100; local3506++) {
+            Static186.aBooleanArray100[local3506] = true;
+        }
+        ClanChat.size = 0;
+        ClanChat.members = null;
+        ClanChat.name = null;
+        for (local3506 = 0; local3506 < 6; local3506++) {
+            StockMarketManager.offers[local3506] = new StockMarketOffer();
+        }
+        for (local3506 = 0; local3506 < 25; local3506++) {
+            PlayerSkillXpTable.boostedLevels[local3506] = 0;
+            PlayerSkillXpTable.baseLevels[local3506] = 0;
+            PlayerSkillXpTable.experience[local3506] = 0;
+        }
+        if (GlRenderer.enabled) {
+            Static86.setInstantFade();
+        }
+        Static197.aBoolean228 = true;
+        Protocol.verifyId = 0;
+        Static195.aClass100_859 = LocalizedText.WALKHERE;
+        Static127.neverRemoveRoofs = false;
+        aShortArray88 = aShortArray19 = aShortArray74 = aShortArray87 = new short[256];
+        Static114.method4637();
+        Static261.aBoolean298 = false;
+        Static59.method1373();
+    }
+
+    @OriginalMember(owner = "client!client", name = "f", descriptor = "(I)V")
 	@Override
 	protected final void mainRedraw() {
 		if (gameState == 1000) {
@@ -714,7 +890,7 @@ public final class client extends GameShell {
 			worldListDefaultPort = GlobalConfig.DEFAULT_PORT + worldListId;
 		}
 		if (game == 1) {
-			Static172.shiftClick = true;
+			Cheat.shiftClick = true;
 			Static161.anInt3923 = 16777215;
 			Static161.anInt3922 = 0;
 			PlayerAppearance.aShortArrayArray2 = PlayerAppearance.aShortArrayArray4;
@@ -734,7 +910,7 @@ public final class client extends GameShell {
 		aShortArray88 = aShortArray19 = aShortArray74 = aShortArray87 = new short[256];
 		port = worldListPort;
 		if ((SignLink.anInt5928 == 3 && modeWhere != 2) || GlobalConfig.SELECT_DEFAULT_WORLD) {
-			Static125.worldId = worldListId;
+			Player.worldId = worldListId;
 		}
 		Keyboard.init();
 		Keyboard.start(GameShell.canvas);
@@ -798,7 +974,7 @@ public final class client extends GameShell {
 		if (GlRenderer.enabled) {
 			nextNpc:
 			for (@Pc(57) int local57 = 0; local57 < 32768; local57++) {
-				@Pc(66) Npc local66 = Static175.npcs[local57];
+				@Pc(66) Npc local66 = NpcList.npcs[local57];
 				if (local66 != null) {
 					@Pc(73) byte local73 = local66.type.aByte10;
 					if ((local73 & 0x2) > 0 && local66.movementQueueSize == 0 && Math.random() * 1000.0D < 10.0D) {
@@ -1326,7 +1502,7 @@ public final class client extends GameShell {
 		if (loop % 1000 == 1) {
 			@Pc(24) GregorianCalendar gregorianCalendar = new GregorianCalendar();
 			Static60.gregorianDateSeed = gregorianCalendar.get(Calendar.HOUR_OF_DAY) * 600 + gregorianCalendar.get(Calendar.MINUTE) * 10 + gregorianCalendar.get(Calendar.SECOND) / 6;
-			Static39.aRandom1.setSeed(Static60.gregorianDateSeed);
+			aRandom1.setSeed(Static60.gregorianDateSeed);
 		}
 		this.js5NetworkLoop();
 		if (js5MasterIndex != null) {
@@ -1358,7 +1534,7 @@ public final class client extends GameShell {
 			LoginManager.loopAuto();
 			LoginManager.loop();
 		} else if (gameState == 30) {
-			Static81.method1756();
+			Protocol.method1756();
 		} else if (gameState == 40) {
 			LoginManager.loop();
 			if (LoginManager.reply != -3) {

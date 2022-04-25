@@ -10,9 +10,6 @@ public final class Static59 {
 	@OriginalMember(owner = "client!ej", name = "bb", descriptor = "F")
 	public static float aFloat6;
 
-	@OriginalMember(owner = "client!ej", name = "U", descriptor = "I")
-	public static int anInt1812 = 0;
-
 	@OriginalMember(owner = "client!ej", name = "W", descriptor = "I")
 	public static int anInt1814 = 0;
 
@@ -21,7 +18,7 @@ public final class Static59 {
 		if (Static226.anInt3953 == 2) {
 			if (Static155.anInt3751 == Static277.anInt5850 && Static60.anInt1892 == Static280.anInt5895) {
 				Static226.anInt3953 = 0;
-				if (Static172.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static231.anInt5204 > 2) {
+				if (Cheat.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static231.anInt5204 > 2) {
 					Static103.method2232(Static231.anInt5204 - 2);
 				} else {
 					Static103.method2232(Static231.anInt5204 - 1);
@@ -29,7 +26,7 @@ public final class Static59 {
 			}
 		} else if (Static155.anInt3751 == Mouse.clickX && Static60.anInt1892 == Mouse.clickY) {
 			Static226.anInt3953 = 0;
-			if (Static172.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static231.anInt5204 > 2) {
+			if (Cheat.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static231.anInt5204 > 2) {
 				Static103.method2232(Static231.anInt5204 - 2);
 			} else {
 				Static103.method2232(Static231.anInt5204 - 1);

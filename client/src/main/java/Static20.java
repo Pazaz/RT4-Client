@@ -18,7 +18,7 @@ public final class Static20 {
 
     @OriginalMember(owner = "client!bj", name = "a", descriptor = "(III)J")
 	public static long method602(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		@Pc(7) Tile local7 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
+		@Pc(7) Tile local7 = SceneGraph.tiles[arg0][arg1][arg2];
 		return local7 == null || local7.aClass15_1 == null ? 0L : local7.aClass15_1.aLong26;
 	}
 }

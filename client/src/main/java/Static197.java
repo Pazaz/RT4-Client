@@ -122,7 +122,7 @@ public final class Static197 {
 		if (arg2 && arg1 > 0) {
 			GameShell.canvas.setIgnoreRepaint(true);
 			if (!Static211.aBoolean73) {
-				Static65.method1500();
+				SceneGraph.clear();
 				client.frameBuffer = null;
 				client.frameBuffer = Static131.create(GameShell.canvasHeight, GameShell.canvasWidth, GameShell.canvas);
 				SoftwareRaster.clear();
@@ -187,12 +187,12 @@ public final class Static197 {
 					Rasteriser.setBrightness(0.6F);
 				}
 			}
-			Static95.method1939();
+			GlTile.method1939();
 			Static114.method4637();
 		}
 		Static87.aBoolean130 = !SceneGraph.allLevelsAreVisible();
 		if (arg2) {
-			Static141.method2721();
+			client.method2721();
 		}
 		if (arg1 >= 2) {
 			Static124.aBoolean156 = true;

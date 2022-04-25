@@ -4,12 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static214 {
 
-	@OriginalMember(owner = "client!rg", name = "y", descriptor = "I")
-	public static int anInt5577;
-
-    @OriginalMember(owner = "client!rg", name = "r", descriptor = "[Lclient!na;")
-	public static final JagString[] aClass100Array170 = new JagString[200];
-
 	@OriginalMember(owner = "client!rg", name = "s", descriptor = "I")
 	public static int anInt5574 = -1;
 
@@ -18,9 +12,9 @@ public final class Static214 {
 
 	@OriginalMember(owner = "client!rg", name = "a", descriptor = "(Lclient!e;I)V")
 	public static void method4359(@OriginalArg(0) Player arg0) {
-		@Pc(12) AreaSound local12 = (AreaSound) Static93.aClass133_7.get(arg0.username.encode37());
+		@Pc(12) AreaSound local12 = (AreaSound) AreaSoundManager.aClass133_7.get(arg0.username.encode37());
 		if (local12 == null) {
-			Static122.method2411(arg0.movementQueueZ[0], null, 0, null, arg0.movementQueueX[0], Player.level, arg0);
+			AreaSoundManager.add(arg0.movementQueueZ[0], null, 0, null, arg0.movementQueueX[0], Player.level, arg0);
 		} else {
 			local12.update();
 		}

@@ -8,9 +8,6 @@ public final class Static175 {
 	@OriginalMember(owner = "client!nm", name = "W", descriptor = "Lclient!na;")
 	public static JagString url;
 
-	@OriginalMember(owner = "client!nm", name = "S", descriptor = "[Lclient!km;")
-	public static final Npc[] npcs = new Npc[32768];
-
 	@OriginalMember(owner = "client!nm", name = "U", descriptor = "I")
 	public static int mapFilesMissingCount = 0;
 

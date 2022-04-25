@@ -6,13 +6,16 @@ import java.awt.*;
 import java.awt.Font;
 
 public class LoadingBarAwt {
+    @OriginalMember(owner = "client!tg", name = "a", descriptor = "Ljava/awt/FontMetrics;")
+    public static FontMetrics aFontMetrics1;
+
     @OriginalMember(owner = "client!bc", name = "a", descriptor = "(Ljava/awt/Color;ZZLclient!na;I)V")
     public static void render(@OriginalArg(0) Color arg0, @OriginalArg(2) boolean arg1, @OriginalArg(3) JagString arg2, @OriginalArg(4) int arg3) {
         try {
             @Pc(6) Graphics local6 = GameShell.canvas.getGraphics();
             if (Static222.aFont1 == null) {
                 Static222.aFont1 = new Font("Helvetica", 1, 13);
-                Static240.aFontMetrics1 = GameShell.canvas.getFontMetrics(Static222.aFont1);
+                aFontMetrics1 = GameShell.canvas.getFontMetrics(Static222.aFont1);
             }
             if (arg1) {
                 local6.setColor(Color.black);
@@ -34,7 +37,7 @@ public class LoadingBarAwt {
                 local56.fillRect(arg3 * 3 + 2, 2, 300 - arg3 * 3, 30);
                 local56.setFont(Static222.aFont1);
                 local56.setColor(Color.white);
-                arg2.method3112(22, (304 - arg2.method3155(Static240.aFontMetrics1)) / 2, local56);
+                arg2.method3112(22, (304 - arg2.method3155(aFontMetrics1)) / 2, local56);
                 local6.drawImage(Static149.anImage3, GameShell.canvasWidth / 2 - 152, GameShell.canvasHeight / 2 + -18, null);
             } catch (@Pc(134) Exception local134) {
                 @Pc(140) int local140 = GameShell.canvasWidth / 2 - 152;
@@ -47,12 +50,12 @@ public class LoadingBarAwt {
                 local6.fillRect(arg3 * 3 + local140 + 2, local146 + 2, 300 - arg3 * 3, 30);
                 local6.setFont(Static222.aFont1);
                 local6.setColor(Color.white);
-                arg2.method3112(local146 + 22, local140 + (-arg2.method3155(Static240.aFontMetrics1) + 304) / 2, local6);
+                arg2.method3112(local146 + 22, local140 + (-arg2.method3155(aFontMetrics1) + 304) / 2, local6);
             }
             if (Static278.mainLoadPrimaryText != null) {
                 local6.setFont(Static222.aFont1);
                 local6.setColor(Color.white);
-                Static278.mainLoadPrimaryText.method3112(GameShell.canvasHeight / 2 - 26, GameShell.canvasWidth / 2 - Static278.mainLoadPrimaryText.method3155(Static240.aFontMetrics1) / 2, local6);
+                Static278.mainLoadPrimaryText.method3112(GameShell.canvasHeight / 2 - 26, GameShell.canvasWidth / 2 - Static278.mainLoadPrimaryText.method3155(aFontMetrics1) / 2, local6);
             }
         } catch (@Pc(252) Exception local252) {
             GameShell.canvas.repaint();
@@ -61,7 +64,7 @@ public class LoadingBarAwt {
 
     @OriginalMember(owner = "client!n", name = "a", descriptor = "(B)V")
     public static void clear() {
-        Static240.aFontMetrics1 = null;
+        aFontMetrics1 = null;
         Static222.aFont1 = null;
         Static149.anImage3 = null;
     }

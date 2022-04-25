@@ -47,8 +47,8 @@ public final class Static4 {
 		if (arg0 == null) {
 			return -1;
 		}
-		for (@Pc(20) int local20 = 0; local20 < Static9.anInt178; local20++) {
-			if (arg0.equalsIgnoreCase(Static122.aClass100Array92[local20])) {
+		for (@Pc(20) int local20 = 0; local20 < FriendsList.size; local20++) {
+			if (arg0.equalsIgnoreCase(FriendsList.usernames[local20])) {
 				return local20;
 			}
 		}
@@ -93,7 +93,7 @@ public final class Static4 {
 				local176.mouseY = local130;
 				Static82.method1767(local176);
 			}
-			if (Static22.anInt723 == 0) {
+			if (Mouse.pressedButton == 0) {
 				if (Static138.aBoolean172) {
 					if (Static105.aClass13_14.anObjectArray16 != null) {
 						local176 = new HookRequest();

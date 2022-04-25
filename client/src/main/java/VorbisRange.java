@@ -97,7 +97,7 @@ public final class VorbisRange {
 		@Pc(22) int local22 = 0;
 		@Pc(32) int local32 = local3 < 0 ? local18 - 1 : local18 + 1;
 		@Pc(43) int local43 = local14 - (local18 < 0 ? -local18 : local18) * local7;
-		arg4[arg0] *= Static108.aFloatArray8[arg1];
+		arg4[arg0] *= VorbisFloor.INVERSE_DB_TABLE[arg1];
 		if (arg2 > arg5) {
 			arg2 = arg5;
 		}
@@ -109,7 +109,7 @@ public final class VorbisRange {
 			} else {
 				local20 += local18;
 			}
-			arg4[local61] *= Static108.aFloatArray8[local20];
+			arg4[local61] *= VorbisFloor.INVERSE_DB_TABLE[local20];
 		}
 	}
 
@@ -196,7 +196,7 @@ public final class VorbisRange {
 				local27 = local53;
 			}
 		}
-		@Pc(193) float local193 = Static108.aFloatArray8[local27];
+		@Pc(193) float local193 = VorbisFloor.INVERSE_DB_TABLE[local27];
 		for (local49 = local20; local49 < arg1; local49++) {
 			arg0[local49] *= local193;
 		}

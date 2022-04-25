@@ -2,9 +2,6 @@ import org.openrs2.deob.annotation.OriginalMember;
 
 public final class Static67 {
 
-	@OriginalMember(owner = "client!fe", name = "x", descriptor = "I")
-	public static int anInt3356;
-
 	@OriginalMember(owner = "client!fe", name = "lc", descriptor = "[Lclient!qf;")
 	public static Sprite[] mapfuncs;
 

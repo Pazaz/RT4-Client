@@ -5,9 +5,6 @@ public final class Static61 {
 	@OriginalMember(owner = "client!en", name = "z", descriptor = "F")
 	public static float aFloat7;
 
-	@OriginalMember(owner = "client!en", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_422 = JagString.parse("::fpsoff");
-
 	@OriginalMember(owner = "client!en", name = "h", descriptor = "Lclient!na;")
 	public static final JagString aClass100_423 = JagString.parse(":chalreq:");
 

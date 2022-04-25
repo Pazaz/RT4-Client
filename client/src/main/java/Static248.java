@@ -11,14 +11,7 @@ public final class Static248 {
 	@OriginalMember(owner = "client!uc", name = "a", descriptor = "I")
 	public static int anInt4229 = 2;
 
-	@OriginalMember(owner = "client!uc", name = "a", descriptor = "(IB)Z")
-	public static boolean method3288(@OriginalArg(0) int arg0) {
-		Protocol.verifyId = arg0 + 1 & 0xFFFF;
-		Static34.verifyIdChanged = true;
-		return true;
-	}
-
-	@OriginalMember(owner = "client!uc", name = "a", descriptor = "(II)I")
+    @OriginalMember(owner = "client!uc", name = "a", descriptor = "(II)I")
 	public static int method3289(@OriginalArg(0) int arg0) {
 		@Pc(9) int local9 = (arg0 >>> 1 & 0xD5555555) + (arg0 & 0x55555555);
 		@Pc(19) int local19 = (local9 >>> 2 & 0x33333333) + (local9 & 0x33333333);
@@ -40,7 +33,7 @@ public final class Static248 {
 		@Pc(37) int local37;
 		@Pc(183) int local183;
 		for (@Pc(23) int local23 = Static235.anInt5276; local23 < Static126.anInt3114; local23++) {
-			@Pc(30) Tile[][] local30 = Static130.aClass3_Sub5ArrayArrayArray1[local23];
+			@Pc(30) Tile[][] local30 = SceneGraph.tiles[local23];
 			for (local32 = Static31.anInt987; local32 < Static2.anInt15; local32++) {
 				for (local37 = Static80.anInt4698; local37 < Static215.anInt4866; local37++) {
 					@Pc(46) Tile local46 = local30[local32][local37];
@@ -109,14 +102,14 @@ public final class Static248 {
 						WaterMaterialRenderer.method619(local285.anInt2486);
 						Static161.method3066(WaterMaterialRenderer.method2422());
 					}
-					local285.method1944(Static130.aClass3_Sub5ArrayArrayArray1, local294, false);
+					local285.method1944(SceneGraph.tiles, local294, false);
 				}
 				UnderwaterMaterialRenderer.method4608();
 			} else {
 				local32 = Static235.anInt5276;
 				while (true) {
 					if (local32 >= Static126.anInt3114) {
-						Static120.method2402(Static167.anInt4069, Static193.anInt4539, Static130.aClass3_Sub5ArrayArrayArray1);
+						Static120.method2402(Static167.anInt4069, Static193.anInt4539, SceneGraph.tiles);
 						break;
 					}
 					for (local37 = 0; local37 < Static182.aClass3_Sub14ArrayArray2[local32].length; local37++) {
@@ -125,7 +118,7 @@ public final class Static248 {
 						if (local336.anInt2485 != -1 && Rasteriser.textureProvider.method3237(local336.anInt2485) == 4 && Preferences.highWaterDetail) {
 							WaterMaterialRenderer.method619(local336.anInt2486);
 						}
-						local336.method1944(Static130.aClass3_Sub5ArrayArrayArray1, local350, false);
+						local336.method1944(SceneGraph.tiles, local350, false);
 					}
 					if (local32 == 0 && Preferences.sceneryShadowsType > 0) {
 						GlRenderer.method4159(101.5F);
@@ -144,7 +137,7 @@ public final class Static248 {
 		@Pc(415) int local415;
 		@Pc(428) int local428;
 		for (local399 = Static235.anInt5276; local399 < Static126.anInt3114; local399++) {
-			local406 = Static130.aClass3_Sub5ArrayArrayArray1[local399];
+			local406 = SceneGraph.tiles[local399];
 			for (local37 = -Static277.tileVisibilityDistance; local37 <= 0; local37++) {
 				local415 = Static167.anInt4069 + local37;
 				local183 = Static167.anInt4069 - local37;
@@ -191,7 +184,7 @@ public final class Static248 {
 			}
 		}
 		for (local399 = Static235.anInt5276; local399 < Static126.anInt3114; local399++) {
-			local406 = Static130.aClass3_Sub5ArrayArrayArray1[local399];
+			local406 = SceneGraph.tiles[local399];
 			for (local37 = -Static277.tileVisibilityDistance; local37 <= 0; local37++) {
 				local415 = Static167.anInt4069 + local37;
 				local183 = Static167.anInt4069 - local37;

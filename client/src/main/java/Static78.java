@@ -35,7 +35,7 @@ public final class Static78 {
 		Protocol.outboundBuffer.offset = 0;
 		Protocol.outboundBuffer.p1(186);
 		if (GlobalConfig.LOGIN_USE_STRINGS) {
-			Protocol.outboundBuffer.pjstr(Base37.decodeLowerCase(name));
+			Protocol.outboundBuffer.pjstr(Base37.decode37(name));
 		} else {
 			Protocol.outboundBuffer.p8(name);
 		}

@@ -22,9 +22,6 @@ public final class Static263 {
 	@OriginalMember(owner = "client!vg", name = "f", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1081 = JagString.parse("<col=80ff00>");
 
-	@OriginalMember(owner = "client!vg", name = "h", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1082 = JagString.parse("; Expires=");
-
 	@OriginalMember(owner = "client!vg", name = "a", descriptor = "(I[S)[S")
 	public static short[] method4511(@OriginalArg(1) short[] arg0) {
 		if (arg0 == null) {
@@ -54,7 +51,7 @@ public final class Static263 {
 		if (local8.anInt453 > 0) {
 			local37 = Static249.method4265(local8);
 		}
-		if (!local37 || !Static36.method940(local8).method503(arg2 - 1)) {
+		if (!local37 || !InterfaceList.getServerActiveProperties(local8).method503(arg2 - 1)) {
 			return;
 		}
 		if (arg2 == 1) {

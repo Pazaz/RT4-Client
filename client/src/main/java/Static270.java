@@ -19,10 +19,7 @@ public final class Static270 {
 	@OriginalMember(owner = "client!wb", name = "e", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1090 = JagString.parse("l");
 
-	@OriginalMember(owner = "client!wb", name = "m", descriptor = "Lclient!na;")
-	public static JagString aClass100_1094 = null;
-
-	@OriginalMember(owner = "client!wb", name = "a", descriptor = "(IIIIIIII)V")
+    @OriginalMember(owner = "client!wb", name = "a", descriptor = "(IIIIIIII)V")
 	public static void method4594(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6) {
 		@Pc(7) int local7 = 0;
 		@Pc(9) int local9 = arg5;

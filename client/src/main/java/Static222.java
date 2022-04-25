@@ -14,10 +14,7 @@ public final class Static222 {
 	@OriginalMember(owner = "client!sa", name = "W", descriptor = "Z")
 	public static boolean instantScreenFade = true;
 
-	@OriginalMember(owner = "client!sa", name = "Y", descriptor = "I")
-	public static volatile int anInt4973 = 0;
-
-	@OriginalMember(owner = "client!sa", name = "c", descriptor = "(III)I")
+    @OriginalMember(owner = "client!sa", name = "c", descriptor = "(III)I")
 	public static int method3825(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
 		@Pc(12) int local12 = arg0 >>> 31;
 		return (arg0 + local12) / arg1 - local12;

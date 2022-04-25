@@ -104,7 +104,7 @@ public final class HashTable {
 	}
 
 	@OriginalMember(owner = "client!sc", name = "e", descriptor = "(I)I")
-	public final int method3864() {
+	public final int size() {
 		@Pc(15) int local15 = 0;
 		for (@Pc(17) int local17 = 0; local17 < this.anInt5023; local17++) {
 			@Pc(26) Node local26 = this.aClass3Array1[local17];

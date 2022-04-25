@@ -5,9 +5,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static89 {
 
-	@OriginalMember(owner = "client!ha", name = "i", descriptor = "Lclient!qf;")
-	public static Sprite aClass3_Sub2_Sub1_5;
-
 	@OriginalMember(owner = "client!ha", name = "k", descriptor = "[[Z")
 	public static boolean[][] aBooleanArrayArray3;
 
@@ -113,7 +110,7 @@ public final class Static89 {
 			if (Static226.anInt3953 != 0) {
 				Static155.anInt3751 = Static277.anInt5850;
 				Static60.anInt1892 = Static280.anInt5895;
-			} else if (Static150.clickButton == 0) {
+			} else if (Mouse.clickButton == 0) {
 				Static155.anInt3751 = Mouse.anInt4873;
 				Static60.anInt1892 = Mouse.anInt5032;
 			} else {
@@ -204,8 +201,8 @@ public final class Static89 {
 		@Pc(9) int local9 = arg2;
 		@Pc(12) int local12 = -arg2;
 		@Pc(14) int local14 = -1;
-		@Pc(22) int local22 = Static78.method1690(Static224.anInt5063, arg2 + arg3, Static172.anInt4164);
-		@Pc(30) int local30 = Static78.method1690(Static224.anInt5063, arg3 - arg2, Static172.anInt4164);
+		@Pc(22) int local22 = Static78.method1690(TextureOp29.anInt5063, arg2 + arg3, TextureOp29.anInt4164);
+		@Pc(30) int local30 = Static78.method1690(TextureOp29.anInt5063, arg3 - arg2, TextureOp29.anInt4164);
 		Static131.method2576(Static71.anIntArrayArray10[arg1], local30, local22, arg0);
 		while (local7 < local9) {
 			local14 += 2;
@@ -219,13 +216,13 @@ public final class Static89 {
 				local58 = arg1 - local9;
 				local12 -= local9 << 1;
 				local68 = arg1 + local9;
-				if (local68 >= Static267.anInt5773 && local58 <= Static106.anInt2869) {
-					local84 = Static78.method1690(Static224.anInt5063, arg3 + local7, Static172.anInt4164);
-					local93 = Static78.method1690(Static224.anInt5063, arg3 - local7, Static172.anInt4164);
-					if (Static106.anInt2869 >= local68) {
+				if (local68 >= TextureOp29.anInt5773 && local58 <= TextureOp29.anInt2869) {
+					local84 = Static78.method1690(TextureOp29.anInt5063, arg3 + local7, TextureOp29.anInt4164);
+					local93 = Static78.method1690(TextureOp29.anInt5063, arg3 - local7, TextureOp29.anInt4164);
+					if (TextureOp29.anInt2869 >= local68) {
 						Static131.method2576(Static71.anIntArrayArray10[local68], local93, local84, arg0);
 					}
-					if (Static267.anInt5773 <= local58) {
+					if (TextureOp29.anInt5773 <= local58) {
 						Static131.method2576(Static71.anIntArrayArray10[local58], local93, local84, arg0);
 					}
 				}
@@ -233,13 +230,13 @@ public final class Static89 {
 			local7++;
 			local58 = arg1 - local7;
 			local68 = local7 + arg1;
-			if (local68 >= Static267.anInt5773 && Static106.anInt2869 >= local58) {
-				local84 = Static78.method1690(Static224.anInt5063, arg3 + local9, Static172.anInt4164);
-				local93 = Static78.method1690(Static224.anInt5063, arg3 - local9, Static172.anInt4164);
-				if (local68 <= Static106.anInt2869) {
+			if (local68 >= TextureOp29.anInt5773 && TextureOp29.anInt2869 >= local58) {
+				local84 = Static78.method1690(TextureOp29.anInt5063, arg3 + local9, TextureOp29.anInt4164);
+				local93 = Static78.method1690(TextureOp29.anInt5063, arg3 - local9, TextureOp29.anInt4164);
+				if (local68 <= TextureOp29.anInt2869) {
 					Static131.method2576(Static71.anIntArrayArray10[local68], local93, local84, arg0);
 				}
-				if (local58 >= Static267.anInt5773) {
+				if (local58 >= TextureOp29.anInt5773) {
 					Static131.method2576(Static71.anIntArrayArray10[local58], local93, local84, arg0);
 				}
 			}

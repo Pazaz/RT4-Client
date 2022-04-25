@@ -16,18 +16,6 @@ public final class Static241 {
     @OriginalMember(owner = "client!th", name = "n", descriptor = "Z")
 	public static boolean aBoolean302 = false;
 
-	@OriginalMember(owner = "client!th", name = "a", descriptor = "(DI)V")
-	public static void method4537(@OriginalArg(0) double arg0) {
-		if (Static122.aDouble1 == arg0) {
-			return;
-		}
-		for (@Pc(12) int local12 = 0; local12 < 256; local12++) {
-			@Pc(25) int local25 = (int) (Math.pow((double) local12 / 255.0D, arg0) * 255.0D);
-			Static103.anIntArray253[local12] = local25 > 255 ? 255 : local25;
-		}
-		Static122.aDouble1 = arg0;
-	}
-
 	@OriginalMember(owner = "client!th", name = "a", descriptor = "(ZIIII)V")
 	public static void setWindowMode(@OriginalArg(0) boolean arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		Static97.aLong89 = 0L;
@@ -134,7 +122,7 @@ public final class Static241 {
 	@OriginalMember(owner = "client!th", name = "a", descriptor = "(Z)V")
 	public static void method4548() {
 		Static172.aClass3_Sub3_Sub4_2.method4446();
-		Static14.anInt441 = 1;
+		MidiPlayer.anInt441 = 1;
 		Static172.aClass153_70 = null;
 	}
 }

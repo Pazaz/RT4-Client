@@ -49,7 +49,7 @@ public class GlSprite extends Sprite {
 		this.anInt1861 = arg0.anInt1861;
 		this.anInt1867 = arg0.anInt1867;
 		this.anInt1859 = arg0.anInt1859;
-		this.method1430(arg0.anIntArray20);
+		this.method1430(arg0.pixels);
 		this.method1431();
 	}
 

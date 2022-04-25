@@ -189,7 +189,7 @@ public final class Static260 {
 			}
 			local14.unlink();
 		}
-		for (local14 = (AreaSound) Static93.aClass133_7.head(); local14 != null; local14 = (AreaSound) Static93.aClass133_7.next()) {
+		for (local14 = (AreaSound) AreaSoundManager.aClass133_7.head(); local14 != null; local14 = (AreaSound) AreaSoundManager.aClass133_7.next()) {
 			if (local14.primaryStream != null) {
 				client.soundStream.removeSubStream(local14.primaryStream);
 				local14.primaryStream = null;

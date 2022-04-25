@@ -12,12 +12,7 @@ public final class Static195 {
     @OriginalMember(owner = "client!pk", name = "bb", descriptor = "Lclient!na;")
 	public static JagString aClass100_859;
 
-    @OriginalMember(owner = "client!pk", name = "f", descriptor = "(B)I")
-	public static int getIdleLoops() {
-		return Keyboard.idleLoops;
-	}
-
-	@OriginalMember(owner = "client!pk", name = "i", descriptor = "(I)V")
+    @OriginalMember(owner = "client!pk", name = "i", descriptor = "(I)V")
 	public static void method3532() {
 		for (@Pc(16) ProjAnimNode local16 = (ProjAnimNode) Static217.aClass69_116.method2289(); local16 != null; local16 = (ProjAnimNode) Static217.aClass69_116.method2288()) {
 			@Pc(21) ProjAnim local21 = local16.aClass8_Sub6_1;
@@ -25,7 +20,7 @@ public final class Static195 {
 				local16.unlink();
 			} else if (client.loop >= local21.anInt4822) {
 				if (local21.anInt4819 > 0) {
-					@Pc(54) Npc local54 = Static175.npcs[local21.anInt4819 - 1];
+					@Pc(54) Npc local54 = NpcList.npcs[local21.anInt4819 - 1];
 					if (local54 != null && local54.xFine >= 0 && local54.xFine < 13312 && local54.zFine >= 0 && local54.zFine < 13312) {
 						local21.method3705(local54.zFine, client.loop, SceneGraph.getTileHeight(local21.anInt4810, local54.xFine, local54.zFine) - local21.anInt4805, local54.xFine);
 					}

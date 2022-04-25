@@ -124,7 +124,7 @@ public final class JagString implements StringInterface {
         return local13.method3151();
     }
 
-    @OriginalMember(owner = "client!na", name = "a", descriptor = "(Z)Ljava/net/URL;")
+	@OriginalMember(owner = "client!na", name = "a", descriptor = "(Z)Ljava/net/URL;")
 	public final URL method3107() throws MalformedURLException {
 		return new URL(new String(this.chars, 0, this.length));
 	}
@@ -343,7 +343,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(B)Lclient!na;")
-	public final JagString method3125() {
+	public final JagString toTitleCase() {
 		@Pc(9) JagString local9 = new JagString();
 		local9.length = this.length;
 		local9.chars = new byte[this.length];
@@ -438,7 +438,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "c", descriptor = "(Z)V")
-	public final void method3129() {
+	public final void print() {
 		@Pc(16) String local16;
 		try {
 			local16 = new String(this.chars, 0, this.length, "ISO-8859-1");
@@ -911,7 +911,7 @@ public final class JagString implements StringInterface {
 
 	@OriginalMember(owner = "client!na", name = "k", descriptor = "(I)Lclient!na;")
 	public final JagString method3159() {
-		@Pc(9) JagString local9 = Base37.decodeLowerCase(this.encode37());
+		@Pc(9) JagString local9 = Base37.decode37(this.encode37());
 		return local9 == null ? Static228.aClass100_967 : local9;
 	}
 

@@ -42,16 +42,16 @@ public final class Static273 {
 					local48 = 2;
 				}
 				if (local46 == 1) {
-					local41 = Static99.anIntArray240[local33[local39++]];
+					local41 = PlayerSkillXpTable.boostedLevels[local33[local39++]];
 				}
 				if (local46 == 17) {
 					local48 = 3;
 				}
 				if (local46 == 2) {
-					local41 = Static141.anIntArray326[local33[local39++]];
+					local41 = PlayerSkillXpTable.baseLevels[local33[local39++]];
 				}
 				if (local46 == 3) {
-					local41 = Static227.anIntArray446[local33[local39++]];
+					local41 = PlayerSkillXpTable.experience[local33[local39++]];
 				}
 				@Pc(124) int local124;
 				@Pc(135) Component local135;
@@ -74,18 +74,18 @@ public final class Static273 {
 					local41 = Static7.varps[local33[local39++]];
 				}
 				if (local46 == 6) {
-					local41 = ObjType.anIntArray213[Static141.anIntArray326[local33[local39++]] - 1];
+					local41 = ObjType.anIntArray213[PlayerSkillXpTable.baseLevels[local33[local39++]] - 1];
 				}
 				if (local46 == 7) {
 					local41 = Static7.varps[local33[local39++]] * 100 / 46875;
 				}
 				if (local46 == 8) {
-					local41 = PlayerList.self.anInt1652;
+					local41 = PlayerList.self.combatLevel;
 				}
 				if (local46 == 9) {
 					for (local124 = 0; local124 < 25; local124++) {
 						if (Static182.aBooleanArray97[local124]) {
-							local41 += Static141.anIntArray326[local124];
+							local41 += PlayerSkillXpTable.baseLevels[local124];
 						}
 					}
 				}
@@ -104,10 +104,10 @@ public final class Static273 {
 					}
 				}
 				if (local46 == 11) {
-					local41 = Static12.anInt400;
+					local41 = Player.runEnergy;
 				}
 				if (local46 == 12) {
-					local41 = Static251.anInt5456;
+					local41 = Player.weight;
 				}
 				if (local46 == 13) {
 					local124 = Static7.varps[local33[local39++]];

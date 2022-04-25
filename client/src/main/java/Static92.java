@@ -7,12 +7,6 @@ public final class Static92 {
 	@OriginalMember(owner = "client!hd", name = "e", descriptor = "Lclient!qf;")
 	public static Sprite aClass3_Sub2_Sub1_6;
 
-	@OriginalMember(owner = "client!hd", name = "g", descriptor = "[J")
-	public static final long[] aLongArray3 = new long[200];
-
-	@OriginalMember(owner = "client!hd", name = "i", descriptor = "I")
-	public static int anInt2433 = 0;
-
 	@OriginalMember(owner = "client!hd", name = "l", descriptor = "Lclient!na;")
 	public static final JagString aClass100_510 = JagString.parse("null");
 

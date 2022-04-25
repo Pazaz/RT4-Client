@@ -32,7 +32,11 @@ public final class PlayerAppearance {
 	public static final short[] aShortArray64 = new short[] { -10304, 9104, -1, -1, -1 };
 	@OriginalMember(owner = "client!vd", name = "B", descriptor = "[S")
 	public static final short[] aShortArray71 = new short[] { 6798, 8741, 25238, 4626, 4550 };
-	@OriginalMember(owner = "client!cj", name = "e", descriptor = "[[S")
+    @OriginalMember(owner = "client!qi", name = "x", descriptor = "[I")
+    public static final int[] MALE_FEATURES = new int[] { 0, 1, 2, 3, 4, 5, 6, 14 };
+    @OriginalMember(owner = "client!kh", name = "g", descriptor = "Lclient!hh;")
+    public static final PlayerAppearance DEFAULT = new PlayerAppearance();
+    @OriginalMember(owner = "client!cj", name = "e", descriptor = "[[S")
     public static short[][] aShortArrayArray2;
 	@OriginalMember(owner = "client!nj", name = "m", descriptor = "[[S")
 	public static short[][] aShortArrayArray7;
@@ -62,7 +66,7 @@ public final class PlayerAppearance {
 	private int[][] anIntArrayArray19;
 
 	@OriginalMember(owner = "client!hh", name = "x", descriptor = "Z")
-	public boolean aBoolean141;
+	public boolean gender;
 
     @OriginalMember(owner = "client!wk", name = "b", descriptor = "(II)V")
     public static void clean() {
@@ -128,7 +132,7 @@ public final class PlayerAppearance {
 		for (local53 = 0; local53 < 5; local53++) {
 			this.aLong88 = local13[(int) (((long) this.anIntArray236[local53] ^ this.aLong88) & 0xFFL)] ^ this.aLong88 >>> 8;
 		}
-		this.aLong88 = local13[(int) (((long) (this.aBoolean141 ? 1 : 0) ^ this.aLong88) & 0xFFL)] ^ this.aLong88 >>> 8;
+		this.aLong88 = local13[(int) (((long) (this.gender ? 1 : 0) ^ this.aLong88) & 0xFFL)] ^ this.aLong88 >>> 8;
 		if (local8 != 0L && this.aLong88 != local8) {
 			aClass99_33.method3098(local8);
 		}
@@ -136,7 +140,7 @@ public final class PlayerAppearance {
 
 	@OriginalMember(owner = "client!hh", name = "a", descriptor = "(ZZ)V")
 	public final void method1948(@OriginalArg(0) boolean arg0) {
-		this.aBoolean141 = arg0;
+		this.gender = arg0;
 		this.method1947();
 	}
 
@@ -151,7 +155,7 @@ public final class PlayerAppearance {
 			for (@Pc(24) int local24 = 0; local24 < 8; local24++) {
 				for (@Pc(31) int local31 = 0; local31 < IdkTypeList.anInt1716; local31++) {
 					@Pc(38) IdkType local38 = IdkTypeList.get(local31);
-					if (local38 != null && !local38.aBoolean85 && local38.feature == (arg2 ? Static153.anIntArray351[local24] : Static204.anIntArray425[local24])) {
+					if (local38 != null && !local38.aBoolean85 && local38.feature == (arg2 ? Static153.anIntArray351[local24] : MALE_FEATURES[local24])) {
 						arg3[anIntArray451[local24]] = Integer.MIN_VALUE | local31;
 						break;
 					}
@@ -159,7 +163,7 @@ public final class PlayerAppearance {
 			}
 		}
 		this.anInt2492 = arg1;
-		this.aBoolean141 = arg2;
+		this.gender = arg2;
 		this.anIntArray236 = arg0;
 		this.anIntArray233 = arg3;
 		this.method1947();
@@ -238,7 +242,7 @@ public final class PlayerAppearance {
 					if ((local169 & Integer.MIN_VALUE) != 0 && !IdkTypeList.get(local169 & 0x3FFFFFFF).isBodyModelReady()) {
 						local158 = true;
 					}
-				} else if (!ObjTypeList.get(local169 & 0x3FFFFFFF).method1822(this.aBoolean141)) {
+				} else if (!ObjTypeList.get(local169 & 0x3FFFFFFF).method1822(this.gender)) {
 					local158 = true;
 				}
 			}
@@ -257,7 +261,7 @@ public final class PlayerAppearance {
 					local250 = local38[local169];
 					@Pc(272) RawModel local272;
 					if ((local250 & 0x40000000) != 0) {
-						local272 = ObjTypeList.get(local250 & 0x3FFFFFFF).getBodyModel(this.aBoolean141);
+						local272 = ObjTypeList.get(local250 & 0x3FFFFFFF).getBodyModel(this.gender);
 						if (local272 != null) {
 							local239[local169] = local272;
 						}
@@ -366,7 +370,7 @@ public final class PlayerAppearance {
 						local827 |= Static276.aClass3_Sub2_Sub7Array8[local353].isAlphaTransformed(local381);
 						local838 |= local858.aBoolean278;
 					}
-					if ((local858.tween || Static204.applyTweening) && local367 != -1 && local367 < local858.frames.length) {
+					if ((local858.tween || client.applyTweening) && local367 != -1 && local367 < local858.frames.length) {
 						Static262.anIntArray515[local353] = local858.anIntArray474[local374];
 						Static73.anIntArray183[local353] = arg0[local353].anInt5404;
 						local979 = local858.frames[local367];
@@ -404,7 +408,7 @@ public final class PlayerAppearance {
 				local827 |= local1042.isAlphaTransformed(local353);
 				local838 |= arg3.aBoolean278;
 			}
-			if ((arg3.tween || Static204.applyTweening) && arg1 != -1 && arg3.frames.length > arg1) {
+			if ((arg3.tween || client.applyTweening) && arg1 != -1 && arg3.frames.length > arg1) {
 				local360 = arg3.frames[arg1];
 				local451 = local360 >>> 16;
 				local360 &= 0xFFFF;
@@ -435,7 +439,7 @@ public final class PlayerAppearance {
 				local827 |= local1154.isAlphaTransformed(local979);
 				local838 |= arg2.aBoolean278;
 			}
-			if ((arg2.tween || Static204.applyTweening) && arg5 != -1 && arg2.frames.length > arg5) {
+			if ((arg2.tween || client.applyTweening) && arg5 != -1 && arg2.frames.length > arg5) {
 				local457 = arg2.anIntArray474[arg8];
 				local451 = arg2.frames[arg5];
 				local481 = local451 >>> 16;
@@ -491,7 +495,7 @@ public final class PlayerAppearance {
 					if ((local52 & Integer.MIN_VALUE) != 0 && !IdkTypeList.get(local52 & 0x3FFFFFFF).isHeadModelReady()) {
 						local42 = true;
 					}
-				} else if (!ObjTypeList.get(local52 & 0x3FFFFFFF).method1816(this.aBoolean141)) {
+				} else if (!ObjTypeList.get(local52 & 0x3FFFFFFF).method1816(this.gender)) {
 					local42 = true;
 				}
 			}
@@ -505,7 +509,7 @@ public final class PlayerAppearance {
 				local114 = this.anIntArray233[local104];
 				@Pc(134) RawModel local134;
 				if ((local114 & 0x40000000) != 0) {
-					local134 = ObjTypeList.get(local114 & 0x3FFFFFFF).getHeadModel(this.aBoolean141);
+					local134 = ObjTypeList.get(local114 & 0x3FFFFFFF).getHeadModel(this.gender);
 					if (local134 != null) {
 						local100[local52++] = local134;
 					}

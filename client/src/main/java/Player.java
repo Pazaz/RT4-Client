@@ -14,6 +14,14 @@ public final class Player extends PathingEntity {
 	public static int inTutorialIsland = 0;
 	@OriginalMember(owner = "client!ee", name = "b", descriptor = "I")
 	public static int level;
+    @OriginalMember(owner = "client!bb", name = "E", descriptor = "I")
+    public static int runEnergy = 0;
+	@OriginalMember(owner = "client!ug", name = "o", descriptor = "I")
+	public static int weight = 0;
+	@OriginalMember(owner = "client!jl", name = "H", descriptor = "I")
+	public static int worldId = -1;
+	@OriginalMember(owner = "client!em", name = "B", descriptor = "I")
+	public static int rebootTimer = 0;
 	@OriginalMember(owner = "client!e", name = "Bc", descriptor = "Lclient!hh;")
 	public PlayerAppearance appearance;
 
@@ -30,7 +38,7 @@ public final class Player extends PathingEntity {
 	public int anInt1650 = 0;
 
 	@OriginalMember(owner = "client!e", name = "yc", descriptor = "I")
-	public int anInt1652 = 0;
+	public int combatLevel = 0;
 
 	@OriginalMember(owner = "client!e", name = "Fc", descriptor = "I")
 	public int anInt1656 = 0;
@@ -209,11 +217,11 @@ public final class Player extends PathingEntity {
 		}
 		this.anInt3365 = arg0.g2();
 		@Pc(236) long local236 = arg0.g8();
-		this.username = Base37.decodeLowerCase(local236).method3125();
-		this.anInt1652 = arg0.g1();
+		this.username = Base37.decode37(local236).toTitleCase();
+		this.combatLevel = arg0.g1();
 		if (local37) {
 			this.anInt1671 = arg0.g2();
-			this.anInt1656 = this.anInt1652;
+			this.anInt1656 = this.combatLevel;
 			this.anInt1667 = -1;
 		} else {
 			this.anInt1671 = 0;
@@ -304,8 +312,8 @@ public final class Player extends PathingEntity {
 				if (local245 != null && local245.anInt4052 != -1) {
 					@Pc(291) int local291;
 					@Pc(302) int local302;
-					if (local245.anInt4058 == 1 && local245.anInt4057 >= 0 && Static175.npcs.length > local245.anInt4057) {
-						@Pc(278) Npc local278 = Static175.npcs[local245.anInt4057];
+					if (local245.anInt4058 == 1 && local245.anInt4057 >= 0 && NpcList.npcs.length > local245.anInt4057) {
+						@Pc(278) Npc local278 = NpcList.npcs[local245.anInt4057];
 						if (local278 != null) {
 							local291 = local278.xFine / 32 - PlayerList.self.xFine / 32;
 							local302 = local278.zFine / 32 - PlayerList.self.zFine / 32;

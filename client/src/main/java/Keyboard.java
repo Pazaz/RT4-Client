@@ -285,6 +285,11 @@ public final class Keyboard implements KeyListener, FocusListener {
         }
     }
 
+    @OriginalMember(owner = "client!pk", name = "f", descriptor = "(B)I")
+	public static int getIdleLoops() {
+		return idleLoops;
+	}
+
     @OriginalMember(owner = "client!uf", name = "keyPressed", descriptor = "(Ljava/awt/event/KeyEvent;)V")
 	@Override
 	public final synchronized void keyPressed(@OriginalArg(0) KeyEvent event) {

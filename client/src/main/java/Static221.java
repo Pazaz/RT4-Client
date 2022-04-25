@@ -13,9 +13,6 @@ public final class Static221 {
 	@OriginalMember(owner = "client!s", name = "d", descriptor = "I")
 	public static int anInt4364 = 0;
 
-	@OriginalMember(owner = "client!s", name = "g", descriptor = "Lclient!na;")
-	public static final JagString aClass100_821 = JagString.parse("document)3cookie=(R");
-
 	@OriginalMember(owner = "client!s", name = "b", descriptor = "(III)V")
 	public static void method3392(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
 		if (Static250.anInt5434 > 0) {
@@ -36,7 +33,7 @@ public final class Static221 {
 				@Pc(65) int local65 = SoftwareRaster.pixels[local24++ + arg0];
 				@Pc(70) int local70 = Static216.anIntArray188[local20++];
 				if (local70 == 0) {
-					Static167.aClass3_Sub2_Sub1_Sub1_3.anIntArray20[local26++] = local65;
+					Static167.aClass3_Sub2_Sub1_Sub1_3.pixels[local26++] = local65;
 				} else {
 					@Pc(76) int local76 = local70 + 18;
 					if (local76 > 255) {
@@ -47,16 +44,16 @@ public final class Static221 {
 						local89 = 255;
 					}
 					local70 = Static96.anIntArray235[local70];
-					Static167.aClass3_Sub2_Sub1_Sub1_3.anIntArray20[local26++] = (local89 * (local65 & 0xFF00FF) + (local70 & 0xFF00FF) * local76 & 0xFF00FF00) + ((local70 & 0xFF00) * local76 + ((local65 & 0xFF00) * local89) & 0xFF0000) >> 8;
+					Static167.aClass3_Sub2_Sub1_Sub1_3.pixels[local26++] = (local89 * (local65 & 0xFF00FF) + (local70 & 0xFF00FF) * local76 & 0xFF00FF00) + ((local70 & 0xFF00) * local76 + ((local65 & 0xFF00) * local89) & 0xFF0000) >> 8;
 				}
 			}
 			for (local55 = 0; local55 < local43; local55++) {
-				Static167.aClass3_Sub2_Sub1_Sub1_3.anIntArray20[local26++] = SoftwareRaster.pixels[arg0 + local24++];
+				Static167.aClass3_Sub2_Sub1_Sub1_3.pixels[local26++] = SoftwareRaster.pixels[arg0 + local24++];
 			}
 			local24 += SoftwareRaster.width - 128;
 		}
 		if (GlRenderer.enabled) {
-			Static46.method1178(Static167.aClass3_Sub2_Sub1_Sub1_3.anIntArray20, arg0, arg1, Static167.aClass3_Sub2_Sub1_Sub1_3.anInt1867, Static167.aClass3_Sub2_Sub1_Sub1_3.anInt1859);
+			Static46.method1178(Static167.aClass3_Sub2_Sub1_Sub1_3.pixels, arg0, arg1, Static167.aClass3_Sub2_Sub1_Sub1_3.anInt1867, Static167.aClass3_Sub2_Sub1_Sub1_3.anInt1859);
 		} else {
 			Static167.aClass3_Sub2_Sub1_Sub1_3.method1415(arg0, arg1);
 		}

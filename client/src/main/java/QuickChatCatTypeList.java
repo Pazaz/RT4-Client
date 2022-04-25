@@ -17,7 +17,7 @@ public class QuickChatCatTypeList {
     }
 
     @OriginalMember(owner = "client!tb", name = "b", descriptor = "(IB)Lclient!bc;")
-    public static QuickChatCatType method4045(@OriginalArg(0) int arg0) {
+    public static QuickChatCatType get(@OriginalArg(0) int arg0) {
         @Pc(10) QuickChatCatType local10 = (QuickChatCatType) types.get((long) arg0);
         if (local10 != null) {
             return local10;

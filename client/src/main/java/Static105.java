@@ -10,9 +10,6 @@ public final class Static105 {
 	@OriginalMember(owner = "client!ib", name = "c", descriptor = "Lclient!qi;")
 	public static final ColorImageCacheEntry VALID = new ColorImageCacheEntry(0, 0);
 
-	@OriginalMember(owner = "client!ib", name = "d", descriptor = "Lclient!gn;")
-	public static final LruHashTable aClass54_9 = new LruHashTable(128);
-
 	@OriginalMember(owner = "client!ib", name = "e", descriptor = "Lclient!be;")
 	public static Component aClass13_14 = null;
 
@@ -113,7 +110,7 @@ public final class Static105 {
 				if (local10 < 0 || local17 < 0 || local10 >= Static152.mapSizeX || local17 >= Static99.mapSizeZ) {
 					return false;
 				}
-				@Pc(42) Tile local42 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][local10][local17];
+				@Pc(42) Tile local42 = SceneGraph.tiles[arg0][local10][local17];
 				if (local42 != null && local42.anInt662 >= 5) {
 					return false;
 				}
@@ -148,11 +145,11 @@ public final class Static105 {
 					local115 += 2;
 				}
 				for (@Pc(141) int local141 = arg0; local141 >= 0; local141--) {
-					if (Static130.aClass3_Sub5ArrayArrayArray1[local141][local17][local108] == null) {
-						Static130.aClass3_Sub5ArrayArrayArray1[local141][local17][local108] = new Tile(local141, local17, local108);
+					if (SceneGraph.tiles[local141][local17][local108] == null) {
+						SceneGraph.tiles[local141][local17][local108] = new Tile(local141, local17, local108);
 					}
 				}
-				@Pc(174) Tile local174 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][local17][local108];
+				@Pc(174) Tile local174 = SceneGraph.tiles[arg0][local17][local108];
 				local174.aClass31Array1[local174.anInt662] = local58;
 				local174.anIntArray59[local174.anInt662] = local115;
 				local174.anInt664 |= local115;

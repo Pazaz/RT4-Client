@@ -44,13 +44,4 @@ public final class Static29 {
 		local9.anInt922 = arg2;
 	}
 
-    @OriginalMember(owner = "client!ce", name = "a", descriptor = "(IBI)Lclient!bn;")
-	public static Map method803(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		for (@Pc(10) Map local10 = (Map) MapList.aClass69_120.method2289(); local10 != null; local10 = (Map) MapList.aClass69_120.method2288()) {
-			if (local10.aBoolean50 && local10.method664(arg1, arg0)) {
-				return local10;
-			}
-		}
-		return null;
-	}
 }

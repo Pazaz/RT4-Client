@@ -10,10 +10,7 @@ public final class Static3 {
 	@OriginalMember(owner = "client!ab", name = "c", descriptor = "[Z")
 	public static final boolean[] aBooleanArray135 = new boolean[200];
 
-	@OriginalMember(owner = "client!ab", name = "j", descriptor = "[Lclient!na;")
-	public static final JagString[] stringStack = new JagString[1000];
-
-	@OriginalMember(owner = "client!ab", name = "n", descriptor = "Lclient!ih;")
+    @OriginalMember(owner = "client!ab", name = "n", descriptor = "Lclient!ih;")
 	public static final LinkedList aClass69_135 = new LinkedList();
 
 	@OriginalMember(owner = "client!ab", name = "a", descriptor = "(Lclient!na;I)V")

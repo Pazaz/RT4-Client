@@ -3,6 +3,9 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 public class TitleScreen {
+    @OriginalMember(owner = "client!cb", name = "cb", descriptor = "Lclient!na;")
+    public static final JagString aClass100_165 = JagString.parse("titlebg");
+
     @OriginalMember(owner = "client!oi", name = "a", descriptor = "(Lclient!ve;B)V")
     public static void load(@OriginalArg(0) Js5 archive) {
         if (Static18.loaded) {
@@ -35,7 +38,7 @@ public class TitleScreen {
 
     @OriginalMember(owner = "client!nd", name = "a", descriptor = "(ILclient!ve;)V")
     public static void init(@OriginalArg(1) Js5 arg0) {
-        Static262.bgId = arg0.getGroupId(Static27.aClass100_165);
+        Static262.bgId = arg0.getGroupId(aClass100_165);
         Static136.logoId = arg0.getGroupId(Static165.aClass100_776);
     }
 

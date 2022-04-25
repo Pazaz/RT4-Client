@@ -31,36 +31,6 @@ public final class Static19 {
 		}
 	}
 
-	@OriginalMember(owner = "client!bi", name = "f", descriptor = "(B)V")
-	public static void loop() {
-		@Pc(11) int local11;
-		for (local11 = -1; local11 < PlayerList.size; local11++) {
-			@Pc(22) int local22;
-			if (local11 == -1) {
-				local22 = 2047;
-			} else {
-				local22 = PlayerList.ids[local11];
-			}
-			@Pc(30) Player local30 = PlayerList.players[local22];
-			if (local30 != null && local30.chatLoops > 0) {
-				local30.chatLoops--;
-				if (local30.chatLoops == 0) {
-					local30.chatMessage = null;
-				}
-			}
-		}
-		for (local11 = 0; local11 < Static272.anInt5214; local11++) {
-			@Pc(68) int local68 = Static33.anIntArray79[local11];
-			@Pc(72) Npc local72 = Static175.npcs[local68];
-			if (local72 != null && local72.chatLoops > 0) {
-				local72.chatLoops--;
-				if (local72.chatLoops == 0) {
-					local72.chatMessage = null;
-				}
-			}
-		}
-	}
-
 	@OriginalMember(owner = "client!bi", name = "a", descriptor = "(IIBI)I")
 	public static int method588(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2) {
 		@Pc(19) int local19 = Rasteriser.palette[Static268.method4585(arg1, arg2)];

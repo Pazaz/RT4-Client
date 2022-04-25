@@ -69,7 +69,7 @@ public final class Static43 {
 		@Pc(100) Entity local100 = null;
 		@Pc(102) Entity local102 = null;
 		if (arg3 == 0) {
-			@Pc(110) Wall local110 = Static110.method2276(arg2, arg1, arg0);
+			@Pc(110) Wall local110 = SceneGraph.removeWall(arg2, arg1, arg0);
 			if (local110 != null) {
 				local100 = local110.aClass8_5;
 				local102 = local110.aClass8_6;

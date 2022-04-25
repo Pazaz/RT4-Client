@@ -23,7 +23,7 @@ public final class ServerActiveProperties extends Node {
 	}
 
 	@OriginalMember(owner = "client!bf", name = "d", descriptor = "(I)Z")
-	public final boolean method504() {
+	public final boolean isObjReplaceEnabled() {
 		return (this.anInt546 >> 29 & 0x1) != 0;
 	}
 
@@ -63,7 +63,7 @@ public final class ServerActiveProperties extends Node {
 	}
 
 	@OriginalMember(owner = "client!bf", name = "i", descriptor = "(I)I")
-	public final int method512() {
+	public final int getTargetMask() {
 		return Static199.method3594(this.anInt546);
 	}
 }

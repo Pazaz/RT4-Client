@@ -28,10 +28,10 @@ public final class Static170 {
 		local6.anInt733 = arg3;
 		local6.aLong26 = arg5;
 		local6.aBoolean49 = arg6;
-		if (Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2] == null) {
-			Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2] = new Tile(arg0, arg1, arg2);
+		if (SceneGraph.tiles[arg0][arg1][arg2] == null) {
+			SceneGraph.tiles[arg0][arg1][arg2] = new Tile(arg0, arg1, arg2);
 		}
-		Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2].aClass15_1 = local6;
+		SceneGraph.tiles[arg0][arg1][arg2].aClass15_1 = local6;
 	}
 
 	@OriginalMember(owner = "client!nh", name = "a", descriptor = "(IIIIIIIIIIIII)V")
