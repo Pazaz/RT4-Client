@@ -11,11 +11,8 @@ public final class Static230 {
 	@OriginalMember(owner = "client!sj", name = "p", descriptor = "I")
 	public static int anInt5150 = 1;
 
-	@OriginalMember(owner = "client!sj", name = "q", descriptor = "[Lclient!na;")
-	public static final JagString[] aClass100Array158 = new JagString[100];
-
-	@OriginalMember(owner = "client!sj", name = "t", descriptor = "I")
-	public static int anInt5152 = 0;
+    @OriginalMember(owner = "client!sj", name = "t", descriptor = "I")
+	public static int opcode2 = 0;
 
 	@OriginalMember(owner = "client!sj", name = "u", descriptor = "Z")
 	public static boolean dynamicMapRegion = false;

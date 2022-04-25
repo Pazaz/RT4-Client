@@ -121,7 +121,7 @@ public final class QuickChatPhraseType extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!cb", name = "a", descriptor = "(ILclient!wa;)Lclient!na;")
-	public final JagString method770(@OriginalArg(1) Buffer arg0) {
+	public final JagString decodeMessage(@OriginalArg(1) Buffer arg0) {
 		@Pc(17) JagString local17 = Static87.allocate(80);
 		if (this.anIntArray71 != null) {
 			for (@Pc(22) int local22 = 0; local22 < this.anIntArray71.length; local22++) {

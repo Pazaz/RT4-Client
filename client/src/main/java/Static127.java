@@ -83,7 +83,7 @@ public final class Static127 {
 			}
 		}
 		for (local96 = 0; local96 < 2048; local96++) {
-			@Pc(265) Player local265 = Static159.players[local96];
+			@Pc(265) Player local265 = PlayerList.players[local96];
 			if (local265 != null) {
 				for (local109 = 0; local109 < 10; local109++) {
 					local265.movementQueueX[local109] -= local86;
@@ -93,8 +93,8 @@ public final class Static127 {
 				local265.zFine -= local81 * 128;
 			}
 		}
-		Static55.level = arg0;
-		PlayerList.self.method1265(arg5, false, arg3);
+		Player.level = arg0;
+		PlayerList.self.teleport(arg5, false, arg3);
 		@Pc(322) byte local322 = 104;
 		@Pc(324) byte local324 = 0;
 		@Pc(326) byte local326 = 0;
@@ -244,7 +244,7 @@ public final class Static127 {
 				}
 				local29 = Runtime.getRuntime();
 				local38 = (int) ((local29.totalMemory() - local29.freeMemory()) / 1024L);
-				Static103.method2231(null, 0, JagString.concatenate(new JagString[] { Static202.aClass100_892, Static123.parseInt(local38), Static17.aClass100_101 }));
+				Chat.add(null, 0, JagString.concatenate(new JagString[] { Static202.aClass100_892, Static123.parseInt(local38), Static17.aClass100_101 }));
 			}
 			@Pc(117) int local117;
 			if (arg0.equalsIgnoreCase(Static154.aClass100_735)) {
@@ -254,17 +254,17 @@ public final class Static127 {
 				}
 				local29 = Runtime.getRuntime();
 				local38 = (int) ((local29.totalMemory() - local29.freeMemory()) / 1024L);
-				Static103.method2231(null, 0, JagString.concatenate(new JagString[] { Static203.aClass100_893, Static123.parseInt(local38), Static17.aClass100_101 }));
+				Chat.add(null, 0, JagString.concatenate(new JagString[] { Static203.aClass100_893, Static123.parseInt(local38), Static17.aClass100_101 }));
 				Static16.method501();
 				client.method2380();
 				for (local117 = 0; local117 < 10; local117++) {
 					System.gc();
 				}
 				local38 = (int) ((local29.totalMemory() - local29.freeMemory()) / 1024L);
-				Static103.method2231(null, 0, JagString.concatenate(new JagString[] { Cheat.aClass100_1093, Static123.parseInt(local38), Static17.aClass100_101 }));
+				Chat.add(null, 0, JagString.concatenate(new JagString[] { Cheat.aClass100_1093, Static123.parseInt(local38), Static17.aClass100_101 }));
 			}
 			if (arg0.equalsIgnoreCase(Static240.aClass100_1009)) {
-				Static103.method2231(null, 0, JagString.concatenate(new JagString[] { Static44.aClass100_335, Static123.parseInt(Static198.method1029()) }));
+				Chat.add(null, 0, JagString.concatenate(new JagString[] { Static44.aClass100_335, Static123.parseInt(Static198.method1029()) }));
 			}
 			if (GlRenderer.enabled && arg0.equalsIgnoreCase(Static201.aClass100_406)) {
 				System.out.println("oncard_geometry:" + GlCleaner.anInt1945);
@@ -330,8 +330,8 @@ public final class Static127 {
 				throw new RuntimeException();
 			}
 			if (arg0.startsWith(Cheat.aClass100_232)) {
-				Static199.rectDebug = arg0.substring(12).method3144().parseInt();
-				Static103.method2231(null, 0, JagString.concatenate(new JagString[] { Static276.aClass100_1096, Static123.parseInt(Static199.rectDebug) }));
+				Static199.rectDebug = arg0.substring(12).trim().parseInt();
+				Chat.add(null, 0, JagString.concatenate(new JagString[] { Static276.aClass100_1096, Static123.parseInt(Static199.rectDebug) }));
 			}
 			if (arg0.equalsIgnoreCase(Static181.aClass100_810)) {
 				Static121.aBoolean154 = true;
@@ -339,10 +339,10 @@ public final class Static127 {
 			if (arg0.equalsIgnoreCase(Static124.aClass100_596)) {
 				if (Static204.applyTweening) {
 					Static204.applyTweening = false;
-					Static103.method2231(null, 0, Cheat.aClass100_943);
+					Chat.add(null, 0, Cheat.aClass100_943);
 				} else {
 					Static204.applyTweening = true;
-					Static103.method2231(null, 0, Static50.aClass100_362);
+					Chat.add(null, 0, Static50.aClass100_362);
 				}
 			}
 			if (arg0.equalsIgnoreCase(Static114.aClass100_1099)) {

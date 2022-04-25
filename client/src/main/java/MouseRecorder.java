@@ -31,8 +31,8 @@ public final class MouseRecorder implements Runnable {
 			@Pc(12) Object local12 = this.lock;
 			synchronized (this.lock) {
 				if (this.samples < 500) {
-					this.x[this.samples] = Static215.anInt4873;
-					this.y[this.samples] = Static223.anInt5032;
+					this.x[this.samples] = Mouse.anInt4873;
+					this.y[this.samples] = Mouse.anInt5032;
 					this.samples++;
 				}
 			}

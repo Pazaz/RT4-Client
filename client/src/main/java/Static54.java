@@ -96,7 +96,7 @@ public final class Static54 {
 			}
 			for (local146 = 0; local146 < 104; local146++) {
 				for (local181 = 0; local181 < 104; local181++) {
-					@Pc(439) LinkedList local439 = Static159.aClass69ArrayArrayArray1[Static55.level][local146][local181];
+					@Pc(439) LinkedList local439 = Static159.aClass69ArrayArrayArray1[Player.level][local146][local181];
 					if (local439 != null) {
 						local154 = local146 * 4 + 2 - PlayerList.self.xFine / 32;
 						local231 = local181 * 4 + 2 - PlayerList.self.zFine / 32;
@@ -122,12 +122,12 @@ public final class Static54 {
 					}
 				}
 			}
-			for (local146 = 0; local146 < Static267.anInt5774; local146++) {
-				@Pc(591) Player local591 = Static159.players[Static105.anIntArray256[local146]];
+			for (local146 = 0; local146 < PlayerList.size; local146++) {
+				@Pc(591) Player local591 = PlayerList.players[PlayerList.ids[local146]];
 				if (local591 != null && local591.method2682()) {
 					local154 = local591.zFine / 32 - PlayerList.self.zFine / 32;
 					local150 = local591.xFine / 32 - PlayerList.self.xFine / 32;
-					@Pc(624) long local624 = local591.aClass100_364.encode37();
+					@Pc(624) long local624 = local591.username.encode37();
 					@Pc(626) boolean local626 = false;
 					for (local239 = 0; local239 < Static9.anInt178; local239++) {
 						if (local624 == Static92.aLongArray3[local239] && Static104.anIntArray255[local239] != 0) {
@@ -160,7 +160,7 @@ public final class Static54 {
 			@Pc(756) Class102[] local756 = Static143.aClass102Array1;
 			for (local181 = 0; local181 < local756.length; local181++) {
 				@Pc(770) Class102 local770 = local756[local181];
-				if (local770 != null && local770.anInt4058 != 0 && Static83.loop % 20 < 10) {
+				if (local770 != null && local770.anInt4058 != 0 && client.loop % 20 < 10) {
 					if (local770.anInt4058 == 1 && local770.anInt4057 >= 0 && local770.anInt4057 < Static175.npcs.length) {
 						@Pc(804) Npc local804 = Static175.npcs[local770.anInt4057];
 						if (local804 != null) {
@@ -174,8 +174,8 @@ public final class Static54 {
 						local231 = (-Static142.originZ + local770.anInt4046) * 4 + 2 - PlayerList.self.zFine / 32;
 						Static97.method1960(local770.anInt4048, arg1, arg2, local154, local231, arg3);
 					}
-					if (local770.anInt4058 == 10 && local770.anInt4057 >= 0 && Static159.players.length > local770.anInt4057) {
-						@Pc(905) Player local905 = Static159.players[local770.anInt4057];
+					if (local770.anInt4058 == 10 && local770.anInt4057 >= 0 && PlayerList.players.length > local770.anInt4057) {
+						@Pc(905) Player local905 = PlayerList.players[local770.anInt4057];
 						if (local905 != null) {
 							local200 = local905.zFine / 32 - PlayerList.self.zFine / 32;
 							local231 = local905.xFine / 32 - PlayerList.self.xFine / 32;

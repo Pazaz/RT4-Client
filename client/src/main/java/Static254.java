@@ -25,9 +25,9 @@ public final class Static254 {
 	@OriginalMember(owner = "client!uj", name = "a", descriptor = "(BZII[[[Lclient!bj;I)Z")
 	public static boolean method4348(@OriginalArg(1) boolean arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Tile[][][] arg3, @OriginalArg(5) int arg4) {
 		@Pc(14) byte local14 = arg0 ? 1 : (byte) (Static136.anInt3325 & 0xFF);
-		if (local14 == Static266.aByteArrayArrayArray15[Static55.level][arg1][arg2]) {
+		if (local14 == Static266.aByteArrayArrayArray15[Player.level][arg1][arg2]) {
 			return false;
-		} else if ((Static12.tileSettings[Static55.level][arg1][arg2] & 0x4) == 0) {
+		} else if ((Static12.tileSettings[Player.level][arg1][arg2] & 0x4) == 0) {
 			return false;
 		} else {
 			@Pc(47) int local47 = 0;
@@ -35,7 +35,7 @@ public final class Static254 {
 			Static259.anIntArray514[0] = arg1;
 			@Pc(69) int local69 = local49 + 1;
 			Static84.anIntArray209[0] = arg2;
-			Static266.aByteArrayArrayArray15[Static55.level][arg1][arg2] = local14;
+			Static266.aByteArrayArrayArray15[Player.level][arg1][arg2] = local14;
 			while (local47 != local69) {
 				@Pc(94) int local94 = Static259.anIntArray514[local47] >> 16 & 0xFF;
 				@Pc(102) int local102 = Static259.anIntArray514[local47] >> 24 & 0xFF;
@@ -45,12 +45,12 @@ public final class Static254 {
 				local47 = local47 + 1 & 0xFFF;
 				@Pc(130) boolean local130 = false;
 				@Pc(132) boolean local132 = false;
-				if ((Static12.tileSettings[Static55.level][local108][local122] & 0x4) == 0) {
+				if ((Static12.tileSettings[Player.level][local108][local122] & 0x4) == 0) {
 					local130 = true;
 				}
 				@Pc(150) int local150;
 				@Pc(191) int local191;
-				label238: for (local150 = Static55.level + 1; local150 <= 3; local150++) {
+				label238: for (local150 = Player.level + 1; local150 <= 3; local150++) {
 					if ((Static12.tileSettings[local150][local108][local122] & 0x8) == 0) {
 						@Pc(227) int local227;
 						@Pc(358) int local358;
@@ -105,8 +105,8 @@ public final class Static254 {
 					}
 				}
 				if (local132) {
-					if (Static83.activeTileHeightMap[Static55.level + 1][local108][local122] > Static79.anIntArray205[arg4]) {
-						Static79.anIntArray205[arg4] = Static83.activeTileHeightMap[Static55.level + 1][local108][local122];
+					if (Static83.activeTileHeightMap[Player.level + 1][local108][local122] > Static79.anIntArray205[arg4]) {
+						Static79.anIntArray205[arg4] = Static83.activeTileHeightMap[Player.level + 1][local108][local122];
 					}
 					local150 = local108 << 7;
 					if (local150 < Static149.anIntArray338[arg4]) {
@@ -122,58 +122,58 @@ public final class Static254 {
 					}
 				}
 				if (!local130) {
-					if (local108 >= 1 && Static266.aByteArrayArrayArray15[Static55.level][local108 - 1][local122] != local14) {
+					if (local108 >= 1 && Static266.aByteArrayArrayArray15[Player.level][local108 - 1][local122] != local14) {
 						Static259.anIntArray514[local69] = local108 - 1 | 0x120000 | 0xD3000000;
 						Static84.anIntArray209[local69] = local122 | 0x130000;
 						local69 = local69 + 1 & 0xFFF;
-						Static266.aByteArrayArrayArray15[Static55.level][local108 - 1][local122] = local14;
+						Static266.aByteArrayArrayArray15[Player.level][local108 - 1][local122] = local14;
 					}
 					local122++;
 					if (local122 < 104) {
-						if (local108 - 1 >= 0 && local14 != Static266.aByteArrayArrayArray15[Static55.level][local108 - 1][local122] && (Static12.tileSettings[Static55.level][local108][local122] & 0x4) == 0 && (Static12.tileSettings[Static55.level][local108 - 1][local122 - 1] & 0x4) == 0) {
+						if (local108 - 1 >= 0 && local14 != Static266.aByteArrayArrayArray15[Player.level][local108 - 1][local122] && (Static12.tileSettings[Player.level][local108][local122] & 0x4) == 0 && (Static12.tileSettings[Player.level][local108 - 1][local122 - 1] & 0x4) == 0) {
 							Static259.anIntArray514[local69] = 0x52000000 | 0x120000 | local108 - 1;
 							Static84.anIntArray209[local69] = local122 | 0x130000;
-							Static266.aByteArrayArrayArray15[Static55.level][local108 - 1][local122] = local14;
+							Static266.aByteArrayArrayArray15[Player.level][local108 - 1][local122] = local14;
 							local69 = local69 + 1 & 0xFFF;
 						}
-						if (local14 != Static266.aByteArrayArrayArray15[Static55.level][local108][local122]) {
+						if (local14 != Static266.aByteArrayArrayArray15[Player.level][local108][local122]) {
 							Static259.anIntArray514[local69] = local108 | 0x13000000 | 0x520000;
 							Static84.anIntArray209[local69] = local122 | 0x530000;
 							local69 = local69 + 1 & 0xFFF;
-							Static266.aByteArrayArrayArray15[Static55.level][local108][local122] = local14;
+							Static266.aByteArrayArrayArray15[Player.level][local108][local122] = local14;
 						}
-						if (local108 + 1 < 104 && Static266.aByteArrayArrayArray15[Static55.level][local108 + 1][local122] != local14 && (Static12.tileSettings[Static55.level][local108][local122] & 0x4) == 0 && (Static12.tileSettings[Static55.level][local108 + 1][local122 - 1] & 0x4) == 0) {
+						if (local108 + 1 < 104 && Static266.aByteArrayArrayArray15[Player.level][local108 + 1][local122] != local14 && (Static12.tileSettings[Player.level][local108][local122] & 0x4) == 0 && (Static12.tileSettings[Player.level][local108 + 1][local122 - 1] & 0x4) == 0) {
 							Static259.anIntArray514[local69] = 0x92000000 | 0x520000 | local108 + 1;
 							Static84.anIntArray209[local69] = local122 | 0x530000;
-							Static266.aByteArrayArrayArray15[Static55.level][local108 + 1][local122] = local14;
+							Static266.aByteArrayArrayArray15[Player.level][local108 + 1][local122] = local14;
 							local69 = local69 + 1 & 0xFFF;
 						}
 					}
 					local122--;
-					if (local108 + 1 < 104 && local14 != Static266.aByteArrayArrayArray15[Static55.level][local108 + 1][local122]) {
+					if (local108 + 1 < 104 && local14 != Static266.aByteArrayArrayArray15[Player.level][local108 + 1][local122]) {
 						Static259.anIntArray514[local69] = local108 + 1 | 0x920000 | 0x53000000;
 						Static84.anIntArray209[local69] = local122 | 0x930000;
-						Static266.aByteArrayArrayArray15[Static55.level][local108 + 1][local122] = local14;
+						Static266.aByteArrayArrayArray15[Player.level][local108 + 1][local122] = local14;
 						local69 = local69 + 1 & 0xFFF;
 					}
 					local122--;
 					if (local122 >= 0) {
-						if (local108 - 1 >= 0 && Static266.aByteArrayArrayArray15[Static55.level][local108 - 1][local122] != local14 && (Static12.tileSettings[Static55.level][local108][local122] & 0x4) == 0 && (Static12.tileSettings[Static55.level][local108 - 1][local122 + 1] & 0x4) == 0) {
+						if (local108 - 1 >= 0 && Static266.aByteArrayArrayArray15[Player.level][local108 - 1][local122] != local14 && (Static12.tileSettings[Player.level][local108][local122] & 0x4) == 0 && (Static12.tileSettings[Player.level][local108 - 1][local122 + 1] & 0x4) == 0) {
 							Static259.anIntArray514[local69] = local108 - 1 | 0xD20000 | 0x12000000;
 							Static84.anIntArray209[local69] = local122 | 0xD30000;
-							Static266.aByteArrayArrayArray15[Static55.level][local108 - 1][local122] = local14;
+							Static266.aByteArrayArrayArray15[Player.level][local108 - 1][local122] = local14;
 							local69 = local69 + 1 & 0xFFF;
 						}
-						if (local14 != Static266.aByteArrayArrayArray15[Static55.level][local108][local122]) {
+						if (local14 != Static266.aByteArrayArrayArray15[Player.level][local108][local122]) {
 							Static259.anIntArray514[local69] = local108 | 0xD20000 | 0x93000000;
 							Static84.anIntArray209[local69] = local122 | 0xD30000;
 							local69 = local69 + 1 & 0xFFF;
-							Static266.aByteArrayArrayArray15[Static55.level][local108][local122] = local14;
+							Static266.aByteArrayArrayArray15[Player.level][local108][local122] = local14;
 						}
-						if (local108 + 1 < 104 && Static266.aByteArrayArrayArray15[Static55.level][local108 + 1][local122] != local14 && (Static12.tileSettings[Static55.level][local108][local122] & 0x4) == 0 && (Static12.tileSettings[Static55.level][local108 + 1][local122 + 1] & 0x4) == 0) {
+						if (local108 + 1 < 104 && Static266.aByteArrayArrayArray15[Player.level][local108 + 1][local122] != local14 && (Static12.tileSettings[Player.level][local108][local122] & 0x4) == 0 && (Static12.tileSettings[Player.level][local108 + 1][local122 + 1] & 0x4) == 0) {
 							Static259.anIntArray514[local69] = local108 + 1 | 0xD2000000 | 0x920000;
 							Static84.anIntArray209[local69] = local122 | 0x930000;
-							Static266.aByteArrayArrayArray15[Static55.level][local108 + 1][local122] = local14;
+							Static266.aByteArrayArrayArray15[Player.level][local108 + 1][local122] = local14;
 							local69 = local69 + 1 & 0xFFF;
 						}
 					}

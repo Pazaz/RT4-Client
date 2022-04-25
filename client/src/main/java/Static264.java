@@ -22,8 +22,8 @@ public final class Static264 {
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "(ILclient!wa;)Lclient!bd;")
 	public static QuickChatPhrase method3568(@OriginalArg(1) Buffer arg0) {
 		@Pc(3) QuickChatPhrase local3 = new QuickChatPhrase();
-		local3.anInt439 = arg0.g2();
-		local3.aClass3_Sub2_Sub6_1 = QuickChatPhraseTypeList.get(local3.anInt439);
+		local3.id = arg0.g2();
+		local3.type = QuickChatPhraseTypeList.get(local3.id);
 		return local3;
 	}
 

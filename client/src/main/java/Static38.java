@@ -154,7 +154,7 @@ public final class Static38 {
 
 	@OriginalMember(owner = "client!cn", name = "b", descriptor = "(ZI)V")
 	public static void method964(@OriginalArg(0) boolean arg0) {
-		@Pc(3) int local3 = Static267.anInt5774;
+		@Pc(3) int local3 = PlayerList.size;
 		if (Static115.anInt2939 == PlayerList.self.xFine >> 7 && PlayerList.self.zFine >> 7 == Static84.anInt2255) {
 			Static115.anInt2939 = 0;
 		}
@@ -173,7 +173,7 @@ public final class Static38 {
 			if (arg0) {
 				local39 = PlayerList.self;
 			} else {
-				local39 = Static159.players[Static105.anIntArray256[local28]];
+				local39 = PlayerList.players[PlayerList.ids[local28]];
 			}
 			if (local39 != null && local39.method2682()) {
 				@Pc(55) int local55 = local39.getSize();
@@ -217,12 +217,12 @@ public final class Static38 {
 				local39 = PlayerList.self;
 				local272 = 8791798054912L;
 			} else {
-				local39 = Static159.players[Static105.anIntArray256[local28]];
-				local272 = (long) Static105.anIntArray256[local28] << 32;
+				local39 = PlayerList.players[PlayerList.ids[local28]];
+				local272 = (long) PlayerList.ids[local28] << 32;
 			}
 			if (local39 != null && local39.method2682()) {
 				local39.aBoolean98 = false;
-				if ((Preferences.manyIdleAnimations && Static267.anInt5774 > 200 || Static267.anInt5774 > 50) && !arg0 && local39.anInt3366 == local39.method2681().idleAnimationId) {
+				if ((Preferences.manyIdleAnimations && PlayerList.size > 200 || PlayerList.size > 50) && !arg0 && local39.anInt3366 == local39.method2681().idleAnimationId) {
 					local39.aBoolean98 = true;
 				}
 				local82 = local39.getSize();
@@ -279,13 +279,13 @@ public final class Static38 {
 						}
 					}
 				}
-				if (local39.attachment == null || Static83.loop < local39.anInt3390 || local39.anInt3375 <= Static83.loop) {
-					local39.anInt3424 = SceneGraph.getTileHeight(Static55.level, local39.xFine, local39.zFine);
-					Static43.method1141(Static55.level, local39.xFine, local39.zFine, local39.anInt3424, (local82 - 1) * 64 + 60, local39, local39.anInt3381, local272, local39.aBoolean171);
+				if (local39.attachment == null || client.loop < local39.anInt3390 || local39.anInt3375 <= client.loop) {
+					local39.anInt3424 = SceneGraph.getTileHeight(Player.level, local39.xFine, local39.zFine);
+					Static43.method1141(Player.level, local39.xFine, local39.zFine, local39.anInt3424, (local82 - 1) * 64 + 60, local39, local39.anInt3381, local272, local39.aBoolean171);
 				} else {
 					local39.aBoolean98 = false;
-					local39.anInt3424 = SceneGraph.getTileHeight(Static55.level, local39.xFine, local39.zFine);
-					Static184.method3387(Static55.level, local39.xFine, local39.zFine, local39.anInt3424, local39, local39.anInt3381, local272, local39.anInt3384, local39.anInt3374, local39.anInt3411, local39.anInt3410);
+					local39.anInt3424 = SceneGraph.getTileHeight(Player.level, local39.xFine, local39.zFine);
+					Static184.method3387(Player.level, local39.xFine, local39.zFine, local39.anInt3424, local39, local39.anInt3381, local272, local39.anInt3384, local39.anInt3374, local39.anInt3411, local39.anInt3410);
 				}
 			}
 		}

@@ -31,6 +31,8 @@ public class InterfaceList {
     public static int keyQueueSize = 0;
     @OriginalMember(owner = "client!je", name = "fb", descriptor = "I")
     public static int transmitTimer = 1;
+    @OriginalMember(owner = "client!ra", name = "J", descriptor = "I")
+    public static int miscTransmitAt = 0;
 
     @OriginalMember(owner = "client!ab", name = "a", descriptor = "(ZLclient!ve;Lclient!ve;Lclient!ve;Lclient!ve;)V")
     public static void init(@OriginalArg(1) Js5 arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) Js5 arg2, @OriginalArg(4) Js5 arg3) {

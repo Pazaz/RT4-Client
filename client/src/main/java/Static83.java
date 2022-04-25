@@ -7,12 +7,6 @@ public final class Static83 {
     @OriginalMember(owner = "client!gj", name = "m", descriptor = "[[[I")
 	public static int[][][] activeTileHeightMap;
 
-    @OriginalMember(owner = "client!gj", name = "d", descriptor = "I")
-	public static int loop = 0;
-
-	@OriginalMember(owner = "client!gj", name = "q", descriptor = "[I")
-	public static final int[] updatedVarps = new int[32];
-
 	@OriginalMember(owner = "client!gj", name = "a", descriptor = "(II)Z")
 	public static boolean method433(@OriginalArg(0) int arg0) {
 		if (arg0 >= 97 && arg0 <= 122) {

@@ -72,8 +72,8 @@ public final class Static145 {
 			SoftwareRaster.drawRect(local11 + 1, local3 + 18, local9 - 2, local15 + -19, 0);
 		}
 		Fonts.b12Full.method2857(LocalizedText.CHOOSE_OPTION, local11 + 3, local3 + 14, 6116423, -1);
-		@Pc(96) int local96 = Static223.anInt5032;
-		@Pc(98) int local98 = Static215.anInt4873;
+		@Pc(96) int local96 = Mouse.anInt5032;
+		@Pc(98) int local98 = Mouse.anInt4873;
 		for (@Pc(107) int local107 = 0; local107 < Static231.anInt5204; local107++) {
 			@Pc(127) int local127 = (Static231.anInt5204 - local107 - 1) * 15 + local3 + 31;
 			@Pc(129) int local129 = 16777215;

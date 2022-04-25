@@ -51,8 +51,8 @@ public final class Static112 {
 		} else {
 			SoftwareRaster.method2484(local3, local9 + 20, local13, local11 - 20, Static40.anInt1275, 256 - Static111.anInt2910);
 		}
-		local114 = Static223.anInt5032;
-		local112 = Static215.anInt4873;
+		local114 = Mouse.anInt5032;
+		local112 = Mouse.anInt4873;
 		@Pc(203) int local203;
 		@Pc(219) int local219;
 		for (local203 = 0; local203 < Static231.anInt5204; local203++) {

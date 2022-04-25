@@ -14,9 +14,6 @@ public final class Static89 {
 	@OriginalMember(owner = "client!ha", name = "o", descriptor = "I")
 	public static int anInt2387;
 
-	@OriginalMember(owner = "client!ha", name = "m", descriptor = "I")
-	public static int anInt2385 = 0;
-
 	@OriginalMember(owner = "client!ha", name = "q", descriptor = "I")
 	public static int anInt2388 = 0;
 
@@ -117,11 +114,11 @@ public final class Static89 {
 				Static155.anInt3751 = Static277.anInt5850;
 				Static60.anInt1892 = Static280.anInt5895;
 			} else if (Static150.clickButton == 0) {
-				Static155.anInt3751 = Static215.anInt4873;
-				Static60.anInt1892 = Static223.anInt5032;
+				Static155.anInt3751 = Mouse.anInt4873;
+				Static60.anInt1892 = Mouse.anInt5032;
 			} else {
-				Static155.anInt3751 = Static7.clickX;
-				Static60.anInt1892 = Static60.clickY;
+				Static155.anInt3751 = Mouse.clickX;
+				Static60.anInt1892 = Mouse.clickY;
 			}
 			Static231.anInt5204 = 1;
 			Static254.aClass100Array168[0] = LocalizedText.CANCEL;
@@ -147,7 +144,7 @@ public final class Static89 {
 		if (GlRenderer.enabled) {
 			Static263.aBoolean299 = true;
 		}
-		Static182.anInt4311 = Static83.loop;
+		Static182.anInt4311 = client.loop;
 		if (InterfaceList.topLevelInterface != -1) {
 			InterfaceList.anInt766 = 0;
 			Static9.method182();
@@ -197,7 +194,7 @@ public final class Static89 {
 				}
 			}
 		}
-		Static110.method2281(Static178.anInt4247, PlayerList.self.xFine, PlayerList.self.zFine, Static55.level);
+		Static110.method2281(Static178.anInt4247, PlayerList.self.xFine, PlayerList.self.zFine, Player.level);
 		Static178.anInt4247 = 0;
 	}
 

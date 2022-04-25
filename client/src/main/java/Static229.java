@@ -7,9 +7,6 @@ public final class Static229 {
 	@OriginalMember(owner = "client!si", name = "ab", descriptor = "I")
 	public static int anInt5138;
 
-	@OriginalMember(owner = "client!si", name = "X", descriptor = "[Lclient!sg;")
-	public static final StockMarketOffer[] aClass136Array1 = new StockMarketOffer[6];
-
 	@OriginalMember(owner = "client!si", name = "Z", descriptor = "Lclient!na;")
 	public static final JagString aClass100_972 = JagString.parse("<col=ffb000>");
 

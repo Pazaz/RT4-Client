@@ -10,54 +10,6 @@ public final class Static17 {
 	@OriginalMember(owner = "client!bg", name = "M", descriptor = "I")
 	public static int milliseconds = 0;
 
-    @OriginalMember(owner = "client!bg", name = "a", descriptor = "(B)V")
-	public static void method527() {
-		Protocol.inboundBuffer.method2233();
-		@Pc(11) int local11 = Protocol.inboundBuffer.method2238(1);
-		if (local11 == 0) {
-			return;
-		}
-		@Pc(23) int local23 = Protocol.inboundBuffer.method2238(2);
-		if (local23 == 0) {
-			Static44.anIntArray106[Static116.anInt2951++] = 2047;
-			return;
-		}
-		@Pc(54) int local54;
-		@Pc(64) int local64;
-		if (local23 == 1) {
-			local54 = Protocol.inboundBuffer.method2238(3);
-			PlayerList.self.method2684(1, local54);
-			local64 = Protocol.inboundBuffer.method2238(1);
-			if (local64 == 1) {
-				Static44.anIntArray106[Static116.anInt2951++] = 2047;
-			}
-		} else if (local23 == 2) {
-			if (Protocol.inboundBuffer.method2238(1) == 1) {
-				local54 = Protocol.inboundBuffer.method2238(3);
-				PlayerList.self.method2684(2, local54);
-				local64 = Protocol.inboundBuffer.method2238(3);
-				PlayerList.self.method2684(2, local64);
-			} else {
-				local54 = Protocol.inboundBuffer.method2238(3);
-				PlayerList.self.method2684(0, local54);
-			}
-			local54 = Protocol.inboundBuffer.method2238(1);
-			if (local54 == 1) {
-				Static44.anIntArray106[Static116.anInt2951++] = 2047;
-			}
-		} else if (local23 == 3) {
-			local54 = Protocol.inboundBuffer.method2238(7);
-			local64 = Protocol.inboundBuffer.method2238(1);
-			Static55.level = Protocol.inboundBuffer.method2238(2);
-			@Pc(163) int local163 = Protocol.inboundBuffer.method2238(1);
-			if (local163 == 1) {
-				Static44.anIntArray106[Static116.anInt2951++] = 2047;
-			}
-			@Pc(181) int local181 = Protocol.inboundBuffer.method2238(7);
-			PlayerList.self.method1265(local181, local64 == 1, local54);
-		}
-	}
-
 	@OriginalMember(owner = "client!bg", name = "d", descriptor = "(II)Z")
 	public static boolean method530(@OriginalArg(0) int arg0) {
 		return arg0 == 198 || arg0 == 230 || arg0 == 156 || arg0 == 140 || arg0 == 223;

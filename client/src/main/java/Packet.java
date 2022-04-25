@@ -18,7 +18,7 @@ public final class Packet extends Buffer {
 	}
 
 	@OriginalMember(owner = "client!i", name = "q", descriptor = "(B)V")
-	public final void method2233() {
+	public final void accessBits() {
 		this.anInt2846 = this.offset * 8;
 	}
 
@@ -30,7 +30,7 @@ public final class Packet extends Buffer {
 	}
 
 	@OriginalMember(owner = "client!i", name = "f", descriptor = "(BI)I")
-	public final int method2238(@OriginalArg(1) int arg0) {
+	public final int gBits(@OriginalArg(1) int arg0) {
 		@Pc(6) int local6 = this.anInt2846 >> 3;
 		@Pc(14) int local14 = 8 - (this.anInt2846 & 0x7);
 		@Pc(16) int local16 = 0;
@@ -69,7 +69,7 @@ public final class Packet extends Buffer {
 	}
 
 	@OriginalMember(owner = "client!i", name = "h", descriptor = "(Z)V")
-	public final void method2244() {
+	public final void accessBytes() {
 		this.offset = (this.anInt2846 + 7) / 8;
 	}
 }

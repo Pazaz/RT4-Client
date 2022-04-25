@@ -88,7 +88,7 @@ public final class Static176 {
 			if (local121 != local112) {
 				local112 = local121;
 				@Pc(240) int local240;
-				if (local133 == 2 && Static257.method523(Static55.level, local47, local147, local121)) {
+				if (local133 == 2 && Static257.method523(Player.level, local47, local147, local121)) {
 					@Pc(172) LocType local172 = LocTypeList.get(local140);
 					if (local172.multiLocs != null) {
 						local172 = local172.getMultiLoc();
@@ -160,19 +160,19 @@ public final class Static176 {
 								Static246.method4240(local502.type, local47, Static33.anIntArray79[local493], local147);
 							}
 						}
-						for (local493 = 0; local493 < Static267.anInt5774; local493++) {
-							local597 = Static159.players[Static105.anIntArray256[local493]];
+						for (local493 = 0; local493 < PlayerList.size; local493++) {
+							local597 = PlayerList.players[PlayerList.ids[local493]];
 							local514 = local597.xFine + 64 - local597.getSize() * 64;
 							local526 = local597.zFine + 64 - local597.getSize() * 64;
 							if (local597 != null && local514 >= local479 && local597.getSize() <= local421.type.soze - (local514 - local479 >> 7) && local526 >= local240 && local597.getSize() <= local421.type.soze - (local526 - local240 >> 7)) {
-								Static217.method3767(Static105.anIntArray256[local493], local147, local597, local47);
+								Static217.method3767(PlayerList.ids[local493], local147, local597, local47);
 							}
 						}
 					}
 					Static246.method4240(local421.type, local47, local140, local147);
 				}
 				if (local133 == 0) {
-					@Pc(688) Player local688 = Static159.players[local140];
+					@Pc(688) Player local688 = PlayerList.players[local140];
 					if ((local688.xFine & 0x7F) == 64 && (local688.zFine & 0x7F) == 64) {
 						local479 = local688.xFine - (local688.getSize() - 1) * 64;
 						local240 = local688.zFine + 64 - local688.getSize() * 64;
@@ -184,19 +184,19 @@ public final class Static176 {
 								Static246.method4240(local502.type, local47, Static33.anIntArray79[local493], local147);
 							}
 						}
-						for (local493 = 0; local493 < Static267.anInt5774; local493++) {
-							local597 = Static159.players[Static105.anIntArray256[local493]];
+						for (local493 = 0; local493 < PlayerList.size; local493++) {
+							local597 = PlayerList.players[PlayerList.ids[local493]];
 							local514 = local597.xFine - (local597.getSize() - 1) * 64;
 							local526 = local597.zFine + 64 - local597.getSize() * 64;
 							if (local597 != null && local597 != local688 && local479 <= local514 && local597.getSize() <= local688.getSize() - (local514 - local479 >> 7) && local526 >= local240 && local597.getSize() <= local688.getSize() - (local526 - local240 >> 7)) {
-								Static217.method3767(Static105.anIntArray256[local493], local147, local597, local47);
+								Static217.method3767(PlayerList.ids[local493], local147, local597, local47);
 							}
 						}
 					}
 					Static217.method3767(local140, local147, local688, local47);
 				}
 				if (local133 == 3) {
-					@Pc(931) LinkedList local931 = Static159.aClass69ArrayArrayArray1[Static55.level][local47][local147];
+					@Pc(931) LinkedList local931 = Static159.aClass69ArrayArrayArray1[Player.level][local47][local147];
 					if (local931 != null) {
 						for (@Pc(940) ObjStackNode local940 = (ObjStackNode) local931.method2279(); local940 != null; local940 = (ObjStackNode) local931.method2286()) {
 							local240 = local940.aClass8_Sub7_1.anInt5555;

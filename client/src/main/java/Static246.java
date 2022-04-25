@@ -17,9 +17,9 @@ public final class Static246 {
 	public static void method4239() {
 		for (@Pc(9) SpotAnimNode local9 = (SpotAnimNode) Static99.aClass69_64.method2289(); local9 != null; local9 = (SpotAnimNode) Static99.aClass69_64.method2288()) {
 			@Pc(15) SpotAnim local15 = local9.aClass8_Sub2_1;
-			if (local15.anInt606 != Static55.level || local15.aBoolean41) {
+			if (local15.anInt606 != Player.level || local15.aBoolean41) {
 				local9.unlink();
-			} else if (local15.anInt590 <= Static83.loop) {
+			} else if (local15.anInt590 <= client.loop) {
 				local15.method558(Static178.anInt4247);
 				if (local15.aBoolean41) {
 					local9.unlink();

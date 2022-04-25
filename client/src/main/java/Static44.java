@@ -10,9 +10,6 @@ public final class Static44 {
 	@OriginalMember(owner = "client!dh", name = "a", descriptor = "Z")
 	public static boolean aBoolean83 = false;
 
-	@OriginalMember(owner = "client!dh", name = "d", descriptor = "[I")
-	public static final int[] anIntArray106 = new int[2048];
-
 	@OriginalMember(owner = "client!dh", name = "e", descriptor = "Lclient!na;")
 	public static final JagString aClass100_335 = JagString.parse("Number of player models in cache:");
 
@@ -22,27 +19,27 @@ public final class Static44 {
 	@OriginalMember(owner = "client!dh", name = "a", descriptor = "(Z)V")
 	public static void method1146() {
 		Protocol.outboundBuffer.offset = 0;
-		Static5.anInt45 = -1;
+		Static5.opcode3 = -1;
 		Static60.aBoolean108 = false;
 		Protocol.length = 0;
 		Static115.anInt2939 = 0;
 		Static231.anInt5204 = 0;
-		Static230.anInt5152 = -1;
+		Static230.opcode2 = -1;
 		Static270.anInt5795 = 0;
 		Static60.rebootTimer = 0;
-		Static49.anInt1462 = -1;
+		Static49.opcode4 = -1;
 		Protocol.inboundBuffer.offset = 0;
 		Static201.anInt1862 = 0;
 		Protocol.opcode = -1;
 		@Pc(35) int local35;
-		for (local35 = 0; local35 < Static159.players.length; local35++) {
-			if (Static159.players[local35] != null) {
-				Static159.players[local35].anInt3370 = -1;
+		for (local35 = 0; local35 < PlayerList.players.length; local35++) {
+			if (PlayerList.players[local35] != null) {
+				PlayerList.players[local35].faceEntity = -1;
 			}
 		}
 		for (local35 = 0; local35 < Static175.npcs.length; local35++) {
 			if (Static175.npcs[local35] != null) {
-				Static175.npcs[local35].anInt3370 = -1;
+				Static175.npcs[local35].faceEntity = -1;
 			}
 		}
 		Static102.method2073();

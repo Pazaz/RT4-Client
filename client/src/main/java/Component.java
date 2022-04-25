@@ -13,19 +13,19 @@ public final class Component {
 	@OriginalMember(owner = "client!gn", name = "i", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable fonts = new SoftLruHashTable(20);
 	@OriginalMember(owner = "client!be", name = "b", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray1;
+	public Object[] onFriendTransmit;
 
 	@OriginalMember(owner = "client!be", name = "d", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray2;
+	public Object[] onStatTransmit;
 
 	@OriginalMember(owner = "client!be", name = "e", descriptor = "[Ljava/lang/Object;")
 	public Object[] anObjectArray3;
 
 	@OriginalMember(owner = "client!be", name = "g", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray4;
+	public Object[] onVarcTransmit;
 
 	@OriginalMember(owner = "client!be", name = "k", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray5;
+	public Object[] onClickRepeat;
 
 	@OriginalMember(owner = "client!be", name = "p", descriptor = "[Ljava/lang/Object;")
 	public Object[] anObjectArray6;
@@ -37,10 +37,10 @@ public final class Component {
 	public JagString[] aClass100Array19;
 
 	@OriginalMember(owner = "client!be", name = "t", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray7;
+	public Object[] onInvTransmit;
 
 	@OriginalMember(owner = "client!be", name = "u", descriptor = "[I")
-	public int[] anIntArray34;
+	public int[] inventoryTriggers;
 
 	@OriginalMember(owner = "client!be", name = "v", descriptor = "[Ljava/lang/Object;")
 	public Object[] anObjectArray8;
@@ -49,13 +49,13 @@ public final class Component {
 	public boolean aBoolean21;
 
 	@OriginalMember(owner = "client!be", name = "z", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray9;
+	public Object[] onHold;
 
 	@OriginalMember(owner = "client!be", name = "E", descriptor = "[Ljava/lang/Object;")
 	public Object[] anObjectArray10;
 
 	@OriginalMember(owner = "client!be", name = "G", descriptor = "[I")
-	public int[] anIntArray35;
+	public int[] varcstrTriggers;
 
 	@OriginalMember(owner = "client!be", name = "I", descriptor = "I")
 	public int type;
@@ -79,16 +79,16 @@ public final class Component {
 	public int[] anIntArray37;
 
 	@OriginalMember(owner = "client!be", name = "kb", descriptor = "[I")
-	public int[] anIntArray38;
+	public int[] varcTriggers;
 
 	@OriginalMember(owner = "client!be", name = "qb", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray13;
+	public Object[] onCamFinished;
 
 	@OriginalMember(owner = "client!be", name = "tb", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray14;
+	public Object[] onKey;
 
 	@OriginalMember(owner = "client!be", name = "ub", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray15;
+	public Object[] onVarcstrTransmit;
 
 	@OriginalMember(owner = "client!be", name = "Db", descriptor = "[Ljava/lang/Object;")
 	public Object[] anObjectArray16;
@@ -100,10 +100,10 @@ public final class Component {
 	public Object[] anObjectArray17;
 
 	@OriginalMember(owner = "client!be", name = "Nb", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray18;
+	public Object[] onRelease;
 
 	@OriginalMember(owner = "client!be", name = "Xb", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray19;
+	public Object[] onMouseOver;
 
 	@OriginalMember(owner = "client!be", name = "Yb", descriptor = "[I")
 	public int[] anIntArray39;
@@ -112,7 +112,7 @@ public final class Component {
 	public int[] objTypes;
 
 	@OriginalMember(owner = "client!be", name = "fc", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray20;
+	public Object[] onChatTransmit;
 
 	@OriginalMember(owner = "client!be", name = "lc", descriptor = "[Lclient!be;")
 	public Component[] createdComponents;
@@ -121,31 +121,31 @@ public final class Component {
 	public byte[] aByteArray8;
 
 	@OriginalMember(owner = "client!be", name = "rc", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray21;
+	public Object[] onStockTransmit;
 
 	@OriginalMember(owner = "client!be", name = "tc", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray22;
+	public Object[] onTimer;
 
 	@OriginalMember(owner = "client!be", name = "yc", descriptor = "[I")
 	public int[] anIntArray41;
 
 	@OriginalMember(owner = "client!be", name = "Ac", descriptor = "[I")
-	public int[] anIntArray42;
+	public int[] statTriggers;
 
 	@OriginalMember(owner = "client!be", name = "Bc", descriptor = "[I")
 	public int[] anIntArray43;
 
 	@OriginalMember(owner = "client!be", name = "Cc", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray23;
+	public Object[] onMouseRepeat;
 
 	@OriginalMember(owner = "client!be", name = "Ic", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray24;
+	public Object[] onMouseLeave;
 
 	@OriginalMember(owner = "client!be", name = "Jc", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray25;
+	public Object[] onVarpTransmit;
 
 	@OriginalMember(owner = "client!be", name = "Nc", descriptor = "[I")
-	public int[] anIntArray44;
+	public int[] varpTriggers;
 
 	@OriginalMember(owner = "client!be", name = "Tc", descriptor = "[I")
 	public int[] anIntArray45;
@@ -172,13 +172,13 @@ public final class Component {
 	public int[] anIntArray49;
 
 	@OriginalMember(owner = "client!be", name = "qd", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray28;
+	public Object[] onClanTransmit;
 
 	@OriginalMember(owner = "client!be", name = "rd", descriptor = "[Ljava/lang/Object;")
 	public Object[] anObjectArray29;
 
 	@OriginalMember(owner = "client!be", name = "sd", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray30;
+	public Object[] onMiscTransmit;
 
 	@OriginalMember(owner = "client!be", name = "wd", descriptor = "[I")
 	public int[] objCounts;
@@ -334,7 +334,7 @@ public final class Component {
 	public JagString aClass100_88 = Static176.aClass100_800;
 
 	@OriginalMember(owner = "client!be", name = "Lc", descriptor = "I")
-	public int anInt511 = 0;
+	public int updatedVarcsReaderIndex = 0;
 
 	@OriginalMember(owner = "client!be", name = "w", descriptor = "I")
 	public int baseWidth = 0;
@@ -343,7 +343,7 @@ public final class Component {
 	public int anInt512 = 0;
 
 	@OriginalMember(owner = "client!be", name = "Ib", descriptor = "I")
-	public int anInt482 = -1;
+	public int lastTransmitTimer = -1;
 
 	@OriginalMember(owner = "client!be", name = "c", descriptor = "Z")
 	public boolean aBoolean18 = false;
@@ -373,7 +373,7 @@ public final class Component {
 	public int anInt498 = -1;
 
 	@OriginalMember(owner = "client!be", name = "Rb", descriptor = "I")
-	public int anInt487 = 0;
+	public int updatedVarcstrsReaderIndex = 0;
 
 	@OriginalMember(owner = "client!be", name = "ic", descriptor = "I")
 	public int anInt495 = 0;
@@ -403,7 +403,7 @@ public final class Component {
 	public int anInt486 = 0;
 
 	@OriginalMember(owner = "client!be", name = "ec", descriptor = "I")
-	public int anInt493 = 0;
+	public int updatedInventoriesReaderIndex = 0;
 
 	@OriginalMember(owner = "client!be", name = "Vc", descriptor = "S")
 	public short aShort11 = 0;
@@ -436,7 +436,7 @@ public final class Component {
 	public Component aClass13_5 = null;
 
 	@OriginalMember(owner = "client!be", name = "od", descriptor = "I")
-	public int anInt525 = 0;
+	public int updatedStatsReaderIndex = 0;
 
 	@OriginalMember(owner = "client!be", name = "ab", descriptor = "I")
 	public int modelType = 1;
@@ -475,7 +475,7 @@ public final class Component {
 	public int anInt510 = 0;
 
 	@OriginalMember(owner = "client!be", name = "mb", descriptor = "I")
-	public int anInt471 = 0;
+	public int updatedVarpsReaderIndex = 0;
 
 	@OriginalMember(owner = "client!be", name = "rb", descriptor = "I")
 	public int anInt474 = 0;
@@ -1143,30 +1143,30 @@ public final class Component {
 		}
 		this.aClass3_Sub4_1 = new ServerActiveProperties(local175, local567);
 		this.anObjectArray3 = this.method485(arg0);
-		this.anObjectArray19 = this.method485(arg0);
-		this.anObjectArray24 = this.method485(arg0);
+		this.onMouseOver = this.method485(arg0);
+		this.onMouseLeave = this.method485(arg0);
 		this.anObjectArray27 = this.method485(arg0);
 		this.anObjectArray11 = this.method485(arg0);
-		this.anObjectArray25 = this.method485(arg0);
-		this.anObjectArray7 = this.method485(arg0);
-		this.anObjectArray2 = this.method485(arg0);
-		this.anObjectArray22 = this.method485(arg0);
+		this.onVarpTransmit = this.method485(arg0);
+		this.onInvTransmit = this.method485(arg0);
+		this.onStatTransmit = this.method485(arg0);
+		this.onTimer = this.method485(arg0);
 		this.anObjectArray29 = this.method485(arg0);
-		this.anObjectArray23 = this.method485(arg0);
-		this.anObjectArray5 = this.method485(arg0);
+		this.onMouseRepeat = this.method485(arg0);
+		this.onClickRepeat = this.method485(arg0);
 		this.anObjectArray6 = this.method485(arg0);
-		this.anObjectArray18 = this.method485(arg0);
-		this.anObjectArray9 = this.method485(arg0);
+		this.onRelease = this.method485(arg0);
+		this.onHold = this.method485(arg0);
 		this.anObjectArray26 = this.method485(arg0);
 		this.anObjectArray16 = this.method485(arg0);
 		this.anObjectArray10 = this.method485(arg0);
-		this.anObjectArray4 = this.method485(arg0);
-		this.anObjectArray15 = this.method485(arg0);
-		this.anIntArray44 = this.method486(arg0);
-		this.anIntArray34 = this.method486(arg0);
-		this.anIntArray42 = this.method486(arg0);
-		this.anIntArray38 = this.method486(arg0);
-		this.anIntArray35 = this.method486(arg0);
+		this.onVarcTransmit = this.method485(arg0);
+		this.onVarcstrTransmit = this.method485(arg0);
+		this.varpTriggers = this.method486(arg0);
+		this.inventoryTriggers = this.method486(arg0);
+		this.statTriggers = this.method486(arg0);
+		this.varcTriggers = this.method486(arg0);
+		this.varcstrTriggers = this.method486(arg0);
 	}
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "([Lclient!ok;I)Lclient!rk;")

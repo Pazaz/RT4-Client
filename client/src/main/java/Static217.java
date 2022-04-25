@@ -38,12 +38,12 @@ public final class Static217 {
 			}
 			@Pc(95) JagString local95 = client.game == 1 ? LocalizedText.RATING : LocalizedText.LEVEL;
 			if (arg2.anInt1652 < arg2.anInt1656) {
-				local158 = JagString.concatenate(new JagString[] { arg2.method1264(), local22 ? Static123.method2420(arg2.anInt1652, PlayerList.self.anInt1652) : Static204.aClass100_896, Static123.aClass100_593, local95, Static123.parseInt(arg2.anInt1652), Static78.aClass100_465, Static123.parseInt(arg2.anInt1656 - arg2.anInt1652), Static72.aClass100_448 });
+				local158 = JagString.concatenate(new JagString[] { arg2.getName(), local22 ? Static123.method2420(arg2.anInt1652, PlayerList.self.anInt1652) : Static204.aClass100_896, Static123.aClass100_593, local95, Static123.parseInt(arg2.anInt1652), Static78.aClass100_465, Static123.parseInt(arg2.anInt1656 - arg2.anInt1652), Static72.aClass100_448 });
 			} else {
-				local158 = JagString.concatenate(new JagString[] { arg2.method1264(), local22 ? Static123.method2420(arg2.anInt1652, PlayerList.self.anInt1652) : Static204.aClass100_896, Static123.aClass100_593, local95, Static123.parseInt(arg2.anInt1652), Static72.aClass100_448 });
+				local158 = JagString.concatenate(new JagString[] { arg2.getName(), local22 ? Static123.method2420(arg2.anInt1652, PlayerList.self.anInt1652) : Static204.aClass100_896, Static123.aClass100_593, local95, Static123.parseInt(arg2.anInt1652), Static72.aClass100_448 });
 			}
 		} else {
-			local158 = JagString.concatenate(new JagString[] { arg2.method1264(), Static123.aClass100_593, LocalizedText.SKILL, Static123.parseInt(arg2.anInt1671), Static72.aClass100_448 });
+			local158 = JagString.concatenate(new JagString[] { arg2.getName(), Static123.aClass100_593, LocalizedText.SKILL, Static123.parseInt(arg2.anInt1671), Static72.aClass100_448 });
 		}
 		@Pc(275) int local275;
 		if (Static260.anInt5014 == 1) {

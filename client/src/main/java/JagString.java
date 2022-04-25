@@ -262,7 +262,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "b", descriptor = "(I)Lclient!na;")
-	public final JagString method3116() {
+	public final JagString encodeMessage() {
 		@Pc(7) byte local7 = 2;
 		@Pc(11) JagString local11 = new JagString();
 		local11.length = this.length;
@@ -682,7 +682,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "h", descriptor = "(I)Lclient!na;")
-	public final JagString method3144() {
+	public final JagString trim() {
 		@Pc(17) int local17;
 		for (local17 = 0; local17 < this.length && (this.chars[local17] >= 0 && this.chars[local17] <= 32 || (this.chars[local17] & 0xFF) == 160); local17++) {
 		}

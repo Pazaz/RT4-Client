@@ -20,14 +20,14 @@ public final class Static142 {
 		@Pc(310) int local310;
 		@Pc(359) int local359;
 		@Pc(639) int local639;
-		for (local5 = -1; local5 < Static267.anInt5774 + Static272.anInt5214; local5++) {
+		for (local5 = -1; local5 < PlayerList.size + Static272.anInt5214; local5++) {
 			@Pc(17) PathingEntity local17;
 			if (local5 == -1) {
 				local17 = PlayerList.self;
-			} else if (Static267.anInt5774 > local5) {
-				local17 = Static159.players[Static105.anIntArray256[local5]];
+			} else if (PlayerList.size > local5) {
+				local17 = PlayerList.players[PlayerList.ids[local5]];
 			} else {
-				local17 = Static175.npcs[Static33.anIntArray79[local5 - Static267.anInt5774]];
+				local17 = Static175.npcs[Static33.anIntArray79[local5 - PlayerList.size]];
 			}
 			if (local17 != null && local17.method2682()) {
 				@Pc(58) NpcType local58;
@@ -41,7 +41,7 @@ public final class Static142 {
 					}
 				}
 				@Pc(161) int local161;
-				if (local5 >= Static267.anInt5774) {
+				if (local5 >= PlayerList.size) {
 					local58 = ((Npc) local17).type;
 					if (local58.multiNpcs != null) {
 						local58 = local58.getMultiNpc();
@@ -60,7 +60,7 @@ public final class Static142 {
 					@Pc(308) Class102[] local308 = Static143.aClass102Array1;
 					for (local310 = 0; local310 < local308.length; local310++) {
 						@Pc(322) Class102 local322 = local308[local310];
-						if (local322 != null && local322.anInt4058 == 1 && local322.anInt4057 == Static33.anIntArray79[local5 - Static267.anInt5774] && Static83.loop % 20 < 10) {
+						if (local322 != null && local322.anInt4058 == 1 && local322.anInt4057 == Static33.anIntArray79[local5 - PlayerList.size] && client.loop % 20 < 10) {
 							if (local58.anInt3730 == -1) {
 								local359 = local17.method2691() + 15;
 							} else {
@@ -92,7 +92,7 @@ public final class Static142 {
 						@Pc(159) Class102[] local159 = Static143.aClass102Array1;
 						for (local161 = 0; local161 < local159.length; local161++) {
 							@Pc(173) Class102 local173 = local159[local161];
-							if (local173 != null && local173.anInt4058 == 10 && Static105.anIntArray256[local5] == local173.anInt4057) {
+							if (local173 != null && local173.anInt4058 == 10 && PlayerList.ids[local5] == local173.anInt4057) {
 								Static180.method3326(arg4 >> 1, arg3, local17, arg5, local17.method2691() + 15, arg1 >> 1);
 								if (Static65.anInt1951 > -1) {
 									Sprites.headhints[local173.anInt4048].method1423(arg2 + Static65.anInt1951 - 12, arg0 + (Static16.anInt548 - local74));
@@ -101,21 +101,21 @@ public final class Static142 {
 						}
 					}
 				}
-				if (local17.aClass100_640 != null && (local5 >= Static267.anInt5774 || Static59.anInt1812 == 0 || Static59.anInt1812 == 3 || Static59.anInt1812 == 1 && Static98.method1965(((Player) local17).aClass100_364))) {
+				if (local17.chatMessage != null && (local5 >= PlayerList.size || Static59.anInt1812 == 0 || Static59.anInt1812 == 3 || Static59.anInt1812 == 1 && Static98.method1965(((Player) local17).username))) {
 					Static180.method3326(arg4 >> 1, arg3, local17, arg5, local17.method2691(), arg1 >> 1);
 					if (Static65.anInt1951 > -1 && Static277.anInt5854 < Static191.anInt4506) {
-						Static191.anIntArray389[Static277.anInt5854] = Fonts.b12Full.getStringWidth(local17.aClass100_640) / 2;
+						Static191.anIntArray389[Static277.anInt5854] = Fonts.b12Full.getStringWidth(local17.chatMessage) / 2;
 						Static191.anIntArray387[Static277.anInt5854] = Fonts.b12Full.lineHeight;
 						Static191.anIntArray385[Static277.anInt5854] = Static65.anInt1951;
 						Static191.anIntArray392[Static277.anInt5854] = Static16.anInt548;
-						Static191.anIntArray390[Static277.anInt5854] = local17.anInt3429;
-						Static191.anIntArray391[Static277.anInt5854] = local17.anInt3352;
-						Static191.anIntArray384[Static277.anInt5854] = local17.anInt3408;
-						Static191.aClass100Array132[Static277.anInt5854] = local17.aClass100_640;
+						Static191.anIntArray390[Static277.anInt5854] = local17.chatColor;
+						Static191.anIntArray391[Static277.anInt5854] = local17.chatEffect;
+						Static191.anIntArray384[Static277.anInt5854] = local17.chatLoops;
+						Static191.aClass100Array132[Static277.anInt5854] = local17.chatMessage;
 						Static277.anInt5854++;
 					}
 				}
-				if (local17.anInt3378 > Static83.loop) {
+				if (local17.hitpointsBarVisibleUntil > client.loop) {
 					@Pc(508) Sprite local508 = Sprites.hitbars[0];
 					@Pc(512) Sprite local512 = Sprites.hitbars[1];
 					if (local17 instanceof Npc) {
@@ -145,7 +145,7 @@ public final class Static142 {
 						local161 = Static65.anInt1951 + arg2 - (local508.anInt1867 >> 1);
 						local359 = Static16.anInt548 + arg0 - 3;
 						local508.method1423(local161, local359);
-						local639 = local508.anInt1867 * local17.anInt3372 / 255;
+						local639 = local508.anInt1867 * local17.hitpointsBar / 255;
 						local642 = local508.anInt1859;
 						if (GlRenderer.enabled) {
 							Static46.method1183(local161, local359, local161 + local639, local359 + local642);
@@ -161,7 +161,7 @@ public final class Static142 {
 					}
 				}
 				for (local74 = 0; local74 < 4; local74++) {
-					if (local17.anIntArray319[local74] > Static83.loop) {
+					if (local17.anIntArray319[local74] > client.loop) {
 						if (local17 instanceof Npc) {
 							@Pc(725) Npc local725 = (Npc) local17;
 							@Pc(728) NpcType local728 = local725.type;

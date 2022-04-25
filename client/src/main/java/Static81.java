@@ -74,14 +74,14 @@ public final class Static81 {
 		}
 		if (Static60.rebootTimer > 1) {
 			Static60.rebootTimer--;
-			Static209.miscTransmitAt = InterfaceList.transmitTimer;
+			InterfaceList.miscTransmitAt = InterfaceList.transmitTimer;
 		}
 		if (LoginManager.aBoolean247) {
 			LoginManager.aBoolean247 = false;
 			Static175.method3279();
 			return;
 		}
-		for (@Pc(34) int i = 0; i < 100 && Static10.readPacket(); i++) {
+		for (@Pc(34) int i = 0; i < 100 && Protocol.readPacket(); i++) {
 		}
 		if (client.gameState != 30) {
 			return;
@@ -174,7 +174,7 @@ public final class Static81 {
 		}
 		if (Static150.clickButton != 0) {
 			@Pc(411) long loops = (Static133.clickTime - Static183.prevClickTime) / 50L;
-			samples = Static60.clickY;
+			samples = Mouse.clickY;
 			if (samples < 0) {
 				samples = 0;
 			} else if (samples > 65535) {
@@ -183,7 +183,7 @@ public final class Static81 {
 			if (loops > 32767L) {
 				loops = 32767L;
 			}
-			i = Static7.clickX;
+			i = Mouse.clickX;
 			Static183.prevClickTime = Static133.clickTime;
 			@Pc(437) byte button = 0;
 			if (i < 0) {
@@ -256,7 +256,7 @@ public final class Static81 {
 		// VarpDomain
 		for (i = Static38.poll(true); i != -1; i = Static38.poll(false)) {
 			Static85.method1775(i);
-			Static83.updatedVarps[Static70.updatedVarpsWriterIndex++ & 0x1F] = i;
+			VarpDomain.updatedVarps[VarpDomain.updatedVarpsWriterIndex++ & 0x1F] = i;
 		}
 		@Pc(782) int modelId;
 		// DelayedStateChange
@@ -265,10 +265,10 @@ public final class Static81 {
 			i = change.getId();
 			if (samples == 1) {
 				Static155.varcs[i] = change.intArg1;
-				Static138.updatedVarcs[Static4.updatedVarcsWriterIndex++ & 0x1F] = i;
+				VarcDomain.updatedVarcs[VarcDomain.updatedVarcsWriterIndex++ & 0x1F] = i;
 			} else if (samples == 2) {
 				Static226.varcstrs[i] = change.stringArg;
-				Static233.updatedVarcstrs[Static72.updatedVarcstrsWriterIndex++ & 0x1F] = i;
+				VarcDomain.updatedVarcstrs[VarcDomain.updatedVarcstrsWriterIndex++ & 0x1F] = i;
 			} else {
 				@Pc(773) Component component;
 				if (samples == 3) {
@@ -394,7 +394,7 @@ public final class Static81 {
 		@Pc(1361) Component local1361;
 		if (Static118.aClass13_15 != null) {
 			Static43.redraw(Static118.aClass13_15);
-			if (Static149.anInt3554 + 5 < Static215.anInt4873 || Static215.anInt4873 < Static149.anInt3554 - 5 || Static206.anInt4773 + 5 < Static223.anInt5032 || Static206.anInt4773 - 5 > Static223.anInt5032) {
+			if (Static149.anInt3554 + 5 < Mouse.anInt4873 || Mouse.anInt4873 < Static149.anInt3554 - 5 || Static206.anInt4773 + 5 < Mouse.anInt5032 || Static206.anInt4773 - 5 > Mouse.anInt5032) {
 				Static123.aBoolean155 = true;
 			}
 			Static78.anInt2145++;
@@ -488,18 +488,18 @@ public final class Static81 {
 												Static4.method28();
 											}
 											if (LoginManager.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static58.wheelRotation != 0) {
-												y = Static55.level - Static58.wheelRotation;
+												y = Player.level - Static58.wheelRotation;
 												if (y < 0) {
 													y = 0;
 												} else if (y > 3) {
 													y = 3;
 												}
 												// Cheat
-												Static61.teleport(PlayerList.self.movementQueueX[0] + Static225.originX, PlayerList.self.movementQueueZ[0] + Static142.originZ, y);
+												Cheat.teleport(PlayerList.self.movementQueueX[0] + Static225.originX, PlayerList.self.movementQueueZ[0] + Static142.originZ, y);
 											}
 											if (LoginManager.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT]) {
 												if (Static56.anInt1742 != -1) {
-													Static61.teleport(Static225.originX + Static56.anInt1742, Static142.originZ - -Static116.anInt2954, Static55.level);
+													Cheat.teleport(Static225.originX + Static56.anInt1742, Static142.originZ - -Static116.anInt2954, Player.level);
 												}
 												Static187.anInt4422 = 0;
 												Static125.anInt3096 = 0;
@@ -512,8 +512,8 @@ public final class Static81 {
 													Protocol.outboundBuffer.p2add(Static116.anInt2954 + Static142.originZ);
 													Static70.type = 1;
 													Static17.milliseconds = 0;
-													Static25.y = Static60.clickY;
-													Static122.x = Static7.clickX;
+													Static25.y = Mouse.clickY;
+													Static122.x = Mouse.clickX;
 												}
 												Static125.anInt3096 = 0;
 											} else if (Static187.anInt4422 == 2) {
@@ -523,16 +523,16 @@ public final class Static81 {
 													Protocol.outboundBuffer.p2(Static56.anInt1742 + Static225.originX);
 													Static17.milliseconds = 0;
 													Static70.type = 1;
-													Static122.x = Static7.clickX;
-													Static25.y = Static60.clickY;
+													Static122.x = Mouse.clickX;
+													Static25.y = Mouse.clickY;
 												}
 												Static187.anInt4422 = 0;
 											} else if (Static56.anInt1742 != -1 && Static125.anInt3096 == 0 && Static187.anInt4422 == 0) {
 												@Pc(1871) boolean local1871 = Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 0, true, 0, Static56.anInt1742, 0, 0, 0, Static116.anInt2954, PlayerList.self.movementQueueX[0]);
 												if (local1871) {
-													Static25.y = Static60.clickY;
+													Static25.y = Mouse.clickY;
 													Static17.milliseconds = 0;
-													Static122.x = Static7.clickX;
+													Static122.x = Mouse.clickX;
 													Static70.type = 1;
 												}
 											}

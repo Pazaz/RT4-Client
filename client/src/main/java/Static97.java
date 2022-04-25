@@ -97,7 +97,7 @@ public final class Static97 {
 	public static JagString method1963(@OriginalArg(0) Component arg0) {
 		if (Static36.method940(arg0).method512() == 0) {
 			return null;
-		} else if (arg0.aClass100_86 == null || arg0.aClass100_86.method3144().length() == 0) {
+		} else if (arg0.aClass100_86 == null || arg0.aClass100_86.trim().length() == 0) {
 			return Static121.aBoolean154 ? Static143.aClass100_668 : null;
 		} else {
 			return arg0.aClass100_86;

@@ -40,10 +40,7 @@ public final class Static233 {
 	@OriginalMember(owner = "client!t", name = "C", descriptor = "Lclient!na;")
 	public static final JagString aClass100_994 = JagString.parse(")3");
 
-	@OriginalMember(owner = "client!t", name = "E", descriptor = "[I")
-	public static final int[] updatedVarcstrs = new int[32];
-
-	@OriginalMember(owner = "client!t", name = "a", descriptor = "(IIIZIII)V")
+    @OriginalMember(owner = "client!t", name = "a", descriptor = "(IIIZIII)V")
 	public static void method4000(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
 		@Pc(3) int local3 = 0;
 		@Pc(5) Class102[] local5 = Static143.aClass102Array1;
@@ -51,7 +48,7 @@ public final class Static233 {
 			@Pc(17) Class102 local17 = local5[local3];
 			if (local17 != null && local17.anInt4058 == 2) {
 				Static198.method1026(arg0 >> 1, arg4, (local17.anInt4046 - Static142.originZ << 7) + local17.anInt4047, local17.anInt4050 * 2, arg2 >> 1, local17.anInt4045 + (local17.anInt4053 - Static225.originX << 7), arg3);
-				if (Static65.anInt1951 > -1 && Static83.loop % 20 < 10) {
+				if (Static65.anInt1951 > -1 && client.loop % 20 < 10) {
 					Sprites.headhints[local17.anInt4048].method1423(arg1 + Static65.anInt1951 - 12, arg5 + -28 - -Static16.anInt548);
 				}
 			}
@@ -119,10 +116,10 @@ public final class Static233 {
 		} else {
 			Static102.method2075(PlayerList.self.movementQueueZ[0], local24, 0, true, 0, arg2, 0, local12 + 1, 2, arg1, PlayerList.self.movementQueueX[0]);
 		}
-		Static25.y = Static60.clickY;
+		Static25.y = Mouse.clickY;
 		Static17.milliseconds = 0;
 		Static70.type = 2;
-		Static122.x = Static7.clickX;
+		Static122.x = Mouse.clickX;
 		return true;
 	}
 

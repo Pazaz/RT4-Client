@@ -14,6 +14,14 @@ import javax.swing.*;
 @OriginalClass("client!ug")
 public final class Mouse implements MouseListener, MouseMotionListener, FocusListener {
 
+    @OriginalMember(owner = "client!ah", name = "s", descriptor = "I")
+    public static int clickX = 0;
+	@OriginalMember(owner = "client!em", name = "y", descriptor = "I")
+	public static int clickY = 0;
+	@OriginalMember(owner = "client!sc", name = "v", descriptor = "I")
+	public static int anInt5032 = 0;
+	@OriginalMember(owner = "client!rh", name = "o", descriptor = "I")
+	public static int anInt4873 = 0;
 	public int mouseWheelX;
 	public int mouseWheelY;
 
@@ -40,12 +48,12 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
         @Pc(2) Mouse local2 = Static93.instance;
         synchronized (Static93.instance) {
             Static22.anInt723 = Static57.anInt1759;
-            Static215.anInt4873 = Static147.anInt3521;
-            Static223.anInt5032 = Static165.anInt4039;
+            anInt4873 = Static147.anInt3521;
+            anInt5032 = Static165.anInt4039;
             Static150.clickButton = Static41.anInt1313;
-            Static7.clickX = Static34.anInt1034;
+            clickX = Static34.anInt1034;
             Static93.anInt2467++;
-            Static60.clickY = Static222.anInt4973;
+            clickY = Static222.anInt4973;
             Static133.clickTime = Static209.aLong161;
             Static41.anInt1313 = 0;
         }

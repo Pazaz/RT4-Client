@@ -8,7 +8,7 @@ public final class Static5 {
 	public static int anInt40;
 
     @OriginalMember(owner = "client!af", name = "k", descriptor = "I")
-	public static int anInt45 = 0;
+	public static int opcode3 = 0;
 
 	@OriginalMember(owner = "client!af", name = "l", descriptor = "[S")
 	public static final short[] aShortArray2 = new short[] { 30, 6, 31, 29, 10, 44, 37, 57 };

@@ -19,19 +19,6 @@ public final class Static245 {
 		local16.pushClient();
 	}
 
-	@OriginalMember(owner = "client!tm", name = "a", descriptor = "(I)V")
-	public static void method4226() {
-		for (@Pc(7) int local7 = 0; local7 < Static116.anInt2951; local7++) {
-			@Pc(31) int local31 = Static44.anIntArray106[local7];
-			@Pc(35) Player local35 = Static159.players[local31];
-			@Pc(39) int local39 = Protocol.inboundBuffer.g1();
-			if ((local39 & 0x10) != 0) {
-				local39 += Protocol.inboundBuffer.g1() << 8;
-			}
-			Static84.method1768(local39, local31, local35);
-		}
-	}
-
 	@OriginalMember(owner = "client!tm", name = "a", descriptor = "(III[Lclient!mj;IB[BIIIZ)V")
 	public static void method4228(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) CollisionMap[] arg3, @OriginalArg(4) int arg4, @OriginalArg(6) byte[] arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7, @OriginalArg(9) int arg8, @OriginalArg(10) boolean arg9) {
 		@Pc(17) int local17;

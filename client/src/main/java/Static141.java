@@ -38,7 +38,7 @@ public final class Static141 {
 		WorldMap.clear(false);
 		TitleScreen.clear();
 		for (@Pc(39) int local39 = 0; local39 < 2048; local39++) {
-			@Pc(46) Player player = Static159.players[local39];
+			@Pc(46) Player player = PlayerList.players[local39];
 			if (player != null) {
 				player.attachment = null;
 			}
@@ -75,7 +75,7 @@ public final class Static141 {
 		if (arg0 && Static113.anInt4612 >= 100) {
 			Static138.renderX = Static245.anInt5375 * 128 + 64;
 			Static134.renderZ = Static248.anInt4232 * 128 + 64;
-			Static5.anInt40 = SceneGraph.getTileHeight(Static55.level, Static138.renderX, Static134.renderZ) - Static231.anInt5203;
+			Static5.anInt40 = SceneGraph.getTileHeight(Player.level, Static138.renderX, Static134.renderZ) - Static231.anInt5203;
 		}
 		Static227.cameraType = 2;
 	}

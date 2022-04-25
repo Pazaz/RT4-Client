@@ -10,10 +10,7 @@ public final class Static159 {
 	@OriginalMember(owner = "client!mi", name = "R", descriptor = "Lclient!na;")
 	public static final JagString aClass100_760 = JagString.parse(")1");
 
-	@OriginalMember(owner = "client!mi", name = "S", descriptor = "[Lclient!e;")
-	public static final Player[] players = new Player[2048];
-
-	@OriginalMember(owner = "client!mi", name = "U", descriptor = "[J")
+    @OriginalMember(owner = "client!mi", name = "U", descriptor = "[J")
 	public static final long[] aLongArray5 = new long[500];
 
 	@OriginalMember(owner = "client!mi", name = "Y", descriptor = "[[[Lclient!ih;")

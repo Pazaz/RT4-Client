@@ -58,7 +58,7 @@ public final class Static73 {
 
 	@OriginalMember(owner = "client!fm", name = "a", descriptor = "(ILclient!na;Lclient!na;Lclient!na;I)V")
 	public static void method1598(@OriginalArg(1) JagString arg0, @OriginalArg(2) JagString arg1, @OriginalArg(3) JagString arg2) {
-		Static154.method2928(-1, 9, arg0, arg2, arg1);
+		Chat.add(-1, 9, arg0, arg2, arg1);
 	}
 
 	@OriginalMember(owner = "client!fm", name = "a", descriptor = "(IIIIII)Z")

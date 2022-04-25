@@ -16,9 +16,6 @@ public final class Static115 {
 	@OriginalMember(owner = "client!ja", name = "k", descriptor = "Lclient!na;")
 	public static final JagString aClass100_579 = JagString.parse("Fps:");
 
-	@OriginalMember(owner = "client!ja", name = "l", descriptor = "[Lclient!wa;")
-	public static final Buffer[] aClass3_Sub15Array1 = new Buffer[2048];
-
 	@OriginalMember(owner = "client!ja", name = "n", descriptor = "I")
 	public static int anInt2939 = 0;
 

@@ -504,7 +504,7 @@ public final class Static45 {
 		Static259.anIntArray514[0] = arg2;
 		@Pc(71) int local71 = local51 + 1;
 		Static84.anIntArray209[0] = arg9;
-		@Pc(78) int[][] local78 = PathFinder.collisionMaps[Static55.level].anIntArrayArray30;
+		@Pc(78) int[][] local78 = PathFinder.collisionMaps[Player.level].anIntArrayArray30;
 		@Pc(198) int local198;
 		while (local71 != local64) {
 			local10 = Static84.anIntArray209[local64];
@@ -515,16 +515,16 @@ public final class Static45 {
 				break;
 			}
 			if (arg8 != 0) {
-				if ((arg8 < 5 || arg8 == 10) && PathFinder.collisionMaps[Static55.level].method3042(arg3, local3, local10, arg0, arg8 - 1, 1, arg6)) {
+				if ((arg8 < 5 || arg8 == 10) && PathFinder.collisionMaps[Player.level].method3042(arg3, local3, local10, arg0, arg8 - 1, 1, arg6)) {
 					local53 = true;
 					break;
 				}
-				if (arg8 < 10 && PathFinder.collisionMaps[Static55.level].method3046(arg3, arg8 - 1, arg0, local10, 1, arg6, local3)) {
+				if (arg8 < 10 && PathFinder.collisionMaps[Player.level].method3046(arg3, arg8 - 1, arg0, local10, 1, arg6, local3)) {
 					local53 = true;
 					break;
 				}
 			}
-			if (arg10 != 0 && arg5 != 0 && PathFinder.collisionMaps[Static55.level].method3052(arg0, local10, local3, 1, arg10, arg1, arg3, arg5)) {
+			if (arg10 != 0 && arg5 != 0 && PathFinder.collisionMaps[Player.level].method3052(arg0, local10, local3, 1, arg10, arg1, arg3, arg5)) {
 				local53 = true;
 				break;
 			}

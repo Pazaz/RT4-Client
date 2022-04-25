@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static190 {
 
-	@OriginalMember(owner = "client!pf", name = "h", descriptor = "[J")
-	public static final long[] aLongArray6 = new long[100];
-
 	@OriginalMember(owner = "client!pf", name = "r", descriptor = "[I")
 	public static final int[] anIntArray382 = new int[500];
 

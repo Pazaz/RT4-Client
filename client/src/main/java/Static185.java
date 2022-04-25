@@ -10,9 +10,6 @@ public final class Static185 {
 	@OriginalMember(owner = "client!p", name = "g", descriptor = "F")
 	public static float aFloat23;
 
-	@OriginalMember(owner = "client!p", name = "d", descriptor = "I")
-	public static int anInt4369 = 0;
-
 	@OriginalMember(owner = "client!p", name = "a", descriptor = "(I)V")
 	public static void method3395() {
 		if (LoginManager.step == 5) {

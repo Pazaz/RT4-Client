@@ -7,10 +7,7 @@ public final class Static116 {
 	@OriginalMember(owner = "client!jb", name = "c", descriptor = "Lclient!na;")
 	public static final JagString aClass100_583 = JagString.parse("(Y<)4col>");
 
-	@OriginalMember(owner = "client!jb", name = "m", descriptor = "I")
-	public static int anInt2951 = 0;
-
-	@OriginalMember(owner = "client!jb", name = "n", descriptor = "I")
+    @OriginalMember(owner = "client!jb", name = "n", descriptor = "I")
 	public static int anInt2952 = 0;
 
 	@OriginalMember(owner = "client!jb", name = "p", descriptor = "I")

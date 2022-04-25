@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static209 {
 
-	@OriginalMember(owner = "client!ra", name = "J", descriptor = "I")
-	public static int miscTransmitAt = 0;
-
     @OriginalMember(owner = "client!ra", name = "jb", descriptor = "J")
 	public static volatile long aLong161 = 0L;
 

@@ -180,8 +180,10 @@ public final class client extends GameShell {
 	public static long firstGc = 0L;
 	@OriginalMember(owner = "client!mj", name = "A", descriptor = "J")
 	public static long prevGc = 0L;
+    @OriginalMember(owner = "client!gj", name = "d", descriptor = "I")
+	public static int loop = 0;
 
-	@OriginalMember(owner = "client!client", name = "main", descriptor = "([Ljava/lang/String;)V")
+    @OriginalMember(owner = "client!client", name = "main", descriptor = "([Ljava/lang/String;)V")
 	public static void main(@OriginalArg(0) String[] arg0) {
 		try {
 			if (arg0.length != 4) {
@@ -806,12 +808,12 @@ public final class client extends GameShell {
 							local66.movementQueueSpeed[0] = 1;
 							local66.movementQueueX[0] = local98 + (local66.xFine >> 7);
 							local66.movementQueueZ[0] = local106 + (local66.zFine >> 7);
-							PathFinder.collisionMaps[Static55.level].unflagScenery(local66.xFine >> 7, local66.getSize(), false, 0, local66.getSize(), local66.zFine >> 7);
-							if (local66.movementQueueX[0] >= 0 && local66.movementQueueX[0] <= 104 - local66.getSize() && local66.movementQueueZ[0] >= 0 && local66.movementQueueZ[0] <= 104 - local66.getSize() && PathFinder.collisionMaps[Static55.level].method3054(local66.zFine >> 7, local66.movementQueueZ[0], local66.movementQueueX[0], local66.xFine >> 7)) {
+							PathFinder.collisionMaps[Player.level].unflagScenery(local66.xFine >> 7, local66.getSize(), false, 0, local66.getSize(), local66.zFine >> 7);
+							if (local66.movementQueueX[0] >= 0 && local66.movementQueueX[0] <= 104 - local66.getSize() && local66.movementQueueZ[0] >= 0 && local66.movementQueueZ[0] <= 104 - local66.getSize() && PathFinder.collisionMaps[Player.level].method3054(local66.zFine >> 7, local66.movementQueueZ[0], local66.movementQueueX[0], local66.xFine >> 7)) {
 								if (local66.getSize() > 1) {
 									for (@Pc(226) int local226 = local66.movementQueueX[0]; local66.movementQueueX[0] + local66.getSize() > local226; local226++) {
 										for (@Pc(246) int local246 = local66.movementQueueZ[0]; local66.movementQueueZ[0] + local66.getSize() > local246; local246++) {
-											if ((PathFinder.collisionMaps[Static55.level].anIntArrayArray30[local226][local246] & 0x12401FF) != 0) {
+											if ((PathFinder.collisionMaps[Player.level].anIntArrayArray30[local226][local246] & 0x12401FF) != 0) {
 												continue nextNpc;
 											}
 										}
@@ -824,7 +826,7 @@ public final class client extends GameShell {
 					Static104.method2247(local66);
 					Static37.method949(local66);
 					Static34.method879(local66);
-					PathFinder.collisionMaps[Static55.level].flagScenery(local66.xFine >> 7, false, local66.zFine >> 7, local66.getSize(), local66.getSize());
+					PathFinder.collisionMaps[Player.level].flagScenery(local66.xFine >> 7, false, local66.zFine >> 7, local66.getSize(), local66.getSize());
 				}
 			}
 		}
@@ -866,7 +868,7 @@ public final class client extends GameShell {
 												Static175.url = null;
 												Static33.openUrlRequest = null;
 											}
-											if (Static83.loop % 1500 == 0) {
+											if (loop % 1500 == 0) {
 												Static123.topBannerRefresh();
 											}
 											return;
@@ -1320,8 +1322,8 @@ public final class client extends GameShell {
 		if (gameState == 1000) {
 			return;
 		}
-		Static83.loop++;
-		if (Static83.loop % 1000 == 1) {
+		loop++;
+		if (loop % 1000 == 1) {
 			@Pc(24) GregorianCalendar gregorianCalendar = new GregorianCalendar();
 			Static60.gregorianDateSeed = gregorianCalendar.get(Calendar.HOUR_OF_DAY) * 600 + gregorianCalendar.get(Calendar.MINUTE) * 10 + gregorianCalendar.get(Calendar.SECOND) / 6;
 			Static39.aRandom1.setSeed(Static60.gregorianDateSeed);

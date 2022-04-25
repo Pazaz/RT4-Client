@@ -34,23 +34,23 @@ public final class Static36 {
 	@OriginalMember(owner = "client!client", name = "a", descriptor = "([Lclient!be;IIIIIII)V")
 	public static void method946(@OriginalArg(0) Component[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7) {
 		for (@Pc(1) int local1 = 0; local1 < arg0.length; local1++) {
-			@Pc(9) Component local9 = arg0[local1];
-			if (local9 != null && local9.layer == arg1 && (!local9.aBoolean32 || local9.type == 0 || local9.aBoolean25 || method940(local9).anInt546 != 0 || local9 == Static4.aClass13_1 || local9.anInt453 == 1338) && (!local9.aBoolean32 || !method947(local9))) {
-				@Pc(50) int local50 = local9.x + arg6;
-				@Pc(55) int local55 = local9.y + arg7;
+			@Pc(9) Component component = arg0[local1];
+			if (component != null && component.layer == arg1 && (!component.aBoolean32 || component.type == 0 || component.aBoolean25 || method940(component).anInt546 != 0 || component == Static4.aClass13_1 || component.anInt453 == 1338) && (!component.aBoolean32 || !method947(component))) {
+				@Pc(50) int local50 = component.x + arg6;
+				@Pc(55) int local55 = component.y + arg7;
 				@Pc(61) int local61;
 				@Pc(63) int local63;
 				@Pc(65) int local65;
 				@Pc(67) int local67;
-				if (local9.type == 2) {
+				if (component.type == 2) {
 					local61 = arg2;
 					local63 = arg3;
 					local65 = arg4;
 					local67 = arg5;
 				} else {
-					@Pc(73) int local73 = local50 + local9.anInt445;
-					@Pc(78) int local78 = local55 + local9.anInt459;
-					if (local9.type == 9) {
+					@Pc(73) int local73 = local50 + component.anInt445;
+					@Pc(78) int local78 = local55 + component.anInt459;
+					if (component.type == 9) {
 						local73++;
 						local78++;
 					}
@@ -59,17 +59,17 @@ public final class Static36 {
 					local65 = local73 < arg4 ? local73 : arg4;
 					local67 = local78 < arg5 ? local78 : arg5;
 				}
-				if (local9 == Static105.aClass13_14) {
+				if (component == Static105.aClass13_14) {
 					Static44.aBoolean83 = true;
 					Static124.anInt3075 = local50;
 					Static20.anInt660 = local55;
 				}
-				if (!local9.aBoolean32 || local61 < local65 && local63 < local67) {
-					if (local9.type == 0) {
-						if (!local9.aBoolean32 && method947(local9) && Static180.aClass13_22 != local9) {
+				if (!component.aBoolean32 || local61 < local65 && local63 < local67) {
+					if (component.type == 0) {
+						if (!component.aBoolean32 && method947(component) && Static180.aClass13_22 != component) {
 							continue;
 						}
-						if (local9.noClickThrough && Static215.anInt4873 >= local61 && Static223.anInt5032 >= local63 && Static215.anInt4873 < local65 && Static223.anInt5032 < local67) {
+						if (component.noClickThrough && Mouse.anInt4873 >= local61 && Mouse.anInt5032 >= local63 && Mouse.anInt4873 < local65 && Mouse.anInt5032 < local67) {
 							for (@Pc(164) HookRequest local164 = (HookRequest) InterfaceList.lowPriorityRequests.method2289(); local164 != null; local164 = (HookRequest) InterfaceList.lowPriorityRequests.method2288()) {
 								if (local164.aBoolean158) {
 									local164.unlink();
@@ -83,9 +83,9 @@ public final class Static36 {
 							Static137.anInt3337 = 0;
 						}
 					}
-					if (local9.aBoolean32) {
+					if (component.aBoolean32) {
 						@Pc(207) boolean local207;
-						if (Static215.anInt4873 >= local61 && Static223.anInt5032 >= local63 && Static215.anInt4873 < local65 && Static223.anInt5032 < local67) {
+						if (Mouse.anInt4873 >= local61 && Mouse.anInt5032 >= local63 && Mouse.anInt4873 < local65 && Mouse.anInt5032 < local67) {
 							local207 = true;
 						} else {
 							local207 = false;
@@ -95,383 +95,385 @@ public final class Static36 {
 							local212 = true;
 						}
 						@Pc(221) boolean local221 = false;
-						if (Static150.clickButton == 1 && Static7.clickX >= local61 && Static60.clickY >= local63 && Static7.clickX < local65 && Static60.clickY < local67) {
+						if (Static150.clickButton == 1 && Mouse.clickX >= local61 && Mouse.clickY >= local63 && Mouse.clickX < local65 && Mouse.clickY < local67) {
 							local221 = true;
 						}
-						@Pc(243) int local243;
-						@Pc(322) int local322;
-						if (local9.aByteArray8 != null) {
-							for (local243 = 0; local243 < local9.aByteArray8.length; local243++) {
-								if (Keyboard.pressedKeys[local9.aByteArray8[local243]]) {
-									if (local9.anIntArray49 == null || Static83.loop >= local9.anIntArray49[local243]) {
-										@Pc(279) byte local279 = local9.aByteArray7[local243];
+						@Pc(243) int i;
+						@Pc(322) int k;
+						if (component.aByteArray8 != null) {
+							for (i = 0; i < component.aByteArray8.length; i++) {
+								if (Keyboard.pressedKeys[component.aByteArray8[i]]) {
+									if (component.anIntArray49 == null || client.loop >= component.anIntArray49[i]) {
+										@Pc(279) byte local279 = component.aByteArray7[i];
 										if (local279 == 0 || ((local279 & 0x2) == 0 || Keyboard.pressedKeys[Keyboard.KEY_ALT]) && ((local279 & 0x1) == 0 || Keyboard.pressedKeys[Keyboard.KEY_CTRL]) && ((local279 & 0x4) == 0 || Keyboard.pressedKeys[Keyboard.KEY_SHIFT])) {
-											Static263.method4512(JagString.EMPTY, -1, local243 + 1, local9.id);
-											local322 = local9.anIntArray46[local243];
-											if (local9.anIntArray49 == null) {
-												local9.anIntArray49 = new int[local9.aByteArray8.length];
+											Static263.method4512(JagString.EMPTY, -1, i + 1, component.id);
+											k = component.anIntArray46[i];
+											if (component.anIntArray49 == null) {
+												component.anIntArray49 = new int[component.aByteArray8.length];
 											}
-											if (local322 == 0) {
-												local9.anIntArray49[local243] = Integer.MAX_VALUE;
+											if (k == 0) {
+												component.anIntArray49[i] = Integer.MAX_VALUE;
 											} else {
-												local9.anIntArray49[local243] = Static83.loop + local322;
+												component.anIntArray49[i] = client.loop + k;
 											}
 										}
 									}
-								} else if (local9.anIntArray49 != null) {
-									local9.anIntArray49[local243] = 0;
+								} else if (component.anIntArray49 != null) {
+									component.anIntArray49[i] = 0;
 								}
 							}
 						}
 						if (local221) {
-							Static40.method1015(Static60.clickY - local55, Static7.clickX - local50, local9);
+							Static40.method1015(Mouse.clickY - local55, Mouse.clickX - local50, component);
 						}
-						if (Static105.aClass13_14 != null && Static105.aClass13_14 != local9 && local207 && method940(local9).method509()) {
-							Static56.aClass13_12 = local9;
+						if (Static105.aClass13_14 != null && Static105.aClass13_14 != component && local207 && method940(component).method509()) {
+							Static56.aClass13_12 = component;
 						}
-						if (local9 == Static4.aClass13_1) {
+						if (component == Static4.aClass13_1) {
 							Static146.aBoolean174 = true;
 							Static81.anInt2225 = local50;
 							Static228.anInt5103 = local55;
 						}
-						if (local9.aBoolean25 || local9.anInt453 != 0) {
-							@Pc(399) HookRequest local399;
-							if (local207 && Static58.wheelRotation != 0 && local9.anObjectArray10 != null) {
-								local399 = new HookRequest();
-								local399.aBoolean158 = true;
-								local399.source = local9;
-								local399.mouseY = Static58.wheelRotation;
-								local399.arguments = local9.anObjectArray10;
-								InterfaceList.lowPriorityRequests.addTail(local399);
+						if (component.aBoolean25 || component.anInt453 != 0) {
+							@Pc(399) HookRequest request;
+							if (local207 && Static58.wheelRotation != 0 && component.anObjectArray10 != null) {
+								request = new HookRequest();
+								request.aBoolean158 = true;
+								request.source = component;
+								request.mouseY = Static58.wheelRotation;
+								request.arguments = component.anObjectArray10;
+								InterfaceList.lowPriorityRequests.addTail(request);
 							}
-							if (Static105.aClass13_14 != null || Static118.aClass13_15 != null || Static60.aBoolean108 || local9.anInt453 != 1400 && Static137.anInt3337 > 0) {
+							if (Static105.aClass13_14 != null || Static118.aClass13_15 != null || Static60.aBoolean108 || component.anInt453 != 1400 && Static137.anInt3337 > 0) {
 								local221 = false;
 								local212 = false;
 								local207 = false;
 							}
-							@Pc(508) int local508;
-							if (local9.anInt453 != 0) {
-								if (local9.anInt453 == 1337) {
-									Static280.aClass13_26 = local9;
-									Static43.redraw(local9);
+							@Pc(508) int skill;
+							if (component.anInt453 != 0) {
+								if (component.anInt453 == 1337) {
+									Static280.aClass13_26 = component;
+									Static43.redraw(component);
 									continue;
 								}
-								if (local9.anInt453 == 1338) {
+								if (component.anInt453 == 1338) {
 									if (local221) {
-										Static1.anInt5 = Static7.clickX - local50;
-										Static107.anInt2878 = Static60.clickY - local55;
+										Static1.anInt5 = Mouse.clickX - local50;
+										Static107.anInt2878 = Mouse.clickY - local55;
 									}
 									continue;
 								}
-								if (local9.anInt453 == 1400) {
-									WorldMap.component = local9;
+								if (component.anInt453 == 1400) {
+									WorldMap.component = component;
 									if (local221) {
 										if (Keyboard.pressedKeys[Keyboard.KEY_CTRL] && LoginManager.staffModLevel > 0) {
-											local243 = (int) ((double) (Static7.clickX - local50 - local9.anInt445 / 2) * 2.0D / (double) WorldMap.zoom);
-											local508 = (int) ((double) (Static60.clickY - local55 - local9.anInt459 / 2) * 2.0D / (double) WorldMap.zoom);
-											local322 = WorldMap.anInt435 + local243;
-											@Pc(516) int local516 = WorldMap.anInt919 + local508;
-											@Pc(520) int local520 = local322 + WorldMap.originX;
+											i = (int) ((double) (Mouse.clickX - local50 - component.anInt445 / 2) * 2.0D / (double) WorldMap.zoom);
+											skill = (int) ((double) (Mouse.clickY - local55 - component.anInt459 / 2) * 2.0D / (double) WorldMap.zoom);
+											k = WorldMap.anInt435 + i;
+											@Pc(516) int local516 = WorldMap.anInt919 + skill;
+											@Pc(520) int local520 = k + WorldMap.originX;
 											@Pc(528) int local528 = WorldMap.length + WorldMap.originZ - local516 - 1;
-											Static61.teleport(local520, local528, 0);
+											Cheat.teleport(local520, local528, 0);
 											Static153.method2909();
 											continue;
 										}
 										Static137.anInt3337 = 1;
-										Static246.anInt5388 = Static215.anInt4873;
-										Static165.anInt4035 = Static223.anInt5032;
+										Static246.anInt5388 = Mouse.anInt4873;
+										Static165.anInt4035 = Mouse.anInt5032;
 										continue;
 									}
 									if (local212 && Static137.anInt3337 > 0) {
-										if (Static137.anInt3337 == 1 && (Static246.anInt5388 != Static215.anInt4873 || Static165.anInt4035 != Static223.anInt5032)) {
+										if (Static137.anInt3337 == 1 && (Static246.anInt5388 != Mouse.anInt4873 || Static165.anInt4035 != Mouse.anInt5032)) {
 											Static197.anInt4620 = WorldMap.anInt435;
 											Static71.anInt1885 = WorldMap.anInt919;
 											Static137.anInt3337 = 2;
 										}
 										if (Static137.anInt3337 == 2) {
-											Static98.method1964(Static197.anInt4620 + (int) ((double) (Static246.anInt5388 - Static215.anInt4873) * 2.0D / (double) WorldMap.targetZoom));
-											Static277.method4641(Static71.anInt1885 + (int) ((double) (Static165.anInt4035 - Static223.anInt5032) * 2.0D / (double) WorldMap.targetZoom));
+											WorldMap.method1964(Static197.anInt4620 + (int) ((double) (Static246.anInt5388 - Mouse.anInt4873) * 2.0D / (double) WorldMap.targetZoom));
+											WorldMap.method4641(Static71.anInt1885 + (int) ((double) (Static165.anInt4035 - Mouse.anInt5032) * 2.0D / (double) WorldMap.targetZoom));
 										}
 										continue;
 									}
 									Static137.anInt3337 = 0;
 									continue;
 								}
-								if (local9.anInt453 == 1401) {
+								if (component.anInt453 == 1401) {
 									if (local212) {
-										Static119.method2387(local9.anInt445, Static223.anInt5032 - local55, Static215.anInt4873 - local50, local9.anInt459);
+										WorldMap.method2387(component.anInt445, Mouse.anInt5032 - local55, Mouse.anInt4873 - local50, component.anInt459);
 									}
 									continue;
 								}
-								if (local9.anInt453 == 1402) {
+								if (component.anInt453 == 1402) {
 									if (!GlRenderer.enabled) {
-										Static43.redraw(local9);
+										Static43.redraw(component);
 									}
 									continue;
 								}
 							}
-							if (!local9.aBoolean24 && local221) {
-								local9.aBoolean24 = true;
-								if (local9.anObjectArray5 != null) {
-									local399 = new HookRequest();
-									local399.aBoolean158 = true;
-									local399.source = local9;
-									local399.mouseX = Static7.clickX - local50;
-									local399.mouseY = Static60.clickY - local55;
-									local399.arguments = local9.anObjectArray5;
-									InterfaceList.lowPriorityRequests.addTail(local399);
+							if (!component.aBoolean24 && local221) {
+								component.aBoolean24 = true;
+								if (component.onClickRepeat != null) {
+									request = new HookRequest();
+									request.aBoolean158 = true;
+									request.source = component;
+									request.mouseX = Mouse.clickX - local50;
+									request.mouseY = Mouse.clickY - local55;
+									request.arguments = component.onClickRepeat;
+									InterfaceList.lowPriorityRequests.addTail(request);
 								}
 							}
-							if (local9.aBoolean24 && local212 && local9.anObjectArray6 != null) {
-								local399 = new HookRequest();
-								local399.aBoolean158 = true;
-								local399.source = local9;
-								local399.mouseX = Static215.anInt4873 - local50;
-								local399.mouseY = Static223.anInt5032 - local55;
-								local399.arguments = local9.anObjectArray6;
-								InterfaceList.lowPriorityRequests.addTail(local399);
+							if (component.aBoolean24 && local212 && component.anObjectArray6 != null) {
+								request = new HookRequest();
+								request.aBoolean158 = true;
+								request.source = component;
+								request.mouseX = Mouse.anInt4873 - local50;
+								request.mouseY = Mouse.anInt5032 - local55;
+								request.arguments = component.anObjectArray6;
+								InterfaceList.lowPriorityRequests.addTail(request);
 							}
-							if (local9.aBoolean24 && !local212) {
-								local9.aBoolean24 = false;
-								if (local9.anObjectArray18 != null) {
-									local399 = new HookRequest();
-									local399.aBoolean158 = true;
-									local399.source = local9;
-									local399.mouseX = Static215.anInt4873 - local50;
-									local399.mouseY = Static223.anInt5032 - local55;
-									local399.arguments = local9.anObjectArray18;
-									Static115.mediumPriorityRequests.addTail(local399);
+							if (component.aBoolean24 && !local212) {
+								component.aBoolean24 = false;
+								if (component.onRelease != null) {
+									request = new HookRequest();
+									request.aBoolean158 = true;
+									request.source = component;
+									request.mouseX = Mouse.anInt4873 - local50;
+									request.mouseY = Mouse.anInt5032 - local55;
+									request.arguments = component.onRelease;
+									Static115.mediumPriorityRequests.addTail(request);
 								}
 							}
-							if (local212 && local9.anObjectArray9 != null) {
-								local399 = new HookRequest();
-								local399.aBoolean158 = true;
-								local399.source = local9;
-								local399.mouseX = Static215.anInt4873 - local50;
-								local399.mouseY = Static223.anInt5032 - local55;
-								local399.arguments = local9.anObjectArray9;
-								InterfaceList.lowPriorityRequests.addTail(local399);
+							if (local212 && component.onHold != null) {
+								request = new HookRequest();
+								request.aBoolean158 = true;
+								request.source = component;
+								request.mouseX = Mouse.anInt4873 - local50;
+								request.mouseY = Mouse.anInt5032 - local55;
+								request.arguments = component.onHold;
+								InterfaceList.lowPriorityRequests.addTail(request);
 							}
-							if (!local9.aBoolean19 && local207) {
-								local9.aBoolean19 = true;
-								if (local9.anObjectArray19 != null) {
-									local399 = new HookRequest();
-									local399.aBoolean158 = true;
-									local399.source = local9;
-									local399.mouseX = Static215.anInt4873 - local50;
-									local399.mouseY = Static223.anInt5032 - local55;
-									local399.arguments = local9.anObjectArray19;
-									InterfaceList.lowPriorityRequests.addTail(local399);
+							if (!component.aBoolean19 && local207) {
+								component.aBoolean19 = true;
+								if (component.onMouseOver != null) {
+									request = new HookRequest();
+									request.aBoolean158 = true;
+									request.source = component;
+									request.mouseX = Mouse.anInt4873 - local50;
+									request.mouseY = Mouse.anInt5032 - local55;
+									request.arguments = component.onMouseOver;
+									InterfaceList.lowPriorityRequests.addTail(request);
 								}
 							}
-							if (local9.aBoolean19 && local207 && local9.anObjectArray23 != null) {
-								local399 = new HookRequest();
-								local399.aBoolean158 = true;
-								local399.source = local9;
-								local399.mouseX = Static215.anInt4873 - local50;
-								local399.mouseY = Static223.anInt5032 - local55;
-								local399.arguments = local9.anObjectArray23;
-								InterfaceList.lowPriorityRequests.addTail(local399);
+							if (component.aBoolean19 && local207 && component.onMouseRepeat != null) {
+								request = new HookRequest();
+								request.aBoolean158 = true;
+								request.source = component;
+								request.mouseX = Mouse.anInt4873 - local50;
+								request.mouseY = Mouse.anInt5032 - local55;
+								request.arguments = component.onMouseRepeat;
+								InterfaceList.lowPriorityRequests.addTail(request);
 							}
-							if (local9.aBoolean19 && !local207) {
-								local9.aBoolean19 = false;
-								if (local9.anObjectArray24 != null) {
-									local399 = new HookRequest();
-									local399.aBoolean158 = true;
-									local399.source = local9;
-									local399.mouseX = Static215.anInt4873 - local50;
-									local399.mouseY = Static223.anInt5032 - local55;
-									local399.arguments = local9.anObjectArray24;
-									Static115.mediumPriorityRequests.addTail(local399);
+							if (component.aBoolean19 && !local207) {
+								component.aBoolean19 = false;
+								if (component.onMouseLeave != null) {
+									request = new HookRequest();
+									request.aBoolean158 = true;
+									request.source = component;
+									request.mouseX = Mouse.anInt4873 - local50;
+									request.mouseY = Mouse.anInt5032 - local55;
+									request.arguments = component.onMouseLeave;
+									Static115.mediumPriorityRequests.addTail(request);
 								}
 							}
-							if (local9.anObjectArray22 != null) {
-								local399 = new HookRequest();
-								local399.source = local9;
-								local399.arguments = local9.anObjectArray22;
-								Static4.highPriorityRequests.addTail(local399);
+							if (component.onTimer != null) {
+								request = new HookRequest();
+								request.source = component;
+								request.arguments = component.onTimer;
+								Static4.highPriorityRequests.addTail(request);
 							}
-							@Pc(966) HookRequest local966;
-							if (local9.anObjectArray4 != null && Static4.updatedVarcsWriterIndex > local9.anInt511) {
-								if (local9.anIntArray38 == null || Static4.updatedVarcsWriterIndex - local9.anInt511 > 32) {
-									local399 = new HookRequest();
-									local399.source = local9;
-									local399.arguments = local9.anObjectArray4;
-									InterfaceList.lowPriorityRequests.addTail(local399);
+							@Pc(966) HookRequest request2;
+							if (component.onVarcTransmit != null && VarcDomain.updatedVarcsWriterIndex > component.updatedVarcsReaderIndex) {
+								if (component.varcTriggers == null || VarcDomain.updatedVarcsWriterIndex - component.updatedVarcsReaderIndex > 32) {
+									request = new HookRequest();
+									request.source = component;
+									request.arguments = component.onVarcTransmit;
+									InterfaceList.lowPriorityRequests.addTail(request);
 								} else {
-									label563: for (local243 = local9.anInt511; local243 < Static4.updatedVarcsWriterIndex; local243++) {
-										local508 = Static138.updatedVarcs[local243 & 0x1F];
-										for (local322 = 0; local322 < local9.anIntArray38.length; local322++) {
-											if (local9.anIntArray38[local322] == local508) {
-												local966 = new HookRequest();
-												local966.source = local9;
-												local966.arguments = local9.anObjectArray4;
-												InterfaceList.lowPriorityRequests.addTail(local966);
+									label563: for (i = component.updatedVarcsReaderIndex; i < VarcDomain.updatedVarcsWriterIndex; i++) {
+										skill = VarcDomain.updatedVarcs[i & 0x1F];
+										for (k = 0; k < component.varcTriggers.length; k++) {
+											if (component.varcTriggers[k] == skill) {
+												request2 = new HookRequest();
+												request2.source = component;
+												request2.arguments = component.onVarcTransmit;
+												InterfaceList.lowPriorityRequests.addTail(request2);
 												break label563;
 											}
 										}
 									}
 								}
-								local9.anInt511 = Static4.updatedVarcsWriterIndex;
+								component.updatedVarcsReaderIndex = VarcDomain.updatedVarcsWriterIndex;
 							}
-							if (local9.anObjectArray15 != null && Static72.updatedVarcstrsWriterIndex > local9.anInt487) {
-								if (local9.anIntArray35 == null || Static72.updatedVarcstrsWriterIndex - local9.anInt487 > 32) {
-									local399 = new HookRequest();
-									local399.source = local9;
-									local399.arguments = local9.anObjectArray15;
-									InterfaceList.lowPriorityRequests.addTail(local399);
+							if (component.onVarcstrTransmit != null && VarcDomain.updatedVarcstrsWriterIndex > component.updatedVarcstrsReaderIndex) {
+								if (component.varcstrTriggers == null || VarcDomain.updatedVarcstrsWriterIndex - component.updatedVarcstrsReaderIndex > 32) {
+									request = new HookRequest();
+									request.source = component;
+									request.arguments = component.onVarcstrTransmit;
+									InterfaceList.lowPriorityRequests.addTail(request);
 								} else {
-									label539: for (local243 = local9.anInt487; local243 < Static72.updatedVarcstrsWriterIndex; local243++) {
-										local508 = Static233.updatedVarcstrs[local243 & 0x1F];
-										for (local322 = 0; local322 < local9.anIntArray35.length; local322++) {
-											if (local9.anIntArray35[local322] == local508) {
-												local966 = new HookRequest();
-												local966.source = local9;
-												local966.arguments = local9.anObjectArray15;
-												InterfaceList.lowPriorityRequests.addTail(local966);
+									label539: for (i = component.updatedVarcstrsReaderIndex; i < VarcDomain.updatedVarcstrsWriterIndex; i++) {
+										skill = VarcDomain.updatedVarcstrs[i & 0x1F];
+										for (k = 0; k < component.varcstrTriggers.length; k++) {
+											if (component.varcstrTriggers[k] == skill) {
+												request2 = new HookRequest();
+												request2.source = component;
+												request2.arguments = component.onVarcstrTransmit;
+												InterfaceList.lowPriorityRequests.addTail(request2);
 												break label539;
 											}
 										}
 									}
 								}
-								local9.anInt487 = Static72.updatedVarcstrsWriterIndex;
+								component.updatedVarcstrsReaderIndex = VarcDomain.updatedVarcstrsWriterIndex;
 							}
-							if (local9.anObjectArray25 != null && Static70.updatedVarpsWriterIndex > local9.anInt471) {
-								if (local9.anIntArray44 == null || Static70.updatedVarpsWriterIndex - local9.anInt471 > 32) {
-									local399 = new HookRequest();
-									local399.source = local9;
-									local399.arguments = local9.anObjectArray25;
-									InterfaceList.lowPriorityRequests.addTail(local399);
+							if (component.onVarpTransmit != null && VarpDomain.updatedVarpsWriterIndex > component.updatedVarpsReaderIndex) {
+								if (component.varpTriggers == null || VarpDomain.updatedVarpsWriterIndex - component.updatedVarpsReaderIndex > 32) {
+									request = new HookRequest();
+									request.source = component;
+									request.arguments = component.onVarpTransmit;
+									InterfaceList.lowPriorityRequests.addTail(request);
 								} else {
-									label515: for (local243 = local9.anInt471; local243 < Static70.updatedVarpsWriterIndex; local243++) {
-										local508 = Static83.updatedVarps[local243 & 0x1F];
-										for (local322 = 0; local322 < local9.anIntArray44.length; local322++) {
-											if (local9.anIntArray44[local322] == local508) {
-												local966 = new HookRequest();
-												local966.source = local9;
-												local966.arguments = local9.anObjectArray25;
-												InterfaceList.lowPriorityRequests.addTail(local966);
+									label515: for (i = component.updatedVarpsReaderIndex; i < VarpDomain.updatedVarpsWriterIndex; i++) {
+										skill = VarpDomain.updatedVarps[i & 0x1F];
+										for (k = 0; k < component.varpTriggers.length; k++) {
+											if (component.varpTriggers[k] == skill) {
+												request2 = new HookRequest();
+												request2.source = component;
+												request2.arguments = component.onVarpTransmit;
+												InterfaceList.lowPriorityRequests.addTail(request2);
 												break label515;
 											}
 										}
 									}
 								}
-								local9.anInt471 = Static70.updatedVarpsWriterIndex;
+								component.updatedVarpsReaderIndex = VarpDomain.updatedVarpsWriterIndex;
 							}
-							if (local9.anObjectArray7 != null && Static111.anInt2901 > local9.anInt493) {
-								if (local9.anIntArray34 == null || Static111.anInt2901 - local9.anInt493 > 32) {
-									local399 = new HookRequest();
-									local399.source = local9;
-									local399.arguments = local9.anObjectArray7;
-									InterfaceList.lowPriorityRequests.addTail(local399);
+							if (component.onInvTransmit != null && Static111.updatedInventoriesWriterIndex > component.updatedInventoriesReaderIndex) {
+								if (component.inventoryTriggers == null || Static111.updatedInventoriesWriterIndex - component.updatedInventoriesReaderIndex > 32) {
+									request = new HookRequest();
+									request.source = component;
+									request.arguments = component.onInvTransmit;
+									InterfaceList.lowPriorityRequests.addTail(request);
 								} else {
-									label491: for (local243 = local9.anInt493; local243 < Static111.anInt2901; local243++) {
-										local508 = Static27.anIntArray70[local243 & 0x1F];
-										for (local322 = 0; local322 < local9.anIntArray34.length; local322++) {
-											if (local9.anIntArray34[local322] == local508) {
-												local966 = new HookRequest();
-												local966.source = local9;
-												local966.arguments = local9.anObjectArray7;
-												InterfaceList.lowPriorityRequests.addTail(local966);
-												break label491;
+									outer:
+									for (i = component.updatedInventoriesReaderIndex; i < Static111.updatedInventoriesWriterIndex; i++) {
+										skill = Static27.updatedInventories[i & 0x1F];
+										for (k = 0; k < component.inventoryTriggers.length; k++) {
+											if (component.inventoryTriggers[k] == skill) {
+												request2 = new HookRequest();
+												request2.source = component;
+												request2.arguments = component.onInvTransmit;
+												InterfaceList.lowPriorityRequests.addTail(request2);
+												break outer;
 											}
 										}
 									}
 								}
-								local9.anInt493 = Static111.anInt2901;
+								component.updatedInventoriesReaderIndex = Static111.updatedInventoriesWriterIndex;
 							}
-							if (local9.anObjectArray2 != null && Static89.anInt2385 > local9.anInt525) {
-								if (local9.anIntArray42 == null || Static89.anInt2385 - local9.anInt525 > 32) {
-									local399 = new HookRequest();
-									local399.source = local9;
-									local399.arguments = local9.anObjectArray2;
-									InterfaceList.lowPriorityRequests.addTail(local399);
+							if (component.onStatTransmit != null && PlayerSkillXpTable.updatedStatsWriterIndex > component.updatedStatsReaderIndex) {
+								if (component.statTriggers == null || PlayerSkillXpTable.updatedStatsWriterIndex - component.updatedStatsReaderIndex > 32) {
+									request = new HookRequest();
+									request.source = component;
+									request.arguments = component.onStatTransmit;
+									InterfaceList.lowPriorityRequests.addTail(request);
 								} else {
-									label467: for (local243 = local9.anInt525; local243 < Static89.anInt2385; local243++) {
-										local508 = Static249.anIntArray478[local243 & 0x1F];
-										for (local322 = 0; local322 < local9.anIntArray42.length; local322++) {
-											if (local9.anIntArray42[local322] == local508) {
-												local966 = new HookRequest();
-												local966.source = local9;
-												local966.arguments = local9.anObjectArray2;
-												InterfaceList.lowPriorityRequests.addTail(local966);
-												break label467;
+									outer:
+									for (i = component.updatedStatsReaderIndex; i < PlayerSkillXpTable.updatedStatsWriterIndex; i++) {
+										skill = PlayerSkillXpTable.updatedStats[i & 0x1F];
+										for (k = 0; k < component.statTriggers.length; k++) {
+											if (component.statTriggers[k] == skill) {
+												request2 = new HookRequest();
+												request2.source = component;
+												request2.arguments = component.onStatTransmit;
+												InterfaceList.lowPriorityRequests.addTail(request2);
+												break outer;
 											}
 										}
 									}
 								}
-								local9.anInt525 = Static89.anInt2385;
+								component.updatedStatsReaderIndex = PlayerSkillXpTable.updatedStatsWriterIndex;
 							}
-							if (Static49.anInt1464 > local9.anInt482 && local9.anObjectArray20 != null) {
-								local399 = new HookRequest();
-								local399.source = local9;
-								local399.arguments = local9.anObjectArray20;
-								InterfaceList.lowPriorityRequests.addTail(local399);
+							if (Chat.transmitAt > component.lastTransmitTimer && component.onChatTransmit != null) {
+								request = new HookRequest();
+								request.source = component;
+								request.arguments = component.onChatTransmit;
+								InterfaceList.lowPriorityRequests.addTail(request);
 							}
-							if (Static185.anInt4369 > local9.anInt482 && local9.anObjectArray1 != null) {
-								local399 = new HookRequest();
-								local399.source = local9;
-								local399.arguments = local9.anObjectArray1;
-								InterfaceList.lowPriorityRequests.addTail(local399);
+							if (FriendsList.transmitAt > component.lastTransmitTimer && component.onFriendTransmit != null) {
+								request = new HookRequest();
+								request.source = component;
+								request.arguments = component.onFriendTransmit;
+								InterfaceList.lowPriorityRequests.addTail(request);
 							}
-							if (Static278.anInt5867 > local9.anInt482 && local9.anObjectArray28 != null) {
-								local399 = new HookRequest();
-								local399.source = local9;
-								local399.arguments = local9.anObjectArray28;
-								InterfaceList.lowPriorityRequests.addTail(local399);
+							if (ClanChat.transmitAt > component.lastTransmitTimer && component.onClanTransmit != null) {
+								request = new HookRequest();
+								request.source = component;
+								request.arguments = component.onClanTransmit;
+								InterfaceList.lowPriorityRequests.addTail(request);
 							}
-							if (Static207.anInt4778 > local9.anInt482 && local9.anObjectArray21 != null) {
-								local399 = new HookRequest();
-								local399.source = local9;
-								local399.arguments = local9.anObjectArray21;
-								InterfaceList.lowPriorityRequests.addTail(local399);
+							if (StockMarketManager.transmitAt > component.lastTransmitTimer && component.onStockTransmit != null) {
+								request = new HookRequest();
+								request.source = component;
+								request.arguments = component.onStockTransmit;
+								InterfaceList.lowPriorityRequests.addTail(request);
 							}
-							if (Static209.miscTransmitAt > local9.anInt482 && local9.anObjectArray30 != null) {
-								local399 = new HookRequest();
-								local399.source = local9;
-								local399.arguments = local9.anObjectArray30;
-								InterfaceList.lowPriorityRequests.addTail(local399);
+							if (InterfaceList.miscTransmitAt > component.lastTransmitTimer && component.onMiscTransmit != null) {
+								request = new HookRequest();
+								request.source = component;
+								request.arguments = component.onMiscTransmit;
+								InterfaceList.lowPriorityRequests.addTail(request);
 							}
-							local9.anInt482 = InterfaceList.transmitTimer;
-							if (local9.anObjectArray14 != null) {
-								for (local243 = 0; local243 < InterfaceList.keyQueueSize; local243++) {
+							component.lastTransmitTimer = InterfaceList.transmitTimer;
+							if (component.onKey != null) {
+								for (i = 0; i < InterfaceList.keyQueueSize; i++) {
 									@Pc(1430) HookRequest local1430 = new HookRequest();
-									local1430.source = local9;
-									local1430.keyCode = InterfaceList.keyCodes[local243];
-									local1430.keyChar = InterfaceList.keyChars[local243];
-									local1430.arguments = local9.anObjectArray14;
+									local1430.source = component;
+									local1430.keyCode = InterfaceList.keyCodes[i];
+									local1430.keyChar = InterfaceList.keyChars[i];
+									local1430.arguments = component.onKey;
 									InterfaceList.lowPriorityRequests.addTail(local1430);
 								}
 							}
-							if (Static13.aBoolean16 && local9.anObjectArray13 != null) {
-								local399 = new HookRequest();
-								local399.source = local9;
-								local399.arguments = local9.anObjectArray13;
-								InterfaceList.lowPriorityRequests.addTail(local399);
+							if (Static13.aBoolean16 && component.onCamFinished != null) {
+								request = new HookRequest();
+								request.source = component;
+								request.arguments = component.onCamFinished;
+								InterfaceList.lowPriorityRequests.addTail(request);
 							}
 						}
 					}
-					if (!local9.aBoolean32 && Static105.aClass13_14 == null && Static118.aClass13_15 == null && !Static60.aBoolean108) {
-						if ((local9.anInt470 >= 0 || local9.anInt480 != 0) && Static215.anInt4873 >= local61 && Static223.anInt5032 >= local63 && Static215.anInt4873 < local65 && Static223.anInt5032 < local67) {
-							if (local9.anInt470 >= 0) {
-								Static180.aClass13_22 = arg0[local9.anInt470];
+					if (!component.aBoolean32 && Static105.aClass13_14 == null && Static118.aClass13_15 == null && !Static60.aBoolean108) {
+						if ((component.anInt470 >= 0 || component.anInt480 != 0) && Mouse.anInt4873 >= local61 && Mouse.anInt5032 >= local63 && Mouse.anInt4873 < local65 && Mouse.anInt5032 < local67) {
+							if (component.anInt470 >= 0) {
+								Static180.aClass13_22 = arg0[component.anInt470];
 							} else {
-								Static180.aClass13_22 = local9;
+								Static180.aClass13_22 = component;
 							}
 						}
-						if (local9.type == 8 && Static215.anInt4873 >= local61 && Static223.anInt5032 >= local63 && Static215.anInt4873 < local65 && Static223.anInt5032 < local67) {
-							Static43.aClass13_11 = local9;
+						if (component.type == 8 && Mouse.anInt4873 >= local61 && Mouse.anInt5032 >= local63 && Mouse.anInt4873 < local65 && Mouse.anInt5032 < local67) {
+							Static43.aClass13_11 = component;
 						}
-						if (local9.anInt491 > local9.anInt459) {
-							Static236.method4049(Static223.anInt5032, local9.anInt459, local9, Static215.anInt4873, local50 + local9.anInt445, local55, local9.anInt491);
+						if (component.anInt491 > component.anInt459) {
+							Static236.method4049(Mouse.anInt5032, component.anInt459, component, Mouse.anInt4873, local50 + component.anInt445, local55, component.anInt491);
 						}
 					}
-					if (local9.type == 0) {
-						method946(arg0, local9.id, local61, local63, local65, local67, local50 - local9.anInt489, local55 - local9.scrollY);
-						if (local9.createdComponents != null) {
-							method946(local9.createdComponents, local9.id, local61, local63, local65, local67, local50 - local9.anInt489, local55 - local9.scrollY);
+					if (component.type == 0) {
+						method946(arg0, component.id, local61, local63, local65, local67, local50 - component.anInt489, local55 - component.scrollY);
+						if (component.createdComponents != null) {
+							method946(component.createdComponents, component.id, local61, local63, local65, local67, local50 - component.anInt489, local55 - component.scrollY);
 						}
-						@Pc(1595) Class3_Sub31 local1595 = (Class3_Sub31) Static119.aClass133_9.get((long) local9.id);
+						@Pc(1595) Class3_Sub31 local1595 = (Class3_Sub31) Static119.aClass133_9.get((long) component.id);
 						if (local1595 != null) {
 							Static57.method1320(local50, local63, local55, local65, local1595.anInt5878, local61, local67);
 						}

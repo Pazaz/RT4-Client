@@ -79,7 +79,7 @@ public final class Static104 {
 			local233 = ((Npc) arg0).type.aBoolean181;
 		}
 		if (local233) {
-			if (arg0.anInt3381 != arg0.anInt3400 && arg0.anInt3370 == -1 && arg0.anInt3376 != 0) {
+			if (arg0.anInt3381 != arg0.anInt3400 && arg0.faceEntity == -1 && arg0.anInt3376 != 0) {
 				local273 = 2;
 			}
 			if (arg0.movementQueueSize > 2) {

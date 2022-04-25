@@ -18,7 +18,7 @@ public final class Static18 {
 
 	@OriginalMember(owner = "client!bh", name = "a", descriptor = "(Lclient!fe;Z)V")
 	public static void method553(@OriginalArg(0) PathingEntity arg0) {
-		@Pc(8) int local8 = arg0.anInt3395 - Static83.loop;
+		@Pc(8) int local8 = arg0.anInt3395 - client.loop;
 		@Pc(20) int local20 = arg0.anInt3380 * 128 + arg0.getSize() * 64;
 		@Pc(36) int local36 = arg0.anInt3428 * 128 + arg0.getSize() * 64;
 		if (arg0.anInt3431 == 0) {

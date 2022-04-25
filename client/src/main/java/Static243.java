@@ -32,13 +32,13 @@ public final class Static243 {
 		MouseRecorder.instance.samples = 0;
 		GameShell.focus = true;
 		Static114.method4625();
-		Static49.anInt1462 = -1;
-		Static5.anInt45 = -1;
+		Static49.opcode4 = -1;
+		Static5.opcode3 = -1;
 		Protocol.opcode = -1;
 		Static267.anInt5775 = 0;
 		Static60.rebootTimer = 0;
 		Protocol.outboundBuffer.offset = 0;
-		Static230.anInt5152 = -1;
+		Static230.opcode2 = -1;
 		Static201.anInt1862 = 0;
 		Protocol.inboundBuffer.offset = 0;
 		@Pc(3506) int local3506;
@@ -49,14 +49,14 @@ public final class Static243 {
 		Static60.aBoolean108 = false;
 		Static48.setIdleLoops(0);
 		for (local3506 = 0; local3506 < 100; local3506++) {
-			Static230.aClass100Array158[local3506] = null;
+			Chat.aClass100Array158[local3506] = null;
 		}
 		Static260.anInt5014 = 0;
 		Static132.anInt3291 = (int) (Math.random() * 100.0D) - 50;
 		Static84.anInt2255 = 0;
 		Camera.yawTarget = (int) (Math.random() * 20.0D) - 10 & 0x7FF;
 		Static107.anInt2875 = -1;
-		Static267.anInt5774 = 0;
+		PlayerList.size = 0;
 		Static270.anInt5795 = 0;
 		Static206.anInt4774 = (int) (Math.random() * 110.0D) - 55;
 		Static241.aBoolean302 = false;
@@ -64,17 +64,17 @@ public final class Static243 {
 		SoundPlayer.anInt4451 = 0;
 		Static115.anInt2939 = 0;
 		Static59.anInt1814 = (int) (Math.random() * 120.0D) - 60;
-		Static62.anInt1941 = 0;
+		Chat.anInt1941 = 0;
 		Static230.anInt5161 = (int) (Math.random() * 80.0D) - 40;
 		Static272.anInt5214 = 0;
 		for (local3506 = 0; local3506 < 2048; local3506++) {
-			Static159.players[local3506] = null;
-			Static115.aClass3_Sub15Array1[local3506] = null;
+			PlayerList.players[local3506] = null;
+			PlayerList.appearanceCache[local3506] = null;
 		}
 		for (local3506 = 0; local3506 < 32768; local3506++) {
 			Static175.npcs[local3506] = null;
 		}
-		PlayerList.self = Static159.players[2047] = new Player();
+		PlayerList.self = PlayerList.players[2047] = new Player();
 		Static217.aClass69_116.clear();
 		Static99.aClass69_64.clear();
 		if (Static159.aClass69ArrayArrayArray1 != null) {
@@ -131,7 +131,7 @@ public final class Static243 {
 		Static199.aClass3_Sub22Array1 = null;
 		Static15.aClass100_87 = null;
 		for (local3506 = 0; local3506 < 6; local3506++) {
-			Static229.aClass136Array1[local3506] = new StockMarketOffer();
+			StockMarketManager.aClass136Array1[local3506] = new StockMarketOffer();
 		}
 		for (local3506 = 0; local3506 < 25; local3506++) {
 			Static99.anIntArray240[local3506] = 0;

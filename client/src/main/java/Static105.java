@@ -16,9 +16,6 @@ public final class Static105 {
 	@OriginalMember(owner = "client!ib", name = "e", descriptor = "Lclient!be;")
 	public static Component aClass13_14 = null;
 
-	@OriginalMember(owner = "client!ib", name = "f", descriptor = "[I")
-	public static final int[] anIntArray256 = new int[2048];
-
 	@OriginalMember(owner = "client!ib", name = "g", descriptor = "Lclient!na;")
 	public static final JagString aClass100_559 = JagString.parse("<col=ffff00>");
 
