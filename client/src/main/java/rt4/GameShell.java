@@ -514,7 +514,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			}
 			getMaxMemory();
 			this.addCanvas();
-			client.frameBuffer = Static131.create(canvasHeight, canvasWidth, canvas);
+			SoftwareRaster.frameBuffer = Static131.create(canvasHeight, canvasWidth, canvas);
 			this.mainInit();
 			timer = Timer.create();
 

@@ -12,5 +12,6 @@ dependencyResolutionManagement {
 include(
     "deob-annotations",
     "signlink",
-    "client"
+    "client",
+    "playground"
 )

@@ -554,7 +554,7 @@ public final class Static1 {
 			if (GlRenderer.enabled) {
 				SoftwareRaster.pixels = null;
 			} else {
-				client.frameBuffer.makeTarget();
+				SoftwareRaster.frameBuffer.makeTarget();
 			}
 		}
 		WorldMap.aClass3_Sub2_Sub1_2.method1415(arg0, arg3);
