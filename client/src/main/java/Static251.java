@@ -54,11 +54,6 @@ public final class Static251 {
 		}
 	}
 
-	@OriginalMember(owner = "client!ug", name = "b", descriptor = "(B)V")
-	public static void method4276() {
-		Static45.aClass99_6.method3103();
-	}
-
 	@OriginalMember(owner = "client!ug", name = "a", descriptor = "(II)V")
 	public static void method4278(@OriginalArg(0) int arg0) {
 		if (Static241.anIntArray522 == null || Static241.anIntArray522.length < arg0) {

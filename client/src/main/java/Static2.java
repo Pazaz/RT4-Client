@@ -13,13 +13,7 @@ public final class Static2 {
 	@OriginalMember(owner = "client!aa", name = "a", descriptor = "I")
 	public static int anInt7 = 0;
 
-	@OriginalMember(owner = "client!aa", name = "h", descriptor = "[S")
-	public static final short[] aShortArray1 = new short[] { 960, 957, -21568, -21571, 22464 };
-
-	@OriginalMember(owner = "client!aa", name = "l", descriptor = "Z")
-	public static boolean aBoolean1 = false;
-
-	@OriginalMember(owner = "client!aa", name = "a", descriptor = "(SI)Z")
+    @OriginalMember(owner = "client!aa", name = "a", descriptor = "(SI)Z")
 	public static boolean method5(@OriginalArg(0) short arg0) {
 		if (arg0 == 47 || arg0 == 5 || arg0 == 43 || arg0 == 35 || arg0 == 58 || arg0 == 22 || arg0 == 40 || arg0 == 3) {
 			return true;
@@ -55,7 +49,7 @@ public final class Static2 {
 				}
 				if (arg1 == 1 && local23.anObjectArray8 != null) {
 					if (local23.createdComponentId >= 0) {
-						@Pc(103) Component local103 = Static5.getComponent(local23.id);
+						@Pc(103) Component local103 = InterfaceList.getComponent(local23.id);
 						if (local103 == null || local103.createdComponents == null || local23.createdComponentId >= local103.createdComponents.length || local103.createdComponents[local23.createdComponentId] != local23) {
 							continue;
 						}
@@ -89,7 +83,7 @@ public final class Static2 {
 		@Pc(61) int local61 = 0;
 		@Pc(64) int local64 = local53 + 1;
 		Static84.anIntArray209[0] = arg3;
-		@Pc(71) int[][] local71 = Static148.collisionMaps[Static55.level].anIntArrayArray30;
+		@Pc(71) int[][] local71 = PathFinder.collisionMaps[Static55.level].anIntArrayArray30;
 		@Pc(193) int local193;
 		while (local61 != local64) {
 			local3 = Static259.anIntArray514[local61];
@@ -100,16 +94,16 @@ public final class Static2 {
 				break;
 			}
 			if (arg1 != 0) {
-				if ((arg1 < 5 || arg1 == 10) && Static148.collisionMaps[Static55.level].method3042(arg4, local3, local8, arg8, arg1 - 1, 2, arg7)) {
+				if ((arg1 < 5 || arg1 == 10) && PathFinder.collisionMaps[Static55.level].method3042(arg4, local3, local8, arg8, arg1 - 1, 2, arg7)) {
 					local59 = true;
 					break;
 				}
-				if (arg1 < 10 && Static148.collisionMaps[Static55.level].method3046(arg4, arg1 - 1, arg8, local8, 2, arg7, local3)) {
+				if (arg1 < 10 && PathFinder.collisionMaps[Static55.level].method3046(arg4, arg1 - 1, arg8, local8, 2, arg7, local3)) {
 					local59 = true;
 					break;
 				}
 			}
-			if (arg0 != 0 && arg6 != 0 && Static148.collisionMaps[Static55.level].method3052(arg8, local8, local3, 2, arg0, arg2, arg4, arg6)) {
+			if (arg0 != 0 && arg6 != 0 && PathFinder.collisionMaps[Static55.level].method3052(arg8, local8, local3, 2, arg0, arg2, arg4, arg6)) {
 				local59 = true;
 				break;
 			}
@@ -247,9 +241,9 @@ public final class Static2 {
 
 	@OriginalMember(owner = "client!aa", name = "a", descriptor = "(IZI)V")
 	public static void method10(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		Static6.outboundBuffer.p1isaac(132);
-		Static6.outboundBuffer.p4rme(arg1);
-		Static6.outboundBuffer.p2le(arg0);
+		Protocol.outboundBuffer.p1isaac(132);
+		Protocol.outboundBuffer.p4rme(arg1);
+		Protocol.outboundBuffer.p2le(arg0);
 	}
 
 	@OriginalMember(owner = "client!aa", name = "a", descriptor = "(BLclient!be;)V")

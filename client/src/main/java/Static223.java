@@ -4,37 +4,28 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static223 {
 
-	@OriginalMember(owner = "client!sc", name = "m", descriptor = "[Z")
-	public static boolean[] aBooleanArray115;
-
-	@OriginalMember(owner = "client!sc", name = "f", descriptor = "Lclient!na;")
-	public static final JagString aClass100_946 = Static28.parse("(R");
+    @OriginalMember(owner = "client!sc", name = "f", descriptor = "Lclient!na;")
+	public static final JagString aClass100_946 = JagString.parse("(R");
 
 	@OriginalMember(owner = "client!sc", name = "g", descriptor = "Lclient!na;")
-	public static final JagString aClass100_947 = Static28.parse(" )2> <col=ff9040>");
+	public static final JagString aClass100_947 = JagString.parse(" )2> <col=ff9040>");
 
-	@OriginalMember(owner = "client!sc", name = "o", descriptor = "I")
-	public static int anInt5028 = 0;
-
-	@OriginalMember(owner = "client!sc", name = "p", descriptor = "I")
+    @OriginalMember(owner = "client!sc", name = "p", descriptor = "I")
 	public static int anInt5029 = 0;
 
 	@OriginalMember(owner = "client!sc", name = "v", descriptor = "I")
 	public static int anInt5032 = 0;
 
-	@OriginalMember(owner = "client!sc", name = "y", descriptor = "I")
-	public static int anInt5034 = -2;
-
 	@OriginalMember(owner = "client!sc", name = "z", descriptor = "[Z")
 	public static final boolean[] aBooleanArray116 = new boolean[100];
 
 	@OriginalMember(owner = "client!sc", name = "D", descriptor = "Lclient!na;")
-	public static final JagString aClass100_951 = Static28.parse("<col=ff7000>");
+	public static final JagString aClass100_951 = JagString.parse("<col=ff7000>");
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(IIILclient!km;)V")
 	public static void method3855(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) Npc arg2) {
 		if (arg2.seqId == arg1 && arg1 != -1) {
-			@Pc(10) SeqType local10 = Static36.get(arg1);
+			@Pc(10) SeqType local10 = SeqTypeList.get(arg1);
 			@Pc(13) int local13 = local10.anInt5347;
 			if (local13 == 1) {
 				arg2.anInt3373 = 1;
@@ -47,7 +38,7 @@ public final class Static223 {
 			if (local13 == 2) {
 				arg2.anInt3371 = 0;
 			}
-		} else if (arg1 == -1 || arg2.seqId == -1 || Static36.get(arg1).anInt5355 >= Static36.get(arg2.seqId).anInt5355) {
+		} else if (arg1 == -1 || arg2.seqId == -1 || SeqTypeList.get(arg1).anInt5355 >= SeqTypeList.get(arg2.seqId).anInt5355) {
 			arg2.anInt3360 = 0;
 			arg2.seqId = arg1;
 			arg2.anInt3373 = 1;
@@ -56,7 +47,7 @@ public final class Static223 {
 			arg2.anInt3405 = arg2.movementQueueSize;
 			arg2.anInt3425 = 0;
 			if (arg2.seqId != -1) {
-				SoundPlayer.playSeqSound(arg2.zFine, Static36.get(arg2.seqId), arg2.xFine, false, arg2.anInt3425);
+				SoundPlayer.playSeqSound(arg2.zFine, SeqTypeList.get(arg2.seqId), arg2.xFine, false, arg2.anInt3425);
 			}
 		}
 	}

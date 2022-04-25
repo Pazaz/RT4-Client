@@ -31,7 +31,7 @@ public final class Static91 {
 		if (local12 != null) {
 			return local12;
 		}
-		@Pc(22) byte[] local22 = Static16.js5Archive12.getFile(arg0, 0);
+		@Pc(22) byte[] local22 = client.js5Archive12.getFile(arg0, 0);
 		if (local22 == null) {
 			return null;
 		}
@@ -88,18 +88,13 @@ public final class Static91 {
 		for (@Pc(13) AreaSound local13 = (AreaSound) Static152.aClass69_87.method2289(); local13 != null; local13 = (AreaSound) Static152.aClass69_87.method2288()) {
 			if (arg0 == local13.npc) {
 				if (local13.primaryStream != null) {
-					Static204.soundStream.removeSubStream(local13.primaryStream);
+					client.soundStream.removeSubStream(local13.primaryStream);
 					local13.primaryStream = null;
 				}
 				local13.unlink();
 				return;
 			}
 		}
-	}
-
-	@OriginalMember(owner = "client!hc", name = "a", descriptor = "(Lclient!ve;I)V")
-	public static void init(@OriginalArg(0) Js5 arg0) {
-		Static182.aClass153_77 = arg0;
 	}
 
 	@OriginalMember(owner = "client!hc", name = "a", descriptor = "(Lclient!na;Z)I")

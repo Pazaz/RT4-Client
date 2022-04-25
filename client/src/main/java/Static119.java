@@ -14,53 +14,12 @@ public final class Static119 {
 	public static HashTable aClass133_9 = new HashTable(8);
 
 	@OriginalMember(owner = "client!je", name = "U", descriptor = "Lclient!na;")
-	public static final JagString aClass100_588 = Static28.parse("showingVideoAd");
+	public static final JagString aClass100_588 = JagString.parse("showingVideoAd");
 
 	@OriginalMember(owner = "client!je", name = "db", descriptor = "Lclient!na;")
-	public static final JagString aClass100_589 = Static28.parse(" <col=ffffff>");
+	public static final JagString aClass100_589 = JagString.parse(" <col=ffffff>");
 
-	@OriginalMember(owner = "client!je", name = "fb", descriptor = "I")
-	public static int transmitTimer = 1;
-
-	@OriginalMember(owner = "client!je", name = "h", descriptor = "(I)V")
-	public static void method2380() {
-		Static252.method4301();
-		Static224.method3885();
-		Static181.method3342();
-		Static179.method3323();
-		Static233.method4001();
-		Static103.method2239();
-		Static227.method3903();
-		Static71.method1441();
-		Static78.method1694();
-		Static3.method4657();
-		Static45.method1172();
-		Static267.method4529();
-		Static92.method1882();
-		Static26.method741();
-		Static192.method3474();
-		Static40.method1019();
-		Static180.method3329();
-		Static251.method4276();
-		Static73.aClass99_10.method3103();
-		Static139.aClass99_22.method3103();
-	}
-
-	@OriginalMember(owner = "client!je", name = "f", descriptor = "(B)V")
-	public static void method2381() {
-		if (Static18.loaded) {
-			Static243.logo = null;
-			Static18.loaded = false;
-			Static78.titleBg = null;
-		}
-	}
-
-	@OriginalMember(owner = "client!je", name = "a", descriptor = "(ILclient!ve;)V")
-	public static void init(@OriginalArg(1) Js5 arg0) {
-		Static9.aClass153_2 = arg0;
-	}
-
-	@OriginalMember(owner = "client!je", name = "j", descriptor = "(I)I")
+    @OriginalMember(owner = "client!je", name = "j", descriptor = "(I)I")
 	public static int method2385() {
 		if (WorldMap.labels == null) {
 			return -1;

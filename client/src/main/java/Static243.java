@@ -4,14 +4,8 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static243 {
 
-	@OriginalMember(owner = "client!tk", name = "j", descriptor = "Lclient!ve;")
-	public static Js5 spritesArchive;
-
-	@OriginalMember(owner = "client!tk", name = "o", descriptor = "Lclient!ok;")
+    @OriginalMember(owner = "client!tk", name = "o", descriptor = "Lclient!ok;")
 	public static IndexedSprite logo;
-
-	@OriginalMember(owner = "client!tk", name = "s", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_98;
 
 	@OriginalMember(owner = "client!tk", name = "D", descriptor = "[Lclient!ec;")
 	public static Scenery[] aClass31Array3;
@@ -40,13 +34,13 @@ public final class Static243 {
 		Static114.method4625();
 		Static49.anInt1462 = -1;
 		Static5.anInt45 = -1;
-		Static164.anInt3985 = -1;
+		Protocol.opcode = -1;
 		Static267.anInt5775 = 0;
 		Static60.rebootTimer = 0;
-		Static6.outboundBuffer.offset = 0;
+		Protocol.outboundBuffer.offset = 0;
 		Static230.anInt5152 = -1;
 		Static201.anInt1862 = 0;
-		Static57.aClass3_Sub15_Sub1_3.offset = 0;
+		Protocol.inboundBuffer.offset = 0;
 		@Pc(3506) int local3506;
 		for (local3506 = 0; local3506 < Static143.aClass102Array1.length; local3506++) {
 			Static143.aClass102Array1[local3506] = null;
@@ -67,7 +61,7 @@ public final class Static243 {
 		Static206.anInt4774 = (int) (Math.random() * 110.0D) - 55;
 		Static241.aBoolean302 = false;
 		Static273.anInt4130 = (int) (Math.random() * 30.0D) - 20;
-		Static189.anInt4451 = 0;
+		SoundPlayer.anInt4451 = 0;
 		Static115.anInt2939 = 0;
 		Static59.anInt1814 = (int) (Math.random() * 120.0D) - 60;
 		Static62.anInt1941 = 0;
@@ -111,14 +105,14 @@ public final class Static243 {
 			Static155.varcs[local3506] = -1;
 		}
 		if (InterfaceList.topLevelInterface != -1) {
-			Static109.method2275(InterfaceList.topLevelInterface);
+			InterfaceList.method2275(InterfaceList.topLevelInterface);
 		}
 		for (@Pc(3755) Class3_Sub31 local3755 = (Class3_Sub31) Static119.aClass133_9.head(); local3755 != null; local3755 = (Class3_Sub31) Static119.aClass133_9.next()) {
 			Static132.method2605(true, local3755);
 		}
 		InterfaceList.topLevelInterface = -1;
 		Static119.aClass133_9 = new HashTable(8);
-		Static52.method1287();
+		InterfaceList.method1287();
 		Static39.aClass13_10 = null;
 		Static60.aBoolean108 = false;
 		Static231.anInt5204 = 0;
@@ -148,10 +142,10 @@ public final class Static243 {
 			Static86.setInstantFade();
 		}
 		Static197.aBoolean228 = true;
-		Static189.anInt4443 = 0;
+		Protocol.verifyId = 0;
 		Static195.aClass100_859 = LocalizedText.WALKHERE;
 		Static127.neverRemoveRoofs = false;
-		Static259.aShortArray88 = Static62.aShortArray19 = Static232.aShortArray74 = Static259.aShortArray87 = new short[256];
+		client.aShortArray88 = client.aShortArray19 = client.aShortArray74 = client.aShortArray87 = new short[256];
 		Static114.method4637();
 		Static261.aBoolean298 = false;
 		Static59.method1373();

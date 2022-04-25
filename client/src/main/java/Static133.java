@@ -34,14 +34,9 @@ public final class Static133 {
 		return null;
 	}
 
-	@OriginalMember(owner = "client!kf", name = "a", descriptor = "(II)I")
-	public static int method4010(@OriginalArg(0) int arg0) {
-		return arg0 & 0xFF;
-	}
-
-	@OriginalMember(owner = "client!kf", name = "a", descriptor = "(Lclient!na;I)V")
+    @OriginalMember(owner = "client!kf", name = "a", descriptor = "(Lclient!na;I)V")
 	public static void method4011(@OriginalArg(0) JagString arg0) {
-		for (@Pc(15) Map local15 = (Map) Static228.aClass69_120.method2289(); local15 != null; local15 = (Map) Static228.aClass69_120.method2288()) {
+		for (@Pc(15) Map local15 = (Map) MapList.aClass69_120.method2289(); local15 != null; local15 = (Map) MapList.aClass69_120.method2288()) {
 			if (local15.group.strEquals(arg0)) {
 				WorldMap.currentMap = local15;
 				return;

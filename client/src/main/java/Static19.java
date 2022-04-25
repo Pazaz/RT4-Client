@@ -4,14 +4,11 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static19 {
 
-	@OriginalMember(owner = "client!bi", name = "R", descriptor = "I")
-	public static int anInt636;
-
 	@OriginalMember(owner = "client!bi", name = "Y", descriptor = "[[B")
 	public static byte[][] underWaterLocationsMapFilesBuffer;
 
     @OriginalMember(owner = "client!bi", name = "W", descriptor = "Lclient!na;")
-	public static final JagString aClass100_112 = Static28.parse("k");
+	public static final JagString aClass100_112 = JagString.parse("k");
 
 	@OriginalMember(owner = "client!bi", name = "jb", descriptor = "Z")
 	public static boolean aBoolean43 = true;
@@ -32,11 +29,6 @@ public final class Static19 {
 			@Pc(91) int local91 = (arg1 - arg3) * (arg7 - arg6) - (arg0 - arg6) * (arg4 - arg3);
 			return local59 * local91 > 0 && local91 * local75 > 0;
 		}
-	}
-
-	@OriginalMember(owner = "client!bi", name = "c", descriptor = "(II)V")
-	public static void method586() {
-		Static262.aClass99_34.method3102(5);
 	}
 
 	@OriginalMember(owner = "client!bi", name = "f", descriptor = "(B)V")

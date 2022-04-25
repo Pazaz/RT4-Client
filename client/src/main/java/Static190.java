@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static190 {
 
-    @OriginalMember(owner = "client!pf", name = "b", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_26 = new SoftLruHashTable(200);
-
 	@OriginalMember(owner = "client!pf", name = "h", descriptor = "[J")
 	public static final long[] aLongArray6 = new long[100];
 
@@ -32,14 +29,14 @@ public final class Static190 {
 	public static Sprite method3443(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		@Pc(27) int local27 = (arg2 ? 65536 : 0) + arg1 + (arg0 << 17) + (arg4 << 19);
 		@Pc(37) long local37 = (long) local27 * 3849834839L + (long) arg3 * 3147483667L;
-		@Pc(43) Sprite local43 = (Sprite) Static118.objectSpriteCache.get(local37);
+		@Pc(43) Sprite local43 = (Sprite) ObjTypeList.objectSpriteCache.get(local37);
 		if (local43 != null) {
 			return local43;
 		}
 		Rasteriser.textureHasTransparency = false;
 		local43 = Static164.method3150(arg4, false, arg1, arg2, arg0, arg3, false);
 		if (local43 != null && !Rasteriser.textureHasTransparency) {
-			Static118.objectSpriteCache.put(local43, local37);
+			ObjTypeList.objectSpriteCache.put(local43, local37);
 		}
 		return local43;
 	}
@@ -51,10 +48,4 @@ public final class Static190 {
 		local14.intArg1 = arg0;
 	}
 
-	@OriginalMember(owner = "client!pf", name = "c", descriptor = "(II)V")
-	public static void method3447() {
-		Static27.aClass99_4.method3102(5);
-		Static244.models.method3102(5);
-		Static118.objectSpriteCache.method3102(5);
-	}
 }

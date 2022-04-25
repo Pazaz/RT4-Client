@@ -7,14 +7,11 @@ public final class Static9 {
 	@OriginalMember(owner = "client!al", name = "e", descriptor = "I")
 	public static int anInt172;
 
-	@OriginalMember(owner = "client!al", name = "q", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_2;
-
-	@OriginalMember(owner = "client!al", name = "m", descriptor = "I")
+    @OriginalMember(owner = "client!al", name = "m", descriptor = "I")
 	public static int anInt178 = 0;
 
 	@OriginalMember(owner = "client!al", name = "r", descriptor = "Lclient!na;")
-	public static final JagString aClass100_35 = Static28.parse("showVideoAd");
+	public static final JagString aClass100_35 = JagString.parse("showVideoAd");
 
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "(Lclient!pb;BIIIIIII)V")
 	public static void method181(@OriginalArg(0) LocType arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7) {
@@ -74,19 +71,6 @@ public final class Static9 {
 		}
 	}
 
-	@OriginalMember(owner = "client!al", name = "a", descriptor = "(ZZZIZ)Lclient!ve;")
-	public static Js5 createJs5(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) int arg3) {
-		@Pc(7) Cache local7 = null;
-		if (client.cacheData != null) {
-			local7 = new Cache(arg3, client.cacheData, client.cacheIndexes[arg3], 1000000);
-		}
-		Static269.js5Providers[arg3] = Static257.js5MasterIndex.method180(arg3, Static148.masterCache, local7);
-		if (arg1) {
-			Static269.js5Providers[arg3].method528();
-		}
-		return new Js5(Static269.js5Providers[arg3], arg0, arg2);
-	}
-
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "(ILclient!wa;)Lclient!ci;")
 	public static TextureOp29SubOp1 method184(@OriginalArg(1) Buffer arg0) {
 		return new TextureOp29SubOp1(arg0.g2s(), arg0.g2s(), arg0.g2s(), arg0.g2s(), arg0.g3(), arg0.g1());
@@ -103,14 +87,6 @@ public final class Static9 {
 			@Pc(36) double local36 = (double) local26 / 255.0D * 6.283185307179586D;
 			Static119.anIntArray282[local26] = (int) (Math.sin(local36) * 4096.0D);
 			Static130.anIntArray299[local26] = (int) (Math.cos(local36) * 4096.0D);
-		}
-	}
-
-	@OriginalMember(owner = "client!al", name = "a", descriptor = "(ZI)V")
-	public static void method186(@OriginalArg(0) boolean arg0) {
-		if (arg0 != Static240.aBoolean276) {
-			Static240.aBoolean276 = arg0;
-			Static176.method3302();
 		}
 	}
 

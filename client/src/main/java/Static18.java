@@ -10,11 +10,8 @@ public final class Static18 {
 	@OriginalMember(owner = "client!bh", name = "t", descriptor = "I")
 	public static int anInt588 = 0;
 
-	@OriginalMember(owner = "client!bh", name = "z", descriptor = "Z")
-	public static boolean serverUpdatedPreferences = true;
-
-	@OriginalMember(owner = "client!bh", name = "C", descriptor = "Lclient!na;")
-	public static final JagString COMPLETE_PERCENT = Static28.parse("<br>(X100(U(Y");
+    @OriginalMember(owner = "client!bh", name = "C", descriptor = "Lclient!na;")
+	public static final JagString COMPLETE_PERCENT = JagString.parse("<br>(X100(U(Y");
 
 	@OriginalMember(owner = "client!bh", name = "G", descriptor = "[I")
 	public static final int[] anIntArray57 = new int[] { 0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, Integer.MAX_VALUE, -1 };

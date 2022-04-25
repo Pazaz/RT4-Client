@@ -11,7 +11,7 @@ public final class Static69 {
 	public static final boolean[][] aBooleanArrayArray2 = new boolean[][] { new boolean[0], { true, false, true }, { true, false, false, true }, { false, false, true, true }, { true, true, false }, { false, true, true }, { true, false, false, true }, { false, false, false, true, true }, { false, true, true }, { true, false, true, true, true }, { false, true, true, true, true }, { false, true, true, true, true, false } };
 
 	@OriginalMember(owner = "client!fh", name = "ab", descriptor = "Lclient!na;")
-	public static final JagString aClass100_443 = Static28.parse("::noclip");
+	public static final JagString aClass100_443 = JagString.parse("::noclip");
 
 	@OriginalMember(owner = "client!fh", name = "a", descriptor = "(IIII)I")
 	public static int method1540(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
@@ -37,9 +37,9 @@ public final class Static69 {
 					Static190.aLongArray6[local36] = Static190.aLongArray6[local36 + 1];
 					Static193.aClass100Array134[local36] = Static193.aClass100Array134[local36 + 1];
 				}
-				Static185.anInt4369 = Static119.transmitTimer;
-				Static6.outboundBuffer.p1isaac(213);
-				Static6.outboundBuffer.p8(arg0);
+				Static185.anInt4369 = InterfaceList.transmitTimer;
+				Protocol.outboundBuffer.p1isaac(213);
+				Protocol.outboundBuffer.p8(arg0);
 				break;
 			}
 		}
@@ -159,17 +159,4 @@ public final class Static69 {
 		}
 	}
 
-	@OriginalMember(owner = "client!fh", name = "a", descriptor = "(Lclient!wa;I)V")
-	public static void method1546(@OriginalArg(0) Buffer arg0) {
-		for (@Pc(7) int local7 = 0; local7 < Static106.anInt2871; local7++) {
-			@Pc(18) int local18 = arg0.gSmart1or2();
-			@Pc(22) int local22 = arg0.g2();
-			if (local22 == 65535) {
-				local22 = -1;
-			}
-			if (Static196.aClass10_Sub1Array2[local18] != null) {
-				Static196.aClass10_Sub1Array2[local18].players = local22;
-			}
-		}
-	}
 }

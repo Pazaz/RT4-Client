@@ -14,26 +14,26 @@ public final class Static44 {
 	public static final int[] anIntArray106 = new int[2048];
 
 	@OriginalMember(owner = "client!dh", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_335 = Static28.parse("Number of player models in cache:");
+	public static final JagString aClass100_335 = JagString.parse("Number of player models in cache:");
 
 	@OriginalMember(owner = "client!dh", name = "i", descriptor = "Lclient!na;")
-	public static final JagString aClass100_336 = Static28.parse("<img=1>");
+	public static final JagString aClass100_336 = JagString.parse("<img=1>");
 
 	@OriginalMember(owner = "client!dh", name = "a", descriptor = "(Z)V")
 	public static void method1146() {
-		Static6.outboundBuffer.offset = 0;
+		Protocol.outboundBuffer.offset = 0;
 		Static5.anInt45 = -1;
 		Static60.aBoolean108 = false;
-		Static223.anInt5028 = 0;
+		Protocol.length = 0;
 		Static115.anInt2939 = 0;
 		Static231.anInt5204 = 0;
 		Static230.anInt5152 = -1;
 		Static270.anInt5795 = 0;
 		Static60.rebootTimer = 0;
 		Static49.anInt1462 = -1;
-		Static57.aClass3_Sub15_Sub1_3.offset = 0;
+		Protocol.inboundBuffer.offset = 0;
 		Static201.anInt1862 = 0;
-		Static164.anInt3985 = -1;
+		Protocol.opcode = -1;
 		@Pc(35) int local35;
 		for (local35 = 0; local35 < Static159.players.length; local35++) {
 			if (Static159.players[local35] != null) {
@@ -47,7 +47,7 @@ public final class Static44 {
 		}
 		Static102.method2073();
 		Static227.cameraType = 1;
-		Static196.setGameState(30);
+		client.setGameState(30);
 		for (local35 = 0; local35 < 100; local35++) {
 			Static186.aBooleanArray100[local35] = true;
 		}
@@ -70,7 +70,7 @@ public final class Static44 {
 		local9.anInt5878 = arg0;
 		Static119.aClass133_9.put(local9, (long) arg1);
 		Static81.method1753(arg0);
-		@Pc(28) Component local28 = Static5.getComponent(arg1);
+		@Pc(28) Component local28 = InterfaceList.getComponent(arg1);
 		if (local28 != null) {
 			Static43.redraw(local28);
 		}
@@ -118,12 +118,4 @@ public final class Static44 {
 		}
 	}
 
-	@OriginalMember(owner = "client!dh", name = "a", descriptor = "(B)Lclient!uc;")
-	public static MouseWheel create() {
-		try {
-			return (MouseWheel) Class.forName("JavaMouseWheel").getDeclaredConstructor().newInstance();
-		} catch (@Pc(15) Throwable local15) {
-			return null;
-		}
-	}
 }

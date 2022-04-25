@@ -7,9 +7,6 @@ public final class Static276 {
 	@OriginalMember(owner = "client!wh", name = "c", descriptor = "[[[Lclient!bj;")
 	public static Tile[][][] underWaterGroundTiles;
 
-	@OriginalMember(owner = "client!wh", name = "g", descriptor = "[I")
-	public static final int[] anIntArray563 = new int[50];
-
 	@OriginalMember(owner = "client!wh", name = "j", descriptor = "[Lclient!cl;")
 	public static final AnimFrameset[] aClass3_Sub2_Sub7Array8 = new AnimFrameset[14];
 
@@ -17,16 +14,13 @@ public final class Static276 {
 	public static final int[] anIntArray564 = new int[5];
 
 	@OriginalMember(owner = "client!wh", name = "n", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1095 = Static28.parse("; version=1; path=)4; domain=");
+	public static final JagString aClass100_1095 = JagString.parse("; version=1; path=)4; domain=");
 
 	@OriginalMember(owner = "client!wh", name = "o", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1096 = Static28.parse("rect_debug=");
+	public static final JagString aClass100_1096 = JagString.parse("rect_debug=");
 
-	@OriginalMember(owner = "client!wh", name = "s", descriptor = "I")
-	public static int anInt5816 = 0;
-
-	@OriginalMember(owner = "client!wh", name = "u", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1097 = Static28.parse("(U2");
+    @OriginalMember(owner = "client!wh", name = "u", descriptor = "Lclient!na;")
+	public static final JagString aClass100_1097 = JagString.parse("(U2");
 
 	@OriginalMember(owner = "client!wh", name = "a", descriptor = "(IIII)Z")
 	public static boolean method4611(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
@@ -39,11 +33,6 @@ public final class Static276 {
 		}
 	}
 
-	@OriginalMember(owner = "client!wh", name = "a", descriptor = "(I)V")
-	public static void method4612() {
-		Static233.aClass99_31.clear();
-	}
-
 	@OriginalMember(owner = "client!wh", name = "a", descriptor = "(IILclient!na;)V")
 	public static void method4613(@OriginalArg(0) int arg0, @OriginalArg(2) JagString arg1) {
 		@Pc(7) JagString local7 = arg1.method3159().method3125();
@@ -54,20 +43,20 @@ public final class Static276 {
 				local13 = true;
 				Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local28.movementQueueX[0], 1, 0, 2, local28.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
 				if (arg0 == 1) {
-					Static6.outboundBuffer.p1isaac(68);
-					Static6.outboundBuffer.p2leadd(Static105.anIntArray256[local15]);
+					Protocol.outboundBuffer.p1isaac(68);
+					Protocol.outboundBuffer.p2leadd(Static105.anIntArray256[local15]);
 				} else if (arg0 == 4) {
-					Static6.outboundBuffer.p1isaac(180);
-					Static6.outboundBuffer.p2leadd(Static105.anIntArray256[local15]);
+					Protocol.outboundBuffer.p1isaac(180);
+					Protocol.outboundBuffer.p2leadd(Static105.anIntArray256[local15]);
 				} else if (arg0 == 5) {
-					Static6.outboundBuffer.p1isaac(4);
-					Static6.outboundBuffer.p2le(Static105.anIntArray256[local15]);
+					Protocol.outboundBuffer.p1isaac(4);
+					Protocol.outboundBuffer.p2le(Static105.anIntArray256[local15]);
 				} else if (arg0 == 6) {
-					Static6.outboundBuffer.p1isaac(133);
-					Static6.outboundBuffer.p2le(Static105.anIntArray256[local15]);
+					Protocol.outboundBuffer.p1isaac(133);
+					Protocol.outboundBuffer.p2le(Static105.anIntArray256[local15]);
 				} else if (arg0 == 7) {
-					Static6.outboundBuffer.p1isaac(114);
-					Static6.outboundBuffer.p2leadd(Static105.anIntArray256[local15]);
+					Protocol.outboundBuffer.p1isaac(114);
+					Protocol.outboundBuffer.p2leadd(Static105.anIntArray256[local15]);
 				}
 				break;
 			}
@@ -89,9 +78,4 @@ public final class Static276 {
 		return local27;
 	}
 
-	@OriginalMember(owner = "client!wh", name = "a", descriptor = "(II)V")
-	public static void method4615() {
-		Static231.aClass99_29.method3102(5);
-		Static219.sprites.method3102(5);
-	}
 }

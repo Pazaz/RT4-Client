@@ -13,10 +13,10 @@ public final class SeqType {
 	public boolean[] aBooleanArray123;
 
 	@OriginalMember(owner = "client!tk", name = "y", descriptor = "I")
-	public int anInt5361;
+	public int id;
 
 	@OriginalMember(owner = "client!tk", name = "C", descriptor = "[[I")
-	public int[][] anIntArrayArray38;
+	public int[][] sounds;
 
 	@OriginalMember(owner = "client!tk", name = "G", descriptor = "[I")
 	public int[] anIntArray474;
@@ -336,14 +336,14 @@ public final class SeqType {
 			}
 		} else if (arg0 == 13) {
 			local8 = arg1.g2();
-			this.anIntArrayArray38 = new int[local8][];
+			this.sounds = new int[local8][];
 			for (local14 = 0; local14 < local8; local14++) {
 				@Pc(163) int local163 = arg1.g1();
 				if (local163 > 0) {
-					this.anIntArrayArray38[local14] = new int[local163];
-					this.anIntArrayArray38[local14][0] = arg1.g3();
+					this.sounds[local14] = new int[local163];
+					this.sounds[local14][0] = arg1.g3();
 					for (@Pc(182) int local182 = 1; local182 < local163; local182++) {
-						this.anIntArrayArray38[local14][local182] = arg1.g2();
+						this.sounds[local14][local182] = arg1.g2();
 					}
 				}
 			}

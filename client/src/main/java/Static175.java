@@ -14,11 +14,8 @@ public final class Static175 {
 	@OriginalMember(owner = "client!nm", name = "U", descriptor = "I")
 	public static int mapFilesMissingCount = 0;
 
-	@OriginalMember(owner = "client!nm", name = "Y", descriptor = "J")
-	public static long firstGc = 0L;
-
 	@OriginalMember(owner = "client!nm", name = "bb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_798 = Static28.parse("<col=ff0000>");
+	public static final JagString aClass100_798 = JagString.parse("<col=ff0000>");
 
 	@OriginalMember(owner = "client!nm", name = "a", descriptor = "(Z)V")
 	public static void method3279() {
@@ -27,7 +24,7 @@ public final class Static175 {
 		} else {
 			Static233.aClass95_4 = Protocol.socket;
 			Protocol.socket = null;
-			Static196.setGameState(40);
+			client.setGameState(40);
 		}
 	}
 }

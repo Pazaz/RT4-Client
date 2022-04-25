@@ -14,7 +14,7 @@ public final class Static136 {
 	public static int anInt3325 = 0;
 
 	@OriginalMember(owner = "client!kk", name = "m", descriptor = "Lclient!na;")
-	public static final JagString CS_ERROR = Static28.parse("Clientscript error )2 check log for details");
+	public static final JagString CS_ERROR = JagString.parse("Clientscript error )2 check log for details");
 
 	@OriginalMember(owner = "client!kk", name = "a", descriptor = "(IIB)V")
 	public static void method2649(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {

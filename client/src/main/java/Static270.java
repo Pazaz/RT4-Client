@@ -8,7 +8,7 @@ public final class Static270 {
 	public static int[] anIntArray562;
 
 	@OriginalMember(owner = "client!wb", name = "a", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1089 = Static28.parse(")2");
+	public static final JagString aClass100_1089 = JagString.parse(")2");
 
 	@OriginalMember(owner = "client!wb", name = "c", descriptor = "I")
 	public static int anInt5794 = -1;
@@ -17,13 +17,7 @@ public final class Static270 {
 	public static int anInt5795 = 0;
 
 	@OriginalMember(owner = "client!wb", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1090 = Static28.parse("l");
-
-	@OriginalMember(owner = "client!wb", name = "f", descriptor = "Lclient!wa;")
-	public static final Buffer aClass3_Sub15_9 = new Buffer(new byte[5000]);
-
-	@OriginalMember(owner = "client!wb", name = "j", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1093 = Static28.parse("Memory after cleanup=");
+	public static final JagString aClass100_1090 = JagString.parse("l");
 
 	@OriginalMember(owner = "client!wb", name = "m", descriptor = "Lclient!na;")
 	public static JagString aClass100_1094 = null;
@@ -145,20 +139,20 @@ public final class Static270 {
 			}
 			return local11 - local14;
 		} else if (arg1 == 2) {
-			return arg0.getWorldInfo().aClass100_378.method3126(arg2.getWorldInfo().aClass100_378);
+			return arg0.getWorldInfo().name.method3126(arg2.getWorldInfo().name);
 		} else if (arg1 == 3) {
-			if (arg0.aClass100_69.strEquals(Static111.aClass100_570)) {
-				if (arg2.aClass100_69.strEquals(Static111.aClass100_570)) {
+			if (arg0.activity.strEquals(Static111.aClass100_570)) {
+				if (arg2.activity.strEquals(Static111.aClass100_570)) {
 					return 0;
 				} else if (arg3) {
 					return -1;
 				} else {
 					return 1;
 				}
-			} else if (arg2.aClass100_69.strEquals(Static111.aClass100_570)) {
+			} else if (arg2.activity.strEquals(Static111.aClass100_570)) {
 				return arg3 ? 1 : -1;
 			} else {
-				return arg0.aClass100_69.method3126(arg2.aClass100_69);
+				return arg0.activity.method3126(arg2.activity);
 			}
 		} else if (arg1 == 4) {
 			return arg0.isLootShare() ? (arg2.isLootShare() ? 0 : 1) : arg2.isLootShare() ? -1 : 0;
@@ -169,7 +163,7 @@ public final class Static270 {
 		} else if (arg1 == 7) {
 			return arg0.isMembers() ? (arg2.isMembers() ? 0 : 1) : (arg2.isMembers() ? -1 : 0);
 		} else {
-			return arg0.anInt382 - arg2.anInt382;
+			return arg0.id - arg2.id;
 		}
 	}
 }

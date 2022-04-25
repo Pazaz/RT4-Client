@@ -193,10 +193,10 @@ public final class ObjType {
 			return true;
 		}
 		@Pc(33) boolean local33 = true;
-		if (!Static230.modelsArchive.isFileReady(0, local6)) {
+		if (!ObjTypeList.modelsArchive.isFileReady(0, local6)) {
 			local33 = false;
 		}
-		if (local9 != -1 && !Static230.modelsArchive.isFileReady(0, local9)) {
+		if (local9 != -1 && !ObjTypeList.modelsArchive.isFileReady(0, local9)) {
 			local33 = false;
 		}
 		return local33;
@@ -222,7 +222,7 @@ public final class ObjType {
 				}
 			}
 			if (local23 != -1) {
-				return Static71.get(local23);
+				return ObjTypeList.get(local23);
 			}
 		}
 		return this;
@@ -242,13 +242,13 @@ public final class ObjType {
 			return true;
 		}
 		@Pc(41) boolean local41 = true;
-		if (!Static230.modelsArchive.isFileReady(0, local9)) {
+		if (!ObjTypeList.modelsArchive.isFileReady(0, local9)) {
 			local41 = false;
 		}
-		if (local6 != -1 && !Static230.modelsArchive.isFileReady(0, local6)) {
+		if (local6 != -1 && !ObjTypeList.modelsArchive.isFileReady(0, local6)) {
 			local41 = false;
 		}
-		if (local20 != -1 && !Static230.modelsArchive.isFileReady(0, local20)) {
+		if (local20 != -1 && !ObjTypeList.modelsArchive.isFileReady(0, local20)) {
 			local41 = false;
 		}
 		return local41;
@@ -309,12 +309,12 @@ public final class ObjType {
 				}
 			}
 			if (local22 != -1) {
-				return Static71.get(local22).getModel(arg0, arg1, arg2, 1, arg4);
+				return ObjTypeList.get(local22).getModel(arg0, arg1, arg2, 1, arg4);
 			}
 		}
-		@Pc(76) Model local76 = (Model) Static244.models.get((long) this.anInt2354);
+		@Pc(76) Model local76 = (Model) ObjTypeList.models.get((long) this.anInt2354);
 		if (local76 == null) {
-			@Pc(85) RawModel local85 = Static77.create(Static230.modelsArchive, this.model);
+			@Pc(85) RawModel local85 = Static77.create(ObjTypeList.modelsArchive, this.model);
 			if (local85 == null) {
 				return null;
 			}
@@ -324,7 +324,7 @@ public final class ObjType {
 					if (this.recolorDestinationPalette == null || local97 >= this.recolorDestinationPalette.length) {
 						local85.recolor(this.recolorDestination[local97], this.recolorSource[local97]);
 					} else {
-						local85.recolor(this.recolorDestination[local97], Static259.aShortArray87[this.recolorDestinationPalette[local97] & 0xFF]);
+						local85.recolor(this.recolorDestination[local97], client.aShortArray87[this.recolorDestinationPalette[local97] & 0xFF]);
 					}
 				}
 			}
@@ -341,7 +341,7 @@ public final class ObjType {
 			if (GlRenderer.enabled) {
 				((GlModel) local76).method4111(false, false, false, false, false, true);
 			}
-			Static244.models.put(local76, (long) this.anInt2354);
+			ObjTypeList.models.put(local76, (long) this.anInt2354);
 		}
 		if (arg2 != null) {
 			local76 = arg2.method4215(local76, arg0, arg1, arg4);
@@ -539,9 +539,9 @@ public final class ObjType {
 		if (local17 == -1) {
 			return null;
 		}
-		@Pc(36) RawModel local36 = Static77.create(Static230.modelsArchive, local17);
+		@Pc(36) RawModel local36 = Static77.create(ObjTypeList.modelsArchive, local17);
 		if (local4 != -1) {
-			@Pc(44) RawModel local44 = Static77.create(Static230.modelsArchive, local4);
+			@Pc(44) RawModel local44 = Static77.create(ObjTypeList.modelsArchive, local4);
 			@Pc(55) RawModel[] local55 = new RawModel[] { local36, local44 };
 			local36 = new RawModel(local55, 2);
 		}
@@ -572,14 +572,14 @@ public final class ObjType {
 		if (local4 == -1) {
 			return null;
 		}
-		@Pc(43) RawModel local43 = Static77.create(Static230.modelsArchive, local4);
+		@Pc(43) RawModel local43 = Static77.create(ObjTypeList.modelsArchive, local4);
 		if (local18 != -1) {
-			@Pc(54) RawModel local54 = Static77.create(Static230.modelsArchive, local18);
+			@Pc(54) RawModel local54 = Static77.create(ObjTypeList.modelsArchive, local18);
 			if (local21 == -1) {
 				@Pc(68) RawModel[] local68 = new RawModel[] { local43, local54 };
 				local43 = new RawModel(local68, 2);
 			} else {
-				@Pc(81) RawModel local81 = Static77.create(Static230.modelsArchive, local21);
+				@Pc(81) RawModel local81 = Static77.create(ObjTypeList.modelsArchive, local21);
 				@Pc(96) RawModel[] local96 = new RawModel[] { local43, local54, local81 };
 				local43 = new RawModel(local96, 3);
 			}
@@ -626,7 +626,7 @@ public final class ObjType {
 
 	@OriginalMember(owner = "client!h", name = "d", descriptor = "(I)Lclient!w;")
 	public final SoftwareModel getInvModel() {
-		@Pc(11) RawModel local11 = Static77.create(Static230.modelsArchive, this.model);
+		@Pc(11) RawModel local11 = Static77.create(ObjTypeList.modelsArchive, this.model);
 		if (local11 == null) {
 			return null;
 		}
@@ -636,7 +636,7 @@ public final class ObjType {
 				if (this.recolorDestinationPalette == null || local21 >= this.recolorDestinationPalette.length) {
 					local11.recolor(this.recolorDestination[local21], this.recolorSource[local21]);
 				} else {
-					local11.recolor(this.recolorDestination[local21], Static259.aShortArray87[this.recolorDestinationPalette[local21] & 0xFF]);
+					local11.recolor(this.recolorDestination[local21], client.aShortArray87[this.recolorDestinationPalette[local21] & 0xFF]);
 				}
 			}
 		}

@@ -58,4 +58,11 @@ public class LoadingBarAwt {
             GameShell.canvas.repaint();
         }
     }
+
+    @OriginalMember(owner = "client!n", name = "a", descriptor = "(B)V")
+    public static void clear() {
+        Static240.aFontMetrics1 = null;
+        Static222.aFont1 = null;
+        Static149.anImage3 = null;
+    }
 }

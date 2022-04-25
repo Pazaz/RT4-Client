@@ -682,24 +682,4 @@ public final class Static247 {
 		return arg0 & 0xFF;
 	}
 
-	@OriginalMember(owner = "client!ub", name = "a", descriptor = "(II)Lclient!eh;")
-	public static VarpType method4248(@OriginalArg(1) int arg0) {
-		@Pc(10) VarpType local10 = (VarpType) Static232.aClass99_30.get((long) arg0);
-		if (local10 != null) {
-			return local10;
-		}
-		@Pc(20) byte[] local20 = Static81.aClass153_34.getFile(16, arg0);
-		local10 = new VarpType();
-		if (local20 != null) {
-			local10.decode(new Buffer(local20));
-		}
-		Static232.aClass99_30.put(local10, (long) arg0);
-		return local10;
-	}
-
-	@OriginalMember(owner = "client!ub", name = "a", descriptor = "(Z)V")
-	public static void method4249() {
-		Static279.aClass99_38.clear();
-		Static56.models.clear();
-	}
 }

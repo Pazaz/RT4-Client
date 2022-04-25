@@ -4,23 +4,12 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static269 {
 
-	@OriginalMember(owner = "client!wa", name = "X", descriptor = "[Lclient!na;")
-	public static JagString[] aClass100Array87 = null;
-
 	@OriginalMember(owner = "client!wa", name = "pb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_556 = Static28.parse("<br>");
+	public static final JagString aClass100_556 = JagString.parse("<br>");
 
-	@OriginalMember(owner = "client!wa", name = "Eb", descriptor = "[Lclient!bg;")
-	public static final Js5CachedResourceProvider[] js5Providers = new Js5CachedResourceProvider[28];
-
-	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(Z)V")
-	public static void updateFlames() {
-		Static250.anInt5434++;
-	}
-
-	@OriginalMember(owner = "client!wa", name = "e", descriptor = "(B)V")
+    @OriginalMember(owner = "client!wa", name = "e", descriptor = "(B)V")
 	public static void clearObjectSpriteCache() {
-		Static118.objectSpriteCache.clear();
+		ObjTypeList.objectSpriteCache.clear();
 	}
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "([Lclient!mj;ZIIIII[B)V")
@@ -180,7 +169,7 @@ public final class Static269 {
 				for (local243 = 0; local243 < local515; local243++) {
 					@Pc(529) Light local529 = new Light(local95);
 					if (local529.anInt2243 == 31) {
-						@Pc(541) LightType local541 = Static140.method2709(local95.g2());
+						@Pc(541) LightType local541 = LightTypeList.get(local95.g2());
 						local529.method1762(local541.anInt2865, local541.anInt2873, local541.anInt2867, local541.anInt2872);
 					}
 					local529.anInt2245 += arg3 << 7;
@@ -233,11 +222,6 @@ public final class Static269 {
 		}
 	}
 
-	@OriginalMember(owner = "client!wa", name = "d", descriptor = "(BI)V")
-	public static void method2221() {
-		Static125.aClass99_19.method3102(5);
-	}
-
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(IIIII)V")
 	public static void method2225(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		if (WorldMap.loadPercentage < 100) {
@@ -278,15 +262,15 @@ public final class Static269 {
 		local61 = (int) ((float) arg3 / WorldMap.zoom) + WorldMap.anInt435;
 		Static89.anInt2387 = (int) ((float) (arg3 * 2) / WorldMap.zoom);
 		if (GlRenderer.enabled) {
-			if (Static153.aClass3_Sub2_Sub1_Sub1_2 == null || Static153.aClass3_Sub2_Sub1_Sub1_2.anInt1867 != arg3 || Static153.aClass3_Sub2_Sub1_Sub1_2.anInt1859 != arg2) {
-				Static153.aClass3_Sub2_Sub1_Sub1_2 = null;
-				Static153.aClass3_Sub2_Sub1_Sub1_2 = new SoftwareSprite(arg3, arg2);
+			if (WorldMap.aClass3_Sub2_Sub1_Sub1_2 == null || WorldMap.aClass3_Sub2_Sub1_Sub1_2.anInt1867 != arg3 || WorldMap.aClass3_Sub2_Sub1_Sub1_2.anInt1859 != arg2) {
+				WorldMap.aClass3_Sub2_Sub1_Sub1_2 = null;
+				WorldMap.aClass3_Sub2_Sub1_Sub1_2 = new SoftwareSprite(arg3, arg2);
 			}
-			SoftwareRaster.method2491(Static153.aClass3_Sub2_Sub1_Sub1_2.anIntArray20, arg3, arg2);
+			SoftwareRaster.method2491(WorldMap.aClass3_Sub2_Sub1_Sub1_2.anIntArray20, arg3, arg2);
 			Static214.method4364(arg3, 0, local61, local50, 0, local236, arg2, local211);
 			Static48.method1195(arg3, 0, local61, local236, arg2, 0, local211, local50);
 			Static38.method959(0, 0, local211, arg3, local236, local50, local61, arg2);
-			Static46.method1178(Static153.aClass3_Sub2_Sub1_Sub1_2.anIntArray20, arg0, arg1, arg3, arg2);
+			Static46.method1178(WorldMap.aClass3_Sub2_Sub1_Sub1_2.anIntArray20, arg0, arg1, arg3, arg2);
 			SoftwareRaster.pixels = null;
 		} else {
 			Static214.method4364(arg3 + arg0, arg1, local61, local50, arg0, local236, arg1 + arg2, local211);

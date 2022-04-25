@@ -10,17 +10,14 @@ public final class Static27 {
 	@OriginalMember(owner = "client!cb", name = "I", descriptor = "[I")
 	public static final int[] anIntArray70 = new int[32];
 
-	@OriginalMember(owner = "client!cb", name = "Y", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_4 = new SoftLruHashTable(64);
-
-	@OriginalMember(owner = "client!cb", name = "ab", descriptor = "Lclient!na;")
-	public static final JagString aClass100_164 = Static28.parse(" )2> <col=00ffff>");
+    @OriginalMember(owner = "client!cb", name = "ab", descriptor = "Lclient!na;")
+	public static final JagString aClass100_164 = JagString.parse(" )2> <col=00ffff>");
 
 	@OriginalMember(owner = "client!cb", name = "cb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_165 = Static28.parse("titlebg");
+	public static final JagString aClass100_165 = JagString.parse("titlebg");
 
     @OriginalMember(owner = "client!cb", name = "fb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_168 = Static28.parse(": ");
+	public static final JagString aClass100_168 = JagString.parse(": ");
 
 	@OriginalMember(owner = "client!cb", name = "b", descriptor = "(III)V")
 	public static void setMaterial(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {

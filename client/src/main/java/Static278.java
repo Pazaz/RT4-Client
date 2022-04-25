@@ -5,13 +5,13 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static278 {
 
 	@OriginalMember(owner = "client!wj", name = "b", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1101 = Static28.parse(" <col=ffff00>");
+	public static final JagString aClass100_1101 = JagString.parse(" <col=ffff00>");
 
 	@OriginalMember(owner = "client!wj", name = "e", descriptor = "Lclient!na;")
 	public static JagString mainLoadPrimaryText = null;
 
 	@OriginalMember(owner = "client!wj", name = "f", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1103 = Static28.parse("ul");
+	public static final JagString aClass100_1103 = JagString.parse("ul");
 
 	@OriginalMember(owner = "client!wj", name = "l", descriptor = "I")
 	public static int anInt5867 = 0;
@@ -19,8 +19,8 @@ public final class Static278 {
 	@OriginalMember(owner = "client!wj", name = "a", descriptor = "(I)V")
 	public static void method4645() {
 		while (true) {
-			if (Static57.aClass3_Sub15_Sub1_3.method2241(Static223.anInt5028) >= 27) {
-				@Pc(14) int local14 = Static57.aClass3_Sub15_Sub1_3.method2238(15);
+			if (Protocol.inboundBuffer.method2241(Protocol.length) >= 27) {
+				@Pc(14) int local14 = Protocol.inboundBuffer.method2238(15);
 				if (local14 != 32767) {
 					@Pc(19) boolean local19 = false;
 					if (Static175.npcs[local14] == null) {
@@ -33,21 +33,21 @@ public final class Static278 {
 					if (local37.type != null && local37.type.hasAreaSound()) {
 						Static91.method1877(local37);
 					}
-					@Pc(66) int local66 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
-					@Pc(73) int local73 = Static56.anIntArray141[Static57.aClass3_Sub15_Sub1_3.method2238(3)];
+					@Pc(66) int local66 = Protocol.inboundBuffer.method2238(1);
+					@Pc(73) int local73 = Static56.anIntArray141[Protocol.inboundBuffer.method2238(3)];
 					if (local19) {
 						local37.anInt3400 = local37.anInt3381 = local73;
 					}
-					@Pc(86) int local86 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
+					@Pc(86) int local86 = Protocol.inboundBuffer.method2238(1);
 					if (local86 == 1) {
 						Static44.anIntArray106[Static116.anInt2951++] = local14;
 					}
-					@Pc(105) int local105 = Static57.aClass3_Sub15_Sub1_3.method2238(5);
-					local37.method2698(Static214.get(Static57.aClass3_Sub15_Sub1_3.method2238(14)));
+					@Pc(105) int local105 = Protocol.inboundBuffer.method2238(5);
+					local37.method2698(NpcTypeList.get(Protocol.inboundBuffer.method2238(14)));
 					if (local105 > 15) {
 						local105 -= 32;
 					}
-					@Pc(124) int local124 = Static57.aClass3_Sub15_Sub1_3.method2238(5);
+					@Pc(124) int local124 = Protocol.inboundBuffer.method2238(5);
 					if (local124 > 15) {
 						local124 -= 32;
 					}
@@ -64,7 +64,7 @@ public final class Static278 {
 					continue;
 				}
 			}
-			Static57.aClass3_Sub15_Sub1_3.method2244();
+			Protocol.inboundBuffer.method2244();
 			return;
 		}
 	}
@@ -102,13 +102,13 @@ public final class Static278 {
 
 	@OriginalMember(owner = "client!wj", name = "b", descriptor = "(I)V")
 	public static void method4649() {
-		Static125.aClass99_18.clear();
+		NpcTypeList.aClass99_18.clear();
 	}
 
 	@OriginalMember(owner = "client!wj", name = "a", descriptor = "(IIB)V")
 	public static void method4650(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		if (Preferences.musicVolume != 0 && arg1 != -1) {
-			Static122.method2410(Static214.js5Archive11, arg1, Preferences.musicVolume);
+			Static122.method2410(client.js5Archive11, arg1, Preferences.musicVolume);
 			MidiPlayer.jingle = true;
 		}
 	}
@@ -199,21 +199,21 @@ public final class Static278 {
 			Protocol.socket.close();
 			Protocol.socket = null;
 		}
-		Static217.method3768();
+		client.method3768();
 		Static65.method1500();
 		@Pc(19) int local19;
 		for (local19 = 0; local19 < 4; local19++) {
-			Static148.collisionMaps[local19].resetFlags();
+			PathFinder.collisionMaps[local19].resetFlags();
 		}
-		Static116.clear(false);
+		WorldMap.clear(false);
 		System.gc();
-		Static29.method801();
+		MidiPlayer.method801();
 		MidiPlayer.jingle = false;
-		Static221.anInt4363 = -1;
+		MusicPlayer.groupId = -1;
 		Static260.clearAmbientSounds(true);
 		Static230.dynamicMapRegion = false;
 		Static142.originZ = 0;
-		Static80.anInt4701 = 0;
+		Static80.centralZoneX = 0;
 		Static52.anInt1695 = 0;
 		Static225.originX = 0;
 		for (local19 = 0; local19 < Static143.aClass102Array1.length; local19++) {
@@ -236,7 +236,7 @@ public final class Static278 {
 			}
 		}
 		Static35.resetCameraEffects();
-		Static189.anInt4443 = 0;
+		Protocol.verifyId = 0;
 		Static8.method121();
 		Static73.method1596(true);
 	}

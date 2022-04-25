@@ -61,6 +61,8 @@ public class Preferences {
     public static boolean hdr = false;
     @OriginalMember(owner = "client!rg", name = "F", descriptor = "I")
     public static int favoriteWorlds = 0;
+    @OriginalMember(owner = "client!bh", name = "z", descriptor = "Z")
+    public static boolean sentToServer = true;
     @OriginalMember(owner = "client!ga", name = "e", descriptor = "I")
     static int particles = 2;
 
@@ -315,5 +317,10 @@ public class Preferences {
         local4.p1(hdr ? 1 : 0);
         local4.p1(cursorsEnabled ? 1 : 0);
         return local4;
+    }
+
+    @OriginalMember(owner = "client!lf", name = "c", descriptor = "(I)I")
+    public static int toInt() {
+        return ((stereo ? 1 : 0) << 19) + (((fogEnabled ? 1 : 0) << 16) + ((highWaterDetail ? 1 : 0) << 15) + ((highDetailLighting ? 1 : 0) << 13) + ((characterShadowsOn ? 1 : 0) << 10) + ((manyGroundTextures ? 1 : 0) << 9) + ((manyIdleAnimations ? 1 : 0) << 7) + ((highDetailTextures ? 1 : 0) << 6) + ((showGroundDecorations ? 1 : 0) << 5) + (((allLevelsVisible ? 1 : 0) << 3) + (brightness & 0x7) - (-((removeRoofsSelectively ? 1 : 0) << 4) + -((flickeringEffectsOn ? 1 : 0) << 8)) - (-((sceneryShadowsType & 0x3) << 11) + -((soundEffectVolume == 0 ? 0 : 1) << 20) - (((musicVolume == 0 ? 0 : 1) << 21) + ((ambientSoundsVolume == 0 ? 0 : 1) << 22)))) + (getParticleSetting() << 23));
     }
 }

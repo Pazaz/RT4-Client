@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static110 {
 
-	@OriginalMember(owner = "client!ih", name = "l", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_15 = new SoftLruHashTable(4);
-
 	@OriginalMember(owner = "client!ih", name = "a", descriptor = "(III)Lclient!jh;")
 	public static Wall method2276(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		@Pc(7) Tile local7 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
@@ -17,21 +14,6 @@ public final class Static110 {
 			local7.aClass77_1 = null;
 			return local14;
 		}
-	}
-
-	@OriginalMember(owner = "client!ih", name = "a", descriptor = "(II)Lclient!hn;")
-	public static ParamType method2277(@OriginalArg(1) int arg0) {
-		@Pc(6) ParamType local6 = (ParamType) Static272.aClass54_14.get((long) arg0);
-		if (local6 != null) {
-			return local6;
-		}
-		@Pc(30) byte[] local30 = Static39.aClass153_23.getFile(11, arg0);
-		local6 = new ParamType();
-		if (local30 != null) {
-			local6.decode(new Buffer(local30));
-		}
-		Static272.aClass54_14.put(local6, (long) arg0);
-		return local6;
 	}
 
 	@OriginalMember(owner = "client!ih", name = "a", descriptor = "(I[Lclient!hg;)V")
@@ -62,7 +44,7 @@ public final class Static110 {
 				local141 = Static112.getSound(local6.npc);
 				if (local141 != local6.sound) {
 					if (local6.primaryStream != null) {
-						Static204.soundStream.removeSubStream(local6.primaryStream);
+						client.soundStream.removeSubStream(local6.primaryStream);
 						local6.primaryStream = null;
 					}
 					local6.sound = local141;
@@ -89,7 +71,7 @@ public final class Static110 {
 				local141 = Static140.getSound(local6.player);
 				if (local6.sound != local141) {
 					if (local6.primaryStream != null) {
-						Static204.soundStream.removeSubStream(local6.primaryStream);
+						client.soundStream.removeSubStream(local6.primaryStream);
 						local6.primaryStream = null;
 					}
 					local6.sound = local141;

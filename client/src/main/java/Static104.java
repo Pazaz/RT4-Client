@@ -16,7 +16,7 @@ public final class Static104 {
 			return;
 		}
 		if (arg0.seqId != -1 && arg0.anInt3420 == 0) {
-			@Pc(40) SeqType local40 = Static36.get(arg0.seqId);
+			@Pc(40) SeqType local40 = SeqTypeList.get(arg0.seqId);
 			if (arg0.anInt3405 > 0 && local40.anInt5363 == 0) {
 				arg0.anInt3417++;
 				return;
@@ -233,8 +233,4 @@ public final class Static104 {
 		return 0;
 	}
 
-	@OriginalMember(owner = "client!ia", name = "a", descriptor = "(I)I")
-	public static int getTotal() {
-		return 2;
-	}
 }

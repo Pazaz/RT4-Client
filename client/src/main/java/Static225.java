@@ -7,23 +7,17 @@ public final class Static225 {
 	@OriginalMember(owner = "client!se", name = "a", descriptor = "I")
 	public static int originX;
 
-	@OriginalMember(owner = "client!se", name = "l", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_92;
-
-	@OriginalMember(owner = "client!se", name = "h", descriptor = "I")
+    @OriginalMember(owner = "client!se", name = "h", descriptor = "I")
 	public static int anInt5073 = -1;
 
 	@OriginalMember(owner = "client!se", name = "m", descriptor = "Lclient!na;")
-	public static final JagString aClass100_961 = Static28.parse(" )2>");
-
-	@OriginalMember(owner = "client!se", name = "t", descriptor = "[I")
-	public static final int[] anIntArray445 = new int[] { 12543016, 15504954, 15914854, 16773818 };
+	public static final JagString aClass100_961 = JagString.parse(" )2>");
 
 	@OriginalMember(owner = "client!se", name = "a", descriptor = "(I)V")
 	public static void method3889() {
 		while (true) {
-			if (Static57.aClass3_Sub15_Sub1_3.method2241(Static223.anInt5028) >= 11) {
-				@Pc(20) int local20 = Static57.aClass3_Sub15_Sub1_3.method2238(11);
+			if (Protocol.inboundBuffer.method2241(Protocol.length) >= 11) {
+				@Pc(20) int local20 = Protocol.inboundBuffer.method2238(11);
 				if (local20 != 2047) {
 					@Pc(27) boolean local27 = false;
 					if (Static159.players[local20] == null) {
@@ -36,20 +30,20 @@ public final class Static225 {
 					Static105.anIntArray256[Static267.anInt5774++] = local20;
 					@Pc(65) Player local65 = Static159.players[local20];
 					local65.anInt3430 = Static83.loop;
-					@Pc(73) int local73 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
+					@Pc(73) int local73 = Protocol.inboundBuffer.method2238(1);
 					if (local73 == 1) {
 						Static44.anIntArray106[Static116.anInt2951++] = local20;
 					}
-					@Pc(92) int local92 = Static57.aClass3_Sub15_Sub1_3.method2238(5);
-					@Pc(99) int local99 = Static56.anIntArray141[Static57.aClass3_Sub15_Sub1_3.method2238(3)];
+					@Pc(92) int local92 = Protocol.inboundBuffer.method2238(5);
+					@Pc(99) int local99 = Static56.anIntArray141[Protocol.inboundBuffer.method2238(3)];
 					if (local92 > 15) {
 						local92 -= 32;
 					}
 					if (local27) {
 						local65.anInt3400 = local65.anInt3381 = local99;
 					}
-					@Pc(116) int local116 = Static57.aClass3_Sub15_Sub1_3.method2238(1);
-					@Pc(121) int local121 = Static57.aClass3_Sub15_Sub1_3.method2238(5);
+					@Pc(116) int local116 = Protocol.inboundBuffer.method2238(1);
+					@Pc(121) int local121 = Protocol.inboundBuffer.method2238(5);
 					if (local121 > 15) {
 						local121 -= 32;
 					}
@@ -57,7 +51,7 @@ public final class Static225 {
 					continue;
 				}
 			}
-			Static57.aClass3_Sub15_Sub1_3.method2244();
+			Protocol.inboundBuffer.method2244();
 			return;
 		}
 	}
@@ -80,15 +74,15 @@ public final class Static225 {
 	@OriginalMember(owner = "client!se", name = "a", descriptor = "(Lclient!na;Lclient!na;IB)V")
 	public static void method3896(@OriginalArg(0) JagString arg0, @OriginalArg(1) JagString arg1, @OriginalArg(2) int arg2) {
 		Player.password = arg1;
-		Static5.anInt39 = arg2;
+		LoginManager.anInt39 = arg2;
 		Player.username = arg0;
 		if (Player.username.strEquals(JagString.EMPTY) || Player.password.strEquals(JagString.EMPTY)) {
-			Static266.reply = 3;
+			LoginManager.reply = 3;
 		} else if (Static125.worldId == -1) {
-			Static20.anInt673 = 0;
-			Static196.anInt4587 = 0;
-			Static266.reply = -3;
-			Static219.anInt4937 = 1;
+			LoginManager.anInt673 = 0;
+			LoginManager.anInt4587 = 0;
+			LoginManager.reply = -3;
+			LoginManager.anInt4937 = 1;
 			@Pc(43) Buffer local43 = new Buffer(128);
 			local43.p1(10);
 			local43.p2((int) (Math.random() * 99999.0D));
@@ -98,12 +92,12 @@ public final class Static225 {
 			local43.pjstr(Player.password);
 			local43.p4((int) (Math.random() * 9.9999999E7D));
 			local43.encryptRsa(GlobalConfig.RSA_EXPONENT, GlobalConfig.RSA_MODULUS);
-			Static6.outboundBuffer.offset = 0;
-			Static6.outboundBuffer.p1(210);
-			Static6.outboundBuffer.p1(local43.offset);
-			Static6.outboundBuffer.pBytes(local43.data, local43.offset);
+			Protocol.outboundBuffer.offset = 0;
+			Protocol.outboundBuffer.p1(210);
+			Protocol.outboundBuffer.p1(local43.offset);
+			Protocol.outboundBuffer.pBytes(local43.data, local43.offset);
 		} else {
-			Static49.method1208();
+			LoginManager.clear();
 		}
 	}
 }

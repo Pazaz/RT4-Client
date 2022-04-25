@@ -26,8 +26,8 @@ public final class Npc extends PathingEntity {
 		if (this.type == null) {
 			return;
 		}
-		@Pc(29) SeqType local29 = this.seqId != -1 && this.anInt3420 == 0 ? Static36.get(this.seqId) : null;
-		@Pc(53) SeqType local53 = this.anInt3366 == -1 || this.anInt3366 == this.method2681().idleAnimationId && local29 != null ? null : Static36.get(this.anInt3366);
+		@Pc(29) SeqType local29 = this.seqId != -1 && this.anInt3420 == 0 ? SeqTypeList.get(this.seqId) : null;
+		@Pc(53) SeqType local53 = this.anInt3366 == -1 || this.anInt3366 == this.method2681().idleAnimationId && local29 != null ? null : SeqTypeList.get(this.anInt3366);
 		@Pc(74) Model local74 = this.type.getBodyModel(this.aClass147Array3, this.anInt3388, this.anInt3407, this.anInt3373, this.anInt3360, this.anInt3425, local53, this.anInt3396, local29);
 		if (local74 == null) {
 			return;
@@ -39,7 +39,7 @@ public final class Npc extends PathingEntity {
 		}
 		@Pc(140) Model local140;
 		if (Preferences.characterShadowsOn && local84.shadow) {
-			local140 = Static41.method1043(this.type.aByte13, this.aBoolean171, local53 == null ? local29 : local53, this.xFine, this.type.aShort23, this.zFine, this.type.aShort24, this.type.soze, local74, arg0, local53 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, this.type.aByte12);
+			local140 = ShadowModelList.method1043(this.type.aByte13, this.aBoolean171, local53 == null ? local29 : local53, this.xFine, this.type.aShort23, this.zFine, this.type.aShort24, this.type.soze, local74, arg0, local53 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, this.type.aByte12);
 			if (GlRenderer.enabled) {
 				@Pc(144) float local144 = GlRenderer.method4179();
 				@Pc(146) float local146 = GlRenderer.method4166();
@@ -56,7 +56,7 @@ public final class Npc extends PathingEntity {
 		this.method2685(local74, arg0);
 		local140 = null;
 		if (this.anInt3432 != -1 && this.anInt3399 != -1) {
-			@Pc(211) SpotAnimType local211 = Static34.method877(this.anInt3432);
+			@Pc(211) SpotAnimType local211 = SpotAnimTypeList.get(this.anInt3432);
 			local140 = local211.method1319(this.anInt3418, this.anInt3399, this.anInt3361);
 			if (local140 != null) {
 				local140.method4575(0, -this.anInt3394, 0);

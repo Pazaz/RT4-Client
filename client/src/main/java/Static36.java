@@ -17,7 +17,7 @@ public final class Static36 {
 			return null;
 		}
 		for (@Pc(10) int local10 = 0; local10 < local4; local10++) {
-			arg0 = Static5.getComponent(arg0.layer);
+			arg0 = InterfaceList.getComponent(arg0.layer);
 			if (arg0 == null) {
 				return null;
 			}
@@ -29,23 +29,6 @@ public final class Static36 {
 	public static ServerActiveProperties method940(@OriginalArg(0) Component arg0) {
 		@Pc(13) ServerActiveProperties local13 = (ServerActiveProperties) Static210.aClass133_21.get(((long) arg0.id << 32) + (long) arg0.createdComponentId);
 		return local13 == null ? arg0.aClass3_Sub4_1 : local13;
-	}
-
-	@OriginalMember(owner = "client!client", name = "a", descriptor = "(IB)Lclient!tk;")
-	public static SeqType get(@OriginalArg(0) int arg0) {
-		@Pc(17) SeqType local17 = (SeqType) Static142.aClass99_23.get((long) arg0);
-		if (local17 != null) {
-			return local17;
-		}
-		@Pc(32) byte[] local32 = Static243.aClass153_98.getFile(Static221.method3389(arg0), Static118.method2356(arg0));
-		local17 = new SeqType();
-		local17.anInt5361 = arg0;
-		if (local32 != null) {
-			local17.decode(new Buffer(local32));
-		}
-		local17.postDecode();
-		Static142.aClass99_23.put(local17, (long) arg0);
-		return local17;
 	}
 
 	@OriginalMember(owner = "client!client", name = "a", descriptor = "([Lclient!be;IIIIIII)V")
@@ -181,9 +164,9 @@ public final class Static36 {
 									continue;
 								}
 								if (local9.anInt453 == 1400) {
-									Static24.component = local9;
+									WorldMap.component = local9;
 									if (local221) {
-										if (Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Static191.staffModLevel > 0) {
+										if (Keyboard.pressedKeys[Keyboard.KEY_CTRL] && LoginManager.staffModLevel > 0) {
 											local243 = (int) ((double) (Static7.clickX - local50 - local9.anInt445 / 2) * 2.0D / (double) WorldMap.zoom);
 											local508 = (int) ((double) (Static60.clickY - local55 - local9.anInt459 / 2) * 2.0D / (double) WorldMap.zoom);
 											local322 = WorldMap.anInt435 + local243;
@@ -449,13 +432,13 @@ public final class Static36 {
 								local399.arguments = local9.anObjectArray30;
 								InterfaceList.lowPriorityRequests.addTail(local399);
 							}
-							local9.anInt482 = Static119.transmitTimer;
+							local9.anInt482 = InterfaceList.transmitTimer;
 							if (local9.anObjectArray14 != null) {
-								for (local243 = 0; local243 < Static182.keyQueueSize; local243++) {
+								for (local243 = 0; local243 < InterfaceList.keyQueueSize; local243++) {
 									@Pc(1430) HookRequest local1430 = new HookRequest();
 									local1430.source = local9;
-									local1430.keyCode = Static227.keyCodes[local243];
-									local1430.keyChar = Static205.keyChars[local243];
+									local1430.keyCode = InterfaceList.keyCodes[local243];
+									local1430.keyChar = InterfaceList.keyChars[local243];
 									local1430.arguments = local9.anObjectArray14;
 									InterfaceList.lowPriorityRequests.addTail(local1430);
 								}

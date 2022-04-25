@@ -7,9 +7,6 @@ public final class Static204 {
 	@OriginalMember(owner = "client!qi", name = "z", descriptor = "Lclient!qf;")
 	public static Sprite aClass3_Sub2_Sub1_10;
 
-	@OriginalMember(owner = "client!qi", name = "C", descriptor = "Lclient!ei;")
-	public static MixerPcmStream soundStream;
-
     @OriginalMember(owner = "client!qi", name = "t", descriptor = "I")
 	public static int anInt4762 = 0;
 
@@ -22,18 +19,8 @@ public final class Static204 {
 	@OriginalMember(owner = "client!qi", name = "x", descriptor = "[I")
 	public static final int[] anIntArray425 = new int[] { 0, 1, 2, 3, 4, 5, 6, 14 };
 
-	@OriginalMember(owner = "client!qi", name = "A", descriptor = "I")
-	public static int anInt4765 = -1;
-
-	@OriginalMember(owner = "client!qi", name = "B", descriptor = "Lclient!na;")
-	public static final JagString aClass100_896 = Static28.parse("<col=ffffff>");
-
-	@OriginalMember(owner = "client!qi", name = "e", descriptor = "(B)V")
-	public static void method3673() {
-		Static93.aClass99_13.clear();
-		Static125.aClass99_18.clear();
-		Static262.headModels.clear();
-	}
+    @OriginalMember(owner = "client!qi", name = "B", descriptor = "Lclient!na;")
+	public static final JagString aClass100_896 = JagString.parse("<col=ffffff>");
 
 	@OriginalMember(owner = "client!qi", name = "b", descriptor = "(II)I")
 	public static int method3674(@OriginalArg(0) int arg0) {

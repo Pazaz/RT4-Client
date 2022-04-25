@@ -4,35 +4,20 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static167 {
 
-	@OriginalMember(owner = "client!nd", name = "n", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_61;
-
-	@OriginalMember(owner = "client!nd", name = "p", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_62;
-
 	@OriginalMember(owner = "client!nd", name = "s", descriptor = "I")
 	public static int anInt4069;
-
-	@OriginalMember(owner = "client!nd", name = "t", descriptor = "Lclient!ve;")
-	public static Js5 js5Archive26;
-
-	@OriginalMember(owner = "client!nd", name = "v", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_64;
 
 	@OriginalMember(owner = "client!nd", name = "y", descriptor = "Lclient!mm;")
 	public static SoftwareSprite aClass3_Sub2_Sub1_Sub1_3;
 
 	@OriginalMember(owner = "client!nd", name = "b", descriptor = "Lclient!na;")
-	public static final JagString aClass100_780 = Static28.parse("Clientscript error in: ");
+	public static final JagString aClass100_780 = JagString.parse("Clientscript error in: ");
 
 	@OriginalMember(owner = "client!nd", name = "q", descriptor = "[[I")
 	public static final int[][] anIntArrayArray31 = new int[104][104];
 
-	@OriginalMember(owner = "client!nd", name = "r", descriptor = "Lclient!na;")
-	public static final JagString aClass100_781 = Static28.parse("zap");
-
 	@OriginalMember(owner = "client!nd", name = "x", descriptor = "Lclient!na;")
-	public static final JagString aClass100_783 = Static28.parse(")4p=");
+	public static final JagString aClass100_783 = JagString.parse(")4p=");
 
 	@OriginalMember(owner = "client!nd", name = "a", descriptor = "(ZLclient!qb;)V")
 	public static void setInactive(@OriginalArg(1) PcmStream arg0) {
@@ -45,9 +30,4 @@ public final class Static167 {
 		}
 	}
 
-	@OriginalMember(owner = "client!nd", name = "a", descriptor = "(ILclient!ve;)V")
-	public static void init(@OriginalArg(1) Js5 arg0) {
-		Static262.bgId = arg0.getGroupId(Static27.aClass100_165);
-		Static136.logoId = arg0.getGroupId(Static165.aClass100_776);
-	}
 }

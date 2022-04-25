@@ -9,17 +9,14 @@ public final class Static81 {
 	@OriginalMember(owner = "client!gg", name = "Z", descriptor = "I")
 	public static int anInt2222;
 
-	@OriginalMember(owner = "client!gg", name = "ab", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_34;
-
 	@OriginalMember(owner = "client!gg", name = "bb", descriptor = "I")
 	public static int cameraX;
 
     @OriginalMember(owner = "client!gg", name = "W", descriptor = "Lclient!na;")
-	public static final JagString aClass100_475 = Static28.parse("null");
+	public static final JagString aClass100_475 = JagString.parse("null");
 
 	@OriginalMember(owner = "client!gg", name = "Y", descriptor = "Lclient!na;")
-	public static final JagString aClass100_476 = Static28.parse("::gc");
+	public static final JagString aClass100_476 = JagString.parse("::gc");
 
 	@OriginalMember(owner = "client!gg", name = "db", descriptor = "I")
 	public static int anInt2225 = -1;
@@ -33,7 +30,7 @@ public final class Static81 {
 			return;
 		}
 		if (arg0 != -1) {
-			@Pc(24) CursorType local24 = Static202.method3660(arg0);
+			@Pc(24) CursorType local24 = CursorTypeList.get(arg0);
 			@Pc(28) SoftwareSprite local28 = local24.getSprite();
 			if (local28 == null) {
 				arg0 = -1;
@@ -53,27 +50,12 @@ public final class Static81 {
 		Static71.anIntArrayArray10 = arg0;
 	}
 
-	@OriginalMember(owner = "client!gg", name = "d", descriptor = "(II)Lclient!dm;")
-	public static IdkType method1752(@OriginalArg(0) int arg0) {
-		@Pc(10) IdkType local10 = (IdkType) Static67.aClass99_20.get((long) arg0);
-		if (local10 != null) {
-			return local10;
-		}
-		@Pc(21) byte[] local21 = Static216.aClass153_31.getFile(3, arg0);
-		local10 = new IdkType();
-		if (local21 != null) {
-			local10.decode(new Buffer(local21));
-		}
-		Static67.aClass99_20.put(local10, (long) arg0);
-		return local10;
-	}
-
 	@OriginalMember(owner = "client!gg", name = "e", descriptor = "(II)V")
 	public static void method1753(@OriginalArg(0) int arg0) {
-		if (!Static245.load(arg0)) {
+		if (!InterfaceList.load(arg0)) {
 			return;
 		}
-		@Pc(15) Component[] local15 = Static241.components[arg0];
+		@Pc(15) Component[] local15 = InterfaceList.components[arg0];
 		for (@Pc(17) int local17 = 0; local17 < local15.length; local17++) {
 			@Pc(29) Component local29 = local15[local17];
 			if (local29 != null) {
@@ -84,11 +66,6 @@ public final class Static81 {
 		}
 	}
 
-	@OriginalMember(owner = "client!gg", name = "a", descriptor = "(ILclient!ve;)V")
-	public static void init(@OriginalArg(1) Js5 arg0) {
-		Static138.anInt3443 = arg0.getGroupId(Static12.aClass100_73);
-	}
-
 	@OriginalMember(owner = "client!gg", name = "a", descriptor = "(Z)V")
 	public static void method1756() {
 		// todo: consolidate/rename static classes
@@ -97,10 +74,10 @@ public final class Static81 {
 		}
 		if (Static60.rebootTimer > 1) {
 			Static60.rebootTimer--;
-			Static209.miscTransmitAt = Static119.transmitTimer;
+			Static209.miscTransmitAt = InterfaceList.transmitTimer;
 		}
-		if (Static224.aBoolean247) {
-			Static224.aBoolean247 = false;
+		if (LoginManager.aBoolean247) {
+			LoginManager.aBoolean247 = false;
 			Static175.method3279();
 			return;
 		}
@@ -109,7 +86,7 @@ public final class Static81 {
 		if (client.gameState != 30) {
 			return;
 		}
-		Static233.loop(Static6.outboundBuffer); // ReflectionCheck
+		Static233.loop(Protocol.outboundBuffer); // ReflectionCheck
 		@Pc(60) Object mouseRecorder = MouseRecorder.instance.lock;
 		@Pc(86) int offset;
 		@Pc(79) int samples;
@@ -119,14 +96,14 @@ public final class Static81 {
 		@Pc(182) int dx;
 		@Pc(189) int dy;
 		synchronized (mouseRecorder) {
-			if (!Static245.enabled) {
+			if (!MouseRecorder.enabled) {
 				MouseRecorder.instance.samples = 0;
 			} else if (Static150.clickButton != 0 || MouseRecorder.instance.samples >= 40) {
-				Static6.outboundBuffer.p1isaac(123);
+				Protocol.outboundBuffer.p1isaac(123);
 				samples = 0;
-				Static6.outboundBuffer.p1(0);
-				offset = Static6.outboundBuffer.offset;
-				for (i = 0; MouseRecorder.instance.samples > i && Static6.outboundBuffer.offset - offset < 240; i++) {
+				Protocol.outboundBuffer.p1(0);
+				offset = Protocol.outboundBuffer.offset;
+				for (i = 0; MouseRecorder.instance.samples > i && Protocol.outboundBuffer.offset - offset < 240; i++) {
 					samples++;
 					y = MouseRecorder.instance.y[i];
 					x = MouseRecorder.instance.x[i];
@@ -154,28 +131,28 @@ public final class Static81 {
 						if (Static204.anInt4762 < 8 && dx >= -32 && dx <= 31 && dy >= -32 && dy <= 31) {
 							dy += 32;
 							dx += 32;
-							Static6.outboundBuffer.p2(dy + (Static204.anInt4762 << 12) + (dx << 6));
+							Protocol.outboundBuffer.p2(dy + (Static204.anInt4762 << 12) + (dx << 6));
 							Static204.anInt4762 = 0;
 						} else if (Static204.anInt4762 < 32 && dx >= -128 && dx <= 127 && dy >= -128 && dy <= 127) {
-							Static6.outboundBuffer.p1(Static204.anInt4762 + 128);
+							Protocol.outboundBuffer.p1(Static204.anInt4762 + 128);
 							dy += 128;
 							dx += 128;
-							Static6.outboundBuffer.p2((dx << 8) + dy);
+							Protocol.outboundBuffer.p2((dx << 8) + dy);
 							Static204.anInt4762 = 0;
 						} else if (Static204.anInt4762 < 32) {
-							Static6.outboundBuffer.p1(Static204.anInt4762 + 192);
+							Protocol.outboundBuffer.p1(Static204.anInt4762 + 192);
 							if (outsideWindow) {
-								Static6.outboundBuffer.p4(Integer.MIN_VALUE);
+								Protocol.outboundBuffer.p4(Integer.MIN_VALUE);
 							} else {
-								Static6.outboundBuffer.p4(x | y << 16);
+								Protocol.outboundBuffer.p4(x | y << 16);
 							}
 							Static204.anInt4762 = 0;
 						} else {
-							Static6.outboundBuffer.p2(Static204.anInt4762 + 57344);
+							Protocol.outboundBuffer.p2(Static204.anInt4762 + 57344);
 							if (outsideWindow) {
-								Static6.outboundBuffer.p4(Integer.MIN_VALUE);
+								Protocol.outboundBuffer.p4(Integer.MIN_VALUE);
 							} else {
-								Static6.outboundBuffer.p4(x | y << 16);
+								Protocol.outboundBuffer.p4(x | y << 16);
 							}
 							Static204.anInt4762 = 0;
 						}
@@ -183,7 +160,7 @@ public final class Static81 {
 						Static204.anInt4762++;
 					}
 				}
-				Static6.outboundBuffer.p1len(Static6.outboundBuffer.offset - offset);
+				Protocol.outboundBuffer.p1len(Protocol.outboundBuffer.offset - offset);
 				if (MouseRecorder.instance.samples > samples) {
 					MouseRecorder.instance.samples -= samples;
 					for (i = 0; i < MouseRecorder.instance.samples; i++) {
@@ -218,16 +195,16 @@ public final class Static81 {
 			if (Static150.clickButton == 2) {
 				button = 1;
 			}
-			Static6.outboundBuffer.p1isaac(75);
-			Static6.outboundBuffer.p2leadd(button << 15 | x);
-			Static6.outboundBuffer.p4me(i | samples << 16);
+			Protocol.outboundBuffer.p1isaac(75);
+			Protocol.outboundBuffer.p2leadd(button << 15 | x);
+			Protocol.outboundBuffer.p4me(i | samples << 16);
 		}
 		if (Static16.anInt551 > 0) {
 			Static16.anInt551--;
 		}
 		if (Preferences.aBoolean63) {
-			for (i = 0; i < Static182.keyQueueSize; i++) {
-				offset = Static227.keyCodes[i];
+			for (i = 0; i < InterfaceList.keyQueueSize; i++) {
+				offset = InterfaceList.keyCodes[i];
 				if (offset == 98 || offset == 99 || offset == 96 || offset == 97) {
 					Static197.aBoolean228 = true;
 					break;
@@ -239,24 +216,24 @@ public final class Static81 {
 		if (Static197.aBoolean228 && Static16.anInt551 <= 0) {
 			Static16.anInt551 = 20;
 			Static197.aBoolean228 = false;
-			Static6.outboundBuffer.p1isaac(21);
-			Static6.outboundBuffer.p2add((int)Camera.pitchTarget);
-			Static6.outboundBuffer.p2le((int)Camera.yawTarget);
+			Protocol.outboundBuffer.p1isaac(21);
+			Protocol.outboundBuffer.p2add((int)Camera.pitchTarget);
+			Protocol.outboundBuffer.p2le((int)Camera.yawTarget);
 		}
 		if (GameShell.focus && !Static67.prevFocus) {
 			Static67.prevFocus = true;
-			Static6.outboundBuffer.p1isaac(22);
-			Static6.outboundBuffer.p1(1);
+			Protocol.outboundBuffer.p1isaac(22);
+			Protocol.outboundBuffer.p1(1);
 		}
 		if (!GameShell.focus && Static67.prevFocus) {
 			Static67.prevFocus = false;
-			Static6.outboundBuffer.p1isaac(22);
-			Static6.outboundBuffer.p1(0);
+			Protocol.outboundBuffer.p1isaac(22);
+			Protocol.outboundBuffer.p1(0);
 		}
-		if (!Static18.serverUpdatedPreferences) {
-			Static6.outboundBuffer.p1isaac(98);
-			Static6.outboundBuffer.p4(Static145.method2746());
-			Static18.serverUpdatedPreferences = true;
+		if (!Preferences.sentToServer) {
+			Protocol.outboundBuffer.p1isaac(98);
+			Protocol.outboundBuffer.p4(Preferences.toInt());
+			Preferences.sentToServer = true;
 		}
 		Static31.method846();
 		if (client.gameState != 30) {
@@ -273,7 +250,7 @@ public final class Static81 {
 		Static71.method1444();
 		Static109.method2274();
 		Static19.loop(); // OverheadChat
-		if (Static24.component != null) {
+		if (WorldMap.component != null) {
 			Static12.method447();
 		}
 		// VarpDomain
@@ -295,13 +272,13 @@ public final class Static81 {
 			} else {
 				@Pc(773) Component component;
 				if (samples == 3) {
-					component = Static5.getComponent(i);
+					component = InterfaceList.getComponent(i);
 					if (!change.stringArg.strEquals(component.aClass100_84)) {
 						component.aClass100_84 = change.stringArg;
 						Static43.redraw(component);
 					}
 				} else if (samples == 4) {
-					component = Static5.getComponent(i);
+					component = InterfaceList.getComponent(i);
 					x = change.intArg1;
 					dx = change.intArg2;
 					modelId = change.intArg3;
@@ -312,7 +289,7 @@ public final class Static81 {
 						Static43.redraw(component);
 					}
 				} else if (samples == 5) {
-					component = Static5.getComponent(i);
+					component = InterfaceList.getComponent(i);
 					if (component.anInt522 != change.intArg1 || change.intArg1 == -1) {
 						component.anInt496 = 1;
 						component.anInt500 = 0;
@@ -325,14 +302,14 @@ public final class Static81 {
 					x = y >> 10 & 0x1F;
 					dx = y & 0x1F;
 					modelId = y >> 5 & 0x1F;
-					@Pc(1189) Component local1189 = Static5.getComponent(i);
+					@Pc(1189) Component local1189 = InterfaceList.getComponent(i);
 					dy = (dx << 3) + (modelId << 11) + (x << 19);
 					if (dy != local1189.anInt474) {
 						local1189.anInt474 = dy;
 						Static43.redraw(local1189);
 					}
 				} else if (samples == 7) {
-					component = Static5.getComponent(i);
+					component = InterfaceList.getComponent(i);
 					// todo: this should not be necessary, data/server-related?
 					if (component != null) {
 						@Pc(1145) boolean hidden = change.intArg1 == 1;
@@ -342,7 +319,7 @@ public final class Static81 {
 						}
 					}
 				} else if (samples == 8) {
-					component = Static5.getComponent(i);
+					component = InterfaceList.getComponent(i);
 					if (change.intArg1 != component.modelXAngle || component.modelYAngle != change.intArg3 || change.intArg2 != component.modelZoom) {
 						component.modelXAngle = change.intArg1;
 						component.modelZoom = change.intArg2;
@@ -357,14 +334,14 @@ public final class Static81 {
 						Static43.redraw(component);
 					}
 				} else if (samples == 9) {
-					component = Static5.getComponent(i);
+					component = InterfaceList.getComponent(i);
 					if (change.intArg1 != component.objId || component.objCount != change.intArg3) {
 						component.objId = change.intArg1;
 						component.objCount = change.intArg3;
 						Static43.redraw(component);
 					}
 				} else if (samples == 10) {
-					component = Static5.getComponent(i);
+					component = InterfaceList.getComponent(i);
 					if (component.modelXOffset != change.intArg1 || change.intArg3 != component.modelZOffset || component.modelYOffset != change.intArg2) {
 						component.modelZOffset = change.intArg3;
 						component.modelYOffset = change.intArg2;
@@ -372,14 +349,14 @@ public final class Static81 {
 						Static43.redraw(component);
 					}
 				} else if (samples == 11) {
-					component = Static5.getComponent(i);
+					component = InterfaceList.getComponent(i);
 					component.x = component.baseX = change.intArg1;
 					component.yMode = 0;
 					component.xMode = 0;
 					component.y = component.baseY = change.intArg3;
 					Static43.redraw(component);
 				} else if (samples == 12) {
-					component = Static5.getComponent(i);
+					component = InterfaceList.getComponent(i);
 					x = change.intArg1;
 					if (component != null && component.type == 0) {
 						if (x > component.anInt491 - component.anInt459) {
@@ -394,7 +371,7 @@ public final class Static81 {
 						}
 					}
 				} else if (samples == 13) {
-					component = Static5.getComponent(i);
+					component = InterfaceList.getComponent(i);
 					component.modelRotationSpeed = change.intArg1;
 				}
 			}
@@ -454,11 +431,11 @@ public final class Static81 {
 						} else {
 							local1361.swapObjs(Static18.anInt588, Static4.anInt36);
 						}
-						Static6.outboundBuffer.p1isaac(231);
-						Static6.outboundBuffer.p2(Static4.anInt36);
-						Static6.outboundBuffer.p4le2(Static118.aClass13_15.id);
-						Static6.outboundBuffer.p2add(Static18.anInt588);
-						Static6.outboundBuffer.p1sub(local1363);
+						Protocol.outboundBuffer.p1isaac(231);
+						Protocol.outboundBuffer.p2(Static4.anInt36);
+						Protocol.outboundBuffer.p4le2(Static118.aClass13_15.id);
+						Protocol.outboundBuffer.p2add(Static18.anInt588);
+						Protocol.outboundBuffer.p1sub(local1363);
 					}
 				} else if ((Static116.anInt2952 == 1 || Static277.method4640(Static231.anInt5204 - 1)) && Static231.anInt5204 > 2) {
 					Static226.method3901();
@@ -473,22 +450,22 @@ public final class Static81 {
 		Static146.aBoolean174 = false;
 		Static56.aClass13_12 = null;
 		Static44.aBoolean83 = false;
-		Static182.keyQueueSize = 0;
+		InterfaceList.keyQueueSize = 0;
 		local1361 = Static180.aClass13_22;
 		Static180.aClass13_22 = null;
 		@Pc(1508) Component local1508 = Static43.aClass13_11;
 		Static43.aClass13_11 = null;
-		while (Keyboard.nextKey() && Static182.keyQueueSize < 128) {
-			Static227.keyCodes[Static182.keyQueueSize] = Keyboard.keyCode;
-			Static205.keyChars[Static182.keyQueueSize] = Keyboard.keyChar;
-			Static182.keyQueueSize++;
+		while (Keyboard.nextKey() && InterfaceList.keyQueueSize < 128) {
+			InterfaceList.keyCodes[InterfaceList.keyQueueSize] = Keyboard.keyCode;
+			InterfaceList.keyChars[InterfaceList.keyQueueSize] = Keyboard.keyChar;
+			InterfaceList.keyQueueSize++;
 		}
 		// WorldMap.component
-		Static24.component = null;
+		WorldMap.component = null;
 		if (InterfaceList.topLevelInterface != -1) {
 			Static57.method1320(0, 0, 0, GameShell.canvasWidth, InterfaceList.topLevelInterface, 0, GameShell.canvasHeight);
 		}
-		Static119.transmitTimer++;
+		InterfaceList.transmitTimer++;
 		while (true) {
 			@Pc(1569) Component priorityComponent;
 			@Pc(1560) Component prioritySource;
@@ -504,13 +481,13 @@ public final class Static81 {
 									do {
 										priorityRequest = (HookRequest) InterfaceList.lowPriorityRequests.removeHead();
 										if (priorityRequest == null) {
-											if (Static24.component == null) {
+											if (WorldMap.component == null) {
 												Static137.anInt3337 = 0;
 											}
 											if (Static105.aClass13_14 != null) {
 												Static4.method28();
 											}
-											if (Static191.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static58.wheelRotation != 0) {
+											if (LoginManager.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static58.wheelRotation != 0) {
 												y = Static55.level - Static58.wheelRotation;
 												if (y < 0) {
 													y = 0;
@@ -520,7 +497,7 @@ public final class Static81 {
 												// Cheat
 												Static61.teleport(PlayerList.self.movementQueueX[0] + Static225.originX, PlayerList.self.movementQueueZ[0] + Static142.originZ, y);
 											}
-											if (Static191.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT]) {
+											if (LoginManager.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT]) {
 												if (Static56.anInt1742 != -1) {
 													Static61.teleport(Static225.originX + Static56.anInt1742, Static142.originZ - -Static116.anInt2954, Static55.level);
 												}
@@ -528,11 +505,11 @@ public final class Static81 {
 												Static125.anInt3096 = 0;
 											} else if (Static125.anInt3096 == 2) {
 												if (Static56.anInt1742 != -1) {
-													Static6.outboundBuffer.p1isaac(131);
-													Static6.outboundBuffer.p4me(Static98.anInt2512);
-													Static6.outboundBuffer.p2add(Static225.originX + Static56.anInt1742);
-													Static6.outboundBuffer.p2leadd(Static15.anInt506);
-													Static6.outboundBuffer.p2add(Static116.anInt2954 + Static142.originZ);
+													Protocol.outboundBuffer.p1isaac(131);
+													Protocol.outboundBuffer.p4me(Static98.anInt2512);
+													Protocol.outboundBuffer.p2add(Static225.originX + Static56.anInt1742);
+													Protocol.outboundBuffer.p2leadd(Static15.anInt506);
+													Protocol.outboundBuffer.p2add(Static116.anInt2954 + Static142.originZ);
 													Static70.type = 1;
 													Static17.milliseconds = 0;
 													Static25.y = Static60.clickY;
@@ -541,9 +518,9 @@ public final class Static81 {
 												Static125.anInt3096 = 0;
 											} else if (Static187.anInt4422 == 2) {
 												if (Static56.anInt1742 != -1) {
-													Static6.outboundBuffer.p1isaac(179);
-													Static6.outboundBuffer.p2(Static142.originZ + Static116.anInt2954);
-													Static6.outboundBuffer.p2(Static56.anInt1742 + Static225.originX);
+													Protocol.outboundBuffer.p1isaac(179);
+													Protocol.outboundBuffer.p2(Static142.originZ + Static116.anInt2954);
+													Protocol.outboundBuffer.p2(Static56.anInt1742 + Static225.originX);
 													Static17.milliseconds = 0;
 													Static70.type = 1;
 													Static122.x = Static7.clickX;
@@ -602,7 +579,7 @@ public final class Static81 {
 											if (y > 15000 && x > 15000) {
 												Static267.anInt5775 = 250;
 												Static48.setIdleLoops(14500);
-												Static6.outboundBuffer.p1isaac(245);
+												Protocol.outboundBuffer.p1isaac(245);
 											}
 											if (Static33.openUrlRequest != null && Static33.openUrlRequest.status == 1) {
 												if (Static33.openUrlRequest.result != null) {
@@ -669,17 +646,17 @@ public final class Static81 {
 												Static263.anInt5755 = -2;
 											}
 											if (Static131.anInt3251 > 50) {
-												Static6.outboundBuffer.p1isaac(93);
+												Protocol.outboundBuffer.p1isaac(93);
 											}
 											if (Static34.verifyIdChanged) {
 												Static71.transmitVerifyId();
 												Static34.verifyIdChanged = false;
 											}
 											try {
-												if (Protocol.socket != null && Static6.outboundBuffer.offset > 0) {
-													Protocol.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
+												if (Protocol.socket != null && Protocol.outboundBuffer.offset > 0) {
+													Protocol.socket.write(Protocol.outboundBuffer.data, Protocol.outboundBuffer.offset);
 													Static131.anInt3251 = 0;
-													Static6.outboundBuffer.offset = 0;
+													Protocol.outboundBuffer.offset = 0;
 												}
 											} catch (@Pc(2266) IOException local2266) {
 												Static175.method3279();
@@ -690,7 +667,7 @@ public final class Static81 {
 										if (prioritySource.createdComponentId < 0) {
 											break;
 										}
-										priorityComponent = Static5.getComponent(prioritySource.layer);
+										priorityComponent = InterfaceList.getComponent(prioritySource.layer);
 									} while (priorityComponent == null || priorityComponent.createdComponents == null || prioritySource.createdComponentId >= priorityComponent.createdComponents.length || prioritySource != priorityComponent.createdComponents[prioritySource.createdComponentId]);
 									Static82.method1767(priorityRequest);
 								}
@@ -699,7 +676,7 @@ public final class Static81 {
 							if (prioritySource.createdComponentId < 0) {
 								break;
 							}
-							priorityComponent = Static5.getComponent(prioritySource.layer);
+							priorityComponent = InterfaceList.getComponent(prioritySource.layer);
 						} while (priorityComponent == null || priorityComponent.createdComponents == null || priorityComponent.createdComponents.length <= prioritySource.createdComponentId || priorityComponent.createdComponents[prioritySource.createdComponentId] != prioritySource);
 						Static82.method1767(priorityRequest);
 					}
@@ -708,7 +685,7 @@ public final class Static81 {
 				if (prioritySource.createdComponentId < 0) {
 					break;
 				}
-				priorityComponent = Static5.getComponent(prioritySource.layer);
+				priorityComponent = InterfaceList.getComponent(prioritySource.layer);
 			} while (priorityComponent == null || priorityComponent.createdComponents == null || prioritySource.createdComponentId >= priorityComponent.createdComponents.length || priorityComponent.createdComponents[prioritySource.createdComponentId] != prioritySource);
 			Static82.method1767(priorityRequest);
 		}

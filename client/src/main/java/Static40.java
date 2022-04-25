@@ -8,7 +8,7 @@ public final class Static40 {
 	public static int anInt1275;
 
 	@OriginalMember(owner = "client!da", name = "O", descriptor = "Lclient!na;")
-	public static final JagString aClass100_253 = Static28.parse("(U0a )2 via: ");
+	public static final JagString aClass100_253 = JagString.parse("(U0a )2 via: ");
 
 	@OriginalMember(owner = "client!da", name = "d", descriptor = "(I)V")
 	public static void updateLoginScreenCamera() {
@@ -107,7 +107,7 @@ public final class Static40 {
 		local8.p2((int) (Math.random() * 99999.0D));
 		local8.p2(530);
 		if (GlobalConfig.LOGIN_USE_STRINGS) {
-			local8.pjstr(Static79.decode37(name));
+			local8.pjstr(Base37.decodeLowerCase(name));
 		} else {
 			local8.p8(name);
 		}
@@ -122,20 +122,20 @@ public final class Static40 {
 		local8.p2(arg1);
 		local8.p4((int) (Math.random() * 9.9999999E7D));
 		local8.encryptRsa(GlobalConfig.RSA_EXPONENT, GlobalConfig.RSA_MODULUS);
-		Static6.outboundBuffer.offset = 0;
-		Static6.outboundBuffer.p1(36);
-		Static6.outboundBuffer.p1(local8.offset);
-		Static6.outboundBuffer.pBytes(local8.data, local8.offset);
-		Static223.anInt5034 = -3;
-		Static179.accountCreationStep = 1;
-		Static226.anInt5079 = 0;
-		Static57.anInt1758 = 0;
+		Protocol.outboundBuffer.offset = 0;
+		Protocol.outboundBuffer.p1(36);
+		Protocol.outboundBuffer.p1(local8.offset);
+		Protocol.outboundBuffer.pBytes(local8.data, local8.offset);
+		CreateManager.reply = -3;
+		CreateManager.step = 1;
+		CreateManager.loops = 0;
+		CreateManager.errors = 0;
 	}
 
 	@OriginalMember(owner = "client!da", name = "h", descriptor = "(B)V")
 	public static void method1019() {
-		Static190.aClass99_26.method3103();
-		Static124.aClass99_17.method3103();
-		Static87.aClass99_12.method3103();
+		Component.sprites.method3103();
+		Component.models.method3103();
+		Component.fonts.method3103();
 	}
 }

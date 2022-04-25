@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static26 {
 
-    @OriginalMember(owner = "client!ca", name = "Z", descriptor = "Lclient!ve;")
-	public static Js5 js5Archive5;
-
     @OriginalMember(owner = "client!ca", name = "X", descriptor = "Lclient!ih;")
 	public static LinkedList aClass69_27 = new LinkedList();
 
@@ -15,9 +12,6 @@ public final class Static26 {
 
     @OriginalMember(owner = "client!ca", name = "eb", descriptor = "[I")
 	public static final int[] anIntArray67 = new int[100];
-
-	@OriginalMember(owner = "client!ca", name = "fb", descriptor = "[I")
-	public static final int[] anIntArray68 = new int[50];
 
 	@OriginalMember(owner = "client!ca", name = "h", descriptor = "(I)V")
 	public static void setupLoadingScreenRegion() {
@@ -41,11 +35,11 @@ public final class Static26 {
 			for (@Pc(97) int local97 = (local23 - 6) / 8; local97 <= (local23 + 6) / 8; local97++) {
 				@Pc(115) int local115 = (local80 << 8) + local97;
 				Static238.regionBitPacked[local74] = local115;
-				Static36.mapFileIds[local74] = js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static103.aClass100_558, Static123.parseInt(local80), Static86.aClass100_488, Static123.parseInt(local97) }));
-				Static172.locationsMapFileIds[local74] = js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static270.aClass100_1090, Static123.parseInt(local80), Static86.aClass100_488, Static123.parseInt(local97) }));
-				Static175.npcSpawnsFileIds[local74] = js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static179.aClass100_807, Static123.parseInt(local80), Static86.aClass100_488, Static123.parseInt(local97) }));
-				Static99.underWaterMapFileIds[local74] = js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static165.aClass100_772, Static123.parseInt(local80), Static86.aClass100_488, Static123.parseInt(local97) }));
-				Static35.underWaterLocationsMapFileIds[local74] = js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static278.aClass100_1103, Static123.parseInt(local80), Static86.aClass100_488, Static123.parseInt(local97) }));
+				Static36.mapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static103.aClass100_558, Static123.parseInt(local80), Static86.aClass100_488, Static123.parseInt(local97) }));
+				Static172.locationsMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static270.aClass100_1090, Static123.parseInt(local80), Static86.aClass100_488, Static123.parseInt(local97) }));
+				Static175.npcSpawnsFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static179.aClass100_807, Static123.parseInt(local80), Static86.aClass100_488, Static123.parseInt(local97) }));
+				Static99.underWaterMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static165.aClass100_772, Static123.parseInt(local80), Static86.aClass100_488, Static123.parseInt(local97) }));
+				Static35.underWaterLocationsMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static278.aClass100_1103, Static123.parseInt(local80), Static86.aClass100_488, Static123.parseInt(local97) }));
 				if (Static175.npcSpawnsFileIds[local74] == -1) {
 					Static36.mapFileIds[local74] = -1;
 					Static172.locationsMapFileIds[local74] = -1;
@@ -65,12 +59,6 @@ public final class Static26 {
 		Static127.method2463(0, local23, local10, 8, true, 8);
 	}
 
-	@OriginalMember(owner = "client!ca", name = "a", descriptor = "(Z)V")
-	public static void method741() {
-		Static79.aClass99_11.method3103();
-		Static7.sprites.method3103();
-	}
-
 	@OriginalMember(owner = "client!ca", name = "a", descriptor = "(ZI)V")
 	public static void method743(@OriginalArg(0) boolean arg0) {
 		@Pc(13) int local13 = Static273.mapFilesBuffer.length;
@@ -85,22 +73,10 @@ public final class Static26 {
 			if (local32 != null) {
 				@Pc(45) int local45 = (Static238.regionBitPacked[local25] >> 8) * 64 - Static225.originX;
 				@Pc(56) int local56 = (Static238.regionBitPacked[local25] & 0xFF) * 64 - Static142.originZ;
-				Static107.loop();
-				Static124.method2437(local45, arg0, local32, local56, Static148.collisionMaps);
+				client.audioLoop();
+				Static124.method2437(local45, arg0, local32, local56, PathFinder.collisionMaps);
 			}
 		}
 	}
 
-	@OriginalMember(owner = "client!ca", name = "a", descriptor = "(IIII)V")
-	public static void method744(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		if (Preferences.soundEffectVolume == 0 || arg0 == 0 || Static189.anInt4451 >= 50 || arg1 == -1) {
-			return;
-		}
-		Static200.anIntArray421[Static189.anInt4451] = arg1;
-		Static276.anIntArray563[Static189.anInt4451] = arg0;
-		Static164.anIntArray362[Static189.anInt4451] = arg2;
-		Static173.aClass138Array1[Static189.anInt4451] = null;
-		anIntArray68[Static189.anInt4451] = 0;
-		Static189.anInt4451++;
-	}
 }

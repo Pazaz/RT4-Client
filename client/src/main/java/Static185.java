@@ -15,8 +15,8 @@ public final class Static185 {
 
 	@OriginalMember(owner = "client!p", name = "a", descriptor = "(I)V")
 	public static void method3395() {
-		if (Static184.loginStep == 5) {
-			Static184.loginStep = 6;
+		if (LoginManager.step == 5) {
+			LoginManager.step = 6;
 		}
 	}
 
@@ -33,7 +33,7 @@ public final class Static185 {
 		if (arg2 < Static146.anInt3508) {
 			Static146.anInt3508 = arg2;
 		}
-		@Pc(62) LocType local62 = Static271.get(arg5);
+		@Pc(62) LocType local62 = LocTypeList.get(arg5);
 		if (GlRenderer.enabled && local62.aBoolean216) {
 			return;
 		}
@@ -343,7 +343,7 @@ public final class Static185 {
 					local1226 = 16;
 					local1889 = Static265.method4521(arg2, arg7, arg8);
 					if (local1889 != 0L) {
-						local1226 = Static271.get(Integer.MAX_VALUE & (int) (local1889 >>> 32)).wallDecorOffsetScale;
+						local1226 = LocTypeList.get(Integer.MAX_VALUE & (int) (local1889 >>> 32)).wallDecorOffsetScale;
 					}
 					if (local62.anInt4430 == -1 && local62.multiLocs == null && !local62.aBoolean214) {
 						local1950 = local62.method3428(arg9, local165, local153, 4, local199, local213, arg1, null, local330, local173);
@@ -359,7 +359,7 @@ public final class Static185 {
 					local1226 = 8;
 					local1889 = Static265.method4521(arg2, arg7, arg8);
 					if (local1889 != 0L) {
-						local1226 = Static271.get(Integer.MAX_VALUE & (int) (local1889 >>> 32)).wallDecorOffsetScale / 2;
+						local1226 = LocTypeList.get(Integer.MAX_VALUE & (int) (local1889 >>> 32)).wallDecorOffsetScale / 2;
 					}
 					if (local62.anInt4430 == -1 && local62.multiLocs == null && !local62.aBoolean214) {
 						local1950 = local62.method3428(arg9 + 4, local165, local153, 4, local199, local213, arg1, null, local330, local173);
@@ -387,7 +387,7 @@ public final class Static185 {
 					local1226 = 8;
 					local1889 = Static265.method4521(arg2, arg7, arg8);
 					if (local1889 != 0L) {
-						local1226 = Static271.get(Integer.MAX_VALUE & (int) (local1889 >>> 32)).wallDecorOffsetScale / 2;
+						local1226 = LocTypeList.get(Integer.MAX_VALUE & (int) (local1889 >>> 32)).wallDecorOffsetScale / 2;
 					}
 					@Pc(2244) int local2244 = arg9 + 2 & 0x3;
 					@Pc(2289) Entity local2289;

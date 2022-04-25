@@ -14,13 +14,10 @@ public final class Static80 {
 	public static int[][][] underWaterTileHeightMap;
 
 	@OriginalMember(owner = "client!gf", name = "R", descriptor = "I")
-	public static int anInt4701;
-
-	@OriginalMember(owner = "client!gf", name = "T", descriptor = "I")
-	public static int anInt4702;
+	public static int centralZoneX;
 
 	@OriginalMember(owner = "client!gf", name = "I", descriptor = "Lclient!na;")
-	public static final JagString aClass100_886 = Static28.parse(")3runescape)3com)4l=");
+	public static final JagString aClass100_886 = JagString.parse(")3runescape)3com)4l=");
 
 	@OriginalMember(owner = "client!gf", name = "S", descriptor = "[I")
 	public static final int[] anIntArray419 = new int[] { 0, 2, 2, 2, 1, 1, 2, 2, 1, 3, 1, 1 };
@@ -33,22 +30,22 @@ public final class Static80 {
 	@OriginalMember(owner = "client!gf", name = "a", descriptor = "(BII)V")
 	public static void method3616(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
 		WorldMap.anInt3482 = arg0 - WorldMap.originX;
-		@Pc(24) int local24 = WorldMap.anInt3482 - (int) ((float) Static24.component.anInt445 / WorldMap.zoom);
-		@Pc(33) int local33 = WorldMap.anInt3482 + (int) ((float) Static24.component.anInt445 / WorldMap.zoom);
+		@Pc(24) int local24 = WorldMap.anInt3482 - (int) ((float) WorldMap.component.anInt445 / WorldMap.zoom);
+		@Pc(33) int local33 = WorldMap.anInt3482 + (int) ((float) WorldMap.component.anInt445 / WorldMap.zoom);
 		if (local24 < 0) {
-			WorldMap.anInt3482 = (int) ((float) Static24.component.anInt445 / WorldMap.zoom);
+			WorldMap.anInt3482 = (int) ((float) WorldMap.component.anInt445 / WorldMap.zoom);
 		}
 		WorldMap.anInt4901 = WorldMap.length + WorldMap.originZ - arg1 - 1;
-		@Pc(61) int local61 = (int) ((float) Static24.component.anInt459 / WorldMap.zoom) + WorldMap.anInt4901;
-		@Pc(70) int local70 = WorldMap.anInt4901 - (int) ((float) Static24.component.anInt459 / WorldMap.zoom);
+		@Pc(61) int local61 = (int) ((float) WorldMap.component.anInt459 / WorldMap.zoom) + WorldMap.anInt4901;
+		@Pc(70) int local70 = WorldMap.anInt4901 - (int) ((float) WorldMap.component.anInt459 / WorldMap.zoom);
 		if (local33 > WorldMap.width) {
-			WorldMap.anInt3482 = WorldMap.width - (int) ((float) Static24.component.anInt445 / WorldMap.zoom);
+			WorldMap.anInt3482 = WorldMap.width - (int) ((float) WorldMap.component.anInt445 / WorldMap.zoom);
 		}
 		if (local70 < 0) {
-			WorldMap.anInt4901 = (int) ((float) Static24.component.anInt459 / WorldMap.zoom);
+			WorldMap.anInt4901 = (int) ((float) WorldMap.component.anInt459 / WorldMap.zoom);
 		}
 		if (WorldMap.length < local61) {
-			WorldMap.anInt4901 = WorldMap.length - (int) ((float) Static24.component.anInt459 / WorldMap.zoom);
+			WorldMap.anInt4901 = WorldMap.length - (int) ((float) WorldMap.component.anInt459 / WorldMap.zoom);
 		}
 	}
 

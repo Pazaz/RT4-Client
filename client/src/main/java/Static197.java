@@ -14,7 +14,7 @@ public final class Static197 {
 	public static int anInt4620;
 
 	@OriginalMember(owner = "client!pm", name = "Y", descriptor = "Lclient!na;")
-	public static final JagString aClass100_872 = Static28.parse("<br>");
+	public static final JagString aClass100_872 = JagString.parse("<br>");
 
 	@OriginalMember(owner = "client!pm", name = "ab", descriptor = "Z")
 	public static boolean aBoolean228 = true;
@@ -45,7 +45,7 @@ public final class Static197 {
 	}
 
 	@OriginalMember(owner = "client!pm", name = "a", descriptor = "(ZIZIZII)V")
-	public static void method3560(@OriginalArg(0) boolean arg0, @OriginalArg(1) int arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
+	public static void setWindowMode(@OriginalArg(0) boolean arg0, @OriginalArg(1) int arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
 		if (arg2) {
 			GlRenderer.quit();
 		}
@@ -62,7 +62,7 @@ public final class Static197 {
 			}
 		}
 		if (arg1 == 3 && GameShell.fullScreenFrame == null) {
-			method3560(true, Preferences.favoriteWorlds, true, arg3, -1, -1);
+			setWindowMode(true, Preferences.favoriteWorlds, true, arg3, -1, -1);
 			return;
 		}
 		@Pc(85) Container local85;
@@ -100,7 +100,7 @@ public final class Static197 {
 			}
 			client.instance.addCanvas();
 			Keyboard.start(GameShell.canvas);
-			Static88.start(GameShell.canvas);
+			Mouse.start(GameShell.canvas);
 			if (client.mouseWheel != null) {
 				client.mouseWheel.start(GameShell.canvas);
 			}
@@ -155,7 +155,7 @@ public final class Static197 {
 			}
 		}
 		if (!GlRenderer.enabled && arg1 > 0) {
-			method3560(true, 0, true, arg3, -1, -1);
+			setWindowMode(true, 0, true, arg3, -1, -1);
 			return;
 		}
 		if (arg1 > 0 && arg3 == 0) {

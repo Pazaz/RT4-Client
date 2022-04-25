@@ -14,10 +14,7 @@ public final class Static169 {
 	@OriginalMember(owner = "client!nf", name = "h", descriptor = "Lclient!be;")
 	public static Component aClass13_18;
 
-	@OriginalMember(owner = "client!nf", name = "f", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_24 = new SoftLruHashTable(500);
-
-	@OriginalMember(owner = "client!nf", name = "i", descriptor = "I")
+    @OriginalMember(owner = "client!nf", name = "i", descriptor = "I")
 	public static int anInt4075 = -1;
 
 	@OriginalMember(owner = "client!nf", name = "a", descriptor = "(Lclient!na;BZ)V")

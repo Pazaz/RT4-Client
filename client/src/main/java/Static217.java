@@ -7,9 +7,6 @@ public final class Static217 {
 	@OriginalMember(owner = "client!rj", name = "R", descriptor = "I")
 	public static int anInt4903;
 
-	@OriginalMember(owner = "client!rj", name = "Y", descriptor = "J")
-	public static long js5ConnectTime;
-
     @OriginalMember(owner = "client!rj", name = "U", descriptor = "Lclient!ih;")
 	public static final LinkedList aClass69_116 = new LinkedList();
 
@@ -17,7 +14,7 @@ public final class Static217 {
 	public static final int[] anIntArray434 = new int[64];
 
 	@OriginalMember(owner = "client!rj", name = "ab", descriptor = "Lclient!na;")
-	public static final JagString aClass100_916 = Static28.parse(":clanreq:");
+	public static final JagString aClass100_916 = JagString.parse(":clanreq:");
 
 	@OriginalMember(owner = "client!rj", name = "a", descriptor = "(IIILclient!e;I)V")
 	public static void method3767(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Player arg2, @OriginalArg(4) int arg3) {
@@ -85,51 +82,6 @@ public final class Static217 {
 		}
 	}
 
-	@OriginalMember(owner = "client!rj", name = "f", descriptor = "(B)V")
-	public static void method3768() {
-		Static276.method4612();
-		Static54.method1308();
-		Static233.method3999();
-		Static90.clearLocCache();
-		Static204.method3673();
-		Static176.method3302();
-		Static10.method350();
-		Static247.method4249();
-		Static53.method1295();
-		Static249.method4266();
-		Static124.method2433();
-		Static202.method3653();
-		Static78.method1695();
-		Static10.method351();
-		Static230.method3947();
-		Static147.method2764();
-		if (client.modeWhat != 0) {
-			for (@Pc(54) int local54 = 0; local54 < Static51.aByteArrayArray8.length; local54++) {
-				Static51.aByteArrayArray8[local54] = null;
-			}
-			Static105.anInt2863 = 0;
-		}
-		Static181.method3347();
-		Static90.method1857();
-		Static139.aClass99_22.clear();
-		if (!GlRenderer.enabled) {
-			((Js5GlTextureProvider) Rasteriser.textureProvider).clear();
-		}
-		Static105.aClass54_9.clear();
-		Static213.js5Archive0.method4499();
-		Static249.js5Archive1.method4499();
-		Static41.js5Archive3.method4499();
-		Static248.js5Archive4.method4499();
-		Static26.js5Archive5.method4499();
-		Static130.js5Archive6.method4499();
-		Static267.js5Archive7.method4499();
-		Static209.js5Archive8.method4499();
-		Static184.js5Archive10.method4499();
-		Static214.js5Archive11.method4499();
-		Static16.js5Archive12.method4499();
-		Static73.aClass99_10.clear();
-	}
-
 	@OriginalMember(owner = "client!rj", name = "a", descriptor = "([Lclient!mj;I[BIIIIZIIB)V")
 	public static void method3771(@OriginalArg(0) CollisionMap[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) byte[] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) boolean arg7, @OriginalArg(8) int arg8, @OriginalArg(9) int arg9) {
 		@Pc(7) int local7 = -1;
@@ -154,7 +106,7 @@ public final class Static217 {
 				@Pc(68) int local68 = local64 >> 2;
 				@Pc(72) int local72 = local64 & 0x3;
 				if (arg3 == local60 && local56 >= arg8 && local56 < arg8 + 8 && arg9 <= local50 && arg9 + 8 > local50) {
-					@Pc(103) LocType local103 = Static271.get(local7);
+					@Pc(103) LocType local103 = LocTypeList.get(local7);
 					@Pc(120) int local120 = Static52.method1286(local50 & 0x7, arg4, local72, local103.length, local103.width, local56 & 0x7) + arg5;
 					@Pc(137) int local137 = Static241.method4541(local103.width, arg4, local103.length, local56 & 0x7, local72, local50 & 0x7) + arg6;
 					if (local120 > 0 && local137 > 0 && local120 < 103 && local137 < 103) {

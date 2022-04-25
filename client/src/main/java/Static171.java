@@ -8,13 +8,7 @@ public final class Static171 {
 	@OriginalMember(owner = "client!ni", name = "h", descriptor = "I")
 	public static int anInt4153;
 
-	@OriginalMember(owner = "client!ni", name = "k", descriptor = "Lclient!ve;")
-	public static Js5 js5Archive19;
-
-	@OriginalMember(owner = "client!ni", name = "q", descriptor = "I")
-	public static int anInt4157;
-
-	@OriginalMember(owner = "client!ni", name = "n", descriptor = "Lclient!sm;")
+    @OriginalMember(owner = "client!ni", name = "n", descriptor = "Lclient!sm;")
 	public static Class139 aClass139_1 = new Class139();
 
 	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(ILclient!na;)I")
@@ -48,8 +42,8 @@ public final class Static171 {
 
 	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(ILclient!na;I)V")
 	public static void method3221(@OriginalArg(1) JagString arg0, @OriginalArg(2) int arg1) {
-		Static6.outboundBuffer.p1isaac(188);
-		Static6.outboundBuffer.p1a(arg1);
-		Static6.outboundBuffer.p8(arg0.encode37());
+		Protocol.outboundBuffer.p1isaac(188);
+		Protocol.outboundBuffer.p1a(arg1);
+		Protocol.outboundBuffer.p8(arg0.encode37());
 	}
 }

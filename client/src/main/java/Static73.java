@@ -4,14 +4,8 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static73 {
 
-	@OriginalMember(owner = "client!fm", name = "S", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_10 = new SoftLruHashTable(4);
-
 	@OriginalMember(owner = "client!fm", name = "W", descriptor = "Lclient!na;")
-	public static final JagString aClass100_453 = Static28.parse(")2");
-
-	@OriginalMember(owner = "client!fm", name = "db", descriptor = "Lclient!gn;")
-	public static final LruHashTable aClass54_7 = new LruHashTable(64);
+	public static final JagString aClass100_453 = JagString.parse(")2");
 
 	@OriginalMember(owner = "client!fm", name = "fb", descriptor = "[I")
 	public static final int[] anIntArray183 = new int[14];
@@ -20,14 +14,14 @@ public final class Static73 {
 	public static void method1596(@OriginalArg(0) boolean arg0) {
 		if (arg0) {
 			if (InterfaceList.topLevelInterface != -1) {
-				Static109.method2275(InterfaceList.topLevelInterface);
+				InterfaceList.method2275(InterfaceList.topLevelInterface);
 			}
 			for (@Pc(18) Class3_Sub31 local18 = (Class3_Sub31) Static119.aClass133_9.head(); local18 != null; local18 = (Class3_Sub31) Static119.aClass133_9.next()) {
 				Static132.method2605(true, local18);
 			}
 			InterfaceList.topLevelInterface = -1;
 			Static119.aClass133_9 = new HashTable(8);
-			Static52.method1287();
+			InterfaceList.method1287();
 			InterfaceList.topLevelInterface = Static156.loginScreenId;
 			Static210.method3712(false);
 			Static87.method1807();
@@ -39,8 +33,8 @@ public final class Static73 {
 		PlayerList.self.zFine = 3000;
 		PlayerList.self.xFine = 3000;
 		if (!GlRenderer.enabled) {
-			Static145.method2743(Static209.js5Archive8);
-			Static196.setGameState(10);
+			Static145.method2743(client.js5Archive8);
+			client.setGameState(10);
 			return;
 		}
 		if (Static227.cameraType == 2) {
@@ -51,7 +45,7 @@ public final class Static73 {
 		}
 		Static86.setInstantFade();
 		Static26.setupLoadingScreenRegion();
-		Static196.setGameState(28);
+		client.setGameState(28);
 	}
 
 	@OriginalMember(owner = "client!fm", name = "a", descriptor = "(ZII)V")

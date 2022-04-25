@@ -7,11 +7,8 @@ public final class Static220 {
 	@OriginalMember(owner = "client!rm", name = "c", descriptor = "I")
 	public static int anInt4941 = 1;
 
-	@OriginalMember(owner = "client!rm", name = "d", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_28 = new SoftLruHashTable(64);
-
-    @OriginalMember(owner = "client!rm", name = "i", descriptor = "Lclient!na;")
-	public static final JagString aClass100_930 = Static28.parse("(Z");
+	@OriginalMember(owner = "client!rm", name = "i", descriptor = "Lclient!na;")
+	public static final JagString aClass100_930 = JagString.parse("(Z");
 
 	@OriginalMember(owner = "client!rm", name = "a", descriptor = "(IBI)V")
 	public static void spawnGroundObject(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
@@ -24,7 +21,7 @@ public final class Static220 {
 		@Pc(30) ObjStackNode local30 = null;
 		@Pc(35) ObjStackNode local35;
 		for (local35 = (ObjStackNode) local9.method2289(); local35 != null; local35 = (ObjStackNode) local9.method2288()) {
-			@Pc(44) ObjType local44 = Static71.get(local35.aClass8_Sub7_1.anInt5555);
+			@Pc(44) ObjType local44 = ObjTypeList.get(local35.aClass8_Sub7_1.anInt5555);
 			@Pc(47) int local47 = local44.cost;
 			if (local44.stackable == 1) {
 				local47 *= local35.aClass8_Sub7_1.anInt5550 + 1;
@@ -53,49 +50,7 @@ public final class Static220 {
 			}
 		}
 		@Pc(152) long local152 = (long) ((arg0 << 7) + arg1 + 1610612736);
-		Static69.method1543(Static55.level, arg1, arg0, Static207.method3685(Static55.level, arg1 * 128 + 64, arg0 * 128 + 64), local30.aClass8_Sub7_1, local152, local89, local91);
-	}
-
-	@OriginalMember(owner = "client!rm", name = "a", descriptor = "(ZIIIILclient!ak;I)Lclient!ak;")
-	public static Model method3800(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) Model arg4, @OriginalArg(6) int arg5) {
-		@Pc(4) long local4 = (long) arg2;
-		@Pc(10) Model local10 = (Model) Static110.aClass99_15.get(local4);
-		if (local10 == null) {
-			@Pc(22) RawModel local22 = Static77.create(Static267.js5Archive7, arg2);
-			if (local22 == null) {
-				return null;
-			}
-			local10 = local22.createModel(64, 768, -50, -10, -50);
-			Static110.aClass99_15.put(local10, local4);
-		}
-		@Pc(42) int local42 = arg4.method4562();
-		@Pc(45) int local45 = arg4.method4561();
-		@Pc(48) int local48 = arg4.method4576();
-		@Pc(51) int local51 = arg4.method4550();
-		local10 = local10.method4560(true, true, true);
-		if (arg0 != 0) {
-			local10.method4554(arg0);
-		}
-		@Pc(94) int local94;
-		if (GlRenderer.enabled) {
-			@Pc(68) GlModel local68 = (GlModel) local10;
-			if (arg5 != Static207.method3685(Static55.level, arg3 + local42, arg1 + local48) || arg5 != Static207.method3685(Static55.level, arg3 + local45, local51 + arg1)) {
-				for (local94 = 0; local94 < local68.anInt5295; local94++) {
-					local68.anIntArray465[local94] += Static207.method3685(Static55.level, local68.anIntArray461[local94] + arg3, local68.anIntArray466[local94] + arg1) - arg5;
-				}
-				local68.aClass127_4.aBoolean235 = false;
-				local68.aClass5_1.aBoolean3 = false;
-			}
-		} else {
-			@Pc(142) SoftwareModel local142 = (SoftwareModel) local10;
-			if (arg5 != Static207.method3685(Static55.level, local42 + arg3, local48 + arg1) || arg5 != Static207.method3685(Static55.level, arg3 + local45, local51 + arg1)) {
-				for (local94 = 0; local94 < local142.anInt5788; local94++) {
-					local142.anIntArray527[local94] += Static207.method3685(Static55.level, arg3 + local142.anIntArray528[local94], local142.anIntArray531[local94] + arg1) - arg5;
-				}
-				local142.aBoolean305 = false;
-			}
-		}
-		return local10;
+		Static69.method1543(Static55.level, arg1, arg0, SceneGraph.getTileHeight(Static55.level, arg1 * 128 + 64, arg0 * 128 + 64), local30.aClass8_Sub7_1, local152, local89, local91);
 	}
 
 	@OriginalMember(owner = "client!rm", name = "a", descriptor = "(III)V")

@@ -4,58 +4,58 @@ import org.openrs2.deob.annotation.Pc;
 
 public class Sprites {
     @OriginalMember(owner = "client!bh", name = "s", descriptor = "Lclient!na;")
-    public static final JagString P11_FULL = Static28.parse("p11_full");
+    public static final JagString P11_FULL = JagString.parse("p11_full");
 
     @OriginalMember(owner = "client!ee", name = "e", descriptor = "Lclient!na;")
-    public static final JagString P12_FULL = Static28.parse("p12_full");
+    public static final JagString P12_FULL = JagString.parse("p12_full");
 
     @OriginalMember(owner = "client!fm", name = "eb", descriptor = "Lclient!na;")
-    public static final JagString B12_FULL = Static28.parse("b12_full");
+    public static final JagString B12_FULL = JagString.parse("b12_full");
 
     @OriginalMember(owner = "client!bg", name = "N", descriptor = "Lclient!na;")
-    public static final JagString MAPFUNCTION = Static28.parse("mapfunction");
+    public static final JagString MAPFUNCTION = JagString.parse("mapfunction");
 
     @OriginalMember(owner = "client!rl", name = "S", descriptor = "Lclient!na;")
-    public static final JagString HITMARKS = Static28.parse("hitmarks");
+    public static final JagString HITMARKS = JagString.parse("hitmarks");
 
     @OriginalMember(owner = "client!vd", name = "v", descriptor = "Lclient!na;")
-    public static final JagString HITBAR_DEFAULT = Static28.parse("hitbar_default");
+    public static final JagString HITBAR_DEFAULT = JagString.parse("hitbar_default");
 
     @OriginalMember(owner = "client!jj", name = "d", descriptor = "Lclient!na;")
-    public static final JagString HEADICONS_PK = Static28.parse("headicons_pk");
+    public static final JagString HEADICONS_PK = JagString.parse("headicons_pk");
 
     @OriginalMember(owner = "client!sh", name = "j", descriptor = "Lclient!na;")
-    public static final JagString HEADICONS_PRAYER = Static28.parse("headicons_prayer");
+    public static final JagString HEADICONS_PRAYER = JagString.parse("headicons_prayer");
 
     @OriginalMember(owner = "client!hj", name = "d", descriptor = "Lclient!na;")
-    public static final JagString HINT_HEADICONS = Static28.parse("hint_headicons");
+    public static final JagString HINT_HEADICONS = JagString.parse("hint_headicons");
 
     @OriginalMember(owner = "client!pe", name = "n", descriptor = "Lclient!na;")
-    public static final JagString HINT_MAPMARKERS = Static28.parse("hint_mapmarkers");
+    public static final JagString HINT_MAPMARKERS = JagString.parse("hint_mapmarkers");
 
     @OriginalMember(owner = "client!vc", name = "ab", descriptor = "Lclient!na;")
-    public static final JagString MAPFLAG = Static28.parse("mapflag");
+    public static final JagString MAPFLAG = JagString.parse("mapflag");
 
     @OriginalMember(owner = "client!gm", name = "db", descriptor = "Lclient!na;")
-    public static final JagString CROSS = Static28.parse("cross");
+    public static final JagString CROSS = JagString.parse("cross");
 
     @OriginalMember(owner = "client!pe", name = "z", descriptor = "Lclient!na;")
-    public static final JagString MAPDOTS = Static28.parse("mapdots");
+    public static final JagString MAPDOTS = JagString.parse("mapdots");
 
     @OriginalMember(owner = "client!uf", name = "o", descriptor = "Lclient!na;")
-    public static final JagString SCROLLBAR = Static28.parse("scrollbar");
+    public static final JagString SCROLLBAR = JagString.parse("scrollbar");
 
     @OriginalMember(owner = "client!cb", name = "eb", descriptor = "Lclient!na;")
-    public static final JagString NAME_ICONS = Static28.parse("name_icons");
+    public static final JagString NAME_ICONS = JagString.parse("name_icons");
 
     @OriginalMember(owner = "client!bh", name = "v", descriptor = "Lclient!na;")
-    public static final JagString FLOORSHADOWS = Static28.parse("floorshadows");
+    public static final JagString FLOORSHADOWS = JagString.parse("floorshadows");
 
     @OriginalMember(owner = "client!wl", name = "d", descriptor = "Lclient!na;")
-    public static final JagString COMPASS = Static28.parse("compass");
+    public static final JagString COMPASS = JagString.parse("compass");
 
     @OriginalMember(owner = "client!af", name = "g", descriptor = "Lclient!na;")
-    public static final JagString HINT_MAPEDGE = Static28.parse("hint_mapedge");
+    public static final JagString HINT_MAPEDGE = JagString.parse("hint_mapedge");
 
     @OriginalMember(owner = "client!nc", name = "h", descriptor = "I")
     public static int p11FullId;
@@ -269,5 +269,10 @@ public class Sprites {
         } else {
             Static67.mapfuncs = mapfunctions;
         }
+    }
+
+    @OriginalMember(owner = "client!f", name = "h", descriptor = "(I)I")
+    public static int total() {
+        return 15;
     }
 }

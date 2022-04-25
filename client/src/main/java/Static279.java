@@ -7,20 +7,11 @@ public final class Static279 {
 	@OriginalMember(owner = "client!wk", name = "v", descriptor = "[I")
 	public static int[] anIntArray568;
 
-    @OriginalMember(owner = "client!wk", name = "t", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_38 = new SoftLruHashTable(64);
-
-	@OriginalMember(owner = "client!wk", name = "u", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1106 = Static28.parse("::clientjs5drop");
+    @OriginalMember(owner = "client!wk", name = "u", descriptor = "Lclient!na;")
+	public static final JagString aClass100_1106 = JagString.parse("::clientjs5drop");
 
 	@OriginalMember(owner = "client!wk", name = "x", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1107 = Static28.parse(")4l=");
-
-	@OriginalMember(owner = "client!wk", name = "b", descriptor = "(II)V")
-	public static void method4662() {
-		Static250.aClass99_33.method3102(5);
-		Static139.aClass99_21.method3102(5);
-	}
+	public static final JagString aClass100_1107 = JagString.parse(")4l=");
 
 	@OriginalMember(owner = "client!wk", name = "a", descriptor = "(I[Lclient!na;)[Lclient!na;")
 	public static JagString[] method4664(@OriginalArg(1) JagString[] arg0) {

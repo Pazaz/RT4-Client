@@ -12,9 +12,9 @@ public final class AnimFrameset extends SecondaryNode {
 	@OriginalMember(owner = "client!cl", name = "<init>", descriptor = "(Lclient!ve;Lclient!ve;IZ)V")
 	public AnimFrameset(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1, @OriginalArg(2) int arg2, @OriginalArg(3) boolean arg3) {
 		@Pc(5) LinkedList local5 = new LinkedList();
-		@Pc(10) int local10 = arg0.method4504(arg2);
+		@Pc(10) int local10 = arg0.getGroupCapacity(arg2);
 		this.frames = new AnimFrame[local10];
-		@Pc(19) int[] local19 = arg0.method4503(arg2);
+		@Pc(19) int[] local19 = arg0.getFileIds(arg2);
 		for (@Pc(21) int local21 = 0; local21 < local19.length; local21++) {
 			@Pc(37) byte[] local37 = arg0.getFile(arg2, local19[local21]);
 			@Pc(51) int local51 = local37[1] & 0xFF | (local37[0] & 0xFF) << 8;

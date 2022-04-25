@@ -7,9 +7,6 @@ public final class Static182 {
 	@OriginalMember(owner = "client!oj", name = "t", descriptor = "[I")
 	public static int[] anIntArray372;
 
-	@OriginalMember(owner = "client!oj", name = "x", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_77;
-
 	@OriginalMember(owner = "client!oj", name = "E", descriptor = "[[Lclient!hg;")
 	public static GlTile[][] aClass3_Sub14ArrayArray2;
 
@@ -19,10 +16,7 @@ public final class Static182 {
 	@OriginalMember(owner = "client!oj", name = "v", descriptor = "I")
 	public static int anInt4311 = -2;
 
-	@OriginalMember(owner = "client!oj", name = "y", descriptor = "I")
-	public static int keyQueueSize = 0;
-
-	@OriginalMember(owner = "client!oj", name = "z", descriptor = "[Z")
+    @OriginalMember(owner = "client!oj", name = "z", descriptor = "[Z")
 	public static final boolean[] aBooleanArray97 = new boolean[] { true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false };
 
     @OriginalMember(owner = "client!oj", name = "a", descriptor = "(IZIJI)Lclient!na;")

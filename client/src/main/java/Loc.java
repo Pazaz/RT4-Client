@@ -82,7 +82,7 @@ public final class Loc extends Entity {
 			if (arg8 instanceof Loc) {
 				((Loc) arg8).method1046();
 			} else {
-				local67 = Static271.get(this.anInt1299);
+				local67 = LocTypeList.get(this.anInt1299);
 				if (local67.multiLocs != null) {
 					local67 = local67.getMultiLoc();
 				}
@@ -92,7 +92,7 @@ public final class Loc extends Entity {
 			}
 		}
 		if (arg6 != -1) {
-			this.aClass144_2 = Static36.get(arg6);
+			this.aClass144_2 = SeqTypeList.get(arg6);
 			this.anInt1297 = 0;
 			if (this.aClass144_2.frames.length <= 1) {
 				this.anInt1304 = 0;
@@ -128,7 +128,7 @@ public final class Loc extends Entity {
 			this.method1048(true);
 		}
 		if (arg8 == null) {
-			local67 = Static271.get(this.anInt1299);
+			local67 = LocTypeList.get(this.anInt1299);
 			if (local67.multiLocs != null) {
 				this.aBoolean80 = true;
 			}
@@ -222,7 +222,7 @@ public final class Loc extends Entity {
 	@OriginalMember(owner = "client!dc", name = "a", descriptor = "(ZI)Lclient!th;")
 	private Entity method1048(@OriginalArg(0) boolean arg0) {
 		@Pc(12) boolean local12 = Static107.surfaceTileHeightMap != Static83.activeTileHeightMap;
-		@Pc(19) LocType local19 = Static271.get(this.anInt1299);
+		@Pc(19) LocType local19 = LocTypeList.get(this.anInt1299);
 		@Pc(22) int local22 = local19.anInt4430;
 		if (local19.multiLocs != null) {
 			local19 = local19.getMultiLoc();
@@ -234,7 +234,7 @@ public final class Loc extends Entity {
 			return null;
 		}
 		@Pc(69) int local69;
-		if (client.game != 0 && this.aBoolean80 && (this.aClass144_2 == null || this.aClass144_2 != null && this.aClass144_2.anInt5361 != local19.anInt4430)) {
+		if (client.game != 0 && this.aBoolean80 && (this.aClass144_2 == null || this.aClass144_2 != null && this.aClass144_2.id != local19.anInt4430)) {
 			local69 = local19.anInt4430;
 			if (local19.anInt4430 == -1) {
 				local69 = local22;
@@ -242,7 +242,7 @@ public final class Loc extends Entity {
 			if (local69 == -1) {
 				this.aClass144_2 = null;
 			} else {
-				this.aClass144_2 = Static36.get(local69);
+				this.aClass144_2 = SeqTypeList.get(local69);
 			}
 			if (this.aClass144_2 != null) {
 				if (local19.aBoolean209 && this.aClass144_2.anInt5362 != -1) {
@@ -269,7 +269,7 @@ public final class Loc extends Entity {
 		@Pc(192) int local192 = (local157 >> 1) + this.anInt1300;
 		@Pc(201) int local201 = (local157 + 1 >> 1) + this.anInt1300;
 		this.method1047(local192 * 128, local185 * 128);
-		@Pc(256) boolean local256 = !local12 && local19.aBoolean212 && (local19.anInt4426 != this.anInt1321 || (this.anInt1297 != this.anInt1322 || this.aClass144_2 != null && (this.aClass144_2.aBoolean280 || Static204.applyTweening) && this.anInt1297 != this.anInt1304) && Preferences.sceneryShadowsType >= 2);
+		@Pc(256) boolean local256 = !local12 && local19.aBoolean212 && (local19.id != this.anInt1321 || (this.anInt1297 != this.anInt1322 || this.aClass144_2 != null && (this.aClass144_2.aBoolean280 || Static204.applyTweening) && this.anInt1297 != this.anInt1304) && Preferences.sceneryShadowsType >= 2);
 		if (arg0 && !local256) {
 			return null;
 		}
@@ -319,7 +319,7 @@ public final class Loc extends Entity {
 				this.anInt1294 = local429;
 				this.anInt1296 = local302;
 			}
-			this.anInt1321 = local19.anInt4426;
+			this.anInt1321 = local19.id;
 			this.anInt1322 = this.anInt1297;
 		}
 		return local389.aClass8_10;

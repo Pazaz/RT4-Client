@@ -53,18 +53,18 @@ public final class SpotAnim extends Entity {
 		this.anInt590 = arg6 + arg5;
 		this.anInt596 = arg0;
 		this.anInt599 = arg4;
-		@Pc(42) int local42 = Static34.method877(this.anInt596).seqId;
+		@Pc(42) int local42 = SpotAnimTypeList.get(this.anInt596).seqId;
 		if (local42 == -1) {
 			this.aBoolean41 = true;
 		} else {
 			this.aBoolean41 = false;
-			this.aClass144_1 = Static36.get(local42);
+			this.aClass144_1 = SeqTypeList.get(local42);
 		}
 	}
 
 	@OriginalMember(owner = "client!bh", name = "b", descriptor = "(Z)Lclient!ak;")
 	private Model method552() {
-		@Pc(8) SpotAnimType local8 = Static34.method877(this.anInt596);
+		@Pc(8) SpotAnimType local8 = SpotAnimTypeList.get(this.anInt596);
 		@Pc(26) Model local26;
 		if (this.aBoolean41) {
 			local26 = local8.method1319(-1, -1, 0);

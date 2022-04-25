@@ -324,12 +324,12 @@ public class GlSprite extends Sprite {
 	@Override
 	public final void finalize() throws Throwable {
 		if (this.textureId != -1) {
-			Static63.deleteTexture2d(this.textureId, this.anInt1869, this.anInt1875);
+			GlCleaner.deleteTexture2d(this.textureId, this.anInt1869, this.anInt1875);
 			this.textureId = -1;
 			this.anInt1869 = 0;
 		}
 		if (this.anInt1871 != -1) {
-			Static63.deleteList(this.anInt1871, this.anInt1875);
+			GlCleaner.deleteList(this.anInt1871, this.anInt1875);
 			this.anInt1871 = -1;
 		}
 		super.finalize();
@@ -463,11 +463,11 @@ public class GlSprite extends Sprite {
 			@Pc(100) int[] local100 = new int[1];
 			local93.glGenTextures(1, local100, 0);
 			this.textureId = local100[0];
-			this.anInt1875 = Static63.contextId;
+			this.anInt1875 = GlCleaner.contextId;
 		}
 		GlRenderer.setTextureId(this.textureId);
 		local93.glTexImage2D(GL2.GL_TEXTURE_2D, 0, GL2.GL_RGBA, this.powerOfTwoWidth, this.powerOfTwoHeight, 0, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, local91);
-		Static63.onCard2d += local91.limit() - this.anInt1869;
+		GlCleaner.onCard2d += local91.limit() - this.anInt1869;
 		this.anInt1869 = local91.limit();
 	}
 
@@ -493,7 +493,7 @@ public class GlSprite extends Sprite {
 		@Pc(17) GL2 local17 = GlRenderer.gl;
 		if (this.anInt1871 == -1) {
 			this.anInt1871 = local17.glGenLists(1);
-			this.anInt1875 = Static63.contextId;
+			this.anInt1875 = GlCleaner.contextId;
 		}
 		local17.glNewList(this.anInt1871, GL2.GL_COMPILE);
 		local17.glBegin(GL2.GL_TRIANGLE_FAN);

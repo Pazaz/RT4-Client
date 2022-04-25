@@ -4,10 +4,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static132 {
 
-	@OriginalMember(owner = "client!ke", name = "R", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_48;
-
-	@OriginalMember(owner = "client!ke", name = "T", descriptor = "[[I")
+    @OriginalMember(owner = "client!ke", name = "T", descriptor = "[[I")
 	public static final int[][] anIntArrayArray24 = new int[][] { { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, { 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1 }, { 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 }, { 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1 }, { 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, { 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1 }, { 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0 }, { 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 }, { 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1 }, { 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1 }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1 } };
 
 	@OriginalMember(owner = "client!ke", name = "U", descriptor = "I")
@@ -22,10 +19,10 @@ public final class Static132 {
 		@Pc(16) int local16 = arg1.anInt5878;
 		arg1.unlink();
 		if (arg0) {
-			Static109.method2275(local16);
+			InterfaceList.method2275(local16);
 		}
 		Static273.method3214(local16);
-		@Pc(32) Component local32 = Static5.getComponent(local9);
+		@Pc(32) Component local32 = InterfaceList.getComponent(local9);
 		if (local32 != null) {
 			Static43.redraw(local32);
 		}

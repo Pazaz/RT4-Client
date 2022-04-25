@@ -4,14 +4,11 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static137 {
 
-	@OriginalMember(owner = "client!kl", name = "r", descriptor = "Lclient!ve;")
-	public static Js5 js5Archive14;
-
 	@OriginalMember(owner = "client!kl", name = "s", descriptor = "I")
 	public static int anInt3337 = 0;
 
 	@OriginalMember(owner = "client!kl", name = "u", descriptor = "Lclient!na;")
-	public static final JagString aClass100_637 = Static28.parse("<col=ffffff>");
+	public static final JagString aClass100_637 = JagString.parse("<col=ffffff>");
 
 	@OriginalMember(owner = "client!kl", name = "a", descriptor = "(Lclient!wa;B)Lclient!kc;")
 	public static TextureOp29SubOp2 method2664(@OriginalArg(0) Buffer arg0) {
@@ -52,13 +49,13 @@ public final class Static137 {
 				for (local76 = 0; local76 < 104; local76++) {
 					@Pc(169) long local169 = Static20.method602(Static55.level, local37 + 0, local76);
 					if (local169 != 0L) {
-						@Pc(184) LocType local184 = Static271.get((int) (local169 >>> 32) & Integer.MAX_VALUE);
+						@Pc(184) LocType local184 = LocTypeList.get((int) (local169 >>> 32) & Integer.MAX_VALUE);
 						@Pc(187) int local187 = local184.mapElement;
 						@Pc(194) int local194;
 						if (local184.multiLocs != null) {
 							for (local194 = 0; local194 < local184.multiLocs.length; local194++) {
 								if (local184.multiLocs[local194] != -1) {
-									@Pc(216) LocType local216 = Static271.get(local184.multiLocs[local194]);
+									@Pc(216) LocType local216 = LocTypeList.get(local184.multiLocs[local194]);
 									if (local216.mapElement >= 0) {
 										local187 = local216.mapElement;
 										break;
@@ -70,7 +67,7 @@ public final class Static137 {
 							@Pc(237) int local237 = local76;
 							local194 = local37;
 							if (local187 != 22 && local187 != 29 && local187 != 34 && local187 != 36 && local187 != 46 && local187 != 47 && local187 != 48) {
-								@Pc(269) int[][] local269 = Static148.collisionMaps[Static55.level].anIntArrayArray30;
+								@Pc(269) int[][] local269 = PathFinder.collisionMaps[Static55.level].anIntArrayArray30;
 								for (@Pc(271) int local271 = 0; local271 < 10; local271++) {
 									@Pc(281) int local281 = (int) (Math.random() * 4.0D);
 									if (local281 == 0 && local194 > 0 && local37 - 3 < local194 && (local269[local194 - 1][local237] & 0x12C0108) == 0) {
@@ -87,7 +84,7 @@ public final class Static137 {
 									}
 								}
 							}
-							Static199.anIntArray417[Static251.anInt5454] = local184.anInt4426;
+							Static199.anIntArray417[Static251.anInt5454] = local184.id;
 							Static145.anIntArray331[Static251.anInt5454] = local194;
 							Static93.anIntArray219[Static251.anInt5454] = local237;
 							Static251.anInt5454++;
@@ -140,9 +137,4 @@ public final class Static137 {
 		return true;
 	}
 
-	@OriginalMember(owner = "client!kl", name = "c", descriptor = "(II)V")
-	public static void method2666() {
-		Static279.aClass99_38.method3102(5);
-		Static56.models.method3102(5);
-	}
 }

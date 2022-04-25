@@ -34,13 +34,13 @@ public final class GlFont extends Font {
 	@Override
 	protected void finalize() throws Throwable {
 		if (this.textureId != -1) {
-			Static63.deleteTexture2d(this.textureId, this.size, this.contextId);
+			GlCleaner.deleteTexture2d(this.textureId, this.size, this.contextId);
 			this.textureId = -1;
 			this.size = 0;
 		}
 		if (this.listIds != null) {
 			for (@Pc(21) int i = 0; i < this.listIds.length; i++) {
-				Static63.deleteList(this.listIds[i], this.contextId);
+				GlCleaner.deleteList(this.listIds[i], this.contextId);
 			}
 			this.listIds = null;
 		}
@@ -139,7 +139,7 @@ public final class GlFont extends Font {
 			gl.glEnd();
 			gl.glEndList();
 		}
-		this.contextId = Static63.contextId;
+		this.contextId = GlCleaner.contextId;
 	}
 
 	@OriginalMember(owner = "client!mb", name = "a", descriptor = "([[B)V")
@@ -186,11 +186,11 @@ public final class GlFont extends Font {
 			@Pc(162) int[] temp = new int[1];
 			gl.glGenTextures(1, temp, 0);
 			this.textureId = temp[0];
-			this.contextId = Static63.contextId;
+			this.contextId = GlCleaner.contextId;
 		}
 		GlRenderer.setTextureId(this.textureId);
 		gl.glTexImage2D(GL2.GL_TEXTURE_2D, 0, GL2.GL_LUMINANCE_ALPHA, this.powerOfTwoSize, this.powerOfTwoSize, 0, GL2.GL_LUMINANCE_ALPHA, GL2.GL_UNSIGNED_BYTE, buffer);
-		Static63.onCard2d += buffer.limit() - this.size;
+		GlCleaner.onCard2d += buffer.limit() - this.size;
 		this.size = buffer.limit();
 		gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_NEAREST);
 		gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_NEAREST);

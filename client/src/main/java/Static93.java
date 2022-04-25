@@ -4,12 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static93 {
 
-	@OriginalMember(owner = "client!he", name = "cb", descriptor = "Lclient!ve;")
-	public static Js5 modelsArchive;
-
-	@OriginalMember(owner = "client!he", name = "V", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_13 = new SoftLruHashTable(64);
-
 	@OriginalMember(owner = "client!he", name = "Y", descriptor = "I")
 	public static volatile int anInt2467 = 0;
 
@@ -20,16 +14,13 @@ public final class Static93 {
 	public static Mouse instance = new Mouse();
 
 	@OriginalMember(owner = "client!he", name = "db", descriptor = "Lclient!na;")
-	public static final JagString aClass100_517 = Static28.parse("");
+	public static final JagString aClass100_517 = JagString.parse("");
 
 	@OriginalMember(owner = "client!he", name = "eb", descriptor = "[I")
 	public static final int[] anIntArray219 = new int[1000];
 
-	@OriginalMember(owner = "client!he", name = "fb", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_14 = new SoftLruHashTable(30);
-
 	@OriginalMember(owner = "client!he", name = "gb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_518 = Static28.parse("www");
+	public static final JagString aClass100_518 = JagString.parse("www");
 
 	@OriginalMember(owner = "client!he", name = "c", descriptor = "(II)V")
 	public static void method1906(@OriginalArg(1) int arg0) {

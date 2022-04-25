@@ -9,7 +9,21 @@ public abstract class Model extends Entity {
 	@OriginalMember(owner = "client!ak", name = "s", descriptor = "Z")
 	public boolean aBoolean303 = false;
 
-	@OriginalMember(owner = "client!ak", name = "c", descriptor = "()I")
+    @OriginalMember(owner = "client!ak", name = "a", descriptor = "([[III)I")
+    public static int method4556(@OriginalArg(0) int[][] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+        @Pc(3) int local3 = arg1 >> 7;
+        @Pc(7) int local7 = arg2 >> 7;
+        if (local3 < 0 || local7 < 0 || local3 >= arg0.length || local7 >= arg0[0].length) {
+            return 0;
+        }
+        @Pc(27) int local27 = arg1 & 0x7F;
+        @Pc(31) int local31 = arg2 & 0x7F;
+        @Pc(53) int local53 = arg0[local3][local7] * (128 - local27) + arg0[local3 + 1][local7] * local27 >> 7;
+        @Pc(79) int local79 = arg0[local3][local7 + 1] * (128 - local27) + arg0[local3 + 1][local7 + 1] * local27 >> 7;
+        return local53 * (128 - local31) + local79 * local31 >> 7;
+    }
+
+    @OriginalMember(owner = "client!ak", name = "c", descriptor = "()I")
 	public abstract int method4550();
 
 	@OriginalMember(owner = "client!ak", name = "b", descriptor = "()I")
@@ -307,16 +321,16 @@ public abstract class Model extends Entity {
 	protected final void method4573(@OriginalArg(0) int[][] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
 		@Pc(10) int local10 = -arg4 / 2;
 		@Pc(15) int local15 = -arg5 / 2;
-		@Pc(24) int local24 = Static282.method4556(arg0, arg1 + local10, arg3 + local15);
+		@Pc(24) int local24 = method4556(arg0, arg1 + local10, arg3 + local15);
 		@Pc(28) int local28 = arg4 / 2;
 		@Pc(33) int local33 = -arg5 / 2;
-		@Pc(42) int local42 = Static282.method4556(arg0, arg1 + local28, arg3 + local33);
+		@Pc(42) int local42 = method4556(arg0, arg1 + local28, arg3 + local33);
 		@Pc(47) int local47 = -arg4 / 2;
 		@Pc(51) int local51 = arg5 / 2;
-		@Pc(60) int local60 = Static282.method4556(arg0, arg1 + local47, arg3 + local51);
+		@Pc(60) int local60 = method4556(arg0, arg1 + local47, arg3 + local51);
 		@Pc(64) int local64 = arg4 / 2;
 		@Pc(68) int local68 = arg5 / 2;
-		@Pc(77) int local77 = Static282.method4556(arg0, arg1 + local64, arg3 + local68);
+		@Pc(77) int local77 = method4556(arg0, arg1 + local64, arg3 + local68);
 		@Pc(84) int local84 = local24 < local42 ? local24 : local42;
 		@Pc(91) int local91 = local60 < local77 ? local60 : local77;
 		@Pc(98) int local98 = local42 < local77 ? local42 : local77;

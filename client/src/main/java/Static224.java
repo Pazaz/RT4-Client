@@ -16,10 +16,7 @@ public final class Static224 {
 	@OriginalMember(owner = "client!sd", name = "V", descriptor = "[I")
 	public static final int[] anIntArray443 = new int[100];
 
-	@OriginalMember(owner = "client!sd", name = "X", descriptor = "Z")
-	public static boolean aBoolean247 = false;
-
-	@OriginalMember(owner = "client!sd", name = "c", descriptor = "(II)V")
+    @OriginalMember(owner = "client!sd", name = "c", descriptor = "(II)V")
 	public static void method3884(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		@Pc(7) Tile local7 = Static130.aClass3_Sub5ArrayArrayArray1[0][arg0][arg1];
 		for (@Pc(9) int local9 = 0; local9 < 3; local9++) {
@@ -39,11 +36,6 @@ public final class Static224 {
 		}
 		Static130.aClass3_Sub5ArrayArrayArray1[0][arg0][arg1].aClass3_Sub5_1 = local7;
 		Static130.aClass3_Sub5ArrayArrayArray1[3][arg0][arg1] = null;
-	}
-
-	@OriginalMember(owner = "client!sd", name = "f", descriptor = "(B)V")
-	public static void method3885() {
-		Static83.aClass99_3.method3103();
 	}
 
 }

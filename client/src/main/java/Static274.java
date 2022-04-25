@@ -9,17 +9,11 @@ public final class Static274 {
 	@OriginalMember(owner = "client!wf", name = "f", descriptor = "I")
 	public static int anInt4999;
 
-	@OriginalMember(owner = "client!wf", name = "g", descriptor = "Lclient!ve;")
-	public static Js5 js5Archive2;
-
 	@OriginalMember(owner = "client!wf", name = "j", descriptor = "Lclient!be;")
 	public static Component staticActiveComponent1;
 
 	@OriginalMember(owner = "client!wf", name = "o", descriptor = "[Lclient!gb;")
 	public static final RawModel[] tempModels = new RawModel[4];
-
-	@OriginalMember(owner = "client!wf", name = "s", descriptor = "Lclient!na;")
-	public static final JagString aClass100_943 = Static28.parse("Forced tweening disabled)3");
 
 	@OriginalMember(owner = "client!wf", name = "a", descriptor = "(II)I")
 	public static int method3845(@OriginalArg(0) int arg0) {

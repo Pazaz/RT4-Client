@@ -4,51 +4,28 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static5 {
 
-	@OriginalMember(owner = "client!af", name = "a", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_1;
-
 	@OriginalMember(owner = "client!af", name = "d", descriptor = "I")
 	public static int anInt40;
 
-	@OriginalMember(owner = "client!af", name = "c", descriptor = "I")
-	public static int anInt39 = -1;
-
-	@OriginalMember(owner = "client!af", name = "k", descriptor = "I")
+    @OriginalMember(owner = "client!af", name = "k", descriptor = "I")
 	public static int anInt45 = 0;
 
 	@OriginalMember(owner = "client!af", name = "l", descriptor = "[S")
 	public static final short[] aShortArray2 = new short[] { 30, 6, 31, 29, 10, 44, 37, 57 };
 
 	@OriginalMember(owner = "client!af", name = "m", descriptor = "Lclient!na;")
-	public static final JagString aClass100_10 = Static28.parse("<br>");
+	public static final JagString aClass100_10 = JagString.parse("<br>");
 
 	@OriginalMember(owner = "client!af", name = "a", descriptor = "(ILjava/lang/String;)V")
 	public static void method31(@OriginalArg(1) String arg0) {
 		System.out.println("Error: " + Static40.method1014("%0a", "\n", arg0));
 	}
 
-	@OriginalMember(owner = "client!af", name = "a", descriptor = "(BI)Lclient!be;")
-	public static Component getComponent(@OriginalArg(1) int id) {
-		@Pc(7) int interfaceId = id >> 16;
-		@Pc(18) int componentId = id & 0xFFFF;
-		if (Static241.components[interfaceId] == null || Static241.components[interfaceId][componentId] == null) {
-			@Pc(33) boolean success = Static245.load(interfaceId);
-			if (!success) {
-				return null;
-			}
-			// todo: this should not be necessary, data/server-related?
-			if (Static241.components.length <= interfaceId || Static241.components[interfaceId].length <= componentId) {
-				return null;
-			}
-		}
-		return Static241.components[interfaceId][componentId];
-	}
-
 	@OriginalMember(owner = "client!af", name = "b", descriptor = "(B)V")
 	public static void method34() {
-		Static116.clear(false);
+		WorldMap.clear(false);
 		System.gc();
-		Static196.setGameState(25);
+		client.setGameState(25);
 	}
 
 	@OriginalMember(owner = "client!af", name = "a", descriptor = "(IIIIIILclient!th;IJ)Z")

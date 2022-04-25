@@ -5,10 +5,7 @@ public final class Static106 {
 	@OriginalMember(owner = "client!ic", name = "a", descriptor = "Lclient!qf;")
 	public static Sprite compass;
 
-	@OriginalMember(owner = "client!ic", name = "n", descriptor = "I")
-	public static int anInt2871;
-
-	@OriginalMember(owner = "client!ic", name = "e", descriptor = "[I")
+    @OriginalMember(owner = "client!ic", name = "e", descriptor = "[I")
 	public static final int[] anIntArray257 = new int[2500];
 
 	@OriginalMember(owner = "client!ic", name = "j", descriptor = "I")

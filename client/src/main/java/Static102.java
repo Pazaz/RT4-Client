@@ -42,18 +42,6 @@ public final class Static102 {
 		Static20.objectContainerCache = new HashTable(32);
 	}
 
-	@OriginalMember(owner = "client!hn", name = "a", descriptor = "(Lclient!ve;ILclient!ve;)V")
-	public static void load(@OriginalArg(0) Js5 arg0, @OriginalArg(2) Js5 arg1) {
-		Fonts.p11Full = Static127.method2462(Sprites.p11FullId, arg1, arg0);
-		if (GlRenderer.enabled) {
-			Static265.p11FullSoftware = Static122.method2412(Sprites.p11FullId, arg0, arg1);
-		} else {
-			Static265.p11FullSoftware = (SoftwareFont) Fonts.p11Full;
-		}
-		Fonts.p12Full = Static127.method2462(Sprites.p12FullId, arg1, arg0);
-		Fonts.b12Full = Static127.method2462(Sprites.b12FullId, arg1, arg0);
-	}
-
 	@OriginalMember(owner = "client!hn", name = "a", descriptor = "(IIIZIIIIIIII)Z")
 	public static boolean method2075(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) boolean arg3, @OriginalArg(4) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7, @OriginalArg(9) int arg8, @OriginalArg(10) int arg9, @OriginalArg(11) int arg10) {
 		if (PlayerList.self.getSize() == 2) {

@@ -223,7 +223,7 @@ public final class Js5NetQueue {
 	}
 
 	@OriginalMember(owner = "client!jb", name = "a", descriptor = "(ZZ)V")
-	public final void method2322(@OriginalArg(0) boolean arg0) {
+	public final void writeLoggedIn(@OriginalArg(0) boolean arg0) {
 		if (this.aClass95_1 == null) {
 			return;
 		}
@@ -261,7 +261,7 @@ public final class Js5NetQueue {
 		}
 		this.aClass95_1 = arg1;
 		this.method2331();
-		this.method2322(arg0);
+		this.writeLoggedIn(arg0);
 		this.aClass3_Sub15_5.offset = 0;
 		this.aClass3_Sub2_Sub5_Sub2_2 = null;
 		while (true) {

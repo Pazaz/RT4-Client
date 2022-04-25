@@ -5,9 +5,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static33 {
 
-	@OriginalMember(owner = "client!cj", name = "e", descriptor = "[[S")
-	public static short[][] aShortArrayArray2;
-
     @OriginalMember(owner = "client!cj", name = "n", descriptor = "Lsignlink!im;")
 	public static PrivilegedRequest openUrlRequest;
 
@@ -67,12 +64,7 @@ public final class Static33 {
 		return arg0;
 	}
 
-    @OriginalMember(owner = "client!cj", name = "a", descriptor = "(IB)I")
-	public static int method872(@OriginalArg(0) int arg0) {
-		return arg0 & 0xFF;
-	}
-
-	@OriginalMember(owner = "client!cj", name = "a", descriptor = "(JB)Lclient!na;")
+    @OriginalMember(owner = "client!cj", name = "a", descriptor = "(JB)Lclient!na;")
 	public static JagString method873(@OriginalArg(0) long arg0) {
 		Static35.aCalendar1.setTime(new Date(arg0));
 		@Pc(13) int local13 = Static35.aCalendar1.get(7);

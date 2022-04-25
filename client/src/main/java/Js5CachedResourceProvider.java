@@ -164,7 +164,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 	}
 
 	@OriginalMember(owner = "client!bg", name = "a", descriptor = "(Z)V")
-	public final void method528() {
+	public final void prefetchAll() {
 		if (this.aClass49_2 != null) {
 			this.aBoolean36 = true;
 			if (this.aClass69_17 == null) {

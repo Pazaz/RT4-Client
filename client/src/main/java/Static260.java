@@ -4,14 +4,11 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static260 {
 
-    @OriginalMember(owner = "client!vd", name = "B", descriptor = "[S")
-	public static final short[] aShortArray71 = new short[] { 6798, 8741, 25238, 4626, 4550 };
-
-	@OriginalMember(owner = "client!vd", name = "C", descriptor = "I")
+    @OriginalMember(owner = "client!vd", name = "C", descriptor = "I")
 	public static int anInt5014 = 0;
 
 	@OriginalMember(owner = "client!vd", name = "F", descriptor = "Lclient!na;")
-	public static final JagString aClass100_945 = Static28.parse("0");
+	public static final JagString aClass100_945 = JagString.parse("0");
 
 	@OriginalMember(owner = "client!vd", name = "a", descriptor = "(IIIIBI)V")
 	public static void method3849(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4) {
@@ -23,7 +20,7 @@ public final class Static260 {
 		if (Static233.anInt5217 >= 100) {
 			@Pc(30) int local30 = Static251.anInt5449 * 128 + 64;
 			@Pc(36) int local36 = Static265.anInt5765 * 128 + 64;
-			@Pc(44) int local44 = Static207.method3685(Static55.level, local30, local36) - Static57.anInt1744;
+			@Pc(44) int local44 = SceneGraph.getTileHeight(Static55.level, local30, local36) - Static57.anInt1744;
 			@Pc(49) int local49 = local44 - Static5.anInt40;
 			@Pc(54) int local54 = local30 - Static138.renderX;
 			@Pc(59) int local59 = local36 - Static134.renderZ;
@@ -173,11 +170,11 @@ public final class Static260 {
 		@Pc(14) AreaSound local14;
 		for (local14 = (AreaSound) Static3.aClass69_135.method2289(); local14 != null; local14 = (AreaSound) Static3.aClass69_135.method2288()) {
 			if (local14.primaryStream != null) {
-				Static204.soundStream.removeSubStream(local14.primaryStream);
+				client.soundStream.removeSubStream(local14.primaryStream);
 				local14.primaryStream = null;
 			}
 			if (local14.secondaryStream != null) {
-				Static204.soundStream.removeSubStream(local14.secondaryStream);
+				client.soundStream.removeSubStream(local14.secondaryStream);
 				local14.secondaryStream = null;
 			}
 			local14.unlink();
@@ -187,14 +184,14 @@ public final class Static260 {
 		}
 		for (local14 = (AreaSound) Static152.aClass69_87.method2289(); local14 != null; local14 = (AreaSound) Static152.aClass69_87.method2288()) {
 			if (local14.primaryStream != null) {
-				Static204.soundStream.removeSubStream(local14.primaryStream);
+				client.soundStream.removeSubStream(local14.primaryStream);
 				local14.primaryStream = null;
 			}
 			local14.unlink();
 		}
 		for (local14 = (AreaSound) Static93.aClass133_7.head(); local14 != null; local14 = (AreaSound) Static93.aClass133_7.next()) {
 			if (local14.primaryStream != null) {
-				Static204.soundStream.removeSubStream(local14.primaryStream);
+				client.soundStream.removeSubStream(local14.primaryStream);
 				local14.primaryStream = null;
 			}
 			local14.unlink();

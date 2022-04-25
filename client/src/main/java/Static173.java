@@ -7,13 +7,7 @@ public final class Static173 {
 	@OriginalMember(owner = "client!nk", name = "d", descriptor = "[I")
 	public static int[] anIntArray367;
 
-	@OriginalMember(owner = "client!nk", name = "E", descriptor = "I")
-	public static int redDelta;
-
-	@OriginalMember(owner = "client!nk", name = "n", descriptor = "[Lclient!sl;")
-	public static final SynthSound[] aClass138Array1 = new SynthSound[50];
-
-	@OriginalMember(owner = "client!nk", name = "c", descriptor = "(IZ)V")
+    @OriginalMember(owner = "client!nk", name = "c", descriptor = "(IZ)V")
 	public static void method3240(@OriginalArg(1) boolean arg0) {
 		@Pc(7) int local7;
 		@Pc(16) Npc local16;
@@ -122,7 +116,7 @@ public final class Static173 {
 				if (!local16.type.aBoolean183) {
 					local262 |= Long.MIN_VALUE;
 				}
-				local16.anInt3424 = Static207.method3685(Static55.level, local16.xFine, local16.zFine);
+				local16.anInt3424 = SceneGraph.getTileHeight(Static55.level, local16.xFine, local16.zFine);
 				Static43.method1141(Static55.level, local16.xFine, local16.zFine, local16.anInt3424, local107 * 64 + 60 - 64, local16, local16.anInt3381, local262, local16.aBoolean171);
 			}
 		}

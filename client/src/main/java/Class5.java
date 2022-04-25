@@ -26,5 +26,5 @@ public final class Class5 {
 	public short aShort8;
 
 	@OriginalMember(owner = "client!ae", name = "h", descriptor = "Z")
-	public boolean aBoolean3 = false;
+	public boolean valid = false;
 }

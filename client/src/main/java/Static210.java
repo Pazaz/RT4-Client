@@ -24,14 +24,4 @@ public final class Static210 {
 		Static234.method4017(GameShell.canvasHeight, arg0, InterfaceList.topLevelInterface, GameShell.canvasWidth);
 	}
 
-	@OriginalMember(owner = "client!rb", name = "a", descriptor = "(Lclient!wa;Z)Lclient!bn;")
-	public static Map method3713(@OriginalArg(0) Buffer arg0) {
-		@Pc(35) Map local35 = new Map(arg0.gjstr(), arg0.gjstr(), arg0.g2(), arg0.g2(), arg0.g4(), arg0.g1() == 1, arg0.g1());
-		@Pc(39) int local39 = arg0.g1();
-		for (@Pc(41) int local41 = 0; local41 < local39; local41++) {
-			local35.aClass69_23.addTail(new Class3_Sub24(arg0.g2(), arg0.g2(), arg0.g2(), arg0.g2()));
-		}
-		local35.method665();
-		return local35;
-	}
 }

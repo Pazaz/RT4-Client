@@ -25,7 +25,7 @@ public final class Packet extends Buffer {
 	@OriginalMember(owner = "client!i", name = "a", descriptor = "(BI[BI)V")
 	public final void method2237(@OriginalArg(2) byte[] arg0, @OriginalArg(3) int arg1) {
 		for (@Pc(17) int local17 = 0; local17 < arg1; local17++) {
-			arg0[local17] = (byte) (this.data[this.offset++] - this.aClass71_1.method2295());
+			arg0[local17] = (byte) (this.data[this.offset++] - this.aClass71_1.getNextKey());
 		}
 	}
 
@@ -49,7 +49,7 @@ public final class Packet extends Buffer {
 	}
 
 	@OriginalMember(owner = "client!i", name = "a", descriptor = "([IZ)V")
-	public final void method2240(@OriginalArg(0) int[] arg0) {
+	public final void setKey(@OriginalArg(0) int[] arg0) {
 		this.aClass71_1 = new IsaacRandom(arg0);
 	}
 
@@ -60,12 +60,12 @@ public final class Packet extends Buffer {
 
 	@OriginalMember(owner = "client!i", name = "r", descriptor = "(II)V")
 	public final void p1isaac(@OriginalArg(1) int arg0) {
-		this.data[this.offset++] = (byte) (arg0 + this.aClass71_1.method2295());
+		this.data[this.offset++] = (byte) (arg0 + this.aClass71_1.getNextKey());
 	}
 
 	@OriginalMember(owner = "client!i", name = "s", descriptor = "(I)I")
-	public final int method2243() {
-		return this.data[this.offset++] - this.aClass71_1.method2295() & 0xFF;
+	public final int g1isaac() {
+		return this.data[this.offset++] - this.aClass71_1.getNextKey() & 0xFF;
 	}
 
 	@OriginalMember(owner = "client!i", name = "h", descriptor = "(Z)V")

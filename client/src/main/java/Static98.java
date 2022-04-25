@@ -7,9 +7,6 @@ public final class Static98 {
 	@OriginalMember(owner = "client!hj", name = "e", descriptor = "I")
 	public static int anInt2512;
 
-	@OriginalMember(owner = "client!hj", name = "m", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_42;
-
 	@OriginalMember(owner = "client!hj", name = "a", descriptor = "(II)V")
 	public static void method1964(@OriginalArg(0) int arg0) {
 		WorldMap.anInt4901 = -1;

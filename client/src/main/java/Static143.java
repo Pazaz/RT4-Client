@@ -3,10 +3,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 
 public final class Static143 {
 
-	@OriginalMember(owner = "client!ld", name = "k", descriptor = "Ljava/lang/String;")
-	public static String worldListHostname;
-
-	@OriginalMember(owner = "client!ld", name = "a", descriptor = "[I")
+    @OriginalMember(owner = "client!ld", name = "a", descriptor = "[I")
 	public static final int[] anIntArray329 = new int[] { 2, 2, 4, 0, 1, 8, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0 };
 
 	@OriginalMember(owner = "client!ld", name = "b", descriptor = "[Lclient!nc;")
@@ -16,12 +13,9 @@ public final class Static143 {
 	public static int anInt3484 = -1;
 
 	@OriginalMember(owner = "client!ld", name = "d", descriptor = "Lclient!na;")
-	public static final JagString aClass100_668 = Static28.parse("Hidden)2use");
+	public static final JagString aClass100_668 = JagString.parse("Hidden)2use");
 
-	@OriginalMember(owner = "client!ld", name = "g", descriptor = "[Lclient!na;")
-	public static JagString[] aClass100Array104 = null;
-
-	@OriginalMember(owner = "client!ld", name = "i", descriptor = "I")
+    @OriginalMember(owner = "client!ld", name = "i", descriptor = "I")
 	public static int anInt3486 = 0;
 
 	@OriginalMember(owner = "client!ld", name = "a", descriptor = "(IIIIZI)V")
@@ -33,12 +27,7 @@ public final class Static143 {
 		Static199.anInt4675 = arg2;
 	}
 
-	@OriginalMember(owner = "client!ld", name = "a", descriptor = "(B)I")
-	public static int getTotal() {
-		return 6;
-	}
-
-	@OriginalMember(owner = "client!ld", name = "a", descriptor = "(IB)I")
+    @OriginalMember(owner = "client!ld", name = "a", descriptor = "(IB)I")
 	public static int toUpperCase(@OriginalArg(0) int arg0) {
 		if (arg0 >= 97 && arg0 <= 122 || arg0 >= 224 && arg0 <= 254 && arg0 != 247) {
 			return arg0 - 32;

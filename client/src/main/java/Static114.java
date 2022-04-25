@@ -6,13 +6,13 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static114 {
 
 	@OriginalMember(owner = "client!j", name = "z", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1099 = Static28.parse("::shiftclick");
+	public static final JagString aClass100_1099 = JagString.parse("::shiftclick");
 
 	@OriginalMember(owner = "client!j", name = "K", descriptor = "I")
 	public static int anInt5843 = 0;
 
 	@OriginalMember(owner = "client!j", name = "M", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1100 = Static28.parse("::replacecanvas");
+	public static final JagString aClass100_1100 = JagString.parse("::replacecanvas");
 
 	@OriginalMember(owner = "client!j", name = "O", descriptor = "[I")
 	public static final int[] anIntArray565 = new int[] { 1, -1, -1, 1 };

@@ -7,14 +7,11 @@ public final class Static206 {
 	@OriginalMember(owner = "client!qk", name = "c", descriptor = "[I")
 	public static int[] anIntArray427;
 
-	@OriginalMember(owner = "client!qk", name = "g", descriptor = "Lclient!ma;")
-	public static BufferedSocket js5Socket;
-
-	@OriginalMember(owner = "client!qk", name = "a", descriptor = "Lclient!na;")
-	public static final JagString aClass100_899 = Static28.parse("0(U");
+    @OriginalMember(owner = "client!qk", name = "a", descriptor = "Lclient!na;")
+	public static final JagString aClass100_899 = JagString.parse("0(U");
 
 	@OriginalMember(owner = "client!qk", name = "b", descriptor = "Lclient!na;")
-	public static final JagString aClass100_900 = Static28.parse("tbrefresh");
+	public static final JagString aClass100_900 = JagString.parse("tbrefresh");
 
 	@OriginalMember(owner = "client!qk", name = "f", descriptor = "I")
 	public static int anInt4773 = 0;
@@ -53,8 +50,4 @@ public final class Static206 {
 		return local17;
 	}
 
-	@OriginalMember(owner = "client!qk", name = "a", descriptor = "(ZI)I")
-	public static int method3681(@OriginalArg(1) int arg0) {
-		return arg0 >>> 8;
-	}
 }

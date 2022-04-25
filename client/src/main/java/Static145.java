@@ -16,27 +16,27 @@ public final class Static145 {
 	@OriginalMember(owner = "client!lf", name = "a", descriptor = "(I)V")
 	public static void method2742() {
 		if (client.gameState == 10 && GlRenderer.enabled) {
-			Static196.setGameState(28);
+			client.setGameState(28);
 		}
 		if (client.gameState == 30) {
-			Static196.setGameState(25);
+			client.setGameState(25);
 		}
 	}
 
 	@OriginalMember(owner = "client!lf", name = "a", descriptor = "(ILclient!ve;)V")
 	public static void method2743(@OriginalArg(1) Js5 arg0) {
-		Static233.aClass36_Sub1Array1 = SpriteLoader.method3088(Static138.anInt3443, arg0);
+		Static233.aClass36_Sub1Array1 = SpriteLoader.method3088(Flames.anInt3443, arg0);
 		Static96.anIntArray235 = new int[256];
 		@Pc(15) int local15;
 		for (local15 = 0; local15 < 3; local15++) {
-			@Pc(30) int local30 = Static225.anIntArray445[local15 + 1] >> 16 & 0xFF;
-			@Pc(39) float local39 = (float) (Static225.anIntArray445[local15] >> 16 & 0xFF);
-			@Pc(48) float local48 = (float) (Static225.anIntArray445[local15] >> 8 & 0xFF);
-			@Pc(55) float local55 = (float) (Static225.anIntArray445[local15] & 0xFF);
+			@Pc(30) int local30 = Flames.anIntArray445[local15 + 1] >> 16 & 0xFF;
+			@Pc(39) float local39 = (float) (Flames.anIntArray445[local15] >> 16 & 0xFF);
+			@Pc(48) float local48 = (float) (Flames.anIntArray445[local15] >> 8 & 0xFF);
+			@Pc(55) float local55 = (float) (Flames.anIntArray445[local15] & 0xFF);
 			@Pc(62) float local62 = ((float) local30 - local39) / 64.0F;
-			@Pc(72) int local72 = Static225.anIntArray445[local15 + 1] >> 8 & 0xFF;
+			@Pc(72) int local72 = Flames.anIntArray445[local15 + 1] >> 8 & 0xFF;
 			@Pc(80) float local80 = ((float) local72 - local48) / 64.0F;
-			@Pc(88) int local88 = Static225.anIntArray445[local15 + 1] & 0xFF;
+			@Pc(88) int local88 = Flames.anIntArray445[local15 + 1] & 0xFF;
 			@Pc(95) float local95 = ((float) local88 - local55) / 64.0F;
 			for (@Pc(97) int local97 = 0; local97 < 64; local97++) {
 				Static96.anIntArray235[local97 + local15 * 64] = (int) local55 | (int) local48 << 8 | (int) local39 << 16;
@@ -46,7 +46,7 @@ public final class Static145 {
 			}
 		}
 		for (local15 = 192; local15 < 255; local15++) {
-			Static96.anIntArray235[local15] = Static225.anIntArray445[3];
+			Static96.anIntArray235[local15] = Flames.anIntArray445[3];
 		}
 		Static270.anIntArray562 = new int[32768];
 		Static263.anIntArray516 = new int[32768];
@@ -94,8 +94,4 @@ public final class Static145 {
 		local8.intArg2 = arg1;
 	}
 
-	@OriginalMember(owner = "client!lf", name = "c", descriptor = "(I)I")
-	public static int method2746() {
-		return ((Preferences.stereo ? 1 : 0) << 19) + (((Preferences.fogEnabled ? 1 : 0) << 16) + ((Preferences.highWaterDetail ? 1 : 0) << 15) + ((Preferences.highDetailLighting ? 1 : 0) << 13) + ((Preferences.characterShadowsOn ? 1 : 0) << 10) + ((Preferences.manyGroundTextures ? 1 : 0) << 9) + ((Preferences.manyIdleAnimations ? 1 : 0) << 7) + ((Preferences.highDetailTextures ? 1 : 0) << 6) + ((Preferences.showGroundDecorations ? 1 : 0) << 5) + (((Preferences.allLevelsVisible ? 1 : 0) << 3) + (Preferences.brightness & 0x7) - (-((Preferences.removeRoofsSelectively ? 1 : 0) << 4) + -((Preferences.flickeringEffectsOn ? 1 : 0) << 8)) - (-((Preferences.sceneryShadowsType & 0x3) << 11) + -((Preferences.soundEffectVolume == 0 ? 0 : 1) << 20) - (((Preferences.musicVolume == 0 ? 0 : 1) << 21) + ((Preferences.ambientSoundsVolume == 0 ? 0 : 1) << 22)))) + (Preferences.getParticleSetting() << 23));
-	}
 }

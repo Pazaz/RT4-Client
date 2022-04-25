@@ -38,7 +38,7 @@ public final class Shadow {
 		@Pc(12) int[] local12 = new int[1];
 		local9.glGenTextures(1, local12, 0);
 		this.anInt5901 = local12[0];
-		Static63.onCardTexture += 16384;
+		GlCleaner.onCardTexture += 16384;
 		GlRenderer.setTextureId(this.anInt5901);
 		local9.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR);
 		local9.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);

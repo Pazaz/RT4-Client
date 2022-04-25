@@ -14,7 +14,7 @@ public final class Static115 {
 	public static int anInt2937 = 0;
 
 	@OriginalMember(owner = "client!ja", name = "k", descriptor = "Lclient!na;")
-	public static final JagString aClass100_579 = Static28.parse("Fps:");
+	public static final JagString aClass100_579 = JagString.parse("Fps:");
 
 	@OriginalMember(owner = "client!ja", name = "l", descriptor = "[Lclient!wa;")
 	public static final Buffer[] aClass3_Sub15Array1 = new Buffer[2048];
@@ -26,7 +26,7 @@ public final class Static115 {
 	public static int anInt2941 = -1;
 
 	@OriginalMember(owner = "client!ja", name = "s", descriptor = "Lclient!na;")
-	public static final JagString aClass100_582 = Static28.parse("http:)4)4");
+	public static final JagString aClass100_582 = JagString.parse("http:)4)4");
 
 	@OriginalMember(owner = "client!ja", name = "a", descriptor = "([II)[I")
 	public static int[] method2308(@OriginalArg(0) int[] arg0) {
@@ -65,13 +65,7 @@ public final class Static115 {
 		Static256.method4392();
 	}
 
-	@OriginalMember(owner = "client!ja", name = "a", descriptor = "(Lclient!ve;Lclient!ve;I)V")
-	public static void init(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1) {
-		Static87.aClass153_38 = arg1;
-		Static29.aClass153_19 = arg0;
-	}
-
-	@OriginalMember(owner = "client!ja", name = "a", descriptor = "(II)V")
+    @OriginalMember(owner = "client!ja", name = "a", descriptor = "(II)V")
 	public static void method2312(@OriginalArg(0) int arg0) {
 		GameShell.VARIABLE_RENDER_RATE = 1000 / arg0;
 	}
@@ -146,7 +140,7 @@ public final class Static115 {
 		Sprites.hitmarks = null;
 		Sprites.crosses = null;
 		Sprites.nameIcons = null;
-		Static265.p11FullSoftware = null;
+		Fonts.p11FullSoftware = null;
 		Sprites.mapfunctions = null;
 		Static67.mapfuncs = null;
 		Sprites.mapmarkhints = null;

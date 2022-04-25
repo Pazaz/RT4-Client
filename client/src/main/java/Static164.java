@@ -7,14 +7,8 @@ public final class Static164 {
 	@OriginalMember(owner = "client!na", name = "W", descriptor = "Z")
 	public static boolean newTab;
 
-    @OriginalMember(owner = "client!na", name = "l", descriptor = "I")
-	public static int anInt3985 = 0;
-
-	@OriginalMember(owner = "client!na", name = "cb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_770 = Static28.parse(":allyreq:");
-
-	@OriginalMember(owner = "client!na", name = "mb", descriptor = "[I")
-	public static final int[] anIntArray362 = new int[50];
+    @OriginalMember(owner = "client!na", name = "cb", descriptor = "Lclient!na;")
+	public static final JagString aClass100_770 = JagString.parse(":allyreq:");
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(IIIIIIIZ)Z")
 	public static boolean method3109(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(6) int arg4) {
@@ -30,7 +24,7 @@ public final class Static164 {
 			local28 = (int) local14 >> 20 & 0x3;
 			local35 = (int) local14 >> 14 & 0x1F;
 			local42 = Integer.MAX_VALUE & (int) (local14 >>> 32);
-			local46 = Static271.get(local42);
+			local46 = LocTypeList.get(local42);
 			if (local46.mapSceneId == -1) {
 				local65 = arg1;
 				if (local14 > 0L) {
@@ -104,7 +98,7 @@ public final class Static164 {
 			local28 = (int) local14 >> 20 & 0x3;
 			local35 = (int) local14 >> 14 & 0x1F;
 			local42 = (int) (local14 >>> 32) & Integer.MAX_VALUE;
-			local46 = Static271.get(local42);
+			local46 = LocTypeList.get(local42);
 			if (local46.mapSceneId == -1) {
 				if (local35 == 9) {
 					local65 = 15658734;
@@ -133,7 +127,7 @@ public final class Static164 {
 		if (local14 != 0L) {
 			local28 = (int) local14 >> 20 & 0x3;
 			local35 = (int) (local14 >>> 32) & Integer.MAX_VALUE;
-			@Pc(586) LocType local586 = Static271.get(local35);
+			@Pc(586) LocType local586 = LocTypeList.get(local35);
 			if (local586.mapSceneId != -1 && !Static33.method867(arg0, local586, arg2, local28)) {
 				return false;
 			}
@@ -166,7 +160,7 @@ public final class Static164 {
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(IBZIZIIZ)Lclient!qf;")
 	public static Sprite method3150(@OriginalArg(0) int arg0, @OriginalArg(2) boolean arg1, @OriginalArg(3) int arg2, @OriginalArg(4) boolean arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) boolean arg6) {
-		@Pc(5) ObjType local5 = Static71.get(arg2);
+		@Pc(5) ObjType local5 = ObjTypeList.get(arg2);
 		if (arg5 > 1 && local5.countObj != null) {
 			@Pc(15) int local15 = -1;
 			for (@Pc(17) int local17 = 0; local17 < 10; local17++) {
@@ -175,7 +169,7 @@ public final class Static164 {
 				}
 			}
 			if (local15 != -1) {
-				local5 = Static71.get(local15);
+				local5 = ObjTypeList.get(local15);
 			}
 		}
 		@Pc(60) SoftwareModel local60 = local5.getInvModel();
@@ -231,7 +225,7 @@ public final class Static164 {
 			local133 = local71;
 		}
 		if (arg3 && (local5.stackable == 1 || arg5 != 1) && arg5 != -1) {
-			Static256.aClass3_Sub2_Sub9_Sub1_1.method2857(Static52.method1288(arg5), 0, 9, 16776960, 1);
+			ObjTypeList.aClass3_Sub2_Sub9_Sub1_1.method2857(Static52.method1288(arg5), 0, 9, 16776960, 1);
 		}
 		SoftwareRaster.method2491(local118, local120, local122);
 		SoftwareRaster.method2488(local125);

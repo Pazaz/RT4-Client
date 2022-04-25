@@ -8,9 +8,6 @@ public final class Static7 {
     @OriginalMember(owner = "client!ah", name = "t", descriptor = "I")
 	public static int anInt986;
 
-	@OriginalMember(owner = "client!ah", name = "i", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable sprites = new SoftLruHashTable(2);
-
 	@OriginalMember(owner = "client!ah", name = "j", descriptor = "[I")
 	public static final int[] varps = new int[2500];
 
@@ -25,7 +22,7 @@ public final class Static7 {
 
 	@OriginalMember(owner = "client!ah", name = "a", descriptor = "(BZ)V")
 	public static void ping(@OriginalArg(1) boolean arg0) {
-		Static107.loop();
+		client.audioLoop();
 		if (client.gameState != 30 && client.gameState != 25) {
 			return;
 		}
@@ -34,16 +31,16 @@ public final class Static7 {
 			return;
 		}
 		Static131.anInt3251 = 0;
-		if (!Static224.aBoolean247 && Protocol.socket != null) {
-			Static6.outboundBuffer.p1isaac(93);
+		if (!LoginManager.aBoolean247 && Protocol.socket != null) {
+			Protocol.outboundBuffer.p1isaac(93);
 			try {
-				Protocol.socket.write(Static6.outboundBuffer.data, Static6.outboundBuffer.offset);
-				Static6.outboundBuffer.offset = 0;
+				Protocol.socket.write(Protocol.outboundBuffer.data, Protocol.outboundBuffer.offset);
+				Protocol.outboundBuffer.offset = 0;
 			} catch (@Pc(53) IOException local53) {
-				Static224.aBoolean247 = true;
+				LoginManager.aBoolean247 = true;
 			}
 		}
-		Static107.loop();
+		client.audioLoop();
 	}
 
 	@OriginalMember(owner = "client!ah", name = "b", descriptor = "(I)V")
@@ -60,7 +57,7 @@ public final class Static7 {
 				if (local37 == 25 || local37 == 23 || local37 == 48 || local37 == 7 || local37 == 13 || local37 == 47 || local37 == 5 || local37 == 43 || local37 == 35 || local37 == 58 || local37 == 22 || local37 == 1006) {
 					local93 = Static196.anIntArray408[Static231.anInt5204 - 1];
 					local99 = Static56.anIntArray142[Static231.anInt5204 - 1];
-					@Pc(103) Component local103 = Static5.getComponent(local99);
+					@Pc(103) Component local103 = InterfaceList.getComponent(local99);
 					@Pc(106) ServerActiveProperties local106 = Static36.method940(local103);
 					if (local106.method511() || local106.method504()) {
 						Static78.anInt2145 = 0;
@@ -68,7 +65,7 @@ public final class Static7 {
 						if (Static118.aClass13_15 != null) {
 							Static43.redraw(Static118.aClass13_15);
 						}
-						Static118.aClass13_15 = Static5.getComponent(local99);
+						Static118.aClass13_15 = InterfaceList.getComponent(local99);
 						Static149.anInt3554 = clickX;
 						Static206.anInt4773 = Static60.clickY;
 						Static4.anInt36 = local93;

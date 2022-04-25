@@ -13,7 +13,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class JagString implements StringInterface {
 
     @OriginalMember(owner = "client!pa", name = "O", descriptor = "Lclient!na;")
-    public static final JagString EMPTY = Static28.parse("");
+    public static final JagString EMPTY = parse("");
     @OriginalMember(owner = "client!na", name = "T", descriptor = "[B")
 	public byte[] chars;
 
@@ -101,7 +101,30 @@ public final class JagString implements StringInterface {
 		}
 	}
 
-	@OriginalMember(owner = "client!na", name = "a", descriptor = "(Z)Ljava/net/URL;")
+    @OriginalMember(owner = "client!cd", name = "a", descriptor = "(Ljava/lang/String;B)Lclient!na;")
+    public static JagString parse(@OriginalArg(0) String arg0) {
+        @Pc(6) byte[] local6 = arg0.getBytes();
+        @Pc(9) int local9 = local6.length;
+        @Pc(13) JagString local13 = new JagString();
+        @Pc(15) int local15 = 0;
+        local13.chars = new byte[local9];
+        while (local9 > local15) {
+            @Pc(29) int local29 = local6[local15++] & 0xFF;
+            if (local29 <= 45 && local29 >= 40) {
+                if (local15 >= local9) {
+                    break;
+                }
+                @Pc(51) int local51 = local6[local15++] & 0xFF;
+                local13.chars[local13.length++] = (byte) (local51 + (local29 + -40) * 43 - 48);
+            } else if (local29 != 0) {
+                local13.chars[local13.length++] = (byte) local29;
+            }
+        }
+        local13.method3156();
+        return local13.method3151();
+    }
+
+    @OriginalMember(owner = "client!na", name = "a", descriptor = "(Z)Ljava/net/URL;")
 	public final URL method3107() throws MalformedURLException {
 		return new URL(new String(this.chars, 0, this.length));
 	}
@@ -856,7 +879,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(ILjava/applet/Applet;)Ljava/lang/Object;")
-	public final Object method3157(@OriginalArg(1) Applet arg0) throws Throwable {
+	public final Object browserControlCall(@OriginalArg(1) Applet arg0) throws Throwable {
 		@Pc(12) String local12 = new String(this.chars, 0, this.length);
 		@Pc(17) Object local17 = Static287.method1757(local12, arg0);
 		if (local17 instanceof String) {
@@ -888,7 +911,7 @@ public final class JagString implements StringInterface {
 
 	@OriginalMember(owner = "client!na", name = "k", descriptor = "(I)Lclient!na;")
 	public final JagString method3159() {
-		@Pc(9) JagString local9 = Static79.decode37(this.encode37());
+		@Pc(9) JagString local9 = Base37.decodeLowerCase(this.encode37());
 		return local9 == null ? Static228.aClass100_967 : local9;
 	}
 

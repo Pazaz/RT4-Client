@@ -7,10 +7,7 @@ public final class Static214 {
 	@OriginalMember(owner = "client!rg", name = "y", descriptor = "I")
 	public static int anInt5577;
 
-	@OriginalMember(owner = "client!rg", name = "z", descriptor = "Lclient!ve;")
-	public static Js5 js5Archive11;
-
-	@OriginalMember(owner = "client!rg", name = "r", descriptor = "[Lclient!na;")
+    @OriginalMember(owner = "client!rg", name = "r", descriptor = "[Lclient!na;")
 	public static final JagString[] aClass100Array170 = new JagString[200];
 
 	@OriginalMember(owner = "client!rg", name = "s", descriptor = "I")
@@ -46,23 +43,6 @@ public final class Static214 {
 	@OriginalMember(owner = "client!rg", name = "d", descriptor = "(B)Lclient!bn;")
 	public static Map method4361() {
 		return WorldMap.currentMap;
-	}
-
-	@OriginalMember(owner = "client!rg", name = "b", descriptor = "(II)Lclient!me;")
-	public static NpcType get(@OriginalArg(0) int arg0) {
-		@Pc(10) NpcType local10 = (NpcType) Static93.aClass99_13.get((long) arg0);
-		if (local10 != null) {
-			return local10;
-		}
-		@Pc(26) byte[] local26 = Static58.aClass153_28.getFile(Static60.method1447(arg0), Static179.method3322(arg0));
-		local10 = new NpcType();
-		local10.id = arg0;
-		if (local26 != null) {
-			local10.decode(new Buffer(local26));
-		}
-		local10.method2942();
-		Static93.aClass99_13.put(local10, (long) arg0);
-		return local10;
 	}
 
 	@OriginalMember(owner = "client!rg", name = "a", descriptor = "(IIIIIIIII)V")

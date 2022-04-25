@@ -13,9 +13,6 @@ public final class Static45 {
 	@OriginalMember(owner = "client!di", name = "H", descriptor = "Z")
 	public static boolean aBoolean84 = false;
 
-	@OriginalMember(owner = "client!di", name = "I", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_6 = new SoftLruHashTable(32);
-
 	@OriginalMember(owner = "client!di", name = "a", descriptor = "([Lclient!mj;ZI)V")
 	public static void method1169(@OriginalArg(0) CollisionMap[] collisionMaps, @OriginalArg(1) boolean underwater) {
 		@Pc(10) int level;
@@ -136,7 +133,7 @@ public final class Static45 {
 					if (local178 < 104) {
 						local194 = Static253.aByteArrayArrayArray16[local152][local178][local173] & 0xFF;
 						if (local194 > 0) {
-							@Pc(693) FluType local693 = Static199.method3593(local194 - 1);
+							@Pc(693) FluType local693 = FluTypeList.get(local194 - 1);
 							Static221.anIntArray376[local173] += local693.weightedHue;
 							Static139.anIntArray325[local173] += local693.saturation;
 							Static279.anIntArray568[local173] += local693.lightness;
@@ -148,7 +145,7 @@ public final class Static45 {
 					if (local194 >= 0) {
 						local200 = Static253.aByteArrayArrayArray16[local152][local194][local173] & 0xFF;
 						if (local200 > 0) {
-							@Pc(758) FluType local758 = Static199.method3593(local200 - 1);
+							@Pc(758) FluType local758 = FluTypeList.get(local200 - 1);
 							Static221.anIntArray376[local173] -= local758.weightedHue;
 							Static139.anIntArray325[local173] -= local758.saturation;
 							Static279.anIntArray568[local173] -= local758.lightness;
@@ -204,7 +201,7 @@ public final class Static45 {
 								if (local178 == 0 && Static163.aByteArrayArrayArray11[local152][local168][local173] != 0) {
 									local1067 = false;
 								}
-								if (local194 > 0 && !Static256.method4395(local194 - 1).aBoolean312) {
+								if (local194 > 0 && !FloTypeList.method4395(local194 - 1).aBoolean312) {
 									local1067 = false;
 								}
 								if (local1067 && local200 == local202 && local200 == local209 && local349 == local200) {
@@ -231,7 +228,7 @@ public final class Static45 {
 							local326 = local146[local168 + 1][local173 + 1];
 							if (local194 == 0) {
 								Static176.method3305(local152, local168, local173, 0, 0, -1, local200, local202, local209, local349, Static87.method1814(local267, local234), Static87.method1814(local273, local234), Static87.method1814(local326, local234), Static87.method1814(local332, local234), 0, 0, 0, 0, local254, 0);
-								if (GlRenderer.enabled && local152 > 0 && local234 != -1 && Static199.method3593(local178 - 1).aBoolean198) {
+								if (GlRenderer.enabled && local152 > 0 && local234 != -1 && FluTypeList.get(local178 - 1).aBoolean198) {
 									Static242.method4197(0, 0, true, false, local168, local173, local200 - Static83.activeTileHeightMap[0][local168][local173], -Static83.activeTileHeightMap[0][local168 + 1][local173] + local202, local209 - Static83.activeTileHeightMap[0][local168 + 1][local173 + 1], local349 - Static83.activeTileHeightMap[0][local168][local173 + 1]);
 								}
 								if (GlRenderer.enabled && !underwater && Static62.anIntArrayArray11 != null && local152 == 0) {
@@ -240,7 +237,7 @@ public final class Static45 {
 											if ((local322 != local168 || local173 != local1794) && local322 >= 0 && local322 < 104 && local1794 >= 0 && local1794 < 104) {
 												@Pc(1834) int local1834 = Static240.aByteArrayArrayArray14[local152][local322][local1794] & 0xFF;
 												if (local1834 != 0) {
-													@Pc(1842) FloType local1842 = Static256.method4395(local1834 - 1);
+													@Pc(1842) FloType local1842 = FloTypeList.method4395(local1834 - 1);
 													if (local1842.texture != -1 && Rasteriser.textureProvider.method3237(local1842.texture) == 4) {
 														Static62.anIntArrayArray11[local168][local173] = local1842.anInt5889 + (local1842.anInt5898 << 24);
 														continue label771;
@@ -253,7 +250,7 @@ public final class Static45 {
 							} else {
 								local322 = Static163.aByteArrayArrayArray11[local152][local168][local173] + 1;
 								@Pc(1242) byte local1242 = Static4.aByteArrayArrayArray1[local152][local168][local173];
-								@Pc(1248) FloType local1248 = Static256.method4395(local194 - 1);
+								@Pc(1248) FloType local1248 = FloTypeList.method4395(local194 - 1);
 								@Pc(1301) int local1301;
 								@Pc(1353) int local1353;
 								@Pc(1288) int local1288;
@@ -266,7 +263,7 @@ public final class Static45 {
 												if ((local168 != local1288 || local1301 != local173) && local1288 >= 0 && local1288 < 104 && local1301 >= 0 && local1301 < 104) {
 													local1353 = Static240.aByteArrayArrayArray14[local152][local1288][local1301] & 0xFF;
 													if (local1353 != 0) {
-														@Pc(1366) FloType local1366 = Static256.method4395(local1353 - 1);
+														@Pc(1366) FloType local1366 = FloTypeList.method4395(local1353 - 1);
 														if (local1366.texture != -1 && Rasteriser.textureProvider.method3237(local1366.texture) == 4) {
 															Static62.anIntArrayArray11[local168][local173] = local1366.anInt5889 + (local1366.anInt5898 << 24);
 															break label737;
@@ -313,7 +310,7 @@ public final class Static45 {
 								}
 								Static176.method3305(local152, local168, local173, local322, local1242, local1288, local200, local202, local209, local349, Static87.method1814(local267, local234), Static87.method1814(local273, local234), Static87.method1814(local326, local234), Static87.method1814(local332, local234), Static230.method3949(local1301, local267), Static230.method3949(local1301, local273), Static230.method3949(local1301, local326), Static230.method3949(local1301, local332), local254, local1353);
 								if (GlRenderer.enabled && local152 > 0) {
-									Static242.method4197(local322, local1242, local1301 == -2 || !local1248.aBoolean311, local234 == -1 || !Static199.method3593(local178 - 1).aBoolean198, local168, local173, local200 - Static83.activeTileHeightMap[0][local168][local173], local202 - Static83.activeTileHeightMap[0][local168 + 1][local173], local209 - Static83.activeTileHeightMap[0][local168 + 1][local173 + 1], -Static83.activeTileHeightMap[0][local168][local173 + 1] + local349);
+									Static242.method4197(local322, local1242, local1301 == -2 || !local1248.aBoolean311, local234 == -1 || !FluTypeList.get(local178 - 1).aBoolean198, local168, local173, local200 - Static83.activeTileHeightMap[0][local168][local173], local202 - Static83.activeTileHeightMap[0][local168 + 1][local173], local209 - Static83.activeTileHeightMap[0][local168 + 1][local173 + 1], -Static83.activeTileHeightMap[0][local168][local173 + 1] + local349);
 								}
 							}
 						}
@@ -507,7 +504,7 @@ public final class Static45 {
 		Static259.anIntArray514[0] = arg2;
 		@Pc(71) int local71 = local51 + 1;
 		Static84.anIntArray209[0] = arg9;
-		@Pc(78) int[][] local78 = Static148.collisionMaps[Static55.level].anIntArrayArray30;
+		@Pc(78) int[][] local78 = PathFinder.collisionMaps[Static55.level].anIntArrayArray30;
 		@Pc(198) int local198;
 		while (local71 != local64) {
 			local10 = Static84.anIntArray209[local64];
@@ -518,16 +515,16 @@ public final class Static45 {
 				break;
 			}
 			if (arg8 != 0) {
-				if ((arg8 < 5 || arg8 == 10) && Static148.collisionMaps[Static55.level].method3042(arg3, local3, local10, arg0, arg8 - 1, 1, arg6)) {
+				if ((arg8 < 5 || arg8 == 10) && PathFinder.collisionMaps[Static55.level].method3042(arg3, local3, local10, arg0, arg8 - 1, 1, arg6)) {
 					local53 = true;
 					break;
 				}
-				if (arg8 < 10 && Static148.collisionMaps[Static55.level].method3046(arg3, arg8 - 1, arg0, local10, 1, arg6, local3)) {
+				if (arg8 < 10 && PathFinder.collisionMaps[Static55.level].method3046(arg3, arg8 - 1, arg0, local10, 1, arg6, local3)) {
 					local53 = true;
 					break;
 				}
 			}
-			if (arg10 != 0 && arg5 != 0 && Static148.collisionMaps[Static55.level].method3052(arg0, local10, local3, 1, arg10, arg1, arg3, arg5)) {
+			if (arg10 != 0 && arg5 != 0 && PathFinder.collisionMaps[Static55.level].method3052(arg0, local10, local3, 1, arg10, arg1, arg3, arg5)) {
 				local53 = true;
 				break;
 			}
@@ -663,8 +660,4 @@ public final class Static45 {
 		}
 	}
 
-	@OriginalMember(owner = "client!di", name = "d", descriptor = "(I)V")
-	public static void method1172() {
-		Static262.aClass99_34.method3103();
-	}
 }

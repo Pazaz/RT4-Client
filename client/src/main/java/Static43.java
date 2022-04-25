@@ -58,7 +58,7 @@ public final class Static43 {
 		}
 		@Pc(57) int local57 = (int) local9 >> 14 & 0x1F;
 		@Pc(70) int local70 = (int) (local9 >>> 32) & Integer.MAX_VALUE;
-		@Pc(74) LocType local74 = Static271.get(local70);
+		@Pc(74) LocType local74 = LocTypeList.get(local70);
 		if (local74.hasAreaSound()) {
 			Static209.method3701(arg1, local74, arg0, arg2);
 		}

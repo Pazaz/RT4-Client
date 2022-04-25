@@ -6,17 +6,11 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static203 {
 
-	@OriginalMember(owner = "client!qh", name = "e", descriptor = "[Lclient!ee;")
-	public static Class32[] aClass32Array1;
-
-	@OriginalMember(owner = "client!qh", name = "g", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_85;
-
-	@OriginalMember(owner = "client!qh", name = "c", descriptor = "Lclient!na;")
-	public static final JagString aClass100_893 = Static28.parse("Memory before cleanup=");
+    @OriginalMember(owner = "client!qh", name = "c", descriptor = "Lclient!na;")
+	public static final JagString aClass100_893 = JagString.parse("Memory before cleanup=");
 
 	@OriginalMember(owner = "client!qh", name = "i", descriptor = "Lclient!na;")
-	public static final JagString aClass100_894 = Static28.parse("Mem:");
+	public static final JagString aClass100_894 = JagString.parse("Mem:");
 
 	@OriginalMember(owner = "client!qh", name = "a", descriptor = "(Z)V")
 	public static void method3662() {

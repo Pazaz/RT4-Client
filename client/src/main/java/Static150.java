@@ -5,25 +5,13 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static150 {
 
 	@OriginalMember(owner = "client!lk", name = "J", descriptor = "Lclient!na;")
-	public static final JagString aClass100_687 = Static28.parse(")4p=");
+	public static final JagString aClass100_687 = JagString.parse(")4p=");
 
     @OriginalMember(owner = "client!lk", name = "V", descriptor = "I")
 	public static int anInt3582 = 0;
 
 	@OriginalMember(owner = "client!lk", name = "Z", descriptor = "I")
 	public static int clickButton = 0;
-
-	@OriginalMember(owner = "client!lk", name = "a", descriptor = "(ILclient!ve;)I")
-	public static int getReady(@OriginalArg(1) Js5 archive) {
-		@Pc(1) int ready = 0;
-		if (archive.isFileReady(Static262.bgId)) {
-			ready++;
-		}
-		if (archive.isFileReady(Static136.logoId)) {
-			ready++;
-		}
-		return ready;
-	}
 
 	@OriginalMember(owner = "client!lk", name = "a", descriptor = "(IIILclient!be;Z)V")
 	public static void method2801(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Component arg2, @OriginalArg(4) boolean arg3) {
@@ -103,11 +91,11 @@ public final class Static150 {
 		}
 		if (arg1.radius == 0 || arg1.radius < local20 - 64 || Preferences.ambientSoundsVolume == 0 || arg2 != arg1.anInt2033) {
 			if (arg1.primaryStream != null) {
-				Static204.soundStream.removeSubStream(arg1.primaryStream);
+				client.soundStream.removeSubStream(arg1.primaryStream);
 				arg1.primaryStream = null;
 			}
 			if (arg1.secondaryStream != null) {
-				Static204.soundStream.removeSubStream(arg1.secondaryStream);
+				client.soundStream.removeSubStream(arg1.secondaryStream);
 				arg1.secondaryStream = null;
 			}
 			return;
@@ -120,12 +108,12 @@ public final class Static150 {
 		if (arg1.primaryStream != null) {
 			arg1.primaryStream.method386(local134);
 		} else if (arg1.sound >= 0) {
-			@Pc(150) SynthSound local150 = SynthSound.create(Static248.js5Archive4, arg1.sound, 0);
+			@Pc(150) SynthSound local150 = SynthSound.create(client.js5Archive4, arg1.sound, 0);
 			if (local150 != null) {
-				@Pc(158) PcmSound local158 = local150.method3989().method2648(Static56.resampler);
+				@Pc(158) PcmSound local158 = local150.method3989().method2648(client.resampler);
 				@Pc(163) SoundPcmStream local163 = Static284.method404(local158, local134);
 				local163.method396(-1);
-				Static204.soundStream.method1343(local163);
+				client.soundStream.method1343(local163);
 				arg1.primaryStream = local163;
 			}
 		}
@@ -136,12 +124,12 @@ public final class Static150 {
 			}
 		} else if (arg1.sounds != null && (arg1.anInt2034 -= arg3) <= 0) {
 			@Pc(219) int local219 = (int) ((double) arg1.sounds.length * Math.random());
-			@Pc(227) SynthSound local227 = SynthSound.create(Static248.js5Archive4, arg1.sounds[local219], 0);
+			@Pc(227) SynthSound local227 = SynthSound.create(client.js5Archive4, arg1.sounds[local219], 0);
 			if (local227 != null) {
-				@Pc(236) PcmSound local236 = local227.method3989().method2648(Static56.resampler);
+				@Pc(236) PcmSound local236 = local227.method3989().method2648(client.resampler);
 				@Pc(241) SoundPcmStream local241 = Static284.method404(local236, local134);
 				local241.method396(0);
-				Static204.soundStream.method1343(local241);
+				client.soundStream.method1343(local241);
 				arg1.anInt2034 = (int) ((double) (arg1.anInt2040 - arg1.anInt2032) * Math.random()) + arg1.anInt2032;
 				arg1.secondaryStream = local241;
 			}

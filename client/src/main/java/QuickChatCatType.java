@@ -91,7 +91,7 @@ public final class QuickChatCatType extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!bc", name = "a", descriptor = "(Lclient!wa;B)V")
-	public final void method470(@OriginalArg(0) Buffer arg0) {
+	public final void decode(@OriginalArg(0) Buffer arg0) {
 		while (true) {
 			@Pc(12) int local12 = arg0.g1();
 			if (local12 == 0) {

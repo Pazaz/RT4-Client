@@ -3,7 +3,7 @@ import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
-public final class Static63 {
+public final class GlCleaner {
 
 	@OriginalMember(owner = "client!fa", name = "a", descriptor = "I")
 	public static int onCardTexture = 0;

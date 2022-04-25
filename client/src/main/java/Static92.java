@@ -7,9 +7,6 @@ public final class Static92 {
 	@OriginalMember(owner = "client!hd", name = "e", descriptor = "Lclient!qf;")
 	public static Sprite aClass3_Sub2_Sub1_6;
 
-	@OriginalMember(owner = "client!hd", name = "a", descriptor = "I")
-	public static int anInt2430 = 0;
-
 	@OriginalMember(owner = "client!hd", name = "g", descriptor = "[J")
 	public static final long[] aLongArray3 = new long[200];
 
@@ -17,7 +14,7 @@ public final class Static92 {
 	public static int anInt2433 = 0;
 
 	@OriginalMember(owner = "client!hd", name = "l", descriptor = "Lclient!na;")
-	public static final JagString aClass100_510 = Static28.parse("null");
+	public static final JagString aClass100_510 = JagString.parse("null");
 
 	@OriginalMember(owner = "client!hd", name = "a", descriptor = "(IIIIIIII)V")
 	public static void method1881(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6) {
@@ -70,8 +67,4 @@ public final class Static92 {
 		}
 	}
 
-	@OriginalMember(owner = "client!hd", name = "a", descriptor = "(I)V")
-	public static void method1882() {
-		Static220.aClass99_28.method3103();
-	}
 }

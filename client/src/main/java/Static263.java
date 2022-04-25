@@ -20,10 +20,10 @@ public final class Static263 {
 	public static int anInt5755 = 2;
 
 	@OriginalMember(owner = "client!vg", name = "f", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1081 = Static28.parse("<col=80ff00>");
+	public static final JagString aClass100_1081 = JagString.parse("<col=80ff00>");
 
 	@OriginalMember(owner = "client!vg", name = "h", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1082 = Static28.parse("; Expires=");
+	public static final JagString aClass100_1082 = JagString.parse("; Expires=");
 
 	@OriginalMember(owner = "client!vg", name = "a", descriptor = "(I[S)[S")
 	public static short[] method4511(@OriginalArg(1) short[] arg0) {
@@ -58,54 +58,54 @@ public final class Static263 {
 			return;
 		}
 		if (arg2 == 1) {
-			Static6.outboundBuffer.p1isaac(155);
-			Static6.outboundBuffer.p4(arg3);
-			Static6.outboundBuffer.p2(arg1);
+			Protocol.outboundBuffer.p1isaac(155);
+			Protocol.outboundBuffer.p4(arg3);
+			Protocol.outboundBuffer.p2(arg1);
 		}
 		if (arg2 == 2) {
-			Static6.outboundBuffer.p1isaac(196);
-			Static6.outboundBuffer.p4(arg3);
-			Static6.outboundBuffer.p2(arg1);
+			Protocol.outboundBuffer.p1isaac(196);
+			Protocol.outboundBuffer.p4(arg3);
+			Protocol.outboundBuffer.p2(arg1);
 		}
 		if (arg2 == 3) {
-			Static6.outboundBuffer.p1isaac(124);
-			Static6.outboundBuffer.p4(arg3);
-			Static6.outboundBuffer.p2(arg1);
+			Protocol.outboundBuffer.p1isaac(124);
+			Protocol.outboundBuffer.p4(arg3);
+			Protocol.outboundBuffer.p2(arg1);
 		}
 		if (arg2 == 4) {
-			Static6.outboundBuffer.p1isaac(199);
-			Static6.outboundBuffer.p4(arg3);
-			Static6.outboundBuffer.p2(arg1);
+			Protocol.outboundBuffer.p1isaac(199);
+			Protocol.outboundBuffer.p4(arg3);
+			Protocol.outboundBuffer.p2(arg1);
 		}
 		if (arg2 == 5) {
-			Static6.outboundBuffer.p1isaac(234);
-			Static6.outboundBuffer.p4(arg3);
-			Static6.outboundBuffer.p2(arg1);
+			Protocol.outboundBuffer.p1isaac(234);
+			Protocol.outboundBuffer.p4(arg3);
+			Protocol.outboundBuffer.p2(arg1);
 		}
 		if (arg2 == 6) {
-			Static6.outboundBuffer.p1isaac(168);
-			Static6.outboundBuffer.p4(arg3);
-			Static6.outboundBuffer.p2(arg1);
+			Protocol.outboundBuffer.p1isaac(168);
+			Protocol.outboundBuffer.p4(arg3);
+			Protocol.outboundBuffer.p2(arg1);
 		}
 		if (arg2 == 7) {
-			Static6.outboundBuffer.p1isaac(166);
-			Static6.outboundBuffer.p4(arg3);
-			Static6.outboundBuffer.p2(arg1);
+			Protocol.outboundBuffer.p1isaac(166);
+			Protocol.outboundBuffer.p4(arg3);
+			Protocol.outboundBuffer.p2(arg1);
 		}
 		if (arg2 == 8) {
-			Static6.outboundBuffer.p1isaac(64);
-			Static6.outboundBuffer.p4(arg3);
-			Static6.outboundBuffer.p2(arg1);
+			Protocol.outboundBuffer.p1isaac(64);
+			Protocol.outboundBuffer.p4(arg3);
+			Protocol.outboundBuffer.p2(arg1);
 		}
 		if (arg2 == 9) {
-			Static6.outboundBuffer.p1isaac(53);
-			Static6.outboundBuffer.p4(arg3);
-			Static6.outboundBuffer.p2(arg1);
+			Protocol.outboundBuffer.p1isaac(53);
+			Protocol.outboundBuffer.p4(arg3);
+			Protocol.outboundBuffer.p2(arg1);
 		}
 		if (arg2 == 10) {
-			Static6.outboundBuffer.p1isaac(9);
-			Static6.outboundBuffer.p4(arg3);
-			Static6.outboundBuffer.p2(arg1);
+			Protocol.outboundBuffer.p1isaac(9);
+			Protocol.outboundBuffer.p4(arg3);
+			Protocol.outboundBuffer.p2(arg1);
 		}
 	}
 

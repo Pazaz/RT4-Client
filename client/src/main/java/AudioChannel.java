@@ -9,6 +9,8 @@ public class AudioChannel {
 
     @OriginalMember(owner = "client!na", name = "w", descriptor = "Z")
     public static boolean stereo;
+    @OriginalMember(owner = "client!va", name = "O", descriptor = "I")
+    public static int threadPriority;
 
     @OriginalMember(owner = "client!vh", name = "h", descriptor = "Lclient!qb;")
 	private PcmStream stream;
@@ -60,7 +62,7 @@ public class AudioChannel {
 
     @OriginalMember(owner = "client!dc", name = "a", descriptor = "(IIIZ)V")
     public static void init(@OriginalArg(3) boolean arg0) {
-        Static258.threadPriority = 2;
+        threadPriority = 2;
         stereo = arg0;
         Static44.sampleRate = 22050;
     }
@@ -80,10 +82,10 @@ public class AudioChannel {
 				local33.bufferCapacity = 16384;
 			}
 			local33.open(local33.bufferCapacity);
-			if (Static258.threadPriority > 0 && Static60.thread == null) {
+			if (threadPriority > 0 && Static60.thread == null) {
 				Static60.thread = new AudioThread();
 				Static60.thread.signLink = arg1;
-				arg1.startThread(Static258.threadPriority, Static60.thread);
+				arg1.startThread(threadPriority, Static60.thread);
 			}
 			if (Static60.thread != null) {
 				if (Static60.thread.channels[arg3] != null) {
@@ -100,10 +102,10 @@ public class AudioChannel {
 				local120.init(arg2);
 				local120.bufferCapacity = 16384;
 				local120.open(local120.bufferCapacity);
-				if (Static258.threadPriority > 0 && Static60.thread == null) {
+				if (threadPriority > 0 && Static60.thread == null) {
 					Static60.thread = new AudioThread();
 					Static60.thread.signLink = arg1;
-					arg1.startThread(Static258.threadPriority, Static60.thread);
+					arg1.startThread(threadPriority, Static60.thread);
 				}
 				if (Static60.thread != null) {
 					if (Static60.thread.channels[arg3] != null) {

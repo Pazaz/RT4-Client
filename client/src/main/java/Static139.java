@@ -11,14 +11,8 @@ public final class Static139 {
 	@OriginalMember(owner = "client!l", name = "l", descriptor = "[I")
 	public static int[] anIntArray325;
 
-	@OriginalMember(owner = "client!l", name = "b", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_21 = new SoftLruHashTable(5);
-
 	@OriginalMember(owner = "client!l", name = "d", descriptor = "Lclient!na;")
-	public static final JagString aClass100_659 = Static28.parse(")4j");
-
-	@OriginalMember(owner = "client!l", name = "f", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_22 = new SoftLruHashTable(4);
+	public static final JagString aClass100_659 = JagString.parse(")4j");
 
     @OriginalMember(owner = "client!l", name = "a", descriptor = "(III)J")
 	public static long method2703(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {

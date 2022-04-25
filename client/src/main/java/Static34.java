@@ -8,46 +8,46 @@ public final class Static34 {
 	public static int anInt1060;
 
 	@OriginalMember(owner = "client!ck", name = "b", descriptor = "Lclient!na;")
-	private static final JagString aClass100_195 = Static28.parse("Discard");
+	private static final JagString aClass100_195 = JagString.parse("Discard");
 
 	@OriginalMember(owner = "client!ck", name = "d", descriptor = "[I")
 	public static final int[] anIntArray80 = new int[] { 1, 0, -1, 0 };
 
 	@OriginalMember(owner = "client!ck", name = "T", descriptor = "Lclient!na;")
-	private static final JagString aClass100_207 = Static28.parse("Jan");
+	private static final JagString aClass100_207 = JagString.parse("Jan");
 
 	@OriginalMember(owner = "client!ck", name = "hb", descriptor = "Lclient!na;")
-	private static final JagString aClass100_212 = Static28.parse("Feb");
+	private static final JagString aClass100_212 = JagString.parse("Feb");
 
 	@OriginalMember(owner = "client!ck", name = "gb", descriptor = "Lclient!na;")
-	private static final JagString aClass100_211 = Static28.parse("Mar");
+	private static final JagString aClass100_211 = JagString.parse("Mar");
 
 	@OriginalMember(owner = "client!ck", name = "db", descriptor = "Lclient!na;")
-	private static final JagString aClass100_210 = Static28.parse("Apr");
+	private static final JagString aClass100_210 = JagString.parse("Apr");
 
 	@OriginalMember(owner = "client!ck", name = "n", descriptor = "Lclient!na;")
-	private static final JagString aClass100_199 = Static28.parse("May");
+	private static final JagString aClass100_199 = JagString.parse("May");
 
 	@OriginalMember(owner = "client!ck", name = "L", descriptor = "Lclient!na;")
-	private static final JagString aClass100_204 = Static28.parse("Jun");
+	private static final JagString aClass100_204 = JagString.parse("Jun");
 
 	@OriginalMember(owner = "client!ck", name = "B", descriptor = "Lclient!na;")
-	private static final JagString aClass100_202 = Static28.parse("Jul");
+	private static final JagString aClass100_202 = JagString.parse("Jul");
 
 	@OriginalMember(owner = "client!ck", name = "l", descriptor = "Lclient!na;")
-	private static final JagString aClass100_198 = Static28.parse("Aug");
+	private static final JagString aClass100_198 = JagString.parse("Aug");
 
 	@OriginalMember(owner = "client!ck", name = "V", descriptor = "Lclient!na;")
-	private static final JagString aClass100_208 = Static28.parse("Sep");
+	private static final JagString aClass100_208 = JagString.parse("Sep");
 
 	@OriginalMember(owner = "client!ck", name = "S", descriptor = "Lclient!na;")
-	private static final JagString aClass100_206 = Static28.parse("Oct");
+	private static final JagString aClass100_206 = JagString.parse("Oct");
 
 	@OriginalMember(owner = "client!ck", name = "Y", descriptor = "Lclient!na;")
-	private static final JagString aClass100_209 = Static28.parse("Nov");
+	private static final JagString aClass100_209 = JagString.parse("Nov");
 
 	@OriginalMember(owner = "client!ck", name = "O", descriptor = "Lclient!na;")
-	private static final JagString aClass100_205 = Static28.parse("Dec");
+	private static final JagString aClass100_205 = JagString.parse("Dec");
 
 	@OriginalMember(owner = "client!ck", name = "f", descriptor = "[Lclient!na;")
 	public static final JagString[] aClass100Array40 = new JagString[] { aClass100_207, aClass100_212, aClass100_211, aClass100_210, aClass100_199, aClass100_204, aClass100_202, aClass100_198, aClass100_208, aClass100_206, aClass100_209, aClass100_205 };
@@ -56,12 +56,9 @@ public final class Static34 {
 	public static volatile int anInt1034 = 0;
 
 	@OriginalMember(owner = "client!ck", name = "o", descriptor = "Lclient!na;")
-	private static final JagString aClass100_200 = Static28.parse("Loaded world list data");
+	private static final JagString aClass100_200 = JagString.parse("Loaded world list data");
 
-	@OriginalMember(owner = "client!ck", name = "C", descriptor = "I")
-	public static int anInt1047 = 0;
-
-	@OriginalMember(owner = "client!ck", name = "D", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!ck", name = "D", descriptor = "Lclient!na;")
 	public static JagString aClass100_203 = null;
 
 	@OriginalMember(owner = "client!ck", name = "K", descriptor = "I")
@@ -70,37 +67,12 @@ public final class Static34 {
 	@OriginalMember(owner = "client!ck", name = "eb", descriptor = "Z")
 	public static boolean verifyIdChanged = false;
 
-	@OriginalMember(owner = "client!ck", name = "a", descriptor = "(ILclient!va;Lclient!ve;Lclient!ve;Lclient!ve;)Z")
-	public static boolean init(@OriginalArg(1) MidiPcmStream arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) Js5 arg2, @OriginalArg(4) Js5 arg3) {
-		Static210.aClass153_87 = arg1;
-		Static78.aClass153_32 = arg3;
-		Static252.aClass153_103 = arg2;
-		Static172.aClass3_Sub3_Sub4_2 = arg0;
-		return true;
-	}
-
-	@OriginalMember(owner = "client!ck", name = "a", descriptor = "(BI)Lclient!eg;")
-	public static SpotAnimType method877(@OriginalArg(1) int arg0) {
-		@Pc(10) SpotAnimType local10 = (SpotAnimType) Static279.aClass99_38.get((long) arg0);
-		if (local10 != null) {
-			return local10;
-		}
-		@Pc(26) byte[] local26 = Static132.aClass153_48.getFile(Static206.method3681(arg0), Static133.method4010(arg0));
-		local10 = new SpotAnimType();
-		local10.id = arg0;
-		if (local26 != null) {
-			local10.method1316(new Buffer(local26));
-		}
-		Static279.aClass99_38.put(local10, (long) arg0);
-		return local10;
-	}
-
 	@OriginalMember(owner = "client!ck", name = "a", descriptor = "(Lclient!fe;I)V")
 	public static void method879(@OriginalArg(0) PathingEntity arg0) {
 		arg0.aBoolean171 = false;
 		@Pc(18) SeqType local18;
 		if (arg0.anInt3366 != -1) {
-			local18 = Static36.get(arg0.anInt3366);
+			local18 = SeqTypeList.get(arg0.anInt3366);
 			if (local18 == null || local18.frames == null) {
 				arg0.anInt3366 = -1;
 			} else {
@@ -124,11 +96,11 @@ public final class Static34 {
 		}
 		@Pc(156) int local156;
 		if (arg0.anInt3432 != -1 && Static83.loop >= arg0.anInt3359) {
-			local156 = method877(arg0.anInt3432).seqId;
+			local156 = SpotAnimTypeList.get(arg0.anInt3432).seqId;
 			if (local156 == -1) {
 				arg0.anInt3432 = -1;
 			} else {
-				@Pc(165) SeqType local165 = Static36.get(local156);
+				@Pc(165) SeqType local165 = SeqTypeList.get(local156);
 				if (local165 == null || local165.frames == null) {
 					arg0.anInt3432 = -1;
 				} else {
@@ -153,14 +125,14 @@ public final class Static34 {
 			}
 		}
 		if (arg0.seqId != -1 && arg0.anInt3420 <= 1) {
-			local18 = Static36.get(arg0.seqId);
+			local18 = SeqTypeList.get(arg0.seqId);
 			if (local18.anInt5363 == 1 && arg0.anInt3405 > 0 && Static83.loop >= arg0.anInt3395 && Static83.loop > arg0.anInt3386) {
 				arg0.anInt3420 = 1;
 				return;
 			}
 		}
 		if (arg0.seqId != -1 && arg0.anInt3420 == 0) {
-			local18 = Static36.get(arg0.seqId);
+			local18 = SeqTypeList.get(arg0.seqId);
 			if (local18 == null || local18.frames == null) {
 				arg0.seqId = -1;
 			} else {
@@ -202,7 +174,7 @@ public final class Static34 {
 				if (local545.anInt5408 > 0) {
 					local545.anInt5408--;
 				} else {
-					@Pc(570) SeqType local570 = Static36.get(local545.anInt5396);
+					@Pc(570) SeqType local570 = SeqTypeList.get(local545.anInt5396);
 					if (local570 == null || local570.frames == null) {
 						arg0.aClass147Array3[local156] = null;
 					} else {

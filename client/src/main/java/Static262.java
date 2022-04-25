@@ -7,20 +7,8 @@ public final class Static262 {
 	@OriginalMember(owner = "client!vf", name = "c", descriptor = "I")
 	public static int anInt5752;
 
-	@OriginalMember(owner = "client!vf", name = "n", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_108;
-
-	@OriginalMember(owner = "client!vf", name = "a", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_34 = new SoftLruHashTable(64);
-
 	@OriginalMember(owner = "client!vf", name = "g", descriptor = "[I")
 	public static final int[] anIntArray515 = new int[14];
-
-	@OriginalMember(owner = "client!vf", name = "k", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable headModels = new SoftLruHashTable(5);
-
-	@OriginalMember(owner = "client!vf", name = "l", descriptor = "Lclient!n;")
-	public static final SoftLruHashTable aClass99_36 = new SoftLruHashTable(50);
 
 	@OriginalMember(owner = "client!vf", name = "m", descriptor = "I")
 	public static int bgId = -1;

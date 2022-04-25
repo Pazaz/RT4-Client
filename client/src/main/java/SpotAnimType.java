@@ -46,7 +46,7 @@ public final class SpotAnimType {
 	private int angle = 0;
 
 	@OriginalMember(owner = "client!eg", name = "a", descriptor = "(Lclient!wa;B)V")
-	public final void method1316(@OriginalArg(0) Buffer arg0) {
+	public final void decode(@OriginalArg(0) Buffer arg0) {
 		while (true) {
 			@Pc(17) int local17 = arg0.g1();
 			if (local17 == 0) {
@@ -99,9 +99,9 @@ public final class SpotAnimType {
 
 	@OriginalMember(owner = "client!eg", name = "a", descriptor = "(IBII)Lclient!ak;")
 	public final Model method1319(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-		@Pc(13) Model local13 = (Model) Static56.models.get((long) this.id);
+		@Pc(13) Model local13 = (Model) SpotAnimTypeList.models.get((long) this.id);
 		if (local13 == null) {
-			@Pc(28) RawModel local28 = Static77.create(Static93.modelsArchive, this.modelId);
+			@Pc(28) RawModel local28 = Static77.create(SpotAnimTypeList.modelsArchive, this.modelId);
 			if (local28 == null) {
 				return null;
 			}
@@ -117,13 +117,13 @@ public final class SpotAnimType {
 				}
 			}
 			local13 = local28.createModel(this.anInt1749 + 64, this.anInt1748 + 850, -30, -50, -30);
-			Static56.models.put(local13, (long) this.id);
+			SpotAnimTypeList.models.put(local13, (long) this.id);
 		}
 		@Pc(118) Model local118;
 		if (this.seqId == -1 || arg1 == -1) {
 			local118 = local13.method4560(true, true, true);
 		} else {
-			local118 = Static36.get(this.seqId).method4219(arg0, arg2, arg1, local13);
+			local118 = SeqTypeList.get(this.seqId).method4219(arg0, arg2, arg1, local13);
 		}
 		if (this.resizeXZ != 128 || this.resizeY != 128) {
 			local118.resize(this.resizeXZ, this.resizeY, this.resizeXZ);

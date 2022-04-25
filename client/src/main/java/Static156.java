@@ -8,10 +8,7 @@ public final class Static156 {
 	@OriginalMember(owner = "client!mf", name = "O", descriptor = "[[B")
 	public static byte[][] locationMapFilesBuffer;
 
-	@OriginalMember(owner = "client!mf", name = "W", descriptor = "Lclient!ve;")
-	public static Js5 js5Archive22;
-
-	@OriginalMember(owner = "client!mf", name = "X", descriptor = "I")
+    @OriginalMember(owner = "client!mf", name = "X", descriptor = "I")
 	public static int loginScreenId;
 
 	@OriginalMember(owner = "client!mf", name = "a", descriptor = "(IIIII[[[B[I[I[I[I[IIBII)V")
@@ -107,8 +104,8 @@ public final class Static156 {
 	@OriginalMember(owner = "client!mf", name = "a", descriptor = "(JI)V")
 	public static void method2956(@OriginalArg(0) long arg0) {
 		if ((long) 0 != arg0) {
-			Static6.outboundBuffer.p1isaac(104);
-			Static6.outboundBuffer.p8(arg0);
+			Protocol.outboundBuffer.p1isaac(104);
+			Protocol.outboundBuffer.p8(arg0);
 		}
 	}
 

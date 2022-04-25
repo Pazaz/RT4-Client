@@ -9,7 +9,7 @@ public final class Static11 {
 
     @OriginalMember(owner = "client!ba", name = "e", descriptor = "(I)V")
 	public static void method443() {
-		Static262.headModels.clear();
+		NpcTypeList.headModels.clear();
 	}
 
 	@OriginalMember(owner = "client!ba", name = "a", descriptor = "(IB)I")
@@ -19,7 +19,7 @@ public final class Static11 {
 		}
 		@Pc(17) Inv local17 = (Inv) Static20.objectContainerCache.get((long) arg0);
 		if (local17 == null) {
-			return Static246.list(arg0).size;
+			return InvTypeList.list(arg0).size;
 		}
 		@Pc(31) int freeSpaces = 0;
 		for (@Pc(33) int id = 0; id < local17.objectIds.length; id++) {
@@ -27,6 +27,6 @@ public final class Static11 {
 				freeSpaces++;
 			}
 		}
-		return freeSpaces + Static246.list(arg0).size - local17.objectIds.length;
+		return freeSpaces + InvTypeList.list(arg0).size - local17.objectIds.length;
 	}
 }

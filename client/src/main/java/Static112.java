@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static112 {
 
 	@OriginalMember(owner = "client!ij", name = "a", descriptor = "Lclient!na;")
-	public static final JagString aClass100_574 = Static28.parse(":duelfriend:");
+	public static final JagString aClass100_574 = JagString.parse(":duelfriend:");
 
 	@OriginalMember(owner = "client!ij", name = "a", descriptor = "(B)V")
 	public static void method2297() {
@@ -14,9 +14,9 @@ public final class Static112 {
 		@Pc(11) int local11 = Static13.anInt436;
 		@Pc(13) int local13 = Static24.anInt761;
 		if (Static39.aClass3_Sub2_Sub1_1 == null || Static181.aClass3_Sub2_Sub1_9 == null) {
-			if (Static209.js5Archive8.isFileReady(Static55.anInt1736) && Static209.js5Archive8.isFileReady(Static169.anInt4073)) {
-				Static39.aClass3_Sub2_Sub1_1 = Static80.loadSoftwareAlphaSprite(Static209.js5Archive8, Static55.anInt1736);
-				Static181.aClass3_Sub2_Sub1_9 = Static80.loadSoftwareAlphaSprite(Static209.js5Archive8, Static169.anInt4073);
+			if (client.js5Archive8.isFileReady(Static55.anInt1736) && client.js5Archive8.isFileReady(Static169.anInt4073)) {
+				Static39.aClass3_Sub2_Sub1_1 = Static80.loadSoftwareAlphaSprite(client.js5Archive8, Static55.anInt1736);
+				Static181.aClass3_Sub2_Sub1_9 = Static80.loadSoftwareAlphaSprite(client.js5Archive8, Static169.anInt4073);
 				if (GlRenderer.enabled) {
 					if (Static39.aClass3_Sub2_Sub1_1 instanceof SoftwareAlphaSprite) {
 						Static39.aClass3_Sub2_Sub1_1 = new GlAlphaSprite((SoftwareSprite) Static39.aClass3_Sub2_Sub1_1);
@@ -65,10 +65,10 @@ public final class Static112 {
 				}
 			}
 		}
-		if ((Static165.aClass3_Sub2_Sub1_8 == null || Static92.aClass3_Sub2_Sub1_6 == null || Static204.aClass3_Sub2_Sub1_10 == null) && Static209.js5Archive8.isFileReady(Static85.anInt2261) && Static209.js5Archive8.isFileReady(Static136.anInt3324) && Static209.js5Archive8.isFileReady(Static254.anInt5556)) {
-			Static165.aClass3_Sub2_Sub1_8 = Static80.loadSoftwareAlphaSprite(Static209.js5Archive8, Static85.anInt2261);
-			Static92.aClass3_Sub2_Sub1_6 = Static80.loadSoftwareAlphaSprite(Static209.js5Archive8, Static136.anInt3324);
-			Static204.aClass3_Sub2_Sub1_10 = Static80.loadSoftwareAlphaSprite(Static209.js5Archive8, Static254.anInt5556);
+		if ((Static165.aClass3_Sub2_Sub1_8 == null || Static92.aClass3_Sub2_Sub1_6 == null || Static204.aClass3_Sub2_Sub1_10 == null) && client.js5Archive8.isFileReady(Static85.anInt2261) && client.js5Archive8.isFileReady(Static136.anInt3324) && client.js5Archive8.isFileReady(Static254.anInt5556)) {
+			Static165.aClass3_Sub2_Sub1_8 = Static80.loadSoftwareAlphaSprite(client.js5Archive8, Static85.anInt2261);
+			Static92.aClass3_Sub2_Sub1_6 = Static80.loadSoftwareAlphaSprite(client.js5Archive8, Static136.anInt3324);
+			Static204.aClass3_Sub2_Sub1_10 = Static80.loadSoftwareAlphaSprite(client.js5Archive8, Static254.anInt5556);
 			if (GlRenderer.enabled) {
 				if (Static165.aClass3_Sub2_Sub1_8 instanceof SoftwareAlphaSprite) {
 					Static165.aClass3_Sub2_Sub1_8 = new GlAlphaSprite((SoftwareSprite) Static165.aClass3_Sub2_Sub1_8);

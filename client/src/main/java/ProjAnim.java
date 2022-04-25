@@ -104,11 +104,11 @@ public final class ProjAnim extends Entity {
 		this.anInt4797 = arg8;
 		this.anInt4822 = arg5;
 		this.anInt4813 = arg4;
-		@Pc(58) int local58 = Static34.method877(this.anInt4816).seqId;
+		@Pc(58) int local58 = SpotAnimTypeList.get(this.anInt4816).seqId;
 		if (local58 == -1) {
 			this.aClass144_3 = null;
 		} else {
-			this.aClass144_3 = Static36.get(local58);
+			this.aClass144_3 = SeqTypeList.get(local58);
 		}
 	}
 
@@ -119,7 +119,7 @@ public final class ProjAnim extends Entity {
 
 	@OriginalMember(owner = "client!ra", name = "b", descriptor = "(I)Lclient!ak;")
 	private Model method3703() {
-		@Pc(14) SpotAnimType local14 = Static34.method877(this.anInt4816);
+		@Pc(14) SpotAnimType local14 = SpotAnimTypeList.get(this.anInt4816);
 		@Pc(24) Model local24 = local14.method1319(this.anInt4798, this.anInt4820, this.anInt4796);
 		if (local24 == null) {
 			return null;

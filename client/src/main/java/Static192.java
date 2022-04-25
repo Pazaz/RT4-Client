@@ -17,7 +17,7 @@ public final class Static192 {
 			@Pc(29) int local29;
 			if (local17.anInt1192 < 0) {
 				local29 = -local17.anInt1192 - 1;
-				if (local29 == Static16.anInt549) {
+				if (local29 == PlayerList.selfId) {
 					local40 = PlayerList.self;
 				} else {
 					local40 = Static159.players[local29];
@@ -27,7 +27,7 @@ public final class Static192 {
 				local40 = Static175.npcs[local29];
 			}
 			if (local40 != null) {
-				@Pc(63) LocType local63 = Static271.get(local17.anInt1189);
+				@Pc(63) LocType local63 = LocTypeList.get(local17.anInt1189);
 				if (Static55.level < 3) {
 				}
 				@Pc(86) int local86;
@@ -102,7 +102,7 @@ public final class Static192 {
 
 	@OriginalMember(owner = "client!ph", name = "b", descriptor = "(B)V")
 	public static void method3474() {
-		Static250.aClass99_33.method3103();
-		Static139.aClass99_21.method3103();
+		PlayerAppearance.aClass99_33.method3103();
+		PlayerAppearance.aClass99_21.method3103();
 	}
 }

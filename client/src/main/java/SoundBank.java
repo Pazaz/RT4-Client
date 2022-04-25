@@ -52,7 +52,7 @@ public final class SoundBank {
 	public final PcmSound method2738(@OriginalArg(0) int arg0, @OriginalArg(2) int[] arg1) {
 		if (this.aClass153_52.method4483() == 1) {
 			return this.method2737(arg1, 0, arg0);
-		} else if (this.aClass153_52.method4504(arg0) == 1) {
+		} else if (this.aClass153_52.getGroupCapacity(arg0) == 1) {
 			return this.method2737(arg1, arg0, 0);
 		} else {
 			throw new RuntimeException();
@@ -93,7 +93,7 @@ public final class SoundBank {
 	public final PcmSound method2741(@OriginalArg(1) int arg0, @OriginalArg(2) int[] arg1) {
 		if (this.aClass153_53.method4483() == 1) {
 			return this.method2740(0, arg1, arg0);
-		} else if (this.aClass153_53.method4504(arg0) == 1) {
+		} else if (this.aClass153_53.getGroupCapacity(arg0) == 1) {
 			return this.method2740(arg0, arg1, 0);
 		} else {
 			throw new RuntimeException();

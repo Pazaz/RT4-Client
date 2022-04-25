@@ -4,26 +4,14 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static202 {
 
-	@OriginalMember(owner = "client!qg", name = "ab", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_84;
-
 	@OriginalMember(owner = "client!qg", name = "U", descriptor = "Lclient!na;")
-	public static final JagString aClass100_891 = Static28.parse("");
+	public static final JagString aClass100_891 = JagString.parse("");
 
-	@OriginalMember(owner = "client!qg", name = "W", descriptor = "Z")
-	public static boolean aBoolean233 = false;
-
-	@OriginalMember(owner = "client!qg", name = "Y", descriptor = "[I")
+    @OriginalMember(owner = "client!qg", name = "Y", descriptor = "[I")
 	public static final int[] anIntArray424 = new int[5];
 
 	@OriginalMember(owner = "client!qg", name = "Z", descriptor = "Lclient!na;")
-	public static final JagString aClass100_892 = Static28.parse("mem=");
-
-	@OriginalMember(owner = "client!qg", name = "h", descriptor = "(I)V")
-	public static void method3653() {
-		Static231.aClass99_29.clear();
-		Static219.sprites.clear();
-	}
+	public static final JagString aClass100_892 = JagString.parse("mem=");
 
 	@OriginalMember(owner = "client!qg", name = "a", descriptor = "(Lsignlink!ll;Lclient!wa;IB)V")
 	public static void method3654(@OriginalArg(0) SignLink arg0, @OriginalArg(1) Buffer arg1, @OriginalArg(2) int arg2) {
@@ -94,7 +82,7 @@ public final class Static202 {
 
 	@OriginalMember(owner = "client!qg", name = "a", descriptor = "(IZI)V")
 	public static void setVarbitClient(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		@Pc(7) VarbitType local7 = Static125.method2449(arg0);
+		@Pc(7) VarbitType local7 = VarbitTypeList.get(arg0);
 		@Pc(10) int local10 = local7.endBit;
 		@Pc(16) int local16 = local7.startBit;
 		@Pc(19) int local19 = local7.baseVar;
@@ -125,18 +113,4 @@ public final class Static202 {
 		}
 	}
 
-	@OriginalMember(owner = "client!qg", name = "d", descriptor = "(II)Lclient!ia;")
-	public static CursorType method3660(@OriginalArg(0) int arg0) {
-		@Pc(10) CursorType local10 = (CursorType) Static79.aClass99_11.get((long) arg0);
-		if (local10 != null) {
-			return local10;
-		}
-		@Pc(20) byte[] local20 = Static153.aClass153_57.getFile(33, arg0);
-		local10 = new CursorType();
-		if (local20 != null) {
-			local10.decode(new Buffer(local20), arg0);
-		}
-		Static79.aClass99_11.put(local10, (long) arg0);
-		return local10;
-	}
 }

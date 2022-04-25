@@ -6,6 +6,12 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!be")
 public final class Component {
 
+    @OriginalMember(owner = "client!pf", name = "b", descriptor = "Lclient!n;")
+	public static final SoftLruHashTable sprites = new SoftLruHashTable(200);
+	@OriginalMember(owner = "client!jk", name = "z", descriptor = "Lclient!n;")
+	public static final SoftLruHashTable models = new SoftLruHashTable(50);
+	@OriginalMember(owner = "client!gn", name = "i", descriptor = "Lclient!n;")
+	public static final SoftLruHashTable fonts = new SoftLruHashTable(20);
 	@OriginalMember(owner = "client!be", name = "b", descriptor = "[Ljava/lang/Object;")
 	public Object[] anObjectArray1;
 
@@ -477,6 +483,13 @@ public final class Component {
 	@OriginalMember(owner = "client!be", name = "xd", descriptor = "I")
 	public int anInt530 = 0;
 
+	@OriginalMember(owner = "client!ec", name = "a", descriptor = "(II)V")
+	public static void clean() {
+		sprites.clean(50);
+		models.clean(50);
+		fonts.clean(50);
+	}
+
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(IIB)V")
 	public final void method477(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		if (this.anIntArray39 == null || this.anIntArray39.length <= arg0) {
@@ -500,7 +513,7 @@ public final class Component {
 		if (this.anIntArray37 != null) {
 			return true;
 		}
-		@Pc(18) SoftwareIndexedSprite local18 = Static164.loadSoftwareIndexedSprite(this.anInt477, Static23.aClass153_12);
+		@Pc(18) SoftwareIndexedSprite local18 = Static164.loadSoftwareIndexedSprite(this.anInt477, InterfaceList.aClass153_12);
 		if (local18 == null) {
 			return false;
 		}
@@ -774,15 +787,15 @@ public final class Component {
 		if (local29 == -1) {
 			return null;
 		}
-		@Pc(43) Sprite local43 = (Sprite) Static190.aClass99_26.get((long) local29);
+		@Pc(43) Sprite local43 = (Sprite) sprites.get((long) local29);
 		if (local43 != null) {
 			return local43;
 		}
-		local43 = SpriteLoader.loadSprites(local29, Static23.aClass153_12);
+		local43 = SpriteLoader.loadSprites(local29, InterfaceList.aClass153_12);
 		if (local43 == null) {
 			Static211.aBoolean72 = true;
 		} else {
-			Static190.aClass99_26.put(local43, (long) local29);
+			sprites.put(local43, (long) local29);
 		}
 		return local43;
 	}
@@ -848,22 +861,22 @@ public final class Component {
 		} else {
 			@Pc(61) Model local61;
 			if (local10 == 1) {
-				local61 = (Model) Static124.aClass99_17.get((long) ((local10 << 16) + local13));
+				local61 = (Model) models.get((long) ((local10 << 16) + local13));
 				if (local61 == null) {
-					@Pc(69) RawModel local69 = Static77.create(Static203.aClass153_85, local13);
+					@Pc(69) RawModel local69 = Static77.create(InterfaceList.aClass153_85, local13);
 					if (local69 == null) {
 						Static211.aBoolean72 = true;
 						return null;
 					}
 					local61 = local69.createModel(64, 768, -50, -10, -50);
-					Static124.aClass99_17.put(local61, (long) (local13 + (local10 << 16)));
+					models.put(local61, (long) (local13 + (local10 << 16)));
 				}
 				if (arg1 != null) {
 					local61 = arg1.method4215(local61, arg0, arg3, arg2);
 				}
 				return local61;
 			} else if (local10 == 2) {
-				local61 = Static214.get(local13).getHeadModel(arg1, arg3, arg0, arg2);
+				local61 = NpcTypeList.get(local13).getHeadModel(arg1, arg3, arg0, arg2);
 				if (local61 == null) {
 					Static211.aBoolean72 = true;
 					return null;
@@ -882,7 +895,7 @@ public final class Component {
 					return local61;
 				}
 			} else if (local10 == 4) {
-				@Pc(164) ObjType local164 = Static71.get(local13);
+				@Pc(164) ObjType local164 = ObjTypeList.get(local13);
 				@Pc(173) Model local173 = local164.getModel(arg0, arg3, arg1, 10, arg2);
 				if (local173 == null) {
 					Static211.aBoolean72 = true;
@@ -891,7 +904,7 @@ public final class Component {
 					return local173;
 				}
 			} else if (local10 == 6) {
-				local61 = Static214.get(local13).getBodyModel(null, 0, 0, arg0, arg3, arg2, null, 0, arg1);
+				local61 = NpcTypeList.get(local13).getBodyModel(null, 0, 0, arg0, arg3, arg2, null, 0, arg1);
 				if (local61 == null) {
 					Static211.aBoolean72 = true;
 					return null;
@@ -930,15 +943,15 @@ public final class Component {
 			return null;
 		}
 		@Pc(66) long local66 = ((this.aBoolean21 ? 1L : 0L) << 38) + ((this.aBoolean18 ? 1L : 0L) << 35) + (long) local12 + ((long) this.anInt514 << 36) + ((this.aBoolean26 ? 1L : 0L) << 39) + ((long) this.anInt513 << 40);
-		@Pc(72) Sprite local72 = (Sprite) Static190.aClass99_26.get(local66);
+		@Pc(72) Sprite local72 = (Sprite) sprites.get(local66);
 		if (local72 != null) {
 			return local72;
 		}
 		@Pc(85) SoftwareSprite local85;
 		if (this.aBoolean18) {
-			local85 = Static80.loadSoftwareAlphaSprite(Static23.aClass153_12, local12);
+			local85 = Static80.loadSoftwareAlphaSprite(InterfaceList.aClass153_12, local12);
 		} else {
-			local85 = SpriteLoader.loadSoftwareSprite(0, Static23.aClass153_12, local12);
+			local85 = SpriteLoader.loadSoftwareSprite(0, InterfaceList.aClass153_12, local12);
 		}
 		if (local85 == null) {
 			Static211.aBoolean72 = true;
@@ -969,7 +982,7 @@ public final class Component {
 		} else {
 			local72 = new GlSprite(local85);
 		}
-		Static190.aClass99_26.put(local72, local66);
+		sprites.put(local72, local66);
 		return local72;
 	}
 
@@ -1162,16 +1175,16 @@ public final class Component {
 		if (this.anInt502 == -1) {
 			return null;
 		}
-		@Pc(21) Font local21 = (Font) Static87.aClass99_12.get((long) this.anInt502);
+		@Pc(21) Font local21 = (Font) fonts.get((long) this.anInt502);
 		if (local21 != null) {
 			return local21;
 		}
-		local21 = Static127.method2462(this.anInt502, Static23.aClass153_12, Static167.aClass153_64);
+		local21 = Static127.method2462(this.anInt502, InterfaceList.aClass153_12, InterfaceList.aClass153_64);
 		if (local21 == null) {
 			Static211.aBoolean72 = true;
 		} else {
 			local21.setNameIcons(arg0, null);
-			Static87.aClass99_12.put(local21, (long) this.anInt502);
+			fonts.put(local21, (long) this.anInt502);
 		}
 		return local21;
 	}

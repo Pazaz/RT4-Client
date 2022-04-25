@@ -17,13 +17,13 @@ public final class CursorType {
 
 	@OriginalMember(owner = "client!ia", name = "a", descriptor = "(B)Lclient!mm;")
 	public final SoftwareSprite getSprite() {
-		@Pc(7) SoftwareSprite local7 = (SoftwareSprite) Static7.sprites.get((long) this.spriteId);
+		@Pc(7) SoftwareSprite local7 = (SoftwareSprite) CursorTypeList.sprites.get((long) this.spriteId);
 		if (local7 != null) {
 			return local7;
 		}
-		local7 = Static80.loadSoftwareAlphaSprite(Static243.spritesArchive, this.spriteId);
+		local7 = Static80.loadSoftwareAlphaSprite(CursorTypeList.spritesArchive, this.spriteId);
 		if (local7 != null) {
-			Static7.sprites.put(local7, (long) this.spriteId);
+			CursorTypeList.sprites.put(local7, (long) this.spriteId);
 		}
 		return local7;
 	}

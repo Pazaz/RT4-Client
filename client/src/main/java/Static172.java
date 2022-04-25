@@ -4,10 +4,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static172 {
 
-	@OriginalMember(owner = "client!nj", name = "c", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_69;
-
-	@OriginalMember(owner = "client!nj", name = "e", descriptor = "Lclient!va;")
+    @OriginalMember(owner = "client!nj", name = "e", descriptor = "Lclient!va;")
 	public static MidiPcmStream aClass3_Sub3_Sub4_2;
 
     @OriginalMember(owner = "client!nj", name = "g", descriptor = "Lclient!ve;")
@@ -19,13 +16,7 @@ public final class Static172 {
 	@OriginalMember(owner = "client!nj", name = "k", descriptor = "I")
 	public static int anInt4165;
 
-	@OriginalMember(owner = "client!nj", name = "l", descriptor = "Lclient!ve;")
-	public static Js5 js5Archive18;
-
-	@OriginalMember(owner = "client!nj", name = "m", descriptor = "[[S")
-	public static short[][] aShortArrayArray7;
-
-	@OriginalMember(owner = "client!nj", name = "a", descriptor = "Z")
+    @OriginalMember(owner = "client!nj", name = "a", descriptor = "Z")
 	public static boolean shiftClick = false;
 
 	@OriginalMember(owner = "client!nj", name = "h", descriptor = "Lclient!ih;")

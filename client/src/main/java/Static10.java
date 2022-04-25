@@ -21,27 +21,6 @@ public final class Static10 {
 		return local7;
 	}
 
-	@OriginalMember(owner = "client!an", name = "a", descriptor = "(BI)I")
-	public static int method347(@OriginalArg(1) int arg0) {
-		if (Protocol.socket != null) {
-			Protocol.socket.close();
-			Protocol.socket = null;
-		}
-		Static127.anInt3132++;
-		if (Static127.anInt3132 > 4) {
-			Static82.anInt2231 = 0;
-			Static127.anInt3132 = 0;
-			return arg0;
-		}
-		Static82.anInt2231 = 0;
-		if (Static208.worldListPort == Static249.worldListDefaultPort) {
-			Static208.worldListPort = Static97.worldListAlternatePort;
-		} else {
-			Static208.worldListPort = Static249.worldListDefaultPort;
-		}
-		return -1;
-	}
-
 	@OriginalMember(owner = "client!an", name = "c", descriptor = "(III)V")
 	public static void method348(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
 		if (Static189.anInt4457 != arg1) {
@@ -76,26 +55,14 @@ public final class Static10 {
 			Static175.method3279();
 			return true;
 		} catch (@Pc(19) Exception local19) {
-			@Pc(61) String local61 = "T2 - " + Static164.anInt3985 + "," + Static5.anInt45 + "," + Static49.anInt1462 + " - " + Static223.anInt5028 + "," + (Static225.originX + PlayerList.self.movementQueueX[0]) + "," + (PlayerList.self.movementQueueZ[0] + Static142.originZ) + " - ";
-			for (@Pc(63) int local63 = 0; local63 < Static223.anInt5028 && local63 < 50; local63++) {
-				local61 = local61 + Static57.aClass3_Sub15_Sub1_3.data[local63] + ",";
+			@Pc(61) String local61 = "T2 - " + Protocol.opcode + "," + Static5.anInt45 + "," + Static49.anInt1462 + " - " + Protocol.length + "," + (Static225.originX + PlayerList.self.movementQueueX[0]) + "," + (PlayerList.self.movementQueueZ[0] + Static142.originZ) + " - ";
+			for (@Pc(63) int local63 = 0; local63 < Protocol.length && local63 < 50; local63++) {
+				local61 = local61 + Protocol.inboundBuffer.data[local63] + ",";
 			}
 			TracingException.report(local61, local19);
 			Static278.processLogout();
 			return true;
 		}
-	}
-
-	@OriginalMember(owner = "client!an", name = "a", descriptor = "(Z)V")
-	public static void method350() {
-		Static142.aClass99_23.clear();
-		Static267.aClass99_37.clear();
-	}
-
-	@OriginalMember(owner = "client!an", name = "i", descriptor = "(I)V")
-	public static void method351() {
-		Static79.aClass99_11.clear();
-		Static7.sprites.clear();
 	}
 
 	@OriginalMember(owner = "client!an", name = "a", descriptor = "(IIIIIII)V")
