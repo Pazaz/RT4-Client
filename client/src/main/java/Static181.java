@@ -15,7 +15,7 @@ public final class Static181 {
 
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(IIIIIIIIII)V")
 	public static void method3340(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) int arg8) {
-		if (arg5 >= Static172.anInt4164 && arg5 <= Static224.anInt5063 && arg0 >= Static172.anInt4164 && arg0 <= Static224.anInt5063 && arg6 >= Static172.anInt4164 && Static224.anInt5063 >= arg6 && Static172.anInt4164 <= arg1 && arg1 <= Static224.anInt5063 && Static267.anInt5773 <= arg4 && arg4 <= Static106.anInt2869 && arg7 >= Static267.anInt5773 && Static106.anInt2869 >= arg7 && arg2 >= Static267.anInt5773 && Static106.anInt2869 >= arg2 && arg3 >= Static267.anInt5773 && arg3 <= Static106.anInt2869) {
+		if (arg5 >= TextureOp29.anInt4164 && arg5 <= TextureOp29.anInt5063 && arg0 >= TextureOp29.anInt4164 && arg0 <= TextureOp29.anInt5063 && arg6 >= TextureOp29.anInt4164 && TextureOp29.anInt5063 >= arg6 && TextureOp29.anInt4164 <= arg1 && arg1 <= TextureOp29.anInt5063 && TextureOp29.anInt5773 <= arg4 && arg4 <= TextureOp29.anInt2869 && arg7 >= TextureOp29.anInt5773 && TextureOp29.anInt2869 >= arg7 && arg2 >= TextureOp29.anInt5773 && TextureOp29.anInt2869 >= arg2 && arg3 >= TextureOp29.anInt5773 && arg3 <= TextureOp29.anInt2869) {
 			Static38.method962(arg2, arg8, arg7, arg6, arg1, arg3, arg4, arg0, arg5);
 		} else {
 			Static165.method3162(arg5, arg0, arg7, arg8, arg3, arg2, arg1, arg6, arg4);

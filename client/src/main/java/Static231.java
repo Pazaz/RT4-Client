@@ -54,12 +54,12 @@ public final class Static231 {
 		@Pc(183) int local183;
 		@Pc(192) int local192;
 		@Pc(201) int local201;
-		if (arg4 >= Static267.anInt5773 && Static106.anInt2869 >= arg4) {
+		if (arg4 >= TextureOp29.anInt5773 && TextureOp29.anInt2869 >= arg4) {
 			@Pc(166) int[] local166 = Static71.anIntArrayArray10[arg4];
-			local174 = Static78.method1690(Static224.anInt5063, arg5 - arg0, Static172.anInt4164);
-			local183 = Static78.method1690(Static224.anInt5063, arg5 + arg0, Static172.anInt4164);
-			local192 = Static78.method1690(Static224.anInt5063, arg5 - local12, Static172.anInt4164);
-			local201 = Static78.method1690(Static224.anInt5063, arg5 + local12, Static172.anInt4164);
+			local174 = Static78.method1690(TextureOp29.anInt5063, arg5 - arg0, TextureOp29.anInt4164);
+			local183 = Static78.method1690(TextureOp29.anInt5063, arg5 + arg0, TextureOp29.anInt4164);
+			local192 = Static78.method1690(TextureOp29.anInt5063, arg5 - local12, TextureOp29.anInt4164);
+			local201 = Static78.method1690(TextureOp29.anInt5063, arg5 + local12, TextureOp29.anInt4164);
 			Static131.method2576(local166, local174, local192, arg2);
 			Static131.method2576(local166, local192, local201, arg1);
 			Static131.method2576(local166, local201, local183, arg2);
@@ -111,30 +111,30 @@ public final class Static231 {
 			local16--;
 			local183 = arg4 + local16;
 			local174 = arg4 - local16;
-			if (Static267.anInt5773 <= local183 && Static106.anInt2869 >= local174) {
-				local192 = Static78.method1690(Static224.anInt5063, arg5 + local7, Static172.anInt4164);
-				local201 = Static78.method1690(Static224.anInt5063, arg5 - local7, Static172.anInt4164);
+			if (TextureOp29.anInt5773 <= local183 && TextureOp29.anInt2869 >= local174) {
+				local192 = Static78.method1690(TextureOp29.anInt5063, arg5 + local7, TextureOp29.anInt4164);
+				local201 = Static78.method1690(TextureOp29.anInt5063, arg5 - local7, TextureOp29.anInt4164);
 				if (local255) {
-					@Pc(404) int local404 = Static78.method1690(Static224.anInt5063, arg5 + local14, Static172.anInt4164);
-					@Pc(412) int local412 = Static78.method1690(Static224.anInt5063, arg5 - local14, Static172.anInt4164);
+					@Pc(404) int local404 = Static78.method1690(TextureOp29.anInt5063, arg5 + local14, TextureOp29.anInt4164);
+					@Pc(412) int local412 = Static78.method1690(TextureOp29.anInt5063, arg5 - local14, TextureOp29.anInt4164);
 					@Pc(420) int[] local420;
-					if (Static267.anInt5773 <= local174) {
+					if (TextureOp29.anInt5773 <= local174) {
 						local420 = Static71.anIntArrayArray10[local174];
 						Static131.method2576(local420, local201, local412, arg2);
 						Static131.method2576(local420, local412, local404, arg1);
 						Static131.method2576(local420, local404, local192, arg2);
 					}
-					if (local183 <= Static106.anInt2869) {
+					if (local183 <= TextureOp29.anInt2869) {
 						local420 = Static71.anIntArrayArray10[local183];
 						Static131.method2576(local420, local201, local412, arg2);
 						Static131.method2576(local420, local412, local404, arg1);
 						Static131.method2576(local420, local404, local192, arg2);
 					}
 				} else {
-					if (Static267.anInt5773 <= local174) {
+					if (TextureOp29.anInt5773 <= local174) {
 						Static131.method2576(Static71.anIntArrayArray10[local174], local201, local192, arg2);
 					}
-					if (Static106.anInt2869 >= local183) {
+					if (TextureOp29.anInt2869 >= local183) {
 						Static131.method2576(Static71.anIntArrayArray10[local183], local201, local192, arg2);
 					}
 				}
@@ -157,41 +157,41 @@ public final class Static231 {
 			@Pc(59) int local59 = arg3 - (local50 * arg2 >> 12);
 			@Pc(68) int local68;
 			@Pc(76) int local76;
-			if (Static172.anInt4164 > arg2) {
-				local68 = Static172.anInt4164;
-				local76 = (Static172.anInt4164 * local50 >> 12) + local59;
-			} else if (arg2 > Static224.anInt5063) {
-				local76 = (Static224.anInt5063 * local50 >> 12) + local59;
-				local68 = Static224.anInt5063;
+			if (TextureOp29.anInt4164 > arg2) {
+				local68 = TextureOp29.anInt4164;
+				local76 = (TextureOp29.anInt4164 * local50 >> 12) + local59;
+			} else if (arg2 > TextureOp29.anInt5063) {
+				local76 = (TextureOp29.anInt5063 * local50 >> 12) + local59;
+				local68 = TextureOp29.anInt5063;
 			} else {
 				local68 = arg2;
 				local76 = arg3;
 			}
 			@Pc(109) int local109;
 			@Pc(118) int local118;
-			if (arg4 < Static172.anInt4164) {
-				local109 = Static172.anInt4164;
-				local118 = local59 + (local50 * Static172.anInt4164 >> 12);
-			} else if (Static224.anInt5063 < arg4) {
-				local109 = Static224.anInt5063;
-				local118 = local59 + (local50 * Static224.anInt5063 >> 12);
+			if (arg4 < TextureOp29.anInt4164) {
+				local109 = TextureOp29.anInt4164;
+				local118 = local59 + (local50 * TextureOp29.anInt4164 >> 12);
+			} else if (TextureOp29.anInt5063 < arg4) {
+				local109 = TextureOp29.anInt5063;
+				local118 = local59 + (local50 * TextureOp29.anInt5063 >> 12);
 			} else {
 				local118 = arg1;
 				local109 = arg4;
 			}
-			if (Static267.anInt5773 > local118) {
-				local109 = (Static267.anInt5773 - local59 << 12) / local50;
-				local118 = Static267.anInt5773;
-			} else if (local118 > Static106.anInt2869) {
-				local118 = Static106.anInt2869;
-				local109 = (Static106.anInt2869 - local59 << 12) / local50;
+			if (TextureOp29.anInt5773 > local118) {
+				local109 = (TextureOp29.anInt5773 - local59 << 12) / local50;
+				local118 = TextureOp29.anInt5773;
+			} else if (local118 > TextureOp29.anInt2869) {
+				local118 = TextureOp29.anInt2869;
+				local109 = (TextureOp29.anInt2869 - local59 << 12) / local50;
 			}
-			if (local76 < Static267.anInt5773) {
-				local76 = Static267.anInt5773;
-				local68 = (Static267.anInt5773 - local59 << 12) / local50;
-			} else if (Static106.anInt2869 < local76) {
-				local76 = Static106.anInt2869;
-				local68 = (Static106.anInt2869 - local59 << 12) / local50;
+			if (local76 < TextureOp29.anInt5773) {
+				local76 = TextureOp29.anInt5773;
+				local68 = (TextureOp29.anInt5773 - local59 << 12) / local50;
+			} else if (TextureOp29.anInt2869 < local76) {
+				local76 = TextureOp29.anInt2869;
+				local68 = (TextureOp29.anInt2869 - local59 << 12) / local50;
 			}
 			Static241.method4547(arg0, local118, local76, local109, local68);
 		}

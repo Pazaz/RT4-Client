@@ -7,9 +7,6 @@ public final class Static49 {
 	@OriginalMember(owner = "client!dm", name = "j", descriptor = "Lclient!na;")
 	public static final JagString aClass100_351 = JagString.parse(" ");
 
-	@OriginalMember(owner = "client!dm", name = "m", descriptor = "I")
-	public static int anInt1459 = 0;
-
 	@OriginalMember(owner = "client!dm", name = "n", descriptor = "Lclient!na;")
 	public static final JagString PERCENT_SIGN = JagString.parse("(U");
 
@@ -72,69 +69,6 @@ public final class Static49 {
 		}
 	}
 
-	@OriginalMember(owner = "client!dm", name = "a", descriptor = "(B)V")
-	public static void method1202() {
-		Protocol.inboundBuffer.accessBits();
-		@Pc(13) int local13 = Protocol.inboundBuffer.gBits(8);
-		@Pc(22) int local22;
-		if (Static272.anInt5214 > local13) {
-			for (local22 = local13; local22 < Static272.anInt5214; local22++) {
-				Protocol.removedIds[Protocol.removedCount++] = Static33.anIntArray79[local22];
-			}
-		}
-		if (Static272.anInt5214 < local13) {
-			throw new RuntimeException("gnpov1");
-		}
-		Static272.anInt5214 = 0;
-		for (local22 = 0; local22 < local13; local22++) {
-			@Pc(61) int local61 = Static33.anIntArray79[local22];
-			@Pc(65) Npc local65 = Static175.npcs[local61];
-			@Pc(70) int local70 = Protocol.inboundBuffer.gBits(1);
-			if (local70 == 0) {
-				Static33.anIntArray79[Static272.anInt5214++] = local61;
-				local65.lastSeenLoop = client.loop;
-			} else {
-				@Pc(92) int local92 = Protocol.inboundBuffer.gBits(2);
-				if (local92 == 0) {
-					Static33.anIntArray79[Static272.anInt5214++] = local61;
-					local65.lastSeenLoop = client.loop;
-					Protocol.extendedIds[Protocol.extendedCount++] = local61;
-				} else {
-					@Pc(139) int local139;
-					@Pc(149) int local149;
-					if (local92 == 1) {
-						Static33.anIntArray79[Static272.anInt5214++] = local61;
-						local65.lastSeenLoop = client.loop;
-						local139 = Protocol.inboundBuffer.gBits(3);
-						local65.move(1, local139);
-						local149 = Protocol.inboundBuffer.gBits(1);
-						if (local149 == 1) {
-							Protocol.extendedIds[Protocol.extendedCount++] = local61;
-						}
-					} else if (local92 == 2) {
-						Static33.anIntArray79[Static272.anInt5214++] = local61;
-						local65.lastSeenLoop = client.loop;
-						if (Protocol.inboundBuffer.gBits(1) == 1) {
-							local139 = Protocol.inboundBuffer.gBits(3);
-							local65.move(2, local139);
-							local149 = Protocol.inboundBuffer.gBits(3);
-							local65.move(2, local149);
-						} else {
-							local139 = Protocol.inboundBuffer.gBits(3);
-							local65.move(0, local139);
-						}
-						local139 = Protocol.inboundBuffer.gBits(1);
-						if (local139 == 1) {
-							Protocol.extendedIds[Protocol.extendedCount++] = local61;
-						}
-					} else if (local92 == 3) {
-						Protocol.removedIds[Protocol.removedCount++] = local61;
-					}
-				}
-			}
-		}
-	}
-
 	@OriginalMember(owner = "client!dm", name = "a", descriptor = "(IBIII)V")
 	public static void method1206(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		@Pc(15) int local15 = 0;
@@ -172,7 +106,7 @@ public final class Static49 {
 		}
 		@Pc(24) JagString local24 = Static13.method471();
 		if (arg0 == null) {
-			@Pc(40) int local40 = Fonts.b12Full.method2859(local24, arg2 + 4, arg1 - -15, Static39.aRandom1, Static60.gregorianDateSeed);
+			@Pc(40) int local40 = Fonts.b12Full.method2859(local24, arg2 + 4, arg1 - -15, client.aRandom1, Static60.gregorianDateSeed);
 			Static133.method4012(arg2 + 4, Fonts.b12Full.getStringWidth(local24) + local40, arg1, 15);
 			return;
 		}
@@ -180,7 +114,7 @@ public final class Static49 {
 		if (local59 == null) {
 			local59 = Fonts.b12Full;
 		}
-		local59.method2878(local24, arg2, arg1, arg0.anInt445, arg0.anInt459, arg0.anInt474, arg0.anInt513, arg0.anInt460, arg0.anInt478, Static39.aRandom1, Static60.gregorianDateSeed, Static50.anIntArray132);
+		local59.method2878(local24, arg2, arg1, arg0.anInt445, arg0.anInt459, arg0.color, arg0.anInt513, arg0.anInt460, arg0.anInt478, client.aRandom1, Static60.gregorianDateSeed, Static50.anIntArray132);
 		Static133.method4012(Static50.anIntArray132[0], Static50.anIntArray132[2], Static50.anIntArray132[1], Static50.anIntArray132[3]);
 	}
 

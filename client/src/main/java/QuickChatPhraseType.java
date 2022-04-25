@@ -6,11 +6,13 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!cb")
 public final class QuickChatPhraseType extends SecondaryNode {
 
-	@OriginalMember(owner = "client!cb", name = "L", descriptor = "[I")
+    @OriginalMember(owner = "client!ld", name = "a", descriptor = "[I")
+	public static final int[] DYNAMIC_COMMAND_ENCODE_BYTES = new int[] { 2, 2, 4, 0, 1, 8, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0 };
+    @OriginalMember(owner = "client!cb", name = "L", descriptor = "[I")
 	private int[] anIntArray71;
 
 	@OriginalMember(owner = "client!cb", name = "M", descriptor = "[I")
-	public int[] anIntArray72;
+	public int[] automaticResponses;
 
 	@OriginalMember(owner = "client!cb", name = "U", descriptor = "[[I")
 	private int[][] anIntArrayArray5;
@@ -22,12 +24,12 @@ public final class QuickChatPhraseType extends SecondaryNode {
 	public boolean aBoolean60 = true;
 
 	@OriginalMember(owner = "client!cb", name = "a", descriptor = "(Lclient!wa;[IZ)V")
-	public final void method760(@OriginalArg(0) Buffer arg0, @OriginalArg(1) int[] arg1) {
+	public final void encodeMessage(@OriginalArg(0) Buffer arg0, @OriginalArg(1) int[] arg1) {
 		if (this.anIntArray71 == null) {
 			return;
 		}
 		for (@Pc(14) int local14 = 0; this.anIntArray71.length > local14 && local14 < arg1.length; local14++) {
-			@Pc(38) int local38 = Static143.anIntArray329[this.method765(local14)];
+			@Pc(38) int local38 = DYNAMIC_COMMAND_ENCODE_BYTES[this.getDynamicCommand(local14)];
 			if (local38 > 0) {
 				arg0.pVarLong(local38, (long) arg1[local14]);
 			}
@@ -47,15 +49,15 @@ public final class QuickChatPhraseType extends SecondaryNode {
 
 	@OriginalMember(owner = "client!cb", name = "e", descriptor = "(I)V")
 	public final void method763() {
-		if (this.anIntArray72 != null) {
-			for (@Pc(7) int local7 = 0; local7 < this.anIntArray72.length; local7++) {
-				this.anIntArray72[local7] |= 0x8000;
+		if (this.automaticResponses != null) {
+			for (@Pc(7) int local7 = 0; local7 < this.automaticResponses.length; local7++) {
+				this.automaticResponses[local7] |= 0x8000;
 			}
 		}
 	}
 
 	@OriginalMember(owner = "client!cb", name = "a", descriptor = "(III)I")
-	public final int method764(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
+	public final int getDynamicCommandParam(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
 		if (this.anIntArray71 == null || arg1 < 0 || arg1 > this.anIntArray71.length) {
 			return -1;
 		} else if (this.anIntArrayArray5[arg1] == null || arg0 < 0 || arg0 > this.anIntArrayArray5[arg1].length) {
@@ -66,12 +68,12 @@ public final class QuickChatPhraseType extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!cb", name = "c", descriptor = "(II)I")
-	public final int method765(@OriginalArg(1) int arg0) {
+	public final int getDynamicCommand(@OriginalArg(1) int arg0) {
 		return this.anIntArray71 == null || arg0 < 0 || arg0 > this.anIntArray71.length ? -1 : this.anIntArray71[arg0];
 	}
 
 	@OriginalMember(owner = "client!cb", name = "a", descriptor = "(Z)I")
-	public final int method767() {
+	public final int getDynamicCommandCount() {
 		return this.anIntArray71 == null ? 0 : this.anIntArray71.length;
 	}
 
@@ -85,9 +87,9 @@ public final class QuickChatPhraseType extends SecondaryNode {
 		@Pc(42) int local42;
 		if (arg1 == 2) {
 			local32 = arg0.g1();
-			this.anIntArray72 = new int[local32];
+			this.automaticResponses = new int[local32];
 			for (local42 = 0; local42 < local32; local42++) {
-				this.anIntArray72[local42] = arg0.g2();
+				this.automaticResponses[local42] = arg0.g2();
 			}
 		} else if (arg1 == 3) {
 			local32 = arg0.g1();
@@ -107,7 +109,7 @@ public final class QuickChatPhraseType extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!cb", name = "f", descriptor = "(I)Lclient!na;")
-	public final JagString method769() {
+	public final JagString getText() {
 		@Pc(15) JagString local15 = Static87.allocate(80);
 		if (this.aClass100Array35 == null) {
 			return Static202.aClass100_891;

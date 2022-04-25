@@ -27,7 +27,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 				@Pc(72) int local72 = local45;
 				@Pc(74) int local74 = local57;
 				for (@Pc(77) int local77 = -20; local77 < 0; local77++) {
-					@Pc(93) int local93 = this.anIntArray20[(local72 >> 16) + (local74 >> 16) * this.anInt1867];
+					@Pc(93) int local93 = this.pixels[(local72 >> 16) + (local74 >> 16) * this.anInt1867];
 					@Pc(97) int local97 = SoftwareRaster.pixels[local70];
 					@Pc(101) int local101 = local93 >>> 24;
 					@Pc(105) int local105 = 256 - local101;
@@ -81,7 +81,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 			local27 += local36;
 		}
 		if (local23 > 0 && local20 > 0) {
-			Static283.method319(SoftwareRaster.pixels, this.anIntArray20, local17, local15, local23, local20, local27, local29);
+			Static283.method319(SoftwareRaster.pixels, this.pixels, local17, local15, local23, local20, local27, local29);
 		}
 	}
 
@@ -123,7 +123,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 			local27 += local36;
 		}
 		if (local23 > 0 && local20 > 0) {
-			Static283.method319(SoftwareRaster.pixels, this.anIntArray20, local17, local15, local23, local20, local27, local29);
+			Static283.method319(SoftwareRaster.pixels, this.pixels, local17, local15, local23, local20, local27, local29);
 		}
 	}
 
@@ -259,7 +259,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 								local394 = local853;
 							}
 							while (local394 < 0) {
-								local432 = this.anIntArray20[(local378 >> 12) * this.anInt1867 + (local802 >> 12)];
+								local432 = this.pixels[(local378 >> 12) * this.anInt1867 + (local802 >> 12)];
 								local436 = SoftwareRaster.pixels[local388];
 								local440 = local432 >>> 24;
 								local444 = 256 - local440;
@@ -304,7 +304,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 							local394 = local1049;
 						}
 						while (local394 < 0) {
-							local432 = this.anIntArray20[(local504 >> 12) * this.anInt1867 + (local802 >> 12)];
+							local432 = this.pixels[(local504 >> 12) * this.anInt1867 + (local802 >> 12)];
 							local436 = SoftwareRaster.pixels[local388];
 							local440 = local432 >>> 24;
 							local444 = 256 - local440;
@@ -349,7 +349,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 							local394 = local1253;
 						}
 						while (local394 < 0) {
-							local432 = this.anIntArray20[(local504 >> 12) * this.anInt1867 + (local802 >> 12)];
+							local432 = this.pixels[(local504 >> 12) * this.anInt1867 + (local802 >> 12)];
 							local436 = SoftwareRaster.pixels[local388];
 							local440 = local432 >>> 24;
 							local444 = 256 - local440;
@@ -382,7 +382,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 							local394 = local1412;
 						}
 						while (local394 < 0) {
-							local432 = this.anIntArray20[(local378 >> 12) * this.anInt1867 + (local802 >> 12)];
+							local432 = this.pixels[(local378 >> 12) * this.anInt1867 + (local802 >> 12)];
 							local436 = SoftwareRaster.pixels[local388];
 							local440 = local432 >>> 24;
 							local444 = 256 - local440;
@@ -426,7 +426,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 						local394 = local1610;
 					}
 					while (local394 < 0) {
-						local432 = this.anIntArray20[(local504 >> 12) * this.anInt1867 + (local802 >> 12)];
+						local432 = this.pixels[(local504 >> 12) * this.anInt1867 + (local802 >> 12)];
 						local436 = SoftwareRaster.pixels[local388];
 						local440 = local432 >>> 24;
 						local444 = 256 - local440;
@@ -470,7 +470,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 						local394 = local1816;
 					}
 					while (local394 < 0) {
-						local432 = this.anIntArray20[(local504 >> 12) * this.anInt1867 + (local802 >> 12)];
+						local432 = this.pixels[(local504 >> 12) * this.anInt1867 + (local802 >> 12)];
 						local436 = SoftwareRaster.pixels[local388];
 						local440 = local432 >>> 24;
 						local444 = 256 - local440;
@@ -492,7 +492,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 				local394 = local166;
 				if (local368 >= 0 && local378 >= 0 && local368 - (this.anInt1867 << 12) < 0 && local378 - (this.anInt1859 << 12) < 0) {
 					while (local394 < 0) {
-						local432 = this.anIntArray20[(local378 >> 12) * this.anInt1867 + (local368 >> 12)];
+						local432 = this.pixels[(local378 >> 12) * this.anInt1867 + (local368 >> 12)];
 						local436 = SoftwareRaster.pixels[local388];
 						local440 = local432 >>> 24;
 						local444 = 256 - local440;
@@ -522,7 +522,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 						local394 = local553;
 					}
 					while (local394 < 0) {
-						local432 = this.anIntArray20[(local504 >> 12) * this.anInt1867 + (local368 >> 12)];
+						local432 = this.pixels[(local504 >> 12) * this.anInt1867 + (local368 >> 12)];
 						local436 = SoftwareRaster.pixels[local388];
 						local440 = local432 >>> 24;
 						local444 = 256 - local440;
@@ -553,7 +553,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 						local394 = local702;
 					}
 					while (local394 < 0) {
-						local432 = this.anIntArray20[(local504 >> 12) * this.anInt1867 + (local368 >> 12)];
+						local432 = this.pixels[(local504 >> 12) * this.anInt1867 + (local368 >> 12)];
 						local436 = SoftwareRaster.pixels[local388];
 						local440 = local432 >>> 24;
 						local444 = 256 - local440;
@@ -588,7 +588,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 				@Pc(88) int local88 = local51 + local39 * local78;
 				@Pc(94) int local94 = local63 - local33 * local78;
 				for (@Pc(99) int local99 = -arg9[local71]; local99 < 0; local99++) {
-					@Pc(115) int local115 = this.anIntArray20[(local88 >> 16) + (local94 >> 16) * this.anInt1867];
+					@Pc(115) int local115 = this.pixels[(local88 >> 16) + (local94 >> 16) * this.anInt1867];
 					@Pc(119) int local119 = SoftwareRaster.pixels[local82];
 					@Pc(123) int local123 = local115 >>> 24;
 					@Pc(127) int local127 = 256 - local123;
@@ -623,7 +623,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 				@Pc(88) int local88 = local51 + local39 * local78;
 				@Pc(94) int local94 = local63 - local33 * local78;
 				for (@Pc(99) int local99 = -arg8[local71]; local99 < 0; local99++) {
-					@Pc(115) int local115 = this.anIntArray20[(local88 >> 16) + (local94 >> 16) * this.anInt1867];
+					@Pc(115) int local115 = this.pixels[(local88 >> 16) + (local94 >> 16) * this.anInt1867];
 					@Pc(119) int local119 = SoftwareRaster.pixels[local82];
 					@Pc(123) int local123 = local115 >>> 24;
 					@Pc(127) int local127 = 256 - local123;
@@ -694,7 +694,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 			local12 += local26 * local150;
 			local130 += local150;
 		}
-		Static283.method317(SoftwareRaster.pixels, this.anIntArray20, local12, local14, local46, local130, arg2, arg3, local26, local32, local7, arg4);
+		Static283.method317(SoftwareRaster.pixels, this.pixels, local12, local14, local46, local130, arg2, arg3, local26, local32, local7, arg4);
 	}
 
 	@OriginalMember(owner = "client!am", name = "a", descriptor = "(IIII)V")
@@ -752,7 +752,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 			local12 += local26 * local150;
 			local130 += local150;
 		}
-		Static283.method321(SoftwareRaster.pixels, this.anIntArray20, local12, local14, local46, local130, arg2, arg3, local26, local32, local7);
+		Static283.method321(SoftwareRaster.pixels, this.pixels, local12, local14, local46, local130, arg2, arg3, local26, local32, local7);
 	}
 
 	@OriginalMember(owner = "client!am", name = "d", descriptor = "(II)V")
@@ -793,7 +793,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 			local36 += local47;
 		}
 		if (local32 > 0 && local29 > 0) {
-			Static283.method318(SoftwareRaster.pixels, this.anIntArray20, local26, local21, local32, local29, local36, local40);
+			Static283.method318(SoftwareRaster.pixels, this.pixels, local26, local21, local32, local29, local36, local40);
 		}
 	}
 
@@ -835,7 +835,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 			local27 += local36;
 		}
 		if (local23 > 0 && local20 > 0) {
-			Static283.method320(SoftwareRaster.pixels, this.anIntArray20, local17, local15, local23, local20, local27, local29, arg2);
+			Static283.method320(SoftwareRaster.pixels, this.pixels, local17, local15, local23, local20, local27, local29, arg2);
 		}
 	}
 }

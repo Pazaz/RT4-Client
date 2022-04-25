@@ -3,9 +3,6 @@ import org.openrs2.deob.annotation.OriginalMember;
 
 public final class Static143 {
 
-    @OriginalMember(owner = "client!ld", name = "a", descriptor = "[I")
-	public static final int[] anIntArray329 = new int[] { 2, 2, 4, 0, 1, 8, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0 };
-
 	@OriginalMember(owner = "client!ld", name = "b", descriptor = "[Lclient!nc;")
 	public static final Class102[] aClass102Array1 = new Class102[4];
 

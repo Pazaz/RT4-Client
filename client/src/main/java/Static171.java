@@ -40,10 +40,4 @@ public final class Static171 {
 		}
 	}
 
-	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(ILclient!na;I)V")
-	public static void method3221(@OriginalArg(1) JagString arg0, @OriginalArg(2) int arg1) {
-		Protocol.outboundBuffer.p1isaac(188);
-		Protocol.outboundBuffer.p1a(arg1);
-		Protocol.outboundBuffer.p8(arg0.encode37());
-	}
 }

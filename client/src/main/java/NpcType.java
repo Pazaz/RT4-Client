@@ -358,7 +358,7 @@ public final class NpcType {
 						local721 |= Static6.aClass3_Sub2_Sub7Array1[local235].isAlphaTransformed(local214);
 						local725 |= local753.aBoolean278;
 					}
-					if ((local753.tween || Static204.applyTweening) && local207 != -1 && local753.frames.length > local207) {
+					if ((local753.tween || client.applyTweening) && local207 != -1 && local753.frames.length > local207) {
 						Static71.anIntArray147[local235] = local753.anIntArray474[local200];
 						Static214.anIntArray492[local235] = arg0[local235].anInt5404;
 						local228 = local753.frames[local207];
@@ -401,7 +401,7 @@ public final class NpcType {
 				local721 |= local962.isAlphaTransformed(local235);
 				local725 |= arg8.aBoolean278;
 			}
-			if ((arg8.tween || Static204.applyTweening) && arg3 != -1 && arg8.frames.length > arg3) {
+			if ((arg8.tween || client.applyTweening) && arg3 != -1 && arg8.frames.length > arg3) {
 				local200 = arg8.anIntArray474[arg5];
 				local221 = arg8.frames[arg3];
 				local1040 = local221 >>> 16;
@@ -432,7 +432,7 @@ public final class NpcType {
 				local721 |= local1088.isAlphaTransformed(local228);
 				local725 |= arg6.aBoolean278;
 			}
-			if ((arg6.tween || Static204.applyTweening) && arg1 != -1 && arg1 < arg6.frames.length) {
+			if ((arg6.tween || client.applyTweening) && arg1 != -1 && arg1 < arg6.frames.length) {
 				local300 = arg6.anIntArray474[arg2];
 				local1040 = arg6.frames[arg1];
 				local318 = local1040 >>> 16;

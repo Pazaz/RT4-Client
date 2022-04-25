@@ -45,7 +45,7 @@ public final class Static7 {
 		if (Static118.aClass13_15 != null || Static105.aClass13_14 != null) {
 			return;
 		}
-		@Pc(20) int local20 = Static150.clickButton;
+		@Pc(20) int local20 = Mouse.clickButton;
 		@Pc(93) int local93;
 		@Pc(99) int local99;
 		if (!Static60.aBoolean108) {
@@ -55,8 +55,8 @@ public final class Static7 {
 					local93 = Static196.anIntArray408[Static231.anInt5204 - 1];
 					local99 = Static56.anIntArray142[Static231.anInt5204 - 1];
 					@Pc(103) Component local103 = InterfaceList.getComponent(local99);
-					@Pc(106) ServerActiveProperties local106 = Static36.method940(local103);
-					if (local106.method511() || local106.method504()) {
+					@Pc(106) ServerActiveProperties local106 = InterfaceList.getServerActiveProperties(local103);
+					if (local106.method511() || local106.isObjReplaceEnabled()) {
 						Static78.anInt2145 = 0;
 						Static123.aBoolean155 = false;
 						if (Static118.aClass13_15 != null) {

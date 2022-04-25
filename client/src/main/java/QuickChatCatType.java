@@ -7,43 +7,43 @@ import org.openrs2.deob.annotation.Pc;
 public final class QuickChatCatType extends SecondaryNode {
 
 	@OriginalMember(owner = "client!bc", name = "O", descriptor = "[I")
-	public int[] anIntArray29;
+	public int[] phraseShortcuts;
 
 	@OriginalMember(owner = "client!bc", name = "P", descriptor = "[I")
-	public int[] anIntArray30;
+	public int[] subcategories;
 
 	@OriginalMember(owner = "client!bc", name = "T", descriptor = "[I")
-	public int[] anIntArray31;
+	public int[] subcategoryShortcuts;
 
 	@OriginalMember(owner = "client!bc", name = "Y", descriptor = "Lclient!na;")
-	public JagString aClass100_79;
+	public JagString description;
 
 	@OriginalMember(owner = "client!bc", name = "ab", descriptor = "[I")
-	public int[] anIntArray32;
+	public int[] phrases;
 
 	@OriginalMember(owner = "client!bc", name = "d", descriptor = "(I)V")
 	public final void method465() {
 		@Pc(8) int local8;
-		if (this.anIntArray32 != null) {
-			for (local8 = 0; local8 < this.anIntArray32.length; local8++) {
-				this.anIntArray32[local8] |= 0x8000;
+		if (this.phrases != null) {
+			for (local8 = 0; local8 < this.phrases.length; local8++) {
+				this.phrases[local8] |= 0x8000;
 			}
 		}
-		if (this.anIntArray30 != null) {
-			for (local8 = 0; local8 < this.anIntArray30.length; local8++) {
-				this.anIntArray30[local8] |= 0x8000;
+		if (this.subcategories != null) {
+			for (local8 = 0; local8 < this.subcategories.length; local8++) {
+				this.subcategories[local8] |= 0x8000;
 			}
 		}
 	}
 
 	@OriginalMember(owner = "client!bc", name = "c", descriptor = "(II)I")
-	public final int method466(@OriginalArg(0) int arg0) {
-		if (this.anIntArray32 == null) {
+	public final int getPhraseByShortcut(@OriginalArg(0) int arg0) {
+		if (this.phrases == null) {
 			return -1;
 		}
-		for (@Pc(13) int local13 = 0; local13 < this.anIntArray32.length; local13++) {
-			if (arg0 == this.anIntArray29[local13]) {
-				return this.anIntArray32[local13];
+		for (@Pc(13) int local13 = 0; local13 < this.phrases.length; local13++) {
+			if (arg0 == this.phraseShortcuts[local13]) {
+				return this.phrases[local13];
 			}
 		}
 		return -1;
@@ -52,39 +52,39 @@ public final class QuickChatCatType extends SecondaryNode {
 	@OriginalMember(owner = "client!bc", name = "a", descriptor = "(Lclient!wa;II)V")
 	private void method467(@OriginalArg(0) Buffer arg0, @OriginalArg(2) int arg1) {
 		if (arg1 == 1) {
-			this.aClass100_79 = arg0.gjstr();
+			this.description = arg0.gjstr();
 			return;
 		}
 		@Pc(28) int local28;
 		@Pc(38) int local38;
 		if (arg1 == 2) {
 			local28 = arg0.g1();
-			this.anIntArray30 = new int[local28];
-			this.anIntArray31 = new int[local28];
+			this.subcategories = new int[local28];
+			this.subcategoryShortcuts = new int[local28];
 			for (local38 = 0; local38 < local28; local38++) {
-				this.anIntArray30[local38] = arg0.g2();
-				this.anIntArray31[local38] = Static229.method3933(arg0.g1s());
+				this.subcategories[local38] = arg0.g2();
+				this.subcategoryShortcuts[local38] = Static229.method3933(arg0.g1s());
 			}
 		} else if (arg1 == 3) {
 			local28 = arg0.g1();
-			this.anIntArray32 = new int[local28];
-			this.anIntArray29 = new int[local28];
+			this.phrases = new int[local28];
+			this.phraseShortcuts = new int[local28];
 			for (local38 = 0; local38 < local28; local38++) {
-				this.anIntArray32[local38] = arg0.g2();
-				this.anIntArray29[local38] = Static229.method3933(arg0.g1s());
+				this.phrases[local38] = arg0.g2();
+				this.phraseShortcuts[local38] = Static229.method3933(arg0.g1s());
 			}
 		} else if (arg1 == 4) {
 		}
 	}
 
 	@OriginalMember(owner = "client!bc", name = "a", descriptor = "(BI)I")
-	public final int method469(@OriginalArg(1) int arg0) {
-		if (this.anIntArray30 == null) {
+	public final int getSubcategoryByShortcut(@OriginalArg(1) int arg0) {
+		if (this.subcategories == null) {
 			return -1;
 		}
-		for (@Pc(21) int local21 = 0; local21 < this.anIntArray30.length; local21++) {
-			if (this.anIntArray31[local21] == arg0) {
-				return this.anIntArray30[local21];
+		for (@Pc(21) int local21 = 0; local21 < this.subcategories.length; local21++) {
+			if (this.subcategoryShortcuts[local21] == arg0) {
+				return this.subcategories[local21];
 			}
 		}
 		return -1;

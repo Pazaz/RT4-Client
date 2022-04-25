@@ -8,17 +8,8 @@ public class Camera {
     @OriginalMember(owner = "client!eg", name = "d", descriptor = "I")
     public static double yawTarget = 0;
 
-    public static int pitchDirection = -1;
-
-    public static int yawDirection = -1;
-
-    public static int getPitch() {
-        return pitchDirection == 1 ? (int)Math.ceil(pitchTarget) : (int)pitchTarget;
-    }
-
-    public static int getYaw() {
-        return yawDirection == 1 ? (int)Math.floor(yawTarget) : (int)yawTarget;
-    }
+    @OriginalMember(owner = "client!ef", name = "i", descriptor = "I")
+    public static double pitchAccel = 0;
 
     public static double mod(double a, double b) {
         return ((a % b) + b) % b;

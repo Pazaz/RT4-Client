@@ -20,17 +20,4 @@ public final class Static238 {
 		return local13;
 	}
 
-	@OriginalMember(owner = "client!te", name = "b", descriptor = "(Lclient!na;I)Z")
-	public static boolean method4144(@OriginalArg(0) JagString arg0) {
-		if (arg0 == null) {
-			return false;
-		}
-		for (@Pc(11) int local11 = 0; local11 < Static35.anInt1093; local11++) {
-			if (arg0.equalsIgnoreCase(Static193.aClass100Array134[local11])) {
-				return true;
-			}
-		}
-		return false;
-	}
-
 }

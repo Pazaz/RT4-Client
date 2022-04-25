@@ -213,4 +213,9 @@ public class WorldList {
             }
         }
     }
+
+    @OriginalMember(owner = "client!h", name = "a", descriptor = "(I)Lclient!ba;")
+    public static World getNextWorld() {
+        return sorted.length > Static51.worldPos ? sorted[Static51.worldPos++] : null;
+    }
 }

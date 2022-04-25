@@ -4,20 +4,8 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static93 {
 
-	@OriginalMember(owner = "client!he", name = "Y", descriptor = "I")
-	public static volatile int anInt2467 = 0;
-
-	@OriginalMember(owner = "client!he", name = "ab", descriptor = "Lclient!sc;")
-	public static final HashTable aClass133_7 = new HashTable(16);
-
-	@OriginalMember(owner = "client!he", name = "bb", descriptor = "Lclient!ug;")
-	public static Mouse instance = new Mouse();
-
 	@OriginalMember(owner = "client!he", name = "db", descriptor = "Lclient!na;")
 	public static final JagString aClass100_517 = JagString.parse("");
-
-	@OriginalMember(owner = "client!he", name = "eb", descriptor = "[I")
-	public static final int[] anIntArray219 = new int[1000];
 
 	@OriginalMember(owner = "client!he", name = "gb", descriptor = "Lclient!na;")
 	public static final JagString aClass100_518 = JagString.parse("www");

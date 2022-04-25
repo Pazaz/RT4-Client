@@ -20,7 +20,7 @@ public final class Static16 {
 		if (!GlRenderer.enabled || Static231.aBoolean252) {
 			return;
 		}
-		@Pc(14) Tile[][][] local14 = Static130.aClass3_Sub5ArrayArrayArray1;
+		@Pc(14) Tile[][][] local14 = SceneGraph.tiles;
 		for (@Pc(22) int local22 = 0; local22 < local14.length; local22++) {
 			@Pc(30) Tile[][] local30 = local14[local22];
 			for (@Pc(32) int local32 = 0; local32 < local30.length; local32++) {

@@ -6,9 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static46 {
 
-	@OriginalMember(owner = "client!dj", name = "a", descriptor = "Lclient!cf;")
-	public static GlSprite mask = null;
-
 	@OriginalMember(owner = "client!dj", name = "b", descriptor = "I")
 	public static int clipY = 0;
 
@@ -20,11 +17,6 @@ public final class Static46 {
 
 	@OriginalMember(owner = "client!dj", name = "e", descriptor = "I")
 	public static int anInt1441 = 0;
-
-	@OriginalMember(owner = "client!dj", name = "a", descriptor = "()V")
-	public static void method1173() {
-		mask = null;
-	}
 
 	@OriginalMember(owner = "client!dj", name = "a", descriptor = "(IIII)V")
 	public static void method1174(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
@@ -62,7 +54,7 @@ public final class Static46 {
 		anInt1441 = GlRenderer.canvasHeight;
 		@Pc(9) GL2 local9 = GlRenderer.gl;
 		local9.glDisable(GL2.GL_SCISSOR_TEST);
-		method1173();
+		GlFont.method1173();
 	}
 
 	@OriginalMember(owner = "client!dj", name = "a", descriptor = "([IIIII)V")
@@ -201,7 +193,7 @@ public final class Static46 {
 		} else {
 			gl.glScissor(0, 0, 0, 0);
 		}
-		method1173();
+		GlFont.method1173();
 	}
 
 	@OriginalMember(owner = "client!dj", name = "d", descriptor = "()V")
@@ -266,14 +258,7 @@ public final class Static46 {
 		} else {
 			local27.glScissor(0, 0, 0, 0);
 		}
-		method1173();
+		GlFont.method1173();
 	}
 
-	@OriginalMember(owner = "client!dj", name = "a", descriptor = "(Lclient!cf;)V")
-	public static void method1188(@OriginalArg(0) GlSprite arg0) {
-		if (arg0.anInt1859 != anInt1441 - clipY) {
-			throw new IllegalArgumentException();
-		}
-		mask = arg0;
-	}
 }

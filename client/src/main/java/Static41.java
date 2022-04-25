@@ -14,10 +14,7 @@ public final class Static41 {
 	@OriginalMember(owner = "client!dc", name = "R", descriptor = "Lclient!na;")
 	private static final JagString aClass100_269 = JagString.parse("Drop");
 
-	@OriginalMember(owner = "client!dc", name = "W", descriptor = "I")
-	public static volatile int anInt1313 = 0;
-
-	@OriginalMember(owner = "client!dc", name = "ab", descriptor = "I")
+    @OriginalMember(owner = "client!dc", name = "ab", descriptor = "I")
 	public static int anInt1316 = 0;
 
 	@OriginalMember(owner = "client!dc", name = "db", descriptor = "[[B")

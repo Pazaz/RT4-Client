@@ -11,6 +11,8 @@ public class AudioChannel {
     public static boolean stereo;
     @OriginalMember(owner = "client!va", name = "O", descriptor = "I")
     public static int threadPriority;
+    @OriginalMember(owner = "client!em", name = "x", descriptor = "Lclient!cj;")
+    public static AudioThread thread;
 
     @OriginalMember(owner = "client!vh", name = "h", descriptor = "Lclient!qb;")
 	private PcmStream stream;
@@ -82,16 +84,16 @@ public class AudioChannel {
 				local33.bufferCapacity = 16384;
 			}
 			local33.open(local33.bufferCapacity);
-			if (threadPriority > 0 && Static60.thread == null) {
-				Static60.thread = new AudioThread();
-				Static60.thread.signLink = arg1;
-				arg1.startThread(threadPriority, Static60.thread);
+			if (threadPriority > 0 && thread == null) {
+				thread = new AudioThread();
+				thread.signLink = arg1;
+				arg1.startThread(threadPriority, thread);
 			}
-			if (Static60.thread != null) {
-				if (Static60.thread.channels[arg3] != null) {
+			if (thread != null) {
+				if (thread.channels[arg3] != null) {
 					throw new IllegalArgumentException();
 				}
-				Static60.thread.channels[arg3] = local33;
+				thread.channels[arg3] = local33;
 			}
 			return local33;
 		} catch (@Pc(109) Throwable local109) {
@@ -102,16 +104,16 @@ public class AudioChannel {
 				local120.init(arg2);
 				local120.bufferCapacity = 16384;
 				local120.open(local120.bufferCapacity);
-				if (threadPriority > 0 && Static60.thread == null) {
-					Static60.thread = new AudioThread();
-					Static60.thread.signLink = arg1;
-					arg1.startThread(threadPriority, Static60.thread);
+				if (threadPriority > 0 && thread == null) {
+					thread = new AudioThread();
+					thread.signLink = arg1;
+					arg1.startThread(threadPriority, thread);
 				}
-				if (Static60.thread != null) {
-					if (Static60.thread.channels[arg3] != null) {
+				if (thread != null) {
+					if (thread.channels[arg3] != null) {
 						throw new IllegalArgumentException();
 					}
-					Static60.thread.channels[arg3] = local120;
+					thread.channels[arg3] = local120;
 				}
 				return local120;
 			} catch (@Pc(186) Throwable local186) {
@@ -359,22 +361,22 @@ public class AudioChannel {
 
 	@OriginalMember(owner = "client!vh", name = "a", descriptor = "(Z)V")
 	public final synchronized void quit() {
-		if (Static60.thread != null) {
+		if (thread != null) {
 			@Pc(6) boolean local6 = true;
 			for (@Pc(8) int local8 = 0; local8 < 2; local8++) {
-				if (Static60.thread.channels[local8] == this) {
-					Static60.thread.channels[local8] = null;
+				if (thread.channels[local8] == this) {
+					thread.channels[local8] = null;
 				}
-				if (Static60.thread.channels[local8] != null) {
+				if (thread.channels[local8] != null) {
 					local6 = false;
 				}
 			}
 			if (local6) {
-				Static60.thread.stop = true;
-				while (Static60.thread.running) {
+				thread.stop = true;
+				while (thread.running) {
 					ThreadUtils.sleep(50L);
 				}
-				Static60.thread = null;
+				thread = null;
 			}
 		}
 		this.flush();

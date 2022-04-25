@@ -30,8 +30,8 @@ public final class Static146 {
 		Static235.anInt5276 = arg0;
 		for (@Pc(3) int local3 = 0; local3 < Static152.mapSizeX; local3++) {
 			for (@Pc(8) int local8 = 0; local8 < Static99.mapSizeZ; local8++) {
-				if (Static130.aClass3_Sub5ArrayArrayArray1[arg0][local3][local8] == null) {
-					Static130.aClass3_Sub5ArrayArrayArray1[arg0][local3][local8] = new Tile(arg0, local3, local8);
+				if (SceneGraph.tiles[arg0][local3][local8] == null) {
+					SceneGraph.tiles[arg0][local3][local8] = new Tile(arg0, local3, local8);
 				}
 			}
 		}

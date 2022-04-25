@@ -7,9 +7,6 @@ public final class Static9 {
 	@OriginalMember(owner = "client!al", name = "e", descriptor = "I")
 	public static int anInt172;
 
-    @OriginalMember(owner = "client!al", name = "m", descriptor = "I")
-	public static int anInt178 = 0;
-
 	@OriginalMember(owner = "client!al", name = "r", descriptor = "Lclient!na;")
 	public static final JagString aClass100_35 = JagString.parse("showVideoAd");
 

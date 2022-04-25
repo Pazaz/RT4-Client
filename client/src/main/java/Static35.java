@@ -18,9 +18,6 @@ public final class Static35 {
 	@OriginalMember(owner = "client!cl", name = "Y", descriptor = "I")
 	public static int anInt1092 = -1;
 
-	@OriginalMember(owner = "client!cl", name = "Z", descriptor = "I")
-	public static int anInt1093 = 0;
-
 	@OriginalMember(owner = "client!cl", name = "ab", descriptor = "[I")
 	public static final int[] anIntArray83 = new int[256];
 
@@ -42,9 +39,9 @@ public final class Static35 {
 		@Pc(81) int local81 = local55;
 		@Pc(95) int local95;
 		@Pc(104) int local104;
-		if (arg4 >= Static267.anInt5773 && Static106.anInt2869 >= arg4) {
-			local95 = Static78.method1690(Static224.anInt5063, arg2 + arg3, Static172.anInt4164);
-			local104 = Static78.method1690(Static224.anInt5063, arg3 - arg2, Static172.anInt4164);
+		if (arg4 >= TextureOp29.anInt5773 && TextureOp29.anInt2869 >= arg4) {
+			local95 = Static78.method1690(TextureOp29.anInt5063, arg2 + arg3, TextureOp29.anInt4164);
+			local104 = Static78.method1690(TextureOp29.anInt5063, arg3 - arg2, TextureOp29.anInt4164);
 			Static131.method2576(Static71.anIntArrayArray10[arg4], local104, local95, arg0);
 		}
 		@Pc(118) int local118 = local67 * (arg1 - 1);
@@ -71,13 +68,13 @@ public final class Static35 {
 			local75 -= local67;
 			local42 += -local118;
 			local104 = local17 + arg4;
-			if (Static267.anInt5773 <= local104 && Static106.anInt2869 >= local95) {
-				@Pc(213) int local213 = Static78.method1690(Static224.anInt5063, local15 + arg3, Static172.anInt4164);
-				@Pc(222) int local222 = Static78.method1690(Static224.anInt5063, arg3 - local15, Static172.anInt4164);
-				if (local95 >= Static267.anInt5773) {
+			if (TextureOp29.anInt5773 <= local104 && TextureOp29.anInt2869 >= local95) {
+				@Pc(213) int local213 = Static78.method1690(TextureOp29.anInt5063, local15 + arg3, TextureOp29.anInt4164);
+				@Pc(222) int local222 = Static78.method1690(TextureOp29.anInt5063, arg3 - local15, TextureOp29.anInt4164);
+				if (local95 >= TextureOp29.anInt5773) {
 					Static131.method2576(Static71.anIntArrayArray10[local95], local222, local213, arg0);
 				}
-				if (Static106.anInt2869 >= local104) {
+				if (TextureOp29.anInt2869 >= local104) {
 					Static131.method2576(Static71.anIntArrayArray10[local104], local222, local213, arg0);
 				}
 			}
@@ -87,7 +84,7 @@ public final class Static35 {
 
 	@OriginalMember(owner = "client!cl", name = "a", descriptor = "(III)J")
 	public static long method899(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		@Pc(7) Tile local7 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
+		@Pc(7) Tile local7 = SceneGraph.tiles[arg0][arg1][arg2];
 		if (local7 == null) {
 			return 0L;
 		}

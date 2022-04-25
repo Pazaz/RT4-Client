@@ -3,10 +3,15 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
+import java.util.zip.CRC32;
+
 @OriginalClass("client!bg")
 public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 
-	@OriginalMember(owner = "client!bg", name = "m", descriptor = "Lclient!ii;")
+    @OriginalMember(owner = "client!fn", name = "X", descriptor = "Ljava/util/zip/CRC32;")
+    public static final CRC32 aCRC32_1 = new CRC32();
+
+    @OriginalMember(owner = "client!bg", name = "m", descriptor = "Lclient!ii;")
 	private Js5Index aClass70_1;
 
 	@OriginalMember(owner = "client!bg", name = "w", descriptor = "[B")
@@ -356,9 +361,9 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 				if (local161 == null || local161.length <= 2) {
 					throw new RuntimeException();
 				}
-				Static74.aCRC32_1.reset();
-				Static74.aCRC32_1.update(local161, 0, local161.length - 2);
-				local199 = (int) Static74.aCRC32_1.getValue();
+				aCRC32_1.reset();
+				aCRC32_1.update(local161, 0, local161.length - 2);
+				local199 = (int) aCRC32_1.getValue();
 				if (this.aClass70_1.anIntArray268[arg1] != local199) {
 					throw new RuntimeException();
 				}
@@ -391,9 +396,9 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 			if (local161 == null || local161.length <= 2) {
 				throw new RuntimeException();
 			}
-			Static74.aCRC32_1.reset();
-			Static74.aCRC32_1.update(local161, 0, local161.length - 2);
-			local199 = (int) Static74.aCRC32_1.getValue();
+			aCRC32_1.reset();
+			aCRC32_1.update(local161, 0, local161.length - 2);
+			local199 = (int) aCRC32_1.getValue();
 			if (this.aClass70_1.anIntArray268[arg1] != local199) {
 				throw new RuntimeException();
 			}

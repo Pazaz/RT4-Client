@@ -15,9 +15,6 @@ public final class Static12 {
 	@OriginalMember(owner = "client!bb", name = "A", descriptor = "Lclient!na;")
 	public static final JagString aClass100_74 = JagString.parse("::");
 
-	@OriginalMember(owner = "client!bb", name = "E", descriptor = "I")
-	public static int anInt400 = 0;
-
 	@OriginalMember(owner = "client!bb", name = "a", descriptor = "(I)V")
 	public static void method447() {
 		if (WorldMap.zoom < WorldMap.targetZoom) {

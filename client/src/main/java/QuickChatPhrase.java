@@ -11,5 +11,5 @@ public final class QuickChatPhrase {
 	public QuickChatPhraseType type;
 
 	@OriginalMember(owner = "client!bd", name = "h", descriptor = "[I")
-	public int[] anIntArray33;
+	public int[] values;
 }

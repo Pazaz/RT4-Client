@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static209 {
 
-    @OriginalMember(owner = "client!ra", name = "jb", descriptor = "J")
-	public static volatile long aLong161 = 0L;
-
 	@OriginalMember(owner = "client!ra", name = "a", descriptor = "(ILclient!pb;BII)V")
 	public static void method3701(@OriginalArg(0) int arg0, @OriginalArg(1) LocType arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		for (@Pc(10) AreaSound local10 = (AreaSound) Static3.aClass69_135.method2289(); local10 != null; local10 = (AreaSound) Static3.aClass69_135.method2288()) {

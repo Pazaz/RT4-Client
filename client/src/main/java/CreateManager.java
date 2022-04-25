@@ -92,7 +92,7 @@ public class CreateManager {
                 Protocol.inboundBuffer.offset = 0;
                 Protocol.socket.read(0, suggestedNames.length * 8, Protocol.inboundBuffer.data);
                 for (local120 = 0; local120 < suggestedNames.length; local120++) {
-                    suggestedNames[local120] = Base37.decodeLowerCase(Protocol.inboundBuffer.g8());
+                    suggestedNames[local120] = Base37.decode37(Protocol.inboundBuffer.g8());
                 }
                 reply = 21;
                 step = 0;

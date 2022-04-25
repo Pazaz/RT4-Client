@@ -7,9 +7,6 @@ public final class Static142 {
 	@OriginalMember(owner = "client!lc", name = "n", descriptor = "I")
 	public static int originZ;
 
-	@OriginalMember(owner = "client!lc", name = "m", descriptor = "Lclient!na;")
-	public static final JagString aClass100_667 = JagString.parse("settings=");
-
 	@OriginalMember(owner = "client!lc", name = "a", descriptor = "(IIIIIII)V")
 	public static void method2726(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
 		Static277.anInt5854 = 0;
@@ -27,7 +24,7 @@ public final class Static142 {
 			} else if (PlayerList.size > local5) {
 				local17 = PlayerList.players[PlayerList.ids[local5]];
 			} else {
-				local17 = Static175.npcs[Static33.anIntArray79[local5 - PlayerList.size]];
+				local17 = NpcList.npcs[Static33.anIntArray79[local5 - PlayerList.size]];
 			}
 			if (local17 != null && local17.method2682()) {
 				@Pc(58) NpcType local58;
@@ -101,7 +98,7 @@ public final class Static142 {
 						}
 					}
 				}
-				if (local17.chatMessage != null && (local5 >= PlayerList.size || Static59.anInt1812 == 0 || Static59.anInt1812 == 3 || Static59.anInt1812 == 1 && Static98.method1965(((Player) local17).username))) {
+				if (local17.chatMessage != null && (local5 >= PlayerList.size || Chat.publicFilter == 0 || Chat.publicFilter == 3 || Chat.publicFilter == 1 && FriendsList.contains(((Player) local17).username))) {
 					Static180.method3326(arg4 >> 1, arg3, local17, arg5, local17.method2691(), arg1 >> 1);
 					if (Static65.anInt1951 > -1 && Static277.anInt5854 < Static191.anInt4506) {
 						Static191.anIntArray389[Static277.anInt5854] = Fonts.b12Full.getStringWidth(local17.chatMessage) / 2;
@@ -307,8 +304,4 @@ public final class Static142 {
 		}
 	}
 
-	@OriginalMember(owner = "client!lc", name = "a", descriptor = "(B)I")
-	public static int getIdleLoops() {
-		return Static93.anInt2467;
-	}
 }

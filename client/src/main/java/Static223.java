@@ -4,10 +4,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static223 {
 
-    @OriginalMember(owner = "client!sc", name = "f", descriptor = "Lclient!na;")
-	public static final JagString aClass100_946 = JagString.parse("(R");
-
-	@OriginalMember(owner = "client!sc", name = "g", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!sc", name = "g", descriptor = "Lclient!na;")
 	public static final JagString aClass100_947 = JagString.parse(" )2> <col=ff9040>");
 
     @OriginalMember(owner = "client!sc", name = "p", descriptor = "I")

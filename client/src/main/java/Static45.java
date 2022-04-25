@@ -341,7 +341,7 @@ public final class Static45 {
 							local2057[local2025.length + local349] = local2049[local349];
 						}
 						Static110.method2280(local152, local2057);
-						Static221.method3393(local1900, Static253.aByteArrayArrayArray16[local152], Static4.aByteArrayArrayArray1[local152], Static120.lights, local152, Static120.lightCount, local1896, Static163.aByteArrayArrayArray11[local152], Static240.aByteArrayArrayArray14[local152], Static83.activeTileHeightMap[local152], local1888);
+						Static221.method3393(local1900, Static253.aByteArrayArrayArray16[local152], Static4.aByteArrayArrayArray1[local152], LightingManager.lights, local152, LightingManager.lightCount, local1896, Static163.aByteArrayArrayArray11[local152], Static240.aByteArrayArrayArray14[local152], Static83.activeTileHeightMap[local152], local1888);
 						break;
 					}
 					for (local202 = 1; local202 <= 103; local202++) {

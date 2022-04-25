@@ -10,26 +10,6 @@ public final class Static155 {
 	@OriginalMember(owner = "client!me", name = "k", descriptor = "I")
 	public static int anInt3718 = -1;
 
-	@OriginalMember(owner = "client!me", name = "P", descriptor = "[I")
-	public static final int[] varcs = new int[2000];
-
-	@OriginalMember(owner = "client!me", name = "a", descriptor = "(IB)V")
-	public static void method2940(@OriginalArg(0) int arg0) {
-		WorldMap.anInt4901 = -1;
-		if (arg0 == 37) {
-			WorldMap.targetZoom = 3.0F;
-		} else if (arg0 == 50) {
-			WorldMap.targetZoom = 4.0F;
-		} else if (arg0 == 75) {
-			WorldMap.targetZoom = 6.0F;
-		} else if (arg0 == 100) {
-			WorldMap.targetZoom = 8.0F;
-		} else if (arg0 == 200) {
-			WorldMap.targetZoom = 16.0F;
-		}
-		WorldMap.anInt4901 = -1;
-	}
-
 	@OriginalMember(owner = "client!me", name = "a", descriptor = "(ZLclient!na;I)V")
 	public static void method2941(@OriginalArg(0) boolean arg0, @OriginalArg(1) JagString arg1) {
 		@Pc(8) short[] local8 = new short[16];
@@ -39,8 +19,8 @@ public final class Static155 {
 			@Pc(27) ObjType local27 = ObjTypeList.get(local16);
 			if ((!arg0 || local27.stockMarket) && local27.certificateTemplate == -1 && local27.lentTemplate == -1 && local27.dummyItem == 0 && local27.name.toLowerCase().indexOf(local12) != -1) {
 				if (local14 >= 250) {
-					Static169.aShortArray52 = null;
-					Static111.anInt2905 = -1;
+					Find.results = null;
+					Find.index = -1;
 					return;
 				}
 				if (local14 >= local8.length) {
@@ -53,14 +33,14 @@ public final class Static155 {
 				local8[local14++] = (short) local16;
 			}
 		}
-		Static169.aShortArray52 = local8;
-		Static67.anInt3356 = 0;
-		Static111.anInt2905 = local14;
-		@Pc(117) JagString[] local117 = new JagString[Static111.anInt2905];
-		for (@Pc(119) int local119 = 0; local119 < Static111.anInt2905; local119++) {
+		Find.results = local8;
+		Find.size = 0;
+		Find.index = local14;
+		@Pc(117) JagString[] local117 = new JagString[Find.index];
+		for (@Pc(119) int local119 = 0; local119 < Find.index; local119++) {
 			local117[local119] = ObjTypeList.get(local8[local119]).name;
 		}
-		Static202.method3656(local117, Static169.aShortArray52);
+		Static202.method3656(local117, Find.results);
 	}
 
 	@OriginalMember(owner = "client!me", name = "a", descriptor = "(II)I")

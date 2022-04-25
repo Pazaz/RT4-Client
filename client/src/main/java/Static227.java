@@ -8,10 +8,7 @@ public final class Static227 {
     @OriginalMember(owner = "client!sg", name = "o", descriptor = "I")
 	public static int cameraType;
 
-    @OriginalMember(owner = "client!sg", name = "b", descriptor = "[I")
-	public static final int[] anIntArray446 = new int[25];
-
-	@OriginalMember(owner = "client!sg", name = "e", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!sg", name = "e", descriptor = "Lclient!na;")
 	public static final JagString SETTINGS = JagString.parse("settings");
 
 }

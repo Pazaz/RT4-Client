@@ -83,12 +83,12 @@ public final class Static18 {
 	@OriginalMember(owner = "client!bh", name = "a", descriptor = "(B)Lclient!ba;")
 	public static World getFirstWorld() {
 		Static51.worldPos = 0;
-		return Static88.getNextWorld();
+		return WorldList.getNextWorld();
 	}
 
 	@OriginalMember(owner = "client!bh", name = "a", descriptor = "(IIII)V")
 	public static void method559(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		@Pc(7) Tile local7 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
+		@Pc(7) Tile local7 = SceneGraph.tiles[arg0][arg1][arg2];
 		if (local7 == null) {
 			return;
 		}

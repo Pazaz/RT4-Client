@@ -6,7 +6,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!ki")
 public final class MidiDecoder {
 
-	@OriginalMember(owner = "client!ki", name = "b", descriptor = "[I")
+    @OriginalMember(owner = "client!ki", name = "e", descriptor = "[B")
+    public static final byte[] STATUS_LENGTHS = new byte[] { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    @OriginalMember(owner = "client!ki", name = "b", descriptor = "[I")
 	public int[] anIntArray310;
 
 	@OriginalMember(owner = "client!ki", name = "c", descriptor = "[I")
@@ -98,7 +100,7 @@ public final class MidiDecoder {
 	private int method2633(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		@Pc(12) int local12;
 		if (arg1 != 255) {
-			@Pc(78) byte local78 = Static135.aByteArray46[arg1 - 128];
+			@Pc(78) byte local78 = STATUS_LENGTHS[arg1 - 128];
 			local12 = arg1;
 			if (local78 >= 1) {
 				local12 = arg1 | this.aClass3_Sub15_6.g1() << 8;

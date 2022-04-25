@@ -1,67 +1,19 @@
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
-import org.openrs2.deob.annotation.Pc;
 
 public final class Static141 {
 
 	@OriginalMember(owner = "client!lb", name = "z", descriptor = "I")
 	public static int anInt3473;
 
-	@OriginalMember(owner = "client!lb", name = "p", descriptor = "[I")
-	public static final int[] anIntArray326 = new int[25];
-
-	@OriginalMember(owner = "client!lb", name = "s", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!lb", name = "s", descriptor = "Lclient!na;")
 	public static final JagString aClass100_664 = JagString.parse(":clan:");
 
 	@OriginalMember(owner = "client!lb", name = "d", descriptor = "(B)V")
 	public static void method2720() {
 		if (WorldMap.aClass100_724 != null) {
-			Static90.method1853(WorldMap.aClass100_724);
+			WorldMap.method1853(WorldMap.aClass100_724);
 			WorldMap.aClass100_724 = null;
-		}
-	}
-
-	@OriginalMember(owner = "client!lb", name = "a", descriptor = "(Z)V")
-	public static void method2721() {
-		Static65.method1500();
-		Static89.aClass3_Sub2_Sub1_5 = null;
-		Static107.anInt2875 = -1;
-		client.method3768();
-		Static255.cache.clear();
-		Static171.aClass139_1 = new Class139();
-		((Js5GlTextureProvider) Rasteriser.textureProvider).clear();
-		Static120.lightCount = 0;
-		Static120.lights = new Light[255];
-		Static237.method4120();
-		Static242.method4203();
-		Static115.clear();
-		WorldMap.clear(false);
-		TitleScreen.clear();
-		for (@Pc(39) int local39 = 0; local39 < 2048; local39++) {
-			@Pc(46) Player player = PlayerList.players[local39];
-			if (player != null) {
-				player.attachment = null;
-			}
-		}
-		if (GlRenderer.enabled) {
-			Static242.method4201();
-			Static76.method1642();
-		}
-		Fonts.load(client.js5Archive13, client.js5Archive8);
-		Sprites.load(client.js5Archive8);
-		Static204.aClass3_Sub2_Sub1_10 = null;
-		Static39.aClass3_Sub2_Sub1_1 = null;
-		Static92.aClass3_Sub2_Sub1_6 = null;
-		Static165.aClass3_Sub2_Sub1_8 = null;
-		Static181.aClass3_Sub2_Sub1_9 = null;
-		if (client.gameState == 5) {
-			TitleScreen.load(client.js5Archive8);
-		}
-		if (client.gameState == 10) {
-			Static73.method1596(false);
-		}
-		if (client.gameState == 30) {
-			client.setGameState(25);
 		}
 	}
 

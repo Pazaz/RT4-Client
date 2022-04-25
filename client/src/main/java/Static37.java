@@ -19,7 +19,7 @@ public final class Static37 {
 		@Pc(43) int local43;
 		@Pc(36) int local36;
 		if (arg0.faceEntity != -1 && arg0.faceEntity < 32768) {
-			@Pc(26) Npc local26 = Static175.npcs[arg0.faceEntity];
+			@Pc(26) Npc local26 = NpcList.npcs[arg0.faceEntity];
 			if (local26 != null) {
 				local36 = arg0.zFine - local26.zFine;
 				local43 = arg0.xFine - local26.xFine;

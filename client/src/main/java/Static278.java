@@ -13,59 +13,6 @@ public final class Static278 {
 	@OriginalMember(owner = "client!wj", name = "f", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1103 = JagString.parse("ul");
 
-	@OriginalMember(owner = "client!wj", name = "a", descriptor = "(I)V")
-	public static void method4645() {
-		while (true) {
-			if (Protocol.inboundBuffer.method2241(Protocol.length) >= 27) {
-				@Pc(14) int local14 = Protocol.inboundBuffer.gBits(15);
-				if (local14 != 32767) {
-					@Pc(19) boolean local19 = false;
-					if (Static175.npcs[local14] == null) {
-						local19 = true;
-						Static175.npcs[local14] = new Npc();
-					}
-					@Pc(37) Npc local37 = Static175.npcs[local14];
-					Static33.anIntArray79[Static272.anInt5214++] = local14;
-					local37.lastSeenLoop = client.loop;
-					if (local37.type != null && local37.type.hasAreaSound()) {
-						Static91.method1877(local37);
-					}
-					@Pc(66) int local66 = Protocol.inboundBuffer.gBits(1);
-					@Pc(73) int local73 = Static56.anIntArray141[Protocol.inboundBuffer.gBits(3)];
-					if (local19) {
-						local37.anInt3400 = local37.anInt3381 = local73;
-					}
-					@Pc(86) int local86 = Protocol.inboundBuffer.gBits(1);
-					if (local86 == 1) {
-						Protocol.extendedIds[Protocol.extendedCount++] = local14;
-					}
-					@Pc(105) int local105 = Protocol.inboundBuffer.gBits(5);
-					local37.method2698(NpcTypeList.get(Protocol.inboundBuffer.gBits(14)));
-					if (local105 > 15) {
-						local105 -= 32;
-					}
-					@Pc(124) int local124 = Protocol.inboundBuffer.gBits(5);
-					if (local124 > 15) {
-						local124 -= 32;
-					}
-					local37.method2692(local37.type.soze);
-					local37.anInt3365 = local37.type.basId;
-					local37.anInt3376 = local37.type.anInt3733;
-					if (local37.anInt3376 == 0) {
-						local37.anInt3381 = 0;
-					}
-					local37.method2683(local37.getSize(), PlayerList.self.movementQueueX[0] + local124, local105 + PlayerList.self.movementQueueZ[0], local66 == 1);
-					if (local37.type.hasAreaSound()) {
-						Static122.method2411(local37.movementQueueZ[0], null, 0, local37, local37.movementQueueX[0], Player.level, null);
-					}
-					continue;
-				}
-			}
-			Protocol.inboundBuffer.accessBytes();
-			return;
-		}
-	}
-
 	@OriginalMember(owner = "client!wj", name = "a", descriptor = "(IIIIIII)V")
 	public static void method4647(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6) {
 		@Pc(3) Class120 local3 = new Class120();
@@ -86,28 +33,20 @@ public final class Static278 {
 	@OriginalMember(owner = "client!wj", name = "a", descriptor = "(Z)V")
 	public static void setRenderTiles(@OriginalArg(0) boolean arg0) {
 		if (arg0) {
-			Static130.aClass3_Sub5ArrayArrayArray1 = Static276.underWaterGroundTiles;
+			SceneGraph.tiles = Static276.underWaterGroundTiles;
 			Static83.activeTileHeightMap = Static80.underWaterTileHeightMap;
 			Static182.aClass3_Sub14ArrayArray2 = Static195.underWaterHdTiles;
 		} else {
-			Static130.aClass3_Sub5ArrayArrayArray1 = Static197.surfaceGroundTiles;
+			SceneGraph.tiles = Static197.surfaceGroundTiles;
 			Static83.activeTileHeightMap = Static107.surfaceTileHeightMap;
 			Static182.aClass3_Sub14ArrayArray2 = Static36.surfaceHdTiles;
 		}
-		Static126.anInt3114 = Static130.aClass3_Sub5ArrayArrayArray1.length;
+		Static126.anInt3114 = SceneGraph.tiles.length;
 	}
 
 	@OriginalMember(owner = "client!wj", name = "b", descriptor = "(I)V")
 	public static void method4649() {
 		NpcTypeList.aClass99_18.clear();
-	}
-
-	@OriginalMember(owner = "client!wj", name = "a", descriptor = "(IIB)V")
-	public static void method4650(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		if (Preferences.musicVolume != 0 && arg1 != -1) {
-			Static122.method2410(client.js5Archive11, arg1, Preferences.musicVolume);
-			MidiPlayer.jingle = true;
-		}
 	}
 
 	@OriginalMember(owner = "client!wj", name = "a", descriptor = "(IIZLclient!wa;IIBII)V")
@@ -172,24 +111,6 @@ public final class Static278 {
 		}
 	}
 
-	@OriginalMember(owner = "client!wj", name = "a", descriptor = "(BII)I")
-	public static int method4652(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
-		@Pc(8) Inv local8 = (Inv) Static20.objectContainerCache.get((long) arg0);
-		if (local8 == null) {
-			return 0;
-		} else if (arg1 == -1) {
-			return 0;
-		} else {
-			@Pc(25) int local25 = 0;
-			for (@Pc(27) int local27 = 0; local27 < local8.anIntArray422.length; local27++) {
-				if (arg1 == local8.objectIds[local27]) {
-					local25 += local8.anIntArray422[local27];
-				}
-			}
-			return local25;
-		}
-	}
-
 	@OriginalMember(owner = "client!wj", name = "b", descriptor = "(B)V")
 	public static void processLogout() {
 		if (Protocol.socket != null) {
@@ -197,7 +118,7 @@ public final class Static278 {
 			Protocol.socket = null;
 		}
 		client.method3768();
-		Static65.method1500();
+		SceneGraph.clear();
 		@Pc(19) int local19;
 		for (local19 = 0; local19 < 4; local19++) {
 			PathFinder.collisionMaps[local19].resetFlags();
@@ -223,7 +144,7 @@ public final class Static278 {
 			PlayerList.appearanceCache[local19] = null;
 		}
 		for (local19 = 0; local19 < 32768; local19++) {
-			Static175.npcs[local19] = null;
+			NpcList.npcs[local19] = null;
 		}
 		for (local19 = 0; local19 < 4; local19++) {
 			for (@Pc(115) int local115 = 0; local115 < 104; local115++) {

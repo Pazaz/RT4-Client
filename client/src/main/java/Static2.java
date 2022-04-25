@@ -251,7 +251,7 @@ public final class Static2 {
 				Static158.anInt3851 = arg0.anInt477;
 				Static145.anInt3502 = arg0.anInt519;
 			}
-			if (Static134.aClass59_2.aBoolean141) {
+			if (PlayerAppearance.DEFAULT.gender) {
 				arg0.anInt477 = Static158.anInt3851;
 			} else {
 				arg0.anInt477 = Static145.anInt3502;
@@ -261,7 +261,7 @@ public final class Static2 {
 				Static145.anInt3502 = arg0.anInt519;
 				Static158.anInt3851 = arg0.anInt477;
 			}
-			if (Static134.aClass59_2.aBoolean141) {
+			if (PlayerAppearance.DEFAULT.gender) {
 				arg0.anInt477 = Static145.anInt3502;
 			} else {
 				arg0.anInt477 = Static158.anInt3851;
@@ -281,7 +281,7 @@ public final class Static2 {
 				arg0.modelId = ((int) PlayerList.self.username.encode37() << 11) + 2047;
 				arg0.anInt496 = PlayerList.self.anInt3388;
 				arg0.anInt500 = 0;
-				arg0.anInt522 = PlayerList.self.anInt3366;
+				arg0.modelSeqId = PlayerList.self.anInt3366;
 				arg0.anInt510 = PlayerList.self.anInt3407;
 			}
 		}

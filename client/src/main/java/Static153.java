@@ -25,34 +25,6 @@ public final class Static153 {
 	@OriginalMember(owner = "client!mc", name = "tb", descriptor = "S")
 	public static short aShort22 = 1;
 
-	@OriginalMember(owner = "client!mc", name = "c", descriptor = "(III)V")
-	public static void method2905(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
-		@Pc(14) DelayedStateChange local14 = Static238.method4143(7, arg0);
-		local14.pushServer();
-		local14.intArg1 = arg1;
-	}
-
-	@OriginalMember(owner = "client!mc", name = "a", descriptor = "(IIIIIIII)V")
-	public static void method2907(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6) {
-		@Pc(9) int local9 = arg4 + arg1;
-		@Pc(13) int local13 = arg4 + arg6;
-		@Pc(15) int local15;
-		for (local15 = arg1; local15 < local9; local15++) {
-			Static131.method2576(Static71.anIntArrayArray10[local15], arg6, arg5, arg0);
-		}
-		@Pc(34) int local34 = arg2 - arg4;
-		@Pc(39) int local39 = arg5 - arg4;
-		for (local15 = arg2; local15 > local34; local15--) {
-			Static131.method2576(Static71.anIntArrayArray10[local15], arg6, arg5, arg0);
-		}
-		for (local15 = local9; local15 <= local34; local15++) {
-			@Pc(72) int[] local72 = Static71.anIntArrayArray10[local15];
-			Static131.method2576(local72, arg6, local13, arg0);
-			Static131.method2576(local72, local13, local39, arg3);
-			Static131.method2576(local72, local39, arg5, arg0);
-		}
-	}
-
 	@OriginalMember(owner = "client!mc", name = "f", descriptor = "(B)V")
 	public static void method2909() {
 		Protocol.outboundBuffer.p1isaac(184);

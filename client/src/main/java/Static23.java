@@ -62,19 +62,7 @@ public final class Static23 {
 		}
 	}
 
-	@OriginalMember(owner = "client!bm", name = "a", descriptor = "(III)I")
-	public static int method647(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
-		@Pc(10) Inv local10 = (Inv) Static20.objectContainerCache.get((long) arg0);
-		if (local10 == null) {
-			return 0;
-		} else if (arg1 >= 0 && arg1 < local10.anIntArray422.length) {
-			return local10.anIntArray422[arg1];
-		} else {
-			return 0;
-		}
-	}
-
-	@OriginalMember(owner = "client!bm", name = "a", descriptor = "(B[B)[B")
+    @OriginalMember(owner = "client!bm", name = "a", descriptor = "(B[B)[B")
 	public static byte[] method648(@OriginalArg(1) byte[] arg0) {
 		@Pc(6) int local6 = arg0.length;
 		@Pc(9) byte[] local9 = new byte[local6];

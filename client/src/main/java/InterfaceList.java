@@ -150,4 +150,10 @@ public class InterfaceList {
         }
         return components[interfaceId][componentId];
     }
+
+    @OriginalMember(owner = "client!client", name = "b", descriptor = "(Lclient!be;)Lclient!bf;")
+    public static ServerActiveProperties getServerActiveProperties(@OriginalArg(0) Component arg0) {
+        @Pc(13) ServerActiveProperties local13 = (ServerActiveProperties) Static210.aClass133_21.get(((long) arg0.id << 32) + (long) arg0.createdComponentId);
+        return local13 == null ? arg0.aClass3_Sub4_1 : local13;
+    }
 }

@@ -1,4 +1,3 @@
-import java.util.Random;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
@@ -10,9 +9,6 @@ public final class Static39 {
 
 	@OriginalMember(owner = "client!d", name = "R", descriptor = "Lclient!be;")
 	public static Component aClass13_10 = null;
-
-	@OriginalMember(owner = "client!d", name = "S", descriptor = "Ljava/util/Random;")
-	public static final Random aRandom1 = new Random();
 
 	@OriginalMember(owner = "client!d", name = "db", descriptor = "Z")
 	public static boolean aBoolean77 = false;

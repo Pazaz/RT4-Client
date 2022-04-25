@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static70 {
 
-    @OriginalMember(owner = "client!fi", name = "k", descriptor = "I")
-	public static int type = 0;
-
     @OriginalMember(owner = "client!fi", name = "a", descriptor = "(BI)Lclient!na;")
 	public static JagString method1548(@OriginalArg(1) int arg0) {
 		@Pc(9) JagString local9 = Static123.parseInt(arg0);

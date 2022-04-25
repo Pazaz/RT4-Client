@@ -38,11 +38,4 @@ public final class Static190 {
 		return local43;
 	}
 
-	@OriginalMember(owner = "client!pf", name = "a", descriptor = "(III)V")
-	public static void method3444(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		@Pc(14) DelayedStateChange local14 = Static238.method4143(13, arg1);
-		local14.pushServer();
-		local14.intArg1 = arg0;
-	}
-
 }

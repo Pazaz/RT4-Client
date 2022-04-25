@@ -15,9 +15,6 @@ public final class Static84 {
 	@OriginalMember(owner = "client!gk", name = "h", descriptor = "I")
 	public static int anInt2255 = 0;
 
-	@OriginalMember(owner = "client!gk", name = "i", descriptor = "I")
-	public static int anInt2256 = 0;
-
 	@OriginalMember(owner = "client!gk", name = "b", descriptor = "(B)V")
 	public static void method1771() {
 		Static62.anIntArray150 = Static206.method3679(0.4F);

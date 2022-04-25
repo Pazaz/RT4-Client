@@ -27,11 +27,11 @@ public final class Static176 {
 		} else if (SignLink.anInt5928 == 1 || SignLink.anInt5928 == 2 || client.modeWhere == 2) {
 			@Pc(31) byte[] local31 = local3.hostname.method3148();
 			client.hostname = new String(local31, 0, local31.length);
-			Static125.worldId = local3.id;
+			Player.worldId = local3.id;
 			if (client.modeWhere != 0) {
-				client.defaultPort = Static125.worldId + 43594; // 40000;
+				client.defaultPort = Player.worldId + 43594; // 40000;
 				client.port = client.defaultPort;
-				client.alternatePort = Static125.worldId + 43594; // 50000;
+				client.alternatePort = Player.worldId + 43594; // 50000;
 			}
 			return true;
 		} else {
@@ -148,12 +148,12 @@ public final class Static176 {
 				@Pc(502) Npc local502;
 				@Pc(597) Player local597;
 				if (local133 == 1) {
-					@Pc(421) Npc local421 = Static175.npcs[local140];
+					@Pc(421) Npc local421 = NpcList.npcs[local140];
 					if ((local421.type.soze & 0x1) == 0 && (local421.xFine & 0x7F) == 0 && (local421.zFine & 0x7F) == 0 || (local421.type.soze & 0x1) == 1 && (local421.xFine & 0x7F) == 64 && (local421.zFine & 0x7F) == 64) {
 						local479 = local421.xFine + 64 - local421.type.soze * 64;
 						local240 = local421.zFine - (local421.type.soze - 1) * 64;
 						for (local493 = 0; local493 < Static272.anInt5214; local493++) {
-							local502 = Static175.npcs[Static33.anIntArray79[local493]];
+							local502 = NpcList.npcs[Static33.anIntArray79[local493]];
 							local514 = local502.xFine + 64 - local502.type.soze * 64;
 							local526 = local502.zFine + 64 - local502.type.soze * 64;
 							if (local502 != null && local421 != local502 && local514 >= local479 && local421.type.soze - (local514 - local479 >> 7) >= local502.type.soze && local240 <= local526 && local502.type.soze <= local421.type.soze - (local526 - local240 >> 7)) {
@@ -177,7 +177,7 @@ public final class Static176 {
 						local479 = local688.xFine - (local688.getSize() - 1) * 64;
 						local240 = local688.zFine + 64 - local688.getSize() * 64;
 						for (local493 = 0; local493 < Static272.anInt5214; local493++) {
-							local502 = Static175.npcs[Static33.anIntArray79[local493]];
+							local502 = NpcList.npcs[Static33.anIntArray79[local493]];
 							local514 = local502.xFine + 64 - local502.type.soze * 64;
 							local526 = local502.zFine + 64 - local502.type.soze * 64;
 							if (local502 != null && local514 >= local479 && local502.type.soze <= local688.getSize() - (local514 - local479 >> 7) && local526 >= local240 && local502.type.soze <= local688.getSize() - (local526 - local240 >> 7)) {
@@ -257,27 +257,27 @@ public final class Static176 {
 		if (arg3 == 0) {
 			local12 = new PlainTile(arg10, arg11, arg12, arg13, -1, arg18, false);
 			for (local14 = arg0; local14 >= 0; local14--) {
-				if (Static130.aClass3_Sub5ArrayArrayArray1[local14][arg1][arg2] == null) {
-					Static130.aClass3_Sub5ArrayArrayArray1[local14][arg1][arg2] = new Tile(local14, arg1, arg2);
+				if (SceneGraph.tiles[local14][arg1][arg2] == null) {
+					SceneGraph.tiles[local14][arg1][arg2] = new Tile(local14, arg1, arg2);
 				}
 			}
-			Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2].aClass131_1 = local12;
+			SceneGraph.tiles[arg0][arg1][arg2].plainTile = local12;
 		} else if (arg3 == 1) {
 			local12 = new PlainTile(arg14, arg15, arg16, arg17, arg5, arg19, arg6 == arg7 && arg6 == arg8 && arg6 == arg9);
 			for (local14 = arg0; local14 >= 0; local14--) {
-				if (Static130.aClass3_Sub5ArrayArrayArray1[local14][arg1][arg2] == null) {
-					Static130.aClass3_Sub5ArrayArrayArray1[local14][arg1][arg2] = new Tile(local14, arg1, arg2);
+				if (SceneGraph.tiles[local14][arg1][arg2] == null) {
+					SceneGraph.tiles[local14][arg1][arg2] = new Tile(local14, arg1, arg2);
 				}
 			}
-			Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2].aClass131_1 = local12;
+			SceneGraph.tiles[arg0][arg1][arg2].plainTile = local12;
 		} else {
 			@Pc(134) ShapedTile local134 = new ShapedTile(arg3, arg4, arg5, arg1, arg2, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			for (local14 = arg0; local14 >= 0; local14--) {
-				if (Static130.aClass3_Sub5ArrayArrayArray1[local14][arg1][arg2] == null) {
-					Static130.aClass3_Sub5ArrayArrayArray1[local14][arg1][arg2] = new Tile(local14, arg1, arg2);
+				if (SceneGraph.tiles[local14][arg1][arg2] == null) {
+					SceneGraph.tiles[local14][arg1][arg2] = new Tile(local14, arg1, arg2);
 				}
 			}
-			Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2].aClass43_1 = local134;
+			SceneGraph.tiles[arg0][arg1][arg2].shapedTile = local134;
 		}
 	}
 

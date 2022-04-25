@@ -34,7 +34,7 @@ public class TextureOpSprite extends TextureOp {
 			local43.trim();
 			this.anInt3240 = local43.anInt1859;
 			this.anInt3239 = local43.anInt1867;
-			this.anIntArray305 = local43.anIntArray20;
+			this.anIntArray305 = local43.pixels;
 			return true;
 		}
 	}

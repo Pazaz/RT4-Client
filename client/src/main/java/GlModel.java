@@ -10,8 +10,50 @@ public final class GlModel extends Model {
 
     @OriginalMember(owner = "client!tf", name = "G", descriptor = "Z")
     public static boolean arbVboSupported;
+    @OriginalMember(owner = "client!td", name = "D", descriptor = "Lclient!wa;")
+    public static Buffer aClass3_Sub15_8 = new Buffer(10000);
+	@OriginalMember(owner = "client!td", name = "bb", descriptor = "Lclient!td;")
+	public static GlModel aClass8_Sub1_Sub1_1 = new GlModel();
+	@OriginalMember(owner = "client!td", name = "jb", descriptor = "Lclient!td;")
+	public static GlModel aClass8_Sub1_Sub1_2 = new GlModel();
+	@OriginalMember(owner = "client!td", name = "mb", descriptor = "Lclient!td;")
+	public static GlModel aClass8_Sub1_Sub1_3 = new GlModel();
+	@OriginalMember(owner = "client!td", name = "nb", descriptor = "Lclient!td;")
+	public static GlModel aClass8_Sub1_Sub1_4 = new GlModel();
+	@OriginalMember(owner = "client!td", name = "ob", descriptor = "Lclient!td;")
+	public static GlModel aClass8_Sub1_Sub1_5 = new GlModel();
+	@OriginalMember(owner = "client!td", name = "pb", descriptor = "Lclient!td;")
+	public static GlModel aClass8_Sub1_Sub1_6 = new GlModel();
+	@OriginalMember(owner = "client!td", name = "qb", descriptor = "[I")
+	public static int[] anIntArray467 = new int[1];
+	@OriginalMember(owner = "client!td", name = "ub", descriptor = "[I")
+	public static int[] anIntArray468 = new int[1];
+	@OriginalMember(owner = "client!td", name = "Bb", descriptor = "Z")
+	public static boolean aBoolean260 = false;
+	@OriginalMember(owner = "client!td", name = "Ab", descriptor = "F")
+	public static float aFloat29;
+	@OriginalMember(owner = "client!td", name = "G", descriptor = "[J")
+	public static long[] aLongArray10;
+	@OriginalMember(owner = "client!td", name = "T", descriptor = "Ljava/nio/ByteBuffer;")
+	public static ByteBuffer aByteBuffer9;
+	@OriginalMember(owner = "client!td", name = "rb", descriptor = "F")
+	public static float aFloat24;
+	@OriginalMember(owner = "client!td", name = "sb", descriptor = "I")
+	public static int anInt5298;
+	@OriginalMember(owner = "client!td", name = "tb", descriptor = "F")
+	public static float aFloat25;
+	@OriginalMember(owner = "client!td", name = "vb", descriptor = "I")
+	public static int anInt5299;
+	@OriginalMember(owner = "client!td", name = "wb", descriptor = "F")
+	public static float aFloat26;
+	@OriginalMember(owner = "client!td", name = "xb", descriptor = "F")
+	public static float aFloat27;
+	@OriginalMember(owner = "client!td", name = "yb", descriptor = "I")
+	public static int anInt5300;
+	@OriginalMember(owner = "client!td", name = "zb", descriptor = "F")
+	public static float aFloat28;
 
-    @OriginalMember(owner = "client!td", name = "t", descriptor = "[S")
+	@OriginalMember(owner = "client!td", name = "t", descriptor = "[S")
 	private short[] aShortArray75;
 
 	@OriginalMember(owner = "client!td", name = "v", descriptor = "[S")
@@ -216,7 +258,7 @@ public final class GlModel extends Model {
 		this.aShort29 = (short) arg1;
 		this.aShort28 = (short) arg2;
 		this.aShortArray81 = new short[local117];
-		Static237.aLongArray10 = new long[local117];
+		aLongArray10 = new long[local117];
 		local125 = 0;
 		for (local127 = 0; local127 < arg0.anInt2139; local127++) {
 			local226 = this.anIntArray462[local127];
@@ -319,7 +361,7 @@ public final class GlModel extends Model {
 						local714 = (float) arg0.aShortArray25[local459] / 1024.0F;
 						local685 = (float) arg0.aShortArray21[local459] / 1024.0F;
 					}
-					local433[local459] = Static237.method4097(arg0.aShortArray26[local459], arg0.aShortArray20[local459], arg0.aShortArray28[local459], arg0.aByteArray27[local459] & 0xFF, local683, local714, local685);
+					local433[local459] = method4097(arg0.aShortArray26[local459], arg0.aShortArray20[local459], arg0.aShortArray28[local459], arg0.aByteArray27[local459] & 0xFF, local683, local714, local685);
 				}
 			}
 		}
@@ -435,15 +477,15 @@ public final class GlModel extends Model {
 						local952 = (float) arg0.aByteArray34[local833] / 256.0F;
 						if (local902 == 1) {
 							local960 = (float) (arg0.aShortArray21[local833] & 0xFFFF) / 1024.0F;
-							Static237.method4095(arg0.anIntArray202[local909], arg0.anIntArray201[local909], arg0.anIntArray203[local909], local1276, local1280, local1284, local1288, local960, local1293, local952);
-							local854 = Static237.aFloat26;
-							local856 = Static237.aFloat28;
-							Static237.method4095(arg0.anIntArray202[local914], arg0.anIntArray201[local914], arg0.anIntArray203[local914], local1276, local1280, local1284, local1288, local960, local1293, local952);
-							local858 = Static237.aFloat26;
-							local683 = Static237.aFloat28;
-							Static237.method4095(arg0.anIntArray202[local919], arg0.anIntArray201[local919], arg0.anIntArray203[local919], local1276, local1280, local1284, local1288, local960, local1293, local952);
-							local714 = Static237.aFloat26;
-							local685 = Static237.aFloat28;
+							method4095(arg0.anIntArray202[local909], arg0.anIntArray201[local909], arg0.anIntArray203[local909], local1276, local1280, local1284, local1288, local960, local1293, local952);
+							local854 = aFloat26;
+							local856 = aFloat28;
+							method4095(arg0.anIntArray202[local914], arg0.anIntArray201[local914], arg0.anIntArray203[local914], local1276, local1280, local1284, local1288, local960, local1293, local952);
+							local858 = aFloat26;
+							local683 = aFloat28;
+							method4095(arg0.anIntArray202[local919], arg0.anIntArray201[local919], arg0.anIntArray203[local919], local1276, local1280, local1284, local1288, local960, local1293, local952);
+							local714 = aFloat26;
+							local685 = aFloat28;
 							local968 = local960 / 2.0F;
 							if ((local1293 & 0x1) == 0) {
 								if (local858 - local854 > local968) {
@@ -494,26 +536,26 @@ public final class GlModel extends Model {
 							local1072 = ((float) local1583 * local1288[0] + (float) local1591 * local1288[1] + (float) local1599 * local1288[2]) / local1048;
 							local1080 = ((float) local1583 * local1288[3] + (float) local1591 * local1288[4] + (float) local1599 * local1288[5]) / local1056;
 							local1088 = ((float) local1583 * local1288[6] + (float) local1591 * local1288[7] + (float) local1599 * local1288[8]) / local1064;
-							local553 = Static237.method4092(local1072, local1080, local1088);
-							Static237.method4104(arg0.anIntArray202[local909], arg0.anIntArray201[local909], arg0.anIntArray203[local909], local1276, local1280, local1284, local553, local1288, local1293, local952, local960, local968);
-							local854 = Static237.aFloat27;
-							local856 = Static237.aFloat24;
-							Static237.method4104(arg0.anIntArray202[local914], arg0.anIntArray201[local914], arg0.anIntArray203[local914], local1276, local1280, local1284, local553, local1288, local1293, local952, local960, local968);
-							local858 = Static237.aFloat27;
-							local683 = Static237.aFloat24;
-							Static237.method4104(arg0.anIntArray202[local919], arg0.anIntArray201[local919], arg0.anIntArray203[local919], local1276, local1280, local1284, local553, local1288, local1293, local952, local960, local968);
-							local714 = Static237.aFloat27;
-							local685 = Static237.aFloat24;
+							local553 = method4092(local1072, local1080, local1088);
+							method4104(arg0.anIntArray202[local909], arg0.anIntArray201[local909], arg0.anIntArray203[local909], local1276, local1280, local1284, local553, local1288, local1293, local952, local960, local968);
+							local854 = aFloat27;
+							local856 = aFloat24;
+							method4104(arg0.anIntArray202[local914], arg0.anIntArray201[local914], arg0.anIntArray203[local914], local1276, local1280, local1284, local553, local1288, local1293, local952, local960, local968);
+							local858 = aFloat27;
+							local683 = aFloat24;
+							method4104(arg0.anIntArray202[local919], arg0.anIntArray201[local919], arg0.anIntArray203[local919], local1276, local1280, local1284, local553, local1288, local1293, local952, local960, local968);
+							local714 = aFloat27;
+							local685 = aFloat24;
 						} else if (local902 == 3) {
-							Static237.method4101(arg0.anIntArray202[local909], arg0.anIntArray201[local909], arg0.anIntArray203[local909], local1276, local1280, local1284, local1288, local1293, local952);
-							local854 = Static237.aFloat29;
-							local856 = Static237.aFloat25;
-							Static237.method4101(arg0.anIntArray202[local914], arg0.anIntArray201[local914], arg0.anIntArray203[local914], local1276, local1280, local1284, local1288, local1293, local952);
-							local858 = Static237.aFloat29;
-							local683 = Static237.aFloat25;
-							Static237.method4101(arg0.anIntArray202[local919], arg0.anIntArray201[local919], arg0.anIntArray203[local919], local1276, local1280, local1284, local1288, local1293, local952);
-							local714 = Static237.aFloat29;
-							local685 = Static237.aFloat25;
+							method4101(arg0.anIntArray202[local909], arg0.anIntArray201[local909], arg0.anIntArray203[local909], local1276, local1280, local1284, local1288, local1293, local952);
+							local854 = aFloat29;
+							local856 = aFloat25;
+							method4101(arg0.anIntArray202[local914], arg0.anIntArray201[local914], arg0.anIntArray203[local914], local1276, local1280, local1284, local1288, local1293, local952);
+							local858 = aFloat29;
+							local683 = aFloat25;
+							method4101(arg0.anIntArray202[local919], arg0.anIntArray201[local919], arg0.anIntArray203[local919], local1276, local1280, local1284, local1288, local1293, local952);
+							local714 = aFloat29;
+							local685 = aFloat25;
 							if ((local1293 & 0x1) == 0) {
 								if (local858 - local854 > 0.5F) {
 									local858--;
@@ -609,19 +651,266 @@ public final class GlModel extends Model {
 			}
 		}
 		this.anIntArray463[local439] = this.anInt5297;
-		Static237.aLongArray10 = null;
-		this.aShortArray76 = Static237.method4119(this.aShortArray76, this.anInt5296);
-		this.aShortArray79 = Static237.method4119(this.aShortArray79, this.anInt5296);
-		this.aShortArray85 = Static237.method4119(this.aShortArray85, this.anInt5296);
-		this.aShortArray86 = Static237.method4119(this.aShortArray86, this.anInt5296);
-		this.aFloatArray25 = Static237.method4112(this.aFloatArray25, this.anInt5296);
-		this.aFloatArray26 = Static237.method4112(this.aFloatArray26, this.anInt5296);
+		aLongArray10 = null;
+		this.aShortArray76 = method4119(this.aShortArray76, this.anInt5296);
+		this.aShortArray79 = method4119(this.aShortArray79, this.anInt5296);
+		this.aShortArray85 = method4119(this.aShortArray85, this.anInt5296);
+		this.aShortArray86 = method4119(this.aShortArray86, this.anInt5296);
+		this.aFloatArray25 = method4112(this.aFloatArray25, this.anInt5296);
+		this.aFloatArray26 = method4112(this.aFloatArray26, this.anInt5296);
+	}
+
+	@OriginalMember(owner = "client!td", name = "a", descriptor = "(FFF)I")
+	public static int method4092(@OriginalArg(0) float arg0, @OriginalArg(1) float arg1, @OriginalArg(2) float arg2) {
+		@Pc(8) float local8 = arg0 < 0.0F ? -arg0 : arg0;
+		@Pc(17) float local17 = arg1 < 0.0F ? -arg1 : arg1;
+		@Pc(26) float local26 = arg2 < 0.0F ? -arg2 : arg2;
+		if (local17 > local8 && local17 > local26) {
+			return arg1 > 0.0F ? 0 : 1;
+		} else if (local26 > local8 && local26 > local17) {
+			return arg2 > 0.0F ? 2 : 3;
+		} else if (arg0 > 0.0F) {
+			return 4;
+		} else {
+			return 5;
+		}
+	}
+
+	@OriginalMember(owner = "client!td", name = "a", descriptor = "(IIIIII[FFIF)V")
+	public static void method4095(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) float[] arg6, @OriginalArg(7) float arg7, @OriginalArg(8) int arg8, @OriginalArg(9) float arg9) {
+		@Pc(3) int local3 = arg0 - arg3;
+		@Pc(7) int local7 = arg1 - arg4;
+		@Pc(11) int local11 = arg2 - arg5;
+		@Pc(32) float local32 = (float) local3 * arg6[0] + (float) local7 * arg6[1] + (float) local11 * arg6[2];
+		@Pc(53) float local53 = (float) local3 * arg6[3] + (float) local7 * arg6[4] + (float) local11 * arg6[5];
+		@Pc(74) float local74 = (float) local3 * arg6[6] + (float) local7 * arg6[7] + (float) local11 * arg6[8];
+		@Pc(85) float local85 = (float) Math.atan2((double) local32, (double) local74) / 6.2831855F + 0.5F;
+		if (arg7 != 1.0F) {
+			local85 *= arg7;
+		}
+		@Pc(99) float local99 = local53 + arg9 + 0.5F;
+		@Pc(104) float local104;
+		if (arg8 == 1) {
+			local104 = local85;
+			local85 = -local99;
+			local99 = local104;
+		} else if (arg8 == 2) {
+			local85 = -local85;
+			local99 = -local99;
+		} else if (arg8 == 3) {
+			local104 = local85;
+			local85 = local99;
+			local99 = -local104;
+		}
+		aFloat26 = local85;
+		aFloat28 = local99;
+	}
+
+	@OriginalMember(owner = "client!td", name = "a", descriptor = "(ISIB)I")
+	public static int method4096(@OriginalArg(0) int arg0, @OriginalArg(1) short arg1, @OriginalArg(2) int arg2, @OriginalArg(3) byte arg3) {
+		@Pc(5) int local5 = Rasteriser.palette[Static268.method4585(arg0, arg2)];
+		if (arg1 != -1) {
+			@Pc(15) int local15 = Rasteriser.textureProvider.method3238(arg1 & 0xFFFF);
+			@Pc(21) int local21;
+			@Pc(44) int local44;
+			if (local15 != 0) {
+				if (arg2 < 0) {
+					local21 = 0;
+				} else if (arg2 > 127) {
+					local21 = 16777215;
+				} else {
+					local21 = arg2 * 131586;
+				}
+				if (local15 == 256) {
+					local5 = local21;
+				} else {
+					local44 = 256 - local15;
+					local5 = ((local21 & 0xFF00FF) * local15 + (local5 & 0xFF00FF) * local44 & 0xFF00FF00) + ((local21 & 0xFF00) * local15 + (local5 & 0xFF00) * local44 & 0xFF0000) >> 8;
+				}
+			}
+			local21 = Rasteriser.textureProvider.method3229(arg1 & 0xFFFF);
+			if (local21 != 0) {
+				local21 += 256;
+				@Pc(92) int local92 = (local5 >> 16 & 0xFF) * local21;
+				if (local92 > 65535) {
+					local92 = 65535;
+				}
+				local44 = (local5 >> 8 & 0xFF) * local21;
+				if (local44 > 65535) {
+					local44 = 65535;
+				}
+				@Pc(116) int local116 = (local5 & 0xFF) * local21;
+				if (local116 > 65535) {
+					local116 = 65535;
+				}
+				local5 = ((local92 & 0xFF00) << 8) + (local44 & 0xFF00) + (local116 >> 8);
+			}
+		}
+		return (local5 << 8) + (255 - (arg3 & 0xFF));
+	}
+
+	@OriginalMember(owner = "client!td", name = "a", descriptor = "(IIIIFFF)[F")
+	public static float[] method4097(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) float arg4, @OriginalArg(5) float arg5, @OriginalArg(6) float arg6) {
+		@Pc(2) float[] local2 = new float[9];
+		@Pc(5) float[] local5 = new float[9];
+		@Pc(13) float local13 = (float) Math.cos((double) ((float) arg3 * 0.024543693F));
+		@Pc(21) float local21 = (float) Math.sin((double) ((float) arg3 * 0.024543693F));
+		local2[0] = local13;
+		local2[1] = 0.0F;
+		local2[2] = local21;
+		local2[3] = 0.0F;
+		local2[4] = 1.0F;
+		local2[5] = 0.0F;
+		local2[6] = -local21;
+		local2[7] = 0.0F;
+		local2[8] = local13;
+		@Pc(65) float[] local65 = new float[9];
+		@Pc(67) float local67 = 1.0F;
+		@Pc(69) float local69 = 0.0F;
+		@Pc(74) float local74 = (float) arg1 / 32767.0F;
+		@Pc(84) float local84 = -((float) Math.sqrt((double) (1.0F - local74 * local74)));
+		@Pc(88) float local88 = 1.0F - local74;
+		@Pc(99) float local99 = (float) Math.sqrt((double) (arg0 * arg0 + arg2 * arg2));
+		if (local99 == 0.0F && local74 == 0.0F) {
+			local5 = local2;
+		} else {
+			if (local99 != 0.0F) {
+				local67 = (float) -arg2 / local99;
+				local69 = (float) arg0 / local99;
+			}
+			local65[0] = local74 + local67 * local67 * local88;
+			local65[1] = local69 * local84;
+			local65[2] = local69 * local67 * local88;
+			local65[3] = -local69 * local84;
+			local65[4] = local74;
+			local65[5] = local67 * local84;
+			local65[6] = local67 * local69 * local88;
+			local65[7] = -local67 * local84;
+			local65[8] = local74 + local69 * local69 * local88;
+			local5[0] = local2[0] * local65[0] + local2[1] * local65[3] + local2[2] * local65[6];
+			local5[1] = local2[0] * local65[1] + local2[1] * local65[4] + local2[2] * local65[7];
+			local5[2] = local2[0] * local65[2] + local2[1] * local65[5] + local2[2] * local65[8];
+			local5[3] = local2[3] * local65[0] + local2[4] * local65[3] + local2[5] * local65[6];
+			local5[4] = local2[3] * local65[1] + local2[4] * local65[4] + local2[5] * local65[7];
+			local5[5] = local2[3] * local65[2] + local2[4] * local65[5] + local2[5] * local65[8];
+			local5[6] = local2[6] * local65[0] + local2[7] * local65[3] + local2[8] * local65[6];
+			local5[7] = local2[6] * local65[1] + local2[7] * local65[4] + local2[8] * local65[7];
+			local5[8] = local2[6] * local65[2] + local2[7] * local65[5] + local2[8] * local65[8];
+		}
+		local5[0] *= arg4;
+		local5[1] *= arg4;
+		local5[2] *= arg4;
+		local5[3] *= arg5;
+		local5[4] *= arg5;
+		local5[5] *= arg5;
+		local5[6] *= arg6;
+		local5[7] *= arg6;
+		local5[8] *= arg6;
+		return local5;
+	}
+
+	@OriginalMember(owner = "client!td", name = "a", descriptor = "(IIIIII[FIF)V")
+	public static void method4101(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) float[] arg6, @OriginalArg(7) int arg7, @OriginalArg(8) float arg8) {
+		@Pc(3) int local3 = arg0 - arg3;
+		@Pc(7) int local7 = arg1 - arg4;
+		@Pc(11) int local11 = arg2 - arg5;
+		@Pc(32) float local32 = (float) local3 * arg6[0] + (float) local7 * arg6[1] + (float) local11 * arg6[2];
+		@Pc(53) float local53 = (float) local3 * arg6[3] + (float) local7 * arg6[4] + (float) local11 * arg6[5];
+		@Pc(74) float local74 = (float) local3 * arg6[6] + (float) local7 * arg6[7] + (float) local11 * arg6[8];
+		@Pc(89) float local89 = (float) Math.sqrt((double) (local32 * local32 + local53 * local53 + local74 * local74));
+		@Pc(100) float local100 = (float) Math.atan2((double) local32, (double) local74) / 6.2831855F + 0.5F;
+		@Pc(113) float local113 = (float) Math.asin((double) (local53 / local89)) / 3.1415927F + arg8 + 0.5F;
+		@Pc(118) float local118;
+		if (arg7 == 1) {
+			local118 = local100;
+			local100 = -local113;
+			local113 = local118;
+		} else if (arg7 == 2) {
+			local100 = -local100;
+			local113 = -local113;
+		} else if (arg7 == 3) {
+			local118 = local100;
+			local100 = local113;
+			local113 = -local118;
+		}
+		aFloat29 = local100;
+		aFloat25 = local113;
+	}
+
+	@OriginalMember(owner = "client!td", name = "a", descriptor = "(IIIIIII[FIFFF)V")
+	public static void method4104(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) float[] arg7, @OriginalArg(8) int arg8, @OriginalArg(9) float arg9, @OriginalArg(10) float arg10, @OriginalArg(11) float arg11) {
+		@Pc(3) int local3 = arg0 - arg3;
+		@Pc(7) int local7 = arg1 - arg4;
+		@Pc(11) int local11 = arg2 - arg5;
+		@Pc(32) float local32 = (float) local3 * arg7[0] + (float) local7 * arg7[1] + (float) local11 * arg7[2];
+		@Pc(53) float local53 = (float) local3 * arg7[3] + (float) local7 * arg7[4] + (float) local11 * arg7[5];
+		@Pc(74) float local74 = (float) local3 * arg7[6] + (float) local7 * arg7[7] + (float) local11 * arg7[8];
+		@Pc(82) float local82;
+		@Pc(89) float local89;
+		if (arg6 == 0) {
+			local82 = local32 + arg9 + 0.5F;
+			local89 = arg11 + 0.5F - local74;
+		} else if (arg6 == 1) {
+			local82 = local32 + arg9 + 0.5F;
+			local89 = local74 + arg11 + 0.5F;
+		} else if (arg6 == 2) {
+			local82 = arg9 + 0.5F - local32;
+			local89 = arg10 + 0.5F - local53;
+		} else if (arg6 == 3) {
+			local82 = local32 + arg9 + 0.5F;
+			local89 = arg10 + 0.5F - local53;
+		} else if (arg6 == 4) {
+			local82 = local74 + arg11 + 0.5F;
+			local89 = arg10 + 0.5F - local53;
+		} else {
+			local82 = arg11 + 0.5F - local74;
+			local89 = arg10 + 0.5F - local53;
+		}
+		@Pc(177) float local177;
+		if (arg8 == 1) {
+			local177 = local82;
+			local82 = -local89;
+			local89 = local177;
+		} else if (arg8 == 2) {
+			local82 = -local82;
+			local89 = -local89;
+		} else if (arg8 == 3) {
+			local177 = local82;
+			local82 = local89;
+			local89 = -local177;
+		}
+		aFloat27 = local82;
+		aFloat24 = local89;
+	}
+
+	@OriginalMember(owner = "client!td", name = "a", descriptor = "([FI)[F")
+	public static float[] method4112(@OriginalArg(0) float[] arg0, @OriginalArg(1) int arg1) {
+		@Pc(2) float[] local2 = new float[arg1];
+		Static289.method2615(arg0, 0, local2, 0, arg1);
+		return local2;
+	}
+
+	@OriginalMember(owner = "client!td", name = "a", descriptor = "([SI)[S")
+	public static short[] method4119(@OriginalArg(0) short[] arg0, @OriginalArg(1) int arg1) {
+		@Pc(2) short[] local2 = new short[arg1];
+		Static289.method2616(arg0, 0, local2, 0, arg1);
+		return local2;
+	}
+
+	@OriginalMember(owner = "client!td", name = "v", descriptor = "()V")
+	public static void method4120() {
+		aClass8_Sub1_Sub1_1 = new GlModel();
+		aClass8_Sub1_Sub1_2 = new GlModel();
+		aClass8_Sub1_Sub1_3 = new GlModel();
+		aClass8_Sub1_Sub1_4 = new GlModel();
+		aClass8_Sub1_Sub1_5 = new GlModel();
+		aClass8_Sub1_Sub1_6 = new GlModel();
 	}
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(ZZZ)Lclient!ak;")
 	@Override
 	public final Model method4560(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
-		return this.method4114(arg0, arg1, arg2, Static237.aClass8_Sub1_Sub1_4, Static237.aClass8_Sub1_Sub1_3);
+		return this.method4114(arg0, arg1, arg2, aClass8_Sub1_Sub1_4, aClass8_Sub1_Sub1_3);
 	}
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(IIIIIIIIJILclient!ga;)V")
@@ -746,9 +1035,9 @@ public final class GlModel extends Model {
 					if (this.aBoolean303) {
 						Static259.aLongArray11[Static2.anInt7++] = arg8;
 					} else {
-						if (Static237.anIntArray468.length < this.anInt5296) {
-							Static237.anIntArray468 = new int[this.anInt5296];
-							Static237.anIntArray467 = new int[this.anInt5296];
+						if (anIntArray468.length < this.anInt5296) {
+							anIntArray468 = new int[this.anInt5296];
+							anIntArray467 = new int[this.anInt5296];
 						}
 						local362 = 0;
 						label118: while (true) {
@@ -761,7 +1050,7 @@ public final class GlModel extends Model {
 									@Pc(698) short local698 = this.aShortArray77[local362];
 									@Pc(703) short local703 = this.aShortArray82[local362];
 									@Pc(708) short local708 = this.aShortArray83[local362];
-									if (this.method4118(Static150.anInt3582, Static34.anInt1053, Static237.anIntArray467[local698], Static237.anIntArray467[local703], Static237.anIntArray467[local708], Static237.anIntArray468[local698], Static237.anIntArray468[local703], Static237.anIntArray468[local708])) {
+									if (this.method4118(Static150.anInt3582, Static34.anInt1053, anIntArray467[local698], anIntArray467[local703], anIntArray467[local708], anIntArray468[local698], anIntArray468[local703], anIntArray468[local708])) {
 										Static259.aLongArray11[Static2.anInt7++] = arg8;
 										break label118;
 									}
@@ -796,8 +1085,8 @@ public final class GlModel extends Model {
 								if (local671 == -1) {
 									break;
 								}
-								Static237.anIntArray468[local671] = local465;
-								Static237.anIntArray467[local671] = local471;
+								anIntArray468[local671] = local465;
+								anIntArray467[local671] = local471;
 							}
 							local362++;
 						}
@@ -906,7 +1195,7 @@ public final class GlModel extends Model {
 	@OriginalMember(owner = "client!td", name = "b", descriptor = "(ZZZ)Lclient!ak;")
 	@Override
 	public final Model method4568(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
-		return this.method4114(arg0, arg1, arg2, Static237.aClass8_Sub1_Sub1_6, Static237.aClass8_Sub1_Sub1_5);
+		return this.method4114(arg0, arg1, arg2, aClass8_Sub1_Sub1_6, aClass8_Sub1_Sub1_5);
 	}
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(Lclient!th;IIIZ)V")
@@ -1090,12 +1379,12 @@ public final class GlModel extends Model {
 				local13 = local15;
 				break;
 			}
-			if (Static237.aLongArray10[local15] == arg2) {
+			if (aLongArray10[local15] == arg2) {
 				return (short) (local23 - 1);
 			}
 		}
 		this.aShortArray81[local13] = (short) (this.anInt5296 + 1);
-		Static237.aLongArray10[local13] = arg2;
+		aLongArray10[local13] = arg2;
 		this.aShortArray76[this.anInt5296] = (short) arg3;
 		this.aShortArray79[this.anInt5296] = (short) arg4;
 		this.aShortArray85[this.anInt5296] = (short) arg5;
@@ -1133,9 +1422,9 @@ public final class GlModel extends Model {
 			arg3 <<= 0x4;
 			arg4 <<= 0x4;
 			local18 = 0;
-			Static237.anInt5298 = 0;
-			Static237.anInt5300 = 0;
-			Static237.anInt5299 = 0;
+			anInt5298 = 0;
+			anInt5300 = 0;
+			anInt5299 = 0;
 			for (local26 = 0; local26 < local2; local26++) {
 				local33 = arg1[local26];
 				if (local33 < this.anIntArrayArray36.length) {
@@ -1143,23 +1432,23 @@ public final class GlModel extends Model {
 					for (local45 = 0; local45 < local43.length; local45++) {
 						local53 = local43[local45];
 						if (this.aShortArray84 == null || (arg6 & this.aShortArray84[local53]) != 0) {
-							Static237.anInt5298 += this.anIntArray461[local53];
-							Static237.anInt5300 += this.anIntArray465[local53];
-							Static237.anInt5299 += this.anIntArray466[local53];
+							anInt5298 += this.anIntArray461[local53];
+							anInt5300 += this.anIntArray465[local53];
+							anInt5299 += this.anIntArray466[local53];
 							local18++;
 						}
 					}
 				}
 			}
 			if (local18 > 0) {
-				Static237.anInt5298 = Static237.anInt5298 / local18 + arg2;
-				Static237.anInt5300 = Static237.anInt5300 / local18 + arg3;
-				Static237.anInt5299 = Static237.anInt5299 / local18 + arg4;
-				Static237.aBoolean260 = true;
+				anInt5298 = anInt5298 / local18 + arg2;
+				anInt5300 = anInt5300 / local18 + arg3;
+				anInt5299 = anInt5299 / local18 + arg4;
+				aBoolean260 = true;
 			} else {
-				Static237.anInt5298 = arg2;
-				Static237.anInt5300 = arg3;
-				Static237.anInt5299 = arg4;
+				anInt5298 = arg2;
+				anInt5300 = arg3;
+				anInt5299 = arg4;
 			}
 			return;
 		}
@@ -1224,9 +1513,9 @@ public final class GlModel extends Model {
 						for (local230 = 0; local230 < local228.length; local230++) {
 							local45 = local228[local230];
 							if (this.aShortArray84 == null || (arg6 & this.aShortArray84[local45]) != 0) {
-								this.anIntArray461[local45] -= Static237.anInt5298;
-								this.anIntArray465[local45] -= Static237.anInt5300;
-								this.anIntArray466[local45] -= Static237.anInt5299;
+								this.anIntArray461[local45] -= anInt5298;
+								this.anIntArray465[local45] -= anInt5300;
+								this.anIntArray466[local45] -= anInt5299;
 								if (arg4 != 0) {
 									local53 = MathUtils.sin[arg4];
 									local343 = MathUtils.cos[arg4];
@@ -1248,9 +1537,9 @@ public final class GlModel extends Model {
 									this.anIntArray466[local45] = this.anIntArray466[local45] * local343 + 32767 - this.anIntArray461[local45] * local53 >> 16;
 									this.anIntArray461[local45] = local365;
 								}
-								this.anIntArray461[local45] += Static237.anInt5298;
-								this.anIntArray465[local45] += Static237.anInt5300;
-								this.anIntArray466[local45] += Static237.anInt5299;
+								this.anIntArray461[local45] += anInt5298;
+								this.anIntArray465[local45] += anInt5300;
+								this.anIntArray466[local45] += anInt5299;
 							}
 						}
 					}
@@ -1307,17 +1596,17 @@ public final class GlModel extends Model {
 				local230 = arg7[12] << 4;
 				local45 = arg7[13] << 4;
 				local53 = arg7[14] << 4;
-				if (Static237.aBoolean260) {
-					local343 = arg7[0] * Static237.anInt5298 + arg7[3] * Static237.anInt5300 + arg7[6] * Static237.anInt5299 + 16384 >> 15;
-					local365 = arg7[1] * Static237.anInt5298 + arg7[4] * Static237.anInt5300 + arg7[7] * Static237.anInt5299 + 16384 >> 15;
-					local387 = arg7[2] * Static237.anInt5298 + arg7[5] * Static237.anInt5300 + arg7[8] * Static237.anInt5299 + 16384 >> 15;
+				if (aBoolean260) {
+					local343 = arg7[0] * anInt5298 + arg7[3] * anInt5300 + arg7[6] * anInt5299 + 16384 >> 15;
+					local365 = arg7[1] * anInt5298 + arg7[4] * anInt5300 + arg7[7] * anInt5299 + 16384 >> 15;
+					local387 = arg7[2] * anInt5298 + arg7[5] * anInt5300 + arg7[8] * anInt5299 + 16384 >> 15;
 					local343 += local230;
 					local365 += local45;
 					local387 += local53;
-					Static237.anInt5298 = local343;
-					Static237.anInt5300 = local365;
-					Static237.anInt5299 = local387;
-					Static237.aBoolean260 = false;
+					anInt5298 = local343;
+					anInt5300 = local365;
+					anInt5299 = local387;
+					aBoolean260 = false;
 				}
 				@Pc(410) int[] local410 = new int[9];
 				local365 = MathUtils.cos[arg2] >> 1;
@@ -1337,12 +1626,12 @@ public final class GlModel extends Model {
 				local410[6] = -local434 * local440 + local428 * local462 + 16384 >> 15;
 				local410[7] = local434 * local446 + local428 * local454 + 16384 >> 15;
 				local410[8] = local428 * local365 + 16384 >> 15;
-				@Pc(590) int local590 = local410[0] * -Static237.anInt5298 + local410[1] * -Static237.anInt5300 + local410[2] * -Static237.anInt5299 + 16384 >> 15;
-				local615 = local410[3] * -Static237.anInt5298 + local410[4] * -Static237.anInt5300 + local410[5] * -Static237.anInt5299 + 16384 >> 15;
-				local640 = local410[6] * -Static237.anInt5298 + local410[7] * -Static237.anInt5300 + local410[8] * -Static237.anInt5299 + 16384 >> 15;
-				local644 = local590 + Static237.anInt5298;
-				@Pc(648) int local648 = local615 + Static237.anInt5300;
-				local652 = local640 + Static237.anInt5299;
+				@Pc(590) int local590 = local410[0] * -anInt5298 + local410[1] * -anInt5300 + local410[2] * -anInt5299 + 16384 >> 15;
+				local615 = local410[3] * -anInt5298 + local410[4] * -anInt5300 + local410[5] * -anInt5299 + 16384 >> 15;
+				local640 = local410[6] * -anInt5298 + local410[7] * -anInt5300 + local410[8] * -anInt5299 + 16384 >> 15;
+				local644 = local590 + anInt5298;
+				@Pc(648) int local648 = local615 + anInt5300;
+				local652 = local640 + anInt5299;
 				@Pc(655) int[] local655 = new int[9];
 				for (local657 = 0; local657 < 3; local657++) {
 					for (local662 = 0; local662 < 3; local662++) {
@@ -1405,15 +1694,15 @@ public final class GlModel extends Model {
 						for (local230 = 0; local230 < local228.length; local230++) {
 							local45 = local228[local230];
 							if (this.aShortArray84 == null || (arg6 & this.aShortArray84[local45]) != 0) {
-								this.anIntArray461[local45] -= Static237.anInt5298;
-								this.anIntArray465[local45] -= Static237.anInt5300;
-								this.anIntArray466[local45] -= Static237.anInt5299;
+								this.anIntArray461[local45] -= anInt5298;
+								this.anIntArray465[local45] -= anInt5300;
+								this.anIntArray466[local45] -= anInt5299;
 								this.anIntArray461[local45] = this.anIntArray461[local45] * arg2 >> 7;
 								this.anIntArray465[local45] = this.anIntArray465[local45] * arg3 >> 7;
 								this.anIntArray466[local45] = this.anIntArray466[local45] * arg4 >> 7;
-								this.anIntArray461[local45] += Static237.anInt5298;
-								this.anIntArray465[local45] += Static237.anInt5300;
-								this.anIntArray466[local45] += Static237.anInt5299;
+								this.anIntArray461[local45] += anInt5298;
+								this.anIntArray465[local45] += anInt5300;
+								this.anIntArray466[local45] += anInt5299;
 							}
 						}
 					}
@@ -1425,27 +1714,27 @@ public final class GlModel extends Model {
 				local230 = arg7[12] << 4;
 				local45 = arg7[13] << 4;
 				local53 = arg7[14] << 4;
-				if (Static237.aBoolean260) {
-					local343 = arg7[0] * Static237.anInt5298 + arg7[3] * Static237.anInt5300 + arg7[6] * Static237.anInt5299 + 16384 >> 15;
-					local365 = arg7[1] * Static237.anInt5298 + arg7[4] * Static237.anInt5300 + arg7[7] * Static237.anInt5299 + 16384 >> 15;
-					local387 = arg7[2] * Static237.anInt5298 + arg7[5] * Static237.anInt5300 + arg7[8] * Static237.anInt5299 + 16384 >> 15;
+				if (aBoolean260) {
+					local343 = arg7[0] * anInt5298 + arg7[3] * anInt5300 + arg7[6] * anInt5299 + 16384 >> 15;
+					local365 = arg7[1] * anInt5298 + arg7[4] * anInt5300 + arg7[7] * anInt5299 + 16384 >> 15;
+					local387 = arg7[2] * anInt5298 + arg7[5] * anInt5300 + arg7[8] * anInt5299 + 16384 >> 15;
 					local343 += local230;
 					local365 += local45;
 					local387 += local53;
-					Static237.anInt5298 = local343;
-					Static237.anInt5300 = local365;
-					Static237.anInt5299 = local387;
-					Static237.aBoolean260 = false;
+					anInt5298 = local343;
+					anInt5300 = local365;
+					anInt5299 = local387;
+					aBoolean260 = false;
 				}
 				local343 = arg2 << 15 >> 7;
 				local365 = arg3 << 15 >> 7;
 				local387 = arg4 << 15 >> 7;
-				local428 = local343 * -Static237.anInt5298 + 16384 >> 15;
-				local434 = local365 * -Static237.anInt5300 + 16384 >> 15;
-				local440 = local387 * -Static237.anInt5299 + 16384 >> 15;
-				local446 = local428 + Static237.anInt5298;
-				local454 = local434 + Static237.anInt5300;
-				local462 = local440 + Static237.anInt5299;
+				local428 = local343 * -anInt5298 + 16384 >> 15;
+				local434 = local365 * -anInt5300 + 16384 >> 15;
+				local440 = local387 * -anInt5299 + 16384 >> 15;
+				local446 = local428 + anInt5298;
+				local454 = local434 + anInt5300;
+				local462 = local440 + anInt5299;
 				@Pc(1783) int[] local1783 = new int[] { local343 * arg7[0] + 16384 >> 15, local343 * arg7[3] + 16384 >> 15, local343 * arg7[6] + 16384 >> 15, local365 * arg7[1] + 16384 >> 15, local365 * arg7[4] + 16384 >> 15, local365 * arg7[7] + 16384 >> 15, local387 * arg7[2] + 16384 >> 15, local387 * arg7[5] + 16384 >> 15, local387 * arg7[8] + 16384 >> 15 };
 				local615 = local343 * local230 + 16384 >> 15;
 				local640 = local365 * local45 + 16384 >> 15;
@@ -1659,7 +1948,7 @@ public final class GlModel extends Model {
 	@OriginalMember(owner = "client!td", name = "c", descriptor = "(ZZZ)Lclient!ak;")
 	@Override
 	public final Model method4572(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
-		return this.method4114(arg0, arg1, arg2, Static237.aClass8_Sub1_Sub1_2, Static237.aClass8_Sub1_Sub1_1);
+		return this.method4114(arg0, arg1, arg2, aClass8_Sub1_Sub1_2, aClass8_Sub1_Sub1_1);
 	}
 
 	@OriginalMember(owner = "client!td", name = "e", descriptor = "()V")
@@ -1675,28 +1964,28 @@ public final class GlModel extends Model {
 
 	@OriginalMember(owner = "client!td", name = "q", descriptor = "()V")
 	private void method4103() {
-		if (Static237.aClass3_Sub15_8.data.length < this.anInt5296 * 12) {
-			Static237.aClass3_Sub15_8 = new Buffer((this.anInt5296 + 100) * 12);
+		if (aClass3_Sub15_8.data.length < this.anInt5296 * 12) {
+			aClass3_Sub15_8 = new Buffer((this.anInt5296 + 100) * 12);
 		} else {
-			Static237.aClass3_Sub15_8.offset = 0;
+			aClass3_Sub15_8.offset = 0;
 		}
 		@Pc(25) int local25;
 		if (GlRenderer.bigEndian) {
 			for (local25 = 0; local25 < this.anInt5297; local25++) {
-				Static237.aClass3_Sub15_8.p4(this.aShortArray77[local25]);
-				Static237.aClass3_Sub15_8.p4(this.aShortArray82[local25]);
-				Static237.aClass3_Sub15_8.p4(this.aShortArray83[local25]);
+				aClass3_Sub15_8.p4(this.aShortArray77[local25]);
+				aClass3_Sub15_8.p4(this.aShortArray82[local25]);
+				aClass3_Sub15_8.p4(this.aShortArray83[local25]);
 			}
 		} else {
 			for (local25 = 0; local25 < this.anInt5297; local25++) {
-				Static237.aClass3_Sub15_8.p4le(this.aShortArray77[local25]);
-				Static237.aClass3_Sub15_8.p4le(this.aShortArray82[local25]);
-				Static237.aClass3_Sub15_8.p4le(this.aShortArray83[local25]);
+				aClass3_Sub15_8.p4le(this.aShortArray77[local25]);
+				aClass3_Sub15_8.p4le(this.aShortArray82[local25]);
+				aClass3_Sub15_8.p4le(this.aShortArray83[local25]);
 			}
 		}
 		if (!GlRenderer.arbVboSupported) {
-			@Pc(115) ByteBuffer local115 = ByteBuffer.allocateDirect(Static237.aClass3_Sub15_8.offset);
-			local115.put(Static237.aClass3_Sub15_8.data, 0, Static237.aClass3_Sub15_8.offset);
+			@Pc(115) ByteBuffer local115 = ByteBuffer.allocateDirect(aClass3_Sub15_8.offset);
+			local115.put(aClass3_Sub15_8.data, 0, aClass3_Sub15_8.offset);
 			local115.flip();
 			this.aClass127_5.valid = true;
 			this.aClass127_5.aByteBuffer8 = local115;
@@ -1704,7 +1993,7 @@ public final class GlModel extends Model {
 			return;
 		}
 		@Pc(88) GlVertexBufferObject local88 = new GlVertexBufferObject();
-		@Pc(95) ByteBuffer local95 = ByteBuffer.wrap(Static237.aClass3_Sub15_8.data, 0, Static237.aClass3_Sub15_8.offset);
+		@Pc(95) ByteBuffer local95 = ByteBuffer.wrap(aClass3_Sub15_8.data, 0, aClass3_Sub15_8.offset);
 		local88.method4519(local95);
 		this.aClass127_5.valid = true;
 		this.aClass127_5.aByteBuffer8 = null;
@@ -1728,9 +2017,9 @@ public final class GlModel extends Model {
 			this.anIntArray465[local6] <<= 0x4;
 			this.anIntArray466[local6] <<= 0x4;
 		}
-		Static237.anInt5298 = 0;
-		Static237.anInt5300 = 0;
-		Static237.anInt5299 = 0;
+		anInt5298 = 0;
+		anInt5300 = 0;
+		anInt5299 = 0;
 		return true;
 	}
 
@@ -2024,10 +2313,10 @@ public final class GlModel extends Model {
 		if (local1 == 0) {
 			return;
 		}
-		if (Static237.aClass3_Sub15_8.data.length < this.anInt5296 * local1) {
-			Static237.aClass3_Sub15_8 = new Buffer((this.anInt5296 + 100) * local1);
+		if (aClass3_Sub15_8.data.length < this.anInt5296 * local1) {
+			aClass3_Sub15_8 = new Buffer((this.anInt5296 + 100) * local1);
 		} else {
-			Static237.aClass3_Sub15_8.offset = 0;
+			aClass3_Sub15_8.offset = 0;
 		}
 		@Pc(60) int local60;
 		@Pc(71) int local71;
@@ -2050,10 +2339,10 @@ public final class GlModel extends Model {
 						if (local109 == -1) {
 							break;
 						}
-						Static237.aClass3_Sub15_8.offset = local109 * local1;
-						Static237.aClass3_Sub15_8.p4(local71);
-						Static237.aClass3_Sub15_8.p4(local78);
-						Static237.aClass3_Sub15_8.p4(local85);
+						aClass3_Sub15_8.offset = local109 * local1;
+						aClass3_Sub15_8.p4(local71);
+						aClass3_Sub15_8.p4(local78);
+						aClass3_Sub15_8.p4(local85);
 					}
 				}
 			} else {
@@ -2068,10 +2357,10 @@ public final class GlModel extends Model {
 						if (local109 == -1) {
 							break;
 						}
-						Static237.aClass3_Sub15_8.offset = local109 * local1;
-						Static237.aClass3_Sub15_8.p4le(local71);
-						Static237.aClass3_Sub15_8.p4le(local78);
-						Static237.aClass3_Sub15_8.p4le(local85);
+						aClass3_Sub15_8.offset = local109 * local1;
+						aClass3_Sub15_8.p4le(local71);
+						aClass3_Sub15_8.p4le(local78);
+						aClass3_Sub15_8.p4le(local85);
 					}
 				}
 			}
@@ -2079,13 +2368,13 @@ public final class GlModel extends Model {
 		if (arg2) {
 			if (Preferences.highDetailLighting) {
 				for (local60 = 0; local60 < this.anInt5297; local60++) {
-					local71 = Static237.method4096(this.aShortArray75[local60], this.aShortArray80[local60], this.aShort29, this.aByteArray71[local60]);
-					Static237.aClass3_Sub15_8.offset = this.aClass127_1.anInt4777 + this.aShortArray77[local60] * local1;
-					Static237.aClass3_Sub15_8.p4(local71);
-					Static237.aClass3_Sub15_8.offset = this.aClass127_1.anInt4777 + this.aShortArray82[local60] * local1;
-					Static237.aClass3_Sub15_8.p4(local71);
-					Static237.aClass3_Sub15_8.offset = this.aClass127_1.anInt4777 + this.aShortArray83[local60] * local1;
-					Static237.aClass3_Sub15_8.p4(local71);
+					local71 = method4096(this.aShortArray75[local60], this.aShortArray80[local60], this.aShort29, this.aByteArray71[local60]);
+					aClass3_Sub15_8.offset = this.aClass127_1.anInt4777 + this.aShortArray77[local60] * local1;
+					aClass3_Sub15_8.p4(local71);
+					aClass3_Sub15_8.offset = this.aClass127_1.anInt4777 + this.aShortArray82[local60] * local1;
+					aClass3_Sub15_8.p4(local71);
+					aClass3_Sub15_8.offset = this.aClass127_1.anInt4777 + this.aShortArray83[local60] * local1;
+					aClass3_Sub15_8.p4(local71);
 				}
 			} else {
 				local60 = (int) Static161.aFloatArray18[0];
@@ -2149,15 +2438,15 @@ public final class GlModel extends Model {
 						}
 						this.aShortArray86[local458] = (short) (-local469 - 1);
 					}
-					@Pc(562) int local562 = Static237.method4096(this.aShortArray75[local99], this.aShortArray80[local99], local281, this.aByteArray71[local99]);
-					@Pc(577) int local577 = Static237.method4096(this.aShortArray75[local99], this.aShortArray80[local99], local375, this.aByteArray71[local99]);
-					@Pc(592) int local592 = Static237.method4096(this.aShortArray75[local99], this.aShortArray80[local99], local469, this.aByteArray71[local99]);
-					Static237.aClass3_Sub15_8.offset = this.aClass127_1.anInt4777 + local270 * local1;
-					Static237.aClass3_Sub15_8.p4(local562);
-					Static237.aClass3_Sub15_8.offset = this.aClass127_1.anInt4777 + local364 * local1;
-					Static237.aClass3_Sub15_8.p4(local577);
-					Static237.aClass3_Sub15_8.offset = this.aClass127_1.anInt4777 + local458 * local1;
-					Static237.aClass3_Sub15_8.p4(local592);
+					@Pc(562) int local562 = method4096(this.aShortArray75[local99], this.aShortArray80[local99], local281, this.aByteArray71[local99]);
+					@Pc(577) int local577 = method4096(this.aShortArray75[local99], this.aShortArray80[local99], local375, this.aByteArray71[local99]);
+					@Pc(592) int local592 = method4096(this.aShortArray75[local99], this.aShortArray80[local99], local469, this.aByteArray71[local99]);
+					aClass3_Sub15_8.offset = this.aClass127_1.anInt4777 + local270 * local1;
+					aClass3_Sub15_8.p4(local562);
+					aClass3_Sub15_8.offset = this.aClass127_1.anInt4777 + local364 * local1;
+					aClass3_Sub15_8.p4(local577);
+					aClass3_Sub15_8.offset = this.aClass127_1.anInt4777 + local458 * local1;
+					aClass3_Sub15_8.p4(local592);
 				}
 				this.aShortArray76 = null;
 				this.aShortArray79 = null;
@@ -2167,62 +2456,62 @@ public final class GlModel extends Model {
 		if (arg3) {
 			@Pc(723) float local723 = 3.0F / (float) this.aShort28;
 			@Pc(734) float local734 = 3.0F / (float) (this.aShort28 + this.aShort28 / 2);
-			Static237.aClass3_Sub15_8.offset = this.aClass127_2.anInt4777;
+			aClass3_Sub15_8.offset = this.aClass127_2.anInt4777;
 			@Pc(752) short local752;
 			@Pc(790) float local790;
 			if (GlRenderer.bigEndian) {
 				for (local78 = 0; local78 < this.anInt5296; local78++) {
 					local752 = this.aShortArray86[local78];
 					if (local752 == 0) {
-						Static237.aClass3_Sub15_8.pFloat((float) this.aShortArray76[local78] * local734);
-						Static237.aClass3_Sub15_8.pFloat((float) this.aShortArray79[local78] * local734);
-						Static237.aClass3_Sub15_8.pFloat((float) this.aShortArray85[local78] * local734);
+						aClass3_Sub15_8.pFloat((float) this.aShortArray76[local78] * local734);
+						aClass3_Sub15_8.pFloat((float) this.aShortArray79[local78] * local734);
+						aClass3_Sub15_8.pFloat((float) this.aShortArray85[local78] * local734);
 					} else {
 						local790 = local723 / (float) local752;
-						Static237.aClass3_Sub15_8.pFloat((float) this.aShortArray76[local78] * local790);
-						Static237.aClass3_Sub15_8.pFloat((float) this.aShortArray79[local78] * local790);
-						Static237.aClass3_Sub15_8.pFloat((float) this.aShortArray85[local78] * local790);
+						aClass3_Sub15_8.pFloat((float) this.aShortArray76[local78] * local790);
+						aClass3_Sub15_8.pFloat((float) this.aShortArray79[local78] * local790);
+						aClass3_Sub15_8.pFloat((float) this.aShortArray85[local78] * local790);
 					}
-					Static237.aClass3_Sub15_8.offset += local1 - 12;
+					aClass3_Sub15_8.offset += local1 - 12;
 				}
 			} else {
 				for (local78 = 0; local78 < this.anInt5296; local78++) {
 					local752 = this.aShortArray86[local78];
 					if (local752 == 0) {
-						Static237.aClass3_Sub15_8.gFloat((float) this.aShortArray76[local78] * local734);
-						Static237.aClass3_Sub15_8.gFloat((float) this.aShortArray79[local78] * local734);
-						Static237.aClass3_Sub15_8.gFloat((float) this.aShortArray85[local78] * local734);
+						aClass3_Sub15_8.gFloat((float) this.aShortArray76[local78] * local734);
+						aClass3_Sub15_8.gFloat((float) this.aShortArray79[local78] * local734);
+						aClass3_Sub15_8.gFloat((float) this.aShortArray85[local78] * local734);
 					} else {
 						local790 = local723 / (float) local752;
-						Static237.aClass3_Sub15_8.gFloat((float) this.aShortArray76[local78] * local790);
-						Static237.aClass3_Sub15_8.gFloat((float) this.aShortArray79[local78] * local790);
-						Static237.aClass3_Sub15_8.gFloat((float) this.aShortArray85[local78] * local790);
+						aClass3_Sub15_8.gFloat((float) this.aShortArray76[local78] * local790);
+						aClass3_Sub15_8.gFloat((float) this.aShortArray79[local78] * local790);
+						aClass3_Sub15_8.gFloat((float) this.aShortArray85[local78] * local790);
 					}
-					Static237.aClass3_Sub15_8.offset += local1 - 12;
+					aClass3_Sub15_8.offset += local1 - 12;
 				}
 			}
 		}
 		if (arg4) {
-			Static237.aClass3_Sub15_8.offset = this.aClass127_3.anInt4777;
+			aClass3_Sub15_8.offset = this.aClass127_3.anInt4777;
 			if (GlRenderer.bigEndian) {
 				for (local60 = 0; local60 < this.anInt5296; local60++) {
-					Static237.aClass3_Sub15_8.pFloat(this.aFloatArray25[local60]);
-					Static237.aClass3_Sub15_8.pFloat(this.aFloatArray26[local60]);
-					Static237.aClass3_Sub15_8.offset += local1 - 8;
+					aClass3_Sub15_8.pFloat(this.aFloatArray25[local60]);
+					aClass3_Sub15_8.pFloat(this.aFloatArray26[local60]);
+					aClass3_Sub15_8.offset += local1 - 8;
 				}
 			} else {
 				for (local60 = 0; local60 < this.anInt5296; local60++) {
-					Static237.aClass3_Sub15_8.gFloat(this.aFloatArray25[local60]);
-					Static237.aClass3_Sub15_8.gFloat(this.aFloatArray26[local60]);
-					Static237.aClass3_Sub15_8.offset += local1 - 8;
+					aClass3_Sub15_8.gFloat(this.aFloatArray25[local60]);
+					aClass3_Sub15_8.gFloat(this.aFloatArray26[local60]);
+					aClass3_Sub15_8.offset += local1 - 8;
 				}
 			}
 		}
-		Static237.aClass3_Sub15_8.offset = local1 * this.anInt5296;
+		aClass3_Sub15_8.offset = local1 * this.anInt5296;
 		@Pc(1007) ByteBuffer local1007;
 		if (arg0) {
 			if (arbVboSupported) {
-				local1007 = ByteBuffer.wrap(Static237.aClass3_Sub15_8.data, 0, Static237.aClass3_Sub15_8.offset);
+				local1007 = ByteBuffer.wrap(aClass3_Sub15_8.data, 0, aClass3_Sub15_8.offset);
 				if (this.aClass155_5 == null) {
 					this.aClass155_5 = new GlVertexBufferObject(true);
 					this.aClass155_5.method4519(local1007);
@@ -2254,41 +2543,41 @@ public final class GlModel extends Model {
 					this.aClass127_3.anInt4782 = local1;
 				}
 			} else {
-				if (Static237.aByteBuffer9 == null || Static237.aByteBuffer9.capacity() < Static237.aClass3_Sub15_8.offset) {
-					Static237.aByteBuffer9 = ByteBuffer.allocateDirect(Static237.aClass3_Sub15_8.offset + local1 * 100);
+				if (aByteBuffer9 == null || aByteBuffer9.capacity() < aClass3_Sub15_8.offset) {
+					aByteBuffer9 = ByteBuffer.allocateDirect(aClass3_Sub15_8.offset + local1 * 100);
 				} else {
-					Static237.aByteBuffer9.clear();
+					aByteBuffer9.clear();
 				}
-				Static237.aByteBuffer9.put(Static237.aClass3_Sub15_8.data, 0, Static237.aClass3_Sub15_8.offset);
-				Static237.aByteBuffer9.flip();
+				aByteBuffer9.put(aClass3_Sub15_8.data, 0, aClass3_Sub15_8.offset);
+				aByteBuffer9.flip();
 				if (arg1) {
 					this.bounds.valid = true;
-					this.bounds.aByteBuffer8 = Static237.aByteBuffer9;
+					this.bounds.aByteBuffer8 = aByteBuffer9;
 					this.bounds.aClass155_4 = null;
 					this.bounds.anInt4782 = local1;
 				}
 				if (arg2) {
 					this.aClass127_1.valid = true;
-					this.aClass127_1.aByteBuffer8 = Static237.aByteBuffer9;
+					this.aClass127_1.aByteBuffer8 = aByteBuffer9;
 					this.bounds.aClass155_4 = null;
 					this.aClass127_1.anInt4782 = local1;
 				}
 				if (arg3) {
 					this.aClass127_2.valid = true;
-					this.aClass127_2.aByteBuffer8 = Static237.aByteBuffer9;
+					this.aClass127_2.aByteBuffer8 = aByteBuffer9;
 					this.aClass127_2.aClass155_4 = null;
 					this.aClass127_2.anInt4782 = local1;
 				}
 				if (arg4) {
 					this.aClass127_3.valid = true;
-					this.aClass127_3.aByteBuffer8 = Static237.aByteBuffer9;
+					this.aClass127_3.aByteBuffer8 = aByteBuffer9;
 					this.aClass127_3.aClass155_4 = null;
 					this.aClass127_3.anInt4782 = local1;
 				}
 			}
 		} else if (GlRenderer.arbVboSupported) {
 			@Pc(1211) GlVertexBufferObject local1211 = new GlVertexBufferObject();
-			@Pc(1218) ByteBuffer local1218 = ByteBuffer.wrap(Static237.aClass3_Sub15_8.data, 0, Static237.aClass3_Sub15_8.offset);
+			@Pc(1218) ByteBuffer local1218 = ByteBuffer.wrap(aClass3_Sub15_8.data, 0, aClass3_Sub15_8.offset);
 			local1211.method4519(local1218);
 			if (arg1) {
 				this.bounds.valid = true;
@@ -2315,8 +2604,8 @@ public final class GlModel extends Model {
 				this.aClass127_3.anInt4782 = local1;
 			}
 		} else {
-			local1007 = ByteBuffer.allocateDirect(Static237.aClass3_Sub15_8.offset);
-			local1007.put(Static237.aClass3_Sub15_8.data, 0, Static237.aClass3_Sub15_8.offset);
+			local1007 = ByteBuffer.allocateDirect(aClass3_Sub15_8.offset);
+			local1007.put(aClass3_Sub15_8.data, 0, aClass3_Sub15_8.offset);
 			local1007.flip();
 			if (arg1) {
 				this.bounds.valid = true;
@@ -2637,30 +2926,30 @@ public final class GlModel extends Model {
 			local12 = arg3 << 4;
 			local16 = arg4 << 4;
 			local18 = 0;
-			Static237.anInt5298 = 0;
-			Static237.anInt5300 = 0;
-			Static237.anInt5299 = 0;
+			anInt5298 = 0;
+			anInt5300 = 0;
+			anInt5299 = 0;
 			for (local26 = 0; local26 < local2; local26++) {
 				@Pc(33) int local33 = arg1[local26];
 				if (local33 < this.anIntArrayArray36.length) {
 					@Pc(43) int[] local43 = this.anIntArrayArray36[local33];
 					for (local45 = 0; local45 < local43.length; local45++) {
 						local53 = local43[local45];
-						Static237.anInt5298 += this.anIntArray461[local53];
-						Static237.anInt5300 += this.anIntArray465[local53];
-						Static237.anInt5299 += this.anIntArray466[local53];
+						anInt5298 += this.anIntArray461[local53];
+						anInt5300 += this.anIntArray465[local53];
+						anInt5299 += this.anIntArray466[local53];
 						local18++;
 					}
 				}
 			}
 			if (local18 > 0) {
-				Static237.anInt5298 = Static237.anInt5298 / local18 + local8;
-				Static237.anInt5300 = Static237.anInt5300 / local18 + local12;
-				Static237.anInt5299 = Static237.anInt5299 / local18 + local16;
+				anInt5298 = anInt5298 / local18 + local8;
+				anInt5300 = anInt5300 / local18 + local12;
+				anInt5299 = anInt5299 / local18 + local16;
 			} else {
-				Static237.anInt5298 = local8;
-				Static237.anInt5300 = local12;
-				Static237.anInt5299 = local16;
+				anInt5298 = local8;
+				anInt5300 = local12;
+				anInt5299 = local16;
 			}
 			return;
 		}
@@ -2694,9 +2983,9 @@ public final class GlModel extends Model {
 					local141 = this.anIntArrayArray36[local26];
 					for (local143 = 0; local143 < local141.length; local143++) {
 						local45 = local141[local143];
-						this.anIntArray461[local45] -= Static237.anInt5298;
-						this.anIntArray465[local45] -= Static237.anInt5300;
-						this.anIntArray466[local45] -= Static237.anInt5299;
+						this.anIntArray461[local45] -= anInt5298;
+						this.anIntArray465[local45] -= anInt5300;
+						this.anIntArray466[local45] -= anInt5299;
 						if (arg4 != 0) {
 							local53 = MathUtils.sin[arg4];
 							local246 = MathUtils.cos[arg4];
@@ -2718,9 +3007,9 @@ public final class GlModel extends Model {
 							this.anIntArray466[local45] = this.anIntArray466[local45] * local246 + 32767 - this.anIntArray461[local45] * local53 >> 16;
 							this.anIntArray461[local45] = local264;
 						}
-						this.anIntArray461[local45] += Static237.anInt5298;
-						this.anIntArray465[local45] += Static237.anInt5300;
-						this.anIntArray466[local45] += Static237.anInt5299;
+						this.anIntArray461[local45] += anInt5298;
+						this.anIntArray465[local45] += anInt5300;
+						this.anIntArray466[local45] += anInt5299;
 					}
 				}
 			}
@@ -2777,15 +3066,15 @@ public final class GlModel extends Model {
 					local141 = this.anIntArrayArray36[local26];
 					for (local143 = 0; local143 < local141.length; local143++) {
 						local45 = local141[local143];
-						this.anIntArray461[local45] -= Static237.anInt5298;
-						this.anIntArray465[local45] -= Static237.anInt5300;
-						this.anIntArray466[local45] -= Static237.anInt5299;
+						this.anIntArray461[local45] -= anInt5298;
+						this.anIntArray465[local45] -= anInt5300;
+						this.anIntArray466[local45] -= anInt5299;
 						this.anIntArray461[local45] = this.anIntArray461[local45] * arg2 >> 7;
 						this.anIntArray465[local45] = this.anIntArray465[local45] * arg3 >> 7;
 						this.anIntArray466[local45] = this.anIntArray466[local45] * arg4 >> 7;
-						this.anIntArray461[local45] += Static237.anInt5298;
-						this.anIntArray465[local45] += Static237.anInt5300;
-						this.anIntArray466[local45] += Static237.anInt5299;
+						this.anIntArray461[local45] += anInt5298;
+						this.anIntArray465[local45] += anInt5300;
+						this.anIntArray466[local45] += anInt5299;
 					}
 				}
 			}
@@ -2852,23 +3141,23 @@ public final class GlModel extends Model {
 		@Pc(11) int local11;
 		if (arg0 == 0) {
 			local3 = 0;
-			Static237.anInt5298 = 0;
-			Static237.anInt5300 = 0;
-			Static237.anInt5299 = 0;
+			anInt5298 = 0;
+			anInt5300 = 0;
+			anInt5299 = 0;
 			for (local11 = 0; local11 < this.vertexCount; local11++) {
-				Static237.anInt5298 += this.anIntArray461[local11];
-				Static237.anInt5300 += this.anIntArray465[local11];
-				Static237.anInt5299 += this.anIntArray466[local11];
+				anInt5298 += this.anIntArray461[local11];
+				anInt5300 += this.anIntArray465[local11];
+				anInt5299 += this.anIntArray466[local11];
 				local3++;
 			}
 			if (local3 > 0) {
-				Static237.anInt5298 = Static237.anInt5298 / local3 + arg1;
-				Static237.anInt5300 = Static237.anInt5300 / local3 + arg2;
-				Static237.anInt5299 = Static237.anInt5299 / local3 + arg3;
+				anInt5298 = anInt5298 / local3 + arg1;
+				anInt5300 = anInt5300 / local3 + arg2;
+				anInt5299 = anInt5299 / local3 + arg3;
 			} else {
-				Static237.anInt5298 = arg1;
-				Static237.anInt5300 = arg2;
-				Static237.anInt5299 = arg3;
+				anInt5298 = arg1;
+				anInt5300 = arg2;
+				anInt5299 = arg3;
 			}
 		} else if (arg0 == 1) {
 			for (local3 = 0; local3 < this.vertexCount; local3++) {
@@ -2881,9 +3170,9 @@ public final class GlModel extends Model {
 			@Pc(164) int local164;
 			if (arg0 == 2) {
 				for (local3 = 0; local3 < this.vertexCount; local3++) {
-					this.anIntArray461[local3] -= Static237.anInt5298;
-					this.anIntArray465[local3] -= Static237.anInt5300;
-					this.anIntArray466[local3] -= Static237.anInt5299;
+					this.anIntArray461[local3] -= anInt5298;
+					this.anIntArray465[local3] -= anInt5300;
+					this.anIntArray466[local3] -= anInt5299;
 					if (arg3 != 0) {
 						local11 = MathUtils.sin[arg3];
 						local146 = MathUtils.cos[arg3];
@@ -2905,21 +3194,21 @@ public final class GlModel extends Model {
 						this.anIntArray466[local3] = this.anIntArray466[local3] * local146 + 32767 - this.anIntArray461[local3] * local11 >> 16;
 						this.anIntArray461[local3] = local164;
 					}
-					this.anIntArray461[local3] += Static237.anInt5298;
-					this.anIntArray465[local3] += Static237.anInt5300;
-					this.anIntArray466[local3] += Static237.anInt5299;
+					this.anIntArray461[local3] += anInt5298;
+					this.anIntArray465[local3] += anInt5300;
+					this.anIntArray466[local3] += anInt5299;
 				}
 			} else if (arg0 == 3) {
 				for (local3 = 0; local3 < this.vertexCount; local3++) {
-					this.anIntArray461[local3] -= Static237.anInt5298;
-					this.anIntArray465[local3] -= Static237.anInt5300;
-					this.anIntArray466[local3] -= Static237.anInt5299;
+					this.anIntArray461[local3] -= anInt5298;
+					this.anIntArray465[local3] -= anInt5300;
+					this.anIntArray466[local3] -= anInt5299;
 					this.anIntArray461[local3] = this.anIntArray461[local3] * arg1 / 128;
 					this.anIntArray465[local3] = this.anIntArray465[local3] * arg2 / 128;
 					this.anIntArray466[local3] = this.anIntArray466[local3] * arg3 / 128;
-					this.anIntArray461[local3] += Static237.anInt5298;
-					this.anIntArray465[local3] += Static237.anInt5300;
-					this.anIntArray466[local3] += Static237.anInt5299;
+					this.anIntArray461[local3] += anInt5298;
+					this.anIntArray465[local3] += anInt5300;
+					this.anIntArray466[local3] += anInt5299;
 				}
 			} else if (arg0 == 5) {
 				for (local3 = 0; local3 < this.anInt5297; local3++) {
@@ -3199,9 +3488,9 @@ public final class GlModel extends Model {
 		}
 		local151.anInt4280 = local26;
 		local151.anInt4273 = local85;
-		if (Static237.anIntArray468.length < this.anInt5296) {
-			Static237.anIntArray468 = new int[this.anInt5296];
-			Static237.anIntArray467 = new int[this.anInt5296];
+		if (anIntArray468.length < this.anInt5296) {
+			anIntArray468 = new int[this.anInt5296];
+			anIntArray467 = new int[this.anInt5296];
 		}
 		@Pc(194) int local194;
 		@Pc(246) int local246;
@@ -3217,8 +3506,8 @@ public final class GlModel extends Model {
 				if (local258 == -1) {
 					break;
 				}
-				Static237.anIntArray468[local258] = local216;
-				Static237.anIntArray467[local258] = local234;
+				anIntArray468[local258] = local216;
+				anIntArray467[local258] = local234;
 			}
 		}
 		for (local194 = 0; local194 < this.anInt5297; local194++) {
@@ -3226,12 +3515,12 @@ public final class GlModel extends Model {
 				@Pc(292) short local292 = this.aShortArray77[local194];
 				@Pc(297) short local297 = this.aShortArray82[local194];
 				@Pc(302) short local302 = this.aShortArray83[local194];
-				local246 = Static237.anIntArray468[local292];
-				local248 = Static237.anIntArray468[local297];
-				local258 = Static237.anIntArray468[local302];
-				@Pc(318) int local318 = Static237.anIntArray467[local292];
-				@Pc(322) int local322 = Static237.anIntArray467[local297];
-				@Pc(326) int local326 = Static237.anIntArray467[local302];
+				local246 = anIntArray468[local292];
+				local248 = anIntArray468[local297];
+				local258 = anIntArray468[local302];
+				@Pc(318) int local318 = anIntArray467[local292];
+				@Pc(322) int local322 = anIntArray467[local297];
+				@Pc(326) int local326 = anIntArray467[local302];
 				if ((local246 - local248) * (local322 - local326) - (local322 - local318) * (local258 - local248) > 0) {
 					Rasteriser.fillSpriteTriangle(local151.aByteArray18, local318, local322, local326, local246, local248, local258, local134);
 				}

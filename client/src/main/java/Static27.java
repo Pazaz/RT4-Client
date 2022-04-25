@@ -5,10 +5,7 @@ public final class Static27 {
 	@OriginalMember(owner = "client!cb", name = "ab", descriptor = "Lclient!na;")
 	public static final JagString aClass100_164 = JagString.parse(" )2> <col=00ffff>");
 
-	@OriginalMember(owner = "client!cb", name = "cb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_165 = JagString.parse("titlebg");
-
-    @OriginalMember(owner = "client!cb", name = "fb", descriptor = "Lclient!na;")
+	@OriginalMember(owner = "client!cb", name = "fb", descriptor = "Lclient!na;")
 	public static final JagString aClass100_168 = JagString.parse(": ");
 
 }

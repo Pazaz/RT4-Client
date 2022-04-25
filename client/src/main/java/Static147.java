@@ -4,10 +4,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static147 {
 
-    @OriginalMember(owner = "client!lh", name = "u", descriptor = "I")
-	public static volatile int anInt3521 = -1;
-
-	@OriginalMember(owner = "client!lh", name = "z", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!lh", name = "z", descriptor = "Lclient!na;")
 	public static final JagString aClass100_672 = JagString.parse("(U (X");
 
 	@OriginalMember(owner = "client!lh", name = "b", descriptor = "(II)V")

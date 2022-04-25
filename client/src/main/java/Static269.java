@@ -202,7 +202,7 @@ public final class Static269 {
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(III)Lclient!bm;")
 	public static GroundDecor method2210(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		@Pc(7) Tile local7 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
+		@Pc(7) Tile local7 = SceneGraph.tiles[arg0][arg1][arg2];
 		return local7 == null || local7.aClass15_1 == null ? null : local7.aClass15_1;
 	}
 
@@ -266,11 +266,11 @@ public final class Static269 {
 				WorldMap.aClass3_Sub2_Sub1_Sub1_2 = null;
 				WorldMap.aClass3_Sub2_Sub1_Sub1_2 = new SoftwareSprite(arg3, arg2);
 			}
-			SoftwareRaster.method2491(WorldMap.aClass3_Sub2_Sub1_Sub1_2.anIntArray20, arg3, arg2);
+			SoftwareRaster.method2491(WorldMap.aClass3_Sub2_Sub1_Sub1_2.pixels, arg3, arg2);
 			Static214.method4364(arg3, 0, local61, local50, 0, local236, arg2, local211);
 			Static48.method1195(arg3, 0, local61, local236, arg2, 0, local211, local50);
 			Static38.method959(0, 0, local211, arg3, local236, local50, local61, arg2);
-			Static46.method1178(WorldMap.aClass3_Sub2_Sub1_Sub1_2.anIntArray20, arg0, arg1, arg3, arg2);
+			Static46.method1178(WorldMap.aClass3_Sub2_Sub1_Sub1_2.pixels, arg0, arg1, arg3, arg2);
 			SoftwareRaster.pixels = null;
 		} else {
 			Static214.method4364(arg3 + arg0, arg1, local61, local50, arg0, local236, arg1 + arg2, local211);

@@ -8,7 +8,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!mb")
 public final class GlFont extends Font {
 
-	@OriginalMember(owner = "client!mb", name = "Gb", descriptor = "[I")
+    @OriginalMember(owner = "client!dj", name = "a", descriptor = "Lclient!cf;")
+    public static GlSprite masked = null;
+    @OriginalMember(owner = "client!mb", name = "Gb", descriptor = "[I")
 	private int[] listIds;
 
 	@OriginalMember(owner = "client!mb", name = "Hb", descriptor = "I")
@@ -28,6 +30,19 @@ public final class GlFont extends Font {
 		super(bytes, xOffsets, yOffsets, innerWidths, innerHeights);
 		this.createTexture(pixels);
 		this.createLists();
+	}
+
+	@OriginalMember(owner = "client!dj", name = "a", descriptor = "()V")
+	public static void method1173() {
+		masked = null;
+	}
+
+	@OriginalMember(owner = "client!dj", name = "a", descriptor = "(Lclient!cf;)V")
+	public static void method1188(@OriginalArg(0) GlSprite arg0) {
+		if (arg0.anInt1859 != Static46.anInt1441 - Static46.clipY) {
+			throw new IllegalArgumentException();
+		}
+		masked = arg0;
 	}
 
 	@OriginalMember(owner = "client!mb", name = "finalize", descriptor = "()V")
@@ -51,7 +66,7 @@ public final class GlFont extends Font {
 	@Override
 	protected final void renderGlyph(@OriginalArg(0) int glyph, @OriginalArg(1) int x, @OriginalArg(2) int y, @OriginalArg(3) int width, @OriginalArg(4) int height, @OriginalArg(5) int color) {
 		@Pc(4) GL2 gl;
-		if (Static46.mask == null) {
+		if (masked == null) {
 			GlRenderer.method4151();
 			gl = GlRenderer.gl;
 			GlRenderer.setTextureId(this.textureId);
@@ -70,7 +85,7 @@ public final class GlFont extends Font {
 		@Pc(51) float s1 = s0 + (float) this.spriteInnerWidths[glyph] / (float) this.powerOfTwoSize;
 		@Pc(63) float t1 = t0 + (float) this.spriteInnerHeights[glyph] / (float) this.powerOfTwoSize;
 		GlRenderer.setTextureId(this.textureId);
-		@Pc(68) GlSprite mask = Static46.mask;
+		@Pc(68) GlSprite mask = masked;
 		gl.glActiveTexture(GL2.GL_TEXTURE1);
 		gl.glEnable(GL2.GL_TEXTURE_2D);
 		gl.glBindTexture(GL2.GL_TEXTURE_2D, mask.textureId);

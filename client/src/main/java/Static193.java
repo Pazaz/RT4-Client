@@ -13,37 +13,6 @@ public final class Static193 {
 	@OriginalMember(owner = "client!pi", name = "V", descriptor = "[Lclient!na;")
 	public static final JagString[] aClass100Array134 = new JagString[100];
 
-	@OriginalMember(owner = "client!pi", name = "a", descriptor = "(Lclient!na;BI)V")
-	public static void method3498(@OriginalArg(0) JagString arg0, @OriginalArg(2) int arg1) {
-		@Pc(10) DelayedStateChange local10 = Static238.method4143(2, arg1);
-		local10.pushServer();
-		local10.stringArg = arg0;
-	}
-
-	@OriginalMember(owner = "client!pi", name = "a", descriptor = "(JI)V")
-	public static void method3500(@OriginalArg(0) long arg0) {
-		if (arg0 == 0L) {
-			return;
-		}
-		for (@Pc(13) int local13 = 0; local13 < Static9.anInt178; local13++) {
-			if (Static92.aLongArray3[local13] == arg0) {
-				Static9.anInt178--;
-				for (@Pc(41) int local41 = local13; local41 < Static9.anInt178; local41++) {
-					Static122.aClass100Array92[local41] = Static122.aClass100Array92[local41 + 1];
-					Static104.anIntArray255[local41] = Static104.anIntArray255[local41 + 1];
-					Static214.aClass100Array170[local41] = Static214.aClass100Array170[local41 + 1];
-					Static92.aLongArray3[local41] = Static92.aLongArray3[local41 + 1];
-					Static106.anIntArray258[local41] = Static106.anIntArray258[local41 + 1];
-					Static3.aBooleanArray135[local41] = Static3.aBooleanArray135[local41 + 1];
-				}
-				FriendsList.transmitAt = InterfaceList.transmitTimer;
-				Protocol.outboundBuffer.p1isaac(57);
-				Protocol.outboundBuffer.p8(arg0);
-				break;
-			}
-		}
-	}
-
 	@OriginalMember(owner = "client!pi", name = "a", descriptor = "([[[B[[B[[B[[I[[F[[I[[B[[B[[FI[[F[[I[[I[[II)[Lclient!hg;")
 	public static GlTile[] method3501(@OriginalArg(0) byte[][][] arg0, @OriginalArg(1) byte[][] arg1, @OriginalArg(2) byte[][] arg2, @OriginalArg(3) int[][] arg3, @OriginalArg(4) float[][] arg4, @OriginalArg(5) int[][] arg5, @OriginalArg(6) byte[][] arg6, @OriginalArg(7) byte[][] arg7, @OriginalArg(8) float[][] arg8, @OriginalArg(9) int arg9, @OriginalArg(10) float[][] arg10, @OriginalArg(11) int[][] arg11, @OriginalArg(12) int[][] arg12, @OriginalArg(13) int[][] arg13) {
 		@Pc(9) int[][] local9 = new int[105][105];
@@ -257,7 +226,7 @@ public final class Static193 {
 				local493.method1943();
 			}
 		}
-		local16 = local103.method3864();
+		local16 = local103.size();
 		@Pc(1348) GlTile[] local1348 = new GlTile[local16];
 		local103.method3865(local1348);
 		@Pc(1358) long[] local1358 = new long[local16];

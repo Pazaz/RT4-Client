@@ -26,7 +26,7 @@ public final class Static44 {
 		Static231.anInt5204 = 0;
 		Static230.opcode2 = -1;
 		Static270.anInt5795 = 0;
-		Static60.rebootTimer = 0;
+		Player.rebootTimer = 0;
 		Static49.opcode4 = -1;
 		Protocol.inboundBuffer.offset = 0;
 		Static201.anInt1862 = 0;
@@ -37,9 +37,9 @@ public final class Static44 {
 				PlayerList.players[local35].faceEntity = -1;
 			}
 		}
-		for (local35 = 0; local35 < Static175.npcs.length; local35++) {
-			if (Static175.npcs[local35] != null) {
-				Static175.npcs[local35].faceEntity = -1;
+		for (local35 = 0; local35 < NpcList.npcs.length; local35++) {
+			if (NpcList.npcs[local35] != null) {
+				NpcList.npcs[local35].faceEntity = -1;
 			}
 		}
 		Static102.method2073();

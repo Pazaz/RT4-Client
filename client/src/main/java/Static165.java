@@ -16,9 +16,6 @@ public final class Static165 {
 	@OriginalMember(owner = "client!nb", name = "d", descriptor = "I")
 	public static int anInt4035 = 0;
 
-	@OriginalMember(owner = "client!nb", name = "j", descriptor = "I")
-	public static volatile int anInt4039 = -1;
-
 	@OriginalMember(owner = "client!nb", name = "m", descriptor = "Lclient!na;")
 	public static final JagString aClass100_776 = JagString.parse("logo");
 
@@ -66,7 +63,7 @@ public final class Static165 {
 	public static void method3163(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4) {
 		if (arg1 == arg4) {
 			Static82.method1760(arg4, arg2, arg0, arg3);
-		} else if (Static172.anInt4164 <= arg2 - arg4 && arg2 + arg4 <= Static224.anInt5063 && arg3 - arg1 >= Static267.anInt5773 && arg3 + arg1 <= Static106.anInt2869) {
+		} else if (TextureOp29.anInt4164 <= arg2 - arg4 && arg2 + arg4 <= TextureOp29.anInt5063 && arg3 - arg1 >= TextureOp29.anInt5773 && arg3 + arg1 <= TextureOp29.anInt2869) {
 			Static72.method1568(arg3, arg2, arg4, arg1, arg0);
 		} else {
 			Static35.method898(arg0, arg1, arg4, arg2, arg3);

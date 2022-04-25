@@ -69,19 +69,4 @@ public final class Static138 {
 		return local34 >> 19 & 0xFF;
 	}
 
-	@OriginalMember(owner = "client!km", name = "a", descriptor = "(ILjava/lang/Object;Z)[B")
-	public static byte[] method2696(@OriginalArg(1) Object arg0, @OriginalArg(2) boolean arg1) {
-		if (arg0 == null) {
-			return null;
-		} else if (arg0 instanceof byte[]) {
-			@Pc(14) byte[] local14 = (byte[]) arg0;
-			return arg1 ? Static23.method648(local14) : local14;
-		} else if (arg0 instanceof ByteArray) {
-			@Pc(34) ByteArray local34 = (ByteArray) arg0;
-			return local34.get();
-		} else {
-			throw new IllegalArgumentException();
-		}
-	}
-
 }

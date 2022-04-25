@@ -898,4 +898,52 @@ public class WorldMap {
         anInt435 = arg0;
         method965();
     }
+
+    @OriginalMember(owner = "client!hc", name = "d", descriptor = "(I)I")
+    public static int getTargetZoom() {
+        if ((double) targetZoom == 3.0D) {
+            return 37;
+        } else if ((double) targetZoom == 4.0D) {
+            return 50;
+        } else if ((double) targetZoom == 6.0D) {
+            return 75;
+        } else if ((double) targetZoom == 8.0D) {
+            return 100;
+        } else {
+            return 200;
+        }
+    }
+
+    @OriginalMember(owner = "client!hb", name = "b", descriptor = "(Lclient!na;I)V")
+    public static void method1853(@OriginalArg(0) JagString arg0) {
+        clear(false);
+        method4011(arg0);
+    }
+
+    @OriginalMember(owner = "client!kf", name = "a", descriptor = "(Lclient!na;I)V")
+	public static void method4011(@OriginalArg(0) JagString arg0) {
+		for (@Pc(15) Map local15 = (Map) MapList.aClass69_120.method2289(); local15 != null; local15 = (Map) MapList.aClass69_120.method2288()) {
+			if (local15.group.strEquals(arg0)) {
+				currentMap = local15;
+				return;
+			}
+		}
+	}
+
+    @OriginalMember(owner = "client!me", name = "a", descriptor = "(IB)V")
+	public static void setTargetZoom(@OriginalArg(0) int arg0) {
+		anInt4901 = -1;
+		if (arg0 == 37) {
+			targetZoom = 3.0F;
+		} else if (arg0 == 50) {
+			targetZoom = 4.0F;
+		} else if (arg0 == 75) {
+			targetZoom = 6.0F;
+		} else if (arg0 == 100) {
+			targetZoom = 8.0F;
+		} else if (arg0 == 200) {
+			targetZoom = 16.0F;
+		}
+		anInt4901 = -1;
+	}
 }

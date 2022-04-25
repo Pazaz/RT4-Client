@@ -6,6 +6,10 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!lc")
 public final class Texture {
 
+    @OriginalMember(owner = "client!i", name = "ac", descriptor = "[I")
+    public static final int[] brightnessMap = new int[256];
+	@OriginalMember(owner = "client!jh", name = "f", descriptor = "D")
+	public static double brightness = -1.0D;
 	@OriginalMember(owner = "client!lc", name = "k", descriptor = "[I")
 	private final int[] anIntArray328;
 
@@ -72,9 +76,21 @@ public final class Texture {
 		this.aClass3_Sub1_2 = this.aClass3_Sub1Array22[arg0.g1()];
 	}
 
+	@OriginalMember(owner = "client!th", name = "a", descriptor = "(DI)V")
+	public static void setBrightness(@OriginalArg(0) double arg0) {
+		if (brightness == arg0) {
+			return;
+		}
+		for (@Pc(12) int local12 = 0; local12 < 256; local12++) {
+			@Pc(25) int local25 = (int) (Math.pow((double) local12 / 255.0D, arg0) * 255.0D);
+			brightnessMap[local12] = local25 > 255 ? 255 : local25;
+		}
+		brightness = arg0;
+	}
+
 	@OriginalMember(owner = "client!lc", name = "a", descriptor = "(IZIDILclient!ve;Lclient!m;Z)[I")
 	public final int[] method2725(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(3) double arg3, @OriginalArg(5) Js5 arg4, @OriginalArg(6) TextureProvider arg5, @OriginalArg(7) boolean arg6) {
-		Static241.method4537(arg3);
+		setBrightness(arg3);
 		Static37.anInterface1_1 = arg5;
 		Static176.aClass153_76 = arg4;
 		Static10.method348(arg0, arg2);
@@ -122,7 +138,7 @@ public final class Texture {
 				if (local136 < 0) {
 					local136 = 0;
 				}
-				local136 = Static103.anIntArray253[local136];
+				local136 = brightnessMap[local136];
 				@Pc(159) int local159 = local105[local127] >> 4;
 				@Pc(165) int local165 = local103[local127] >> 4;
 				if (local165 > 255) {
@@ -134,11 +150,11 @@ public final class Texture {
 				if (local159 > 255) {
 					local159 = 255;
 				}
-				local165 = Static103.anIntArray253[local165];
+				local165 = brightnessMap[local165];
 				if (local159 < 0) {
 					local159 = 0;
 				}
-				local159 = Static103.anIntArray253[local159];
+				local159 = brightnessMap[local159];
 				local56[local76++] = (local136 << 16) + (local165 << 8) + local159;
 				if (arg1) {
 					local76 += arg2 - 1;
@@ -154,7 +170,7 @@ public final class Texture {
 	@OriginalMember(owner = "client!lc", name = "a", descriptor = "(IIZLclient!m;DILclient!ve;)[B")
 	public final byte[] method2728(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) TextureProvider arg3, @OriginalArg(4) double arg4, @OriginalArg(6) Js5 arg5) {
 		@Pc(8) byte[] local8 = new byte[arg1 * 4 * arg0];
-		Static241.method4537(arg4);
+		setBrightness(arg4);
 		Static176.aClass153_76 = arg5;
 		Static37.anInterface1_1 = arg3;
 		Static10.method348(arg0, arg1);
@@ -204,15 +220,15 @@ public final class Texture {
 				if (local167 > 255) {
 					local167 = 255;
 				}
-				local138 = Static103.anIntArray253[local138];
+				local138 = brightnessMap[local138];
 				if (local167 < 0) {
 					local167 = 0;
 				}
 				if (local154 < 0) {
 					local154 = 0;
 				}
-				local154 = Static103.anIntArray253[local154];
-				local167 = Static103.anIntArray253[local167];
+				local154 = brightnessMap[local154];
+				local167 = brightnessMap[local167];
 				@Pc(220) int local220;
 				if (local138 == 0 && local154 == 0 && local167 == 0) {
 					local220 = 0;

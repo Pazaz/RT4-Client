@@ -13,10 +13,7 @@ public final class Static226 {
 	@OriginalMember(owner = "client!sf", name = "g", descriptor = "Lclient!na;")
 	public static final JagString aClass100_965 = JagString.parse("<col=ffff00>");
 
-	@OriginalMember(owner = "client!sf", name = "h", descriptor = "[Lclient!na;")
-	public static final JagString[] varcstrs = new JagString[1000];
-
-	@OriginalMember(owner = "client!sf", name = "i", descriptor = "I")
+    @OriginalMember(owner = "client!sf", name = "i", descriptor = "I")
 	public static int anInt5084 = 0;
     @OriginalMember(owner = "client!ml", name = "Q", descriptor = "I")
     public static int anInt3953 = 0;

@@ -25,14 +25,14 @@ public final class Static54 {
 		} else {
 			SoftwareRaster.method2496(arg2, arg1, arg2 + arg3.anInt445, arg1 + arg3.anInt459);
 		}
-		if (Static270.anInt5795 != 2 && Static270.anInt5795 != 5 && Static89.aClass3_Sub2_Sub1_5 != null) {
+		if (Static270.anInt5795 != 2 && Static270.anInt5795 != 5 && MiniMap.sprite != null) {
 			@Pc(48) int local48 = Static59.anInt1814 + (int)Camera.yawTarget & 0x7FF;
 			@Pc(57) int local57 = PlayerList.self.xFine / 32 + 48;
 			@Pc(67) int local67 = 464 - PlayerList.self.zFine / 32;
 			if (GlRenderer.enabled) {
-				((GlSprite) Static89.aClass3_Sub2_Sub1_5).method1427(arg2, arg1, arg3.anInt445, arg3.anInt459, local57, local67, local48, Static273.anInt4130 + 256, (GlSprite) arg3.method489(false));
+				((GlSprite) MiniMap.sprite).method1427(arg2, arg1, arg3.anInt445, arg3.anInt459, local57, local67, local48, Static273.anInt4130 + 256, (GlSprite) arg3.method489(false));
 			} else {
-				((SoftwareSprite) Static89.aClass3_Sub2_Sub1_5).method310(arg2, arg1, arg3.anInt445, arg3.anInt459, local57, local67, local48, Static273.anInt4130 + 256, arg3.anIntArray37, arg3.anIntArray45);
+				((SoftwareSprite) MiniMap.sprite).method310(arg2, arg1, arg3.anInt445, arg3.anInt459, local57, local67, local48, Static273.anInt4130 + 256, arg3.anIntArray37, arg3.anIntArray45);
 			}
 			@Pc(146) int local146;
 			@Pc(181) int local181;
@@ -68,13 +68,13 @@ public final class Static54 {
 								local271 = Static235.mapElementList.anIntArray444[local117];
 							}
 							if (GlRenderer.enabled) {
-								Static46.method1188((GlSprite) arg3.method489(false));
+								GlFont.method1188((GlSprite) arg3.method489(false));
 							} else {
 								SoftwareRaster.method2486(arg3.anIntArray37, arg3.anIntArray45);
 							}
 							local156.renderParagraphAlpha(Static235.mapElementList.aClass100Array153[local117], arg2 + local245 + arg3.anInt445 / 2, arg1 + arg3.anInt459 / 2 + -local200, local239, 50, local271, 0, 1, 0, 0);
 							if (GlRenderer.enabled) {
-								Static46.method1173();
+								GlFont.method1173();
 							} else {
 								SoftwareRaster.method2482();
 							}
@@ -82,10 +82,10 @@ public final class Static54 {
 					}
 				}
 			}
-			for (local146 = 0; local146 < Static251.anInt5454; local146++) {
-				local181 = Static145.anIntArray331[local146] * 4 + 2 - PlayerList.self.xFine / 32;
-				local150 = Static93.anIntArray219[local146] * 4 + 2 - PlayerList.self.zFine / 32;
-				@Pc(382) LocType local382 = LocTypeList.get(Static199.anIntArray417[local146]);
+			for (local146 = 0; local146 < MiniMap.locs; local146++) {
+				local181 = MiniMap.locX[local146] * 4 + 2 - PlayerList.self.xFine / 32;
+				local150 = MiniMap.locZ[local146] * 4 + 2 - PlayerList.self.zFine / 32;
+				@Pc(382) LocType local382 = LocTypeList.get(MiniMap.locId[local146]);
 				if (local382.multiLocs != null) {
 					local382 = local382.getMultiLoc();
 					if (local382 == null || local382.mapElement == -1) {
@@ -105,7 +105,7 @@ public final class Static54 {
 				}
 			}
 			for (local146 = 0; local146 < Static272.anInt5214; local146++) {
-				@Pc(498) Npc local498 = Static175.npcs[Static33.anIntArray79[local146]];
+				@Pc(498) Npc local498 = NpcList.npcs[Static33.anIntArray79[local146]];
 				if (local498 != null && local498.method2682()) {
 					@Pc(507) NpcType local507 = local498.type;
 					if (local507 != null && local507.multiNpcs != null) {
@@ -129,15 +129,15 @@ public final class Static54 {
 					local150 = local591.xFine / 32 - PlayerList.self.xFine / 32;
 					@Pc(624) long local624 = local591.username.encode37();
 					@Pc(626) boolean local626 = false;
-					for (local239 = 0; local239 < Static9.anInt178; local239++) {
-						if (local624 == Static92.aLongArray3[local239] && Static104.anIntArray255[local239] != 0) {
+					for (local239 = 0; local239 < FriendsList.size; local239++) {
+						if (local624 == FriendsList.encodedUsernames[local239] && FriendsList.worlds[local239] != 0) {
 							local626 = true;
 							break;
 						}
 					}
 					@Pc(660) boolean local660 = false;
-					for (local271 = 0; local271 < Static214.anInt5577; local271++) {
-						if (local624 == Static199.aClass3_Sub22Array1[local271].key) {
+					for (local271 = 0; local271 < ClanChat.size; local271++) {
+						if (local624 == ClanChat.members[local271].key) {
 							local660 = true;
 							break;
 						}
@@ -161,8 +161,8 @@ public final class Static54 {
 			for (local181 = 0; local181 < local756.length; local181++) {
 				@Pc(770) Class102 local770 = local756[local181];
 				if (local770 != null && local770.anInt4058 != 0 && client.loop % 20 < 10) {
-					if (local770.anInt4058 == 1 && local770.anInt4057 >= 0 && local770.anInt4057 < Static175.npcs.length) {
-						@Pc(804) Npc local804 = Static175.npcs[local770.anInt4057];
+					if (local770.anInt4058 == 1 && local770.anInt4057 >= 0 && local770.anInt4057 < NpcList.npcs.length) {
+						@Pc(804) Npc local804 = NpcList.npcs[local770.anInt4057];
 						if (local804 != null) {
 							local231 = local804.xFine / 32 - PlayerList.self.xFine / 32;
 							local200 = local804.zFine / 32 - PlayerList.self.zFine / 32;
@@ -207,9 +207,9 @@ public final class Static54 {
 
 	@OriginalMember(owner = "client!ed", name = "a", descriptor = "(ZIIII)V")
 	public static void method1306(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
-		if (arg3 >= Static172.anInt4164 && arg3 <= Static224.anInt5063) {
-			@Pc(22) int local22 = Static78.method1690(Static106.anInt2869, arg1, Static267.anInt5773);
-			@Pc(28) int local28 = Static78.method1690(Static106.anInt2869, arg0, Static267.anInt5773);
+		if (arg3 >= TextureOp29.anInt4164 && arg3 <= TextureOp29.anInt5063) {
+			@Pc(22) int local22 = Static78.method1690(TextureOp29.anInt2869, arg1, TextureOp29.anInt5773);
+			@Pc(28) int local28 = Static78.method1690(TextureOp29.anInt2869, arg0, TextureOp29.anInt5773);
 			Static101.method2054(local22, arg3, local28, arg2);
 		}
 	}
@@ -264,75 +264,4 @@ public final class Static54 {
 		return WorldList.loaded && arg0 >= WorldList.minId && arg0 <= WorldList.maxId ? WorldList.worlds[arg0 - WorldList.minId] : null;
 	}
 
-	@OriginalMember(owner = "client!ed", name = "d", descriptor = "(B)V")
-	public static void loop() {
-		for (@Pc(5) int local5 = 0; local5 < SoundPlayer.anInt4451; local5++) {
-			@Pc(12) int local12 = SoundPlayer.anIntArray362[local5]--;
-			if (SoundPlayer.anIntArray362[local5] >= -10) {
-				@Pc(79) SynthSound local79 = SoundPlayer.aClass138Array1[local5];
-				if (local79 == null) {
-					local79 = SynthSound.create(client.js5Archive4, SoundPlayer.anIntArray421[local5], 0);
-					if (local79 == null) {
-						continue;
-					}
-					SoundPlayer.anIntArray362[local5] += local79.method3990();
-					SoundPlayer.aClass138Array1[local5] = local79;
-				}
-				if (SoundPlayer.anIntArray362[local5] < 0) {
-					@Pc(209) int local209;
-					if (SoundPlayer.anIntArray68[local5] == 0) {
-						local209 = Preferences.soundEffectVolume;
-					} else {
-						@Pc(125) int local125 = (SoundPlayer.anIntArray68[local5] & 0xFF) * 128;
-						@Pc(133) int local133 = SoundPlayer.anIntArray68[local5] >> 8 & 0xFF;
-						@Pc(141) int local141 = SoundPlayer.anIntArray68[local5] >> 16 & 0xFF;
-						@Pc(151) int local151 = local133 * 128 + 64 - PlayerList.self.zFine;
-						if (local151 < 0) {
-							local151 = -local151;
-						}
-						@Pc(167) int local167 = local141 * 128 + 64 - PlayerList.self.xFine;
-						if (local167 < 0) {
-							local167 = -local167;
-						}
-						@Pc(180) int local180 = local167 + local151 - 128;
-						if (local125 < local180) {
-							SoundPlayer.anIntArray362[local5] = -100;
-							continue;
-						}
-						if (local180 < 0) {
-							local180 = 0;
-						}
-						local209 = Preferences.ambientSoundsVolume * (local125 - local180) / local125;
-					}
-					if (local209 > 0) {
-						@Pc(223) PcmSound local223 = local79.method3989().method2648(client.resampler);
-						@Pc(228) SoundPcmStream local228 = Static284.method404(local223, local209);
-						local228.method396(SoundPlayer.anIntArray563[local5] - 1);
-						client.soundStream.method1343(local228);
-					}
-					SoundPlayer.anIntArray362[local5] = -100;
-				}
-			} else {
-				SoundPlayer.anInt4451--;
-				for (@Pc(28) int local28 = local5; local28 < SoundPlayer.anInt4451; local28++) {
-					SoundPlayer.anIntArray421[local28] = SoundPlayer.anIntArray421[local28 + 1];
-					SoundPlayer.aClass138Array1[local28] = SoundPlayer.aClass138Array1[local28 + 1];
-					SoundPlayer.anIntArray563[local28] = SoundPlayer.anIntArray563[local28 + 1];
-					SoundPlayer.anIntArray362[local28] = SoundPlayer.anIntArray362[local28 + 1];
-					SoundPlayer.anIntArray68[local28] = SoundPlayer.anIntArray68[local28 + 1];
-				}
-				local5--;
-			}
-		}
-		if (MidiPlayer.jingle && !Static136.method2655()) {
-			if (Preferences.musicVolume != 0 && MusicPlayer.groupId != -1) {
-				Static122.method2410(client.js5Archive6, MusicPlayer.groupId, Preferences.musicVolume);
-			}
-			MidiPlayer.jingle = false;
-		} else if (Preferences.musicVolume != 0 && MusicPlayer.groupId != -1 && !Static136.method2655()) {
-			Protocol.outboundBuffer.p1isaac(137);
-			Protocol.outboundBuffer.p4(MusicPlayer.groupId);
-			MusicPlayer.groupId = -1;
-		}
-	}
 }

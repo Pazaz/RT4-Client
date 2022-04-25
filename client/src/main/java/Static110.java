@@ -4,18 +4,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static110 {
 
-	@OriginalMember(owner = "client!ih", name = "a", descriptor = "(III)Lclient!jh;")
-	public static Wall method2276(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		@Pc(7) Tile local7 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
-		if (local7 == null) {
-			return null;
-		} else {
-			@Pc(14) Wall local14 = local7.aClass77_1;
-			local7.aClass77_1 = null;
-			return local14;
-		}
-	}
-
 	@OriginalMember(owner = "client!ih", name = "a", descriptor = "(I[Lclient!hg;)V")
 	public static void method2280(@OriginalArg(0) int arg0, @OriginalArg(1) GlTile[] arg1) {
 		Static182.aClass3_Sub14ArrayArray2[arg0] = arg1;
@@ -57,7 +45,7 @@ public final class Static110 {
 			local6.anInt2028 = local6.npc.zFine + local6.npc.getSize() * 64;
 			Static150.method2804(arg1, local6, arg3, arg0, arg2);
 		}
-		for (local6 = (AreaSound) Static93.aClass133_7.head(); local6 != null; local6 = (AreaSound) Static93.aClass133_7.next()) {
+		for (local6 = (AreaSound) AreaSoundManager.aClass133_7.head(); local6 != null; local6 = (AreaSound) AreaSoundManager.aClass133_7.next()) {
 			local37 = 1;
 			local42 = local6.player.method2681();
 			if (local6.player.anInt3366 == local42.idleAnimationId) {

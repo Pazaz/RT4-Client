@@ -31,7 +31,7 @@ public final class Component {
 	public Object[] anObjectArray6;
 
 	@OriginalMember(owner = "client!be", name = "q", descriptor = "[Lclient!na;")
-	public JagString[] aClass100Array18;
+	public JagString[] ops;
 
 	@OriginalMember(owner = "client!be", name = "s", descriptor = "[Lclient!na;")
 	public JagString[] aClass100Array19;
@@ -301,7 +301,7 @@ public final class Component {
 	public int anInt492 = 0;
 
 	@OriginalMember(owner = "client!be", name = "Gb", descriptor = "Lclient!na;")
-	public JagString aClass100_84 = Static176.aClass100_800;
+	public JagString text = Static176.aClass100_800;
 
 	@OriginalMember(owner = "client!be", name = "n", descriptor = "I")
 	public int anInt445 = 0;
@@ -331,7 +331,7 @@ public final class Component {
 	public int modelZOffset = 0;
 
 	@OriginalMember(owner = "client!be", name = "Dc", descriptor = "Lclient!na;")
-	public JagString aClass100_88 = Static176.aClass100_800;
+	public JagString opBase = Static176.aClass100_800;
 
 	@OriginalMember(owner = "client!be", name = "Lc", descriptor = "I")
 	public int updatedVarcsReaderIndex = 0;
@@ -412,7 +412,7 @@ public final class Component {
 	public int anInt521 = 0;
 
 	@OriginalMember(owner = "client!be", name = "id", descriptor = "I")
-	public int anInt522 = -1;
+	public int modelSeqId = -1;
 
 	@OriginalMember(owner = "client!be", name = "Rc", descriptor = "Lclient!na;")
 	public JagString aClass100_89 = LocalizedText.OK;
@@ -478,7 +478,7 @@ public final class Component {
 	public int updatedVarpsReaderIndex = 0;
 
 	@OriginalMember(owner = "client!be", name = "rb", descriptor = "I")
-	public int anInt474 = 0;
+	public int color = 0;
 
 	@OriginalMember(owner = "client!be", name = "xd", descriptor = "I")
 	public int anInt530 = 0;
@@ -544,16 +544,16 @@ public final class Component {
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(BLclient!na;I)V")
 	public final void method480(@OriginalArg(1) JagString arg0, @OriginalArg(2) int arg1) {
-		if (this.aClass100Array18 == null || this.aClass100Array18.length <= arg1) {
+		if (this.ops == null || this.ops.length <= arg1) {
 			@Pc(23) JagString[] local23 = new JagString[arg1 + 1];
-			if (this.aClass100Array18 != null) {
-				for (@Pc(30) int local30 = 0; local30 < this.aClass100Array18.length; local30++) {
-					local23[local30] = this.aClass100Array18[local30];
+			if (this.ops != null) {
+				for (@Pc(30) int local30 = 0; local30 < this.ops.length; local30++) {
+					local23[local30] = this.ops[local30];
 				}
 			}
-			this.aClass100Array18 = local23;
+			this.ops = local23;
 		}
-		this.aClass100Array18[arg1] = arg0;
+		this.ops[arg1] = arg0;
 	}
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(ILclient!wa;)V")
@@ -677,11 +677,11 @@ public final class Component {
 			this.aBoolean28 = arg0.g1() == 1;
 		}
 		if (this.type == 4) {
-			this.aClass100_84 = arg0.gjstr();
+			this.text = arg0.gjstr();
 			this.aClass100_82 = arg0.gjstr();
 		}
 		if (this.type == 1 || this.type == 3 || this.type == 4) {
-			this.anInt474 = arg0.g4();
+			this.color = arg0.g4();
 		}
 		if (this.type == 3 || this.type == 4) {
 			this.anInt492 = arg0.g4();
@@ -703,9 +703,9 @@ public final class Component {
 			if (this.anInt461 == 65535) {
 				this.anInt461 = -1;
 			}
-			this.anInt522 = arg0.g2();
-			if (this.anInt522 == 65535) {
-				this.anInt522 = -1;
+			this.modelSeqId = arg0.g2();
+			if (this.modelSeqId == 65535) {
+				this.modelSeqId = -1;
 			}
 			this.anInt462 = arg0.g2();
 			if (this.anInt462 == 65535) {
@@ -726,7 +726,7 @@ public final class Component {
 				this.anInt502 = -1;
 			}
 			this.aBoolean28 = arg0.g1() == 1;
-			this.anInt474 = arg0.g4();
+			this.color = arg0.g4();
 			this.anInt512 = arg0.g2s();
 			this.anInt516 = arg0.g2s();
 			local175 = arg0.g1();
@@ -743,7 +743,7 @@ public final class Component {
 			}
 		}
 		if (this.type == 8) {
-			this.aClass100_84 = arg0.gjstr();
+			this.text = arg0.gjstr();
 		}
 		if (this.anInt530 == 2 || this.type == 2) {
 			this.aClass100_86 = arg0.gjstr();
@@ -1041,9 +1041,9 @@ public final class Component {
 			this.modelYAngle = arg0.g2();
 			this.modelYOffset = arg0.g2();
 			this.modelZoom = arg0.g2();
-			this.anInt522 = arg0.g2();
-			if (this.anInt522 == 65535) {
-				this.anInt522 = -1;
+			this.modelSeqId = arg0.g2();
+			if (this.modelSeqId == 65535) {
+				this.modelSeqId = -1;
 			}
 			this.aBoolean22 = arg0.g1() == 1;
 			this.aShort11 = (short) arg0.g2();
@@ -1061,21 +1061,21 @@ public final class Component {
 			if (this.anInt502 == 65535) {
 				this.anInt502 = -1;
 			}
-			this.aClass100_84 = arg0.gjstr();
+			this.text = arg0.gjstr();
 			this.anInt467 = arg0.g1();
 			this.anInt460 = arg0.g1();
 			this.anInt478 = arg0.g1();
 			this.aBoolean28 = arg0.g1() == 1;
-			this.anInt474 = arg0.g4();
+			this.color = arg0.g4();
 		}
 		if (this.type == 3) {
-			this.anInt474 = arg0.g4();
+			this.color = arg0.g4();
 			this.aBoolean30 = arg0.g1() == 1;
 			this.anInt476 = arg0.g1();
 		}
 		if (this.type == 9) {
 			this.anInt490 = arg0.g1();
-			this.anInt474 = arg0.g4();
+			this.color = arg0.g4();
 			this.aBoolean20 = arg0.g1() == 1;
 		}
 		local175 = arg0.g3();
@@ -1099,14 +1099,14 @@ public final class Component {
 				local471 = arg0.g1();
 			}
 		}
-		this.aClass100_88 = arg0.gjstr();
+		this.opBase = arg0.gjstr();
 		local497 = arg0.g1();
 		@Pc(557) int local557 = local497 & 0xF;
 		@Pc(567) int local567;
 		if (local557 > 0) {
-			this.aClass100Array18 = new JagString[local557];
+			this.ops = new JagString[local557];
 			for (local567 = 0; local567 < local557; local567++) {
-				this.aClass100Array18[local567] = arg0.gjstr();
+				this.ops[local567] = arg0.gjstr();
 			}
 		}
 		@Pc(584) int local584 = local497 >> 4;

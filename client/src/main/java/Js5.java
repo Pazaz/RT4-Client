@@ -31,7 +31,22 @@ public final class Js5 {
 		this.aBoolean297 = arg2;
 	}
 
-	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(B)Z")
+    @OriginalMember(owner = "client!km", name = "a", descriptor = "(ILjava/lang/Object;Z)[B")
+    public static byte[] method2696(@OriginalArg(1) Object arg0, @OriginalArg(2) boolean arg1) {
+        if (arg0 == null) {
+            return null;
+        } else if (arg0 instanceof byte[]) {
+            @Pc(14) byte[] local14 = (byte[]) arg0;
+            return arg1 ? Static23.method648(local14) : local14;
+        } else if (arg0 instanceof ByteArray) {
+            @Pc(34) ByteArray local34 = (ByteArray) arg0;
+            return local34.get();
+        } else {
+            throw new IllegalArgumentException();
+        }
+    }
+
+    @OriginalMember(owner = "client!ve", name = "a", descriptor = "(B)Z")
 	public final boolean fetchAll() {
 		if (!this.method4484()) {
 			return false;
@@ -187,7 +202,7 @@ public final class Js5 {
 				}
 			}
 		}
-		@Pc(64) byte[] local64 = Static138.method2696(this.anObjectArrayArray1[arg0][arg2], false);
+		@Pc(64) byte[] local64 = method2696(this.anObjectArrayArray1[arg0][arg2], false);
 		if (this.aBoolean297) {
 			this.anObjectArrayArray1[arg0][arg2] = null;
 			if (this.aClass70_2.anIntArray270[arg0] == 1) {
@@ -278,9 +293,9 @@ public final class Js5 {
 			}
 			@Pc(114) byte[] local114;
 			if (arg1 == null || arg1[0] == 0 && arg1[1] == 0 && arg1[2] == 0 && arg1[3] == 0) {
-				local114 = Static138.method2696(this.anObjectArray32[arg0], false);
+				local114 = method2696(this.anObjectArray32[arg0], false);
 			} else {
-				local114 = Static138.method2696(this.anObjectArray32[arg0], true);
+				local114 = method2696(this.anObjectArray32[arg0], true);
 				@Pc(128) Buffer local128 = new Buffer(local114);
 				local128.decryptXtea(arg1, local128.data.length);
 			}
@@ -456,7 +471,7 @@ public final class Js5 {
 				}
 			}
 		}
-		return Static138.method2696(this.anObjectArrayArray1[arg1][arg0], false);
+		return method2696(this.anObjectArrayArray1[arg1][arg0], false);
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(BI)[I")

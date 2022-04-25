@@ -101,14 +101,6 @@ public final class Static156 {
 		Static248.method3292(arg0, arg1, arg2, arg5, arg11, arg12, arg13, arg14);
 	}
 
-	@OriginalMember(owner = "client!mf", name = "a", descriptor = "(JI)V")
-	public static void method2956(@OriginalArg(0) long arg0) {
-		if ((long) 0 != arg0) {
-			Protocol.outboundBuffer.p1isaac(104);
-			Protocol.outboundBuffer.p8(arg0);
-		}
-	}
-
 	@OriginalMember(owner = "client!mf", name = "a", descriptor = "()V")
 	public static void method2959() {
 		@Pc(1) GL2 local1 = GlRenderer.gl;
@@ -123,7 +115,7 @@ public final class Static156 {
 			if (local31.anInt2485 >= 0 && Rasteriser.textureProvider.method3237(local31.anInt2485) == 4) {
 				local1.glColor4fv(Static190.method3441(local31.anInt2486), 0);
 				@Pc(57) float local57 = 201.5F - (local31.aBoolean140 ? 1.0F : 0.5F);
-				local31.method1944(Static130.aClass3_Sub5ArrayArrayArray1, local57, true);
+				local31.method1944(SceneGraph.tiles, local57, true);
 			}
 		}
 		local1.glEnableClientState(GL2.GL_COLOR_ARRAY);

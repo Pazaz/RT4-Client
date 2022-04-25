@@ -10,9 +10,6 @@ public final class Static69 {
     @OriginalMember(owner = "client!fh", name = "U", descriptor = "[[Z")
 	public static final boolean[][] aBooleanArrayArray2 = new boolean[][] { new boolean[0], { true, false, true }, { true, false, false, true }, { false, false, true, true }, { true, true, false }, { false, true, true }, { true, false, false, true }, { false, false, false, true, true }, { false, true, true }, { true, false, true, true, true }, { false, true, true, true, true }, { false, true, true, true, true, false } };
 
-	@OriginalMember(owner = "client!fh", name = "ab", descriptor = "Lclient!na;")
-	public static final JagString aClass100_443 = JagString.parse("::noclip");
-
 	@OriginalMember(owner = "client!fh", name = "a", descriptor = "(IIII)I")
 	public static int method1540(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
 		if (arg1 == arg2) {
@@ -22,26 +19,6 @@ public final class Static69 {
 			@Pc(50) int local50 = arg0 * (arg2 >>> 7 & 0x1FE01FE) + local17 * (arg1 >>> 7 & 0x1FE01FE) & 0xFF00FF00;
 			@Pc(65) int local65 = local17 * (arg1 & 0xFF00FF) + (arg2 & 0xFF00FF) * arg0 & 0xFF00FF00;
 			return local50 + (local65 >> 7);
-		}
-	}
-
-	@OriginalMember(owner = "client!fh", name = "a", descriptor = "(JI)V")
-	public static void method1542(@OriginalArg(0) long arg0) {
-		if (arg0 == 0L) {
-			return;
-		}
-		for (@Pc(12) int local12 = 0; local12 < Static35.anInt1093; local12++) {
-			if (IgnoreList.encodedUsernames[local12] == arg0) {
-				Static35.anInt1093--;
-				for (@Pc(36) int local36 = local12; local36 < Static35.anInt1093; local36++) {
-					IgnoreList.encodedUsernames[local36] = IgnoreList.encodedUsernames[local36 + 1];
-					Static193.aClass100Array134[local36] = Static193.aClass100Array134[local36 + 1];
-				}
-				FriendsList.transmitAt = InterfaceList.transmitTimer;
-				Protocol.outboundBuffer.p1isaac(213);
-				Protocol.outboundBuffer.p8(arg0);
-				break;
-			}
 		}
 	}
 
@@ -56,7 +33,7 @@ public final class Static69 {
 		local3.aClass8_7 = arg6;
 		local3.aClass8_8 = arg7;
 		@Pc(34) int local34 = 0;
-		@Pc(42) Tile local42 = Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2];
+		@Pc(42) Tile local42 = SceneGraph.tiles[arg0][arg1][arg2];
 		if (local42 != null) {
 			for (@Pc(46) int local46 = 0; local46 < local42.anInt662; local46++) {
 				@Pc(55) Scenery local55 = local42.aClass31Array1[local46];
@@ -69,10 +46,10 @@ public final class Static69 {
 			}
 		}
 		local3.anInt3063 = -local34;
-		if (Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2] == null) {
-			Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2] = new Tile(arg0, arg1, arg2);
+		if (SceneGraph.tiles[arg0][arg1][arg2] == null) {
+			SceneGraph.tiles[arg0][arg1][arg2] = new Tile(arg0, arg1, arg2);
 		}
-		Static130.aClass3_Sub5ArrayArrayArray1[arg0][arg1][arg2].aClass79_1 = local3;
+		SceneGraph.tiles[arg0][arg1][arg2].aClass79_1 = local3;
 	}
 
 	@OriginalMember(owner = "client!fh", name = "a", descriptor = "(Lclient!th;IIIII)V")
@@ -88,7 +65,7 @@ public final class Static69 {
 					if (local28 >= 0 && local28 < Static152.mapSizeX) {
 						for (@Pc(39) int local39 = local11; local39 <= local15; local39++) {
 							if (local39 >= 0 && local39 < Static99.mapSizeZ && (!local1 || local28 >= local7 || local39 >= local15 || local39 < arg3 && local28 != arg2)) {
-								@Pc(71) Tile local71 = Static130.aClass3_Sub5ArrayArrayArray1[local17][local28][local39];
+								@Pc(71) Tile local71 = SceneGraph.tiles[local17][local28][local39];
 								if (local71 != null) {
 									@Pc(158) int local158 = (Static83.activeTileHeightMap[local17][local28][local39] + Static83.activeTileHeightMap[local17][local28 + 1][local39] + Static83.activeTileHeightMap[local17][local28][local39 + 1] + Static83.activeTileHeightMap[local17][local28 + 1][local39 + 1]) / 4 - (Static83.activeTileHeightMap[arg1][arg2][arg3] + Static83.activeTileHeightMap[arg1][arg2 + 1][arg3] + Static83.activeTileHeightMap[arg1][arg2][arg3 + 1] + Static83.activeTileHeightMap[arg1][arg2 + 1][arg3 + 1]) / 4;
 									@Pc(161) Wall local161 = local71.aClass77_1;

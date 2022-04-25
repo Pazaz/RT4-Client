@@ -6,7 +6,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!fe")
 public abstract class PathingEntity extends Entity {
 
-	@OriginalMember(owner = "client!fe", name = "A", descriptor = "I")
+    @OriginalMember(owner = "client!ef", name = "a", descriptor = "[I")
+	public static final int[] ANGLES = new int[] { 768, 1024, 1280, 512, 1536, 256, 0, 1792 };
+    @OriginalMember(owner = "client!fe", name = "A", descriptor = "I")
 	public int spotAnimStart;
 
 	@OriginalMember(owner = "client!fe", name = "S", descriptor = "I")

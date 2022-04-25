@@ -6,12 +6,28 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!si")
 public final class TextureOp29 extends TextureOp {
 
+	@OriginalMember(owner = "client!sd", name = "S", descriptor = "I")
+	public static int anInt5063 = 100;
+	@OriginalMember(owner = "client!ic", name = "j", descriptor = "I")
+	public static int anInt2869 = 100;
+	@OriginalMember(owner = "client!nj", name = "i", descriptor = "I")
+	public static int anInt4164 = 0;
+	@OriginalMember(owner = "client!vl", name = "h", descriptor = "I")
+	public static int anInt5773 = 0;
 	@OriginalMember(owner = "client!si", name = "U", descriptor = "[Lclient!kf;")
 	private TextureOp29SubOp[] aClass18Array1;
 
 	@OriginalMember(owner = "client!si", name = "<init>", descriptor = "()V")
 	public TextureOp29() {
 		super(0, true);
+	}
+
+	@OriginalMember(owner = "client!id", name = "a", descriptor = "(IIBII)V")
+	public static void method2263(@OriginalArg(3) int arg0, @OriginalArg(4) int arg1) {
+		anInt5063 = arg1;
+		anInt4164 = 0;
+		anInt5773 = 0;
+		anInt2869 = arg0;
 	}
 
 	@OriginalMember(owner = "client!si", name = "a", descriptor = "(IB)[I")
@@ -29,7 +45,7 @@ public final class TextureOp29 extends TextureOp {
 		@Pc(7) int local7 = Static172.anInt4165;
 		@Pc(9) int local9 = Static189.anInt4457;
 		Static81.method1751(arg0);
-		Static107.method2263(Static141.anInt3473, Static34.anInt1060);
+		method2263(Static141.anInt3473, Static34.anInt1060);
 		if (this.aClass18Array1 == null) {
 			return;
 		}

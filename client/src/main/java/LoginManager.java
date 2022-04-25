@@ -1,3 +1,4 @@
+import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
@@ -131,7 +132,7 @@ public class LoginManager {
                 }
                 local126 = Protocol.socket.read() << 8 | Protocol.socket.read();
                 Static176.hopWorld(local126);
-                if (Static125.worldId == -1) {
+                if (Player.worldId == -1) {
                     anInt4937 = 0;
                     reply = 6;
                     Protocol.socket.close();
@@ -428,7 +429,7 @@ public class LoginManager {
                 Protocol.socket.read(0, Protocol.length, Protocol.inboundBuffer.data);
                 reply = 2;
                 step = 0;
-                Static243.method4221();
+                client.method4221();
                 Static80.centralZoneX = -1;
                 Protocol.readRebuildPacket(false);
                 Protocol.opcode = -1;
@@ -452,6 +453,43 @@ public class LoginManager {
                     client.port = client.defaultPort;
                 }
             }
+        }
+    }
+
+    @OriginalMember(owner = "client!p", name = "a", descriptor = "(I)V")
+    public static void method3395() {
+        if (step == 5) {
+            step = 6;
+        }
+    }
+
+    @OriginalMember(owner = "client!se", name = "a", descriptor = "(Lclient!na;Lclient!na;IB)V")
+    public static void method3896(@OriginalArg(0) JagString arg0, @OriginalArg(1) JagString arg1, @OriginalArg(2) int arg2) {
+        Player.password = arg1;
+        anInt39 = arg2;
+        Player.usernameInput = arg0;
+        if (Player.usernameInput.strEquals(JagString.EMPTY) || Player.password.strEquals(JagString.EMPTY)) {
+            reply = 3;
+        } else if (Player.worldId == -1) {
+            anInt673 = 0;
+            anInt4587 = 0;
+            reply = -3;
+            anInt4937 = 1;
+            @Pc(43) Buffer local43 = new Buffer(128);
+            local43.p1(10);
+            local43.p2((int) (Math.random() * 99999.0D));
+            local43.p2(530);
+            local43.p8(Player.usernameInput.encode37());
+            local43.p4((int) (Math.random() * 9.9999999E7D));
+            local43.pjstr(Player.password);
+            local43.p4((int) (Math.random() * 9.9999999E7D));
+            local43.encryptRsa(GlobalConfig.RSA_EXPONENT, GlobalConfig.RSA_MODULUS);
+            Protocol.outboundBuffer.offset = 0;
+            Protocol.outboundBuffer.p1(210);
+            Protocol.outboundBuffer.p1(local43.offset);
+            Protocol.outboundBuffer.pBytes(local43.data, local43.offset);
+        } else {
+            clear();
         }
     }
 }

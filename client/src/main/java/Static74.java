@@ -1,12 +1,8 @@
-import java.util.zip.CRC32;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 public final class Static74 {
-
-	@OriginalMember(owner = "client!fn", name = "X", descriptor = "Ljava/util/zip/CRC32;")
-	public static final CRC32 aCRC32_1 = new CRC32();
 
 	@OriginalMember(owner = "client!fn", name = "Z", descriptor = "Lclient!na;")
 	public static final JagString aClass100_461 = JagString.parse(")1 ");
@@ -15,7 +11,7 @@ public final class Static74 {
 	public static void method1623(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6) {
 		if (arg3 == arg6) {
 			Static152.method2826(arg0, arg2, arg5, arg6, arg1, arg4);
-		} else if (arg1 - arg6 >= Static172.anInt4164 && arg6 + arg1 <= Static224.anInt5063 && Static267.anInt5773 <= arg2 - arg3 && Static106.anInt2869 >= arg2 + arg3) {
+		} else if (arg1 - arg6 >= TextureOp29.anInt4164 && arg6 + arg1 <= TextureOp29.anInt5063 && TextureOp29.anInt5773 <= arg2 - arg3 && TextureOp29.anInt2869 >= arg2 + arg3) {
 			Static270.method4594(arg5, arg1, arg2, arg4, arg6, arg3, arg0);
 		} else {
 			Static231.method3981(arg6, arg5, arg4, arg0, arg2, arg1, arg3);
@@ -84,7 +80,7 @@ public final class Static74 {
 				@Pc(50) HookRequest local50 = new HookRequest();
 				local50.arguments = local41.anObjectArray3;
 				local50.source = local41;
-				Static88.method1818(2000000, local50);
+				ScriptRunner.run(2000000, local50);
 			}
 		}
 	}
