@@ -62,8 +62,8 @@ public final class Static41 {
 				local130 = local83[local115];
 				for (@Pc(132) int local132 = 0; local132 < local41; local132++) {
 					@Pc(141) int local141 = (local132 << 11) / local41;
-					@Pc(152) int local152 = arg5 + MathUtils.anIntArray225[local141] * local130 >> 16;
-					local162 = arg3 + MathUtils.anIntArray223[local141] * local126 >> 16;
+					@Pc(152) int local152 = arg5 + MathUtils.cos[local141] * local130 >> 16;
+					local162 = arg3 + MathUtils.sin[local141] * local126 >> 16;
 					local113[local115][local132] = local103.method1685(local162, local152);
 				}
 			}

@@ -8,13 +8,13 @@ public final class Static77 {
 	public static final int[] anIntArray194 = new int[10000];
 
 	@OriginalMember(owner = "client!gb", name = "N", descriptor = "[I")
-	public static final int[] anIntArray195 = MathUtils.anIntArray225;
+	public static final int[] anIntArray195 = MathUtils.cos;
 
 	@OriginalMember(owner = "client!gb", name = "S", descriptor = "I")
 	public static int anInt2138 = 0;
 
 	@OriginalMember(owner = "client!gb", name = "V", descriptor = "[I")
-	public static final int[] anIntArray198 = MathUtils.anIntArray223;
+	public static final int[] anIntArray198 = MathUtils.sin;
 
 	@OriginalMember(owner = "client!gb", name = "Z", descriptor = "[I")
 	public static final int[] anIntArray199 = new int[10000];

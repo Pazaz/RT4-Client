@@ -46,8 +46,8 @@ public final class Static54 {
 				for (@Pc(117) int local117 = 0; local117 < Static235.mapFunctionGroup.anInt5074; local117++) {
 					if (Static235.mapFunctionGroup.method3892(local117)) {
 						local146 = (Static235.mapFunctionGroup.aShortArray73[local117] - Static225.originX) * 4 + 2 - Static173.self.xFine / 32;
-						local150 = MathUtils.anIntArray223[local48];
-						local154 = MathUtils.anIntArray225[local48];
+						local150 = MathUtils.sin[local48];
+						local154 = MathUtils.cos[local48];
 						@Pc(156) Font local156 = Static114.aClass3_Sub2_Sub9_42;
 						@Pc(164) int local164 = local150 * 256 / (Static273.anInt4130 + 256);
 						local181 = (Static235.mapFunctionGroup.aShortArray72[local117] - Static142.originZ) * 4 + 2 - Static173.self.zFine / 32;

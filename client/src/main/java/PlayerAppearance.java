@@ -252,12 +252,12 @@ public final class PlayerAppearance {
 									local404[0] = local404[4] = local404[8] = 32768;
 									local404[14] = -local360;
 								} else {
-									local451 = MathUtils.anIntArray225[local374] >> 1;
-									local457 = MathUtils.anIntArray223[local374] >> 1;
-									@Pc(463) int local463 = MathUtils.anIntArray225[local367] >> 1;
-									@Pc(469) int local469 = MathUtils.anIntArray223[local367] >> 1;
-									local475 = MathUtils.anIntArray225[local381] >> 1;
-									local481 = MathUtils.anIntArray223[local381] >> 1;
+									local451 = MathUtils.cos[local374] >> 1;
+									local457 = MathUtils.sin[local374] >> 1;
+									@Pc(463) int local463 = MathUtils.cos[local367] >> 1;
+									@Pc(469) int local469 = MathUtils.sin[local367] >> 1;
+									local475 = MathUtils.cos[local381] >> 1;
+									local481 = MathUtils.sin[local381] >> 1;
 									local404[4] = local451 * local475 + 16384 >> 15;
 									local404[5] = -local457;
 									local404[3] = local481 * local451 + 16384 >> 15;

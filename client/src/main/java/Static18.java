@@ -74,14 +74,14 @@ public final class Static18 {
 		@Pc(72) int local72;
 		@Pc(68) int local68;
 		if (local5 != 0) {
-			local68 = MathUtils.anIntArray225[local5];
-			local72 = MathUtils.anIntArray223[local5];
+			local68 = MathUtils.cos[local5];
+			local72 = MathUtils.sin[local5];
 			local59 = local72 * -arg3 >> 16;
 			local57 = local68 * arg3 >> 16;
 		}
 		if (local29 != 0) {
-			local72 = MathUtils.anIntArray223[local29];
-			local68 = MathUtils.anIntArray225[local29];
+			local72 = MathUtils.sin[local29];
+			local68 = MathUtils.cos[local29];
 			local55 = local72 * local57 >> 16;
 			local57 = local57 * local68 >> 16;
 		}
