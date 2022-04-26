@@ -105,8 +105,8 @@ public final class BasType {
 	}
 
 	@OriginalMember(owner = "client!ck", name = "a", descriptor = "(IBLclient!wa;)V")
-	private void method881(@OriginalArg(0) int arg0, @OriginalArg(2) Buffer arg1) {
-		if (arg0 == 1) {
+	private void method881(@OriginalArg(0) int opcode, @OriginalArg(2) Buffer arg1) {
+		if (opcode == 1) {
 			this.idleAnimationId = arg1.g2();
 			this.walkAnimation = arg1.g2();
 			if (this.walkAnimation == 65535) {
@@ -115,26 +115,26 @@ public final class BasType {
 			if (this.idleAnimationId == 65535) {
 				this.idleAnimationId = -1;
 			}
-		} else if (arg0 == 2) {
+		} else if (opcode == 2) {
 			this.anInt1062 = arg1.g2();
-		} else if (arg0 == 3) {
+		} else if (opcode == 3) {
 			this.anInt1042 = arg1.g2();
-		} else if (arg0 == 4) {
+		} else if (opcode == 4) {
 			this.anInt1066 = arg1.g2();
-		} else if (arg0 == 5) {
+		} else if (opcode == 5) {
 			this.anInt1048 = arg1.g2();
-		} else if (arg0 == 6) {
+		} else if (opcode == 6) {
 			this.runAnimationId = arg1.g2();
-		} else if (arg0 == 7) {
+		} else if (opcode == 7) {
 			this.runAnimationId2 = arg1.g2();
-		} else if (arg0 == 8) {
+		} else if (opcode == 8) {
 			this.runAnimationId3 = arg1.g2();
-		} else if (arg0 == 9) {
+		} else if (opcode == 9) {
 			this.runAnimationId4 = arg1.g2();
-		} else if (arg0 == 26) {
+		} else if (opcode == 26) {
 			this.anInt1059 = (short) (arg1.g1() * 4);
 			this.anInt1050 = (short) (arg1.g1() * 4);
-		} else if (arg0 == 27) {
+		} else if (opcode == 27) {
 			if (this.modelRotateTranslate == null) {
 				this.modelRotateTranslate = new int[12][];
 			}
@@ -143,39 +143,39 @@ public final class BasType {
 			for (@Pc(314) int type = 0; type < 6; type++) {
 				this.modelRotateTranslate[bodyId][type] = arg1.g2s();
 			}
-		} else if (arg0 == 29) {
+		} else if (opcode == 29) {
 			this.anInt1038 = arg1.g1();
-		} else if (arg0 == 30) {
+		} else if (opcode == 30) {
 			this.anInt1031 = arg1.g2();
-		} else if (arg0 == 31) {
+		} else if (opcode == 31) {
 			this.anInt1055 = arg1.g1();
-		} else if (arg0 == 32) {
+		} else if (opcode == 32) {
 			this.anInt1040 = arg1.g2();
-		} else if (arg0 == 33) {
+		} else if (opcode == 33) {
 			this.anInt1064 = arg1.g2s();
-		} else if (arg0 == 34) {
+		} else if (opcode == 34) {
 			this.anInt1065 = arg1.g1();
-		} else if (arg0 == 35) {
+		} else if (opcode == 35) {
 			this.anInt1063 = arg1.g2();
-		} else if (arg0 == 36) {
+		} else if (opcode == 36) {
 			this.anInt1041 = arg1.g2s();
-		} else if (arg0 == 37) {
+		} else if (opcode == 37) {
 			this.anInt1032 = arg1.g1();
-		} else if (arg0 == 38) {
+		} else if (opcode == 38) {
 			this.anInt1036 = arg1.g2();
-		} else if (arg0 == 39) {
+		} else if (opcode == 39) {
 			this.anInt1067 = arg1.g2();
-		} else if (arg0 == 40) {
+		} else if (opcode == 40) {
 			this.turnAnimation1 = arg1.g2();
-		} else if (arg0 == 41) {
+		} else if (opcode == 41) {
 			this.turnAnimation2 = arg1.g2();
-		} else if (arg0 == 42) {
+		} else if (opcode == 42) {
 			this.turnAnimation3 = arg1.g2();
-		} else if (arg0 == 43) {
+		} else if (opcode == 43) {
 			arg1.g2();
-		} else if (arg0 == 44) {
+		} else if (opcode == 44) {
 			arg1.g2();
-		} else if (arg0 == 45) {
+		} else if (opcode == 45) {
 			arg1.g2();
 		}
 	}

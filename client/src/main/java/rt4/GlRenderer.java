@@ -298,7 +298,7 @@ public final class GlRenderer {
 	}
 
 	@OriginalMember(owner = "client!tf", name = "h", descriptor = "()V")
-	public static void method4160() {
+	public static void draw() {
 		@Pc(2) int[] local2 = new int[2];
 		gl.glGetIntegerv(GL2.GL_DRAW_BUFFER, local2, 0);
 		gl.glGetIntegerv(GL2.GL_READ_BUFFER, local2, 1);
