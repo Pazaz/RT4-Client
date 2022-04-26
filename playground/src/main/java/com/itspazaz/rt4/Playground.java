@@ -171,7 +171,7 @@ public class Playground extends GameShell {
             }
         } else if (state == 7) {
             if (useGl) {
-                GlRenderer.init(GameShell.canvas, 16);
+                GlRenderer.init(GameShell.canvas, 0);
                 if (GlRenderer.enabled) {
                     GlRenderer.setCanvasSize(GameShell.canvasWidth, GameShell.canvasHeight);
                     GlRenderer.method4173();
@@ -205,28 +205,27 @@ public class Playground extends GameShell {
     public static boolean useGl = true;
 
     private void exportGlImage(String filename) {
-        try {
-            GL2 gl = GLContext.getCurrentGL().getGL2();
+        GL2 gl = GLContext.getCurrentGL().getGL2();
+        ByteBuffer buffer = GLBuffers.newDirectByteBuffer(GameShell.canvasWidth * GameShell.canvasHeight * 3);
 
-            BufferedImage image = new BufferedImage(GameShell.canvasWidth, GameShell.canvasHeight, BufferedImage.TYPE_INT_RGB);
-            Graphics graphics = image.getGraphics();
+        gl.glReadBuffer(GL2.GL_BACK);
+        gl.glReadPixels(0, 0, GameShell.canvasWidth, GameShell.canvasHeight, GL2.GL_BGR, GL2.GL_UNSIGNED_BYTE, buffer);
 
-            ByteBuffer buffer = GLBuffers.newDirectByteBuffer(GameShell.canvasWidth * GameShell.canvasHeight * 4);
-
-            gl.glReadBuffer(GL2.GL_BACK);
-            gl.glReadPixels(0, 0, GameShell.canvasWidth, GameShell.canvasHeight, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, buffer);
-
-            for (int h = 0; h < GameShell.canvasHeight; h++) {
-                for (int w = 0; w < GameShell.canvasWidth; w++) {
-                    graphics.setColor(new Color((buffer.get() & 0xff), (buffer.get() & 0xff), (buffer.get() & 0xff)));
-                    buffer.get();
-                    graphics.drawRect(w, GameShell.canvasHeight - h, 1, 1);
+        int[] pixels = new int[GameShell.canvasWidth * GameShell.canvasHeight];
+        for (int y = GameShell.canvasHeight; y > 0; ++y) {
+            for (int x = 0; x < GameShell.canvasWidth; ++x) {
+                int r = buffer.get() & 0xFF;
+                int g = buffer.get() & 0xFF;
+                int b = buffer.get() & 0xFF;
+                int a = 255;
+                if (r == 0x33 && g == 0x33 && b == 0x33) {
+                    a = 0x7F;
                 }
+                pixels[x + y * GameShell.canvasWidth] = r | (g << 8) | (b << 16) | (a << 24);
             }
-
-            ImageIO.write(image, "PNG", new File(filename + ".png"));
-        } catch (IOException ex) {
         }
+
+        exportImage(pixels, filename);
     }
 
     private void exportImage(int[] pixels, String filename) {
@@ -351,7 +350,7 @@ public class Playground extends GameShell {
             if (!GlRenderer.enabled) {
                 SoftwareRaster.clear(0x7F666666);
             } else {
-                GlRenderer.clearColorAndDepthBuffers(0x7F333333);
+                GlRenderer.clearColorAndDepthBuffers(0x333333);
             }
 
             if (npc != null) {
