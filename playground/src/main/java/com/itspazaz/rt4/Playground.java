@@ -220,17 +220,21 @@ public class Playground extends GameShell {
         gl.glReadPixels(0, 0, GameShell.canvasWidth, GameShell.canvasHeight, GL2.GL_BGR, GL2.GL_UNSIGNED_BYTE, buffer);
 
         int[] pixels = new int[GameShell.canvasWidth * GameShell.canvasHeight];
-        for (int y = GameShell.canvasHeight; y > 0; ++y) {
+        for (int y = GameShell.canvasHeight - 1; y > 0; --y) {
             for (int x = 0; x < GameShell.canvasWidth; ++x) {
                 int r = buffer.get() & 0xFF;
                 int g = buffer.get() & 0xFF;
                 int b = buffer.get() & 0xFF;
-                int a = 255;
+                int a = 0xFF;
                 if (r == 0x33 && g == 0x33 && b == 0x33) {
                     a = 0x7F;
                 }
                 pixels[x + y * GameShell.canvasWidth] = r | (g << 8) | (b << 16) | (a << 24);
             }
+        }
+        // erase first line (black)
+        for (int x = 0; x < GameShell.canvasWidth; ++x) {
+            pixels[x] = 0x7F000000;
         }
 
         exportImage(pixels, filename);
