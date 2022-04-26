@@ -171,18 +171,7 @@ public class Playground extends GameShell {
             }
         } else if (state == 7) {
             if (useGl) {
-                GlRenderer.init(GameShell.canvas, 0);
-                if (GlRenderer.enabled) {
-                    GlRenderer.setCanvasSize(GameShell.canvasWidth, GameShell.canvasHeight);
-                    GlRenderer.method4173();
-                    float yaw = 0.4f * 360.0F / 6.2831855F;
-                    float pitch = -0.4f * 360.0F / 6.2831855F;
-                    GlRenderer.method4171(0, 0, GameShell.canvasWidth, GameShell.canvasHeight, GameShell.canvasWidth / 2, GameShell.canvasHeight / 2, yaw, pitch, 471, 471);
-                    GlRenderer.setViewportBounds(0, 0, GameShell.canvasWidth, GameShell.canvasHeight);
-                    GlRenderer.setDepthTestEnabled(true);
-                    GlRenderer.setFogEnabled(true);
-                    Static241.setWindowMode(false, 2, GameShell.canvasWidth, GameShell.canvasHeight);
-                }
+                initGl();
             }
             state++;
         } else if (state == 8) {
@@ -200,6 +189,25 @@ public class Playground extends GameShell {
         }
 
         GameShell.frame.setTitle("" + state);
+    }
+
+    public void initGl() {
+        GlRenderer.init(GameShell.canvas, 0);
+        if (GlRenderer.enabled) {
+            GlRenderer.setCanvasSize(GameShell.canvasWidth, GameShell.canvasHeight);
+            GlRenderer.method4173();
+            float yaw = 0.4f * 360.0F / 6.2831855F;
+            float pitch = -0.4f * 360.0F / 6.2831855F;
+            GlRenderer.method4171(0, 0, GameShell.canvasWidth, GameShell.canvasHeight, GameShell.canvasWidth / 2, GameShell.canvasHeight / 2, yaw, pitch, 471, 471);
+            GlRenderer.setViewportBounds(0, 0, GameShell.canvasWidth, GameShell.canvasHeight);
+            GlRenderer.setDepthTestEnabled(true);
+            GlRenderer.setFogEnabled(true);
+            Static241.setWindowMode(false, 2, GameShell.canvasWidth, GameShell.canvasHeight);
+            orientation = 292;
+            x = 100;
+            z = 218;
+            y = 236;
+        }
     }
 
     public static boolean useGl = true;
@@ -258,6 +266,11 @@ public class Playground extends GameShell {
     }
 
     int exportCounter = 0;
+    int orientation = 378;
+    int x = 112;
+    int z = 180;
+    int y = 116;
+    int modifier = 2;
 
     public void inputLoop() {
         if (Keyboard.getKey(KeyEvent.VK_BACK_SLASH)) {
@@ -267,6 +280,38 @@ public class Playground extends GameShell {
                 exportImage(SoftwareRaster.pixels, "dump/" + exportCounter++);
             }
         }
+
+        if (Keyboard.getKey(KeyEvent.VK_W)) {
+            y += modifier;
+        } else if (Keyboard.getKey(KeyEvent.VK_S)) {
+            y -= modifier;
+        }
+
+        if (Keyboard.getKey(KeyEvent.VK_A)) {
+            x -= modifier;
+        } else if (Keyboard.getKey(KeyEvent.VK_D)) {
+            x += modifier;
+        }
+
+        if (Keyboard.getKey(KeyEvent.VK_Q)) {
+            z += modifier;
+        } else if (Keyboard.getKey(KeyEvent.VK_E)) {
+            z -= modifier;
+        }
+
+        if (Keyboard.getKey(KeyEvent.VK_LEFT)) {
+            orientation += modifier;
+        } else if (Keyboard.getKey(KeyEvent.VK_RIGHT)) {
+            orientation -= modifier;
+        }
+
+        if (Keyboard.getKey(KeyEvent.VK_OPEN_BRACKET)) {
+            modifier--;
+        } else if (Keyboard.getKey(KeyEvent.VK_CLOSE_BRACKET)) {
+            modifier++;
+        }
+
+//        System.out.println(x + ", " + z + ", " + y + ", " + orientation);
     }
 
     @Override
@@ -354,15 +399,6 @@ public class Playground extends GameShell {
             }
 
             if (npc != null) {
-                int orientation = 384;
-                int x = 128;
-                int z = 192;
-                int y = 128;
-                if (GlRenderer.enabled) {
-                    x = 230;
-                    z = 400;
-                    y *= 4;
-                }
                 npc.render(orientation, 25079, 60547, -44308, 48222, x, z, y, 0L, 0, null);
             }
 
@@ -377,6 +413,11 @@ public class Playground extends GameShell {
 
     @Override
     protected void mainQuit() {
+        Keyboard.stop(GameShell.canvas);
+        Mouse.stop(GameShell.canvas);
+        Keyboard.quit();
+        Mouse.quit();
+
         if (GlRenderer.enabled) {
             GlRenderer.quit();
         }
@@ -384,11 +425,6 @@ public class Playground extends GameShell {
         if (GameShell.signLink != null) {
             GameShell.signLink.unloadGlNatives(this.getClass());
         }
-
-        Keyboard.stop(GameShell.canvas);
-        Mouse.stop(GameShell.canvas);
-        Keyboard.quit();
-        Mouse.quit();
     }
 
     @Override
