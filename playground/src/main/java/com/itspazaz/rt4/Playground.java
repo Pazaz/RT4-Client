@@ -184,36 +184,52 @@ public class Playground extends GameShell {
             Rasteriser.setBounds(GameShell.canvasWidth, GameShell.canvasHeight);
             Rasteriser.prepare();
             Rasteriser.prepareOffsets();
-            npcType = NpcTypeList.get(0);
-            npcType.name.print();
-            npc = new Npc();
-            npc.setNpcType(npcType);
+            loadNpc(exportCounter);
             state++;
         }
-
-        GameShell.frame.setTitle("" + state);
     }
+
+    public void loadNpc(int id) {
+        npcType = NpcTypeList.get(id);
+        npc = new Npc();
+        BasType basType = BasTypeList.get(npcType.basId);
+        npc.seqId = basType.idleAnimationId;
+        npc.setNpcType(npcType);
+        GameShell.frame.setTitle(npcType.name + " - " + id);
+    }
+
+    float yaw = 0.4f;
+    float pitch = -0.4f;
+    int zoom2d = 471;
+    int zoom3d = 471;
 
     public void initGl() {
         GlRenderer.init(GameShell.canvas, 0);
         if (GlRenderer.enabled) {
             GlRenderer.setCanvasSize(GameShell.canvasWidth, GameShell.canvasHeight);
             GlRenderer.method4173();
-            float yaw = 0.4f * 360.0F / 6.2831855F;
-            float pitch = -0.4f * 360.0F / 6.2831855F;
-            GlRenderer.method4171(0, 0, GameShell.canvasWidth, GameShell.canvasHeight, GameShell.canvasWidth / 2, GameShell.canvasHeight / 2, yaw, pitch, 471, 471);
+            float yaw1 = yaw * 360.0F / 6.2831855F;
+            float pitch1 = pitch * 360.0F / 6.2831855F;
+            GlRenderer.method4171(0, 0, GameShell.canvasWidth, GameShell.canvasHeight, GameShell.canvasWidth / 2, GameShell.canvasHeight / 2, yaw1, pitch1, zoom2d, zoom3d);
             GlRenderer.setViewportBounds(0, 0, GameShell.canvasWidth, GameShell.canvasHeight);
             GlRenderer.setDepthTestEnabled(true);
+            GlRenderer.enableDepthMask();
             GlRenderer.setFogEnabled(true);
             Static241.setWindowMode(false, 2, GameShell.canvasWidth, GameShell.canvasHeight);
             orientation = 292;
             x = 100;
             z = 218;
             y = 236;
+            if (GameShell.canvasWidth >= 2500) {
+                x = 56;
+                z = 176;
+                y = 120;
+                orientation = 128;
+            }
         }
     }
 
-    public static boolean useGl = false;
+    public static boolean useGl = true;
 
     private void exportGlImage(String filename) {
         GL2 gl = GLContext.getCurrentGL().getGL2();
@@ -272,32 +288,35 @@ public class Playground extends GameShell {
         }
     }
 
+    /*  NPC_NORMAL.xan2d = 96;
+        NPC_NORMAL.yan2d = 128;
+
+        CHATHEAD.zoom2d = 796;
+        CHATHEAD.zoom3d = 512;
+        CHATHEAD.xan2d = 40;
+        CHATHEAD.yan2d = 1882;*/
+
     int exportCounter = 0;
     int orientation = 378;
     int x = 112;
     int z = 180;
     int y = 116;
     int modifier = 2;
+    int chatheadOrientation = 1882;
+    int chatheadX = -34;
+    int chatheadZ = 97;
+    int chatheadY = 592;
+
+    boolean renderHead = false;
+    boolean perspectiveChanged = false;
+
+    long lastInputTime = 0;
 
     public void inputLoop() {
-        if (Keyboard.getKey(KeyEvent.VK_BACK_SLASH)) {
-            if (GlRenderer.enabled) {
-                exportGlImage("dump/" + exportCounter++);
-            } else {
-                exportImage(SoftwareRaster.pixels, "dump/" + exportCounter++);
-            }
-        }
-
         if (Keyboard.getKey(KeyEvent.VK_W)) {
             y += modifier;
         } else if (Keyboard.getKey(KeyEvent.VK_S)) {
             y -= modifier;
-        }
-
-        if (Keyboard.getKey(KeyEvent.VK_A)) {
-            x -= modifier;
-        } else if (Keyboard.getKey(KeyEvent.VK_D)) {
-            x += modifier;
         }
 
         if (Keyboard.getKey(KeyEvent.VK_Q)) {
@@ -306,12 +325,40 @@ public class Playground extends GameShell {
             z -= modifier;
         }
 
-        if (Keyboard.getKey(KeyEvent.VK_LEFT)) {
+        if (Keyboard.getKey(KeyEvent.VK_SHIFT) && Keyboard.getKey(KeyEvent.VK_A)) {
             orientation += modifier;
             orientation &= 2047;
-        } else if (Keyboard.getKey(KeyEvent.VK_RIGHT)) {
+        } else if (Keyboard.getKey(KeyEvent.VK_SHIFT) && Keyboard.getKey(KeyEvent.VK_D)) {
             orientation -= modifier;
             orientation &= 2047;
+        } else if (Keyboard.getKey(KeyEvent.VK_A)) {
+            x -= modifier;
+        } else if (Keyboard.getKey(KeyEvent.VK_D)) {
+            x += modifier;
+        }
+
+        if (Keyboard.getKey(KeyEvent.VK_UP)) {
+            yaw -= 0.01f;
+            perspectiveChanged = true;
+        } else if (Keyboard.getKey(KeyEvent.VK_DOWN)) {
+            yaw += 0.01f;
+            perspectiveChanged = true;
+        }
+
+        if (Keyboard.getKey(KeyEvent.VK_LEFT)) {
+            pitch += 0.01f;
+            perspectiveChanged = true;
+        } else if (Keyboard.getKey(KeyEvent.VK_RIGHT)) {
+            pitch -= 0.01f;
+            perspectiveChanged = true;
+        }
+
+        if (Keyboard.getKey(KeyEvent.VK_F)) {
+            zoom2d -= modifier;
+            perspectiveChanged = true;
+        } else if (Keyboard.getKey(KeyEvent.VK_G)) {
+            zoom2d += modifier;
+            perspectiveChanged = true;
         }
 
         if (Keyboard.getKey(KeyEvent.VK_OPEN_BRACKET)) {
@@ -320,8 +367,61 @@ public class Playground extends GameShell {
             modifier++;
         }
 
-//        System.out.println(x + ", " + z + ", " + y + ", " + orientation);
+        // rate limited input events
+        long currentTime = System.currentTimeMillis();
+        if (currentTime - lastInputTime < 100) {
+            return;
+        }
+        lastInputTime = currentTime;
+
+        if (Keyboard.getKey(KeyEvent.VK_H)) {
+            renderHead = !renderHead;
+            if (renderHead) {
+                x = chatheadX;
+                z = chatheadZ;
+                y = chatheadY;
+                orientation = chatheadOrientation;
+                yaw = 0.17f;
+                pitch = 0.09f;
+                perspectiveChanged = true;
+                zoom2d = 796;
+                zoom3d = 512;
+            } else {
+                x = 56;
+                z = 176;
+                y = 120;
+                orientation = 128;
+                yaw = 0.4f;
+                pitch = -0.4f;
+                perspectiveChanged = true;
+                zoom2d = 471;
+                zoom3d = 471;
+            }
+        }
+
+        if (Keyboard.getKey(KeyEvent.VK_BACK_SLASH)) {
+            if (GlRenderer.enabled) {
+                exportGlImage("dump/" + exportCounter++);
+            } else {
+                exportImage(SoftwareRaster.pixels, "dump/" + exportCounter++);
+            }
+        }
+
+        if (Keyboard.getKey(KeyEvent.VK_1)) {
+            exportCounter--;
+        } else if (Keyboard.getKey(KeyEvent.VK_2)) {
+            exportCounter++;
+        }
+
+        if (Keyboard.getKey(KeyEvent.VK_P)) {
+            System.out.println("cam: " + orientation + ", " + x + ", " + z + ", " + y);
+            System.out.println("per: " + yaw + ", " + pitch);
+            System.out.println("zoom: " + zoom2d + ", " + zoom3d);
+            System.out.println();
+        }
     }
+
+    int lastExportCounter = -1;
 
     @Override
     protected void mainLoop() {
@@ -331,6 +431,12 @@ public class Playground extends GameShell {
         js5NetLoop();
         stateLoop();
         inputLoop();
+
+        if (state == 9) {
+            if (lastExportCounter != exportCounter) {
+                loadNpc(exportCounter);
+            }
+        }
     }
 
     public int js5ConnectState = 0;
@@ -407,15 +513,34 @@ public class Playground extends GameShell {
                 GlRenderer.clearColorAndDepthBuffers(0x333333);
             }
 
+            if (perspectiveChanged) {
+                float yaw1 = yaw * 360.0F / 6.2831855F;
+                float pitch1 = pitch * 360.0F / 6.2831855F;
+                GlRenderer.method4171(0, 0, GameShell.canvasWidth, GameShell.canvasHeight, GameShell.canvasWidth / 2, GameShell.canvasHeight / 2, yaw1, pitch1, zoom2d, zoom2d);
+                perspectiveChanged = false;
+            }
+
             if (npc != null) {
-                npc.render(orientation, 25079, 60547, -44308, 48222, x, z, y, 0L, 0, null);
+                SeqType seqType = SeqTypeList.get(9804);
+                Model head = npcType.getHeadModel(seqType, 0, 0, 0);
+                if (renderHead && head != null) {
+                    head.render(orientation, 25079, 60547, -44308, 48222, x, z, y, 0L, 0, null);
+                } else {
+                    npc.render(orientation, 25079, 60547, -44308, 48222, x, z, y, 0L, 0, null);
+                }
             }
 
             if (!GlRenderer.enabled) {
                 SoftwareRaster.frameBuffer.draw(GameShell.canvas.getGraphics());
             } else {
-                GlRenderer.method4160();
+                GlRenderer.draw();
                 GlRenderer.swapBuffers();
+            }
+
+            if (lastExportCounter != exportCounter) {
+//                exportGlImage("dump/" + exportCounter);
+                lastExportCounter = exportCounter;
+//                exportCounter++;
             }
         }
     }
