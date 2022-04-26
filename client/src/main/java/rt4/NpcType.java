@@ -39,7 +39,7 @@ public final class NpcType {
 	public int id;
 
 	@OriginalMember(owner = "client!me", name = "cb", descriptor = "[I")
-	private int[] anIntArray356;
+	private int[] modelIndices;
 
 	@OriginalMember(owner = "client!me", name = "hb", descriptor = "[I")
 	public int[] multiNpcs;
@@ -237,18 +237,18 @@ public final class NpcType {
 		@Pc(330) int local330;
 		if (local40 == null) {
 			local46 = false;
-			for (@Pc(48) int local48 = 0; local48 < this.anIntArray356.length; local48++) {
-				if (this.anIntArray356[local48] != -1 && !NpcTypeList.modelsArchive.isFileReady(0, this.anIntArray356[local48])) {
+			for (@Pc(48) int local48 = 0; local48 < this.modelIndices.length; local48++) {
+				if (this.modelIndices[local48] != -1 && !NpcTypeList.modelsArchive.isFileReady(0, this.modelIndices[local48])) {
 					local46 = true;
 				}
 			}
 			if (local46) {
 				return null;
 			}
-			@Pc(84) RawModel[] local84 = new RawModel[this.anIntArray356.length];
-			for (@Pc(86) int local86 = 0; local86 < this.anIntArray356.length; local86++) {
-				if (this.anIntArray356[local86] != -1) {
-					local84[local86] = Static77.create(NpcTypeList.modelsArchive, this.anIntArray356[local86]);
+			@Pc(84) RawModel[] local84 = new RawModel[this.modelIndices.length];
+			for (@Pc(86) int local86 = 0; local86 < this.modelIndices.length; local86++) {
+				if (this.modelIndices[local86] != -1) {
+					local84[local86] = Static77.create(NpcTypeList.modelsArchive, this.modelIndices[local86]);
 					if (this.anIntArrayArray29 != null && this.anIntArrayArray29[local86] != null && local84[local86] != null) {
 						local84[local86].translate(this.anIntArrayArray29[local86][0], this.anIntArrayArray29[local86][1], this.anIntArrayArray29[local86][2]);
 					}
@@ -557,15 +557,15 @@ public final class NpcType {
 
 	@OriginalMember(owner = "client!me", name = "a", descriptor = "(IILclient!wa;)V")
 	private void decode(@OriginalArg(1) int arg0, @OriginalArg(2) Buffer arg1) {
-		@Pc(12) int local12;
+		@Pc(12) int count;
 		@Pc(18) int local18;
 		if (arg0 == 1) {
-			local12 = arg1.g1();
-			this.anIntArray356 = new int[local12];
-			for (local18 = 0; local18 < local12; local18++) {
-				this.anIntArray356[local18] = arg1.g2();
-				if (this.anIntArray356[local18] == 65535) {
-					this.anIntArray356[local18] = -1;
+			count = arg1.g1();
+			this.modelIndices = new int[count];
+			for (local18 = 0; local18 < count; local18++) {
+				this.modelIndices[local18] = arg1.g2();
+				if (this.modelIndices[local18] == 65535) {
+					this.modelIndices[local18] = -1;
 				}
 			}
 		} else if (arg0 == 2) {
@@ -578,31 +578,31 @@ public final class NpcType {
 				this.ops[arg0 - 30] = null;
 			}
 		} else if (arg0 == 40) {
-			local12 = arg1.g1();
-			this.recolorSource = new short[local12];
-			this.recolorDestination = new short[local12];
-			for (local18 = 0; local18 < local12; local18++) {
+			count = arg1.g1();
+			this.recolorSource = new short[count];
+			this.recolorDestination = new short[count];
+			for (local18 = 0; local18 < count; local18++) {
 				this.recolorDestination[local18] = (short) arg1.g2();
 				this.recolorSource[local18] = (short) arg1.g2();
 			}
 		} else if (arg0 == 41) {
-			local12 = arg1.g1();
-			this.retextureSource = new short[local12];
-			this.retextureDestination = new short[local12];
-			for (local18 = 0; local18 < local12; local18++) {
+			count = arg1.g1();
+			this.retextureSource = new short[count];
+			this.retextureDestination = new short[count];
+			for (local18 = 0; local18 < count; local18++) {
 				this.retextureDestination[local18] = (short) arg1.g2();
 				this.retextureSource[local18] = (short) arg1.g2();
 			}
 		} else if (arg0 == 42) {
-			local12 = arg1.g1();
-			this.aByteArray51 = new byte[local12];
-			for (local18 = 0; local18 < local12; local18++) {
+			count = arg1.g1();
+			this.aByteArray51 = new byte[count];
+			for (local18 = 0; local18 < count; local18++) {
 				this.aByteArray51[local18] = arg1.g1s();
 			}
 		} else if (arg0 == 60) {
-			local12 = arg1.g1();
-			this.anIntArray354 = new int[local12];
-			for (local18 = 0; local18 < local12; local18++) {
+			count = arg1.g1();
+			this.anIntArray354 = new int[count];
+			for (local18 = 0; local18 < count; local18++) {
 				this.anIntArray354[local18] = arg1.g2();
 			}
 		} else if (arg0 == 93) {
@@ -627,7 +627,7 @@ public final class NpcType {
 			@Pc(297) int local297;
 			if (arg0 == 106 || arg0 == 118) {
 				this.multiNpcVarbit = arg1.g2();
-				local12 = -1;
+				count = -1;
 				if (this.multiNpcVarbit == 65535) {
 					this.multiNpcVarbit = -1;
 				}
@@ -636,9 +636,9 @@ public final class NpcType {
 					this.multiNpcVarp = -1;
 				}
 				if (arg0 == 118) {
-					local12 = arg1.g2();
-					if (local12 == 65535) {
-						local12 = -1;
+					count = arg1.g2();
+					if (count == 65535) {
+						count = -1;
 					}
 				}
 				local18 = arg1.g1();
@@ -649,7 +649,7 @@ public final class NpcType {
 						this.multiNpcs[local297] = -1;
 					}
 				}
-				this.multiNpcs[local18 + 1] = local12;
+				this.multiNpcs[local18 + 1] = count;
 			} else if (arg0 == 107) {
 				this.aBoolean183 = false;
 			} else if (arg0 == 109) {
@@ -668,9 +668,9 @@ public final class NpcType {
 			} else if (arg0 == 119) {
 				this.aByte10 = arg1.g1s();
 			} else if (arg0 == 121) {
-				this.anIntArrayArray29 = new int[this.anIntArray356.length][];
-				local12 = arg1.g1();
-				for (local18 = 0; local18 < local12; local18++) {
+				this.anIntArrayArray29 = new int[this.modelIndices.length][];
+				count = arg1.g1();
+				for (local18 = 0; local18 < count; local18++) {
 					local297 = arg1.g1();
 					@Pc(439) int[] local439 = this.anIntArrayArray29[local297] = new int[3];
 					local439[0] = arg1.g1s();
@@ -716,12 +716,12 @@ public final class NpcType {
 			} else if (arg0 == 137) {
 				this.anInt3752 = arg1.g2();
 			} else if (arg0 == 249) {
-				local12 = arg1.g1();
+				count = arg1.g1();
 				if (this.params == null) {
-					local18 = Static165.clp2(local12);
+					local18 = Static165.clp2(count);
 					this.params = new HashTable(local18);
 				}
-				for (local18 = 0; local18 < local12; local18++) {
+				for (local18 = 0; local18 < count; local18++) {
 					@Pc(592) boolean local592 = arg1.g1() == 1;
 					@Pc(596) int local596 = arg1.g3();
 					@Pc(605) Node local605;

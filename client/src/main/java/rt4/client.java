@@ -327,7 +327,7 @@ public final class client extends GameShell {
             }
         }
         if (GlRenderer.enabled && (arg0 == 25 || arg0 == 28 || arg0 == 40)) {
-            GlRenderer.method4160();
+            GlRenderer.draw();
         }
         gameState = arg0;
     }

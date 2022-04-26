@@ -74,7 +74,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 	public static int frameHeight;
 
 	@OriginalMember(owner = "client!kd", name = "pb", descriptor = "I")
-	public static int anInt3252;
+	public static int clientBuild;
 
 	@OriginalMember(owner = "client!fl", name = "U", descriptor = "I")
 	public static int frameWidth;
@@ -582,12 +582,12 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 	@OriginalMember(owner = "client!rc", name = "a", descriptor = "(IIZILjava/lang/String;III)V")
 	protected final void startApplication(@OriginalArg(0) int cacheId, @OriginalArg(4) String cacheSubDir) {
 		try {
-			canvasHeight = 768;
-			frameHeight = 768;
 			leftMargin = 0;
-			anInt3252 = 530;
-			canvasWidth = 1024;
-			frameWidth = 1024;
+			clientBuild = 530;
+			frameWidth = 2500;
+			frameHeight = 1400;
+			canvasWidth = frameWidth;
+			canvasHeight = frameHeight;
 			topMargin = 0;
 			instance = this;
 			frame = new Frame();
@@ -637,7 +637,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			}
 			instance = this;
 			topMargin = 0;
-			anInt3252 = 1530;
+			clientBuild = 1530;
 			canvasWidth = 765;
 			frameWidth = 765;
 			leftMargin = 0;

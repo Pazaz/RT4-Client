@@ -6,6 +6,8 @@ import java.awt.Graphics;
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
+
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
@@ -498,8 +500,8 @@ public final class JagString implements StringInterface {
 
 	@OriginalMember(owner = "client!na", name = "toString", descriptor = "()Ljava/lang/String;")
 	@Override
-	public final String toString() {
-		throw new RuntimeException();
+	public String toString() {
+		return new String(this.chars, 0, this.length, StandardCharsets.ISO_8859_1);
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(ZLjava/applet/Applet;)V")
