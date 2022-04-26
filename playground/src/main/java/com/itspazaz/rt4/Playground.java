@@ -76,6 +76,9 @@ public class Playground extends GameShell {
 
         js5NetQueue = new Js5NetQueue();
         js5CacheQueue = new Js5CacheQueue();
+
+        Preferences.characterShadowsOn = false;
+        Preferences.highDetailLighting = false;
     }
 
     public int percentage = 0;
@@ -210,7 +213,7 @@ public class Playground extends GameShell {
         }
     }
 
-    public static boolean useGl = true;
+    public static boolean useGl = false;
 
     private void exportGlImage(String filename) {
         GL2 gl = GLContext.getCurrentGL().getGL2();
@@ -305,8 +308,10 @@ public class Playground extends GameShell {
 
         if (Keyboard.getKey(KeyEvent.VK_LEFT)) {
             orientation += modifier;
+            orientation &= 2047;
         } else if (Keyboard.getKey(KeyEvent.VK_RIGHT)) {
             orientation -= modifier;
+            orientation &= 2047;
         }
 
         if (Keyboard.getKey(KeyEvent.VK_OPEN_BRACKET)) {
