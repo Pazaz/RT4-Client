@@ -37,4 +37,23 @@ public final class NanoTimer extends Timer {
 		}
 		return local31;
 	}
+
+	@Override
+	public int count(int arg0, int arg1) {
+		@Pc(9) long local9 = (long) arg0 * 1000000L;
+		@Pc(14) long local14 = this.aLong142 - System.nanoTime();
+		if (local9 > local14) {
+			local14 = local9;
+		}
+		@Pc(31) int local31 = 0;
+		@Pc(33) long local33 = System.nanoTime();
+		while (local31 < 10 && (local31 < 1 || this.aLong142 < local33)) {
+			local31++;
+			this.aLong142 += (long) arg1 * 1000000L;
+		}
+		if (local33 > this.aLong142) {
+			this.aLong142 = local33;
+		}
+		return local31;
+	}
 }
