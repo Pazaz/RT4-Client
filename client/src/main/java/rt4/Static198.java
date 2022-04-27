@@ -9,9 +9,6 @@ public final class Static198 {
 	@OriginalMember(owner = "client!q", name = "a", descriptor = "Lclient!na;")
 	public static final JagString aClass100_260 = JagString.parse(")1a2)1m");
 
-	@OriginalMember(owner = "client!q", name = "h", descriptor = "Lclient!na;")
-	public static final JagString aClass100_264 = JagString.parse("Card:");
-
 	@OriginalMember(owner = "client!q", name = "a", descriptor = "(BZII)Lclient!na;")
 	public static JagString method1025(@OriginalArg(1) boolean arg0, @OriginalArg(3) int arg1) {
 		@Pc(23) int local23 = 1;

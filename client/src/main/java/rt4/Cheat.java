@@ -11,10 +11,6 @@ public class Cheat {
     public static final JagString CLIENTDROP = JagString.parse("::clientdrop");
     @OriginalMember(owner = "client!dg", name = "b", descriptor = "Lclient!na;")
     public static final JagString aClass100_333 = JagString.parse("Shift)2click ENABLED(Q");
-    @OriginalMember(owner = "client!dg", name = "d", descriptor = "Lclient!na;")
-    public static final JagString aClass100_334 = JagString.parse("Cache:");
-    @OriginalMember(owner = "client!c", name = "Y", descriptor = "Lclient!na;")
-    public static final JagString aClass100_154 = JagString.parse("Mem:");
     @OriginalMember(owner = "client!nh", name = "hb", descriptor = "Lclient!na;")
     public static final JagString aClass100_623 = JagString.parse("::fps ");
     @OriginalMember(owner = "client!nb", name = "e", descriptor = "Lclient!na;")
@@ -39,6 +35,22 @@ public class Cheat {
     public static final JagString aClass100_443 = JagString.parse("::noclip");
     @OriginalMember(owner = "client!en", name = "e", descriptor = "Lclient!na;")
     public static final JagString aClass100_422 = JagString.parse("::fpsoff");
+    @OriginalMember(owner = "client!ja", name = "k", descriptor = "Lclient!na;")
+    public static final JagString DEBUG_FPS = JagString.parse("FPS: ");
+    @OriginalMember(owner = "client!qh", name = "i", descriptor = "Lclient!na;")
+    public static final JagString DEBUG_MEMORY = JagString.parse("RAM: ");
+    @OriginalMember(owner = "client!bi", name = "W", descriptor = "Lclient!na;")
+	public static final JagString DEBUG_MEMORY_UNIT = JagString.parse(" MB");
+    @OriginalMember(owner = "client!dg", name = "d", descriptor = "Lclient!na;")
+    public static final JagString DEBUG_CAHE = JagString.parse("Cache: ");
+    @OriginalMember(owner = "client!hm", name = "Y", descriptor = "Lclient!na;")
+    public static final JagString DEBUG_FPS2 = JagString.parse("FPS: ");
+    @OriginalMember(owner = "client!c", name = "Y", descriptor = "Lclient!na;")
+    public static final JagString DEBUG_MEM = JagString.parse("RAM: ");
+    @OriginalMember(owner = "client!bg", name = "z", descriptor = "Lclient!na;")
+	public static final JagString DEBUG_MEM_UNIT = JagString.parse(" MB");
+    @OriginalMember(owner = "client!q", name = "h", descriptor = "Lclient!na;")
+    public static final JagString DEBUG_CARD = JagString.parse("GPU: ");
     @OriginalMember(owner = "client!dg", name = "f", descriptor = "Z")
     public static boolean displayFps = false;
     @OriginalMember(owner = "client!nj", name = "a", descriptor = "Z")
@@ -64,7 +76,7 @@ public class Cheat {
                 }
                 local29 = Runtime.getRuntime();
                 local38 = (int) ((local29.totalMemory() - local29.freeMemory()) / 1024L);
-                Chat.add(null, 0, JagString.concatenate(new JagString[] { Static202.aClass100_892, Static123.parseInt(local38), Static17.aClass100_101 }));
+                Chat.add(null, 0, JagString.concatenate(new JagString[] { Static202.aClass100_892, Static123.parseInt(local38), DEBUG_MEM_UNIT}));
             }
             @Pc(117) int local117;
             if (arg0.equalsIgnoreCase(Static154.aClass100_735)) {
@@ -74,14 +86,14 @@ public class Cheat {
                 }
                 local29 = Runtime.getRuntime();
                 local38 = (int) ((local29.totalMemory() - local29.freeMemory()) / 1024L);
-                Chat.add(null, 0, JagString.concatenate(new JagString[] { Static203.aClass100_893, Static123.parseInt(local38), Static17.aClass100_101 }));
+                Chat.add(null, 0, JagString.concatenate(new JagString[] { Static203.aClass100_893, Static123.parseInt(local38), DEBUG_MEM_UNIT}));
                 Static16.method501();
                 client.method2380();
                 for (local117 = 0; local117 < 10; local117++) {
                     System.gc();
                 }
                 local38 = (int) ((local29.totalMemory() - local29.freeMemory()) / 1024L);
-                Chat.add(null, 0, JagString.concatenate(new JagString[] {aClass100_1093, Static123.parseInt(local38), Static17.aClass100_101 }));
+                Chat.add(null, 0, JagString.concatenate(new JagString[] {aClass100_1093, Static123.parseInt(local38), DEBUG_MEM_UNIT}));
             }
             if (arg0.equalsIgnoreCase(aClass100_1009)) {
                 Chat.add(null, 0, JagString.concatenate(new JagString[] { Static44.aClass100_335, Static123.parseInt(Static198.method1029()) }));

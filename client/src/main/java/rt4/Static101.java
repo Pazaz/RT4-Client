@@ -12,9 +12,6 @@ public final class Static101 {
 	@OriginalMember(owner = "client!hm", name = "T", descriptor = "Lclient!na;")
 	public static final JagString aClass100_538 = JagString.parse(" ");
 
-	@OriginalMember(owner = "client!hm", name = "Y", descriptor = "Lclient!na;")
-	public static final JagString aClass100_539 = JagString.parse("Fps:");
-
 	@OriginalMember(owner = "client!hm", name = "ab", descriptor = "I")
 	public static int anInt2640 = 0;
 
