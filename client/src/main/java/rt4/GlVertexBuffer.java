@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!ae")
-public final class Class5 {
+public final class GlVertexBuffer {
 
 	@OriginalMember(owner = "client!ae", name = "a", descriptor = "S")
 	public short aShort2;

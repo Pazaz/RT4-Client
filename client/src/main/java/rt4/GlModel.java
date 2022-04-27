@@ -119,7 +119,7 @@ public final class GlModel extends Model {
 	private short[] aShortArray84;
 
 	@OriginalMember(owner = "client!td", name = "U", descriptor = "Lclient!ae;")
-	public Class5 vertexBuffer;
+	public GlVertexBuffer vertexBuffer;
 
 	@OriginalMember(owner = "client!td", name = "W", descriptor = "[S")
 	private short[] aShortArray85;
@@ -249,7 +249,7 @@ public final class GlModel extends Model {
 		if (arg0.aShortArray22 != null) {
 			this.aShortArray78 = new short[this.anInt5297];
 		}
-		this.vertexBuffer = new Class5();
+		this.vertexBuffer = new GlVertexBuffer();
 		this.bounds = new GlBuffer();
 		this.aClass127_1 = new GlBuffer();
 		if (Preferences.highDetailLighting) {
@@ -2660,7 +2660,7 @@ public final class GlModel extends Model {
 		}
 		arg3.bounds.valid = false;
 		if (arg3.vertexBuffer == null) {
-			arg3.vertexBuffer = new Class5();
+			arg3.vertexBuffer = new GlVertexBuffer();
 		}
 		arg3.vertexBuffer.valid = false;
 		if (arg0) {
@@ -2814,7 +2814,7 @@ public final class GlModel extends Model {
 			local3.vertexBuffer = this.vertexBuffer;
 		} else {
 			local3.bounds = new GlBuffer();
-			local3.vertexBuffer = new Class5();
+			local3.vertexBuffer = new GlVertexBuffer();
 		}
 		if (arg2) {
 			local3.aShortArray75 = this.aShortArray75;
