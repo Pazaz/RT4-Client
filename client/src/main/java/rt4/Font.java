@@ -453,10 +453,10 @@ public abstract class Font extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "b", descriptor = "(Lclient!na;IIII)V")
-	public final void renderRight(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
-		if (arg0 != null) {
+	public final void renderRight(@OriginalArg(0) JagString string, @OriginalArg(1) int x, @OriginalArg(2) int y, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+		if (string != null) {
 			this.setColors(arg3, arg4);
-			this.render(arg0, arg1 - this.getStringWidth(arg0), arg2);
+			this.render(string, x - this.getStringWidth(string), y);
 		}
 	}
 
@@ -733,13 +733,13 @@ public abstract class Font extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "c", descriptor = "(II)V")
-	private void setColors(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+	private void setColors(@OriginalArg(0) int rgb, @OriginalArg(1) int shadow) {
 		strikethroughColor = -1;
 		underlineColor = -1;
-		shadowColor = arg1;
-		shadowColorOverride = arg1;
-		color = arg0;
-		colorOverride = arg0;
+		shadowColor = shadow;
+		shadowColorOverride = shadow;
+		color = rgb;
+		colorOverride = rgb;
 		alpha = 256;
 		alphaOverride = 256;
 		spaceWidth = 0;

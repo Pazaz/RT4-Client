@@ -11,9 +11,6 @@ public final class Static203 {
     @OriginalMember(owner = "client!qh", name = "c", descriptor = "Lclient!na;")
 	public static final JagString aClass100_893 = JagString.parse("Memory before cleanup=");
 
-	@OriginalMember(owner = "client!qh", name = "i", descriptor = "Lclient!na;")
-	public static final JagString aClass100_894 = JagString.parse("Mem:");
-
 	@OriginalMember(owner = "client!qh", name = "a", descriptor = "(Z)V")
 	public static void method3662() {
 		@Pc(8) Container local8;

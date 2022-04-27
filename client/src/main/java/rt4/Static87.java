@@ -192,9 +192,9 @@ public final class Static87 {
 					}
 					if (!local30.usingScripts || local302 > local166 && local164 < local291) {
 						@Pc(468) int local468;
-						@Pc(503) int local503;
-						@Pc(514) int local514;
-						@Pc(518) int local518;
+						@Pc(503) int memory;
+						@Pc(514) int color;
+						@Pc(518) int cardMemory;
 						@Pc(556) int local556;
 						@Pc(563) int local563;
 						@Pc(571) int local571;
@@ -232,14 +232,14 @@ public final class Static87 {
 									continue;
 								}
 								local276 -= local30.anInt459 / 2;
-								local503 = (int)Camera.yawTarget + Static59.anInt1814 & 0x7FF;
+								memory = (int)Camera.yawTarget + Static59.anInt1814 & 0x7FF;
 								local270 -= local30.anInt445 / 2;
-								local514 = MathUtils.sin[local503];
-								local518 = MathUtils.cos[local503];
-								local514 = (Static273.anInt4130 + 256) * local514 >> 8;
-								local518 = (Static273.anInt4130 + 256) * local518 >> 8;
-								local545 = local518 * local276 - local514 * local270 >> 11;
-								local556 = local276 * local514 + local270 * local518 >> 11;
+								color = MathUtils.sin[memory];
+								cardMemory = MathUtils.cos[memory];
+								color = (Static273.anInt4130 + 256) * color >> 8;
+								cardMemory = (Static273.anInt4130 + 256) * cardMemory >> 8;
+								local545 = cardMemory * local276 - color * local270 >> 11;
+								local556 = local276 * color + local270 * cardMemory >> 11;
 								local563 = PlayerList.self.xFine + local556 >> 7;
 								local571 = PlayerList.self.zFine - local545 >> 7;
 								if (Static241.aBoolean302 && (Static274.anInt4999 & 0x40) != 0) {
@@ -304,37 +304,37 @@ public final class Static87 {
 								}
 								local270 = local30.anInt445 + local123;
 								local276 = local114 + 15;
-								Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Static101.aClass100_539, Static123.parseInt(GameShell.framesPerSecond) }), local270, local276, 16776960, -1);
+								Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Cheat.DEBUG_FPS2, Static123.parseInt(GameShell.framesPerSecond) }), local270, local276, 16776960, 0);
 								local276 += 15;
-								@Pc(795) Runtime local795 = Runtime.getRuntime();
-								local503 = (int) ((local795.totalMemory() - local795.freeMemory()) / 1024L);
-								local514 = 16776960;
-								if (local503 > 65536) {
-									local514 = 16711680;
+								@Pc(795) Runtime runtime = Runtime.getRuntime();
+								memory = (int) ((runtime.totalMemory() - runtime.freeMemory()) / 1024L / 1024L);
+								color = 16776960;
+								if (memory > 128) {
+									color = 16711680;
 								}
-								Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Cheat.aClass100_154, Static123.parseInt(local503), Static17.aClass100_101 }), local270, local276, local514, -1);
+								Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Cheat.DEBUG_MEM, Static123.parseInt(memory), Cheat.DEBUG_MEM_UNIT}), local270, local276, color, 0);
 								local276 += 15;
 								if (GlRenderer.enabled) {
-									local514 = 16776960;
-									local518 = (GlCleaner.onCardTexture + GlCleaner.anInt1945 + GlCleaner.onCard2d) / 1024;
-									if (local518 > 65536) {
-										local514 = 16711680;
+									color = 16776960;
+									cardMemory = (GlCleaner.onCardTexture + GlCleaner.anInt1945 + GlCleaner.onCard2d) / 1024 / 1024;
+									if (cardMemory > 64) {
+										color = 16711680;
 									}
-									Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Static198.aClass100_264, Static123.parseInt(local518), Static17.aClass100_101 }), local270, local276, local514, -1);
+									Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Cheat.DEBUG_CARD, Static123.parseInt(cardMemory), Cheat.DEBUG_MEM_UNIT}), local270, local276, color, 0);
 									local276 += 15;
 								}
-								local518 = 0;
+								cardMemory = 0;
 								local545 = 0;
 								local556 = 0;
 								for (local563 = 0; local563 < 28; local563++) {
-									local518 += client.js5Providers[local563].method535();
+									cardMemory += client.js5Providers[local563].method535();
 									local556 += client.js5Providers[local563].method529();
 									local545 += client.js5Providers[local563].method533();
 								}
-								local571 = local556 * 10000 / local518;
-								local563 = local545 * 100 / local518;
-								@Pc(968) JagString local968 = JagString.concatenate(new JagString[] { Cheat.aClass100_334, Static182.valueToBase10String(0, true, 2, (long) local571), Static147.aClass100_672, Static123.parseInt(local563), Static14.aClass100_80 });
-								Fonts.p11Full.renderRight(local968, local270, local276, 16776960, -1);
+								local571 = local556 * 10000 / cardMemory;
+								local563 = local545 * 100 / cardMemory;
+								@Pc(968) JagString local968 = JagString.concatenate(new JagString[] { Cheat.DEBUG_CAHE, Static182.valueToBase10String(0, true, 2, (long) local571), Static147.aClass100_672, Static123.parseInt(local563), Static14.aClass100_80 });
+								Fonts.p11Full.renderRight(local968, local270, local276, 16776960, 0);
 								local276 += 12;
 								Static186.aBooleanArray100[local57] = true;
 								InterfaceList.rectangleRedraw[local57] = true;
@@ -402,15 +402,15 @@ public final class Static87 {
 									local270 = 0;
 									for (local276 = 0; local276 < local30.baseHeight; local276++) {
 										for (local468 = 0; local468 < local30.baseWidth; local468++) {
-											local514 = local114 + local276 * (local30.anInt516 + 32);
-											local503 = (local30.anInt512 + 32) * local468 + local123;
+											color = local114 + local276 * (local30.anInt516 + 32);
+											memory = (local30.anInt512 + 32) * local468 + local123;
 											if (local270 < 20) {
-												local514 += local30.anIntArray47[local270];
-												local503 += local30.anIntArray41[local270];
+												color += local30.anIntArray47[local270];
+												memory += local30.anIntArray41[local270];
 											}
 											if (local30.objTypes[local270] > 0) {
 												local545 = local30.objTypes[local270] - 1;
-												if (arg0 < local503 + 32 && local503 < arg4 && arg6 < local514 + 32 && local514 < arg7 || local30 == Static118.aClass13_15 && Static4.anInt36 == local270) {
+												if (arg0 < memory + 32 && memory < arg4 && arg6 < color + 32 && color < arg7 || local30 == Static118.aClass13_15 && Static4.anInt36 == local270) {
 													@Pc(1476) Sprite local1476;
 													if (Static260.anInt5014 == 1 && Static185.anInt4370 == local270 && local30.id == Static224.anInt5062) {
 														local1476 = Static190.method3443(2, local545, local30.aBoolean31, local30.objCounts[local270], 0);
@@ -423,19 +423,19 @@ public final class Static87 {
 													if (local1476 == null) {
 														InterfaceList.redraw(local30);
 													} else if (Static118.aClass13_15 == local30 && local270 == Static4.anInt36) {
-														local518 = Mouse.anInt4873 - Static149.anInt3554;
+														cardMemory = Mouse.anInt4873 - Static149.anInt3554;
 														local556 = Mouse.anInt5032 - Static206.anInt4773;
 														if (local556 < 5 && local556 > -5) {
 															local556 = 0;
 														}
-														if (local518 < 5 && local518 > -5) {
-															local518 = 0;
+														if (cardMemory < 5 && cardMemory > -5) {
+															cardMemory = 0;
 														}
 														if (Static78.anInt2145 < 5) {
-															local518 = 0;
+															cardMemory = 0;
 															local556 = 0;
 														}
-														local1476.method1417(local503 + local518, local514 - -local556, 128);
+														local1476.method1417(memory + cardMemory, color - -local556, 128);
 														if (arg5 != -1) {
 															@Pc(1571) Component local1571 = arg3[arg5 & 0xFFFF];
 															@Pc(1577) int local1577;
@@ -448,8 +448,8 @@ public final class Static87 {
 																local1575 = SoftwareRaster.clipBottom;
 															}
 															@Pc(1611) int local1611;
-															if (local1577 > local556 + local514 && local1571.scrollY > 0) {
-																local1611 = Static178.anInt4247 * (local1577 - local556 - local514) / 3;
+															if (local1577 > local556 + color && local1571.scrollY > 0) {
+																local1611 = Static178.anInt4247 * (local1577 - local556 - color) / 3;
 																if (local1611 > Static178.anInt4247 * 10) {
 																	local1611 = Static178.anInt4247 * 10;
 																}
@@ -460,8 +460,8 @@ public final class Static87 {
 																Static206.anInt4773 += local1611;
 																InterfaceList.redraw(local1571);
 															}
-															if (local1575 < local556 + local514 + 32 && local1571.scrollY < local1571.anInt491 - local1571.anInt459) {
-																local1611 = (local514 + local556 + 32 - local1575) * Static178.anInt4247 / 3;
+															if (local1575 < local556 + color + 32 && local1571.scrollY < local1571.anInt491 - local1571.anInt459) {
+																local1611 = (color + local556 + 32 - local1575) * Static178.anInt4247 / 3;
 																if (local1611 > Static178.anInt4247 * 10) {
 																	local1611 = Static178.anInt4247 * 10;
 																}
@@ -474,15 +474,15 @@ public final class Static87 {
 															}
 														}
 													} else if (local30 == Static257.aClass13_7 && local270 == Static250.anInt5444) {
-														local1476.method1417(local503, local514, 128);
+														local1476.method1417(memory, color, 128);
 													} else {
-														local1476.method1423(local503, local514);
+														local1476.method1423(memory, color);
 													}
 												}
 											} else if (local30.anIntArray36 != null && local270 < 20) {
 												@Pc(1381) Sprite local1381 = local30.method482(local270);
 												if (local1381 != null) {
-													local1381.method1423(local503, local514);
+													local1381.method1423(memory, color);
 												} else if (Static211.aBoolean72) {
 													InterfaceList.redraw(local30);
 												}
@@ -578,8 +578,8 @@ public final class Static87 {
 												local276 = local2094.anInt1860;
 												local468 = local2094.anInt1866;
 												if (local30.aBoolean23) {
-													local503 = (local276 + local30.anInt445 - 1) / local276;
-													local514 = (local30.anInt459 + local468 - 1) / local468;
+													memory = (local276 + local30.anInt445 - 1) / local276;
+													color = (local30.anInt459 + local468 - 1) / local468;
 													if (GlRenderer.enabled) {
 														Static46.method1183(local123, local114, local30.anInt445 + local123, local30.anInt459 + local114);
 														@Pc(2274) boolean local2274 = Static209.method3702(local2094.width);
@@ -587,29 +587,29 @@ public final class Static87 {
 														@Pc(2282) GlSprite local2282 = (GlSprite) local2094;
 														if (local2274 && local2279) {
 															if (local117 == 0) {
-																local2282.method1429(local123, local114, local503, local514);
+																local2282.method1429(local123, local114, memory, color);
 															} else {
-																local2282.method1426(local123, local114, 256 - (local117 & 0xFF), local503, local514);
+																local2282.method1426(local123, local114, 256 - (local117 & 0xFF), memory, color);
 															}
 														} else if (local2274) {
-															for (local563 = 0; local563 < local514; local563++) {
+															for (local563 = 0; local563 < color; local563++) {
 																if (local117 == 0) {
-																	local2282.method1429(local123, local563 * local468 + local114, local503, 1);
+																	local2282.method1429(local123, local563 * local468 + local114, memory, 1);
 																} else {
-																	local2282.method1426(local123, local114 + local563 * local468, -(local117 & 0xFF) + 256, local503, 1);
+																	local2282.method1426(local123, local114 + local563 * local468, -(local117 & 0xFF) + 256, memory, 1);
 																}
 															}
 														} else if (local2279) {
-															for (local563 = 0; local563 < local503; local563++) {
+															for (local563 = 0; local563 < memory; local563++) {
 																if (local117 == 0) {
-																	local2282.method1429(local276 * local563 + local123, local114, 1, local514);
+																	local2282.method1429(local276 * local563 + local123, local114, 1, color);
 																} else {
-																	local2282.method1426(local276 * local563 + local123, local114, 256 - (local117 & 0xFF), 1, local514);
+																	local2282.method1426(local276 * local563 + local123, local114, 256 - (local117 & 0xFF), 1, color);
 																}
 															}
 														} else {
-															for (local563 = 0; local563 < local503; local563++) {
-																for (local571 = 0; local571 < local514; local571++) {
+															for (local563 = 0; local563 < memory; local563++) {
+																for (local571 = 0; local571 < color; local571++) {
 																	if (local117 == 0) {
 																		local2094.method1423(local123 + local276 * local563, local468 * local571 + local114);
 																	} else {
@@ -621,23 +621,23 @@ public final class Static87 {
 														Static46.method1187(arg0, arg6, arg4, arg7);
 													} else {
 														SoftwareRaster.method2498(local123, local114, local123 + local30.anInt445, local114 - -local30.anInt459);
-														for (local518 = 0; local518 < local503; local518++) {
-															for (local556 = 0; local556 < local514; local556++) {
+														for (cardMemory = 0; cardMemory < memory; cardMemory++) {
+															for (local556 = 0; local556 < color; local556++) {
 																if (local30.anInt521 != 0) {
-																	local2094.method1420(local114 + local468 * local556 + local468 / 2, local30.anInt521, 4096, local518 * local276 + local123 + local276 / 2);
+																	local2094.method1420(local114 + local468 * local556 + local468 / 2, local30.anInt521, 4096, cardMemory * local276 + local123 + local276 / 2);
 																} else if (local117 == 0) {
-																	local2094.method1423(local518 * local276 + local123, local468 * local556 + local114);
+																	local2094.method1423(cardMemory * local276 + local123, local468 * local556 + local114);
 																} else {
-																	local2094.method1417(local518 * local276 + local123, local114 + local556 * local468, 256 - (local117 & 0xFF));
+																	local2094.method1417(cardMemory * local276 + local123, local114 + local556 * local468, 256 - (local117 & 0xFF));
 																}
 															}
 														}
 														SoftwareRaster.method2496(arg0, arg6, arg4, arg7);
 													}
 												} else {
-													local503 = local30.anInt445 * 4096 / local276;
+													memory = local30.anInt445 * 4096 / local276;
 													if (local30.anInt521 != 0) {
-														local2094.method1420(local114 + local30.anInt459 / 2, local30.anInt521, local503, local123 + local30.anInt445 / 2);
+														local2094.method1420(local114 + local30.anInt459 / 2, local30.anInt521, memory, local123 + local30.anInt445 / 2);
 													} else if (local117 != 0) {
 														local2094.method1422(local123, local114, local30.anInt445, local30.anInt459, 256 - (local117 & 0xFF));
 													} else if (local276 == local30.anInt445 && local468 == local30.anInt459) {
@@ -667,7 +667,7 @@ public final class Static87 {
 											} else {
 												local276 = local30.modelSeqId;
 											}
-											local503 = 0;
+											memory = 0;
 											if (local30.objId != -1) {
 												local2611 = ObjTypeList.get(local30.objId);
 												if (local2611 != null) {
@@ -677,18 +677,18 @@ public final class Static87 {
 													if (local2589 == null) {
 														InterfaceList.redraw(local30);
 													} else {
-														local503 = -local2589.getMaxY() / 2;
+														memory = -local2589.getMaxY() / 2;
 													}
 												}
 											} else if (local30.modelType == 5) {
 												if (local30.modelId == -1) {
 													local2589 = PlayerAppearance.DEFAULT.method1954(null, -1, null, null, 0, -1, 0, -1, -1);
 												} else {
-													local514 = local30.modelId & 0x7FF;
-													if (local514 == PlayerList.selfId) {
-														local514 = 2047;
+													color = local30.modelId & 0x7FF;
+													if (color == PlayerList.selfId) {
+														color = 2047;
 													}
-													@Pc(2751) Player local2751 = PlayerList.players[local514];
+													@Pc(2751) Player local2751 = PlayerList.players[color];
 													@Pc(2760) SeqType local2760 = local276 == -1 ? null : SeqTypeList.get(local276);
 													if (local2751 != null && (int) local2751.username.encode37() << 11 == (local30.modelId & 0xFFFFF800)) {
 														local2589 = local2751.appearance.method1954(null, -1, null, local2760, 0, -1, 0, local30.anInt510, 0);
@@ -708,22 +708,22 @@ public final class Static87 {
 											}
 											if (local2589 != null) {
 												if (local30.anInt451 > 0) {
-													local514 = (local30.anInt445 << 8) / local30.anInt451;
+													color = (local30.anInt445 << 8) / local30.anInt451;
 												} else {
-													local514 = 256;
+													color = 256;
 												}
 												if (local30.anInt526 <= 0) {
-													local518 = 256;
+													cardMemory = 256;
 												} else {
-													local518 = (local30.anInt459 << 8) / local30.anInt526;
+													cardMemory = (local30.anInt459 << 8) / local30.anInt526;
 												}
-												local556 = local123 + local30.anInt445 / 2 + (local514 * local30.anInt495 >> 8);
-												local545 = local30.anInt459 / 2 + local114 + (local518 * local30.anInt481 >> 8);
+												local556 = local123 + local30.anInt445 / 2 + (color * local30.anInt495 >> 8);
+												local545 = local30.anInt459 / 2 + local114 + (cardMemory * local30.anInt481 >> 8);
 												if (GlRenderer.enabled) {
 													if (local30.aBoolean22) {
-														GlRenderer.method4182(local556, local545, local30.modelZoom, local30.aShort11, local514, local518);
+														GlRenderer.method4182(local556, local545, local30.modelZoom, local30.aShort11, color, cardMemory);
 													} else {
-														GlRenderer.method4148(local556, local545, local514, local518);
+														GlRenderer.method4148(local556, local545, color, cardMemory);
 														GlRenderer.method4152((float) local30.aShort10, (float) local30.aShort11 * 1.5F);
 													}
 													GlRenderer.method4173();
@@ -742,7 +742,7 @@ public final class Static87 {
 													local563 = MathUtils.sin[local30.modelXAngle] * local30.modelZoom >> 16;
 													local571 = local30.modelZoom * MathUtils.cos[local30.modelXAngle] >> 16;
 													if (local30.usingScripts) {
-														local2589.method4571(local30.modelYAngle, local30.modelYOffset, local30.modelXAngle, local30.modelXOffset, local30.modelZOffset + local563 + local503, local30.modelZOffset + local571, -1L);
+														local2589.method4571(local30.modelYAngle, local30.modelYOffset, local30.modelXAngle, local30.modelXOffset, local30.modelZOffset + local563 + memory, local30.modelZOffset + local571, -1L);
 													} else {
 														local2589.method4571(local30.modelYAngle, 0, local30.modelXAngle, 0, local563, local571, -1L);
 													}
@@ -756,9 +756,9 @@ public final class Static87 {
 													if (!local30.usingScripts) {
 														local2589.method4571(local30.modelYAngle, 0, local30.modelXAngle, 0, local563, local571, -1L);
 													} else if (local30.aBoolean22) {
-														((SoftwareModel) local2589).method4591(local30.modelYAngle, local30.modelYOffset, local30.modelXAngle, local30.modelXOffset, local30.modelZOffset + local503 + local563, local571 + local30.modelZOffset, local30.modelZoom);
+														((SoftwareModel) local2589).method4591(local30.modelYAngle, local30.modelYOffset, local30.modelXAngle, local30.modelXOffset, local30.modelZOffset + memory + local563, local571 + local30.modelZOffset, local30.modelZoom);
 													} else {
-														local2589.method4571(local30.modelYAngle, local30.modelYOffset, local30.modelXAngle, local30.modelXOffset, local30.modelZOffset + local563 + local503, local571 + local30.modelZOffset, -1L);
+														local2589.method4571(local30.modelYAngle, local30.modelYOffset, local30.modelXAngle, local30.modelXOffset, local30.modelZOffset + local563 + memory, local571 + local30.modelZOffset, -1L);
 													}
 													Rasteriser.prepareOffsets();
 												}
@@ -774,7 +774,7 @@ public final class Static87 {
 												}
 												local276 = 0;
 												for (local468 = 0; local468 < local30.baseHeight; local468++) {
-													for (local503 = 0; local503 < local30.baseWidth; local503++) {
+													for (memory = 0; memory < local30.baseWidth; memory++) {
 														if (local30.objTypes[local276] > 0) {
 															local2611 = ObjTypeList.get(local30.objTypes[local276] - 1);
 															@Pc(3159) JagString local3159;
@@ -783,7 +783,7 @@ public final class Static87 {
 															} else {
 																local3159 = JagString.concatenate(new JagString[] { Static8.aClass100_32, local2611.name, Static54.aClass100_375, Static70.method1548(local30.objCounts[local276]) });
 															}
-															local556 = local123 + local503 * (local30.anInt512 + 115);
+															local556 = local123 + memory * (local30.anInt512 + 115);
 															local545 = (local30.anInt516 + 12) * local468 + local114;
 															if (local30.anInt460 == 0) {
 																local1921.method2857(local3159, local556, local545, local30.color, local30.aBoolean28 ? 0 : -1);
@@ -805,13 +805,13 @@ public final class Static87 {
 												local3297 = Static127.method2465(local30, local3297);
 												@Pc(3325) JagString local3325;
 												while (local3297.length() > 0) {
-													local518 = local3297.indexOf(Static269.aClass100_556);
-													if (local518 == -1) {
+													cardMemory = local3297.indexOf(Static269.aClass100_556);
+													if (cardMemory == -1) {
 														local3325 = local3297;
 														local3297 = JagString.EMPTY;
 													} else {
-														local3325 = local3297.substring(local518, 0);
-														local3297 = local3297.substring(local518 + 4);
+														local3325 = local3297.substring(cardMemory, 0);
+														local3297 = local3297.substring(cardMemory + 4);
 													}
 													local556 = local3299.getStringWidth(local3325);
 													local276 += local3299.lineHeight + 1;
@@ -825,19 +825,19 @@ public final class Static87 {
 												if (local556 + local276 > arg7) {
 													local556 = arg7 - local276;
 												}
-												local518 = local123 + local30.anInt445 - local270 - 5;
-												if (local518 < local123 + 5) {
-													local518 = local123 + 5;
+												cardMemory = local123 + local30.anInt445 - local270 - 5;
+												if (cardMemory < local123 + 5) {
+													cardMemory = local123 + 5;
 												}
-												if (local270 + local518 > arg4) {
-													local518 = arg4 - local270;
+												if (local270 + cardMemory > arg4) {
+													cardMemory = arg4 - local270;
 												}
 												if (GlRenderer.enabled) {
-													Static46.method1186(local518, local556, local270, local276, 16777120);
-													Static46.method1179(local518, local556, local270, local276, 0);
+													Static46.method1186(cardMemory, local556, local270, local276, 16777120);
+													Static46.method1179(cardMemory, local556, local270, local276, 0);
 												} else {
-													SoftwareRaster.fillRect(local518, local556, local270, local276, 16777120);
-													SoftwareRaster.drawRect(local518, local556, local270, local276, 0);
+													SoftwareRaster.fillRect(cardMemory, local556, local270, local276, 16777120);
+													SoftwareRaster.drawRect(cardMemory, local556, local270, local276, 0);
 												}
 												local3297 = local30.text;
 												local545 = local556 + local3299.lineHeight + 2;
@@ -851,7 +851,7 @@ public final class Static87 {
 														local3325 = local3297.substring(local563, 0);
 														local3297 = local3297.substring(local563 + 4);
 													}
-													local3299.method2857(local3325, local518 + 3, local545, 0, -1);
+													local3299.method2857(local3325, cardMemory + 3, local545, 0, -1);
 													local545 += local3299.lineHeight + 1;
 												}
 											}
@@ -859,22 +859,22 @@ public final class Static87 {
 												if (local30.aBoolean20) {
 													local468 = local123 + local30.anInt445;
 													local276 = local114 + local30.anInt459;
-													local503 = local114;
+													memory = local114;
 												} else {
 													local276 = local114;
-													local503 = local114 + local30.anInt459;
+													memory = local114 + local30.anInt459;
 													local468 = local123 + local30.anInt445;
 												}
 												if (local30.anInt490 == 1) {
 													if (GlRenderer.enabled) {
-														Static46.method1185(local123, local276, local468, local503, local30.color);
+														Static46.method1185(local123, local276, local468, memory, local30.color);
 													} else {
-														SoftwareRaster.method2500(local123, local276, local468, local503, local30.color);
+														SoftwareRaster.method2500(local123, local276, local468, memory, local30.color);
 													}
 												} else if (GlRenderer.enabled) {
-													Static46.method1181(local123, local276, local468, local503, local30.color, local30.anInt490);
+													Static46.method1181(local123, local276, local468, memory, local30.color, local30.anInt490);
 												} else {
-													SoftwareRaster.method2494(local123, local276, local468, local503, local30.color, local30.anInt490);
+													SoftwareRaster.method2494(local123, local276, local468, memory, local30.color, local30.anInt490);
 												}
 											}
 										}

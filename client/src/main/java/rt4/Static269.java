@@ -286,21 +286,21 @@ public final class Static269 {
 				Static201.anInt1864--;
 			}
 		}
-		if (!Cheat.displayFps) {
-			return;
+
+		if (Cheat.displayFps) {
+			@Pc(405) int local405 = arg1 + arg2 - 8;
+			@Pc(412) int local412 = arg0 + arg3 - 5;
+			Fonts.p12Full.renderRight(JagString.concatenate(new JagString[]{Cheat.DEBUG_FPS, Static123.parseInt(GameShell.framesPerSecond)}), local412, local405, 16776960, -1);
+			@Pc(434) Runtime runtime = Runtime.getRuntime();
+			@Pc(443) int memory = (int) ((runtime.totalMemory() - runtime.freeMemory()) / 1024L / 1024L);
+			@Pc(445) int color = 16776960;
+			@Pc(446) int local446 = local405 - 15;
+			if (memory > 95) {
+				color = 16711680;
+			}
+			Fonts.p12Full.renderRight(JagString.concatenate(new JagString[]{Cheat.DEBUG_MEMORY, Static123.parseInt(memory), Cheat.DEBUG_MEMORY_UNIT}), local412, local446, color, -1);
+			local405 = local446 - 15;
 		}
-		@Pc(405) int local405 = arg1 + arg2 - 8;
-		@Pc(412) int local412 = arg0 + arg3 - 5;
-		Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Static115.aClass100_579, Static123.parseInt(GameShell.framesPerSecond) }), local412, local405, 16776960, -1);
-		@Pc(434) Runtime local434 = Runtime.getRuntime();
-		@Pc(443) int local443 = (int) ((local434.totalMemory() - local434.freeMemory()) / 1024L);
-		@Pc(445) int local445 = 16776960;
-		@Pc(446) int local446 = local405 - 15;
-		if (local443 > 65536) {
-			local445 = 16711680;
-		}
-		Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Static203.aClass100_894, Static123.parseInt(local443), Static19.aClass100_112 }), local412, local446, local445, -1);
-		local405 = local446 - 15;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(IZ)Lclient!na;")

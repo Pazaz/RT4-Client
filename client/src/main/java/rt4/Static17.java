@@ -6,10 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static17 {
 
-    @OriginalMember(owner = "client!bg", name = "z", descriptor = "Lclient!na;")
-	public static final JagString aClass100_101 = JagString.parse("k");
-
-    @OriginalMember(owner = "client!bg", name = "d", descriptor = "(II)Z")
+	@OriginalMember(owner = "client!bg", name = "d", descriptor = "(II)Z")
 	public static boolean method530(@OriginalArg(0) int arg0) {
 		return arg0 == 198 || arg0 == 230 || arg0 == 156 || arg0 == 140 || arg0 == 223;
 	}
