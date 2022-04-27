@@ -84,11 +84,11 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 	public static int minimumDelay = 1;
 
 	@OriginalMember(owner = "client!ba", name = "B", descriptor = "I")
-	public static long VARIABLE_RENDER_RATE = 20;
-	public static long VARIABLE_RENDER_RATE_NS = VARIABLE_RENDER_RATE * 1_000_000;
+	public static double VARIABLE_RENDER_RATE = 20.0d;
+	public static long VARIABLE_RENDER_RATE_NS = (long)(VARIABLE_RENDER_RATE * 1_000_000.0d);
 
-	public static final long FIXED_UPDATE_RATE = 20;
-	public static final long FIXED_UPDATE_RATE_NS = FIXED_UPDATE_RATE * 1_000_000;
+	public static final double FIXED_UPDATE_RATE = 20.0d;
+	public static final long FIXED_UPDATE_RATE_NS = (long)(FIXED_UPDATE_RATE * 1_000_000.0d);
 
 	@OriginalMember(owner = "client!cm", name = "b", descriptor = "Ljava/lang/Thread;")
 	public static Thread thread;
@@ -184,8 +184,8 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 
     @OriginalMember(owner = "client!ja", name = "a", descriptor = "(II)V")
 	public static void setFpsTarget(@OriginalArg(0) int fps) {
-		VARIABLE_RENDER_RATE = 1000 / fps;
-		VARIABLE_RENDER_RATE_NS = VARIABLE_RENDER_RATE * 1_000_000;
+		VARIABLE_RENDER_RATE = 1000.0d / (double)fps;
+		VARIABLE_RENDER_RATE_NS = (int)(VARIABLE_RENDER_RATE * 1_000_000.0d);
 	}
 
     @OriginalMember(owner = "client!rc", name = "focusLost", descriptor = "(Ljava/awt/event/FocusEvent;)V")
