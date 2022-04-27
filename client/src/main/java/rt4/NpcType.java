@@ -217,7 +217,7 @@ public final class NpcType {
 	}
 
 	@OriginalMember(owner = "client!me", name = "a", descriptor = "([Lclient!ub;IBIIIILclient!tk;ILclient!tk;)Lclient!ak;")
-	public final Model getBodyModel(@OriginalArg(0) Class147[] seqs, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) SeqType seqType1, @OriginalArg(8) int arg7, @OriginalArg(9) SeqType seqType2) {
+	public final Model getBodyModel(@OriginalArg(0) Npc_Class147[] seqs, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) SeqType seqType1, @OriginalArg(8) int arg7, @OriginalArg(9) SeqType seqType2) {
 		if (this.multiNpcs != null) {
 			@Pc(13) NpcType local13 = this.getMultiNpc();
 			return local13 == null ? null : local13.getBodyModel(seqs, arg1, arg2, arg3, arg4, arg5, seqType1, arg7, seqType2);

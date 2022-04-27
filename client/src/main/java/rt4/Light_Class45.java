@@ -8,7 +8,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!fj")
-public final class Class45 {
+public final class Light_Class45 {
 
 	@OriginalMember(owner = "client!fj", name = "a", descriptor = "Lclient!vi;")
 	private GlVertexBufferObject aClass155_1;

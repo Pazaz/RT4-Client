@@ -54,7 +54,7 @@ public final class Light {
 	public final boolean aBoolean126;
 
 	@OriginalMember(owner = "client!gi", name = "B", descriptor = "Lclient!fj;")
-	public Class45 aClass45_1;
+	public Light_Class45 aClass45_1;
 
 	@OriginalMember(owner = "client!gi", name = "C", descriptor = "I")
 	public final int anInt2247;

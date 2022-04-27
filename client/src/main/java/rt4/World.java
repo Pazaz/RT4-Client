@@ -16,7 +16,7 @@ public final class World extends AbstractWorld {
 	public JagString hostname;
 
 	@OriginalMember(owner = "client!ba", name = "g", descriptor = "(I)Lclient!ee;")
-	public final Class32 getWorldInfo() {
+	public final WorldInfo getWorldInfo() {
 		return WorldList.countries[this.country];
 	}
 }

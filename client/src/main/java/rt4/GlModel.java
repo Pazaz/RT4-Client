@@ -137,7 +137,7 @@ public final class GlModel extends Model {
 	private short[] aShortArray86;
 
 	@OriginalMember(owner = "client!td", name = "cb", descriptor = "Lclient!de;")
-	private Class23 aClass23_1;
+	private GlModel_Class23 aClass23_1;
 
 	@OriginalMember(owner = "client!td", name = "db", descriptor = "[I")
 	private int[] anIntArray464;
@@ -602,13 +602,13 @@ public final class GlModel extends Model {
 			if (local902 == 0) {
 				@Pc(1994) long local1994 = (long) (local833 << 2) + ((long) (local553 << 24) + (long) (local817 << 8) + (long) local844 << 32);
 				local919 = arg0.anIntArray197[local810];
-				@Pc(2004) Class57 local2004 = arg0.aClass57Array1[local919];
+				@Pc(2004) Model_Class57 local2004 = arg0.aClass57Array1[local919];
 				this.aShortArray77[local439] = this.method4098(arg0, local919, local1994, local2004.anInt2437, local2004.anInt2431, local2004.anInt2436, local2004.anInt2432, local854, local856);
 				local1280 = arg0.anIntArray200[local810];
-				@Pc(2033) Class57 local2033 = arg0.aClass57Array1[local1280];
+				@Pc(2033) Model_Class57 local2033 = arg0.aClass57Array1[local1280];
 				this.aShortArray82[local439] = this.method4098(arg0, local1280, local1994 + (long) local866, local2033.anInt2437, local2033.anInt2431, local2033.anInt2436, local2033.anInt2432, local858, local683);
 				@Pc(2060) int local2060 = arg0.anIntArray196[local810];
-				@Pc(2065) Class57 local2065 = arg0.aClass57Array1[local2060];
+				@Pc(2065) Model_Class57 local2065 = arg0.aClass57Array1[local2060];
 				this.aShortArray83[local439] = this.method4098(arg0, local2060, local1994 + (long) local868, local2065.anInt2437, local2065.anInt2431, local2065.anInt2436, local2065.anInt2432, local714, local685);
 			} else if (local902 == 1) {
 				@Pc(2096) TriangleNormal local2096 = arg0.aClass126Array1[local810];
@@ -1287,14 +1287,14 @@ public final class GlModel extends Model {
 									}
 									if (local237 != -1) {
 										if (local40 == null) {
-											this.aClass23_1 = new Class23();
+											this.aClass23_1 = new GlModel_Class23();
 											local40 = this.aClass23_1.aShortArray8 = Static263.method4511(this.aShortArray76);
 											local44 = this.aClass23_1.aShortArray10 = Static263.method4511(this.aShortArray79);
 											local48 = this.aClass23_1.aShortArray9 = Static263.method4511(this.aShortArray85);
 											local52 = this.aClass23_1.aShortArray7 = Static263.method4511(this.aShortArray86);
 										}
 										if (local68 == null) {
-											@Pc(325) Class23 local325 = local2.aClass23_1 = new Class23();
+											@Pc(325) GlModel_Class23 local325 = local2.aClass23_1 = new GlModel_Class23();
 											local68 = local325.aShortArray8 = Static263.method4511(local24);
 											local72 = local325.aShortArray10 = Static263.method4511(local27);
 											local76 = local325.aShortArray9 = Static263.method4511(local30);

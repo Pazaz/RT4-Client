@@ -152,7 +152,7 @@ public abstract class PathingEntity extends Entity {
 	public int anInt3377 = 0;
 
 	@OriginalMember(owner = "client!fe", name = "Eb", descriptor = "[Lclient!ub;")
-	public final Class147[] aClass147Array3 = new Class147[12];
+	public final Npc_Class147[] aClass147Array3 = new Npc_Class147[12];
 
 	@OriginalMember(owner = "client!fe", name = "Lb", descriptor = "I")
 	public int chatLoops = 100;

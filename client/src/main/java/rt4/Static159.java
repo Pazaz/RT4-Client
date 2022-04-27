@@ -30,7 +30,7 @@ public final class Static159 {
 						arg1.aClass147Array3[local25] = null;
 					} else {
 						@Pc(60) SeqType local60 = SeqTypeList.get(local15);
-						@Pc(65) Class147 local65 = arg1.aClass147Array3[local25];
+						@Pc(65) Npc_Class147 local65 = arg1.aClass147Array3[local25];
 						@Pc(68) int local68 = local60.anInt5347;
 						if (local65 != null) {
 							if (local15 == local65.anInt5396) {
@@ -51,7 +51,7 @@ public final class Static159 {
 							}
 						}
 						if (local65 == null) {
-							local65 = arg1.aClass147Array3[local25] = new Class147();
+							local65 = arg1.aClass147Array3[local25] = new Npc_Class147();
 							local65.anInt5398 = 1;
 							local65.anInt5404 = 0;
 							local65.anInt5408 = local23;

@@ -126,7 +126,7 @@ public final class Player extends PathingEntity {
 					} else {
 						@Pc(68) SeqType local68 = SeqTypeList.get(local20);
 						@Pc(71) int local71 = local68.anInt5347;
-						@Pc(76) Class147 local76 = arg2.aClass147Array3[local30];
+						@Pc(76) Npc_Class147 local76 = arg2.aClass147Array3[local30];
 						if (local76 != null) {
 							if (local20 == local76.anInt5396) {
 								if (local71 == 0) {
@@ -146,7 +146,7 @@ public final class Player extends PathingEntity {
 							}
 						}
 						if (local76 == null) {
-							local76 = arg2.aClass147Array3[local30] = new Class147();
+							local76 = arg2.aClass147Array3[local30] = new Npc_Class147();
 							local76.anInt5396 = local20;
 							local76.anInt5398 = 1;
 							local76.anInt5404 = 0;

@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!wh")
-public final class Class162 {
+public final class Midi_Class162 {
 
 	@OriginalMember(owner = "client!wh", name = "a", descriptor = "I")
 	public int anInt5807;

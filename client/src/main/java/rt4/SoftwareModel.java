@@ -234,7 +234,7 @@ public final class SoftwareModel extends Model {
 			if (local377 == -1) {
 				local366 = 2;
 			}
-			@Pc(435) Class57 local435;
+			@Pc(435) Model_Class57 local435;
 			@Pc(468) int local468;
 			@Pc(614) TriangleNormal local614;
 			if (local388 == -1) {

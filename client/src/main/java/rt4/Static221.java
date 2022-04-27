@@ -67,7 +67,7 @@ public final class Static221 {
 			@Pc(18) Light local18 = arg3[local7];
 			if (local18.anInt2241 == arg4) {
 				@Pc(24) int local24 = 0;
-				@Pc(28) Class45 local28 = new Class45();
+				@Pc(28) Light_Class45 local28 = new Light_Class45();
 				@Pc(37) int local37 = (local18.anInt2240 >> 7) - local18.anInt2236;
 				@Pc(46) int local46 = (local18.anInt2245 >> 7) - local18.anInt2236;
 				if (local46 < 0) {

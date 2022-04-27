@@ -75,7 +75,7 @@ public final class RawModel extends Entity {
 	public short[] aShortArray24;
 
 	@OriginalMember(owner = "client!gb", name = "W", descriptor = "[Lclient!hd;")
-	public Class57[] aClass57Array1;
+	public Model_Class57[] aClass57Array1;
 
 	@OriginalMember(owner = "client!gb", name = "X", descriptor = "S")
 	private short aShort16;
@@ -105,7 +105,7 @@ public final class RawModel extends Entity {
 	public short[] aShortArray25;
 
 	@OriginalMember(owner = "client!gb", name = "hb", descriptor = "[Lclient!hd;")
-	public Class57[] aClass57Array2;
+	public Model_Class57[] aClass57Array2;
 
 	@OriginalMember(owner = "client!gb", name = "ib", descriptor = "[S")
 	public short[] aShortArray26;
@@ -557,10 +557,10 @@ public final class RawModel extends Entity {
 		if (this.aClass57Array1 != null) {
 			return;
 		}
-		this.aClass57Array1 = new Class57[this.anInt2139];
+		this.aClass57Array1 = new Model_Class57[this.anInt2139];
 		@Pc(10) int local10;
 		for (local10 = 0; local10 < this.anInt2139; local10++) {
-			this.aClass57Array1[local10] = new Class57();
+			this.aClass57Array1[local10] = new Model_Class57();
 		}
 		for (local10 = 0; local10 < this.anInt2136; local10++) {
 			@Pc(34) int local34 = this.anIntArray197[local10];
@@ -593,17 +593,17 @@ public final class RawModel extends Entity {
 				local201 = this.aByteArray30[local10];
 			}
 			if (local201 == 0) {
-				@Pc(214) Class57 local214 = this.aClass57Array1[local34];
+				@Pc(214) Model_Class57 local214 = this.aClass57Array1[local34];
 				local214.anInt2437 += local112;
 				local214.anInt2431 += local120;
 				local214.anInt2436 += local128;
 				local214.anInt2432++;
-				@Pc(243) Class57 local243 = this.aClass57Array1[local39];
+				@Pc(243) Model_Class57 local243 = this.aClass57Array1[local39];
 				local243.anInt2437 += local112;
 				local243.anInt2431 += local120;
 				local243.anInt2436 += local128;
 				local243.anInt2432++;
-				@Pc(272) Class57 local272 = this.aClass57Array1[local44];
+				@Pc(272) Model_Class57 local272 = this.aClass57Array1[local44];
 				local272.anInt2437 += local112;
 				local272.anInt2431 += local120;
 				local272.anInt2436 += local128;
@@ -1271,7 +1271,7 @@ public final class RawModel extends Entity {
 		@Pc(18) int local18 = local2.anInt2139;
 		@Pc(20) int local20;
 		for (local20 = 0; local20 < this.anInt2139; local20++) {
-			@Pc(29) Class57 local29 = this.aClass57Array1[local20];
+			@Pc(29) Model_Class57 local29 = this.aClass57Array1[local20];
 			if (local29.anInt2432 != 0) {
 				@Pc(40) int local40 = this.anIntArray201[local20] - arg2;
 				if (local40 >= local2.aShort15 && local40 <= local2.aShort13) {
@@ -1280,21 +1280,21 @@ public final class RawModel extends Entity {
 						@Pc(72) int local72 = this.anIntArray203[local20] - arg3;
 						if (local72 >= local2.aShort20 && local72 <= local2.aShort17) {
 							for (@Pc(83) int local83 = 0; local83 < local18; local83++) {
-								@Pc(91) Class57 local91 = local2.aClass57Array1[local83];
+								@Pc(91) Model_Class57 local91 = local2.aClass57Array1[local83];
 								if (local56 == local15[local83] && local72 == local2.anIntArray203[local83] && local40 == local2.anIntArray201[local83] && local91.anInt2432 != 0) {
 									if (this.aClass57Array2 == null) {
-										this.aClass57Array2 = new Class57[this.anInt2139];
+										this.aClass57Array2 = new Model_Class57[this.anInt2139];
 									}
 									if (local2.aClass57Array2 == null) {
-										local2.aClass57Array2 = new Class57[local18];
+										local2.aClass57Array2 = new Model_Class57[local18];
 									}
-									@Pc(131) Class57 local131 = this.aClass57Array2[local20];
+									@Pc(131) Model_Class57 local131 = this.aClass57Array2[local20];
 									if (local131 == null) {
-										local131 = this.aClass57Array2[local20] = new Class57(local29);
+										local131 = this.aClass57Array2[local20] = new Model_Class57(local29);
 									}
-									@Pc(148) Class57 local148 = local2.aClass57Array2[local83];
+									@Pc(148) Model_Class57 local148 = local2.aClass57Array2[local83];
 									if (local148 == null) {
-										local148 = local2.aClass57Array2[local83] = new Class57(local91);
+										local148 = local2.aClass57Array2[local83] = new Model_Class57(local91);
 									}
 									local131.anInt2437 += local91.anInt2437;
 									local131.anInt2431 += local91.anInt2431;

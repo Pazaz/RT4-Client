@@ -291,7 +291,7 @@ public final class Loc extends Entity {
 			Static242.method4207(this.aClass36_Sub1_2, this.anInt1296, this.anInt1294, this.anInt1319);
 		}
 		@Pc(356) boolean local356 = this.aClass36_Sub1_2 == null;
-		@Pc(389) Class139 local389;
+		@Pc(389) Loc_Class139 local389;
 		if (this.aClass144_2 == null) {
 			local389 = local19.method3428(this.anInt1295, local302, local267, this.anInt1307, local293, local314, false, local356 ? aClass36_Sub1_1 : this.aClass36_Sub1_2, local256, local311);
 		} else {

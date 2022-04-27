@@ -30,7 +30,7 @@ public final class MidiInstrument extends Node {
 	public final short[] aShortArray36 = new short[128];
 
 	@OriginalMember(owner = "client!jk", name = "I", descriptor = "[Lclient!wh;")
-	public final Class162[] aClass162Array1 = new Class162[128];
+	public final Midi_Class162[] aClass162Array1 = new Midi_Class162[128];
 
 	@OriginalMember(owner = "client!jk", name = "<init>", descriptor = "([B)V")
 	public MidiInstrument(@OriginalArg(0) byte[] arg0) {
@@ -93,9 +93,9 @@ public final class MidiInstrument extends Node {
 				local187[local206] = (byte) local204;
 			}
 		}
-		@Pc(242) Class162[] local242 = new Class162[local194];
+		@Pc(242) Midi_Class162[] local242 = new Midi_Class162[local194];
 		for (local206 = 0; local206 < local242.length; local206++) {
-			@Pc(256) Class162 local256 = local242[local206] = new Class162();
+			@Pc(256) Midi_Class162 local256 = local242[local206] = new Midi_Class162();
 			@Pc(260) int local260 = local38.g1();
 			if (local260 > 0) {
 				local256.aByteArray80 = new byte[local260 * 2];
@@ -185,7 +185,7 @@ public final class MidiInstrument extends Node {
 		}
 		local428 = 0;
 		local375 = 0;
-		@Pc(609) Class162 local609 = null;
+		@Pc(609) Midi_Class162 local609 = null;
 		@Pc(611) int local611;
 		for (local611 = 0; local611 < 128; local611++) {
 			if (this.anIntArray289[local611] != 0) {
@@ -220,7 +220,7 @@ public final class MidiInstrument extends Node {
 			this.aByteArray45[local664] = (byte) local611;
 		}
 		this.anInt3078 = local38.g1() + 1;
-		@Pc(729) Class162 local729;
+		@Pc(729) Midi_Class162 local729;
 		@Pc(734) int local734;
 		for (local664 = 0; local664 < local194; local664++) {
 			local729 = local242[local664];

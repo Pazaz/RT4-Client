@@ -11,7 +11,7 @@ public final class Static171 {
 	public static int anInt4153;
 
     @OriginalMember(owner = "client!ni", name = "n", descriptor = "Lclient!sm;")
-	public static Class139 aClass139_1 = new Class139();
+	public static Loc_Class139 aClass139_1 = new Loc_Class139();
 
 	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(ILclient!na;)I")
 	public static int method3218(@OriginalArg(1) JagString arg0) {

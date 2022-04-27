@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ea")
-public final class Class3_Sub9 extends Node {
+public final class Song_Class3_Sub9 extends Node {
 
 	@OriginalMember(owner = "client!ea", name = "s", descriptor = "[I")
 	public static final int[] anIntArray135 = new int[32];
@@ -23,7 +23,7 @@ public final class Class3_Sub9 extends Node {
 	}
 
 	@OriginalMember(owner = "client!ea", name = "<init>", descriptor = "([B)V")
-	public Class3_Sub9(@OriginalArg(0) byte[] arg0) {
+	public Song_Class3_Sub9(@OriginalArg(0) byte[] arg0) {
 		this.aByteArray17 = arg0;
 	}
 }
