@@ -733,7 +733,7 @@ public final class LocType {
 	}
 
 	@OriginalMember(owner = "client!pb", name = "a", descriptor = "(II[[III[[IZLclient!ek;BZI)Lclient!sm;")
-	public final Class139 method3428(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int[][] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int[][] arg5, @OriginalArg(6) boolean arg6, @OriginalArg(7) SoftwareIndexedSprite arg7, @OriginalArg(9) boolean arg8, @OriginalArg(10) int arg9) {
+	public final Loc_Class139 method3428(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int[][] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int[][] arg5, @OriginalArg(6) boolean arg6, @OriginalArg(7) SoftwareIndexedSprite arg7, @OriginalArg(9) boolean arg8, @OriginalArg(10) int arg9) {
 		@Pc(29) long local29;
 		if (GlRenderer.enabled) {
 			if (this.shapes == null) {
@@ -741,7 +741,7 @@ public final class LocType {
 			} else {
 				local29 = arg0 + (this.id << 10) + (arg3 << 3);
 			}
-			@Pc(225) Class139 local225 = (Class139) LocTypeList.aClass99_14.get(local29);
+			@Pc(225) Loc_Class139 local225 = (Loc_Class139) LocTypeList.aClass99_14.get(local29);
 			@Pc(235) GlModel local235;
 			@Pc(265) SoftwareIndexedSprite local265;
 			if (local225 == null) {
@@ -759,7 +759,7 @@ public final class LocType {
 				} else {
 					local265 = null;
 				}
-				local225 = new Class139();
+				local225 = new Loc_Class139();
 				local225.aClass8_10 = local235;
 				local225.aClass36_Sub1_3 = local265;
 				LocTypeList.aClass99_14.put(local225, local29);
@@ -826,7 +826,7 @@ public final class LocType {
 	}
 
 	@OriginalMember(owner = "client!pb", name = "a", descriptor = "(IILclient!ek;ILclient!tk;I[[IZII[[IIII)Lclient!sm;")
-	public final Class139 method3429(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) SoftwareIndexedSprite arg2, @OriginalArg(3) int arg3, @OriginalArg(4) SeqType arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int[][] arg6, @OriginalArg(7) boolean arg7, @OriginalArg(8) int arg8, @OriginalArg(10) int[][] arg9, @OriginalArg(11) int arg10, @OriginalArg(12) int arg11, @OriginalArg(13) int arg12) {
+	public final Loc_Class139 method3429(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) SoftwareIndexedSprite arg2, @OriginalArg(3) int arg3, @OriginalArg(4) SeqType arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int[][] arg6, @OriginalArg(7) boolean arg7, @OriginalArg(8) int arg8, @OriginalArg(10) int[][] arg9, @OriginalArg(11) int arg10, @OriginalArg(12) int arg11, @OriginalArg(13) int arg12) {
 		@Pc(30) long local30;
 		if (!GlRenderer.enabled) {
 			if (this.shapes == null) {

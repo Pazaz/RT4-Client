@@ -29,7 +29,7 @@ public class WorldList {
     @OriginalMember(owner = "client!gf", name = "T", descriptor = "I")
     public static int checksum;
     @OriginalMember(owner = "client!qh", name = "e", descriptor = "[Lclient!ee;")
-    public static Class32[] countries;
+    public static WorldInfo[] countries;
     @OriginalMember(owner = "client!bi", name = "R", descriptor = "I")
     public static int minId;
     @OriginalMember(owner = "client!ni", name = "q", descriptor = "I")
@@ -163,10 +163,10 @@ public class WorldList {
     @OriginalMember(owner = "client!hi", name = "a", descriptor = "(Lclient!wa;I)V")
     public static void decodeWorlds(@OriginalArg(0) Buffer buffer) {
         @Pc(9) int countryCount = buffer.gSmart1or2();
-        countries = new Class32[countryCount];
+        countries = new WorldInfo[countryCount];
         @Pc(14) int i;
         for (i = 0; i < countryCount; i++) {
-            countries[i] = new Class32();
+            countries[i] = new WorldInfo();
             countries[i].flag = buffer.gSmart1or2();
             countries[i].name = buffer.gjstr2();
         }

@@ -3688,7 +3688,7 @@ public final class ScriptRunner {
 														intStack[isp++] = 1;
 														continue;
 													}
-													@Pc(10247) Class32 local10247;
+													@Pc(10247) WorldInfo local10247;
 													@Pc(10191) World world;
 													if (opcode == 6501) {
 														world = Static18.getFirstWorld();
@@ -3763,7 +3763,7 @@ public final class ScriptRunner {
 														} else {
 															intStack[isp++] = local10440.flags;
 															stringStack[ssp++] = local10440.activity;
-															@Pc(10458) Class32 local10458 = local10440.getWorldInfo();
+															@Pc(10458) WorldInfo local10458 = local10440.getWorldInfo();
 															intStack[isp++] = local10458.flag;
 															stringStack[ssp++] = local10458.name;
 															intStack[isp++] = local10440.players;

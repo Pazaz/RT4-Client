@@ -7,7 +7,7 @@ public class AttachLocRequest {
     @OriginalMember(owner = "client!ph", name = "a", descriptor = "(B)V")
     public static void loop() {
         while (true) {
-            @Pc(17) Class3_Sub8 local17 = (Class3_Sub8) Static128.aClass69_77.removeHead();
+            @Pc(17) AttachLocRequest_Class3_Sub8 local17 = (AttachLocRequest_Class3_Sub8) Static128.aClass69_77.removeHead();
             if (local17 == null) {
                 return;
             }

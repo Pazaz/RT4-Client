@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!de")
-public final class Class23 {
+public final class GlModel_Class23 {
 
 	@OriginalMember(owner = "client!de", name = "a", descriptor = "[S")
 	public short[] aShortArray7;

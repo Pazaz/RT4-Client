@@ -85,7 +85,7 @@ public final class Static202 {
 		@Pc(10) int local10 = local7.endBit;
 		@Pc(16) int local16 = local7.startBit;
 		@Pc(19) int local19 = local7.baseVar;
-		@Pc(25) int local25 = Class3_Sub9.anIntArray135[local10 - local16];
+		@Pc(25) int local25 = Song_Class3_Sub9.anIntArray135[local10 - local16];
 		if (arg1 < 0 || arg1 > local25) {
 			arg1 = 0;
 		}

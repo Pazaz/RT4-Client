@@ -15,7 +15,7 @@ public final class Static272 {
 		@Pc(17) int local17 = local14.baseVar;
 		@Pc(20) int local20 = local14.endBit;
 		@Pc(23) int local23 = local14.startBit;
-		@Pc(29) int local29 = Class3_Sub9.anIntArray135[local20 - local23];
+		@Pc(29) int local29 = Song_Class3_Sub9.anIntArray135[local20 - local23];
 		if (arg0 < 0 || local29 < arg0) {
 			arg0 = 0;
 		}

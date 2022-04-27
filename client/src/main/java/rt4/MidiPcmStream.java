@@ -112,7 +112,7 @@ public final class MidiPcmStream extends PcmStream {
 		arg0.method3741();
 		@Pc(5) boolean local5 = true;
 		@Pc(20) int[] local20 = new int[] { 22050 };
-		for (@Pc(34) Class3_Sub9 local34 = (Class3_Sub9) arg0.aClass133_22.head(); local34 != null; local34 = (Class3_Sub9) arg0.aClass133_22.next()) {
+		for (@Pc(34) Song_Class3_Sub9 local34 = (Song_Class3_Sub9) arg0.aClass133_22.head(); local34 != null; local34 = (Song_Class3_Sub9) arg0.aClass133_22.next()) {
 			@Pc(40) int local40 = (int) local34.key;
 			@Pc(48) MidiInstrument local48 = (MidiInstrument) this.aClass133_23.get((long) local40);
 			if (local48 == null) {
@@ -533,7 +533,7 @@ public final class MidiPcmStream extends PcmStream {
 			arg2.anInt3764 = local54;
 		}
 		arg2.aClass3_Sub3_Sub1_3.method410(this.method4439(arg2));
-		@Pc(103) Class162 local103 = arg2.aClass162_1;
+		@Pc(103) Midi_Class162 local103 = arg2.aClass162_1;
 		arg2.anInt3768 += local103.anInt5814;
 		arg2.anInt3774++;
 		@Pc(134) double local134 = (double) ((arg2.anInt3779 - 60 << 8) + (arg2.anInt3764 * arg2.anInt3781 >> 12)) * 5.086263020833333E-6D;
@@ -719,7 +719,7 @@ public final class MidiPcmStream extends PcmStream {
 
 	@OriginalMember(owner = "client!va", name = "a", descriptor = "(BLclient!mf;)I")
 	private int method4439(@OriginalArg(1) MidiNote arg0) {
-		@Pc(6) Class162 local6 = arg0.aClass162_1;
+		@Pc(6) Midi_Class162 local6 = arg0.aClass162_1;
 		@Pc(17) int local17 = (arg0.anInt3781 * arg0.anInt3764 >> 12) + arg0.anInt3769;
 		local17 += this.anIntArray501[arg0.anInt3773] * (this.anIntArray497[arg0.anInt3773] - 8192) >> 12;
 		@Pc(62) int local62;
@@ -825,7 +825,7 @@ public final class MidiPcmStream extends PcmStream {
 		if (this.anIntArray507[arg0.anInt3773] == 0) {
 			return 0;
 		}
-		@Pc(21) Class162 local21 = arg0.aClass162_1;
+		@Pc(21) Midi_Class162 local21 = arg0.aClass162_1;
 		@Pc(37) int local37 = this.anIntArray495[arg0.anInt3773] * this.anIntArray505[arg0.anInt3773] + 4096 >> 13;
 		@Pc(45) int local45 = local37 * local37 + 16384 >> 15;
 		@Pc(54) int local54 = arg0.anInt3772 * local45 + 16384 >> 15;

@@ -453,7 +453,7 @@ public final class client extends GameShell {
         Static107.anInt2875 = -1;
         method3768();
         Static255.cache.clear();
-        Static171.aClass139_1 = new Class139();
+        Static171.aClass139_1 = new Loc_Class139();
         ((Js5GlTextureProvider) Rasteriser.textureProvider).clear();
         LightingManager.lightCount = 0;
         LightingManager.lights = new Light[255];

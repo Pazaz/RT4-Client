@@ -56,7 +56,7 @@ public final class Static9 {
 		if (arg7 < 3) {
 			local158 = Static83.activeTileHeightMap[arg7 + 1];
 		}
-		@Pc(215) Class139 local215 = arg0.method3428(arg2, local80, local120, arg4, local148, local158, false, null, true, local88);
+		@Pc(215) Loc_Class139 local215 = arg0.method3428(arg2, local80, local120, arg4, local148, local158, false, null, true, local88);
 		Static242.method4207(local215.aClass36_Sub1_3, local80 - arg3, local122, local88 - arg1);
 	}
 

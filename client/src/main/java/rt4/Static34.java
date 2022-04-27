@@ -165,7 +165,7 @@ public final class Static34 {
 			arg0.anInt3420--;
 		}
 		for (local156 = 0; local156 < arg0.aClass147Array3.length; local156++) {
-			@Pc(545) Class147 local545 = arg0.aClass147Array3[local156];
+			@Pc(545) Npc_Class147 local545 = arg0.aClass147Array3[local156];
 			if (local545 != null) {
 				if (local545.anInt5408 > 0) {
 					local545.anInt5408--;
