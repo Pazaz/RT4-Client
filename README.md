@@ -35,3 +35,19 @@ cd RT4-Client
 
 You will be connected to a test server automatically.  
 This server is provided by 2009scape for their own internal developments.
+
+## Deviations
+
+Configurable:
+- Packet behaviors to make it compatible with existing servers
+- View distance in HD
+- Bilinear map filtering in HD/SD
+- Tweening enabled by default (existed in client)
+- Shift-click behavior on inventory items enabled by default (existed in client)
+
+Unconfigurable:
+- JOGL was updated to 2.4.0
+- Update/render loop was decoupled to tick indepedently from each other
+- Camera panning input rewritten to use render loop timing
+- Varp array size was extended to 3500 instead of 2500
+- Mouse wheel camera movement (click middle button and move mouse)
