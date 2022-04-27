@@ -15,3 +15,5 @@ include(
     "client",
     "playground"
 )
+
+startParameter.excludedTaskNames << ':playground:run'
