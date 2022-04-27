@@ -72,11 +72,11 @@ public final class Static53 {
 			@Pc(29) HookRequest local29 = new HookRequest();
 			local29.arguments = local19.anObjectArray27;
 			local29.source = local19;
-			Static82.method1767(local29);
+			ScriptRunner.run(local29);
 		}
 		Static241.aBoolean302 = false;
 		Static35.anInt1092 = -1;
-		Static43.redraw(local19);
+		InterfaceList.redraw(local19);
 	}
 
 }

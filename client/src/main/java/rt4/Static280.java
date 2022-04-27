@@ -530,8 +530,8 @@ public final class Static280 {
 			return InterfaceList.getComponent(arg0.layer);
 		}
 		@Pc(28) int local28 = arg0.id >>> 16;
-		@Pc(33) HashTableIterator local33 = new HashTableIterator(Static119.aClass133_9);
-		for (@Pc(38) Class3_Sub31 local38 = (Class3_Sub31) local33.method2701(); local38 != null; local38 = (Class3_Sub31) local33.method2700()) {
+		@Pc(33) HashTableIterator local33 = new HashTableIterator(InterfaceList.openInterfaces);
+		for (@Pc(38) ComponentPointer local38 = (ComponentPointer) local33.method2701(); local38 != null; local38 = (ComponentPointer) local33.method2700()) {
 			if (local28 == local38.anInt5878) {
 				return InterfaceList.getComponent((int) local38.key);
 			}
@@ -656,7 +656,7 @@ public final class Static280 {
 	}
 
 	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(IIIIB)V")
-	public static void method4672(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	public static void updateContainer(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		@Pc(12) Inv local12 = (Inv) Static20.objectContainerCache.get((long) arg3);
 		if (local12 == null) {
 			local12 = new Inv();

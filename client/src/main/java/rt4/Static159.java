@@ -46,7 +46,7 @@ public final class Static159 {
 								} else if (local68 == 2) {
 									local65.anInt5400 = 0;
 								}
-							} else if (local60.anInt5355 >= SeqTypeList.get(local65.anInt5396).anInt5355) {
+							} else if (local60.forcedPriority >= SeqTypeList.get(local65.anInt5396).forcedPriority) {
 								local65 = arg1.aClass147Array3[local25] = null;
 							}
 						}

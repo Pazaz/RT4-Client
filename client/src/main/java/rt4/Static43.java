@@ -39,14 +39,7 @@ public final class Static43 {
 		return Static105.method2256(arg0, local7, local11, local15 + 1 - local7, local19 - local11 + 1, arg1, arg2, arg3, arg5, arg6, true, arg7);
 	}
 
-	@OriginalMember(owner = "client!dg", name = "a", descriptor = "(ILclient!be;)V")
-	public static void redraw(@OriginalArg(1) Component arg0) {
-		if (Static182.anInt4311 == arg0.anInt465) {
-			Static186.aBooleanArray100[arg0.anInt517] = true;
-		}
-	}
-
-	@OriginalMember(owner = "client!dg", name = "a", descriptor = "(IIIIIILclient!mj;)V")
+    @OriginalMember(owner = "client!dg", name = "a", descriptor = "(IIIIIILclient!mj;)V")
 	public static void method1144(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) CollisionMap arg5) {
 		@Pc(9) long local9 = 0L;
 		if (arg3 == 0) {

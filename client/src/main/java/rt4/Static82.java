@@ -17,8 +17,4 @@ public final class Static82 {
 		}
 	}
 
-    @OriginalMember(owner = "client!gi", name = "a", descriptor = "(ILclient!jl;)V")
-	public static void method1767(@OriginalArg(1) HookRequest arg0) {
-		ScriptRunner.run(200000, arg0);
-	}
 }

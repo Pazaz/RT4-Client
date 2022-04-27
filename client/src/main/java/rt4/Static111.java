@@ -11,10 +11,7 @@ public final class Static111 {
 	@OriginalMember(owner = "client!ii", name = "y", descriptor = "I")
 	public static int anInt2910;
 
-	@OriginalMember(owner = "client!ii", name = "c", descriptor = "I")
-	public static int updatedInventoriesWriterIndex = 0;
-
-	@OriginalMember(owner = "client!ii", name = "e", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!ii", name = "e", descriptor = "Lclient!na;")
 	public static final JagString aClass100_570 = JagString.parse(")2");
 
 	@OriginalMember(owner = "client!ii", name = "a", descriptor = "(Lclient!be;III)V")
@@ -45,7 +42,7 @@ public final class Static111 {
 		} else {
 			arg0.x = arg2 - (arg2 * arg0.baseX >> 14) - arg0.anInt445;
 		}
-		if (!Static121.aBoolean154 || InterfaceList.getServerActiveProperties(arg0).anInt546 == 0 && arg0.type != 0) {
+		if (!Static121.aBoolean154 || InterfaceList.getServerActiveProperties(arg0).accessMask == 0 && arg0.type != 0) {
 			return;
 		}
 		if (arg0.y < 0) {

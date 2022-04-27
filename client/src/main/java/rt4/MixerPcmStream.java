@@ -56,7 +56,7 @@ public final class MixerPcmStream extends PcmStream {
 			arg2 -= local33;
 			this.anInt1780 += local33;
 			this.method1344();
-			@Pc(60) MixerListener local60 = (MixerListener) this.aClass69_44.method2289();
+			@Pc(60) MixerListener local60 = (MixerListener) this.aClass69_44.start();
 			synchronized (local60) {
 				@Pc(68) int local68 = local60.method779(this);
 				if (local68 < 0) {
@@ -75,7 +75,7 @@ public final class MixerPcmStream extends PcmStream {
 		if (this.anInt1780 <= 0) {
 			return;
 		}
-		for (@Pc(8) MixerListener local8 = (MixerListener) this.aClass69_44.method2289(); local8 != null; local8 = (MixerListener) this.aClass69_44.method2288()) {
+		for (@Pc(8) MixerListener local8 = (MixerListener) this.aClass69_44.start(); local8 != null; local8 = (MixerListener) this.aClass69_44.next()) {
 			local8.anInt905 -= this.anInt1780;
 		}
 		this.anInt1781 -= this.anInt1780;
@@ -85,19 +85,19 @@ public final class MixerPcmStream extends PcmStream {
 	@OriginalMember(owner = "client!ei", name = "b", descriptor = "()Lclient!qb;")
 	@Override
 	public final PcmStream method4406() {
-		return (PcmStream) this.aClass69_43.method2289();
+		return (PcmStream) this.aClass69_43.start();
 	}
 
 	@OriginalMember(owner = "client!ei", name = "d", descriptor = "(I)V")
 	private void method1345(@OriginalArg(0) int arg0) {
-		for (@Pc(5) PcmStream local5 = (PcmStream) this.aClass69_43.method2289(); local5 != null; local5 = (PcmStream) this.aClass69_43.method2288()) {
+		for (@Pc(5) PcmStream local5 = (PcmStream) this.aClass69_43.start(); local5 != null; local5 = (PcmStream) this.aClass69_43.next()) {
 			local5.skip(arg0);
 		}
 	}
 
 	@OriginalMember(owner = "client!ei", name = "c", descriptor = "([III)V")
 	private void method1346(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		for (@Pc(5) PcmStream local5 = (PcmStream) this.aClass69_43.method2289(); local5 != null; local5 = (PcmStream) this.aClass69_43.method2288()) {
+		for (@Pc(5) PcmStream local5 = (PcmStream) this.aClass69_43.start(); local5 != null; local5 = (PcmStream) this.aClass69_43.next()) {
 			local5.method4405(arg0, arg1, arg2);
 		}
 	}
@@ -131,7 +131,7 @@ public final class MixerPcmStream extends PcmStream {
 			arg0 -= local29;
 			this.anInt1780 += local29;
 			this.method1344();
-			@Pc(50) MixerListener local50 = (MixerListener) this.aClass69_44.method2289();
+			@Pc(50) MixerListener local50 = (MixerListener) this.aClass69_44.start();
 			synchronized (local50) {
 				@Pc(58) int local58 = local50.method779(this);
 				if (local58 < 0) {
@@ -148,7 +148,7 @@ public final class MixerPcmStream extends PcmStream {
 	@OriginalMember(owner = "client!ei", name = "d", descriptor = "()Lclient!qb;")
 	@Override
 	public final PcmStream method4409() {
-		return (PcmStream) this.aClass69_43.method2288();
+		return (PcmStream) this.aClass69_43.next();
 	}
 
 	@OriginalMember(owner = "client!ei", name = "a", descriptor = "(Lclient!ab;Lclient!cc;)V")

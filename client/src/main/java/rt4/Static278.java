@@ -136,8 +136,8 @@ public final class Static278 {
 		Static80.centralZoneX = 0;
 		Static52.anInt1695 = 0;
 		Static225.originX = 0;
-		for (local19 = 0; local19 < Static143.aClass102Array1.length; local19++) {
-			Static143.aClass102Array1[local19] = null;
+		for (local19 = 0; local19 < Static143.hintMapMarkers.length; local19++) {
+			Static143.hintMapMarkers[local19] = null;
 		}
 		PlayerList.size = 0;
 		Static272.anInt5214 = 0;
@@ -157,7 +157,7 @@ public final class Static278 {
 		}
 		Static35.resetCameraEffects();
 		Protocol.verifyId = 0;
-		Static8.method121();
+		Static8.resetTransientVars();
 		Static73.method1596(true);
 	}
 }

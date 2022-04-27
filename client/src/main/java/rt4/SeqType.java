@@ -51,7 +51,7 @@ public final class SeqType {
 	public int anInt5363 = -1;
 
 	@OriginalMember(owner = "client!tk", name = "p", descriptor = "I")
-	public int anInt5355 = 5;
+	public int forcedPriority = 5;
 
 	@OriginalMember(owner = "client!tk", name = "r", descriptor = "Z")
 	public boolean aBoolean279 = false;
@@ -314,7 +314,7 @@ public final class SeqType {
 		} else if (arg0 == 4) {
 			this.aBoolean279 = true;
 		} else if (arg0 == 5) {
-			this.anInt5355 = arg1.g1();
+			this.forcedPriority = arg1.g1();
 		} else if (arg0 == 6) {
 			this.anInt5353 = arg1.g2();
 		} else if (arg0 == 7) {

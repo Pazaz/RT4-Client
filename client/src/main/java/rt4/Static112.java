@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static112 {
 
 	@OriginalMember(owner = "client!ij", name = "a", descriptor = "Lclient!na;")
-	public static final JagString aClass100_574 = JagString.parse(":duelfriend:");
+	public static final JagString DUELFRIEND = JagString.parse(":duelfriend:");
 
 	@OriginalMember(owner = "client!ij", name = "a", descriptor = "(B)V")
 	public static void method2297() {

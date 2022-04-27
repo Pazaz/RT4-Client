@@ -4,13 +4,13 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!cd")
-public final class Class3_Sub7 extends Node {
+public final class SceneryStack extends Node {
 
 	@OriginalMember(owner = "client!cd", name = "r", descriptor = "I")
-	public int anInt916;
+	public int z;
 
 	@OriginalMember(owner = "client!cd", name = "t", descriptor = "I")
-	public int anInt918;
+	public int level;
 
 	@OriginalMember(owner = "client!cd", name = "w", descriptor = "I")
 	public int anInt920;
@@ -31,7 +31,7 @@ public final class Class3_Sub7 extends Node {
 	public int anInt927;
 
 	@OriginalMember(owner = "client!cd", name = "H", descriptor = "I")
-	public int anInt928;
+	public int x;
 
 	@OriginalMember(owner = "client!cd", name = "I", descriptor = "I")
 	public int anInt929;

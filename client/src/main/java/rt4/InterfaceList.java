@@ -13,6 +13,8 @@ public class InterfaceList {
     public static final int[] keyChars = new int[128];
     @OriginalMember(owner = "client!sg", name = "q", descriptor = "[I")
     public static final int[] keyCodes = new int[128];
+    @OriginalMember(owner = "client!rb", name = "b", descriptor = "Lclient!sc;")
+    public static final HashTable properties = new HashTable(512);
     @OriginalMember(owner = "client!bn", name = "V", descriptor = "I")
     public static int anInt766 = 0;
     @OriginalMember(owner = "client!md", name = "W", descriptor = "I")
@@ -35,6 +37,8 @@ public class InterfaceList {
     public static int transmitTimer = 1;
     @OriginalMember(owner = "client!ra", name = "J", descriptor = "I")
     public static int miscTransmitAt = 0;
+    @OriginalMember(owner = "client!je", name = "T", descriptor = "Lclient!sc;")
+    public static HashTable openInterfaces = new HashTable(8);
 
     @OriginalMember(owner = "client!ab", name = "a", descriptor = "(ZLclient!ve;Lclient!ve;Lclient!ve;Lclient!ve;)V")
     public static void init(@OriginalArg(1) Js5 arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) Js5 arg2, @OriginalArg(4) Js5 arg3) {
@@ -75,7 +79,9 @@ public class InterfaceList {
     public static boolean load(@OriginalArg(0) int arg0) {
         if (aBooleanArray115[arg0]) {
             return true;
-        } else if (aClass153_84.method4479(arg0)) {
+        }
+
+        if (aClass153_84.method4479(arg0)) {
             @Pc(25) int local25 = aClass153_84.getGroupCapacity(arg0);
             if (local25 == 0) {
                 aBooleanArray115[arg0] = true;
@@ -91,9 +97,9 @@ public class InterfaceList {
                         @Pc(74) Component local74 = components[arg0][local46] = new Component();
                         local74.id = local46 + (arg0 << 16);
                         if (local62[0] == -1) {
-                            local74.method490(new Buffer(local62));
+                            local74.decodeScriptFormat(new Buffer(local62));
                         } else {
-                            local74.method481(new Buffer(local62));
+                            local74.decodeNoScripts(new Buffer(local62));
                         }
                     }
                 }
@@ -112,8 +118,8 @@ public class InterfaceList {
     }
 
     @OriginalMember(owner = "client!i", name = "i", descriptor = "(Z)V")
-    public static void method2245() {
-        for (@Pc(6) Class3_Sub31 local6 = (Class3_Sub31) Static119.aClass133_9.head(); local6 != null; local6 = (Class3_Sub31) Static119.aClass133_9.next()) {
+    public static void redrawActiveInterfaces() {
+        for (@Pc(6) ComponentPointer local6 = (ComponentPointer) openInterfaces.head(); local6 != null; local6 = (ComponentPointer) openInterfaces.next()) {
             @Pc(14) int local14 = local6.anInt5878;
             if (load(local14)) {
                 @Pc(21) boolean local21 = true;
@@ -121,7 +127,7 @@ public class InterfaceList {
                 @Pc(27) int local27;
                 for (local27 = 0; local27 < local25.length; local27++) {
                     if (local25[local27] != null) {
-                        local21 = local25[local27].aBoolean32;
+                        local21 = local25[local27].usingScripts;
                         break;
                     }
                 }
@@ -129,7 +135,7 @@ public class InterfaceList {
                     local27 = (int) local6.key;
                     @Pc(60) Component local60 = getComponent(local27);
                     if (local60 != null) {
-                        Static43.redraw(local60);
+                        redraw(local60);
                     }
                 }
             }
@@ -138,19 +144,20 @@ public class InterfaceList {
 
     @OriginalMember(owner = "client!af", name = "a", descriptor = "(BI)Lclient!be;")
     public static Component getComponent(@OriginalArg(1) int id) {
+        // TODO: _why_ are there some interfaces/components that are null! (i.e. banking)
         try {
             @Pc(7) int interfaceId = id >> 16;
             @Pc(18) int componentId = id & 0xFFFF;
-            if (components.length < interfaceId || interfaceId < 0) {
+            if (components.length <= interfaceId || interfaceId < 0) {
                 return null;
             }
-            if (components[interfaceId] == null || components[interfaceId][componentId] == null) {
+            if (components[interfaceId] == null || components[interfaceId].length <= componentId || components[interfaceId][componentId] == null) {
                 @Pc(33) boolean success = load(interfaceId);
                 if (!success) {
                     return null;
                 }
             }
-            if (components[interfaceId].length < componentId) {
+            if (components[interfaceId].length <= componentId) {
                 return null;
             }
             return components[interfaceId][componentId];
@@ -162,7 +169,14 @@ public class InterfaceList {
 
     @OriginalMember(owner = "client!client", name = "b", descriptor = "(Lclient!be;)Lclient!bf;")
     public static ServerActiveProperties getServerActiveProperties(@OriginalArg(0) Component arg0) {
-        @Pc(13) ServerActiveProperties local13 = (ServerActiveProperties) Static210.aClass133_21.get(((long) arg0.id << 32) + (long) arg0.createdComponentId);
-        return local13 == null ? arg0.aClass3_Sub4_1 : local13;
+        @Pc(13) ServerActiveProperties local13 = (ServerActiveProperties) properties.get(((long) arg0.id << 32) + (long) arg0.createdComponentId);
+        return local13 == null ? arg0.properties : local13;
+    }
+
+    @OriginalMember(owner = "client!dg", name = "a", descriptor = "(ILclient!be;)V")
+    public static void redraw(@OriginalArg(1) Component arg0) {
+        if (Static182.anInt4311 == arg0.anInt465) {
+            Static186.aBooleanArray100[arg0.anInt517] = true;
+        }
     }
 }

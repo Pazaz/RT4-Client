@@ -29,7 +29,7 @@ public class MapList {
 
     @OriginalMember(owner = "client!jk", name = "a", descriptor = "(ILclient!na;)Lclient!bn;")
 	public static Map get(@OriginalArg(1) JagString arg0) {
-		for (@Pc(15) Map local15 = (Map) aClass69_120.method2289(); local15 != null; local15 = (Map) aClass69_120.method2288()) {
+		for (@Pc(15) Map local15 = (Map) aClass69_120.start(); local15 != null; local15 = (Map) aClass69_120.next()) {
 			if (local15.group.strEquals(arg0)) {
 				return local15;
 			}
@@ -39,7 +39,7 @@ public class MapList {
 
     @OriginalMember(owner = "client!ce", name = "a", descriptor = "(IBI)Lclient!bn;")
 	public static Map getContainingSource(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		for (@Pc(10) Map local10 = (Map) aClass69_120.method2289(); local10 != null; local10 = (Map) aClass69_120.method2288()) {
+		for (@Pc(10) Map local10 = (Map) aClass69_120.start(); local10 != null; local10 = (Map) aClass69_120.next()) {
 			if (local10.aBoolean50 && local10.method664(arg1, arg0)) {
 				return local10;
 			}

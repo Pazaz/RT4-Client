@@ -112,12 +112,12 @@ public final class Static8 {
 	}
 
 	@OriginalMember(owner = "client!aj", name = "i", descriptor = "(I)V")
-	public static void method121() {
+	public static void resetTransientVars() {
 		for (@Pc(3) int local3 = 0; local3 < VarpTypeList.anInt4043; local3++) {
 			@Pc(19) VarpType local19 = VarpTypeList.get(local3);
 			if (local19 != null && local19.clientCode == 0) {
-				Static106.anIntArray257[local3] = 0;
-				Static7.varps[local3] = 0;
+				Static106.varp[local3] = 0;
+				VarpDomain.varps[local3] = 0;
 			}
 		}
 		Static199.aClass133_20 = new HashTable(16);

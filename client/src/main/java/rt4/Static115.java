@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static115 {
 
 	@OriginalMember(owner = "client!ja", name = "q", descriptor = "I")
-	public static int anInt2940;
+	public static int currentChunkX;
 
 	@OriginalMember(owner = "client!ja", name = "f", descriptor = "Lclient!ih;")
 	public static final LinkedList mediumPriorityRequests = new LinkedList();
@@ -19,7 +19,7 @@ public final class Static115 {
 	public static final JagString aClass100_579 = JagString.parse("Fps:");
 
 	@OriginalMember(owner = "client!ja", name = "n", descriptor = "I")
-	public static int anInt2939 = 0;
+	public static int mapFlagX = 0;
 
 	@OriginalMember(owner = "client!ja", name = "r", descriptor = "I")
 	public static int anInt2941 = -1;

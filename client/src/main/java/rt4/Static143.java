@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class Static143 {
 
 	@OriginalMember(owner = "client!ld", name = "b", descriptor = "[Lclient!nc;")
-	public static final Class102[] aClass102Array1 = new Class102[4];
+	public static final MapMarker[] hintMapMarkers = new MapMarker[4];
 
 	@OriginalMember(owner = "client!ld", name = "c", descriptor = "I")
 	public static int anInt3484 = -1;

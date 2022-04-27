@@ -22,7 +22,7 @@ public final class Static17 {
 		if (arg0.createdComponents != null) {
 			Static266.method4190(arg0.id, arg1, local20, local32, arg0.createdComponents);
 		}
-		@Pc(66) Class3_Sub31 local66 = (Class3_Sub31) Static119.aClass133_9.get((long) arg0.id);
+		@Pc(66) ComponentPointer local66 = (ComponentPointer) InterfaceList.openInterfaces.get((long) arg0.id);
 		if (local66 != null) {
 			Static234.method4017(local32, arg1, local66.anInt5878, local20);
 		}

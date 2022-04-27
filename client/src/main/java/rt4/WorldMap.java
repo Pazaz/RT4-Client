@@ -924,7 +924,7 @@ public class WorldMap {
 
     @OriginalMember(owner = "client!kf", name = "a", descriptor = "(Lclient!na;I)V")
 	public static void method4011(@OriginalArg(0) JagString arg0) {
-		for (@Pc(15) Map local15 = (Map) MapList.aClass69_120.method2289(); local15 != null; local15 = (Map) MapList.aClass69_120.method2288()) {
+		for (@Pc(15) Map local15 = (Map) MapList.aClass69_120.start(); local15 != null; local15 = (Map) MapList.aClass69_120.next()) {
 			if (local15.group.strEquals(arg0)) {
 				currentMap = local15;
 				return;

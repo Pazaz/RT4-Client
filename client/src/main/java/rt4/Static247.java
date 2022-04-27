@@ -667,7 +667,7 @@ public final class Static247 {
 			@Pc(19) HookRequest local19 = new HookRequest();
 			local19.source = local8;
 			local19.arguments = local8.anObjectArray11;
-			Static82.method1767(local19);
+			ScriptRunner.run(local19);
 		}
 		Static15.anInt506 = arg1;
 		Static121.anInt3039 = arg3;
@@ -676,7 +676,7 @@ public final class Static247 {
 		Static241.aBoolean302 = true;
 		Static246.anInt5393 = arg4;
 		Static35.anInt1092 = arg5;
-		Static43.redraw(local8);
+		InterfaceList.redraw(local8);
 	}
 
 	@OriginalMember(owner = "client!ub", name = "a", descriptor = "(IB)I")

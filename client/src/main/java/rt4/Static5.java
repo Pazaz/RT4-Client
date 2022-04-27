@@ -9,10 +9,7 @@ public final class Static5 {
 	@OriginalMember(owner = "client!af", name = "d", descriptor = "I")
 	public static int anInt40;
 
-    @OriginalMember(owner = "client!af", name = "k", descriptor = "I")
-	public static int opcode3 = 0;
-
-	@OriginalMember(owner = "client!af", name = "l", descriptor = "[S")
+    @OriginalMember(owner = "client!af", name = "l", descriptor = "[S")
 	public static final short[] aShortArray2 = new short[] { 30, 6, 31, 29, 10, 44, 37, 57 };
 
 	@OriginalMember(owner = "client!af", name = "m", descriptor = "Lclient!na;")
@@ -24,7 +21,7 @@ public final class Static5 {
 	}
 
 	@OriginalMember(owner = "client!af", name = "b", descriptor = "(B)V")
-	public static void method34() {
+	public static void resetWorldMap() {
 		WorldMap.clear(false);
 		System.gc();
 		client.setGameState(25);

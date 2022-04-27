@@ -52,9 +52,9 @@ public final class Static217 {
 			Static98.method1966(Static169.anInt4075, (long) arg0, JagString.concatenate(new JagString[] { Static34.aClass100_203, Static105.aClass100_561, local158 }), arg3, (short) 1, LocalizedText.USE, arg1);
 		} else if (!Static241.aBoolean302) {
 			for (local275 = 7; local275 >= 0; local275--) {
-				if (Static160.aClass100Array121[local275] != null) {
+				if (Player.options[local275] != null) {
 					@Pc(291) short local291 = 0;
-					if (client.game == 0 && Static160.aClass100Array121[local275].equalsIgnoreCase(LocalizedText.ATTACK)) {
+					if (client.game == 0 && Player.options[local275].equalsIgnoreCase(LocalizedText.ATTACK)) {
 						if (arg2.combatLevel > PlayerList.self.combatLevel) {
 							local291 = 2000;
 						}
@@ -65,12 +65,12 @@ public final class Static217 {
 								local291 = 0;
 							}
 						}
-					} else if (Static1.aBooleanArray1[local275]) {
+					} else if (Player.secondaryOptions[local275]) {
 						local291 = 2000;
 					}
 					@Pc(353) short local353 = Static5.aShortArray2[local275];
 					@Pc(358) short local358 = (short) (local353 + local291);
-					Static98.method1966(Static191.anIntArray388[local275], (long) arg0, JagString.concatenate(new JagString[] { Static204.aClass100_896, local158 }), arg3, local358, Static160.aClass100Array121[local275], arg1);
+					Static98.method1966(Player.cursors[local275], (long) arg0, JagString.concatenate(new JagString[] { Static204.aClass100_896, local158 }), arg3, local358, Player.options[local275], arg1);
 				}
 			}
 		} else if ((Static274.anInt4999 & 0x8) != 0) {

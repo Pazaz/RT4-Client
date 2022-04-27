@@ -10,7 +10,7 @@ public final class Static202 {
 	public static final JagString aClass100_891 = JagString.parse("");
 
     @OriginalMember(owner = "client!qg", name = "Y", descriptor = "[I")
-	public static final int[] anIntArray424 = new int[5];
+	public static final int[] cameraFrequency = new int[5];
 
 	@OriginalMember(owner = "client!qg", name = "Z", descriptor = "Lclient!na;")
 	public static final JagString aClass100_892 = JagString.parse("mem=");
@@ -93,7 +93,7 @@ public final class Static202 {
 			arg1 = 0;
 		}
 		local25 <<= local16;
-		Static148.method2766(local19, local25 & arg1 << local16 | Static7.varps[local19] & ~local25);
+		Static148.method2766(local19, local25 & arg1 << local16 | VarpDomain.varps[local19] & ~local25);
 	}
 
 	@OriginalMember(owner = "client!qg", name = "a", descriptor = "([Lclient!na;[SI)V")

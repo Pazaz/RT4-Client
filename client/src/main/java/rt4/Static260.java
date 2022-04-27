@@ -170,7 +170,7 @@ public final class Static260 {
 	@OriginalMember(owner = "client!vd", name = "a", descriptor = "(BZ)V")
 	public static void clearAmbientSounds(@OriginalArg(1) boolean arg0) {
 		@Pc(14) AreaSound local14;
-		for (local14 = (AreaSound) Static3.aClass69_135.method2289(); local14 != null; local14 = (AreaSound) Static3.aClass69_135.method2288()) {
+		for (local14 = (AreaSound) Static3.aClass69_135.start(); local14 != null; local14 = (AreaSound) Static3.aClass69_135.next()) {
 			if (local14.primaryStream != null) {
 				client.soundStream.removeSubStream(local14.primaryStream);
 				local14.primaryStream = null;
@@ -184,7 +184,7 @@ public final class Static260 {
 		if (!arg0) {
 			return;
 		}
-		for (local14 = (AreaSound) Static152.aClass69_87.method2289(); local14 != null; local14 = (AreaSound) Static152.aClass69_87.method2288()) {
+		for (local14 = (AreaSound) Static152.aClass69_87.start(); local14 != null; local14 = (AreaSound) Static152.aClass69_87.next()) {
 			if (local14.primaryStream != null) {
 				client.soundStream.removeSubStream(local14.primaryStream);
 				local14.primaryStream = null;

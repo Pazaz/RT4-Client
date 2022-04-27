@@ -102,7 +102,7 @@ public final class Static35 {
 	@OriginalMember(owner = "client!cl", name = "e", descriptor = "(I)V")
 	public static void resetCameraEffects() {
 		for (@Pc(3) int local3 = 0; local3 < 5; local3++) {
-			Static176.aBooleanArray95[local3] = false;
+			Static176.customCameraActive[local3] = false;
 		}
 		Static133.anInt5230 = 0;
 		Static233.anInt5217 = 0;

@@ -294,10 +294,10 @@ public final class Component {
 	public int anInt480 = 0;
 
 	@OriginalMember(owner = "client!be", name = "Hb", descriptor = "Z")
-	public boolean aBoolean32 = false;
+	public boolean usingScripts = false;
 
 	@OriginalMember(owner = "client!be", name = "gc", descriptor = "Lclient!bf;")
-	public ServerActiveProperties aClass3_Sub4_1 = Static45.aClass3_Sub4_2;
+	public ServerActiveProperties properties = Static45.aClass3_Sub4_2;
 
 	@OriginalMember(owner = "client!be", name = "cc", descriptor = "I")
 	public int anInt492 = 0;
@@ -559,8 +559,8 @@ public final class Component {
 	}
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(ILclient!wa;)V")
-	public final void method481(@OriginalArg(1) Buffer arg0) {
-		this.aBoolean32 = false;
+	public final void decodeNoScripts(@OriginalArg(1) Buffer arg0) {
+		this.usingScripts = false;
 		this.type = arg0.g1();
 		this.anInt530 = arg0.g1();
 		this.anInt453 = arg0.g2();
@@ -776,7 +776,7 @@ public final class Component {
 		if (this.anInt530 == 6) {
 			local164 |= 0x1;
 		}
-		this.aClass3_Sub4_1 = new ServerActiveProperties(local164, -1);
+		this.properties = new ServerActiveProperties(local164, -1);
 	}
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(ZI)Lclient!qf;")
@@ -989,99 +989,99 @@ public final class Component {
 	}
 
 	@OriginalMember(owner = "client!be", name = "c", descriptor = "(ILclient!wa;)V")
-	public final void method490(@OriginalArg(1) Buffer arg0) {
-		this.aBoolean32 = true;
-		arg0.offset++;
-		this.type = arg0.g1();
+	public final void decodeScriptFormat(@OriginalArg(1) Buffer buffer) {
+		this.usingScripts = true;
+		buffer.offset++;
+		this.type = buffer.g1();
 		if ((this.type & 0x80) != 0) {
 			this.type &= 0x7F;
-			arg0.gjstr();
+			buffer.gjstr();
 		}
-		this.anInt453 = arg0.g2();
-		this.baseX = arg0.g2s();
-		this.baseY = arg0.g2s();
-		this.baseWidth = arg0.g2();
-		this.baseHeight = arg0.g2();
-		this.dynamicWidthValue = arg0.g1s();
-		this.dynamicHeightValue = arg0.g1s();
-		this.yMode = arg0.g1s();
-		this.xMode = arg0.g1s();
-		this.layer = arg0.g2();
+		this.anInt453 = buffer.g2();
+		this.baseX = buffer.g2s();
+		this.baseY = buffer.g2s();
+		this.baseWidth = buffer.g2();
+		this.baseHeight = buffer.g2();
+		this.dynamicWidthValue = buffer.g1s();
+		this.dynamicHeightValue = buffer.g1s();
+		this.yMode = buffer.g1s();
+		this.xMode = buffer.g1s();
+		this.layer = buffer.g2();
 		if (this.layer == 65535) {
 			this.layer = -1;
 		} else {
 			this.layer = (this.id & 0xFFFF0000) + this.layer;
 		}
-		this.hidden = arg0.g1() == 1;
+		this.hidden = buffer.g1() == 1;
 		if (this.type == 0) {
-			this.anInt486 = arg0.g2();
-			this.anInt491 = arg0.g2();
-			this.noClickThrough = arg0.g1() == 1;
+			this.anInt486 = buffer.g2();
+			this.anInt491 = buffer.g2();
+			this.noClickThrough = buffer.g1() == 1;
 		}
 		@Pc(175) int local175;
 		if (this.type == 5) {
-			this.anInt477 = arg0.g4();
-			this.anInt521 = arg0.g2();
-			local175 = arg0.g1();
+			this.anInt477 = buffer.g4();
+			this.anInt521 = buffer.g2();
+			local175 = buffer.g1();
 			this.aBoolean18 = (local175 & 0x2) != 0;
 			this.aBoolean23 = (local175 & 0x1) != 0;
-			this.anInt476 = arg0.g1();
-			this.anInt514 = arg0.g1();
-			this.anInt513 = arg0.g4();
-			this.aBoolean21 = arg0.g1() == 1;
-			this.aBoolean26 = arg0.g1() == 1;
+			this.anInt476 = buffer.g1();
+			this.anInt514 = buffer.g1();
+			this.anInt513 = buffer.g4();
+			this.aBoolean21 = buffer.g1() == 1;
+			this.aBoolean26 = buffer.g1() == 1;
 		}
 		if (this.type == 6) {
 			this.modelType = 1;
-			this.modelId = arg0.g2();
+			this.modelId = buffer.g2();
 			if (this.modelId == 65535) {
 				this.modelId = -1;
 			}
-			this.anInt495 = arg0.g2s();
-			this.anInt481 = arg0.g2s();
-			this.modelXAngle = arg0.g2();
-			this.modelYAngle = arg0.g2();
-			this.modelYOffset = arg0.g2();
-			this.modelZoom = arg0.g2();
-			this.modelSeqId = arg0.g2();
+			this.anInt495 = buffer.g2s();
+			this.anInt481 = buffer.g2s();
+			this.modelXAngle = buffer.g2();
+			this.modelYAngle = buffer.g2();
+			this.modelYOffset = buffer.g2();
+			this.modelZoom = buffer.g2();
+			this.modelSeqId = buffer.g2();
 			if (this.modelSeqId == 65535) {
 				this.modelSeqId = -1;
 			}
-			this.aBoolean22 = arg0.g1() == 1;
-			this.aShort11 = (short) arg0.g2();
-			this.aShort10 = (short) arg0.g2();
-			this.aBoolean34 = arg0.g1() == 1;
+			this.aBoolean22 = buffer.g1() == 1;
+			this.aShort11 = (short) buffer.g2();
+			this.aShort10 = (short) buffer.g2();
+			this.aBoolean34 = buffer.g1() == 1;
 			if (this.dynamicWidthValue != 0) {
-				this.anInt451 = arg0.g2();
+				this.anInt451 = buffer.g2();
 			}
 			if (this.dynamicHeightValue != 0) {
-				this.anInt526 = arg0.g2();
+				this.anInt526 = buffer.g2();
 			}
 		}
 		if (this.type == 4) {
-			this.anInt502 = arg0.g2();
+			this.anInt502 = buffer.g2();
 			if (this.anInt502 == 65535) {
 				this.anInt502 = -1;
 			}
-			this.text = arg0.gjstr();
-			this.anInt467 = arg0.g1();
-			this.anInt460 = arg0.g1();
-			this.anInt478 = arg0.g1();
-			this.aBoolean28 = arg0.g1() == 1;
-			this.color = arg0.g4();
+			this.text = buffer.gjstr();
+			this.anInt467 = buffer.g1();
+			this.anInt460 = buffer.g1();
+			this.anInt478 = buffer.g1();
+			this.aBoolean28 = buffer.g1() == 1;
+			this.color = buffer.g4();
 		}
 		if (this.type == 3) {
-			this.color = arg0.g4();
-			this.aBoolean30 = arg0.g1() == 1;
-			this.anInt476 = arg0.g1();
+			this.color = buffer.g4();
+			this.aBoolean30 = buffer.g1() == 1;
+			this.anInt476 = buffer.g1();
 		}
 		if (this.type == 9) {
-			this.anInt490 = arg0.g1();
-			this.color = arg0.g4();
-			this.aBoolean20 = arg0.g1() == 1;
+			this.anInt490 = buffer.g1();
+			this.color = buffer.g4();
+			this.aBoolean20 = buffer.g1() == 1;
 		}
-		local175 = arg0.g3();
-		@Pc(471) int local471 = arg0.g1();
+		local175 = buffer.g3();
+		@Pc(471) int local471 = buffer.g1();
 		@Pc(497) int local497;
 		if (local471 != 0) {
 			this.anIntArray46 = new int[10];
@@ -1089,86 +1089,86 @@ public final class Component {
 			this.aByteArray7 = new byte[10];
 			while (local471 != 0) {
 				local497 = (local471 >> 4) - 1;
-				local471 = arg0.g1() | local471 << 8;
+				local471 = buffer.g1() | local471 << 8;
 				local471 &= 0xFFF;
 				if (local471 == 4095) {
 					this.anIntArray46[local497] = -1;
 				} else {
 					this.anIntArray46[local497] = local471;
 				}
-				this.aByteArray8[local497] = arg0.g1s();
-				this.aByteArray7[local497] = arg0.g1s();
-				local471 = arg0.g1();
+				this.aByteArray8[local497] = buffer.g1s();
+				this.aByteArray7[local497] = buffer.g1s();
+				local471 = buffer.g1();
 			}
 		}
-		this.opBase = arg0.gjstr();
-		local497 = arg0.g1();
+		this.opBase = buffer.gjstr();
+		local497 = buffer.g1();
 		@Pc(557) int local557 = local497 & 0xF;
 		@Pc(567) int local567;
 		if (local557 > 0) {
 			this.ops = new JagString[local557];
 			for (local567 = 0; local567 < local557; local567++) {
-				this.ops[local567] = arg0.gjstr();
+				this.ops[local567] = buffer.gjstr();
 			}
 		}
 		@Pc(584) int local584 = local497 >> 4;
 		if (local584 > 0) {
-			local567 = arg0.g1();
+			local567 = buffer.g1();
 			this.anIntArray39 = new int[local567 + 1];
 			for (@Pc(599) int local599 = 0; local599 < this.anIntArray39.length; local599++) {
 				this.anIntArray39[local599] = -1;
 			}
-			this.anIntArray39[local567] = arg0.g2();
+			this.anIntArray39[local567] = buffer.g2();
 		}
 		if (local584 > 1) {
-			local567 = arg0.g1();
-			this.anIntArray39[local567] = arg0.g2();
+			local567 = buffer.g1();
+			this.anIntArray39[local567] = buffer.g2();
 		}
-		this.anInt472 = arg0.g1();
-		this.anInt447 = arg0.g1();
-		this.aBoolean27 = arg0.g1() == 1;
+		this.anInt472 = buffer.g1();
+		this.anInt447 = buffer.g1();
+		this.aBoolean27 = buffer.g1() == 1;
 		local567 = -1;
-		this.aClass100_86 = arg0.gjstr();
+		this.aClass100_86 = buffer.gjstr();
 		if (Static199.method3594(local175) != 0) {
-			local567 = arg0.g2();
-			this.anInt499 = arg0.g2();
+			local567 = buffer.g2();
+			this.anInt499 = buffer.g2();
 			if (local567 == 65535) {
 				local567 = -1;
 			}
 			if (this.anInt499 == 65535) {
 				this.anInt499 = -1;
 			}
-			this.anInt484 = arg0.g2();
+			this.anInt484 = buffer.g2();
 			if (this.anInt484 == 65535) {
 				this.anInt484 = -1;
 			}
 		}
-		this.aClass3_Sub4_1 = new ServerActiveProperties(local175, local567);
-		this.anObjectArray3 = this.method485(arg0);
-		this.onMouseOver = this.method485(arg0);
-		this.onMouseLeave = this.method485(arg0);
-		this.anObjectArray27 = this.method485(arg0);
-		this.anObjectArray11 = this.method485(arg0);
-		this.onVarpTransmit = this.method485(arg0);
-		this.onInvTransmit = this.method485(arg0);
-		this.onStatTransmit = this.method485(arg0);
-		this.onTimer = this.method485(arg0);
-		this.anObjectArray29 = this.method485(arg0);
-		this.onMouseRepeat = this.method485(arg0);
-		this.onClickRepeat = this.method485(arg0);
-		this.anObjectArray6 = this.method485(arg0);
-		this.onRelease = this.method485(arg0);
-		this.onHold = this.method485(arg0);
-		this.anObjectArray26 = this.method485(arg0);
-		this.anObjectArray16 = this.method485(arg0);
-		this.anObjectArray10 = this.method485(arg0);
-		this.onVarcTransmit = this.method485(arg0);
-		this.onVarcstrTransmit = this.method485(arg0);
-		this.varpTriggers = this.method486(arg0);
-		this.inventoryTriggers = this.method486(arg0);
-		this.statTriggers = this.method486(arg0);
-		this.varcTriggers = this.method486(arg0);
-		this.varcstrTriggers = this.method486(arg0);
+		this.properties = new ServerActiveProperties(local175, local567);
+		this.anObjectArray3 = this.method485(buffer);
+		this.onMouseOver = this.method485(buffer);
+		this.onMouseLeave = this.method485(buffer);
+		this.anObjectArray27 = this.method485(buffer);
+		this.anObjectArray11 = this.method485(buffer);
+		this.onVarpTransmit = this.method485(buffer);
+		this.onInvTransmit = this.method485(buffer);
+		this.onStatTransmit = this.method485(buffer);
+		this.onTimer = this.method485(buffer);
+		this.anObjectArray29 = this.method485(buffer);
+		this.onMouseRepeat = this.method485(buffer);
+		this.onClickRepeat = this.method485(buffer);
+		this.anObjectArray6 = this.method485(buffer);
+		this.onRelease = this.method485(buffer);
+		this.onHold = this.method485(buffer);
+		this.anObjectArray26 = this.method485(buffer);
+		this.anObjectArray16 = this.method485(buffer);
+		this.anObjectArray10 = this.method485(buffer);
+		this.onVarcTransmit = this.method485(buffer);
+		this.onVarcstrTransmit = this.method485(buffer);
+		this.varpTriggers = this.method486(buffer);
+		this.inventoryTriggers = this.method486(buffer);
+		this.statTriggers = this.method486(buffer);
+		this.varcTriggers = this.method486(buffer);
+		this.varcstrTriggers = this.method486(buffer);
 	}
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "([Lclient!ok;I)Lclient!rk;")

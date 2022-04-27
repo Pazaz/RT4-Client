@@ -13,7 +13,7 @@ public final class Static54 {
 	public static final JagString aClass100_375 = JagString.parse("<)4col> x");
 
 	@OriginalMember(owner = "client!ed", name = "a", descriptor = "(III)V")
-	public static void method1304(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
+	public static void runScripts(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
 		if (InterfaceList.load(arg1)) {
 			Static2.method7(InterfaceList.components[arg1], arg0);
 		}
@@ -27,7 +27,7 @@ public final class Static54 {
 		} else {
 			SoftwareRaster.method2496(arg2, arg1, arg2 + arg3.anInt445, arg1 + arg3.anInt459);
 		}
-		if (Static270.anInt5795 != 2 && Static270.anInt5795 != 5 && MiniMap.sprite != null) {
+		if (Static270.minimapState != 2 && Static270.minimapState != 5 && MiniMap.sprite != null) {
 			@Pc(48) int local48 = Static59.anInt1814 + (int)Camera.yawTarget & 0x7FF;
 			@Pc(57) int local57 = PlayerList.self.xFine / 32 + 48;
 			@Pc(67) int local67 = 464 - PlayerList.self.zFine / 32;
@@ -159,25 +159,25 @@ public final class Static54 {
 					}
 				}
 			}
-			@Pc(756) Class102[] local756 = Static143.aClass102Array1;
+			@Pc(756) MapMarker[] local756 = Static143.hintMapMarkers;
 			for (local181 = 0; local181 < local756.length; local181++) {
-				@Pc(770) Class102 local770 = local756[local181];
-				if (local770 != null && local770.anInt4058 != 0 && client.loop % 20 < 10) {
-					if (local770.anInt4058 == 1 && local770.anInt4057 >= 0 && local770.anInt4057 < NpcList.npcs.length) {
-						@Pc(804) Npc local804 = NpcList.npcs[local770.anInt4057];
+				@Pc(770) MapMarker local770 = local756[local181];
+				if (local770 != null && local770.type != 0 && client.loop % 20 < 10) {
+					if (local770.type == 1 && local770.actorTargetId >= 0 && local770.actorTargetId < NpcList.npcs.length) {
+						@Pc(804) Npc local804 = NpcList.npcs[local770.actorTargetId];
 						if (local804 != null) {
 							local231 = local804.xFine / 32 - PlayerList.self.xFine / 32;
 							local200 = local804.zFine / 32 - PlayerList.self.zFine / 32;
 							Static97.method1960(local770.anInt4048, arg1, arg2, local231, local200, arg3);
 						}
 					}
-					if (local770.anInt4058 == 2) {
-						local154 = (local770.anInt4053 - Static225.originX) * 4 + 2 - PlayerList.self.xFine / 32;
+					if (local770.type == 2) {
+						local154 = (local770.targetX - Static225.originX) * 4 + 2 - PlayerList.self.xFine / 32;
 						local231 = (-Static142.originZ + local770.anInt4046) * 4 + 2 - PlayerList.self.zFine / 32;
 						Static97.method1960(local770.anInt4048, arg1, arg2, local154, local231, arg3);
 					}
-					if (local770.anInt4058 == 10 && local770.anInt4057 >= 0 && PlayerList.players.length > local770.anInt4057) {
-						@Pc(905) Player local905 = PlayerList.players[local770.anInt4057];
+					if (local770.type == 10 && local770.actorTargetId >= 0 && PlayerList.players.length > local770.actorTargetId) {
+						@Pc(905) Player local905 = PlayerList.players[local770.actorTargetId];
 						if (local905 != null) {
 							local200 = local905.zFine / 32 - PlayerList.self.zFine / 32;
 							local231 = local905.xFine / 32 - PlayerList.self.xFine / 32;
@@ -186,8 +186,8 @@ public final class Static54 {
 					}
 				}
 			}
-			if (Static115.anInt2939 != 0) {
-				local146 = Static115.anInt2939 * 4 + 2 - PlayerList.self.xFine / 32;
+			if (Static115.mapFlagX != 0) {
+				local146 = Static115.mapFlagX * 4 + 2 - PlayerList.self.xFine / 32;
 				local181 = Static84.anInt2255 * 4 + 2 - PlayerList.self.zFine / 32;
 				Static60.method1446(arg3, Sprites.mapflags, local181, local146, arg1, arg2);
 			}

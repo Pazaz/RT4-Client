@@ -16,20 +16,20 @@ public final class Static44 {
 	public static final JagString aClass100_335 = JagString.parse("Number of player models in cache:");
 
 	@OriginalMember(owner = "client!dh", name = "i", descriptor = "Lclient!na;")
-	public static final JagString aClass100_336 = JagString.parse("<img=1>");
+	public static final JagString IMG1 = JagString.parse("<img=1>");
 
 	@OriginalMember(owner = "client!dh", name = "a", descriptor = "(Z)V")
 	public static void method1146() {
 		Protocol.outboundBuffer.offset = 0;
-		Static5.opcode3 = -1;
+		Protocol.opcode3 = -1;
 		Static60.aBoolean108 = false;
 		Protocol.length = 0;
-		Static115.anInt2939 = 0;
+		Static115.mapFlagX = 0;
 		Static231.anInt5204 = 0;
-		Static230.opcode2 = -1;
-		Static270.anInt5795 = 0;
+		Protocol.opcode2 = -1;
+		Static270.minimapState = 0;
 		Player.rebootTimer = 0;
-		Static49.opcode4 = -1;
+		Protocol.opcode4 = -1;
 		Protocol.inboundBuffer.offset = 0;
 		Static201.anInt1862 = 0;
 		Protocol.opcode = -1;
@@ -63,18 +63,18 @@ public final class Static44 {
 	}
 
 	@OriginalMember(owner = "client!dh", name = "a", descriptor = "(IIII)Lclient!wk;")
-	public static Class3_Sub31 method1148(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-		@Pc(9) Class3_Sub31 local9 = new Class3_Sub31();
+	public static ComponentPointer method1148(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
+		@Pc(9) ComponentPointer local9 = new ComponentPointer();
 		local9.anInt5879 = arg2;
 		local9.anInt5878 = arg0;
-		Static119.aClass133_9.put(local9, (long) arg1);
+		InterfaceList.openInterfaces.put(local9, (long) arg1);
 		Static81.method1753(arg0);
 		@Pc(28) Component local28 = InterfaceList.getComponent(arg1);
 		if (local28 != null) {
-			Static43.redraw(local28);
+			InterfaceList.redraw(local28);
 		}
 		if (Static39.aClass13_10 != null) {
-			Static43.redraw(Static39.aClass13_10);
+			InterfaceList.redraw(Static39.aClass13_10);
 			Static39.aClass13_10 = null;
 		}
 		@Pc(45) int local45 = Static231.anInt5204;
@@ -104,7 +104,7 @@ public final class Static44 {
 		}
 		Static74.method1626(arg0);
 		if (InterfaceList.topLevelInterface != -1) {
-			Static54.method1304(1, InterfaceList.topLevelInterface);
+			Static54.runScripts(1, InterfaceList.topLevelInterface);
 		}
 		return local9;
 	}

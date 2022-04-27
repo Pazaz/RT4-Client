@@ -10,7 +10,7 @@ public final class Static272 {
 	public static int anInt5214 = 0;
 
 	@OriginalMember(owner = "client!wd", name = "a", descriptor = "(BII)V")
-	public static void method3995(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
+	public static void setVarbit(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
 		@Pc(14) VarbitType local14 = VarbitTypeList.get(arg1);
 		@Pc(17) int local17 = local14.baseVar;
 		@Pc(20) int local20 = local14.endBit;
@@ -20,6 +20,6 @@ public final class Static272 {
 			arg0 = 0;
 		}
 		local29 <<= local23;
-		Static170.method2575(arg0 << local23 & local29 | ~local29 & Static106.anIntArray257[local17], local17);
+		VarpDomain.set(arg0 << local23 & local29 | ~local29 & Static106.varp[local17], local17);
 	}
 }

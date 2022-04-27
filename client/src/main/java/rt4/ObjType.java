@@ -8,9 +8,6 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!h")
 public final class ObjType {
 
-	@OriginalMember(owner = "client!h", name = "S", descriptor = "[I")
-	public static final int[] anIntArray213 = new int[99];
-
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "[S")
 	private short[] retextureDestination;
 
@@ -179,7 +176,7 @@ public final class ObjType {
 			@Pc(13) int local13 = local6 + 1;
 			@Pc(26) int local26 = (int) (Math.pow(2.0D, (double) local13 / 7.0D) * 300.0D + (double) local13);
 			local4 += local26;
-			anIntArray213[local6] = local4 / 4;
+			PlayerSkillXpTable.xpLevelLookup[local6] = local4 / 4;
 		}
 	}
 

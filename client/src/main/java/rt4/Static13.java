@@ -1,6 +1,5 @@
 package rt4;
 
-import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
@@ -34,14 +33,6 @@ public final class Static13 {
 			local32 = JagString.concatenate(new JagString[] { local32, Static1.aClass100_2, Static123.parseInt(Static231.anInt5204 - 2), LocalizedText.MOREOPTIONS});
 		}
 		return local32;
-	}
-
-	@OriginalMember(owner = "client!bc", name = "d", descriptor = "(II)V")
-	public static void method472(@OriginalArg(0) int arg0) {
-		@Pc(14) Inv local14 = (Inv) Static20.objectContainerCache.get((long) arg0);
-		if (local14 != null) {
-			local14.unlink();
-		}
 	}
 
 }

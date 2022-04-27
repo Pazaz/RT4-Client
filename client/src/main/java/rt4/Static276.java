@@ -13,7 +13,7 @@ public final class Static276 {
 	public static final AnimFrameset[] aClass3_Sub2_Sub7Array8 = new AnimFrameset[14];
 
 	@OriginalMember(owner = "client!wh", name = "m", descriptor = "[I")
-	public static final int[] anIntArray564 = new int[5];
+	public static final int[] cameraAmplitude = new int[5];
 
     @OriginalMember(owner = "client!wh", name = "o", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1096 = JagString.parse("rect_debug=");

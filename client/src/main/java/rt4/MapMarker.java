@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!nc")
-public final class Class102 {
+public final class MapMarker {
 
 	@OriginalMember(owner = "client!nc", name = "b", descriptor = "I")
 	public int anInt4045;
@@ -22,14 +22,14 @@ public final class Class102 {
 	public int anInt4050;
 
 	@OriginalMember(owner = "client!nc", name = "l", descriptor = "I")
-	public int anInt4053;
+	public int targetX;
 
 	@OriginalMember(owner = "client!nc", name = "p", descriptor = "I")
-	public int anInt4057;
+	public int actorTargetId;
 
 	@OriginalMember(owner = "client!nc", name = "q", descriptor = "I")
-	public int anInt4058;
+	public int type;
 
 	@OriginalMember(owner = "client!nc", name = "k", descriptor = "I")
-	public int anInt4052 = -1;
+	public int playerModelId = -1;
 }

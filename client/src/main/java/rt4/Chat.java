@@ -15,6 +15,8 @@ public class Chat {
     public static final int[] phraseIds = new int[100];
     @OriginalMember(owner = "client!mc", name = "Y", descriptor = "[Lclient!na;")
 	public static final JagString[] names = new JagString[100];
+    @OriginalMember(owner = "client!t", name = "w", descriptor = "[J")
+    public static final long[] recentMessages = new long[100];
     @OriginalMember(owner = "client!dm", name = "u", descriptor = "I")
     public static int transmitAt = 0;
     @OriginalMember(owner = "client!f", name = "Z", descriptor = "I")
@@ -25,6 +27,8 @@ public class Chat {
     public static int privateFilter = 0;
     @OriginalMember(owner = "client!ej", name = "U", descriptor = "I")
     public static int publicFilter = 0;
+    @OriginalMember(owner = "client!ug", name = "e", descriptor = "I")
+    public static int messageCounter = 0;
 
     @OriginalMember(owner = "client!md", name = "a", descriptor = "(IILclient!na;Lclient!na;BLclient!na;)V")
     public static void add(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) JagString arg2, @OriginalArg(3) JagString arg3, @OriginalArg(5) JagString arg4) {

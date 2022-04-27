@@ -9,9 +9,6 @@ public final class Static210 {
 	@OriginalMember(owner = "client!rb", name = "f", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_87;
 
-	@OriginalMember(owner = "client!rb", name = "b", descriptor = "Lclient!sc;")
-	public static final HashTable aClass133_21 = new HashTable(512);
-
 	@OriginalMember(owner = "client!rb", name = "a", descriptor = "(I)V")
 	public static void method3711() {
 		for (@Pc(7) int local7 = 0; local7 < 104; local7++) {

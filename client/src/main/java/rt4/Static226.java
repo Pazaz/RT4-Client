@@ -21,22 +21,22 @@ public final class Static226 {
     public static int anInt3953 = 0;
 
     @OriginalMember(owner = "client!sf", name = "a", descriptor = "(ILclient!cd;)V")
-	public static void method3898(@OriginalArg(1) Class3_Sub7 arg0) {
+	public static void method3898(@OriginalArg(1) SceneryStack arg0) {
 		@Pc(5) long local5 = 0L;
 		@Pc(7) int local7 = -1;
 		@Pc(14) int local14 = 0;
 		if (arg0.anInt927 == 0) {
-			local5 = Static265.method4521(arg0.anInt918, arg0.anInt928, arg0.anInt916);
+			local5 = Static265.method4521(arg0.level, arg0.x, arg0.z);
 		}
 		@Pc(31) int local31 = 0;
 		if (arg0.anInt927 == 1) {
-			local5 = Static139.method2703(arg0.anInt918, arg0.anInt928, arg0.anInt916);
+			local5 = Static139.method2703(arg0.level, arg0.x, arg0.z);
 		}
 		if (arg0.anInt927 == 2) {
-			local5 = Static35.method899(arg0.anInt918, arg0.anInt928, arg0.anInt916);
+			local5 = Static35.method899(arg0.level, arg0.x, arg0.z);
 		}
 		if (arg0.anInt927 == 3) {
-			local5 = Static20.method602(arg0.anInt918, arg0.anInt928, arg0.anInt916);
+			local5 = Static20.method602(arg0.level, arg0.x, arg0.z);
 		}
 		if (local5 != 0L) {
 			local7 = Integer.MAX_VALUE & (int) (local5 >>> 32);

@@ -16,7 +16,7 @@ public final class Static270 {
 	public static int anInt5794 = -1;
 
 	@OriginalMember(owner = "client!wb", name = "d", descriptor = "I")
-	public static int anInt5795 = 0;
+	public static int minimapState = 0;
 
 	@OriginalMember(owner = "client!wb", name = "e", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1090 = JagString.parse("l");

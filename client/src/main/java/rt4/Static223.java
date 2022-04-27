@@ -19,7 +19,7 @@ public final class Static223 {
 	public static final JagString aClass100_951 = JagString.parse("<col=ff7000>");
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(IIILclient!km;)V")
-	public static void method3855(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) Npc arg2) {
+	public static void animateNpc(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) Npc arg2) {
 		if (arg2.seqId == arg1 && arg1 != -1) {
 			@Pc(10) SeqType local10 = SeqTypeList.get(arg1);
 			@Pc(13) int local13 = local10.anInt5347;
@@ -34,7 +34,7 @@ public final class Static223 {
 			if (local13 == 2) {
 				arg2.anInt3371 = 0;
 			}
-		} else if (arg1 == -1 || arg2.seqId == -1 || SeqTypeList.get(arg1).anInt5355 >= SeqTypeList.get(arg2.seqId).anInt5355) {
+		} else if (arg1 == -1 || arg2.seqId == -1 || SeqTypeList.get(arg1).forcedPriority >= SeqTypeList.get(arg2.seqId).forcedPriority) {
 			arg2.anInt3360 = 0;
 			arg2.seqId = arg1;
 			arg2.anInt3373 = 1;

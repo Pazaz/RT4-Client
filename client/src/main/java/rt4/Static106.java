@@ -8,6 +8,6 @@ public final class Static106 {
 	public static Sprite compass;
 
     @OriginalMember(owner = "client!ic", name = "e", descriptor = "[I")
-	public static final int[] anIntArray257 = new int[2500];
+	public static final int[] varp = new int[2500];
 
 }

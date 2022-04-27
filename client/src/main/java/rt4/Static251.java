@@ -18,9 +18,6 @@ public final class Static251 {
 	@OriginalMember(owner = "client!ug", name = "b", descriptor = "[F")
 	public static final float[] aFloatArray28 = new float[4];
 
-	@OriginalMember(owner = "client!ug", name = "e", descriptor = "I")
-	public static int anInt5447 = 0;
-
 	@OriginalMember(owner = "client!ug", name = "r", descriptor = "I")
 	public static int anInt5459 = 0;
 

@@ -29,10 +29,7 @@ public final class Static230 {
 	@OriginalMember(owner = "client!sj", name = "p", descriptor = "I")
 	public static int anInt5150 = 1;
 
-    @OriginalMember(owner = "client!sj", name = "t", descriptor = "I")
-	public static int opcode2 = 0;
-
-	@OriginalMember(owner = "client!sj", name = "u", descriptor = "Z")
+    @OriginalMember(owner = "client!sj", name = "u", descriptor = "Z")
 	public static boolean dynamicMapRegion = false;
 
 	@OriginalMember(owner = "client!sj", name = "w", descriptor = "Lclient!na;")

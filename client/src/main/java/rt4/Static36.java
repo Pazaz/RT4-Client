@@ -31,7 +31,7 @@ public final class Static36 {
 	public static void method946(@OriginalArg(0) Component[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7) {
 		for (@Pc(1) int local1 = 0; local1 < arg0.length; local1++) {
 			@Pc(9) Component component = arg0[local1];
-			if (component != null && component.layer == arg1 && (!component.aBoolean32 || component.type == 0 || component.aBoolean25 || InterfaceList.getServerActiveProperties(component).anInt546 != 0 || component == Static4.aClass13_1 || component.anInt453 == 1338) && (!component.aBoolean32 || !method947(component))) {
+			if (component != null && component.layer == arg1 && (!component.usingScripts || component.type == 0 || component.aBoolean25 || InterfaceList.getServerActiveProperties(component).accessMask != 0 || component == Static4.aClass13_1 || component.anInt453 == 1338) && (!component.usingScripts || !method947(component))) {
 				@Pc(50) int local50 = component.x + arg6;
 				@Pc(55) int local55 = component.y + arg7;
 				@Pc(61) int local61;
@@ -60,13 +60,13 @@ public final class Static36 {
 					Static124.anInt3075 = local50;
 					Static20.anInt660 = local55;
 				}
-				if (!component.aBoolean32 || local61 < local65 && local63 < local67) {
+				if (!component.usingScripts || local61 < local65 && local63 < local67) {
 					if (component.type == 0) {
-						if (!component.aBoolean32 && method947(component) && Static180.aClass13_22 != component) {
+						if (!component.usingScripts && method947(component) && Static180.aClass13_22 != component) {
 							continue;
 						}
 						if (component.noClickThrough && Mouse.anInt4873 >= local61 && Mouse.anInt5032 >= local63 && Mouse.anInt4873 < local65 && Mouse.anInt5032 < local67) {
-							for (@Pc(164) HookRequest local164 = (HookRequest) InterfaceList.lowPriorityRequests.method2289(); local164 != null; local164 = (HookRequest) InterfaceList.lowPriorityRequests.method2288()) {
+							for (@Pc(164) HookRequest local164 = (HookRequest) InterfaceList.lowPriorityRequests.start(); local164 != null; local164 = (HookRequest) InterfaceList.lowPriorityRequests.next()) {
 								if (local164.aBoolean158) {
 									local164.unlink();
 									local164.source.aBoolean19 = false;
@@ -79,7 +79,7 @@ public final class Static36 {
 							Static137.anInt3337 = 0;
 						}
 					}
-					if (component.aBoolean32) {
+					if (component.usingScripts) {
 						@Pc(207) boolean local207;
 						if (Mouse.anInt4873 >= local61 && Mouse.anInt5032 >= local63 && Mouse.anInt4873 < local65 && Mouse.anInt5032 < local67) {
 							local207 = true;
@@ -149,7 +149,7 @@ public final class Static36 {
 							if (component.anInt453 != 0) {
 								if (component.anInt453 == 1337) {
 									Static280.aClass13_26 = component;
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									continue;
 								}
 								if (component.anInt453 == 1338) {
@@ -201,7 +201,7 @@ public final class Static36 {
 								}
 								if (component.anInt453 == 1402) {
 									if (!GlRenderer.enabled) {
-										Static43.redraw(component);
+										InterfaceList.redraw(component);
 									}
 									continue;
 								}
@@ -354,15 +354,15 @@ public final class Static36 {
 								}
 								component.updatedVarpsReaderIndex = VarpDomain.updatedVarpsWriterIndex;
 							}
-							if (component.onInvTransmit != null && Static111.updatedInventoriesWriterIndex > component.updatedInventoriesReaderIndex) {
-								if (component.inventoryTriggers == null || Static111.updatedInventoriesWriterIndex - component.updatedInventoriesReaderIndex > 32) {
+							if (component.onInvTransmit != null && Inv.updatedInventoriesWriterIndex > component.updatedInventoriesReaderIndex) {
+								if (component.inventoryTriggers == null || Inv.updatedInventoriesWriterIndex - component.updatedInventoriesReaderIndex > 32) {
 									request = new HookRequest();
 									request.source = component;
 									request.arguments = component.onInvTransmit;
 									InterfaceList.lowPriorityRequests.addTail(request);
 								} else {
 									outer:
-									for (i = component.updatedInventoriesReaderIndex; i < Static111.updatedInventoriesWriterIndex; i++) {
+									for (i = component.updatedInventoriesReaderIndex; i < Inv.updatedInventoriesWriterIndex; i++) {
 										skill = Inv.updatedInventories[i & 0x1F];
 										for (k = 0; k < component.inventoryTriggers.length; k++) {
 											if (component.inventoryTriggers[k] == skill) {
@@ -375,7 +375,7 @@ public final class Static36 {
 										}
 									}
 								}
-								component.updatedInventoriesReaderIndex = Static111.updatedInventoriesWriterIndex;
+								component.updatedInventoriesReaderIndex = Inv.updatedInventoriesWriterIndex;
 							}
 							if (component.onStatTransmit != null && PlayerSkillXpTable.updatedStatsWriterIndex > component.updatedStatsReaderIndex) {
 								if (component.statTriggers == null || PlayerSkillXpTable.updatedStatsWriterIndex - component.updatedStatsReaderIndex > 32) {
@@ -449,7 +449,7 @@ public final class Static36 {
 							}
 						}
 					}
-					if (!component.aBoolean32 && Static105.aClass13_14 == null && Static118.aClass13_15 == null && !Static60.aBoolean108) {
+					if (!component.usingScripts && Static105.aClass13_14 == null && Static118.aClass13_15 == null && !Static60.aBoolean108) {
 						if ((component.anInt470 >= 0 || component.anInt480 != 0) && Mouse.anInt4873 >= local61 && Mouse.anInt5032 >= local63 && Mouse.anInt4873 < local65 && Mouse.anInt5032 < local67) {
 							if (component.anInt470 >= 0) {
 								Static180.aClass13_22 = arg0[component.anInt470];
@@ -469,7 +469,7 @@ public final class Static36 {
 						if (component.createdComponents != null) {
 							method946(component.createdComponents, component.id, local61, local63, local65, local67, local50 - component.anInt489, local55 - component.scrollY);
 						}
-						@Pc(1595) Class3_Sub31 local1595 = (Class3_Sub31) Static119.aClass133_9.get((long) component.id);
+						@Pc(1595) ComponentPointer local1595 = (ComponentPointer) InterfaceList.openInterfaces.get((long) component.id);
 						if (local1595 != null) {
 							Static57.method1320(local50, local63, local55, local65, local1595.anInt5878, local61, local67);
 						}
@@ -482,7 +482,7 @@ public final class Static36 {
 	@OriginalMember(owner = "client!client", name = "c", descriptor = "(Lclient!be;)Z")
 	public static boolean method947(@OriginalArg(0) Component arg0) {
 		if (Static121.aBoolean154) {
-			if (InterfaceList.getServerActiveProperties(arg0).anInt546 != 0) {
+			if (InterfaceList.getServerActiveProperties(arg0).accessMask != 0) {
 				return false;
 			}
 			if (arg0.type == 0) {

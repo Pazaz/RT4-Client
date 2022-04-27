@@ -19,7 +19,7 @@ public class ClientProt {
             local19.source = local8;
             local19.opBase = arg0;
             local19.op = arg2;
-            Static82.method1767(local19);
+            ScriptRunner.run(local19);
         }
         @Pc(37) boolean local37 = true;
         if (local8.anInt453 > 0) {
@@ -105,7 +105,7 @@ public class ClientProt {
         Protocol.outboundBuffer.p2(Static225.originX + local23);
         Protocol.outboundBuffer.p2add(Static142.originZ + local27);
         Static84.anInt2255 = Static84.anIntArray209[0];
-        Static115.anInt2939 = Static259.anIntArray514[0];
+        Static115.mapFlagX = Static259.anIntArray514[0];
         for (@Pc(126) int local126 = 1; local126 < local13; local126++) {
             arg0--;
             Protocol.outboundBuffer.p1a(Static259.anIntArray514[arg0] - local23);
@@ -116,13 +116,13 @@ public class ClientProt {
     @OriginalMember(owner = "client!mc", name = "f", descriptor = "(B)V")
     public static void method2909() {
         Protocol.outboundBuffer.p1isaac(184);
-        for (@Pc(18) Class3_Sub31 local18 = (Class3_Sub31) Static119.aClass133_9.head(); local18 != null; local18 = (Class3_Sub31) Static119.aClass133_9.next()) {
+        for (@Pc(18) ComponentPointer local18 = (ComponentPointer) InterfaceList.openInterfaces.head(); local18 != null; local18 = (ComponentPointer) InterfaceList.openInterfaces.next()) {
             if (local18.anInt5879 == 0) {
-                Static132.method2605(true, local18);
+                Static132.closeInterface(true, local18);
             }
         }
         if (Static39.aClass13_10 != null) {
-            Static43.redraw(Static39.aClass13_10);
+            InterfaceList.redraw(Static39.aClass13_10);
             Static39.aClass13_10 = null;
         }
     }
@@ -395,7 +395,7 @@ public class ClientProt {
         if (local23 == 41 && Static39.aClass13_10 == null) {
             method10(local15, local19);
             Static39.aClass13_10 = Static201.method1418(local19, local15);
-            Static43.redraw(Static39.aClass13_10);
+            InterfaceList.redraw(Static39.aClass13_10);
         }
         if (local23 == 49) {
             Static233.method4003(local31, local19, local15);
@@ -487,7 +487,7 @@ public class ClientProt {
                 if (Static102.aClass100_545 == null) {
                     Static102.aClass100_545 = Static250.aClass100_1042;
                 }
-                if (local693.aBoolean32) {
+                if (local693.usingScripts) {
                     Static78.aClass100_466 = JagString.concatenate(new JagString[] { local693.opBase, Static204.aClass100_896 });
                 } else {
                     Static78.aClass100_466 = JagString.concatenate(new JagString[] { MiniMenu.COLOR_GREEN, local693.aClass100_85, Static204.aClass100_896 });
@@ -576,9 +576,9 @@ public class ClientProt {
             local693 = InterfaceList.getComponent(local19);
             if (local693.anIntArrayArray4 != null && local693.anIntArrayArray4[0][0] == 5) {
                 local1955 = local693.anIntArrayArray4[0][1];
-                if (Static7.varps[local1955] != local693.anIntArray48[0]) {
-                    Static7.varps[local1955] = local693.anIntArray48[0];
-                    Static85.method1775(local1955);
+                if (VarpDomain.varps[local1955] != local693.anIntArray48[0]) {
+                    VarpDomain.varps[local1955] = local693.anIntArray48[0];
+                    Static85.refreshMagicVarp(local1955);
                 }
             }
         }
@@ -603,8 +603,8 @@ public class ClientProt {
             local693 = InterfaceList.getComponent(local19);
             if (local693.anIntArrayArray4 != null && local693.anIntArrayArray4[0][0] == 5) {
                 local1955 = local693.anIntArrayArray4[0][1];
-                Static7.varps[local1955] = 1 - Static7.varps[local1955];
-                Static85.method1775(local1955);
+                VarpDomain.varps[local1955] = 1 - VarpDomain.varps[local1955];
+                Static85.refreshMagicVarp(local1955);
             }
         }
         if (local23 == 33) {
@@ -733,10 +733,10 @@ public class ClientProt {
             Static185.anInt4370 = local15;
             Static260.anInt5014 = 1;
             Static274.anInt4997 = local36;
-            Static43.redraw(local693);
+            InterfaceList.redraw(local693);
             Static34.aClass100_203 = JagString.concatenate(new JagString[] { Static8.aClass100_32, ObjTypeList.get(local36).name, Static204.aClass100_896 });
             if (Static34.aClass100_203 == null) {
-                Static34.aClass100_203 = Static92.aClass100_510;
+                Static34.aClass100_203 = Static92.NULL;
             }
             return;
         }
@@ -856,13 +856,13 @@ public class ClientProt {
         }
         if (Static260.anInt5014 != 0) {
             Static260.anInt5014 = 0;
-            Static43.redraw(InterfaceList.getComponent(Static224.anInt5062));
+            InterfaceList.redraw(InterfaceList.getComponent(Static224.anInt5062));
         }
         if (Static241.aBoolean302) {
             Static53.method1294();
         }
         if (Static257.aClass13_7 != null && Static72.anInt2043 == 0) {
-            Static43.redraw(Static257.aClass13_7);
+            InterfaceList.redraw(Static257.aClass13_7);
         }
     }
 
@@ -1168,7 +1168,7 @@ public class ClientProt {
 
     @OriginalMember(owner = "client!ac", name = "b", descriptor = "(I)V")
     public static void method28() {
-        Static43.redraw(Static105.aClass13_14);
+        InterfaceList.redraw(Static105.aClass13_14);
         Static213.anInt4851++;
         if (Static44.aBoolean83 && Static146.aBoolean174) {
             @Pc(30) int local30 = Mouse.anInt4873;
@@ -1202,7 +1202,7 @@ public class ClientProt {
                 local176.arguments = Static105.aClass13_14.anObjectArray26;
                 local176.mouseX = local122;
                 local176.mouseY = local130;
-                Static82.method1767(local176);
+                ScriptRunner.run(local176);
             }
             if (Mouse.pressedButton == 0) {
                 if (Static138.aBoolean172) {
@@ -1213,7 +1213,7 @@ public class ClientProt {
                         local176.mouseX = local122;
                         local176.arguments = Static105.aClass13_14.anObjectArray16;
                         local176.source = Static105.aClass13_14;
-                        Static82.method1767(local176);
+                        ScriptRunner.run(local176);
                     }
                     if (Static56.aClass13_12 != null && Static36.method938(Static105.aClass13_14) != null) {
                         Protocol.outboundBuffer.p1isaac(79);

@@ -10,6 +10,8 @@ public final class Inv extends Node {
 
     @OriginalMember(owner = "client!cb", name = "I", descriptor = "[I")
     public static final int[] updatedInventories = new int[32];
+    @OriginalMember(owner = "client!ii", name = "c", descriptor = "I")
+    public static int updatedInventoriesWriterIndex = 0;
     @OriginalMember(owner = "client!qe", name = "p", descriptor = "[I")
 	public int[] objectIds = new int[] { -1 };
 
@@ -98,6 +100,14 @@ public final class Inv extends Node {
             return local10.objectIds[arg1];
         } else {
             return -1;
+        }
+    }
+
+    @OriginalMember(owner = "client!bc", name = "d", descriptor = "(II)V")
+    public static void delete(@OriginalArg(0) int arg0) {
+        @Pc(14) Inv local14 = (Inv) Static20.objectContainerCache.get((long) arg0);
+        if (local14 != null) {
+            local14.unlink();
         }
     }
 }

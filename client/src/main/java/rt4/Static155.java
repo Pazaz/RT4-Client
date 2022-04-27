@@ -52,6 +52,6 @@ public final class Static155 {
 		@Pc(19) int local19 = local13.endBit;
 		@Pc(22) int local22 = local13.startBit;
 		@Pc(29) int local29 = Class3_Sub9.anIntArray135[local19 - local22];
-		return Static7.varps[local16] >> local22 & local29;
+		return VarpDomain.varps[local16] >> local22 & local29;
 	}
 }

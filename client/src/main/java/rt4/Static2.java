@@ -34,9 +34,9 @@ public final class Static2 {
 					if (local23.createdComponents != null) {
 						method7(local23.createdComponents, arg1);
 					}
-					@Pc(49) Class3_Sub31 local49 = (Class3_Sub31) Static119.aClass133_9.get((long) local23.id);
+					@Pc(49) ComponentPointer local49 = (ComponentPointer) InterfaceList.openInterfaces.get((long) local23.id);
 					if (local49 != null) {
-						Static54.method1304(arg1, local49.anInt5878);
+						Static54.runScripts(arg1, local49.anInt5878);
 					}
 				}
 				@Pc(72) HookRequest local72;
@@ -44,7 +44,7 @@ public final class Static2 {
 					local72 = new HookRequest();
 					local72.arguments = local23.anObjectArray12;
 					local72.source = local23;
-					Static82.method1767(local72);
+					ScriptRunner.run(local72);
 				}
 				if (arg1 == 1 && local23.anObjectArray8 != null) {
 					if (local23.createdComponentId >= 0) {
@@ -56,7 +56,7 @@ public final class Static2 {
 					local72 = new HookRequest();
 					local72.arguments = local23.anObjectArray8;
 					local72.source = local23;
-					Static82.method1767(local72);
+					ScriptRunner.run(local72);
 				}
 			}
 		}

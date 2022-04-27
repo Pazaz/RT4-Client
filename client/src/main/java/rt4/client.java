@@ -498,18 +498,18 @@ public final class client extends GameShell {
         MouseRecorder.instance.samples = 0;
         focus = true;
         Static114.method4625();
-        Static49.opcode4 = -1;
-        Static5.opcode3 = -1;
+        Protocol.opcode4 = -1;
+        Protocol.opcode3 = -1;
         Protocol.opcode = -1;
         Static267.anInt5775 = 0;
         Player.rebootTimer = 0;
         Protocol.outboundBuffer.offset = 0;
-        Static230.opcode2 = -1;
+        Protocol.opcode2 = -1;
         Static201.anInt1862 = 0;
         Protocol.inboundBuffer.offset = 0;
         @Pc(3506) int local3506;
-        for (local3506 = 0; local3506 < Static143.aClass102Array1.length; local3506++) {
-            Static143.aClass102Array1[local3506] = null;
+        for (local3506 = 0; local3506 < Static143.hintMapMarkers.length; local3506++) {
+            Static143.hintMapMarkers[local3506] = null;
         }
         Static231.anInt5204 = 0;
         Static60.aBoolean108 = false;
@@ -523,12 +523,12 @@ public final class client extends GameShell {
         Camera.yawTarget = (int) (Math.random() * 20.0D) - 10 & 0x7FF;
         Static107.anInt2875 = -1;
         PlayerList.size = 0;
-        Static270.anInt5795 = 0;
+        Static270.minimapState = 0;
         Static206.anInt4774 = (int) (Math.random() * 110.0D) - 55;
         Static241.aBoolean302 = false;
         Static273.anInt4130 = (int) (Math.random() * 30.0D) - 20;
         SoundPlayer.anInt4451 = 0;
-        Static115.anInt2939 = 0;
+        Static115.mapFlagX = 0;
         Static59.anInt1814 = (int) (Math.random() * 120.0D) - 60;
         Chat.size = 0;
         Static230.anInt5161 = (int) (Math.random() * 80.0D) - 40;
@@ -552,10 +552,10 @@ public final class client extends GameShell {
                 }
             }
         }
-        Static26.aClass69_27 = new LinkedList();
+        Static26.sceneryList = new LinkedList();
         FriendsList.state = 0;
         FriendsList.size = 0;
-        Static8.method121();
+        Static8.resetTransientVars();
         DelayedStateChange.clear();
         Static133.anInt5230 = 0;
         Static233.anInt5217 = 0;
@@ -573,20 +573,20 @@ public final class client extends GameShell {
         if (InterfaceList.topLevelInterface != -1) {
             InterfaceList.method2275(InterfaceList.topLevelInterface);
         }
-        for (@Pc(3755) Class3_Sub31 local3755 = (Class3_Sub31) Static119.aClass133_9.head(); local3755 != null; local3755 = (Class3_Sub31) Static119.aClass133_9.next()) {
-            Static132.method2605(true, local3755);
+        for (@Pc(3755) ComponentPointer local3755 = (ComponentPointer) InterfaceList.openInterfaces.head(); local3755 != null; local3755 = (ComponentPointer) InterfaceList.openInterfaces.next()) {
+            Static132.closeInterface(true, local3755);
         }
         InterfaceList.topLevelInterface = -1;
-        Static119.aClass133_9 = new HashTable(8);
+        InterfaceList.openInterfaces = new HashTable(8);
         InterfaceList.method1287();
         Static39.aClass13_10 = null;
         Static60.aBoolean108 = false;
         Static231.anInt5204 = 0;
         PlayerAppearance.DEFAULT.method1950(new int[] { 0, 0, 0, 0, 0 }, -1, false, null, -1);
         for (local3506 = 0; local3506 < 8; local3506++) {
-            Static160.aClass100Array121[local3506] = null;
-            Static1.aBooleanArray1[local3506] = false;
-            Static191.anIntArray388[local3506] = -1;
+            Player.options[local3506] = null;
+            Player.secondaryOptions[local3506] = false;
+            Player.cursors[local3506] = -1;
         }
         Static102.method2073();
         Static19.aBoolean43 = true;
@@ -609,7 +609,7 @@ public final class client extends GameShell {
         }
         Static197.aBoolean228 = true;
         Protocol.verifyId = 0;
-        Static195.aClass100_859 = LocalizedText.WALKHERE;
+        Static195.walkText = LocalizedText.WALKHERE;
         Static127.neverRemoveRoofs = false;
         aShortArray88 = aShortArray19 = aShortArray74 = aShortArray87 = new short[256];
         Static114.method4637();
@@ -1055,7 +1055,7 @@ public final class client extends GameShell {
 										}
 										priorityComponent = InterfaceList.getComponent(prioritySource.layer);
 									} while (priorityComponent == null || priorityComponent.createdComponents == null || priorityComponent.createdComponents.length <= prioritySource.createdComponentId || prioritySource != priorityComponent.createdComponents[prioritySource.createdComponentId]);
-									Static82.method1767(priorityRequest);
+									ScriptRunner.run(priorityRequest);
 								}
 							}
 							prioritySource = priorityRequest.source;
@@ -1064,7 +1064,7 @@ public final class client extends GameShell {
 							}
 							priorityComponent = InterfaceList.getComponent(prioritySource.layer);
 						} while (priorityComponent == null || priorityComponent.createdComponents == null || prioritySource.createdComponentId >= priorityComponent.createdComponents.length || prioritySource != priorityComponent.createdComponents[prioritySource.createdComponentId]);
-						Static82.method1767(priorityRequest);
+						ScriptRunner.run(priorityRequest);
 					}
 				}
 				prioritySource = priorityRequest.source;
@@ -1073,7 +1073,7 @@ public final class client extends GameShell {
 				}
 				priorityComponent = InterfaceList.getComponent(prioritySource.layer);
 			} while (priorityComponent == null || priorityComponent.createdComponents == null || priorityComponent.createdComponents.length <= prioritySource.createdComponentId || prioritySource != priorityComponent.createdComponents[prioritySource.createdComponentId]);
-			Static82.method1767(priorityRequest);
+			ScriptRunner.run(priorityRequest);
 		}
 	}
 

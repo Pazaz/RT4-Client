@@ -205,7 +205,7 @@ public class LoginManager {
                 }
                 Protocol.socket = new BufferedSocket((Socket) Protocol.socketRequest.result, GameShell.signLink);
                 Protocol.socketRequest = null;
-                @Pc(106) long local106 = Static101.aLong98 = Player.usernameInput.encode37();
+                @Pc(106) long local106 = Player.name37 = Player.usernameInput.encode37();
                 Protocol.outboundBuffer.offset = 0;
                 Protocol.outboundBuffer.p1(14);
                 @Pc(120) int local120 = (int) (local106 >> 16 & 0x1FL);
