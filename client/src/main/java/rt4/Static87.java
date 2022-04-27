@@ -304,7 +304,7 @@ public final class Static87 {
 								}
 								local270 = local30.anInt445 + local123;
 								local276 = local114 + 15;
-								Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Cheat.DEBUG_FPS2, Static123.parseInt(GameShell.framesPerSecond) }), local270, local276, 16776960, 0);
+								Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Cheat.DEBUG_FPS2, Static123.parseInt((int)GameShell.framesPerSecond) }), local270, local276, 16776960, 0);
 								local276 += 15;
 								@Pc(795) Runtime runtime = Runtime.getRuntime();
 								memory = (int) ((runtime.totalMemory() - runtime.freeMemory()) / 1024L / 1024L);
