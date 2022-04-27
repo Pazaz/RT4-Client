@@ -154,7 +154,11 @@ public class GlSprite extends Sprite {
 		arg8.method1424(1);
 		@Pc(11) GL2 local11 = GlRenderer.gl;
 		GlRenderer.setTextureId(this.textureId);
-		this.method1424(1);
+		if (GlobalConfig.BILINEAR_MINIMAP) {
+			this.method1424(2);
+		} else {
+			this.method1424(1);
+		}
 		local11.glActiveTexture(GL2.GL_TEXTURE1);
 		local11.glEnable(GL2.GL_TEXTURE_2D);
 		local11.glBindTexture(GL2.GL_TEXTURE_2D, arg8.textureId);
