@@ -46,6 +46,7 @@ public class GlobalConfig {
     public static int VIEW_DISTANCE = TILE_DISTANCE * 128;
     public static float VIEW_FADE_DISTANCE = ((float) TILE_DISTANCE / 28.0f) * 256.0f;
 
+    public static boolean USE_SHIFT_CLICK = true;
     public static boolean USE_TWEENING = true;
     public static boolean BILINEAR_MINIMAP = true;
 
