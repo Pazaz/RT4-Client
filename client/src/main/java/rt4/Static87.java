@@ -316,7 +316,7 @@ public final class Static87 {
 								local276 += 15;
 								if (GlRenderer.enabled) {
 									color = 16776960;
-									cardMemory = (GlCleaner.onCardTexture + GlCleaner.anInt1945 + GlCleaner.onCard2d) / 1024 / 1024;
+									cardMemory = (GlCleaner.onCardTexture + GlCleaner.onCardGeometry + GlCleaner.onCard2d) / 1024 / 1024;
 									if (cardMemory > 64) {
 										color = 16711680;
 									}
@@ -393,7 +393,7 @@ public final class Static87 {
 								Rasteriser.prepare();
 							}
 						}
-						if (Static223.aBooleanArray116[local57] || Static199.rectDebug > 1) {
+						if (Static223.aBooleanArray116[local57] || Cheat.rectDebug > 1) {
 							if (local30.type == 0 && !local30.usingScripts && local30.anInt491 > local30.anInt459) {
 								Static74.method1624(local30.scrollY, local30.anInt491, local30.anInt445 + local123, local114, local30.anInt459);
 							}

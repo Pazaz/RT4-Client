@@ -12,9 +12,6 @@ public final class Static201 {
 	@OriginalMember(owner = "client!qf", name = "M", descriptor = "I")
 	public static int anInt1862 = 0;
 
-	@OriginalMember(owner = "client!qf", name = "N", descriptor = "Lclient!na;")
-	public static final JagString aClass100_406 = JagString.parse("::cardmem");
-
 	@OriginalMember(owner = "client!qf", name = "Q", descriptor = "Lclient!na;")
 	public static final JagString aClass100_407 = JagString.parse(" )2> <col=ffff00>");
 

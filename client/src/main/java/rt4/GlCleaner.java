@@ -23,7 +23,7 @@ public final class GlCleaner {
 	public static int onCard2d = 0;
 
 	@OriginalMember(owner = "client!fa", name = "f", descriptor = "I")
-	public static int anInt1945 = 0;
+	public static int onCardGeometry = 0;
 
 	@OriginalMember(owner = "client!fa", name = "g", descriptor = "Lclient!ih;")
 	private static final LinkedList aClass69_49 = new LinkedList();
@@ -62,7 +62,7 @@ public final class GlCleaner {
 		aClass69_49.clear();
 		aClass69_50.clear();
 		aClass69_51.clear();
-		anInt1945 = 0;
+		onCardGeometry = 0;
 		onCard2d = 0;
 		onCardTexture = 0;
 	}
@@ -99,7 +99,7 @@ public final class GlCleaner {
 								while (true) {
 									local8 = (IntNode) aClass69_51.removeHead();
 									if (local8 == null) {
-										if (anInt1945 + onCard2d + onCardTexture > 100663296 && MonotonicClock.currentTimeMillis() > aLong71 + 60000L) {
+										if (onCardGeometry + onCard2d + onCardTexture > 100663296 && MonotonicClock.currentTimeMillis() > aLong71 + 60000L) {
 											System.gc();
 											aLong71 = MonotonicClock.currentTimeMillis();
 										}
@@ -126,7 +126,7 @@ public final class GlCleaner {
 				}
 			}
 			anIntArray151[local3++] = (int) local8.key;
-			anInt1945 -= local8.value;
+			onCardGeometry -= local8.value;
 			if (local3 == 1000) {
 				local1.glDeleteBuffers(local3, anIntArray151, 0);
 				local3 = 0;

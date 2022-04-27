@@ -176,7 +176,7 @@ public final class Static89 {
 		if (Static187.anInt4422 == 1) {
 			Static187.anInt4422 = 2;
 		}
-		if (Static199.rectDebug == 3) {
+		if (Cheat.rectDebug == 3) {
 			for (@Pc(189) int local189 = 0; local189 < InterfaceList.anInt766; local189++) {
 				if (Static223.aBooleanArray116[local189]) {
 					if (GlRenderer.enabled) {

@@ -10,7 +10,7 @@ public final class Static279 {
 	public static int[] anIntArray568;
 
     @OriginalMember(owner = "client!wk", name = "u", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1106 = JagString.parse("::clientjs5drop");
+	public static final JagString JS5DROP = JagString.parse("::clientjs5drop");
 
 	@OriginalMember(owner = "client!wk", name = "x", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1107 = JagString.parse(")4l=");

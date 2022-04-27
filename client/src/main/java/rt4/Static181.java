@@ -9,11 +9,8 @@ public final class Static181 {
 	@OriginalMember(owner = "client!oi", name = "h", descriptor = "Lclient!qf;")
 	public static Sprite aClass3_Sub2_Sub1_9;
 
-    @OriginalMember(owner = "client!oi", name = "b", descriptor = "Lclient!na;")
-	public static final JagString aClass100_810 = JagString.parse("::qa_op_test");
-
 	@OriginalMember(owner = "client!oi", name = "j", descriptor = "Lclient!na;")
-	public static final JagString aClass100_811 = JagString.parse("::wm1");
+	public static final JagString WM1 = JagString.parse("::wm1");
 
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(IIIIIIIIII)V")
 	public static void method3340(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) int arg8) {

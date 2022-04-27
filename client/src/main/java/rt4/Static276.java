@@ -15,9 +15,6 @@ public final class Static276 {
 	@OriginalMember(owner = "client!wh", name = "m", descriptor = "[I")
 	public static final int[] cameraAmplitude = new int[5];
 
-    @OriginalMember(owner = "client!wh", name = "o", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1096 = JagString.parse("rect_debug=");
-
     @OriginalMember(owner = "client!wh", name = "u", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1097 = JagString.parse("(U2");
 
