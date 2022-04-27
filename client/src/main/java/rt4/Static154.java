@@ -10,10 +10,7 @@ public final class Static154 {
 	public static int anInt3709;
 
 	@OriginalMember(owner = "client!md", name = "Q", descriptor = "Lclient!na;")
-	public static final JagString aClass100_735 = JagString.parse("::mm");
-
-	@OriginalMember(owner = "client!md", name = "T", descriptor = "Lclient!na;")
-	public static final JagString aClass100_736 = JagString.parse("Shift)2click disabled)3");
+	public static final JagString MM = JagString.parse("::mm");
 
     @OriginalMember(owner = "client!md", name = "a", descriptor = "(Lclient!be;I)Z")
 	public static boolean method2926(@OriginalArg(0) Component arg0) {

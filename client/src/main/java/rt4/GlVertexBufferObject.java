@@ -72,7 +72,7 @@ public final class GlVertexBufferObject {
 		@Pc(1) GL2 local1 = GlRenderer.gl;
 		local1.glBindBuffer(GL2.GL_ELEMENT_ARRAY_BUFFER, this.anInt5760);
 		local1.glBufferData(GL2.GL_ELEMENT_ARRAY_BUFFER, arg0.limit(), arg0, this.aBoolean300 ? GL2.GL_STREAM_DRAW : GL2.GL_STATIC_DRAW);
-		GlCleaner.anInt1945 += arg0.limit() - this.anInt5762;
+		GlCleaner.onCardGeometry += arg0.limit() - this.anInt5762;
 		this.anInt5762 = arg0.limit();
 	}
 
@@ -87,7 +87,7 @@ public final class GlVertexBufferObject {
 		@Pc(1) GL2 local1 = GlRenderer.gl;
 		local1.glBindBuffer(GL2.GL_ARRAY_BUFFER, this.anInt5760);
 		local1.glBufferData(GL2.GL_ARRAY_BUFFER, arg0.limit(), arg0, this.aBoolean300 ? GL2.GL_STREAM_DRAW : GL2.GL_STATIC_DRAW);
-		GlCleaner.anInt1945 += arg0.limit() - this.anInt5762;
+		GlCleaner.onCardGeometry += arg0.limit() - this.anInt5762;
 		this.anInt5762 = arg0.limit();
 	}
 }

@@ -703,7 +703,7 @@ public final class client extends GameShell {
 			}
 		} else {
 			@Pc(388) Graphics local388;
-			if ((gameState == 30 || gameState == 10) && Static199.rectDebug == 0 && !local158) {
+			if ((gameState == 30 || gameState == 10) && Cheat.rectDebug == 0 && !local158) {
 				try {
 					local388 = GameShell.canvas.getGraphics();
 					for (local84 = 0; local84 < InterfaceList.anInt766; local84++) {

@@ -12,10 +12,7 @@ public final class Static202 {
     @OriginalMember(owner = "client!qg", name = "Y", descriptor = "[I")
 	public static final int[] cameraFrequency = new int[5];
 
-	@OriginalMember(owner = "client!qg", name = "Z", descriptor = "Lclient!na;")
-	public static final JagString aClass100_892 = JagString.parse("mem=");
-
-	@OriginalMember(owner = "client!qg", name = "a", descriptor = "(Lsignlink!ll;Lclient!wa;IB)V")
+    @OriginalMember(owner = "client!qg", name = "a", descriptor = "(Lsignlink!ll;Lclient!wa;IB)V")
 	public static void method3654(@OriginalArg(0) SignLink arg0, @OriginalArg(1) Buffer arg1, @OriginalArg(2) int arg2) {
 		@Pc(17) ReflectionCheck local17 = new ReflectionCheck();
 		local17.anInt1725 = arg1.g1();

@@ -16,7 +16,7 @@ public final class Static148 {
 	public static int screenUpperY;
 
 	@OriginalMember(owner = "client!li", name = "p", descriptor = "Lclient!na;")
-	public static final JagString aClass100_677 = JagString.parse("::rebuild");
+	public static final JagString REBUILD = JagString.parse("::rebuild");
 
 	@OriginalMember(owner = "client!li", name = "a", descriptor = "(III)V")
 	public static void method2766(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {

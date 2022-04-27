@@ -12,10 +12,7 @@ public final class Static44 {
 	@OriginalMember(owner = "client!dh", name = "a", descriptor = "Z")
 	public static boolean aBoolean83 = false;
 
-	@OriginalMember(owner = "client!dh", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_335 = JagString.parse("Number of player models in cache:");
-
-	@OriginalMember(owner = "client!dh", name = "i", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!dh", name = "i", descriptor = "Lclient!na;")
 	public static final JagString IMG1 = JagString.parse("<img=1>");
 
 	@OriginalMember(owner = "client!dh", name = "a", descriptor = "(Z)V")
