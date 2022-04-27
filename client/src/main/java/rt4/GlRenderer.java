@@ -534,7 +534,7 @@ public final class GlRenderer {
 		@Pc(35) int local35 = (arg1 + arg3 - arg5 << 8) / arg9;
 		gl.glMatrixMode(GL2.GL_PROJECTION);
 		gl.glLoadIdentity();
-		method4175((float) local7 * aFloat34, (float) local17 * aFloat34, (float) -local35 * aFloat34, (float) -local25 * aFloat34, 50.0F, 3584.0F);
+		method4175((float) local7 * aFloat34, (float) local17 * aFloat34, (float) -local35 * aFloat34, (float) -local25 * aFloat34, 50.0F, (float) GlobalConfig.VIEW_DISTANCE);
 		setViewportBounds(arg0, canvasHeight - arg1 - arg3, arg2, arg3);
 		gl.glMatrixMode(GL2.GL_MODELVIEW);
 		gl.glLoadIdentity();
@@ -767,7 +767,7 @@ public final class GlRenderer {
 		@Pc(23) float local23 = (float) arg2 / 512.0F;
 		@Pc(30) float local30 = local23 * (256.0F / (float) arg4);
 		@Pc(37) float local37 = local23 * (256.0F / (float) arg5);
-		gl.glOrtho((double) ((float) local2 * local30), (double) ((float) local6 * local30), (double) ((float) -local13 * local37), (double) ((float) -local9 * local37), (double) (50 - arg3), (double) (3584 - arg3));
+		gl.glOrtho((double) ((float) local2 * local30), (double) ((float) local6 * local30), (double) ((float) -local13 * local37), (double) ((float) -local9 * local37), (double) (50 - arg3), (double) (GlobalConfig.VIEW_DISTANCE - arg3));
 		setViewportBounds(0, 0, canvasWidth, canvasHeight);
 		gl.glMatrixMode(GL2.GL_MODELVIEW);
 		gl.glLoadIdentity();

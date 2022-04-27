@@ -423,7 +423,7 @@ public final class Static120 {
 		local4.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_OPERAND0_RGB, GL2.GL_SRC_COLOR);
 		local4.glBlendFunc(GL2.GL_SRC_ALPHA, GL2.GL_ONE_MINUS_SRC_ALPHA);
 		local4.glDepthMask(true);
-		local4.glFogfv(GL2.GL_FOG_COLOR, Static161.aFloatArray19, 0);
+		local4.glFogfv(GL2.GL_FOG_COLOR, Static161.fogColor, 0);
 		local4.glEnableClientState(GL2.GL_TEXTURE_COORD_ARRAY);
 		GlRenderer.method4173();
 	}

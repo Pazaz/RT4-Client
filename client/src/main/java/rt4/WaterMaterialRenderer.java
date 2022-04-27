@@ -176,13 +176,14 @@ public final class WaterMaterialRenderer implements MaterialRenderer {
 		local1.glCallList(this.anInt4440);
 		@Pc(12) float local12 = 2662.4001F;
 		local12 += (float) (Static254.anInt5559 - 128) * 0.5F;
-		if (local12 >= 3328.0F) {
-			local12 = 3327.0F;
+		float max = (float) GlobalConfig.VIEW_DISTANCE - 256.0f;
+		if (local12 >= max) {
+			local12 = max - 1.0f;
 		}
 		this.aFloatArray23[0] = 0.0F;
 		this.aFloatArray23[1] = 0.0F;
-		this.aFloatArray23[2] = 1.0F / (local12 - 3328.0F);
-		this.aFloatArray23[3] = local12 / (local12 - 3328.0F);
+		this.aFloatArray23[2] = 1.0F / (local12 - max);
+		this.aFloatArray23[3] = local12 / (local12 - max);
 		local1.glTexGenfv(GL2.GL_S, GL2.GL_EYE_PLANE, this.aFloatArray23, 0);
 		local1.glPopMatrix();
 		local1.glActiveTexture(GL2.GL_TEXTURE0);

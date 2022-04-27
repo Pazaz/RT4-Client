@@ -994,7 +994,7 @@ public class ClientProt {
                 }
             }
         }
-        Static28.method792(GlRenderer.enabled ? 28 : 25, hasUnderWaterMap);
+        Static28.method792(GlRenderer.enabled ? GlobalConfig.TILE_DISTANCE : 25, hasUnderWaterMap);
         for (i = 0; i < 4; i++) {
             PathFinder.collisionMaps[i].resetFlags();
         }
