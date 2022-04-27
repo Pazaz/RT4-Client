@@ -98,7 +98,7 @@ public final class ScriptRunner {
 					}
 					if (opcode == 1) {
 						id = intOperands[pc];
-						intStack[isp++] = VarpDomain.varps[id];
+						intStack[isp++] = VarpDomain.activeVarps[id];
 						continue;
 					}
 					if (opcode == 2) {

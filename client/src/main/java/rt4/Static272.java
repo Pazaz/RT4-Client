@@ -20,6 +20,6 @@ public final class Static272 {
 			arg0 = 0;
 		}
 		local29 <<= local23;
-		VarpDomain.set(arg0 << local23 & local29 | ~local29 & Static106.varp[local17], local17);
+		VarpDomain.set(arg0 << local23 & local29 | ~local29 & VarpDomain.varp[local17], local17);
 	}
 }

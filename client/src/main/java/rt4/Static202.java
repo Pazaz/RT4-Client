@@ -93,7 +93,7 @@ public final class Static202 {
 			arg1 = 0;
 		}
 		local25 <<= local16;
-		Static148.method2766(local19, local25 & arg1 << local16 | VarpDomain.varps[local19] & ~local25);
+		Static148.method2766(local19, local25 & arg1 << local16 | VarpDomain.activeVarps[local19] & ~local25);
 	}
 
 	@OriginalMember(owner = "client!qg", name = "a", descriptor = "([Lclient!na;[SI)V")
