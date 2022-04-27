@@ -138,19 +138,26 @@ public class InterfaceList {
 
     @OriginalMember(owner = "client!af", name = "a", descriptor = "(BI)Lclient!be;")
     public static Component getComponent(@OriginalArg(1) int id) {
-        @Pc(7) int interfaceId = id >> 16;
-        @Pc(18) int componentId = id & 0xFFFF;
-        if (components[interfaceId] == null || components[interfaceId][componentId] == null) {
-            @Pc(33) boolean success = load(interfaceId);
-            if (!success) {
+        try {
+            @Pc(7) int interfaceId = id >> 16;
+            @Pc(18) int componentId = id & 0xFFFF;
+            if (components.length < interfaceId || interfaceId < 0) {
                 return null;
             }
-            // todo: this should not be necessary, data/server-related?
-            if (components.length <= interfaceId || components[interfaceId].length <= componentId) {
+            if (components[interfaceId] == null || components[interfaceId][componentId] == null) {
+                @Pc(33) boolean success = load(interfaceId);
+                if (!success) {
+                    return null;
+                }
+            }
+            if (components[interfaceId].length < componentId) {
                 return null;
             }
+            return components[interfaceId][componentId];
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return null;
         }
-        return components[interfaceId][componentId];
     }
 
     @OriginalMember(owner = "client!client", name = "b", descriptor = "(Lclient!be;)Lclient!bf;")

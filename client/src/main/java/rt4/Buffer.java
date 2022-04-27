@@ -248,7 +248,7 @@ public class Buffer extends Node {
 	}
 
 	@OriginalMember(owner = "client!wa", name = "i", descriptor = "(B)B")
-	public final byte g1neg() {
+	public final byte g1sneg() {
 		return (byte) -this.data[this.offset++];
 	}
 
@@ -399,9 +399,9 @@ public class Buffer extends Node {
 	}
 
 	@OriginalMember(owner = "client!wa", name = "l", descriptor = "(I)I")
-	public final int g4me() {
+	public final int g4le() {
 		this.offset += 4;
-		return ((this.data[this.offset - 2] & 0xFF) << 16) + ((this.data[this.offset - 1] & 0xFF) << 24) + ((this.data[this.offset - 3] & 0xFF) << 8) + (this.data[this.offset - 4] & 0xFF);
+		return ((this.data[this.offset - 1] & 0xFF) << 24) + ((this.data[this.offset - 2] & 0xFF) << 16) + ((this.data[this.offset - 3] & 0xFF) << 8) + (this.data[this.offset - 4] & 0xFF);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "l", descriptor = "(II)V")
@@ -419,7 +419,7 @@ public class Buffer extends Node {
 	}
 
 	@OriginalMember(owner = "client!wa", name = "g", descriptor = "(Z)I")
-	public final int p1neg() {
+	public final int g1neg() {
 		return -this.data[this.offset++] & 0xFF;
 	}
 
@@ -491,7 +491,7 @@ public class Buffer extends Node {
 
 	// reverse "middle-endian"
 	@OriginalMember(owner = "client!wa", name = "o", descriptor = "(B)I")
-	public final int p4rme() {
+	public final int g4me() {
 		this.offset += 4;
 		return ((this.data[this.offset - 3] & 0xFF) << 24) + ((this.data[this.offset - 4] & 0xFF) << 16) + ((this.data[this.offset - 1] & 0xFF) << 8) + (this.data[this.offset - 2] & 0xFF);
 	}
