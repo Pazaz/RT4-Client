@@ -94,12 +94,12 @@ public final class Static161 {
 		gl.glFogf(GL2.GL_FOG_DENSITY, 0.95F);
 		gl.glHint(GL2.GL_FOG_HINT, GL2.GL_FASTEST);
 		int fogEnd = GlobalConfig.VIEW_DISTANCE;
-		@Pc(65) int fogStart = fogEnd - 512 - offset;
+		@Pc(65) int fogStart = fogEnd - (int)(GlobalConfig.VIEW_FADE_DISTANCE * 2.0f) - offset;
 		if (fogStart < 50) {
 			fogStart = 50;
 		}
 		gl.glFogf(GL2.GL_FOG_START, (float) fogStart);
-		gl.glFogf(GL2.GL_FOG_END, (float) fogEnd - 256.0f);
+		gl.glFogf(GL2.GL_FOG_END, (float) fogEnd - GlobalConfig.VIEW_FADE_DISTANCE);
 		gl.glFogfv(GL2.GL_FOG_COLOR, fogColor, 0);
 	}
 

@@ -44,6 +44,7 @@ public class GlobalConfig {
     // default distance is 28
     public static int TILE_DISTANCE = 56;
     public static int VIEW_DISTANCE = TILE_DISTANCE * 128;
+    public static float VIEW_FADE_DISTANCE = ((float) TILE_DISTANCE / 28.0f) * 256.0f;
 
     public static boolean USE_TWEENING = true;
 

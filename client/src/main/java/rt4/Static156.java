@@ -110,7 +110,7 @@ public final class Static156 {
 		GlRenderer.setLightingEnabled(false);
 		local1.glDisable(GL2.GL_DEPTH_TEST);
 		local1.glPushAttrib(GL2.GL_FOG_BIT);
-		local1.glFogf(GL2.GL_FOG_START, (float) GlobalConfig.VIEW_DISTANCE - 512.0f);
+		local1.glFogf(GL2.GL_FOG_START, (float) GlobalConfig.VIEW_DISTANCE - (GlobalConfig.VIEW_FADE_DISTANCE * 2.0f));
 		GlRenderer.disableDepthMask();
 		for (@Pc(19) int local19 = 0; local19 < Static36.surfaceHdTiles[0].length; local19++) {
 			@Pc(31) GlTile local31 = Static36.surfaceHdTiles[0][local19];

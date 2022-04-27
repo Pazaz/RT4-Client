@@ -176,7 +176,7 @@ public final class WaterMaterialRenderer implements MaterialRenderer {
 		local1.glCallList(this.anInt4440);
 		@Pc(12) float local12 = 2662.4001F;
 		local12 += (float) (Static254.anInt5559 - 128) * 0.5F;
-		float max = (float) GlobalConfig.VIEW_DISTANCE - 256.0f;
+		float max = (float) GlobalConfig.VIEW_DISTANCE - GlobalConfig.VIEW_FADE_DISTANCE;
 		if (local12 >= max) {
 			local12 = max - 1.0f;
 		}
