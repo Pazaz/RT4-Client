@@ -40,12 +40,12 @@ public final class Static112 {
 		@Pc(112) int local112;
 		@Pc(114) int local114;
 		if (Static39.aClass3_Sub2_Sub1_1 != null && Static181.aClass3_Sub2_Sub1_9 != null) {
-			local112 = local13 / Static39.aClass3_Sub2_Sub1_1.anInt1867;
+			local112 = local13 / Static39.aClass3_Sub2_Sub1_1.width;
 			for (local114 = 0; local114 < local112; local114++) {
-				Static39.aClass3_Sub2_Sub1_1.method1423(local114 * Static39.aClass3_Sub2_Sub1_1.anInt1867 + local3, local9);
+				Static39.aClass3_Sub2_Sub1_1.method1423(local114 * Static39.aClass3_Sub2_Sub1_1.width + local3, local9);
 			}
 			Static181.aClass3_Sub2_Sub1_9.method1423(local3, local9);
-			Static181.aClass3_Sub2_Sub1_9.method1421(local3 + local13 - Static181.aClass3_Sub2_Sub1_9.anInt1867, local9);
+			Static181.aClass3_Sub2_Sub1_9.method1421(local3 + local13 - Static181.aClass3_Sub2_Sub1_9.width, local9);
 		}
 		Fonts.b12Full.method2857(LocalizedText.CHOOSE_OPTION, local3 + 3, local9 + 14, Static195.anInt4581, -1);
 		if (GlRenderer.enabled) {
@@ -91,17 +91,17 @@ public final class Static112 {
 		}
 		@Pc(418) int local418;
 		if (Static165.aClass3_Sub2_Sub1_8 != null && Static92.aClass3_Sub2_Sub1_6 != null && Static204.aClass3_Sub2_Sub1_10 != null) {
-			local203 = local13 / Static165.aClass3_Sub2_Sub1_8.anInt1867;
+			local203 = local13 / Static165.aClass3_Sub2_Sub1_8.width;
 			for (local219 = 0; local219 < local203; local219++) {
-				Static165.aClass3_Sub2_Sub1_8.method1423(local3 + Static165.aClass3_Sub2_Sub1_8.anInt1867 * local219, local11 + local9 + -Static165.aClass3_Sub2_Sub1_8.anInt1859);
+				Static165.aClass3_Sub2_Sub1_8.method1423(local3 + Static165.aClass3_Sub2_Sub1_8.width * local219, local11 + local9 + -Static165.aClass3_Sub2_Sub1_8.height);
 			}
-			local219 = (local11 - 20) / Static92.aClass3_Sub2_Sub1_6.anInt1859;
+			local219 = (local11 - 20) / Static92.aClass3_Sub2_Sub1_6.height;
 			for (local418 = 0; local418 < local219; local418++) {
-				Static92.aClass3_Sub2_Sub1_6.method1423(local3, local9 + local418 * Static92.aClass3_Sub2_Sub1_6.anInt1859 + 20);
-				Static92.aClass3_Sub2_Sub1_6.method1421(local3 + local13 - Static92.aClass3_Sub2_Sub1_6.anInt1867, local9 + 20 + local418 * Static92.aClass3_Sub2_Sub1_6.anInt1859);
+				Static92.aClass3_Sub2_Sub1_6.method1423(local3, local9 + local418 * Static92.aClass3_Sub2_Sub1_6.height + 20);
+				Static92.aClass3_Sub2_Sub1_6.method1421(local3 + local13 - Static92.aClass3_Sub2_Sub1_6.width, local9 + 20 + local418 * Static92.aClass3_Sub2_Sub1_6.height);
 			}
-			Static204.aClass3_Sub2_Sub1_10.method1423(local3, local11 + local9 - Static204.aClass3_Sub2_Sub1_10.anInt1859);
-			Static204.aClass3_Sub2_Sub1_10.method1421(local3 + local13 - Static204.aClass3_Sub2_Sub1_10.anInt1867, local9 - -local11 + -Static204.aClass3_Sub2_Sub1_10.anInt1859);
+			Static204.aClass3_Sub2_Sub1_10.method1423(local3, local11 + local9 - Static204.aClass3_Sub2_Sub1_10.height);
+			Static204.aClass3_Sub2_Sub1_10.method1421(local3 + local13 - Static204.aClass3_Sub2_Sub1_10.width, local9 - -local11 + -Static204.aClass3_Sub2_Sub1_10.height);
 		}
 		for (local203 = 0; local203 < Static231.anInt5204; local203++) {
 			local219 = (Static231.anInt5204 - local203 - 1) * 15 + local9 + 35;

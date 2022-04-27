@@ -17,22 +17,22 @@ public class SoftwareSprite extends Sprite {
 		this.anInt1866 = arg1;
 		this.anInt1863 = arg2;
 		this.anInt1861 = arg3;
-		this.anInt1867 = arg4;
-		this.anInt1859 = arg5;
+		this.width = arg4;
+		this.height = arg5;
 		this.pixels = arg6;
 	}
 
 	@OriginalMember(owner = "client!mm", name = "<init>", descriptor = "(II)V")
 	public SoftwareSprite(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		this.pixels = new int[arg0 * arg1];
-		this.anInt1867 = this.anInt1860 = arg0;
-		this.anInt1859 = this.anInt1866 = arg1;
+		this.width = this.anInt1860 = arg0;
+		this.height = this.anInt1866 = arg1;
 		this.anInt1863 = this.anInt1861 = 0;
 	}
 
 	@OriginalMember(owner = "client!mm", name = "d", descriptor = "(I)V")
 	public final void method298(@OriginalArg(0) int arg0) {
-		if (this.anInt1867 == this.anInt1860 && this.anInt1859 == this.anInt1866) {
+		if (this.width == this.anInt1860 && this.height == this.anInt1866) {
 			return;
 		}
 		@Pc(12) int local12 = arg0;
@@ -40,43 +40,43 @@ public class SoftwareSprite extends Sprite {
 			local12 = this.anInt1863;
 		}
 		@Pc(21) int local21 = arg0;
-		if (arg0 + this.anInt1863 + this.anInt1867 > this.anInt1860) {
-			local21 = this.anInt1860 - this.anInt1863 - this.anInt1867;
+		if (arg0 + this.anInt1863 + this.width > this.anInt1860) {
+			local21 = this.anInt1860 - this.anInt1863 - this.width;
 		}
 		@Pc(42) int local42 = arg0;
 		if (arg0 > this.anInt1861) {
 			local42 = this.anInt1861;
 		}
 		@Pc(51) int local51 = arg0;
-		if (arg0 + this.anInt1861 + this.anInt1859 > this.anInt1866) {
-			local51 = this.anInt1866 - this.anInt1861 - this.anInt1859;
+		if (arg0 + this.anInt1861 + this.height > this.anInt1866) {
+			local51 = this.anInt1866 - this.anInt1861 - this.height;
 		}
-		@Pc(77) int local77 = this.anInt1867 + local12 + local21;
-		@Pc(84) int local84 = this.anInt1859 + local42 + local51;
+		@Pc(77) int local77 = this.width + local12 + local21;
+		@Pc(84) int local84 = this.height + local42 + local51;
 		@Pc(89) int[] local89 = new int[local77 * local84];
-		for (@Pc(91) int local91 = 0; local91 < this.anInt1859; local91++) {
-			for (@Pc(97) int local97 = 0; local97 < this.anInt1867; local97++) {
-				local89[(local91 + local42) * local77 + local97 + local12] = this.pixels[local91 * this.anInt1867 + local97];
+		for (@Pc(91) int local91 = 0; local91 < this.height; local91++) {
+			for (@Pc(97) int local97 = 0; local97 < this.width; local97++) {
+				local89[(local91 + local42) * local77 + local97 + local12] = this.pixels[local91 * this.width + local97];
 			}
 		}
 		this.pixels = local89;
-		this.anInt1867 = local77;
-		this.anInt1859 = local84;
+		this.width = local77;
+		this.height = local84;
 		this.anInt1863 -= local12;
 		this.anInt1861 -= local42;
 	}
 
 	@OriginalMember(owner = "client!mm", name = "a", descriptor = "()V")
 	public final void method299() {
-		@Pc(6) int[] local6 = new int[this.anInt1867 * this.anInt1859];
+		@Pc(6) int[] local6 = new int[this.width * this.height];
 		@Pc(8) int local8 = 0;
-		for (@Pc(10) int local10 = 0; local10 < this.anInt1859; local10++) {
-			for (@Pc(19) int local19 = this.anInt1867 - 1; local19 >= 0; local19--) {
-				local6[local8++] = this.pixels[local19 + local10 * this.anInt1867];
+		for (@Pc(10) int local10 = 0; local10 < this.height; local10++) {
+			for (@Pc(19) int local19 = this.width - 1; local19 >= 0; local19--) {
+				local6[local8++] = this.pixels[local19 + local10 * this.width];
 			}
 		}
 		this.pixels = local6;
-		this.anInt1863 = this.anInt1860 - this.anInt1867 - this.anInt1863;
+		this.anInt1863 = this.anInt1860 - this.width - this.anInt1863;
 	}
 
 	@OriginalMember(owner = "client!mm", name = "c", descriptor = "(II)V")
@@ -86,8 +86,8 @@ public class SoftwareSprite extends Sprite {
 		arg1 += this.anInt1861;
 		@Pc(15) int local15 = arg0 + arg1 * SoftwareRaster.width;
 		@Pc(17) int local17 = 0;
-		@Pc(20) int local20 = this.anInt1859;
-		@Pc(23) int local23 = this.anInt1867;
+		@Pc(20) int local20 = this.height;
+		@Pc(23) int local23 = this.width;
 		@Pc(27) int local27 = SoftwareRaster.width - local23;
 		@Pc(29) int local29 = 0;
 		@Pc(36) int local36;
@@ -124,10 +124,10 @@ public class SoftwareSprite extends Sprite {
 	@OriginalMember(owner = "client!mm", name = "b", descriptor = "()[I")
 	public final int[] method301() {
 		@Pc(6) int[] local6 = new int[this.anInt1860 * this.anInt1866];
-		for (@Pc(8) int local8 = 0; local8 < this.anInt1859; local8++) {
-			@Pc(17) int local17 = local8 * this.anInt1867;
+		for (@Pc(8) int local8 = 0; local8 < this.height; local8++) {
+			@Pc(17) int local17 = local8 * this.width;
 			@Pc(28) int local28 = this.anInt1863 + (local8 + this.anInt1861) * this.anInt1860;
-			for (@Pc(30) int local30 = 0; local30 < this.anInt1867; local30++) {
+			for (@Pc(30) int local30 = 0; local30 < this.width; local30++) {
 				@Pc(40) int local40 = this.pixels[local17++];
 				local6[local28++] = local40 == 0 ? 0 : local40 | 0xFF000000;
 			}
@@ -148,12 +148,12 @@ public class SoftwareSprite extends Sprite {
 		@Pc(43) int local43 = (int) Math.floor(Math.cos(local23) * (double) arg5 + 0.5D);
 		@Pc(53) int local53 = -local9 * local43 + -local16 * local33;
 		@Pc(64) int local64 = --local9 * local33 + -local16 * local43;
-		@Pc(78) int local78 = ((this.anInt1867 << 4) - local9) * local43 + -local16 * local33;
-		@Pc(93) int local93 = -((this.anInt1867 << 4) - local9) * local33 + -local16 * local43;
-		@Pc(107) int local107 = -local9 * local43 + ((this.anInt1859 << 4) - local16) * local33;
-		@Pc(122) int local122 = --local9 * local33 + ((this.anInt1859 << 4) - local16) * local43;
-		@Pc(140) int local140 = ((this.anInt1867 << 4) - local9) * local43 + ((this.anInt1859 << 4) - local16) * local33;
-		@Pc(159) int local159 = -((this.anInt1867 << 4) - local9) * local33 + ((this.anInt1859 << 4) - local16) * local43;
+		@Pc(78) int local78 = ((this.width << 4) - local9) * local43 + -local16 * local33;
+		@Pc(93) int local93 = -((this.width << 4) - local9) * local33 + -local16 * local43;
+		@Pc(107) int local107 = -local9 * local43 + ((this.height << 4) - local16) * local33;
+		@Pc(122) int local122 = --local9 * local33 + ((this.height << 4) - local16) * local43;
+		@Pc(140) int local140 = ((this.width << 4) - local9) * local43 + ((this.height << 4) - local16) * local33;
+		@Pc(159) int local159 = -((this.width << 4) - local9) * local33 + ((this.height << 4) - local16) * local43;
 		@Pc(164) int local164;
 		@Pc(166) int local166;
 		if (local53 < local78) {
@@ -251,9 +251,9 @@ public class SoftwareSprite extends Sprite {
 						local388 = local319;
 						local694 = local368 + (local350 * local342 >> 4);
 						local394 = local166;
-						if (local378 >= 0 && local378 - (this.anInt1859 << 12) < 0) {
+						if (local378 >= 0 && local378 - (this.height << 12) < 0) {
 							@Pc(717) int local717;
-							if ((local717 = local694 - (this.anInt1867 << 12)) >= 0) {
+							if ((local717 = local694 - (this.width << 12)) >= 0) {
 								local496 = (local342 - local717) / local342;
 								local394 = local166 + local496;
 								local694 += local342 * local496;
@@ -264,7 +264,7 @@ public class SoftwareSprite extends Sprite {
 								local394 = local745;
 							}
 							while (local394 < 0) {
-								local432 = this.pixels[(local378 >> 12) * this.anInt1867 + (local694 >> 12)];
+								local432 = this.pixels[(local378 >> 12) * this.width + (local694 >> 12)];
 								if (local432 == 0) {
 									local388++;
 								} else {
@@ -286,7 +286,7 @@ public class SoftwareSprite extends Sprite {
 						local468 = local378 + (local350 * local333 >> 4);
 						local394 = local166;
 						@Pc(825) int local825;
-						if ((local825 = local694 - (this.anInt1867 << 12)) >= 0) {
+						if ((local825 = local694 - (this.width << 12)) >= 0) {
 							local496 = (local342 - local825) / local342;
 							local394 = local166 + local496;
 							local694 += local342 * local496;
@@ -298,7 +298,7 @@ public class SoftwareSprite extends Sprite {
 							local394 = local859;
 						}
 						@Pc(871) int local871;
-						if ((local871 = local468 - (this.anInt1859 << 12)) >= 0) {
+						if ((local871 = local468 - (this.height << 12)) >= 0) {
 							local496 = (local333 - local871) / local333;
 							local394 += local496;
 							local694 += local342 * local496;
@@ -310,7 +310,7 @@ public class SoftwareSprite extends Sprite {
 							local394 = local905;
 						}
 						while (local394 < 0) {
-							local432 = this.pixels[(local468 >> 12) * this.anInt1867 + (local694 >> 12)];
+							local432 = this.pixels[(local468 >> 12) * this.width + (local694 >> 12)];
 							if (local432 == 0) {
 								local388++;
 							} else {
@@ -333,7 +333,7 @@ public class SoftwareSprite extends Sprite {
 						local468 = local378 + (local350 * local333 >> 4);
 						local394 = local166;
 						@Pc(991) int local991;
-						if ((local991 = local694 - (this.anInt1867 << 12)) >= 0) {
+						if ((local991 = local694 - (this.width << 12)) >= 0) {
 							local496 = (local342 - local991) / local342;
 							local394 = local166 + local496;
 							local694 += local342 * local496;
@@ -352,11 +352,11 @@ public class SoftwareSprite extends Sprite {
 							local388 += local496;
 						}
 						@Pc(1073) int local1073;
-						if ((local1073 = (local468 + 1 - (this.anInt1859 << 12) - local333) / local333) > local394) {
+						if ((local1073 = (local468 + 1 - (this.height << 12) - local333) / local333) > local394) {
 							local394 = local1073;
 						}
 						while (local394 < 0) {
-							local432 = this.pixels[(local468 >> 12) * this.anInt1867 + (local694 >> 12)];
+							local432 = this.pixels[(local468 >> 12) * this.width + (local694 >> 12)];
 							if (local432 == 0) {
 								local388++;
 							} else {
@@ -378,7 +378,7 @@ public class SoftwareSprite extends Sprite {
 					local388 = local319;
 					local694 = local368 + (local350 * local342 >> 4);
 					local394 = local166;
-					if (local378 >= 0 && local378 - (this.anInt1859 << 12) < 0) {
+					if (local378 >= 0 && local378 - (this.height << 12) < 0) {
 						if (local694 < 0) {
 							local496 = (local342 - local694 - 1) / local342;
 							local394 = local166 + local496;
@@ -386,11 +386,11 @@ public class SoftwareSprite extends Sprite {
 							local388 = local319 + local496;
 						}
 						@Pc(1196) int local1196;
-						if ((local1196 = (local694 + 1 - (this.anInt1867 << 12) - local342) / local342) > local394) {
+						if ((local1196 = (local694 + 1 - (this.width << 12) - local342) / local342) > local394) {
 							local394 = local1196;
 						}
 						while (local394 < 0) {
-							local432 = this.pixels[(local378 >> 12) * this.anInt1867 + (local694 >> 12)];
+							local432 = this.pixels[(local378 >> 12) * this.width + (local694 >> 12)];
 							if (local432 == 0) {
 								local388++;
 							} else {
@@ -419,11 +419,11 @@ public class SoftwareSprite extends Sprite {
 						local388 = local319 + local496;
 					}
 					@Pc(1312) int local1312;
-					if ((local1312 = (local694 + 1 - (this.anInt1867 << 12) - local342) / local342) > local394) {
+					if ((local1312 = (local694 + 1 - (this.width << 12) - local342) / local342) > local394) {
 						local394 = local1312;
 					}
 					@Pc(1324) int local1324;
-					if ((local1324 = local468 - (this.anInt1859 << 12)) >= 0) {
+					if ((local1324 = local468 - (this.height << 12)) >= 0) {
 						local496 = (local333 - local1324) / local333;
 						local394 += local496;
 						local694 += local342 * local496;
@@ -435,7 +435,7 @@ public class SoftwareSprite extends Sprite {
 						local394 = local1358;
 					}
 					while (local394 < 0) {
-						local432 = this.pixels[(local468 >> 12) * this.anInt1867 + (local694 >> 12)];
+						local432 = this.pixels[(local468 >> 12) * this.width + (local694 >> 12)];
 						if (local432 == 0) {
 							local388++;
 						} else {
@@ -465,7 +465,7 @@ public class SoftwareSprite extends Sprite {
 						local388 = local319 + local496;
 					}
 					@Pc(1480) int local1480;
-					if ((local1480 = (local694 + 1 - (this.anInt1867 << 12) - local342) / local342) > local394) {
+					if ((local1480 = (local694 + 1 - (this.width << 12) - local342) / local342) > local394) {
 						local394 = local1480;
 					}
 					if (local468 < 0) {
@@ -476,11 +476,11 @@ public class SoftwareSprite extends Sprite {
 						local388 += local496;
 					}
 					@Pc(1528) int local1528;
-					if ((local1528 = (local468 + 1 - (this.anInt1859 << 12) - local333) / local333) > local394) {
+					if ((local1528 = (local468 + 1 - (this.height << 12) - local333) / local333) > local394) {
 						local394 = local1528;
 					}
 					while (local394 < 0) {
-						local432 = this.pixels[(local468 >> 12) * this.anInt1867 + (local694 >> 12)];
+						local432 = this.pixels[(local468 >> 12) * this.width + (local694 >> 12)];
 						if (local432 == 0) {
 							local388++;
 						} else {
@@ -501,9 +501,9 @@ public class SoftwareSprite extends Sprite {
 			while (local384 < 0) {
 				local388 = local319;
 				local394 = local166;
-				if (local368 >= 0 && local378 >= 0 && local368 - (this.anInt1867 << 12) < 0 && local378 - (this.anInt1859 << 12) < 0) {
+				if (local368 >= 0 && local378 >= 0 && local368 - (this.width << 12) < 0 && local378 - (this.height << 12) < 0) {
 					while (local394 < 0) {
-						local432 = this.pixels[(local378 >> 12) * this.anInt1867 + (local368 >> 12)];
+						local432 = this.pixels[(local378 >> 12) * this.width + (local368 >> 12)];
 						if (local432 == 0) {
 							local388++;
 						} else {
@@ -521,9 +521,9 @@ public class SoftwareSprite extends Sprite {
 				local388 = local319;
 				local468 = local378 + (local350 * local333 >> 4);
 				local394 = local166;
-				if (local368 >= 0 && local368 - (this.anInt1867 << 12) < 0) {
+				if (local368 >= 0 && local368 - (this.width << 12) < 0) {
 					@Pc(489) int local489;
-					if ((local489 = local468 - (this.anInt1859 << 12)) >= 0) {
+					if ((local489 = local468 - (this.height << 12)) >= 0) {
 						local496 = (local333 - local489) / local333;
 						local394 = local166 + local496;
 						local468 += local333 * local496;
@@ -534,7 +534,7 @@ public class SoftwareSprite extends Sprite {
 						local394 = local517;
 					}
 					while (local394 < 0) {
-						local432 = this.pixels[(local468 >> 12) * this.anInt1867 + (local368 >> 12)];
+						local432 = this.pixels[(local468 >> 12) * this.width + (local368 >> 12)];
 						if (local432 == 0) {
 							local388++;
 						} else {
@@ -554,7 +554,7 @@ public class SoftwareSprite extends Sprite {
 				local388 = local319;
 				local468 = local378 + (local350 * local333 >> 4);
 				local394 = local166;
-				if (local368 >= 0 && local368 - (this.anInt1867 << 12) < 0) {
+				if (local368 >= 0 && local368 - (this.width << 12) < 0) {
 					if (local468 < 0) {
 						local496 = (local333 - local468 - 1) / local333;
 						local394 = local166 + local496;
@@ -562,11 +562,11 @@ public class SoftwareSprite extends Sprite {
 						local388 = local319 + local496;
 					}
 					@Pc(630) int local630;
-					if ((local630 = (local468 + 1 - (this.anInt1859 << 12) - local333) / local333) > local394) {
+					if ((local630 = (local468 + 1 - (this.height << 12) - local333) / local333) > local394) {
 						local394 = local630;
 					}
 					while (local394 < 0) {
-						local432 = this.pixels[(local468 >> 12) * this.anInt1867 + (local368 >> 12)];
+						local432 = this.pixels[(local468 >> 12) * this.width + (local368 >> 12)];
 						if (local432 == 0) {
 							local388++;
 						} else {
@@ -585,19 +585,19 @@ public class SoftwareSprite extends Sprite {
 
 	@OriginalMember(owner = "client!mm", name = "e", descriptor = "(I)V")
 	public final void method303(@OriginalArg(0) int arg0) {
-		@Pc(6) int[] local6 = new int[this.anInt1867 * this.anInt1859];
+		@Pc(6) int[] local6 = new int[this.width * this.height];
 		@Pc(8) int local8 = 0;
-		for (@Pc(10) int local10 = 0; local10 < this.anInt1859; local10++) {
-			for (@Pc(16) int local16 = 0; local16 < this.anInt1867; local16++) {
+		for (@Pc(10) int local10 = 0; local10 < this.height; local10++) {
+			for (@Pc(16) int local16 = 0; local16 < this.width; local16++) {
 				@Pc(25) int local25 = this.pixels[local8];
 				if (local25 == 0) {
 					if (local16 > 0 && this.pixels[local8 - 1] != 0) {
 						local25 = arg0;
-					} else if (local10 > 0 && this.pixels[local8 - this.anInt1867] != 0) {
+					} else if (local10 > 0 && this.pixels[local8 - this.width] != 0) {
 						local25 = arg0;
-					} else if (local16 < this.anInt1867 - 1 && this.pixels[local8 + 1] != 0) {
+					} else if (local16 < this.width - 1 && this.pixels[local8 + 1] != 0) {
 						local25 = arg0;
-					} else if (local10 < this.anInt1859 - 1 && this.pixels[local8 + this.anInt1867] != 0) {
+					} else if (local10 < this.height - 1 && this.pixels[local8 + this.width] != 0) {
 						local25 = arg0;
 					}
 				}
@@ -609,7 +609,7 @@ public class SoftwareSprite extends Sprite {
 
 	@OriginalMember(owner = "client!mm", name = "c", descriptor = "()V")
 	public final void makeTarget() {
-		SoftwareRaster.method2491(this.pixels, this.anInt1867, this.anInt1859);
+		SoftwareRaster.method2491(this.pixels, this.width, this.height);
 	}
 
 	@OriginalMember(owner = "client!mm", name = "a", descriptor = "(IIIIIIDI)V")
@@ -627,7 +627,7 @@ public class SoftwareSprite extends Sprite {
 				@Pc(72) int local72 = local45;
 				@Pc(74) int local74 = local57;
 				for (@Pc(77) int local77 = -20; local77 < 0; local77++) {
-					@Pc(93) int local93 = this.pixels[(local72 >> 16) + (local74 >> 16) * this.anInt1867];
+					@Pc(93) int local93 = this.pixels[(local72 >> 16) + (local74 >> 16) * this.width];
 					if (local93 == 0) {
 						local70++;
 					} else {
@@ -647,12 +647,12 @@ public class SoftwareSprite extends Sprite {
 	@OriginalMember(owner = "client!mm", name = "d", descriptor = "(II)V")
 	@Override
 	public void method1421(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		arg0 += this.anInt1860 - this.anInt1867 - this.anInt1863;
+		arg0 += this.anInt1860 - this.width - this.anInt1863;
 		arg1 += this.anInt1861;
 		@Pc(21) int local21 = arg0 + arg1 * SoftwareRaster.width;
-		@Pc(26) int local26 = this.anInt1867 - 1;
-		@Pc(29) int local29 = this.anInt1859;
-		@Pc(32) int local32 = this.anInt1867;
+		@Pc(26) int local26 = this.width - 1;
+		@Pc(29) int local29 = this.height;
+		@Pc(32) int local32 = this.width;
 		@Pc(36) int local36 = SoftwareRaster.width - local32;
 		@Pc(40) int local40 = local32 + local32;
 		@Pc(47) int local47;
@@ -693,8 +693,8 @@ public class SoftwareSprite extends Sprite {
 		arg1 += this.anInt1861;
 		@Pc(15) int local15 = arg0 + arg1 * SoftwareRaster.width;
 		@Pc(17) int local17 = 0;
-		@Pc(20) int local20 = this.anInt1859;
-		@Pc(23) int local23 = this.anInt1867;
+		@Pc(20) int local20 = this.height;
+		@Pc(23) int local23 = this.width;
 		@Pc(27) int local27 = SoftwareRaster.width - local23;
 		@Pc(29) int local29 = 0;
 		@Pc(36) int local36;
@@ -735,8 +735,8 @@ public class SoftwareSprite extends Sprite {
 		arg1 += this.anInt1861;
 		@Pc(15) int local15 = arg0 + arg1 * SoftwareRaster.width;
 		@Pc(17) int local17 = 0;
-		@Pc(20) int local20 = this.anInt1859;
-		@Pc(23) int local23 = this.anInt1867;
+		@Pc(20) int local20 = this.height;
+		@Pc(23) int local23 = this.width;
 		@Pc(27) int local27 = SoftwareRaster.width - local23;
 		@Pc(29) int local29 = 0;
 		@Pc(36) int local36;
@@ -772,42 +772,65 @@ public class SoftwareSprite extends Sprite {
 
 	@OriginalMember(owner = "client!mm", name = "d", descriptor = "()V")
 	public final void method309() {
-		@Pc(6) int[] local6 = new int[this.anInt1867 * this.anInt1859];
+		@Pc(6) int[] local6 = new int[this.width * this.height];
 		@Pc(8) int local8 = 0;
-		for (@Pc(13) int local13 = this.anInt1859 - 1; local13 >= 0; local13--) {
-			for (@Pc(17) int local17 = 0; local17 < this.anInt1867; local17++) {
-				local6[local8++] = this.pixels[local17 + local13 * this.anInt1867];
+		for (@Pc(13) int local13 = this.height - 1; local13 >= 0; local13--) {
+			for (@Pc(17) int local17 = 0; local17 < this.width; local17++) {
+				local6[local8++] = this.pixels[local17 + local13 * this.width];
 			}
 		}
 		this.pixels = local6;
-		this.anInt1861 = this.anInt1866 - this.anInt1859 - this.anInt1861;
+		this.anInt1861 = this.anInt1866 - this.height - this.anInt1861;
 	}
 
 	@OriginalMember(owner = "client!mm", name = "a", descriptor = "(IIIIIIII[I[I)V")
-	public void method310(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) int[] arg8, @OriginalArg(9) int[] arg9) {
+	public void drawMinimapRegion(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int w, @OriginalArg(3) int h, @OriginalArg(4) int anchorX, @OriginalArg(5) int anchorY, @OriginalArg(6) int theta, @OriginalArg(7) int zoom, @OriginalArg(8) int[] lineStarts, @OriginalArg(9) int[] arg9) {
 		try {
-			@Pc(4) int local4 = -arg2 / 2;
-			@Pc(9) int local9 = -arg3 / 2;
-			@Pc(18) int local18 = (int) (Math.sin((double) arg6 / 326.11D) * 65536.0D);
-			@Pc(27) int local27 = (int) (Math.cos((double) arg6 / 326.11D) * 65536.0D);
-			@Pc(33) int local33 = local18 * arg7 >> 8;
-			@Pc(39) int local39 = local27 * arg7 >> 8;
-			@Pc(51) int local51 = (arg4 << 16) + local9 * local33 + local4 * local39;
-			@Pc(63) int local63 = (arg5 << 16) + (local9 * local39 - local4 * local33);
-			@Pc(69) int local69 = arg0 + arg1 * SoftwareRaster.width;
-			for (@Pc(71) int local71 = 0; local71 < arg3; local71++) {
-				@Pc(78) int local78 = arg8[local71];
-				@Pc(82) int local82 = local69 + local78;
-				@Pc(88) int local88 = local51 + local39 * local78;
-				@Pc(94) int local94 = local63 - local33 * local78;
-				for (@Pc(99) int local99 = -arg9[local71]; local99 < 0; local99++) {
-					SoftwareRaster.pixels[local82++] = this.pixels[(local88 >> 16) + (local94 >> 16) * this.anInt1867];
-					local88 += local39;
-					local94 -= local33;
+			@Pc(4) int centerX = -w / 2;
+			@Pc(9) int centerY = -h / 2;
+			@Pc(18) int sin1 = (int) (Math.sin((double) theta / 326.11D) * 65536.0D);
+			@Pc(27) int cos1 = (int) (Math.cos((double) theta / 326.11D) * 65536.0D);
+			@Pc(33) int sin = sin1 * zoom >> 8;
+			@Pc(39) int cos = cos1 * zoom >> 8;
+			@Pc(51) int originX = (anchorX << 16) + centerY * sin + centerX * cos;
+			@Pc(63) int originY = (anchorY << 16) + (centerY * cos - centerX * sin);
+			@Pc(69) int origin = x + y * SoftwareRaster.width;
+			for (@Pc(71) int iy = 0; iy < h; iy++) {
+				@Pc(78) int start = lineStarts[iy];
+				@Pc(82) int dstOff = origin + start;
+				@Pc(88) int dstX = originX + cos * start;
+				@Pc(94) int dstY = originY - sin * start;
+				for (@Pc(99) int ix = -arg9[iy]; ix < 0; ix++) {
+					if (GlobalConfig.BILINEAR_MINIMAP) {
+						int x1 = dstX >> 16;
+						int y1 = dstY >> 16;
+						int x2 = x1 + 1;
+						int y2 = y1 + 1;
+						int sampleColor1 = this.pixels[x1 + y1 * this.width];
+						int sampleColor2 = this.pixels[x2 + y1 * this.width];
+						int sampleColor3 = this.pixels[x1 + y2 * this.width];
+						int sampleColor4 = this.pixels[x2 + y2 * this.width];
+						int x1Distance = (dstX >> 8) - (x1 << 8);
+						int y1Distance = (dstY >> 8) - (y1 << 8);
+						int x2Distance = (x2 << 8) - (dstX >> 8);
+						int y2Distance = (y2 << 8) - (dstY >> 8);
+						int sampleAlpha1 = x2Distance * y2Distance;
+						int sampleAlpha2 = x1Distance * y2Distance;
+						int sampleAlpha3 = x2Distance * y1Distance;
+						int sampleAlpha4 = x1Distance * y1Distance;
+						int red = (sampleColor1 >> 16 & 0xff) * sampleAlpha1 + (sampleColor2 >> 16 & 0xff) * sampleAlpha2 + (sampleColor3 >> 16 & 0xff) * sampleAlpha3 + (sampleColor4 >> 16 & 0xff) * sampleAlpha4 & 0xff0000;
+						int green = (sampleColor1 >> 8 & 0xff) * sampleAlpha1 + (sampleColor2 >> 8 & 0xff) * sampleAlpha2 + (sampleColor3 >> 8 & 0xff) * sampleAlpha3 + (sampleColor4 >> 8 & 0xff) * sampleAlpha4 >> 8 & 0xff00;
+						int blue = (sampleColor1 & 0xff) * sampleAlpha1 + (sampleColor2 & 0xff) * sampleAlpha2 + (sampleColor3 & 0xff) * sampleAlpha3 + (sampleColor4 & 0xff) * sampleAlpha4 >> 16;
+						SoftwareRaster.pixels[dstOff++] = red | green | blue;
+					} else {
+						SoftwareRaster.pixels[dstOff++] = this.pixels[(dstX >> 16) + (dstY >> 16) * this.width];
+					}
+					dstX += cos;
+					dstY -= sin;
 				}
-				local51 += local33;
-				local63 += local39;
-				local69 += SoftwareRaster.width;
+				originX += sin;
+				originY += cos;
+				origin += SoftwareRaster.width;
 			}
 		} catch (@Pc(144) Exception local144) {
 		}
@@ -815,18 +838,18 @@ public class SoftwareSprite extends Sprite {
 
 	@OriginalMember(owner = "client!mm", name = "e", descriptor = "()V")
 	public final void trim() {
-		if (this.anInt1867 == this.anInt1860 && this.anInt1859 == this.anInt1866) {
+		if (this.width == this.anInt1860 && this.height == this.anInt1866) {
 			return;
 		}
 		@Pc(17) int[] local17 = new int[this.anInt1860 * this.anInt1866];
-		for (@Pc(19) int local19 = 0; local19 < this.anInt1859; local19++) {
-			for (@Pc(25) int local25 = 0; local25 < this.anInt1867; local25++) {
-				local17[(local19 + this.anInt1861) * this.anInt1860 + local25 + this.anInt1863] = this.pixels[local19 * this.anInt1867 + local25];
+		for (@Pc(19) int local19 = 0; local19 < this.height; local19++) {
+			for (@Pc(25) int local25 = 0; local25 < this.width; local25++) {
+				local17[(local19 + this.anInt1861) * this.anInt1860 + local25 + this.anInt1863] = this.pixels[local19 * this.width + local25];
 			}
 		}
 		this.pixels = local17;
-		this.anInt1867 = this.anInt1860;
-		this.anInt1859 = this.anInt1866;
+		this.width = this.anInt1860;
+		this.height = this.anInt1866;
 		this.anInt1863 = 0;
 		this.anInt1861 = 0;
 	}
@@ -839,8 +862,8 @@ public class SoftwareSprite extends Sprite {
 		arg0 += this.anInt1863;
 		arg1 += this.anInt1861;
 		@Pc(21) int local21 = 0;
-		@Pc(24) int local24 = this.anInt1859;
-		@Pc(27) int local27 = this.anInt1867;
+		@Pc(24) int local24 = this.height;
+		@Pc(27) int local27 = this.width;
 		@Pc(31) int local31 = SoftwareRaster.width - local27;
 		@Pc(33) int local33 = 0;
 		@Pc(39) int local39 = arg0 + arg1 * SoftwareRaster.width;
@@ -919,46 +942,69 @@ public class SoftwareSprite extends Sprite {
 	}
 
 	@OriginalMember(owner = "client!mm", name = "b", descriptor = "(IIIIIIII[I[I)V")
-	public void method313(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(8) int[] arg7, @OriginalArg(9) int[] arg8) {
+	public void drawCompass(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int w, @OriginalArg(3) int h, @OriginalArg(4) int anchorX, @OriginalArg(5) int anchorY, @OriginalArg(6) int theta, @OriginalArg(8) int[] lineStart, @OriginalArg(9) int[] lineWidth) {
 		try {
-			@Pc(4) int local4 = -arg2 / 2;
-			@Pc(9) int local9 = -arg3 / 2;
-			@Pc(18) int local18 = (int) (Math.sin((double) arg6 / 326.11D) * 65536.0D);
-			@Pc(27) int local27 = (int) (Math.cos((double) arg6 / 326.11D) * 65536.0D);
-			@Pc(33) int local33 = local18 * 256 >> 8;
-			@Pc(39) int local39 = local27 * 256 >> 8;
-			@Pc(51) int local51 = (arg4 << 16) + local9 * local33 + local4 * local39;
-			@Pc(63) int local63 = (arg5 << 16) + (local9 * local39 - local4 * local33);
-			@Pc(69) int local69 = arg0 + arg1 * SoftwareRaster.width;
-			for (@Pc(71) int local71 = 0; local71 < arg3; local71++) {
-				@Pc(78) int local78 = arg7[local71];
-				@Pc(82) int local82 = local69 + local78;
-				@Pc(88) int local88 = local51 + local39 * local78;
-				@Pc(94) int local94 = local63 - local33 * local78;
-				for (@Pc(99) int local99 = -arg8[local71]; local99 < 0; local99++) {
-					@Pc(115) int local115 = this.pixels[(local88 >> 16) + (local94 >> 16) * this.anInt1867];
-					if (local115 == 0) {
-						local82++;
+			@Pc(4) int centerX = -w / 2;
+			@Pc(9) int centerY = -h / 2;
+			@Pc(18) int sin1 = (int) (Math.sin((double) theta / 326.11D) * 65536.0D);
+			@Pc(27) int cos1 = (int) (Math.cos((double) theta / 326.11D) * 65536.0D);
+			@Pc(33) int sin = sin1 * 256 >> 8;
+			@Pc(39) int cos = cos1 * 256 >> 8;
+			@Pc(51) int originX = (anchorX << 16) + centerY * sin + centerX * cos;
+			@Pc(63) int originY = (anchorY << 16) + (centerY * cos - centerX * sin);
+			@Pc(69) int origin = x + y * SoftwareRaster.width;
+			for (@Pc(71) int iy = 0; iy < h; iy++) {
+				@Pc(78) int start = lineStart[iy];
+				@Pc(82) int dstOff = origin + start;
+				@Pc(88) int dstX = originX + cos * start;
+				@Pc(94) int dstY = originY - sin * start;
+				for (@Pc(99) int ix = -lineWidth[iy]; ix < 0; ix++) {
+					@Pc(115) int color = this.pixels[(dstX >> 16) + (dstY >> 16) * this.width];
+					if (color == 0) {
+						dstOff++;
 					} else {
-						SoftwareRaster.pixels[local82++] = local115;
+						if (GlobalConfig.BILINEAR_MINIMAP) {
+							int x1 = dstX >> 16;
+							int y1 = dstY >> 16;
+							int x2 = x1 + 1;
+							int y2 = y1 + 1;
+							int sampleColor1 = this.pixels[x1 + y1 * this.width];
+							int sampleColor2 = this.pixels[x2 + y1 * this.width];
+							int sampleColor3 = this.pixels[x1 + y2 * this.width];
+							int sampleColor4 = this.pixels[x2 + y2 * this.width];
+							int x1Distance = (dstX >> 8) - (x1 << 8);
+							int y1Distance = (dstY >> 8) - (y1 << 8);
+							int x2Distance = (x2 << 8) - (dstX >> 8);
+							int y2Distance = (y2 << 8) - (dstY >> 8);
+							int sampleAlpha1 = x2Distance * y2Distance;
+							int sampleAlpha2 = x1Distance * y2Distance;
+							int sampleAlpha3 = x2Distance * y1Distance;
+							int sampleAlpha4 = x1Distance * y1Distance;
+							int red = (sampleColor1 >> 16 & 0xff) * sampleAlpha1 + (sampleColor2 >> 16 & 0xff) * sampleAlpha2 + (sampleColor3 >> 16 & 0xff) * sampleAlpha3 + (sampleColor4 >> 16 & 0xff) * sampleAlpha4 & 0xff0000;
+							int green = (sampleColor1 >> 8 & 0xff) * sampleAlpha1 + (sampleColor2 >> 8 & 0xff) * sampleAlpha2 + (sampleColor3 >> 8 & 0xff) * sampleAlpha3 + (sampleColor4 >> 8 & 0xff) * sampleAlpha4 >> 8 & 0xff00;
+							int blue = (sampleColor1 & 0xff) * sampleAlpha1 + (sampleColor2 & 0xff) * sampleAlpha2 + (sampleColor3 & 0xff) * sampleAlpha3 + (sampleColor4 & 0xff) * sampleAlpha4 >> 16;
+							SoftwareRaster.pixels[dstOff++] = red | green | blue;
+						} else {
+							SoftwareRaster.pixels[dstOff++] = color;
+						}
 					}
-					local88 += local39;
-					local94 -= local33;
+					dstX += cos;
+					dstY -= sin;
 				}
-				local51 += local33;
-				local63 += local39;
-				local69 += SoftwareRaster.width;
+				originX += sin;
+				originY += cos;
+				origin += SoftwareRaster.width;
 			}
-		} catch (@Pc(150) Exception local150) {
+		} catch (@Pc(150) Exception ex) {
 		}
 	}
 
 	@OriginalMember(owner = "client!mm", name = "f", descriptor = "(I)V")
 	public final void method314(@OriginalArg(0) int arg0) {
-		for (@Pc(4) int local4 = this.anInt1859 - 1; local4 > 0; local4--) {
-			@Pc(11) int local11 = local4 * this.anInt1867;
-			for (@Pc(16) int local16 = this.anInt1867 - 1; local16 > 0; local16--) {
-				if (this.pixels[local16 + local11] == 0 && this.pixels[local16 + local11 - this.anInt1867 - 1] != 0) {
+		for (@Pc(4) int local4 = this.height - 1; local4 > 0; local4--) {
+			@Pc(11) int local11 = local4 * this.width;
+			for (@Pc(16) int local16 = this.width - 1; local16 > 0; local16--) {
+				if (this.pixels[local16 + local11] == 0 && this.pixels[local16 + local11 - this.width - 1] != 0) {
 					this.pixels[local16 + local11] = arg0;
 				}
 			}
@@ -971,8 +1017,8 @@ public class SoftwareSprite extends Sprite {
 		if (arg2 <= 0 || arg3 <= 0) {
 			return;
 		}
-		@Pc(7) int local7 = this.anInt1867;
-		@Pc(10) int local10 = this.anInt1859;
+		@Pc(7) int local7 = this.width;
+		@Pc(10) int local10 = this.height;
 		@Pc(12) int local12 = 0;
 		@Pc(14) int local14 = 0;
 		@Pc(17) int local17 = this.anInt1860;
@@ -1060,8 +1106,8 @@ public class SoftwareSprite extends Sprite {
 		if (arg2 <= 0 || arg3 <= 0) {
 			return;
 		}
-		@Pc(7) int local7 = this.anInt1867;
-		@Pc(10) int local10 = this.anInt1859;
+		@Pc(7) int local7 = this.width;
+		@Pc(10) int local10 = this.height;
 		@Pc(12) int local12 = 0;
 		@Pc(14) int local14 = 0;
 		@Pc(17) int local17 = this.anInt1860;

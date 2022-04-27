@@ -55,7 +55,7 @@ public final class Static221 {
 			local24 += SoftwareRaster.width - 128;
 		}
 		if (GlRenderer.enabled) {
-			Static46.method1178(Static167.aClass3_Sub2_Sub1_Sub1_3.pixels, arg0, arg1, Static167.aClass3_Sub2_Sub1_Sub1_3.anInt1867, Static167.aClass3_Sub2_Sub1_Sub1_3.anInt1859);
+			Static46.method1178(Static167.aClass3_Sub2_Sub1_Sub1_3.pixels, arg0, arg1, Static167.aClass3_Sub2_Sub1_Sub1_3.width, Static167.aClass3_Sub2_Sub1_Sub1_3.height);
 		} else {
 			Static167.aClass3_Sub2_Sub1_Sub1_3.method1415(arg0, arg1);
 		}

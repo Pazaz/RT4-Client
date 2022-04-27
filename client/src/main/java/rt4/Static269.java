@@ -264,7 +264,7 @@ public final class Static269 {
 		local61 = (int) ((float) arg3 / WorldMap.zoom) + WorldMap.anInt435;
 		Static89.anInt2387 = (int) ((float) (arg3 * 2) / WorldMap.zoom);
 		if (GlRenderer.enabled) {
-			if (WorldMap.aClass3_Sub2_Sub1_Sub1_2 == null || WorldMap.aClass3_Sub2_Sub1_Sub1_2.anInt1867 != arg3 || WorldMap.aClass3_Sub2_Sub1_Sub1_2.anInt1859 != arg2) {
+			if (WorldMap.aClass3_Sub2_Sub1_Sub1_2 == null || WorldMap.aClass3_Sub2_Sub1_Sub1_2.width != arg3 || WorldMap.aClass3_Sub2_Sub1_Sub1_2.height != arg2) {
 				WorldMap.aClass3_Sub2_Sub1_Sub1_2 = null;
 				WorldMap.aClass3_Sub2_Sub1_Sub1_2 = new SoftwareSprite(arg3, arg2);
 			}

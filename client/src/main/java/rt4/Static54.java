@@ -34,7 +34,7 @@ public final class Static54 {
 			if (GlRenderer.enabled) {
 				((GlSprite) MiniMap.sprite).method1427(arg2, arg1, arg3.anInt445, arg3.anInt459, local57, local67, local48, Static273.anInt4130 + 256, (GlSprite) arg3.method489(false));
 			} else {
-				((SoftwareSprite) MiniMap.sprite).method310(arg2, arg1, arg3.anInt445, arg3.anInt459, local57, local67, local48, Static273.anInt4130 + 256, arg3.anIntArray37, arg3.anIntArray45);
+				((SoftwareSprite) MiniMap.sprite).drawMinimapRegion(arg2, arg1, arg3.anInt445, arg3.anInt459, local57, local67, local48, Static273.anInt4130 + 256, arg3.anIntArray37, arg3.anIntArray45);
 			}
 			@Pc(146) int local146;
 			@Pc(181) int local181;
