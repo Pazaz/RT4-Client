@@ -180,6 +180,11 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
         logicCycles = 0;
     }
 
+    @OriginalMember(owner = "client!ja", name = "a", descriptor = "(II)V")
+	public static void setFpsTarget(@OriginalArg(0) int fps) {
+		VARIABLE_RENDER_RATE = 1000 / fps;
+	}
+
     @OriginalMember(owner = "client!rc", name = "focusLost", descriptor = "(Ljava/awt/event/FocusEvent;)V")
 	@Override
 	public final void focusLost(@OriginalArg(0) FocusEvent event) {
@@ -599,6 +604,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			frame.toFront();
 			@Pc(44) Insets insets = frame.getInsets();
 			frame.setSize(insets.left + frameWidth + insets.right, insets.top + frameHeight + insets.bottom);
+			GameShell.setFpsTarget(getCurrentDevice().getDisplayMode().getRefreshRate());
 			Static69.signLink = signLink = new SignLink(null, cacheId, cacheSubDir, 28);
 			@Pc(76) PrivilegedRequest request = signLink.startThread(1, this);
 			while (request.status == 0) {

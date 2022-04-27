@@ -144,7 +144,7 @@ public class Cheat {
                 Preferences.sentToServer = false;
             }
             if (arg0.startsWith(aClass100_623) && client.modeWhere != 0) {
-                Static115.method2312(arg0.substring(6).parseInt());
+                GameShell.setFpsTarget(arg0.substring(6).parseInt());
             }
             if (arg0.equalsIgnoreCase(aClass100_990)) {
                 throw new RuntimeException();

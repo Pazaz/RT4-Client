@@ -51,3 +51,4 @@ Unconfigurable:
 - Camera panning input rewritten to use render loop timing
 - Varp array size was extended to 3500 instead of 2500
 - Mouse wheel camera movement (click middle button and move mouse)
+- Render FPS is set to your monitor's refresh rate
