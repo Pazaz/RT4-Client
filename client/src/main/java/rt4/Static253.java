@@ -50,8 +50,8 @@ public final class Static253 {
 			if (local59 < Static234.anInt5245 / 256) {
 				local59 = Static234.anInt5245 / 256;
 			}
-			if (Static176.aBooleanArray95[4] && Static276.anIntArray564[4] + 128 > local59) {
-				local59 = Static276.anIntArray564[4] + 128;
+			if (Static176.customCameraActive[4] && Static276.cameraAmplitude[4] + 128 > local59) {
+				local59 = Static276.cameraAmplitude[4] + 128;
 			}
 			Static18.method555(Static81.cameraX, arg0, SceneGraph.getTileHeight(Player.level, PlayerList.self.xFine, PlayerList.self.zFine) - 50, 600 - -(local59 * 3), local57, Static111.cameraZ, local59);
 		}
@@ -63,8 +63,8 @@ public final class Static253 {
 		@Pc(127) int local127;
 		@Pc(171) int local171;
 		for (local127 = 0; local127 < 5; local127++) {
-			if (Static176.aBooleanArray95[local127]) {
-				local171 = (int) ((double) -Static222.anIntArray437[local127] + (double) (Static222.anIntArray437[local127] * 2 + 1) * Math.random() + Math.sin((double) Static31.anIntArray76[local127] * ((double) Static202.anIntArray424[local127] / 100.0D)) * (double) Static276.anIntArray564[local127]);
+			if (Static176.customCameraActive[local127]) {
+				local171 = (int) ((double) -Static222.cameraJitter[local127] + (double) (Static222.cameraJitter[local127] * 2 + 1) * Math.random() + Math.sin((double) Static31.anIntArray76[local127] * ((double) Static202.cameraFrequency[local127] / 100.0D)) * (double) Static276.cameraAmplitude[local127]);
 				if (local127 == 3) {
 					Static184.cameraYaw = local171 + Static184.cameraYaw & 0x7FF;
 				}

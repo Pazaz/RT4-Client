@@ -10,7 +10,7 @@ public final class Static196 {
 	public static final int[] anIntArray408 = new int[500];
 
 	@OriginalMember(owner = "client!pl", name = "f", descriptor = "Lclient!na;")
-	public static final JagString aClass100_863 = JagString.parse(":tradereq:");
+	public static final JagString TRADEREQ = JagString.parse(":tradereq:");
 
     @OriginalMember(owner = "client!pl", name = "a", descriptor = "(ZI)V")
 	public static void method3535(@OriginalArg(0) boolean arg0) {

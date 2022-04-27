@@ -8,9 +8,6 @@ public final class Static7 {
     @OriginalMember(owner = "client!ah", name = "t", descriptor = "I")
 	public static int anInt986;
 
-	@OriginalMember(owner = "client!ah", name = "j", descriptor = "[I")
-	public static final int[] varps = new int[2500];
-
     @OriginalMember(owner = "client!ah", name = "n", descriptor = "I")
 	public static int anInt983 = 0;
 
@@ -37,13 +34,13 @@ public final class Static7 {
 						Static78.anInt2145 = 0;
 						Static123.aBoolean155 = false;
 						if (Static118.aClass13_15 != null) {
-							Static43.redraw(Static118.aClass13_15);
+							InterfaceList.redraw(Static118.aClass13_15);
 						}
 						Static118.aClass13_15 = InterfaceList.getComponent(local99);
 						Static149.anInt3554 = Mouse.clickX;
 						Static206.anInt4773 = Mouse.clickY;
 						Static4.anInt36 = local93;
-						Static43.redraw(Static118.aClass13_15);
+						InterfaceList.redraw(Static118.aClass13_15);
 						return;
 					}
 				}

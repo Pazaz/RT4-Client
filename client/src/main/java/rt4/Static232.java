@@ -12,9 +12,6 @@ public final class Static232 {
 	@OriginalMember(owner = "client!sm", name = "e", descriptor = "[[[B")
 	public static byte[][][] aByteArrayArrayArray13;
 
-	@OriginalMember(owner = "client!sm", name = "k", descriptor = "Lsignlink!im;")
-	public static PrivilegedRequest aClass212_5;
-
 	@OriginalMember(owner = "client!sm", name = "m", descriptor = "I")
 	public static int anInt5212;
 
@@ -71,7 +68,7 @@ public final class Static232 {
 				}
 			}
 		}
-		for (@Pc(285) MapElement local285 = (MapElement) Static172.aClass69_97.method2289(); local285 != null; local285 = (MapElement) Static172.aClass69_97.method2288()) {
+		for (@Pc(285) MapElement local285 = (MapElement) Static172.aClass69_97.start(); local285 != null; local285 = (MapElement) Static172.aClass69_97.next()) {
 			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 15, local11);
 			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 13, local11);
 			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 11, local11);

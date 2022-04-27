@@ -98,7 +98,7 @@ public final class ScriptRunner {
 					}
 					if (opcode == 1) {
 						id = intOperands[pc];
-						intStack[isp++] = Static7.varps[id];
+						intStack[isp++] = VarpDomain.varps[id];
 						continue;
 					}
 					if (opcode == 2) {
@@ -358,7 +358,7 @@ public final class ScriptRunner {
 								throw new RuntimeException("Gap at:" + (int2 - 1));
 							}
 							@Pc(1137) Component local1137 = new Component();
-							local1137.aBoolean32 = true;
+							local1137.usingScripts = true;
 							local1137.createdComponentId = int2;
 							local1137.layer = local1137.id = local1063.id;
 							local1137.type = int3;
@@ -368,7 +368,7 @@ public final class ScriptRunner {
 							} else {
 								Static227.staticActiveComponent2 = local1137;
 							}
-							Static43.redraw(local1063);
+							InterfaceList.redraw(local1063);
 							continue;
 						}
 						throw new RuntimeException();
@@ -384,14 +384,14 @@ public final class ScriptRunner {
 						}
 						local1204 = InterfaceList.getComponent(component.id);
 						local1204.createdComponents[component.createdComponentId] = null;
-						Static43.redraw(local1204);
+						InterfaceList.redraw(local1204);
 						continue;
 					}
 					if (opcode == 102) {
 						isp--;
 						component = InterfaceList.getComponent(intStack[isp]);
 						component.createdComponents = null;
-						Static43.redraw(component);
+						InterfaceList.redraw(component);
 						continue;
 					}
 					if (opcode == 200) {
@@ -493,7 +493,7 @@ public final class ScriptRunner {
 									if (component.scrollY < 0) {
 										component.scrollY = 0;
 									}
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									if (component.createdComponentId == -1) {
 										Static118.method2353(component.id);
 									}
@@ -502,7 +502,7 @@ public final class ScriptRunner {
 								if (opcode == 1101) {
 									isp--;
 									component.color = intStack[isp];
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									if (component.createdComponentId == -1) {
 										Static245.method4224(component.id);
 									}
@@ -511,44 +511,44 @@ public final class ScriptRunner {
 								if (opcode == 1102) {
 									isp--;
 									component.aBoolean30 = intStack[isp] == 1;
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1103) {
 									isp--;
 									component.anInt476 = intStack[isp];
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1104) {
 									isp--;
 									component.anInt490 = intStack[isp];
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1105) {
 									isp--;
 									component.anInt477 = intStack[isp];
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1106) {
 									isp--;
 									component.anInt521 = intStack[isp];
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1107) {
 									isp--;
 									component.aBoolean23 = intStack[isp] == 1;
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1108) {
 									component.modelType = 1;
 									isp--;
 									component.modelId = intStack[isp];
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									if (component.createdComponentId == -1) {
 										Static271.method4600(component.id);
 									}
@@ -562,7 +562,7 @@ public final class ScriptRunner {
 									component.modelYAngle = intStack[isp + 3];
 									component.modelYOffset = intStack[isp + 4];
 									component.modelZoom = intStack[isp + 5];
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									if (component.createdComponentId == -1) {
 										Static153.method2910(component.id);
 										Static180.method3328(component.id);
@@ -577,7 +577,7 @@ public final class ScriptRunner {
 										component.anInt510 = 0;
 										component.anInt500 = 0;
 										component.anInt496 = 1;
-										Static43.redraw(component);
+										InterfaceList.redraw(component);
 									}
 									if (component.createdComponentId == -1) {
 										Static181.method3345(component.id);
@@ -587,7 +587,7 @@ public final class ScriptRunner {
 								if (opcode == 1111) {
 									isp--;
 									component.aBoolean22 = intStack[isp] == 1;
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1112) {
@@ -595,7 +595,7 @@ public final class ScriptRunner {
 									local2522 = stringStack[ssp];
 									if (!local2522.strEquals(component.text)) {
 										component.text = local2522;
-										Static43.redraw(component);
+										InterfaceList.redraw(component);
 									}
 									if (component.createdComponentId == -1) {
 										Static163.method3096(component.id);
@@ -605,7 +605,7 @@ public final class ScriptRunner {
 								if (opcode == 1113) {
 									isp--;
 									component.anInt502 = intStack[isp];
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1114) {
@@ -613,44 +613,44 @@ public final class ScriptRunner {
 									component.anInt460 = intStack[isp];
 									component.anInt478 = intStack[isp + 1];
 									component.anInt467 = intStack[isp + 2];
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1115) {
 									isp--;
 									component.aBoolean28 = intStack[isp] == 1;
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1116) {
 									isp--;
 									component.anInt514 = intStack[isp];
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1117) {
 									isp--;
 									component.anInt513 = intStack[isp];
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1118) {
 									isp--;
 									component.aBoolean21 = intStack[isp] == 1;
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1119) {
 									isp--;
 									component.aBoolean26 = intStack[isp] == 1;
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1120) {
 									isp -= 2;
 									component.anInt486 = intStack[isp];
 									component.anInt491 = intStack[isp + 1];
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									if (component.type == 0) {
 										Static17.method531(component, false);
 									}
@@ -660,19 +660,19 @@ public final class ScriptRunner {
 									isp -= 2;
 									component.aShort11 = (short) intStack[isp];
 									component.aShort10 = (short) intStack[isp + 1];
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1122) {
 									isp--;
 									component.aBoolean18 = intStack[isp] == 1;
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1123) {
 									isp--;
 									component.modelZoom = intStack[isp];
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 									if (component.createdComponentId == -1) {
 										Static153.method2910(component.id);
 									}
@@ -686,7 +686,7 @@ public final class ScriptRunner {
 									component = InterfaceList.getComponent(intStack[isp]);
 									opcode -= 1000;
 								}
-								Static43.redraw(component);
+								InterfaceList.redraw(component);
 								if (opcode == 1200 || opcode == 1205) {
 									isp -= 2;
 									int2 = intStack[isp + 1];
@@ -1164,7 +1164,7 @@ public final class ScriptRunner {
 									if (opcode == 2702) {
 										isp--;
 										int1 = intStack[isp];
-										@Pc(12566) Class3_Sub31 local12566 = (Class3_Sub31) Static119.aClass133_9.get((long) int1);
+										@Pc(12566) ComponentPointer local12566 = (ComponentPointer) InterfaceList.openInterfaces.get((long) int1);
 										if (local12566 == null) {
 											intStack[isp++] = 0;
 										} else {
@@ -1193,7 +1193,7 @@ public final class ScriptRunner {
 										isp -= 2;
 										int1 = intStack[isp];
 										int3 = intStack[isp + 1];
-										@Pc(12663) Class3_Sub31 local12663 = (Class3_Sub31) Static119.aClass133_9.get((long) int1);
+										@Pc(12663) ComponentPointer local12663 = (ComponentPointer) InterfaceList.openInterfaces.get((long) int1);
 										if (local12663 != null && local12663.anInt5878 == int3) {
 											intStack[isp++] = 1;
 											continue;
@@ -1798,7 +1798,7 @@ public final class ScriptRunner {
 										isp--;
 										int1 = intStack[isp];
 										if (ClanChat.name != null && ClanChat.size > int1) {
-											stringStack[ssp++] = ClanChat.members[int1].aClass100_635;
+											stringStack[ssp++] = ClanChat.members[int1].worldName;
 											continue;
 										}
 										stringStack[ssp++] = EMPTY_STRING;
@@ -2957,11 +2957,11 @@ public final class ScriptRunner {
 													}
 													if (opcode == 5419) {
 														string = EMPTY_STRING;
-														if (Static232.aClass212_5 != null) {
-															string = Static181.method3341(Static232.aClass212_5.intArg2);
+														if (Player.lastLogAddress != null) {
+															string = Static181.method3341(Player.lastLogAddress.intArg2);
 															try {
-																if (Static232.aClass212_5.result != null) {
-																	@Pc(8281) byte[] local8281 = ((String) Static232.aClass212_5.result).getBytes("ISO-8859-1");
+																if (Player.lastLogAddress.result != null) {
+																	@Pc(8281) byte[] local8281 = ((String) Player.lastLogAddress.result).getBytes("ISO-8859-1");
 																	string = Static10.decodeString(local8281, local8281.length, 0);
 																}
 															} catch (@Pc(8290) UnsupportedEncodingException local8290) {
@@ -4054,7 +4054,7 @@ public final class ScriptRunner {
 								}
 								component.xMode = (byte) int2;
 								component.yMode = (byte) int3;
-								Static43.redraw(component);
+								InterfaceList.redraw(component);
 								Static74.update(component);
 								if (component.createdComponentId == -1) {
 									Static280.method4675(component.id);
@@ -4081,7 +4081,7 @@ public final class ScriptRunner {
 									int3 = 4;
 								}
 								component.dynamicWidthValue = (byte) int3;
-								Static43.redraw(component);
+								InterfaceList.redraw(component);
 								Static74.update(component);
 								if (component.type == 0) {
 									Static17.method531(component, false);
@@ -4093,7 +4093,7 @@ public final class ScriptRunner {
 								local1552 = intStack[isp] == 1;
 								if (local1552 != component.hidden) {
 									component.hidden = local1552;
-									Static43.redraw(component);
+									InterfaceList.redraw(component);
 								}
 								if (component.createdComponentId == -1) {
 									Static93.method1906(component.id);
@@ -4104,7 +4104,7 @@ public final class ScriptRunner {
 								isp -= 2;
 								component.aspectWidth = intStack[isp];
 								component.aspectHeight = intStack[isp + 1];
-								Static43.redraw(component);
+								InterfaceList.redraw(component);
 								Static74.update(component);
 								if (component.type == 0) {
 									Static17.method531(component, false);
@@ -4145,4 +4145,8 @@ public final class ScriptRunner {
 		}
 	}
 
+    @OriginalMember(owner = "client!gi", name = "a", descriptor = "(ILclient!jl;)V")
+	public static void run(@OriginalArg(1) HookRequest request) {
+		run(200000, request);
+	}
 }

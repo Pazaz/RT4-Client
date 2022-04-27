@@ -48,7 +48,7 @@ public final class Static150 {
 		if (arg2.dynamicHeightValue == 4) {
 			arg2.anInt459 = arg2.aspectHeight * arg2.anInt445 / arg2.aspectWidth;
 		}
-		if (Static121.aBoolean154 && (InterfaceList.getServerActiveProperties(arg2).anInt546 != 0 || arg2.type == 0)) {
+		if (Static121.aBoolean154 && (InterfaceList.getServerActiveProperties(arg2).accessMask != 0 || arg2.type == 0)) {
 			if (arg2.anInt459 < 5 && arg2.anInt445 < 5) {
 				arg2.anInt459 = 5;
 				arg2.anInt445 = 5;

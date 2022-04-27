@@ -6,9 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static160 {
 
-    @OriginalMember(owner = "client!mj", name = "d", descriptor = "[Lclient!na;")
-	public static final JagString[] aClass100Array121 = new JagString[8];
-
 	@OriginalMember(owner = "client!mj", name = "g", descriptor = "Lclient!na;")
 	public static final JagString aClass100_761 = JagString.parse("(U3");
 
@@ -20,7 +17,7 @@ public final class Static160 {
 		if (GlRenderer.enabled) {
 			Static46.method1187(arg0, arg1, arg2.anInt445 + arg0, arg2.anInt459 + arg1);
 		}
-		if (Static270.anInt5795 >= 3) {
+		if (Static270.minimapState >= 3) {
 			if (GlRenderer.enabled) {
 				@Pc(44) Sprite local44 = arg2.method489(false);
 				if (local44 != null) {

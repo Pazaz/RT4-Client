@@ -126,10 +126,10 @@ public final class Static127 {
 				}
 			}
 		}
-		for (@Pc(451) Class3_Sub7 local451 = (Class3_Sub7) Static26.aClass69_27.method2289(); local451 != null; local451 = (Class3_Sub7) Static26.aClass69_27.method2288()) {
-			local451.anInt916 -= local81;
-			local451.anInt928 -= local86;
-			if (local451.anInt928 < 0 || local451.anInt916 < 0 || local451.anInt928 >= 104 || local451.anInt916 >= 104) {
+		for (@Pc(451) SceneryStack local451 = (SceneryStack) Static26.sceneryList.start(); local451 != null; local451 = (SceneryStack) Static26.sceneryList.next()) {
+			local451.z -= local81;
+			local451.x -= local86;
+			if (local451.x < 0 || local451.z < 0 || local451.x >= 104 || local451.z >= 104) {
 				local451.unlink();
 			}
 		}
@@ -144,9 +144,9 @@ public final class Static127 {
 			Static227.cameraType = 1;
 		}
 		SoundPlayer.anInt4451 = 0;
-		if (Static115.anInt2939 != 0) {
+		if (Static115.mapFlagX != 0) {
 			Static84.anInt2255 -= local81;
-			Static115.anInt2939 -= local86;
+			Static115.mapFlagX -= local86;
 		}
 		if (GlRenderer.enabled && arg4 && (Math.abs(local86) > 104 || Math.abs(local81) > 104)) {
 			Static86.setInstantFade();
@@ -204,11 +204,11 @@ public final class Static127 {
 														return arg1;
 													}
 													@Pc(246) JagString local246 = JagString.EMPTY;
-													if (Static232.aClass212_5 != null) {
-														local246 = Static181.method3341(Static232.aClass212_5.intArg2);
+													if (Player.lastLogAddress != null) {
+														local246 = Static181.method3341(Player.lastLogAddress.intArg2);
 														try {
-															if (Static232.aClass212_5.result != null) {
-																@Pc(265) byte[] local265 = ((String) Static232.aClass212_5.result).getBytes("ISO-8859-1");
+															if (Player.lastLogAddress.result != null) {
+																@Pc(265) byte[] local265 = ((String) Player.lastLogAddress.result).getBytes("ISO-8859-1");
 																local246 = Static10.decodeString(local265, local265.length, 0);
 															}
 														} catch (@Pc(274) UnsupportedEncodingException local274) {

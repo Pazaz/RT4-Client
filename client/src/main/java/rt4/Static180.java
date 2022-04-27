@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static180 {
 
 	@OriginalMember(owner = "client!og", name = "b", descriptor = "I")
-	public static int anInt4264;
+	public static int currentChunkZ;
 
 	@OriginalMember(owner = "client!og", name = "e", descriptor = "Lclient!be;")
 	public static Component aClass13_22;

@@ -8,7 +8,13 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!e")
 public final class Player extends PathingEntity {
 
-    @OriginalMember(owner = "client!pa", name = "P", descriptor = "Lclient!na;")
+	@OriginalMember(owner = "client!mj", name = "d", descriptor = "[Lclient!na;")
+	public static final JagString[] options = new JagString[8];
+	@OriginalMember(owner = "client!pg", name = "ab", descriptor = "[I")
+	public static final int[] cursors = new int[8];
+	@OriginalMember(owner = "client!a", name = "f", descriptor = "[Z")
+	public static final boolean[] secondaryOptions = new boolean[8];
+	@OriginalMember(owner = "client!pa", name = "P", descriptor = "Lclient!na;")
     public static JagString password = JagString.EMPTY;
 	@OriginalMember(owner = "client!pa", name = "S", descriptor = "Lclient!na;")
 	public static JagString usernameInput = JagString.EMPTY;
@@ -24,6 +30,10 @@ public final class Player extends PathingEntity {
 	public static int worldId = -1;
 	@OriginalMember(owner = "client!em", name = "B", descriptor = "I")
 	public static int rebootTimer = 0;
+    @OriginalMember(owner = "client!hm", name = "gb", descriptor = "J")
+    public static long name37;
+	@OriginalMember(owner = "client!sm", name = "k", descriptor = "Lsignlink!im;")
+	public static PrivilegedRequest lastLogAddress;
 	@OriginalMember(owner = "client!e", name = "Bc", descriptor = "Lclient!hh;")
 	public PlayerAppearance appearance;
 
@@ -88,7 +98,7 @@ public final class Player extends PathingEntity {
 			if (local92 == 2) {
 				arg2.anInt3371 = 0;
 			}
-		} else if (arg1 == -1 || arg2.seqId == -1 || SeqTypeList.get(arg1).anInt5355 >= SeqTypeList.get(arg2.seqId).anInt5355) {
+		} else if (arg1 == -1 || arg2.seqId == -1 || SeqTypeList.get(arg1).forcedPriority >= SeqTypeList.get(arg2.seqId).forcedPriority) {
 			arg2.anInt3373 = 1;
 			arg2.anInt3425 = 0;
 			arg2.anInt3420 = arg0;
@@ -131,7 +141,7 @@ public final class Player extends PathingEntity {
 								} else if (local71 == 2) {
 									local76.anInt5400 = 0;
 								}
-							} else if (local68.anInt5355 >= SeqTypeList.get(local76.anInt5396).anInt5355) {
+							} else if (local68.forcedPriority >= SeqTypeList.get(local76.anInt5396).forcedPriority) {
 								local76 = arg2.aClass147Array3[local30] = null;
 							}
 						}
@@ -309,30 +319,30 @@ public final class Player extends PathingEntity {
 			}
 		}
 		if (PlayerList.self == this) {
-			for (local102 = Static143.aClass102Array1.length - 1; local102 >= 0; local102--) {
-				@Pc(245) Class102 local245 = Static143.aClass102Array1[local102];
-				if (local245 != null && local245.anInt4052 != -1) {
+			for (local102 = Static143.hintMapMarkers.length - 1; local102 >= 0; local102--) {
+				@Pc(245) MapMarker local245 = Static143.hintMapMarkers[local102];
+				if (local245 != null && local245.playerModelId != -1) {
 					@Pc(291) int local291;
 					@Pc(302) int local302;
-					if (local245.anInt4058 == 1 && local245.anInt4057 >= 0 && NpcList.npcs.length > local245.anInt4057) {
-						@Pc(278) Npc local278 = NpcList.npcs[local245.anInt4057];
+					if (local245.type == 1 && local245.actorTargetId >= 0 && NpcList.npcs.length > local245.actorTargetId) {
+						@Pc(278) Npc local278 = NpcList.npcs[local245.actorTargetId];
 						if (local278 != null) {
 							local291 = local278.xFine / 32 - PlayerList.self.xFine / 32;
 							local302 = local278.zFine / 32 - PlayerList.self.zFine / 32;
-							this.method1263(null, local302, local76, local291, arg5, arg9, arg0, arg7, arg4, arg3, arg1, local245.anInt4052, arg2, arg6);
+							this.method1263(null, local302, local76, local291, arg5, arg9, arg0, arg7, arg4, arg3, arg1, local245.playerModelId, arg2, arg6);
 						}
 					}
-					if (local245.anInt4058 == 2) {
-						@Pc(340) int local340 = (local245.anInt4053 - Static225.originX) * 4 + 2 - PlayerList.self.xFine / 32;
+					if (local245.type == 2) {
+						@Pc(340) int local340 = (local245.targetX - Static225.originX) * 4 + 2 - PlayerList.self.xFine / 32;
 						local291 = (local245.anInt4046 - Static142.originZ) * 4 + 2 - PlayerList.self.zFine / 32;
-						this.method1263(null, local291, local76, local340, arg5, arg9, arg0, arg7, arg4, arg3, arg1, local245.anInt4052, arg2, arg6);
+						this.method1263(null, local291, local76, local340, arg5, arg9, arg0, arg7, arg4, arg3, arg1, local245.playerModelId, arg2, arg6);
 					}
-					if (local245.anInt4058 == 10 && local245.anInt4057 >= 0 && PlayerList.players.length > local245.anInt4057) {
-						@Pc(395) Player local395 = PlayerList.players[local245.anInt4057];
+					if (local245.type == 10 && local245.actorTargetId >= 0 && PlayerList.players.length > local245.actorTargetId) {
+						@Pc(395) Player local395 = PlayerList.players[local245.actorTargetId];
 						if (local395 != null) {
 							local291 = local395.xFine / 32 - PlayerList.self.xFine / 32;
 							local302 = local395.zFine / 32 - PlayerList.self.zFine / 32;
-							this.method1263(null, local302, local76, local291, arg5, arg9, arg0, arg7, arg4, arg3, arg1, local245.anInt4052, arg2, arg6);
+							this.method1263(null, local302, local76, local291, arg5, arg9, arg0, arg7, arg4, arg3, arg1, local245.playerModelId, arg2, arg6);
 						}
 					}
 				}

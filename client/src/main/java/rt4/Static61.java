@@ -8,7 +8,7 @@ public final class Static61 {
 	public static float aFloat7;
 
 	@OriginalMember(owner = "client!en", name = "h", descriptor = "Lclient!na;")
-	public static final JagString aClass100_423 = JagString.parse(":chalreq:");
+	public static final JagString CHALREQ = JagString.parse(":chalreq:");
 
 	@OriginalMember(owner = "client!en", name = "t", descriptor = "[I")
 	public static final int[] anIntArray148 = new int[14];

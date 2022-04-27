@@ -21,10 +21,7 @@ public final class Static233 {
 	@OriginalMember(owner = "client!t", name = "v", descriptor = "[Lclient!na;")
 	public static final JagString[] aClass100Array160 = new JagString[500];
 
-	@OriginalMember(owner = "client!t", name = "w", descriptor = "[J")
-	public static final long[] aLongArray9 = new long[100];
-
-    @OriginalMember(owner = "client!t", name = "y", descriptor = "I")
+	@OriginalMember(owner = "client!t", name = "y", descriptor = "I")
 	public static int loadingScreenState = 0;
 
 	@OriginalMember(owner = "client!t", name = "z", descriptor = "I")
@@ -36,11 +33,11 @@ public final class Static233 {
     @OriginalMember(owner = "client!t", name = "a", descriptor = "(IIIZIII)V")
 	public static void method4000(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
 		@Pc(3) int local3 = 0;
-		@Pc(5) Class102[] local5 = Static143.aClass102Array1;
+		@Pc(5) MapMarker[] local5 = Static143.hintMapMarkers;
 		while (local5.length > local3) {
-			@Pc(17) Class102 local17 = local5[local3];
-			if (local17 != null && local17.anInt4058 == 2) {
-				Static198.method1026(arg0 >> 1, arg4, (local17.anInt4046 - Static142.originZ << 7) + local17.anInt4047, local17.anInt4050 * 2, arg2 >> 1, local17.anInt4045 + (local17.anInt4053 - Static225.originX << 7), arg3);
+			@Pc(17) MapMarker local17 = local5[local3];
+			if (local17 != null && local17.type == 2) {
+				Static198.method1026(arg0 >> 1, arg4, (local17.anInt4046 - Static142.originZ << 7) + local17.anInt4047, local17.anInt4050 * 2, arg2 >> 1, local17.anInt4045 + (local17.targetX - Static225.originX << 7), arg3);
 				if (Static65.anInt1951 > -1 && client.loop % 20 < 10) {
 					Sprites.headhints[local17.anInt4048].method1423(arg1 + Static65.anInt1951 - 12, arg5 + -28 - -Static16.anInt548);
 				}

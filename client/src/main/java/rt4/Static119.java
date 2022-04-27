@@ -8,9 +8,6 @@ public final class Static119 {
 	@OriginalMember(owner = "client!je", name = "eb", descriptor = "[I")
 	public static int[] anIntArray282;
 
-	@OriginalMember(owner = "client!je", name = "T", descriptor = "Lclient!sc;")
-	public static HashTable aClass133_9 = new HashTable(8);
-
 	@OriginalMember(owner = "client!je", name = "U", descriptor = "Lclient!na;")
 	public static final JagString aClass100_588 = JagString.parse("showingVideoAd");
 
@@ -34,12 +31,12 @@ public final class Static119 {
 	@OriginalMember(owner = "client!je", name = "k", descriptor = "(I)V")
 	public static void method2386() {
 		@Pc(6) AreaSound local6;
-		for (local6 = (AreaSound) Static3.aClass69_135.method2289(); local6 != null; local6 = (AreaSound) Static3.aClass69_135.method2288()) {
+		for (local6 = (AreaSound) Static3.aClass69_135.start(); local6 != null; local6 = (AreaSound) Static3.aClass69_135.next()) {
 			if (local6.multiLocOrNpc) {
 				local6.update();
 			}
 		}
-		for (local6 = (AreaSound) Static152.aClass69_87.method2289(); local6 != null; local6 = (AreaSound) Static152.aClass69_87.method2288()) {
+		for (local6 = (AreaSound) Static152.aClass69_87.start(); local6 != null; local6 = (AreaSound) Static152.aClass69_87.next()) {
 			if (local6.multiLocOrNpc) {
 				local6.update();
 			}

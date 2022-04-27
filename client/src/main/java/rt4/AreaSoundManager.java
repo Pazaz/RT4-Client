@@ -76,7 +76,7 @@ public class AreaSoundManager {
 
     @OriginalMember(owner = "client!hc", name = "a", descriptor = "(Lclient!km;Z)V")
     public static void remove(@OriginalArg(0) Npc arg0) {
-        for (@Pc(13) AreaSound local13 = (AreaSound) Static152.aClass69_87.method2289(); local13 != null; local13 = (AreaSound) Static152.aClass69_87.method2288()) {
+        for (@Pc(13) AreaSound local13 = (AreaSound) Static152.aClass69_87.start(); local13 != null; local13 = (AreaSound) Static152.aClass69_87.next()) {
             if (arg0 == local13.npc) {
                 if (local13.primaryStream != null) {
                     client.soundStream.removeSubStream(local13.primaryStream);

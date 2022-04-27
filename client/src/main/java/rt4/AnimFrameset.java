@@ -20,14 +20,14 @@ public final class AnimFrameset extends SecondaryNode {
 		for (@Pc(21) int local21 = 0; local21 < local19.length; local21++) {
 			@Pc(37) byte[] local37 = arg0.getFile(arg2, local19[local21]);
 			@Pc(51) int local51 = local37[1] & 0xFF | (local37[0] & 0xFF) << 8;
-			@Pc(56) AnimBase local56 = (AnimBase) local5.method2289();
+			@Pc(56) AnimBase local56 = (AnimBase) local5.start();
 			@Pc(58) AnimBase local58 = null;
 			while (local56 != null) {
 				if (local56.id == local51) {
 					local58 = local56;
 					break;
 				}
-				local56 = (AnimBase) local5.method2288();
+				local56 = (AnimBase) local5.next();
 			}
 			if (local58 == null) {
 				@Pc(85) byte[] local85 = arg1.method4502(0, local51);

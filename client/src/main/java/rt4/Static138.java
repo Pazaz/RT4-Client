@@ -58,7 +58,7 @@ public final class Static138 {
 	public static final int[] anIntArray324 = new int[] { 19, 55, 38, 155, 255, 110, 137, 205, 76 };
 
 	@OriginalMember(owner = "client!km", name = "Sc", descriptor = "Lclient!na;")
-	public static final JagString aClass100_654 = JagString.parse(":trade:");
+	public static final JagString TRADE = JagString.parse(":trade:");
 
 	@OriginalMember(owner = "client!km", name = "ad", descriptor = "I")
 	public static int fp = 0;

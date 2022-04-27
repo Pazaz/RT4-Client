@@ -17,7 +17,7 @@ public class GlobalConfig {
     public static final BigInteger RSA_EXPONENT = new BigInteger("65537");
 
     // Server IP
-    public static String DEFAULT_HOSTNAME = "play.2009scape.org";
+    public static String DEFAULT_HOSTNAME = "test.2009scape.org";
 
     // Jagex had this at 40000+id
     public static int DEFAULT_PORT = 43594;

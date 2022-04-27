@@ -27,7 +27,7 @@ public final class MidiNoteStream extends PcmStream {
 	public final PcmStream method4409() {
 		@Pc(9) MidiNote local9;
 		do {
-			local9 = (MidiNote) this.aClass69_126.method2288();
+			local9 = (MidiNote) this.aClass69_126.next();
 			if (local9 == null) {
 				return null;
 			}
@@ -38,7 +38,7 @@ public final class MidiNoteStream extends PcmStream {
 	@OriginalMember(owner = "client!te", name = "b", descriptor = "()Lclient!qb;")
 	@Override
 	public final PcmStream method4406() {
-		@Pc(9) MidiNote local9 = (MidiNote) this.aClass69_126.method2289();
+		@Pc(9) MidiNote local9 = (MidiNote) this.aClass69_126.start();
 		if (local9 == null) {
 			return null;
 		} else if (local9.aClass3_Sub3_Sub1_3 == null) {
@@ -80,7 +80,7 @@ public final class MidiNoteStream extends PcmStream {
 	@Override
 	public final void skip(@OriginalArg(0) int arg0) {
 		this.aClass3_Sub3_Sub2_2.skip(arg0);
-		for (@Pc(15) MidiNote local15 = (MidiNote) this.aClass69_126.method2289(); local15 != null; local15 = (MidiNote) this.aClass69_126.method2288()) {
+		for (@Pc(15) MidiNote local15 = (MidiNote) this.aClass69_126.start(); local15 != null; local15 = (MidiNote) this.aClass69_126.next()) {
 			if (!this.aClass3_Sub3_Sub4_3.method4445(local15)) {
 				@Pc(27) int local27 = arg0;
 				do {
@@ -100,7 +100,7 @@ public final class MidiNoteStream extends PcmStream {
 	@Override
 	public final void read(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		this.aClass3_Sub3_Sub2_2.read(arg0, arg1, arg2);
-		for (@Pc(17) MidiNote local17 = (MidiNote) this.aClass69_126.method2289(); local17 != null; local17 = (MidiNote) this.aClass69_126.method2288()) {
+		for (@Pc(17) MidiNote local17 = (MidiNote) this.aClass69_126.start(); local17 != null; local17 = (MidiNote) this.aClass69_126.next()) {
 			if (!this.aClass3_Sub3_Sub4_3.method4445(local17)) {
 				@Pc(29) int local29 = arg2;
 				@Pc(31) int local31 = arg1;

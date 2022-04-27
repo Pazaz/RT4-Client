@@ -13,7 +13,7 @@ public final class Static264 {
 	public static final int[] anIntArray410 = new int[100];
 
 	@OriginalMember(owner = "client!vh", name = "c", descriptor = "Lclient!na;")
-	public static final JagString aClass100_875 = JagString.parse(":");
+	public static final JagString COLON = JagString.parse(":");
 
 	@OriginalMember(owner = "client!vh", name = "p", descriptor = "[I")
 	public static final int[] anIntArray412 = new int[] { 1, 0, 0, 0, 1, 0, 2, 1, 1, 1, 0, 2, 0, 0, 1, 0 };

@@ -28,14 +28,11 @@ public final class Static191 {
 	@OriginalMember(owner = "client!pg", name = "Z", descriptor = "[I")
 	public static final int[] anIntArray387 = new int[anInt4506];
 
-	@OriginalMember(owner = "client!pg", name = "ab", descriptor = "[I")
-	public static final int[] anIntArray388 = new int[8];
-
 	@OriginalMember(owner = "client!pg", name = "cb", descriptor = "[I")
 	public static final int[] anIntArray389 = new int[anInt4506];
 
 	@OriginalMember(owner = "client!pg", name = "db", descriptor = "Lclient!na;")
-	public static final JagString aClass100_845 = JagString.parse(":assistreq:");
+	public static final JagString ASSISTREQ = JagString.parse(":assistreq:");
 
 	@OriginalMember(owner = "client!pg", name = "eb", descriptor = "[I")
 	public static final int[] anIntArray390 = new int[anInt4506];

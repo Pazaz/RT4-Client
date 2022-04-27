@@ -144,7 +144,7 @@ public final class Static38 {
 			if ((local28.value & 0x3FFFFFFFFFFFFFFFL) < local4) {
 				if ((local28.value & 0x4000000000000000L) != 0L) {
 					@Pc(58) int local58 = (int) local28.key;
-					Static7.varps[local58] = Static106.anIntArray257[local58];
+					VarpDomain.varps[local58] = Static106.varp[local58];
 					local28.unlink();
 					return local58;
 				}
@@ -157,8 +157,8 @@ public final class Static38 {
 	@OriginalMember(owner = "client!cn", name = "b", descriptor = "(ZI)V")
 	public static void method964(@OriginalArg(0) boolean arg0) {
 		@Pc(3) int local3 = PlayerList.size;
-		if (Static115.anInt2939 == PlayerList.self.xFine >> 7 && PlayerList.self.zFine >> 7 == Static84.anInt2255) {
-			Static115.anInt2939 = 0;
+		if (Static115.mapFlagX == PlayerList.self.xFine >> 7 && PlayerList.self.zFine >> 7 == Static84.anInt2255) {
+			Static115.mapFlagX = 0;
 		}
 		if (arg0) {
 			local3 = 1;

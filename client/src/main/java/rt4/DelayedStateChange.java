@@ -60,14 +60,14 @@ public final class DelayedStateChange extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!ke", name = "c", descriptor = "(III)V")
-	public static void method2606(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+	public static void updateVarC(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		@Pc(8) DelayedStateChange local8 = Static238.method4143(1, arg0);
 		local8.pushServer();
 		local8.intArg1 = arg1;
 	}
 
 	@OriginalMember(owner = "client!ke", name = "a", descriptor = "(IIIBI)V")
-	public static void method2607(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {
+	public static void updateComponentModel(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {
 		@Pc(8) DelayedStateChange local8 = Static238.method4143(4, arg2);
 		local8.pushServer();
 		local8.intArg3 = arg3;
@@ -83,7 +83,7 @@ public final class DelayedStateChange extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(BIIII)V")
-	public static void method4505(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
+	public static void updateView(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		@Pc(8) DelayedStateChange local8 = Static238.method4143(8, arg1);
 		local8.pushServer();
 		local8.intArg2 = arg0;
@@ -92,7 +92,7 @@ public final class DelayedStateChange extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!kk", name = "a", descriptor = "(IIB)V")
-	public static void method2649(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+	public static void setColor(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		@Pc(4) DelayedStateChange local4 = Static238.method4143(6, arg1);
 		local4.pushServer();
 		local4.intArg1 = arg0;

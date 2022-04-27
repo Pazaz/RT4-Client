@@ -15,9 +15,6 @@ public final class Static1 {
 	@OriginalMember(owner = "client!a", name = "e", descriptor = "Lclient!na;")
 	public static final JagString TITLE_SONG = JagString.parse("scape main");
 
-	@OriginalMember(owner = "client!a", name = "f", descriptor = "[Z")
-	public static final boolean[] aBooleanArray1 = new boolean[8];
-
 	@OriginalMember(owner = "client!a", name = "i", descriptor = "I")
 	public static int anInt6 = 0;
 
@@ -582,7 +579,7 @@ public final class Static1 {
 		} else {
 			local225 = Static91.anInt2428 * 25;
 		}
-		for (@Pc(238) MapElement local238 = (MapElement) WorldMap.mapElements.method2289(); local238 != null; local238 = (MapElement) WorldMap.mapElements.method2288()) {
+		for (@Pc(238) MapElement local238 = (MapElement) WorldMap.mapElements.start(); local238 != null; local238 = (MapElement) WorldMap.mapElements.next()) {
 			if (local238.id == Static9.anInt172) {
 				@Pc(258) int local258 = arg3 + local238.anInt4314 * arg1 / WorldMap.length;
 				@Pc(267) int local267 = arg2 * local238.anInt4307 / WorldMap.width + arg0;

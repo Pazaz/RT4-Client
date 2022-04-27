@@ -10,7 +10,7 @@ public final class Static176 {
 	public static Js5 aClass153_76;
 
 	@OriginalMember(owner = "client!ob", name = "a", descriptor = "[Z")
-	public static final boolean[] aBooleanArray95 = new boolean[5];
+	public static final boolean[] customCameraActive = new boolean[5];
 
 	@OriginalMember(owner = "client!ob", name = "e", descriptor = "Lclient!na;")
 	public static final JagString aClass100_800 = JagString.parse("");
@@ -77,7 +77,7 @@ public final class Static176 {
 				if (client.game == 1) {
 					Static98.method1966(-1, 0L, JagString.EMPTY, local33, (short) 36, LocalizedText.FACEHERE, local47);
 				}
-				Static98.method1966(-1, 0L, JagString.EMPTY, local33, (short) 60, Static195.aClass100_859, local47);
+				Static98.method1966(-1, 0L, JagString.EMPTY, local33, (short) 60, Static195.walkText, local47);
 			}
 		}
 		@Pc(112) long local112 = -1L;

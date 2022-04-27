@@ -13,7 +13,7 @@ public final class Static132 {
 	public static final int[] anIntArray309 = new int[] { 1, 4 };
 
 	@OriginalMember(owner = "client!ke", name = "a", descriptor = "(ZLclient!wk;Z)V")
-	public static void method2605(@OriginalArg(0) boolean arg0, @OriginalArg(1) Class3_Sub31 arg1) {
+	public static void closeInterface(@OriginalArg(0) boolean arg0, @OriginalArg(1) ComponentPointer arg1) {
 		@Pc(9) int local9 = (int) arg1.key;
 		@Pc(16) int local16 = arg1.anInt5878;
 		arg1.unlink();
@@ -23,7 +23,7 @@ public final class Static132 {
 		Static273.method3214(local16);
 		@Pc(32) Component local32 = InterfaceList.getComponent(local9);
 		if (local32 != null) {
-			Static43.redraw(local32);
+			InterfaceList.redraw(local32);
 		}
 		@Pc(41) int local41 = Static231.anInt5204;
 		@Pc(43) int local43;
@@ -48,7 +48,7 @@ public final class Static132 {
 			Static24.anInt761 = local43 + 8;
 		}
 		if (InterfaceList.topLevelInterface != -1) {
-			Static54.method1304(1, InterfaceList.topLevelInterface);
+			Static54.runScripts(1, InterfaceList.topLevelInterface);
 		}
 	}
 

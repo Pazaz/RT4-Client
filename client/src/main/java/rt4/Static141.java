@@ -9,7 +9,7 @@ public final class Static141 {
 	public static int anInt3473;
 
     @OriginalMember(owner = "client!lb", name = "s", descriptor = "Lclient!na;")
-	public static final JagString aClass100_664 = JagString.parse(":clan:");
+	public static final JagString CLAN = JagString.parse(":clan:");
 
 	@OriginalMember(owner = "client!lb", name = "d", descriptor = "(B)V")
 	public static void method2720() {

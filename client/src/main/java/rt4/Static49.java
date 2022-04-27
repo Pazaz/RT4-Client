@@ -12,10 +12,7 @@ public final class Static49 {
 	@OriginalMember(owner = "client!dm", name = "n", descriptor = "Lclient!na;")
 	public static final JagString PERCENT_SIGN = JagString.parse("(U");
 
-	@OriginalMember(owner = "client!dm", name = "q", descriptor = "I")
-	public static int opcode4 = 0;
-
-	@OriginalMember(owner = "client!dm", name = "a", descriptor = "(BII[B)Z")
+    @OriginalMember(owner = "client!dm", name = "a", descriptor = "(BII[B)Z")
 	public static boolean method1201(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) byte[] arg2) {
 		@Pc(15) boolean local15 = true;
 		@Pc(17) int local17 = -1;

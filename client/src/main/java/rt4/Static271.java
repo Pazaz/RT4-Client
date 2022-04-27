@@ -10,7 +10,7 @@ public final class Static271 {
 	public static int anInt5804 = 0;
 
 	@OriginalMember(owner = "client!wc", name = "a", descriptor = "(Lclient!wa;I)V")
-	public static void method4598(@OriginalArg(0) Buffer arg0) {
+	public static void writeRandom(@OriginalArg(0) Buffer arg0) {
 		if (client.uid != null) {
 			try {
 				client.uid.seek(0L);

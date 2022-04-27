@@ -11,6 +11,8 @@ public class PlayerSkillXpTable {
 	public static final int[] boostedLevels = new int[25];
     @OriginalMember(owner = "client!sg", name = "b", descriptor = "[I")
 	public static final int[] experience = new int[25];
+    @OriginalMember(owner = "client!h", name = "S", descriptor = "[I")
+    public static final int[] xpLevelLookup = new int[99];
     @OriginalMember(owner = "client!ha", name = "m", descriptor = "I")
     public static int updatedStatsWriterIndex = 0;
 }

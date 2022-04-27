@@ -13,14 +13,14 @@ public final class Static85 {
 	public static int anInt2263;
 
     @OriginalMember(owner = "client!gl", name = "a", descriptor = "(II)V")
-	public static void method1775(@OriginalArg(1) int arg0) {
-		InterfaceList.method2245();
+	public static void refreshMagicVarp(@OriginalArg(1) int arg0) {
+		InterfaceList.redrawActiveInterfaces();
 		Static119.method2386();
 		@Pc(17) int local17 = VarpTypeList.get(arg0).clientCode;
 		if (local17 == 0) {
 			return;
 		}
-		@Pc(25) int local25 = Static7.varps[arg0];
+		@Pc(25) int local25 = VarpDomain.varps[arg0];
 		if (local17 == 6) {
 			Static79.anInt2157 = local25;
 		}

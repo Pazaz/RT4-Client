@@ -131,7 +131,7 @@ public final class Static258 {
 				}
 			}
 		}
-		if (!arg2.aBoolean32) {
+		if (!arg2.usingScripts) {
 			return;
 		}
 		if (!Static241.aBoolean302) {

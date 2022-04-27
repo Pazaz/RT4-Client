@@ -14,13 +14,13 @@ public final class Static110 {
 	@OriginalMember(owner = "client!ih", name = "a", descriptor = "(IIIII)V")
 	public static void method2281(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		@Pc(6) AreaSound local6;
-		for (local6 = (AreaSound) Static3.aClass69_135.method2289(); local6 != null; local6 = (AreaSound) Static3.aClass69_135.method2288()) {
+		for (local6 = (AreaSound) Static3.aClass69_135.start(); local6 != null; local6 = (AreaSound) Static3.aClass69_135.next()) {
 			Static150.method2804(arg1, local6, arg3, arg0, arg2);
 		}
 		@Pc(37) byte local37;
 		@Pc(42) BasType local42;
 		@Pc(141) int local141;
-		for (local6 = (AreaSound) Static152.aClass69_87.method2289(); local6 != null; local6 = (AreaSound) Static152.aClass69_87.method2288()) {
+		for (local6 = (AreaSound) Static152.aClass69_87.start(); local6 != null; local6 = (AreaSound) Static152.aClass69_87.next()) {
 			local37 = 1;
 			local42 = local6.npc.method2681();
 			if (local42.idleAnimationId == local6.npc.anInt3366) {

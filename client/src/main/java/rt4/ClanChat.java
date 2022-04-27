@@ -18,7 +18,7 @@ public class ClanChat {
     @OriginalMember(owner = "client!rg", name = "y", descriptor = "I")
     public static int size;
     @OriginalMember(owner = "client!qc", name = "bb", descriptor = "[Lclient!kl;")
-    public static Class3_Sub22[] members;
+    public static ClanMember[] members;
 
     @OriginalMember(owner = "client!kh", name = "b", descriptor = "(I)V")
     public static void leave() {

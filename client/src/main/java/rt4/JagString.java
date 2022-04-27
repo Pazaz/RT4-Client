@@ -453,7 +453,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "c", descriptor = "(BLclient!na;)Z")
-	public final boolean method3130(@OriginalArg(1) JagString arg0) {
+	public final boolean endsWith(@OriginalArg(1) JagString arg0) {
 		if (arg0.length > this.length) {
 			return false;
 		}
