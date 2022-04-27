@@ -934,7 +934,7 @@ public final class GlModel extends Model {
 			return;
 		}
 		@Pc(70) int local70 = local41 + (-local13 * arg2 + local17 * arg1 >> 16);
-		if (local70 >= 3584) {
+		if (local70 >= GlobalConfig.VIEW_DISTANCE) {
 			return;
 		}
 		@Pc(84) int local84 = arg7 * arg3 + arg5 * arg4 >> 16;

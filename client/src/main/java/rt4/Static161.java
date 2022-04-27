@@ -32,7 +32,7 @@ public final class Static161 {
 	private static float aFloat20 = -1.0F;
 
 	@OriginalMember(owner = "client!mk", name = "h", descriptor = "[F")
-	public static final float[] aFloatArray19 = new float[4];
+	public static final float[] fogColor = new float[4];
 
 	@OriginalMember(owner = "client!mk", name = "j", descriptor = "[F")
 	private static final float[] aFloatArray20 = new float[4];
@@ -41,10 +41,10 @@ public final class Static161 {
 	public static int anInt3923 = 16777215;
 
 	@OriginalMember(owner = "client!mk", name = "l", descriptor = "I")
-	private static int anInt3924 = -1;
+	private static int fogOffset = -1;
 
 	@OriginalMember(owner = "client!mk", name = "m", descriptor = "I")
-	private static int anInt3925 = -1;
+	private static int fogColorRGB = -1;
 
 	@OriginalMember(owner = "client!mk", name = "a", descriptor = "()V")
 	public static void method3058() {
@@ -80,26 +80,27 @@ public final class Static161 {
 	}
 
 	@OriginalMember(owner = "client!mk", name = "a", descriptor = "(II)V")
-	public static void method3062(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		if (anInt3925 == arg0 && anInt3924 == arg1) {
+	public static void method3062(@OriginalArg(0) int color, @OriginalArg(1) int offset) {
+		if (fogColorRGB == color && fogOffset == offset) {
 			return;
 		}
-		anInt3925 = arg0;
-		anInt3924 = arg1;
-		@Pc(12) GL2 local12 = GlRenderer.gl;
-		aFloatArray19[0] = (float) (arg0 >> 16 & 0xFF) / 255.0F;
-		aFloatArray19[1] = (float) (arg0 >> 8 & 0xFF) / 255.0F;
-		aFloatArray19[2] = (float) (arg0 & 0xFF) / 255.0F;
-		local12.glFogi(GL2.GL_FOG_MODE, GL2.GL_LINEAR);
-		local12.glFogf(GL2.GL_FOG_DENSITY, 0.95F);
-		local12.glHint(GL2.GL_FOG_HINT, GL2.GL_FASTEST);
-		@Pc(65) int local65 = 3072 - arg1;
-		if (local65 < 50) {
-			local65 = 50;
+		fogColorRGB = color;
+		fogOffset = offset;
+		@Pc(12) GL2 gl = GlRenderer.gl;
+		fogColor[0] = (float) (color >> 16 & 0xFF) / 255.0F;
+		fogColor[1] = (float) (color >> 8 & 0xFF) / 255.0F;
+		fogColor[2] = (float) (color & 0xFF) / 255.0F;
+		gl.glFogi(GL2.GL_FOG_MODE, GL2.GL_LINEAR);
+		gl.glFogf(GL2.GL_FOG_DENSITY, 0.95F);
+		gl.glHint(GL2.GL_FOG_HINT, GL2.GL_FASTEST);
+		int fogEnd = GlobalConfig.VIEW_DISTANCE;
+		@Pc(65) int fogStart = fogEnd - 512 - offset;
+		if (fogStart < 50) {
+			fogStart = 50;
 		}
-		local12.glFogf(GL2.GL_FOG_START, (float) local65);
-		local12.glFogf(GL2.GL_FOG_END, (float) 3328);
-		local12.glFogfv(GL2.GL_FOG_COLOR, aFloatArray19, 0);
+		gl.glFogf(GL2.GL_FOG_START, (float) fogStart);
+		gl.glFogf(GL2.GL_FOG_END, (float) fogEnd - 256.0f);
+		gl.glFogfv(GL2.GL_FOG_COLOR, fogColor, 0);
 	}
 
 	@OriginalMember(owner = "client!mk", name = "a", descriptor = "(FFF)V")
@@ -134,14 +135,14 @@ public final class Static161 {
 		local1.glLightfv(GL2.GL_LIGHT1, GL2.GL_AMBIENT, local55, 0);
 		local1.glEnable(GL2.GL_LIGHT1);
 		anInt3919 = -1;
-		anInt3925 = -1;
+		fogColorRGB = -1;
 		method3067();
 	}
 
 	@OriginalMember(owner = "client!mk", name = "a", descriptor = "([F)V")
 	public static void method3066(@OriginalArg(0) float[] arg0) {
 		if (arg0 == null) {
-			arg0 = aFloatArray19;
+			arg0 = fogColor;
 		}
 		@Pc(5) GL2 local5 = GlRenderer.gl;
 		local5.glFogfv(GL2.GL_FOG_COLOR, arg0, 0);

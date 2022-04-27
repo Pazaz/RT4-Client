@@ -41,7 +41,9 @@ public class GlobalConfig {
     public static boolean USE_ISAAC = false;
     //endregion
 
-    public static boolean ANIMATED_SD_BACKGROUND = true;
+    // default distance is 28
+    public static int TILE_DISTANCE = 56;
+    public static int VIEW_DISTANCE = TILE_DISTANCE * 128;
 
     public static boolean USE_TWEENING = true;
 
