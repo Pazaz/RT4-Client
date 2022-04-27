@@ -22,4 +22,6 @@ public abstract class Timer {
 
 	@OriginalMember(owner = "client!s", name = "b", descriptor = "(I)V")
 	public abstract void reset();
+
+	public abstract int count(int arg0, int arg1);
 }

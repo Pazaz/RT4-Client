@@ -534,7 +534,10 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 
 				updateDelta = currentTime - lastUpdateTime;
 				if (updateDelta >= FIXED_UPDATE_RATE * 1_000_000) {
-					this.mainLoopWrapper();
+					logicCycles = timer.count(minimumDelay, (int)FIXED_UPDATE_RATE);
+					for (int cycle = 0; cycle < logicCycles; ++cycle) {
+						this.mainLoopWrapper();
+					}
 					lastUpdateTime = currentTime;
 					flush(signLink, canvas);
 				}
@@ -544,13 +547,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 					this.mainInputLoop();
 					this.mainRedrawWrapper();
 					lastDrawTime = currentTime;
-
-					if (VARIABLE_RENDER_RATE > minimumDelay) {
-						timer.sleep(minimumDelay, (int) VARIABLE_RENDER_RATE);
-					} else {
-						// encourage thread switching
-						Thread.yield();
-					}
+					Thread.yield();
 				}
 			}
 		} catch (@Pc(198) Exception ex) {

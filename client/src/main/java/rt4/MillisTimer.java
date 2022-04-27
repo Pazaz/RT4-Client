@@ -87,4 +87,8 @@ public final class MillisTimer extends Timer {
 		this.anInt3553 &= 0xFF;
 		return local139;
 	}
+
+	public int count(int arg0, int arg1) {
+		return 1;
+	}
 }
