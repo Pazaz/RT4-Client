@@ -582,8 +582,8 @@ public final class Static87 {
 													local514 = (local30.anInt459 + local468 - 1) / local468;
 													if (GlRenderer.enabled) {
 														Static46.method1183(local123, local114, local30.anInt445 + local123, local30.anInt459 + local114);
-														@Pc(2274) boolean local2274 = Static209.method3702(local2094.anInt1867);
-														@Pc(2279) boolean local2279 = Static209.method3702(local2094.anInt1859);
+														@Pc(2274) boolean local2274 = Static209.method3702(local2094.width);
+														@Pc(2279) boolean local2279 = Static209.method3702(local2094.height);
 														@Pc(2282) GlSprite local2282 = (GlSprite) local2094;
 														if (local2274 && local2279) {
 															if (local117 == 0) {

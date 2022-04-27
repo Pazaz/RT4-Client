@@ -41,7 +41,7 @@ public final class GlFont extends Font {
 
 	@OriginalMember(owner = "client!dj", name = "a", descriptor = "(Lclient!cf;)V")
 	public static void method1188(@OriginalArg(0) GlSprite arg0) {
-		if (arg0.anInt1859 != Static46.anInt1441 - Static46.clipY) {
+		if (arg0.height != Static46.anInt1441 - Static46.clipY) {
 			throw new IllegalArgumentException();
 		}
 		masked = arg0;

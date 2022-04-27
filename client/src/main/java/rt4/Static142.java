@@ -139,13 +139,13 @@ public final class Static142 {
 					} else {
 						local310 = local17.method2691();
 					}
-					Static180.method3326(arg4 >> 1, arg3, local17, arg5, local508.anInt1859 + local310 + 10, arg1 >> 1);
+					Static180.method3326(arg4 >> 1, arg3, local17, arg5, local508.height + local310 + 10, arg1 >> 1);
 					if (Static65.anInt1951 > -1) {
-						local161 = Static65.anInt1951 + arg2 - (local508.anInt1867 >> 1);
+						local161 = Static65.anInt1951 + arg2 - (local508.width >> 1);
 						local359 = Static16.anInt548 + arg0 - 3;
 						local508.method1423(local161, local359);
-						local639 = local508.anInt1867 * local17.hitpointsBar / 255;
-						local642 = local508.anInt1859;
+						local639 = local508.width * local17.hitpointsBar / 255;
+						local642 = local508.height;
 						if (GlRenderer.enabled) {
 							Static46.method1183(local161, local359, local161 + local639, local359 + local642);
 						} else {

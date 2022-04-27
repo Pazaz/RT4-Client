@@ -9,7 +9,7 @@ import org.openrs2.deob.annotation.Pc;
 public abstract class Sprite extends SecondaryNode {
 
 	@OriginalMember(owner = "client!qf", name = "I", descriptor = "I")
-	public int anInt1859;
+	public int height;
 
 	@OriginalMember(owner = "client!qf", name = "J", descriptor = "I")
 	public int anInt1860;
@@ -24,7 +24,7 @@ public abstract class Sprite extends SecondaryNode {
 	public int anInt1866;
 
 	@OriginalMember(owner = "client!qf", name = "W", descriptor = "I")
-	public int anInt1867;
+	public int width;
 
 	@OriginalMember(owner = "client!qf", name = "<init>", descriptor = "()V")
 	protected Sprite() {

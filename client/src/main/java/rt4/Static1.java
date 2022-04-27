@@ -539,7 +539,7 @@ public final class Static1 {
 		if (WorldMap.loadPercentage < 100) {
 			return;
 		}
-		if (WorldMap.aClass3_Sub2_Sub1_2 == null || arg2 != WorldMap.aClass3_Sub2_Sub1_2.anInt1867 || WorldMap.aClass3_Sub2_Sub1_2.anInt1859 != arg1) {
+		if (WorldMap.aClass3_Sub2_Sub1_2 == null || arg2 != WorldMap.aClass3_Sub2_Sub1_2.width || WorldMap.aClass3_Sub2_Sub1_2.height != arg1) {
 			@Pc(63) SoftwareSprite local63 = new SoftwareSprite(arg2, arg1);
 			SoftwareRaster.method2491(local63.pixels, arg2, arg1);
 			Static214.method4364(arg2, 0, WorldMap.width, 0, 0, WorldMap.length, arg1, 0);
