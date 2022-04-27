@@ -113,7 +113,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 	public static int partialRedraws = 500;
 
 	@OriginalMember(owner = "client!tk", name = "v", descriptor = "I")
-	public static int framesPerSecond = 0;
+	public static double framesPerSecond = 0;
 
 	@OriginalMember(owner = "client!te", name = "C", descriptor = "I")
 	public static int maxMemory = 64;
@@ -390,8 +390,6 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			focus = focusIn;
 		}
 		this.mainLoop();
-		if (previous != 0L && now <= previous) {
-		}
 	}
 
 	public static GraphicsDevice getCurrentDevice() {
@@ -407,16 +405,16 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 		return null;
 	}
 
+	long lastFpsUpdate = 0;
+
 	@OriginalMember(owner = "client!rc", name = "e", descriptor = "(I)V")
 	private void mainRedrawWrapper() {
-		@Pc(2) long now = MonotonicClock.currentTimeMillis();
-		@Pc(6) long previous = redrawTimes[redrawTimePointer];
-		redrawTimes[redrawTimePointer] = now;
-		redrawTimePointer = redrawTimePointer + 1 & 0x1F;
-		if (previous != 0L && now > previous) {
-			@Pc(41) int duration = (int) (now - previous);
-			framesPerSecond = ((duration >> 1) + 32000) / duration;
+		long now = System.currentTimeMillis();
+		if (now - lastFpsUpdate > 250) {
+			framesPerSecond = 1_000_000_000.0d / (double)renderDelta;
+			lastFpsUpdate = now;
 		}
+
 		if (partialRedraws++ > 50) {
 			fullRedraw = true;
 			partialRedraws -= 50;

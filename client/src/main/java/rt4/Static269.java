@@ -290,7 +290,7 @@ public final class Static269 {
 		if (Cheat.displayFps) {
 			@Pc(405) int local405 = arg1 + arg2 - 8;
 			@Pc(412) int local412 = arg0 + arg3 - 5;
-			Fonts.p12Full.renderRight(JagString.concatenate(new JagString[]{Cheat.DEBUG_FPS, Static123.parseInt(GameShell.framesPerSecond)}), local412, local405, 16776960, -1);
+			Fonts.p12Full.renderRight(JagString.concatenate(new JagString[]{Cheat.DEBUG_FPS, Static123.parseInt((int)GameShell.framesPerSecond)}), local412, local405, 16776960, -1);
 			@Pc(434) Runtime runtime = Runtime.getRuntime();
 			@Pc(443) int memory = (int) ((runtime.totalMemory() - runtime.freeMemory()) / 1024L / 1024L);
 			@Pc(445) int color = 16776960;
