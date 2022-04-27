@@ -64,11 +64,6 @@ public final class Static115 {
 		Static256.method4392();
 	}
 
-    @OriginalMember(owner = "client!ja", name = "a", descriptor = "(II)V")
-	public static void method2312(@OriginalArg(0) int arg0) {
-		GameShell.VARIABLE_RENDER_RATE = 1000 / arg0;
-	}
-
 	@OriginalMember(owner = "client!ja", name = "a", descriptor = "(IIIIIZ)V")
 	public static void method2314(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) boolean arg4) {
 		if (arg0 < 1) {
