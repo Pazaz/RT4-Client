@@ -47,6 +47,7 @@ public class GlobalConfig {
     public static float VIEW_FADE_DISTANCE = ((float) TILE_DISTANCE / 28.0f) * 256.0f;
 
     public static boolean USE_TWEENING = true;
+    public static boolean BILINEAR_MINIMAP = true;
 
     public static int JS5_RESPONSE_TIMEOUT = 5000;
 }
