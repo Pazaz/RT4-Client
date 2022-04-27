@@ -42,7 +42,7 @@ public class Cheat {
     @OriginalMember(owner = "client!dg", name = "f", descriptor = "Z")
     public static boolean displayFps = false;
     @OriginalMember(owner = "client!nj", name = "a", descriptor = "Z")
-	public static boolean shiftClick = false;
+	public static boolean shiftClick = GlobalConfig.USE_SHIFT_CLICK;
 
     @OriginalMember(owner = "client!en", name = "a", descriptor = "(IIIB)V")
 	public static void teleport(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
