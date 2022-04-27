@@ -14,8 +14,6 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!rc")
 public abstract class GameShell extends Applet implements Runnable, FocusListener, WindowListener {
 
-	public static final long FIXED_UPDATE_RATE = 20;
-
 	@OriginalMember(owner = "client!sh", name = "l", descriptor = "[J")
 	public static final long[] logicTimes = new long[32];
 
@@ -87,6 +85,10 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 
 	@OriginalMember(owner = "client!ba", name = "B", descriptor = "I")
 	public static long VARIABLE_RENDER_RATE = 20;
+	public static long VARIABLE_RENDER_RATE_NS = VARIABLE_RENDER_RATE * 1_000_000;
+
+	public static final long FIXED_UPDATE_RATE = 20;
+	public static final long FIXED_UPDATE_RATE_NS = FIXED_UPDATE_RATE * 1_000_000;
 
 	@OriginalMember(owner = "client!cm", name = "b", descriptor = "Ljava/lang/Thread;")
 	public static Thread thread;
@@ -183,6 +185,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
     @OriginalMember(owner = "client!ja", name = "a", descriptor = "(II)V")
 	public static void setFpsTarget(@OriginalArg(0) int fps) {
 		VARIABLE_RENDER_RATE = 1000 / fps;
+		VARIABLE_RENDER_RATE_NS = VARIABLE_RENDER_RATE * 1_000_000;
 	}
 
     @OriginalMember(owner = "client!rc", name = "focusLost", descriptor = "(Ljava/awt/event/FocusEvent;)V")
@@ -382,10 +385,6 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 
 	@OriginalMember(owner = "client!rc", name = "b", descriptor = "(Z)V")
 	private void mainLoopWrapper() {
-		@Pc(6) long now = MonotonicClock.currentTimeMillis();
-		@Pc(10) long previous = logicTimes[logicTimePointer];
-		logicTimes[logicTimePointer] = now;
-		logicTimePointer = logicTimePointer + 1 & 0x1F;
 		synchronized (this) {
 			focus = focusIn;
 		}
@@ -406,12 +405,22 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 	}
 
 	long lastFpsUpdate = 0;
+	double[] lastFps = new double[5];
+	int lastFpsIndex = 0;
 
 	@OriginalMember(owner = "client!rc", name = "e", descriptor = "(I)V")
 	private void mainRedrawWrapper() {
 		long now = System.currentTimeMillis();
-		if (now - lastFpsUpdate > 250) {
-			framesPerSecond = 1_000_000_000.0d / (double)renderDelta;
+		if (now - lastFpsUpdate > 1000) {
+			lastFps[lastFpsIndex++] = 1_000_000_000.0d / (double)renderDelta;
+			double total = 0.0d;
+			for (int i = 0; i < lastFps.length; ++i) {
+				total += lastFps[i];
+			}
+			if (lastFpsIndex >= 5) {
+				lastFpsIndex = 0;
+			}
+			framesPerSecond = total / 5;
 			lastFpsUpdate = now;
 		}
 
@@ -531,7 +540,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 				long currentTime = System.nanoTime();
 
 				updateDelta = currentTime - lastUpdateTime;
-				if (updateDelta >= FIXED_UPDATE_RATE * 1_000_000) {
+				if (updateDelta >= FIXED_UPDATE_RATE_NS) {
 					logicCycles = timer.count(minimumDelay, (int)FIXED_UPDATE_RATE);
 					for (int cycle = 0; cycle < logicCycles; ++cycle) {
 						this.mainLoopWrapper();
@@ -541,7 +550,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 				}
 
 				renderDelta = currentTime - lastDrawTime;
-				if (renderDelta >= VARIABLE_RENDER_RATE * 1_000_000) {
+				if (renderDelta >= VARIABLE_RENDER_RATE_NS) {
 					this.mainInputLoop();
 					this.mainRedrawWrapper();
 					lastDrawTime = currentTime;
