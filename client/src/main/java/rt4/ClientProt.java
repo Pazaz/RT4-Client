@@ -576,8 +576,8 @@ public class ClientProt {
             local693 = InterfaceList.getComponent(local19);
             if (local693.anIntArrayArray4 != null && local693.anIntArrayArray4[0][0] == 5) {
                 local1955 = local693.anIntArrayArray4[0][1];
-                if (VarpDomain.varps[local1955] != local693.anIntArray48[0]) {
-                    VarpDomain.varps[local1955] = local693.anIntArray48[0];
+                if (VarpDomain.activeVarps[local1955] != local693.anIntArray48[0]) {
+                    VarpDomain.activeVarps[local1955] = local693.anIntArray48[0];
                     Static85.refreshMagicVarp(local1955);
                 }
             }
@@ -603,7 +603,7 @@ public class ClientProt {
             local693 = InterfaceList.getComponent(local19);
             if (local693.anIntArrayArray4 != null && local693.anIntArrayArray4[0][0] == 5) {
                 local1955 = local693.anIntArrayArray4[0][1];
-                VarpDomain.varps[local1955] = 1 - VarpDomain.varps[local1955];
+                VarpDomain.activeVarps[local1955] = 1 - VarpDomain.activeVarps[local1955];
                 Static85.refreshMagicVarp(local1955);
             }
         }

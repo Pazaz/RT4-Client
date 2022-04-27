@@ -73,13 +73,13 @@ public final class Static273 {
 					}
 				}
 				if (local46 == 5) {
-					local41 = VarpDomain.varps[local33[local39++]];
+					local41 = VarpDomain.activeVarps[local33[local39++]];
 				}
 				if (local46 == 6) {
 					local41 = PlayerSkillXpTable.xpLevelLookup[PlayerSkillXpTable.baseLevels[local33[local39++]] - 1];
 				}
 				if (local46 == 7) {
-					local41 = VarpDomain.varps[local33[local39++]] * 100 / 46875;
+					local41 = VarpDomain.activeVarps[local33[local39++]] * 100 / 46875;
 				}
 				if (local46 == 8) {
 					local41 = PlayerList.self.combatLevel;
@@ -112,7 +112,7 @@ public final class Static273 {
 					local41 = Player.weight;
 				}
 				if (local46 == 13) {
-					local124 = VarpDomain.varps[local33[local39++]];
+					local124 = VarpDomain.activeVarps[local33[local39++]];
 					@Pc(353) int local353 = local33[local39++];
 					local41 = (0x1 << local353 & local124) == 0 ? 0 : 1;
 				}

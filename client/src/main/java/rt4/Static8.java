@@ -116,8 +116,8 @@ public final class Static8 {
 		for (@Pc(3) int local3 = 0; local3 < VarpTypeList.anInt4043; local3++) {
 			@Pc(19) VarpType local19 = VarpTypeList.get(local3);
 			if (local19 != null && local19.clientCode == 0) {
-				Static106.varp[local3] = 0;
-				VarpDomain.varps[local3] = 0;
+				VarpDomain.varp[local3] = 0;
+				VarpDomain.activeVarps[local3] = 0;
 			}
 		}
 		Static199.aClass133_20 = new HashTable(16);

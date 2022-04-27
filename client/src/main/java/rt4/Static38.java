@@ -144,7 +144,7 @@ public final class Static38 {
 			if ((local28.value & 0x3FFFFFFFFFFFFFFFL) < local4) {
 				if ((local28.value & 0x4000000000000000L) != 0L) {
 					@Pc(58) int local58 = (int) local28.key;
-					VarpDomain.varps[local58] = Static106.varp[local58];
+					VarpDomain.activeVarps[local58] = VarpDomain.varp[local58];
 					local28.unlink();
 					return local58;
 				}

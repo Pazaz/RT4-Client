@@ -1568,9 +1568,9 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.FORCE_VARP_REFRESH) {
-            for (int i = 0; i < VarpDomain.varps.length; i++) {
-                if (Static106.varp[i] != VarpDomain.varps[i]) {
-                    VarpDomain.varps[i] = Static106.varp[i];
+            for (int i = 0; i < VarpDomain.activeVarps.length; i++) {
+                if (VarpDomain.varp[i] != VarpDomain.activeVarps[i]) {
+                    VarpDomain.activeVarps[i] = VarpDomain.varp[i];
                     Static85.refreshMagicVarp(i);
                     VarpDomain.updatedVarps[VarpDomain.updatedVarpsWriterIndex++ & 0x1F] = i;
                 }
