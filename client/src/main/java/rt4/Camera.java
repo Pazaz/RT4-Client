@@ -38,7 +38,7 @@ public class Camera {
                     if (local80 < 3 && (Static12.tileSettings[1][local64][local73] & 0x2) == 2) {
                         local80++;
                     }
-                    @Pc(117) int local117 = (Static232.aByteArrayArrayArray13[local80][local64][local73] & 0xFF) * 8 + local43 - Static83.activeTileHeightMap[local80][local64][local73];
+                    @Pc(117) int local117 = (Static232.aByteArrayArrayArray13[local80][local64][local73] & 0xFF) * 8 + local43 - SceneGraph.activeTileHeightMap[local80][local64][local73];
                     if (local117 > local45) {
                         local45 = local117;
                     }

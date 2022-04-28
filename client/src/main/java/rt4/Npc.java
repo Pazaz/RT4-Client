@@ -11,7 +11,28 @@ public final class Npc extends PathingEntity {
 	@OriginalMember(owner = "client!km", name = "rc", descriptor = "Lclient!me;")
 	public NpcType type;
 
-	@OriginalMember(owner = "client!km", name = "finalize", descriptor = "()V")
+    @OriginalMember(owner = "client!ij", name = "a", descriptor = "(Lclient!km;I)I")
+    public static int getSound(@OriginalArg(0) Npc arg0) {
+        @Pc(13) NpcType local13 = arg0.type;
+        if (local13.multiNpcs != null) {
+            local13 = local13.getMultiNpc();
+            if (local13 == null) {
+                return -1;
+            }
+        }
+        @Pc(29) int local29 = local13.walkSound;
+        @Pc(33) BasType local33 = arg0.getBasType();
+        if (local33.idleAnimationId == arg0.movementSeqId) {
+            local29 = local13.idleSound;
+        } else if (arg0.movementSeqId == local33.runAnimationId || local33.runAnimationId2 == arg0.movementSeqId || arg0.movementSeqId == local33.runAnimationId4 || arg0.movementSeqId == local33.runAnimationId3) {
+            local29 = local13.runSound;
+        } else if (local33.anInt1062 == arg0.movementSeqId || arg0.movementSeqId == local33.anInt1042 || arg0.movementSeqId == local33.anInt1048 || arg0.movementSeqId == local33.anInt1066) {
+            local29 = local13.crawlSound;
+        }
+        return local29;
+    }
+
+    @OriginalMember(owner = "client!km", name = "finalize", descriptor = "()V")
 	@Override
 	public final void finalize() {
 	}
@@ -30,7 +51,7 @@ public final class Npc extends PathingEntity {
 		}
 
 		@Pc(29) SeqType local29 = this.seqId != -1 && this.anInt3420 == 0 ? SeqTypeList.get(this.seqId) : null;
-		@Pc(53) SeqType local53 = this.anInt3366 == -1 || this.anInt3366 == this.method2681().idleAnimationId && local29 != null ? null : SeqTypeList.get(this.anInt3366);
+		@Pc(53) SeqType local53 = this.movementSeqId == -1 || this.movementSeqId == this.getBasType().idleAnimationId && local29 != null ? null : SeqTypeList.get(this.movementSeqId);
 		@Pc(74) Model body = this.type.getBodyModel(this.aClass147Array3, this.anInt3388, this.anInt3407, this.anInt3373, this.anInt3360, this.anInt3425, local53, this.anInt3396, local29);
 		if (body == null) {
 			return;

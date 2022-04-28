@@ -38,7 +38,7 @@ public final class MidiNoteStream extends PcmStream {
 	@OriginalMember(owner = "client!te", name = "b", descriptor = "()Lclient!qb;")
 	@Override
 	public final PcmStream method4406() {
-		@Pc(9) MidiNote local9 = (MidiNote) this.aClass69_126.start();
+		@Pc(9) MidiNote local9 = (MidiNote) this.aClass69_126.head();
 		if (local9 == null) {
 			return null;
 		} else if (local9.aClass3_Sub3_Sub1_3 == null) {
@@ -51,7 +51,7 @@ public final class MidiNoteStream extends PcmStream {
 	@OriginalMember(owner = "client!te", name = "a", descriptor = "(Lclient!mf;II)V")
 	private void method4141(@OriginalArg(0) MidiNote arg0, @OriginalArg(2) int arg1) {
 		if ((this.aClass3_Sub3_Sub4_3.anIntArray508[arg0.anInt3773] & 0x4) != 0 && arg0.anInt3767 < 0) {
-			@Pc(27) int local27 = this.aClass3_Sub3_Sub4_3.anIntArray503[arg0.anInt3773] / Static44.sampleRate;
+			@Pc(27) int local27 = this.aClass3_Sub3_Sub4_3.anIntArray503[arg0.anInt3773] / AudioChannel.sampleRate;
 			@Pc(37) int local37 = (local27 + 1048575 - arg0.anInt3775) / local27;
 			arg0.anInt3775 = local27 * arg1 + arg0.anInt3775 & 0xFFFFF;
 			if (arg1 >= local37) {
@@ -62,7 +62,7 @@ public final class MidiNoteStream extends PcmStream {
 					this.aClass3_Sub3_Sub4_3.method4442(arg0, arg0.aClass3_Sub18_1.aShortArray36[arg0.anInt3779] < 0);
 				}
 				if (arg0.aClass3_Sub18_1.aShortArray36[arg0.anInt3779] < 0) {
-					arg0.aClass3_Sub3_Sub1_3.method396(-1);
+					arg0.aClass3_Sub3_Sub1_3.setLoops(-1);
 				}
 				arg1 = arg0.anInt3775 / local27;
 			}
@@ -80,7 +80,7 @@ public final class MidiNoteStream extends PcmStream {
 	@Override
 	public final void skip(@OriginalArg(0) int arg0) {
 		this.aClass3_Sub3_Sub2_2.skip(arg0);
-		for (@Pc(15) MidiNote local15 = (MidiNote) this.aClass69_126.start(); local15 != null; local15 = (MidiNote) this.aClass69_126.next()) {
+		for (@Pc(15) MidiNote local15 = (MidiNote) this.aClass69_126.head(); local15 != null; local15 = (MidiNote) this.aClass69_126.next()) {
 			if (!this.aClass3_Sub3_Sub4_3.method4445(local15)) {
 				@Pc(27) int local27 = arg0;
 				do {
@@ -100,7 +100,7 @@ public final class MidiNoteStream extends PcmStream {
 	@Override
 	public final void read(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		this.aClass3_Sub3_Sub2_2.read(arg0, arg1, arg2);
-		for (@Pc(17) MidiNote local17 = (MidiNote) this.aClass69_126.start(); local17 != null; local17 = (MidiNote) this.aClass69_126.next()) {
+		for (@Pc(17) MidiNote local17 = (MidiNote) this.aClass69_126.head(); local17 != null; local17 = (MidiNote) this.aClass69_126.next()) {
 			if (!this.aClass3_Sub3_Sub4_3.method4445(local17)) {
 				@Pc(29) int local29 = arg2;
 				@Pc(31) int local31 = arg1;
@@ -121,7 +121,7 @@ public final class MidiNoteStream extends PcmStream {
 	@OriginalMember(owner = "client!te", name = "a", descriptor = "([ILclient!mf;IIIB)V")
 	private void method4146(@OriginalArg(0) int[] arg0, @OriginalArg(1) MidiNote arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		if ((this.aClass3_Sub3_Sub4_3.anIntArray508[arg1.anInt3773] & 0x4) != 0 && arg1.anInt3767 < 0) {
-			@Pc(26) int local26 = this.aClass3_Sub3_Sub4_3.anIntArray503[arg1.anInt3773] / Static44.sampleRate;
+			@Pc(26) int local26 = this.aClass3_Sub3_Sub4_3.anIntArray503[arg1.anInt3773] / AudioChannel.sampleRate;
 			while (true) {
 				@Pc(36) int local36 = (local26 + 1048575 - arg1.anInt3775) / local26;
 				if (arg3 < local36) {
@@ -130,7 +130,7 @@ public final class MidiNoteStream extends PcmStream {
 				}
 				arg3 -= local36;
 				arg1.aClass3_Sub3_Sub1_3.read(arg0, arg2, local36);
-				@Pc(55) int local55 = Static44.sampleRate / 100;
+				@Pc(55) int local55 = AudioChannel.sampleRate / 100;
 				@Pc(58) SoundPcmStream local58 = arg1.aClass3_Sub3_Sub1_3;
 				@Pc(62) int local62 = 262144 / local26;
 				if (local62 < local55) {
@@ -145,13 +145,13 @@ public final class MidiNoteStream extends PcmStream {
 					arg1.aClass3_Sub3_Sub1_3.method398(local55, local58.method392());
 				}
 				if (arg1.aClass3_Sub18_1.aShortArray36[arg1.anInt3779] < 0) {
-					arg1.aClass3_Sub3_Sub1_3.method396(-1);
+					arg1.aClass3_Sub3_Sub1_3.setLoops(-1);
 				}
 				arg2 += local36;
 				local58.method384(local55);
 				local58.read(arg0, arg2, arg4 - arg2);
 				if (local58.method412()) {
-					this.aClass3_Sub3_Sub2_2.method1343(local58);
+					this.aClass3_Sub3_Sub2_2.addSubStream(local58);
 				}
 			}
 		}

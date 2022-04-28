@@ -17,10 +17,10 @@ public abstract class PathingEntity extends Entity {
 	public int hitpointsBar;
 
 	@OriginalMember(owner = "client!fe", name = "U", descriptor = "I")
-	public int anInt3374;
+	public int attachmentZ0;
 
 	@OriginalMember(owner = "client!fe", name = "Z", descriptor = "I")
-	public int anInt3379;
+	public int attachmentXFine;
 
 	@OriginalMember(owner = "client!fe", name = "bb", descriptor = "I")
 	public int anInt3380;
@@ -29,7 +29,7 @@ public abstract class PathingEntity extends Entity {
 	public int anInt3381;
 
 	@OriginalMember(owner = "client!fe", name = "fb", descriptor = "I")
-	public int anInt3384;
+	public int atachmentX0;
 
 	@OriginalMember(owner = "client!fe", name = "hb", descriptor = "I")
 	public int anInt3386;
@@ -53,13 +53,13 @@ public abstract class PathingEntity extends Entity {
 	public int anInt3400;
 
 	@OriginalMember(owner = "client!fe", name = "Jb", descriptor = "I")
-	public int anInt3406;
+	public int attachmentY;
 
 	@OriginalMember(owner = "client!fe", name = "Ob", descriptor = "I")
-	public int anInt3410;
+	public int attachmentZ1;
 
 	@OriginalMember(owner = "client!fe", name = "Pb", descriptor = "I")
-	public int anInt3411;
+	public int attachmentX1;
 
 	@OriginalMember(owner = "client!fe", name = "Qb", descriptor = "I")
 	public int xFine;
@@ -74,7 +74,7 @@ public abstract class PathingEntity extends Entity {
 	public int anInt3424;
 
 	@OriginalMember(owner = "client!fe", name = "fc", descriptor = "I")
-	public int anInt3426;
+	public int attachmentZFine;
 
 	@OriginalMember(owner = "client!fe", name = "hc", descriptor = "I")
 	public int anInt3428;
@@ -215,7 +215,7 @@ public abstract class PathingEntity extends Entity {
 	public int anInt3414 = 0;
 
 	@OriginalMember(owner = "client!fe", name = "H", descriptor = "I")
-	public int anInt3366 = -1;
+	public int movementSeqId = -1;
 
 	@OriginalMember(owner = "client!fe", name = "gc", descriptor = "I")
 	private int anInt3427 = 0;
@@ -257,7 +257,7 @@ public abstract class PathingEntity extends Entity {
 	public int anInt3418 = -1;
 
 	@OriginalMember(owner = "client!fe", name = "b", descriptor = "(Z)Lclient!ck;")
-	public final BasType method2681() {
+	public final BasType getBasType() {
 		@Pc(7) int local7 = this.method2688();
 		return local7 == -1 ? Static4.aClass20_1 : BasTypeList.get(local7);
 	}
@@ -355,7 +355,7 @@ public abstract class PathingEntity extends Entity {
 		Static102.anInt2680 = 0;
 		Static101.anInt2640 = 0;
 		Static62.anInt1938 = 0;
-		@Pc(21) BasType local21 = this.method2681();
+		@Pc(21) BasType local21 = this.getBasType();
 		@Pc(24) int local24 = local21.anInt1059;
 		@Pc(27) int local27 = local21.anInt1050;
 		if (local24 == 0 || local27 == 0) {
@@ -419,7 +419,7 @@ public abstract class PathingEntity extends Entity {
 
 	@OriginalMember(owner = "client!fe", name = "a", descriptor = "(Lclient!ak;B)V")
 	protected final void method2687(@OriginalArg(0) Model arg0) {
-		@Pc(16) BasType local16 = this.method2681();
+		@Pc(16) BasType local16 = this.getBasType();
 		if (local16.anInt1064 == 0 && local16.anInt1041 == 0) {
 			return;
 		}

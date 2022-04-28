@@ -79,7 +79,12 @@ public final class SoundPcmStream extends PcmStream {
 		this.method416();
 	}
 
-	@OriginalMember(owner = "client!b", name = "b", descriptor = "([III)V")
+    @OriginalMember(owner = "client!b", name = "a", descriptor = "(Lclient!kj;II)Lclient!b;")
+    public static SoundPcmStream create(@OriginalArg(0) PcmSound arg0, @OriginalArg(2) int arg1) {
+        return arg0.aByteArray47 == null || arg0.aByteArray47.length == 0 ? null : new SoundPcmStream(arg0, (int) ((long) arg0.anInt3316 * 256L * (long) 100 / (long) (AudioChannel.sampleRate * 100)), arg1 << 6);
+    }
+
+    @OriginalMember(owner = "client!b", name = "b", descriptor = "([III)V")
 	@Override
 	public final synchronized void read(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		if (this.anInt343 == 0 && this.anInt351 == 0) {
@@ -379,7 +384,7 @@ public final class SoundPcmStream extends PcmStream {
 	}
 
 	@OriginalMember(owner = "client!b", name = "e", descriptor = "(I)V")
-	public final synchronized void method386(@OriginalArg(0) int arg0) {
+	public final synchronized void setVolume(@OriginalArg(0) int arg0) {
 		this.method408(arg0 << 6, this.method418());
 	}
 
@@ -554,7 +559,7 @@ public final class SoundPcmStream extends PcmStream {
 	}
 
 	@OriginalMember(owner = "client!b", name = "f", descriptor = "(I)V")
-	public final synchronized void method396(@OriginalArg(0) int arg0) {
+	public final synchronized void setLoops(@OriginalArg(0) int arg0) {
 		this.anInt350 = arg0;
 	}
 

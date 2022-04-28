@@ -102,7 +102,7 @@ public final class LinkedList {
 	}
 
 	@OriginalMember(owner = "client!ih", name = "f", descriptor = "(I)Lclient!ab;")
-	public final Node start() {
+	public final Node head() {
 		@Pc(3) Node local3 = this.aClass3_109.aClass3_222;
 		if (this.aClass3_109 == local3) {
 			this.aClass3_110 = null;

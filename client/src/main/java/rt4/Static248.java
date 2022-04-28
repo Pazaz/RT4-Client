@@ -56,26 +56,26 @@ public final class Static248 {
 							if (local32 >= local9 && local32 <= local13 && local37 >= local17 && local37 <= local21) {
 								if (local46.aClass77_1 != null) {
 									@Pc(103) Wall local103 = local46.aClass77_1;
-									local103.aClass8_5.method4545(0, local23, local103.anInt3051, local103.anInt3048, local103.anInt3044);
+									local103.primary.method4545(0, local23, local103.anInt3051, local103.anInt3048, local103.anInt3044);
 									if (local103.aClass8_6 != null) {
 										local103.aClass8_6.method4545(0, local23, local103.anInt3051, local103.anInt3048, local103.anInt3044);
 									}
 								}
 								if (local46.aClass24_1 != null) {
 									@Pc(134) WallDecor local134 = local46.aClass24_1;
-									local134.aClass8_3.method4545(local134.anInt1388, local23, local134.anInt1391, local134.anInt1390, local134.anInt1393);
+									local134.primary.method4545(local134.anInt1388, local23, local134.anInt1391, local134.anInt1390, local134.anInt1393);
 									if (local134.aClass8_2 != null) {
 										local134.aClass8_2.method4545(local134.anInt1388, local23, local134.anInt1391, local134.anInt1390, local134.anInt1393);
 									}
 								}
 								if (local46.aClass15_1 != null) {
 									@Pc(167) GroundDecor local167 = local46.aClass15_1;
-									local167.aClass8_1.method4545(0, local23, local167.anInt733, local167.anInt732, local167.anInt736);
+									local167.primary.method4545(0, local23, local167.anInt733, local167.anInt732, local167.anInt736);
 								}
 								if (local46.aClass31Array1 != null) {
 									for (local183 = 0; local183 < local46.anInt662; local183++) {
 										@Pc(192) Scenery local192 = local46.aClass31Array1[local183];
-										local192.aClass8_4.method4545(local192.anInt1714, local23, local192.anInt1706, local192.anInt1699, local192.anInt1703);
+										local192.primary.method4545(local192.anInt1714, local23, local192.anInt1706, local192.anInt1699, local192.anInt1703);
 									}
 								}
 							}
@@ -84,7 +84,7 @@ public final class Static248 {
 				}
 			}
 		}
-		@Pc(240) boolean local240 = Static83.activeTileHeightMap == Static80.underWaterTileHeightMap;
+		@Pc(240) boolean local240 = SceneGraph.activeTileHeightMap == Static80.underWaterTileHeightMap;
 		if (GlRenderer.enabled) {
 			@Pc(244) GL2 local244 = GlRenderer.gl;
 			local244.glPushMatrix();
@@ -124,7 +124,7 @@ public final class Static248 {
 					}
 					if (local32 == 0 && Preferences.sceneryShadowsType > 0) {
 						GlRenderer.method4159(101.5F);
-						Static242.method4198(Static167.anInt4069, Static193.anInt4539, Static277.tileVisibilityDistance, arg1, Static48.aBooleanArrayArray1, Static83.activeTileHeightMap[0]);
+						Static242.method4198(Static167.anInt4069, Static193.anInt4539, Static277.tileVisibilityDistance, arg1, Static48.aBooleanArrayArray1, SceneGraph.activeTileHeightMap[0]);
 					}
 					local32++;
 				}

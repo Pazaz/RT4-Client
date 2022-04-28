@@ -82,7 +82,7 @@ public class ShadowModelList {
         local130 = arg8.method4550();
         if (arg2 != null) {
             @Pc(403) int local403 = arg2.frames[arg10];
-            local386 = Static72.getAnimFrameset(local403 >> 16);
+            local386 = SeqTypeList.getAnimFrameset(local403 >> 16);
             arg10 = local403 & 0xFFFF;
         }
         local109 = local367;

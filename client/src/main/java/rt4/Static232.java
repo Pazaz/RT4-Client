@@ -68,7 +68,7 @@ public final class Static232 {
 				}
 			}
 		}
-		for (@Pc(285) MapElement local285 = (MapElement) Static172.aClass69_97.start(); local285 != null; local285 = (MapElement) Static172.aClass69_97.next()) {
+		for (@Pc(285) MapElement local285 = (MapElement) Static172.aClass69_97.head(); local285 != null; local285 = (MapElement) Static172.aClass69_97.next()) {
 			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 15, local11);
 			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 13, local11);
 			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 11, local11);

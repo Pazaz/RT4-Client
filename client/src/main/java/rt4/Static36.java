@@ -66,7 +66,7 @@ public final class Static36 {
 							continue;
 						}
 						if (component.noClickThrough && Mouse.anInt4873 >= local61 && Mouse.anInt5032 >= local63 && Mouse.anInt4873 < local65 && Mouse.anInt5032 < local67) {
-							for (@Pc(164) HookRequest local164 = (HookRequest) InterfaceList.lowPriorityRequests.start(); local164 != null; local164 = (HookRequest) InterfaceList.lowPriorityRequests.next()) {
+							for (@Pc(164) HookRequest local164 = (HookRequest) InterfaceList.lowPriorityRequests.head(); local164 != null; local164 = (HookRequest) InterfaceList.lowPriorityRequests.next()) {
 								if (local164.aBoolean158) {
 									local164.unlink();
 									local164.source.aBoolean19 = false;

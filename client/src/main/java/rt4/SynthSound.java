@@ -69,7 +69,7 @@ public final class SynthSound {
 	}
 
 	@OriginalMember(owner = "client!sl", name = "b", descriptor = "()Lclient!kj;")
-	public final PcmSound method3989() {
+	public final PcmSound toPcmSound() {
 		@Pc(2) byte[] local2 = this.method3987();
 		return new PcmSound(22050, local2, this.anInt5207 * 22050 / 1000, this.anInt5206 * 22050 / 1000);
 	}

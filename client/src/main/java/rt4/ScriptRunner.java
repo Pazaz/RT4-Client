@@ -2907,10 +2907,10 @@ public final class ScriptRunner {
 													if (opcode == 5401) {
 														isp -= 2;
 														client.aShortArray88[intStack[isp]] = (short) Static105.method2253(intStack[isp + 1]);
-														Static211.method924();
+														Static211.clearObjectModelCache();
 														Static269.clearObjectSpriteCache();
 														Static278.method4649();
-														Static11.method443();
+														Static11.clearNpcHeadCache();
 														Static87.method1807();
 														continue;
 													}

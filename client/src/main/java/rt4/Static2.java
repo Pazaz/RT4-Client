@@ -276,7 +276,7 @@ public final class Static2 {
 				arg0.modelId = ((int) PlayerList.self.username.encode37() << 11) + 2047;
 				arg0.anInt496 = PlayerList.self.anInt3388;
 				arg0.anInt500 = 0;
-				arg0.modelSeqId = PlayerList.self.anInt3366;
+				arg0.modelSeqId = PlayerList.self.movementSeqId;
 				arg0.anInt510 = PlayerList.self.anInt3407;
 			}
 		}

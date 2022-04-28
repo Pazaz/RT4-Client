@@ -55,7 +55,7 @@ public final class Static43 {
 		@Pc(70) int local70 = (int) (local9 >>> 32) & Integer.MAX_VALUE;
 		@Pc(74) LocType local74 = LocTypeList.get(local70);
 		if (local74.hasAreaSound()) {
-			Static209.method3701(arg1, local74, arg0, arg2);
+			AreaSoundManager.remove(arg1, local74, arg0, arg2);
 		}
 		@Pc(92) int local92 = (int) local9 >> 20 & 0x3;
 		if (local9 == 0L) {
@@ -66,7 +66,7 @@ public final class Static43 {
 		if (arg3 == 0) {
 			@Pc(110) Wall local110 = SceneGraph.removeWall(arg2, arg1, arg0);
 			if (local110 != null) {
-				local100 = local110.aClass8_5;
+				local100 = local110.primary;
 				local102 = local110.aClass8_6;
 			}
 			if (local74.anInt4435 != 0) {
@@ -75,13 +75,13 @@ public final class Static43 {
 		} else if (arg3 == 1) {
 			@Pc(233) WallDecor local233 = Static75.method1633(arg2, arg1, arg0);
 			if (local233 != null) {
-				local100 = local233.aClass8_3;
+				local100 = local233.primary;
 				local102 = local233.aClass8_2;
 			}
 		} else if (arg3 == 2) {
 			@Pc(148) Scenery local148 = Static47.method3996(arg2, arg1, arg0);
 			if (local148 != null) {
-				local100 = local148.aClass8_4;
+				local100 = local148.primary;
 			}
 			if (local74.anInt4435 != 0 && local74.width + arg1 < 104 && local74.width + arg0 < 104 && arg1 + local74.length < 104 && arg0 + local74.length < 104) {
 				arg5.unflagScenery(arg1, local74.width, local74.aBoolean207, local92, local74.length, arg0);
@@ -89,7 +89,7 @@ public final class Static43 {
 		} else if (arg3 == 3) {
 			@Pc(211) GroundDecor local211 = Static267.method4526(arg2, arg1, arg0);
 			if (local211 != null) {
-				local100 = local211.aClass8_1;
+				local100 = local211.primary;
 			}
 			if (local74.anInt4435 == 1) {
 				arg5.method3053(arg0, arg1);

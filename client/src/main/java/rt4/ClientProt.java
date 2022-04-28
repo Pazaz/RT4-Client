@@ -1005,7 +1005,7 @@ public class ClientProt {
                 }
             }
         }
-        Static260.clearAmbientSounds(false);
+        AreaSoundManager.clear(false);
         if (GlRenderer.enabled) {
             Static242.shadowMapImage.method1392();
             for (i = 0; i < 13; i++) {
@@ -1089,7 +1089,7 @@ public class ClientProt {
         if (GlRenderer.enabled) {
             for (chunkX = 0; chunkX < 13; chunkX++) {
                 for (chunkZ = 0; chunkZ < 13; chunkZ++) {
-                    Static242.shadows[chunkX][chunkZ].method4676(Static83.activeTileHeightMap[0], chunkX * 8, chunkZ * 8);
+                    Static242.shadows[chunkX][chunkZ].method4676(SceneGraph.activeTileHeightMap[0], chunkX * 8, chunkZ * 8);
                 }
             }
         }

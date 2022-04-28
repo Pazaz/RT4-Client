@@ -83,8 +83,8 @@ public final class Static45 {
 				local173 = local168 * 768 >> 8;
 				for (local178 = 1; local178 < 103; local178++) {
 					for (local194 = 1; local194 < 103; local194++) {
-						local209 = Static83.activeTileHeightMap[local152][local194][local178 + 1] - Static83.activeTileHeightMap[local152][local194][local178 - 1];
-						local202 = Static83.activeTileHeightMap[local152][local194 + 1][local178] - Static83.activeTileHeightMap[local152][local194 - 1][local178];
+						local209 = SceneGraph.activeTileHeightMap[local152][local194][local178 + 1] - SceneGraph.activeTileHeightMap[local152][local194][local178 - 1];
+						local202 = SceneGraph.activeTileHeightMap[local152][local194 + 1][local178] - SceneGraph.activeTileHeightMap[local152][local194 - 1][local178];
 						local349 = (int) Math.sqrt((double) (local202 * local202 + local209 * local209 + 65536));
 						local267 = (local209 << 8) / local349;
 						local254 = -65536 / local349;
@@ -109,8 +109,8 @@ public final class Static45 {
 				local200 = local194 * 1024 >> 8;
 				for (local202 = 1; local202 < 103; local202++) {
 					for (local209 = 1; local209 < 103; local209++) {
-						local234 = Static83.activeTileHeightMap[local152][local209 + 1][local202] - Static83.activeTileHeightMap[local152][local209 - 1][local202];
-						local254 = Static83.activeTileHeightMap[local152][local209][local202 + 1] - Static83.activeTileHeightMap[local152][local209][local202 - 1];
+						local234 = SceneGraph.activeTileHeightMap[local152][local209 + 1][local202] - SceneGraph.activeTileHeightMap[local152][local209 - 1][local202];
+						local254 = SceneGraph.activeTileHeightMap[local152][local209][local202 + 1] - SceneGraph.activeTileHeightMap[local152][local209][local202 - 1];
 						local267 = (int) Math.sqrt((double) (local234 * local234 + local254 * local254 + 65536));
 						local273 = (local234 << 8) / local267;
 						local322 = (local159[local209][local202 + 1] >> 3) + (local159[local209][local202 - 1] >> 2) + (local159[local209 - 1][local202] >> 2) + (local159[local209 + 1][local202] >> 3) + (local159[local209][local202] >> 1);
@@ -194,10 +194,10 @@ public final class Static45 {
 						local178 = Static253.aByteArrayArrayArray16[local152][local168][local173] & 0xFF;
 						local194 = Static240.aByteArrayArrayArray14[local152][local168][local173] & 0xFF;
 						if (local178 > 0 || local194 > 0) {
-							local202 = Static83.activeTileHeightMap[local152][local168 + 1][local173];
-							local200 = Static83.activeTileHeightMap[local152][local168][local173];
-							local349 = Static83.activeTileHeightMap[local152][local168][local173 + 1];
-							local209 = Static83.activeTileHeightMap[local152][local168 + 1][local173 + 1];
+							local202 = SceneGraph.activeTileHeightMap[local152][local168 + 1][local173];
+							local200 = SceneGraph.activeTileHeightMap[local152][local168][local173];
+							local349 = SceneGraph.activeTileHeightMap[local152][local168][local173 + 1];
+							local209 = SceneGraph.activeTileHeightMap[local152][local168 + 1][local173 + 1];
 							if (local152 > 0) {
 								@Pc(1067) boolean local1067 = true;
 								if (local178 == 0 && Static163.aByteArrayArrayArray11[local152][local168][local173] != 0) {
@@ -231,7 +231,7 @@ public final class Static45 {
 							if (local194 == 0) {
 								Static176.method3305(local152, local168, local173, 0, 0, -1, local200, local202, local209, local349, Static87.method1814(local267, local234), Static87.method1814(local273, local234), Static87.method1814(local326, local234), Static87.method1814(local332, local234), 0, 0, 0, 0, local254, 0);
 								if (GlRenderer.enabled && local152 > 0 && local234 != -1 && FluTypeList.get(local178 - 1).aBoolean198) {
-									Static242.method4197(0, 0, true, false, local168, local173, local200 - Static83.activeTileHeightMap[0][local168][local173], -Static83.activeTileHeightMap[0][local168 + 1][local173] + local202, local209 - Static83.activeTileHeightMap[0][local168 + 1][local173 + 1], local349 - Static83.activeTileHeightMap[0][local168][local173 + 1]);
+									Static242.method4197(0, 0, true, false, local168, local173, local200 - SceneGraph.activeTileHeightMap[0][local168][local173], -SceneGraph.activeTileHeightMap[0][local168 + 1][local173] + local202, local209 - SceneGraph.activeTileHeightMap[0][local168 + 1][local173 + 1], local349 - SceneGraph.activeTileHeightMap[0][local168][local173 + 1]);
 								}
 								if (GlRenderer.enabled && !underwater && Static62.anIntArrayArray11 != null && local152 == 0) {
 									for (local322 = local168 - 1; local322 <= local168 + 1; local322++) {
@@ -312,7 +312,7 @@ public final class Static45 {
 								}
 								Static176.method3305(local152, local168, local173, local322, local1242, local1288, local200, local202, local209, local349, Static87.method1814(local267, local234), Static87.method1814(local273, local234), Static87.method1814(local326, local234), Static87.method1814(local332, local234), Static230.method3949(local1301, local267), Static230.method3949(local1301, local273), Static230.method3949(local1301, local326), Static230.method3949(local1301, local332), local254, local1353);
 								if (GlRenderer.enabled && local152 > 0) {
-									Static242.method4197(local322, local1242, local1301 == -2 || !local1248.aBoolean311, local234 == -1 || !FluTypeList.get(local178 - 1).aBoolean198, local168, local173, local200 - Static83.activeTileHeightMap[0][local168][local173], local202 - Static83.activeTileHeightMap[0][local168 + 1][local173], local209 - Static83.activeTileHeightMap[0][local168 + 1][local173 + 1], -Static83.activeTileHeightMap[0][local168][local173 + 1] + local349);
+									Static242.method4197(local322, local1242, local1301 == -2 || !local1248.aBoolean311, local234 == -1 || !FluTypeList.get(local178 - 1).aBoolean198, local168, local173, local200 - SceneGraph.activeTileHeightMap[0][local168][local173], local202 - SceneGraph.activeTileHeightMap[0][local168 + 1][local173], local209 - SceneGraph.activeTileHeightMap[0][local168 + 1][local173 + 1], -SceneGraph.activeTileHeightMap[0][local168][local173 + 1] + local349);
 								}
 							}
 						}
@@ -321,7 +321,7 @@ public final class Static45 {
 			}
 			if (GlRenderer.enabled) {
 				@Pc(1888) float[][] local1888 = new float[105][105];
-				@Pc(1892) int[][] local1892 = Static83.activeTileHeightMap[local152];
+				@Pc(1892) int[][] local1892 = SceneGraph.activeTileHeightMap[local152];
 				@Pc(1896) float[][] local1896 = new float[105][105];
 				@Pc(1900) float[][] local1900 = new float[105][105];
 				local200 = 1;
@@ -329,12 +329,12 @@ public final class Static45 {
 					if (local200 > 103) {
 						@Pc(2025) GlTile[] local2025;
 						if (underwater) {
-							local2025 = Static193.method3501(Static12.tileSettings, Static163.aByteArrayArrayArray11[local152], Static253.aByteArrayArrayArray16[local152], local146, local1896, Static62.anIntArrayArray11, Static240.aByteArrayArrayArray14[local152], Static4.aByteArrayArrayArray1[local152], local1888, local152, local1900, local142, Static83.activeTileHeightMap[local152], Static107.surfaceTileHeightMap[0]);
+							local2025 = Static193.method3501(Static12.tileSettings, Static163.aByteArrayArrayArray11[local152], Static253.aByteArrayArrayArray16[local152], local146, local1896, Static62.anIntArrayArray11, Static240.aByteArrayArrayArray14[local152], Static4.aByteArrayArrayArray1[local152], local1888, local152, local1900, local142, SceneGraph.activeTileHeightMap[local152], Static107.surfaceTileHeightMap[0]);
 							Static110.method2280(local152, local2025);
 							break;
 						}
-						local2025 = Static193.method3501(Static12.tileSettings, Static163.aByteArrayArrayArray11[local152], Static253.aByteArrayArrayArray16[local152], local146, local1896, null, Static240.aByteArrayArrayArray14[local152], Static4.aByteArrayArrayArray1[local152], local1888, local152, local1900, local142, Static83.activeTileHeightMap[local152], null);
-						@Pc(2049) GlTile[] local2049 = Static1.method2(local1896, local1888, Static83.activeTileHeightMap[local152], local152, local1900, Static4.aByteArrayArrayArray1[local152], local146, Static163.aByteArrayArrayArray11[local152], Static253.aByteArrayArrayArray16[local152], Static240.aByteArrayArrayArray14[local152], Static12.tileSettings);
+						local2025 = Static193.method3501(Static12.tileSettings, Static163.aByteArrayArrayArray11[local152], Static253.aByteArrayArrayArray16[local152], local146, local1896, null, Static240.aByteArrayArrayArray14[local152], Static4.aByteArrayArrayArray1[local152], local1888, local152, local1900, local142, SceneGraph.activeTileHeightMap[local152], null);
+						@Pc(2049) GlTile[] local2049 = Static1.method2(local1896, local1888, SceneGraph.activeTileHeightMap[local152], local152, local1900, Static4.aByteArrayArrayArray1[local152], local146, Static163.aByteArrayArrayArray11[local152], Static253.aByteArrayArrayArray16[local152], Static240.aByteArrayArrayArray14[local152], Static12.tileSettings);
 						@Pc(2057) GlTile[] local2057 = new GlTile[local2025.length + local2049.length];
 						for (local349 = 0; local349 < local2025.length; local349++) {
 							local2057[local349] = local2025[local349];
@@ -343,7 +343,7 @@ public final class Static45 {
 							local2057[local2025.length + local349] = local2049[local349];
 						}
 						Static110.method2280(local152, local2057);
-						Static221.method3393(local1900, Static253.aByteArrayArrayArray16[local152], Static4.aByteArrayArrayArray1[local152], LightingManager.lights, local152, LightingManager.lightCount, local1896, Static163.aByteArrayArrayArray11[local152], Static240.aByteArrayArrayArray14[local152], Static83.activeTileHeightMap[local152], local1888);
+						Static221.method3393(local1900, Static253.aByteArrayArrayArray16[local152], Static4.aByteArrayArrayArray1[local152], LightingManager.lights, local152, LightingManager.lightCount, local1896, Static163.aByteArrayArrayArray11[local152], Static240.aByteArrayArrayArray14[local152], SceneGraph.activeTileHeightMap[local152], local1888);
 						break;
 					}
 					for (local202 = 1; local202 <= 103; local202++) {
@@ -403,8 +403,8 @@ public final class Static45 {
 						}
 						local202 = (local200 + 1 - local194) * (-local173 + (local178 - -1));
 						if (local202 >= 8) {
-							local349 = Static83.activeTileHeightMap[local200][local168][local173] - 240;
-							local234 = Static83.activeTileHeightMap[local194][local168][local173];
+							local349 = SceneGraph.activeTileHeightMap[local200][local168][local173] - 240;
+							local234 = SceneGraph.activeTileHeightMap[local194][local168][local173];
 							Static278.method4647(1, local168 * 128, local168 * 128, local173 * 128, local178 * 128 + 128, local349, local234);
 							for (local254 = local194; local254 <= local200; local254++) {
 								for (local267 = local173; local267 <= local178; local267++) {
@@ -438,8 +438,8 @@ public final class Static45 {
 						}
 						local202 = (local178 + 1 - local173) * (-local194 + local200 - -1);
 						if (local202 >= 8) {
-							local349 = Static83.activeTileHeightMap[local200][local173][local2204] - 240;
-							local234 = Static83.activeTileHeightMap[local194][local173][local2204];
+							local349 = SceneGraph.activeTileHeightMap[local200][local173][local2204] - 240;
+							local234 = SceneGraph.activeTileHeightMap[local194][local173][local2204];
 							Static278.method4647(2, local173 * 128, local178 * 128 + 128, local2204 * 128, local2204 * 128, local349, local234);
 							for (local254 = local194; local254 <= local200; local254++) {
 								for (local267 = local173; local267 <= local178; local267++) {
@@ -472,7 +472,7 @@ public final class Static45 {
 							local178++;
 						}
 						if ((local178 + 1 - local173) * (local200 - (local194 - 1)) >= 4) {
-							local202 = Static83.activeTileHeightMap[local152][local173][local194];
+							local202 = SceneGraph.activeTileHeightMap[local152][local173][local194];
 							Static278.method4647(4, local173 * 128, local178 * 128 + 128, local194 * 128, local200 * 128 + 128, local202, local202);
 							for (local209 = local173; local209 <= local178; local209++) {
 								for (local349 = local194; local349 <= local200; local349++) {

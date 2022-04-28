@@ -163,7 +163,21 @@ public final class Player extends PathingEntity {
 		}
 	}
 
-	@OriginalMember(owner = "client!e", name = "c", descriptor = "(B)I")
+    @OriginalMember(owner = "client!la", name = "a", descriptor = "(ILclient!e;)I")
+    public static int getSound(@OriginalArg(1) Player arg0) {
+        @Pc(14) int local14 = arg0.anInt1654;
+        @Pc(18) BasType local18 = arg0.getBasType();
+        if (local18.idleAnimationId == arg0.movementSeqId) {
+            local14 = arg0.anInt1648;
+        } else if (local18.runAnimationId == arg0.movementSeqId || arg0.movementSeqId == local18.runAnimationId2 || arg0.movementSeqId == local18.runAnimationId4 || local18.runAnimationId3 == arg0.movementSeqId) {
+            local14 = arg0.anInt1670;
+        } else if (arg0.movementSeqId == local18.anInt1062 || arg0.movementSeqId == local18.anInt1042 || arg0.movementSeqId == local18.anInt1048 || arg0.movementSeqId == local18.anInt1066) {
+            local14 = arg0.anInt1658;
+        }
+        return local14;
+    }
+
+    @OriginalMember(owner = "client!e", name = "c", descriptor = "(B)I")
 	@Override
 	public final int getSize() {
 		return this.appearance == null || this.appearance.anInt2492 == -1 ? super.getSize() : NpcTypeList.get(this.appearance.anInt2492).size;
@@ -281,7 +295,7 @@ public final class Player extends PathingEntity {
 			return;
 		}
 		@Pc(25) SeqType local25 = this.seqId != -1 && this.anInt3420 == 0 ? SeqTypeList.get(this.seqId) : null;
-		@Pc(54) SeqType local54 = this.anInt3366 == -1 || this.aBoolean98 || this.anInt3366 == this.method2681().idleAnimationId && local25 != null ? null : SeqTypeList.get(this.anInt3366);
+		@Pc(54) SeqType local54 = this.movementSeqId == -1 || this.aBoolean98 || this.movementSeqId == this.getBasType().idleAnimationId && local25 != null ? null : SeqTypeList.get(this.movementSeqId);
 		@Pc(76) Model local76 = this.appearance.method1954(this.aClass147Array3, this.anInt3373, local54, local25, this.anInt3396, this.anInt3388, this.anInt3360, this.anInt3425, this.anInt3407);
 		@Pc(79) int local79 = Static198.method1029();
 		if (GlRenderer.enabled && GameShell.maxMemory < 96 && local79 > 50) {
@@ -380,7 +394,7 @@ public final class Player extends PathingEntity {
 				} else {
 					local515 = (Model) this.attachment;
 				}
-				local515.translate(this.anInt3379 - this.xFine, this.anInt3406 + -this.anInt3424, this.anInt3426 - this.zFine);
+				local515.translate(this.attachmentXFine - this.xFine, this.attachmentY + -this.anInt3424, this.attachmentZFine - this.zFine);
 				if (this.anInt3400 == 512) {
 					local515.method4578();
 				} else if (this.anInt3400 == 1024) {
@@ -417,7 +431,7 @@ public final class Player extends PathingEntity {
 		} else if (this.anInt3400 == 1536) {
 			local515.method4578();
 		}
-		local515.translate(this.xFine - this.anInt3379, -this.anInt3406 + this.anInt3424, this.zFine - this.anInt3426);
+		local515.translate(this.xFine - this.attachmentXFine, -this.attachmentY + this.anInt3424, this.zFine - this.attachmentZFine);
 	}
 
 	@OriginalMember(owner = "client!e", name = "a", descriptor = "(Lclient!ga;ILclient!ak;IIIIIIIIIIII)V")

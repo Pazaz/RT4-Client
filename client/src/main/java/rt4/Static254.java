@@ -104,8 +104,8 @@ public final class Static254 {
 					}
 				}
 				if (local132) {
-					if (Static83.activeTileHeightMap[Player.level + 1][local108][local122] > Static79.anIntArray205[arg4]) {
-						Static79.anIntArray205[arg4] = Static83.activeTileHeightMap[Player.level + 1][local108][local122];
+					if (SceneGraph.activeTileHeightMap[Player.level + 1][local108][local122] > Static79.anIntArray205[arg4]) {
+						Static79.anIntArray205[arg4] = SceneGraph.activeTileHeightMap[Player.level + 1][local108][local122];
 					}
 					local150 = local108 << 7;
 					if (local150 < Static149.anIntArray338[arg4]) {

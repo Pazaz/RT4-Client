@@ -37,7 +37,7 @@ public final class Static219 {
 
 	@OriginalMember(owner = "client!rl", name = "i", descriptor = "(I)V")
 	public static void method3796() {
-		for (@Pc(10) SceneryStack local10 = (SceneryStack) Static26.sceneryList.start(); local10 != null; local10 = (SceneryStack) Static26.sceneryList.next()) {
+		for (@Pc(10) SceneryStack local10 = (SceneryStack) Static26.sceneryList.head(); local10 != null; local10 = (SceneryStack) Static26.sceneryList.next()) {
 			if (local10.anInt924 == -1) {
 				local10.anInt925 = 0;
 				Static226.method3898(local10);

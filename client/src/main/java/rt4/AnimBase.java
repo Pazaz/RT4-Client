@@ -27,30 +27,30 @@ public final class AnimBase extends Node {
 	public final int[] parts;
 
 	@OriginalMember(owner = "client!jm", name = "<init>", descriptor = "(I[B)V")
-	public AnimBase(@OriginalArg(0) int arg0, @OriginalArg(1) byte[] arg1) {
-		this.id = arg0;
-		@Pc(9) Buffer buffer = new Buffer(arg1);
+	public AnimBase(@OriginalArg(0) int id, @OriginalArg(1) byte[] bytes) {
+		this.id = id;
+		@Pc(9) Buffer buffer = new Buffer(bytes);
 		this.transforms = buffer.g1();
 		this.bones = new int[this.transforms][];
 		this.types = new int[this.transforms];
 		this.shadow = new boolean[this.transforms];
 		this.parts = new int[this.transforms];
-		@Pc(36) int local36;
-		for (local36 = 0; local36 < this.transforms; local36++) {
-			this.types[local36] = buffer.g1();
+		@Pc(36) int i;
+		for (i = 0; i < this.transforms; i++) {
+			this.types[i] = buffer.g1();
 		}
-		for (local36 = 0; local36 < this.transforms; local36++) {
-			this.shadow[local36] = buffer.g1() == 1;
+		for (i = 0; i < this.transforms; i++) {
+			this.shadow[i] = buffer.g1() == 1;
 		}
-		for (local36 = 0; local36 < this.transforms; local36++) {
-			this.parts[local36] = buffer.g2();
+		for (i = 0; i < this.transforms; i++) {
+			this.parts[i] = buffer.g2();
 		}
-		for (local36 = 0; local36 < this.transforms; local36++) {
-			this.bones[local36] = new int[buffer.g1()];
+		for (i = 0; i < this.transforms; i++) {
+			this.bones[i] = new int[buffer.g1()];
 		}
-		for (local36 = 0; local36 < this.transforms; local36++) {
-			for (@Pc(118) int local118 = 0; local118 < this.bones[local36].length; local118++) {
-				this.bones[local36][local118] = buffer.g1();
+		for (i = 0; i < this.transforms; i++) {
+			for (@Pc(118) int j = 0; j < this.bones[i].length; j++) {
+				this.bones[i][j] = buffer.g1();
 			}
 		}
 	}

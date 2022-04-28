@@ -126,7 +126,7 @@ public final class Static127 {
 				}
 			}
 		}
-		for (@Pc(451) SceneryStack local451 = (SceneryStack) Static26.sceneryList.start(); local451 != null; local451 = (SceneryStack) Static26.sceneryList.next()) {
+		for (@Pc(451) SceneryStack local451 = (SceneryStack) Static26.sceneryList.head(); local451 != null; local451 = (SceneryStack) Static26.sceneryList.next()) {
 			local451.z -= local81;
 			local451.x -= local86;
 			if (local451.x < 0 || local451.z < 0 || local451.x >= 104 || local451.z >= 104) {

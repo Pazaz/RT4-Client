@@ -98,7 +98,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 			return;
 		}
 		@Pc(15) Node local15;
-		for (local15 = this.aClass69_16.start(); local15 != null; local15 = this.aClass69_16.next()) {
+		for (local15 = this.aClass69_16.head(); local15 != null; local15 = this.aClass69_16.next()) {
 			if (local15.key == (long) arg0) {
 				return;
 			}
@@ -190,7 +190,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 		if (this.aClass70_1 == null) {
 			return 0;
 		} else if (this.aBoolean35) {
-			@Pc(25) Node local25 = this.aClass69_17.start();
+			@Pc(25) Node local25 = this.aClass69_17.head();
 			return local25 == null ? 0 : (int) local25.key;
 		} else {
 			return this.aClass70_1.anInt2902;
@@ -208,7 +208,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 			@Pc(43) int local43;
 			if (this.aBoolean35) {
 				local32 = true;
-				for (local37 = this.aClass69_17.start(); local37 != null; local37 = this.aClass69_17.next()) {
+				for (local37 = this.aClass69_17.head(); local37 != null; local37 = this.aClass69_17.next()) {
 					local43 = (int) local37.key;
 					if (this.aByteArray9[local43] == 0) {
 						this.method536(1, local43);
@@ -245,7 +245,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 				}
 			} else if (this.aBoolean36) {
 				local32 = true;
-				for (local37 = this.aClass69_17.start(); local37 != null; local37 = this.aClass69_17.next()) {
+				for (local37 = this.aClass69_17.head(); local37 != null; local37 = this.aClass69_17.next()) {
 					local43 = (int) local37.key;
 					if (this.aByteArray9[local43] != 1) {
 						this.method536(2, local43);
@@ -434,7 +434,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 		if (this.aClass69_17 == null || this.method521() == null) {
 			return;
 		}
-		for (@Pc(21) Node local21 = this.aClass69_16.start(); local21 != null; local21 = this.aClass69_16.next()) {
+		for (@Pc(21) Node local21 = this.aClass69_16.head(); local21 != null; local21 = this.aClass69_16.next()) {
 			@Pc(28) int local28 = (int) local21.key;
 			if (local28 < 0 || this.aClass70_1.anInt2907 <= local28 || this.aClass70_1.anIntArray272[local28] == 0) {
 				local21.unlink();

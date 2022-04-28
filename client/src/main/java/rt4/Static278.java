@@ -36,11 +36,11 @@ public final class Static278 {
 	public static void setRenderTiles(@OriginalArg(0) boolean arg0) {
 		if (arg0) {
 			SceneGraph.tiles = Static276.underWaterGroundTiles;
-			Static83.activeTileHeightMap = Static80.underWaterTileHeightMap;
+			SceneGraph.activeTileHeightMap = Static80.underWaterTileHeightMap;
 			Static182.aClass3_Sub14ArrayArray2 = Static195.underWaterHdTiles;
 		} else {
 			SceneGraph.tiles = Static197.surfaceGroundTiles;
-			Static83.activeTileHeightMap = Static107.surfaceTileHeightMap;
+			SceneGraph.activeTileHeightMap = Static107.surfaceTileHeightMap;
 			Static182.aClass3_Sub14ArrayArray2 = Static36.surfaceHdTiles;
 		}
 		Static126.anInt3114 = SceneGraph.tiles.length;
@@ -77,26 +77,26 @@ public final class Static278 {
 			local32 = arg3.g1();
 			if (local32 == 0) {
 				if (arg2) {
-					Static83.activeTileHeightMap[0][arg5][arg4] = Static107.surfaceTileHeightMap[0][arg5][arg4];
+					SceneGraph.activeTileHeightMap[0][arg5][arg4] = Static107.surfaceTileHeightMap[0][arg5][arg4];
 				} else if (arg7 == 0) {
-					Static83.activeTileHeightMap[0][arg5][arg4] = -Static65.method1498(arg4 + arg1 + 556238, arg0 + arg5 + 932731) * 8;
+					SceneGraph.activeTileHeightMap[0][arg5][arg4] = -Static65.method1498(arg4 + arg1 + 556238, arg0 + arg5 + 932731) * 8;
 				} else {
-					Static83.activeTileHeightMap[arg7][arg5][arg4] = Static83.activeTileHeightMap[arg7 - 1][arg5][arg4] - 240;
+					SceneGraph.activeTileHeightMap[arg7][arg5][arg4] = SceneGraph.activeTileHeightMap[arg7 - 1][arg5][arg4] - 240;
 				}
 				break;
 			}
 			if (local32 == 1) {
 				@Pc(111) int local111 = arg3.g1();
 				if (arg2) {
-					Static83.activeTileHeightMap[0][arg5][arg4] = Static107.surfaceTileHeightMap[0][arg5][arg4] + local111 * 8;
+					SceneGraph.activeTileHeightMap[0][arg5][arg4] = Static107.surfaceTileHeightMap[0][arg5][arg4] + local111 * 8;
 				} else {
 					if (local111 == 1) {
 						local111 = 0;
 					}
 					if (arg7 == 0) {
-						Static83.activeTileHeightMap[0][arg5][arg4] = -local111 * 8;
+						SceneGraph.activeTileHeightMap[0][arg5][arg4] = -local111 * 8;
 					} else {
-						Static83.activeTileHeightMap[arg7][arg5][arg4] = Static83.activeTileHeightMap[arg7 - 1][arg5][arg4] - local111 * 8;
+						SceneGraph.activeTileHeightMap[arg7][arg5][arg4] = SceneGraph.activeTileHeightMap[arg7 - 1][arg5][arg4] - local111 * 8;
 					}
 				}
 				break;
@@ -130,7 +130,7 @@ public final class Static278 {
 		MidiPlayer.method801();
 		MidiPlayer.jingle = false;
 		MusicPlayer.groupId = -1;
-		Static260.clearAmbientSounds(true);
+		AreaSoundManager.clear(true);
 		Static230.dynamicMapRegion = false;
 		Static142.originZ = 0;
 		Static80.centralZoneX = 0;

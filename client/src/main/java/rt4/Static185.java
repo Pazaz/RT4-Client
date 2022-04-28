@@ -56,14 +56,14 @@ public final class Static185 {
 			local129 = (local81 >> 1) + arg8;
 			local133 = arg8 + (local81 + 1 >> 1);
 		}
-		@Pc(153) int[][] local153 = Static83.activeTileHeightMap[arg0];
+		@Pc(153) int[][] local153 = SceneGraph.activeTileHeightMap[arg0];
 		@Pc(165) int local165 = (local84 << 6) + (arg7 << 7);
 		@Pc(173) int local173 = (local81 << 6) + (arg8 << 7);
 		@Pc(199) int local199 = local153[local103][local133] + local153[local112][local129] + local153[local103][local129] + local153[local112][local133] >> 2;
 		@Pc(201) int local201 = 0;
 		@Pc(213) int[][] local213;
 		if (GlRenderer.enabled && arg0 != 0) {
-			local213 = Static83.activeTileHeightMap[0];
+			local213 = SceneGraph.activeTileHeightMap[0];
 			local201 = local199 - (local213[local112][local133] + local213[local112][local129] + local213[local103][local129] + local213[local103][local133] >> 2);
 		}
 		local213 = null;
@@ -71,7 +71,7 @@ public final class Static185 {
 		if (arg3) {
 			local213 = Static107.surfaceTileHeightMap[0];
 		} else if (arg0 < 3) {
-			local213 = Static83.activeTileHeightMap[arg0 + 1];
+			local213 = SceneGraph.activeTileHeightMap[arg0 + 1];
 		}
 		if (local62.anInt4429 == 0 || arg3) {
 			local261 |= Long.MIN_VALUE;

@@ -56,9 +56,9 @@ public abstract class Model extends Entity {
 					}
 					local42 = arg8 & arg0.parts[local14];
 					if (local42 == 65535) {
-						this.method4569(arg0.types[local14], arg0.bones[local14], arg1.aShortArray44[local5], arg1.aShortArray50[local5], arg1.aShortArray49[local5], arg7);
+						this.method4569(arg0.types[local14], arg0.bones[local14], arg1.x[local5], arg1.y[local5], arg1.z[local5], arg7);
 					} else {
-						this.method4577(arg0.types[local14], arg0.bones[local14], arg1.aShortArray44[local5], arg1.aShortArray50[local5], arg1.aShortArray49[local5], arg7, local42, arg9);
+						this.method4577(arg0.types[local14], arg0.bones[local14], arg1.x[local5], arg1.y[local5], arg1.z[local5], arg7, local42, arg9);
 					}
 				}
 			}
@@ -88,9 +88,9 @@ public abstract class Model extends Entity {
 					@Pc(228) short local228;
 					@Pc(233) byte local233;
 					if (local144) {
-						local213 = arg1.aShortArray44[local5];
-						local218 = arg1.aShortArray50[local5];
-						local223 = arg1.aShortArray49[local5];
+						local213 = arg1.x[local5];
+						local218 = arg1.y[local5];
+						local223 = arg1.z[local5];
 						local228 = arg1.prevOriginIndices[local5];
 						local233 = arg1.flags[local5];
 						local5++;
@@ -107,9 +107,9 @@ public abstract class Model extends Entity {
 					@Pc(267) short local267;
 					@Pc(272) byte local272;
 					if (local158) {
-						local252 = arg2.aShortArray44[local136];
-						local257 = arg2.aShortArray50[local136];
-						local262 = arg2.aShortArray49[local136];
+						local252 = arg2.x[local136];
+						local257 = arg2.y[local136];
+						local262 = arg2.z[local136];
 						local267 = arg2.prevOriginIndices[local136];
 						local272 = arg2.flags[local136];
 						local136++;
@@ -206,7 +206,7 @@ public abstract class Model extends Entity {
 				if (local12.prevOriginIndices[local17] != -1) {
 					this.method4567(0, 0, 0, 0);
 				}
-				this.method4567(local15.types[local26], local12.aShortArray44[local17], local12.aShortArray50[local17], local12.aShortArray49[local17]);
+				this.method4567(local15.types[local26], local12.x[local17], local12.y[local17], local12.z[local17]);
 			}
 		}
 		this.method4557();

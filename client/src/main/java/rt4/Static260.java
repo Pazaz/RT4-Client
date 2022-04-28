@@ -46,7 +46,7 @@ public final class Static260 {
 		}
 		@Pc(10) int local10 = arg1 << 7;
 		@Pc(14) int local14 = arg2 << 7;
-		@Pc(24) int local24 = Static83.activeTileHeightMap[arg0][arg1][arg2] - 1;
+		@Pc(24) int local24 = SceneGraph.activeTileHeightMap[arg0][arg1][arg2] - 1;
 		@Pc(28) int local28 = local24 - 120;
 		@Pc(32) int local32 = local24 - 230;
 		@Pc(36) int local36 = local24 - 238;
@@ -167,36 +167,4 @@ public final class Static260 {
 		}
 	}
 
-	@OriginalMember(owner = "client!vd", name = "a", descriptor = "(BZ)V")
-	public static void clearAmbientSounds(@OriginalArg(1) boolean arg0) {
-		@Pc(14) AreaSound local14;
-		for (local14 = (AreaSound) Static3.aClass69_135.start(); local14 != null; local14 = (AreaSound) Static3.aClass69_135.next()) {
-			if (local14.primaryStream != null) {
-				client.soundStream.removeSubStream(local14.primaryStream);
-				local14.primaryStream = null;
-			}
-			if (local14.secondaryStream != null) {
-				client.soundStream.removeSubStream(local14.secondaryStream);
-				local14.secondaryStream = null;
-			}
-			local14.unlink();
-		}
-		if (!arg0) {
-			return;
-		}
-		for (local14 = (AreaSound) Static152.aClass69_87.start(); local14 != null; local14 = (AreaSound) Static152.aClass69_87.next()) {
-			if (local14.primaryStream != null) {
-				client.soundStream.removeSubStream(local14.primaryStream);
-				local14.primaryStream = null;
-			}
-			local14.unlink();
-		}
-		for (local14 = (AreaSound) AreaSoundManager.aClass133_7.head(); local14 != null; local14 = (AreaSound) AreaSoundManager.aClass133_7.next()) {
-			if (local14.primaryStream != null) {
-				client.soundStream.removeSubStream(local14.primaryStream);
-				local14.primaryStream = null;
-			}
-			local14.unlink();
-		}
-	}
 }

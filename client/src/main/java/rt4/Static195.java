@@ -16,7 +16,7 @@ public final class Static195 {
 
     @OriginalMember(owner = "client!pk", name = "i", descriptor = "(I)V")
 	public static void method3532() {
-		for (@Pc(16) ProjAnimNode local16 = (ProjAnimNode) Static217.aClass69_116.start(); local16 != null; local16 = (ProjAnimNode) Static217.aClass69_116.next()) {
+		for (@Pc(16) ProjAnimNode local16 = (ProjAnimNode) Static217.aClass69_116.head(); local16 != null; local16 = (ProjAnimNode) Static217.aClass69_116.next()) {
 			@Pc(21) ProjAnim local21 = local16.aClass8_Sub6_1;
 			if (Player.level != local21.anInt4810 || local21.anInt4800 < client.loop) {
 				local16.unlink();
