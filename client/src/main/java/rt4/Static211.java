@@ -31,7 +31,7 @@ public final class Static211 {
 	}
 
 	@OriginalMember(owner = "client!rc", name = "a", descriptor = "(Z)V")
-	public static void method924() {
+	public static void clearObjectModelCache() {
 		ObjTypeList.models.clear();
 	}
 

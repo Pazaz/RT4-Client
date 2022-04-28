@@ -10,7 +10,7 @@ public final class Wall {
 	public int anInt3044;
 
 	@OriginalMember(owner = "client!jh", name = "e", descriptor = "Lclient!th;")
-	public Entity aClass8_5;
+	public Entity primary;
 
 	@OriginalMember(owner = "client!jh", name = "h", descriptor = "Lclient!th;")
 	public Entity aClass8_6;

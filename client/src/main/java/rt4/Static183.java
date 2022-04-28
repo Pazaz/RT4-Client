@@ -29,7 +29,7 @@ public final class Static183 {
 	@OriginalMember(owner = "client!ok", name = "a", descriptor = "(IIB)Lclient!ce;")
 	public static SecondaryLinkedList method3333(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		@Pc(9) SecondaryLinkedList local9 = new SecondaryLinkedList();
-		for (@Pc(14) Map local14 = (Map) MapList.aClass69_120.start(); local14 != null; local14 = (Map) MapList.aClass69_120.next()) {
+		for (@Pc(14) Map local14 = (Map) MapList.aClass69_120.head(); local14 != null; local14 = (Map) MapList.aClass69_120.next()) {
 			if (local14.aBoolean50 && local14.method664(arg1, arg0)) {
 				local9.addTail(local14);
 			}

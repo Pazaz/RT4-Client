@@ -25,7 +25,7 @@ public final class WallDecor {
 	public int anInt1393;
 
 	@OriginalMember(owner = "client!df", name = "j", descriptor = "Lclient!th;")
-	public Entity aClass8_3;
+	public Entity primary;
 
 	@OriginalMember(owner = "client!df", name = "k", descriptor = "I")
 	public int anInt1394;

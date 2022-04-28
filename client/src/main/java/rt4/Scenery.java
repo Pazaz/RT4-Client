@@ -10,7 +10,7 @@ public final class Scenery {
 	public int anInt1696;
 
 	@OriginalMember(owner = "client!ec", name = "c", descriptor = "Lclient!th;")
-	public Entity aClass8_4;
+	public Entity primary;
 
 	@OriginalMember(owner = "client!ec", name = "e", descriptor = "I")
 	public int anInt1698;

@@ -579,7 +579,7 @@ public final class Static1 {
 		} else {
 			local225 = Static91.anInt2428 * 25;
 		}
-		for (@Pc(238) MapElement local238 = (MapElement) WorldMap.mapElements.start(); local238 != null; local238 = (MapElement) WorldMap.mapElements.next()) {
+		for (@Pc(238) MapElement local238 = (MapElement) WorldMap.mapElements.head(); local238 != null; local238 = (MapElement) WorldMap.mapElements.next()) {
 			if (local238.id == Static9.anInt172) {
 				@Pc(258) int local258 = arg3 + local238.anInt4314 * arg1 / WorldMap.length;
 				@Pc(267) int local267 = arg2 * local238.anInt4307 / WorldMap.width + arg0;

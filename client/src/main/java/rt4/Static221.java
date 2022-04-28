@@ -134,7 +134,7 @@ public final class Static221 {
 								local135 = true;
 							}
 						}
-						@Pc(275) Scenery local275 = Static133.method4008(arg4, local114, local72);
+						@Pc(275) Scenery local275 = SceneGraph.getScenery(arg4, local114, local72);
 						if (local275 != null) {
 							@Pc(287) int local287 = (int) (local275.aLong56 >> 14) & 0x3F;
 							if (local287 == 9) {
@@ -254,7 +254,7 @@ public final class Static221 {
 								local791 = true;
 							}
 						}
-						@Pc(899) Scenery local899 = Static133.method4008(arg4, local114, local72);
+						@Pc(899) Scenery local899 = SceneGraph.getScenery(arg4, local114, local72);
 						if (local899 != null) {
 							@Pc(911) int local911 = (int) (local899.aLong56 >> 14) & 0x3F;
 							if (local911 == 9) {

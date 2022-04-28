@@ -25,7 +25,7 @@ public final class Static262 {
 		local8.anInt3048 = arg1 * 128 + 64;
 		local8.anInt3044 = arg2 * 128 + 64;
 		local8.anInt3051 = arg3;
-		local8.aClass8_5 = arg4;
+		local8.primary = arg4;
 		local8.aClass8_6 = arg5;
 		local8.anInt3049 = arg6;
 		local8.anInt3052 = arg7;
@@ -35,12 +35,6 @@ public final class Static262 {
 			}
 		}
 		SceneGraph.tiles[arg0][arg1][arg2].aClass77_1 = local8;
-	}
-
-	@OriginalMember(owner = "client!vf", name = "a", descriptor = "(III)Lclient!jh;")
-	public static Wall method4509(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		@Pc(7) Tile local7 = SceneGraph.tiles[arg0][arg1][arg2];
-		return local7 == null ? null : local7.aClass77_1;
 	}
 
 	@OriginalMember(owner = "client!vf", name = "a", descriptor = "(IB)Lclient!na;")

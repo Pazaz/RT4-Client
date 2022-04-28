@@ -15,7 +15,7 @@ public final class Static85 {
     @OriginalMember(owner = "client!gl", name = "a", descriptor = "(II)V")
 	public static void refreshMagicVarp(@OriginalArg(1) int arg0) {
 		InterfaceList.redrawActiveInterfaces();
-		Static119.method2386();
+		AreaSoundManager.updateMulti();
 		@Pc(17) int local17 = VarpTypeList.get(arg0).clientCode;
 		if (local17 == 0) {
 			return;

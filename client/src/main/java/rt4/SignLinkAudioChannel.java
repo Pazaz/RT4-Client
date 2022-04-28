@@ -35,7 +35,7 @@ public final class SignLinkAudioChannel extends AudioChannel {
 	@OriginalMember(owner = "client!hl", name = "a", descriptor = "(Ljava/awt/Component;)V")
 	@Override
 	public final void init(@OriginalArg(0) Component component) throws Exception {
-		audioSource.init(Static44.sampleRate, component, AudioChannel.stereo);
+		audioSource.init(AudioChannel.sampleRate, component, AudioChannel.stereo);
 	}
 
 	@OriginalMember(owner = "client!hl", name = "b", descriptor = "()V")

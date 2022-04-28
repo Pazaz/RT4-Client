@@ -180,7 +180,7 @@ public final class Static269 {
 					local190 = local529.anInt2240 >> 7;
 					if (local190 >= 0 && local194 >= 0 && local190 < 104 && local194 < 104) {
 						local529.aBoolean125 = (Static12.tileSettings[1][local190][local194] & 0x2) != 0;
-						local529.anInt2235 = Static83.activeTileHeightMap[local529.anInt2241][local190][local194] - local529.anInt2235;
+						local529.anInt2235 = SceneGraph.activeTileHeightMap[local529.anInt2241][local190][local194] - local529.anInt2235;
 						Static120.method2389(local529);
 					}
 				}
@@ -200,12 +200,6 @@ public final class Static269 {
 				}
 			}
 		}
-	}
-
-	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(III)Lclient!bm;")
-	public static GroundDecor method2210(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		@Pc(7) Tile local7 = SceneGraph.tiles[arg0][arg1][arg2];
-		return local7 == null || local7.aClass15_1 == null ? null : local7.aClass15_1;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "o", descriptor = "(I)V")

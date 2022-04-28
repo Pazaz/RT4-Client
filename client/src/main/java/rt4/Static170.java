@@ -24,7 +24,7 @@ public final class Static170 {
 			return;
 		}
 		@Pc(6) GroundDecor local6 = new GroundDecor();
-		local6.aClass8_1 = arg4;
+		local6.primary = arg4;
 		local6.anInt732 = arg1 * 128 + 64;
 		local6.anInt736 = arg2 * 128 + 64;
 		local6.anInt733 = arg3;
@@ -38,20 +38,20 @@ public final class Static170 {
 
 	@OriginalMember(owner = "client!nh", name = "a", descriptor = "(IIIIIIIIIIIII)V")
 	public static void method2574(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) int arg8, @OriginalArg(9) int arg9, @OriginalArg(11) int arg10, @OriginalArg(12) int arg11) {
-		@Pc(7) AttachLocRequest_Class3_Sub8 local7 = new AttachLocRequest_Class3_Sub8();
-		local7.anInt1206 = arg6;
+		@Pc(7) AttachLocRequest local7 = new AttachLocRequest();
+		local7.angle = arg6;
 		local7.anInt1205 = arg3;
 		local7.anInt1187 = arg1;
 		local7.anInt1200 = arg5;
-		local7.anInt1192 = arg2;
-		local7.anInt1190 = arg8;
+		local7.entityId = arg2;
+		local7.x = arg8;
 		local7.anInt1197 = arg10;
-		local7.anInt1204 = arg4;
-		local7.anInt1189 = arg11;
+		local7.z = arg4;
+		local7.locId = arg11;
 		local7.anInt1188 = arg7;
 		local7.anInt1191 = arg0;
-		local7.anInt1198 = arg9;
-		Static128.aClass69_77.addTail(local7);
+		local7.shape = arg9;
+		AttachLocRequest.queue.addTail(local7);
 	}
 
 }

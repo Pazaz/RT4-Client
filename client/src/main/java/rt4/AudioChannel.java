@@ -15,8 +15,10 @@ public class AudioChannel {
     public static int threadPriority;
     @OriginalMember(owner = "client!em", name = "x", descriptor = "Lclient!cj;")
     public static AudioThread thread;
+	@OriginalMember(owner = "client!dh", name = "h", descriptor = "I")
+	public static int sampleRate;
 
-    @OriginalMember(owner = "client!vh", name = "h", descriptor = "Lclient!qb;")
+	@OriginalMember(owner = "client!vh", name = "h", descriptor = "Lclient!qb;")
 	private PcmStream stream;
 
 	@OriginalMember(owner = "client!vh", name = "n", descriptor = "[I")
@@ -26,7 +28,7 @@ public class AudioChannel {
 	private int anInt4637;
 
 	@OriginalMember(owner = "client!vh", name = "H", descriptor = "I")
-	public int sampleRate;
+	public int sampleRate2;
 
 	@OriginalMember(owner = "client!vh", name = "K", descriptor = "I")
 	public int bufferCapacity;
@@ -65,27 +67,27 @@ public class AudioChannel {
 	private int prevBufferSize = 0;
 
     @OriginalMember(owner = "client!dc", name = "a", descriptor = "(IIIZ)V")
-    public static void init(@OriginalArg(3) boolean arg0) {
+    public static void init(@OriginalArg(3) boolean stereo) {
         threadPriority = 2;
-        stereo = arg0;
-        Static44.sampleRate = 22050;
+        AudioChannel.stereo = stereo;
+        sampleRate = 22050;
     }
 
 	@OriginalMember(owner = "client!id", name = "a", descriptor = "(ILsignlink!ll;Ljava/awt/Component;II)Lclient!vh;")
 	public static AudioChannel create(@OriginalArg(0) int arg0, @OriginalArg(1) SignLink arg1, @OriginalArg(2) Component arg2, @OriginalArg(3) int arg3) {
-		if (Static44.sampleRate == 0) {
+		if (sampleRate == 0) {
 			throw new IllegalStateException();
 		}
 		try {
-			@Pc(33) AudioChannel local33 = (AudioChannel) Class.forName("rt4.JavaAudioChannel").getDeclaredConstructor().newInstance();
-			local33.sampleRate = arg0;
-			local33.samples = new int[(stereo ? 2 : 1) * 256];
-			local33.init(arg2);
-			local33.bufferCapacity = (arg0 & -1024) + 1024;
-			if (local33.bufferCapacity > 16384) {
-				local33.bufferCapacity = 16384;
+			@Pc(33) AudioChannel audioChannel = (AudioChannel) Class.forName("rt4.JavaAudioChannel").getDeclaredConstructor().newInstance();
+			audioChannel.sampleRate2 = arg0;
+			audioChannel.samples = new int[(stereo ? 2 : 1) * 256];
+			audioChannel.init(arg2);
+			audioChannel.bufferCapacity = (arg0 & -1024) + 1024;
+			if (audioChannel.bufferCapacity > 16384) {
+				audioChannel.bufferCapacity = 16384;
 			}
-			local33.open(local33.bufferCapacity);
+			audioChannel.open(audioChannel.bufferCapacity);
 			if (threadPriority > 0 && thread == null) {
 				thread = new AudioThread();
 				thread.signLink = arg1;
@@ -95,14 +97,14 @@ public class AudioChannel {
 				if (thread.channels[arg3] != null) {
 					throw new IllegalArgumentException();
 				}
-				thread.channels[arg3] = local33;
+				thread.channels[arg3] = audioChannel;
 			}
-			return local33;
+			return audioChannel;
 		} catch (@Pc(109) Throwable local109) {
 			try {
 				@Pc(120) SignLinkAudioChannel local120 = new SignLinkAudioChannel(arg1, arg3);
 				local120.samples = new int[(stereo ? 2 : 1) * 256];
-				local120.sampleRate = arg0;
+				local120.sampleRate2 = arg0;
 				local120.init(arg2);
 				local120.bufferCapacity = 16384;
 				local120.open(local120.bufferCapacity);
@@ -145,7 +147,7 @@ public class AudioChannel {
 		Static289.clear(arg0, 0, local1);
 		this.anInt4638 -= 256;
 		if (this.stream != null && this.anInt4638 <= 0) {
-			this.anInt4638 += Static44.sampleRate >> 4;
+			this.anInt4638 += sampleRate >> 4;
 			Static167.setInactive(this.stream);
 			this.method3567(this.stream, this.stream.method4407());
 			@Pc(45) int local45 = 0;
@@ -252,7 +254,7 @@ public class AudioChannel {
 			if (this.consumedSamples < this.prevBufferSize - local38) {
 				this.consumedSamples = this.prevBufferSize - local38;
 			}
-			@Pc(65) int local65 = this.sampleRate + this.anInt4637;
+			@Pc(65) int local65 = this.sampleRate2 + this.anInt4637;
 			if (local65 + 256 > 16384) {
 				local65 = 16128;
 			}
@@ -266,7 +268,7 @@ public class AudioChannel {
 				this.open(this.bufferCapacity);
 				if (this.bufferCapacity < local65 + 256) {
 					local65 = this.bufferCapacity - 256;
-					this.anInt4637 = local65 - this.sampleRate;
+					this.anInt4637 = local65 - this.sampleRate2;
 				}
 				this.skipConsumptionCheck = true;
 			}
@@ -300,7 +302,7 @@ public class AudioChannel {
 			}
 			while (now > this.time + 5000L) {
 				this.skip();
-				this.time += 256000 / Static44.sampleRate;
+				this.time += 256000 / sampleRate;
 			}
 		} catch (@Pc(247) Exception local247) {
 			this.time = now;

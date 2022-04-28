@@ -30,8 +30,8 @@ public final class Static16 {
 					@Pc(54) Tile local54 = local30[local32][local42];
 					if (local54 != null) {
 						@Pc(71) GlModel local71;
-						if (local54.aClass15_1 != null && local54.aClass15_1.aClass8_1 instanceof GlModel) {
-							local71 = (GlModel) local54.aClass15_1.aClass8_1;
+						if (local54.aClass15_1 != null && local54.aClass15_1.primary instanceof GlModel) {
+							local71 = (GlModel) local54.aClass15_1.primary;
 							if ((local54.aClass15_1.aLong26 & Long.MIN_VALUE) == 0L) {
 								local71.method4111(false, true, true, false, true, true);
 							} else {
@@ -39,8 +39,8 @@ public final class Static16 {
 							}
 						}
 						if (local54.aClass24_1 != null) {
-							if (local54.aClass24_1.aClass8_3 instanceof GlModel) {
-								local71 = (GlModel) local54.aClass24_1.aClass8_3;
+							if (local54.aClass24_1.primary instanceof GlModel) {
+								local71 = (GlModel) local54.aClass24_1.primary;
 								if ((local54.aClass24_1.key & Long.MIN_VALUE) == 0L) {
 									local71.method4111(false, true, true, false, true, true);
 								} else {
@@ -57,8 +57,8 @@ public final class Static16 {
 							}
 						}
 						if (local54.aClass77_1 != null) {
-							if (local54.aClass77_1.aClass8_5 instanceof GlModel) {
-								local71 = (GlModel) local54.aClass77_1.aClass8_5;
+							if (local54.aClass77_1.primary instanceof GlModel) {
+								local71 = (GlModel) local54.aClass77_1.primary;
 								if ((local54.aClass77_1.key & Long.MIN_VALUE) == 0L) {
 									local71.method4111(false, true, true, false, true, true);
 								} else {
@@ -75,8 +75,8 @@ public final class Static16 {
 							}
 						}
 						for (@Pc(270) int local270 = 0; local270 < local54.anInt662; local270++) {
-							if (local54.aClass31Array1[local270].aClass8_4 instanceof GlModel) {
-								@Pc(293) GlModel local293 = (GlModel) local54.aClass31Array1[local270].aClass8_4;
+							if (local54.aClass31Array1[local270].primary instanceof GlModel) {
+								@Pc(293) GlModel local293 = (GlModel) local54.aClass31Array1[local270].primary;
 								if ((Long.MIN_VALUE & local54.aClass31Array1[local270].aLong56) == 0L) {
 									local293.method4111(false, true, true, false, true, true);
 								} else {

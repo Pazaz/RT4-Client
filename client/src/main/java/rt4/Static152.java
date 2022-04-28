@@ -8,9 +8,6 @@ public final class Static152 {
 	@OriginalMember(owner = "client!ma", name = "i", descriptor = "I")
 	public static int mapSizeX;
 
-	@OriginalMember(owner = "client!ma", name = "x", descriptor = "Lclient!ih;")
-	public static final LinkedList aClass69_87 = new LinkedList();
-
 	@OriginalMember(owner = "client!ma", name = "z", descriptor = "I")
 	public static int anInt3604 = -1;
 

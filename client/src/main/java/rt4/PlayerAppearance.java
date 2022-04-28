@@ -364,7 +364,7 @@ public final class PlayerAppearance {
 					local374 = arg0[local353].anInt5399;
 					local367 = arg0[local353].anInt5398;
 					local381 = local858.frames[local374];
-					Static276.aClass3_Sub2_Sub7Array8[local353] = Static72.getAnimFrameset(local381 >>> 16);
+					Static276.aClass3_Sub2_Sub7Array8[local353] = SeqTypeList.getAnimFrameset(local381 >>> 16);
 					local381 &= 0xFFFF;
 					Static241.anIntArray520[local353] = local381;
 					if (Static276.aClass3_Sub2_Sub7Array8[local353] != null) {
@@ -372,11 +372,11 @@ public final class PlayerAppearance {
 						local827 |= Static276.aClass3_Sub2_Sub7Array8[local353].isAlphaTransformed(local381);
 						local838 |= local858.aBoolean278;
 					}
-					if ((local858.tween || client.applyTweening) && local367 != -1 && local367 < local858.frames.length) {
+					if ((local858.tween || SeqType.applyTweening) && local367 != -1 && local367 < local858.frames.length) {
 						Static262.anIntArray515[local353] = local858.anIntArray474[local374];
 						Static73.anIntArray183[local353] = arg0[local353].anInt5404;
 						local979 = local858.frames[local367];
-						Static133.aClass3_Sub2_Sub7Array7[local353] = Static72.getAnimFrameset(local979 >>> 16);
+						Static133.aClass3_Sub2_Sub7Array7[local353] = SeqTypeList.getAnimFrameset(local979 >>> 16);
 						@Pc(991) int local991 = local979 & 0xFFFF;
 						anIntArray187[local353] = local991;
 						if (Static133.aClass3_Sub2_Sub7Array7[local353] != null) {
@@ -403,14 +403,14 @@ public final class PlayerAppearance {
 		if (arg3 != null) {
 			local353 = arg3.frames[arg7];
 			local979 = local353 >>> 16;
-			local1042 = Static72.getAnimFrameset(local979);
+			local1042 = SeqTypeList.getAnimFrameset(local979);
 			local353 &= 0xFFFF;
 			if (local1042 != null) {
 				local836 |= local1042.isColorTransformed(local353);
 				local827 |= local1042.isAlphaTransformed(local353);
 				local838 |= arg3.aBoolean278;
 			}
-			if ((arg3.tween || client.applyTweening) && arg1 != -1 && arg3.frames.length > arg1) {
+			if ((arg3.tween || SeqType.applyTweening) && arg1 != -1 && arg3.frames.length > arg1) {
 				local360 = arg3.frames[arg1];
 				local451 = local360 >>> 16;
 				local360 &= 0xFFFF;
@@ -418,7 +418,7 @@ public final class PlayerAppearance {
 				if (local979 == local451) {
 					local1040 = local1042;
 				} else {
-					local1040 = Static72.getAnimFrameset(local360 >>> 16);
+					local1040 = SeqTypeList.getAnimFrameset(local360 >>> 16);
 				}
 				if (local1040 != null) {
 					local836 |= local1040.isColorTransformed(local360);
@@ -435,13 +435,13 @@ public final class PlayerAppearance {
 			local979 = arg2.frames[arg8];
 			local475 = local979 >>> 16;
 			local979 &= 0xFFFF;
-			local1154 = Static72.getAnimFrameset(local475);
+			local1154 = SeqTypeList.getAnimFrameset(local475);
 			if (local1154 != null) {
 				local836 |= local1154.isColorTransformed(local979);
 				local827 |= local1154.isAlphaTransformed(local979);
 				local838 |= arg2.aBoolean278;
 			}
-			if ((arg2.tween || client.applyTweening) && arg5 != -1 && arg2.frames.length > arg5) {
+			if ((arg2.tween || SeqType.applyTweening) && arg5 != -1 && arg2.frames.length > arg5) {
 				local457 = arg2.anIntArray474[arg8];
 				local451 = arg2.frames[arg5];
 				local481 = local451 >>> 16;
@@ -449,7 +449,7 @@ public final class PlayerAppearance {
 				if (local475 == local481) {
 					local1156 = local1154;
 				} else {
-					local1156 = Static72.getAnimFrameset(local451 >>> 16);
+					local1156 = SeqTypeList.getAnimFrameset(local451 >>> 16);
 				}
 				if (local1156 != null) {
 					local836 |= local1156.isColorTransformed(local451);

@@ -104,10 +104,10 @@ public class SoundPlayer {
                         local209 = Preferences.ambientSoundsVolume * (local125 - local180) / local125;
                     }
                     if (local209 > 0) {
-                        @Pc(223) PcmSound local223 = local79.method3989().method2648(client.resampler);
-                        @Pc(228) SoundPcmStream local228 = Static284.method404(local223, local209);
-                        local228.method396(anIntArray563[local5] - 1);
-                        client.soundStream.method1343(local228);
+                        @Pc(223) PcmSound local223 = local79.toPcmSound().resample(client.resampler);
+                        @Pc(228) SoundPcmStream local228 = SoundPcmStream.create(local223, local209);
+                        local228.setLoops(anIntArray563[local5] - 1);
+                        client.soundStream.addSubStream(local228);
                     }
                     anIntArray362[local5] = -100;
                 }

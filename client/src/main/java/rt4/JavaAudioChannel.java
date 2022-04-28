@@ -53,7 +53,7 @@ public final class JavaAudioChannel extends AudioChannel {
 				}
 			}
 		}
-		this.anAudioFormat1 = new AudioFormat((float) Static44.sampleRate, 16, AudioChannel.stereo ? 2 : 1, true, false);
+		this.anAudioFormat1 = new AudioFormat((float) AudioChannel.sampleRate, 16, AudioChannel.stereo ? 2 : 1, true, false);
 		this.aByteArray64 = new byte[0x100 << (AudioChannel.stereo ? 2 : 1)];
 	}
 

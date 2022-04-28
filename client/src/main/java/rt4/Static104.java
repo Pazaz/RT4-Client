@@ -8,8 +8,8 @@ public final class Static104 {
 
 	@OriginalMember(owner = "client!ia", name = "a", descriptor = "(BLclient!fe;)V")
 	public static void method2247(@OriginalArg(1) PathingEntity arg0) {
-		@Pc(9) BasType local9 = arg0.method2681();
-		arg0.anInt3366 = local9.idleAnimationId;
+		@Pc(9) BasType local9 = arg0.getBasType();
+		arg0.movementSeqId = local9.idleAnimationId;
 		if (arg0.movementQueueSize == 0) {
 			arg0.anInt3417 = 0;
 			return;
@@ -73,7 +73,7 @@ public final class Static104 {
 		if (local227 == -1) {
 			local227 = local9.walkAnimation;
 		}
-		arg0.anInt3366 = local227;
+		arg0.movementSeqId = local227;
 		if (arg0 instanceof Npc) {
 			local233 = ((Npc) arg0).type.aBoolean181;
 		}
@@ -112,24 +112,24 @@ public final class Static104 {
 		}
 		if (local273 < 8 || local9.runAnimationId == -1) {
 			if (local9.anInt1062 != -1 && local235 == 0) {
-				if (local9.turnAnimation1 == arg0.anInt3366 && local9.anInt1042 != -1) {
-					arg0.anInt3366 = local9.anInt1042;
-				} else if (local9.turnAnimation2 == arg0.anInt3366 && local9.anInt1066 != -1) {
-					arg0.anInt3366 = local9.anInt1066;
-				} else if (local9.turnAnimation3 == arg0.anInt3366 && local9.anInt1048 != -1) {
-					arg0.anInt3366 = local9.anInt1048;
+				if (local9.turnAnimation1 == arg0.movementSeqId && local9.anInt1042 != -1) {
+					arg0.movementSeqId = local9.anInt1042;
+				} else if (local9.turnAnimation2 == arg0.movementSeqId && local9.anInt1066 != -1) {
+					arg0.movementSeqId = local9.anInt1066;
+				} else if (local9.turnAnimation3 == arg0.movementSeqId && local9.anInt1048 != -1) {
+					arg0.movementSeqId = local9.anInt1048;
 				} else {
-					arg0.anInt3366 = local9.anInt1062;
+					arg0.movementSeqId = local9.anInt1062;
 				}
 			}
-		} else if (local9.turnAnimation1 == arg0.anInt3366 && local9.runAnimationId2 != -1) {
-			arg0.anInt3366 = local9.runAnimationId2;
-		} else if (arg0.anInt3366 == local9.turnAnimation2 && local9.runAnimationId3 != -1) {
-			arg0.anInt3366 = local9.runAnimationId3;
-		} else if (arg0.anInt3366 == local9.turnAnimation3 && local9.runAnimationId4 != -1) {
-			arg0.anInt3366 = local9.runAnimationId4;
+		} else if (local9.turnAnimation1 == arg0.movementSeqId && local9.runAnimationId2 != -1) {
+			arg0.movementSeqId = local9.runAnimationId2;
+		} else if (arg0.movementSeqId == local9.turnAnimation2 && local9.runAnimationId3 != -1) {
+			arg0.movementSeqId = local9.runAnimationId3;
+		} else if (arg0.movementSeqId == local9.turnAnimation3 && local9.runAnimationId4 != -1) {
+			arg0.movementSeqId = local9.runAnimationId4;
 		} else {
-			arg0.anInt3366 = local9.runAnimationId;
+			arg0.movementSeqId = local9.runAnimationId;
 		}
 		if (local9.anInt1032 != -1) {
 			local273 <<= 0x7;

@@ -8,6 +8,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!tk")
 public final class SeqType {
 
+	@OriginalMember(owner = "client!qi", name = "v", descriptor = "Z")
+	public static boolean applyTweening = GlobalConfig.USE_TWEENING;
+
 	@OriginalMember(owner = "client!tk", name = "g", descriptor = "[I")
 	public int[] frames;
 
@@ -77,16 +80,16 @@ public final class SeqType {
 	public final Model method4214(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Model arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
 		@Pc(10) int local10 = this.anIntArray474[arg0];
 		@Pc(15) int local15 = this.frames[arg0];
-		@Pc(23) AnimFrameset local23 = Static72.getAnimFrameset(local15 >> 16);
+		@Pc(23) AnimFrameset local23 = SeqTypeList.getAnimFrameset(local15 >> 16);
 		@Pc(27) int local27 = local15 & 0xFFFF;
 		if (local23 == null) {
 			return arg2.method4568(true, true, true);
 		}
 		@Pc(39) int local39 = arg3 & 0x3;
 		@Pc(41) AnimFrameset local41 = null;
-		if ((this.tween || client.applyTweening) && arg1 != -1 && this.frames.length > arg1) {
+		if ((this.tween || applyTweening) && arg1 != -1 && this.frames.length > arg1) {
 			@Pc(69) int local69 = this.frames[arg1];
-			local41 = Static72.getAnimFrameset(local69 >> 16);
+			local41 = SeqTypeList.getAnimFrameset(local69 >> 16);
 			arg1 = local69 & 0xFFFF;
 		}
 		@Pc(124) Model local124;
@@ -133,15 +136,15 @@ public final class SeqType {
 	public final Model method4215(@OriginalArg(0) Model arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		@Pc(8) int local8 = this.frames[arg3];
 		@Pc(13) int local13 = this.anIntArray474[arg3];
-		@Pc(19) AnimFrameset local19 = Static72.getAnimFrameset(local8 >> 16);
+		@Pc(19) AnimFrameset local19 = SeqTypeList.getAnimFrameset(local8 >> 16);
 		@Pc(23) int local23 = local8 & 0xFFFF;
 		if (local19 == null) {
 			return arg0.method4572(true, true, true);
 		}
 		@Pc(34) AnimFrameset local34 = null;
-		if ((this.tween || client.applyTweening) && arg1 != -1 && arg1 < this.frames.length) {
+		if ((this.tween || applyTweening) && arg1 != -1 && arg1 < this.frames.length) {
 			@Pc(59) int local59 = this.frames[arg1];
-			local34 = Static72.getAnimFrameset(local59 >> 16);
+			local34 = SeqTypeList.getAnimFrameset(local59 >> 16);
 			arg1 = local59 & 0xFFFF;
 		}
 		@Pc(71) AnimFrameset local71 = null;
@@ -152,14 +155,14 @@ public final class SeqType {
 			if (this.anIntArray475.length > arg3) {
 				local83 = this.anIntArray475[arg3];
 				if (local83 != 65535) {
-					local71 = Static72.getAnimFrameset(local83 >> 16);
+					local71 = SeqTypeList.getAnimFrameset(local83 >> 16);
 					local83 &= 0xFFFF;
 				}
 			}
-			if ((this.tween || client.applyTweening) && arg1 != -1 && this.anIntArray475.length > arg1) {
+			if ((this.tween || applyTweening) && arg1 != -1 && this.anIntArray475.length > arg1) {
 				local85 = this.anIntArray475[arg1];
 				if (local85 != 65535) {
-					local81 = Static72.getAnimFrameset(local85 >> 16);
+					local81 = SeqTypeList.getAnimFrameset(local85 >> 16);
 					local85 &= 0xFFFF;
 				}
 			}
@@ -190,16 +193,16 @@ public final class SeqType {
 	public final Model method4216(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Model arg4) {
 		@Pc(6) int local6 = this.anIntArray474[arg1];
 		@Pc(11) int local11 = this.frames[arg1];
-		@Pc(19) AnimFrameset local19 = Static72.getAnimFrameset(local11 >> 16);
+		@Pc(19) AnimFrameset local19 = SeqTypeList.getAnimFrameset(local11 >> 16);
 		@Pc(27) int local27 = local11 & 0xFFFF;
 		if (local19 == null) {
 			return arg4.method4572(true, true, true);
 		}
 		@Pc(40) int local40 = arg3 & 0x3;
 		@Pc(42) AnimFrameset local42 = null;
-		if ((this.tween || client.applyTweening) && arg0 != -1 && arg0 < this.frames.length) {
+		if ((this.tween || applyTweening) && arg0 != -1 && arg0 < this.frames.length) {
 			@Pc(66) int local66 = this.frames[arg0];
-			local42 = Static72.getAnimFrameset(local66 >> 16);
+			local42 = SeqTypeList.getAnimFrameset(local66 >> 16);
 			arg0 = local66 & 0xFFFF;
 		}
 		@Pc(106) Model local106;
@@ -265,15 +268,15 @@ public final class SeqType {
 	public final Model method4219(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) Model arg3) {
 		@Pc(16) int local16 = this.anIntArray474[arg2];
 		@Pc(21) int local21 = this.frames[arg2];
-		@Pc(27) AnimFrameset local27 = Static72.getAnimFrameset(local21 >> 16);
+		@Pc(27) AnimFrameset local27 = SeqTypeList.getAnimFrameset(local21 >> 16);
 		@Pc(31) int local31 = local21 & 0xFFFF;
 		if (local27 == null) {
 			return arg3.method4560(true, true, true);
 		}
 		@Pc(42) AnimFrameset local42 = null;
-		if ((this.tween || client.applyTweening) && arg0 != -1 && this.frames.length > arg0) {
+		if ((this.tween || applyTweening) && arg0 != -1 && this.frames.length > arg0) {
 			@Pc(65) int local65 = this.frames[arg0];
-			local42 = Static72.getAnimFrameset(local65 >> 16);
+			local42 = SeqTypeList.getAnimFrameset(local65 >> 16);
 			arg0 = local65 & 0xFFFF;
 		}
 		@Pc(103) Model local103;

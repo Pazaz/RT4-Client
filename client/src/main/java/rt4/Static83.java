@@ -6,10 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static83 {
 
-    @OriginalMember(owner = "client!gj", name = "m", descriptor = "[[[I")
-	public static int[][][] activeTileHeightMap;
-
-	@OriginalMember(owner = "client!gj", name = "a", descriptor = "(II)Z")
+    @OriginalMember(owner = "client!gj", name = "a", descriptor = "(II)Z")
 	public static boolean method433(@OriginalArg(0) int arg0) {
 		if (arg0 >= 97 && arg0 <= 122) {
 			return true;
@@ -18,12 +15,6 @@ public final class Static83 {
 		} else {
 			return arg0 >= 48 && arg0 <= 57;
 		}
-	}
-
-	@OriginalMember(owner = "client!gj", name = "a", descriptor = "(III)Lclient!df;")
-	public static WallDecor method435(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		@Pc(7) Tile local7 = SceneGraph.tiles[arg0][arg1][arg2];
-		return local7 == null ? null : local7.aClass24_1;
 	}
 
 	@OriginalMember(owner = "client!gj", name = "a", descriptor = "([JII[II)V")

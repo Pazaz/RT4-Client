@@ -21,20 +21,7 @@ public final class Static72 {
     @OriginalMember(owner = "client!fl", name = "V", descriptor = "Lclient!na;")
 	public static final JagString aClass100_448 = JagString.parse("(Y");
 
-	@OriginalMember(owner = "client!fl", name = "b", descriptor = "(II)Lclient!cl;")
-	public static AnimFrameset getAnimFrameset(@OriginalArg(0) int arg0) {
-		@Pc(19) AnimFrameset local19 = (AnimFrameset) SeqTypeList.aClass99_37.get((long) arg0);
-		if (local19 != null) {
-			return local19;
-		}
-		local19 = Static87.method1803(SeqTypeList.aClass153_92, SeqTypeList.aClass153_1, arg0);
-		if (local19 != null) {
-			SeqTypeList.aClass99_37.put(local19, (long) arg0);
-		}
-		return local19;
-	}
-
-	@OriginalMember(owner = "client!fl", name = "a", descriptor = "(IIIIII)V")
+    @OriginalMember(owner = "client!fl", name = "a", descriptor = "(IIIIII)V")
 	public static void method1568(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
 		Static131.method2576(Static71.anIntArrayArray10[arg0], arg1 - arg2, arg2 + arg1, arg4);
 		@Pc(17) int local17 = 0;

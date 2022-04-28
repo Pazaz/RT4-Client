@@ -67,10 +67,10 @@ public final class Static34 {
 	public static void method879(@OriginalArg(0) PathingEntity arg0) {
 		arg0.aBoolean171 = false;
 		@Pc(18) SeqType local18;
-		if (arg0.anInt3366 != -1) {
-			local18 = SeqTypeList.get(arg0.anInt3366);
+		if (arg0.movementSeqId != -1) {
+			local18 = SeqTypeList.get(arg0.movementSeqId);
 			if (local18 == null || local18.frames == null) {
-				arg0.anInt3366 = -1;
+				arg0.movementSeqId = -1;
 			} else {
 				arg0.anInt3396++;
 				if (local18.frames.length > arg0.anInt3407 && arg0.anInt3396 > local18.anIntArray474[arg0.anInt3407]) {

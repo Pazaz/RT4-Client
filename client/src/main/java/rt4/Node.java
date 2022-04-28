@@ -16,7 +16,7 @@ public class Node {
 	public Node aClass3_223;
 
 	@OriginalMember(owner = "client!ab", name = "a", descriptor = "(I)Z")
-	public final boolean method4654() {
+	public final boolean isLinked() {
 		return this.aClass3_223 != null;
 	}
 

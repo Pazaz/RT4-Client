@@ -8,7 +8,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!dc")
 public final class Loc extends Entity {
 
-    @OriginalMember(owner = "client!ci", name = "q", descriptor = "Lclient!ek;")
+	@OriginalMember(owner = "client!kf", name = "h", descriptor = "[I")
+	public static final int[] LAYERS = new int[] { 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3 };
+	@OriginalMember(owner = "client!ci", name = "q", descriptor = "Lclient!ek;")
     public static SoftwareIndexedSprite aClass36_Sub1_1 = null;
     @OriginalMember(owner = "client!dc", name = "U", descriptor = "Lclient!ga;")
 	private ParticleSystem aClass47_Sub1_2;
@@ -225,7 +227,7 @@ public final class Loc extends Entity {
 
 	@OriginalMember(owner = "client!dc", name = "a", descriptor = "(ZI)Lclient!th;")
 	private Entity method1048(@OriginalArg(0) boolean arg0) {
-		@Pc(12) boolean local12 = Static107.surfaceTileHeightMap != Static83.activeTileHeightMap;
+		@Pc(12) boolean local12 = Static107.surfaceTileHeightMap != SceneGraph.activeTileHeightMap;
 		@Pc(19) LocType local19 = LocTypeList.get(this.anInt1299);
 		@Pc(22) int local22 = local19.anInt4430;
 		if (local19.multiLocs != null) {
@@ -273,11 +275,11 @@ public final class Loc extends Entity {
 		@Pc(192) int local192 = (local157 >> 1) + this.anInt1300;
 		@Pc(201) int local201 = (local157 + 1 >> 1) + this.anInt1300;
 		this.method1047(local192 * 128, local185 * 128);
-		@Pc(256) boolean local256 = !local12 && local19.aBoolean212 && (local19.id != this.anInt1321 || (this.anInt1297 != this.anInt1322 || this.aClass144_2 != null && (this.aClass144_2.aBoolean280 || client.applyTweening) && this.anInt1297 != this.anInt1304) && Preferences.sceneryShadowsType >= 2);
+		@Pc(256) boolean local256 = !local12 && local19.aBoolean212 && (local19.id != this.anInt1321 || (this.anInt1297 != this.anInt1322 || this.aClass144_2 != null && (this.aClass144_2.aBoolean280 || SeqType.applyTweening) && this.anInt1297 != this.anInt1304) && Preferences.sceneryShadowsType >= 2);
 		if (arg0 && !local256) {
 			return null;
 		}
-		@Pc(267) int[][] local267 = Static83.activeTileHeightMap[this.anInt1303];
+		@Pc(267) int[][] local267 = SceneGraph.activeTileHeightMap[this.anInt1303];
 		@Pc(293) int local293 = local267[local178][local201] + local267[local185][local201] + local267[local185][local192] + local267[local178][local192] >> 2;
 		@Pc(302) int local302 = (local160 << 6) + (this.anInt1308 << 7);
 		@Pc(311) int local311 = (local157 << 6) + (this.anInt1300 << 7);
@@ -285,7 +287,7 @@ public final class Loc extends Entity {
 		if (local12) {
 			local314 = Static107.surfaceTileHeightMap[0];
 		} else if (this.anInt1303 < 3) {
-			local314 = Static83.activeTileHeightMap[this.anInt1303 + 1];
+			local314 = SceneGraph.activeTileHeightMap[this.anInt1303 + 1];
 		}
 		if (GlRenderer.enabled && local256) {
 			Static242.method4207(this.aClass36_Sub1_2, this.anInt1296, this.anInt1294, this.anInt1319);
@@ -306,7 +308,7 @@ public final class Loc extends Entity {
 			}
 			@Pc(429) int local429 = 0;
 			if (this.anInt1303 != 0) {
-				@Pc(439) int[][] local439 = Static83.activeTileHeightMap[0];
+				@Pc(439) int[][] local439 = SceneGraph.activeTileHeightMap[0];
 				local429 = local293 - (local439[local178][local192] + local439[local185][local192] + local439[local185][local201] + local439[local178][local201] >> 2);
 			}
 			@Pc(471) SoftwareIndexedSprite local471 = local389.aClass36_Sub1_3;

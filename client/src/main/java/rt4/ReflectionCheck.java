@@ -40,7 +40,7 @@ public final class ReflectionCheck extends Node {
     @OriginalMember(owner = "client!t", name = "a", descriptor = "(Lclient!i;II)V")
     public static void loop(@OriginalArg(0) Packet arg0) {
         while (true) {
-            @Pc(18) ReflectionCheck local18 = (ReflectionCheck) Static204.aClass69_113.start();
+            @Pc(18) ReflectionCheck local18 = (ReflectionCheck) Static204.aClass69_113.head();
             if (local18 == null) {
                 return;
             }

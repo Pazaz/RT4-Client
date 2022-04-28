@@ -193,11 +193,11 @@ public class Cheat {
                 Static121.aBoolean154 = true;
             }
             if (arg0.equalsIgnoreCase(TWEENING)) {
-                if (client.applyTweening) {
-                    client.applyTweening = false;
+                if (SeqType.applyTweening) {
+                    SeqType.applyTweening = false;
                     Chat.add(null, 0, aClass100_943);
                 } else {
-                    client.applyTweening = true;
+                    SeqType.applyTweening = true;
                     Chat.add(null, 0, aClass100_362);
                 }
             }

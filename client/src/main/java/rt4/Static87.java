@@ -24,32 +24,6 @@ public final class Static87 {
 		return false;
 	}
 
-	@OriginalMember(owner = "client!gn", name = "a", descriptor = "(Lclient!ve;ZLclient!ve;BI)Lclient!cl;")
-	public static AnimFrameset method1803(@OriginalArg(0) Js5 arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(4) int arg2) {
-		@Pc(5) boolean local5 = true;
-		@Pc(16) int[] local16 = arg0.getFileIds(arg2);
-		for (@Pc(18) int local18 = 0; local18 < local16.length; local18++) {
-			@Pc(30) byte[] local30 = arg0.method4502(local16[local18], arg2);
-			if (local30 == null) {
-				local5 = false;
-			} else {
-				@Pc(49) int local49 = (local30[0] & 0xFF) << 8 | local30[1] & 0xFF;
-				@Pc(57) byte[] local57 = arg1.method4502(0, local49);
-				if (local57 == null) {
-					local5 = false;
-				}
-			}
-		}
-		if (!local5) {
-			return null;
-		}
-		try {
-			return new AnimFrameset(arg0, arg1, arg2, false);
-		} catch (@Pc(84) Exception local84) {
-			return null;
-		}
-	}
-
 	@OriginalMember(owner = "client!gn", name = "a", descriptor = "(BI)Lclient!na;")
 	public static JagString allocate(@OriginalArg(1) int arg0) {
 		@Pc(13) JagString local13 = new JagString();

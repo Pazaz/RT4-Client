@@ -50,12 +50,12 @@ public class Protocol {
             int local15 = inboundBuffer.g1neg();
             int local19 = local15 & 0x3;
             int local23 = local15 >> 2;
-            int local27 = Static133.anIntArray453[local23];
+            int local27 = Loc.LAYERS[local23];
             int local31 = inboundBuffer.g1();
             int local39 = (local31 >> 4 & 0x7) + Static115.currentChunkX;
             int local45 = (local31 & 0x7) + Static180.currentChunkZ;
             if (local39 >= 0 && local45 >= 0 && local39 < 104 && local45 < 104) {
-                Static29.method800(Player.level, local45, local19, local39, -1, -1, local27, local23, 0);
+                ChangeLocRequest.push(Player.level, local45, local19, local39, -1, -1, local27, local23, 0);
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_33) {
             int local15 = inboundBuffer.g2le();
@@ -116,13 +116,13 @@ public class Protocol {
             int local15 = inboundBuffer.g1add();
             int local23 = local15 >> 2;
             int local19 = local15 & 0x3;
-            int local27 = Static133.anIntArray453[local23];
+            int local27 = Loc.LAYERS[local23];
             int local31 = inboundBuffer.g1();
             int local39 = Static115.currentChunkX + (local31 >> 4 & 0x7);
             int local45 = (local31 & 0x7) + Static180.currentChunkZ;
             int local218 = inboundBuffer.g2sub();
             if (local39 >= 0 && local45 >= 0 && local39 < 104 && local45 < 104) {
-                Static29.method800(Player.level, local45, local19, local39, -1, local218, local27, local23, 0);
+                ChangeLocRequest.push(Player.level, local45, local19, local39, -1, local218, local27, local23, 0);
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_20) {
             int local15 = inboundBuffer.g1ssub();
@@ -131,7 +131,7 @@ public class Protocol {
             int local27 = inboundBuffer.g1ssub();
             int local31 = local27 >> 2;
             int local39 = local27 & 0x3;
-            int local45 = Static133.anIntArray453[local31];
+            int local45 = Loc.LAYERS[local31];
             int local218 = inboundBuffer.g2le();
             if (local218 == 65535) {
                 local218 = -1;
@@ -165,7 +165,7 @@ public class Protocol {
             if (local23 >= 0 && local19 >= 0 && local23 < 104 && local19 < 104) {
                 @Pc(710) LinkedList local710 = Static159.aClass69ArrayArrayArray1[Player.level][local23][local19];
                 if (local710 != null) {
-                    for (@Pc(718) ObjStackNode local718 = (ObjStackNode) local710.start(); local718 != null; local718 = (ObjStackNode) local710.next()) {
+                    for (@Pc(718) ObjStackNode local718 = (ObjStackNode) local710.head(); local718 != null; local718 = (ObjStackNode) local710.next()) {
                         @Pc(723) ObjStack local723 = local718.aClass8_Sub7_1;
                         if ((local27 & 0x7FFF) == local723.anInt5555 && local31 == local723.anInt5550) {
                             local723.anInt5550 = local39;
@@ -262,7 +262,7 @@ public class Protocol {
                         }
                     }
                     if (local1198 != null) {
-                        @Pc(1232) BasType local1232 = local1198.method2681();
+                        @Pc(1232) BasType local1232 = local1198.getBasType();
                         if (local1232.modelRotateTranslate != null && local1232.modelRotateTranslate[local1194] != null) {
                             local1188 = local1232.modelRotateTranslate[local1194][0];
                             local224 -= local1232.modelRotateTranslate[local1194][1];
@@ -311,13 +311,13 @@ public class Protocol {
             if (local23 >= 0 && local19 >= 0 && local23 < 104 && local19 < 104) {
                 @Pc(1565) LinkedList local1565 = Static159.aClass69ArrayArrayArray1[Player.level][local23][local19];
                 if (local1565 != null) {
-                    for (@Pc(1572) ObjStackNode local1572 = (ObjStackNode) local1565.start(); local1572 != null; local1572 = (ObjStackNode) local1565.next()) {
+                    for (@Pc(1572) ObjStackNode local1572 = (ObjStackNode) local1565.head(); local1572 != null; local1572 = (ObjStackNode) local1565.next()) {
                         if (local1572.aClass8_Sub7_1.anInt5555 == (local27 & 0x7FFF)) {
                             local1572.unlink();
                             break;
                         }
                     }
-                    if (local1565.start() == null) {
+                    if (local1565.head() == null) {
                         Static159.aClass69ArrayArrayArray1[Player.level][local23][local19] = null;
                     }
                     Static220.spawnGroundObject(local19, local23);
@@ -1444,7 +1444,7 @@ public class Protocol {
                     }
                 }
             }
-            for (@Pc(2604) SceneryStack loc = (SceneryStack) Static26.sceneryList.start(); loc != null; loc = (SceneryStack) Static26.sceneryList.next()) {
+            for (@Pc(2604) SceneryStack loc = (SceneryStack) Static26.sceneryList.head(); loc != null; loc = (SceneryStack) Static26.sceneryList.next()) {
                 if (loc.x >= Static115.currentChunkX && Static115.currentChunkX + 8 > loc.x && loc.z >= Static180.currentChunkZ && loc.z < Static180.currentChunkZ + 8 && loc.level == Player.level) {
                     loc.anInt924 = 0;
                 }
@@ -1869,7 +1869,7 @@ public class Protocol {
             int slot = inboundBuffer.g1ssub();
             int type = slot >> 2;
             int rotation = slot & 0x3;
-            int type2 = Static133.anIntArray453[type];
+            int type2 = Loc.LAYERS[type];
             int seqId = inboundBuffer.g2();
             int pos = inboundBuffer.g4();
             if (seqId == 65535) {

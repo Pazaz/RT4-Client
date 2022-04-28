@@ -224,7 +224,7 @@ public final class Static38 {
 			}
 			if (local39 != null && local39.method2682()) {
 				local39.aBoolean98 = false;
-				if ((Preferences.manyIdleAnimations && PlayerList.size > 200 || PlayerList.size > 50) && !arg0 && local39.anInt3366 == local39.method2681().idleAnimationId) {
+				if ((Preferences.manyIdleAnimations && PlayerList.size > 200 || PlayerList.size > 50) && !arg0 && local39.movementSeqId == local39.getBasType().idleAnimationId) {
 					local39.aBoolean98 = true;
 				}
 				local82 = local39.getSize();
@@ -287,7 +287,7 @@ public final class Static38 {
 				} else {
 					local39.aBoolean98 = false;
 					local39.anInt3424 = SceneGraph.getTileHeight(Player.level, local39.xFine, local39.zFine);
-					Static184.method3387(Player.level, local39.xFine, local39.zFine, local39.anInt3424, local39, local39.anInt3381, local272, local39.anInt3384, local39.anInt3374, local39.anInt3411, local39.anInt3410);
+					Static184.method3387(Player.level, local39.xFine, local39.zFine, local39.anInt3424, local39, local39.anInt3381, local272, local39.atachmentX0, local39.attachmentZ0, local39.attachmentX1, local39.attachmentZ1);
 				}
 			}
 		}

@@ -193,7 +193,7 @@ public final class Static89 {
 				}
 			}
 		}
-		Static110.method2281(Static178.anInt4247, PlayerList.self.xFine, PlayerList.self.zFine, Player.level);
+		AreaSoundManager.redraw(Static178.anInt4247, PlayerList.self.xFine, PlayerList.self.zFine, Player.level);
 		Static178.anInt4247 = 0;
 	}
 

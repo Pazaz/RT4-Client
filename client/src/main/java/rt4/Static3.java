@@ -12,9 +12,6 @@ public final class Static3 {
 	@OriginalMember(owner = "client!ab", name = "c", descriptor = "[Z")
 	public static final boolean[] aBooleanArray135 = new boolean[200];
 
-    @OriginalMember(owner = "client!ab", name = "n", descriptor = "Lclient!ih;")
-	public static final LinkedList aClass69_135 = new LinkedList();
-
 	@OriginalMember(owner = "client!ab", name = "a", descriptor = "(Lclient!na;I)V")
 	public static void method4656(@OriginalArg(0) JagString arg0) {
 		@Pc(9) int local9 = Static171.method3218(arg0);

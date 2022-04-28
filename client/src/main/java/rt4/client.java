@@ -185,8 +185,6 @@ public final class client extends GameShell {
 	public static long prevGc = 0L;
     @OriginalMember(owner = "client!gj", name = "d", descriptor = "I")
 	public static int loop = 0;
-    @OriginalMember(owner = "client!qi", name = "v", descriptor = "Z")
-    public static boolean applyTweening = GlobalConfig.USE_TWEENING;
 
 	@OriginalMember(owner = "client!client", name = "main", descriptor = "([Ljava/lang/String;)V")
 	public static void main(@OriginalArg(0) String[] arg0) {
@@ -1284,7 +1282,7 @@ public final class client extends GameShell {
 			soundChannel = AudioChannel.create(2048, GameShell.signLink, GameShell.canvas, 1);
 			soundStream = new MixerPcmStream();
 			soundChannel.setStream(soundStream);
-			resampler = new Resampler(22050, Static44.sampleRate);
+			resampler = new Resampler(22050, AudioChannel.sampleRate);
 			MusicPlayer.titleSong = js5Archive6.getGroupId(Static1.TITLE_SONG);
 			mainLoadPercentage = 30;
 			mainLoadState = 50;
