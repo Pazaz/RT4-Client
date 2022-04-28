@@ -79,7 +79,7 @@ public class AudioChannel {
 			throw new IllegalStateException();
 		}
 		try {
-			@Pc(33) AudioChannel audioChannel = (AudioChannel) Class.forName("rt4.JavaAudioChannel").getDeclaredConstructor().newInstance();
+			@Pc(33) AudioChannel audioChannel = new JavaAudioChannel();
 			audioChannel.sampleRate2 = arg0;
 			audioChannel.samples = new int[(stereo ? 2 : 1) * 256];
 			audioChannel.init(arg2);

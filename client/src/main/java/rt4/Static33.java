@@ -56,7 +56,7 @@ public final class Static33 {
 		}
 		if (arg0.length > 136 && !Static84.aBoolean127) {
 			try {
-				@Pc(27) ByteArray local27 = (ByteArray) Class.forName("rt4.DirectByteArray").getDeclaredConstructor().newInstance();
+				@Pc(27) ByteArray local27 = new DirectByteArray();
 				local27.set(arg0);
 				return local27;
 			} catch (@Pc(34) Throwable local34) {

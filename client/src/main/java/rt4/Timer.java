@@ -11,7 +11,7 @@ public abstract class Timer {
 	@OriginalMember(owner = "client!fi", name = "a", descriptor = "(B)Lclient!s;")
 	public static Timer create() {
 		try {
-			return (Timer) Class.forName("rt4.NanoTimer").getDeclaredConstructor().newInstance();
+			return new NanoTimer();
 		} catch (@Pc(15) Throwable ex) {
 			return new MillisTimer();
 		}
