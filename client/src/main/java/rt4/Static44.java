@@ -50,7 +50,7 @@ public final class Static44 {
 	@OriginalMember(owner = "client!dh", name = "b", descriptor = "(I)Lclient!q;")
 	public static ReferenceNodeFactory method1147() {
 		try {
-			return (ReferenceNodeFactory) Class.forName("rt4.SoftReferenceNodeFactory").getDeclaredConstructor().newInstance();
+			return new SoftReferenceNodeFactory();
 		} catch (@Pc(15) Throwable local15) {
 			return null;
 		}

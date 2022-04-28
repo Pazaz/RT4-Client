@@ -141,18 +141,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 
 	@OriginalMember(owner = "client!sd", name = "e", descriptor = "(I)V")
 	public static void getMaxMemory() {
-		try {
-			@Pc(12) Method method = Runtime.class.getMethod("maxMemory");
-			if (method != null) {
-				try {
-					@Pc(17) Runtime runtime = Runtime.getRuntime();
-					@Pc(24) Long bytes = (Long) method.invoke(runtime, (Object[]) null);
-					maxMemory = (int) (bytes / 1048576L) + 1;
-				} catch (@Pc(34) Throwable ex) {
-				}
-			}
-		} catch (@Pc(36) Exception ex) {
-		}
+		maxMemory = (int) (Runtime.getRuntime().maxMemory() / 1048576L) + 1;
 	}
 
 	@OriginalMember(owner = "client!la", name = "a", descriptor = "(Lsignlink!ll;Ljava/lang/Object;I)V")

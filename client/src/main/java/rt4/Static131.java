@@ -125,8 +125,7 @@ public final class Static131 {
 	@OriginalMember(owner = "client!kd", name = "a", descriptor = "(IIZLjava/awt/Component;)Lclient!vk;")
 	public static FrameBuffer create(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) Component arg2) {
 		try {
-			@Pc(12) Class local12 = Class.forName("rt4.BufferedImageFrameBuffer");
-			@Pc(16) FrameBuffer local16 = (FrameBuffer) local12.getDeclaredConstructor().newInstance();
+			@Pc(16) FrameBuffer local16 = new BufferedImageFrameBuffer();
 			local16.init(arg0, arg1, arg2);
 			return local16;
 		} catch (@Pc(25) Throwable local25) {
