@@ -11,7 +11,10 @@ public final class MonochromeImageCache {
 	@OriginalMember(owner = "client!nd", name = "c", descriptor = "[B")
 	public static final byte[] aByteArray53 = new byte[32896];
 
-	@OriginalMember(owner = "client!nd", name = "f", descriptor = "I")
+    @OriginalMember(owner = "client!a", name = "b", descriptor = "[I")
+    public static final int[] anIntArray1 = new int[4096];
+
+    @OriginalMember(owner = "client!nd", name = "f", descriptor = "I")
 	private int anInt4062 = -1;
 
 	@OriginalMember(owner = "client!nd", name = "k", descriptor = "I")
@@ -41,6 +44,10 @@ public final class MonochromeImageCache {
 			for (@Pc(15) int local15 = 0; local15 <= local10; local15++) {
 				aByteArray53[local8++] = (byte) (255.0D / Math.sqrt((double) ((float) (local15 * local15 + local10 * local10 + 65535) / 65535.0F)));
 			}
+		}
+
+		for (@Pc(4) int local4 = 0; local4 < 4096; local4++) {
+			anIntArray1[local4] = Static273.method3211(local4);
 		}
 	}
 

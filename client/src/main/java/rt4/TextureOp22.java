@@ -247,11 +247,11 @@ public final class TextureOp22 extends TextureOp {
 						}
 					}
 					if (Static189.anInt4457 >= local97 + local101) {
-						Static289.method2614(local112, local101, local97, local125);
+						ArrayUtils.fill(local112, local101, local97, local125);
 					} else {
 						local133 = Static189.anInt4457 - local101;
-						Static289.method2614(local112, local101, local133, local125);
-						Static289.method2614(local112, 0, local97 - local133, local125);
+						ArrayUtils.fill(local112, local101, local133, local125);
+						ArrayUtils.fill(local112, 0, local97 - local133, local125);
 					}
 				} else {
 					local125 = arg4 - local103 - 1;
@@ -261,10 +261,10 @@ public final class TextureOp22 extends TextureOp {
 						}
 						if (local101 + local97 > Static189.anInt4457) {
 							local133 = Static189.anInt4457 - local101;
-							Static289.method2614(local112, local101, local133, local26);
-							Static289.method2614(local112, 0, local97 - local133, local26);
+							ArrayUtils.fill(local112, local101, local133, local26);
+							ArrayUtils.fill(local112, 0, local97 - local133, local26);
 						} else {
-							Static289.method2614(local112, local101, local97, local26);
+							ArrayUtils.fill(local112, local101, local97, local26);
 						}
 					} else {
 						local133 = local125 * local26 / local90;
@@ -282,24 +282,24 @@ public final class TextureOp22 extends TextureOp {
 						}
 						if (local97 + local101 > Static189.anInt4457) {
 							local142 = Static189.anInt4457 - local101;
-							Static289.method2614(local112, local101, local142, local133);
-							Static289.method2614(local112, 0, local97 - local142, local133);
+							ArrayUtils.fill(local112, local101, local142, local133);
+							ArrayUtils.fill(local112, 0, local97 - local142, local133);
 						} else {
-							Static289.method2614(local112, local101, local97, local133);
+							ArrayUtils.fill(local112, local101, local97, local133);
 						}
 					}
 				}
 			}
 		} else if (Static189.anInt4457 >= arg2 + arg3) {
 			for (local68 = 0; local68 < arg4; local68++) {
-				Static289.method2614(arg5[arg0 + local68], arg2, arg3, local26);
+				ArrayUtils.fill(arg5[arg0 + local68], arg2, arg3, local26);
 			}
 		} else {
 			local68 = Static189.anInt4457 - arg2;
 			for (local72 = 0; local72 < arg4; local72++) {
 				@Pc(522) int[] local522 = arg5[local72 + arg0];
-				Static289.method2614(local522, arg2, local68, local26);
-				Static289.method2614(local522, 0, arg3 - local68, local26);
+				ArrayUtils.fill(local522, arg2, local68, local26);
+				ArrayUtils.fill(local522, 0, arg3 - local68, local26);
 			}
 		}
 	}

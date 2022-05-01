@@ -54,10 +54,10 @@ public class LoadingBarAwt {
                 local6.setColor(Color.white);
                 arg2.method3112(local146 + 22, local140 + (-arg2.method3155(aFontMetrics1) + 304) / 2, local6);
             }
-            if (Static278.mainLoadPrimaryText != null) {
+            if (client.mainLoadPrimaryText != null) {
                 local6.setFont(Static222.aFont1);
                 local6.setColor(Color.white);
-                Static278.mainLoadPrimaryText.method3112(GameShell.canvasHeight / 2 - 26, GameShell.canvasWidth / 2 - Static278.mainLoadPrimaryText.method3155(aFontMetrics1) / 2, local6);
+                client.mainLoadPrimaryText.method3112(GameShell.canvasHeight / 2 - 26, GameShell.canvasWidth / 2 - client.mainLoadPrimaryText.method3155(aFontMetrics1) / 2, local6);
             }
         } catch (@Pc(252) Exception local252) {
             GameShell.canvas.repaint();

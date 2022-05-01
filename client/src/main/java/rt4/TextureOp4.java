@@ -65,7 +65,7 @@ public final class TextureOp4 extends TextureOp {
 			local64 = local60 >> 12;
 			local77 = this.aByteArray10[local64 & 0xFF] & 0xFF;
 			local60 &= 0xFFF;
-			local85 = MonochromeImageCacheBack.anIntArray1[local60];
+			local85 = MonochromeImageCache.anIntArray1[local60];
 			local68 = local64 + 1;
 			if (local47 <= local68) {
 				local68 = 0;
@@ -97,7 +97,7 @@ public final class TextureOp4 extends TextureOp {
 			local68 = local64 + 1;
 			local77 = this.aByteArray10[local64 & 0xFF] & 0xFF;
 			@Pc(81) int local81 = local60 & 0xFFF;
-			local85 = MonochromeImageCacheBack.anIntArray1[local81];
+			local85 = MonochromeImageCache.anIntArray1[local81];
 			if (local68 >= local47) {
 				local68 = 0;
 			}
@@ -118,7 +118,7 @@ public final class TextureOp4 extends TextureOp {
 				local54 = this.anInt646 * local40 >> 12;
 				local68 = local64 + 1;
 				local60 &= 0xFFF;
-				local85 = MonochromeImageCacheBack.anIntArray1[local60];
+				local85 = MonochromeImageCache.anIntArray1[local60];
 				local47 = this.anInt641 * local40 >> 12;
 				if (local68 >= local47) {
 					local68 = 0;
@@ -211,7 +211,7 @@ public final class TextureOp4 extends TextureOp {
 		}
 		@Pc(40) int local40 = arg0 & 0xFFF;
 		@Pc(50) int local50 = this.aByteArray10[local27 + arg2] & 0x3;
-		@Pc(54) int local54 = MonochromeImageCacheBack.anIntArray1[local40];
+		@Pc(54) int local54 = MonochromeImageCache.anIntArray1[local40];
 		@Pc(70) int local70;
 		if (local50 > 1) {
 			local70 = local50 == 2 ? local40 - arg4 : -local40 + -arg4;

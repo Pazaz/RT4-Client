@@ -23,7 +23,7 @@ public final class Static54 {
 	public static void method1305(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Component arg3) {
 		client.audioLoop();
 		if (GlRenderer.enabled) {
-			Static46.method1187(arg2, arg1, arg2 + arg3.anInt445, arg1 + arg3.anInt459);
+			GlRaster.method1187(arg2, arg1, arg2 + arg3.anInt445, arg1 + arg3.anInt459);
 		} else {
 			SoftwareRaster.method2496(arg2, arg1, arg2 + arg3.anInt445, arg1 + arg3.anInt459);
 		}
@@ -192,7 +192,7 @@ public final class Static54 {
 				Static60.method1446(arg3, Sprites.mapflags, local181, local146, arg1, arg2);
 			}
 			if (GlRenderer.enabled) {
-				Static46.method1186(arg2 + arg3.anInt445 / 2 - 1, arg1 + -1 - -(arg3.anInt459 / 2), 3, 3, 16777215);
+				GlRaster.method1186(arg2 + arg3.anInt445 / 2 - 1, arg1 + -1 - -(arg3.anInt459 / 2), 3, 3, 16777215);
 			} else {
 				SoftwareRaster.fillRect(arg3.anInt445 / 2 + arg2 - 1, arg3.anInt459 / 2 + -1 + arg1, 3, 3, 16777215);
 			}

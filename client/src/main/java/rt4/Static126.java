@@ -35,7 +35,7 @@ public final class Static126 {
 			Static9.method182();
 		}
 		if (GlRenderer.enabled) {
-			Static46.method1177();
+			GlRaster.method1177();
 		} else {
 			SoftwareRaster.method2503();
 		}

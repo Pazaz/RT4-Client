@@ -62,9 +62,9 @@ public final class Static145 {
 		@Pc(11) int local11 = Static183.anInt4271;
 		@Pc(15) int local15 = Static13.anInt436;
 		if (GlRenderer.enabled) {
-			Static46.method1186(local11, local3, local9, local15, 6116423);
-			Static46.method1186(local11 + 1, local3 + 1, local9 - 2, 16, 0);
-			Static46.method1179(local11 + 1, local3 + 18, local9 - 2, local15 + -19, 0);
+			GlRaster.method1186(local11, local3, local9, local15, 6116423);
+			GlRaster.method1186(local11 + 1, local3 + 1, local9 - 2, 16, 0);
+			GlRaster.method1179(local11 + 1, local3 + 18, local9 - 2, local15 + -19, 0);
 		} else {
 			SoftwareRaster.fillRect(local11, local3, local9, local15, 6116423);
 			SoftwareRaster.fillRect(local11 + 1, local3 + 1, local9 - 2, 16, 0);

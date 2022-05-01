@@ -8,7 +8,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!pb")
 public final class LocType {
 
-	@OriginalMember(owner = "client!pb", name = "a", descriptor = "[S")
+    @OriginalMember(owner = "client!wf", name = "o", descriptor = "[Lclient!gb;")
+    public static final RawModel[] tempModels = new RawModel[4];
+    @OriginalMember(owner = "client!pb", name = "a", descriptor = "[S")
 	private short[] retextureSource;
 
 	@OriginalMember(owner = "client!pb", name = "b", descriptor = "[S")
@@ -257,11 +259,11 @@ public final class LocType {
 					LocTypeList.aClass99_24.put(local7, (long) local60);
 				}
 				if (local46 > 1) {
-					Static274.tempModels[local48] = local7;
+					tempModels[local48] = local7;
 				}
 			}
 			if (local46 > 1) {
-				local7 = new RawModel(Static274.tempModels, local46);
+				local7 = new RawModel(tempModels, local46);
 			}
 		} else {
 			local46 = -1;
@@ -650,11 +652,11 @@ public final class LocType {
 						return null;
 					}
 					if (local24 > 1) {
-						Static274.tempModels[local177] = local175;
+						tempModels[local177] = local175;
 					}
 				}
 				if (local24 > 1) {
-					local175 = new RawModel(Static274.tempModels, local24);
+					local175 = new RawModel(tempModels, local24);
 				}
 				local79 = new GlModel(local175, local10, local17, arg1);
 				LocTypeList.aClass99_24.put(local79, local135);

@@ -15,9 +15,6 @@ public final class Static253 {
 	@OriginalMember(owner = "client!ui", name = "T", descriptor = "F")
 	public static float aFloat36;
 
-	@OriginalMember(owner = "client!ui", name = "eb", descriptor = "[[[B")
-	public static byte[][][] aByteArrayArrayArray16;
-
 	@OriginalMember(owner = "client!ui", name = "mb", descriptor = "F")
 	public static float aFloat37;
 
@@ -90,7 +87,7 @@ public final class Static253 {
 		}
 		Static252.method4302();
 		if (GlRenderer.enabled) {
-			Static46.method1187(arg2, arg4, arg2 + arg3, arg4 - -arg0);
+			GlRaster.method1187(arg2, arg4, arg2 + arg3, arg4 - -arg0);
 			@Pc(248) float local248 = (float) Static240.cameraPitch * 0.17578125F;
 			@Pc(253) float local253 = (float) Static184.cameraYaw * 0.17578125F;
 			if (Static227.cameraType == 3) {
@@ -158,7 +155,7 @@ public final class Static253 {
 		}
 		if (Static19.aBoolean43) {
 			if (GlRenderer.enabled) {
-				Static46.method1186(arg2, arg4, arg3, arg0, 0);
+				GlRaster.method1186(arg2, arg4, arg3, arg0, 0);
 			} else {
 				SoftwareRaster.fillRect(arg2, arg4, arg3, arg0, 0);
 			}

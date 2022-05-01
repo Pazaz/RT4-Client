@@ -9,11 +9,6 @@ public final class Static269 {
 	@OriginalMember(owner = "client!wa", name = "pb", descriptor = "Lclient!na;")
 	public static final JagString aClass100_556 = JagString.parse("<br>");
 
-    @OriginalMember(owner = "client!wa", name = "e", descriptor = "(B)V")
-	public static void clearObjectSpriteCache() {
-		ObjTypeList.objectSpriteCache.clear();
-	}
-
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "([Lclient!mj;ZIIIII[B)V")
 	public static void method2203(@OriginalArg(0) CollisionMap[] arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) byte[] arg6) {
 		@Pc(14) int local14;
@@ -40,7 +35,7 @@ public final class Static269 {
 		for (local14 = 0; local14 < local99; local14++) {
 			for (local21 = 0; local21 < 64; local21++) {
 				for (local117 = 0; local117 < 64; local117++) {
-					Static278.method4651(arg2, arg5, arg1, local95, local117 + arg3, arg4 + local21, 0, local14);
+					Static278.readTile(arg2, arg5, arg1, local95, local117 + arg3, arg4 + local21, 0, local14);
 				}
 			}
 		}
@@ -179,8 +174,8 @@ public final class Static269 {
 					local194 = local529.anInt2245 >> 7;
 					local190 = local529.anInt2240 >> 7;
 					if (local190 >= 0 && local194 >= 0 && local190 < 104 && local194 < 104) {
-						local529.aBoolean125 = (Static12.tileSettings[1][local190][local194] & 0x2) != 0;
-						local529.anInt2235 = SceneGraph.activeTileHeightMap[local529.anInt2241][local190][local194] - local529.anInt2235;
+						local529.aBoolean125 = (SceneGraph.tileFlags[1][local190][local194] & 0x2) != 0;
+						local529.anInt2235 = SceneGraph.tileHeights[local529.anInt2241][local190][local194] - local529.anInt2235;
 						Static120.method2389(local529);
 					}
 				}
@@ -224,7 +219,7 @@ public final class Static269 {
 			WorldMap.method3413();
 		}
 		if (GlRenderer.enabled) {
-			Static46.method1187(arg0, arg1, arg0 + arg3, arg2 + arg1);
+			GlRaster.method1187(arg0, arg1, arg0 + arg3, arg2 + arg1);
 		} else {
 			SoftwareRaster.method2496(arg0, arg1, arg0 + arg3, arg2 + arg1);
 		}
@@ -234,11 +229,11 @@ public final class Static269 {
 			local50 = arg0 + arg3 / 2;
 			local61 = arg2 / 2 + arg1 - 18 - 20;
 			if (GlRenderer.enabled) {
-				Static46.method1186(arg0, arg1, arg3, arg2, 0);
-				Static46.method1179(local50 - 152, local61, 304, 34, 9179409);
-				Static46.method1179(local50 - 151, local61 + 1, 302, 32, 0);
-				Static46.method1186(local50 - 150, local61 + 2, WorldMap.loadPercentage * 3, 30, 9179409);
-				Static46.method1186(local50 + WorldMap.loadPercentage * 3 - 150, local61 - -2, 300 - WorldMap.loadPercentage * 3, 30, 0);
+				GlRaster.method1186(arg0, arg1, arg3, arg2, 0);
+				GlRaster.method1179(local50 - 152, local61, 304, 34, 9179409);
+				GlRaster.method1179(local50 - 151, local61 + 1, 302, 32, 0);
+				GlRaster.method1186(local50 - 150, local61 + 2, WorldMap.loadPercentage * 3, 30, 9179409);
+				GlRaster.method1186(local50 + WorldMap.loadPercentage * 3 - 150, local61 - -2, 300 - WorldMap.loadPercentage * 3, 30, 0);
 			} else {
 				SoftwareRaster.fillRect(arg0, arg1, arg3, arg2, 0);
 				SoftwareRaster.drawRect(local50 - 152, local61, 304, 34, 9179409);
@@ -266,7 +261,7 @@ public final class Static269 {
 			Static214.method4364(arg3, 0, local61, local50, 0, local236, arg2, local211);
 			Static48.method1195(arg3, 0, local61, local236, arg2, 0, local211, local50);
 			Static38.method959(0, 0, local211, arg3, local236, local50, local61, arg2);
-			Static46.method1178(WorldMap.aClass3_Sub2_Sub1_Sub1_2.pixels, arg0, arg1, arg3, arg2);
+			GlRaster.method1178(WorldMap.aClass3_Sub2_Sub1_Sub1_2.pixels, arg0, arg1, arg3, arg2);
 			SoftwareRaster.pixels = null;
 		} else {
 			Static214.method4364(arg3 + arg0, arg1, local61, local50, arg0, local236, arg1 + arg2, local211);

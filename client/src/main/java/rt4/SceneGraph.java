@@ -5,11 +5,23 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 public class SceneGraph {
+    @OriginalMember(owner = "client!bb", name = "g", descriptor = "[[[B")
+    public static final byte[][][] tileFlags = new byte[4][104][104];
     @OriginalMember(owner = "client!kc", name = "o", descriptor = "[[[Lclient!bj;")
     public static Tile[][][] tiles;
 
     @OriginalMember(owner = "client!gj", name = "m", descriptor = "[[[I")
-	public static int[][][] activeTileHeightMap;
+	public static int[][][] tileHeights;
+    @OriginalMember(owner = "client!id", name = "i", descriptor = "[[[I")
+    public static int[][][] surfaceTileHeights;
+    @OriginalMember(owner = "client!tg", name = "g", descriptor = "[[[B")
+    public static byte[][][] tileOverlays;
+    @OriginalMember(owner = "client!n", name = "h", descriptor = "[[[B")
+	public static byte[][][] tileShapes;
+    @OriginalMember(owner = "client!ac", name = "e", descriptor = "[[[B")
+    public static byte[][][] tileAngles;
+    @OriginalMember(owner = "client!ui", name = "eb", descriptor = "[[[B")
+    public static byte[][][] tileUnderlays;
 
     @OriginalMember(owner = "client!km", name = "f", descriptor = "(I)Z")
     public static boolean allLevelsAreVisible() {
@@ -18,7 +30,7 @@ public class SceneGraph {
 
     @OriginalMember(owner = "client!ql", name = "a", descriptor = "(IIII)I")
     public static int getTileHeight(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-        if (activeTileHeightMap == null) {
+        if (tileHeights == null) {
             return 0;
         }
         @Pc(12) int local12 = arg1 >> 7;
@@ -29,11 +41,11 @@ public class SceneGraph {
         @Pc(36) int local36 = arg1 & 0x7F;
         @Pc(40) int local40 = arg2 & 0x7F;
         @Pc(42) int local42 = arg0;
-        if (arg0 < 3 && (Static12.tileSettings[1][local12][local16] & 0x2) == 2) {
+        if (arg0 < 3 && (tileFlags[1][local12][local16] & 0x2) == 2) {
             local42 = arg0 + 1;
         }
-        @Pc(91) int local91 = local36 * activeTileHeightMap[local42][local12 + 1][local16 + 1] + activeTileHeightMap[local42][local12][local16 + 1] * (128 - local36) >> 7;
-        @Pc(118) int local118 = local36 * activeTileHeightMap[local42][local12 + 1][local16] + (128 - local36) * activeTileHeightMap[local42][local12][local16] >> 7;
+        @Pc(91) int local91 = local36 * tileHeights[local42][local12 + 1][local16 + 1] + tileHeights[local42][local12][local16 + 1] * (128 - local36) >> 7;
+        @Pc(118) int local118 = local36 * tileHeights[local42][local12 + 1][local16] + (128 - local36) * tileHeights[local42][local12][local16] >> 7;
         return local40 * local91 + (128 - local40) * local118 >> 7;
     }
 

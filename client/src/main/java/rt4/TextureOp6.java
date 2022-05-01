@@ -79,7 +79,7 @@ public final class TextureOp6 extends TextureOp {
 						break;
 					}
 				}
-				Static289.method2614(local19, 0, Static189.anInt4457, local34);
+				ArrayUtils.fill(local19, 0, Static189.anInt4457, local34);
 			} else {
 				for (@Pc(85) int local85 = 0; local85 < Static189.anInt4457; local85++) {
 					@Pc(96) int local96 = Static173.anIntArray367[local85];

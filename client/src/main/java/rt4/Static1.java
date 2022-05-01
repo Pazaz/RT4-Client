@@ -530,8 +530,8 @@ public final class Static1 {
 	@OriginalMember(owner = "client!a", name = "a", descriptor = "(IIIII)V")
 	public static void method4(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {
 		if (GlRenderer.enabled) {
-			Static46.method1187(arg0, arg3, arg2 + arg0, arg1 + arg3);
-			Static46.method1186(arg0, arg3, arg2, arg1, 0);
+			GlRaster.method1187(arg0, arg3, arg2 + arg0, arg1 + arg3);
+			GlRaster.method1186(arg0, arg3, arg2, arg1, 0);
 		} else {
 			SoftwareRaster.method2496(arg0, arg3, arg2 + arg0, arg3 + arg1);
 			SoftwareRaster.fillRect(arg0, arg3, arg2, arg1, 0);
@@ -564,8 +564,8 @@ public final class Static1 {
 			local169 = 16777215;
 		}
 		if (GlRenderer.enabled) {
-			Static46.method1182(local161, local147, local167, local153, local169, 128);
-			Static46.method1179(local161, local147, local167, local153, local169);
+			GlRaster.method1182(local161, local147, local167, local153, local169, 128);
+			GlRaster.method1179(local161, local147, local167, local153, local169);
 		} else {
 			SoftwareRaster.method2484(local161, local147, local167, local153, local169, 128);
 			SoftwareRaster.drawRect(local161, local147, local167, local153, local169);
@@ -584,7 +584,7 @@ public final class Static1 {
 				@Pc(258) int local258 = arg3 + local238.anInt4314 * arg1 / WorldMap.length;
 				@Pc(267) int local267 = arg2 * local238.anInt4307 / WorldMap.width + arg0;
 				if (GlRenderer.enabled) {
-					Static46.method1182(local267 - 2, local258 + -2, 4, 4, 16776960, local225);
+					GlRaster.method1182(local267 - 2, local258 + -2, 4, 4, 16776960, local225);
 				} else {
 					SoftwareRaster.method2484(local267 - 2, local258 + -2, 4, 4, 16776960, local225);
 				}

@@ -84,7 +84,7 @@ public final class Static248 {
 				}
 			}
 		}
-		@Pc(240) boolean local240 = SceneGraph.activeTileHeightMap == Static80.underWaterTileHeightMap;
+		@Pc(240) boolean local240 = SceneGraph.tileHeights == Static80.underWaterTileHeightMap;
 		if (GlRenderer.enabled) {
 			@Pc(244) GL2 local244 = GlRenderer.gl;
 			local244.glPushMatrix();
@@ -124,7 +124,7 @@ public final class Static248 {
 					}
 					if (local32 == 0 && Preferences.sceneryShadowsType > 0) {
 						GlRenderer.method4159(101.5F);
-						Static242.method4198(Static167.anInt4069, Static193.anInt4539, Static277.tileVisibilityDistance, arg1, Static48.aBooleanArrayArray1, SceneGraph.activeTileHeightMap[0]);
+						Static242.method4198(Static167.anInt4069, Static193.anInt4539, Static277.tileVisibilityDistance, arg1, Static48.aBooleanArrayArray1, SceneGraph.tileHeights[0]);
 					}
 					local32++;
 				}

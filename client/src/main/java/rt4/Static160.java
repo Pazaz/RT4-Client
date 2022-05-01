@@ -15,7 +15,7 @@ public final class Static160 {
     @OriginalMember(owner = "client!mj", name = "a", descriptor = "(IILclient!be;IB)V")
 	public static void method3047(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Component arg2, @OriginalArg(3) int arg3) {
 		if (GlRenderer.enabled) {
-			Static46.method1187(arg0, arg1, arg2.anInt445 + arg0, arg2.anInt459 + arg1);
+			GlRaster.method1187(arg0, arg1, arg2.anInt445 + arg0, arg2.anInt459 + arg1);
 		}
 		if (Static270.minimapState >= 3) {
 			if (GlRenderer.enabled) {

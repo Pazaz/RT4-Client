@@ -67,11 +67,11 @@ public final class Static156 {
 				if (local146 >= 0 && local152 >= 0 && local146 < Static152.mapSizeX && local152 < Static99.mapSizeZ) {
 					@Pc(176) int local176;
 					if (Static80.underWaterTileHeightMap == null) {
-						local176 = Static107.surfaceTileHeightMap[0][local146][local152] + 128 - Static123.anInt3947;
+						local176 = SceneGraph.surfaceTileHeights[0][local146][local152] + 128 - Static123.anInt3947;
 					} else {
 						local176 = Static80.underWaterTileHeightMap[0][local146][local152] + 128 - Static123.anInt3947;
 					}
-					@Pc(201) int local201 = Static107.surfaceTileHeightMap[3][local146][local152] - Static123.anInt3947 - 1000;
+					@Pc(201) int local201 = SceneGraph.surfaceTileHeights[3][local146][local152] - Static123.anInt3947 - 1000;
 					Static89.aBooleanArrayArray3[local104][local113] = Static160.method3049(local130, local201, local176, local140, local99);
 				} else {
 					Static89.aBooleanArrayArray3[local104][local113] = false;

@@ -6,9 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static4 {
 
-	@OriginalMember(owner = "client!ac", name = "e", descriptor = "[[[B")
-	public static byte[][][] aByteArrayArrayArray1;
-
 	@OriginalMember(owner = "client!ac", name = "i", descriptor = "Lclient!ih;")
 	public static final LinkedList highPriorityRequests = new LinkedList();
 
@@ -26,8 +23,8 @@ public final class Static4 {
 
 	@OriginalMember(owner = "client!ac", name = "a", descriptor = "(IIII)I")
 	public static int method22(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2) {
-		if ((Static12.tileSettings[arg2][arg1][arg0] & 0x8) == 0) {
-			return arg2 <= 0 || (Static12.tileSettings[1][arg1][arg0] & 0x2) == 0 ? arg2 : arg2 - 1;
+		if ((SceneGraph.tileFlags[arg2][arg1][arg0] & 0x8) == 0) {
+			return arg2 <= 0 || (SceneGraph.tileFlags[1][arg1][arg0] & 0x2) == 0 ? arg2 : arg2 - 1;
 		} else {
 			return 0;
 		}

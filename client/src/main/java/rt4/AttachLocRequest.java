@@ -82,7 +82,7 @@ public final class AttachLocRequest extends Node {
 				@Pc(110) int centerX0 = (width >> 1) + request.x;
 				@Pc(117) int centerZ0 = (length >> 1) + request.z;
 				@Pc(126) int centerZ1 = (length + 1 >> 1) + request.z;
-				@Pc(130) int[][] tileHeights = SceneGraph.activeTileHeightMap[Player.level];
+				@Pc(130) int[][] tileHeights = SceneGraph.tileHeights[Player.level];
 				@Pc(157) int y = tileHeights[centerX1][centerZ1] + tileHeights[centerX0][centerZ1] + tileHeights[centerX0][centerZ0] + tileHeights[centerX1][centerZ0] >> 2;
 				@Pc(159) Entity attachment = null;
 				@Pc(164) int layer = Loc.LAYERS[request.shape];

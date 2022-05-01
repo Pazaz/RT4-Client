@@ -162,7 +162,7 @@ public final class TextureOp17 extends TextureOp {
 					}
 				}
 			} else {
-				Static289.method2614(local11, 0, Static189.anInt4457, 0);
+				ArrayUtils.fill(local11, 0, Static189.anInt4457, 0);
 			}
 		}
 		return local11;

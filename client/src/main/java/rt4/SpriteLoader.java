@@ -312,4 +312,14 @@ public class SpriteLoader {
     public static SoftwareIndexedSprite[] method3088(@OriginalArg(1) int arg0, @OriginalArg(2) Js5 arg1) {
         return decode(arg1, arg0) ? createSoftwareIndexedSprites() : null;
     }
+
+    @OriginalMember(owner = "client!da", name = "a", descriptor = "(ILclient!ve;Z)Lclient!ok;")
+    public static IndexedSprite loadIndexedSpriteAutoDetect(@OriginalArg(0) int arg0, @OriginalArg(1) Js5 arg1) {
+        return decode(arg1, arg0) ? Static276.method4614() : null;
+    }
+
+    @OriginalMember(owner = "client!kc", name = "a", descriptor = "(ILclient!ve;I)Lclient!qf;")
+    public static Sprite loadSpriteAutoDetect(@OriginalArg(1) Js5 arg0, @OriginalArg(2) int arg1) {
+        return decode(arg0, arg1) ? method1764() : null;
+    }
 }

@@ -43,7 +43,7 @@ public final class Static3 {
 				}
 			}
 			Static105.aClass114Array1 = new Class114[local22];
-			Static289.method2617(local20, 0, Static105.aClass114Array1, 0, local22);
+			ArrayUtils.copy(local20, 0, Static105.aClass114Array1, 0, local22);
 			@Pc(112) int[] local112 = new int[Static105.aClass114Array1.length];
 			for (@Pc(114) int local114 = 0; local114 < Static105.aClass114Array1.length; local114++) {
 				@Pc(122) Class114 local122 = Static105.aClass114Array1[local114];

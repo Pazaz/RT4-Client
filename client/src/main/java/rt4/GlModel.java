@@ -888,14 +888,14 @@ public final class GlModel extends Model {
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "([FI)[F")
 	public static float[] method4112(@OriginalArg(0) float[] arg0, @OriginalArg(1) int arg1) {
 		@Pc(2) float[] local2 = new float[arg1];
-		Static289.method2615(arg0, 0, local2, 0, arg1);
+		ArrayUtils.copy(arg0, 0, local2, 0, arg1);
 		return local2;
 	}
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "([SI)[S")
 	public static short[] method4119(@OriginalArg(0) short[] arg0, @OriginalArg(1) int arg1) {
 		@Pc(2) short[] local2 = new short[arg1];
-		Static289.method2616(arg0, 0, local2, 0, arg1);
+		ArrayUtils.copy(arg0, 0, local2, 0, arg1);
 		return local2;
 	}
 

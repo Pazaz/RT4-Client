@@ -6,10 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static243 {
 
-    @OriginalMember(owner = "client!tk", name = "o", descriptor = "Lclient!ok;")
-	public static IndexedSprite logo;
-
-	@OriginalMember(owner = "client!tk", name = "D", descriptor = "[Lclient!ec;")
+    @OriginalMember(owner = "client!tk", name = "D", descriptor = "[Lclient!ec;")
 	public static Scenery[] aClass31Array3;
 
 	@OriginalMember(owner = "client!tk", name = "K", descriptor = "[I")

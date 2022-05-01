@@ -4,10 +4,10 @@ import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
-public final class Static289 {
+public final class ArrayUtils {
 
 	@OriginalMember(owner = "client!kg", name = "a", descriptor = "([JI[JII)V")
-	public static void method2611(@OriginalArg(0) long[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) long[] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+	public static void copy(@OriginalArg(0) long[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) long[] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		@Pc(15) int local15;
 		if (arg0 == arg2) {
 			if (arg1 == arg3) {
@@ -47,7 +47,7 @@ public final class Static289 {
 	}
 
     @OriginalMember(owner = "client!kg", name = "a", descriptor = "([II[III)V")
-	public static void method2613(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int[] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+	public static void copy(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int[] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		@Pc(15) int local15;
 		if (arg0 == arg2) {
 			if (arg1 == arg3) {
@@ -95,7 +95,7 @@ public final class Static289 {
 	}
 
 	@OriginalMember(owner = "client!kg", name = "a", descriptor = "([IIII)V")
-	public static void method2614(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	public static void fill(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		@Pc(5) int local5 = arg1 + arg2 - 7;
 		while (arg1 < local5) {
 			arg0[arg1++] = arg3;
@@ -114,7 +114,7 @@ public final class Static289 {
 	}
 
 	@OriginalMember(owner = "client!kg", name = "a", descriptor = "([FI[FII)V")
-	public static void method2615(@OriginalArg(0) float[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) float[] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+	public static void copy(@OriginalArg(0) float[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) float[] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		if (arg0 == arg2) {
 			return;
 		}
@@ -137,7 +137,7 @@ public final class Static289 {
 	}
 
 	@OriginalMember(owner = "client!kg", name = "a", descriptor = "([SI[SII)V")
-	public static void method2616(@OriginalArg(0) short[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) short[] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+	public static void copy(@OriginalArg(0) short[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) short[] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		@Pc(15) int local15;
 		if (arg0 == arg2) {
 			if (arg1 == arg3) {
@@ -185,7 +185,7 @@ public final class Static289 {
 	}
 
 	@OriginalMember(owner = "client!kg", name = "a", descriptor = "([Ljava/lang/Object;I[Ljava/lang/Object;II)V")
-	public static void method2617(@OriginalArg(0) Object[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Object[] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+	public static void copy(@OriginalArg(0) Object[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Object[] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		@Pc(15) int local15;
 		if (arg0 == arg2) {
 			if (arg1 == arg3) {

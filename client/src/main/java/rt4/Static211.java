@@ -30,12 +30,7 @@ public final class Static211 {
 		return local12 == -1 ? Static93.aClass100_517 : WorldMap.labels.aClass100Array153[local12].method3140(Static101.aClass100_538, Static197.aClass100_872);
 	}
 
-	@OriginalMember(owner = "client!rc", name = "a", descriptor = "(Z)V")
-	public static void clearObjectModelCache() {
-		ObjTypeList.models.clear();
-	}
-
-	@OriginalMember(owner = "client!rc", name = "d", descriptor = "(I)V")
+    @OriginalMember(owner = "client!rc", name = "d", descriptor = "(I)V")
 	public static void method930() {
 		if (client.musicChannel != null) {
 			client.musicChannel.quit();

@@ -21,7 +21,7 @@ public class VarbitTypeList {
         if (local10 != null) {
             return local10;
         }
-        @Pc(31) byte[] local31 = archive.getFile(Static254.method4349(arg0), Static274.method3845(arg0));
+        @Pc(31) byte[] local31 = archive.getFile(method4349(arg0), method3845(arg0));
         local10 = new VarbitType();
         if (local31 != null) {
             local10.decode(new Buffer(local31));
@@ -43,5 +43,15 @@ public class VarbitTypeList {
     @OriginalMember(owner = "client!ec", name = "b", descriptor = "(I)V")
     public static void method1295() {
         types.clear();
+    }
+
+    @OriginalMember(owner = "client!wf", name = "a", descriptor = "(II)I")
+    public static int method3845(@OriginalArg(0) int arg0) {
+        return arg0 & 0x3FF;
+    }
+
+    @OriginalMember(owner = "client!uj", name = "a", descriptor = "(II)I")
+    public static int method4349(@OriginalArg(0) int arg0) {
+        return arg0 >>> 10;
     }
 }

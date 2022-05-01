@@ -73,7 +73,7 @@ public final class Static247 {
 											local31 = SceneGraph.tiles[local24];
 											@Pc(33) float local33 = 0.0F;
 											if (GlRenderer.enabled) {
-												if (Static80.underWaterTileHeightMap == SceneGraph.activeTileHeightMap) {
+												if (Static80.underWaterTileHeightMap == SceneGraph.tileHeights) {
 													var9 = Static62.anIntArrayArray11[local18][local21];
 													var10 = var9 & 0xFFFFFF;
 													if (var10 != Static152.anInt3604) {
@@ -86,7 +86,7 @@ public final class Static247 {
 														Static22.anInt730 = local65;
 														Static147.method2761(local65);
 													}
-													local115 = Static107.surfaceTileHeightMap[0][local18][local21] + Static107.surfaceTileHeightMap[0][local18 + 1][local21] + Static107.surfaceTileHeightMap[0][local18][local21 + 1] + Static107.surfaceTileHeightMap[0][local18 + 1][local21 + 1] >> 2;
+													local115 = SceneGraph.surfaceTileHeights[0][local18][local21] + SceneGraph.surfaceTileHeights[0][local18 + 1][local21] + SceneGraph.surfaceTileHeights[0][local18][local21 + 1] + SceneGraph.surfaceTileHeights[0][local18 + 1][local21 + 1] >> 2;
 													MaterialManager.setMaterial(-local115, 3);
 													local33 = 201.5F;
 													GlRenderer.method4159(local33);

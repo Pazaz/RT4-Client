@@ -2906,11 +2906,11 @@ public final class ScriptRunner {
 													}
 													if (opcode == 5401) {
 														isp -= 2;
-														client.aShortArray88[intStack[isp]] = (short) Static105.method2253(intStack[isp + 1]);
-														Static211.clearObjectModelCache();
-														Static269.clearObjectSpriteCache();
-														Static278.method4649();
-														Static11.clearNpcHeadCache();
+														client.aShortArray88[intStack[isp]] = (short) ColorUtils.rgbToHsl(intStack[isp + 1]);
+														ObjTypeList.clearModels();
+														ObjTypeList.clearSprites();
+														NpcTypeList.clearModels();
+														NpcTypeList.clearHeadModels();
 														Static87.method1807();
 														continue;
 													}
@@ -3228,7 +3228,7 @@ public final class ScriptRunner {
 																Static145.method2742();
 															}
 														}
-														Static269.clearObjectSpriteCache();
+														ObjTypeList.clearSprites();
 														Preferences.write(GameShell.signLink);
 														Preferences.sentToServer = false;
 														continue;

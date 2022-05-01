@@ -12,12 +12,6 @@ public final class Static170 {
 	@OriginalMember(owner = "client!nh", name = "fb", descriptor = "[I")
 	public static final int[] JS5_ARCHIVE_WEIGHTS = new int[] { 4, 4, 1, 2, 6, 4, 2, 49, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
 
-	@OriginalMember(owner = "client!nh", name = "a", descriptor = "(IIIII)I")
-	public static int method2569(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {
-		@Pc(22) int local22 = 65536 - MathUtils.cos[arg2 * 1024 / arg3] >> 1;
-		return (arg0 * (65536 - local22) >> 16) + (arg1 * local22 >> 16);
-	}
-
 	@OriginalMember(owner = "client!nh", name = "a", descriptor = "(IIIILclient!th;JZ)V")
 	public static void method2570(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Entity arg4, @OriginalArg(5) long arg5, @OriginalArg(6) boolean arg6) {
 		if (arg4 == null) {

@@ -73,6 +73,8 @@ public class Cheat {
     public static final JagString aClass100_892 = JagString.parse("mem=");
     @OriginalMember(owner = "client!gg", name = "Y", descriptor = "Lclient!na;")
     public static final JagString aClass100_476 = JagString.parse("::gc");
+    @OriginalMember(owner = "client!wk", name = "u", descriptor = "Lclient!na;")
+	public static final JagString CLIENTJS5DROP = JagString.parse("::clientjs5drop");
     @OriginalMember(owner = "client!dg", name = "f", descriptor = "Z")
     public static boolean displayFps = false;
     @OriginalMember(owner = "client!nj", name = "a", descriptor = "Z")
@@ -130,7 +132,7 @@ public class Cheat {
             if (arg0.equalsIgnoreCase(CLIENTDROP)) {
                 Static175.method3279();
             }
-            if (arg0.equalsIgnoreCase(Static279.JS5DROP)) {
+            if (arg0.equalsIgnoreCase(CLIENTJS5DROP)) {
                 client.js5NetQueue.quit();
             }
             if (arg0.equalsIgnoreCase(JS5DROP)) {

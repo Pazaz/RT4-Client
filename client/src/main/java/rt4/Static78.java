@@ -8,10 +8,7 @@ public final class Static78 {
     @OriginalMember(owner = "client!gd", name = "m", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_32;
 
-	@OriginalMember(owner = "client!gd", name = "n", descriptor = "Lclient!qf;")
-	public static Sprite titleBg;
-
-	@OriginalMember(owner = "client!gd", name = "b", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!gd", name = "b", descriptor = "Lclient!na;")
 	public static final JagString aClass100_464 = JagString.parse("null");
 
 	@OriginalMember(owner = "client!gd", name = "c", descriptor = "Lclient!na;")

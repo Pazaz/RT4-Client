@@ -11,16 +11,16 @@ public class LoadingBar {
         if (GlRenderer.enabled || arg0) {
             local9 = GameShell.canvasHeight;
             @Pc(15) int local15 = local9 * 956 / 503;
-            Static78.titleBg.renderResizedTransparent((GameShell.canvasWidth - local15) / 2, 0, local15, local9);
-            Static243.logo.renderTransparent(GameShell.canvasWidth / 2 - Static243.logo.width / 2, 18);
+            TitleScreen.titleBg.renderResizedTransparent((GameShell.canvasWidth - local15) / 2, 0, local15, local9);
+            TitleScreen.logo.renderTransparent(GameShell.canvasWidth / 2 - TitleScreen.logo.width / 2, 18);
         }
         arg1.renderCenter(LocalizedText.GAME0_LOADING, GameShell.canvasWidth / 2, GameShell.canvasHeight / 2 - 26, 16777215, -1);
         local9 = GameShell.canvasHeight / 2 - 18;
         if (GlRenderer.enabled) {
-            Static46.method1179(GameShell.canvasWidth / 2 - 152, local9, 304, 34, 9179409);
-            Static46.method1179(GameShell.canvasWidth / 2 - 151, local9 - -1, 302, 32, 0);
-            Static46.method1186(GameShell.canvasWidth / 2 - 150, local9 + 2, client.mainLoadPercentage * 3, 30, 9179409);
-            Static46.method1186(GameShell.canvasWidth / 2 + client.mainLoadPercentage * 3 - 150, local9 + 2, 300 - client.mainLoadPercentage * 3, 30, 0);
+            GlRaster.method1179(GameShell.canvasWidth / 2 - 152, local9, 304, 34, 9179409);
+            GlRaster.method1179(GameShell.canvasWidth / 2 - 151, local9 - -1, 302, 32, 0);
+            GlRaster.method1186(GameShell.canvasWidth / 2 - 150, local9 + 2, client.mainLoadPercentage * 3, 30, 9179409);
+            GlRaster.method1186(GameShell.canvasWidth / 2 + client.mainLoadPercentage * 3 - 150, local9 + 2, 300 - client.mainLoadPercentage * 3, 30, 0);
         } else {
             SoftwareRaster.drawRect(GameShell.canvasWidth / 2 - 152, local9, 304, 34, 9179409);
             SoftwareRaster.drawRect(GameShell.canvasWidth / 2 - 151, local9 + 1, 302, 32, 0);
