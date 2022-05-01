@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
-public final class Static46 {
+public final class GlRaster {
 
 	@OriginalMember(owner = "client!dj", name = "b", descriptor = "I")
 	public static int clipY = 0;

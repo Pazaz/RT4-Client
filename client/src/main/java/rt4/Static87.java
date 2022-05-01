@@ -80,7 +80,7 @@ public final class Static87 {
 	@OriginalMember(owner = "client!gn", name = "a", descriptor = "(III[Lclient!be;IIIIBI)V")
 	public static void method1809(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) Component[] arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(9) int arg8) {
 		if (GlRenderer.enabled) {
-			Static46.method1187(arg0, arg6, arg4, arg7);
+			GlRaster.method1187(arg0, arg6, arg4, arg7);
 		} else {
 			SoftwareRaster.method2496(arg0, arg6, arg4, arg7);
 			Rasteriser.prepare();
@@ -180,7 +180,7 @@ public final class Static87 {
 								Static97.anInt2503 = local123;
 								Static253.method4326(local30.anInt459, local30.anInt453 == 1403, local123, local30.anInt445, local114);
 								if (GlRenderer.enabled) {
-									Static46.method1187(arg0, arg6, arg4, arg7);
+									GlRaster.method1187(arg0, arg6, arg4, arg7);
 								} else {
 									SoftwareRaster.method2496(arg0, arg6, arg4, arg7);
 								}
@@ -192,7 +192,7 @@ public final class Static87 {
 								}
 								Static54.method1305(local57, local114, local123, local30);
 								if (GlRenderer.enabled) {
-									Static46.method1187(arg0, arg6, arg4, arg7);
+									GlRaster.method1187(arg0, arg6, arg4, arg7);
 								} else {
 									SoftwareRaster.method2496(arg0, arg6, arg4, arg7);
 								}
@@ -235,7 +235,7 @@ public final class Static87 {
 								if (local30.method478()) {
 									Static160.method3047(local123, local114, local30, local57);
 									if (GlRenderer.enabled) {
-										Static46.method1187(arg0, arg6, arg4, arg7);
+										GlRaster.method1187(arg0, arg6, arg4, arg7);
 									} else {
 										SoftwareRaster.method2496(arg0, arg6, arg4, arg7);
 									}
@@ -247,7 +247,7 @@ public final class Static87 {
 								Static186.aBooleanArray100[local57] = true;
 								InterfaceList.rectangleRedraw[local57] = true;
 								if (GlRenderer.enabled) {
-									Static46.method1187(arg0, arg6, arg4, arg7);
+									GlRaster.method1187(arg0, arg6, arg4, arg7);
 								} else {
 									SoftwareRaster.method2496(arg0, arg6, arg4, arg7);
 								}
@@ -258,7 +258,7 @@ public final class Static87 {
 								Static186.aBooleanArray100[local57] = true;
 								InterfaceList.rectangleRedraw[local57] = true;
 								if (GlRenderer.enabled) {
-									Static46.method1187(arg0, arg6, arg4, arg7);
+									GlRaster.method1187(arg0, arg6, arg4, arg7);
 								} else {
 									SoftwareRaster.method2496(arg0, arg6, arg4, arg7);
 								}
@@ -361,7 +361,7 @@ public final class Static87 {
 								Static6.method86(local1186.anInt5878, local166, local302, local123, local57, local291, local164, local114);
 							}
 							if (GlRenderer.enabled) {
-								Static46.method1187(arg0, arg6, arg4, arg7);
+								GlRaster.method1187(arg0, arg6, arg4, arg7);
 							} else {
 								SoftwareRaster.method2496(arg0, arg6, arg4, arg7);
 								Rasteriser.prepare();
@@ -415,8 +415,8 @@ public final class Static87 {
 															@Pc(1577) int local1577;
 															@Pc(1575) int local1575;
 															if (GlRenderer.enabled) {
-																local1575 = Static46.anInt1441;
-																local1577 = Static46.clipY;
+																local1575 = GlRaster.anInt1441;
+																local1577 = GlRaster.clipY;
 															} else {
 																local1577 = SoftwareRaster.clipTop;
 																local1575 = SoftwareRaster.clipBottom;
@@ -479,23 +479,23 @@ public final class Static87 {
 									if (local117 == 0) {
 										if (local30.aBoolean30) {
 											if (GlRenderer.enabled) {
-												Static46.method1186(local123, local114, local30.anInt445, local30.anInt459, local270);
+												GlRaster.method1186(local123, local114, local30.anInt445, local30.anInt459, local270);
 											} else {
 												SoftwareRaster.fillRect(local123, local114, local30.anInt445, local30.anInt459, local270);
 											}
 										} else if (GlRenderer.enabled) {
-											Static46.method1179(local123, local114, local30.anInt445, local30.anInt459, local270);
+											GlRaster.method1179(local123, local114, local30.anInt445, local30.anInt459, local270);
 										} else {
 											SoftwareRaster.drawRect(local123, local114, local30.anInt445, local30.anInt459, local270);
 										}
 									} else if (local30.aBoolean30) {
 										if (GlRenderer.enabled) {
-											Static46.method1182(local123, local114, local30.anInt445, local30.anInt459, local270, 256 - (local117 & 0xFF));
+											GlRaster.method1182(local123, local114, local30.anInt445, local30.anInt459, local270, 256 - (local117 & 0xFF));
 										} else {
 											SoftwareRaster.method2484(local123, local114, local30.anInt445, local30.anInt459, local270, 256 - (local117 & 0xFF));
 										}
 									} else if (GlRenderer.enabled) {
-										Static46.method1180(local123, local114, local30.anInt445, local30.anInt459, local270, 256 - (local117 & 0xFF));
+										GlRaster.method1180(local123, local114, local30.anInt445, local30.anInt459, local270, 256 - (local117 & 0xFF));
 									} else {
 										SoftwareRaster.method2487(local123, local114, local30.anInt445, local30.anInt459, local270, 256 - (local117 & 0xFF));
 									}
@@ -555,7 +555,7 @@ public final class Static87 {
 													memory = (local276 + local30.anInt445 - 1) / local276;
 													color = (local30.anInt459 + local468 - 1) / local468;
 													if (GlRenderer.enabled) {
-														Static46.method1183(local123, local114, local30.anInt445 + local123, local30.anInt459 + local114);
+														GlRaster.method1183(local123, local114, local30.anInt445 + local123, local30.anInt459 + local114);
 														@Pc(2274) boolean local2274 = Static209.method3702(local2094.width);
 														@Pc(2279) boolean local2279 = Static209.method3702(local2094.height);
 														@Pc(2282) GlSprite local2282 = (GlSprite) local2094;
@@ -592,7 +592,7 @@ public final class Static87 {
 																}
 															}
 														}
-														Static46.method1187(arg0, arg6, arg4, arg7);
+														GlRaster.method1187(arg0, arg6, arg4, arg7);
 													} else {
 														SoftwareRaster.method2498(local123, local114, local123 + local30.anInt445, local114 - -local30.anInt459);
 														for (cardMemory = 0; cardMemory < memory; cardMemory++) {
@@ -705,9 +705,9 @@ public final class Static87 {
 													GlRenderer.setFogEnabled(false);
 													Static229.method3935(Preferences.brightness);
 													if (Static263.aBoolean299) {
-														Static46.method1177();
+														GlRaster.method1177();
 														GlRenderer.clearDepthBuffer();
-														Static46.method1187(arg0, arg6, arg4, arg7);
+														GlRaster.method1187(arg0, arg6, arg4, arg7);
 														Static263.aBoolean299 = false;
 													}
 													if (local30.aBoolean34) {
@@ -807,8 +807,8 @@ public final class Static87 {
 													cardMemory = arg4 - local270;
 												}
 												if (GlRenderer.enabled) {
-													Static46.method1186(cardMemory, local556, local270, local276, 16777120);
-													Static46.method1179(cardMemory, local556, local270, local276, 0);
+													GlRaster.method1186(cardMemory, local556, local270, local276, 16777120);
+													GlRaster.method1179(cardMemory, local556, local270, local276, 0);
 												} else {
 													SoftwareRaster.fillRect(cardMemory, local556, local270, local276, 16777120);
 													SoftwareRaster.drawRect(cardMemory, local556, local270, local276, 0);
@@ -841,12 +841,12 @@ public final class Static87 {
 												}
 												if (local30.anInt490 == 1) {
 													if (GlRenderer.enabled) {
-														Static46.method1185(local123, local276, local468, memory, local30.color);
+														GlRaster.method1185(local123, local276, local468, memory, local30.color);
 													} else {
 														SoftwareRaster.method2500(local123, local276, local468, memory, local30.color);
 													}
 												} else if (GlRenderer.enabled) {
-													Static46.method1181(local123, local276, local468, memory, local30.color, local30.anInt490);
+													GlRaster.method1181(local123, local276, local468, memory, local30.color, local30.anInt490);
 												} else {
 													SoftwareRaster.method2494(local123, local276, local468, memory, local30.color, local30.anInt490);
 												}

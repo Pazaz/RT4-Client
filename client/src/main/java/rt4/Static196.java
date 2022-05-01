@@ -24,14 +24,14 @@ public final class Static196 {
 		} else {
 			local14 = 4;
 		}
-		Static163.aByteArrayArrayArray11 = new byte[local14][104][104];
+		SceneGraph.tileShapes = new byte[local14][104][104];
 		Static128.anIntArray293 = new int[104];
 		Static60.anIntArrayArrayArray6 = new int[local14][105][105];
 		Static118.aByteArrayArrayArray9 = new byte[local14][105][105];
-		Static240.aByteArrayArrayArray14 = new byte[local14][104][104];
+		SceneGraph.tileOverlays = new byte[local14][104][104];
 		Static279.anIntArray568 = new int[104];
-		Static4.aByteArrayArrayArray1 = new byte[local14][104][104];
-		Static253.aByteArrayArrayArray16 = new byte[local14][104][104];
+		SceneGraph.tileAngles = new byte[local14][104][104];
+		SceneGraph.tileUnderlays = new byte[local14][104][104];
 	}
 
 }

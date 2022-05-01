@@ -96,4 +96,14 @@ public class ObjTypeList {
             method3302();
         }
     }
+
+    @OriginalMember(owner = "client!rc", name = "a", descriptor = "(Z)V")
+    public static void clearModels() {
+        models.clear();
+    }
+
+    @OriginalMember(owner = "client!wa", name = "e", descriptor = "(B)V")
+	public static void clearSprites() {
+		objectSpriteCache.clear();
+	}
 }

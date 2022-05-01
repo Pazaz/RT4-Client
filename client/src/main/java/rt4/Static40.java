@@ -76,12 +76,7 @@ public final class Static40 {
 		Static184.cameraYaw = (int) ((double) Static84.aFloat10 * 325.949D) & 0x7FF;
 	}
 
-	@OriginalMember(owner = "client!da", name = "a", descriptor = "(ILclient!ve;Z)Lclient!ok;")
-	public static IndexedSprite loadIndexedSpriteAutoDetect(@OriginalArg(0) int arg0, @OriginalArg(1) Js5 arg1) {
-		return SpriteLoader.decode(arg1, arg0) ? Static276.method4614() : null;
-	}
-
-	@OriginalMember(owner = "client!da", name = "a", descriptor = "(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;")
+    @OriginalMember(owner = "client!da", name = "a", descriptor = "(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;")
 	public static String method1014(@OriginalArg(0) String arg0, @OriginalArg(1) String arg1, @OriginalArg(3) String arg2) {
 		for (@Pc(5) int local5 = arg2.indexOf(arg0); local5 != -1; local5 = arg2.indexOf(arg0, local5 + arg1.length())) {
 			arg2 = arg2.substring(0, local5) + arg1 + arg2.substring(arg0.length() + local5);

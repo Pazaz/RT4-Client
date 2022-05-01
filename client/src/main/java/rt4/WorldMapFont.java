@@ -17,6 +17,7 @@ public final class WorldMapFont {
 
 	@OriginalMember(owner = "client!fd", name = "d", descriptor = "Ljava/lang/String;")
 	public static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"£$%^&*()-_=+[{]};:'@#~,<.>/?\\| " + String.valueOf('Ä') + 'Ë' + 'Ï' + 'Ö' + 'Ü' + 'ä' + 'ë' + 'ï' + 'ö' + 'ü' + 'ÿ' + 'ß' + 'Á' + 'À' + 'É' + 'È' + 'Í' + 'Ì' + 'Ó' + 'Ò' + 'Ú' + 'Ù' + 'á' + 'à' + 'é' + 'è' + 'í' + 'ì' + 'ó' + 'ò' + 'ú' + 'ù' + 'Â' + 'Ê' + 'Î' + 'Ô' + 'Û' + 'â' + 'ê' + 'î' + 'ô' + 'û' + 'Æ' + 'æ';
+
     @OriginalMember(owner = "client!fd", name = "e", descriptor = "I")
     public static final int ALPHABET_SIZE = ALPHABET.length();
 
@@ -24,10 +25,10 @@ public final class WorldMapFont {
 	private static final int[] CHAR_INDEXES = new int[256];
 
 	@OriginalMember(owner = "client!fd", name = "c", descriptor = "I")
-	private int dataIndex = 0;
+	private int dataIndex;
 
 	@OriginalMember(owner = "client!fd", name = "b", descriptor = "Z")
-	private boolean grayscale = false;
+	private boolean grayscale;
 
 	@OriginalMember(owner = "client!fd", name = "a", descriptor = "[B")
 	private byte[] data = new byte[100000];
@@ -43,51 +44,51 @@ public final class WorldMapFont {
 	}
 
 	@OriginalMember(owner = "client!fd", name = "<init>", descriptor = "(IZLjava/awt/Component;)V")
-	public WorldMapFont(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) Component arg2) {
+	public WorldMapFont(@OriginalArg(0) int size, @OriginalArg(1) boolean arg1, @OriginalArg(2) Component component) {
 		this.dataIndex = ALPHABET_SIZE * 9;
 		this.grayscale = false;
-		@Pc(30) Font local30 = new Font("Helvetica", 1, arg0);
-		@Pc(34) FontMetrics local34 = arg2.getFontMetrics(local30);
-		@Pc(36) int local36;
-		for (local36 = 0; local36 < ALPHABET_SIZE; local36++) {
-			this.preRenderGlyph(local30, local34, ALPHABET.charAt(local36), local36, false);
+		@Pc(30) Font font = new Font("Helvetica", Font.BOLD, size);
+		@Pc(34) FontMetrics boldMetrics = component.getFontMetrics(font);
+		@Pc(36) int i;
+		for (i = 0; i < ALPHABET_SIZE; i++) {
+			this.preRenderGlyph(font, boldMetrics, ALPHABET.charAt(i), i, false);
 		}
 		if (this.grayscale) {
 			this.dataIndex = ALPHABET_SIZE * 9;
 			this.grayscale = false;
-			local30 = new Font("Helvetica", 0, arg0);
-			local34 = arg2.getFontMetrics(local30);
-			for (local36 = 0; local36 < ALPHABET_SIZE; local36++) {
-				this.preRenderGlyph(local30, local34, ALPHABET.charAt(local36), local36, false);
+			font = new Font("Helvetica", Font.PLAIN, size);
+			boldMetrics = component.getFontMetrics(font);
+			for (i = 0; i < ALPHABET_SIZE; i++) {
+				this.preRenderGlyph(font, boldMetrics, ALPHABET.charAt(i), i, false);
 			}
 			if (!this.grayscale) {
 				this.dataIndex = ALPHABET_SIZE * 9;
 				this.grayscale = false;
-				for (local36 = 0; local36 < ALPHABET_SIZE; local36++) {
-					this.preRenderGlyph(local30, local34, ALPHABET.charAt(local36), local36, true);
+				for (i = 0; i < ALPHABET_SIZE; i++) {
+					this.preRenderGlyph(font, boldMetrics, ALPHABET.charAt(i), i, true);
 				}
 			}
 		}
-		@Pc(121) byte[] local121 = new byte[this.dataIndex];
-		for (@Pc(123) int local123 = 0; local123 < this.dataIndex; local123++) {
-			local121[local123] = this.data[local123];
+		@Pc(121) byte[] data = new byte[this.dataIndex];
+		for (@Pc(123) int j = 0; j < this.dataIndex; j++) {
+			data[j] = this.data[j];
 		}
-		this.data = local121;
+		this.data = data;
 	}
 
 	@OriginalMember(owner = "client!fd", name = "a", descriptor = "(Lclient!na;IIIZ)V")
-	private void renderString(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4) {
-		if (this.grayscale || arg3 == 0) {
-			arg4 = false;
+	private void renderString(@OriginalArg(0) JagString s, @OriginalArg(1) int x, @OriginalArg(2) int y, @OriginalArg(3) int color, @OriginalArg(4) boolean shadow) {
+		if (this.grayscale || color == 0) {
+			shadow = false;
 		}
-		for (@Pc(8) int local8 = 0; local8 < arg0.length(); local8++) {
-			@Pc(20) int local20 = CHAR_INDEXES[arg0.charAt(local8)];
-			if (arg4) {
-				this.renderGlyph(local20, arg1 + 1, arg2, 1, this.data);
-				this.renderGlyph(local20, arg1, arg2 + 1, 1, this.data);
+		for (@Pc(8) int i = 0; i < s.length(); i++) {
+			@Pc(20) int index = CHAR_INDEXES[s.charAt(i)];
+			if (shadow) {
+				this.renderGlyph(index, x + 1, y, 1, this.data);
+				this.renderGlyph(index, x, y + 1, 1, this.data);
 			}
-			this.renderGlyph(local20, arg1, arg2, arg3, this.data);
-			arg1 += this.data[local20 + 7];
+			this.renderGlyph(index, x, y, color, this.data);
+			x += this.data[index + 7];
 		}
 	}
 
@@ -97,67 +98,67 @@ public final class WorldMapFont {
 	}
 
 	@OriginalMember(owner = "client!fd", name = "a", descriptor = "([I[BIIIIIII)V")
-	private void renderGlyphGrayscale(@OriginalArg(0) int[] arg0, @OriginalArg(1) byte[] arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) int arg8) {
-		for (@Pc(2) int local2 = -arg6; local2 < 0; local2++) {
-			for (@Pc(7) int local7 = -arg5; local7 < 0; local7++) {
-				@Pc(16) int local16 = arg1[arg3++] & 0xFF;
-				if (local16 <= 30) {
-					arg4++;
-				} else if (local16 >= 230) {
-					arg0[arg4++] = arg2;
+	private void renderGlyphGrayscale(@OriginalArg(0) int[] dest, @OriginalArg(1) byte[] src, @OriginalArg(2) int color, @OriginalArg(3) int srcIndex, @OriginalArg(4) int destIndex, @OriginalArg(5) int w, @OriginalArg(6) int h, @OriginalArg(7) int destStride, @OriginalArg(8) int srcStride) {
+		for (@Pc(2) int y = -h; y < 0; y++) {
+			for (@Pc(7) int x = -w; x < 0; x++) {
+				@Pc(16) int intensity = src[srcIndex++] & 0xFF;
+				if (intensity <= 30) {
+					destIndex++;
+				} else if (intensity >= 230) {
+					dest[destIndex++] = color;
 				} else {
-					@Pc(32) int local32 = arg0[arg4];
-					arg0[arg4++] = ((arg2 & 0xFF00FF) * local16 + (local32 & 0xFF00FF) * (256 - local16) & 0xFF00FF00) + ((arg2 & 0xFF00) * local16 + (local32 & 0xFF00) * (256 - local16) & 0xFF0000) >> 8;
+					@Pc(32) int backgroundColor = dest[destIndex];
+					dest[destIndex++] = ((color & 0xFF00FF) * intensity + (backgroundColor & 0xFF00FF) * (256 - intensity) & 0xFF00FF00) + ((color & 0xFF00) * intensity + (backgroundColor & 0xFF00) * (256 - intensity) & 0xFF0000) >> 8;
 				}
 			}
-			arg4 += arg7;
-			arg3 += arg8;
+			destIndex += destStride;
+			srcIndex += srcStride;
 		}
 	}
 
 	@OriginalMember(owner = "client!fd", name = "a", descriptor = "(IIII[B)V")
-	private void renderGlyph(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) byte[] arg4) {
-		@Pc(7) int local7 = arg1 + arg4[arg0 + 5];
-		@Pc(15) int local15 = arg2 - arg4[arg0 + 6];
-		@Pc(21) int local21 = arg4[arg0 + 3];
-		@Pc(27) int local27 = arg4[arg0 + 4];
-		@Pc(47) int local47 = arg4[arg0] * 16384 + arg4[arg0 + 1] * 128 + arg4[arg0 + 2];
-		@Pc(53) int local53 = local7 + local15 * SoftwareRaster.width;
-		@Pc(57) int local57 = SoftwareRaster.width - local21;
-		@Pc(59) int local59 = 0;
+	private void renderGlyph(@OriginalArg(0) int index, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) byte[] src) {
+		@Pc(7) int local7 = arg1 + src[index + 5];
+		@Pc(15) int local15 = arg2 - src[index + 6];
+		@Pc(21) int width = src[index + 3];
+		@Pc(27) int height = src[index + 4];
+		@Pc(47) int srcIndex = src[index] * 16384 + src[index + 1] * 128 + src[index + 2];
+		@Pc(53) int destIndex = local7 + local15 * SoftwareRaster.width;
+		@Pc(57) int destStride = SoftwareRaster.width - width;
+		@Pc(59) int srcStride = 0;
 		@Pc(66) int local66;
 		if (local15 < SoftwareRaster.clipTop) {
 			local66 = SoftwareRaster.clipTop - local15;
-			local27 -= local66;
+			height -= local66;
 			local15 = SoftwareRaster.clipTop;
-			local47 += local66 * local21;
-			local53 += local66 * SoftwareRaster.width;
+			srcIndex += local66 * width;
+			destIndex += local66 * SoftwareRaster.width;
 		}
-		if (local15 + local27 >= SoftwareRaster.clipBottom) {
-			local27 -= local15 + local27 + 1 - SoftwareRaster.clipBottom;
+		if (local15 + height >= SoftwareRaster.clipBottom) {
+			height -= local15 + height + 1 - SoftwareRaster.clipBottom;
 		}
 		if (local7 < SoftwareRaster.clipLeft) {
 			local66 = SoftwareRaster.clipLeft - local7;
-			local21 -= local66;
+			width -= local66;
 			local7 = SoftwareRaster.clipLeft;
-			local47 += local66;
-			local53 += local66;
-			local59 = local66;
-			local57 += local66;
+			srcIndex += local66;
+			destIndex += local66;
+			srcStride = local66;
+			destStride += local66;
 		}
-		if (local7 + local21 >= SoftwareRaster.clipRight) {
-			local66 = local7 + local21 + 1 - SoftwareRaster.clipRight;
-			local21 -= local66;
-			local59 += local66;
-			local57 += local66;
+		if (local7 + width >= SoftwareRaster.clipRight) {
+			local66 = local7 + width + 1 - SoftwareRaster.clipRight;
+			width -= local66;
+			srcStride += local66;
+			destStride += local66;
 		}
-		if (local21 <= 0 || local27 <= 0) {
+		if (width <= 0 || height <= 0) {
 			return;
 		}
 		if (this.grayscale) {
-			this.renderGlyphGrayscale(SoftwareRaster.pixels, arg4, arg3, local47, local53, local21, local27, local57, local59);
+			this.renderGlyphGrayscale(SoftwareRaster.pixels, src, arg3, srcIndex, destIndex, width, height, destStride, srcStride);
 		} else {
-			this.renderGlyphMono(SoftwareRaster.pixels, arg4, arg3, local47, local53, local21, local27, local57, local59);
+			this.renderGlyphMono(SoftwareRaster.pixels, src, arg3, srcIndex, destIndex, width, height, destStride, srcStride);
 		}
 	}
 

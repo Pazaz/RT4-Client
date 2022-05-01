@@ -147,13 +147,13 @@ public final class Static142 {
 						local639 = local508.width * local17.hitpointsBar / 255;
 						local642 = local508.height;
 						if (GlRenderer.enabled) {
-							Static46.method1183(local161, local359, local161 + local639, local359 + local642);
+							GlRaster.method1183(local161, local359, local161 + local639, local359 + local642);
 						} else {
 							SoftwareRaster.method2498(local161, local359, local161 + local639, local642 + local359);
 						}
 						local512.method1423(local161, local359);
 						if (GlRenderer.enabled) {
-							Static46.method1187(arg2, arg0, arg1 + arg2, arg0 - -arg4);
+							GlRaster.method1187(arg2, arg0, arg1 + arg2, arg0 - -arg4);
 						} else {
 							SoftwareRaster.method2496(arg2, arg0, arg1 + arg2, arg4 + arg0);
 						}
@@ -269,13 +269,13 @@ public final class Static142 {
 				if (Static191.anIntArray391[local5] == 4) {
 					local642 = (150 - Static191.anIntArray384[local5]) * (Fonts.b12Full.getStringWidth(local962) + 100) / 150;
 					if (GlRenderer.enabled) {
-						Static46.method1183(Static65.anInt1951 + arg2 - 50, arg0, Static65.anInt1951 + arg2 + 50, arg4 + arg0);
+						GlRaster.method1183(Static65.anInt1951 + arg2 - 50, arg0, Static65.anInt1951 + arg2 + 50, arg4 + arg0);
 					} else {
 						SoftwareRaster.method2498(arg2 + Static65.anInt1951 - 50, arg0, Static65.anInt1951 + arg2 + 50, arg4 + arg0);
 					}
 					Fonts.b12Full.method2857(local962, arg2 + Static65.anInt1951 + 50 - local642, arg0 + Static16.anInt548, local639, 0);
 					if (GlRenderer.enabled) {
-						Static46.method1187(arg2, arg0, arg1 + arg2, arg4 + arg0);
+						GlRaster.method1187(arg2, arg0, arg1 + arg2, arg4 + arg0);
 					} else {
 						SoftwareRaster.method2496(arg2, arg0, arg2 + arg1, arg0 + arg4);
 					}
@@ -284,7 +284,7 @@ public final class Static142 {
 					@Pc(1372) int local1372 = 0;
 					local642 = 150 - Static191.anIntArray384[local5];
 					if (GlRenderer.enabled) {
-						Static46.method1183(arg2, Static16.anInt548 + arg0 - Fonts.b12Full.lineHeight - 1, arg1 + arg2, arg0 + Static16.anInt548 + 5);
+						GlRaster.method1183(arg2, Static16.anInt548 + arg0 - Fonts.b12Full.lineHeight - 1, arg1 + arg2, arg0 + Static16.anInt548 + 5);
 					} else {
 						SoftwareRaster.method2498(arg2, Static16.anInt548 + arg0 - Fonts.b12Full.lineHeight - 1, arg2 + arg1, Static16.anInt548 + arg0 + 5);
 					}
@@ -295,7 +295,7 @@ public final class Static142 {
 					}
 					Fonts.b12Full.renderCenter(local962, Static65.anInt1951 + arg2, local1372 + arg0 + Static16.anInt548, local639, 0);
 					if (GlRenderer.enabled) {
-						Static46.method1187(arg2, arg0, arg2 + arg1, arg0 + arg4);
+						GlRaster.method1187(arg2, arg0, arg2 + arg1, arg0 + arg4);
 					} else {
 						SoftwareRaster.method2496(arg2, arg0, arg2 + arg1, arg0 + arg4);
 					}

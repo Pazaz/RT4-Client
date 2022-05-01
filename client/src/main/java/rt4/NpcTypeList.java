@@ -8,7 +8,7 @@ public class NpcTypeList {
     @OriginalMember(owner = "client!he", name = "V", descriptor = "Lclient!n;")
     public static final SoftLruHashTable types = new SoftLruHashTable(64);
     @OriginalMember(owner = "client!jl", name = "x", descriptor = "Lclient!n;")
-    public static final SoftLruHashTable aClass99_18 = new SoftLruHashTable(50);
+    public static final SoftLruHashTable models = new SoftLruHashTable(50);
     @OriginalMember(owner = "client!vf", name = "k", descriptor = "Lclient!n;")
     public static final SoftLruHashTable headModels = new SoftLruHashTable(5);
     @OriginalMember(owner = "client!gm", name = "ib", descriptor = "Lclient!ve;")
@@ -42,21 +42,21 @@ public class NpcTypeList {
     @OriginalMember(owner = "client!t", name = "b", descriptor = "(B)V")
     public static void method4001() {
         types.method3103();
-        aClass99_18.method3103();
+        models.method3103();
         headModels.method3103();
     }
 
     @OriginalMember(owner = "client!qi", name = "e", descriptor = "(B)V")
     public static void method3673() {
         types.clear();
-        aClass99_18.clear();
+        models.clear();
         headModels.clear();
     }
 
     @OriginalMember(owner = "client!ra", name = "c", descriptor = "(BI)V")
     public static void clean() {
         types.clean(5);
-        aClass99_18.clean(5);
+        models.clean(5);
         headModels.clean(5);
     }
 
@@ -68,5 +68,15 @@ public class NpcTypeList {
     @OriginalMember(owner = "client!oe", name = "a", descriptor = "(IZ)I")
     public static int method3322(@OriginalArg(0) int arg0) {
         return arg0 & 0x7F;
+    }
+
+    @OriginalMember(owner = "client!wj", name = "b", descriptor = "(I)V")
+    public static void clearModels() {
+        models.clear();
+    }
+
+    @OriginalMember(owner = "client!ba", name = "e", descriptor = "(I)V")
+    public static void clearHeadModels() {
+        headModels.clear();
     }
 }

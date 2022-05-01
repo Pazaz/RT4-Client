@@ -87,10 +87,10 @@ public class GlSprite extends Sprite {
 		local11.glBindTexture(GL2.GL_TEXTURE_2D, arg2.textureId);
 		local11.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_REPLACE);
 		local11.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_SRC0_RGB, GL2.GL_PREVIOUS);
-		@Pc(47) float local47 = (float) (arg0 - Static46.clipX) / (float) arg2.powerOfTwoWidth;
-		@Pc(56) float local56 = (float) (arg1 - Static46.clipY) / (float) arg2.powerOfTwoHeight;
-		@Pc(68) float local68 = (float) (arg0 + this.width - Static46.clipX) / (float) arg2.powerOfTwoWidth;
-		@Pc(80) float local80 = (float) (arg1 + this.height - Static46.clipY) / (float) arg2.powerOfTwoHeight;
+		@Pc(47) float local47 = (float) (arg0 - GlRaster.clipX) / (float) arg2.powerOfTwoWidth;
+		@Pc(56) float local56 = (float) (arg1 - GlRaster.clipY) / (float) arg2.powerOfTwoHeight;
+		@Pc(68) float local68 = (float) (arg0 + this.width - GlRaster.clipX) / (float) arg2.powerOfTwoWidth;
+		@Pc(80) float local80 = (float) (arg1 + this.height - GlRaster.clipY) / (float) arg2.powerOfTwoHeight;
 		@Pc(85) int local85 = arg0 + this.anInt1863;
 		@Pc(90) int local90 = arg1 + this.anInt1861;
 		local11.glBegin(GL2.GL_TRIANGLE_FAN);

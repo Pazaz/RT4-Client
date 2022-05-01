@@ -302,9 +302,9 @@ public final class MidiPcmStream extends PcmStream {
 		local133.anInt3782 = 0;
 		local133.anInt3763 = 0;
 		if (this.anIntArray509[arg1] == 0) {
-			local133.aClass3_Sub3_Sub1_3 = Static284.method399(local126, this.method4439(local133), this.method4449(local133), this.method4437(local133));
+			local133.aClass3_Sub3_Sub1_3 = SoundPcmStream.method399(local126, this.method4439(local133), this.method4449(local133), this.method4437(local133));
 		} else {
-			local133.aClass3_Sub3_Sub1_3 = Static284.method399(local126, this.method4439(local133), 0, this.method4437(local133));
+			local133.aClass3_Sub3_Sub1_3 = SoundPcmStream.method399(local126, this.method4439(local133), 0, this.method4437(local133));
 			this.method4442(local133, local118.aShortArray36[arg2] < 0);
 		}
 		if (local118.aShortArray36[arg2] < 0) {

@@ -27,7 +27,7 @@ public final class Static169 {
 		}
 		if (GlRenderer.enabled && GameShell.openWindowJavaScript) {
 			try {
-				Static287.method1758(GameShell.signLink.applet, "openjs", new Object[] { arg0.method3127(GameShell.instance.getCodeBase()).toString() });
+				BrowserControl.call(GameShell.signLink.applet, "openjs", new Object[] { arg0.method3127(GameShell.instance.getCodeBase()).toString() });
 				return;
 			} catch (@Pc(48) Throwable local48) {
 			}

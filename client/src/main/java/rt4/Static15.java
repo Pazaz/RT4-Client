@@ -30,6 +30,6 @@ public final class Static15 {
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(II)I")
 	public static int method492(@OriginalArg(1) int arg0) {
-		return arg0 == 16711935 ? -1 : Static105.method2253(arg0);
+		return arg0 == 16711935 ? -1 : ColorUtils.rgbToHsl(arg0);
 	}
 }

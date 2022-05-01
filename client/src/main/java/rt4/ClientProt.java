@@ -1001,7 +1001,7 @@ public class ClientProt {
         for (i = 0; i < 4; i++) {
             for (chunkX = 0; chunkX < 104; chunkX++) {
                 for (chunkZ = 0; chunkZ < 104; chunkZ++) {
-                    Static12.tileSettings[i][chunkX][chunkZ] = 0;
+                    SceneGraph.tileFlags[i][chunkX][chunkZ] = 0;
                 }
             }
         }
@@ -1089,7 +1089,7 @@ public class ClientProt {
         if (GlRenderer.enabled) {
             for (chunkX = 0; chunkX < 13; chunkX++) {
                 for (chunkZ = 0; chunkZ < 13; chunkZ++) {
-                    Static242.shadows[chunkX][chunkZ].method4676(SceneGraph.activeTileHeightMap[0], chunkX * 8, chunkZ * 8);
+                    Static242.shadows[chunkX][chunkZ].method4676(SceneGraph.tileHeights[0], chunkX * 8, chunkZ * 8);
                 }
             }
         }

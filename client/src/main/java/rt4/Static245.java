@@ -43,9 +43,9 @@ public final class Static245 {
 			for (local103 = 0; local103 < 64; local103++) {
 				for (local108 = 0; local108 < 64; local108++) {
 					if (arg6 == local17 && arg8 <= local103 && arg8 + 8 > local103 && arg7 <= local108 && local108 < arg7 + 8) {
-						Static278.method4651(0, 0, arg9, local96, Static202.method3659(arg0, local103 & 0x7, local108 & 0x7) + arg4, Static214.method4360(arg0, local108 & 0x7, local103 & 0x7) + arg1, arg0, arg2);
+						Static278.readTile(0, 0, arg9, local96, Static202.method3659(arg0, local103 & 0x7, local108 & 0x7) + arg4, Static214.method4360(arg0, local108 & 0x7, local103 & 0x7) + arg1, arg0, arg2);
 					} else {
-						Static278.method4651(0, 0, arg9, local96, -1, -1, 0, 0);
+						Static278.readTile(0, 0, arg9, local96, -1, -1, 0, 0);
 					}
 				}
 			}
@@ -159,8 +159,8 @@ public final class Static245 {
 						local417 = local517.anInt2240 >> 7;
 						local255 = local517.anInt2245 >> 7;
 						if (local417 >= 0 && local255 >= 0 && local417 < 104 && local255 < 104) {
-							local517.aBoolean125 = (Static12.tileSettings[1][local417][local255] & 0x2) != 0;
-							local517.anInt2235 = SceneGraph.activeTileHeightMap[local517.anInt2241][local417][local255] - local517.anInt2235;
+							local517.aBoolean125 = (SceneGraph.tileFlags[1][local417][local255] & 0x2) != 0;
+							local517.anInt2235 = SceneGraph.tileHeights[local517.anInt2241][local417][local255] - local517.anInt2235;
 							Static120.method2389(local517);
 						}
 					}

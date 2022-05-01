@@ -282,14 +282,14 @@ public abstract class Font extends SecondaryNode {
 					@Pc(323) int local323 = this.glyphWidths[local22];
 					if (strikethroughColor != -1) {
 						if (GlRenderer.enabled) {
-							Static46.method1174(arg1, local4 + (int) ((double) this.lineHeight * 0.7D), local323, strikethroughColor);
+							GlRaster.method1174(arg1, local4 + (int) ((double) this.lineHeight * 0.7D), local323, strikethroughColor);
 						} else {
 							SoftwareRaster.drawHorizontalLine(arg1, local4 + (int) ((double) this.lineHeight * 0.7D), local323, strikethroughColor);
 						}
 					}
 					if (underlineColor != -1) {
 						if (GlRenderer.enabled) {
-							Static46.method1174(arg1, local4 + this.lineHeight + 1, local323, underlineColor);
+							GlRaster.method1174(arg1, local4 + this.lineHeight + 1, local323, underlineColor);
 						} else {
 							SoftwareRaster.drawHorizontalLine(arg1, local4 + this.lineHeight + 1, local323, underlineColor);
 						}
@@ -974,14 +974,14 @@ public abstract class Font extends SecondaryNode {
 					@Pc(387) int local387 = this.glyphWidths[local24];
 					if (strikethroughColor != -1) {
 						if (GlRenderer.enabled) {
-							Static46.method1174(arg1, local4 + (int) ((double) this.lineHeight * 0.7D), local387, strikethroughColor);
+							GlRaster.method1174(arg1, local4 + (int) ((double) this.lineHeight * 0.7D), local387, strikethroughColor);
 						} else {
 							SoftwareRaster.drawHorizontalLine(arg1, local4 + (int) ((double) this.lineHeight * 0.7D), local387, strikethroughColor);
 						}
 					}
 					if (underlineColor != -1) {
 						if (GlRenderer.enabled) {
-							Static46.method1174(arg1, local4 + this.lineHeight, local387, underlineColor);
+							GlRaster.method1174(arg1, local4 + this.lineHeight, local387, underlineColor);
 						} else {
 							SoftwareRaster.drawHorizontalLine(arg1, local4 + this.lineHeight, local387, underlineColor);
 						}

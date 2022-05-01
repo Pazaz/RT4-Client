@@ -184,7 +184,12 @@ public class Playground extends GameShell {
             Rasteriser.setBounds(GameShell.canvasWidth, GameShell.canvasHeight);
             Rasteriser.prepare();
             Rasteriser.prepareOffsets();
-            loadNpc(exportCounter);
+            try {
+                loadNpc(exportCounter);
+            } catch (Exception ex) {
+                npc = null;
+                npcType = null;
+            }
             state++;
         }
     }
@@ -233,10 +238,10 @@ public class Playground extends GameShell {
 
     private void exportGlImage(String filename) {
         GL2 gl = GLContext.getCurrentGL().getGL2();
-        ByteBuffer buffer = GLBuffers.newDirectByteBuffer(GameShell.canvasWidth * GameShell.canvasHeight * 3);
+        ByteBuffer buffer = GLBuffers.newDirectByteBuffer(GameShell.canvasWidth * GameShell.canvasHeight * 4);
 
         gl.glReadBuffer(GL2.GL_BACK);
-        gl.glReadPixels(0, 0, GameShell.canvasWidth, GameShell.canvasHeight, GL2.GL_BGR, GL2.GL_UNSIGNED_BYTE, buffer);
+        gl.glReadPixels(0, 0, GameShell.canvasWidth, GameShell.canvasHeight, GL2.GL_BGRA, GL2.GL_UNSIGNED_BYTE, buffer);
 
         int[] pixels = new int[GameShell.canvasWidth * GameShell.canvasHeight];
         for (int y = GameShell.canvasHeight - 1; y > 0; --y) {
@@ -244,6 +249,7 @@ public class Playground extends GameShell {
                 int r = buffer.get() & 0xFF;
                 int g = buffer.get() & 0xFF;
                 int b = buffer.get() & 0xFF;
+                buffer.get();
                 int a = 0xFF;
                 if (r == 0x33 && g == 0x33 && b == 0x33) {
                     a = 0x7F;
@@ -296,7 +302,7 @@ public class Playground extends GameShell {
         CHATHEAD.xan2d = 40;
         CHATHEAD.yan2d = 1882;*/
 
-    int exportCounter = 0;
+    int exportCounter = 8105;
     int orientation = 378;
     int x = 112;
     int z = 180;
@@ -434,7 +440,12 @@ public class Playground extends GameShell {
 
         if (state == 9) {
             if (lastExportCounter != exportCounter) {
-                loadNpc(exportCounter);
+                try {
+                    loadNpc(exportCounter);
+                } catch (Exception ex) {
+                    npc = null;
+                    npcType = null;
+                }
             }
         }
     }
@@ -506,43 +517,45 @@ public class Playground extends GameShell {
 
     @Override
     protected void mainRedraw() {
-        if (state == 9) {
-            if (!GlRenderer.enabled) {
-                SoftwareRaster.clear(0x7F666666);
-            } else {
-                GlRenderer.clearColorAndDepthBuffers(0x333333);
-            }
-
-            if (perspectiveChanged) {
-                float yaw1 = yaw * 360.0F / 6.2831855F;
-                float pitch1 = pitch * 360.0F / 6.2831855F;
-                GlRenderer.method4171(0, 0, GameShell.canvasWidth, GameShell.canvasHeight, GameShell.canvasWidth / 2, GameShell.canvasHeight / 2, yaw1, pitch1, zoom2d, zoom2d);
-                perspectiveChanged = false;
-            }
-
-            if (npc != null) {
-                SeqType seqType = SeqTypeList.get(9804);
-                Model head = npcType.getHeadModel(seqType, 0, 0, 0);
-                if (renderHead && head != null) {
-                    head.render(orientation, 25079, 60547, -44308, 48222, x, z, y, 0L, 0, null);
+        try {
+            if (state == 9) {
+                if (!GlRenderer.enabled) {
+                    SoftwareRaster.clear(0x7F666666);
                 } else {
-                    npc.render(orientation, 25079, 60547, -44308, 48222, x, z, y, 0L, 0, null);
+                    GlRenderer.clearColorAndDepthBuffers(0x333333);
+                }
+
+                if (perspectiveChanged) {
+                    float yaw1 = yaw * 360.0F / 6.2831855F;
+                    float pitch1 = pitch * 360.0F / 6.2831855F;
+                    GlRenderer.method4171(0, 0, GameShell.canvasWidth, GameShell.canvasHeight, GameShell.canvasWidth / 2, GameShell.canvasHeight / 2, yaw1, pitch1, zoom2d, zoom2d);
+                    perspectiveChanged = false;
+                }
+
+                if (npc != null) {
+                    SeqType seqType = SeqTypeList.get(9804);
+                    Model head = npcType.getHeadModel(seqType, 0, 0, 0);
+                    if (renderHead && head != null) {
+                        head.render(orientation, 25079, 60547, -44308, 48222, x, z, y, 0L, 0, null);
+                    } else {
+                        npc.render(orientation, 25079, 60547, -44308, 48222, x, z, y, 0L, 0, null);
+                    }
+                }
+
+                if (!GlRenderer.enabled) {
+                    SoftwareRaster.frameBuffer.draw(GameShell.canvas.getGraphics());
+                } else {
+                    GlRenderer.draw();
+                    GlRenderer.swapBuffers();
+                }
+
+                if (lastExportCounter != exportCounter) {
+    //                exportGlImage("dump/" + exportCounter);
+                    lastExportCounter = exportCounter;
+    //                exportCounter++;
                 }
             }
-
-            if (!GlRenderer.enabled) {
-                SoftwareRaster.frameBuffer.draw(GameShell.canvas.getGraphics());
-            } else {
-                GlRenderer.draw();
-                GlRenderer.swapBuffers();
-            }
-
-            if (lastExportCounter != exportCounter) {
-//                exportGlImage("dump/" + exportCounter);
-                lastExportCounter = exportCounter;
-//                exportCounter++;
-            }
-        }
+        } catch (Exception ex) {}
     }
 
     @Override

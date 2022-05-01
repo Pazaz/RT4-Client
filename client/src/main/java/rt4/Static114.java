@@ -37,8 +37,8 @@ public final class Static114 {
 		@Pc(24) int local24 = Fonts.p12Full.method2856(arg1, 250);
 		@Pc(31) int local31 = Fonts.p12Full.getParagraphLineCount(arg1, 250) * 13;
 		if (GlRenderer.enabled) {
-			Static46.method1186(6, 6, local24 + 4 + 4, local31 + 8, 0);
-			Static46.method1179(6, 6, local24 + 4 + 4, local31 + 4 + 4, 16777215);
+			GlRaster.method1186(6, 6, local24 + 4 + 4, local31 + 8, 0);
+			GlRaster.method1179(6, 6, local24 + 4 + 4, local31 + 4 + 4, 16777215);
 		} else {
 			SoftwareRaster.fillRect(6, 6, local24 + 4 + 4, local31 + 8, 0);
 			SoftwareRaster.drawRect(6, 6, local24 + 8, 4 + 4 + local31, 16777215);

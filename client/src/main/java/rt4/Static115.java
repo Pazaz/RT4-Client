@@ -30,27 +30,12 @@ public final class Static115 {
 			return null;
 		} else {
 			@Pc(18) int[] local18 = new int[arg0.length];
-			Static289.method2613(arg0, 0, local18, 0, arg0.length);
+			ArrayUtils.copy(arg0, 0, local18, 0, arg0.length);
 			return local18;
 		}
 	}
 
-	@OriginalMember(owner = "client!ja", name = "a", descriptor = "(IIII)I")
-	public static int method2309(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		@Pc(7) int local7 = arg1 / arg0;
-		@Pc(11) int local11 = arg2 / arg0;
-		@Pc(17) int local17 = arg2 & arg0 - 1;
-		@Pc(23) int local23 = arg0 - 1 & arg1;
-		@Pc(28) int local28 = Static24.method670(local7, local11);
-		@Pc(35) int local35 = Static24.method670(local7 + 1, local11);
-		@Pc(42) int local42 = Static24.method670(local7, local11 + 1);
-		@Pc(56) int local56 = Static24.method670(local7 + 1, local11 + 1);
-		@Pc(63) int local63 = Static170.method2569(local28, local35, local23, arg0);
-		@Pc(70) int local70 = Static170.method2569(local42, local56, local23, arg0);
-		return Static170.method2569(local63, local70, local17, arg0);
-	}
-
-	@OriginalMember(owner = "client!ja", name = "a", descriptor = "(IIIIB)V")
+    @OriginalMember(owner = "client!ja", name = "a", descriptor = "(IIIIB)V")
 	public static void method2310(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		if (Cross.type == 1) {
 			Sprites.crosses[Cross.milliseconds / 100].method1423(Cross.x - 8, Cross.y + -8);
@@ -94,9 +79,9 @@ public final class Static115 {
 					local115 = arg2 * 512 * local51 / (local86 * 334);
 					local122 = (arg0 - local115) / 2;
 					if (arg4) {
-						Static46.method1177();
-						Static46.method1186(arg3, arg1, local122, arg2, 0);
-						Static46.method1186(arg0 + arg3 - local122, arg1, local122, arg2, 0);
+						GlRaster.method1177();
+						GlRaster.method1186(arg3, arg1, local122, arg2, 0);
+						GlRaster.method1186(arg0 + arg3 - local122, arg1, local122, arg2, 0);
 					}
 					arg3 += local122;
 					arg0 -= local122 * 2;
@@ -109,9 +94,9 @@ public final class Static115 {
 					local115 = local86 * arg0 * 334 / (local51 * 512);
 					local122 = (arg2 - local115) / 2;
 					if (arg4) {
-						Static46.method1177();
-						Static46.method1186(arg3, arg1, arg0, local122, 0);
-						Static46.method1186(arg3, arg1 + arg2 - local122, arg0, local122, 0);
+						GlRaster.method1177();
+						GlRaster.method1186(arg3, arg1, arg0, local122, 0);
+						GlRaster.method1186(arg3, arg1 + arg2 - local122, arg0, local122, 0);
 					}
 					arg2 -= local122 * 2;
 					arg1 += local122;

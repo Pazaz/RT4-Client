@@ -227,7 +227,7 @@ public final class Loc extends Entity {
 
 	@OriginalMember(owner = "client!dc", name = "a", descriptor = "(ZI)Lclient!th;")
 	private Entity method1048(@OriginalArg(0) boolean arg0) {
-		@Pc(12) boolean local12 = Static107.surfaceTileHeightMap != SceneGraph.activeTileHeightMap;
+		@Pc(12) boolean local12 = SceneGraph.surfaceTileHeights != SceneGraph.tileHeights;
 		@Pc(19) LocType local19 = LocTypeList.get(this.anInt1299);
 		@Pc(22) int local22 = local19.anInt4430;
 		if (local19.multiLocs != null) {
@@ -279,15 +279,15 @@ public final class Loc extends Entity {
 		if (arg0 && !local256) {
 			return null;
 		}
-		@Pc(267) int[][] local267 = SceneGraph.activeTileHeightMap[this.anInt1303];
+		@Pc(267) int[][] local267 = SceneGraph.tileHeights[this.anInt1303];
 		@Pc(293) int local293 = local267[local178][local201] + local267[local185][local201] + local267[local185][local192] + local267[local178][local192] >> 2;
 		@Pc(302) int local302 = (local160 << 6) + (this.anInt1308 << 7);
 		@Pc(311) int local311 = (local157 << 6) + (this.anInt1300 << 7);
 		@Pc(314) int[][] local314 = null;
 		if (local12) {
-			local314 = Static107.surfaceTileHeightMap[0];
+			local314 = SceneGraph.surfaceTileHeights[0];
 		} else if (this.anInt1303 < 3) {
-			local314 = SceneGraph.activeTileHeightMap[this.anInt1303 + 1];
+			local314 = SceneGraph.tileHeights[this.anInt1303 + 1];
 		}
 		if (GlRenderer.enabled && local256) {
 			Static242.method4207(this.aClass36_Sub1_2, this.anInt1296, this.anInt1294, this.anInt1319);
@@ -308,7 +308,7 @@ public final class Loc extends Entity {
 			}
 			@Pc(429) int local429 = 0;
 			if (this.anInt1303 != 0) {
-				@Pc(439) int[][] local439 = SceneGraph.activeTileHeightMap[0];
+				@Pc(439) int[][] local439 = SceneGraph.tileHeights[0];
 				local429 = local293 - (local439[local178][local192] + local439[local185][local192] + local439[local185][local201] + local439[local178][local201] >> 2);
 			}
 			@Pc(471) SoftwareIndexedSprite local471 = local389.aClass36_Sub1_3;

@@ -46,7 +46,7 @@ public final class Static260 {
 		}
 		@Pc(10) int local10 = arg1 << 7;
 		@Pc(14) int local14 = arg2 << 7;
-		@Pc(24) int local24 = SceneGraph.activeTileHeightMap[arg0][arg1][arg2] - 1;
+		@Pc(24) int local24 = SceneGraph.tileHeights[arg0][arg1][arg2] - 1;
 		@Pc(28) int local28 = local24 - 120;
 		@Pc(32) int local32 = local24 - 230;
 		@Pc(36) int local36 = local24 - 238;

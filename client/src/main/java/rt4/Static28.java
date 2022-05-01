@@ -14,7 +14,7 @@ public final class Static28 {
 		Static99.mapSizeZ = 104;
 		Static277.tileVisibilityDistance = tileVisibility;
 		Static197.surfaceGroundTiles = new Tile[4][Static152.mapSizeX][Static99.mapSizeZ];
-		Static107.surfaceTileHeightMap = new int[4][Static152.mapSizeX + 1][Static99.mapSizeZ + 1];
+		SceneGraph.surfaceTileHeights = new int[4][Static152.mapSizeX + 1][Static99.mapSizeZ + 1];
 		if (GlRenderer.enabled) {
 			Static36.surfaceHdTiles = new GlTile[4][];
 		}

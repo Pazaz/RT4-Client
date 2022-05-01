@@ -222,7 +222,7 @@ public final class NpcType {
 			@Pc(13) NpcType local13 = this.getMultiNpc();
 			return local13 == null ? null : local13.getBodyModel(seqs, arg1, arg2, arg3, arg4, arg5, seqType1, arg7, seqType2);
 		}
-		@Pc(40) Model local40 = (Model) NpcTypeList.aClass99_18.get((long) this.id);
+		@Pc(40) Model local40 = (Model) NpcTypeList.models.get((long) this.id);
 		@Pc(46) boolean local46;
 		@Pc(173) int local173;
 		@Pc(235) int local235;
@@ -336,7 +336,7 @@ public final class NpcType {
 			if (GlRenderer.enabled) {
 				((GlModel) local40).method4111(false, false, false, false, false, true);
 			}
-			NpcTypeList.aClass99_18.put(local40, (long) this.id);
+			NpcTypeList.models.put(local40, (long) this.id);
 		}
 		local46 = false;
 		@Pc(721) boolean local721 = false;

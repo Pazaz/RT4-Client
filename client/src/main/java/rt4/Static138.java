@@ -1,8 +1,6 @@
 package rt4;
 
-import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
-import org.openrs2.deob.annotation.Pc;
 
 public final class Static138 {
 
@@ -62,13 +60,5 @@ public final class Static138 {
 
 	@OriginalMember(owner = "client!km", name = "ad", descriptor = "I")
 	public static int fp = 0;
-
-	@OriginalMember(owner = "client!km", name = "b", descriptor = "(III)I")
-	public static int method2695(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		@Pc(14) int local14 = arg1 * 57 + arg0;
-		@Pc(20) int local20 = local14 ^ local14 << 13;
-		@Pc(34) int local34 = Integer.MAX_VALUE & (local20 * local20 * 15731 + 789221) * local20 + 1376312589;
-		return local34 >> 19 & 0xFF;
-	}
 
 }

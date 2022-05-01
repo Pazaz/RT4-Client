@@ -185,8 +185,10 @@ public final class client extends GameShell {
 	public static long prevGc = 0L;
     @OriginalMember(owner = "client!gj", name = "d", descriptor = "I")
 	public static int loop = 0;
+    @OriginalMember(owner = "client!wj", name = "e", descriptor = "Lclient!na;")
+    public static JagString mainLoadPrimaryText = null;
 
-	@OriginalMember(owner = "client!client", name = "main", descriptor = "([Ljava/lang/String;)V")
+    @OriginalMember(owner = "client!client", name = "main", descriptor = "([Ljava/lang/String;)V")
 	public static void main(@OriginalArg(0) String[] arg0) {
 		try {
 			if (arg0.length != 4) {
@@ -938,7 +940,7 @@ public final class client extends GameShell {
 			cacheMasterIndex = null;
 			masterCache = null;
 		}
-		Static278.mainLoadPrimaryText = LocalizedText.GAME0_LOADING;
+		mainLoadPrimaryText = LocalizedText.GAME0_LOADING;
 		if (modeWhere != 0) {
 			Cheat.displayFps = true;
 		}

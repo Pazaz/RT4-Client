@@ -9,9 +9,6 @@ public final class Static279 {
 	@OriginalMember(owner = "client!wk", name = "v", descriptor = "[I")
 	public static int[] anIntArray568;
 
-    @OriginalMember(owner = "client!wk", name = "u", descriptor = "Lclient!na;")
-	public static final JagString JS5DROP = JagString.parse("::clientjs5drop");
-
 	@OriginalMember(owner = "client!wk", name = "x", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1107 = JagString.parse(")4l=");
 

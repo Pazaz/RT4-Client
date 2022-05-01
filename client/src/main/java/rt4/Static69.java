@@ -69,7 +69,7 @@ public final class Static69 {
 							if (local39 >= 0 && local39 < Static99.mapSizeZ && (!local1 || local28 >= local7 || local39 >= local15 || local39 < arg3 && local28 != arg2)) {
 								@Pc(71) Tile local71 = SceneGraph.tiles[local17][local28][local39];
 								if (local71 != null) {
-									@Pc(158) int local158 = (SceneGraph.activeTileHeightMap[local17][local28][local39] + SceneGraph.activeTileHeightMap[local17][local28 + 1][local39] + SceneGraph.activeTileHeightMap[local17][local28][local39 + 1] + SceneGraph.activeTileHeightMap[local17][local28 + 1][local39 + 1]) / 4 - (SceneGraph.activeTileHeightMap[arg1][arg2][arg3] + SceneGraph.activeTileHeightMap[arg1][arg2 + 1][arg3] + SceneGraph.activeTileHeightMap[arg1][arg2][arg3 + 1] + SceneGraph.activeTileHeightMap[arg1][arg2 + 1][arg3 + 1]) / 4;
+									@Pc(158) int local158 = (SceneGraph.tileHeights[local17][local28][local39] + SceneGraph.tileHeights[local17][local28 + 1][local39] + SceneGraph.tileHeights[local17][local28][local39 + 1] + SceneGraph.tileHeights[local17][local28 + 1][local39 + 1]) / 4 - (SceneGraph.tileHeights[arg1][arg2][arg3] + SceneGraph.tileHeights[arg1][arg2 + 1][arg3] + SceneGraph.tileHeights[arg1][arg2][arg3 + 1] + SceneGraph.tileHeights[arg1][arg2 + 1][arg3 + 1]) / 4;
 									@Pc(161) Wall local161 = local71.aClass77_1;
 									if (local161 != null) {
 										if (local161.primary.method4543()) {

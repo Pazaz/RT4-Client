@@ -40,12 +40,12 @@ public final class Static252 {
 		}
 		if (Static227.cameraType != 1) {
 			local33 = SceneGraph.getTileHeight(Player.level, Static138.renderX, Static134.renderZ);
-			if (local33 - Static5.anInt40 < 800 && (Static12.tileSettings[Player.level][Static138.renderX >> 7][Static134.renderZ >> 7] & 0x4) != 0) {
+			if (local33 - Static5.anInt40 < 800 && (SceneGraph.tileFlags[Player.level][Static138.renderX >> 7][Static134.renderZ >> 7] & 0x4) != 0) {
 				Static254.method4348(false, Static138.renderX >> 7, Static134.renderZ >> 7, SceneGraph.tiles, 1);
 			}
 			return;
 		}
-		if ((Static12.tileSettings[Player.level][PlayerList.self.xFine >> 7][PlayerList.self.zFine >> 7] & 0x4) != 0) {
+		if ((SceneGraph.tileFlags[Player.level][PlayerList.self.xFine >> 7][PlayerList.self.zFine >> 7] & 0x4) != 0) {
 			Static254.method4348(false, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7, SceneGraph.tiles, 0);
 		}
 		if (Static240.cameraPitch >= 310) {
@@ -78,7 +78,7 @@ public final class Static252 {
 				} else if (local40 > local135) {
 					local40--;
 				}
-				if ((Static12.tileSettings[Player.level][local33][local40] & 0x4) != 0) {
+				if ((SceneGraph.tileFlags[Player.level][local33][local40] & 0x4) != 0) {
 					Static254.method4348(false, local33, local40, SceneGraph.tiles, 1);
 					break;
 				}
@@ -90,7 +90,7 @@ public final class Static252 {
 						local33--;
 					}
 					local186 -= 65536;
-					if ((Static12.tileSettings[Player.level][local33][local40] & 0x4) != 0) {
+					if ((SceneGraph.tileFlags[Player.level][local33][local40] & 0x4) != 0) {
 						Static254.method4348(false, local33, local40, SceneGraph.tiles, 1);
 						break;
 					}
@@ -106,7 +106,7 @@ public final class Static252 {
 			} else if (local33 > local162) {
 				local33--;
 			}
-			if ((Static12.tileSettings[Player.level][local33][local40] & 0x4) != 0) {
+			if ((SceneGraph.tileFlags[Player.level][local33][local40] & 0x4) != 0) {
 				Static254.method4348(false, local33, local40, SceneGraph.tiles, 1);
 				break;
 			}
@@ -118,7 +118,7 @@ public final class Static252 {
 					local40--;
 				}
 				local186 -= 65536;
-				if ((Static12.tileSettings[Player.level][local33][local40] & 0x4) != 0) {
+				if ((SceneGraph.tileFlags[Player.level][local33][local40] & 0x4) != 0) {
 					Static254.method4348(false, local33, local40, SceneGraph.tiles, 1);
 					break;
 				}

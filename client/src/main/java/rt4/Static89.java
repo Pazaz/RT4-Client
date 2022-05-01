@@ -149,7 +149,7 @@ public final class Static89 {
 			Static9.method182();
 		}
 		if (GlRenderer.enabled) {
-			Static46.method1177();
+			GlRaster.method1177();
 		} else {
 			SoftwareRaster.method2503();
 		}
@@ -180,13 +180,13 @@ public final class Static89 {
 			for (@Pc(189) int local189 = 0; local189 < InterfaceList.anInt766; local189++) {
 				if (Static223.aBooleanArray116[local189]) {
 					if (GlRenderer.enabled) {
-						Static46.method1182(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711935, 128);
+						GlRaster.method1182(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711935, 128);
 					} else {
 						SoftwareRaster.method2484(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711935, 128);
 					}
 				} else if (InterfaceList.rectangleRedraw[local189]) {
 					if (GlRenderer.enabled) {
-						Static46.method1182(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711680, 128);
+						GlRaster.method1182(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711680, 128);
 					} else {
 						SoftwareRaster.method2484(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711680, 128);
 					}

@@ -144,7 +144,7 @@ public class AudioChannel {
 		if (stereo) {
 			local1 = 512;
 		}
-		Static289.clear(arg0, 0, local1);
+		ArrayUtils.clear(arg0, 0, local1);
 		this.anInt4638 -= 256;
 		if (this.stream != null && this.anInt4638 <= 0) {
 			this.anInt4638 += sampleRate >> 4;

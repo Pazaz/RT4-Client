@@ -56,9 +56,9 @@ public final class MidiNoteStream extends PcmStream {
 			arg0.anInt3775 = local27 * arg1 + arg0.anInt3775 & 0xFFFFF;
 			if (arg1 >= local37) {
 				if (this.aClass3_Sub3_Sub4_3.anIntArray509[arg0.anInt3773] == 0) {
-					arg0.aClass3_Sub3_Sub1_3 = Static284.method399(arg0.aClass3_Sub16_Sub1_1, arg0.aClass3_Sub3_Sub1_3.method405(), arg0.aClass3_Sub3_Sub1_3.method392(), arg0.aClass3_Sub3_Sub1_3.method418());
+					arg0.aClass3_Sub3_Sub1_3 = SoundPcmStream.method399(arg0.aClass3_Sub16_Sub1_1, arg0.aClass3_Sub3_Sub1_3.method405(), arg0.aClass3_Sub3_Sub1_3.method392(), arg0.aClass3_Sub3_Sub1_3.method418());
 				} else {
-					arg0.aClass3_Sub3_Sub1_3 = Static284.method399(arg0.aClass3_Sub16_Sub1_1, arg0.aClass3_Sub3_Sub1_3.method405(), 0, arg0.aClass3_Sub3_Sub1_3.method418());
+					arg0.aClass3_Sub3_Sub1_3 = SoundPcmStream.method399(arg0.aClass3_Sub16_Sub1_1, arg0.aClass3_Sub3_Sub1_3.method405(), 0, arg0.aClass3_Sub3_Sub1_3.method418());
 					this.aClass3_Sub3_Sub4_3.method4442(arg0, arg0.aClass3_Sub18_1.aShortArray36[arg0.anInt3779] < 0);
 				}
 				if (arg0.aClass3_Sub18_1.aShortArray36[arg0.anInt3779] < 0) {
@@ -138,9 +138,9 @@ public final class MidiNoteStream extends PcmStream {
 				}
 				arg1.anInt3775 += local26 * local36 - 1048576;
 				if (this.aClass3_Sub3_Sub4_3.anIntArray509[arg1.anInt3773] == 0) {
-					arg1.aClass3_Sub3_Sub1_3 = Static284.method399(arg1.aClass3_Sub16_Sub1_1, local58.method405(), local58.method392(), local58.method418());
+					arg1.aClass3_Sub3_Sub1_3 = SoundPcmStream.method399(arg1.aClass3_Sub16_Sub1_1, local58.method405(), local58.method392(), local58.method418());
 				} else {
-					arg1.aClass3_Sub3_Sub1_3 = Static284.method399(arg1.aClass3_Sub16_Sub1_1, local58.method405(), 0, local58.method418());
+					arg1.aClass3_Sub3_Sub1_3 = SoundPcmStream.method399(arg1.aClass3_Sub16_Sub1_1, local58.method405(), 0, local58.method418());
 					this.aClass3_Sub3_Sub4_3.method4442(arg1, arg1.aClass3_Sub18_1.aShortArray36[arg1.anInt3779] < 0);
 					arg1.aClass3_Sub3_Sub1_3.method398(local55, local58.method392());
 				}

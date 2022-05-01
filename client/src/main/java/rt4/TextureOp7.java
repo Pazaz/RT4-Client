@@ -72,7 +72,7 @@ public final class TextureOp7 extends TextureOp {
 					local15[local51] = local38[Static34.anInt1060 - local51];
 				}
 			} else {
-				Static289.method2613(local38, 0, local15, 0, Static189.anInt4457);
+				ArrayUtils.copy(local38, 0, local15, 0, Static189.anInt4457);
 			}
 		}
 		return local15;

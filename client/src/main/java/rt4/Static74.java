@@ -42,16 +42,16 @@ public final class Static74 {
 			SoftwareRaster.drawHorizontalLine(arg2 + 1, local35 + arg3 - (-local54 + -14), 15, Static20.anInt671);
 			return;
 		}
-		Static46.method1186(arg2, arg3 + 16, 16, arg4 - 32, Static182.anInt4306);
-		Static46.method1186(arg2, arg3 + local54 + 16, 16, local35, Static53.anInt1704);
-		Static46.method1176(arg2, local54 + arg3 + 16, local35, Static219.anInt4938);
-		Static46.method1176(arg2 + 1, local54 + 16 + arg3, local35, Static219.anInt4938);
-		Static46.method1174(arg2, local54 + arg3 + 16, 16, Static219.anInt4938);
-		Static46.method1174(arg2, local54 + arg3 + 17, 16, Static219.anInt4938);
-		Static46.method1176(arg2 + 15, arg3 + (16 - -local54), local35, Static20.anInt671);
-		Static46.method1176(arg2 + 14, arg3 - -local54 + 17, local35 - 1, Static20.anInt671);
-		Static46.method1174(arg2, local35 + arg3 + local54 + 15, 16, Static20.anInt671);
-		Static46.method1174(arg2 + 1, arg3 + 14 - -local54 + local35, 15, Static20.anInt671);
+		GlRaster.method1186(arg2, arg3 + 16, 16, arg4 - 32, Static182.anInt4306);
+		GlRaster.method1186(arg2, arg3 + local54 + 16, 16, local35, Static53.anInt1704);
+		GlRaster.method1176(arg2, local54 + arg3 + 16, local35, Static219.anInt4938);
+		GlRaster.method1176(arg2 + 1, local54 + 16 + arg3, local35, Static219.anInt4938);
+		GlRaster.method1174(arg2, local54 + arg3 + 16, 16, Static219.anInt4938);
+		GlRaster.method1174(arg2, local54 + arg3 + 17, 16, Static219.anInt4938);
+		GlRaster.method1176(arg2 + 15, arg3 + (16 - -local54), local35, Static20.anInt671);
+		GlRaster.method1176(arg2 + 14, arg3 - -local54 + 17, local35 - 1, Static20.anInt671);
+		GlRaster.method1174(arg2, local35 + arg3 + local54 + 15, 16, Static20.anInt671);
+		GlRaster.method1174(arg2 + 1, arg3 + 14 - -local54 + local35, 15, Static20.anInt671);
 	}
 
 	@OriginalMember(owner = "client!fn", name = "a", descriptor = "(ILclient!be;)V")

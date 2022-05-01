@@ -41,7 +41,7 @@ public final class Static124 {
 					@Pc(90) CollisionMap local90 = null;
 					if (!arg1) {
 						@Pc(95) int local95 = local50;
-						if ((Static12.tileSettings[1][local72][local76] & 0x2) == 2) {
+						if ((SceneGraph.tileFlags[1][local72][local76] & 0x2) == 2) {
 							local95 = local50 - 1;
 						}
 						if (local95 >= 0) {

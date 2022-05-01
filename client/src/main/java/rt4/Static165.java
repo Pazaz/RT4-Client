@@ -18,9 +18,6 @@ public final class Static165 {
 	@OriginalMember(owner = "client!nb", name = "d", descriptor = "I")
 	public static int anInt4035 = 0;
 
-	@OriginalMember(owner = "client!nb", name = "m", descriptor = "Lclient!na;")
-	public static final JagString aClass100_776 = JagString.parse("logo");
-
 	@OriginalMember(owner = "client!nb", name = "n", descriptor = "Lclient!na;")
 	public static final JagString DETAILS = JagString.parse("details");
 
