@@ -6,9 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static196 {
 
-    @OriginalMember(owner = "client!pl", name = "e", descriptor = "[I")
-	public static final int[] anIntArray408 = new int[500];
-
 	@OriginalMember(owner = "client!pl", name = "f", descriptor = "Lclient!na;")
 	public static final JagString TRADEREQ = JagString.parse(":tradereq:");
 

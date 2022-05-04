@@ -13,9 +13,6 @@ public final class Static231 {
 	public static int anInt5205;
 
 
-    @OriginalMember(owner = "client!sk", name = "kb", descriptor = "I")
-	public static int anInt5204 = 0;
-
 	@OriginalMember(owner = "client!sk", name = "lb", descriptor = "Z")
 	public static boolean aBoolean252 = false;
 

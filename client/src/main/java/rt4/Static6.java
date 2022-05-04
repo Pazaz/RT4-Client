@@ -9,10 +9,7 @@ public final class Static6 {
     @OriginalMember(owner = "client!ag", name = "ab", descriptor = "Lclient!na;")
 	public static final JagString aClass100_17 = JagString.parse("0");
 
-	@OriginalMember(owner = "client!ag", name = "bb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_18 = JagString.parse("<col=40ff00>");
-
-	@OriginalMember(owner = "client!ag", name = "cb", descriptor = "[Lclient!cl;")
+    @OriginalMember(owner = "client!ag", name = "cb", descriptor = "[Lclient!cl;")
 	public static final AnimFrameset[] aClass3_Sub2_Sub7Array1 = new AnimFrameset[14];
 
     @OriginalMember(owner = "client!ag", name = "j", descriptor = "(I)V")

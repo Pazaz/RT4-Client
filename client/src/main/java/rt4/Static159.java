@@ -12,9 +12,6 @@ public final class Static159 {
 	@OriginalMember(owner = "client!mi", name = "R", descriptor = "Lclient!na;")
 	public static final JagString aClass100_760 = JagString.parse(")1");
 
-    @OriginalMember(owner = "client!mi", name = "U", descriptor = "[J")
-	public static final long[] aLongArray5 = new long[500];
-
 	@OriginalMember(owner = "client!mi", name = "Y", descriptor = "[[[Lclient!ih;")
 	public static final LinkedList[][][] aClass69ArrayArrayArray1 = new LinkedList[4][104][104];
 

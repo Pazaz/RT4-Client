@@ -2,7 +2,6 @@ package rt4;
 
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
-import org.openrs2.deob.annotation.Pc;
 
 public final class Static251 {
 
@@ -28,9 +27,4 @@ public final class Static251 {
 		}
 	}
 
-	@OriginalMember(owner = "client!ug", name = "a", descriptor = "(IB)V")
-	public static void method4279(@OriginalArg(0) int arg0) {
-		@Pc(14) DelayedStateChange local14 = Static238.method4143(9, arg0);
-		local14.pushClient();
-	}
 }

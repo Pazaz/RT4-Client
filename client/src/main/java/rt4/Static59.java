@@ -20,18 +20,18 @@ public final class Static59 {
 		if (Static226.anInt3953 == 2) {
 			if (Static155.anInt3751 == Static277.anInt5850 && Static60.anInt1892 == Static280.anInt5895) {
 				Static226.anInt3953 = 0;
-				if (Cheat.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static231.anInt5204 > 2) {
-					ClientProt.method2232(Static231.anInt5204 - 2);
+				if (Cheat.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && MiniMenu.size > 2) {
+					MiniMenu.doAction(MiniMenu.size - 2);
 				} else {
-					ClientProt.method2232(Static231.anInt5204 - 1);
+					MiniMenu.doAction(MiniMenu.size - 1);
 				}
 			}
 		} else if (Static155.anInt3751 == Mouse.clickX && Static60.anInt1892 == Mouse.clickY) {
 			Static226.anInt3953 = 0;
-			if (Cheat.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static231.anInt5204 > 2) {
-				ClientProt.method2232(Static231.anInt5204 - 2);
+			if (Cheat.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && MiniMenu.size > 2) {
+				MiniMenu.doAction(MiniMenu.size - 2);
 			} else {
-				ClientProt.method2232(Static231.anInt5204 - 1);
+				MiniMenu.doAction(MiniMenu.size - 1);
 			}
 		} else {
 			Static280.anInt5895 = Mouse.clickY;

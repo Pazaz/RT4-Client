@@ -15,7 +15,7 @@ public final class Static235 {
 
 	@OriginalMember(owner = "client!tb", name = "h", descriptor = "(I)I")
 	public static int method4044() {
-		return Cheat.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static231.anInt5204 > 2 ? Static190.anIntArray382[Static231.anInt5204 - 2] : Static190.anIntArray382[Static231.anInt5204 - 1];
+		return Cheat.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && MiniMenu.size > 2 ? MiniMenu.cursors[MiniMenu.size - 2] : MiniMenu.cursors[MiniMenu.size - 1];
 	}
 
 }

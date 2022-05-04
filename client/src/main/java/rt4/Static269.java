@@ -292,8 +292,4 @@ public final class Static269 {
 		}
 	}
 
-	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(IZ)Lclient!na;")
-	public static JagString method2228(@OriginalArg(0) int arg0) {
-		return Static233.aClass100Array160[arg0].length() > 0 ? JagString.concatenate(new JagString[] { Static254.aClass100Array168[arg0], LocalizedText.MINISEPARATOR, Static233.aClass100Array160[arg0] }) : Static254.aClass100Array168[arg0];
-	}
 }

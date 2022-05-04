@@ -511,7 +511,7 @@ public final class client extends GameShell {
         for (local3506 = 0; local3506 < Static143.hintMapMarkers.length; local3506++) {
             Static143.hintMapMarkers[local3506] = null;
         }
-        Static231.anInt5204 = 0;
+        MiniMenu.size = 0;
         Static60.aBoolean108 = false;
         Static48.setIdleLoops(0);
         for (local3506 = 0; local3506 < 100; local3506++) {
@@ -581,7 +581,7 @@ public final class client extends GameShell {
         InterfaceList.method1287();
         Static39.aClass13_10 = null;
         Static60.aBoolean108 = false;
-        Static231.anInt5204 = 0;
+        MiniMenu.size = 0;
         PlayerAppearance.DEFAULT.method1950(new int[] { 0, 0, 0, 0, 0 }, -1, false, null, -1);
         for (local3506 = 0; local3506 < 8; local3506++) {
             Player.options[local3506] = null;

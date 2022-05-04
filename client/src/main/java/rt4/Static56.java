@@ -4,9 +4,6 @@ import org.openrs2.deob.annotation.OriginalMember;
 
 public final class Static56 {
 
-	@OriginalMember(owner = "client!ef", name = "c", descriptor = "[I")
-	public static final int[] anIntArray142 = new int[500];
-
 	@OriginalMember(owner = "client!ef", name = "f", descriptor = "Lclient!na;")
 	public static final JagString DUELSTAKE = JagString.parse(":duelstake:");
 

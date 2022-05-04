@@ -23,11 +23,11 @@ public final class Static7 {
 		@Pc(93) int local93;
 		@Pc(99) int local99;
 		if (!Static60.aBoolean108) {
-			if (local20 == 1 && Static231.anInt5204 > 0) {
-				@Pc(37) short local37 = Static39.aShortArray6[Static231.anInt5204 - 1];
+			if (local20 == 1 && MiniMenu.size > 0) {
+				@Pc(37) short local37 = MiniMenu.actions[MiniMenu.size - 1];
 				if (local37 == 25 || local37 == 23 || local37 == 48 || local37 == 7 || local37 == 13 || local37 == 47 || local37 == 5 || local37 == 43 || local37 == 35 || local37 == 58 || local37 == 22 || local37 == 1006) {
-					local93 = Static196.anIntArray408[Static231.anInt5204 - 1];
-					local99 = Static56.anIntArray142[Static231.anInt5204 - 1];
+					local93 = MiniMenu.intArgs1[MiniMenu.size - 1];
+					local99 = MiniMenu.intArgs2[MiniMenu.size - 1];
 					@Pc(103) Component local103 = InterfaceList.getComponent(local99);
 					@Pc(106) ServerActiveProperties local106 = InterfaceList.getServerActiveProperties(local103);
 					if (local106.method511() || local106.isObjReplaceEnabled()) {
@@ -45,13 +45,13 @@ public final class Static7 {
 					}
 				}
 			}
-			if (local20 == 1 && (Static116.anInt2952 == 1 && Static231.anInt5204 > 2 || Static277.method4640(Static231.anInt5204 - 1))) {
+			if (local20 == 1 && (Static116.anInt2952 == 1 && MiniMenu.size > 2 || Static277.method4640(MiniMenu.size - 1))) {
 				local20 = 2;
 			}
-			if (local20 == 2 && Static231.anInt5204 > 0 || Static226.anInt3953 == 1) {
+			if (local20 == 2 && MiniMenu.size > 0 || Static226.anInt3953 == 1) {
 				Static226.method3901();
 			}
-			if (local20 == 1 && Static231.anInt5204 > 0 || Static226.anInt3953 == 2) {
+			if (local20 == 1 && MiniMenu.size > 0 || Static226.anInt3953 == 2) {
 				Static59.method1372();
 			}
 			return;
@@ -74,19 +74,19 @@ public final class Static7 {
 		@Pc(265) int local265 = Mouse.clickX;
 		@Pc(267) int local267 = Mouse.clickY;
 		@Pc(269) int local269 = -1;
-		for (@Pc(271) int local271 = 0; local271 < Static231.anInt5204; local271++) {
+		for (@Pc(271) int local271 = 0; local271 < MiniMenu.size; local271++) {
 			@Pc(289) int local289;
 			if (Static261.aBoolean298) {
-				local289 = (Static231.anInt5204 - local271 - 1) * 15 + local93 + 35;
+				local289 = (MiniMenu.size - local271 - 1) * 15 + local93 + 35;
 			} else {
-				local289 = (Static231.anInt5204 - local271 - 1) * 15 + local93 + 31;
+				local289 = (MiniMenu.size - local271 - 1) * 15 + local93 + 31;
 			}
 			if (local265 > local204 && local204 + local99 > local265 && local289 - 13 < local267 && local289 + 3 > local267) {
 				local269 = local271;
 			}
 		}
 		if (local269 != -1) {
-			ClientProt.method2232(local269);
+			MiniMenu.doAction(local269);
 		}
 		Static60.aBoolean108 = false;
 		Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);

@@ -25,26 +25,26 @@ public final class Static132 {
 		if (local32 != null) {
 			InterfaceList.redraw(local32);
 		}
-		@Pc(41) int local41 = Static231.anInt5204;
+		@Pc(41) int local41 = MiniMenu.size;
 		@Pc(43) int local43;
 		for (local43 = 0; local43 < local41; local43++) {
-			if (Static2.method5(Static39.aShortArray6[local43])) {
-				Static200.method3628(local43);
+			if (Static2.method5(MiniMenu.actions[local43])) {
+				MiniMenu.remove(local43);
 			}
 		}
-		if (Static231.anInt5204 == 1) {
+		if (MiniMenu.size == 1) {
 			Static60.aBoolean108 = false;
 			Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
 		} else {
 			Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
 			local43 = Fonts.b12Full.getStringWidth(LocalizedText.CHOOSE_OPTION);
-			for (@Pc(75) int local75 = 0; local75 < Static231.anInt5204; local75++) {
-				@Pc(88) int local88 = Fonts.b12Full.getStringWidth(Static269.method2228(local75));
+			for (@Pc(75) int local75 = 0; local75 < MiniMenu.size; local75++) {
+				@Pc(88) int local88 = Fonts.b12Full.getStringWidth(MiniMenu.getOp(local75));
 				if (local43 < local88) {
 					local43 = local88;
 				}
 			}
-			Static13.anInt436 = Static231.anInt5204 * 15 + (Static261.aBoolean298 ? 26 : 22);
+			Static13.anInt436 = MiniMenu.size * 15 + (Static261.aBoolean298 ? 26 : 22);
 			Static24.anInt761 = local43 + 8;
 		}
 		if (InterfaceList.topLevelInterface != -1) {

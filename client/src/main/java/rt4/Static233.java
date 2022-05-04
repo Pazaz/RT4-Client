@@ -18,9 +18,6 @@ public final class Static233 {
 	@OriginalMember(owner = "client!t", name = "G", descriptor = "[Lclient!ek;")
 	public static SoftwareIndexedSprite[] aClass36_Sub1Array1;
 
-	@OriginalMember(owner = "client!t", name = "v", descriptor = "[Lclient!na;")
-	public static final JagString[] aClass100Array160 = new JagString[500];
-
 	@OriginalMember(owner = "client!t", name = "y", descriptor = "I")
 	public static int loadingScreenState = 0;
 
