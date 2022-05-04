@@ -16,7 +16,7 @@ public final class GroundDecor {
 	public int anInt733;
 
 	@OriginalMember(owner = "client!bm", name = "m", descriptor = "J")
-	public long aLong26;
+	public long key;
 
 	@OriginalMember(owner = "client!bm", name = "o", descriptor = "I")
 	public int anInt736;

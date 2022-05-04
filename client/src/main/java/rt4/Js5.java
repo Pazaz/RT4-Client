@@ -48,6 +48,23 @@ public final class Js5 {
         }
     }
 
+    @OriginalMember(owner = "client!cj", name = "a", descriptor = "(ZI[B)Ljava/lang/Object;")
+    public static Object method869(@OriginalArg(2) byte[] arg0) {
+        if (arg0 == null) {
+            return null;
+        }
+        if (arg0.length > 136 && !Static84.aBoolean127) {
+            try {
+                @Pc(27) ByteArray local27 = new DirectByteArray();
+                local27.set(arg0);
+                return local27;
+            } catch (@Pc(34) Throwable local34) {
+                Static84.aBoolean127 = true;
+            }
+        }
+        return arg0;
+    }
+
     @OriginalMember(owner = "client!ve", name = "a", descriptor = "(B)Z")
 	public final boolean fetchAll() {
 		if (!this.method4484()) {
@@ -305,7 +322,7 @@ public final class Js5 {
 			try {
 				local140 = Js5Compression.uncompress(local114);
 			} catch (@Pc(142) RuntimeException local142) {
-				System.out.println("T3 - " + (arg1 != null) + "," + arg0 + "," + local114.length + "," + Static71.method1442(local114, local114.length) + "," + Static71.method1442(local114, local114.length - 2) + "," + this.aClass70_2.anIntArray268[arg0] + "," + this.aClass70_2.anInt2911);
+				System.out.println("T3 - " + (arg1 != null) + "," + arg0 + "," + local114.length + "," + Buffer.crc32(local114, local114.length) + "," + Buffer.crc32(local114, local114.length - 2) + "," + this.aClass70_2.anIntArray268[arg0] + "," + this.aClass70_2.anInt2911);
 				local140 = new byte[] { 0 };
 			}
 			if (this.discardPacked) {
@@ -357,7 +374,7 @@ public final class Js5 {
 					if (this.discardUnpacked) {
 						local53[local320] = local282[local252];
 					} else {
-						local53[local320] = Static33.method869(local282[local252]);
+						local53[local320] = method869(local282[local252]);
 					}
 				}
 			} else {
@@ -369,7 +386,7 @@ public final class Js5 {
 				if (this.discardUnpacked) {
 					local53[local213] = local140;
 				} else {
-					local53[local213] = Static33.method869(local140);
+					local53[local213] = method869(local140);
 				}
 			}
 			return true;
@@ -386,7 +403,7 @@ public final class Js5 {
 		if (this.discardPacked) {
 			this.anObjectArray32[arg0] = this.provider.method525(arg0);
 		} else {
-			this.anObjectArray32[arg0] = Static33.method869(this.provider.method525(arg0));
+			this.anObjectArray32[arg0] = method869(this.provider.method525(arg0));
 		}
 	}
 

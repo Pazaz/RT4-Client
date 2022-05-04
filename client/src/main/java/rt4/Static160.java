@@ -9,27 +9,24 @@ public final class Static160 {
 	@OriginalMember(owner = "client!mj", name = "g", descriptor = "Lclient!na;")
 	public static final JagString aClass100_761 = JagString.parse("(U3");
 
-	@OriginalMember(owner = "client!mj", name = "i", descriptor = "I")
-	public static int anInt3902 = 0;
-
-    @OriginalMember(owner = "client!mj", name = "a", descriptor = "(IILclient!be;IB)V")
+	@OriginalMember(owner = "client!mj", name = "a", descriptor = "(IILclient!be;IB)V")
 	public static void method3047(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Component arg2, @OriginalArg(3) int arg3) {
 		if (GlRenderer.enabled) {
-			GlRaster.method1187(arg0, arg1, arg2.anInt445 + arg0, arg2.anInt459 + arg1);
+			GlRaster.setClip(arg0, arg1, arg2.anInt445 + arg0, arg2.anInt459 + arg1);
 		}
-		if (Static270.minimapState >= 3) {
+		if (MiniMap.state >= 3) {
 			if (GlRenderer.enabled) {
 				@Pc(44) Sprite local44 = arg2.method489(false);
 				if (local44 != null) {
-					local44.method1423(arg0, arg1);
+					local44.renderTransparent(arg0, arg1);
 				}
 			} else {
 				SoftwareRaster.method2504(arg0, arg1, arg2.anIntArray37, arg2.anIntArray45);
 			}
 		} else if (GlRenderer.enabled) {
-			((GlSprite) Static106.compass).method1427(arg0, arg1, arg2.anInt445, arg2.anInt459, Static106.compass.width / 2, Static106.compass.height / 2, (int)Camera.yawTarget, 256, (GlSprite) arg2.method489(false));
+			((GlSprite) Static106.compass).renderRotatedTransparent(arg0, arg1, arg2.anInt445, arg2.anInt459, Static106.compass.width / 2, Static106.compass.height / 2, (int)Camera.yawTarget, 256, (GlSprite) arg2.method489(false));
 		} else {
-			((SoftwareSprite) Static106.compass).drawCompass(arg0, arg1, arg2.anInt445, arg2.anInt459, Static106.compass.width / 2, Static106.compass.height / 2, (int)Camera.yawTarget, arg2.anIntArray37, arg2.anIntArray45);
+			((SoftwareSprite) Static106.compass).renderRotatedTransparent(arg0, arg1, arg2.anInt445, arg2.anInt459, Static106.compass.width / 2, Static106.compass.height / 2, (int)Camera.yawTarget, arg2.anIntArray37, arg2.anIntArray45);
 		}
 		InterfaceList.rectangleRedraw[arg3] = true;
 	}

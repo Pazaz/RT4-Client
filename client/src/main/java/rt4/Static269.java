@@ -176,7 +176,7 @@ public final class Static269 {
 					if (local190 >= 0 && local194 >= 0 && local190 < 104 && local194 < 104) {
 						local529.aBoolean125 = (SceneGraph.tileFlags[1][local190][local194] & 0x2) != 0;
 						local529.anInt2235 = SceneGraph.tileHeights[local529.anInt2241][local190][local194] - local529.anInt2235;
-						Static120.method2389(local529);
+						LightingManager.method2389(local529);
 					}
 				}
 			}
@@ -219,9 +219,9 @@ public final class Static269 {
 			WorldMap.method3413();
 		}
 		if (GlRenderer.enabled) {
-			GlRaster.method1187(arg0, arg1, arg0 + arg3, arg2 + arg1);
+			GlRaster.setClip(arg0, arg1, arg0 + arg3, arg2 + arg1);
 		} else {
-			SoftwareRaster.method2496(arg0, arg1, arg0 + arg3, arg2 + arg1);
+			SoftwareRaster.setClip(arg0, arg1, arg0 + arg3, arg2 + arg1);
 		}
 		@Pc(50) int local50;
 		@Pc(61) int local61;
@@ -259,13 +259,13 @@ public final class Static269 {
 			}
 			SoftwareRaster.method2491(WorldMap.aClass3_Sub2_Sub1_Sub1_2.pixels, arg3, arg2);
 			Static214.method4364(arg3, 0, local61, local50, 0, local236, arg2, local211);
-			Static48.method1195(arg3, 0, local61, local236, arg2, 0, local211, local50);
+			method1195(arg3, 0, local61, local236, arg2, 0, local211, local50);
 			Static38.method959(0, 0, local211, arg3, local236, local50, local61, arg2);
 			GlRaster.method1178(WorldMap.aClass3_Sub2_Sub1_Sub1_2.pixels, arg0, arg1, arg3, arg2);
 			SoftwareRaster.pixels = null;
 		} else {
 			Static214.method4364(arg3 + arg0, arg1, local61, local50, arg0, local236, arg1 + arg2, local211);
-			Static48.method1195(arg0 + arg3, arg0, local61, local236, arg2 + arg1, arg1, local211, local50);
+			method1195(arg0 + arg3, arg0, local61, local236, arg2 + arg1, arg1, local211, local50);
 			Static38.method959(arg0, arg1, local211, arg0 + arg3, local236, local50, local61, arg2 + arg1);
 		}
 		if (Static201.anInt1864 > 0) {
@@ -279,7 +279,7 @@ public final class Static269 {
 		if (Cheat.displayFps) {
 			@Pc(405) int local405 = arg1 + arg2 - 8;
 			@Pc(412) int local412 = arg0 + arg3 - 5;
-			Fonts.p12Full.renderRight(JagString.concatenate(new JagString[]{Cheat.DEBUG_FPS, Static123.parseInt((int)GameShell.framesPerSecond)}), local412, local405, 16776960, -1);
+			Fonts.p12Full.renderRight(JagString.concatenate(new JagString[]{Cheat.DEBUG_FPS, JagString.parseInt((int)GameShell.framesPerSecond)}), local412, local405, 16776960, -1);
 			@Pc(434) Runtime runtime = Runtime.getRuntime();
 			@Pc(443) int memory = (int) ((runtime.totalMemory() - runtime.freeMemory()) / 1024L / 1024L);
 			@Pc(445) int color = 16776960;
@@ -287,9 +287,17 @@ public final class Static269 {
 			if (memory > 95) {
 				color = 16711680;
 			}
-			Fonts.p12Full.renderRight(JagString.concatenate(new JagString[]{Cheat.DEBUG_MEMORY, Static123.parseInt(memory), Cheat.DEBUG_MEMORY_UNIT}), local412, local446, color, -1);
+			Fonts.p12Full.renderRight(JagString.concatenate(new JagString[]{Cheat.DEBUG_MEMORY, JagString.parseInt(memory), Cheat.DEBUG_MEMORY_UNIT}), local412, local446, color, -1);
 			local405 = local446 - 15;
 		}
 	}
 
+    @OriginalMember(owner = "client!dl", name = "a", descriptor = "(IIIIIIIII)V")
+    public static void method1195(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7) {
+        @Pc(13) int local13 = arg2 - arg6;
+        @Pc(17) int local17 = arg3 - arg7;
+        @Pc(26) int local26 = (arg0 - arg1 << 16) / local13;
+        @Pc(35) int local35 = (arg4 - arg5 << 16) / local17;
+        Static232.method3991(arg1, arg3, arg2, local35, arg6, local26, arg7, arg5);
+    }
 }

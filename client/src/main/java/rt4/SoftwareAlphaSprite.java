@@ -144,7 +144,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 
 	@OriginalMember(owner = "client!am", name = "e", descriptor = "(II)V")
 	@Override
-	public final void method1423(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+	public final void renderTransparent(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		arg0 += this.anInt1863;
 		arg1 += this.anInt1861;
 		@Pc(15) int local15 = arg0 + arg1 * SoftwareRaster.width;
@@ -670,7 +670,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 
 	@OriginalMember(owner = "client!am", name = "a", descriptor = "(IIIIIIII[I[I)V")
 	@Override
-	public final void drawMinimapRegion(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int w, @OriginalArg(3) int h, @OriginalArg(4) int anchorX, @OriginalArg(5) int anchorY, @OriginalArg(6) int theta, @OriginalArg(7) int zoom, @OriginalArg(8) int[] lineStarts, @OriginalArg(9) int[] arg9) {
+	public final void renderRotatedTransparent(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int w, @OriginalArg(3) int h, @OriginalArg(4) int anchorX, @OriginalArg(5) int anchorY, @OriginalArg(6) int theta, @OriginalArg(7) int zoom, @OriginalArg(8) int[] lineStarts, @OriginalArg(9) int[] arg9) {
 		try {
 			@Pc(4) int local4 = -w / 2;
 			@Pc(9) int local9 = -h / 2;
@@ -705,7 +705,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 
 	@OriginalMember(owner = "client!am", name = "b", descriptor = "(IIIIIIII[I[I)V")
 	@Override
-	public final void drawCompass(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int w, @OriginalArg(3) int h, @OriginalArg(4) int anchorX, @OriginalArg(5) int anchorY, @OriginalArg(6) int theta, @OriginalArg(8) int[] lineStart, @OriginalArg(9) int[] lineWidth) {
+	public final void renderRotatedTransparent(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int w, @OriginalArg(3) int h, @OriginalArg(4) int anchorX, @OriginalArg(5) int anchorY, @OriginalArg(6) int theta, @OriginalArg(8) int[] lineStart, @OriginalArg(9) int[] lineWidth) {
 		try {
 			@Pc(4) int local4 = -w / 2;
 			@Pc(9) int local9 = -h / 2;

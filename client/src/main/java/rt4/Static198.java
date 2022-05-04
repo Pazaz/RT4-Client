@@ -9,41 +9,6 @@ public final class Static198 {
 	@OriginalMember(owner = "client!q", name = "a", descriptor = "Lclient!na;")
 	public static final JagString aClass100_260 = JagString.parse(")1a2)1m");
 
-	@OriginalMember(owner = "client!q", name = "a", descriptor = "(BZII)Lclient!na;")
-	public static JagString method1025(@OriginalArg(1) boolean arg0, @OriginalArg(3) int arg1) {
-		@Pc(23) int local23 = 1;
-		@Pc(27) int local27 = arg1 / 10;
-		while (local27 != 0) {
-			local27 /= 10;
-			local23++;
-		}
-		@Pc(38) int local38 = local23;
-		if (arg1 < 0 || arg0) {
-			local38 = local23 + 1;
-		}
-		@Pc(46) byte[] local46 = new byte[local38];
-		if (arg1 < 0) {
-			local46[0] = 45;
-		} else if (arg0) {
-			local46[0] = 43;
-		}
-		for (@Pc(61) int local61 = 0; local61 < local23; local61++) {
-			@Pc(68) int local68 = arg1 % 10;
-			if (local68 < 0) {
-				local68 = -local68;
-			}
-			if (local68 > 9) {
-				local68 += 39;
-			}
-			local46[local38 - local61 - 1] = (byte) (local68 + 48);
-			arg1 /= 10;
-		}
-		@Pc(112) JagString local112 = new JagString();
-		local112.chars = local46;
-		local112.length = local38;
-		return local112;
-	}
-
 	@OriginalMember(owner = "client!q", name = "a", descriptor = "(IIIIIIBI)V")
 	public static void method1026(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(7) int arg6) {
 		if (arg5 < 128 || arg2 < 128 || arg5 > 13056 || arg2 > 13056) {

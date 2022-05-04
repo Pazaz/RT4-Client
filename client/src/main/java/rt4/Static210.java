@@ -6,9 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static210 {
 
-	@OriginalMember(owner = "client!rb", name = "f", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_87;
-
 	@OriginalMember(owner = "client!rb", name = "a", descriptor = "(I)V")
 	public static void method3711() {
 		for (@Pc(7) int local7 = 0; local7 < 104; local7++) {

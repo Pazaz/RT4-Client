@@ -156,7 +156,7 @@ public final class SoftwareRaster {
 		pixels = arg0;
 		width = arg1;
 		height = arg2;
-		method2496(0, 0, arg1, arg2);
+		setClip(0, 0, arg1, arg2);
 	}
 
 	@OriginalMember(owner = "client!kb", name = "b", descriptor = "()V")
@@ -278,7 +278,7 @@ public final class SoftwareRaster {
 	}
 
 	@OriginalMember(owner = "client!kb", name = "c", descriptor = "(IIII)V")
-	public static void method2496(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	public static void setClip(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		if (arg0 < 0) {
 			arg0 = 0;
 		}

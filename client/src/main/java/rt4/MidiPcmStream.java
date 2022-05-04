@@ -265,7 +265,7 @@ public final class MidiPcmStream extends PcmStream {
 	private void method4427(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2) {
 		this.method4434(arg2, 64, arg1);
 		if ((this.anIntArray508[arg1] & 0x2) != 0) {
-			for (@Pc(28) MidiNote local28 = (MidiNote) this.aClass3_Sub3_Sub3_1.aClass69_126.method2279(); local28 != null; local28 = (MidiNote) this.aClass3_Sub3_Sub3_1.aClass69_126.method2286()) {
+			for (@Pc(28) MidiNote local28 = (MidiNote) this.aClass3_Sub3_Sub3_1.aClass69_126.tail(); local28 != null; local28 = (MidiNote) this.aClass3_Sub3_Sub3_1.aClass69_126.prev()) {
 				if (arg1 == local28.anInt3773 && local28.anInt3767 < 0) {
 					this.aClass3_Sub25ArrayArray1[arg1][local28.anInt3779] = null;
 					this.aClass3_Sub25ArrayArray1[arg1][arg2] = local28;

@@ -72,7 +72,7 @@ public final class Static125 {
 		}
 		local9 = Static265.anInt5765 * 128 + 64;
 		local15 = Static251.anInt5449 * 128 + 64;
-		local23 = SceneGraph.getTileHeight(Player.level, local15, local9) - Static57.anInt1744;
+		local23 = SceneGraph.getTileHeight(Player.level, local15, local9) - Static260.anInt1744;
 		@Pc(236) int local236 = local23 - Static5.anInt40;
 		@Pc(241) int local241 = local9 - Static134.renderZ;
 		@Pc(246) int local246 = local15 - Static138.renderX;

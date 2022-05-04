@@ -15,17 +15,6 @@ public final class Static183 {
 	@OriginalMember(owner = "client!ok", name = "f", descriptor = "J")
 	public static long prevClickTime = 0L;
 
-	@OriginalMember(owner = "client!ok", name = "a", descriptor = "(Lclient!ab;Lclient!ab;I)V")
-	public static void method3331(@OriginalArg(0) Node arg0, @OriginalArg(1) Node arg1) {
-		if (arg0.aClass3_223 != null) {
-			arg0.unlink();
-		}
-		arg0.aClass3_222 = arg1;
-		arg0.aClass3_223 = arg1.aClass3_223;
-		arg0.aClass3_223.aClass3_222 = arg0;
-		arg0.aClass3_222.aClass3_223 = arg0;
-	}
-
 	@OriginalMember(owner = "client!ok", name = "a", descriptor = "(IIB)Lclient!ce;")
 	public static SecondaryLinkedList method3333(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		@Pc(9) SecondaryLinkedList local9 = new SecondaryLinkedList();

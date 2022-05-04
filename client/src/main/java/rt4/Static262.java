@@ -31,11 +31,11 @@ public final class Static262 {
 				SceneGraph.tiles[local42][arg1][arg2] = new Tile(local42, arg1, arg2);
 			}
 		}
-		SceneGraph.tiles[arg0][arg1][arg2].aClass77_1 = local8;
+		SceneGraph.tiles[arg0][arg1][arg2].wall = local8;
 	}
 
 	@OriginalMember(owner = "client!vf", name = "a", descriptor = "(IB)Lclient!na;")
 	public static JagString method4510(@OriginalArg(0) int arg0) {
-		return arg0 >= 999999999 ? Static220.aClass100_930 : Static123.parseInt(arg0);
+		return arg0 >= 999999999 ? Static220.aClass100_930 : JagString.parseInt(arg0);
 	}
 }

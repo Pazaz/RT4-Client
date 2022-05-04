@@ -69,7 +69,7 @@ public final class ColorImageCache {
 					local29 = new ColorImageCacheEntry(row, this.size);
 					this.size++;
 				} else {
-					@Pc(66) ColorImageCacheEntry local66 = (ColorImageCacheEntry) this.recentlyUsed.method2279();
+					@Pc(66) ColorImageCacheEntry local66 = (ColorImageCacheEntry) this.recentlyUsed.tail();
 					local29 = new ColorImageCacheEntry(row, local66.index);
 					this.entries[local66.row] = null;
 					local66.unlink();

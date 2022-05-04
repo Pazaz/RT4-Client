@@ -141,6 +141,106 @@ public final class DelayedStateChange extends SecondaryNode {
 		return local13;
 	}
 
+	@OriginalMember(owner = "client!wc", name = "a", descriptor = "(ZI)V")
+	public static void method4600(@OriginalArg(1) int arg0) {
+		@Pc(8) DelayedStateChange local8 = create(4, arg0);
+		local8.pushClient();
+	}
+
+	@OriginalMember(owner = "client!jd", name = "a", descriptor = "(IB)V")
+	public static void method2353(@OriginalArg(0) int arg0) {
+		@Pc(12) DelayedStateChange local12 = create(12, arg0);
+		local12.pushClient();
+	}
+
+	@OriginalMember(owner = "client!k", name = "a", descriptor = "(B)Lclient!da;")
+	public static DelayedStateChange poll() {
+		@Pc(10) DelayedStateChange local10 = (DelayedStateChange) serverQueue.method795();
+		if (local10 != null) {
+			local10.unlink();
+			local10.method4365();
+			return local10;
+		}
+		do {
+			local10 = (DelayedStateChange) clientQueue.method795();
+			if (local10 == null) {
+				return null;
+			}
+			if (local10.getTime() > MonotonicClock.currentTimeMillis()) {
+				return null;
+			}
+			local10.unlink();
+			local10.method4365();
+		} while ((Long.MIN_VALUE & local10.secondaryKey) == 0L);
+		return local10;
+	}
+
+	@OriginalMember(owner = "client!lf", name = "a", descriptor = "(IIIIB)V")
+	public static void method2745(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+		@Pc(8) DelayedStateChange local8 = create(10, arg0);
+		local8.pushServer();
+		local8.intArg3 = arg2;
+		local8.intArg1 = arg3;
+		local8.intArg2 = arg1;
+	}
+
+	@OriginalMember(owner = "client!n", name = "a", descriptor = "(II)V")
+	public static void method3096(@OriginalArg(0) int arg0) {
+		@Pc(8) DelayedStateChange local8 = create(3, arg0);
+		local8.pushClient();
+	}
+
+	@OriginalMember(owner = "client!oi", name = "b", descriptor = "(II)V")
+	public static void method3345(@OriginalArg(0) int arg0) {
+		@Pc(8) DelayedStateChange local8 = create(5, arg0);
+		local8.pushClient();
+	}
+
+	@OriginalMember(owner = "client!ra", name = "a", descriptor = "(BIII)V")
+	public static void method3707(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
+		@Pc(12) DelayedStateChange local12 = create(9, arg0);
+		local12.pushServer();
+		local12.intArg1 = arg2;
+		local12.intArg3 = arg1;
+	}
+
+	@OriginalMember(owner = "client!si", name = "b", descriptor = "(IIB)V")
+	public static void method3938(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+		@Pc(16) DelayedStateChange local16 = create(12, arg1);
+		local16.pushServer();
+		local16.intArg1 = arg0;
+	}
+
+	@OriginalMember(owner = "client!tm", name = "a", descriptor = "(II)V")
+	public static void method4224(@OriginalArg(0) int arg0) {
+		@Pc(16) DelayedStateChange local16 = create(6, arg0);
+		local16.pushClient();
+	}
+
+	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(II)V")
+	public static void method4675(@OriginalArg(1) int arg0) {
+		@Pc(17) DelayedStateChange local17 = create(11, arg0);
+		local17.pushClient();
+	}
+
+	@OriginalMember(owner = "client!ac", name = "a", descriptor = "(BI)V")
+	public static void method24(@OriginalArg(1) int arg0) {
+		@Pc(16) DelayedStateChange local16 = create(1, arg0);
+		local16.pushClient();
+	}
+
+	@OriginalMember(owner = "client!ha", name = "b", descriptor = "(II)V")
+	public static void method1840(@OriginalArg(1) int arg0) {
+		@Pc(8) DelayedStateChange local8 = create(2, arg0);
+		local8.pushClient();
+	}
+
+	@OriginalMember(owner = "client!he", name = "c", descriptor = "(II)V")
+	public static void method1906(@OriginalArg(1) int arg0) {
+		@Pc(12) DelayedStateChange local12 = create(7, arg0);
+		local12.pushClient();
+	}
+
 	@OriginalMember(owner = "client!da", name = "a", descriptor = "(Z)V")
 	public final void pushClient() {
 		this.secondaryKey = MonotonicClock.currentTimeMillis() + 500L | Long.MIN_VALUE & this.secondaryKey;

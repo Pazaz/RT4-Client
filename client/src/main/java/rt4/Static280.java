@@ -657,10 +657,10 @@ public final class Static280 {
 
 	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(IIIIB)V")
 	public static void updateContainer(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		@Pc(12) Inv local12 = (Inv) Static20.objectContainerCache.get((long) arg3);
+		@Pc(12) Inv local12 = (Inv) Inv.objectContainerCache.get((long) arg3);
 		if (local12 == null) {
 			local12 = new Inv();
-			Static20.objectContainerCache.put(local12, (long) arg3);
+			Inv.objectContainerCache.put(local12, (long) arg3);
 		}
 		if (arg1 >= local12.objectIds.length) {
 			@Pc(39) int[] local39 = new int[arg1 + 1];
@@ -681,9 +681,4 @@ public final class Static280 {
 		local12.anIntArray422[arg1] = arg2;
 	}
 
-	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(II)V")
-	public static void method4675(@OriginalArg(1) int arg0) {
-		@Pc(17) DelayedStateChange local17 = DelayedStateChange.create(11, arg0);
-		local17.pushClient();
-	}
 }

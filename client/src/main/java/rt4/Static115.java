@@ -38,12 +38,12 @@ public final class Static115 {
     @OriginalMember(owner = "client!ja", name = "a", descriptor = "(IIIIB)V")
 	public static void method2310(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		if (Cross.type == 1) {
-			Sprites.crosses[Cross.milliseconds / 100].method1423(Cross.x - 8, Cross.y + -8);
+			Sprites.crosses[Cross.milliseconds / 100].renderTransparent(Cross.x - 8, Cross.y + -8);
 		}
 		if (Cross.type == 2) {
-			Sprites.crosses[Cross.milliseconds / 100 + 4].method1423(Cross.x - 8, Cross.y + -8);
+			Sprites.crosses[Cross.milliseconds / 100 + 4].renderTransparent(Cross.x - 8, Cross.y + -8);
 		}
-		Static256.method4392();
+		Player.setTutorialIsland();
 	}
 
 	@OriginalMember(owner = "client!ja", name = "a", descriptor = "(IIIIIZ)V")

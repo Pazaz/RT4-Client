@@ -9,9 +9,6 @@ public final class Static40 {
 	@OriginalMember(owner = "client!da", name = "ab", descriptor = "I")
 	public static int anInt1275;
 
-	@OriginalMember(owner = "client!da", name = "O", descriptor = "Lclient!na;")
-	public static final JagString aClass100_253 = JagString.parse("(U0a )2 via: ");
-
 	@OriginalMember(owner = "client!da", name = "d", descriptor = "(I)V")
 	public static void updateLoginScreenCamera() {
 		if (Static155.anInt3718 == -1 || Static52.anInt1694 == -1) {

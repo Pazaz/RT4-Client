@@ -18,16 +18,8 @@ public final class Static80 {
 	@OriginalMember(owner = "client!gf", name = "R", descriptor = "I")
 	public static int centralZoneX;
 
-	@OriginalMember(owner = "client!gf", name = "I", descriptor = "Lclient!na;")
-	public static final JagString aClass100_886 = JagString.parse(")3runescape)3com)4l=");
-
 	@OriginalMember(owner = "client!gf", name = "S", descriptor = "[I")
 	public static final int[] anIntArray419 = new int[] { 0, 2, 2, 2, 1, 1, 2, 2, 1, 3, 1, 1 };
-
-	@OriginalMember(owner = "client!gf", name = "a", descriptor = "(Lclient!ve;IIB)Lclient!mm;")
-	public static SoftwareSprite loadSoftwareAlphaSprite(@OriginalArg(0) Js5 arg0, @OriginalArg(2) int arg1) {
-		return SpriteLoader.decode(arg0, 0, arg1) ? Static102.method2071() : null;
-	}
 
 	@OriginalMember(owner = "client!gf", name = "a", descriptor = "(BII)V")
 	public static void method3616(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {

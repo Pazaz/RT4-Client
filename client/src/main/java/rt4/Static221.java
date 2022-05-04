@@ -9,10 +9,7 @@ public final class Static221 {
 	@OriginalMember(owner = "client!s", name = "a", descriptor = "[I")
 	public static int[] tt;
 
-	@OriginalMember(owner = "client!s", name = "i", descriptor = "[I")
-	public static int[] anIntArray376;
-
-    @OriginalMember(owner = "client!s", name = "b", descriptor = "(III)V")
+	@OriginalMember(owner = "client!s", name = "b", descriptor = "(III)V")
 	public static void method3392(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
 		if (Static250.anInt5434 > 0) {
 			Static267.method4528(Static250.anInt5434);
@@ -133,10 +130,10 @@ public final class Static221 {
 						}
 						@Pc(275) Scenery local275 = SceneGraph.getScenery(arg4, local114, local72);
 						if (local275 != null) {
-							@Pc(287) int local287 = (int) (local275.aLong56 >> 14) & 0x3F;
+							@Pc(287) int local287 = (int) (local275.key >> 14) & 0x3F;
 							if (local287 == 9) {
 								local234 = null;
-								@Pc(302) int local302 = (int) (local275.aLong56 >> 20) & 0x3;
+								@Pc(302) int local302 = (int) (local275.key >> 20) & 0x3;
 								@Pc(315) boolean local315;
 								@Pc(343) short local343;
 								@Pc(349) int local349;
@@ -253,10 +250,10 @@ public final class Static221 {
 						}
 						@Pc(899) Scenery local899 = SceneGraph.getScenery(arg4, local114, local72);
 						if (local899 != null) {
-							@Pc(911) int local911 = (int) (local899.aLong56 >> 14) & 0x3F;
+							@Pc(911) int local911 = (int) (local899.key >> 14) & 0x3F;
 							if (local911 == 9) {
 								@Pc(917) int[] local917 = null;
-								@Pc(925) int local925 = (int) (local899.aLong56 >> 20) & 0x3;
+								@Pc(925) int local925 = (int) (local899.key >> 20) & 0x3;
 								@Pc(973) int local973;
 								@Pc(947) boolean local947;
 								@Pc(961) short local961;

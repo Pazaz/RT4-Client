@@ -6,9 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static150 {
 
-	@OriginalMember(owner = "client!lk", name = "J", descriptor = "Lclient!na;")
-	public static final JagString aClass100_687 = JagString.parse(")4p=");
-
     @OriginalMember(owner = "client!lk", name = "V", descriptor = "I")
 	public static int anInt3582 = 0;
 

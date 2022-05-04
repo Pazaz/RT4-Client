@@ -12,9 +12,6 @@ public final class Static4 {
 	@OriginalMember(owner = "client!ac", name = "k", descriptor = "S")
 	public static short aShort1 = 32767;
 
-	@OriginalMember(owner = "client!ac", name = "l", descriptor = "Lclient!ck;")
-	public static final BasType aClass20_1 = new BasType();
-
 	@OriginalMember(owner = "client!ac", name = "n", descriptor = "I")
 	public static int anInt36 = 0;
 
@@ -33,12 +30,6 @@ public final class Static4 {
 	@OriginalMember(owner = "client!ac", name = "a", descriptor = "([J[Ljava/lang/Object;I)V")
 	public static void method23(@OriginalArg(0) long[] arg0, @OriginalArg(1) Object[] arg1) {
 		Static228.method3909(arg0.length - 1, arg0, 0, arg1);
-	}
-
-	@OriginalMember(owner = "client!ac", name = "a", descriptor = "(BI)V")
-	public static void method24(@OriginalArg(1) int arg0) {
-		@Pc(16) DelayedStateChange local16 = DelayedStateChange.create(1, arg0);
-		local16.pushClient();
 	}
 
 	@OriginalMember(owner = "client!ac", name = "a", descriptor = "(Lclient!na;I)I")

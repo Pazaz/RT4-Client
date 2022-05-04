@@ -8,6 +8,100 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!w")
 public final class SoftwareModel extends Model {
 
+	@OriginalMember(owner = "client!w", name = "nb", descriptor = "Lclient!w;")
+	public static final SoftwareModel aClass8_Sub1_Sub2_3 = new SoftwareModel();
+	@OriginalMember(owner = "client!w", name = "ab", descriptor = "Lclient!w;")
+	public static final SoftwareModel aClass8_Sub1_Sub2_1 = new SoftwareModel();
+	@OriginalMember(owner = "client!w", name = "eb", descriptor = "Lclient!w;")
+	public static final SoftwareModel aClass8_Sub1_Sub2_2 = new SoftwareModel();
+	@OriginalMember(owner = "client!w", name = "pb", descriptor = "[Z")
+	public static final boolean[] aBooleanArray132 = new boolean[4096];
+	@OriginalMember(owner = "client!w", name = "qb", descriptor = "[I")
+	public static final int[] anIntArray541 = new int[12];
+	@OriginalMember(owner = "client!w", name = "rb", descriptor = "[I")
+	public static final int[] anIntArray542 = new int[10];
+	@OriginalMember(owner = "client!w", name = "sb", descriptor = "[I")
+	public static final int[] anIntArray543 = new int[4096];
+	@OriginalMember(owner = "client!w", name = "tb", descriptor = "[I")
+	public static final int[] anIntArray544 = new int[4096];
+	@OriginalMember(owner = "client!w", name = "ub", descriptor = "[I")
+	public static final int[] anIntArray545 = new int[4096];
+	@OriginalMember(owner = "client!w", name = "xb", descriptor = "[I")
+	public static final int[] anIntArray547 = new int[10];
+	@OriginalMember(owner = "client!w", name = "Ab", descriptor = "[I")
+	public static final int[] anIntArray548 = new int[4096];
+	@OriginalMember(owner = "client!w", name = "Eb", descriptor = "[I")
+	public static final int[] anIntArray551 = new int[4096];
+	@OriginalMember(owner = "client!w", name = "Ib", descriptor = "[I")
+	public static final int[] anIntArray553 = new int[10];
+	@OriginalMember(owner = "client!w", name = "Jb", descriptor = "[Z")
+	public static final boolean[] aBooleanArray133 = new boolean[4096];
+	@OriginalMember(owner = "client!w", name = "Kb", descriptor = "[[I")
+	public static final int[][] anIntArrayArray45 = new int[12][4096];
+	@OriginalMember(owner = "client!w", name = "Nb", descriptor = "[I")
+	public static final int[] anIntArray555 = new int[4096];
+	@OriginalMember(owner = "client!w", name = "Pb", descriptor = "[I")
+	public static final int[] anIntArray556 = new int[4096];
+	@OriginalMember(owner = "client!w", name = "Qb", descriptor = "[I")
+	public static final int[] anIntArray557 = new int[12];
+	@OriginalMember(owner = "client!w", name = "Ub", descriptor = "[I")
+	public static final int[] anIntArray560 = new int[4096];
+	@OriginalMember(owner = "client!w", name = "Wb", descriptor = "[I")
+	public static final int[] anIntArray561 = new int[8192];
+	@OriginalMember(owner = "client!w", name = "vb", descriptor = "[[I")
+    public static int[][] anIntArrayArray43;
+	@OriginalMember(owner = "client!w", name = "Ob", descriptor = "Z")
+	public static boolean aBoolean307 = false;
+	@OriginalMember(owner = "client!w", name = "Lb", descriptor = "[I")
+	public static int[] anIntArray554 = new int[1];
+	@OriginalMember(owner = "client!w", name = "Vb", descriptor = "[S")
+	public static short[] aShortArray95 = new short[1];
+	@OriginalMember(owner = "client!w", name = "Fb", descriptor = "[B")
+	public static byte[] aByteArray78 = new byte[1];
+	@OriginalMember(owner = "client!w", name = "Tb", descriptor = "[I")
+	public static int[] anIntArray559 = new int[1];
+	@OriginalMember(owner = "client!w", name = "wb", descriptor = "[I")
+	public static int[] anIntArray546 = new int[1];
+	@OriginalMember(owner = "client!w", name = "Mb", descriptor = "I")
+	public static int anInt5792;
+	@OriginalMember(owner = "client!w", name = "Gb", descriptor = "I")
+	public static int anInt5791;
+	@OriginalMember(owner = "client!w", name = "Rb", descriptor = "I")
+	public static int anInt5793;
+	@OriginalMember(owner = "client!w", name = "Db", descriptor = "[I")
+	public static int[] anIntArray550;
+	@OriginalMember(owner = "client!w", name = "Bb", descriptor = "[I")
+	public static int[] anIntArray549;
+	@OriginalMember(owner = "client!w", name = "yb", descriptor = "[[I")
+	public static int[][] anIntArrayArray44;
+	@OriginalMember(owner = "client!w", name = "Sb", descriptor = "[I")
+	public static int[] anIntArray558;
+	@OriginalMember(owner = "client!w", name = "Hb", descriptor = "[I")
+	public static int[] anIntArray552;
+	@OriginalMember(owner = "client!w", name = "cb", descriptor = "[I")
+	public static int[] anIntArray535 = new int[1];
+	@OriginalMember(owner = "client!w", name = "db", descriptor = "[I")
+	public static int[] anIntArray536 = new int[1];
+	@OriginalMember(owner = "client!w", name = "fb", descriptor = "[B")
+	public static byte[] aByteArray76 = new byte[1];
+	@OriginalMember(owner = "client!w", name = "hb", descriptor = "[I")
+	public static int[] anIntArray537 = new int[1];
+	@OriginalMember(owner = "client!w", name = "ib", descriptor = "[S")
+	public static short[] aShortArray93 = new short[1];
+	@OriginalMember(owner = "client!w", name = "jb", descriptor = "[I")
+	public static int[] anIntArray538 = new int[1];
+	@OriginalMember(owner = "client!w", name = "kb", descriptor = "[S")
+	public static short[] aShortArray94 = new short[1];
+	@OriginalMember(owner = "client!w", name = "lb", descriptor = "[I")
+	public static int[] anIntArray539 = new int[1];
+	@OriginalMember(owner = "client!w", name = "mb", descriptor = "[B")
+	public static byte[] aByteArray77 = new byte[1];
+	@OriginalMember(owner = "client!w", name = "ob", descriptor = "[I")
+	public static int[] anIntArray540 = new int[1];
+	@OriginalMember(owner = "client!w", name = "zb", descriptor = "Z")
+	public static boolean aBoolean306 = false;
+	@OriginalMember(owner = "client!w", name = "Cb", descriptor = "I")
+	public static int anInt5790 = 0;
 	@OriginalMember(owner = "client!w", name = "t", descriptor = "[S")
 	private short[] aShortArray89;
 
@@ -114,14 +208,14 @@ public final class SoftwareModel extends Model {
 	private boolean aBoolean304 = false;
 
 	static {
-		if (Static268.aBoolean307) {
-			Static268.anIntArray550 = new int[4096];
-			Static268.anIntArray549 = new int[4096];
+		if (aBoolean307) {
+			anIntArray550 = new int[4096];
+			anIntArray549 = new int[4096];
 		} else {
-			Static268.anIntArray558 = new int[1600];
-			Static268.anIntArrayArray44 = new int[1600][64];
-			Static268.anIntArray552 = new int[32];
-			Static268.anIntArrayArray43 = new int[32][512];
+			anIntArray558 = new int[1600];
+			anIntArrayArray44 = new int[1600][64];
+			anIntArray552 = new int[32];
+			anIntArrayArray43 = new int[32][512];
 		}
 	}
 
@@ -246,25 +340,25 @@ public final class SoftwareModel extends Model {
 						local435 = arg0.aClass57Array2[this.anIntArray534[local133]];
 					}
 					local468 = arg1 + (arg3 * local435.anInt2437 + arg4 * local435.anInt2431 + arg5 * local435.anInt2436) / (local108 * local435.anInt2432) << 17;
-					this.anIntArray533[local133] = local468 | Static268.method4585(local416, local468 >> 17);
+					this.anIntArray533[local133] = local468 | method4585(local416, local468 >> 17);
 					if (arg0.aClass57Array2 == null || arg0.aClass57Array2[this.anIntArray524[local133]] == null) {
 						local435 = arg0.aClass57Array1[this.anIntArray524[local133]];
 					} else {
 						local435 = arg0.aClass57Array2[this.anIntArray524[local133]];
 					}
 					local468 = arg1 + (arg3 * local435.anInt2437 + arg4 * local435.anInt2431 + arg5 * local435.anInt2436) / (local108 * local435.anInt2432) << 17;
-					this.anIntArray523[local133] = local468 | Static268.method4585(local416, local468 >> 17);
+					this.anIntArray523[local133] = local468 | method4585(local416, local468 >> 17);
 					if (arg0.aClass57Array2 == null || arg0.aClass57Array2[this.anIntArray529[local133]] == null) {
 						local435 = arg0.aClass57Array1[this.anIntArray529[local133]];
 					} else {
 						local435 = arg0.aClass57Array2[this.anIntArray529[local133]];
 					}
 					local468 = arg1 + (arg3 * local435.anInt2437 + arg4 * local435.anInt2431 + arg5 * local435.anInt2436) / (local108 * local435.anInt2432) << 17;
-					this.anIntArray532[local133] = local468 | Static268.method4585(local416, local468 >> 17);
+					this.anIntArray532[local133] = local468 | method4585(local416, local468 >> 17);
 				} else if (local366 == 1) {
 					local614 = arg0.aClass126Array1[local133];
 					local468 = arg1 + (arg3 * local614.anInt4769 + arg4 * local614.anInt4770 + arg5 * local614.anInt4767) / (local108 + local108 / 2) << 17;
-					this.anIntArray533[local133] = local468 | Static268.method4585(arg0.aShortArray24[local133] & 0xFFFF, local468 >> 17);
+					this.anIntArray533[local133] = local468 | method4585(arg0.aShortArray24[local133] & 0xFFFF, local468 >> 17);
 					this.anIntArray532[local133] = -1;
 				} else if (local366 == 3) {
 					this.anIntArray533[local133] = 128;
@@ -279,25 +373,25 @@ public final class SoftwareModel extends Model {
 					local435 = arg0.aClass57Array2[this.anIntArray534[local133]];
 				}
 				local468 = arg1 + (arg3 * local435.anInt2437 + arg4 * local435.anInt2431 + arg5 * local435.anInt2436) / (local108 * local435.anInt2432);
-				this.anIntArray533[local133] = Static268.method4582(local468);
+				this.anIntArray533[local133] = method4582(local468);
 				if (arg0.aClass57Array2 == null || arg0.aClass57Array2[this.anIntArray524[local133]] == null) {
 					local435 = arg0.aClass57Array1[this.anIntArray524[local133]];
 				} else {
 					local435 = arg0.aClass57Array2[this.anIntArray524[local133]];
 				}
 				local468 = arg1 + (arg3 * local435.anInt2437 + arg4 * local435.anInt2431 + arg5 * local435.anInt2436) / (local108 * local435.anInt2432);
-				this.anIntArray523[local133] = Static268.method4582(local468);
+				this.anIntArray523[local133] = method4582(local468);
 				if (arg0.aClass57Array2 == null || arg0.aClass57Array2[this.anIntArray529[local133]] == null) {
 					local435 = arg0.aClass57Array1[this.anIntArray529[local133]];
 				} else {
 					local435 = arg0.aClass57Array2[this.anIntArray529[local133]];
 				}
 				local468 = arg1 + (arg3 * local435.anInt2437 + arg4 * local435.anInt2431 + arg5 * local435.anInt2436) / (local108 * local435.anInt2432);
-				this.anIntArray532[local133] = Static268.method4582(local468);
+				this.anIntArray532[local133] = method4582(local468);
 			} else if (local366 == 1) {
 				local614 = arg0.aClass126Array1[local133];
 				local468 = arg1 + (arg3 * local614.anInt4769 + arg4 * local614.anInt4770 + arg5 * local614.anInt4767) / (local108 + local108 / 2);
-				this.anIntArray533[local133] = Static268.method4582(local468);
+				this.anIntArray533[local133] = method4582(local468);
 				this.anIntArray532[local133] = -1;
 			} else {
 				this.anIntArray532[local133] = -2;
@@ -422,16 +516,59 @@ public final class SoftwareModel extends Model {
 		}
 	}
 
+	@OriginalMember(owner = "client!w", name = "m", descriptor = "()V")
+	public static void method4580() {
+		aBoolean307 = true;
+		anIntArray550 = new int[4096];
+		anIntArray549 = new int[4096];
+		anIntArray558 = null;
+		anIntArrayArray44 = null;
+		anIntArray552 = null;
+		anIntArrayArray43 = null;
+	}
+
+    @OriginalMember(owner = "client!w", name = "o", descriptor = "()V")
+    public static void method4583() {
+        aBoolean307 = false;
+        anIntArray550 = null;
+        anIntArray549 = null;
+        anIntArray558 = new int[1600];
+        anIntArrayArray44 = new int[1600][64];
+        anIntArray552 = new int[32];
+        anIntArrayArray43 = new int[32][512];
+    }
+
+	@OriginalMember(owner = "client!w", name = "f", descriptor = "(I)I")
+	public static int method4582(@OriginalArg(0) int arg0) {
+		if (arg0 < 2) {
+			arg0 = 2;
+		} else if (arg0 > 126) {
+			arg0 = 126;
+		}
+		return arg0;
+	}
+
+	@OriginalMember(owner = "client!w", name = "a", descriptor = "(II)I")
+	public static int method4585(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+		arg1 = arg1 * (arg0 & 0x7F) >> 7;
+		if (arg1 < 2) {
+			arg1 = 2;
+		} else if (arg1 > 126) {
+			arg1 = 126;
+		}
+		return (arg0 & 0xFF80) + arg1;
+	}
+
 	@OriginalMember(owner = "client!w", name = "e", descriptor = "(I)V")
 	private void method4579(@OriginalArg(0) int arg0) {
-		if (Static268.aBooleanArray132[arg0]) {
+		if (aBooleanArray132[arg0]) {
 			this.method4587(arg0);
 			return;
 		}
 		@Pc(12) int local12 = this.anIntArray534[arg0];
 		@Pc(17) int local17 = this.anIntArray524[arg0];
 		@Pc(22) int local22 = this.anIntArray529[arg0];
-		Rasteriser.testX = Static268.aBooleanArray133[arg0];
+		Rasteriser.testX = aBooleanArray133[arg0];
 		if (this.aByteArray75 == null) {
 			Rasteriser.alpha = 0;
 		} else {
@@ -452,14 +589,14 @@ public final class SoftwareModel extends Model {
 				local151 = this.anIntArray525[local136];
 			}
 			if (this.anIntArray532[arg0] == -1) {
-				Rasteriser.fillTexturedAlphaTriangle(Static268.anIntArray551[local12], Static268.anIntArray551[local17], Static268.anIntArray551[local22], Static268.anIntArray556[local12], Static268.anIntArray556[local17], Static268.anIntArray556[local22], this.anIntArray533[arg0], this.anIntArray533[arg0], this.anIntArray533[arg0], Static268.anIntArray560[local141], Static268.anIntArray560[local146], Static268.anIntArray560[local151], Static268.anIntArray548[local141], Static268.anIntArray548[local146], Static268.anIntArray548[local151], Static268.anIntArray544[local141], Static268.anIntArray544[local146], Static268.anIntArray544[local151], this.aShortArray92[arg0]);
+				Rasteriser.fillTexturedAlphaTriangle(anIntArray551[local12], anIntArray551[local17], anIntArray551[local22], anIntArray556[local12], anIntArray556[local17], anIntArray556[local22], this.anIntArray533[arg0], this.anIntArray533[arg0], this.anIntArray533[arg0], anIntArray560[local141], anIntArray560[local146], anIntArray560[local151], anIntArray548[local141], anIntArray548[local146], anIntArray548[local151], anIntArray544[local141], anIntArray544[local146], anIntArray544[local151], this.aShortArray92[arg0]);
 			} else {
-				Rasteriser.fillTexturedAlphaTriangle(Static268.anIntArray551[local12], Static268.anIntArray551[local17], Static268.anIntArray551[local22], Static268.anIntArray556[local12], Static268.anIntArray556[local17], Static268.anIntArray556[local22], this.anIntArray533[arg0], this.anIntArray523[arg0], this.anIntArray532[arg0], Static268.anIntArray560[local141], Static268.anIntArray560[local146], Static268.anIntArray560[local151], Static268.anIntArray548[local141], Static268.anIntArray548[local146], Static268.anIntArray548[local151], Static268.anIntArray544[local141], Static268.anIntArray544[local146], Static268.anIntArray544[local151], this.aShortArray92[arg0]);
+				Rasteriser.fillTexturedAlphaTriangle(anIntArray551[local12], anIntArray551[local17], anIntArray551[local22], anIntArray556[local12], anIntArray556[local17], anIntArray556[local22], this.anIntArray533[arg0], this.anIntArray523[arg0], this.anIntArray532[arg0], anIntArray560[local141], anIntArray560[local146], anIntArray560[local151], anIntArray548[local141], anIntArray548[local146], anIntArray548[local151], anIntArray544[local141], anIntArray544[local146], anIntArray544[local151], this.aShortArray92[arg0]);
 			}
 		} else if (this.anIntArray532[arg0] == -1) {
-			Rasteriser.fillTriangle(Static268.anIntArray551[local12], Static268.anIntArray551[local17], Static268.anIntArray551[local22], Static268.anIntArray556[local12], Static268.anIntArray556[local17], Static268.anIntArray556[local22], Rasteriser.palette[this.anIntArray533[arg0] & 0xFFFF]);
+			Rasteriser.fillTriangle(anIntArray551[local12], anIntArray551[local17], anIntArray551[local22], anIntArray556[local12], anIntArray556[local17], anIntArray556[local22], Rasteriser.palette[this.anIntArray533[arg0] & 0xFFFF]);
 		} else {
-			Rasteriser.fillGouraudTriangle(Static268.anIntArray551[local12], Static268.anIntArray551[local17], Static268.anIntArray551[local22], Static268.anIntArray556[local12], Static268.anIntArray556[local17], Static268.anIntArray556[local22], this.anIntArray533[arg0] & 0xFFFF, this.anIntArray523[arg0] & 0xFFFF, this.anIntArray532[arg0] & 0xFFFF);
+			Rasteriser.fillGouraudTriangle(anIntArray551[local12], anIntArray551[local17], anIntArray551[local22], anIntArray556[local12], anIntArray556[local17], anIntArray556[local22], this.anIntArray533[arg0] & 0xFFFF, this.anIntArray523[arg0] & 0xFFFF, this.anIntArray532[arg0] & 0xFFFF);
 		}
 	}
 
@@ -482,14 +619,14 @@ public final class SoftwareModel extends Model {
 				@Pc(38) int local38;
 				if (this.anIntArray532[local1] == -1) {
 					local38 = this.anIntArray533[local1] & 0xFFFE0000;
-					this.anIntArray533[local1] = local38 | Static268.method4585(local25, local38 >> 17);
+					this.anIntArray533[local1] = local38 | method4585(local25, local38 >> 17);
 				} else if (this.anIntArray532[local1] != -2) {
 					local38 = this.anIntArray533[local1] & 0xFFFE0000;
-					this.anIntArray533[local1] = local38 | Static268.method4585(local25, local38 >> 17);
+					this.anIntArray533[local1] = local38 | method4585(local25, local38 >> 17);
 					local38 = this.anIntArray523[local1] & 0xFFFE0000;
-					this.anIntArray523[local1] = local38 | Static268.method4585(local25, local38 >> 17);
+					this.anIntArray523[local1] = local38 | method4585(local25, local38 >> 17);
 					local38 = this.anIntArray532[local1] & 0xFFFE0000;
-					this.anIntArray532[local1] = local38 | Static268.method4585(local25, local38 >> 17);
+					this.anIntArray532[local1] = local38 | method4585(local25, local38 >> 17);
 				}
 			}
 		}
@@ -598,9 +735,9 @@ public final class SoftwareModel extends Model {
 		if (this.anIntArrayArray41 == null) {
 			return false;
 		} else {
-			Static268.anInt5793 = 0;
-			Static268.anInt5791 = 0;
-			Static268.anInt5792 = 0;
+			anInt5793 = 0;
+			anInt5791 = 0;
+			anInt5792 = 0;
 			return true;
 		}
 	}
@@ -750,18 +887,18 @@ public final class SoftwareModel extends Model {
 			local223 = local577;
 			local577 = local208 * arg2 - local227 * arg1 >> 16;
 			local227 = local208 * arg1 + local227 * arg2 >> 16;
-			Static268.anIntArray543[local204] = local227 - local24;
+			anIntArray543[local204] = local227 - local24;
 			if (local227 >= 50) {
-				Static268.anIntArray556[local204] = local172 + (local223 << 9) / local227;
-				Static268.anIntArray551[local204] = local174 + (local577 << 9) / local227;
+				anIntArray556[local204] = local172 + (local223 << 9) / local227;
+				anIntArray551[local204] = local174 + (local577 << 9) / local227;
 			} else {
-				Static268.anIntArray556[local204] = -5000;
+				anIntArray556[local204] = -5000;
 				local154 = true;
 			}
 			if (local170) {
-				Static268.anIntArray560[local204] = local223;
-				Static268.anIntArray548[local204] = local577;
-				Static268.anIntArray544[local204] = local227;
+				anIntArray560[local204] = local223;
+				anIntArray548[local204] = local577;
+				anIntArray544[local204] = local227;
 			}
 		}
 		try {
@@ -971,13 +1108,13 @@ public final class SoftwareModel extends Model {
 				local71 += arg5;
 				local83 = local66 * local40 - local71 * local36 >> 16;
 				local71 = local66 * local36 + local71 * local40 >> 16;
-				Static268.anIntArray543[local52] = local71 - local50;
-				Static268.anIntArray556[local52] = local6 + (local61 << 9) / local71;
-				Static268.anIntArray551[local52] = local8 + (local83 << 9) / local71;
+				anIntArray543[local52] = local71 - local50;
+				anIntArray556[local52] = local6 + (local61 << 9) / local71;
+				anIntArray551[local52] = local8 + (local83 << 9) / local71;
 				if (this.anInt5789 > 0) {
-					Static268.anIntArray560[local52] = local61;
-					Static268.anIntArray548[local52] = local83;
-					Static268.anIntArray544[local52] = local71;
+					anIntArray560[local52] = local61;
+					anIntArray548[local52] = local83;
+					anIntArray544[local52] = local71;
 				}
 			}
 			this.method4590(false, arg6 >= 0L, arg6, this.aShort35, this.aShort35 << 1, null);
@@ -993,9 +1130,9 @@ public final class SoftwareModel extends Model {
 		@Pc(10) int local10 = this.anIntArray534[arg0];
 		@Pc(15) int local15 = this.anIntArray524[arg0];
 		@Pc(20) int local20 = this.anIntArray529[arg0];
-		@Pc(24) int local24 = Static268.anIntArray544[local10];
-		@Pc(28) int local28 = Static268.anIntArray544[local15];
-		@Pc(32) int local32 = Static268.anIntArray544[local20];
+		@Pc(24) int local24 = anIntArray544[local10];
+		@Pc(28) int local28 = anIntArray544[local15];
+		@Pc(32) int local32 = anIntArray544[local20];
 		if (this.aByteArray75 == null) {
 			Rasteriser.alpha = 0;
 		} else {
@@ -1006,76 +1143,76 @@ public final class SoftwareModel extends Model {
 		@Pc(86) int local86;
 		@Pc(99) int local99;
 		if (local24 >= 50) {
-			Static268.anIntArray542[0] = Static268.anIntArray556[local10];
-			Static268.anIntArray547[0] = Static268.anIntArray551[local10];
+			anIntArray542[0] = anIntArray556[local10];
+			anIntArray547[0] = anIntArray551[local10];
 			local5++;
-			Static268.anIntArray553[0] = this.anIntArray533[arg0] & 0xFFFF;
+			anIntArray553[0] = this.anIntArray533[arg0] & 0xFFFF;
 		} else {
-			local75 = Static268.anIntArray560[local10];
-			local79 = Static268.anIntArray548[local10];
+			local75 = anIntArray560[local10];
+			local79 = anIntArray548[local10];
 			local86 = this.anIntArray533[arg0] & 0xFFFF;
 			if (local32 >= 50) {
 				local99 = (50 - local24) * MathUtils.reciprical16[local32 - local24];
-				Static268.anIntArray542[0] = local1 + (local75 + ((Static268.anIntArray560[local20] - local75) * local99 >> 16) << 9) / 50;
-				Static268.anIntArray547[0] = local3 + (local79 + ((Static268.anIntArray548[local20] - local79) * local99 >> 16) << 9) / 50;
+				anIntArray542[0] = local1 + (local75 + ((anIntArray560[local20] - local75) * local99 >> 16) << 9) / 50;
+				anIntArray547[0] = local3 + (local79 + ((anIntArray548[local20] - local79) * local99 >> 16) << 9) / 50;
 				local5++;
-				Static268.anIntArray553[0] = local86 + (((this.anIntArray532[arg0] & 0xFFFF) - local86) * local99 >> 16);
+				anIntArray553[0] = local86 + (((this.anIntArray532[arg0] & 0xFFFF) - local86) * local99 >> 16);
 			}
 			if (local28 >= 50) {
 				local99 = (50 - local24) * MathUtils.reciprical16[local28 - local24];
-				Static268.anIntArray542[local5] = local1 + (local75 + ((Static268.anIntArray560[local15] - local75) * local99 >> 16) << 9) / 50;
-				Static268.anIntArray547[local5] = local3 + (local79 + ((Static268.anIntArray548[local15] - local79) * local99 >> 16) << 9) / 50;
-				Static268.anIntArray553[local5++] = local86 + (((this.anIntArray523[arg0] & 0xFFFF) - local86) * local99 >> 16);
+				anIntArray542[local5] = local1 + (local75 + ((anIntArray560[local15] - local75) * local99 >> 16) << 9) / 50;
+				anIntArray547[local5] = local3 + (local79 + ((anIntArray548[local15] - local79) * local99 >> 16) << 9) / 50;
+				anIntArray553[local5++] = local86 + (((this.anIntArray523[arg0] & 0xFFFF) - local86) * local99 >> 16);
 			}
 		}
 		if (local28 >= 50) {
-			Static268.anIntArray542[local5] = Static268.anIntArray556[local15];
-			Static268.anIntArray547[local5] = Static268.anIntArray551[local15];
-			Static268.anIntArray553[local5++] = this.anIntArray523[arg0] & 0xFFFF;
+			anIntArray542[local5] = anIntArray556[local15];
+			anIntArray547[local5] = anIntArray551[local15];
+			anIntArray553[local5++] = this.anIntArray523[arg0] & 0xFFFF;
 		} else {
-			local75 = Static268.anIntArray560[local15];
-			local79 = Static268.anIntArray548[local15];
+			local75 = anIntArray560[local15];
+			local79 = anIntArray548[local15];
 			local86 = this.anIntArray523[arg0] & 0xFFFF;
 			if (local24 >= 50) {
 				local99 = (50 - local28) * MathUtils.reciprical16[local24 - local28];
-				Static268.anIntArray542[local5] = local1 + (local75 + ((Static268.anIntArray560[local10] - local75) * local99 >> 16) << 9) / 50;
-				Static268.anIntArray547[local5] = local3 + (local79 + ((Static268.anIntArray548[local10] - local79) * local99 >> 16) << 9) / 50;
-				Static268.anIntArray553[local5++] = local86 + (((this.anIntArray533[arg0] & 0xFFFF) - local86) * local99 >> 16);
+				anIntArray542[local5] = local1 + (local75 + ((anIntArray560[local10] - local75) * local99 >> 16) << 9) / 50;
+				anIntArray547[local5] = local3 + (local79 + ((anIntArray548[local10] - local79) * local99 >> 16) << 9) / 50;
+				anIntArray553[local5++] = local86 + (((this.anIntArray533[arg0] & 0xFFFF) - local86) * local99 >> 16);
 			}
 			if (local32 >= 50) {
 				local99 = (50 - local28) * MathUtils.reciprical16[local32 - local28];
-				Static268.anIntArray542[local5] = local1 + (local75 + ((Static268.anIntArray560[local20] - local75) * local99 >> 16) << 9) / 50;
-				Static268.anIntArray547[local5] = local3 + (local79 + ((Static268.anIntArray548[local20] - local79) * local99 >> 16) << 9) / 50;
-				Static268.anIntArray553[local5++] = local86 + (((this.anIntArray532[arg0] & 0xFFFF) - local86) * local99 >> 16);
+				anIntArray542[local5] = local1 + (local75 + ((anIntArray560[local20] - local75) * local99 >> 16) << 9) / 50;
+				anIntArray547[local5] = local3 + (local79 + ((anIntArray548[local20] - local79) * local99 >> 16) << 9) / 50;
+				anIntArray553[local5++] = local86 + (((this.anIntArray532[arg0] & 0xFFFF) - local86) * local99 >> 16);
 			}
 		}
 		if (local32 >= 50) {
-			Static268.anIntArray542[local5] = Static268.anIntArray556[local20];
-			Static268.anIntArray547[local5] = Static268.anIntArray551[local20];
-			Static268.anIntArray553[local5++] = this.anIntArray532[arg0] & 0xFFFF;
+			anIntArray542[local5] = anIntArray556[local20];
+			anIntArray547[local5] = anIntArray551[local20];
+			anIntArray553[local5++] = this.anIntArray532[arg0] & 0xFFFF;
 		} else {
-			local75 = Static268.anIntArray560[local20];
-			local79 = Static268.anIntArray548[local20];
+			local75 = anIntArray560[local20];
+			local79 = anIntArray548[local20];
 			local86 = this.anIntArray532[arg0] & 0xFFFF;
 			if (local28 >= 50) {
 				local99 = (50 - local32) * MathUtils.reciprical16[local28 - local32];
-				Static268.anIntArray542[local5] = local1 + (local75 + ((Static268.anIntArray560[local15] - local75) * local99 >> 16) << 9) / 50;
-				Static268.anIntArray547[local5] = local3 + (local79 + ((Static268.anIntArray548[local15] - local79) * local99 >> 16) << 9) / 50;
-				Static268.anIntArray553[local5++] = local86 + (((this.anIntArray523[arg0] & 0xFFFF) - local86) * local99 >> 16);
+				anIntArray542[local5] = local1 + (local75 + ((anIntArray560[local15] - local75) * local99 >> 16) << 9) / 50;
+				anIntArray547[local5] = local3 + (local79 + ((anIntArray548[local15] - local79) * local99 >> 16) << 9) / 50;
+				anIntArray553[local5++] = local86 + (((this.anIntArray523[arg0] & 0xFFFF) - local86) * local99 >> 16);
 			}
 			if (local24 >= 50) {
 				local99 = (50 - local32) * MathUtils.reciprical16[local24 - local32];
-				Static268.anIntArray542[local5] = local1 + (local75 + ((Static268.anIntArray560[local10] - local75) * local99 >> 16) << 9) / 50;
-				Static268.anIntArray547[local5] = local3 + (local79 + ((Static268.anIntArray548[local10] - local79) * local99 >> 16) << 9) / 50;
-				Static268.anIntArray553[local5++] = local86 + (((this.anIntArray533[arg0] & 0xFFFF) - local86) * local99 >> 16);
+				anIntArray542[local5] = local1 + (local75 + ((anIntArray560[local10] - local75) * local99 >> 16) << 9) / 50;
+				anIntArray547[local5] = local3 + (local79 + ((anIntArray548[local10] - local79) * local99 >> 16) << 9) / 50;
+				anIntArray553[local5++] = local86 + (((this.anIntArray533[arg0] & 0xFFFF) - local86) * local99 >> 16);
 			}
 		}
-		local75 = Static268.anIntArray542[0];
-		local79 = Static268.anIntArray542[1];
-		local86 = Static268.anIntArray542[2];
-		local99 = Static268.anIntArray547[0];
-		@Pc(614) int local614 = Static268.anIntArray547[1];
-		@Pc(618) int local618 = Static268.anIntArray547[2];
+		local75 = anIntArray542[0];
+		local79 = anIntArray542[1];
+		local86 = anIntArray542[2];
+		local99 = anIntArray547[0];
+		@Pc(614) int local614 = anIntArray547[1];
+		@Pc(618) int local618 = anIntArray547[2];
 		Rasteriser.testX = false;
 		@Pc(709) int local709;
 		@Pc(714) int local714;
@@ -1097,20 +1234,20 @@ public final class SoftwareModel extends Model {
 					local719 = this.anIntArray525[local704];
 				}
 				if (this.anIntArray532[arg0] == -1) {
-					Rasteriser.fillTexturedAlphaTriangle(local99, local614, local618, local75, local79, local86, this.anIntArray533[arg0], this.anIntArray533[arg0], this.anIntArray533[arg0], Static268.anIntArray560[local709], Static268.anIntArray560[local714], Static268.anIntArray560[local719], Static268.anIntArray548[local709], Static268.anIntArray548[local714], Static268.anIntArray548[local719], Static268.anIntArray544[local709], Static268.anIntArray544[local714], Static268.anIntArray544[local719], this.aShortArray92[arg0]);
+					Rasteriser.fillTexturedAlphaTriangle(local99, local614, local618, local75, local79, local86, this.anIntArray533[arg0], this.anIntArray533[arg0], this.anIntArray533[arg0], anIntArray560[local709], anIntArray560[local714], anIntArray560[local719], anIntArray548[local709], anIntArray548[local714], anIntArray548[local719], anIntArray544[local709], anIntArray544[local714], anIntArray544[local719], this.aShortArray92[arg0]);
 				} else {
-					Rasteriser.fillTexturedAlphaTriangle(local99, local614, local618, local75, local79, local86, Static268.anIntArray553[0], Static268.anIntArray553[1], Static268.anIntArray553[2], Static268.anIntArray560[local709], Static268.anIntArray560[local714], Static268.anIntArray560[local719], Static268.anIntArray548[local709], Static268.anIntArray548[local714], Static268.anIntArray548[local719], Static268.anIntArray544[local709], Static268.anIntArray544[local714], Static268.anIntArray544[local719], this.aShortArray92[arg0]);
+					Rasteriser.fillTexturedAlphaTriangle(local99, local614, local618, local75, local79, local86, anIntArray553[0], anIntArray553[1], anIntArray553[2], anIntArray560[local709], anIntArray560[local714], anIntArray560[local719], anIntArray548[local709], anIntArray548[local714], anIntArray548[local719], anIntArray544[local709], anIntArray544[local714], anIntArray544[local719], this.aShortArray92[arg0]);
 				}
 			} else if (this.anIntArray532[arg0] == -1) {
 				Rasteriser.fillTriangle(local99, local614, local618, local75, local79, local86, Rasteriser.palette[this.anIntArray533[arg0] & 0xFFFF]);
 			} else {
-				Rasteriser.fillGouraudTriangle(local99, local614, local618, local75, local79, local86, Static268.anIntArray553[0], Static268.anIntArray553[1], Static268.anIntArray553[2]);
+				Rasteriser.fillGouraudTriangle(local99, local614, local618, local75, local79, local86, anIntArray553[0], anIntArray553[1], anIntArray553[2]);
 			}
 		}
 		if (local5 != 4) {
 			return;
 		}
-		if (local75 < 0 || local79 < 0 || local86 < 0 || local75 > Rasteriser.width || local79 > Rasteriser.width || local86 > Rasteriser.width || Static268.anIntArray542[3] < 0 || Static268.anIntArray542[3] > Rasteriser.width) {
+		if (local75 < 0 || local79 < 0 || local86 < 0 || local75 > Rasteriser.width || local79 > Rasteriser.width || local86 > Rasteriser.width || anIntArray542[3] < 0 || anIntArray542[3] > Rasteriser.width) {
 			Rasteriser.testX = true;
 		}
 		if (this.aShortArray92 != null && this.aShortArray92[arg0] != -1) {
@@ -1126,19 +1263,19 @@ public final class SoftwareModel extends Model {
 			}
 			@Pc(984) short local984 = this.aShortArray92[arg0];
 			if (this.anIntArray532[arg0] == -1) {
-				Rasteriser.fillTexturedAlphaTriangle(local99, local614, local618, local75, local79, local86, this.anIntArray533[arg0], this.anIntArray533[arg0], this.anIntArray533[arg0], Static268.anIntArray560[local709], Static268.anIntArray560[local714], Static268.anIntArray560[local719], Static268.anIntArray548[local709], Static268.anIntArray548[local714], Static268.anIntArray548[local719], Static268.anIntArray544[local709], Static268.anIntArray544[local714], Static268.anIntArray544[local719], local984);
-				Rasteriser.fillTexturedAlphaTriangle(local99, local618, Static268.anIntArray547[3], local75, local86, Static268.anIntArray542[3], this.anIntArray533[arg0], this.anIntArray533[arg0], this.anIntArray533[arg0], Static268.anIntArray560[local709], Static268.anIntArray560[local714], Static268.anIntArray560[local719], Static268.anIntArray548[local709], Static268.anIntArray548[local714], Static268.anIntArray548[local719], Static268.anIntArray544[local709], Static268.anIntArray544[local714], Static268.anIntArray544[local719], local984);
+				Rasteriser.fillTexturedAlphaTriangle(local99, local614, local618, local75, local79, local86, this.anIntArray533[arg0], this.anIntArray533[arg0], this.anIntArray533[arg0], anIntArray560[local709], anIntArray560[local714], anIntArray560[local719], anIntArray548[local709], anIntArray548[local714], anIntArray548[local719], anIntArray544[local709], anIntArray544[local714], anIntArray544[local719], local984);
+				Rasteriser.fillTexturedAlphaTriangle(local99, local618, anIntArray547[3], local75, local86, anIntArray542[3], this.anIntArray533[arg0], this.anIntArray533[arg0], this.anIntArray533[arg0], anIntArray560[local709], anIntArray560[local714], anIntArray560[local719], anIntArray548[local709], anIntArray548[local714], anIntArray548[local719], anIntArray544[local709], anIntArray544[local714], anIntArray544[local719], local984);
 			} else {
-				Rasteriser.fillTexturedAlphaTriangle(local99, local614, local618, local75, local79, local86, Static268.anIntArray553[0], Static268.anIntArray553[1], Static268.anIntArray553[2], Static268.anIntArray560[local709], Static268.anIntArray560[local714], Static268.anIntArray560[local719], Static268.anIntArray548[local709], Static268.anIntArray548[local714], Static268.anIntArray548[local719], Static268.anIntArray544[local709], Static268.anIntArray544[local714], Static268.anIntArray544[local719], local984);
-				Rasteriser.fillTexturedAlphaTriangle(local99, local618, Static268.anIntArray547[3], local75, local86, Static268.anIntArray542[3], Static268.anIntArray553[0], Static268.anIntArray553[2], Static268.anIntArray553[3], Static268.anIntArray560[local709], Static268.anIntArray560[local714], Static268.anIntArray560[local719], Static268.anIntArray548[local709], Static268.anIntArray548[local714], Static268.anIntArray548[local719], Static268.anIntArray544[local709], Static268.anIntArray544[local714], Static268.anIntArray544[local719], local984);
+				Rasteriser.fillTexturedAlphaTriangle(local99, local614, local618, local75, local79, local86, anIntArray553[0], anIntArray553[1], anIntArray553[2], anIntArray560[local709], anIntArray560[local714], anIntArray560[local719], anIntArray548[local709], anIntArray548[local714], anIntArray548[local719], anIntArray544[local709], anIntArray544[local714], anIntArray544[local719], local984);
+				Rasteriser.fillTexturedAlphaTriangle(local99, local618, anIntArray547[3], local75, local86, anIntArray542[3], anIntArray553[0], anIntArray553[2], anIntArray553[3], anIntArray560[local709], anIntArray560[local714], anIntArray560[local719], anIntArray548[local709], anIntArray548[local714], anIntArray548[local719], anIntArray544[local709], anIntArray544[local714], anIntArray544[local719], local984);
 			}
 		} else if (this.anIntArray532[arg0] == -1) {
 			local709 = Rasteriser.palette[this.anIntArray533[arg0] & 0xFFFF];
 			Rasteriser.fillTriangle(local99, local614, local618, local75, local79, local86, local709);
-			Rasteriser.fillTriangle(local99, local618, Static268.anIntArray547[3], local75, local86, Static268.anIntArray542[3], local709);
+			Rasteriser.fillTriangle(local99, local618, anIntArray547[3], local75, local86, anIntArray542[3], local709);
 		} else {
-			Rasteriser.fillGouraudTriangle(local99, local614, local618, local75, local79, local86, Static268.anIntArray553[0], Static268.anIntArray553[1], Static268.anIntArray553[2]);
-			Rasteriser.fillGouraudTriangle(local99, local618, Static268.anIntArray547[3], local75, local86, Static268.anIntArray542[3], Static268.anIntArray553[0], Static268.anIntArray553[2], Static268.anIntArray553[3]);
+			Rasteriser.fillGouraudTriangle(local99, local614, local618, local75, local79, local86, anIntArray553[0], anIntArray553[1], anIntArray553[2]);
+			Rasteriser.fillGouraudTriangle(local99, local618, anIntArray547[3], local75, local86, anIntArray542[3], anIntArray553[0], anIntArray553[2], anIntArray553[3]);
 		}
 	}
 
@@ -1165,16 +1302,16 @@ public final class SoftwareModel extends Model {
 	@OriginalMember(owner = "client!w", name = "a", descriptor = "(ZZZ)Lclient!ak;")
 	@Override
 	public final Model method4560(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
-		if (!arg0 && Static268.aByteArray77.length < this.anInt5787) {
-			Static268.aByteArray77 = new byte[this.anInt5787 + 100];
+		if (!arg0 && aByteArray77.length < this.anInt5787) {
+			aByteArray77 = new byte[this.anInt5787 + 100];
 		}
-		if (!arg1 && Static268.aShortArray94.length < this.anInt5787) {
-			Static268.anIntArray539 = new int[this.anInt5787 + 100];
-			Static268.anIntArray540 = new int[this.anInt5787 + 100];
-			Static268.anIntArray538 = new int[this.anInt5787 + 100];
-			Static268.aShortArray94 = new short[this.anInt5787 + 100];
+		if (!arg1 && aShortArray94.length < this.anInt5787) {
+			anIntArray539 = new int[this.anInt5787 + 100];
+			anIntArray540 = new int[this.anInt5787 + 100];
+			anIntArray538 = new int[this.anInt5787 + 100];
+			aShortArray94 = new short[this.anInt5787 + 100];
 		}
-		return this.method4584(arg0, arg1, Static268.aClass8_Sub1_Sub2_2, Static268.aByteArray77, Static268.aShortArray94, Static268.anIntArray539, Static268.anIntArray540, Static268.anIntArray538);
+		return this.method4584(arg0, arg1, aClass8_Sub1_Sub2_2, aByteArray77, aShortArray94, anIntArray539, anIntArray540, anIntArray538);
 	}
 
 	@OriginalMember(owner = "client!w", name = "j", descriptor = "()I")
@@ -1233,30 +1370,30 @@ public final class SoftwareModel extends Model {
 		@Pc(41) int local41;
 		if (arg0 == 0) {
 			local6 = 0;
-			Static268.anInt5793 = 0;
-			Static268.anInt5791 = 0;
-			Static268.anInt5792 = 0;
+			anInt5793 = 0;
+			anInt5791 = 0;
+			anInt5792 = 0;
 			for (local14 = 0; local14 < local2; local14++) {
 				@Pc(21) int local21 = arg1[local14];
 				if (local21 < this.anIntArrayArray41.length) {
 					@Pc(31) int[] local31 = this.anIntArrayArray41[local21];
 					for (local33 = 0; local33 < local31.length; local33++) {
 						local41 = local31[local33];
-						Static268.anInt5793 += this.anIntArray528[local41];
-						Static268.anInt5791 += this.anIntArray527[local41];
-						Static268.anInt5792 += this.anIntArray531[local41];
+						anInt5793 += this.anIntArray528[local41];
+						anInt5791 += this.anIntArray527[local41];
+						anInt5792 += this.anIntArray531[local41];
 						local6++;
 					}
 				}
 			}
 			if (local6 > 0) {
-				Static268.anInt5793 = Static268.anInt5793 / local6 + arg2;
-				Static268.anInt5791 = Static268.anInt5791 / local6 + arg3;
-				Static268.anInt5792 = Static268.anInt5792 / local6 + arg4;
+				anInt5793 = anInt5793 / local6 + arg2;
+				anInt5791 = anInt5791 / local6 + arg3;
+				anInt5792 = anInt5792 / local6 + arg4;
 			} else {
-				Static268.anInt5793 = arg2;
-				Static268.anInt5791 = arg3;
-				Static268.anInt5792 = arg4;
+				anInt5793 = arg2;
+				anInt5791 = arg3;
+				anInt5792 = arg4;
 			}
 			return;
 		}
@@ -1286,9 +1423,9 @@ public final class SoftwareModel extends Model {
 					local117 = this.anIntArrayArray41[local14];
 					for (local119 = 0; local119 < local117.length; local119++) {
 						local33 = local117[local119];
-						this.anIntArray528[local33] -= Static268.anInt5793;
-						this.anIntArray527[local33] -= Static268.anInt5791;
-						this.anIntArray531[local33] -= Static268.anInt5792;
+						this.anIntArray528[local33] -= anInt5793;
+						this.anIntArray527[local33] -= anInt5791;
+						this.anIntArray531[local33] -= anInt5792;
 						if (arg4 != 0) {
 							local41 = MathUtils.sin[arg4];
 							local222 = MathUtils.cos[arg4];
@@ -1310,9 +1447,9 @@ public final class SoftwareModel extends Model {
 							this.anIntArray531[local33] = this.anIntArray531[local33] * local222 + 32767 - this.anIntArray528[local33] * local41 >> 16;
 							this.anIntArray528[local33] = local240;
 						}
-						this.anIntArray528[local33] += Static268.anInt5793;
-						this.anIntArray527[local33] += Static268.anInt5791;
-						this.anIntArray531[local33] += Static268.anInt5792;
+						this.anIntArray528[local33] += anInt5793;
+						this.anIntArray527[local33] += anInt5791;
+						this.anIntArray531[local33] += anInt5792;
 					}
 				}
 			}
@@ -1323,15 +1460,15 @@ public final class SoftwareModel extends Model {
 					local117 = this.anIntArrayArray41[local14];
 					for (local119 = 0; local119 < local117.length; local119++) {
 						local33 = local117[local119];
-						this.anIntArray528[local33] -= Static268.anInt5793;
-						this.anIntArray527[local33] -= Static268.anInt5791;
-						this.anIntArray531[local33] -= Static268.anInt5792;
+						this.anIntArray528[local33] -= anInt5793;
+						this.anIntArray527[local33] -= anInt5791;
+						this.anIntArray531[local33] -= anInt5792;
 						this.anIntArray528[local33] = this.anIntArray528[local33] * arg2 / 128;
 						this.anIntArray527[local33] = this.anIntArray527[local33] * arg3 / 128;
 						this.anIntArray531[local33] = this.anIntArray531[local33] * arg4 / 128;
-						this.anIntArray528[local33] += Static268.anInt5793;
-						this.anIntArray527[local33] += Static268.anInt5791;
-						this.anIntArray531[local33] += Static268.anInt5792;
+						this.anIntArray528[local33] += anInt5793;
+						this.anIntArray527[local33] += anInt5791;
+						this.anIntArray531[local33] += anInt5792;
 					}
 				}
 			}
@@ -1402,16 +1539,16 @@ public final class SoftwareModel extends Model {
 	@OriginalMember(owner = "client!w", name = "c", descriptor = "(ZZZ)Lclient!ak;")
 	@Override
 	public final Model method4572(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
-		if (!arg0 && Static268.aByteArray76.length < this.anInt5787) {
-			Static268.aByteArray76 = new byte[this.anInt5787 + 100];
+		if (!arg0 && aByteArray76.length < this.anInt5787) {
+			aByteArray76 = new byte[this.anInt5787 + 100];
 		}
-		if (!arg1 && Static268.aShortArray93.length < this.anInt5787) {
-			Static268.anIntArray536 = new int[this.anInt5787 + 100];
-			Static268.anIntArray537 = new int[this.anInt5787 + 100];
-			Static268.anIntArray535 = new int[this.anInt5787 + 100];
-			Static268.aShortArray93 = new short[this.anInt5787 + 100];
+		if (!arg1 && aShortArray93.length < this.anInt5787) {
+			anIntArray536 = new int[this.anInt5787 + 100];
+			anIntArray537 = new int[this.anInt5787 + 100];
+			anIntArray535 = new int[this.anInt5787 + 100];
+			aShortArray93 = new short[this.anInt5787 + 100];
 		}
-		return this.method4584(arg0, arg1, Static268.aClass8_Sub1_Sub2_1, Static268.aByteArray76, Static268.aShortArray93, Static268.anIntArray536, Static268.anIntArray537, Static268.anIntArray535);
+		return this.method4584(arg0, arg1, aClass8_Sub1_Sub2_1, aByteArray76, aShortArray93, anIntArray536, anIntArray537, anIntArray535);
 	}
 
 	@OriginalMember(owner = "client!w", name = "a", descriptor = "(ZZJIILclient!ga;)V")
@@ -1422,14 +1559,14 @@ public final class SoftwareModel extends Model {
 		@Pc(5) int local5 = 0;
 		@Pc(7) int local7 = 0;
 		@Pc(11) int local11;
-		if (!Static268.aBoolean307) {
+		if (!aBoolean307) {
 			for (local11 = 0; local11 < 1600; local11++) {
-				Static268.anIntArray558[local11] = 0;
+				anIntArray558[local11] = 0;
 			}
 			for (local11 = 0; local11 < 32; local11++) {
-				Static268.anIntArray552[local11] = 0;
+				anIntArray552[local11] = 0;
 			}
-			Static268.anInt5790 = 0;
+			anInt5790 = 0;
 		}
 		@Pc(51) int local51;
 		@Pc(56) int local56;
@@ -1445,19 +1582,19 @@ public final class SoftwareModel extends Model {
 				local51 = this.anIntArray534[local11];
 				local56 = this.anIntArray524[local11];
 				local61 = this.anIntArray529[local11];
-				local65 = Static268.anIntArray556[local51];
-				local69 = Static268.anIntArray556[local56];
-				@Pc(73) int local73 = Static268.anIntArray556[local61];
+				local65 = anIntArray556[local51];
+				local69 = anIntArray556[local56];
+				@Pc(73) int local73 = anIntArray556[local61];
 				if (arg0 && (local65 == -5000 || local69 == -5000 || local73 == -5000)) {
-					local88 = Static268.anIntArray560[local51];
-					local92 = Static268.anIntArray560[local56];
-					local96 = Static268.anIntArray560[local61];
-					@Pc(100) int local100 = Static268.anIntArray548[local51];
-					local104 = Static268.anIntArray548[local56];
-					@Pc(108) int local108 = Static268.anIntArray548[local61];
-					@Pc(112) int local112 = Static268.anIntArray544[local51];
-					@Pc(116) int local116 = Static268.anIntArray544[local56];
-					@Pc(120) int local120 = Static268.anIntArray544[local61];
+					local88 = anIntArray560[local51];
+					local92 = anIntArray560[local56];
+					local96 = anIntArray560[local61];
+					@Pc(100) int local100 = anIntArray548[local51];
+					local104 = anIntArray548[local56];
+					@Pc(108) int local108 = anIntArray548[local61];
+					@Pc(112) int local112 = anIntArray544[local51];
+					@Pc(116) int local116 = anIntArray544[local56];
+					@Pc(120) int local120 = anIntArray544[local61];
 					local88 -= local92;
 					@Pc(128) int local128 = local96 - local92;
 					@Pc(132) int local132 = local100 - local104;
@@ -1468,96 +1605,96 @@ public final class SoftwareModel extends Model {
 					@Pc(160) int local160 = local140 * local128 - local88 * local144;
 					@Pc(168) int local168 = local88 * local136 - local132 * local128;
 					if (local92 * local152 + local104 * local160 + local116 * local168 > 0) {
-						Static268.aBooleanArray132[local11] = true;
-						if (Static268.aBoolean307) {
-							Static268.anIntArray550[local5] = (Static268.anIntArray543[local51] + Static268.anIntArray543[local56] + Static268.anIntArray543[local61]) / 3;
-							Static268.anIntArray549[local5++] = local11;
+						aBooleanArray132[local11] = true;
+						if (aBoolean307) {
+							anIntArray550[local5] = (anIntArray543[local51] + anIntArray543[local56] + anIntArray543[local61]) / 3;
+							anIntArray549[local5++] = local11;
 						} else {
-							@Pc(224) int local224 = (Static268.anIntArray543[local51] + Static268.anIntArray543[local56] + Static268.anIntArray543[local61]) / 3 + arg3;
-							if (Static268.anIntArray558[local224] < 64) {
-								Static268.anIntArrayArray44[local224][Static268.anIntArray558[local224]++] = local11;
+							@Pc(224) int local224 = (anIntArray543[local51] + anIntArray543[local56] + anIntArray543[local61]) / 3 + arg3;
+							if (anIntArray558[local224] < 64) {
+								anIntArrayArray44[local224][anIntArray558[local224]++] = local11;
 							} else {
-								@Pc(247) int local247 = Static268.anIntArray558[local224];
+								@Pc(247) int local247 = anIntArray558[local224];
 								if (local247 == 64) {
-									if (Static268.anInt5790 == 512) {
+									if (anInt5790 == 512) {
 										continue;
 									}
-									Static268.anIntArray558[local224] = local247 = Static268.anInt5790++ + 65;
+									anIntArray558[local224] = local247 = anInt5790++ + 65;
 								}
 								local247 -= 65;
-								Static268.anIntArrayArray43[local247][Static268.anIntArray552[local247]++] = local11;
+								anIntArrayArray43[local247][anIntArray552[local247]++] = local11;
 							}
 						}
 					}
 				} else {
-					if (arg1 && this.method4589(Static150.anInt3582 + Rasteriser.centerX, Static34.anInt1053 + Rasteriser.centerY, Static268.anIntArray551[local51], Static268.anIntArray551[local56], Static268.anIntArray551[local61], local65, local69, local73)) {
+					if (arg1 && this.method4589(Static150.anInt3582 + Rasteriser.centerX, Static34.anInt1053 + Rasteriser.centerY, anIntArray551[local51], anIntArray551[local56], anIntArray551[local61], local65, local69, local73)) {
 						Static259.aLongArray11[Static2.anInt7++] = arg2;
 						arg1 = false;
 					}
-					if ((local65 - local69) * (Static268.anIntArray551[local61] - Static268.anIntArray551[local56]) - (Static268.anIntArray551[local51] - Static268.anIntArray551[local56]) * (local73 - local69) > 0) {
-						Static268.aBooleanArray132[local11] = false;
+					if ((local65 - local69) * (anIntArray551[local61] - anIntArray551[local56]) - (anIntArray551[local51] - anIntArray551[local56]) * (local73 - local69) > 0) {
+						aBooleanArray132[local11] = false;
 						if (local65 >= 0 && local69 >= 0 && local73 >= 0 && local65 <= Rasteriser.width && local69 <= Rasteriser.width && local73 <= Rasteriser.width) {
-							Static268.aBooleanArray133[local11] = false;
+							aBooleanArray133[local11] = false;
 						} else {
-							Static268.aBooleanArray133[local11] = true;
+							aBooleanArray133[local11] = true;
 						}
-						if (Static268.aBoolean307) {
-							Static268.anIntArray550[local5] = (Static268.anIntArray543[local51] + Static268.anIntArray543[local56] + Static268.anIntArray543[local61]) / 3;
-							Static268.anIntArray549[local5++] = local11;
+						if (aBoolean307) {
+							anIntArray550[local5] = (anIntArray543[local51] + anIntArray543[local56] + anIntArray543[local61]) / 3;
+							anIntArray549[local5++] = local11;
 						} else {
-							local88 = (Static268.anIntArray543[local51] + Static268.anIntArray543[local56] + Static268.anIntArray543[local61]) / 3 + arg3;
-							if (Static268.anIntArray558[local88] < 64) {
-								Static268.anIntArrayArray44[local88][Static268.anIntArray558[local88]++] = local11;
+							local88 = (anIntArray543[local51] + anIntArray543[local56] + anIntArray543[local61]) / 3 + arg3;
+							if (anIntArray558[local88] < 64) {
+								anIntArrayArray44[local88][anIntArray558[local88]++] = local11;
 							} else {
-								local92 = Static268.anIntArray558[local88];
+								local92 = anIntArray558[local88];
 								if (local92 == 64) {
-									if (Static268.anInt5790 == 512) {
+									if (anInt5790 == 512) {
 										continue;
 									}
-									Static268.anIntArray558[local88] = local92 = Static268.anInt5790++ + 65;
+									anIntArray558[local88] = local92 = anInt5790++ + 65;
 								}
 								local92 -= 65;
-								Static268.anIntArrayArray43[local92][Static268.anIntArray552[local92]++] = local11;
+								anIntArrayArray43[local92][anIntArray552[local92]++] = local11;
 							}
 						}
 					}
 				}
 			}
 		}
-		if (Static268.aBoolean307) {
-			Static172.method3223(0, local5 - 1, Static268.anIntArray550, Static268.anIntArray549);
+		if (aBoolean307) {
+			Static172.method3223(0, local5 - 1, anIntArray550, anIntArray549);
 			if (this.aByteArray73 == null) {
 				for (local11 = 0; local11 < local5; local11++) {
-					this.method4579(Static268.anIntArray549[local11]);
+					this.method4579(anIntArray549[local11]);
 				}
 				return;
 			}
 			for (local11 = 0; local11 < 12; local11++) {
-				Static268.anIntArray541[local11] = 0;
-				Static268.anIntArray557[local11] = 0;
+				anIntArray541[local11] = 0;
+				anIntArray557[local11] = 0;
 			}
 			for (local11 = 0; local11 < local5; local11++) {
-				local51 = Static268.anIntArray549[local11];
-				local56 = Static268.anIntArray550[local11];
+				local51 = anIntArray549[local11];
+				local56 = anIntArray550[local11];
 				@Pc(523) byte local523 = this.aByteArray73[local51];
-				local65 = Static268.anIntArray541[local523]++;
-				Static268.anIntArrayArray45[local523][local65] = local51;
+				local65 = anIntArray541[local523]++;
+				anIntArrayArray45[local523][local65] = local51;
 				if (local523 < 10) {
-					Static268.anIntArray557[local523] += local56;
+					anIntArray557[local523] += local56;
 				} else if (local523 == 10) {
-					Static268.anIntArray545[local65] = local56;
+					anIntArray545[local65] = local56;
 				} else {
-					Static268.anIntArray555[local65] = local56;
+					anIntArray555[local65] = local56;
 				}
 			}
 		} else {
 			@Pc(590) int[] local590;
 			if (this.aByteArray73 == null) {
 				for (local11 = arg4 - 1; local11 >= 0; local11--) {
-					local51 = Static268.anIntArray558[local11];
+					local51 = anIntArray558[local11];
 					if (local51 > 0) {
 						local56 = local51 > 64 ? 64 : local51;
-						local590 = Static268.anIntArrayArray44[local11];
+						local590 = anIntArrayArray44[local11];
 						for (local65 = 0; local65 < local56; local65++) {
 							local69 = local590[local65];
 							if (local69 < 65536) {
@@ -1566,9 +1703,9 @@ public final class SoftwareModel extends Model {
 						}
 					}
 					if (local51 > 64) {
-						local56 = Static268.anIntArray558[local11] - 64 - 1;
-						local590 = Static268.anIntArrayArray43[local56];
-						for (local65 = 0; local65 < Static268.anIntArray552[local56]; local65++) {
+						local56 = anIntArray558[local11] - 64 - 1;
+						local590 = anIntArrayArray43[local56];
+						for (local65 = 0; local65 < anIntArray552[local56]; local65++) {
 							local69 = local590[local65];
 							if (local69 < 65536) {
 								this.method4579(local590[local65]);
@@ -1579,11 +1716,11 @@ public final class SoftwareModel extends Model {
 				return;
 			}
 			for (local11 = 0; local11 < 12; local11++) {
-				Static268.anIntArray541[local11] = 0;
-				Static268.anIntArray557[local11] = 0;
+				anIntArray541[local11] = 0;
+				anIntArray557[local11] = 0;
 			}
 			for (local11 = arg4 - 1; local11 >= 0; local11--) {
-				local51 = Static268.anIntArray558[local11];
+				local51 = anIntArray558[local11];
 				@Pc(704) byte local704;
 				if (local51 > 0) {
 					if (local51 > 64) {
@@ -1591,69 +1728,69 @@ public final class SoftwareModel extends Model {
 					} else {
 						local56 = local51;
 					}
-					local590 = Static268.anIntArrayArray44[local11];
+					local590 = anIntArrayArray44[local11];
 					for (local65 = 0; local65 < local56; local65++) {
 						local69 = local590[local65];
 						if (local69 < 65536) {
 							local704 = this.aByteArray73[local69];
-							local88 = Static268.anIntArray541[local704]++;
-							Static268.anIntArrayArray45[local704][local88] = local69;
+							local88 = anIntArray541[local704]++;
+							anIntArrayArray45[local704][local88] = local69;
 							if (local704 < 10) {
-								Static268.anIntArray557[local704] += local11;
+								anIntArray557[local704] += local11;
 							} else if (local704 == 10) {
-								Static268.anIntArray545[local88] = local11;
+								anIntArray545[local88] = local11;
 							} else {
-								Static268.anIntArray555[local88] = local11;
+								anIntArray555[local88] = local11;
 							}
 						} else {
-							Static268.anIntArray561[local7++] = (local69 >> 16) - 1;
+							anIntArray561[local7++] = (local69 >> 16) - 1;
 						}
 					}
 				}
 				if (local51 > 64) {
-					local56 = Static268.anIntArray558[local11] - 64 - 1;
-					local590 = Static268.anIntArrayArray43[local56];
-					for (local65 = 0; local65 < Static268.anIntArray552[local56]; local65++) {
+					local56 = anIntArray558[local11] - 64 - 1;
+					local590 = anIntArrayArray43[local56];
+					for (local65 = 0; local65 < anIntArray552[local56]; local65++) {
 						local69 = local590[local65];
 						if (local69 < 65536) {
 							local704 = this.aByteArray73[local69];
-							local88 = Static268.anIntArray541[local704]++;
-							Static268.anIntArrayArray45[local704][local88] = local69;
+							local88 = anIntArray541[local704]++;
+							anIntArrayArray45[local704][local88] = local69;
 							if (local704 < 10) {
-								Static268.anIntArray557[local704] += local11;
+								anIntArray557[local704] += local11;
 							} else if (local704 == 10) {
-								Static268.anIntArray545[local88] = local11;
+								anIntArray545[local88] = local11;
 							} else {
-								Static268.anIntArray555[local88] = local11;
+								anIntArray555[local88] = local11;
 							}
 						} else {
-							Static268.anIntArray561[local7++] = (local69 >> 16) - 1;
+							anIntArray561[local7++] = (local69 >> 16) - 1;
 						}
 					}
 				}
 			}
 		}
 		local11 = 0;
-		if (Static268.anIntArray541[1] > 0 || Static268.anIntArray541[2] > 0) {
-			local11 = (Static268.anIntArray557[1] + Static268.anIntArray557[2]) / (Static268.anIntArray541[1] + Static268.anIntArray541[2]);
+		if (anIntArray541[1] > 0 || anIntArray541[2] > 0) {
+			local11 = (anIntArray557[1] + anIntArray557[2]) / (anIntArray541[1] + anIntArray541[2]);
 		}
 		local51 = 0;
-		if (Static268.anIntArray541[3] > 0 || Static268.anIntArray541[4] > 0) {
-			local51 = (Static268.anIntArray557[3] + Static268.anIntArray557[4]) / (Static268.anIntArray541[3] + Static268.anIntArray541[4]);
+		if (anIntArray541[3] > 0 || anIntArray541[4] > 0) {
+			local51 = (anIntArray557[3] + anIntArray557[4]) / (anIntArray541[3] + anIntArray541[4]);
 		}
 		local56 = 0;
-		if (Static268.anIntArray541[6] > 0 || Static268.anIntArray541[8] > 0) {
-			local56 = (Static268.anIntArray557[6] + Static268.anIntArray557[8]) / (Static268.anIntArray541[6] + Static268.anIntArray541[8]);
+		if (anIntArray541[6] > 0 || anIntArray541[8] > 0) {
+			local56 = (anIntArray557[6] + anIntArray557[8]) / (anIntArray541[6] + anIntArray541[8]);
 		}
 		local65 = 0;
-		local69 = Static268.anIntArray541[10];
-		@Pc(928) int[] local928 = Static268.anIntArrayArray45[10];
-		@Pc(930) int[] local930 = Static268.anIntArray545;
+		local69 = anIntArray541[10];
+		@Pc(928) int[] local928 = anIntArrayArray45[10];
+		@Pc(930) int[] local930 = anIntArray545;
 		if (local69 == 0) {
 			local65 = 0;
-			local69 = Static268.anIntArray541[11];
-			local928 = Static268.anIntArrayArray45[11];
-			local930 = Static268.anIntArray555;
+			local69 = anIntArray541[11];
+			local928 = anIntArrayArray45[11];
+			local930 = anIntArray555;
 		}
 		if (local69 > 0) {
 			local61 = local930[0];
@@ -1663,11 +1800,11 @@ public final class SoftwareModel extends Model {
 		for (local92 = 0; local92 < 10; local92++) {
 			while (local92 == 0 && local61 > local11) {
 				this.method4579(local928[local65++]);
-				if (local65 == local69 && local928 != Static268.anIntArrayArray45[11]) {
+				if (local65 == local69 && local928 != anIntArrayArray45[11]) {
 					local65 = 0;
-					local69 = Static268.anIntArray541[11];
-					local928 = Static268.anIntArrayArray45[11];
-					local930 = Static268.anIntArray555;
+					local69 = anIntArray541[11];
+					local928 = anIntArrayArray45[11];
+					local930 = anIntArray555;
 				}
 				if (local65 < local69) {
 					local61 = local930[local65];
@@ -1677,11 +1814,11 @@ public final class SoftwareModel extends Model {
 			}
 			while (local92 == 3 && local61 > local51) {
 				this.method4579(local928[local65++]);
-				if (local65 == local69 && local928 != Static268.anIntArrayArray45[11]) {
+				if (local65 == local69 && local928 != anIntArrayArray45[11]) {
 					local65 = 0;
-					local69 = Static268.anIntArray541[11];
-					local928 = Static268.anIntArrayArray45[11];
-					local930 = Static268.anIntArray555;
+					local69 = anIntArray541[11];
+					local928 = anIntArrayArray45[11];
+					local930 = anIntArray555;
 				}
 				if (local65 < local69) {
 					local61 = local930[local65];
@@ -1691,11 +1828,11 @@ public final class SoftwareModel extends Model {
 			}
 			while (local92 == 5 && local61 > local56) {
 				this.method4579(local928[local65++]);
-				if (local65 == local69 && local928 != Static268.anIntArrayArray45[11]) {
+				if (local65 == local69 && local928 != anIntArrayArray45[11]) {
 					local65 = 0;
-					local69 = Static268.anIntArray541[11];
-					local928 = Static268.anIntArrayArray45[11];
-					local930 = Static268.anIntArray555;
+					local69 = anIntArray541[11];
+					local928 = anIntArrayArray45[11];
+					local930 = anIntArray555;
 				}
 				if (local65 < local69) {
 					local61 = local930[local65];
@@ -1703,19 +1840,19 @@ public final class SoftwareModel extends Model {
 					local61 = -1000;
 				}
 			}
-			local96 = Static268.anIntArray541[local92];
-			@Pc(1096) int[] local1096 = Static268.anIntArrayArray45[local92];
+			local96 = anIntArray541[local92];
+			@Pc(1096) int[] local1096 = anIntArrayArray45[local92];
 			for (local104 = 0; local104 < local96; local104++) {
 				this.method4579(local1096[local104]);
 			}
 		}
 		while (local61 != -1000) {
 			this.method4579(local928[local65++]);
-			if (local65 == local69 && local928 != Static268.anIntArrayArray45[11]) {
+			if (local65 == local69 && local928 != anIntArrayArray45[11]) {
 				local65 = 0;
-				local928 = Static268.anIntArrayArray45[11];
-				local69 = Static268.anIntArray541[11];
-				local930 = Static268.anIntArray555;
+				local928 = anIntArrayArray45[11];
+				local69 = anIntArray541[11];
+				local930 = anIntArray555;
 			}
 			if (local65 < local69) {
 				local61 = local930[local65];
@@ -1773,13 +1910,13 @@ public final class SoftwareModel extends Model {
 				local71 += arg5;
 				local83 = local66 * local40 - local71 * local36 >> 16;
 				local71 = local66 * local36 + local71 * local40 >> 16;
-				Static268.anIntArray543[local52] = local71 - local50;
-				Static268.anIntArray556[local52] = local6 + (local61 << 9) / arg6;
-				Static268.anIntArray551[local52] = local8 + (local83 << 9) / arg6;
+				anIntArray543[local52] = local71 - local50;
+				anIntArray556[local52] = local6 + (local61 << 9) / arg6;
+				anIntArray551[local52] = local8 + (local83 << 9) / arg6;
 				if (this.anInt5789 > 0) {
-					Static268.anIntArray560[local52] = local61;
-					Static268.anIntArray548[local52] = local83;
-					Static268.anIntArray544[local52] = local71;
+					anIntArray560[local52] = local61;
+					anIntArray548[local52] = local83;
+					anIntArray544[local52] = local71;
 				}
 			}
 			this.method4590(false, false, 0L, this.aShort35, this.aShort35 << 1, null);
@@ -1859,9 +1996,9 @@ public final class SoftwareModel extends Model {
 		@Pc(21) int local21;
 		if (arg0 == 0) {
 			local6 = 0;
-			Static268.anInt5793 = 0;
-			Static268.anInt5791 = 0;
-			Static268.anInt5792 = 0;
+			anInt5793 = 0;
+			anInt5791 = 0;
+			anInt5792 = 0;
 			for (local14 = 0; local14 < local2; local14++) {
 				local21 = arg1[local14];
 				if (local21 < this.anIntArrayArray41.length) {
@@ -1869,23 +2006,23 @@ public final class SoftwareModel extends Model {
 					for (local33 = 0; local33 < local31.length; local33++) {
 						local41 = local31[local33];
 						if (this.aShortArray91 == null || (arg6 & this.aShortArray91[local41]) != 0) {
-							Static268.anInt5793 += this.anIntArray528[local41];
-							Static268.anInt5791 += this.anIntArray527[local41];
-							Static268.anInt5792 += this.anIntArray531[local41];
+							anInt5793 += this.anIntArray528[local41];
+							anInt5791 += this.anIntArray527[local41];
+							anInt5792 += this.anIntArray531[local41];
 							local6++;
 						}
 					}
 				}
 			}
 			if (local6 > 0) {
-				Static268.anInt5793 = Static268.anInt5793 / local6 + arg2;
-				Static268.anInt5791 = Static268.anInt5791 / local6 + arg3;
-				Static268.anInt5792 = Static268.anInt5792 / local6 + arg4;
-				Static268.aBoolean306 = true;
+				anInt5793 = anInt5793 / local6 + arg2;
+				anInt5791 = anInt5791 / local6 + arg3;
+				anInt5792 = anInt5792 / local6 + arg4;
+				aBoolean306 = true;
 			} else {
-				Static268.anInt5793 = arg2;
-				Static268.anInt5791 = arg3;
-				Static268.anInt5792 = arg4;
+				anInt5793 = arg2;
+				anInt5791 = arg3;
+				anInt5792 = arg4;
 			}
 			return;
 		}
@@ -1947,9 +2084,9 @@ public final class SoftwareModel extends Model {
 						for (local206 = 0; local206 < local204.length; local206++) {
 							local33 = local204[local206];
 							if (this.aShortArray91 == null || (arg6 & this.aShortArray91[local33]) != 0) {
-								this.anIntArray528[local33] -= Static268.anInt5793;
-								this.anIntArray527[local33] -= Static268.anInt5791;
-								this.anIntArray531[local33] -= Static268.anInt5792;
+								this.anIntArray528[local33] -= anInt5793;
+								this.anIntArray527[local33] -= anInt5791;
+								this.anIntArray531[local33] -= anInt5792;
 								if (arg4 != 0) {
 									local41 = MathUtils.sin[arg4];
 									local307 = MathUtils.cos[arg4];
@@ -1971,9 +2108,9 @@ public final class SoftwareModel extends Model {
 									this.anIntArray531[local33] = this.anIntArray531[local33] * local307 + 32767 - this.anIntArray528[local33] * local41 >> 16;
 									this.anIntArray528[local33] = local329;
 								}
-								this.anIntArray528[local33] += Static268.anInt5793;
-								this.anIntArray527[local33] += Static268.anInt5791;
-								this.anIntArray531[local33] += Static268.anInt5792;
+								this.anIntArray528[local33] += anInt5793;
+								this.anIntArray527[local33] += anInt5791;
+								this.anIntArray531[local33] += anInt5792;
 							}
 						}
 					}
@@ -1985,17 +2122,17 @@ public final class SoftwareModel extends Model {
 				local206 = arg7[12];
 				local33 = arg7[13];
 				local41 = arg7[14];
-				if (Static268.aBoolean306) {
-					local307 = arg7[0] * Static268.anInt5793 + arg7[3] * Static268.anInt5791 + arg7[6] * Static268.anInt5792 + 16384 >> 15;
-					local329 = arg7[1] * Static268.anInt5793 + arg7[4] * Static268.anInt5791 + arg7[7] * Static268.anInt5792 + 16384 >> 15;
-					local351 = arg7[2] * Static268.anInt5793 + arg7[5] * Static268.anInt5791 + arg7[8] * Static268.anInt5792 + 16384 >> 15;
+				if (aBoolean306) {
+					local307 = arg7[0] * anInt5793 + arg7[3] * anInt5791 + arg7[6] * anInt5792 + 16384 >> 15;
+					local329 = arg7[1] * anInt5793 + arg7[4] * anInt5791 + arg7[7] * anInt5792 + 16384 >> 15;
+					local351 = arg7[2] * anInt5793 + arg7[5] * anInt5791 + arg7[8] * anInt5792 + 16384 >> 15;
 					local307 += local206;
 					local329 += local33;
 					local351 += local41;
-					Static268.anInt5793 = local307;
-					Static268.anInt5791 = local329;
-					Static268.anInt5792 = local351;
-					Static268.aBoolean306 = false;
+					anInt5793 = local307;
+					anInt5791 = local329;
+					anInt5792 = local351;
+					aBoolean306 = false;
 				}
 				@Pc(374) int[] local374 = new int[9];
 				local329 = MathUtils.cos[arg2] >> 1;
@@ -2015,12 +2152,12 @@ public final class SoftwareModel extends Model {
 				local374[6] = -local398 * local404 + local392 * local426 + 16384 >> 15;
 				local374[7] = local398 * local410 + local392 * local418 + 16384 >> 15;
 				local374[8] = local392 * local329 + 16384 >> 15;
-				@Pc(554) int local554 = local374[0] * -Static268.anInt5793 + local374[1] * -Static268.anInt5791 + local374[2] * -Static268.anInt5792 + 16384 >> 15;
-				local579 = local374[3] * -Static268.anInt5793 + local374[4] * -Static268.anInt5791 + local374[5] * -Static268.anInt5792 + 16384 >> 15;
-				local604 = local374[6] * -Static268.anInt5793 + local374[7] * -Static268.anInt5791 + local374[8] * -Static268.anInt5792 + 16384 >> 15;
-				local608 = local554 + Static268.anInt5793;
-				@Pc(612) int local612 = local579 + Static268.anInt5791;
-				local616 = local604 + Static268.anInt5792;
+				@Pc(554) int local554 = local374[0] * -anInt5793 + local374[1] * -anInt5791 + local374[2] * -anInt5792 + 16384 >> 15;
+				local579 = local374[3] * -anInt5793 + local374[4] * -anInt5791 + local374[5] * -anInt5792 + 16384 >> 15;
+				local604 = local374[6] * -anInt5793 + local374[7] * -anInt5791 + local374[8] * -anInt5792 + 16384 >> 15;
+				local608 = local554 + anInt5793;
+				@Pc(612) int local612 = local579 + anInt5791;
+				local616 = local604 + anInt5792;
 				@Pc(619) int[] local619 = new int[9];
 				for (local621 = 0; local621 < 3; local621++) {
 					for (local626 = 0; local626 < 3; local626++) {
@@ -2083,15 +2220,15 @@ public final class SoftwareModel extends Model {
 						for (local206 = 0; local206 < local204.length; local206++) {
 							local33 = local204[local206];
 							if (this.aShortArray91 == null || (arg6 & this.aShortArray91[local33]) != 0) {
-								this.anIntArray528[local33] -= Static268.anInt5793;
-								this.anIntArray527[local33] -= Static268.anInt5791;
-								this.anIntArray531[local33] -= Static268.anInt5792;
+								this.anIntArray528[local33] -= anInt5793;
+								this.anIntArray527[local33] -= anInt5791;
+								this.anIntArray531[local33] -= anInt5792;
 								this.anIntArray528[local33] = this.anIntArray528[local33] * arg2 / 128;
 								this.anIntArray527[local33] = this.anIntArray527[local33] * arg3 / 128;
 								this.anIntArray531[local33] = this.anIntArray531[local33] * arg4 / 128;
-								this.anIntArray528[local33] += Static268.anInt5793;
-								this.anIntArray527[local33] += Static268.anInt5791;
-								this.anIntArray531[local33] += Static268.anInt5792;
+								this.anIntArray528[local33] += anInt5793;
+								this.anIntArray527[local33] += anInt5791;
+								this.anIntArray531[local33] += anInt5792;
 							}
 						}
 					}
@@ -2103,27 +2240,27 @@ public final class SoftwareModel extends Model {
 				local206 = arg7[12];
 				local33 = arg7[13];
 				local41 = arg7[14];
-				if (Static268.aBoolean306) {
-					local307 = arg7[0] * Static268.anInt5793 + arg7[3] * Static268.anInt5791 + arg7[6] * Static268.anInt5792 + 16384 >> 15;
-					local329 = arg7[1] * Static268.anInt5793 + arg7[4] * Static268.anInt5791 + arg7[7] * Static268.anInt5792 + 16384 >> 15;
-					local351 = arg7[2] * Static268.anInt5793 + arg7[5] * Static268.anInt5791 + arg7[8] * Static268.anInt5792 + 16384 >> 15;
+				if (aBoolean306) {
+					local307 = arg7[0] * anInt5793 + arg7[3] * anInt5791 + arg7[6] * anInt5792 + 16384 >> 15;
+					local329 = arg7[1] * anInt5793 + arg7[4] * anInt5791 + arg7[7] * anInt5792 + 16384 >> 15;
+					local351 = arg7[2] * anInt5793 + arg7[5] * anInt5791 + arg7[8] * anInt5792 + 16384 >> 15;
 					local307 += local206;
 					local329 += local33;
 					local351 += local41;
-					Static268.anInt5793 = local307;
-					Static268.anInt5791 = local329;
-					Static268.anInt5792 = local351;
-					Static268.aBoolean306 = false;
+					anInt5793 = local307;
+					anInt5791 = local329;
+					anInt5792 = local351;
+					aBoolean306 = false;
 				}
 				local307 = arg2 << 15 >> 7;
 				local329 = arg3 << 15 >> 7;
 				local351 = arg4 << 15 >> 7;
-				local392 = local307 * -Static268.anInt5793 + 16384 >> 15;
-				local398 = local329 * -Static268.anInt5791 + 16384 >> 15;
-				local404 = local351 * -Static268.anInt5792 + 16384 >> 15;
-				local410 = local392 + Static268.anInt5793;
-				local418 = local398 + Static268.anInt5791;
-				local426 = local404 + Static268.anInt5792;
+				local392 = local307 * -anInt5793 + 16384 >> 15;
+				local398 = local329 * -anInt5791 + 16384 >> 15;
+				local404 = local351 * -anInt5792 + 16384 >> 15;
+				local410 = local392 + anInt5793;
+				local418 = local398 + anInt5791;
+				local426 = local404 + anInt5792;
 				@Pc(1481) int[] local1481 = new int[] { local307 * arg7[0] + 16384 >> 15, local307 * arg7[3] + 16384 >> 15, local307 * arg7[6] + 16384 >> 15, local329 * arg7[1] + 16384 >> 15, local329 * arg7[4] + 16384 >> 15, local329 * arg7[7] + 16384 >> 15, local351 * arg7[2] + 16384 >> 15, local351 * arg7[5] + 16384 >> 15, local351 * arg7[8] + 16384 >> 15 };
 				local579 = local307 * local206 + 16384 >> 15;
 				local604 = local329 * local33 + 16384 >> 15;
@@ -2231,23 +2368,23 @@ public final class SoftwareModel extends Model {
 		@Pc(11) int local11;
 		if (arg0 == 0) {
 			local3 = 0;
-			Static268.anInt5793 = 0;
-			Static268.anInt5791 = 0;
-			Static268.anInt5792 = 0;
+			anInt5793 = 0;
+			anInt5791 = 0;
+			anInt5792 = 0;
 			for (local11 = 0; local11 < this.vertexCount; local11++) {
-				Static268.anInt5793 += this.anIntArray528[local11];
-				Static268.anInt5791 += this.anIntArray527[local11];
-				Static268.anInt5792 += this.anIntArray531[local11];
+				anInt5793 += this.anIntArray528[local11];
+				anInt5791 += this.anIntArray527[local11];
+				anInt5792 += this.anIntArray531[local11];
 				local3++;
 			}
 			if (local3 > 0) {
-				Static268.anInt5793 = Static268.anInt5793 / local3 + arg1;
-				Static268.anInt5791 = Static268.anInt5791 / local3 + arg2;
-				Static268.anInt5792 = Static268.anInt5792 / local3 + arg3;
+				anInt5793 = anInt5793 / local3 + arg1;
+				anInt5791 = anInt5791 / local3 + arg2;
+				anInt5792 = anInt5792 / local3 + arg3;
 			} else {
-				Static268.anInt5793 = arg1;
-				Static268.anInt5791 = arg2;
-				Static268.anInt5792 = arg3;
+				anInt5793 = arg1;
+				anInt5791 = arg2;
+				anInt5792 = arg3;
 			}
 		} else if (arg0 == 1) {
 			for (local3 = 0; local3 < this.vertexCount; local3++) {
@@ -2260,9 +2397,9 @@ public final class SoftwareModel extends Model {
 			@Pc(164) int local164;
 			if (arg0 == 2) {
 				for (local3 = 0; local3 < this.vertexCount; local3++) {
-					this.anIntArray528[local3] -= Static268.anInt5793;
-					this.anIntArray527[local3] -= Static268.anInt5791;
-					this.anIntArray531[local3] -= Static268.anInt5792;
+					this.anIntArray528[local3] -= anInt5793;
+					this.anIntArray527[local3] -= anInt5791;
+					this.anIntArray531[local3] -= anInt5792;
 					if (arg3 != 0) {
 						local11 = MathUtils.sin[arg3];
 						local146 = MathUtils.cos[arg3];
@@ -2284,21 +2421,21 @@ public final class SoftwareModel extends Model {
 						this.anIntArray531[local3] = this.anIntArray531[local3] * local146 + 32767 - this.anIntArray528[local3] * local11 >> 16;
 						this.anIntArray528[local3] = local164;
 					}
-					this.anIntArray528[local3] += Static268.anInt5793;
-					this.anIntArray527[local3] += Static268.anInt5791;
-					this.anIntArray531[local3] += Static268.anInt5792;
+					this.anIntArray528[local3] += anInt5793;
+					this.anIntArray527[local3] += anInt5791;
+					this.anIntArray531[local3] += anInt5792;
 				}
 			} else if (arg0 == 3) {
 				for (local3 = 0; local3 < this.vertexCount; local3++) {
-					this.anIntArray528[local3] -= Static268.anInt5793;
-					this.anIntArray527[local3] -= Static268.anInt5791;
-					this.anIntArray531[local3] -= Static268.anInt5792;
+					this.anIntArray528[local3] -= anInt5793;
+					this.anIntArray527[local3] -= anInt5791;
+					this.anIntArray531[local3] -= anInt5792;
 					this.anIntArray528[local3] = this.anIntArray528[local3] * arg1 / 128;
 					this.anIntArray527[local3] = this.anIntArray527[local3] * arg2 / 128;
 					this.anIntArray531[local3] = this.anIntArray531[local3] * arg3 / 128;
-					this.anIntArray528[local3] += Static268.anInt5793;
-					this.anIntArray527[local3] += Static268.anInt5791;
-					this.anIntArray531[local3] += Static268.anInt5792;
+					this.anIntArray528[local3] += anInt5793;
+					this.anIntArray527[local3] += anInt5791;
+					this.anIntArray531[local3] += anInt5792;
 				}
 			} else if (arg0 == 5) {
 				for (local3 = 0; local3 < this.anInt5787; local3++) {
@@ -2350,15 +2487,15 @@ public final class SoftwareModel extends Model {
 	@OriginalMember(owner = "client!w", name = "b", descriptor = "(ZZZ)Lclient!ak;")
 	@Override
 	public final Model method4568(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
-		if (!arg0 && Static268.aByteArray78.length < this.anInt5787) {
-			Static268.aByteArray78 = new byte[this.anInt5787 + 100];
+		if (!arg0 && aByteArray78.length < this.anInt5787) {
+			aByteArray78 = new byte[this.anInt5787 + 100];
 		}
-		if (!arg1 && Static268.aShortArray95.length < this.anInt5787) {
-			Static268.anIntArray554 = new int[this.anInt5787 + 100];
-			Static268.anIntArray559 = new int[this.anInt5787 + 100];
-			Static268.anIntArray546 = new int[this.anInt5787 + 100];
-			Static268.aShortArray95 = new short[this.anInt5787 + 100];
+		if (!arg1 && aShortArray95.length < this.anInt5787) {
+			anIntArray554 = new int[this.anInt5787 + 100];
+			anIntArray559 = new int[this.anInt5787 + 100];
+			anIntArray546 = new int[this.anInt5787 + 100];
+			aShortArray95 = new short[this.anInt5787 + 100];
 		}
-		return this.method4584(arg0, arg1, Static268.aClass8_Sub1_Sub2_3, Static268.aByteArray78, Static268.aShortArray95, Static268.anIntArray554, Static268.anIntArray559, Static268.anIntArray546);
+		return this.method4584(arg0, arg1, aClass8_Sub1_Sub2_3, aByteArray78, aShortArray95, anIntArray554, anIntArray559, anIntArray546);
 	}
 }

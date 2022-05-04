@@ -56,9 +56,9 @@ public final class Static147 {
 			@Pc(160) int local160 = Static68.anIntArray164[local22];
 			@Pc(164) int local164 = Static68.anIntArray164[local29];
 			if ((local39 - local148) * (local164 - local160) - (local156 - local160) * (local152 - local148) > 0) {
-				if (Static158.aBoolean187 && Static19.method583(Static89.anInt2388 + Rasteriser.centerX, Static131.anInt3259 + Rasteriser.centerY, local156, local160, local164, local39, local148, local152)) {
-					Static56.anInt1742 = arg5;
-					Static116.anInt2954 = arg6;
+				if (MiniMenu.aBoolean187 && Static19.method583(MiniMenu.anInt2388 + Rasteriser.centerX, MiniMenu.anInt3259 + Rasteriser.centerY, local156, local160, local164, local39, local148, local152)) {
+					MiniMenu.anInt1742 = arg5;
+					MiniMenu.anInt2954 = arg6;
 				}
 				if (!GlRenderer.enabled && !arg7) {
 					Rasteriser.testX = false;

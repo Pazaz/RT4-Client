@@ -38,7 +38,7 @@ public final class Static102 {
 
 	@OriginalMember(owner = "client!hn", name = "f", descriptor = "(B)V")
 	public static void method2073() {
-		Static20.objectContainerCache = new HashTable(32);
+		Inv.objectContainerCache = new HashTable(32);
 	}
 
 }

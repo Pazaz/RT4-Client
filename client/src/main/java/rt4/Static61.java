@@ -13,7 +13,4 @@ public final class Static61 {
 	@OriginalMember(owner = "client!en", name = "t", descriptor = "[I")
 	public static final int[] anIntArray148 = new int[14];
 
-	@OriginalMember(owner = "client!en", name = "x", descriptor = "Lclient!na;")
-	public static final JagString aClass100_424 = JagString.parse("http:)4)4");
-
 }

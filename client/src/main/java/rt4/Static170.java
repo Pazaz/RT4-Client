@@ -22,12 +22,12 @@ public final class Static170 {
 		local6.anInt732 = arg1 * 128 + 64;
 		local6.anInt736 = arg2 * 128 + 64;
 		local6.anInt733 = arg3;
-		local6.aLong26 = arg5;
+		local6.key = arg5;
 		local6.aBoolean49 = arg6;
 		if (SceneGraph.tiles[arg0][arg1][arg2] == null) {
 			SceneGraph.tiles[arg0][arg1][arg2] = new Tile(arg0, arg1, arg2);
 		}
-		SceneGraph.tiles[arg0][arg1][arg2].aClass15_1 = local6;
+		SceneGraph.tiles[arg0][arg1][arg2].groundDecor = local6;
 	}
 
 	@OriginalMember(owner = "client!nh", name = "a", descriptor = "(IIIIIIIIIIIII)V")

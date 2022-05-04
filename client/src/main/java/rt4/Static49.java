@@ -6,9 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static49 {
 
-	@OriginalMember(owner = "client!dm", name = "j", descriptor = "Lclient!na;")
-	public static final JagString aClass100_351 = JagString.parse(" ");
-
 	@OriginalMember(owner = "client!dm", name = "n", descriptor = "Lclient!na;")
 	public static final JagString PERCENT_SIGN = JagString.parse("(U");
 
@@ -100,10 +97,10 @@ public final class Static49 {
 
 	@OriginalMember(owner = "client!dm", name = "a", descriptor = "(Lclient!be;III)V")
 	public static void method1207(@OriginalArg(0) Component arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-		if (MiniMenu.size < 2 && Static260.anInt5014 == 0 && !Static241.aBoolean302) {
+		if (MiniMenu.size < 2 && MiniMenu.anInt5014 == 0 && !Static241.aBoolean302) {
 			return;
 		}
-		@Pc(24) JagString local24 = Static13.method471();
+		@Pc(24) JagString local24 = MiniMenu.method471();
 		if (arg0 == null) {
 			@Pc(40) int local40 = Fonts.b12Full.method2859(local24, arg2 + 4, arg1 - -15, client.aRandom1, Static60.gregorianDateSeed);
 			Static133.method4012(arg2 + 4, Fonts.b12Full.getStringWidth(local24) + local40, arg1, 15);

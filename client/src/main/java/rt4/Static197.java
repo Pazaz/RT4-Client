@@ -9,9 +9,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static197 {
 
-	@OriginalMember(owner = "client!pm", name = "cb", descriptor = "[[[Lclient!bj;")
-	public static Tile[][][] surfaceGroundTiles;
-
 	@OriginalMember(owner = "client!pm", name = "hb", descriptor = "I")
 	public static int anInt4620;
 
@@ -163,7 +160,7 @@ public final class Static197 {
 		if (arg1 > 0 && arg3 == 0) {
 			GameShell.thread.setPriority(5);
 			SoftwareRaster.frameBuffer = null;
-			Static268.method4580();
+			SoftwareModel.method4580();
 			((Js5GlTextureProvider) Rasteriser.textureProvider).method3248(200);
 			if (Preferences.highDetailLighting) {
 				Rasteriser.setBrightness(0.7F);
@@ -172,7 +169,7 @@ public final class Static197 {
 		} else if (arg1 == 0 && arg3 > 0) {
 			GameShell.thread.setPriority(1);
 			SoftwareRaster.frameBuffer = Static131.create(503, 765, GameShell.canvas);
-			Static268.method4583();
+			SoftwareModel.method4583();
 			Static76.method1643();
 			((Js5GlTextureProvider) Rasteriser.textureProvider).method3248(20);
 			if (Preferences.highDetailLighting) {

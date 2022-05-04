@@ -290,7 +290,7 @@ public final class MidiInstrument extends Node {
 				local734 += 2;
 				local1014 = (local995 - local954) * local958 + (local995 - local954) / 2;
 				for (local1016 = local954; local1016 < local995; local1016++) {
-					local1031 = Static222.method3825(local1014, local995 - local954);
+					local1031 = method3825(local1014, local995 - local954);
 					local1014 += local1001 - local958;
 					this.aByteArray45[local1016] = (byte) (local1031 * this.aByteArray45[local1016] + 32 >> 6);
 				}
@@ -328,7 +328,7 @@ public final class MidiInstrument extends Node {
 				local1207 = local327[local734 + 1] << 1;
 				local734 += 2;
 				for (local1016 = local954; local1016 < local995; local1016++) {
-					local1031 = Static222.method3825(local1014, local995 - local954);
+					local1031 = method3825(local1014, local995 - local954);
 					local1014 += local1207 - local1133;
 					@Pc(1237) int local1237 = local1031 + (this.aByteArray43[local1016] & 0xFF);
 					if (local1237 < 0) {
@@ -385,7 +385,13 @@ public final class MidiInstrument extends Node {
 		}
 	}
 
-	@OriginalMember(owner = "client!jk", name = "d", descriptor = "(B)V")
+    @OriginalMember(owner = "client!sa", name = "c", descriptor = "(III)I")
+	public static int method3825(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
+		@Pc(12) int local12 = arg0 >>> 31;
+		return (arg0 + local12) / arg1 - local12;
+	}
+
+    @OriginalMember(owner = "client!jk", name = "d", descriptor = "(B)V")
 	public final void method2432() {
 		this.anIntArray289 = null;
 	}

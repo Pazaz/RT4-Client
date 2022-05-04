@@ -51,31 +51,31 @@ public final class Static254 {
 						@Pc(227) int local227;
 						@Pc(358) int local358;
 						if (local130 && arg3[local150][local108][local122] != null) {
-							if (arg3[local150][local108][local122].aClass77_1 != null) {
+							if (arg3[local150][local108][local122].wall != null) {
 								local191 = Static104.method2251(local94);
-								if (arg3[local150][local108][local122].aClass77_1.anInt3049 == local191 || arg3[local150][local108][local122].aClass77_1.anInt3052 == local191) {
+								if (arg3[local150][local108][local122].wall.anInt3049 == local191 || arg3[local150][local108][local122].wall.anInt3052 == local191) {
 									continue;
 								}
 								if (local102 != 0) {
 									local227 = Static104.method2251(local102);
-									if (local227 == arg3[local150][local108][local122].aClass77_1.anInt3049 || arg3[local150][local108][local122].aClass77_1.anInt3052 == local227) {
+									if (local227 == arg3[local150][local108][local122].wall.anInt3049 || arg3[local150][local108][local122].wall.anInt3052 == local227) {
 										continue;
 									}
 								}
 								if (local116 != 0) {
 									local227 = Static104.method2251(local116);
-									if (local227 == arg3[local150][local108][local122].aClass77_1.anInt3049 || local227 == arg3[local150][local108][local122].aClass77_1.anInt3052) {
+									if (local227 == arg3[local150][local108][local122].wall.anInt3049 || local227 == arg3[local150][local108][local122].wall.anInt3052) {
 										continue;
 									}
 								}
 							}
-							if (arg3[local150][local108][local122].aClass31Array1 != null) {
-								for (local191 = 0; local191 < arg3[local150][local108][local122].anInt662; local191++) {
-									local227 = (int) (arg3[local150][local108][local122].aClass31Array1[local191].aLong56 >> 14 & 0x3FL);
+							if (arg3[local150][local108][local122].scenery != null) {
+								for (local191 = 0; local191 < arg3[local150][local108][local122].sceneryLen; local191++) {
+									local227 = (int) (arg3[local150][local108][local122].scenery[local191].key >> 14 & 0x3FL);
 									if (local227 == 21) {
 										local227 = 19;
 									}
-									@Pc(352) int local352 = (int) (arg3[local150][local108][local122].aClass31Array1[local191].aLong56 >> 20 & 0x3L);
+									@Pc(352) int local352 = (int) (arg3[local150][local108][local122].scenery[local191].key >> 20 & 0x3L);
 									local358 = local227 | local352 << 6;
 									if (local358 == local94 || local102 != 0 && local358 == local102 || local116 != 0 && local116 == local358) {
 										continue label238;
@@ -85,9 +85,9 @@ public final class Static254 {
 						}
 						local132 = true;
 						@Pc(395) Tile local395 = arg3[local150][local108][local122];
-						if (local395 != null && local395.anInt662 > 0) {
-							for (local227 = 0; local227 < local395.anInt662; local227++) {
-								@Pc(418) Scenery local418 = local395.aClass31Array1[local227];
+						if (local395 != null && local395.sceneryLen > 0) {
+							for (local227 = 0; local227 < local395.sceneryLen; local227++) {
+								@Pc(418) Scenery local418 = local395.scenery[local227];
 								if (local418.anInt1713 != local418.anInt1701 || local418.anInt1698 != local418.anInt1696) {
 									for (local358 = local418.anInt1701; local358 <= local418.anInt1713; local358++) {
 										for (@Pc(450) int local450 = local418.anInt1696; local450 <= local418.anInt1698; local450++) {
@@ -195,7 +195,7 @@ public final class Static254 {
 			}
 			@Pc(15) byte[] local15 = new byte[local7];
 			arg0.offset += WordPack.codec.method1552(0, local7, local15, arg0.data, arg0.offset);
-			return Static10.decodeString(local15, local7, 0);
+			return JagString.decodeString(local15, local7, 0);
 		} catch (@Pc(47) Exception local47) {
 			return WordPack.CABBAGE;
 		}

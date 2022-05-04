@@ -13,6 +13,8 @@ public final class MonochromeImageCache {
 
     @OriginalMember(owner = "client!a", name = "b", descriptor = "[I")
     public static final int[] anIntArray1 = new int[4096];
+    @OriginalMember(owner = "client!bc", name = "N", descriptor = "Lclient!lb;")
+    public static final MonochromeImageCache_Class3_Sub23 aClass3_Sub23_1 = new MonochromeImageCache_Class3_Sub23(0, 0);
 
     @OriginalMember(owner = "client!nd", name = "f", descriptor = "I")
 	private int anInt4062 = -1;
@@ -47,7 +49,7 @@ public final class MonochromeImageCache {
 		}
 
 		for (@Pc(4) int local4 = 0; local4 < 4096; local4++) {
-			anIntArray1[local4] = Static273.method3211(local4);
+			anIntArray1[local4] = method3211(local4);
 		}
 	}
 
@@ -59,13 +61,21 @@ public final class MonochromeImageCache {
 		this.anIntArrayArrayArray13 = new int[this.anInt4064][3][arg2];
 	}
 
+	@OriginalMember(owner = "client!we", name = "a", descriptor = "(BI)I")
+	public static int method3211(@OriginalArg(1) int arg0) {
+		@Pc(13) int local13 = arg0 * (arg0 * arg0 >> 12) >> 12;
+		@Pc(26) int local26 = arg0 * 6 - 61440;
+		@Pc(34) int local34 = (arg0 * local26 >> 12) + 40960;
+		return local13 * local34 >> 12;
+	}
+
 	@OriginalMember(owner = "client!nd", name = "a", descriptor = "(B)[[[I")
 	public final int[][][] method3168() {
 		if (this.anInt4067 != this.anInt4064) {
 			throw new RuntimeException("Can only retrieve a full image cache");
 		}
 		for (@Pc(27) int local27 = 0; local27 < this.anInt4064; local27++) {
-			this.aClass3_Sub23Array1[local27] = Static13.aClass3_Sub23_1;
+			this.aClass3_Sub23Array1[local27] = aClass3_Sub23_1;
 		}
 		return this.anIntArrayArrayArray13;
 	}
@@ -88,7 +98,7 @@ public final class MonochromeImageCache {
 	public final int[][] method3173(@OriginalArg(1) int arg0) {
 		if (this.anInt4064 == this.anInt4067) {
 			this.aBoolean195 = this.aClass3_Sub23Array1[arg0] == null;
-			this.aClass3_Sub23Array1[arg0] = Static13.aClass3_Sub23_1;
+			this.aClass3_Sub23Array1[arg0] = aClass3_Sub23_1;
 			return this.anIntArrayArrayArray13[arg0];
 		} else if (this.anInt4064 == 1) {
 			this.aBoolean195 = this.anInt4062 != arg0;
@@ -102,7 +112,7 @@ public final class MonochromeImageCache {
 					local44 = new MonochromeImageCache_Class3_Sub23(arg0, this.anInt4066);
 					this.anInt4066++;
 				} else {
-					@Pc(80) MonochromeImageCache_Class3_Sub23 local80 = (MonochromeImageCache_Class3_Sub23) this.aClass69_96.method2279();
+					@Pc(80) MonochromeImageCache_Class3_Sub23 local80 = (MonochromeImageCache_Class3_Sub23) this.aClass69_96.tail();
 					local44 = new MonochromeImageCache_Class3_Sub23(arg0, local80.anInt3468);
 					this.aClass3_Sub23Array1[local80.anInt3476] = null;
 					local80.unlink();

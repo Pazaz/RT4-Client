@@ -8,6 +8,14 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!ie")
 public final class VorbisRange {
 
+    @OriginalMember(owner = "client!ie", name = "k", descriptor = "[I")
+    public static final int[] anIntArray267 = new int[] { 256, 128, 86, 64 };
+	@OriginalMember(owner = "client!ie", name = "b", descriptor = "[Z")
+	public static boolean[] aBooleanArray60;
+	@OriginalMember(owner = "client!ie", name = "h", descriptor = "[I")
+	public static int[] anIntArray264;
+	@OriginalMember(owner = "client!ie", name = "j", descriptor = "[I")
+	public static int[] anIntArray266;
 	@OriginalMember(owner = "client!ie", name = "e", descriptor = "[I")
 	private final int[] anIntArray262;
 
@@ -31,17 +39,17 @@ public final class VorbisRange {
 
 	@OriginalMember(owner = "client!ie", name = "<init>", descriptor = "()V")
 	public VorbisRange() {
-		@Pc(4) int local4 = Static117.method2350(16);
+		@Pc(4) int local4 = VorbisSound.method2350(16);
 		if (local4 != 1) {
 			throw new RuntimeException();
 		}
-		@Pc(14) int local14 = Static117.method2350(5);
+		@Pc(14) int local14 = VorbisSound.method2350(5);
 		@Pc(16) int local16 = 0;
 		this.anIntArray262 = new int[local14];
 		@Pc(22) int local22;
 		@Pc(28) int local28;
 		for (local22 = 0; local22 < local14; local22++) {
-			local28 = Static117.method2350(4);
+			local28 = VorbisSound.method2350(4);
 			this.anIntArray262[local22] = local28;
 			if (local28 >= local16) {
 				local16 = local28 + 1;
@@ -53,20 +61,20 @@ public final class VorbisRange {
 		this.anIntArrayArray20 = new int[local16][];
 		@Pc(101) int local101;
 		for (local22 = 0; local22 < local16; local22++) {
-			this.anIntArray265[local22] = Static117.method2350(3) + 1;
-			local28 = this.anIntArray263[local22] = Static117.method2350(2);
+			this.anIntArray265[local22] = VorbisSound.method2350(3) + 1;
+			local28 = this.anIntArray263[local22] = VorbisSound.method2350(2);
 			if (local28 != 0) {
-				this.anIntArray260[local22] = Static117.method2350(8);
+				this.anIntArray260[local22] = VorbisSound.method2350(8);
 			}
 			local28 = 0x1 << local28;
 			@Pc(94) int[] local94 = new int[local28];
 			this.anIntArrayArray20[local22] = local94;
 			for (local101 = 0; local101 < local28; local101++) {
-				local94[local101] = Static117.method2350(8) - 1;
+				local94[local101] = VorbisSound.method2350(8) - 1;
 			}
 		}
-		this.anInt2880 = Static117.method2350(2) + 1;
-		local22 = Static117.method2350(4);
+		this.anInt2880 = VorbisSound.method2350(2) + 1;
+		local22 = VorbisSound.method2350(4);
 		local28 = 2;
 		@Pc(128) int local128;
 		for (local128 = 0; local128 < local14; local128++) {
@@ -79,14 +87,44 @@ public final class VorbisRange {
 		for (local128 = 0; local128 < local14; local128++) {
 			local101 = this.anIntArray262[local128];
 			for (@Pc(173) int local173 = 0; local173 < this.anIntArray265[local101]; local173++) {
-				this.anIntArray261[local28++] = Static117.method2350(local22);
+				this.anIntArray261[local28++] = VorbisSound.method2350(local22);
 			}
 		}
-		if (Static108.anIntArray264 == null || Static108.anIntArray264.length < local28) {
-			Static108.anIntArray264 = new int[local28];
-			Static108.anIntArray266 = new int[local28];
-			Static108.aBooleanArray60 = new boolean[local28];
+		if (anIntArray264 == null || anIntArray264.length < local28) {
+			anIntArray264 = new int[local28];
+			anIntArray266 = new int[local28];
+			aBooleanArray60 = new boolean[local28];
 		}
+	}
+
+	@OriginalMember(owner = "client!ie", name = "a", descriptor = "([II)I")
+	public static int method2268(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1) {
+		@Pc(3) int local3 = arg0[arg1];
+		@Pc(5) int local5 = -1;
+		@Pc(7) int local7 = Integer.MIN_VALUE;
+		for (@Pc(9) int local9 = 0; local9 < arg1; local9++) {
+			@Pc(16) int local16 = arg0[local9];
+			if (local16 < local3 && local16 > local7) {
+				local5 = local9;
+				local7 = local16;
+			}
+		}
+		return local5;
+	}
+
+	@OriginalMember(owner = "client!ie", name = "b", descriptor = "([II)I")
+	public static int method2270(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1) {
+		@Pc(3) int local3 = arg0[arg1];
+		@Pc(5) int local5 = -1;
+		@Pc(7) int local7 = Integer.MAX_VALUE;
+		for (@Pc(9) int local9 = 0; local9 < arg1; local9++) {
+			@Pc(16) int local16 = arg0[local9];
+			if (local16 > local3 && local16 < local7) {
+				local5 = local9;
+				local7 = local16;
+			}
+		}
+		return local5;
 	}
 
 	@OriginalMember(owner = "client!ie", name = "a", descriptor = "(IIII[FI)V")
@@ -121,24 +159,24 @@ public final class VorbisRange {
 			return;
 		}
 		@Pc(5) int local5 = arg0;
-		@Pc(9) int local9 = Static108.anIntArray264[arg0];
-		@Pc(13) int local13 = Static108.anIntArray266[arg0];
-		@Pc(17) boolean local17 = Static108.aBooleanArray60[arg0];
+		@Pc(9) int local9 = anIntArray264[arg0];
+		@Pc(13) int local13 = anIntArray266[arg0];
+		@Pc(17) boolean local17 = aBooleanArray60[arg0];
 		for (@Pc(21) int local21 = arg0 + 1; local21 <= arg1; local21++) {
-			@Pc(28) int local28 = Static108.anIntArray264[local21];
+			@Pc(28) int local28 = anIntArray264[local21];
 			if (local28 < local9) {
-				Static108.anIntArray264[local5] = local28;
-				Static108.anIntArray266[local5] = Static108.anIntArray266[local21];
-				Static108.aBooleanArray60[local5] = Static108.aBooleanArray60[local21];
+				anIntArray264[local5] = local28;
+				anIntArray266[local5] = anIntArray266[local21];
+				aBooleanArray60[local5] = aBooleanArray60[local21];
 				local5++;
-				Static108.anIntArray264[local21] = Static108.anIntArray264[local5];
-				Static108.anIntArray266[local21] = Static108.anIntArray266[local5];
-				Static108.aBooleanArray60[local21] = Static108.aBooleanArray60[local5];
+				anIntArray264[local21] = anIntArray264[local5];
+				anIntArray266[local21] = anIntArray266[local5];
+				aBooleanArray60[local21] = aBooleanArray60[local5];
 			}
 		}
-		Static108.anIntArray264[local5] = local9;
-		Static108.anIntArray266[local5] = local13;
-		Static108.aBooleanArray60[local5] = local17;
+		anIntArray264[local5] = local9;
+		anIntArray266[local5] = local13;
+		aBooleanArray60[local5] = local17;
 		this.method2266(arg0, local5 - 1);
 		this.method2266(local5 + 1, arg1);
 	}
@@ -156,40 +194,40 @@ public final class VorbisRange {
 	@OriginalMember(owner = "client!ie", name = "a", descriptor = "([FI)V")
 	public final void method2269(@OriginalArg(0) float[] arg0, @OriginalArg(1) int arg1) {
 		@Pc(3) int local3 = this.anIntArray261.length;
-		@Pc(10) int local10 = Static108.anIntArray267[this.anInt2880 - 1];
-		Static108.aBooleanArray60[0] = Static108.aBooleanArray60[1] = true;
+		@Pc(10) int local10 = anIntArray267[this.anInt2880 - 1];
+		aBooleanArray60[0] = aBooleanArray60[1] = true;
 		@Pc(20) int local20;
 		@Pc(27) int local27;
 		@Pc(31) int local31;
 		@Pc(49) int local49;
 		@Pc(53) int local53;
 		for (local20 = 2; local20 < local3; local20++) {
-			local27 = Static108.method2268(Static108.anIntArray264, local20);
-			local31 = Static108.method2270(Static108.anIntArray264, local20);
-			local49 = this.method2267(Static108.anIntArray264[local27], Static108.anIntArray266[local27], Static108.anIntArray264[local31], Static108.anIntArray266[local31], Static108.anIntArray264[local20]);
-			local53 = Static108.anIntArray266[local20];
+			local27 = method2268(anIntArray264, local20);
+			local31 = method2270(anIntArray264, local20);
+			local49 = this.method2267(anIntArray264[local27], anIntArray266[local27], anIntArray264[local31], anIntArray266[local31], anIntArray264[local20]);
+			local53 = anIntArray266[local20];
 			@Pc(57) int local57 = local10 - local49;
 			@Pc(68) int local68 = (local57 < local49 ? local57 : local49) << 1;
 			if (local53 == 0) {
-				Static108.aBooleanArray60[local20] = false;
-				Static108.anIntArray266[local20] = local49;
+				aBooleanArray60[local20] = false;
+				anIntArray266[local20] = local49;
 			} else {
-				Static108.aBooleanArray60[local27] = Static108.aBooleanArray60[local31] = true;
-				Static108.aBooleanArray60[local20] = true;
+				aBooleanArray60[local27] = aBooleanArray60[local31] = true;
+				aBooleanArray60[local20] = true;
 				if (local53 >= local68) {
-					Static108.anIntArray266[local20] = local57 > local49 ? local53 + local49 - local49 : local49 - local53 + local57 - 1;
+					anIntArray266[local20] = local57 > local49 ? local53 + local49 - local49 : local49 - local53 + local57 - 1;
 				} else {
-					Static108.anIntArray266[local20] = (local53 & 0x1) == 0 ? local49 + local53 / 2 : local49 - (local53 + 1) / 2;
+					anIntArray266[local20] = (local53 & 0x1) == 0 ? local49 + local53 / 2 : local49 - (local53 + 1) / 2;
 				}
 			}
 		}
 		this.method2266(0, local3 - 1);
 		local20 = 0;
-		local27 = Static108.anIntArray266[0] * this.anInt2880;
+		local27 = anIntArray266[0] * this.anInt2880;
 		for (local31 = 1; local31 < local3; local31++) {
-			if (Static108.aBooleanArray60[local31]) {
-				local49 = Static108.anIntArray264[local31];
-				local53 = Static108.anIntArray266[local31] * this.anInt2880;
+			if (aBooleanArray60[local31]) {
+				local49 = anIntArray264[local31];
+				local53 = anIntArray266[local31] * this.anInt2880;
 				this.method2265(local20, local27, local49, local53, arg0, arg1);
 				if (local49 >= arg1) {
 					return;
@@ -206,19 +244,19 @@ public final class VorbisRange {
 
 	@OriginalMember(owner = "client!ie", name = "b", descriptor = "()Z")
 	public final boolean method2272() {
-		@Pc(5) boolean local5 = Static117.method2346() != 0;
+		@Pc(5) boolean local5 = VorbisSound.method2346() != 0;
 		if (!local5) {
 			return false;
 		}
 		@Pc(13) int local13 = this.anIntArray261.length;
 		@Pc(15) int local15;
 		for (local15 = 0; local15 < local13; local15++) {
-			Static108.anIntArray264[local15] = this.anIntArray261[local15];
+			anIntArray264[local15] = this.anIntArray261[local15];
 		}
-		local15 = Static108.anIntArray267[this.anInt2880 - 1];
+		local15 = anIntArray267[this.anInt2880 - 1];
 		@Pc(40) int local40 = Static204.method3674(local15 - 1);
-		Static108.anIntArray266[0] = Static117.method2350(local40);
-		Static108.anIntArray266[1] = Static117.method2350(local40);
+		anIntArray266[0] = VorbisSound.method2350(local40);
+		anIntArray266[1] = VorbisSound.method2350(local40);
 		@Pc(52) int local52 = 2;
 		for (@Pc(54) int local54 = 0; local54 < this.anIntArray262.length; local54++) {
 			@Pc(64) int local64 = this.anIntArray262[local54];
@@ -227,12 +265,12 @@ public final class VorbisRange {
 			@Pc(80) int local80 = (0x1 << local74) - 1;
 			@Pc(82) int local82 = 0;
 			if (local74 > 0) {
-				local82 = Static117.aClass78Array1[this.anIntArray260[local64]].method2415();
+				local82 = VorbisSound.aClass78Array1[this.anIntArray260[local64]].method2415();
 			}
 			for (@Pc(94) int local94 = 0; local94 < local69; local94++) {
 				@Pc(106) int local106 = this.anIntArrayArray20[local64][local82 & local80];
 				local82 >>>= local74;
-				Static108.anIntArray266[local52++] = local106 >= 0 ? Static117.aClass78Array1[local106].method2415() : 0;
+				anIntArray266[local52++] = local106 >= 0 ? VorbisSound.aClass78Array1[local106].method2415() : 0;
 			}
 		}
 		return true;

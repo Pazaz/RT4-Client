@@ -6,22 +6,13 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static118 {
 
-	@OriginalMember(owner = "client!jd", name = "d", descriptor = "[[[B")
-	public static byte[][][] aByteArrayArrayArray9;
-
-	@OriginalMember(owner = "client!jd", name = "i", descriptor = "Lclient!be;")
+    @OriginalMember(owner = "client!jd", name = "i", descriptor = "Lclient!be;")
 	public static Component aClass13_15;
 
     @OriginalMember(owner = "client!jd", name = "a", descriptor = "(B)I")
 	public static int method2352() {
 		Static232.anInt5212 = 0;
 		return Static119.method2385();
-	}
-
-	@OriginalMember(owner = "client!jd", name = "a", descriptor = "(IB)V")
-	public static void method2353(@OriginalArg(0) int arg0) {
-		@Pc(12) DelayedStateChange local12 = DelayedStateChange.create(12, arg0);
-		local12.pushClient();
 	}
 
 	@OriginalMember(owner = "client!jd", name = "a", descriptor = "(II[Lclient!be;)V")

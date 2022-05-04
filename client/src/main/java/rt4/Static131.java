@@ -22,10 +22,7 @@ public final class Static131 {
 	@OriginalMember(owner = "client!kd", name = "yb", descriptor = "S")
 	public static short aShort21 = 32767;
 
-	@OriginalMember(owner = "client!kd", name = "zb", descriptor = "I")
-	public static int anInt3259 = 0;
-
-	@OriginalMember(owner = "client!kd", name = "Bb", descriptor = "I")
+    @OriginalMember(owner = "client!kd", name = "Bb", descriptor = "I")
 	public static int anInt3260 = -1;
 
 	@OriginalMember(owner = "client!kd", name = "a", descriptor = "([IIIII)V")

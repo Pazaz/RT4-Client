@@ -19,7 +19,7 @@ public final class Static23 {
 		for (local3 = arg1; local3 <= arg3 + arg1; local3++) {
 			for (local10 = arg2; local10 <= arg4 + arg2; local10++) {
 				if (local10 >= 0 && local10 < 104 && local3 >= 0 && local3 < 104) {
-					Static118.aByteArrayArrayArray9[arg0][local10][local3] = 127;
+					SceneGraph.aByteArrayArrayArray9[arg0][local10][local3] = 127;
 				}
 			}
 		}

@@ -12,9 +12,6 @@ public final class Static225 {
     @OriginalMember(owner = "client!se", name = "h", descriptor = "I")
 	public static int anInt5073 = -1;
 
-	@OriginalMember(owner = "client!se", name = "m", descriptor = "Lclient!na;")
-	public static final JagString aClass100_961 = JagString.parse(" )2>");
-
 	@OriginalMember(owner = "client!se", name = "a", descriptor = "(IIIIZ)I")
 	public static int method3891(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		@Pc(8) int local8 = arg3 & 0xF;

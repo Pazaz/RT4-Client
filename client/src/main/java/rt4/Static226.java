@@ -33,7 +33,7 @@ public final class Static226 {
 			local5 = Static35.method899(arg0.level, arg0.x, arg0.z);
 		}
 		if (arg0.anInt927 == 3) {
-			local5 = Static20.method602(arg0.level, arg0.x, arg0.z);
+			local5 = SceneGraph.method602(arg0.level, arg0.x, arg0.z);
 		}
 		if (local5 != 0L) {
 			local7 = Integer.MAX_VALUE & (int) (local5 >>> 32);

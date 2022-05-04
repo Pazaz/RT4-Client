@@ -9,9 +9,6 @@ public final class Static3 {
 	@OriginalMember(owner = "client!ab", name = "b", descriptor = "I")
 	public static int anInt5868 = 0;
 
-	@OriginalMember(owner = "client!ab", name = "c", descriptor = "[Z")
-	public static final boolean[] aBooleanArray135 = new boolean[200];
-
 	@OriginalMember(owner = "client!ab", name = "a", descriptor = "(Lclient!na;I)V")
 	public static void method4656(@OriginalArg(0) JagString arg0) {
 		@Pc(9) int local9 = Static171.method3218(arg0);

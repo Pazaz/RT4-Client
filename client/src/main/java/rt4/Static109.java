@@ -19,8 +19,8 @@ public final class Static109 {
 
 	@OriginalMember(owner = "client!ig", name = "a", descriptor = "(I)V")
 	public static void method2274() {
-		for (@Pc(7) int local7 = 0; local7 < Static272.anInt5214; local7++) {
-			@Pc(18) int local18 = Static33.anIntArray79[local7];
+		for (@Pc(7) int local7 = 0; local7 < NpcList.size; local7++) {
+			@Pc(18) int local18 = NpcList.ids[local7];
 			@Pc(22) Npc local22 = NpcList.npcs[local18];
 			if (local22 != null) {
 				Static263.method4514(local22.type.size, local22);

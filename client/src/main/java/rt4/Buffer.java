@@ -66,7 +66,21 @@ public class Buffer extends Node {
         return arg0.length() + 1;
     }
 
-    @OriginalMember(owner = "client!wa", name = "c", descriptor = "(I)I")
+    @OriginalMember(owner = "client!nf", name = "a", descriptor = "(II[BB)I")
+    public static int crc32(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) byte[] arg2) {
+        @Pc(5) int local5 = -1;
+        for (@Pc(15) int local15 = arg0; local15 < arg1; local15++) {
+            local5 = local5 >>> 8 ^ HuffmanCodec.anIntArray175[(local5 ^ arg2[local15]) & 0xFF];
+        }
+        return ~local5;
+    }
+
+	@OriginalMember(owner = "client!fk", name = "a", descriptor = "([BIZ)I")
+	public static int crc32(@OriginalArg(0) byte[] arg0, @OriginalArg(1) int arg1) {
+		return crc32(0, arg1, arg0);
+	}
+
+	@OriginalMember(owner = "client!wa", name = "c", descriptor = "(I)I")
 	public final int g2() {
 		this.offset += 2;
 		return ((this.data[this.offset - 2] & 0xFF) << 8) + (this.data[this.offset - 1] & 0xFF);
@@ -235,7 +249,7 @@ public class Buffer extends Node {
 		@Pc(32) int off = this.offset;
 		while (this.data[this.offset++] != 0) {
 		}
-		return Static10.decodeString(this.data, this.offset - off - 1, off);
+		return JagString.decodeString(this.data, this.offset - off - 1, off);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(FB)V")
@@ -370,7 +384,7 @@ public class Buffer extends Node {
 		@Pc(12) int start = this.offset;
 		while (this.data[this.offset++] != 0) {
 		}
-		return Static10.decodeString(this.data, this.offset - start - 1, start);
+		return JagString.decodeString(this.data, this.offset - start - 1, start);
 	}
 
 	@OriginalMember(owner = "client!wa", name = "f", descriptor = "(Z)I")
@@ -465,7 +479,7 @@ public class Buffer extends Node {
 
 	@OriginalMember(owner = "client!wa", name = "c", descriptor = "(BI)I")
 	public final int pCrc32(@OriginalArg(1) int off) {
-		@Pc(16) int checksum = Static169.crc32(off, this.offset, this.data);
+		@Pc(16) int checksum = crc32(off, this.offset, this.data);
 		this.p4(checksum);
 		return checksum;
 	}

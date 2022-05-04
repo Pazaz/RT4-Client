@@ -1,5 +1,6 @@
 package rt4;
 
+import java.util.Calendar;
 import java.util.Date;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
@@ -7,11 +8,12 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static33 {
 
-    @OriginalMember(owner = "client!cj", name = "n", descriptor = "Lsignlink!im;")
+	@OriginalMember(owner = "client!dm", name = "j", descriptor = "Lclient!na;")
+	public static final JagString aClass100_351 = JagString.parse(" ");
+	@OriginalMember(owner = "client!fn", name = "Z", descriptor = "Lclient!na;")
+	public static final JagString aClass100_461 = JagString.parse(")1 ");
+	@OriginalMember(owner = "client!cj", name = "n", descriptor = "Lsignlink!im;")
 	public static PrivilegedRequest openUrlRequest;
-
-	@OriginalMember(owner = "client!cj", name = "i", descriptor = "[I")
-	public static final int[] anIntArray79 = new int[32768];
 
 	@OriginalMember(owner = "client!cj", name = "a", descriptor = "(ILclient!pb;ZIIII)Z")
 	public static boolean method867(@OriginalArg(0) int arg0, @OriginalArg(1) LocType arg1, @OriginalArg(5) int arg2, @OriginalArg(6) int arg3) {
@@ -49,34 +51,17 @@ public final class Static33 {
 		return true;
 	}
 
-	@OriginalMember(owner = "client!cj", name = "a", descriptor = "(ZI[B)Ljava/lang/Object;")
-	public static Object method869(@OriginalArg(2) byte[] arg0) {
-		if (arg0 == null) {
-			return null;
-		}
-		if (arg0.length > 136 && !Static84.aBoolean127) {
-			try {
-				@Pc(27) ByteArray local27 = new DirectByteArray();
-				local27.set(arg0);
-				return local27;
-			} catch (@Pc(34) Throwable local34) {
-				Static84.aBoolean127 = true;
-			}
-		}
-		return arg0;
-	}
-
-    @OriginalMember(owner = "client!cj", name = "a", descriptor = "(JB)Lclient!na;")
+	@OriginalMember(owner = "client!cj", name = "a", descriptor = "(JB)Lclient!na;")
 	public static JagString method873(@OriginalArg(0) long arg0) {
 		Static35.aCalendar1.setTime(new Date(arg0));
-		@Pc(13) int local13 = Static35.aCalendar1.get(7);
-		@Pc(17) int local17 = Static35.aCalendar1.get(5);
-		@Pc(21) int local21 = Static35.aCalendar1.get(2);
-		@Pc(32) int local32 = Static35.aCalendar1.get(1);
-		@Pc(36) int local36 = Static35.aCalendar1.get(11);
-		@Pc(40) int local40 = Static35.aCalendar1.get(12);
-		@Pc(44) int local44 = Static35.aCalendar1.get(13);
-		return JagString.concatenate(new JagString[] { Static219.aClass100Array149[local13 - 1], Static74.aClass100_461, Static123.parseInt(local17 / 10), Static123.parseInt(local17 % 10), Static270.aClass100_1089, Static138.aClass100Array102[local21], Static270.aClass100_1089, Static123.parseInt(local32), Static49.aClass100_351, Static123.parseInt(local36 / 10), Static123.parseInt(local36 % 10), Static264.COLON, Static123.parseInt(local40 / 10), Static123.parseInt(local40 % 10), Static264.COLON, Static123.parseInt(local44 / 10), Static123.parseInt(local44 % 10), Static55.aClass100_376 });
+		@Pc(13) int local13 = Static35.aCalendar1.get(Calendar.DAY_OF_WEEK);
+		@Pc(17) int local17 = Static35.aCalendar1.get(Calendar.DATE);
+		@Pc(21) int local21 = Static35.aCalendar1.get(Calendar.MONTH);
+		@Pc(32) int local32 = Static35.aCalendar1.get(Calendar.YEAR);
+		@Pc(36) int local36 = Static35.aCalendar1.get(Calendar.HOUR_OF_DAY);
+		@Pc(40) int local40 = Static35.aCalendar1.get(Calendar.MINUTE);
+		@Pc(44) int local44 = Static35.aCalendar1.get(Calendar.SECOND);
+		return JagString.concatenate(new JagString[] { Static219.aClass100Array149[local13 - 1], aClass100_461, JagString.parseInt(local17 / 10), JagString.parseInt(local17 % 10), Static270.aClass100_1089, Static138.aClass100Array102[local21], Static270.aClass100_1089, JagString.parseInt(local32), aClass100_351, JagString.parseInt(local36 / 10), JagString.parseInt(local36 % 10), Static264.COLON, JagString.parseInt(local40 / 10), JagString.parseInt(local40 % 10), Static264.COLON, JagString.parseInt(local44 / 10), JagString.parseInt(local44 % 10), Static55.aClass100_376 });
 	}
 
 	@OriginalMember(owner = "client!cj", name = "a", descriptor = "(ZIIIIIIFB)[[I")

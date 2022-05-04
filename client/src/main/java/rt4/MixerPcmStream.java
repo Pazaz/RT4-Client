@@ -20,6 +20,17 @@ public final class MixerPcmStream extends PcmStream {
 	@OriginalMember(owner = "client!ei", name = "w", descriptor = "I")
 	private int anInt1781 = -1;
 
+	@OriginalMember(owner = "client!ok", name = "a", descriptor = "(Lclient!ab;Lclient!ab;I)V")
+	public static void method3331(@OriginalArg(0) Node arg0, @OriginalArg(1) Node arg1) {
+		if (arg0.aClass3_223 != null) {
+			arg0.unlink();
+		}
+		arg0.aClass3_222 = arg1;
+		arg0.aClass3_223 = arg1.aClass3_223;
+		arg0.aClass3_223.aClass3_222 = arg0;
+		arg0.aClass3_222.aClass3_223 = arg0;
+	}
+
 	@OriginalMember(owner = "client!ei", name = "a", descriptor = "(Lclient!cc;)V")
 	private void method1342(@OriginalArg(0) MixerListener arg0) {
 		arg0.unlink();
@@ -156,7 +167,7 @@ public final class MixerPcmStream extends PcmStream {
 		while (arg0 != this.aClass69_44.aClass3_109 && ((MixerListener) arg0).anInt905 <= arg1.anInt905) {
 			arg0 = arg0.aClass3_222;
 		}
-		Static183.method3331(arg1, arg0);
+		method3331(arg1, arg0);
 		this.anInt1781 = ((MixerListener) this.aClass69_44.aClass3_109.aClass3_222).anInt905;
 	}
 }

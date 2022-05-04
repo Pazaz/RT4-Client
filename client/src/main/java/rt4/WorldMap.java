@@ -948,4 +948,54 @@ public class WorldMap {
 		}
 		anInt4901 = -1;
 	}
+
+    @OriginalMember(owner = "client!af", name = "b", descriptor = "(B)V")
+    public static void reset() {
+        clear(false);
+        System.gc();
+        client.setGameState(25);
+    }
+
+    @OriginalMember(owner = "client!bb", name = "a", descriptor = "(I)V")
+    public static void method447() {
+        if (zoom < targetZoom) {
+            zoom = (float) ((double) zoom + (double) zoom / 30.0D);
+            if (targetZoom < zoom) {
+                zoom = targetZoom;
+            }
+            method965();
+        } else if (targetZoom < zoom) {
+            zoom = (float) ((double) zoom - (double) zoom / 30.0D);
+            if (targetZoom > zoom) {
+                zoom = targetZoom;
+            }
+            method965();
+        }
+        if (anInt3482 == -1 || anInt4901 == -1) {
+            return;
+        }
+        @Pc(60) int local60 = anInt3482 - anInt435;
+        if (local60 < 2 || local60 > 2) {
+            local60 >>= 0x4;
+        }
+        @Pc(78) int local78 = anInt4901 - anInt919;
+        if (local78 < 2 || local78 > 2) {
+            local78 >>= 0x4;
+        }
+        anInt919 -= -local78;
+        anInt435 += local60;
+        if (local60 == 0 && local78 == 0) {
+            anInt3482 = -1;
+            anInt4901 = -1;
+        }
+        method965();
+    }
+
+    @OriginalMember(owner = "client!lb", name = "d", descriptor = "(B)V")
+    public static void method2720() {
+        if (aClass100_724 != null) {
+            method1853(aClass100_724);
+            aClass100_724 = null;
+        }
+    }
 }

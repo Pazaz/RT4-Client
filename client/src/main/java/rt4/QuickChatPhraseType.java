@@ -10,7 +10,13 @@ public final class QuickChatPhraseType extends SecondaryNode {
 
     @OriginalMember(owner = "client!ld", name = "a", descriptor = "[I")
 	public static final int[] DYNAMIC_COMMAND_ENCODE_BYTES = new int[] { 2, 2, 4, 0, 1, 8, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0 };
-    @OriginalMember(owner = "client!cb", name = "L", descriptor = "[I")
+	@OriginalMember(owner = "client!rc", name = "I", descriptor = "Lclient!na;")
+	public static final JagString aClass100_231 = JagString.parse(")3)3)3");
+	@OriginalMember(owner = "client!bf", name = "C", descriptor = "[I")
+	public static final int[] anIntArray51 = new int[] { 2, 2, 4, 2, 1, 8, 4, 1, 4, 4, 2, 1, 1, 1, 4, 1 };
+	@OriginalMember(owner = "client!qg", name = "U", descriptor = "Lclient!na;")
+	public static final JagString aClass100_891 = JagString.parse("");
+	@OriginalMember(owner = "client!cb", name = "L", descriptor = "[I")
 	private int[] anIntArray71;
 
 	@OriginalMember(owner = "client!cb", name = "M", descriptor = "[I")
@@ -114,11 +120,11 @@ public final class QuickChatPhraseType extends SecondaryNode {
 	public final JagString getText() {
 		@Pc(15) JagString local15 = Static87.allocate(80);
 		if (this.aClass100Array35 == null) {
-			return Static202.aClass100_891;
+			return aClass100_891;
 		}
 		local15.method3113(this.aClass100Array35[0]);
 		for (@Pc(31) int local31 = 1; local31 < this.aClass100Array35.length; local31++) {
-			local15.method3113(Static211.aClass100_231);
+			local15.method3113(aClass100_231);
 			local15.method3113(this.aClass100Array35[local31]);
 		}
 		return local15.method3156();
@@ -130,7 +136,7 @@ public final class QuickChatPhraseType extends SecondaryNode {
 		if (this.anIntArray71 != null) {
 			for (@Pc(22) int local22 = 0; local22 < this.anIntArray71.length; local22++) {
 				local17.method3113(this.aClass100Array35[local22]);
-				local17.method3113(Static89.method1838(this.anIntArrayArray5[local22], arg0.gVarLong(Static16.anIntArray51[this.anIntArray71[local22]]), this.anIntArray71[local22]));
+				local17.method3113(Static89.method1838(this.anIntArrayArray5[local22], arg0.gVarLong(anIntArray51[this.anIntArray71[local22]]), this.anIntArray71[local22]));
 			}
 		}
 		local17.method3113(this.aClass100Array35[this.aClass100Array35.length - 1]);

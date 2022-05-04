@@ -33,7 +33,7 @@ public final class LinkedList {
 	}
 
 	@OriginalMember(owner = "client!ih", name = "b", descriptor = "(I)Lclient!ab;")
-	public final Node method2279() {
+	public final Node tail() {
 		@Pc(7) Node local7 = this.aClass3_109.aClass3_223;
 		if (this.aClass3_109 == local7) {
 			this.aClass3_110 = null;
@@ -67,7 +67,7 @@ public final class LinkedList {
 	}
 
 	@OriginalMember(owner = "client!ih", name = "d", descriptor = "(I)Lclient!ab;")
-	public final Node method2286() {
+	public final Node prev() {
 		@Pc(13) Node local13 = this.aClass3_110;
 		if (this.aClass3_109 == local13) {
 			this.aClass3_110 = null;

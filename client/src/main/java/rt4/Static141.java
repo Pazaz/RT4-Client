@@ -8,17 +8,6 @@ public final class Static141 {
 	@OriginalMember(owner = "client!lb", name = "z", descriptor = "I")
 	public static int anInt3473;
 
-    @OriginalMember(owner = "client!lb", name = "s", descriptor = "Lclient!na;")
-	public static final JagString CLAN = JagString.parse(":clan:");
-
-	@OriginalMember(owner = "client!lb", name = "d", descriptor = "(B)V")
-	public static void method2720() {
-		if (WorldMap.aClass100_724 != null) {
-			WorldMap.method1853(WorldMap.aClass100_724);
-			WorldMap.aClass100_724 = null;
-		}
-	}
-
 	@OriginalMember(owner = "client!lb", name = "a", descriptor = "(ZIIIBII)V")
 	public static void method2722(@OriginalArg(0) boolean arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
 		Static113.anInt4612 = arg3;

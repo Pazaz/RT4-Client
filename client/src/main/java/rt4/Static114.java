@@ -10,10 +10,7 @@ public final class Static114 {
 	@OriginalMember(owner = "client!j", name = "K", descriptor = "I")
 	public static int anInt5843 = 0;
 
-	@OriginalMember(owner = "client!j", name = "M", descriptor = "Lclient!na;")
-	public static final JagString REPLACECANVAS = JagString.parse("::replacecanvas");
-
-	@OriginalMember(owner = "client!j", name = "O", descriptor = "[I")
+    @OriginalMember(owner = "client!j", name = "O", descriptor = "[I")
 	public static final int[] anIntArray565 = new int[] { 1, -1, -1, 1 };
 
 	@OriginalMember(owner = "client!j", name = "c", descriptor = "(I)V")

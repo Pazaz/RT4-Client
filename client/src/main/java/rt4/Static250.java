@@ -14,9 +14,6 @@ public final class Static250 {
 	@OriginalMember(owner = "client!uf", name = "q", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1042 = JagString.parse("Null");
 
-	@OriginalMember(owner = "client!uf", name = "s", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1043 = JagString.parse(" <col=00ff80>");
-
 	@OriginalMember(owner = "client!uf", name = "t", descriptor = "I")
 	public static int anInt5444 = 0;
 
@@ -24,15 +21,15 @@ public final class Static250 {
 	public static void method4273() {
 		@Pc(14) int playerX = PlayerList.self.xFine + Static132.anInt3291;
 		@Pc(20) int playerZ = PlayerList.self.zFine + Static206.anInt4774;
-		if (Static81.cameraX - playerX < -500 || Static81.cameraX - playerX > 500 || Static111.cameraZ - playerZ < -500 || Static111.cameraZ - playerZ > 500) {
-			Static81.cameraX = playerX;
-			Static111.cameraZ = playerZ;
+		if (Camera.cameraX - playerX < -500 || Camera.cameraX - playerX > 500 || Camera.cameraZ - playerZ < -500 || Camera.cameraZ - playerZ > 500) {
+			Camera.cameraX = playerX;
+			Camera.cameraZ = playerZ;
 		}
-		if (Static111.cameraZ != playerZ) {
-			Static111.cameraZ += (playerZ - Static111.cameraZ) / 16;
+		if (Camera.cameraZ != playerZ) {
+			Camera.cameraZ += (playerZ - Camera.cameraZ) / 16;
 		}
-		if (Static81.cameraX != playerX) {
-			Static81.cameraX += (playerX - Static81.cameraX) / 16;
+		if (Camera.cameraX != playerX) {
+			Camera.cameraX += (playerX - Camera.cameraX) / 16;
 		}
 		if (Preferences.aBoolean63) {
 			for (@Pc(93) int local93 = 0; local93 < InterfaceList.keyQueueSize; local93++) {

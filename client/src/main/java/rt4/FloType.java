@@ -40,7 +40,12 @@ public final class FloType {
 	@OriginalMember(owner = "client!wl", name = "m", descriptor = "I")
 	public int anInt5889 = 1190717;
 
-	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(ILclient!wa;I)V")
+    @OriginalMember(owner = "client!be", name = "a", descriptor = "(II)I")
+    public static int method492(@OriginalArg(1) int arg0) {
+        return arg0 == 16711935 ? -1 : ColorUtils.rgbToHsl(arg0);
+    }
+
+    @OriginalMember(owner = "client!wl", name = "a", descriptor = "(ILclient!wa;I)V")
 	public final void decode(@OriginalArg(1) Buffer arg0, @OriginalArg(2) int arg1) {
 		while (true) {
 			@Pc(5) int local5 = arg0.g1();
@@ -54,7 +59,7 @@ public final class FloType {
 	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(IILclient!wa;I)V")
 	private void method4674(@OriginalArg(1) int arg0, @OriginalArg(2) Buffer arg1, @OriginalArg(3) int arg2) {
 		if (arg0 == 1) {
-			this.anInt5899 = Static15.method492(arg1.g3());
+			this.anInt5899 = method492(arg1.g3());
 		} else if (arg0 == 2) {
 			this.texture = arg1.g1();
 		} else if (arg0 == 3) {
@@ -65,7 +70,7 @@ public final class FloType {
 		} else if (arg0 == 5) {
 			this.aBoolean312 = false;
 		} else if (arg0 == 7) {
-			this.anInt5894 = Static15.method492(arg1.g3());
+			this.anInt5894 = method492(arg1.g3());
 		} else if (arg0 == 8) {
 			anInt865 = arg2;
 		} else if (arg0 == 9) {

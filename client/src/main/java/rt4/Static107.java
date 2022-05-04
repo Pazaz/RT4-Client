@@ -10,9 +10,6 @@ public final class Static107 {
 	@OriginalMember(owner = "client!id", name = "b", descriptor = "I")
 	public static int anInt2875 = -1;
 
-	@OriginalMember(owner = "client!id", name = "c", descriptor = "Lclient!na;")
-	public static final JagString FPSON = JagString.parse("::fpson");
-
 	@OriginalMember(owner = "client!id", name = "d", descriptor = "[[[I")
 	public static final int[][][] anIntArrayArrayArray9 = new int[2][][];
 

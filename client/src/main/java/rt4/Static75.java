@@ -25,8 +25,8 @@ public final class Static75 {
 		if (local7 == null) {
 			return null;
 		} else {
-			@Pc(14) WallDecor local14 = local7.aClass24_1;
-			local7.aClass24_1 = null;
+			@Pc(14) WallDecor local14 = local7.wallDecor;
+			local7.wallDecor = null;
 			return local14;
 		}
 	}

@@ -7,6 +7,8 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static127 {
 
+	@OriginalMember(owner = "client!hh", name = "a", descriptor = "Lclient!na;")
+	public static final JagString aClass100_520 = JagString.parse("(U4");
 	@OriginalMember(owner = "client!k", name = "j", descriptor = "I")
 	public static int anInt3126;
 
@@ -21,7 +23,7 @@ public final class Static127 {
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(IIBLclient!ve;Lclient!ve;)Lclient!rk;")
 	public static Font method2462(@OriginalArg(1) int arg0, @OriginalArg(3) Js5 arg1, @OriginalArg(4) Js5 arg2) {
-		return SpriteLoader.decode(arg1, 0, arg0) ? Static29.method799(arg2.getFile(arg0, 0)) : null;
+		return SpriteLoader.decode(arg1, 0, arg0) ? Font.method799(arg2.getFile(arg0, 0)) : null;
 	}
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(IIIIZIZ)V")
@@ -53,7 +55,7 @@ public final class Static127 {
 		@Pc(103) Npc local103;
 		@Pc(109) int local109;
 		if (arg4) {
-			Static272.anInt5214 = 0;
+			NpcList.size = 0;
 			for (local96 = 0; local96 < 32768; local96++) {
 				local103 = NpcList.npcs[local96];
 				if (local103 != null) {
@@ -64,7 +66,7 @@ public final class Static127 {
 							local103.movementQueueX[local109] -= local86;
 							local103.movementQueueZ[local109] -= local81;
 						}
-						Static33.anIntArray79[Static272.anInt5214++] = local96;
+						NpcList.ids[NpcList.size++] = local96;
 					} else {
 						NpcList.npcs[local96].setNpcType(null);
 						NpcList.npcs[local96] = null;
@@ -119,9 +121,9 @@ public final class Static127 {
 				@Pc(382) int local382 = local367 + local81;
 				for (@Pc(384) int local384 = 0; local384 < 4; local384++) {
 					if (local378 >= 0 && local382 >= 0 && local378 < 104 && local382 < 104) {
-						Static159.aClass69ArrayArrayArray1[local384][local358][local367] = Static159.aClass69ArrayArrayArray1[local384][local378][local382];
+						Static159.objStacks[local384][local358][local367] = Static159.objStacks[local384][local378][local382];
 					} else {
-						Static159.aClass69ArrayArrayArray1[local384][local358][local367] = null;
+						Static159.objStacks[local384][local358][local367] = null;
 					}
 				}
 			}
@@ -156,28 +158,6 @@ public final class Static127 {
 		Static217.aClass69_116.clear();
 	}
 
-	@OriginalMember(owner = "client!k", name = "a", descriptor = "(B)Lclient!da;")
-	public static DelayedStateChange poll() {
-		@Pc(10) DelayedStateChange local10 = (DelayedStateChange) DelayedStateChange.serverQueue.method795();
-		if (local10 != null) {
-			local10.unlink();
-			local10.method4365();
-			return local10;
-		}
-		do {
-			local10 = (DelayedStateChange) DelayedStateChange.clientQueue.method795();
-			if (local10 == null) {
-				return null;
-			}
-			if (local10.getTime() > MonotonicClock.currentTimeMillis()) {
-				return null;
-			}
-			local10.unlink();
-			local10.method4365();
-		} while ((Long.MIN_VALUE & local10.secondaryKey) == 0L);
-		return local10;
-	}
-
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(Lclient!be;Lclient!na;I)Lclient!na;")
 	public static JagString method2465(@OriginalArg(0) Component arg0, @OriginalArg(1) JagString arg1) {
 		if (arg1.indexOf(Static49.PERCENT_SIGN) == -1) {
@@ -193,7 +173,7 @@ public final class Static127 {
 							local14 = arg1.indexOf(Static160.aClass100_761);
 							if (local14 == -1) {
 								while (true) {
-									local14 = arg1.indexOf(Static96.aClass100_520);
+									local14 = arg1.indexOf(aClass100_520);
 									if (local14 == -1) {
 										while (true) {
 											local14 = arg1.indexOf(Static235.aClass100_1002);
@@ -209,7 +189,7 @@ public final class Static127 {
 														try {
 															if (Player.lastLogAddress.result != null) {
 																@Pc(265) byte[] local265 = ((String) Player.lastLogAddress.result).getBytes("ISO-8859-1");
-																local246 = Static10.decodeString(local265, local265.length, 0);
+																local246 = JagString.decodeString(local265, local265.length, 0);
 															}
 														} catch (@Pc(274) UnsupportedEncodingException local274) {
 														}

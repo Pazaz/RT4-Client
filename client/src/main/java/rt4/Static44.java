@@ -21,7 +21,7 @@ public final class Static44 {
 		Static115.mapFlagX = 0;
 		MiniMenu.size = 0;
 		Protocol.opcode2 = -1;
-		Static270.minimapState = 0;
+		MiniMap.state = 0;
 		Player.rebootTimer = 0;
 		Protocol.opcode4 = -1;
 		Protocol.inboundBuffer.offset = 0;

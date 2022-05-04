@@ -32,7 +32,7 @@ public final class Static19 {
 
 	@OriginalMember(owner = "client!bi", name = "a", descriptor = "(IIBI)I")
 	public static int method588(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2) {
-		@Pc(19) int local19 = Rasteriser.palette[Static268.method4585(arg1, arg2)];
+		@Pc(19) int local19 = Rasteriser.palette[SoftwareModel.method4585(arg1, arg2)];
 		if (arg0 > 0) {
 			@Pc(31) int local31 = Rasteriser.textureProvider.method3238(arg0 & 0xFFFF);
 			@Pc(49) int local49;

@@ -126,7 +126,18 @@ public class AudioChannel {
 		}
 	}
 
-	@OriginalMember(owner = "client!vh", name = "a", descriptor = "()V")
+    @OriginalMember(owner = "client!nd", name = "a", descriptor = "(ZLclient!qb;)V")
+    public static void setInactive(@OriginalArg(1) PcmStream arg0) {
+        if (arg0.aClass3_Sub16_5 != null) {
+            arg0.aClass3_Sub16_5.anInt3313 = 0;
+        }
+        arg0.aBoolean292 = false;
+        for (@Pc(14) PcmStream local14 = arg0.method4406(); local14 != null; local14 = arg0.method4409()) {
+            setInactive(local14);
+        }
+    }
+
+    @OriginalMember(owner = "client!vh", name = "a", descriptor = "()V")
 	protected void write() throws Exception {
 	}
 
@@ -148,7 +159,7 @@ public class AudioChannel {
 		this.anInt4638 -= 256;
 		if (this.stream != null && this.anInt4638 <= 0) {
 			this.anInt4638 += sampleRate >> 4;
-			Static167.setInactive(this.stream);
+			setInactive(this.stream);
 			this.method3567(this.stream, this.stream.method4407());
 			@Pc(45) int local45 = 0;
 			@Pc(47) int local47 = 255;

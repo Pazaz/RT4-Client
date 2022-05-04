@@ -13,6 +13,11 @@ public class Camera {
     @OriginalMember(owner = "client!ef", name = "i", descriptor = "I")
     public static double pitchAccel = 0;
 
+    @OriginalMember(owner = "client!ii", name = "a", descriptor = "I")
+    public static int cameraZ;
+    @OriginalMember(owner = "client!gg", name = "bb", descriptor = "I")
+    public static int cameraX;
+
     public static double mod(double a, double b) {
         return ((a % b) + b) % b;
     }
@@ -26,9 +31,9 @@ public class Camera {
             pitchTarget = 383;
         }
         yawTarget = mod(yawTarget, 2047.0d);
-        @Pc(33) int local33 = Static81.cameraX >> 7;
-        @Pc(37) int local37 = Static111.cameraZ >> 7;
-        @Pc(43) int local43 = SceneGraph.getTileHeight(Player.level, Static81.cameraX, Static111.cameraZ);
+        @Pc(33) int local33 = cameraX >> 7;
+        @Pc(37) int local37 = cameraZ >> 7;
+        @Pc(43) int local43 = SceneGraph.getTileHeight(Player.level, cameraX, cameraZ);
         @Pc(45) int local45 = 0;
         @Pc(64) int local64;
         if (local33 > 3 && local37 > 3 && local33 < 100 && local37 < 100) {

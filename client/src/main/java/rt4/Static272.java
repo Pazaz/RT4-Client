@@ -6,10 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static272 {
 
-    @OriginalMember(owner = "client!wd", name = "g", descriptor = "I")
-	public static int anInt5214 = 0;
-
-	@OriginalMember(owner = "client!wd", name = "a", descriptor = "(BII)V")
+    @OriginalMember(owner = "client!wd", name = "a", descriptor = "(BII)V")
 	public static void setVarbit(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
 		@Pc(14) VarbitType local14 = VarbitTypeList.get(arg1);
 		@Pc(17) int local17 = local14.baseVar;

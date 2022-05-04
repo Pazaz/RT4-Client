@@ -65,8 +65,8 @@ public final class TextureOp32 extends TextureOp {
 		} else {
 			@Pc(22) int local22 = Static189.anInt4457;
 			@Pc(24) int local24 = Static172.anInt4165;
-			@Pc(34) int local34 = Static37.anInterface1_1.isLowDetail(this.anInt5539) ? 64 : 128;
-			this.anIntArray483 = Static37.anInterface1_1.method3235(this.anInt5539);
+			@Pc(34) int local34 = Texture.anInterface1_1.isLowDetail(this.anInt5539) ? 64 : 128;
+			this.anIntArray483 = Texture.anInterface1_1.method3235(this.anInt5539);
 			this.anInt5536 = local34;
 			this.anInt5535 = local34;
 			Static10.method348(local24, local22);

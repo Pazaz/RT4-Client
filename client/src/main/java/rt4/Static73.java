@@ -78,17 +78,17 @@ public final class Static73 {
 			local16 = (arg1 << 7) + 1;
 			local20 = (arg3 << 7) + 2;
 			@Pc(156) int local156 = SceneGraph.tileHeights[arg0][arg1][arg3] + arg5;
-			if (!Static256.method4394(local16, local156, local20)) {
+			if (!SceneGraph.method4394(local16, local156, local20)) {
 				return false;
 			}
 			@Pc(169) int local169 = (arg2 << 7) - 1;
-			if (!Static256.method4394(local169, local156, local20)) {
+			if (!SceneGraph.method4394(local169, local156, local20)) {
 				return false;
 			}
 			@Pc(182) int local182 = (arg4 << 7) - 1;
-			if (!Static256.method4394(local16, local156, local182)) {
+			if (!SceneGraph.method4394(local16, local156, local182)) {
 				return false;
-			} else if (Static256.method4394(local169, local156, local182)) {
+			} else if (SceneGraph.method4394(local169, local156, local182)) {
 				return true;
 			} else {
 				return false;
@@ -96,7 +96,7 @@ public final class Static73 {
 		} else if (Static9.method187(arg0, arg1, arg3)) {
 			local16 = arg1 << 7;
 			local20 = arg3 << 7;
-			return Static256.method4394(local16 + 1, SceneGraph.tileHeights[arg0][arg1][arg3] + arg5, local20 + 1) && Static256.method4394(local16 + 128 - 1, SceneGraph.tileHeights[arg0][arg1 + 1][arg3] + arg5, local20 + 1) && Static256.method4394(local16 + 128 - 1, SceneGraph.tileHeights[arg0][arg1 + 1][arg3 + 1] + arg5, local20 + 128 - 1) && Static256.method4394(local16 + 1, SceneGraph.tileHeights[arg0][arg1][arg3 + 1] + arg5, local20 + 128 - 1);
+			return SceneGraph.method4394(local16 + 1, SceneGraph.tileHeights[arg0][arg1][arg3] + arg5, local20 + 1) && SceneGraph.method4394(local16 + 128 - 1, SceneGraph.tileHeights[arg0][arg1 + 1][arg3] + arg5, local20 + 1) && SceneGraph.method4394(local16 + 128 - 1, SceneGraph.tileHeights[arg0][arg1 + 1][arg3 + 1] + arg5, local20 + 128 - 1) && SceneGraph.method4394(local16 + 1, SceneGraph.tileHeights[arg0][arg1][arg3 + 1] + arg5, local20 + 128 - 1);
 		} else {
 			return false;
 		}

@@ -8,6 +8,8 @@ public final class Static267 {
 
 	@OriginalMember(owner = "client!vl", name = "e", descriptor = "[I")
 	public static final int[] anIntArray517 = new int[] { 1, 2, 4, 8 };
+	@OriginalMember(owner = "client!je", name = "U", descriptor = "Lclient!na;")
+	public static final JagString aClass100_588 = JagString.parse("showingVideoAd");
 
 	@OriginalMember(owner = "client!vl", name = "i", descriptor = "[I")
 	public static int[] anIntArray518 = new int[2];
@@ -24,8 +26,8 @@ public final class Static267 {
 		if (local7 == null) {
 			return null;
 		} else {
-			@Pc(14) GroundDecor local14 = local7.aClass15_1;
-			local7.aClass15_1 = null;
+			@Pc(14) GroundDecor local14 = local7.groundDecor;
+			local7.groundDecor = null;
 			return local14;
 		}
 	}
@@ -34,7 +36,7 @@ public final class Static267 {
 	public static boolean isShowingVideoAd() {
 		if (client.objectTag) {
 			try {
-				return !((Boolean) Static119.aClass100_588.browserControlCall(GameShell.signLink.applet));
+				return !((Boolean) aClass100_588.browserControlCall(GameShell.signLink.applet));
 			} catch (@Pc(21) Throwable local21) {
 			}
 		}

@@ -12,7 +12,9 @@ public final class Texture {
     public static final int[] brightnessMap = new int[256];
 	@OriginalMember(owner = "client!jh", name = "f", descriptor = "D")
 	public static double brightness = -1.0D;
-	@OriginalMember(owner = "client!lc", name = "k", descriptor = "[I")
+    @OriginalMember(owner = "client!cm", name = "a", descriptor = "Lclient!m;")
+    public static TextureProvider anInterface1_1;
+    @OriginalMember(owner = "client!lc", name = "k", descriptor = "[I")
 	private final int[] anIntArray328;
 
 	@OriginalMember(owner = "client!lc", name = "b", descriptor = "[I")
@@ -93,7 +95,7 @@ public final class Texture {
 	@OriginalMember(owner = "client!lc", name = "a", descriptor = "(IZIDILclient!ve;Lclient!m;Z)[I")
 	public final int[] method2725(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(3) double arg3, @OriginalArg(5) Js5 arg4, @OriginalArg(6) TextureProvider arg5, @OriginalArg(7) boolean arg6) {
 		setBrightness(arg3);
-		Static37.anInterface1_1 = arg5;
+		anInterface1_1 = arg5;
 		Static176.aClass153_76 = arg4;
 		Static10.method348(arg0, arg2);
 		@Pc(20) int local20;
@@ -174,7 +176,7 @@ public final class Texture {
 		@Pc(8) byte[] local8 = new byte[arg1 * 4 * arg0];
 		setBrightness(arg4);
 		Static176.aClass153_76 = arg5;
-		Static37.anInterface1_1 = arg3;
+		anInterface1_1 = arg3;
 		Static10.method348(arg0, arg1);
 		@Pc(31) int local31;
 		for (local31 = 0; local31 < this.aClass3_Sub1Array22.length; local31++) {

@@ -9,19 +9,6 @@ public final class Static10 {
 	@OriginalMember(owner = "client!an", name = "db", descriptor = "S")
 	public static short aShort9 = 205;
 
-	@OriginalMember(owner = "client!an", name = "a", descriptor = "([BIII)Lclient!na;")
-	public static JagString decodeString(@OriginalArg(0) byte[] arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-		@Pc(7) JagString local7 = new JagString();
-		local7.chars = new byte[arg1];
-		local7.length = 0;
-		for (@Pc(22) int local22 = arg2; local22 < arg1 + arg2; local22++) {
-			if (arg0[local22] != 0) {
-				local7.chars[local7.length++] = arg0[local22];
-			}
-		}
-		return local7;
-	}
-
 	@OriginalMember(owner = "client!an", name = "c", descriptor = "(III)V")
 	public static void method348(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
 		if (Static189.anInt4457 != arg1) {

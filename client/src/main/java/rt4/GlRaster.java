@@ -236,7 +236,7 @@ public final class GlRaster {
 	}
 
 	@OriginalMember(owner = "client!dj", name = "d", descriptor = "(IIII)V")
-	public static void method1187(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	public static void setClip(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		if (arg0 < 0) {
 			arg0 = 0;
 		}

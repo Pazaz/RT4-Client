@@ -11,9 +11,6 @@ public final class Static96 {
 	@OriginalMember(owner = "client!hh", name = "r", descriptor = "[I")
 	public static int[] anIntArray235;
 
-	@OriginalMember(owner = "client!hh", name = "a", descriptor = "Lclient!na;")
-	public static final JagString aClass100_520 = JagString.parse("(U4");
-
 	@OriginalMember(owner = "client!hh", name = "a", descriptor = "(II)V")
 	public static void method1949(@OriginalArg(1) int arg0) {
 		if (InterfaceList.load(arg0)) {

@@ -6,7 +6,9 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static38 {
 
-	@OriginalMember(owner = "client!cn", name = "B", descriptor = "I")
+    @OriginalMember(owner = "client!di", name = "q", descriptor = "[Lclient!na;")
+    public static final JagString[] aClass100Array53 = new JagString[5];
+    @OriginalMember(owner = "client!cn", name = "B", descriptor = "I")
 	public static int anInt1196 = 1;
 
 	@OriginalMember(owner = "client!cn", name = "L", descriptor = "I")
@@ -70,11 +72,11 @@ public final class Static38 {
 					local82 = WorldMap.labels.anIntArray444[local11];
 				}
 				if (local84 != null) {
-					@Pc(211) int local211 = Fonts.p11Full.splitParagraph(WorldMap.labels.aClass100Array153[local11], null, Static45.aClass100Array53);
+					@Pc(211) int local211 = Fonts.p11Full.splitParagraph(WorldMap.labels.aClass100Array153[local11], null, aClass100Array53);
 					local80 -= local84.method1503() * (local211 - 1) / 2;
 					local80 += local84.method1511() / 2;
 					for (@Pc(231) int local231 = 0; local231 < local211; local231++) {
-						@Pc(242) JagString local242 = Static45.aClass100Array53[local231];
+						@Pc(242) JagString local242 = aClass100Array53[local231];
 						if (local211 - 1 > local231) {
 							local242.method3133(local242.length() - 4);
 						}
@@ -140,7 +142,7 @@ public final class Static38 {
 	@OriginalMember(owner = "client!cn", name = "a", descriptor = "(ZI)I")
 	public static int poll(@OriginalArg(0) boolean arg0) {
 		@Pc(4) long local4 = MonotonicClock.currentTimeMillis();
-		for (@Pc(28) LongNode local28 = arg0 ? (LongNode) Static199.aClass133_20.head() : (LongNode) Static199.aClass133_20.next(); local28 != null; local28 = (LongNode) Static199.aClass133_20.next()) {
+		for (@Pc(28) LongNode local28 = arg0 ? (LongNode) VarpDomain.aClass133_20.head() : (LongNode) VarpDomain.aClass133_20.next(); local28 != null; local28 = (LongNode) VarpDomain.aClass133_20.next()) {
 			if ((local28.value & 0x3FFFFFFFFFFFFFFFL) < local4) {
 				if ((local28.value & 0x4000000000000000L) != 0L) {
 					@Pc(58) int local58 = (int) local28.key;

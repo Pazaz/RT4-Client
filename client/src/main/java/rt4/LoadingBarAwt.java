@@ -10,6 +10,8 @@ import java.awt.Font;
 public class LoadingBarAwt {
     @OriginalMember(owner = "client!tg", name = "a", descriptor = "Ljava/awt/FontMetrics;")
     public static FontMetrics aFontMetrics1;
+    @OriginalMember(owner = "client!lj", name = "y", descriptor = "Ljava/awt/Image;")
+    public static Image anImage3;
 
     @OriginalMember(owner = "client!bc", name = "a", descriptor = "(Ljava/awt/Color;ZZLclient!na;I)V")
     public static void render(@OriginalArg(0) Color arg0, @OriginalArg(2) boolean arg1, @OriginalArg(3) JagString arg2, @OriginalArg(4) int arg3) {
@@ -27,10 +29,10 @@ public class LoadingBarAwt {
                 arg0 = new Color(140, 17, 17);
             }
             try {
-                if (Static149.anImage3 == null) {
-                    Static149.anImage3 = GameShell.canvas.createImage(304, 34);
+                if (anImage3 == null) {
+                    anImage3 = GameShell.canvas.createImage(304, 34);
                 }
-                @Pc(56) Graphics local56 = Static149.anImage3.getGraphics();
+                @Pc(56) Graphics local56 = anImage3.getGraphics();
                 local56.setColor(arg0);
                 local56.drawRect(0, 0, 303, 33);
                 local56.fillRect(2, 2, arg3 * 3, 30);
@@ -40,7 +42,7 @@ public class LoadingBarAwt {
                 local56.setFont(Static222.aFont1);
                 local56.setColor(Color.white);
                 arg2.method3112(22, (304 - arg2.method3155(aFontMetrics1)) / 2, local56);
-                local6.drawImage(Static149.anImage3, GameShell.canvasWidth / 2 - 152, GameShell.canvasHeight / 2 + -18, null);
+                local6.drawImage(anImage3, GameShell.canvasWidth / 2 - 152, GameShell.canvasHeight / 2 + -18, null);
             } catch (@Pc(134) Exception local134) {
                 @Pc(140) int local140 = GameShell.canvasWidth / 2 - 152;
                 @Pc(146) int local146 = GameShell.canvasHeight / 2 - 18;
@@ -68,6 +70,6 @@ public class LoadingBarAwt {
     public static void clear() {
         aFontMetrics1 = null;
         Static222.aFont1 = null;
-        Static149.anImage3 = null;
+        anImage3 = null;
     }
 }

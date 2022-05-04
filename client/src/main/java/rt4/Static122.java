@@ -12,11 +12,11 @@ public final class Static122 {
 	public static void method2410(@OriginalArg(0) Js5 arg0, @OriginalArg(2) int arg1, @OriginalArg(5) int arg2) {
 		Static172.aClass153_70 = arg0;
 		MidiPlayer.anInt441 = 1;
-		Static253.anInt5527 = arg2;
+		MidiPlayer.anInt5527 = arg2;
 		Static226.anInt5085 = 0;
-		Static277.anInt5853 = arg1;
-		Static72.aBoolean116 = false;
-		Static57.anInt1757 = 10000;
+		MidiPlayer.anInt5853 = arg1;
+		MidiPlayer.aBoolean116 = false;
+		MidiPlayer.anInt1757 = 10000;
 	}
 
     @OriginalMember(owner = "client!jh", name = "a", descriptor = "(IILclient!ve;Lclient!ve;I)Lclient!dd;")

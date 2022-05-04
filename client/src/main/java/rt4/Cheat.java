@@ -75,6 +75,20 @@ public class Cheat {
     public static final JagString aClass100_476 = JagString.parse("::gc");
     @OriginalMember(owner = "client!wk", name = "u", descriptor = "Lclient!na;")
 	public static final JagString CLIENTJS5DROP = JagString.parse("::clientjs5drop");
+    @OriginalMember(owner = "client!id", name = "c", descriptor = "Lclient!na;")
+    public static final JagString FPSON = JagString.parse("::fpson");
+    @OriginalMember(owner = "client!md", name = "Q", descriptor = "Lclient!na;")
+    public static final JagString MM = JagString.parse("::mm");
+    @OriginalMember(owner = "client!j", name = "M", descriptor = "Lclient!na;")
+    public static final JagString REPLACECANVAS = JagString.parse("::replacecanvas");
+    @OriginalMember(owner = "client!li", name = "p", descriptor = "Lclient!na;")
+    public static final JagString REBUILD = JagString.parse("::rebuild");
+    @OriginalMember(owner = "client!oi", name = "j", descriptor = "Lclient!na;")
+    public static final JagString WM1 = JagString.parse("::wm1");
+    @OriginalMember(owner = "client!ql", name = "i", descriptor = "Lclient!na;")
+    public static final JagString WM2 = JagString.parse("::wm2");
+    @OriginalMember(owner = "client!hk", name = "db", descriptor = "Lclient!na;")
+    public static final JagString WM3 = JagString.parse("::wm3");
     @OriginalMember(owner = "client!dg", name = "f", descriptor = "Z")
     public static boolean displayFps = false;
     @OriginalMember(owner = "client!nj", name = "a", descriptor = "Z")
@@ -84,7 +98,7 @@ public class Cheat {
 
     @OriginalMember(owner = "client!en", name = "a", descriptor = "(IIIB)V")
 	public static void teleport(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		@Pc(66) JagString local66 = JagString.concatenate(new JagString[] { aClass100_521, Static123.parseInt(arg2), Static159.aClass100_760, Static123.parseInt(arg0 >> 6), Static159.aClass100_760, Static123.parseInt(arg1 >> 6), Static159.aClass100_760, Static123.parseInt(arg0 & 0x3F), Static159.aClass100_760, Static123.parseInt(arg1 & 0x3F) });
+		@Pc(66) JagString local66 = JagString.concatenate(new JagString[] { aClass100_521, JagString.parseInt(arg2), Static70.aClass100_760, JagString.parseInt(arg0 >> 6), Static70.aClass100_760, JagString.parseInt(arg1 >> 6), Static70.aClass100_760, JagString.parseInt(arg0 & 0x3F), Static70.aClass100_760, JagString.parseInt(arg1 & 0x3F) });
 		local66.print();
 		execute(local66);
 	}
@@ -102,27 +116,27 @@ public class Cheat {
                 }
                 local29 = Runtime.getRuntime();
                 local38 = (int) ((local29.totalMemory() - local29.freeMemory()) / 1024L);
-                Chat.add(null, 0, JagString.concatenate(new JagString[] { aClass100_892, Static123.parseInt(local38), DEBUG_MEM_UNIT}));
+                Chat.add(null, 0, JagString.concatenate(new JagString[] { aClass100_892, JagString.parseInt(local38), DEBUG_MEM_UNIT}));
             }
             @Pc(117) int local117;
-            if (arg0.equalsIgnoreCase(Static154.MM)) {
+            if (arg0.equalsIgnoreCase(MM)) {
                 client.method2380();
                 for (local18 = 0; local18 < 10; local18++) {
                     System.gc();
                 }
                 local29 = Runtime.getRuntime();
                 local38 = (int) ((local29.totalMemory() - local29.freeMemory()) / 1024L);
-                Chat.add(null, 0, JagString.concatenate(new JagString[] { aClass100_893, Static123.parseInt(local38), DEBUG_MEM_UNIT}));
+                Chat.add(null, 0, JagString.concatenate(new JagString[] { aClass100_893, JagString.parseInt(local38), DEBUG_MEM_UNIT}));
                 Static16.method501();
                 client.method2380();
                 for (local117 = 0; local117 < 10; local117++) {
                     System.gc();
                 }
                 local38 = (int) ((local29.totalMemory() - local29.freeMemory()) / 1024L);
-                Chat.add(null, 0, JagString.concatenate(new JagString[] {aClass100_1093, Static123.parseInt(local38), DEBUG_MEM_UNIT}));
+                Chat.add(null, 0, JagString.concatenate(new JagString[] {aClass100_1093, JagString.parseInt(local38), DEBUG_MEM_UNIT}));
             }
             if (arg0.equalsIgnoreCase(PCACHESIZE)) {
-                Chat.add(null, 0, JagString.concatenate(new JagString[] { aClass100_335, Static123.parseInt(Static198.method1029()) }));
+                Chat.add(null, 0, JagString.concatenate(new JagString[] { aClass100_335, JagString.parseInt(Static198.method1029()) }));
             }
             if (GlRenderer.enabled && arg0.equalsIgnoreCase(CARDMEM)) {
                 System.out.println("oncard_geometry:" + GlCleaner.onCardGeometry);
@@ -136,20 +150,20 @@ public class Cheat {
                 client.js5NetQueue.quit();
             }
             if (arg0.equalsIgnoreCase(JS5DROP)) {
-                client.js5NetQueue.method2319();
+                client.js5NetQueue.drop();
             }
             if (arg0.equalsIgnoreCase(BREAKCON)) {
                 GameShell.signLink.breakConnection();
                 Protocol.socket.breakConnection();
-                client.js5NetQueue.method2323();
+                client.js5NetQueue.breakConnection();
             }
-            if (arg0.equalsIgnoreCase(Static114.REPLACECANVAS)) {
+            if (arg0.equalsIgnoreCase(REPLACECANVAS)) {
                 GameShell.replaceCanvas = true;
             }
-            if (arg0.equalsIgnoreCase(Static148.REBUILD)) {
+            if (arg0.equalsIgnoreCase(REBUILD)) {
                 client.setGameState(25);
             }
-            if (arg0.equalsIgnoreCase(Static107.FPSON)) {
+            if (arg0.equalsIgnoreCase(FPSON)) {
                 displayFps = true;
             }
             if (arg0.equalsIgnoreCase(FPSOFF)) {
@@ -158,13 +172,13 @@ public class Cheat {
             if (arg0.equalsIgnoreCase(WM0)) {
                 Static241.setWindowMode(false, 0, -1, -1);
             }
-            if (arg0.equalsIgnoreCase(Static181.WM1)) {
+            if (arg0.equalsIgnoreCase(WM1)) {
                 Static241.setWindowMode(false, 1, -1, -1);
             }
-            if (arg0.equalsIgnoreCase(Static207.WM2)) {
+            if (arg0.equalsIgnoreCase(WM2)) {
                 Static241.setWindowMode(false, 2, -1, -1);
             }
-            if (arg0.equalsIgnoreCase(Static99.WM3)) {
+            if (arg0.equalsIgnoreCase(WM3)) {
                 Static241.setWindowMode(false, 3, 1024, 768);
             }
             if (arg0.equalsIgnoreCase(NOCLIP)) {
@@ -189,7 +203,7 @@ public class Cheat {
             }
             if (arg0.startsWith(RECT_DEBUG)) {
                 rectDebug = arg0.substring(12).trim().parseInt();
-                Chat.add(null, 0, JagString.concatenate(new JagString[] { RECT_DEBUG_EQUALS, Static123.parseInt(rectDebug) }));
+                Chat.add(null, 0, JagString.concatenate(new JagString[] { RECT_DEBUG_EQUALS, JagString.parseInt(rectDebug) }));
             }
             if (arg0.equalsIgnoreCase(QA_OP_TEST)) {
                 Static121.aBoolean154 = true;
