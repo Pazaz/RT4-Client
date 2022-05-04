@@ -54,7 +54,13 @@ public class MiniMenu {
     @OriginalMember(owner = "client!aj", name = "R", descriptor = "Lclient!na;")
     public static final JagString aClass100_32 = JagString.parse("<col=ff9040>");
     @OriginalMember(owner = "client!fl", name = "V", descriptor = "Lclient!na;")
-	public static final JagString aClass100_448 = JagString.parse("(Y");
+	public static final JagString CLOSE_PARENTHESIS = JagString.parse("(Y");
+    @OriginalMember(owner = "client!gd", name = "c", descriptor = "Lclient!na;")
+    public static final JagString PLUS = JagString.parse(")0");
+    @OriginalMember(owner = "client!jj", name = "g", descriptor = "Lclient!na;")
+    public static final JagString OPEN_PARENTHESIS = JagString.parse(" (X");
+    @OriginalMember(owner = "client!qi", name = "B", descriptor = "Lclient!na;")
+    public static final JagString COLOR_WHITE = JagString.parse("<col=ffffff>");
     @OriginalMember(owner = "client!ck", name = "D", descriptor = "Lclient!na;")
 	public static JagString aClass100_203 = null;
     @OriginalMember(owner = "client!hn", name = "W", descriptor = "Lclient!na;")
@@ -640,9 +646,9 @@ public class MiniMenu {
                     aClass100_545 = Static250.aClass100_1042;
                 }
                 if (local693.usingScripts) {
-                    aClass100_466 = JagString.concatenate(new JagString[] { local693.opBase, Static204.aClass100_896 });
+                    aClass100_466 = JagString.concatenate(new JagString[] { local693.opBase, COLOR_WHITE});
                 } else {
-                    aClass100_466 = JagString.concatenate(new JagString[] {COLOR_GREEN, local693.aClass100_85, Static204.aClass100_896 });
+                    aClass100_466 = JagString.concatenate(new JagString[] {COLOR_GREEN, local693.aClass100_85, COLOR_WHITE});
                 }
             }
             return;
@@ -886,7 +892,7 @@ public class MiniMenu {
             anInt5014 = 1;
             anInt4997 = local36;
             InterfaceList.redraw(local693);
-            aClass100_203 = JagString.concatenate(new JagString[] { aClass100_32, ObjTypeList.get(local36).name, Static204.aClass100_896 });
+            aClass100_203 = JagString.concatenate(new JagString[] { aClass100_32, ObjTypeList.get(local36).name, COLOR_WHITE});
             if (aClass100_203 == null) {
                 aClass100_203 = Static92.NULL;
             }
@@ -1281,7 +1287,7 @@ public class MiniMenu {
         @Pc(35) JagString local35 = arg0.name;
         if (arg0.combatLevel != 0) {
             @Pc(47) JagString local47 = client.game == 1 ? LocalizedText.RATING : LocalizedText.LEVEL;
-            local35 = JagString.concatenate(new JagString[] { local35, getCombatLevelColor(arg0.combatLevel, PlayerList.self.combatLevel), Static70.aClass100_593, local47, JagString.parseInt(arg0.combatLevel), aClass100_448 });
+            local35 = JagString.concatenate(new JagString[] { local35, getCombatLevelColor(arg0.combatLevel, PlayerList.self.combatLevel), OPEN_PARENTHESIS, local47, JagString.parseInt(arg0.combatLevel), CLOSE_PARENTHESIS});
         }
         if (anInt5014 == 1) {
             add(Static169.anInt4075, (long) arg2, JagString.concatenate(new JagString[] {aClass100_203, aClass100_407, local35 }), arg1, (short) 26, LocalizedText.USE, arg3);
@@ -1361,47 +1367,47 @@ public class MiniMenu {
     }
 
     @OriginalMember(owner = "client!rj", name = "a", descriptor = "(IIILclient!e;I)V")
-    public static void addPlayerEntries(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Player arg2, @OriginalArg(4) int arg3) {
-        if (PlayerList.self == arg2 || size >= 400) {
+    public static void addPlayerEntries(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Player other, @OriginalArg(4) int arg3) {
+        if (PlayerList.self == other || size >= 400) {
             return;
         }
-        @Pc(158) JagString local158;
-        if (arg2.anInt1671 == 0) {
-            @Pc(22) boolean local22 = true;
-            if (PlayerList.self.anInt1667 != -1 && arg2.anInt1667 != -1) {
-                @Pc(43) int local43 = arg2.combatLevel < PlayerList.self.combatLevel ? PlayerList.self.combatLevel : arg2.combatLevel;
-                @Pc(58) int local58 = PlayerList.self.anInt1667 < arg2.anInt1667 ? PlayerList.self.anInt1667 : arg2.anInt1667;
-                @Pc(69) int local69 = local43 * 10 / 100 + local58 + 5;
-                @Pc(76) int local76 = PlayerList.self.combatLevel - arg2.combatLevel;
-                if (local76 < 0) {
-                    local76 = -local76;
+        @Pc(158) JagString string;
+        if (other.skill == 0) {
+            @Pc(22) boolean markCombatDifference = true;
+            if (PlayerList.self.combatRange != -1 && other.combatRange != -1) {
+                @Pc(43) int highestCombatLevel = Math.max(other.combatLevel, PlayerList.self.combatLevel);
+                @Pc(58) int highestCombatRange = Math.min(other.combatRange, PlayerList.self.combatRange);
+                @Pc(69) int calc = (highestCombatLevel * 10) / 100 + highestCombatRange + 5;
+                @Pc(76) int combatDelta = PlayerList.self.combatLevel - other.combatLevel;
+                if (combatDelta < 0) {
+                    combatDelta = -combatDelta;
                 }
-                if (local69 < local76) {
-                    local22 = false;
+                if (combatDelta < calc) {
+                    markCombatDifference = false;
                 }
             }
             @Pc(95) JagString local95 = client.game == 1 ? LocalizedText.RATING : LocalizedText.LEVEL;
-            if (arg2.combatLevel < arg2.anInt1656) {
-                local158 = JagString.concatenate(new JagString[] { arg2.getName(), local22 ? getCombatLevelColor(arg2.combatLevel, PlayerList.self.combatLevel) : Static204.aClass100_896, Static70.aClass100_593, local95, JagString.parseInt(arg2.combatLevel), Static78.aClass100_465, JagString.parseInt(arg2.anInt1656 - arg2.combatLevel), aClass100_448 });
+            if (other.combatLevelWithSummoning > other.combatLevel) {
+                string = JagString.concatenate(new JagString[] { other.getName(), markCombatDifference ? getCombatLevelColor(other.combatLevel, PlayerList.self.combatLevel) : COLOR_WHITE, OPEN_PARENTHESIS, local95, JagString.parseInt(other.combatLevel), PLUS, JagString.parseInt(other.combatLevelWithSummoning - other.combatLevel), CLOSE_PARENTHESIS});
             } else {
-                local158 = JagString.concatenate(new JagString[] { arg2.getName(), local22 ? getCombatLevelColor(arg2.combatLevel, PlayerList.self.combatLevel) : Static204.aClass100_896, Static70.aClass100_593, local95, JagString.parseInt(arg2.combatLevel), aClass100_448 });
+                string = JagString.concatenate(new JagString[] { other.getName(), markCombatDifference ? getCombatLevelColor(other.combatLevel, PlayerList.self.combatLevel) : COLOR_WHITE, OPEN_PARENTHESIS, local95, JagString.parseInt(other.combatLevel), CLOSE_PARENTHESIS});
             }
         } else {
-            local158 = JagString.concatenate(new JagString[] { arg2.getName(), Static70.aClass100_593, LocalizedText.SKILL, JagString.parseInt(arg2.anInt1671), aClass100_448 });
+            string = JagString.concatenate(new JagString[] { other.getName(), OPEN_PARENTHESIS, LocalizedText.SKILL, JagString.parseInt(other.skill), CLOSE_PARENTHESIS});
         }
         @Pc(275) int local275;
         if (anInt5014 == 1) {
-            add(Static169.anInt4075, (long) arg0, JagString.concatenate(new JagString[] {aClass100_203, Static105.aClass100_561, local158 }), arg3, (short) 1, LocalizedText.USE, arg1);
+            add(Static169.anInt4075, (long) arg0, JagString.concatenate(new JagString[] {aClass100_203, Static105.aClass100_561, string }), arg3, (short) 1, LocalizedText.USE, arg1);
         } else if (!Static241.aBoolean302) {
             for (local275 = 7; local275 >= 0; local275--) {
                 if (Player.options[local275] != null) {
                     @Pc(291) short local291 = 0;
                     if (client.game == 0 && Player.options[local275].equalsIgnoreCase(LocalizedText.ATTACK)) {
-                        if (arg2.combatLevel > PlayerList.self.combatLevel) {
+                        if (other.combatLevel > PlayerList.self.combatLevel) {
                             local291 = 2000;
                         }
-                        if (PlayerList.self.anInt1650 != 0 && arg2.anInt1650 != 0) {
-                            if (PlayerList.self.anInt1650 == arg2.anInt1650) {
+                        if (PlayerList.self.anInt1650 != 0 && other.anInt1650 != 0) {
+                            if (PlayerList.self.anInt1650 == other.anInt1650) {
                                 local291 = 2000;
                             } else {
                                 local291 = 0;
@@ -1412,15 +1418,15 @@ public class MiniMenu {
                     }
                     @Pc(353) short local353 = Static5.aShortArray2[local275];
                     @Pc(358) short local358 = (short) (local353 + local291);
-                    add(Player.cursors[local275], (long) arg0, JagString.concatenate(new JagString[] { Static204.aClass100_896, local158 }), arg3, local358, Player.options[local275], arg1);
+                    add(Player.cursors[local275], (long) arg0, JagString.concatenate(new JagString[] {COLOR_WHITE, string }), arg3, local358, Player.options[local275], arg1);
                 }
             }
         } else if ((anInt4999 & 0x8) != 0) {
-            add(Static246.anInt5393, (long) arg0, JagString.concatenate(new JagString[] {aClass100_466, Static105.aClass100_561, local158 }), arg3, (short) 15, aClass100_545, arg1);
+            add(Static246.anInt5393, (long) arg0, JagString.concatenate(new JagString[] {aClass100_466, Static105.aClass100_561, string }), arg3, (short) 15, aClass100_545, arg1);
         }
         for (local275 = 0; local275 < size; local275++) {
             if (actions[local275] == 60) {
-                opBases[local275] = JagString.concatenate(new JagString[] { Static204.aClass100_896, local158 });
+                opBases[local275] = JagString.concatenate(new JagString[] {COLOR_WHITE, string });
                 break;
             }
         }
