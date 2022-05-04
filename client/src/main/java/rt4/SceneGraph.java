@@ -7,6 +7,8 @@ import org.openrs2.deob.annotation.Pc;
 public class SceneGraph {
     @OriginalMember(owner = "client!bb", name = "g", descriptor = "[[[B")
     public static final byte[][][] tileFlags = new byte[4][104][104];
+    @OriginalMember(owner = "client!mi", name = "Y", descriptor = "[[[Lclient!ih;")
+	public static final LinkedList[][][] objStacks = new LinkedList[4][104][104];
     @OriginalMember(owner = "client!kc", name = "o", descriptor = "[[[Lclient!bj;")
     public static Tile[][][] tiles;
 

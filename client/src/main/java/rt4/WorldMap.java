@@ -89,6 +89,12 @@ public class WorldMap {
     public static Sprite aClass3_Sub2_Sub1_2;
     @OriginalMember(owner = "client!mc", name = "S", descriptor = "Lclient!mm;")
     public static SoftwareSprite aClass3_Sub2_Sub1_Sub1_2;
+    @OriginalMember(owner = "client!ha", name = "o", descriptor = "I")
+    public static int anInt2387;
+    @OriginalMember(owner = "client!cm", name = "c", descriptor = "I")
+    public static int anInt1176;
+    @OriginalMember(owner = "client!sm", name = "m", descriptor = "I")
+    public static int anInt5212;
 
     @OriginalMember(owner = "client!pa", name = "d", descriptor = "(I)V")
     public static void method3413() {
@@ -998,4 +1004,93 @@ public class WorldMap {
             aClass100_724 = null;
         }
     }
+
+    @OriginalMember(owner = "client!va", name = "c", descriptor = "(BI)V")
+    public static void method4444(@OriginalArg(1) int arg0) {
+        Static9.anInt172 = arg0;
+        Static91.anInt2428 = 20;
+        Static201.anInt1864 = 3;
+    }
+
+    @OriginalMember(owner = "client!ab", name = "a", descriptor = "(Lclient!na;I)V")
+    public static void method4656(@OriginalArg(0) JagString arg0) {
+        @Pc(9) int local9 = Static171.method3218(arg0);
+        if (local9 != -1) {
+            method3616(labels.aShortArray73[local9], labels.aShortArray72[local9]);
+        }
+    }
+
+    @OriginalMember(owner = "client!rc", name = "a", descriptor = "(Lclient!na;Z)Lclient!na;")
+    public static JagString method923(@OriginalArg(0) JagString arg0) {
+        @Pc(12) int local12 = Static171.method3218(arg0);
+        return local12 == -1 ? Static211.aClass100_517 : labels.aClass100Array153[local12].method3140(Static101.aClass100_538, Static197.aClass100_872);
+    }
+
+    @OriginalMember(owner = "client!rg", name = "d", descriptor = "(B)Lclient!bn;")
+    public static Map method4361() {
+        return currentMap;
+    }
+
+    @OriginalMember(owner = "client!jd", name = "a", descriptor = "(B)I")
+	public static int method2352() {
+		anInt5212 = 0;
+		return method2385();
+	}
+
+    @OriginalMember(owner = "client!je", name = "j", descriptor = "(I)I")
+    public static int method2385() {
+        if (labels == null) {
+            return -1;
+        }
+        while (anInt5212 < labels.anInt5074) {
+            if (labels.method3897(anInt5212)) {
+                return anInt5212++;
+            }
+            anInt5212++;
+        }
+        return -1;
+    }
+
+    @OriginalMember(owner = "client!gf", name = "a", descriptor = "(BII)V")
+    public static void method3616(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
+        anInt3482 = arg0 - originX;
+        @Pc(24) int local24 = anInt3482 - (int) ((float) component.anInt445 / zoom);
+        @Pc(33) int local33 = anInt3482 + (int) ((float) component.anInt445 / zoom);
+        if (local24 < 0) {
+            anInt3482 = (int) ((float) component.anInt445 / zoom);
+        }
+        anInt4901 = length + originZ - arg1 - 1;
+        @Pc(61) int local61 = (int) ((float) component.anInt459 / zoom) + anInt4901;
+        @Pc(70) int local70 = anInt4901 - (int) ((float) component.anInt459 / zoom);
+        if (local33 > width) {
+            anInt3482 = width - (int) ((float) component.anInt445 / zoom);
+        }
+        if (local70 < 0) {
+            anInt4901 = (int) ((float) component.anInt459 / zoom);
+        }
+        if (length < local61) {
+            anInt4901 = length - (int) ((float) component.anInt459 / zoom);
+        }
+    }
+
+    @OriginalMember(owner = "client!dh", name = "a", descriptor = "(Lclient!na;I)V")
+    public static void method1149(@OriginalArg(0) JagString arg0) {
+        @Pc(7) int local7 = method1879(arg0);
+        if (local7 != -1) {
+            method3616(labels.aShortArray73[local7], labels.aShortArray72[local7]);
+        }
+    }
+
+    @OriginalMember(owner = "client!hc", name = "a", descriptor = "(Lclient!na;Z)I")
+	public static int method1879(@OriginalArg(0) JagString arg0) {
+		if (labels == null || arg0.length() == 0) {
+			return -1;
+		}
+		for (@Pc(20) int local20 = 0; local20 < labels.anInt5074; local20++) {
+			if (labels.aClass100Array153[local20].method3140(Static101.aClass100_538, Static197.aClass100_872).strEquals(arg0)) {
+				return local20;
+			}
+		}
+		return -1;
+	}
 }

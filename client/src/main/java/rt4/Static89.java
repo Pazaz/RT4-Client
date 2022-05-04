@@ -10,9 +10,6 @@ public final class Static89 {
 	@OriginalMember(owner = "client!ha", name = "k", descriptor = "[[Z")
 	public static boolean[][] aBooleanArrayArray3;
 
-	@OriginalMember(owner = "client!ha", name = "o", descriptor = "I")
-	public static int anInt2387;
-
     @OriginalMember(owner = "client!ha", name = "a", descriptor = "(ZB)V")
 	public static void method1835(@OriginalArg(0) boolean arg0) {
 		@Pc(11) byte local11;
@@ -171,15 +168,15 @@ public final class Static89 {
 			for (@Pc(189) int local189 = 0; local189 < InterfaceList.anInt766; local189++) {
 				if (Static223.aBooleanArray116[local189]) {
 					if (GlRenderer.enabled) {
-						GlRaster.method1182(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711935, 128);
+						GlRaster.fillRectAlpha(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711935, 128);
 					} else {
-						SoftwareRaster.method2484(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711935, 128);
+						SoftwareRaster.fillRectAlpha(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711935, 128);
 					}
 				} else if (InterfaceList.rectangleRedraw[local189]) {
 					if (GlRenderer.enabled) {
-						GlRaster.method1182(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711680, 128);
+						GlRaster.fillRectAlpha(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711680, 128);
 					} else {
-						SoftwareRaster.method2484(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711680, 128);
+						SoftwareRaster.fillRectAlpha(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711680, 128);
 					}
 				}
 			}

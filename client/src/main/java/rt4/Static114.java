@@ -13,22 +13,6 @@ public final class Static114 {
     @OriginalMember(owner = "client!j", name = "O", descriptor = "[I")
 	public static final int[] anIntArray565 = new int[] { 1, -1, -1, 1 };
 
-	@OriginalMember(owner = "client!j", name = "c", descriptor = "(I)V")
-	public static void method4625() {
-		Static204.aClass69_113 = new LinkedList();
-	}
-
-	@OriginalMember(owner = "client!j", name = "a", descriptor = "([BI)Lclient!dd;")
-	public static SoftwareFont method4635(@OriginalArg(0) byte[] arg0) {
-		if (arg0 == null) {
-			return null;
-		} else {
-			@Pc(22) SoftwareFont local22 = new SoftwareFont(arg0, SpriteLoader.xOffsets, SpriteLoader.yOffsets, SpriteLoader.innerWidths, SpriteLoader.innerHeights, SpriteLoader.pixels);
-			SpriteLoader.clear();
-			return local22;
-		}
-	}
-
 	@OriginalMember(owner = "client!j", name = "a", descriptor = "(BZLclient!na;)V")
 	public static void drawTextOnScreen(@OriginalArg(1) boolean arg0, @OriginalArg(2) JagString arg1) {
 		@Pc(24) int local24 = Fonts.p12Full.method2856(arg1, 250);

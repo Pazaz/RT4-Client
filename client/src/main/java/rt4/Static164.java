@@ -227,7 +227,7 @@ public final class Static164 {
 			local133 = local71;
 		}
 		if (arg3 && (local5.stackable == 1 || arg5 != 1) && arg5 != -1) {
-			ObjTypeList.aClass3_Sub2_Sub9_Sub1_1.method2857(Static52.method1288(arg5), 0, 9, 16776960, 1);
+			ObjTypeList.aClass3_Sub2_Sub9_Sub1_1.renderLeft(Static52.method1288(arg5), 0, 9, 16776960, 1);
 		}
 		SoftwareRaster.method2491(local118, local120, local122);
 		SoftwareRaster.method2488(local125);

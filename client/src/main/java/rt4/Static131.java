@@ -10,10 +10,7 @@ public final class Static131 {
     @OriginalMember(owner = "client!kd", name = "ub", descriptor = "I")
 	public static int anInt3255;
 
-    @OriginalMember(owner = "client!kd", name = "mb", descriptor = "[Lclient!cl;")
-	public static final AnimFrameset[] aClass3_Sub2_Sub7Array5 = new AnimFrameset[14];
-
-	@OriginalMember(owner = "client!kd", name = "ob", descriptor = "I")
+    @OriginalMember(owner = "client!kd", name = "ob", descriptor = "I")
 	public static int anInt3251 = 0;
 
     @OriginalMember(owner = "client!kd", name = "sb", descriptor = "[I")

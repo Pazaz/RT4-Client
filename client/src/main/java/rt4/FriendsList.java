@@ -110,4 +110,17 @@ public class FriendsList {
         Protocol.outboundBuffer.p1a(arg1);
         Protocol.outboundBuffer.p8(arg0.encode37());
     }
+
+    @OriginalMember(owner = "client!ac", name = "a", descriptor = "(Lclient!na;I)I")
+    public static int method25(@OriginalArg(0) JagString arg0) {
+        if (arg0 == null) {
+            return -1;
+        }
+        for (@Pc(20) int local20 = 0; local20 < size; local20++) {
+            if (arg0.equalsIgnoreCase(usernames[local20])) {
+                return local20;
+            }
+        }
+        return -1;
+    }
 }

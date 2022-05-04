@@ -12,28 +12,6 @@ public final class Static18 {
     @OriginalMember(owner = "client!bh", name = "C", descriptor = "Lclient!na;")
 	public static final JagString COMPLETE_PERCENT = JagString.parse("<br>(X100(U(Y");
 
-	@OriginalMember(owner = "client!bh", name = "a", descriptor = "(Lclient!fe;Z)V")
-	public static void method553(@OriginalArg(0) PathingEntity arg0) {
-		@Pc(8) int local8 = arg0.anInt3395 - client.loop;
-		@Pc(20) int local20 = arg0.anInt3380 * 128 + arg0.getSize() * 64;
-		@Pc(36) int local36 = arg0.anInt3428 * 128 + arg0.getSize() * 64;
-		if (arg0.anInt3431 == 0) {
-			arg0.anInt3400 = 1024;
-		}
-		arg0.xFine += (local20 - arg0.xFine) / local8;
-		arg0.zFine += (local36 - arg0.zFine) / local8;
-		if (arg0.anInt3431 == 1) {
-			arg0.anInt3400 = 1536;
-		}
-		arg0.anInt3417 = 0;
-		if (arg0.anInt3431 == 2) {
-			arg0.anInt3400 = 0;
-		}
-		if (arg0.anInt3431 == 3) {
-			arg0.anInt3400 = 512;
-		}
-	}
-
 	@OriginalMember(owner = "client!bh", name = "a", descriptor = "(IB)I")
 	public static int method554(@OriginalArg(0) int arg0) {
 		return arg0 >>> 8;

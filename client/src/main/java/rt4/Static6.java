@@ -9,9 +9,6 @@ public final class Static6 {
     @OriginalMember(owner = "client!ag", name = "ab", descriptor = "Lclient!na;")
 	public static final JagString aClass100_17 = JagString.parse("0");
 
-    @OriginalMember(owner = "client!ag", name = "cb", descriptor = "[Lclient!cl;")
-	public static final AnimFrameset[] aClass3_Sub2_Sub7Array1 = new AnimFrameset[14];
-
     @OriginalMember(owner = "client!ag", name = "j", descriptor = "(I)V")
 	public static void method84() {
 		SceneGraph.clear();

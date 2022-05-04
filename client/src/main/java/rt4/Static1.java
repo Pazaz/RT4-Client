@@ -553,18 +553,18 @@ public final class Static1 {
 		}
 		WorldMap.aClass3_Sub2_Sub1_2.method1415(arg0, arg3);
 		@Pc(147) int local147 = arg1 * Static109.anInt2884 / WorldMap.length + arg3;
-		@Pc(153) int local153 = Static37.anInt1176 * arg1 / WorldMap.length;
+		@Pc(153) int local153 = WorldMap.anInt1176 * arg1 / WorldMap.length;
 		@Pc(161) int local161 = arg0 + arg2 * Static109.anInt2882 / WorldMap.width;
-		@Pc(167) int local167 = arg2 * Static89.anInt2387 / WorldMap.width;
+		@Pc(167) int local167 = arg2 * WorldMap.anInt2387 / WorldMap.width;
 		@Pc(169) int local169 = 16711680;
 		if (client.game == 1) {
 			local169 = 16777215;
 		}
 		if (GlRenderer.enabled) {
-			GlRaster.method1182(local161, local147, local167, local153, local169, 128);
+			GlRaster.fillRectAlpha(local161, local147, local167, local153, local169, 128);
 			GlRaster.method1179(local161, local147, local167, local153, local169);
 		} else {
-			SoftwareRaster.method2484(local161, local147, local167, local153, local169, 128);
+			SoftwareRaster.fillRectAlpha(local161, local147, local167, local153, local169, 128);
 			SoftwareRaster.drawRect(local161, local147, local167, local153, local169);
 		}
 		if (Static201.anInt1864 <= 0) {
@@ -581,9 +581,9 @@ public final class Static1 {
 				@Pc(258) int local258 = arg3 + local238.anInt4314 * arg1 / WorldMap.length;
 				@Pc(267) int local267 = arg2 * local238.anInt4307 / WorldMap.width + arg0;
 				if (GlRenderer.enabled) {
-					GlRaster.method1182(local267 - 2, local258 + -2, 4, 4, 16776960, local225);
+					GlRaster.fillRectAlpha(local267 - 2, local258 + -2, 4, 4, 16776960, local225);
 				} else {
-					SoftwareRaster.method2484(local267 - 2, local258 + -2, 4, 4, 16776960, local225);
+					SoftwareRaster.fillRectAlpha(local267 - 2, local258 + -2, 4, 4, 16776960, local225);
 				}
 			}
 		}

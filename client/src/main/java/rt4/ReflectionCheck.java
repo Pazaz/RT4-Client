@@ -13,7 +13,9 @@ import java.lang.reflect.Method;
 @OriginalClass("client!ed")
 public final class ReflectionCheck extends Node {
 
-	@OriginalMember(owner = "client!ed", name = "p", descriptor = "I")
+    @OriginalMember(owner = "client!qi", name = "u", descriptor = "Lclient!ih;")
+    public static LinkedList aClass69_113 = new LinkedList();
+    @OriginalMember(owner = "client!ed", name = "p", descriptor = "I")
 	public int anInt1725;
 
 	@OriginalMember(owner = "client!ed", name = "u", descriptor = "[Lsignlink!im;")
@@ -40,7 +42,7 @@ public final class ReflectionCheck extends Node {
     @OriginalMember(owner = "client!t", name = "a", descriptor = "(Lclient!i;II)V")
     public static void loop(@OriginalArg(0) Packet arg0) {
         while (true) {
-            @Pc(18) ReflectionCheck local18 = (ReflectionCheck) Static204.aClass69_113.head();
+            @Pc(18) ReflectionCheck local18 = (ReflectionCheck) aClass69_113.head();
             if (local18 == null) {
                 return;
             }
@@ -218,6 +220,11 @@ public final class ReflectionCheck extends Node {
 				local17.anIntArray138[local59] = -5;
 			}
 		}
-		Static204.aClass69_113.addTail(local17);
+		aClass69_113.addTail(local17);
 	}
+
+    @OriginalMember(owner = "client!j", name = "c", descriptor = "(I)V")
+    public static void method4625() {
+        aClass69_113 = new LinkedList();
+    }
 }

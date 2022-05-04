@@ -244,14 +244,14 @@ public final class Static269 {
 			Fonts.b12Full.renderCenter(LocalizedText.LOADINGDOTDOTDOT, local50, local61 + 20, 16777215, -1);
 			return;
 		}
-		Static37.anInt1176 = (int) ((float) (arg2 * 2) / WorldMap.zoom);
+		WorldMap.anInt1176 = (int) ((float) (arg2 * 2) / WorldMap.zoom);
 		Static109.anInt2882 = WorldMap.anInt435 - (int) ((float) arg3 / WorldMap.zoom);
 		@Pc(211) int local211 = WorldMap.anInt435 - (int) ((float) arg3 / WorldMap.zoom);
 		local50 = WorldMap.anInt919 - (int) ((float) arg2 / WorldMap.zoom);
 		Static109.anInt2884 = WorldMap.anInt919 - (int) ((float) arg2 / WorldMap.zoom);
 		@Pc(236) int local236 = WorldMap.anInt919 + (int) ((float) arg2 / WorldMap.zoom);
 		local61 = (int) ((float) arg3 / WorldMap.zoom) + WorldMap.anInt435;
-		Static89.anInt2387 = (int) ((float) (arg3 * 2) / WorldMap.zoom);
+		WorldMap.anInt2387 = (int) ((float) (arg3 * 2) / WorldMap.zoom);
 		if (GlRenderer.enabled) {
 			if (WorldMap.aClass3_Sub2_Sub1_Sub1_2 == null || WorldMap.aClass3_Sub2_Sub1_Sub1_2.width != arg3 || WorldMap.aClass3_Sub2_Sub1_Sub1_2.height != arg2) {
 				WorldMap.aClass3_Sub2_Sub1_Sub1_2 = null;

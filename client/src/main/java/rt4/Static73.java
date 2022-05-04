@@ -43,10 +43,10 @@ public final class Static73 {
 			Static138.renderX = Static245.anInt5375 << 7;
 			Static134.renderZ = Static248.anInt4232 << 7;
 		} else {
-			Static40.updateLoginScreenCamera();
+			Camera.updateLoginScreenCamera();
 		}
 		Static86.setInstantFade();
-		Static26.setupLoadingScreenRegion();
+		LoginManager.setupLoadingScreenRegion();
 		client.setGameState(28);
 	}
 

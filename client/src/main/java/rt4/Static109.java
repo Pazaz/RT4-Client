@@ -1,7 +1,6 @@
 package rt4;
 
 import org.openrs2.deob.annotation.OriginalMember;
-import org.openrs2.deob.annotation.Pc;
 
 public final class Static109 {
 
@@ -16,16 +15,5 @@ public final class Static109 {
 
 	@OriginalMember(owner = "client!ig", name = "i", descriptor = "I")
 	public static int anInt2886;
-
-	@OriginalMember(owner = "client!ig", name = "a", descriptor = "(I)V")
-	public static void method2274() {
-		for (@Pc(7) int local7 = 0; local7 < NpcList.size; local7++) {
-			@Pc(18) int local18 = NpcList.ids[local7];
-			@Pc(22) Npc local22 = NpcList.npcs[local18];
-			if (local22 != null) {
-				Static263.method4514(local22.type.size, local22);
-			}
-		}
-	}
 
 }

@@ -32,34 +32,4 @@ public final class Static263 {
 		}
 	}
 
-	@OriginalMember(owner = "client!vg", name = "a", descriptor = "(IILclient!fe;)V")
-	public static void method4514(@OriginalArg(0) int arg0, @OriginalArg(2) PathingEntity arg1) {
-		if (client.loop < arg1.anInt3395) {
-			Static18.method553(arg1);
-		} else if (arg1.anInt3386 >= client.loop) {
-			Static280.method4665(arg1);
-		} else {
-			Static104.method2247(arg1);
-		}
-		if (arg1.xFine < 128 || arg1.zFine < 128 || arg1.xFine >= 13184 || arg1.zFine >= 13184) {
-			arg1.seqId = -1;
-			arg1.spotAnimId = -1;
-			arg1.anInt3395 = 0;
-			arg1.anInt3386 = 0;
-			arg1.xFine = arg1.movementQueueX[0] * 128 + arg1.getSize() * 64;
-			arg1.zFine = arg1.movementQueueZ[0] * 128 + arg1.getSize() * 64;
-			arg1.method2689();
-		}
-		if (arg1 == PlayerList.self && (arg1.xFine < 1536 || arg1.zFine < 1536 || arg1.xFine >= 11776 || arg1.zFine >= 11776)) {
-			arg1.spotAnimId = -1;
-			arg1.anInt3395 = 0;
-			arg1.anInt3386 = 0;
-			arg1.seqId = -1;
-			arg1.xFine = arg1.movementQueueX[0] * 128 + arg1.getSize() * 64;
-			arg1.zFine = arg1.movementQueueZ[0] * 128 + arg1.getSize() * 64;
-			arg1.method2689();
-		}
-		Static37.method949(arg1);
-		Static34.method879(arg1);
-	}
 }

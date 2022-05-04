@@ -1183,7 +1183,7 @@ public class MiniMenu {
                     addPlayerEntries(local140, z, player, x);
                 }
                 if (local133 == 3) {
-                    @Pc(931) LinkedList objStacks = Static159.objStacks[Player.level][x][z];
+                    @Pc(931) LinkedList objStacks = SceneGraph.objStacks[Player.level][x][z];
                     if (objStacks != null) {
                         for (@Pc(940) ObjStackNode node = (ObjStackNode) objStacks.tail(); node != null; node = (ObjStackNode) objStacks.prev()) {
                             local240 = node.value.type;

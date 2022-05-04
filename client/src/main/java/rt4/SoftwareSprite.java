@@ -203,10 +203,33 @@ public class SoftwareSprite extends Sprite {
 
     @OriginalMember(owner = "client!gf", name = "a", descriptor = "(Lclient!ve;IIB)Lclient!mm;")
     public static SoftwareSprite loadSoftwareAlphaSprite(@OriginalArg(0) Js5 arg0, @OriginalArg(2) int arg1) {
-        return SpriteLoader.decode(arg0, 0, arg1) ? Static102.method2071() : null;
+        return SpriteLoader.decode(arg0, 0, arg1) ? method2071() : null;
     }
 
-    @OriginalMember(owner = "client!mm", name = "d", descriptor = "(I)V")
+	@OriginalMember(owner = "client!hn", name = "d", descriptor = "(I)Lclient!mm;")
+	public static SoftwareSprite method2071() {
+		@Pc(13) int local13 = SpriteLoader.innerHeights[0] * SpriteLoader.innerWidths[0];
+		@Pc(17) byte[] local17 = SpriteLoader.pixels[0];
+		@Pc(78) SoftwareSprite local78;
+		if (SpriteLoader.hasAlpha[0]) {
+			@Pc(30) byte[] local30 = SpriteLoader.alpha[0];
+			@Pc(33) int[] local33 = new int[local13];
+			for (@Pc(35) int local35 = 0; local35 < local13; local35++) {
+				local33[local35] = (local30[local35] & 0xFF) << 24 | SpriteLoader.palette[local17[local35] & 0xFF];
+			}
+			local78 = new SoftwareAlphaSprite(SpriteLoader.width, SpriteLoader.height, SpriteLoader.xOffsets[0], SpriteLoader.yOffsets[0], SpriteLoader.innerWidths[0], SpriteLoader.innerHeights[0], local33);
+		} else {
+			@Pc(83) int[] local83 = new int[local13];
+			for (@Pc(85) int local85 = 0; local85 < local13; local85++) {
+				local83[local85] = SpriteLoader.palette[local17[local85] & 0xFF];
+			}
+			local78 = new SoftwareSprite(SpriteLoader.width, SpriteLoader.height, SpriteLoader.xOffsets[0], SpriteLoader.yOffsets[0], SpriteLoader.innerWidths[0], SpriteLoader.innerHeights[0], local83);
+		}
+		SpriteLoader.clear();
+		return local78;
+	}
+
+	@OriginalMember(owner = "client!mm", name = "d", descriptor = "(I)V")
 	public final void method298(@OriginalArg(0) int arg0) {
 		if (this.width == this.anInt1860 && this.height == this.anInt1866) {
 			return;
@@ -822,7 +845,7 @@ public class SoftwareSprite extends Sprite {
 
 	@OriginalMember(owner = "client!mm", name = "d", descriptor = "(II)V")
 	@Override
-	public void method1421(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+	public void renderHorizontalFlipTransparent(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		arg0 += this.anInt1860 - this.width - this.anInt1863;
 		arg1 += this.anInt1861;
 		@Pc(21) int local21 = arg0 + arg1 * SoftwareRaster.width;

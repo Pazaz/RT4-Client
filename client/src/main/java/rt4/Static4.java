@@ -2,7 +2,6 @@ package rt4;
 
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
-import org.openrs2.deob.annotation.Pc;
 
 public final class Static4 {
 
@@ -30,19 +29,6 @@ public final class Static4 {
 	@OriginalMember(owner = "client!ac", name = "a", descriptor = "([J[Ljava/lang/Object;I)V")
 	public static void method23(@OriginalArg(0) long[] arg0, @OriginalArg(1) Object[] arg1) {
 		Static228.method3909(arg0.length - 1, arg0, 0, arg1);
-	}
-
-	@OriginalMember(owner = "client!ac", name = "a", descriptor = "(Lclient!na;I)I")
-	public static int method25(@OriginalArg(0) JagString arg0) {
-		if (arg0 == null) {
-			return -1;
-		}
-		for (@Pc(20) int local20 = 0; local20 < FriendsList.size; local20++) {
-			if (arg0.equalsIgnoreCase(FriendsList.usernames[local20])) {
-				return local20;
-			}
-		}
-		return -1;
 	}
 
 }

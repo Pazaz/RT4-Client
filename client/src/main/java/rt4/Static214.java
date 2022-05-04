@@ -9,9 +9,6 @@ public final class Static214 {
 	@OriginalMember(owner = "client!rg", name = "s", descriptor = "I")
 	public static int anInt5574 = -1;
 
-	@OriginalMember(owner = "client!rg", name = "A", descriptor = "[I")
-	public static final int[] anIntArray492 = new int[14];
-
 	@OriginalMember(owner = "client!rg", name = "a", descriptor = "(Lclient!e;I)V")
 	public static void method4359(@OriginalArg(0) Player arg0) {
 		@Pc(12) AreaSound local12 = (AreaSound) AreaSoundManager.playerSounds.get(arg0.username.encode37());
@@ -34,11 +31,6 @@ public final class Static214 {
 		} else {
 			return 7 - arg1;
 		}
-	}
-
-	@OriginalMember(owner = "client!rg", name = "d", descriptor = "(B)Lclient!bn;")
-	public static Map method4361() {
-		return WorldMap.currentMap;
 	}
 
 	@OriginalMember(owner = "client!rg", name = "a", descriptor = "(IIIIIIIII)V")

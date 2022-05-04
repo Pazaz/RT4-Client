@@ -140,7 +140,7 @@ public final class Static278 {
 		for (local19 = 0; local19 < 4; local19++) {
 			for (@Pc(115) int local115 = 0; local115 < 104; local115++) {
 				for (@Pc(122) int local122 = 0; local122 < 104; local122++) {
-					Static159.objStacks[local19][local115][local122] = null;
+					SceneGraph.objStacks[local19][local115][local122] = null;
 				}
 			}
 		}

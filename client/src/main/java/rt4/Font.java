@@ -336,7 +336,7 @@ public abstract class Font extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!rk", name = "a", descriptor = "(Lclient!na;IIII)V")
-	public final void method2857(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+	public final void renderLeft(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		if (arg0 != null) {
 			this.setColors(arg3, arg4);
 			this.render(arg0, arg1, arg2);

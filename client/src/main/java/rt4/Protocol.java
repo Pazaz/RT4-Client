@@ -5,6 +5,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 public class Protocol {
     @OriginalMember(owner = "client!eg", name = "e", descriptor = "Lclient!i;")
@@ -25,6 +26,8 @@ public class Protocol {
     public static final JagString TRADEREQ = JagString.parse(":tradereq:");
     @OriginalMember(owner = "client!lb", name = "s", descriptor = "Lclient!na;")
 	public static final JagString CLAN = JagString.parse(":clan:");
+    @OriginalMember(owner = "client!ij", name = "a", descriptor = "Lclient!na;")
+    public static final JagString DUELFRIEND = JagString.parse(":duelfriend:");
     @OriginalMember(owner = "client!jk", name = "B", descriptor = "Lclient!ma;")
     public static BufferedSocket socket;
     @OriginalMember(owner = "client!fl", name = "C", descriptor = "Lsignlink!im;")
@@ -73,10 +76,10 @@ public class Protocol {
                 @Pc(122) ObjStack local122 = new ObjStack();
                 local122.anInt5550 = local31;
                 local122.type = local15;
-                if (Static159.objStacks[Player.level][local19][local27] == null) {
-                    Static159.objStacks[Player.level][local19][local27] = new LinkedList();
+                if (SceneGraph.objStacks[Player.level][local19][local27] == null) {
+                    SceneGraph.objStacks[Player.level][local19][local27] = new LinkedList();
                 }
-                Static159.objStacks[Player.level][local19][local27].addTail(new ObjStackNode(local122));
+                SceneGraph.objStacks[Player.level][local19][local27].addTail(new ObjStackNode(local122));
                 Static220.spawnGroundObject(local27, local19);
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_121) {
@@ -169,7 +172,7 @@ public class Protocol {
             int local31 = inboundBuffer.g2();
             int local39 = inboundBuffer.g2();
             if (local23 >= 0 && local19 >= 0 && local23 < 104 && local19 < 104) {
-                @Pc(710) LinkedList local710 = Static159.objStacks[Player.level][local23][local19];
+                @Pc(710) LinkedList local710 = SceneGraph.objStacks[Player.level][local23][local19];
                 if (local710 != null) {
                     for (@Pc(718) ObjStackNode local718 = (ObjStackNode) local710.head(); local718 != null; local718 = (ObjStackNode) local710.next()) {
                         @Pc(723) ObjStack local723 = local718.value;
@@ -192,10 +195,10 @@ public class Protocol {
                 @Pc(812) ObjStack local812 = new ObjStack();
                 local812.anInt5550 = local31;
                 local812.type = local39;
-                if (Static159.objStacks[Player.level][local19][local27] == null) {
-                    Static159.objStacks[Player.level][local19][local27] = new LinkedList();
+                if (SceneGraph.objStacks[Player.level][local19][local27] == null) {
+                    SceneGraph.objStacks[Player.level][local19][local27] = new LinkedList();
                 }
-                Static159.objStacks[Player.level][local19][local27].addTail(new ObjStackNode(local812));
+                SceneGraph.objStacks[Player.level][local19][local27].addTail(new ObjStackNode(local812));
                 Static220.spawnGroundObject(local27, local19);
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_16) {
@@ -315,7 +318,7 @@ public class Protocol {
             int local23 = (local15 >> 4 & 0x7) + Static115.currentChunkX;
             int local27 = inboundBuffer.g2();
             if (local23 >= 0 && local19 >= 0 && local23 < 104 && local19 < 104) {
-                @Pc(1565) LinkedList local1565 = Static159.objStacks[Player.level][local23][local19];
+                @Pc(1565) LinkedList local1565 = SceneGraph.objStacks[Player.level][local23][local19];
                 if (local1565 != null) {
                     for (@Pc(1572) ObjStackNode local1572 = (ObjStackNode) local1565.head(); local1572 != null; local1572 = (ObjStackNode) local1565.next()) {
                         if (local1572.value.type == (local27 & 0x7FFF)) {
@@ -324,7 +327,7 @@ public class Protocol {
                         }
                     }
                     if (local1565.head() == null) {
-                        Static159.objStacks[Player.level][local23][local19] = null;
+                        SceneGraph.objStacks[Player.level][local23][local19] = null;
                     }
                     Static220.spawnGroundObject(local19, local23);
                 }
@@ -967,7 +970,7 @@ public class Protocol {
                 if (!ignored && Player.inTutorialIsland == 0) {
                     Chat.add(name, 14, JagString.EMPTY);
                 }
-            } else if (message.endsWith(Static112.DUELFRIEND)) {
+            } else if (message.endsWith(DUELFRIEND)) {
                 JagString name = message.substring(message.indexOf(Static264.COLON), 0);
                 long name37 = name.encode37();
                 boolean ignored = false;
@@ -1444,8 +1447,8 @@ public class Protocol {
             Static180.currentChunkZ = inboundBuffer.g1neg();
             for (int x = Static115.currentChunkX; x < Static115.currentChunkX + 8; x++) {
                 for (int z = Static180.currentChunkZ; z < Static180.currentChunkZ + 8; z++) {
-                    if (Static159.objStacks[Player.level][x][z] != null) {
-                        Static159.objStacks[Player.level][x][z] = null;
+                    if (SceneGraph.objStacks[Player.level][x][z] != null) {
+                        SceneGraph.objStacks[Player.level][x][z] = null;
                         Static220.spawnGroundObject(z, x);
                     }
                 }
@@ -1759,7 +1762,7 @@ public class Protocol {
             } else {
                 Static175.url = url;
                 Static164.newTab = true;
-                Static33.openUrlRequest = GameShell.signLink.openUrl(new String(url.method3148(), "ISO-8859-1"));
+                Static33.openUrlRequest = GameShell.signLink.openUrl(new String(url.method3148(), StandardCharsets.ISO_8859_1));
             }
             opcode = -1;
             return true;
@@ -2496,7 +2499,7 @@ public class Protocol {
             return;
         }
         Static71.method1444();
-        Static109.method2274();
+        NpcList.method2274();
         OverheadChat.loop();
         if (WorldMap.component != null) {
             WorldMap.method447();
@@ -2810,9 +2813,9 @@ public class Protocol {
                                             if (Static227.cameraType == 1) {
                                                 Static250.method4273();
                                             } else if (Static227.cameraType == 2) {
-                                                Static125.updateLockedCamera();
+                                                Camera.updateLockedCamera();
                                             } else {
-                                                Static40.updateLoginScreenCamera();
+                                                Camera.updateLoginScreenCamera();
                                             }
                                             for (y = 0; y < 5; y++) {
                                                 @Pc(2001) int local2001 = Static31.anIntArray76[y]++;

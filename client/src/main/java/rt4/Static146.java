@@ -12,10 +12,7 @@ public final class Static146 {
 	@OriginalMember(owner = "client!lg", name = "b", descriptor = "Z")
 	public static boolean aBoolean174 = false;
 
-	@OriginalMember(owner = "client!lg", name = "c", descriptor = "[Lclient!tk;")
-	public static final SeqType[] aClass144Array1 = new SeqType[14];
-
-	@OriginalMember(owner = "client!lg", name = "a", descriptor = "(ZLclient!wa;Lclient!na;)I")
+    @OriginalMember(owner = "client!lg", name = "a", descriptor = "(ZLclient!wa;Lclient!na;)I")
 	public static int method2748(@OriginalArg(1) Buffer arg0, @OriginalArg(2) JagString arg1) {
 		@Pc(6) int local6 = arg0.offset;
 		@Pc(14) byte[] local14 = arg1.method3148();

@@ -188,6 +188,11 @@ public final class JagString implements StringInterface {
         return arg0 == 198 || arg0 == 230 || arg0 == 156 || arg0 == 140 || arg0 == 223;
     }
 
+    @OriginalMember(owner = "client!ih", name = "a", descriptor = "(ZII)Lclient!na;")
+    public static JagString parseIntTrue(@OriginalArg(2) int arg0) {
+        return parseInt(true, arg0);
+    }
+
     @OriginalMember(owner = "client!na", name = "a", descriptor = "(Z)Ljava/net/URL;")
 	public final URL method3107() throws MalformedURLException {
 		return new URL(new String(this.chars, 0, this.length));
@@ -283,12 +288,7 @@ public final class JagString implements StringInterface {
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(IILjava/awt/Graphics;B)V")
 	public final void method3112(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Graphics arg2) {
-		@Pc(17) String local17;
-		try {
-			local17 = new String(this.chars, 0, this.length, "ISO-8859-1");
-		} catch (@Pc(19) UnsupportedEncodingException local19) {
-			local17 = new String(this.chars, 0, this.length);
-		}
+		@Pc(17) String local17 = new String(this.chars, 0, this.length, StandardCharsets.ISO_8859_1);
 		arg2.drawString(local17, arg1, arg0);
 	}
 
@@ -503,12 +503,7 @@ public final class JagString implements StringInterface {
 
 	@OriginalMember(owner = "client!na", name = "c", descriptor = "(Z)V")
 	public final void print() {
-		@Pc(16) String local16;
-		try {
-			local16 = new String(this.chars, 0, this.length, "ISO-8859-1");
-		} catch (@Pc(18) UnsupportedEncodingException local18) {
-			local16 = new String(this.chars, 0, this.length);
-		}
+		@Pc(16) String local16 = new String(this.chars, 0, this.length, StandardCharsets.ISO_8859_1);
 		System.out.println(local16);
 	}
 
@@ -920,12 +915,7 @@ public final class JagString implements StringInterface {
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(ILjava/awt/FontMetrics;)I")
 	public final int method3155(@OriginalArg(1) FontMetrics arg0) {
-		@Pc(14) String local14;
-		try {
-			local14 = new String(this.chars, 0, this.length, "ISO-8859-1");
-		} catch (@Pc(16) UnsupportedEncodingException local16) {
-			local14 = new String(this.chars, 0, this.length);
-		}
+		@Pc(14) String local14 = new String(this.chars, 0, this.length, StandardCharsets.ISO_8859_1);
 		return arg0.stringWidth(local14);
 	}
 

@@ -14,7 +14,7 @@ public final class Static220 {
 
 	@OriginalMember(owner = "client!rm", name = "a", descriptor = "(IBI)V")
 	public static void spawnGroundObject(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		@Pc(9) LinkedList local9 = Static159.objStacks[Player.level][arg1][arg0];
+		@Pc(9) LinkedList local9 = SceneGraph.objStacks[Player.level][arg1][arg0];
 		if (local9 == null) {
 			Static187.method3420(Player.level, arg1, arg0);
 			return;
