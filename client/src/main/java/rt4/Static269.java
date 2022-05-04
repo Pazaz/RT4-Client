@@ -18,7 +18,7 @@ public final class Static269 {
 				for (local14 = 0; local14 < 64; local14++) {
 					for (local21 = 0; local21 < 64; local21++) {
 						if (arg4 + local14 > 0 && local14 + arg4 < 103 && arg3 + local21 > 0 && local21 + arg3 < 103) {
-							arg0[local9].anIntArrayArray30[local14 + arg4][arg3 + local21] &= 0xFEFFFFFF;
+							arg0[local9].flags[local14 + arg4][arg3 + local21] &= 0xFEFFFFFF;
 						}
 					}
 				}

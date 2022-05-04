@@ -12,10 +12,7 @@ public final class Static221 {
 	@OriginalMember(owner = "client!s", name = "i", descriptor = "[I")
 	public static int[] anIntArray376;
 
-	@OriginalMember(owner = "client!s", name = "d", descriptor = "I")
-	public static int anInt4364 = 0;
-
-	@OriginalMember(owner = "client!s", name = "b", descriptor = "(III)V")
+    @OriginalMember(owner = "client!s", name = "b", descriptor = "(III)V")
 	public static void method3392(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
 		if (Static250.anInt5434 > 0) {
 			Static267.method4528(Static250.anInt5434);

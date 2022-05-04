@@ -25,7 +25,7 @@ public final class Static245 {
 			for (@Pc(10) int local10 = 0; local10 < 8; local10++) {
 				for (local17 = 0; local17 < 8; local17++) {
 					if (arg1 + local10 > 0 && local10 + arg1 < 103 && local17 + arg4 > 0 && arg4 + local17 < 103) {
-						arg3[arg2].anIntArrayArray30[local10 + arg1][local17 + arg4] &= 0xFEFFFFFF;
+						arg3[arg2].flags[local10 + arg1][local17 + arg4] &= 0xFEFFFFFF;
 					}
 				}
 			}

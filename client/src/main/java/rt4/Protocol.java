@@ -2765,7 +2765,7 @@ public class Protocol {
                                                 }
                                                 Static187.anInt4422 = 0;
                                             } else if (Static56.anInt1742 != -1 && Static125.anInt3096 == 0 && Static187.anInt4422 == 0) {
-                                                @Pc(1871) boolean local1871 = Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 0, true, 0, Static56.anInt1742, 0, 0, 0, Static116.anInt2954, PlayerList.self.movementQueueX[0]);
+                                                @Pc(1871) boolean local1871 = PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 0, true, 0, Static56.anInt1742, 0, 0, 0, Static116.anInt2954, PlayerList.self.movementQueueX[0]);
                                                 if (local1871) {
                                                     Cross.y = Mouse.clickY;
                                                     Cross.milliseconds = 0;

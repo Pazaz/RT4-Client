@@ -171,7 +171,7 @@ public class Cheat {
                 for (local18 = 0; local18 < 4; local18++) {
                     for (local38 = 1; local38 < 103; local38++) {
                         for (local117 = 1; local117 < 103; local117++) {
-                            PathFinder.collisionMaps[local18].anIntArrayArray30[local38][local117] = 0;
+                            PathFinder.collisionMaps[local18].flags[local38][local117] = 0;
                         }
                     }
                 }

@@ -82,35 +82,4 @@ public final class Static233 {
 		}
 	}
 
-	@OriginalMember(owner = "client!t", name = "a", descriptor = "(BJII)Z")
-	public static boolean method4003(@OriginalArg(1) long arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-		@Pc(12) int local12 = (int) arg0 >> 14 & 0x1F;
-		@Pc(24) int local24 = (int) arg0 >> 20 & 0x3;
-		@Pc(31) int local31 = (int) (arg0 >>> 32) & Integer.MAX_VALUE;
-		if (local12 == 10 || local12 == 11 || local12 == 22) {
-			@Pc(46) LocType local46 = LocTypeList.get(local31);
-			@Pc(62) int local62;
-			@Pc(59) int local59;
-			if (local24 == 0 || local24 == 2) {
-				local59 = local46.length;
-				local62 = local46.width;
-			} else {
-				local59 = local46.width;
-				local62 = local46.length;
-			}
-			@Pc(73) int local73 = local46.blockedSides;
-			if (local24 != 0) {
-				local73 = (local73 << local24 & 0xF) + (local73 >> 4 - local24);
-			}
-			Static102.method2075(PlayerList.self.movementQueueZ[0], 0, local59, true, local73, arg2, local62, 0, 2, arg1, PlayerList.self.movementQueueX[0]);
-		} else {
-			Static102.method2075(PlayerList.self.movementQueueZ[0], local24, 0, true, 0, arg2, 0, local12 + 1, 2, arg1, PlayerList.self.movementQueueX[0]);
-		}
-		Cross.y = Mouse.clickY;
-		Cross.milliseconds = 0;
-		Cross.type = 2;
-		Cross.x = Mouse.clickX;
-		return true;
-	}
-
 }
