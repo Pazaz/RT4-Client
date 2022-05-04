@@ -87,8 +87,8 @@ public class ClientProt {
             local13 = 25;
         }
         arg0--;
-        @Pc(23) int local23 = Static259.anIntArray514[arg0];
-        @Pc(27) int local27 = Static84.anIntArray209[arg0];
+        @Pc(23) int local23 = PathFinder.queueX[arg0];
+        @Pc(27) int local27 = PathFinder.queueZ[arg0];
         if (arg1 == 0) {
             Protocol.outboundBuffer.p1isaac(215);
             Protocol.outboundBuffer.p1(local13 + local13 + 3);
@@ -104,12 +104,12 @@ public class ClientProt {
         Protocol.outboundBuffer.p1a(Keyboard.pressedKeys[Keyboard.KEY_CTRL] ? 1 : 0);
         Protocol.outboundBuffer.p2(Static225.originX + local23);
         Protocol.outboundBuffer.p2add(Static142.originZ + local27);
-        Static84.anInt2255 = Static84.anIntArray209[0];
-        Static115.mapFlagX = Static259.anIntArray514[0];
+        Static84.anInt2255 = PathFinder.queueZ[0];
+        Static115.mapFlagX = PathFinder.queueX[0];
         for (@Pc(126) int local126 = 1; local126 < local13; local126++) {
             arg0--;
-            Protocol.outboundBuffer.p1a(Static259.anIntArray514[arg0] - local23);
-            Protocol.outboundBuffer.p1sub(Static84.anIntArray209[arg0] - local27);
+            Protocol.outboundBuffer.p1a(PathFinder.queueX[arg0] - local23);
+            Protocol.outboundBuffer.p1sub(PathFinder.queueZ[arg0] - local27);
         }
     }
 
@@ -135,7 +135,7 @@ public class ClientProt {
             @Pc(28) Player local28 = PlayerList.players[PlayerList.ids[local15]];
             if (local28 != null && local28.username != null && local28.username.equalsIgnoreCase(local7)) {
                 local13 = true;
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local28.movementQueueX[0], 1, 0, 2, local28.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local28.movementQueueX[0], 1, 0, 2, local28.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
                 if (arg0 == 1) {
                     Protocol.outboundBuffer.p1isaac(68);
                     Protocol.outboundBuffer.p2leadd(PlayerList.ids[local15]);
@@ -177,7 +177,7 @@ public class ClientProt {
         if (local23 == 31) {
             local43 = PlayerList.players[local36];
             if (local43 != null) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
                 Cross.type = 2;
                 Cross.milliseconds = 0;
                 Cross.x = Mouse.clickX;
@@ -187,7 +187,7 @@ public class ClientProt {
             }
         }
         if (local23 == 46) {
-            Static233.method4003(local31, local19, local15);
+            PathFinder.findPathToLoc(local31, local19, local15);
             Protocol.outboundBuffer.p1isaac(247);
             Protocol.outboundBuffer.p2le(Static142.originZ + local19);
             Protocol.outboundBuffer.p2leadd(local15 + Static225.originX);
@@ -209,7 +209,7 @@ public class ClientProt {
         if (local23 == 19) {
             local192 = NpcList.npcs[local36];
             if (local192 != null) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
                 Cross.x = Mouse.clickX;
                 Cross.type = 2;
                 Cross.milliseconds = 0;
@@ -221,7 +221,7 @@ public class ClientProt {
         if (local23 == 17) {
             local192 = NpcList.npcs[local36];
             if (local192 != null) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
                 Cross.x = Mouse.clickX;
                 Cross.milliseconds = 0;
                 Cross.type = 2;
@@ -233,7 +233,7 @@ public class ClientProt {
         if (local23 == 44) {
             local43 = PlayerList.players[local36];
             if (local43 != null) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
                 Cross.x = Mouse.clickX;
                 Cross.type = 2;
                 Cross.y = Mouse.clickY;
@@ -252,7 +252,7 @@ public class ClientProt {
             Static250.anInt5444 = local15;
         }
         if (local23 == 42) {
-            Static233.method4003(local31, local19, local15);
+            PathFinder.findPathToLoc(local31, local19, local15);
             Protocol.outboundBuffer.p1isaac(254);
             Protocol.outboundBuffer.p2le(local15 + Static225.originX);
             Protocol.outboundBuffer.p2add((int) (local31 >>> 32) & Integer.MAX_VALUE);
@@ -264,7 +264,7 @@ public class ClientProt {
         if (local23 == 45) {
             local192 = NpcList.npcs[local36];
             if (local192 != null) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
                 Cross.x = Mouse.clickX;
                 Cross.type = 2;
                 Cross.milliseconds = 0;
@@ -278,11 +278,11 @@ public class ClientProt {
         @Pc(560) boolean local560;
         if (local23 == 18) {
             if (client.game == 1) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
             } else {
-                local560 = Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 0, false, 0, local15, 0, 0, 2, local19, PlayerList.self.movementQueueX[0]);
+                local560 = PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 0, false, 0, local15, 0, 0, 2, local19, PlayerList.self.movementQueueX[0]);
                 if (!local560) {
-                    Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
+                    PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
                 }
             }
             Cross.x = Mouse.clickX;
@@ -295,7 +295,7 @@ public class ClientProt {
             Protocol.outboundBuffer.p2leadd(local19 + Static142.originZ);
         }
         if (local23 == 1001) {
-            Static233.method4003(local31, local19, local15);
+            PathFinder.findPathToLoc(local31, local19, local15);
             Protocol.outboundBuffer.p1isaac(170);
             Protocol.outboundBuffer.p2leadd(Integer.MAX_VALUE & (int) (local31 >>> 32));
             Protocol.outboundBuffer.p2leadd(local15 + Static225.originX);
@@ -328,7 +328,7 @@ public class ClientProt {
             } else if (local36 == 1) {
                 if (LoginManager.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT]) {
                     Cheat.teleport(Static225.originX + local15, Static142.originZ + local19, Player.level);
-                } else if (Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 0, true, 0, local15, 0, 0, 1, local19, PlayerList.self.movementQueueX[0])) {
+                } else if (PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 0, true, 0, local15, 0, 0, 1, local19, PlayerList.self.movementQueueX[0])) {
                     Protocol.outboundBuffer.p1(Static1.anInt5);
                     Protocol.outboundBuffer.p1(Static107.anInt2878);
                     Protocol.outboundBuffer.p2((int)Camera.yawTarget);
@@ -338,7 +338,7 @@ public class ClientProt {
                     Protocol.outboundBuffer.p1(89);
                     Protocol.outboundBuffer.p2(PlayerList.self.xFine);
                     Protocol.outboundBuffer.p2(PlayerList.self.zFine);
-                    Protocol.outboundBuffer.p1(Static221.anInt4364);
+                    Protocol.outboundBuffer.p1(PathFinder.anInt4364);
                     Protocol.outboundBuffer.p1(63);
                 }
             }
@@ -383,7 +383,7 @@ public class ClientProt {
         if (local23 == 10) {
             local43 = PlayerList.players[local36];
             if (local43 != null) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
                 Cross.type = 2;
                 Cross.y = Mouse.clickY;
                 Cross.x = Mouse.clickX;
@@ -398,7 +398,7 @@ public class ClientProt {
             InterfaceList.redraw(Static39.aClass13_10);
         }
         if (local23 == 49) {
-            Static233.method4003(local31, local19, local15);
+            PathFinder.findPathToLoc(local31, local19, local15);
             Protocol.outboundBuffer.p1isaac(84);
             Protocol.outboundBuffer.p2leadd(Integer.MAX_VALUE & (int) (local31 >>> 32));
             Protocol.outboundBuffer.p2leadd(Static142.originZ + local19);
@@ -413,7 +413,7 @@ public class ClientProt {
             Static257.aClass13_7 = InterfaceList.getComponent(local19);
             Static250.anInt5444 = local15;
         }
-        if (local23 == 14 && Static233.method4003(local31, local19, local15)) {
+        if (local23 == 14 && PathFinder.findPathToLoc(local31, local19, local15)) {
             Protocol.outboundBuffer.p1isaac(134);
             Protocol.outboundBuffer.p2add(Static225.originX + local15);
             Protocol.outboundBuffer.p2(Static274.anInt4997);
@@ -425,7 +425,7 @@ public class ClientProt {
         if (local23 == 37) {
             local43 = PlayerList.players[local36];
             if (local43 != null) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
                 Cross.milliseconds = 0;
                 Cross.type = 2;
                 Cross.y = Mouse.clickY;
@@ -448,11 +448,11 @@ public class ClientProt {
         }
         if (local23 == 21) {
             if (client.game == 1) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
             } else {
-                local560 = Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 0, false, 0, local15, 0, 0, 2, local19, PlayerList.self.movementQueueX[0]);
+                local560 = PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 0, false, 0, local15, 0, 0, 2, local19, PlayerList.self.movementQueueX[0]);
                 if (!local560) {
-                    Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
+                    PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
                 }
             }
             Cross.type = 2;
@@ -467,7 +467,7 @@ public class ClientProt {
         if (local23 == 4) {
             local192 = NpcList.npcs[local36];
             if (local192 != null) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
                 Cross.type = 2;
                 Cross.milliseconds = 0;
                 Cross.y = Mouse.clickY;
@@ -498,7 +498,7 @@ public class ClientProt {
         if (local23 == 29) {
             local43 = PlayerList.players[local36];
             if (local43 != null) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
                 Cross.y = Mouse.clickY;
                 Cross.milliseconds = 0;
                 Cross.type = 2;
@@ -519,7 +519,7 @@ public class ClientProt {
         if (local23 == 15) {
             local43 = PlayerList.players[local36];
             if (local43 != null) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
                 Cross.milliseconds = 0;
                 Cross.type = 2;
                 Cross.x = Mouse.clickX;
@@ -532,11 +532,11 @@ public class ClientProt {
         }
         if (local23 == 34) {
             if (client.game == 1) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
             } else {
-                local560 = Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 0, false, 0, local15, 0, 0, 2, local19, PlayerList.self.movementQueueX[0]);
+                local560 = PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 0, false, 0, local15, 0, 0, 2, local19, PlayerList.self.movementQueueX[0]);
                 if (!local560) {
-                    Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
+                    PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
                 }
             }
             Cross.x = Mouse.clickX;
@@ -560,7 +560,7 @@ public class ClientProt {
         if (local23 == 2) {
             local192 = NpcList.npcs[local36];
             if (local192 != null) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
                 Cross.y = Mouse.clickY;
                 Cross.type = 2;
                 Cross.x = Mouse.clickX;
@@ -585,7 +585,7 @@ public class ClientProt {
         if (local23 == 26) {
             local192 = NpcList.npcs[local36];
             if (local192 != null) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
                 Cross.type = 2;
                 Cross.milliseconds = 0;
                 Cross.y = Mouse.clickY;
@@ -608,9 +608,9 @@ public class ClientProt {
             }
         }
         if (local23 == 33) {
-            local560 = Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 0, false, 0, local15, 0, 0, 2, local19, PlayerList.self.movementQueueX[0]);
+            local560 = PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 0, false, 0, local15, 0, 0, 2, local19, PlayerList.self.movementQueueX[0]);
             if (!local560) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
             }
             Cross.x = Mouse.clickX;
             Cross.milliseconds = 0;
@@ -658,7 +658,7 @@ public class ClientProt {
         if (local23 == 1) {
             local43 = PlayerList.players[local36];
             if (local43 != null) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
                 Cross.milliseconds = 0;
                 Cross.y = Mouse.clickY;
                 Cross.type = 2;
@@ -681,11 +681,11 @@ public class ClientProt {
         }
         if (local23 == 24) {
             if (client.game == 1) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
             } else {
-                local560 = Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 0, false, 0, local15, 0, 0, 2, local19, PlayerList.self.movementQueueX[0]);
+                local560 = PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 0, false, 0, local15, 0, 0, 2, local19, PlayerList.self.movementQueueX[0]);
                 if (!local560) {
-                    Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
+                    PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
                 }
             }
             Cross.type = 2;
@@ -697,7 +697,7 @@ public class ClientProt {
             Protocol.outboundBuffer.p2leadd(local36);
             Protocol.outboundBuffer.p2le(Static142.originZ + local19);
         }
-        if (local23 == 38 && Static233.method4003(local31, local19, local15)) {
+        if (local23 == 38 && PathFinder.findPathToLoc(local31, local19, local15)) {
             Protocol.outboundBuffer.p1isaac(233);
             Protocol.outboundBuffer.p2leadd(local19 + Static142.originZ);
             Protocol.outboundBuffer.p2add(Static225.originX + local15);
@@ -717,7 +717,7 @@ public class ClientProt {
         if (local23 == 57) {
             local43 = PlayerList.players[local36];
             if (local43 != null) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
                 Cross.type = 2;
                 Cross.y = Mouse.clickY;
                 Cross.x = Mouse.clickX;
@@ -741,7 +741,7 @@ public class ClientProt {
             return;
         }
         if (local23 == 50) {
-            Static233.method4003(local31, local19, local15);
+            PathFinder.findPathToLoc(local31, local19, local15);
             Protocol.outboundBuffer.p1isaac(194);
             Protocol.outboundBuffer.p2leadd(local19 + Static142.originZ);
             Protocol.outboundBuffer.p2le(Static225.originX + local15);
@@ -759,7 +759,7 @@ public class ClientProt {
         if (local23 == 30) {
             local43 = PlayerList.players[local36];
             if (local43 != null) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
                 Cross.milliseconds = 0;
                 Cross.x = Mouse.clickX;
                 Cross.y = Mouse.clickY;
@@ -778,9 +778,9 @@ public class ClientProt {
             Static250.anInt5444 = local15;
         }
         if (local23 == 39) {
-            local560 = Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 0, false, 0, local15, 0, 0, 2, local19, PlayerList.self.movementQueueX[0]);
+            local560 = PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 0, false, 0, local15, 0, 0, 2, local19, PlayerList.self.movementQueueX[0]);
             if (!local560) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
             }
             Cross.y = Mouse.clickY;
             Cross.x = Mouse.clickX;
@@ -815,7 +815,7 @@ public class ClientProt {
         if (local23 == 6) {
             local43 = PlayerList.players[local36];
             if (local43 != null) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local43.movementQueueX[0], 1, 0, 2, local43.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
                 Cross.y = Mouse.clickY;
                 Cross.milliseconds = 0;
                 Cross.type = 2;
@@ -826,11 +826,11 @@ public class ClientProt {
         }
         if (local23 == 20) {
             if (client.game == 1) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
             } else {
-                local560 = Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 0, false, 0, local15, 0, 0, 2, local19, PlayerList.self.movementQueueX[0]);
+                local560 = PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 0, false, 0, local15, 0, 0, 2, local19, PlayerList.self.movementQueueX[0]);
                 if (!local560) {
-                    Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
+                    PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local15, 1, 0, 2, local19, PlayerList.self.movementQueueX[0]);
                 }
             }
             Cross.y = Mouse.clickY;
@@ -845,7 +845,7 @@ public class ClientProt {
         if (local23 == 16) {
             local192 = NpcList.npcs[local36];
             if (local192 != null) {
-                Static102.method2075(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
+                PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local192.movementQueueX[0], 1, 0, 2, local192.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
                 Cross.x = Mouse.clickX;
                 Cross.milliseconds = 0;
                 Cross.y = Mouse.clickY;

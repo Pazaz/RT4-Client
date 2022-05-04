@@ -296,8 +296,11 @@ public final class Component {
 	@OriginalMember(owner = "client!be", name = "Hb", descriptor = "Z")
 	public boolean usingScripts = false;
 
+	@OriginalMember(owner = "client!di", name = "F", descriptor = "Lclient!bf;")
+	public static final ServerActiveProperties DEFAULT_SERVER_ACTIVE_PROPERTIES = new ServerActiveProperties(0, -1);
+
 	@OriginalMember(owner = "client!be", name = "gc", descriptor = "Lclient!bf;")
-	public ServerActiveProperties properties = Static45.aClass3_Sub4_2;
+	public ServerActiveProperties properties = DEFAULT_SERVER_ACTIVE_PROPERTIES;
 
 	@OriginalMember(owner = "client!be", name = "cc", descriptor = "I")
 	public int anInt492 = 0;

@@ -15,9 +15,6 @@ public final class Static167 {
 	@OriginalMember(owner = "client!nd", name = "b", descriptor = "Lclient!na;")
 	public static final JagString aClass100_780 = JagString.parse("Clientscript error in: ");
 
-	@OriginalMember(owner = "client!nd", name = "q", descriptor = "[[I")
-	public static final int[][] anIntArrayArray31 = new int[104][104];
-
 	@OriginalMember(owner = "client!nd", name = "x", descriptor = "Lclient!na;")
 	public static final JagString aClass100_783 = JagString.parse(")4p=");
 

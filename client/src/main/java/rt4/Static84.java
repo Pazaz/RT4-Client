@@ -8,9 +8,6 @@ public final class Static84 {
 	@OriginalMember(owner = "client!gk", name = "d", descriptor = "F")
 	public static float aFloat10;
 
-    @OriginalMember(owner = "client!gk", name = "c", descriptor = "[I")
-	public static final int[] anIntArray209 = new int[4096];
-
 	@OriginalMember(owner = "client!gk", name = "g", descriptor = "Z")
 	public static boolean aBoolean127 = false;
 

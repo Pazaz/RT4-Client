@@ -989,7 +989,7 @@ public final class client extends GameShell {
 								if (local66.getSize() > 1) {
 									for (@Pc(226) int local226 = local66.movementQueueX[0]; local66.movementQueueX[0] + local66.getSize() > local226; local226++) {
 										for (@Pc(246) int local246 = local66.movementQueueZ[0]; local66.movementQueueZ[0] + local66.getSize() > local246; local246++) {
-											if ((PathFinder.collisionMaps[Player.level].anIntArrayArray30[local226][local246] & 0x12401FF) != 0) {
+											if ((PathFinder.collisionMaps[Player.level].flags[local226][local246] & 0x12401FF) != 0) {
 												continue nextNpc;
 											}
 										}

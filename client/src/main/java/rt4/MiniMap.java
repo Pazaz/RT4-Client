@@ -134,7 +134,7 @@ public class MiniMap {
                             @Pc(237) int local237 = local76;
                             local194 = local37;
                             if (local187 != 22 && local187 != 29 && local187 != 34 && local187 != 36 && local187 != 46 && local187 != 47 && local187 != 48) {
-                                @Pc(269) int[][] local269 = PathFinder.collisionMaps[Player.level].anIntArrayArray30;
+                                @Pc(269) int[][] local269 = PathFinder.collisionMaps[Player.level].flags;
                                 for (@Pc(271) int local271 = 0; local271 < 10; local271++) {
                                     @Pc(281) int local281 = (int) (Math.random() * 4.0D);
                                     if (local281 == 0 && local194 > 0 && local37 - 3 < local194 && (local269[local194 - 1][local237] & 0x12C0108) == 0) {

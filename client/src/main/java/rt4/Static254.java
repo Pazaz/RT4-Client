@@ -31,16 +31,16 @@ public final class Static254 {
 		} else {
 			@Pc(47) int local47 = 0;
 			@Pc(49) byte local49 = 0;
-			Static259.anIntArray514[0] = arg1;
+			PathFinder.queueX[0] = arg1;
 			@Pc(69) int local69 = local49 + 1;
-			Static84.anIntArray209[0] = arg2;
+			PathFinder.queueZ[0] = arg2;
 			Static266.aByteArrayArrayArray15[Player.level][arg1][arg2] = local14;
 			while (local47 != local69) {
-				@Pc(94) int local94 = Static259.anIntArray514[local47] >> 16 & 0xFF;
-				@Pc(102) int local102 = Static259.anIntArray514[local47] >> 24 & 0xFF;
-				@Pc(108) int local108 = Static259.anIntArray514[local47] & 0xFFFF;
-				@Pc(116) int local116 = Static84.anIntArray209[local47] >> 16 & 0xFF;
-				@Pc(122) int local122 = Static84.anIntArray209[local47] & 0xFFFF;
+				@Pc(94) int local94 = PathFinder.queueX[local47] >> 16 & 0xFF;
+				@Pc(102) int local102 = PathFinder.queueX[local47] >> 24 & 0xFF;
+				@Pc(108) int local108 = PathFinder.queueX[local47] & 0xFFFF;
+				@Pc(116) int local116 = PathFinder.queueZ[local47] >> 16 & 0xFF;
+				@Pc(122) int local122 = PathFinder.queueZ[local47] & 0xFFFF;
 				local47 = local47 + 1 & 0xFFF;
 				@Pc(130) boolean local130 = false;
 				@Pc(132) boolean local132 = false;
@@ -122,56 +122,56 @@ public final class Static254 {
 				}
 				if (!local130) {
 					if (local108 >= 1 && Static266.aByteArrayArrayArray15[Player.level][local108 - 1][local122] != local14) {
-						Static259.anIntArray514[local69] = local108 - 1 | 0x120000 | 0xD3000000;
-						Static84.anIntArray209[local69] = local122 | 0x130000;
+						PathFinder.queueX[local69] = local108 - 1 | 0x120000 | 0xD3000000;
+						PathFinder.queueZ[local69] = local122 | 0x130000;
 						local69 = local69 + 1 & 0xFFF;
 						Static266.aByteArrayArrayArray15[Player.level][local108 - 1][local122] = local14;
 					}
 					local122++;
 					if (local122 < 104) {
 						if (local108 - 1 >= 0 && local14 != Static266.aByteArrayArrayArray15[Player.level][local108 - 1][local122] && (SceneGraph.tileFlags[Player.level][local108][local122] & 0x4) == 0 && (SceneGraph.tileFlags[Player.level][local108 - 1][local122 - 1] & 0x4) == 0) {
-							Static259.anIntArray514[local69] = 0x52000000 | 0x120000 | local108 - 1;
-							Static84.anIntArray209[local69] = local122 | 0x130000;
+							PathFinder.queueX[local69] = 0x52000000 | 0x120000 | local108 - 1;
+							PathFinder.queueZ[local69] = local122 | 0x130000;
 							Static266.aByteArrayArrayArray15[Player.level][local108 - 1][local122] = local14;
 							local69 = local69 + 1 & 0xFFF;
 						}
 						if (local14 != Static266.aByteArrayArrayArray15[Player.level][local108][local122]) {
-							Static259.anIntArray514[local69] = local108 | 0x13000000 | 0x520000;
-							Static84.anIntArray209[local69] = local122 | 0x530000;
+							PathFinder.queueX[local69] = local108 | 0x13000000 | 0x520000;
+							PathFinder.queueZ[local69] = local122 | 0x530000;
 							local69 = local69 + 1 & 0xFFF;
 							Static266.aByteArrayArrayArray15[Player.level][local108][local122] = local14;
 						}
 						if (local108 + 1 < 104 && Static266.aByteArrayArrayArray15[Player.level][local108 + 1][local122] != local14 && (SceneGraph.tileFlags[Player.level][local108][local122] & 0x4) == 0 && (SceneGraph.tileFlags[Player.level][local108 + 1][local122 - 1] & 0x4) == 0) {
-							Static259.anIntArray514[local69] = 0x92000000 | 0x520000 | local108 + 1;
-							Static84.anIntArray209[local69] = local122 | 0x530000;
+							PathFinder.queueX[local69] = 0x92000000 | 0x520000 | local108 + 1;
+							PathFinder.queueZ[local69] = local122 | 0x530000;
 							Static266.aByteArrayArrayArray15[Player.level][local108 + 1][local122] = local14;
 							local69 = local69 + 1 & 0xFFF;
 						}
 					}
 					local122--;
 					if (local108 + 1 < 104 && local14 != Static266.aByteArrayArrayArray15[Player.level][local108 + 1][local122]) {
-						Static259.anIntArray514[local69] = local108 + 1 | 0x920000 | 0x53000000;
-						Static84.anIntArray209[local69] = local122 | 0x930000;
+						PathFinder.queueX[local69] = local108 + 1 | 0x920000 | 0x53000000;
+						PathFinder.queueZ[local69] = local122 | 0x930000;
 						Static266.aByteArrayArrayArray15[Player.level][local108 + 1][local122] = local14;
 						local69 = local69 + 1 & 0xFFF;
 					}
 					local122--;
 					if (local122 >= 0) {
 						if (local108 - 1 >= 0 && Static266.aByteArrayArrayArray15[Player.level][local108 - 1][local122] != local14 && (SceneGraph.tileFlags[Player.level][local108][local122] & 0x4) == 0 && (SceneGraph.tileFlags[Player.level][local108 - 1][local122 + 1] & 0x4) == 0) {
-							Static259.anIntArray514[local69] = local108 - 1 | 0xD20000 | 0x12000000;
-							Static84.anIntArray209[local69] = local122 | 0xD30000;
+							PathFinder.queueX[local69] = local108 - 1 | 0xD20000 | 0x12000000;
+							PathFinder.queueZ[local69] = local122 | 0xD30000;
 							Static266.aByteArrayArrayArray15[Player.level][local108 - 1][local122] = local14;
 							local69 = local69 + 1 & 0xFFF;
 						}
 						if (local14 != Static266.aByteArrayArrayArray15[Player.level][local108][local122]) {
-							Static259.anIntArray514[local69] = local108 | 0xD20000 | 0x93000000;
-							Static84.anIntArray209[local69] = local122 | 0xD30000;
+							PathFinder.queueX[local69] = local108 | 0xD20000 | 0x93000000;
+							PathFinder.queueZ[local69] = local122 | 0xD30000;
 							local69 = local69 + 1 & 0xFFF;
 							Static266.aByteArrayArrayArray15[Player.level][local108][local122] = local14;
 						}
 						if (local108 + 1 < 104 && Static266.aByteArrayArrayArray15[Player.level][local108 + 1][local122] != local14 && (SceneGraph.tileFlags[Player.level][local108][local122] & 0x4) == 0 && (SceneGraph.tileFlags[Player.level][local108 + 1][local122 + 1] & 0x4) == 0) {
-							Static259.anIntArray514[local69] = local108 + 1 | 0xD2000000 | 0x920000;
-							Static84.anIntArray209[local69] = local122 | 0x930000;
+							PathFinder.queueX[local69] = local108 + 1 | 0xD2000000 | 0x920000;
+							PathFinder.queueZ[local69] = local122 | 0x930000;
 							Static266.aByteArrayArrayArray15[Player.level][local108 + 1][local122] = local14;
 							local69 = local69 + 1 & 0xFFF;
 						}
