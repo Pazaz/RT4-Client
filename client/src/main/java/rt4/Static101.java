@@ -6,10 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static101 {
 
-	@OriginalMember(owner = "client!hm", name = "R", descriptor = "Lclient!na;")
-	public static final JagString aClass100_537 = JagString.parse("<img=1>");
-
-	@OriginalMember(owner = "client!hm", name = "T", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!hm", name = "T", descriptor = "Lclient!na;")
 	public static final JagString aClass100_538 = JagString.parse(" ");
 
 	@OriginalMember(owner = "client!hm", name = "ab", descriptor = "I")

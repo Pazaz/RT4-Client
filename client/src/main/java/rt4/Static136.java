@@ -10,11 +10,8 @@ public final class Static136 {
     @OriginalMember(owner = "client!kk", name = "j", descriptor = "I")
 	public static int anInt3325 = 0;
 
-	@OriginalMember(owner = "client!kk", name = "m", descriptor = "Lclient!na;")
-	public static final JagString CS_ERROR = JagString.parse("Clientscript error )2 check log for details");
-
 	@OriginalMember(owner = "client!kk", name = "a", descriptor = "(I)Z")
 	public static boolean method2655() {
-		return MidiPlayer.anInt441 == 0 ? Static172.aClass3_Sub3_Sub4_2.method4414() : true;
+		return MidiPlayer.anInt441 != 0 || Static172.midiPcmStream.method4414();
 	}
 }

@@ -112,4 +112,9 @@ public final class Inv extends Node {
             local14.unlink();
         }
     }
+
+    @OriginalMember(owner = "client!hn", name = "f", descriptor = "(B)V")
+    public static void method2073() {
+        objectContainerCache = new HashTable(32);
+    }
 }

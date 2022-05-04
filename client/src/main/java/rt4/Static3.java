@@ -1,6 +1,5 @@
 package rt4;
 
-import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
@@ -9,15 +8,7 @@ public final class Static3 {
 	@OriginalMember(owner = "client!ab", name = "b", descriptor = "I")
 	public static int anInt5868 = 0;
 
-	@OriginalMember(owner = "client!ab", name = "a", descriptor = "(Lclient!na;I)V")
-	public static void method4656(@OriginalArg(0) JagString arg0) {
-		@Pc(9) int local9 = Static171.method3218(arg0);
-		if (local9 != -1) {
-			Static80.method3616(WorldMap.labels.aShortArray73[local9], WorldMap.labels.aShortArray72[local9]);
-		}
-	}
-
-	@OriginalMember(owner = "client!ab", name = "c", descriptor = "(B)[Lclient!od;")
+    @OriginalMember(owner = "client!ab", name = "c", descriptor = "(B)[Lclient!od;")
 	public static Class114[] method4660() {
 		if (Static105.aClass114Array1 == null) {
 			@Pc(16) Class114[] local16 = Static197.method3558(GameShell.signLink);

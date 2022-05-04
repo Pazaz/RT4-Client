@@ -582,8 +582,8 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 		try {
 			leftMargin = 0;
 			clientBuild = 530;
-			frameWidth = 765;
-			frameHeight = 503;
+			frameWidth = 1024;
+			frameHeight = 768;
 			canvasWidth = frameWidth;
 			canvasHeight = frameHeight;
 			topMargin = 0;

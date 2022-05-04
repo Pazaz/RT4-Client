@@ -9,12 +9,6 @@ public final class Static118 {
     @OriginalMember(owner = "client!jd", name = "i", descriptor = "Lclient!be;")
 	public static Component aClass13_15;
 
-    @OriginalMember(owner = "client!jd", name = "a", descriptor = "(B)I")
-	public static int method2352() {
-		Static232.anInt5212 = 0;
-		return Static119.method2385();
-	}
-
 	@OriginalMember(owner = "client!jd", name = "a", descriptor = "(II[Lclient!be;)V")
 	public static void method2354(@OriginalArg(1) int arg0, @OriginalArg(2) Component[] arg1) {
 		for (@Pc(7) int local7 = 0; local7 < arg1.length; local7++) {

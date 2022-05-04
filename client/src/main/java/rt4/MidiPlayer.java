@@ -37,10 +37,10 @@ public class MidiPlayer {
                 if (aClass89_1 == null) {
                     aClass89_1 = new SoundBank(Static78.aClass153_32, aClass153_103);
                 }
-                if (Static172.aClass3_Sub3_Sub4_2.method4411(Static144.aClass3_Sub29_1, aClass153_87, aClass89_1)) {
-                    Static172.aClass3_Sub3_Sub4_2.method4412();
-                    Static172.aClass3_Sub3_Sub4_2.method4447(anInt5527);
-                    Static172.aClass3_Sub3_Sub4_2.method4431(aBoolean116, Static144.aClass3_Sub29_1);
+                if (Static172.midiPcmStream.method4411(Static144.aClass3_Sub29_1, aClass153_87, aClass89_1)) {
+                    Static172.midiPcmStream.method4412();
+                    Static172.midiPcmStream.method4447(anInt5527);
+                    Static172.midiPcmStream.method4431(aBoolean116, Static144.aClass3_Sub29_1);
                     anInt441 = 0;
                     Static144.aClass3_Sub29_1 = null;
                     aClass89_1 = null;
@@ -50,7 +50,7 @@ public class MidiPlayer {
             }
         } catch (@Pc(68) Exception local68) {
             local68.printStackTrace();
-            Static172.aClass3_Sub3_Sub4_2.method4446();
+            Static172.midiPcmStream.method4446();
             Static172.aClass153_70 = null;
             Static144.aClass3_Sub29_1 = null;
             anInt441 = 0;
@@ -86,7 +86,7 @@ public class MidiPlayer {
         aClass153_87 = arg1;
         Static78.aClass153_32 = arg3;
         aClass153_103 = arg2;
-        Static172.aClass3_Sub3_Sub4_2 = arg0;
+        Static172.midiPcmStream = arg0;
         return true;
     }
 
@@ -94,17 +94,17 @@ public class MidiPlayer {
     public static void loop() {
         try {
             if (anInt441 == 1) {
-                @Pc(16) int local16 = Static172.aClass3_Sub3_Sub4_2.method4440();
-                if (local16 > 0 && Static172.aClass3_Sub3_Sub4_2.method4414()) {
+                @Pc(16) int local16 = Static172.midiPcmStream.method4440();
+                if (local16 > 0 && Static172.midiPcmStream.method4414()) {
                     local16 -= anInt1757;
                     if (local16 < 0) {
                         local16 = 0;
                     }
-                    Static172.aClass3_Sub3_Sub4_2.method4447(local16);
+                    Static172.midiPcmStream.method4447(local16);
                     return;
                 }
-                Static172.aClass3_Sub3_Sub4_2.method4446();
-                Static172.aClass3_Sub3_Sub4_2.method4426();
+                Static172.midiPcmStream.method4446();
+                Static172.midiPcmStream.method4426();
                 Static144.aClass3_Sub29_1 = null;
                 aClass89_1 = null;
                 if (Static172.aClass153_70 == null) {
@@ -115,7 +115,7 @@ public class MidiPlayer {
             }
         } catch (@Pc(62) Exception local62) {
             local62.printStackTrace();
-            Static172.aClass3_Sub3_Sub4_2.method4446();
+            Static172.midiPcmStream.method4446();
             Static172.aClass153_70 = null;
             Static144.aClass3_Sub29_1 = null;
             anInt441 = 0;

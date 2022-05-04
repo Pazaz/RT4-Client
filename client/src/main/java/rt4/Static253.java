@@ -160,13 +160,6 @@ public final class Static253 {
 		}
 	}
 
-	@OriginalMember(owner = "client!ui", name = "d", descriptor = "(II)V")
-	public static void method4332(@OriginalArg(0) int arg0) {
-		if (arg0 >= 0 && MapList.aBooleanArray130.length > arg0) {
-			MapList.aBooleanArray130[arg0] = !MapList.aBooleanArray130[arg0];
-		}
-	}
-
     @OriginalMember(owner = "client!lc", name = "a", descriptor = "(IIIIIII)V")
     public static void method2726(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
         Static277.anInt5854 = 0;
@@ -431,7 +424,7 @@ public final class Static253 {
                     } else {
                         SoftwareRaster.method2498(arg2 + Static65.anInt1951 - 50, arg0, Static65.anInt1951 + arg2 + 50, arg4 + arg0);
                     }
-                    Fonts.b12Full.method2857(local962, arg2 + Static65.anInt1951 + 50 - local642, arg0 + Static16.anInt548, local639, 0);
+                    Fonts.b12Full.renderLeft(local962, arg2 + Static65.anInt1951 + 50 - local642, arg0 + Static16.anInt548, local639, 0);
                     if (GlRenderer.enabled) {
                         GlRaster.setClip(arg2, arg0, arg1 + arg2, arg4 + arg0);
                     } else {

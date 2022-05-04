@@ -1,6 +1,7 @@
 package rt4;
 
-import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
+import java.util.Calendar;
 import java.util.Date;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
@@ -24,6 +25,12 @@ public final class ScriptRunner {
 	public static final JagString aClass100_446 = JagString.parse("<img=0>");
 	@OriginalMember(owner = "client!nd", name = "b", descriptor = "Lclient!na;")
 	public static final JagString aClass100_780 = JagString.parse("Clientscript error in: ");
+	@OriginalMember(owner = "client!hm", name = "R", descriptor = "Lclient!na;")
+	public static final JagString aClass100_537 = JagString.parse("<img=1>");
+	@OriginalMember(owner = "client!hn", name = "K", descriptor = "Ljava/util/Calendar;")
+	public static final Calendar aCalendar2 = Calendar.getInstance();
+	@OriginalMember(owner = "client!kk", name = "m", descriptor = "Lclient!na;")
+	public static final JagString CS_ERROR = JagString.parse("Clientscript error )2 check log for details");
 	@OriginalMember(owner = "client!jh", name = "n", descriptor = "Lclient!bd;")
 	public static QuickChatPhrase activePhrase;
 	@OriginalMember(owner = "client!wf", name = "j", descriptor = "Lclient!be;")
@@ -1679,7 +1686,7 @@ public final class ScriptRunner {
 									if (opcode == 3609) {
 										ssp--;
 										string = stringStack[ssp];
-										if (string.startsWith(aClass100_446) || string.startsWith(Static101.aClass100_537)) {
+										if (string.startsWith(aClass100_446) || string.startsWith(aClass100_537)) {
 											string = string.substring(7);
 										}
 										intStack[isp++] = FriendsList.contains(string) ? 1 : 0;
@@ -1786,7 +1793,7 @@ public final class ScriptRunner {
 									if (opcode == 3623) {
 										ssp--;
 										string = stringStack[ssp];
-										if (string.startsWith(aClass100_446) || string.startsWith(Static101.aClass100_537)) {
+										if (string.startsWith(aClass100_446) || string.startsWith(aClass100_537)) {
 											string = string.substring(7);
 										}
 										intStack[isp++] = IgnoreList.contains(string) ? 1 : 0;
@@ -1833,10 +1840,10 @@ public final class ScriptRunner {
 									if (opcode == 3628) {
 										ssp--;
 										string = stringStack[ssp];
-										if (string.startsWith(aClass100_446) || string.startsWith(Static101.aClass100_537)) {
+										if (string.startsWith(aClass100_446) || string.startsWith(aClass100_537)) {
 											string = string.substring(7);
 										}
-										intStack[isp++] = Static4.method25(string);
+										intStack[isp++] = FriendsList.method25(string);
 										continue;
 									}
 									if (opcode == 3629) {
@@ -2677,16 +2684,16 @@ public final class ScriptRunner {
 													}
 													if (opcode == 5202) {
 														isp--;
-														Static258.method4444(intStack[isp]);
+														WorldMap.method4444(intStack[isp]);
 														continue;
 													}
 													if (opcode == 5203) {
 														ssp--;
-														Static3.method4656(stringStack[ssp]);
+														WorldMap.method4656(stringStack[ssp]);
 														continue;
 													}
 													if (opcode == 5204) {
-														stringStack[ssp - 1] = Static211.method923(stringStack[ssp - 1]);
+														stringStack[ssp - 1] = WorldMap.method923(stringStack[ssp - 1]);
 														continue;
 													}
 													if (opcode == 5205) {
@@ -2717,8 +2724,8 @@ public final class ScriptRunner {
 														continue;
 													}
 													if (opcode == 5208) {
-														intStack[isp++] = Static89.anInt2387;
-														intStack[isp++] = Static37.anInt1176;
+														intStack[isp++] = WorldMap.anInt2387;
+														intStack[isp++] = WorldMap.anInt1176;
 														continue;
 													}
 													if (opcode == 5209) {
@@ -2727,7 +2734,7 @@ public final class ScriptRunner {
 														continue;
 													}
 													if (opcode == 5210) {
-														local7293 = Static214.method4361();
+														local7293 = WorldMap.method4361();
 														if (local7293 == null) {
 															intStack[isp++] = 0;
 															intStack[isp++] = 0;
@@ -2738,7 +2745,7 @@ public final class ScriptRunner {
 														continue;
 													}
 													if (opcode == 5211) {
-														local7293 = Static214.method4361();
+														local7293 = WorldMap.method4361();
 														if (local7293 == null) {
 															intStack[isp++] = 0;
 															intStack[isp++] = 0;
@@ -2749,7 +2756,7 @@ public final class ScriptRunner {
 														continue;
 													}
 													if (opcode == 5212) {
-														int1 = Static118.method2352();
+														int1 = WorldMap.method2352();
 														int2 = 0;
 														if (int1 == -1) {
 															local2522 = EMPTY_STRING;
@@ -2764,7 +2771,7 @@ public final class ScriptRunner {
 													}
 													if (opcode == 5213) {
 														int2 = 0;
-														int1 = Static119.method2385();
+														int1 = WorldMap.method2385();
 														if (int1 == -1) {
 															local2522 = EMPTY_STRING;
 														} else {
@@ -2779,7 +2786,7 @@ public final class ScriptRunner {
 													if (opcode == 5214) {
 														isp--;
 														int1 = intStack[isp];
-														Static80.method3616(int1 >> 14 & 0x3FFF, int1 & 0x3FFF);
+														WorldMap.method3616(int1 >> 14 & 0x3FFF, int1 & 0x3FFF);
 														continue;
 													}
 													if (opcode == 5215) {
@@ -2805,13 +2812,13 @@ public final class ScriptRunner {
 													if (opcode == 5216) {
 														isp--;
 														int1 = intStack[isp];
-														Static253.method4332(int1);
+														MapList.method4332(int1);
 														continue;
 													}
 													if (opcode == 5217) {
 														isp--;
 														int1 = intStack[isp];
-														if (Static90.method1855(int1)) {
+														if (MapList.method1855(int1)) {
 															intStack[isp++] = 1;
 														} else {
 															intStack[isp++] = 0;
@@ -2819,7 +2826,7 @@ public final class ScriptRunner {
 														continue;
 													}
 													if (opcode == 5218) {
-														local7293 = Static214.method4361();
+														local7293 = WorldMap.method4361();
 														if (local7293 == null) {
 															intStack[isp++] = -1;
 														} else {
@@ -2829,7 +2836,7 @@ public final class ScriptRunner {
 													}
 													if (opcode == 5219) {
 														ssp--;
-														Static44.method1149(stringStack[ssp]);
+														WorldMap.method1149(stringStack[ssp]);
 														continue;
 													}
 													if (opcode == 5220) {
@@ -2975,12 +2982,9 @@ public final class ScriptRunner {
 														string = EMPTY_STRING;
 														if (Player.lastLogAddress != null) {
 															string = Static181.method3341(Player.lastLogAddress.intArg2);
-															try {
-																if (Player.lastLogAddress.result != null) {
-																	@Pc(8281) byte[] local8281 = ((String) Player.lastLogAddress.result).getBytes("ISO-8859-1");
-																	string = JagString.decodeString(local8281, local8281.length, 0);
-																}
-															} catch (@Pc(8290) UnsupportedEncodingException local8290) {
+															if (Player.lastLogAddress.result != null) {
+																@Pc(8281) byte[] local8281 = ((String) Player.lastLogAddress.result).getBytes(StandardCharsets.ISO_8859_1);
+																string = JagString.decodeString(local8281, local8281.length, 0);
 															}
 														}
 														stringStack[ssp++] = string;
@@ -3002,7 +3006,7 @@ public final class ScriptRunner {
 														if (GameShell.frame != null || local1552 && SignLink.anInt5928 != 3 && SignLink.osName.startsWith("win") && !client.haveIe6) {
 															Static164.newTab = local1552;
 															Static175.url = local8356;
-															Static33.openUrlRequest = GameShell.signLink.openUrl(new String(local8356.method3148(), "ISO-8859-1"));
+															Static33.openUrlRequest = GameShell.signLink.openUrl(new String(local8356.method3148(), StandardCharsets.ISO_8859_1));
 															continue;
 														}
 														Static169.openUrl(local8356, local1552);
@@ -3656,16 +3660,16 @@ public final class ScriptRunner {
 														int2 = intStack[isp + 2];
 														int3 = intStack[isp + 1];
 														int1 = intStack[isp];
-														Static102.aCalendar2.clear();
-														Static102.aCalendar2.set(11, 12);
-														Static102.aCalendar2.set(int2, int3, int1);
-														intStack[isp++] = (int) (Static102.aCalendar2.getTime().getTime() / 86400000L) - 11745;
+														aCalendar2.clear();
+														aCalendar2.set(11, 12);
+														aCalendar2.set(int2, int3, int1);
+														intStack[isp++] = (int) (aCalendar2.getTime().getTime() / 86400000L) - 11745;
 														continue;
 													}
 													if (opcode == 6303) {
-														Static102.aCalendar2.clear();
-														Static102.aCalendar2.setTime(new Date(MonotonicClock.currentTimeMillis()));
-														intStack[isp++] = Static102.aCalendar2.get(1);
+														aCalendar2.clear();
+														aCalendar2.setTime(new Date(MonotonicClock.currentTimeMillis()));
+														intStack[isp++] = aCalendar2.get(1);
 														continue;
 													}
 													if (opcode == 6304) {
@@ -3853,7 +3857,7 @@ public final class ScriptRunner {
 										string = stringStack[ssp];
 										isp--;
 										int3 = intStack[isp];
-										stringStack[ssp++] = JagString.concatenate(new JagString[] { string, Static110.method2285(int3) });
+										stringStack[ssp++] = JagString.concatenate(new JagString[] { string, JagString.parseIntTrue(int3) });
 										continue;
 									}
 									if (opcode == 4103) {
@@ -3866,10 +3870,10 @@ public final class ScriptRunner {
 										isp--;
 										int1 = intStack[isp];
 										@Pc(11770) long local11770 = (long) int1 * 86400000L + 1014768000000L;
-										Static102.aCalendar2.setTime(new Date(local11770));
-										local652 = Static102.aCalendar2.get(5);
-										c = Static102.aCalendar2.get(2);
-										local1087 = Static102.aCalendar2.get(1);
+										aCalendar2.setTime(new Date(local11770));
+										local652 = aCalendar2.get(5);
+										c = aCalendar2.get(2);
+										local1087 = aCalendar2.get(1);
 										stringStack[ssp++] = JagString.concatenate(new JagString[] { JagString.parseInt(local652), Static163.aClass100_767, Static34.aClass100Array40[c], Static163.aClass100_767, JagString.parseInt(local1087) });
 										continue;
 									}
@@ -4140,7 +4144,7 @@ public final class ScriptRunner {
 		} catch (@Pc(14378) Exception ex) {
 			if (script.name == null) {
 				if (client.modeWhere != 0) {
-					Chat.add(EMPTY_STRING, 0, Static136.CS_ERROR);
+					Chat.add(EMPTY_STRING, 0, CS_ERROR);
 				}
 				TracingException.report("CS2 - scr:" + script.key + " op:" + op, ex);
 			} else {

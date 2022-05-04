@@ -9,19 +9,6 @@ public final class Static91 {
     @OriginalMember(owner = "client!hc", name = "P", descriptor = "I")
 	public static int anInt2428;
 
-    @OriginalMember(owner = "client!hc", name = "a", descriptor = "(Lclient!na;Z)I")
-	public static int method1879(@OriginalArg(0) JagString arg0) {
-		if (WorldMap.labels == null || arg0.length() == 0) {
-			return -1;
-		}
-		for (@Pc(20) int local20 = 0; local20 < WorldMap.labels.anInt5074; local20++) {
-			if (WorldMap.labels.aClass100Array153[local20].method3140(Static101.aClass100_538, Static197.aClass100_872).strEquals(arg0)) {
-				return local20;
-			}
-		}
-		return -1;
-	}
-
 	@OriginalMember(owner = "client!hc", name = "a", descriptor = "(IIIILclient!th;Lclient!th;IIIIJ)V")
 	public static void method1880(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Entity arg4, @OriginalArg(5) Entity arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) int arg8, @OriginalArg(9) int arg9, @OriginalArg(10) long arg10) {
 		if (arg4 == null) {

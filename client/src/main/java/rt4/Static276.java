@@ -12,10 +12,7 @@ public final class Static276 {
 	@OriginalMember(owner = "client!wh", name = "m", descriptor = "[I")
 	public static final int[] cameraAmplitude = new int[5];
 
-    @OriginalMember(owner = "client!wh", name = "u", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1097 = JagString.parse("(U2");
-
-	@OriginalMember(owner = "client!wh", name = "a", descriptor = "(IIII)Z")
+    @OriginalMember(owner = "client!wh", name = "a", descriptor = "(IIII)Z")
 	public static boolean method4611(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		if (Static9.method187(arg0, arg1, arg2)) {
 			@Pc(10) int local10 = arg1 << 7;

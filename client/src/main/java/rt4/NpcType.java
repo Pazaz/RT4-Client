@@ -8,6 +8,20 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!me")
 public final class NpcType {
 
+	@OriginalMember(owner = "client!id", name = "e", descriptor = "[I")
+	public static final int[] anIntArray259 = new int[14];
+	@OriginalMember(owner = "client!lg", name = "c", descriptor = "[Lclient!tk;")
+	public static final SeqType[] aClass144Array1 = new SeqType[14];
+	@OriginalMember(owner = "client!ag", name = "cb", descriptor = "[Lclient!cl;")
+	public static final AnimFrameset[] aClass3_Sub2_Sub7Array1 = new AnimFrameset[14];
+	@OriginalMember(owner = "client!fk", name = "k", descriptor = "[I")
+	public static final int[] anIntArray147 = new int[14];
+	@OriginalMember(owner = "client!rg", name = "A", descriptor = "[I")
+	public static final int[] anIntArray492 = new int[14];
+	@OriginalMember(owner = "client!kd", name = "mb", descriptor = "[Lclient!cl;")
+	public static final AnimFrameset[] aClass3_Sub2_Sub7Array5 = new AnimFrameset[14];
+	@OriginalMember(owner = "client!en", name = "t", descriptor = "[I")
+	public static final int[] anIntArray148 = new int[14];
 	@OriginalMember(owner = "client!me", name = "b", descriptor = "[S")
 	private short[] retextureSource;
 
@@ -347,35 +361,35 @@ public final class NpcType {
 			if (seqs[local235] != null) {
 				@Pc(753) SeqType local753 = SeqTypeList.get(seqs[local235].anInt5396);
 				if (local753.frames != null) {
-					Static146.aClass144Array1[local235] = local753;
+					aClass144Array1[local235] = local753;
 					local207 = seqs[local235].anInt5398;
 					local46 = true;
 					local200 = seqs[local235].anInt5399;
 					local214 = local753.frames[local200];
-					Static6.aClass3_Sub2_Sub7Array1[local235] = SeqTypeList.getAnimFrameset(local214 >>> 16);
+					aClass3_Sub2_Sub7Array1[local235] = SeqTypeList.getAnimFrameset(local214 >>> 16);
 					local214 &= 0xFFFF;
-					Static107.anIntArray259[local235] = local214;
-					if (Static6.aClass3_Sub2_Sub7Array1[local235] != null) {
-						local723 |= Static6.aClass3_Sub2_Sub7Array1[local235].isColorTransformed(local214);
-						local721 |= Static6.aClass3_Sub2_Sub7Array1[local235].isAlphaTransformed(local214);
+					anIntArray259[local235] = local214;
+					if (aClass3_Sub2_Sub7Array1[local235] != null) {
+						local723 |= aClass3_Sub2_Sub7Array1[local235].isColorTransformed(local214);
+						local721 |= aClass3_Sub2_Sub7Array1[local235].isAlphaTransformed(local214);
 						local725 |= local753.aBoolean278;
 					}
 					if ((local753.tween || SeqType.applyTweening) && local207 != -1 && local753.frames.length > local207) {
-						Static71.anIntArray147[local235] = local753.anIntArray474[local200];
-						Static214.anIntArray492[local235] = seqs[local235].anInt5404;
+						anIntArray147[local235] = local753.anIntArray474[local200];
+						anIntArray492[local235] = seqs[local235].anInt5404;
 						local228 = local753.frames[local207];
-						Static131.aClass3_Sub2_Sub7Array5[local235] = SeqTypeList.getAnimFrameset(local228 >>> 16);
+						aClass3_Sub2_Sub7Array5[local235] = SeqTypeList.getAnimFrameset(local228 >>> 16);
 						local228 &= 0xFFFF;
-						Static61.anIntArray148[local235] = local228;
-						if (Static131.aClass3_Sub2_Sub7Array5[local235] != null) {
-							local723 |= Static131.aClass3_Sub2_Sub7Array5[local235].isColorTransformed(local228);
-							local721 |= Static131.aClass3_Sub2_Sub7Array5[local235].isAlphaTransformed(local228);
+						anIntArray148[local235] = local228;
+						if (aClass3_Sub2_Sub7Array5[local235] != null) {
+							local723 |= aClass3_Sub2_Sub7Array5[local235].isColorTransformed(local228);
+							local721 |= aClass3_Sub2_Sub7Array5[local235].isAlphaTransformed(local228);
 						}
 					} else {
-						Static71.anIntArray147[local235] = 0;
-						Static214.anIntArray492[local235] = 0;
-						Static131.aClass3_Sub2_Sub7Array5[local235] = null;
-						Static61.anIntArray148[local235] = -1;
+						anIntArray147[local235] = 0;
+						anIntArray492[local235] = 0;
+						aClass3_Sub2_Sub7Array5[local235] = null;
+						anIntArray148[local235] = -1;
 					}
 				}
 			}
@@ -453,8 +467,8 @@ public final class NpcType {
 		@Pc(1218) Model local1218 = local40.method4572(!local721, !local723, !local725);
 		local330 = 1;
 		for (local318 = 0; local318 < local173; local318++) {
-			if (Static6.aClass3_Sub2_Sub7Array1[local318] != null) {
-				local1218.method4565(Static6.aClass3_Sub2_Sub7Array1[local318], Static107.anIntArray259[local318], Static131.aClass3_Sub2_Sub7Array5[local318], Static61.anIntArray148[local318], Static214.anIntArray492[local318] - 1, Static71.anIntArray147[local318], local330, Static146.aClass144Array1[local318].aBoolean278, this.anIntArrayArray28[local318]);
+			if (aClass3_Sub2_Sub7Array1[local318] != null) {
+				local1218.method4565(aClass3_Sub2_Sub7Array1[local318], anIntArray259[local318], aClass3_Sub2_Sub7Array5[local318], anIntArray148[local318], anIntArray492[local318] - 1, anIntArray147[local318], local330, aClass144Array1[local318].aBoolean278, this.anIntArrayArray28[local318]);
 			}
 			local330 <<= 0x1;
 		}
@@ -466,9 +480,9 @@ public final class NpcType {
 			local1218.method4558(local1088, local228, local1092, local1040, arg7 - 1, local300, seqType1.aBoolean278);
 		}
 		for (local318 = 0; local318 < local173; local318++) {
-			Static6.aClass3_Sub2_Sub7Array1[local318] = null;
-			Static131.aClass3_Sub2_Sub7Array5[local318] = null;
-			Static146.aClass144Array1[local318] = null;
+			aClass3_Sub2_Sub7Array1[local318] = null;
+			aClass3_Sub2_Sub7Array5[local318] = null;
+			aClass144Array1[local318] = null;
 		}
 		if (this.anInt3729 != 128 || this.anInt3731 != 128) {
 			local1218.resize(this.anInt3729, this.anInt3731, this.anInt3729);

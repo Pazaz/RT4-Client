@@ -9,9 +9,6 @@ public final class Static204 {
 	@OriginalMember(owner = "client!qi", name = "z", descriptor = "Lclient!qf;")
 	public static Sprite aClass3_Sub2_Sub1_10;
 
-	@OriginalMember(owner = "client!qi", name = "u", descriptor = "Lclient!ih;")
-	public static LinkedList aClass69_113 = new LinkedList();
-
 	@OriginalMember(owner = "client!qi", name = "B", descriptor = "Lclient!na;")
 	public static final JagString aClass100_896 = JagString.parse("<col=ffffff>");
 

@@ -47,7 +47,7 @@ public class Fonts {
     public static void load(@OriginalArg(0) Js5 arg0, @OriginalArg(2) Js5 arg1) {
         p11Full = Static127.method2462(Sprites.p11FullId, arg1, arg0);
         if (GlRenderer.enabled) {
-            p11FullSoftware = Static122.method2412(Sprites.p11FullId, arg0, arg1);
+            p11FullSoftware = SoftwareFont.method2412(Sprites.p11FullId, arg0, arg1);
         } else {
             p11FullSoftware = (SoftwareFont) p11Full;
         }

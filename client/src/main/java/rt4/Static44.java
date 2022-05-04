@@ -38,7 +38,7 @@ public final class Static44 {
 				NpcList.npcs[local35].faceEntity = -1;
 			}
 		}
-		Static102.method2073();
+		Inv.method2073();
 		Static227.cameraType = 1;
 		client.setGameState(30);
 		for (local35 = 0; local35 < 100; local35++) {
@@ -92,14 +92,6 @@ public final class Static44 {
 			Static54.runScripts(1, InterfaceList.topLevelInterface);
 		}
 		return local9;
-	}
-
-	@OriginalMember(owner = "client!dh", name = "a", descriptor = "(Lclient!na;I)V")
-	public static void method1149(@OriginalArg(0) JagString arg0) {
-		@Pc(7) int local7 = Static91.method1879(arg0);
-		if (local7 != -1) {
-			Static80.method3616(WorldMap.labels.aShortArray73[local7], WorldMap.labels.aShortArray72[local7]);
-		}
 	}
 
 }

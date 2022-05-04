@@ -10,8 +10,4 @@ public final class Static110 {
 		Static182.aClass3_Sub14ArrayArray2[arg0] = arg1;
 	}
 
-	@OriginalMember(owner = "client!ih", name = "a", descriptor = "(ZII)Lclient!na;")
-	public static JagString method2285(@OriginalArg(2) int arg0) {
-		return JagString.parseInt(true, arg0);
-	}
 }

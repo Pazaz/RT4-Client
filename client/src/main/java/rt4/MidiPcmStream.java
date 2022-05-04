@@ -116,7 +116,7 @@ public final class MidiPcmStream extends PcmStream {
 			@Pc(40) int local40 = (int) local34.key;
 			@Pc(48) MidiInstrument local48 = (MidiInstrument) this.aClass133_23.get((long) local40);
 			if (local48 == null) {
-				local48 = Static116.method2320(arg1, local40);
+				local48 = MidiInstrument.method2320(arg1, local40);
 				if (local48 == null) {
 					local5 = false;
 					continue;

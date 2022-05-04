@@ -7,10 +7,7 @@ public final class Static235 {
 	@OriginalMember(owner = "client!tb", name = "X", descriptor = "Lclient!se;")
 	public static MapElementList mapElementList;
 
-	@OriginalMember(owner = "client!tb", name = "P", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1002 = JagString.parse("(U5");
-
-	@OriginalMember(owner = "client!tb", name = "Q", descriptor = "I")
+    @OriginalMember(owner = "client!tb", name = "Q", descriptor = "I")
 	public static int anInt5276 = 0;
 
 	@OriginalMember(owner = "client!tb", name = "h", descriptor = "(I)I")

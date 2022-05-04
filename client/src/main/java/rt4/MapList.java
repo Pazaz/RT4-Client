@@ -46,4 +46,16 @@ public class MapList {
 		}
 		return null;
 	}
+
+    @OriginalMember(owner = "client!hb", name = "b", descriptor = "(II)Z")
+	public static boolean method1855(@OriginalArg(0) int arg0) {
+		return arg0 >= 0 && aBooleanArray130.length > arg0 ? aBooleanArray130[arg0] : false;
+	}
+
+    @OriginalMember(owner = "client!ui", name = "d", descriptor = "(II)V")
+    public static void method4332(@OriginalArg(0) int arg0) {
+        if (arg0 >= 0 && aBooleanArray130.length > arg0) {
+            aBooleanArray130[arg0] = !aBooleanArray130[arg0];
+        }
+    }
 }

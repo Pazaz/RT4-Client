@@ -12,34 +12,6 @@ public final class Static280 {
 	@OriginalMember(owner = "client!wl", name = "u", descriptor = "I")
 	public static int anInt5895 = 0;
 
-	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(Lclient!fe;B)V")
-	public static void method4665(@OriginalArg(0) PathingEntity arg0) {
-		if (client.loop == arg0.anInt3386 || arg0.seqId == -1 || arg0.anInt3420 != 0 || arg0.anInt3360 + 1 > SeqTypeList.get(arg0.seqId).anIntArray474[arg0.anInt3425]) {
-			@Pc(35) int local35 = arg0.anInt3386 - arg0.anInt3395;
-			@Pc(41) int local41 = client.loop - arg0.anInt3395;
-			@Pc(52) int local52 = arg0.anInt3380 * 128 + arg0.getSize() * 64;
-			@Pc(64) int local64 = arg0.anInt3428 * 128 + arg0.getSize() * 64;
-			@Pc(75) int local75 = arg0.anInt3416 * 128 + arg0.getSize() * 64;
-			@Pc(86) int local86 = arg0.anInt3392 * 128 + arg0.getSize() * 64;
-			arg0.xFine = (local41 * local75 + local52 * (local35 - local41)) / local35;
-			arg0.zFine = (local86 * local41 + local64 * (local35 - local41)) / local35;
-		}
-		arg0.anInt3417 = 0;
-		if (arg0.anInt3431 == 0) {
-			arg0.anInt3400 = 1024;
-		}
-		if (arg0.anInt3431 == 1) {
-			arg0.anInt3400 = 1536;
-		}
-		if (arg0.anInt3431 == 2) {
-			arg0.anInt3400 = 0;
-		}
-		if (arg0.anInt3431 == 3) {
-			arg0.anInt3400 = 512;
-		}
-		arg0.anInt3381 = arg0.anInt3400;
-	}
-
 	@OriginalMember(owner = "client!wl", name = "a", descriptor = "([IIIIIIIIIZB)V")
 	public static void method4667(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) int arg8, @OriginalArg(9) boolean arg9) {
 		@Pc(7) int local7 = arg2;

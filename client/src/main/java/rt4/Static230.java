@@ -1,6 +1,8 @@
 package rt4;
 
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
+
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
@@ -76,12 +78,7 @@ public final class Static230 {
 
 	@OriginalMember(owner = "client!sj", name = "a", descriptor = "(Ljava/lang/String;I)Lclient!na;")
 	public static JagString method3952(@OriginalArg(0) String arg0) {
-		@Pc(14) byte[] local14;
-		try {
-			local14 = arg0.getBytes("ISO-8859-1");
-		} catch (@Pc(16) UnsupportedEncodingException local16) {
-			local14 = arg0.getBytes();
-		}
+		@Pc(14) byte[] local14 = arg0.getBytes(StandardCharsets.ISO_8859_1);
 		@Pc(23) JagString local23 = new JagString();
 		local23.chars = local14;
 		local23.length = 0;
@@ -116,7 +113,7 @@ public final class Static230 {
 	@OriginalMember(owner = "client!sj", name = "c", descriptor = "(II)V")
 	public static void method3956(@OriginalArg(0) int arg0) {
 		if (MidiPlayer.anInt441 == 0) {
-			Static172.aClass3_Sub3_Sub4_2.method4447(arg0);
+			Static172.midiPcmStream.method4447(arg0);
 		} else {
 			MidiPlayer.anInt5527 = arg0;
 		}

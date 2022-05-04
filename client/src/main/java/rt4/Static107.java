@@ -13,7 +13,4 @@ public final class Static107 {
 	@OriginalMember(owner = "client!id", name = "d", descriptor = "[[[I")
 	public static final int[][][] anIntArrayArrayArray9 = new int[2][][];
 
-	@OriginalMember(owner = "client!id", name = "e", descriptor = "[I")
-	public static final int[] anIntArray259 = new int[14];
-
 }

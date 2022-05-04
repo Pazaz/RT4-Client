@@ -5,9 +5,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static112 {
 
-	@OriginalMember(owner = "client!ij", name = "a", descriptor = "Lclient!na;")
-	public static final JagString DUELFRIEND = JagString.parse(":duelfriend:");
-
 	@OriginalMember(owner = "client!ij", name = "a", descriptor = "(B)V")
 	public static void method2297() {
 		@Pc(3) int local3 = Static183.anInt4271;
@@ -31,9 +28,9 @@ public final class Static112 {
 					}
 				}
 			} else if (GlRenderer.enabled) {
-				GlRaster.method1182(local3, local9, local13, 20, Static40.anInt1275, 256 - Static111.anInt2910);
+				GlRaster.fillRectAlpha(local3, local9, local13, 20, Static40.anInt1275, 256 - Static111.anInt2910);
 			} else {
-				SoftwareRaster.method2484(local3, local9, local13, 20, Static40.anInt1275, 256 - Static111.anInt2910);
+				SoftwareRaster.fillRectAlpha(local3, local9, local13, 20, Static40.anInt1275, 256 - Static111.anInt2910);
 			}
 		}
 		@Pc(112) int local112;
@@ -44,13 +41,13 @@ public final class Static112 {
 				Static39.aClass3_Sub2_Sub1_1.renderTransparent(local114 * Static39.aClass3_Sub2_Sub1_1.width + local3, local9);
 			}
 			Static181.aClass3_Sub2_Sub1_9.renderTransparent(local3, local9);
-			Static181.aClass3_Sub2_Sub1_9.method1421(local3 + local13 - Static181.aClass3_Sub2_Sub1_9.width, local9);
+			Static181.aClass3_Sub2_Sub1_9.renderHorizontalFlipTransparent(local3 + local13 - Static181.aClass3_Sub2_Sub1_9.width, local9);
 		}
-		Fonts.b12Full.method2857(LocalizedText.CHOOSE_OPTION, local3 + 3, local9 + 14, Static195.anInt4581, -1);
+		Fonts.b12Full.renderLeft(LocalizedText.CHOOSE_OPTION, local3 + 3, local9 + 14, Static195.anInt4581, -1);
 		if (GlRenderer.enabled) {
-			GlRaster.method1182(local3, local9 + 20, local13, local11 - 20, Static40.anInt1275, 256 - Static111.anInt2910);
+			GlRaster.fillRectAlpha(local3, local9 + 20, local13, local11 - 20, Static40.anInt1275, 256 - Static111.anInt2910);
 		} else {
-			SoftwareRaster.method2484(local3, local9 + 20, local13, local11 - 20, Static40.anInt1275, 256 - Static111.anInt2910);
+			SoftwareRaster.fillRectAlpha(local3, local9 + 20, local13, local11 - 20, Static40.anInt1275, 256 - Static111.anInt2910);
 		}
 		local114 = Mouse.anInt5032;
 		local112 = Mouse.anInt4873;
@@ -60,9 +57,9 @@ public final class Static112 {
 			local219 = (MiniMenu.size - local203 - 1) * 15 + local9 + 35;
 			if (local3 < local112 && local112 < local3 + local13 && local114 > local219 - 13 && local114 < local219 + 3) {
 				if (GlRenderer.enabled) {
-					GlRaster.method1182(local3, local219 - 13, local13, 16, Static251.anInt5457, 256 - Static232.anInt5208);
+					GlRaster.fillRectAlpha(local3, local219 - 13, local13, 16, Static251.anInt5457, 256 - Static232.anInt5208);
 				} else {
-					SoftwareRaster.method2484(local3, local219 - 13, local13, 16, Static251.anInt5457, 256 - Static232.anInt5208);
+					SoftwareRaster.fillRectAlpha(local3, local219 - 13, local13, 16, Static251.anInt5457, 256 - Static232.anInt5208);
 				}
 			}
 		}
@@ -97,10 +94,10 @@ public final class Static112 {
 			local219 = (local11 - 20) / Static92.aClass3_Sub2_Sub1_6.height;
 			for (local418 = 0; local418 < local219; local418++) {
 				Static92.aClass3_Sub2_Sub1_6.renderTransparent(local3, local9 + local418 * Static92.aClass3_Sub2_Sub1_6.height + 20);
-				Static92.aClass3_Sub2_Sub1_6.method1421(local3 + local13 - Static92.aClass3_Sub2_Sub1_6.width, local9 + 20 + local418 * Static92.aClass3_Sub2_Sub1_6.height);
+				Static92.aClass3_Sub2_Sub1_6.renderHorizontalFlipTransparent(local3 + local13 - Static92.aClass3_Sub2_Sub1_6.width, local9 + 20 + local418 * Static92.aClass3_Sub2_Sub1_6.height);
 			}
 			Static204.aClass3_Sub2_Sub1_10.renderTransparent(local3, local11 + local9 - Static204.aClass3_Sub2_Sub1_10.height);
-			Static204.aClass3_Sub2_Sub1_10.method1421(local3 + local13 - Static204.aClass3_Sub2_Sub1_10.width, local9 - -local11 + -Static204.aClass3_Sub2_Sub1_10.height);
+			Static204.aClass3_Sub2_Sub1_10.renderHorizontalFlipTransparent(local3 + local13 - Static204.aClass3_Sub2_Sub1_10.width, local9 - -local11 + -Static204.aClass3_Sub2_Sub1_10.height);
 		}
 		for (local203 = 0; local203 < MiniMenu.size; local203++) {
 			local219 = (MiniMenu.size - local203 - 1) * 15 + local9 + 35;
@@ -108,7 +105,7 @@ public final class Static112 {
 			if (local3 < local112 && local13 + local3 > local112 && local219 - 13 < local114 && local114 < local219 + 3) {
 				local418 = Static262.anInt5752;
 			}
-			Fonts.b12Full.method2857(MiniMenu.getOp(local203), local3 + 3, local219, local418, 0);
+			Fonts.b12Full.renderLeft(MiniMenu.getOp(local203), local3 + 3, local219, local418, 0);
 		}
 		Static121.method2407(Static183.anInt4271, Static229.anInt5138, Static13.anInt436, Static24.anInt761);
 	}

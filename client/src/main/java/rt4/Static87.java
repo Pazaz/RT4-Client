@@ -490,9 +490,9 @@ public final class Static87 {
 										}
 									} else if (local30.aBoolean30) {
 										if (GlRenderer.enabled) {
-											GlRaster.method1182(local123, local114, local30.anInt445, local30.anInt459, local270, 256 - (local117 & 0xFF));
+											GlRaster.fillRectAlpha(local123, local114, local30.anInt445, local30.anInt459, local270, 256 - (local117 & 0xFF));
 										} else {
-											SoftwareRaster.method2484(local123, local114, local30.anInt445, local30.anInt459, local270, 256 - (local117 & 0xFF));
+											SoftwareRaster.fillRectAlpha(local123, local114, local30.anInt445, local30.anInt459, local270, 256 - (local117 & 0xFF));
 										}
 									} else if (GlRenderer.enabled) {
 										GlRaster.method1180(local123, local114, local30.anInt445, local30.anInt459, local270, 256 - (local117 & 0xFF));
@@ -760,7 +760,7 @@ public final class Static87 {
 															local556 = local123 + memory * (local30.anInt512 + 115);
 															local545 = (local30.anInt516 + 12) * local468 + local114;
 															if (local30.anInt460 == 0) {
-																local1921.method2857(local3159, local556, local545, local30.color, local30.aBoolean28 ? 0 : -1);
+																local1921.renderLeft(local3159, local556, local545, local30.color, local30.aBoolean28 ? 0 : -1);
 															} else if (local30.anInt460 == 1) {
 																local1921.renderCenter(local3159, local556 + 57, local545, local30.color, local30.aBoolean28 ? 0 : -1);
 															} else {
@@ -825,7 +825,7 @@ public final class Static87 {
 														local3325 = local3297.substring(local563, 0);
 														local3297 = local3297.substring(local563 + 4);
 													}
-													local3299.method2857(local3325, cardMemory + 3, local545, 0, -1);
+													local3299.renderLeft(local3325, cardMemory + 3, local545, 0, -1);
 													local545 += local3299.lineHeight + 1;
 												}
 											}

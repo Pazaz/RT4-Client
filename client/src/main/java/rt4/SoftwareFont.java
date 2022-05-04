@@ -126,6 +126,22 @@ public final class SoftwareFont extends Font {
 		}
 	}
 
+    @OriginalMember(owner = "client!jh", name = "a", descriptor = "(IILclient!ve;Lclient!ve;I)Lclient!dd;")
+	public static SoftwareFont method2412(@OriginalArg(0) int arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) Js5 arg2) {
+		return SpriteLoader.decode(arg2, 0, arg0) ? method4635(arg1.getFile(arg0, 0)) : null;
+	}
+
+	@OriginalMember(owner = "client!j", name = "a", descriptor = "([BI)Lclient!dd;")
+	public static SoftwareFont method4635(@OriginalArg(0) byte[] arg0) {
+		if (arg0 == null) {
+			return null;
+		} else {
+			@Pc(22) SoftwareFont local22 = new SoftwareFont(arg0, SpriteLoader.xOffsets, SpriteLoader.yOffsets, SpriteLoader.innerWidths, SpriteLoader.innerHeights, SpriteLoader.pixels);
+			SpriteLoader.clear();
+			return local22;
+		}
+	}
+
 	@OriginalMember(owner = "client!dd", name = "a", descriptor = "(IIIIIIIZ)V")
 	@Override
 	protected final void renderGlyphTransparent(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6) {

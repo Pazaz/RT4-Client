@@ -1,6 +1,8 @@
 package rt4;
 
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
+
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
@@ -9,6 +11,18 @@ public final class Static127 {
 
 	@OriginalMember(owner = "client!hh", name = "a", descriptor = "Lclient!na;")
 	public static final JagString aClass100_520 = JagString.parse("(U4");
+	@OriginalMember(owner = "client!mj", name = "g", descriptor = "Lclient!na;")
+	public static final JagString aClass100_761 = JagString.parse("(U3");
+	@OriginalMember(owner = "client!wh", name = "u", descriptor = "Lclient!na;")
+	public static final JagString aClass100_1097 = JagString.parse("(U2");
+	@OriginalMember(owner = "client!bm", name = "p", descriptor = "Lclient!na;")
+	public static final JagString aClass100_133 = JagString.parse("(U1");
+	@OriginalMember(owner = "client!tb", name = "P", descriptor = "Lclient!na;")
+	public static final JagString aClass100_1002 = JagString.parse("(U5");
+	@OriginalMember(owner = "client!jh", name = "g", descriptor = "Lclient!na;")
+	public static final JagString aClass100_591 = JagString.parse("(Udns");
+	@OriginalMember(owner = "client!dm", name = "n", descriptor = "Lclient!na;")
+	public static final JagString PERCENT_SIGN = JagString.parse("(U");
 	@OriginalMember(owner = "client!k", name = "j", descriptor = "I")
 	public static int anInt3126;
 
@@ -121,9 +135,9 @@ public final class Static127 {
 				@Pc(382) int local382 = local367 + local81;
 				for (@Pc(384) int local384 = 0; local384 < 4; local384++) {
 					if (local378 >= 0 && local382 >= 0 && local378 < 104 && local382 < 104) {
-						Static159.objStacks[local384][local358][local367] = Static159.objStacks[local384][local378][local382];
+						SceneGraph.objStacks[local384][local358][local367] = SceneGraph.objStacks[local384][local378][local382];
 					} else {
-						Static159.objStacks[local384][local358][local367] = null;
+						SceneGraph.objStacks[local384][local358][local367] = null;
 					}
 				}
 			}
@@ -160,38 +174,35 @@ public final class Static127 {
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(Lclient!be;Lclient!na;I)Lclient!na;")
 	public static JagString method2465(@OriginalArg(0) Component arg0, @OriginalArg(1) JagString arg1) {
-		if (arg1.indexOf(Static49.PERCENT_SIGN) == -1) {
+		if (arg1.indexOf(PERCENT_SIGN) == -1) {
 			return arg1;
 		}
 		while (true) {
-			@Pc(14) int local14 = arg1.indexOf(Static23.aClass100_133);
+			@Pc(14) int local14 = arg1.indexOf(aClass100_133);
 			if (local14 == -1) {
 				while (true) {
-					local14 = arg1.indexOf(Static276.aClass100_1097);
+					local14 = arg1.indexOf(aClass100_1097);
 					if (local14 == -1) {
 						while (true) {
-							local14 = arg1.indexOf(Static160.aClass100_761);
+							local14 = arg1.indexOf(aClass100_761);
 							if (local14 == -1) {
 								while (true) {
 									local14 = arg1.indexOf(aClass100_520);
 									if (local14 == -1) {
 										while (true) {
-											local14 = arg1.indexOf(Static235.aClass100_1002);
+											local14 = arg1.indexOf(aClass100_1002);
 											if (local14 == -1) {
 												while (true) {
-													local14 = arg1.indexOf(Static122.aClass100_591);
+													local14 = arg1.indexOf(aClass100_591);
 													if (local14 == -1) {
 														return arg1;
 													}
 													@Pc(246) JagString local246 = JagString.EMPTY;
 													if (Player.lastLogAddress != null) {
 														local246 = Static181.method3341(Player.lastLogAddress.intArg2);
-														try {
-															if (Player.lastLogAddress.result != null) {
-																@Pc(265) byte[] local265 = ((String) Player.lastLogAddress.result).getBytes("ISO-8859-1");
-																local246 = JagString.decodeString(local265, local265.length, 0);
-															}
-														} catch (@Pc(274) UnsupportedEncodingException local274) {
+														if (Player.lastLogAddress.result != null) {
+															@Pc(265) byte[] local265 = ((String) Player.lastLogAddress.result).getBytes(StandardCharsets.ISO_8859_1);
+															local246 = JagString.decodeString(local265, local265.length, 0);
 														}
 													}
 													arg1 = JagString.concatenate(new JagString[] { arg1.substring(local14, 0), local246, arg1.substring(local14 + 4) });

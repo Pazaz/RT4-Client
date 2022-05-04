@@ -287,7 +287,7 @@ public class MiniMap {
             }
             for (local146 = 0; local146 < 104; local146++) {
                 for (local181 = 0; local181 < 104; local181++) {
-                    @Pc(439) LinkedList local439 = Static159.objStacks[Player.level][local146][local181];
+                    @Pc(439) LinkedList local439 = SceneGraph.objStacks[Player.level][local146][local181];
                     if (local439 != null) {
                         local154 = local146 * 4 + 2 - PlayerList.self.xFine / 32;
                         local231 = local181 * 4 + 2 - PlayerList.self.zFine / 32;
