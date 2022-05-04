@@ -53,7 +53,7 @@ public final class Player extends PathingEntity {
 	public int combatLevel = 0;
 
 	@OriginalMember(owner = "client!e", name = "Fc", descriptor = "I")
-	public int anInt1656 = 0;
+	public int combatLevelWithSummoning = 0;
 
 	@OriginalMember(owner = "client!e", name = "Cc", descriptor = "I")
 	public int anInt1654 = -1;
@@ -68,13 +68,13 @@ public final class Player extends PathingEntity {
 	public int anInt1658 = -1;
 
 	@OriginalMember(owner = "client!e", name = "Sc", descriptor = "I")
-	public int anInt1667 = -1;
+	public int combatRange = -1;
 
 	@OriginalMember(owner = "client!e", name = "Oc", descriptor = "Z")
 	public boolean aBoolean98 = false;
 
 	@OriginalMember(owner = "client!e", name = "Xc", descriptor = "I")
-	public int anInt1671 = 0;
+	public int skill = 0;
 
 	@OriginalMember(owner = "client!e", name = "Vc", descriptor = "I")
 	public int anInt1669 = -1;
@@ -262,15 +262,15 @@ public final class Player extends PathingEntity {
 		this.username = Base37.decode37(local236).toTitleCase();
 		this.combatLevel = arg0.g1();
 		if (local37) {
-			this.anInt1671 = arg0.g2();
-			this.anInt1656 = this.combatLevel;
-			this.anInt1667 = -1;
+			this.skill = arg0.g2();
+			this.combatLevelWithSummoning = this.combatLevel;
+			this.combatRange = -1;
 		} else {
-			this.anInt1671 = 0;
-			this.anInt1656 = arg0.g1();
-			this.anInt1667 = arg0.g1();
-			if (this.anInt1667 == 255) {
-				this.anInt1667 = -1;
+			this.skill = 0;
+			this.combatLevelWithSummoning = arg0.g1();
+			this.combatRange = arg0.g1();
+			if (this.combatRange == 255) {
+				this.combatRange = -1;
 			}
 		}
 		local134 = this.soundRadius;

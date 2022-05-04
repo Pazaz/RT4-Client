@@ -11,10 +11,7 @@ public final class Static78 {
     @OriginalMember(owner = "client!gd", name = "b", descriptor = "Lclient!na;")
 	public static final JagString aClass100_464 = JagString.parse("null");
 
-	@OriginalMember(owner = "client!gd", name = "c", descriptor = "Lclient!na;")
-	public static final JagString aClass100_465 = JagString.parse(")0");
-
-	@OriginalMember(owner = "client!gd", name = "h", descriptor = "[I")
+    @OriginalMember(owner = "client!gd", name = "h", descriptor = "[I")
 	public static final int[] anIntArray204 = new int[] { 16, 32, 64, 128 };
 
     @OriginalMember(owner = "client!gd", name = "j", descriptor = "I")

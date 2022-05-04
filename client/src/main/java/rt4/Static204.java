@@ -9,9 +9,6 @@ public final class Static204 {
 	@OriginalMember(owner = "client!qi", name = "z", descriptor = "Lclient!qf;")
 	public static Sprite aClass3_Sub2_Sub1_10;
 
-	@OriginalMember(owner = "client!qi", name = "B", descriptor = "Lclient!na;")
-	public static final JagString aClass100_896 = JagString.parse("<col=ffffff>");
-
 	@OriginalMember(owner = "client!qi", name = "b", descriptor = "(II)I")
 	public static int method3674(@OriginalArg(0) int arg0) {
 		@Pc(5) int local5 = 0;
