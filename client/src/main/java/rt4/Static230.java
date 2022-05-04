@@ -23,6 +23,8 @@ public final class Static230 {
 	public static final JagString aClass100_821 = JagString.parse("document)3cookie=(R");
 	@OriginalMember(owner = "client!sc", name = "f", descriptor = "Lclient!na;")
 	public static final JagString aClass100_946 = JagString.parse("(R");
+	@OriginalMember(owner = "client!fb", name = "i", descriptor = "Lclient!na;")
+	public static final JagString aClass100_431 = JagString.parse("; Max)2Age=");
 	@OriginalMember(owner = "client!sj", name = "D", descriptor = "I")
 	public static int anInt5158;
 
@@ -31,9 +33,6 @@ public final class Static230 {
 
     @OriginalMember(owner = "client!sj", name = "u", descriptor = "Z")
 	public static boolean dynamicMapRegion = false;
-
-	@OriginalMember(owner = "client!sj", name = "w", descriptor = "Lclient!na;")
-	public static final JagString aClass100_978 = JagString.parse("<)4col>");
 
 	@OriginalMember(owner = "client!sj", name = "H", descriptor = "I")
 	public static int anInt5161 = 0;
@@ -107,7 +106,7 @@ public final class Static230 {
 			if (arg0.length() == 0) {
 				local48 = JagString.concatenate(new JagString[] { local48, aClass100_1018 });
 			} else {
-				local48 = JagString.concatenate(new JagString[] { local48, aClass100_1082, Static33.method873(MonotonicClock.currentTimeMillis() + 94608000000L), Static64.aClass100_431, Static154.method2929(94608000L) });
+				local48 = JagString.concatenate(new JagString[] { local48, aClass100_1082, Static33.method873(MonotonicClock.currentTimeMillis() + 94608000000L), aClass100_431, Static154.method2929(94608000L) });
 			}
 			JagString.concatenate(new JagString[] { aClass100_821, local48, aClass100_946 }).method3134(GameShell.signLink.applet);
 		} catch (@Pc(124) Throwable local124) {
@@ -119,7 +118,7 @@ public final class Static230 {
 		if (MidiPlayer.anInt441 == 0) {
 			Static172.aClass3_Sub3_Sub4_2.method4447(arg0);
 		} else {
-			Static253.anInt5527 = arg0;
+			MidiPlayer.anInt5527 = arg0;
 		}
 	}
 }

@@ -37,9 +37,9 @@ public final class Static69 {
 		@Pc(34) int local34 = 0;
 		@Pc(42) Tile local42 = SceneGraph.tiles[arg0][arg1][arg2];
 		if (local42 != null) {
-			for (@Pc(46) int local46 = 0; local46 < local42.anInt662; local46++) {
-				@Pc(55) Scenery local55 = local42.aClass31Array1[local46];
-				if ((local55.aLong56 & 0x400000L) == 4194304L) {
+			for (@Pc(46) int local46 = 0; local46 < local42.sceneryLen; local46++) {
+				@Pc(55) Scenery local55 = local42.scenery[local46];
+				if ((local55.key & 0x400000L) == 4194304L) {
 					@Pc(66) int local66 = local55.primary.getMaxY();
 					if (local66 != -32768 && local66 < local34) {
 						local34 = local66;
@@ -64,13 +64,13 @@ public final class Static69 {
 		for (@Pc(17) int local17 = arg1; local17 <= arg1 + 1; local17++) {
 			if (local17 != Static126.anInt3114) {
 				for (@Pc(28) int local28 = local3; local28 <= local7; local28++) {
-					if (local28 >= 0 && local28 < Static152.mapSizeX) {
+					if (local28 >= 0 && local28 < SceneGraph.mapSizeX) {
 						for (@Pc(39) int local39 = local11; local39 <= local15; local39++) {
-							if (local39 >= 0 && local39 < Static99.mapSizeZ && (!local1 || local28 >= local7 || local39 >= local15 || local39 < arg3 && local28 != arg2)) {
+							if (local39 >= 0 && local39 < SceneGraph.mapSizeZ && (!local1 || local28 >= local7 || local39 >= local15 || local39 < arg3 && local28 != arg2)) {
 								@Pc(71) Tile local71 = SceneGraph.tiles[local17][local28][local39];
 								if (local71 != null) {
 									@Pc(158) int local158 = (SceneGraph.tileHeights[local17][local28][local39] + SceneGraph.tileHeights[local17][local28 + 1][local39] + SceneGraph.tileHeights[local17][local28][local39 + 1] + SceneGraph.tileHeights[local17][local28 + 1][local39 + 1]) / 4 - (SceneGraph.tileHeights[arg1][arg2][arg3] + SceneGraph.tileHeights[arg1][arg2 + 1][arg3] + SceneGraph.tileHeights[arg1][arg2][arg3 + 1] + SceneGraph.tileHeights[arg1][arg2 + 1][arg3 + 1]) / 4;
-									@Pc(161) Wall local161 = local71.aClass77_1;
+									@Pc(161) Wall local161 = local71.wall;
 									if (local161 != null) {
 										if (local161.primary.method4543()) {
 											arg0.method4544(local161.primary, (local28 - arg2) * 128 + (1 - arg4) * 64, local158, (local39 - arg3) * 128 + (1 - arg5) * 64, local1);
@@ -79,8 +79,8 @@ public final class Static69 {
 											arg0.method4544(local161.aClass8_6, (local28 - arg2) * 128 + (1 - arg4) * 64, local158, (local39 - arg3) * 128 + (1 - arg5) * 64, local1);
 										}
 									}
-									for (@Pc(232) int local232 = 0; local232 < local71.anInt662; local232++) {
-										@Pc(241) Scenery local241 = local71.aClass31Array1[local232];
+									for (@Pc(232) int local232 = 0; local232 < local71.sceneryLen; local232++) {
+										@Pc(241) Scenery local241 = local71.scenery[local232];
 										if (local241 != null && local241.primary.method4543() && (local28 == local241.anInt1701 || local28 == local3) && (local39 == local241.anInt1696 || local39 == local11)) {
 											@Pc(270) int local270 = local241.anInt1713 + 1 - local241.anInt1701;
 											@Pc(278) int local278 = local241.anInt1698 + 1 - local241.anInt1696;

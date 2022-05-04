@@ -18,7 +18,9 @@ public final class JagString implements StringInterface {
 
     @OriginalMember(owner = "client!pa", name = "O", descriptor = "Lclient!na;")
     public static final JagString EMPTY = parse("");
-    @OriginalMember(owner = "client!na", name = "T", descriptor = "[B")
+	@OriginalMember(owner = "client!pi", name = "Q", descriptor = "Lclient!na;")
+	public static final JagString aClass100_853 = parse("null");
+	@OriginalMember(owner = "client!na", name = "T", descriptor = "[B")
 	public byte[] chars;
 
 	@OriginalMember(owner = "client!na", name = "lb", descriptor = "I")
@@ -40,7 +42,7 @@ public final class JagString implements StringInterface {
 		@Pc(5) int local5 = 0;
 		for (@Pc(7) int local7 = 0; local7 < arg1; local7++) {
 			if (arg2[arg0 + local7] == null) {
-				arg2[local7 + arg0] = Static193.aClass100_853;
+				arg2[local7 + arg0] = aClass100_853;
 			}
 			local5 += arg2[local7 + arg0].length;
 		}
@@ -128,7 +130,65 @@ public final class JagString implements StringInterface {
         return local13.method3151();
     }
 
-	@OriginalMember(owner = "client!na", name = "a", descriptor = "(Z)Ljava/net/URL;")
+    @OriginalMember(owner = "client!jj", name = "b", descriptor = "(BI)Lclient!na;")
+    public static JagString parseInt(@OriginalArg(1) int arg0) {
+        return parseInt(false, arg0);
+    }
+
+	@OriginalMember(owner = "client!q", name = "a", descriptor = "(BZII)Lclient!na;")
+	public static JagString parseInt(@OriginalArg(1) boolean arg0, @OriginalArg(3) int arg1) {
+		@Pc(23) int local23 = 1;
+		@Pc(27) int local27 = arg1 / 10;
+		while (local27 != 0) {
+			local27 /= 10;
+			local23++;
+		}
+		@Pc(38) int local38 = local23;
+		if (arg1 < 0 || arg0) {
+			local38 = local23 + 1;
+		}
+		@Pc(46) byte[] local46 = new byte[local38];
+		if (arg1 < 0) {
+			local46[0] = 45;
+		} else if (arg0) {
+			local46[0] = 43;
+		}
+		for (@Pc(61) int local61 = 0; local61 < local23; local61++) {
+			@Pc(68) int local68 = arg1 % 10;
+			if (local68 < 0) {
+				local68 = -local68;
+			}
+			if (local68 > 9) {
+				local68 += 39;
+			}
+			local46[local38 - local61 - 1] = (byte) (local68 + 48);
+			arg1 /= 10;
+		}
+		@Pc(112) JagString local112 = new JagString();
+		local112.chars = local46;
+		local112.length = local38;
+		return local112;
+	}
+
+    @OriginalMember(owner = "client!an", name = "a", descriptor = "([BIII)Lclient!na;")
+    public static JagString decodeString(@OriginalArg(0) byte[] arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
+        @Pc(7) JagString local7 = new JagString();
+        local7.chars = new byte[arg1];
+        local7.length = 0;
+        for (@Pc(22) int local22 = arg2; local22 < arg1 + arg2; local22++) {
+            if (arg0[local22] != 0) {
+                local7.chars[local7.length++] = arg0[local22];
+            }
+        }
+        return local7;
+    }
+
+    @OriginalMember(owner = "client!bg", name = "d", descriptor = "(II)Z")
+    public static boolean method530(@OriginalArg(0) int arg0) {
+        return arg0 == 198 || arg0 == 230 || arg0 == 156 || arg0 == 140 || arg0 == 223;
+    }
+
+    @OriginalMember(owner = "client!na", name = "a", descriptor = "(Z)Ljava/net/URL;")
 	public final URL method3107() throws MalformedURLException {
 		return new URL(new String(this.chars, 0, this.length));
 	}
@@ -389,7 +449,7 @@ public final class JagString implements StringInterface {
 				local12 = this.chars[local28] & 0xFF;
 				local28++;
 			}
-			if (Static17.method530(local12)) {
+			if (method530(local12)) {
 				local23++;
 			} else {
 				local20--;
@@ -404,7 +464,7 @@ public final class JagString implements StringInterface {
 				local14 = arg0.chars[local30] & 0xFF;
 				local30++;
 			}
-			if (Static17.method530(local14)) {
+			if (method530(local14)) {
 				local26++;
 			} else {
 				local17--;
@@ -888,7 +948,7 @@ public final class JagString implements StringInterface {
 		@Pc(17) Object local17 = BrowserControl.call(local12, arg0);
 		if (local17 instanceof String) {
 			@Pc(24) byte[] local24 = ((String) local17).getBytes();
-			local17 = Static10.decodeString(local24, local24.length, 0);
+			local17 = decodeString(local24, local24.length, 0);
 		}
 		return local17;
 	}

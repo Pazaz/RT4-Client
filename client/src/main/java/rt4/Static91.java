@@ -6,10 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static91 {
 
-	@OriginalMember(owner = "client!hc", name = "O", descriptor = "[Lclient!pe;")
-	public static Class120[] aClass120Array1;
-
-	@OriginalMember(owner = "client!hc", name = "P", descriptor = "I")
+    @OriginalMember(owner = "client!hc", name = "P", descriptor = "I")
 	public static int anInt2428;
 
     @OriginalMember(owner = "client!hc", name = "a", descriptor = "(Lclient!na;Z)I")
@@ -46,6 +43,6 @@ public final class Static91 {
 				SceneGraph.tiles[local46][arg1][arg2] = new Tile(local46, arg1, arg2);
 			}
 		}
-		SceneGraph.tiles[arg0][arg1][arg2].aClass24_1 = local6;
+		SceneGraph.tiles[arg0][arg1][arg2].wallDecor = local6;
 	}
 }

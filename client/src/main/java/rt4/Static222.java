@@ -3,7 +3,6 @@ package rt4;
 import java.awt.Font;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
-import org.openrs2.deob.annotation.Pc;
 
 public final class Static222 {
 
@@ -15,12 +14,6 @@ public final class Static222 {
 
 	@OriginalMember(owner = "client!sa", name = "W", descriptor = "Z")
 	public static boolean instantScreenFade = true;
-
-    @OriginalMember(owner = "client!sa", name = "c", descriptor = "(III)I")
-	public static int method3825(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		@Pc(12) int local12 = arg0 >>> 31;
-		return (arg0 + local12) / arg1 - local12;
-	}
 
 	@OriginalMember(owner = "client!sa", name = "a", descriptor = "(IIIBI)V")
 	public static void method3826(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {

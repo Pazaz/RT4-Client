@@ -12,7 +12,6 @@ public final class Static231 {
 	@OriginalMember(owner = "client!sk", name = "mb", descriptor = "I")
 	public static int anInt5205;
 
-
 	@OriginalMember(owner = "client!sk", name = "lb", descriptor = "Z")
 	public static boolean aBoolean252 = false;
 

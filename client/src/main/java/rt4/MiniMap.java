@@ -21,6 +21,10 @@ public class MiniMap {
     public static Sprite sprite;
     @OriginalMember(owner = "client!ug", name = "m", descriptor = "I")
     public static int locs = 0;
+    @OriginalMember(owner = "client!wb", name = "d", descriptor = "I")
+    public static int state = 0;
+    @OriginalMember(owner = "client!we", name = "w", descriptor = "I")
+    public static int anInt4130 = 0;
 
     @OriginalMember(owner = "client!ma", name = "a", descriptor = "([IIIIII)V")
     public static void renderTile(@OriginalArg(0) int[] pixels, @OriginalArg(1) int index, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
@@ -114,7 +118,7 @@ public class MiniMap {
             locs = 0;
             for (local37 = 0; local37 < 104; local37++) {
                 for (local76 = 0; local76 < 104; local76++) {
-                    @Pc(169) long local169 = Static20.method602(Player.level, local37 + 0, local76);
+                    @Pc(169) long local169 = SceneGraph.method602(Player.level, local37 + 0, local76);
                     if (local169 != 0L) {
                         @Pc(184) LocType local184 = LocTypeList.get((int) (local169 >>> 32) & Integer.MAX_VALUE);
                         @Pc(187) int local187 = local184.mapElement;
@@ -203,4 +207,216 @@ public class MiniMap {
         softwareSprite = null;
         return true;
     }
+
+    @OriginalMember(owner = "client!ed", name = "a", descriptor = "(IBIILclient!be;)V")
+    public static void render(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Component arg3) {
+        client.audioLoop();
+        if (GlRenderer.enabled) {
+            GlRaster.setClip(arg2, arg1, arg2 + arg3.anInt445, arg1 + arg3.anInt459);
+        } else {
+            SoftwareRaster.setClip(arg2, arg1, arg2 + arg3.anInt445, arg1 + arg3.anInt459);
+        }
+        if (state != 2 && state != 5 && sprite != null) {
+            @Pc(48) int local48 = Static59.anInt1814 + (int)Camera.yawTarget & 0x7FF;
+            @Pc(57) int local57 = PlayerList.self.xFine / 32 + 48;
+            @Pc(67) int local67 = 464 - PlayerList.self.zFine / 32;
+            if (GlRenderer.enabled) {
+                ((GlSprite) sprite).renderRotatedTransparent(arg2, arg1, arg3.anInt445, arg3.anInt459, local57, local67, local48, anInt4130 + 256, (GlSprite) arg3.method489(false));
+            } else {
+                ((SoftwareSprite) sprite).renderRotatedTransparent(arg2, arg1, arg3.anInt445, arg3.anInt459, local57, local67, local48, anInt4130 + 256, arg3.anIntArray37, arg3.anIntArray45);
+            }
+            @Pc(146) int local146;
+            @Pc(181) int local181;
+            @Pc(150) int local150;
+            @Pc(154) int local154;
+            @Pc(231) int local231;
+            @Pc(200) int local200;
+            @Pc(239) int local239;
+            @Pc(271) int local271;
+            if (Static235.mapElementList != null) {
+                for (@Pc(117) int local117 = 0; local117 < Static235.mapElementList.anInt5074; local117++) {
+                    if (Static235.mapElementList.method3892(local117)) {
+                        local146 = (Static235.mapElementList.aShortArray73[local117] - Static225.originX) * 4 + 2 - PlayerList.self.xFine / 32;
+                        local150 = MathUtils.sin[local48];
+                        local154 = MathUtils.cos[local48];
+                        @Pc(156) Font local156 = Fonts.p11Full;
+                        @Pc(164) int local164 = local150 * 256 / (anInt4130 + 256);
+                        local181 = (Static235.mapElementList.aShortArray72[local117] - Static142.originZ) * 4 + 2 - PlayerList.self.zFine / 32;
+                        @Pc(189) int local189 = local154 * 256 / (anInt4130 + 256);
+                        local200 = local181 * local189 - local146 * local164 >> 16;
+                        if (Static235.mapElementList.method3894(local117) == 1) {
+                            local156 = Fonts.p12Full;
+                        }
+                        if (Static235.mapElementList.method3894(local117) == 2) {
+                            local156 = Fonts.b12Full;
+                        }
+                        local231 = local164 * local181 + local189 * local146 >> 16;
+                        local239 = local156.method2856(Static235.mapElementList.aClass100Array153[local117], 100);
+                        @Pc(245) int local245 = local231 - local239 / 2;
+                        if (local245 >= -arg3.anInt445 && local245 <= arg3.anInt445 && local200 >= -arg3.anInt459 && local200 <= arg3.anInt459) {
+                            local271 = 16777215;
+                            if (Static235.mapElementList.anIntArray444[local117] != -1) {
+                                local271 = Static235.mapElementList.anIntArray444[local117];
+                            }
+                            if (GlRenderer.enabled) {
+                                GlFont.method1188((GlSprite) arg3.method489(false));
+                            } else {
+                                SoftwareRaster.method2486(arg3.anIntArray37, arg3.anIntArray45);
+                            }
+                            local156.renderParagraphAlpha(Static235.mapElementList.aClass100Array153[local117], arg2 + local245 + arg3.anInt445 / 2, arg1 + arg3.anInt459 / 2 + -local200, local239, 50, local271, 0, 1, 0, 0);
+                            if (GlRenderer.enabled) {
+                                GlFont.method1173();
+                            } else {
+                                SoftwareRaster.method2482();
+                            }
+                        }
+                    }
+                }
+            }
+            for (local146 = 0; local146 < locs; local146++) {
+                local181 = locX[local146] * 4 + 2 - PlayerList.self.xFine / 32;
+                local150 = locZ[local146] * 4 + 2 - PlayerList.self.zFine / 32;
+                @Pc(382) LocType local382 = LocTypeList.get(locId[local146]);
+                if (local382.multiLocs != null) {
+                    local382 = local382.getMultiLoc();
+                    if (local382 == null || local382.mapElement == -1) {
+                        continue;
+                    }
+                }
+                method1446(arg3, Static67.mapfuncs[local382.mapElement], local150, local181, arg1, arg2);
+            }
+            for (local146 = 0; local146 < 104; local146++) {
+                for (local181 = 0; local181 < 104; local181++) {
+                    @Pc(439) LinkedList local439 = Static159.objStacks[Player.level][local146][local181];
+                    if (local439 != null) {
+                        local154 = local146 * 4 + 2 - PlayerList.self.xFine / 32;
+                        local231 = local181 * 4 + 2 - PlayerList.self.zFine / 32;
+                        method1446(arg3, Sprites.mapdots[0], local231, local154, arg1, arg2);
+                    }
+                }
+            }
+            for (local146 = 0; local146 < NpcList.size; local146++) {
+                @Pc(498) Npc local498 = NpcList.npcs[NpcList.ids[local146]];
+                if (local498 != null && local498.method2682()) {
+                    @Pc(507) NpcType local507 = local498.type;
+                    if (local507 != null && local507.multiNpcs != null) {
+                        local507 = local507.getMultiNpc();
+                    }
+                    if (local507 != null && local507.aBoolean184 && local507.aBoolean183) {
+                        local154 = local498.xFine / 32 - PlayerList.self.xFine / 32;
+                        local231 = local498.zFine / 32 - PlayerList.self.zFine / 32;
+                        if (local507.anInt3739 == -1) {
+                            method1446(arg3, Sprites.mapdots[1], local231, local154, arg1, arg2);
+                        } else {
+                            method1446(arg3, Static67.mapfuncs[local507.anInt3739], local231, local154, arg1, arg2);
+                        }
+                    }
+                }
+            }
+            for (local146 = 0; local146 < PlayerList.size; local146++) {
+                @Pc(591) Player local591 = PlayerList.players[PlayerList.ids[local146]];
+                if (local591 != null && local591.method2682()) {
+                    local154 = local591.zFine / 32 - PlayerList.self.zFine / 32;
+                    local150 = local591.xFine / 32 - PlayerList.self.xFine / 32;
+                    @Pc(624) long local624 = local591.username.encode37();
+                    @Pc(626) boolean local626 = false;
+                    for (local239 = 0; local239 < FriendsList.size; local239++) {
+                        if (local624 == FriendsList.encodedUsernames[local239] && FriendsList.worlds[local239] != 0) {
+                            local626 = true;
+                            break;
+                        }
+                    }
+                    @Pc(660) boolean local660 = false;
+                    for (local271 = 0; local271 < ClanChat.size; local271++) {
+                        if (local624 == ClanChat.members[local271].key) {
+                            local660 = true;
+                            break;
+                        }
+                    }
+                    @Pc(682) boolean local682 = false;
+                    if (PlayerList.self.anInt1650 != 0 && local591.anInt1650 != 0 && local591.anInt1650 == PlayerList.self.anInt1650) {
+                        local682 = true;
+                    }
+                    if (local626) {
+                        method1446(arg3, Sprites.mapdots[3], local154, local150, arg1, arg2);
+                    } else if (local660) {
+                        method1446(arg3, Sprites.mapdots[5], local154, local150, arg1, arg2);
+                    } else if (local682) {
+                        method1446(arg3, Sprites.mapdots[4], local154, local150, arg1, arg2);
+                    } else {
+                        method1446(arg3, Sprites.mapdots[2], local154, local150, arg1, arg2);
+                    }
+                }
+            }
+            @Pc(756) MapMarker[] local756 = Static143.hintMapMarkers;
+            for (local181 = 0; local181 < local756.length; local181++) {
+                @Pc(770) MapMarker local770 = local756[local181];
+                if (local770 != null && local770.type != 0 && client.loop % 20 < 10) {
+                    if (local770.type == 1 && local770.actorTargetId >= 0 && local770.actorTargetId < NpcList.npcs.length) {
+                        @Pc(804) Npc local804 = NpcList.npcs[local770.actorTargetId];
+                        if (local804 != null) {
+                            local231 = local804.xFine / 32 - PlayerList.self.xFine / 32;
+                            local200 = local804.zFine / 32 - PlayerList.self.zFine / 32;
+                            Static97.method1960(local770.anInt4048, arg1, arg2, local231, local200, arg3);
+                        }
+                    }
+                    if (local770.type == 2) {
+                        local154 = (local770.targetX - Static225.originX) * 4 + 2 - PlayerList.self.xFine / 32;
+                        local231 = (-Static142.originZ + local770.anInt4046) * 4 + 2 - PlayerList.self.zFine / 32;
+                        Static97.method1960(local770.anInt4048, arg1, arg2, local154, local231, arg3);
+                    }
+                    if (local770.type == 10 && local770.actorTargetId >= 0 && PlayerList.players.length > local770.actorTargetId) {
+                        @Pc(905) Player local905 = PlayerList.players[local770.actorTargetId];
+                        if (local905 != null) {
+                            local200 = local905.zFine / 32 - PlayerList.self.zFine / 32;
+                            local231 = local905.xFine / 32 - PlayerList.self.xFine / 32;
+                            Static97.method1960(local770.anInt4048, arg1, arg2, local231, local200, arg3);
+                        }
+                    }
+                }
+            }
+            if (Static115.mapFlagX != 0) {
+                local146 = Static115.mapFlagX * 4 + 2 - PlayerList.self.xFine / 32;
+                local181 = Static84.anInt2255 * 4 + 2 - PlayerList.self.zFine / 32;
+                method1446(arg3, Sprites.mapflags, local181, local146, arg1, arg2);
+            }
+            if (GlRenderer.enabled) {
+                GlRaster.method1186(arg2 + arg3.anInt445 / 2 - 1, arg1 + -1 - -(arg3.anInt459 / 2), 3, 3, 16777215);
+            } else {
+                SoftwareRaster.fillRect(arg3.anInt445 / 2 + arg2 - 1, arg3.anInt459 / 2 + -1 + arg1, 3, 3, 16777215);
+            }
+        } else if (GlRenderer.enabled) {
+            @Pc(1041) Sprite local1041 = arg3.method489(false);
+            if (local1041 != null) {
+                local1041.renderTransparent(arg2, arg1);
+            }
+        } else {
+            SoftwareRaster.method2504(arg2, arg1, arg3.anIntArray37, arg3.anIntArray45);
+        }
+        InterfaceList.rectangleRedraw[arg0] = true;
+    }
+
+    @OriginalMember(owner = "client!em", name = "a", descriptor = "(Lclient!be;Lclient!qf;IIIBI)V")
+	public static void method1446(@OriginalArg(0) Component arg0, @OriginalArg(1) Sprite arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(6) int arg5) {
+		if (arg1 == null) {
+			return;
+		}
+		@Pc(21) int local21 = arg3 * arg3 + arg2 * arg2;
+		@Pc(27) int local27 = Static59.anInt1814 + (int)Camera.yawTarget & 0x7FF;
+		@Pc(39) int local39 = Math.max(arg0.anInt445 / 2, arg0.anInt459 / 2) + 10;
+		if (local39 * local39 < local21) {
+			return;
+		}
+		@Pc(50) int local50 = MathUtils.sin[local27];
+		@Pc(58) int local58 = local50 * 256 / (anInt4130 + 256);
+		@Pc(62) int local62 = MathUtils.cos[local27];
+		@Pc(70) int local70 = local62 * 256 / (anInt4130 + 256);
+		@Pc(81) int local81 = local58 * arg2 + arg3 * local70 >> 16;
+		@Pc(92) int local92 = local70 * arg2 - arg3 * local58 >> 16;
+		if (GlRenderer.enabled) {
+			((GlSprite) arg1).method1425(arg0.anInt445 / 2 + arg5 + local81 - arg1.anInt1860 / 2, arg0.anInt459 / 2 + arg4 - (local92 + arg1.anInt1866 / 2), (GlSprite) arg0.method489(false));
+		} else {
+			((SoftwareSprite) arg1).method312(arg0.anInt445 / 2 + arg5 + local81 - arg1.anInt1860 / 2, -(arg1.anInt1866 / 2) + arg0.anInt459 / 2 + arg4 + -local92, arg0.anIntArray37, arg0.anIntArray45);
+		}
+	}
 }

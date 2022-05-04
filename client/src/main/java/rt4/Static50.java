@@ -16,6 +16,4 @@ public final class Static50 {
     @OriginalMember(owner = "client!e", name = "Dc", descriptor = "Lclient!na;")
 	public static final JagString aClass100_363 = JagString.parse("_labels");
 
-	@OriginalMember(owner = "client!e", name = "Tc", descriptor = "Lclient!na;")
-	public static final JagString aClass100_365 = JagString.parse("www)2wtqa");
 }

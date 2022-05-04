@@ -9,7 +9,19 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!pj")
 public final class SynthInstrument {
 
-	@OriginalMember(owner = "client!pj", name = "k", descriptor = "[I")
+    @OriginalMember(owner = "client!pj", name = "o", descriptor = "[I")
+    public static final int[] anIntArray398 = new int[220500];
+    @OriginalMember(owner = "client!pj", name = "p", descriptor = "[I")
+    public static final int[] anIntArray399 = new int[5];
+    @OriginalMember(owner = "client!pj", name = "q", descriptor = "[I")
+    public static final int[] anIntArray400 = new int[5];
+    @OriginalMember(owner = "client!pj", name = "r", descriptor = "[I")
+    public static final int[] anIntArray401 = new int[5];
+    @OriginalMember(owner = "client!pj", name = "s", descriptor = "[I")
+    public static final int[] anIntArray402 = new int[5];
+    @OriginalMember(owner = "client!pj", name = "t", descriptor = "[I")
+    public static final int[] anIntArray403 = new int[5];
+    @OriginalMember(owner = "client!pj", name = "k", descriptor = "[I")
 	private static final int[] anIntArray395 = new int[32768];
 
 	@OriginalMember(owner = "client!pj", name = "h", descriptor = "[I")
@@ -95,9 +107,9 @@ public final class SynthInstrument {
 
 	@OriginalMember(owner = "client!pj", name = "a", descriptor = "(II)[I")
 	public final int[] method3505(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		ArrayUtils.clear(Static194.anIntArray398, 0, arg0);
+		ArrayUtils.clear(anIntArray398, 0, arg0);
 		if (arg1 < 10) {
-			return Static194.anIntArray398;
+			return anIntArray398;
 		}
 		@Pc(16) double local16 = (double) arg0 / ((double) arg1 + 0.0D);
 		this.aClass42_5.method1513();
@@ -123,11 +135,11 @@ public final class SynthInstrument {
 		@Pc(102) int local102;
 		for (local102 = 0; local102 < 5; local102++) {
 			if (this.anIntArray396[local102] != 0) {
-				Static194.anIntArray401[local102] = 0;
-				Static194.anIntArray402[local102] = (int) ((double) this.anIntArray397[local102] * local16);
-				Static194.anIntArray403[local102] = (this.anIntArray396[local102] << 14) / 100;
-				Static194.anIntArray399[local102] = (int) ((double) (this.aClass42_5.anInt1960 - this.aClass42_5.anInt1959) * 32.768D * Math.pow(1.0057929410678534D, (double) this.anIntArray404[local102]) / local16);
-				Static194.anIntArray400[local102] = (int) ((double) this.aClass42_5.anInt1959 * 32.768D / local16);
+				anIntArray401[local102] = 0;
+				anIntArray402[local102] = (int) ((double) this.anIntArray397[local102] * local16);
+				anIntArray403[local102] = (this.anIntArray396[local102] << 14) / 100;
+				anIntArray399[local102] = (int) ((double) (this.aClass42_5.anInt1960 - this.aClass42_5.anInt1959) * 32.768D * Math.pow(1.0057929410678534D, (double) this.anIntArray404[local102]) / local16);
+				anIntArray400[local102] = (int) ((double) this.aClass42_5.anInt1959 * 32.768D / local16);
 			}
 		}
 		@Pc(185) int local185;
@@ -151,10 +163,10 @@ public final class SynthInstrument {
 			}
 			for (local198 = 0; local198 < 5; local198++) {
 				if (this.anIntArray396[local198] != 0) {
-					local203 = local102 + Static194.anIntArray402[local198];
+					local203 = local102 + anIntArray402[local198];
 					if (local203 < arg0) {
-						Static194.anIntArray398[local203] += this.method3504(Static194.anIntArray401[local198], local190 * Static194.anIntArray403[local198] >> 15, this.aClass42_5.anInt1958);
-						Static194.anIntArray401[local198] += (local185 * Static194.anIntArray399[local198] >> 16) + Static194.anIntArray400[local198];
+						anIntArray398[local203] += this.method3504(anIntArray401[local198], local190 * anIntArray403[local198] >> 15, this.aClass42_5.anInt1958);
+						anIntArray401[local198] += (local185 * anIntArray399[local198] >> 16) + anIntArray400[local198];
 					}
 				}
 			}
@@ -179,14 +191,14 @@ public final class SynthInstrument {
 					local341 = !local341;
 				}
 				if (local341) {
-					Static194.anIntArray398[local198] = 0;
+					anIntArray398[local198] = 0;
 				}
 			}
 		}
 		if (this.anInt4547 > 0 && this.anInt4549 > 0) {
 			local102 = (int) ((double) this.anInt4547 * local16);
 			for (local185 = local102; local185 < arg0; local185++) {
-				Static194.anIntArray398[local185] += Static194.anIntArray398[local185 - local102] * this.anInt4549 / 100;
+				anIntArray398[local185] += anIntArray398[local185 - local102] * this.anInt4549 / 100;
 			}
 		}
 		if (this.aClass110_1.anIntArray368[0] > 0 || this.aClass110_1.anIntArray368[1] > 0) {
@@ -202,14 +214,14 @@ public final class SynthInstrument {
 				}
 				@Pc(523) int local523;
 				while (local198 < local203) {
-					local356 = (int) ((long) Static194.anIntArray398[local198 + local185] * (long) Static174.anInt4191 >> 16);
+					local356 = (int) ((long) anIntArray398[local198 + local185] * (long) Static174.anInt4191 >> 16);
 					for (local523 = 0; local523 < local185; local523++) {
-						local356 += (int) ((long) Static194.anIntArray398[local198 + local185 - local523 - 1] * (long) Static174.anIntArrayArray32[0][local523] >> 16);
+						local356 += (int) ((long) anIntArray398[local198 + local185 - local523 - 1] * (long) Static174.anIntArrayArray32[0][local523] >> 16);
 					}
 					for (local523 = 0; local523 < local198; local523++) {
-						local356 -= (int) ((long) Static194.anIntArray398[local198 - local523 - 1] * (long) Static174.anIntArrayArray32[1][local523] >> 16);
+						local356 -= (int) ((long) anIntArray398[local198 - local523 - 1] * (long) Static174.anIntArrayArray32[1][local523] >> 16);
 					}
-					Static194.anIntArray398[local198] = local356;
+					anIntArray398[local198] = local356;
 					local102 = this.aClass42_6.method1512(arg0 + 1);
 					local198++;
 				}
@@ -219,14 +231,14 @@ public final class SynthInstrument {
 						local203 = arg0 - local185;
 					}
 					while (local198 < local203) {
-						local356 = (int) ((long) Static194.anIntArray398[local198 + local185] * (long) Static174.anInt4191 >> 16);
+						local356 = (int) ((long) anIntArray398[local198 + local185] * (long) Static174.anInt4191 >> 16);
 						for (local523 = 0; local523 < local185; local523++) {
-							local356 += (int) ((long) Static194.anIntArray398[local198 + local185 - local523 - 1] * (long) Static174.anIntArrayArray32[0][local523] >> 16);
+							local356 += (int) ((long) anIntArray398[local198 + local185 - local523 - 1] * (long) Static174.anIntArrayArray32[0][local523] >> 16);
 						}
 						for (local523 = 0; local523 < local190; local523++) {
-							local356 -= (int) ((long) Static194.anIntArray398[local198 - local523 - 1] * (long) Static174.anIntArrayArray32[1][local523] >> 16);
+							local356 -= (int) ((long) anIntArray398[local198 - local523 - 1] * (long) Static174.anIntArrayArray32[1][local523] >> 16);
 						}
-						Static194.anIntArray398[local198] = local356;
+						anIntArray398[local198] = local356;
 						local102 = this.aClass42_6.method1512(arg0 + 1);
 						local198++;
 					}
@@ -234,12 +246,12 @@ public final class SynthInstrument {
 						while (local198 < arg0) {
 							local356 = 0;
 							for (local523 = local198 + local185 - arg0; local523 < local185; local523++) {
-								local356 += (int) ((long) Static194.anIntArray398[local198 + local185 - local523 - 1] * (long) Static174.anIntArrayArray32[0][local523] >> 16);
+								local356 += (int) ((long) anIntArray398[local198 + local185 - local523 - 1] * (long) Static174.anIntArrayArray32[0][local523] >> 16);
 							}
 							for (local523 = 0; local523 < local190; local523++) {
-								local356 -= (int) ((long) Static194.anIntArray398[local198 - local523 - 1] * (long) Static174.anIntArrayArray32[1][local523] >> 16);
+								local356 -= (int) ((long) anIntArray398[local198 - local523 - 1] * (long) Static174.anIntArrayArray32[1][local523] >> 16);
 							}
-							Static194.anIntArray398[local198] = local356;
+							anIntArray398[local198] = local356;
 							this.aClass42_6.method1512(arg0 + 1);
 							local198++;
 						}
@@ -252,14 +264,14 @@ public final class SynthInstrument {
 			}
 		}
 		for (local102 = 0; local102 < arg0; local102++) {
-			if (Static194.anIntArray398[local102] < -32768) {
-				Static194.anIntArray398[local102] = -32768;
+			if (anIntArray398[local102] < -32768) {
+				anIntArray398[local102] = -32768;
 			}
-			if (Static194.anIntArray398[local102] > 32767) {
-				Static194.anIntArray398[local102] = 32767;
+			if (anIntArray398[local102] > 32767) {
+				anIntArray398[local102] = 32767;
 			}
 		}
-		return Static194.anIntArray398;
+		return anIntArray398;
 	}
 
 	@OriginalMember(owner = "client!pj", name = "a", descriptor = "(Lclient!wa;)V")

@@ -11,7 +11,7 @@ public final class Tile extends Node {
 	public boolean aBoolean45;
 
 	@OriginalMember(owner = "client!bj", name = "y", descriptor = "I")
-	public int anInt662;
+	public int sceneryLen;
 
 	@OriginalMember(owner = "client!bj", name = "A", descriptor = "Z")
 	public boolean aBoolean46;
@@ -26,16 +26,16 @@ public final class Tile extends Node {
 	public int anInt665;
 
 	@OriginalMember(owner = "client!bj", name = "G", descriptor = "Lclient!bm;")
-	public GroundDecor aClass15_1;
+	public GroundDecor groundDecor;
 
 	@OriginalMember(owner = "client!bj", name = "I", descriptor = "I")
 	public int anInt667;
 
 	@OriginalMember(owner = "client!bj", name = "J", descriptor = "Lclient!df;")
-	public WallDecor aClass24_1;
+	public WallDecor wallDecor;
 
 	@OriginalMember(owner = "client!bj", name = "K", descriptor = "Lclient!jh;")
-	public Wall aClass77_1;
+	public Wall wall;
 
 	@OriginalMember(owner = "client!bj", name = "M", descriptor = "Lclient!bj;")
 	public Tile aClass3_Sub5_1;
@@ -56,7 +56,7 @@ public final class Tile extends Node {
 	public int anInt664 = 0;
 
 	@OriginalMember(owner = "client!bj", name = "w", descriptor = "[Lclient!ec;")
-	public final Scenery[] aClass31Array1 = new Scenery[5];
+	public final Scenery[] scenery = new Scenery[5];
 
 	@OriginalMember(owner = "client!bj", name = "P", descriptor = "[I")
 	public final int[] anIntArray59 = new int[5];

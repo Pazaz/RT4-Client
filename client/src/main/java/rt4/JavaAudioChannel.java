@@ -29,6 +29,16 @@ public final class JavaAudioChannel extends AudioChannel {
 	@OriginalMember(owner = "client!qa", name = "N", descriptor = "Z")
 	private boolean aBoolean230 = false;
 
+	@OriginalMember(owner = "client!uc", name = "a", descriptor = "(II)I")
+	public static int method3289(@OriginalArg(0) int arg0) {
+		@Pc(9) int local9 = (arg0 >>> 1 & 0xD5555555) + (arg0 & 0x55555555);
+		@Pc(19) int local19 = (local9 >>> 2 & 0x33333333) + (local9 & 0x33333333);
+		@Pc(31) int local31 = (local19 >>> 4) + local19 & 0xF0F0F0F;
+		@Pc(37) int local37 = local31 + (local31 >>> 8);
+		@Pc(43) int local43 = local37 + (local37 >>> 16);
+		return local43 & 0xFF;
+	}
+
 	@OriginalMember(owner = "client!qa", name = "d", descriptor = "()V")
 	@Override
 	protected final void flush() {
@@ -67,7 +77,7 @@ public final class JavaAudioChannel extends AudioChannel {
 			this.aSourceDataLine1.start();
 			this.anInt4645 = arg0;
 		} catch (@Pc(36) LineUnavailableException local36) {
-			if (Static248.method3289(arg0) == 1) {
+			if (method3289(arg0) == 1) {
 				this.aSourceDataLine1 = null;
 				throw local36;
 			} else {

@@ -6,6 +6,14 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static52 {
 
+	@OriginalMember(owner = "client!kl", name = "u", descriptor = "Lclient!na;")
+	public static final JagString aClass100_637 = JagString.parse("<col=ffffff>");
+	@OriginalMember(owner = "client!ol", name = "Y", descriptor = "Lclient!na;")
+	public static final JagString aClass100_819 = JagString.parse("<col=00ff80>");
+	@OriginalMember(owner = "client!ib", name = "g", descriptor = "Lclient!na;")
+	public static final JagString aClass100_559 = JagString.parse("<col=ffff00>");
+	@OriginalMember(owner = "client!jj", name = "m", descriptor = "Lclient!na;")
+	public static final JagString aClass100_594 = JagString.parse("<)4col>");
 	@OriginalMember(owner = "client!eb", name = "u", descriptor = "I")
 	public static int anInt1695;
 
@@ -34,11 +42,11 @@ public final class Static52 {
 	@OriginalMember(owner = "client!eb", name = "b", descriptor = "(II)Lclient!na;")
 	public static JagString method1288(@OriginalArg(1) int arg0) {
 		if (arg0 < 100000) {
-			return JagString.concatenate(new JagString[] { Static105.aClass100_559, Static123.parseInt(arg0), Static123.aClass100_594 });
+			return JagString.concatenate(new JagString[] { aClass100_559, JagString.parseInt(arg0), aClass100_594 });
 		} else if (arg0 >= 10000000) {
-			return JagString.concatenate(new JagString[] { Static184.aClass100_819, Static123.parseInt(arg0 / 1000000), LocalizedText.MILLION, Static123.aClass100_594 });
+			return JagString.concatenate(new JagString[] { aClass100_819, JagString.parseInt(arg0 / 1000000), LocalizedText.MILLION, aClass100_594 });
 		} else {
-			return JagString.concatenate(new JagString[] { Static137.aClass100_637, Static123.parseInt(arg0 / 1000), LocalizedText.THOUSAND, Static123.aClass100_594 });
+			return JagString.concatenate(new JagString[] { aClass100_637, JagString.parseInt(arg0 / 1000), LocalizedText.THOUSAND, aClass100_594 });
 		}
 	}
 }

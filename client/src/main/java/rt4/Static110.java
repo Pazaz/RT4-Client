@@ -12,6 +12,6 @@ public final class Static110 {
 
 	@OriginalMember(owner = "client!ih", name = "a", descriptor = "(ZII)Lclient!na;")
 	public static JagString method2285(@OriginalArg(2) int arg0) {
-		return Static198.method1025(true, arg0);
+		return JagString.parseInt(true, arg0);
 	}
 }

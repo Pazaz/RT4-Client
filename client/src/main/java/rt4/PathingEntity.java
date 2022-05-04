@@ -10,7 +10,9 @@ public abstract class PathingEntity extends Entity {
 
     @OriginalMember(owner = "client!ef", name = "a", descriptor = "[I")
 	public static final int[] ANGLES = new int[] { 768, 1024, 1280, 512, 1536, 256, 0, 1792 };
-    @OriginalMember(owner = "client!fe", name = "A", descriptor = "I")
+	@OriginalMember(owner = "client!ac", name = "l", descriptor = "Lclient!ck;")
+	public static final BasType aClass20_1 = new BasType();
+	@OriginalMember(owner = "client!fe", name = "A", descriptor = "I")
 	public int spotAnimStart;
 
 	@OriginalMember(owner = "client!fe", name = "S", descriptor = "I")
@@ -259,7 +261,7 @@ public abstract class PathingEntity extends Entity {
 	@OriginalMember(owner = "client!fe", name = "b", descriptor = "(Z)Lclient!ck;")
 	public final BasType getBasType() {
 		@Pc(7) int local7 = this.method2688();
-		return local7 == -1 ? Static4.aClass20_1 : BasTypeList.get(local7);
+		return local7 == -1 ? aClass20_1 : BasTypeList.get(local7);
 	}
 
 	@OriginalMember(owner = "client!fe", name = "a", descriptor = "(B)Z")

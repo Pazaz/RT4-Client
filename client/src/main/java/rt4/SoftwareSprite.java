@@ -201,7 +201,12 @@ public class SoftwareSprite extends Sprite {
 		}
 	}
 
-	@OriginalMember(owner = "client!mm", name = "d", descriptor = "(I)V")
+    @OriginalMember(owner = "client!gf", name = "a", descriptor = "(Lclient!ve;IIB)Lclient!mm;")
+    public static SoftwareSprite loadSoftwareAlphaSprite(@OriginalArg(0) Js5 arg0, @OriginalArg(2) int arg1) {
+        return SpriteLoader.decode(arg0, 0, arg1) ? Static102.method2071() : null;
+    }
+
+    @OriginalMember(owner = "client!mm", name = "d", descriptor = "(I)V")
 	public final void method298(@OriginalArg(0) int arg0) {
 		if (this.width == this.anInt1860 && this.height == this.anInt1866) {
 			return;
@@ -901,7 +906,7 @@ public class SoftwareSprite extends Sprite {
 
 	@OriginalMember(owner = "client!mm", name = "e", descriptor = "(II)V")
 	@Override
-	public void method1423(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+	public void renderTransparent(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		arg0 += this.anInt1863;
 		arg1 += this.anInt1861;
 		@Pc(15) int local15 = arg0 + arg1 * SoftwareRaster.width;
@@ -955,7 +960,7 @@ public class SoftwareSprite extends Sprite {
 	}
 
 	@OriginalMember(owner = "client!mm", name = "a", descriptor = "(IIIIIIII[I[I)V")
-	public void drawMinimapRegion(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int w, @OriginalArg(3) int h, @OriginalArg(4) int anchorX, @OriginalArg(5) int anchorY, @OriginalArg(6) int theta, @OriginalArg(7) int zoom, @OriginalArg(8) int[] lineStarts, @OriginalArg(9) int[] arg9) {
+	public void renderRotatedTransparent(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int w, @OriginalArg(3) int h, @OriginalArg(4) int anchorX, @OriginalArg(5) int anchorY, @OriginalArg(6) int theta, @OriginalArg(7) int zoom, @OriginalArg(8) int[] lineStarts, @OriginalArg(9) int[] arg9) {
 		try {
 			@Pc(4) int centerX = -w / 2;
 			@Pc(9) int centerY = -h / 2;
@@ -1113,7 +1118,7 @@ public class SoftwareSprite extends Sprite {
 	}
 
 	@OriginalMember(owner = "client!mm", name = "b", descriptor = "(IIIIIIII[I[I)V")
-	public void drawCompass(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int w, @OriginalArg(3) int h, @OriginalArg(4) int anchorX, @OriginalArg(5) int anchorY, @OriginalArg(6) int theta, @OriginalArg(8) int[] lineStart, @OriginalArg(9) int[] lineWidth) {
+	public void renderRotatedTransparent(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int w, @OriginalArg(3) int h, @OriginalArg(4) int anchorX, @OriginalArg(5) int anchorY, @OriginalArg(6) int theta, @OriginalArg(8) int[] lineStart, @OriginalArg(9) int[] lineWidth) {
 		try {
 			@Pc(4) int centerX = -w / 2;
 			@Pc(9) int centerY = -h / 2;

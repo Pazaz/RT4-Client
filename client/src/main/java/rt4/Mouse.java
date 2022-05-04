@@ -97,6 +97,14 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
         return anInt2467;
     }
 
+    @OriginalMember(owner = "client!dl", name = "a", descriptor = "(II)V")
+    public static void setIdleLoops(@OriginalArg(1) int arg0) {
+        @Pc(10) Mouse local10 = instance;
+        synchronized (instance) {
+            anInt2467 = arg0;
+        }
+    }
+
     @OriginalMember(owner = "client!ug", name = "mouseMoved", descriptor = "(Ljava/awt/event/MouseEvent;)V")
 	@Override
 	public final synchronized void mouseMoved(@OriginalArg(0) MouseEvent arg0) {

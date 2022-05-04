@@ -6,12 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static45 {
 
-	@OriginalMember(owner = "client!di", name = "q", descriptor = "[Lclient!na;")
-	public static final JagString[] aClass100Array53 = new JagString[5];
-
-	@OriginalMember(owner = "client!di", name = "H", descriptor = "Z")
-	public static boolean aBoolean84 = false;
-
 	@OriginalMember(owner = "client!di", name = "a", descriptor = "([Lclient!mj;ZI)V")
 	public static void method1169(@OriginalArg(0) CollisionMap[] collisionMaps, @OriginalArg(1) boolean underwater) {
 		@Pc(10) int level;
@@ -70,7 +64,7 @@ public final class Static45 {
 		@Pc(254) int local254;
 		@Pc(267) int local267;
 		for (local152 = 0; local152 < local128; local152++) {
-			@Pc(159) byte[][] local159 = Static118.aByteArrayArrayArray9[local152];
+			@Pc(159) byte[][] local159 = SceneGraph.aByteArrayArrayArray9[local152];
 			@Pc(273) int local273;
 			@Pc(326) int local326;
 			@Pc(332) int local332;
@@ -119,11 +113,11 @@ public final class Static45 {
 				}
 			}
 			for (local168 = 0; local168 < 104; local168++) {
-				Static221.anIntArray376[local168] = 0;
-				Static139.anIntArray325[local168] = 0;
-				Static279.anIntArray568[local168] = 0;
-				Static251.anIntArray479[local168] = 0;
-				Static128.anIntArray293[local168] = 0;
+				SceneGraph.anIntArray376[local168] = 0;
+				SceneGraph.anIntArray325[local168] = 0;
+				SceneGraph.anIntArray568[local168] = 0;
+				SceneGraph.anIntArray479[local168] = 0;
+				SceneGraph.anIntArray293[local168] = 0;
 			}
 			for (local168 = -5; local168 < 104; local168++) {
 				for (local173 = 0; local173 < 104; local173++) {
@@ -133,11 +127,11 @@ public final class Static45 {
 						local194 = SceneGraph.tileUnderlays[local152][local178][local173] & 0xFF;
 						if (local194 > 0) {
 							@Pc(693) FluType local693 = FluTypeList.get(local194 - 1);
-							Static221.anIntArray376[local173] += local693.weightedHue;
-							Static139.anIntArray325[local173] += local693.saturation;
-							Static279.anIntArray568[local173] += local693.lightness;
-							Static251.anIntArray479[local173] += local693.chroma;
-							local729 = Static128.anIntArray293[local173]++;
+							SceneGraph.anIntArray376[local173] += local693.weightedHue;
+							SceneGraph.anIntArray325[local173] += local693.saturation;
+							SceneGraph.anIntArray568[local173] += local693.lightness;
+							SceneGraph.anIntArray479[local173] += local693.chroma;
+							local729 = SceneGraph.anIntArray293[local173]++;
 						}
 					}
 					local194 = local168 - 5;
@@ -145,11 +139,11 @@ public final class Static45 {
 						local200 = SceneGraph.tileUnderlays[local152][local194][local173] & 0xFF;
 						if (local200 > 0) {
 							@Pc(758) FluType local758 = FluTypeList.get(local200 - 1);
-							Static221.anIntArray376[local173] -= local758.weightedHue;
-							Static139.anIntArray325[local173] -= local758.saturation;
-							Static279.anIntArray568[local173] -= local758.lightness;
-							Static251.anIntArray479[local173] -= local758.chroma;
-							local729 = Static128.anIntArray293[local173]--;
+							SceneGraph.anIntArray376[local173] -= local758.weightedHue;
+							SceneGraph.anIntArray325[local173] -= local758.saturation;
+							SceneGraph.anIntArray568[local173] -= local758.lightness;
+							SceneGraph.anIntArray479[local173] -= local758.chroma;
+							local729 = SceneGraph.anIntArray293[local173]--;
 						}
 					}
 				}
@@ -162,19 +156,19 @@ public final class Static45 {
 					for (local209 = -5; local209 < 104; local209++) {
 						local349 = local209 + 5;
 						if (local349 < 104) {
-							local178 += Static139.anIntArray325[local349];
-							local202 += Static128.anIntArray293[local349];
-							local173 += Static221.anIntArray376[local349];
-							local200 += Static251.anIntArray479[local349];
-							local194 += Static279.anIntArray568[local349];
+							local178 += SceneGraph.anIntArray325[local349];
+							local202 += SceneGraph.anIntArray293[local349];
+							local173 += SceneGraph.anIntArray376[local349];
+							local200 += SceneGraph.anIntArray479[local349];
+							local194 += SceneGraph.anIntArray568[local349];
 						}
 						local234 = local209 - 5;
 						if (local234 >= 0) {
-							local178 -= Static139.anIntArray325[local234];
-							local200 -= Static251.anIntArray479[local234];
-							local173 -= Static221.anIntArray376[local234];
-							local202 -= Static128.anIntArray293[local234];
-							local194 -= Static279.anIntArray568[local234];
+							local178 -= SceneGraph.anIntArray325[local234];
+							local200 -= SceneGraph.anIntArray479[local234];
+							local173 -= SceneGraph.anIntArray376[local234];
+							local202 -= SceneGraph.anIntArray293[local234];
+							local194 -= SceneGraph.anIntArray568[local234];
 						}
 						if (local209 >= 0 && local202 > 0) {
 							local142[local168][local209] = Static54.method1309(local194 / local202, local178 / local202, local173 * 256 / local200);
@@ -185,8 +179,8 @@ public final class Static45 {
 			for (local168 = 1; local168 < 103; local168++) {
 				label771: for (local173 = 1; local173 < 103; local173++) {
 					if (underwater || SceneGraph.allLevelsAreVisible() || (SceneGraph.tileFlags[0][local168][local173] & 0x2) != 0 || (SceneGraph.tileFlags[local152][local168][local173] & 0x10) == 0 && Static4.method22(local173, local168, local152) == Static41.anInt1316) {
-						if (Static146.anInt3508 > local152) {
-							Static146.anInt3508 = local152;
+						if (SceneGraph.firstVisibleLevel > local152) {
+							SceneGraph.firstVisibleLevel = local152;
 						}
 						local178 = SceneGraph.tileUnderlays[local152][local168][local173] & 0xFF;
 						local194 = SceneGraph.tileOverlays[local152][local168][local173] & 0xFF;
@@ -204,7 +198,7 @@ public final class Static45 {
 									local1067 = false;
 								}
 								if (local1067 && local200 == local202 && local200 == local209 && local349 == local200) {
-									Static60.anIntArrayArrayArray6[local152][local168][local173] |= 0x4;
+									SceneGraph.anIntArrayArrayArray6[local152][local168][local173] |= 0x4;
 								}
 							}
 							if (local178 <= 0) {
@@ -358,7 +352,7 @@ public final class Static45 {
 			SceneGraph.tileOverlays[local152] = null;
 			SceneGraph.tileShapes[local152] = null;
 			SceneGraph.tileAngles[local152] = null;
-			Static118.aByteArrayArrayArray9[local152] = null;
+			SceneGraph.aByteArrayArrayArray9[local152] = null;
 		}
 		Static220.method3801();
 		if (underwater) {
@@ -375,16 +369,16 @@ public final class Static45 {
 		for (local152 = 0; local152 < 4; local152++) {
 			for (local2204 = 0; local2204 <= 104; local2204++) {
 				for (local168 = 0; local168 <= 104; local168++) {
-					if ((Static60.anIntArrayArrayArray6[local152][local168][local2204] & 0x1) != 0) {
+					if ((SceneGraph.anIntArrayArrayArray6[local152][local168][local2204] & 0x1) != 0) {
 						local200 = local152;
-						for (local173 = local2204; local173 > 0 && (Static60.anIntArrayArrayArray6[local152][local168][local173 - 1] & 0x1) != 0; local173--) {
+						for (local173 = local2204; local173 > 0 && (SceneGraph.anIntArrayArrayArray6[local152][local168][local173 - 1] & 0x1) != 0; local173--) {
 						}
 						local194 = local152;
-						for (local178 = local2204; local178 < 104 && (Static60.anIntArrayArrayArray6[local152][local168][local178 + 1] & 0x1) != 0; local178++) {
+						for (local178 = local2204; local178 < 104 && (SceneGraph.anIntArrayArrayArray6[local152][local168][local178 + 1] & 0x1) != 0; local178++) {
 						}
 						label454: while (local194 > 0) {
 							for (local202 = local173; local202 <= local178; local202++) {
-								if ((Static60.anIntArrayArrayArray6[local194 - 1][local168][local202] & 0x1) == 0) {
+								if ((SceneGraph.anIntArrayArrayArray6[local194 - 1][local168][local202] & 0x1) == 0) {
 									break label454;
 								}
 							}
@@ -392,7 +386,7 @@ public final class Static45 {
 						}
 						label443: while (local200 < 3) {
 							for (local202 = local173; local202 <= local178; local202++) {
-								if ((Static60.anIntArrayArrayArray6[local200 + 1][local168][local202] & 0x1) == 0) {
+								if ((SceneGraph.anIntArrayArrayArray6[local200 + 1][local168][local202] & 0x1) == 0) {
 									break label443;
 								}
 							}
@@ -405,21 +399,21 @@ public final class Static45 {
 							Static278.method4647(1, local168 * 128, local168 * 128, local173 * 128, local178 * 128 + 128, local349, local234);
 							for (local254 = local194; local254 <= local200; local254++) {
 								for (local267 = local173; local267 <= local178; local267++) {
-									Static60.anIntArrayArrayArray6[local254][local168][local267] &= 0xFFFFFFFE;
+									SceneGraph.anIntArrayArrayArray6[local254][local168][local267] &= 0xFFFFFFFE;
 								}
 							}
 						}
 					}
-					if ((Static60.anIntArrayArrayArray6[local152][local168][local2204] & 0x2) != 0) {
-						for (local173 = local168; local173 > 0 && (Static60.anIntArrayArrayArray6[local152][local173 - 1][local2204] & 0x2) != 0; local173--) {
+					if ((SceneGraph.anIntArrayArrayArray6[local152][local168][local2204] & 0x2) != 0) {
+						for (local173 = local168; local173 > 0 && (SceneGraph.anIntArrayArrayArray6[local152][local173 - 1][local2204] & 0x2) != 0; local173--) {
 						}
 						local200 = local152;
 						local194 = local152;
-						for (local178 = local168; local178 < 104 && (Static60.anIntArrayArrayArray6[local152][local178 + 1][local2204] & 0x2) != 0; local178++) {
+						for (local178 = local168; local178 < 104 && (SceneGraph.anIntArrayArrayArray6[local152][local178 + 1][local2204] & 0x2) != 0; local178++) {
 						}
 						label508: while (local194 > 0) {
 							for (local202 = local173; local202 <= local178; local202++) {
-								if ((Static60.anIntArrayArrayArray6[local194 - 1][local202][local2204] & 0x2) == 0) {
+								if ((SceneGraph.anIntArrayArrayArray6[local194 - 1][local202][local2204] & 0x2) == 0) {
 									break label508;
 								}
 							}
@@ -427,7 +421,7 @@ public final class Static45 {
 						}
 						label497: while (local200 < 3) {
 							for (local202 = local173; local202 <= local178; local202++) {
-								if ((Static60.anIntArrayArrayArray6[local200 + 1][local202][local2204] & 0x2) == 0) {
+								if ((SceneGraph.anIntArrayArrayArray6[local200 + 1][local202][local2204] & 0x2) == 0) {
 									break label497;
 								}
 							}
@@ -440,21 +434,21 @@ public final class Static45 {
 							Static278.method4647(2, local173 * 128, local178 * 128 + 128, local2204 * 128, local2204 * 128, local349, local234);
 							for (local254 = local194; local254 <= local200; local254++) {
 								for (local267 = local173; local267 <= local178; local267++) {
-									Static60.anIntArrayArrayArray6[local254][local267][local2204] &= 0xFFFFFFFD;
+									SceneGraph.anIntArrayArrayArray6[local254][local267][local2204] &= 0xFFFFFFFD;
 								}
 							}
 						}
 					}
-					if ((Static60.anIntArrayArrayArray6[local152][local168][local2204] & 0x4) != 0) {
+					if ((SceneGraph.anIntArrayArrayArray6[local152][local168][local2204] & 0x4) != 0) {
 						local173 = local168;
 						local178 = local168;
-						for (local194 = local2204; local194 > 0 && (Static60.anIntArrayArrayArray6[local152][local168][local194 - 1] & 0x4) != 0; local194--) {
+						for (local194 = local2204; local194 > 0 && (SceneGraph.anIntArrayArrayArray6[local152][local168][local194 - 1] & 0x4) != 0; local194--) {
 						}
-						for (local200 = local2204; local200 < 104 && (Static60.anIntArrayArrayArray6[local152][local168][local200 + 1] & 0x4) != 0; local200++) {
+						for (local200 = local2204; local200 < 104 && (SceneGraph.anIntArrayArrayArray6[local152][local168][local200 + 1] & 0x4) != 0; local200++) {
 						}
 						label562: while (local173 > 0) {
 							for (local202 = local194; local202 <= local200; local202++) {
-								if ((Static60.anIntArrayArrayArray6[local152][local173 - 1][local202] & 0x4) == 0) {
+								if ((SceneGraph.anIntArrayArrayArray6[local152][local173 - 1][local202] & 0x4) == 0) {
 									break label562;
 								}
 							}
@@ -462,7 +456,7 @@ public final class Static45 {
 						}
 						label551: while (local178 < 104) {
 							for (local202 = local194; local202 <= local200; local202++) {
-								if ((Static60.anIntArrayArrayArray6[local152][local178 + 1][local202] & 0x4) == 0) {
+								if ((SceneGraph.anIntArrayArrayArray6[local152][local178 + 1][local202] & 0x4) == 0) {
 									break label551;
 								}
 							}
@@ -473,7 +467,7 @@ public final class Static45 {
 							Static278.method4647(4, local173 * 128, local178 * 128 + 128, local194 * 128, local200 * 128 + 128, local202, local202);
 							for (local209 = local173; local209 <= local178; local209++) {
 								for (local349 = local194; local349 <= local200; local349++) {
-									Static60.anIntArrayArrayArray6[local152][local209][local349] &= 0xFFFFFFFB;
+									SceneGraph.anIntArrayArrayArray6[local152][local209][local349] &= 0xFFFFFFFB;
 								}
 							}
 						}

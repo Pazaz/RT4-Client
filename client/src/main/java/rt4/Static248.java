@@ -13,16 +13,6 @@ public final class Static248 {
 	@OriginalMember(owner = "client!uc", name = "a", descriptor = "I")
 	public static int anInt4229 = 2;
 
-    @OriginalMember(owner = "client!uc", name = "a", descriptor = "(II)I")
-	public static int method3289(@OriginalArg(0) int arg0) {
-		@Pc(9) int local9 = (arg0 >>> 1 & 0xD5555555) + (arg0 & 0x55555555);
-		@Pc(19) int local19 = (local9 >>> 2 & 0x33333333) + (local9 & 0x33333333);
-		@Pc(31) int local31 = (local19 >>> 4) + local19 & 0xF0F0F0F;
-		@Pc(37) int local37 = local31 + (local31 >>> 8);
-		@Pc(43) int local43 = local37 + (local37 >>> 16);
-		return local43 & 0xFF;
-	}
-
 	@OriginalMember(owner = "client!uc", name = "a", descriptor = "(III[[[BIBII)V")
 	public static void method3292(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) byte[][][] arg3, @OriginalArg(4) int arg4, @OriginalArg(5) byte arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7) {
 		Static13.anInt437++;
@@ -43,7 +33,7 @@ public final class Static248 {
 						if (Static48.aBooleanArrayArray1[local32 + Static277.tileVisibilityDistance - Static167.anInt4069][local37 + Static277.tileVisibilityDistance - Static193.anInt4539] && (arg3 == null || local23 < arg4 || arg3[local23][local32][local37] != arg5)) {
 							local46.aBoolean45 = true;
 							local46.aBoolean46 = true;
-							if (local46.anInt662 > 0) {
+							if (local46.sceneryLen > 0) {
 								local46.aBoolean47 = true;
 							} else {
 								local46.aBoolean47 = false;
@@ -54,27 +44,27 @@ public final class Static248 {
 							local46.aBoolean46 = false;
 							local46.anInt663 = 0;
 							if (local32 >= local9 && local32 <= local13 && local37 >= local17 && local37 <= local21) {
-								if (local46.aClass77_1 != null) {
-									@Pc(103) Wall local103 = local46.aClass77_1;
+								if (local46.wall != null) {
+									@Pc(103) Wall local103 = local46.wall;
 									local103.primary.method4545(0, local23, local103.anInt3051, local103.anInt3048, local103.anInt3044);
 									if (local103.aClass8_6 != null) {
 										local103.aClass8_6.method4545(0, local23, local103.anInt3051, local103.anInt3048, local103.anInt3044);
 									}
 								}
-								if (local46.aClass24_1 != null) {
-									@Pc(134) WallDecor local134 = local46.aClass24_1;
+								if (local46.wallDecor != null) {
+									@Pc(134) WallDecor local134 = local46.wallDecor;
 									local134.primary.method4545(local134.anInt1388, local23, local134.anInt1391, local134.anInt1390, local134.anInt1393);
 									if (local134.aClass8_2 != null) {
 										local134.aClass8_2.method4545(local134.anInt1388, local23, local134.anInt1391, local134.anInt1390, local134.anInt1393);
 									}
 								}
-								if (local46.aClass15_1 != null) {
-									@Pc(167) GroundDecor local167 = local46.aClass15_1;
+								if (local46.groundDecor != null) {
+									@Pc(167) GroundDecor local167 = local46.groundDecor;
 									local167.primary.method4545(0, local23, local167.anInt733, local167.anInt732, local167.anInt736);
 								}
-								if (local46.aClass31Array1 != null) {
-									for (local183 = 0; local183 < local46.anInt662; local183++) {
-										@Pc(192) Scenery local192 = local46.aClass31Array1[local183];
+								if (local46.scenery != null) {
+									for (local183 = 0; local183 < local46.sceneryLen; local183++) {
+										@Pc(192) Scenery local192 = local46.scenery[local183];
 										local192.primary.method4545(local192.anInt1714, local23, local192.anInt1706, local192.anInt1699, local192.anInt1703);
 									}
 								}
@@ -111,7 +101,7 @@ public final class Static248 {
 				local32 = Static235.anInt5276;
 				while (true) {
 					if (local32 >= Static126.anInt3114) {
-						Static120.method2402(Static167.anInt4069, Static193.anInt4539, SceneGraph.tiles);
+						LightingManager.method2402(Static167.anInt4069, Static193.anInt4539, SceneGraph.tiles);
 						break;
 					}
 					for (local37 = 0; local37 < Static182.aClass3_Sub14ArrayArray2[local32].length; local37++) {
@@ -177,7 +167,7 @@ public final class Static248 {
 						}
 						if (Static211.anInt1142 == 0) {
 							if (!local240) {
-								Static158.aBoolean187 = false;
+								MiniMenu.aBoolean187 = false;
 							}
 							return;
 						}
@@ -224,7 +214,7 @@ public final class Static248 {
 						}
 						if (Static211.anInt1142 == 0) {
 							if (!local240) {
-								Static158.aBoolean187 = false;
+								MiniMenu.aBoolean187 = false;
 							}
 							return;
 						}
@@ -232,6 +222,6 @@ public final class Static248 {
 				}
 			}
 		}
-		Static158.aBoolean187 = false;
+		MiniMenu.aBoolean187 = false;
 	}
 }

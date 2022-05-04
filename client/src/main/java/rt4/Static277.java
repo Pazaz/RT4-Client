@@ -9,9 +9,6 @@ public final class Static277 {
 	@OriginalMember(owner = "client!wi", name = "R", descriptor = "[Lclient!qf;")
 	public static Sprite[] hintMapEdge;
 
-	@OriginalMember(owner = "client!wi", name = "ab", descriptor = "I")
-	public static int anInt5853;
-
 	@OriginalMember(owner = "client!wi", name = "db", descriptor = "I")
 	public static int tileVisibilityDistance;
 

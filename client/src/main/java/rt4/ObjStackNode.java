@@ -8,10 +8,10 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class ObjStackNode extends SecondaryNode {
 
 	@OriginalMember(owner = "client!pa", name = "T", descriptor = "Lclient!uj;")
-	public final ObjStack aClass8_Sub7_1;
+	public final ObjStack value;
 
 	@OriginalMember(owner = "client!pa", name = "<init>", descriptor = "(Lclient!uj;)V")
 	public ObjStackNode(@OriginalArg(0) ObjStack arg0) {
-		this.aClass8_Sub7_1 = arg0;
+		this.value = arg0;
 	}
 }

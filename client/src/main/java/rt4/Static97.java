@@ -30,15 +30,15 @@ public final class Static97 {
 		}
 		@Pc(30) int local30 = Math.min(arg5.anInt445 / 2, arg5.anInt459 / 2);
 		if (local30 * local30 >= local13) {
-			Static60.method1446(arg5, Sprites.mapmarkhints[arg0], arg4, arg3, arg1, arg2);
+			MiniMap.method1446(arg5, Sprites.mapmarkhints[arg0], arg4, arg3, arg1, arg2);
 			return;
 		}
 		local30 -= 10;
 		@Pc(58) int local58 = Static59.anInt1814 + (int)Camera.yawTarget & 0x7FF;
 		@Pc(62) int local62 = MathUtils.cos[local58];
 		@Pc(66) int local66 = MathUtils.sin[local58];
-		@Pc(74) int local74 = local66 * 256 / (Static273.anInt4130 + 256);
-		@Pc(82) int local82 = local62 * 256 / (Static273.anInt4130 + 256);
+		@Pc(74) int local74 = local66 * 256 / (MiniMap.anInt4130 + 256);
+		@Pc(82) int local82 = local62 * 256 / (MiniMap.anInt4130 + 256);
 		@Pc(93) int local93 = arg4 * local74 + local82 * arg3 >> 16;
 		@Pc(104) int local104 = arg4 * local82 - local74 * arg3 >> 16;
 		@Pc(110) double local110 = Math.atan2((double) local93, (double) local104);

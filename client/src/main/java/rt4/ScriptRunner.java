@@ -14,8 +14,24 @@ public final class ScriptRunner {
 	public static final int[] intStack = new int[1000];
 	@OriginalMember(owner = "client!fl", name = "Q", descriptor = "Lclient!na;")
 	public static final JagString EMPTY_STRING = JagString.parse("");
+	@OriginalMember(owner = "client!bb", name = "A", descriptor = "Lclient!na;")
+	public static final JagString aClass100_74 = JagString.parse("::");
+	@OriginalMember(owner = "client!be", name = "ib", descriptor = "Lclient!na;")
+	public static final JagString EVENT_OPBASE = JagString.parse("event_opbase");
+	@OriginalMember(owner = "client!da", name = "O", descriptor = "Lclient!na;")
+	public static final JagString aClass100_253 = JagString.parse("(U0a )2 via: ");
+    @OriginalMember(owner = "client!fl", name = "H", descriptor = "Lclient!na;")
+	public static final JagString aClass100_446 = JagString.parse("<img=0>");
+	@OriginalMember(owner = "client!nd", name = "b", descriptor = "Lclient!na;")
+	public static final JagString aClass100_780 = JagString.parse("Clientscript error in: ");
 	@OriginalMember(owner = "client!jh", name = "n", descriptor = "Lclient!bd;")
 	public static QuickChatPhrase activePhrase;
+	@OriginalMember(owner = "client!wf", name = "j", descriptor = "Lclient!be;")
+	public static Component staticActiveComponent1;
+	@OriginalMember(owner = "client!sg", name = "i", descriptor = "Lclient!be;")
+	public static Component staticActiveComponent2;
+	@OriginalMember(owner = "client!og", name = "g", descriptor = "[Lclient!na;")
+	public static JagString[] stringLocals;
 
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(BILclient!jl;)V")
 	public static void run(@OriginalArg(1) int maxCycles, @OriginalArg(2) HookRequest request) {
@@ -36,7 +52,7 @@ public final class ScriptRunner {
 		try {
 			Static215.intLocals = new int[script.anInt4667];
 			@Pc(50) int intLocalIndex = 0;
-			Static180.stringLocals = new JagString[script.anInt4671];
+			stringLocals = new JagString[script.anInt4671];
 			@Pc(56) int stringLocalIndex = 0;
 			@Pc(77) int id;
 			@Pc(194) JagString value;
@@ -73,10 +89,10 @@ public final class ScriptRunner {
 					Static215.intLocals[intLocalIndex++] = id;
 				} else if (local4[cycles] instanceof JagString) {
 					value = (JagString) local4[cycles];
-					if (value.strEquals(Static15.EVENT_OPBASE)) {
+					if (value.strEquals(EVENT_OPBASE)) {
 						value = request.opBase;
 					}
-					Static180.stringLocals[stringLocalIndex++] = value;
+					stringLocals[stringLocalIndex++] = value;
 				}
 			}
 			cycles = 0;
@@ -152,7 +168,7 @@ public final class ScriptRunner {
 						Static215.intLocals = frame.intLocals;
 						opcodes = script.opcodes;
 						pc = frame.pc;
-						Static180.stringLocals = frame.stringLocals;
+						stringLocals = frame.stringLocals;
 						intOperands = script.intOperands;
 						continue;
 					}
@@ -193,13 +209,13 @@ public final class ScriptRunner {
 						continue;
 					}
 					if (opcode == 35) {
-						stringStack[ssp++] = Static180.stringLocals[intOperands[pc]];
+						stringStack[ssp++] = stringLocals[intOperands[pc]];
 						continue;
 					}
 					if (opcode == 36) {
 						local = intOperands[pc];
 						ssp--;
-						Static180.stringLocals[local] = stringStack[ssp];
+						stringLocals[local] = stringStack[ssp];
 						continue;
 					}
 					if (opcode == 37) {
@@ -231,7 +247,7 @@ public final class ScriptRunner {
 						isp -= local642.anInt4665;
 						ssp -= local642.anInt4669;
 						@Pc(705) GoSubFrame local705 = new GoSubFrame();
-						local705.stringLocals = Static180.stringLocals;
+						local705.stringLocals = stringLocals;
 						local705.intLocals = Static215.intLocals;
 						local705.pc = pc;
 						local705.script = script;
@@ -244,7 +260,7 @@ public final class ScriptRunner {
 						Static215.intLocals = local646;
 						intOperands = local642.intOperands;
 						opcodes = local642.opcodes;
-						Static180.stringLocals = local650;
+						stringLocals = local650;
 						continue;
 					}
 					if (opcode == 42) {
@@ -255,7 +271,7 @@ public final class ScriptRunner {
 						id = intOperands[pc];
 						isp--;
 						VarcDomain.varcs[id] = intStack[isp];
-						Static4.method24(id);
+						DelayedStateChange.method24(id);
 						continue;
 					}
 					if (opcode == 44) {
@@ -312,7 +328,7 @@ public final class ScriptRunner {
 						id = intOperands[pc];
 						ssp--;
 						VarcDomain.varcstrs[id] = stringStack[ssp];
-						Static89.method1840(id);
+						DelayedStateChange.method1840(id);
 						continue;
 					}
 					if (opcode == 51) {
@@ -364,9 +380,9 @@ public final class ScriptRunner {
 							local1137.type = int3;
 							local1063.createdComponents[int2] = local1137;
 							if (local1020) {
-								Static274.staticActiveComponent1 = local1137;
+								staticActiveComponent1 = local1137;
 							} else {
-								Static227.staticActiveComponent2 = local1137;
+								staticActiveComponent2 = local1137;
 							}
 							InterfaceList.redraw(local1063);
 							continue;
@@ -375,7 +391,7 @@ public final class ScriptRunner {
 					}
 					@Pc(1204) Component local1204;
 					if (opcode == 101) {
-						component = local1020 ? Static274.staticActiveComponent1 : Static227.staticActiveComponent2;
+						component = local1020 ? staticActiveComponent1 : staticActiveComponent2;
 						if (component.createdComponentId == -1) {
 							if (!local1020) {
 								throw new RuntimeException("Tried to cc_delete static active-component!");
@@ -402,9 +418,9 @@ public final class ScriptRunner {
 						if (local1256 != null && int3 != -1) {
 							intStack[isp++] = 1;
 							if (local1020) {
-								Static274.staticActiveComponent1 = local1256;
+								staticActiveComponent1 = local1256;
 							} else {
-								Static227.staticActiveComponent2 = local1256;
+								staticActiveComponent2 = local1256;
 							}
 							continue;
 						}
@@ -420,9 +436,9 @@ public final class ScriptRunner {
 						} else {
 							intStack[isp++] = 1;
 							if (local1020) {
-								Static274.staticActiveComponent1 = local1204;
+								staticActiveComponent1 = local1204;
 							} else {
-								Static227.staticActiveComponent2 = local1204;
+								staticActiveComponent2 = local1204;
 							}
 						}
 						continue;
@@ -471,7 +487,7 @@ public final class ScriptRunner {
 							@Pc(2522) JagString local2522;
 							if (opcode >= 1100 && opcode < 1200 || !(opcode < 2100 || opcode >= 2200)) {
 								if (opcode < 2000) {
-									component = local1020 ? Static274.staticActiveComponent1 : Static227.staticActiveComponent2;
+									component = local1020 ? staticActiveComponent1 : staticActiveComponent2;
 								} else {
 									opcode -= 1000;
 									isp--;
@@ -495,7 +511,7 @@ public final class ScriptRunner {
 									}
 									InterfaceList.redraw(component);
 									if (component.createdComponentId == -1) {
-										Static118.method2353(component.id);
+										DelayedStateChange.method2353(component.id);
 									}
 									continue;
 								}
@@ -504,7 +520,7 @@ public final class ScriptRunner {
 									component.color = intStack[isp];
 									InterfaceList.redraw(component);
 									if (component.createdComponentId == -1) {
-										Static245.method4224(component.id);
+										DelayedStateChange.method4224(component.id);
 									}
 									continue;
 								}
@@ -550,7 +566,7 @@ public final class ScriptRunner {
 									component.modelId = intStack[isp];
 									InterfaceList.redraw(component);
 									if (component.createdComponentId == -1) {
-										Static271.method4600(component.id);
+										DelayedStateChange.method4600(component.id);
 									}
 									continue;
 								}
@@ -580,7 +596,7 @@ public final class ScriptRunner {
 										InterfaceList.redraw(component);
 									}
 									if (component.createdComponentId == -1) {
-										Static181.method3345(component.id);
+										DelayedStateChange.method3345(component.id);
 									}
 									continue;
 								}
@@ -598,7 +614,7 @@ public final class ScriptRunner {
 										InterfaceList.redraw(component);
 									}
 									if (component.createdComponentId == -1) {
-										Static163.method3096(component.id);
+										DelayedStateChange.method3096(component.id);
 									}
 									continue;
 								}
@@ -680,7 +696,7 @@ public final class ScriptRunner {
 								}
 							} else if (opcode >= 1200 && opcode < 1300 || !(opcode < 2200 || opcode >= 2300)) {
 								if (opcode < 2000) {
-									component = local1020 ? Static274.staticActiveComponent1 : Static227.staticActiveComponent2;
+									component = local1020 ? staticActiveComponent1 : staticActiveComponent2;
 								} else {
 									isp--;
 									component = InterfaceList.getComponent(intStack[isp]);
@@ -728,7 +744,7 @@ public final class ScriptRunner {
 									isp--;
 									component.modelId = intStack[isp];
 									if (component.createdComponentId == -1) {
-										Static271.method4600(component.id);
+										DelayedStateChange.method4600(component.id);
 									}
 									continue;
 								}
@@ -736,7 +752,7 @@ public final class ScriptRunner {
 									component.modelType = 3;
 									component.modelId = PlayerList.self.appearance.method1952();
 									if (component.createdComponentId == -1) {
-										Static271.method4600(component.id);
+										DelayedStateChange.method4600(component.id);
 									}
 									continue;
 								}
@@ -745,7 +761,7 @@ public final class ScriptRunner {
 									isp--;
 									component.modelId = intStack[isp];
 									if (component.createdComponentId == -1) {
-										Static271.method4600(component.id);
+										DelayedStateChange.method4600(component.id);
 									}
 									continue;
 								}
@@ -754,7 +770,7 @@ public final class ScriptRunner {
 									isp--;
 									component.modelId = intStack[isp];
 									if (component.createdComponentId == -1) {
-										Static271.method4600(component.id);
+										DelayedStateChange.method4600(component.id);
 									}
 									continue;
 								}
@@ -764,7 +780,7 @@ public final class ScriptRunner {
 									component = InterfaceList.getComponent(intStack[isp]);
 									opcode -= 1000;
 								} else {
-									component = local1020 ? Static274.staticActiveComponent1 : Static227.staticActiveComponent2;
+									component = local1020 ? staticActiveComponent1 : staticActiveComponent2;
 								}
 								if (opcode == 1300) {
 									isp--;
@@ -834,7 +850,7 @@ public final class ScriptRunner {
 								@Pc(4859) int c;
 								if (opcode >= 1400 && opcode < 1500 || opcode >= 2400 && opcode < 2500) {
 									if (opcode < 2000) {
-										component = local1020 ? Static274.staticActiveComponent1 : Static227.staticActiveComponent2;
+										component = local1020 ? staticActiveComponent1 : staticActiveComponent2;
 									} else {
 										opcode -= 1000;
 										isp--;
@@ -940,7 +956,7 @@ public final class ScriptRunner {
 									continue;
 								}
 								if (opcode < 1600) {
-									component = local1020 ? Static274.staticActiveComponent1 : Static227.staticActiveComponent2;
+									component = local1020 ? staticActiveComponent1 : staticActiveComponent2;
 									if (opcode == 1500) {
 										intStack[isp++] = component.x;
 										continue;
@@ -966,7 +982,7 @@ public final class ScriptRunner {
 										continue;
 									}
 								} else if (opcode < 1700) {
-									component = local1020 ? Static274.staticActiveComponent1 : Static227.staticActiveComponent2;
+									component = local1020 ? staticActiveComponent1 : staticActiveComponent2;
 									if (opcode == 1600) {
 										intStack[isp++] = component.anInt489;
 										continue;
@@ -1020,7 +1036,7 @@ public final class ScriptRunner {
 										continue;
 									}
 								} else if (opcode < 1800) {
-									component = local1020 ? Static274.staticActiveComponent1 : Static227.staticActiveComponent2;
+									component = local1020 ? staticActiveComponent1 : staticActiveComponent2;
 									if (opcode == 1700) {
 										intStack[isp++] = component.objId;
 										continue;
@@ -1038,7 +1054,7 @@ public final class ScriptRunner {
 										continue;
 									}
 								} else if (opcode < 1900) {
-									component = local1020 ? Static274.staticActiveComponent1 : Static227.staticActiveComponent2;
+									component = local1020 ? staticActiveComponent1 : staticActiveComponent2;
 									if (opcode == 1800) {
 										intStack[isp++] = InterfaceList.getServerActiveProperties(component).getTargetMask();
 										continue;
@@ -1289,7 +1305,7 @@ public final class ScriptRunner {
 									if (opcode == 3109) {
 										isp -= 2;
 										int1 = intStack[isp];
-										local1256 = local1020 ? Static274.staticActiveComponent1 : Static227.staticActiveComponent2;
+										local1256 = local1020 ? staticActiveComponent1 : staticActiveComponent2;
 										int3 = intStack[isp + 1];
 										Static40.method1015(int3, int1, local1256);
 										continue;
@@ -1663,7 +1679,7 @@ public final class ScriptRunner {
 									if (opcode == 3609) {
 										ssp--;
 										string = stringStack[ssp];
-										if (string.startsWith(Static72.aClass100_446) || string.startsWith(Static101.aClass100_537)) {
+										if (string.startsWith(aClass100_446) || string.startsWith(Static101.aClass100_537)) {
 											string = string.substring(7);
 										}
 										intStack[isp++] = FriendsList.contains(string) ? 1 : 0;
@@ -1770,7 +1786,7 @@ public final class ScriptRunner {
 									if (opcode == 3623) {
 										ssp--;
 										string = stringStack[ssp];
-										if (string.startsWith(Static72.aClass100_446) || string.startsWith(Static101.aClass100_537)) {
+										if (string.startsWith(aClass100_446) || string.startsWith(Static101.aClass100_537)) {
 											string = string.substring(7);
 										}
 										intStack[isp++] = IgnoreList.contains(string) ? 1 : 0;
@@ -1808,7 +1824,7 @@ public final class ScriptRunner {
 										isp--;
 										int1 = intStack[isp];
 										if (FriendsList.state == 2 && int1 >= 0 && int1 < FriendsList.size) {
-											intStack[isp++] = Static3.aBooleanArray135[int1] ? 1 : 0;
+											intStack[isp++] = FriendsList.aBooleanArray135[int1] ? 1 : 0;
 											continue;
 										}
 										intStack[isp++] = 0;
@@ -1817,7 +1833,7 @@ public final class ScriptRunner {
 									if (opcode == 3628) {
 										ssp--;
 										string = stringStack[ssp];
-										if (string.startsWith(Static72.aClass100_446) || string.startsWith(Static101.aClass100_537)) {
+										if (string.startsWith(aClass100_446) || string.startsWith(Static101.aClass100_537)) {
 											string = string.substring(7);
 										}
 										intStack[isp++] = Static4.method25(string);
@@ -2221,7 +2237,7 @@ public final class ScriptRunner {
 												if (opcode == 5008) {
 													ssp--;
 													string = stringStack[ssp];
-													if (!string.startsWith(Static12.aClass100_74)) {
+													if (!string.startsWith(aClass100_74)) {
 														if (LoginManager.staffModLevel == 0 && (LoginManager.playerUnderage && !LoginManager.parentalChatConsent || LoginManager.mapQuickChat)) {
 															continue;
 														}
@@ -2962,7 +2978,7 @@ public final class ScriptRunner {
 															try {
 																if (Player.lastLogAddress.result != null) {
 																	@Pc(8281) byte[] local8281 = ((String) Player.lastLogAddress.result).getBytes("ISO-8859-1");
-																	string = Static10.decodeString(local8281, local8281.length, 0);
+																	string = JagString.decodeString(local8281, local8281.length, 0);
 																}
 															} catch (@Pc(8290) UnsupportedEncodingException local8290) {
 															}
@@ -3822,7 +3838,7 @@ public final class ScriptRunner {
 										string = stringStack[ssp];
 										isp--;
 										int3 = intStack[isp];
-										stringStack[ssp++] = JagString.concatenate(new JagString[] { string, Static123.parseInt(int3) });
+										stringStack[ssp++] = JagString.concatenate(new JagString[] { string, JagString.parseInt(int3) });
 										continue;
 									}
 									if (opcode == 4101) {
@@ -3854,7 +3870,7 @@ public final class ScriptRunner {
 										local652 = Static102.aCalendar2.get(5);
 										c = Static102.aCalendar2.get(2);
 										local1087 = Static102.aCalendar2.get(1);
-										stringStack[ssp++] = JagString.concatenate(new JagString[] { Static123.parseInt(local652), Static163.aClass100_767, Static34.aClass100Array40[c], Static163.aClass100_767, Static123.parseInt(local1087) });
+										stringStack[ssp++] = JagString.concatenate(new JagString[] { JagString.parseInt(local652), Static163.aClass100_767, Static34.aClass100Array40[c], Static163.aClass100_767, JagString.parseInt(local1087) });
 										continue;
 									}
 									if (opcode == 4105) {
@@ -3871,7 +3887,7 @@ public final class ScriptRunner {
 									if (opcode == 4106) {
 										isp--;
 										int1 = intStack[isp];
-										stringStack[ssp++] = Static123.parseInt(int1);
+										stringStack[ssp++] = JagString.parseInt(int1);
 										continue;
 									}
 									if (opcode == 4107) {
@@ -3929,7 +3945,7 @@ public final class ScriptRunner {
 									if (opcode == 4113) {
 										isp--;
 										int1 = intStack[isp];
-										intStack[isp++] = Static273.method3213(int1) ? 1 : 0;
+										intStack[isp++] = method3213(int1) ? 1 : 0;
 										continue;
 									}
 									if (opcode == 4114) {
@@ -4030,7 +4046,7 @@ public final class ScriptRunner {
 							}
 						} else {
 							if (opcode < 2000) {
-								component = local1020 ? Static274.staticActiveComponent1 : Static227.staticActiveComponent2;
+								component = local1020 ? staticActiveComponent1 : staticActiveComponent2;
 							} else {
 								isp--;
 								component = InterfaceList.getComponent(intStack[isp]);
@@ -4057,7 +4073,7 @@ public final class ScriptRunner {
 								InterfaceList.redraw(component);
 								Static74.update(component);
 								if (component.createdComponentId == -1) {
-									Static280.method4675(component.id);
+									DelayedStateChange.method4675(component.id);
 								}
 								continue;
 							}
@@ -4096,7 +4112,7 @@ public final class ScriptRunner {
 									InterfaceList.redraw(component);
 								}
 								if (component.createdComponentId == -1) {
-									Static93.method1906(component.id);
+									DelayedStateChange.method1906(component.id);
 								}
 								continue;
 							}
@@ -4131,14 +4147,14 @@ public final class ScriptRunner {
 				@Pc(14385) JagString str = Static87.allocate(30);
 				str.method3113(Static219.aClass100_928).method3113(script.name);
 				for (cycles = Static138.fp - 1; cycles >= 0; cycles--) {
-					str.method3113(Static40.aClass100_253).method3113(Static67.callStack[cycles].script.name);
+					str.method3113(aClass100_253).method3113(Static67.callStack[cycles].script.name);
 				}
 				if (op == 40) {
 					cycles = intOperands[pc];
-					str.method3113(Static176.aClass100_802).method3113(Static123.parseInt(cycles));
+					str.method3113(Static176.aClass100_802).method3113(JagString.parseInt(cycles));
 				}
 				if (client.modeWhere != 0) {
-					Chat.add(EMPTY_STRING, 0, JagString.concatenate(new JagString[] { Static167.aClass100_780, script.name}));
+					Chat.add(EMPTY_STRING, 0, JagString.concatenate(new JagString[] { aClass100_780, script.name}));
 				}
 				TracingException.report("CS2 - scr:" + script.key + " op:" + op + new String(str.method3148()), ex);
 			}
@@ -4148,5 +4164,16 @@ public final class ScriptRunner {
     @OriginalMember(owner = "client!gi", name = "a", descriptor = "(ILclient!jl;)V")
 	public static void run(@OriginalArg(1) HookRequest request) {
 		run(200000, request);
+	}
+
+	@OriginalMember(owner = "client!we", name = "b", descriptor = "(II)Z")
+	public static boolean method3213(@OriginalArg(1) int arg0) {
+		if (arg0 >= 32 && arg0 <= 126) {
+			return true;
+		} else if (arg0 >= 160 && arg0 <= 255) {
+			return true;
+		} else {
+			return arg0 == 128 || arg0 == 140 || arg0 == 151 || arg0 == 156 || arg0 == 159;
+		}
 	}
 }

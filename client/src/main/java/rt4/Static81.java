@@ -11,13 +11,7 @@ public final class Static81 {
 	@OriginalMember(owner = "client!gg", name = "Z", descriptor = "I")
 	public static int anInt2222;
 
-	@OriginalMember(owner = "client!gg", name = "bb", descriptor = "I")
-	public static int cameraX;
-
-    @OriginalMember(owner = "client!gg", name = "W", descriptor = "Lclient!na;")
-	public static final JagString aClass100_475 = JagString.parse("null");
-
-    @OriginalMember(owner = "client!gg", name = "db", descriptor = "I")
+	@OriginalMember(owner = "client!gg", name = "db", descriptor = "I")
 	public static int anInt2225 = -1;
 
 	@OriginalMember(owner = "client!gg", name = "c", descriptor = "(II)V")

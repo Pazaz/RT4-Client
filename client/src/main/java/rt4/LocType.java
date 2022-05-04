@@ -10,6 +10,8 @@ public final class LocType {
 
     @OriginalMember(owner = "client!wf", name = "o", descriptor = "[Lclient!gb;")
     public static final RawModel[] tempModels = new RawModel[4];
+    @OriginalMember(owner = "client!ni", name = "n", descriptor = "Lclient!sm;")
+	public static Loc_Class139 aClass139_1 = new Loc_Class139();
     @OriginalMember(owner = "client!pb", name = "a", descriptor = "[S")
 	private short[] retextureSource;
 
@@ -58,8 +60,10 @@ public final class LocType {
 	@OriginalMember(owner = "client!pb", name = "u", descriptor = "I")
 	private int anInt4407 = 0;
 
+	@OriginalMember(owner = "client!gg", name = "W", descriptor = "Lclient!na;")
+	public static final JagString aClass100_475 = JagString.parse("null");
 	@OriginalMember(owner = "client!pb", name = "E", descriptor = "Lclient!na;")
-	public JagString name = Static81.aClass100_475;
+	public JagString name = aClass100_475;
 
 	@OriginalMember(owner = "client!pb", name = "D", descriptor = "Z")
 	public boolean aBoolean212 = true;
@@ -749,9 +753,9 @@ public final class LocType {
 			if (local225 == null) {
 				local235 = this.method3427(arg0, false, arg3);
 				if (local235 == null) {
-					Static171.aClass139_1.aClass8_10 = null;
-					Static171.aClass139_1.aClass36_Sub1_3 = null;
-					return Static171.aClass139_1;
+					aClass139_1.aClass8_10 = null;
+					aClass139_1.aClass36_Sub1_3 = null;
+					return aClass139_1;
 				}
 				if (arg3 == 10 && arg0 > 3) {
 					local235.method4554(256);
@@ -775,10 +779,10 @@ public final class LocType {
 				local330.method4110(this.aByte15, this.aShort26, local235, arg2, arg5, arg1, arg4, arg9);
 			}
 			local330.method4111(this.anInt4429 == 0 && !this.aBoolean214, true, true, this.anInt4429 == 0, true, false);
-			Static171.aClass139_1.aClass8_10 = local330;
+			aClass139_1.aClass8_10 = local330;
 			local330.aBoolean259 = local298;
-			Static171.aClass139_1.aClass36_Sub1_3 = local265;
-			return Static171.aClass139_1;
+			aClass139_1.aClass36_Sub1_3 = local265;
+			return aClass139_1;
 		}
 		if (this.shapes == null) {
 			local29 = (this.id << 10) + arg0;
@@ -796,8 +800,8 @@ public final class LocType {
 		if (local60 == null) {
 			@Pc(69) RawModel local69 = this.method3418(arg0, arg3);
 			if (local69 == null) {
-				Static171.aClass139_1.aClass8_10 = null;
-				return Static171.aClass139_1;
+				aClass139_1.aClass8_10 = null;
+				return aClass139_1;
 			}
 			local69.method1681();
 			if (arg3 == 10 && arg0 > 3) {
@@ -823,8 +827,8 @@ public final class LocType {
 				local60 = ((RawModel) local60).method1670(this.aByte15, this.aShort26, arg2, arg5, arg1, arg4, arg9);
 			}
 		}
-		Static171.aClass139_1.aClass8_10 = local60;
-		return Static171.aClass139_1;
+		aClass139_1.aClass8_10 = local60;
+		return aClass139_1;
 	}
 
 	@OriginalMember(owner = "client!pb", name = "a", descriptor = "(IILclient!ek;ILclient!tk;I[[IZII[[IIII)Lclient!sm;")
@@ -863,8 +867,8 @@ public final class LocType {
 				}
 				local195 = local195.method4586(this.aByte15, this.aShort26, arg6, arg9, arg1, arg3, arg0, false);
 			}
-			Static171.aClass139_1.aClass8_10 = local195;
-			return Static171.aClass139_1;
+			aClass139_1.aClass8_10 = local195;
+			return aClass139_1;
 		}
 		if (this.shapes == null) {
 			local30 = arg5 + (this.id << 10);
@@ -895,9 +899,9 @@ public final class LocType {
 			local82.method4554(256);
 		}
 		if (arg7) {
-			Static171.aClass139_1.aClass36_Sub1_3 = local82.method4124(arg2);
+			aClass139_1.aClass36_Sub1_3 = local82.method4124(arg2);
 		} else {
-			Static171.aClass139_1.aClass36_Sub1_3 = null;
+			aClass139_1.aClass36_Sub1_3 = null;
 		}
 		if (this.aByte15 != 0) {
 			if (!local80) {
@@ -905,8 +909,8 @@ public final class LocType {
 			}
 			local82.method4110(this.aByte15, this.aShort26, local46, arg6, arg9, arg1, arg3, arg0);
 		}
-		Static171.aClass139_1.aClass8_10 = local82;
-		return Static171.aClass139_1;
+		aClass139_1.aClass8_10 = local82;
+		return aClass139_1;
 	}
 
 	@OriginalMember(owner = "client!pb", name = "a", descriptor = "(Lclient!na;II)Lclient!na;")

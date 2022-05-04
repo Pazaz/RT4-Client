@@ -9,12 +9,6 @@ public final class Static163 {
 	@OriginalMember(owner = "client!n", name = "e", descriptor = "Lclient!na;")
 	public static final JagString aClass100_767 = JagString.parse(")2");
 
-	@OriginalMember(owner = "client!n", name = "a", descriptor = "(II)V")
-	public static void method3096(@OriginalArg(0) int arg0) {
-		@Pc(8) DelayedStateChange local8 = DelayedStateChange.create(3, arg0);
-		local8.pushClient();
-	}
-
 	@OriginalMember(owner = "client!n", name = "a", descriptor = "(IIIIII)V")
 	public static void method3105(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
 		@Pc(11) int local11 = Static78.method1690(TextureOp29.anInt2869, arg2, TextureOp29.anInt5773);

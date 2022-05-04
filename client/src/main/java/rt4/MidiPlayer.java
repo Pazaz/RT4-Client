@@ -13,13 +13,23 @@ public class MidiPlayer {
     public static int anInt441 = 0;
     @OriginalMember(owner = "client!uh", name = "P", descriptor = "Lclient!ve;")
     public static Js5 aClass153_103;
+    @OriginalMember(owner = "client!ui", name = "R", descriptor = "I")
+    public static int anInt5527;
+    @OriginalMember(owner = "client!wi", name = "ab", descriptor = "I")
+    public static int anInt5853;
+    @OriginalMember(owner = "client!eg", name = "t", descriptor = "I")
+    public static int anInt1757;
+    @OriginalMember(owner = "client!fl", name = "u", descriptor = "Z")
+    public static boolean aBoolean116;
+    @OriginalMember(owner = "client!rb", name = "f", descriptor = "Lclient!ve;")
+    public static Js5 aClass153_87;
 
     @OriginalMember(owner = "client!km", name = "c", descriptor = "(Z)Z")
     public static boolean method2699() {
         try {
             if (anInt441 == 2) {
                 if (Static144.aClass3_Sub29_1 == null) {
-                    Static144.aClass3_Sub29_1 = Song.create(Static172.aClass153_70, Static277.anInt5853, Static226.anInt5085);
+                    Static144.aClass3_Sub29_1 = Song.create(Static172.aClass153_70, anInt5853, Static226.anInt5085);
                     if (Static144.aClass3_Sub29_1 == null) {
                         return false;
                     }
@@ -27,10 +37,10 @@ public class MidiPlayer {
                 if (aClass89_1 == null) {
                     aClass89_1 = new SoundBank(Static78.aClass153_32, aClass153_103);
                 }
-                if (Static172.aClass3_Sub3_Sub4_2.method4411(Static144.aClass3_Sub29_1, Static210.aClass153_87, aClass89_1)) {
+                if (Static172.aClass3_Sub3_Sub4_2.method4411(Static144.aClass3_Sub29_1, aClass153_87, aClass89_1)) {
                     Static172.aClass3_Sub3_Sub4_2.method4412();
-                    Static172.aClass3_Sub3_Sub4_2.method4447(Static253.anInt5527);
-                    Static172.aClass3_Sub3_Sub4_2.method4431(Static72.aBoolean116, Static144.aClass3_Sub29_1);
+                    Static172.aClass3_Sub3_Sub4_2.method4447(anInt5527);
+                    Static172.aClass3_Sub3_Sub4_2.method4431(aBoolean116, Static144.aClass3_Sub29_1);
                     anInt441 = 0;
                     Static144.aClass3_Sub29_1 = null;
                     aClass89_1 = null;
@@ -51,29 +61,29 @@ public class MidiPlayer {
 
     @OriginalMember(owner = "client!ce", name = "a", descriptor = "(II)V")
     public static void method801() {
-        Static253.anInt5527 = 0;
+        anInt5527 = 0;
         Static226.anInt5085 = -1;
         anInt441 = 1;
-        Static57.anInt1757 = 2;
-        Static72.aBoolean116 = false;
+        anInt1757 = 2;
+        aBoolean116 = false;
         Static172.aClass153_70 = null;
-        Static277.anInt5853 = -1;
+        anInt5853 = -1;
     }
 
     @OriginalMember(owner = "client!v", name = "a", descriptor = "(ZIILclient!ve;ZII)V")
     public static void playFadeOut(@OriginalArg(1) int arg0, @OriginalArg(3) Js5 arg1, @OriginalArg(5) int arg2) {
         Static172.aClass153_70 = arg1;
         Static226.anInt5085 = 0;
-        Static277.anInt5853 = arg0;
-        Static72.aBoolean116 = false;
+        anInt5853 = arg0;
+        aBoolean116 = false;
         anInt441 = 1;
-        Static57.anInt1757 = 2;
-        Static253.anInt5527 = arg2;
+        anInt1757 = 2;
+        anInt5527 = arg2;
     }
 
     @OriginalMember(owner = "client!ck", name = "a", descriptor = "(ILclient!va;Lclient!ve;Lclient!ve;Lclient!ve;)Z")
     public static boolean init(@OriginalArg(1) MidiPcmStream arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) Js5 arg2, @OriginalArg(4) Js5 arg3) {
-        Static210.aClass153_87 = arg1;
+        aClass153_87 = arg1;
         Static78.aClass153_32 = arg3;
         aClass153_103 = arg2;
         Static172.aClass3_Sub3_Sub4_2 = arg0;
@@ -86,7 +96,7 @@ public class MidiPlayer {
             if (anInt441 == 1) {
                 @Pc(16) int local16 = Static172.aClass3_Sub3_Sub4_2.method4440();
                 if (local16 > 0 && Static172.aClass3_Sub3_Sub4_2.method4414()) {
-                    local16 -= Static57.anInt1757;
+                    local16 -= anInt1757;
                     if (local16 < 0) {
                         local16 = 0;
                     }

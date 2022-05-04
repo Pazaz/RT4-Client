@@ -309,7 +309,7 @@ public class ClientProt {
             }
         }
         if (GlRenderer.enabled) {
-            Static120.method2404();
+            LightingManager.method2404();
         }
         if (GlRenderer.enabled) {
             Static75.setDefaultChunksAtmosphere();
@@ -317,7 +317,7 @@ public class ClientProt {
         client.audioLoop();
         System.gc();
         ping(true);
-        Static196.method3535(false);
+        SceneGraph.method3535(false);
         if (!Static230.dynamicMapRegion) {
             Static87.method1805(false);
             ping(true);
@@ -345,10 +345,10 @@ public class ClientProt {
         ping(true);
         Static45.method1169(PathFinder.collisionMaps, false);
         if (GlRenderer.enabled) {
-            Static120.method2395();
+            LightingManager.method2395();
         }
         ping(true);
-        i = Static146.anInt3508;
+        i = SceneGraph.firstVisibleLevel;
         if (i > Player.level) {
             i = Player.level;
         }
@@ -357,12 +357,12 @@ public class ClientProt {
         if (SceneGraph.allLevelsAreVisible()) {
             Static146.method2750(0);
         } else {
-            Static146.method2750(Static146.anInt3508);
+            Static146.method2750(SceneGraph.firstVisibleLevel);
         }
-        Static105.method2255();
+        SceneGraph.method2255();
         if (GlRenderer.enabled && hasUnderWaterMap) {
             Static278.setRenderTiles(true);
-            Static196.method3535(true);
+            SceneGraph.method3535(true);
             if (!Static230.dynamicMapRegion) {
                 Static87.method1805(true);
                 ping(true);
@@ -377,7 +377,7 @@ public class ClientProt {
             ping(true);
             Static45.method1169(PathFinder.collisionMaps, true);
             ping(true);
-            Static105.method2255();
+            SceneGraph.method2255();
             Static278.setRenderTiles(false);
         }
         if (GlRenderer.enabled) {
@@ -409,8 +409,8 @@ public class ClientProt {
             for (@Pc(837) int local837 = chunkX - 1; local837 <= chunkZ + 1; local837++) {
                 for (@Pc(850) int local850 = local821 - 1; local850 <= local815 + 1; local850++) {
                     if (local837 < chunkX || local837 > chunkZ || local850 < local821 || local850 > local815) {
-                        client.js5Archive5.method4486(JagString.concatenate(new JagString[] { Static103.aClass100_558, Static123.parseInt(local837), Static86.aClass100_488, Static123.parseInt(local850) }));
-                        client.js5Archive5.method4486(JagString.concatenate(new JagString[] { Static270.aClass100_1090, Static123.parseInt(local837), Static86.aClass100_488, Static123.parseInt(local850) }));
+                        client.js5Archive5.method4486(JagString.concatenate(new JagString[] { Static103.aClass100_558, JagString.parseInt(local837), Static86.aClass100_488, JagString.parseInt(local850) }));
+                        client.js5Archive5.method4486(JagString.concatenate(new JagString[] { Static270.aClass100_1090, JagString.parseInt(local837), Static86.aClass100_488, JagString.parseInt(local850) }));
                     }
                 }
             }
@@ -423,7 +423,7 @@ public class ClientProt {
                 Protocol.outboundBuffer.p1isaac(110);
             }
         }
-        Static141.method2720();
+        WorldMap.method2720();
         client.audioLoop();
         GameShell.resetTimer();
     }

@@ -72,7 +72,7 @@ public final class SoundBank {
 		} else if (arg1 == null || arg1[0] > 0) {
 			@Pc(53) VorbisSound local53 = (VorbisSound) this.aClass133_11.get(local26);
 			if (local53 == null) {
-				local53 = Static117.method2345(this.aClass153_53, arg0, arg2);
+				local53 = VorbisSound.method2345(this.aClass153_53, arg0, arg2);
 				if (local53 == null) {
 					return null;
 				}

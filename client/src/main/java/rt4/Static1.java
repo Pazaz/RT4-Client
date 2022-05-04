@@ -18,10 +18,7 @@ public final class Static1 {
 	@OriginalMember(owner = "client!a", name = "i", descriptor = "I")
 	public static int anInt6 = 0;
 
-	@OriginalMember(owner = "client!a", name = "j", descriptor = "Lclient!na;")
-	public static final JagString aClass100_2 = JagString.parse("<col=ffffff> )4 ");
-
-	@OriginalMember(owner = "client!a", name = "a", descriptor = "([[F[[F[[II[[F[[B[[II[[B[[B[[B[[[B)[Lclient!hg;")
+    @OriginalMember(owner = "client!a", name = "a", descriptor = "([[F[[F[[II[[F[[B[[II[[B[[B[[B[[[B)[Lclient!hg;")
 	public static GlTile[] method2(@OriginalArg(0) float[][] arg0, @OriginalArg(1) float[][] arg1, @OriginalArg(2) int[][] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) float[][] arg4, @OriginalArg(5) byte[][] arg5, @OriginalArg(6) int[][] arg6, @OriginalArg(8) byte[][] arg7, @OriginalArg(9) byte[][] arg8, @OriginalArg(10) byte[][] arg9, @OriginalArg(11) byte[][][] arg10) {
 		@Pc(10) HashTable local10 = new HashTable(128);
 		@Pc(12) int local12;
@@ -530,10 +527,10 @@ public final class Static1 {
 	@OriginalMember(owner = "client!a", name = "a", descriptor = "(IIIII)V")
 	public static void method4(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {
 		if (GlRenderer.enabled) {
-			GlRaster.method1187(arg0, arg3, arg2 + arg0, arg1 + arg3);
+			GlRaster.setClip(arg0, arg3, arg2 + arg0, arg1 + arg3);
 			GlRaster.method1186(arg0, arg3, arg2, arg1, 0);
 		} else {
-			SoftwareRaster.method2496(arg0, arg3, arg2 + arg0, arg3 + arg1);
+			SoftwareRaster.setClip(arg0, arg3, arg2 + arg0, arg3 + arg1);
 			SoftwareRaster.fillRect(arg0, arg3, arg2, arg1, 0);
 		}
 		if (WorldMap.loadPercentage < 100) {

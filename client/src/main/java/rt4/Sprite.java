@@ -58,5 +58,5 @@ public abstract class Sprite extends SecondaryNode {
 	public abstract void method1422(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4);
 
 	@OriginalMember(owner = "client!qf", name = "e", descriptor = "(II)V")
-	public abstract void method1423(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1);
+	public abstract void renderTransparent(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1);
 }

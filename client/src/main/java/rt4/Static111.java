@@ -5,14 +5,8 @@ import org.openrs2.deob.annotation.OriginalMember;
 
 public final class Static111 {
 
-	@OriginalMember(owner = "client!ii", name = "a", descriptor = "I")
-	public static int cameraZ;
-
 	@OriginalMember(owner = "client!ii", name = "y", descriptor = "I")
 	public static int anInt2910;
-
-    @OriginalMember(owner = "client!ii", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_570 = JagString.parse(")2");
 
 	@OriginalMember(owner = "client!ii", name = "a", descriptor = "(Lclient!be;III)V")
 	public static void method2291(@OriginalArg(0) Component arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {

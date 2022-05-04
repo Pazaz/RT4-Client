@@ -127,9 +127,9 @@ public final class Static132 {
 		Rasteriser.alpha = 0;
 		@Pc(475) int local475;
 		if ((local307 - local323) * (local299 - local331) - (local315 - local331) * (local291 - local323) > 0) {
-			if (Static158.aBoolean187 && Static19.method583(Static89.anInt2388 + Rasteriser.centerX, Static131.anInt3259 + Rasteriser.centerY, local315, local331, local299, local307, local323, local291)) {
-				Static56.anInt1742 = arg6;
-				Static116.anInt2954 = arg7;
+			if (MiniMenu.aBoolean187 && Static19.method583(MiniMenu.anInt2388 + Rasteriser.centerX, MiniMenu.anInt3259 + Rasteriser.centerY, local315, local331, local299, local307, local323, local291)) {
+				MiniMenu.anInt1742 = arg6;
+				MiniMenu.anInt2954 = arg7;
 			}
 			if (!GlRenderer.enabled && !arg8) {
 				Rasteriser.testX = false;
@@ -153,9 +153,9 @@ public final class Static132 {
 		if ((local275 - local291) * (local331 - local299) - (local283 - local299) * (local323 - local291) <= 0) {
 			return;
 		}
-		if (Static158.aBoolean187 && Static19.method583(Static89.anInt2388 + Rasteriser.centerX, Static131.anInt3259 + Rasteriser.centerY, local283, local299, local331, local275, local291, local323)) {
-			Static56.anInt1742 = arg6;
-			Static116.anInt2954 = arg7;
+		if (MiniMenu.aBoolean187 && Static19.method583(MiniMenu.anInt2388 + Rasteriser.centerX, MiniMenu.anInt3259 + Rasteriser.centerY, local283, local299, local331, local275, local291, local323)) {
+			MiniMenu.anInt1742 = arg6;
+			MiniMenu.anInt2954 = arg7;
 		}
 		if (GlRenderer.enabled || arg8) {
 			return;

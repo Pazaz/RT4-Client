@@ -129,7 +129,7 @@ public final class GlRenderer {
 	private static JagString method4147(@OriginalArg(0) String arg0) {
 		@Pc(3) byte[] local3;
 		local3 = arg0.getBytes(StandardCharsets.ISO_8859_1);
-		return Static10.decodeString(local3, local3.length, 0);
+		return JagString.decodeString(local3, local3.length, 0);
 	}
 
 	@OriginalMember(owner = "client!tf", name = "a", descriptor = "(IIII)V")
@@ -271,7 +271,7 @@ public final class GlRenderer {
 		gl.glMatrixMode(GL2.GL_MODELVIEW);
 		gl.glLoadIdentity();
 		Static161.method3065();
-		Static120.method2400(); // LightingManager
+		LightingManager.method2400(); // LightingManager
 	}
 
 	@OriginalMember(owner = "client!tf", name = "g", descriptor = "()V")
@@ -511,7 +511,7 @@ public final class GlRenderer {
 		gl = null;
 		context = null;
 		drawable = null;
-		Static120.method2398(); // LightingManager
+		LightingManager.method2398(); // LightingManager
 		enabled = false;
 	}
 
@@ -808,7 +808,7 @@ public final class GlRenderer {
 		anInt5328 = local2[0];
 		gl.glBindTexture(GL2.GL_TEXTURE_2D, anInt5328);
 		gl.glTexImage2D(GL2.GL_TEXTURE_2D, 0, 4, 1, 1, 0, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, IntBuffer.wrap(new int[] { -1 }));
-		Static120.method2401();
+		LightingManager.method2401();
 		MaterialManager.init();
 	}
 }

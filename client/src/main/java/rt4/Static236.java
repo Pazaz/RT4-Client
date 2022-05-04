@@ -8,8 +8,10 @@ public final class Static236 {
 
 	@OriginalMember(owner = "client!df", name = "n", descriptor = "I")
 	public static int anInt1396 = 0;
+    @OriginalMember(owner = "client!di", name = "H", descriptor = "Z")
+    public static boolean aBoolean84 = false;
 
-	@OriginalMember(owner = "client!tc", name = "a", descriptor = "(B)I")
+    @OriginalMember(owner = "client!tc", name = "a", descriptor = "(B)I")
 	public static int method4047() {
 		if (Static127.neverRemoveRoofs) {
 			return 0;
@@ -22,12 +24,12 @@ public final class Static236 {
 
 	@OriginalMember(owner = "client!tc", name = "a", descriptor = "(IILclient!be;BIIII)V")
 	public static void method4049(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Component arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6) {
-		if (Static45.aBoolean84) {
+		if (aBoolean84) {
 			anInt1396 = 32;
 		} else {
 			anInt1396 = 0;
 		}
-		Static45.aBoolean84 = false;
+		aBoolean84 = false;
 		@Pc(139) int local139;
 		if (Mouse.pressedButton != 0) {
 			if (arg4 <= arg3 && arg4 + 16 > arg3 && arg0 >= arg5 && arg5 + 16 > arg0) {
@@ -45,7 +47,7 @@ public final class Static236 {
 				@Pc(162) int local162 = arg0 - local139 / 2 - arg5 - 16;
 				arg2.scrollY = (arg6 - arg1) * local162 / local150;
 				InterfaceList.redraw(arg2);
-				Static45.aBoolean84 = true;
+				aBoolean84 = true;
 			}
 		}
 		if (Static58.wheelRotation == 0) {

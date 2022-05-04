@@ -8,7 +8,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!gi")
 public final class Light {
 
-	@OriginalMember(owner = "client!gi", name = "a", descriptor = "Z")
+    @OriginalMember(owner = "client!f", name = "P", descriptor = "[I")
+    public static int[] anIntArray150;
+    @OriginalMember(owner = "client!gi", name = "a", descriptor = "Z")
 	public final boolean aBoolean124;
 
 	@OriginalMember(owner = "client!gi", name = "d", descriptor = "I")
@@ -70,7 +72,7 @@ public final class Light {
 
 	@OriginalMember(owner = "client!gi", name = "<init>", descriptor = "(Lclient!wa;)V")
 	public Light(@OriginalArg(0) Buffer arg0) {
-		if (Static62.anIntArray150 == null) {
+		if (anIntArray150 == null) {
 			Static84.method1771();
 		}
 		this.anInt2241 = arg0.g1();
@@ -118,7 +120,7 @@ public final class Light {
 		if (local29 == 1) {
 			local62 = (MathUtils.sin[local26] >> 6) + 1024;
 		} else if (local29 == 3) {
-			local62 = Static62.anIntArray150[local26] >> 1;
+			local62 = anIntArray150[local26] >> 1;
 		} else if (local29 == 4) {
 			local62 = local26 >> 10 << 11;
 		} else if (local29 == 2) {

@@ -13,10 +13,7 @@ public final class Static89 {
 	@OriginalMember(owner = "client!ha", name = "o", descriptor = "I")
 	public static int anInt2387;
 
-	@OriginalMember(owner = "client!ha", name = "q", descriptor = "I")
-	public static int anInt2388 = 0;
-
-	@OriginalMember(owner = "client!ha", name = "a", descriptor = "(ZB)V")
+    @OriginalMember(owner = "client!ha", name = "a", descriptor = "(ZB)V")
 	public static void method1835(@OriginalArg(0) boolean arg0) {
 		@Pc(11) byte local11;
 		@Pc(13) byte[][] local13;
@@ -98,12 +95,6 @@ public final class Static89 {
 			}
 		}
 		return Static154.method2929(arg1);
-	}
-
-    @OriginalMember(owner = "client!ha", name = "b", descriptor = "(II)V")
-	public static void method1840(@OriginalArg(1) int arg0) {
-		@Pc(8) DelayedStateChange local8 = DelayedStateChange.create(2, arg0);
-		local8.pushClient();
 	}
 
 	@OriginalMember(owner = "client!ha", name = "a", descriptor = "(I)V")

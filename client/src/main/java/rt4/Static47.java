@@ -12,9 +12,9 @@ public final class Static47 {
 		if (local7 == null) {
 			return null;
 		}
-		for (@Pc(13) int local13 = 0; local13 < local7.anInt662; local13++) {
-			@Pc(22) Scenery local22 = local7.aClass31Array1[local13];
-			if ((local22.aLong56 >> 29 & 0x3L) == 2L && local22.anInt1701 == arg1 && local22.anInt1696 == arg2) {
+		for (@Pc(13) int local13 = 0; local13 < local7.sceneryLen; local13++) {
+			@Pc(22) Scenery local22 = local7.scenery[local13];
+			if ((local22.key >> 29 & 0x3L) == 2L && local22.anInt1701 == arg1 && local22.anInt1696 == arg2) {
 				Static266.method4193(local22);
 				return local22;
 			}

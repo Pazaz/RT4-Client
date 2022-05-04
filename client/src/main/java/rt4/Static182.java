@@ -6,7 +6,11 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static182 {
 
-	@OriginalMember(owner = "client!oj", name = "t", descriptor = "[I")
+    @OriginalMember(owner = "client!tl", name = "i", descriptor = "Lclient!na;")
+    public static final JagString aClass100_1017 = JagString.parse(")1");
+    @OriginalMember(owner = "client!cg", name = "h", descriptor = "Lclient!na;")
+    public static final JagString aClass100_185 = JagString.parse(")3");
+    @OriginalMember(owner = "client!oj", name = "t", descriptor = "[I")
 	public static int[] anIntArray372;
 
 	@OriginalMember(owner = "client!oj", name = "E", descriptor = "[[Lclient!hg;")
@@ -28,24 +32,24 @@ public final class Static182 {
 			arg3 = -arg3;
 			local9.method3113(Static73.aClass100_453);
 		}
-		@Pc(26) JagString local26 = Static244.aClass100_1017;
-		@Pc(28) JagString local28 = Static30.aClass100_185;
+		@Pc(26) JagString local26 = aClass100_1017;
+		@Pc(28) JagString local28 = aClass100_185;
 		if (arg0 == 1) {
-			local26 = Static30.aClass100_185;
-			local28 = Static244.aClass100_1017;
+			local26 = aClass100_185;
+			local28 = aClass100_1017;
 		}
 		if (arg0 == 2) {
-			local28 = Static244.aClass100_1017;
+			local28 = aClass100_1017;
 			local26 = Static26.aClass100_160;
 		}
 		if (arg0 == 3) {
-			local26 = Static30.aClass100_185;
-			local28 = Static244.aClass100_1017;
+			local26 = aClass100_185;
+			local28 = aClass100_1017;
 		}
 		@Pc(59) JagString local59 = Static87.allocate(0);
 		@Pc(61) int local61;
 		for (local61 = 0; local61 < arg2; local61++) {
-			local59.method3113(Static123.parseInt((int) (arg3 % 10L)));
+			local59.method3113(JagString.parseInt((int) (arg3 % 10L)));
 			arg3 /= 10L;
 		}
 		local61 = 0;
@@ -58,7 +62,7 @@ public final class Static182 {
 				if (arg1 && local61 != 0 && local61 % 3 == 0) {
 					local95.method3113(local26);
 				}
-				local95.method3113(Static123.parseInt((int) (arg3 % 10L)));
+				local95.method3113(JagString.parseInt((int) (arg3 % 10L)));
 				local61++;
 				arg3 /= 10L;
 			}

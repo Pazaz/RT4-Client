@@ -2,17 +2,13 @@ package rt4;
 
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
-import org.openrs2.deob.annotation.Pc;
 
 public final class Static181 {
 
 	@OriginalMember(owner = "client!oi", name = "h", descriptor = "Lclient!qf;")
 	public static Sprite aClass3_Sub2_Sub1_9;
 
-	@OriginalMember(owner = "client!oi", name = "j", descriptor = "Lclient!na;")
-	public static final JagString WM1 = JagString.parse("::wm1");
-
-	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(IIIIIIIIII)V")
+    @OriginalMember(owner = "client!oi", name = "a", descriptor = "(IIIIIIIIII)V")
 	public static void method3340(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) int arg8) {
 		if (arg5 >= TextureOp29.anInt4164 && arg5 <= TextureOp29.anInt5063 && arg0 >= TextureOp29.anInt4164 && arg0 <= TextureOp29.anInt5063 && arg6 >= TextureOp29.anInt4164 && TextureOp29.anInt5063 >= arg6 && TextureOp29.anInt4164 <= arg1 && arg1 <= TextureOp29.anInt5063 && TextureOp29.anInt5773 <= arg4 && arg4 <= TextureOp29.anInt2869 && arg7 >= TextureOp29.anInt5773 && TextureOp29.anInt2869 >= arg7 && arg2 >= TextureOp29.anInt5773 && TextureOp29.anInt2869 >= arg2 && arg3 >= TextureOp29.anInt5773 && arg3 <= TextureOp29.anInt2869) {
 			Static38.method962(arg2, arg8, arg7, arg6, arg1, arg3, arg4, arg0, arg5);
@@ -23,13 +19,7 @@ public final class Static181 {
 
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(II)Lclient!na;")
 	public static JagString method3341(@OriginalArg(0) int arg0) {
-		return JagString.concatenate(new JagString[] { Static123.parseInt(arg0 >> 24 & 0xFF), Static233.aClass100_994, Static123.parseInt(arg0 >> 16 & 0xFF), Static233.aClass100_994, Static123.parseInt(arg0 >> 8 & 0xFF), Static233.aClass100_994, Static123.parseInt(arg0 & 0xFF) });
-	}
-
-	@OriginalMember(owner = "client!oi", name = "b", descriptor = "(II)V")
-	public static void method3345(@OriginalArg(0) int arg0) {
-		@Pc(8) DelayedStateChange local8 = DelayedStateChange.create(5, arg0);
-		local8.pushClient();
+		return JagString.concatenate(new JagString[] { JagString.parseInt(arg0 >> 24 & 0xFF), Static233.aClass100_994, JagString.parseInt(arg0 >> 16 & 0xFF), Static233.aClass100_994, JagString.parseInt(arg0 >> 8 & 0xFF), Static233.aClass100_994, JagString.parseInt(arg0 & 0xFF) });
 	}
 
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(I[I[Ljava/lang/Object;)V")

@@ -6,9 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static247 {
 
-	@OriginalMember(owner = "client!ub", name = "h", descriptor = "[Lclient!pe;")
-	public static Class120[] aClass120Array2;
-
 	@OriginalMember(owner = "client!ub", name = "m", descriptor = "I")
 	public static int screenUpperX;
 
@@ -151,24 +148,24 @@ public final class Static247 {
 												} else {
 													Static132.method2610(local153.plainTile, 0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local18, local21, false);
 												}
-												var22 = local153.aClass77_1;
+												var22 = local153.wall;
 												if (var22 != null) {
 													if (GlRenderer.enabled) {
 														if ((var22.anInt3049 & local8.anInt670) == 0) {
-															Static120.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
+															LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
 														} else {
-															Static120.method2388(var22.anInt3049, Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local27, local18, local21);
+															LightingManager.method2388(var22.anInt3049, Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local27, local18, local21);
 														}
 													}
 													var22.primary.render(0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, var22.anInt3048 - Static149.anInt3555, var22.anInt3051 - Static123.anInt3947, var22.anInt3044 - Static217.anInt4903, var22.key, local24, null);
 												}
-												for (local65 = 0; local65 < local153.anInt662; local65++) {
-													var25 = local153.aClass31Array1[local65];
+												for (local65 = 0; local65 < local153.sceneryLen; local65++) {
+													var25 = local153.scenery[local65];
 													if (var25 != null) {
 														if (GlRenderer.enabled) {
-															Static120.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
+															LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
 														}
-														var25.primary.render(var25.anInt1714, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, var25.anInt1699 - Static149.anInt3555, var25.anInt1706 - Static123.anInt3947, var25.anInt1703 - Static217.anInt4903, var25.aLong56, local24, null);
+														var25.primary.render(var25.anInt1714, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, var25.anInt1699 - Static149.anInt3555, var25.anInt1706 - Static123.anInt3947, var25.anInt1703 - Static217.anInt4903, var25.key, local24, null);
 													}
 												}
 												if (GlRenderer.enabled) {
@@ -189,20 +186,20 @@ public final class Static247 {
 												Static132.method2610(local8.plainTile, local27, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local18, local21, true);
 											} else {
 												var24 = true;
-												if (local8.plainTile.anInt4865 != 12345678 || Static158.aBoolean187 && local24 <= Static160.anInt3902) {
+												if (local8.plainTile.anInt4865 != 12345678 || MiniMenu.aBoolean187 && local24 <= MiniMenu.anInt3902) {
 													Static132.method2610(local8.plainTile, local27, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local18, local21, false);
 												}
 											}
 											if (var24) {
-												@Pc(549) GroundDecor local549 = local8.aClass15_1;
-												if (local549 != null && (local549.aLong26 & 0x80000000L) != 0L) {
+												@Pc(549) GroundDecor local549 = local8.groundDecor;
+												if (local549 != null && (local549.key & 0x80000000L) != 0L) {
 													if (GlRenderer.enabled && local549.aBoolean49) {
 														GlRenderer.method4159(local33 + 50.0F - 1.5F);
 													}
 													if (GlRenderer.enabled) {
-														Static120.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
+														LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
 													}
-													local549.primary.render(0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local549.anInt732 - Static149.anInt3555, local549.anInt733 - Static123.anInt3947, local549.anInt736 - Static217.anInt4903, local549.aLong26, local24, null);
+													local549.primary.render(0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local549.anInt732 - Static149.anInt3555, local549.anInt733 - Static123.anInt3947, local549.anInt736 - Static217.anInt4903, local549.key, local24, null);
 													if (GlRenderer.enabled && local549.aBoolean49) {
 														GlRenderer.method4159(local33);
 													}
@@ -210,8 +207,8 @@ public final class Static247 {
 											}
 											var10 = 0;
 											local65 = 0;
-											@Pc(616) Wall local616 = local8.aClass77_1;
-											@Pc(619) WallDecor local619 = local8.aClass24_1;
+											@Pc(616) Wall local616 = local8.wall;
+											@Pc(619) WallDecor local619 = local8.wallDecor;
 											if (local616 != null || local619 != null) {
 												if (Static167.anInt4069 == local18) {
 													var10++;
@@ -248,13 +245,13 @@ public final class Static247 {
 												}
 												if ((local616.anInt3049 & local65) != 0 && !Static260.method3850(local27, local18, local21, local616.anInt3049)) {
 													if (GlRenderer.enabled) {
-														Static120.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
+														LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
 													}
 													local616.primary.render(0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local616.anInt3048 - Static149.anInt3555, local616.anInt3051 - Static123.anInt3947, local616.anInt3044 - Static217.anInt4903, local616.key, local24, null);
 												}
 												if ((local616.anInt3052 & local65) != 0 && !Static260.method3850(local27, local18, local21, local616.anInt3052)) {
 													if (GlRenderer.enabled) {
-														Static120.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
+														LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
 													}
 													local616.aClass8_6.render(0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local616.anInt3048 - Static149.anInt3555, local616.anInt3051 - Static123.anInt3947, local616.anInt3044 - Static217.anInt4903, local616.key, local24, null);
 												}
@@ -265,7 +262,7 @@ public final class Static247 {
 												}
 												if ((local619.anInt1395 & local65) != 0) {
 													if (GlRenderer.enabled) {
-														Static120.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
+														LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
 													}
 													local619.primary.render(0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local619.anInt1390 + local619.anInt1394 - Static149.anInt3555, local619.anInt1391 - Static123.anInt3947, local619.anInt1393 + local619.anInt1392 - Static217.anInt4903, local619.key, local24, null);
 												} else if (local619.anInt1395 == 256) {
@@ -286,12 +283,12 @@ public final class Static247 {
 													}
 													if (local928 < var18) {
 														if (GlRenderer.enabled) {
-															Static120.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
+															LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
 														}
 														local619.primary.render(0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local894 + local619.anInt1394, local899, local904 + local619.anInt1392, local619.key, local24, null);
 													} else if (local619.aClass8_2 != null) {
 														if (GlRenderer.enabled) {
-															Static120.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
+															LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
 														}
 														local619.aClass8_2.render(0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local894, local899, local904, local619.key, local24, null);
 													}
@@ -301,15 +298,15 @@ public final class Static247 {
 												}
 											}
 											if (var24) {
-												@Pc(1001) GroundDecor local1001 = local8.aClass15_1;
-												if (local1001 != null && (local1001.aLong26 & 0x80000000L) == 0L) {
+												@Pc(1001) GroundDecor local1001 = local8.groundDecor;
+												if (local1001 != null && (local1001.key & 0x80000000L) == 0L) {
 													if (GlRenderer.enabled && local1001.aBoolean49) {
 														GlRenderer.method4159(local33 + 50.0F - 1.5F);
 													}
 													if (GlRenderer.enabled) {
-														Static120.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
+														LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
 													}
-													local1001.primary.render(0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local1001.anInt732 - Static149.anInt3555, local1001.anInt733 - Static123.anInt3947, local1001.anInt736 - Static217.anInt4903, local1001.aLong26, local24, null);
+													local1001.primary.render(0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local1001.anInt732 - Static149.anInt3555, local1001.anInt733 - Static123.anInt3947, local1001.anInt736 - Static217.anInt4903, local1001.key, local24, null);
 													if (GlRenderer.enabled && local1001.aBoolean49) {
 														GlRenderer.method4159(local33);
 													}
@@ -317,7 +314,7 @@ public final class Static247 {
 												@Pc(1064) ObjStackEntity local1064 = local8.aClass79_1;
 												if (local1064 != null && local1064.anInt3063 == 0) {
 													if (GlRenderer.enabled) {
-														Static120.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
+														LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
 													}
 													if (local1064.aClass8_7 != null) {
 														local1064.aClass8_7.render(0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local1064.anInt3064 - Static149.anInt3555, local1064.anInt3057 - Static123.anInt3947, local1064.anInt3061 - Static217.anInt4903, local1064.aLong108, local24, null);
@@ -361,14 +358,14 @@ public final class Static247 {
 										}
 										if (local8.anInt663 != 0) {
 											var24 = true;
-											for (var10 = 0; var10 < local8.anInt662; var10++) {
-												if (local8.aClass31Array1[var10].anInt1707 != Static13.anInt437 && (local8.anIntArray59[var10] & local8.anInt663) == local8.anInt665) {
+											for (var10 = 0; var10 < local8.sceneryLen; var10++) {
+												if (local8.scenery[var10].anInt1707 != Static13.anInt437 && (local8.anIntArray59[var10] & local8.anInt663) == local8.anInt665) {
 													var24 = false;
 													break;
 												}
 											}
 											if (var24) {
-												var22 = local8.aClass77_1;
+												var22 = local8.wall;
 												if (!Static260.method3850(local27, local18, local21, var22.anInt3049)) {
 													if (GlRenderer.enabled) {
 														label882: {
@@ -379,34 +376,34 @@ public final class Static247 {
 																if (local1332 == 0) {
 																	local65 -= 64;
 																	local115 += 64;
-																	if (local115 < local65 && local18 > 0 && local21 < Static99.mapSizeZ - 1) {
-																		Static120.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18 - 1, local21 + 1);
+																	if (local115 < local65 && local18 > 0 && local21 < SceneGraph.mapSizeZ - 1) {
+																		LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18 - 1, local21 + 1);
 																		break label882;
 																	}
 																} else if (local1332 == 1) {
 																	local65 += 64;
 																	local115 += 64;
-																	if (local115 < -local65 && local18 < Static152.mapSizeX - 1 && local21 < Static99.mapSizeZ - 1) {
-																		Static120.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18 + 1, local21 + 1);
+																	if (local115 < -local65 && local18 < SceneGraph.mapSizeX - 1 && local21 < SceneGraph.mapSizeZ - 1) {
+																		LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18 + 1, local21 + 1);
 																		break label882;
 																	}
 																} else if (local1332 == 2) {
 																	local65 += 64;
 																	local115 -= 64;
-																	if (local115 > local65 && local18 < Static152.mapSizeX - 1 && local21 > 0) {
-																		Static120.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18 + 1, local21 - 1);
+																	if (local115 > local65 && local18 < SceneGraph.mapSizeX - 1 && local21 > 0) {
+																		LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18 + 1, local21 - 1);
 																		break label882;
 																	}
 																} else if (local1332 == 3) {
 																	local65 -= 64;
 																	local115 -= 64;
 																	if (local115 > -local65 && local18 > 0 && local21 > 0) {
-																		Static120.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18 - 1, local21 - 1);
+																		LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18 - 1, local21 - 1);
 																		break label882;
 																	}
 																}
 															}
-															Static120.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
+															LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
 														}
 													}
 													var22.primary.render(0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, var22.anInt3048 - Static149.anInt3555, var22.anInt3051 - Static123.anInt3947, var22.anInt3044 - Static217.anInt4903, var22.key, local24, null);
@@ -418,11 +415,11 @@ public final class Static247 {
 											break;
 										}
 										try {
-											var9 = local8.anInt662;
+											var9 = local8.sceneryLen;
 											local8.aBoolean47 = false;
 											var10 = 0;
 											label767: for (local65 = 0; local65 < var9; local65++) {
-												var25 = local8.aClass31Array1[local65];
+												var25 = local8.scenery[local65];
 												if (var25.anInt1707 != Static13.anInt437) {
 													for (local1332 = var25.anInt1701; local1332 <= var25.anInt1713; local1332++) {
 														for (local894 = var25.anInt1696; local894 <= var25.anInt1698; local894++) {
@@ -452,7 +449,7 @@ public final class Static247 {
 															}
 														}
 													}
-													Static25.aClass31Array2[var10++] = var25;
+													SceneGraph.aClass31Array2[var10++] = var25;
 													local1332 = Static167.anInt4069 - var25.anInt1701;
 													local894 = var25.anInt1713 - Static167.anInt4069;
 													if (local894 > local1332) {
@@ -471,7 +468,7 @@ public final class Static247 {
 												local65 = -50;
 												local115 = -1;
 												for (local1332 = 0; local1332 < var10; local1332++) {
-													@Pc(1628) Scenery local1628 = Static25.aClass31Array2[local1332];
+													@Pc(1628) Scenery local1628 = SceneGraph.aClass31Array2[local1332];
 													if (local1628.anInt1707 != Static13.anInt437) {
 														if (local1628.anInt1705 > local65) {
 															local65 = local1628.anInt1705;
@@ -479,8 +476,8 @@ public final class Static247 {
 														} else if (local1628.anInt1705 == local65) {
 															local899 = local1628.anInt1699 - Static149.anInt3555;
 															local904 = local1628.anInt1703 - Static217.anInt4903;
-															var17 = Static25.aClass31Array2[local115].anInt1699 - Static149.anInt3555;
-															var18 = Static25.aClass31Array2[local115].anInt1703 - Static217.anInt4903;
+															var17 = SceneGraph.aClass31Array2[local115].anInt1699 - Static149.anInt3555;
+															var18 = SceneGraph.aClass31Array2[local115].anInt1703 - Static217.anInt4903;
 															if (local899 * local899 + local904 * local904 > var17 * var17 + var18 * var18) {
 																local115 = local1332;
 															}
@@ -490,31 +487,31 @@ public final class Static247 {
 												if (local115 == -1) {
 													break;
 												}
-												@Pc(1697) Scenery local1697 = Static25.aClass31Array2[local115];
+												@Pc(1697) Scenery local1697 = SceneGraph.aClass31Array2[local115];
 												local1697.anInt1707 = Static13.anInt437;
 												if (!Static73.method1599(local27, local1697.anInt1701, local1697.anInt1713, local1697.anInt1696, local1697.anInt1698, local1697.primary.getMaxY())) {
 													if (GlRenderer.enabled) {
-														if ((local1697.aLong56 & 0xFC000L) == 147456L) {
-															Static120.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
+														if ((local1697.key & 0xFC000L) == 147456L) {
+															LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
 															local894 = local1697.anInt1699 - Static149.anInt3555;
 															local899 = local1697.anInt1703 - Static217.anInt4903;
-															local904 = (int) (local1697.aLong56 >> 20 & 0x3L);
+															local904 = (int) (local1697.key >> 20 & 0x3L);
 															if (local904 == 1 || local904 == 3) {
 																if (local899 > -local894) {
-																	Static120.method2397(local24, local18, local21 - 1, local18 - 1, local21);
+																	LightingManager.method2397(local24, local18, local21 - 1, local18 - 1, local21);
 																} else {
-																	Static120.method2397(local24, local18, local21 + 1, local18 + 1, local21);
+																	LightingManager.method2397(local24, local18, local21 + 1, local18 + 1, local21);
 																}
 															} else if (local899 > local894) {
-																Static120.method2397(local24, local18, local21 - 1, local18 + 1, local21);
+																LightingManager.method2397(local24, local18, local21 - 1, local18 + 1, local21);
 															} else {
-																Static120.method2397(local24, local18, local21 + 1, local18 - 1, local21);
+																LightingManager.method2397(local24, local18, local21 + 1, local18 - 1, local21);
 															}
 														} else {
-															Static120.method2391(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local1697.anInt1701, local1697.anInt1696, local1697.anInt1713, local1697.anInt1698);
+															LightingManager.method2391(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local1697.anInt1701, local1697.anInt1696, local1697.anInt1713, local1697.anInt1698);
 														}
 													}
-													local1697.primary.render(local1697.anInt1714, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local1697.anInt1699 - Static149.anInt3555, local1697.anInt1706 - Static123.anInt3947, local1697.anInt1703 - Static217.anInt4903, local1697.aLong56, local24, null);
+													local1697.primary.render(local1697.anInt1714, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local1697.anInt1699 - Static149.anInt3555, local1697.anInt1706 - Static123.anInt3947, local1697.anInt1703 - Static217.anInt4903, local1697.key, local24, null);
 												}
 												for (local894 = local1697.anInt1701; local894 <= local1697.anInt1713; local894++) {
 													for (local899 = local1697.anInt1696; local899 <= local1697.anInt1698; local899++) {
@@ -562,7 +559,7 @@ public final class Static247 {
 			@Pc(1999) ObjStackEntity local1999 = local8.aClass79_1;
 			if (local1999 != null && local1999.anInt3063 != 0) {
 				if (GlRenderer.enabled) {
-					Static120.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
+					LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
 				}
 				if (local1999.aClass8_7 != null) {
 					local1999.aClass8_7.render(0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local1999.anInt3064 - Static149.anInt3555, local1999.anInt3057 - Static123.anInt3947 - local1999.anInt3063, local1999.anInt3061 - Static217.anInt4903, local1999.aLong108, local24, null);
@@ -575,11 +572,11 @@ public final class Static247 {
 				}
 			}
 			if (local8.anInt670 != 0) {
-				@Pc(2109) WallDecor local2109 = local8.aClass24_1;
+				@Pc(2109) WallDecor local2109 = local8.wallDecor;
 				if (local2109 != null && !Static276.method4611(local27, local18, local21, local2109.primary.getMaxY())) {
 					if ((local2109.anInt1395 & local8.anInt670) != 0) {
 						if (GlRenderer.enabled) {
-							Static120.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
+							LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
 						}
 						local2109.primary.render(0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local2109.anInt1390 + local2109.anInt1394 - Static149.anInt3555, local2109.anInt1391 - Static123.anInt3947, local2109.anInt1393 + local2109.anInt1392 - Static217.anInt4903, local2109.key, local24, null);
 					} else if (local2109.anInt1395 == 256) {
@@ -599,28 +596,28 @@ public final class Static247 {
 						}
 						if (local904 >= local899) {
 							if (GlRenderer.enabled) {
-								Static120.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
+								LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
 							}
 							local2109.primary.render(0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local65 + local2109.anInt1394, local115, local1332 + local2109.anInt1392, local2109.key, local24, null);
 						} else if (local2109.aClass8_2 != null) {
 							if (GlRenderer.enabled) {
-								Static120.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
+								LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
 							}
 							local2109.aClass8_2.render(0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local65, local115, local1332, local2109.key, local24, null);
 						}
 					}
 				}
-				@Pc(2275) Wall local2275 = local8.aClass77_1;
+				@Pc(2275) Wall local2275 = local8.wall;
 				if (local2275 != null) {
 					if ((local2275.anInt3052 & local8.anInt670) != 0 && !Static260.method3850(local27, local18, local21, local2275.anInt3052)) {
 						if (GlRenderer.enabled) {
-							Static120.method2388(local2275.anInt3052, Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local27, local18, local21);
+							LightingManager.method2388(local2275.anInt3052, Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local27, local18, local21);
 						}
 						local2275.aClass8_6.render(0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local2275.anInt3048 - Static149.anInt3555, local2275.anInt3051 - Static123.anInt3947, local2275.anInt3044 - Static217.anInt4903, local2275.key, local24, null);
 					}
 					if ((local2275.anInt3049 & local8.anInt670) != 0 && !Static260.method3850(local27, local18, local21, local2275.anInt3049)) {
 						if (GlRenderer.enabled) {
-							Static120.method2388(local2275.anInt3049, Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local27, local18, local21);
+							LightingManager.method2388(local2275.anInt3049, Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local27, local18, local21);
 						}
 						local2275.primary.render(0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local2275.anInt3048 - Static149.anInt3555, local2275.anInt3051 - Static123.anInt3947, local2275.anInt3044 - Static217.anInt4903, local2275.key, local24, null);
 					}
@@ -669,10 +666,10 @@ public final class Static247 {
 			local19.arguments = local8.anObjectArray11;
 			ScriptRunner.run(local19);
 		}
-		Static15.anInt506 = arg1;
+		MiniMenu.anInt506 = arg1;
 		Static121.anInt3039 = arg3;
-		Static98.anInt2512 = arg0;
-		Static274.anInt4999 = arg2;
+		MiniMenu.anInt2512 = arg0;
+		MiniMenu.anInt4999 = arg2;
 		Static241.aBoolean302 = true;
 		Static246.anInt5393 = arg4;
 		Static35.anInt1092 = arg5;

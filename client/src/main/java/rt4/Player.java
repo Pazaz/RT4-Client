@@ -177,6 +177,22 @@ public final class Player extends PathingEntity {
         return local14;
     }
 
+    @OriginalMember(owner = "client!um", name = "a", descriptor = "(Z)V")
+    public static void setTutorialIsland() {
+        inTutorialIsland = 0;
+        @Pc(17) int local17 = Static225.originX + (PlayerList.self.xFine >> 7);
+        @Pc(25) int local25 = (PlayerList.self.zFine >> 7) + Static142.originZ;
+        if (local17 >= 3053 && local17 <= 3156 && local25 >= 3056 && local25 <= 3136) {
+            inTutorialIsland = 1;
+        }
+        if (local17 >= 3072 && local17 <= 3118 && local25 >= 9492 && local25 <= 9535) {
+            inTutorialIsland = 1;
+        }
+        if (inTutorialIsland == 1 && local17 >= 3139 && local17 <= 3199 && local25 >= 3008 && local25 <= 3062) {
+            inTutorialIsland = 0;
+        }
+    }
+
     @OriginalMember(owner = "client!e", name = "c", descriptor = "(B)I")
 	@Override
 	public final int getSize() {

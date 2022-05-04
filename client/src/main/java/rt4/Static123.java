@@ -1,6 +1,5 @@
 package rt4;
 
-import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
@@ -9,14 +8,9 @@ public final class Static123 {
     @OriginalMember(owner = "client!jj", name = "e", descriptor = "I")
 	public static int anInt3058 = 0;
 
-	@OriginalMember(owner = "client!jj", name = "g", descriptor = "Lclient!na;")
-	public static final JagString aClass100_593 = JagString.parse(" (X");
-
-	@OriginalMember(owner = "client!jj", name = "j", descriptor = "Z")
+    @OriginalMember(owner = "client!jj", name = "j", descriptor = "Z")
 	public static boolean aBoolean155 = false;
 
-	@OriginalMember(owner = "client!jj", name = "m", descriptor = "Lclient!na;")
-	public static final JagString aClass100_594 = JagString.parse("<)4col>");
 	@OriginalMember(owner = "client!ml", name = "K", descriptor = "I")
 	public static int anInt3947;
 
@@ -32,9 +26,9 @@ public final class Static123 {
 
 	@OriginalMember(owner = "client!jj", name = "a", descriptor = "()V")
 	public static void method2419() {
-		Static215.anInt4870 = 0;
-		label194: for (@Pc(3) int local3 = 0; local3 < Static28.anInt917; local3++) {
-			@Pc(10) Class120 local10 = Static91.aClass120Array1[local3];
+		SceneGraph.anInt4870 = 0;
+		label194: for (@Pc(3) int local3 = 0; local3 < SceneGraph.anInt917; local3++) {
+			@Pc(10) Class120 local10 = SceneGraph.aClass120Array1[local3];
 			@Pc(14) int local14;
 			if (Static8.anIntArray8 != null) {
 				for (local14 = 0; local14 < Static8.anIntArray8.length; local14++) {
@@ -80,7 +74,7 @@ public final class Static123 {
 						local10.anInt4450 = (local10.anInt4449 - Static217.anInt4903 << 8) / local158;
 						local10.anInt4459 = (local10.anInt4444 - anInt3947 << 8) / local158;
 						local10.anInt4463 = (local10.anInt4447 - anInt3947 << 8) / local158;
-						Static247.aClass120Array2[Static215.anInt4870++] = local10;
+						SceneGraph.aClass120Array2[SceneGraph.anInt4870++] = local10;
 					}
 				}
 			} else if (local10.anInt4453 == 2) {
@@ -116,7 +110,7 @@ public final class Static123 {
 						local10.anInt4456 = (local10.anInt4445 - Static149.anInt3555 << 8) / local158;
 						local10.anInt4459 = (local10.anInt4444 - anInt3947 << 8) / local158;
 						local10.anInt4463 = (local10.anInt4447 - anInt3947 << 8) / local158;
-						Static247.aClass120Array2[Static215.anInt4870++] = local10;
+						SceneGraph.aClass120Array2[SceneGraph.anInt4870++] = local10;
 					}
 				}
 			} else if (local10.anInt4453 == 4) {
@@ -154,7 +148,7 @@ public final class Static123 {
 							local10.anInt4456 = (local10.anInt4445 - Static149.anInt3555 << 8) / local14;
 							local10.anInt4454 = (local10.anInt4458 - Static217.anInt4903 << 8) / local14;
 							local10.anInt4450 = (local10.anInt4449 - Static217.anInt4903 << 8) / local14;
-							Static247.aClass120Array2[Static215.anInt4870++] = local10;
+							SceneGraph.aClass120Array2[SceneGraph.anInt4870++] = local10;
 						}
 					}
 				}
@@ -162,8 +156,4 @@ public final class Static123 {
 		}
 	}
 
-	@OriginalMember(owner = "client!jj", name = "b", descriptor = "(BI)Lclient!na;")
-	public static JagString parseInt(@OriginalArg(1) int arg0) {
-		return Static198.method1025(false, arg0);
-	}
 }

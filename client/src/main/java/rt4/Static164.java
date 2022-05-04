@@ -125,7 +125,7 @@ public final class Static164 {
 				return false;
 			}
 		}
-		local14 = Static20.method602(arg4, arg0 + 0, arg2);
+		local14 = SceneGraph.method602(arg4, arg0 + 0, arg2);
 		if (local14 != 0L) {
 			local28 = (int) local14 >> 20 & 0x3;
 			local35 = (int) (local14 >>> 32) & Integer.MAX_VALUE;
@@ -220,10 +220,10 @@ public final class Static164 {
 			local133.method314(arg0);
 		}
 		if (local5.certificateTemplate != -1) {
-			local71.method1423(0, 0);
+			local71.renderTransparent(0, 0);
 		} else if (local5.lentTemplate != -1) {
 			SoftwareRaster.method2491(local71.pixels, 36, 32);
-			local133.method1423(0, 0);
+			local133.renderTransparent(0, 0);
 			local133 = local71;
 		}
 		if (arg3 && (local5.stackable == 1 || arg5 != 1) && arg5 != -1) {

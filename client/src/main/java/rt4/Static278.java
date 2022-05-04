@@ -6,10 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static278 {
 
-	@OriginalMember(owner = "client!wj", name = "b", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1101 = JagString.parse(" <col=ffff00>");
-
-	@OriginalMember(owner = "client!wj", name = "f", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!wj", name = "f", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1103 = JagString.parse("ul");
 
 	@OriginalMember(owner = "client!wj", name = "a", descriptor = "(IIIIIII)V")
@@ -26,19 +23,19 @@ public final class Static278 {
 		local3.anInt4449 = arg4;
 		local3.anInt4444 = arg5;
 		local3.anInt4447 = arg6;
-		Static91.aClass120Array1[Static28.anInt917++] = local3;
+		SceneGraph.aClass120Array1[SceneGraph.anInt917++] = local3;
 	}
 
 	@OriginalMember(owner = "client!wj", name = "a", descriptor = "(Z)V")
 	public static void setRenderTiles(@OriginalArg(0) boolean arg0) {
 		if (arg0) {
-			SceneGraph.tiles = Static276.underWaterGroundTiles;
+			SceneGraph.tiles = SceneGraph.underWaterGroundTiles;
 			SceneGraph.tileHeights = Static80.underWaterTileHeightMap;
-			Static182.aClass3_Sub14ArrayArray2 = Static195.underWaterHdTiles;
+			Static182.aClass3_Sub14ArrayArray2 = SceneGraph.underWaterHdTiles;
 		} else {
-			SceneGraph.tiles = Static197.surfaceGroundTiles;
+			SceneGraph.tiles = SceneGraph.surfaceGroundTiles;
 			SceneGraph.tileHeights = SceneGraph.surfaceTileHeights;
-			Static182.aClass3_Sub14ArrayArray2 = Static36.surfaceHdTiles;
+			Static182.aClass3_Sub14ArrayArray2 = SceneGraph.surfaceHdTiles;
 		}
 		Static126.anInt3114 = SceneGraph.tiles.length;
 	}
@@ -132,7 +129,7 @@ public final class Static278 {
 			Static143.hintMapMarkers[local19] = null;
 		}
 		PlayerList.size = 0;
-		Static272.anInt5214 = 0;
+		NpcList.size = 0;
 		for (local19 = 0; local19 < 2048; local19++) {
 			PlayerList.players[local19] = null;
 			PlayerList.appearanceCache[local19] = null;
@@ -143,13 +140,13 @@ public final class Static278 {
 		for (local19 = 0; local19 < 4; local19++) {
 			for (@Pc(115) int local115 = 0; local115 < 104; local115++) {
 				for (@Pc(122) int local122 = 0; local122 < 104; local122++) {
-					Static159.aClass69ArrayArrayArray1[local19][local115][local122] = null;
+					Static159.objStacks[local19][local115][local122] = null;
 				}
 			}
 		}
 		Static35.resetCameraEffects();
 		Protocol.verifyId = 0;
-		Static8.resetTransientVars();
+		VarpDomain.reset();
 		Static73.method1596(true);
 	}
 }

@@ -9,11 +9,8 @@ public final class Static159 {
 	@OriginalMember(owner = "client!mi", name = "Z", descriptor = "I")
 	public static int anInt3893;
 
-	@OriginalMember(owner = "client!mi", name = "R", descriptor = "Lclient!na;")
-	public static final JagString aClass100_760 = JagString.parse(")1");
-
-	@OriginalMember(owner = "client!mi", name = "Y", descriptor = "[[[Lclient!ih;")
-	public static final LinkedList[][][] aClass69ArrayArrayArray1 = new LinkedList[4][104][104];
+    @OriginalMember(owner = "client!mi", name = "Y", descriptor = "[[[Lclient!ih;")
+	public static final LinkedList[][][] objStacks = new LinkedList[4][104][104];
 
     @OriginalMember(owner = "client!mi", name = "a", descriptor = "([IBLclient!km;[I[I)V")
 	public static void method3037(@OriginalArg(0) int[] arg0, @OriginalArg(2) Npc arg1, @OriginalArg(3) int[] arg2, @OriginalArg(4) int[] arg3) {

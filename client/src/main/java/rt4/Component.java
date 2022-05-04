@@ -954,7 +954,7 @@ public final class Component {
 		}
 		@Pc(85) SoftwareSprite local85;
 		if (this.aBoolean18) {
-			local85 = Static80.loadSoftwareAlphaSprite(InterfaceList.aClass153_12, local12);
+			local85 = SoftwareSprite.loadSoftwareAlphaSprite(InterfaceList.aClass153_12, local12);
 		} else {
 			local85 = SpriteLoader.loadSoftwareSprite(0, InterfaceList.aClass153_12, local12);
 		}

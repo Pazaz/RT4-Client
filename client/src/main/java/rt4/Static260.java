@@ -6,23 +6,22 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static260 {
 
-    @OriginalMember(owner = "client!vd", name = "C", descriptor = "I")
-	public static int anInt5014 = 0;
-
-	@OriginalMember(owner = "client!vd", name = "F", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!vd", name = "F", descriptor = "Lclient!na;")
 	public static final JagString aClass100_945 = JagString.parse("0");
+    @OriginalMember(owner = "client!eg", name = "a", descriptor = "I")
+    public static int anInt1744;
 
-	@OriginalMember(owner = "client!vd", name = "a", descriptor = "(IIIIBI)V")
+    @OriginalMember(owner = "client!vd", name = "a", descriptor = "(IIIIBI)V")
 	public static void method3849(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4) {
 		Static133.anInt5230 = arg2;
 		Static265.anInt5765 = arg1;
 		Static233.anInt5217 = arg4;
 		Static251.anInt5449 = arg3;
-		Static57.anInt1744 = arg0;
+		anInt1744 = arg0;
 		if (Static233.anInt5217 >= 100) {
 			@Pc(30) int local30 = Static251.anInt5449 * 128 + 64;
 			@Pc(36) int local36 = Static265.anInt5765 * 128 + 64;
-			@Pc(44) int local44 = SceneGraph.getTileHeight(Player.level, local30, local36) - Static57.anInt1744;
+			@Pc(44) int local44 = SceneGraph.getTileHeight(Player.level, local30, local36) - anInt1744;
 			@Pc(49) int local49 = local44 - Static5.anInt40;
 			@Pc(54) int local54 = local30 - Static138.renderX;
 			@Pc(59) int local59 = local36 - Static134.renderZ;
@@ -53,115 +52,115 @@ public final class Static260 {
 		if (arg3 < 16) {
 			if (arg3 == 1) {
 				if (local10 > Static149.anInt3555) {
-					if (!Static256.method4394(local10, local24, local14)) {
+					if (!SceneGraph.method4394(local10, local24, local14)) {
 						return false;
 					}
-					if (!Static256.method4394(local10, local24, local14 + 128)) {
+					if (!SceneGraph.method4394(local10, local24, local14 + 128)) {
 						return false;
 					}
 				}
 				if (arg0 > 0) {
-					if (!Static256.method4394(local10, local28, local14)) {
+					if (!SceneGraph.method4394(local10, local28, local14)) {
 						return false;
 					}
-					if (!Static256.method4394(local10, local28, local14 + 128)) {
+					if (!SceneGraph.method4394(local10, local28, local14 + 128)) {
 						return false;
 					}
 				}
-				if (!Static256.method4394(local10, local32, local14)) {
+				if (!SceneGraph.method4394(local10, local32, local14)) {
 					return false;
 				}
-				if (!Static256.method4394(local10, local32, local14 + 128)) {
+				if (!SceneGraph.method4394(local10, local32, local14 + 128)) {
 					return false;
 				}
 				return true;
 			}
 			if (arg3 == 2) {
 				if (local14 < Static217.anInt4903) {
-					if (!Static256.method4394(local10, local24, local14 + 128)) {
+					if (!SceneGraph.method4394(local10, local24, local14 + 128)) {
 						return false;
 					}
-					if (!Static256.method4394(local10 + 128, local24, local14 + 128)) {
+					if (!SceneGraph.method4394(local10 + 128, local24, local14 + 128)) {
 						return false;
 					}
 				}
 				if (arg0 > 0) {
-					if (!Static256.method4394(local10, local28, local14 + 128)) {
+					if (!SceneGraph.method4394(local10, local28, local14 + 128)) {
 						return false;
 					}
-					if (!Static256.method4394(local10 + 128, local28, local14 + 128)) {
+					if (!SceneGraph.method4394(local10 + 128, local28, local14 + 128)) {
 						return false;
 					}
 				}
-				if (!Static256.method4394(local10, local32, local14 + 128)) {
+				if (!SceneGraph.method4394(local10, local32, local14 + 128)) {
 					return false;
 				}
-				if (!Static256.method4394(local10 + 128, local32, local14 + 128)) {
+				if (!SceneGraph.method4394(local10 + 128, local32, local14 + 128)) {
 					return false;
 				}
 				return true;
 			}
 			if (arg3 == 4) {
 				if (local10 < Static149.anInt3555) {
-					if (!Static256.method4394(local10 + 128, local24, local14)) {
+					if (!SceneGraph.method4394(local10 + 128, local24, local14)) {
 						return false;
 					}
-					if (!Static256.method4394(local10 + 128, local24, local14 + 128)) {
+					if (!SceneGraph.method4394(local10 + 128, local24, local14 + 128)) {
 						return false;
 					}
 				}
 				if (arg0 > 0) {
-					if (!Static256.method4394(local10 + 128, local28, local14)) {
+					if (!SceneGraph.method4394(local10 + 128, local28, local14)) {
 						return false;
 					}
-					if (!Static256.method4394(local10 + 128, local28, local14 + 128)) {
+					if (!SceneGraph.method4394(local10 + 128, local28, local14 + 128)) {
 						return false;
 					}
 				}
-				if (!Static256.method4394(local10 + 128, local32, local14)) {
+				if (!SceneGraph.method4394(local10 + 128, local32, local14)) {
 					return false;
 				}
-				if (!Static256.method4394(local10 + 128, local32, local14 + 128)) {
+				if (!SceneGraph.method4394(local10 + 128, local32, local14 + 128)) {
 					return false;
 				}
 				return true;
 			}
 			if (arg3 == 8) {
 				if (local14 > Static217.anInt4903) {
-					if (!Static256.method4394(local10, local24, local14)) {
+					if (!SceneGraph.method4394(local10, local24, local14)) {
 						return false;
 					}
-					if (!Static256.method4394(local10 + 128, local24, local14)) {
+					if (!SceneGraph.method4394(local10 + 128, local24, local14)) {
 						return false;
 					}
 				}
 				if (arg0 > 0) {
-					if (!Static256.method4394(local10, local28, local14)) {
+					if (!SceneGraph.method4394(local10, local28, local14)) {
 						return false;
 					}
-					if (!Static256.method4394(local10 + 128, local28, local14)) {
+					if (!SceneGraph.method4394(local10 + 128, local28, local14)) {
 						return false;
 					}
 				}
-				if (!Static256.method4394(local10, local32, local14)) {
+				if (!SceneGraph.method4394(local10, local32, local14)) {
 					return false;
 				}
-				if (!Static256.method4394(local10 + 128, local32, local14)) {
+				if (!SceneGraph.method4394(local10 + 128, local32, local14)) {
 					return false;
 				}
 				return true;
 			}
 		}
-		if (!Static256.method4394(local10 + 64, local36, local14 + 64)) {
+		if (!SceneGraph.method4394(local10 + 64, local36, local14 + 64)) {
 			return false;
 		} else if (arg3 == 16) {
-			return Static256.method4394(local10, local32, local14 + 128);
+			return SceneGraph.method4394(local10, local32, local14 + 128);
 		} else if (arg3 == 32) {
-			return Static256.method4394(local10 + 128, local32, local14 + 128);
+			return SceneGraph.method4394(local10 + 128, local32, local14 + 128);
 		} else if (arg3 == 64) {
-			return Static256.method4394(local10 + 128, local32, local14);
+			return SceneGraph.method4394(local10 + 128, local32, local14);
 		} else if (arg3 == 128) {
-			return Static256.method4394(local10, local32, local14);
+			return SceneGraph.method4394(local10, local32, local14);
 		} else {
 			return true;
 		}

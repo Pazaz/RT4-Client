@@ -6,13 +6,12 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static36 {
 
-	@OriginalMember(owner = "client!client", name = "kb", descriptor = "[[Lclient!hg;")
-	public static GlTile[][] surfaceHdTiles;
-
-	@OriginalMember(owner = "client!client", name = "lb", descriptor = "[I")
+    @OriginalMember(owner = "client!client", name = "lb", descriptor = "[I")
 	public static int[] mapFileIds;
+    @OriginalMember(owner = "client!fk", name = "e", descriptor = "I")
+    public static int anInt1885;
 
-	@OriginalMember(owner = "client!client", name = "a", descriptor = "(Lclient!be;)Lclient!be;")
+    @OriginalMember(owner = "client!client", name = "a", descriptor = "(Lclient!be;)Lclient!be;")
 	public static Component method938(@OriginalArg(0) Component arg0) {
 		@Pc(4) int local4 = InterfaceList.getServerActiveProperties(arg0).method505();
 		if (local4 == 0) {
@@ -181,12 +180,12 @@ public final class Static36 {
 									if (local212 && Static137.anInt3337 > 0) {
 										if (Static137.anInt3337 == 1 && (Static246.anInt5388 != Mouse.anInt4873 || Static165.anInt4035 != Mouse.anInt5032)) {
 											Static197.anInt4620 = WorldMap.anInt435;
-											Static71.anInt1885 = WorldMap.anInt919;
+											anInt1885 = WorldMap.anInt919;
 											Static137.anInt3337 = 2;
 										}
 										if (Static137.anInt3337 == 2) {
 											WorldMap.method1964(Static197.anInt4620 + (int) ((double) (Static246.anInt5388 - Mouse.anInt4873) * 2.0D / (double) WorldMap.targetZoom));
-											WorldMap.method4641(Static71.anInt1885 + (int) ((double) (Static165.anInt4035 - Mouse.anInt5032) * 2.0D / (double) WorldMap.targetZoom));
+											WorldMap.method4641(anInt1885 + (int) ((double) (Static165.anInt4035 - Mouse.anInt5032) * 2.0D / (double) WorldMap.targetZoom));
 										}
 										continue;
 									}

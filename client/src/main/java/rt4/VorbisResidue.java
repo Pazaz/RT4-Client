@@ -9,22 +9,22 @@ import org.openrs2.deob.annotation.Pc;
 public final class VorbisResidue {
 
 	@OriginalMember(owner = "client!vb", name = "c", descriptor = "I")
-	private final int anInt5679 = Static117.method2350(16);
+	private final int anInt5679 = VorbisSound.method2350(16);
 
 	@OriginalMember(owner = "client!vb", name = "b", descriptor = "I")
-	private final int anInt5678 = Static117.method2350(24);
+	private final int anInt5678 = VorbisSound.method2350(24);
 
 	@OriginalMember(owner = "client!vb", name = "d", descriptor = "I")
-	private final int anInt5680 = Static117.method2350(24);
+	private final int anInt5680 = VorbisSound.method2350(24);
 
 	@OriginalMember(owner = "client!vb", name = "e", descriptor = "I")
-	private final int anInt5681 = Static117.method2350(24) + 1;
+	private final int anInt5681 = VorbisSound.method2350(24) + 1;
 
 	@OriginalMember(owner = "client!vb", name = "g", descriptor = "I")
-	private final int anInt5682 = Static117.method2350(6) + 1;
+	private final int anInt5682 = VorbisSound.method2350(6) + 1;
 
 	@OriginalMember(owner = "client!vb", name = "a", descriptor = "I")
-	private final int anInt5677 = Static117.method2350(8);
+	private final int anInt5677 = VorbisSound.method2350(8);
 
 	@OriginalMember(owner = "client!vb", name = "f", descriptor = "[I")
 	private final int[] anIntArray511;
@@ -35,16 +35,16 @@ public final class VorbisResidue {
 		@Pc(35) int local35;
 		for (local35 = 0; local35 < this.anInt5682; local35++) {
 			@Pc(41) int local41 = 0;
-			@Pc(44) int local44 = Static117.method2350(3);
-			@Pc(50) boolean local50 = Static117.method2346() != 0;
+			@Pc(44) int local44 = VorbisSound.method2350(3);
+			@Pc(50) boolean local50 = VorbisSound.method2346() != 0;
 			if (local50) {
-				local41 = Static117.method2350(5);
+				local41 = VorbisSound.method2350(5);
 			}
 			local33[local35] = local41 << 3 | local44;
 		}
 		this.anIntArray511 = new int[this.anInt5682 * 8];
 		for (local35 = 0; local35 < this.anInt5682 * 8; local35++) {
-			this.anIntArray511[local35] = (local33[local35 >> 3] & 0x1 << (local35 & 0x7)) == 0 ? -1 : Static117.method2350(8);
+			this.anIntArray511[local35] = (local33[local35 >> 3] & 0x1 << (local35 & 0x7)) == 0 ? -1 : VorbisSound.method2350(8);
 		}
 	}
 
@@ -57,7 +57,7 @@ public final class VorbisResidue {
 		if (arg2) {
 			return;
 		}
-		local1 = Static117.aClass78Array1[this.anInt5677].anInt3055;
+		local1 = VorbisSound.aClass78Array1[this.anInt5677].anInt3055;
 		@Pc(25) int local25 = this.anInt5680 - this.anInt5678;
 		@Pc(30) int local30 = local25 / this.anInt5681;
 		@Pc(33) int[] local33 = new int[local30];
@@ -67,7 +67,7 @@ public final class VorbisResidue {
 				@Pc(51) int local51;
 				@Pc(55) int local55;
 				if (local35 == 0) {
-					local51 = Static117.aClass78Array1[this.anInt5677].method2415();
+					local51 = VorbisSound.aClass78Array1[this.anInt5677].method2415();
 					for (local55 = local1 - 1; local55 >= 0; local55--) {
 						if (local40 + local55 < local30) {
 							local33[local40 + local55] = local51 % this.anInt5682;
@@ -80,7 +80,7 @@ public final class VorbisResidue {
 					@Pc(96) int local96 = this.anIntArray511[local55 * 8 + local35];
 					if (local96 >= 0) {
 						@Pc(106) int local106 = this.anInt5678 + local40 * this.anInt5681;
-						@Pc(110) VorbisCodebook local110 = Static117.aClass78Array1[local96];
+						@Pc(110) VorbisCodebook local110 = VorbisSound.aClass78Array1[local96];
 						@Pc(119) int local119;
 						if (this.anInt5679 == 0) {
 							local119 = this.anInt5681 / local110.anInt3055;

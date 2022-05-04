@@ -8,6 +8,10 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!fg")
 public final class ShapedTile {
 
+	@OriginalMember(owner = "client!fg", name = "i", descriptor = "[[I")
+	public static final int[][] anIntArrayArray12 = new int[][] { { 1, 3, 5, 7 }, { 1, 3, 5, 7 }, { 1, 3, 5, 7 }, { 1, 3, 5, 7, 6 }, { 1, 3, 5, 7, 6 }, { 1, 3, 5, 7, 6 }, { 1, 3, 5, 7, 6 }, { 1, 3, 5, 7, 2, 6 }, { 1, 3, 5, 7, 2, 8 }, { 1, 3, 5, 7, 2, 8 }, { 1, 3, 5, 7, 11, 12 }, { 1, 3, 5, 7, 11, 12 }, { 1, 3, 5, 7, 13, 14 } };
+	@OriginalMember(owner = "client!fg", name = "j", descriptor = "[[I")
+	public static final int[][] anIntArrayArray13 = new int[][] { { 0, 1, 2, 3, 0, 0, 1, 3 }, { 1, 1, 2, 3, 1, 0, 1, 3 }, { 0, 1, 2, 3, 1, 0, 1, 3 }, { 0, 0, 1, 2, 0, 0, 2, 4, 1, 0, 4, 3 }, { 0, 0, 1, 4, 0, 0, 4, 3, 1, 1, 2, 4 }, { 0, 0, 4, 3, 1, 0, 1, 2, 1, 0, 2, 4 }, { 0, 1, 2, 4, 1, 0, 1, 4, 1, 0, 4, 3 }, { 0, 4, 1, 2, 0, 4, 2, 5, 1, 0, 4, 5, 1, 0, 5, 3 }, { 0, 4, 1, 2, 0, 4, 2, 3, 0, 4, 3, 5, 1, 0, 4, 5 }, { 0, 0, 4, 5, 1, 4, 1, 2, 1, 4, 2, 3, 1, 4, 3, 5 }, { 0, 0, 1, 5, 0, 1, 4, 5, 0, 1, 2, 4, 1, 0, 5, 3, 1, 5, 4, 3, 1, 4, 2, 3 }, { 1, 0, 1, 5, 1, 1, 4, 5, 1, 1, 2, 4, 0, 0, 5, 3, 0, 5, 4, 3, 0, 4, 2, 3 }, { 1, 0, 5, 4, 1, 0, 1, 5, 0, 0, 4, 3, 0, 4, 5, 3, 0, 5, 2, 3, 0, 1, 2, 5 } };
 	@OriginalMember(owner = "client!fg", name = "s", descriptor = "Z")
 	public boolean aBoolean113 = true;
 
@@ -66,7 +70,7 @@ public final class ShapedTile {
 		@Pc(34) int local34 = local30 / 2;
 		@Pc(38) int local38 = local30 / 4;
 		@Pc(44) int local44 = local30 * 3 / 4;
-		@Pc(48) int[] local48 = Static68.anIntArrayArray12[arg0];
+		@Pc(48) int[] local48 = anIntArrayArray12[arg0];
 		@Pc(51) int local51 = local48.length;
 		this.anIntArray168 = new int[local51];
 		this.anIntArray160 = new int[local51];
@@ -195,7 +199,7 @@ public final class ShapedTile {
 			local66[local79] = local148;
 			local69[local79] = local150;
 		}
-		@Pc(534) int[] local534 = Static68.anIntArrayArray13[arg0];
+		@Pc(534) int[] local534 = anIntArrayArray13[arg0];
 		local86 = local534.length / 4;
 		this.anIntArray166 = new int[local86];
 		this.anIntArray162 = new int[local86];

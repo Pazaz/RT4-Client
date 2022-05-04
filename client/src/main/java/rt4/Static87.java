@@ -80,9 +80,9 @@ public final class Static87 {
 	@OriginalMember(owner = "client!gn", name = "a", descriptor = "(III[Lclient!be;IIIIBI)V")
 	public static void method1809(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) Component[] arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(9) int arg8) {
 		if (GlRenderer.enabled) {
-			GlRaster.method1187(arg0, arg6, arg4, arg7);
+			GlRaster.setClip(arg0, arg6, arg4, arg7);
 		} else {
-			SoftwareRaster.method2496(arg0, arg6, arg4, arg7);
+			SoftwareRaster.setClip(arg0, arg6, arg4, arg7);
 			Rasteriser.prepare();
 		}
 		for (@Pc(18) int local18 = 0; local18 < arg3.length; local18++) {
@@ -180,9 +180,9 @@ public final class Static87 {
 								Static97.anInt2503 = local123;
 								Static253.method4326(local30.anInt459, local30.anInt453 == 1403, local123, local30.anInt445, local114);
 								if (GlRenderer.enabled) {
-									GlRaster.method1187(arg0, arg6, arg4, arg7);
+									GlRaster.setClip(arg0, arg6, arg4, arg7);
 								} else {
-									SoftwareRaster.method2496(arg0, arg6, arg4, arg7);
+									SoftwareRaster.setClip(arg0, arg6, arg4, arg7);
 								}
 								continue;
 							}
@@ -190,13 +190,13 @@ public final class Static87 {
 								if (!local30.method478()) {
 									continue;
 								}
-								Static54.method1305(local57, local114, local123, local30);
+								MiniMap.render(local57, local114, local123, local30);
 								if (GlRenderer.enabled) {
-									GlRaster.method1187(arg0, arg6, arg4, arg7);
+									GlRaster.setClip(arg0, arg6, arg4, arg7);
 								} else {
-									SoftwareRaster.method2496(arg0, arg6, arg4, arg7);
+									SoftwareRaster.setClip(arg0, arg6, arg4, arg7);
 								}
-								if (Static270.minimapState != 0 && Static270.minimapState != 3 || Static60.aBoolean108 || local166 > Static155.anInt3751 || Static60.anInt1892 < local164 || Static155.anInt3751 >= local302 || local291 <= Static60.anInt1892) {
+								if (MiniMap.state != 0 && MiniMap.state != 3 || Static60.aBoolean108 || local166 > Static155.anInt3751 || Static60.anInt1892 < local164 || Static155.anInt3751 >= local302 || local291 <= Static60.anInt1892) {
 									continue;
 								}
 								local270 = Static155.anInt3751 - local123;
@@ -210,18 +210,18 @@ public final class Static87 {
 								local270 -= local30.anInt445 / 2;
 								color = MathUtils.sin[memory];
 								cardMemory = MathUtils.cos[memory];
-								color = (Static273.anInt4130 + 256) * color >> 8;
-								cardMemory = (Static273.anInt4130 + 256) * cardMemory >> 8;
+								color = (MiniMap.anInt4130 + 256) * color >> 8;
+								cardMemory = (MiniMap.anInt4130 + 256) * cardMemory >> 8;
 								local545 = cardMemory * local276 - color * local270 >> 11;
 								local556 = local276 * color + local270 * cardMemory >> 11;
 								local563 = PlayerList.self.xFine + local556 >> 7;
 								local571 = PlayerList.self.zFine - local545 >> 7;
-								if (Static241.aBoolean302 && (Static274.anInt4999 & 0x40) != 0) {
-									@Pc(583) Component local583 = Static201.method1418(Static98.anInt2512, Static15.anInt506);
+								if (Static241.aBoolean302 && (MiniMenu.anInt4999 & 0x40) != 0) {
+									@Pc(583) Component local583 = Static201.method1418(MiniMenu.anInt2512, MiniMenu.anInt506);
 									if (local583 == null) {
 										Static53.method1294();
 									} else {
-										MiniMenu.add(Static246.anInt5393, 1L, Static225.aClass100_961, local563, (short) 11, MiniMenu.aClass100_545, local571);
+										MiniMenu.add(Static246.anInt5393, 1L, MiniMenu.aClass100_961, local563, (short) 11, MiniMenu.aClass100_545, local571);
 									}
 									continue;
 								}
@@ -235,9 +235,9 @@ public final class Static87 {
 								if (local30.method478()) {
 									Static160.method3047(local123, local114, local30, local57);
 									if (GlRenderer.enabled) {
-										GlRaster.method1187(arg0, arg6, arg4, arg7);
+										GlRaster.setClip(arg0, arg6, arg4, arg7);
 									} else {
-										SoftwareRaster.method2496(arg0, arg6, arg4, arg7);
+										SoftwareRaster.setClip(arg0, arg6, arg4, arg7);
 									}
 								}
 								continue;
@@ -247,9 +247,9 @@ public final class Static87 {
 								Static186.aBooleanArray100[local57] = true;
 								InterfaceList.rectangleRedraw[local57] = true;
 								if (GlRenderer.enabled) {
-									GlRaster.method1187(arg0, arg6, arg4, arg7);
+									GlRaster.setClip(arg0, arg6, arg4, arg7);
 								} else {
-									SoftwareRaster.method2496(arg0, arg6, arg4, arg7);
+									SoftwareRaster.setClip(arg0, arg6, arg4, arg7);
 								}
 								continue;
 							}
@@ -258,9 +258,9 @@ public final class Static87 {
 								Static186.aBooleanArray100[local57] = true;
 								InterfaceList.rectangleRedraw[local57] = true;
 								if (GlRenderer.enabled) {
-									GlRaster.method1187(arg0, arg6, arg4, arg7);
+									GlRaster.setClip(arg0, arg6, arg4, arg7);
 								} else {
-									SoftwareRaster.method2496(arg0, arg6, arg4, arg7);
+									SoftwareRaster.setClip(arg0, arg6, arg4, arg7);
 								}
 								continue;
 							}
@@ -278,7 +278,7 @@ public final class Static87 {
 								}
 								local270 = local30.anInt445 + local123;
 								local276 = local114 + 15;
-								Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Cheat.DEBUG_FPS2, Static123.parseInt((int)GameShell.framesPerSecond) }), local270, local276, 16776960, 0);
+								Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Cheat.DEBUG_FPS2, JagString.parseInt((int)GameShell.framesPerSecond) }), local270, local276, 16776960, 0);
 								local276 += 15;
 								@Pc(795) Runtime runtime = Runtime.getRuntime();
 								memory = (int) ((runtime.totalMemory() - runtime.freeMemory()) / 1024L / 1024L);
@@ -286,7 +286,7 @@ public final class Static87 {
 								if (memory > 128) {
 									color = 16711680;
 								}
-								Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Cheat.DEBUG_MEM, Static123.parseInt(memory), Cheat.DEBUG_MEM_UNIT}), local270, local276, color, 0);
+								Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Cheat.DEBUG_MEM, JagString.parseInt(memory), Cheat.DEBUG_MEM_UNIT}), local270, local276, color, 0);
 								local276 += 15;
 								if (GlRenderer.enabled) {
 									color = 16776960;
@@ -294,7 +294,7 @@ public final class Static87 {
 									if (cardMemory > 64) {
 										color = 16711680;
 									}
-									Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Cheat.DEBUG_CARD, Static123.parseInt(cardMemory), Cheat.DEBUG_MEM_UNIT}), local270, local276, color, 0);
+									Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Cheat.DEBUG_CARD, JagString.parseInt(cardMemory), Cheat.DEBUG_MEM_UNIT}), local270, local276, color, 0);
 									local276 += 15;
 								}
 								cardMemory = 0;
@@ -307,7 +307,7 @@ public final class Static87 {
 								}
 								local571 = local556 * 10000 / cardMemory;
 								local563 = local545 * 100 / cardMemory;
-								@Pc(968) JagString local968 = JagString.concatenate(new JagString[] { Cheat.DEBUG_CAHE, Static182.valueToBase10String(0, true, 2, (long) local571), Static147.aClass100_672, Static123.parseInt(local563), Static14.aClass100_80 });
+								@Pc(968) JagString local968 = JagString.concatenate(new JagString[] { Cheat.DEBUG_CAHE, Static182.valueToBase10String(0, true, 2, (long) local571), Static147.aClass100_672, JagString.parseInt(local563), Static14.aClass100_80 });
 								Fonts.p11Full.renderRight(local968, local270, local276, 16776960, 0);
 								local276 += 12;
 								Static186.aBooleanArray100[local57] = true;
@@ -361,9 +361,9 @@ public final class Static87 {
 								Static6.method86(local1186.anInt5878, local166, local302, local123, local57, local291, local164, local114);
 							}
 							if (GlRenderer.enabled) {
-								GlRaster.method1187(arg0, arg6, arg4, arg7);
+								GlRaster.setClip(arg0, arg6, arg4, arg7);
 							} else {
-								SoftwareRaster.method2496(arg0, arg6, arg4, arg7);
+								SoftwareRaster.setClip(arg0, arg6, arg4, arg7);
 								Rasteriser.prepare();
 							}
 						}
@@ -386,7 +386,7 @@ public final class Static87 {
 												local545 = local30.objTypes[local270] - 1;
 												if (arg0 < memory + 32 && memory < arg4 && arg6 < color + 32 && color < arg7 || local30 == Static118.aClass13_15 && Static4.anInt36 == local270) {
 													@Pc(1476) Sprite local1476;
-													if (Static260.anInt5014 == 1 && Static185.anInt4370 == local270 && local30.id == Static224.anInt5062) {
+													if (MiniMenu.anInt5014 == 1 && Static185.anInt4370 == local270 && local30.id == Static224.anInt5062) {
 														local1476 = Static190.method3443(2, local545, local30.aBoolean31, local30.objCounts[local270], 0);
 													} else {
 														local1476 = Static190.method3443(1, local545, local30.aBoolean31, local30.objCounts[local270], 3153952);
@@ -447,16 +447,16 @@ public final class Static87 {
 																InterfaceList.redraw(local1571);
 															}
 														}
-													} else if (local30 == Static257.aClass13_7 && local270 == Static250.anInt5444) {
+													} else if (local30 == MiniMenu.aClass13_7 && local270 == Static250.anInt5444) {
 														local1476.method1417(memory, color, 128);
 													} else {
-														local1476.method1423(memory, color);
+														local1476.renderTransparent(memory, color);
 													}
 												}
 											} else if (local30.anIntArray36 != null && local270 < 20) {
 												@Pc(1381) Sprite local1381 = local30.method482(local270);
 												if (local1381 != null) {
-													local1381.method1423(memory, color);
+													local1381.renderTransparent(memory, color);
 												} else if (Static211.aBoolean72) {
 													InterfaceList.redraw(local30);
 												}
@@ -526,7 +526,7 @@ public final class Static87 {
 													local1934 = Static92.NULL;
 												}
 												if ((local1989.stackable == 1 || local30.objCount != 1) && local30.objCount != -1) {
-													local1934 = JagString.concatenate(new JagString[] { Static8.aClass100_32, local1934, Static54.aClass100_375, Static70.method1548(local30.objCount) });
+													local1934 = JagString.concatenate(new JagString[] { MiniMenu.aClass100_32, local1934, Static54.aClass100_375, Static70.method1548(local30.objCount) });
 												}
 											}
 											if (Static39.aClass13_10 == local30) {
@@ -585,14 +585,14 @@ public final class Static87 {
 															for (local563 = 0; local563 < memory; local563++) {
 																for (local571 = 0; local571 < color; local571++) {
 																	if (local117 == 0) {
-																		local2094.method1423(local123 + local276 * local563, local468 * local571 + local114);
+																		local2094.renderTransparent(local123 + local276 * local563, local468 * local571 + local114);
 																	} else {
 																		local2094.method1417(local563 * local276 + local123, local468 * local571 + local114, 256 - (local117 & 0xFF));
 																	}
 																}
 															}
 														}
-														GlRaster.method1187(arg0, arg6, arg4, arg7);
+														GlRaster.setClip(arg0, arg6, arg4, arg7);
 													} else {
 														SoftwareRaster.method2498(local123, local114, local123 + local30.anInt445, local114 - -local30.anInt459);
 														for (cardMemory = 0; cardMemory < memory; cardMemory++) {
@@ -600,13 +600,13 @@ public final class Static87 {
 																if (local30.anInt521 != 0) {
 																	local2094.method1420(local114 + local468 * local556 + local468 / 2, local30.anInt521, 4096, cardMemory * local276 + local123 + local276 / 2);
 																} else if (local117 == 0) {
-																	local2094.method1423(cardMemory * local276 + local123, local468 * local556 + local114);
+																	local2094.renderTransparent(cardMemory * local276 + local123, local468 * local556 + local114);
 																} else {
 																	local2094.method1417(cardMemory * local276 + local123, local114 + local556 * local468, 256 - (local117 & 0xFF));
 																}
 															}
 														}
-														SoftwareRaster.method2496(arg0, arg6, arg4, arg7);
+														SoftwareRaster.setClip(arg0, arg6, arg4, arg7);
 													}
 												} else {
 													memory = local30.anInt445 * 4096 / local276;
@@ -615,7 +615,7 @@ public final class Static87 {
 													} else if (local117 != 0) {
 														local2094.method1422(local123, local114, local30.anInt445, local30.anInt459, 256 - (local117 & 0xFF));
 													} else if (local276 == local30.anInt445 && local468 == local30.anInt459) {
-														local2094.method1423(local123, local114);
+														local2094.renderTransparent(local123, local114);
 													} else {
 														local2094.renderResizedTransparent(local123, local114, local30.anInt445, local30.anInt459);
 													}
@@ -626,7 +626,7 @@ public final class Static87 {
 										} else {
 											local2094 = local30.method489(Static154.method2926(local30));
 											if (local2094 != null) {
-												local2094.method1423(local123, local114);
+												local2094.renderTransparent(local123, local114);
 											} else if (Static211.aBoolean72) {
 												InterfaceList.redraw(local30);
 											}
@@ -707,7 +707,7 @@ public final class Static87 {
 													if (Static263.aBoolean299) {
 														GlRaster.method1177();
 														GlRenderer.clearDepthBuffer();
-														GlRaster.method1187(arg0, arg6, arg4, arg7);
+														GlRaster.setClip(arg0, arg6, arg4, arg7);
 														Static263.aBoolean299 = false;
 													}
 													if (local30.aBoolean34) {
@@ -753,9 +753,9 @@ public final class Static87 {
 															local2611 = ObjTypeList.get(local30.objTypes[local276] - 1);
 															@Pc(3159) JagString local3159;
 															if (local2611.stackable != 1 && local30.objCounts[local276] == 1) {
-																local3159 = JagString.concatenate(new JagString[] { Static8.aClass100_32, local2611.name, Static230.aClass100_978 });
+																local3159 = JagString.concatenate(new JagString[] { MiniMenu.aClass100_32, local2611.name, Static70.aClass100_978 });
 															} else {
-																local3159 = JagString.concatenate(new JagString[] { Static8.aClass100_32, local2611.name, Static54.aClass100_375, Static70.method1548(local30.objCounts[local276]) });
+																local3159 = JagString.concatenate(new JagString[] { MiniMenu.aClass100_32, local2611.name, Static54.aClass100_375, Static70.method1548(local30.objCounts[local276]) });
 															}
 															local556 = local123 + memory * (local30.anInt512 + 115);
 															local545 = (local30.anInt516 + 12) * local468 + local114;

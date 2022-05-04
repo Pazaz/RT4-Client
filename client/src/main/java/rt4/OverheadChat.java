@@ -22,8 +22,8 @@ public class OverheadChat {
                 }
             }
         }
-        for (local11 = 0; local11 < Static272.anInt5214; local11++) {
-            @Pc(68) int local68 = Static33.anIntArray79[local11];
+        for (local11 = 0; local11 < NpcList.size; local11++) {
+            @Pc(68) int local68 = NpcList.ids[local11];
             @Pc(72) Npc local72 = NpcList.npcs[local68];
             if (local72 != null && local72.chatLoops > 0) {
                 local72.chatLoops--;

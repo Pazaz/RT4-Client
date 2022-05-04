@@ -10,25 +10,24 @@ public final class Static158 {
 
 	@OriginalMember(owner = "client!mh", name = "X", descriptor = "I")
 	public static int anInt3851 = -1;
+    @OriginalMember(owner = "client!mg", name = "Q", descriptor = "I")
+    public static int anInt3811 = 0;
 
-	@OriginalMember(owner = "client!mh", name = "Y", descriptor = "Z")
-	public static boolean aBoolean187 = false;
-
-	@OriginalMember(owner = "client!mh", name = "h", descriptor = "(B)V")
+    @OriginalMember(owner = "client!mh", name = "h", descriptor = "(B)V")
 	public static void decodeNpcFiles() {
 		@Pc(10) int local10 = Static191.npcSpawnsFilesBuffer.length;
 		for (@Pc(16) int local16 = 0; local16 < local10; local16++) {
 			if (Static191.npcSpawnsFilesBuffer[local16] != null) {
 				@Pc(25) int local25 = -1;
-				for (@Pc(27) int local27 = 0; local27 < Static157.anInt3811; local27++) {
+				for (@Pc(27) int local27 = 0; local27 < anInt3811; local27++) {
 					if (Static217.anIntArray434[local27] == Static238.regionBitPacked[local16]) {
 						local25 = local27;
 						break;
 					}
 				}
 				if (local25 == -1) {
-					Static217.anIntArray434[Static157.anInt3811] = Static238.regionBitPacked[local16];
-					local25 = Static157.anInt3811++;
+					Static217.anIntArray434[anInt3811] = Static238.regionBitPacked[local16];
+					local25 = anInt3811++;
 				}
 				@Pc(67) int local67 = 0;
 				@Pc(74) Buffer local74 = new Buffer(Static191.npcSpawnsFilesBuffer[local16]);
@@ -44,7 +43,7 @@ public final class Static158 {
 					if (NpcList.npcs[local97] == null && (local148.aByte10 & 0x1) > 0 && local107 == Static41.anInt1316 && local125 >= 0 && local148.size + local125 < 104 && local142 >= 0 && local142 + local148.size < 104) {
 						NpcList.npcs[local97] = new Npc();
 						@Pc(198) Npc local198 = NpcList.npcs[local97];
-						Static33.anIntArray79[Static272.anInt5214++] = local97;
+						NpcList.ids[NpcList.size++] = local97;
 						local198.lastSeenLoop = client.loop;
 						local198.setNpcType(local148);
 						local198.method2692(local198.type.size);

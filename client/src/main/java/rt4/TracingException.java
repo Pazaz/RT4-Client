@@ -30,7 +30,7 @@ public final class TracingException extends RuntimeException {
                 }
                 local13 = local13 + arg0;
             }
-            Static5.method31(local13);
+            method31(local13);
             local13 = Static40.method1014(":", "%3a", local13);
             local13 = Static40.method1014("@", "%40", local13);
             local13 = Static40.method1014("&", "%26", local13);
@@ -49,5 +49,10 @@ public final class TracingException extends RuntimeException {
             }
         } catch (@Pc(135) Exception local135) {
         }
+    }
+
+    @OriginalMember(owner = "client!af", name = "a", descriptor = "(ILjava/lang/String;)V")
+    public static void method31(@OriginalArg(1) String arg0) {
+        System.out.println("Error: " + Static40.method1014("%0a", "\n", arg0));
     }
 }

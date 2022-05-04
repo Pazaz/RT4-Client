@@ -6,7 +6,9 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static270 {
 
-	@OriginalMember(owner = "client!wb", name = "b", descriptor = "[I")
+    @OriginalMember(owner = "client!ii", name = "e", descriptor = "Lclient!na;")
+	public static final JagString aClass100_570 = JagString.parse(")2");
+    @OriginalMember(owner = "client!wb", name = "b", descriptor = "[I")
 	public static int[] anIntArray562;
 
 	@OriginalMember(owner = "client!wb", name = "a", descriptor = "Lclient!na;")
@@ -15,10 +17,7 @@ public final class Static270 {
 	@OriginalMember(owner = "client!wb", name = "c", descriptor = "I")
 	public static int anInt5794 = -1;
 
-	@OriginalMember(owner = "client!wb", name = "d", descriptor = "I")
-	public static int minimapState = 0;
-
-	@OriginalMember(owner = "client!wb", name = "e", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!wb", name = "e", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1090 = JagString.parse("l");
 
     @OriginalMember(owner = "client!wb", name = "a", descriptor = "(IIIIIIII)V")
@@ -140,15 +139,15 @@ public final class Static270 {
 		} else if (arg1 == 2) {
 			return arg0.getWorldInfo().name.method3126(arg2.getWorldInfo().name);
 		} else if (arg1 == 3) {
-			if (arg0.activity.strEquals(Static111.aClass100_570)) {
-				if (arg2.activity.strEquals(Static111.aClass100_570)) {
+			if (arg0.activity.strEquals(aClass100_570)) {
+				if (arg2.activity.strEquals(aClass100_570)) {
 					return 0;
 				} else if (arg3) {
 					return -1;
 				} else {
 					return 1;
 				}
-			} else if (arg2.activity.strEquals(Static111.aClass100_570)) {
+			} else if (arg2.activity.strEquals(aClass100_570)) {
 				return arg3 ? 1 : -1;
 			} else {
 				return arg0.activity.method3126(arg2.activity);

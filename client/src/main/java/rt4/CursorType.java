@@ -23,7 +23,7 @@ public final class CursorType {
 		if (local7 != null) {
 			return local7;
 		}
-		local7 = Static80.loadSoftwareAlphaSprite(CursorTypeList.spritesArchive, this.spriteId);
+		local7 = SoftwareSprite.loadSoftwareAlphaSprite(CursorTypeList.spritesArchive, this.spriteId);
 		if (local7 != null) {
 			CursorTypeList.sprites.put(local7, (long) this.spriteId);
 		}

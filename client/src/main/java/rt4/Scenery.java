@@ -43,5 +43,5 @@ public final class Scenery {
 	public int anInt1714;
 
 	@OriginalMember(owner = "client!ec", name = "A", descriptor = "J")
-	public long aLong56 = 0L;
+	public long key = 0L;
 }

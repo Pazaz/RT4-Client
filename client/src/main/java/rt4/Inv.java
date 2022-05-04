@@ -12,6 +12,8 @@ public final class Inv extends Node {
     public static final int[] updatedInventories = new int[32];
     @OriginalMember(owner = "client!ii", name = "c", descriptor = "I")
     public static int updatedInventoriesWriterIndex = 0;
+    @OriginalMember(owner = "client!bj", name = "v", descriptor = "Lclient!sc;")
+    public static HashTable objectContainerCache = new HashTable(32);
     @OriginalMember(owner = "client!qe", name = "p", descriptor = "[I")
 	public int[] objectIds = new int[] { -1 };
 
@@ -23,7 +25,7 @@ public final class Inv extends Node {
         if (arg0 < 0) {
             return 0;
         }
-        @Pc(17) Inv local17 = (Inv) Static20.objectContainerCache.get((long) arg0);
+        @Pc(17) Inv local17 = (Inv) objectContainerCache.get((long) arg0);
         if (local17 == null) {
             return InvTypeList.list(arg0).size;
         }
@@ -38,7 +40,7 @@ public final class Inv extends Node {
 
     @OriginalMember(owner = "client!od", name = "a", descriptor = "(IZII)I")
     public static int getTotalParam(@OriginalArg(1) boolean arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-        @Pc(19) Inv local19 = (Inv) Static20.objectContainerCache.get((long) arg1);
+        @Pc(19) Inv local19 = (Inv) objectContainerCache.get((long) arg1);
         if (local19 == null) {
             return 0;
         }
@@ -63,7 +65,7 @@ public final class Inv extends Node {
 
     @OriginalMember(owner = "client!wj", name = "a", descriptor = "(BII)I")
     public static int getSlotTotal(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
-        @Pc(8) Inv local8 = (Inv) Static20.objectContainerCache.get((long) arg0);
+        @Pc(8) Inv local8 = (Inv) objectContainerCache.get((long) arg0);
         if (local8 == null) {
             return 0;
         } else if (arg1 == -1) {
@@ -81,7 +83,7 @@ public final class Inv extends Node {
 
     @OriginalMember(owner = "client!bm", name = "a", descriptor = "(III)I")
     public static int getItemCount(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
-        @Pc(10) Inv local10 = (Inv) Static20.objectContainerCache.get((long) arg0);
+        @Pc(10) Inv local10 = (Inv) objectContainerCache.get((long) arg0);
         if (local10 == null) {
             return 0;
         } else if (arg1 >= 0 && arg1 < local10.anIntArray422.length) {
@@ -93,7 +95,7 @@ public final class Inv extends Node {
 
     @OriginalMember(owner = "client!be", name = "a", descriptor = "(III)I")
     public static int getItemType(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-        @Pc(10) Inv local10 = (Inv) Static20.objectContainerCache.get((long) arg0);
+        @Pc(10) Inv local10 = (Inv) objectContainerCache.get((long) arg0);
         if (local10 == null) {
             return -1;
         } else if (arg1 >= 0 && arg1 < local10.objectIds.length) {
@@ -105,7 +107,7 @@ public final class Inv extends Node {
 
     @OriginalMember(owner = "client!bc", name = "d", descriptor = "(II)V")
     public static void delete(@OriginalArg(0) int arg0) {
-        @Pc(14) Inv local14 = (Inv) Static20.objectContainerCache.get((long) arg0);
+        @Pc(14) Inv local14 = (Inv) objectContainerCache.get((long) arg0);
         if (local14 != null) {
             local14.unlink();
         }

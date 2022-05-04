@@ -6,6 +6,8 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static228 {
 
+    @OriginalMember(owner = "client!dc", name = "db", descriptor = "[[B")
+    public static final byte[][] aByteArrayArray6 = new byte[50][];
     @OriginalMember(owner = "client!sh", name = "c", descriptor = "I")
 	public static int anInt5101 = 0;
 
@@ -33,8 +35,8 @@ public final class Static228 {
 			Static12.aByteArrayArray2[Static251.anInt5459] = null;
 			return local22;
 		} else if (arg0 == 30000 && Static224.anInt5064 > 0) {
-			local22 = Static41.aByteArrayArray6[--Static224.anInt5064];
-			Static41.aByteArrayArray6[Static224.anInt5064] = null;
+			local22 = aByteArrayArray6[--Static224.anInt5064];
+			aByteArrayArray6[Static224.anInt5064] = null;
 			return local22;
 		} else {
 			return new byte[arg0];

@@ -16,7 +16,7 @@ public final class Static84 {
 
 	@OriginalMember(owner = "client!gk", name = "b", descriptor = "(B)V")
 	public static void method1771() {
-		Static62.anIntArray150 = Static206.method3679(0.4F);
+		Light.anIntArray150 = Static206.method3679(0.4F);
 	}
 
 	@OriginalMember(owner = "client!gk", name = "a", descriptor = "(Lclient!rg;Lclient!rg;B)V")

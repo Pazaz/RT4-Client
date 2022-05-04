@@ -34,11 +34,11 @@ public final class Static26 {
 			for (@Pc(97) int local97 = (local23 - 6) / 8; local97 <= (local23 + 6) / 8; local97++) {
 				@Pc(115) int local115 = (local80 << 8) + local97;
 				Static238.regionBitPacked[local74] = local115;
-				Static36.mapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static103.aClass100_558, Static123.parseInt(local80), Static86.aClass100_488, Static123.parseInt(local97) }));
-				Static172.locationsMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static270.aClass100_1090, Static123.parseInt(local80), Static86.aClass100_488, Static123.parseInt(local97) }));
-				Static175.npcSpawnsFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static179.aClass100_807, Static123.parseInt(local80), Static86.aClass100_488, Static123.parseInt(local97) }));
-				Static99.underWaterMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static165.aClass100_772, Static123.parseInt(local80), Static86.aClass100_488, Static123.parseInt(local97) }));
-				Static35.underWaterLocationsMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static278.aClass100_1103, Static123.parseInt(local80), Static86.aClass100_488, Static123.parseInt(local97) }));
+				Static36.mapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static103.aClass100_558, JagString.parseInt(local80), Static86.aClass100_488, JagString.parseInt(local97) }));
+				Static172.locationsMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static270.aClass100_1090, JagString.parseInt(local80), Static86.aClass100_488, JagString.parseInt(local97) }));
+				Static175.npcSpawnsFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static179.aClass100_807, JagString.parseInt(local80), Static86.aClass100_488, JagString.parseInt(local97) }));
+				Static99.underWaterMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static165.aClass100_772, JagString.parseInt(local80), Static86.aClass100_488, JagString.parseInt(local97) }));
+				Static35.underWaterLocationsMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static278.aClass100_1103, JagString.parseInt(local80), Static86.aClass100_488, JagString.parseInt(local97) }));
 				if (Static175.npcSpawnsFileIds[local74] == -1) {
 					Static36.mapFileIds[local74] = -1;
 					Static172.locationsMapFileIds[local74] = -1;

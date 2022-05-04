@@ -48,19 +48,19 @@ public final class Static266 {
 				@Pc(22) Tile local22 = SceneGraph.tiles[arg0.anInt1709][local2][local9];
 				if (local22 != null) {
 					@Pc(26) int local26;
-					for (local26 = 0; local26 < local22.anInt662; local26++) {
-						if (local22.aClass31Array1[local26] == arg0) {
-							local22.anInt662--;
-							for (@Pc(44) int local44 = local26; local44 < local22.anInt662; local44++) {
-								local22.aClass31Array1[local44] = local22.aClass31Array1[local44 + 1];
+					for (local26 = 0; local26 < local22.sceneryLen; local26++) {
+						if (local22.scenery[local26] == arg0) {
+							local22.sceneryLen--;
+							for (@Pc(44) int local44 = local26; local44 < local22.sceneryLen; local44++) {
+								local22.scenery[local44] = local22.scenery[local44 + 1];
 								local22.anIntArray59[local44] = local22.anIntArray59[local44 + 1];
 							}
-							local22.aClass31Array1[local22.anInt662] = null;
+							local22.scenery[local22.sceneryLen] = null;
 							break;
 						}
 					}
 					local22.anInt664 = 0;
-					for (local26 = 0; local26 < local22.anInt662; local26++) {
+					for (local26 = 0; local26 < local22.sceneryLen; local26++) {
 						local22.anInt664 |= local22.anIntArray59[local26];
 					}
 				}

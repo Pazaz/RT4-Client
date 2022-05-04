@@ -52,13 +52,13 @@ public final class Static92 {
 			}
 			@Pc(255) Scenery local255 = SceneGraph.getScenery(arg0, arg5, arg3);
 			if (local255 != null) {
-				local255.primary = new Loc((int) (local255.aLong56 >>> 32) & Integer.MAX_VALUE, arg2, arg1, arg0, arg5, arg3, arg6, false, local255.primary);
+				local255.primary = new Loc((int) (local255.key >>> 32) & Integer.MAX_VALUE, arg2, arg1, arg0, arg5, arg3, arg6, false, local255.primary);
 			}
 		}
 		if (arg4 == 3) {
 			@Pc(290) GroundDecor local290 = SceneGraph.getGroundDecor(arg0, arg5, arg3);
 			if (local290 != null) {
-				local290.primary = new Loc(Integer.MAX_VALUE & (int) (local290.aLong26 >>> 32), 22, arg1, arg0, arg5, arg3, arg6, false, local290.primary);
+				local290.primary = new Loc(Integer.MAX_VALUE & (int) (local290.key >>> 32), 22, arg1, arg0, arg5, arg3, arg6, false, local290.primary);
 			}
 		}
 	}

@@ -7,6 +7,8 @@ import org.openrs2.deob.annotation.Pc;
 public class IgnoreList {
     @OriginalMember(owner = "client!pf", name = "h", descriptor = "[J")
     public static final long[] encodedUsernames = new long[100];
+    @OriginalMember(owner = "client!pi", name = "V", descriptor = "[Lclient!na;")
+    public static final JagString[] aClass100Array134 = new JagString[100];
     @OriginalMember(owner = "client!cl", name = "Z", descriptor = "I")
     public static int size = 0;
 
@@ -16,7 +18,7 @@ public class IgnoreList {
             return false;
         }
         for (@Pc(11) int local11 = 0; local11 < size; local11++) {
-            if (arg0.equalsIgnoreCase(Static193.aClass100Array134[local11])) {
+            if (arg0.equalsIgnoreCase(aClass100Array134[local11])) {
                 return true;
             }
         }
@@ -51,7 +53,7 @@ public class IgnoreList {
             return;
         }
         encodedUsernames[size] = arg0;
-        Static193.aClass100Array134[size++] = Base37.decode37(arg0);
+        aClass100Array134[size++] = Base37.decode37(arg0);
         FriendsList.transmitAt = InterfaceList.transmitTimer;
         Protocol.outboundBuffer.p1isaac(34);
         Protocol.outboundBuffer.p8(arg0);
@@ -67,7 +69,7 @@ public class IgnoreList {
                 size--;
                 for (@Pc(36) int local36 = local12; local36 < size; local36++) {
                     encodedUsernames[local36] = encodedUsernames[local36 + 1];
-                    Static193.aClass100Array134[local36] = Static193.aClass100Array134[local36 + 1];
+                    aClass100Array134[local36] = aClass100Array134[local36 + 1];
                 }
                 FriendsList.transmitAt = InterfaceList.transmitTimer;
                 Protocol.outboundBuffer.p1isaac(213);

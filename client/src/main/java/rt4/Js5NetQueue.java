@@ -199,7 +199,7 @@ public final class Js5NetQueue {
 	}
 
 	@OriginalMember(owner = "client!jb", name = "a", descriptor = "(Z)V")
-	public final void method2319() {
+	public final void drop() {
 		if (this.aClass95_1 == null) {
 			return;
 		}
@@ -246,7 +246,7 @@ public final class Js5NetQueue {
 	}
 
 	@OriginalMember(owner = "client!jb", name = "c", descriptor = "(I)V")
-	public final void method2323() {
+	public final void breakConnection() {
 		if (this.aClass95_1 != null) {
 			this.aClass95_1.breakConnection();
 		}
