@@ -55,7 +55,7 @@ public final class ServerActiveProperties extends Node {
 	}
 
 	@OriginalMember(owner = "client!bf", name = "h", descriptor = "(I)Z")
-	public final boolean method510() {
+	public final boolean isObjOpsEnabled() {
 		return (this.accessMask >> 30 & 0x1) != 0;
 	}
 

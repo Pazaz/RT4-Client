@@ -23,7 +23,7 @@ public final class Static271 {
 
 	@OriginalMember(owner = "client!wc", name = "a", descriptor = "(ZI)V")
 	public static void method4600(@OriginalArg(1) int arg0) {
-		@Pc(8) DelayedStateChange local8 = Static238.method4143(4, arg0);
+		@Pc(8) DelayedStateChange local8 = DelayedStateChange.create(4, arg0);
 		local8.pushClient();
 	}
 

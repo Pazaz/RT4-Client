@@ -20,13 +20,7 @@ public final class Static180 {
 		Static198.method1026(arg5, arg1, arg2.zFine, arg4, arg0, arg2.xFine, arg3);
 	}
 
-    @OriginalMember(owner = "client!og", name = "a", descriptor = "(II)V")
-	public static void method3328(@OriginalArg(0) int arg0) {
-		@Pc(12) DelayedStateChange local12 = Static238.method4143(10, arg0);
-		local12.pushClient();
-	}
-
-	@OriginalMember(owner = "client!og", name = "a", descriptor = "(III)I")
+    @OriginalMember(owner = "client!og", name = "a", descriptor = "(III)I")
 	public static int method3330(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
 		if (arg0 > 22050) {
 			arg1 = arg0;

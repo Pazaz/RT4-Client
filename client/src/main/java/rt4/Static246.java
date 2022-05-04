@@ -31,7 +31,7 @@ public final class Static246 {
 
 	@OriginalMember(owner = "client!u", name = "a", descriptor = "(Lclient!me;IIII)V")
 	public static void method4240(@OriginalArg(0) NpcType arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
-		if (Static231.anInt5204 >= 400) {
+		if (MiniMenu.size >= 400) {
 			return;
 		}
 		if (arg0.multiNpcs != null) {
@@ -43,14 +43,14 @@ public final class Static246 {
 		@Pc(35) JagString local35 = arg0.name;
 		if (arg0.combatLevel != 0) {
 			@Pc(47) JagString local47 = client.game == 1 ? LocalizedText.RATING : LocalizedText.LEVEL;
-			local35 = JagString.concatenate(new JagString[] { local35, Static123.method2420(arg0.combatLevel, PlayerList.self.combatLevel), Static123.aClass100_593, local47, Static123.parseInt(arg0.combatLevel), Static72.aClass100_448 });
+			local35 = JagString.concatenate(new JagString[] { local35, MiniMenu.getCombatLevelColor(arg0.combatLevel, PlayerList.self.combatLevel), Static123.aClass100_593, local47, Static123.parseInt(arg0.combatLevel), Static72.aClass100_448 });
 		}
 		if (Static260.anInt5014 == 1) {
-			Static98.method1966(Static169.anInt4075, (long) arg2, JagString.concatenate(new JagString[] { Static34.aClass100_203, Static201.aClass100_407, local35 }), arg1, (short) 26, LocalizedText.USE, arg3);
+			MiniMenu.add(Static169.anInt4075, (long) arg2, JagString.concatenate(new JagString[] { MiniMenu.aClass100_203, Static201.aClass100_407, local35 }), arg1, (short) 26, LocalizedText.USE, arg3);
 		} else if (Static241.aBoolean302) {
 			@Pc(378) ParamType local378 = Static121.anInt3039 == -1 ? null : ParamTypeList.get(Static121.anInt3039);
 			if ((Static274.anInt4999 & 0x2) != 0 && (local378 == null || arg0.getParam(Static121.anInt3039, local378.defaultInt) != local378.defaultInt)) {
-				Static98.method1966(anInt5393, (long) arg2, JagString.concatenate(new JagString[] { Static78.aClass100_466, Static201.aClass100_407, local35 }), arg1, (short) 45, Static102.aClass100_545, arg3);
+				MiniMenu.add(anInt5393, (long) arg2, JagString.concatenate(new JagString[] { Static78.aClass100_466, Static201.aClass100_407, local35 }), arg1, (short) 45, MiniMenu.aClass100_545, arg3);
 			}
 		} else {
 			@Pc(129) JagString[] local129 = arg0.ops;
@@ -84,7 +84,7 @@ public final class Static246 {
 						if (local140 == 4) {
 							local161 = 2;
 						}
-						Static98.method1966(local176, (long) arg2, JagString.concatenate(new JagString[] { Static226.aClass100_965, local35 }), arg1, local161, local129[local140], arg3);
+						MiniMenu.add(local176, (long) arg2, JagString.concatenate(new JagString[] { MiniMenu.aClass100_965, local35 }), arg1, local161, local129[local140], arg3);
 					}
 				}
 			}
@@ -114,11 +114,11 @@ public final class Static246 {
 						if (local281 != 0) {
 							local281 += local271;
 						}
-						Static98.method1966(arg0.anInt3752, (long) arg2, JagString.concatenate(new JagString[] { Static226.aClass100_965, local35 }), arg1, local281, local129[local140], arg3);
+						MiniMenu.add(arg0.anInt3752, (long) arg2, JagString.concatenate(new JagString[] { MiniMenu.aClass100_965, local35 }), arg1, local281, local129[local140], arg3);
 					}
 				}
 			}
-			Static98.method1966(Static225.anInt5073, (long) arg2, JagString.concatenate(new JagString[] { Static226.aClass100_965, local35 }), arg1, (short) 1007, LocalizedText.EXAMINE, arg3);
+			MiniMenu.add(Static225.anInt5073, (long) arg2, JagString.concatenate(new JagString[] { MiniMenu.aClass100_965, local35 }), arg1, (short) 1007, LocalizedText.EXAMINE, arg3);
 		}
 	}
 

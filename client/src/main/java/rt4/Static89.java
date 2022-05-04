@@ -102,7 +102,7 @@ public final class Static89 {
 
     @OriginalMember(owner = "client!ha", name = "b", descriptor = "(II)V")
 	public static void method1840(@OriginalArg(1) int arg0) {
-		@Pc(8) DelayedStateChange local8 = Static238.method4143(2, arg0);
+		@Pc(8) DelayedStateChange local8 = DelayedStateChange.create(2, arg0);
 		local8.pushClient();
 	}
 
@@ -119,11 +119,11 @@ public final class Static89 {
 				Static155.anInt3751 = Mouse.clickX;
 				Static60.anInt1892 = Mouse.clickY;
 			}
-			Static231.anInt5204 = 1;
-			Static254.aClass100Array168[0] = LocalizedText.CANCEL;
-			Static233.aClass100Array160[0] = JagString.EMPTY;
-			Static39.aShortArray6[0] = 1005;
-			Static190.anIntArray382[0] = Static35.anInt1092;
+			MiniMenu.size = 1;
+			MiniMenu.ops[0] = LocalizedText.CANCEL;
+			MiniMenu.opBases[0] = JagString.EMPTY;
+			MiniMenu.actions[0] = 1005;
+			MiniMenu.cursors[0] = Static35.anInt1092;
 		}
 		if (InterfaceList.topLevelInterface != -1) {
 			Static96.method1949(InterfaceList.topLevelInterface);
@@ -153,7 +153,7 @@ public final class Static89 {
 		} else {
 			SoftwareRaster.method2503();
 		}
-		Static280.method4673();
+		MiniMenu.sort();
 		if (Static60.aBoolean108) {
 			if (Static261.aBoolean298) {
 				Static112.method2297();

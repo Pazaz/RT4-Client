@@ -5,14 +5,8 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static252 {
 
-	@OriginalMember(owner = "client!uh", name = "P", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_103;
-
 	@OriginalMember(owner = "client!uh", name = "Y", descriptor = "Lclient!na;")
 	public static final JagString HUFFMAN_GROUP = JagString.parse("huffman");
-
-	@OriginalMember(owner = "client!uh", name = "ab", descriptor = "Lclient!q;")
-	public static final ReferenceNodeFactory aClass22_1 = Static44.method1147();
 
 	@OriginalMember(owner = "client!uh", name = "f", descriptor = "(I)V")
 	public static void method4302() {

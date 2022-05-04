@@ -19,7 +19,7 @@ public final class Static44 {
 		Static60.aBoolean108 = false;
 		Protocol.length = 0;
 		Static115.mapFlagX = 0;
-		Static231.anInt5204 = 0;
+		MiniMenu.size = 0;
 		Protocol.opcode2 = -1;
 		Static270.minimapState = 0;
 		Player.rebootTimer = 0;
@@ -47,15 +47,6 @@ public final class Static44 {
 		ClientProt.method1373();
 	}
 
-	@OriginalMember(owner = "client!dh", name = "b", descriptor = "(I)Lclient!q;")
-	public static ReferenceNodeFactory method1147() {
-		try {
-			return new SoftReferenceNodeFactory();
-		} catch (@Pc(15) Throwable local15) {
-			return null;
-		}
-	}
-
 	@OriginalMember(owner = "client!dh", name = "a", descriptor = "(IIII)Lclient!wk;")
 	public static ComponentPointer method1148(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
 		@Pc(9) ComponentPointer local9 = new ComponentPointer();
@@ -71,27 +62,27 @@ public final class Static44 {
 			InterfaceList.redraw(Static39.aClass13_10);
 			Static39.aClass13_10 = null;
 		}
-		@Pc(45) int local45 = Static231.anInt5204;
+		@Pc(45) int local45 = MiniMenu.size;
 		@Pc(53) int local53;
 		for (local53 = 0; local53 < local45; local53++) {
-			if (Static2.method5(Static39.aShortArray6[local53])) {
-				Static200.method3628(local53);
+			if (Static2.method5(MiniMenu.actions[local53])) {
+				MiniMenu.remove(local53);
 			}
 		}
-		if (Static231.anInt5204 == 1) {
+		if (MiniMenu.size == 1) {
 			Static60.aBoolean108 = false;
 			Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
 		} else {
 			Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
 			local53 = Fonts.b12Full.getStringWidth(LocalizedText.CHOOSE_OPTION);
-			for (@Pc(95) int local95 = 0; local95 < Static231.anInt5204; local95++) {
-				@Pc(104) int local104 = Fonts.b12Full.getStringWidth(Static269.method2228(local95));
+			for (@Pc(95) int local95 = 0; local95 < MiniMenu.size; local95++) {
+				@Pc(104) int local104 = Fonts.b12Full.getStringWidth(MiniMenu.getOp(local95));
 				if (local104 > local53) {
 					local53 = local104;
 				}
 			}
 			Static24.anInt761 = local53 + 8;
-			Static13.anInt436 = Static231.anInt5204 * 15 + (Static261.aBoolean298 ? 26 : 22);
+			Static13.anInt436 = MiniMenu.size * 15 + (Static261.aBoolean298 ? 26 : 22);
 		}
 		if (local28 != null) {
 			Static17.method531(local28, false);

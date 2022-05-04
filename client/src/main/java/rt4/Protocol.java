@@ -2675,9 +2675,9 @@ public class Protocol {
                         outboundBuffer.p2add(Static18.anInt588);
                         outboundBuffer.p1sub(local1363);
                     }
-                } else if ((Static116.anInt2952 == 1 || Static277.method4640(Static231.anInt5204 - 1)) && Static231.anInt5204 > 2) {
+                } else if ((Static116.anInt2952 == 1 || Static277.method4640(MiniMenu.size - 1)) && MiniMenu.size > 2) {
                     Static226.method3901();
-                } else if (Static231.anInt5204 > 0) {
+                } else if (MiniMenu.size > 0) {
                     Static59.method1372();
                 }
                 Mouse.clickButton = 0;

@@ -9,10 +9,7 @@ public final class Static229 {
 	@OriginalMember(owner = "client!si", name = "ab", descriptor = "I")
 	public static int anInt5138;
 
-	@OriginalMember(owner = "client!si", name = "Z", descriptor = "Lclient!na;")
-	public static final JagString aClass100_972 = JagString.parse("<col=ffb000>");
-
-	@OriginalMember(owner = "client!si", name = "gb", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!si", name = "gb", descriptor = "Lclient!na;")
 	public static final JagString aClass100_974 = JagString.parse("<br>(X");
 
 	@OriginalMember(owner = "client!si", name = "a", descriptor = "(ZB)I")
@@ -30,7 +27,7 @@ public final class Static229 {
 
     @OriginalMember(owner = "client!si", name = "b", descriptor = "(IIB)V")
 	public static void method3938(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		@Pc(16) DelayedStateChange local16 = Static238.method4143(12, arg1);
+		@Pc(16) DelayedStateChange local16 = DelayedStateChange.create(12, arg1);
 		local16.pushServer();
 		local16.intArg1 = arg0;
 	}

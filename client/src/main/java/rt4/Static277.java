@@ -32,7 +32,7 @@ public final class Static277 {
 		if (arg0 < 0) {
 			return false;
 		}
-		@Pc(12) int local12 = Static39.aShortArray6[arg0];
+		@Pc(12) int local12 = MiniMenu.actions[arg0];
 		if (local12 >= 2000) {
 			local12 -= 2000;
 		}

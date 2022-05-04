@@ -162,28 +162,6 @@ public final class Static123 {
 		}
 	}
 
-	@OriginalMember(owner = "client!jj", name = "a", descriptor = "(IBI)Lclient!na;")
-	public static JagString method2420(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		@Pc(4) int local4 = arg1 - arg0;
-		if (local4 < -9) {
-			return Static175.aClass100_798;
-		} else if (local4 < -6) {
-			return Static64.aClass100_433;
-		} else if (local4 < -3) {
-			return Static223.aClass100_951;
-		} else if (local4 < 0) {
-			return Static229.aClass100_972;
-		} else if (local4 > 9) {
-			return MiniMenu.COLOR_GREEN;
-		} else if (local4 > 6) {
-			return Static6.aClass100_18;
-		} else if (local4 <= 3) {
-			return local4 > 0 ? Static41.aClass100_266 : Static226.aClass100_965;
-		} else {
-			return Static263.aClass100_1081;
-		}
-	}
-
 	@OriginalMember(owner = "client!jj", name = "b", descriptor = "(BI)Lclient!na;")
 	public static JagString parseInt(@OriginalArg(1) int arg0) {
 		return Static198.method1025(false, arg0);

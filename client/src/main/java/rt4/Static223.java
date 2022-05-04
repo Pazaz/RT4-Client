@@ -6,17 +6,11 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static223 {
 
-    @OriginalMember(owner = "client!sc", name = "g", descriptor = "Lclient!na;")
-	public static final JagString aClass100_947 = JagString.parse(" )2> <col=ff9040>");
-
     @OriginalMember(owner = "client!sc", name = "p", descriptor = "I")
 	public static int anInt5029 = 0;
 
     @OriginalMember(owner = "client!sc", name = "z", descriptor = "[Z")
 	public static final boolean[] aBooleanArray116 = new boolean[100];
-
-	@OriginalMember(owner = "client!sc", name = "D", descriptor = "Lclient!na;")
-	public static final JagString aClass100_951 = JagString.parse("<col=ff7000>");
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(IIILclient!km;)V")
 	public static void animateNpc(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) Npc arg2) {

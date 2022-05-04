@@ -681,43 +681,9 @@ public final class Static280 {
 		local12.anIntArray422[arg1] = arg2;
 	}
 
-	@OriginalMember(owner = "client!wl", name = "b", descriptor = "(I)V")
-	public static void method4673() {
-		@Pc(3) boolean local3 = false;
-		while (!local3) {
-			local3 = true;
-			for (@Pc(13) int local13 = 0; local13 < Static231.anInt5204 - 1; local13++) {
-				if (Static39.aShortArray6[local13] < 1000 && Static39.aShortArray6[local13 + 1] > 1000) {
-					@Pc(41) JagString local41 = Static233.aClass100Array160[local13];
-					local3 = false;
-					Static233.aClass100Array160[local13] = Static233.aClass100Array160[local13 + 1];
-					Static233.aClass100Array160[local13 + 1] = local41;
-					@Pc(61) JagString local61 = Static254.aClass100Array168[local13];
-					Static254.aClass100Array168[local13] = Static254.aClass100Array168[local13 + 1];
-					Static254.aClass100Array168[local13 + 1] = local61;
-					@Pc(79) int local79 = Static196.anIntArray408[local13];
-					Static196.anIntArray408[local13] = Static196.anIntArray408[local13 + 1];
-					Static196.anIntArray408[local13 + 1] = local79;
-					@Pc(97) int local97 = Static56.anIntArray142[local13];
-					Static56.anIntArray142[local13] = Static56.anIntArray142[local13 + 1];
-					Static56.anIntArray142[local13 + 1] = local97;
-					@Pc(115) int local115 = Static190.anIntArray382[local13];
-					Static190.anIntArray382[local13] = Static190.anIntArray382[local13 + 1];
-					Static190.anIntArray382[local13 + 1] = local115;
-					@Pc(133) short local133 = Static39.aShortArray6[local13];
-					Static39.aShortArray6[local13] = Static39.aShortArray6[local13 + 1];
-					Static39.aShortArray6[local13 + 1] = local133;
-					@Pc(151) long local151 = Static159.aLongArray5[local13];
-					Static159.aLongArray5[local13] = Static159.aLongArray5[local13 + 1];
-					Static159.aLongArray5[local13 + 1] = local151;
-				}
-			}
-		}
-	}
-
 	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(II)V")
 	public static void method4675(@OriginalArg(1) int arg0) {
-		@Pc(17) DelayedStateChange local17 = Static238.method4143(11, arg0);
+		@Pc(17) DelayedStateChange local17 = DelayedStateChange.create(11, arg0);
 		local17.pushClient();
 	}
 }

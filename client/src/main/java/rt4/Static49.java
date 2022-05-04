@@ -100,7 +100,7 @@ public final class Static49 {
 
 	@OriginalMember(owner = "client!dm", name = "a", descriptor = "(Lclient!be;III)V")
 	public static void method1207(@OriginalArg(0) Component arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-		if (Static231.anInt5204 < 2 && Static260.anInt5014 == 0 && !Static241.aBoolean302) {
+		if (MiniMenu.size < 2 && Static260.anInt5014 == 0 && !Static241.aBoolean302) {
 			return;
 		}
 		@Pc(24) JagString local24 = Static13.method471();

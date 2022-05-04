@@ -564,8 +564,8 @@ public final class ScriptRunner {
 									component.modelZoom = intStack[isp + 5];
 									InterfaceList.redraw(component);
 									if (component.createdComponentId == -1) {
-										Static153.method2910(component.id);
-										Static180.method3328(component.id);
+										DelayedStateChange.setComponentModelAngleClient(component.id);
+										DelayedStateChange.setComponentModelOffsetClient(component.id);
 									}
 									continue;
 								}
@@ -674,7 +674,7 @@ public final class ScriptRunner {
 									component.modelZoom = intStack[isp];
 									InterfaceList.redraw(component);
 									if (component.createdComponentId == -1) {
-										Static153.method2910(component.id);
+										DelayedStateChange.setComponentModelAngleClient(component.id);
 									}
 									continue;
 								}
@@ -692,9 +692,9 @@ public final class ScriptRunner {
 									int2 = intStack[isp + 1];
 									int3 = intStack[isp];
 									if (component.createdComponentId == -1) {
-										Static251.method4279(component.id);
-										Static153.method2910(component.id);
-										Static180.method3328(component.id);
+										DelayedStateChange.setComponentObjClient(component.id);
+										DelayedStateChange.setComponentModelAngleClient(component.id);
+										DelayedStateChange.setComponentModelOffsetClient(component.id);
 									}
 									if (int3 == -1) {
 										component.modelId = -1;

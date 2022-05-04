@@ -12,10 +12,7 @@ public final class Static226 {
 	@OriginalMember(owner = "client!sf", name = "j", descriptor = "I")
 	public static int anInt5085;
 
-	@OriginalMember(owner = "client!sf", name = "g", descriptor = "Lclient!na;")
-	public static final JagString aClass100_965 = JagString.parse("<col=ffff00>");
-
-    @OriginalMember(owner = "client!sf", name = "i", descriptor = "I")
+	@OriginalMember(owner = "client!sf", name = "i", descriptor = "I")
 	public static int anInt5084 = 0;
     @OriginalMember(owner = "client!ml", name = "Q", descriptor = "I")
     public static int anInt3953 = 0;
@@ -53,13 +50,13 @@ public final class Static226 {
 		@Pc(16) int local16 = Fonts.b12Full.getStringWidth(LocalizedText.CHOOSE_OPTION);
 		@Pc(18) int local18;
 		@Pc(27) int local27;
-		for (local18 = 0; local18 < Static231.anInt5204; local18++) {
-			local27 = Fonts.b12Full.getStringWidth(Static269.method2228(local18));
+		for (local18 = 0; local18 < MiniMenu.size; local18++) {
+			local27 = Fonts.b12Full.getStringWidth(MiniMenu.getOp(local18));
 			if (local27 > local16) {
 				local16 = local27;
 			}
 		}
-		local18 = Static231.anInt5204 * 15 + 21;
+		local18 = MiniMenu.size * 15 + 21;
 		@Pc(43) int local43 = Static60.anInt1892;
 		local16 += 8;
 		local27 = Static155.anInt3751 - local16 / 2;
@@ -77,7 +74,7 @@ public final class Static226 {
 		}
 		if (anInt3953 == 1) {
 			if (Static155.anInt3751 == Static277.anInt5850 && Static280.anInt5895 == Static60.anInt1892) {
-				Static13.anInt436 = Static231.anInt5204 * 15 + (Static261.aBoolean298 ? 26 : 22);
+				Static13.anInt436 = MiniMenu.size * 15 + (Static261.aBoolean298 ? 26 : 22);
 				anInt3953 = 0;
 				Static229.anInt5138 = local43;
 				Static183.anInt4271 = local27;
@@ -89,7 +86,7 @@ public final class Static226 {
 			anInt3953 = 0;
 			Static24.anInt761 = local16;
 			Static229.anInt5138 = local43;
-			Static13.anInt436 = (Static261.aBoolean298 ? 26 : 22) + Static231.anInt5204 * 15;
+			Static13.anInt436 = (Static261.aBoolean298 ? 26 : 22) + MiniMenu.size * 15;
 			Static60.aBoolean108 = true;
 		} else {
 			Static280.anInt5895 = Mouse.clickY;

@@ -18,9 +18,6 @@ public final class Static254 {
     @OriginalMember(owner = "client!uj", name = "A", descriptor = "[I")
 	public static final int[] anIntArray489 = new int[] { 2, 0, 0, 2, 0, 0, 0, 4, 4 };
 
-	@OriginalMember(owner = "client!uj", name = "C", descriptor = "[Lclient!na;")
-	public static final JagString[] aClass100Array168 = new JagString[500];
-
 	@OriginalMember(owner = "client!uj", name = "a", descriptor = "(BZII[[[Lclient!bj;I)Z")
 	public static boolean method4348(@OriginalArg(1) boolean arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Tile[][][] arg3, @OriginalArg(5) int arg4) {
 		@Pc(14) byte local14 = arg0 ? 1 : (byte) (Static136.anInt3325 & 0xFF);

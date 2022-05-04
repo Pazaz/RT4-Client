@@ -6,9 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static190 {
 
-	@OriginalMember(owner = "client!pf", name = "r", descriptor = "[I")
-	public static final int[] anIntArray382 = new int[500];
-
 	@OriginalMember(owner = "client!pf", name = "a", descriptor = "(II)[F")
 	public static float[] method3441(@OriginalArg(0) int arg0) {
 		@Pc(7) float local7 = Static161.method3068() + Static161.method3059();

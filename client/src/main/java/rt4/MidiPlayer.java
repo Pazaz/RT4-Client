@@ -11,6 +11,8 @@ public class MidiPlayer {
     public static SoundBank aClass89_1;
     @OriginalMember(owner = "client!bd", name = "i", descriptor = "I")
     public static int anInt441 = 0;
+    @OriginalMember(owner = "client!uh", name = "P", descriptor = "Lclient!ve;")
+    public static Js5 aClass153_103;
 
     @OriginalMember(owner = "client!km", name = "c", descriptor = "(Z)Z")
     public static boolean method2699() {
@@ -23,7 +25,7 @@ public class MidiPlayer {
                     }
                 }
                 if (aClass89_1 == null) {
-                    aClass89_1 = new SoundBank(Static78.aClass153_32, Static252.aClass153_103);
+                    aClass89_1 = new SoundBank(Static78.aClass153_32, aClass153_103);
                 }
                 if (Static172.aClass3_Sub3_Sub4_2.method4411(Static144.aClass3_Sub29_1, Static210.aClass153_87, aClass89_1)) {
                     Static172.aClass3_Sub3_Sub4_2.method4412();
@@ -73,7 +75,7 @@ public class MidiPlayer {
     public static boolean init(@OriginalArg(1) MidiPcmStream arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) Js5 arg2, @OriginalArg(4) Js5 arg3) {
         Static210.aClass153_87 = arg1;
         Static78.aClass153_32 = arg3;
-        Static252.aClass153_103 = arg2;
+        aClass153_103 = arg2;
         Static172.aClass3_Sub3_Sub4_2 = arg0;
         return true;
     }

@@ -10,9 +10,6 @@ public final class Static102 {
 	@OriginalMember(owner = "client!hn", name = "K", descriptor = "Ljava/util/Calendar;")
 	public static final Calendar aCalendar2 = Calendar.getInstance();
 
-	@OriginalMember(owner = "client!hn", name = "W", descriptor = "Lclient!na;")
-	public static JagString aClass100_545 = null;
-
     @OriginalMember(owner = "client!hn", name = "Y", descriptor = "I")
 	public static int anInt2680 = 0;
 

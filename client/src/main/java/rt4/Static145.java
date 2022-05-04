@@ -70,20 +70,20 @@ public final class Static145 {
 		Fonts.b12Full.method2857(LocalizedText.CHOOSE_OPTION, local11 + 3, local3 + 14, 6116423, -1);
 		@Pc(96) int local96 = Mouse.anInt5032;
 		@Pc(98) int local98 = Mouse.anInt4873;
-		for (@Pc(107) int local107 = 0; local107 < Static231.anInt5204; local107++) {
-			@Pc(127) int local127 = (Static231.anInt5204 - local107 - 1) * 15 + local3 + 31;
+		for (@Pc(107) int local107 = 0; local107 < MiniMenu.size; local107++) {
+			@Pc(127) int local127 = (MiniMenu.size - local107 - 1) * 15 + local3 + 31;
 			@Pc(129) int local129 = 16777215;
 			if (local11 < local98 && local98 < local11 + local9 && local127 - 13 < local96 && local96 < local127 + 3) {
 				local129 = 16776960;
 			}
-			Fonts.b12Full.method2857(Static269.method2228(local107), local11 + 3, local127, local129, 0);
+			Fonts.b12Full.method2857(MiniMenu.getOp(local107), local11 + 3, local127, local129, 0);
 		}
 		Static121.method2407(Static183.anInt4271, Static229.anInt5138, Static13.anInt436, Static24.anInt761);
 	}
 
 	@OriginalMember(owner = "client!lf", name = "a", descriptor = "(IIIIB)V")
 	public static void method2745(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		@Pc(8) DelayedStateChange local8 = Static238.method4143(10, arg0);
+		@Pc(8) DelayedStateChange local8 = DelayedStateChange.create(10, arg0);
 		local8.pushServer();
 		local8.intArg3 = arg2;
 		local8.intArg1 = arg3;

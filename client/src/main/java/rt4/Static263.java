@@ -21,10 +21,7 @@ public final class Static263 {
 	@OriginalMember(owner = "client!vg", name = "d", descriptor = "I")
 	public static int anInt5755 = 2;
 
-	@OriginalMember(owner = "client!vg", name = "f", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1081 = JagString.parse("<col=80ff00>");
-
-	@OriginalMember(owner = "client!vg", name = "a", descriptor = "(I[S)[S")
+    @OriginalMember(owner = "client!vg", name = "a", descriptor = "(I[S)[S")
 	public static short[] method4511(@OriginalArg(1) short[] arg0) {
 		if (arg0 == null) {
 			return null;
