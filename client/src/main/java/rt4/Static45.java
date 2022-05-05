@@ -231,7 +231,7 @@ public final class Static45 {
 												@Pc(1834) int local1834 = SceneGraph.tileOverlays[local152][local322][local1794] & 0xFF;
 												if (local1834 != 0) {
 													@Pc(1842) FloType local1842 = FloTypeList.method4395(local1834 - 1);
-													if (local1842.texture != -1 && Rasteriser.textureProvider.method3237(local1842.texture) == 4) {
+													if (local1842.texture != -1 && Rasteriser.textureProvider.getMaterialType(local1842.texture) == MaterialManager.WATER) {
 														Static62.anIntArrayArray11[local168][local173] = local1842.anInt5889 + (local1842.anInt5898 << 24);
 														continue label771;
 													}
@@ -248,7 +248,7 @@ public final class Static45 {
 								@Pc(1353) int local1353;
 								@Pc(1288) int local1288;
 								if (GlRenderer.enabled && !underwater && Static62.anIntArrayArray11 != null && local152 == 0) {
-									if (local1248.texture != -1 && Rasteriser.textureProvider.method3237(local1248.texture) == 4) {
+									if (local1248.texture != -1 && Rasteriser.textureProvider.getMaterialType(local1248.texture) == MaterialManager.WATER) {
 										Static62.anIntArrayArray11[local168][local173] = (local1248.anInt5898 << 24) + local1248.anInt5889;
 									} else {
 										label737: for (local1288 = local168 - 1; local1288 <= local168 + 1; local1288++) {
@@ -257,7 +257,7 @@ public final class Static45 {
 													local1353 = SceneGraph.tileOverlays[local152][local1288][local1301] & 0xFF;
 													if (local1353 != 0) {
 														@Pc(1366) FloType local1366 = FloTypeList.method4395(local1353 - 1);
-														if (local1366.texture != -1 && Rasteriser.textureProvider.method3237(local1366.texture) == 4) {
+														if (local1366.texture != -1 && Rasteriser.textureProvider.getMaterialType(local1366.texture) == MaterialManager.WATER) {
 															Static62.anIntArrayArray11[local168][local173] = local1366.anInt5889 + (local1366.anInt5898 << 24);
 															break label737;
 														}

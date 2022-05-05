@@ -30,7 +30,7 @@ public final class Static278 {
 	public static void setRenderTiles(@OriginalArg(0) boolean arg0) {
 		if (arg0) {
 			SceneGraph.tiles = SceneGraph.underWaterGroundTiles;
-			SceneGraph.tileHeights = Static80.underWaterTileHeightMap;
+			SceneGraph.tileHeights = SceneGraph.underwaterTileHeights;
 			Static182.aClass3_Sub14ArrayArray2 = SceneGraph.underWaterHdTiles;
 		} else {
 			SceneGraph.tiles = SceneGraph.surfaceGroundTiles;

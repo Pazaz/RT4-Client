@@ -188,7 +188,7 @@ public final class Js5GlTextureProvider implements TextureProvider {
 
 	@OriginalMember(owner = "client!nk", name = "g", descriptor = "(II)I")
 	@Override
-	public final int method3237(@OriginalArg(0) int arg0) {
+	public final int getMaterialType(@OriginalArg(0) int arg0) {
 		return this.aByteArray62[arg0] & 0xFF;
 	}
 

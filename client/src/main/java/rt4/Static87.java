@@ -700,7 +700,7 @@ public final class Static87 {
 														GlRenderer.method4148(local556, local545, color, cardMemory);
 														GlRenderer.method4152((float) local30.aShort10, (float) local30.aShort11 * 1.5F);
 													}
-													GlRenderer.method4173();
+													GlRenderer.restoreLighting();
 													GlRenderer.setDepthTestEnabled(true);
 													GlRenderer.setFogEnabled(false);
 													Static229.method3935(Preferences.brightness);

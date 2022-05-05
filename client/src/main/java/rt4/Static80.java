@@ -10,10 +10,7 @@ public final class Static80 {
 	@OriginalMember(owner = "client!gf", name = "M", descriptor = "I")
 	public static int anInt4698;
 
-	@OriginalMember(owner = "client!gf", name = "O", descriptor = "[[[I")
-	public static int[][][] underWaterTileHeightMap;
-
-	@OriginalMember(owner = "client!gf", name = "R", descriptor = "I")
+    @OriginalMember(owner = "client!gf", name = "R", descriptor = "I")
 	public static int centralZoneX;
 
 	@OriginalMember(owner = "client!gf", name = "S", descriptor = "[I")

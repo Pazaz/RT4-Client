@@ -66,6 +66,8 @@ public class SceneGraph {
 	public static Scenery[] aClass31Array3;
     @OriginalMember(owner = "client!c", name = "bb", descriptor = "[Lclient!ec;")
     public static Scenery[] aClass31Array2;
+    @OriginalMember(owner = "client!gf", name = "O", descriptor = "[[[I")
+    public static int[][][] underwaterTileHeights;
 
     @OriginalMember(owner = "client!km", name = "f", descriptor = "(I)Z")
     public static boolean allLevelsAreVisible() {

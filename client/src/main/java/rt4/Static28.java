@@ -18,14 +18,14 @@ public final class Static28 {
 		if (hasUnderWaterMap) {
 			SceneGraph.underWaterGroundTiles = new Tile[1][SceneGraph.mapSizeX][SceneGraph.mapSizeZ];
 			Static62.anIntArrayArray11 = new int[SceneGraph.mapSizeX][SceneGraph.mapSizeZ];
-			Static80.underWaterTileHeightMap = new int[1][SceneGraph.mapSizeX + 1][SceneGraph.mapSizeZ + 1];
+			SceneGraph.underwaterTileHeights = new int[1][SceneGraph.mapSizeX + 1][SceneGraph.mapSizeZ + 1];
 			if (GlRenderer.enabled) {
 				SceneGraph.underWaterHdTiles = new GlTile[1][];
 			}
 		} else {
 			SceneGraph.underWaterGroundTiles = null;
 			Static62.anIntArrayArray11 = null;
-			Static80.underWaterTileHeightMap = null;
+			SceneGraph.underwaterTileHeights = null;
 			SceneGraph.underWaterHdTiles = null;
 		}
 		Static278.setRenderTiles(false);

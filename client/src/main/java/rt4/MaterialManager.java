@@ -5,6 +5,8 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 public class MaterialManager {
+    public static final int WATER = 4;
+
     @OriginalMember(owner = "client!dl", name = "c", descriptor = "I")
     public static int currentType = 0;
     @OriginalMember(owner = "client!je", name = "R", descriptor = "Z")

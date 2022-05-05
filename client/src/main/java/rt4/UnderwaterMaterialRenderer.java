@@ -64,7 +64,33 @@ public final class UnderwaterMaterialRenderer implements MaterialRenderer {
 		local1.glClientActiveTexture(GL2.GL_TEXTURE0);
 	}
 
-	@OriginalMember(owner = "client!wg", name = "d", descriptor = "()V")
+    @OriginalMember(owner = "client!mf", name = "a", descriptor = "()V")
+    public static void applyFogFade() {
+        @Pc(1) GL2 gl = GlRenderer.gl;
+        gl.glDisableClientState(GL2.GL_COLOR_ARRAY);
+        GlRenderer.setLightingEnabled(false);
+        gl.glDisable(GL2.GL_DEPTH_TEST);
+        gl.glPushAttrib(GL2.GL_FOG_BIT);
+        gl.glFogf(GL2.GL_FOG_START, (float) GlobalConfig.VIEW_DISTANCE - (GlobalConfig.VIEW_FADE_DISTANCE * 2.0f));
+        GlRenderer.disableDepthMask();
+        try {
+            for (@Pc(19) int i = 0; i < SceneGraph.surfaceHdTiles[0].length; i++) {
+                @Pc(31) GlTile tile = SceneGraph.surfaceHdTiles[0][i];
+                if (tile.texture >= 0 && Rasteriser.textureProvider.getMaterialType(tile.texture) == MaterialManager.WATER) {
+                    gl.glColor4fv(ColorUtils.getRgbFloat(tile.underwaterColor), 0);
+                    @Pc(57) float f = 201.5F - (tile.blend ? 1.0F : 0.5F);
+                    tile.method1944(SceneGraph.tiles, f, true);
+                }
+            }
+        } catch (Exception ignored) {}
+        gl.glEnableClientState(GL2.GL_COLOR_ARRAY);
+        GlRenderer.restoreLighting();
+        gl.glEnable(GL2.GL_DEPTH_TEST);
+        gl.glPopAttrib();
+        GlRenderer.enableDepthMask();
+    }
+
+    @OriginalMember(owner = "client!wg", name = "d", descriptor = "()V")
 	private void method4606() {
 		@Pc(1) GL2 local1 = GlRenderer.gl;
 		this.anInt5806 = local1.glGenLists(2);
