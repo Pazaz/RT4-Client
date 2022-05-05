@@ -89,27 +89,27 @@ public final class GlTile extends Node {
 	private int anInt2489 = 0;
 
 	@OriginalMember(owner = "client!hg", name = "y", descriptor = "I")
-	public final int anInt2485;
+	public final int texture;
 
 	@OriginalMember(owner = "client!hg", name = "V", descriptor = "F")
 	private final float aFloat12;
 
 	@OriginalMember(owner = "client!hg", name = "M", descriptor = "Z")
-	public final boolean aBoolean140;
+	public final boolean blend;
 
 	@OriginalMember(owner = "client!hg", name = "u", descriptor = "Z")
 	private final boolean aBoolean139;
 
 	@OriginalMember(owner = "client!hg", name = "C", descriptor = "I")
-	public final int anInt2486;
+	public final int underwaterColor;
 
 	@OriginalMember(owner = "client!hg", name = "<init>", descriptor = "(IFZZI)V")
 	public GlTile(@OriginalArg(0) int arg0, @OriginalArg(1) float arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) boolean arg3, @OriginalArg(4) int arg4) {
-		this.anInt2485 = arg0;
+		this.texture = arg0;
 		this.aFloat12 = arg1;
-		this.aBoolean140 = arg2;
+		this.blend = arg2;
 		this.aBoolean139 = arg3;
-		this.anInt2486 = arg4;
+		this.underwaterColor = arg4;
 	}
 
 	@OriginalMember(owner = "client!hg", name = "a", descriptor = "()V")
@@ -137,7 +137,7 @@ public final class GlTile extends Node {
 		this.anIntArray231 = new int[this.anInt2484];
 		this.anIntArrayArray17 = new int[this.anInt2484][];
 		this.aClass133_8 = new HashTable(Static165.clp2(this.anInt2482));
-		if (this.aBoolean140) {
+		if (this.blend) {
 			this.anIntArrayArray18 = new int[this.anInt2484][];
 			this.aBooleanArray54 = new boolean[this.anInt2484];
 		}
@@ -248,7 +248,7 @@ public final class GlTile extends Node {
 				local68 = arg0[this.anIntArray231[local47]][this.anIntArray228[local47]][this.anIntArray227[local47]];
 				if (local68 != null && local68.aBoolean45) {
 					local78 = this.anIntArrayArray17[local47];
-					if (this.aBoolean140) {
+					if (this.blend) {
 						local86 = this.anIntArrayArray18[local47];
 						if (local86 != null) {
 							for (local90 = 0; local90 < local86.length; local90++) {
@@ -271,7 +271,7 @@ public final class GlTile extends Node {
 				local68 = arg0[this.anIntArray231[local47]][this.anIntArray228[local47]][this.anIntArray227[local47]];
 				if (local68 != null && local68.aBoolean45) {
 					local78 = this.anIntArrayArray17[local47];
-					if (this.aBoolean140) {
+					if (this.blend) {
 						local86 = this.anIntArrayArray18[local47];
 						if (local86 != null) {
 							for (local90 = 0; local90 < local86.length; local90++) {
@@ -293,50 +293,50 @@ public final class GlTile extends Node {
 		if (aClass3_Sub15_3.offset == 0 && aClass3_Sub15_2.offset == 0) {
 			return;
 		}
-		@Pc(257) GL2 local257 = GlRenderer.gl;
-		if (this.anInt2485 == -1 || arg2) {
+		@Pc(257) GL2 gl = GlRenderer.gl;
+		if (this.texture == -1 || arg2) {
 			GlRenderer.setTextureId(-1);
 			MaterialManager.setMaterial(0, 0);
 		} else {
-			Rasteriser.textureProvider.method3227(this.anInt2485);
+			Rasteriser.textureProvider.method3227(this.texture);
 		}
-		@Pc(282) int local282 = this.aBoolean139 ? 40 : 36;
+		@Pc(282) int i = this.aBoolean139 ? 40 : 36;
 		if (this.aClass155_3 == null) {
 			if (GlRenderer.arbVboSupported) {
-				local257.glBindBuffer(GL2.GL_ARRAY_BUFFER, 0);
+				gl.glBindBuffer(GL2.GL_ARRAY_BUFFER, 0);
 			}
 			this.aByteBuffer3.position(0);
-			local257.glVertexPointer(3, GL2.GL_FLOAT, local282, this.aByteBuffer3);
+			gl.glVertexPointer(3, GL2.GL_FLOAT, i, this.aByteBuffer3);
 			this.aByteBuffer3.position(12);
-			local257.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, local282, this.aByteBuffer3);
+			gl.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, i, this.aByteBuffer3);
 			if (Preferences.highDetailLighting) {
 				this.aByteBuffer3.position(16);
-				local257.glNormalPointer(GL2.GL_FLOAT, local282, this.aByteBuffer3);
+				gl.glNormalPointer(GL2.GL_FLOAT, i, this.aByteBuffer3);
 			}
 			this.aByteBuffer3.position(28);
-			local257.glTexCoordPointer(2, GL2.GL_FLOAT, local282, this.aByteBuffer3);
+			gl.glTexCoordPointer(2, GL2.GL_FLOAT, i, this.aByteBuffer3);
 			if (this.aBoolean139) {
-				local257.glClientActiveTexture(UnderwaterMaterialRenderer.method4607());
+				gl.glClientActiveTexture(UnderwaterMaterialRenderer.method4607());
 				this.aByteBuffer3.position(36);
-				local257.glTexCoordPointer(1, GL2.GL_FLOAT, local282, this.aByteBuffer3);
-				local257.glClientActiveTexture(GL2.GL_TEXTURE0);
+				gl.glTexCoordPointer(1, GL2.GL_FLOAT, i, this.aByteBuffer3);
+				gl.glClientActiveTexture(GL2.GL_TEXTURE0);
 			}
 		} else {
 			this.aClass155_3.method4516();
-			local257.glVertexPointer(3, GL2.GL_FLOAT, local282, 0L);
-			local257.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, local282, 12L);
+			gl.glVertexPointer(3, GL2.GL_FLOAT, i, 0L);
+			gl.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, i, 12L);
 			if (Preferences.highDetailLighting) {
-				local257.glNormalPointer(GL2.GL_FLOAT, local282, 16L);
+				gl.glNormalPointer(GL2.GL_FLOAT, i, 16L);
 			}
-			local257.glTexCoordPointer(2, GL2.GL_FLOAT, local282, 28L);
+			gl.glTexCoordPointer(2, GL2.GL_FLOAT, i, 28L);
 			if (this.aBoolean139) {
-				local257.glClientActiveTexture(UnderwaterMaterialRenderer.method4607());
-				local257.glTexCoordPointer(1, GL2.GL_FLOAT, local282, 36L);
-				local257.glClientActiveTexture(GL2.GL_TEXTURE0);
+				gl.glClientActiveTexture(UnderwaterMaterialRenderer.method4607());
+				gl.glTexCoordPointer(1, GL2.GL_FLOAT, i, 36L);
+				gl.glClientActiveTexture(GL2.GL_TEXTURE0);
 			}
 		}
 		if (GlRenderer.arbVboSupported) {
-			local257.glBindBuffer(GL2.GL_ELEMENT_ARRAY_BUFFER, 0);
+			gl.glBindBuffer(GL2.GL_ELEMENT_ARRAY_BUFFER, 0);
 		}
 		if (aClass3_Sub15_3.offset != 0) {
 			if (aByteBuffer5 == null || aByteBuffer5.capacity() < aClass3_Sub15_3.offset) {
@@ -347,7 +347,7 @@ public final class GlTile extends Node {
 			aByteBuffer5.put(aClass3_Sub15_3.data, 0, aClass3_Sub15_3.offset);
 			aByteBuffer5.flip();
 			GlRenderer.method4159(arg1);
-			local257.glDrawElements(GL2.GL_TRIANGLES, aClass3_Sub15_3.offset / 4, GL2.GL_UNSIGNED_INT, aByteBuffer5);
+			gl.glDrawElements(GL2.GL_TRIANGLES, aClass3_Sub15_3.offset / 4, GL2.GL_UNSIGNED_INT, aByteBuffer5);
 		}
 		if (aClass3_Sub15_2.offset == 0) {
 			return;
@@ -361,13 +361,13 @@ public final class GlTile extends Node {
 		aByteBuffer4.flip();
 		GlRenderer.method4159(arg1 - 100.0F);
 		GlRenderer.disableDepthMask();
-		local257.glDrawElements(GL2.GL_TRIANGLES, aClass3_Sub15_2.offset / 4, GL2.GL_UNSIGNED_INT, aByteBuffer4);
+		gl.glDrawElements(GL2.GL_TRIANGLES, aClass3_Sub15_2.offset / 4, GL2.GL_UNSIGNED_INT, aByteBuffer4);
 		GlRenderer.enableDepthMask();
 	}
 
 	@OriginalMember(owner = "client!hg", name = "a", descriptor = "(III[I[IZ)I")
 	public final int method1945(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int[] arg3, @OriginalArg(4) int[] arg4, @OriginalArg(5) boolean arg5) {
-		if (this.aBoolean140) {
+		if (this.blend) {
 			this.anIntArrayArray18[this.anInt2489] = arg4;
 			this.aBooleanArray54[this.anInt2489] = arg5;
 			if (arg4 != null) {

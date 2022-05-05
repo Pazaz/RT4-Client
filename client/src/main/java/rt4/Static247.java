@@ -70,7 +70,7 @@ public final class Static247 {
 											local31 = SceneGraph.tiles[local24];
 											@Pc(33) float local33 = 0.0F;
 											if (GlRenderer.enabled) {
-												if (Static80.underWaterTileHeightMap == SceneGraph.tileHeights) {
+												if (SceneGraph.underwaterTileHeights == SceneGraph.tileHeights) {
 													var9 = Static62.anIntArrayArray11[local18][local21];
 													var10 = var9 & 0xFFFFFF;
 													if (var10 != Static152.anInt3604) {

@@ -212,7 +212,7 @@ public class Playground extends GameShell {
         GlRenderer.init(GameShell.canvas, 0);
         if (GlRenderer.enabled) {
             GlRenderer.setCanvasSize(GameShell.canvasWidth, GameShell.canvasHeight);
-            GlRenderer.method4173();
+            GlRenderer.restoreLighting();
             float yaw1 = yaw * 360.0F / 6.2831855F;
             float pitch1 = pitch * 360.0F / 6.2831855F;
             GlRenderer.method4171(0, 0, GameShell.canvasWidth, GameShell.canvasHeight, GameShell.canvasWidth / 2, GameShell.canvasHeight / 2, yaw1, pitch1, zoom2d, zoom3d);

@@ -206,7 +206,7 @@ public final class GlModel extends Model {
 			if (arg0.aShortArray23 != null) {
 				local135 = arg0.aShortArray23[local125];
 				if (local135 != -1) {
-					local131 = Rasteriser.textureProvider.method3237(local135 & 0xFFFF);
+					local131 = Rasteriser.textureProvider.getMaterialType(local135 & 0xFFFF);
 					local133 = Rasteriser.textureProvider.method3228(local135 & 0xFFFF);
 				}
 			}

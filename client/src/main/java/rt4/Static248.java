@@ -74,13 +74,13 @@ public final class Static248 {
 				}
 			}
 		}
-		@Pc(240) boolean local240 = SceneGraph.tileHeights == Static80.underWaterTileHeightMap;
+		@Pc(240) boolean local240 = SceneGraph.tileHeights == SceneGraph.underwaterTileHeights;
 		if (GlRenderer.enabled) {
-			@Pc(244) GL2 local244 = GlRenderer.gl;
-			local244.glPushMatrix();
-			local244.glTranslatef((float) -arg0, (float) -arg1, (float) -arg2);
+			@Pc(244) GL2 gl = GlRenderer.gl;
+			gl.glPushMatrix();
+			gl.glTranslatef((float) -arg0, (float) -arg1, (float) -arg2);
 			if (local240) {
-				Static156.method2959();
+				UnderwaterMaterialRenderer.applyFogFade();
 				MaterialManager.setMaterial(-1, 3);
 				MaterialManager.renderingUnderwater = true;
 				UnderwaterMaterialRenderer.method4609();
@@ -88,10 +88,10 @@ public final class Static248 {
 				Static22.anInt730 = -1;
 				for (local32 = 0; local32 < Static182.aClass3_Sub14ArrayArray2[0].length; local32++) {
 					@Pc(285) GlTile local285 = Static182.aClass3_Sub14ArrayArray2[0][local32];
-					@Pc(294) float local294 = 251.5F - (local285.aBoolean140 ? 1.0F : 0.5F);
-					if (local285.anInt2486 != Static152.anInt3604) {
-						Static152.anInt3604 = local285.anInt2486;
-						WaterMaterialRenderer.method619(local285.anInt2486);
+					@Pc(294) float local294 = 251.5F - (local285.blend ? 1.0F : 0.5F);
+					if (local285.underwaterColor != Static152.anInt3604) {
+						Static152.anInt3604 = local285.underwaterColor;
+						WaterMaterialRenderer.method619(local285.underwaterColor);
 						Static161.method3066(WaterMaterialRenderer.method2422());
 					}
 					local285.method1944(SceneGraph.tiles, local294, false);
@@ -106,9 +106,9 @@ public final class Static248 {
 					}
 					for (local37 = 0; local37 < Static182.aClass3_Sub14ArrayArray2[local32].length; local37++) {
 						@Pc(336) GlTile local336 = Static182.aClass3_Sub14ArrayArray2[local32][local37];
-						@Pc(350) float local350 = 201.5F - (float) local32 * 50.0F - (local336.aBoolean140 ? 1.0F : 0.5F);
-						if (local336.anInt2485 != -1 && Rasteriser.textureProvider.method3237(local336.anInt2485) == 4 && Preferences.highWaterDetail) {
-							WaterMaterialRenderer.method619(local336.anInt2486);
+						@Pc(350) float local350 = 201.5F - (float) local32 * 50.0F - (local336.blend ? 1.0F : 0.5F);
+						if (local336.texture != -1 && Rasteriser.textureProvider.getMaterialType(local336.texture) == MaterialManager.WATER && Preferences.highWaterDetail) {
+							WaterMaterialRenderer.method619(local336.underwaterColor);
 						}
 						local336.method1944(SceneGraph.tiles, local350, false);
 					}
@@ -119,7 +119,7 @@ public final class Static248 {
 					local32++;
 				}
 			}
-			local244.glPopMatrix();
+			gl.glPopMatrix();
 		}
 		@Pc(434) int local434;
 		@Pc(438) int local438;

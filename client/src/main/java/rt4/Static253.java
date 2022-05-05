@@ -109,7 +109,7 @@ public final class Static253 {
 		client.audioLoop();
 		@Pc(387) byte local387 = Static236.method4047() == 2 ? (byte) Static136.anInt3325 : 1;
 		if (GlRenderer.enabled) {
-			GlRenderer.method4173();
+			GlRenderer.restoreLighting();
 			GlRenderer.setDepthTestEnabled(true);
 			GlRenderer.setFogEnabled(true);
 			if (client.gameState == 10) {

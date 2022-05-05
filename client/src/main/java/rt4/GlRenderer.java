@@ -566,7 +566,7 @@ public final class GlRenderer {
 	}
 
 	@OriginalMember(owner = "client!tf", name = "p", descriptor = "()V")
-	public static void method4173() {
+	public static void restoreLighting() {
 		if (Preferences.highDetailLighting) {
 			setLightingEnabled(true);
 			setNormalArrayEnabled(true);
