@@ -40,6 +40,83 @@ public final class ScriptRunner {
 	@OriginalMember(owner = "client!og", name = "g", descriptor = "[Lclient!na;")
 	public static JagString[] stringLocals;
 
+	public class Cs2Opcodes {
+		// Component setters
+		public static final int setPosition = 1000;
+		public static final int setSize = 1001;
+		public static final int setHidden = 1003;
+		public static final int setAspect = 1004;
+		public static final int setNoClickThrough = 1005;
+
+		// Component properties
+		public static final int getX = 1500;
+		public static final int getY = 1501;
+		public static final int getWidth = 1502;
+		public static final int getHeight = 1503;
+		public static final int getHidden = 1504;
+		public static final int getLayer = 1505;
+
+		// Bit utilities
+		public static final int addPercent = 4007;
+		public static final int flagBit = 4008;
+		public static final int unflagBit = 4009;
+		public static final int isBitFlagged = 4010;
+		public static final int mod = 4011;
+		public static final int pow = 4012;
+		public static final int root = 4013;
+		public static final int bitAnd = 4014;
+		public static final int bitOr = 4015;
+		public static final int min = 4016;
+		public static final int max = 4017;
+		public static final int multiplyDivide = 4018;
+
+		// String utilities
+		public static final int concatInt = 4100;
+		public static final int concatString = 4101;
+		public static final int concatSignedInt = 4102;
+		public static final int toLowerStr = 4103;
+		public static final int timeToStr = 4104;
+		public static final int strForGender = 4105;
+		public static final int parseInt = 4106;
+		public static final int compare = 4107;
+		public static final int getLineCount = 4108;
+		public static final int getMaxLineWidth = 4109;
+		public static final int chooseString = 4110;
+		public static final int escape = 4111;
+		public static final int concatChar = 4112;
+		public static final int isValidChar = 4113;
+		public static final int isAlphaNumeric = 4114;
+		public static final int isLetter = 4115;
+		public static final int isDigit = 4116;
+		public static final int length = 4117;
+		public static final int substr = 4118;
+		public static final int removeTags = 4119;
+		public static final int indexOfChar = 4120;
+		public static final int indexOfStr = 4121;
+		public static final int toLower = 4122;
+		public static final int toUpper = 4123;
+		public static final int formatNumber = 4124;
+
+		// Objs
+		public static final int itemIsStackable = 4207;
+		public static final int itemAttribute = 4208;
+		public static final int searchItem = 4210;
+
+		// Privacy
+		public static final int getPublicChatSetting = 5000;
+		public static final int setChatSettings = 5001;
+		public static final int getPrivateChatSetting = 5005;
+
+		// Ads
+		public static final int canShowVideoAd = 6405;
+		public static final int isShowingVideoAd = 6406;
+
+		// Worlds
+		public static final int getFirstWorldData = 6501;
+		public static final int getNextWorldData = 6502;
+		public static final int setWorldHost = 6503;
+	}
+
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(BILclient!jl;)V")
 	public static void run(@OriginalArg(1) int maxCycles, @OriginalArg(2) HookRequest request) {
 		@Pc(4) Object[] local4 = request.arguments;
@@ -502,16 +579,16 @@ public final class ScriptRunner {
 								}
 								if (opcode == 1100) {
 									isp -= 2;
-									component.anInt489 = intStack[isp];
-									if (component.anInt489 > component.anInt486 - component.width) {
-										component.anInt489 = component.anInt486 - component.width;
+									component.scrollX = intStack[isp];
+									if (component.scrollX > component.scrollMaxH - component.width) {
+										component.scrollX = component.scrollMaxH - component.width;
 									}
-									if (component.anInt489 < 0) {
-										component.anInt489 = 0;
+									if (component.scrollX < 0) {
+										component.scrollX = 0;
 									}
 									component.scrollY = intStack[isp + 1];
-									if (component.scrollY > component.anInt491 - component.height) {
-										component.scrollY = component.anInt491 - component.height;
+									if (component.scrollY > component.scrollMaxV - component.height) {
+										component.scrollY = component.scrollMaxV - component.height;
 									}
 									if (component.scrollY < 0) {
 										component.scrollY = 0;
@@ -539,31 +616,31 @@ public final class ScriptRunner {
 								}
 								if (opcode == 1103) {
 									isp--;
-									component.anInt476 = intStack[isp];
+									component.alpha = intStack[isp];
 									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1104) {
 									isp--;
-									component.anInt490 = intStack[isp];
+									component.lineWidth = intStack[isp];
 									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1105) {
 									isp--;
-									component.anInt477 = intStack[isp];
+									component.spriteId = intStack[isp];
 									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1106) {
 									isp--;
-									component.anInt521 = intStack[isp];
+									component.angle2d = intStack[isp];
 									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1107) {
 									isp--;
-									component.aBoolean23 = intStack[isp] == 1;
+									component.spriteTiling = intStack[isp] == 1;
 									InterfaceList.redraw(component);
 									continue;
 								}
@@ -609,7 +686,7 @@ public final class ScriptRunner {
 								}
 								if (opcode == 1111) {
 									isp--;
-									component.aBoolean22 = intStack[isp] == 1;
+									component.modelOrtho = intStack[isp] == 1;
 									InterfaceList.redraw(component);
 									continue;
 								}
@@ -627,7 +704,7 @@ public final class ScriptRunner {
 								}
 								if (opcode == 1113) {
 									isp--;
-									component.anInt502 = intStack[isp];
+									component.font = intStack[isp];
 									InterfaceList.redraw(component);
 									continue;
 								}
@@ -641,38 +718,38 @@ public final class ScriptRunner {
 								}
 								if (opcode == 1115) {
 									isp--;
-									component.aBoolean28 = intStack[isp] == 1;
+									component.textAntiMacro = intStack[isp] == 1;
 									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1116) {
 									isp--;
-									component.objSelected = intStack[isp];
+									component.outlineThickness = intStack[isp];
 									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1117) {
 									isp--;
-									component.objShadow = intStack[isp];
+									component.shadowColor = intStack[isp];
 									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1118) {
 									isp--;
-									component.aBoolean21 = intStack[isp] == 1;
+									component.vFlip = intStack[isp] == 1;
 									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1119) {
 									isp--;
-									component.aBoolean26 = intStack[isp] == 1;
+									component.hFlip = intStack[isp] == 1;
 									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1120) {
 									isp -= 2;
-									component.anInt486 = intStack[isp];
-									component.anInt491 = intStack[isp + 1];
+									component.scrollMaxH = intStack[isp];
+									component.scrollMaxV = intStack[isp + 1];
 									InterfaceList.redraw(component);
 									if (component.type == 0) {
 										Static17.method531(component, false);
@@ -688,7 +765,7 @@ public final class ScriptRunner {
 								}
 								if (opcode == 1122) {
 									isp--;
-									component.aBoolean18 = intStack[isp] == 1;
+									component.hasAlpha = intStack[isp] == 1;
 									InterfaceList.redraw(component);
 									continue;
 								}
@@ -809,27 +886,27 @@ public final class ScriptRunner {
 								}
 								if (opcode == 1302) {
 									isp--;
-									component.aBoolean27 = intStack[isp] == 1;
+									component.dragRenderBehavior = intStack[isp] == 1;
 									continue;
 								}
 								if (opcode == 1303) {
 									isp--;
-									component.anInt472 = intStack[isp];
+									component.dragDeadzone = intStack[isp];
 									continue;
 								}
 								if (opcode == 1304) {
 									isp--;
-									component.anInt447 = intStack[isp];
+									component.dragDeadtime = intStack[isp];
 									continue;
 								}
 								if (opcode == 1305) {
 									ssp--;
-									component.opBase = stringStack[ssp];
+									component.optionBase = stringStack[ssp];
 									continue;
 								}
 								if (opcode == 1306) {
 									ssp--;
-									component.aClass100_86 = stringStack[ssp];
+									component.targetVerb = stringStack[ssp];
 									continue;
 								}
 								if (opcode == 1307) {
@@ -907,20 +984,20 @@ public final class ScriptRunner {
 									} else if (opcode == 1404) {
 										component.onMouseLeave = local13000;
 									} else if (opcode == 1405) {
-										component.anObjectArray26 = local13000;
+										component.onDragStart = local13000;
 									} else if (opcode == 1406) {
-										component.anObjectArray27 = local13000;
+										component.onUseWith = local13000;
 									} else if (opcode == 1407) {
 										component.varpTriggers = local12937;
 										component.onVarpTransmit = local13000;
 									} else if (opcode == 1408) {
 										component.onTimer = local13000;
 									} else if (opcode == 1409) {
-										component.anObjectArray29 = local13000;
+										component.onOptionClick = local13000;
 									} else if (opcode == 1410) {
-										component.anObjectArray16 = local13000;
+										component.onDragRelease = local13000;
 									} else if (opcode == 1411) {
-										component.anObjectArray6 = local13000;
+										component.onDrag = local13000;
 									} else if (opcode == 1412) {
 										component.onMouseRepeat = local13000;
 									} else if (opcode == 1414) {
@@ -930,11 +1007,11 @@ public final class ScriptRunner {
 										component.statTriggers = local12937;
 										component.onStatTransmit = local13000;
 									} else if (opcode == 1416) {
-										component.anObjectArray11 = local13000;
+										component.onUse = local13000;
 									} else if (opcode == 1417) {
-										component.anObjectArray10 = local13000;
+										component.onScroll = local13000;
 									} else if (opcode == 1418) {
-										component.onChatTransmit = local13000;
+										component.onMsg = local13000;
 									} else if (opcode == 1419) {
 										component.onKey = local13000;
 									} else if (opcode == 1420) {
@@ -944,15 +1021,15 @@ public final class ScriptRunner {
 									} else if (opcode == 1422) {
 										component.onMiscTransmit = local13000;
 									} else if (opcode == 1423) {
-										component.anObjectArray12 = local13000;
+										component.onDialogAbort = local13000;
 									} else if (opcode == 1424) {
-										component.anObjectArray8 = local13000;
+										component.onWidgetsOpenClose = local13000;
 									} else if (opcode == 1425) {
 										component.onStockTransmit = local13000;
 									} else if (opcode == 1426) {
-										component.onCamFinished = local13000;
+										component.onMinimapUnlock = local13000;
 									} else if (opcode == 1427) {
-										component.anObjectArray17 = local13000;
+										component.onResize = local13000;
 									} else if (opcode == 1428) {
 										component.onVarcTransmit = local13000;
 										component.varcTriggers = local12937;
@@ -964,34 +1041,34 @@ public final class ScriptRunner {
 								}
 								if (opcode < 1600) {
 									component = local1020 ? staticActiveComponent1 : staticActiveComponent2;
-									if (opcode == 1500) {
+									if (opcode == Cs2Opcodes.getX) {
 										intStack[isp++] = component.x;
 										continue;
 									}
-									if (opcode == 1501) {
+									if (opcode == Cs2Opcodes.getY) {
 										intStack[isp++] = component.y;
 										continue;
 									}
-									if (opcode == 1502) {
+									if (opcode == Cs2Opcodes.getWidth) {
 										intStack[isp++] = component.width;
 										continue;
 									}
-									if (opcode == 1503) {
+									if (opcode == Cs2Opcodes.getHeight) {
 										intStack[isp++] = component.height;
 										continue;
 									}
-									if (opcode == 1504) {
+									if (opcode == Cs2Opcodes.getHidden) {
 										intStack[isp++] = component.hidden ? 1 : 0;
 										continue;
 									}
-									if (opcode == 1505) {
+									if (opcode == Cs2Opcodes.getLayer) {
 										intStack[isp++] = component.layer;
 										continue;
 									}
 								} else if (opcode < 1700) {
 									component = local1020 ? staticActiveComponent1 : staticActiveComponent2;
 									if (opcode == 1600) {
-										intStack[isp++] = component.anInt489;
+										intStack[isp++] = component.scrollX;
 										continue;
 									}
 									if (opcode == 1601) {
@@ -1003,11 +1080,11 @@ public final class ScriptRunner {
 										continue;
 									}
 									if (opcode == 1603) {
-										intStack[isp++] = component.anInt486;
+										intStack[isp++] = component.scrollMaxH;
 										continue;
 									}
 									if (opcode == 1604) {
-										intStack[isp++] = component.anInt491;
+										intStack[isp++] = component.scrollMaxV;
 										continue;
 									}
 									if (opcode == 1605) {
@@ -1027,7 +1104,7 @@ public final class ScriptRunner {
 										continue;
 									}
 									if (opcode == 1609) {
-										intStack[isp++] = component.anInt476;
+										intStack[isp++] = component.alpha;
 										continue;
 									}
 									if (opcode == 1610) {
@@ -1039,7 +1116,7 @@ public final class ScriptRunner {
 										continue;
 									}
 									if (opcode == 1612) {
-										intStack[isp++] = component.anInt477;
+										intStack[isp++] = component.spriteId;
 										continue;
 									}
 								} else if (opcode < 1800) {
@@ -1078,10 +1155,10 @@ public final class ScriptRunner {
 										continue;
 									}
 									if (opcode == 1802) {
-										if (component.opBase == null) {
+										if (component.optionBase == null) {
 											stringStack[ssp++] = EMPTY_STRING;
 										} else {
-											stringStack[ssp++] = component.opBase;
+											stringStack[ssp++] = component.optionBase;
 										}
 										continue;
 									}
@@ -1116,7 +1193,7 @@ public final class ScriptRunner {
 									isp--;
 									component = InterfaceList.getComponent(intStack[isp]);
 									if (opcode == 2600) {
-										intStack[isp++] = component.anInt489;
+										intStack[isp++] = component.scrollX;
 										continue;
 									}
 									if (opcode == 2601) {
@@ -1128,11 +1205,11 @@ public final class ScriptRunner {
 										continue;
 									}
 									if (opcode == 2603) {
-										intStack[isp++] = component.anInt486;
+										intStack[isp++] = component.scrollMaxH;
 										continue;
 									}
 									if (opcode == 2604) {
-										intStack[isp++] = component.anInt491;
+										intStack[isp++] = component.scrollMaxV;
 										continue;
 									}
 									if (opcode == 2605) {
@@ -1152,7 +1229,7 @@ public final class ScriptRunner {
 										continue;
 									}
 									if (opcode == 2609) {
-										intStack[isp++] = component.anInt476;
+										intStack[isp++] = component.alpha;
 										continue;
 									}
 									if (opcode == 2610) {
@@ -1164,7 +1241,7 @@ public final class ScriptRunner {
 										continue;
 									}
 									if (opcode == 2612) {
-										intStack[isp++] = component.anInt477;
+										intStack[isp++] = component.spriteId;
 										continue;
 									}
 								} else if (opcode < 2800) {
@@ -1243,10 +1320,10 @@ public final class ScriptRunner {
 										continue;
 									}
 									if (opcode == 2802) {
-										if (component.opBase == null) {
+										if (component.optionBase == null) {
 											stringStack[ssp++] = EMPTY_STRING;
 										} else {
-											stringStack[ssp++] = component.opBase;
+											stringStack[ssp++] = component.optionBase;
 										}
 										continue;
 									}
@@ -1968,42 +2045,42 @@ public final class ScriptRunner {
 									}
 									@Pc(4899) long local4899;
 									@Pc(4892) long local4892;
-									if (opcode == 4007) {
+									if (opcode == Cs2Opcodes.addPercent) {
 										isp -= 2;
 										local4892 = intStack[isp];
 										local4899 = intStack[isp + 1];
 										intStack[isp++] = (int) (local4892 * local4899 / 100L + local4892);
 										continue;
 									}
-									if (opcode == 4008) {
+									if (opcode == Cs2Opcodes.flagBit) {
 										isp -= 2;
 										int1 = intStack[isp];
 										int3 = intStack[isp + 1];
 										intStack[isp++] = int1 | 0x1 << int3;
 										continue;
 									}
-									if (opcode == 4009) {
+									if (opcode == Cs2Opcodes.unflagBit) {
 										isp -= 2;
 										int1 = intStack[isp];
 										int3 = intStack[isp + 1];
 										intStack[isp++] = -(0x1 << int3) - 1 & int1;
 										continue;
 									}
-									if (opcode == 4010) {
+									if (opcode == Cs2Opcodes.isBitFlagged) {
 										isp -= 2;
 										int1 = intStack[isp];
 										int3 = intStack[isp + 1];
 										intStack[isp++] = (int1 & 0x1 << int3) == 0 ? 0 : 1;
 										continue;
 									}
-									if (opcode == 4011) {
+									if (opcode == Cs2Opcodes.mod) {
 										isp -= 2;
 										int3 = intStack[isp + 1];
 										int1 = intStack[isp];
 										intStack[isp++] = int1 % int3;
 										continue;
 									}
-									if (opcode == 4012) {
+									if (opcode == Cs2Opcodes.pow) {
 										isp -= 2;
 										int3 = intStack[isp + 1];
 										int1 = intStack[isp];
@@ -2014,7 +2091,7 @@ public final class ScriptRunner {
 										}
 										continue;
 									}
-									if (opcode == 4013) {
+									if (opcode == Cs2Opcodes.root) {
 										isp -= 2;
 										int3 = intStack[isp + 1];
 										int1 = intStack[isp];
@@ -2027,35 +2104,35 @@ public final class ScriptRunner {
 										}
 										continue;
 									}
-									if (opcode == 4014) {
+									if (opcode == Cs2Opcodes.bitAnd) {
 										isp -= 2;
 										int3 = intStack[isp + 1];
 										int1 = intStack[isp];
 										intStack[isp++] = int3 & int1;
 										continue;
 									}
-									if (opcode == 4015) {
+									if (opcode == Cs2Opcodes.bitOr) {
 										isp -= 2;
 										int1 = intStack[isp];
 										int3 = intStack[isp + 1];
 										intStack[isp++] = int1 | int3;
 										continue;
 									}
-									if (opcode == 4016) {
+									if (opcode == Cs2Opcodes.min) {
 										isp -= 2;
 										int1 = intStack[isp];
 										int3 = intStack[isp + 1];
 										intStack[isp++] = int1 < int3 ? int1 : int3;
 										continue;
 									}
-									if (opcode == 4017) {
+									if (opcode == Cs2Opcodes.max) {
 										isp -= 2;
 										int3 = intStack[isp + 1];
 										int1 = intStack[isp];
 										intStack[isp++] = int3 >= int1 ? int3 : int1;
 										continue;
 									}
-									if (opcode == 4018) {
+									if (opcode == Cs2Opcodes.multiplyDivide) {
 										isp -= 3;
 										local4892 = intStack[isp];
 										local4899 = intStack[isp + 1];
@@ -2132,13 +2209,13 @@ public final class ScriptRunner {
 											intStack[isp++] = int1;
 											continue;
 										}
-										if (opcode == 4207) {
+										if (opcode == Cs2Opcodes.itemIsStackable) {
 											isp--;
 											int1 = intStack[isp];
 											intStack[isp++] = ObjTypeList.get(int1).members ? 1 : 0;
 											continue;
 										}
-										if (opcode == 4208) {
+										if (opcode == Cs2Opcodes.itemAttribute) {
 											isp -= 2;
 											int1 = intStack[isp];
 											int3 = intStack[isp + 1];
@@ -2150,12 +2227,12 @@ public final class ScriptRunner {
 											}
 											continue;
 										}
-										if (opcode == 4210) {
+										if (opcode == Cs2Opcodes.searchItem) {
 											ssp--;
 											string = stringStack[ssp];
 											isp--;
 											int3 = intStack[isp];
-											Static155.method2941(int3 == 1, string);
+											Find.search(int3 == 1, string);
 											intStack[isp++] = Find.index;
 											continue;
 										}
@@ -2187,11 +2264,11 @@ public final class ScriptRunner {
 									} else if (opcode >= 4500) {
 										if (opcode >= 4600) {
 											if (opcode < 5100) {
-												if (opcode == 5000) {
+												if (opcode == Cs2Opcodes.getPublicChatSetting) {
 													intStack[isp++] = Chat.publicFilter;
 													continue;
 												}
-												if (opcode == 5001) {
+												if (opcode == Cs2Opcodes.setChatSettings) {
 													isp -= 3;
 													Chat.publicFilter = intStack[isp];
 													Chat.privateFilter = intStack[isp + 1];
@@ -2237,7 +2314,7 @@ public final class ScriptRunner {
 													intStack[isp++] = int3;
 													continue;
 												}
-												if (opcode == 5005) {
+												if (opcode == Cs2Opcodes.getPrivateChatSetting) {
 													intStack[isp++] = Chat.privateFilter;
 													continue;
 												}
@@ -3691,11 +3768,11 @@ public final class ScriptRunner {
 														continue;
 													}
 												} else if (opcode < 6500) {
-													if (opcode == 6405) {
+													if (opcode == Cs2Opcodes.canShowVideoAd) {
 														intStack[isp++] = Static87.showVideoAd() ? 1 : 0;
 														continue;
 													}
-													if (opcode == 6406) {
+													if (opcode == Cs2Opcodes.isShowingVideoAd) {
 														intStack[isp++] = Static267.isShowingVideoAd() ? 1 : 0;
 														continue;
 													}
@@ -3710,7 +3787,7 @@ public final class ScriptRunner {
 													}
 													@Pc(10247) WorldInfo local10247;
 													@Pc(10191) World world;
-													if (opcode == 6501) {
+													if (opcode == Cs2Opcodes.getFirstWorldData) {
 														world = Static18.getFirstWorld();
 														if (world == null) {
 															intStack[isp++] = -1;
@@ -3730,7 +3807,7 @@ public final class ScriptRunner {
 														}
 														continue;
 													}
-													if (opcode == 6502) {
+													if (opcode == Cs2Opcodes.getNextWorldData) {
 														world = WorldList.getNextWorld();
 														if (world == null) {
 															intStack[isp++] = -1;
@@ -3750,7 +3827,7 @@ public final class ScriptRunner {
 														}
 														continue;
 													}
-													if (opcode == 6503) {
+													if (opcode == Cs2Opcodes.setWorldHost) {
 														isp--;
 														int1 = intStack[isp];
 														if (client.gameState == 10 && LoginManager.anInt4937 == 0 && LoginManager.step == 0 && CreateManager.step == 0) {
@@ -3837,7 +3914,7 @@ public final class ScriptRunner {
 										continue;
 									}
 								} else {
-									if (opcode == 4100) {
+									if (opcode == Cs2Opcodes.concatInt) {
 										ssp--;
 										string = stringStack[ssp];
 										isp--;
@@ -3845,14 +3922,14 @@ public final class ScriptRunner {
 										stringStack[ssp++] = JagString.concatenate(new JagString[] { string, JagString.parseInt(int3) });
 										continue;
 									}
-									if (opcode == 4101) {
+									if (opcode == Cs2Opcodes.concatString) {
 										ssp -= 2;
 										local2522 = stringStack[ssp + 1];
 										string = stringStack[ssp];
 										stringStack[ssp++] = JagString.concatenate(new JagString[] { string, local2522 });
 										continue;
 									}
-									if (opcode == 4102) {
+									if (opcode == Cs2Opcodes.concatSignedInt) {
 										ssp--;
 										string = stringStack[ssp];
 										isp--;
@@ -3860,24 +3937,24 @@ public final class ScriptRunner {
 										stringStack[ssp++] = JagString.concatenate(new JagString[] { string, JagString.parseIntTrue(int3) });
 										continue;
 									}
-									if (opcode == 4103) {
+									if (opcode == Cs2Opcodes.toLowerStr) {
 										ssp--;
 										string = stringStack[ssp];
 										stringStack[ssp++] = string.toLowerCase();
 										continue;
 									}
-									if (opcode == 4104) {
+									if (opcode == Cs2Opcodes.timeToStr) {
 										isp--;
 										int1 = intStack[isp];
 										@Pc(11770) long local11770 = (long) int1 * 86400000L + 1014768000000L;
 										aCalendar2.setTime(new Date(local11770));
-										local652 = aCalendar2.get(5);
-										c = aCalendar2.get(2);
-										local1087 = aCalendar2.get(1);
+										local652 = aCalendar2.get(Calendar.DATE);
+										c = aCalendar2.get(Calendar.MONTH);
+										local1087 = aCalendar2.get(Calendar.YEAR);
 										stringStack[ssp++] = JagString.concatenate(new JagString[] { JagString.parseInt(local652), Static163.aClass100_767, Static34.aClass100Array40[c], Static163.aClass100_767, JagString.parseInt(local1087) });
 										continue;
 									}
-									if (opcode == 4105) {
+									if (opcode == Cs2Opcodes.strForGender) {
 										ssp -= 2;
 										local2522 = stringStack[ssp + 1];
 										string = stringStack[ssp];
@@ -3888,18 +3965,18 @@ public final class ScriptRunner {
 										stringStack[ssp++] = string;
 										continue;
 									}
-									if (opcode == 4106) {
+									if (opcode == Cs2Opcodes.parseInt) {
 										isp--;
 										int1 = intStack[isp];
 										stringStack[ssp++] = JagString.parseInt(int1);
 										continue;
 									}
-									if (opcode == 4107) {
+									if (opcode == Cs2Opcodes.compare) {
 										ssp -= 2;
-										intStack[isp++] = stringStack[ssp].method3126(stringStack[ssp + 1]);
+										intStack[isp++] = stringStack[ssp].compare(stringStack[ssp + 1]);
 										continue;
 									}
-									if (opcode == 4108) {
+									if (opcode == Cs2Opcodes.getLineCount) {
 										ssp--;
 										string = stringStack[ssp];
 										isp -= 2;
@@ -3908,16 +3985,16 @@ public final class ScriptRunner {
 										intStack[isp++] = FontMetricsList.get(int2).getParagraphLineCount(string, int3);
 										continue;
 									}
-									if (opcode == 4109) {
+									if (opcode == Cs2Opcodes.getMaxLineWidth) {
 										isp -= 2;
 										ssp--;
 										string = stringStack[ssp];
 										int2 = intStack[isp + 1];
 										int3 = intStack[isp];
-										intStack[isp++] = FontMetricsList.get(int2).method2856(string, int3);
+										intStack[isp++] = FontMetricsList.get(int2).getMaxLineWidth(string, int3);
 										continue;
 									}
-									if (opcode == 4110) {
+									if (opcode == Cs2Opcodes.chooseString) {
 										ssp -= 2;
 										string = stringStack[ssp];
 										local2522 = stringStack[ssp + 1];
@@ -3929,13 +4006,13 @@ public final class ScriptRunner {
 										}
 										continue;
 									}
-									if (opcode == 4111) {
+									if (opcode == Cs2Opcodes.escape) {
 										ssp--;
 										string = stringStack[ssp];
 										stringStack[ssp++] = Font.escape(string);
 										continue;
 									}
-									if (opcode == 4112) {
+									if (opcode == Cs2Opcodes.concatChar) {
 										ssp--;
 										string = stringStack[ssp];
 										isp--;
@@ -3943,34 +4020,34 @@ public final class ScriptRunner {
 										if (int3 == -1) {
 											throw new RuntimeException("null char");
 										}
-										stringStack[ssp++] = string.method3128(int3);
+										stringStack[ssp++] = string.concatChar(int3);
 										continue;
 									}
-									if (opcode == 4113) {
+									if (opcode == Cs2Opcodes.isValidChar) {
 										isp--;
 										int1 = intStack[isp];
-										intStack[isp++] = method3213(int1) ? 1 : 0;
+										intStack[isp++] = isValidChar(int1) ? 1 : 0;
 										continue;
 									}
-									if (opcode == 4114) {
+									if (opcode == Cs2Opcodes.isAlphaNumeric) {
 										isp--;
 										int1 = intStack[isp];
-										intStack[isp++] = Static83.method433(int1) ? 1 : 0;
+										intStack[isp++] = Static83.isAlphaNumeric(int1) ? 1 : 0;
 										continue;
 									}
-									if (opcode == 4115) {
+									if (opcode == Cs2Opcodes.isLetter) {
 										isp--;
 										int1 = intStack[isp];
-										intStack[isp++] = Static258.method4428(int1) ? 1 : 0;
+										intStack[isp++] = Static258.isLetter(int1) ? 1 : 0;
 										continue;
 									}
-									if (opcode == 4116) {
+									if (opcode == Cs2Opcodes.isDigit) {
 										isp--;
 										int1 = intStack[isp];
-										intStack[isp++] = Static24.method671(int1) ? 1 : 0;
+										intStack[isp++] = Static24.isDigit(int1) ? 1 : 0;
 										continue;
 									}
-									if (opcode == 4117) {
+									if (opcode == Cs2Opcodes.length) {
 										ssp--;
 										string = stringStack[ssp];
 										if (string == null) {
@@ -3980,7 +4057,7 @@ public final class ScriptRunner {
 										}
 										continue;
 									}
-									if (opcode == 4118) {
+									if (opcode == Cs2Opcodes.substr) {
 										isp -= 2;
 										ssp--;
 										string = stringStack[ssp];
@@ -3989,7 +4066,7 @@ public final class ScriptRunner {
 										stringStack[ssp++] = string.substring(int2, int3);
 										continue;
 									}
-									if (opcode == 4119) {
+									if (opcode == Cs2Opcodes.removeTags) {
 										ssp--;
 										string = stringStack[ssp];
 										local2522 = Static87.allocate(string.length());
@@ -4008,7 +4085,7 @@ public final class ScriptRunner {
 										stringStack[ssp++] = local2522;
 										continue;
 									}
-									if (opcode == 4120) {
+									if (opcode == Cs2Opcodes.indexOfChar) {
 										isp -= 2;
 										ssp--;
 										string = stringStack[ssp];
@@ -4017,7 +4094,7 @@ public final class ScriptRunner {
 										intStack[isp++] = string.indexOf(int3, int2);
 										continue;
 									}
-									if (opcode == 4121) {
+									if (opcode == Cs2Opcodes.indexOfStr) {
 										ssp -= 2;
 										string = stringStack[ssp];
 										local2522 = stringStack[ssp + 1];
@@ -4026,24 +4103,24 @@ public final class ScriptRunner {
 										intStack[isp++] = string.indexOf(local2522, int2);
 										continue;
 									}
-									if (opcode == 4122) {
+									if (opcode == Cs2Opcodes.toLower) {
 										isp--;
 										int1 = intStack[isp];
 										intStack[isp++] = Static231.toLowerCase(int1);
 										continue;
 									}
-									if (opcode == 4123) {
+									if (opcode == Cs2Opcodes.toUpper) {
 										isp--;
 										int1 = intStack[isp];
 										intStack[isp++] = Static143.toUpperCase(int1);
 										continue;
 									}
-									if (opcode == 4124) {
+									if (opcode == Cs2Opcodes.formatNumber) {
 										isp--;
 										local12388 = intStack[isp] != 0;
 										isp--;
 										int3 = intStack[isp];
-										stringStack[ssp++] = Static182.valueToBase10String(client.language, local12388, 0, (long) int3);
+										stringStack[ssp++] = Static182.formatNumber(client.language, local12388, 0, (long) int3);
 										continue;
 									}
 								}
@@ -4056,7 +4133,7 @@ public final class ScriptRunner {
 								component = InterfaceList.getComponent(intStack[isp]);
 								opcode -= 1000;
 							}
-							if (opcode == 1000) {
+							if (opcode == Cs2Opcodes.setPosition) {
 								isp -= 4;
 								component.baseX = intStack[isp];
 								component.baseY = intStack[isp + 1];
@@ -4081,7 +4158,7 @@ public final class ScriptRunner {
 								}
 								continue;
 							}
-							if (opcode == 1001) {
+							if (opcode == Cs2Opcodes.setSize) {
 								isp -= 4;
 								component.baseWidth = intStack[isp];
 								component.baseHeight = intStack[isp + 1];
@@ -4108,7 +4185,7 @@ public final class ScriptRunner {
 								}
 								continue;
 							}
-							if (opcode == 1003) {
+							if (opcode == Cs2Opcodes.setHidden) {
 								isp--;
 								local1552 = intStack[isp] == 1;
 								if (local1552 != component.hidden) {
@@ -4120,7 +4197,7 @@ public final class ScriptRunner {
 								}
 								continue;
 							}
-							if (opcode == 1004) {
+							if (opcode == Cs2Opcodes.setAspect) {
 								isp -= 2;
 								component.aspectWidth = intStack[isp];
 								component.aspectHeight = intStack[isp + 1];
@@ -4131,7 +4208,7 @@ public final class ScriptRunner {
 								}
 								continue;
 							}
-							if (opcode == 1005) {
+							if (opcode == Cs2Opcodes.setNoClickThrough) {
 								isp--;
 								component.noClickThrough = intStack[isp] == 1;
 								continue;
@@ -4171,7 +4248,7 @@ public final class ScriptRunner {
 	}
 
 	@OriginalMember(owner = "client!we", name = "b", descriptor = "(II)Z")
-	public static boolean method3213(@OriginalArg(1) int arg0) {
+	public static boolean isValidChar(@OriginalArg(1) int arg0) {
 		if (arg0 >= 32 && arg0 <= 126) {
 			return true;
 		} else if (arg0 >= 160 && arg0 <= 255) {

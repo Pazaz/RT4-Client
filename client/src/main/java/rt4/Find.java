@@ -46,4 +46,37 @@ public class Find {
         }
         Static202.method3656(local113, results);
     }
+
+    @OriginalMember(owner = "client!me", name = "a", descriptor = "(ZLclient!na;I)V")
+    public static void search(@OriginalArg(0) boolean arg0, @OriginalArg(1) JagString arg1) {
+        @Pc(8) short[] local8 = new short[16];
+        @Pc(12) JagString local12 = arg1.toLowerCase();
+        @Pc(14) int local14 = 0;
+        for (@Pc(16) int local16 = 0; local16 < ObjTypeList.anInt3245; local16++) {
+            @Pc(27) ObjType local27 = ObjTypeList.get(local16);
+            if ((!arg0 || local27.stockMarket) && local27.certificateTemplate == -1 && local27.lentTemplate == -1 && local27.dummyItem == 0 && local27.name.toLowerCase().indexOf(local12) != -1) {
+                if (local14 >= 250) {
+                    results = null;
+                    index = -1;
+                    return;
+                }
+                if (local14 >= local8.length) {
+                    @Pc(83) short[] local83 = new short[local8.length * 2];
+                    for (@Pc(85) int local85 = 0; local85 < local14; local85++) {
+                        local83[local85] = local8[local85];
+                    }
+                    local8 = local83;
+                }
+                local8[local14++] = (short) local16;
+            }
+        }
+        results = local8;
+        size = 0;
+        index = local14;
+        @Pc(117) JagString[] local117 = new JagString[index];
+        for (@Pc(119) int local119 = 0; local119 < index; local119++) {
+            local117[local119] = ObjTypeList.get(local8[local119]).name;
+        }
+        Static202.method3656(local117, results);
+    }
 }

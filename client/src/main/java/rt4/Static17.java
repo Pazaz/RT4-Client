@@ -8,8 +8,8 @@ public final class Static17 {
 
 	@OriginalMember(owner = "client!bg", name = "a", descriptor = "(Lclient!be;ZI)V")
 	public static void method531(@OriginalArg(0) Component arg0, @OriginalArg(1) boolean arg1) {
-		@Pc(20) int local20 = arg0.anInt486 == 0 ? arg0.width : arg0.anInt486;
-		@Pc(32) int local32 = arg0.anInt491 == 0 ? arg0.height : arg0.anInt491;
+		@Pc(20) int local20 = arg0.scrollMaxH == 0 ? arg0.width : arg0.scrollMaxH;
+		@Pc(32) int local32 = arg0.scrollMaxV == 0 ? arg0.height : arg0.scrollMaxV;
 		Static266.method4190(arg0.id, arg1, local20, local32, InterfaceList.components[arg0.id >> 16]);
 		if (arg0.createdComponents != null) {
 			Static266.method4190(arg0.id, arg1, local20, local32, arg0.createdComponents);

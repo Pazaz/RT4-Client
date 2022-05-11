@@ -131,12 +131,12 @@ public final class Static36 {
 						}
 						if (component.aBoolean25 || component.anInt453 != 0) {
 							@Pc(399) HookRequest request;
-							if (local207 && Static58.wheelRotation != 0 && component.anObjectArray10 != null) {
+							if (local207 && Static58.wheelRotation != 0 && component.onScroll != null) {
 								request = new HookRequest();
 								request.aBoolean158 = true;
 								request.source = component;
 								request.mouseY = Static58.wheelRotation;
-								request.arguments = component.anObjectArray10;
+								request.arguments = component.onScroll;
 								InterfaceList.lowPriorityRequests.addTail(request);
 							}
 							if (Static105.aClass13_14 != null || Static118.aClass13_15 != null || Static60.aBoolean108 || component.anInt453 != 1400 && Static137.anInt3337 > 0) {
@@ -217,13 +217,13 @@ public final class Static36 {
 									InterfaceList.lowPriorityRequests.addTail(request);
 								}
 							}
-							if (component.aBoolean24 && local212 && component.anObjectArray6 != null) {
+							if (component.aBoolean24 && local212 && component.onDrag != null) {
 								request = new HookRequest();
 								request.aBoolean158 = true;
 								request.source = component;
 								request.mouseX = Mouse.anInt4873 - local50;
 								request.mouseY = Mouse.anInt5032 - local55;
-								request.arguments = component.anObjectArray6;
+								request.arguments = component.onDrag;
 								InterfaceList.lowPriorityRequests.addTail(request);
 							}
 							if (component.aBoolean24 && !local212) {
@@ -399,10 +399,10 @@ public final class Static36 {
 								}
 								component.updatedStatsReaderIndex = PlayerSkillXpTable.updatedStatsWriterIndex;
 							}
-							if (Chat.transmitAt > component.lastTransmitTimer && component.onChatTransmit != null) {
+							if (Chat.transmitAt > component.lastTransmitTimer && component.onMsg != null) {
 								request = new HookRequest();
 								request.source = component;
-								request.arguments = component.onChatTransmit;
+								request.arguments = component.onMsg;
 								InterfaceList.lowPriorityRequests.addTail(request);
 							}
 							if (FriendsList.transmitAt > component.lastTransmitTimer && component.onFriendTransmit != null) {
@@ -440,10 +440,10 @@ public final class Static36 {
 									InterfaceList.lowPriorityRequests.addTail(local1430);
 								}
 							}
-							if (Static13.aBoolean16 && component.onCamFinished != null) {
+							if (Static13.aBoolean16 && component.onMinimapUnlock != null) {
 								request = new HookRequest();
 								request.source = component;
-								request.arguments = component.onCamFinished;
+								request.arguments = component.onMinimapUnlock;
 								InterfaceList.lowPriorityRequests.addTail(request);
 							}
 						}
@@ -459,14 +459,14 @@ public final class Static36 {
 						if (component.type == 8 && Mouse.anInt4873 >= local61 && Mouse.anInt5032 >= local63 && Mouse.anInt4873 < local65 && Mouse.anInt5032 < local67) {
 							Static43.aClass13_11 = component;
 						}
-						if (component.anInt491 > component.height) {
-							Static236.method4049(Mouse.anInt5032, component.height, component, Mouse.anInt4873, local50 + component.width, local55, component.anInt491);
+						if (component.scrollMaxV > component.height) {
+							Static236.method4049(Mouse.anInt5032, component.height, component, Mouse.anInt4873, local50 + component.width, local55, component.scrollMaxV);
 						}
 					}
 					if (component.type == 0) {
-						method946(arg0, component.id, local61, local63, local65, local67, local50 - component.anInt489, local55 - component.scrollY);
+						method946(arg0, component.id, local61, local63, local65, local67, local50 - component.scrollX, local55 - component.scrollY);
 						if (component.createdComponents != null) {
-							method946(component.createdComponents, component.id, local61, local63, local65, local67, local50 - component.anInt489, local55 - component.scrollY);
+							method946(component.createdComponents, component.id, local61, local63, local65, local67, local50 - component.scrollX, local55 - component.scrollY);
 						}
 						@Pc(1595) ComponentPointer local1595 = (ComponentPointer) InterfaceList.openInterfaces.get((long) component.id);
 						if (local1595 != null) {

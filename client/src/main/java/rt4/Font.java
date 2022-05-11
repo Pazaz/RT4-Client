@@ -323,7 +323,7 @@ public abstract class Font extends SecondaryNode {
 	protected abstract void renderGlyphTransparent(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6);
 
 	@OriginalMember(owner = "client!rk", name = "b", descriptor = "(Lclient!na;I)I")
-	public final int method2856(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1) {
+	public final int getMaxLineWidth(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1) {
 		@Pc(10) int local10 = this.splitParagraph(arg0, new int[] { arg1 }, lines);
 		@Pc(12) int local12 = 0;
 		for (@Pc(14) int local14 = 0; local14 < local10; local14++) {

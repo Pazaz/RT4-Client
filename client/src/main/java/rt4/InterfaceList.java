@@ -182,7 +182,7 @@ public class InterfaceList {
 
     @OriginalMember(owner = "client!qj", name = "a", descriptor = "(Lclient!be;BI)Lclient!na;")
     public static JagString getOp(@OriginalArg(0) Component arg0, @OriginalArg(2) int arg1) {
-        if (!getServerActiveProperties(arg0).method503(arg1) && arg0.anObjectArray29 == null) {
+        if (!getServerActiveProperties(arg0).method503(arg1) && arg0.onOptionClick == null) {
             return null;
         } else if (arg0.ops == null || arg0.ops.length <= arg1 || arg0.ops[arg1] == null || arg0.ops[arg1].trim().length() == 0) {
             return Static121.aBoolean154 ? JagString.concatenate(new JagString[] { Static207.aClass100_903, JagString.parseInt(arg1) }) : null;

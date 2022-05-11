@@ -30,7 +30,7 @@ public final class Component {
 	public Object[] onClickRepeat;
 
 	@OriginalMember(owner = "client!be", name = "p", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray6;
+	public Object[] onDrag;
 
 	@OriginalMember(owner = "client!be", name = "q", descriptor = "[Lclient!na;")
 	public JagString[] ops;
@@ -45,16 +45,16 @@ public final class Component {
 	public int[] inventoryTriggers;
 
 	@OriginalMember(owner = "client!be", name = "v", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray8;
+	public Object[] onWidgetsOpenClose;
 
 	@OriginalMember(owner = "client!be", name = "x", descriptor = "Z")
-	public boolean aBoolean21;
+	public boolean vFlip;
 
 	@OriginalMember(owner = "client!be", name = "z", descriptor = "[Ljava/lang/Object;")
 	public Object[] onHold;
 
 	@OriginalMember(owner = "client!be", name = "E", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray10;
+	public Object[] onScroll;
 
 	@OriginalMember(owner = "client!be", name = "G", descriptor = "[I")
 	public int[] varcstrTriggers;
@@ -66,16 +66,16 @@ public final class Component {
 	public int[] anIntArray36;
 
 	@OriginalMember(owner = "client!be", name = "X", descriptor = "Z")
-	public boolean aBoolean26;
+	public boolean hFlip;
 
 	@OriginalMember(owner = "client!be", name = "Z", descriptor = "I")
 	public int modelId;
 
 	@OriginalMember(owner = "client!be", name = "bb", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray11;
+	public Object[] onUse;
 
 	@OriginalMember(owner = "client!be", name = "fb", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray12;
+	public Object[] onDialogAbort;
 
 	@OriginalMember(owner = "client!be", name = "gb", descriptor = "[I")
 	public int[] anIntArray37;
@@ -84,7 +84,7 @@ public final class Component {
 	public int[] varcTriggers;
 
 	@OriginalMember(owner = "client!be", name = "qb", descriptor = "[Ljava/lang/Object;")
-	public Object[] onCamFinished;
+	public Object[] onMinimapUnlock;
 
 	@OriginalMember(owner = "client!be", name = "tb", descriptor = "[Ljava/lang/Object;")
 	public Object[] onKey;
@@ -93,13 +93,13 @@ public final class Component {
 	public Object[] onVarcstrTransmit;
 
 	@OriginalMember(owner = "client!be", name = "Db", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray16;
+	public Object[] onDragRelease;
 
 	@OriginalMember(owner = "client!be", name = "Fb", descriptor = "[B")
 	public byte[] aByteArray7;
 
 	@OriginalMember(owner = "client!be", name = "Jb", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray17;
+	public Object[] onResize;
 
 	@OriginalMember(owner = "client!be", name = "Nb", descriptor = "[Ljava/lang/Object;")
 	public Object[] onRelease;
@@ -114,7 +114,7 @@ public final class Component {
 	public int[] objTypes;
 
 	@OriginalMember(owner = "client!be", name = "fc", descriptor = "[Ljava/lang/Object;")
-	public Object[] onChatTransmit;
+	public Object[] onMsg;
 
 	@OriginalMember(owner = "client!be", name = "lc", descriptor = "[Lclient!be;")
 	public Component[] createdComponents;
@@ -153,7 +153,7 @@ public final class Component {
 	public int[] anIntArray45;
 
 	@OriginalMember(owner = "client!be", name = "Xc", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray26;
+	public Object[] onDragStart;
 
 	@OriginalMember(owner = "client!be", name = "ad", descriptor = "[[I")
 	public int[][] anIntArrayArray4;
@@ -165,7 +165,7 @@ public final class Component {
 	public int[] anIntArray47;
 
 	@OriginalMember(owner = "client!be", name = "gd", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray27;
+	public Object[] onUseWith;
 
 	@OriginalMember(owner = "client!be", name = "kd", descriptor = "[I")
 	public int[] anIntArray48;
@@ -177,7 +177,7 @@ public final class Component {
 	public Object[] onClanTransmit;
 
 	@OriginalMember(owner = "client!be", name = "rd", descriptor = "[Ljava/lang/Object;")
-	public Object[] anObjectArray29;
+	public Object[] onOptionClick;
 
 	@OriginalMember(owner = "client!be", name = "sd", descriptor = "[Ljava/lang/Object;")
 	public Object[] onMiscTransmit;
@@ -186,7 +186,7 @@ public final class Component {
 	public int[] objCounts;
 
 	@OriginalMember(owner = "client!be", name = "H", descriptor = "Z")
-	public boolean aBoolean23 = false;
+	public boolean spriteTiling = false;
 
 	@OriginalMember(owner = "client!be", name = "f", descriptor = "I")
 	public int aspectHeight = 1;
@@ -207,7 +207,7 @@ public final class Component {
 	public int y = 0;
 
 	@OriginalMember(owner = "client!be", name = "nb", descriptor = "I")
-	public int anInt472 = 0;
+	public int dragDeadzone = 0;
 
 	@OriginalMember(owner = "client!be", name = "W", descriptor = "I")
 	public int anInt462 = -1;
@@ -222,19 +222,19 @@ public final class Component {
 	public int anInt481 = 0;
 
 	@OriginalMember(owner = "client!be", name = "A", descriptor = "Z")
-	public boolean aBoolean22 = false;
+	public boolean modelOrtho = false;
 
 	@OriginalMember(owner = "client!be", name = "zb", descriptor = "Z")
 	public boolean aBoolean30 = false;
 
 	@OriginalMember(owner = "client!be", name = "y", descriptor = "I")
-	public int anInt447 = 0;
+	public int dragDeadtime = 0;
 
 	@OriginalMember(owner = "client!be", name = "hb", descriptor = "I")
 	public int scrollY = 0;
 
 	@OriginalMember(owner = "client!be", name = "xb", descriptor = "I")
-	public int anInt477 = -1;
+	public int spriteId = -1;
 
 	@OriginalMember(owner = "client!be", name = "eb", descriptor = "I")
 	public int anInt467 = 0;
@@ -243,7 +243,7 @@ public final class Component {
 	public boolean hidden = false;
 
 	@OriginalMember(owner = "client!be", name = "Zb", descriptor = "I")
-	public int anInt490 = 1;
+	public int lineWidth = 1;
 
 	@OriginalMember(owner = "client!be", name = "Mb", descriptor = "I")
 	public int anInt484 = -1;
@@ -276,13 +276,13 @@ public final class Component {
 	public byte dynamicHeightValue = 0;
 
 	@OriginalMember(owner = "client!be", name = "bc", descriptor = "I")
-	public int anInt491 = 0;
+	public int scrollMaxV = 0;
 
 	@OriginalMember(owner = "client!be", name = "Y", descriptor = "Z")
-	public boolean aBoolean27 = false;
+	public boolean dragRenderBehavior = false;
 
 	@OriginalMember(owner = "client!be", name = "ob", descriptor = "Z")
-	public boolean aBoolean28 = false;
+	public boolean textAntiMacro = false;
 
 	@OriginalMember(owner = "client!be", name = "cb", descriptor = "I")
 	public int anInt465 = -1;
@@ -312,7 +312,7 @@ public final class Component {
 	public int width = 0;
 
 	@OriginalMember(owner = "client!be", name = "Wb", descriptor = "I")
-	public int anInt489 = 0;
+	public int scrollX = 0;
 
 	@OriginalMember(owner = "client!be", name = "sb", descriptor = "Z")
 	public boolean noClickThrough = false;
@@ -336,7 +336,7 @@ public final class Component {
 	public int modelZOffset = 0;
 
 	@OriginalMember(owner = "client!be", name = "Dc", descriptor = "Lclient!na;")
-	public JagString opBase = Static176.aClass100_800;
+	public JagString optionBase = Static176.aClass100_800;
 
 	@OriginalMember(owner = "client!be", name = "Lc", descriptor = "I")
 	public int updatedVarcsReaderIndex = 0;
@@ -351,19 +351,19 @@ public final class Component {
 	public int lastTransmitTimer = -1;
 
 	@OriginalMember(owner = "client!be", name = "c", descriptor = "Z")
-	public boolean aBoolean18 = false;
+	public boolean hasAlpha = false;
 
 	@OriginalMember(owner = "client!be", name = "F", descriptor = "I")
 	public int anInt451 = 0;
 
 	@OriginalMember(owner = "client!be", name = "wb", descriptor = "I")
-	public int anInt476 = 0;
+	public int alpha = 0;
 
 	@OriginalMember(owner = "client!be", name = "hc", descriptor = "I")
 	public int modelXOffset = 0;
 
 	@OriginalMember(owner = "client!be", name = "Ub", descriptor = "Lclient!na;")
-	public JagString aClass100_86 = Static176.aClass100_800;
+	public JagString targetVerb = Static176.aClass100_800;
 
 	@OriginalMember(owner = "client!be", name = "Lb", descriptor = "I")
 	public int modelRotationSpeed = 0;
@@ -372,7 +372,7 @@ public final class Component {
 	public JagString aClass100_82 = Static176.aClass100_800;
 
 	@OriginalMember(owner = "client!be", name = "Pc", descriptor = "I")
-	public int objSelected = 0;
+	public int outlineThickness = 0;
 
 	@OriginalMember(owner = "client!be", name = "oc", descriptor = "I")
 	public int anInt498 = -1;
@@ -402,10 +402,10 @@ public final class Component {
 	public int anInt500 = 0;
 
 	@OriginalMember(owner = "client!be", name = "uc", descriptor = "I")
-	public int anInt502 = -1;
+	public int font = -1;
 
 	@OriginalMember(owner = "client!be", name = "Pb", descriptor = "I")
-	public int anInt486 = 0;
+	public int scrollMaxH = 0;
 
 	@OriginalMember(owner = "client!be", name = "ec", descriptor = "I")
 	public int updatedInventoriesReaderIndex = 0;
@@ -414,7 +414,7 @@ public final class Component {
 	public short aShort11 = 0;
 
 	@OriginalMember(owner = "client!be", name = "ed", descriptor = "I")
-	public int anInt521 = 0;
+	public int angle2d = 0;
 
 	@OriginalMember(owner = "client!be", name = "id", descriptor = "I")
 	public int modelSeqId = -1;
@@ -435,7 +435,7 @@ public final class Component {
 	public int anInt453 = 0;
 
 	@OriginalMember(owner = "client!be", name = "Oc", descriptor = "I")
-	public int objShadow = 0;
+	public int shadowColor = 0;
 
 	@OriginalMember(owner = "client!be", name = "fd", descriptor = "Lclient!be;")
 	public Component aClass13_5 = null;
@@ -518,7 +518,7 @@ public final class Component {
 		if (this.anIntArray37 != null) {
 			return true;
 		}
-		@Pc(18) SoftwareIndexedSprite local18 = Static164.loadSoftwareIndexedSprite(this.anInt477, InterfaceList.aClass153_12);
+		@Pc(18) SoftwareIndexedSprite local18 = Static164.loadSoftwareIndexedSprite(this.spriteId, InterfaceList.aClass153_12);
 		if (local18 == null) {
 			return false;
 		}
@@ -575,7 +575,7 @@ public final class Component {
 		this.dynamicHeightValue = 0;
 		this.yMode = 0;
 		this.xMode = 0;
-		this.anInt476 = arg0.g1();
+		this.alpha = arg0.g1();
 		this.layer = arg0.g2();
 		if (this.layer == 65535) {
 			this.layer = -1;
@@ -614,7 +614,7 @@ public final class Component {
 			}
 		}
 		if (this.type == 0) {
-			this.anInt491 = arg0.g2();
+			this.scrollMaxV = arg0.g2();
 			this.hidden = arg0.g1() == 1;
 		}
 		if (this.type == 1) {
@@ -675,11 +675,11 @@ public final class Component {
 			this.anInt460 = arg0.g1();
 			this.anInt478 = arg0.g1();
 			this.anInt467 = arg0.g1();
-			this.anInt502 = arg0.g2();
-			if (this.anInt502 == 65535) {
-				this.anInt502 = -1;
+			this.font = arg0.g2();
+			if (this.font == 65535) {
+				this.font = -1;
 			}
-			this.aBoolean28 = arg0.g1() == 1;
+			this.textAntiMacro = arg0.g1() == 1;
 		}
 		if (this.type == 4) {
 			this.text = arg0.gjstr();
@@ -694,7 +694,7 @@ public final class Component {
 			this.anInt475 = arg0.g4();
 		}
 		if (this.type == 5) {
-			this.anInt477 = arg0.g4();
+			this.spriteId = arg0.g4();
 			this.anInt519 = arg0.g4();
 		}
 		if (this.type == 6) {
@@ -726,11 +726,11 @@ public final class Component {
 			this.objCounts = new int[this.baseHeight * this.baseWidth];
 			this.objTypes = new int[this.baseWidth * this.baseHeight];
 			this.anInt460 = arg0.g1();
-			this.anInt502 = arg0.g2();
-			if (this.anInt502 == 65535) {
-				this.anInt502 = -1;
+			this.font = arg0.g2();
+			if (this.font == 65535) {
+				this.font = -1;
 			}
-			this.aBoolean28 = arg0.g1() == 1;
+			this.textAntiMacro = arg0.g1() == 1;
 			this.color = arg0.g4();
 			this.anInt512 = arg0.g2s();
 			this.anInt516 = arg0.g2s();
@@ -751,7 +751,7 @@ public final class Component {
 			this.text = arg0.gjstr();
 		}
 		if (this.anInt530 == 2 || this.type == 2) {
-			this.aClass100_86 = arg0.gjstr();
+			this.targetVerb = arg0.gjstr();
 			this.aClass100_85 = arg0.gjstr();
 			local175 = arg0.g2() & 0x3F;
 			local164 |= local175 << 11;
@@ -942,18 +942,18 @@ public final class Component {
 		if (arg0) {
 			local12 = this.anInt519;
 		} else {
-			local12 = this.anInt477;
+			local12 = this.spriteId;
 		}
 		if (local12 == -1) {
 			return null;
 		}
-		@Pc(66) long local66 = ((this.aBoolean21 ? 1L : 0L) << 38) + ((this.aBoolean18 ? 1L : 0L) << 35) + (long) local12 + ((long) this.objSelected << 36) + ((this.aBoolean26 ? 1L : 0L) << 39) + ((long) this.objShadow << 40);
+		@Pc(66) long local66 = ((this.vFlip ? 1L : 0L) << 38) + ((this.hasAlpha ? 1L : 0L) << 35) + (long) local12 + ((long) this.outlineThickness << 36) + ((this.hFlip ? 1L : 0L) << 39) + ((long) this.shadowColor << 40);
 		@Pc(72) Sprite local72 = (Sprite) sprites.get(local66);
 		if (local72 != null) {
 			return local72;
 		}
 		@Pc(85) SoftwareSprite local85;
-		if (this.aBoolean18) {
+		if (this.hasAlpha) {
 			local85 = SoftwareSprite.loadSoftwareAlphaSprite(InterfaceList.aClass153_12, local12);
 		} else {
 			local85 = SpriteLoader.loadSoftwareSprite(0, InterfaceList.aClass153_12, local12);
@@ -962,23 +962,23 @@ public final class Component {
 			Static211.aBoolean72 = true;
 			return null;
 		}
-		if (this.aBoolean21) {
+		if (this.vFlip) {
 			local85.method309();
 		}
-		if (this.aBoolean26) {
+		if (this.hFlip) {
 			local85.method299();
 		}
-		if (this.objSelected > 0) {
-			local85.method298(this.objSelected);
+		if (this.outlineThickness > 0) {
+			local85.method298(this.outlineThickness);
 		}
-		if (this.objSelected >= 1) {
+		if (this.outlineThickness >= 1) {
 			local85.drawOutline(1);
 		}
-		if (this.objSelected >= 2) {
+		if (this.outlineThickness >= 2) {
 			local85.drawOutline(16777215);
 		}
-		if (this.objShadow != 0) {
-			local85.drawShadow(this.objShadow);
+		if (this.shadowColor != 0) {
+			local85.drawShadow(this.shadowColor);
 		}
 		if (!GlRenderer.enabled) {
 			local72 = local85;
@@ -1017,22 +1017,22 @@ public final class Component {
 		}
 		this.hidden = buffer.g1() == 1;
 		if (this.type == 0) {
-			this.anInt486 = buffer.g2();
-			this.anInt491 = buffer.g2();
+			this.scrollMaxH = buffer.g2();
+			this.scrollMaxV = buffer.g2();
 			this.noClickThrough = buffer.g1() == 1;
 		}
 		@Pc(175) int local175;
 		if (this.type == 5) {
-			this.anInt477 = buffer.g4();
-			this.anInt521 = buffer.g2();
+			this.spriteId = buffer.g4();
+			this.angle2d = buffer.g2();
 			local175 = buffer.g1();
-			this.aBoolean18 = (local175 & 0x2) != 0;
-			this.aBoolean23 = (local175 & 0x1) != 0;
-			this.anInt476 = buffer.g1();
-			this.objSelected = buffer.g1();
-			this.objShadow = buffer.g4();
-			this.aBoolean21 = buffer.g1() == 1;
-			this.aBoolean26 = buffer.g1() == 1;
+			this.hasAlpha = (local175 & 0x2) != 0;
+			this.spriteTiling = (local175 & 0x1) != 0;
+			this.alpha = buffer.g1();
+			this.outlineThickness = buffer.g1();
+			this.shadowColor = buffer.g4();
+			this.vFlip = buffer.g1() == 1;
+			this.hFlip = buffer.g1() == 1;
 		}
 		if (this.type == 6) {
 			this.modelType = 1;
@@ -1050,7 +1050,7 @@ public final class Component {
 			if (this.modelSeqId == 65535) {
 				this.modelSeqId = -1;
 			}
-			this.aBoolean22 = buffer.g1() == 1;
+			this.modelOrtho = buffer.g1() == 1;
 			this.aShort11 = (short) buffer.g2();
 			this.aShort10 = (short) buffer.g2();
 			this.aBoolean34 = buffer.g1() == 1;
@@ -1062,24 +1062,24 @@ public final class Component {
 			}
 		}
 		if (this.type == 4) {
-			this.anInt502 = buffer.g2();
-			if (this.anInt502 == 65535) {
-				this.anInt502 = -1;
+			this.font = buffer.g2();
+			if (this.font == 65535) {
+				this.font = -1;
 			}
 			this.text = buffer.gjstr();
 			this.anInt467 = buffer.g1();
 			this.anInt460 = buffer.g1();
 			this.anInt478 = buffer.g1();
-			this.aBoolean28 = buffer.g1() == 1;
+			this.textAntiMacro = buffer.g1() == 1;
 			this.color = buffer.g4();
 		}
 		if (this.type == 3) {
 			this.color = buffer.g4();
 			this.aBoolean30 = buffer.g1() == 1;
-			this.anInt476 = buffer.g1();
+			this.alpha = buffer.g1();
 		}
 		if (this.type == 9) {
-			this.anInt490 = buffer.g1();
+			this.lineWidth = buffer.g1();
 			this.color = buffer.g4();
 			this.aBoolean20 = buffer.g1() == 1;
 		}
@@ -1104,7 +1104,7 @@ public final class Component {
 				local471 = buffer.g1();
 			}
 		}
-		this.opBase = buffer.gjstr();
+		this.optionBase = buffer.gjstr();
 		local497 = buffer.g1();
 		@Pc(557) int local557 = local497 & 0xF;
 		@Pc(567) int local567;
@@ -1127,11 +1127,11 @@ public final class Component {
 			local567 = buffer.g1();
 			this.anIntArray39[local567] = buffer.g2();
 		}
-		this.anInt472 = buffer.g1();
-		this.anInt447 = buffer.g1();
-		this.aBoolean27 = buffer.g1() == 1;
+		this.dragDeadzone = buffer.g1();
+		this.dragDeadtime = buffer.g1();
+		this.dragRenderBehavior = buffer.g1() == 1;
 		local567 = -1;
-		this.aClass100_86 = buffer.gjstr();
+		this.targetVerb = buffer.gjstr();
 		if (Static199.method3594(local175) != 0) {
 			local567 = buffer.g2();
 			this.anInt499 = buffer.g2();
@@ -1150,21 +1150,21 @@ public final class Component {
 		this.anObjectArray3 = this.method485(buffer);
 		this.onMouseOver = this.method485(buffer);
 		this.onMouseLeave = this.method485(buffer);
-		this.anObjectArray27 = this.method485(buffer);
-		this.anObjectArray11 = this.method485(buffer);
+		this.onUseWith = this.method485(buffer);
+		this.onUse = this.method485(buffer);
 		this.onVarpTransmit = this.method485(buffer);
 		this.onInvTransmit = this.method485(buffer);
 		this.onStatTransmit = this.method485(buffer);
 		this.onTimer = this.method485(buffer);
-		this.anObjectArray29 = this.method485(buffer);
+		this.onOptionClick = this.method485(buffer);
 		this.onMouseRepeat = this.method485(buffer);
 		this.onClickRepeat = this.method485(buffer);
-		this.anObjectArray6 = this.method485(buffer);
+		this.onDrag = this.method485(buffer);
 		this.onRelease = this.method485(buffer);
 		this.onHold = this.method485(buffer);
-		this.anObjectArray26 = this.method485(buffer);
-		this.anObjectArray16 = this.method485(buffer);
-		this.anObjectArray10 = this.method485(buffer);
+		this.onDragStart = this.method485(buffer);
+		this.onDragRelease = this.method485(buffer);
+		this.onScroll = this.method485(buffer);
 		this.onVarcTransmit = this.method485(buffer);
 		this.onVarcstrTransmit = this.method485(buffer);
 		this.varpTriggers = this.method486(buffer);
@@ -1177,19 +1177,19 @@ public final class Component {
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "([Lclient!ok;I)Lclient!rk;")
 	public final Font method491(@OriginalArg(0) IndexedSprite[] arg0) {
 		Static211.aBoolean72 = false;
-		if (this.anInt502 == -1) {
+		if (this.font == -1) {
 			return null;
 		}
-		@Pc(21) Font local21 = (Font) fonts.get((long) this.anInt502);
+		@Pc(21) Font local21 = (Font) fonts.get((long) this.font);
 		if (local21 != null) {
 			return local21;
 		}
-		local21 = Static127.method2462(this.anInt502, InterfaceList.aClass153_12, InterfaceList.aClass153_64);
+		local21 = Static127.method2462(this.font, InterfaceList.aClass153_12, InterfaceList.aClass153_64);
 		if (local21 == null) {
 			Static211.aBoolean72 = true;
 		} else {
 			local21.setNameIcons(arg0, null);
-			fonts.put(local21, (long) this.anInt502);
+			fonts.put(local21, (long) this.font);
 		}
 		return local21;
 	}

@@ -40,13 +40,13 @@ public final class Static2 {
 					}
 				}
 				@Pc(72) HookRequest local72;
-				if (arg1 == 0 && local23.anObjectArray12 != null) {
+				if (arg1 == 0 && local23.onDialogAbort != null) {
 					local72 = new HookRequest();
-					local72.arguments = local23.anObjectArray12;
+					local72.arguments = local23.onDialogAbort;
 					local72.source = local23;
 					ScriptRunner.run(local72);
 				}
-				if (arg1 == 1 && local23.anObjectArray8 != null) {
+				if (arg1 == 1 && local23.onWidgetsOpenClose != null) {
 					if (local23.createdComponentId >= 0) {
 						@Pc(103) Component local103 = InterfaceList.getComponent(local23.id);
 						if (local103 == null || local103.createdComponents == null || local23.createdComponentId >= local103.createdComponents.length || local103.createdComponents[local23.createdComponentId] != local23) {
@@ -54,7 +54,7 @@ public final class Static2 {
 						}
 					}
 					local72 = new HookRequest();
-					local72.arguments = local23.anObjectArray8;
+					local72.arguments = local23.onWidgetsOpenClose;
 					local72.source = local23;
 					ScriptRunner.run(local72);
 				}
@@ -67,23 +67,23 @@ public final class Static2 {
 		@Pc(16) int local16 = arg0.anInt453;
 		if (local16 == 324) {
 			if (Static158.anInt3851 == -1) {
-				Static158.anInt3851 = arg0.anInt477;
+				Static158.anInt3851 = arg0.spriteId;
 				Static145.anInt3502 = arg0.anInt519;
 			}
 			if (PlayerAppearance.DEFAULT.gender) {
-				arg0.anInt477 = Static158.anInt3851;
+				arg0.spriteId = Static158.anInt3851;
 			} else {
-				arg0.anInt477 = Static145.anInt3502;
+				arg0.spriteId = Static145.anInt3502;
 			}
 		} else if (local16 == 325) {
 			if (Static158.anInt3851 == -1) {
 				Static145.anInt3502 = arg0.anInt519;
-				Static158.anInt3851 = arg0.anInt477;
+				Static158.anInt3851 = arg0.spriteId;
 			}
 			if (PlayerAppearance.DEFAULT.gender) {
-				arg0.anInt477 = Static145.anInt3502;
+				arg0.spriteId = Static145.anInt3502;
 			} else {
-				arg0.anInt477 = Static158.anInt3851;
+				arg0.spriteId = Static158.anInt3851;
 			}
 		} else if (local16 == 327) {
 			arg0.modelXAngle = 150;

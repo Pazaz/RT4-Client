@@ -26,7 +26,7 @@ public final class Static182 {
 	public static final boolean[] aBooleanArray97 = new boolean[] { true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false };
 
     @OriginalMember(owner = "client!oj", name = "a", descriptor = "(IZIJI)Lclient!na;")
-	public static JagString valueToBase10String(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(3) long arg3) {
+	public static JagString formatNumber(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(3) long arg3) {
 		@Pc(9) JagString local9 = Static87.allocate(0);
 		if (arg3 < 0L) {
 			arg3 = -arg3;

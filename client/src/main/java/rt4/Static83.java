@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static83 {
 
     @OriginalMember(owner = "client!gj", name = "a", descriptor = "(II)Z")
-	public static boolean method433(@OriginalArg(0) int arg0) {
+	public static boolean isAlphaNumeric(@OriginalArg(0) int arg0) {
 		if (arg0 >= 97 && arg0 <= 122) {
 			return true;
 		} else if (arg0 >= 65 && arg0 <= 90) {

@@ -61,9 +61,9 @@ public final class Static150 {
 		if (arg2.anInt453 == 1337) {
 			Static280.aClass13_26 = arg2;
 		}
-		if (arg3 && arg2.anObjectArray17 != null && (local4 != arg2.width || arg2.height != local7)) {
+		if (arg3 && arg2.onResize != null && (local4 != arg2.width || arg2.height != local7)) {
 			@Pc(305) HookRequest local305 = new HookRequest();
-			local305.arguments = arg2.anObjectArray17;
+			local305.arguments = arg2.onResize;
 			local305.source = arg2;
 			InterfaceList.lowPriorityRequests.addTail(local305);
 		}

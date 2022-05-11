@@ -657,10 +657,10 @@ public final class Static247 {
 	@OriginalMember(owner = "client!ub", name = "b", descriptor = "(IIIIIII)V")
 	public static void method4246(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(6) int arg5) {
 		@Pc(8) Component local8 = Static201.method1418(arg0, arg1);
-		if (local8 != null && local8.anObjectArray11 != null) {
+		if (local8 != null && local8.onUse != null) {
 			@Pc(19) HookRequest local19 = new HookRequest();
 			local19.source = local8;
-			local19.arguments = local8.anObjectArray11;
+			local19.arguments = local8.onUse;
 			ScriptRunner.run(local19);
 		}
 		MiniMenu.anInt506 = arg1;

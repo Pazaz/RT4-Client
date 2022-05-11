@@ -22,17 +22,17 @@ public final class Static266 {
 			if (local19 != null && local19.layer == arg0) {
 				Static150.method2801(arg3, arg2, local19, arg1);
 				Static111.method2291(local19, arg3, arg2);
-				if (local19.anInt486 - local19.width < local19.anInt489) {
-					local19.anInt489 = local19.anInt486 - local19.width;
+				if (local19.scrollMaxH - local19.width < local19.scrollX) {
+					local19.scrollX = local19.scrollMaxH - local19.width;
 				}
-				if (local19.scrollY > local19.anInt491 - local19.height) {
-					local19.scrollY = local19.anInt491 - local19.height;
+				if (local19.scrollY > local19.scrollMaxV - local19.height) {
+					local19.scrollY = local19.scrollMaxV - local19.height;
 				}
 				if (local19.scrollY < 0) {
 					local19.scrollY = 0;
 				}
-				if (local19.anInt489 < 0) {
-					local19.anInt489 = 0;
+				if (local19.scrollX < 0) {
+					local19.scrollX = 0;
 				}
 				if (local19.type == 0) {
 					Static17.method531(local19, arg1);

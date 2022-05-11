@@ -13,9 +13,9 @@ public class ClientProt {
         if (local8 == null) {
             return;
         }
-        if (local8.anObjectArray29 != null) {
+        if (local8.onOptionClick != null) {
             @Pc(19) HookRequest local19 = new HookRequest();
-            local19.arguments = local8.anObjectArray29;
+            local19.arguments = local8.onOptionClick;
             local19.source = local8;
             local19.opBase = arg0;
             local19.op = arg2;
@@ -483,29 +483,29 @@ public class ClientProt {
             }
             @Pc(109) int local109 = local41 - Static20.anInt660;
             @Pc(114) int local114 = local30 - Static124.anInt3075;
-            @Pc(122) int local122 = local30 + Static4.aClass13_1.anInt489 - Static81.anInt2225;
+            @Pc(122) int local122 = local30 + Static4.aClass13_1.scrollX - Static81.anInt2225;
             @Pc(130) int local130 = Static4.aClass13_1.scrollY + local41 - Static228.anInt5103;
-            @Pc(133) int local133 = Static105.aClass13_14.anInt472;
-            if (Static213.anInt4851 > Static105.aClass13_14.anInt447 && (local133 < local114 || -local133 > local114 || local109 > local133 || local109 < -local133)) {
+            @Pc(133) int local133 = Static105.aClass13_14.dragDeadzone;
+            if (Static213.anInt4851 > Static105.aClass13_14.dragDeadtime && (local133 < local114 || -local133 > local114 || local109 > local133 || local109 < -local133)) {
                 Static138.aBoolean172 = true;
             }
             @Pc(176) HookRequest local176;
-            if (Static105.aClass13_14.anObjectArray26 != null && Static138.aBoolean172) {
+            if (Static105.aClass13_14.onDragStart != null && Static138.aBoolean172) {
                 local176 = new HookRequest();
                 local176.source = Static105.aClass13_14;
-                local176.arguments = Static105.aClass13_14.anObjectArray26;
+                local176.arguments = Static105.aClass13_14.onDragStart;
                 local176.mouseX = local122;
                 local176.mouseY = local130;
                 ScriptRunner.run(local176);
             }
             if (Mouse.pressedButton == 0) {
                 if (Static138.aBoolean172) {
-                    if (Static105.aClass13_14.anObjectArray16 != null) {
+                    if (Static105.aClass13_14.onDragRelease != null) {
                         local176 = new HookRequest();
                         local176.mouseY = local130;
                         local176.target = Static56.aClass13_12;
                         local176.mouseX = local122;
-                        local176.arguments = Static105.aClass13_14.anObjectArray16;
+                        local176.arguments = Static105.aClass13_14.onDragRelease;
                         local176.source = Static105.aClass13_14;
                         ScriptRunner.run(local176);
                     }
