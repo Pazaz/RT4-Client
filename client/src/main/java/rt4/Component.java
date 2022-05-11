@@ -192,7 +192,7 @@ public final class Component {
 	public int aspectHeight = 1;
 
 	@OriginalMember(owner = "client!be", name = "R", descriptor = "I")
-	public int anInt459 = 0;
+	public int height = 0;
 
 	@OriginalMember(owner = "client!be", name = "S", descriptor = "I")
 	public int anInt460 = 0;
@@ -309,7 +309,7 @@ public final class Component {
 	public JagString text = Static176.aClass100_800;
 
 	@OriginalMember(owner = "client!be", name = "n", descriptor = "I")
-	public int anInt445 = 0;
+	public int width = 0;
 
 	@OriginalMember(owner = "client!be", name = "Wb", descriptor = "I")
 	public int anInt489 = 0;
@@ -372,7 +372,7 @@ public final class Component {
 	public JagString aClass100_82 = Static176.aClass100_800;
 
 	@OriginalMember(owner = "client!be", name = "Pc", descriptor = "I")
-	public int anInt514 = 0;
+	public int objSelected = 0;
 
 	@OriginalMember(owner = "client!be", name = "oc", descriptor = "I")
 	public int anInt498 = -1;
@@ -435,7 +435,7 @@ public final class Component {
 	public int anInt453 = 0;
 
 	@OriginalMember(owner = "client!be", name = "Oc", descriptor = "I")
-	public int anInt513 = 0;
+	public int objShadow = 0;
 
 	@OriginalMember(owner = "client!be", name = "fd", descriptor = "Lclient!be;")
 	public Component aClass13_5 = null;
@@ -474,7 +474,7 @@ public final class Component {
 	public int baseY = 0;
 
 	@OriginalMember(owner = "client!be", name = "Bb", descriptor = "Z")
-	public boolean aBoolean31 = true;
+	public boolean objDrawText = true;
 
 	@OriginalMember(owner = "client!be", name = "Kc", descriptor = "I")
 	public int anInt510 = 0;
@@ -947,7 +947,7 @@ public final class Component {
 		if (local12 == -1) {
 			return null;
 		}
-		@Pc(66) long local66 = ((this.aBoolean21 ? 1L : 0L) << 38) + ((this.aBoolean18 ? 1L : 0L) << 35) + (long) local12 + ((long) this.anInt514 << 36) + ((this.aBoolean26 ? 1L : 0L) << 39) + ((long) this.anInt513 << 40);
+		@Pc(66) long local66 = ((this.aBoolean21 ? 1L : 0L) << 38) + ((this.aBoolean18 ? 1L : 0L) << 35) + (long) local12 + ((long) this.objSelected << 36) + ((this.aBoolean26 ? 1L : 0L) << 39) + ((long) this.objShadow << 40);
 		@Pc(72) Sprite local72 = (Sprite) sprites.get(local66);
 		if (local72 != null) {
 			return local72;
@@ -968,17 +968,17 @@ public final class Component {
 		if (this.aBoolean26) {
 			local85.method299();
 		}
-		if (this.anInt514 > 0) {
-			local85.method298(this.anInt514);
+		if (this.objSelected > 0) {
+			local85.method298(this.objSelected);
 		}
-		if (this.anInt514 >= 1) {
-			local85.method303(1);
+		if (this.objSelected >= 1) {
+			local85.drawOutline(1);
 		}
-		if (this.anInt514 >= 2) {
-			local85.method303(16777215);
+		if (this.objSelected >= 2) {
+			local85.drawOutline(16777215);
 		}
-		if (this.anInt513 != 0) {
-			local85.method314(this.anInt513);
+		if (this.objShadow != 0) {
+			local85.drawShadow(this.objShadow);
 		}
 		if (!GlRenderer.enabled) {
 			local72 = local85;
@@ -1029,8 +1029,8 @@ public final class Component {
 			this.aBoolean18 = (local175 & 0x2) != 0;
 			this.aBoolean23 = (local175 & 0x1) != 0;
 			this.anInt476 = buffer.g1();
-			this.anInt514 = buffer.g1();
-			this.anInt513 = buffer.g4();
+			this.objSelected = buffer.g1();
+			this.objShadow = buffer.g4();
 			this.aBoolean21 = buffer.g1() == 1;
 			this.aBoolean26 = buffer.g1() == 1;
 		}

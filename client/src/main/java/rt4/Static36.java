@@ -43,8 +43,8 @@ public final class Static36 {
 					local65 = arg4;
 					local67 = arg5;
 				} else {
-					@Pc(73) int local73 = local50 + component.anInt445;
-					@Pc(78) int local78 = local55 + component.anInt459;
+					@Pc(73) int local73 = local50 + component.width;
+					@Pc(78) int local78 = local55 + component.height;
 					if (component.type == 9) {
 						local73++;
 						local78++;
@@ -162,8 +162,8 @@ public final class Static36 {
 									WorldMap.component = component;
 									if (local221) {
 										if (Keyboard.pressedKeys[Keyboard.KEY_CTRL] && LoginManager.staffModLevel > 0) {
-											i = (int) ((double) (Mouse.clickX - local50 - component.anInt445 / 2) * 2.0D / (double) WorldMap.zoom);
-											skill = (int) ((double) (Mouse.clickY - local55 - component.anInt459 / 2) * 2.0D / (double) WorldMap.zoom);
+											i = (int) ((double) (Mouse.clickX - local50 - component.width / 2) * 2.0D / (double) WorldMap.zoom);
+											skill = (int) ((double) (Mouse.clickY - local55 - component.height / 2) * 2.0D / (double) WorldMap.zoom);
 											k = WorldMap.anInt435 + i;
 											@Pc(516) int local516 = WorldMap.anInt919 + skill;
 											@Pc(520) int local520 = k + WorldMap.originX;
@@ -194,7 +194,7 @@ public final class Static36 {
 								}
 								if (component.anInt453 == 1401) {
 									if (local212) {
-										WorldMap.method2387(component.anInt445, Mouse.anInt5032 - local55, Mouse.anInt4873 - local50, component.anInt459);
+										WorldMap.method2387(component.width, Mouse.anInt5032 - local55, Mouse.anInt4873 - local50, component.height);
 									}
 									continue;
 								}
@@ -459,8 +459,8 @@ public final class Static36 {
 						if (component.type == 8 && Mouse.anInt4873 >= local61 && Mouse.anInt5032 >= local63 && Mouse.anInt4873 < local65 && Mouse.anInt5032 < local67) {
 							Static43.aClass13_11 = component;
 						}
-						if (component.anInt491 > component.anInt459) {
-							Static236.method4049(Mouse.anInt5032, component.anInt459, component, Mouse.anInt4873, local50 + component.anInt445, local55, component.anInt491);
+						if (component.anInt491 > component.height) {
+							Static236.method4049(Mouse.anInt5032, component.height, component, Mouse.anInt4873, local50 + component.width, local55, component.anInt491);
 						}
 					}
 					if (component.type == 0) {

@@ -9,21 +9,21 @@ public final class Static160 {
 	@OriginalMember(owner = "client!mj", name = "a", descriptor = "(IILclient!be;IB)V")
 	public static void method3047(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Component arg2, @OriginalArg(3) int arg3) {
 		if (GlRenderer.enabled) {
-			GlRaster.setClip(arg0, arg1, arg2.anInt445 + arg0, arg2.anInt459 + arg1);
+			GlRaster.setClip(arg0, arg1, arg2.width + arg0, arg2.height + arg1);
 		}
 		if (MiniMap.state >= 3) {
 			if (GlRenderer.enabled) {
 				@Pc(44) Sprite local44 = arg2.method489(false);
 				if (local44 != null) {
-					local44.renderTransparent(arg0, arg1);
+					local44.render(arg0, arg1);
 				}
 			} else {
 				SoftwareRaster.method2504(arg0, arg1, arg2.anIntArray37, arg2.anIntArray45);
 			}
 		} else if (GlRenderer.enabled) {
-			((GlSprite) Static106.compass).renderRotatedTransparent(arg0, arg1, arg2.anInt445, arg2.anInt459, Static106.compass.width / 2, Static106.compass.height / 2, (int)Camera.yawTarget, 256, (GlSprite) arg2.method489(false));
+			((GlSprite) Static106.compass).renderRotatedTransparent(arg0, arg1, arg2.width, arg2.height, Static106.compass.width / 2, Static106.compass.height / 2, (int)Camera.yawTarget, 256, (GlSprite) arg2.method489(false));
 		} else {
-			((SoftwareSprite) Static106.compass).renderRotatedTransparent(arg0, arg1, arg2.anInt445, arg2.anInt459, Static106.compass.width / 2, Static106.compass.height / 2, (int)Camera.yawTarget, arg2.anIntArray37, arg2.anIntArray45);
+			((SoftwareSprite) Static106.compass).renderRotated(arg0, arg1, arg2.width, arg2.height, Static106.compass.width / 2, Static106.compass.height / 2, (int)Camera.yawTarget, arg2.anIntArray37, arg2.anIntArray45);
 		}
 		InterfaceList.rectangleRedraw[arg3] = true;
 	}
@@ -50,14 +50,14 @@ public final class Static160 {
 			return false;
 		} else if (local29 > arg4 && local66 > arg4) {
 			return false;
-		} else if (local50 < Static240.screenLowerX && local87 < Static240.screenLowerX) {
+		} else if (local50 < Rasteriser.screenLowerX && local87 < Rasteriser.screenLowerX) {
 			return false;
-		} else if (local50 > Static247.screenUpperX && local87 > Static247.screenUpperX) {
+		} else if (local50 > Rasteriser.screenUpperX && local87 > Rasteriser.screenUpperX) {
 			return false;
-		} else if (local56 < Static1.screenLowerY && local93 < Static1.screenLowerY) {
+		} else if (local56 < Rasteriser.screenLowerY && local93 < Rasteriser.screenLowerY) {
 			return false;
 		} else {
-			return local56 <= Static148.screenUpperY || local93 <= Static148.screenUpperY;
+			return local56 <= Rasteriser.screenUpperY || local93 <= Rasteriser.screenUpperY;
 		}
 	}
 }

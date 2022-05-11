@@ -11,7 +11,7 @@ public class LoadingBar {
         if (GlRenderer.enabled || arg0) {
             local9 = GameShell.canvasHeight;
             @Pc(15) int local15 = local9 * 956 / 503;
-            TitleScreen.titleBg.renderResizedTransparent((GameShell.canvasWidth - local15) / 2, 0, local15, local9);
+            TitleScreen.titleBg.renderResized((GameShell.canvasWidth - local15) / 2, 0, local15, local9);
             TitleScreen.logo.renderTransparent(GameShell.canvasWidth / 2 - TitleScreen.logo.width / 2, 18);
         }
         arg1.renderCenter(LocalizedText.GAME0_LOADING, GameShell.canvasWidth / 2, GameShell.canvasHeight / 2 - 26, 16777215, -1);

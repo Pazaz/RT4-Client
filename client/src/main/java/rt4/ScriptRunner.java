@@ -503,15 +503,15 @@ public final class ScriptRunner {
 								if (opcode == 1100) {
 									isp -= 2;
 									component.anInt489 = intStack[isp];
-									if (component.anInt489 > component.anInt486 - component.anInt445) {
-										component.anInt489 = component.anInt486 - component.anInt445;
+									if (component.anInt489 > component.anInt486 - component.width) {
+										component.anInt489 = component.anInt486 - component.width;
 									}
 									if (component.anInt489 < 0) {
 										component.anInt489 = 0;
 									}
 									component.scrollY = intStack[isp + 1];
-									if (component.scrollY > component.anInt491 - component.anInt459) {
-										component.scrollY = component.anInt491 - component.anInt459;
+									if (component.scrollY > component.anInt491 - component.height) {
+										component.scrollY = component.anInt491 - component.height;
 									}
 									if (component.scrollY < 0) {
 										component.scrollY = 0;
@@ -647,13 +647,13 @@ public final class ScriptRunner {
 								}
 								if (opcode == 1116) {
 									isp--;
-									component.anInt514 = intStack[isp];
+									component.objSelected = intStack[isp];
 									InterfaceList.redraw(component);
 									continue;
 								}
 								if (opcode == 1117) {
 									isp--;
-									component.anInt513 = intStack[isp];
+									component.objShadow = intStack[isp];
 									InterfaceList.redraw(component);
 									continue;
 								}
@@ -739,9 +739,9 @@ public final class ScriptRunner {
 											component.modelZoom = component.modelZoom * 32 / component.baseWidth;
 										}
 										if (opcode == 1205) {
-											component.aBoolean31 = false;
+											component.objDrawText = false;
 										} else {
-											component.aBoolean31 = true;
+											component.objDrawText = true;
 										}
 									}
 									continue;
@@ -973,11 +973,11 @@ public final class ScriptRunner {
 										continue;
 									}
 									if (opcode == 1502) {
-										intStack[isp++] = component.anInt445;
+										intStack[isp++] = component.width;
 										continue;
 									}
 									if (opcode == 1503) {
-										intStack[isp++] = component.anInt459;
+										intStack[isp++] = component.height;
 										continue;
 									}
 									if (opcode == 1504) {
@@ -1097,11 +1097,11 @@ public final class ScriptRunner {
 										continue;
 									}
 									if (opcode == 2502) {
-										intStack[isp++] = component.anInt445;
+										intStack[isp++] = component.width;
 										continue;
 									}
 									if (opcode == 2503) {
-										intStack[isp++] = component.anInt459;
+										intStack[isp++] = component.height;
 										continue;
 									}
 									if (opcode == 2504) {
@@ -1369,7 +1369,7 @@ public final class ScriptRunner {
 									if (opcode == 3304) {
 										isp--;
 										int1 = intStack[isp];
-										intStack[isp++] = InvTypeList.list(int1).size;
+										intStack[isp++] = InvTypeList.get(int1).size;
 										continue;
 									}
 									if (opcode == 3305) {
@@ -3631,7 +3631,7 @@ public final class ScriptRunner {
 														continue;
 													}
 													if (opcode == 6203) {
-														Static115.method2314(Static280.aClass13_26.anInt445, 0, Static280.aClass13_26.anInt459, 0, false);
+														Static115.method2314(Static280.aClass13_26.width, 0, Static280.aClass13_26.height, 0, false);
 														intStack[isp++] = Static166.anInt4055;
 														intStack[isp++] = Static245.anInt5377;
 														continue;

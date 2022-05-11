@@ -144,7 +144,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 
 	@OriginalMember(owner = "client!am", name = "e", descriptor = "(II)V")
 	@Override
-	public final void renderTransparent(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+	public final void render(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		arg0 += this.anInt1863;
 		arg1 += this.anInt1861;
 		@Pc(15) int local15 = arg0 + arg1 * SoftwareRaster.width;
@@ -670,7 +670,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 
 	@OriginalMember(owner = "client!am", name = "a", descriptor = "(IIIIIIII[I[I)V")
 	@Override
-	public final void renderRotatedTransparent(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int w, @OriginalArg(3) int h, @OriginalArg(4) int anchorX, @OriginalArg(5) int anchorY, @OriginalArg(6) int theta, @OriginalArg(7) int zoom, @OriginalArg(8) int[] lineStarts, @OriginalArg(9) int[] arg9) {
+	public final void renderRotated(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int w, @OriginalArg(3) int h, @OriginalArg(4) int anchorX, @OriginalArg(5) int anchorY, @OriginalArg(6) int theta, @OriginalArg(7) int zoom, @OriginalArg(8) int[] lineStarts, @OriginalArg(9) int[] arg9) {
 		try {
 			@Pc(4) int local4 = -w / 2;
 			@Pc(9) int local9 = -h / 2;
@@ -705,7 +705,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 
 	@OriginalMember(owner = "client!am", name = "b", descriptor = "(IIIIIIII[I[I)V")
 	@Override
-	public final void renderRotatedTransparent(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int w, @OriginalArg(3) int h, @OriginalArg(4) int anchorX, @OriginalArg(5) int anchorY, @OriginalArg(6) int theta, @OriginalArg(8) int[] lineStart, @OriginalArg(9) int[] lineWidth) {
+	public final void renderRotated(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int w, @OriginalArg(3) int h, @OriginalArg(4) int anchorX, @OriginalArg(5) int anchorY, @OriginalArg(6) int theta, @OriginalArg(8) int[] lineStart, @OriginalArg(9) int[] lineWidth) {
 		try {
 			@Pc(4) int local4 = -w / 2;
 			@Pc(9) int local9 = -h / 2;
@@ -798,8 +798,8 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 
 	@OriginalMember(owner = "client!am", name = "a", descriptor = "(IIII)V")
 	@Override
-	public final void renderResizedTransparent(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		if (arg2 <= 0 || arg3 <= 0) {
+	public final void renderResized(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int width, @OriginalArg(3) int height) {
+		if (width <= 0 || height <= 0) {
 			return;
 		}
 		@Pc(7) int local7 = this.width;
@@ -808,55 +808,55 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 		@Pc(14) int local14 = 0;
 		@Pc(17) int local17 = this.anInt1860;
 		@Pc(20) int local20 = this.anInt1866;
-		@Pc(26) int local26 = (local17 << 16) / arg2;
-		@Pc(32) int local32 = (local20 << 16) / arg3;
+		@Pc(26) int local26 = (local17 << 16) / width;
+		@Pc(32) int local32 = (local20 << 16) / height;
 		@Pc(46) int local46;
 		if (this.anInt1863 > 0) {
 			local46 = ((this.anInt1863 << 16) + local26 - 1) / local26;
-			arg0 += local46;
+			x += local46;
 			local12 = local46 * local26 - (this.anInt1863 << 16);
 		}
 		if (this.anInt1861 > 0) {
 			local46 = ((this.anInt1861 << 16) + local32 - 1) / local32;
-			arg1 += local46;
+			y += local46;
 			local14 = local46 * local32 - (this.anInt1861 << 16);
 		}
 		if (local7 < local17) {
-			arg2 = ((local7 << 16) + local26 - local12 - 1) / local26;
+			width = ((local7 << 16) + local26 - local12 - 1) / local26;
 		}
 		if (local10 < local20) {
-			arg3 = ((local10 << 16) + local32 - local14 - 1) / local32;
+			height = ((local10 << 16) + local32 - local14 - 1) / local32;
 		}
-		local46 = arg0 + arg1 * SoftwareRaster.width;
-		@Pc(130) int local130 = SoftwareRaster.width - arg2;
-		if (arg1 + arg3 > SoftwareRaster.clipBottom) {
-			arg3 -= arg1 + arg3 - SoftwareRaster.clipBottom;
+		local46 = x + y * SoftwareRaster.width;
+		@Pc(130) int local130 = SoftwareRaster.width - width;
+		if (y + height > SoftwareRaster.clipBottom) {
+			height -= y + height - SoftwareRaster.clipBottom;
 		}
 		@Pc(150) int local150;
-		if (arg1 < SoftwareRaster.clipTop) {
-			local150 = SoftwareRaster.clipTop - arg1;
-			arg3 -= local150;
+		if (y < SoftwareRaster.clipTop) {
+			local150 = SoftwareRaster.clipTop - y;
+			height -= local150;
 			local46 += local150 * SoftwareRaster.width;
 			local14 += local32 * local150;
 		}
-		if (arg0 + arg2 > SoftwareRaster.clipRight) {
-			local150 = arg0 + arg2 - SoftwareRaster.clipRight;
-			arg2 -= local150;
+		if (x + width > SoftwareRaster.clipRight) {
+			local150 = x + width - SoftwareRaster.clipRight;
+			width -= local150;
 			local130 += local150;
 		}
-		if (arg0 < SoftwareRaster.clipLeft) {
-			local150 = SoftwareRaster.clipLeft - arg0;
-			arg2 -= local150;
+		if (x < SoftwareRaster.clipLeft) {
+			local150 = SoftwareRaster.clipLeft - x;
+			width -= local150;
 			local46 += local150;
 			local12 += local26 * local150;
 			local130 += local150;
 		}
-		method321(SoftwareRaster.pixels, this.pixels, local12, local14, local46, local130, arg2, arg3, local26, local32, local7);
+		method321(SoftwareRaster.pixels, this.pixels, local12, local14, local46, local130, width, height, local26, local32, local7);
 	}
 
 	@OriginalMember(owner = "client!am", name = "d", descriptor = "(II)V")
 	@Override
-	public final void renderHorizontalFlipTransparent(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+	public final void renderHorizontalFlip(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		arg0 += this.anInt1860 - this.width - this.anInt1863;
 		arg1 += this.anInt1861;
 		@Pc(21) int local21 = arg0 + arg1 * SoftwareRaster.width;
@@ -898,43 +898,43 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 
 	@OriginalMember(owner = "client!am", name = "a", descriptor = "(III)V")
 	@Override
-	public final void method1417(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		arg0 += this.anInt1863;
-		arg1 += this.anInt1861;
-		@Pc(15) int local15 = arg0 + arg1 * SoftwareRaster.width;
+	public final void renderAlpha(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int alpha) {
+		x += this.anInt1863;
+		y += this.anInt1861;
+		@Pc(15) int local15 = x + y * SoftwareRaster.width;
 		@Pc(17) int local17 = 0;
 		@Pc(20) int local20 = this.height;
 		@Pc(23) int local23 = this.width;
 		@Pc(27) int local27 = SoftwareRaster.width - local23;
 		@Pc(29) int local29 = 0;
 		@Pc(36) int local36;
-		if (arg1 < SoftwareRaster.clipTop) {
-			local36 = SoftwareRaster.clipTop - arg1;
+		if (y < SoftwareRaster.clipTop) {
+			local36 = SoftwareRaster.clipTop - y;
 			local20 -= local36;
-			arg1 = SoftwareRaster.clipTop;
+			y = SoftwareRaster.clipTop;
 			local17 = local36 * local23;
 			local15 += local36 * SoftwareRaster.width;
 		}
-		if (arg1 + local20 > SoftwareRaster.clipBottom) {
-			local20 -= arg1 + local20 - SoftwareRaster.clipBottom;
+		if (y + local20 > SoftwareRaster.clipBottom) {
+			local20 -= y + local20 - SoftwareRaster.clipBottom;
 		}
-		if (arg0 < SoftwareRaster.clipLeft) {
-			local36 = SoftwareRaster.clipLeft - arg0;
+		if (x < SoftwareRaster.clipLeft) {
+			local36 = SoftwareRaster.clipLeft - x;
 			local23 -= local36;
-			arg0 = SoftwareRaster.clipLeft;
+			x = SoftwareRaster.clipLeft;
 			local17 += local36;
 			local15 += local36;
 			local29 = local36;
 			local27 += local36;
 		}
-		if (arg0 + local23 > SoftwareRaster.clipRight) {
-			local36 = arg0 + local23 - SoftwareRaster.clipRight;
+		if (x + local23 > SoftwareRaster.clipRight) {
+			local36 = x + local23 - SoftwareRaster.clipRight;
 			local23 -= local36;
 			local29 += local36;
 			local27 += local36;
 		}
 		if (local23 > 0 && local20 > 0) {
-			method320(SoftwareRaster.pixels, this.pixels, local17, local15, local23, local20, local27, local29, arg2);
+			method320(SoftwareRaster.pixels, this.pixels, local17, local15, local23, local20, local27, local29, alpha);
 		}
 	}
 }

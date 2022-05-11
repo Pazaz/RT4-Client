@@ -36,7 +36,7 @@ public class TitleScreen {
         @Pc(20) int height = GameShell.canvasHeight;
         @Pc(26) int width = height * 956 / 503;
         titleBg = SpriteLoader.loadSpriteAutoDetect(archive, bgId);
-        titleBg.renderResizedTransparent((GameShell.canvasWidth - width) / 2, 0, width, height);
+        titleBg.renderResized((GameShell.canvasWidth - width) / 2, 0, width, height);
         logo = SpriteLoader.loadIndexedSpriteAutoDetect(logoId, archive);
         logo.renderTransparent(GameShell.canvasWidth / 2 - logo.width / 2, 18);
         loaded = true;

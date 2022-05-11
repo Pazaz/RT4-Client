@@ -99,11 +99,11 @@ public final class Static253 {
 		} else {
 			Static39.aBoolean77 = true;
 			Static2.anInt7 = 0;
-			local171 = Static247.screenUpperX;
-			@Pc(344) int local344 = Static1.screenLowerY;
-			local127 = Static240.screenLowerX;
+			local171 = Rasteriser.screenUpperX;
+			@Pc(344) int local344 = Rasteriser.screenLowerY;
+			local127 = Rasteriser.screenLowerX;
 			Static150.anInt3582 = local127 + (local171 - local127) * (-arg2 + Static155.anInt3751) / arg3;
-			@Pc(361) int local361 = Static148.screenUpperY;
+			@Pc(361) int local361 = Rasteriser.screenUpperY;
 			Static34.anInt1053 = (local361 - local344) * (Static60.anInt1892 - arg4) / arg0 + local344;
 		}
 		client.audioLoop();
@@ -204,7 +204,7 @@ public final class Static253 {
                         }
                         Static180.method3326(arg4 >> 1, arg3, local17, arg5, local265, arg1 >> 1);
                         if (Static65.anInt1951 > -1) {
-                            Sprites.headiconPrayers[local58.prayerIcon].renderTransparent(arg2 + Static65.anInt1951 - 12, arg0 + -30 - -Static16.anInt548);
+                            Sprites.headiconPrayers[local58.prayerIcon].render(arg2 + Static65.anInt1951 - 12, arg0 + -30 - -Static16.anInt548);
                         }
                     }
                     @Pc(308) MapMarker[] local308 = Static143.hintMapMarkers;
@@ -218,7 +218,7 @@ public final class Static253 {
                             }
                             Static180.method3326(arg4 >> 1, arg3, local17, arg5, local359, arg1 >> 1);
                             if (Static65.anInt1951 > -1) {
-                                Sprites.headhints[local322.anInt4048].renderTransparent(arg2 + Static65.anInt1951 - 12, Static16.anInt548 + -28 + arg0);
+                                Sprites.headhints[local322.anInt4048].render(arg2 + Static65.anInt1951 - 12, Static16.anInt548 + -28 + arg0);
                             }
                         }
                     }
@@ -229,11 +229,11 @@ public final class Static253 {
                         Static180.method3326(arg4 >> 1, arg3, local17, arg5, local17.method2691() + 15, arg1 >> 1);
                         if (Static65.anInt1951 > -1) {
                             if (local77.anInt1669 != -1) {
-                                Sprites.headiconPks[local77.anInt1669].renderTransparent(Static65.anInt1951 + arg2 - 12, arg0 + -30 + Static16.anInt548);
+                                Sprites.headiconPks[local77.anInt1669].render(Static65.anInt1951 + arg2 - 12, arg0 + -30 + Static16.anInt548);
                                 local74 += 25;
                             }
                             if (local77.anInt1649 != -1) {
-                                Sprites.headiconPrayers[local77.anInt1649].renderTransparent(arg2 + Static65.anInt1951 - 12, arg0 - (-Static16.anInt548 + local74));
+                                Sprites.headiconPrayers[local77.anInt1649].render(arg2 + Static65.anInt1951 - 12, arg0 - (-Static16.anInt548 + local74));
                                 local74 += 25;
                             }
                         }
@@ -245,7 +245,7 @@ public final class Static253 {
                             if (local173 != null && local173.type == 10 && PlayerList.ids[local5] == local173.actorTargetId) {
                                 Static180.method3326(arg4 >> 1, arg3, local17, arg5, local17.method2691() + 15, arg1 >> 1);
                                 if (Static65.anInt1951 > -1) {
-                                    Sprites.headhints[local173.anInt4048].renderTransparent(arg2 + Static65.anInt1951 - 12, arg0 + (Static16.anInt548 - local74));
+                                    Sprites.headhints[local173.anInt4048].render(arg2 + Static65.anInt1951 - 12, arg0 + (Static16.anInt548 - local74));
                                 }
                             }
                         }
@@ -294,7 +294,7 @@ public final class Static253 {
                     if (Static65.anInt1951 > -1) {
                         local161 = Static65.anInt1951 + arg2 - (local508.width >> 1);
                         local359 = Static16.anInt548 + arg0 - 3;
-                        local508.renderTransparent(local161, local359);
+                        local508.render(local161, local359);
                         local639 = local508.width * local17.hitpointsBar / 255;
                         local642 = local508.height;
                         if (GlRenderer.enabled) {
@@ -302,7 +302,7 @@ public final class Static253 {
                         } else {
                             SoftwareRaster.method2498(local161, local359, local161 + local639, local642 + local359);
                         }
-                        local512.renderTransparent(local161, local359);
+                        local512.render(local161, local359);
                         if (GlRenderer.enabled) {
                             GlRaster.setClip(arg2, arg0, arg1 + arg2, arg0 - -arg4);
                         } else {
@@ -336,7 +336,7 @@ public final class Static253 {
                                 Static16.anInt548 -= 10;
                                 Static65.anInt1951 += 15;
                             }
-                            Sprites.hitmarks[local17.anIntArray321[local74]].renderTransparent(arg2 + Static65.anInt1951 - 12, arg0 + Static16.anInt548 - 12);
+                            Sprites.hitmarks[local17.anIntArray321[local74]].render(arg2 + Static65.anInt1951 - 12, arg0 + Static16.anInt548 - 12);
                             Fonts.p11Full.renderCenter(JagString.parseInt(local17.anIntArray322[local74]), Static65.anInt1951 + arg2 - 1, Static16.anInt548 + 3 + arg0, 16777215, 0);
                         }
                     }

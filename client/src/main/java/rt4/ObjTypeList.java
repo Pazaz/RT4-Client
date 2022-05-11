@@ -16,7 +16,7 @@ public class ObjTypeList {
     @OriginalMember(owner = "client!sj", name = "r", descriptor = "Lclient!ve;")
     public static Js5 modelsArchive;
     @OriginalMember(owner = "client!um", name = "U", descriptor = "Lclient!dd;")
-    public static SoftwareFont aClass3_Sub2_Sub9_Sub1_1;
+    public static SoftwareFont font;
     @OriginalMember(owner = "client!wa", name = "X", descriptor = "[Lclient!na;")
     public static JagString[] aClass100Array87 = null;
     @OriginalMember(owner = "client!ld", name = "g", descriptor = "[Lclient!na;")
@@ -35,7 +35,7 @@ public class ObjTypeList {
         anInt3245 = archive.getGroupCapacity(local23) + local23 * 256;
         aClass100Array104 = new JagString[] { null, null, null, null, LocalizedText.DROP};
         aClass100Array87 = new JagString[] { null, null, LocalizedText.TAKE, null, null };
-        aClass3_Sub2_Sub9_Sub1_1 = arg1;
+        font = arg1;
     }
 
     @OriginalMember(owner = "client!fk", name = "a", descriptor = "(IB)Lclient!h;")

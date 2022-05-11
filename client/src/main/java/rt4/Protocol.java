@@ -2047,7 +2047,7 @@ public class Protocol {
                     component.objTypes[slot] = amount;
                     component.objCounts[slot] = id;
                 }
-                Static280.updateContainer(amount - 1, slot, id, containerId);
+                Inv.updateContainer(amount - 1, slot, id, containerId);
             }
             if (component != null) {
                 InterfaceList.redraw(component);
@@ -2257,7 +2257,7 @@ public class Protocol {
                     component.objTypes[slot] = itemId;
                     component.objCounts[slot] = amount;
                 }
-                Static280.updateContainer(itemId - 1, slot, amount, containerId);
+                Inv.updateContainer(itemId - 1, slot, amount, containerId);
             }
             if (component != null) {
                 InterfaceList.redraw(component);
@@ -2607,8 +2607,8 @@ public class Protocol {
                     component = InterfaceList.getComponent(i);
                     x = change.intArg1;
                     if (component != null && component.type == 0) {
-                        if (x > component.anInt491 - component.anInt459) {
-                            x = component.anInt491 - component.anInt459;
+                        if (x > component.anInt491 - component.height) {
+                            x = component.anInt491 - component.height;
                         }
                         if (x < 0) {
                             x = 0;

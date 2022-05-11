@@ -1054,22 +1054,22 @@ public class WorldMap {
     @OriginalMember(owner = "client!gf", name = "a", descriptor = "(BII)V")
     public static void method3616(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
         anInt3482 = arg0 - originX;
-        @Pc(24) int local24 = anInt3482 - (int) ((float) component.anInt445 / zoom);
-        @Pc(33) int local33 = anInt3482 + (int) ((float) component.anInt445 / zoom);
+        @Pc(24) int local24 = anInt3482 - (int) ((float) component.width / zoom);
+        @Pc(33) int local33 = anInt3482 + (int) ((float) component.width / zoom);
         if (local24 < 0) {
-            anInt3482 = (int) ((float) component.anInt445 / zoom);
+            anInt3482 = (int) ((float) component.width / zoom);
         }
         anInt4901 = length + originZ - arg1 - 1;
-        @Pc(61) int local61 = (int) ((float) component.anInt459 / zoom) + anInt4901;
-        @Pc(70) int local70 = anInt4901 - (int) ((float) component.anInt459 / zoom);
+        @Pc(61) int local61 = (int) ((float) component.height / zoom) + anInt4901;
+        @Pc(70) int local70 = anInt4901 - (int) ((float) component.height / zoom);
         if (local33 > width) {
-            anInt3482 = width - (int) ((float) component.anInt445 / zoom);
+            anInt3482 = width - (int) ((float) component.width / zoom);
         }
         if (local70 < 0) {
-            anInt4901 = (int) ((float) component.anInt459 / zoom);
+            anInt4901 = (int) ((float) component.height / zoom);
         }
         if (length < local61) {
-            anInt4901 = length - (int) ((float) component.anInt459 / zoom);
+            anInt4901 = length - (int) ((float) component.height / zoom);
         }
     }
 

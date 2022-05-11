@@ -107,7 +107,7 @@ public final class SoftwareRaster {
 	}
 
 	@OriginalMember(owner = "client!kb", name = "a", descriptor = "([I)V")
-	public static void method2488(@OriginalArg(0) int[] arg0) {
+	public static void restoreClip(@OriginalArg(0) int[] arg0) {
 		clipLeft = arg0[0];
 		clipTop = arg0[1];
 		clipRight = arg0[2];
@@ -152,7 +152,7 @@ public final class SoftwareRaster {
 	}
 
 	@OriginalMember(owner = "client!kb", name = "a", descriptor = "([III)V")
-	public static void method2491(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+	public static void setSize(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		pixels = arg0;
 		width = arg1;
 		height = arg2;
@@ -299,7 +299,7 @@ public final class SoftwareRaster {
 	}
 
 	@OriginalMember(owner = "client!kb", name = "b", descriptor = "([I)V")
-	public static void method2497(@OriginalArg(0) int[] arg0) {
+	public static void saveClip(@OriginalArg(0) int[] arg0) {
 		arg0[0] = clipLeft;
 		arg0[1] = clipTop;
 		arg0[2] = clipRight;

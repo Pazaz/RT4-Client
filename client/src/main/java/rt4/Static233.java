@@ -36,7 +36,7 @@ public final class Static233 {
 			if (local17 != null && local17.type == 2) {
 				Static198.method1026(arg0 >> 1, arg4, (local17.anInt4046 - Static142.originZ << 7) + local17.anInt4047, local17.anInt4050 * 2, arg2 >> 1, local17.anInt4045 + (local17.targetX - Static225.originX << 7), arg3);
 				if (Static65.anInt1951 > -1 && client.loop % 20 < 10) {
-					Sprites.headhints[local17.anInt4048].renderTransparent(arg1 + Static65.anInt1951 - 12, arg5 + -28 - -Static16.anInt548);
+					Sprites.headhints[local17.anInt4048].render(arg1 + Static65.anInt1951 - 12, arg5 + -28 - -Static16.anInt548);
 				}
 			}
 			local3++;
