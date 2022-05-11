@@ -2607,8 +2607,8 @@ public class Protocol {
                     component = InterfaceList.getComponent(i);
                     x = change.intArg1;
                     if (component != null && component.type == 0) {
-                        if (x > component.anInt491 - component.height) {
-                            x = component.anInt491 - component.height;
+                        if (x > component.scrollMaxV - component.height) {
+                            x = component.scrollMaxV - component.height;
                         }
                         if (x < 0) {
                             x = 0;

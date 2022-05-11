@@ -228,24 +228,24 @@ public class MiniMenu {
             for (local171 = 9; local171 >= 5; local171--) {
                 @Pc(765) JagString local765 = InterfaceList.getOp(component, local171);
                 if (local765 != null) {
-                    add(getOpCursor(local171, component), (long) (local171 + 1), component.opBase, component.createdComponentId, (short) 1003, local765, component.id);
+                    add(getOpCursor(local171, component), (long) (local171 + 1), component.optionBase, component.createdComponentId, (short) 1003, local765, component.id);
                 }
             }
             local47 = Static97.getTargetVerb(component);
             if (local47 != null) {
-                add(-1, 0L, component.opBase, component.createdComponentId, (short) 32, local47, component.id);
+                add(-1, 0L, component.optionBase, component.createdComponentId, (short) 32, local47, component.id);
             }
             for (local173 = 4; local173 >= 0; local173--) {
                 @Pc(828) JagString local828 = InterfaceList.getOp(component, local173);
                 if (local828 != null) {
-                    add(getOpCursor(local173, component), (long) (local173 + 1), component.opBase, component.createdComponentId, (short) 9, local828, component.id);
+                    add(getOpCursor(local173, component), (long) (local173 + 1), component.optionBase, component.createdComponentId, (short) 9, local828, component.id);
                 }
             }
             if (InterfaceList.getServerActiveProperties(component).method506()) {
                 add(-1, 0L, JagString.EMPTY, component.createdComponentId, (short) 41, LocalizedText.CONTINUE, component.id);
             }
         } else if (InterfaceList.getServerActiveProperties(component).method508() && (anInt4999 & 0x20) != 0) {
-            add(Static246.anInt5393, 0L, JagString.concatenate(new JagString[] { aClass100_466, aClass100_408, component.opBase}), component.createdComponentId, (short) 12, aClass100_545, component.id);
+            add(Static246.anInt5393, 0L, JagString.concatenate(new JagString[] { aClass100_466, aClass100_408, component.optionBase}), component.createdComponentId, (short) 12, aClass100_545, component.id);
         }
     }
 
@@ -646,7 +646,7 @@ public class MiniMenu {
                     aClass100_545 = Static250.aClass100_1042;
                 }
                 if (local693.usingScripts) {
-                    aClass100_466 = JagString.concatenate(new JagString[] { local693.opBase, COLOR_WHITE});
+                    aClass100_466 = JagString.concatenate(new JagString[] { local693.optionBase, COLOR_WHITE});
                 } else {
                     aClass100_466 = JagString.concatenate(new JagString[] {COLOR_GREEN, local693.aClass100_85, COLOR_WHITE});
                 }
@@ -1434,7 +1434,7 @@ public class MiniMenu {
 
     @OriginalMember(owner = "client!aj", name = "a", descriptor = "(BILclient!be;)I")
     public static int getOpCursor(@OriginalArg(1) int arg0, @OriginalArg(2) Component arg1) {
-        if (!InterfaceList.getServerActiveProperties(arg1).method503(arg0) && arg1.anObjectArray29 == null) {
+        if (!InterfaceList.getServerActiveProperties(arg1).method503(arg0) && arg1.onOptionClick == null) {
             return -1;
         } else if (arg1.anIntArray39 == null || arg0 >= arg1.anIntArray39.length) {
             return -1;

@@ -68,9 +68,9 @@ public final class Static53 {
 			return;
 		}
 		@Pc(19) Component local19 = Static201.method1418(MiniMenu.anInt2512, MiniMenu.anInt506);
-		if (local19 != null && local19.anObjectArray27 != null) {
+		if (local19 != null && local19.onUseWith != null) {
 			@Pc(29) HookRequest local29 = new HookRequest();
-			local29.arguments = local19.anObjectArray27;
+			local29.arguments = local19.onUseWith;
 			local29.source = local19;
 			ScriptRunner.run(local29);
 		}

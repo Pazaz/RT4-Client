@@ -3,7 +3,6 @@ package rt4;
 import java.applet.Applet;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
-import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
@@ -429,7 +428,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "b", descriptor = "(BLclient!na;)I")
-	public final int method3126(@OriginalArg(1) JagString arg0) {
+	public final int compare(@OriginalArg(1) JagString arg0) {
 		@Pc(12) int local12 = 0;
 		@Pc(14) int local14 = 0;
 		@Pc(17) int local17 = arg0.length;
@@ -489,7 +488,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(ZI)Lclient!na;")
-	public final JagString method3128(@OriginalArg(1) int arg0) {
+	public final JagString concatChar(@OriginalArg(1) int arg0) {
 		if (arg0 <= 0 || arg0 > 255) {
 			throw new IllegalArgumentException("invalid char");
 		}

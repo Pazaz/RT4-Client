@@ -24,7 +24,7 @@ public final class Static24 {
 	}
 
 	@OriginalMember(owner = "client!bn", name = "d", descriptor = "(II)Z")
-	public static boolean method671(@OriginalArg(1) int arg0) {
+	public static boolean isDigit(@OriginalArg(1) int arg0) {
 		return arg0 >= 48 && arg0 <= 57;
 	}
 }

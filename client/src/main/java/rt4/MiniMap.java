@@ -251,7 +251,7 @@ public class MiniMap {
                             local156 = Fonts.b12Full;
                         }
                         local231 = local164 * local181 + local189 * local146 >> 16;
-                        local239 = local156.method2856(Static235.mapElementList.aClass100Array153[local117], 100);
+                        local239 = local156.getMaxLineWidth(Static235.mapElementList.aClass100Array153[local117], 100);
                         @Pc(245) int local245 = local231 - local239 / 2;
                         if (local245 >= -arg3.width && local245 <= arg3.width && local200 >= -arg3.height && local200 <= arg3.height) {
                             local271 = 16777215;

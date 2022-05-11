@@ -15,7 +15,7 @@ public final class Static114 {
 
 	@OriginalMember(owner = "client!j", name = "a", descriptor = "(BZLclient!na;)V")
 	public static void drawTextOnScreen(@OriginalArg(1) boolean arg0, @OriginalArg(2) JagString arg1) {
-		@Pc(24) int local24 = Fonts.p12Full.method2856(arg1, 250);
+		@Pc(24) int local24 = Fonts.p12Full.getMaxLineWidth(arg1, 250);
 		@Pc(31) int local31 = Fonts.p12Full.getParagraphLineCount(arg1, 250) * 13;
 		if (GlRenderer.enabled) {
 			GlRaster.method1186(6, 6, local24 + 4 + 4, local31 + 8, 0);
