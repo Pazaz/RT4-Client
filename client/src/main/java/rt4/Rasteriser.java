@@ -12,6 +12,18 @@ public final class Rasteriser {
 	@OriginalMember(owner = "client!hf", name = "e", descriptor = "Lclient!m;")
 	public static TextureProvider textureProvider;
 
+	@OriginalMember(owner = "client!tg", name = "c", descriptor = "I")
+	public static int screenLowerX;
+
+	@OriginalMember(owner = "client!ub", name = "m", descriptor = "I")
+	public static int screenUpperX;
+
+	@OriginalMember(owner = "client!a", name = "g", descriptor = "I")
+	public static int screenLowerY;
+
+	@OriginalMember(owner = "client!li", name = "x", descriptor = "I")
+	public static int screenUpperY;
+
 	@OriginalMember(owner = "client!hf", name = "k", descriptor = "I")
 	private static int height;
 
@@ -1313,10 +1325,10 @@ public final class Rasteriser {
 	public static void prepareOffsets() {
 		centerX = width / 2;
 		centerY = height / 2;
-		Static240.screenLowerX = -centerX;
-		Static247.screenUpperX = width - centerX;
-		Static1.screenLowerY = -centerY;
-		Static148.screenUpperY = height - centerY;
+		screenLowerX = -centerX;
+		screenUpperX = width - centerX;
+		screenLowerY = -centerY;
+		screenUpperY = height - centerY;
 	}
 
 	@OriginalMember(owner = "client!hf", name = "a", descriptor = "([I[IIIIIIIIIIIIII)V")
@@ -2520,10 +2532,10 @@ public final class Rasteriser {
 		@Pc(13) int left = offset - top * SoftwareRaster.width;
 		centerX = right - left;
 		centerY = bottom - top;
-		Static240.screenLowerX = -centerX;
-		Static247.screenUpperX = width - centerX;
-		Static1.screenLowerY = -centerY;
-		Static148.screenUpperY = height - centerY;
+		screenLowerX = -centerX;
+		screenUpperX = width - centerX;
+		screenLowerY = -centerY;
+		screenUpperY = height - centerY;
 	}
 
 	@OriginalMember(owner = "client!hf", name = "a", descriptor = "([IIIIIIII)V")

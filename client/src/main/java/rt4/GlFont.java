@@ -41,7 +41,7 @@ public final class GlFont extends Font {
 
 	@OriginalMember(owner = "client!dj", name = "a", descriptor = "(Lclient!cf;)V")
 	public static void method1188(@OriginalArg(0) GlSprite arg0) {
-		if (arg0.height != GlRaster.anInt1441 - GlRaster.clipY) {
+		if (arg0.height != GlRaster.clipBottom - GlRaster.clipTop) {
 			throw new IllegalArgumentException();
 		}
 		masked = arg0;
@@ -93,10 +93,10 @@ public final class GlFont extends Font {
 		gl.glBindTexture(GL2.GL_TEXTURE_2D, mask.textureId);
 		gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_REPLACE);
 		gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_SRC0_RGB, GL2.GL_PREVIOUS);
-		@Pc(98) float maskX0 = (float) (x - GlRaster.clipX) / (float) mask.powerOfTwoWidth;
-		@Pc(107) float maskY0 = (float) (y - GlRaster.clipY) / (float) mask.powerOfTwoHeight;
-		@Pc(118) float maskX1 = (float) (x + width - GlRaster.clipX) / (float) mask.powerOfTwoWidth;
-		@Pc(129) float maskY1 = (float) (y + height - GlRaster.clipY) / (float) mask.powerOfTwoHeight;
+		@Pc(98) float maskX0 = (float) (x - GlRaster.clipLeft) / (float) mask.powerOfTwoWidth;
+		@Pc(107) float maskY0 = (float) (y - GlRaster.clipTop) / (float) mask.powerOfTwoHeight;
+		@Pc(118) float maskX1 = (float) (x + width - GlRaster.clipLeft) / (float) mask.powerOfTwoWidth;
+		@Pc(129) float maskY1 = (float) (y + height - GlRaster.clipTop) / (float) mask.powerOfTwoHeight;
 		gl.glBegin(GL2.GL_TRIANGLE_FAN);
 		gl.glMultiTexCoord2f(GL2.GL_TEXTURE1, maskX1, maskY0);
 		gl.glTexCoord2f(s1, t0);

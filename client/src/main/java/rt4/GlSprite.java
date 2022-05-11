@@ -87,10 +87,10 @@ public class GlSprite extends Sprite {
 		local11.glBindTexture(GL2.GL_TEXTURE_2D, arg2.textureId);
 		local11.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_REPLACE);
 		local11.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_SRC0_RGB, GL2.GL_PREVIOUS);
-		@Pc(47) float local47 = (float) (arg0 - GlRaster.clipX) / (float) arg2.powerOfTwoWidth;
-		@Pc(56) float local56 = (float) (arg1 - GlRaster.clipY) / (float) arg2.powerOfTwoHeight;
-		@Pc(68) float local68 = (float) (arg0 + this.width - GlRaster.clipX) / (float) arg2.powerOfTwoWidth;
-		@Pc(80) float local80 = (float) (arg1 + this.height - GlRaster.clipY) / (float) arg2.powerOfTwoHeight;
+		@Pc(47) float local47 = (float) (arg0 - GlRaster.clipLeft) / (float) arg2.powerOfTwoWidth;
+		@Pc(56) float local56 = (float) (arg1 - GlRaster.clipTop) / (float) arg2.powerOfTwoHeight;
+		@Pc(68) float local68 = (float) (arg0 + this.width - GlRaster.clipLeft) / (float) arg2.powerOfTwoWidth;
+		@Pc(80) float local80 = (float) (arg1 + this.height - GlRaster.clipTop) / (float) arg2.powerOfTwoHeight;
 		@Pc(85) int local85 = arg0 + this.anInt1863;
 		@Pc(90) int local90 = arg1 + this.anInt1861;
 		local11.glBegin(GL2.GL_TRIANGLE_FAN);
@@ -207,7 +207,7 @@ public class GlSprite extends Sprite {
 
 	@OriginalMember(owner = "client!cf", name = "d", descriptor = "(II)V")
 	@Override
-	public final void renderHorizontalFlipTransparent(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+	public final void renderHorizontalFlip(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		GlRenderer.method4149();
 		@Pc(5) int local5 = arg0 + this.anInt1863;
 		@Pc(10) int local10 = arg1 + this.anInt1861;
@@ -232,7 +232,7 @@ public class GlSprite extends Sprite {
 
 	@OriginalMember(owner = "client!cf", name = "e", descriptor = "(II)V")
 	@Override
-	public final void renderTransparent(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+	public final void render(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		GlRenderer.method4149();
 		@Pc(5) int local5 = arg0 + this.anInt1863;
 		@Pc(10) int local10 = arg1 + this.anInt1861;
@@ -261,7 +261,7 @@ public class GlSprite extends Sprite {
 
 	@OriginalMember(owner = "client!cf", name = "a", descriptor = "(IIII)V")
 	@Override
-	public final void renderResizedTransparent(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	public final void renderResized(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		if (arg2 <= 0 || arg3 <= 0) {
 			return;
 		}
@@ -479,7 +479,7 @@ public class GlSprite extends Sprite {
 
 	@OriginalMember(owner = "client!cf", name = "a", descriptor = "(III)V")
 	@Override
-	public final void method1417(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+	public final void renderAlpha(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		GlRenderer.method4155();
 		@Pc(5) int local5 = arg0 + this.anInt1863;
 		@Pc(10) int local10 = arg1 + this.anInt1861;

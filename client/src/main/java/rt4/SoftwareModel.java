@@ -770,20 +770,20 @@ public final class SoftwareModel extends Model {
 		}
 		@Pc(71) int local71 = arg7 * arg3 + arg5 * arg4 >> 16;
 		@Pc(78) int local78 = local71 + this.aShort34 << 9;
-		if (local78 / local38 <= Static240.screenLowerX) {
+		if (local78 / local38 <= Rasteriser.screenLowerX) {
 			return;
 		}
 		@Pc(91) int local91 = local71 - this.aShort34 << 9;
-		if (local91 / local38 >= Static247.screenUpperX) {
+		if (local91 / local38 >= Rasteriser.screenUpperX) {
 			return;
 		}
 		@Pc(107) int local107 = arg6 * arg2 - local14 * arg1 >> 16;
 		@Pc(123) int local123 = local107 + (this.aShort34 * arg1 + this.aShort37 * arg2 >> 16) << 9;
-		if (local123 / local38 <= Static1.screenLowerY) {
+		if (local123 / local38 <= Rasteriser.screenLowerY) {
 			return;
 		}
 		@Pc(146) int local146 = local107 + (-this.aShort34 * arg1 + this.aShort38 * arg2 >> 16) << 9;
-		if (local146 / local38 >= Static148.screenUpperY) {
+		if (local146 / local38 >= Rasteriser.screenUpperY) {
 			return;
 		}
 		@Pc(154) boolean local154 = false;
@@ -1072,7 +1072,7 @@ public final class SoftwareModel extends Model {
 
 	@OriginalMember(owner = "client!w", name = "a", descriptor = "(IIIIIIIJ)V")
 	@Override
-	public final void method4571(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) long arg6) {
+	public final void setCamera(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) long arg6) {
 		try {
 			if (!this.boundsValid) {
 				this.method4592();

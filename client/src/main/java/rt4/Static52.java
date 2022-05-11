@@ -39,14 +39,4 @@ public final class Static52 {
 		}
 	}
 
-	@OriginalMember(owner = "client!eb", name = "b", descriptor = "(II)Lclient!na;")
-	public static JagString method1288(@OriginalArg(1) int arg0) {
-		if (arg0 < 100000) {
-			return JagString.concatenate(new JagString[] { aClass100_559, JagString.parseInt(arg0), aClass100_594 });
-		} else if (arg0 >= 10000000) {
-			return JagString.concatenate(new JagString[] { aClass100_819, JagString.parseInt(arg0 / 1000000), LocalizedText.MILLION, aClass100_594 });
-		} else {
-			return JagString.concatenate(new JagString[] { aClass100_637, JagString.parseInt(arg0 / 1000), LocalizedText.THOUSAND, aClass100_594 });
-		}
-	}
 }

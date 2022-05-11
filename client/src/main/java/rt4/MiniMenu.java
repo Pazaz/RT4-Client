@@ -1051,10 +1051,10 @@ public class MiniMenu {
         @Pc(15) int local15;
         @Pc(47) int x;
         if (anInt5014 == 0) {
-            @Pc(13) int local13 = Static148.screenUpperY;
-            local15 = Static1.screenLowerY;
-            @Pc(17) int local17 = Static247.screenUpperX;
-            @Pc(19) int local19 = Static240.screenLowerX;
+            @Pc(13) int local13 = Rasteriser.screenUpperY;
+            local15 = Rasteriser.screenLowerY;
+            @Pc(17) int local17 = Rasteriser.screenUpperX;
+            @Pc(19) int local19 = Rasteriser.screenLowerX;
             @Pc(33) int local33 = (arg5 - arg3) * (local17 - local19) / arg1 + local19;
             x = local15 + (local13 - local15) * (arg4 - arg0) / arg2;
             if (Static241.aBoolean302 && (anInt4999 & 0x40) != 0) {

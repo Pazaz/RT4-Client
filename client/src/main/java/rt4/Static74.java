@@ -60,8 +60,8 @@ public final class Static74 {
 			local17 = GameShell.canvasHeight;
 			local19 = GameShell.canvasWidth;
 		} else {
-			local17 = local7.anInt459;
-			local19 = local7.anInt445;
+			local17 = local7.height;
+			local19 = local7.width;
 		}
 		Static150.method2801(local17, local19, arg0, false);
 		Static111.method2291(arg0, local17, local19);

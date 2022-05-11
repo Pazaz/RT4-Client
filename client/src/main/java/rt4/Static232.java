@@ -55,7 +55,7 @@ public final class Static232 {
 											local243.id = local222.mapElement;
 											Static172.aClass69_97.addTail(local243);
 										} else {
-											MapList.sprites[local222.mapElement].renderTransparent(local65 - 7, local144 + -7);
+											MapList.sprites[local222.mapElement].render(local65 - 7, local144 + -7);
 										}
 									}
 								}
@@ -70,7 +70,7 @@ public final class Static232 {
 			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 13, local11);
 			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 11, local11);
 			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 9, local11);
-			MapList.sprites[local285.id].renderTransparent(local285.anInt4307 - 7, local285.anInt4314 + -7);
+			MapList.sprites[local285.id].render(local285.anInt4307 - 7, local285.anInt4314 + -7);
 		}
 		Static172.aClass69_97.clear();
 	}

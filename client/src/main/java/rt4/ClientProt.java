@@ -471,15 +471,15 @@ public class ClientProt {
                 local30 = Static81.anInt2225;
             }
             @Pc(41) int local41 = Mouse.anInt5032;
-            if (Static81.anInt2225 + Static4.aClass13_1.anInt445 < local30 - -Static105.aClass13_14.anInt445) {
-                local30 = Static81.anInt2225 + Static4.aClass13_1.anInt445 - Static105.aClass13_14.anInt445;
+            if (Static81.anInt2225 + Static4.aClass13_1.width < local30 - -Static105.aClass13_14.width) {
+                local30 = Static81.anInt2225 + Static4.aClass13_1.width - Static105.aClass13_14.width;
             }
             local41 -= Static165.anInt4035;
             if (local41 < Static228.anInt5103) {
                 local41 = Static228.anInt5103;
             }
-            if (Static228.anInt5103 + Static4.aClass13_1.anInt459 < local41 - -Static105.aClass13_14.anInt459) {
-                local41 = Static228.anInt5103 + Static4.aClass13_1.anInt459 - Static105.aClass13_14.anInt459;
+            if (Static228.anInt5103 + Static4.aClass13_1.height < local41 - -Static105.aClass13_14.height) {
+                local41 = Static228.anInt5103 + Static4.aClass13_1.height - Static105.aClass13_14.height;
             }
             @Pc(109) int local109 = local41 - Static20.anInt660;
             @Pc(114) int local114 = local30 - Static124.anInt3075;

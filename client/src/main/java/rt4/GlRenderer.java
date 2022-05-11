@@ -546,10 +546,10 @@ public final class GlRenderer {
 			gl.glRotatef(arg7, 0.0F, 1.0F, 0.0F);
 		}
 		aBoolean266 = false;
-		Static240.screenLowerX = local7;
-		Static247.screenUpperX = local17;
-		Static1.screenLowerY = local25;
-		Static148.screenUpperY = local35;
+		Rasteriser.screenLowerX = local7;
+		Rasteriser.screenUpperX = local17;
+		Rasteriser.screenLowerY = local25;
+		Rasteriser.screenUpperY = local35;
 	}
 
 	@OriginalMember(owner = "client!tf", name = "d", descriptor = "(Z)V")

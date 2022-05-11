@@ -939,20 +939,20 @@ public final class GlModel extends Model {
 		}
 		@Pc(84) int local84 = arg7 * arg3 + arg5 * arg4 >> 16;
 		@Pc(90) int local90 = local84 + local13 << 9;
-		if (local90 / local53 <= Static240.screenLowerX) {
+		if (local90 / local53 <= Rasteriser.screenLowerX) {
 			return;
 		}
 		@Pc(102) int local102 = local84 - local13 << 9;
-		if (local102 / local53 >= Static247.screenUpperX) {
+		if (local102 / local53 >= Rasteriser.screenUpperX) {
 			return;
 		}
 		@Pc(118) int local118 = arg6 * arg2 - local31 * arg1 >> 16;
 		@Pc(132) int local132 = local118 + (local13 * arg1 + local21 * arg2 >> 16) << 9;
-		if (local132 / local53 <= Static1.screenLowerY) {
+		if (local132 / local53 <= Rasteriser.screenLowerY) {
 			return;
 		}
 		@Pc(153) int local153 = local118 + (-local13 * arg1 + local17 * arg2 >> 16) << 9;
-		if (local153 / local53 >= Static148.screenUpperY) {
+		if (local153 / local53 >= Rasteriser.screenUpperY) {
 			return;
 		}
 		@Pc(161) int local161 = 0;
@@ -1350,7 +1350,7 @@ public final class GlModel extends Model {
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(IIIIIIIJ)V")
 	@Override
-	public final void method4571(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) long arg6) {
+	public final void setCamera(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) long arg6) {
 		if (this.anInt5296 == 0) {
 			return;
 		}

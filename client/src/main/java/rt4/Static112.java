@@ -38,10 +38,10 @@ public final class Static112 {
 		if (Static39.aClass3_Sub2_Sub1_1 != null && Static181.aClass3_Sub2_Sub1_9 != null) {
 			local112 = local13 / Static39.aClass3_Sub2_Sub1_1.width;
 			for (local114 = 0; local114 < local112; local114++) {
-				Static39.aClass3_Sub2_Sub1_1.renderTransparent(local114 * Static39.aClass3_Sub2_Sub1_1.width + local3, local9);
+				Static39.aClass3_Sub2_Sub1_1.render(local114 * Static39.aClass3_Sub2_Sub1_1.width + local3, local9);
 			}
-			Static181.aClass3_Sub2_Sub1_9.renderTransparent(local3, local9);
-			Static181.aClass3_Sub2_Sub1_9.renderHorizontalFlipTransparent(local3 + local13 - Static181.aClass3_Sub2_Sub1_9.width, local9);
+			Static181.aClass3_Sub2_Sub1_9.render(local3, local9);
+			Static181.aClass3_Sub2_Sub1_9.renderHorizontalFlip(local3 + local13 - Static181.aClass3_Sub2_Sub1_9.width, local9);
 		}
 		Fonts.b12Full.renderLeft(LocalizedText.CHOOSE_OPTION, local3 + 3, local9 + 14, Static195.anInt4581, -1);
 		if (GlRenderer.enabled) {
@@ -89,15 +89,15 @@ public final class Static112 {
 		if (Static165.aClass3_Sub2_Sub1_8 != null && Static92.aClass3_Sub2_Sub1_6 != null && Static204.aClass3_Sub2_Sub1_10 != null) {
 			local203 = local13 / Static165.aClass3_Sub2_Sub1_8.width;
 			for (local219 = 0; local219 < local203; local219++) {
-				Static165.aClass3_Sub2_Sub1_8.renderTransparent(local3 + Static165.aClass3_Sub2_Sub1_8.width * local219, local11 + local9 + -Static165.aClass3_Sub2_Sub1_8.height);
+				Static165.aClass3_Sub2_Sub1_8.render(local3 + Static165.aClass3_Sub2_Sub1_8.width * local219, local11 + local9 + -Static165.aClass3_Sub2_Sub1_8.height);
 			}
 			local219 = (local11 - 20) / Static92.aClass3_Sub2_Sub1_6.height;
 			for (local418 = 0; local418 < local219; local418++) {
-				Static92.aClass3_Sub2_Sub1_6.renderTransparent(local3, local9 + local418 * Static92.aClass3_Sub2_Sub1_6.height + 20);
-				Static92.aClass3_Sub2_Sub1_6.renderHorizontalFlipTransparent(local3 + local13 - Static92.aClass3_Sub2_Sub1_6.width, local9 + 20 + local418 * Static92.aClass3_Sub2_Sub1_6.height);
+				Static92.aClass3_Sub2_Sub1_6.render(local3, local9 + local418 * Static92.aClass3_Sub2_Sub1_6.height + 20);
+				Static92.aClass3_Sub2_Sub1_6.renderHorizontalFlip(local3 + local13 - Static92.aClass3_Sub2_Sub1_6.width, local9 + 20 + local418 * Static92.aClass3_Sub2_Sub1_6.height);
 			}
-			Static204.aClass3_Sub2_Sub1_10.renderTransparent(local3, local11 + local9 - Static204.aClass3_Sub2_Sub1_10.height);
-			Static204.aClass3_Sub2_Sub1_10.renderHorizontalFlipTransparent(local3 + local13 - Static204.aClass3_Sub2_Sub1_10.width, local9 - -local11 + -Static204.aClass3_Sub2_Sub1_10.height);
+			Static204.aClass3_Sub2_Sub1_10.render(local3, local11 + local9 - Static204.aClass3_Sub2_Sub1_10.height);
+			Static204.aClass3_Sub2_Sub1_10.renderHorizontalFlip(local3 + local13 - Static204.aClass3_Sub2_Sub1_10.width, local9 - -local11 + -Static204.aClass3_Sub2_Sub1_10.height);
 		}
 		for (local203 = 0; local203 < MiniMenu.size; local203++) {
 			local219 = (MiniMenu.size - local203 - 1) * 15 + local9 + 35;

@@ -16,7 +16,7 @@ public class InvTypeList {
     }
 
     @OriginalMember(owner = "client!u", name = "a", descriptor = "(II)Lclient!md;")
-    public static InvType list(@OriginalArg(0) int id) {
+    public static InvType get(@OriginalArg(0) int id) {
         @Pc(16) InvType invType = (InvType) types.get((long) id);
         if (invType != null) {
             return invType;

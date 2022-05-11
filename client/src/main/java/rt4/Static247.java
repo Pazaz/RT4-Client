@@ -6,10 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static247 {
 
-	@OriginalMember(owner = "client!ub", name = "m", descriptor = "I")
-	public static int screenUpperX;
-
-	@OriginalMember(owner = "client!ub", name = "a", descriptor = "(IIIIIII)V")
+    @OriginalMember(owner = "client!ub", name = "a", descriptor = "(IIIIIII)V")
 	public static void method4244(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
 		if (TextureOp29.anInt4164 <= arg1 && TextureOp29.anInt5063 >= arg3 && TextureOp29.anInt5773 <= arg2 && arg4 <= TextureOp29.anInt2869) {
 			if (arg5 == 1) {

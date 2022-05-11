@@ -133,13 +133,13 @@ public class Playground extends GameShell {
             Fonts.load(archives[13], archives[8]);
             state++;
         } else if (state == 5) {
-            LoadingBarAwt.render(null, true, JagString.parse("Prefetching"), 1);
-            percentage = 0;
-            for (int i = 0; i < 28; ++i) {
-                archives[i].fetchAll();
-                percentage += archives[i].getPercentageComplete();
-            }
-            if (percentage > 2700) {
+            LoadingBarAwt.render(null, true, JagString.parse("Loading configs"), 1);
+//            percentage = 0;
+//            for (int i = 0; i < 28; ++i) {
+//                archives[i].fetchAll();
+//                percentage += archives[i].getPercentageComplete();
+//            }
+//            if (percentage > 2700) {
                 ParamTypeList.init(archives[2]);
                 FloTypeList.init(archives[2]);
                 FluTypeList.init(archives[2]);
@@ -163,7 +163,7 @@ public class Playground extends GameShell {
                 MsiTypeList.init(archives[2], archives[8]);
                 Equipment.init();
                 state++;
-            }
+//            }
         } else if (state == 6) {
             LoadingBarAwt.render(null, true, JagString.parse("Loading sprites"), 1);
             int ready = Sprites.getReady(archives[8]);
@@ -184,14 +184,21 @@ public class Playground extends GameShell {
             Rasteriser.setBounds(GameShell.canvasWidth, GameShell.canvasHeight);
             Rasteriser.prepare();
             Rasteriser.prepareOffsets();
+            loadItem(995, 10000);
             try {
-                loadNpc(exportCounter);
+                //loadNpc(exportCounter);
             } catch (Exception ex) {
                 npc = null;
                 npcType = null;
             }
             state++;
         }
+    }
+
+    Sprite sprite;
+
+    public void loadItem(int id, int count) {
+        sprite = Inv.getObjectSprite(0, id, false, count, 0);
     }
 
     public void loadNpc(int id) {
@@ -234,7 +241,7 @@ public class Playground extends GameShell {
         }
     }
 
-    public static boolean useGl = true;
+    public static boolean useGl = false;
 
     private void exportGlImage(String filename) {
         GL2 gl = GLContext.getCurrentGL().getGL2();
@@ -441,7 +448,7 @@ public class Playground extends GameShell {
         if (state == 9) {
             if (lastExportCounter != exportCounter) {
                 try {
-                    loadNpc(exportCounter);
+                    //loadNpc(exportCounter);
                 } catch (Exception ex) {
                     npc = null;
                     npcType = null;
@@ -540,6 +547,10 @@ public class Playground extends GameShell {
                     } else {
                         npc.render(orientation, 25079, 60547, -44308, 48222, x, z, y, 0L, 0, null);
                     }
+                }
+
+                if (sprite != null) {
+                    sprite.render(canvasWidth / 2 - 144, canvasHeight / 2 - 128);
                 }
 
                 if (!GlRenderer.enabled) {

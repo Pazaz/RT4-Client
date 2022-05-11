@@ -9,16 +9,16 @@ import org.openrs2.deob.annotation.Pc;
 public final class GlRaster {
 
 	@OriginalMember(owner = "client!dj", name = "b", descriptor = "I")
-	public static int clipY = 0;
+	public static int clipTop = 0;
 
 	@OriginalMember(owner = "client!dj", name = "c", descriptor = "I")
-	public static int clipX = 0;
+	public static int clipLeft = 0;
 
 	@OriginalMember(owner = "client!dj", name = "d", descriptor = "I")
-	private static int anInt1440 = 0;
+	private static int clipRight = 0;
 
 	@OriginalMember(owner = "client!dj", name = "e", descriptor = "I")
-	public static int anInt1441 = 0;
+	public static int clipBottom = 0;
 
 	@OriginalMember(owner = "client!dj", name = "a", descriptor = "(IIII)V")
 	public static void method1174(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
@@ -50,10 +50,10 @@ public final class GlRaster {
 
 	@OriginalMember(owner = "client!dj", name = "c", descriptor = "()V")
 	public static void method1177() {
-		clipX = 0;
-		clipY = 0;
-		anInt1440 = GlRenderer.canvasWidth;
-		anInt1441 = GlRenderer.canvasHeight;
+		clipLeft = 0;
+		clipTop = 0;
+		clipRight = GlRenderer.canvasWidth;
+		clipBottom = GlRenderer.canvasHeight;
 		@Pc(9) GL2 local9 = GlRenderer.gl;
 		local9.glDisable(GL2.GL_SCISSOR_TEST);
 		GlFont.method1173();
@@ -176,22 +176,22 @@ public final class GlRaster {
 
 	@OriginalMember(owner = "client!dj", name = "c", descriptor = "(IIII)V")
 	public static void method1183(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		if (clipX < arg0) {
-			clipX = arg0;
+		if (clipLeft < arg0) {
+			clipLeft = arg0;
 		}
-		if (clipY < arg1) {
-			clipY = arg1;
+		if (clipTop < arg1) {
+			clipTop = arg1;
 		}
-		if (anInt1440 > arg2) {
-			anInt1440 = arg2;
+		if (clipRight > arg2) {
+			clipRight = arg2;
 		}
-		if (anInt1441 > arg3) {
-			anInt1441 = arg3;
+		if (clipBottom > arg3) {
+			clipBottom = arg3;
 		}
 		@Pc(21) GL2 gl = GlRenderer.gl;
 		gl.glEnable(GL2.GL_SCISSOR_TEST);
-		if (clipX <= anInt1440 && clipY <= anInt1441) {
-			gl.glScissor((int)(clipX * GameShell.canvasScale + GameShell.subpixelX), (int)((GlRenderer.canvasHeight - anInt1441) * GameShell.canvasScale + GameShell.subpixelY), (int)((anInt1440 - clipX) * GameShell.canvasScale + GameShell.subpixelX), (int)((anInt1441 - clipY) * GameShell.canvasScale + GameShell.subpixelY));
+		if (clipLeft <= clipRight && clipTop <= clipBottom) {
+			gl.glScissor((int)(clipLeft * GameShell.canvasScale + GameShell.subpixelX), (int)((GlRenderer.canvasHeight - clipBottom) * GameShell.canvasScale + GameShell.subpixelY), (int)((clipRight - clipLeft) * GameShell.canvasScale + GameShell.subpixelX), (int)((clipBottom - clipTop) * GameShell.canvasScale + GameShell.subpixelY));
 		} else {
 			gl.glScissor(0, 0, 0, 0);
 		}
@@ -249,14 +249,14 @@ public final class GlRaster {
 		if (arg3 > GlRenderer.canvasHeight) {
 			arg3 = GlRenderer.canvasHeight;
 		}
-		clipX = arg0;
-		clipY = arg1;
-		anInt1440 = arg2;
-		anInt1441 = arg3;
+		clipLeft = arg0;
+		clipTop = arg1;
+		clipRight = arg2;
+		clipBottom = arg3;
 		@Pc(27) GL2 local27 = GlRenderer.gl;
 		local27.glEnable(GL2.GL_SCISSOR_TEST);
-		if (clipX <= anInt1440 && clipY <= anInt1441) {
-			local27.glScissor((int)(clipX * GameShell.canvasScale + GameShell.subpixelX), (int)((GlRenderer.canvasHeight - anInt1441) * GameShell.canvasScale + GameShell.subpixelY), (int)((anInt1440 - clipX) * GameShell.canvasScale + GameShell.subpixelX), (int)((anInt1441 - clipY) * GameShell.canvasScale + GameShell.subpixelY));
+		if (clipLeft <= clipRight && clipTop <= clipBottom) {
+			local27.glScissor((int)(clipLeft * GameShell.canvasScale + GameShell.subpixelX), (int)((GlRenderer.canvasHeight - clipBottom) * GameShell.canvasScale + GameShell.subpixelY), (int)((clipRight - clipLeft) * GameShell.canvasScale + GameShell.subpixelX), (int)((clipBottom - clipTop) * GameShell.canvasScale + GameShell.subpixelY));
 		} else {
 			local27.glScissor(0, 0, 0, 0);
 		}

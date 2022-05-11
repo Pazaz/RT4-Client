@@ -6,9 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static1 {
 
-	@OriginalMember(owner = "client!a", name = "g", descriptor = "I")
-	public static int screenLowerY;
-
 	@OriginalMember(owner = "client!a", name = "h", descriptor = "I")
 	public static int anInt5;
 
@@ -538,7 +535,7 @@ public final class Static1 {
 		}
 		if (WorldMap.aClass3_Sub2_Sub1_2 == null || arg2 != WorldMap.aClass3_Sub2_Sub1_2.width || WorldMap.aClass3_Sub2_Sub1_2.height != arg1) {
 			@Pc(63) SoftwareSprite local63 = new SoftwareSprite(arg2, arg1);
-			SoftwareRaster.method2491(local63.pixels, arg2, arg1);
+			SoftwareRaster.setSize(local63.pixels, arg2, arg1);
 			Static214.method4364(arg2, 0, WorldMap.width, 0, 0, WorldMap.length, arg1, 0);
 			if (GlRenderer.enabled) {
 				WorldMap.aClass3_Sub2_Sub1_2 = new GlSprite(local63);

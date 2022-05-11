@@ -212,18 +212,18 @@ public class MiniMap {
     public static void render(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Component arg3) {
         client.audioLoop();
         if (GlRenderer.enabled) {
-            GlRaster.setClip(arg2, arg1, arg2 + arg3.anInt445, arg1 + arg3.anInt459);
+            GlRaster.setClip(arg2, arg1, arg2 + arg3.width, arg1 + arg3.height);
         } else {
-            SoftwareRaster.setClip(arg2, arg1, arg2 + arg3.anInt445, arg1 + arg3.anInt459);
+            SoftwareRaster.setClip(arg2, arg1, arg2 + arg3.width, arg1 + arg3.height);
         }
         if (state != 2 && state != 5 && sprite != null) {
             @Pc(48) int local48 = Static59.anInt1814 + (int)Camera.yawTarget & 0x7FF;
             @Pc(57) int local57 = PlayerList.self.xFine / 32 + 48;
             @Pc(67) int local67 = 464 - PlayerList.self.zFine / 32;
             if (GlRenderer.enabled) {
-                ((GlSprite) sprite).renderRotatedTransparent(arg2, arg1, arg3.anInt445, arg3.anInt459, local57, local67, local48, anInt4130 + 256, (GlSprite) arg3.method489(false));
+                ((GlSprite) sprite).renderRotatedTransparent(arg2, arg1, arg3.width, arg3.height, local57, local67, local48, anInt4130 + 256, (GlSprite) arg3.method489(false));
             } else {
-                ((SoftwareSprite) sprite).renderRotatedTransparent(arg2, arg1, arg3.anInt445, arg3.anInt459, local57, local67, local48, anInt4130 + 256, arg3.anIntArray37, arg3.anIntArray45);
+                ((SoftwareSprite) sprite).renderRotated(arg2, arg1, arg3.width, arg3.height, local57, local67, local48, anInt4130 + 256, arg3.anIntArray37, arg3.anIntArray45);
             }
             @Pc(146) int local146;
             @Pc(181) int local181;
@@ -253,7 +253,7 @@ public class MiniMap {
                         local231 = local164 * local181 + local189 * local146 >> 16;
                         local239 = local156.method2856(Static235.mapElementList.aClass100Array153[local117], 100);
                         @Pc(245) int local245 = local231 - local239 / 2;
-                        if (local245 >= -arg3.anInt445 && local245 <= arg3.anInt445 && local200 >= -arg3.anInt459 && local200 <= arg3.anInt459) {
+                        if (local245 >= -arg3.width && local245 <= arg3.width && local200 >= -arg3.height && local200 <= arg3.height) {
                             local271 = 16777215;
                             if (Static235.mapElementList.anIntArray444[local117] != -1) {
                                 local271 = Static235.mapElementList.anIntArray444[local117];
@@ -263,7 +263,7 @@ public class MiniMap {
                             } else {
                                 SoftwareRaster.method2486(arg3.anIntArray37, arg3.anIntArray45);
                             }
-                            local156.renderParagraphAlpha(Static235.mapElementList.aClass100Array153[local117], arg2 + local245 + arg3.anInt445 / 2, arg1 + arg3.anInt459 / 2 + -local200, local239, 50, local271, 0, 1, 0, 0);
+                            local156.renderParagraphAlpha(Static235.mapElementList.aClass100Array153[local117], arg2 + local245 + arg3.width / 2, arg1 + arg3.height / 2 + -local200, local239, 50, local271, 0, 1, 0, 0);
                             if (GlRenderer.enabled) {
                                 GlFont.method1173();
                             } else {
@@ -381,14 +381,14 @@ public class MiniMap {
                 method1446(arg3, Sprites.mapflags, local181, local146, arg1, arg2);
             }
             if (GlRenderer.enabled) {
-                GlRaster.method1186(arg2 + arg3.anInt445 / 2 - 1, arg1 + -1 - -(arg3.anInt459 / 2), 3, 3, 16777215);
+                GlRaster.method1186(arg2 + arg3.width / 2 - 1, arg1 + -1 - -(arg3.height / 2), 3, 3, 16777215);
             } else {
-                SoftwareRaster.fillRect(arg3.anInt445 / 2 + arg2 - 1, arg3.anInt459 / 2 + -1 + arg1, 3, 3, 16777215);
+                SoftwareRaster.fillRect(arg3.width / 2 + arg2 - 1, arg3.height / 2 + -1 + arg1, 3, 3, 16777215);
             }
         } else if (GlRenderer.enabled) {
             @Pc(1041) Sprite local1041 = arg3.method489(false);
             if (local1041 != null) {
-                local1041.renderTransparent(arg2, arg1);
+                local1041.render(arg2, arg1);
             }
         } else {
             SoftwareRaster.method2504(arg2, arg1, arg3.anIntArray37, arg3.anIntArray45);
@@ -403,7 +403,7 @@ public class MiniMap {
 		}
 		@Pc(21) int local21 = arg3 * arg3 + arg2 * arg2;
 		@Pc(27) int local27 = Static59.anInt1814 + (int)Camera.yawTarget & 0x7FF;
-		@Pc(39) int local39 = Math.max(arg0.anInt445 / 2, arg0.anInt459 / 2) + 10;
+		@Pc(39) int local39 = Math.max(arg0.width / 2, arg0.height / 2) + 10;
 		if (local39 * local39 < local21) {
 			return;
 		}
@@ -414,9 +414,9 @@ public class MiniMap {
 		@Pc(81) int local81 = local58 * arg2 + arg3 * local70 >> 16;
 		@Pc(92) int local92 = local70 * arg2 - arg3 * local58 >> 16;
 		if (GlRenderer.enabled) {
-			((GlSprite) arg1).method1425(arg0.anInt445 / 2 + arg5 + local81 - arg1.anInt1860 / 2, arg0.anInt459 / 2 + arg4 - (local92 + arg1.anInt1866 / 2), (GlSprite) arg0.method489(false));
+			((GlSprite) arg1).method1425(arg0.width / 2 + arg5 + local81 - arg1.anInt1860 / 2, arg0.height / 2 + arg4 - (local92 + arg1.anInt1866 / 2), (GlSprite) arg0.method489(false));
 		} else {
-			((SoftwareSprite) arg1).method312(arg0.anInt445 / 2 + arg5 + local81 - arg1.anInt1860 / 2, -(arg1.anInt1866 / 2) + arg0.anInt459 / 2 + arg4 + -local92, arg0.anIntArray37, arg0.anIntArray45);
+			((SoftwareSprite) arg1).method312(arg0.width / 2 + arg5 + local81 - arg1.anInt1860 / 2, -(arg1.anInt1866 / 2) + arg0.height / 2 + arg4 + -local92, arg0.anIntArray37, arg0.anIntArray45);
 		}
 	}
 }
