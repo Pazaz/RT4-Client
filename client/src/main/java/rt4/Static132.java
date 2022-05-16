@@ -9,9 +9,6 @@ public final class Static132 {
 	@OriginalMember(owner = "client!ke", name = "U", descriptor = "I")
 	public static int anInt3291 = 0;
 
-	@OriginalMember(owner = "client!ke", name = "Y", descriptor = "[I")
-	public static final int[] anIntArray309 = new int[] { 1, 4 };
-
 	@OriginalMember(owner = "client!ke", name = "a", descriptor = "(ZLclient!wk;Z)V")
 	public static void closeInterface(@OriginalArg(0) boolean arg0, @OriginalArg(1) ComponentPointer arg1) {
 		@Pc(9) int local9 = (int) arg1.key;
@@ -33,7 +30,7 @@ public final class Static132 {
 			}
 		}
 		if (MiniMenu.size == 1) {
-			Static60.aBoolean108 = false;
+			Static40.aBoolean108 = false;
 			Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
 		} else {
 			Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
@@ -44,7 +41,7 @@ public final class Static132 {
 					local43 = local88;
 				}
 			}
-			Static13.anInt436 = MiniMenu.size * 15 + (Static261.aBoolean298 ? 26 : 22);
+			Static13.anInt436 = MiniMenu.size * 15 + (Static40.aBoolean298 ? 26 : 22);
 			Static24.anInt761 = local43 + 8;
 		}
 		if (InterfaceList.topLevelInterface != -1) {

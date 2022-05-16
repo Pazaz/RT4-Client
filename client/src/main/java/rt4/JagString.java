@@ -19,6 +19,8 @@ public final class JagString implements StringInterface {
     public static final JagString EMPTY = parse("");
 	@OriginalMember(owner = "client!pi", name = "Q", descriptor = "Lclient!na;")
 	public static final JagString aClass100_853 = parse("null");
+	@OriginalMember(owner = "client!t", name = "C", descriptor = "Lclient!na;")
+	public static final JagString aClass100_994 = parse(")3");
 	@OriginalMember(owner = "client!na", name = "T", descriptor = "[B")
 	public byte[] chars;
 
@@ -190,6 +192,11 @@ public final class JagString implements StringInterface {
     @OriginalMember(owner = "client!ih", name = "a", descriptor = "(ZII)Lclient!na;")
     public static JagString parseIntTrue(@OriginalArg(2) int arg0) {
         return parseInt(true, arg0);
+    }
+
+    @OriginalMember(owner = "client!oi", name = "a", descriptor = "(II)Lclient!na;")
+    public static JagString formatIp(@OriginalArg(0) int arg0) {
+        return concatenate(new JagString[] { parseInt(arg0 >> 24 & 0xFF), aClass100_994, parseInt(arg0 >> 16 & 0xFF), aClass100_994, parseInt(arg0 >> 8 & 0xFF), aClass100_994, parseInt(arg0 & 0xFF) });
     }
 
     @OriginalMember(owner = "client!na", name = "a", descriptor = "(Z)Ljava/net/URL;")

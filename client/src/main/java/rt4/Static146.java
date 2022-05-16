@@ -12,15 +12,6 @@ public final class Static146 {
 	@OriginalMember(owner = "client!lg", name = "b", descriptor = "Z")
 	public static boolean aBoolean174 = false;
 
-    @OriginalMember(owner = "client!lg", name = "a", descriptor = "(ZLclient!wa;Lclient!na;)I")
-	public static int method2748(@OriginalArg(1) Buffer arg0, @OriginalArg(2) JagString arg1) {
-		@Pc(6) int local6 = arg0.offset;
-		@Pc(14) byte[] local14 = arg1.method3148();
-		arg0.pSmart1or2(local14.length);
-		arg0.offset += WordPack.codec.method1550(local14.length, arg0.data, local14, 0, arg0.offset);
-		return arg0.offset - local6;
-	}
-
 	@OriginalMember(owner = "client!lg", name = "a", descriptor = "(I)V")
 	public static void method2750(@OriginalArg(0) int arg0) {
 		Static235.anInt5276 = arg0;

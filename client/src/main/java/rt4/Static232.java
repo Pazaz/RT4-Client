@@ -6,10 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static232 {
 
-	@OriginalMember(owner = "client!sm", name = "b", descriptor = "I")
-	public static int anInt5208;
-
-	@OriginalMember(owner = "client!sm", name = "e", descriptor = "[[[B")
+    @OriginalMember(owner = "client!sm", name = "e", descriptor = "[[[B")
 	public static byte[][][] aByteArrayArrayArray13;
 
     @OriginalMember(owner = "client!sm", name = "a", descriptor = "(IIIIIIIIIII)V")

@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
-public final class Static161 {
+public final class FogManager {
 
 	@OriginalMember(owner = "client!mk", name = "c", descriptor = "I")
 	public static int anInt3920;

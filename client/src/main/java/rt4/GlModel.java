@@ -2379,9 +2379,9 @@ public final class GlModel extends Model {
 					aClass3_Sub15_8.p4(local71);
 				}
 			} else {
-				local60 = (int) Static161.aFloatArray18[0];
-				local71 = (int) Static161.aFloatArray18[1];
-				local78 = (int) Static161.aFloatArray18[2];
+				local60 = (int) FogManager.aFloatArray18[0];
+				local71 = (int) FogManager.aFloatArray18[1];
+				local78 = (int) FogManager.aFloatArray18[2];
 				local85 = (int) Math.sqrt((double) (local60 * local60 + local71 * local71 + local78 * local78));
 				local90 = (int) ((float) this.aShort29 * 1.3F);
 				local97 = this.aShort28 * local85 >> 8;
@@ -3461,21 +3461,21 @@ public final class GlModel extends Model {
 		}
 		@Pc(26) int local26;
 		@Pc(40) int local40;
-		if (Static161.anInt3920 > 0) {
-			local26 = this.vertexBuffer.aShort6 - (this.vertexBuffer.aShort3 * Static161.anInt3920 >> 8) >> 3;
-			local40 = this.vertexBuffer.aShort5 - (this.vertexBuffer.aShort2 * Static161.anInt3920 >> 8) >> 3;
+		if (FogManager.anInt3920 > 0) {
+			local26 = this.vertexBuffer.aShort6 - (this.vertexBuffer.aShort3 * FogManager.anInt3920 >> 8) >> 3;
+			local40 = this.vertexBuffer.aShort5 - (this.vertexBuffer.aShort2 * FogManager.anInt3920 >> 8) >> 3;
 		} else {
-			local26 = this.vertexBuffer.aShort6 - (this.vertexBuffer.aShort2 * Static161.anInt3920 >> 8) >> 3;
-			local40 = this.vertexBuffer.aShort5 - (this.vertexBuffer.aShort3 * Static161.anInt3920 >> 8) >> 3;
+			local26 = this.vertexBuffer.aShort6 - (this.vertexBuffer.aShort2 * FogManager.anInt3920 >> 8) >> 3;
+			local40 = this.vertexBuffer.aShort5 - (this.vertexBuffer.aShort3 * FogManager.anInt3920 >> 8) >> 3;
 		}
 		@Pc(85) int local85;
 		@Pc(99) int local99;
-		if (Static161.anInt3921 > 0) {
-			local85 = this.vertexBuffer.aShort8 - (this.vertexBuffer.aShort3 * Static161.anInt3921 >> 8) >> 3;
-			local99 = this.vertexBuffer.aShort7 - (this.vertexBuffer.aShort2 * Static161.anInt3921 >> 8) >> 3;
+		if (FogManager.anInt3921 > 0) {
+			local85 = this.vertexBuffer.aShort8 - (this.vertexBuffer.aShort3 * FogManager.anInt3921 >> 8) >> 3;
+			local99 = this.vertexBuffer.aShort7 - (this.vertexBuffer.aShort2 * FogManager.anInt3921 >> 8) >> 3;
 		} else {
-			local85 = this.vertexBuffer.aShort8 - (this.vertexBuffer.aShort2 * Static161.anInt3921 >> 8) >> 3;
-			local99 = this.vertexBuffer.aShort7 - (this.vertexBuffer.aShort3 * Static161.anInt3921 >> 8) >> 3;
+			local85 = this.vertexBuffer.aShort8 - (this.vertexBuffer.aShort2 * FogManager.anInt3921 >> 8) >> 3;
+			local99 = this.vertexBuffer.aShort7 - (this.vertexBuffer.aShort3 * FogManager.anInt3921 >> 8) >> 3;
 		}
 		@Pc(134) int local134 = local40 + 1 - local26;
 		@Pc(140) int local140 = local99 + 1 - local85;
@@ -3499,8 +3499,8 @@ public final class GlModel extends Model {
 		@Pc(248) int local248;
 		@Pc(258) int local258;
 		for (local194 = 0; local194 < this.vertexCount; local194++) {
-			@Pc(216) int local216 = (this.anIntArray461[local194] - (this.anIntArray465[local194] * Static161.anInt3920 >> 8) >> 3) - local26;
-			@Pc(234) int local234 = (this.anIntArray466[local194] - (this.anIntArray465[local194] * Static161.anInt3921 >> 8) >> 3) - local85;
+			@Pc(216) int local216 = (this.anIntArray461[local194] - (this.anIntArray465[local194] * FogManager.anInt3920 >> 8) >> 3) - local26;
+			@Pc(234) int local234 = (this.anIntArray466[local194] - (this.anIntArray465[local194] * FogManager.anInt3921 >> 8) >> 3) - local85;
 			@Pc(239) int local239 = this.anIntArray462[local194];
 			local246 = this.anIntArray462[local194 + 1];
 			for (local248 = local239; local248 < local246; local248++) {

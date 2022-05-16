@@ -61,6 +61,8 @@ public class MiniMenu {
     public static final JagString OPEN_PARENTHESIS = JagString.parse(" (X");
     @OriginalMember(owner = "client!qi", name = "B", descriptor = "Lclient!na;")
     public static final JagString COLOR_WHITE = JagString.parse("<col=ffffff>");
+    @OriginalMember(owner = "client!cb", name = "ab", descriptor = "Lclient!na;")
+    public static final JagString aClass100_164 = JagString.parse(" )2> <col=00ffff>");
     @OriginalMember(owner = "client!ck", name = "D", descriptor = "Lclient!na;")
 	public static JagString aClass100_203 = null;
     @OriginalMember(owner = "client!hn", name = "W", descriptor = "Lclient!na;")
@@ -251,7 +253,7 @@ public class MiniMenu {
 
     @OriginalMember(owner = "client!hj", name = "a", descriptor = "(IJBLclient!na;ISLclient!na;I)V")
     public static void add(@OriginalArg(0) int cursor, @OriginalArg(1) long arg1, @OriginalArg(3) JagString arg2, @OriginalArg(4) int arg3, @OriginalArg(5) short arg4, @OriginalArg(6) JagString arg5, @OriginalArg(7) int arg6) {
-        if (Static60.aBoolean108 || size >= 500) {
+        if (Static40.aBoolean108 || size >= 500) {
             return;
         }
         ops[size] = arg5;
@@ -417,7 +419,7 @@ public class MiniMenu {
             Protocol.outboundBuffer.p2(local19 + Camera.originZ);
         }
         if (local23 == 28) {
-            ClientProt.method2909();
+            ClientProt.closeWidget();
         }
         if (local23 == 45) {
             local192 = NpcList.npcs[local36];
@@ -552,7 +554,7 @@ public class MiniMenu {
         }
         if (local23 == 41 && Static39.aClass13_10 == null) {
             ClientProt.method10(local15, local19);
-            Static39.aClass13_10 = Static201.method1418(local19, local15);
+            Static39.aClass13_10 = InterfaceList.method1418(local19, local15);
             InterfaceList.redraw(Static39.aClass13_10);
         }
         if (local23 == 49) {
@@ -635,7 +637,7 @@ public class MiniMenu {
             }
         }
         if (local23 == 32) {
-            local693 = Static201.method1418(local19, local15);
+            local693 = InterfaceList.method1418(local19, local15);
             if (local693 != null) {
                 Static53.method1294();
                 @Pc(1493) ServerActiveProperties local1493 = InterfaceList.getServerActiveProperties(local693);
@@ -1058,7 +1060,7 @@ public class MiniMenu {
             @Pc(33) int local33 = (arg5 - arg3) * (local17 - local19) / arg1 + local19;
             x = local15 + (local13 - local15) * (arg4 - arg0) / arg2;
             if (Static241.aBoolean302 && (anInt4999 & 0x40) != 0) {
-                @Pc(61) Component local61 = Static201.method1418(anInt2512, anInt506);
+                @Pc(61) Component local61 = InterfaceList.method1418(anInt2512, anInt506);
                 if (local61 == null) {
                     Static53.method1294();
                 } else {
@@ -1090,11 +1092,11 @@ public class MiniMenu {
                         continue;
                     }
                     if (anInt5014 == 1) {
-                        add(Static169.anInt4075, local121, JagString.concatenate(new JagString[] {aClass100_203, Static27.aClass100_164, local172.name}), x, (short) 14, LocalizedText.USE, z);
+                        add(Static169.anInt4075, local121, JagString.concatenate(new JagString[] {aClass100_203, aClass100_164, local172.name}), x, (short) 14, LocalizedText.USE, z);
                     } else if (Static241.aBoolean302) {
                         @Pc(363) ParamType local363 = Static121.anInt3039 == -1 ? null : ParamTypeList.get(Static121.anInt3039);
                         if ((anInt4999 & 0x4) != 0 && (local363 == null || local172.getParam(local363.defaultInt, Static121.anInt3039) != local363.defaultInt)) {
-                            add(Static246.anInt5393, local121, JagString.concatenate(new JagString[] { aClass100_466, Static27.aClass100_164, local172.name}), x, (short) 38, aClass100_545, z);
+                            add(Static246.anInt5393, local121, JagString.concatenate(new JagString[] { aClass100_466, aClass100_164, local172.name}), x, (short) 38, aClass100_545, z);
                         }
                     } else {
                         @Pc(228) JagString[] local228 = local172.ops;

@@ -6,10 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static264 {
 
-	@OriginalMember(owner = "client!vh", name = "e", descriptor = "I")
-	public static int anInt4623;
-
-	@OriginalMember(owner = "client!vh", name = "b", descriptor = "[I")
+    @OriginalMember(owner = "client!vh", name = "b", descriptor = "[I")
 	public static final int[] anIntArray410 = new int[100];
 
 	@OriginalMember(owner = "client!vh", name = "c", descriptor = "Lclient!na;")

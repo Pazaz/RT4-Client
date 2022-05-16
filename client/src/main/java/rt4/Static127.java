@@ -146,8 +146,8 @@ public final class Static127 {
 			}
 		}
 		if (arg4) {
-			Static138.renderX -= local86 * 128;
-			Static134.renderZ -= local81 * 128;
+			Camera.renderX -= local86 * 128;
+			Camera.renderZ -= local81 * 128;
 			Static248.anInt4232 -= local81;
 			Static251.anInt5449 -= local86;
 			Static265.anInt5765 -= local81;
@@ -161,7 +161,7 @@ public final class Static127 {
 			Static115.mapFlagX -= local86;
 		}
 		if (GlRenderer.enabled && arg4 && (Math.abs(local86) > 104 || Math.abs(local81) > 104)) {
-			Static86.setInstantFade();
+			Static103.setInstantFade();
 		}
 		Static107.anInt2875 = -1;
 		Static99.aClass69_64.clear();
@@ -195,7 +195,7 @@ public final class Static127 {
 													}
 													@Pc(246) JagString local246 = JagString.EMPTY;
 													if (Player.lastLogAddress != null) {
-														local246 = Static181.method3341(Player.lastLogAddress.intArg2);
+														local246 = JagString.formatIp(Player.lastLogAddress.intArg2);
 														if (Player.lastLogAddress.result != null) {
 															@Pc(265) byte[] local265 = ((String) Player.lastLogAddress.result).getBytes(StandardCharsets.ISO_8859_1);
 															local246 = JagString.decodeString(local265, local265.length, 0);

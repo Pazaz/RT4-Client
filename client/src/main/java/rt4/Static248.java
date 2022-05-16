@@ -85,14 +85,14 @@ public final class Static248 {
 				MaterialManager.renderingUnderwater = true;
 				UnderwaterMaterialRenderer.method4609();
 				Static152.anInt3604 = -1;
-				Static22.anInt730 = -1;
+				Static247.anInt730 = -1;
 				for (local32 = 0; local32 < Static182.aClass3_Sub14ArrayArray2[0].length; local32++) {
 					@Pc(285) GlTile local285 = Static182.aClass3_Sub14ArrayArray2[0][local32];
 					@Pc(294) float local294 = 251.5F - (local285.blend ? 1.0F : 0.5F);
 					if (local285.underwaterColor != Static152.anInt3604) {
 						Static152.anInt3604 = local285.underwaterColor;
 						WaterMaterialRenderer.method619(local285.underwaterColor);
-						Static161.method3066(WaterMaterialRenderer.method2422());
+						FogManager.method3066(WaterMaterialRenderer.method2422());
 					}
 					local285.method1944(SceneGraph.tiles, local294, false);
 				}

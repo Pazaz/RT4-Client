@@ -7,10 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static171 {
 
-	@OriginalMember(owner = "client!ni", name = "h", descriptor = "I")
-	public static int anInt4153;
-
-	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(ILclient!na;)I")
+    @OriginalMember(owner = "client!ni", name = "a", descriptor = "(ILclient!na;)I")
 	public static int method3218(@OriginalArg(1) JagString arg0) {
 		if (WorldMap.labels == null || arg0.length() == 0) {
 			return -1;

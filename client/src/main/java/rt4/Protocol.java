@@ -52,6 +52,8 @@ public class Protocol {
 	public static int opcode3 = 0;
     @OriginalMember(owner = "client!sj", name = "t", descriptor = "I")
 	public static int opcode2 = 0;
+    @OriginalMember(owner = "client!bj", name = "r", descriptor = "I")
+    public static int anInt659 = 2;
 
     @OriginalMember(owner = "client!g", name = "b", descriptor = "(B)V")
     public static void readLocationPacket() {
@@ -390,10 +392,10 @@ public class Protocol {
                         Static35.underWaterLocationsMapFileIds[local20] = -1;
                     } else {
                         Static238.regionBitPacked[local20] = local169;
-                        Static36.mapFileIds[local20] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static103.aClass100_558, JagString.parseInt(local138), Static86.aClass100_488, JagString.parseInt(local151) }));
-                        Static172.locationsMapFileIds[local20] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static270.aClass100_1090, JagString.parseInt(local138), Static86.aClass100_488, JagString.parseInt(local151) }));
-                        Static99.underWaterMapFileIds[local20] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static165.aClass100_772, JagString.parseInt(local138), Static86.aClass100_488, JagString.parseInt(local151) }));
-                        Static35.underWaterLocationsMapFileIds[local20] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static278.aClass100_1103, JagString.parseInt(local138), Static86.aClass100_488, JagString.parseInt(local151) }));
+                        Static36.mapFileIds[local20] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static103.aClass100_558, JagString.parseInt(local138), Static86.UNDERSCORE, JagString.parseInt(local151) }));
+                        Static172.locationsMapFileIds[local20] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static270.aClass100_1090, JagString.parseInt(local138), Static86.UNDERSCORE, JagString.parseInt(local151) }));
+                        Static99.underWaterMapFileIds[local20] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static165.aClass100_772, JagString.parseInt(local138), Static86.UNDERSCORE, JagString.parseInt(local151) }));
+                        Static35.underWaterLocationsMapFileIds[local20] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static278.aClass100_1103, JagString.parseInt(local138), Static86.UNDERSCORE, JagString.parseInt(local151) }));
                     }
                     local20++;
                 }
@@ -459,10 +461,10 @@ public class Protocol {
                             Static238.regionBitPacked[local60] = local571;
                             @Pc(609) int local609 = local571 & 0xFF;
                             local573 = local571 >> 8 & 0xFF;
-                            Static36.mapFileIds[local60] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static103.aClass100_558, JagString.parseInt(local573), Static86.aClass100_488, JagString.parseInt(local609) }));
-                            Static172.locationsMapFileIds[local60] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static270.aClass100_1090, JagString.parseInt(local573), Static86.aClass100_488, JagString.parseInt(local609) }));
-                            Static99.underWaterMapFileIds[local60] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static165.aClass100_772, JagString.parseInt(local573), Static86.aClass100_488, JagString.parseInt(local609) }));
-                            Static35.underWaterLocationsMapFileIds[local60] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static278.aClass100_1103, JagString.parseInt(local573), Static86.aClass100_488, JagString.parseInt(local609) }));
+                            Static36.mapFileIds[local60] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static103.aClass100_558, JagString.parseInt(local573), Static86.UNDERSCORE, JagString.parseInt(local609) }));
+                            Static172.locationsMapFileIds[local60] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static270.aClass100_1090, JagString.parseInt(local573), Static86.UNDERSCORE, JagString.parseInt(local609) }));
+                            Static99.underWaterMapFileIds[local60] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static165.aClass100_772, JagString.parseInt(local573), Static86.UNDERSCORE, JagString.parseInt(local609) }));
+                            Static35.underWaterLocationsMapFileIds[local60] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static278.aClass100_1103, JagString.parseInt(local573), Static86.UNDERSCORE, JagString.parseInt(local609) }));
                             local60++;
                         }
                     }
@@ -1679,7 +1681,7 @@ public class Protocol {
             int shake4 = inboundBuffer.g2();
             setVerifyId(tracknum);
             Static176.customCameraActive[cameraId] = true;
-            Static222.cameraJitter[cameraId] = jitter;
+            Camera.cameraJitter[cameraId] = jitter;
             Static276.cameraAmplitude[cameraId] = amplitude;
             Static202.cameraFrequency[cameraId] = frequency;
             Static31.anIntArray76[cameraId] = shake4;
@@ -1752,7 +1754,7 @@ public class Protocol {
             return true;
         } else if (opcode == ServerProt.URL_OPEN) {
             if (GameShell.fullScreenFrame != null) {
-                Static241.setWindowMode(false, Preferences.favoriteWorlds, -1, -1);
+                DisplayMode.setWindowMode(false, Preferences.favoriteWorlds, -1, -1);
             }
             @Pc(3848) byte[] data = new byte[length];
             inboundBuffer.gBytesIsaac(data, length);
@@ -2730,11 +2732,11 @@ public class Protocol {
                                             if (WorldMap.component == null) {
                                                 Static137.anInt3337 = 0;
                                             }
-                                            if (Static105.aClass13_14 != null) {
+                                            if (Static40.aClass13_14 != null) {
                                                 ClientProt.method28();
                                             }
-                                            if (LoginManager.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static58.wheelRotation != 0) {
-                                                y = Player.level - Static58.wheelRotation;
+                                            if (LoginManager.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && MouseWheel.wheelRotation != 0) {
+                                                y = Player.level - MouseWheel.wheelRotation;
                                                 if (y < 0) {
                                                     y = 0;
                                                 } else if (y > 3) {
@@ -2845,7 +2847,7 @@ public class Protocol {
                                                     Static230.anInt5161 += Static220.anInt4941;
                                                 }
                                                 if ((modelId & 0x2) == 2) {
-                                                    Static206.anInt4774 += Static20.anInt659;
+                                                    Static206.anInt4774 += anInt659;
                                                 }
                                                 if ((modelId & 0x1) == 1) {
                                                     Static132.anInt3291 += Static248.anInt4229;
@@ -2871,10 +2873,10 @@ public class Protocol {
                                                 Static179.anInt4262 = 1;
                                             }
                                             if (Static206.anInt4774 < -55) {
-                                                Static20.anInt659 = 2;
+                                                anInt659 = 2;
                                             }
                                             if (Static206.anInt4774 > 55) {
-                                                Static20.anInt659 = -2;
+                                                anInt659 = -2;
                                             }
                                             if (Static230.anInt5161 < -40) {
                                                 Static220.anInt4941 = 1;

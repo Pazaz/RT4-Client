@@ -6,9 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static154 {
 
-    @OriginalMember(owner = "client!md", name = "S", descriptor = "I")
-	public static int anInt3709;
-
     @OriginalMember(owner = "client!md", name = "a", descriptor = "(Lclient!be;I)Z")
 	public static boolean method2926(@OriginalArg(0) Component arg0) {
 		if (arg0.anIntArray43 == null) {

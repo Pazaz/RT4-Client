@@ -52,8 +52,8 @@ public final class Static18 {
 		}
 		Camera.cameraPitch = arg6;
 		Camera.cameraYaw = arg4;
-		Static134.renderZ = arg5 - local57;
-		Static138.renderX = arg0 - local55;
+		Camera.renderZ = arg5 - local57;
+		Camera.renderX = arg0 - local55;
 		Static5.anInt40 = arg2 - local59;
 	}
 

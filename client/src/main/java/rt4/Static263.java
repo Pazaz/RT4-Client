@@ -6,9 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static263 {
 
-	@OriginalMember(owner = "client!vg", name = "a", descriptor = "[Lclient!na;")
-	public static JagString[] aClass100Array174;
-
 	@OriginalMember(owner = "client!vg", name = "e", descriptor = "[I")
 	public static int[] anIntArray516;
 

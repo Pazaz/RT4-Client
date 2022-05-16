@@ -8,21 +8,18 @@ public final class Static7 {
     @OriginalMember(owner = "client!ah", name = "t", descriptor = "I")
 	public static int anInt986;
 
-    @OriginalMember(owner = "client!ah", name = "n", descriptor = "I")
-	public static int anInt983 = 0;
-
-	@OriginalMember(owner = "client!ah", name = "p", descriptor = "Lclient!ih;")
+    @OriginalMember(owner = "client!ah", name = "p", descriptor = "Lclient!ih;")
 	public static final LinkedList aClass69_32 = new LinkedList();
 
 	@OriginalMember(owner = "client!ah", name = "b", descriptor = "(I)V")
 	public static void method843() {
-		if (Static118.aClass13_15 != null || Static105.aClass13_14 != null) {
+		if (Static118.aClass13_15 != null || Static40.aClass13_14 != null) {
 			return;
 		}
 		@Pc(20) int local20 = Mouse.clickButton;
 		@Pc(93) int local93;
 		@Pc(99) int local99;
-		if (!Static60.aBoolean108) {
+		if (!Static40.aBoolean108) {
 			if (local20 == 1 && MiniMenu.size > 0) {
 				@Pc(37) short local37 = MiniMenu.actions[MiniMenu.size - 1];
 				if (local37 == 25 || local37 == 23 || local37 == 48 || local37 == 7 || local37 == 13 || local37 == 47 || local37 == 5 || local37 == 43 || local37 == 35 || local37 == 58 || local37 == 22 || local37 == 1006) {
@@ -61,7 +58,7 @@ public final class Static7 {
 			local93 = Mouse.anInt5032;
 			local204 = Mouse.anInt4873;
 			if (local204 < Static183.anInt4271 - 10 || local204 > Static24.anInt761 + Static183.anInt4271 + 10 || Static229.anInt5138 - 10 > local93 || local93 > Static13.anInt436 + Static229.anInt5138 + 10) {
-				Static60.aBoolean108 = false;
+				Static40.aBoolean108 = false;
 				Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
 			}
 		}
@@ -76,7 +73,7 @@ public final class Static7 {
 		@Pc(269) int local269 = -1;
 		for (@Pc(271) int local271 = 0; local271 < MiniMenu.size; local271++) {
 			@Pc(289) int local289;
-			if (Static261.aBoolean298) {
+			if (Static40.aBoolean298) {
 				local289 = (MiniMenu.size - local271 - 1) * 15 + local93 + 35;
 			} else {
 				local289 = (MiniMenu.size - local271 - 1) * 15 + local93 + 31;
@@ -88,7 +85,7 @@ public final class Static7 {
 		if (local269 != -1) {
 			MiniMenu.doAction(local269);
 		}
-		Static60.aBoolean108 = false;
+		Static40.aBoolean108 = false;
 		Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
 	}
 }

@@ -483,11 +483,11 @@ public final class Player extends PathingEntity {
 	@OriginalMember(owner = "client!e", name = "e", descriptor = "(I)Lclient!na;")
 	public final JagString getName() {
 		@Pc(2) JagString local2 = this.username;
-		if (Static103.aClass100Array88 != null) {
-			local2 = JagString.concatenate(new JagString[] { Static103.aClass100Array88[this.anInt1651], local2 });
+		if (PlayerList.playerNames != null) {
+			local2 = JagString.concatenate(new JagString[] { PlayerList.playerNames[this.anInt1651], local2 });
 		}
-		if (Static263.aClass100Array174 != null) {
-			local2 = JagString.concatenate(new JagString[] { local2, Static263.aClass100Array174[this.anInt1651] });
+		if (PlayerList.playerNames2 != null) {
+			local2 = JagString.concatenate(new JagString[] { local2, PlayerList.playerNames2[this.anInt1651] });
 		}
 		return local2;
 	}

@@ -1,6 +1,5 @@
 package rt4;
 
-import com.jogamp.opengl.*;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
@@ -95,7 +94,7 @@ public final class Static156 {
 			if (GlRenderer.enabled) {
 				MaterialManager.renderingUnderwater = false;
 				MaterialManager.setMaterial(0, 0);
-				Static161.method3066(null);
+				FogManager.method3066(null);
 				LightingManager.method2390();
 			}
 			Static278.setRenderTiles(false);

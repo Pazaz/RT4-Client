@@ -33,9 +33,9 @@ public final class Static252 {
 			Static50.anIntArray134[local33] = 0;
 		}
 		if (Camera.cameraType != 1) {
-			local33 = SceneGraph.getTileHeight(Player.level, Static138.renderX, Static134.renderZ);
-			if (local33 - Static5.anInt40 < 800 && (SceneGraph.tileFlags[Player.level][Static138.renderX >> 7][Static134.renderZ >> 7] & 0x4) != 0) {
-				Static254.method4348(false, Static138.renderX >> 7, Static134.renderZ >> 7, SceneGraph.tiles, 1);
+			local33 = SceneGraph.getTileHeight(Player.level, Camera.renderX, Camera.renderZ);
+			if (local33 - Static5.anInt40 < 800 && (SceneGraph.tileFlags[Player.level][Camera.renderX >> 7][Camera.renderZ >> 7] & 0x4) != 0) {
+				Static254.method4348(false, Camera.renderX >> 7, Camera.renderZ >> 7, SceneGraph.tiles, 1);
 			}
 			return;
 		}
@@ -46,14 +46,14 @@ public final class Static252 {
 			return;
 		}
 		@Pc(135) int local135 = PlayerList.self.zFine >> 7;
-		local40 = Static134.renderZ >> 7;
+		local40 = Camera.renderZ >> 7;
 		@Pc(146) int local146;
 		if (local40 < local135) {
 			local146 = local135 - local40;
 		} else {
 			local146 = local40 - local135;
 		}
-		local33 = Static138.renderX >> 7;
+		local33 = Camera.renderX >> 7;
 		@Pc(162) int local162 = PlayerList.self.xFine >> 7;
 		@Pc(174) int local174;
 		if (local162 > local33) {

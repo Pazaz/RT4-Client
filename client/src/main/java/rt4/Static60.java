@@ -10,7 +10,4 @@ public final class Static60 {
 	@OriginalMember(owner = "client!em", name = "D", descriptor = "I")
 	public static int gregorianDateSeed;
 
-	@OriginalMember(owner = "client!em", name = "z", descriptor = "Z")
-	public static boolean aBoolean108 = false;
-
 }

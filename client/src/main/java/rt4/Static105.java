@@ -6,14 +6,8 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static105 {
 
-	@OriginalMember(owner = "client!ib", name = "i", descriptor = "[Lclient!od;")
-	public static Class114[] aClass114Array1;
-
-	@OriginalMember(owner = "client!ib", name = "c", descriptor = "Lclient!qi;")
+    @OriginalMember(owner = "client!ib", name = "c", descriptor = "Lclient!qi;")
 	public static final ColorImageCacheEntry VALID = new ColorImageCacheEntry(0, 0);
-
-	@OriginalMember(owner = "client!ib", name = "e", descriptor = "Lclient!be;")
-	public static Component aClass13_14 = null;
 
     @OriginalMember(owner = "client!ib", name = "k", descriptor = "Lclient!na;")
 	public static final JagString aClass100_561 = JagString.parse(" )2> <col=ffffff>");

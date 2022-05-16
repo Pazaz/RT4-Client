@@ -38,6 +38,8 @@ public final class PlayerAppearance {
     public static final int[] MALE_FEATURES = new int[] { 0, 1, 2, 3, 4, 5, 6, 14 };
     @OriginalMember(owner = "client!kh", name = "g", descriptor = "Lclient!hh;")
     public static final PlayerAppearance DEFAULT = new PlayerAppearance();
+    @OriginalMember(owner = "client!mc", name = "ab", descriptor = "[I")
+	public static final int[] FEMALE_FEATURES = new int[] { 7, 8, 9, 10, 11, 12, 13, 15 };
     @OriginalMember(owner = "client!cj", name = "e", descriptor = "[[S")
     public static short[][] aShortArrayArray2;
 	@OriginalMember(owner = "client!nj", name = "m", descriptor = "[[S")
@@ -157,7 +159,7 @@ public final class PlayerAppearance {
 			for (@Pc(24) int local24 = 0; local24 < 8; local24++) {
 				for (@Pc(31) int local31 = 0; local31 < IdkTypeList.anInt1716; local31++) {
 					@Pc(38) IdkType local38 = IdkTypeList.get(local31);
-					if (local38 != null && !local38.aBoolean85 && local38.feature == (arg2 ? Static153.anIntArray351[local24] : MALE_FEATURES[local24])) {
+					if (local38 != null && !local38.aBoolean85 && local38.feature == (arg2 ? FEMALE_FEATURES[local24] : MALE_FEATURES[local24])) {
 						arg3[anIntArray451[local24]] = Integer.MIN_VALUE | local31;
 						break;
 					}

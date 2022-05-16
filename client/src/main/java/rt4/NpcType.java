@@ -173,7 +173,7 @@ public final class NpcType {
 	public final NpcType getMultiNpc() {
 		@Pc(5) int local5 = -1;
 		if (this.multiNpcVarbit != -1) {
-			local5 = Static155.getVarbit(this.multiNpcVarbit);
+			local5 = VarpDomain.getVarbit(this.multiNpcVarbit);
 		} else if (this.multiNpcVarp != -1) {
 			local5 = VarpDomain.activeVarps[this.multiNpcVarp];
 		}
@@ -192,7 +192,7 @@ public final class NpcType {
 		}
 		@Pc(16) int local16 = -1;
 		if (this.multiNpcVarbit != -1) {
-			local16 = Static155.getVarbit(this.multiNpcVarbit);
+			local16 = VarpDomain.getVarbit(this.multiNpcVarbit);
 		} else if (this.multiNpcVarp != -1) {
 			local16 = VarpDomain.activeVarps[this.multiNpcVarp];
 		}

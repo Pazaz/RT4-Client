@@ -19,10 +19,8 @@ public final class Static15 {
 	public static final JagString aClass100_886 = JagString.parse(")3runescape)3com)4l=");
 	@OriginalMember(owner = "client!v", name = "a", descriptor = "Lclient!na;")
 	public static final JagString aClass100_98 = JagString.parse(")4a=");
-	@OriginalMember(owner = "client!be", name = "Vb", descriptor = "F")
-	public static float aFloat4;
 
-	@OriginalMember(owner = "client!be", name = "a", descriptor = "(Z)Lclient!na;")
+    @OriginalMember(owner = "client!be", name = "a", descriptor = "(Z)Lclient!na;")
 	public static JagString method479() {
 		@Pc(8) JagString local8 = aClass100_518;
 		@Pc(10) JagString local10 = JagString.EMPTY;

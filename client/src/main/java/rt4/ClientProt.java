@@ -9,7 +9,7 @@ import java.io.IOException;
 public class ClientProt {
     @OriginalMember(owner = "client!vg", name = "a", descriptor = "(Lclient!na;IIBI)V")
     public static void method4512(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {
-        @Pc(8) Component local8 = Static201.method1418(arg3, arg1);
+        @Pc(8) Component local8 = InterfaceList.method1418(arg3, arg1);
         if (local8 == null) {
             return;
         }
@@ -114,7 +114,7 @@ public class ClientProt {
     }
 
     @OriginalMember(owner = "client!mc", name = "f", descriptor = "(B)V")
-    public static void method2909() {
+    public static void closeWidget() {
         Protocol.outboundBuffer.p1isaac(184);
         for (@Pc(18) ComponentPointer local18 = (ComponentPointer) InterfaceList.openInterfaces.head(); local18 != null; local18 = (ComponentPointer) InterfaceList.openInterfaces.next()) {
             if (local18.anInt5879 == 0) {
@@ -128,7 +128,7 @@ public class ClientProt {
     }
 
     @OriginalMember(owner = "client!wh", name = "a", descriptor = "(IILclient!na;)V")
-    public static void method4613(@OriginalArg(0) int arg0, @OriginalArg(2) JagString arg1) {
+    public static void clickPlayerOption(@OriginalArg(0) int arg0, @OriginalArg(2) JagString arg1) {
         @Pc(7) JagString local7 = arg1.method3159().toTitleCase();
         @Pc(13) boolean local13 = false;
         for (@Pc(15) int local15 = 0; local15 < PlayerList.size; local15++) {
@@ -394,8 +394,8 @@ public class ClientProt {
             for (@Pc(837) int local837 = chunkX - 1; local837 <= chunkZ + 1; local837++) {
                 for (@Pc(850) int local850 = local821 - 1; local850 <= local815 + 1; local850++) {
                     if (local837 < chunkX || local837 > chunkZ || local850 < local821 || local850 > local815) {
-                        client.js5Archive5.method4486(JagString.concatenate(new JagString[] { Static103.aClass100_558, JagString.parseInt(local837), Static86.aClass100_488, JagString.parseInt(local850) }));
-                        client.js5Archive5.method4486(JagString.concatenate(new JagString[] { Static270.aClass100_1090, JagString.parseInt(local837), Static86.aClass100_488, JagString.parseInt(local850) }));
+                        client.js5Archive5.method4486(JagString.concatenate(new JagString[] { Static103.aClass100_558, JagString.parseInt(local837), Static86.UNDERSCORE, JagString.parseInt(local850) }));
+                        client.js5Archive5.method4486(JagString.concatenate(new JagString[] { Static270.aClass100_1090, JagString.parseInt(local837), Static86.UNDERSCORE, JagString.parseInt(local850) }));
                     }
                 }
             }
@@ -416,7 +416,7 @@ public class ClientProt {
     @OriginalMember(owner = "client!ej", name = "i", descriptor = "(I)V")
     public static void method1373() {
         Protocol.outboundBuffer.p1isaac(243);
-        Protocol.outboundBuffer.p1(Static144.getWindowMode());
+        Protocol.outboundBuffer.p1(DisplayMode.getWindowMode());
         Protocol.outboundBuffer.p2(GameShell.canvasWidth);
         Protocol.outboundBuffer.p2(GameShell.canvasHeight);
         Protocol.outboundBuffer.p1(Preferences.antiAliasingMode);
@@ -447,69 +447,69 @@ public class ClientProt {
 
     @OriginalMember(owner = "client!ac", name = "b", descriptor = "(I)V")
     public static void method28() {
-        InterfaceList.redraw(Static105.aClass13_14);
-        Static213.anInt4851++;
+        InterfaceList.redraw(Static40.aClass13_14);
+        Static40.anInt4851++;
         if (Static44.aBoolean83 && Static146.aBoolean174) {
             @Pc(30) int local30 = Mouse.anInt4873;
-            local30 -= Static246.anInt5388;
+            local30 -= Static40.anInt5388;
             if (Static81.anInt2225 > local30) {
                 local30 = Static81.anInt2225;
             }
             @Pc(41) int local41 = Mouse.anInt5032;
-            if (Static81.anInt2225 + Static4.aClass13_1.width < local30 - -Static105.aClass13_14.width) {
-                local30 = Static81.anInt2225 + Static4.aClass13_1.width - Static105.aClass13_14.width;
+            if (Static81.anInt2225 + Static40.aClass13_1.width < local30 - -Static40.aClass13_14.width) {
+                local30 = Static81.anInt2225 + Static40.aClass13_1.width - Static40.aClass13_14.width;
             }
-            local41 -= Static165.anInt4035;
+            local41 -= Static40.anInt4035;
             if (local41 < Static228.anInt5103) {
                 local41 = Static228.anInt5103;
             }
-            if (Static228.anInt5103 + Static4.aClass13_1.height < local41 - -Static105.aClass13_14.height) {
-                local41 = Static228.anInt5103 + Static4.aClass13_1.height - Static105.aClass13_14.height;
+            if (Static228.anInt5103 + Static40.aClass13_1.height < local41 - -Static40.aClass13_14.height) {
+                local41 = Static228.anInt5103 + Static40.aClass13_1.height - Static40.aClass13_14.height;
             }
-            @Pc(109) int local109 = local41 - Static20.anInt660;
+            @Pc(109) int local109 = local41 - Static36.anInt660;
             @Pc(114) int local114 = local30 - Static124.anInt3075;
-            @Pc(122) int local122 = local30 + Static4.aClass13_1.scrollX - Static81.anInt2225;
-            @Pc(130) int local130 = Static4.aClass13_1.scrollY + local41 - Static228.anInt5103;
-            @Pc(133) int local133 = Static105.aClass13_14.dragDeadzone;
-            if (Static213.anInt4851 > Static105.aClass13_14.dragDeadtime && (local133 < local114 || -local133 > local114 || local109 > local133 || local109 < -local133)) {
-                Static138.aBoolean172 = true;
+            @Pc(122) int local122 = local30 + Static40.aClass13_1.scrollX - Static81.anInt2225;
+            @Pc(130) int local130 = Static40.aClass13_1.scrollY + local41 - Static228.anInt5103;
+            @Pc(133) int local133 = Static40.aClass13_14.dragDeadzone;
+            if (Static40.anInt4851 > Static40.aClass13_14.dragDeadtime && (local133 < local114 || -local133 > local114 || local109 > local133 || local109 < -local133)) {
+                Static40.aBoolean172 = true;
             }
             @Pc(176) HookRequest local176;
-            if (Static105.aClass13_14.onDragStart != null && Static138.aBoolean172) {
+            if (Static40.aClass13_14.onDragStart != null && Static40.aBoolean172) {
                 local176 = new HookRequest();
-                local176.source = Static105.aClass13_14;
-                local176.arguments = Static105.aClass13_14.onDragStart;
+                local176.source = Static40.aClass13_14;
+                local176.arguments = Static40.aClass13_14.onDragStart;
                 local176.mouseX = local122;
                 local176.mouseY = local130;
                 ScriptRunner.run(local176);
             }
             if (Mouse.pressedButton == 0) {
-                if (Static138.aBoolean172) {
-                    if (Static105.aClass13_14.onDragRelease != null) {
+                if (Static40.aBoolean172) {
+                    if (Static40.aClass13_14.onDragRelease != null) {
                         local176 = new HookRequest();
                         local176.mouseY = local130;
                         local176.target = Static56.aClass13_12;
                         local176.mouseX = local122;
-                        local176.arguments = Static105.aClass13_14.onDragRelease;
-                        local176.source = Static105.aClass13_14;
+                        local176.arguments = Static40.aClass13_14.onDragRelease;
+                        local176.source = Static40.aClass13_14;
                         ScriptRunner.run(local176);
                     }
-                    if (Static56.aClass13_12 != null && Static36.method938(Static105.aClass13_14) != null) {
+                    if (Static56.aClass13_12 != null && Static36.method938(Static40.aClass13_14) != null) {
                         Protocol.outboundBuffer.p1isaac(79);
-                        Protocol.outboundBuffer.p4me(Static105.aClass13_14.id);
+                        Protocol.outboundBuffer.p4me(Static40.aClass13_14.id);
                         Protocol.outboundBuffer.p2le(Static56.aClass13_12.createdComponentId);
                         Protocol.outboundBuffer.p4(Static56.aClass13_12.id);
-                        Protocol.outboundBuffer.p2le(Static105.aClass13_14.createdComponentId);
+                        Protocol.outboundBuffer.p2le(Static40.aClass13_14.createdComponentId);
                     }
                 } else if ((Static116.anInt2952 == 1 || Static277.method4640(MiniMenu.size - 1)) && MiniMenu.size > 2) {
                     Static226.method3901();
                 } else if (MiniMenu.size > 0) {
                     Static59.method1372();
                 }
-                Static105.aClass13_14 = null;
+                Static40.aClass13_14 = null;
             }
-        } else if (Static213.anInt4851 > 1) {
-            Static105.aClass13_14 = null;
+        } else if (Static40.anInt4851 > 1) {
+            Static40.aClass13_14 = null;
         }
     }
 

@@ -6,13 +6,10 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static253 {
 
-	@OriginalMember(owner = "client!ui", name = "T", descriptor = "F")
-	public static float aFloat36;
+    @OriginalMember(owner = "client!bi", name = "jb", descriptor = "Z")
+    public static boolean aBoolean43 = true;
 
-	@OriginalMember(owner = "client!ui", name = "mb", descriptor = "F")
-	public static float aFloat37;
-
-	@OriginalMember(owner = "client!ui", name = "a", descriptor = "(IIZIII)V")
+    @OriginalMember(owner = "client!ui", name = "a", descriptor = "(IIZIII)V")
 	public static void method4326(@OriginalArg(1) int arg0, @OriginalArg(2) boolean arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
 		Static136.anInt3325++;
 		Static210.method3711();
@@ -28,10 +25,10 @@ public final class Static253 {
 		Static246.method4239();
 		if (GlRenderer.enabled) {
 			Static115.method2314(arg3, arg4, arg0, arg2, true);
-			arg2 = Static7.anInt983;
-			arg4 = Static24.anInt773;
-			arg3 = Static166.anInt4055;
-			arg0 = Static245.anInt5377;
+			arg2 = Static115.anInt983;
+			arg4 = Static115.anInt773;
+			arg3 = Static115.anInt4055;
+			arg0 = Static115.anInt5377;
 		}
 		@Pc(59) int local59;
 		@Pc(57) int local57;
@@ -47,15 +44,15 @@ public final class Static253 {
 			Static18.method555(Camera.cameraX, arg0, SceneGraph.getTileHeight(Player.level, PlayerList.self.xFine, PlayerList.self.zFine) - 50, 600 - -(local59 * 3), local57, Camera.cameraZ, local59);
 		}
 		local57 = Static5.anInt40;
-		local59 = Static138.renderX;
-		@Pc(121) int local121 = Static134.renderZ;
+		local59 = Camera.renderX;
+		@Pc(121) int local121 = Camera.renderZ;
 		@Pc(123) int local123 = Camera.cameraPitch;
 		@Pc(125) int local125 = Camera.cameraYaw;
 		@Pc(127) int local127;
 		@Pc(171) int local171;
 		for (local127 = 0; local127 < 5; local127++) {
 			if (Static176.customCameraActive[local127]) {
-				local171 = (int) ((double) -Static222.cameraJitter[local127] + (double) (Static222.cameraJitter[local127] * 2 + 1) * Math.random() + Math.sin((double) Static31.anIntArray76[local127] * ((double) Static202.cameraFrequency[local127] / 100.0D)) * (double) Static276.cameraAmplitude[local127]);
+				local171 = (int) ((double) -Camera.cameraJitter[local127] + (double) (Camera.cameraJitter[local127] * 2 + 1) * Math.random() + Math.sin((double) Static31.anIntArray76[local127] * ((double) Static202.cameraFrequency[local127] / 100.0D)) * (double) Static276.cameraAmplitude[local127]);
 				if (local127 == 3) {
 					Camera.cameraYaw = local171 + Camera.cameraYaw & 0x7FF;
 				}
@@ -69,13 +66,13 @@ public final class Static253 {
 					}
 				}
 				if (local127 == 2) {
-					Static134.renderZ += local171;
+					Camera.renderZ += local171;
 				}
 				if (local127 == 1) {
 					Static5.anInt40 += local171;
 				}
 				if (local127 == 0) {
-					Static138.renderX += local171;
+					Camera.renderX += local171;
 				}
 			}
 		}
@@ -88,12 +85,12 @@ public final class Static253 {
 				local248 = Static146.aFloat15 * 360.0F / 6.2831855F;
 				local253 = Static84.aFloat10 * 360.0F / 6.2831855F;
 			}
-			GlRenderer.method4171(arg2, arg4, arg3, arg0, arg3 / 2 + arg2, arg4 - -(arg0 / 2), local248, local253, Static223.anInt5029, Static223.anInt5029);
+			GlRenderer.method4171(arg2, arg4, arg3, arg0, arg3 / 2 + arg2, arg4 - -(arg0 / 2), local248, local253, Static115.anInt5029, Static115.anInt5029);
 		} else {
 			SoftwareRaster.setClip(arg2, arg4, arg3 + arg2, arg0 + arg4);
 			Rasteriser.prepare();
 		}
-		if (Static60.aBoolean108 || Static155.anInt3751 < arg2 || Static155.anInt3751 >= arg3 + arg2 || arg4 > Static60.anInt1892 || arg0 + arg4 <= Static60.anInt1892) {
+		if (Static40.aBoolean108 || Static155.anInt3751 < arg2 || Static155.anInt3751 >= arg3 + arg2 || arg4 > Static60.anInt1892 || arg0 + arg4 <= Static60.anInt1892) {
 			Static39.aBoolean77 = false;
 			Static2.anInt7 = 0;
 		} else {
@@ -113,25 +110,25 @@ public final class Static253 {
 			GlRenderer.setDepthTestEnabled(true);
 			GlRenderer.setFogEnabled(true);
 			if (client.gameState == 10) {
-				local171 = Static103.method2235(Static178.anInt4247, Static134.renderZ >> 10, Preferences.brightness, Static138.renderX >> 10);
+				local171 = Static103.method2235(Static178.anInt4247, Camera.renderZ >> 10, Preferences.brightness, Camera.renderX >> 10);
 			} else {
 				local171 = Static103.method2235(Static178.anInt4247, PlayerList.self.movementQueueZ[0] >> 3, Preferences.brightness, PlayerList.self.movementQueueX[0] >> 3);
 			}
 			LightingManager.method2394(client.loop, !Preferences.flickeringEffectsOn);
 			GlRenderer.clearColorAndDepthBuffers(local171);
-			Static143.method2731(Camera.cameraPitch, Static134.renderZ, Static5.anInt40, Static138.renderX, Camera.cameraYaw);
+			Static143.method2731(Camera.cameraPitch, Camera.renderZ, Static5.anInt40, Camera.renderX, Camera.cameraYaw);
 			GlRenderer.anInt5323 = client.loop;
-			Static156.method2954(Static138.renderX, Static5.anInt40, Static134.renderZ, Camera.cameraPitch, Camera.cameraYaw, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Player.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
+			Static156.method2954(Camera.renderX, Static5.anInt40, Camera.renderZ, Camera.cameraPitch, Camera.cameraYaw, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Player.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
 			Static263.aBoolean299 = true;
 			LightingManager.method2390();
 			Static143.method2731(0, 0, 0, 0, 0);
 			client.audioLoop();
 			Static223.method3858();
-			method2726(arg4, arg3, arg2, Static223.anInt5029, arg0, Static223.anInt5029);
-			Static233.method4000(arg3, arg2, arg0, Static223.anInt5029, Static223.anInt5029, arg4);
+			method2726(arg4, arg3, arg2, Static115.anInt5029, arg0, Static115.anInt5029);
+			Static233.method4000(arg3, arg2, arg0, Static115.anInt5029, Static115.anInt5029, arg4);
 		} else {
 			SoftwareRaster.fillRect(arg2, arg4, arg3, arg0, 0);
-			Static156.method2954(Static138.renderX, Static5.anInt40, Static134.renderZ, Camera.cameraPitch, Camera.cameraYaw, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Player.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
+			Static156.method2954(Camera.renderX, Static5.anInt40, Camera.renderZ, Camera.cameraPitch, Camera.cameraYaw, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Player.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
 			client.audioLoop();
 			Static223.method3858();
 			method2726(arg4, arg3, arg2, 256, arg0, 256);
@@ -140,14 +137,14 @@ public final class Static253 {
 		((Js5GlTextureProvider) Rasteriser.textureProvider).method3239(Static178.anInt4247);
 		Static115.method2310(arg3, arg4, arg0, arg2);
 		Camera.cameraPitch = local123;
-		Static134.renderZ = local121;
+		Camera.renderZ = local121;
 		Static5.anInt40 = local57;
-		Static138.renderX = local59;
+		Camera.renderX = local59;
 		Camera.cameraYaw = local125;
-		if (Static19.aBoolean43 && client.js5NetQueue.method2328() == 0) {
-			Static19.aBoolean43 = false;
+		if (aBoolean43 && client.js5NetQueue.method2328() == 0) {
+			aBoolean43 = false;
 		}
-		if (Static19.aBoolean43) {
+		if (aBoolean43) {
 			if (GlRenderer.enabled) {
 				GlRaster.method1186(arg2, arg4, arg3, arg0, 0);
 			} else {
@@ -155,7 +152,7 @@ public final class Static253 {
 			}
 			Static114.drawTextOnScreen(false, LocalizedText.LOADING);
 		}
-		if (!arg1 && !Static19.aBoolean43 && !Static60.aBoolean108 && arg2 <= Static155.anInt3751 && arg3 + arg2 > Static155.anInt3751 && arg4 <= Static60.anInt1892 && arg0 + arg4 > Static60.anInt1892) {
+		if (!arg1 && !aBoolean43 && !Static40.aBoolean108 && arg2 <= Static155.anInt3751 && arg3 + arg2 > Static155.anInt3751 && arg4 <= Static60.anInt1892 && arg0 + arg4 > Static60.anInt1892) {
 			MiniMenu.addEntries(arg4, arg3, arg0, arg2, Static60.anInt1892, Static155.anInt3751);
 		}
 	}
