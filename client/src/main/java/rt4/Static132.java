@@ -17,7 +17,7 @@ public final class Static132 {
 		if (arg0) {
 			InterfaceList.method2275(local16);
 		}
-		Static273.method3214(local16);
+		method3214(local16);
 		@Pc(32) Component local32 = InterfaceList.getComponent(local9);
 		if (local32 != null) {
 			InterfaceList.redraw(local32);
@@ -170,6 +170,15 @@ public final class Static132 {
 		} else {
 			local475 = Rasteriser.textureProvider.getAverageColor(arg0.anInt4869);
 			Rasteriser.fillGouraudTriangle(local283, local299, local331, local275, local291, local323, Static216.method1640(local475, arg0.anInt4872), Static216.method1640(local475, arg0.anInt4867), Static216.method1640(local475, arg0.anInt4864));
+		}
+	}
+
+	@OriginalMember(owner = "client!we", name = "b", descriptor = "(BI)V")
+	public static void method3214(@OriginalArg(1) int arg0) {
+		for (@Pc(11) Node local11 = InterfaceList.properties.head(); local11 != null; local11 = InterfaceList.properties.next()) {
+			if ((local11.key >> 48 & 0xFFFFL) == (long) arg0) {
+				local11.unlink();
+			}
 		}
 	}
 }

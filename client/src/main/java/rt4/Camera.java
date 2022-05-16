@@ -9,6 +9,10 @@ public class Camera {
     public static final int[][][] anIntArrayArrayArray9 = new int[2][][];
     @OriginalMember(owner = "client!sa", name = "Q", descriptor = "[I")
     public static final int[] cameraJitter = new int[5];
+    @OriginalMember(owner = "client!wh", name = "m", descriptor = "[I")
+    public static final int[] cameraAmplitude = new int[5];
+    @OriginalMember(owner = "client!qg", name = "Y", descriptor = "[I")
+    public static final int[] cameraFrequency = new int[5];
     @OriginalMember(owner = "client!fl", name = "s", descriptor = "I")
 	public static double pitchTarget = 128;
 
@@ -52,6 +56,14 @@ public class Camera {
     public static int renderX;
     @OriginalMember(owner = "client!kh", name = "f", descriptor = "I")
     public static int renderZ;
+    @OriginalMember(owner = "client!uc", name = "f", descriptor = "I")
+    public static int anInt4232;
+    @OriginalMember(owner = "client!ug", name = "h", descriptor = "I")
+	public static int anInt5449;
+    @OriginalMember(owner = "client!vj", name = "d", descriptor = "I")
+    public static int anInt5765;
+    @OriginalMember(owner = "client!tm", name = "g", descriptor = "I")
+    public static int anInt5375;
 
     public static double mod(double a, double b) {
         return ((a % b) + b) % b;
@@ -78,7 +90,7 @@ public class Camera {
                     if (local80 < 3 && (SceneGraph.tileFlags[1][local64][local73] & 0x2) == 2) {
                         local80++;
                     }
-                    @Pc(117) int local117 = (Static232.aByteArrayArrayArray13[local80][local64][local73] & 0xFF) * 8 + local43 - SceneGraph.tileHeights[local80][local64][local73];
+                    @Pc(117) int local117 = (SceneGraph.aByteArrayArrayArray13[local80][local64][local73] & 0xFF) * 8 + local43 - SceneGraph.tileHeights[local80][local64][local73];
                     if (local117 > local45) {
                         local45 = local117;
                     }
@@ -101,12 +113,12 @@ public class Camera {
 
     @OriginalMember(owner = "client!jl", name = "c", descriptor = "(I)V")
     public static void updateLockedCamera() {
-        @Pc(9) int local9 = Static248.anInt4232 * 128 + 64;
-        @Pc(15) int local15 = Static245.anInt5375 * 128 + 64;
+        @Pc(9) int local9 = anInt4232 * 128 + 64;
+        @Pc(15) int local15 = anInt5375 * 128 + 64;
         @Pc(23) int local23 = SceneGraph.getTileHeight(Player.level, local15, local9) - Static231.anInt5203;
         if (Static113.anInt4612 >= 100) {
-            renderX = Static245.anInt5375 * 128 + 64;
-            renderZ = Static248.anInt4232 * 128 + 64;
+            renderX = anInt5375 * 128 + 64;
+            renderZ = anInt4232 * 128 + 64;
             Static5.anInt40 = SceneGraph.getTileHeight(Player.level, renderX, renderZ) - Static231.anInt5203;
         } else {
             if (renderX < local15) {
@@ -146,8 +158,8 @@ public class Camera {
                 }
             }
         }
-        local9 = Static265.anInt5765 * 128 + 64;
-        local15 = Static251.anInt5449 * 128 + 64;
+        local9 = anInt5765 * 128 + 64;
+        local15 = anInt5449 * 128 + 64;
         local23 = SceneGraph.getTileHeight(Player.level, local15, local9) - Static260.anInt1744;
         @Pc(236) int local236 = local23 - Static5.anInt40;
         @Pc(241) int local241 = local9 - renderZ;
@@ -267,13 +279,13 @@ public class Camera {
     @OriginalMember(owner = "client!vd", name = "a", descriptor = "(IIIIBI)V")
 	public static void method3849(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4) {
 		Static133.anInt5230 = arg2;
-		Static265.anInt5765 = arg1;
+		anInt5765 = arg1;
 		Static233.anInt5217 = arg4;
-		Static251.anInt5449 = arg3;
+		anInt5449 = arg3;
 		Static260.anInt1744 = arg0;
 		if (Static233.anInt5217 >= 100) {
-			@Pc(30) int local30 = Static251.anInt5449 * 128 + 64;
-			@Pc(36) int local36 = Static265.anInt5765 * 128 + 64;
+			@Pc(30) int local30 = anInt5449 * 128 + 64;
+			@Pc(36) int local36 = anInt5765 * 128 + 64;
 			@Pc(44) int local44 = SceneGraph.getTileHeight(Player.level, local30, local36) - Static260.anInt1744;
 			@Pc(49) int local49 = local44 - Static5.anInt40;
 			@Pc(54) int local54 = local30 - renderX;
@@ -295,12 +307,12 @@ public class Camera {
     public static void method2722(@OriginalArg(0) boolean arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
         Static113.anInt4612 = arg3;
         Static231.anInt5203 = arg2;
-        Static245.anInt5375 = arg5;
+        anInt5375 = arg5;
         Static233.anInt5225 = arg1;
-        Static248.anInt4232 = arg4;
+        anInt4232 = arg4;
         if (arg0 && Static113.anInt4612 >= 100) {
-            renderX = Static245.anInt5375 * 128 + 64;
-            renderZ = Static248.anInt4232 * 128 + 64;
+            renderX = anInt5375 * 128 + 64;
+            renderZ = anInt4232 * 128 + 64;
             Static5.anInt40 = SceneGraph.getTileHeight(Player.level, renderX, renderZ) - Static231.anInt5203;
         }
         cameraType = 2;
@@ -316,5 +328,36 @@ public class Camera {
         anInt3718 = -1;
         anInt1694 = -1;
         cameraType = 1;
+    }
+
+    @OriginalMember(owner = "client!uf", name = "a", descriptor = "(B)V")
+    public static void method4273() {
+        @Pc(14) int playerX = PlayerList.self.xFine + Static132.anInt3291;
+        @Pc(20) int playerZ = PlayerList.self.zFine + Static206.anInt4774;
+        if (cameraX - playerX < -500 || cameraX - playerX > 500 || cameraZ - playerZ < -500 || cameraZ - playerZ > 500) {
+            cameraX = playerX;
+            cameraZ = playerZ;
+        }
+        if (cameraZ != playerZ) {
+            cameraZ += (playerZ - cameraZ) / 16;
+        }
+        if (cameraX != playerX) {
+            cameraX += (playerX - cameraX) / 16;
+        }
+        if (Preferences.aBoolean63) {
+            for (@Pc(93) int local93 = 0; local93 < InterfaceList.keyQueueSize; local93++) {
+                @Pc(104) int code = InterfaceList.keyCodes[local93];
+                if (code == Keyboard.KEY_UP) {
+                    pitchTarget += 47;
+                } else if (code == Keyboard.KEY_DOWN) {
+                    pitchTarget -= 17;
+                } else if (code == Keyboard.KEY_LEFT) {
+                    yawTarget -= 65;
+                } else if (code == Keyboard.KEY_RIGHT) {
+                    yawTarget += 191;
+                }
+            }
+            clampCameraAngle();
+        }
     }
 }

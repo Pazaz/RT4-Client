@@ -6,9 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static202 {
 
-	@OriginalMember(owner = "client!qg", name = "Y", descriptor = "[I")
-	public static final int[] cameraFrequency = new int[5];
-
 	@OriginalMember(owner = "client!qg", name = "a", descriptor = "([Lclient!na;[SI)V")
 	public static void method3656(@OriginalArg(0) JagString[] arg0, @OriginalArg(1) short[] arg1) {
 		Static54.method1307(arg1, arg0.length - 1, arg0, 0);

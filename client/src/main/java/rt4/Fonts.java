@@ -45,13 +45,13 @@ public class Fonts {
 
     @OriginalMember(owner = "client!hn", name = "a", descriptor = "(Lclient!ve;ILclient!ve;)V")
     public static void load(@OriginalArg(0) Js5 arg0, @OriginalArg(2) Js5 arg1) {
-        p11Full = Static127.method2462(Sprites.p11FullId, arg1, arg0);
+        p11Full = Font.method2462(Sprites.p11FullId, arg1, arg0);
         if (GlRenderer.enabled) {
             p11FullSoftware = SoftwareFont.method2412(Sprites.p11FullId, arg0, arg1);
         } else {
             p11FullSoftware = (SoftwareFont) p11Full;
         }
-        p12Full = Static127.method2462(Sprites.p12FullId, arg1, arg0);
-        b12Full = Static127.method2462(Sprites.b12FullId, arg1, arg0);
+        p12Full = Font.method2462(Sprites.p12FullId, arg1, arg0);
+        b12Full = Font.method2462(Sprites.b12FullId, arg1, arg0);
     }
 }

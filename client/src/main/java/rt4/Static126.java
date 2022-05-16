@@ -5,9 +5,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static126 {
 
-	@OriginalMember(owner = "client!jm", name = "r", descriptor = "I")
-	public static int anInt3114;
-
     @OriginalMember(owner = "client!jm", name = "a", descriptor = "(Z)V")
 	public static void method2460() {
 		if (InterfaceList.topLevelInterface != -1) {

@@ -9,12 +9,9 @@ public final class Static254 {
     @OriginalMember(owner = "client!uj", name = "H", descriptor = "I")
 	public static int anInt5559;
 
-	@OriginalMember(owner = "client!uj", name = "A", descriptor = "[I")
-	public static final int[] anIntArray489 = new int[] { 2, 0, 0, 2, 0, 0, 0, 4, 4 };
-
 	@OriginalMember(owner = "client!uj", name = "a", descriptor = "(BZII[[[Lclient!bj;I)Z")
 	public static boolean method4348(@OriginalArg(1) boolean arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Tile[][][] arg3, @OriginalArg(5) int arg4) {
-		@Pc(14) byte local14 = arg0 ? 1 : (byte) (Static136.anInt3325 & 0xFF);
+		@Pc(14) byte local14 = arg0 ? 1 : (byte) (Static253.anInt3325 & 0xFF);
 		if (local14 == Static266.aByteArrayArrayArray15[Player.level][arg1][arg2]) {
 			return false;
 		} else if ((SceneGraph.tileFlags[Player.level][arg1][arg2] & 0x4) == 0) {
@@ -46,18 +43,18 @@ public final class Static254 {
 						@Pc(358) int local358;
 						if (local130 && arg3[local150][local108][local122] != null) {
 							if (arg3[local150][local108][local122].wall != null) {
-								local191 = Static104.method2251(local94);
+								local191 = SceneGraph.method2251(local94);
 								if (arg3[local150][local108][local122].wall.anInt3049 == local191 || arg3[local150][local108][local122].wall.anInt3052 == local191) {
 									continue;
 								}
 								if (local102 != 0) {
-									local227 = Static104.method2251(local102);
+									local227 = SceneGraph.method2251(local102);
 									if (local227 == arg3[local150][local108][local122].wall.anInt3049 || arg3[local150][local108][local122].wall.anInt3052 == local227) {
 										continue;
 									}
 								}
 								if (local116 != 0) {
-									local227 = Static104.method2251(local116);
+									local227 = SceneGraph.method2251(local116);
 									if (local227 == arg3[local150][local108][local122].wall.anInt3049 || local227 == arg3[local150][local108][local122].wall.anInt3052) {
 										continue;
 									}

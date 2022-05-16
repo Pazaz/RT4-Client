@@ -93,8 +93,8 @@ public final class Npc extends PathingEntity {
 					if (Static101.anInt2640 != 0) {
 						model.rotateX(Static101.anInt2640);
 					}
-					if (Static102.anInt2680 != 0) {
-						model.rotateZ(Static102.anInt2680);
+					if (PathingEntity.anInt2680 != 0) {
+						model.rotateZ(PathingEntity.anInt2680);
 					}
 					if (Static62.anInt1938 != 0) {
 						model.translate(0, Static62.anInt1938, 0);

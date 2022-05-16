@@ -42,7 +42,7 @@ public final class Static7 {
 					}
 				}
 			}
-			if (local20 == 1 && (Static116.anInt2952 == 1 && MiniMenu.size > 2 || Static277.method4640(MiniMenu.size - 1))) {
+			if (local20 == 1 && (Static116.anInt2952 == 1 && MiniMenu.size > 2 || MiniMenu.method4640(MiniMenu.size - 1))) {
 				local20 = 2;
 			}
 			if (local20 == 2 && MiniMenu.size > 0 || Static226.anInt3953 == 1) {

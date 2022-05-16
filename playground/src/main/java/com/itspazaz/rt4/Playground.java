@@ -107,7 +107,7 @@ public class Playground extends GameShell {
             LoadingBarAwt.render(null, true, JagString.parse("Initializing sprites"), 1);
             percentage = 0;
             for (int i = 0; i < 28; i++) {
-                percentage += js5Providers[i].getIndexPercentageComplete() * Static170.JS5_ARCHIVE_WEIGHTS[i] / 100;
+                percentage += js5Providers[i].getIndexPercentageComplete() * client.JS5_ARCHIVE_WEIGHTS[i] / 100;
             }
             if (percentage == 100) {
                 Sprites.init(archives[8]);

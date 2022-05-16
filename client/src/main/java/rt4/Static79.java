@@ -46,7 +46,7 @@ public final class Static79 {
 			if ((SceneGraph.tileFlags[arg2][arg1][arg4] & 0x8) != 0) {
 				local39 = 0;
 			}
-			if (local39 != Static41.anInt1316) {
+			if (local39 != LoginManager.centralPlane) {
 				return;
 			}
 		}

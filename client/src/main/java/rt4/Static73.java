@@ -40,8 +40,8 @@ public final class Static73 {
 			return;
 		}
 		if (Camera.cameraType == 2) {
-			Camera.renderX = Static245.anInt5375 << 7;
-			Camera.renderZ = Static248.anInt4232 << 7;
+			Camera.renderX = Camera.anInt5375 << 7;
+			Camera.renderZ = Camera.anInt4232 << 7;
 		} else {
 			Camera.updateLoginScreenCamera();
 		}

@@ -35,7 +35,7 @@ public final class MsiType {
 			return local17;
 		}
 		MsiTypeList.spritesArchive.isFileReady(this.spriteId);
-		local17 = Static164.loadSoftwareIndexedSprite(this.spriteId, MsiTypeList.spritesArchive);
+		local17 = SpriteLoader.loadSoftwareIndexedSprite(this.spriteId, MsiTypeList.spritesArchive);
 		if (local17 != null) {
 			local17.adjustPalette(MsiTypeList.redDelta, MsiTypeList.greenDelta, MsiTypeList.blueDelta);
 			local17.innerWidth = local17.width;

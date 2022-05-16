@@ -8,6 +8,14 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!nl")
 public final class SynthFilter {
 
+	@OriginalMember(owner = "client!nl", name = "f", descriptor = "[[I")
+	public static final int[][] anIntArrayArray32 = new int[2][8];
+	@OriginalMember(owner = "client!nl", name = "b", descriptor = "[[F")
+	public static final float[][] aFloatArrayArray2 = new float[2][8];
+	@OriginalMember(owner = "client!nl", name = "d", descriptor = "F")
+	public static float aFloat22;
+	@OriginalMember(owner = "client!nl", name = "g", descriptor = "I")
+	public static int anInt4191;
 	@OriginalMember(owner = "client!nl", name = "e", descriptor = "[I")
 	public final int[] anIntArray368 = new int[2];
 
@@ -19,6 +27,12 @@ public final class SynthFilter {
 
 	@OriginalMember(owner = "client!nl", name = "h", descriptor = "[I")
 	private final int[] anIntArray369 = new int[2];
+
+	@OriginalMember(owner = "client!nl", name = "a", descriptor = "(F)F")
+	public static float method3250(@OriginalArg(0) float arg0) {
+		@Pc(7) float local7 = (float) Math.pow(2.0D, (double) arg0) * 32.703197F;
+		return local7 * 3.1415927F / 11025.0F;
+	}
 
 	@OriginalMember(owner = "client!nl", name = "a", descriptor = "(Lclient!wa;Lclient!ff;)V")
 	public final void method3249(@OriginalArg(0) Buffer arg0, @OriginalArg(1) SynthEnvelope arg1) {
@@ -62,35 +76,35 @@ public final class SynthFilter {
 		if (arg0 == 0) {
 			local20 = (float) this.anIntArray369[0] + (float) (this.anIntArray369[1] - this.anIntArray369[0]) * arg1;
 			@Pc(24) float local24 = local20 * 0.0030517578F;
-			Static174.aFloat22 = (float) Math.pow(0.1D, (double) (local24 / 20.0F));
-			Static174.anInt4191 = (int) (Static174.aFloat22 * 65536.0F);
+			aFloat22 = (float) Math.pow(0.1D, (double) (local24 / 20.0F));
+			anInt4191 = (int) (aFloat22 * 65536.0F);
 		}
 		if (this.anIntArray368[arg0] == 0) {
 			return 0;
 		}
 		local20 = this.method3253(arg0, 0, arg1);
-		Static174.aFloatArrayArray2[arg0][0] = -2.0F * local20 * (float) Math.cos((double) this.method3254(arg0, 0, arg1));
-		Static174.aFloatArrayArray2[arg0][1] = local20 * local20;
+		aFloatArrayArray2[arg0][0] = -2.0F * local20 * (float) Math.cos((double) this.method3254(arg0, 0, arg1));
+		aFloatArrayArray2[arg0][1] = local20 * local20;
 		@Pc(77) int local77;
 		for (local77 = 1; local77 < this.anIntArray368[arg0]; local77++) {
 			local20 = this.method3253(arg0, local77, arg1);
 			@Pc(102) float local102 = -2.0F * local20 * (float) Math.cos((double) this.method3254(arg0, local77, arg1));
 			@Pc(106) float local106 = local20 * local20;
-			Static174.aFloatArrayArray2[arg0][local77 * 2 + 1] = Static174.aFloatArrayArray2[arg0][local77 * 2 - 1] * local106;
-			Static174.aFloatArrayArray2[arg0][local77 * 2] = Static174.aFloatArrayArray2[arg0][local77 * 2 - 1] * local102 + Static174.aFloatArrayArray2[arg0][local77 * 2 - 2] * local106;
+			aFloatArrayArray2[arg0][local77 * 2 + 1] = aFloatArrayArray2[arg0][local77 * 2 - 1] * local106;
+			aFloatArrayArray2[arg0][local77 * 2] = aFloatArrayArray2[arg0][local77 * 2 - 1] * local102 + aFloatArrayArray2[arg0][local77 * 2 - 2] * local106;
 			for (@Pc(162) int local162 = local77 * 2 - 1; local162 >= 2; local162--) {
-				Static174.aFloatArrayArray2[arg0][local162] += Static174.aFloatArrayArray2[arg0][local162 - 1] * local102 + Static174.aFloatArrayArray2[arg0][local162 - 2] * local106;
+				aFloatArrayArray2[arg0][local162] += aFloatArrayArray2[arg0][local162 - 1] * local102 + aFloatArrayArray2[arg0][local162 - 2] * local106;
 			}
-			Static174.aFloatArrayArray2[arg0][1] += Static174.aFloatArrayArray2[arg0][0] * local102 + local106;
-			Static174.aFloatArrayArray2[arg0][0] += local102;
+			aFloatArrayArray2[arg0][1] += aFloatArrayArray2[arg0][0] * local102 + local106;
+			aFloatArrayArray2[arg0][0] += local102;
 		}
 		if (arg0 == 0) {
 			for (local77 = 0; local77 < this.anIntArray368[0] * 2; local77++) {
-				Static174.aFloatArrayArray2[0][local77] *= Static174.aFloat22;
+				aFloatArrayArray2[0][local77] *= aFloat22;
 			}
 		}
 		for (local77 = 0; local77 < this.anIntArray368[arg0] * 2; local77++) {
-			Static174.anIntArrayArray32[arg0][local77] = (int) (Static174.aFloatArrayArray2[arg0][local77] * 65536.0F);
+			anIntArrayArray32[arg0][local77] = (int) (aFloatArrayArray2[arg0][local77] * 65536.0F);
 		}
 		return this.anIntArray368[arg0] * 2;
 	}
@@ -106,6 +120,6 @@ public final class SynthFilter {
 	private float method3254(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) float arg2) {
 		@Pc(30) float local30 = (float) this.anIntArrayArrayArray14[arg0][0][arg1] + arg2 * (float) (this.anIntArrayArrayArray14[arg0][1][arg1] - this.anIntArrayArrayArray14[arg0][0][arg1]);
 		@Pc(34) float local34 = local30 * 1.2207031E-4F;
-		return Static174.method3250(local34);
+		return method3250(local34);
 	}
 }

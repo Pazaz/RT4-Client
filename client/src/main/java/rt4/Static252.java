@@ -13,8 +13,8 @@ public final class Static252 {
 		if (Static236.method4047() != 2) {
 			return;
 		}
-		@Pc(27) byte local27 = (byte) (Static136.anInt3325 - 4 & 0xFF);
-		@Pc(31) int local31 = Static136.anInt3325 % 104;
+		@Pc(27) byte local27 = (byte) (Static253.anInt3325 - 4 & 0xFF);
+		@Pc(31) int local31 = Static253.anInt3325 % 104;
 		@Pc(33) int local33;
 		@Pc(40) int local40;
 		for (local33 = 0; local33 < 4; local33++) {

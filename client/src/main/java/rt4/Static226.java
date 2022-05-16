@@ -70,7 +70,7 @@ public final class Static226 {
 			local43 = 0;
 		}
 		if (anInt3953 == 1) {
-			if (Static155.anInt3751 == Static277.anInt5850 && Static280.anInt5895 == Static60.anInt1892) {
+			if (Static155.anInt3751 == Mouse.anInt5850 && Static280.anInt5895 == Static60.anInt1892) {
 				Static13.anInt436 = MiniMenu.size * 15 + (Static40.aBoolean298 ? 26 : 22);
 				anInt3953 = 0;
 				Static229.anInt5138 = local43;
@@ -87,7 +87,7 @@ public final class Static226 {
 			Static40.aBoolean108 = true;
 		} else {
 			Static280.anInt5895 = Mouse.clickY;
-			Static277.anInt5850 = Mouse.clickX;
+			Mouse.anInt5850 = Mouse.clickX;
 			anInt3953 = 1;
 		}
 	}

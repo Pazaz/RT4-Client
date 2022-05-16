@@ -68,6 +68,12 @@ public class SceneGraph {
     public static Scenery[] aClass31Array2;
     @OriginalMember(owner = "client!gf", name = "O", descriptor = "[[[I")
     public static int[][][] underwaterTileHeights;
+    @OriginalMember(owner = "client!oj", name = "E", descriptor = "[[Lclient!hg;")
+    public static GlTile[][] underwaterHdTiles;
+    @OriginalMember(owner = "client!jm", name = "r", descriptor = "I")
+    public static int anInt3114;
+    @OriginalMember(owner = "client!sm", name = "e", descriptor = "[[[B")
+	public static byte[][][] aByteArrayArrayArray13;
 
     @OriginalMember(owner = "client!km", name = "f", descriptor = "(I)Z")
     public static boolean allLevelsAreVisible() {
@@ -316,4 +322,223 @@ public class SceneGraph {
 		@Pc(7) Tile local7 = tiles[arg0][arg1][arg2];
 		return local7 == null || local7.groundDecor == null ? 0L : local7.groundDecor.key;
 	}
+
+    @OriginalMember(owner = "client!wj", name = "a", descriptor = "(Z)V")
+    public static void setRenderTiles(@OriginalArg(0) boolean arg0) {
+        if (arg0) {
+            tiles = underWaterGroundTiles;
+            tileHeights = underwaterTileHeights;
+            underwaterHdTiles = underWaterHdTiles;
+        } else {
+            tiles = surfaceGroundTiles;
+            tileHeights = surfaceTileHeights;
+            underwaterHdTiles = surfaceHdTiles;
+        }
+        anInt3114 = tiles.length;
+    }
+
+    @OriginalMember(owner = "client!wj", name = "a", descriptor = "(IIZLclient!wa;IIBII)V")
+    public static void readTile(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) Buffer arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7) {
+        @Pc(32) int local32;
+        if (arg5 < 0 || arg5 >= 104 || arg4 < 0 || arg4 >= 104) {
+            while (true) {
+                local32 = arg3.g1();
+                if (local32 == 0) {
+                    break;
+                }
+                if (local32 == 1) {
+                    arg3.g1();
+                    break;
+                }
+                if (local32 <= 49) {
+                    arg3.g1();
+                }
+            }
+            return;
+        }
+        if (!arg2) {
+            tileFlags[arg7][arg5][arg4] = 0;
+        }
+        while (true) {
+            local32 = arg3.g1();
+            if (local32 == 0) {
+                if (arg2) {
+                    tileHeights[0][arg5][arg4] = surfaceTileHeights[0][arg5][arg4];
+                } else if (arg7 == 0) {
+                    tileHeights[0][arg5][arg4] = -PerlinNoise.getTileHeight(arg4 + arg1 + 556238, arg0 + arg5 + 932731) * 8;
+                } else {
+                    tileHeights[arg7][arg5][arg4] = tileHeights[arg7 - 1][arg5][arg4] - 240;
+                }
+                break;
+            }
+            if (local32 == 1) {
+                @Pc(111) int local111 = arg3.g1();
+                if (arg2) {
+                    tileHeights[0][arg5][arg4] = surfaceTileHeights[0][arg5][arg4] + local111 * 8;
+                } else {
+                    if (local111 == 1) {
+                        local111 = 0;
+                    }
+                    if (arg7 == 0) {
+                        tileHeights[0][arg5][arg4] = -local111 * 8;
+                    } else {
+                        tileHeights[arg7][arg5][arg4] = tileHeights[arg7 - 1][arg5][arg4] - local111 * 8;
+                    }
+                }
+                break;
+            }
+            if (local32 <= 49) {
+                tileOverlays[arg7][arg5][arg4] = arg3.g1s();
+                tileShapes[arg7][arg5][arg4] = (byte) ((local32 - 2) / 4);
+                tileAngles[arg7][arg5][arg4] = (byte) (local32 + arg6 - 2 & 0x3);
+            } else if (local32 > 81) {
+                tileUnderlays[arg7][arg5][arg4] = (byte) (local32 - 81);
+            } else if (!arg2) {
+                tileFlags[arg7][arg5][arg4] = (byte) (local32 - 49);
+            }
+        }
+    }
+
+    @OriginalMember(owner = "client!hd", name = "a", descriptor = "(IIIIIIII)V")
+    public static void method1881(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6) {
+        if (arg5 < 0 || arg3 < 0 || arg5 >= 103 || arg3 >= 103) {
+            return;
+        }
+        @Pc(38) int local38;
+        if (arg4 == 0) {
+            @Pc(28) Wall local28 = getWall(arg0, arg5, arg3);
+            if (local28 != null) {
+                local38 = Integer.MAX_VALUE & (int) (local28.key >>> 32);
+                if (arg2 == 2) {
+                    local28.primary = new Loc(local38, 2, arg1 + 4, arg0, arg5, arg3, arg6, false, local28.primary);
+                    local28.aClass8_6 = new Loc(local38, 2, arg1 + 1 & 0x3, arg0, arg5, arg3, arg6, false, local28.aClass8_6);
+                } else {
+                    local28.primary = new Loc(local38, arg2, arg1, arg0, arg5, arg3, arg6, false, local28.primary);
+                }
+            }
+        }
+        if (arg4 == 1) {
+            @Pc(106) WallDecor local106 = getWallDecor(arg0, arg5, arg3);
+            if (local106 != null) {
+                local38 = (int) (local106.key >>> 32) & Integer.MAX_VALUE;
+                if (arg2 == 4 || arg2 == 5) {
+                    local106.primary = new Loc(local38, 4, arg1, arg0, arg5, arg3, arg6, false, local106.primary);
+                } else if (arg2 == 6) {
+                    local106.primary = new Loc(local38, 4, arg1 + 4, arg0, arg5, arg3, arg6, false, local106.primary);
+                } else if (arg2 == 7) {
+                    local106.primary = new Loc(local38, 4, (arg1 + 2 & 0x3) + 4, arg0, arg5, arg3, arg6, false, local106.primary);
+                } else if (arg2 == 8) {
+                    local106.primary = new Loc(local38, 4, arg1 + 4, arg0, arg5, arg3, arg6, false, local106.primary);
+                    local106.aClass8_2 = new Loc(local38, 4, (arg1 + 2 & 0x3) + 4, arg0, arg5, arg3, arg6, false, local106.aClass8_2);
+                }
+            }
+        }
+        if (arg4 == 2) {
+            if (arg2 == 11) {
+                arg2 = 10;
+            }
+            @Pc(255) Scenery local255 = getScenery(arg0, arg5, arg3);
+            if (local255 != null) {
+                local255.primary = new Loc((int) (local255.key >>> 32) & Integer.MAX_VALUE, arg2, arg1, arg0, arg5, arg3, arg6, false, local255.primary);
+            }
+        }
+        if (arg4 == 3) {
+            @Pc(290) GroundDecor local290 = getGroundDecor(arg0, arg5, arg3);
+            if (local290 != null) {
+                local290.primary = new Loc(Integer.MAX_VALUE & (int) (local290.key >>> 32), 22, arg1, arg0, arg5, arg3, arg6, false, local290.primary);
+            }
+        }
+    }
+
+    @OriginalMember(owner = "client!nh", name = "a", descriptor = "(IIIILclient!th;JZ)V")
+    public static void method2570(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Entity arg4, @OriginalArg(5) long arg5, @OriginalArg(6) boolean arg6) {
+        if (arg4 == null) {
+            return;
+        }
+        @Pc(6) GroundDecor local6 = new GroundDecor();
+        local6.primary = arg4;
+        local6.anInt732 = arg1 * 128 + 64;
+        local6.anInt736 = arg2 * 128 + 64;
+        local6.anInt733 = arg3;
+        local6.key = arg5;
+        local6.aBoolean49 = arg6;
+        if (tiles[arg0][arg1][arg2] == null) {
+            tiles[arg0][arg1][arg2] = new Tile(arg0, arg1, arg2);
+        }
+        tiles[arg0][arg1][arg2].groundDecor = local6;
+    }
+
+    @OriginalMember(owner = "client!nh", name = "a", descriptor = "(IIIIIIIIIIIII)V")
+    public static void method2574(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) int arg8, @OriginalArg(9) int arg9, @OriginalArg(11) int arg10, @OriginalArg(12) int arg11) {
+        @Pc(7) AttachLocRequest local7 = new AttachLocRequest();
+        local7.angle = arg6;
+        local7.anInt1205 = arg3;
+        local7.anInt1187 = arg1;
+        local7.anInt1200 = arg5;
+        local7.entityId = arg2;
+        local7.x = arg8;
+        local7.anInt1197 = arg10;
+        local7.z = arg4;
+        local7.locId = arg11;
+        local7.anInt1188 = arg7;
+        local7.anInt1191 = arg0;
+        local7.shape = arg9;
+        AttachLocRequest.queue.addTail(local7);
+    }
+
+    @OriginalMember(owner = "client!ia", name = "a", descriptor = "(IB)I")
+	public static int method2251(@OriginalArg(0) int arg0) {
+		@Pc(11) int local11 = arg0 & 0x3F;
+		@Pc(17) int local17 = arg0 >> 6 & 0x3;
+		if (local11 == 18) {
+			if (local17 == 0) {
+				return 1;
+			}
+			if (local17 == 1) {
+				return 2;
+			}
+			if (local17 == 2) {
+				return 4;
+			}
+			if (local17 == 3) {
+				return 8;
+			}
+		} else if (local11 == 19 || local11 == 21) {
+			if (local17 == 0) {
+				return 16;
+			}
+			if (local17 == 1) {
+				return 32;
+			}
+			if (local17 == 2) {
+				return 64;
+			}
+			if (local17 == 3) {
+				return 128;
+			}
+		}
+		return 0;
+	}
+
+    @OriginalMember(owner = "client!vf", name = "a", descriptor = "(IIIILclient!th;Lclient!th;IIJ)V")
+    public static void method4508(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Entity arg4, @OriginalArg(5) Entity arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) long arg8) {
+        if (arg4 == null && arg5 == null) {
+            return;
+        }
+        @Pc(8) Wall local8 = new Wall();
+        local8.key = arg8;
+        local8.anInt3048 = arg1 * 128 + 64;
+        local8.anInt3044 = arg2 * 128 + 64;
+        local8.anInt3051 = arg3;
+        local8.primary = arg4;
+        local8.aClass8_6 = arg5;
+        local8.anInt3049 = arg6;
+        local8.anInt3052 = arg7;
+        for (@Pc(42) int local42 = arg0; local42 >= 0; local42--) {
+            if (tiles[local42][arg1][arg2] == null) {
+                tiles[local42][arg1][arg2] = new Tile(local42, arg1, arg2);
+            }
+        }
+        tiles[arg0][arg1][arg2].wall = local8;
+    }
 }

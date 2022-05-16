@@ -63,6 +63,10 @@ public class MiniMenu {
     public static final JagString COLOR_WHITE = JagString.parse("<col=ffffff>");
     @OriginalMember(owner = "client!cb", name = "ab", descriptor = "Lclient!na;")
     public static final JagString aClass100_164 = JagString.parse(" )2> <col=00ffff>");
+    @OriginalMember(owner = "client!ud", name = "Q", descriptor = "Lclient!na;")
+	public static final JagString aClass100_1039 = JagString.parse(" x ");
+    @OriginalMember(owner = "client!hd", name = "l", descriptor = "Lclient!na;")
+    public static final JagString NULL = JagString.parse("null");
     @OriginalMember(owner = "client!ck", name = "D", descriptor = "Lclient!na;")
 	public static JagString aClass100_203 = null;
     @OriginalMember(owner = "client!hn", name = "W", descriptor = "Lclient!na;")
@@ -476,7 +480,7 @@ public class MiniMenu {
                 Protocol.outboundBuffer.p1isaac(92);
                 Protocol.outboundBuffer.p2leadd(local36);
             } else {
-                Chat.add(JagString.EMPTY, 0, JagString.concatenate(new JagString[] { JagString.parseInt(local693.objCounts[local15]), Static249.aClass100_1039, ObjTypeList.get(local36).name}));
+                Chat.add(JagString.EMPTY, 0, JagString.concatenate(new JagString[] { JagString.parseInt(local693.objCounts[local15]), aClass100_1039, ObjTypeList.get(local36).name}));
             }
             anInt2043 = 0;
             aClass13_7 = InterfaceList.getComponent(local19);
@@ -493,7 +497,7 @@ public class MiniMenu {
                     Protocol.outboundBuffer.p1(Static107.anInt2878);
                     Protocol.outboundBuffer.p2((int)Camera.yawTarget);
                     Protocol.outboundBuffer.p1(57);
-                    Protocol.outboundBuffer.p1(Static59.anInt1814);
+                    Protocol.outboundBuffer.p1(MiniMap.anInt1814);
                     Protocol.outboundBuffer.p1(MiniMap.anInt4130);
                     Protocol.outboundBuffer.p1(89);
                     Protocol.outboundBuffer.p2(PlayerList.self.xFine);
@@ -738,7 +742,7 @@ public class MiniMenu {
                 local1955 = local693.anIntArrayArray4[0][1];
                 if (VarpDomain.activeVarps[local1955] != local693.anIntArray48[0]) {
                     VarpDomain.activeVarps[local1955] = local693.anIntArray48[0];
-                    Static85.refreshMagicVarp(local1955);
+                    VarpDomain.refreshMagicVarp(local1955);
                 }
             }
         }
@@ -764,7 +768,7 @@ public class MiniMenu {
             if (local693.anIntArrayArray4 != null && local693.anIntArrayArray4[0][0] == 5) {
                 local1955 = local693.anIntArrayArray4[0][1];
                 VarpDomain.activeVarps[local1955] = 1 - VarpDomain.activeVarps[local1955];
-                Static85.refreshMagicVarp(local1955);
+                VarpDomain.refreshMagicVarp(local1955);
             }
         }
         if (local23 == 33) {
@@ -808,7 +812,7 @@ public class MiniMenu {
             local693 = InterfaceList.getComponent(local19);
             @Pc(2287) boolean local2287 = true;
             if (local693.anInt453 > 0) {
-                local2287 = Static249.method4265(local693);
+                local2287 = method4265(local693);
             }
             if (local2287) {
                 Protocol.outboundBuffer.p1isaac(10);
@@ -896,7 +900,7 @@ public class MiniMenu {
             InterfaceList.redraw(local693);
             aClass100_203 = JagString.concatenate(new JagString[] { aClass100_32, ObjTypeList.get(local36).name, COLOR_WHITE});
             if (aClass100_203 == null) {
-                aClass100_203 = Static92.NULL;
+                aClass100_203 = NULL;
             }
             return;
         }
@@ -1075,7 +1079,7 @@ public class MiniMenu {
         }
         @Pc(112) long local112 = -1L;
         for (local15 = 0; local15 < Static2.anInt7; local15++) {
-            @Pc(121) long local121 = Static259.aLongArray11[local15];
+            @Pc(121) long local121 = Model.aLongArray11[local15];
             x = (int) local121 & 0x7F;
             @Pc(133) int local133 = (int) local121 >> 29 & 0x3;
             @Pc(140) int local140 = (int) (local121 >>> 32) & Integer.MAX_VALUE;
@@ -1454,4 +1458,26 @@ public class MiniMenu {
 		anInt1742 = -1;
 		anInt2954 = -1;
 	}
+
+    @OriginalMember(owner = "client!wi", name = "c", descriptor = "(II)Z")
+    public static boolean method4640(@OriginalArg(0) int arg0) {
+        if (arg0 < 0) {
+            return false;
+        }
+        @Pc(12) int local12 = actions[arg0];
+        if (local12 >= 2000) {
+            local12 -= 2000;
+        }
+        return local12 == 1003;
+    }
+
+    @OriginalMember(owner = "client!ud", name = "a", descriptor = "(ILclient!be;)Z")
+    public static boolean method4265(@OriginalArg(1) Component arg0) {
+        if (arg0.anInt453 == 205) {
+            Static267.anInt5775 = 250;
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
