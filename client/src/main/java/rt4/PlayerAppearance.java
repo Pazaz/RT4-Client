@@ -141,7 +141,7 @@ public final class PlayerAppearance {
 	}
 
 	@OriginalMember(owner = "client!hh", name = "a", descriptor = "(ZZ)V")
-	public final void method1948(@OriginalArg(0) boolean arg0) {
+	public final void setFemale(@OriginalArg(0) boolean arg0) {
 		this.gender = arg0;
 		this.method1947();
 	}
@@ -172,7 +172,7 @@ public final class PlayerAppearance {
 	}
 
 	@OriginalMember(owner = "client!hh", name = "a", descriptor = "(IZI)V")
-	public final void method1951(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
+	public final void setBaseColor(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
 		this.anIntArray236[arg0] = arg1;
 		this.method1947();
 	}

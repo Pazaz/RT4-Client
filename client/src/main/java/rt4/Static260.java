@@ -11,33 +11,6 @@ public final class Static260 {
     @OriginalMember(owner = "client!eg", name = "a", descriptor = "I")
     public static int anInt1744;
 
-    @OriginalMember(owner = "client!vd", name = "a", descriptor = "(IIIIBI)V")
-	public static void method3849(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4) {
-		Static133.anInt5230 = arg2;
-		Static265.anInt5765 = arg1;
-		Static233.anInt5217 = arg4;
-		Static251.anInt5449 = arg3;
-		anInt1744 = arg0;
-		if (Static233.anInt5217 >= 100) {
-			@Pc(30) int local30 = Static251.anInt5449 * 128 + 64;
-			@Pc(36) int local36 = Static265.anInt5765 * 128 + 64;
-			@Pc(44) int local44 = SceneGraph.getTileHeight(Player.level, local30, local36) - anInt1744;
-			@Pc(49) int local49 = local44 - Static5.anInt40;
-			@Pc(54) int local54 = local30 - Static138.renderX;
-			@Pc(59) int local59 = local36 - Static134.renderZ;
-			@Pc(70) int local70 = (int) Math.sqrt((double) (local59 * local59 + local54 * local54));
-			Static240.cameraPitch = (int) (Math.atan2((double) local49, (double) local70) * 325.949D) & 0x7FF;
-			Static184.cameraYaw = (int) (Math.atan2((double) local54, (double) local59) * -325.949D) & 0x7FF;
-			if (Static240.cameraPitch < 128) {
-				Static240.cameraPitch = 128;
-			}
-			if (Static240.cameraPitch > 383) {
-				Static240.cameraPitch = 383;
-			}
-		}
-		Static227.cameraType = 2;
-	}
-
 	@OriginalMember(owner = "client!vd", name = "b", descriptor = "(IIII)Z")
 	public static boolean method3850(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		if (!Static9.method187(arg0, arg1, arg2)) {

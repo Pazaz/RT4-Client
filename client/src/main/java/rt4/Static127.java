@@ -1,6 +1,5 @@
 package rt4;
 
-import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 
 import org.openrs2.deob.annotation.OriginalArg;
@@ -29,9 +28,6 @@ public final class Static127 {
 	@OriginalMember(owner = "client!k", name = "l", descriptor = "[I")
 	public static int[] anIntArray292;
 
-	@OriginalMember(owner = "client!k", name = "i", descriptor = "I")
-	public static int anInt3125 = 0;
-
 	@OriginalMember(owner = "client!k", name = "m", descriptor = "Z")
 	public static boolean neverRemoveRoofs = false;
 
@@ -57,13 +53,13 @@ public final class Static127 {
 			client.setGameState(25);
 		}
 		Static114.drawTextOnScreen(true, LocalizedText.LOADING);
-		@Pc(53) int local53 = Static142.originZ;
-		@Pc(55) int local55 = Static225.originX;
-		Static142.originZ = arg1 * 8 - 48;
-		Static225.originX = (arg2 - 6) * 8;
+		@Pc(53) int local53 = Camera.originZ;
+		@Pc(55) int local55 = Camera.originX;
+		Camera.originZ = arg1 * 8 - 48;
+		Camera.originX = (arg2 - 6) * 8;
 		Static158.aClass3_Sub2_Sub4_3 = MapList.getContainingSource(Static80.centralZoneX * 8, Static52.anInt1695 * 8);
-		@Pc(81) int local81 = Static142.originZ - local53;
-		@Pc(86) int local86 = Static225.originX - local55;
+		@Pc(81) int local81 = Camera.originZ - local53;
+		@Pc(86) int local86 = Camera.originX - local55;
 		Static235.mapElementList = null;
 		@Pc(96) int local96;
 		@Pc(103) Npc local103;
@@ -157,7 +153,7 @@ public final class Static127 {
 			Static265.anInt5765 -= local81;
 			Static245.anInt5375 -= local86;
 		} else {
-			Static227.cameraType = 1;
+			Camera.cameraType = 1;
 		}
 		SoundPlayer.anInt4451 = 0;
 		if (Static115.mapFlagX != 0) {

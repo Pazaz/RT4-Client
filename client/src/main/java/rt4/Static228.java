@@ -8,10 +8,8 @@ public final class Static228 {
 
     @OriginalMember(owner = "client!dc", name = "db", descriptor = "[[B")
     public static final byte[][] aByteArrayArray6 = new byte[50][];
-    @OriginalMember(owner = "client!sh", name = "c", descriptor = "I")
-	public static int anInt5101 = 0;
 
-	@OriginalMember(owner = "client!sh", name = "e", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!sh", name = "e", descriptor = "Lclient!na;")
 	public static final JagString aClass100_967 = JagString.parse("");
 
 	@OriginalMember(owner = "client!sh", name = "f", descriptor = "I")

@@ -49,8 +49,8 @@ public final class Static87 {
 		@Pc(49) int local49;
 		@Pc(53) byte[] local53;
 		for (local20 = 0; local20 < local18; local20++) {
-			local38 = (Static238.regionBitPacked[local20] >> 8) * 64 - Static225.originX;
-			local49 = (Static238.regionBitPacked[local20] & 0xFF) * 64 - Static142.originZ;
+			local38 = (Static238.regionBitPacked[local20] >> 8) * 64 - Camera.originX;
+			local49 = (Static238.regionBitPacked[local20] & 0xFF) * 64 - Camera.originZ;
 			local53 = local9[local20];
 			if (local53 != null) {
 				client.audioLoop();
@@ -58,8 +58,8 @@ public final class Static87 {
 			}
 		}
 		for (local20 = 0; local20 < local18; local20++) {
-			local38 = (Static238.regionBitPacked[local20] >> 8) * 64 - Static225.originX;
-			local49 = (Static238.regionBitPacked[local20] & 0xFF) * 64 - Static142.originZ;
+			local38 = (Static238.regionBitPacked[local20] >> 8) * 64 - Camera.originX;
+			local49 = (Static238.regionBitPacked[local20] & 0xFF) * 64 - Camera.originZ;
 			local53 = local9[local20];
 			if (local53 == null && Static52.anInt1695 < 800) {
 				client.audioLoop();
@@ -496,7 +496,7 @@ public final class Static87 {
 										}
 									}
 									if (local117 == 0) {
-										if (local30.aBoolean30) {
+										if (local30.filled) {
 											if (GlRenderer.enabled) {
 												GlRaster.method1186(local123, local114, local30.width, local30.height, local270);
 											} else {
@@ -507,7 +507,7 @@ public final class Static87 {
 										} else {
 											SoftwareRaster.drawRect(local123, local114, local30.width, local30.height, local270);
 										}
-									} else if (local30.aBoolean30) {
+									} else if (local30.filled) {
 										if (GlRenderer.enabled) {
 											GlRaster.fillRectAlpha(local123, local114, local30.width, local30.height, local270, 256 - (local117 & 0xFF));
 										} else {

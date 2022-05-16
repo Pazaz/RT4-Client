@@ -225,7 +225,7 @@ public final class Component {
 	public boolean modelOrtho = false;
 
 	@OriginalMember(owner = "client!be", name = "zb", descriptor = "Z")
-	public boolean aBoolean30 = false;
+	public boolean filled = false;
 
 	@OriginalMember(owner = "client!be", name = "y", descriptor = "I")
 	public int dragDeadtime = 0;
@@ -669,7 +669,7 @@ public final class Component {
 			}
 		}
 		if (this.type == 3) {
-			this.aBoolean30 = arg0.g1() == 1;
+			this.filled = arg0.g1() == 1;
 		}
 		if (this.type == 4 || this.type == 1) {
 			this.anInt460 = arg0.g1();
@@ -1075,7 +1075,7 @@ public final class Component {
 		}
 		if (this.type == 3) {
 			this.color = buffer.g4();
-			this.aBoolean30 = buffer.g1() == 1;
+			this.filled = buffer.g1() == 1;
 			this.alpha = buffer.g1();
 		}
 		if (this.type == 9) {

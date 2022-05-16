@@ -32,7 +32,7 @@ public final class Static252 {
 			Static243.anIntArray476[local33] = 1000000;
 			Static50.anIntArray134[local33] = 0;
 		}
-		if (Static227.cameraType != 1) {
+		if (Camera.cameraType != 1) {
 			local33 = SceneGraph.getTileHeight(Player.level, Static138.renderX, Static134.renderZ);
 			if (local33 - Static5.anInt40 < 800 && (SceneGraph.tileFlags[Player.level][Static138.renderX >> 7][Static134.renderZ >> 7] & 0x4) != 0) {
 				Static254.method4348(false, Static138.renderX >> 7, Static134.renderZ >> 7, SceneGraph.tiles, 1);
@@ -42,7 +42,7 @@ public final class Static252 {
 		if ((SceneGraph.tileFlags[Player.level][PlayerList.self.xFine >> 7][PlayerList.self.zFine >> 7] & 0x4) != 0) {
 			Static254.method4348(false, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7, SceneGraph.tiles, 0);
 		}
-		if (Static240.cameraPitch >= 310) {
+		if (Camera.cameraPitch >= 310) {
 			return;
 		}
 		@Pc(135) int local135 = PlayerList.self.zFine >> 7;

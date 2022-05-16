@@ -180,8 +180,8 @@ public final class Player extends PathingEntity {
     @OriginalMember(owner = "client!um", name = "a", descriptor = "(Z)V")
     public static void setTutorialIsland() {
         inTutorialIsland = 0;
-        @Pc(17) int local17 = Static225.originX + (PlayerList.self.xFine >> 7);
-        @Pc(25) int local25 = (PlayerList.self.zFine >> 7) + Static142.originZ;
+        @Pc(17) int local17 = Camera.originX + (PlayerList.self.xFine >> 7);
+        @Pc(25) int local25 = (PlayerList.self.zFine >> 7) + Camera.originZ;
         if (local17 >= 3053 && local17 <= 3156 && local25 >= 3056 && local25 <= 3136) {
             inTutorialIsland = 1;
         }
@@ -363,8 +363,8 @@ public final class Player extends PathingEntity {
 						}
 					}
 					if (local245.type == 2) {
-						@Pc(340) int local340 = (local245.targetX - Static225.originX) * 4 + 2 - PlayerList.self.xFine / 32;
-						local291 = (local245.anInt4046 - Static142.originZ) * 4 + 2 - PlayerList.self.zFine / 32;
+						@Pc(340) int local340 = (local245.targetX - Camera.originX) * 4 + 2 - PlayerList.self.xFine / 32;
+						local291 = (local245.anInt4046 - Camera.originZ) * 4 + 2 - PlayerList.self.zFine / 32;
 						this.method1263(null, local291, local76, local340, arg5, arg9, arg0, arg7, arg4, arg3, arg1, local245.playerModelId, arg2, arg6);
 					}
 					if (local245.type == 10 && local245.actorTargetId >= 0 && PlayerList.players.length > local245.actorTargetId) {

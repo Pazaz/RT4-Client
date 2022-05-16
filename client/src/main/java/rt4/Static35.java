@@ -99,15 +99,4 @@ public final class Static35 {
 		return 0L;
 	}
 
-	@OriginalMember(owner = "client!cl", name = "e", descriptor = "(I)V")
-	public static void resetCameraEffects() {
-		for (@Pc(3) int local3 = 0; local3 < 5; local3++) {
-			Static176.customCameraActive[local3] = false;
-		}
-		Static133.anInt5230 = 0;
-		Static233.anInt5217 = 0;
-		Static155.anInt3718 = -1;
-		Static52.anInt1694 = -1;
-		Static227.cameraType = 1;
-	}
 }

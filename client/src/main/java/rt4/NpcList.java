@@ -331,8 +331,8 @@ public class NpcList {
 			}
 		}
 		if ((arg0.faceX != 0 || arg0.faceY != 0) && (arg0.movementQueueSize == 0 || arg0.anInt3417 > 0)) {
-			local70 = arg0.xFine - (arg0.faceX - Static225.originX - Static225.originX) * 64;
-			local43 = arg0.zFine - (arg0.faceY - Static142.originZ - Static142.originZ) * 64;
+			local70 = arg0.xFine - (arg0.faceX - Camera.originX - Camera.originX) * 64;
+			local43 = arg0.zFine - (arg0.faceY - Camera.originZ - Camera.originZ) * 64;
 			if (local70 != 0 || local43 != 0) {
 				arg0.anInt3400 = (int) (Math.atan2((double) local70, (double) local43) * 325.949D) & 0x7FF;
 			}

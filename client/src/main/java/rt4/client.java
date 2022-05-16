@@ -1010,7 +1010,7 @@ public final class client extends GameShell {
 		if (!GlRenderer.enabled) {
 			Flames.update();
 		} else if (LoginManager.step == 0 && CreateManager.step == 0) {
-			if (Static227.cameraType == 2) {
+			if (Camera.cameraType == 2) {
 				Camera.updateLockedCamera();
 			} else {
 				Camera.updateLoginScreenCamera();
