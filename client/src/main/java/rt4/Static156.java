@@ -6,9 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static156 {
 
-	@OriginalMember(owner = "client!mf", name = "O", descriptor = "[[B")
-	public static byte[][] locationMapFilesBuffer;
-
     @OriginalMember(owner = "client!mf", name = "X", descriptor = "I")
 	public static int loginScreenId;
 
@@ -33,19 +30,19 @@ public final class Static156 {
 		Static217.anInt4903 = arg2;
 		Static167.anInt4069 = arg0 / 128;
 		Static193.anInt4539 = arg2 / 128;
-		Static31.anInt987 = Static167.anInt4069 - Static277.tileVisibilityDistance;
+		Static31.anInt987 = Static167.anInt4069 - Static123.tileVisibilityDistance;
 		if (Static31.anInt987 < 0) {
 			Static31.anInt987 = 0;
 		}
-		Static80.anInt4698 = Static193.anInt4539 - Static277.tileVisibilityDistance;
+		Static80.anInt4698 = Static193.anInt4539 - Static123.tileVisibilityDistance;
 		if (Static80.anInt4698 < 0) {
 			Static80.anInt4698 = 0;
 		}
-		Static2.anInt15 = Static167.anInt4069 + Static277.tileVisibilityDistance;
+		Static2.anInt15 = Static167.anInt4069 + Static123.tileVisibilityDistance;
 		if (Static2.anInt15 > SceneGraph.mapSizeX) {
 			Static2.anInt15 = SceneGraph.mapSizeX;
 		}
-		Static215.anInt4866 = Static193.anInt4539 + Static277.tileVisibilityDistance;
+		Static215.anInt4866 = Static193.anInt4539 + Static123.tileVisibilityDistance;
 		if (Static215.anInt4866 > SceneGraph.mapSizeZ) {
 			Static215.anInt4866 = SceneGraph.mapSizeZ;
 		}
@@ -57,12 +54,12 @@ public final class Static156 {
 		}
 		@Pc(104) int local104;
 		@Pc(113) int local113;
-		for (local104 = 0; local104 < Static277.tileVisibilityDistance + Static277.tileVisibilityDistance + 2; local104++) {
-			for (local113 = 0; local113 < Static277.tileVisibilityDistance + Static277.tileVisibilityDistance + 2; local113++) {
-				@Pc(130) int local130 = (local104 - Static277.tileVisibilityDistance << 7) - (Static149.anInt3555 & 0x7F);
-				@Pc(140) int local140 = (local113 - Static277.tileVisibilityDistance << 7) - (Static217.anInt4903 & 0x7F);
-				@Pc(146) int local146 = Static167.anInt4069 + local104 - Static277.tileVisibilityDistance;
-				@Pc(152) int local152 = Static193.anInt4539 + local113 - Static277.tileVisibilityDistance;
+		for (local104 = 0; local104 < Static123.tileVisibilityDistance + Static123.tileVisibilityDistance + 2; local104++) {
+			for (local113 = 0; local113 < Static123.tileVisibilityDistance + Static123.tileVisibilityDistance + 2; local113++) {
+				@Pc(130) int local130 = (local104 - Static123.tileVisibilityDistance << 7) - (Static149.anInt3555 & 0x7F);
+				@Pc(140) int local140 = (local113 - Static123.tileVisibilityDistance << 7) - (Static217.anInt4903 & 0x7F);
+				@Pc(146) int local146 = Static167.anInt4069 + local104 - Static123.tileVisibilityDistance;
+				@Pc(152) int local152 = Static193.anInt4539 + local113 - Static123.tileVisibilityDistance;
 				if (local146 >= 0 && local152 >= 0 && local146 < SceneGraph.mapSizeX && local152 < SceneGraph.mapSizeZ) {
 					@Pc(176) int local176;
 					if (SceneGraph.underwaterTileHeights == null) {
@@ -77,8 +74,8 @@ public final class Static156 {
 				}
 			}
 		}
-		for (local104 = 0; local104 < Static277.tileVisibilityDistance + Static277.tileVisibilityDistance + 1; local104++) {
-			for (local113 = 0; local113 < Static277.tileVisibilityDistance + Static277.tileVisibilityDistance + 1; local113++) {
+		for (local104 = 0; local104 < Static123.tileVisibilityDistance + Static123.tileVisibilityDistance + 1; local104++) {
+			for (local113 = 0; local113 < Static123.tileVisibilityDistance + Static123.tileVisibilityDistance + 1; local113++) {
 				Static48.aBooleanArrayArray1[local104][local113] = Static89.aBooleanArrayArray3[local104][local113] || Static89.aBooleanArrayArray3[local104 + 1][local113] || Static89.aBooleanArrayArray3[local104][local113 + 1] || Static89.aBooleanArrayArray3[local104 + 1][local113 + 1];
 			}
 		}
@@ -89,7 +86,7 @@ public final class Static156 {
 		Static206.anIntArray427 = arg10;
 		Static123.method2419();
 		if (SceneGraph.underWaterGroundTiles != null) {
-			Static278.setRenderTiles(true);
+			SceneGraph.setRenderTiles(true);
 			Static248.method3292(arg0, arg1, arg2, null, 0, (byte) 0, arg13, arg14);
 			if (GlRenderer.enabled) {
 				MaterialManager.renderingUnderwater = false;
@@ -97,7 +94,7 @@ public final class Static156 {
 				FogManager.method3066(null);
 				LightingManager.method2390();
 			}
-			Static278.setRenderTiles(false);
+			SceneGraph.setRenderTiles(false);
 		}
 		Static248.method3292(arg0, arg1, arg2, arg5, arg11, arg12, arg13, arg14);
 	}

@@ -12,9 +12,6 @@ public final class Static172 {
     @OriginalMember(owner = "client!nj", name = "g", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_70;
 
-	@OriginalMember(owner = "client!nj", name = "j", descriptor = "[I")
-	public static int[] locationsMapFileIds;
-
 	@OriginalMember(owner = "client!nj", name = "k", descriptor = "I")
 	public static int anInt4165;
 

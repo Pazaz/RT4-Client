@@ -181,7 +181,7 @@ public final class Static45 {
 			}
 			for (local168 = 1; local168 < 103; local168++) {
 				label771: for (local173 = 1; local173 < 103; local173++) {
-					if (underwater || SceneGraph.allLevelsAreVisible() || (SceneGraph.tileFlags[0][local168][local173] & 0x2) != 0 || (SceneGraph.tileFlags[local152][local168][local173] & 0x10) == 0 && Static4.method22(local173, local168, local152) == Static41.anInt1316) {
+					if (underwater || SceneGraph.allLevelsAreVisible() || (SceneGraph.tileFlags[0][local168][local173] & 0x2) != 0 || (SceneGraph.tileFlags[local152][local168][local173] & 0x10) == 0 && Static4.method22(local173, local168, local152) == LoginManager.centralPlane) {
 						if (SceneGraph.firstVisibleLevel > local152) {
 							SceneGraph.firstVisibleLevel = local152;
 						}
@@ -399,7 +399,7 @@ public final class Static45 {
 						if (local202 >= 8) {
 							local349 = SceneGraph.tileHeights[local200][local168][local173] - 240;
 							local234 = SceneGraph.tileHeights[local194][local168][local173];
-							Static278.method4647(1, local168 * 128, local168 * 128, local173 * 128, local178 * 128 + 128, local349, local234);
+							method4647(1, local168 * 128, local168 * 128, local173 * 128, local178 * 128 + 128, local349, local234);
 							for (local254 = local194; local254 <= local200; local254++) {
 								for (local267 = local173; local267 <= local178; local267++) {
 									SceneGraph.anIntArrayArrayArray6[local254][local168][local267] &= 0xFFFFFFFE;
@@ -434,7 +434,7 @@ public final class Static45 {
 						if (local202 >= 8) {
 							local349 = SceneGraph.tileHeights[local200][local173][local2204] - 240;
 							local234 = SceneGraph.tileHeights[local194][local173][local2204];
-							Static278.method4647(2, local173 * 128, local178 * 128 + 128, local2204 * 128, local2204 * 128, local349, local234);
+							method4647(2, local173 * 128, local178 * 128 + 128, local2204 * 128, local2204 * 128, local349, local234);
 							for (local254 = local194; local254 <= local200; local254++) {
 								for (local267 = local173; local267 <= local178; local267++) {
 									SceneGraph.anIntArrayArrayArray6[local254][local267][local2204] &= 0xFFFFFFFD;
@@ -467,7 +467,7 @@ public final class Static45 {
 						}
 						if ((local178 + 1 - local173) * (local200 - (local194 - 1)) >= 4) {
 							local202 = SceneGraph.tileHeights[local152][local173][local194];
-							Static278.method4647(4, local173 * 128, local178 * 128 + 128, local194 * 128, local200 * 128 + 128, local202, local202);
+							method4647(4, local173 * 128, local178 * 128 + 128, local194 * 128, local200 * 128 + 128, local202, local202);
 							for (local209 = local173; local209 <= local178; local209++) {
 								for (local349 = local194; local349 <= local200; local349++) {
 									SceneGraph.anIntArrayArrayArray6[local152][local209][local349] &= 0xFFFFFFFB;
@@ -480,4 +480,20 @@ public final class Static45 {
 		}
 	}
 
+    @OriginalMember(owner = "client!wj", name = "a", descriptor = "(IIIIIII)V")
+    public static void method4647(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6) {
+        @Pc(3) Class120 local3 = new Class120();
+        local3.anInt4452 = arg1 / 128;
+        local3.anInt4446 = arg2 / 128;
+        local3.anInt4461 = arg3 / 128;
+        local3.anInt4464 = arg4 / 128;
+        local3.anInt4453 = arg0;
+        local3.anInt4460 = arg1;
+        local3.anInt4445 = arg2;
+        local3.anInt4458 = arg3;
+        local3.anInt4449 = arg4;
+        local3.anInt4444 = arg5;
+        local3.anInt4447 = arg6;
+        SceneGraph.aClass120Array1[SceneGraph.anInt917++] = local3;
+    }
 }

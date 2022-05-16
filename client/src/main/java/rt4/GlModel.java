@@ -1035,7 +1035,7 @@ public final class GlModel extends Model {
 				}
 				if (Static150.anInt3582 >= local187 && Static150.anInt3582 <= local191 && Static34.anInt1053 >= local206 && Static34.anInt1053 <= local210) {
 					if (this.aBoolean303) {
-						Static259.aLongArray11[Static2.anInt7++] = arg8;
+						Model.aLongArray11[Static2.anInt7++] = arg8;
 					} else {
 						if (anIntArray468.length < this.anInt5296) {
 							anIntArray468 = new int[this.anInt5296];
@@ -1053,7 +1053,7 @@ public final class GlModel extends Model {
 									@Pc(703) short local703 = this.aShortArray82[local362];
 									@Pc(708) short local708 = this.aShortArray83[local362];
 									if (this.method4118(Static150.anInt3582, Static34.anInt1053, anIntArray467[local698], anIntArray467[local703], anIntArray467[local708], anIntArray468[local698], anIntArray468[local703], anIntArray468[local708])) {
-										Static259.aLongArray11[Static2.anInt7++] = arg8;
+										Model.aLongArray11[Static2.anInt7++] = arg8;
 										break label118;
 									}
 									local362++;

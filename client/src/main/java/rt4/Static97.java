@@ -34,7 +34,7 @@ public final class Static97 {
 			return;
 		}
 		local30 -= 10;
-		@Pc(58) int local58 = Static59.anInt1814 + (int)Camera.yawTarget & 0x7FF;
+		@Pc(58) int local58 = MiniMap.anInt1814 + (int)Camera.yawTarget & 0x7FF;
 		@Pc(62) int local62 = MathUtils.cos[local58];
 		@Pc(66) int local66 = MathUtils.sin[local58];
 		@Pc(74) int local74 = local66 * 256 / (MiniMap.anInt4130 + 256);

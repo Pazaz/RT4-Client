@@ -16,9 +16,9 @@ public final class Static89 {
 		@Pc(13) byte[][] local13;
 		if (GlRenderer.enabled && arg0) {
 			local11 = 1;
-			local13 = Static186.underWaterMapFilesBuffer;
+			local13 = LoginManager.underWaterMapFilesBuffer;
 		} else {
-			local13 = Static273.mapFilesBuffer;
+			local13 = LoginManager.mapFilesBuffer;
 			local11 = 4;
 		}
 		for (@Pc(21) int local21 = 0; local21 < local11; local21++) {
@@ -34,8 +34,8 @@ public final class Static89 {
 							@Pc(82) int local82 = local52 >> 1 & 0x3;
 							@Pc(88) int local88 = local52 >> 14 & 0x3FF;
 							@Pc(98) int local98 = (local88 / 8 << 8) + local76 / 8;
-							for (@Pc(100) int local100 = 0; local100 < Static238.regionBitPacked.length; local100++) {
-								if (Static238.regionBitPacked[local100] == local98 && local13[local100] != null) {
+							for (@Pc(100) int local100 = 0; local100 < LoginManager.regionBitPacked.length; local100++) {
+								if (LoginManager.regionBitPacked[local100] == local98 && local13[local100] != null) {
 									Static245.method4228(local82, local32 * 8, local21, PathFinder.collisionMaps, local39 * 8, local13[local100], local65, (local76 & 0x7) * 8, (local88 & 0x7) * 8, arg0);
 									local54 = true;
 									break;
@@ -89,7 +89,7 @@ public final class Static89 {
 	public static void method1841() {
 		if (!Static40.aBoolean108) {
 			if (Static226.anInt3953 != 0) {
-				Static155.anInt3751 = Static277.anInt5850;
+				Static155.anInt3751 = Mouse.anInt5850;
 				Static60.anInt1892 = Static280.anInt5895;
 			} else if (Mouse.clickButton == 0) {
 				Static155.anInt3751 = Mouse.anInt4873;

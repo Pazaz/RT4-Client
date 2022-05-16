@@ -20,8 +20,4 @@ public final class Static24 {
 		return local8;
 	}
 
-	@OriginalMember(owner = "client!bn", name = "d", descriptor = "(II)Z")
-	public static boolean isDigit(@OriginalArg(1) int arg0) {
-		return arg0 >= 48 && arg0 <= 57;
-	}
 }

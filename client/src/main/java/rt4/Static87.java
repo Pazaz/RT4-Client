@@ -38,10 +38,10 @@ public final class Static87 {
 		@Pc(9) byte[][] local9;
 		if (GlRenderer.enabled && arg0) {
 			local7 = 1;
-			local9 = Static186.underWaterMapFilesBuffer;
+			local9 = LoginManager.underWaterMapFilesBuffer;
 		} else {
 			local7 = 4;
-			local9 = Static273.mapFilesBuffer;
+			local9 = LoginManager.mapFilesBuffer;
 		}
 		@Pc(18) int local18 = local9.length;
 		@Pc(20) int local20;
@@ -49,19 +49,19 @@ public final class Static87 {
 		@Pc(49) int local49;
 		@Pc(53) byte[] local53;
 		for (local20 = 0; local20 < local18; local20++) {
-			local38 = (Static238.regionBitPacked[local20] >> 8) * 64 - Camera.originX;
-			local49 = (Static238.regionBitPacked[local20] & 0xFF) * 64 - Camera.originZ;
+			local38 = (LoginManager.regionBitPacked[local20] >> 8) * 64 - Camera.originX;
+			local49 = (LoginManager.regionBitPacked[local20] & 0xFF) * 64 - Camera.originZ;
 			local53 = local9[local20];
 			if (local53 != null) {
 				client.audioLoop();
-				Static269.method2203(PathFinder.collisionMaps, arg0, Static80.centralZoneX * 8 - 48, local49, local38, (Static52.anInt1695 - 6) * 8, local53);
+				Static269.method2203(PathFinder.collisionMaps, arg0, LoginManager.centralZoneX * 8 - 48, local49, local38, (LoginManager.centralZoneZ - 6) * 8, local53);
 			}
 		}
 		for (local20 = 0; local20 < local18; local20++) {
-			local38 = (Static238.regionBitPacked[local20] >> 8) * 64 - Camera.originX;
-			local49 = (Static238.regionBitPacked[local20] & 0xFF) * 64 - Camera.originZ;
+			local38 = (LoginManager.regionBitPacked[local20] >> 8) * 64 - Camera.originX;
+			local49 = (LoginManager.regionBitPacked[local20] & 0xFF) * 64 - Camera.originZ;
 			local53 = local9[local20];
-			if (local53 == null && Static52.anInt1695 < 800) {
+			if (local53 == null && LoginManager.centralZoneZ < 800) {
 				client.audioLoop();
 				for (@Pc(130) int local130 = 0; local130 < local7; local130++) {
 					Static23.method645(local130, local49, local38, 64, 64);
@@ -206,7 +206,7 @@ public final class Static87 {
 									continue;
 								}
 								local276 -= local30.height / 2;
-								memory = (int)Camera.yawTarget + Static59.anInt1814 & 0x7FF;
+								memory = (int)Camera.yawTarget + MiniMap.anInt1814 & 0x7FF;
 								local270 -= local30.width / 2;
 								color = MathUtils.sin[memory];
 								cardMemory = MathUtils.cos[memory];
@@ -369,7 +369,7 @@ public final class Static87 {
 						}
 						if (Static223.aBooleanArray116[local57] || Cheat.rectDebug > 1) {
 							if (local30.type == 0 && !local30.usingScripts && local30.scrollMaxV > local30.height) {
-								Static74.method1624(local30.scrollY, local30.scrollMaxV, local30.width + local123, local114, local30.height);
+								method1624(local30.scrollY, local30.scrollMaxV, local30.width + local123, local114, local30.height);
 							}
 
 							if (local30.type != 1) {
@@ -475,7 +475,7 @@ public final class Static87 {
 												@Pc(1381) Sprite local1381 = local30.method482(local270);
 												if (local1381 != null) {
 													local1381.render(x, y);
-												} else if (Static211.aBoolean72) {
+												} else if (Component.aBoolean72) {
 													InterfaceList.redraw(local30);
 												}
 											}
@@ -542,7 +542,7 @@ public final class Static87 {
 												@Pc(1989) ObjType local1989 = ObjTypeList.get(local30.objId);
 												local1934 = local1989.name;
 												if (local1934 == null) {
-													local1934 = Static92.NULL;
+													local1934 = MiniMenu.NULL;
 												}
 												if ((local1989.stackable == 1 || local30.objCount != 1) && local30.objCount != -1) {
 													local1934 = JagString.concatenate(new JagString[] { MiniMenu.aClass100_32, local1934, Static54.aClass100_375, Static70.method1548(local30.objCount) });
@@ -553,10 +553,10 @@ public final class Static87 {
 												local1934 = LocalizedText.PLEASEWAIT;
 											}
 											if (!local30.usingScripts) {
-												local1934 = Static127.method2465(local30, local1934);
+												local1934 = JagString.method2465(local30, local1934);
 											}
 											local1921.method2852(local1934, local123, local114, local30.width, local30.height, local276, local30.textAntiMacro ? 0 : -1, local30.anInt460, local30.anInt478, local30.anInt467);
-										} else if (Static211.aBoolean72) {
+										} else if (Component.aBoolean72) {
 											InterfaceList.redraw(local30);
 										}
 									} else if (local30.type == 5) {
@@ -646,14 +646,14 @@ public final class Static87 {
 														sprite.renderResized(local123, local114, local30.width, local30.height);
 													}
 												}
-											} else if (Static211.aBoolean72) {
+											} else if (Component.aBoolean72) {
 												InterfaceList.redraw(local30);
 											}
 										} else {
 											sprite = local30.method489(Static154.method2926(local30));
 											if (sprite != null) {
 												sprite.render(local123, local114);
-											} else if (Static211.aBoolean72) {
+											} else if (Component.aBoolean72) {
 												InterfaceList.redraw(local30);
 											}
 										}
@@ -696,13 +696,13 @@ public final class Static87 {
 												}
 											} else if (local276 == -1) {
 												local2589 = local30.method488(-1, null, -1, 0, local2587, PlayerList.self.appearance);
-												if (local2589 == null && Static211.aBoolean72) {
+												if (local2589 == null && Component.aBoolean72) {
 													InterfaceList.redraw(local30);
 												}
 											} else {
 												@Pc(2689) SeqType local2689 = SeqTypeList.get(local276);
 												local2589 = local30.method488(local30.anInt496, local2689, local30.anInt510, local30.anInt500, local2587, PlayerList.self.appearance);
-												if (local2589 == null && Static211.aBoolean72) {
+												if (local2589 == null && Component.aBoolean72) {
 													InterfaceList.redraw(local30);
 												}
 											}
@@ -729,7 +729,7 @@ public final class Static87 {
 													GlRenderer.restoreLighting();
 													GlRenderer.setDepthTestEnabled(true);
 													GlRenderer.setFogEnabled(false);
-													Static229.method3935(Preferences.brightness);
+													FogManager.method3935(Preferences.brightness);
 													if (Static263.aBoolean299) {
 														GlRaster.method1177();
 														GlRenderer.clearDepthBuffer();
@@ -767,7 +767,7 @@ public final class Static87 {
 											if (local30.type == 7) {
 												local1921 = local30.method491(Sprites.nameIcons);
 												if (local1921 == null) {
-													if (Static211.aBoolean72) {
+													if (Component.aBoolean72) {
 														InterfaceList.redraw(local30);
 													}
 													continue;
@@ -802,7 +802,7 @@ public final class Static87 {
 												local270 = 0;
 												@Pc(3297) JagString local3297 = local30.text;
 												@Pc(3299) Font local3299 = Fonts.p12Full;
-												local3297 = Static127.method2465(local30, local3297);
+												local3297 = JagString.method2465(local30, local3297);
 												@Pc(3325) JagString local3325;
 												while (local3297.length() > 0) {
 													cardMemory = local3297.indexOf(Static269.aClass100_556);
@@ -841,7 +841,7 @@ public final class Static87 {
 												}
 												local3297 = local30.text;
 												objId = local556 + local3299.lineHeight + 2;
-												local3297 = Static127.method2465(local30, local3297);
+												local3297 = JagString.method2465(local30, local3297);
 												while (local3297.length() > 0) {
 													local563 = local3297.indexOf(Static269.aClass100_556);
 													if (local563 == -1) {
@@ -900,5 +900,39 @@ public final class Static87 {
 			arg0 = 126;
 		}
 		return arg0 + (arg1 & 0xFF80);
+	}
+
+	@OriginalMember(owner = "client!fn", name = "a", descriptor = "(BIIIII)V")
+	public static void method1624(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
+		Sprites.scrollbars[0].renderTransparent(arg2, arg3);
+		Sprites.scrollbars[1].renderTransparent(arg2, arg4 + arg3 - 16);
+		@Pc(35) int local35 = arg4 * (arg4 - 32) / arg1;
+		if (local35 < 8) {
+			local35 = 8;
+		}
+		@Pc(54) int local54 = arg0 * (arg4 - local35 - 32) / (arg1 - arg4);
+		if (!GlRenderer.enabled) {
+			SoftwareRaster.fillRect(arg2, arg3 + 16, 16, arg4 - 32, Static182.anInt4306);
+			SoftwareRaster.fillRect(arg2, local54 + arg3 + 16, 16, local35, Static53.anInt1704);
+			SoftwareRaster.drawVerticalLine(arg2, local54 + arg3 + 16, local35, Static219.anInt4938);
+			SoftwareRaster.drawVerticalLine(arg2 + 1, local54 + 16 + arg3, local35, Static219.anInt4938);
+			SoftwareRaster.drawHorizontalLine(arg2, arg3 + local54 + 16, 16, Static219.anInt4938);
+			SoftwareRaster.drawHorizontalLine(arg2, arg3 + local54 + 17, 16, Static219.anInt4938);
+			SoftwareRaster.drawVerticalLine(arg2 + 15, local54 + 16 + arg3, local35, Static74.anInt671);
+			SoftwareRaster.drawVerticalLine(arg2 + 14, arg3 - -17 - -local54, local35 - 1, Static74.anInt671);
+			SoftwareRaster.drawHorizontalLine(arg2, local35 + arg3 + local54 + 15, 16, Static74.anInt671);
+			SoftwareRaster.drawHorizontalLine(arg2 + 1, local35 + arg3 - (-local54 + -14), 15, Static74.anInt671);
+			return;
+		}
+		GlRaster.method1186(arg2, arg3 + 16, 16, arg4 - 32, Static182.anInt4306);
+		GlRaster.method1186(arg2, arg3 + local54 + 16, 16, local35, Static53.anInt1704);
+		GlRaster.method1176(arg2, local54 + arg3 + 16, local35, Static219.anInt4938);
+		GlRaster.method1176(arg2 + 1, local54 + 16 + arg3, local35, Static219.anInt4938);
+		GlRaster.method1174(arg2, local54 + arg3 + 16, 16, Static219.anInt4938);
+		GlRaster.method1174(arg2, local54 + arg3 + 17, 16, Static219.anInt4938);
+		GlRaster.method1176(arg2 + 15, arg3 + (16 - -local54), local35, Static74.anInt671);
+		GlRaster.method1176(arg2 + 14, arg3 - -local54 + 17, local35 - 1, Static74.anInt671);
+		GlRaster.method1174(arg2, local35 + arg3 + local54 + 15, 16, Static74.anInt671);
+		GlRaster.method1174(arg2 + 1, arg3 + 14 - -local54 + local35, 15, Static74.anInt671);
 	}
 }

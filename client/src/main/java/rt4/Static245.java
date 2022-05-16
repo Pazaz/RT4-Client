@@ -6,9 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static245 {
 
-	@OriginalMember(owner = "client!tm", name = "g", descriptor = "I")
-	public static int anInt5375;
-
     @OriginalMember(owner = "client!tm", name = "a", descriptor = "(III[Lclient!mj;IB[BIIIZ)V")
 	public static void method4228(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) CollisionMap[] arg3, @OriginalArg(4) int arg4, @OriginalArg(6) byte[] arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7, @OriginalArg(9) int arg8, @OriginalArg(10) boolean arg9) {
 		@Pc(17) int local17;
@@ -34,9 +31,9 @@ public final class Static245 {
 			for (local103 = 0; local103 < 64; local103++) {
 				for (local108 = 0; local108 < 64; local108++) {
 					if (arg6 == local17 && arg8 <= local103 && arg8 + 8 > local103 && arg7 <= local108 && local108 < arg7 + 8) {
-						Static278.readTile(0, 0, arg9, local96, Static202.method3659(arg0, local103 & 0x7, local108 & 0x7) + arg4, Static214.method4360(arg0, local108 & 0x7, local103 & 0x7) + arg1, arg0, arg2);
+						SceneGraph.readTile(0, 0, arg9, local96, Static202.method3659(arg0, local103 & 0x7, local108 & 0x7) + arg4, Static214.method4360(arg0, local108 & 0x7, local103 & 0x7) + arg1, arg0, arg2);
 					} else {
-						Static278.readTile(0, 0, arg9, local96, -1, -1, 0, 0);
+						SceneGraph.readTile(0, 0, arg9, local96, -1, -1, 0, 0);
 					}
 				}
 			}
@@ -83,7 +80,7 @@ public final class Static245 {
 						}
 						while (local237 > local232) {
 							while (local417 < local255) {
-								Static232.aByteArrayArrayArray13[arg2][local232][local417] = 0;
+								SceneGraph.aByteArrayArrayArray13[arg2][local232][local417] = 0;
 								local417++;
 							}
 							local232++;
@@ -100,7 +97,7 @@ public final class Static245 {
 											local316 = arg1 + Static214.method4360(arg0, local266 & 0x7, local255 & 0x7);
 											@Pc(328) int local328 = Static202.method3659(arg0, local255 & 0x7, local266 & 0x7) + arg4;
 											if (local316 >= 0 && local316 < 104 && local328 >= 0 && local328 < 104) {
-												Static232.aByteArrayArrayArray13[arg2][local316][local328] = local246;
+												SceneGraph.aByteArrayArrayArray13[arg2][local316][local328] = local246;
 											}
 										}
 									}
@@ -162,7 +159,7 @@ public final class Static245 {
 		local108 = arg4 + 7;
 		for (local497 = arg1; local497 < local103; local497++) {
 			for (local232 = arg4; local232 < local108; local232++) {
-				Static232.aByteArrayArrayArray13[arg2][local497][local232] = 0;
+				SceneGraph.aByteArrayArrayArray13[arg2][local497][local232] = 0;
 			}
 		}
 	}

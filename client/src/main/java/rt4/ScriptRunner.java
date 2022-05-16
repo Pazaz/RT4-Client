@@ -3716,7 +3716,7 @@ public final class ScriptRunner {
 													if (opcode == 6017) {
 														isp--;
 														Preferences.stereo = intStack[isp] == 1;
-														Static211.method930();
+														client.method930();
 														Preferences.write(GameShell.signLink);
 														Preferences.sentToServer = false;
 														continue;
@@ -4277,25 +4277,25 @@ public final class ScriptRunner {
 									if (opcode == Cs2Opcodes.isValidChar) {
 										isp--;
 										int1 = intStack[isp];
-										intStack[isp++] = isValidChar(int1) ? 1 : 0;
+										intStack[isp++] = StringUtils.isValidChar(int1) ? 1 : 0;
 										continue;
 									}
 									if (opcode == Cs2Opcodes.isAlphaNumeric) {
 										isp--;
 										int1 = intStack[isp];
-										intStack[isp++] = Static83.isAlphaNumeric(int1) ? 1 : 0;
+										intStack[isp++] = StringUtils.isAlphaNumeric(int1) ? 1 : 0;
 										continue;
 									}
 									if (opcode == Cs2Opcodes.isLetter) {
 										isp--;
 										int1 = intStack[isp];
-										intStack[isp++] = Static258.isLetter(int1) ? 1 : 0;
+										intStack[isp++] = StringUtils.isLetter(int1) ? 1 : 0;
 										continue;
 									}
 									if (opcode == Cs2Opcodes.isDigit) {
 										isp--;
 										int1 = intStack[isp];
-										intStack[isp++] = Static24.isDigit(int1) ? 1 : 0;
+										intStack[isp++] = StringUtils.isDigit(int1) ? 1 : 0;
 										continue;
 									}
 									if (opcode == Cs2Opcodes.length) {
@@ -4498,14 +4498,4 @@ public final class ScriptRunner {
 		run(200000, request);
 	}
 
-	@OriginalMember(owner = "client!we", name = "b", descriptor = "(II)Z")
-	public static boolean isValidChar(@OriginalArg(1) int arg0) {
-		if (arg0 >= 32 && arg0 <= 126) {
-			return true;
-		} else if (arg0 >= 160 && arg0 <= 255) {
-			return true;
-		} else {
-			return arg0 == 128 || arg0 == 140 || arg0 == 151 || arg0 == 156 || arg0 == 159;
-		}
-	}
 }

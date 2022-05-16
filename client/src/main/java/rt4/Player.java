@@ -390,8 +390,8 @@ public final class Player extends PathingEntity {
 					if (Static101.anInt2640 != 0) {
 						local184.rotateX(Static101.anInt2640);
 					}
-					if (Static102.anInt2680 != 0) {
-						local184.rotateZ(Static102.anInt2680);
+					if (PathingEntity.anInt2680 != 0) {
+						local184.rotateZ(PathingEntity.anInt2680);
 					}
 					if (Static62.anInt1938 != 0) {
 						local184.translate(0, Static62.anInt1938, 0);

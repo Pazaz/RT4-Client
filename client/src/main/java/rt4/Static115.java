@@ -15,9 +15,6 @@ public final class Static115 {
 	@OriginalMember(owner = "client!ja", name = "j", descriptor = "I")
 	public static int anInt2937 = 0;
 
-	@OriginalMember(owner = "client!ja", name = "n", descriptor = "I")
-	public static int mapFlagX = 0;
-
 	@OriginalMember(owner = "client!ja", name = "r", descriptor = "I")
 	public static int anInt2941 = -1;
 

@@ -42,11 +42,11 @@ public final class Static233 {
 		@Pc(19) byte local19;
 		@Pc(21) byte[][] local21;
 		if (GlRenderer.enabled && arg0) {
-			local21 = Static19.underWaterLocationsMapFilesBuffer;
+			local21 = LoginManager.underWaterLocationsMapFilesBuffer;
 			local19 = 1;
 		} else {
 			local19 = 4;
-			local21 = Static156.locationMapFilesBuffer;
+			local21 = LoginManager.locationMapFilesBuffer;
 		}
 		for (@Pc(29) int local29 = 0; local29 < local19; local29++) {
 			client.audioLoop();
@@ -60,8 +60,8 @@ public final class Static233 {
 							@Pc(83) int local83 = local56 >> 14 & 0x3FF;
 							@Pc(89) int local89 = local56 >> 3 & 0x7FF;
 							@Pc(99) int local99 = local89 / 8 + (local83 / 8 << 8);
-							for (@Pc(101) int local101 = 0; local101 < Static238.regionBitPacked.length; local101++) {
-								if (Static238.regionBitPacked[local101] == local99 && local21[local101] != null) {
+							for (@Pc(101) int local101 = 0; local101 < LoginManager.regionBitPacked.length; local101++) {
+								if (LoginManager.regionBitPacked[local101] == local99 && local21[local101] != null) {
 									Static217.method3771(PathFinder.collisionMaps, local29, local21[local101], local67, local77, local36 * 8, local43 * 8, arg0, (local83 & 0x7) * 8, (local89 & 0x7) * 8);
 									break;
 								}

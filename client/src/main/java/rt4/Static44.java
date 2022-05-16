@@ -18,7 +18,7 @@ public final class Static44 {
 		Protocol.opcode3 = -1;
 		Static40.aBoolean108 = false;
 		Protocol.length = 0;
-		Static115.mapFlagX = 0;
+		LoginManager.mapFlagX = 0;
 		MiniMenu.size = 0;
 		Protocol.opcode2 = -1;
 		MiniMap.state = 0;

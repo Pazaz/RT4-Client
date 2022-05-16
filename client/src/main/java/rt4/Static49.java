@@ -56,7 +56,7 @@ public final class Static49 {
 				local39 = true;
 				if (!local95.isReady()) {
 					local15 = false;
-					Static271.anInt5804++;
+					ClientProt.anInt5804++;
 				}
 			}
 		}

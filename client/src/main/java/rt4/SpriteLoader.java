@@ -315,11 +315,33 @@ public class SpriteLoader {
 
     @OriginalMember(owner = "client!da", name = "a", descriptor = "(ILclient!ve;Z)Lclient!ok;")
     public static IndexedSprite loadIndexedSpriteAutoDetect(@OriginalArg(0) int arg0, @OriginalArg(1) Js5 arg1) {
-        return decode(arg1, arg0) ? Static276.method4614() : null;
+        return decode(arg1, arg0) ? method4614() : null;
     }
 
     @OriginalMember(owner = "client!kc", name = "a", descriptor = "(ILclient!ve;I)Lclient!qf;")
     public static Sprite loadSpriteAutoDetect(@OriginalArg(1) Js5 arg0, @OriginalArg(2) int arg1) {
         return decode(arg0, arg1) ? method1764() : null;
+    }
+
+    @OriginalMember(owner = "client!wh", name = "b", descriptor = "(B)Lclient!ok;")
+    public static IndexedSprite method4614() {
+        @Pc(27) IndexedSprite local27;
+        if (GlRenderer.enabled) {
+            local27 = new GlIndexedSprite(width, height, xOffsets[0], yOffsets[0], innerWidths[0], innerHeights[0], pixels[0], palette);
+        } else {
+            local27 = new SoftwareIndexedSprite(width, height, xOffsets[0], yOffsets[0], innerWidths[0], innerHeights[0], pixels[0], palette);
+        }
+        clear();
+        return local27;
+    }
+
+    @OriginalMember(owner = "client!na", name = "a", descriptor = "(IZILclient!ve;)Lclient!ek;")
+    public static SoftwareIndexedSprite loadSoftwareIndexedSprite(@OriginalArg(2) int arg0, @OriginalArg(3) Js5 arg1) {
+        return decode(arg1, 0, arg0) ? Static134.method2619() : null;
+    }
+
+    @OriginalMember(owner = "client!na", name = "a", descriptor = "(Lclient!ve;IZ)Lclient!mm;")
+    public static SoftwareSprite method3117(@OriginalArg(0) Js5 arg0, @OriginalArg(1) int arg1) {
+        return decode(arg0, arg1) ? method3537() : null;
     }
 }

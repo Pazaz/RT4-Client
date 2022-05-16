@@ -12,8 +12,10 @@ public final class DisplayMode {
 
 	@OriginalMember(owner = "client!ib", name = "i", descriptor = "[Lclient!od;")
 	public static DisplayMode[] aClass114Array1;
+    @OriginalMember(owner = "client!rc", name = "M", descriptor = "Z")
+    public static boolean aBoolean73 = false;
 
-	@OriginalMember(owner = "client!od", name = "j", descriptor = "I")
+    @OriginalMember(owner = "client!od", name = "j", descriptor = "I")
 	public int width;
 
 	@OriginalMember(owner = "client!od", name = "k", descriptor = "I")
@@ -148,7 +150,7 @@ public final class DisplayMode {
 		}
 		if (arg2 && arg1 > 0) {
 			GameShell.canvas.setIgnoreRepaint(true);
-			if (!Static211.aBoolean73) {
+			if (!aBoolean73) {
 				SceneGraph.clear();
 				SoftwareRaster.frameBuffer = null;
 				SoftwareRaster.frameBuffer = Static131.create(GameShell.canvasHeight, GameShell.canvasWidth, GameShell.canvas);
@@ -174,10 +176,10 @@ public final class DisplayMode {
 					ThreadUtils.sleep(100L);
 				}
 				if (local300.status == 1) {
-					Static211.aBoolean73 = true;
+					aBoolean73 = true;
 				}
 			}
-			if (Static211.aBoolean73) {
+			if (aBoolean73) {
 				GlRenderer.init(GameShell.canvas, Preferences.antiAliasingMode * 2);
 			}
 		}

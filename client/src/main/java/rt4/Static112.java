@@ -5,7 +5,10 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static112 {
 
-	@OriginalMember(owner = "client!ij", name = "a", descriptor = "(B)V")
+    @OriginalMember(owner = "client!hd", name = "e", descriptor = "Lclient!qf;")
+    public static Sprite aClass3_Sub2_Sub1_6;
+
+    @OriginalMember(owner = "client!ij", name = "a", descriptor = "(B)V")
 	public static void method2297() {
 		@Pc(3) int local3 = Static183.anInt4271;
 		@Pc(9) int local9 = Static229.anInt5138;
@@ -63,9 +66,9 @@ public final class Static112 {
 				}
 			}
 		}
-		if ((Static165.aClass3_Sub2_Sub1_8 == null || Static92.aClass3_Sub2_Sub1_6 == null || Static204.aClass3_Sub2_Sub1_10 == null) && client.js5Archive8.isFileReady(Static40.anInt2261) && client.js5Archive8.isFileReady(Static40.anInt3324) && client.js5Archive8.isFileReady(Static40.anInt5556)) {
+		if ((Static165.aClass3_Sub2_Sub1_8 == null || aClass3_Sub2_Sub1_6 == null || Static204.aClass3_Sub2_Sub1_10 == null) && client.js5Archive8.isFileReady(Static40.anInt2261) && client.js5Archive8.isFileReady(Static40.anInt3324) && client.js5Archive8.isFileReady(Static40.anInt5556)) {
 			Static165.aClass3_Sub2_Sub1_8 = SoftwareSprite.loadSoftwareAlphaSprite(client.js5Archive8, Static40.anInt2261);
-			Static92.aClass3_Sub2_Sub1_6 = SoftwareSprite.loadSoftwareAlphaSprite(client.js5Archive8, Static40.anInt3324);
+			aClass3_Sub2_Sub1_6 = SoftwareSprite.loadSoftwareAlphaSprite(client.js5Archive8, Static40.anInt3324);
 			Static204.aClass3_Sub2_Sub1_10 = SoftwareSprite.loadSoftwareAlphaSprite(client.js5Archive8, Static40.anInt5556);
 			if (GlRenderer.enabled) {
 				if (Static165.aClass3_Sub2_Sub1_8 instanceof SoftwareAlphaSprite) {
@@ -73,10 +76,10 @@ public final class Static112 {
 				} else {
 					Static165.aClass3_Sub2_Sub1_8 = new GlSprite((SoftwareSprite) Static165.aClass3_Sub2_Sub1_8);
 				}
-				if (Static92.aClass3_Sub2_Sub1_6 instanceof SoftwareAlphaSprite) {
-					Static92.aClass3_Sub2_Sub1_6 = new GlAlphaSprite((SoftwareSprite) Static92.aClass3_Sub2_Sub1_6);
+				if (aClass3_Sub2_Sub1_6 instanceof SoftwareAlphaSprite) {
+					aClass3_Sub2_Sub1_6 = new GlAlphaSprite((SoftwareSprite) aClass3_Sub2_Sub1_6);
 				} else {
-					Static92.aClass3_Sub2_Sub1_6 = new GlSprite((SoftwareSprite) Static92.aClass3_Sub2_Sub1_6);
+					aClass3_Sub2_Sub1_6 = new GlSprite((SoftwareSprite) aClass3_Sub2_Sub1_6);
 				}
 				if (Static204.aClass3_Sub2_Sub1_10 instanceof SoftwareAlphaSprite) {
 					Static204.aClass3_Sub2_Sub1_10 = new GlAlphaSprite((SoftwareSprite) Static204.aClass3_Sub2_Sub1_10);
@@ -86,15 +89,15 @@ public final class Static112 {
 			}
 		}
 		@Pc(418) int local418;
-		if (Static165.aClass3_Sub2_Sub1_8 != null && Static92.aClass3_Sub2_Sub1_6 != null && Static204.aClass3_Sub2_Sub1_10 != null) {
+		if (Static165.aClass3_Sub2_Sub1_8 != null && aClass3_Sub2_Sub1_6 != null && Static204.aClass3_Sub2_Sub1_10 != null) {
 			local203 = local13 / Static165.aClass3_Sub2_Sub1_8.width;
 			for (local219 = 0; local219 < local203; local219++) {
 				Static165.aClass3_Sub2_Sub1_8.render(local3 + Static165.aClass3_Sub2_Sub1_8.width * local219, local11 + local9 + -Static165.aClass3_Sub2_Sub1_8.height);
 			}
-			local219 = (local11 - 20) / Static92.aClass3_Sub2_Sub1_6.height;
+			local219 = (local11 - 20) / aClass3_Sub2_Sub1_6.height;
 			for (local418 = 0; local418 < local219; local418++) {
-				Static92.aClass3_Sub2_Sub1_6.render(local3, local9 + local418 * Static92.aClass3_Sub2_Sub1_6.height + 20);
-				Static92.aClass3_Sub2_Sub1_6.renderHorizontalFlip(local3 + local13 - Static92.aClass3_Sub2_Sub1_6.width, local9 + 20 + local418 * Static92.aClass3_Sub2_Sub1_6.height);
+				aClass3_Sub2_Sub1_6.render(local3, local9 + local418 * aClass3_Sub2_Sub1_6.height + 20);
+				aClass3_Sub2_Sub1_6.renderHorizontalFlip(local3 + local13 - aClass3_Sub2_Sub1_6.width, local9 + 20 + local418 * aClass3_Sub2_Sub1_6.height);
 			}
 			Static204.aClass3_Sub2_Sub1_10.render(local3, local11 + local9 - Static204.aClass3_Sub2_Sub1_10.height);
 			Static204.aClass3_Sub2_Sub1_10.renderHorizontalFlip(local3 + local13 - Static204.aClass3_Sub2_Sub1_10.width, local9 - -local11 + -Static204.aClass3_Sub2_Sub1_10.height);

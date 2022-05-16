@@ -6,14 +6,14 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static36 {
 
-    @OriginalMember(owner = "client!client", name = "lb", descriptor = "[I")
-	public static int[] mapFileIds;
-    @OriginalMember(owner = "client!fk", name = "e", descriptor = "I")
+	@OriginalMember(owner = "client!fk", name = "e", descriptor = "I")
     public static int anInt1885;
 	@OriginalMember(owner = "client!bj", name = "s", descriptor = "I")
 	public static int anInt660 = -1;
+    @OriginalMember(owner = "client!kl", name = "s", descriptor = "I")
+    public static int anInt3337 = 0;
 
-	@OriginalMember(owner = "client!client", name = "a", descriptor = "(Lclient!be;)Lclient!be;")
+    @OriginalMember(owner = "client!client", name = "a", descriptor = "(Lclient!be;)Lclient!be;")
 	public static Component method938(@OriginalArg(0) Component arg0) {
 		@Pc(4) int local4 = InterfaceList.getServerActiveProperties(arg0).method505();
 		if (local4 == 0) {
@@ -77,7 +77,7 @@ public final class Static36 {
 								Static40.aClass13_14 = null;
 								Static40.aClass13_1 = null;
 							}
-							Static137.anInt3337 = 0;
+							anInt3337 = 0;
 						}
 					}
 					if (component.usingScripts) {
@@ -141,7 +141,7 @@ public final class Static36 {
 								request.arguments = component.onScroll;
 								InterfaceList.lowPriorityRequests.addTail(request);
 							}
-							if (Static40.aClass13_14 != null || Static118.aClass13_15 != null || Static40.aBoolean108 || component.anInt453 != 1400 && Static137.anInt3337 > 0) {
+							if (Static40.aClass13_14 != null || Static118.aClass13_15 != null || Static40.aBoolean108 || component.anInt453 != 1400 && anInt3337 > 0) {
 								local221 = false;
 								local212 = false;
 								local207 = false;
@@ -174,24 +174,24 @@ public final class Static36 {
 											ClientProt.closeWidget();
 											continue;
 										}
-										Static137.anInt3337 = 1;
+										anInt3337 = 1;
 										Static40.anInt5388 = Mouse.anInt4873;
 										Static40.anInt4035 = Mouse.anInt5032;
 										continue;
 									}
-									if (local212 && Static137.anInt3337 > 0) {
-										if (Static137.anInt3337 == 1 && (Static40.anInt5388 != Mouse.anInt4873 || Static40.anInt4035 != Mouse.anInt5032)) {
+									if (local212 && anInt3337 > 0) {
+										if (anInt3337 == 1 && (Static40.anInt5388 != Mouse.anInt4873 || Static40.anInt4035 != Mouse.anInt5032)) {
 											Static197.anInt4620 = WorldMap.anInt435;
 											anInt1885 = WorldMap.anInt919;
-											Static137.anInt3337 = 2;
+											anInt3337 = 2;
 										}
-										if (Static137.anInt3337 == 2) {
+										if (anInt3337 == 2) {
 											WorldMap.method1964(Static197.anInt4620 + (int) ((double) (Static40.anInt5388 - Mouse.anInt4873) * 2.0D / (double) WorldMap.targetZoom));
 											WorldMap.method4641(anInt1885 + (int) ((double) (Static40.anInt4035 - Mouse.anInt5032) * 2.0D / (double) WorldMap.targetZoom));
 										}
 										continue;
 									}
-									Static137.anInt3337 = 0;
+									anInt3337 = 0;
 									continue;
 								}
 								if (component.anInt453 == 1401) {
