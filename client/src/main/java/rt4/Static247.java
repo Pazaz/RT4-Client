@@ -6,6 +6,9 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static247 {
 
+    @OriginalMember(owner = "client!bl", name = "X", descriptor = "I")
+	public static int anInt730 = -1;
+
     @OriginalMember(owner = "client!ub", name = "a", descriptor = "(IIIIIII)V")
 	public static void method4244(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
 		if (TextureOp29.anInt4164 <= arg1 && TextureOp29.anInt5063 >= arg3 && TextureOp29.anInt5773 <= arg2 && arg4 <= TextureOp29.anInt2869) {
@@ -73,11 +76,11 @@ public final class Static247 {
 													if (var10 != Static152.anInt3604) {
 														Static152.anInt3604 = var10;
 														WaterMaterialRenderer.method619(var10);
-														Static161.method3066(WaterMaterialRenderer.method2422());
+														FogManager.method3066(WaterMaterialRenderer.method2422());
 													}
 													local65 = var9 >>> 24 << 3;
-													if (local65 != Static22.anInt730) {
-														Static22.anInt730 = local65;
+													if (local65 != anInt730) {
+														anInt730 = local65;
 														Static147.method2761(local65);
 													}
 													local115 = SceneGraph.surfaceTileHeights[0][local18][local21] + SceneGraph.surfaceTileHeights[0][local18 + 1][local21] + SceneGraph.surfaceTileHeights[0][local18][local21 + 1] + SceneGraph.surfaceTileHeights[0][local18 + 1][local21 + 1] >> 2;
@@ -656,7 +659,7 @@ public final class Static247 {
 
 	@OriginalMember(owner = "client!ub", name = "b", descriptor = "(IIIIIII)V")
 	public static void method4246(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(6) int arg5) {
-		@Pc(8) Component local8 = Static201.method1418(arg0, arg1);
+		@Pc(8) Component local8 = InterfaceList.method1418(arg0, arg1);
 		if (local8 != null && local8.onUse != null) {
 			@Pc(19) HookRequest local19 = new HookRequest();
 			local19.source = local8;

@@ -283,7 +283,7 @@ public class MiniMap {
                         continue;
                     }
                 }
-                method1446(arg3, Static67.mapfuncs[local382.mapElement], local150, local181, arg1, arg2);
+                method1446(arg3, Sprites.mapfuncs[local382.mapElement], local150, local181, arg1, arg2);
             }
             for (local146 = 0; local146 < 104; local146++) {
                 for (local181 = 0; local181 < 104; local181++) {
@@ -308,7 +308,7 @@ public class MiniMap {
                         if (local507.anInt3739 == -1) {
                             method1446(arg3, Sprites.mapdots[1], local231, local154, arg1, arg2);
                         } else {
-                            method1446(arg3, Static67.mapfuncs[local507.anInt3739], local231, local154, arg1, arg2);
+                            method1446(arg3, Sprites.mapfuncs[local507.anInt3739], local231, local154, arg1, arg2);
                         }
                     }
                 }

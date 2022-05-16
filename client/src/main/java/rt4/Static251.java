@@ -8,10 +8,7 @@ public final class Static251 {
     @OriginalMember(owner = "client!ug", name = "h", descriptor = "I")
 	public static int anInt5449;
 
-	@OriginalMember(owner = "client!ug", name = "p", descriptor = "I")
-	public static int anInt5457;
-
-	@OriginalMember(owner = "client!ug", name = "b", descriptor = "[F")
+    @OriginalMember(owner = "client!ug", name = "b", descriptor = "[F")
 	public static final float[] aFloatArray28 = new float[4];
 
 	@OriginalMember(owner = "client!ug", name = "r", descriptor = "I")

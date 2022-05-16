@@ -11,6 +11,8 @@ public class VarpDomain {
 	public static final int[] varp = new int[3500];
     @OriginalMember(owner = "client!ah", name = "j", descriptor = "[I")
     public static final int[] activeVarps = new int[3500];
+    @OriginalMember(owner = "client!uj", name = "s", descriptor = "Lclient!na;")
+	public static final JagString aClass100_1061 = JagString.parse("null");
     @OriginalMember(owner = "client!fi", name = "n", descriptor = "I")
     public static int updatedVarpsWriterIndex = 0;
     @OriginalMember(owner = "client!qc", name = "K", descriptor = "Lclient!sc;")
@@ -38,5 +40,41 @@ public class VarpDomain {
             }
         }
         aClass133_20 = new HashTable(16);
+    }
+
+    @OriginalMember(owner = "client!li", name = "a", descriptor = "(III)V")
+	public static void method2766(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
+		activeVarps[arg0] = arg1;
+		@Pc(21) LongNode local21 = (LongNode) aClass133_20.get((long) arg0);
+		if (local21 == null) {
+			local21 = new LongNode(MonotonicClock.currentTimeMillis() + 500L);
+			aClass133_20.put(local21, (long) arg0);
+		} else {
+			local21.value = MonotonicClock.currentTimeMillis() + 500L;
+		}
+	}
+
+    @OriginalMember(owner = "client!me", name = "a", descriptor = "(II)I")
+	public static int getVarbit(@OriginalArg(1) int arg0) {
+		@Pc(13) VarbitType local13 = VarbitTypeList.get(arg0);
+		@Pc(16) int local16 = local13.baseVar;
+		@Pc(19) int local19 = local13.endBit;
+		@Pc(22) int local22 = local13.startBit;
+		@Pc(29) int local29 = Song_Class3_Sub9.anIntArray135[local19 - local22];
+		return activeVarps[local16] >> local22 & local29;
+	}
+
+    @OriginalMember(owner = "client!qg", name = "a", descriptor = "(IZI)V")
+    public static void setVarbitClient(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
+        @Pc(7) VarbitType local7 = VarbitTypeList.get(arg0);
+        @Pc(10) int local10 = local7.endBit;
+        @Pc(16) int local16 = local7.startBit;
+        @Pc(19) int local19 = local7.baseVar;
+        @Pc(25) int local25 = Song_Class3_Sub9.anIntArray135[local10 - local16];
+        if (arg1 < 0 || arg1 > local25) {
+            arg1 = 0;
+        }
+        local25 <<= local16;
+        method2766(local19, local25 & arg1 << local16 | activeVarps[local19] & ~local25);
     }
 }

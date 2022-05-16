@@ -10,8 +10,10 @@ public final class Static36 {
 	public static int[] mapFileIds;
     @OriginalMember(owner = "client!fk", name = "e", descriptor = "I")
     public static int anInt1885;
+	@OriginalMember(owner = "client!bj", name = "s", descriptor = "I")
+	public static int anInt660 = -1;
 
-    @OriginalMember(owner = "client!client", name = "a", descriptor = "(Lclient!be;)Lclient!be;")
+	@OriginalMember(owner = "client!client", name = "a", descriptor = "(Lclient!be;)Lclient!be;")
 	public static Component method938(@OriginalArg(0) Component arg0) {
 		@Pc(4) int local4 = InterfaceList.getServerActiveProperties(arg0).method505();
 		if (local4 == 0) {
@@ -30,7 +32,7 @@ public final class Static36 {
 	public static void method946(@OriginalArg(0) Component[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7) {
 		for (@Pc(1) int local1 = 0; local1 < arg0.length; local1++) {
 			@Pc(9) Component component = arg0[local1];
-			if (component != null && component.layer == arg1 && (!component.usingScripts || component.type == 0 || component.aBoolean25 || InterfaceList.getServerActiveProperties(component).accessMask != 0 || component == Static4.aClass13_1 || component.anInt453 == 1338) && (!component.usingScripts || !method947(component))) {
+			if (component != null && component.layer == arg1 && (!component.usingScripts || component.type == 0 || component.aBoolean25 || InterfaceList.getServerActiveProperties(component).accessMask != 0 || component == Static40.aClass13_1 || component.anInt453 == 1338) && (!component.usingScripts || !method947(component))) {
 				@Pc(50) int local50 = component.x + arg6;
 				@Pc(55) int local55 = component.y + arg7;
 				@Pc(61) int local61;
@@ -54,10 +56,10 @@ public final class Static36 {
 					local65 = local73 < arg4 ? local73 : arg4;
 					local67 = local78 < arg5 ? local78 : arg5;
 				}
-				if (component == Static105.aClass13_14) {
+				if (component == Static40.aClass13_14) {
 					Static44.aBoolean83 = true;
 					Static124.anInt3075 = local50;
-					Static20.anInt660 = local55;
+					anInt660 = local55;
 				}
 				if (!component.usingScripts || local61 < local65 && local63 < local67) {
 					if (component.type == 0) {
@@ -71,9 +73,9 @@ public final class Static36 {
 									local164.source.aBoolean19 = false;
 								}
 							}
-							if (Static213.anInt4851 == 0) {
-								Static105.aClass13_14 = null;
-								Static4.aClass13_1 = null;
+							if (Static40.anInt4851 == 0) {
+								Static40.aClass13_14 = null;
+								Static40.aClass13_1 = null;
 							}
 							Static137.anInt3337 = 0;
 						}
@@ -121,25 +123,25 @@ public final class Static36 {
 						if (local221) {
 							Static40.method1015(Mouse.clickY - local55, Mouse.clickX - local50, component);
 						}
-						if (Static105.aClass13_14 != null && Static105.aClass13_14 != component && local207 && InterfaceList.getServerActiveProperties(component).method509()) {
+						if (Static40.aClass13_14 != null && Static40.aClass13_14 != component && local207 && InterfaceList.getServerActiveProperties(component).method509()) {
 							Static56.aClass13_12 = component;
 						}
-						if (component == Static4.aClass13_1) {
+						if (component == Static40.aClass13_1) {
 							Static146.aBoolean174 = true;
 							Static81.anInt2225 = local50;
 							Static228.anInt5103 = local55;
 						}
 						if (component.aBoolean25 || component.anInt453 != 0) {
 							@Pc(399) HookRequest request;
-							if (local207 && Static58.wheelRotation != 0 && component.onScroll != null) {
+							if (local207 && MouseWheel.wheelRotation != 0 && component.onScroll != null) {
 								request = new HookRequest();
 								request.aBoolean158 = true;
 								request.source = component;
-								request.mouseY = Static58.wheelRotation;
+								request.mouseY = MouseWheel.wheelRotation;
 								request.arguments = component.onScroll;
 								InterfaceList.lowPriorityRequests.addTail(request);
 							}
-							if (Static105.aClass13_14 != null || Static118.aClass13_15 != null || Static60.aBoolean108 || component.anInt453 != 1400 && Static137.anInt3337 > 0) {
+							if (Static40.aClass13_14 != null || Static118.aClass13_15 != null || Static40.aBoolean108 || component.anInt453 != 1400 && Static137.anInt3337 > 0) {
 								local221 = false;
 								local212 = false;
 								local207 = false;
@@ -169,23 +171,23 @@ public final class Static36 {
 											@Pc(520) int local520 = k + WorldMap.originX;
 											@Pc(528) int local528 = WorldMap.length + WorldMap.originZ - local516 - 1;
 											Cheat.teleport(local520, local528, 0);
-											ClientProt.method2909();
+											ClientProt.closeWidget();
 											continue;
 										}
 										Static137.anInt3337 = 1;
-										Static246.anInt5388 = Mouse.anInt4873;
-										Static165.anInt4035 = Mouse.anInt5032;
+										Static40.anInt5388 = Mouse.anInt4873;
+										Static40.anInt4035 = Mouse.anInt5032;
 										continue;
 									}
 									if (local212 && Static137.anInt3337 > 0) {
-										if (Static137.anInt3337 == 1 && (Static246.anInt5388 != Mouse.anInt4873 || Static165.anInt4035 != Mouse.anInt5032)) {
+										if (Static137.anInt3337 == 1 && (Static40.anInt5388 != Mouse.anInt4873 || Static40.anInt4035 != Mouse.anInt5032)) {
 											Static197.anInt4620 = WorldMap.anInt435;
 											anInt1885 = WorldMap.anInt919;
 											Static137.anInt3337 = 2;
 										}
 										if (Static137.anInt3337 == 2) {
-											WorldMap.method1964(Static197.anInt4620 + (int) ((double) (Static246.anInt5388 - Mouse.anInt4873) * 2.0D / (double) WorldMap.targetZoom));
-											WorldMap.method4641(anInt1885 + (int) ((double) (Static165.anInt4035 - Mouse.anInt5032) * 2.0D / (double) WorldMap.targetZoom));
+											WorldMap.method1964(Static197.anInt4620 + (int) ((double) (Static40.anInt5388 - Mouse.anInt4873) * 2.0D / (double) WorldMap.targetZoom));
+											WorldMap.method4641(anInt1885 + (int) ((double) (Static40.anInt4035 - Mouse.anInt5032) * 2.0D / (double) WorldMap.targetZoom));
 										}
 										continue;
 									}
@@ -440,7 +442,7 @@ public final class Static36 {
 									InterfaceList.lowPriorityRequests.addTail(local1430);
 								}
 							}
-							if (Static13.aBoolean16 && component.onMinimapUnlock != null) {
+							if (Camera.aBoolean16 && component.onMinimapUnlock != null) {
 								request = new HookRequest();
 								request.source = component;
 								request.arguments = component.onMinimapUnlock;
@@ -448,7 +450,7 @@ public final class Static36 {
 							}
 						}
 					}
-					if (!component.usingScripts && Static105.aClass13_14 == null && Static118.aClass13_15 == null && !Static60.aBoolean108) {
+					if (!component.usingScripts && Static40.aClass13_14 == null && Static118.aClass13_15 == null && !Static40.aBoolean108) {
 						if ((component.anInt470 >= 0 || component.anInt480 != 0) && Mouse.anInt4873 >= local61 && Mouse.anInt5032 >= local63 && Mouse.anInt4873 < local65 && Mouse.anInt5032 < local67) {
 							if (component.anInt470 >= 0) {
 								Static180.aClass13_22 = arg0[component.anInt470];

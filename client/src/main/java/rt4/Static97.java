@@ -45,9 +45,9 @@ public final class Static97 {
 		@Pc(117) int local117 = (int) (Math.sin(local110) * (double) local30);
 		@Pc(124) int local124 = (int) (Math.cos(local110) * (double) local30);
 		if (GlRenderer.enabled) {
-			((GlSprite) Static277.hintMapEdge[arg0]).method1428((arg5.width / 2 + arg2 + local117) * 16, (arg5.height / 2 + arg1 - local124) * 16, (int) (local110 * 10430.378D));
+			((GlSprite) Sprites.hintMapEdge[arg0]).method1428((arg5.width / 2 + arg2 + local117) * 16, (arg5.height / 2 + arg1 - local124) * 16, (int) (local110 * 10430.378D));
 		} else {
-			((SoftwareSprite) Static277.hintMapEdge[arg0]).method306(local117 + arg5.width / 2 + arg2 - 10, arg5.height / 2 + -10 + arg1 + -local124, local110);
+			((SoftwareSprite) Sprites.hintMapEdge[arg0]).method306(local117 + arg5.width / 2 + arg2 - 10, arg5.height / 2 + -10 + arg1 + -local124, local110);
 		}
 	}
 

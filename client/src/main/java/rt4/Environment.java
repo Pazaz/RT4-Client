@@ -37,11 +37,11 @@ public final class Environment {
 
 	@OriginalMember(owner = "client!li", name = "<init>", descriptor = "()V")
 	public Environment() {
-		this.anInt3526 = Static161.anInt3923;
+		this.anInt3526 = FogManager.anInt3923;
 		this.aFloat17 = 1.2F;
 		this.anInt3527 = -50;
 		this.aFloat16 = 1.1523438F;
-		this.anInt3525 = Static161.anInt3922;
+		this.anInt3525 = FogManager.anInt3922;
 		this.anInt3528 = -60;
 		this.aFloat18 = 0.69921875F;
 		this.anInt3529 = 0;
@@ -52,7 +52,7 @@ public final class Environment {
 	public Environment(@OriginalArg(0) Buffer arg0) {
 		@Pc(7) int local7 = arg0.g1();
 		if ((local7 & 0x1) == 0) {
-			this.anInt3526 = Static161.anInt3923;
+			this.anInt3526 = FogManager.anInt3923;
 		} else {
 			this.anInt3526 = arg0.g4();
 		}
@@ -81,7 +81,7 @@ public final class Environment {
 			this.anInt3527 = arg0.g2s();
 		}
 		if ((local7 & 0x20) == 0) {
-			this.anInt3525 = Static161.anInt3922;
+			this.anInt3525 = FogManager.anInt3922;
 		} else {
 			this.anInt3525 = arg0.g4();
 		}

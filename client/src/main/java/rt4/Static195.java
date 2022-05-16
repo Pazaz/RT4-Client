@@ -5,9 +5,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static195 {
 
-    @OriginalMember(owner = "client!pk", name = "Y", descriptor = "I")
-	public static int anInt4581;
-
     @OriginalMember(owner = "client!pk", name = "bb", descriptor = "Lclient!na;")
 	public static JagString walkText;
 

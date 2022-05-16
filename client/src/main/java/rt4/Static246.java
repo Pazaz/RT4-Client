@@ -8,10 +8,7 @@ public final class Static246 {
 	@OriginalMember(owner = "client!u", name = "i", descriptor = "I")
 	public static int anInt5393;
 
-	@OriginalMember(owner = "client!u", name = "a", descriptor = "I")
-	public static int anInt5388 = 0;
-
-	@OriginalMember(owner = "client!u", name = "a", descriptor = "(Z)V")
+    @OriginalMember(owner = "client!u", name = "a", descriptor = "(Z)V")
 	public static void method4239() {
 		for (@Pc(9) SpotAnimNode local9 = (SpotAnimNode) Static99.aClass69_64.head(); local9 != null; local9 = (SpotAnimNode) Static99.aClass69_64.next()) {
 			@Pc(15) SpotAnim local15 = local9.aClass8_Sub2_1;

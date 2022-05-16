@@ -6,7 +6,10 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static74 {
 
-	@OriginalMember(owner = "client!fn", name = "a", descriptor = "(ZIIIIIII)V")
+    @OriginalMember(owner = "client!bj", name = "V", descriptor = "I")
+    public static final int anInt671 = 3353893;
+
+    @OriginalMember(owner = "client!fn", name = "a", descriptor = "(ZIIIIIII)V")
 	public static void method1623(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6) {
 		if (arg3 == arg6) {
 			Static152.method2826(arg0, arg2, arg5, arg6, arg1, arg4);
@@ -33,10 +36,10 @@ public final class Static74 {
 			SoftwareRaster.drawVerticalLine(arg2 + 1, local54 + 16 + arg3, local35, Static219.anInt4938);
 			SoftwareRaster.drawHorizontalLine(arg2, arg3 + local54 + 16, 16, Static219.anInt4938);
 			SoftwareRaster.drawHorizontalLine(arg2, arg3 + local54 + 17, 16, Static219.anInt4938);
-			SoftwareRaster.drawVerticalLine(arg2 + 15, local54 + 16 + arg3, local35, Static20.anInt671);
-			SoftwareRaster.drawVerticalLine(arg2 + 14, arg3 - -17 - -local54, local35 - 1, Static20.anInt671);
-			SoftwareRaster.drawHorizontalLine(arg2, local35 + arg3 + local54 + 15, 16, Static20.anInt671);
-			SoftwareRaster.drawHorizontalLine(arg2 + 1, local35 + arg3 - (-local54 + -14), 15, Static20.anInt671);
+			SoftwareRaster.drawVerticalLine(arg2 + 15, local54 + 16 + arg3, local35, anInt671);
+			SoftwareRaster.drawVerticalLine(arg2 + 14, arg3 - -17 - -local54, local35 - 1, anInt671);
+			SoftwareRaster.drawHorizontalLine(arg2, local35 + arg3 + local54 + 15, 16, anInt671);
+			SoftwareRaster.drawHorizontalLine(arg2 + 1, local35 + arg3 - (-local54 + -14), 15, anInt671);
 			return;
 		}
 		GlRaster.method1186(arg2, arg3 + 16, 16, arg4 - 32, Static182.anInt4306);
@@ -45,10 +48,10 @@ public final class Static74 {
 		GlRaster.method1176(arg2 + 1, local54 + 16 + arg3, local35, Static219.anInt4938);
 		GlRaster.method1174(arg2, local54 + arg3 + 16, 16, Static219.anInt4938);
 		GlRaster.method1174(arg2, local54 + arg3 + 17, 16, Static219.anInt4938);
-		GlRaster.method1176(arg2 + 15, arg3 + (16 - -local54), local35, Static20.anInt671);
-		GlRaster.method1176(arg2 + 14, arg3 - -local54 + 17, local35 - 1, Static20.anInt671);
-		GlRaster.method1174(arg2, local35 + arg3 + local54 + 15, 16, Static20.anInt671);
-		GlRaster.method1174(arg2 + 1, arg3 + 14 - -local54 + local35, 15, Static20.anInt671);
+		GlRaster.method1176(arg2 + 15, arg3 + (16 - -local54), local35, anInt671);
+		GlRaster.method1176(arg2 + 14, arg3 - -local54 + 17, local35 - 1, anInt671);
+		GlRaster.method1174(arg2, local35 + arg3 + local54 + 15, 16, anInt671);
+		GlRaster.method1174(arg2 + 1, arg3 + 14 - -local54 + local35, 15, anInt671);
 	}
 
 	@OriginalMember(owner = "client!fn", name = "a", descriptor = "(ILclient!be;)V")

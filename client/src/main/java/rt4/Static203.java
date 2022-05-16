@@ -26,7 +26,7 @@ public final class Static203 {
 			GameShell.frameHeight -= local35.bottom + local35.top;
 			GameShell.frameWidth -= local35.right + local35.left;
 		}
-		if (Static144.getWindowMode() >= 2) {
+		if (DisplayMode.getWindowMode() >= 2) {
 			GameShell.canvasWidth = GameShell.frameWidth;
 			GameShell.leftMargin = 0;
 			GameShell.topMargin = 0;

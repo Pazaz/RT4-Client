@@ -154,7 +154,7 @@ public class WorldMap {
             @Pc(235) int length = WorldMap.length >> 6;
             @Pc(239) int width = WorldMap.width >> 6;
             aByteArrayArrayArray8 = new byte[width][length][];
-            @Pc(249) int local249 = Static86.anInt2293 >> 2 << 10;
+            @Pc(249) int local249 = Static45.anInt2293 >> 2 << 10;
             aByteArrayArrayArray7 = new byte[width][length][];
             underlayColors = new int[width][length][];
             aByteArrayArrayArray3 = new byte[width][length][];

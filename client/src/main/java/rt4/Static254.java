@@ -6,16 +6,10 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static254 {
 
-	@OriginalMember(owner = "client!uj", name = "E", descriptor = "I")
-	public static int anInt5556;
-
-	@OriginalMember(owner = "client!uj", name = "H", descriptor = "I")
+    @OriginalMember(owner = "client!uj", name = "H", descriptor = "I")
 	public static int anInt5559;
 
-    @OriginalMember(owner = "client!uj", name = "s", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1061 = JagString.parse("null");
-
-    @OriginalMember(owner = "client!uj", name = "A", descriptor = "[I")
+	@OriginalMember(owner = "client!uj", name = "A", descriptor = "[I")
 	public static final int[] anIntArray489 = new int[] { 2, 0, 0, 2, 0, 0, 0, 4, 4 };
 
 	@OriginalMember(owner = "client!uj", name = "a", descriptor = "(BZII[[[Lclient!bj;I)Z")

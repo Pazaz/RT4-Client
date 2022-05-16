@@ -6,7 +6,10 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static45 {
 
-	@OriginalMember(owner = "client!di", name = "a", descriptor = "([Lclient!mj;ZI)V")
+    @OriginalMember(owner = "client!gm", name = "R", descriptor = "I")
+	public static int anInt2293 = (int) (Math.random() * 17.0D) - 8;
+
+    @OriginalMember(owner = "client!di", name = "a", descriptor = "([Lclient!mj;ZI)V")
 	public static void method1169(@OriginalArg(0) CollisionMap[] collisionMaps, @OriginalArg(1) boolean underwater) {
 		@Pc(10) int level;
 		@Pc(15) int x;
@@ -33,12 +36,12 @@ public final class Static45 {
 			if (Static183.anInt4272 > 16) {
 				Static183.anInt4272 = 16;
 			}
-			Static86.anInt2293 += (int) (Math.random() * 5.0D) - 2;
-			if (Static86.anInt2293 < -8) {
-				Static86.anInt2293 = -8;
+			anInt2293 += (int) (Math.random() * 5.0D) - 2;
+			if (anInt2293 < -8) {
+				anInt2293 = -8;
 			}
-			if (Static86.anInt2293 > 8) {
-				Static86.anInt2293 = 8;
+			if (anInt2293 > 8) {
+				anInt2293 = 8;
 			}
 		}
 		@Pc(128) byte local128;
@@ -47,7 +50,7 @@ public final class Static45 {
 		} else {
 			local128 = 4;
 		}
-		level = Static86.anInt2293 >> 2 << 10;
+		level = anInt2293 >> 2 << 10;
 		@Pc(142) int[][] local142 = new int[104][104];
 		@Pc(146) int[][] local146 = new int[104][104];
 		x = Static183.anInt4272 >> 1;
@@ -93,9 +96,9 @@ public final class Static45 {
 					}
 				}
 			} else {
-				local168 = (int) Static161.aFloatArray18[0];
-				local173 = (int) Static161.aFloatArray18[1];
-				local178 = (int) Static161.aFloatArray18[2];
+				local168 = (int) FogManager.aFloatArray18[0];
+				local173 = (int) FogManager.aFloatArray18[1];
+				local178 = (int) FogManager.aFloatArray18[2];
 				local194 = (int) Math.sqrt((double) (local173 * local173 + local168 * local168 + local178 * local178));
 				local200 = local194 * 1024 >> 8;
 				for (local202 = 1; local202 < 103; local202++) {

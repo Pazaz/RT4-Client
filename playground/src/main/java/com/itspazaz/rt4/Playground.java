@@ -4,6 +4,7 @@ import com.jogamp.opengl.GL2;
 import com.jogamp.opengl.GLContext;
 import com.jogamp.opengl.util.GLBuffers;
 import rt4.*;
+import rt4.DisplayMode;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -227,7 +228,7 @@ public class Playground extends GameShell {
             GlRenderer.setDepthTestEnabled(true);
             GlRenderer.enableDepthMask();
             GlRenderer.setFogEnabled(true);
-            Static241.setWindowMode(false, 2, GameShell.canvasWidth, GameShell.canvasHeight);
+            DisplayMode.setWindowMode(false, 2, GameShell.canvasWidth, GameShell.canvasHeight);
             orientation = 292;
             x = 100;
             z = 218;

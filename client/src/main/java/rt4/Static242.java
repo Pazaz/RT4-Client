@@ -109,8 +109,8 @@ public final class Static242 {
 		@Pc(19) int local19 = arg4 << 7;
 		@Pc(29) int local29 = arg6 + arg7 + arg8 + arg9 >> 2;
 		@Pc(33) int local33 = arg5 << 7;
-		@Pc(43) int local43 = local19 - (local29 * Static161.anInt3920 >> 8) >> 3;
-		@Pc(53) int local53 = local33 - (local29 * Static161.anInt3921 >> 8) >> 3;
+		@Pc(43) int local43 = local19 - (local29 * FogManager.anInt3920 >> 8) >> 3;
+		@Pc(53) int local53 = local33 - (local29 * FogManager.anInt3921 >> 8) >> 3;
 		if (arg0 != 0 && arg0 != 1 && (arg2 || arg3)) {
 			method4210(Sprites.floorShadows[arg0], shadowMapImage, local43 + 1, local53 + 1, arg1, arg2);
 		} else {
@@ -335,8 +335,8 @@ public final class Static242 {
 	@OriginalMember(owner = "client!tj", name = "a", descriptor = "(Lclient!ek;III)V")
 	public static void method4207(@OriginalArg(0) SoftwareIndexedSprite arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		if (arg0 != null) {
-			@Pc(12) int local12 = arg1 - (arg2 * Static161.anInt3920 >> 8) >> 3;
-			@Pc(22) int local22 = arg3 - (arg2 * Static161.anInt3921 >> 8) >> 3;
+			@Pc(12) int local12 = arg1 - (arg2 * FogManager.anInt3920 >> 8) >> 3;
+			@Pc(22) int local22 = arg3 - (arg2 * FogManager.anInt3921 >> 8) >> 3;
 			method4202(arg0, shadowMapImage, local12 + 1, local22 + 1);
 		}
 	}
@@ -368,8 +368,8 @@ public final class Static242 {
 		if (arg0 == null) {
 			return false;
 		} else {
-			@Pc(13) int local13 = arg1 - (arg2 * Static161.anInt3920 >> 8) >> 3;
-			@Pc(23) int local23 = arg3 - (arg2 * Static161.anInt3921 >> 8) >> 3;
+			@Pc(13) int local13 = arg1 - (arg2 * FogManager.anInt3920 >> 8) >> 3;
+			@Pc(23) int local23 = arg3 - (arg2 * FogManager.anInt3921 >> 8) >> 3;
 			return method4200(arg0, shadowMapImage, local13 + 1, local23 + 1);
 		}
 	}
@@ -412,8 +412,8 @@ public final class Static242 {
 	@OriginalMember(owner = "client!tj", name = "c", descriptor = "(Lclient!ek;III)V")
 	public static void method4211(@OriginalArg(0) SoftwareIndexedSprite arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		if (arg0 != null) {
-			@Pc(12) int local12 = arg1 - (arg2 * Static161.anInt3920 >> 8) >> 3;
-			@Pc(22) int local22 = arg3 - (arg2 * Static161.anInt3921 >> 8) >> 3;
+			@Pc(12) int local12 = arg1 - (arg2 * FogManager.anInt3920 >> 8) >> 3;
+			@Pc(22) int local22 = arg3 - (arg2 * FogManager.anInt3921 >> 8) >> 3;
 			method4194(arg0, shadowMapImage, local12 + 1, local22 + 1);
 		}
 	}

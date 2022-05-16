@@ -7,9 +7,6 @@ public final class Static179 {
 	@OriginalMember(owner = "client!oe", name = "b", descriptor = "I")
 	public static int anInt4254 = 0;
 
-	@OriginalMember(owner = "client!oe", name = "i", descriptor = "[[I")
-	public static final int[][] anIntArrayArray33 = new int[5][5000];
-
 	@OriginalMember(owner = "client!oe", name = "n", descriptor = "I")
 	public static int anInt4262 = 1;
 

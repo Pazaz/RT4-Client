@@ -51,15 +51,6 @@ public final class Static89 {
 		}
 	}
 
-	@OriginalMember(owner = "client!ha", name = "a", descriptor = "(ILclient!be;)Lclient!be;")
-	public static Component method1836(@OriginalArg(1) Component arg0) {
-		@Pc(12) Component local12 = Static36.method938(arg0);
-		if (local12 == null) {
-			local12 = arg0.aClass13_5;
-		}
-		return local12;
-	}
-
 	@OriginalMember(owner = "client!ha", name = "a", descriptor = "(II)[B")
 	public static byte[] method1837(@OriginalArg(1) int arg0) {
 		@Pc(10) ByteArrayNode local10 = (ByteArrayNode) Static53.aClass54_5.get((long) arg0);
@@ -96,7 +87,7 @@ public final class Static89 {
 
 	@OriginalMember(owner = "client!ha", name = "a", descriptor = "(I)V")
 	public static void method1841() {
-		if (!Static60.aBoolean108) {
+		if (!Static40.aBoolean108) {
 			if (Static226.anInt3953 != 0) {
 				Static155.anInt3751 = Static277.anInt5850;
 				Static60.anInt1892 = Static280.anInt5895;
@@ -142,8 +133,8 @@ public final class Static89 {
 			SoftwareRaster.method2503();
 		}
 		MiniMenu.sort();
-		if (Static60.aBoolean108) {
-			if (Static261.aBoolean298) {
+		if (Static40.aBoolean108) {
+			if (Static40.aBoolean298) {
 				Static112.method2297();
 			} else {
 				Static145.method2744();
@@ -153,7 +144,7 @@ public final class Static89 {
 		} else if (Static97.anInt2503 != -1) {
 			Static49.method1207(null, Static214.anInt5574, Static97.anInt2503);
 		}
-		local60 = Static60.aBoolean108 ? -1 : Static235.method4044();
+		local60 = Static40.aBoolean108 ? -1 : Static235.method4044();
 		if (local60 == -1) {
 			local60 = Static270.anInt5794;
 		}

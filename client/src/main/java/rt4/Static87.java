@@ -87,7 +87,7 @@ public final class Static87 {
 		}
 		for (@Pc(18) int local18 = 0; local18 < arg3.length; local18++) {
 			@Pc(30) Component local30 = arg3[local18];
-			if (local30 != null && (local30.layer == arg5 || arg5 == -1412584499 && local30 == Static105.aClass13_14)) {
+			if (local30 != null && (local30.layer == arg5 || arg5 == -1412584499 && local30 == Static40.aClass13_14)) {
 				@Pc(57) int local57;
 				if (arg8 == -1) {
 					Static264.anIntArray410[InterfaceList.anInt766] = arg2 + local30.x;
@@ -112,30 +112,30 @@ public final class Static87 {
 					}
 					@Pc(166) int local166;
 					@Pc(164) int local164;
-					if (local30 == Static105.aClass13_14) {
+					if (local30 == Static40.aClass13_14) {
 						if (arg5 != -1412584499 && !local30.dragRenderBehavior) {
 							Static80.anInt4696 = arg2;
 							Static127.anInt3126 = arg1;
 							Static241.aClass13Array13 = arg3;
 							continue;
 						}
-						if (Static138.aBoolean172 && Static146.aBoolean174) {
+						if (Static40.aBoolean172 && Static146.aBoolean174) {
 							local164 = Mouse.anInt5032;
 							local166 = Mouse.anInt4873;
-							local164 -= Static165.anInt4035;
+							local164 -= Static40.anInt4035;
 							if (local164 < Static228.anInt5103) {
 								local164 = Static228.anInt5103;
 							}
-							if (local164 + local30.height > Static4.aClass13_1.height + Static228.anInt5103) {
-								local164 = Static4.aClass13_1.height + Static228.anInt5103 - local30.height;
+							if (local164 + local30.height > Static40.aClass13_1.height + Static228.anInt5103) {
+								local164 = Static40.aClass13_1.height + Static228.anInt5103 - local30.height;
 							}
 							local114 = local164;
-							local166 -= Static246.anInt5388;
+							local166 -= Static40.anInt5388;
 							if (Static81.anInt2225 > local166) {
 								local166 = Static81.anInt2225;
 							}
-							if (Static4.aClass13_1.width + Static81.anInt2225 < local30.width + local166) {
-								local166 = Static4.aClass13_1.width + Static81.anInt2225 - local30.width;
+							if (Static40.aClass13_1.width + Static81.anInt2225 < local30.width + local166) {
+								local166 = Static40.aClass13_1.width + Static81.anInt2225 - local30.width;
 							}
 							local123 = local166;
 						}
@@ -196,7 +196,7 @@ public final class Static87 {
 								} else {
 									SoftwareRaster.setClip(arg0, arg6, arg4, arg7);
 								}
-								if (MiniMap.state != 0 && MiniMap.state != 3 || Static60.aBoolean108 || local166 > Static155.anInt3751 || Static60.anInt1892 < local164 || Static155.anInt3751 >= local302 || local291 <= Static60.anInt1892) {
+								if (MiniMap.state != 0 && MiniMap.state != 3 || Static40.aBoolean108 || local166 > Static155.anInt3751 || Static60.anInt1892 < local164 || Static155.anInt3751 >= local302 || local291 <= Static60.anInt1892) {
 									continue;
 								}
 								local270 = Static155.anInt3751 - local123;
@@ -217,7 +217,7 @@ public final class Static87 {
 								local563 = PlayerList.self.xFine + local556 >> 7;
 								local571 = PlayerList.self.zFine - objId >> 7;
 								if (Static241.aBoolean302 && (MiniMenu.anInt4999 & 0x40) != 0) {
-									@Pc(583) Component local583 = Static201.method1418(MiniMenu.anInt2512, MiniMenu.anInt506);
+									@Pc(583) Component local583 = InterfaceList.method1418(MiniMenu.anInt2512, MiniMenu.anInt506);
 									if (local583 == null) {
 										Static53.method1294();
 									} else {
@@ -321,7 +321,7 @@ public final class Static87 {
 								continue;
 							}
 						}
-						if (!Static60.aBoolean108) {
+						if (!Static40.aBoolean108) {
 							if (local30.type == 0 && local30.noClickThrough && Static155.anInt3751 >= local166 && Static60.anInt1892 >= local164 && Static155.anInt3751 < local302 && local291 > Static60.anInt1892 && !Static121.aBoolean154) {
 								MiniMenu.size = 1;
 								MiniMenu.cursors[0] = Static35.anInt1092;
@@ -351,7 +351,7 @@ public final class Static87 {
 							}
 							@Pc(1186) ComponentPointer local1186 = (ComponentPointer) InterfaceList.openInterfaces.get((long) local30.id);
 							if (local1186 != null) {
-								if (local1186.anInt5879 == 0 && !Static60.aBoolean108 && Static155.anInt3751 >= local166 && local164 <= Static60.anInt1892 && local302 > Static155.anInt3751 && Static60.anInt1892 < local291 && !Static121.aBoolean154) {
+								if (local1186.anInt5879 == 0 && !Static40.aBoolean108 && Static155.anInt3751 >= local166 && local164 <= Static60.anInt1892 && local302 > Static155.anInt3751 && Static60.anInt1892 < local291 && !Static121.aBoolean154) {
 									MiniMenu.ops[0] = LocalizedText.CANCEL;
 									MiniMenu.size = 1;
 									MiniMenu.cursors[0] = Static35.anInt1092;

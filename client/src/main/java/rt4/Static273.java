@@ -107,7 +107,7 @@ public final class Static273 {
 				}
 				if (local46 == 14) {
 					local124 = local33[local39++];
-					local41 = Static155.getVarbit(local124);
+					local41 = VarpDomain.getVarbit(local124);
 				}
 				if (local46 == 18) {
 					local41 = (PlayerList.self.xFine >> 7) + Camera.originX;

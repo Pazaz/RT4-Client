@@ -16,7 +16,7 @@ public final class Static44 {
 	public static void method1146() {
 		Protocol.outboundBuffer.offset = 0;
 		Protocol.opcode3 = -1;
-		Static60.aBoolean108 = false;
+		Static40.aBoolean108 = false;
 		Protocol.length = 0;
 		Static115.mapFlagX = 0;
 		MiniMenu.size = 0;
@@ -70,7 +70,7 @@ public final class Static44 {
 			}
 		}
 		if (MiniMenu.size == 1) {
-			Static60.aBoolean108 = false;
+			Static40.aBoolean108 = false;
 			Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
 		} else {
 			Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
@@ -82,7 +82,7 @@ public final class Static44 {
 				}
 			}
 			Static24.anInt761 = local53 + 8;
-			Static13.anInt436 = MiniMenu.size * 15 + (Static261.aBoolean298 ? 26 : 22);
+			Static13.anInt436 = MiniMenu.size * 15 + (Static40.aBoolean298 ? 26 : 22);
 		}
 		if (local28 != null) {
 			Static17.method531(local28, false);

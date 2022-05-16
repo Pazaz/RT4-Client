@@ -460,7 +460,7 @@ public final class client extends GameShell {
         LightingManager.lights = new Light[255];
         GlModel.method4120();
         Static242.method4203();
-        Static115.clear();
+        Sprites.clear();
         WorldMap.clear(false);
         TitleScreen.clear();
         for (@Pc(39) int local39 = 0; local39 < 2048; local39++) {
@@ -513,7 +513,7 @@ public final class client extends GameShell {
             Static143.hintMapMarkers[local3506] = null;
         }
         MiniMenu.size = 0;
-        Static60.aBoolean108 = false;
+        Static40.aBoolean108 = false;
         Mouse.setIdleLoops(0);
         for (local3506 = 0; local3506 < 100; local3506++) {
             Chat.messages[local3506] = null;
@@ -581,7 +581,7 @@ public final class client extends GameShell {
         InterfaceList.openInterfaces = new HashTable(8);
         InterfaceList.method1287();
         Static39.aClass13_10 = null;
-        Static60.aBoolean108 = false;
+        Static40.aBoolean108 = false;
         MiniMenu.size = 0;
         PlayerAppearance.DEFAULT.method1950(new int[] { 0, 0, 0, 0, 0 }, -1, false, null, -1);
         for (local3506 = 0; local3506 < 8; local3506++) {
@@ -590,7 +590,7 @@ public final class client extends GameShell {
             Player.cursors[local3506] = -1;
         }
         Inv.method2073();
-        Static19.aBoolean43 = true;
+        Static253.aBoolean43 = true;
         for (local3506 = 0; local3506 < 100; local3506++) {
             Static186.aBooleanArray100[local3506] = true;
         }
@@ -606,15 +606,15 @@ public final class client extends GameShell {
             PlayerSkillXpTable.experience[local3506] = 0;
         }
         if (GlRenderer.enabled) {
-            Static86.setInstantFade();
+            Static103.setInstantFade();
         }
         Static197.aBoolean228 = true;
         Protocol.verifyId = 0;
         Static195.walkText = LocalizedText.WALKHERE;
         Static127.neverRemoveRoofs = false;
         aShortArray88 = aShortArray19 = aShortArray74 = aShortArray87 = new short[256];
-        Static114.method4637();
-        Static261.aBoolean298 = false;
+        Static40.method4637();
+        Static40.aBoolean298 = false;
         ClientProt.method1373();
     }
 
@@ -629,7 +629,7 @@ public final class client extends GameShell {
 			musicChannel.method3570();
 		}
 		if ((gameState == 30 || gameState == 10) && (GameShell.replaceCanvas || Static97.aLong89 != 0L && Static97.aLong89 < MonotonicClock.currentTimeMillis())) {
-			Static241.setWindowMode(GameShell.replaceCanvas, Static144.getWindowMode(), Preferences.fullScreenWidth, Preferences.fullScreenHeight);
+			DisplayMode.setWindowMode(GameShell.replaceCanvas, DisplayMode.getWindowMode(), Preferences.fullScreenWidth, Preferences.fullScreenHeight);
 		}
 		@Pc(80) int local80;
 		@Pc(84) int local84;
@@ -655,7 +655,7 @@ public final class client extends GameShell {
 			}
 		}
 		if (GameShell.fullScreenFrame != null && !GameShell.focus && (gameState == 30 || gameState == 10)) {
-			Static241.setWindowMode(false, Preferences.favoriteWorlds, -1, -1);
+			DisplayMode.setWindowMode(false, Preferences.favoriteWorlds, -1, -1);
 		}
 		@Pc(158) boolean local158 = false;
 		if (GameShell.fullRedraw) {
@@ -892,8 +892,8 @@ public final class client extends GameShell {
 		}
 		if (game == 1) {
 			Cheat.shiftClick = true;
-			Static161.anInt3923 = 16777215;
-			Static161.anInt3922 = 0;
+			FogManager.anInt3923 = 16777215;
+			FogManager.anInt3922 = 0;
 			PlayerAppearance.aShortArrayArray2 = PlayerAppearance.aShortArrayArray4;
 			PlayerAppearance.aShortArrayArray7 = PlayerAppearance.aShortArrayArray1;
 			PlayerAppearance.aShortArray65 = PlayerAppearance.aShortArray1;
@@ -1015,7 +1015,7 @@ public final class client extends GameShell {
 			} else {
 				Camera.updateLoginScreenCamera();
 			}
-			if (Static138.renderX >> 7 < 14 || Static138.renderX >> 7 >= 90 || Static134.renderZ >> 7 < 14 || Static134.renderZ >> 7 >= 90) {
+			if (Camera.renderX >> 7 < 14 || Camera.renderX >> 7 >= 90 || Camera.renderZ >> 7 < 14 || Camera.renderZ >> 7 >= 90) {
 				LoginManager.setupLoadingScreenRegion();
 			}
 		}
@@ -1034,7 +1034,7 @@ public final class client extends GameShell {
 									do {
 										priorityRequest = (HookRequest) InterfaceList.lowPriorityRequests.removeHead();
 										if (priorityRequest == null) {
-											if (Static105.aClass13_14 != null) {
+											if (Static40.aClass13_14 != null) {
 												ClientProt.method28();
 											}
 											if (Static33.openUrlRequest != null && Static33.openUrlRequest.status == 1) {
@@ -1484,7 +1484,7 @@ public final class client extends GameShell {
 			}
 			Preferences.safeMode = true;
 			Preferences.write(GameShell.signLink);
-			Static241.setWindowMode(false, Preferences.favoriteWorlds, -1, -1);
+			DisplayMode.setWindowMode(false, Preferences.favoriteWorlds, -1, -1);
 			mainLoadPercentage = 100;
 			mainLoadState = 160;
 			mainLoadSecondaryText = LocalizedText.MAINLOAD150B;
@@ -1518,7 +1518,7 @@ public final class client extends GameShell {
 		}
 		if (mouseWheel != null) {
 			@Pc(75) int wheelRotation = mouseWheel.getRotation();
-			Static58.wheelRotation = wheelRotation;
+			MouseWheel.wheelRotation = wheelRotation;
 		}
 		if (gameState == 0) {
 			this.mainLoad();

@@ -7,17 +7,11 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static131 {
 
-    @OriginalMember(owner = "client!kd", name = "ub", descriptor = "I")
-	public static int anInt3255;
-
     @OriginalMember(owner = "client!kd", name = "ob", descriptor = "I")
 	public static int anInt3251 = 0;
 
     @OriginalMember(owner = "client!kd", name = "sb", descriptor = "[I")
 	public static final int[] anIntArray307 = new int[] { 1, 1, 0, 0, 0, 8, 0, 0, 8 };
-
-	@OriginalMember(owner = "client!kd", name = "yb", descriptor = "S")
-	public static short aShort21 = 32767;
 
     @OriginalMember(owner = "client!kd", name = "Bb", descriptor = "I")
 	public static int anInt3260 = -1;

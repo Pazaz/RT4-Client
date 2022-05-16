@@ -138,6 +138,12 @@ public class Sprites {
     public static IndexedSprite[] nameIcons;
     @OriginalMember(owner = "client!th", name = "f", descriptor = "[Lclient!ok;")
     public static IndexedSprite[] scrollbars;
+    @OriginalMember(owner = "client!ic", name = "a", descriptor = "Lclient!qf;")
+    public static Sprite compass;
+    @OriginalMember(owner = "client!wi", name = "R", descriptor = "[Lclient!qf;")
+    public static Sprite[] hintMapEdge;
+    @OriginalMember(owner = "client!fe", name = "lc", descriptor = "[Lclient!qf;")
+    public static Sprite[] mapfuncs;
 
     @OriginalMember(owner = "client!g", name = "a", descriptor = "(ILclient!ve;)V")
     public static void init(@OriginalArg(1) Js5 archive) {
@@ -235,12 +241,12 @@ public class Sprites {
                 floorShadows[local101].trim();
             }
         }
-        @Pc(124) SoftwareSprite compass = SpriteLoader.loadSoftwareSprite(0, archive, compassId);
-        compass.trim();
+        @Pc(124) SoftwareSprite newCompass = SpriteLoader.loadSoftwareSprite(0, archive, compassId);
+        newCompass.trim();
         if (GlRenderer.enabled) {
-            Static106.compass = new GlSprite(compass);
+            compass = new GlSprite(newCompass);
         } else {
-            Static106.compass = compass;
+            compass = newCompass;
         }
         @Pc(143) SoftwareSprite[] local143 = SpriteLoader.loadSoftwareSprites(hintMapEdgeId, archive);
         @Pc(145) int local145;
@@ -248,12 +254,12 @@ public class Sprites {
             local143[local145].trim();
         }
         if (GlRenderer.enabled) {
-            Static277.hintMapEdge = new Sprite[local143.length];
+            hintMapEdge = new Sprite[local143.length];
             for (local145 = 0; local145 < local143.length; local145++) {
-                Static277.hintMapEdge[local145] = new GlSprite(local143[local145]);
+                hintMapEdge[local145] = new GlSprite(local143[local145]);
             }
         } else {
-            Static277.hintMapEdge = local143;
+            hintMapEdge = local143;
         }
         @Pc(196) int local196 = (int) ((double) 21 * Math.random()) - 10;
         local145 = (int) (Math.random() * 21.0D) - 10;
@@ -264,17 +270,40 @@ public class Sprites {
             mapfunctions[local219].method315(local145 + local217, local217 + local196, local217 + local210);
         }
         if (GlRenderer.enabled) {
-            Static67.mapfuncs = new Sprite[mapfunctions.length];
+            mapfuncs = new Sprite[mapfunctions.length];
             for (local219 = 0; local219 < mapfunctions.length; local219++) {
-                Static67.mapfuncs[local219] = new GlSprite(mapfunctions[local219]);
+                mapfuncs[local219] = new GlSprite(mapfunctions[local219]);
             }
         } else {
-            Static67.mapfuncs = mapfunctions;
+            mapfuncs = mapfunctions;
         }
     }
 
     @OriginalMember(owner = "client!f", name = "h", descriptor = "(I)I")
     public static int total() {
         return 15;
+    }
+
+    @OriginalMember(owner = "client!ja", name = "a", descriptor = "(Z)V")
+    public static void clear() {
+        Fonts.p12Full = null;
+        hitmarks = null;
+        crosses = null;
+        nameIcons = null;
+        Fonts.p11FullSoftware = null;
+        mapfunctions = null;
+        mapfuncs = null;
+        mapmarkhints = null;
+        headiconPrayers = null;
+        Fonts.b12Full = null;
+        compass = null;
+        mapdots = null;
+        Fonts.p11Full = null;
+        mapflags = null;
+        hitbars = null;
+        hintMapEdge = null;
+        headhints = null;
+        headiconPks = null;
+        scrollbars = null;
     }
 }

@@ -41,7 +41,7 @@ public class LoginManager {
     @OriginalMember(owner = "client!pg", name = "S", descriptor = "I")
     public static int staffModLevel = 0;
     @OriginalMember(owner = "client!ud", name = "O", descriptor = "I")
-	public static int playerModLevel = 0;
+	public static int blackmarks = 0;
     @OriginalMember(owner = "client!jk", name = "G", descriptor = "Z")
     public static boolean playerUnderage = false;
     @OriginalMember(owner = "client!ql", name = "c", descriptor = "Z")
@@ -275,7 +275,7 @@ public class LoginManager {
                 buffer.p1(anInt39);
                 buffer.p1(client.advertSuppressed ? 1 : 0);
                 buffer.p1(1);
-                buffer.p1(Static144.getWindowMode());
+                buffer.p1(DisplayMode.getWindowMode());
                 buffer.p2(GameShell.canvasWidth);
                 buffer.p2(GameShell.canvasHeight);
                 buffer.p1(Preferences.antiAliasingMode);
@@ -395,7 +395,7 @@ public class LoginManager {
                 Protocol.socket.read(0, 14, Protocol.inboundBuffer.data);
                 Protocol.inboundBuffer.offset = 0;
                 staffModLevel = Protocol.inboundBuffer.g1();
-                playerModLevel = Protocol.inboundBuffer.g1();
+                blackmarks = Protocol.inboundBuffer.g1();
                 playerUnderage = Protocol.inboundBuffer.g1() == 1;
                 parentalChatConsent = Protocol.inboundBuffer.g1() == 1;
                 parentalAdvertConsent = Protocol.inboundBuffer.g1() == 1;
@@ -497,8 +497,8 @@ public class LoginManager {
 
     @OriginalMember(owner = "client!ca", name = "h", descriptor = "(I)V")
 	public static void setupLoadingScreenRegion() {
-		@Pc(10) int local10 = (Static138.renderX >> 10) + (Camera.originX >> 3);
-		@Pc(23) int local23 = (Static134.renderZ >> 10) + (Camera.originZ >> 3);
+		@Pc(10) int local10 = (Camera.renderX >> 10) + (Camera.originX >> 3);
+		@Pc(23) int local23 = (Camera.renderZ >> 10) + (Camera.originZ >> 3);
 		Static156.locationMapFilesBuffer = new byte[18][];
 		Static35.underWaterLocationsMapFileIds = new int[18];
 		Static191.npcSpawnsFilesBuffer = new byte[18][];
@@ -517,11 +517,11 @@ public class LoginManager {
 			for (@Pc(97) int local97 = (local23 - 6) / 8; local97 <= (local23 + 6) / 8; local97++) {
 				@Pc(115) int local115 = (local80 << 8) + local97;
 				Static238.regionBitPacked[local74] = local115;
-				Static36.mapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static103.aClass100_558, JagString.parseInt(local80), Static86.aClass100_488, JagString.parseInt(local97) }));
-				Static172.locationsMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static270.aClass100_1090, JagString.parseInt(local80), Static86.aClass100_488, JagString.parseInt(local97) }));
-				Static175.npcSpawnsFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static179.aClass100_807, JagString.parseInt(local80), Static86.aClass100_488, JagString.parseInt(local97) }));
-				Static99.underWaterMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static165.aClass100_772, JagString.parseInt(local80), Static86.aClass100_488, JagString.parseInt(local97) }));
-				Static35.underWaterLocationsMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static278.aClass100_1103, JagString.parseInt(local80), Static86.aClass100_488, JagString.parseInt(local97) }));
+				Static36.mapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static103.aClass100_558, JagString.parseInt(local80), Static86.UNDERSCORE, JagString.parseInt(local97) }));
+				Static172.locationsMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static270.aClass100_1090, JagString.parseInt(local80), Static86.UNDERSCORE, JagString.parseInt(local97) }));
+				Static175.npcSpawnsFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static179.aClass100_807, JagString.parseInt(local80), Static86.UNDERSCORE, JagString.parseInt(local97) }));
+				Static99.underWaterMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static165.aClass100_772, JagString.parseInt(local80), Static86.UNDERSCORE, JagString.parseInt(local97) }));
+				Static35.underWaterLocationsMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static278.aClass100_1103, JagString.parseInt(local80), Static86.UNDERSCORE, JagString.parseInt(local97) }));
 				if (Static175.npcSpawnsFileIds[local74] == -1) {
 					Static36.mapFileIds[local74] = -1;
 					Static172.locationsMapFileIds[local74] = -1;

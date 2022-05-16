@@ -12,7 +12,9 @@ public final class WaterMaterialRenderer implements MaterialRenderer {
 
     @OriginalMember(owner = "client!v", name = "c", descriptor = "[F")
     public static final float[] aFloatArray2 = new float[] { 0.073F, 0.169F, 0.24F, 1.0F };
-    @OriginalMember(owner = "client!pd", name = "a", descriptor = "I")
+	@OriginalMember(owner = "client!pd", name = "b", descriptor = "[F")
+	public static final float[] aFloatArray22 = new float[] { 0.1F, 0.1F, 0.15F, 0.1F };
+	@OriginalMember(owner = "client!pd", name = "a", descriptor = "I")
 	private int anInt4440 = -1;
 
 	@OriginalMember(owner = "client!pd", name = "c", descriptor = "[F")
@@ -32,8 +34,8 @@ public final class WaterMaterialRenderer implements MaterialRenderer {
 
 	@OriginalMember(owner = "client!jj", name = "a", descriptor = "(B)[F")
 	public static float[] method2422() {
-		@Pc(3) float local3 = Static161.method3068() + Static161.method3059();
-		@Pc(9) int local9 = Static161.method3064();
+		@Pc(3) float local3 = FogManager.method3068() + FogManager.method3059();
+		@Pc(9) int local9 = FogManager.method3064();
 		@Pc(18) float local18 = (float) (local9 >> 16 & 0xFF) / 255.0F;
 		Static251.aFloatArray28[3] = 1.0F;
 		@Pc(37) float local37 = (float) (local9 >> 8 & 0xFF) / 255.0F;
@@ -187,7 +189,7 @@ public final class WaterMaterialRenderer implements MaterialRenderer {
 		local1.glTexGenfv(GL2.GL_S, GL2.GL_EYE_PLANE, this.aFloatArray23, 0);
 		local1.glPopMatrix();
 		local1.glActiveTexture(GL2.GL_TEXTURE0);
-		local1.glTexEnvfv(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_COLOR, Static188.aFloatArray22, 0);
+		local1.glTexEnvfv(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_COLOR, aFloatArray22, 0);
 	}
 
 	@OriginalMember(owner = "client!pd", name = "c", descriptor = "()I")
