@@ -36,9 +36,9 @@ public final class Static158 {
 					@Pc(103) int local103 = local74.g2();
 					@Pc(107) int local107 = local103 >> 14;
 					@Pc(113) int local113 = local103 >> 7 & 0x3F;
-					@Pc(125) int local125 = local113 + (Static238.regionBitPacked[local16] >> 8) * 64 - Static225.originX;
+					@Pc(125) int local125 = local113 + (Static238.regionBitPacked[local16] >> 8) * 64 - Camera.originX;
 					@Pc(129) int local129 = local103 & 0x3F;
-					@Pc(142) int local142 = local129 + (Static238.regionBitPacked[local16] & 0xFF) * 64 - Static142.originZ;
+					@Pc(142) int local142 = local129 + (Static238.regionBitPacked[local16] & 0xFF) * 64 - Camera.originZ;
 					@Pc(148) NpcType local148 = NpcTypeList.get(local74.g2());
 					if (NpcList.npcs[local97] == null && (local148.aByte10 & 0x1) > 0 && local107 == Static41.anInt1316 && local125 >= 0 && local148.size + local125 < 104 && local142 >= 0 && local142 + local148.size < 104) {
 						NpcList.npcs[local97] = new Npc();

@@ -121,10 +121,10 @@ public final class Static278 {
 		MusicPlayer.groupId = -1;
 		AreaSoundManager.clear(true);
 		Static230.dynamicMapRegion = false;
-		Static142.originZ = 0;
+		Camera.originZ = 0;
 		Static80.centralZoneX = 0;
 		Static52.anInt1695 = 0;
-		Static225.originX = 0;
+		Camera.originX = 0;
 		for (local19 = 0; local19 < Static143.hintMapMarkers.length; local19++) {
 			Static143.hintMapMarkers[local19] = null;
 		}
@@ -144,7 +144,7 @@ public final class Static278 {
 				}
 			}
 		}
-		Static35.resetCameraEffects();
+		Camera.resetCameraEffects();
 		Protocol.verifyId = 0;
 		VarpDomain.reset();
 		Static73.method1596(true);

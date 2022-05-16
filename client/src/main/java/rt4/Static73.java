@@ -39,7 +39,7 @@ public final class Static73 {
 			client.setGameState(10);
 			return;
 		}
-		if (Static227.cameraType == 2) {
+		if (Camera.cameraType == 2) {
 			Static138.renderX = Static245.anInt5375 << 7;
 			Static134.renderZ = Static248.anInt4232 << 7;
 		} else {

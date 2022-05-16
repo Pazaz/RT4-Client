@@ -137,9 +137,9 @@ public class WorldMap {
                 targetZoom = 8.0F;
             }
 
-            @Pc(144) int local144 = (PlayerList.self.xFine >> 7) + Static225.originX - originX;
+            @Pc(144) int local144 = (PlayerList.self.xFine >> 7) + Camera.originX - originX;
             @Pc(153) int local153 = local144 + (int) (Math.random() * 10.0D) - 5;
-            @Pc(168) int local168 = originZ + length - Static142.originZ - (PlayerList.self.zFine >> 7) - 1;
+            @Pc(168) int local168 = originZ + length - Camera.originZ - (PlayerList.self.zFine >> 7) - 1;
             @Pc(177) int local177 = local168 + (int) (Math.random() * 10.0D) - 5;
             if (local153 >= 0 && width > local153 && local177 >= 0 && local177 < length) {
                 anInt435 = local153;

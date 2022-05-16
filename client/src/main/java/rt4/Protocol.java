@@ -1251,7 +1251,7 @@ public class Protocol {
             int step = inboundBuffer.g1();
             int dur = inboundBuffer.g1();
             setVerifyId(tracknum);
-            Static260.method3849(cy, tz, step, tx, dur);
+            Camera.method3849(cy, tz, step, tx, dur);
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.IF_SETANIM) {
@@ -1364,8 +1364,8 @@ public class Protocol {
                 }
             } else {
                 int plane = target >> 28 & 0x3;
-                int posX = (target >> 14 & 0x3FFF) - Static225.originX;
-                int posZ = (target & 0x3FFF) - Static142.originZ;
+                int posX = (target >> 14 & 0x3FFF) - Camera.originX;
+                int posZ = (target & 0x3FFF) - Camera.originZ;
                 if (posX >= 0 && posZ >= 0 && posX < 104 && posZ < 104) {
                     posZ = posZ * 128 + 64;
                     posX = posX * 128 + 64;
@@ -1425,9 +1425,9 @@ public class Protocol {
             setVerifyId(tracknum);
             Camera.yawTarget = yaw;
             Camera.pitchTarget = pitch;
-            if (Static227.cameraType == 2) {
-                Static240.cameraPitch = (int)Camera.pitchTarget;
-                Static184.cameraYaw = (int)Camera.yawTarget;
+            if (Camera.cameraType == 2) {
+                Camera.cameraPitch = (int)Camera.pitchTarget;
+                Camera.cameraYaw = (int)Camera.yawTarget;
             }
             Camera.clampCameraAngle();
             opcode = -1;
@@ -1594,7 +1594,7 @@ public class Protocol {
             int local1146 = inboundBuffer.g1();
             int local277 = inboundBuffer.g1();
             setVerifyId(tracknum);
-            Static141.method2722(true, local1146, counter, local277, modelId, local786);
+            Camera.method2722(true, local1146, counter, local277, modelId, local786);
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.MESSAGE_QUICKCHAT_PRIVATE) {
@@ -1886,8 +1886,8 @@ public class Protocol {
             }
             int z = pos & 0x3FFF;
             int x = pos >> 14 & 0x3FFF;
-            x -= Static225.originX;
-            z -= Static142.originZ;
+            x -= Camera.originX;
+            z -= Camera.originZ;
             int plane = pos >> 28 & 0x3;
             Static92.method1881(plane, rotation, type, z, type2, x, seqId);
             opcode = -1;
@@ -2059,7 +2059,7 @@ public class Protocol {
         } else if (opcode == ServerProt.CAM_RESET) {
             int tracknum = inboundBuffer.g2();
             setVerifyId(tracknum);
-            Static35.resetCameraEffects();
+            Camera.resetCameraEffects();
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.LOGOUT) {
@@ -2307,7 +2307,7 @@ public class Protocol {
             Static175.method3279();
             return true;
         } catch (@Pc(19) Exception local19) {
-            @Pc(61) String local61 = "T2 - " + opcode + "," + opcode3 + "," + opcode4 + " - " + length + "," + (Static225.originX + PlayerList.self.movementQueueX[0]) + "," + (PlayerList.self.movementQueueZ[0] + Static142.originZ) + " - ";
+            @Pc(61) String local61 = "T2 - " + opcode + "," + opcode3 + "," + opcode4 + " - " + length + "," + (Camera.originX + PlayerList.self.movementQueueX[0]) + "," + (PlayerList.self.movementQueueZ[0] + Camera.originZ) + " - ";
             for (@Pc(63) int local63 = 0; local63 < length && local63 < 50; local63++) {
                 local61 = local61 + inboundBuffer.data[local63] + ",";
             }
@@ -2741,11 +2741,11 @@ public class Protocol {
                                                     y = 3;
                                                 }
                                                 // Cheat
-                                                Cheat.teleport(PlayerList.self.movementQueueX[0] + Static225.originX, PlayerList.self.movementQueueZ[0] + Static142.originZ, y);
+                                                Cheat.teleport(PlayerList.self.movementQueueX[0] + Camera.originX, PlayerList.self.movementQueueZ[0] + Camera.originZ, y);
                                             }
                                             if (LoginManager.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT]) {
                                                 if (MiniMenu.anInt1742 != -1) {
-                                                    Cheat.teleport(Static225.originX + MiniMenu.anInt1742, Static142.originZ - -MiniMenu.anInt2954, Player.level);
+                                                    Cheat.teleport(Camera.originX + MiniMenu.anInt1742, Camera.originZ - -MiniMenu.anInt2954, Player.level);
                                                 }
                                                 Static187.anInt4422 = 0;
                                                 Static125.anInt3096 = 0;
@@ -2753,9 +2753,9 @@ public class Protocol {
                                                 if (MiniMenu.anInt1742 != -1) {
                                                     outboundBuffer.p1isaac(131);
                                                     outboundBuffer.p4me(MiniMenu.anInt2512);
-                                                    outboundBuffer.p2add(Static225.originX + MiniMenu.anInt1742);
+                                                    outboundBuffer.p2add(Camera.originX + MiniMenu.anInt1742);
                                                     outboundBuffer.p2leadd(MiniMenu.anInt506);
-                                                    outboundBuffer.p2add(MiniMenu.anInt2954 + Static142.originZ);
+                                                    outboundBuffer.p2add(MiniMenu.anInt2954 + Camera.originZ);
                                                     Cross.type = 1;
                                                     Cross.milliseconds = 0;
                                                     Cross.y = Mouse.clickY;
@@ -2765,8 +2765,8 @@ public class Protocol {
                                             } else if (Static187.anInt4422 == 2) {
                                                 if (MiniMenu.anInt1742 != -1) {
                                                     outboundBuffer.p1isaac(179);
-                                                    outboundBuffer.p2(Static142.originZ + MiniMenu.anInt2954);
-                                                    outboundBuffer.p2(MiniMenu.anInt1742 + Static225.originX);
+                                                    outboundBuffer.p2(Camera.originZ + MiniMenu.anInt2954);
+                                                    outboundBuffer.p2(MiniMenu.anInt1742 + Camera.originX);
                                                     Cross.milliseconds = 0;
                                                     Cross.type = 1;
                                                     Cross.x = Mouse.clickX;
@@ -2810,9 +2810,9 @@ public class Protocol {
                                                     InterfaceList.redraw(Static43.aClass13_11);
                                                 }
                                             }
-                                            if (Static227.cameraType == 1) {
+                                            if (Camera.cameraType == 1) {
                                                 Static250.method4273();
-                                            } else if (Static227.cameraType == 2) {
+                                            } else if (Camera.cameraType == 2) {
                                                 Camera.updateLockedCamera();
                                             } else {
                                                 Camera.updateLoginScreenCamera();

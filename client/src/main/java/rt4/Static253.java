@@ -35,7 +35,7 @@ public final class Static253 {
 		}
 		@Pc(59) int local59;
 		@Pc(57) int local57;
-		if (Static227.cameraType == 1) {
+		if (Camera.cameraType == 1) {
 			local57 = Static230.anInt5161 + (int)Camera.yawTarget & 0x7FF;
 			local59 = (int)Camera.pitchTarget;
 			if (local59 < Static234.anInt5245 / 256) {
@@ -49,23 +49,23 @@ public final class Static253 {
 		local57 = Static5.anInt40;
 		local59 = Static138.renderX;
 		@Pc(121) int local121 = Static134.renderZ;
-		@Pc(123) int local123 = Static240.cameraPitch;
-		@Pc(125) int local125 = Static184.cameraYaw;
+		@Pc(123) int local123 = Camera.cameraPitch;
+		@Pc(125) int local125 = Camera.cameraYaw;
 		@Pc(127) int local127;
 		@Pc(171) int local171;
 		for (local127 = 0; local127 < 5; local127++) {
 			if (Static176.customCameraActive[local127]) {
 				local171 = (int) ((double) -Static222.cameraJitter[local127] + (double) (Static222.cameraJitter[local127] * 2 + 1) * Math.random() + Math.sin((double) Static31.anIntArray76[local127] * ((double) Static202.cameraFrequency[local127] / 100.0D)) * (double) Static276.cameraAmplitude[local127]);
 				if (local127 == 3) {
-					Static184.cameraYaw = local171 + Static184.cameraYaw & 0x7FF;
+					Camera.cameraYaw = local171 + Camera.cameraYaw & 0x7FF;
 				}
 				if (local127 == 4) {
-					Static240.cameraPitch += local171;
-					if (Static240.cameraPitch < 128) {
-						Static240.cameraPitch = 128;
+					Camera.cameraPitch += local171;
+					if (Camera.cameraPitch < 128) {
+						Camera.cameraPitch = 128;
 					}
-					if (Static240.cameraPitch > 383) {
-						Static240.cameraPitch = 383;
+					if (Camera.cameraPitch > 383) {
+						Camera.cameraPitch = 383;
 					}
 				}
 				if (local127 == 2) {
@@ -82,9 +82,9 @@ public final class Static253 {
 		Static252.method4302();
 		if (GlRenderer.enabled) {
 			GlRaster.setClip(arg2, arg4, arg2 + arg3, arg4 - -arg0);
-			@Pc(248) float local248 = (float) Static240.cameraPitch * 0.17578125F;
-			@Pc(253) float local253 = (float) Static184.cameraYaw * 0.17578125F;
-			if (Static227.cameraType == 3) {
+			@Pc(248) float local248 = (float) Camera.cameraPitch * 0.17578125F;
+			@Pc(253) float local253 = (float) Camera.cameraYaw * 0.17578125F;
+			if (Camera.cameraType == 3) {
 				local248 = Static146.aFloat15 * 360.0F / 6.2831855F;
 				local253 = Static84.aFloat10 * 360.0F / 6.2831855F;
 			}
@@ -119,9 +119,9 @@ public final class Static253 {
 			}
 			LightingManager.method2394(client.loop, !Preferences.flickeringEffectsOn);
 			GlRenderer.clearColorAndDepthBuffers(local171);
-			Static143.method2731(Static240.cameraPitch, Static134.renderZ, Static5.anInt40, Static138.renderX, Static184.cameraYaw);
+			Static143.method2731(Camera.cameraPitch, Static134.renderZ, Static5.anInt40, Static138.renderX, Camera.cameraYaw);
 			GlRenderer.anInt5323 = client.loop;
-			Static156.method2954(Static138.renderX, Static5.anInt40, Static134.renderZ, Static240.cameraPitch, Static184.cameraYaw, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Player.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
+			Static156.method2954(Static138.renderX, Static5.anInt40, Static134.renderZ, Camera.cameraPitch, Camera.cameraYaw, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Player.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
 			Static263.aBoolean299 = true;
 			LightingManager.method2390();
 			Static143.method2731(0, 0, 0, 0, 0);
@@ -131,7 +131,7 @@ public final class Static253 {
 			Static233.method4000(arg3, arg2, arg0, Static223.anInt5029, Static223.anInt5029, arg4);
 		} else {
 			SoftwareRaster.fillRect(arg2, arg4, arg3, arg0, 0);
-			Static156.method2954(Static138.renderX, Static5.anInt40, Static134.renderZ, Static240.cameraPitch, Static184.cameraYaw, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Player.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
+			Static156.method2954(Static138.renderX, Static5.anInt40, Static134.renderZ, Camera.cameraPitch, Camera.cameraYaw, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Player.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
 			client.audioLoop();
 			Static223.method3858();
 			method2726(arg4, arg3, arg2, 256, arg0, 256);
@@ -139,11 +139,11 @@ public final class Static253 {
 		}
 		((Js5GlTextureProvider) Rasteriser.textureProvider).method3239(Static178.anInt4247);
 		Static115.method2310(arg3, arg4, arg0, arg2);
-		Static240.cameraPitch = local123;
+		Camera.cameraPitch = local123;
 		Static134.renderZ = local121;
 		Static5.anInt40 = local57;
 		Static138.renderX = local59;
-		Static184.cameraYaw = local125;
+		Camera.cameraYaw = local125;
 		if (Static19.aBoolean43 && client.js5NetQueue.method2328() == 0) {
 			Static19.aBoolean43 = false;
 		}

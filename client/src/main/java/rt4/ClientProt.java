@@ -102,8 +102,8 @@ public class ClientProt {
             Protocol.outboundBuffer.p1(local13 + local13 + 3);
         }
         Protocol.outboundBuffer.p1a(Keyboard.pressedKeys[Keyboard.KEY_CTRL] ? 1 : 0);
-        Protocol.outboundBuffer.p2(Static225.originX + local23);
-        Protocol.outboundBuffer.p2add(Static142.originZ + local27);
+        Protocol.outboundBuffer.p2(Camera.originX + local23);
+        Protocol.outboundBuffer.p2add(Camera.originZ + local27);
         Static84.anInt2255 = PathFinder.queueZ[0];
         Static115.mapFlagX = PathFinder.queueX[0];
         for (@Pc(126) int local126 = 1; local126 < local13; local126++) {
@@ -158,21 +158,6 @@ public class ClientProt {
         if (!local13) {
             Chat.add(JagString.EMPTY, 0, JagString.concatenate(new JagString[] { LocalizedText.UNABLETOFIND, local7 }));
         }
-    }
-
-    @OriginalMember(owner = "client!gd", name = "a", descriptor = "(JI)V")
-    public static void method1691(@OriginalArg(0) long name) {
-        Protocol.outboundBuffer.offset = 0;
-        Protocol.outboundBuffer.p1(186);
-        if (GlobalConfig.LOGIN_USE_STRINGS) {
-            Protocol.outboundBuffer.pjstr(Base37.decode37(name));
-        } else {
-            Protocol.outboundBuffer.p8(name);
-        }
-        CreateManager.step = 1;
-        CreateManager.loops = 0;
-        CreateManager.errors = 0;
-        CreateManager.reply = -3;
     }
 
     @OriginalMember(owner = "client!gd", name = "c", descriptor = "(I)V")
@@ -246,8 +231,8 @@ public class ClientProt {
         for (id = 0; id < Static273.mapFilesBuffer.length; id++) {
             @Pc(294) byte[] local294 = Static156.locationMapFilesBuffer[id];
             if (local294 != null) {
-                chunkZ = (Static238.regionBitPacked[id] & 0xFF) * 64 - Static142.originZ;
-                chunkX = (Static238.regionBitPacked[id] >> 8) * 64 - Static225.originX;
+                chunkZ = (Static238.regionBitPacked[id] & 0xFF) * 64 - Camera.originZ;
+                chunkX = (Static238.regionBitPacked[id] >> 8) * 64 - Camera.originX;
                 if (Static230.dynamicMapRegion) {
                     chunkZ = 10;
                     chunkX = 10;
@@ -257,8 +242,8 @@ public class ClientProt {
             if (GlRenderer.enabled) {
                 local294 = Static19.underWaterLocationsMapFilesBuffer[id];
                 if (local294 != null) {
-                    chunkX = (Static238.regionBitPacked[id] >> 8) * 64 - Static225.originX;
-                    chunkZ = (Static238.regionBitPacked[id] & 0xFF) * 64 - Static142.originZ;
+                    chunkX = (Static238.regionBitPacked[id] >> 8) * 64 - Camera.originX;
+                    chunkZ = (Static238.regionBitPacked[id] & 0xFF) * 64 - Camera.originZ;
                     if (Static230.dynamicMapRegion) {
                         chunkZ = 10;
                         chunkX = 10;

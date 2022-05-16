@@ -30,39 +30,7 @@ public final class Static40 {
 		Static165.anInt4035 = arg0;
 	}
 
-	@OriginalMember(owner = "client!da", name = "a", descriptor = "(IIIILclient!na;JI)V")
-	public static void method1016(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) JagString password, @OriginalArg(5) long name, @OriginalArg(6) int arg5) {
-		@Pc(8) Buffer local8 = new Buffer(GlobalConfig.LOGIN_USE_STRINGS ? 129 : 128);
-		local8.p1(10);
-		local8.p2((int) (Math.random() * 99999.0D));
-		local8.p2(530);
-		if (GlobalConfig.LOGIN_USE_STRINGS) {
-			local8.pjstr(Base37.decode37(name));
-		} else {
-			local8.p8(name);
-		}
-		local8.p4((int) (Math.random() * 9.9999999E7D));
-		local8.pjstr(password);
-		local8.p4((int) (Math.random() * 9.9999999E7D));
-		local8.p2(client.affiliate);
-		local8.p1(arg0);
-		local8.p1(arg2);
-		local8.p4((int) (Math.random() * 9.9999999E7D));
-		local8.p2(arg5);
-		local8.p2(arg1);
-		local8.p4((int) (Math.random() * 9.9999999E7D));
-		local8.encryptRsa(GlobalConfig.RSA_EXPONENT, GlobalConfig.RSA_MODULUS);
-		Protocol.outboundBuffer.offset = 0;
-		Protocol.outboundBuffer.p1(36);
-		Protocol.outboundBuffer.p1(local8.offset);
-		Protocol.outboundBuffer.pBytes(local8.data, local8.offset);
-		CreateManager.reply = -3;
-		CreateManager.step = 1;
-		CreateManager.loops = 0;
-		CreateManager.errors = 0;
-	}
-
-	@OriginalMember(owner = "client!da", name = "h", descriptor = "(B)V")
+    @OriginalMember(owner = "client!da", name = "h", descriptor = "(B)V")
 	public static void method1019() {
 		Component.sprites.method3103();
 		Component.models.method3103();

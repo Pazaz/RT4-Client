@@ -497,8 +497,8 @@ public class LoginManager {
 
     @OriginalMember(owner = "client!ca", name = "h", descriptor = "(I)V")
 	public static void setupLoadingScreenRegion() {
-		@Pc(10) int local10 = (Static138.renderX >> 10) + (Static225.originX >> 3);
-		@Pc(23) int local23 = (Static134.renderZ >> 10) + (Static142.originZ >> 3);
+		@Pc(10) int local10 = (Static138.renderX >> 10) + (Camera.originX >> 3);
+		@Pc(23) int local23 = (Static134.renderZ >> 10) + (Camera.originZ >> 3);
 		Static156.locationMapFilesBuffer = new byte[18][];
 		Static35.underWaterLocationsMapFileIds = new int[18];
 		Static191.npcSpawnsFilesBuffer = new byte[18][];

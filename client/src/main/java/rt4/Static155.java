@@ -9,10 +9,7 @@ public final class Static155 {
 	@OriginalMember(owner = "client!me", name = "nb", descriptor = "I")
 	public static int anInt3751;
 
-	@OriginalMember(owner = "client!me", name = "k", descriptor = "I")
-	public static int anInt3718 = -1;
-
-	@OriginalMember(owner = "client!me", name = "a", descriptor = "(II)I")
+    @OriginalMember(owner = "client!me", name = "a", descriptor = "(II)I")
 	public static int getVarbit(@OriginalArg(1) int arg0) {
 		@Pc(13) VarbitType local13 = VarbitTypeList.get(arg0);
 		@Pc(16) int local16 = local13.baseVar;

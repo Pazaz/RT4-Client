@@ -110,10 +110,10 @@ public final class Static273 {
 					local41 = Static155.getVarbit(local124);
 				}
 				if (local46 == 18) {
-					local41 = (PlayerList.self.xFine >> 7) + Static225.originX;
+					local41 = (PlayerList.self.xFine >> 7) + Camera.originX;
 				}
 				if (local46 == 19) {
-					local41 = (PlayerList.self.zFine >> 7) + Static142.originZ;
+					local41 = (PlayerList.self.zFine >> 7) + Camera.originZ;
 				}
 				if (local46 == 20) {
 					local41 = local33[local39++];

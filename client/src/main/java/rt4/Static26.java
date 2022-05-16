@@ -24,8 +24,8 @@ public final class Static26 {
 		for (@Pc(25) int local25 = 0; local25 < local13; local25++) {
 			@Pc(32) byte[] local32 = local19[local25];
 			if (local32 != null) {
-				@Pc(45) int local45 = (Static238.regionBitPacked[local25] >> 8) * 64 - Static225.originX;
-				@Pc(56) int local56 = (Static238.regionBitPacked[local25] & 0xFF) * 64 - Static142.originZ;
+				@Pc(45) int local45 = (Static238.regionBitPacked[local25] >> 8) * 64 - Camera.originX;
+				@Pc(56) int local56 = (Static238.regionBitPacked[local25] & 0xFF) * 64 - Camera.originZ;
 				client.audioLoop();
 				Static124.method2437(local45, arg0, local32, local56, PathFinder.collisionMaps);
 			}

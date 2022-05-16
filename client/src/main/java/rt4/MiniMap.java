@@ -236,12 +236,12 @@ public class MiniMap {
             if (Static235.mapElementList != null) {
                 for (@Pc(117) int local117 = 0; local117 < Static235.mapElementList.anInt5074; local117++) {
                     if (Static235.mapElementList.method3892(local117)) {
-                        local146 = (Static235.mapElementList.aShortArray73[local117] - Static225.originX) * 4 + 2 - PlayerList.self.xFine / 32;
+                        local146 = (Static235.mapElementList.aShortArray73[local117] - Camera.originX) * 4 + 2 - PlayerList.self.xFine / 32;
                         local150 = MathUtils.sin[local48];
                         local154 = MathUtils.cos[local48];
                         @Pc(156) Font local156 = Fonts.p11Full;
                         @Pc(164) int local164 = local150 * 256 / (anInt4130 + 256);
-                        local181 = (Static235.mapElementList.aShortArray72[local117] - Static142.originZ) * 4 + 2 - PlayerList.self.zFine / 32;
+                        local181 = (Static235.mapElementList.aShortArray72[local117] - Camera.originZ) * 4 + 2 - PlayerList.self.zFine / 32;
                         @Pc(189) int local189 = local154 * 256 / (anInt4130 + 256);
                         local200 = local181 * local189 - local146 * local164 >> 16;
                         if (Static235.mapElementList.method3894(local117) == 1) {
@@ -361,8 +361,8 @@ public class MiniMap {
                         }
                     }
                     if (local770.type == 2) {
-                        local154 = (local770.targetX - Static225.originX) * 4 + 2 - PlayerList.self.xFine / 32;
-                        local231 = (-Static142.originZ + local770.anInt4046) * 4 + 2 - PlayerList.self.zFine / 32;
+                        local154 = (local770.targetX - Camera.originX) * 4 + 2 - PlayerList.self.xFine / 32;
+                        local231 = (-Camera.originZ + local770.anInt4046) * 4 + 2 - PlayerList.self.zFine / 32;
                         Static97.method1960(local770.anInt4048, arg1, arg2, local154, local231, arg3);
                     }
                     if (local770.type == 10 && local770.actorTargetId >= 0 && PlayerList.players.length > local770.actorTargetId) {
