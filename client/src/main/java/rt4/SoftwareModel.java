@@ -262,12 +262,12 @@ public final class SoftwareModel extends Model {
 				}
 			}
 		}
-		if (arg0.texturedCount > 0 && arg0.faceTextureIndex != null) {
+		if (arg0.texturedCount > 0 && arg0.triangleTextureIndex != null) {
 			@Pc(177) int[] local177 = new int[arg0.texturedCount];
 			@Pc(179) int local179;
 			for (local179 = 0; local179 < this.anInt5787; local179++) {
-				if (arg0.faceTextureIndex[local179] != -1) {
-					local177[arg0.faceTextureIndex[local179] & 0xFF]++;
+				if (arg0.triangleTextureIndex[local179] != -1) {
+					local177[arg0.triangleTextureIndex[local179] & 0xFF]++;
 				}
 			}
 			this.anInt5789 = 0;
@@ -293,10 +293,10 @@ public final class SoftwareModel extends Model {
 			}
 			this.aByteArray74 = new byte[this.anInt5787];
 			for (local248 = 0; local248 < this.anInt5787; local248++) {
-				if (arg0.faceTextureIndex[local248] == -1) {
+				if (arg0.triangleTextureIndex[local248] == -1) {
 					this.aByteArray74[local248] = -1;
 				} else {
-					this.aByteArray74[local248] = (byte) local177[arg0.faceTextureIndex[local248] & 0xFF];
+					this.aByteArray74[local248] = (byte) local177[arg0.triangleTextureIndex[local248] & 0xFF];
 					if (this.aByteArray74[local248] == -1 && this.aShortArray92 != null) {
 						this.aShortArray92[local248] = -1;
 					}
@@ -963,9 +963,9 @@ public final class SoftwareModel extends Model {
 			local150.aShortArray90 = this.aShortArray90;
 			local150.aBoolean303 = this.aBoolean303;
 			if (arg0 == 3) {
-				local150.anIntArray528 = Static115.method2308(this.anIntArray528);
-				local150.anIntArray527 = Static115.method2308(this.anIntArray527);
-				local150.anIntArray531 = Static115.method2308(this.anIntArray531);
+				local150.anIntArray528 = RawModel.method2308(this.anIntArray528);
+				local150.anIntArray527 = RawModel.method2308(this.anIntArray527);
+				local150.anIntArray531 = RawModel.method2308(this.anIntArray531);
 			} else {
 				local150.anIntArray528 = this.anIntArray528;
 				local150.anIntArray527 = new int[local150.vertexCount];

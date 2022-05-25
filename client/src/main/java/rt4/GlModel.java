@@ -277,7 +277,7 @@ public final class GlModel extends Model {
 		@Pc(683) float local683;
 		@Pc(714) float local714;
 		@Pc(685) float local685;
-		if (arg0.faceTextureIndex != null) {
+		if (arg0.triangleTextureIndex != null) {
 			local439 = arg0.texturedCount;
 			@Pc(442) int[] local442 = new int[local439];
 			@Pc(445) int[] local445 = new int[local439];
@@ -296,8 +296,8 @@ public final class GlModel extends Model {
 			}
 			for (local459 = 0; local459 < this.anInt5297; local459++) {
 				@Pc(498) int local498 = local23[local459];
-				if (arg0.faceTextureIndex[local498] != -1) {
-					@Pc(511) int local511 = arg0.faceTextureIndex[local498] & 0xFF;
+				if (arg0.triangleTextureIndex[local498] != -1) {
+					@Pc(511) int local511 = arg0.triangleTextureIndex[local498] & 0xFF;
 					for (@Pc(513) int local513 = 0; local513 < 3; local513++) {
 						@Pc(523) int local523;
 						if (local513 == 0) {
@@ -378,10 +378,10 @@ public final class GlModel extends Model {
 				local822 = arg0.triangleTextures[local810];
 			}
 			@Pc(833) int local833;
-			if (arg0.faceTextureIndex == null) {
+			if (arg0.triangleTextureIndex == null) {
 				local833 = -1;
 			} else {
-				local833 = arg0.faceTextureIndex[local810];
+				local833 = arg0.triangleTextureIndex[local810];
 			}
 			@Pc(844) int local844;
 			if (arg0.triangleAlpha == null) {
@@ -2750,7 +2750,7 @@ public final class GlModel extends Model {
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(III)Lclient!th;")
 	@Override
-	public final Entity method4539() {
+	public final Entity createModel() {
 		this.aBoolean259 = false;
 		if (this.aClass23_1 != null) {
 			this.aShortArray76 = this.aClass23_1.aShortArray8;
@@ -2801,13 +2801,13 @@ public final class GlModel extends Model {
 			local3.anIntArray461 = this.anIntArray461;
 			local3.anIntArray466 = this.anIntArray466;
 		} else {
-			local3.anIntArray461 = Static115.method2308(this.anIntArray461);
-			local3.anIntArray466 = Static115.method2308(this.anIntArray466);
+			local3.anIntArray461 = RawModel.method2308(this.anIntArray461);
+			local3.anIntArray466 = RawModel.method2308(this.anIntArray466);
 		}
 		if (arg1) {
 			local3.anIntArray465 = this.anIntArray465;
 		} else {
-			local3.anIntArray465 = Static115.method2308(this.anIntArray465);
+			local3.anIntArray465 = RawModel.method2308(this.anIntArray465);
 		}
 		if (arg0 && arg1) {
 			local3.bounds = this.bounds;
