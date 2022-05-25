@@ -38,7 +38,7 @@ public final class IdkType {
 		@Pc(16) RawModel[] local16 = new RawModel[5];
 		for (@Pc(18) int local18 = 0; local18 < 5; local18++) {
 			if (this.headModels[local18] != -1) {
-				local16[local13++] = Static77.create(IdkTypeList.modelsArchive, this.headModels[local18]);
+				local16[local13++] = RawModel.create(IdkTypeList.modelsArchive, this.headModels[local18]);
 			}
 		}
 		@Pc(52) RawModel local52 = new RawModel(local16, local13);
@@ -114,7 +114,7 @@ public final class IdkType {
 		}
 		@Pc(16) RawModel[] local16 = new RawModel[this.bodyModels.length];
 		for (@Pc(18) int local18 = 0; local18 < this.bodyModels.length; local18++) {
-			local16[local18] = Static77.create(IdkTypeList.modelsArchive, this.bodyModels[local18]);
+			local16[local18] = RawModel.create(IdkTypeList.modelsArchive, this.bodyModels[local18]);
 		}
 		@Pc(56) RawModel local56;
 		if (local16.length == 1) {

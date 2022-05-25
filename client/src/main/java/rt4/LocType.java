@@ -253,7 +253,7 @@ public final class LocType {
 				}
 				local7 = (RawModel) LocTypeList.aClass99_24.get((long) local60);
 				if (local7 == null) {
-					local7 = Static77.create(LocTypeList.modelsArchive, local60 & 0xFFFF);
+					local7 = RawModel.create(LocTypeList.modelsArchive, local60 & 0xFFFF);
 					if (local7 == null) {
 						return null;
 					}
@@ -286,7 +286,7 @@ public final class LocType {
 			}
 			local7 = (RawModel) LocTypeList.aClass99_24.get((long) local48);
 			if (local7 == null) {
-				local7 = Static77.create(LocTypeList.modelsArchive, local48 & 0xFFFF);
+				local7 = RawModel.create(LocTypeList.modelsArchive, local48 & 0xFFFF);
 				if (local7 == null) {
 					return null;
 				}
@@ -651,7 +651,7 @@ public final class LocType {
 			if (local79 == null) {
 				@Pc(175) RawModel local175 = null;
 				for (local177 = 0; local177 < local24; local177++) {
-					local175 = Static77.create(LocTypeList.modelsArchive, this.models[local177] & 0xFFFF);
+					local175 = RawModel.create(LocTypeList.modelsArchive, this.models[local177] & 0xFFFF);
 					if (local175 == null) {
 						return null;
 					}
@@ -683,7 +683,7 @@ public final class LocType {
 			}
 			local79 = (GlModel) LocTypeList.aClass99_24.get((long) local26);
 			if (local79 == null) {
-				@Pc(90) RawModel local90 = Static77.create(LocTypeList.modelsArchive, local26 & 0xFFFF);
+				@Pc(90) RawModel local90 = RawModel.create(LocTypeList.modelsArchive, local26 & 0xFFFF);
 				if (local90 == null) {
 					return null;
 				}
@@ -811,7 +811,7 @@ public final class LocType {
 				local69.aShort19 = (short) (this.anInt4407 + 64);
 				local60 = local69;
 				local69.aShort18 = (short) (this.anInt4405 * 5 + 768);
-				local69.method1668();
+				local69.calculateNormals();
 			} else {
 				local60 = new SoftwareModel(local69, this.anInt4407 + 64, this.anInt4405 * 5 + 768, -50, -10, -50);
 			}
@@ -881,7 +881,7 @@ public final class LocType {
 			if (local46 == null) {
 				return null;
 			}
-			local46.method4099();
+			local46.createBones();
 			local46.method4111(false, false, false, false, false, true);
 			LocTypeList.aClass99_36.put(local46, local30);
 		}

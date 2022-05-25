@@ -61,10 +61,10 @@ public class ShadowModelList {
                 @Pc(252) short local252 = (short) (((arg6 & 0x7F) * local130 + (arg4 & 0x7F) * local126 & 0x7F00) + (local130 * (arg6 & 0x380) + local126 * (arg4 & 0x380) & 0x38000) + (local126 * (arg4 & 0xFC00) + (arg6 & 0xFC00) * local130 & 0xFC0000) >> 8);
                 for (local162 = 0; local162 < local41; local162++) {
                     if (local115 == 0) {
-                        local103.method1676(local109, local113[0][(local162 + 1) % local41], local113[0][local162], local252, local207);
+                        local103.addTriangle(local109, local113[0][(local162 + 1) % local41], local113[0][local162], local252, local207);
                     } else {
-                        local103.method1676(local113[local115 - 1][local162], local113[local115 - 1][(local162 + 1) % local41], local113[local115][(local162 + 1) % local41], local252, local207);
-                        local103.method1676(local113[local115 - 1][local162], local113[local115][(local162 + 1) % local41], local113[local115][local162], local252, local207);
+                        local103.addTriangle(local113[local115 - 1][local162], local113[local115 - 1][(local162 + 1) % local41], local113[local115][(local162 + 1) % local41], local252, local207);
+                        local103.addTriangle(local113[local115 - 1][local162], local113[local115][(local162 + 1) % local41], local113[local115][local162], local252, local207);
                     }
                 }
             }

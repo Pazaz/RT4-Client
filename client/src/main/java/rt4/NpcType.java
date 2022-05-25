@@ -262,7 +262,7 @@ public final class NpcType {
 			@Pc(84) RawModel[] local84 = new RawModel[this.modelIndices.length];
 			for (@Pc(86) int local86 = 0; local86 < this.modelIndices.length; local86++) {
 				if (this.modelIndices[local86] != -1) {
-					local84[local86] = Static77.create(NpcTypeList.modelsArchive, this.modelIndices[local86]);
+					local84[local86] = RawModel.create(NpcTypeList.modelsArchive, this.modelIndices[local86]);
 					if (this.anIntArrayArray29 != null && this.anIntArrayArray29[local86] != null && local84[local86] != null) {
 						local84[local86].translate(this.anIntArrayArray29[local86][0], this.anIntArrayArray29[local86][1], this.anIntArrayArray29[local86][2]);
 					}
@@ -536,7 +536,7 @@ public final class NpcType {
 				}
 				@Pc(82) RawModel[] local82 = new RawModel[this.anIntArray354.length];
 				for (@Pc(84) int local84 = 0; local84 < this.anIntArray354.length; local84++) {
-					local82[local84] = Static77.create(NpcTypeList.modelsArchive, this.anIntArray354[local84]);
+					local82[local84] = RawModel.create(NpcTypeList.modelsArchive, this.anIntArray354[local84]);
 				}
 				@Pc(119) RawModel local119;
 				if (local82.length == 1) {
