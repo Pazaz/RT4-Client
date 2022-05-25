@@ -8,7 +8,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public abstract class Entity {
 
 	@OriginalMember(owner = "client!th", name = "a", descriptor = "(III)Lclient!th;")
-	public Entity method4539() {
+	public Entity createModel() {
 		return this;
 	}
 

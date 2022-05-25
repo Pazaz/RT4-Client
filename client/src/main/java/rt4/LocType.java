@@ -315,9 +315,9 @@ public final class LocType {
 		}
 		@Pc(285) int local285 = arg0 & 0x3;
 		if (local285 == 1) {
-			local265.method1662();
+			local265.swapXz();
 		} else if (local285 == 2) {
-			local265.method1660();
+			local265.negateXz();
 		} else if (local285 == 3) {
 			local265.method1689();
 		}

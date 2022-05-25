@@ -68,21 +68,21 @@ public final class Static220 {
 							if (local27.aClass8_6 != null && local27.aClass8_6.method4543()) {
 								Static69.method1544(local27.aClass8_6, local1, local6, local11, 1, 1);
 								local27.primary.method4544(local27.aClass8_6, 0, 0, 0, false);
-								local27.aClass8_6 = local27.aClass8_6.method4539();
+								local27.aClass8_6 = local27.aClass8_6.createModel();
 							}
-							local27.primary = local27.primary.method4539();
+							local27.primary = local27.primary.createModel();
 						}
 						for (@Pc(83) int local83 = 0; local83 < local22.sceneryLen; local83++) {
 							@Pc(92) Scenery local92 = local22.scenery[local83];
 							if (local92 != null && local92.primary.method4543()) {
 								Static69.method1544(local92.primary, local1, local6, local11, local92.anInt1713 + 1 - local92.anInt1701, local92.anInt1698 - local92.anInt1696 + 1);
-								local92.primary = local92.primary.method4539();
+								local92.primary = local92.primary.createModel();
 							}
 						}
 						@Pc(131) GroundDecor local131 = local22.groundDecor;
 						if (local131 != null && local131.primary.method4543()) {
 							Static264.method3574(local131.primary, local1, local6, local11);
-							local131.primary = local131.primary.method4539();
+							local131.primary = local131.primary.createModel();
 						}
 					}
 				}
