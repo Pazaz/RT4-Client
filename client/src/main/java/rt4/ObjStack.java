@@ -28,13 +28,13 @@ public final class ObjStack extends Entity {
 		@Pc(16) Model local16 = ObjTypeList.get(this.type).getModel(-1, 0, null, this.anInt5550, 0);
 		if (local16 != null) {
 			local16.render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
-			this.anInt5553 = local16.getMaxY();
+			this.anInt5553 = local16.getMinY();
 		}
 	}
 
 	@OriginalMember(owner = "client!uj", name = "b", descriptor = "()I")
 	@Override
-	public final int getMaxY() {
+	public final int getMinY() {
 		return this.anInt5553;
 	}
 }

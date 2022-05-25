@@ -266,7 +266,7 @@ public final class Static247 {
 													local616.aClass8_6.render(0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local616.anInt3048 - Static149.anInt3555, local616.anInt3051 - Static123.anInt3947, local616.anInt3044 - Static217.anInt4903, local616.key, local24, null);
 												}
 											}
-											if (local619 != null && !method4611(local27, local18, local21, local619.primary.getMaxY())) {
+											if (local619 != null && !method4611(local27, local18, local21, local619.primary.getMinY())) {
 												if (GlRenderer.enabled) {
 													GlRenderer.method4159(local33 - 0.5F);
 												}
@@ -499,7 +499,7 @@ public final class Static247 {
 												}
 												@Pc(1697) Scenery local1697 = SceneGraph.aClass31Array2[local115];
 												local1697.anInt1707 = Static13.anInt437;
-												if (!Static73.method1599(local27, local1697.anInt1701, local1697.anInt1713, local1697.anInt1696, local1697.anInt1698, local1697.primary.getMaxY())) {
+												if (!Static73.method1599(local27, local1697.anInt1701, local1697.anInt1713, local1697.anInt1696, local1697.anInt1698, local1697.primary.getMinY())) {
 													if (GlRenderer.enabled) {
 														if ((local1697.key & 0xFC000L) == 147456L) {
 															LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
@@ -583,7 +583,7 @@ public final class Static247 {
 			}
 			if (local8.anInt670 != 0) {
 				@Pc(2109) WallDecor local2109 = local8.wallDecor;
-				if (local2109 != null && !method4611(local27, local18, local21, local2109.primary.getMaxY())) {
+				if (local2109 != null && !method4611(local27, local18, local21, local2109.primary.getMinY())) {
 					if ((local2109.anInt1395 & local8.anInt670) != 0) {
 						if (GlRenderer.enabled) {
 							LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);

@@ -78,7 +78,7 @@ public final class SpotAnim extends Entity {
 
 	@OriginalMember(owner = "client!bh", name = "b", descriptor = "()I")
 	@Override
-	public final int getMaxY() {
+	public final int getMinY() {
 		return this.anInt603;
 	}
 
@@ -88,7 +88,7 @@ public final class SpotAnim extends Entity {
 		@Pc(7) Model local7 = this.method552();
 		if (local7 != null) {
 			local7.render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.aClass47_Sub1_1);
-			this.anInt603 = local7.getMaxY();
+			this.anInt603 = local7.getMinY();
 		}
 	}
 

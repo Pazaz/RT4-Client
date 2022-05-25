@@ -229,7 +229,7 @@ public final class GlModel extends Model {
 		this.anIntArray465 = arg0.vertexY;
 		this.anIntArray466 = arg0.vertexZ;
 		this.anIntArray464 = arg0.vertexBones;
-		this.aShortArray84 = arg0.aShortArray29;
+		this.aShortArray84 = arg0.vertexSources;
 		local117 = this.anInt5297 * 3;
 		this.aShortArray76 = new short[local117];
 		this.aShortArray79 = new short[local117];
@@ -1844,7 +1844,7 @@ public final class GlModel extends Model {
 
 	@OriginalMember(owner = "client!td", name = "b", descriptor = "()I")
 	@Override
-	public final int getMaxY() {
+	public final int getMinY() {
 		if (!this.vertexBuffer.valid) {
 			this.method4108();
 		}

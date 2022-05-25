@@ -525,7 +525,7 @@ public abstract class PathingEntity extends Entity {
 		this.anInt3383 += this.anInt3355;
 		if (this.anInt3383 != 0) {
 			local101 = this.anInt3383 >> 5 & 0x7FF;
-			local106 = arg0.getMaxY() / 2;
+			local106 = arg0.getMinY() / 2;
 			arg0.translate(0, -local106, 0);
 			arg0.rotateZ(local101);
 			arg0.translate(0, local106, 0);
@@ -616,7 +616,7 @@ public abstract class PathingEntity extends Entity {
 			return;
 		}
 		local101 = this.anInt3427 >> 5 & 0x7FF;
-		local106 = arg0.getMaxY() / 2;
+		local106 = arg0.getMinY() / 2;
 		arg0.translate(0, -local106, 0);
 		arg0.rotateX(local101);
 		arg0.translate(0, local106, 0);

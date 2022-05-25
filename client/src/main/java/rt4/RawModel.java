@@ -27,7 +27,7 @@ public final class RawModel extends Entity {
 	public byte[] triangleAlpha;
 
 	@OriginalMember(owner = "client!gb", name = "t", descriptor = "S")
-	private short aShort13;
+	private short maxY;
 
 	@OriginalMember(owner = "client!gb", name = "u", descriptor = "[B")
 	public byte[] textureRotationY;
@@ -39,7 +39,7 @@ public final class RawModel extends Entity {
 	public int[] triangleBones;
 
 	@OriginalMember(owner = "client!gb", name = "z", descriptor = "S")
-	private short aShort14;
+	private short minX;
 
 	@OriginalMember(owner = "client!gb", name = "A", descriptor = "[S")
 	public short[] texturesScaleZ;
@@ -48,7 +48,7 @@ public final class RawModel extends Entity {
 	public byte[] aByteArray28;
 
 	@OriginalMember(owner = "client!gb", name = "D", descriptor = "S")
-	private short maxY;
+	private short minY;
 
 	@OriginalMember(owner = "client!gb", name = "E", descriptor = "[S")
 	public short[] aShortArray22;
@@ -93,10 +93,10 @@ public final class RawModel extends Entity {
 	public VertexNormal[] vertexNormals;
 
 	@OriginalMember(owner = "client!gb", name = "X", descriptor = "S")
-	private short aShort16;
+	private short maxX;
 
 	@OriginalMember(owner = "client!gb", name = "Y", descriptor = "S")
-	private short aShort17;
+	private short maxZ;
 
 	@OriginalMember(owner = "client!gb", name = "ab", descriptor = "S")
 	public short aShort18;
@@ -111,7 +111,7 @@ public final class RawModel extends Entity {
 	public short aShort19;
 
 	@OriginalMember(owner = "client!gb", name = "eb", descriptor = "S")
-	private short aShort20;
+	private short minZ;
 
 	@OriginalMember(owner = "client!gb", name = "fb", descriptor = "[I")
 	public int[] vertexY;
@@ -147,7 +147,7 @@ public final class RawModel extends Entity {
 	public int[] vertexZ;
 
 	@OriginalMember(owner = "client!gb", name = "rb", descriptor = "[S")
-	public short[] aShortArray29;
+	public short[] vertexSources;
 
 	@OriginalMember(owner = "client!gb", name = "C", descriptor = "Z")
 	private boolean boundsValid = false;
@@ -175,25 +175,25 @@ public final class RawModel extends Entity {
 	}
 
 	@OriginalMember(owner = "client!gb", name = "<init>", descriptor = "(III)V")
-	public RawModel(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		this.vertexX = new int[arg0];
-		this.vertexY = new int[arg0];
-		this.vertexZ = new int[arg0];
-		this.vertexBones = new int[arg0];
-		this.triangleVertexA = new int[arg1];
-		this.triangleVertexB = new int[arg1];
-		this.triangleVertexC = new int[arg1];
-		this.triangleInfo = new byte[arg1];
-		this.trianglePriorities = new byte[arg1];
-		this.triangleAlpha = new byte[arg1];
-		this.triangleColors = new short[arg1];
-		this.triangleTextures = new short[arg1];
-		this.faceTextureIndex = new byte[arg1];
-		this.triangleBones = new int[arg1];
+	public RawModel(@OriginalArg(0) int vertexCount, @OriginalArg(1) int triangleCount, @OriginalArg(2) int arg2) {
+		this.vertexX = new int[vertexCount];
+		this.vertexY = new int[vertexCount];
+		this.vertexZ = new int[vertexCount];
+		this.vertexBones = new int[vertexCount];
+		this.triangleVertexA = new int[triangleCount];
+		this.triangleVertexB = new int[triangleCount];
+		this.triangleVertexC = new int[triangleCount];
+		this.triangleInfo = new byte[triangleCount];
+		this.trianglePriorities = new byte[triangleCount];
+		this.triangleAlpha = new byte[triangleCount];
+		this.triangleColors = new short[triangleCount];
+		this.triangleTextures = new short[triangleCount];
+		this.faceTextureIndex = new byte[triangleCount];
+		this.triangleBones = new int[triangleCount];
 	}
 
 	@OriginalMember(owner = "client!gb", name = "<init>", descriptor = "([Lclient!gb;I)V")
-	public RawModel(@OriginalArg(0) RawModel[] arg0, @OriginalArg(1) int arg1) {
+	public RawModel(@OriginalArg(0) RawModel[] models, @OriginalArg(1) int arg1) {
 		@Pc(15) boolean local15 = false;
 		@Pc(17) boolean local17 = false;
 		@Pc(19) boolean local19 = false;
@@ -206,7 +206,7 @@ public final class RawModel extends Entity {
 		this.priority = -1;
 		@Pc(43) int local43;
 		for (local43 = 0; local43 < arg1; local43++) {
-			@Pc(50) RawModel local50 = arg0[local43];
+			@Pc(50) RawModel local50 = models[local43];
 			if (local50 != null) {
 				this.vertexCount += local50.vertexCount;
 				this.triangleCount += local50.triangleCount;
@@ -232,7 +232,7 @@ public final class RawModel extends Entity {
 		this.vertexY = new int[this.vertexCount];
 		this.vertexZ = new int[this.vertexCount];
 		this.vertexBones = new int[this.vertexCount];
-		this.aShortArray29 = new short[this.vertexCount];
+		this.vertexSources = new short[this.vertexCount];
 		this.triangleVertexA = new int[this.triangleCount];
 		this.triangleVertexB = new int[this.triangleCount];
 		this.triangleVertexC = new int[this.triangleCount];
@@ -275,7 +275,7 @@ public final class RawModel extends Entity {
 		this.texturedCount = 0;
 		for (local43 = 0; local43 < arg1; local43++) {
 			@Pc(323) short local323 = (short) (0x1 << local43);
-			@Pc(327) RawModel local327 = arg0[local43];
+			@Pc(327) RawModel local327 = models[local43];
 			if (local327 != null) {
 				@Pc(331) int local331;
 				for (local331 = 0; local331 < local327.triangleCount; local331++) {
@@ -311,17 +311,17 @@ public final class RawModel extends Entity {
 					}
 					this.triangleColors[this.triangleCount] = local327.triangleColors[local331];
 					this.aShortArray22[this.triangleCount] = local323;
-					this.triangleVertexA[this.triangleCount] = this.method1666(local327, local327.triangleVertexA[local331], local323);
-					this.triangleVertexB[this.triangleCount] = this.method1666(local327, local327.triangleVertexB[local331], local323);
-					this.triangleVertexC[this.triangleCount] = this.method1666(local327, local327.triangleVertexC[local331], local323);
+					this.triangleVertexA[this.triangleCount] = this.addVertex(local327, local327.triangleVertexA[local331], local323);
+					this.triangleVertexB[this.triangleCount] = this.addVertex(local327, local327.triangleVertexB[local331], local323);
+					this.triangleVertexC[this.triangleCount] = this.addVertex(local327, local327.triangleVertexC[local331], local323);
 					this.triangleCount++;
 				}
 				for (local331 = 0; local331 < local327.texturedCount; local331++) {
 					@Pc(530) byte local530 = this.textureTypes[this.texturedCount] = local327.textureTypes[local331];
 					if (local530 == 0) {
-						this.textureFacesP[this.texturedCount] = (short) this.method1666(local327, local327.textureFacesP[local331], local323);
-						this.textureFacesM[this.texturedCount] = (short) this.method1666(local327, local327.textureFacesM[local331], local323);
-						this.textureFacesN[this.texturedCount] = (short) this.method1666(local327, local327.textureFacesN[local331], local323);
+						this.textureFacesP[this.texturedCount] = (short) this.addVertex(local327, local327.textureFacesP[local331], local323);
+						this.textureFacesM[this.texturedCount] = (short) this.addVertex(local327, local327.textureFacesM[local331], local323);
+						this.textureFacesN[this.texturedCount] = (short) this.addVertex(local327, local327.textureFacesN[local331], local323);
 					}
 					if (local530 >= 1 && local530 <= 3) {
 						this.textureFacesP[this.texturedCount] = local327.textureFacesP[local331];
@@ -345,70 +345,70 @@ public final class RawModel extends Entity {
 	}
 
 	@OriginalMember(owner = "client!gb", name = "<init>", descriptor = "(Lclient!gb;ZZZZ)V")
-	public RawModel(@OriginalArg(0) RawModel arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) boolean arg3, @OriginalArg(4) boolean arg4) {
-		this.vertexCount = arg0.vertexCount;
-		this.triangleCount = arg0.triangleCount;
-		this.texturedCount = arg0.texturedCount;
+	public RawModel(@OriginalArg(0) RawModel other, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) boolean arg3, @OriginalArg(4) boolean arg4) {
+		this.vertexCount = other.vertexCount;
+		this.triangleCount = other.triangleCount;
+		this.texturedCount = other.texturedCount;
 		@Pc(57) int local57;
 		if (arg1) {
-			this.vertexX = arg0.vertexX;
-			this.vertexY = arg0.vertexY;
-			this.vertexZ = arg0.vertexZ;
+			this.vertexX = other.vertexX;
+			this.vertexY = other.vertexY;
+			this.vertexZ = other.vertexZ;
 		} else {
 			this.vertexX = new int[this.vertexCount];
 			this.vertexY = new int[this.vertexCount];
 			this.vertexZ = new int[this.vertexCount];
 			for (local57 = 0; local57 < this.vertexCount; local57++) {
-				this.vertexX[local57] = arg0.vertexX[local57];
-				this.vertexY[local57] = arg0.vertexY[local57];
-				this.vertexZ[local57] = arg0.vertexZ[local57];
+				this.vertexX[local57] = other.vertexX[local57];
+				this.vertexY[local57] = other.vertexY[local57];
+				this.vertexZ[local57] = other.vertexZ[local57];
 			}
 		}
 		if (arg2) {
-			this.triangleColors = arg0.triangleColors;
+			this.triangleColors = other.triangleColors;
 		} else {
 			this.triangleColors = new short[this.triangleCount];
 			for (local57 = 0; local57 < this.triangleCount; local57++) {
-				this.triangleColors[local57] = arg0.triangleColors[local57];
+				this.triangleColors[local57] = other.triangleColors[local57];
 			}
 		}
-		if (arg3 || arg0.triangleTextures == null) {
-			this.triangleTextures = arg0.triangleTextures;
+		if (arg3 || other.triangleTextures == null) {
+			this.triangleTextures = other.triangleTextures;
 		} else {
 			this.triangleTextures = new short[this.triangleCount];
 			for (local57 = 0; local57 < this.triangleCount; local57++) {
-				this.triangleTextures[local57] = arg0.triangleTextures[local57];
+				this.triangleTextures[local57] = other.triangleTextures[local57];
 			}
 		}
-		this.triangleAlpha = arg0.triangleAlpha;
-		this.triangleVertexA = arg0.triangleVertexA;
-		this.triangleVertexB = arg0.triangleVertexB;
-		this.triangleVertexC = arg0.triangleVertexC;
-		this.triangleInfo = arg0.triangleInfo;
-		this.trianglePriorities = arg0.trianglePriorities;
-		this.faceTextureIndex = arg0.faceTextureIndex;
-		this.priority = arg0.priority;
-		this.textureTypes = arg0.textureTypes;
-		this.textureFacesP = arg0.textureFacesP;
-		this.textureFacesM = arg0.textureFacesM;
-		this.textureFacesN = arg0.textureFacesN;
-		this.texturesScaleX = arg0.texturesScaleX;
-		this.texturesScaleY = arg0.texturesScaleY;
-		this.texturesScaleZ = arg0.texturesScaleZ;
-		this.textureRotationY = arg0.textureRotationY;
-		this.aByteArray32 = arg0.aByteArray32;
-		this.aByteArray34 = arg0.aByteArray34;
-		this.aByteArray28 = arg0.aByteArray28;
-		this.aByteArray33 = arg0.aByteArray33;
-		this.vertexBones = arg0.vertexBones;
-		this.triangleBones = arg0.triangleBones;
-		this.boneVertices = arg0.boneVertices;
-		this.boneTriangles = arg0.boneTriangles;
-		this.vertexNormals = arg0.vertexNormals;
-		this.triangleNormals = arg0.triangleNormals;
-		this.aClass57Array2 = arg0.aClass57Array2;
-		this.aShort19 = arg0.aShort19;
-		this.aShort18 = arg0.aShort18;
+		this.triangleAlpha = other.triangleAlpha;
+		this.triangleVertexA = other.triangleVertexA;
+		this.triangleVertexB = other.triangleVertexB;
+		this.triangleVertexC = other.triangleVertexC;
+		this.triangleInfo = other.triangleInfo;
+		this.trianglePriorities = other.trianglePriorities;
+		this.faceTextureIndex = other.faceTextureIndex;
+		this.priority = other.priority;
+		this.textureTypes = other.textureTypes;
+		this.textureFacesP = other.textureFacesP;
+		this.textureFacesM = other.textureFacesM;
+		this.textureFacesN = other.textureFacesN;
+		this.texturesScaleX = other.texturesScaleX;
+		this.texturesScaleY = other.texturesScaleY;
+		this.texturesScaleZ = other.texturesScaleZ;
+		this.textureRotationY = other.textureRotationY;
+		this.aByteArray32 = other.aByteArray32;
+		this.aByteArray34 = other.aByteArray34;
+		this.aByteArray28 = other.aByteArray28;
+		this.aByteArray33 = other.aByteArray33;
+		this.vertexBones = other.vertexBones;
+		this.triangleBones = other.triangleBones;
+		this.boneVertices = other.boneVertices;
+		this.boneTriangles = other.boneTriangles;
+		this.vertexNormals = other.vertexNormals;
+		this.triangleNormals = other.triangleNormals;
+		this.aClass57Array2 = other.aClass57Array2;
+		this.aShort19 = other.aShort19;
+		this.aShort18 = other.aShort18;
 	}
 
 	@OriginalMember(owner = "client!gb", name = "a", descriptor = "([[III)I")
@@ -467,50 +467,60 @@ public final class RawModel extends Entity {
 		if (this.boundsValid) {
 			return;
 		}
+
 		this.boundsValid = true;
-		@Pc(8) int local8 = 32767;
-		@Pc(10) int local10 = 32767;
-		@Pc(12) int local12 = 32767;
-		@Pc(14) int local14 = -32768;
-		@Pc(16) int local16 = -32768;
-		@Pc(18) int local18 = -32768;
-		for (@Pc(20) int local20 = 0; local20 < this.vertexCount; local20++) {
-			@Pc(29) int local29 = this.vertexX[local20];
-			@Pc(34) int local34 = this.vertexY[local20];
-			@Pc(39) int local39 = this.vertexZ[local20];
-			if (local29 < local8) {
-				local8 = local29;
+
+		@Pc(8) int minX = 32767;
+		@Pc(10) int minY = 32767;
+		@Pc(12) int minZ = 32767;
+		@Pc(14) int maxX = -32768;
+		@Pc(16) int maxY = -32768;
+		@Pc(18) int maxZ = -32768;
+
+		for (@Pc(20) int v = 0; v < this.vertexCount; v++) {
+			@Pc(29) int x = this.vertexX[v];
+			@Pc(34) int y = this.vertexY[v];
+			@Pc(39) int z = this.vertexZ[v];
+
+			if (x < minX) {
+				minX = x;
 			}
-			if (local29 > local14) {
-				local14 = local29;
+
+			if (x > maxX) {
+				maxX = x;
 			}
-			if (local34 < local10) {
-				local10 = local34;
+
+			if (y < minY) {
+				minY = y;
 			}
-			if (local34 > local16) {
-				local16 = local34;
+
+			if (y > maxY) {
+				maxY = y;
 			}
-			if (local39 < local12) {
-				local12 = local39;
+
+			if (z < minZ) {
+				minZ = z;
 			}
-			if (local39 > local18) {
-				local18 = local39;
+
+			if (z > maxZ) {
+				maxZ = z;
 			}
 		}
-		this.aShort14 = (short) local8;
-		this.aShort16 = (short) local14;
-		this.maxY = (short) local10;
-		this.aShort13 = (short) local16;
-		this.aShort20 = (short) local12;
-		this.aShort17 = (short) local18;
+
+		this.minX = (short) minX;
+		this.maxX = (short) maxX;
+		this.minY = (short) minY;
+		this.maxY = (short) maxY;
+		this.minZ = (short) minZ;
+		this.maxZ = (short) maxZ;
 	}
 
 	@OriginalMember(owner = "client!gb", name = "b", descriptor = "(III)V")
-	public final void method1665(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		for (@Pc(1) int local1 = 0; local1 < this.vertexCount; local1++) {
-			this.vertexX[local1] = this.vertexX[local1] * arg0 / 128;
-			this.vertexY[local1] = this.vertexY[local1] * arg1 / 128;
-			this.vertexZ[local1] = this.vertexZ[local1] * arg2 / 128;
+	public final void resize(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int z) {
+		for (@Pc(1) int v = 0; v < this.vertexCount; v++) {
+			this.vertexX[v] = this.vertexX[v] * x / 128;
+			this.vertexY[v] = this.vertexY[v] * y / 128;
+			this.vertexZ[v] = this.vertexZ[v] * z / 128;
 		}
 		this.invalidate();
 	}
@@ -522,23 +532,27 @@ public final class RawModel extends Entity {
 	}
 
 	@OriginalMember(owner = "client!gb", name = "a", descriptor = "(Lclient!gb;IS)I")
-	private int method1666(@OriginalArg(0) RawModel arg0, @OriginalArg(1) int arg1, @OriginalArg(2) short arg2) {
-		@Pc(4) int local4 = arg0.vertexX[arg1];
-		@Pc(9) int local9 = arg0.vertexY[arg1];
-		@Pc(14) int local14 = arg0.vertexZ[arg1];
-		for (@Pc(16) int local16 = 0; local16 < this.vertexCount; local16++) {
-			if (local4 == this.vertexX[local16] && local9 == this.vertexY[local16] && local14 == this.vertexZ[local16]) {
-				this.aShortArray29[local16] |= arg2;
-				return local16;
+	private int addVertex(@OriginalArg(0) RawModel m, @OriginalArg(1) int vertex, @OriginalArg(2) short source) {
+		@Pc(4) int x = m.vertexX[vertex];
+		@Pc(9) int y = m.vertexY[vertex];
+		@Pc(14) int z = m.vertexZ[vertex];
+
+		for (@Pc(16) int i = 0; i < this.vertexCount; i++) {
+			if (x == this.vertexX[i] && y == this.vertexY[i] && z == this.vertexZ[i]) {
+				this.vertexSources[i] |= source;
+				return i;
 			}
 		}
-		this.vertexX[this.vertexCount] = local4;
-		this.vertexY[this.vertexCount] = local9;
-		this.vertexZ[this.vertexCount] = local14;
-		this.aShortArray29[this.vertexCount] = arg2;
-		if (arg0.vertexBones != null) {
-			this.vertexBones[this.vertexCount] = arg0.vertexBones[arg1];
+
+		this.vertexX[this.vertexCount] = x;
+		this.vertexY[this.vertexCount] = y;
+		this.vertexZ[this.vertexCount] = z;
+		this.vertexSources[this.vertexCount] = source;
+
+		if (m.vertexBones != null) {
+			this.vertexBones[this.vertexCount] = m.vertexBones[vertex];
 		}
+
 		return this.vertexCount++;
 	}
 
@@ -670,10 +684,10 @@ public final class RawModel extends Entity {
 	@OriginalMember(owner = "client!gb", name = "a", descriptor = "(II[[I[[IIIIZZ)Lclient!gb;")
 	public final RawModel method1670(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int[][] arg2, @OriginalArg(3) int[][] arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6) {
 		this.calculateBounds();
-		@Pc(6) int local6 = arg4 + this.aShort14;
-		@Pc(11) int local11 = arg4 + this.aShort16;
-		@Pc(16) int local16 = arg6 + this.aShort20;
-		@Pc(21) int local21 = arg6 + this.aShort17;
+		@Pc(6) int local6 = arg4 + this.minX;
+		@Pc(11) int local11 = arg4 + this.maxX;
+		@Pc(16) int local16 = arg6 + this.minZ;
+		@Pc(21) int local21 = arg6 + this.maxZ;
 		if ((arg0 == 1 || arg0 == 2 || arg0 == 3 || arg0 == 5) && (local6 < 0 || local11 + 128 >> 7 >= arg2.length || local16 < 0 || local21 + 128 >> 7 >= arg2[0].length)) {
 			return this;
 		}
@@ -764,7 +778,7 @@ public final class RawModel extends Entity {
 			@Pc(547) int local547;
 			if (arg0 == 2) {
 				for (local326 = 0; local326 < local147.vertexCount; local326++) {
-					local337 = (this.vertexY[local326] << 16) / this.maxY;
+					local337 = (this.vertexY[local326] << 16) / this.minY;
 					if (local337 < arg1) {
 						local344 = this.vertexX[local326] + arg4;
 						local348 = this.vertexZ[local326] + arg6;
@@ -785,7 +799,7 @@ public final class RawModel extends Entity {
 				local337 = (arg1 >> 8 & 0xFF) * 4;
 				this.method1667(arg2, arg4, arg5, arg6, local326, local337);
 			} else if (arg0 == 4) {
-				local326 = this.aShort13 - this.maxY;
+				local326 = this.maxY - this.minY;
 				for (local337 = 0; local337 < this.vertexCount; local337++) {
 					local344 = this.vertexX[local337] + arg4;
 					local348 = this.vertexZ[local337] + arg6;
@@ -799,7 +813,7 @@ public final class RawModel extends Entity {
 					local147.vertexY[local337] = this.vertexY[local337] + local547 + local326 - arg5;
 				}
 			} else if (arg0 == 5) {
-				local326 = this.aShort13 - this.maxY;
+				local326 = this.maxY - this.minY;
 				for (local337 = 0; local337 < this.vertexCount; local337++) {
 					local344 = this.vertexX[local337] + arg4;
 					local348 = this.vertexZ[local337] + arg6;
@@ -924,7 +938,7 @@ public final class RawModel extends Entity {
 			offset += triangleCount;
 		}
 
-		@Pc(177) int tri = offset;
+		@Pc(177) int triangleTypeDataOffset = offset;
 		offset += triangleCount;
 
 		@Pc(183) int trianglePriorityDataOffset = offset;
@@ -1133,7 +1147,7 @@ public final class RawModel extends Entity {
 		}
 
 		buffer1.offset = vertexIndexDataOffset;
-		buffer2.offset = tri;
+		buffer2.offset = triangleTypeDataOffset;
 
 		int a = 0;
 		int b = 0;
@@ -1141,8 +1155,8 @@ public final class RawModel extends Entity {
 		int last = 0;
 
 		for (int n = 0; n < triangleCount; n++) {
-			int flags = buffer2.g1();
-			if (flags == 1) {
+			int type = buffer2.g1();
+			if (type == 1) {
 				a = buffer1.gSmart1or2s() + last;
 				b = buffer1.gSmart1or2s() + a;
 				c = buffer1.gSmart1or2s() + b;
@@ -1150,21 +1164,21 @@ public final class RawModel extends Entity {
 				this.triangleVertexA[n] = a;
 				this.triangleVertexB[n] = b;
 				this.triangleVertexC[n] = c;
-			} else if (flags == 2) {
+			} else if (type == 2) {
 				b = c;
 				c = buffer1.gSmart1or2s() + last;
 				last = c;
 				this.triangleVertexA[n] = a;
 				this.triangleVertexB[n] = b;
 				this.triangleVertexC[n] = c;
-			} else if (flags == 3) {
+			} else if (type == 3) {
 				a = c;
 				c = buffer1.gSmart1or2s() + last;
 				last = c;
 				this.triangleVertexA[n] = a;
 				this.triangleVertexB[n] = b;
 				this.triangleVertexC[n] = c;
-			} else if (flags == 4) {
+			} else if (type == 4) {
 				@Pc(803) int b0 = a;
 				a = b;
 				b = b0;
@@ -1184,12 +1198,12 @@ public final class RawModel extends Entity {
 		buffer6.offset = local304;
 
 		for (int n = 0; n < texturedCount; n++) {
-			int flags = this.textureTypes[n] & 0xFF;
-			if (flags == 0) {
+			int type = this.textureTypes[n] & 0xFF;
+			if (type == 0) {
 				this.textureFacesP[n] = (short) buffer1.g2();
 				this.textureFacesM[n] = (short) buffer1.g2();
 				this.textureFacesN[n] = (short) buffer1.g2();
-			} else if (flags == 1) {
+			} else if (type == 1) {
 				this.textureFacesP[n] = (short) buffer2.g2();
 				this.textureFacesM[n] = (short) buffer2.g2();
 				this.textureFacesN[n] = (short) buffer2.g2();
@@ -1199,7 +1213,7 @@ public final class RawModel extends Entity {
 				this.textureRotationY[n] = buffer4.g1s();
 				this.aByteArray32[n] = buffer5.g1s();
 				this.aByteArray34[n] = buffer6.g1s();
-			} else if (flags == 2) {
+			} else if (type == 2) {
 				this.textureFacesP[n] = (short) buffer2.g2();
 				this.textureFacesM[n] = (short) buffer2.g2();
 				this.textureFacesN[n] = (short) buffer2.g2();
@@ -1211,7 +1225,7 @@ public final class RawModel extends Entity {
 				this.aByteArray34[n] = buffer6.g1s();
 				this.aByteArray28[n] = buffer6.g1s();
 				this.aByteArray33[n] = buffer6.g1s();
-			} else if (flags == 3) {
+			} else if (type == 3) {
 				this.textureFacesP[n] = (short) buffer2.g2();
 				this.textureFacesM[n] = (short) buffer2.g2();
 				this.textureFacesN[n] = (short) buffer2.g2();
@@ -1335,15 +1349,16 @@ public final class RawModel extends Entity {
 
 	@OriginalMember(owner = "client!gb", name = "b", descriptor = "()I")
 	@Override
-	public final int getMaxY() {
+	public final int getMinY() {
 		if (!this.boundsValid) {
 			this.calculateBounds();
 		}
-		return this.maxY;
+
+		return this.minY;
 	}
 
 	@OriginalMember(owner = "client!gb", name = "k", descriptor = "()V")
-	public final void method1681() {
+	public final void resetBones() {
 		this.vertexBones = null;
 		this.triangleBones = null;
 		this.boneVertices = null;
@@ -1365,11 +1380,11 @@ public final class RawModel extends Entity {
 			@Pc(29) VertexNormal local29 = this.vertexNormals[local20];
 			if (local29.triangles != 0) {
 				@Pc(40) int local40 = this.vertexY[local20] - arg2;
-				if (local40 >= m.maxY && local40 <= m.aShort13) {
+				if (local40 >= m.minY && local40 <= m.maxY) {
 					@Pc(56) int local56 = this.vertexX[local20] - arg1;
-					if (local56 >= m.aShort14 && local56 <= m.aShort16) {
+					if (local56 >= m.minX && local56 <= m.maxX) {
 						@Pc(72) int local72 = this.vertexZ[local20] - arg3;
-						if (local72 >= m.aShort20 && local72 <= m.aShort17) {
+						if (local72 >= m.minZ && local72 <= m.maxZ) {
 							for (@Pc(83) int local83 = 0; local83 < local18; local83++) {
 								@Pc(91) VertexNormal local91 = m.vertexNormals[local83];
 								if (local56 == local15[local83] && local72 == m.vertexZ[local83] && local40 == m.vertexY[local83] && local91.triangles != 0) {
@@ -1542,251 +1557,292 @@ public final class RawModel extends Entity {
 	}
 
 	@OriginalMember(owner = "client!gb", name = "b", descriptor = "(SS)V")
-	public final void recolor(@OriginalArg(0) short arg0, @OriginalArg(1) short arg1) {
-		for (@Pc(1) int local1 = 0; local1 < this.triangleCount; local1++) {
-			if (this.triangleColors[local1] == arg0) {
-				this.triangleColors[local1] = arg1;
+	public final void recolor(@OriginalArg(0) short src, @OriginalArg(1) short dest) {
+		for (@Pc(1) int i = 0; i < this.triangleCount; i++) {
+			if (this.triangleColors[i] == src) {
+				this.triangleColors[i] = dest;
 			}
 		}
 	}
 
 	@OriginalMember(owner = "client!gb", name = "b", descriptor = "([B)V")
-	private void decodeOld(@OriginalArg(0) byte[] arg0) {
-		@Pc(1) boolean local1 = false;
-		@Pc(3) boolean local3 = false;
-		@Pc(8) Buffer local8 = new Buffer(arg0);
-		@Pc(13) Buffer local13 = new Buffer(arg0);
-		@Pc(18) Buffer local18 = new Buffer(arg0);
-		@Pc(23) Buffer local23 = new Buffer(arg0);
-		@Pc(28) Buffer local28 = new Buffer(arg0);
-		local8.offset = arg0.length - 18;
-		@Pc(38) int local38 = local8.g2();
-		@Pc(42) int local42 = local8.g2();
-		@Pc(46) int local46 = local8.g1();
-		@Pc(50) int local50 = local8.g1();
-		@Pc(54) int local54 = local8.g1();
-		@Pc(58) int local58 = local8.g1();
-		@Pc(62) int local62 = local8.g1();
-		@Pc(66) int local66 = local8.g1();
-		@Pc(70) int local70 = local8.g2();
-		@Pc(74) int local74 = local8.g2();
-		@Pc(78) int local78 = local8.g2();
-		@Pc(82) int local82 = local8.g2();
-		@Pc(90) int local90 = local38;
-		@Pc(92) int local92 = local90;
-		local90 += local42;
-		@Pc(98) int local98 = local90;
-		if (local54 == 255) {
-			local90 += local42;
+	private void decodeOld(@OriginalArg(0) byte[] src) {
+		@Pc(1) boolean hasColor = false; // might be incorrect, should confirm later
+		@Pc(3) boolean hasTextures = false;
+
+		@Pc(8) Buffer buffer1 = new Buffer(src);
+		@Pc(13) Buffer buffer2 = new Buffer(src);
+		@Pc(18) Buffer buffer3 = new Buffer(src);
+		@Pc(23) Buffer buffer4 = new Buffer(src);
+		@Pc(28) Buffer buffer5 = new Buffer(src);
+		buffer1.offset = src.length - 18;
+
+		@Pc(38) int vertexCount = buffer1.g2();
+		@Pc(42) int triangleCount = buffer1.g2();
+		@Pc(46) int texturedCount = buffer1.g1();
+
+		@Pc(50) int hasTriangleInfo = buffer1.g1();
+		@Pc(54) int hasPriorities = buffer1.g1();
+		@Pc(58) int hasAlpha = buffer1.g1();
+		@Pc(62) int hasTriangleBones = buffer1.g1();
+		@Pc(66) int hasVertexBones = buffer1.g1();
+
+		@Pc(70) int local70 = buffer1.g2();
+		@Pc(74) int local74 = buffer1.g2();
+		@Pc(78) int local78 = buffer1.g2();
+		@Pc(82) int local82 = buffer1.g2();
+
+		@Pc(90) int offset = vertexCount;
+
+		@Pc(92) int triangleTypeDataOffset = offset;
+		offset += triangleCount;
+
+		@Pc(98) int trianglePriorityDataOffset = offset;
+		if (hasPriorities == 255) {
+			offset += triangleCount;
 		}
-		@Pc(107) int local107 = local90;
-		if (local62 == 1) {
-			local90 += local42;
+
+		@Pc(107) int triangleBonesDataOffset = offset;
+		if (hasTriangleBones == 1) {
+			offset += triangleCount;
 		}
-		@Pc(116) int local116 = local90;
-		if (local50 == 1) {
-			local90 += local42;
+
+		@Pc(116) int triangleInfoDataOffset = offset;
+		if (hasTriangleInfo == 1) {
+			offset += triangleCount;
 		}
-		@Pc(125) int local125 = local90;
-		if (local66 == 1) {
-			local90 += local38;
+
+		@Pc(125) int vertexBonesOffset = offset;
+		if (hasVertexBones == 1) {
+			offset += vertexCount;
 		}
-		@Pc(134) int local134 = local90;
-		if (local58 == 1) {
-			local90 += local42;
+
+		@Pc(134) int triangleAlphaDataOffset = offset;
+		if (hasAlpha == 1) {
+			offset += triangleCount;
 		}
-		@Pc(143) int local143 = local90;
-		local90 += local82;
-		@Pc(149) int local149 = local90;
-		local90 += local42 * 2;
-		@Pc(157) int local157 = local90;
-		local90 += local46 * 6;
-		@Pc(165) int local165 = local90;
-		local90 += local70;
-		@Pc(171) int local171 = local90;
-		local90 += local74;
-		this.vertexCount = local38;
-		this.triangleCount = local42;
-		this.texturedCount = local46;
-		this.vertexX = new int[local38];
-		this.vertexY = new int[local38];
-		this.vertexZ = new int[local38];
-		this.triangleVertexA = new int[local42];
-		this.triangleVertexB = new int[local42];
-		this.triangleVertexC = new int[local42];
-		if (local46 > 0) {
-			this.textureTypes = new byte[local46];
-			this.textureFacesP = new short[local46];
-			this.textureFacesM = new short[local46];
-			this.textureFacesN = new short[local46];
+
+		@Pc(143) int vertexIndexDataOffset = offset;
+		offset += local82;
+
+		@Pc(149) int triangleColorDataOffset = offset;
+		offset += triangleCount * 2;
+
+		@Pc(157) int local157 = offset;
+		offset += texturedCount * 6;
+
+		@Pc(165) int vertexDxOffset = offset;
+		offset += local70;
+
+		@Pc(171) int vertexDyOffset = offset;
+		offset += local74;
+
+		this.vertexCount = vertexCount;
+		this.triangleCount = triangleCount;
+		this.texturedCount = texturedCount;
+
+		this.vertexX = new int[vertexCount];
+		this.vertexY = new int[vertexCount];
+		this.vertexZ = new int[vertexCount];
+
+		this.triangleVertexA = new int[triangleCount];
+		this.triangleVertexB = new int[triangleCount];
+		this.triangleVertexC = new int[triangleCount];
+
+		if (texturedCount > 0) {
+			this.textureTypes = new byte[texturedCount];
+			this.textureFacesP = new short[texturedCount];
+			this.textureFacesM = new short[texturedCount];
+			this.textureFacesN = new short[texturedCount];
 		}
-		if (local66 == 1) {
-			this.vertexBones = new int[local38];
+
+		if (hasVertexBones == 1) {
+			this.vertexBones = new int[vertexCount];
 		}
-		if (local50 == 1) {
-			this.triangleInfo = new byte[local42];
-			this.faceTextureIndex = new byte[local42];
-			this.triangleTextures = new short[local42];
+
+		if (hasTriangleInfo == 1) {
+			this.triangleInfo = new byte[triangleCount];
+			this.faceTextureIndex = new byte[triangleCount];
+			this.triangleTextures = new short[triangleCount];
 		}
-		if (local54 == 255) {
-			this.trianglePriorities = new byte[local42];
+
+		if (hasPriorities == 255) {
+			this.trianglePriorities = new byte[triangleCount];
 		} else {
-			this.priority = (byte) local54;
+			this.priority = (byte) hasPriorities;
 		}
-		if (local58 == 1) {
-			this.triangleAlpha = new byte[local42];
+
+		if (hasAlpha == 1) {
+			this.triangleAlpha = new byte[triangleCount];
 		}
-		if (local62 == 1) {
-			this.triangleBones = new int[local42];
+
+		if (hasTriangleBones == 1) {
+			this.triangleBones = new int[triangleCount];
 		}
-		this.triangleColors = new short[local42];
-		local8.offset = 0;
-		local13.offset = local165;
-		local18.offset = local171;
-		local23.offset = local90;
-		local28.offset = local125;
-		@Pc(301) int local301 = 0;
-		@Pc(303) int local303 = 0;
-		@Pc(305) int local305 = 0;
-		@Pc(307) int local307;
-		@Pc(314) int local314;
-		@Pc(316) int local316;
-		@Pc(326) int local326;
-		@Pc(336) int local336;
-		for (local307 = 0; local307 < local38; local307++) {
-			local314 = local8.g1();
-			local316 = 0;
-			if ((local314 & 0x1) != 0) {
-				local316 = local13.gSmart1or2s();
+
+		this.triangleColors = new short[triangleCount];
+
+		buffer1.offset = 0;
+		buffer2.offset = vertexDxOffset;
+		buffer3.offset = vertexDyOffset;
+		buffer4.offset = offset;
+		buffer5.offset = vertexBonesOffset;
+
+		@Pc(301) int prevVertexX = 0;
+		@Pc(303) int prevVertexY = 0;
+		@Pc(305) int prevVertexZ = 0;
+
+		for (int v = 0; v < vertexCount; v++) {
+			int flags = buffer1.g1();
+
+			int dx = 0;
+			if ((flags & 0x1) != 0) {
+				dx = buffer2.gSmart1or2s();
 			}
-			local326 = 0;
-			if ((local314 & 0x2) != 0) {
-				local326 = local18.gSmart1or2s();
+
+			int dy = 0;
+			if ((flags & 0x2) != 0) {
+				dy = buffer3.gSmart1or2s();
 			}
-			local336 = 0;
-			if ((local314 & 0x4) != 0) {
-				local336 = local23.gSmart1or2s();
+
+			int dz = 0;
+			if ((flags & 0x4) != 0) {
+				dz = buffer4.gSmart1or2s();
 			}
-			this.vertexX[local307] = local301 + local316;
-			this.vertexY[local307] = local303 + local326;
-			this.vertexZ[local307] = local305 + local336;
-			local301 = this.vertexX[local307];
-			local303 = this.vertexY[local307];
-			local305 = this.vertexZ[local307];
-			if (local66 == 1) {
-				this.vertexBones[local307] = local28.g1();
+
+			this.vertexX[v] = prevVertexX + dx;
+			this.vertexY[v] = prevVertexY + dy;
+			this.vertexZ[v] = prevVertexZ + dz;
+
+			prevVertexX = this.vertexX[v];
+			prevVertexY = this.vertexY[v];
+			prevVertexZ = this.vertexZ[v];
+
+			if (hasVertexBones == 1) {
+				this.vertexBones[v] = buffer5.g1();
 			}
 		}
-		local8.offset = local149;
-		local13.offset = local116;
-		local18.offset = local98;
-		local23.offset = local134;
-		local28.offset = local107;
-		for (local307 = 0; local307 < local42; local307++) {
-			this.triangleColors[local307] = (short) local8.g2();
-			if (local50 == 1) {
-				local314 = local13.g1();
-				if ((local314 & 0x1) == 1) {
-					this.triangleInfo[local307] = 1;
-					local1 = true;
+
+		buffer1.offset = triangleColorDataOffset;
+		buffer2.offset = triangleInfoDataOffset;
+		buffer3.offset = trianglePriorityDataOffset;
+		buffer4.offset = triangleAlphaDataOffset;
+		buffer5.offset = triangleBonesDataOffset;
+
+		for (int t = 0; t < triangleCount; t++) {
+			this.triangleColors[t] = (short) buffer1.g2();
+
+			if (hasTriangleInfo == 1) {
+				int flags = buffer2.g1();
+				if ((flags & 0x1) == 1) {
+					this.triangleInfo[t] = 1;
+					hasColor = true;
 				} else {
-					this.triangleInfo[local307] = 0;
+					this.triangleInfo[t] = 0;
 				}
-				if ((local314 & 0x2) == 2) {
-					this.faceTextureIndex[local307] = (byte) (local314 >> 2);
-					this.triangleTextures[local307] = this.triangleColors[local307];
-					this.triangleColors[local307] = 127;
-					if (this.triangleTextures[local307] != -1) {
-						local3 = true;
+
+				if ((flags & 0x2) == 2) {
+					this.faceTextureIndex[t] = (byte) (flags >> 2);
+					this.triangleTextures[t] = this.triangleColors[t];
+					this.triangleColors[t] = 127;
+					if (this.triangleTextures[t] != -1) {
+						hasTextures = true;
 					}
 				} else {
-					this.faceTextureIndex[local307] = -1;
-					this.triangleTextures[local307] = -1;
+					this.faceTextureIndex[t] = -1;
+					this.triangleTextures[t] = -1;
 				}
 			}
-			if (local54 == 255) {
-				this.trianglePriorities[local307] = local18.g1s();
+
+			if (hasPriorities == 255) {
+				this.trianglePriorities[t] = buffer3.g1s();
 			}
-			if (local58 == 1) {
-				this.triangleAlpha[local307] = local23.g1s();
+
+			if (hasAlpha == 1) {
+				this.triangleAlpha[t] = buffer4.g1s();
 			}
-			if (local62 == 1) {
-				this.triangleBones[local307] = local28.g1();
-			}
-		}
-		local8.offset = local143;
-		local13.offset = local92;
-		local307 = 0;
-		local314 = 0;
-		local316 = 0;
-		local326 = 0;
-		@Pc(545) int local545;
-		@Pc(648) int local648;
-		for (local336 = 0; local336 < local42; local336++) {
-			local545 = local13.g1();
-			if (local545 == 1) {
-				local307 = local8.gSmart1or2s() + local326;
-				local314 = local8.gSmart1or2s() + local307;
-				local316 = local8.gSmart1or2s() + local314;
-				local326 = local316;
-				this.triangleVertexA[local336] = local307;
-				this.triangleVertexB[local336] = local314;
-				this.triangleVertexC[local336] = local316;
-			}
-			if (local545 == 2) {
-				local314 = local316;
-				local316 = local8.gSmart1or2s() + local326;
-				local326 = local316;
-				this.triangleVertexA[local336] = local307;
-				this.triangleVertexB[local336] = local314;
-				this.triangleVertexC[local336] = local316;
-			}
-			if (local545 == 3) {
-				local307 = local316;
-				local316 = local8.gSmart1or2s() + local326;
-				local326 = local316;
-				this.triangleVertexA[local336] = local307;
-				this.triangleVertexB[local336] = local314;
-				this.triangleVertexC[local336] = local316;
-			}
-			if (local545 == 4) {
-				local648 = local307;
-				local307 = local314;
-				local314 = local648;
-				local316 = local8.gSmart1or2s() + local326;
-				local326 = local316;
-				this.triangleVertexA[local336] = local307;
-				this.triangleVertexB[local336] = local648;
-				this.triangleVertexC[local336] = local316;
+
+			if (hasTriangleBones == 1) {
+				this.triangleBones[t] = buffer5.g1();
 			}
 		}
-		local8.offset = local157;
-		for (local336 = 0; local336 < local46; local336++) {
-			this.textureTypes[local336] = 0;
-			this.textureFacesP[local336] = (short) local8.g2();
-			this.textureFacesM[local336] = (short) local8.g2();
-			this.textureFacesN[local336] = (short) local8.g2();
+
+		buffer1.offset = vertexIndexDataOffset;
+		buffer2.offset = triangleTypeDataOffset;
+
+		int a = 0;
+		int b = 0;
+		int c = 0;
+		int last = 0;
+
+		for (int t = 0; t < triangleCount; t++) {
+			int type = buffer2.g1();
+			if (type == 1) {
+				a = buffer1.gSmart1or2s() + last;
+				b = buffer1.gSmart1or2s() + a;
+				c = buffer1.gSmart1or2s() + b;
+				last = c;
+				this.triangleVertexA[t] = a;
+				this.triangleVertexB[t] = b;
+				this.triangleVertexC[t] = c;
+			} else if (type == 2) {
+				b = c;
+				c = buffer1.gSmart1or2s() + last;
+				last = c;
+				this.triangleVertexA[t] = a;
+				this.triangleVertexB[t] = b;
+				this.triangleVertexC[t] = c;
+			} else if (type == 3) {
+				a = c;
+				c = buffer1.gSmart1or2s() + last;
+				last = c;
+				this.triangleVertexA[t] = a;
+				this.triangleVertexB[t] = b;
+				this.triangleVertexC[t] = c;
+			} else if (type == 4) {
+				int b0 = a;
+				a = b;
+				b = b0;
+				c = buffer1.gSmart1or2s() + last;
+				last = c;
+				this.triangleVertexA[t] = a;
+				this.triangleVertexB[t] = b0;
+				this.triangleVertexC[t] = c;
+			}
 		}
+
+		buffer1.offset = local157;
+
+		for (int t = 0; t < texturedCount; t++) {
+			this.textureTypes[t] = 0;
+			this.textureFacesP[t] = (short) buffer1.g2();
+			this.textureFacesM[t] = (short) buffer1.g2();
+			this.textureFacesN[t] = (short) buffer1.g2();
+		}
+
 		if (this.faceTextureIndex != null) {
-			@Pc(721) boolean local721 = false;
-			for (local545 = 0; local545 < local42; local545++) {
-				local648 = this.faceTextureIndex[local545] & 0xFF;
-				if (local648 != 255) {
-					if ((this.textureFacesP[local648] & 0xFFFF) == this.triangleVertexA[local545] && (this.textureFacesM[local648] & 0xFFFF) == this.triangleVertexB[local545] && (this.textureFacesN[local648] & 0xFFFF) == this.triangleVertexC[local545]) {
-						this.faceTextureIndex[local545] = -1;
+			@Pc(721) boolean hasFaceTextures = false;
+			for (int i = 0; i < triangleCount; i++) {
+				int index = this.faceTextureIndex[i] & 0xFF;
+				if (index != 255) {
+					if ((this.textureFacesP[index] & 0xFFFF) == this.triangleVertexA[i] && (this.textureFacesM[index] & 0xFFFF) == this.triangleVertexB[i] && (this.textureFacesN[index] & 0xFFFF) == this.triangleVertexC[i]) {
+						this.faceTextureIndex[i] = -1;
 					} else {
-						local721 = true;
+						hasFaceTextures = true;
 					}
 				}
 			}
-			if (!local721) {
+
+			if (!hasFaceTextures) {
 				this.faceTextureIndex = null;
 			}
 		}
-		if (!local3) {
+
+		if (!hasTextures) {
 			this.triangleTextures = null;
 		}
-		if (!local1) {
+
+		if (!hasColor) {
 			this.triangleInfo = null;
 		}
 	}

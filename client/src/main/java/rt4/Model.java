@@ -31,7 +31,7 @@ public abstract class Model extends Entity {
 	public abstract int method4550();
 
 	@OriginalMember(owner = "client!ak", name = "b", descriptor = "()I")
-	public abstract int getMaxY();
+	public abstract int getMinY();
 
 	@OriginalMember(owner = "client!ak", name = "d", descriptor = "()Z")
 	protected abstract boolean method4551();
