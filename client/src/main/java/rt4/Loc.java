@@ -386,7 +386,7 @@ public final class Loc extends Entity {
 
 	@OriginalMember(owner = "client!dc", name = "b", descriptor = "()I")
 	@Override
-	public final int getMaxY() {
+	public final int getMinY() {
 		return this.anInt1311;
 	}
 }

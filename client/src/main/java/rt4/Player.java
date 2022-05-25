@@ -332,7 +332,7 @@ public final class Player extends PathingEntity {
 		if (local76 == null) {
 			return;
 		}
-		this.anInt3413 = local76.getMaxY();
+		this.anInt3413 = local76.getMinY();
 		@Pc(184) Model local184;
 		if (Preferences.characterShadowsOn && (this.appearance.anInt2492 == -1 || NpcTypeList.get(this.appearance.anInt2492).shadow)) {
 			local184 = ShadowModelList.method1043(160, this.aBoolean171, local54 == null ? local25 : local54, this.xFine, 0, this.zFine, 0, 1, local76, arg0, local54 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, 240);
@@ -509,7 +509,7 @@ public final class Player extends PathingEntity {
 
 	@OriginalMember(owner = "client!e", name = "b", descriptor = "()I")
 	@Override
-	public final int getMaxY() {
+	public final int getMinY() {
 		return this.anInt3413;
 	}
 }

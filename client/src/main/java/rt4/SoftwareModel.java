@@ -242,7 +242,7 @@ public final class SoftwareModel extends Model {
 		this.anIntArrayArray41 = arg0.boneVertices;
 		this.anIntArrayArray42 = arg0.boneTriangles;
 		this.aShortArray90 = arg0.aShortArray22;
-		this.aShortArray91 = arg0.aShortArray29;
+		this.aShortArray91 = arg0.vertexSources;
 		@Pc(102) int local102 = (int) Math.sqrt((double) (arg3 * arg3 + arg4 * arg4 + arg5 * arg5));
 		@Pc(108) int local108 = arg2 * local102 >> 8;
 		this.anIntArray533 = new int[this.anInt5787];
@@ -643,7 +643,7 @@ public final class SoftwareModel extends Model {
 
 	@OriginalMember(owner = "client!w", name = "b", descriptor = "()I")
 	@Override
-	public final int getMaxY() {
+	public final int getMinY() {
 		if (!this.boundsValid) {
 			this.method4592();
 		}

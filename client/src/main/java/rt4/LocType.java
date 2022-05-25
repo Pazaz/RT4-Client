@@ -337,7 +337,7 @@ public final class LocType {
 			}
 		}
 		if (local211) {
-			local265.method1665(this.resizeX, this.resizeY, this.resizeZ);
+			local265.resize(this.resizeX, this.resizeY, this.resizeZ);
 		}
 		if (local230) {
 			local265.translate(this.translateX, this.translateY, this.translateZ);
@@ -803,7 +803,7 @@ public final class LocType {
 				aClass139_1.aClass8_10 = null;
 				return aClass139_1;
 			}
-			local69.method1681();
+			local69.resetBones();
 			if (arg3 == 10 && arg0 > 3) {
 				local69.method1682();
 			}

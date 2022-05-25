@@ -39,7 +39,7 @@ public final class Npc extends PathingEntity {
 
 	@OriginalMember(owner = "client!km", name = "b", descriptor = "()I")
 	@Override
-	public final int getMaxY() {
+	public final int getMinY() {
 		return this.anInt3413;
 	}
 
@@ -57,7 +57,7 @@ public final class Npc extends PathingEntity {
 			return;
 		}
 
-		this.anInt3413 = body.getMaxY();
+		this.anInt3413 = body.getMinY();
 		@Pc(84) NpcType local84 = this.type;
 		if (local84.multiNpcs != null) {
 			local84 = local84.getMultiNpc();

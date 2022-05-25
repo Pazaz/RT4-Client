@@ -219,7 +219,7 @@ public final class Inv extends Node {
 
         @Pc(176) int pitchcos = MathUtils.cos[objType.xAngle2d] * zoom >> 16;
         @Pc(185) int pitchsin = MathUtils.sin[objType.xAngle2d] * zoom >> 16;
-        model.setCamera(objType.yAngle2d, objType.zAngle2d, objType.xAngle2d, objType.xOffset2d, pitchsin + objType.yOffset2d - model.getMaxY() / 2, objType.yOffset2d + pitchcos, -1L);
+        model.setCamera(objType.yAngle2d, objType.zAngle2d, objType.xAngle2d, objType.xOffset2d, pitchsin + objType.yOffset2d - model.getMinY() / 2, objType.yOffset2d + pitchcos, -1L);
 
         if (state >= 1) {
             canvas.drawOutline(1);

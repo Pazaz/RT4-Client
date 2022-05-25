@@ -677,7 +677,7 @@ public final class Static87 {
 													if (local2589 == null) {
 														InterfaceList.redraw(local30);
 													} else {
-														memory = -local2589.getMaxY() / 2;
+														memory = -local2589.getMinY() / 2;
 													}
 												}
 											} else if (local30.modelType == 5) {
