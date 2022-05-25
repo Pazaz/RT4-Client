@@ -18,24 +18,7 @@ public final class Static241 {
     @OriginalMember(owner = "client!th", name = "n", descriptor = "Z")
 	public static boolean aBoolean302 = false;
 
-	@OriginalMember(owner = "client!th", name = "a", descriptor = "(ZIIII)V")
-	public static void setWindowMode(@OriginalArg(0) boolean arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
-		Static97.aLong89 = 0L;
-		@Pc(4) int mode = Static144.getWindowMode();
-		if (arg1 == 3 || mode == 3) {
-			arg0 = true;
-		}
-		@Pc(44) boolean useHd = false;
-		if (mode > 0 != arg1 > 0) {
-			useHd = true;
-		}
-		if (arg0 && arg1 > 0) {
-			useHd = true;
-		}
-		Static197.setWindowMode(arg0, arg1, useHd, mode, arg2, arg3);
-	}
-
-	@OriginalMember(owner = "client!th", name = "a", descriptor = "(IIBIIII)I")
+    @OriginalMember(owner = "client!th", name = "a", descriptor = "(IIBIIII)I")
 	public static int method4541(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
 		if ((arg4 & 0x1) == 1) {
 			@Pc(9) int local9 = arg0;

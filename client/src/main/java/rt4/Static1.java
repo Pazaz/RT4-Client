@@ -6,7 +6,11 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static1 {
 
-	@OriginalMember(owner = "client!a", name = "h", descriptor = "I")
+    @OriginalMember(owner = "client!wi", name = "hb", descriptor = "[[Z")
+    public static final boolean[][] aBooleanArrayArray4 = new boolean[][] { { true, true, true }, { false, false }, { false, true }, { true, false }, { false, true, true }, { true, false, true }, { false, true, false }, { true, false, false } };
+    @OriginalMember(owner = "client!kc", name = "s", descriptor = "[I")
+	public static final int[] anIntArray300 = new int[] { 1, 1, 1, 1, 4, 1, 1, 5, 6, 1, 5, 0, 7, 0, 4, 1, 7, 2, 1, 1, 6, 1, 1, 3, 6, 1, 7, 0, 0, 6, 7, 0, 1, 7, 6, 1, 1, 1, 5, 4, 3, 2, 1, 1, 0, 4, 1, 5 };
+    @OriginalMember(owner = "client!a", name = "h", descriptor = "I")
 	public static int anInt5;
 
 	@OriginalMember(owner = "client!a", name = "e", descriptor = "Lclient!na;")
@@ -83,9 +87,9 @@ public final class Static1 {
 						if (local242.aBoolean310 && local242.anInt5899 != -1) {
 							local264 = arg5[local12 - 1][local17 + 1];
 							local274 = arg7[local12 - 1][local17 + 1];
-							local287 = Static130.anIntArray300[local274 * 4 + (local264 + 2 & 0x3)];
-							local299 = Static130.anIntArray300[(local264 + 3 & 0x3) + local274 * 4];
-							if (!Static277.aBooleanArrayArray4[local299][1] || !Static277.aBooleanArrayArray4[local287][0]) {
+							local287 = anIntArray300[local274 * 4 + (local264 + 2 & 0x3)];
+							local299 = anIntArray300[(local264 + 3 & 0x3) + local274 * 4];
+							if (!aBooleanArrayArray4[local299][1] || !aBooleanArrayArray4[local287][0]) {
 								for (local317 = 0; local317 < 8; local317++) {
 									if (local317 == 0) {
 										local127++;
@@ -104,9 +108,9 @@ public final class Static1 {
 						if (local242.aBoolean310 && local242.anInt5899 != -1) {
 							local264 = arg5[local12 - 1][local17 - 1];
 							local274 = arg7[local12 - 1][local17 - 1];
-							local287 = Static130.anIntArray300[local274 * 4 + (local264 & 0x3)];
-							local299 = Static130.anIntArray300[(local264 + 3 & 0x3) + local274 * 4];
-							if (!Static277.aBooleanArrayArray4[local287][1] || !Static277.aBooleanArrayArray4[local299][0]) {
+							local287 = anIntArray300[local274 * 4 + (local264 & 0x3)];
+							local299 = anIntArray300[(local264 + 3 & 0x3) + local274 * 4];
+							if (!aBooleanArrayArray4[local287][1] || !aBooleanArrayArray4[local299][0]) {
 								for (local317 = 0; local317 < 8; local317++) {
 									if (local127 == local317) {
 										local166[local127++] = local214;
@@ -124,9 +128,9 @@ public final class Static1 {
 						if (local242.aBoolean310 && local242.anInt5899 != -1) {
 							local264 = arg5[local12 + 1][local17 - 1];
 							local274 = arg7[local12 + 1][local17 - 1];
-							local299 = Static130.anIntArray300[local274 * 4 + (local264 + 1 & 0x3)];
-							local287 = Static130.anIntArray300[local274 * 4 + (local264 & 0x3)];
-							if (!Static277.aBooleanArrayArray4[local299][1] || !Static277.aBooleanArrayArray4[local287][0]) {
+							local299 = anIntArray300[local274 * 4 + (local264 + 1 & 0x3)];
+							local287 = anIntArray300[local274 * 4 + (local264 & 0x3)];
+							if (!aBooleanArrayArray4[local299][1] || !aBooleanArrayArray4[local287][0]) {
 								for (local317 = 0; local317 < 8; local317++) {
 									if (local127 == local317) {
 										local166[local127++] = local202;
@@ -144,9 +148,9 @@ public final class Static1 {
 						if (local242.aBoolean310 && local242.anInt5899 != -1) {
 							local264 = arg5[local12 + 1][local17 + 1];
 							local274 = arg7[local12 + 1][local17 + 1];
-							local299 = Static130.anIntArray300[local274 * 4 + (local264 + 1 & 0x3)];
-							local287 = Static130.anIntArray300[local274 * 4 + (local264 + 2 & 0x3)];
-							if (!Static277.aBooleanArrayArray4[local287][1] || !Static277.aBooleanArrayArray4[local299][0]) {
+							local299 = anIntArray300[local274 * 4 + (local264 + 1 & 0x3)];
+							local287 = anIntArray300[local274 * 4 + (local264 + 2 & 0x3)];
+							if (!aBooleanArrayArray4[local287][1] || !aBooleanArrayArray4[local299][0]) {
 								for (local317 = 0; local317 < 8; local317++) {
 									if (local127 == local317) {
 										local166[local127++] = local226;
@@ -162,7 +166,7 @@ public final class Static1 {
 					if (local143 != 0 && local38 != local143) {
 						local242 = FloTypeList.method4395(local143 - 1);
 						if (local242.aBoolean310 && local242.anInt5899 != -1) {
-							local129 = Static130.anIntArray300[arg7[local12][local17 + 1] * 4 + (arg5[local12][local17 + 1] + 2 & 0x3)];
+							local129 = anIntArray300[arg7[local12][local17 + 1] * 4 + (arg5[local12][local17 + 1] + 2 & 0x3)];
 							for (local777 = 0; local777 < 8; local777++) {
 								if (local127 == local777) {
 									local166[local127++] = local143;
@@ -177,7 +181,7 @@ public final class Static1 {
 					if (local163 != 0 && local38 != local163) {
 						local242 = FloTypeList.method4395(local163 - 1);
 						if (local242.aBoolean310 && local242.anInt5899 != -1) {
-							local133 = Static130.anIntArray300[(arg5[local12 - 1][local17] + 3 & 0x3) + arg7[local12 - 1][local17] * 4];
+							local133 = anIntArray300[(arg5[local12 - 1][local17] + 3 & 0x3) + arg7[local12 - 1][local17] * 4];
 							for (local777 = 0; local777 < 8; local777++) {
 								if (local127 == local777) {
 									local166[local127++] = local163;
@@ -192,7 +196,7 @@ public final class Static1 {
 					if (local153 != 0 && local38 != local153) {
 						local242 = FloTypeList.method4395(local153 - 1);
 						if (local242.aBoolean310 && local242.anInt5899 != -1) {
-							local131 = Static130.anIntArray300[(arg5[local12][local17 - 1] & 0x3) + arg7[local12][local17 - 1] * 4];
+							local131 = anIntArray300[(arg5[local12][local17 - 1] & 0x3) + arg7[local12][local17 - 1] * 4];
 							for (local777 = 0; local777 < 8; local777++) {
 								if (local777 == local127) {
 									local166[local127++] = local153;
@@ -207,7 +211,7 @@ public final class Static1 {
 					if (local190 != 0 && local38 != local190) {
 						local242 = FloTypeList.method4395(local190 - 1);
 						if (local242.aBoolean310 && local242.anInt5899 != -1) {
-							local168 = Static130.anIntArray300[(arg5[local12 + 1][local17] + 1 & 0x3) + arg7[local12 + 1][local17] * 4];
+							local168 = anIntArray300[(arg5[local12 + 1][local17] + 1 & 0x3) + arg7[local12 + 1][local17] * 4];
 							for (local777 = 0; local777 < 8; local777++) {
 								if (local127 == local777) {
 									local166[local127++] = local190;
@@ -221,10 +225,10 @@ public final class Static1 {
 					}
 					for (local1035 = 0; local1035 < local127; local1035++) {
 						local777 = local166[local1035];
-						local1055 = Static277.aBooleanArrayArray4[local163 == local777 ? local133 : 0];
-						local1068 = Static277.aBooleanArrayArray4[local777 == local153 ? local131 : 0];
-						@Pc(1077) boolean[] local1077 = Static277.aBooleanArrayArray4[local143 == local777 ? local129 : 0];
-						local1086 = Static277.aBooleanArrayArray4[local190 == local777 ? local168 : 0];
+						local1055 = aBooleanArrayArray4[local163 == local777 ? local133 : 0];
+						local1068 = aBooleanArrayArray4[local777 == local153 ? local131 : 0];
+						@Pc(1077) boolean[] local1077 = aBooleanArrayArray4[local143 == local777 ? local129 : 0];
+						local1086 = aBooleanArrayArray4[local190 == local777 ? local168 : 0];
 						@Pc(1092) FloType local1092 = FloTypeList.method4395(local777 - 1);
 						@Pc(1097) GlTile local1097 = Static243.method4212(local10, local1092);
 						local1097.anInt2482 += 5;
@@ -291,9 +295,9 @@ public final class Static1 {
 						if (local1496.aBoolean310 && local1496.anInt5899 != -1) {
 							local274 = arg5[local12 - 1][local17 + 1];
 							local1527 = arg7[local12 - 1][local17 + 1];
-							local299 = Static130.anIntArray300[local1527 * 4 + (local274 + 2 & 0x3)];
-							local317 = Static130.anIntArray300[local1527 * 4 + (local274 + 3 & 0x3)];
-							if (Static277.aBooleanArrayArray4[local317][1] && Static277.aBooleanArrayArray4[local299][0]) {
+							local299 = anIntArray300[local1527 * 4 + (local274 + 2 & 0x3)];
+							local317 = anIntArray300[local1527 * 4 + (local274 + 3 & 0x3)];
+							if (aBooleanArrayArray4[local317][1] && aBooleanArrayArray4[local299][0]) {
 								local214 = 0;
 							} else {
 								for (local1571 = 0; local1571 < 8; local1571++) {
@@ -318,9 +322,9 @@ public final class Static1 {
 						if (local1496.aBoolean310 && local1496.anInt5899 != -1) {
 							local274 = arg5[local12 - 1][local17 - 1];
 							local1527 = arg7[local12 - 1][local17 - 1];
-							local299 = Static130.anIntArray300[(local274 & 0x3) + local1527 * 4];
-							local317 = Static130.anIntArray300[(local274 + 3 & 0x3) + local1527 * 4];
-							if (Static277.aBooleanArrayArray4[local299][1] && Static277.aBooleanArrayArray4[local317][0]) {
+							local299 = anIntArray300[(local274 & 0x3) + local1527 * 4];
+							local317 = anIntArray300[(local274 + 3 & 0x3) + local1527 * 4];
+							if (aBooleanArrayArray4[local299][1] && aBooleanArrayArray4[local317][0]) {
 								local202 = 0;
 							} else {
 								for (local1571 = 0; local1571 < 8; local1571++) {
@@ -344,9 +348,9 @@ public final class Static1 {
 						if (local1496.aBoolean310 && local1496.anInt5899 != -1) {
 							local274 = arg5[local12 + 1][local17 - 1];
 							local1527 = arg7[local12 + 1][local17 - 1];
-							local317 = Static130.anIntArray300[(local274 + 1 & 0x3) + local1527 * 4];
-							local299 = Static130.anIntArray300[local1527 * 4 + (local274 & 0x3)];
-							if (Static277.aBooleanArrayArray4[local317][1] && Static277.aBooleanArrayArray4[local299][0]) {
+							local317 = anIntArray300[(local274 + 1 & 0x3) + local1527 * 4];
+							local299 = anIntArray300[local1527 * 4 + (local274 & 0x3)];
+							if (aBooleanArrayArray4[local317][1] && aBooleanArrayArray4[local299][0]) {
 								local226 = 0;
 							} else {
 								for (local1571 = 0; local1571 < 8; local1571++) {
@@ -370,9 +374,9 @@ public final class Static1 {
 						if (local1496.aBoolean310 && local1496.anInt5899 != -1) {
 							local1527 = arg7[local12 + 1][local17 + 1];
 							local274 = arg5[local12 + 1][local17 + 1];
-							local299 = Static130.anIntArray300[(local274 + 2 & 0x3) + local1527 * 4];
-							local317 = Static130.anIntArray300[(local274 + 1 & 0x3) + local1527 * 4];
-							if (Static277.aBooleanArrayArray4[local299][1] && Static277.aBooleanArrayArray4[local317][0]) {
+							local299 = anIntArray300[(local274 + 2 & 0x3) + local1527 * 4];
+							local317 = anIntArray300[(local274 + 1 & 0x3) + local1527 * 4];
+							if (aBooleanArrayArray4[local299][1] && aBooleanArrayArray4[local317][0]) {
 								local1035 = 0;
 							} else {
 								for (local1571 = 0; local1571 < 8; local1571++) {
@@ -393,7 +397,7 @@ public final class Static1 {
 					if (local163 != 0 && local163 != local127) {
 						local1496 = FloTypeList.method4395(local163 - 1);
 						if (local1496.aBoolean310 && local1496.anInt5899 != -1) {
-							local133 = Static130.anIntArray300[arg7[local12][local17 + 1] * 4 + (arg5[local12][local17 + 1] + 2 & 0x3)];
+							local133 = anIntArray300[arg7[local12][local17 + 1] * 4 + (arg5[local12][local17 + 1] + 2 & 0x3)];
 							for (local2003 = 0; local2003 < 8; local2003++) {
 								if (local2003 == local1386) {
 									local1382[local1386++] = local163;
@@ -408,7 +412,7 @@ public final class Static1 {
 					if (local153 != 0 && local127 != local153) {
 						local1496 = FloTypeList.method4395(local153 - 1);
 						if (local1496.aBoolean310 && local1496.anInt5899 != -1) {
-							local131 = Static130.anIntArray300[(arg5[local12 - 1][local17] + 3 & 0x3) + arg7[local12 - 1][local17] * 4];
+							local131 = anIntArray300[(arg5[local12 - 1][local17] + 3 & 0x3) + arg7[local12 - 1][local17] * 4];
 							for (local2003 = 0; local2003 < 8; local2003++) {
 								if (local1386 == local2003) {
 									local1382[local1386++] = local153;
@@ -423,7 +427,7 @@ public final class Static1 {
 					if (local190 != 0 && local190 != local127) {
 						local1496 = FloTypeList.method4395(local190 - 1);
 						if (local1496.aBoolean310 && local1496.anInt5899 != -1) {
-							local168 = Static130.anIntArray300[(arg5[local12][local17 - 1] & 0x3) + arg7[local12][local17 - 1] * 4];
+							local168 = anIntArray300[(arg5[local12][local17 - 1] & 0x3) + arg7[local12][local17 - 1] * 4];
 							for (local2003 = 0; local2003 < 8; local2003++) {
 								if (local1386 == local2003) {
 									local1382[local1386++] = local190;
@@ -438,7 +442,7 @@ public final class Static1 {
 					if (local180 != 0 && local180 != local127) {
 						local1496 = FloTypeList.method4395(local180 - 1);
 						if (local1496.aBoolean310 && local1496.anInt5899 != -1) {
-							local143 = Static130.anIntArray300[arg7[local12 + 1][local17] * 4 + (arg5[local12 + 1][local17] + 1 & 0x3)];
+							local143 = anIntArray300[arg7[local12 + 1][local17] * 4 + (arg5[local12 + 1][local17] + 1 & 0x3)];
 							for (local2003 = 0; local2003 < 8; local2003++) {
 								if (local2003 == local1386) {
 									local1382[local1386++] = local180;
@@ -452,10 +456,10 @@ public final class Static1 {
 					}
 					for (local777 = 0; local777 < local1386; local777++) {
 						local2003 = local1382[local777];
-						local1055 = Static277.aBooleanArrayArray4[local2003 == local163 ? local133 : 0];
-						local1068 = Static277.aBooleanArrayArray4[local153 == local2003 ? local131 : 0];
-						local1086 = Static277.aBooleanArrayArray4[local2003 == local190 ? local168 : 0];
-						@Pc(2318) boolean[] local2318 = Static277.aBooleanArrayArray4[local2003 == local180 ? local143 : 0];
+						local1055 = aBooleanArrayArray4[local2003 == local163 ? local133 : 0];
+						local1068 = aBooleanArrayArray4[local153 == local2003 ? local131 : 0];
+						local1086 = aBooleanArrayArray4[local2003 == local190 ? local168 : 0];
+						@Pc(2318) boolean[] local2318 = aBooleanArrayArray4[local2003 == local180 ? local143 : 0];
 						@Pc(2324) FloType local2324 = FloTypeList.method4395(local2003 - 1);
 						@Pc(2329) GlTile local2329 = Static243.method4212(local10, local2324);
 						@Pc(2345) int local2345 = Static19.method588(local2324.texture, local2324.anInt5899, arg6[local12][local17]) << 8 | 0xFF;

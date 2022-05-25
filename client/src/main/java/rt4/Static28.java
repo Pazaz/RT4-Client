@@ -9,7 +9,7 @@ public final class Static28 {
 	public static void method792(@OriginalArg(3) int tileVisibility, @OriginalArg(4) boolean hasUnderWaterMap) {
 		SceneGraph.mapSizeX = 104;
 		SceneGraph.mapSizeZ = 104;
-		Static277.tileVisibilityDistance = tileVisibility;
+		Static123.tileVisibilityDistance = tileVisibility;
 		SceneGraph.surfaceGroundTiles = new Tile[4][SceneGraph.mapSizeX][SceneGraph.mapSizeZ];
 		SceneGraph.surfaceTileHeights = new int[4][SceneGraph.mapSizeX + 1][SceneGraph.mapSizeZ + 1];
 		if (GlRenderer.enabled) {
@@ -28,7 +28,7 @@ public final class Static28 {
 			SceneGraph.underwaterTileHeights = null;
 			SceneGraph.underWaterHdTiles = null;
 		}
-		Static278.setRenderTiles(false);
+		SceneGraph.setRenderTiles(false);
 		SceneGraph.aClass120Array1 = new Class120[500];
 		SceneGraph.anInt917 = 0;
 		SceneGraph.aClass120Array2 = new Class120[500];
@@ -37,8 +37,8 @@ public final class Static28 {
 		SceneGraph.aClass31Array3 = new Scenery[5000];
 		SceneGraph.anInt726 = 0;
 		SceneGraph.aClass31Array2 = new Scenery[100];
-		Static48.aBooleanArrayArray1 = new boolean[Static277.tileVisibilityDistance + Static277.tileVisibilityDistance + 1][Static277.tileVisibilityDistance + Static277.tileVisibilityDistance + 1];
-		Static89.aBooleanArrayArray3 = new boolean[Static277.tileVisibilityDistance + Static277.tileVisibilityDistance + 2][Static277.tileVisibilityDistance + Static277.tileVisibilityDistance + 2];
-		Static232.aByteArrayArrayArray13 = new byte[4][SceneGraph.mapSizeX][SceneGraph.mapSizeZ];
+		Static48.aBooleanArrayArray1 = new boolean[Static123.tileVisibilityDistance + Static123.tileVisibilityDistance + 1][Static123.tileVisibilityDistance + Static123.tileVisibilityDistance + 1];
+		Static89.aBooleanArrayArray3 = new boolean[Static123.tileVisibilityDistance + Static123.tileVisibilityDistance + 2][Static123.tileVisibilityDistance + Static123.tileVisibilityDistance + 2];
+		SceneGraph.aByteArrayArrayArray13 = new byte[4][SceneGraph.mapSizeX][SceneGraph.mapSizeZ];
 	}
 }

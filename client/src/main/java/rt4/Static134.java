@@ -6,9 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static134 {
 
-	@OriginalMember(owner = "client!kh", name = "f", descriptor = "I")
-	public static int renderZ;
-
 	@OriginalMember(owner = "client!kh", name = "a", descriptor = "(B)Lclient!ek;")
 	public static SoftwareIndexedSprite method2619() {
 		@Pc(25) SoftwareIndexedSprite local25 = new SoftwareIndexedSprite(SpriteLoader.width, SpriteLoader.height, SpriteLoader.xOffsets[0], SpriteLoader.yOffsets[0], SpriteLoader.innerWidths[0], SpriteLoader.innerHeights[0], SpriteLoader.pixels[0], SpriteLoader.palette);

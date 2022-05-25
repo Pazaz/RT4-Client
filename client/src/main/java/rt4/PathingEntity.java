@@ -12,7 +12,9 @@ public abstract class PathingEntity extends Entity {
 	public static final int[] ANGLES = new int[] { 768, 1024, 1280, 512, 1536, 256, 0, 1792 };
 	@OriginalMember(owner = "client!ac", name = "l", descriptor = "Lclient!ck;")
 	public static final BasType aClass20_1 = new BasType();
-	@OriginalMember(owner = "client!fe", name = "A", descriptor = "I")
+    @OriginalMember(owner = "client!hn", name = "Y", descriptor = "I")
+    public static int anInt2680 = 0;
+    @OriginalMember(owner = "client!fe", name = "A", descriptor = "I")
 	public int spotAnimStart;
 
 	@OriginalMember(owner = "client!fe", name = "S", descriptor = "I")
@@ -300,7 +302,7 @@ public abstract class PathingEntity extends Entity {
 		this.zFine = arg0 * 64 + this.movementQueueZ[0] * 128;
 		this.xFine = arg0 * 64 + this.movementQueueX[0] * 128;
 		if (GlRenderer.enabled && PlayerList.self == this) {
-			Static86.setInstantFade();
+			Static103.setInstantFade();
 		}
 	}
 
@@ -354,7 +356,7 @@ public abstract class PathingEntity extends Entity {
 
 	@OriginalMember(owner = "client!fe", name = "a", descriptor = "(BLclient!ak;I)V")
 	protected final void method2685(@OriginalArg(1) Model arg0, @OriginalArg(2) int arg1) {
-		Static102.anInt2680 = 0;
+		anInt2680 = 0;
 		Static101.anInt2640 = 0;
 		Static62.anInt1938 = 0;
 		@Pc(21) BasType local21 = this.getBasType();
@@ -393,9 +395,9 @@ public abstract class PathingEntity extends Entity {
 		if (Static101.anInt2640 != 0) {
 			arg0.rotateX(Static101.anInt2640);
 		}
-		Static102.anInt2680 = (int) (Math.atan2((double) (local245 - local238), (double) local24) * 325.95D) & 0x7FF;
-		if (Static102.anInt2680 != 0) {
-			arg0.rotateZ(Static102.anInt2680);
+		anInt2680 = (int) (Math.atan2((double) (local245 - local238), (double) local24) * 325.95D) & 0x7FF;
+		if (anInt2680 != 0) {
+			arg0.rotateZ(anInt2680);
 		}
 		Static62.anInt1938 = local224 + local87;
 		if (local201 + local134 < Static62.anInt1938) {

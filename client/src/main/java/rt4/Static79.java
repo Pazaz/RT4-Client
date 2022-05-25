@@ -6,10 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static79 {
 
-	@OriginalMember(owner = "client!ge", name = "q", descriptor = "I")
-	public static int anInt2161;
-
-	@OriginalMember(owner = "client!ge", name = "k", descriptor = "[I")
+    @OriginalMember(owner = "client!ge", name = "k", descriptor = "[I")
 	public static int[] anIntArray205 = new int[2];
 
 	@OriginalMember(owner = "client!ge", name = "m", descriptor = "I")
@@ -49,7 +46,7 @@ public final class Static79 {
 			if ((SceneGraph.tileFlags[arg2][arg1][arg4] & 0x8) != 0) {
 				local39 = 0;
 			}
-			if (local39 != Static41.anInt1316) {
+			if (local39 != LoginManager.centralPlane) {
 				return;
 			}
 		}

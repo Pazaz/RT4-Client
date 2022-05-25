@@ -6,16 +6,13 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static154 {
 
-    @OriginalMember(owner = "client!md", name = "S", descriptor = "I")
-	public static int anInt3709;
-
     @OriginalMember(owner = "client!md", name = "a", descriptor = "(Lclient!be;I)Z")
 	public static boolean method2926(@OriginalArg(0) Component arg0) {
 		if (arg0.anIntArray43 == null) {
 			return false;
 		}
 		for (@Pc(14) int local14 = 0; local14 < arg0.anIntArray43.length; local14++) {
-			@Pc(34) int local34 = Static273.method3212(local14, arg0);
+			@Pc(34) int local34 = Static127.method3212(local14, arg0);
 			@Pc(39) int local39 = arg0.anIntArray48[local14];
 			if (arg0.anIntArray43[local14] == 2) {
 				if (local39 <= local34) {

@@ -62,7 +62,7 @@ public final class Static69 {
 		@Pc(11) int local11 = arg3 - 1;
 		@Pc(15) int local15 = arg3 + arg5;
 		for (@Pc(17) int local17 = arg1; local17 <= arg1 + 1; local17++) {
-			if (local17 != Static126.anInt3114) {
+			if (local17 != SceneGraph.anInt3114) {
 				for (@Pc(28) int local28 = local3; local28 <= local7; local28++) {
 					if (local28 >= 0 && local28 < SceneGraph.mapSizeX) {
 						for (@Pc(39) int local39 = local11; local39 <= local15; local39++) {

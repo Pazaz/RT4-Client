@@ -4,12 +4,6 @@ import org.openrs2.deob.annotation.OriginalMember;
 
 public final class Static138 {
 
-	@OriginalMember(owner = "client!km", name = "Pc", descriptor = "I")
-	public static int renderX;
-
-    @OriginalMember(owner = "client!km", name = "pc", descriptor = "Z")
-	public static boolean aBoolean172 = false;
-
 	@OriginalMember(owner = "client!km", name = "tc", descriptor = "Lclient!na;")
 	private static final JagString aClass100_641 = JagString.parse("Dec");
 
@@ -57,8 +51,5 @@ public final class Static138 {
 
 	@OriginalMember(owner = "client!km", name = "Sc", descriptor = "Lclient!na;")
 	public static final JagString TRADE = JagString.parse(":trade:");
-
-	@OriginalMember(owner = "client!km", name = "ad", descriptor = "I")
-	public static int fp = 0;
 
 }

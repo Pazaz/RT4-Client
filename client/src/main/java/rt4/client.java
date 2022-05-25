@@ -24,7 +24,11 @@ public final class client extends GameShell {
     public static final Js5CachedResourceProvider[] js5Providers = new Js5CachedResourceProvider[28];
     @OriginalMember(owner = "client!d", name = "S", descriptor = "Ljava/util/Random;")
     public static final Random aRandom1 = new Random();
-    @OriginalMember(owner = "client!jm", name = "A", descriptor = "Lclient!na;")
+	@OriginalMember(owner = "client!nh", name = "fb", descriptor = "[I")
+	public static final int[] JS5_ARCHIVE_WEIGHTS = new int[] { 4, 4, 1, 2, 6, 4, 2, 49, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+	@OriginalMember(owner = "client!si", name = "gb", descriptor = "Lclient!na;")
+	public static final JagString aClass100_974 = JagString.parse("<br>(X");
+	@OriginalMember(owner = "client!jm", name = "A", descriptor = "Lclient!na;")
 	static final JagString aClass100_603 = JagString.parse("");
 	@OriginalMember(owner = "client!jm", name = "z", descriptor = "Lclient!na;")
 	public static JagString mainLoadSecondaryText = aClass100_603;
@@ -297,7 +301,7 @@ public final class client extends GameShell {
             Static233.aClass95_4 = null;
         }
         if (arg0 == 25 || arg0 == 28) {
-            Static271.anInt5804 = 0;
+            ClientProt.anInt5804 = 0;
             Static230.anInt5150 = 1;
             Static233.loadingScreenState = 0;
             Static38.anInt1196 = 1;
@@ -453,14 +457,14 @@ public final class client extends GameShell {
         MiniMap.sprite = null;
         Static107.anInt2875 = -1;
         method3768();
-        Static255.cache.clear();
+        DeadClass.cache.clear();
         LocType.aClass139_1 = new Loc_Class139();
         ((Js5GlTextureProvider) Rasteriser.textureProvider).clear();
         LightingManager.lightCount = 0;
         LightingManager.lights = new Light[255];
         GlModel.method4120();
         Static242.method4203();
-        Static115.clear();
+        Sprites.clear();
         WorldMap.clear(false);
         TitleScreen.clear();
         for (@Pc(39) int local39 = 0; local39 < 2048; local39++) {
@@ -477,7 +481,7 @@ public final class client extends GameShell {
         Sprites.load(js5Archive8);
         Static204.aClass3_Sub2_Sub1_10 = null;
         Static39.aClass3_Sub2_Sub1_1 = null;
-        Static92.aClass3_Sub2_Sub1_6 = null;
+        Static112.aClass3_Sub2_Sub1_6 = null;
         Static165.aClass3_Sub2_Sub1_8 = null;
         Static181.aClass3_Sub2_Sub1_9 = null;
         if (gameState == 5) {
@@ -513,14 +517,14 @@ public final class client extends GameShell {
             Static143.hintMapMarkers[local3506] = null;
         }
         MiniMenu.size = 0;
-        Static60.aBoolean108 = false;
+        Static40.aBoolean108 = false;
         Mouse.setIdleLoops(0);
         for (local3506 = 0; local3506 < 100; local3506++) {
             Chat.messages[local3506] = null;
         }
         MiniMenu.anInt5014 = 0;
         Static132.anInt3291 = (int) (Math.random() * 100.0D) - 50;
-        Static84.anInt2255 = 0;
+        LoginManager.mapFlagZ = 0;
         Camera.yawTarget = (int) (Math.random() * 20.0D) - 10 & 0x7FF;
         Static107.anInt2875 = -1;
         PlayerList.size = 0;
@@ -529,8 +533,8 @@ public final class client extends GameShell {
         Static241.aBoolean302 = false;
         MiniMap.anInt4130 = (int) (Math.random() * 30.0D) - 20;
         SoundPlayer.anInt4451 = 0;
-        Static115.mapFlagX = 0;
-        Static59.anInt1814 = (int) (Math.random() * 120.0D) - 60;
+        LoginManager.mapFlagX = 0;
+        MiniMap.anInt1814 = (int) (Math.random() * 120.0D) - 60;
         Chat.size = 0;
         Static230.anInt5161 = (int) (Math.random() * 80.0D) - 40;
         NpcList.size = 0;
@@ -560,12 +564,12 @@ public final class client extends GameShell {
         DelayedStateChange.clear();
         Static133.anInt5230 = 0;
         Static233.anInt5217 = 0;
-        Static265.anInt5765 = 0;
+        Camera.anInt5765 = 0;
         Static231.anInt5203 = 0;
-        Static248.anInt4232 = 0;
-        Static245.anInt5375 = 0;
+        Camera.anInt4232 = 0;
+        Camera.anInt5375 = 0;
         Static260.anInt1744 = 0;
-        Static251.anInt5449 = 0;
+        Camera.anInt5449 = 0;
         Static113.anInt4612 = 0;
         Static233.anInt5225 = 0;
         for (local3506 = 0; local3506 < VarcDomain.varcs.length; local3506++) {
@@ -581,7 +585,7 @@ public final class client extends GameShell {
         InterfaceList.openInterfaces = new HashTable(8);
         InterfaceList.method1287();
         Static39.aClass13_10 = null;
-        Static60.aBoolean108 = false;
+        Static40.aBoolean108 = false;
         MiniMenu.size = 0;
         PlayerAppearance.DEFAULT.method1950(new int[] { 0, 0, 0, 0, 0 }, -1, false, null, -1);
         for (local3506 = 0; local3506 < 8; local3506++) {
@@ -590,7 +594,7 @@ public final class client extends GameShell {
             Player.cursors[local3506] = -1;
         }
         Inv.method2073();
-        Static19.aBoolean43 = true;
+        Static253.aBoolean43 = true;
         for (local3506 = 0; local3506 < 100; local3506++) {
             Static186.aBooleanArray100[local3506] = true;
         }
@@ -606,19 +610,34 @@ public final class client extends GameShell {
             PlayerSkillXpTable.experience[local3506] = 0;
         }
         if (GlRenderer.enabled) {
-            Static86.setInstantFade();
+            Static103.setInstantFade();
         }
         Static197.aBoolean228 = true;
         Protocol.verifyId = 0;
         Static195.walkText = LocalizedText.WALKHERE;
         Static127.neverRemoveRoofs = false;
         aShortArray88 = aShortArray19 = aShortArray74 = aShortArray87 = new short[256];
-        Static114.method4637();
-        Static261.aBoolean298 = false;
+        Static40.method4637();
+        Static40.aBoolean298 = false;
         ClientProt.method1373();
     }
 
-    @OriginalMember(owner = "client!client", name = "f", descriptor = "(I)V")
+	@OriginalMember(owner = "client!rc", name = "d", descriptor = "(I)V")
+	public static void method930() {
+		if (musicChannel != null) {
+			musicChannel.quit();
+		}
+		if (soundChannel != null) {
+			soundChannel.quit();
+		}
+		AudioChannel.init(Preferences.stereo);
+		musicChannel = AudioChannel.create(22050, signLink, canvas, 0);
+		musicChannel.setStream(musicStream);
+		soundChannel = AudioChannel.create(2048, signLink, canvas, 1);
+		soundChannel.setStream(soundStream);
+	}
+
+	@OriginalMember(owner = "client!client", name = "f", descriptor = "(I)V")
 	@Override
 	protected final void mainRedraw() {
 		if (gameState == 1000) {
@@ -629,7 +648,7 @@ public final class client extends GameShell {
 			musicChannel.method3570();
 		}
 		if ((gameState == 30 || gameState == 10) && (GameShell.replaceCanvas || Static97.aLong89 != 0L && Static97.aLong89 < MonotonicClock.currentTimeMillis())) {
-			Static241.setWindowMode(GameShell.replaceCanvas, Static144.getWindowMode(), Preferences.fullScreenWidth, Preferences.fullScreenHeight);
+			DisplayMode.setWindowMode(GameShell.replaceCanvas, DisplayMode.getWindowMode(), Preferences.fullScreenWidth, Preferences.fullScreenHeight);
 		}
 		@Pc(80) int local80;
 		@Pc(84) int local84;
@@ -650,12 +669,12 @@ public final class client extends GameShell {
 				local84 -= local90.top + local90.bottom;
 			}
 			if (local80 != GameShell.frameWidth || local84 != GameShell.frameHeight) {
-				Static203.method3662();
+				GameShell.method3662();
 				Static97.aLong89 = MonotonicClock.currentTimeMillis() + 500L;
 			}
 		}
 		if (GameShell.fullScreenFrame != null && !GameShell.focus && (gameState == 30 || gameState == 10)) {
-			Static241.setWindowMode(false, Preferences.favoriteWorlds, -1, -1);
+			DisplayMode.setWindowMode(false, Preferences.favoriteWorlds, -1, -1);
 		}
 		@Pc(158) boolean local158 = false;
 		if (GameShell.fullRedraw) {
@@ -682,13 +701,13 @@ public final class client extends GameShell {
 					Static230.anInt5150 = Static175.mapFilesMissingCount;
 				}
 				local80 = (Static230.anInt5150 - Static175.mapFilesMissingCount) * 50 / Static230.anInt5150;
-				Static114.drawTextOnScreen(false, JagString.concatenate(new JagString[] { LocalizedText.LOADING, Static229.aClass100_974, JagString.parseInt(local80), Static14.aClass100_80 }));
+				Static114.drawTextOnScreen(false, JagString.concatenate(new JagString[] { LocalizedText.LOADING, aClass100_974, JagString.parseInt(local80), Static14.aClass100_80 }));
 			} else if (Static233.loadingScreenState == 2) {
-				if (Static38.anInt1196 < Static271.anInt5804) {
-					Static38.anInt1196 = Static271.anInt5804;
+				if (Static38.anInt1196 < ClientProt.anInt5804) {
+					Static38.anInt1196 = ClientProt.anInt5804;
 				}
-				local80 = (Static38.anInt1196 - Static271.anInt5804) * 50 / Static38.anInt1196 + 50;
-				Static114.drawTextOnScreen(false, JagString.concatenate(new JagString[] { LocalizedText.LOADING, Static229.aClass100_974, JagString.parseInt(local80), Static14.aClass100_80 }));
+				local80 = (Static38.anInt1196 - ClientProt.anInt5804) * 50 / Static38.anInt1196 + 50;
+				Static114.drawTextOnScreen(false, JagString.concatenate(new JagString[] { LocalizedText.LOADING, aClass100_974, JagString.parseInt(local80), Static14.aClass100_80 }));
 			} else {
 				Static114.drawTextOnScreen(false, LocalizedText.LOADING);
 			}
@@ -870,7 +889,7 @@ public final class client extends GameShell {
 	@OriginalMember(owner = "client!client", name = "g", descriptor = "(I)V")
 	@Override
 	protected final void mainInit() {
-		Static203.method3662();
+		GameShell.method3662();
 		js5CacheQueue = new Js5CacheQueue();
 		js5NetQueue = new Js5NetQueue();
 		if (modeWhat != 0) {
@@ -892,8 +911,8 @@ public final class client extends GameShell {
 		}
 		if (game == 1) {
 			Cheat.shiftClick = true;
-			Static161.anInt3923 = 16777215;
-			Static161.anInt3922 = 0;
+			FogManager.anInt3923 = 16777215;
+			FogManager.anInt3922 = 0;
 			PlayerAppearance.aShortArrayArray2 = PlayerAppearance.aShortArrayArray4;
 			PlayerAppearance.aShortArrayArray7 = PlayerAppearance.aShortArrayArray1;
 			PlayerAppearance.aShortArray65 = PlayerAppearance.aShortArray1;
@@ -1010,12 +1029,12 @@ public final class client extends GameShell {
 		if (!GlRenderer.enabled) {
 			Flames.update();
 		} else if (LoginManager.step == 0 && CreateManager.step == 0) {
-			if (Static227.cameraType == 2) {
+			if (Camera.cameraType == 2) {
 				Camera.updateLockedCamera();
 			} else {
 				Camera.updateLoginScreenCamera();
 			}
-			if (Static138.renderX >> 7 < 14 || Static138.renderX >> 7 >= 90 || Static134.renderZ >> 7 < 14 || Static134.renderZ >> 7 >= 90) {
+			if (Camera.renderX >> 7 < 14 || Camera.renderX >> 7 >= 90 || Camera.renderZ >> 7 < 14 || Camera.renderZ >> 7 >= 90) {
 				LoginManager.setupLoadingScreenRegion();
 			}
 		}
@@ -1034,7 +1053,7 @@ public final class client extends GameShell {
 									do {
 										priorityRequest = (HookRequest) InterfaceList.lowPriorityRequests.removeHead();
 										if (priorityRequest == null) {
-											if (Static105.aClass13_14 != null) {
+											if (Static40.aClass13_14 != null) {
 												ClientProt.method28();
 											}
 											if (Static33.openUrlRequest != null && Static33.openUrlRequest.status == 1) {
@@ -1260,7 +1279,7 @@ public final class client extends GameShell {
 		} else if (mainLoadState == 40) {
 			percentage = 0;
 			for (i = 0; i < 28; i++) {
-				percentage += js5Providers[i].getIndexPercentageComplete() * Static170.JS5_ARCHIVE_WEIGHTS[i] / 100;
+				percentage += js5Providers[i].getIndexPercentageComplete() * JS5_ARCHIVE_WEIGHTS[i] / 100;
 			}
 			if (percentage == 100) {
 				mainLoadPercentage = 20;
@@ -1484,7 +1503,7 @@ public final class client extends GameShell {
 			}
 			Preferences.safeMode = true;
 			Preferences.write(GameShell.signLink);
-			Static241.setWindowMode(false, Preferences.favoriteWorlds, -1, -1);
+			DisplayMode.setWindowMode(false, Preferences.favoriteWorlds, -1, -1);
 			mainLoadPercentage = 100;
 			mainLoadState = 160;
 			mainLoadSecondaryText = LocalizedText.MAINLOAD150B;
@@ -1518,7 +1537,7 @@ public final class client extends GameShell {
 		}
 		if (mouseWheel != null) {
 			@Pc(75) int wheelRotation = mouseWheel.getRotation();
-			Static58.wheelRotation = wheelRotation;
+			MouseWheel.wheelRotation = wheelRotation;
 		}
 		if (gameState == 0) {
 			this.mainLoad();
@@ -1542,7 +1561,7 @@ public final class client extends GameShell {
 				if (LoginManager.reply == 15) {
 					Static44.method1146();
 				} else if (LoginManager.reply != 2) {
-					Static278.processLogout();
+					LoginManager.processLogout();
 				}
 			}
 		}

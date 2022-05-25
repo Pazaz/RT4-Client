@@ -17,11 +17,6 @@ public final class Static181 {
 		}
 	}
 
-	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(II)Lclient!na;")
-	public static JagString method3341(@OriginalArg(0) int arg0) {
-		return JagString.concatenate(new JagString[] { JagString.parseInt(arg0 >> 24 & 0xFF), Static233.aClass100_994, JagString.parseInt(arg0 >> 16 & 0xFF), Static233.aClass100_994, JagString.parseInt(arg0 >> 8 & 0xFF), Static233.aClass100_994, JagString.parseInt(arg0 & 0xFF) });
-	}
-
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(I[I[Ljava/lang/Object;)V")
 	public static void method3346(@OriginalArg(1) int[] arg0, @OriginalArg(2) Object[] arg1) {
 		Static53.method1292(arg1, arg0.length - 1, arg0, 0);

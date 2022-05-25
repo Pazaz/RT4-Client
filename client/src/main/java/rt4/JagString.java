@@ -19,6 +19,8 @@ public final class JagString implements StringInterface {
     public static final JagString EMPTY = parse("");
 	@OriginalMember(owner = "client!pi", name = "Q", descriptor = "Lclient!na;")
 	public static final JagString aClass100_853 = parse("null");
+	@OriginalMember(owner = "client!t", name = "C", descriptor = "Lclient!na;")
+	public static final JagString aClass100_994 = parse(")3");
 	@OriginalMember(owner = "client!na", name = "T", descriptor = "[B")
 	public byte[] chars;
 
@@ -192,7 +194,64 @@ public final class JagString implements StringInterface {
         return parseInt(true, arg0);
     }
 
-    @OriginalMember(owner = "client!na", name = "a", descriptor = "(Z)Ljava/net/URL;")
+    @OriginalMember(owner = "client!oi", name = "a", descriptor = "(II)Lclient!na;")
+    public static JagString formatIp(@OriginalArg(0) int arg0) {
+        return concatenate(new JagString[] { parseInt(arg0 >> 24 & 0xFF), aClass100_994, parseInt(arg0 >> 16 & 0xFF), aClass100_994, parseInt(arg0 >> 8 & 0xFF), aClass100_994, parseInt(arg0 & 0xFF) });
+    }
+
+	@OriginalMember(owner = "client!k", name = "a", descriptor = "(Lclient!be;Lclient!na;I)Lclient!na;")
+	public static JagString method2465(@OriginalArg(0) Component arg0, @OriginalArg(1) JagString arg1) {
+		if (arg1.indexOf(Static127.PERCENT_SIGN) == -1) {
+			return arg1;
+		}
+		while (true) {
+			@Pc(14) int local14 = arg1.indexOf(Static127.aClass100_133);
+			if (local14 == -1) {
+				while (true) {
+					local14 = arg1.indexOf(Static127.aClass100_1097);
+					if (local14 == -1) {
+						while (true) {
+							local14 = arg1.indexOf(Static127.aClass100_761);
+							if (local14 == -1) {
+								while (true) {
+									local14 = arg1.indexOf(Static127.aClass100_520);
+									if (local14 == -1) {
+										while (true) {
+											local14 = arg1.indexOf(Static127.aClass100_1002);
+											if (local14 == -1) {
+												while (true) {
+													local14 = arg1.indexOf(Static127.aClass100_591);
+													if (local14 == -1) {
+														return arg1;
+													}
+													@Pc(246) JagString local246 = EMPTY;
+													if (Player.lastLogAddress != null) {
+														local246 = formatIp(Player.lastLogAddress.intArg2);
+														if (Player.lastLogAddress.result != null) {
+															@Pc(265) byte[] local265 = ((String) Player.lastLogAddress.result).getBytes(StandardCharsets.ISO_8859_1);
+															local246 = decodeString(local265, local265.length, 0);
+														}
+													}
+													arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), local246, arg1.substring(local14 + 4) });
+												}
+											}
+											arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), StringUtils.method4510(Static127.method3212(4, arg0)), arg1.substring(local14 + 2) });
+										}
+									}
+									arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), StringUtils.method4510(Static127.method3212(3, arg0)), arg1.substring(local14 + 2) });
+								}
+							}
+							arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), StringUtils.method4510(Static127.method3212(2, arg0)), arg1.substring(local14 + 2) });
+						}
+					}
+					arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), StringUtils.method4510(Static127.method3212(1, arg0)), arg1.substring(local14 + 2) });
+				}
+			}
+			arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), StringUtils.method4510(Static127.method3212(0, arg0)), arg1.substring(local14 + 2) });
+		}
+	}
+
+	@OriginalMember(owner = "client!na", name = "a", descriptor = "(Z)Ljava/net/URL;")
 	public final URL method3107() throws MalformedURLException {
 		return new URL(new String(this.chars, 0, this.length));
 	}

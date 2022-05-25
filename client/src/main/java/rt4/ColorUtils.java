@@ -70,8 +70,8 @@ public class ColorUtils {
 
     @OriginalMember(owner = "client!pf", name = "a", descriptor = "(II)[F")
     public static float[] getRgbFloat(@OriginalArg(0) int arg0) {
-        @Pc(7) float local7 = Static161.method3068() + Static161.method3059();
-        @Pc(9) int local9 = Static161.method3064();
+        @Pc(7) float local7 = FogManager.method3068() + FogManager.method3059();
+        @Pc(9) int local9 = FogManager.method3064();
         @Pc(11) float local11 = 0.58823526F;
         Static251.aFloatArray28[3] = 1.0F;
         @Pc(24) float local24 = (float) (local9 >> 16 & 0xFF) / 255.0F;

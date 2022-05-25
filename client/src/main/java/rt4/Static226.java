@@ -6,9 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static226 {
 
-    @OriginalMember(owner = "client!sf", name = "c", descriptor = "I")
-	public static int anInt5080;
-
 	@OriginalMember(owner = "client!sf", name = "j", descriptor = "I")
 	public static int anInt5085;
 
@@ -73,12 +70,12 @@ public final class Static226 {
 			local43 = 0;
 		}
 		if (anInt3953 == 1) {
-			if (Static155.anInt3751 == Static277.anInt5850 && Static280.anInt5895 == Static60.anInt1892) {
-				Static13.anInt436 = MiniMenu.size * 15 + (Static261.aBoolean298 ? 26 : 22);
+			if (Static155.anInt3751 == Mouse.anInt5850 && Static280.anInt5895 == Static60.anInt1892) {
+				Static13.anInt436 = MiniMenu.size * 15 + (Static40.aBoolean298 ? 26 : 22);
 				anInt3953 = 0;
 				Static229.anInt5138 = local43;
 				Static183.anInt4271 = local27;
-				Static60.aBoolean108 = true;
+				Static40.aBoolean108 = true;
 				Static24.anInt761 = local16;
 			}
 		} else if (Static155.anInt3751 == Mouse.clickX && Static60.anInt1892 == Mouse.clickY) {
@@ -86,11 +83,11 @@ public final class Static226 {
 			anInt3953 = 0;
 			Static24.anInt761 = local16;
 			Static229.anInt5138 = local43;
-			Static13.anInt436 = (Static261.aBoolean298 ? 26 : 22) + MiniMenu.size * 15;
-			Static60.aBoolean108 = true;
+			Static13.anInt436 = (Static40.aBoolean298 ? 26 : 22) + MiniMenu.size * 15;
+			Static40.aBoolean108 = true;
 		} else {
 			Static280.anInt5895 = Mouse.clickY;
-			Static277.anInt5850 = Mouse.clickX;
+			Mouse.anInt5850 = Mouse.clickX;
 			anInt3953 = 1;
 		}
 	}

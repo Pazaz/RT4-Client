@@ -52,6 +52,8 @@ public class Protocol {
 	public static int opcode3 = 0;
     @OriginalMember(owner = "client!sj", name = "t", descriptor = "I")
 	public static int opcode2 = 0;
+    @OriginalMember(owner = "client!bj", name = "r", descriptor = "I")
+    public static int anInt659 = 2;
 
     @OriginalMember(owner = "client!g", name = "b", descriptor = "(B)V")
     public static void readLocationPacket() {
@@ -145,7 +147,7 @@ public class Protocol {
             if (local218 == 65535) {
                 local218 = -1;
             }
-            Static92.method1881(Player.level, local39, local31, local19, local45, local23, local218);
+            SceneGraph.method1881(Player.level, local39, local31, local19, local45, local23, local218);
         } else if (opcode == ServerProt.LOCATION_PACKET_202) {
             int local15 = inboundBuffer.g1();
             int local23 = local15 >> 2;
@@ -162,7 +164,7 @@ public class Protocol {
             int local247 = inboundBuffer.g2();
             int local633 = inboundBuffer.g2lesadd();
             if (!GlRenderer.enabled) {
-                Static170.method2574(local625, local247, local633, local232, local39, local613, local19, local605, local31, local23, local609, local228);
+                SceneGraph.method2574(local625, local247, local633, local232, local39, local613, local19, local605, local31, local23, local609, local228);
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_14) {
             int local15 = inboundBuffer.g1();
@@ -350,27 +352,27 @@ public class Protocol {
         if (!Static230.dynamicMapRegion) {
             local13 = inboundBuffer.g2sub();
             local20 = (length - inboundBuffer.offset) / 16;
-            Static72.regionsXteaKeys = new int[local20][4];
+            LoginManager.regionsXteaKeys = new int[local20][4];
             for (local26 = 0; local26 < local20; local26++) {
                 for (local31 = 0; local31 < 4; local31++) {
-                    Static72.regionsXteaKeys[local26][local31] = inboundBuffer.g4me();
+                    LoginManager.regionsXteaKeys[local26][local31] = inboundBuffer.g4me();
                 }
             }
             local26 = inboundBuffer.g1ssub();
             local31 = inboundBuffer.g2();
             local60 = inboundBuffer.g2sub();
             local64 = inboundBuffer.g2sub();
-            Static238.regionBitPacked = new int[local20];
-            Static273.mapFilesBuffer = new byte[local20][];
-            Static191.npcSpawnsFilesBuffer = null;
-            Static99.underWaterMapFileIds = new int[local20];
-            Static156.locationMapFilesBuffer = new byte[local20][];
-            Static19.underWaterLocationsMapFilesBuffer = new byte[local20][];
-            Static175.npcSpawnsFileIds = null;
-            Static36.mapFileIds = new int[local20];
-            Static186.underWaterMapFilesBuffer = new byte[local20][];
-            Static172.locationsMapFileIds = new int[local20];
-            Static35.underWaterLocationsMapFileIds = new int[local20];
+            LoginManager.regionBitPacked = new int[local20];
+            LoginManager.mapFilesBuffer = new byte[local20][];
+            LoginManager.npcSpawnsFilesBuffer = null;
+            LoginManager.underWaterMapFileIds = new int[local20];
+            LoginManager.locationMapFilesBuffer = new byte[local20][];
+            LoginManager.underWaterLocationsMapFilesBuffer = new byte[local20][];
+            LoginManager.npcSpawnsFileIds = null;
+            LoginManager.mapFileIds = new int[local20];
+            LoginManager.underWaterMapFilesBuffer = new byte[local20][];
+            LoginManager.locationsMapFileIds = new int[local20];
+            LoginManager.underWaterLocationsMapFileIds = new int[local20];
             local20 = 0;
             @Pc(100) boolean local100 = false;
             if ((local31 / 8 == 48 || local31 / 8 == 49) && local60 / 8 == 48) {
@@ -383,22 +385,22 @@ public class Protocol {
                 for (local151 = (local60 - 6) / 8; local151 <= (local60 + 6) / 8; local151++) {
                     local169 = (local138 << 8) + local151;
                     if (local100 && (local151 == 49 || local151 == 149 || local151 == 147 || local138 == 50 || local138 == 49 && local151 == 47)) {
-                        Static238.regionBitPacked[local20] = local169;
-                        Static36.mapFileIds[local20] = -1;
-                        Static172.locationsMapFileIds[local20] = -1;
-                        Static99.underWaterMapFileIds[local20] = -1;
-                        Static35.underWaterLocationsMapFileIds[local20] = -1;
+                        LoginManager.regionBitPacked[local20] = local169;
+                        LoginManager.mapFileIds[local20] = -1;
+                        LoginManager.locationsMapFileIds[local20] = -1;
+                        LoginManager.underWaterMapFileIds[local20] = -1;
+                        LoginManager.underWaterLocationsMapFileIds[local20] = -1;
                     } else {
-                        Static238.regionBitPacked[local20] = local169;
-                        Static36.mapFileIds[local20] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static103.aClass100_558, JagString.parseInt(local138), Static86.aClass100_488, JagString.parseInt(local151) }));
-                        Static172.locationsMapFileIds[local20] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static270.aClass100_1090, JagString.parseInt(local138), Static86.aClass100_488, JagString.parseInt(local151) }));
-                        Static99.underWaterMapFileIds[local20] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static165.aClass100_772, JagString.parseInt(local138), Static86.aClass100_488, JagString.parseInt(local151) }));
-                        Static35.underWaterLocationsMapFileIds[local20] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static278.aClass100_1103, JagString.parseInt(local138), Static86.aClass100_488, JagString.parseInt(local151) }));
+                        LoginManager.regionBitPacked[local20] = local169;
+                        LoginManager.mapFileIds[local20] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { LoginManager.aClass100_558, JagString.parseInt(local138), LoginManager.UNDERSCORE, JagString.parseInt(local151) }));
+                        LoginManager.locationsMapFileIds[local20] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { LoginManager.aClass100_1090, JagString.parseInt(local138), LoginManager.UNDERSCORE, JagString.parseInt(local151) }));
+                        LoginManager.underWaterMapFileIds[local20] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { LoginManager.aClass100_772, JagString.parseInt(local138), LoginManager.UNDERSCORE, JagString.parseInt(local151) }));
+                        LoginManager.underWaterLocationsMapFileIds[local20] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { LoginManager.aClass100_1103, JagString.parseInt(local138), LoginManager.UNDERSCORE, JagString.parseInt(local151) }));
                     }
                     local20++;
                 }
             }
-            Static127.method2463(local26, local60, local31, local64, false, local13);
+            LoginManager.method2463(local26, local60, local31, local64, false, local13);
             return;
         }
         local13 = inboundBuffer.g2leadd();
@@ -421,24 +423,24 @@ public class Protocol {
         }
         inboundBuffer.accessBytes();
         local60 = (length - inboundBuffer.offset) / 16;
-        Static72.regionsXteaKeys = new int[local60][4];
+        LoginManager.regionsXteaKeys = new int[local60][4];
         for (local64 = 0; local64 < local60; local64++) {
             for (local391 = 0; local391 < 4; local391++) {
-                Static72.regionsXteaKeys[local64][local391] = inboundBuffer.g4me();
+                LoginManager.regionsXteaKeys[local64][local391] = inboundBuffer.g4me();
             }
         }
         local64 = inboundBuffer.g2();
-        Static35.underWaterLocationsMapFileIds = new int[local60];
-        Static172.locationsMapFileIds = new int[local60];
-        Static36.mapFileIds = new int[local60];
-        Static19.underWaterLocationsMapFilesBuffer = new byte[local60][];
-        Static175.npcSpawnsFileIds = null;
-        Static99.underWaterMapFileIds = new int[local60];
-        Static156.locationMapFilesBuffer = new byte[local60][];
-        Static273.mapFilesBuffer = new byte[local60][];
-        Static238.regionBitPacked = new int[local60];
-        Static191.npcSpawnsFilesBuffer = null;
-        Static186.underWaterMapFilesBuffer = new byte[local60][];
+        LoginManager.underWaterLocationsMapFileIds = new int[local60];
+        LoginManager.locationsMapFileIds = new int[local60];
+        LoginManager.mapFileIds = new int[local60];
+        LoginManager.underWaterLocationsMapFilesBuffer = new byte[local60][];
+        LoginManager.npcSpawnsFileIds = null;
+        LoginManager.underWaterMapFileIds = new int[local60];
+        LoginManager.locationMapFilesBuffer = new byte[local60][];
+        LoginManager.mapFilesBuffer = new byte[local60][];
+        LoginManager.regionBitPacked = new int[local60];
+        LoginManager.npcSpawnsFilesBuffer = null;
+        LoginManager.underWaterMapFilesBuffer = new byte[local60][];
         local60 = 0;
         for (local391 = 0; local391 < 4; local391++) {
             for (local138 = 0; local138 < 13; local138++) {
@@ -450,26 +452,26 @@ public class Protocol {
                         @Pc(571) int local571 = local561 / 8 + (local555 / 8 << 8);
                         @Pc(573) int local573;
                         for (local573 = 0; local573 < local60; local573++) {
-                            if (local571 == Static238.regionBitPacked[local573]) {
+                            if (local571 == LoginManager.regionBitPacked[local573]) {
                                 local571 = -1;
                                 break;
                             }
                         }
                         if (local571 != -1) {
-                            Static238.regionBitPacked[local60] = local571;
+                            LoginManager.regionBitPacked[local60] = local571;
                             @Pc(609) int local609 = local571 & 0xFF;
                             local573 = local571 >> 8 & 0xFF;
-                            Static36.mapFileIds[local60] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static103.aClass100_558, JagString.parseInt(local573), Static86.aClass100_488, JagString.parseInt(local609) }));
-                            Static172.locationsMapFileIds[local60] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static270.aClass100_1090, JagString.parseInt(local573), Static86.aClass100_488, JagString.parseInt(local609) }));
-                            Static99.underWaterMapFileIds[local60] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static165.aClass100_772, JagString.parseInt(local573), Static86.aClass100_488, JagString.parseInt(local609) }));
-                            Static35.underWaterLocationsMapFileIds[local60] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static278.aClass100_1103, JagString.parseInt(local573), Static86.aClass100_488, JagString.parseInt(local609) }));
+                            LoginManager.mapFileIds[local60] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { LoginManager.aClass100_558, JagString.parseInt(local573), LoginManager.UNDERSCORE, JagString.parseInt(local609) }));
+                            LoginManager.locationsMapFileIds[local60] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { LoginManager.aClass100_1090, JagString.parseInt(local573), LoginManager.UNDERSCORE, JagString.parseInt(local609) }));
+                            LoginManager.underWaterMapFileIds[local60] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { LoginManager.aClass100_772, JagString.parseInt(local573), LoginManager.UNDERSCORE, JagString.parseInt(local609) }));
+                            LoginManager.underWaterLocationsMapFileIds[local60] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { LoginManager.aClass100_1103, JagString.parseInt(local573), LoginManager.UNDERSCORE, JagString.parseInt(local609) }));
                             local60++;
                         }
                     }
                 }
             }
         }
-        Static127.method2463(local26, local64, local20, local31, false, local13);
+        LoginManager.method2463(local26, local64, local20, local31, false, local13);
     }
 
     @OriginalMember(owner = "client!gk", name = "a", descriptor = "(IIBLclient!e;)V")
@@ -1034,7 +1036,7 @@ public class Protocol {
             return true;
         } else if (opcode == ServerProt.CLEAR_MINIMAP_FLAG) {
             opcode = -1;
-            Static115.mapFlagX = 0;
+            LoginManager.mapFlagX = 0;
             return true;
         } else if (opcode == ServerProt.IF_SETSCROLLPOS) {
             int id = inboundBuffer.g4me();
@@ -1178,7 +1180,7 @@ public class Protocol {
             int optId = inboundBuffer.g1();
             JagString option = inboundBuffer.gjstr();
             if (optId >= 1 && optId <= 8) {
-                if (option.equalsIgnoreCase(Static92.NULL)) {
+                if (option.equalsIgnoreCase(MiniMenu.NULL)) {
                     option = null;
                 }
                 Player.options[optId - 1] = option;
@@ -1234,7 +1236,7 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.UPDATE_UID192) {
-            Static271.writeRandom(inboundBuffer);
+            writeRandom(inboundBuffer);
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.RESET_CLIENT_VARCACHE) {
@@ -1251,7 +1253,7 @@ public class Protocol {
             int step = inboundBuffer.g1();
             int dur = inboundBuffer.g1();
             setVerifyId(tracknum);
-            Static260.method3849(cy, tz, step, tx, dur);
+            Camera.method3849(cy, tz, step, tx, dur);
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.IF_SETANIM) {
@@ -1364,8 +1366,8 @@ public class Protocol {
                 }
             } else {
                 int plane = target >> 28 & 0x3;
-                int posX = (target >> 14 & 0x3FFF) - Static225.originX;
-                int posZ = (target & 0x3FFF) - Static142.originZ;
+                int posX = (target >> 14 & 0x3FFF) - Camera.originX;
+                int posZ = (target & 0x3FFF) - Camera.originZ;
                 if (posX >= 0 && posZ >= 0 && posX < 104 && posZ < 104) {
                     posZ = posZ * 128 + 64;
                     posX = posX * 128 + 64;
@@ -1425,9 +1427,9 @@ public class Protocol {
             setVerifyId(tracknum);
             Camera.yawTarget = yaw;
             Camera.pitchTarget = pitch;
-            if (Static227.cameraType == 2) {
-                Static240.cameraPitch = (int)Camera.pitchTarget;
-                Static184.cameraYaw = (int)Camera.yawTarget;
+            if (Camera.cameraType == 2) {
+                Camera.cameraPitch = (int)Camera.pitchTarget;
+                Camera.cameraYaw = (int)Camera.yawTarget;
             }
             Camera.clampCameraAngle();
             opcode = -1;
@@ -1580,7 +1582,7 @@ public class Protocol {
             for (int i = 0; i < VarpDomain.activeVarps.length; i++) {
                 if (VarpDomain.varp[i] != VarpDomain.activeVarps[i]) {
                     VarpDomain.activeVarps[i] = VarpDomain.varp[i];
-                    Static85.refreshMagicVarp(i);
+                    VarpDomain.refreshMagicVarp(i);
                     VarpDomain.updatedVarps[VarpDomain.updatedVarpsWriterIndex++ & 0x1F] = i;
                 }
             }
@@ -1594,7 +1596,7 @@ public class Protocol {
             int local1146 = inboundBuffer.g1();
             int local277 = inboundBuffer.g1();
             setVerifyId(tracknum);
-            Static141.method2722(true, local1146, counter, local277, modelId, local786);
+            Camera.method2722(true, local1146, counter, local277, modelId, local786);
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.MESSAGE_QUICKCHAT_PRIVATE) {
@@ -1679,9 +1681,9 @@ public class Protocol {
             int shake4 = inboundBuffer.g2();
             setVerifyId(tracknum);
             Static176.customCameraActive[cameraId] = true;
-            Static222.cameraJitter[cameraId] = jitter;
-            Static276.cameraAmplitude[cameraId] = amplitude;
-            Static202.cameraFrequency[cameraId] = frequency;
+            Camera.cameraJitter[cameraId] = jitter;
+            Camera.cameraAmplitude[cameraId] = amplitude;
+            Camera.cameraFrequency[cameraId] = frequency;
             Static31.anIntArray76[cameraId] = shake4;
             opcode = -1;
             return true;
@@ -1752,7 +1754,7 @@ public class Protocol {
             return true;
         } else if (opcode == ServerProt.URL_OPEN) {
             if (GameShell.fullScreenFrame != null) {
-                Static241.setWindowMode(false, Preferences.favoriteWorlds, -1, -1);
+                DisplayMode.setWindowMode(false, Preferences.favoriteWorlds, -1, -1);
             }
             @Pc(3848) byte[] data = new byte[length];
             inboundBuffer.gBytesIsaac(data, length);
@@ -1779,7 +1781,7 @@ public class Protocol {
         } else if (opcode == ServerProt.VARBIT_SMALL) {
             int value = inboundBuffer.g1add();
             int id = inboundBuffer.g2le();
-            Static272.setVarbit(value, id);
+            VarpDomain.setVarbit(value, id);
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.IF_OPENTOP) {
@@ -1886,10 +1888,10 @@ public class Protocol {
             }
             int z = pos & 0x3FFF;
             int x = pos >> 14 & 0x3FFF;
-            x -= Static225.originX;
-            z -= Static142.originZ;
+            x -= Camera.originX;
+            z -= Camera.originZ;
             int plane = pos >> 28 & 0x3;
-            Static92.method1881(plane, rotation, type, z, type2, x, seqId);
+            SceneGraph.method1881(plane, rotation, type, z, type2, x, seqId);
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.MESSAGE_PRIVATE) {
@@ -2018,7 +2020,7 @@ public class Protocol {
         } else if (opcode == ServerProt.VARBIT_LARGE) {
             int value = inboundBuffer.g4le();
             int id = inboundBuffer.g2leadd();
-            Static272.setVarbit(value, id);
+            VarpDomain.setVarbit(value, id);
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.UPDATE_INV_PARTIAL) {
@@ -2059,11 +2061,11 @@ public class Protocol {
         } else if (opcode == ServerProt.CAM_RESET) {
             int tracknum = inboundBuffer.g2();
             setVerifyId(tracknum);
-            Static35.resetCameraEffects();
+            Camera.resetCameraEffects();
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.LOGOUT) {
-            Static278.processLogout();
+            LoginManager.processLogout();
             opcode = -1;
             return false;
         } else if (opcode == ServerProt.GRAND_EXCHANGE_OFFERS) {
@@ -2294,7 +2296,7 @@ public class Protocol {
             return true;
         } else {
             TracingException.report("T1 - " + opcode + "," + opcode3 + "," + opcode4 + " - " + length, null);
-            Static278.processLogout();
+            LoginManager.processLogout();
             return true;
         }
     }
@@ -2307,12 +2309,12 @@ public class Protocol {
             Static175.method3279();
             return true;
         } catch (@Pc(19) Exception local19) {
-            @Pc(61) String local61 = "T2 - " + opcode + "," + opcode3 + "," + opcode4 + " - " + length + "," + (Static225.originX + PlayerList.self.movementQueueX[0]) + "," + (PlayerList.self.movementQueueZ[0] + Static142.originZ) + " - ";
+            @Pc(61) String local61 = "T2 - " + opcode + "," + opcode3 + "," + opcode4 + " - " + length + "," + (Camera.originX + PlayerList.self.movementQueueX[0]) + "," + (PlayerList.self.movementQueueZ[0] + Camera.originZ) + " - ";
             for (@Pc(63) int local63 = 0; local63 < length && local63 < 50; local63++) {
                 local61 = local61 + inboundBuffer.data[local63] + ",";
             }
             TracingException.report(local61, local19);
-            Static278.processLogout();
+            LoginManager.processLogout();
             return true;
         }
     }
@@ -2506,7 +2508,7 @@ public class Protocol {
         }
         // VarpDomain
         for (i = Static38.poll(true); i != -1; i = Static38.poll(false)) {
-            Static85.refreshMagicVarp(i);
+            VarpDomain.refreshMagicVarp(i);
             VarpDomain.updatedVarps[VarpDomain.updatedVarpsWriterIndex++ & 0x1F] = i;
         }
         @Pc(782) int modelId;
@@ -2684,7 +2686,7 @@ public class Protocol {
                         outboundBuffer.p2add(Static18.anInt588);
                         outboundBuffer.p1sub(local1363);
                     }
-                } else if ((Static116.anInt2952 == 1 || Static277.method4640(MiniMenu.size - 1)) && MiniMenu.size > 2) {
+                } else if ((Static116.anInt2952 == 1 || MiniMenu.method4640(MiniMenu.size - 1)) && MiniMenu.size > 2) {
                     Static226.method3901();
                 } else if (MiniMenu.size > 0) {
                     Static59.method1372();
@@ -2728,24 +2730,24 @@ public class Protocol {
                                         priorityRequest = (HookRequest) InterfaceList.lowPriorityRequests.removeHead();
                                         if (priorityRequest == null) {
                                             if (WorldMap.component == null) {
-                                                Static137.anInt3337 = 0;
+                                                Static36.anInt3337 = 0;
                                             }
-                                            if (Static105.aClass13_14 != null) {
+                                            if (Static40.aClass13_14 != null) {
                                                 ClientProt.method28();
                                             }
-                                            if (LoginManager.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && Static58.wheelRotation != 0) {
-                                                y = Player.level - Static58.wheelRotation;
+                                            if (LoginManager.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && MouseWheel.wheelRotation != 0) {
+                                                y = Player.level - MouseWheel.wheelRotation;
                                                 if (y < 0) {
                                                     y = 0;
                                                 } else if (y > 3) {
                                                     y = 3;
                                                 }
                                                 // Cheat
-                                                Cheat.teleport(PlayerList.self.movementQueueX[0] + Static225.originX, PlayerList.self.movementQueueZ[0] + Static142.originZ, y);
+                                                Cheat.teleport(PlayerList.self.movementQueueX[0] + Camera.originX, PlayerList.self.movementQueueZ[0] + Camera.originZ, y);
                                             }
                                             if (LoginManager.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT]) {
                                                 if (MiniMenu.anInt1742 != -1) {
-                                                    Cheat.teleport(Static225.originX + MiniMenu.anInt1742, Static142.originZ - -MiniMenu.anInt2954, Player.level);
+                                                    Cheat.teleport(Camera.originX + MiniMenu.anInt1742, Camera.originZ - -MiniMenu.anInt2954, Player.level);
                                                 }
                                                 Static187.anInt4422 = 0;
                                                 Static125.anInt3096 = 0;
@@ -2753,9 +2755,9 @@ public class Protocol {
                                                 if (MiniMenu.anInt1742 != -1) {
                                                     outboundBuffer.p1isaac(131);
                                                     outboundBuffer.p4me(MiniMenu.anInt2512);
-                                                    outboundBuffer.p2add(Static225.originX + MiniMenu.anInt1742);
+                                                    outboundBuffer.p2add(Camera.originX + MiniMenu.anInt1742);
                                                     outboundBuffer.p2leadd(MiniMenu.anInt506);
-                                                    outboundBuffer.p2add(MiniMenu.anInt2954 + Static142.originZ);
+                                                    outboundBuffer.p2add(MiniMenu.anInt2954 + Camera.originZ);
                                                     Cross.type = 1;
                                                     Cross.milliseconds = 0;
                                                     Cross.y = Mouse.clickY;
@@ -2765,8 +2767,8 @@ public class Protocol {
                                             } else if (Static187.anInt4422 == 2) {
                                                 if (MiniMenu.anInt1742 != -1) {
                                                     outboundBuffer.p1isaac(179);
-                                                    outboundBuffer.p2(Static142.originZ + MiniMenu.anInt2954);
-                                                    outboundBuffer.p2(MiniMenu.anInt1742 + Static225.originX);
+                                                    outboundBuffer.p2(Camera.originZ + MiniMenu.anInt2954);
+                                                    outboundBuffer.p2(MiniMenu.anInt1742 + Camera.originX);
                                                     Cross.milliseconds = 0;
                                                     Cross.type = 1;
                                                     Cross.x = Mouse.clickX;
@@ -2810,9 +2812,9 @@ public class Protocol {
                                                     InterfaceList.redraw(Static43.aClass13_11);
                                                 }
                                             }
-                                            if (Static227.cameraType == 1) {
-                                                Static250.method4273();
-                                            } else if (Static227.cameraType == 2) {
+                                            if (Camera.cameraType == 1) {
+                                                Camera.method4273();
+                                            } else if (Camera.cameraType == 2) {
                                                 Camera.updateLockedCamera();
                                             } else {
                                                 Camera.updateLoginScreenCamera();
@@ -2836,7 +2838,7 @@ public class Protocol {
                                                 Static164.newTab = false;
                                             }
                                             Static131.anInt3251++;
-                                            Static82.anInt2252++;
+                                            MiniMap.anInt2252++;
                                             Static143.anInt3486++;
                                             if (Static143.anInt3486 > 500) {
                                                 Static143.anInt3486 = 0;
@@ -2845,36 +2847,36 @@ public class Protocol {
                                                     Static230.anInt5161 += Static220.anInt4941;
                                                 }
                                                 if ((modelId & 0x2) == 2) {
-                                                    Static206.anInt4774 += Static20.anInt659;
+                                                    Static206.anInt4774 += anInt659;
                                                 }
                                                 if ((modelId & 0x1) == 1) {
                                                     Static132.anInt3291 += Static248.anInt4229;
                                                 }
                                             }
-                                            if (Static82.anInt2252 > 500) {
-                                                Static82.anInt2252 = 0;
+                                            if (MiniMap.anInt2252 > 500) {
+                                                MiniMap.anInt2252 = 0;
                                                 modelId = (int) (Math.random() * 8.0D);
                                                 if ((modelId & 0x1) == 1) {
-                                                    Static59.anInt1814 += Static263.anInt5755;
+                                                    MiniMap.anInt1814 += MiniMap.anInt5755;
                                                 }
                                                 if ((modelId & 0x2) == 2) {
-                                                    MiniMap.anInt4130 += Static179.anInt4262;
+                                                    MiniMap.anInt4130 += MiniMap.anInt4262;
                                                 }
                                             }
                                             if (Static132.anInt3291 < -50) {
                                                 Static248.anInt4229 = 2;
                                             }
-                                            if (Static59.anInt1814 < -60) {
-                                                Static263.anInt5755 = 2;
+                                            if (MiniMap.anInt1814 < -60) {
+                                                MiniMap.anInt5755 = 2;
                                             }
                                             if (MiniMap.anInt4130 < -20) {
-                                                Static179.anInt4262 = 1;
+                                                MiniMap.anInt4262 = 1;
                                             }
                                             if (Static206.anInt4774 < -55) {
-                                                Static20.anInt659 = 2;
+                                                anInt659 = 2;
                                             }
                                             if (Static206.anInt4774 > 55) {
-                                                Static20.anInt659 = -2;
+                                                anInt659 = -2;
                                             }
                                             if (Static230.anInt5161 < -40) {
                                                 Static220.anInt4941 = 1;
@@ -2886,10 +2888,10 @@ public class Protocol {
                                                 Static220.anInt4941 = -1;
                                             }
                                             if (MiniMap.anInt4130 > 10) {
-                                                Static179.anInt4262 = -1;
+                                                MiniMap.anInt4262 = -1;
                                             }
-                                            if (Static59.anInt1814 > 60) {
-                                                Static263.anInt5755 = -2;
+                                            if (MiniMap.anInt1814 > 60) {
+                                                MiniMap.anInt5755 = -2;
                                             }
                                             if (Static131.anInt3251 > 50) {
                                                 outboundBuffer.p1isaac(93);
@@ -3198,5 +3200,17 @@ public class Protocol {
     public static void transmitVerifyId() {
         outboundBuffer.p1isaac(177);
         outboundBuffer.p2(verifyId);
+    }
+
+    @OriginalMember(owner = "client!wc", name = "a", descriptor = "(Lclient!wa;I)V")
+    public static void writeRandom(@OriginalArg(0) Buffer arg0) {
+        if (client.uid != null) {
+            try {
+                client.uid.seek(0L);
+                client.uid.write(arg0.data, arg0.offset, 24);
+            } catch (@Pc(16) Exception local16) {
+            }
+        }
+        arg0.offset += 24;
     }
 }

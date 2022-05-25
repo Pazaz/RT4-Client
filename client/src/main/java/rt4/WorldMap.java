@@ -21,6 +21,8 @@ public class WorldMap {
     public static final int anInt3254 = (int) (Math.random() * 17.0D) - 8;
     @OriginalMember(owner = "client!lf", name = "c", descriptor = "Lclient!ih;")
     public static final LinkedList mapElements = new LinkedList();
+    @OriginalMember(owner = "client!he", name = "db", descriptor = "Lclient!na;")
+    public static final JagString aClass100_517 = JagString.parse("");
     @OriginalMember(owner = "client!wa", name = "ub", descriptor = "Lclient!bn;")
     public static Map currentMap;
     @OriginalMember(owner = "client!dc", name = "O", descriptor = "I")
@@ -137,9 +139,9 @@ public class WorldMap {
                 targetZoom = 8.0F;
             }
 
-            @Pc(144) int local144 = (PlayerList.self.xFine >> 7) + Static225.originX - originX;
+            @Pc(144) int local144 = (PlayerList.self.xFine >> 7) + Camera.originX - originX;
             @Pc(153) int local153 = local144 + (int) (Math.random() * 10.0D) - 5;
-            @Pc(168) int local168 = originZ + length - Static142.originZ - (PlayerList.self.zFine >> 7) - 1;
+            @Pc(168) int local168 = originZ + length - Camera.originZ - (PlayerList.self.zFine >> 7) - 1;
             @Pc(177) int local177 = local168 + (int) (Math.random() * 10.0D) - 5;
             if (local153 >= 0 && width > local153 && local177 >= 0 && local177 < length) {
                 anInt435 = local153;
@@ -154,7 +156,7 @@ public class WorldMap {
             @Pc(235) int length = WorldMap.length >> 6;
             @Pc(239) int width = WorldMap.width >> 6;
             aByteArrayArrayArray8 = new byte[width][length][];
-            @Pc(249) int local249 = Static86.anInt2293 >> 2 << 10;
+            @Pc(249) int local249 = Static45.anInt2293 >> 2 << 10;
             aByteArrayArrayArray7 = new byte[width][length][];
             underlayColors = new int[width][length][];
             aByteArrayArrayArray3 = new byte[width][length][];
@@ -691,7 +693,7 @@ public class WorldMap {
                                     if (local437 == 0 || local62 <= 1 || local238 <= 1) {
                                         SoftwareRaster.fillRect(local47, mapScene, local62, local238, local372);
                                     } else {
-                                        Static280.method4667(SoftwareRaster.pixels, local372, local47, local433 & 0x3, local312, local437 >> 2, local238, local62, mapScene, true);
+                                        method4667(SoftwareRaster.pixels, local372, local47, local433 & 0x3, local312, local437 >> 2, local238, local62, mapScene, true);
                                     }
                                 }
                                 if (local395 != 0) {
@@ -703,7 +705,7 @@ public class WorldMap {
                                     if (local437 == 0 || local62 <= 1 || local238 <= 1) {
                                         SoftwareRaster.fillRect(local47, mapScene, local62, local238, local395);
                                     }
-                                    Static280.method4667(SoftwareRaster.pixels, local395, local47, local433 & 0x3, 0, local437 >> 2, local238, local62, mapScene, local372 == 0);
+                                    method4667(SoftwareRaster.pixels, local395, local47, local433 & 0x3, 0, local437 >> 2, local238, local62, mapScene, local372 == 0);
                                 }
                             }
                             if (local197[angle] != null) {
@@ -1023,7 +1025,7 @@ public class WorldMap {
     @OriginalMember(owner = "client!rc", name = "a", descriptor = "(Lclient!na;Z)Lclient!na;")
     public static JagString method923(@OriginalArg(0) JagString arg0) {
         @Pc(12) int local12 = Static171.method3218(arg0);
-        return local12 == -1 ? Static211.aClass100_517 : labels.aClass100Array153[local12].method3140(Static101.aClass100_538, Static197.aClass100_872);
+        return local12 == -1 ? aClass100_517 : labels.aClass100Array153[local12].method3140(Static101.aClass100_538, Static197.aClass100_872);
     }
 
     @OriginalMember(owner = "client!rg", name = "d", descriptor = "(B)Lclient!bn;")
@@ -1093,4 +1095,488 @@ public class WorldMap {
 		}
 		return -1;
 	}
+
+    @OriginalMember(owner = "client!wl", name = "a", descriptor = "([IIIIIIIIIZB)V")
+    public static void method4667(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) int arg8, @OriginalArg(9) boolean arg9) {
+        @Pc(7) int local7 = arg2;
+        if (SoftwareRaster.clipRight <= arg2) {
+            return;
+        }
+        if (arg2 < SoftwareRaster.clipLeft) {
+            local7 = SoftwareRaster.clipLeft;
+        }
+        @Pc(30) int local30 = arg7 + arg2;
+        if (SoftwareRaster.clipLeft >= local30) {
+            return;
+        }
+        if (SoftwareRaster.clipRight < local30) {
+            local30 = SoftwareRaster.clipRight;
+        }
+        @Pc(43) int local43 = arg8;
+        if (SoftwareRaster.clipBottom <= arg8) {
+            return;
+        }
+        @Pc(56) int local56 = arg8 + arg6;
+        if (arg8 < SoftwareRaster.clipTop) {
+            local43 = SoftwareRaster.clipTop;
+        }
+        if (local56 <= SoftwareRaster.clipTop) {
+            return;
+        }
+        @Pc(79) int local79 = local7 + SoftwareRaster.width * local43;
+        if (arg5 == 9) {
+            arg3 = arg3 + 1 & 0x3;
+            arg5 = 1;
+        }
+        @Pc(99) int local99 = local7 + SoftwareRaster.width - local30;
+        local43 -= arg8;
+        @Pc(108) int local108 = arg6 - local43;
+        if (SoftwareRaster.clipBottom < local56) {
+            local56 = SoftwareRaster.clipBottom;
+        }
+        if (arg5 == 10) {
+            arg3 = arg3 + 3 & 0x3;
+            arg5 = 1;
+        }
+        local7 -= arg2;
+        @Pc(136) int local136 = arg7 - local7;
+        if (arg5 == 11) {
+            arg3 = arg3 + 3 & 0x3;
+            arg5 = 8;
+        }
+        local30 -= arg2;
+        @Pc(157) int local157 = arg7 - local30;
+        local56 -= arg8;
+        @Pc(165) int local165 = arg6 - local56;
+        @Pc(175) int local175;
+        @Pc(184) int local184;
+        if (arg5 == 1) {
+            if (arg3 == 0) {
+                for (local175 = local43; local175 < local56; local175++) {
+                    for (local184 = local7; local184 < local30; local184++) {
+                        if (local184 <= local175) {
+                            arg0[local79] = arg1;
+                        } else if (arg9) {
+                            arg0[local79] = arg4;
+                        }
+                        local79++;
+                    }
+                    local79 += local99;
+                }
+            } else if (arg3 == 1) {
+                for (local175 = local108 - 1; local175 >= local165; local175--) {
+                    for (local184 = local7; local184 < local30; local184++) {
+                        if (local175 >= local184) {
+                            arg0[local79] = arg1;
+                        } else if (arg9) {
+                            arg0[local79] = arg4;
+                        }
+                        local79++;
+                    }
+                    local79 += local99;
+                }
+            } else if (arg3 == 2) {
+                for (local175 = local43; local175 < local56; local175++) {
+                    for (local184 = local7; local184 < local30; local184++) {
+                        if (local184 >= local175) {
+                            arg0[local79] = arg1;
+                        } else if (arg9) {
+                            arg0[local79] = arg4;
+                        }
+                        local79++;
+                    }
+                    local79 += local99;
+                }
+            } else if (arg3 == 3) {
+                for (local175 = local108 - 1; local175 >= local165; local175--) {
+                    for (local184 = local7; local184 < local30; local184++) {
+                        if (local184 >= local175) {
+                            arg0[local79] = arg1;
+                        } else if (arg9) {
+                            arg0[local79] = arg4;
+                        }
+                        local79++;
+                    }
+                    local79 += local99;
+                }
+            }
+        } else if (arg5 == 2) {
+            if (arg3 == 0) {
+                for (local175 = local108 - 1; local175 >= local165; local175--) {
+                    for (local184 = local7; local184 < local30; local184++) {
+                        if (local175 >> 1 >= local184) {
+                            arg0[local79] = arg1;
+                        } else if (arg9) {
+                            arg0[local79] = arg4;
+                        }
+                        local79++;
+                    }
+                    local79 += local99;
+                }
+            } else if (arg3 == 1) {
+                for (local175 = local43; local175 < local56; local175++) {
+                    for (local184 = local7; local184 < local30; local184++) {
+                        if (local79 >= 0 && local79 < arg0.length) {
+                            if (local175 << 1 <= local184) {
+                                arg0[local79] = arg1;
+                            } else if (arg9) {
+                                arg0[local79] = arg4;
+                            }
+                            local79++;
+                        } else {
+                            local79++;
+                        }
+                    }
+                    local79 += local99;
+                }
+            } else if (arg3 == 2) {
+                for (local175 = local43; local175 < local56; local175++) {
+                    for (local184 = local136 - 1; local184 >= local157; local184--) {
+                        if (local175 >> 1 >= local184) {
+                            arg0[local79] = arg1;
+                        } else if (arg9) {
+                            arg0[local79] = arg4;
+                        }
+                        local79++;
+                    }
+                    local79 += local99;
+                }
+            } else if (arg3 == 3) {
+                for (local175 = local108 - 1; local175 >= local165; local175--) {
+                    for (local184 = local136 - 1; local184 >= local157; local184--) {
+                        if (local175 << 1 <= local184) {
+                            arg0[local79] = arg1;
+                        } else if (arg9) {
+                            arg0[local79] = arg4;
+                        }
+                        local79++;
+                    }
+                    local79 += local99;
+                }
+            }
+        } else if (arg5 == 3) {
+            if (arg3 == 0) {
+                for (local175 = local108 - 1; local175 >= local165; local175--) {
+                    for (local184 = local136 - 1; local184 >= local157; local184--) {
+                        if (local175 >> 1 >= local184) {
+                            arg0[local79] = arg1;
+                        } else if (arg9) {
+                            arg0[local79] = arg4;
+                        }
+                        local79++;
+                    }
+                    local79 += local99;
+                }
+            } else if (arg3 == 1) {
+                for (local175 = local108 - 1; local175 >= local165; local175--) {
+                    for (local184 = local7; local184 < local30; local184++) {
+                        if (local184 >= local175 << 1) {
+                            arg0[local79] = arg1;
+                        } else if (arg9) {
+                            arg0[local79] = arg4;
+                        }
+                        local79++;
+                    }
+                    local79 += local99;
+                }
+            } else if (arg3 == 2) {
+                for (local175 = local43; local175 < local56; local175++) {
+                    for (local184 = local7; local184 < local30; local184++) {
+                        if (local184 <= local175 >> 1) {
+                            arg0[local79] = arg1;
+                        } else if (arg9) {
+                            arg0[local79] = arg4;
+                        }
+                        local79++;
+                    }
+                    local79 += local99;
+                }
+            } else if (arg3 == 3) {
+                for (local175 = local43; local175 < local56; local175++) {
+                    for (local184 = local136 - 1; local184 >= local157; local184--) {
+                        if (local175 << 1 <= local184) {
+                            arg0[local79] = arg1;
+                        } else if (arg9) {
+                            arg0[local79] = arg4;
+                        }
+                        local79++;
+                    }
+                    local79 += local99;
+                }
+            }
+        } else if (arg5 == 4) {
+            if (arg3 == 0) {
+                for (local175 = local108 - 1; local175 >= local165; local175--) {
+                    for (local184 = local7; local184 < local30; local184++) {
+                        if (local175 >> 1 <= local184) {
+                            arg0[local79] = arg1;
+                        } else if (arg9) {
+                            arg0[local79] = arg4;
+                        }
+                        local79++;
+                    }
+                    local79 += local99;
+                }
+            } else if (arg3 == 1) {
+                for (local175 = local43; local175 < local56; local175++) {
+                    for (local184 = local7; local184 < local30; local184++) {
+                        if (local175 << 1 >= local184) {
+                            arg0[local79] = arg1;
+                        } else if (arg9) {
+                            arg0[local79] = arg4;
+                        }
+                        local79++;
+                    }
+                    local79 += local99;
+                }
+            } else if (arg3 == 2) {
+                for (local175 = local43; local175 < local56; local175++) {
+                    for (local184 = local136 - 1; local184 >= local157; local184--) {
+                        if (local184 >= local175 >> 1) {
+                            arg0[local79] = arg1;
+                        } else if (arg9) {
+                            arg0[local79] = arg4;
+                        }
+                        local79++;
+                    }
+                    local79 += local99;
+                }
+            } else if (arg3 == 3) {
+                for (local175 = local108 - 1; local175 >= local165; local175--) {
+                    for (local184 = local136 - 1; local184 >= local157; local184--) {
+                        if (local184 <= local175 << 1) {
+                            arg0[local79] = arg1;
+                        } else if (arg9) {
+                            arg0[local79] = arg4;
+                        }
+                        local79++;
+                    }
+                    local79 += local99;
+                }
+            }
+        } else if (arg5 != 5) {
+            if (arg5 == 6) {
+                if (arg3 == 0) {
+                    for (local175 = local43; local175 < local56; local175++) {
+                        for (local184 = local7; local184 < local30; local184++) {
+                            if (local184 <= arg7 / 2) {
+                                arg0[local79] = arg1;
+                            } else if (arg9) {
+                                arg0[local79] = arg4;
+                            }
+                            local79++;
+                        }
+                        local79 += local99;
+                    }
+                    return;
+                }
+                if (arg3 == 1) {
+                    for (local175 = local43; local175 < local56; local175++) {
+                        for (local184 = local7; local184 < local30; local184++) {
+                            if (local175 <= arg6 / 2) {
+                                arg0[local79] = arg1;
+                            } else if (arg9) {
+                                arg0[local79] = arg4;
+                            }
+                            local79++;
+                        }
+                        local79 += local99;
+                    }
+                    return;
+                }
+                if (arg3 == 2) {
+                    for (local175 = local43; local175 < local56; local175++) {
+                        for (local184 = local7; local184 < local30; local184++) {
+                            if (local184 >= arg7 / 2) {
+                                arg0[local79] = arg1;
+                            } else if (arg9) {
+                                arg0[local79] = arg4;
+                            }
+                            local79++;
+                        }
+                        local79 += local99;
+                    }
+                    return;
+                }
+                if (arg3 == 3) {
+                    for (local175 = local43; local175 < local56; local175++) {
+                        for (local184 = local7; local184 < local30; local184++) {
+                            if (local175 >= arg6 / 2) {
+                                arg0[local79] = arg1;
+                            } else if (arg9) {
+                                arg0[local79] = arg4;
+                            }
+                            local79++;
+                        }
+                        local79 += local99;
+                    }
+                    return;
+                }
+            }
+            if (arg5 == 7) {
+                if (arg3 == 0) {
+                    for (local175 = local43; local175 < local56; local175++) {
+                        for (local184 = local7; local184 < local30; local184++) {
+                            if (local184 <= local175 - arg6 / 2) {
+                                arg0[local79] = arg1;
+                            } else if (arg9) {
+                                arg0[local79] = arg4;
+                            }
+                            local79++;
+                        }
+                        local79 += local99;
+                    }
+                    return;
+                }
+                if (arg3 == 1) {
+                    for (local175 = local108 - 1; local175 >= local165; local175--) {
+                        for (local184 = local7; local184 < local30; local184++) {
+                            if (local175 - arg6 / 2 >= local184) {
+                                arg0[local79] = arg1;
+                            } else if (arg9) {
+                                arg0[local79] = arg4;
+                            }
+                            local79++;
+                        }
+                        local79 += local99;
+                    }
+                    return;
+                }
+                if (arg3 == 2) {
+                    for (local175 = local108 - 1; local175 >= local165; local175--) {
+                        for (local184 = local136 - 1; local184 >= local157; local184--) {
+                            if (local184 <= local175 - arg6 / 2) {
+                                arg0[local79] = arg1;
+                            } else if (arg9) {
+                                arg0[local79] = arg4;
+                            }
+                            local79++;
+                        }
+                        local79 += local99;
+                    }
+                    return;
+                }
+                if (arg3 == 3) {
+                    for (local175 = local43; local175 < local56; local175++) {
+                        for (local184 = local136 - 1; local184 >= local157; local184--) {
+                            if (local175 - arg6 / 2 >= local184) {
+                                arg0[local79] = arg1;
+                            } else if (arg9) {
+                                arg0[local79] = arg4;
+                            }
+                            local79++;
+                        }
+                        local79 += local99;
+                    }
+                    return;
+                }
+            }
+            if (arg5 == 8) {
+                if (arg3 == 0) {
+                    for (local175 = local43; local175 < local56; local175++) {
+                        for (local184 = local7; local184 < local30; local184++) {
+                            if (local175 - arg6 / 2 <= local184) {
+                                arg0[local79] = arg1;
+                            } else if (arg9) {
+                                arg0[local79] = arg4;
+                            }
+                            local79++;
+                        }
+                        local79 += local99;
+                    }
+                    return;
+                }
+                if (arg3 == 1) {
+                    for (local175 = local108 - 1; local175 >= local165; local175--) {
+                        for (local184 = local7; local184 < local30; local184++) {
+                            if (local175 - arg6 / 2 <= local184) {
+                                arg0[local79] = arg1;
+                            } else if (arg9) {
+                                arg0[local79] = arg4;
+                            }
+                            local79++;
+                        }
+                        local79 += local99;
+                    }
+                    return;
+                }
+                if (arg3 == 2) {
+                    for (local175 = local108 - 1; local175 >= local165; local175--) {
+                        for (local184 = local136 - 1; local184 >= local157; local184--) {
+                            if (local184 >= local175 - arg6 / 2) {
+                                arg0[local79] = arg1;
+                            } else if (arg9) {
+                                arg0[local79] = arg4;
+                            }
+                            local79++;
+                        }
+                        local79 += local99;
+                    }
+                    return;
+                }
+                if (arg3 == 3) {
+                    for (local175 = local43; local175 < local56; local175++) {
+                        for (local184 = local136 - 1; local184 >= local157; local184--) {
+                            if (local175 - arg6 / 2 <= local184) {
+                                arg0[local79] = arg1;
+                            } else if (arg9) {
+                                arg0[local79] = arg4;
+                            }
+                            local79++;
+                        }
+                        local79 += local99;
+                    }
+                    return;
+                }
+            }
+        } else if (arg3 == 0) {
+            for (local175 = local108 - 1; local175 >= local165; local175--) {
+                for (local184 = local136 - 1; local184 >= local157; local184--) {
+                    if (local175 >> 1 <= local184) {
+                        arg0[local79] = arg1;
+                    } else if (arg9) {
+                        arg0[local79] = arg4;
+                    }
+                    local79++;
+                }
+                local79 += local99;
+            }
+        } else if (arg3 == 1) {
+            for (local175 = local108 - 1; local175 >= local165; local175--) {
+                for (local184 = local7; local184 < local30; local184++) {
+                    if (local184 <= local175 << 1) {
+                        arg0[local79] = arg1;
+                    } else if (arg9) {
+                        arg0[local79] = arg4;
+                    }
+                    local79++;
+                }
+                local79 += local99;
+            }
+        } else if (arg3 == 2) {
+            for (local175 = local43; local175 < local56; local175++) {
+                for (local184 = local7; local184 < local30; local184++) {
+                    if (local184 >= local175 >> 1) {
+                        arg0[local79] = arg1;
+                    } else if (arg9) {
+                        arg0[local79] = arg4;
+                    }
+                    local79++;
+                }
+                local79 += local99;
+            }
+        } else if (arg3 == 3) {
+            for (local175 = local43; local175 < local56; local175++) {
+                for (local184 = local136 - 1; local184 >= local157; local184--) {
+                    if (local175 << 1 >= local184) {
+                        arg0[local79] = arg1;
+                    } else if (arg9) {
+                        arg0[local79] = arg4;
+                    }
+                    local79++;
+                }
+                local79 += local99;
+            }
+        }
+    }
 }

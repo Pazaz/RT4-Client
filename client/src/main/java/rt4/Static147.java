@@ -11,7 +11,7 @@ public final class Static147 {
 
 	@OriginalMember(owner = "client!lh", name = "b", descriptor = "(II)V")
 	public static void method2761(@OriginalArg(0) int arg0) {
-		Static170.anInt3241 = arg0;
+		UnderwaterMaterialRenderer.anInt3241 = arg0;
 		MaterialManager.resetArgument(3);
 		MaterialManager.resetArgument(4);
 	}

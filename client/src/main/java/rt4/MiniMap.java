@@ -25,6 +25,14 @@ public class MiniMap {
     public static int state = 0;
     @OriginalMember(owner = "client!we", name = "w", descriptor = "I")
     public static int anInt4130 = 0;
+    @OriginalMember(owner = "client!ej", name = "W", descriptor = "I")
+	public static int anInt1814 = 0;
+    @OriginalMember(owner = "client!vg", name = "d", descriptor = "I")
+    public static int anInt5755 = 2;
+    @OriginalMember(owner = "client!oe", name = "n", descriptor = "I")
+    public static int anInt4262 = 1;
+    @OriginalMember(owner = "client!gi", name = "H", descriptor = "I")
+	public static int anInt2252 = 0;
 
     @OriginalMember(owner = "client!ma", name = "a", descriptor = "([IIIIII)V")
     public static void renderTile(@OriginalArg(0) int[] pixels, @OriginalArg(1) int index, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
@@ -217,7 +225,7 @@ public class MiniMap {
             SoftwareRaster.setClip(arg2, arg1, arg2 + arg3.width, arg1 + arg3.height);
         }
         if (state != 2 && state != 5 && sprite != null) {
-            @Pc(48) int local48 = Static59.anInt1814 + (int)Camera.yawTarget & 0x7FF;
+            @Pc(48) int local48 = anInt1814 + (int)Camera.yawTarget & 0x7FF;
             @Pc(57) int local57 = PlayerList.self.xFine / 32 + 48;
             @Pc(67) int local67 = 464 - PlayerList.self.zFine / 32;
             if (GlRenderer.enabled) {
@@ -233,37 +241,37 @@ public class MiniMap {
             @Pc(200) int local200;
             @Pc(239) int local239;
             @Pc(271) int local271;
-            if (Static235.mapElementList != null) {
-                for (@Pc(117) int local117 = 0; local117 < Static235.mapElementList.anInt5074; local117++) {
-                    if (Static235.mapElementList.method3892(local117)) {
-                        local146 = (Static235.mapElementList.aShortArray73[local117] - Static225.originX) * 4 + 2 - PlayerList.self.xFine / 32;
+            if (LoginManager.mapElementList != null) {
+                for (@Pc(117) int local117 = 0; local117 < LoginManager.mapElementList.anInt5074; local117++) {
+                    if (LoginManager.mapElementList.method3892(local117)) {
+                        local146 = (LoginManager.mapElementList.aShortArray73[local117] - Camera.originX) * 4 + 2 - PlayerList.self.xFine / 32;
                         local150 = MathUtils.sin[local48];
                         local154 = MathUtils.cos[local48];
                         @Pc(156) Font local156 = Fonts.p11Full;
                         @Pc(164) int local164 = local150 * 256 / (anInt4130 + 256);
-                        local181 = (Static235.mapElementList.aShortArray72[local117] - Static142.originZ) * 4 + 2 - PlayerList.self.zFine / 32;
+                        local181 = (LoginManager.mapElementList.aShortArray72[local117] - Camera.originZ) * 4 + 2 - PlayerList.self.zFine / 32;
                         @Pc(189) int local189 = local154 * 256 / (anInt4130 + 256);
                         local200 = local181 * local189 - local146 * local164 >> 16;
-                        if (Static235.mapElementList.method3894(local117) == 1) {
+                        if (LoginManager.mapElementList.method3894(local117) == 1) {
                             local156 = Fonts.p12Full;
                         }
-                        if (Static235.mapElementList.method3894(local117) == 2) {
+                        if (LoginManager.mapElementList.method3894(local117) == 2) {
                             local156 = Fonts.b12Full;
                         }
                         local231 = local164 * local181 + local189 * local146 >> 16;
-                        local239 = local156.getMaxLineWidth(Static235.mapElementList.aClass100Array153[local117], 100);
+                        local239 = local156.getMaxLineWidth(LoginManager.mapElementList.aClass100Array153[local117], 100);
                         @Pc(245) int local245 = local231 - local239 / 2;
                         if (local245 >= -arg3.width && local245 <= arg3.width && local200 >= -arg3.height && local200 <= arg3.height) {
                             local271 = 16777215;
-                            if (Static235.mapElementList.anIntArray444[local117] != -1) {
-                                local271 = Static235.mapElementList.anIntArray444[local117];
+                            if (LoginManager.mapElementList.anIntArray444[local117] != -1) {
+                                local271 = LoginManager.mapElementList.anIntArray444[local117];
                             }
                             if (GlRenderer.enabled) {
                                 GlFont.method1188((GlSprite) arg3.method489(false));
                             } else {
                                 SoftwareRaster.method2486(arg3.anIntArray37, arg3.anIntArray45);
                             }
-                            local156.renderParagraphAlpha(Static235.mapElementList.aClass100Array153[local117], arg2 + local245 + arg3.width / 2, arg1 + arg3.height / 2 + -local200, local239, 50, local271, 0, 1, 0, 0);
+                            local156.renderParagraphAlpha(LoginManager.mapElementList.aClass100Array153[local117], arg2 + local245 + arg3.width / 2, arg1 + arg3.height / 2 + -local200, local239, 50, local271, 0, 1, 0, 0);
                             if (GlRenderer.enabled) {
                                 GlFont.method1173();
                             } else {
@@ -283,7 +291,7 @@ public class MiniMap {
                         continue;
                     }
                 }
-                method1446(arg3, Static67.mapfuncs[local382.mapElement], local150, local181, arg1, arg2);
+                method1446(arg3, Sprites.mapfuncs[local382.mapElement], local150, local181, arg1, arg2);
             }
             for (local146 = 0; local146 < 104; local146++) {
                 for (local181 = 0; local181 < 104; local181++) {
@@ -308,7 +316,7 @@ public class MiniMap {
                         if (local507.anInt3739 == -1) {
                             method1446(arg3, Sprites.mapdots[1], local231, local154, arg1, arg2);
                         } else {
-                            method1446(arg3, Static67.mapfuncs[local507.anInt3739], local231, local154, arg1, arg2);
+                            method1446(arg3, Sprites.mapfuncs[local507.anInt3739], local231, local154, arg1, arg2);
                         }
                     }
                 }
@@ -361,8 +369,8 @@ public class MiniMap {
                         }
                     }
                     if (local770.type == 2) {
-                        local154 = (local770.targetX - Static225.originX) * 4 + 2 - PlayerList.self.xFine / 32;
-                        local231 = (-Static142.originZ + local770.anInt4046) * 4 + 2 - PlayerList.self.zFine / 32;
+                        local154 = (local770.targetX - Camera.originX) * 4 + 2 - PlayerList.self.xFine / 32;
+                        local231 = (-Camera.originZ + local770.anInt4046) * 4 + 2 - PlayerList.self.zFine / 32;
                         Static97.method1960(local770.anInt4048, arg1, arg2, local154, local231, arg3);
                     }
                     if (local770.type == 10 && local770.actorTargetId >= 0 && PlayerList.players.length > local770.actorTargetId) {
@@ -375,9 +383,9 @@ public class MiniMap {
                     }
                 }
             }
-            if (Static115.mapFlagX != 0) {
-                local146 = Static115.mapFlagX * 4 + 2 - PlayerList.self.xFine / 32;
-                local181 = Static84.anInt2255 * 4 + 2 - PlayerList.self.zFine / 32;
+            if (LoginManager.mapFlagX != 0) {
+                local146 = LoginManager.mapFlagX * 4 + 2 - PlayerList.self.xFine / 32;
+                local181 = LoginManager.mapFlagZ * 4 + 2 - PlayerList.self.zFine / 32;
                 method1446(arg3, Sprites.mapflags, local181, local146, arg1, arg2);
             }
             if (GlRenderer.enabled) {
@@ -402,7 +410,7 @@ public class MiniMap {
 			return;
 		}
 		@Pc(21) int local21 = arg3 * arg3 + arg2 * arg2;
-		@Pc(27) int local27 = Static59.anInt1814 + (int)Camera.yawTarget & 0x7FF;
+		@Pc(27) int local27 = anInt1814 + (int)Camera.yawTarget & 0x7FF;
 		@Pc(39) int local39 = Math.max(arg0.width / 2, arg0.height / 2) + 10;
 		if (local39 * local39 < local21) {
 			return;

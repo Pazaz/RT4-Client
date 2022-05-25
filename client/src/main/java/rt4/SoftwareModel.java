@@ -862,7 +862,7 @@ public final class SoftwareModel extends Model {
 				}
 				if (Static150.anInt3582 >= local204 && Static150.anInt3582 <= local208 && Static34.anInt1053 >= local223 && Static34.anInt1053 <= local227) {
 					if (this.aBoolean303) {
-						Static259.aLongArray11[Static2.anInt7++] = arg8;
+						Model.aLongArray11[Static2.anInt7++] = arg8;
 					} else {
 						local190 = true;
 					}
@@ -1628,7 +1628,7 @@ public final class SoftwareModel extends Model {
 					}
 				} else {
 					if (arg1 && this.method4589(Static150.anInt3582 + Rasteriser.centerX, Static34.anInt1053 + Rasteriser.centerY, anIntArray551[local51], anIntArray551[local56], anIntArray551[local61], local65, local69, local73)) {
-						Static259.aLongArray11[Static2.anInt7++] = arg2;
+						Model.aLongArray11[Static2.anInt7++] = arg2;
 						arg1 = false;
 					}
 					if ((local65 - local69) * (anIntArray551[local61] - anIntArray551[local56]) - (anIntArray551[local51] - anIntArray551[local56]) * (local73 - local69) > 0) {

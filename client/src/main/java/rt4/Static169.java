@@ -7,10 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static169 {
 
-	@OriginalMember(owner = "client!nf", name = "e", descriptor = "I")
-	public static int anInt4073;
-
-	@OriginalMember(owner = "client!nf", name = "h", descriptor = "Lclient!be;")
+    @OriginalMember(owner = "client!nf", name = "h", descriptor = "Lclient!be;")
 	public static Component aClass13_18;
 
     @OriginalMember(owner = "client!nf", name = "i", descriptor = "I")
@@ -43,14 +40,14 @@ public final class Static169 {
 		if (!arg3.isFullScreenSupported()) {
 			return null;
 		}
-		@Pc(20) Class114[] local20 = Static197.method3558(arg3);
+		@Pc(20) DisplayMode[] local20 = DisplayMode.method3558(arg3);
 		if (local20 == null) {
 			return null;
 		}
 		@Pc(27) boolean local27 = false;
 		for (@Pc(29) int local29 = 0; local29 < local20.length; local29++) {
-			if (arg2 == local20[local29].anInt4248 && arg1 == local20[local29].anInt4250 && (!local27 || local20[local29].anInt4251 > arg0)) {
-				arg0 = local20[local29].anInt4251;
+			if (arg2 == local20[local29].width && arg1 == local20[local29].height && (!local27 || local20[local29].bitDepth > arg0)) {
+				arg0 = local20[local29].bitDepth;
 				local27 = true;
 			}
 		}

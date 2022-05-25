@@ -14,6 +14,18 @@ public class LoginManager {
     public static final JagString ZAP = JagString.parse("zap");
     @OriginalMember(owner = "client!ef", name = "h", descriptor = "Lclient!na;")
     public static final JagString UNZAP = JagString.parse("unzap");
+    @OriginalMember(owner = "client!wj", name = "f", descriptor = "Lclient!na;")
+	public static final JagString aClass100_1103 = JagString.parse("ul");
+    @OriginalMember(owner = "client!i", name = "ic", descriptor = "Lclient!na;")
+    public static final JagString aClass100_558 = JagString.parse("m");
+    @OriginalMember(owner = "client!wb", name = "e", descriptor = "Lclient!na;")
+	public static final JagString aClass100_1090 = JagString.parse("l");
+    @OriginalMember(owner = "client!oe", name = "o", descriptor = "Lclient!na;")
+    public static final JagString aClass100_807 = JagString.parse("n");
+    @OriginalMember(owner = "client!nb", name = "a", descriptor = "Lclient!na;")
+	public static final JagString aClass100_772 = JagString.parse("um");
+    @OriginalMember(owner = "client!gm", name = "W", descriptor = "Lclient!na;")
+    public static final JagString UNDERSCORE = JagString.parse("_");
     @OriginalMember(owner = "client!rl", name = "X", descriptor = "I")
     public static int anInt4937 = 0;
     @OriginalMember(owner = "client!sd", name = "X", descriptor = "Z")
@@ -41,7 +53,7 @@ public class LoginManager {
     @OriginalMember(owner = "client!pg", name = "S", descriptor = "I")
     public static int staffModLevel = 0;
     @OriginalMember(owner = "client!ud", name = "O", descriptor = "I")
-	public static int playerModLevel = 0;
+	public static int blackmarks = 0;
     @OriginalMember(owner = "client!jk", name = "G", descriptor = "Z")
     public static boolean playerUnderage = false;
     @OriginalMember(owner = "client!ql", name = "c", descriptor = "Z")
@@ -54,6 +66,44 @@ public class LoginManager {
     public static boolean mapQuickChat = false;
     @OriginalMember(owner = "client!c", name = "hb", descriptor = "Z")
     public static boolean parentalAdvertConsent = false;
+    @OriginalMember(owner = "client!we", name = "H", descriptor = "[[B")
+    public static byte[][] mapFilesBuffer;
+    @OriginalMember(owner = "client!mf", name = "O", descriptor = "[[B")
+    public static byte[][] locationMapFilesBuffer;
+    @OriginalMember(owner = "client!cl", name = "V", descriptor = "[I")
+	public static int[] underWaterLocationsMapFileIds;
+    @OriginalMember(owner = "client!pg", name = "jb", descriptor = "[[B")
+    public static byte[][] npcSpawnsFilesBuffer;
+    @OriginalMember(owner = "client!client", name = "lb", descriptor = "[I")
+	public static int[] mapFileIds;
+    @OriginalMember(owner = "client!pa", name = "L", descriptor = "[[B")
+    public static byte[][] underWaterMapFilesBuffer;
+    @OriginalMember(owner = "client!fl", name = "D", descriptor = "[[I")
+    public static int[][] regionsXteaKeys;
+    @OriginalMember(owner = "client!te", name = "H", descriptor = "[I")
+	public static int[] regionBitPacked;
+    @OriginalMember(owner = "client!nm", name = "P", descriptor = "[I")
+    public static int[] npcSpawnsFileIds;
+    @OriginalMember(owner = "client!hk", name = "bb", descriptor = "[I")
+	public static int[] underWaterMapFileIds;
+    @OriginalMember(owner = "client!nj", name = "j", descriptor = "[I")
+    public static int[] locationsMapFileIds;
+    @OriginalMember(owner = "client!bi", name = "Y", descriptor = "[[B")
+    public static byte[][] underWaterLocationsMapFilesBuffer;
+    @OriginalMember(owner = "client!gf", name = "R", descriptor = "I")
+	public static int centralZoneX;
+    @OriginalMember(owner = "client!eb", name = "u", descriptor = "I")
+    public static int centralZoneZ;
+    @OriginalMember(owner = "client!dc", name = "ab", descriptor = "I")
+    public static int centralPlane = 0;
+    @OriginalMember(owner = "client!mh", name = "hb", descriptor = "Lclient!bn;")
+    public static Map map;
+    @OriginalMember(owner = "client!tb", name = "X", descriptor = "Lclient!se;")
+    public static MapElementList mapElementList;
+    @OriginalMember(owner = "client!ja", name = "n", descriptor = "I")
+    public static int mapFlagX = 0;
+    @OriginalMember(owner = "client!gk", name = "h", descriptor = "I")
+    public static int mapFlagZ = 0;
 
     @OriginalMember(owner = "client!dm", name = "d", descriptor = "(I)V")
     public static void clear() {
@@ -275,7 +325,7 @@ public class LoginManager {
                 buffer.p1(anInt39);
                 buffer.p1(client.advertSuppressed ? 1 : 0);
                 buffer.p1(1);
-                buffer.p1(Static144.getWindowMode());
+                buffer.p1(DisplayMode.getWindowMode());
                 buffer.p2(GameShell.canvasWidth);
                 buffer.p2(GameShell.canvasHeight);
                 buffer.p1(Preferences.antiAliasingMode);
@@ -395,7 +445,7 @@ public class LoginManager {
                 Protocol.socket.read(0, 14, Protocol.inboundBuffer.data);
                 Protocol.inboundBuffer.offset = 0;
                 staffModLevel = Protocol.inboundBuffer.g1();
-                playerModLevel = Protocol.inboundBuffer.g1();
+                blackmarks = Protocol.inboundBuffer.g1();
                 playerUnderage = Protocol.inboundBuffer.g1() == 1;
                 parentalChatConsent = Protocol.inboundBuffer.g1() == 1;
                 parentalAdvertConsent = Protocol.inboundBuffer.g1() == 1;
@@ -432,7 +482,7 @@ public class LoginManager {
                 reply = 2;
                 step = 0;
                 client.method4221();
-                Static80.centralZoneX = -1;
+                centralZoneX = -1;
                 Protocol.readRebuildPacket(false);
                 Protocol.opcode = -1;
                 return;
@@ -497,47 +547,227 @@ public class LoginManager {
 
     @OriginalMember(owner = "client!ca", name = "h", descriptor = "(I)V")
 	public static void setupLoadingScreenRegion() {
-		@Pc(10) int local10 = (Static138.renderX >> 10) + (Static225.originX >> 3);
-		@Pc(23) int local23 = (Static134.renderZ >> 10) + (Static142.originZ >> 3);
-		Static156.locationMapFilesBuffer = new byte[18][];
-		Static35.underWaterLocationsMapFileIds = new int[18];
-		Static191.npcSpawnsFilesBuffer = new byte[18][];
-		Static36.mapFileIds = new int[18];
-		Static72.regionsXteaKeys = new int[18][4];
-		Static186.underWaterMapFilesBuffer = new byte[18][];
-		Static238.regionBitPacked = new int[18];
-		Static273.mapFilesBuffer = new byte[18][];
-		Static175.npcSpawnsFileIds = new int[18];
-		Static99.underWaterMapFileIds = new int[18];
-		Static172.locationsMapFileIds = new int[18];
-		Static19.underWaterLocationsMapFilesBuffer = new byte[18][];
+		@Pc(10) int local10 = (Camera.renderX >> 10) + (Camera.originX >> 3);
+		@Pc(23) int local23 = (Camera.renderZ >> 10) + (Camera.originZ >> 3);
+		locationMapFilesBuffer = new byte[18][];
+		underWaterLocationsMapFileIds = new int[18];
+		npcSpawnsFilesBuffer = new byte[18][];
+		mapFileIds = new int[18];
+		regionsXteaKeys = new int[18][4];
+		underWaterMapFilesBuffer = new byte[18][];
+		regionBitPacked = new int[18];
+		mapFilesBuffer = new byte[18][];
+		npcSpawnsFileIds = new int[18];
+		underWaterMapFileIds = new int[18];
+		locationsMapFileIds = new int[18];
+		underWaterLocationsMapFilesBuffer = new byte[18][];
 		@Pc(74) int local74 = 0;
 		@Pc(80) int local80;
 		for (local80 = (local10 - 6) / 8; local80 <= (local10 + 6) / 8; local80++) {
 			for (@Pc(97) int local97 = (local23 - 6) / 8; local97 <= (local23 + 6) / 8; local97++) {
 				@Pc(115) int local115 = (local80 << 8) + local97;
-				Static238.regionBitPacked[local74] = local115;
-				Static36.mapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static103.aClass100_558, JagString.parseInt(local80), Static86.aClass100_488, JagString.parseInt(local97) }));
-				Static172.locationsMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static270.aClass100_1090, JagString.parseInt(local80), Static86.aClass100_488, JagString.parseInt(local97) }));
-				Static175.npcSpawnsFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static179.aClass100_807, JagString.parseInt(local80), Static86.aClass100_488, JagString.parseInt(local97) }));
-				Static99.underWaterMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static165.aClass100_772, JagString.parseInt(local80), Static86.aClass100_488, JagString.parseInt(local97) }));
-				Static35.underWaterLocationsMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { Static278.aClass100_1103, JagString.parseInt(local80), Static86.aClass100_488, JagString.parseInt(local97) }));
-				if (Static175.npcSpawnsFileIds[local74] == -1) {
-					Static36.mapFileIds[local74] = -1;
-					Static172.locationsMapFileIds[local74] = -1;
-					Static99.underWaterMapFileIds[local74] = -1;
-					Static35.underWaterLocationsMapFileIds[local74] = -1;
+				regionBitPacked[local74] = local115;
+				mapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { aClass100_558, JagString.parseInt(local80), UNDERSCORE, JagString.parseInt(local97) }));
+				locationsMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { aClass100_1090, JagString.parseInt(local80), UNDERSCORE, JagString.parseInt(local97) }));
+				npcSpawnsFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { aClass100_807, JagString.parseInt(local80), UNDERSCORE, JagString.parseInt(local97) }));
+				underWaterMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { aClass100_772, JagString.parseInt(local80), UNDERSCORE, JagString.parseInt(local97) }));
+				underWaterLocationsMapFileIds[local74] = client.js5Archive5.getGroupId(JagString.concatenate(new JagString[] { aClass100_1103, JagString.parseInt(local80), UNDERSCORE, JagString.parseInt(local97) }));
+				if (npcSpawnsFileIds[local74] == -1) {
+					mapFileIds[local74] = -1;
+					locationsMapFileIds[local74] = -1;
+					underWaterMapFileIds[local74] = -1;
+					underWaterLocationsMapFileIds[local74] = -1;
 				}
 				local74++;
 			}
 		}
-		for (local80 = local74; local80 < Static175.npcSpawnsFileIds.length; local80++) {
-			Static175.npcSpawnsFileIds[local80] = -1;
-			Static36.mapFileIds[local80] = -1;
-			Static172.locationsMapFileIds[local80] = -1;
-			Static99.underWaterMapFileIds[local80] = -1;
-			Static35.underWaterLocationsMapFileIds[local80] = -1;
+		for (local80 = local74; local80 < npcSpawnsFileIds.length; local80++) {
+			npcSpawnsFileIds[local80] = -1;
+			mapFileIds[local80] = -1;
+			locationsMapFileIds[local80] = -1;
+			underWaterMapFileIds[local80] = -1;
+			underWaterLocationsMapFileIds[local80] = -1;
 		}
-		Static127.method2463(0, local23, local10, 8, true, 8);
+		method2463(0, local23, local10, 8, true, 8);
 	}
+
+    @OriginalMember(owner = "client!wj", name = "b", descriptor = "(B)V")
+    public static void processLogout() {
+        if (Protocol.socket != null) {
+            Protocol.socket.close();
+            Protocol.socket = null;
+        }
+        client.method3768();
+        SceneGraph.clear();
+        @Pc(19) int local19;
+        for (local19 = 0; local19 < 4; local19++) {
+            PathFinder.collisionMaps[local19].resetFlags();
+        }
+        WorldMap.clear(false);
+        System.gc();
+        MidiPlayer.method801();
+        MidiPlayer.jingle = false;
+        MusicPlayer.groupId = -1;
+        AreaSoundManager.clear(true);
+        Static230.dynamicMapRegion = false;
+        Camera.originZ = 0;
+        centralZoneX = 0;
+        centralZoneZ = 0;
+        Camera.originX = 0;
+        for (local19 = 0; local19 < Static143.hintMapMarkers.length; local19++) {
+            Static143.hintMapMarkers[local19] = null;
+        }
+        PlayerList.size = 0;
+        NpcList.size = 0;
+        for (local19 = 0; local19 < 2048; local19++) {
+            PlayerList.players[local19] = null;
+            PlayerList.appearanceCache[local19] = null;
+        }
+        for (local19 = 0; local19 < 32768; local19++) {
+            NpcList.npcs[local19] = null;
+        }
+        for (local19 = 0; local19 < 4; local19++) {
+            for (@Pc(115) int local115 = 0; local115 < 104; local115++) {
+                for (@Pc(122) int local122 = 0; local122 < 104; local122++) {
+                    SceneGraph.objStacks[local19][local115][local122] = null;
+                }
+            }
+        }
+        Camera.resetCameraEffects();
+        Protocol.verifyId = 0;
+        VarpDomain.reset();
+        Static73.method1596(true);
+    }
+
+    @OriginalMember(owner = "client!k", name = "a", descriptor = "(IIIIZIZ)V")
+    public static void method2463(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4, @OriginalArg(5) int arg5) {
+        if (centralZoneX == arg2 && arg1 == centralZoneZ && (centralPlane == arg0 || SceneGraph.allLevelsAreVisible())) {
+            return;
+        }
+        centralZoneX = arg2;
+        centralZoneZ = arg1;
+        centralPlane = arg0;
+        if (SceneGraph.allLevelsAreVisible()) {
+            centralPlane = 0;
+        }
+        if (arg4) {
+            client.setGameState(28);
+        } else {
+            client.setGameState(25);
+        }
+        Static114.drawTextOnScreen(true, LocalizedText.LOADING);
+        @Pc(53) int local53 = Camera.originZ;
+        @Pc(55) int local55 = Camera.originX;
+        Camera.originZ = arg1 * 8 - 48;
+        Camera.originX = (arg2 - 6) * 8;
+        map = MapList.getContainingSource(centralZoneX * 8, centralZoneZ * 8);
+        @Pc(81) int local81 = Camera.originZ - local53;
+        @Pc(86) int local86 = Camera.originX - local55;
+        mapElementList = null;
+        @Pc(96) int local96;
+        @Pc(103) Npc local103;
+        @Pc(109) int local109;
+        if (arg4) {
+            NpcList.size = 0;
+            for (local96 = 0; local96 < 32768; local96++) {
+                local103 = NpcList.npcs[local96];
+                if (local103 != null) {
+                    local103.xFine -= local86 * 128;
+                    local103.zFine -= local81 * 128;
+                    if (local103.xFine >= 0 && local103.xFine <= 13184 && local103.zFine >= 0 && local103.zFine <= 13184) {
+                        for (local109 = 0; local109 < 10; local109++) {
+                            local103.movementQueueX[local109] -= local86;
+                            local103.movementQueueZ[local109] -= local81;
+                        }
+                        NpcList.ids[NpcList.size++] = local96;
+                    } else {
+                        NpcList.npcs[local96].setNpcType(null);
+                        NpcList.npcs[local96] = null;
+                    }
+                }
+            }
+        } else {
+            for (local96 = 0; local96 < 32768; local96++) {
+                local103 = NpcList.npcs[local96];
+                if (local103 != null) {
+                    for (local109 = 0; local109 < 10; local109++) {
+                        local103.movementQueueX[local109] -= local86;
+                        local103.movementQueueZ[local109] -= local81;
+                    }
+                    local103.xFine -= local86 * 128;
+                    local103.zFine -= local81 * 128;
+                }
+            }
+        }
+        for (local96 = 0; local96 < 2048; local96++) {
+            @Pc(265) Player local265 = PlayerList.players[local96];
+            if (local265 != null) {
+                for (local109 = 0; local109 < 10; local109++) {
+                    local265.movementQueueX[local109] -= local86;
+                    local265.movementQueueZ[local109] -= local81;
+                }
+                local265.xFine -= local86 * 128;
+                local265.zFine -= local81 * 128;
+            }
+        }
+        Player.level = arg0;
+        PlayerList.self.teleport(arg5, false, arg3);
+        @Pc(322) byte local322 = 104;
+        @Pc(324) byte local324 = 0;
+        @Pc(326) byte local326 = 0;
+        @Pc(328) byte local328 = 1;
+        @Pc(330) byte local330 = 104;
+        @Pc(332) byte local332 = 1;
+        if (local81 < 0) {
+            local328 = -1;
+            local330 = -1;
+            local326 = 103;
+        }
+        if (local86 < 0) {
+            local332 = -1;
+            local324 = 103;
+            local322 = -1;
+        }
+        for (@Pc(358) int local358 = local324; local358 != local322; local358 += local332) {
+            for (@Pc(367) int local367 = local326; local367 != local330; local367 += local328) {
+                @Pc(378) int local378 = local86 + local358;
+                @Pc(382) int local382 = local367 + local81;
+                for (@Pc(384) int local384 = 0; local384 < 4; local384++) {
+                    if (local378 >= 0 && local382 >= 0 && local378 < 104 && local382 < 104) {
+                        SceneGraph.objStacks[local384][local358][local367] = SceneGraph.objStacks[local384][local378][local382];
+                    } else {
+                        SceneGraph.objStacks[local384][local358][local367] = null;
+                    }
+                }
+            }
+        }
+        for (@Pc(451) SceneryStack local451 = (SceneryStack) Static26.sceneryList.head(); local451 != null; local451 = (SceneryStack) Static26.sceneryList.next()) {
+            local451.z -= local81;
+            local451.x -= local86;
+            if (local451.x < 0 || local451.z < 0 || local451.x >= 104 || local451.z >= 104) {
+                local451.unlink();
+            }
+        }
+        if (arg4) {
+            Camera.renderX -= local86 * 128;
+            Camera.renderZ -= local81 * 128;
+            Camera.anInt4232 -= local81;
+            Camera.anInt5449 -= local86;
+            Camera.anInt5765 -= local81;
+            Camera.anInt5375 -= local86;
+        } else {
+            Camera.cameraType = 1;
+        }
+        SoundPlayer.anInt4451 = 0;
+        if (mapFlagX != 0) {
+            mapFlagZ -= local81;
+            mapFlagX -= local86;
+        }
+        if (GlRenderer.enabled && arg4 && (Math.abs(local86) > 104 || Math.abs(local81) > 104)) {
+            Static103.setInstantFade();
+        }
+        Static107.anInt2875 = -1;
+        Static99.aClass69_64.clear();
+        Static217.aClass69_116.clear();
+    }
 }

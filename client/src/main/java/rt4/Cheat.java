@@ -170,16 +170,16 @@ public class Cheat {
                 displayFps = false;
             }
             if (arg0.equalsIgnoreCase(WM0)) {
-                Static241.setWindowMode(false, 0, -1, -1);
+                DisplayMode.setWindowMode(false, 0, -1, -1);
             }
             if (arg0.equalsIgnoreCase(WM1)) {
-                Static241.setWindowMode(false, 1, -1, -1);
+                DisplayMode.setWindowMode(false, 1, -1, -1);
             }
             if (arg0.equalsIgnoreCase(WM2)) {
-                Static241.setWindowMode(false, 2, -1, -1);
+                DisplayMode.setWindowMode(false, 2, -1, -1);
             }
             if (arg0.equalsIgnoreCase(WM3)) {
-                Static241.setWindowMode(false, 3, 1024, 768);
+                DisplayMode.setWindowMode(false, 3, 1024, 768);
             }
             if (arg0.equalsIgnoreCase(NOCLIP)) {
                 for (local18 = 0; local18 < 4; local18++) {
