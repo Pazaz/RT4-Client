@@ -313,7 +313,7 @@ public final class ObjType {
 		}
 		@Pc(76) Model local76 = (Model) ObjTypeList.models.get((long) this.anInt2354);
 		if (local76 == null) {
-			@Pc(85) RawModel local85 = Static77.create(ObjTypeList.modelsArchive, this.model);
+			@Pc(85) RawModel local85 = RawModel.create(ObjTypeList.modelsArchive, this.model);
 			if (local85 == null) {
 				return null;
 			}
@@ -538,9 +538,9 @@ public final class ObjType {
 		if (local17 == -1) {
 			return null;
 		}
-		@Pc(36) RawModel local36 = Static77.create(ObjTypeList.modelsArchive, local17);
+		@Pc(36) RawModel local36 = RawModel.create(ObjTypeList.modelsArchive, local17);
 		if (local4 != -1) {
-			@Pc(44) RawModel local44 = Static77.create(ObjTypeList.modelsArchive, local4);
+			@Pc(44) RawModel local44 = RawModel.create(ObjTypeList.modelsArchive, local4);
 			@Pc(55) RawModel[] local55 = new RawModel[] { local36, local44 };
 			local36 = new RawModel(local55, 2);
 		}
@@ -571,14 +571,14 @@ public final class ObjType {
 		if (local4 == -1) {
 			return null;
 		}
-		@Pc(43) RawModel local43 = Static77.create(ObjTypeList.modelsArchive, local4);
+		@Pc(43) RawModel local43 = RawModel.create(ObjTypeList.modelsArchive, local4);
 		if (local18 != -1) {
-			@Pc(54) RawModel local54 = Static77.create(ObjTypeList.modelsArchive, local18);
+			@Pc(54) RawModel local54 = RawModel.create(ObjTypeList.modelsArchive, local18);
 			if (local21 == -1) {
 				@Pc(68) RawModel[] local68 = new RawModel[] { local43, local54 };
 				local43 = new RawModel(local68, 2);
 			} else {
-				@Pc(81) RawModel local81 = Static77.create(ObjTypeList.modelsArchive, local21);
+				@Pc(81) RawModel local81 = RawModel.create(ObjTypeList.modelsArchive, local21);
 				@Pc(96) RawModel[] local96 = new RawModel[] { local43, local54, local81 };
 				local43 = new RawModel(local96, 3);
 			}
@@ -625,7 +625,7 @@ public final class ObjType {
 
 	@OriginalMember(owner = "client!h", name = "d", descriptor = "(I)Lclient!w;")
 	public final SoftwareModel getInvModel() {
-		@Pc(11) RawModel local11 = Static77.create(ObjTypeList.modelsArchive, this.model);
+		@Pc(11) RawModel local11 = RawModel.create(ObjTypeList.modelsArchive, this.model);
 		if (local11 == null) {
 			return null;
 		}

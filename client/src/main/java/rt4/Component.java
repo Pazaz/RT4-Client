@@ -868,7 +868,7 @@ public final class Component {
 			if (local10 == 1) {
 				local61 = (Model) models.get((long) ((local10 << 16) + local13));
 				if (local61 == null) {
-					@Pc(69) RawModel local69 = Static77.create(InterfaceList.aClass153_85, local13);
+					@Pc(69) RawModel local69 = RawModel.create(InterfaceList.aClass153_85, local13);
 					if (local69 == null) {
 						Static211.aBoolean72 = true;
 						return null;

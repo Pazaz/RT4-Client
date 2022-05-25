@@ -28,7 +28,7 @@ public class HintArrowManager {
         @Pc(4) long local4 = (long) arg2;
         @Pc(10) Model local10 = (Model) HINT_ARROWS.get(local4);
         if (local10 == null) {
-            @Pc(22) RawModel local22 = Static77.create(client.js5Archive7, arg2);
+            @Pc(22) RawModel local22 = RawModel.create(client.js5Archive7, arg2);
             if (local22 == null) {
                 return null;
             }
