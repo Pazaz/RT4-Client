@@ -9,16 +9,13 @@ public final class Static185 {
 	@OriginalMember(owner = "client!p", name = "e", descriptor = "I")
 	public static int anInt4370;
 
-	@OriginalMember(owner = "client!p", name = "g", descriptor = "F")
-	public static float aFloat23;
-
-	@OriginalMember(owner = "client!p", name = "a", descriptor = "(IZIZLclient!mj;IIIBII)V")
+    @OriginalMember(owner = "client!p", name = "a", descriptor = "(IZIZLclient!mj;IIIBII)V")
 	public static void method3397(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(3) boolean arg3, @OriginalArg(4) CollisionMap arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(9) int arg8, @OriginalArg(10) int arg9) {
 		if (arg1 && !SceneGraph.allLevelsAreVisible() && (SceneGraph.tileFlags[0][arg7][arg8] & 0x2) == 0) {
 			if ((SceneGraph.tileFlags[arg2][arg7][arg8] & 0x10) != 0) {
 				return;
 			}
-			if (Static4.method22(arg8, arg7, arg2) != Static41.anInt1316) {
+			if (Static4.method22(arg8, arg7, arg2) != LoginManager.centralPlane) {
 				return;
 			}
 		}
@@ -100,7 +97,7 @@ public final class Static185 {
 				} else {
 					local387 = new Loc(arg5, 22, arg9, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
 				}
-				Static170.method2570(arg2, arg7, arg8, local199, local387, local261, local62.aBoolean211);
+				SceneGraph.method2570(arg2, arg7, arg8, local199, local387, local261, local62.aBoolean211);
 				if (local62.anInt4435 == 1 && arg4 != null) {
 					arg4.method3057(arg7, arg8);
 				}
@@ -164,7 +161,7 @@ public final class Static185 {
 			} else {
 				local387 = new Loc(arg5, 0, arg9, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
 			}
-			Static262.method4508(arg2, arg7, arg8, local199, local387, null, Static267.anIntArray517[arg9], 0, local261);
+			SceneGraph.method4508(arg2, arg7, arg8, local199, local387, null, Static267.anIntArray517[arg9], 0, local261);
 			if (arg1) {
 				if (arg9 == 0) {
 					if (local62.aBoolean215) {
@@ -216,7 +213,7 @@ public final class Static185 {
 			} else {
 				local387 = new Loc(arg5, 1, arg9, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
 			}
-			Static262.method4508(arg2, arg7, arg8, local199, local387, null, Static78.anIntArray204[arg9], 0, local261);
+			SceneGraph.method4508(arg2, arg7, arg8, local199, local387, null, Static78.anIntArray204[arg9], 0, local261);
 			if (local62.aBoolean215 && arg1) {
 				if (arg9 == 0) {
 					SceneGraph.aByteArrayArrayArray9[arg2][arg7][arg8 + 1] = 50;
@@ -252,7 +249,7 @@ public final class Static185 {
 					local1254 = new Loc(arg5, 2, arg9 + 4, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
 					local1269 = new Loc(arg5, 2, local1226, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
 				}
-				Static262.method4508(arg2, arg7, arg8, local199, local1254, local1269, Static267.anIntArray517[arg9], Static267.anIntArray517[local1226], local261);
+				SceneGraph.method4508(arg2, arg7, arg8, local199, local1254, local1269, Static267.anIntArray517[arg9], Static267.anIntArray517[local1226], local261);
 				if (local62.aBoolean220 && arg1) {
 					if (arg9 == 0) {
 						SceneGraph.anIntArrayArrayArray6[arg2][arg7][arg8] |= 0x1;
@@ -284,7 +281,7 @@ public final class Static185 {
 				} else {
 					local387 = new Loc(arg5, 3, arg9, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
 				}
-				Static262.method4508(arg2, arg7, arg8, local199, local387, null, Static78.anIntArray204[arg9], 0, local261);
+				SceneGraph.method4508(arg2, arg7, arg8, local199, local387, null, Static78.anIntArray204[arg9], 0, local261);
 				if (local62.aBoolean215 && arg1) {
 					if (arg9 == 0) {
 						SceneGraph.aByteArrayArrayArray9[arg2][arg7][arg8 + 1] = 50;

@@ -9,9 +9,6 @@ public final class Static132 {
 	@OriginalMember(owner = "client!ke", name = "U", descriptor = "I")
 	public static int anInt3291 = 0;
 
-	@OriginalMember(owner = "client!ke", name = "Y", descriptor = "[I")
-	public static final int[] anIntArray309 = new int[] { 1, 4 };
-
 	@OriginalMember(owner = "client!ke", name = "a", descriptor = "(ZLclient!wk;Z)V")
 	public static void closeInterface(@OriginalArg(0) boolean arg0, @OriginalArg(1) ComponentPointer arg1) {
 		@Pc(9) int local9 = (int) arg1.key;
@@ -20,7 +17,7 @@ public final class Static132 {
 		if (arg0) {
 			InterfaceList.method2275(local16);
 		}
-		Static273.method3214(local16);
+		method3214(local16);
 		@Pc(32) Component local32 = InterfaceList.getComponent(local9);
 		if (local32 != null) {
 			InterfaceList.redraw(local32);
@@ -33,7 +30,7 @@ public final class Static132 {
 			}
 		}
 		if (MiniMenu.size == 1) {
-			Static60.aBoolean108 = false;
+			Static40.aBoolean108 = false;
 			Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
 		} else {
 			Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
@@ -44,7 +41,7 @@ public final class Static132 {
 					local43 = local88;
 				}
 			}
-			Static13.anInt436 = MiniMenu.size * 15 + (Static261.aBoolean298 ? 26 : 22);
+			Static13.anInt436 = MiniMenu.size * 15 + (Static40.aBoolean298 ? 26 : 22);
 			Static24.anInt761 = local43 + 8;
 		}
 		if (InterfaceList.topLevelInterface != -1) {
@@ -173,6 +170,15 @@ public final class Static132 {
 		} else {
 			local475 = Rasteriser.textureProvider.getAverageColor(arg0.anInt4869);
 			Rasteriser.fillGouraudTriangle(local283, local299, local331, local275, local291, local323, Static216.method1640(local475, arg0.anInt4872), Static216.method1640(local475, arg0.anInt4867), Static216.method1640(local475, arg0.anInt4864));
+		}
+	}
+
+	@OriginalMember(owner = "client!we", name = "b", descriptor = "(BI)V")
+	public static void method3214(@OriginalArg(1) int arg0) {
+		for (@Pc(11) Node local11 = InterfaceList.properties.head(); local11 != null; local11 = InterfaceList.properties.next()) {
+			if ((local11.key >> 48 & 0xFFFFL) == (long) arg0) {
+				local11.unlink();
+			}
 		}
 	}
 }

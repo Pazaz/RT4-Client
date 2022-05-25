@@ -6,6 +6,19 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static247 {
 
+	@OriginalMember(owner = "client!ka", name = "t", descriptor = "[I")
+	public static final int[] anIntArray294 = new int[] { 0, 0, 2, 0, 0, 2, 1, 1, 0 };
+	@OriginalMember(owner = "client!uj", name = "A", descriptor = "[I")
+	public static final int[] anIntArray489 = new int[] { 2, 0, 0, 2, 0, 0, 0, 4, 4 };
+	@OriginalMember(owner = "client!gm", name = "gb", descriptor = "[I")
+	public static final int[] anIntArray211 = new int[] { 0, 4, 4, 8, 0, 0, 8, 0, 0 };
+	@OriginalMember(owner = "client!kd", name = "sb", descriptor = "[I")
+	public static final int[] anIntArray307 = new int[] { 1, 1, 0, 0, 0, 8, 0, 0, 8 };
+	@OriginalMember(owner = "client!hb", name = "t", descriptor = "[I")
+	public static final int[] anIntArray215 = new int[] { 160, 192, 80, 96, 0, 144, 80, 48, 160 };
+	@OriginalMember(owner = "client!bl", name = "X", descriptor = "I")
+	public static int anInt730 = -1;
+
     @OriginalMember(owner = "client!ub", name = "a", descriptor = "(IIIIIII)V")
 	public static void method4244(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
 		if (TextureOp29.anInt4164 <= arg1 && TextureOp29.anInt5063 >= arg3 && TextureOp29.anInt5773 <= arg2 && arg4 <= TextureOp29.anInt2869) {
@@ -73,11 +86,11 @@ public final class Static247 {
 													if (var10 != Static152.anInt3604) {
 														Static152.anInt3604 = var10;
 														WaterMaterialRenderer.method619(var10);
-														Static161.method3066(WaterMaterialRenderer.method2422());
+														FogManager.method3066(WaterMaterialRenderer.method2422());
 													}
 													local65 = var9 >>> 24 << 3;
-													if (local65 != Static22.anInt730) {
-														Static22.anInt730 = local65;
+													if (local65 != anInt730) {
+														anInt730 = local65;
 														Static147.method2761(local65);
 													}
 													local115 = SceneGraph.surfaceTileHeights[0][local18][local21] + SceneGraph.surfaceTileHeights[0][local18 + 1][local21] + SceneGraph.surfaceTileHeights[0][local18][local21 + 1] + SceneGraph.surfaceTileHeights[0][local18 + 1][local21 + 1] >> 2;
@@ -221,23 +234,23 @@ public final class Static247 {
 												local8.anInt670 = Static191.anIntArray386[var10];
 											}
 											if (local616 != null) {
-												if ((local616.anInt3049 & Static90.anIntArray215[var10]) == 0) {
+												if ((local616.anInt3049 & anIntArray215[var10]) == 0) {
 													local8.anInt663 = 0;
 												} else if (local616.anInt3049 == 16) {
 													local8.anInt663 = 3;
-													local8.anInt665 = Static128.anIntArray294[var10];
+													local8.anInt665 = anIntArray294[var10];
 													local8.anInt667 = 3 - local8.anInt665;
 												} else if (local616.anInt3049 == 32) {
 													local8.anInt663 = 6;
-													local8.anInt665 = Static254.anIntArray489[var10];
+													local8.anInt665 = anIntArray489[var10];
 													local8.anInt667 = 6 - local8.anInt665;
 												} else if (local616.anInt3049 == 64) {
 													local8.anInt663 = 12;
-													local8.anInt665 = Static86.anIntArray211[var10];
+													local8.anInt665 = anIntArray211[var10];
 													local8.anInt667 = 12 - local8.anInt665;
 												} else {
 													local8.anInt663 = 9;
-													local8.anInt665 = Static131.anIntArray307[var10];
+													local8.anInt665 = anIntArray307[var10];
 													local8.anInt667 = 9 - local8.anInt665;
 												}
 												if ((local616.anInt3049 & local65) != 0 && !Static260.method3850(local27, local18, local21, local616.anInt3049)) {
@@ -253,7 +266,7 @@ public final class Static247 {
 													local616.aClass8_6.render(0, Static109.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local616.anInt3048 - Static149.anInt3555, local616.anInt3051 - Static123.anInt3947, local616.anInt3044 - Static217.anInt4903, local616.key, local24, null);
 												}
 											}
-											if (local619 != null && !Static276.method4611(local27, local18, local21, local619.primary.getMaxY())) {
+											if (local619 != null && !method4611(local27, local18, local21, local619.primary.getMaxY())) {
 												if (GlRenderer.enabled) {
 													GlRenderer.method4159(local33 - 0.5F);
 												}
@@ -570,7 +583,7 @@ public final class Static247 {
 			}
 			if (local8.anInt670 != 0) {
 				@Pc(2109) WallDecor local2109 = local8.wallDecor;
-				if (local2109 != null && !Static276.method4611(local27, local18, local21, local2109.primary.getMaxY())) {
+				if (local2109 != null && !method4611(local27, local18, local21, local2109.primary.getMaxY())) {
 					if ((local2109.anInt1395 & local8.anInt670) != 0) {
 						if (GlRenderer.enabled) {
 							LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
@@ -621,7 +634,7 @@ public final class Static247 {
 				}
 			}
 			@Pc(2388) Tile local2388;
-			if (local24 < Static126.anInt3114 - 1) {
+			if (local24 < SceneGraph.anInt3114 - 1) {
 				local2388 = SceneGraph.tiles[local24 + 1][local18][local21];
 				if (local2388 != null && local2388.aBoolean46) {
 					Static7.aClass69_32.addTail(local2388);
@@ -656,7 +669,7 @@ public final class Static247 {
 
 	@OriginalMember(owner = "client!ub", name = "b", descriptor = "(IIIIIII)V")
 	public static void method4246(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(6) int arg5) {
-		@Pc(8) Component local8 = Static201.method1418(arg0, arg1);
+		@Pc(8) Component local8 = InterfaceList.method1418(arg0, arg1);
 		if (local8 != null && local8.onUse != null) {
 			@Pc(19) HookRequest local19 = new HookRequest();
 			local19.source = local8;
@@ -678,4 +691,14 @@ public final class Static247 {
 		return arg0 & 0xFF;
 	}
 
+	@OriginalMember(owner = "client!wh", name = "a", descriptor = "(IIII)Z")
+	public static boolean method4611(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+		if (Static9.method187(arg0, arg1, arg2)) {
+			@Pc(10) int local10 = arg1 << 7;
+			@Pc(14) int local14 = arg2 << 7;
+			return SceneGraph.method4394(local10 + 1, SceneGraph.tileHeights[arg0][arg1][arg2] + arg3, local14 + 1) && SceneGraph.method4394(local10 + 128 - 1, SceneGraph.tileHeights[arg0][arg1 + 1][arg2] + arg3, local14 + 1) && SceneGraph.method4394(local10 + 128 - 1, SceneGraph.tileHeights[arg0][arg1 + 1][arg2 + 1] + arg3, local14 + 128 - 1) && SceneGraph.method4394(local10 + 1, SceneGraph.tileHeights[arg0][arg1][arg2 + 1] + arg3, local14 + 128 - 1);
+		} else {
+			return false;
+		}
+	}
 }

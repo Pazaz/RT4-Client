@@ -13,9 +13,6 @@ public final class Static182 {
     @OriginalMember(owner = "client!oj", name = "t", descriptor = "[I")
 	public static int[] anIntArray372;
 
-	@OriginalMember(owner = "client!oj", name = "E", descriptor = "[[Lclient!hg;")
-	public static GlTile[][] aClass3_Sub14ArrayArray2;
-
 	@OriginalMember(owner = "client!oj", name = "p", descriptor = "I")
 	public static final int anInt4306 = 2301979;
 

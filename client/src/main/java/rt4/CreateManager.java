@@ -1,5 +1,6 @@
 package rt4;
 
+import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
@@ -121,5 +122,66 @@ public class CreateManager {
                 step = 0;
             }
         }
+    }
+
+    @OriginalMember(owner = "client!gd", name = "a", descriptor = "(JI)V")
+    public static void method1691(@OriginalArg(0) long name) {
+        Protocol.outboundBuffer.offset = 0;
+        Protocol.outboundBuffer.p1(186);
+        if (GlobalConfig.LOGIN_USE_STRINGS) {
+            Protocol.outboundBuffer.pjstr(Base37.decode37(name));
+        } else {
+            Protocol.outboundBuffer.p8(name);
+        }
+        step = 1;
+        loops = 0;
+        errors = 0;
+        reply = -3;
+    }
+
+    @OriginalMember(owner = "client!jl", name = "a", descriptor = "(IIIII)V")
+	public static void method2448(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+		Protocol.outboundBuffer.offset = 0;
+		Protocol.outboundBuffer.p1(147);
+		Protocol.outboundBuffer.p1(arg2);
+		Protocol.outboundBuffer.p1(arg3);
+		Protocol.outboundBuffer.p2(arg0);
+		Protocol.outboundBuffer.p2(arg1);
+		loops = 0;
+		errors = 0;
+		step = 1;
+		reply = -3;
+	}
+
+    @OriginalMember(owner = "client!da", name = "a", descriptor = "(IIIILclient!na;JI)V")
+    public static void method1016(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) JagString password, @OriginalArg(5) long name, @OriginalArg(6) int arg5) {
+        @Pc(8) Buffer local8 = new Buffer(GlobalConfig.LOGIN_USE_STRINGS ? 129 : 128);
+        local8.p1(10);
+        local8.p2((int) (Math.random() * 99999.0D));
+        local8.p2(530);
+        if (GlobalConfig.LOGIN_USE_STRINGS) {
+            local8.pjstr(Base37.decode37(name));
+        } else {
+            local8.p8(name);
+        }
+        local8.p4((int) (Math.random() * 9.9999999E7D));
+        local8.pjstr(password);
+        local8.p4((int) (Math.random() * 9.9999999E7D));
+        local8.p2(client.affiliate);
+        local8.p1(arg0);
+        local8.p1(arg2);
+        local8.p4((int) (Math.random() * 9.9999999E7D));
+        local8.p2(arg5);
+        local8.p2(arg1);
+        local8.p4((int) (Math.random() * 9.9999999E7D));
+        local8.encryptRsa(GlobalConfig.RSA_EXPONENT, GlobalConfig.RSA_MODULUS);
+        Protocol.outboundBuffer.offset = 0;
+        Protocol.outboundBuffer.p1(36);
+        Protocol.outboundBuffer.p1(local8.offset);
+        Protocol.outboundBuffer.pBytes(local8.data, local8.offset);
+        reply = -3;
+        step = 1;
+        loops = 0;
+        errors = 0;
     }
 }

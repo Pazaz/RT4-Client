@@ -29,6 +29,11 @@ public final class TextureOp29SubOp2 extends TextureOp29SubOp {
 		this.anInt3159 = arg2;
 	}
 
+	@OriginalMember(owner = "client!kl", name = "a", descriptor = "(Lclient!wa;B)Lclient!kc;")
+	public static TextureOp29SubOp2 method2664(@OriginalArg(0) Buffer arg0) {
+		return new TextureOp29SubOp2(arg0.g2s(), arg0.g2s(), arg0.g2s(), arg0.g2s(), arg0.g3(), arg0.g3(), arg0.g1());
+	}
+
 	@OriginalMember(owner = "client!kc", name = "c", descriptor = "(III)V")
 	@Override
 	public final void method4013(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {

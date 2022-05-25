@@ -9,16 +9,10 @@ public final class Static59 {
 	@OriginalMember(owner = "client!ej", name = "X", descriptor = "I")
 	public static int anInt1815;
 
-	@OriginalMember(owner = "client!ej", name = "bb", descriptor = "F")
-	public static float aFloat6;
-
-	@OriginalMember(owner = "client!ej", name = "W", descriptor = "I")
-	public static int anInt1814 = 0;
-
-	@OriginalMember(owner = "client!ej", name = "h", descriptor = "(I)V")
+    @OriginalMember(owner = "client!ej", name = "h", descriptor = "(I)V")
 	public static void method1372() {
 		if (Static226.anInt3953 == 2) {
-			if (Static155.anInt3751 == Static277.anInt5850 && Static60.anInt1892 == Static280.anInt5895) {
+			if (Static155.anInt3751 == Mouse.anInt5850 && Static60.anInt1892 == Static280.anInt5895) {
 				Static226.anInt3953 = 0;
 				if (Cheat.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && MiniMenu.size > 2) {
 					MiniMenu.doAction(MiniMenu.size - 2);
@@ -36,7 +30,7 @@ public final class Static59 {
 		} else {
 			Static280.anInt5895 = Mouse.clickY;
 			Static226.anInt3953 = 2;
-			Static277.anInt5850 = Mouse.clickX;
+			Mouse.anInt5850 = Mouse.clickX;
 		}
 	}
 

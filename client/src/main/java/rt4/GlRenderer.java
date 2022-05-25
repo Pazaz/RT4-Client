@@ -270,8 +270,8 @@ public final class GlRenderer {
 		gl.glEnableClientState(GL2.GL_TEXTURE_COORD_ARRAY);
 		gl.glMatrixMode(GL2.GL_MODELVIEW);
 		gl.glLoadIdentity();
-		Static161.method3065();
-		LightingManager.method2400(); // LightingManager
+		FogManager.method3065();
+		LightingManager.method2400();
 	}
 
 	@OriginalMember(owner = "client!tf", name = "g", descriptor = "()V")

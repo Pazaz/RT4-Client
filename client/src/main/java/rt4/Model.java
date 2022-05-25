@@ -8,7 +8,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!ak")
 public abstract class Model extends Entity {
 
-	@OriginalMember(owner = "client!ak", name = "s", descriptor = "Z")
+    @OriginalMember(owner = "client!vc", name = "V", descriptor = "[J")
+    public static final long[] aLongArray11 = new long[1000];
+    @OriginalMember(owner = "client!ak", name = "s", descriptor = "Z")
 	public boolean aBoolean303 = false;
 
     @OriginalMember(owner = "client!ak", name = "a", descriptor = "([[III)I")

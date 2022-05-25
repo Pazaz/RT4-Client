@@ -48,7 +48,9 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
 	public static volatile int anInt3521 = -1;
 	@OriginalMember(owner = "client!sa", name = "Y", descriptor = "I")
 	public static volatile int anInt4973 = 0;
-	public int mouseWheelX;
+    @OriginalMember(owner = "client!wi", name = "W", descriptor = "I")
+    public static int anInt5850 = 0;
+    public int mouseWheelX;
 	public int mouseWheelY;
 
     @OriginalMember(owner = "client!sc", name = "a", descriptor = "(ILjava/awt/Component;)V")

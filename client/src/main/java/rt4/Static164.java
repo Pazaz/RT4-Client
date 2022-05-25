@@ -150,14 +150,4 @@ public final class Static164 {
 		}
 	}
 
-	@OriginalMember(owner = "client!na", name = "a", descriptor = "(Lclient!ve;IZ)Lclient!mm;")
-	public static SoftwareSprite method3117(@OriginalArg(0) Js5 arg0, @OriginalArg(1) int arg1) {
-		return SpriteLoader.decode(arg0, arg1) ? SpriteLoader.method3537() : null;
-	}
-
-	@OriginalMember(owner = "client!na", name = "a", descriptor = "(IZILclient!ve;)Lclient!ek;")
-	public static SoftwareIndexedSprite loadSoftwareIndexedSprite(@OriginalArg(2) int arg0, @OriginalArg(3) Js5 arg1) {
-		return SpriteLoader.decode(arg1, 0, arg0) ? Static134.method2619() : null;
-	}
-
 }

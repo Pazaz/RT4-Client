@@ -7,9 +7,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static248 {
 
-	@OriginalMember(owner = "client!uc", name = "f", descriptor = "I")
-	public static int anInt4232;
-
 	@OriginalMember(owner = "client!uc", name = "a", descriptor = "I")
 	public static int anInt4229 = 2;
 
@@ -24,13 +21,13 @@ public final class Static248 {
 		@Pc(32) int local32;
 		@Pc(37) int local37;
 		@Pc(183) int local183;
-		for (@Pc(23) int local23 = Static235.anInt5276; local23 < Static126.anInt3114; local23++) {
+		for (@Pc(23) int local23 = Static235.anInt5276; local23 < SceneGraph.anInt3114; local23++) {
 			@Pc(30) Tile[][] local30 = SceneGraph.tiles[local23];
 			for (local32 = Static31.anInt987; local32 < Static2.anInt15; local32++) {
 				for (local37 = Static80.anInt4698; local37 < Static215.anInt4866; local37++) {
 					@Pc(46) Tile local46 = local30[local32][local37];
 					if (local46 != null) {
-						if (Static48.aBooleanArrayArray1[local32 + Static277.tileVisibilityDistance - Static167.anInt4069][local37 + Static277.tileVisibilityDistance - Static193.anInt4539] && (arg3 == null || local23 < arg4 || arg3[local23][local32][local37] != arg5)) {
+						if (Static48.aBooleanArrayArray1[local32 + Static123.tileVisibilityDistance - Static167.anInt4069][local37 + Static123.tileVisibilityDistance - Static193.anInt4539] && (arg3 == null || local23 < arg4 || arg3[local23][local32][local37] != arg5)) {
 							local46.aBoolean45 = true;
 							local46.aBoolean46 = true;
 							if (local46.sceneryLen > 0) {
@@ -85,14 +82,14 @@ public final class Static248 {
 				MaterialManager.renderingUnderwater = true;
 				UnderwaterMaterialRenderer.method4609();
 				Static152.anInt3604 = -1;
-				Static22.anInt730 = -1;
-				for (local32 = 0; local32 < Static182.aClass3_Sub14ArrayArray2[0].length; local32++) {
-					@Pc(285) GlTile local285 = Static182.aClass3_Sub14ArrayArray2[0][local32];
+				Static247.anInt730 = -1;
+				for (local32 = 0; local32 < SceneGraph.underwaterHdTiles[0].length; local32++) {
+					@Pc(285) GlTile local285 = SceneGraph.underwaterHdTiles[0][local32];
 					@Pc(294) float local294 = 251.5F - (local285.blend ? 1.0F : 0.5F);
 					if (local285.underwaterColor != Static152.anInt3604) {
 						Static152.anInt3604 = local285.underwaterColor;
 						WaterMaterialRenderer.method619(local285.underwaterColor);
-						Static161.method3066(WaterMaterialRenderer.method2422());
+						FogManager.method3066(WaterMaterialRenderer.method2422());
 					}
 					local285.method1944(SceneGraph.tiles, local294, false);
 				}
@@ -100,12 +97,12 @@ public final class Static248 {
 			} else {
 				local32 = Static235.anInt5276;
 				while (true) {
-					if (local32 >= Static126.anInt3114) {
+					if (local32 >= SceneGraph.anInt3114) {
 						LightingManager.method2402(Static167.anInt4069, Static193.anInt4539, SceneGraph.tiles);
 						break;
 					}
-					for (local37 = 0; local37 < Static182.aClass3_Sub14ArrayArray2[local32].length; local37++) {
-						@Pc(336) GlTile local336 = Static182.aClass3_Sub14ArrayArray2[local32][local37];
+					for (local37 = 0; local37 < SceneGraph.underwaterHdTiles[local32].length; local37++) {
+						@Pc(336) GlTile local336 = SceneGraph.underwaterHdTiles[local32][local37];
 						@Pc(350) float local350 = 201.5F - (float) local32 * 50.0F - (local336.blend ? 1.0F : 0.5F);
 						if (local336.texture != -1 && Rasteriser.textureProvider.getMaterialType(local336.texture) == MaterialManager.WATER && Preferences.highWaterDetail) {
 							WaterMaterialRenderer.method619(local336.underwaterColor);
@@ -114,7 +111,7 @@ public final class Static248 {
 					}
 					if (local32 == 0 && Preferences.sceneryShadowsType > 0) {
 						GlRenderer.method4159(101.5F);
-						Static242.method4198(Static167.anInt4069, Static193.anInt4539, Static277.tileVisibilityDistance, arg1, Static48.aBooleanArrayArray1, SceneGraph.tileHeights[0]);
+						Static242.method4198(Static167.anInt4069, Static193.anInt4539, Static123.tileVisibilityDistance, arg1, Static48.aBooleanArrayArray1, SceneGraph.tileHeights[0]);
 					}
 					local32++;
 				}
@@ -128,13 +125,13 @@ public final class Static248 {
 		@Pc(406) Tile[][] local406;
 		@Pc(415) int local415;
 		@Pc(428) int local428;
-		for (local399 = Static235.anInt5276; local399 < Static126.anInt3114; local399++) {
+		for (local399 = Static235.anInt5276; local399 < SceneGraph.anInt3114; local399++) {
 			local406 = SceneGraph.tiles[local399];
-			for (local37 = -Static277.tileVisibilityDistance; local37 <= 0; local37++) {
+			for (local37 = -Static123.tileVisibilityDistance; local37 <= 0; local37++) {
 				local415 = Static167.anInt4069 + local37;
 				local183 = Static167.anInt4069 - local37;
 				if (local415 >= Static31.anInt987 || local183 < Static2.anInt15) {
-					for (local428 = -Static277.tileVisibilityDistance; local428 <= 0; local428++) {
+					for (local428 = -Static123.tileVisibilityDistance; local428 <= 0; local428++) {
 						local434 = Static193.anInt4539 + local428;
 						local438 = Static193.anInt4539 - local428;
 						if (local415 >= Static31.anInt987) {
@@ -175,13 +172,13 @@ public final class Static248 {
 				}
 			}
 		}
-		for (local399 = Static235.anInt5276; local399 < Static126.anInt3114; local399++) {
+		for (local399 = Static235.anInt5276; local399 < SceneGraph.anInt3114; local399++) {
 			local406 = SceneGraph.tiles[local399];
-			for (local37 = -Static277.tileVisibilityDistance; local37 <= 0; local37++) {
+			for (local37 = -Static123.tileVisibilityDistance; local37 <= 0; local37++) {
 				local415 = Static167.anInt4069 + local37;
 				local183 = Static167.anInt4069 - local37;
 				if (local415 >= Static31.anInt987 || local183 < Static2.anInt15) {
-					for (local428 = -Static277.tileVisibilityDistance; local428 <= 0; local428++) {
+					for (local428 = -Static123.tileVisibilityDistance; local428 <= 0; local428++) {
 						local434 = Static193.anInt4539 + local428;
 						local438 = Static193.anInt4539 - local428;
 						if (local415 >= Static31.anInt987) {

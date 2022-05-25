@@ -180,8 +180,8 @@ public final class Player extends PathingEntity {
     @OriginalMember(owner = "client!um", name = "a", descriptor = "(Z)V")
     public static void setTutorialIsland() {
         inTutorialIsland = 0;
-        @Pc(17) int local17 = Static225.originX + (PlayerList.self.xFine >> 7);
-        @Pc(25) int local25 = (PlayerList.self.zFine >> 7) + Static142.originZ;
+        @Pc(17) int local17 = Camera.originX + (PlayerList.self.xFine >> 7);
+        @Pc(25) int local25 = (PlayerList.self.zFine >> 7) + Camera.originZ;
         if (local17 >= 3053 && local17 <= 3156 && local25 >= 3056 && local25 <= 3136) {
             inTutorialIsland = 1;
         }
@@ -363,8 +363,8 @@ public final class Player extends PathingEntity {
 						}
 					}
 					if (local245.type == 2) {
-						@Pc(340) int local340 = (local245.targetX - Static225.originX) * 4 + 2 - PlayerList.self.xFine / 32;
-						local291 = (local245.anInt4046 - Static142.originZ) * 4 + 2 - PlayerList.self.zFine / 32;
+						@Pc(340) int local340 = (local245.targetX - Camera.originX) * 4 + 2 - PlayerList.self.xFine / 32;
+						local291 = (local245.anInt4046 - Camera.originZ) * 4 + 2 - PlayerList.self.zFine / 32;
 						this.method1263(null, local291, local76, local340, arg5, arg9, arg0, arg7, arg4, arg3, arg1, local245.playerModelId, arg2, arg6);
 					}
 					if (local245.type == 10 && local245.actorTargetId >= 0 && PlayerList.players.length > local245.actorTargetId) {
@@ -390,8 +390,8 @@ public final class Player extends PathingEntity {
 					if (Static101.anInt2640 != 0) {
 						local184.rotateX(Static101.anInt2640);
 					}
-					if (Static102.anInt2680 != 0) {
-						local184.rotateZ(Static102.anInt2680);
+					if (PathingEntity.anInt2680 != 0) {
+						local184.rotateZ(PathingEntity.anInt2680);
 					}
 					if (Static62.anInt1938 != 0) {
 						local184.translate(0, Static62.anInt1938, 0);
@@ -483,11 +483,11 @@ public final class Player extends PathingEntity {
 	@OriginalMember(owner = "client!e", name = "e", descriptor = "(I)Lclient!na;")
 	public final JagString getName() {
 		@Pc(2) JagString local2 = this.username;
-		if (Static103.aClass100Array88 != null) {
-			local2 = JagString.concatenate(new JagString[] { Static103.aClass100Array88[this.anInt1651], local2 });
+		if (PlayerList.playerNames != null) {
+			local2 = JagString.concatenate(new JagString[] { PlayerList.playerNames[this.anInt1651], local2 });
 		}
-		if (Static263.aClass100Array174 != null) {
-			local2 = JagString.concatenate(new JagString[] { local2, Static263.aClass100Array174[this.anInt1651] });
+		if (PlayerList.playerNames2 != null) {
+			local2 = JagString.concatenate(new JagString[] { local2, PlayerList.playerNames2[this.anInt1651] });
 		}
 		return local2;
 	}

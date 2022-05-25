@@ -57,7 +57,7 @@ public final class Static220 {
 
 	@OriginalMember(owner = "client!rm", name = "a", descriptor = "(III)V")
 	public static void method3801() {
-		for (@Pc(1) int local1 = 0; local1 < Static126.anInt3114; local1++) {
+		for (@Pc(1) int local1 = 0; local1 < SceneGraph.anInt3114; local1++) {
 			for (@Pc(6) int local6 = 0; local6 < SceneGraph.mapSizeX; local6++) {
 				for (@Pc(11) int local11 = 0; local11 < SceneGraph.mapSizeZ; local11++) {
 					@Pc(22) Tile local22 = SceneGraph.tiles[local1][local6][local11];

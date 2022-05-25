@@ -35,7 +35,7 @@ public final class Static269 {
 		for (local14 = 0; local14 < local99; local14++) {
 			for (local21 = 0; local21 < 64; local21++) {
 				for (local117 = 0; local117 < 64; local117++) {
-					Static278.readTile(arg2, arg5, arg1, local95, local117 + arg3, arg4 + local21, 0, local14);
+					SceneGraph.readTile(arg2, arg5, arg1, local95, local117 + arg3, arg4 + local21, 0, local14);
 				}
 			}
 		}
@@ -79,7 +79,7 @@ public final class Static269 {
 					}
 					while (local243 < local188) {
 						while (local190 < local194) {
-							Static232.aByteArrayArrayArray13[local117][local243][local190] = 0;
+							SceneGraph.aByteArrayArrayArray13[local117][local243][local190] = 0;
 							local190++;
 						}
 						local243++;
@@ -91,7 +91,7 @@ public final class Static269 {
 							for (local194 = local243 + arg4; local194 < arg4 + local243 + 4; local194++) {
 								for (@Pc(320) int local320 = arg3 + local188; local320 < arg3 + local188 + 4; local320++) {
 									if (local194 >= 0 && local194 < 104 && local320 >= 0 && local320 < 104) {
-										Static232.aByteArrayArrayArray13[local117][local194][local320] = local305;
+										SceneGraph.aByteArrayArrayArray13[local117][local194][local320] = local305;
 									}
 								}
 							}
@@ -124,7 +124,7 @@ public final class Static269 {
 					}
 					while (local188 > local243) {
 						while (local190 < local194) {
-							Static232.aByteArrayArrayArray13[local117][local243][local190] = Static232.aByteArrayArrayArray13[local117 - 1][local243][local190];
+							SceneGraph.aByteArrayArrayArray13[local117][local243][local190] = SceneGraph.aByteArrayArrayArray13[local117 - 1][local243][local190];
 							local190++;
 						}
 						local243++;
@@ -157,7 +157,7 @@ public final class Static269 {
 							local243 = local117 + (arg4 >> 3);
 							local188 = (arg3 >> 3) + local515;
 							if (local243 >= 0 && local243 < 13 && local188 >= 0 && local188 < 13) {
-								Static192.aClass92ArrayArray1[local243][local188] = local490;
+								Static103.aClass92ArrayArray1[local243][local188] = local490;
 							}
 						}
 					}
@@ -190,7 +190,7 @@ public final class Static269 {
 					local243 = (arg4 >> 2) + local117;
 					local188 = local515 + (arg3 >> 2);
 					if (local243 >= 0 && local243 < 26 && local188 >= 0 && local188 < 26) {
-						Static232.aByteArrayArrayArray13[local21][local243][local188] = 0;
+						SceneGraph.aByteArrayArrayArray13[local21][local243][local188] = 0;
 					}
 				}
 			}
@@ -208,7 +208,7 @@ public final class Static269 {
 			Static232.method3993(512);
 			Static132.method2608();
 		} else {
-			Static38.method960((byte) (Static136.anInt3325 - 4 & 0xFF));
+			Static38.method960((byte) (Static253.anInt3325 - 4 & 0xFF));
 			Static232.method3993(2);
 		}
 	}

@@ -2,18 +2,8 @@ package rt4;
 
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
-import org.openrs2.deob.annotation.Pc;
 
 public final class Static210 {
-
-	@OriginalMember(owner = "client!rb", name = "a", descriptor = "(I)V")
-	public static void method3711() {
-		for (@Pc(7) int local7 = 0; local7 < 104; local7++) {
-			for (@Pc(14) int local14 = 0; local14 < 104; local14++) {
-				Static31.anIntArrayArray6[local7][local14] = 0;
-			}
-		}
-	}
 
 	@OriginalMember(owner = "client!rb", name = "a", descriptor = "(ZB)V")
 	public static void method3712(@OriginalArg(0) boolean arg0) {

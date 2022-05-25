@@ -21,9 +21,9 @@ public final class Static160 {
 				SoftwareRaster.method2504(arg0, arg1, arg2.anIntArray37, arg2.anIntArray45);
 			}
 		} else if (GlRenderer.enabled) {
-			((GlSprite) Static106.compass).renderRotatedTransparent(arg0, arg1, arg2.width, arg2.height, Static106.compass.width / 2, Static106.compass.height / 2, (int)Camera.yawTarget, 256, (GlSprite) arg2.method489(false));
+			((GlSprite) Sprites.compass).renderRotatedTransparent(arg0, arg1, arg2.width, arg2.height, Sprites.compass.width / 2, Sprites.compass.height / 2, (int)Camera.yawTarget, 256, (GlSprite) arg2.method489(false));
 		} else {
-			((SoftwareSprite) Static106.compass).renderRotated(arg0, arg1, arg2.width, arg2.height, Static106.compass.width / 2, Static106.compass.height / 2, (int)Camera.yawTarget, arg2.anIntArray37, arg2.anIntArray45);
+			((SoftwareSprite) Sprites.compass).renderRotated(arg0, arg1, arg2.width, arg2.height, Sprites.compass.width / 2, Sprites.compass.height / 2, (int)Camera.yawTarget, arg2.anIntArray37, arg2.anIntArray45);
 		}
 		InterfaceList.rectangleRedraw[arg3] = true;
 	}

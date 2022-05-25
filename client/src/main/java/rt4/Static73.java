@@ -39,23 +39,23 @@ public final class Static73 {
 			client.setGameState(10);
 			return;
 		}
-		if (Static227.cameraType == 2) {
-			Static138.renderX = Static245.anInt5375 << 7;
-			Static134.renderZ = Static248.anInt4232 << 7;
+		if (Camera.cameraType == 2) {
+			Camera.renderX = Camera.anInt5375 << 7;
+			Camera.renderZ = Camera.anInt4232 << 7;
 		} else {
 			Camera.updateLoginScreenCamera();
 		}
-		Static86.setInstantFade();
+		Static103.setInstantFade();
 		LoginManager.setupLoadingScreenRegion();
 		client.setGameState(28);
 	}
 
 	@OriginalMember(owner = "client!fm", name = "a", descriptor = "(ZII)V")
 	public static void setLightPosition(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
-		Static85.anInt2263 = Static192.aClass92ArrayArray1[arg1][arg0].anInt3530;
-		Static159.anInt3893 = Static192.aClass92ArrayArray1[arg1][arg0].anInt3528;
-		Static148.anInt3534 = Static192.aClass92ArrayArray1[arg1][arg0].anInt3527;
-		Static161.method3063((float) Static85.anInt2263, (float) Static159.anInt3893, (float) Static148.anInt3534);
+		Static85.anInt2263 = Static103.aClass92ArrayArray1[arg1][arg0].anInt3530;
+		Static159.anInt3893 = Static103.aClass92ArrayArray1[arg1][arg0].anInt3528;
+		Static148.anInt3534 = Static103.aClass92ArrayArray1[arg1][arg0].anInt3527;
+		FogManager.method3063((float) Static85.anInt2263, (float) Static159.anInt3893, (float) Static148.anInt3534);
 	}
 
 	@OriginalMember(owner = "client!fm", name = "a", descriptor = "(ILclient!na;Lclient!na;Lclient!na;I)V")

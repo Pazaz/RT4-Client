@@ -13,8 +13,8 @@ public final class Static252 {
 		if (Static236.method4047() != 2) {
 			return;
 		}
-		@Pc(27) byte local27 = (byte) (Static136.anInt3325 - 4 & 0xFF);
-		@Pc(31) int local31 = Static136.anInt3325 % 104;
+		@Pc(27) byte local27 = (byte) (Static253.anInt3325 - 4 & 0xFF);
+		@Pc(31) int local31 = Static253.anInt3325 % 104;
 		@Pc(33) int local33;
 		@Pc(40) int local40;
 		for (local33 = 0; local33 < 4; local33++) {
@@ -32,28 +32,28 @@ public final class Static252 {
 			Static243.anIntArray476[local33] = 1000000;
 			Static50.anIntArray134[local33] = 0;
 		}
-		if (Static227.cameraType != 1) {
-			local33 = SceneGraph.getTileHeight(Player.level, Static138.renderX, Static134.renderZ);
-			if (local33 - Static5.anInt40 < 800 && (SceneGraph.tileFlags[Player.level][Static138.renderX >> 7][Static134.renderZ >> 7] & 0x4) != 0) {
-				Static254.method4348(false, Static138.renderX >> 7, Static134.renderZ >> 7, SceneGraph.tiles, 1);
+		if (Camera.cameraType != 1) {
+			local33 = SceneGraph.getTileHeight(Player.level, Camera.renderX, Camera.renderZ);
+			if (local33 - Static5.anInt40 < 800 && (SceneGraph.tileFlags[Player.level][Camera.renderX >> 7][Camera.renderZ >> 7] & 0x4) != 0) {
+				Static254.method4348(false, Camera.renderX >> 7, Camera.renderZ >> 7, SceneGraph.tiles, 1);
 			}
 			return;
 		}
 		if ((SceneGraph.tileFlags[Player.level][PlayerList.self.xFine >> 7][PlayerList.self.zFine >> 7] & 0x4) != 0) {
 			Static254.method4348(false, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7, SceneGraph.tiles, 0);
 		}
-		if (Static240.cameraPitch >= 310) {
+		if (Camera.cameraPitch >= 310) {
 			return;
 		}
 		@Pc(135) int local135 = PlayerList.self.zFine >> 7;
-		local40 = Static134.renderZ >> 7;
+		local40 = Camera.renderZ >> 7;
 		@Pc(146) int local146;
 		if (local40 < local135) {
 			local146 = local135 - local40;
 		} else {
 			local146 = local40 - local135;
 		}
-		local33 = Static138.renderX >> 7;
+		local33 = Camera.renderX >> 7;
 		@Pc(162) int local162 = PlayerList.self.xFine >> 7;
 		@Pc(174) int local174;
 		if (local162 > local33) {

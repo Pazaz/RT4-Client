@@ -73,7 +73,7 @@ public final class Light {
 	@OriginalMember(owner = "client!gi", name = "<init>", descriptor = "(Lclient!wa;)V")
 	public Light(@OriginalArg(0) Buffer arg0) {
 		if (anIntArray150 == null) {
-			Static84.method1771();
+			method1771();
 		}
 		this.anInt2241 = arg0.g1();
 		this.aBoolean124 = (this.anInt2241 & 0x10) != 0;
@@ -96,6 +96,11 @@ public final class Light {
 		if (this.anInt2243 != 31) {
 			this.method1766();
 		}
+	}
+
+	@OriginalMember(owner = "client!gk", name = "b", descriptor = "(B)V")
+	public static void method1771() {
+		anIntArray150 = Static206.method3679(0.4F);
 	}
 
 	@OriginalMember(owner = "client!gi", name = "a", descriptor = "(BIIII)V")

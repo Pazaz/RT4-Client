@@ -9,6 +9,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!uc")
 public abstract class MouseWheel {
 
+    @OriginalMember(owner = "client!eh", name = "j", descriptor = "I")
+    public static int wheelRotation = 0;
+
     @OriginalMember(owner = "client!dh", name = "a", descriptor = "(B)Lclient!uc;")
     public static MouseWheel create() {
         try {

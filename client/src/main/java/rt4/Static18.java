@@ -50,10 +50,10 @@ public final class Static18 {
 			local55 = local72 * local57 >> 16;
 			local57 = local57 * local68 >> 16;
 		}
-		Static240.cameraPitch = arg6;
-		Static184.cameraYaw = arg4;
-		Static134.renderZ = arg5 - local57;
-		Static138.renderX = arg0 - local55;
+		Camera.cameraPitch = arg6;
+		Camera.cameraYaw = arg4;
+		Camera.renderZ = arg5 - local57;
+		Camera.renderX = arg0 - local55;
 		Static5.anInt40 = arg2 - local59;
 	}
 

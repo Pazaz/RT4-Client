@@ -217,7 +217,7 @@ public final class LocType {
 	public final LocType getMultiLoc() {
 		@Pc(26) int local26 = -1;
 		if (this.multiLocVarbit != -1) {
-			local26 = Static155.getVarbit(this.multiLocVarbit);
+			local26 = VarpDomain.getVarbit(this.multiLocVarbit);
 		} else if (this.multiLocVarp != -1) {
 			local26 = VarpDomain.activeVarps[this.multiLocVarp];
 		}

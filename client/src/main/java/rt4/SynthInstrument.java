@@ -214,12 +214,12 @@ public final class SynthInstrument {
 				}
 				@Pc(523) int local523;
 				while (local198 < local203) {
-					local356 = (int) ((long) anIntArray398[local198 + local185] * (long) Static174.anInt4191 >> 16);
+					local356 = (int) ((long) anIntArray398[local198 + local185] * (long) SynthFilter.anInt4191 >> 16);
 					for (local523 = 0; local523 < local185; local523++) {
-						local356 += (int) ((long) anIntArray398[local198 + local185 - local523 - 1] * (long) Static174.anIntArrayArray32[0][local523] >> 16);
+						local356 += (int) ((long) anIntArray398[local198 + local185 - local523 - 1] * (long) SynthFilter.anIntArrayArray32[0][local523] >> 16);
 					}
 					for (local523 = 0; local523 < local198; local523++) {
-						local356 -= (int) ((long) anIntArray398[local198 - local523 - 1] * (long) Static174.anIntArrayArray32[1][local523] >> 16);
+						local356 -= (int) ((long) anIntArray398[local198 - local523 - 1] * (long) SynthFilter.anIntArrayArray32[1][local523] >> 16);
 					}
 					anIntArray398[local198] = local356;
 					local102 = this.aClass42_6.method1512(arg0 + 1);
@@ -231,12 +231,12 @@ public final class SynthInstrument {
 						local203 = arg0 - local185;
 					}
 					while (local198 < local203) {
-						local356 = (int) ((long) anIntArray398[local198 + local185] * (long) Static174.anInt4191 >> 16);
+						local356 = (int) ((long) anIntArray398[local198 + local185] * (long) SynthFilter.anInt4191 >> 16);
 						for (local523 = 0; local523 < local185; local523++) {
-							local356 += (int) ((long) anIntArray398[local198 + local185 - local523 - 1] * (long) Static174.anIntArrayArray32[0][local523] >> 16);
+							local356 += (int) ((long) anIntArray398[local198 + local185 - local523 - 1] * (long) SynthFilter.anIntArrayArray32[0][local523] >> 16);
 						}
 						for (local523 = 0; local523 < local190; local523++) {
-							local356 -= (int) ((long) anIntArray398[local198 - local523 - 1] * (long) Static174.anIntArrayArray32[1][local523] >> 16);
+							local356 -= (int) ((long) anIntArray398[local198 - local523 - 1] * (long) SynthFilter.anIntArrayArray32[1][local523] >> 16);
 						}
 						anIntArray398[local198] = local356;
 						local102 = this.aClass42_6.method1512(arg0 + 1);
@@ -246,10 +246,10 @@ public final class SynthInstrument {
 						while (local198 < arg0) {
 							local356 = 0;
 							for (local523 = local198 + local185 - arg0; local523 < local185; local523++) {
-								local356 += (int) ((long) anIntArray398[local198 + local185 - local523 - 1] * (long) Static174.anIntArrayArray32[0][local523] >> 16);
+								local356 += (int) ((long) anIntArray398[local198 + local185 - local523 - 1] * (long) SynthFilter.anIntArrayArray32[0][local523] >> 16);
 							}
 							for (local523 = 0; local523 < local190; local523++) {
-								local356 -= (int) ((long) anIntArray398[local198 - local523 - 1] * (long) Static174.anIntArrayArray32[1][local523] >> 16);
+								local356 -= (int) ((long) anIntArray398[local198 - local523 - 1] * (long) SynthFilter.anIntArrayArray32[1][local523] >> 16);
 							}
 							anIntArray398[local198] = local356;
 							this.aClass42_6.method1512(arg0 + 1);

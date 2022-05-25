@@ -177,6 +177,51 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 		VARIABLE_RENDER_RATE_NS = (int)(VARIABLE_RENDER_RATE * 1_000_000.0d);
 	}
 
+    @OriginalMember(owner = "client!qh", name = "a", descriptor = "(Z)V")
+	public static void method3662() {
+		@Pc(8) Container local8;
+		if (fullScreenFrame != null) {
+			local8 = fullScreenFrame;
+		} else if (frame == null) {
+			local8 = signLink.applet;
+		} else {
+			local8 = frame;
+		}
+		frameWidth = local8.getSize().width;
+		frameHeight = local8.getSize().height;
+		@Pc(35) Insets local35;
+		if (local8 == frame) {
+			local35 = frame.getInsets();
+			frameHeight -= local35.bottom + local35.top;
+			frameWidth -= local35.right + local35.left;
+		}
+		if (DisplayMode.getWindowMode() >= 2) {
+			canvasWidth = frameWidth;
+			leftMargin = 0;
+			topMargin = 0;
+			canvasHeight = frameHeight;
+		} else {
+			topMargin = 0;
+			leftMargin = (frameWidth - 765) / 2;
+			canvasHeight = 503;
+			canvasWidth = 765;
+		}
+		if (GlRenderer.enabled) {
+			GlRenderer.setCanvasSize(canvasWidth, canvasHeight);
+		}
+		canvas.setSize(canvasWidth, canvasHeight);
+		if (local8 == frame) {
+			local35 = frame.getInsets();
+			canvas.setLocation(local35.left + leftMargin, topMargin + local35.top);
+		} else {
+			canvas.setLocation(leftMargin, topMargin);
+		}
+		if (InterfaceList.topLevelInterface != -1) {
+			Static210.method3712(true);
+		}
+		Static139.method2704();
+	}
+
     @OriginalMember(owner = "client!rc", name = "focusLost", descriptor = "(Ljava/awt/event/FocusEvent;)V")
 	@Override
 	public final void focusLost(@OriginalArg(0) FocusEvent event) {

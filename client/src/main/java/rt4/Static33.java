@@ -12,6 +12,8 @@ public final class Static33 {
 	public static final JagString aClass100_351 = JagString.parse(" ");
 	@OriginalMember(owner = "client!fn", name = "Z", descriptor = "Lclient!na;")
 	public static final JagString aClass100_461 = JagString.parse(")1 ");
+	@OriginalMember(owner = "client!ee", name = "a", descriptor = "Lclient!na;")
+	public static final JagString aClass100_376 = JagString.parse(" GMT");
 	@OriginalMember(owner = "client!cj", name = "n", descriptor = "Lsignlink!im;")
 	public static PrivilegedRequest openUrlRequest;
 
@@ -61,7 +63,7 @@ public final class Static33 {
 		@Pc(36) int local36 = Static35.aCalendar1.get(Calendar.HOUR_OF_DAY);
 		@Pc(40) int local40 = Static35.aCalendar1.get(Calendar.MINUTE);
 		@Pc(44) int local44 = Static35.aCalendar1.get(Calendar.SECOND);
-		return JagString.concatenate(new JagString[] { Static219.aClass100Array149[local13 - 1], aClass100_461, JagString.parseInt(local17 / 10), JagString.parseInt(local17 % 10), Static270.aClass100_1089, Static138.aClass100Array102[local21], Static270.aClass100_1089, JagString.parseInt(local32), aClass100_351, JagString.parseInt(local36 / 10), JagString.parseInt(local36 % 10), Static264.COLON, JagString.parseInt(local40 / 10), JagString.parseInt(local40 % 10), Static264.COLON, JagString.parseInt(local44 / 10), JagString.parseInt(local44 % 10), Static55.aClass100_376 });
+		return JagString.concatenate(new JagString[] { Static219.aClass100Array149[local13 - 1], aClass100_461, JagString.parseInt(local17 / 10), JagString.parseInt(local17 % 10), Static270.aClass100_1089, Static138.aClass100Array102[local21], Static270.aClass100_1089, JagString.parseInt(local32), aClass100_351, JagString.parseInt(local36 / 10), JagString.parseInt(local36 % 10), Static264.COLON, JagString.parseInt(local40 / 10), JagString.parseInt(local40 % 10), Static264.COLON, JagString.parseInt(local44 / 10), JagString.parseInt(local44 % 10), aClass100_376 });
 	}
 
 	@OriginalMember(owner = "client!cj", name = "a", descriptor = "(ZIIIIIIFB)[[I")

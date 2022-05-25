@@ -16,7 +16,9 @@ public final class Static176 {
 	public static final JagString aClass100_420 = JagString.parse(")1o");
 	@OriginalMember(owner = "client!nd", name = "x", descriptor = "Lclient!na;")
 	public static final JagString aClass100_783 = JagString.parse(")4p=");
-	@OriginalMember(owner = "client!ob", name = "f", descriptor = "Lclient!ve;")
+    @OriginalMember(owner = "client!rc", name = "G", descriptor = "Lclient!na;")
+    public static final JagString aClass100_230 = JagString.parse("");
+    @OriginalMember(owner = "client!ob", name = "f", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_76;
 
 	@OriginalMember(owner = "client!ob", name = "a", descriptor = "[Z")
@@ -47,15 +49,15 @@ public final class Static176 {
 			}
 			return true;
 		} else {
-			@Pc(62) JagString local62 = Static211.aClass100_230;
+			@Pc(62) JagString local62 = aClass100_230;
 			if (client.modeWhere != 0) {
 				local62 = JagString.concatenate(new JagString[] { aClass100_193, JagString.parseInt(local3.id + 7000) });
 			}
-			@Pc(89) JagString local89 = Static211.aClass100_230;
+			@Pc(89) JagString local89 = aClass100_230;
 			if (client.settings != null) {
 				local89 = JagString.concatenate(new JagString[] { aClass100_783, client.settings});
 			}
-			@Pc(182) JagString local182 = JagString.concatenate(new JagString[] { Static115.aClass100_582, local3.hostname, local62, aClass100_1107, JagString.parseInt(client.language), aClass100_801, JagString.parseInt(client.affiliate), local89, Static139.aClass100_659, client.objectTag ? aClass100_184 : Static260.aClass100_945, aClass100_420, client.javaScript ? aClass100_184 : Static260.aClass100_945, Static198.aClass100_260, client.advertSuppressed ? aClass100_184 : Static260.aClass100_945 });
+			@Pc(182) JagString local182 = JagString.concatenate(new JagString[] { Static115.HTTP_PROTOCOL, local3.hostname, local62, aClass100_1107, JagString.parseInt(client.language), aClass100_801, JagString.parseInt(client.affiliate), local89, Static139.aClass100_659, client.objectTag ? aClass100_184 : Static260.aClass100_945, aClass100_420, client.javaScript ? aClass100_184 : Static260.aClass100_945, Static198.aClass100_260, client.advertSuppressed ? aClass100_184 : Static260.aClass100_945 });
 			try {
 				client.instance.getAppletContext().showDocument(local182.method3107(), "_self");
 				return true;

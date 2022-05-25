@@ -30,6 +30,17 @@ public final class SoftLruHashTable {
 		this.aClass133_18 = new HashTable(local11);
 	}
 
+	@OriginalMember(owner = "client!gk", name = "a", descriptor = "(Lclient!rg;Lclient!rg;B)V")
+	public static void method1772(@OriginalArg(0) SecondaryNode arg0, @OriginalArg(1) SecondaryNode arg1) {
+		if (arg1.aClass3_Sub2_66 != null) {
+			arg1.method4365();
+		}
+		arg1.aClass3_Sub2_66 = arg0;
+		arg1.aClass3_Sub2_67 = arg0.aClass3_Sub2_67;
+		arg1.aClass3_Sub2_66.aClass3_Sub2_67 = arg1;
+		arg1.aClass3_Sub2_67.aClass3_Sub2_66 = arg1;
+	}
+
 	@OriginalMember(owner = "client!n", name = "a", descriptor = "(BLjava/lang/Object;J)V")
 	public final void put(@OriginalArg(1) Object arg0, @OriginalArg(2) long arg1) {
 		this.method3098(arg1);
@@ -82,7 +93,7 @@ public final class SoftLruHashTable {
 			} else if (++local9.secondaryKey > (long) arg0) {
 				@Pc(33) ReferenceNode local33 = ReferenceNodeFactory.SOFT_REFERENCE_NODE_FACTORY.create(local9);
 				this.aClass133_18.put(local33, local9.key);
-				Static84.method1772(local9, local33);
+				method1772(local9, local33);
 				local9.unlink();
 				local9.method4365();
 			}

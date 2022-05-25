@@ -8,16 +8,10 @@ public final class Static4 {
 	@OriginalMember(owner = "client!ac", name = "i", descriptor = "Lclient!ih;")
 	public static final LinkedList highPriorityRequests = new LinkedList();
 
-	@OriginalMember(owner = "client!ac", name = "k", descriptor = "S")
-	public static short aShort1 = 32767;
-
-	@OriginalMember(owner = "client!ac", name = "n", descriptor = "I")
+    @OriginalMember(owner = "client!ac", name = "n", descriptor = "I")
 	public static int anInt36 = 0;
 
-	@OriginalMember(owner = "client!ac", name = "p", descriptor = "Lclient!be;")
-	public static Component aClass13_1 = null;
-
-	@OriginalMember(owner = "client!ac", name = "a", descriptor = "(IIII)I")
+    @OriginalMember(owner = "client!ac", name = "a", descriptor = "(IIII)I")
 	public static int method22(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2) {
 		if ((SceneGraph.tileFlags[arg2][arg1][arg0] & 0x8) == 0) {
 			return arg2 <= 0 || (SceneGraph.tileFlags[1][arg1][arg0] & 0x2) == 0 ? arg2 : arg2 - 1;
