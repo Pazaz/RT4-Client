@@ -46,6 +46,10 @@ public class WorldList {
                 if (MonotonicClock.currentTimeMillis() - 5000L < closeTime) {
                     return 0;
                 }
+				if (GlobalJsonConfig.instance != null) {
+					client.worldListHostname = GlobalJsonConfig.instance.ip_management;
+					client.worldListPort = GlobalJsonConfig.instance.wl_port;
+				}
                 Protocol.socketRequest = GameShell.signLink.openSocket(client.worldListHostname, client.worldListPort);
                 openTime = MonotonicClock.currentTimeMillis();
                 step = 1;

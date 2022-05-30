@@ -15,6 +15,8 @@ import java.lang.reflect.Method;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.Hashtable;
 
 import com.jogamp.opengl.*;
@@ -128,8 +130,8 @@ public final class SignLink implements Runnable {
 		if (cachedFile != null) {
 			return cachedFile;
 		}
-		@Pc(53) String[] cacheLocations = new String[] { "c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/", homeDir, "/tmp/", "" };
-		@Pc(78) String[] cacheDirs = new String[] { ".jagex_cache_" + storeId, ".file_store_" + storeId };
+		@Pc(53) String[] cacheLocations = new String[] { homeDir, "c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/", "/tmp/", "" };
+		@Pc(78) String[] cacheDirs = new String[] { "cache", ".runite_rs", ".530file_store_" + storeId, ".jagex_cache_" + storeId, ".file_store_" + storeId };
 		for (@Pc(80) int attempt = 0; attempt < 2; attempt++) {
 			for (@Pc(87) int i = 0; i < cacheDirs.length; i++) {
 				for (@Pc(93) int j = 0; j < cacheLocations.length; j++) {
@@ -200,11 +202,29 @@ public final class SignLink implements Runnable {
 			homeDir = System.getProperty("user.home");
 			if (homeDir != null) {
 				homeDir = homeDir + "/";
+				// 2009scape-specific behavior
+                if (osName.startsWith("linux")) {
+                    File oldCache = new File(homeDir + "/.runite_rs");
+                    homeDir = homeDir + ".local/share/2009scape/";
+                    File newCache = new File(homeDir + "cache");
+                    if (oldCache.isDirectory() && !newCache.exists()) {
+                        Files.move(oldCache.toPath(), newCache.toPath(), StandardCopyOption.REPLACE_EXISTING);
+                    }
+				}
 			}
 		} catch (@Pc(86) Exception ex) {
 		}
 		if (homeDir == null) {
 			homeDir = "~/";
+			// 2009scape-specific behavior
+			if (osName.startsWith("linux")) {
+				File oldCache = new File(homeDir + "/.runite_rs");
+				homeDir = homeDir + ".local/share/2009scape/";
+				File newCache = new File(homeDir + "cache");
+				if (oldCache.isDirectory() && !newCache.exists()) {
+					Files.move(oldCache.toPath(), newCache.toPath(), StandardCopyOption.REPLACE_EXISTING);
+				}
+			}
 		}
 		try {
 			this.eventQueue = Toolkit.getDefaultToolkit().getSystemEventQueue();
@@ -310,6 +330,7 @@ public final class SignLink implements Runnable {
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(BLjava/lang/String;I)Lsignlink!im;")
 	public final PrivilegedRequest openSocket(@OriginalArg(1) String hostname, @OriginalArg(2) int port) {
+		System.out.println("openSocket(" + hostname + ":" + port + ")");
 		return this.enqueue(1, 0, hostname, port);
 	}
 

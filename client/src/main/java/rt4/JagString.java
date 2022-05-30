@@ -964,11 +964,11 @@ public final class JagString implements StringInterface {
 
 	@OriginalMember(owner = "client!na", name = "d", descriptor = "(Z)I")
 	public final int method3154() {
-		@Pc(7) int local7 = 0;
-		for (@Pc(14) int local14 = 0; local14 < this.length; local14++) {
-			local7 = (this.chars[local14] & 0xFF) + (local7 << 5) - local7;
+		@Pc(7) int hash = 0;
+		for (@Pc(14) int c = 0; c < this.length; c++) {
+			hash = (this.chars[c] & 0xFF) + (hash << 5) - hash;
 		}
-		return local7;
+		return hash;
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(ILjava/awt/FontMetrics;)I")
