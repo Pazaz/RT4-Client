@@ -16,6 +16,8 @@ public class GlobalConfig {
     @OriginalMember(owner = "client!gm", name = "X", descriptor = "Ljava/math/BigInteger;")
     public static final BigInteger RSA_EXPONENT = new BigInteger("65537");
 
+    public static String EXTENDED_CONFIG_PATH = "config.json";
+
     // Server IP
     public static String DEFAULT_HOSTNAME = "test.2009scape.org";
 

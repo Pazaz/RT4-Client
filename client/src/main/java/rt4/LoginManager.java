@@ -243,6 +243,10 @@ public class LoginManager {
                 errors++;
             }
             if (step == 1) {
+                if (GlobalJsonConfig.instance != null) {
+                    client.hostname = GlobalJsonConfig.instance.ip_management;
+                    client.port = GlobalJsonConfig.instance.server_port + client.worldListId;
+                }
                 Protocol.socketRequest = GameShell.signLink.openSocket(client.hostname, client.port);
                 step = 2;
             }

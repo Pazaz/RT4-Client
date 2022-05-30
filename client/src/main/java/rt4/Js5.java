@@ -137,9 +137,9 @@ public final class Js5 {
 	}
 
 	@OriginalMember(owner = "client!ve", name = "a", descriptor = "(Lclient!na;B)I")
-	public final int getGroupId(@OriginalArg(0) JagString arg0) {
+	public final int getGroupId(@OriginalArg(0) JagString name) {
 		if (this.method4484()) {
-			@Pc(16) JagString local16 = arg0.toLowerCase();
+			@Pc(16) JagString local16 = name.toLowerCase();
 			@Pc(27) int local27 = this.aClass70_2.aClass76_1.method2405(local16.method3154());
 			return this.method4492(local27) ? local27 : -1;
 		} else {

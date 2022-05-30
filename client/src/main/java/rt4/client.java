@@ -196,6 +196,11 @@ public final class client extends GameShell {
     @OriginalMember(owner = "client!client", name = "main", descriptor = "([Ljava/lang/String;)V")
 	public static void main(@OriginalArg(0) String[] arg0) {
 		try {
+			GlobalJsonConfig.load(GlobalConfig.EXTENDED_CONFIG_PATH);
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		try {
 			if (arg0.length != 4) {
 				arg0 = new String[4];
 				arg0[0] = "1";
@@ -206,6 +211,9 @@ public final class client extends GameShell {
 			}
 			@Pc(15) int local15 = -1;
 			worldListId = Integer.parseInt(arg0[0]);
+			if (GlobalJsonConfig.instance != null) {
+				worldListId = GlobalJsonConfig.instance.world;
+			}
 			modeWhere = 2;
 			if (arg0[1].equals("live")) {
 				modeWhat = 0;
@@ -892,10 +900,13 @@ public final class client extends GameShell {
 		GameShell.method3662();
 		js5CacheQueue = new Js5CacheQueue();
 		js5NetQueue = new Js5NetQueue();
+
 		if (modeWhat != 0) {
 			Static51.aByteArrayArray8 = new byte[50][];
 		}
+
 		Preferences.read(GameShell.signLink);
+
 		if (modeWhere == 0) {
 			worldListHostname = GlobalConfig.DEFAULT_HOSTNAME; // this.getCodeBase().getHost();
 			worldListAlternatePort = GlobalConfig.ALTERNATE_PORT + 1;
@@ -909,6 +920,13 @@ public final class client extends GameShell {
 			worldListAlternatePort = GlobalConfig.ALTERNATE_PORT + worldListId;
 			worldListDefaultPort = GlobalConfig.DEFAULT_PORT + worldListId;
 		}
+
+		if (GlobalJsonConfig.instance != null) {
+			worldListHostname = GlobalJsonConfig.instance.ip_address;
+			worldListAlternatePort = GlobalJsonConfig.instance.server_port + worldListId;
+			worldListDefaultPort = GlobalJsonConfig.instance.server_port;
+		}
+
 		if (game == 1) {
 			Cheat.shiftClick = true;
 			FogManager.anInt3923 = 16777215;
@@ -923,6 +941,7 @@ public final class client extends GameShell {
 			PlayerAppearance.aShortArrayArray7 = PlayerAppearance.aShortArrayArray5;
 			PlayerAppearance.aShortArray65 = PlayerAppearance.aShortArray71;
 		}
+
 		alternatePort = worldListAlternatePort;
 		defaultPort = worldListDefaultPort;
 		hostname = worldListHostname;
@@ -932,6 +951,7 @@ public final class client extends GameShell {
 		if ((SignLink.anInt5928 == 3 && modeWhere != 2) || GlobalConfig.SELECT_DEFAULT_WORLD) {
 			Player.worldId = worldListId;
 		}
+
 		Keyboard.init();
 		Keyboard.start(GameShell.canvas);
 		Mouse.start(GameShell.canvas);
@@ -1146,6 +1166,10 @@ public final class client extends GameShell {
 		}
 		try {
 			if (js5ConnectState == 0) {
+				if (GlobalJsonConfig.instance != null) {
+					hostname = GlobalJsonConfig.instance.ip_management;
+					port = GlobalJsonConfig.instance.server_port + worldListId;
+				}
 				js5SocketRequest = GameShell.signLink.openSocket(hostname, port);
 				js5ConnectState++;
 			}

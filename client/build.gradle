@@ -19,12 +19,14 @@ dependencies {
     compileOnly project(':deob-annotations')
     implementation project(':signlink')
 
+    implementation 'lib:gson'
     implementation 'lib:gluegen-rt'
     implementation 'lib:gluegen-rt-natives-windows-amd64'
     implementation 'lib:gluegen-rt-natives-windows-i586'
     implementation 'lib:gluegen-rt-natives-linux-amd64'
     implementation 'lib:gluegen-rt-natives-linux-i586'
     implementation 'lib:gluegen-rt-natives-macosx-universal'
+    implementation 'lib:gluegen-rt-natives-android-aarch64'
 
     implementation 'lib:jogl-all'
     implementation 'lib:jogl-all-natives-windows-amd64'
@@ -32,6 +34,7 @@ dependencies {
     implementation 'lib:jogl-all-natives-linux-amd64'
     implementation 'lib:jogl-all-natives-linux-i586'
     implementation 'lib:jogl-all-natives-macosx-universal'
+    implementation 'lib:jogl-all-natives-android-aarch64'
 }
 
 jar {
