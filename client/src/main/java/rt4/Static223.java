@@ -10,31 +10,31 @@ public final class Static223 {
 	public static final boolean[] aBooleanArray116 = new boolean[100];
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(IIILclient!km;)V")
-	public static void animateNpc(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) Npc arg2) {
-		if (arg2.seqId == arg1 && arg1 != -1) {
-			@Pc(10) SeqType local10 = SeqTypeList.get(arg1);
-			@Pc(13) int local13 = local10.anInt5347;
+	public static void animateNpc(@OriginalArg(0) int arg0, @OriginalArg(1) int animationId, @OriginalArg(3) Npc npc) {
+		if (npc.seqId == animationId && animationId != -1) {
+			@Pc(10) SeqType seqType = SeqTypeList.get(animationId);
+			@Pc(13) int local13 = seqType.anInt5347;
 			if (local13 == 1) {
-				arg2.anInt3373 = 1;
-				arg2.anInt3425 = 0;
-				arg2.anInt3360 = 0;
-				arg2.anInt3371 = 0;
-				arg2.anInt3420 = arg0;
-				SoundPlayer.playSeqSound(arg2.zFine, local10, arg2.xFine, false, arg2.anInt3425);
+				npc.anInt3373 = 1;
+				npc.anInt3425 = 0;
+				npc.anInt3360 = 0;
+				npc.anInt3371 = 0;
+				npc.anInt3420 = arg0;
+				SoundPlayer.playSeqSound(npc.zFine, seqType, npc.xFine, false, npc.anInt3425);
 			}
 			if (local13 == 2) {
-				arg2.anInt3371 = 0;
+				npc.anInt3371 = 0;
 			}
-		} else if (arg1 == -1 || arg2.seqId == -1 || SeqTypeList.get(arg1).forcedPriority >= SeqTypeList.get(arg2.seqId).forcedPriority) {
-			arg2.anInt3360 = 0;
-			arg2.seqId = arg1;
-			arg2.anInt3373 = 1;
-			arg2.anInt3371 = 0;
-			arg2.anInt3420 = arg0;
-			arg2.anInt3405 = arg2.movementQueueSize;
-			arg2.anInt3425 = 0;
-			if (arg2.seqId != -1) {
-				SoundPlayer.playSeqSound(arg2.zFine, SeqTypeList.get(arg2.seqId), arg2.xFine, false, arg2.anInt3425);
+		} else if (animationId == -1 || npc.seqId == -1 || SeqTypeList.get(animationId).forcedPriority >= SeqTypeList.get(npc.seqId).forcedPriority) {
+			npc.anInt3360 = 0;
+			npc.seqId = animationId;
+			npc.anInt3373 = 1;
+			npc.anInt3371 = 0;
+			npc.anInt3420 = arg0;
+			npc.anInt3405 = npc.movementQueueSize;
+			npc.anInt3425 = 0;
+			if (npc.seqId != -1) {
+				SoundPlayer.playSeqSound(npc.zFine, SeqTypeList.get(npc.seqId), npc.xFine, false, npc.anInt3425);
 			}
 		}
 	}
