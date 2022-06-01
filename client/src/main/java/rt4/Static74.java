@@ -6,10 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static74 {
 
-    @OriginalMember(owner = "client!bj", name = "V", descriptor = "I")
-    public static final int anInt671 = 3353893;
-
-    @OriginalMember(owner = "client!fn", name = "a", descriptor = "(ZIIIIIII)V")
+	@OriginalMember(owner = "client!fn", name = "a", descriptor = "(ZIIIIIII)V")
 	public static void method1623(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6) {
 		if (arg3 == arg6) {
 			method2826(arg0, arg2, arg5, arg6, arg1, arg4);

@@ -32,7 +32,7 @@ public final class Static36 {
 	public static void method946(@OriginalArg(0) Component[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7) {
 		for (@Pc(1) int local1 = 0; local1 < arg0.length; local1++) {
 			@Pc(9) Component component = arg0[local1];
-			if (component != null && component.layer == arg1 && (!component.usingScripts || component.type == 0 || component.aBoolean25 || InterfaceList.getServerActiveProperties(component).accessMask != 0 || component == Static40.aClass13_1 || component.anInt453 == 1338) && (!component.usingScripts || !method947(component))) {
+			if (component != null && component.layer == arg1 && (!component.if3 || component.type == 0 || component.aBoolean25 || InterfaceList.getServerActiveProperties(component).events != 0 || component == Static40.aClass13_1 || component.clientCode == 1338) && (!component.if3 || !method947(component))) {
 				@Pc(50) int local50 = component.x + arg6;
 				@Pc(55) int local55 = component.y + arg7;
 				@Pc(61) int local61;
@@ -61,12 +61,12 @@ public final class Static36 {
 					Static124.anInt3075 = local50;
 					anInt660 = local55;
 				}
-				if (!component.usingScripts || local61 < local65 && local63 < local67) {
+				if (!component.if3 || local61 < local65 && local63 < local67) {
 					if (component.type == 0) {
-						if (!component.usingScripts && method947(component) && Static180.aClass13_22 != component) {
+						if (!component.if3 && method947(component) && Static180.aClass13_22 != component) {
 							continue;
 						}
-						if (component.noClickThrough && Mouse.anInt4873 >= local61 && Mouse.anInt5032 >= local63 && Mouse.anInt4873 < local65 && Mouse.anInt5032 < local67) {
+						if (component.noClickThrough && Mouse.lastMouseX >= local61 && Mouse.lastMouseY >= local63 && Mouse.lastMouseX < local65 && Mouse.lastMouseY < local67) {
 							for (@Pc(164) HookRequest local164 = (HookRequest) InterfaceList.lowPriorityRequests.head(); local164 != null; local164 = (HookRequest) InterfaceList.lowPriorityRequests.next()) {
 								if (local164.aBoolean158) {
 									local164.unlink();
@@ -80,9 +80,9 @@ public final class Static36 {
 							anInt3337 = 0;
 						}
 					}
-					if (component.usingScripts) {
+					if (component.if3) {
 						@Pc(207) boolean local207;
-						if (Mouse.anInt4873 >= local61 && Mouse.anInt5032 >= local63 && Mouse.anInt4873 < local65 && Mouse.anInt5032 < local67) {
+						if (Mouse.lastMouseX >= local61 && Mouse.lastMouseY >= local63 && Mouse.lastMouseX < local65 && Mouse.lastMouseY < local67) {
 							local207 = true;
 						} else {
 							local207 = false;
@@ -131,7 +131,7 @@ public final class Static36 {
 							Static81.anInt2225 = local50;
 							Static228.anInt5103 = local55;
 						}
-						if (component.aBoolean25 || component.anInt453 != 0) {
+						if (component.aBoolean25 || component.clientCode != 0) {
 							@Pc(399) HookRequest request;
 							if (local207 && MouseWheel.wheelRotation != 0 && component.onScroll != null) {
 								request = new HookRequest();
@@ -141,26 +141,26 @@ public final class Static36 {
 								request.arguments = component.onScroll;
 								InterfaceList.lowPriorityRequests.addTail(request);
 							}
-							if (Static40.aClass13_14 != null || Static118.aClass13_15 != null || Static40.aBoolean108 || component.anInt453 != 1400 && anInt3337 > 0) {
+							if (Static40.aClass13_14 != null || Static118.clickedInventoryComponent != null || Static40.aBoolean108 || component.clientCode != 1400 && anInt3337 > 0) {
 								local221 = false;
 								local212 = false;
 								local207 = false;
 							}
 							@Pc(508) int skill;
-							if (component.anInt453 != 0) {
-								if (component.anInt453 == 1337) {
+							if (component.clientCode != 0) {
+								if (component.clientCode == 1337) {
 									Static280.aClass13_26 = component;
 									InterfaceList.redraw(component);
 									continue;
 								}
-								if (component.anInt453 == 1338) {
+								if (component.clientCode == 1338) {
 									if (local221) {
 										Static1.anInt5 = Mouse.clickX - local50;
-										Static107.anInt2878 = Mouse.clickY - local55;
+										MiniMenu.anInt2878 = Mouse.clickY - local55;
 									}
 									continue;
 								}
-								if (component.anInt453 == 1400) {
+								if (component.clientCode == 1400) {
 									WorldMap.component = component;
 									if (local221) {
 										if (Keyboard.pressedKeys[Keyboard.KEY_CTRL] && LoginManager.staffModLevel > 0) {
@@ -175,32 +175,32 @@ public final class Static36 {
 											continue;
 										}
 										anInt3337 = 1;
-										Static40.anInt5388 = Mouse.anInt4873;
-										Static40.anInt4035 = Mouse.anInt5032;
+										Static40.anInt5388 = Mouse.lastMouseX;
+										Static40.anInt4035 = Mouse.lastMouseY;
 										continue;
 									}
 									if (local212 && anInt3337 > 0) {
-										if (anInt3337 == 1 && (Static40.anInt5388 != Mouse.anInt4873 || Static40.anInt4035 != Mouse.anInt5032)) {
+										if (anInt3337 == 1 && (Static40.anInt5388 != Mouse.lastMouseX || Static40.anInt4035 != Mouse.lastMouseY)) {
 											Static197.anInt4620 = WorldMap.anInt435;
 											anInt1885 = WorldMap.anInt919;
 											anInt3337 = 2;
 										}
 										if (anInt3337 == 2) {
-											WorldMap.method1964(Static197.anInt4620 + (int) ((double) (Static40.anInt5388 - Mouse.anInt4873) * 2.0D / (double) WorldMap.targetZoom));
-											WorldMap.method4641(anInt1885 + (int) ((double) (Static40.anInt4035 - Mouse.anInt5032) * 2.0D / (double) WorldMap.targetZoom));
+											WorldMap.method1964(Static197.anInt4620 + (int) ((double) (Static40.anInt5388 - Mouse.lastMouseX) * 2.0D / (double) WorldMap.targetZoom));
+											WorldMap.method4641(anInt1885 + (int) ((double) (Static40.anInt4035 - Mouse.lastMouseY) * 2.0D / (double) WorldMap.targetZoom));
 										}
 										continue;
 									}
 									anInt3337 = 0;
 									continue;
 								}
-								if (component.anInt453 == 1401) {
+								if (component.clientCode == 1401) {
 									if (local212) {
-										WorldMap.method2387(component.width, Mouse.anInt5032 - local55, Mouse.anInt4873 - local50, component.height);
+										WorldMap.method2387(component.width, Mouse.lastMouseY - local55, Mouse.lastMouseX - local50, component.height);
 									}
 									continue;
 								}
-								if (component.anInt453 == 1402) {
+								if (component.clientCode == 1402) {
 									if (!GlRenderer.enabled) {
 										InterfaceList.redraw(component);
 									}
@@ -223,8 +223,8 @@ public final class Static36 {
 								request = new HookRequest();
 								request.aBoolean158 = true;
 								request.source = component;
-								request.mouseX = Mouse.anInt4873 - local50;
-								request.mouseY = Mouse.anInt5032 - local55;
+								request.mouseX = Mouse.lastMouseX - local50;
+								request.mouseY = Mouse.lastMouseY - local55;
 								request.arguments = component.onDrag;
 								InterfaceList.lowPriorityRequests.addTail(request);
 							}
@@ -234,8 +234,8 @@ public final class Static36 {
 									request = new HookRequest();
 									request.aBoolean158 = true;
 									request.source = component;
-									request.mouseX = Mouse.anInt4873 - local50;
-									request.mouseY = Mouse.anInt5032 - local55;
+									request.mouseX = Mouse.lastMouseX - local50;
+									request.mouseY = Mouse.lastMouseY - local55;
 									request.arguments = component.onRelease;
 									Static115.mediumPriorityRequests.addTail(request);
 								}
@@ -244,8 +244,8 @@ public final class Static36 {
 								request = new HookRequest();
 								request.aBoolean158 = true;
 								request.source = component;
-								request.mouseX = Mouse.anInt4873 - local50;
-								request.mouseY = Mouse.anInt5032 - local55;
+								request.mouseX = Mouse.lastMouseX - local50;
+								request.mouseY = Mouse.lastMouseY - local55;
 								request.arguments = component.onHold;
 								InterfaceList.lowPriorityRequests.addTail(request);
 							}
@@ -255,8 +255,8 @@ public final class Static36 {
 									request = new HookRequest();
 									request.aBoolean158 = true;
 									request.source = component;
-									request.mouseX = Mouse.anInt4873 - local50;
-									request.mouseY = Mouse.anInt5032 - local55;
+									request.mouseX = Mouse.lastMouseX - local50;
+									request.mouseY = Mouse.lastMouseY - local55;
 									request.arguments = component.onMouseOver;
 									InterfaceList.lowPriorityRequests.addTail(request);
 								}
@@ -265,8 +265,8 @@ public final class Static36 {
 								request = new HookRequest();
 								request.aBoolean158 = true;
 								request.source = component;
-								request.mouseX = Mouse.anInt4873 - local50;
-								request.mouseY = Mouse.anInt5032 - local55;
+								request.mouseX = Mouse.lastMouseX - local50;
+								request.mouseY = Mouse.lastMouseY - local55;
 								request.arguments = component.onMouseRepeat;
 								InterfaceList.lowPriorityRequests.addTail(request);
 							}
@@ -276,8 +276,8 @@ public final class Static36 {
 									request = new HookRequest();
 									request.aBoolean158 = true;
 									request.source = component;
-									request.mouseX = Mouse.anInt4873 - local50;
-									request.mouseY = Mouse.anInt5032 - local55;
+									request.mouseX = Mouse.lastMouseX - local50;
+									request.mouseY = Mouse.lastMouseY - local55;
 									request.arguments = component.onMouseLeave;
 									Static115.mediumPriorityRequests.addTail(request);
 								}
@@ -450,19 +450,19 @@ public final class Static36 {
 							}
 						}
 					}
-					if (!component.usingScripts && Static40.aClass13_14 == null && Static118.aClass13_15 == null && !Static40.aBoolean108) {
-						if ((component.anInt470 >= 0 || component.anInt480 != 0) && Mouse.anInt4873 >= local61 && Mouse.anInt5032 >= local63 && Mouse.anInt4873 < local65 && Mouse.anInt5032 < local67) {
+					if (!component.if3 && Static40.aClass13_14 == null && Static118.clickedInventoryComponent == null && !Static40.aBoolean108) {
+						if ((component.anInt470 >= 0 || component.anInt480 != 0) && Mouse.lastMouseX >= local61 && Mouse.lastMouseY >= local63 && Mouse.lastMouseX < local65 && Mouse.lastMouseY < local67) {
 							if (component.anInt470 >= 0) {
 								Static180.aClass13_22 = arg0[component.anInt470];
 							} else {
 								Static180.aClass13_22 = component;
 							}
 						}
-						if (component.type == 8 && Mouse.anInt4873 >= local61 && Mouse.anInt5032 >= local63 && Mouse.anInt4873 < local65 && Mouse.anInt5032 < local67) {
+						if (component.type == 8 && Mouse.lastMouseX >= local61 && Mouse.lastMouseY >= local63 && Mouse.lastMouseX < local65 && Mouse.lastMouseY < local67) {
 							Static43.aClass13_11 = component;
 						}
 						if (component.scrollMaxV > component.height) {
-							Static236.method4049(Mouse.anInt5032, component.height, component, Mouse.anInt4873, local50 + component.width, local55, component.scrollMaxV);
+							Static236.method4049(Mouse.lastMouseY, component.height, component, Mouse.lastMouseX, local50 + component.width, local55, component.scrollMaxV);
 						}
 					}
 					if (component.type == 0) {
@@ -482,8 +482,8 @@ public final class Static36 {
 
 	@OriginalMember(owner = "client!client", name = "c", descriptor = "(Lclient!be;)Z")
 	public static boolean method947(@OriginalArg(0) Component arg0) {
-		if (Static121.aBoolean154) {
-			if (InterfaceList.getServerActiveProperties(arg0).accessMask != 0) {
+		if (Static121.qaOpTest) {
+			if (InterfaceList.getServerActiveProperties(arg0).events != 0) {
 				return false;
 			}
 			if (arg0.type == 0) {

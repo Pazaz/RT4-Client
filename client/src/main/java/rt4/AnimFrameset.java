@@ -59,7 +59,8 @@ public final class AnimFrameset extends SecondaryNode {
         }
         try {
             return new AnimFrameset(animsArchive, basesArchive, id, false);
-        } catch (@Pc(84) Exception local84) {
+        } catch (@Pc(84) Exception ex) {
+			ex.printStackTrace();
             return null;
         }
     }

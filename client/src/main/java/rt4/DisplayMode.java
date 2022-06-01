@@ -14,6 +14,8 @@ public final class DisplayMode {
 	public static DisplayMode[] aClass114Array1;
     @OriginalMember(owner = "client!rc", name = "M", descriptor = "Z")
     public static boolean aBoolean73 = false;
+    @OriginalMember(owner = "client!jk", name = "y", descriptor = "Z")
+    public static boolean aBoolean156 = false;
 
     @OriginalMember(owner = "client!od", name = "j", descriptor = "I")
 	public int width;
@@ -64,9 +66,9 @@ public final class DisplayMode {
 	public static int getWindowMode() {
 		if (GameShell.fullScreenFrame != null) {
 			return 3;
-		} else if (GlRenderer.enabled && Static124.aBoolean156) {
+		} else if (GlRenderer.enabled && aBoolean156) {
 			return 2;
-		} else if (GlRenderer.enabled && !Static124.aBoolean156) {
+		} else if (GlRenderer.enabled && !aBoolean156) {
 			return 1;
 		} else {
 			return 0;
@@ -224,9 +226,9 @@ public final class DisplayMode {
 			client.method2721();
 		}
 		if (arg1 >= 2) {
-			Static124.aBoolean156 = true;
+			aBoolean156 = true;
 		} else {
-			Static124.aBoolean156 = false;
+			aBoolean156 = false;
 		}
 		if (InterfaceList.topLevelInterface != -1) {
 			Static210.method3712(true);

@@ -12,6 +12,16 @@ public final class Static253 {
     public static int anInt5854 = 0;
     @OriginalMember(owner = "client!kk", name = "j", descriptor = "I")
 	public static int anInt3325 = 0;
+    @OriginalMember(owner = "client!sj", name = "D", descriptor = "I")
+    public static int anInt5158;
+    @OriginalMember(owner = "client!ej", name = "X", descriptor = "I")
+    public static int anInt1815;
+    @OriginalMember(owner = "client!uj", name = "H", descriptor = "I")
+	public static int anInt5559;
+    @OriginalMember(owner = "client!bb", name = "M", descriptor = "I")
+    public static int anInt406;
+    @OriginalMember(owner = "client!qc", name = "cb", descriptor = "I")
+    public static int anInt4675;
 
     @OriginalMember(owner = "client!ui", name = "a", descriptor = "(IIZIII)V")
 	public static void method4326(@OriginalArg(1) int arg0, @OriginalArg(2) boolean arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
@@ -120,12 +130,12 @@ public final class Static253 {
 			}
 			LightingManager.method2394(client.loop, !Preferences.flickeringEffectsOn);
 			GlRenderer.clearColorAndDepthBuffers(local171);
-			Static143.method2731(Camera.cameraPitch, Camera.renderZ, Static5.anInt40, Camera.renderX, Camera.cameraYaw);
+			method2731(Camera.cameraPitch, Camera.renderZ, Static5.anInt40, Camera.renderX, Camera.cameraYaw);
 			GlRenderer.anInt5323 = client.loop;
 			Static156.method2954(Camera.renderX, Static5.anInt40, Camera.renderZ, Camera.cameraPitch, Camera.cameraYaw, Static266.aByteArrayArrayArray15, Static79.anIntArray205, Static149.anIntArray338, Static267.anIntArray518, Static50.anIntArray134, Static243.anIntArray476, Player.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
 			Static263.aBoolean299 = true;
 			LightingManager.method2390();
-			Static143.method2731(0, 0, 0, 0, 0);
+			method2731(0, 0, 0, 0, 0);
 			client.audioLoop();
 			Static223.method3858();
 			method2726(arg4, arg3, arg2, Static115.anInt5029, arg0, Static115.anInt5029);
@@ -362,7 +372,7 @@ public final class Static253 {
             Static65.anInt1951 = Static191.anIntArray385[local5];
             Static16.anInt548 = Static191.anIntArray392[local5] = local74;
             @Pc(962) JagString local962 = Static191.aClass100Array132[local5];
-            if (Static79.anInt2157 == 0) {
+            if (VarpDomain.anInt2157 == 0) {
                 local639 = 16776960;
                 if (Static191.anIntArray390[local5] < 6) {
                     local639 = Static16.anIntArray52[Static191.anIntArray390[local5]];
@@ -768,4 +778,13 @@ public final class Static253 {
 			}
 		}
 	}
+
+    @OriginalMember(owner = "client!ld", name = "a", descriptor = "(IIIIZI)V")
+    public static void method2731(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4) {
+        anInt5158 = arg1;
+        anInt1815 = arg4;
+        anInt5559 = arg0;
+        anInt406 = arg3;
+        anInt4675 = arg2;
+    }
 }

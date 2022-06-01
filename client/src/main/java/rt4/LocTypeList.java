@@ -36,7 +36,7 @@ public class LocTypeList {
         if (!allowMembers && local15.members) {
             local15.ops = null;
         }
-        if (local15.aBoolean210) {
+        if (local15.breakroutefinding) {
             local15.anInt4435 = 0;
             local15.aBoolean207 = false;
         }

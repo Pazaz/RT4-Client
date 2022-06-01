@@ -70,17 +70,4 @@ public final class Static231 {
 		}
 	}
 
-    @OriginalMember(owner = "client!sk", name = "c", descriptor = "(II)I")
-	public static int toLowerCase(@OriginalArg(1) int arg0) {
-		if (arg0 >= 65 && arg0 <= 90 || arg0 >= 192 && arg0 <= 222 && arg0 != 215) {
-			return arg0 + 32;
-		} else if (arg0 == 159) {
-			return 255;
-		} else if (arg0 == 140) {
-			return 156;
-		} else {
-			return arg0;
-		}
-	}
-
 }

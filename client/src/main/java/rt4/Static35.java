@@ -8,9 +8,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static35 {
 
-    @OriginalMember(owner = "client!cl", name = "X", descriptor = "I")
-	public static int anInt1091;
-
 	@OriginalMember(owner = "client!cl", name = "K", descriptor = "Ljava/util/Calendar;")
 	public static final Calendar aCalendar1 = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
 

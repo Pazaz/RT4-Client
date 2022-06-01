@@ -55,7 +55,7 @@ public final class Static1 {
 					if (local50.anInt5899 == -1) {
 						continue;
 					}
-					@Pc(61) GlTile local61 = Static243.method4212(local10, local50);
+					@Pc(61) GlTile local61 = method4212(local10, local50);
 					@Pc(67) byte local67 = arg7[local12][local17];
 					@Pc(71) int[] local71 = Static228.anIntArrayArray35[local67];
 					local61.anInt2482 += local71.length / 2;
@@ -230,7 +230,7 @@ public final class Static1 {
 						@Pc(1077) boolean[] local1077 = aBooleanArrayArray4[local143 == local777 ? local129 : 0];
 						local1086 = aBooleanArrayArray4[local190 == local777 ? local168 : 0];
 						@Pc(1092) FloType local1092 = FloTypeList.method4395(local777 - 1);
-						@Pc(1097) GlTile local1097 = Static243.method4212(local10, local1092);
+						@Pc(1097) GlTile local1097 = method4212(local10, local1092);
 						local1097.anInt2482 += 5;
 						local1097.anInt2482 += local1077.length - 2;
 						local1097.anInt2482 += local1055.length - 2;
@@ -261,7 +261,7 @@ public final class Static1 {
 					if (local1250.anInt5899 == -1) {
 						continue;
 					}
-					@Pc(1261) GlTile local1261 = Static243.method4212(local10, local1250);
+					@Pc(1261) GlTile local1261 = method4212(local10, local1250);
 					@Pc(1267) byte local1267 = arg7[local12][local17];
 					@Pc(1273) byte local1273 = arg5[local12][local17];
 					local168 = Static19.method588(local1250.texture, local1250.anInt5899, arg6[local12][local17]);
@@ -461,7 +461,7 @@ public final class Static1 {
 						local1086 = aBooleanArrayArray4[local2003 == local190 ? local168 : 0];
 						@Pc(2318) boolean[] local2318 = aBooleanArrayArray4[local2003 == local180 ? local143 : 0];
 						@Pc(2324) FloType local2324 = FloTypeList.method4395(local2003 - 1);
-						@Pc(2329) GlTile local2329 = Static243.method4212(local10, local2324);
+						@Pc(2329) GlTile local2329 = method4212(local10, local2324);
 						@Pc(2345) int local2345 = Static19.method588(local2324.texture, local2324.anInt5899, arg6[local12][local17]) << 8 | 0xFF;
 						@Pc(2365) int local2365 = Static19.method588(local2324.texture, local2324.anInt5899, arg6[local12 + 1][local17]) << 8 | 0xFF;
 						@Pc(2385) int local2385 = Static19.method588(local2324.texture, local2324.anInt5899, arg6[local12 + 1][local17 + 1]) << 8 | 0xFF;
@@ -589,4 +589,15 @@ public final class Static1 {
 			}
 		}
 	}
+
+    @OriginalMember(owner = "client!tk", name = "a", descriptor = "(Lclient!sc;ZLclient!wl;)Lclient!hg;")
+    public static GlTile method4212(@OriginalArg(0) HashTable arg0, @OriginalArg(2) FloType arg1) {
+        @Pc(23) long local23 = (long) ((arg1.texture + 1 << 16) + arg1.anInt5885) + ((long) arg1.anInt5897 << 56) + ((long) arg1.anInt5889 << 32);
+        @Pc(38) GlTile local38 = (GlTile) arg0.get(local23);
+        if (local38 == null) {
+            local38 = new GlTile(arg1.texture, (float) arg1.anInt5885, true, false, arg1.anInt5889);
+            arg0.put(local38, local23);
+        }
+        return local38;
+    }
 }

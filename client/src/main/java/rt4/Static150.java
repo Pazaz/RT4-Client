@@ -45,7 +45,7 @@ public final class Static150 {
 		if (arg2.dynamicHeightValue == 4) {
 			arg2.height = arg2.aspectHeight * arg2.width / arg2.aspectWidth;
 		}
-		if (Static121.aBoolean154 && (InterfaceList.getServerActiveProperties(arg2).accessMask != 0 || arg2.type == 0)) {
+		if (Static121.qaOpTest && (InterfaceList.getServerActiveProperties(arg2).events != 0 || arg2.type == 0)) {
 			if (arg2.height < 5 && arg2.width < 5) {
 				arg2.height = 5;
 				arg2.width = 5;
@@ -58,7 +58,7 @@ public final class Static150 {
 				}
 			}
 		}
-		if (arg2.anInt453 == 1337) {
+		if (arg2.clientCode == 1337) {
 			Static280.aClass13_26 = arg2;
 		}
 		if (arg3 && arg2.onResize != null && (local4 != arg2.width || arg2.height != local7)) {

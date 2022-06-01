@@ -52,8 +52,8 @@ public final class Static112 {
 		} else {
 			SoftwareRaster.fillRectAlpha(local3, local9 + 20, local13, local11 - 20, Static40.anInt1275, 256 - Static40.anInt2910);
 		}
-		local114 = Mouse.anInt5032;
-		local112 = Mouse.anInt4873;
+		local114 = Mouse.lastMouseY;
+		local112 = Mouse.lastMouseX;
 		@Pc(203) int local203;
 		@Pc(219) int local219;
 		for (local203 = 0; local203 < MiniMenu.size; local203++) {

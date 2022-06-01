@@ -709,7 +709,7 @@ public final class ScriptRunner {
 								throw new RuntimeException("Gap at:" + (int2 - 1));
 							}
 							@Pc(1137) Component local1137 = new Component();
-							local1137.usingScripts = true;
+							local1137.if3 = true;
 							local1137.createdComponentId = int2;
 							local1137.layer = local1137.id = local1063.id;
 							local1137.type = int3;
@@ -4357,13 +4357,13 @@ public final class ScriptRunner {
 									if (opcode == Cs2Opcodes.toLower) {
 										isp--;
 										int1 = intStack[isp];
-										intStack[isp++] = Static231.toLowerCase(int1);
+										intStack[isp++] = StringUtils.toLowerCase(int1);
 										continue;
 									}
 									if (opcode == Cs2Opcodes.toUpper) {
 										isp--;
 										int1 = intStack[isp];
-										intStack[isp++] = Static143.toUpperCase(int1);
+										intStack[isp++] = StringUtils.toUpperCase(int1);
 										continue;
 									}
 									if (opcode == Cs2Opcodes.formatNumber) {
@@ -4371,7 +4371,7 @@ public final class ScriptRunner {
 										local12388 = intStack[isp] != 0;
 										isp--;
 										int3 = intStack[isp];
-										stringStack[ssp++] = Static182.formatNumber(client.language, local12388, 0, (long) int3);
+										stringStack[ssp++] = StringUtils.formatNumber(client.language, local12388, 0, (long) int3);
 										continue;
 									}
 								}

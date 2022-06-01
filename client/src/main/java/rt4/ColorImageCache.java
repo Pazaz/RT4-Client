@@ -8,7 +8,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!pf")
 public final class ColorImageCache {
 
-	@OriginalMember(owner = "client!pf", name = "d", descriptor = "I")
+    @OriginalMember(owner = "client!ib", name = "c", descriptor = "Lclient!qi;")
+	public static final ColorImageCacheEntry VALID = new ColorImageCacheEntry(0, 0);
+    @OriginalMember(owner = "client!pf", name = "d", descriptor = "I")
 	private int size = 0;
 
 	@OriginalMember(owner = "client!pf", name = "m", descriptor = "I")
@@ -55,7 +57,7 @@ public final class ColorImageCache {
 	public final int[] method3445(@OriginalArg(1) int row) {
 		if (this.height == this.capacity) {
 			this.invalid = this.entries[row] == null;
-			this.entries[row] = Static105.VALID;
+			this.entries[row] = VALID;
 			return this.pixels[row];
 		} else if (this.capacity == 1) {
 			this.invalid = this.singleRow != row;
@@ -89,7 +91,7 @@ public final class ColorImageCache {
 			throw new RuntimeException("Can only retrieve a full image cache");
 		}
 		for (@Pc(24) int local24 = 0; local24 < this.capacity; local24++) {
-			this.entries[local24] = Static105.VALID;
+			this.entries[local24] = VALID;
 		}
 		return this.pixels;
 	}

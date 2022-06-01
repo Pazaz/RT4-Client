@@ -13,7 +13,7 @@ public final class Static7 {
 
 	@OriginalMember(owner = "client!ah", name = "b", descriptor = "(I)V")
 	public static void method843() {
-		if (Static118.aClass13_15 != null || Static40.aClass13_14 != null) {
+		if (Static118.clickedInventoryComponent != null || Static40.aClass13_14 != null) {
 			return;
 		}
 		@Pc(20) int local20 = Mouse.clickButton;
@@ -28,21 +28,21 @@ public final class Static7 {
 					@Pc(103) Component local103 = InterfaceList.getComponent(local99);
 					@Pc(106) ServerActiveProperties local106 = InterfaceList.getServerActiveProperties(local103);
 					if (local106.method511() || local106.isObjReplaceEnabled()) {
-						Static78.anInt2145 = 0;
-						Static123.aBoolean155 = false;
-						if (Static118.aClass13_15 != null) {
-							InterfaceList.redraw(Static118.aClass13_15);
+						Static78.clickedInventoryComponentCycle = 0;
+						Static123.draggingClickedInventoryObject = false;
+						if (Static118.clickedInventoryComponent != null) {
+							InterfaceList.redraw(Static118.clickedInventoryComponent);
 						}
-						Static118.aClass13_15 = InterfaceList.getComponent(local99);
-						Static149.anInt3554 = Mouse.clickX;
-						Static206.anInt4773 = Mouse.clickY;
-						Static4.anInt36 = local93;
-						InterfaceList.redraw(Static118.aClass13_15);
+						Static118.clickedInventoryComponent = InterfaceList.getComponent(local99);
+						Static149.clickedInventoryComponentX = Mouse.clickX;
+						Static206.clickedInventoryComponentY = Mouse.clickY;
+						Static4.mouseOverInventoryObjectIndex = local93;
+						InterfaceList.redraw(Static118.clickedInventoryComponent);
 						return;
 					}
 				}
 			}
-			if (local20 == 1 && (Static116.anInt2952 == 1 && MiniMenu.size > 2 || MiniMenu.method4640(MiniMenu.size - 1))) {
+			if (local20 == 1 && (VarpDomain.anInt2952 == 1 && MiniMenu.size > 2 || MiniMenu.method4640(MiniMenu.size - 1))) {
 				local20 = 2;
 			}
 			if (local20 == 2 && MiniMenu.size > 0 || Static226.anInt3953 == 1) {
@@ -55,8 +55,8 @@ public final class Static7 {
 		}
 		@Pc(204) int local204;
 		if (local20 != 1) {
-			local93 = Mouse.anInt5032;
-			local204 = Mouse.anInt4873;
+			local93 = Mouse.lastMouseY;
+			local204 = Mouse.lastMouseX;
 			if (local204 < Static183.anInt4271 - 10 || local204 > Static24.anInt761 + Static183.anInt4271 + 10 || Static229.anInt5138 - 10 > local93 || local93 > Static13.anInt436 + Static229.anInt5138 + 10) {
 				Static40.aBoolean108 = false;
 				Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);

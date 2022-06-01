@@ -324,7 +324,7 @@ public final class Static45 {
 						@Pc(2025) GlTile[] local2025;
 						if (underwater) {
 							local2025 = Static193.method3501(SceneGraph.tileFlags, SceneGraph.tileShapes[local152], SceneGraph.tileUnderlays[local152], local146, local1896, Static62.anIntArrayArray11, SceneGraph.tileOverlays[local152], SceneGraph.tileAngles[local152], local1888, local152, local1900, local142, SceneGraph.tileHeights[local152], SceneGraph.surfaceTileHeights[0]);
-							Static110.method2280(local152, local2025);
+							method2280(local152, local2025);
 							break;
 						}
 						local2025 = Static193.method3501(SceneGraph.tileFlags, SceneGraph.tileShapes[local152], SceneGraph.tileUnderlays[local152], local146, local1896, null, SceneGraph.tileOverlays[local152], SceneGraph.tileAngles[local152], local1888, local152, local1900, local142, SceneGraph.tileHeights[local152], null);
@@ -336,7 +336,7 @@ public final class Static45 {
 						for (local349 = 0; local349 < local2049.length; local349++) {
 							local2057[local2025.length + local349] = local2049[local349];
 						}
-						Static110.method2280(local152, local2057);
+						method2280(local152, local2057);
 						Static221.method3393(local1900, SceneGraph.tileUnderlays[local152], SceneGraph.tileAngles[local152], LightingManager.lights, local152, LightingManager.lightCount, local1896, SceneGraph.tileShapes[local152], SceneGraph.tileOverlays[local152], SceneGraph.tileHeights[local152], local1888);
 						break;
 					}
@@ -495,5 +495,10 @@ public final class Static45 {
         local3.anInt4444 = arg5;
         local3.anInt4447 = arg6;
         SceneGraph.aClass120Array1[SceneGraph.anInt917++] = local3;
+    }
+
+    @OriginalMember(owner = "client!ih", name = "a", descriptor = "(I[Lclient!hg;)V")
+    public static void method2280(@OriginalArg(0) int arg0, @OriginalArg(1) GlTile[] arg1) {
+        SceneGraph.underwaterHdTiles[arg0] = arg1;
     }
 }

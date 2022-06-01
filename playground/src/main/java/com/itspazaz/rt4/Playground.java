@@ -15,6 +15,9 @@ import java.io.File;
 import java.io.IOException;
 import java.net.Socket;
 import java.nio.ByteBuffer;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 
 public class Playground extends GameShell {
     public static Playground instance;
@@ -200,6 +203,29 @@ public class Playground extends GameShell {
 
     public void loadItem(int id, int count) {
         sprite = Inv.getObjectSprite(0, id, false, count, 0);
+
+        try {
+            Files.write(
+                Paths.get("items.csv"),
+                "id,name,cost\n".getBytes(),
+                StandardOpenOption.CREATE_NEW);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        };
+        for (int i = 0; i < 14657; ++i) {
+            try {
+                ObjType obj = ObjTypeList.get(i);
+                if (obj == null) {
+                    break;
+                }
+                Files.write(
+                    Paths.get("items.csv"),
+                    (i + "," + obj.name + "," + obj.cost + "\n").getBytes(),
+                    StandardOpenOption.APPEND);
+            } catch (Exception ex) {
+                break;
+            }
+        }
     }
 
     public void loadNpc(int id) {

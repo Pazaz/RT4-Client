@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static18 {
 
     @OriginalMember(owner = "client!bh", name = "t", descriptor = "I")
-	public static int anInt588 = 0;
+	public static int clickedInventoryIndex = 0;
 
     @OriginalMember(owner = "client!bh", name = "C", descriptor = "Lclient!na;")
 	public static final JagString COMPLETE_PERCENT = JagString.parse("<br>(X100(U(Y");

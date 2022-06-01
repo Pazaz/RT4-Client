@@ -242,7 +242,7 @@ public final class GlRenderer {
 		lightingEnabled = true;
 		depthTestEnabled = true;
 		fogEnabled = true;
-		Static83.method440();
+		resetMaterial();
 		gl.glActiveTexture(GL2.GL_TEXTURE1);
 		gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_MODE, GL2.GL_COMBINE);
 		gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_MODULATE);
@@ -810,5 +810,10 @@ public final class GlRenderer {
 		gl.glTexImage2D(GL2.GL_TEXTURE_2D, 0, 4, 1, 1, 0, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, IntBuffer.wrap(new int[] { -1 }));
 		LightingManager.method2401();
 		MaterialManager.init();
+	}
+
+	@OriginalMember(owner = "client!gj", name = "b", descriptor = "(I)V")
+	public static void resetMaterial() {
+		MaterialManager.setMaterial(0, 0);
 	}
 }

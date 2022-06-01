@@ -1,6 +1,5 @@
 package rt4;
 
-import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 
 import org.openrs2.deob.annotation.OriginalArg;
@@ -27,10 +26,8 @@ public final class Static230 {
 	public static final JagString aClass100_946 = JagString.parse("(R");
 	@OriginalMember(owner = "client!fb", name = "i", descriptor = "Lclient!na;")
 	public static final JagString aClass100_431 = JagString.parse("; Max)2Age=");
-	@OriginalMember(owner = "client!sj", name = "D", descriptor = "I")
-	public static int anInt5158;
 
-	@OriginalMember(owner = "client!sj", name = "p", descriptor = "I")
+    @OriginalMember(owner = "client!sj", name = "p", descriptor = "I")
 	public static int anInt5150 = 1;
 
     @OriginalMember(owner = "client!sj", name = "u", descriptor = "Z")

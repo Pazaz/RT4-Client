@@ -10,7 +10,7 @@ public final class Static126 {
 		if (InterfaceList.topLevelInterface != -1) {
 			Static96.method1949(InterfaceList.topLevelInterface);
 		}
-		for (@Pc(15) int local15 = 0; local15 < InterfaceList.anInt766; local15++) {
+		for (@Pc(15) int local15 = 0; local15 < InterfaceList.rectangles; local15++) {
 			if (Static186.aBooleanArray100[local15]) {
 				InterfaceList.rectangleRedraw[local15] = true;
 			}
@@ -18,14 +18,14 @@ public final class Static126 {
 			Static186.aBooleanArray100[local15] = false;
 		}
 		Static97.anInt2503 = -1;
-		Static169.aClass13_18 = null;
+		Static169.mouseOverInventoryInterface = null;
 		Static182.anInt4311 = client.loop;
 		if (GlRenderer.enabled) {
 			Static263.aBoolean299 = true;
 		}
 		Static214.anInt5574 = -1;
 		if (InterfaceList.topLevelInterface != -1) {
-			InterfaceList.anInt766 = 0;
+			InterfaceList.rectangles = 0;
 			Static9.method182();
 		}
 		if (GlRenderer.enabled) {

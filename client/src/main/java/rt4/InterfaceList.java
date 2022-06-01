@@ -15,8 +15,16 @@ public class InterfaceList {
     public static final int[] keyCodes = new int[128];
     @OriginalMember(owner = "client!rb", name = "b", descriptor = "Lclient!sc;")
     public static final HashTable properties = new HashTable(512);
+    @OriginalMember(owner = "client!vh", name = "b", descriptor = "[I")
+	public static final int[] rectangleX = new int[100];
+    @OriginalMember(owner = "client!e", name = "sc", descriptor = "[I")
+    public static final int[] rectangleY = new int[100];
+    @OriginalMember(owner = "client!sd", name = "V", descriptor = "[I")
+    public static final int[] rectangleWidth = new int[100];
+    @OriginalMember(owner = "client!fe", name = "lb", descriptor = "[I")
+	public static final int[] rectangleHeight = new int[100];
     @OriginalMember(owner = "client!bn", name = "V", descriptor = "I")
-    public static int anInt766 = 0;
+    public static int rectangles = 0;
     @OriginalMember(owner = "client!md", name = "W", descriptor = "I")
     public static int topLevelInterface = -1;
     @OriginalMember(owner = "client!bm", name = "f", descriptor = "Lclient!ve;")
@@ -127,7 +135,7 @@ public class InterfaceList {
                 @Pc(27) int local27;
                 for (local27 = 0; local27 < local25.length; local27++) {
                     if (local25[local27] != null) {
-                        local21 = local25[local27].usingScripts;
+                        local21 = local25[local27].if3;
                         break;
                     }
                 }
@@ -144,23 +152,22 @@ public class InterfaceList {
 
     @OriginalMember(owner = "client!af", name = "a", descriptor = "(BI)Lclient!be;")
     public static Component getComponent(@OriginalArg(1) int id) {
-        // TODO: _why_ are there some interfaces/components that are null! (i.e. banking)
         try {
-            @Pc(7) int interfaceId = id >> 16;
-            @Pc(18) int componentId = id & 0xFFFF;
-            if (components.length <= interfaceId || interfaceId < 0) {
+            @Pc(7) int parent = id >> 16;
+            @Pc(18) int child = id & 0xFFFF;
+            if (components.length <= parent || parent < 0) {
                 return null;
             }
-            if (components[interfaceId] == null || components[interfaceId].length <= componentId || components[interfaceId][componentId] == null) {
-                @Pc(33) boolean success = load(interfaceId);
+            if (components[parent] == null || components[parent].length <= child || components[parent][child] == null) {
+                @Pc(33) boolean success = load(parent);
                 if (!success) {
                     return null;
                 }
             }
-            if (components[interfaceId].length <= componentId) {
+            if (components[parent].length <= child) {
                 return null;
             }
-            return components[interfaceId][componentId];
+            return components[parent][child];
         } catch (Exception ex) {
             ex.printStackTrace();
             return null;
@@ -175,8 +182,8 @@ public class InterfaceList {
 
     @OriginalMember(owner = "client!dg", name = "a", descriptor = "(ILclient!be;)V")
     public static void redraw(@OriginalArg(1) Component arg0) {
-        if (Static182.anInt4311 == arg0.anInt465) {
-            Static186.aBooleanArray100[arg0.anInt517] = true;
+        if (Static182.anInt4311 == arg0.rectangleLoop) {
+            Static186.aBooleanArray100[arg0.rectangle] = true;
         }
     }
 
@@ -185,7 +192,7 @@ public class InterfaceList {
         if (!getServerActiveProperties(arg0).method503(arg1) && arg0.onOptionClick == null) {
             return null;
         } else if (arg0.ops == null || arg0.ops.length <= arg1 || arg0.ops[arg1] == null || arg0.ops[arg1].trim().length() == 0) {
-            return Static121.aBoolean154 ? JagString.concatenate(new JagString[] { Static207.aClass100_903, JagString.parseInt(arg1) }) : null;
+            return Static121.qaOpTest ? JagString.concatenate(new JagString[] { Static207.aClass100_903, JagString.parseInt(arg1) }) : null;
         } else {
             return arg0.ops[arg1];
         }

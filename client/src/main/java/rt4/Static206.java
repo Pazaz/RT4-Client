@@ -16,7 +16,7 @@ public final class Static206 {
 	public static final JagString aClass100_900 = JagString.parse("tbrefresh");
 
 	@OriginalMember(owner = "client!qk", name = "f", descriptor = "I")
-	public static int anInt4773 = 0;
+	public static int clickedInventoryComponentY = 0;
 
 	@OriginalMember(owner = "client!qk", name = "h", descriptor = "I")
 	public static int anInt4774 = 0;

@@ -206,7 +206,7 @@ public class Cheat {
                 Chat.add(null, 0, JagString.concatenate(new JagString[] { RECT_DEBUG_EQUALS, JagString.parseInt(rectDebug) }));
             }
             if (arg0.equalsIgnoreCase(QA_OP_TEST)) {
-                Static121.aBoolean154 = true;
+                Static121.qaOpTest = true;
             }
             if (arg0.equalsIgnoreCase(TWEENING)) {
                 if (SeqType.applyTweening) {

@@ -11,7 +11,13 @@ public final class TextureOp14 extends TextureOp {
 
     @OriginalMember(owner = "client!ui", name = "Q", descriptor = "I")
     public static int anInt5526;
-    @OriginalMember(owner = "client!hm", name = "S", descriptor = "I")
+    @OriginalMember(owner = "client!uf", name = "p", descriptor = "I")
+	public static int anInt5443;
+	@OriginalMember(owner = "client!cl", name = "X", descriptor = "I")
+	public static int anInt1091;
+	@OriginalMember(owner = "client!jg", name = "g", descriptor = "I")
+	public static int anInt3041;
+	@OriginalMember(owner = "client!hm", name = "S", descriptor = "I")
 	private int anInt2635 = 2;
 
 	@OriginalMember(owner = "client!hm", name = "U", descriptor = "I")
@@ -68,9 +74,9 @@ public final class TextureOp14 extends TextureOp {
 			@Pc(40) int local40 = local36 + 1;
 			for (@Pc(42) int local42 = 0; local42 < Static189.anInt4457; local42++) {
 				anInt5526 = Integer.MAX_VALUE;
-				Static250.anInt5443 = Integer.MAX_VALUE;
-				Static121.anInt3041 = Integer.MAX_VALUE;
-				Static35.anInt1091 = Integer.MAX_VALUE;
+				anInt5443 = Integer.MAX_VALUE;
+				anInt3041 = Integer.MAX_VALUE;
+				anInt1091 = Integer.MAX_VALUE;
 				@Pc(62) int local62 = this.anInt2645 * Static173.anIntArray367[local42] + 2048;
 				@Pc(66) int local66 = local62 >> 12;
 				@Pc(70) int local70 = local66 + 1;
@@ -105,18 +111,18 @@ public final class TextureOp14 extends TextureOp {
 						} else {
 							local201 = (int) (Math.sqrt((double) ((float) (local162 * local162 + local151 * local151) / 1.6777216E7F)) * 4096.0D);
 						}
-						if (local201 < Static35.anInt1091) {
-							anInt5526 = Static250.anInt5443;
-							Static250.anInt5443 = Static121.anInt3041;
-							Static121.anInt3041 = Static35.anInt1091;
-							Static35.anInt1091 = local201;
-						} else if (local201 < Static121.anInt3041) {
-							anInt5526 = Static250.anInt5443;
-							Static250.anInt5443 = Static121.anInt3041;
-							Static121.anInt3041 = local201;
-						} else if (Static250.anInt5443 > local201) {
-							anInt5526 = Static250.anInt5443;
-							Static250.anInt5443 = local201;
+						if (local201 < anInt1091) {
+							anInt5526 = anInt5443;
+							anInt5443 = anInt3041;
+							anInt3041 = anInt1091;
+							anInt1091 = local201;
+						} else if (local201 < anInt3041) {
+							anInt5526 = anInt5443;
+							anInt5443 = anInt3041;
+							anInt3041 = local201;
+						} else if (anInt5443 > local201) {
+							anInt5526 = anInt5443;
+							anInt5443 = local201;
 						} else if (local201 < anInt5526) {
 							anInt5526 = local201;
 						}
@@ -124,15 +130,15 @@ public final class TextureOp14 extends TextureOp {
 				}
 				local165 = this.anInt2635;
 				if (local165 == 0) {
-					local19[local42] = Static35.anInt1091;
+					local19[local42] = anInt1091;
 				} else if (local165 == 1) {
-					local19[local42] = Static121.anInt3041;
+					local19[local42] = anInt3041;
 				} else if (local165 == 3) {
-					local19[local42] = Static250.anInt5443;
+					local19[local42] = anInt5443;
 				} else if (local165 == 4) {
 					local19[local42] = anInt5526;
 				} else if (local165 == 2) {
-					local19[local42] = Static121.anInt3041 - Static35.anInt1091;
+					local19[local42] = anInt3041 - anInt1091;
 				}
 			}
 		}

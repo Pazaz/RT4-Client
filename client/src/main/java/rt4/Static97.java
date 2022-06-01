@@ -100,7 +100,7 @@ public final class Static97 {
 		if (InterfaceList.getServerActiveProperties(arg0).getTargetMask() == 0) {
 			return null;
 		} else if (arg0.targetVerb == null || arg0.targetVerb.trim().length() == 0) {
-			return Static121.aBoolean154 ? Static143.aClass100_668 : null;
+			return Static121.qaOpTest ? Static143.aClass100_668 : null;
 		} else {
 			return arg0.targetVerb;
 		}

@@ -9,10 +9,7 @@ public final class Static53 {
     @OriginalMember(owner = "client!ec", name = "d", descriptor = "Lclient!gn;")
 	public static final LruHashTable aClass54_5 = new LruHashTable(16);
 
-	@OriginalMember(owner = "client!ec", name = "l", descriptor = "I")
-	public static final int anInt1704 = 5063219;
-
-	@OriginalMember(owner = "client!ec", name = "B", descriptor = "[[I")
+    @OriginalMember(owner = "client!ec", name = "B", descriptor = "[[I")
 	public static final int[][] anIntArrayArray8 = new int[][] { new int[0], { 128, 0, 128, 128, 0, 128 }, { 0, 0, 128, 0, 128, 128, 64, 128 }, { 0, 128, 0, 0, 128, 0, 64, 128 }, { 0, 0, 64, 128, 0, 128 }, { 128, 128, 64, 128, 128, 0 }, { 64, 0, 128, 0, 128, 128, 64, 128 }, { 128, 0, 128, 128, 0, 128, 0, 64, 64, 0 }, { 0, 0, 64, 0, 0, 64 }, { 0, 0, 128, 0, 128, 128, 64, 96, 32, 64 }, { 0, 128, 0, 0, 32, 64, 64, 96, 128, 128 }, { 0, 128, 0, 0, 32, 32, 96, 32, 128, 0, 128, 128 } };
 
 	@OriginalMember(owner = "client!ec", name = "a", descriptor = "([[IZILclient!hg;[IIIIZ[[FZI[[FIIIZ[[I[[FBI[Z)V")

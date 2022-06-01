@@ -28,6 +28,8 @@ public final class client extends GameShell {
 	public static final int[] JS5_ARCHIVE_WEIGHTS = new int[] { 4, 4, 1, 2, 6, 4, 2, 49, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
 	@OriginalMember(owner = "client!si", name = "gb", descriptor = "Lclient!na;")
 	public static final JagString aClass100_974 = JagString.parse("<br>(X");
+	@OriginalMember(owner = "client!sg", name = "e", descriptor = "Lclient!na;")
+	public static final JagString SETTINGS = JagString.parse("settings");
 	@OriginalMember(owner = "client!jm", name = "A", descriptor = "Lclient!na;")
 	static final JagString aClass100_603 = JagString.parse("");
 	@OriginalMember(owner = "client!jm", name = "z", descriptor = "Lclient!na;")
@@ -404,7 +406,7 @@ public final class client extends GameShell {
 			for (@Pc(54) int local54 = 0; local54 < Static51.aByteArrayArray8.length; local54++) {
 				Static51.aByteArrayArray8[local54] = null;
 			}
-			Static105.anInt2863 = 0;
+			Player.anInt2863 = 0;
 		}
 		HintArrowManager.clear();
 		ShadowModelList.method1857();
@@ -726,7 +728,7 @@ public final class client extends GameShell {
 		}
 		if (GlRenderer.enabled && gameState != 0) {
 			GlRenderer.swapBuffers();
-			for (local80 = 0; local80 < InterfaceList.anInt766; local80++) {
+			for (local80 = 0; local80 < InterfaceList.rectangles; local80++) {
 				InterfaceList.rectangleRedraw[local80] = false;
 			}
 		} else {
@@ -734,9 +736,9 @@ public final class client extends GameShell {
 			if ((gameState == 30 || gameState == 10) && Cheat.rectDebug == 0 && !local158) {
 				try {
 					local388 = GameShell.canvas.getGraphics();
-					for (local84 = 0; local84 < InterfaceList.anInt766; local84++) {
+					for (local84 = 0; local84 < InterfaceList.rectangles; local84++) {
 						if (InterfaceList.rectangleRedraw[local84]) {
-							SoftwareRaster.frameBuffer.drawAt(Static224.anIntArray443[local84], Static264.anIntArray410[local84], Static67.anIntArray320[local84], local388, Static50.anIntArray133[local84]);
+							SoftwareRaster.frameBuffer.drawAt(InterfaceList.rectangleWidth[local84], InterfaceList.rectangleX[local84], InterfaceList.rectangleHeight[local84], local388, InterfaceList.rectangleY[local84]);
 							InterfaceList.rectangleRedraw[local84] = false;
 						}
 					}
@@ -747,7 +749,7 @@ public final class client extends GameShell {
 				try {
 					local388 = GameShell.canvas.getGraphics();
 					SoftwareRaster.frameBuffer.draw(local388);
-					for (local84 = 0; local84 < InterfaceList.anInt766; local84++) {
+					for (local84 = 0; local84 < InterfaceList.rectangles; local84++) {
 						InterfaceList.rectangleRedraw[local84] = false;
 					}
 				} catch (@Pc(453) Exception local453) {
@@ -872,7 +874,7 @@ public final class client extends GameShell {
 		} catch (@Pc(130) Exception local130) {
 			affiliate = 0;
 		}
-		settings = Static227.SETTINGS.fromParameters(this);
+		settings = SETTINGS.fromParameters(this);
 		if (settings == null) {
 			settings = JagString.EMPTY;
 		}
@@ -1583,7 +1585,7 @@ public final class client extends GameShell {
 			LoginManager.loop();
 			if (LoginManager.reply != -3) {
 				if (LoginManager.reply == 15) {
-					Static44.method1146();
+					LoginManager.reconnect();
 				} else if (LoginManager.reply != 2) {
 					LoginManager.processLogout();
 				}

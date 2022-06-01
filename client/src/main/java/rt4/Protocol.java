@@ -1276,10 +1276,10 @@ public class Protocol {
                 long ptr = (long) slot + ((long) parent << 32);
                 ServerActiveProperties prev = (ServerActiveProperties) InterfaceList.properties.get(ptr);
                 if (prev != null) {
-                    properties = new ServerActiveProperties(prev.accessMask, value);
+                    properties = new ServerActiveProperties(prev.events, value);
                     prev.unlink();
                 } else if (slot == -1) {
-                    properties = new ServerActiveProperties(InterfaceList.getComponent(parent).properties.accessMask, value);
+                    properties = new ServerActiveProperties(InterfaceList.getComponent(parent).properties.events, value);
                 } else {
                     properties = new ServerActiveProperties(0, value);
                 }
@@ -2200,7 +2200,7 @@ public class Protocol {
             setVerifyId(tracknum);
             @Pc(5603) Component component = InterfaceList.getComponent(id);
             @Pc(5615) ObjType objType;
-            if (component.usingScripts) {
+            if (component.if3) {
                 DelayedStateChange.method3707(id, slot, itemId);
                 objType = ObjTypeList.get(itemId);
                 DelayedStateChange.updateView(objType.zoom2d, id, objType.yAngle2d, objType.xAngle2d);
@@ -2296,15 +2296,17 @@ public class Protocol {
     public static boolean readPacket() {
         try {
             return readPacketInternal();
-        } catch (@Pc(14) IOException local14) {
+        } catch (@Pc(14) IOException ex) {
+			ex.printStackTrace();
             Static175.method3279();
             return true;
-        } catch (@Pc(19) Exception local19) {
+        } catch (@Pc(19) Exception ex) {
+			ex.printStackTrace();
             @Pc(61) String local61 = "T2 - " + opcode + "," + opcode3 + "," + opcode4 + " - " + length + "," + (Camera.originX + PlayerList.self.movementQueueX[0]) + "," + (PlayerList.self.movementQueueZ[0] + Camera.originZ) + " - ";
             for (@Pc(63) int local63 = 0; local63 < length && local63 < 50; local63++) {
                 local61 = local61 + inboundBuffer.data[local63] + ",";
             }
-            TracingException.report(local61, local19);
+            TracingException.report(local61, ex);
             LoginManager.processLogout();
             return true;
         }
@@ -2598,16 +2600,16 @@ public class Protocol {
                     InterfaceList.redraw(component);
                 } else if (type == 12) {
                     component = InterfaceList.getComponent(i);
-                    x = change.intArg1;
+                    int scrollY = change.intArg1;
                     if (component != null && component.type == 0) {
-                        if (x > component.scrollMaxV - component.height) {
-                            x = component.scrollMaxV - component.height;
+                        if (scrollY > component.scrollMaxV - component.height) {
+                            scrollY = component.scrollMaxV - component.height;
                         }
-                        if (x < 0) {
-                            x = 0;
+                        if (scrollY < 0) {
+                            scrollY = 0;
                         }
-                        if (x != component.scrollY) {
-                            component.scrollY = x;
+                        if (scrollY != component.scrollY) {
+                            component.scrollY = scrollY;
                             InterfaceList.redraw(component);
                         }
                     }
@@ -2624,74 +2626,79 @@ public class Protocol {
             }
         }
         Static178.anInt4247++;
-        if (MiniMenu.aClass13_7 != null) {
+        if (MiniMenu.pressedInventoryComponent != null) {
             MiniMenu.anInt2043++;
             if (MiniMenu.anInt2043 >= 15) {
-                InterfaceList.redraw(MiniMenu.aClass13_7);
-                MiniMenu.aClass13_7 = null;
+                InterfaceList.redraw(MiniMenu.pressedInventoryComponent);
+                MiniMenu.pressedInventoryComponent = null;
             }
         }
-        @Pc(1361) Component local1361;
-        if (Static118.aClass13_15 != null) {
-            InterfaceList.redraw(Static118.aClass13_15);
-            if (Static149.anInt3554 + 5 < Mouse.anInt4873 || Mouse.anInt4873 < Static149.anInt3554 - 5 || Static206.anInt4773 + 5 < Mouse.anInt5032 || Static206.anInt4773 - 5 > Mouse.anInt5032) {
-                Static123.aBoolean155 = true;
+
+        @Pc(1361) Component component;
+        if (Static118.clickedInventoryComponent != null) {
+            InterfaceList.redraw(Static118.clickedInventoryComponent);
+            if (Static149.clickedInventoryComponentX + 5 < Mouse.lastMouseX || Mouse.lastMouseX < Static149.clickedInventoryComponentX - 5 || Static206.clickedInventoryComponentY + 5 < Mouse.lastMouseY || Static206.clickedInventoryComponentY - 5 > Mouse.lastMouseY) {
+                Static123.draggingClickedInventoryObject = true;
             }
-            Static78.anInt2145++;
+            Static78.clickedInventoryComponentCycle++;
+
             if (Mouse.pressedButton == 0) {
-                if (Static123.aBoolean155 && Static78.anInt2145 >= 5) {
-                    if (Static118.aClass13_15 == Static169.aClass13_18 && Static4.anInt36 != Static18.anInt588) {
-                        local1361 = Static118.aClass13_15;
-                        @Pc(1363) byte local1363 = 0;
-                        if (Static179.anInt4254 == 1 && local1361.anInt453 == 206) {
-                            local1363 = 1;
+                if (Static123.draggingClickedInventoryObject && Static78.clickedInventoryComponentCycle >= 5) {
+                    if (Static118.clickedInventoryComponent == Static169.mouseOverInventoryInterface && Static4.mouseOverInventoryObjectIndex != Static18.clickedInventoryIndex) {
+                        component = Static118.clickedInventoryComponent;
+                        @Pc(1363) byte inserting = 0;
+
+                        if (VarpDomain.inserting == 1 && component.clientCode == 206) {
+                            inserting = 1;
                         }
-                        if (local1361.objTypes[Static18.anInt588] <= 0) {
-                            local1363 = 0;
+
+                        if (component.objTypes[Static18.clickedInventoryIndex] <= 0) {
+                            inserting = 0;
                         }
-                        if (InterfaceList.getServerActiveProperties(local1361).isObjReplaceEnabled()) {
-                            y = Static4.anInt36;
-                            x = Static18.anInt588;
-                            local1361.objTypes[x] = local1361.objTypes[y];
-                            local1361.objCounts[x] = local1361.objCounts[y];
-                            local1361.objTypes[y] = -1;
-                            local1361.objCounts[y] = 0;
-                        } else if (local1363 == 1) {
-                            x = Static18.anInt588;
-                            y = Static4.anInt36;
-                            while (x != y) {
-                                if (y > x) {
-                                    local1361.swapObjs(y - 1, y);
-                                    y--;
-                                } else if (x > y) {
-                                    local1361.swapObjs(y + 1, y);
-                                    y++;
+
+                        if (InterfaceList.getServerActiveProperties(component).isObjReplaceEnabled()) {
+                            int newIndex = Static4.mouseOverInventoryObjectIndex;
+                            int currentIndex = Static18.clickedInventoryIndex;
+                            component.objTypes[currentIndex] = component.objTypes[newIndex];
+                            component.objCounts[currentIndex] = component.objCounts[newIndex];
+                            component.objTypes[newIndex] = -1;
+                            component.objCounts[newIndex] = 0;
+                        } else if (inserting == 1) {
+                            int currentIndex = Static18.clickedInventoryIndex;
+                            int newIndex = Static4.mouseOverInventoryObjectIndex;
+                            while (currentIndex != newIndex) {
+                                if (currentIndex > newIndex) {
+                                    component.swapObjs(currentIndex - 1, currentIndex);
+                                    currentIndex--;
+                                } else {
+                                    component.swapObjs(currentIndex + 1, currentIndex);
+                                    currentIndex++;
                                 }
                             }
                         } else {
-                            local1361.swapObjs(Static18.anInt588, Static4.anInt36);
+                            component.swapObjs(Static18.clickedInventoryIndex, Static4.mouseOverInventoryObjectIndex);
                         }
                         outboundBuffer.p1isaac(231);
-                        outboundBuffer.p2(Static4.anInt36);
-                        outboundBuffer.p4le2(Static118.aClass13_15.id);
-                        outboundBuffer.p2add(Static18.anInt588);
-                        outboundBuffer.p1sub(local1363);
+                        outboundBuffer.p2(Static4.mouseOverInventoryObjectIndex);
+                        outboundBuffer.p4le2(Static118.clickedInventoryComponent.id);
+                        outboundBuffer.p2add(Static18.clickedInventoryIndex);
+                        outboundBuffer.p1sub(inserting);
                     }
-                } else if ((Static116.anInt2952 == 1 || MiniMenu.method4640(MiniMenu.size - 1)) && MiniMenu.size > 2) {
+                } else if ((VarpDomain.anInt2952 == 1 || MiniMenu.method4640(MiniMenu.size - 1)) && MiniMenu.size > 2) {
                     Static226.method3901();
                 } else if (MiniMenu.size > 0) {
                     Static59.method1372();
                 }
                 Mouse.clickButton = 0;
                 MiniMenu.anInt2043 = 10;
-                Static118.aClass13_15 = null;
+                Static118.clickedInventoryComponent = null;
             }
         }
         Static146.aBoolean174 = false;
         Static56.aClass13_12 = null;
         Static44.aBoolean83 = false;
         InterfaceList.keyQueueSize = 0;
-        local1361 = Static180.aClass13_22;
+        component = Static180.aClass13_22;
         Static180.aClass13_22 = null;
         @Pc(1508) Component local1508 = Static43.aClass13_11;
         Static43.aClass13_11 = null;
@@ -2777,9 +2784,9 @@ public class Protocol {
                                             }
                                             MiniMenu.anInt1742 = -1;
                                             Static7.method843();
-                                            if (Static180.aClass13_22 != local1361) {
-                                                if (local1361 != null) {
-                                                    InterfaceList.redraw(local1361);
+                                            if (Static180.aClass13_22 != component) {
+                                                if (component != null) {
+                                                    InterfaceList.redraw(component);
                                                 }
                                                 if (Static180.aClass13_22 != null) {
                                                     InterfaceList.redraw(Static180.aClass13_22);

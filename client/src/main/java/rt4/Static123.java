@@ -9,7 +9,7 @@ public final class Static123 {
 	public static int anInt3058 = 0;
 
     @OriginalMember(owner = "client!jj", name = "j", descriptor = "Z")
-	public static boolean aBoolean155 = false;
+	public static boolean draggingClickedInventoryObject = false;
 
 	@OriginalMember(owner = "client!ml", name = "K", descriptor = "I")
 	public static int anInt3947;
