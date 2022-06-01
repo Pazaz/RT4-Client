@@ -43,7 +43,7 @@ public final class Static158 {
 						NpcList.ids[NpcList.size++] = local97;
 						local198.lastSeenLoop = client.loop;
 						local198.setNpcType(local148);
-						local198.method2692(local198.type.size);
+						local198.setSize(local198.type.size);
 						local198.anInt3400 = local198.anInt3381 = PathingEntity.ANGLES[local198.type.aByte11];
 						local198.anInt3376 = local198.type.anInt3733;
 						if (local198.anInt3376 == 0) {
