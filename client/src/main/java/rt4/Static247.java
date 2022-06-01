@@ -681,7 +681,7 @@ public final class Static247 {
 		MiniMenu.anInt2512 = arg0;
 		MiniMenu.anInt4999 = arg2;
 		Static241.aBoolean302 = true;
-		Static246.anInt5393 = arg4;
+		MiniMenu.anInt5393 = arg4;
 		Static35.anInt1092 = arg5;
 		InterfaceList.redraw(local8);
 	}

@@ -29,10 +29,7 @@ public final class Static219 {
 	@OriginalMember(owner = "client!rl", name = "Y", descriptor = "[Lclient!na;")
 	public static final JagString[] aClass100Array149 = new JagString[] { aClass100_927, aClass100_922, aClass100_926, aClass100_924, aClass100_925, aClass100_923, aClass100_921 };
 
-	@OriginalMember(owner = "client!rl", name = "Z", descriptor = "I")
-	public static final int anInt4938 = 7759444;
-
-	@OriginalMember(owner = "client!rl", name = "eb", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!rl", name = "eb", descriptor = "Lclient!na;")
 	public static final JagString aClass100_928 = JagString.parse("(U0a )2 in: ");
 
 	@OriginalMember(owner = "client!rl", name = "i", descriptor = "(I)V")

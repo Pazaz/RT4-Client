@@ -6,9 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static59 {
 
-	@OriginalMember(owner = "client!ej", name = "X", descriptor = "I")
-	public static int anInt1815;
-
     @OriginalMember(owner = "client!ej", name = "h", descriptor = "(I)V")
 	public static void method1372() {
 		if (Static226.anInt3953 == 2) {

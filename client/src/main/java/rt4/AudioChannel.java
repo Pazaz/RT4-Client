@@ -100,7 +100,8 @@ public class AudioChannel {
 				thread.channels[arg3] = audioChannel;
 			}
 			return audioChannel;
-		} catch (@Pc(109) Throwable local109) {
+		} catch (@Pc(109) Throwable ex1) {
+			ex1.printStackTrace();
 			try {
 				@Pc(120) SignLinkAudioChannel local120 = new SignLinkAudioChannel(arg1, arg3);
 				local120.samples = new int[(stereo ? 2 : 1) * 256];
@@ -120,7 +121,8 @@ public class AudioChannel {
 					thread.channels[arg3] = local120;
 				}
 				return local120;
-			} catch (@Pc(186) Throwable local186) {
+			} catch (@Pc(186) Throwable ex2) {
+				ex2.printStackTrace();
 				return new AudioChannel();
 			}
 		}
@@ -303,7 +305,8 @@ public class AudioChannel {
 				this.consumedSamples = 0;
 			}
 			this.prevBufferSize = local38;
-		} catch (@Pc(202) Exception local202) {
+		} catch (@Pc(202) Exception ex) {
+			ex.printStackTrace();
 			this.flush();
 			this.closeUntil = now + 2000L;
 		}
@@ -315,7 +318,8 @@ public class AudioChannel {
 				this.skip();
 				this.time += 256000 / sampleRate;
 			}
-		} catch (@Pc(247) Exception local247) {
+		} catch (@Pc(247) Exception ex) {
+			ex.printStackTrace();
 			this.time = now;
 		}
 	}
@@ -348,7 +352,8 @@ public class AudioChannel {
 		this.skipConsumptionCheck = true;
 		try {
 			this.close();
-		} catch (@Pc(10) Exception local10) {
+		} catch (@Pc(10) Exception ex) {
+			ex.printStackTrace();
 			this.flush();
 			this.closeUntil = MonotonicClock.currentTimeMillis() + 2000L;
 		}

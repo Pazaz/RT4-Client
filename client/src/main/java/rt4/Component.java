@@ -287,7 +287,7 @@ public final class Component {
 	public boolean textAntiMacro = false;
 
 	@OriginalMember(owner = "client!be", name = "cb", descriptor = "I")
-	public int anInt465 = -1;
+	public int rectangleLoop = -1;
 
 	@OriginalMember(owner = "client!be", name = "jc", descriptor = "I")
 	public int anInt496 = 1;
@@ -296,7 +296,7 @@ public final class Component {
 	public int anInt480 = 0;
 
 	@OriginalMember(owner = "client!be", name = "Hb", descriptor = "Z")
-	public boolean usingScripts = false;
+	public boolean if3 = false;
 
 	@OriginalMember(owner = "client!di", name = "F", descriptor = "Lclient!bf;")
 	public static final ServerActiveProperties DEFAULT_SERVER_ACTIVE_PROPERTIES = new ServerActiveProperties(0, -1);
@@ -431,10 +431,10 @@ public final class Component {
 	public int objCount = 0;
 
 	@OriginalMember(owner = "client!be", name = "Uc", descriptor = "I")
-	public int anInt517 = -1;
+	public int rectangle = -1;
 
 	@OriginalMember(owner = "client!be", name = "K", descriptor = "I")
-	public int anInt453 = 0;
+	public int clientCode = 0;
 
 	@OriginalMember(owner = "client!be", name = "Oc", descriptor = "I")
 	public int shadowColor = 0;
@@ -565,10 +565,10 @@ public final class Component {
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(ILclient!wa;)V")
 	public final void decodeNoScripts(@OriginalArg(1) Buffer arg0) {
-		this.usingScripts = false;
+		this.if3 = false;
 		this.type = arg0.g1();
 		this.anInt530 = arg0.g1();
-		this.anInt453 = arg0.g2();
+		this.clientCode = arg0.g2();
 		this.baseX = arg0.g2s();
 		this.baseY = arg0.g2s();
 		this.baseWidth = arg0.g2();
@@ -840,13 +840,14 @@ public final class Component {
 	}
 
 	@OriginalMember(owner = "client!be", name = "b", descriptor = "(III)V")
-	public final void swapObjs(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		@Pc(8) int local8 = this.objTypes[arg1];
-		this.objTypes[arg1] = this.objTypes[arg0];
-		this.objTypes[arg0] = local8;
-		@Pc(34) int local34 = this.objCounts[arg1];
-		this.objCounts[arg1] = this.objCounts[arg0];
-		this.objCounts[arg0] = local34;
+	public final void swapObjs(@OriginalArg(0) int oldIndex, @OriginalArg(1) int newIndex) {
+		@Pc(8) int tmpObj = this.objTypes[newIndex];
+		this.objTypes[newIndex] = this.objTypes[oldIndex];
+		this.objTypes[oldIndex] = tmpObj;
+
+		@Pc(34) int tmpCount = this.objCounts[newIndex];
+		this.objCounts[newIndex] = this.objCounts[oldIndex];
+		this.objCounts[oldIndex] = tmpCount;
 	}
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(ILclient!tk;IIIZLclient!hh;)Lclient!ak;")
@@ -995,14 +996,14 @@ public final class Component {
 
 	@OriginalMember(owner = "client!be", name = "c", descriptor = "(ILclient!wa;)V")
 	public final void decodeScriptFormat(@OriginalArg(1) Buffer buffer) {
-		this.usingScripts = true;
+		this.if3 = true;
 		buffer.offset++;
 		this.type = buffer.g1();
 		if ((this.type & 0x80) != 0) {
 			this.type &= 0x7F;
 			buffer.gjstr();
 		}
-		this.anInt453 = buffer.g2();
+		this.clientCode = buffer.g2();
 		this.baseX = buffer.g2s();
 		this.baseY = buffer.g2s();
 		this.baseWidth = buffer.g2();

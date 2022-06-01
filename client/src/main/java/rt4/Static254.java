@@ -6,10 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static254 {
 
-    @OriginalMember(owner = "client!uj", name = "H", descriptor = "I")
-	public static int anInt5559;
-
-	@OriginalMember(owner = "client!uj", name = "a", descriptor = "(BZII[[[Lclient!bj;I)Z")
+    @OriginalMember(owner = "client!uj", name = "a", descriptor = "(BZII[[[Lclient!bj;I)Z")
 	public static boolean method4348(@OriginalArg(1) boolean arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Tile[][][] arg3, @OriginalArg(5) int arg4) {
 		@Pc(14) byte local14 = arg0 ? 1 : (byte) (Static253.anInt3325 & 0xFF);
 		if (local14 == Static266.aByteArrayArrayArray15[Player.level][arg1][arg2]) {

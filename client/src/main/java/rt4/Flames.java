@@ -10,6 +10,8 @@ public class Flames {
     public static final JagString RUNES = JagString.parse("runes");
     @OriginalMember(owner = "client!km", name = "Yc", descriptor = "I")
     public static int anInt3443;
+    @OriginalMember(owner = "client!uf", name = "e", descriptor = "I")
+	public static int anInt5434 = 0;
 
     @OriginalMember(owner = "client!gg", name = "a", descriptor = "(ILclient!ve;)V")
     public static void init(@OriginalArg(1) Js5 arg0) {
@@ -23,6 +25,6 @@ public class Flames {
 
     @OriginalMember(owner = "client!wa", name = "a", descriptor = "(Z)V")
     public static void update() {
-        Static250.anInt5434++;
+        anInt5434++;
     }
 }

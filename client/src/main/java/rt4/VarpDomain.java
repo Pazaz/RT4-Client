@@ -17,8 +17,14 @@ public class VarpDomain {
     public static int updatedVarpsWriterIndex = 0;
     @OriginalMember(owner = "client!qc", name = "K", descriptor = "Lclient!sc;")
     public static HashTable aClass133_20 = new HashTable(16);
+	@OriginalMember(owner = "client!ge", name = "m", descriptor = "I")
+	public static int anInt2157 = 0;
+	@OriginalMember(owner = "client!jb", name = "n", descriptor = "I")
+	public static int anInt2952 = 0;
+	@OriginalMember(owner = "client!oe", name = "b", descriptor = "I")
+	public static int inserting = 0;
 
-    @OriginalMember(owner = "client!nh", name = "a", descriptor = "(BII)V")
+	@OriginalMember(owner = "client!nh", name = "a", descriptor = "(BII)V")
     public static void set(@OriginalArg(1) int value, @OriginalArg(2) int id) {
         varp[id] = value;
         @Pc(20) LongNode local20 = (LongNode) aClass133_20.get((long) id);
@@ -102,13 +108,13 @@ public class VarpDomain {
 		}
 		@Pc(25) int local25 = activeVarps[arg0];
 		if (local17 == 6) {
-			Static79.anInt2157 = local25;
+			anInt2157 = local25;
 		}
 		if (local17 == 5) {
-			Static116.anInt2952 = local25;
+			anInt2952 = local25;
 		}
 		if (local17 == 9) {
-			Static179.anInt4254 = local25;
+			inserting = local25;
 		}
 	}
 }

@@ -8,7 +8,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static169 {
 
     @OriginalMember(owner = "client!nf", name = "h", descriptor = "Lclient!be;")
-	public static Component aClass13_18;
+	public static Component mouseOverInventoryInterface;
 
     @OriginalMember(owner = "client!nf", name = "i", descriptor = "I")
 	public static int anInt4075 = -1;

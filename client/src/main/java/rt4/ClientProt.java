@@ -25,7 +25,7 @@ public class ClientProt {
             ScriptRunner.run(local19);
         }
         @Pc(37) boolean local37 = true;
-        if (local8.anInt453 > 0) {
+        if (local8.clientCode > 0) {
             local37 = MiniMenu.method4265(local8);
         }
         if (!local37 || !InterfaceList.getServerActiveProperties(local8).method503(arg2 - 1)) {
@@ -453,12 +453,12 @@ public class ClientProt {
         InterfaceList.redraw(Static40.aClass13_14);
         Static40.anInt4851++;
         if (Static44.aBoolean83 && Static146.aBoolean174) {
-            @Pc(30) int local30 = Mouse.anInt4873;
+            @Pc(30) int local30 = Mouse.lastMouseX;
             local30 -= Static40.anInt5388;
             if (Static81.anInt2225 > local30) {
                 local30 = Static81.anInt2225;
             }
-            @Pc(41) int local41 = Mouse.anInt5032;
+            @Pc(41) int local41 = Mouse.lastMouseY;
             if (Static81.anInt2225 + Static40.aClass13_1.width < local30 - -Static40.aClass13_14.width) {
                 local30 = Static81.anInt2225 + Static40.aClass13_1.width - Static40.aClass13_14.width;
             }
@@ -504,7 +504,7 @@ public class ClientProt {
                         Protocol.outboundBuffer.p4(Static56.aClass13_12.id);
                         Protocol.outboundBuffer.p2le(Static40.aClass13_14.createdComponentId);
                     }
-                } else if ((Static116.anInt2952 == 1 || MiniMenu.method4640(MiniMenu.size - 1)) && MiniMenu.size > 2) {
+                } else if ((VarpDomain.anInt2952 == 1 || MiniMenu.method4640(MiniMenu.size - 1)) && MiniMenu.size > 2) {
                     Static226.method3901();
                 } else if (MiniMenu.size > 0) {
                     Static59.method1372();

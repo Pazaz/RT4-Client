@@ -6,10 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static264 {
 
-    @OriginalMember(owner = "client!vh", name = "b", descriptor = "[I")
-	public static final int[] anIntArray410 = new int[100];
-
-	@OriginalMember(owner = "client!vh", name = "c", descriptor = "Lclient!na;")
+    @OriginalMember(owner = "client!vh", name = "c", descriptor = "Lclient!na;")
 	public static final JagString COLON = JagString.parse(":");
 
 	@OriginalMember(owner = "client!vh", name = "p", descriptor = "[I")

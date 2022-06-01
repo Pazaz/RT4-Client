@@ -9,7 +9,7 @@ public final class Static4 {
 	public static final LinkedList highPriorityRequests = new LinkedList();
 
     @OriginalMember(owner = "client!ac", name = "n", descriptor = "I")
-	public static int anInt36 = 0;
+	public static int mouseOverInventoryObjectIndex = 0;
 
     @OriginalMember(owner = "client!ac", name = "a", descriptor = "(IIII)I")
 	public static int method22(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2) {

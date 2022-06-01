@@ -10,7 +10,4 @@ public final class Static67 {
 	@OriginalMember(owner = "client!fe", name = "R", descriptor = "Z")
 	public static boolean prevFocus = true;
 
-    @OriginalMember(owner = "client!fe", name = "lb", descriptor = "[I")
-	public static final int[] anIntArray320 = new int[100];
-
 }

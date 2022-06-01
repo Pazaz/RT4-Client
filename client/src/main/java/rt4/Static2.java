@@ -64,7 +64,7 @@ public final class Static2 {
 
     @OriginalMember(owner = "client!aa", name = "a", descriptor = "(BLclient!be;)V")
 	public static void method13(@OriginalArg(1) Component arg0) {
-		@Pc(16) int local16 = arg0.anInt453;
+		@Pc(16) int local16 = arg0.clientCode;
 		if (local16 == 324) {
 			if (Static158.anInt3851 == -1) {
 				Static158.anInt3851 = arg0.spriteId;

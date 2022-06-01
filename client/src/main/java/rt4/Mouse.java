@@ -21,9 +21,9 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
 	@OriginalMember(owner = "client!em", name = "y", descriptor = "I")
 	public static int clickY = 0;
 	@OriginalMember(owner = "client!sc", name = "v", descriptor = "I")
-	public static int anInt5032 = 0;
+	public static int lastMouseY = 0;
 	@OriginalMember(owner = "client!rh", name = "o", descriptor = "I")
-	public static int anInt4873 = 0;
+	public static int lastMouseX = 0;
     @OriginalMember(owner = "client!he", name = "bb", descriptor = "Lclient!ug;")
     public static Mouse instance = new Mouse();
 	@OriginalMember(owner = "client!he", name = "Y", descriptor = "I")
@@ -76,8 +76,8 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
         @Pc(2) Mouse local2 = instance;
         synchronized (instance) {
             pressedButton = anInt1759;
-            anInt4873 = anInt3521;
-            anInt5032 = anInt4039;
+            lastMouseX = anInt3521;
+            lastMouseY = anInt4039;
             clickButton = anInt1313;
             clickX = anInt1034;
             anInt2467++;

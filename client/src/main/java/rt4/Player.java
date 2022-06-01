@@ -34,7 +34,9 @@ public final class Player extends PathingEntity {
     public static long name37;
 	@OriginalMember(owner = "client!sm", name = "k", descriptor = "Lsignlink!im;")
 	public static PrivilegedRequest lastLogAddress;
-	@OriginalMember(owner = "client!e", name = "Bc", descriptor = "Lclient!hh;")
+    @OriginalMember(owner = "client!ib", name = "l", descriptor = "I")
+    public static int anInt2863 = 0;
+    @OriginalMember(owner = "client!e", name = "Bc", descriptor = "Lclient!hh;")
 	public PlayerAppearance appearance;
 
 	@OriginalMember(owner = "client!e", name = "Mc", descriptor = "Lclient!na;")
@@ -320,13 +322,13 @@ public final class Player extends PathingEntity {
 		@Pc(102) int local102;
 		if (client.modeWhat != 0 && local79 < 50) {
 			local102 = 50 - local79;
-			while (Static105.anInt2863 < local102) {
-				Static51.aByteArrayArray8[Static105.anInt2863] = new byte[102400];
-				Static105.anInt2863++;
+			while (anInt2863 < local102) {
+				Static51.aByteArrayArray8[anInt2863] = new byte[102400];
+				anInt2863++;
 			}
-			while (Static105.anInt2863 > local102) {
-				Static105.anInt2863--;
-				Static51.aByteArrayArray8[Static105.anInt2863] = null;
+			while (anInt2863 > local102) {
+				anInt2863--;
+				Static51.aByteArrayArray8[anInt2863] = null;
 			}
 		}
 		if (local76 == null) {

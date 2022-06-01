@@ -179,6 +179,7 @@ public final class BufferedFile {
 				}
 			}
 		} catch (@Pc(464) IOException ex) {
+			ex.printStackTrace();
 			this.physicalPosition = -1L;
 			throw ex;
 		}
@@ -276,6 +277,7 @@ public final class BufferedFile {
 				}
 			}
 		} catch (@Pc(414) IOException ex) {
+			ex.printStackTrace();
 			this.physicalPosition = -1L;
 			throw ex;
 		}

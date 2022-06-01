@@ -120,7 +120,7 @@ public final class LocType {
 	private int resizeY = 128;
 
 	@OriginalMember(owner = "client!pb", name = "y", descriptor = "Z")
-	public boolean aBoolean210 = false;
+	public boolean breakroutefinding = false;
 
 	@OriginalMember(owner = "client!pb", name = "kb", descriptor = "I")
 	public int anInt4429 = -1;
@@ -514,7 +514,7 @@ public final class LocType {
 		} else if (arg1 == 73) {
 			this.aBoolean206 = true;
 		} else if (arg1 == 74) {
-			this.aBoolean210 = true;
+			this.breakroutefinding = true;
 		} else if (arg1 == 75) {
 			this.anInt4438 = arg0.g1();
 		} else if (arg1 == 77 || arg1 == 92) {

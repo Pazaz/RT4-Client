@@ -35,6 +35,7 @@ public final class AudioThread implements Runnable {
 				GameShell.flush(this.signLink, null);
 			}
 		} catch (@Pc(43) Exception ex) {
+			ex.printStackTrace();
 			TracingException.report(null, ex);
 		} finally {
 			this.running = false;

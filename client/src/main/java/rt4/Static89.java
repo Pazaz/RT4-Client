@@ -92,8 +92,8 @@ public final class Static89 {
 				Static155.anInt3751 = Mouse.anInt5850;
 				Static60.anInt1892 = Static280.anInt5895;
 			} else if (Mouse.clickButton == 0) {
-				Static155.anInt3751 = Mouse.anInt4873;
-				Static60.anInt1892 = Mouse.anInt5032;
+				Static155.anInt3751 = Mouse.lastMouseX;
+				Static60.anInt1892 = Mouse.lastMouseY;
 			} else {
 				Static155.anInt3751 = Mouse.clickX;
 				Static60.anInt1892 = Mouse.clickY;
@@ -108,7 +108,7 @@ public final class Static89 {
 			Static96.method1949(InterfaceList.topLevelInterface);
 		}
 		@Pc(60) int local60;
-		for (local60 = 0; local60 < InterfaceList.anInt766; local60++) {
+		for (local60 = 0; local60 < InterfaceList.rectangles; local60++) {
 			if (Static186.aBooleanArray100[local60]) {
 				InterfaceList.rectangleRedraw[local60] = true;
 			}
@@ -118,13 +118,13 @@ public final class Static89 {
 		Static201.aClass13_13 = null;
 		Static97.anInt2503 = -1;
 		Static214.anInt5574 = -1;
-		Static169.aClass13_18 = null;
+		Static169.mouseOverInventoryInterface = null;
 		if (GlRenderer.enabled) {
 			Static263.aBoolean299 = true;
 		}
 		Static182.anInt4311 = client.loop;
 		if (InterfaceList.topLevelInterface != -1) {
-			InterfaceList.anInt766 = 0;
+			InterfaceList.rectangles = 0;
 			Static9.method182();
 		}
 		if (GlRenderer.enabled) {
@@ -156,18 +156,18 @@ public final class Static89 {
 			Static187.anInt4422 = 2;
 		}
 		if (Cheat.rectDebug == 3) {
-			for (@Pc(189) int local189 = 0; local189 < InterfaceList.anInt766; local189++) {
+			for (@Pc(189) int local189 = 0; local189 < InterfaceList.rectangles; local189++) {
 				if (Static223.aBooleanArray116[local189]) {
 					if (GlRenderer.enabled) {
-						GlRaster.fillRectAlpha(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711935, 128);
+						GlRaster.fillRectAlpha(InterfaceList.rectangleX[local189], InterfaceList.rectangleY[local189], InterfaceList.rectangleWidth[local189], InterfaceList.rectangleHeight[local189], 16711935, 128);
 					} else {
-						SoftwareRaster.fillRectAlpha(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711935, 128);
+						SoftwareRaster.fillRectAlpha(InterfaceList.rectangleX[local189], InterfaceList.rectangleY[local189], InterfaceList.rectangleWidth[local189], InterfaceList.rectangleHeight[local189], 16711935, 128);
 					}
 				} else if (InterfaceList.rectangleRedraw[local189]) {
 					if (GlRenderer.enabled) {
-						GlRaster.fillRectAlpha(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711680, 128);
+						GlRaster.fillRectAlpha(InterfaceList.rectangleX[local189], InterfaceList.rectangleY[local189], InterfaceList.rectangleWidth[local189], InterfaceList.rectangleHeight[local189], 16711680, 128);
 					} else {
-						SoftwareRaster.fillRectAlpha(Static264.anIntArray410[local189], Static50.anIntArray133[local189], Static224.anIntArray443[local189], Static67.anIntArray320[local189], 16711680, 128);
+						SoftwareRaster.fillRectAlpha(InterfaceList.rectangleX[local189], InterfaceList.rectangleY[local189], InterfaceList.rectangleWidth[local189], InterfaceList.rectangleHeight[local189], 16711680, 128);
 					}
 				}
 			}

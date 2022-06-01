@@ -7,15 +7,15 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static118 {
 
     @OriginalMember(owner = "client!jd", name = "i", descriptor = "Lclient!be;")
-	public static Component aClass13_15;
+	public static Component clickedInventoryComponent;
 
 	@OriginalMember(owner = "client!jd", name = "a", descriptor = "(II[Lclient!be;)V")
 	public static void method2354(@OriginalArg(1) int arg0, @OriginalArg(2) Component[] arg1) {
 		for (@Pc(7) int local7 = 0; local7 < arg1.length; local7++) {
 			@Pc(15) Component local15 = arg1[local7];
-			if (local15 != null && local15.layer == arg0 && (!local15.usingScripts || !Static36.method947(local15))) {
+			if (local15 != null && local15.layer == arg0 && (!local15.if3 || !Static36.method947(local15))) {
 				if (local15.type == 0) {
-					if (!local15.usingScripts && Static36.method947(local15) && local15 != Static180.aClass13_22) {
+					if (!local15.if3 && Static36.method947(local15) && local15 != Static180.aClass13_22) {
 						continue;
 					}
 					method2354(local15.id, arg1);
@@ -61,7 +61,7 @@ public final class Static118 {
 							}
 						}
 					}
-					if (local15.modelRotationSpeed != 0 && !local15.usingScripts) {
+					if (local15.modelRotationSpeed != 0 && !local15.if3) {
 						@Pc(239) int local239 = local15.modelRotationSpeed >> 16;
 						@Pc(243) int local243 = local239 * Static178.anInt4247;
 						local105 = local15.modelRotationSpeed << 16 >> 16;

@@ -15,9 +15,9 @@ public final class Static221 {
 
 	@OriginalMember(owner = "client!s", name = "b", descriptor = "(III)V")
 	public static void method3392(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		if (Static250.anInt5434 > 0) {
-			Static267.method4528(Static250.anInt5434);
-			Static250.anInt5434 = 0;
+		if (Flames.anInt5434 > 0) {
+			Static267.method4528(Flames.anInt5434);
+			Flames.anInt5434 = 0;
 		}
 		@Pc(20) int local20 = 0;
 		@Pc(24) int local24 = SoftwareRaster.width * arg1;

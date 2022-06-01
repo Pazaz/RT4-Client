@@ -110,7 +110,8 @@ public final class Cache {
 					@Pc(297) byte[] local297 = local134;
 					return local297;
 				}
-			} catch (@Pc(301) IOException local301) {
+			} catch (@Pc(301) IOException ex) {
+				ex.printStackTrace();
 				return null;
 			}
 		}

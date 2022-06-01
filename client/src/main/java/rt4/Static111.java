@@ -33,7 +33,7 @@ public final class Static111 {
 		} else {
 			arg0.x = arg2 - (arg2 * arg0.baseX >> 14) - arg0.width;
 		}
-		if (!Static121.aBoolean154 || InterfaceList.getServerActiveProperties(arg0).accessMask == 0 && arg0.type != 0) {
+		if (!Static121.qaOpTest || InterfaceList.getServerActiveProperties(arg0).events == 0 && arg0.type != 0) {
 			return;
 		}
 		if (arg0.y < 0) {
