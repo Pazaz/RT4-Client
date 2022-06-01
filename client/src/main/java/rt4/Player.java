@@ -214,7 +214,7 @@ public final class Player extends PathingEntity {
 		@Pc(37) boolean local37 = (local20 & 0x4) != 0;
 		@Pc(41) int local41 = super.getSize();
 		@Pc(44) int[] local44 = new int[12];
-		this.method2692((local20 >> 3 & 0x7) + 1);
+		this.setSize((local20 >> 3 & 0x7) + 1);
 		this.anInt1651 = local20 >> 6 & 0x3;
 		this.xFine += (this.getSize() - local41) * 64;
 		this.zFine += (this.getSize() - local41) * 64;

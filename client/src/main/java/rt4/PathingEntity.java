@@ -225,7 +225,7 @@ public abstract class PathingEntity extends Entity {
 	private int anInt3427 = 0;
 
 	@OriginalMember(owner = "client!fe", name = "Tb", descriptor = "I")
-	private int anInt3415 = 1;
+	private int size = 1;
 
 	@OriginalMember(owner = "client!fe", name = "Kb", descriptor = "I")
 	public int anInt3407 = 0;
@@ -410,12 +410,12 @@ public abstract class PathingEntity extends Entity {
 	}
 
 	@OriginalMember(owner = "client!fe", name = "a", descriptor = "(IIII)V")
-	public final void addHit(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-		for (@Pc(11) int local11 = 0; local11 < 4; local11++) {
-			if (arg1 >= this.anIntArray319[local11]) {
-				this.anIntArray322[local11] = arg2;
-				this.anIntArray321[local11] = arg0;
-				this.anIntArray319[local11] = arg1 + 70;
+	public final void addHit(@OriginalArg(0) int color, @OriginalArg(2) int arg1, @OriginalArg(3) int hitValue) {
+		for (@Pc(11) int i = 0; i < 4; i++) {
+			if (arg1 >= this.anIntArray319[i]) {
+				this.anIntArray322[i] = hitValue;
+				this.anIntArray321[i] = color;
+				this.anIntArray319[i] = arg1 + 70;
 				return;
 			}
 		}
@@ -637,12 +637,12 @@ public abstract class PathingEntity extends Entity {
 	}
 
 	@OriginalMember(owner = "client!fe", name = "a", descriptor = "(II)V")
-	public final void method2692(@OriginalArg(0) int arg0) {
-		this.anInt3415 = arg0;
+	public final void setSize(@OriginalArg(0) int size) {
+		this.size = size;
 	}
 
 	@OriginalMember(owner = "client!fe", name = "c", descriptor = "(B)I")
 	public int getSize() {
-		return this.anInt3415;
+		return this.size;
 	}
 }
