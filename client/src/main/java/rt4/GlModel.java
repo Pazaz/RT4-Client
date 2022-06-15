@@ -3486,7 +3486,7 @@ public final class GlModel extends Model {
 			local151 = arg0;
 			arg0.innerWidth = arg0.width = local134;
 			arg0.innerHeight = arg0.height = local140;
-			arg0.method1392();
+			arg0.clear();
 		}
 		local151.anInt4280 = local26;
 		local151.anInt4273 = local85;

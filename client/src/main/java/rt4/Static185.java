@@ -97,7 +97,7 @@ public final class Static185 {
 				} else {
 					local387 = new Loc(arg5, 22, arg9, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
 				}
-				SceneGraph.method2570(arg2, arg7, arg8, local199, local387, local261, local62.aBoolean211);
+				SceneGraph.setGroundDecor(arg2, arg7, arg8, local199, local387, local261, local62.aBoolean211);
 				if (local62.anInt4435 == 1 && arg4 != null) {
 					arg4.method3057(arg7, arg8);
 				}
@@ -161,7 +161,7 @@ public final class Static185 {
 			} else {
 				local387 = new Loc(arg5, 0, arg9, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
 			}
-			SceneGraph.method4508(arg2, arg7, arg8, local199, local387, null, Static267.anIntArray517[arg9], 0, local261);
+			SceneGraph.setWall(arg2, arg7, arg8, local199, local387, null, Static267.anIntArray517[arg9], 0, local261);
 			if (arg1) {
 				if (arg9 == 0) {
 					if (local62.aBoolean215) {
@@ -213,7 +213,7 @@ public final class Static185 {
 			} else {
 				local387 = new Loc(arg5, 1, arg9, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
 			}
-			SceneGraph.method4508(arg2, arg7, arg8, local199, local387, null, Static78.anIntArray204[arg9], 0, local261);
+			SceneGraph.setWall(arg2, arg7, arg8, local199, local387, null, Static78.anIntArray204[arg9], 0, local261);
 			if (local62.aBoolean215 && arg1) {
 				if (arg9 == 0) {
 					SceneGraph.aByteArrayArrayArray9[arg2][arg7][arg8 + 1] = 50;
@@ -249,7 +249,7 @@ public final class Static185 {
 					local1254 = new Loc(arg5, 2, arg9 + 4, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
 					local1269 = new Loc(arg5, 2, local1226, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
 				}
-				SceneGraph.method4508(arg2, arg7, arg8, local199, local1254, local1269, Static267.anIntArray517[arg9], Static267.anIntArray517[local1226], local261);
+				SceneGraph.setWall(arg2, arg7, arg8, local199, local1254, local1269, Static267.anIntArray517[arg9], Static267.anIntArray517[local1226], local261);
 				if (local62.aBoolean220 && arg1) {
 					if (arg9 == 0) {
 						SceneGraph.anIntArrayArrayArray6[arg2][arg7][arg8] |= 0x1;
@@ -281,7 +281,7 @@ public final class Static185 {
 				} else {
 					local387 = new Loc(arg5, 3, arg9, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
 				}
-				SceneGraph.method4508(arg2, arg7, arg8, local199, local387, null, Static78.anIntArray204[arg9], 0, local261);
+				SceneGraph.setWall(arg2, arg7, arg8, local199, local387, null, Static78.anIntArray204[arg9], 0, local261);
 				if (local62.aBoolean215 && arg1) {
 					if (arg9 == 0) {
 						SceneGraph.aByteArrayArrayArray9[arg2][arg7][arg8 + 1] = 50;
@@ -330,7 +330,7 @@ public final class Static185 {
 				@Pc(1950) Loc_Class139 local1950;
 				if (arg6 == 5) {
 					local1226 = 16;
-					local1889 = Static265.method4521(arg2, arg7, arg8);
+					local1889 = SceneGraph.getWallKey(arg2, arg7, arg8);
 					if (local1889 != 0L) {
 						local1226 = LocTypeList.get(Integer.MAX_VALUE & (int) (local1889 >>> 32)).wallDecorOffsetScale;
 					}
@@ -346,7 +346,7 @@ public final class Static185 {
 					Static91.method1880(arg2, arg7, arg8, local199, local1934, null, Static267.anIntArray517[arg9], 0, local1226 * Static34.anIntArray80[arg9], Static238.anIntArray469[arg9] * local1226, local261);
 				} else if (arg6 == 6) {
 					local1226 = 8;
-					local1889 = Static265.method4521(arg2, arg7, arg8);
+					local1889 = SceneGraph.getWallKey(arg2, arg7, arg8);
 					if (local1889 != 0L) {
 						local1226 = LocTypeList.get(Integer.MAX_VALUE & (int) (local1889 >>> 32)).wallDecorOffsetScale / 2;
 					}
@@ -374,7 +374,7 @@ public final class Static185 {
 					Static91.method1880(arg2, arg7, arg8, local199, local387, null, 256, local2137, 0, 0, local261);
 				} else if (arg6 == 8) {
 					local1226 = 8;
-					local1889 = Static265.method4521(arg2, arg7, arg8);
+					local1889 = SceneGraph.getWallKey(arg2, arg7, arg8);
 					if (local1889 != 0L) {
 						local1226 = LocTypeList.get(Integer.MAX_VALUE & (int) (local1889 >>> 32)).wallDecorOffsetScale / 2;
 					}

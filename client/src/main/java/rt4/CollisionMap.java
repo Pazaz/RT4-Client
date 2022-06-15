@@ -30,7 +30,7 @@ public final class CollisionMap {
 		this.anInt3912 = 0;
 		this.anInt3899 = arg0;
 		this.flags = new int[this.anInt3899][this.anInt3904];
-		this.resetFlags();
+		this.clear();
 	}
 
 	@OriginalMember(owner = "client!mj", name = "a", descriptor = "(IZIIII)V")
@@ -761,7 +761,7 @@ public final class CollisionMap {
 	}
 
 	@OriginalMember(owner = "client!mj", name = "a", descriptor = "(I)V")
-	public final void resetFlags() {
+	public final void clear() {
 		for (@Pc(3) int local3 = 0; local3 < this.anInt3899; local3++) {
 			for (@Pc(13) int local13 = 0; local13 < this.anInt3904; local13++) {
 				if (local3 == 0 || local13 == 0 || local3 >= this.anInt3899 - 5 || this.anInt3904 - 5 <= local13) {

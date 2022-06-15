@@ -45,7 +45,7 @@ public class SceneGraph {
     @OriginalMember(owner = "client!rh", name = "k", descriptor = "I")
     public static int anInt4870 = 0;
     @OriginalMember(owner = "client!bl", name = "T", descriptor = "I")
-	public static int anInt726 = 0;
+	public static int sceneryLen = 0;
     @OriginalMember(owner = "client!pm", name = "cb", descriptor = "[[[Lclient!bj;")
     public static Tile[][][] surfaceGroundTiles;
     @OriginalMember(owner = "client!client", name = "kb", descriptor = "[[Lclient!hg;")
@@ -57,13 +57,13 @@ public class SceneGraph {
     @OriginalMember(owner = "client!hc", name = "O", descriptor = "[Lclient!pe;")
     public static Class120[] aClass120Array1;
     @OriginalMember(owner = "client!ma", name = "i", descriptor = "I")
-    public static int mapSizeX;
+    public static int width;
     @OriginalMember(owner = "client!hk", name = "Y", descriptor = "I")
-    public static int mapSizeZ;
+    public static int length;
     @OriginalMember(owner = "client!cd", name = "s", descriptor = "I")
     public static int anInt917;
     @OriginalMember(owner = "client!tk", name = "D", descriptor = "[Lclient!ec;")
-	public static Scenery[] aClass31Array3;
+	public static Scenery[] scenery;
     @OriginalMember(owner = "client!c", name = "bb", descriptor = "[Lclient!ec;")
     public static Scenery[] aClass31Array2;
     @OriginalMember(owner = "client!gf", name = "O", descriptor = "[[[I")
@@ -74,6 +74,16 @@ public class SceneGraph {
     public static int anInt3114;
     @OriginalMember(owner = "client!sm", name = "e", descriptor = "[[[B")
 	public static byte[][][] aByteArrayArrayArray13;
+    @OriginalMember(owner = "client!wi", name = "db", descriptor = "I")
+	public static int visibility;
+    @OriginalMember(owner = "client!f", name = "ab", descriptor = "[[I")
+    public static int[][] anIntArrayArray11;
+    @OriginalMember(owner = "client!la", name = "i", descriptor = "[[[I")
+    public static int[][][] anIntArrayArrayArray12;
+    @OriginalMember(owner = "client!dl", name = "h", descriptor = "[[Z")
+	public static boolean[][] aBooleanArrayArray1;
+    @OriginalMember(owner = "client!ha", name = "k", descriptor = "[[Z")
+    public static boolean[][] aBooleanArrayArray3;
 
     @OriginalMember(owner = "client!km", name = "f", descriptor = "(I)Z")
     public static boolean allLevelsAreVisible() {
@@ -81,24 +91,24 @@ public class SceneGraph {
     }
 
     @OriginalMember(owner = "client!ql", name = "a", descriptor = "(IIII)I")
-    public static int getTileHeight(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
+    public static int getTileHeight(@OriginalArg(0) int level, @OriginalArg(2) int xFine, @OriginalArg(3) int zFine) {
         if (tileHeights == null) {
             return 0;
         }
-        @Pc(12) int local12 = arg1 >> 7;
-        @Pc(16) int local16 = arg2 >> 7;
-        if (local12 < 0 || local16 < 0 || local12 > 103 || local16 > 103) {
+        @Pc(12) int x = xFine >> 7;
+        @Pc(16) int z = zFine >> 7;
+        if (x < 0 || z < 0 || x > 103 || z > 103) {
             return 0;
         }
-        @Pc(36) int local36 = arg1 & 0x7F;
-        @Pc(40) int local40 = arg2 & 0x7F;
-        @Pc(42) int local42 = arg0;
-        if (arg0 < 3 && (tileFlags[1][local12][local16] & 0x2) == 2) {
-            local42 = arg0 + 1;
+        @Pc(36) int xFine2 = xFine & 0x7F;
+        @Pc(40) int zFine2 = zFine & 0x7F;
+        @Pc(42) int virtualLevel = level;
+        if (level < 3 && (tileFlags[1][x][z] & 0x2) == 2) {
+            virtualLevel = level + 1;
         }
-        @Pc(91) int local91 = local36 * tileHeights[local42][local12 + 1][local16 + 1] + tileHeights[local42][local12][local16 + 1] * (128 - local36) >> 7;
-        @Pc(118) int local118 = local36 * tileHeights[local42][local12 + 1][local16] + (128 - local36) * tileHeights[local42][local12][local16] >> 7;
-        return local40 * local91 + (128 - local40) * local118 >> 7;
+        @Pc(91) int heightZ0 = xFine2 * tileHeights[virtualLevel][x + 1][z + 1] + tileHeights[virtualLevel][x][z + 1] * (128 - xFine2) >> 7;
+        @Pc(118) int heightZ1 = xFine2 * tileHeights[virtualLevel][x + 1][z] + (128 - xFine2) * tileHeights[virtualLevel][x][z] >> 7;
+        return zFine2 * heightZ0 + (128 - zFine2) * heightZ1 >> 7;
     }
 
     @OriginalMember(owner = "client!ih", name = "a", descriptor = "(III)Lclient!jh;")
@@ -120,8 +130,8 @@ public class SceneGraph {
         @Pc(14) int local14;
         if (surfaceGroundTiles != null) {
             for (local3 = 0; local3 < surfaceGroundTiles.length; local3++) {
-                for (local9 = 0; local9 < mapSizeX; local9++) {
-                    for (local14 = 0; local14 < mapSizeZ; local14++) {
+                for (local9 = 0; local9 < width; local9++) {
+                    for (local14 = 0; local14 < length; local14++) {
                         surfaceGroundTiles[local3][local9][local14] = null;
                     }
                 }
@@ -130,8 +140,8 @@ public class SceneGraph {
         surfaceHdTiles = null;
         if (underWaterGroundTiles != null) {
             for (local3 = 0; local3 < underWaterGroundTiles.length; local3++) {
-                for (local9 = 0; local9 < mapSizeX; local9++) {
-                    for (local14 = 0; local14 < mapSizeZ; local14++) {
+                for (local9 = 0; local9 < width; local9++) {
+                    for (local14 = 0; local14 < length; local14++) {
                         underWaterGroundTiles[local3][local9][local14] = null;
                     }
                 }
@@ -144,11 +154,11 @@ public class SceneGraph {
                 aClass120Array1[local3] = null;
             }
         }
-        if (aClass31Array3 != null) {
-            for (local3 = 0; local3 < anInt726; local3++) {
-                aClass31Array3[local3] = null;
+        if (scenery != null) {
+            for (local3 = 0; local3 < sceneryLen; local3++) {
+                scenery[local3] = null;
             }
-            anInt726 = 0;
+            sceneryLen = 0;
         }
         if (aClass31Array2 != null) {
             for (local3 = 0; local3 < aClass31Array2.length; local3++) {
@@ -318,13 +328,13 @@ public class SceneGraph {
     }
 
     @OriginalMember(owner = "client!bj", name = "a", descriptor = "(III)J")
-	public static long method602(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+	public static long getGroundDecorKey(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		@Pc(7) Tile local7 = tiles[arg0][arg1][arg2];
 		return local7 == null || local7.groundDecor == null ? 0L : local7.groundDecor.key;
 	}
 
     @OriginalMember(owner = "client!wj", name = "a", descriptor = "(Z)V")
-    public static void setRenderTiles(@OriginalArg(0) boolean arg0) {
+    public static void setUnderwater(@OriginalArg(0) boolean arg0) {
         if (arg0) {
             tiles = underWaterGroundTiles;
             tileHeights = underwaterTileHeights;
@@ -451,7 +461,7 @@ public class SceneGraph {
     }
 
     @OriginalMember(owner = "client!nh", name = "a", descriptor = "(IIIILclient!th;JZ)V")
-    public static void method2570(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Entity arg4, @OriginalArg(5) long arg5, @OriginalArg(6) boolean arg6) {
+    public static void setGroundDecor(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Entity arg4, @OriginalArg(5) long arg5, @OriginalArg(6) boolean arg6) {
         if (arg4 == null) {
             return;
         }
@@ -521,7 +531,7 @@ public class SceneGraph {
 	}
 
     @OriginalMember(owner = "client!vf", name = "a", descriptor = "(IIIILclient!th;Lclient!th;IIJ)V")
-    public static void method4508(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Entity arg4, @OriginalArg(5) Entity arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) long arg8) {
+    public static void setWall(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Entity arg4, @OriginalArg(5) Entity arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) long arg8) {
         if (arg4 == null && arg5 == null) {
             return;
         }
@@ -540,5 +550,69 @@ public class SceneGraph {
             }
         }
         tiles[arg0][arg1][arg2].wall = local8;
+    }
+
+    @OriginalMember(owner = "client!cd", name = "a", descriptor = "(IIIIZ)V")
+    public static void init(@OriginalArg(3) int tileVisibility, @OriginalArg(4) boolean hasUnderWaterMap) {
+        width = 104;
+        length = 104;
+        visibility = tileVisibility;
+        surfaceGroundTiles = new Tile[4][width][length];
+        surfaceTileHeights = new int[4][width + 1][length + 1];
+        if (GlRenderer.enabled) {
+            surfaceHdTiles = new GlTile[4][];
+        }
+        if (hasUnderWaterMap) {
+            underWaterGroundTiles = new Tile[1][width][length];
+            anIntArrayArray11 = new int[width][length];
+            underwaterTileHeights = new int[1][width + 1][length + 1];
+            if (GlRenderer.enabled) {
+                underWaterHdTiles = new GlTile[1][];
+            }
+        } else {
+            underWaterGroundTiles = null;
+            anIntArrayArray11 = null;
+            underwaterTileHeights = null;
+            underWaterHdTiles = null;
+        }
+        setUnderwater(false);
+        aClass120Array1 = new Class120[500];
+        anInt917 = 0;
+        aClass120Array2 = new Class120[500];
+        anInt4870 = 0;
+        anIntArrayArrayArray12 = new int[4][width + 1][length + 1];
+        scenery = new Scenery[5000];
+        sceneryLen = 0;
+        aClass31Array2 = new Scenery[100];
+        aBooleanArrayArray1 = new boolean[visibility + visibility + 1][visibility + visibility + 1];
+        aBooleanArrayArray3 = new boolean[visibility + visibility + 2][visibility + visibility + 2];
+        aByteArrayArrayArray13 = new byte[4][width][length];
+    }
+
+    @OriginalMember(owner = "client!vj", name = "a", descriptor = "(III)J")
+	public static long getWallKey(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+		@Pc(7) Tile local7 = tiles[arg0][arg1][arg2];
+		return local7 == null || local7.wall == null ? 0L : local7.wall.key;
+	}
+
+    @OriginalMember(owner = "client!l", name = "a", descriptor = "(III)J")
+	public static long getWallDecorKey(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+		@Pc(7) Tile local7 = tiles[arg0][arg1][arg2];
+		return local7 == null || local7.wallDecor == null ? 0L : local7.wallDecor.key;
+	}
+
+    @OriginalMember(owner = "client!cl", name = "a", descriptor = "(III)J")
+    public static long getSceneryKey(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+        @Pc(7) Tile local7 = tiles[arg0][arg1][arg2];
+        if (local7 == null) {
+            return 0L;
+        }
+        for (@Pc(13) int local13 = 0; local13 < local7.sceneryLen; local13++) {
+            @Pc(22) Scenery local22 = local7.scenery[local13];
+            if ((local22.key >> 29 & 0x3L) == 2L && local22.anInt1701 == arg1 && local22.anInt1696 == arg2) {
+                return local22.key;
+            }
+        }
+        return 0L;
     }
 }

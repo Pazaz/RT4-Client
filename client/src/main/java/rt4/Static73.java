@@ -70,7 +70,7 @@ public final class Static73 {
 		if (arg1 != arg2 || arg3 != arg4) {
 			for (local16 = arg1; local16 <= arg2; local16++) {
 				for (local20 = arg3; local20 <= arg4; local20++) {
-					if (Static140.anIntArrayArrayArray12[arg0][local16][local20] == -Static13.anInt437) {
+					if (SceneGraph.anIntArrayArrayArray12[arg0][local16][local20] == -Static13.anInt437) {
 						return false;
 					}
 				}

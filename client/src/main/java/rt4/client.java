@@ -567,7 +567,7 @@ public final class client extends GameShell {
                 }
             }
         }
-        Static26.sceneryList = new LinkedList();
+        ChangeLocRequest.queue = new LinkedList();
         FriendsList.state = 0;
         FriendsList.size = 0;
         VarpDomain.reset();

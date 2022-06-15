@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.awt.Container;
 import java.awt.Graphics;
 import java.awt.Insets;
-import org.openrs2.deob.annotation.OriginalArg;
+
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
@@ -13,13 +13,7 @@ public final class Static139 {
 	@OriginalMember(owner = "client!l", name = "d", descriptor = "Lclient!na;")
 	public static final JagString aClass100_659 = JagString.parse(")4j");
 
-    @OriginalMember(owner = "client!l", name = "a", descriptor = "(III)J")
-	public static long method2703(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		@Pc(7) Tile local7 = SceneGraph.tiles[arg0][arg1][arg2];
-		return local7 == null || local7.wallDecor == null ? 0L : local7.wallDecor.key;
-	}
-
-	@OriginalMember(owner = "client!l", name = "b", descriptor = "(I)V")
+    @OriginalMember(owner = "client!l", name = "b", descriptor = "(I)V")
 	public static void method2704() {
 		@Pc(7) int local7 = GameShell.topMargin;
 		@Pc(9) int local9 = GameShell.leftMargin;

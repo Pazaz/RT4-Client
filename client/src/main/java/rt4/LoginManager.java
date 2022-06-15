@@ -605,7 +605,7 @@ public class LoginManager {
         SceneGraph.clear();
         @Pc(19) int local19;
         for (local19 = 0; local19 < 4; local19++) {
-            PathFinder.collisionMaps[local19].resetFlags();
+            PathFinder.collisionMaps[local19].clear();
         }
         WorldMap.clear(false);
         System.gc();
@@ -745,7 +745,7 @@ public class LoginManager {
                 }
             }
         }
-        for (@Pc(451) SceneryStack local451 = (SceneryStack) Static26.sceneryList.head(); local451 != null; local451 = (SceneryStack) Static26.sceneryList.next()) {
+        for (@Pc(451) ChangeLocRequest local451 = (ChangeLocRequest) ChangeLocRequest.queue.head(); local451 != null; local451 = (ChangeLocRequest) ChangeLocRequest.queue.next()) {
             local451.z -= local81;
             local451.x -= local86;
             if (local451.x < 0 || local451.z < 0 || local451.x >= 104 || local451.z >= 104) {

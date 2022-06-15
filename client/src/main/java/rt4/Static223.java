@@ -41,12 +41,12 @@ public final class Static223 {
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "()V")
 	public static void method3858() {
-		for (@Pc(1) int local1 = 0; local1 < SceneGraph.anInt726; local1++) {
-			@Pc(8) Scenery local8 = SceneGraph.aClass31Array3[local1];
+		for (@Pc(1) int local1 = 0; local1 < SceneGraph.sceneryLen; local1++) {
+			@Pc(8) Scenery local8 = SceneGraph.scenery[local1];
 			Static266.method4193(local8);
-			SceneGraph.aClass31Array3[local1] = null;
+			SceneGraph.scenery[local1] = null;
 		}
-		SceneGraph.anInt726 = 0;
+		SceneGraph.sceneryLen = 0;
 	}
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(IZ)Lclient!j;")

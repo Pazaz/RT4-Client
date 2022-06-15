@@ -1,6 +1,5 @@
 package rt4;
 
-import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
@@ -13,34 +12,6 @@ public final class Static226 {
 	public static int anInt5084 = 0;
     @OriginalMember(owner = "client!ml", name = "Q", descriptor = "I")
     public static int anInt3953 = 0;
-
-    @OriginalMember(owner = "client!sf", name = "a", descriptor = "(ILclient!cd;)V")
-	public static void method3898(@OriginalArg(1) SceneryStack arg0) {
-		@Pc(5) long local5 = 0L;
-		@Pc(7) int local7 = -1;
-		@Pc(14) int local14 = 0;
-		if (arg0.anInt927 == 0) {
-			local5 = Static265.method4521(arg0.level, arg0.x, arg0.z);
-		}
-		@Pc(31) int local31 = 0;
-		if (arg0.anInt927 == 1) {
-			local5 = Static139.method2703(arg0.level, arg0.x, arg0.z);
-		}
-		if (arg0.anInt927 == 2) {
-			local5 = Static35.method899(arg0.level, arg0.x, arg0.z);
-		}
-		if (arg0.anInt927 == 3) {
-			local5 = SceneGraph.method602(arg0.level, arg0.x, arg0.z);
-		}
-		if (local5 != 0L) {
-			local7 = Integer.MAX_VALUE & (int) (local5 >>> 32);
-			local31 = (int) local5 >> 20 & 0x3;
-			local14 = (int) local5 >> 14 & 0x1F;
-		}
-		arg0.anInt921 = local7;
-		arg0.anInt920 = local14;
-		arg0.anInt923 = local31;
-	}
 
 	@OriginalMember(owner = "client!sf", name = "b", descriptor = "(B)V")
 	public static void method3901() {

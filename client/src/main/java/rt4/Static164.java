@@ -14,7 +14,7 @@ public final class Static164 {
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(IIIIIIIZ)Z")
 	public static boolean method3109(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(6) int arg4) {
-		@Pc(14) long local14 = Static265.method4521(arg4, arg0 + 0, arg2);
+		@Pc(14) long local14 = SceneGraph.getWallKey(arg4, arg0 + 0, arg2);
 		@Pc(28) int local28;
 		@Pc(35) int local35;
 		@Pc(42) int local42;
@@ -95,7 +95,7 @@ public final class Static164 {
 				return false;
 			}
 		}
-		local14 = Static35.method899(arg4, arg0 + 0, arg2);
+		local14 = SceneGraph.getSceneryKey(arg4, arg0 + 0, arg2);
 		if (local14 != 0L) {
 			local28 = (int) local14 >> 20 & 0x3;
 			local35 = (int) local14 >> 14 & 0x1F;
@@ -125,7 +125,7 @@ public final class Static164 {
 				return false;
 			}
 		}
-		local14 = SceneGraph.method602(arg4, arg0 + 0, arg2);
+		local14 = SceneGraph.getGroundDecorKey(arg4, arg0 + 0, arg2);
 		if (local14 != 0L) {
 			local28 = (int) local14 >> 20 & 0x3;
 			local35 = (int) (local14 >>> 32) & Integer.MAX_VALUE;

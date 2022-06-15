@@ -13,7 +13,7 @@ public final class Static6 {
 	public static void method84() {
 		SceneGraph.clear();
 		for (@Pc(9) int local9 = 0; local9 < 4; local9++) {
-			PathFinder.collisionMaps[local9].resetFlags();
+			PathFinder.collisionMaps[local9].clear();
 		}
 		System.gc();
 	}

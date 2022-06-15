@@ -276,9 +276,9 @@ public class ClientProt {
                 }
             }
         }
-        Static28.method792(GlRenderer.enabled ? GlobalConfig.TILE_DISTANCE : 25, hasUnderWaterMap);
+        SceneGraph.init(GlRenderer.enabled ? GlobalConfig.TILE_DISTANCE : 25, hasUnderWaterMap);
         for (i = 0; i < 4; i++) {
-            PathFinder.collisionMaps[i].resetFlags();
+            PathFinder.collisionMaps[i].clear();
         }
         for (i = 0; i < 4; i++) {
             for (chunkX = 0; chunkX < 104; chunkX++) {
@@ -289,7 +289,7 @@ public class ClientProt {
         }
         AreaSoundManager.clear(false);
         if (GlRenderer.enabled) {
-            Static242.shadowMapImage.method1392();
+            Static242.shadowMapImage.clear();
             for (i = 0; i < 13; i++) {
                 for (chunkX = 0; chunkX < 13; chunkX++) {
                     Static242.shadows[i][chunkX].outputToSprite = true;
@@ -349,7 +349,7 @@ public class ClientProt {
         }
         SceneGraph.method2255();
         if (GlRenderer.enabled && hasUnderWaterMap) {
-            SceneGraph.setRenderTiles(true);
+            SceneGraph.setUnderwater(true);
             SceneGraph.method3535(true);
             if (!Static230.dynamicMapRegion) {
                 Static87.method1805(true);
@@ -366,7 +366,7 @@ public class ClientProt {
             Static45.method1169(PathFinder.collisionMaps, true);
             ping(true);
             SceneGraph.method2255();
-            SceneGraph.setRenderTiles(false);
+            SceneGraph.setUnderwater(false);
         }
         if (GlRenderer.enabled) {
             for (chunkX = 0; chunkX < 13; chunkX++) {
@@ -382,7 +382,7 @@ public class ClientProt {
         }
         Static269.method2218();
         client.audioLoop();
-        Static219.method3796();
+        ChangeLocRequest.flush();
         client.method3768();
         Static231.aBoolean252 = false;
         if (GameShell.frame != null && Protocol.socket != null && client.gameState == 25) {

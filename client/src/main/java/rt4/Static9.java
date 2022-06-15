@@ -43,7 +43,7 @@ public final class Static9 {
 
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "(III)Z")
 	public static boolean method187(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		@Pc(7) int local7 = Static140.anIntArrayArrayArray12[arg0][arg1][arg2];
+		@Pc(7) int local7 = SceneGraph.anIntArrayArrayArray12[arg0][arg1][arg2];
 		if (local7 == -Static13.anInt437) {
 			return false;
 		} else if (local7 == Static13.anInt437) {
@@ -52,10 +52,10 @@ public final class Static9 {
 			@Pc(22) int local22 = arg1 << 7;
 			@Pc(26) int local26 = arg2 << 7;
 			if (SceneGraph.method4394(local22 + 1, SceneGraph.tileHeights[arg0][arg1][arg2], local26 + 1) && SceneGraph.method4394(local22 + 128 - 1, SceneGraph.tileHeights[arg0][arg1 + 1][arg2], local26 + 1) && SceneGraph.method4394(local22 + 128 - 1, SceneGraph.tileHeights[arg0][arg1 + 1][arg2 + 1], local26 + 128 - 1) && SceneGraph.method4394(local22 + 1, SceneGraph.tileHeights[arg0][arg1][arg2 + 1], local26 + 128 - 1)) {
-				Static140.anIntArrayArrayArray12[arg0][arg1][arg2] = Static13.anInt437;
+				SceneGraph.anIntArrayArrayArray12[arg0][arg1][arg2] = Static13.anInt437;
 				return true;
 			} else {
-				Static140.anIntArrayArrayArray12[arg0][arg1][arg2] = -Static13.anInt437;
+				SceneGraph.anIntArrayArrayArray12[arg0][arg1][arg2] = -Static13.anInt437;
 				return false;
 			}
 		}
