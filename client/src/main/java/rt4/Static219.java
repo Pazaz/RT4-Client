@@ -1,7 +1,6 @@
 package rt4;
 
 import org.openrs2.deob.annotation.OriginalMember;
-import org.openrs2.deob.annotation.Pc;
 
 public final class Static219 {
 
@@ -32,15 +31,4 @@ public final class Static219 {
     @OriginalMember(owner = "client!rl", name = "eb", descriptor = "Lclient!na;")
 	public static final JagString aClass100_928 = JagString.parse("(U0a )2 in: ");
 
-	@OriginalMember(owner = "client!rl", name = "i", descriptor = "(I)V")
-	public static void method3796() {
-		for (@Pc(10) SceneryStack local10 = (SceneryStack) Static26.sceneryList.head(); local10 != null; local10 = (SceneryStack) Static26.sceneryList.next()) {
-			if (local10.anInt924 == -1) {
-				local10.anInt925 = 0;
-				Static226.method3898(local10);
-			} else {
-				local10.unlink();
-			}
-		}
-	}
 }

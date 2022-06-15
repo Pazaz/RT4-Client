@@ -7,9 +7,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static89 {
 
-	@OriginalMember(owner = "client!ha", name = "k", descriptor = "[[Z")
-	public static boolean[][] aBooleanArrayArray3;
-
     @OriginalMember(owner = "client!ha", name = "a", descriptor = "(ZB)V")
 	public static void method1835(@OriginalArg(0) boolean arg0) {
 		@Pc(11) byte local11;

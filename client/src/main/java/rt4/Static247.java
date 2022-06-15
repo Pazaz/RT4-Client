@@ -81,7 +81,7 @@ public final class Static247 {
 											@Pc(33) float local33 = 0.0F;
 											if (GlRenderer.enabled) {
 												if (SceneGraph.underwaterTileHeights == SceneGraph.tileHeights) {
-													var9 = Static62.anIntArrayArray11[local18][local21];
+													var9 = SceneGraph.anIntArrayArray11[local18][local21];
 													var10 = var9 & 0xFFFFFF;
 													if (var10 != Static152.anInt3604) {
 														Static152.anInt3604 = var10;
@@ -386,21 +386,21 @@ public final class Static247 {
 																if (local1332 == 0) {
 																	local65 -= 64;
 																	local115 += 64;
-																	if (local115 < local65 && local18 > 0 && local21 < SceneGraph.mapSizeZ - 1) {
+																	if (local115 < local65 && local18 > 0 && local21 < SceneGraph.length - 1) {
 																		LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18 - 1, local21 + 1);
 																		break label882;
 																	}
 																} else if (local1332 == 1) {
 																	local65 += 64;
 																	local115 += 64;
-																	if (local115 < -local65 && local18 < SceneGraph.mapSizeX - 1 && local21 < SceneGraph.mapSizeZ - 1) {
+																	if (local115 < -local65 && local18 < SceneGraph.width - 1 && local21 < SceneGraph.length - 1) {
 																		LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18 + 1, local21 + 1);
 																		break label882;
 																	}
 																} else if (local1332 == 2) {
 																	local65 += 64;
 																	local115 -= 64;
-																	if (local115 > local65 && local18 < SceneGraph.mapSizeX - 1 && local21 > 0) {
+																	if (local115 > local65 && local18 < SceneGraph.width - 1 && local21 > 0) {
 																		LightingManager.method2393(Static149.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18 + 1, local21 - 1);
 																		break label882;
 																	}

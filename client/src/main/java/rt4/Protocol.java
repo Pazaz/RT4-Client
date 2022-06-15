@@ -1449,9 +1449,9 @@ public class Protocol {
                     }
                 }
             }
-            for (@Pc(2604) SceneryStack loc = (SceneryStack) Static26.sceneryList.head(); loc != null; loc = (SceneryStack) Static26.sceneryList.next()) {
+            for (@Pc(2604) ChangeLocRequest loc = (ChangeLocRequest) ChangeLocRequest.queue.head(); loc != null; loc = (ChangeLocRequest) ChangeLocRequest.queue.next()) {
                 if (loc.x >= Static115.currentChunkX && Static115.currentChunkX + 8 > loc.x && loc.z >= Static180.currentChunkZ && loc.z < Static180.currentChunkZ + 8 && loc.level == Player.level) {
-                    loc.anInt924 = 0;
+                    loc.resetLoops = 0;
                 }
             }
             opcode = -1;

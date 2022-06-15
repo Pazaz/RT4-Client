@@ -43,13 +43,13 @@ public final class Static43 {
 	public static void method1144(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) CollisionMap arg5) {
 		@Pc(9) long local9 = 0L;
 		if (arg3 == 0) {
-			local9 = Static265.method4521(arg2, arg1, arg0);
+			local9 = SceneGraph.getWallKey(arg2, arg1, arg0);
 		} else if (arg3 == 1) {
-			local9 = Static139.method2703(arg2, arg1, arg0);
+			local9 = SceneGraph.getWallDecorKey(arg2, arg1, arg0);
 		} else if (arg3 == 2) {
-			local9 = Static35.method899(arg2, arg1, arg0);
+			local9 = SceneGraph.getSceneryKey(arg2, arg1, arg0);
 		} else if (arg3 == 3) {
-			local9 = SceneGraph.method602(arg2, arg1, arg0);
+			local9 = SceneGraph.getGroundDecorKey(arg2, arg1, arg0);
 		}
 		@Pc(57) int local57 = (int) local9 >> 14 & 0x1F;
 		@Pc(70) int local70 = (int) (local9 >>> 32) & Integer.MAX_VALUE;

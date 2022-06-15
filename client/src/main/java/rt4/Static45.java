@@ -227,7 +227,7 @@ public final class Static45 {
 								if (GlRenderer.enabled && local152 > 0 && local234 != -1 && FluTypeList.get(local178 - 1).aBoolean198) {
 									Static242.method4197(0, 0, true, false, local168, local173, local200 - SceneGraph.tileHeights[0][local168][local173], -SceneGraph.tileHeights[0][local168 + 1][local173] + local202, local209 - SceneGraph.tileHeights[0][local168 + 1][local173 + 1], local349 - SceneGraph.tileHeights[0][local168][local173 + 1]);
 								}
-								if (GlRenderer.enabled && !underwater && Static62.anIntArrayArray11 != null && local152 == 0) {
+								if (GlRenderer.enabled && !underwater && SceneGraph.anIntArrayArray11 != null && local152 == 0) {
 									for (local322 = local168 - 1; local322 <= local168 + 1; local322++) {
 										for (@Pc(1794) int local1794 = local173 - 1; local1794 <= local173 + 1; local1794++) {
 											if ((local322 != local168 || local173 != local1794) && local322 >= 0 && local322 < 104 && local1794 >= 0 && local1794 < 104) {
@@ -235,7 +235,7 @@ public final class Static45 {
 												if (local1834 != 0) {
 													@Pc(1842) FloType local1842 = FloTypeList.method4395(local1834 - 1);
 													if (local1842.texture != -1 && Rasteriser.textureProvider.getMaterialType(local1842.texture) == MaterialManager.WATER) {
-														Static62.anIntArrayArray11[local168][local173] = local1842.anInt5889 + (local1842.anInt5898 << 24);
+														SceneGraph.anIntArrayArray11[local168][local173] = local1842.anInt5889 + (local1842.anInt5898 << 24);
 														continue label771;
 													}
 												}
@@ -250,9 +250,9 @@ public final class Static45 {
 								@Pc(1301) int local1301;
 								@Pc(1353) int local1353;
 								@Pc(1288) int local1288;
-								if (GlRenderer.enabled && !underwater && Static62.anIntArrayArray11 != null && local152 == 0) {
+								if (GlRenderer.enabled && !underwater && SceneGraph.anIntArrayArray11 != null && local152 == 0) {
 									if (local1248.texture != -1 && Rasteriser.textureProvider.getMaterialType(local1248.texture) == MaterialManager.WATER) {
-										Static62.anIntArrayArray11[local168][local173] = (local1248.anInt5898 << 24) + local1248.anInt5889;
+										SceneGraph.anIntArrayArray11[local168][local173] = (local1248.anInt5898 << 24) + local1248.anInt5889;
 									} else {
 										label737: for (local1288 = local168 - 1; local1288 <= local168 + 1; local1288++) {
 											for (local1301 = local173 - 1; local1301 <= local173 + 1; local1301++) {
@@ -261,7 +261,7 @@ public final class Static45 {
 													if (local1353 != 0) {
 														@Pc(1366) FloType local1366 = FloTypeList.method4395(local1353 - 1);
 														if (local1366.texture != -1 && Rasteriser.textureProvider.getMaterialType(local1366.texture) == MaterialManager.WATER) {
-															Static62.anIntArrayArray11[local168][local173] = local1366.anInt5889 + (local1366.anInt5898 << 24);
+															SceneGraph.anIntArrayArray11[local168][local173] = local1366.anInt5889 + (local1366.anInt5898 << 24);
 															break label737;
 														}
 													}
@@ -323,7 +323,7 @@ public final class Static45 {
 					if (local200 > 103) {
 						@Pc(2025) GlTile[] local2025;
 						if (underwater) {
-							local2025 = Static193.method3501(SceneGraph.tileFlags, SceneGraph.tileShapes[local152], SceneGraph.tileUnderlays[local152], local146, local1896, Static62.anIntArrayArray11, SceneGraph.tileOverlays[local152], SceneGraph.tileAngles[local152], local1888, local152, local1900, local142, SceneGraph.tileHeights[local152], SceneGraph.surfaceTileHeights[0]);
+							local2025 = Static193.method3501(SceneGraph.tileFlags, SceneGraph.tileShapes[local152], SceneGraph.tileUnderlays[local152], local146, local1896, SceneGraph.anIntArrayArray11, SceneGraph.tileOverlays[local152], SceneGraph.tileAngles[local152], local1888, local152, local1900, local142, SceneGraph.tileHeights[local152], SceneGraph.surfaceTileHeights[0]);
 							method2280(local152, local2025);
 							break;
 						}

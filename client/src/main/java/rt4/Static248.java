@@ -27,7 +27,7 @@ public final class Static248 {
 				for (local37 = Static80.anInt4698; local37 < Static215.anInt4866; local37++) {
 					@Pc(46) Tile local46 = local30[local32][local37];
 					if (local46 != null) {
-						if (Static48.aBooleanArrayArray1[local32 + Static123.tileVisibilityDistance - Static167.anInt4069][local37 + Static123.tileVisibilityDistance - Static193.anInt4539] && (arg3 == null || local23 < arg4 || arg3[local23][local32][local37] != arg5)) {
+						if (SceneGraph.aBooleanArrayArray1[local32 + SceneGraph.visibility - Static167.anInt4069][local37 + SceneGraph.visibility - Static193.anInt4539] && (arg3 == null || local23 < arg4 || arg3[local23][local32][local37] != arg5)) {
 							local46.aBoolean45 = true;
 							local46.aBoolean46 = true;
 							if (local46.sceneryLen > 0) {
@@ -111,7 +111,7 @@ public final class Static248 {
 					}
 					if (local32 == 0 && Preferences.sceneryShadowsType > 0) {
 						GlRenderer.method4159(101.5F);
-						Static242.method4198(Static167.anInt4069, Static193.anInt4539, Static123.tileVisibilityDistance, arg1, Static48.aBooleanArrayArray1, SceneGraph.tileHeights[0]);
+						Static242.method4198(Static167.anInt4069, Static193.anInt4539, SceneGraph.visibility, arg1, SceneGraph.aBooleanArrayArray1, SceneGraph.tileHeights[0]);
 					}
 					local32++;
 				}
@@ -127,11 +127,11 @@ public final class Static248 {
 		@Pc(428) int local428;
 		for (local399 = Static235.anInt5276; local399 < SceneGraph.anInt3114; local399++) {
 			local406 = SceneGraph.tiles[local399];
-			for (local37 = -Static123.tileVisibilityDistance; local37 <= 0; local37++) {
+			for (local37 = -SceneGraph.visibility; local37 <= 0; local37++) {
 				local415 = Static167.anInt4069 + local37;
 				local183 = Static167.anInt4069 - local37;
 				if (local415 >= Static31.anInt987 || local183 < Static2.anInt15) {
-					for (local428 = -Static123.tileVisibilityDistance; local428 <= 0; local428++) {
+					for (local428 = -SceneGraph.visibility; local428 <= 0; local428++) {
 						local434 = Static193.anInt4539 + local428;
 						local438 = Static193.anInt4539 - local428;
 						if (local415 >= Static31.anInt987) {
@@ -174,11 +174,11 @@ public final class Static248 {
 		}
 		for (local399 = Static235.anInt5276; local399 < SceneGraph.anInt3114; local399++) {
 			local406 = SceneGraph.tiles[local399];
-			for (local37 = -Static123.tileVisibilityDistance; local37 <= 0; local37++) {
+			for (local37 = -SceneGraph.visibility; local37 <= 0; local37++) {
 				local415 = Static167.anInt4069 + local37;
 				local183 = Static167.anInt4069 - local37;
 				if (local415 >= Static31.anInt987 || local183 < Static2.anInt15) {
-					for (local428 = -Static123.tileVisibilityDistance; local428 <= 0; local428++) {
+					for (local428 = -SceneGraph.visibility; local428 <= 0; local428++) {
 						local434 = Static193.anInt4539 + local428;
 						local438 = Static193.anInt4539 - local428;
 						if (local415 >= Static31.anInt987) {

@@ -13,7 +13,7 @@ public final class Static105 {
 		@Pc(17) int local17;
 		for (@Pc(10) int local10 = arg1; local10 < arg1 + arg3; local10++) {
 			for (local17 = arg2; local17 < arg2 + arg4; local17++) {
-				if (local10 < 0 || local17 < 0 || local10 >= SceneGraph.mapSizeX || local17 >= SceneGraph.mapSizeZ) {
+				if (local10 < 0 || local17 < 0 || local10 >= SceneGraph.width || local17 >= SceneGraph.length) {
 					return false;
 				}
 				@Pc(42) Tile local42 = SceneGraph.tiles[arg0][local10][local17];
@@ -60,22 +60,22 @@ public final class Static105 {
 				local174.anIntArray59[local174.sceneryLen] = local115;
 				local174.anInt664 |= local115;
 				local174.sceneryLen++;
-				if (local6 && Static62.anIntArrayArray11[local17][local108] != 0) {
-					local8 = Static62.anIntArrayArray11[local17][local108];
+				if (local6 && SceneGraph.anIntArrayArray11[local17][local108] != 0) {
+					local8 = SceneGraph.anIntArrayArray11[local17][local108];
 				}
 			}
 		}
 		if (local6 && local8 != 0) {
 			for (local17 = arg1; local17 < arg1 + arg3; local17++) {
 				for (local108 = arg2; local108 < arg2 + arg4; local108++) {
-					if (Static62.anIntArrayArray11[local17][local108] == 0) {
-						Static62.anIntArrayArray11[local17][local108] = local8;
+					if (SceneGraph.anIntArrayArray11[local17][local108] == 0) {
+						SceneGraph.anIntArrayArray11[local17][local108] = local8;
 					}
 				}
 			}
 		}
 		if (arg10) {
-			SceneGraph.aClass31Array3[SceneGraph.anInt726++] = local58;
+			SceneGraph.scenery[SceneGraph.sceneryLen++] = local58;
 		}
 		return true;
 	}

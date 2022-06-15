@@ -13,8 +13,6 @@ public final class Static123 {
 
 	@OriginalMember(owner = "client!ml", name = "K", descriptor = "I")
 	public static int anInt3947;
-    @OriginalMember(owner = "client!wi", name = "db", descriptor = "I")
-	public static int tileVisibilityDistance;
 
     @OriginalMember(owner = "client!jj", name = "a", descriptor = "(Z)V")
 	public static void topBannerRefresh() {
@@ -44,19 +42,19 @@ public final class Static123 {
 			@Pc(158) int local158;
 			@Pc(137) boolean local137;
 			if (local10.anInt4453 == 1) {
-				local14 = local10.anInt4452 + tileVisibilityDistance - Static167.anInt4069;
-				if (local14 >= 0 && local14 <= tileVisibilityDistance + tileVisibilityDistance) {
-					local115 = local10.anInt4461 + tileVisibilityDistance - Static193.anInt4539;
+				local14 = local10.anInt4452 + SceneGraph.visibility - Static167.anInt4069;
+				if (local14 >= 0 && local14 <= SceneGraph.visibility + SceneGraph.visibility) {
+					local115 = local10.anInt4461 + SceneGraph.visibility - Static193.anInt4539;
 					if (local115 < 0) {
 						local115 = 0;
 					}
-					local126 = local10.anInt4464 + tileVisibilityDistance - Static193.anInt4539;
-					if (local126 > tileVisibilityDistance + tileVisibilityDistance) {
-						local126 = tileVisibilityDistance + tileVisibilityDistance;
+					local126 = local10.anInt4464 + SceneGraph.visibility - Static193.anInt4539;
+					if (local126 > SceneGraph.visibility + SceneGraph.visibility) {
+						local126 = SceneGraph.visibility + SceneGraph.visibility;
 					}
 					local137 = false;
 					while (local115 <= local126) {
-						if (Static48.aBooleanArrayArray1[local14][local115++]) {
+						if (SceneGraph.aBooleanArrayArray1[local14][local115++]) {
 							local137 = true;
 							break;
 						}
@@ -80,19 +78,19 @@ public final class Static123 {
 					}
 				}
 			} else if (local10.anInt4453 == 2) {
-				local14 = local10.anInt4461 + tileVisibilityDistance - Static193.anInt4539;
-				if (local14 >= 0 && local14 <= tileVisibilityDistance + tileVisibilityDistance) {
-					local115 = local10.anInt4452 + tileVisibilityDistance - Static167.anInt4069;
+				local14 = local10.anInt4461 + SceneGraph.visibility - Static193.anInt4539;
+				if (local14 >= 0 && local14 <= SceneGraph.visibility + SceneGraph.visibility) {
+					local115 = local10.anInt4452 + SceneGraph.visibility - Static167.anInt4069;
 					if (local115 < 0) {
 						local115 = 0;
 					}
-					local126 = local10.anInt4446 + tileVisibilityDistance - Static167.anInt4069;
-					if (local126 > tileVisibilityDistance + tileVisibilityDistance) {
-						local126 = tileVisibilityDistance + tileVisibilityDistance;
+					local126 = local10.anInt4446 + SceneGraph.visibility - Static167.anInt4069;
+					if (local126 > SceneGraph.visibility + SceneGraph.visibility) {
+						local126 = SceneGraph.visibility + SceneGraph.visibility;
 					}
 					local137 = false;
 					while (local115 <= local126) {
-						if (Static48.aBooleanArrayArray1[local115++][local14]) {
+						if (SceneGraph.aBooleanArrayArray1[local115++][local14]) {
 							local137 = true;
 							break;
 						}
@@ -118,27 +116,27 @@ public final class Static123 {
 			} else if (local10.anInt4453 == 4) {
 				local14 = local10.anInt4444 - anInt3947;
 				if (local14 > 128) {
-					local115 = local10.anInt4461 + tileVisibilityDistance - Static193.anInt4539;
+					local115 = local10.anInt4461 + SceneGraph.visibility - Static193.anInt4539;
 					if (local115 < 0) {
 						local115 = 0;
 					}
-					local126 = local10.anInt4464 + tileVisibilityDistance - Static193.anInt4539;
-					if (local126 > tileVisibilityDistance + tileVisibilityDistance) {
-						local126 = tileVisibilityDistance + tileVisibilityDistance;
+					local126 = local10.anInt4464 + SceneGraph.visibility - Static193.anInt4539;
+					if (local126 > SceneGraph.visibility + SceneGraph.visibility) {
+						local126 = SceneGraph.visibility + SceneGraph.visibility;
 					}
 					if (local115 <= local126) {
-						@Pc(408) int local408 = local10.anInt4452 + tileVisibilityDistance - Static167.anInt4069;
+						@Pc(408) int local408 = local10.anInt4452 + SceneGraph.visibility - Static167.anInt4069;
 						if (local408 < 0) {
 							local408 = 0;
 						}
-						local158 = local10.anInt4446 + tileVisibilityDistance - Static167.anInt4069;
-						if (local158 > tileVisibilityDistance + tileVisibilityDistance) {
-							local158 = tileVisibilityDistance + tileVisibilityDistance;
+						local158 = local10.anInt4446 + SceneGraph.visibility - Static167.anInt4069;
+						if (local158 > SceneGraph.visibility + SceneGraph.visibility) {
+							local158 = SceneGraph.visibility + SceneGraph.visibility;
 						}
 						@Pc(430) boolean local430 = false;
 						label166: for (@Pc(432) int local432 = local408; local432 <= local158; local432++) {
 							for (@Pc(437) int local437 = local115; local437 <= local126; local437++) {
-								if (Static48.aBooleanArrayArray1[local432][local437]) {
+								if (SceneGraph.aBooleanArrayArray1[local432][local437]) {
 									local430 = true;
 									break label166;
 								}
