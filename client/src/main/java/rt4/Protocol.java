@@ -63,16 +63,16 @@ public class Protocol {
             int local23 = local15 >> 2;
             int local27 = Loc.LAYERS[local23];
             int local31 = inboundBuffer.g1();
-            int local39 = (local31 >> 4 & 0x7) + Static115.currentChunkX;
-            int local45 = (local31 & 0x7) + Static180.currentChunkZ;
+            int local39 = (local31 >> 4 & 0x7) + SceneGraph.currentChunkX;
+            int local45 = (local31 & 0x7) + SceneGraph.currentChunkZ;
             if (local39 >= 0 && local45 >= 0 && local39 < 104 && local45 < 104) {
                 ChangeLocRequest.push(Player.level, local45, local19, local39, -1, -1, local27, local23, 0);
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_33) {
             int local15 = inboundBuffer.ig2();
             int local23 = inboundBuffer.g1();
-            int local27 = (local23 & 0x7) + Static180.currentChunkZ;
-            int local19 = (local23 >> 4 & 0x7) + Static115.currentChunkX;
+            int local27 = (local23 & 0x7) + SceneGraph.currentChunkZ;
+            int local19 = (local23 >> 4 & 0x7) + SceneGraph.currentChunkX;
             int local31 = inboundBuffer.g2add();
             if (local19 >= 0 && local27 >= 0 && local19 < 104 && local27 < 104) {
                 @Pc(122) ObjStack local122 = new ObjStack();
@@ -86,8 +86,8 @@ public class Protocol {
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_121) {
             int local15 = inboundBuffer.g1();
-            int local23 = Static115.currentChunkX * 2 + (local15 >> 4 & 0xF);
-            int local19 = (local15 & 0xF) + Static180.currentChunkZ * 2;
+            int local23 = SceneGraph.currentChunkX * 2 + (local15 >> 4 & 0xF);
+            int local19 = (local15 & 0xF) + SceneGraph.currentChunkZ * 2;
             int local27 = local23 + inboundBuffer.g1b();
             int local31 = inboundBuffer.g1b() + local19;
             int local39 = inboundBuffer.g2b();
@@ -112,8 +112,8 @@ public class Protocol {
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_17) {
             int local15 = inboundBuffer.g1();
-            int local23 = Static115.currentChunkX + (local15 >> 4 & 0x7);
-            int local19 = Static180.currentChunkZ + (local15 & 0x7);
+            int local23 = SceneGraph.currentChunkX + (local15 >> 4 & 0x7);
+            int local19 = SceneGraph.currentChunkZ + (local15 & 0x7);
             int local27 = inboundBuffer.g2();
             int local31 = inboundBuffer.g1();
             int local39 = inboundBuffer.g2();
@@ -129,16 +129,16 @@ public class Protocol {
             int local19 = local15 & 0x3;
             int local27 = Loc.LAYERS[local23];
             int local31 = inboundBuffer.g1();
-            int local39 = Static115.currentChunkX + (local31 >> 4 & 0x7);
-            int local45 = (local31 & 0x7) + Static180.currentChunkZ;
+            int local39 = SceneGraph.currentChunkX + (local31 >> 4 & 0x7);
+            int local45 = (local31 & 0x7) + SceneGraph.currentChunkZ;
             int local218 = inboundBuffer.g2add();
             if (local39 >= 0 && local45 >= 0 && local39 < 104 && local45 < 104) {
                 ChangeLocRequest.push(Player.level, local45, local19, local39, -1, local218, local27, local23, 0);
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_20) {
             int local15 = inboundBuffer.g1sub();
-            int local23 = (local15 >> 4 & 0x7) + Static115.currentChunkX;
-            int local19 = Static180.currentChunkZ + (local15 & 0x7);
+            int local23 = (local15 >> 4 & 0x7) + SceneGraph.currentChunkX;
+            int local19 = SceneGraph.currentChunkZ + (local15 & 0x7);
             int local27 = inboundBuffer.g1sub();
             int local31 = local27 >> 2;
             int local39 = local27 & 0x3;
@@ -153,8 +153,8 @@ public class Protocol {
             int local23 = local15 >> 2;
             int local19 = local15 & 0x3;
             int local27 = inboundBuffer.g1();
-            int local31 = (local27 >> 4 & 0x7) + Static115.currentChunkX;
-            int local39 = (local27 & 0x7) + Static180.currentChunkZ;
+            int local31 = (local27 >> 4 & 0x7) + SceneGraph.currentChunkX;
+            int local39 = (local27 & 0x7) + SceneGraph.currentChunkZ;
             @Pc(605) byte local605 = inboundBuffer.g1badd();
             @Pc(609) byte local609 = inboundBuffer.g1badd();
             @Pc(613) byte local613 = inboundBuffer.g1bsub();
@@ -168,8 +168,8 @@ public class Protocol {
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_14) {
             int local15 = inboundBuffer.g1();
-            int local19 = Static180.currentChunkZ + (local15 & 0x7);
-            int local23 = (local15 >> 4 & 0x7) + Static115.currentChunkX;
+            int local19 = SceneGraph.currentChunkZ + (local15 & 0x7);
+            int local23 = (local15 >> 4 & 0x7) + SceneGraph.currentChunkX;
             int local27 = inboundBuffer.g2();
             int local31 = inboundBuffer.g2();
             int local39 = inboundBuffer.g2();
@@ -189,8 +189,8 @@ public class Protocol {
         } else if (opcode == ServerProt.LOCATION_PACKET_135) {
             int local15 = inboundBuffer.ig2add();
             int local23 = inboundBuffer.g1neg();
-            int local27 = Static180.currentChunkZ + (local23 & 0x7);
-            int local19 = (local23 >> 4 & 0x7) + Static115.currentChunkX;
+            int local27 = SceneGraph.currentChunkZ + (local23 & 0x7);
+            int local19 = (local23 >> 4 & 0x7) + SceneGraph.currentChunkX;
             int local31 = inboundBuffer.ig2();
             int local39 = inboundBuffer.ig2();
             if (local19 >= 0 && local27 >= 0 && local19 < 104 && local27 < 104 && PlayerList.selfId != local15) {
@@ -205,8 +205,8 @@ public class Protocol {
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_16) {
             int local15 = inboundBuffer.g1();
-            int local23 = Static115.currentChunkX + (local15 >> 4 & 0x7);
-            int local19 = (local15 & 0x7) + Static180.currentChunkZ;
+            int local23 = SceneGraph.currentChunkX + (local15 >> 4 & 0x7);
+            int local19 = (local15 & 0x7) + SceneGraph.currentChunkZ;
             int local27 = local23 + inboundBuffer.g1b();
             int local31 = inboundBuffer.g1b() + local19;
             int local39 = inboundBuffer.g2b();
@@ -231,8 +231,8 @@ public class Protocol {
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_104) {
             int local15 = inboundBuffer.g1();
-            int local19 = Static180.currentChunkZ * 2 + (local15 & 0xF);
-            int local23 = Static115.currentChunkX * 2 + (local15 >> 4 & 0xF);
+            int local19 = SceneGraph.currentChunkZ * 2 + (local15 & 0xF);
+            int local23 = SceneGraph.currentChunkX * 2 + (local15 >> 4 & 0xF);
             int local27 = inboundBuffer.g1b() + local23;
             int local31 = inboundBuffer.g1b() + local19;
             int local39 = inboundBuffer.g2b();
@@ -293,8 +293,8 @@ public class Protocol {
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_97) {
             int local15 = inboundBuffer.g1();
-            int local23 = Static115.currentChunkX + (local15 >> 4 & 0x7);
-            int local19 = Static180.currentChunkZ + (local15 & 0x7);
+            int local23 = SceneGraph.currentChunkX + (local15 >> 4 & 0x7);
+            int local19 = SceneGraph.currentChunkZ + (local15 & 0x7);
             int local27 = inboundBuffer.g2();
             if (local27 == 65535) {
                 local27 = -1;
@@ -316,8 +316,8 @@ public class Protocol {
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_240) {
             int local15 = inboundBuffer.g1sub();
-            int local19 = Static180.currentChunkZ + (local15 & 0x7);
-            int local23 = (local15 >> 4 & 0x7) + Static115.currentChunkX;
+            int local19 = SceneGraph.currentChunkZ + (local15 & 0x7);
+            int local23 = (local15 >> 4 & 0x7) + SceneGraph.currentChunkX;
             int local27 = inboundBuffer.g2();
             if (local23 >= 0 && local19 >= 0 && local23 < 104 && local19 < 104) {
                 @Pc(1565) LinkedList local1565 = SceneGraph.objStacks[Player.level][local23][local19];
@@ -1020,8 +1020,8 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.BATCH_LOCATION_PACKET) {
-            Static180.currentChunkZ = inboundBuffer.g1add();
-            Static115.currentChunkX = inboundBuffer.g1sub();
+            SceneGraph.currentChunkZ = inboundBuffer.g1add();
+            SceneGraph.currentChunkX = inboundBuffer.g1sub();
             while (length > inboundBuffer.offset) {
                 opcode = inboundBuffer.g1();
                 readLocationPacket();
@@ -1206,11 +1206,11 @@ public class Protocol {
                 WorldMap.reset();
             }
             InterfaceList.topLevelInterface = parent;
-            Static81.method1753(parent);
-            Static210.method3712(false);
-            Static74.method1626(InterfaceList.topLevelInterface);
+            InterfaceList.method1753(parent);
+            InterfaceList.method3712(false);
+            InterfaceList.method1626(InterfaceList.topLevelInterface);
             for (int i = 0; i < 100; i++) {
-                Static186.aBooleanArray100[i] = true;
+                InterfaceList.aBooleanArray100[i] = true;
             }
             opcode = -1;
             return true;
@@ -1406,7 +1406,7 @@ public class Protocol {
             setVerifyId(tracknum);
             @Pc(2441) ComponentPointer pointer = (ComponentPointer) InterfaceList.openInterfaces.get(id);
             if (pointer != null) {
-                Static132.closeInterface(true, pointer);
+                InterfaceList.closeInterface(true, pointer);
             }
             if (Static39.aClass13_10 != null) {
                 InterfaceList.redraw(Static39.aClass13_10);
@@ -1439,10 +1439,10 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.CLEAR_GROUND_ITEMS) {
-            Static115.currentChunkX = inboundBuffer.g1();
-            Static180.currentChunkZ = inboundBuffer.g1neg();
-            for (int x = Static115.currentChunkX; x < Static115.currentChunkX + 8; x++) {
-                for (int z = Static180.currentChunkZ; z < Static180.currentChunkZ + 8; z++) {
+            SceneGraph.currentChunkX = inboundBuffer.g1();
+            SceneGraph.currentChunkZ = inboundBuffer.g1neg();
+            for (int x = SceneGraph.currentChunkX; x < SceneGraph.currentChunkX + 8; x++) {
+                for (int z = SceneGraph.currentChunkZ; z < SceneGraph.currentChunkZ + 8; z++) {
                     if (SceneGraph.objStacks[Player.level][x][z] != null) {
                         SceneGraph.objStacks[Player.level][x][z] = null;
                         Static220.spawnGroundObject(z, x);
@@ -1450,7 +1450,7 @@ public class Protocol {
                 }
             }
             for (@Pc(2604) ChangeLocRequest loc = (ChangeLocRequest) ChangeLocRequest.queue.head(); loc != null; loc = (ChangeLocRequest) ChangeLocRequest.queue.next()) {
-                if (loc.x >= Static115.currentChunkX && Static115.currentChunkX + 8 > loc.x && loc.z >= Static180.currentChunkZ && loc.z < Static180.currentChunkZ + 8 && loc.level == Player.level) {
+                if (loc.x >= SceneGraph.currentChunkX && SceneGraph.currentChunkX + 8 > loc.x && loc.z >= SceneGraph.currentChunkZ && loc.z < SceneGraph.currentChunkZ + 8 && loc.level == Player.level) {
                     loc.resetLoops = 0;
                 }
             }
@@ -1566,9 +1566,9 @@ public class Protocol {
             return true;
         } else if (opcode == ServerProt.SET_WALK_TEXT) {
             if (length == 0) {
-                Static195.walkText = LocalizedText.WALKHERE;
+                MiniMenu.walkText = LocalizedText.WALKHERE;
             } else {
-                Static195.walkText = inboundBuffer.gjstr();
+                MiniMenu.walkText = inboundBuffer.gjstr();
             }
             opcode = -1;
             return true;
@@ -1646,7 +1646,7 @@ public class Protocol {
             @Pc(3449) ComponentPointer src = (ComponentPointer) InterfaceList.openInterfaces.get(source);
             ComponentPointer tgt = (ComponentPointer) InterfaceList.openInterfaces.get(target);
             if (tgt != null) {
-                Static132.closeInterface(src == null || tgt.anInt5878 != src.anInt5878, tgt);
+                InterfaceList.closeInterface(src == null || tgt.anInt5878 != src.anInt5878, tgt);
             }
             if (src != null) {
                 src.unlink();
@@ -1659,7 +1659,7 @@ public class Protocol {
             component = InterfaceList.getComponent(target);
             if (component != null) {
                 InterfaceList.redraw(component);
-                Static17.method531(component, true);
+                InterfaceList.method531(component, true);
             }
             if (InterfaceList.topLevelInterface != -1) {
                 Static54.runScripts(1, InterfaceList.topLevelInterface);
@@ -1786,7 +1786,7 @@ public class Protocol {
             setVerifyId(tracknum);
             ComponentPointer ptr = (ComponentPointer) InterfaceList.openInterfaces.get(pointer);
             if (ptr != null) {
-                Static132.closeInterface(ptr.anInt5878 != component, ptr);
+                InterfaceList.closeInterface(ptr.anInt5878 != component, ptr);
             }
             Static44.method1148(component, pointer, type);
             opcode = -1;
@@ -2264,8 +2264,8 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.UPDATE_CURRENT_LOCATION) {
-            Static115.currentChunkX = inboundBuffer.g1neg();
-            Static180.currentChunkZ = inboundBuffer.g1();
+            SceneGraph.currentChunkX = inboundBuffer.g1neg();
+            SceneGraph.currentChunkZ = inboundBuffer.g1();
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.MIDI_SONG) {
@@ -2748,8 +2748,8 @@ public class Protocol {
                                                     Cheat.teleport(Camera.originX + MiniMenu.anInt1742, Camera.originZ - -MiniMenu.anInt2954, Player.level);
                                                 }
                                                 Static187.anInt4422 = 0;
-                                                Static125.anInt3096 = 0;
-                                            } else if (Static125.anInt3096 == 2) {
+                                                MiniMenu.anInt3096 = 0;
+                                            } else if (MiniMenu.anInt3096 == 2) {
                                                 if (MiniMenu.anInt1742 != -1) {
                                                     outboundBuffer.p1isaac(131);
                                                     outboundBuffer.mp4(MiniMenu.anInt2512);
@@ -2761,7 +2761,7 @@ public class Protocol {
                                                     Cross.y = Mouse.clickY;
                                                     Cross.x = Mouse.clickX;
                                                 }
-                                                Static125.anInt3096 = 0;
+                                                MiniMenu.anInt3096 = 0;
                                             } else if (Static187.anInt4422 == 2) {
                                                 if (MiniMenu.anInt1742 != -1) {
                                                     outboundBuffer.p1isaac(179);
@@ -2773,7 +2773,7 @@ public class Protocol {
                                                     Cross.y = Mouse.clickY;
                                                 }
                                                 Static187.anInt4422 = 0;
-                                            } else if (MiniMenu.anInt1742 != -1 && Static125.anInt3096 == 0 && Static187.anInt4422 == 0) {
+                                            } else if (MiniMenu.anInt1742 != -1 && MiniMenu.anInt3096 == 0 && Static187.anInt4422 == 0) {
                                                 @Pc(1871) boolean local1871 = PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 0, true, 0, MiniMenu.anInt1742, 0, 0, 0, MiniMenu.anInt2954, PlayerList.self.movementQueueX[0]);
                                                 if (local1871) {
                                                     Cross.y = Mouse.clickY;

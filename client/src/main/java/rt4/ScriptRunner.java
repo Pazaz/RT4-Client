@@ -1003,7 +1003,7 @@ public final class ScriptRunner {
 									component.scrollMaxV = intStack[isp + 1];
 									InterfaceList.redraw(component);
 									if (component.type == 0) {
-										Static17.method531(component, false);
+										InterfaceList.method531(component, false);
 									}
 									continue;
 								}
@@ -3746,10 +3746,10 @@ public final class ScriptRunner {
 														}
 														if (int1 != Preferences.musicVolume) {
 															if (Preferences.musicVolume == 0 && MusicPlayer.groupId != -1) {
-																Static122.method2410(client.js5Archive6, MusicPlayer.groupId, int1);
+																MidiPlayer.method2410(client.js5Archive6, MusicPlayer.groupId, int1);
 																MidiPlayer.jingle = false;
 															} else if (int1 == 0) {
-																Static241.method4548();
+																MidiPlayer.method4548();
 																MidiPlayer.jingle = false;
 															} else {
 																Static230.method3956(int1);
@@ -4432,7 +4432,7 @@ public final class ScriptRunner {
 								InterfaceList.redraw(component);
 								Static74.update(component);
 								if (component.type == 0) {
-									Static17.method531(component, false);
+									InterfaceList.method531(component, false);
 								}
 								continue;
 							}
@@ -4455,7 +4455,7 @@ public final class ScriptRunner {
 								InterfaceList.redraw(component);
 								Static74.update(component);
 								if (component.type == 0) {
-									Static17.method531(component, false);
+									InterfaceList.method531(component, false);
 								}
 								continue;
 							}

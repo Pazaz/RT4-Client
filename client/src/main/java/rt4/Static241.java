@@ -104,10 +104,4 @@ public final class Static241 {
 		}
 	}
 
-	@OriginalMember(owner = "client!th", name = "a", descriptor = "(Z)V")
-	public static void method4548() {
-		Static172.midiPcmStream.method4446();
-		MidiPlayer.anInt441 = 1;
-		Static172.aClass153_70 = null;
-	}
 }

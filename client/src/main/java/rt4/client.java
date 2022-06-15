@@ -376,7 +376,7 @@ public final class client extends GameShell {
 		MsiTypeList.method4529();
 		LightTypeList.method1882();
 		CursorTypeList.method741();
-		Static192.method3474();
+		PlayerAppearance.method3474();
 		Static40.method1019();
 		HintArrowManager.method3329();
 		ShadowModelList.method4276();
@@ -589,7 +589,7 @@ public final class client extends GameShell {
             InterfaceList.method2275(InterfaceList.topLevelInterface);
         }
         for (@Pc(3755) ComponentPointer local3755 = (ComponentPointer) InterfaceList.openInterfaces.head(); local3755 != null; local3755 = (ComponentPointer) InterfaceList.openInterfaces.next()) {
-            Static132.closeInterface(true, local3755);
+            InterfaceList.closeInterface(true, local3755);
         }
         InterfaceList.topLevelInterface = -1;
         InterfaceList.openInterfaces = new HashTable(8);
@@ -606,7 +606,7 @@ public final class client extends GameShell {
         Inv.method2073();
         Static253.aBoolean43 = true;
         for (local3506 = 0; local3506 < 100; local3506++) {
-            Static186.aBooleanArray100[local3506] = true;
+            InterfaceList.aBooleanArray100[local3506] = true;
         }
         ClanChat.size = 0;
         ClanChat.members = null;
@@ -624,7 +624,7 @@ public final class client extends GameShell {
         }
         Static197.aBoolean228 = true;
         Protocol.verifyId = 0;
-        Static195.walkText = LocalizedText.WALKHERE;
+        MiniMenu.walkText = LocalizedText.WALKHERE;
         Static127.neverRemoveRoofs = false;
         aShortArray88 = aShortArray19 = aShortArray74 = aShortArray87 = new short[256];
         Static40.method4637();
@@ -696,7 +696,7 @@ public final class client extends GameShell {
 		}
 		if (GlRenderer.enabled) {
 			for (local80 = 0; local80 < 100; local80++) {
-				Static186.aBooleanArray100[local80] = true;
+				InterfaceList.aBooleanArray100[local80] = true;
 			}
 		}
 		if (gameState == 0) {

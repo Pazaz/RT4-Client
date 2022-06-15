@@ -19,15 +19,15 @@ public final class Static73 {
 				InterfaceList.method2275(InterfaceList.topLevelInterface);
 			}
 			for (@Pc(18) ComponentPointer local18 = (ComponentPointer) InterfaceList.openInterfaces.head(); local18 != null; local18 = (ComponentPointer) InterfaceList.openInterfaces.next()) {
-				Static132.closeInterface(true, local18);
+				InterfaceList.closeInterface(true, local18);
 			}
 			InterfaceList.topLevelInterface = -1;
 			InterfaceList.openInterfaces = new HashTable(8);
 			InterfaceList.method1287();
 			InterfaceList.topLevelInterface = Static156.loginScreenId;
-			Static210.method3712(false);
+			InterfaceList.method3712(false);
 			Static87.method1807();
-			Static74.method1626(InterfaceList.topLevelInterface);
+			InterfaceList.method1626(InterfaceList.topLevelInterface);
 		}
 		Static35.anInt1092 = -1;
 		Static81.method1750(Static270.anInt5794);

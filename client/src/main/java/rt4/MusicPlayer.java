@@ -12,8 +12,8 @@ public class MusicPlayer {
     @OriginalMember(owner = "client!li", name = "a", descriptor = "(ZI)V")
     public static void playSong(@OriginalArg(1) int arg0) {
         if (arg0 == -1 && !MidiPlayer.jingle) {
-            Static241.method4548();
-        } else if (arg0 != -1 && (groupId != arg0 || !Static136.method2655()) && Preferences.musicVolume != 0 && !MidiPlayer.jingle) {
+            MidiPlayer.method4548();
+        } else if (arg0 != -1 && (groupId != arg0 || !MidiPlayer.method2655()) && Preferences.musicVolume != 0 && !MidiPlayer.jingle) {
             MidiPlayer.playFadeOut(arg0, client.js5Archive6, Preferences.musicVolume);
         }
         groupId = arg0;
@@ -22,7 +22,7 @@ public class MusicPlayer {
     @OriginalMember(owner = "client!wj", name = "a", descriptor = "(IIB)V")
     public static void playJingle(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
         if (Preferences.musicVolume != 0 && arg1 != -1) {
-            Static122.method2410(client.js5Archive11, arg1, Preferences.musicVolume);
+            MidiPlayer.method2410(client.js5Archive11, arg1, Preferences.musicVolume);
             MidiPlayer.jingle = true;
         }
     }

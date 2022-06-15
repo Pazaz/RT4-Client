@@ -47,10 +47,10 @@ public final class Static6 {
 			Static87.method1809(arg1, arg7, arg3, InterfaceList.components[arg0], arg2, -1, arg6, arg5, arg4);
 		} else if (arg4 == -1) {
 			for (@Pc(27) int local27 = 0; local27 < 100; local27++) {
-				Static186.aBooleanArray100[local27] = true;
+				InterfaceList.aBooleanArray100[local27] = true;
 			}
 		} else {
-			Static186.aBooleanArray100[arg4] = true;
+			InterfaceList.aBooleanArray100[arg4] = true;
 		}
 	}
 }

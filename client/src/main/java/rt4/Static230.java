@@ -110,7 +110,7 @@ public final class Static230 {
 	@OriginalMember(owner = "client!sj", name = "c", descriptor = "(II)V")
 	public static void method3956(@OriginalArg(0) int arg0) {
 		if (MidiPlayer.anInt441 == 0) {
-			Static172.midiPcmStream.method4447(arg0);
+			MidiPlayer.midiPcmStream.method4447(arg0);
 		} else {
 			MidiPlayer.anInt5527 = arg0;
 		}

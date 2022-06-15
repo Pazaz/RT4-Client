@@ -85,7 +85,7 @@ public final class Static87 {
 	@OriginalMember(owner = "client!gn", name = "b", descriptor = "(Z)V")
 	public static void method1807() {
 		for (@Pc(11) int local11 = 0; local11 < 100; local11++) {
-			Static186.aBooleanArray100[local11] = true;
+			InterfaceList.aBooleanArray100[local11] = true;
 		}
 	}
 
@@ -240,7 +240,7 @@ public final class Static87 {
 								if (client.game == 1) {
 									MiniMenu.add(-1, 1L, JagString.EMPTY, local563, (short) 36, LocalizedText.FACEHERE, local571);
 								}
-								MiniMenu.add(-1, 1L, JagString.EMPTY, local563, (short) 60, Static195.walkText, local571);
+								MiniMenu.add(-1, 1L, JagString.EMPTY, local563, (short) 60, MiniMenu.walkText, local571);
 								continue;
 							}
 							if (component.clientCode == 1339) {
@@ -256,7 +256,7 @@ public final class Static87 {
 							}
 							if (component.clientCode == 1400) {
 								Static269.method2225(local123, local114, component.height, component.width);
-								Static186.aBooleanArray100[rectangle] = true;
+								InterfaceList.aBooleanArray100[rectangle] = true;
 								InterfaceList.rectangleRedraw[rectangle] = true;
 								if (GlRenderer.enabled) {
 									GlRaster.setClip(arg0, arg6, arg4, arg7);
@@ -267,7 +267,7 @@ public final class Static87 {
 							}
 							if (component.clientCode == 1401) {
 								Static1.method4(local123, component.height, component.width, local114);
-								Static186.aBooleanArray100[rectangle] = true;
+								InterfaceList.aBooleanArray100[rectangle] = true;
 								InterfaceList.rectangleRedraw[rectangle] = true;
 								if (GlRenderer.enabled) {
 									GlRaster.setClip(arg0, arg6, arg4, arg7);
@@ -279,7 +279,7 @@ public final class Static87 {
 							if (component.clientCode == 1402) {
 								if (!GlRenderer.enabled) {
 									Static221.method3392(local123, local114);
-									Static186.aBooleanArray100[rectangle] = true;
+									InterfaceList.aBooleanArray100[rectangle] = true;
 									InterfaceList.rectangleRedraw[rectangle] = true;
 								}
 								continue;
@@ -322,7 +322,7 @@ public final class Static87 {
 								@Pc(968) JagString local968 = JagString.concatenate(new JagString[] { Cheat.DEBUG_CAHE, StringUtils.formatNumber(0, true, 2, (long) local571), Static147.aClass100_672, JagString.parseInt(local563), Static14.aClass100_80 });
 								Fonts.p11Full.renderRight(local968, local270, local276, 16776960, 0);
 								local276 += 12;
-								Static186.aBooleanArray100[rectangle] = true;
+								InterfaceList.aBooleanArray100[rectangle] = true;
 								InterfaceList.rectangleRedraw[rectangle] = true;
 								continue;
 							}
@@ -407,7 +407,7 @@ public final class Static87 {
 													}
 
 													if (Rasteriser.textureHasTransparency) {
-														Static186.aBooleanArray100[rectangle] = true;
+														InterfaceList.aBooleanArray100[rectangle] = true;
 													}
 
 													if (sprite == null) {

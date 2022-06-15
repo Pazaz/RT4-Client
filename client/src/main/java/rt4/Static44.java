@@ -18,7 +18,7 @@ public final class Static44 {
 		local9.anInt5879 = arg2;
 		local9.anInt5878 = arg0;
 		InterfaceList.openInterfaces.put(local9, (long) arg1);
-		Static81.method1753(arg0);
+		InterfaceList.method1753(arg0);
 		@Pc(28) Component local28 = InterfaceList.getComponent(arg1);
 		if (local28 != null) {
 			InterfaceList.redraw(local28);
@@ -50,9 +50,9 @@ public final class Static44 {
 			Static13.anInt436 = MiniMenu.size * 15 + (Static40.aBoolean298 ? 26 : 22);
 		}
 		if (local28 != null) {
-			Static17.method531(local28, false);
+			InterfaceList.method531(local28, false);
 		}
-		Static74.method1626(arg0);
+		InterfaceList.method1626(arg0);
 		if (InterfaceList.topLevelInterface != -1) {
 			Static54.runScripts(1, InterfaceList.topLevelInterface);
 		}
