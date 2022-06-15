@@ -158,15 +158,15 @@ public class MiniMenu {
                             @Pc(276) ObjType local276 = ObjTypeList.get(component.objTypes[local171] - 1);
                             if (anInt5014 == 1 && local267.isObjOpsEnabled()) {
                                 if (Static224.anInt5062 != component.id || Static185.anInt4370 != local171) {
-                                    add(-1, (long) local276.anInt2354, JagString.concatenate(new JagString[] { aClass100_203, aClass100_947, local276.name}), local171, (short) 40, LocalizedText.USE, component.id);
+                                    add(-1, (long) local276.id, JagString.concatenate(new JagString[] { aClass100_203, aClass100_947, local276.name}), local171, (short) 40, LocalizedText.USE, component.id);
                                 }
                             } else if (Static241.aBoolean302 && local267.isObjOpsEnabled()) {
                                 @Pc(596) ParamType local596 = Static121.anInt3039 == -1 ? null : ParamTypeList.get(Static121.anInt3039);
                                 if ((anInt4999 & 0x10) != 0 && (local596 == null || local276.getParam(local596.defaultInt, Static121.anInt3039) != local596.defaultInt)) {
-                                    add(anInt5393, (long) local276.anInt2354, JagString.concatenate(new JagString[] { aClass100_466, aClass100_947, local276.name}), local171, (short) 3, aClass100_545, component.id);
+                                    add(anInt5393, (long) local276.id, JagString.concatenate(new JagString[] { aClass100_466, aClass100_947, local276.name}), local171, (short) 3, aClass100_545, component.id);
                                 }
                             } else {
-                                @Pc(296) JagString[] local296 = local276.inventoryOps;
+                                @Pc(296) JagString[] local296 = local276.iops;
                                 if (aBoolean237) {
                                     local296 = annotateOps(local296);
                                 }
@@ -180,12 +180,12 @@ public class MiniMenu {
                                             } else {
                                                 local334 = 58;
                                             }
-                                            add(-1, (long) local276.anInt2354, JagString.concatenate(new JagString[] { aClass100_32, local276.name}), local171, local334, local296[local309], component.id);
+                                            add(-1, (long) local276.id, JagString.concatenate(new JagString[] { aClass100_32, local276.name}), local171, local334, local296[local309], component.id);
                                         }
                                     }
                                 }
                                 if (local267.method507()) {
-                                    add(Static169.anInt4075, (long) local276.anInt2354, JagString.concatenate(new JagString[] { aClass100_32, local276.name}), local171, (short) 22, LocalizedText.USE, component.id);
+                                    add(Static169.anInt4075, (long) local276.id, JagString.concatenate(new JagString[] { aClass100_32, local276.name}), local171, (short) 22, LocalizedText.USE, component.id);
                                 }
                                 if (local267.isObjOpsEnabled() && local296 != null) {
                                     for (local309 = 2; local309 >= 0; local309--) {
@@ -200,7 +200,7 @@ public class MiniMenu {
                                             if (local309 == 2) {
                                                 local334 = 43;
                                             }
-                                            add(-1, (long) local276.anInt2354, JagString.concatenate(new JagString[] { aClass100_32, local276.name}), local171, local334, local296[local309], component.id);
+                                            add(-1, (long) local276.id, JagString.concatenate(new JagString[] { aClass100_32, local276.name}), local171, local334, local296[local309], component.id);
                                         }
                                     }
                                 }
@@ -227,11 +227,11 @@ public class MiniMenu {
                                             if (local309 == 4) {
                                                 local334 = 13;
                                             }
-                                            add(-1, (long) local276.anInt2354, JagString.concatenate(new JagString[] { aClass100_32, local276.name}), local171, local334, local296[local309], component.id);
+                                            add(-1, (long) local276.id, JagString.concatenate(new JagString[] { aClass100_32, local276.name}), local171, local334, local296[local309], component.id);
                                         }
                                     }
                                 }
-                                add(Static225.anInt5073, (long) local276.anInt2354, JagString.concatenate(new JagString[] { aClass100_32, local276.name}), local171, (short) 1006, LocalizedText.EXAMINE, component.id);
+                                add(Static225.anInt5073, (long) local276.id, JagString.concatenate(new JagString[] { aClass100_32, local276.name}), local171, (short) 1006, LocalizedText.EXAMINE, component.id);
                             }
                         }
                     }

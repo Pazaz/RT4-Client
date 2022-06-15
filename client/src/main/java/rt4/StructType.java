@@ -29,7 +29,7 @@ public final class StructType extends SecondaryNode {
 		@Pc(17) int local17 = arg0.g1();
 		@Pc(25) int local25;
 		if (this.params == null) {
-			local25 = Static165.clp2(local17);
+			local25 = IntUtils.clp2(local17);
 			this.params = new HashTable(local25);
 		}
 		for (local25 = 0; local25 < local17; local25++) {

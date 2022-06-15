@@ -174,7 +174,7 @@ public final class GlFont extends Font {
 			}
 		}
 		this.powerOfTwoSize *= 16;
-		this.powerOfTwoSize = Static165.clp2(this.powerOfTwoSize);
+		this.powerOfTwoSize = IntUtils.clp2(this.powerOfTwoSize);
 		int glyphSize = this.powerOfTwoSize / 16;
 		@Pc(66) byte[] dest = new byte[this.powerOfTwoSize * this.powerOfTwoSize * 2];
 		for (@Pc(68) int i = 0; i < 256; i++) {

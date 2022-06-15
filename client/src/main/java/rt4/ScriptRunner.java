@@ -1055,11 +1055,11 @@ public final class ScriptRunner {
 										component.objId = int3;
 										component.objCount = int2;
 										@Pc(13416) ObjType local13416 = ObjTypeList.get(int3);
-										component.modelYOffset = local13416.zAngle2d;
-										component.modelXOffset = local13416.xOffset2d;
-										component.modelXAngle = local13416.xAngle2d;
-										component.modelZOffset = local13416.yOffset2d;
-										component.modelYAngle = local13416.yAngle2d;
+										component.modelYOffset = local13416.zAngle2D;
+										component.modelXOffset = local13416.xOffset2D;
+										component.modelXAngle = local13416.xAngle2D;
+										component.modelZOffset = local13416.yOffset2D;
+										component.modelYAngle = local13416.yAngle2D;
 										component.modelZoom = local13416.zoom2d;
 										if (component.anInt451 > 0) {
 											component.modelZoom = component.modelZoom * 32 / component.anInt451;
@@ -2418,8 +2418,8 @@ public final class ScriptRunner {
 											int1 = intStack[isp];
 											int3 = intStack[isp + 1];
 											local11269 = ObjTypeList.get(int1);
-											if (int3 >= 1 && int3 <= 5 && local11269.inventoryOps[int3 - 1] != null) {
-												stringStack[ssp++] = local11269.inventoryOps[int3 - 1];
+											if (int3 >= 1 && int3 <= 5 && local11269.iops[int3 - 1] != null) {
+												stringStack[ssp++] = local11269.iops[int3 - 1];
 												continue;
 											}
 											stringStack[ssp++] = EMPTY_STRING;
@@ -2442,8 +2442,8 @@ public final class ScriptRunner {
 											isp--;
 											int1 = intStack[isp];
 											local11417 = ObjTypeList.get(int1);
-											if (local11417.certificateTemplate == -1 && local11417.certificateLink >= 0) {
-												intStack[isp++] = local11417.certificateLink;
+											if (local11417.certtemplate == -1 && local11417.certlink >= 0) {
+												intStack[isp++] = local11417.certlink;
 												continue;
 											}
 											intStack[isp++] = int1;
@@ -2453,8 +2453,8 @@ public final class ScriptRunner {
 											isp--;
 											int1 = intStack[isp];
 											local11417 = ObjTypeList.get(int1);
-											if (local11417.certificateTemplate >= 0 && local11417.certificateLink >= 0) {
-												intStack[isp++] = local11417.certificateLink;
+											if (local11417.certtemplate >= 0 && local11417.certlink >= 0) {
+												intStack[isp++] = local11417.certlink;
 												continue;
 											}
 											intStack[isp++] = int1;

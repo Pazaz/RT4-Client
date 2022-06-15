@@ -732,7 +732,7 @@ public final class NpcType {
 			} else if (arg0 == 249) {
 				count = arg1.g1();
 				if (this.params == null) {
-					local18 = Static165.clp2(count);
+					local18 = IntUtils.clp2(count);
 					this.params = new HashTable(local18);
 				}
 				for (local18 = 0; local18 < count; local18++) {

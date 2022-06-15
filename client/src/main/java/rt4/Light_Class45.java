@@ -178,7 +178,7 @@ public final class Light_Class45 {
 		this.aByteArray25 = new byte[this.anInt2019];
 		this.aByteArray23 = new byte[this.anInt2019];
 		this.aByteArray24 = new byte[this.anInt2019];
-		this.aClass133_4 = new HashTable(Static165.clp2(this.anInt2019));
+		this.aClass133_4 = new HashTable(IntUtils.clp2(this.anInt2019));
 	}
 
 	@OriginalMember(owner = "client!fj", name = "c", descriptor = "()V")

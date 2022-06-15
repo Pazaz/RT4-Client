@@ -3246,7 +3246,7 @@ public final class Rasteriser {
 		height = bottom - top;
 		prepareOffsets();
 		if (offsets.length < height) {
-			offsets = new int[Static165.clp2(height)];
+			offsets = new int[IntUtils.clp2(height)];
 		}
 		@Pc(23) int x = top * SoftwareRaster.width + left;
 		for (@Pc(25) int y = 0; y < height; y++) {
