@@ -14,7 +14,7 @@ public class Equipment {
         @Pc(12) int local12;
         for (local12 = 0; local12 < ObjTypeList.anInt3245; local12++) {
             @Pc(19) ObjType local19 = ObjTypeList.get(local12);
-            if (local19.manWear1 >= 0 || local19.womanWear1 >= 0) {
+            if (local19.manwear >= 0 || local19.womanwear >= 0) {
                 local8[local10++] = local12;
             }
         }

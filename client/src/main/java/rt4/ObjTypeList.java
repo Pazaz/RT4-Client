@@ -46,21 +46,21 @@ public class ObjTypeList {
         }
         @Pc(25) byte[] local25 = archive.fetchFile(Static18.method554(arg0), Static247.method4247(arg0));
         local6 = new ObjType();
-        local6.anInt2354 = arg0;
+        local6.id = arg0;
         if (local25 != null) {
             local6.decode(new Buffer(local25));
         }
-        local6.method1826();
-        if (local6.certificateTemplate != -1) {
-            local6.generateCertificate(get(local6.certificateLink), get(local6.certificateTemplate));
+        local6.postDecode();
+        if (local6.certtemplate != -1) {
+            local6.generateCertificate(get(local6.certlink), get(local6.certtemplate));
         }
         if (local6.lentTemplate != -1) {
-            local6.method1823(get(local6.lentLink), get(local6.lentTemplate));
+            local6.generateLent(get(local6.lentLink), get(local6.lentTemplate));
         }
         if (!aBoolean276 && local6.members) {
             local6.name = LocalizedText.MEMBERS_OBJECT;
             local6.team = 0;
-            local6.inventoryOps = aClass100Array104;
+            local6.iops = aClass100Array104;
             local6.stockMarket = false;
             local6.ops = aClass100Array87;
         }

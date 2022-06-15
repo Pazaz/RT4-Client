@@ -2203,19 +2203,19 @@ public class Protocol {
             if (component.if3) {
                 DelayedStateChange.method3707(id, slot, itemId);
                 objType = ObjTypeList.get(itemId);
-                DelayedStateChange.updateView(objType.zoom2d, id, objType.yAngle2d, objType.xAngle2d);
-                DelayedStateChange.method2745(id, objType.zAngle2d, objType.yOffset2d, objType.xOffset2d);
+                DelayedStateChange.updateView(objType.zoom2d, id, objType.yAngle2D, objType.xAngle2D);
+                DelayedStateChange.method2745(id, objType.zAngle2D, objType.yOffset2D, objType.xOffset2D);
             } else if (itemId == -1) {
                 component.modelType = 0;
                 opcode = -1;
                 return true;
             } else {
                 objType = ObjTypeList.get(itemId);
-                component.modelXAngle = objType.xAngle2d;
+                component.modelXAngle = objType.xAngle2D;
                 component.modelZoom = objType.zoom2d * 100 / slot;
                 component.modelType = 4;
                 component.modelId = itemId;
-                component.modelYAngle = objType.yAngle2d;
+                component.modelYAngle = objType.yAngle2D;
                 InterfaceList.redraw(component);
             }
             opcode = -1;

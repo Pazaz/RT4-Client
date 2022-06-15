@@ -45,8 +45,8 @@ public final class GlIndexedSprite extends IndexedSprite {
 
 	@OriginalMember(owner = "client!oh", name = "a", descriptor = "([B[I)V")
 	private void method3337(@OriginalArg(0) byte[] arg0, @OriginalArg(1) int[] arg1) {
-		this.anInt4287 = Static165.clp2(this.width);
-		this.anInt4286 = Static165.clp2(this.height);
+		this.anInt4287 = IntUtils.clp2(this.width);
+		this.anInt4286 = IntUtils.clp2(this.height);
 		@Pc(20) byte[] local20 = new byte[this.anInt4287 * this.anInt4286 * 4];
 		@Pc(22) int local22 = 0;
 		@Pc(24) int local24 = 0;

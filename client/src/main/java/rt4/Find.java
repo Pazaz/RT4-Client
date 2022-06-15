@@ -54,7 +54,7 @@ public class Find {
         @Pc(14) int local14 = 0;
         for (@Pc(16) int local16 = 0; local16 < ObjTypeList.anInt3245; local16++) {
             @Pc(27) ObjType local27 = ObjTypeList.get(local16);
-            if ((!arg0 || local27.stockMarket) && local27.certificateTemplate == -1 && local27.lentTemplate == -1 && local27.dummyItem == 0 && local27.name.toLowerCase().indexOf(local12) != -1) {
+            if ((!arg0 || local27.stockMarket) && local27.certtemplate == -1 && local27.lentTemplate == -1 && local27.dummyItem == 0 && local27.name.toLowerCase().indexOf(local12) != -1) {
                 if (local14 >= 250) {
                     results = null;
                     index = -1;

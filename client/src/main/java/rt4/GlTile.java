@@ -136,7 +136,7 @@ public final class GlTile extends Node {
 		this.anIntArray227 = new int[this.anInt2484];
 		this.anIntArray231 = new int[this.anInt2484];
 		this.anIntArrayArray17 = new int[this.anInt2484][];
-		this.aClass133_8 = new HashTable(Static165.clp2(this.anInt2482));
+		this.aClass133_8 = new HashTable(IntUtils.clp2(this.anInt2482));
 		if (this.blend) {
 			this.anIntArrayArray18 = new int[this.anInt2484][];
 			this.aBooleanArray54 = new boolean[this.anInt2484];

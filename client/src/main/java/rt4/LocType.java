@@ -593,7 +593,7 @@ public final class LocType {
 		} else if (arg1 == 249) {
 			defaultMultiLoc = arg0.g1();
 			if (this.params == null) {
-				len = Static165.clp2(defaultMultiLoc);
+				len = IntUtils.clp2(defaultMultiLoc);
 				this.params = new HashTable(len);
 			}
 			for (len = 0; len < defaultMultiLoc; len++) {
