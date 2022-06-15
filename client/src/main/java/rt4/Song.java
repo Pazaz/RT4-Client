@@ -196,7 +196,7 @@ public final class Song extends Node {
 						}
 						local500.p1(47);
 						local500.p1(0);
-						local500.p4len(local500.offset - local565);
+						local500.psize4(local500.offset - local565);
 						continue label221;
 					}
 					if (local583 == 23) {

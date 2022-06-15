@@ -6,17 +6,10 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static228 {
 
-    @OriginalMember(owner = "client!dc", name = "db", descriptor = "[[B")
-    public static final byte[][] aByteArrayArray6 = new byte[50][];
-
-    @OriginalMember(owner = "client!sh", name = "e", descriptor = "Lclient!na;")
+	@OriginalMember(owner = "client!sh", name = "e", descriptor = "Lclient!na;")
 	public static final JagString aClass100_967 = JagString.parse("");
-    @OriginalMember(owner = "client!wi", name = "X", descriptor = "[[B")
-    public static final byte[][] aByteArrayArray16 = new byte[1000][];
-    @OriginalMember(owner = "client!bb", name = "t", descriptor = "[[B")
-    public static final byte[][] aByteArrayArray2 = new byte[250][];
 
-    @OriginalMember(owner = "client!sh", name = "f", descriptor = "I")
+	@OriginalMember(owner = "client!sh", name = "f", descriptor = "I")
 	public static int anInt5103 = -1;
 
 	@OriginalMember(owner = "client!sh", name = "i", descriptor = "[[I")
@@ -24,26 +17,6 @@ public final class Static228 {
 
     @OriginalMember(owner = "client!sh", name = "k", descriptor = "Z")
 	public static final boolean aBoolean248 = false;
-
-	@OriginalMember(owner = "client!sh", name = "a", descriptor = "(II)[B")
-	public static synchronized byte[] allocate(@OriginalArg(1) int arg0) {
-		@Pc(22) byte[] local22;
-		if (arg0 == 100 && Static115.anInt2937 > 0) {
-			local22 = aByteArrayArray16[--Static115.anInt2937];
-			aByteArrayArray16[Static115.anInt2937] = null;
-			return local22;
-		} else if (arg0 == 5000 && Static251.anInt5459 > 0) {
-			local22 = aByteArrayArray2[--Static251.anInt5459];
-			aByteArrayArray2[Static251.anInt5459] = null;
-			return local22;
-		} else if (arg0 == 30000 && Static224.anInt5064 > 0) {
-			local22 = aByteArrayArray6[--Static224.anInt5064];
-			aByteArrayArray6[Static224.anInt5064] = null;
-			return local22;
-		} else {
-			return new byte[arg0];
-		}
-	}
 
 	@OriginalMember(owner = "client!sh", name = "a", descriptor = "(IZBIZ)V")
 	public static void sortWorldList(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(3) int arg2, @OriginalArg(4) boolean arg3) {

@@ -63,8 +63,8 @@ public final class GlTexture extends SecondaryNode {
 		this.aBoolean285 = arg0.g1() == 1;
 		this.aBoolean284 = arg0.g1() == 1;
 		@Pc(68) int local68 = arg0.g1() & 0x3;
-		this.anInt5485 = arg0.g1s();
-		this.anInt5497 = arg0.g1s();
+		this.anInt5485 = arg0.g1b();
+		this.anInt5497 = arg0.g1b();
 		@Pc(82) int local82 = arg0.g1();
 		arg0.g1();
 		if (local68 == 1) {

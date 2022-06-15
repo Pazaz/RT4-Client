@@ -86,17 +86,17 @@ public final class AnimFrame {
 				if ((attributes & 0x1) == 0) {
 					tempX[len] = defaultValue;
 				} else {
-					tempX[len] = (short) buffer.gSmart1or2s();
+					tempX[len] = (short) buffer.gsmart();
 				}
 				if ((attributes & 0x2) == 0) {
 					tempY[len] = defaultValue;
 				} else {
-					tempY[len] = (short) buffer.gSmart1or2s();
+					tempY[len] = (short) buffer.gsmart();
 				}
 				if ((attributes & 0x4) == 0) {
 					tempZ[len] = defaultValue;
 				} else {
-					tempZ[len] = (short) buffer.gSmart1or2s();
+					tempZ[len] = (short) buffer.gsmart();
 				}
 				tempFlags[len] = (byte) (attributes >>> 3 & 0x3);
 				if (type == 2) {

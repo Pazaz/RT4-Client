@@ -312,7 +312,7 @@ public class LoginManager {
                     Protocol.outboundBuffer.pjstr(JagString.parse(""));
                     Protocol.outboundBuffer.pjstr(JagString.parse(""));
                 }
-                Protocol.outboundBuffer.encryptRsa(GlobalConfig.RSA_EXPONENT, GlobalConfig.RSA_MODULUS);
+                Protocol.outboundBuffer.rsaenc(GlobalConfig.RSA_EXPONENT, GlobalConfig.RSA_MODULUS);
                 buffer.offset = 0;
                 if (client.gameState == 40) {
                     buffer.p1(18);
@@ -324,7 +324,7 @@ public class LoginManager {
                     // pretend that we're loading the archive so we don't throw the packet size off
                     offset = 4;
                 }
-                buffer.p2(Protocol.outboundBuffer.offset + Buffer.getStringLength(client.settings) + (159 + offset));
+                buffer.p2(Protocol.outboundBuffer.offset + Buffer.gjstrlen(client.settings) + (159 + offset));
                 buffer.p4(530);
                 buffer.p1(anInt39);
                 buffer.p1(client.advertSuppressed ? 1 : 0);
@@ -370,7 +370,7 @@ public class LoginManager {
                 if (GlobalConfig.LOGIN_FAKE_IDX28) {
                     buffer.p4(0);
                 }
-                buffer.pBytes(Protocol.outboundBuffer.data, Protocol.outboundBuffer.offset);
+                buffer.pdata(Protocol.outboundBuffer.data, Protocol.outboundBuffer.offset);
                 Protocol.socket.write(buffer.data, buffer.offset);
                 Protocol.outboundBuffer.setKey(key);
                 for (@Pc(583) int local583 = 0; local583 < 4; local583++) {
@@ -539,11 +539,11 @@ public class LoginManager {
             local43.p4((int) (Math.random() * 9.9999999E7D));
             local43.pjstr(Player.password);
             local43.p4((int) (Math.random() * 9.9999999E7D));
-            local43.encryptRsa(GlobalConfig.RSA_EXPONENT, GlobalConfig.RSA_MODULUS);
+            local43.rsaenc(GlobalConfig.RSA_EXPONENT, GlobalConfig.RSA_MODULUS);
             Protocol.outboundBuffer.offset = 0;
             Protocol.outboundBuffer.p1(210);
             Protocol.outboundBuffer.p1(local43.offset);
-            Protocol.outboundBuffer.pBytes(local43.data, local43.offset);
+            Protocol.outboundBuffer.pdata(local43.data, local43.offset);
         } else {
             clear();
         }

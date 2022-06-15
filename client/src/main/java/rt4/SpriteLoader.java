@@ -105,11 +105,11 @@ public class SpriteLoader {
             @Pc(232) int local232;
             if ((local223 & 0x1) == 0) {
                 for (local232 = 0; local232 < local203; local232++) {
-                    local206[local232] = buffer.g1s();
+                    local206[local232] = buffer.g1b();
                 }
                 if ((local223 & 0x2) != 0) {
                     for (local232 = 0; local232 < local203; local232++) {
-                        @Pc(343) byte local343 = local215[local232] = buffer.g1s();
+                        @Pc(343) byte local343 = local215[local232] = buffer.g1b();
                         local208 |= local343 != -1;
                     }
                 }
@@ -127,14 +127,14 @@ public class SpriteLoader {
                                 break label88;
                             }
                             for (local241 = 0; local241 < local199; local241++) {
-                                @Pc(291) byte local291 = local215[local195 * local241 + local232] = buffer.g1s();
+                                @Pc(291) byte local291 = local215[local195 * local241 + local232] = buffer.g1b();
                                 local208 |= local291 != -1;
                             }
                             local232++;
                         }
                     }
                     for (local241 = 0; local241 < local199; local241++) {
-                        local206[local232 + local241 * local195] = buffer.g1s();
+                        local206[local232 + local241 * local195] = buffer.g1b();
                     }
                     local232++;
                 }

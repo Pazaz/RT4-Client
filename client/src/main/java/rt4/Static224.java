@@ -9,9 +9,6 @@ public final class Static224 {
     @OriginalMember(owner = "client!sd", name = "R", descriptor = "I")
 	public static int anInt5062;
 
-    @OriginalMember(owner = "client!sd", name = "T", descriptor = "I")
-	public static int anInt5064 = 0;
-
     @OriginalMember(owner = "client!sd", name = "c", descriptor = "(II)V")
 	public static void method3884(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		@Pc(7) Tile local7 = SceneGraph.tiles[0][arg0][arg1];

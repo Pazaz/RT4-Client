@@ -275,7 +275,7 @@ public final class GlTile extends Node {
 						local86 = this.anIntArrayArray18[local47];
 						if (local86 != null) {
 							for (local90 = 0; local90 < local86.length; local90++) {
-								aClass3_Sub15_2.p4le(local86[local90]);
+								aClass3_Sub15_2.ip4(local86[local90]);
 							}
 						}
 						local111 = this.aBooleanArray54[local47] ? aClass3_Sub15_2 : aClass3_Sub15_3;
@@ -283,9 +283,9 @@ public final class GlTile extends Node {
 						local111 = aClass3_Sub15_3;
 					}
 					for (local116 = 1; local116 < local78.length - 1; local116++) {
-						local111.p4le(local78[0]);
-						local111.p4le(local78[local116]);
-						local111.p4le(local78[local116 + 1]);
+						local111.ip4(local78[0]);
+						local111.ip4(local78[local116]);
+						local111.ip4(local78[local116 + 1]);
 					}
 				}
 			}

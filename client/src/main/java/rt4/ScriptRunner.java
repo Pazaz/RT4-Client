@@ -2694,7 +2694,7 @@ public final class ScriptRunner {
 														Protocol.outboundBuffer.p1(local5555);
 														Protocol.outboundBuffer.p1(local5943);
 														WordPack.encode(Protocol.outboundBuffer, string);
-														Protocol.outboundBuffer.p1len(Protocol.outboundBuffer.offset - c);
+														Protocol.outboundBuffer.psize1(Protocol.outboundBuffer.offset - c);
 														continue;
 													}
 													Cheat.execute(string);
@@ -2710,7 +2710,7 @@ public final class ScriptRunner {
 														int2 = Protocol.outboundBuffer.offset;
 														Protocol.outboundBuffer.p8(string.encode37());
 														WordPack.encode(Protocol.outboundBuffer, str1);
-														Protocol.outboundBuffer.p1len(Protocol.outboundBuffer.offset - int2);
+														Protocol.outboundBuffer.psize1(Protocol.outboundBuffer.offset - int2);
 													}
 													continue;
 												}
@@ -2851,7 +2851,7 @@ public final class ScriptRunner {
 													Protocol.outboundBuffer.p1(0);
 													Protocol.outboundBuffer.p2(activePhrase.id);
 													activePhrase.type.encodeMessage(Protocol.outboundBuffer, activePhrase.values);
-													Protocol.outboundBuffer.p1len(Protocol.outboundBuffer.offset - int1);
+													Protocol.outboundBuffer.psize1(Protocol.outboundBuffer.offset - int1);
 													continue;
 												}
 												if (opcode == 5060) {
@@ -2863,7 +2863,7 @@ public final class ScriptRunner {
 													Protocol.outboundBuffer.p8(string.encode37());
 													Protocol.outboundBuffer.p2(activePhrase.id);
 													activePhrase.type.encodeMessage(Protocol.outboundBuffer, activePhrase.values);
-													Protocol.outboundBuffer.p1len(Protocol.outboundBuffer.offset - int3);
+													Protocol.outboundBuffer.psize1(Protocol.outboundBuffer.offset - int3);
 													continue;
 												}
 												if (opcode == 5061) {
@@ -2873,7 +2873,7 @@ public final class ScriptRunner {
 													Protocol.outboundBuffer.p1(1);
 													Protocol.outboundBuffer.p2(activePhrase.id);
 													activePhrase.type.encodeMessage(Protocol.outboundBuffer, activePhrase.values);
-													Protocol.outboundBuffer.p1len(Protocol.outboundBuffer.offset - int1);
+													Protocol.outboundBuffer.psize1(Protocol.outboundBuffer.offset - int1);
 													continue;
 												}
 												if (opcode == 5062) {
@@ -3249,7 +3249,7 @@ public final class ScriptRunner {
 														isp--;
 														int2 = intStack[isp];
 														Protocol.outboundBuffer.p1isaac(117);
-														Protocol.outboundBuffer.p1(Buffer.getStringLength(string) + Buffer.getStringLength(str1) + 1);
+														Protocol.outboundBuffer.p1(Buffer.gjstrlen(string) + Buffer.gjstrlen(str1) + 1);
 														Protocol.outboundBuffer.pjstr(string);
 														Protocol.outboundBuffer.pjstr(str1);
 														Protocol.outboundBuffer.p1(int2);

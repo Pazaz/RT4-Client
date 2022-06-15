@@ -166,20 +166,20 @@ public class WorldList {
 
     @OriginalMember(owner = "client!hi", name = "a", descriptor = "(Lclient!wa;I)V")
     public static void decodeWorlds(@OriginalArg(0) Buffer buffer) {
-        @Pc(9) int countryCount = buffer.gSmart1or2();
+        @Pc(9) int countryCount = buffer.gsmarts();
         countries = new WorldInfo[countryCount];
         @Pc(14) int i;
         for (i = 0; i < countryCount; i++) {
             countries[i] = new WorldInfo();
-            countries[i].flag = buffer.gSmart1or2();
+            countries[i].flag = buffer.gsmarts();
             countries[i].name = buffer.gjstr2();
         }
-        minId = buffer.gSmart1or2();
-        maxId = buffer.gSmart1or2();
-        size = buffer.gSmart1or2();
+        minId = buffer.gsmarts();
+        maxId = buffer.gsmarts();
+        size = buffer.gsmarts();
         worlds = new World[maxId + 1 - minId];
         for (i = 0; i < size; i++) {
-            @Pc(77) int offset = buffer.gSmart1or2();
+            @Pc(77) int offset = buffer.gsmarts();
             @Pc(85) World world = worlds[offset] = new World();
             world.country = buffer.g1();
             world.flags = buffer.g4();
@@ -209,7 +209,7 @@ public class WorldList {
     @OriginalMember(owner = "client!fh", name = "a", descriptor = "(Lclient!wa;I)V")
     public static void decodePlayers(@OriginalArg(0) Buffer arg0) {
         for (@Pc(7) int local7 = 0; local7 < size; local7++) {
-            @Pc(18) int local18 = arg0.gSmart1or2();
+            @Pc(18) int local18 = arg0.gsmarts();
             @Pc(22) int local22 = arg0.g2();
             if (local22 == 65535) {
                 local22 = -1;

@@ -1980,9 +1980,9 @@ public final class GlModel extends Model {
 			}
 		} else {
 			for (local25 = 0; local25 < this.anInt5297; local25++) {
-				aClass3_Sub15_8.p4le(this.aShortArray77[local25]);
-				aClass3_Sub15_8.p4le(this.aShortArray82[local25]);
-				aClass3_Sub15_8.p4le(this.aShortArray83[local25]);
+				aClass3_Sub15_8.ip4(this.aShortArray77[local25]);
+				aClass3_Sub15_8.ip4(this.aShortArray82[local25]);
+				aClass3_Sub15_8.ip4(this.aShortArray83[local25]);
 			}
 		}
 		if (!GlRenderer.arbVboSupported) {
@@ -2360,9 +2360,9 @@ public final class GlModel extends Model {
 							break;
 						}
 						aClass3_Sub15_8.offset = local109 * local1;
-						aClass3_Sub15_8.p4le(local71);
-						aClass3_Sub15_8.p4le(local78);
-						aClass3_Sub15_8.p4le(local85);
+						aClass3_Sub15_8.ip4(local71);
+						aClass3_Sub15_8.ip4(local78);
+						aClass3_Sub15_8.ip4(local85);
 					}
 				}
 			}

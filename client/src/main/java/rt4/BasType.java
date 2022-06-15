@@ -141,7 +141,7 @@ public final class BasType {
 			@Pc(306) int bodyId = arg1.g1();
 			this.modelRotateTranslate[bodyId] = new int[6];
 			for (@Pc(314) int type = 0; type < 6; type++) {
-				this.modelRotateTranslate[bodyId][type] = arg1.g2s();
+				this.modelRotateTranslate[bodyId][type] = arg1.g2b();
 			}
 		} else if (opcode == 29) {
 			this.anInt1038 = arg1.g1();
@@ -152,13 +152,13 @@ public final class BasType {
 		} else if (opcode == 32) {
 			this.anInt1040 = arg1.g2();
 		} else if (opcode == 33) {
-			this.anInt1064 = arg1.g2s();
+			this.anInt1064 = arg1.g2b();
 		} else if (opcode == 34) {
 			this.anInt1065 = arg1.g1();
 		} else if (opcode == 35) {
 			this.anInt1063 = arg1.g2();
 		} else if (opcode == 36) {
-			this.anInt1041 = arg1.g2s();
+			this.anInt1041 = arg1.g2b();
 		} else if (opcode == 37) {
 			this.anInt1032 = arg1.g1();
 		} else if (opcode == 38) {

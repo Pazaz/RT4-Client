@@ -569,8 +569,8 @@ public final class Component {
 		this.type = arg0.g1();
 		this.anInt530 = arg0.g1();
 		this.clientCode = arg0.g2();
-		this.baseX = arg0.g2s();
-		this.baseY = arg0.g2s();
+		this.baseX = arg0.g2b();
+		this.baseY = arg0.g2b();
 		this.baseWidth = arg0.g2();
 		this.baseHeight = arg0.g2();
 		this.dynamicWidthValue = 0;
@@ -654,8 +654,8 @@ public final class Component {
 			for (local364 = 0; local364 < 20; local364++) {
 				@Pc(371) int local371 = arg0.g1();
 				if (local371 == 1) {
-					this.anIntArray41[local364] = arg0.g2s();
-					this.anIntArray47[local364] = arg0.g2s();
+					this.anIntArray41[local364] = arg0.g2b();
+					this.anIntArray47[local364] = arg0.g2b();
 					this.anIntArray36[local364] = arg0.g4();
 				} else {
 					this.anIntArray36[local364] = -1;
@@ -734,8 +734,8 @@ public final class Component {
 			}
 			this.textAntiMacro = arg0.g1() == 1;
 			this.color = arg0.g4();
-			this.anInt512 = arg0.g2s();
-			this.anInt516 = arg0.g2s();
+			this.anInt512 = arg0.g2b();
+			this.anInt516 = arg0.g2b();
 			local175 = arg0.g1();
 			if (local175 == 1) {
 				local164 |= 0x40000000;
@@ -1004,14 +1004,14 @@ public final class Component {
 			buffer.gjstr();
 		}
 		this.clientCode = buffer.g2();
-		this.baseX = buffer.g2s();
-		this.baseY = buffer.g2s();
+		this.baseX = buffer.g2b();
+		this.baseY = buffer.g2b();
 		this.baseWidth = buffer.g2();
 		this.baseHeight = buffer.g2();
-		this.dynamicWidthValue = buffer.g1s();
-		this.dynamicHeightValue = buffer.g1s();
-		this.yMode = buffer.g1s();
-		this.xMode = buffer.g1s();
+		this.dynamicWidthValue = buffer.g1b();
+		this.dynamicHeightValue = buffer.g1b();
+		this.yMode = buffer.g1b();
+		this.xMode = buffer.g1b();
 		this.layer = buffer.g2();
 		if (this.layer == 65535) {
 			this.layer = -1;
@@ -1043,8 +1043,8 @@ public final class Component {
 			if (this.modelId == 65535) {
 				this.modelId = -1;
 			}
-			this.anInt495 = buffer.g2s();
-			this.anInt481 = buffer.g2s();
+			this.anInt495 = buffer.g2b();
+			this.anInt481 = buffer.g2b();
 			this.modelXAngle = buffer.g2();
 			this.modelYAngle = buffer.g2();
 			this.modelYOffset = buffer.g2();
@@ -1102,8 +1102,8 @@ public final class Component {
 				} else {
 					this.anIntArray46[local497] = local471;
 				}
-				this.aByteArray8[local497] = buffer.g1s();
-				this.aByteArray7[local497] = buffer.g1s();
+				this.aByteArray8[local497] = buffer.g1b();
+				this.aByteArray7[local497] = buffer.g1b();
 				local471 = buffer.g1();
 			}
 		}

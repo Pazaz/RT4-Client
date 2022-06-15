@@ -21,7 +21,7 @@ public final class Js5Compression {
 			throw new RuntimeException();
 		} else if (type == 0) {
 			@Pc(53) byte[] bytes = new byte[len];
-			buffer.gBytes(len, bytes);
+			buffer.gdata(len, bytes);
 			return bytes;
 		} else {
 			@Pc(65) int uncompressedLen = buffer.g4();

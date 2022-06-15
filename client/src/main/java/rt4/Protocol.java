@@ -69,11 +69,11 @@ public class Protocol {
                 ChangeLocRequest.push(Player.level, local45, local19, local39, -1, -1, local27, local23, 0);
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_33) {
-            int local15 = inboundBuffer.g2le();
+            int local15 = inboundBuffer.ig2();
             int local23 = inboundBuffer.g1();
             int local27 = (local23 & 0x7) + Static180.currentChunkZ;
             int local19 = (local23 >> 4 & 0x7) + Static115.currentChunkX;
-            int local31 = inboundBuffer.g2sub();
+            int local31 = inboundBuffer.g2add();
             if (local19 >= 0 && local27 >= 0 && local19 < 104 && local27 < 104) {
                 @Pc(122) ObjStack local122 = new ObjStack();
                 local122.anInt5550 = local31;
@@ -88,9 +88,9 @@ public class Protocol {
             int local15 = inboundBuffer.g1();
             int local23 = Static115.currentChunkX * 2 + (local15 >> 4 & 0xF);
             int local19 = (local15 & 0xF) + Static180.currentChunkZ * 2;
-            int local27 = local23 + inboundBuffer.g1s();
-            int local31 = inboundBuffer.g1s() + local19;
-            int local39 = inboundBuffer.g2s();
+            int local27 = local23 + inboundBuffer.g1b();
+            int local31 = inboundBuffer.g1b() + local19;
+            int local39 = inboundBuffer.g2b();
             int local45 = inboundBuffer.g2();
             int local218 = inboundBuffer.g1() * 4;
             int local224 = inboundBuffer.g1() * 4;
@@ -131,19 +131,19 @@ public class Protocol {
             int local31 = inboundBuffer.g1();
             int local39 = Static115.currentChunkX + (local31 >> 4 & 0x7);
             int local45 = (local31 & 0x7) + Static180.currentChunkZ;
-            int local218 = inboundBuffer.g2sub();
+            int local218 = inboundBuffer.g2add();
             if (local39 >= 0 && local45 >= 0 && local39 < 104 && local45 < 104) {
                 ChangeLocRequest.push(Player.level, local45, local19, local39, -1, local218, local27, local23, 0);
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_20) {
-            int local15 = inboundBuffer.g1ssub();
+            int local15 = inboundBuffer.g1sub();
             int local23 = (local15 >> 4 & 0x7) + Static115.currentChunkX;
             int local19 = Static180.currentChunkZ + (local15 & 0x7);
-            int local27 = inboundBuffer.g1ssub();
+            int local27 = inboundBuffer.g1sub();
             int local31 = local27 >> 2;
             int local39 = local27 & 0x3;
             int local45 = Loc.LAYERS[local31];
-            int local218 = inboundBuffer.g2le();
+            int local218 = inboundBuffer.ig2();
             if (local218 == 65535) {
                 local218 = -1;
             }
@@ -155,14 +155,14 @@ public class Protocol {
             int local27 = inboundBuffer.g1();
             int local31 = (local27 >> 4 & 0x7) + Static115.currentChunkX;
             int local39 = (local27 & 0x7) + Static180.currentChunkZ;
-            @Pc(605) byte local605 = inboundBuffer.p1sub();
-            @Pc(609) byte local609 = inboundBuffer.p1sub();
-            @Pc(613) byte local613 = inboundBuffer.g1sub();
-            int local228 = inboundBuffer.g2sub();
-            int local232 = inboundBuffer.g2le();
-            @Pc(625) byte local625 = inboundBuffer.g1s();
+            @Pc(605) byte local605 = inboundBuffer.g1badd();
+            @Pc(609) byte local609 = inboundBuffer.g1badd();
+            @Pc(613) byte local613 = inboundBuffer.g1bsub();
+            int local228 = inboundBuffer.g2add();
+            int local232 = inboundBuffer.ig2();
+            @Pc(625) byte local625 = inboundBuffer.g1b();
             int local247 = inboundBuffer.g2();
-            int local633 = inboundBuffer.g2lesadd();
+            int local633 = inboundBuffer.ig2badd();
             if (!GlRenderer.enabled) {
                 SceneGraph.method2574(local625, local247, local633, local232, local39, local613, local19, local605, local31, local23, local609, local228);
             }
@@ -187,12 +187,12 @@ public class Protocol {
                 }
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_135) {
-            int local15 = inboundBuffer.g2leadd();
+            int local15 = inboundBuffer.ig2add();
             int local23 = inboundBuffer.g1neg();
             int local27 = Static180.currentChunkZ + (local23 & 0x7);
             int local19 = (local23 >> 4 & 0x7) + Static115.currentChunkX;
-            int local31 = inboundBuffer.g2le();
-            int local39 = inboundBuffer.g2le();
+            int local31 = inboundBuffer.ig2();
+            int local39 = inboundBuffer.ig2();
             if (local19 >= 0 && local27 >= 0 && local19 < 104 && local27 < 104 && PlayerList.selfId != local15) {
                 @Pc(812) ObjStack local812 = new ObjStack();
                 local812.anInt5550 = local31;
@@ -207,9 +207,9 @@ public class Protocol {
             int local15 = inboundBuffer.g1();
             int local23 = Static115.currentChunkX + (local15 >> 4 & 0x7);
             int local19 = (local15 & 0x7) + Static180.currentChunkZ;
-            int local27 = local23 + inboundBuffer.g1s();
-            int local31 = inboundBuffer.g1s() + local19;
-            int local39 = inboundBuffer.g2s();
+            int local27 = local23 + inboundBuffer.g1b();
+            int local31 = inboundBuffer.g1b() + local19;
+            int local39 = inboundBuffer.g2b();
             int local45 = inboundBuffer.g2();
             int local218 = inboundBuffer.g1() * 4;
             int local224 = inboundBuffer.g1() * 4;
@@ -233,12 +233,12 @@ public class Protocol {
             int local15 = inboundBuffer.g1();
             int local19 = Static180.currentChunkZ * 2 + (local15 & 0xF);
             int local23 = Static115.currentChunkX * 2 + (local15 >> 4 & 0xF);
-            int local27 = inboundBuffer.g1s() + local23;
-            int local31 = inboundBuffer.g1s() + local19;
-            int local39 = inboundBuffer.g2s();
-            int local45 = inboundBuffer.g2s();
+            int local27 = inboundBuffer.g1b() + local23;
+            int local31 = inboundBuffer.g1b() + local19;
+            int local39 = inboundBuffer.g2b();
+            int local45 = inboundBuffer.g2b();
             int local218 = inboundBuffer.g2();
-            int local224 = inboundBuffer.g1s();
+            int local224 = inboundBuffer.g1b();
             int local228 = inboundBuffer.g1() * 4;
             int local232 = inboundBuffer.g2();
             int local236 = inboundBuffer.g2();
@@ -315,7 +315,7 @@ public class Protocol {
                 }
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_240) {
-            int local15 = inboundBuffer.g1ssub();
+            int local15 = inboundBuffer.g1sub();
             int local19 = Static180.currentChunkZ + (local15 & 0x7);
             int local23 = (local15 >> 4 & 0x7) + Static115.currentChunkX;
             int local27 = inboundBuffer.g2();
@@ -350,18 +350,18 @@ public class Protocol {
         @Pc(151) int local151;
         @Pc(169) int local169;
         if (!Static230.dynamicMapRegion) {
-            local13 = inboundBuffer.g2sub();
+            local13 = inboundBuffer.g2add();
             local20 = (length - inboundBuffer.offset) / 16;
             LoginManager.regionsXteaKeys = new int[local20][4];
             for (local26 = 0; local26 < local20; local26++) {
                 for (local31 = 0; local31 < 4; local31++) {
-                    LoginManager.regionsXteaKeys[local26][local31] = inboundBuffer.g4me();
+                    LoginManager.regionsXteaKeys[local26][local31] = inboundBuffer.mg4();
                 }
             }
-            local26 = inboundBuffer.g1ssub();
+            local26 = inboundBuffer.g1sub();
             local31 = inboundBuffer.g2();
-            local60 = inboundBuffer.g2sub();
-            local64 = inboundBuffer.g2sub();
+            local60 = inboundBuffer.g2add();
+            local64 = inboundBuffer.g2add();
             LoginManager.regionBitPacked = new int[local20];
             LoginManager.mapFilesBuffer = new byte[local20][];
             LoginManager.npcSpawnsFilesBuffer = null;
@@ -400,10 +400,10 @@ public class Protocol {
             LoginManager.method2463(local26, local60, local31, local64, false, local13);
             return;
         }
-        local13 = inboundBuffer.g2leadd();
-        local20 = inboundBuffer.g2leadd();
-        local26 = inboundBuffer.g1ssub();
-        local31 = inboundBuffer.g2leadd();
+        local13 = inboundBuffer.ig2add();
+        local20 = inboundBuffer.ig2add();
+        local26 = inboundBuffer.g1sub();
+        local31 = inboundBuffer.ig2add();
         inboundBuffer.accessBits();
         @Pc(391) int local391;
         for (local60 = 0; local60 < 4; local60++) {
@@ -423,7 +423,7 @@ public class Protocol {
         LoginManager.regionsXteaKeys = new int[local60][4];
         for (local64 = 0; local64 < local60; local64++) {
             for (local391 = 0; local391 < 4; local391++) {
-                LoginManager.regionsXteaKeys[local64][local391] = inboundBuffer.g4me();
+                LoginManager.regionsXteaKeys[local64][local391] = inboundBuffer.mg4();
             }
         }
         local64 = inboundBuffer.g2();
@@ -477,7 +477,7 @@ public class Protocol {
         @Pc(17) int int2;
         @Pc(24) int local24;
         if ((flags & 0x80) != 0) {
-            int1 = inboundBuffer.g2le();
+            int1 = inboundBuffer.ig2();
             int2 = inboundBuffer.g1();
             @Pc(21) int local21 = inboundBuffer.g1();
             local24 = inboundBuffer.offset;
@@ -499,7 +499,7 @@ public class Protocol {
                 }
                 if (!ignore && Player.inTutorialIsland == 0) {
                     chatBuffer.offset = 0;
-                    inboundBuffer.gBytesRev(local21, chatBuffer.data);
+                    inboundBuffer.igdata(local21, chatBuffer.data);
                     chatBuffer.offset = 0;
                     @Pc(106) int local106 = -1;
                     @Pc(127) JagString message;
@@ -527,11 +527,11 @@ public class Protocol {
             inboundBuffer.offset = local24 + local21;
         }
         if ((flags & 0x1) != 0) {
-            int1 = inboundBuffer.gSmart1or2();
+            int1 = inboundBuffer.gsmarts();
             int2 = inboundBuffer.g1add();
             player.addHit(int2, client.loop, int1);
             player.hitpointsBarVisibleUntil = client.loop + 300;
-            player.hitpointsBar = inboundBuffer.g1ssub();
+            player.hitpointsBar = inboundBuffer.g1sub();
         }
         if ((flags & 0x8) != 0) {
             int1 = inboundBuffer.g2();
@@ -545,12 +545,12 @@ public class Protocol {
             int1 = inboundBuffer.g1add();
             @Pc(309) byte[] bytes = new byte[int1];
             @Pc(314) Buffer buffer = new Buffer(bytes);
-            inboundBuffer.gBytes(int1, bytes);
+            inboundBuffer.gdata(int1, bytes);
             PlayerList.appearanceCache[id] = buffer;
             player.decodeAppearance(buffer);
         }
         if ((flags & 0x2) != 0) {
-            player.faceEntity = inboundBuffer.g2sub();
+            player.faceEntity = inboundBuffer.g2add();
             if (player.faceEntity == 65535) {
                 player.faceEntity = -1;
             }
@@ -560,8 +560,8 @@ public class Protocol {
             player.anInt3428 = inboundBuffer.g1();
             player.anInt3416 = inboundBuffer.g1add();
             player.anInt3392 = inboundBuffer.g1();
-            player.anInt3395 = inboundBuffer.g2le() + client.loop;
-            player.anInt3386 = inboundBuffer.g2le() + client.loop;
+            player.anInt3395 = inboundBuffer.ig2() + client.loop;
+            player.anInt3386 = inboundBuffer.ig2() + client.loop;
             player.anInt3431 = inboundBuffer.g1neg();
             player.movementQueueSize = 1;
             player.anInt3405 = 0;
@@ -579,8 +579,8 @@ public class Protocol {
             player.chatLoops = 150;
         }
         if ((flags & 0x200) != 0) {
-            int1 = inboundBuffer.gSmart1or2();
-            int2 = inboundBuffer.g1ssub();
+            int1 = inboundBuffer.gsmarts();
+            int2 = inboundBuffer.g1sub();
             player.addHit(int2, client.loop, int1);
         }
         if ((flags & 0x800) != 0) {
@@ -589,7 +589,7 @@ public class Protocol {
             @Pc(505) int[] delays = new int[int1];
             @Pc(508) int[] slotMasks = new int[int1];
             for (@Pc(510) int i = 0; i < int1; i++) {
-                @Pc(521) int seqId = inboundBuffer.g2le();
+                @Pc(521) int seqId = inboundBuffer.ig2();
                 if (seqId == 65535) {
                     seqId = -1;
                 }
@@ -600,11 +600,11 @@ public class Protocol {
             Player.method865(delays, seqIds, player, slotMasks);
         }
         if ((flags & 0x100) != 0) {
-            int1 = inboundBuffer.g2le();
+            int1 = inboundBuffer.ig2();
             if (int1 == 65535) {
                 int1 = -1;
             }
-            int2 = inboundBuffer.g4me();
+            int2 = inboundBuffer.mg4();
             @Pc(573) boolean local573 = int1 == -1 || player.spotAnimId == -1 || SeqTypeList.get(SpotAnimTypeList.get(int1).seqId).forcedPriority >= SeqTypeList.get(SpotAnimTypeList.get(player.spotAnimId).seqId).forcedPriority;
             if (local573) {
                 player.spotAnimStart = (int2 & 0xFFFF) + client.loop;
@@ -629,7 +629,7 @@ public class Protocol {
         }
         if ((flags & 0x40) != 0) {
             player.faceX = inboundBuffer.g2();
-            player.faceY = inboundBuffer.g2leadd();
+            player.faceY = inboundBuffer.ig2add();
         }
     }
 
@@ -875,8 +875,8 @@ public class Protocol {
         Static201.anInt1862 = 0;
 
         if (opcode == ServerProt.VARP_SMALL) {
-            int id = inboundBuffer.g2sub();
-            @Pc(137) byte value = inboundBuffer.g1sneg();
+            int id = inboundBuffer.g2add();
+            @Pc(137) byte value = inboundBuffer.g1bneg();
             VarpDomain.set(value, id);
             opcode = -1;
             return true;
@@ -1012,8 +1012,8 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.IF_SETTEXT3) {
-            int id = inboundBuffer.g2le();
-            int tracknum = inboundBuffer.g2sub();
+            int id = inboundBuffer.ig2();
+            int tracknum = inboundBuffer.g2add();
             JagString value = inboundBuffer.gjstr();
             setVerifyId(tracknum);
             DelayedStateChange.method3498(value, id);
@@ -1021,7 +1021,7 @@ public class Protocol {
             return true;
         } else if (opcode == ServerProt.BATCH_LOCATION_PACKET) {
             Static180.currentChunkZ = inboundBuffer.g1add();
-            Static115.currentChunkX = inboundBuffer.g1ssub();
+            Static115.currentChunkX = inboundBuffer.g1sub();
             while (length > inboundBuffer.offset) {
                 opcode = inboundBuffer.g1();
                 readLocationPacket();
@@ -1033,8 +1033,8 @@ public class Protocol {
             LoginManager.mapFlagX = 0;
             return true;
         } else if (opcode == ServerProt.IF_SETSCROLLPOS) {
-            int id = inboundBuffer.g4me();
-            int pos = inboundBuffer.g2le();
+            int id = inboundBuffer.mg4();
+            int pos = inboundBuffer.ig2();
             int tracknum = inboundBuffer.g2();
             setVerifyId(tracknum);
             DelayedStateChange.method3938(pos, id);
@@ -1042,7 +1042,7 @@ public class Protocol {
             return true;
         } else if (opcode == ServerProt.CLAN_QUICK_CHAT) {
             long name37 = inboundBuffer.g8();
-            inboundBuffer.g1s();
+            inboundBuffer.g1b();
             long clan37 = inboundBuffer.g8();
             int top = inboundBuffer.g2();
             int bot = inboundBuffer.g3();
@@ -1102,7 +1102,7 @@ public class Protocol {
             long name37 = inboundBuffer.g8();
             ClanChat.name = Base37.decode37(name37);
             ClanChat.owner = Base37.decode37(owner37);
-            ClanChat.minKick = inboundBuffer.g1s();
+            ClanChat.minKick = inboundBuffer.g1b();
             int clanSize = inboundBuffer.g1();
             if (clanSize == 255) {
                 opcode = -1;
@@ -1116,7 +1116,7 @@ public class Protocol {
                 members[i].key = inboundBuffer.g8();
                 members[i].username = Base37.decode37(members[i].key);
                 members[i].world = inboundBuffer.g2();
-                members[i].rank = inboundBuffer.g1s();
+                members[i].rank = inboundBuffer.g1b();
                 members[i].worldName = inboundBuffer.gjstr();
                 if (members[i].key == Player.name37) {
                     ClanChat.rank = members[i].rank;
@@ -1143,7 +1143,7 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.LAST_LOGIN_INFO) {
-            int ip32 = inboundBuffer.g4rme();
+            int ip32 = inboundBuffer.img4();
             Player.lastLogAddress = GameShell.signLink.getReverseDns(ip32);
             opcode = -1;
             return true;
@@ -1154,7 +1154,7 @@ public class Protocol {
         } else if (opcode == ServerProt.IF_SETTEXT2) {
             int tracknum = inboundBuffer.g2();
             JagString text = inboundBuffer.gjstr();
-            int id = inboundBuffer.g2leadd();
+            int id = inboundBuffer.ig2add();
             setVerifyId(tracknum);
             DelayedStateChange.method3498(text, id);
             opcode = -1;
@@ -1166,7 +1166,7 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.SET_INTERACTION) {
-            int cursor = inboundBuffer.g2leadd();
+            int cursor = inboundBuffer.ig2add();
             if (cursor == 65535) {
                 cursor = -1;
             }
@@ -1185,22 +1185,22 @@ public class Protocol {
             return true;
         } else if (opcode == ServerProt.VARP_LARGE) {
             int value = inboundBuffer.g4();
-            int id = inboundBuffer.g2sub();
+            int id = inboundBuffer.g2add();
             VarpDomain.set(value, id);
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.IF_SETHIDE) {
             int parent = inboundBuffer.g1neg();
             int tracknum = inboundBuffer.g2();
-            int reset = inboundBuffer.g4le();
+            int reset = inboundBuffer.ig4();
             setVerifyId(tracknum);
             DelayedStateChange.method2905(reset, parent);
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.IF_OPENSUB) {
-            int parent = inboundBuffer.g2leadd();
+            int parent = inboundBuffer.ig2add();
             int reset = inboundBuffer.g1add();
-            int tracknum = inboundBuffer.g2leadd();
+            int tracknum = inboundBuffer.ig2add();
             setVerifyId(tracknum);
             if (reset == 2) {
                 WorldMap.reset();
@@ -1215,9 +1215,9 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.CLIENT_SETVARC_LARGE) {
-            int tracknum = inboundBuffer.g2leadd();
+            int tracknum = inboundBuffer.ig2add();
             int value = inboundBuffer.g4();
-            int id = inboundBuffer.g2sub();
+            int id = inboundBuffer.g2add();
             setVerifyId(tracknum);
             DelayedStateChange.updateVarC(id, value);
             opcode = -1;
@@ -1251,22 +1251,22 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.IF_SETANIM) {
-            int id = inboundBuffer.g4me();
-            int value = inboundBuffer.g2les();
-            int tracknum = inboundBuffer.g2sub();
+            int id = inboundBuffer.mg4();
+            int value = inboundBuffer.ig2b();
+            int tracknum = inboundBuffer.g2add();
             setVerifyId(tracknum);
             DelayedStateChange.method3893(id, value);
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.WIDGETSTRUCT_SETTING) {
-            int value = inboundBuffer.g2leadd();
-            int parent = inboundBuffer.g4le();
-            int tracknum = inboundBuffer.g2sub();
-            int end = inboundBuffer.g2le();
+            int value = inboundBuffer.ig2add();
+            int parent = inboundBuffer.ig4();
+            int tracknum = inboundBuffer.g2add();
+            int end = inboundBuffer.ig2();
             if (end == 65535) {
                 end = -1;
             }
-            int start = inboundBuffer.g2sub();
+            int start = inboundBuffer.g2add();
             if (start == 65535) {
                 start = -1;
             }
@@ -1289,9 +1289,9 @@ public class Protocol {
             return true;
         } else if (opcode == ServerProt.SPOTANIM_SPECIFIC) {
             int delay = inboundBuffer.g2();
-            int height = inboundBuffer.g2le();
-            int target = inboundBuffer.g4rme();
-            int gfxId = inboundBuffer.g2leadd();
+            int height = inboundBuffer.ig2();
+            int target = inboundBuffer.img4();
+            int gfxId = inboundBuffer.ig2add();
             if (target >> 30 == 0) {
                 @Pc(1994) SeqType seq;
                 if (target >> 29 != 0) {
@@ -1372,10 +1372,10 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.INTERFACE_ANIMATE_ROTATE) {
-            int ptr = inboundBuffer.g4me();
-            int tracknum = inboundBuffer.g2sub();
+            int ptr = inboundBuffer.mg4();
+            int tracknum = inboundBuffer.g2add();
             int pitchStep = inboundBuffer.g2();
-            int yawStep = inboundBuffer.g2sub();
+            int yawStep = inboundBuffer.g2add();
             setVerifyId(tracknum);
             DelayedStateChange.setComponentModelRotationSpeedServer(yawStep + (pitchStep << 16), ptr);
             opcode = -1;
@@ -1383,7 +1383,7 @@ public class Protocol {
         } else if (opcode == ServerProt.UPDATE_STAT) {
             InterfaceList.redrawActiveInterfaces();
             int level = inboundBuffer.g1add();
-            int xp = inboundBuffer.g4rme();
+            int xp = inboundBuffer.img4();
             int skill = inboundBuffer.g1();
             PlayerSkillXpTable.experience[skill] = xp;
             PlayerSkillXpTable.boostedLevels[skill] = level;
@@ -1415,7 +1415,7 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.CAM_FORCEANGLE) {
-            int yaw = inboundBuffer.g2le();
+            int yaw = inboundBuffer.ig2();
             int tracknum = inboundBuffer.g2();
             int pitch = inboundBuffer.g2();
             setVerifyId(tracknum);
@@ -1430,9 +1430,9 @@ public class Protocol {
             return true;
         } else if (opcode == ServerProt.IF_SETANGLE) {
             int pitch = inboundBuffer.g2();
-            int tracknum = inboundBuffer.g2sub();
-            int scale = inboundBuffer.g2leadd();
-            int yaw = inboundBuffer.g2leadd();
+            int tracknum = inboundBuffer.g2add();
+            int scale = inboundBuffer.ig2add();
+            int yaw = inboundBuffer.ig2add();
             int ptr = inboundBuffer.g4();
             setVerifyId(tracknum);
             DelayedStateChange.updateView(scale, ptr, yaw, pitch);
@@ -1457,7 +1457,7 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.INTERFACE_ITEMS_CLEAR) {
-            int id = inboundBuffer.g4me();
+            int id = inboundBuffer.mg4();
             @Pc(2666) Component component = InterfaceList.getComponent(id);
             for (int i = 0; i < component.objTypes.length; i++) {
                 component.objTypes[i] = -1;
@@ -1467,9 +1467,9 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.IF_SETMODEL) {
-            int id = inboundBuffer.g4le();
-            int tracknum = inboundBuffer.g2leadd();
-            int modelId = inboundBuffer.g2sub();
+            int id = inboundBuffer.ig4();
+            int tracknum = inboundBuffer.ig2add();
+            int modelId = inboundBuffer.g2add();
             if (modelId == 65535) {
                 modelId = -1;
             }
@@ -1482,7 +1482,7 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.TELEPORT_LOCAL_PLAYER) {
-            int pos1 = inboundBuffer.g1ssub();
+            int pos1 = inboundBuffer.g1sub();
             int flags = inboundBuffer.g1add();
             int pos2 = inboundBuffer.g1();
             Player.level = flags >> 1;
@@ -1639,9 +1639,9 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.SWITCH_WIDGET) {
-            int source = inboundBuffer.g4rme();
-            int tracknum = inboundBuffer.g2sub();
-            int target = inboundBuffer.g4rme();
+            int source = inboundBuffer.img4();
+            int tracknum = inboundBuffer.g2add();
+            int target = inboundBuffer.img4();
             setVerifyId(tracknum);
             @Pc(3449) ComponentPointer src = (ComponentPointer) InterfaceList.openInterfaces.get(source);
             ComponentPointer tgt = (ComponentPointer) InterfaceList.openInterfaces.get(target);
@@ -1682,9 +1682,9 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.IF_SETCOLOUR) {
-            int id = inboundBuffer.g4rme();
-            int tracknum = inboundBuffer.g2sub();
-            int color = inboundBuffer.g2leadd();
+            int id = inboundBuffer.img4();
+            int tracknum = inboundBuffer.g2add();
+            int color = inboundBuffer.ig2add();
             setVerifyId(tracknum);
             DelayedStateChange.setColor(color, id);
             opcode = -1;
@@ -1699,9 +1699,9 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.CLIENT_SETVARC_SMALL) {
-            int tracknum = inboundBuffer.g2le();
+            int tracknum = inboundBuffer.ig2();
             int value = inboundBuffer.g1neg();
-            int id = inboundBuffer.g2leadd();
+            int id = inboundBuffer.ig2add();
             setVerifyId(tracknum);
             DelayedStateChange.updateVarC(id, value);
             opcode = -1;
@@ -1719,14 +1719,14 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.DELETE_INVENTORY) {
-            int id = inboundBuffer.g2le();
+            int id = inboundBuffer.ig2();
             Inv.delete(id);
             Inv.updatedInventories[Inv.updatedInventoriesWriterIndex++ & 0x1F] = id & 0x7FFF;
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.NPC_ANIM_SPECIFIC) {
-            int npcId = inboundBuffer.g2le();
-            int value = inboundBuffer.g1ssub();
+            int npcId = inboundBuffer.ig2();
+            int value = inboundBuffer.g1sub();
             int seqId = inboundBuffer.g2();
             @Pc(3766) Npc npc = NpcList.npcs[npcId];
             if (npc != null) {
@@ -1736,7 +1736,7 @@ public class Protocol {
             return true;
         } else if (opcode == ServerProt.UPDATE_RUNWEIGHT) {
             InterfaceList.redrawActiveInterfaces();
-            Player.weight = inboundBuffer.g2s();
+            Player.weight = inboundBuffer.g2b();
             InterfaceList.miscTransmitAt = InterfaceList.transmitTimer;
             opcode = -1;
             return true;
@@ -1763,25 +1763,25 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.GENERATE_CHAT_HEAD_FROM_BODY) {
-            int tracknum = inboundBuffer.g2sub();
-            int id = inboundBuffer.g4me();
-            int value1 = inboundBuffer.g2leadd();
-            int value2 = inboundBuffer.g2le();
-            int value3 = inboundBuffer.g2leadd();
+            int tracknum = inboundBuffer.g2add();
+            int id = inboundBuffer.mg4();
+            int value1 = inboundBuffer.ig2add();
+            int value2 = inboundBuffer.ig2();
+            int value3 = inboundBuffer.ig2add();
             setVerifyId(tracknum);
             DelayedStateChange.updateComponentModel(value1, 7, id, value2 << 16 | value3);
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.VARBIT_SMALL) {
             int value = inboundBuffer.g1add();
-            int id = inboundBuffer.g2le();
+            int id = inboundBuffer.ig2();
             VarpDomain.setVarbit(value, id);
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.IF_OPENTOP) {
             int type = inboundBuffer.g1();
-            int pointer = inboundBuffer.g4me();
-            int tracknum = inboundBuffer.g2sub();
+            int pointer = inboundBuffer.mg4();
+            int tracknum = inboundBuffer.g2add();
             int component = inboundBuffer.g2();
             setVerifyId(tracknum);
             ComponentPointer ptr = (ComponentPointer) InterfaceList.openInterfaces.get(pointer);
@@ -1862,16 +1862,16 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.IF_SETPOSITION) {
-            int tracknum = inboundBuffer.g2sub();
-            int ptr = inboundBuffer.g4le();
-            int x = inboundBuffer.g2s();
-            int y = inboundBuffer.g2sadd();
+            int tracknum = inboundBuffer.g2add();
+            int ptr = inboundBuffer.ig4();
+            int x = inboundBuffer.g2b();
+            int y = inboundBuffer.g2badd();
             setVerifyId(tracknum);
             DelayedStateChange.method4666(x, ptr, y);
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.LOC_ANIM_SPECIFIC) {
-            int slot = inboundBuffer.g1ssub();
+            int slot = inboundBuffer.g1sub();
             int type = slot >> 2;
             int rotation = slot & 0x3;
             int type2 = Loc.LAYERS[type];
@@ -1934,7 +1934,7 @@ public class Protocol {
             return true;
         } else if (opcode == ServerProt.MESSAGE_CLANCHANNEL) {
             long name37 = inboundBuffer.g8();
-            inboundBuffer.g1s();
+            inboundBuffer.g1b();
             long chat37 = inboundBuffer.g8();
             int top = inboundBuffer.g2();
             int bot = inboundBuffer.g3();
@@ -1993,8 +1993,8 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.IF_SETPLAYERHEAD) {
-            int tracknum = inboundBuffer.g2leadd();
-            int id = inboundBuffer.g4rme();
+            int tracknum = inboundBuffer.ig2add();
+            int id = inboundBuffer.img4();
             setVerifyId(tracknum);
             int set = 0;
             if (PlayerList.self.appearance != null) {
@@ -2004,16 +2004,16 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.IF_SETTEXT1) {
-            int id = inboundBuffer.g4me();
+            int id = inboundBuffer.mg4();
             JagString text = inboundBuffer.gjstr();
-            int tracknum = inboundBuffer.g2sub();
+            int tracknum = inboundBuffer.g2add();
             setVerifyId(tracknum);
             DelayedStateChange.method3617(text, id);
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.VARBIT_LARGE) {
-            int value = inboundBuffer.g4le();
-            int id = inboundBuffer.g2leadd();
+            int value = inboundBuffer.ig4();
+            int id = inboundBuffer.ig2add();
             VarpDomain.setVarbit(value, id);
             opcode = -1;
             return true;
@@ -2030,7 +2030,7 @@ public class Protocol {
                 component = InterfaceList.getComponent(componentHash);
             }
             while (inboundBuffer.offset < length) {
-                int slot = inboundBuffer.gSmart1or2();
+                int slot = inboundBuffer.gsmarts();
                 int amount = inboundBuffer.g2();
                 int id = 0;
                 if (amount != 0) {
@@ -2074,12 +2074,12 @@ public class Protocol {
             StockMarketManager.transmitAt = InterfaceList.transmitTimer;
             return true;
         } else if (opcode == ServerProt.IF_SETNPCHEAD) {
-            int npcId = inboundBuffer.g2sub();
-            int id = inboundBuffer.g4le();
+            int npcId = inboundBuffer.g2add();
+            int id = inboundBuffer.ig4();
             if (npcId == 65535) {
                 npcId = -1;
             }
-            int tracknum = inboundBuffer.g2le();
+            int tracknum = inboundBuffer.ig2();
             setVerifyId(tracknum);
             DelayedStateChange.updateComponentModel(-1, 2, id, npcId);
             opcode = -1;
@@ -2089,14 +2089,14 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.SET_INTERFACE_SETTINGS) {
-            int tracknum = inboundBuffer.g2le();
-            int end = inboundBuffer.g2le();
+            int tracknum = inboundBuffer.ig2();
+            int end = inboundBuffer.ig2();
             if (end == 65535) {
                 end = -1;
             }
             int pointer = inboundBuffer.g4();
-            int start = inboundBuffer.g2sub();
-            int accessMask = inboundBuffer.g4rme();
+            int start = inboundBuffer.g2add();
+            int accessMask = inboundBuffer.img4();
             if (start == 65535) {
                 start = -1;
             }
@@ -2125,7 +2125,7 @@ public class Protocol {
         } else if (opcode == ServerProt.UPDATE_CLAN) {
             long name37 = inboundBuffer.g8();
             int worldId = inboundBuffer.g2();
-            @Pc(5325) byte rights = inboundBuffer.g1s();
+            @Pc(5325) byte rights = inboundBuffer.g1b();
             boolean ignored = (Long.MIN_VALUE & name37) != 0L;
             if (ignored) {
                 if (ClanChat.size == 0) {
@@ -2191,12 +2191,12 @@ public class Protocol {
             return true;
         } else if (opcode == ServerProt.IF_SETOBJECT) {
             int slot = inboundBuffer.g4();
-            int id = inboundBuffer.g4me();
-            int itemId = inboundBuffer.g2leadd();
+            int id = inboundBuffer.mg4();
+            int itemId = inboundBuffer.ig2add();
             if (itemId == 65535) {
                 itemId = -1;
             }
-            int tracknum = inboundBuffer.g2le();
+            int tracknum = inboundBuffer.ig2();
             setVerifyId(tracknum);
             @Pc(5603) Component component = InterfaceList.getComponent(id);
             @Pc(5615) ObjType objType;
@@ -2241,7 +2241,7 @@ public class Protocol {
             Static14.method475(containerId);
             int total = inboundBuffer.g2();
             for (int slot = 0; slot < total; slot++) {
-                int amount = inboundBuffer.g1ssub();
+                int amount = inboundBuffer.g1sub();
                 if (amount == 255) {
                     amount = inboundBuffer.g4();
                 }
@@ -2269,7 +2269,7 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.MIDI_SONG) {
-            int id = inboundBuffer.g2leadd();
+            int id = inboundBuffer.ig2add();
             if (id == 65535) {
                 id = -1;
             }
@@ -2277,8 +2277,8 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.MIDI_JINGLE) {
-            int volume = inboundBuffer.g3le();
-            int id = inboundBuffer.g2le();
+            int volume = inboundBuffer.ig3();
+            int id = inboundBuffer.ig2();
             if (id == 65535) {
                 id = -1;
             }
@@ -2406,7 +2406,7 @@ public class Protocol {
                         anInt4762++;
                     }
                 }
-                outboundBuffer.p1len(outboundBuffer.offset - offset);
+                outboundBuffer.psize1(outboundBuffer.offset - offset);
                 if (MouseRecorder.instance.samples > type) {
                     MouseRecorder.instance.samples -= type;
                     for (i = 0; i < MouseRecorder.instance.samples; i++) {
@@ -2442,8 +2442,8 @@ public class Protocol {
                 button = 1;
             }
             outboundBuffer.p1isaac(75);
-            outboundBuffer.p2leadd(button << 15 | x);
-            outboundBuffer.p4me(i | type << 16);
+            outboundBuffer.ip2add(button << 15 | x);
+            outboundBuffer.mp4(i | type << 16);
         }
         if (Static16.anInt551 > 0) {
             Static16.anInt551--;
@@ -2464,7 +2464,7 @@ public class Protocol {
             Static197.aBoolean228 = false;
             outboundBuffer.p1isaac(21);
             outboundBuffer.p2add((int)Camera.pitchTarget);
-            outboundBuffer.p2le((int)Camera.yawTarget);
+            outboundBuffer.ip2((int)Camera.yawTarget);
         }
         if (GameShell.focus && !Static67.prevFocus) {
             Static67.prevFocus = true;
@@ -2680,7 +2680,7 @@ public class Protocol {
                         }
                         outboundBuffer.p1isaac(231);
                         outboundBuffer.p2(Static4.mouseOverInventoryObjectIndex);
-                        outboundBuffer.p4le2(Static118.clickedInventoryComponent.id);
+                        outboundBuffer.ip4(Static118.clickedInventoryComponent.id);
                         outboundBuffer.p2add(Static18.clickedInventoryIndex);
                         outboundBuffer.p1sub(inserting);
                     }
@@ -2752,9 +2752,9 @@ public class Protocol {
                                             } else if (Static125.anInt3096 == 2) {
                                                 if (MiniMenu.anInt1742 != -1) {
                                                     outboundBuffer.p1isaac(131);
-                                                    outboundBuffer.p4me(MiniMenu.anInt2512);
+                                                    outboundBuffer.mp4(MiniMenu.anInt2512);
                                                     outboundBuffer.p2add(Camera.originX + MiniMenu.anInt1742);
-                                                    outboundBuffer.p2leadd(MiniMenu.anInt506);
+                                                    outboundBuffer.ip2add(MiniMenu.anInt506);
                                                     outboundBuffer.p2add(MiniMenu.anInt2954 + Camera.originZ);
                                                     Cross.type = 1;
                                                     Cross.milliseconds = 0;
@@ -2957,13 +2957,13 @@ public class Protocol {
                 local47 = inboundBuffer.g1neg(); // Color
                 npc.addHit(local47, client.loop, local43);
                 npc.hitpointsBarVisibleUntil = client.loop + 300;
-                npc.hitpointsBar = inboundBuffer.g1ssub();
+                npc.hitpointsBar = inboundBuffer.g1sub();
             }
 
             boolean hasSecondaryHitsplat = (local18 & 0x2) != 0;
             if (hasSecondaryHitsplat) {
                 local43 = inboundBuffer.g1neg(); // Hit value
-                local47 = inboundBuffer.g1ssub(); // Color
+                local47 = inboundBuffer.g1sub(); // Color
                 npc.addHit(local47, client.loop, local43);
             }
 
@@ -2979,7 +2979,7 @@ public class Protocol {
 
             boolean hasFaceEntity = (local18 & 0x4) != 0;
             if (hasFaceEntity) {
-                npc.faceEntity = inboundBuffer.g2sub();
+                npc.faceEntity = inboundBuffer.g2add();
                 if (npc.faceEntity == 65535) {
                     npc.faceEntity = -1;
                 }
@@ -2987,11 +2987,11 @@ public class Protocol {
 
             boolean isKillingBlow = (local18 & 0x80) != 0;
             if (isKillingBlow) {
-                local43 = inboundBuffer.g2sub();
+                local43 = inboundBuffer.g2add();
                 if (local43 == 65535) {
                     local43 = -1;
                 }
-                local47 = inboundBuffer.g4le();
+                local47 = inboundBuffer.ig4();
                 @Pc(147) boolean local147 = local43 == -1 || npc.spotAnimId == -1 || SeqTypeList.get(SpotAnimTypeList.get(local43).seqId).forcedPriority >= SeqTypeList.get(SpotAnimTypeList.get(npc.spotAnimId).seqId).forcedPriority;
                 if (local147) {
                     npc.spotAnimId = local43;
@@ -3020,7 +3020,7 @@ public class Protocol {
                 if (npc.type.hasAreaSound()) {
                     AreaSoundManager.remove(npc);
                 }
-                npc.setNpcType(NpcTypeList.get(inboundBuffer.g2le()));
+                npc.setNpcType(NpcTypeList.get(inboundBuffer.ig2()));
                 npc.setSize(npc.type.size);
                 npc.anInt3365 = npc.type.basId;
                 if (npc.type.hasAreaSound()) {
@@ -3039,12 +3039,12 @@ public class Protocol {
                 @Pc(334) int[] local334 = new int[local43];
                 @Pc(337) int[] local337 = new int[local43];
                 for (@Pc(339) int i1 = 0; i1 < local43; i1++) {
-                    @Pc(350) int local350 = inboundBuffer.g2le();
+                    @Pc(350) int local350 = inboundBuffer.ig2();
                     if (local350 == 65535) {
                         local350 = -1;
                     }
                     local331[i1] = local350;
-                    local334[i1] = inboundBuffer.g1ssub();
+                    local334[i1] = inboundBuffer.g1sub();
                     local337[i1] = inboundBuffer.g2();
                 }
                 Static159.method3037(local337, npc, local334, local331);
@@ -3052,7 +3052,7 @@ public class Protocol {
 
             boolean hasFaceLocation = (local18 & 0x200) != 0;
             if (hasFaceLocation) {
-                npc.faceX = inboundBuffer.g2sub();
+                npc.faceX = inboundBuffer.g2add();
                 npc.faceY = inboundBuffer.g2();
             }
         }

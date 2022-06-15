@@ -9,7 +9,7 @@ import org.openrs2.deob.annotation.Pc;
 public final class HuffmanCodec {
 
 	@OriginalMember(owner = "client!fi", name = "c", descriptor = "[I")
-	public static final int[] anIntArray175 = new int[256];
+	public static final int[] crctable = new int[256];
 
 	@OriginalMember(owner = "client!fi", name = "b", descriptor = "[I")
 	private int[] anIntArray174;
@@ -21,16 +21,16 @@ public final class HuffmanCodec {
 	private final byte[] aByteArray22;
 
 	static {
-		for (@Pc(4) int local4 = 0; local4 < 256; local4++) {
-			@Pc(9) int local9 = local4;
-			for (@Pc(11) int local11 = 0; local11 < 8; local11++) {
-				if ((local9 & 0x1) == 1) {
-					local9 = local9 >>> 1 ^ 0xEDB88320;
+		for (@Pc(4) int i = 0; i < 256; i++) {
+			@Pc(9) int temp = i;
+			for (@Pc(11) int j = 0; j < 8; j++) {
+				if ((temp & 0x1) == 1) {
+					temp = temp >>> 1 ^ 0xEDB88320;
 				} else {
-					local9 >>>= 0x1;
+					temp >>>= 0x1;
 				}
 			}
-			anIntArray175[local4] = local9;
+			crctable[i] = temp;
 		}
 	}
 

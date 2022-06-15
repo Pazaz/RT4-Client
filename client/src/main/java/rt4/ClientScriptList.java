@@ -46,7 +46,7 @@ public class ClientScriptList {
             }
         }
         local42.offset = 0;
-        local12.name = local42.gjstrFast();
+        local12.name = local42.fastgjstr();
         local12.opcodes = new int[local70];
         local12.stringOperands = new JagString[local70];
         local107 = 0;

@@ -325,7 +325,7 @@ public final class VorbisSound extends Node {
 				local51 += local55;
 			} while (local55 >= 255);
 			@Pc(67) byte[] local67 = new byte[local51];
-			local4.gBytes(local51, local67);
+			local4.gdata(local51, local67);
 			this.aByteArrayArray10[local46] = local67;
 		}
 	}

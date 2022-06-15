@@ -220,8 +220,8 @@ public final class Player extends PathingEntity {
 		this.anInt1651 = local20 >> 6 & 0x3;
 		this.xFine += (this.getSize() - local41) * 64;
 		this.zFine += (this.getSize() - local41) * 64;
-		this.anInt1669 = arg0.g1s();
-		this.anInt1649 = arg0.g1s();
+		this.anInt1669 = arg0.g1b();
+		this.anInt1649 = arg0.g1b();
 		this.anInt1650 = 0;
 		@Pc(111) int local111;
 		@Pc(127) int local127;

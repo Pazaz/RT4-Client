@@ -44,7 +44,7 @@ public final class Static26 {
 			local12 += local16;
 			@Pc(27) int local27 = 0;
 			while (true) {
-				@Pc(31) int local31 = local10.gSmart1or2();
+				@Pc(31) int local31 = local10.gsmarts();
 				if (local31 == 0) {
 					break;
 				}

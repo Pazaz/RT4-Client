@@ -40,7 +40,7 @@ public final class LightType {
 		} else if (arg0 == 3) {
 			this.anInt2867 = arg1.g2();
 		} else if (arg0 == 4) {
-			this.anInt2872 = arg1.g2s();
+			this.anInt2872 = arg1.g2b();
 		}
 	}
 }

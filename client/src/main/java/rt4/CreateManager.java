@@ -174,11 +174,11 @@ public class CreateManager {
         local8.p2(arg5);
         local8.p2(arg1);
         local8.p4((int) (Math.random() * 9.9999999E7D));
-        local8.encryptRsa(GlobalConfig.RSA_EXPONENT, GlobalConfig.RSA_MODULUS);
+        local8.rsaenc(GlobalConfig.RSA_EXPONENT, GlobalConfig.RSA_MODULUS);
         Protocol.outboundBuffer.offset = 0;
         Protocol.outboundBuffer.p1(36);
         Protocol.outboundBuffer.p1(local8.offset);
-        Protocol.outboundBuffer.pBytes(local8.data, local8.offset);
+        Protocol.outboundBuffer.pdata(local8.data, local8.offset);
         reply = -3;
         step = 1;
         loops = 0;

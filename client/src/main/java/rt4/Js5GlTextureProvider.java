@@ -106,22 +106,22 @@ public final class Js5GlTextureProvider implements TextureProvider {
 		}
 		for (local97 = 0; local97 < local55; local97++) {
 			if (this.aBooleanArray92[local97]) {
-				this.aByteArray59[local97] = local51.g1s();
+				this.aByteArray59[local97] = local51.g1b();
 			}
 		}
 		for (local97 = 0; local97 < local55; local97++) {
 			if (this.aBooleanArray92[local97]) {
-				this.aByteArray60[local97] = local51.g1s();
+				this.aByteArray60[local97] = local51.g1b();
 			}
 		}
 		for (local97 = 0; local97 < local55; local97++) {
 			if (this.aBooleanArray92[local97]) {
-				this.aByteArray62[local97] = local51.g1s();
+				this.aByteArray62[local97] = local51.g1b();
 			}
 		}
 		for (local97 = 0; local97 < local55; local97++) {
 			if (this.aBooleanArray92[local97]) {
-				this.aByteArray61[local97] = local51.g1s();
+				this.aByteArray61[local97] = local51.g1b();
 			}
 		}
 		for (local97 = 0; local97 < local55; local97++) {

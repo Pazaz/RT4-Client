@@ -458,7 +458,7 @@ public final class client extends GameShell {
 				}
 			}
 		}
-		arg0.pBytes(local15, 24);
+		arg0.pdata(local15, 24);
 	}
 
     @OriginalMember(owner = "client!lb", name = "a", descriptor = "(Z)V")

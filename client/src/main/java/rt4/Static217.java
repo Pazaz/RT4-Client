@@ -30,7 +30,7 @@ public final class Static217 {
 			local7 += local20;
 			@Pc(31) int local31 = 0;
 			while (true) {
-				@Pc(35) int local35 = local12.gSmart1or2();
+				@Pc(35) int local35 = local12.gsmarts();
 				if (local35 == 0) {
 					break;
 				}

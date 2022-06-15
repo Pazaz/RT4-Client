@@ -50,7 +50,7 @@ public final class Static245 {
 				break;
 			}
 			for (local108 = 0; local108 < 4; local108++) {
-				@Pc(223) byte local223 = local96.g1s();
+				@Pc(223) byte local223 = local96.g1b();
 				@Pc(237) int local237;
 				if (local223 == 0) {
 					if (local108 <= arg6) {
@@ -89,7 +89,7 @@ public final class Static245 {
 				} else if (local223 == 1) {
 					for (local232 = 0; local232 < 64; local232 += 4) {
 						for (local237 = 0; local237 < 64; local237 += 4) {
-							@Pc(246) byte local246 = local96.g1s();
+							@Pc(246) byte local246 = local96.g1b();
 							if (local108 <= arg6) {
 								for (local255 = local232; local255 < local232 + 4; local255++) {
 									for (local266 = local237; local266 < local237 + 4; local266++) {

@@ -76,9 +76,9 @@ public final class Environment {
 			this.anInt3530 = -50;
 			this.anInt3528 = -60;
 		} else {
-			this.anInt3530 = arg0.g2s();
-			this.anInt3528 = arg0.g2s();
-			this.anInt3527 = arg0.g2s();
+			this.anInt3530 = arg0.g2b();
+			this.anInt3528 = arg0.g2b();
+			this.anInt3527 = arg0.g2b();
 		}
 		if ((local7 & 0x20) == 0) {
 			this.anInt3525 = FogManager.anInt3922;
