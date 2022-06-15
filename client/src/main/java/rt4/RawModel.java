@@ -448,7 +448,7 @@ public final class RawModel extends Entity {
 
 	@OriginalMember(owner = "client!gb", name = "a", descriptor = "(Lclient!ve;II)Lclient!gb;")
 	public static RawModel create(@OriginalArg(0) Js5 archive, @OriginalArg(1) int id) {
-		@Pc(5) byte[] data = archive.getFile(id, 0);
+		@Pc(5) byte[] data = archive.fetchFile(id, 0);
 		return data == null ? null : new RawModel(data);
 	}
 

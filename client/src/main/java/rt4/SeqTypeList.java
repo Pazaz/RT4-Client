@@ -22,7 +22,7 @@ public class SeqTypeList {
         if (local17 != null) {
             return local17;
         }
-        @Pc(32) byte[] local32 = archive.getFile(getGroupId(id), getFileId(id));
+        @Pc(32) byte[] local32 = archive.fetchFile(getGroupId(id), getFileId(id));
         local17 = new SeqType();
         local17.id = id;
         if (local32 != null) {

@@ -21,7 +21,7 @@ public class LightTypeList {
         if (local10 != null) {
             return local10;
         }
-        @Pc(26) byte[] local26 = archive.getFile(31, arg0);
+        @Pc(26) byte[] local26 = archive.fetchFile(31, arg0);
         local10 = new LightType();
         if (local26 != null) {
             local10.decode(new Buffer(local26), arg0);

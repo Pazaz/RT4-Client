@@ -14,7 +14,7 @@ public class FontMetricsList {
         if (local16 != null) {
             return local16;
         }
-        @Pc(26) byte[] local26 = client.js5Archive13.getFile(arg0, 0);
+        @Pc(26) byte[] local26 = client.js5Archive13.fetchFile(arg0, 0);
         local16 = new SoftwareFont(local26);
         local16.setNameIcons(Sprites.nameIcons, null);
         fontMetrics.put(local16, (long) arg0);

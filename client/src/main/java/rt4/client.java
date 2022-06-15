@@ -415,17 +415,17 @@ public final class client extends GameShell {
 			((Js5GlTextureProvider) Rasteriser.textureProvider).clear();
 		}
 		ClientScriptList.scripts.clear();
-		js5Archive0.method4499();
-		js5Archive1.method4499();
-		js5Archive3.method4499();
-		js5Archive4.method4499();
-		js5Archive5.method4499();
-		js5Archive6.method4499();
-		js5Archive7.method4499();
-		js5Archive8.method4499();
-		js5Archive10.method4499();
-		js5Archive11.method4499();
-		js5Archive12.method4499();
+		js5Archive0.discardUnpacked();
+		js5Archive1.discardUnpacked();
+		js5Archive3.discardUnpacked();
+		js5Archive4.discardUnpacked();
+		js5Archive5.discardUnpacked();
+		js5Archive6.discardUnpacked();
+		js5Archive7.discardUnpacked();
+		js5Archive8.discardUnpacked();
+		js5Archive10.discardUnpacked();
+		js5Archive11.discardUnpacked();
+		js5Archive12.discardUnpacked();
 		HitBarList.hitBars.clear();
 	}
 
@@ -1482,7 +1482,7 @@ public final class client extends GameShell {
 			} else if (!js5Archive13.fetchAll()) {
 				mainLoadSecondaryText = JagString.concatenate(new JagString[] { LocalizedText.MAINLOAD130, JagString.parseInt(js5Archive13.getPercentageComplete() / 20 + 85), Static127.PERCENT_SIGN});
 				mainLoadPercentage = 85;
-			} else if (js5Archive23.allFilesComplete(Static165.DETAILS)) {
+			} else if (js5Archive23.isGroupReady(Static165.DETAILS)) {
 				MapList.init(Sprites.mapfunctions, js5Archive23);
 				mainLoadPercentage = 95;
 				mainLoadSecondaryText = LocalizedText.MAINLOAD130B;

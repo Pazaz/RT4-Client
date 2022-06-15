@@ -21,7 +21,7 @@ public class BasTypeList {
         if (local10 != null) {
             return local10;
         }
-        @Pc(21) byte[] local21 = archive.getFile(32, arg0);
+        @Pc(21) byte[] local21 = archive.fetchFile(32, arg0);
         local10 = new BasType();
         if (local21 != null) {
             local10.decode(new Buffer(local21));

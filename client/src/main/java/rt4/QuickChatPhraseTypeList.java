@@ -39,9 +39,9 @@ public class QuickChatPhraseTypeList {
         }
         @Pc(27) byte[] local27;
         if (arg0 < 32768) {
-            local27 = archive1.getFile(1, arg0);
+            local27 = archive1.fetchFile(1, arg0);
         } else {
-            local27 = archive2.getFile(1, arg0 & 0x7FFF);
+            local27 = archive2.fetchFile(1, arg0 & 0x7FFF);
         }
         local10 = new QuickChatPhraseType();
         if (local27 != null) {

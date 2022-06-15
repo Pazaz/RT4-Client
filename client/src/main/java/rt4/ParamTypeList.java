@@ -21,7 +21,7 @@ public class ParamTypeList {
         if (local6 != null) {
             return local6;
         }
-        @Pc(30) byte[] local30 = archive.getFile(11, arg0);
+        @Pc(30) byte[] local30 = archive.fetchFile(11, arg0);
         local6 = new ParamType();
         if (local30 != null) {
             local6.decode(new Buffer(local30));

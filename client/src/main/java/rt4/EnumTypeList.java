@@ -21,7 +21,7 @@ public class EnumTypeList {
         if (local10 != null) {
             return local10;
         }
-        @Pc(24) byte[] local24 = archive.getFile(Static97.method1959(arg0), Static103.method2236(arg0));
+        @Pc(24) byte[] local24 = archive.fetchFile(Static97.method1959(arg0), Static103.method2236(arg0));
         local10 = new EnumType();
         if (local24 != null) {
             local10.decode(new Buffer(local24));

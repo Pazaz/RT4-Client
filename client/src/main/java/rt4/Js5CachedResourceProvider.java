@@ -93,7 +93,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 
 	@OriginalMember(owner = "client!bg", name = "a", descriptor = "(II)V")
 	@Override
-	public final void method522(@OriginalArg(0) int arg0) {
+	public final void prefetchGroup(@OriginalArg(0) int arg0) {
 		if (this.aClass49_2 == null) {
 			return;
 		}
@@ -110,7 +110,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 
 	@OriginalMember(owner = "client!bg", name = "b", descriptor = "(I)Lclient!ii;")
 	@Override
-	public final Js5Index method521() {
+	public final Js5Index fetchIndex() {
 		if (this.aClass70_1 != null) {
 			return this.aClass70_1;
 		}
@@ -163,7 +163,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 			}
 		}
 		if (this.aClass49_2 != null) {
-			this.aByteArray9 = new byte[this.aClass70_1.anInt2907];
+			this.aByteArray9 = new byte[this.aClass70_1.capacity];
 			this.anInt567 = 0;
 		}
 		this.aClass3_Sub2_Sub5_1 = null;
@@ -200,7 +200,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 	@OriginalMember(owner = "client!bg", name = "c", descriptor = "(Z)V")
 	public final void method534() {
 		if (this.aClass69_17 != null) {
-			if (this.method521() == null) {
+			if (this.fetchIndex() == null) {
 				return;
 			}
 			@Pc(32) boolean local32;
@@ -219,8 +219,8 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 						local37.unlink();
 					}
 				}
-				while (this.aClass70_1.anIntArray272.length > this.anInt578) {
-					if (this.aClass70_1.anIntArray272[this.anInt578] == 0) {
+				while (this.aClass70_1.groupSizes.length > this.anInt578) {
+					if (this.aClass70_1.groupSizes[this.anInt578] == 0) {
 						this.anInt578++;
 					} else {
 						if (this.aClass80_2.anInt3131 >= 250) {
@@ -256,8 +256,8 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 						local32 = false;
 					}
 				}
-				while (this.aClass70_1.anIntArray272.length > this.anInt578) {
-					if (this.aClass70_1.anIntArray272[this.anInt578] == 0) {
+				while (this.aClass70_1.groupSizes.length > this.anInt578) {
+					if (this.aClass70_1.groupSizes[this.anInt578] == 0) {
 						this.anInt578++;
 					} else {
 						if (this.aClass73_2.method2316()) {
@@ -304,7 +304,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 
 	@OriginalMember(owner = "client!bg", name = "b", descriptor = "(II)I")
 	@Override
-	public final int method524(@OriginalArg(0) int arg0) {
+	public final int getPercentageComplete(@OriginalArg(0) int arg0) {
 		@Pc(15) Js5Request local15 = (Js5Request) this.aClass133_1.get((long) arg0);
 		return local15 == null ? 0 : local15.method3553();
 	}
@@ -366,7 +366,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 				aCRC32_1.reset();
 				aCRC32_1.update(local161, 0, local161.length - 2);
 				local199 = (int) aCRC32_1.getValue();
-				if (this.aClass70_1.anIntArray268[arg1] != local199) {
+				if (this.aClass70_1.groupChecksums[arg1] != local199) {
 					throw new RuntimeException();
 				}
 				this.aClass73_2.errors = 0;
@@ -401,7 +401,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 			aCRC32_1.reset();
 			aCRC32_1.update(local161, 0, local161.length - 2);
 			local199 = (int) aCRC32_1.getValue();
-			if (this.aClass70_1.anIntArray268[arg1] != local199) {
+			if (this.aClass70_1.groupChecksums[arg1] != local199) {
 				throw new RuntimeException();
 			}
 			@Pc(385) int local385 = ((local161[local161.length - 2] & 0xFF) << 8) + (local161[local161.length - 1] & 0xFF);
@@ -431,12 +431,12 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 
 	@OriginalMember(owner = "client!bg", name = "e", descriptor = "(I)V")
 	public final void method537() {
-		if (this.aClass69_17 == null || this.method521() == null) {
+		if (this.aClass69_17 == null || this.fetchIndex() == null) {
 			return;
 		}
 		for (@Pc(21) Node local21 = this.aClass69_16.head(); local21 != null; local21 = this.aClass69_16.next()) {
 			@Pc(28) int local28 = (int) local21.key;
-			if (local28 < 0 || this.aClass70_1.anInt2907 <= local28 || this.aClass70_1.anIntArray272[local28] == 0) {
+			if (local28 < 0 || this.aClass70_1.capacity <= local28 || this.aClass70_1.groupSizes[local28] == 0) {
 				local21.unlink();
 			} else {
 				if (this.aByteArray9[local28] == 0) {
@@ -454,7 +454,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 
 	@OriginalMember(owner = "client!bg", name = "f", descriptor = "(I)I")
 	public final int getIndexPercentageComplete() {
-		if (this.method521() == null) {
+		if (this.fetchIndex() == null) {
 			return this.aClass3_Sub2_Sub5_1 == null ? 0 : this.aClass3_Sub2_Sub5_1.method3553();
 		} else {
 			return 100;
@@ -463,7 +463,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 
 	@OriginalMember(owner = "client!bg", name = "c", descriptor = "(II)[B")
 	@Override
-	public final byte[] method525(@OriginalArg(0) int arg0) {
+	public final byte[] fetchGroup(@OriginalArg(0) int arg0) {
 		@Pc(9) Js5Request local9 = this.method536(0, arg0);
 		if (local9 == null) {
 			return null;

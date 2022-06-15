@@ -18,7 +18,7 @@ public final class AnimFrameset extends SecondaryNode {
 		this.frames = new AnimFrame[capacity];
 		@Pc(19) int[] fileIds = animsArchive.getFileIds(id);
 		for (@Pc(21) int i = 0; i < fileIds.length; i++) {
-			@Pc(37) byte[] bytes = animsArchive.getFile(id, fileIds[i]);
+			@Pc(37) byte[] bytes = animsArchive.fetchFile(id, fileIds[i]);
 			@Pc(51) int baseId = bytes[1] & 0xFF | (bytes[0] & 0xFF) << 8;
 			@Pc(56) AnimBase b = (AnimBase) bases.head();
 			@Pc(58) AnimBase base = null;

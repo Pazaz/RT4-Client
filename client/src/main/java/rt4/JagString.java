@@ -728,7 +728,7 @@ public final class JagString implements StringInterface {
 	@OriginalMember(owner = "client!na", name = "hashCode", descriptor = "()I")
 	@Override
 	public final int hashCode() {
-		return this.method3154();
+		return this.getHash();
 	}
 
 	@OriginalMember(owner = "client!na", name = "b", descriptor = "(IZ)Z")
@@ -963,7 +963,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "d", descriptor = "(Z)I")
-	public final int method3154() {
+	public final int getHash() {
 		@Pc(7) int hash = 0;
 		for (@Pc(14) int c = 0; c < this.length; c++) {
 			hash = (this.chars[c] & 0xFF) + (hash << 5) - hash;

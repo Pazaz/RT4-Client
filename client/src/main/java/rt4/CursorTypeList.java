@@ -26,7 +26,7 @@ public class CursorTypeList {
         if (local10 != null) {
             return local10;
         }
-        @Pc(20) byte[] local20 = archive.getFile(33, arg0);
+        @Pc(20) byte[] local20 = archive.fetchFile(33, arg0);
         local10 = new CursorType();
         if (local20 != null) {
             local10.decode(new Buffer(local20), arg0);

@@ -35,7 +35,7 @@ public class SpriteLoader {
 
     @OriginalMember(owner = "client!ta", name = "a", descriptor = "(Lclient!ve;III)Z")
     public static boolean decode(@OriginalArg(0) Js5 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-        @Pc(9) byte[] local9 = arg0.getFile(arg2, arg1);
+        @Pc(9) byte[] local9 = arg0.fetchFile(arg2, arg1);
         if (local9 == null) {
             return false;
         } else {
@@ -299,7 +299,7 @@ public class SpriteLoader {
 
     @OriginalMember(owner = "client!uj", name = "a", descriptor = "(BLclient!ve;I)Z")
     public static boolean decode(@OriginalArg(1) Js5 arg0, @OriginalArg(2) int arg1) {
-        @Pc(13) byte[] local13 = arg0.method4500(arg1);
+        @Pc(13) byte[] local13 = arg0.fetchFile(arg1);
         if (local13 == null) {
             return false;
         } else {

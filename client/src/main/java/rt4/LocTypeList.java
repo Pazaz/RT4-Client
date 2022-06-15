@@ -26,7 +26,7 @@ public class LocTypeList {
         if (local15 != null) {
             return local15;
         }
-        @Pc(30) byte[] local30 = locsArchive.getFile(getGroupId(id), getFileId(id));
+        @Pc(30) byte[] local30 = locsArchive.fetchFile(getGroupId(id), getFileId(id));
         local15 = new LocType();
         local15.id = id;
         if (local30 != null) {

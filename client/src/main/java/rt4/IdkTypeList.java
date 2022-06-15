@@ -27,7 +27,7 @@ public class IdkTypeList {
 		if (local10 != null) {
 			return local10;
 		}
-		@Pc(21) byte[] local21 = archive.getFile(3, arg0);
+		@Pc(21) byte[] local21 = archive.fetchFile(3, arg0);
 		local10 = new IdkType();
 		if (local21 != null) {
 			local10.decode(new Buffer(local21));

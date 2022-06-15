@@ -16,7 +16,7 @@ public class FluTypeList {
         if (local10 != null) {
             return local10;
         }
-        @Pc(27) byte[] local27 = archive.getFile(1, arg0);
+        @Pc(27) byte[] local27 = archive.fetchFile(1, arg0);
         local10 = new FluType();
         if (local27 != null) {
             local10.decode(arg0, new Buffer(local27));
