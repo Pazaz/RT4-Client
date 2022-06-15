@@ -43,20 +43,4 @@ public final class Static81 {
 		Static71.anIntArrayArray10 = arg0;
 	}
 
-	@OriginalMember(owner = "client!gg", name = "e", descriptor = "(II)V")
-	public static void method1753(@OriginalArg(0) int arg0) {
-		if (!InterfaceList.load(arg0)) {
-			return;
-		}
-		@Pc(15) Component[] local15 = InterfaceList.components[arg0];
-		for (@Pc(17) int local17 = 0; local17 < local15.length; local17++) {
-			@Pc(29) Component local29 = local15[local17];
-			if (local29 != null) {
-				local29.anInt496 = 1;
-				local29.anInt510 = 0;
-				local29.anInt500 = 0;
-			}
-		}
-	}
-
 }

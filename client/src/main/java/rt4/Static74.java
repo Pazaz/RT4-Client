@@ -33,24 +33,7 @@ public final class Static74 {
 		Static111.method2291(arg0, local17, local19);
 	}
 
-	@OriginalMember(owner = "client!fn", name = "c", descriptor = "(II)V")
-	public static void method1626(@OriginalArg(0) int arg0) {
-		if (arg0 == -1 || !InterfaceList.load(arg0)) {
-			return;
-		}
-		@Pc(31) Component[] local31 = InterfaceList.components[arg0];
-		for (@Pc(33) int local33 = 0; local33 < local31.length; local33++) {
-			@Pc(41) Component local41 = local31[local33];
-			if (local41.anObjectArray3 != null) {
-				@Pc(50) HookRequest local50 = new HookRequest();
-				local50.arguments = local41.anObjectArray3;
-				local50.source = local41;
-				ScriptRunner.run(2000000, local50);
-			}
-		}
-	}
-
-	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(Lclient!be;I)Lclient!be;")
+    @OriginalMember(owner = "client!wl", name = "a", descriptor = "(Lclient!be;I)Lclient!be;")
 	public static Component method4668(@OriginalArg(0) Component arg0) {
 		if (arg0.layer != -1) {
 			return InterfaceList.getComponent(arg0.layer);

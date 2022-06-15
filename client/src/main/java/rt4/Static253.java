@@ -97,7 +97,7 @@ public final class Static253 {
 			@Pc(253) float local253 = (float) Camera.cameraYaw * 0.17578125F;
 			if (Camera.cameraType == 3) {
 				local248 = Static146.aFloat15 * 360.0F / 6.2831855F;
-				local253 = Static84.aFloat10 * 360.0F / 6.2831855F;
+				local253 = Camera.aFloat10 * 360.0F / 6.2831855F;
 			}
 			GlRenderer.method4171(arg2, arg4, arg3, arg0, arg3 / 2 + arg2, arg4 - -(arg0 / 2), local248, local253, Static115.anInt5029, Static115.anInt5029);
 		} else {

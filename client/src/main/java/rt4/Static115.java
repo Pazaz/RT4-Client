@@ -6,10 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static115 {
 
-	@OriginalMember(owner = "client!ja", name = "q", descriptor = "I")
-	public static int currentChunkX;
-
-	@OriginalMember(owner = "client!ja", name = "f", descriptor = "Lclient!ih;")
+    @OriginalMember(owner = "client!ja", name = "f", descriptor = "Lclient!ih;")
 	public static final LinkedList mediumPriorityRequests = new LinkedList();
 
     @OriginalMember(owner = "client!ja", name = "r", descriptor = "I")

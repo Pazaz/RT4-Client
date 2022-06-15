@@ -121,7 +121,7 @@ public class ClientProt {
         Protocol.outboundBuffer.p1isaac(184);
         for (@Pc(18) ComponentPointer local18 = (ComponentPointer) InterfaceList.openInterfaces.head(); local18 != null; local18 = (ComponentPointer) InterfaceList.openInterfaces.next()) {
             if (local18.anInt5879 == 0) {
-                Static132.closeInterface(true, local18);
+                InterfaceList.closeInterface(true, local18);
             }
         }
         if (Static39.aClass13_10 != null) {
@@ -470,7 +470,7 @@ public class ClientProt {
                 local41 = Static228.anInt5103 + Static40.aClass13_1.height - Static40.aClass13_14.height;
             }
             @Pc(109) int local109 = local41 - Static36.anInt660;
-            @Pc(114) int local114 = local30 - Static124.anInt3075;
+            @Pc(114) int local114 = local30 - Static36.anInt3075;
             @Pc(122) int local122 = local30 + Static40.aClass13_1.scrollX - Static81.anInt2225;
             @Pc(130) int local130 = Static40.aClass13_1.scrollY + local41 - Static228.anInt5103;
             @Pc(133) int local133 = Static40.aClass13_14.dragDeadzone;

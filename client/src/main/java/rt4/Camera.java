@@ -64,6 +64,10 @@ public class Camera {
     public static int anInt5765;
     @OriginalMember(owner = "client!tm", name = "g", descriptor = "I")
     public static int anInt5375;
+    @OriginalMember(owner = "client!pa", name = "K", descriptor = "Z")
+	public static boolean aBoolean205 = false;
+    @OriginalMember(owner = "client!gk", name = "d", descriptor = "F")
+    public static float aFloat10;
 
     public static double mod(double a, double b) {
         return ((a % b) + b) % b;
@@ -222,14 +226,14 @@ public class Camera {
         anInt5224 += local27;
         if (anInt5224 >= 65535) {
             anInt5224 = 65535;
-            if (Static186.aBoolean205) {
+            if (aBoolean205) {
                 aBoolean16 = false;
             } else {
                 aBoolean16 = true;
             }
-            Static186.aBoolean205 = true;
+            aBoolean205 = true;
         } else {
-            Static186.aBoolean205 = false;
+            aBoolean205 = false;
             aBoolean16 = false;
         }
         @Pc(66) float local66 = (float) anInt5224 / 65535.0F;
@@ -271,9 +275,9 @@ public class Camera {
         @Pc(382) float local382 = (local226[1] - renderCoordinates[1]) * -1.0F;
         @Pc(392) double local392 = Math.sqrt((double) (local371 * local371 + local363 * local363));
         Static146.aFloat15 = (float) Math.atan2((double) local382, local392);
-        Static84.aFloat10 = -((float) Math.atan2((double) local363, (double) local371));
+        aFloat10 = -((float) Math.atan2((double) local363, (double) local371));
         cameraPitch = (int) ((double) Static146.aFloat15 * 325.949D) & 0x7FF;
-        cameraYaw = (int) ((double) Static84.aFloat10 * 325.949D) & 0x7FF;
+        cameraYaw = (int) ((double) aFloat10 * 325.949D) & 0x7FF;
     }
 
     @OriginalMember(owner = "client!vd", name = "a", descriptor = "(IIIIBI)V")

@@ -84,6 +84,10 @@ public class SceneGraph {
 	public static boolean[][] aBooleanArrayArray1;
     @OriginalMember(owner = "client!ha", name = "k", descriptor = "[[Z")
     public static boolean[][] aBooleanArrayArray3;
+    @OriginalMember(owner = "client!og", name = "b", descriptor = "I")
+    public static int currentChunkZ;
+    @OriginalMember(owner = "client!ja", name = "q", descriptor = "I")
+    public static int currentChunkX;
 
     @OriginalMember(owner = "client!km", name = "f", descriptor = "(I)Z")
     public static boolean allLevelsAreVisible() {

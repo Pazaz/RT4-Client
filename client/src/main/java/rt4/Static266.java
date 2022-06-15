@@ -15,32 +15,6 @@ public final class Static266 {
     @OriginalMember(owner = "client!vk", name = "d", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1010 = JagString.parse("null");
 
-    @OriginalMember(owner = "client!vk", name = "a", descriptor = "(IZIII[Lclient!be;)V")
-	public static void method4190(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) Component[] arg4) {
-		for (@Pc(3) int local3 = 0; local3 < arg4.length; local3++) {
-			@Pc(19) Component local19 = arg4[local3];
-			if (local19 != null && local19.layer == arg0) {
-				Static150.method2801(arg3, arg2, local19, arg1);
-				Static111.method2291(local19, arg3, arg2);
-				if (local19.scrollMaxH - local19.width < local19.scrollX) {
-					local19.scrollX = local19.scrollMaxH - local19.width;
-				}
-				if (local19.scrollY > local19.scrollMaxV - local19.height) {
-					local19.scrollY = local19.scrollMaxV - local19.height;
-				}
-				if (local19.scrollY < 0) {
-					local19.scrollY = 0;
-				}
-				if (local19.scrollX < 0) {
-					local19.scrollX = 0;
-				}
-				if (local19.type == 0) {
-					Static17.method531(local19, arg1);
-				}
-			}
-		}
-	}
-
 	@OriginalMember(owner = "client!vk", name = "a", descriptor = "(Lclient!ec;)V")
 	public static void method4193(@OriginalArg(0) Scenery arg0) {
 		for (@Pc(2) int local2 = arg0.anInt1701; local2 <= arg0.anInt1713; local2++) {

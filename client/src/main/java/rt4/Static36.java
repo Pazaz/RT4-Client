@@ -12,8 +12,10 @@ public final class Static36 {
 	public static int anInt660 = -1;
     @OriginalMember(owner = "client!kl", name = "s", descriptor = "I")
     public static int anInt3337 = 0;
+	@OriginalMember(owner = "client!jk", name = "p", descriptor = "I")
+	public static int anInt3075 = -1;
 
-    @OriginalMember(owner = "client!client", name = "a", descriptor = "(Lclient!be;)Lclient!be;")
+	@OriginalMember(owner = "client!client", name = "a", descriptor = "(Lclient!be;)Lclient!be;")
 	public static Component method938(@OriginalArg(0) Component arg0) {
 		@Pc(4) int local4 = InterfaceList.getServerActiveProperties(arg0).method505();
 		if (local4 == 0) {
@@ -58,7 +60,7 @@ public final class Static36 {
 				}
 				if (component == Static40.aClass13_14) {
 					Static44.aBoolean83 = true;
-					Static124.anInt3075 = local50;
+					anInt3075 = local50;
 					anInt660 = local55;
 				}
 				if (!component.if3 || local61 < local65 && local63 < local67) {

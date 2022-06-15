@@ -805,7 +805,7 @@ public class LoginManager {
         Camera.cameraType = 1;
         client.setGameState(30);
         for (local35 = 0; local35 < 100; local35++) {
-            Static186.aBooleanArray100[local35] = true;
+            InterfaceList.aBooleanArray100[local35] = true;
         }
         ClientProt.method1373();
     }

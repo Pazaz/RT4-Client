@@ -11,11 +11,11 @@ public final class Static126 {
 			Static96.method1949(InterfaceList.topLevelInterface);
 		}
 		for (@Pc(15) int local15 = 0; local15 < InterfaceList.rectangles; local15++) {
-			if (Static186.aBooleanArray100[local15]) {
+			if (InterfaceList.aBooleanArray100[local15]) {
 				InterfaceList.rectangleRedraw[local15] = true;
 			}
-			Static223.aBooleanArray116[local15] = Static186.aBooleanArray100[local15];
-			Static186.aBooleanArray100[local15] = false;
+			Static223.aBooleanArray116[local15] = InterfaceList.aBooleanArray100[local15];
+			InterfaceList.aBooleanArray100[local15] = false;
 		}
 		Static97.anInt2503 = -1;
 		Static169.mouseOverInventoryInterface = null;

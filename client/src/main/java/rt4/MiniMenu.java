@@ -113,6 +113,10 @@ public class MiniMenu {
     public static int anInt5393;
     @OriginalMember(owner = "client!uf", name = "t", descriptor = "I")
     public static int anInt5444 = 0;
+    @OriginalMember(owner = "client!pk", name = "bb", descriptor = "Lclient!na;")
+	public static JagString walkText;
+    @OriginalMember(owner = "client!jl", name = "v", descriptor = "I")
+	public static int anInt3096 = 0;
 
     @OriginalMember(owner = "client!va", name = "a", descriptor = "(IZILclient!be;)V")
     public static void addComponentEntries(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Component component) {
@@ -810,7 +814,7 @@ public class MiniMenu {
         }
         if (local23 == 11) {
             if (local36 == 0) {
-                Static125.anInt3096 = 1;
+                anInt3096 = 1;
                 method3556(Player.level, local15, local19);
             } else if (local36 == 1) {
                 Protocol.outboundBuffer.p1isaac(131);
@@ -1086,7 +1090,7 @@ public class MiniMenu {
                 if (client.game == 1) {
                     add(-1, 0L, JagString.EMPTY, local33, (short) 36, LocalizedText.FACEHERE, x);
                 }
-                add(-1, 0L, JagString.EMPTY, local33, (short) 60, Static195.walkText, x);
+                add(-1, 0L, JagString.EMPTY, local33, (short) 60, walkText, x);
             }
         }
         @Pc(112) long local112 = -1L;

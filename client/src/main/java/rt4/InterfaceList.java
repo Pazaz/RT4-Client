@@ -23,6 +23,8 @@ public class InterfaceList {
     public static final int[] rectangleWidth = new int[100];
     @OriginalMember(owner = "client!fe", name = "lb", descriptor = "[I")
 	public static final int[] rectangleHeight = new int[100];
+    @OriginalMember(owner = "client!pa", name = "R", descriptor = "[Z")
+    public static final boolean[] aBooleanArray100 = new boolean[100];
     @OriginalMember(owner = "client!bn", name = "V", descriptor = "I")
     public static int rectangles = 0;
     @OriginalMember(owner = "client!md", name = "W", descriptor = "I")
@@ -183,7 +185,7 @@ public class InterfaceList {
     @OriginalMember(owner = "client!dg", name = "a", descriptor = "(ILclient!be;)V")
     public static void redraw(@OriginalArg(1) Component arg0) {
         if (Static182.anInt4311 == arg0.rectangleLoop) {
-            Static186.aBooleanArray100[arg0.rectangle] = true;
+            aBooleanArray100[arg0.rectangle] = true;
         }
     }
 
@@ -207,6 +209,131 @@ public class InterfaceList {
             return null;
         } else {
             return local7.createdComponents[arg1];
+        }
+    }
+
+    @OriginalMember(owner = "client!gg", name = "e", descriptor = "(II)V")
+    public static void method1753(@OriginalArg(0) int arg0) {
+        if (!load(arg0)) {
+            return;
+        }
+        @Pc(15) Component[] local15 = components[arg0];
+        for (@Pc(17) int local17 = 0; local17 < local15.length; local17++) {
+            @Pc(29) Component local29 = local15[local17];
+            if (local29 != null) {
+                local29.anInt496 = 1;
+                local29.anInt510 = 0;
+                local29.anInt500 = 0;
+            }
+        }
+    }
+
+    @OriginalMember(owner = "client!rb", name = "a", descriptor = "(ZB)V")
+    public static void method3712(@OriginalArg(0) boolean arg0) {
+        method4017(GameShell.canvasHeight, arg0, topLevelInterface, GameShell.canvasWidth);
+    }
+
+    @OriginalMember(owner = "client!ta", name = "a", descriptor = "(IZIII)V")
+    public static void method4017(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
+        if (load(arg2)) {
+            method4190(-1, arg1, arg3, arg0, components[arg2]);
+        }
+    }
+
+    @OriginalMember(owner = "client!bg", name = "a", descriptor = "(Lclient!be;ZI)V")
+    public static void method531(@OriginalArg(0) Component arg0, @OriginalArg(1) boolean arg1) {
+        @Pc(20) int local20 = arg0.scrollMaxH == 0 ? arg0.width : arg0.scrollMaxH;
+        @Pc(32) int local32 = arg0.scrollMaxV == 0 ? arg0.height : arg0.scrollMaxV;
+        method4190(arg0.id, arg1, local20, local32, components[arg0.id >> 16]);
+        if (arg0.createdComponents != null) {
+            method4190(arg0.id, arg1, local20, local32, arg0.createdComponents);
+        }
+        @Pc(66) ComponentPointer local66 = (ComponentPointer) openInterfaces.get((long) arg0.id);
+        if (local66 != null) {
+            method4017(local32, arg1, local66.anInt5878, local20);
+        }
+    }
+
+    @OriginalMember(owner = "client!vk", name = "a", descriptor = "(IZIII[Lclient!be;)V")
+	public static void method4190(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) Component[] arg4) {
+		for (@Pc(3) int local3 = 0; local3 < arg4.length; local3++) {
+			@Pc(19) Component local19 = arg4[local3];
+			if (local19 != null && local19.layer == arg0) {
+				Static150.method2801(arg3, arg2, local19, arg1);
+				Static111.method2291(local19, arg3, arg2);
+				if (local19.scrollMaxH - local19.width < local19.scrollX) {
+					local19.scrollX = local19.scrollMaxH - local19.width;
+				}
+				if (local19.scrollY > local19.scrollMaxV - local19.height) {
+					local19.scrollY = local19.scrollMaxV - local19.height;
+				}
+				if (local19.scrollY < 0) {
+					local19.scrollY = 0;
+				}
+				if (local19.scrollX < 0) {
+					local19.scrollX = 0;
+				}
+				if (local19.type == 0) {
+					method531(local19, arg1);
+				}
+			}
+		}
+	}
+
+    @OriginalMember(owner = "client!fn", name = "c", descriptor = "(II)V")
+    public static void method1626(@OriginalArg(0) int arg0) {
+        if (arg0 == -1 || !load(arg0)) {
+            return;
+        }
+        @Pc(31) Component[] local31 = components[arg0];
+        for (@Pc(33) int local33 = 0; local33 < local31.length; local33++) {
+            @Pc(41) Component local41 = local31[local33];
+            if (local41.anObjectArray3 != null) {
+                @Pc(50) HookRequest local50 = new HookRequest();
+                local50.arguments = local41.anObjectArray3;
+                local50.source = local41;
+                ScriptRunner.run(2000000, local50);
+            }
+        }
+    }
+
+    @OriginalMember(owner = "client!ke", name = "a", descriptor = "(ZLclient!wk;Z)V")
+    public static void closeInterface(@OriginalArg(0) boolean arg0, @OriginalArg(1) ComponentPointer arg1) {
+        @Pc(9) int local9 = (int) arg1.key;
+        @Pc(16) int local16 = arg1.anInt5878;
+        arg1.unlink();
+        if (arg0) {
+            method2275(local16);
+        }
+        Static132.method3214(local16);
+        @Pc(32) Component local32 = getComponent(local9);
+        if (local32 != null) {
+            redraw(local32);
+        }
+        @Pc(41) int local41 = MiniMenu.size;
+        @Pc(43) int local43;
+        for (local43 = 0; local43 < local41; local43++) {
+            if (Static2.method5(MiniMenu.actions[local43])) {
+                MiniMenu.remove(local43);
+            }
+        }
+        if (MiniMenu.size == 1) {
+            Static40.aBoolean108 = false;
+            Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
+        } else {
+            Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
+            local43 = Fonts.b12Full.getStringWidth(LocalizedText.CHOOSE_OPTION);
+            for (@Pc(75) int local75 = 0; local75 < MiniMenu.size; local75++) {
+                @Pc(88) int local88 = Fonts.b12Full.getStringWidth(MiniMenu.getOp(local75));
+                if (local43 < local88) {
+                    local43 = local88;
+                }
+            }
+            Static13.anInt436 = MiniMenu.size * 15 + (Static40.aBoolean298 ? 26 : 22);
+            Static24.anInt761 = local43 + 8;
+        }
+        if (topLevelInterface != -1) {
+            Static54.runScripts(1, topLevelInterface);
         }
     }
 }

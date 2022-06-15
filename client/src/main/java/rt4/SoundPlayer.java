@@ -123,12 +123,12 @@ public class SoundPlayer {
                 local5--;
             }
         }
-        if (MidiPlayer.jingle && !Static136.method2655()) {
+        if (MidiPlayer.jingle && !MidiPlayer.method2655()) {
             if (Preferences.musicVolume != 0 && MusicPlayer.groupId != -1) {
-                Static122.method2410(client.js5Archive6, MusicPlayer.groupId, Preferences.musicVolume);
+                MidiPlayer.method2410(client.js5Archive6, MusicPlayer.groupId, Preferences.musicVolume);
             }
             MidiPlayer.jingle = false;
-        } else if (Preferences.musicVolume != 0 && MusicPlayer.groupId != -1 && !Static136.method2655()) {
+        } else if (Preferences.musicVolume != 0 && MusicPlayer.groupId != -1 && !MidiPlayer.method2655()) {
             Protocol.outboundBuffer.p1isaac(137);
             Protocol.outboundBuffer.p4(MusicPlayer.groupId);
             MusicPlayer.groupId = -1;

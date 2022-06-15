@@ -106,11 +106,11 @@ public final class Static89 {
 		}
 		@Pc(60) int local60;
 		for (local60 = 0; local60 < InterfaceList.rectangles; local60++) {
-			if (Static186.aBooleanArray100[local60]) {
+			if (InterfaceList.aBooleanArray100[local60]) {
 				InterfaceList.rectangleRedraw[local60] = true;
 			}
-			Static223.aBooleanArray116[local60] = Static186.aBooleanArray100[local60];
-			Static186.aBooleanArray100[local60] = false;
+			Static223.aBooleanArray116[local60] = InterfaceList.aBooleanArray100[local60];
+			InterfaceList.aBooleanArray100[local60] = false;
 		}
 		Static201.aClass13_13 = null;
 		Static97.anInt2503 = -1;
@@ -146,8 +146,8 @@ public final class Static89 {
 			local60 = Static270.anInt5794;
 		}
 		Static81.method1750(local60);
-		if (Static125.anInt3096 == 1) {
-			Static125.anInt3096 = 2;
+		if (MiniMenu.anInt3096 == 1) {
+			MiniMenu.anInt3096 = 2;
 		}
 		if (Static187.anInt4422 == 1) {
 			Static187.anInt4422 = 2;

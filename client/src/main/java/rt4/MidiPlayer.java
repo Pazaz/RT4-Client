@@ -27,13 +27,19 @@ public class MidiPlayer {
 	public static Js5 aClass153_32;
     @OriginalMember(owner = "client!le", name = "c", descriptor = "Lclient!rf;")
     public static Song aClass3_Sub29_1;
+    @OriginalMember(owner = "client!nj", name = "g", descriptor = "Lclient!ve;")
+	public static Js5 aClass153_70;
+    @OriginalMember(owner = "client!nj", name = "e", descriptor = "Lclient!va;")
+	public static MidiPcmStream midiPcmStream;
+    @OriginalMember(owner = "client!sf", name = "j", descriptor = "I")
+    public static int anInt5085;
 
     @OriginalMember(owner = "client!km", name = "c", descriptor = "(Z)Z")
     public static boolean method2699() {
         try {
             if (anInt441 == 2) {
                 if (aClass3_Sub29_1 == null) {
-                    aClass3_Sub29_1 = Song.create(Static172.aClass153_70, anInt5853, Static226.anInt5085);
+                    aClass3_Sub29_1 = Song.create(aClass153_70, anInt5853, anInt5085);
                     if (aClass3_Sub29_1 == null) {
                         return false;
                     }
@@ -41,21 +47,21 @@ public class MidiPlayer {
                 if (aClass89_1 == null) {
                     aClass89_1 = new SoundBank(aClass153_32, aClass153_103);
                 }
-                if (Static172.midiPcmStream.method4411(aClass3_Sub29_1, aClass153_87, aClass89_1)) {
-                    Static172.midiPcmStream.method4412();
-                    Static172.midiPcmStream.method4447(anInt5527);
-                    Static172.midiPcmStream.method4431(aBoolean116, aClass3_Sub29_1);
+                if (midiPcmStream.method4411(aClass3_Sub29_1, aClass153_87, aClass89_1)) {
+                    midiPcmStream.method4412();
+                    midiPcmStream.method4447(anInt5527);
+                    midiPcmStream.method4431(aBoolean116, aClass3_Sub29_1);
                     anInt441 = 0;
                     aClass3_Sub29_1 = null;
                     aClass89_1 = null;
-                    Static172.aClass153_70 = null;
+                    aClass153_70 = null;
                     return true;
                 }
             }
         } catch (@Pc(68) Exception local68) {
             local68.printStackTrace();
-            Static172.midiPcmStream.method4446();
-            Static172.aClass153_70 = null;
+            midiPcmStream.method4446();
+            aClass153_70 = null;
             aClass3_Sub29_1 = null;
             anInt441 = 0;
             aClass89_1 = null;
@@ -66,18 +72,18 @@ public class MidiPlayer {
     @OriginalMember(owner = "client!ce", name = "a", descriptor = "(II)V")
     public static void method801() {
         anInt5527 = 0;
-        Static226.anInt5085 = -1;
+        anInt5085 = -1;
         anInt441 = 1;
         anInt1757 = 2;
         aBoolean116 = false;
-        Static172.aClass153_70 = null;
+        aClass153_70 = null;
         anInt5853 = -1;
     }
 
     @OriginalMember(owner = "client!v", name = "a", descriptor = "(ZIILclient!ve;ZII)V")
     public static void playFadeOut(@OriginalArg(1) int arg0, @OriginalArg(3) Js5 arg1, @OriginalArg(5) int arg2) {
-        Static172.aClass153_70 = arg1;
-        Static226.anInt5085 = 0;
+        aClass153_70 = arg1;
+        anInt5085 = 0;
         anInt5853 = arg0;
         aBoolean116 = false;
         anInt441 = 1;
@@ -90,7 +96,7 @@ public class MidiPlayer {
         aClass153_87 = arg1;
         aClass153_32 = arg3;
         aClass153_103 = arg2;
-        Static172.midiPcmStream = arg0;
+        midiPcmStream = arg0;
         return true;
     }
 
@@ -98,20 +104,20 @@ public class MidiPlayer {
     public static void loop() {
         try {
             if (anInt441 == 1) {
-                @Pc(16) int local16 = Static172.midiPcmStream.method4440();
-                if (local16 > 0 && Static172.midiPcmStream.method4414()) {
+                @Pc(16) int local16 = midiPcmStream.method4440();
+                if (local16 > 0 && midiPcmStream.method4414()) {
                     local16 -= anInt1757;
                     if (local16 < 0) {
                         local16 = 0;
                     }
-                    Static172.midiPcmStream.method4447(local16);
+                    midiPcmStream.method4447(local16);
                     return;
                 }
-                Static172.midiPcmStream.method4446();
-                Static172.midiPcmStream.method4426();
+                midiPcmStream.method4446();
+                midiPcmStream.method4426();
                 aClass3_Sub29_1 = null;
                 aClass89_1 = null;
-                if (Static172.aClass153_70 == null) {
+                if (aClass153_70 == null) {
                     anInt441 = 0;
                 } else {
                     anInt441 = 2;
@@ -119,11 +125,34 @@ public class MidiPlayer {
             }
         } catch (@Pc(62) Exception local62) {
             local62.printStackTrace();
-            Static172.midiPcmStream.method4446();
-            Static172.aClass153_70 = null;
+            midiPcmStream.method4446();
+            aClass153_70 = null;
             aClass3_Sub29_1 = null;
             anInt441 = 0;
             aClass89_1 = null;
         }
+    }
+
+    @OriginalMember(owner = "client!kk", name = "a", descriptor = "(I)Z")
+	public static boolean method2655() {
+		return anInt441 != 0 || midiPcmStream.method4414();
+	}
+
+    @OriginalMember(owner = "client!jh", name = "a", descriptor = "(Lclient!ve;ZIIZI)V")
+    public static void method2410(@OriginalArg(0) Js5 arg0, @OriginalArg(2) int arg1, @OriginalArg(5) int arg2) {
+        aClass153_70 = arg0;
+        anInt441 = 1;
+        anInt5527 = arg2;
+        anInt5085 = 0;
+        anInt5853 = arg1;
+        aBoolean116 = false;
+        anInt1757 = 10000;
+    }
+
+    @OriginalMember(owner = "client!th", name = "a", descriptor = "(Z)V")
+    public static void method4548() {
+        midiPcmStream.method4446();
+        anInt441 = 1;
+        aClass153_70 = null;
     }
 }
