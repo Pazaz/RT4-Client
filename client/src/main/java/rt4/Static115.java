@@ -12,10 +12,7 @@ public final class Static115 {
 	@OriginalMember(owner = "client!ja", name = "f", descriptor = "Lclient!ih;")
 	public static final LinkedList mediumPriorityRequests = new LinkedList();
 
-	@OriginalMember(owner = "client!ja", name = "j", descriptor = "I")
-	public static int anInt2937 = 0;
-
-	@OriginalMember(owner = "client!ja", name = "r", descriptor = "I")
+    @OriginalMember(owner = "client!ja", name = "r", descriptor = "I")
 	public static int anInt2941 = -1;
 
 	@OriginalMember(owner = "client!ja", name = "s", descriptor = "Lclient!na;")

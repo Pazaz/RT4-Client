@@ -461,9 +461,9 @@ public final class LocType {
 		} else if (arg1 == 28) {
 			this.wallDecorOffsetScale = arg0.g1();
 		} else if (arg1 == 29) {
-			this.anInt4407 = arg0.g1s();
+			this.anInt4407 = arg0.g1b();
 		} else if (arg1 == 39) {
-			this.anInt4405 = arg0.g1s() * 5;
+			this.anInt4405 = arg0.g1b() * 5;
 		} else if (arg1 >= 30 && arg1 < 35) {
 			this.ops[arg1 - 30] = arg0.gjstr();
 			if (this.ops[arg1 - 30].equalsIgnoreCase(LocalizedText.HIDDEN)) {
@@ -489,7 +489,7 @@ public final class LocType {
 			defaultMultiLoc = arg0.g1();
 			this.aByteArray63 = new byte[defaultMultiLoc];
 			for (len = 0; len < defaultMultiLoc; len++) {
-				this.aByteArray63[len] = arg0.g1s();
+				this.aByteArray63[len] = arg0.g1b();
 			}
 		} else if (arg1 == 60) {
 			this.mapElement = arg0.g2();
@@ -506,11 +506,11 @@ public final class LocType {
 		} else if (arg1 == 69) {
 			this.blockedSides = arg0.g1();
 		} else if (arg1 == 70) {
-			this.translateX = arg0.g2s();
+			this.translateX = arg0.g2b();
 		} else if (arg1 == 71) {
-			this.translateY = arg0.g2s();
+			this.translateY = arg0.g2b();
 		} else if (arg1 == 72) {
-			this.translateZ = arg0.g2s();
+			this.translateZ = arg0.g2b();
 		} else if (arg1 == 73) {
 			this.aBoolean206 = true;
 		} else if (arg1 == 74) {

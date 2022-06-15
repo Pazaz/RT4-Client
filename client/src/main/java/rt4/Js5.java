@@ -316,7 +316,7 @@ public final class Js5 {
 			} else {
 				local114 = method2696(this.anObjectArray32[arg0], true);
 				@Pc(128) Buffer local128 = new Buffer(local114);
-				local128.decryptXtea(arg1, local128.data.length);
+				local128.tinydec(arg1, local128.data.length);
 			}
 			@Pc(140) byte[] local140;
 			try {

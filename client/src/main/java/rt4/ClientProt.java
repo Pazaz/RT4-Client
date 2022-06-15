@@ -104,14 +104,14 @@ public class ClientProt {
             Protocol.outboundBuffer.p1isaac(77);
             Protocol.outboundBuffer.p1(local13 + local13 + 3);
         }
-        Protocol.outboundBuffer.p1a(Keyboard.pressedKeys[Keyboard.KEY_CTRL] ? 1 : 0);
+        Protocol.outboundBuffer.p1add(Keyboard.pressedKeys[Keyboard.KEY_CTRL] ? 1 : 0);
         Protocol.outboundBuffer.p2(Camera.originX + local23);
         Protocol.outboundBuffer.p2add(Camera.originZ + local27);
         LoginManager.mapFlagZ = PathFinder.queueZ[0];
         LoginManager.mapFlagX = PathFinder.queueX[0];
         for (@Pc(126) int local126 = 1; local126 < local13; local126++) {
             arg0--;
-            Protocol.outboundBuffer.p1a(PathFinder.queueX[arg0] - local23);
+            Protocol.outboundBuffer.p1add(PathFinder.queueX[arg0] - local23);
             Protocol.outboundBuffer.p1sub(PathFinder.queueZ[arg0] - local27);
         }
     }
@@ -141,19 +141,19 @@ public class ClientProt {
                 PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 1, false, 0, local28.movementQueueX[0], 1, 0, 2, local28.movementQueueZ[0], PlayerList.self.movementQueueX[0]);
                 if (arg0 == 1) {
                     Protocol.outboundBuffer.p1isaac(68);
-                    Protocol.outboundBuffer.p2leadd(PlayerList.ids[local15]);
+                    Protocol.outboundBuffer.ip2add(PlayerList.ids[local15]);
                 } else if (arg0 == 4) {
                     Protocol.outboundBuffer.p1isaac(180);
-                    Protocol.outboundBuffer.p2leadd(PlayerList.ids[local15]);
+                    Protocol.outboundBuffer.ip2add(PlayerList.ids[local15]);
                 } else if (arg0 == 5) {
                     Protocol.outboundBuffer.p1isaac(4);
-                    Protocol.outboundBuffer.p2le(PlayerList.ids[local15]);
+                    Protocol.outboundBuffer.ip2(PlayerList.ids[local15]);
                 } else if (arg0 == 6) {
                     Protocol.outboundBuffer.p1isaac(133);
-                    Protocol.outboundBuffer.p2le(PlayerList.ids[local15]);
+                    Protocol.outboundBuffer.ip2(PlayerList.ids[local15]);
                 } else if (arg0 == 7) {
                     Protocol.outboundBuffer.p1isaac(114);
-                    Protocol.outboundBuffer.p2leadd(PlayerList.ids[local15]);
+                    Protocol.outboundBuffer.ip2add(PlayerList.ids[local15]);
                 }
                 break;
             }
@@ -499,10 +499,10 @@ public class ClientProt {
                     }
                     if (Static56.aClass13_12 != null && Static36.method938(Static40.aClass13_14) != null) {
                         Protocol.outboundBuffer.p1isaac(79);
-                        Protocol.outboundBuffer.p4me(Static40.aClass13_14.id);
-                        Protocol.outboundBuffer.p2le(Static56.aClass13_12.createdComponentId);
+                        Protocol.outboundBuffer.mp4(Static40.aClass13_14.id);
+                        Protocol.outboundBuffer.ip2(Static56.aClass13_12.createdComponentId);
                         Protocol.outboundBuffer.p4(Static56.aClass13_12.id);
-                        Protocol.outboundBuffer.p2le(Static40.aClass13_14.createdComponentId);
+                        Protocol.outboundBuffer.ip2(Static40.aClass13_14.createdComponentId);
                     }
                 } else if ((VarpDomain.anInt2952 == 1 || MiniMenu.method4640(MiniMenu.size - 1)) && MiniMenu.size > 2) {
                     Static226.method3901();
@@ -519,7 +519,7 @@ public class ClientProt {
     @OriginalMember(owner = "client!aa", name = "a", descriptor = "(IZI)V")
     public static void method10(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
         Protocol.outboundBuffer.p1isaac(132);
-        Protocol.outboundBuffer.p4rme(arg1);
-        Protocol.outboundBuffer.p2le(arg0);
+        Protocol.outboundBuffer.imp4(arg1);
+        Protocol.outboundBuffer.ip2(arg0);
     }
 }

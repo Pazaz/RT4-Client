@@ -388,7 +388,7 @@ public class SceneGraph {
                 break;
             }
             if (local32 <= 49) {
-                tileOverlays[arg7][arg5][arg4] = arg3.g1s();
+                tileOverlays[arg7][arg5][arg4] = arg3.g1b();
                 tileShapes[arg7][arg5][arg4] = (byte) ((local32 - 2) / 4);
                 tileAngles[arg7][arg5][arg4] = (byte) (local32 + arg6 - 2 & 0x3);
             } else if (local32 > 81) {

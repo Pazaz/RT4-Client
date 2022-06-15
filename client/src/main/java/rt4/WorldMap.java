@@ -290,7 +290,7 @@ public class WorldMap {
                     @Pc(112) byte[] underlay = underlays[local68 + local102];
                     for (local114 = 0; local114 < 64; local114++) {
                         if (!local35 || local102 >= local33 * 8 && local33 * 8 + 8 > local102 && local114 >= local31 * 8 && local114 < local31 * 8 + 8) {
-                            underlay[local78 - local114] = data.g1s();
+                            underlay[local78 - local114] = data.g1b();
                         }
                     }
                 }
@@ -413,13 +413,13 @@ public class WorldMap {
                         }
                         for (@Pc(104) int local104 = 0; local104 < 64; local104++) {
                             if (!local24 || local97 >= local22 * 8 && local97 < local22 * 8 + 8 && local104 >= local26 * 8 && local104 < local26 * 8 + 8) {
-                                local147 = arg0.g1s();
+                                local147 = arg0.g1b();
                                 if (local147 != 0) {
                                     if (aByteArrayArrayArray3[local91][local95] == null) {
                                         aByteArrayArrayArray3[local91][local95] = new byte[4096];
                                     }
                                     aByteArrayArrayArray3[local91][local95][local97 + (63 - local104 << 6)] = local147;
-                                    @Pc(186) byte local186 = arg0.g1s();
+                                    @Pc(186) byte local186 = arg0.g1b();
                                     if (aByteArrayArrayArray8[local91][local95] == null) {
                                         aByteArrayArrayArray8[local91][local95] = new byte[4096];
                                     }
@@ -435,7 +435,7 @@ public class WorldMap {
                     if ((local24 ? 64 : 4096) <= local91) {
                         continue label87;
                     }
-                    local147 = arg0.g1s();
+                    local147 = arg0.g1b();
                     if (local147 != 0) {
                         arg0.offset++;
                     }
@@ -474,13 +474,13 @@ public class WorldMap {
                         }
                         for (@Pc(107) int local107 = 0; local107 < 64; local107++) {
                             if (!local25 || local23 * 8 <= local102 && local23 * 8 + 8 > local102 && local107 >= local27 * 8 && local27 * 8 + 8 > local107) {
-                                local146 = arg0.g1s();
+                                local146 = arg0.g1b();
                                 if (local146 != 0) {
                                     if (aByteArrayArrayArray12[local96][local100] == null) {
                                         aByteArrayArrayArray12[local96][local100] = new byte[4096];
                                     }
                                     aByteArrayArrayArray12[local96][local100][(63 - local107 << 6) + local102] = local146;
-                                    @Pc(182) byte local182 = arg0.g1s();
+                                    @Pc(182) byte local182 = arg0.g1b();
                                     if (aByteArrayArrayArray10[local96][local100] == null) {
                                         aByteArrayArrayArray10[local96][local100] = new byte[4096];
                                     }
@@ -496,7 +496,7 @@ public class WorldMap {
                     if (local96 >= (local25 ? 64 : 4096)) {
                         continue label83;
                     }
-                    local146 = arg0.g1s();
+                    local146 = arg0.g1b();
                     if (local146 != 0) {
                         arg0.offset++;
                     }

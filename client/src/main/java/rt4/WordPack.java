@@ -19,7 +19,7 @@ public class WordPack {
 	public static int encode(@OriginalArg(1) Buffer arg0, @OriginalArg(2) JagString arg1) {
 		@Pc(6) int local6 = arg0.offset;
 		@Pc(14) byte[] local14 = arg1.method3148();
-		arg0.pSmart1or2(local14.length);
+		arg0.psmarts(local14.length);
 		arg0.offset += codec.method1550(local14.length, arg0.data, local14, 0, arg0.offset);
 		return arg0.offset - local6;
 	}

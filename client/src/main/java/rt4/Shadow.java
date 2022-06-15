@@ -89,12 +89,12 @@ public final class Shadow {
 					local147.p4(local154 + local11 * 9 + 1);
 					local147.p4(local154 + (local11 + 1) * 9 + 1);
 				} else {
-					local147.p4le(local154 + (local11 + 1) * 9);
-					local147.p4le(local154 + local11 * 9);
-					local147.p4le(local154 + local11 * 9 + 1);
-					local147.p4le(local154 + (local11 + 1) * 9);
-					local147.p4le(local154 + local11 * 9 + 1);
-					local147.p4le(local154 + (local11 + 1) * 9 + 1);
+					local147.ip4(local154 + (local11 + 1) * 9);
+					local147.ip4(local154 + local11 * 9);
+					local147.ip4(local154 + local11 * 9 + 1);
+					local147.ip4(local154 + (local11 + 1) * 9);
+					local147.ip4(local154 + local11 * 9 + 1);
+					local147.ip4(local154 + (local11 + 1) * 9 + 1);
 				}
 			}
 		}

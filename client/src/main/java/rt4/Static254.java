@@ -177,7 +177,7 @@ public final class Static254 {
 	@OriginalMember(owner = "client!uj", name = "a", descriptor = "(Lclient!wa;II)Lclient!na;")
 	public static JagString method4350(@OriginalArg(0) Buffer arg0) {
 		try {
-			@Pc(7) int local7 = arg0.gSmart1or2();
+			@Pc(7) int local7 = arg0.gsmarts();
 			if (local7 > 32767) {
 				local7 = 32767;
 			}

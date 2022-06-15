@@ -150,8 +150,8 @@ public final class ReflectionCheck extends Node {
                     arg0.p1(local18.anIntArray138[local121]);
                 }
             }
-            arg0.pCrc32(local25);
-            arg0.p1len(arg0.offset - local25);
+            arg0.addcrc(local25);
+            arg0.psize1(arg0.offset - local25);
             local18.unlink();
         }
     }
@@ -197,7 +197,7 @@ public final class ReflectionCheck extends Node {
 						for (@Pc(199) int local199 = 0; local199 < local95; local199++) {
 							local210 = arg1.g4();
 							local193[local199] = new byte[local210];
-							arg1.gBytes(local210, local193[local199]);
+							arg1.gdata(local210, local193[local199]);
 						}
 					}
 					local17.anIntArray139[local59] = local71;

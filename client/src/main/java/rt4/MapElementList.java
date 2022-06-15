@@ -47,7 +47,7 @@ public final class MapElementList {
         for (@Pc(37) int local37 = 0; local37 < local35.anInt5074; local37++) {
             @Pc(56) Buffer local56 = new Buffer(arg1.getFile(local10, local29[local37]));
             local35.aClass100Array153[local37] = local56.gjstr();
-            local35.aByteArray69[local37] = local56.g1s();
+            local35.aByteArray69[local37] = local56.g1b();
             local35.aShortArray73[local37] = (short) local56.g2();
             local35.aShortArray72[local37] = (short) local56.g2();
             local35.anIntArray444[local37] = local56.g4();

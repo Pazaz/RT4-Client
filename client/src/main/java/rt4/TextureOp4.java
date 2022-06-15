@@ -164,11 +164,11 @@ public final class TextureOp4 extends TextureOp {
 		} else if (arg0 == 1) {
 			this.anInt642 = arg1.g1();
 		} else if (arg0 == 2) {
-			this.anInt648 = arg1.g2s();
+			this.anInt648 = arg1.g2b();
 			if (this.anInt648 < 0) {
 				this.aShortArray4 = new short[this.anInt642];
 				for (@Pc(93) int local93 = 0; local93 < this.anInt642; local93++) {
-					this.aShortArray4[local93] = (short) arg1.g2s();
+					this.aShortArray4[local93] = (short) arg1.g2b();
 				}
 			}
 		} else if (arg0 == 3) {

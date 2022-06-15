@@ -429,7 +429,7 @@ public final class ObjType {
 				local169 = arg0.g1();
 				this.recolorDestinationPalette = new byte[local169];
 				for (local179 = 0; local179 < local169; local179++) {
-					this.recolorDestinationPalette[local179] = arg0.g1s();
+					this.recolorDestinationPalette[local179] = arg0.g1b();
 				}
 			} else if (arg1 == 65) {
 				this.stockMarket = true;
@@ -467,9 +467,9 @@ public final class ObjType {
 			} else if (arg1 == 112) {
 				this.resizeZ = arg0.g2();
 			} else if (arg1 == 113) {
-				this.ambient = arg0.g1s();
+				this.ambient = arg0.g1b();
 			} else if (arg1 == 114) {
-				this.contrast = arg0.g1s() * 5;
+				this.contrast = arg0.g1b() * 5;
 			} else if (arg1 == 115) {
 				this.team = arg0.g1();
 			} else if (arg1 == 121) {
@@ -477,13 +477,13 @@ public final class ObjType {
 			} else if (arg1 == 122) {
 				this.lentTemplate = arg0.g2();
 			} else if (arg1 == 125) {
-				this.manWearXOff = arg0.g1s();
-				this.manWearYOff = arg0.g1s();
-				this.manWearZOff = arg0.g1s();
+				this.manWearXOff = arg0.g1b();
+				this.manWearYOff = arg0.g1b();
+				this.manWearZOff = arg0.g1b();
 			} else if (arg1 == 126) {
-				this.womanWearXOff = arg0.g1s();
-				this.womanWearYOff = arg0.g1s();
-				this.womanWearZOff = arg0.g1s();
+				this.womanWearXOff = arg0.g1b();
+				this.womanWearYOff = arg0.g1b();
+				this.womanWearZOff = arg0.g1b();
 			} else if (arg1 == 127) {
 				this.cursor1Op = arg0.g1();
 				this.cursor1 = arg0.g2();

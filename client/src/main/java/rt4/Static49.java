@@ -31,13 +31,13 @@ public final class Static49 {
 								do {
 									@Pc(45) int local45;
 									while (local39) {
-										local45 = local22.gSmart1or2();
+										local45 = local22.gsmarts();
 										if (local45 == 0) {
 											continue label70;
 										}
 										local22.g1();
 									}
-									local45 = local22.gSmart1or2();
+									local45 = local22.gsmarts();
 									if (local45 == 0) {
 										continue label70;
 									}

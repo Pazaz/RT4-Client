@@ -141,7 +141,7 @@ public final class Light_Class45 {
 				local15.gFloat((float) this.anIntArray179[local19]);
 			}
 			for (local19 = 0; local19 < this.anInt2018; local19++) {
-				local7.p4le(this.anIntArray177[local19]);
+				local7.ip4(this.anIntArray177[local19]);
 			}
 		}
 		if (GlRenderer.arbVboSupported) {

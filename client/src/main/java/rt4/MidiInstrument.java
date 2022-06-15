@@ -43,7 +43,7 @@ public final class MidiInstrument extends Node {
 		@Pc(55) byte[] local55 = new byte[local29];
 		@Pc(57) int local57;
 		for (local57 = 0; local57 < local29; local57++) {
-			local55[local57] = local38.g1s();
+			local55[local57] = local38.g1b();
 		}
 		local38.offset++;
 		local29++;
@@ -55,7 +55,7 @@ public final class MidiInstrument extends Node {
 		@Pc(106) byte[] local106 = new byte[local91];
 		@Pc(108) int local108;
 		for (local108 = 0; local108 < local91; local108++) {
-			local106[local108] = local38.g1s();
+			local106[local108] = local38.g1b();
 		}
 		local38.offset++;
 		local91++;
@@ -67,7 +67,7 @@ public final class MidiInstrument extends Node {
 		}
 		@Pc(159) byte[] local159 = new byte[local133];
 		for (@Pc(161) int local161 = 0; local161 < local133; local161++) {
-			local159[local161] = local38.g1s();
+			local159[local161] = local38.g1b();
 		}
 		local38.offset++;
 		local133++;
@@ -116,7 +116,7 @@ public final class MidiInstrument extends Node {
 		@Pc(346) byte[] local346 = new byte[local329];
 		@Pc(348) int local348;
 		for (local348 = 0; local348 < local329; local348++) {
-			local346[local348] = local38.g1s();
+			local346[local348] = local38.g1b();
 		}
 		local38.offset++;
 		local329++;
@@ -226,23 +226,23 @@ public final class MidiInstrument extends Node {
 			local729 = local242[local664];
 			if (local729.aByteArray80 != null) {
 				for (local734 = 1; local734 < local729.aByteArray80.length; local734 += 2) {
-					local729.aByteArray80[local734] = local38.g1s();
+					local729.aByteArray80[local734] = local38.g1b();
 				}
 			}
 			if (local729.aByteArray81 != null) {
 				for (local734 = 3; local734 < local729.aByteArray81.length - 2; local734 += 2) {
-					local729.aByteArray81[local734] = local38.g1s();
+					local729.aByteArray81[local734] = local38.g1b();
 				}
 			}
 		}
 		if (local311 != null) {
 			for (local664 = 1; local664 < local311.length; local664 += 2) {
-				local311[local664] = local38.g1s();
+				local311[local664] = local38.g1b();
 			}
 		}
 		if (local327 != null) {
 			for (local664 = 1; local664 < local327.length; local664 += 2) {
-				local327[local664] = local38.g1s();
+				local327[local664] = local38.g1b();
 			}
 		}
 		for (local664 = 0; local664 < local194; local664++) {

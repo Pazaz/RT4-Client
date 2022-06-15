@@ -611,7 +611,7 @@ public final class NpcType {
 			count = arg1.g1();
 			this.aByteArray51 = new byte[count];
 			for (local18 = 0; local18 < count; local18++) {
-				this.aByteArray51[local18] = arg1.g1s();
+				this.aByteArray51[local18] = arg1.g1b();
 			}
 		} else if (arg0 == 60) {
 			count = arg1.g1();
@@ -630,9 +630,9 @@ public final class NpcType {
 		} else if (arg0 == 99) {
 			this.aBoolean182 = true;
 		} else if (arg0 == 100) {
-			this.anInt3715 = arg1.g1s();
+			this.anInt3715 = arg1.g1b();
 		} else if (arg0 == 101) {
-			this.anInt3738 = arg1.g1s() * 5;
+			this.anInt3738 = arg1.g1b() * 5;
 		} else if (arg0 == 102) {
 			this.prayerIcon = arg1.g2();
 		} else if (arg0 == 103) {
@@ -674,29 +674,29 @@ public final class NpcType {
 				this.aShort24 = (short) arg1.g2();
 				this.aShort23 = (short) arg1.g2();
 			} else if (arg0 == 114) {
-				this.aByte13 = arg1.g1s();
-				this.aByte12 = arg1.g1s();
+				this.aByte13 = arg1.g1b();
+				this.aByte12 = arg1.g1b();
 			} else if (arg0 == 115) {
 				arg1.g1();
 				arg1.g1();
 			} else if (arg0 == 119) {
-				this.aByte10 = arg1.g1s();
+				this.aByte10 = arg1.g1b();
 			} else if (arg0 == 121) {
 				this.anIntArrayArray29 = new int[this.modelIndices.length][];
 				count = arg1.g1();
 				for (local18 = 0; local18 < count; local18++) {
 					local297 = arg1.g1();
 					@Pc(439) int[] local439 = this.anIntArrayArray29[local297] = new int[3];
-					local439[0] = arg1.g1s();
-					local439[1] = arg1.g1s();
-					local439[2] = arg1.g1s();
+					local439[0] = arg1.g1b();
+					local439[1] = arg1.g1b();
+					local439[2] = arg1.g1b();
 				}
 			} else if (arg0 == 122) {
 				this.hitBarId = arg1.g2();
 			} else if (arg0 == 123) {
 				this.anInt3730 = arg1.g2();
 			} else if (arg0 == 125) {
-				this.aByte11 = arg1.g1s();
+				this.aByte11 = arg1.g1b();
 			} else if (arg0 == 126) {
 				this.anInt3739 = arg1.g2();
 			} else if (arg0 == 127) {

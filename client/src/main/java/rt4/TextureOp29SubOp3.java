@@ -47,7 +47,7 @@ public final class TextureOp29SubOp3 extends TextureOp29SubOp {
 
     @OriginalMember(owner = "client!bk", name = "a", descriptor = "(BLclient!wa;)Lclient!re;")
     public static TextureOp29SubOp3 create(@OriginalArg(1) Buffer arg0) {
-        return new TextureOp29SubOp3(arg0.g2s(), arg0.g2s(), arg0.g2s(), arg0.g2s(), arg0.g2s(), arg0.g2s(), arg0.g2s(), arg0.g2s(), arg0.g3(), arg0.g1());
+        return new TextureOp29SubOp3(arg0.g2b(), arg0.g2b(), arg0.g2b(), arg0.g2b(), arg0.g2b(), arg0.g2b(), arg0.g2b(), arg0.g2b(), arg0.g3(), arg0.g1());
     }
 
     @OriginalMember(owner = "client!re", name = "a", descriptor = "(IZI)V")

@@ -963,7 +963,7 @@ public final class RawModel extends Entity {
 			buffer1.offset = 0;
 
 			for (int i = 0; i < texturedCount; i++) {
-				@Pc(143) byte type = this.textureTypes[i] = buffer1.g1s();
+				@Pc(143) byte type = this.textureTypes[i] = buffer1.g1b();
 				if (type == 0) {
 					simpleTextureFaceCount++;
 				} else if (type >= 1 && type <= 3) {
@@ -1125,17 +1125,17 @@ public final class RawModel extends Entity {
 
 			int dx = 0;
 			if ((flags & 0x1) != 0) {
-				dx = buffer2.gSmart1or2s();
+				dx = buffer2.gsmart();
 			}
 
 			int dy = 0;
 			if ((flags & 0x2) != 0) {
-				dy = buffer3.gSmart1or2s();
+				dy = buffer3.gsmart();
 			}
 
 			int dz = 0;
 			if ((flags & 0x4) != 0) {
-				dz = buffer4.gSmart1or2s();
+				dz = buffer4.gsmart();
 			}
 
 			this.vertexX[v] = prevVertexX + dx;
@@ -1163,15 +1163,15 @@ public final class RawModel extends Entity {
 			this.triangleColors[t] = (short) buffer1.g2();
 
 			if (hasTriangleInfo) {
-				this.triangleInfo[t] = buffer2.g1s();
+				this.triangleInfo[t] = buffer2.g1b();
 			}
 
 			if (priority == 255) {
-				this.trianglePriorities[t] = buffer3.g1s();
+				this.trianglePriorities[t] = buffer3.g1b();
 			}
 
 			if (hasAlpha == 1) {
-				this.triangleAlpha[t] = buffer4.g1s();
+				this.triangleAlpha[t] = buffer4.g1b();
 			}
 
 			if (hasTriangleBones == 1) {
@@ -1202,23 +1202,23 @@ public final class RawModel extends Entity {
 		for (int t = 0; t < triangleCount; t++) {
 			int type = buffer2.g1();
 			if (type == 1) {
-				a = buffer1.gSmart1or2s() + last;
-				b = buffer1.gSmart1or2s() + a;
-				c = buffer1.gSmart1or2s() + b;
+				a = buffer1.gsmart() + last;
+				b = buffer1.gsmart() + a;
+				c = buffer1.gsmart() + b;
 				last = c;
 				this.triangleVertexA[t] = a;
 				this.triangleVertexB[t] = b;
 				this.triangleVertexC[t] = c;
 			} else if (type == 2) {
 				b = c;
-				c = buffer1.gSmart1or2s() + last;
+				c = buffer1.gsmart() + last;
 				last = c;
 				this.triangleVertexA[t] = a;
 				this.triangleVertexB[t] = b;
 				this.triangleVertexC[t] = c;
 			} else if (type == 3) {
 				a = c;
-				c = buffer1.gSmart1or2s() + last;
+				c = buffer1.gsmart() + last;
 				last = c;
 				this.triangleVertexA[t] = a;
 				this.triangleVertexB[t] = b;
@@ -1227,7 +1227,7 @@ public final class RawModel extends Entity {
 				@Pc(803) int b0 = a;
 				a = b;
 				b = b0;
-				c = buffer1.gSmart1or2s() + last;
+				c = buffer1.gsmart() + last;
 				last = c;
 				this.triangleVertexA[t] = a;
 				this.triangleVertexB[t] = b0;
@@ -1255,9 +1255,9 @@ public final class RawModel extends Entity {
 				this.texturesScaleX[t] = (short) buffer3.g2();
 				this.texturesScaleY[t] = (short) buffer3.g2();
 				this.texturesScaleZ[t] = (short) buffer3.g2();
-				this.textureRotationY[t] = buffer4.g1s();
-				this.aByteArray32[t] = buffer5.g1s();
-				this.aByteArray34[t] = buffer6.g1s();
+				this.textureRotationY[t] = buffer4.g1b();
+				this.aByteArray32[t] = buffer5.g1b();
+				this.aByteArray34[t] = buffer6.g1b();
 			} else if (type == 2) {
 				this.textureFacesP[t] = (short) buffer2.g2();
 				this.textureFacesM[t] = (short) buffer2.g2();
@@ -1265,11 +1265,11 @@ public final class RawModel extends Entity {
 				this.texturesScaleX[t] = (short) buffer3.g2();
 				this.texturesScaleY[t] = (short) buffer3.g2();
 				this.texturesScaleZ[t] = (short) buffer3.g2();
-				this.textureRotationY[t] = buffer4.g1s();
-				this.aByteArray32[t] = buffer5.g1s();
-				this.aByteArray34[t] = buffer6.g1s();
-				this.aByteArray28[t] = buffer6.g1s();
-				this.aByteArray33[t] = buffer6.g1s();
+				this.textureRotationY[t] = buffer4.g1b();
+				this.aByteArray32[t] = buffer5.g1b();
+				this.aByteArray34[t] = buffer6.g1b();
+				this.aByteArray28[t] = buffer6.g1b();
+				this.aByteArray33[t] = buffer6.g1b();
 			} else if (type == 3) {
 				this.textureFacesP[t] = (short) buffer2.g2();
 				this.textureFacesM[t] = (short) buffer2.g2();
@@ -1277,9 +1277,9 @@ public final class RawModel extends Entity {
 				this.texturesScaleX[t] = (short) buffer3.g2();
 				this.texturesScaleY[t] = (short) buffer3.g2();
 				this.texturesScaleZ[t] = (short) buffer3.g2();
-				this.textureRotationY[t] = buffer4.g1s();
-				this.aByteArray32[t] = buffer5.g1s();
-				this.aByteArray34[t] = buffer6.g1s();
+				this.textureRotationY[t] = buffer4.g1b();
+				this.aByteArray32[t] = buffer5.g1b();
+				this.aByteArray34[t] = buffer6.g1b();
 			}
 		}
 
@@ -1741,17 +1741,17 @@ public final class RawModel extends Entity {
 
 			int dx = 0;
 			if ((flags & 0x1) != 0) {
-				dx = buffer2.gSmart1or2s();
+				dx = buffer2.gsmart();
 			}
 
 			int dy = 0;
 			if ((flags & 0x2) != 0) {
-				dy = buffer3.gSmart1or2s();
+				dy = buffer3.gsmart();
 			}
 
 			int dz = 0;
 			if ((flags & 0x4) != 0) {
-				dz = buffer4.gSmart1or2s();
+				dz = buffer4.gsmart();
 			}
 
 			this.vertexX[v] = prevVertexX + dx;
@@ -1799,11 +1799,11 @@ public final class RawModel extends Entity {
 			}
 
 			if (hasPriorities == 255) {
-				this.trianglePriorities[t] = buffer3.g1s();
+				this.trianglePriorities[t] = buffer3.g1b();
 			}
 
 			if (hasAlpha == 1) {
-				this.triangleAlpha[t] = buffer4.g1s();
+				this.triangleAlpha[t] = buffer4.g1b();
 			}
 
 			if (hasTriangleBones == 1) {
@@ -1822,23 +1822,23 @@ public final class RawModel extends Entity {
 		for (int t = 0; t < triangleCount; t++) {
 			int type = buffer2.g1();
 			if (type == 1) {
-				a = buffer1.gSmart1or2s() + last;
-				b = buffer1.gSmart1or2s() + a;
-				c = buffer1.gSmart1or2s() + b;
+				a = buffer1.gsmart() + last;
+				b = buffer1.gsmart() + a;
+				c = buffer1.gsmart() + b;
 				last = c;
 				this.triangleVertexA[t] = a;
 				this.triangleVertexB[t] = b;
 				this.triangleVertexC[t] = c;
 			} else if (type == 2) {
 				b = c;
-				c = buffer1.gSmart1or2s() + last;
+				c = buffer1.gsmart() + last;
 				last = c;
 				this.triangleVertexA[t] = a;
 				this.triangleVertexB[t] = b;
 				this.triangleVertexC[t] = c;
 			} else if (type == 3) {
 				a = c;
-				c = buffer1.gSmart1or2s() + last;
+				c = buffer1.gsmart() + last;
 				last = c;
 				this.triangleVertexA[t] = a;
 				this.triangleVertexB[t] = b;
@@ -1847,7 +1847,7 @@ public final class RawModel extends Entity {
 				int b0 = a;
 				a = b;
 				b = b0;
-				c = buffer1.gSmart1or2s() + last;
+				c = buffer1.gsmart() + last;
 				last = c;
 				this.triangleVertexA[t] = a;
 				this.triangleVertexB[t] = b0;

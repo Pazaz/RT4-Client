@@ -359,24 +359,24 @@ public class MiniMenu {
                 Cross.x = Mouse.clickX;
                 Cross.y = Mouse.clickY;
                 Protocol.outboundBuffer.p1isaac(71);
-                Protocol.outboundBuffer.p2leadd(local36);
+                Protocol.outboundBuffer.ip2add(local36);
             }
         }
         if (local23 == 46) {
             PathFinder.findPathToLoc(local31, local19, local15);
             Protocol.outboundBuffer.p1isaac(247);
-            Protocol.outboundBuffer.p2le(Camera.originZ + local19);
-            Protocol.outboundBuffer.p2leadd(local15 + Camera.originX);
+            Protocol.outboundBuffer.ip2(Camera.originZ + local19);
+            Protocol.outboundBuffer.ip2add(local15 + Camera.originX);
             Protocol.outboundBuffer.p2(Integer.MAX_VALUE & (int) (local31 >>> 32));
         }
         if (local23 == 40) {
             Protocol.outboundBuffer.p1isaac(27);
             Protocol.outboundBuffer.p2(Static185.anInt4370);
-            Protocol.outboundBuffer.p4le2(local19);
-            Protocol.outboundBuffer.p2le(local15);
-            Protocol.outboundBuffer.p4le2(Static224.anInt5062);
-            Protocol.outboundBuffer.p2leadd(anInt4997);
-            Protocol.outboundBuffer.p2leadd(local36);
+            Protocol.outboundBuffer.ip4(local19);
+            Protocol.outboundBuffer.ip2(local15);
+            Protocol.outboundBuffer.ip4(Static224.anInt5062);
+            Protocol.outboundBuffer.ip2add(anInt4997);
+            Protocol.outboundBuffer.ip2add(local36);
             anInt2043 = 0;
             pressedInventoryComponent = InterfaceList.getComponent(local19);
             anInt5444 = local15;
@@ -403,7 +403,7 @@ public class MiniMenu {
                 Cross.type = 2;
                 Cross.y = Mouse.clickY;
                 Protocol.outboundBuffer.p1isaac(78);
-                Protocol.outboundBuffer.p2le(local36);
+                Protocol.outboundBuffer.ip2(local36);
             }
         }
         if (local23 == 44) {
@@ -415,14 +415,14 @@ public class MiniMenu {
                 Cross.y = Mouse.clickY;
                 Cross.milliseconds = 0;
                 Protocol.outboundBuffer.p1isaac(133);
-                Protocol.outboundBuffer.p2le(local36);
+                Protocol.outboundBuffer.ip2(local36);
             }
         }
         if (local23 == 58) {
             Protocol.outboundBuffer.p1isaac(135);
             Protocol.outboundBuffer.p2add(local36);
             Protocol.outboundBuffer.p2add(local15);
-            Protocol.outboundBuffer.p4me(local19);
+            Protocol.outboundBuffer.mp4(local19);
             anInt2043 = 0;
             pressedInventoryComponent = InterfaceList.getComponent(local19);
             anInt5444 = local15;
@@ -430,7 +430,7 @@ public class MiniMenu {
         if (local23 == 42) {
             PathFinder.findPathToLoc(local31, local19, local15);
             Protocol.outboundBuffer.p1isaac(254);
-            Protocol.outboundBuffer.p2le(local15 + Camera.originX);
+            Protocol.outboundBuffer.ip2(local15 + Camera.originX);
             Protocol.outboundBuffer.p2add((int) (local31 >>> 32) & Integer.MAX_VALUE);
             Protocol.outboundBuffer.p2(local19 + Camera.originZ);
         }
@@ -446,9 +446,9 @@ public class MiniMenu {
                 Cross.milliseconds = 0;
                 Cross.y = Mouse.clickY;
                 Protocol.outboundBuffer.p1isaac(239);
-                Protocol.outboundBuffer.p4le2(anInt2512);
+                Protocol.outboundBuffer.ip4(anInt2512);
                 Protocol.outboundBuffer.p2add(anInt506);
-                Protocol.outboundBuffer.p2leadd(local36);
+                Protocol.outboundBuffer.ip2add(local36);
             }
         }
         @Pc(560) boolean local560;
@@ -466,16 +466,16 @@ public class MiniMenu {
             Cross.type = 2;
             Cross.y = Mouse.clickY;
             Protocol.outboundBuffer.p1isaac(66);
-            Protocol.outboundBuffer.p2le(Camera.originX + local15);
+            Protocol.outboundBuffer.ip2(Camera.originX + local15);
             Protocol.outboundBuffer.p2(local36);
-            Protocol.outboundBuffer.p2leadd(local19 + Camera.originZ);
+            Protocol.outboundBuffer.ip2add(local19 + Camera.originZ);
         }
         if (local23 == 1001) {
             PathFinder.findPathToLoc(local31, local19, local15);
             Protocol.outboundBuffer.p1isaac(170);
-            Protocol.outboundBuffer.p2leadd(Integer.MAX_VALUE & (int) (local31 >>> 32));
-            Protocol.outboundBuffer.p2leadd(local15 + Camera.originX);
-            Protocol.outboundBuffer.p2leadd(local19 + Camera.originZ);
+            Protocol.outboundBuffer.ip2add(Integer.MAX_VALUE & (int) (local31 >>> 32));
+            Protocol.outboundBuffer.ip2add(local15 + Camera.originX);
+            Protocol.outboundBuffer.ip2add(local19 + Camera.originZ);
         }
         if (local23 == 1002) {
             Cross.type = 2;
@@ -483,14 +483,14 @@ public class MiniMenu {
             Cross.y = Mouse.clickY;
             Cross.milliseconds = 0;
             Protocol.outboundBuffer.p1isaac(92);
-            Protocol.outboundBuffer.p2leadd(local36);
+            Protocol.outboundBuffer.ip2add(local36);
         }
         @Pc(693) Component local693;
         if (local23 == 1006) {
             local693 = InterfaceList.getComponent(local19);
             if (local693 == null || local693.objCounts[local15] < 100000) {
                 Protocol.outboundBuffer.p1isaac(92);
-                Protocol.outboundBuffer.p2leadd(local36);
+                Protocol.outboundBuffer.ip2add(local36);
             } else {
                 Chat.add(JagString.EMPTY, 0, JagString.concatenate(new JagString[] { JagString.parseInt(local693.objCounts[local15]), aClass100_1039, ObjTypeList.get(local36).name}));
             }
@@ -538,20 +538,20 @@ public class MiniMenu {
         }
         if (local23 == 47) {
             Protocol.outboundBuffer.p1isaac(156);
-            Protocol.outboundBuffer.p2leadd(local15);
+            Protocol.outboundBuffer.ip2add(local15);
             Protocol.outboundBuffer.p2add(local36);
-            Protocol.outboundBuffer.p4le2(local19);
+            Protocol.outboundBuffer.ip4(local19);
             anInt2043 = 0;
             pressedInventoryComponent = InterfaceList.getComponent(local19);
             anInt5444 = local15;
         }
         if (local23 == 3) {
             Protocol.outboundBuffer.p1isaac(253);
-            Protocol.outboundBuffer.p4le2(anInt2512);
-            Protocol.outboundBuffer.p2leadd(local15);
-            Protocol.outboundBuffer.p4le2(local19);
+            Protocol.outboundBuffer.ip4(anInt2512);
+            Protocol.outboundBuffer.ip2add(local15);
+            Protocol.outboundBuffer.ip4(local19);
             Protocol.outboundBuffer.p2add(local36);
-            Protocol.outboundBuffer.p2le(anInt506);
+            Protocol.outboundBuffer.ip2(anInt506);
             anInt2043 = 0;
             pressedInventoryComponent = InterfaceList.getComponent(local19);
             anInt5444 = local15;
@@ -565,7 +565,7 @@ public class MiniMenu {
                 Cross.x = Mouse.clickX;
                 Cross.milliseconds = 0;
                 Protocol.outboundBuffer.p1isaac(4);
-                Protocol.outboundBuffer.p2le(local36);
+                Protocol.outboundBuffer.ip2(local36);
             }
         }
         if (local23 == 41 && Static39.aClass13_10 == null) {
@@ -576,15 +576,15 @@ public class MiniMenu {
         if (local23 == 49) {
             PathFinder.findPathToLoc(local31, local19, local15);
             Protocol.outboundBuffer.p1isaac(84);
-            Protocol.outboundBuffer.p2leadd(Integer.MAX_VALUE & (int) (local31 >>> 32));
-            Protocol.outboundBuffer.p2leadd(Camera.originZ + local19);
-            Protocol.outboundBuffer.p2le(local15 + Camera.originX);
+            Protocol.outboundBuffer.ip2add(Integer.MAX_VALUE & (int) (local31 >>> 32));
+            Protocol.outboundBuffer.ip2add(Camera.originZ + local19);
+            Protocol.outboundBuffer.ip2(local15 + Camera.originX);
         }
         if (local23 == 23) {
             Protocol.outboundBuffer.p1isaac(206);
             Protocol.outboundBuffer.p2add(local36);
-            Protocol.outboundBuffer.p2le(local15);
-            Protocol.outboundBuffer.p4le2(local19);
+            Protocol.outboundBuffer.ip2(local15);
+            Protocol.outboundBuffer.ip4(local19);
             anInt2043 = 0;
             pressedInventoryComponent = InterfaceList.getComponent(local19);
             anInt5444 = local15;
@@ -593,9 +593,9 @@ public class MiniMenu {
             Protocol.outboundBuffer.p1isaac(134);
             Protocol.outboundBuffer.p2add(Camera.originX + local15);
             Protocol.outboundBuffer.p2(anInt4997);
-            Protocol.outboundBuffer.p2le(local19 + Camera.originZ);
+            Protocol.outboundBuffer.ip2(local19 + Camera.originZ);
             Protocol.outboundBuffer.p2(Static185.anInt4370);
-            Protocol.outboundBuffer.p4me(Static224.anInt5062);
+            Protocol.outboundBuffer.mp4(Static224.anInt5062);
             Protocol.outboundBuffer.p2add((int) (local31 >>> 32) & Integer.MAX_VALUE);
         }
         if (local23 == 37) {
@@ -607,7 +607,7 @@ public class MiniMenu {
                 Cross.y = Mouse.clickY;
                 Cross.x = Mouse.clickX;
                 Protocol.outboundBuffer.p1isaac(114);
-                Protocol.outboundBuffer.p2leadd(local36);
+                Protocol.outboundBuffer.ip2add(local36);
             }
         }
         if (local23 == 9 || local23 == 1003) {
@@ -615,9 +615,9 @@ public class MiniMenu {
         }
         if (local23 == 5) {
             Protocol.outboundBuffer.p1isaac(55);
-            Protocol.outboundBuffer.p2le(local36);
+            Protocol.outboundBuffer.ip2(local36);
             Protocol.outboundBuffer.p2add(local15);
-            Protocol.outboundBuffer.p4rme(local19);
+            Protocol.outboundBuffer.imp4(local19);
             anInt2043 = 0;
             pressedInventoryComponent = InterfaceList.getComponent(local19);
             anInt5444 = local15;
@@ -637,8 +637,8 @@ public class MiniMenu {
             Cross.y = Mouse.clickY;
             Protocol.outboundBuffer.p1isaac(228);
             Protocol.outboundBuffer.p2(local36);
-            Protocol.outboundBuffer.p2le(Camera.originX + local15);
-            Protocol.outboundBuffer.p2leadd(Camera.originZ + local19);
+            Protocol.outboundBuffer.ip2(Camera.originX + local15);
+            Protocol.outboundBuffer.ip2add(Camera.originZ + local19);
         }
         if (local23 == 4) {
             local192 = NpcList.npcs[local36];
@@ -680,14 +680,14 @@ public class MiniMenu {
                 Cross.type = 2;
                 Cross.x = Mouse.clickX;
                 Protocol.outboundBuffer.p1isaac(180);
-                Protocol.outboundBuffer.p2leadd(local36);
+                Protocol.outboundBuffer.ip2add(local36);
             }
         }
         if (local23 == 35) {
             Protocol.outboundBuffer.p1isaac(161);
-            Protocol.outboundBuffer.p4le2(local19);
-            Protocol.outboundBuffer.p2leadd(local36);
-            Protocol.outboundBuffer.p2leadd(local15);
+            Protocol.outboundBuffer.ip4(local19);
+            Protocol.outboundBuffer.ip2add(local36);
+            Protocol.outboundBuffer.ip2add(local15);
             anInt2043 = 0;
             pressedInventoryComponent = InterfaceList.getComponent(local19);
             anInt5444 = local15;
@@ -702,8 +702,8 @@ public class MiniMenu {
                 Cross.y = Mouse.clickY;
                 Protocol.outboundBuffer.p1isaac(195);
                 Protocol.outboundBuffer.p2add(anInt506);
-                Protocol.outboundBuffer.p4le2(anInt2512);
-                Protocol.outboundBuffer.p2leadd(local36);
+                Protocol.outboundBuffer.ip4(anInt2512);
+                Protocol.outboundBuffer.ip2add(local36);
             }
         }
         if (local23 == 34) {
@@ -720,15 +720,15 @@ public class MiniMenu {
             Cross.y = Mouse.clickY;
             Cross.milliseconds = 0;
             Protocol.outboundBuffer.p1isaac(109);
-            Protocol.outboundBuffer.p2le(local19 + Camera.originZ);
+            Protocol.outboundBuffer.ip2(local19 + Camera.originZ);
             Protocol.outboundBuffer.p2(local15 + Camera.originX);
-            Protocol.outboundBuffer.p2leadd(local36);
+            Protocol.outboundBuffer.ip2add(local36);
         }
         if (local23 == 25) {
             Protocol.outboundBuffer.p1isaac(81);
             Protocol.outboundBuffer.p2add(local15);
             Protocol.outboundBuffer.p2(local36);
-            Protocol.outboundBuffer.p4rme(local19);
+            Protocol.outboundBuffer.imp4(local19);
             anInt2043 = 0;
             pressedInventoryComponent = InterfaceList.getComponent(local19);
             anInt5444 = local15;
@@ -742,7 +742,7 @@ public class MiniMenu {
                 Cross.x = Mouse.clickX;
                 Cross.milliseconds = 0;
                 Protocol.outboundBuffer.p1isaac(218);
-                Protocol.outboundBuffer.p2le(local36);
+                Protocol.outboundBuffer.ip2(local36);
             }
         }
         @Pc(1955) int local1955;
@@ -767,10 +767,10 @@ public class MiniMenu {
                 Cross.y = Mouse.clickY;
                 Cross.x = Mouse.clickX;
                 Protocol.outboundBuffer.p1isaac(115);
-                Protocol.outboundBuffer.p4me(Static224.anInt5062);
-                Protocol.outboundBuffer.p2le(Static185.anInt4370);
-                Protocol.outboundBuffer.p2le(local36);
-                Protocol.outboundBuffer.p2leadd(anInt4997);
+                Protocol.outboundBuffer.mp4(Static224.anInt5062);
+                Protocol.outboundBuffer.ip2(Static185.anInt4370);
+                Protocol.outboundBuffer.ip2(local36);
+                Protocol.outboundBuffer.ip2add(anInt4997);
             }
         }
         if (local23 == 59) {
@@ -793,12 +793,12 @@ public class MiniMenu {
             Cross.y = Mouse.clickY;
             Cross.type = 2;
             Protocol.outboundBuffer.p1isaac(101);
-            Protocol.outboundBuffer.p2leadd(local15 + Camera.originX);
-            Protocol.outboundBuffer.p2le(Static185.anInt4370);
-            Protocol.outboundBuffer.p2le(anInt4997);
-            Protocol.outboundBuffer.p2le(local36);
-            Protocol.outboundBuffer.p2leadd(Camera.originZ + local19);
-            Protocol.outboundBuffer.p4me(Static224.anInt5062);
+            Protocol.outboundBuffer.ip2add(local15 + Camera.originX);
+            Protocol.outboundBuffer.ip2(Static185.anInt4370);
+            Protocol.outboundBuffer.ip2(anInt4997);
+            Protocol.outboundBuffer.ip2(local36);
+            Protocol.outboundBuffer.ip2add(Camera.originZ + local19);
+            Protocol.outboundBuffer.mp4(Static224.anInt5062);
         }
         if (local23 == 1004) {
             Cross.milliseconds = 0;
@@ -806,7 +806,7 @@ public class MiniMenu {
             Cross.type = 2;
             Cross.y = Mouse.clickY;
             Protocol.outboundBuffer.p1isaac(94);
-            Protocol.outboundBuffer.p2leadd(local36);
+            Protocol.outboundBuffer.ip2add(local36);
         }
         if (local23 == 11) {
             if (local36 == 0) {
@@ -814,9 +814,9 @@ public class MiniMenu {
                 method3556(Player.level, local15, local19);
             } else if (local36 == 1) {
                 Protocol.outboundBuffer.p1isaac(131);
-                Protocol.outboundBuffer.p4me(anInt2512);
+                Protocol.outboundBuffer.mp4(anInt2512);
                 Protocol.outboundBuffer.p2add(Camera.originX + local15);
-                Protocol.outboundBuffer.p2leadd(anInt506);
+                Protocol.outboundBuffer.ip2add(anInt506);
                 Protocol.outboundBuffer.p2add(local19 + Camera.originZ);
             }
         }
@@ -840,15 +840,15 @@ public class MiniMenu {
                 Cross.type = 2;
                 Cross.x = Mouse.clickX;
                 Protocol.outboundBuffer.p1isaac(248);
-                Protocol.outboundBuffer.p2leadd(local36);
+                Protocol.outboundBuffer.ip2add(local36);
                 Protocol.outboundBuffer.p2(anInt4997);
                 Protocol.outboundBuffer.p2(Static185.anInt4370);
-                Protocol.outboundBuffer.p4me(Static224.anInt5062);
+                Protocol.outboundBuffer.mp4(Static224.anInt5062);
             }
         }
         if (local23 == 7) {
             Protocol.outboundBuffer.p1isaac(85);
-            Protocol.outboundBuffer.p4rme(local19);
+            Protocol.outboundBuffer.imp4(local19);
             Protocol.outboundBuffer.p2(local15);
             Protocol.outboundBuffer.p2add(local36);
             anInt2043 = 0;
@@ -870,22 +870,22 @@ public class MiniMenu {
             Cross.milliseconds = 0;
             Protocol.outboundBuffer.p1isaac(48);
             Protocol.outboundBuffer.p2add(local15 + Camera.originX);
-            Protocol.outboundBuffer.p2leadd(local36);
-            Protocol.outboundBuffer.p2le(Camera.originZ + local19);
+            Protocol.outboundBuffer.ip2add(local36);
+            Protocol.outboundBuffer.ip2(Camera.originZ + local19);
         }
         if (local23 == 38 && PathFinder.findPathToLoc(local31, local19, local15)) {
             Protocol.outboundBuffer.p1isaac(233);
-            Protocol.outboundBuffer.p2leadd(local19 + Camera.originZ);
+            Protocol.outboundBuffer.ip2add(local19 + Camera.originZ);
             Protocol.outboundBuffer.p2add(Camera.originX + local15);
-            Protocol.outboundBuffer.p2leadd(anInt506);
-            Protocol.outboundBuffer.p4rme(anInt2512);
+            Protocol.outboundBuffer.ip2add(anInt506);
+            Protocol.outboundBuffer.imp4(anInt2512);
             Protocol.outboundBuffer.p2add((int) (local31 >>> 32) & Integer.MAX_VALUE);
         }
         if (local23 == 13) {
             Protocol.outboundBuffer.p1isaac(6);
             Protocol.outboundBuffer.p4(local19);
             Protocol.outboundBuffer.p2add(local15);
-            Protocol.outboundBuffer.p2le(local36);
+            Protocol.outboundBuffer.ip2(local36);
             anInt2043 = 0;
             pressedInventoryComponent = InterfaceList.getComponent(local19);
             anInt5444 = local15;
@@ -919,15 +919,15 @@ public class MiniMenu {
         if (local23 == 50) {
             PathFinder.findPathToLoc(local31, local19, local15);
             Protocol.outboundBuffer.p1isaac(194);
-            Protocol.outboundBuffer.p2leadd(local19 + Camera.originZ);
-            Protocol.outboundBuffer.p2le(Camera.originX + local15);
+            Protocol.outboundBuffer.ip2add(local19 + Camera.originZ);
+            Protocol.outboundBuffer.ip2(Camera.originX + local15);
             Protocol.outboundBuffer.p2((int) (local31 >>> 32) & Integer.MAX_VALUE);
         }
         if (local23 == 48) {
             Protocol.outboundBuffer.p1isaac(154);
-            Protocol.outboundBuffer.p2le(local15);
-            Protocol.outboundBuffer.p4rme(local19);
-            Protocol.outboundBuffer.p2leadd(local36);
+            Protocol.outboundBuffer.ip2(local15);
+            Protocol.outboundBuffer.imp4(local19);
+            Protocol.outboundBuffer.ip2add(local36);
             anInt2043 = 0;
             pressedInventoryComponent = InterfaceList.getComponent(local19);
             anInt5444 = local15;
@@ -941,14 +941,14 @@ public class MiniMenu {
                 Cross.y = Mouse.clickY;
                 Cross.type = 2;
                 Protocol.outboundBuffer.p1isaac(68);
-                Protocol.outboundBuffer.p2leadd(local36);
+                Protocol.outboundBuffer.ip2add(local36);
             }
         }
         if (local23 == 43) {
             Protocol.outboundBuffer.p1isaac(153);
-            Protocol.outboundBuffer.p4le2(local19);
-            Protocol.outboundBuffer.p2le(local15);
-            Protocol.outboundBuffer.p2le(local36);
+            Protocol.outboundBuffer.ip4(local19);
+            Protocol.outboundBuffer.ip2(local15);
+            Protocol.outboundBuffer.ip2(local36);
             anInt2043 = 0;
             pressedInventoryComponent = InterfaceList.getComponent(local19);
             anInt5444 = local15;
@@ -963,18 +963,18 @@ public class MiniMenu {
             Cross.type = 2;
             Cross.milliseconds = 0;
             Protocol.outboundBuffer.p1isaac(73);
-            Protocol.outboundBuffer.p4rme(anInt2512);
+            Protocol.outboundBuffer.imp4(anInt2512);
             Protocol.outboundBuffer.p2(Camera.originZ + local19);
-            Protocol.outboundBuffer.p2leadd(local36);
-            Protocol.outboundBuffer.p2leadd(local15 + Camera.originX);
-            Protocol.outboundBuffer.p2le(anInt506);
+            Protocol.outboundBuffer.ip2add(local36);
+            Protocol.outboundBuffer.ip2add(local15 + Camera.originX);
+            Protocol.outboundBuffer.ip2(anInt506);
         }
         if (local23 == 12) {
             Protocol.outboundBuffer.p1isaac(82);
             Protocol.outboundBuffer.p2(anInt506);
-            Protocol.outboundBuffer.p4rme(local19);
+            Protocol.outboundBuffer.imp4(local19);
             Protocol.outboundBuffer.p4(anInt2512);
-            Protocol.outboundBuffer.p2leadd(local15);
+            Protocol.outboundBuffer.ip2add(local15);
         }
         if (local23 == 36) {
             if (local36 == 0) {
@@ -1016,7 +1016,7 @@ public class MiniMenu {
             Protocol.outboundBuffer.p1isaac(33);
             Protocol.outboundBuffer.p2(local36);
             Protocol.outboundBuffer.p2(Camera.originX + local15);
-            Protocol.outboundBuffer.p2le(Camera.originZ + local19);
+            Protocol.outboundBuffer.ip2(Camera.originZ + local19);
         }
         if (local23 == 16) {
             local192 = NpcList.npcs[local36];
@@ -1027,7 +1027,7 @@ public class MiniMenu {
                 Cross.y = Mouse.clickY;
                 Cross.type = 2;
                 Protocol.outboundBuffer.p1isaac(3);
-                Protocol.outboundBuffer.p2leadd(local36);
+                Protocol.outboundBuffer.ip2add(local36);
             }
         }
         if (anInt5014 != 0) {

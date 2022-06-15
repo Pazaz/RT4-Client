@@ -31,7 +31,7 @@ public final class StockMarketOffer {
 
 	@OriginalMember(owner = "client!sg", name = "<init>", descriptor = "(Lclient!wa;)V")
 	public StockMarketOffer(@OriginalArg(0) Buffer arg0) {
-		this.aByte17 = arg0.g1s();
+		this.aByte17 = arg0.g1b();
 		this.item = arg0.g2();
 		this.price = arg0.g4();
 		this.count = arg0.g4();
