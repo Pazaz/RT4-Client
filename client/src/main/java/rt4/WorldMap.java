@@ -105,7 +105,7 @@ public class WorldMap {
         }
 
         if (loadPercentage < 10) {
-            if (!MapList.archive.allFilesComplete(currentMap.group)) {
+            if (!MapList.archive.isGroupReady(currentMap.group)) {
                 loadPercentage = client.js5Archive23.getPercentageComplete(currentMap.group) / 10;
                 return;
             }
@@ -187,7 +187,7 @@ public class WorldMap {
             GameShell.resetTimer();
         } else if (loadPercentage == 60) {
             if (MapList.archive.isGroupNameValid(JagString.concatenate(new JagString[] { currentMap.group, LABELS}))) {
-                if (!MapList.archive.allFilesComplete(JagString.concatenate(new JagString[] { currentMap.group, LABELS}))) {
+                if (!MapList.archive.isGroupReady(JagString.concatenate(new JagString[] { currentMap.group, LABELS}))) {
                     return;
                 }
                 labels = MapElementList.create(JagString.concatenate(new JagString[] { currentMap.group, LABELS}), MapList.archive);

@@ -9,51 +9,51 @@ import org.openrs2.deob.annotation.Pc;
 public final class Js5Index {
 
 	@OriginalMember(owner = "client!ii", name = "b", descriptor = "[[I")
-	public int[][] anIntArrayArray21;
+	public int[][] fileNameHashes;
 
 	@OriginalMember(owner = "client!ii", name = "d", descriptor = "[I")
-	public int[] anIntArray268;
+	public int[] groupChecksums;
 
 	@OriginalMember(owner = "client!ii", name = "f", descriptor = "I")
 	public int anInt2902;
 
 	@OriginalMember(owner = "client!ii", name = "h", descriptor = "Lclient!jg;")
-	public IntHashTable aClass76_1;
+	public IntHashTable groupNameHashTable;
 
 	@OriginalMember(owner = "client!ii", name = "m", descriptor = "[I")
 	public int[] anIntArray269;
 
 	@OriginalMember(owner = "client!ii", name = "n", descriptor = "[I")
-	public int[] anIntArray270;
+	public int[] groupCapacities;
 
 	@OriginalMember(owner = "client!ii", name = "o", descriptor = "[I")
-	public int[] anIntArray271;
+	public int[] groupNameHashes;
 
 	@OriginalMember(owner = "client!ii", name = "p", descriptor = "[I")
-	public int[] anIntArray272;
+	public int[] groupSizes;
 
 	@OriginalMember(owner = "client!ii", name = "r", descriptor = "[I")
 	public int[] anIntArray273;
 
 	@OriginalMember(owner = "client!ii", name = "s", descriptor = "[[I")
-	public int[][] anIntArrayArray22;
+	public int[][] fileIds;
 
 	@OriginalMember(owner = "client!ii", name = "u", descriptor = "I")
-	public int anInt2907;
+	public int capacity;
 
 	@OriginalMember(owner = "client!ii", name = "v", descriptor = "I")
 	public int anInt2908;
 
 	@OriginalMember(owner = "client!ii", name = "x", descriptor = "[Lclient!jg;")
-	public IntHashTable[] aClass76Array1;
+	public IntHashTable[] fileNameHashTables;
 
 	@OriginalMember(owner = "client!ii", name = "z", descriptor = "I")
-	public final int anInt2911;
+	public final int checksum;
 
 	@OriginalMember(owner = "client!ii", name = "<init>", descriptor = "([BI)V")
 	public Js5Index(@OriginalArg(0) byte[] arg0, @OriginalArg(1) int arg1) {
-		this.anInt2911 = Buffer.crc32(arg0, arg0.length);
-		if (arg1 != this.anInt2911) {
+		this.checksum = Buffer.crc32(arg0, arg0.length);
+		if (arg1 != this.checksum) {
 			throw new RuntimeException();
 		}
 		this.method2293(arg0);
@@ -83,30 +83,30 @@ public final class Js5Index {
 				local59 = this.anIntArray269[local66];
 			}
 		}
-		this.anInt2907 = local59 + 1;
-		this.anIntArray273 = new int[this.anInt2907];
-		this.anIntArrayArray22 = new int[this.anInt2907][];
-		this.anIntArray268 = new int[this.anInt2907];
-		this.anIntArray270 = new int[this.anInt2907];
-		this.anIntArray272 = new int[this.anInt2907];
+		this.capacity = local59 + 1;
+		this.anIntArray273 = new int[this.capacity];
+		this.fileIds = new int[this.capacity][];
+		this.groupChecksums = new int[this.capacity];
+		this.groupCapacities = new int[this.capacity];
+		this.groupSizes = new int[this.capacity];
 		if (local48 != 0) {
-			this.anIntArray271 = new int[this.anInt2907];
-			for (local66 = 0; local66 < this.anInt2907; local66++) {
-				this.anIntArray271[local66] = -1;
+			this.groupNameHashes = new int[this.capacity];
+			for (local66 = 0; local66 < this.capacity; local66++) {
+				this.groupNameHashes[local66] = -1;
 			}
 			for (local66 = 0; local66 < this.anInt2902; local66++) {
-				this.anIntArray271[this.anIntArray269[local66]] = local12.g4();
+				this.groupNameHashes[this.anIntArray269[local66]] = local12.g4();
 			}
-			this.aClass76_1 = new IntHashTable(this.anIntArray271);
+			this.groupNameHashTable = new IntHashTable(this.groupNameHashes);
 		}
 		for (local66 = 0; local66 < this.anInt2902; local66++) {
-			this.anIntArray268[this.anIntArray269[local66]] = local12.g4();
+			this.groupChecksums[this.anIntArray269[local66]] = local12.g4();
 		}
 		for (local66 = 0; local66 < this.anInt2902; local66++) {
 			this.anIntArray273[this.anIntArray269[local66]] = local12.g4();
 		}
 		for (local66 = 0; local66 < this.anInt2902; local66++) {
-			this.anIntArray272[this.anIntArray269[local66]] = local12.g2();
+			this.groupSizes[this.anIntArray269[local66]] = local12.g2();
 		}
 		@Pc(273) int local273;
 		@Pc(278) int local278;
@@ -115,41 +115,41 @@ public final class Js5Index {
 		for (local66 = 0; local66 < this.anInt2902; local66++) {
 			local50 = 0;
 			local273 = this.anIntArray269[local66];
-			local278 = this.anIntArray272[local273];
+			local278 = this.groupSizes[local273];
 			local280 = -1;
-			this.anIntArrayArray22[local273] = new int[local278];
+			this.fileIds[local273] = new int[local278];
 			for (local288 = 0; local288 < local278; local288++) {
-				@Pc(306) int local306 = this.anIntArrayArray22[local273][local288] = local50 += local12.g2();
+				@Pc(306) int local306 = this.fileIds[local273][local288] = local50 += local12.g2();
 				if (local306 > local280) {
 					local280 = local306;
 				}
 			}
-			this.anIntArray270[local273] = local280 + 1;
+			this.groupCapacities[local273] = local280 + 1;
 			if (local280 + 1 == local278) {
-				this.anIntArrayArray22[local273] = null;
+				this.fileIds[local273] = null;
 			}
 		}
 		if (local48 == 0) {
 			return;
 		}
-		this.aClass76Array1 = new IntHashTable[local59 + 1];
-		this.anIntArrayArray21 = new int[local59 + 1][];
+		this.fileNameHashTables = new IntHashTable[local59 + 1];
+		this.fileNameHashes = new int[local59 + 1][];
 		for (local66 = 0; local66 < this.anInt2902; local66++) {
 			local273 = this.anIntArray269[local66];
-			local278 = this.anIntArray272[local273];
-			this.anIntArrayArray21[local273] = new int[this.anIntArray270[local273]];
-			for (local280 = 0; local280 < this.anIntArray270[local273]; local280++) {
-				this.anIntArrayArray21[local273][local280] = -1;
+			local278 = this.groupSizes[local273];
+			this.fileNameHashes[local273] = new int[this.groupCapacities[local273]];
+			for (local280 = 0; local280 < this.groupCapacities[local273]; local280++) {
+				this.fileNameHashes[local273][local280] = -1;
 			}
 			for (local280 = 0; local280 < local278; local280++) {
-				if (this.anIntArrayArray22[local273] == null) {
+				if (this.fileIds[local273] == null) {
 					local288 = local280;
 				} else {
-					local288 = this.anIntArrayArray22[local273][local280];
+					local288 = this.fileIds[local273][local280];
 				}
-				this.anIntArrayArray21[local273][local288] = local12.g4();
+				this.fileNameHashes[local273][local288] = local12.g4();
 			}
-			this.aClass76Array1[local273] = new IntHashTable(this.anIntArrayArray21[local273]);
+			this.fileNameHashTables[local273] = new IntHashTable(this.fileNameHashes[local273]);
 		}
 	}
 }

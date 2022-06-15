@@ -32,7 +32,7 @@ public final class IntHashTable {
 	}
 
 	@OriginalMember(owner = "client!jg", name = "a", descriptor = "(II)I")
-	public final int method2405(@OriginalArg(0) int arg0) {
+	public final int get(@OriginalArg(0) int arg0) {
 		@Pc(16) int local16 = (this.anIntArray285.length >> 1) - 1;
 		@Pc(20) int local20 = local16 & arg0;
 		while (true) {

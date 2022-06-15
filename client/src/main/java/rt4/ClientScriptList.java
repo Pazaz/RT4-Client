@@ -14,7 +14,7 @@ public class ClientScriptList {
         if (local12 != null) {
             return local12;
         }
-        @Pc(22) byte[] local22 = client.js5Archive12.getFile(id, 0);
+        @Pc(22) byte[] local22 = client.js5Archive12.fetchFile(id, 0);
         if (local22 == null) {
             return null;
         }

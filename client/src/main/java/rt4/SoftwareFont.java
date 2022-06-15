@@ -128,7 +128,7 @@ public final class SoftwareFont extends Font {
 
     @OriginalMember(owner = "client!jh", name = "a", descriptor = "(IILclient!ve;Lclient!ve;I)Lclient!dd;")
 	public static SoftwareFont method2412(@OriginalArg(0) int arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) Js5 arg2) {
-		return SpriteLoader.decode(arg2, 0, arg0) ? method4635(arg1.getFile(arg0, 0)) : null;
+		return SpriteLoader.decode(arg2, 0, arg0) ? method4635(arg1.fetchFile(arg0, 0)) : null;
 	}
 
 	@OriginalMember(owner = "client!j", name = "a", descriptor = "([BI)Lclient!dd;")

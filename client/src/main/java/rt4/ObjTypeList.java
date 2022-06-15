@@ -31,7 +31,7 @@ public class ObjTypeList {
         aBoolean276 = true;
         modelsArchive = arg2;
         archive = arg0;
-        @Pc(23) int local23 = archive.method4483() - 1;
+        @Pc(23) int local23 = archive.capacity() - 1;
         anInt3245 = archive.getGroupCapacity(local23) + local23 * 256;
         aClass100Array104 = new JagString[] { null, null, null, null, LocalizedText.DROP};
         aClass100Array87 = new JagString[] { null, null, LocalizedText.TAKE, null, null };
@@ -44,7 +44,7 @@ public class ObjTypeList {
         if (local6 != null) {
             return local6;
         }
-        @Pc(25) byte[] local25 = archive.getFile(Static18.method554(arg0), Static247.method4247(arg0));
+        @Pc(25) byte[] local25 = archive.fetchFile(Static18.method554(arg0), Static247.method4247(arg0));
         local6 = new ObjType();
         local6.anInt2354 = arg0;
         if (local25 != null) {

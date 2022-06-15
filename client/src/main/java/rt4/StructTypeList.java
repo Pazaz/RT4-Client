@@ -21,7 +21,7 @@ public class StructTypeList {
         if (local10 != null) {
             return local10;
         }
-        @Pc(26) byte[] local26 = archive.getFile(26, arg0);
+        @Pc(26) byte[] local26 = archive.fetchFile(26, arg0);
         local10 = new StructType();
         if (local26 != null) {
             local10.decode(new Buffer(local26));

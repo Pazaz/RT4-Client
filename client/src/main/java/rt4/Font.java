@@ -215,7 +215,7 @@ public abstract class Font extends SecondaryNode {
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(IIBLclient!ve;Lclient!ve;)Lclient!rk;")
 	public static Font method2462(@OriginalArg(1) int arg0, @OriginalArg(3) Js5 arg1, @OriginalArg(4) Js5 arg2) {
-		return SpriteLoader.decode(arg1, 0, arg0) ? method799(arg2.getFile(arg0, 0)) : null;
+		return SpriteLoader.decode(arg1, 0, arg0) ? method799(arg2.fetchFile(arg0, 0)) : null;
 	}
 
 	@OriginalMember(owner = "client!rk", name = "a", descriptor = "(Lclient!na;IIIIIIIII)I")

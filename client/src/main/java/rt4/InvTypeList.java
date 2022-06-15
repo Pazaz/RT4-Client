@@ -21,7 +21,7 @@ public class InvTypeList {
         if (invType != null) {
             return invType;
         }
-        @Pc(27) byte[] data = archive.getFile(5, id);
+        @Pc(27) byte[] data = archive.fetchFile(5, id);
         invType = new InvType();
         if (data != null) {
             invType.decode(new Buffer(data));

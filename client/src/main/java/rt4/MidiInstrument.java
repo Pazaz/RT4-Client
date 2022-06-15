@@ -393,7 +393,7 @@ public final class MidiInstrument extends Node {
 
     @OriginalMember(owner = "client!jb", name = "a", descriptor = "(ILclient!ve;I)Lclient!jk;")
 	public static MidiInstrument method2320(@OriginalArg(1) Js5 arg0, @OriginalArg(2) int arg1) {
-		@Pc(9) byte[] local9 = arg0.method4500(arg1);
+		@Pc(9) byte[] local9 = arg0.fetchFile(arg1);
 		return local9 == null ? null : new MidiInstrument(local9);
 	}
 

@@ -54,8 +54,8 @@ public class InterfaceList {
         aClass153_64 = arg0;
         aClass153_84 = arg2;
         aClass153_85 = arg3;
-        components = new Component[aClass153_84.method4483()][];
-        aBooleanArray115 = new boolean[aClass153_84.method4483()];
+        components = new Component[aClass153_84.capacity()][];
+        aBooleanArray115 = new boolean[aClass153_84.capacity()];
     }
 
     @OriginalMember(owner = "client!ig", name = "a", descriptor = "(BI)V")
@@ -63,7 +63,7 @@ public class InterfaceList {
         if (arg0 == -1 || !aBooleanArray115[arg0]) {
             return;
         }
-        aClass153_84.method4490(arg0);
+        aClass153_84.discardUnpacked(arg0);
         if (components[arg0] == null) {
             return;
         }
@@ -89,7 +89,7 @@ public class InterfaceList {
             return true;
         }
 
-        if (aClass153_84.method4479(arg0)) {
+        if (aClass153_84.isGroupReady(arg0)) {
             @Pc(25) int local25 = aClass153_84.getGroupCapacity(arg0);
             if (local25 == 0) {
                 aBooleanArray115[arg0] = true;
@@ -100,7 +100,7 @@ public class InterfaceList {
             }
             for (@Pc(46) int local46 = 0; local46 < local25; local46++) {
                 if (components[arg0][local46] == null) {
-                    @Pc(62) byte[] local62 = aClass153_84.getFile(arg0, local46);
+                    @Pc(62) byte[] local62 = aClass153_84.fetchFile(arg0, local46);
                     if (local62 != null) {
                         @Pc(74) Component local74 = components[arg0][local46] = new Component();
                         local74.id = local46 + (arg0 << 16);
@@ -121,8 +121,8 @@ public class InterfaceList {
 
     @OriginalMember(owner = "client!eb", name = "d", descriptor = "(I)V")
     public static void method1287() {
-        components = new Component[aClass153_84.method4483()][];
-        aBooleanArray115 = new boolean[aClass153_84.method4483()];
+        components = new Component[aClass153_84.capacity()][];
+        aBooleanArray115 = new boolean[aClass153_84.capacity()];
     }
 
     @OriginalMember(owner = "client!i", name = "i", descriptor = "(Z)V")

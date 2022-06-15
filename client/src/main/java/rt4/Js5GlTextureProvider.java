@@ -68,7 +68,7 @@ public final class Js5GlTextureProvider implements TextureProvider {
 		} else {
 			this.aClass54_11 = null;
 		}
-		@Pc(51) Buffer local51 = new Buffer(arg1.getFile(0, 0));
+		@Pc(51) Buffer local51 = new Buffer(arg1.fetchFile(0, 0));
 		@Pc(55) int local55 = local51.g2();
 		this.aByteArray61 = new byte[local55];
 		this.aByteArray60 = new byte[local55];
@@ -169,7 +169,7 @@ public final class Js5GlTextureProvider implements TextureProvider {
 		if (local14 != null) {
 			return local14;
 		}
-		@Pc(30) byte[] local30 = this.aClass153_73.getFile(arg0, 0);
+		@Pc(30) byte[] local30 = this.aClass153_73.fetchFile(arg0, 0);
 		if (local30 == null) {
 			return null;
 		} else {

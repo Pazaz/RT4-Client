@@ -171,14 +171,14 @@ public class ClientProt {
         @Pc(14) int id;
         for (id = 0; id < LoginManager.mapFilesBuffer.length; id++) {
             if (LoginManager.mapFileIds[id] != -1 && LoginManager.mapFilesBuffer[id] == null) {
-                LoginManager.mapFilesBuffer[id] = client.js5Archive5.getFile(LoginManager.mapFileIds[id], 0);
+                LoginManager.mapFilesBuffer[id] = client.js5Archive5.fetchFile(LoginManager.mapFileIds[id], 0);
                 if (LoginManager.mapFilesBuffer[id] == null) {
                     Static175.mapFilesMissingCount++;
                     fileExists = false;
                 }
             }
             if (LoginManager.locationsMapFileIds[id] != -1 && LoginManager.locationMapFilesBuffer[id] == null) {
-                LoginManager.locationMapFilesBuffer[id] = client.js5Archive5.getFileXTEA(LoginManager.locationsMapFileIds[id], LoginManager.regionsXteaKeys[id], 0);
+                LoginManager.locationMapFilesBuffer[id] = client.js5Archive5.fetchFile(LoginManager.locationsMapFileIds[id], LoginManager.regionsXteaKeys[id], 0);
                 if (LoginManager.locationMapFilesBuffer[id] == null) {
                     fileExists = false;
                     Static175.mapFilesMissingCount++;
@@ -187,14 +187,14 @@ public class ClientProt {
 
             if (GlRenderer.enabled) {
                 if (LoginManager.underWaterMapFileIds[id] != -1 && LoginManager.underWaterMapFilesBuffer[id] == null) {
-                    LoginManager.underWaterMapFilesBuffer[id] = client.js5Archive5.getFile(LoginManager.underWaterMapFileIds[id], 0);
+                    LoginManager.underWaterMapFilesBuffer[id] = client.js5Archive5.fetchFile(LoginManager.underWaterMapFileIds[id], 0);
                     if (LoginManager.underWaterMapFilesBuffer[id] == null) {
                         fileExists = false;
                         Static175.mapFilesMissingCount++;
                     }
                 }
                 if (LoginManager.underWaterLocationsMapFileIds[id] != -1 && LoginManager.underWaterLocationsMapFilesBuffer[id] == null) {
-                    LoginManager.underWaterLocationsMapFilesBuffer[id] = client.js5Archive5.getFile(LoginManager.underWaterLocationsMapFileIds[id], 0);
+                    LoginManager.underWaterLocationsMapFilesBuffer[id] = client.js5Archive5.fetchFile(LoginManager.underWaterLocationsMapFileIds[id], 0);
                     if (LoginManager.underWaterLocationsMapFilesBuffer[id] == null) {
                         Static175.mapFilesMissingCount++;
                         fileExists = false;
@@ -203,7 +203,7 @@ public class ClientProt {
             }
 
             if (LoginManager.npcSpawnsFileIds != null && LoginManager.npcSpawnsFilesBuffer[id] == null && LoginManager.npcSpawnsFileIds[id] != -1) {
-                LoginManager.npcSpawnsFilesBuffer[id] = client.js5Archive5.getFileXTEA(LoginManager.npcSpawnsFileIds[id], LoginManager.regionsXteaKeys[id], 0);
+                LoginManager.npcSpawnsFilesBuffer[id] = client.js5Archive5.fetchFile(LoginManager.npcSpawnsFileIds[id], LoginManager.regionsXteaKeys[id], 0);
                 if (LoginManager.npcSpawnsFilesBuffer[id] == null) {
                     Static175.mapFilesMissingCount++;
                     fileExists = false;
@@ -214,7 +214,7 @@ public class ClientProt {
         if (LoginManager.mapElementList == null) {
             if (LoginManager.map == null || !client.js5Archive23.isGroupNameValid(JagString.concatenate(new JagString[] { LoginManager.map.group, Static50.aClass100_363 }))) {
                 LoginManager.mapElementList = new MapElementList(0);
-            } else if (client.js5Archive23.allFilesComplete(JagString.concatenate(new JagString[] { LoginManager.map.group, Static50.aClass100_363 }))) {
+            } else if (client.js5Archive23.isGroupReady(JagString.concatenate(new JagString[] { LoginManager.map.group, Static50.aClass100_363 }))) {
                 LoginManager.mapElementList = MapElementList.create(JagString.concatenate(new JagString[] { LoginManager.map.group, Static50.aClass100_363 }), client.js5Archive23);
             } else {
                 fileExists = false;
@@ -397,8 +397,8 @@ public class ClientProt {
             for (@Pc(837) int local837 = chunkX - 1; local837 <= chunkZ + 1; local837++) {
                 for (@Pc(850) int local850 = local821 - 1; local850 <= local815 + 1; local850++) {
                     if (local837 < chunkX || local837 > chunkZ || local850 < local821 || local850 > local815) {
-                        client.js5Archive5.method4486(JagString.concatenate(new JagString[] { LoginManager.aClass100_558, JagString.parseInt(local837), LoginManager.UNDERSCORE, JagString.parseInt(local850) }));
-                        client.js5Archive5.method4486(JagString.concatenate(new JagString[] { LoginManager.aClass100_1090, JagString.parseInt(local837), LoginManager.UNDERSCORE, JagString.parseInt(local850) }));
+                        client.js5Archive5.prefetchGroup(JagString.concatenate(new JagString[] { LoginManager.aClass100_558, JagString.parseInt(local837), LoginManager.UNDERSCORE, JagString.parseInt(local850) }));
+                        client.js5Archive5.prefetchGroup(JagString.concatenate(new JagString[] { LoginManager.aClass100_1090, JagString.parseInt(local837), LoginManager.UNDERSCORE, JagString.parseInt(local850) }));
                     }
                 }
             }

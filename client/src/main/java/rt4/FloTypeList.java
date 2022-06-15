@@ -24,7 +24,7 @@ public class FloTypeList {
         if (local6 != null) {
             return local6;
         }
-        @Pc(30) byte[] local30 = archive.getFile(4, arg0);
+        @Pc(30) byte[] local30 = archive.fetchFile(4, arg0);
         local6 = new FloType();
         if (local30 != null) {
             local6.decode(new Buffer(local30), arg0);

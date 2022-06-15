@@ -28,7 +28,7 @@ public class NpcTypeList {
         if (local10 != null) {
             return local10;
         }
-        @Pc(26) byte[] local26 = archive.getFile(method1447(arg0), method3322(arg0));
+        @Pc(26) byte[] local26 = archive.fetchFile(method1447(arg0), method3322(arg0));
         local10 = new NpcType();
         local10.id = arg0;
         if (local26 != null) {

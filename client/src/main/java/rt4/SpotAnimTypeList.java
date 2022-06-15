@@ -26,7 +26,7 @@ public class SpotAnimTypeList {
 		if (local10 != null) {
 			return local10;
 		}
-		@Pc(26) byte[] local26 = archive.getFile(method3681(arg0), method4010(arg0));
+		@Pc(26) byte[] local26 = archive.fetchFile(method3681(arg0), method4010(arg0));
 		local10 = new SpotAnimType();
 		local10.id = arg0;
 		if (local26 != null) {

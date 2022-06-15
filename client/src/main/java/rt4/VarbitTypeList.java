@@ -21,7 +21,7 @@ public class VarbitTypeList {
         if (local10 != null) {
             return local10;
         }
-        @Pc(31) byte[] local31 = archive.getFile(method4349(arg0), method3845(arg0));
+        @Pc(31) byte[] local31 = archive.fetchFile(method4349(arg0), method3845(arg0));
         local10 = new VarbitType();
         if (local31 != null) {
             local10.decode(new Buffer(local31));

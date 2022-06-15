@@ -26,9 +26,9 @@ public class QuickChatCatTypeList {
         }
         @Pc(24) byte[] local24;
         if (arg0 < 32768) {
-            local24 = archive1.getFile(0, arg0);
+            local24 = archive1.fetchFile(0, arg0);
         } else {
-            local24 = archive2.getFile(0, arg0 & 0x7FFF);
+            local24 = archive2.fetchFile(0, arg0 & 0x7FFF);
         }
         local10 = new QuickChatCatType();
         if (local24 != null) {

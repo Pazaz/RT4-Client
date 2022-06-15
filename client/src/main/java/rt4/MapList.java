@@ -23,7 +23,7 @@ public class MapList {
         @Pc(25) int local25 = archive.getGroupId(Static54.aClass100_374);
         @Pc(30) int[] local30 = archive.getFileIds(local25);
         for (@Pc(32) int local32 = 0; local32 < local30.length; local32++) {
-            aClass69_120.addTail(Map.create(new Buffer(archive.getFile(local25, local30[local32]))));
+            aClass69_120.addTail(Map.create(new Buffer(archive.fetchFile(local25, local30[local32]))));
         }
     }
 
