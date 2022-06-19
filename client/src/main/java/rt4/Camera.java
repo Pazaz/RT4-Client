@@ -68,6 +68,7 @@ public class Camera {
 	public static boolean aBoolean205 = false;
     @OriginalMember(owner = "client!gk", name = "d", descriptor = "F")
     public static float aFloat10;
+    public static int ZOOM = 600;
 
     public static double mod(double a, double b) {
         return ((a % b) + b) % b;

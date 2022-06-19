@@ -32,4 +32,8 @@ public final class MathUtils {
 			cos[i] = (int) (Math.cos((double) i * 0.0030679615D) * 65536.0D);
 		}
 	}
+
+	public static int clamp(int min, int max, int value) {
+		return Math.max(min, Math.min(max, value));
+	}
 }
