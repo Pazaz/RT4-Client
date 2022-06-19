@@ -4,15 +4,15 @@ import java.awt.EventQueue;
 import java.awt.Frame;
 import java.awt.Point;
 import java.awt.Toolkit;
-import java.io.DataInputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.RandomAccessFile;
+import java.io.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.Hashtable;
 import java.util.Vector;
 import org.openrs2.deob.annotation.OriginalArg;
@@ -320,6 +320,20 @@ public final class Class213 implements Runnable {
 		return this.method5114(8, 0, new Object[] { arg0, arg2, arg1 }, 0);
 	}
 
+	public static boolean copy(InputStream source, String destination) {
+		boolean succeess = true;
+
+		try {
+			Files.copy(source, Paths.get(destination), StandardCopyOption.REPLACE_EXISTING);
+		} catch (IOException ex) {
+			ex.printStackTrace();
+			succeess = false;
+		}
+
+		return succeess;
+
+	}
+
 	@OriginalMember(owner = "signlink!ll", name = "run", descriptor = "()V")
 	@Override
 	public final void run() {
@@ -405,18 +419,26 @@ public final class Class213 implements Runnable {
 							}
 							local230 = Class.forName("java.lang.Runtime").getDeclaredMethod("load0", local217);
 							local230.setAccessible(true);
+							int arch = Integer.parseInt(System.getProperty("sun.arch.data.model")); // returns 32 or 64
 							if (aString15.startsWith("linux") || aString15.startsWith("sunos")) {
+								copy(getClass().getResourceAsStream("libgluegen-rt" + arch + ".so"), method5127(this.aString19, this.anInt5929, "libgluegen-rt.so").toString());
 								local230.invoke(local219, local16.anObject7, method5127(this.aString19, this.anInt5929, "libgluegen-rt.so").toString());
 								@Pc(399) Class local399 = ((Class) local16.anObject7).getClassLoader().loadClass("com.sun.opengl.impl.x11.DRIHack");
 								local399.getMethod("begin").invoke(null);
+								copy(getClass().getResourceAsStream("libjogl_" + arch + ".so"), method5127(this.aString19, this.anInt5929, "libjogl.so").toString());
 								local230.invoke(local219, local16.anObject7, method5127(this.aString19, this.anInt5929, "libjogl.so").toString());
 								local399.getMethod("end").invoke(null);
+								copy(getClass().getResourceAsStream("libjogl_awt_" + arch + ".so"), method5127(this.aString19, this.anInt5929, "libjogl_awt.so").toString());
 								local230.invoke(local219, local16.anObject7, method5127(this.aString19, this.anInt5929, "libjogl_awt.so").toString());
 							} else if (aString15.startsWith("mac")) {
+								copy(getClass().getResourceAsStream("libjogl.jnilib"), method5127(this.aString19, this.anInt5929, "libjogl.jnilib").toString());
 								local230.invoke(local219, local16.anObject7, method5127(this.aString19, this.anInt5929, "libjogl.jnilib").toString());
+								copy(getClass().getResourceAsStream("libjogl_awt.jnilib"), method5127(this.aString19, this.anInt5929, "libjogl_awt.jnilib").toString());
 								local230.invoke(local219, local16.anObject7, method5127(this.aString19, this.anInt5929, "libjogl_awt.jnilib").toString());
 							} else if (aString15.startsWith("win")) {
+								copy(getClass().getResourceAsStream("jogl_" + arch + ".dll"), method5127(this.aString19, this.anInt5929, "jogl.dll").toString());
 								local230.invoke(local219, local16.anObject7, method5127(this.aString19, this.anInt5929, "jogl.dll").toString());
+								copy(getClass().getResourceAsStream("jogl_awt_" + arch + ".dll"), method5127(this.aString19, this.anInt5929, "jogl_awt.dll").toString());
 								local230.invoke(local219, local16.anObject7, method5127(this.aString19, this.anInt5929, "jogl_awt.dll").toString());
 							} else {
 								throw new Exception();
