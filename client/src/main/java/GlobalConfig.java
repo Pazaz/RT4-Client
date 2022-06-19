@@ -20,6 +20,9 @@ public class GlobalConfig {
 
     // If this isn't set, the world server will need to send a default
     public static boolean SELECT_DEFAULT_WORLD = true;
+
+    // Packet opcode encryption
+    public static boolean USE_ISAAC = false;
     //endregion
 
 }

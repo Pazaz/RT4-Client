@@ -163,7 +163,12 @@ public final class Class71 {
 			this.method2296();
 			this.anInt2916 = 255;
 		}
-		return this.anIntArray274[this.anInt2916];
+
+		if (GlobalConfig.USE_ISAAC) {
+			return this.anIntArray274[this.anInt2916];
+		} else {
+			return 0;
+		}
 	}
 
 	@OriginalMember(owner = "client!ij", name = "b", descriptor = "(I)V")
