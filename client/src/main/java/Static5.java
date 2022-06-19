@@ -35,15 +35,28 @@ public final class Static5 {
 
 	@OriginalMember(owner = "client!af", name = "a", descriptor = "(BI)Lclient!be;")
 	public static Class13 method32(@OriginalArg(1) int arg0) {
-		@Pc(7) int local7 = arg0 >> 16;
-		@Pc(18) int local18 = arg0 & 0xFFFF;
-		if (Static241.aClass13ArrayArray12[local7] == null || Static241.aClass13ArrayArray12[local7][local18] == null) {
-			@Pc(33) boolean local33 = Static245.method4225(local7);
-			if (!local33) {
+		try {
+			@Pc(7) int local7 = arg0 >> 16;
+			@Pc(18) int local18 = arg0 & 0xFFFF;
+			if (Static241.aClass13ArrayArray12.length <= local7 || local7 < 0) {
+				// components.length <= parent || parent < 0
 				return null;
 			}
+			if (Static241.aClass13ArrayArray12[local7] == null || Static241.aClass13ArrayArray12[local7][local18] == null) {
+				@Pc(33) boolean local33 = Static245.method4225(local7);
+				if (!local33) {
+					return null;
+				}
+			}
+			if (Static241.aClass13ArrayArray12[local7].length <= local18) {
+				// components[parent].length <= child
+				return null;
+			}
+			return Static241.aClass13ArrayArray12[local7][local18];
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			return null;
 		}
-		return Static241.aClass13ArrayArray12[local7][local18];
 	}
 
 	@OriginalMember(owner = "client!af", name = "b", descriptor = "(B)V")

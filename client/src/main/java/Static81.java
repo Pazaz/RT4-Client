@@ -341,7 +341,8 @@ public final class Static81 {
 				} else if (local79 == 7) {
 					local773 = Static5.method32(local88);
 					@Pc(1145) boolean local1145 = local709.anInt1271 == 1;
-					if (local1145 != local773.aBoolean17) {
+					if (local773 != null && local1145 != local773.aBoolean17) {
+						// component != null && hidden != component.hidden
 						local773.aBoolean17 = local1145;
 						Static43.method1143(local773);
 					}
