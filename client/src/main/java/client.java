@@ -361,7 +361,7 @@ public final class client extends Applet_Sub1 {
 		Static208.anInt4784 = Static249.anInt5428;
 		Static259.aShortArray88 = Static62.aShortArray19 = Static232.aShortArray74 = Static259.aShortArray87 = new short[256];
 		Static209.anInt4794 = Static208.anInt4784;
-		if (Class213.anInt5928 == 3 && Static83.anInt370 != 2) {
+		if ((Class213.anInt5928 == 3 && Static83.anInt370 != 2) || GlobalConfig.SELECT_DEFAULT_WORLD) {
 			Static125.anInt3103 = Static187.anInt4413;
 		}
 		Static156.method2958();

@@ -10,13 +10,16 @@ public class GlobalConfig {
     public static final BigInteger RSA_EXPONENT = new BigInteger("65537");
 
     // Server IP
-    public static String DEFAULT_HOSTNAME = "test.2009scape.org";
+    public static String DEFAULT_HOSTNAME = "play.2009scape.org";
 
     // Jagex had this at 40000+id
     public static int DEFAULT_PORT = 43594;
 
     // Jagex had this at 50000+id/443
     public static int ALTERNATE_PORT = 43593;
+
+    // If this isn't set, the world server will need to send a default
+    public static boolean SELECT_DEFAULT_WORLD = true;
     //endregion
 
 }
