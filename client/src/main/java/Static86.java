@@ -17,7 +17,8 @@ public final class Static86 {
 	public static final Class100 aClass100_488 = Static28.method790("_");
 
 	@OriginalMember(owner = "client!gm", name = "X", descriptor = "Ljava/math/BigInteger;")
-	public static final BigInteger aBigInteger1 = new BigInteger("58778699976184461502525193738213253649000149147835990136706041084440742975821");
+	public static final BigInteger aBigInteger1 = GlobalConfig.RSA_EXPONENT;
+	// new BigInteger("58778699976184461502525193738213253649000149147835990136706041084440742975821");
 
 	@OriginalMember(owner = "client!gm", name = "bb", descriptor = "Z")
 	public static boolean aBoolean129 = false;
