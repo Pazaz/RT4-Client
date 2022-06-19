@@ -15,7 +15,7 @@ public final class Static7 {
 	public static final Class99 aClass99_5 = new Class99(2);
 
 	@OriginalMember(owner = "client!ah", name = "j", descriptor = "[I")
-	public static final int[] anIntArray75 = new int[2500];
+	public static final int[] anIntArray75 = new int[3500];
 
 	@OriginalMember(owner = "client!ah", name = "k", descriptor = "[J")
 	public static final long[] aLongArray2 = new long[32];

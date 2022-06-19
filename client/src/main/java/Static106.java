@@ -12,7 +12,7 @@ public final class Static106 {
 	public static final Class100 aClass100_563 = Static28.method790("Liste des mises -9 jour charg-Be");
 
 	@OriginalMember(owner = "client!ic", name = "e", descriptor = "[I")
-	public static final int[] anIntArray257 = new int[2500];
+	public static final int[] anIntArray257 = new int[3500];
 
 	@OriginalMember(owner = "client!ic", name = "i", descriptor = "Lclient!na;")
 	public static final Class100 aClass100_564 = Static28.method790("Ihre Ignorieren)2Liste ist voll)1 Sie k-Onnen nur 100 Spieler darauf eintragen)3");
