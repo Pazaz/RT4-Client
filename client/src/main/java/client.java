@@ -329,17 +329,17 @@ public final class client extends Applet_Sub1 {
 		}
 		Static80.method3615(Static71.aClass213_3);
 		if (Static83.anInt370 == 0) {
-			Static143.aString4 = this.getCodeBase().getHost();
-			Static97.anInt2508 = 443;
-			Static249.anInt5428 = 43594;
+			Static143.aString4 = GlobalConfig.DEFAULT_HOSTNAME; // this.getCodeBase().getHost();
+			Static97.anInt2508 = GlobalConfig.ALTERNATE_PORT + 1; // 443;
+			Static249.anInt5428 = GlobalConfig.DEFAULT_PORT + 1; // 43594;
 		} else if (Static83.anInt370 == 1) {
-			Static143.aString4 = this.getCodeBase().getHost();
-			Static97.anInt2508 = Static187.anInt4413 + 50000;
-			Static249.anInt5428 = Static187.anInt4413 + 40000;
+			Static143.aString4 = GlobalConfig.DEFAULT_HOSTNAME; // this.getCodeBase().getHost();
+			Static97.anInt2508 = GlobalConfig.ALTERNATE_PORT + Static187.anInt4413; // Static187.anInt4413 + 50000;
+			Static249.anInt5428 = GlobalConfig.DEFAULT_PORT + Static187.anInt4413; // Static187.anInt4413 + 40000;
 		} else if (Static83.anInt370 == 2) {
-			Static143.aString4 = "127.0.0.1";
-			Static97.anInt2508 = Static187.anInt4413 + 50000;
-			Static249.anInt5428 = Static187.anInt4413 + 40000;
+			Static143.aString4 = GlobalConfig.DEFAULT_HOSTNAME; // "127.0.0.1";
+			Static97.anInt2508 = GlobalConfig.ALTERNATE_PORT + Static187.anInt4413; // Static187.anInt4413 + 50000;
+			Static249.anInt5428 = GlobalConfig.DEFAULT_PORT + Static187.anInt4413; // Static187.anInt4413 + 40000;
 		}
 		if (Static266.anInt5343 == 1) {
 			Static172.aBoolean199 = true;
