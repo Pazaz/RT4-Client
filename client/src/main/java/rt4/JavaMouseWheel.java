@@ -8,6 +8,8 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
+import static rt4.MathUtils.clamp;
+
 @OriginalClass("client!o")
 public final class JavaMouseWheel extends MouseWheel implements MouseWheelListener {
 
@@ -31,7 +33,13 @@ public final class JavaMouseWheel extends MouseWheel implements MouseWheelListen
 	@OriginalMember(owner = "client!o", name = "mouseWheelMoved", descriptor = "(Ljava/awt/event/MouseWheelEvent;)V")
 	@Override
 	public final synchronized void mouseWheelMoved(@OriginalArg(0) MouseWheelEvent arg0) {
+		int previous = this.anInt4233;
 		this.anInt4233 += arg0.getWheelRotation();
+		int diff = this.anInt4233 - previous;
+
+		if (GlobalJsonConfig.instance.mouseWheelZoom && Keyboard.instance.isShiftPressed()) {
+			Camera.ZOOM = clamp(200, 1200, Camera.ZOOM + (diff >= 0 ? 50: -50));
+		}
 	}
 
 	@OriginalMember(owner = "client!o", name = "a", descriptor = "(Ljava/awt/Component;I)V")
