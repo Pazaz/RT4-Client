@@ -37,7 +37,11 @@ public final class Static78 {
 	public static void method1691(@OriginalArg(0) long arg0) {
 		Static6.aClass3_Sub15_Sub1_1.anInt2792 = 0;
 		Static6.aClass3_Sub15_Sub1_1.method2178(186);
-		Static6.aClass3_Sub15_Sub1_1.method2166(arg0);
+		if (GlobalConfig.LOGIN_USE_STRINGS) {
+			Static6.aClass3_Sub15_Sub1_1.method2171(Static79.method1702(arg0));
+		} else {
+			Static6.aClass3_Sub15_Sub1_1.method2166(arg0);
+		}
 		Static179.anInt4261 = 1;
 		Static226.anInt5079 = 0;
 		Static57.anInt1758 = 0;

@@ -101,6 +101,11 @@ public final class Static216 {
 				Static6.aClass3_Sub15_Sub1_1.method2164(local210[3]);
 				Static6.aClass3_Sub15_Sub1_1.method2166(Static186.aClass100_829.method3158());
 				Static6.aClass3_Sub15_Sub1_1.method2171(Static186.aClass100_828);
+				if (GlobalConfig.LOGIN_EXTRA_INFO) {
+					Static6.aClass3_Sub15_Sub1_1.method2171(Static28.method790(""));
+					Static6.aClass3_Sub15_Sub1_1.method2171(Static28.method790(""));
+					Static6.aClass3_Sub15_Sub1_1.method2171(Static28.method790(""));
+				}
 				Static6.aClass3_Sub15_Sub1_1.method2226(Static86.aBigInteger1, Static256.aBigInteger2);
 				Static17.aClass3_Sub15_Sub1_2.anInt2792 = 0;
 				if (Static244.anInt5370 == 40) {
@@ -108,7 +113,12 @@ public final class Static216 {
 				} else {
 					Static17.aClass3_Sub15_Sub1_2.method2178(16);
 				}
-				Static17.aClass3_Sub15_Sub1_2.method2230(Static6.aClass3_Sub15_Sub1_1.anInt2792 + Static229.method3937(Static47.aClass100_991) + 159);
+				int offset = 0;
+				if (GlobalConfig.LOGIN_FAKE_IDX28) {
+					// pretend that we're loading the archive so we don't throw the packet size off
+					offset = 4;
+				}
+				Static17.aClass3_Sub15_Sub1_2.method2230(Static6.aClass3_Sub15_Sub1_1.anInt2792 + Static229.method3937(Static47.aClass100_991) + (159 + offset));
 				Static17.aClass3_Sub15_Sub1_2.method2164(530);
 				Static17.aClass3_Sub15_Sub1_2.method2178(Static5.anInt39);
 				Static17.aClass3_Sub15_Sub1_2.method2178(Static249.aBoolean282 ? 1 : 0);
@@ -151,6 +161,9 @@ public final class Static216 {
 				Static17.aClass3_Sub15_Sub1_2.method2164(Static28.aClass153_18.method4480());
 				Static17.aClass3_Sub15_Sub1_2.method2164(Static167.aClass153_63.method4480());
 				Static17.aClass3_Sub15_Sub1_2.method2164(Static226.aClass153_93.method4480());
+				if (GlobalConfig.LOGIN_FAKE_IDX28) {
+					Static17.aClass3_Sub15_Sub1_2.method2164(0);
+				}
 				Static17.aClass3_Sub15_Sub1_2.method2179(Static6.aClass3_Sub15_Sub1_1.aByteArray40, Static6.aClass3_Sub15_Sub1_1.anInt2792);
 				Static124.aClass95_2.method2830(Static17.aClass3_Sub15_Sub1_2.aByteArray40, Static17.aClass3_Sub15_Sub1_2.anInt2792);
 				Static6.aClass3_Sub15_Sub1_1.method2240(local210);

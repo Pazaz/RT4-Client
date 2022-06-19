@@ -124,7 +124,11 @@ public final class Static40 {
 		local8.method2178(10);
 		local8.method2230((int) (Math.random() * 99999.0D));
 		local8.method2230(530);
-		local8.method2166(arg4);
+		if (GlobalConfig.LOGIN_USE_STRINGS) {
+			local8.method2171(Static79.method1702(arg4));
+		} else {
+			local8.method2166(arg4);
+		}
 		local8.method2164((int) (Math.random() * 9.9999999E7D));
 		local8.method2171(arg3);
 		local8.method2164((int) (Math.random() * 9.9999999E7D));

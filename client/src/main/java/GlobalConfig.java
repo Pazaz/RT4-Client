@@ -21,6 +21,15 @@ public class GlobalConfig {
     // If this isn't set, the world server will need to send a default
     public static boolean SELECT_DEFAULT_WORLD = true;
 
+    // Send strings instead of base37 for login/registration packets
+    public static boolean LOGIN_USE_STRINGS = true;
+
+    // Send additional information like user/serial/mac address
+    public static boolean LOGIN_EXTRA_INFO = true;
+
+    // Send an additional empty CRC for idx28 (not in this revision originally)
+    public static boolean LOGIN_FAKE_IDX28 = true;
+
     // Packet opcode encryption
     public static boolean USE_ISAAC = false;
     //endregion
