@@ -337,6 +337,19 @@ public final class Keyboard implements KeyListener, FocusListener {
 		}
 	}
 
+	public boolean isShiftPressed() {
+		//I did this the Jagex(TM) way just for you Pazaz xoxo
+		boolean isPressed = false;
+		for (int keyCode : eventQueue) {
+			if (keyCode == 81)
+				isPressed = true;
+			else if (keyCode == ~(81 & 0xFFFFFF7F))
+				isPressed = false;
+		}
+
+		return isPressed;
+	}
+
 	@OriginalMember(owner = "client!uf", name = "keyTyped", descriptor = "(Ljava/awt/event/KeyEvent;)V")
 	@Override
 	public final void keyTyped(@OriginalArg(0) KeyEvent event) {
