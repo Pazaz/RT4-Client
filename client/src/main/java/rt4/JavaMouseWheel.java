@@ -37,7 +37,7 @@ public final class JavaMouseWheel extends MouseWheel implements MouseWheelListen
 		this.anInt4233 += arg0.getWheelRotation();
 		int diff = this.anInt4233 - previous;
 
-		if (((GlobalJsonConfig.instance != null && GlobalJsonConfig.instance.mouseWheelZoom) || (GlobalJsonConfig.instance == null && GlobalConfig.MOUSEWHEEL_ZOOM)) && Keyboard.instance.isShiftPressed()) {
+		if (((GlobalJsonConfig.instance != null && GlobalJsonConfig.instance.mouseWheelZoom) || (GlobalJsonConfig.instance == null && GlobalConfig.MOUSEWHEEL_ZOOM)) && Keyboard.pressedKeys[Keyboard.KEY_SHIFT]) {
 			Camera.ZOOM = clamp(200, 1200, Camera.ZOOM + (diff >= 0 ? 50: -50));
 		}
 	}
