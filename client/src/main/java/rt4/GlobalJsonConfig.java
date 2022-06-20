@@ -25,5 +25,6 @@ public class GlobalJsonConfig {
     int server_port;
     int wl_port;
     int js5_port;
-    boolean mouseWheelZoom;
+    boolean mouseWheelZoom = GlobalConfig.MOUSEWHEEL_ZOOM;
+
 }
