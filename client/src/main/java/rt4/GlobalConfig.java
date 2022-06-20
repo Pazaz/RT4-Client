@@ -51,6 +51,8 @@ public class GlobalConfig {
     public static boolean USE_SHIFT_CLICK = true;
     public static boolean USE_TWEENING = true;
     public static boolean BILINEAR_MINIMAP = true;
+    public static boolean MOUSEWHEEL_ZOOM = true;
 
     public static int JS5_RESPONSE_TIMEOUT = 5000;
+
 }
