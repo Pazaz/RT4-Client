@@ -23,8 +23,14 @@ jobs:
       uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
       with:
         arguments: build
+    - run: sha256sum client/build/libs/client-1.0.0.jar | cut -d ' ' -f 1 | tr -d '\n' > client/build/libs/client-1.0.0.jar.sha256
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.0
       with:
         name: rt4-client.jar
         path: client/build/libs/client-1.0.0.jar
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.0
+      with:
+        name: rt4-client.jar.sha256
+        path: client/build/libs/client-1.0.0.jar.sha256
