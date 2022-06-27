@@ -9,83 +9,83 @@ import org.openrs2.deob.annotation.Pc;
 public final class VorbisCodebook {
 
 	@OriginalMember(owner = "client!ji", name = "f", descriptor = "[I")
-	private int[] anIntArray288;
+	private int[] entryTree;
 
 	@OriginalMember(owner = "client!ji", name = "c", descriptor = "I")
-	public final int anInt3055;
+	public final int dimensions;
 
 	@OriginalMember(owner = "client!ji", name = "e", descriptor = "I")
-	private final int anInt3056;
+	private final int entries;
 
 	@OriginalMember(owner = "client!ji", name = "a", descriptor = "[I")
-	private final int[] anIntArray286;
+	private final int[] lengths;
 
 	@OriginalMember(owner = "client!ji", name = "d", descriptor = "[I")
-	private int[] anIntArray287;
+	private int[] multiplicands;
 
 	@OriginalMember(owner = "client!ji", name = "b", descriptor = "[[F")
-	private float[][] aFloatArrayArray1;
+	private float[][] valueVector;
 
 	@OriginalMember(owner = "client!ji", name = "<init>", descriptor = "()V")
 	public VorbisCodebook() {
-		VorbisSound.method2350(24);
-		this.anInt3055 = VorbisSound.method2350(16);
-		this.anInt3056 = VorbisSound.method2350(24);
-		this.anIntArray286 = new int[this.anInt3056];
-		@Pc(23) boolean local23 = VorbisSound.method2346() != 0;
+		VorbisSound.readBits(24);
+		this.dimensions = VorbisSound.readBits(16);
+		this.entries = VorbisSound.readBits(24);
+		this.lengths = new int[this.entries];
+		@Pc(23) boolean local23 = VorbisSound.readBit() != 0;
 		@Pc(27) int local27;
 		@Pc(32) int local32;
 		@Pc(46) int local46;
 		if (local23) {
 			local27 = 0;
-			local32 = VorbisSound.method2350(5) + 1;
-			while (local27 < this.anInt3056) {
-				@Pc(44) int local44 = VorbisSound.method2350(method3674(this.anInt3056 - local27));
+			local32 = VorbisSound.readBits(5) + 1;
+			while (local27 < this.entries) {
+				@Pc(44) int local44 = VorbisSound.readBits(IntUtils.bitCount(this.entries - local27));
 				for (local46 = 0; local46 < local44; local46++) {
-					this.anIntArray286[local27++] = local32;
+					this.lengths[local27++] = local32;
 				}
 				local32++;
 			}
 		} else {
-			@Pc(66) boolean local66 = VorbisSound.method2346() != 0;
-			for (local32 = 0; local32 < this.anInt3056; local32++) {
-				if (local66 && VorbisSound.method2346() == 0) {
-					this.anIntArray286[local32] = 0;
+			@Pc(66) boolean local66 = VorbisSound.readBit() != 0;
+			for (local32 = 0; local32 < this.entries; local32++) {
+				if (local66 && VorbisSound.readBit() == 0) {
+					this.lengths[local32] = 0;
 				} else {
-					this.anIntArray286[local32] = VorbisSound.method2350(5) + 1;
+					this.lengths[local32] = VorbisSound.readBits(5) + 1;
 				}
 			}
 		}
-		this.method2414();
-		local27 = VorbisSound.method2350(4);
+		this.createEntryTree();
+		local27 = VorbisSound.readBits(4);
 		if (local27 > 0) {
-			@Pc(103) float local103 = VorbisSound.method2340(VorbisSound.method2350(32));
-			@Pc(107) float local107 = VorbisSound.method2340(VorbisSound.method2350(32));
-			local46 = VorbisSound.method2350(4) + 1;
-			@Pc(118) boolean local118 = VorbisSound.method2346() != 0;
+			@Pc(103) float local103 = VorbisSound.float32Unpack(VorbisSound.readBits(32));
+			@Pc(107) float local107 = VorbisSound.float32Unpack(VorbisSound.readBits(32));
+			local46 = VorbisSound.readBits(4) + 1;
+			@Pc(118) boolean local118 = VorbisSound.readBit() != 0;
 			@Pc(127) int local127;
 			if (local27 == 1) {
-				local127 = lookup1Values(this.anInt3056, this.anInt3055);
+				local127 = lookup1Values(this.entries, this.dimensions);
 			} else {
-				local127 = this.anInt3056 * this.anInt3055;
+				local127 = this.entries * this.dimensions;
 			}
-			this.anIntArray287 = new int[local127];
+			this.multiplicands = new int[local127];
 			@Pc(140) int local140;
 			for (local140 = 0; local140 < local127; local140++) {
-				this.anIntArray287[local140] = VorbisSound.method2350(local46);
+				this.multiplicands[local140] = VorbisSound.readBits(local46);
 			}
-			this.aFloatArrayArray1 = new float[this.anInt3056][this.anInt3055];
+			this.valueVector = new float[this.entries][this.dimensions];
 			@Pc(169) float local169;
 			@Pc(171) int local171;
 			@Pc(173) int local173;
 			if (local27 == 1) {
-				for (local140 = 0; local140 < this.anInt3056; local140++) {
+				for (local140 = 0; local140 < this.entries; local140++) {
 					local169 = 0.0F;
 					local171 = 1;
-					for (local173 = 0; local173 < this.anInt3055; local173++) {
+					for (local173 = 0; local173 < this.dimensions; local173++) {
 						@Pc(183) int local183 = local140 / local171 % local127;
-						@Pc(195) float local195 = (float) this.anIntArray287[local183] * local107 + local103 + local169;
-						this.aFloatArrayArray1[local140][local173] = local195;
+						@Pc(195) float local195 = (float) this.multiplicands[local183] * local107 + local103 + local169;
+						this.valueVector[local140][local173] = local195;
 						if (local118) {
 							local169 = local195;
 						}
@@ -93,12 +93,12 @@ public final class VorbisCodebook {
 					}
 				}
 			} else {
-				for (local140 = 0; local140 < this.anInt3056; local140++) {
+				for (local140 = 0; local140 < this.entries; local140++) {
 					local169 = 0.0F;
-					local171 = local140 * this.anInt3055;
-					for (local173 = 0; local173 < this.anInt3055; local173++) {
-						@Pc(246) float local246 = (float) this.anIntArray287[local171] * local107 + local103 + local169;
-						this.aFloatArrayArray1[local140][local173] = local246;
+					local171 = local140 * this.dimensions;
+					for (local173 = 0; local173 < this.dimensions; local173++) {
+						@Pc(246) float local246 = (float) this.multiplicands[local171] * local107 + local103 + local169;
+						this.valueVector[local140][local173] = local246;
 						if (local118) {
 							local169 = local246;
 						}
@@ -117,40 +117,14 @@ public final class VorbisCodebook {
         return returnValue;
     }
 
-    @OriginalMember(owner = "client!qi", name = "b", descriptor = "(II)I")
-    public static int method3674(@OriginalArg(0) int arg0) {
-        @Pc(5) int local5 = 0;
-        if (arg0 < 0 || arg0 >= 65536) {
-            local5 += 16;
-            arg0 >>>= 0x10;
-        }
-        if (arg0 >= 256) {
-            local5 += 8;
-            arg0 >>>= 0x8;
-        }
-        if (arg0 >= 16) {
-            local5 += 4;
-            arg0 >>>= 0x4;
-        }
-        if (arg0 >= 4) {
-            arg0 >>>= 0x2;
-            local5 += 2;
-        }
-        if (arg0 >= 1) {
-            arg0 >>>= 0x1;
-            local5++;
-        }
-        return arg0 + local5;
-    }
-
-    @OriginalMember(owner = "client!ji", name = "a", descriptor = "()[F")
-	public final float[] method2413() {
-		return this.aFloatArrayArray1[this.method2415()];
+	@OriginalMember(owner = "client!ji", name = "a", descriptor = "()[F")
+	public final float[] decodeVq() {
+		return this.valueVector[this.decodeScalar()];
 	}
 
 	@OriginalMember(owner = "client!ji", name = "b", descriptor = "()V")
-	private void method2414() {
-		@Pc(3) int[] local3 = new int[this.anInt3056];
+	private void createEntryTree() {
+		@Pc(3) int[] local3 = new int[this.entries];
 		@Pc(6) int[] local6 = new int[33];
 		@Pc(8) int local8;
 		@Pc(17) int local17;
@@ -159,8 +133,8 @@ public final class VorbisCodebook {
 		@Pc(44) int local44;
 		@Pc(53) int local53;
 		@Pc(69) int local69;
-		for (local8 = 0; local8 < this.anInt3056; local8++) {
-			local17 = this.anIntArray286[local8];
+		for (local8 = 0; local8 < this.entries; local8++) {
+			local17 = this.lengths[local8];
 			if (local17 != 0) {
 				local26 = 0x1 << 32 - local17;
 				local30 = local6[local17];
@@ -192,10 +166,10 @@ public final class VorbisCodebook {
 				}
 			}
 		}
-		this.anIntArray288 = new int[8];
+		this.entryTree = new int[8];
 		@Pc(122) int local122 = 0;
-		for (local8 = 0; local8 < this.anInt3056; local8++) {
-			local17 = this.anIntArray286[local8];
+		for (local8 = 0; local8 < this.entries; local8++) {
+			local17 = this.lengths[local8];
 			if (local17 != 0) {
 				local26 = local3[local8];
 				local30 = 0;
@@ -204,20 +178,20 @@ public final class VorbisCodebook {
 					if ((local26 & local53) == 0) {
 						local30++;
 					} else {
-						if (this.anIntArray288[local30] == 0) {
-							this.anIntArray288[local30] = local122;
+						if (this.entryTree[local30] == 0) {
+							this.entryTree[local30] = local122;
 						}
-						local30 = this.anIntArray288[local30];
+						local30 = this.entryTree[local30];
 					}
-					if (local30 >= this.anIntArray288.length) {
-						@Pc(184) int[] local184 = new int[this.anIntArray288.length * 2];
-						for (local69 = 0; local69 < this.anIntArray288.length; local69++) {
-							local184[local69] = this.anIntArray288[local69];
+					if (local30 >= this.entryTree.length) {
+						@Pc(184) int[] local184 = new int[this.entryTree.length * 2];
+						for (local69 = 0; local69 < this.entryTree.length; local69++) {
+							local184[local69] = this.entryTree[local69];
 						}
-						this.anIntArray288 = local184;
+						this.entryTree = local184;
 					}
 				}
-				this.anIntArray288[local30] = ~local8;
+				this.entryTree[local30] = ~local8;
 				if (local30 >= local122) {
 					local122 = local30 + 1;
 				}
@@ -226,10 +200,10 @@ public final class VorbisCodebook {
 	}
 
 	@OriginalMember(owner = "client!ji", name = "c", descriptor = "()I")
-	public final int method2415() {
+	public final int decodeScalar() {
 		@Pc(1) int local1;
-		for (local1 = 0; this.anIntArray288[local1] >= 0; local1 = VorbisSound.method2346() == 0 ? local1 + 1 : this.anIntArray288[local1]) {
+		for (local1 = 0; this.entryTree[local1] >= 0; local1 = VorbisSound.readBit() == 0 ? local1 + 1 : this.entryTree[local1]) {
 		}
-		return ~this.anIntArray288[local1];
+		return ~this.entryTree[local1];
 	}
 }
