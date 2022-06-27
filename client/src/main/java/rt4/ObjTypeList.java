@@ -44,7 +44,7 @@ public class ObjTypeList {
         if (local6 != null) {
             return local6;
         }
-        @Pc(25) byte[] local25 = archive.fetchFile(Static18.method554(arg0), Static247.method4247(arg0));
+        @Pc(25) byte[] local25 = archive.fetchFile(method554(arg0), method4247(arg0));
         local6 = new ObjType();
         local6.id = arg0;
         if (local25 != null) {
@@ -106,4 +106,14 @@ public class ObjTypeList {
 	public static void clearSprites() {
 		objectSpriteCache.clear();
 	}
+
+    @OriginalMember(owner = "client!ub", name = "a", descriptor = "(IB)I")
+    public static int method4247(@OriginalArg(0) int arg0) {
+        return arg0 & 0xFF;
+    }
+
+    @OriginalMember(owner = "client!bh", name = "a", descriptor = "(IB)I")
+    public static int method554(@OriginalArg(0) int arg0) {
+        return arg0 >>> 8;
+    }
 }

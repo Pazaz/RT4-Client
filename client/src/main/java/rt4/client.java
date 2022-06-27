@@ -547,7 +547,7 @@ public final class client extends GameShell {
         PlayerList.size = 0;
         MiniMap.state = 0;
         Camera.anInt4774 = (int) (Math.random() * 110.0D) - 55;
-        Static241.aBoolean302 = false;
+        MiniMenu.aBoolean302 = false;
         MiniMap.anInt4130 = (int) (Math.random() * 30.0D) - 20;
         SoundPlayer.size = 0;
         LoginManager.mapFlagX = 0;

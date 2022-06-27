@@ -99,7 +99,7 @@ public final class Static49 {
 
 	@OriginalMember(owner = "client!dm", name = "a", descriptor = "(Lclient!be;III)V")
 	public static void method1207(@OriginalArg(0) Component arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-		if (MiniMenu.size < 2 && MiniMenu.anInt5014 == 0 && !Static241.aBoolean302) {
+		if (MiniMenu.size < 2 && MiniMenu.anInt5014 == 0 && !MiniMenu.aBoolean302) {
 			return;
 		}
 		@Pc(24) JagString local24 = MiniMenu.method471();

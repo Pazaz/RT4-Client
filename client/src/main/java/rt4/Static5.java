@@ -6,9 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static5 {
 
-	@OriginalMember(owner = "client!af", name = "d", descriptor = "I")
-	public static int anInt40;
-
     @OriginalMember(owner = "client!af", name = "l", descriptor = "[S")
 	public static final short[] aShortArray2 = new short[] { 30, 6, 31, 29, 10, 44, 37, 57 };
 

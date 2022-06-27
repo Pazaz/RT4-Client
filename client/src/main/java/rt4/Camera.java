@@ -85,6 +85,8 @@ public class Camera {
     public static int anInt4774 = 0;
     @OriginalMember(owner = "client!sj", name = "H", descriptor = "I")
     public static int anInt5161 = 0;
+    @OriginalMember(owner = "client!af", name = "d", descriptor = "I")
+    public static int anInt40;
 
     public static double mod(double a, double b) {
         return ((a % b) + b) % b;
@@ -140,7 +142,7 @@ public class Camera {
         if (anInt4612 >= 100) {
             renderX = anInt5375 * 128 + 64;
             renderZ = anInt4232 * 128 + 64;
-            Static5.anInt40 = SceneGraph.getTileHeight(Player.level, renderX, renderZ) - Static231.anInt5203;
+            anInt40 = SceneGraph.getTileHeight(Player.level, renderX, renderZ) - Static231.anInt5203;
         } else {
             if (renderX < local15) {
                 renderX += Static233.anInt5225 + anInt4612 * (local15 - renderX) / 1000;
@@ -148,10 +150,10 @@ public class Camera {
                     renderX = local15;
                 }
             }
-            if (Static5.anInt40 < local23) {
-                Static5.anInt40 += (local23 - Static5.anInt40) * anInt4612 / 1000 + Static233.anInt5225;
-                if (Static5.anInt40 > local23) {
-                    Static5.anInt40 = local23;
+            if (anInt40 < local23) {
+                anInt40 += (local23 - anInt40) * anInt4612 / 1000 + Static233.anInt5225;
+                if (anInt40 > local23) {
+                    anInt40 = local23;
                 }
             }
             if (renderX > local15) {
@@ -166,10 +168,10 @@ public class Camera {
                     renderZ = local9;
                 }
             }
-            if (local23 < Static5.anInt40) {
-                Static5.anInt40 -= (Static5.anInt40 - local23) * anInt4612 / 1000 + Static233.anInt5225;
-                if (local23 > Static5.anInt40) {
-                    Static5.anInt40 = local23;
+            if (local23 < anInt40) {
+                anInt40 -= (anInt40 - local23) * anInt4612 / 1000 + Static233.anInt5225;
+                if (local23 > anInt40) {
+                    anInt40 = local23;
                 }
             }
             if (renderZ > local9) {
@@ -182,7 +184,7 @@ public class Camera {
         local9 = anInt5765 * 128 + 64;
         local15 = anInt5449 * 128 + 64;
         local23 = SceneGraph.getTileHeight(Player.level, local15, local9) - anInt1744;
-        @Pc(236) int local236 = local23 - Static5.anInt40;
+        @Pc(236) int local236 = local23 - anInt40;
         @Pc(241) int local241 = local9 - renderZ;
         @Pc(246) int local246 = local15 - renderX;
         @Pc(257) int local257 = (int) Math.sqrt((double) (local246 * local246 + local241 * local241));
@@ -272,7 +274,7 @@ public class Camera {
             local173 = anIntArrayArrayArray9[anInt3718][local70 + 2][local72] + local131 - local119 - local111;
             renderCoordinates[local72] = (float) local119 + (((float) local173 * local66 + (float) local155) * local66 + (float) local146) * local66;
         }
-        Static5.anInt40 = (int) renderCoordinates[1] * -1;
+        anInt40 = (int) renderCoordinates[1] * -1;
         renderX = (int) renderCoordinates[0] - originX * 128;
         renderZ = (int) renderCoordinates[2] - originZ * 128;
         @Pc(226) float[] local226 = new float[3];
@@ -308,7 +310,7 @@ public class Camera {
 			@Pc(30) int local30 = anInt5449 * 128 + 64;
 			@Pc(36) int local36 = anInt5765 * 128 + 64;
 			@Pc(44) int local44 = SceneGraph.getTileHeight(Player.level, local30, local36) - anInt1744;
-			@Pc(49) int local49 = local44 - Static5.anInt40;
+			@Pc(49) int local49 = local44 - anInt40;
 			@Pc(54) int local54 = local30 - renderX;
 			@Pc(59) int local59 = local36 - renderZ;
 			@Pc(70) int local70 = (int) Math.sqrt((double) (local59 * local59 + local54 * local54));
@@ -334,7 +336,7 @@ public class Camera {
         if (arg0 && anInt4612 >= 100) {
             renderX = anInt5375 * 128 + 64;
             renderZ = anInt4232 * 128 + 64;
-            Static5.anInt40 = SceneGraph.getTileHeight(Player.level, renderX, renderZ) - Static231.anInt5203;
+            anInt40 = SceneGraph.getTileHeight(Player.level, renderX, renderZ) - Static231.anInt5203;
         }
         cameraType = 2;
     }
@@ -381,4 +383,44 @@ public class Camera {
             clampCameraAngle();
         }
     }
+
+    @OriginalMember(owner = "client!bh", name = "a", descriptor = "(IIIIIIII)V")
+	public static void method555(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6) {
+		@Pc(5) int local5;
+		@Pc(29) int local29;
+		if (GlRenderer.enabled) {
+			local5 = arg1 - 334;
+			if (local5 < 0) {
+				local5 = 0;
+			} else if (local5 > 100) {
+				local5 = 100;
+			}
+			local29 = local5 * (ScriptRunner.aShort27 - ScriptRunner.aShort30) / 100 + ScriptRunner.aShort30;
+			arg3 = local29 * arg3 >> 8;
+		}
+		local5 = 2048 - arg6 & 0x7FF;
+		local29 = 2048 - arg4 & 0x7FF;
+		@Pc(55) int local55 = 0;
+		@Pc(57) int local57 = arg3;
+		@Pc(59) int local59 = 0;
+		@Pc(72) int local72;
+		@Pc(68) int local68;
+		if (local5 != 0) {
+			local68 = MathUtils.cos[local5];
+			local72 = MathUtils.sin[local5];
+			local59 = local72 * -arg3 >> 16;
+			local57 = local68 * arg3 >> 16;
+		}
+		if (local29 != 0) {
+			local72 = MathUtils.sin[local29];
+			local68 = MathUtils.cos[local29];
+			local55 = local72 * local57 >> 16;
+			local57 = local57 * local68 >> 16;
+		}
+		cameraPitch = arg6;
+		cameraYaw = arg4;
+		renderZ = arg5 - local57;
+		renderX = arg0 - local55;
+		anInt40 = arg2 - local59;
+	}
 }

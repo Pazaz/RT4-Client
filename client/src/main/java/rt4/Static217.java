@@ -56,7 +56,7 @@ public final class Static217 {
 								local154 = arg0[local159];
 							}
 						}
-						LoginManager.method3397(arg1, !arg7, arg1, arg7, local154, local7, local68, local120, local137, local72 + arg4 & 0x3);
+						SceneGraph.method3397(arg1, !arg7, arg1, arg7, local154, local7, local68, local120, local137, local72 + arg4 & 0x3);
 					}
 				}
 			}

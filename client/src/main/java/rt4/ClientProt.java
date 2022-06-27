@@ -9,6 +9,8 @@ import java.io.IOException;
 public class ClientProt {
     @OriginalMember(owner = "client!e", name = "Dc", descriptor = "Lclient!na;")
     public static final JagString aClass100_363 = JagString.parse("_labels");
+    @OriginalMember(owner = "client!bh", name = "C", descriptor = "Lclient!na;")
+	public static final JagString COMPLETE_PERCENT = JagString.parse("<br>(X100(U(Y");
     @OriginalMember(owner = "client!wc", name = "g", descriptor = "I")
     public static int anInt5804 = 0;
     @OriginalMember(owner = "client!nm", name = "U", descriptor = "I")
@@ -265,7 +267,7 @@ public class ClientProt {
         }
 
         if (Static233.loadingScreenState != 0) {
-            Static114.drawTextOnScreen(true, JagString.concatenate(new JagString[] { LocalizedText.LOADING, Static18.COMPLETE_PERCENT}));
+            Static114.drawTextOnScreen(true, JagString.concatenate(new JagString[] { LocalizedText.LOADING, COMPLETE_PERCENT}));
         }
 
         client.audioLoop();
@@ -347,9 +349,9 @@ public class ClientProt {
         if (i < Player.level - 1) {
         }
         if (SceneGraph.allLevelsAreVisible()) {
-            Static146.method2750(0);
+            SceneGraph.method2750(0);
         } else {
-            Static146.method2750(SceneGraph.firstVisibleLevel);
+            SceneGraph.method2750(SceneGraph.firstVisibleLevel);
         }
         SceneGraph.unload();
         if (GlRenderer.enabled && hasUnderWaterMap) {
@@ -381,7 +383,7 @@ public class ClientProt {
         }
         for (chunkX = 0; chunkX < 104; chunkX++) {
             for (chunkZ = 0; chunkZ < 104; chunkZ++) {
-                Static220.spawnGroundObject(chunkZ, chunkX);
+                Protocol.spawnGroundObject(chunkZ, chunkX);
             }
         }
         ScriptRunner.method2218();

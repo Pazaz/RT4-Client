@@ -254,4 +254,10 @@ public class WorldList {
 		method1697(arg0, arg1, local15 - 1, arg3, arg4, arg5);
 		method1697(arg0, arg1, arg2, arg3, local15 + 1, arg5);
 	}
+
+    @OriginalMember(owner = "client!bh", name = "a", descriptor = "(B)Lclient!ba;")
+    public static World getFirstWorld() {
+        worldPos = 0;
+        return getNextWorld();
+    }
 }

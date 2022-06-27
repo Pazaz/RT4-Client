@@ -13,22 +13,22 @@ public final class WallDecor {
 	public Entity secondary;
 
 	@OriginalMember(owner = "client!df", name = "e", descriptor = "I")
-	public int anInt1390;
+	public int xFine;
 
 	@OriginalMember(owner = "client!df", name = "f", descriptor = "I")
 	public int anInt1391;
 
 	@OriginalMember(owner = "client!df", name = "g", descriptor = "I")
-	public int anInt1392;
+	public int zOffset;
 
 	@OriginalMember(owner = "client!df", name = "h", descriptor = "I")
-	public int anInt1393;
+	public int zFine;
 
 	@OriginalMember(owner = "client!df", name = "j", descriptor = "Lclient!th;")
 	public Entity primary;
 
 	@OriginalMember(owner = "client!df", name = "k", descriptor = "I")
-	public int anInt1394;
+	public int xOffset;
 
 	@OriginalMember(owner = "client!df", name = "m", descriptor = "I")
 	public int anInt1395;

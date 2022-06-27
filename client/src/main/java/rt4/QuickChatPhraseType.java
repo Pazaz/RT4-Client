@@ -16,6 +16,8 @@ public final class QuickChatPhraseType extends SecondaryNode {
 	public static final int[] anIntArray51 = new int[] { 2, 2, 4, 2, 1, 8, 4, 1, 4, 4, 2, 1, 1, 1, 4, 1 };
 	@OriginalMember(owner = "client!qg", name = "U", descriptor = "Lclient!na;")
 	public static final JagString aClass100_891 = JagString.parse("");
+	@OriginalMember(owner = "client!vh", name = "p", descriptor = "[I")
+	public static final int[] anIntArray412 = new int[] { 1, 0, 0, 0, 1, 0, 2, 1, 1, 1, 0, 2, 0, 0, 1, 0 };
 	@OriginalMember(owner = "client!cb", name = "L", descriptor = "[I")
 	private int[] anIntArray71;
 
@@ -31,7 +33,15 @@ public final class QuickChatPhraseType extends SecondaryNode {
 	@OriginalMember(owner = "client!cb", name = "O", descriptor = "Z")
 	public boolean aBoolean60 = true;
 
-	@OriginalMember(owner = "client!cb", name = "a", descriptor = "(Lclient!wa;[IZ)V")
+    @OriginalMember(owner = "client!vh", name = "a", descriptor = "(ILclient!wa;)Lclient!bd;")
+    public static QuickChatPhrase method3568(@OriginalArg(1) Buffer arg0) {
+        @Pc(3) QuickChatPhrase local3 = new QuickChatPhrase();
+        local3.id = arg0.g2();
+        local3.type = QuickChatPhraseTypeList.get(local3.id);
+        return local3;
+    }
+
+    @OriginalMember(owner = "client!cb", name = "a", descriptor = "(Lclient!wa;[IZ)V")
 	public final void encodeMessage(@OriginalArg(0) Buffer arg0, @OriginalArg(1) int[] arg1) {
 		if (this.anIntArray71 == null) {
 			return;
@@ -106,8 +116,8 @@ public final class QuickChatPhraseType extends SecondaryNode {
 			for (local42 = 0; local42 < local32; local42++) {
 				@Pc(49) int local49 = arg0.g2();
 				this.anIntArray71[local42] = local49;
-				this.anIntArrayArray5[local42] = new int[Static264.anIntArray412[local49]];
-				for (@Pc(64) int local64 = 0; local64 < Static264.anIntArray412[local49]; local64++) {
+				this.anIntArrayArray5[local42] = new int[anIntArray412[local49]];
+				for (@Pc(64) int local64 = 0; local64 < anIntArray412[local49]; local64++) {
 					this.anIntArrayArray5[local42][local64] = arg0.g2();
 				}
 			}

@@ -21,7 +21,7 @@ public class LightingManager {
     @OriginalMember(owner = "client!ch", name = "w", descriptor = "I")
     public static int anInt987;
     @OriginalMember(owner = "client!id", name = "b", descriptor = "I")
-public static int anInt2875 = -1;
+    public static int anInt2875 = -1;
     @OriginalMember(owner = "client!jf", name = "c", descriptor = "[I")
     private static int[] anIntArray283;
     @OriginalMember(owner = "client!jf", name = "d", descriptor = "I")
@@ -29,7 +29,7 @@ public static int anInt2875 = -1;
     @OriginalMember(owner = "client!jf", name = "e", descriptor = "I")
     private static int anInt3030;
     @OriginalMember(owner = "client!jf", name = "f", descriptor = "[Z")
-    private static boolean[] aBooleanArray65;
+    private static boolean[] enabledLights;
     @OriginalMember(owner = "client!jf", name = "g", descriptor = "[[[I")
     private static int[][][] anIntArrayArrayArray11;
     @OriginalMember(owner = "client!jf", name = "h", descriptor = "[I")
@@ -45,9 +45,9 @@ public static int anInt2875 = -1;
     @OriginalMember(owner = "client!jf", name = "n", descriptor = "I")
     private static int anInt3035;
     @OriginalMember(owner = "client!jf", name = "o", descriptor = "I")
-    private static int anInt3036;
+    private static int length;
     @OriginalMember(owner = "client!jf", name = "p", descriptor = "I")
-    private static int anInt3037;
+    private static int width;
 
     @OriginalMember(owner = "client!jf", name = "a", descriptor = "(IIIIIII)V")
     public static void method2388(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6) {
@@ -56,19 +56,19 @@ public static int anInt2875 = -1;
         }
         if (arg0 == 1 && arg5 > 0) {
             method2393(arg1, arg2, arg3, arg4, arg5 - 1, arg6);
-        } else if (arg0 == 4 && arg5 < anInt3037 - 1) {
+        } else if (arg0 == 4 && arg5 < width - 1) {
             method2393(arg1, arg2, arg3, arg4, arg5 + 1, arg6);
         } else if (arg0 == 8 && arg6 > 0) {
             method2393(arg1, arg2, arg3, arg4, arg5, arg6 - 1);
-        } else if (arg0 == 2 && arg6 < anInt3036 - 1) {
+        } else if (arg0 == 2 && arg6 < length - 1) {
             method2393(arg1, arg2, arg3, arg4, arg5, arg6 + 1);
-        } else if (arg0 == 16 && arg5 > 0 && arg6 < anInt3036 - 1) {
+        } else if (arg0 == 16 && arg5 > 0 && arg6 < length - 1) {
             method2393(arg1, arg2, arg3, arg4, arg5 - 1, arg6 + 1);
-        } else if (arg0 == 32 && arg5 < anInt3037 - 1 && arg6 < anInt3036 - 1) {
+        } else if (arg0 == 32 && arg5 < width - 1 && arg6 < length - 1) {
             method2393(arg1, arg2, arg3, arg4, arg5 + 1, arg6 + 1);
         } else if (arg0 == 128 && arg5 > 0 && arg6 > 0) {
             method2393(arg1, arg2, arg3, arg4, arg5 - 1, arg6 - 1);
-        } else if (arg0 == 64 && arg5 < anInt3037 - 1 && arg6 > 0) {
+        } else if (arg0 == 64 && arg5 < width - 1 && arg6 > 0) {
             method2393(arg1, arg2, arg3, arg4, arg5 + 1, arg6 - 1);
         }
     }
@@ -86,7 +86,7 @@ public static int anInt2875 = -1;
     public static void method2390() {
         for (@Pc(1) int local1 = 0; local1 < 4; local1++) {
             anIntArray284[local1] = -1;
-            method2396(local1);
+            disableLight(local1);
         }
     }
 
@@ -155,7 +155,7 @@ public static int anInt2875 = -1;
         for (local35 = 0; local35 < 4; local35++) {
             if (!aBooleanArray66[local35]) {
                 anIntArray284[local35] = -1;
-                method2396(local35);
+                disableLight(local35);
             }
         }
         anInt3031 = arg3;
@@ -168,9 +168,9 @@ public static int anInt2875 = -1;
     @OriginalMember(owner = "client!jf", name = "a", descriptor = "(III)V")
     public static void method2392() {
         anInt3032 = 4;
-        anInt3037 = 104;
-        anInt3036 = 104;
-        anIntArrayArrayArray11 = new int[anInt3032][anInt3037][anInt3036];
+        width = 104;
+        length = 104;
+        anIntArrayArrayArray11 = new int[anInt3032][width][length];
     }
 
     @OriginalMember(owner = "client!jf", name = "a", descriptor = "(IIIIII)V")
@@ -211,7 +211,7 @@ public static int anInt2875 = -1;
             for (local47 = 0; local47 < 4; local47++) {
                 if (!aBooleanArray66[local47]) {
                     anIntArray284[local47] = -1;
-                    method2396(local47);
+                    disableLight(local47);
                 }
             }
             anInt3031 = arg3;
@@ -255,8 +255,8 @@ public static int anInt2875 = -1;
                     local39 = 0;
                 }
                 @Pc(55) int local55 = (local8.z >> 7) + local8.radius;
-                if (local55 > anInt3036 - 1) {
-                    local55 = anInt3036 - 1;
+                if (local55 > length - 1) {
+                    local55 = length - 1;
                 }
                 for (@Pc(66) int local66 = local39; local66 <= local55; local66++) {
                     @Pc(75) short local75 = local8.aShortArray30[local31++];
@@ -265,8 +265,8 @@ public static int anInt2875 = -1;
                     if (local87 < 0) {
                         local87 = 0;
                     }
-                    if (local95 > anInt3037 - 1) {
-                        local95 = anInt3037 - 1;
+                    if (local95 > width - 1) {
+                        local95 = width - 1;
                     }
                     for (@Pc(110) int local110 = local87; local110 <= local95; local110++) {
                         @Pc(121) int local121 = anIntArrayArrayArray11[local26][local110][local66];
@@ -286,12 +286,12 @@ public static int anInt2875 = -1;
     }
 
     @OriginalMember(owner = "client!jf", name = "a", descriptor = "(I)V")
-    private static void method2396(@OriginalArg(0) int arg0) {
-        if (aBooleanArray65[arg0]) {
-            aBooleanArray65[arg0] = false;
-            @Pc(14) int local14 = arg0 + 16384 + 4;
-            @Pc(16) GL2 local16 = GlRenderer.gl;
-            local16.glDisable(local14);
+    private static void disableLight(@OriginalArg(0) int i) {
+        if (enabledLights[i]) {
+            enabledLights[i] = false;
+            @Pc(14) int light = i + 16384 + 4;
+            @Pc(16) GL2 gl = GlRenderer.gl;
+            gl.glDisable(light);
         }
     }
 
@@ -321,7 +321,7 @@ public static int anInt2875 = -1;
                 }
             }
             anIntArray284[local4] = -1;
-            method2396(local4);
+            disableLight(local4);
         }
     }
 
@@ -329,7 +329,7 @@ public static int anInt2875 = -1;
     public static void method2398() {
         lights = null;
         anIntArray284 = null;
-        aBooleanArray65 = null;
+        enabledLights = null;
         anIntArray283 = null;
         aBooleanArray66 = null;
         anIntArrayArrayArray11 = null;
@@ -347,7 +347,7 @@ public static int anInt2875 = -1;
         }
         for (local3 = 0; local3 < 4; local3++) {
             anIntArray284[local3] = -1;
-            method2396(local3);
+            disableLight(local3);
         }
     }
 
@@ -355,10 +355,10 @@ public static int anInt2875 = -1;
     public static void method2401() {
         lights = new Light[255];
         anIntArray284 = new int[4];
-        aBooleanArray65 = new boolean[4];
+        enabledLights = new boolean[4];
         anIntArray283 = new int[4];
         aBooleanArray66 = new boolean[4];
-        anIntArrayArrayArray11 = new int[anInt3032][anInt3037][anInt3036];
+        anIntArrayArrayArray11 = new int[anInt3032][width][length];
     }
 
     @OriginalMember(owner = "client!jf", name = "a", descriptor = "(II[[[Lclient!bj;)V")
@@ -366,17 +366,17 @@ public static int anInt2875 = -1;
         if (!Preferences.highDetailLighting) {
             return;
         }
-        @Pc(4) GL2 local4 = GlRenderer.gl;
+        @Pc(4) GL2 gl = GlRenderer.gl;
         MaterialManager.setMaterial(0, 0);
         GlRenderer.setTextureCombineRgbMode(0);
         GlRenderer.resetTextureMatrix();
         GlRenderer.setTextureId(GlRenderer.anInt5328);
-        local4.glDepthMask(false);
+        gl.glDepthMask(false);
         GlRenderer.setLightingEnabled(false);
-        local4.glBlendFunc(GL2.GL_DST_COLOR, GL2.GL_ONE);
-        local4.glFogfv(GL2.GL_FOG_COLOR, new float[] { 0.0F, 0.0F, 0.0F, 0.0F }, 0);
-        local4.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_SRC0_RGB, GL2.GL_CONSTANT);
-        local4.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_OPERAND0_RGB, GL2.GL_SRC_ALPHA);
+        gl.glBlendFunc(GL2.GL_DST_COLOR, GL2.GL_ONE);
+        gl.glFogfv(GL2.GL_FOG_COLOR, new float[] { 0.0F, 0.0F, 0.0F, 0.0F }, 0);
+        gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_SRC0_RGB, GL2.GL_CONSTANT);
+        gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_OPERAND0_RGB, GL2.GL_SRC_ALPHA);
         label71: for (@Pc(56) int local56 = 0; local56 < lightCount; local56++) {
             @Pc(63) Light local63 = lights[local56];
             @Pc(66) int local66 = local63.level;
@@ -411,7 +411,7 @@ public static int anInt2875 = -1;
                         }
                         if (local66 < 0 || local160 != null && local160.aBoolean45) {
                             GlRenderer.method4159(201.5F - (float) local63.level * 50.0F - 1.5F);
-                            local4.glTexEnvfv(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_COLOR, new float[] { 0.0F, 0.0F, 0.0F, local63.alpha}, 0);
+                            gl.glTexEnvfv(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_COLOR, new float[] { 0.0F, 0.0F, 0.0F, local63.alpha}, 0);
                             local63.aClass45_1.method1556();
                             continue label71;
                         }
@@ -419,50 +419,41 @@ public static int anInt2875 = -1;
                 }
             }
         }
-        local4.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_SRC0_RGB, GL2.GL_TEXTURE);
-        local4.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_OPERAND0_RGB, GL2.GL_SRC_COLOR);
-        local4.glBlendFunc(GL2.GL_SRC_ALPHA, GL2.GL_ONE_MINUS_SRC_ALPHA);
-        local4.glDepthMask(true);
-        local4.glFogfv(GL2.GL_FOG_COLOR, FogManager.fogColor, 0);
-        local4.glEnableClientState(GL2.GL_TEXTURE_COORD_ARRAY);
+        gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_SRC0_RGB, GL2.GL_TEXTURE);
+        gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_OPERAND0_RGB, GL2.GL_SRC_COLOR);
+        gl.glBlendFunc(GL2.GL_SRC_ALPHA, GL2.GL_ONE_MINUS_SRC_ALPHA);
+        gl.glDepthMask(true);
+        gl.glFogfv(GL2.GL_FOG_COLOR, FogManager.fogColor, 0);
+        gl.glEnableClientState(GL2.GL_TEXTURE_COORD_ARRAY);
         GlRenderer.restoreLighting();
     }
 
     @OriginalMember(owner = "client!jf", name = "a", descriptor = "(ILclient!gi;III)V")
     private static void method2403(@OriginalArg(0) int arg0, @OriginalArg(1) Light arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
         @Pc(5) int local5 = arg0 + 16384 + 4;
-        @Pc(7) GL2 local7 = GlRenderer.gl;
-        if (!aBooleanArray65[arg0]) {
-            local7.glEnable(local5);
-            aBooleanArray65[arg0] = true;
+        @Pc(7) GL2 gl = GlRenderer.gl;
+        if (!enabledLights[arg0]) {
+            gl.glEnable(local5);
+            enabledLights[arg0] = true;
         }
-        local7.glLightf(local5, GL2.GL_QUADRATIC_ATTENUATION, arg1.aFloat9);
-        local7.glLightfv(local5, GL2.GL_DIFFUSE, arg1.diffuse, 0);
+        gl.glLightf(local5, GL2.GL_QUADRATIC_ATTENUATION, arg1.aFloat9);
+        gl.glLightfv(local5, GL2.GL_DIFFUSE, arg1.diffuse, 0);
         aFloatArray17[0] = arg1.x - arg2;
         aFloatArray17[1] = arg1.y - arg3;
         aFloatArray17[2] = arg1.z - arg4;
-        local7.glLightfv(local5, GL2.GL_POSITION, aFloatArray17, 0);
+        gl.glLightfv(local5, GL2.GL_POSITION, aFloatArray17, 0);
     }
 
     @OriginalMember(owner = "client!jf", name = "g", descriptor = "()V")
     public static void method2404() {
         lightCount = 0;
         for (@Pc(3) int local3 = 0; local3 < anInt3032; local3++) {
-            for (@Pc(8) int local8 = 0; local8 < anInt3037; local8++) {
-                for (@Pc(13) int local13 = 0; local13 < anInt3036; local13++) {
+            for (@Pc(8) int local8 = 0; local8 < width; local8++) {
+                for (@Pc(13) int local13 = 0; local13 < length; local13++) {
                     anIntArrayArrayArray11[local3][local8][local13] = 0;
                 }
             }
         }
     }
 
-    @OriginalMember(owner = "client!ch", name = "c", descriptor = "(I)V")
-    public static void method846() {
-        if (!SceneGraph.allLevelsAreVisible() && LoginManager.centralPlane != Player.level) {
-            LoginManager.method2463(Player.level, LoginManager.centralZoneZ, LoginManager.centralZoneX, PlayerList.self.movementQueueZ[0], false, PlayerList.self.movementQueueX[0]);
-        } else if (Player.level != anInt2875 && MiniMap.renderMap(Player.level)) {
-            anInt2875 = Player.level;
-            ScriptRunner.method2218();
-        }
-    }
 }
