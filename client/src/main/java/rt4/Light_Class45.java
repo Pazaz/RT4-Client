@@ -68,16 +68,16 @@ public final class Light_Class45 {
 				return local23.value;
 			}
 		}
-		@Pc(31) int local31 = arg0.anInt2247;
-		@Pc(37) float local37 = (float) (arg0.anInt2240 - arg1);
-		@Pc(43) float local43 = (float) (arg0.anInt2235 - arg2);
-		@Pc(49) float local49 = (float) (arg0.anInt2245 - arg3);
+		@Pc(31) int local31 = arg0.color;
+		@Pc(37) float local37 = (float) (arg0.x - arg1);
+		@Pc(43) float local43 = (float) (arg0.y - arg2);
+		@Pc(49) float local49 = (float) (arg0.z - arg3);
 		@Pc(64) float local64 = (float) Math.sqrt((double) (local37 * local37 + local43 * local43 + local49 * local49));
 		@Pc(68) float local68 = 1.0F / local64;
 		@Pc(72) float local72 = local37 * local68;
 		@Pc(76) float local76 = local43 * local68;
 		@Pc(80) float local80 = local49 * local68;
-		@Pc(90) float local90 = local64 / (float) ((arg0.anInt2236 << 7) + 64);
+		@Pc(90) float local90 = local64 / (float) ((arg0.radius << 7) + 64);
 		@Pc(96) float local96 = 1.0F - local90 * local90;
 		if (local96 < 0.0F) {
 			local96 = 0.0F;

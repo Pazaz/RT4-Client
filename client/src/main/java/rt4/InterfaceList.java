@@ -1034,4 +1034,42 @@ public class InterfaceList {
             return arg0 == 8 || arg0 == 32 || arg0 == 28 || arg0 == 59 || arg0 == 51 || arg0 == 41;
         }
     }
+
+    @OriginalMember(owner = "client!fm", name = "a", descriptor = "(ZI)V")
+    public static void method1596(@OriginalArg(0) boolean arg0) {
+        if (arg0) {
+            if (topLevelInterface != -1) {
+                method2275(topLevelInterface);
+            }
+            for (@Pc(18) ComponentPointer local18 = (ComponentPointer) openInterfaces.head(); local18 != null; local18 = (ComponentPointer) openInterfaces.next()) {
+                closeInterface(true, local18);
+            }
+            topLevelInterface = -1;
+            openInterfaces = new HashTable(8);
+            method1287();
+            topLevelInterface = Static156.loginScreenId;
+            method3712(false);
+            Static87.method1807();
+            method1626(topLevelInterface);
+        }
+        MiniMenu.anInt1092 = -1;
+        Static81.method1750(ScriptRunner.anInt5794);
+        PlayerList.self = new Player();
+        PlayerList.self.zFine = 3000;
+        PlayerList.self.xFine = 3000;
+        if (!GlRenderer.enabled) {
+            Static145.method2743(client.js5Archive8);
+            client.setGameState(10);
+            return;
+        }
+        if (Camera.cameraType == 2) {
+            Camera.renderX = Camera.anInt5375 << 7;
+            Camera.renderZ = Camera.anInt4232 << 7;
+        } else {
+            Camera.updateLoginScreenCamera();
+        }
+        Static103.setInstantFade();
+        LoginManager.setupLoadingScreenRegion();
+        client.setGameState(28);
+    }
 }

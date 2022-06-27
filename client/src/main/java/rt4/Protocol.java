@@ -2019,11 +2019,11 @@ public class Protocol {
                 Chat.messageCounter = (Chat.messageCounter + 1) % 100;
                 JagString message = Font.escape(formatChatMessage(inboundBuffer).encodeMessage());
                 if (rights == 2 || rights == 3) {
-                    Static73.method1598(message, JagString.concatenate(new JagString[] { Static44.IMG1, Base37.decode37(name37).toTitleCase() }), Base37.decode37(chat37).toTitleCase());
+                    Chat.method1598(message, JagString.concatenate(new JagString[] { Static44.IMG1, Base37.decode37(name37).toTitleCase() }), Base37.decode37(chat37).toTitleCase());
                 } else if (rights == 1) {
-                    Static73.method1598(message, JagString.concatenate(new JagString[] { IMG0, Base37.decode37(name37).toTitleCase() }), Base37.decode37(chat37).toTitleCase());
+                    Chat.method1598(message, JagString.concatenate(new JagString[] { IMG0, Base37.decode37(name37).toTitleCase() }), Base37.decode37(chat37).toTitleCase());
                 } else {
-                    Static73.method1598(message, Base37.decode37(name37).toTitleCase(), Base37.decode37(chat37).toTitleCase());
+                    Chat.method1598(message, Base37.decode37(name37).toTitleCase(), Base37.decode37(chat37).toTitleCase());
                 }
             }
             opcode = -1;

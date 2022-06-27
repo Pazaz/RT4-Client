@@ -1022,7 +1022,7 @@ public class WorldMap {
 
     @OriginalMember(owner = "client!ab", name = "a", descriptor = "(Lclient!na;I)V")
     public static void method4656(@OriginalArg(0) JagString arg0) {
-        @Pc(9) int local9 = Static171.method3218(arg0);
+        @Pc(9) int local9 = method3218(arg0);
         if (local9 != -1) {
             method3616(labels.aShortArray73[local9], labels.aShortArray72[local9]);
         }
@@ -1030,7 +1030,7 @@ public class WorldMap {
 
     @OriginalMember(owner = "client!rc", name = "a", descriptor = "(Lclient!na;Z)Lclient!na;")
     public static JagString method923(@OriginalArg(0) JagString arg0) {
-        @Pc(12) int local12 = Static171.method3218(arg0);
+        @Pc(12) int local12 = method3218(arg0);
         return local12 == -1 ? aClass100_517 : labels.aClass100Array153[local12].method3140(aClass100_538, aClass100_872);
     }
 
@@ -1788,4 +1788,17 @@ public class WorldMap {
             }
         }
     }
+
+    @OriginalMember(owner = "client!ni", name = "a", descriptor = "(ILclient!na;)I")
+	public static int method3218(@OriginalArg(1) JagString arg0) {
+		if (labels == null || arg0.length() == 0) {
+			return -1;
+		}
+		for (@Pc(20) int local20 = 0; local20 < labels.anInt5074; local20++) {
+			if (labels.aClass100Array153[local20].method3140(aClass100_538, aClass100_872).method3142(arg0)) {
+				return local20;
+			}
+		}
+		return -1;
+	}
 }

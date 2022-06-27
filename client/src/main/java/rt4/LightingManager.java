@@ -239,28 +239,28 @@ public static int anInt2875 = -1;
     public static void method2395() {
         for (@Pc(1) int local1 = 0; local1 < lightCount; local1++) {
             @Pc(8) Light local8 = lights[local1];
-            @Pc(11) int local11 = local8.anInt2241;
+            @Pc(11) int local11 = local8.level;
             if (local8.aBoolean124) {
                 local11 = 0;
             }
-            @Pc(19) int local19 = local8.anInt2241;
+            @Pc(19) int local19 = local8.level;
             if (local8.aBoolean126) {
                 local19 = 3;
             }
             for (@Pc(26) int local26 = local11; local26 <= local19; local26++) {
                 @Pc(31) int local31 = 0;
-                @Pc(39) int local39 = (local8.anInt2245 >> 7) - local8.anInt2236;
+                @Pc(39) int local39 = (local8.z >> 7) - local8.radius;
                 if (local39 < 0) {
                     local31 = -local39;
                     local39 = 0;
                 }
-                @Pc(55) int local55 = (local8.anInt2245 >> 7) + local8.anInt2236;
+                @Pc(55) int local55 = (local8.z >> 7) + local8.radius;
                 if (local55 > anInt3036 - 1) {
                     local55 = anInt3036 - 1;
                 }
                 for (@Pc(66) int local66 = local39; local66 <= local55; local66++) {
                     @Pc(75) short local75 = local8.aShortArray30[local31++];
-                    @Pc(87) int local87 = (local8.anInt2240 >> 7) + (local75 >> 8) - local8.anInt2236;
+                    @Pc(87) int local87 = (local8.x >> 7) + (local75 >> 8) - local8.radius;
                     @Pc(95) int local95 = local87 + (local75 & 0xFF) - 1;
                     if (local87 < 0) {
                         local87 = 0;
@@ -379,14 +379,14 @@ public static int anInt2875 = -1;
         local4.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_OPERAND0_RGB, GL2.GL_SRC_ALPHA);
         label71: for (@Pc(56) int local56 = 0; local56 < lightCount; local56++) {
             @Pc(63) Light local63 = lights[local56];
-            @Pc(66) int local66 = local63.anInt2241;
+            @Pc(66) int local66 = local63.level;
             if (local63.aBoolean125) {
                 local66--;
             }
             if (local63.aClass45_1 != null) {
                 @Pc(76) int local76 = 0;
-                @Pc(84) int local84 = (local63.anInt2245 >> 7) - local63.anInt2236;
-                @Pc(92) int local92 = (local63.anInt2245 >> 7) + local63.anInt2236;
+                @Pc(84) int local84 = (local63.z >> 7) - local63.radius;
+                @Pc(92) int local92 = (local63.z >> 7) + local63.radius;
                 if (local92 >= anInt4866) {
                     local92 = anInt4866 - 1;
                 }
@@ -396,7 +396,7 @@ public static int anInt2875 = -1;
                 }
                 for (@Pc(112) int local112 = local84; local112 <= local92; local112++) {
                     @Pc(121) short local121 = local63.aShortArray30[local76++];
-                    @Pc(133) int local133 = (local63.anInt2240 >> 7) + (local121 >> 8) - local63.anInt2236;
+                    @Pc(133) int local133 = (local63.x >> 7) + (local121 >> 8) - local63.radius;
                     @Pc(141) int local141 = local133 + (local121 & 0xFF) - 1;
                     if (local133 < anInt987) {
                         local133 = anInt987;
@@ -410,8 +410,8 @@ public static int anInt2875 = -1;
                             local160 = arg2[local66][local155][local112];
                         }
                         if (local66 < 0 || local160 != null && local160.aBoolean45) {
-                            GlRenderer.method4159(201.5F - (float) local63.anInt2241 * 50.0F - 1.5F);
-                            local4.glTexEnvfv(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_COLOR, new float[] { 0.0F, 0.0F, 0.0F, local63.aFloat8 }, 0);
+                            GlRenderer.method4159(201.5F - (float) local63.level * 50.0F - 1.5F);
+                            local4.glTexEnvfv(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_COLOR, new float[] { 0.0F, 0.0F, 0.0F, local63.alpha}, 0);
                             local63.aClass45_1.method1556();
                             continue label71;
                         }
@@ -437,10 +437,10 @@ public static int anInt2875 = -1;
             aBooleanArray65[arg0] = true;
         }
         local7.glLightf(local5, GL2.GL_QUADRATIC_ATTENUATION, arg1.aFloat9);
-        local7.glLightfv(local5, GL2.GL_DIFFUSE, arg1.aFloatArray3, 0);
-        aFloatArray17[0] = arg1.anInt2240 - arg2;
-        aFloatArray17[1] = arg1.anInt2235 - arg3;
-        aFloatArray17[2] = arg1.anInt2245 - arg4;
+        local7.glLightfv(local5, GL2.GL_DIFFUSE, arg1.diffuse, 0);
+        aFloatArray17[0] = arg1.x - arg2;
+        aFloatArray17[1] = arg1.y - arg3;
+        aFloatArray17[2] = arg1.z - arg4;
         local7.glLightfv(local5, GL2.GL_POSITION, aFloatArray17, 0);
     }
 

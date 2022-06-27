@@ -65,16 +65,16 @@ public final class Static221 {
 	public static void method3393(@OriginalArg(0) float[][] arg0, @OriginalArg(1) byte[][] arg1, @OriginalArg(2) byte[][] arg2, @OriginalArg(3) Light[] arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) float[][] arg6, @OriginalArg(7) byte[][] arg7, @OriginalArg(8) byte[][] arg8, @OriginalArg(9) int[][] arg9, @OriginalArg(11) float[][] arg10) {
 		for (@Pc(7) int local7 = 0; local7 < arg5; local7++) {
 			@Pc(18) Light local18 = arg3[local7];
-			if (local18.anInt2241 == arg4) {
+			if (local18.level == arg4) {
 				@Pc(24) int local24 = 0;
 				@Pc(28) Light_Class45 local28 = new Light_Class45();
-				@Pc(37) int local37 = (local18.anInt2240 >> 7) - local18.anInt2236;
-				@Pc(46) int local46 = (local18.anInt2245 >> 7) - local18.anInt2236;
+				@Pc(37) int local37 = (local18.x >> 7) - local18.radius;
+				@Pc(46) int local46 = (local18.z >> 7) - local18.radius;
 				if (local46 < 0) {
 					local24 = -local46;
 					local46 = 0;
 				}
-				@Pc(65) int local65 = local18.anInt2236 + (local18.anInt2245 >> 7);
+				@Pc(65) int local65 = local18.radius + (local18.z >> 7);
 				if (local65 > 103) {
 					local65 = 103;
 				}
@@ -212,8 +212,8 @@ public final class Static221 {
 				}
 				local24 = 0;
 				local28.method1555();
-				if ((local18.anInt2245 >> 7) - local18.anInt2236 < 0) {
-					local24 = local18.anInt2236 - (local18.anInt2245 >> 7);
+				if ((local18.z >> 7) - local18.radius < 0) {
+					local24 = local18.radius - (local18.z >> 7);
 				}
 				for (local72 = local46; local72 <= local65; local72++) {
 					local84 = local18.aShortArray30[local24];

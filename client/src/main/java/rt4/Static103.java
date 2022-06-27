@@ -6,8 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static103 {
 
-	@OriginalMember(owner = "client!ph", name = "b", descriptor = "[[Lclient!li;")
-	public static final Environment[][] aClass92ArrayArray1 = new Environment[13][13];
 	@OriginalMember(owner = "client!i", name = "ec", descriptor = "[I")
 	public static int[] anIntArray254;
 
@@ -51,8 +49,6 @@ public final class Static103 {
 	public static int anInt2161;
 	@OriginalMember(owner = "client!sa", name = "W", descriptor = "Z")
 	public static boolean instantScreenFade = true;
-    @OriginalMember(owner = "client!gl", name = "f", descriptor = "I")
-	public static int anInt2263;
 
     @OriginalMember(owner = "client!i", name = "b", descriptor = "(IIIII)I")
 	public static int method2235(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
@@ -60,7 +56,7 @@ public final class Static103 {
 			arg0 = 1000000;
 			instantScreenFade = false;
 		}
-		@Pc(15) Environment local15 = aClass92ArrayArray1[arg3][arg1];
+		@Pc(15) Environment local15 = Static73.aClass92ArrayArray1[arg3][arg1];
 		@Pc(25) float local25 = ((float) arg2 * 0.1F + 0.7F) * local15.aFloat16;
 		@Pc(28) float local28 = local15.aFloat18;
 		@Pc(31) int local31 = local15.anInt3526;
@@ -103,7 +99,7 @@ public final class Static103 {
 		}
 		FogManager.method3060(anInt5731, aFloat7, aFloat36, aFloat5);
 		FogManager.method3062(anInt3709, anInt2161);
-		FogManager.method3063((float) anInt2263, (float) Static73.anInt3893, (float) Static73.anInt3534);
+		FogManager.method3063((float) Static73.anInt2263, (float) Static73.anInt3893, (float) Static73.anInt3534);
 		FogManager.method3058();
 		return anInt3709;
 	}
