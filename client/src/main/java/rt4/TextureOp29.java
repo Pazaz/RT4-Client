@@ -97,7 +97,7 @@ public final class TextureOp29 extends TextureOp {
 			@Pc(20) int local20 = Texture.width;
 			@Pc(22) int local22 = Texture.height;
 			@Pc(26) int[][] local26 = new int[local22][local20];
-			@Pc(31) int[][][] local31 = this.colorImageCache.method3168();
+			@Pc(31) int[][][] local31 = this.colorImageCache.get();
 			this.method3934(local26);
 			for (@Pc(37) int local37 = 0; local37 < Texture.height; local37++) {
 				@Pc(44) int[] local44 = local26[local37];
