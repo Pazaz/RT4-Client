@@ -10,59 +10,57 @@ public class ClientScriptList {
 
     @OriginalMember(owner = "client!hc", name = "a", descriptor = "(IB)Lclient!qc;")
     public static ClientScript get(@OriginalArg(0) int id) {
-        @Pc(12) ClientScript local12 = (ClientScript) scripts.get((long) id);
-        if (local12 != null) {
-            return local12;
+        @Pc(12) ClientScript script = (ClientScript) scripts.get(id);
+        if (script != null) {
+            return script;
         }
-        @Pc(22) byte[] local22 = client.js5Archive12.fetchFile(id, 0);
-        if (local22 == null) {
+        @Pc(22) byte[] bytes = client.js5Archive12.fetchFile(id, 0);
+        if (bytes == null) {
             return null;
         }
-        local12 = new ClientScript();
-        @Pc(42) Buffer local42 = new Buffer(local22);
-        local42.offset = local42.data.length - 2;
-        @Pc(53) int local53 = local42.g2();
-        @Pc(63) int local63 = local42.data.length - local53 - 12 - 2;
-        local42.offset = local63;
-        @Pc(70) int local70 = local42.g4();
-        local12.anInt4667 = local42.g2();
-        local12.anInt4671 = local42.g2();
-        local12.anInt4665 = local42.g2();
-        local12.anInt4669 = local42.g2();
-        @Pc(98) int local98 = local42.g1();
-        @Pc(107) int local107;
-        @Pc(114) int local114;
-        if (local98 > 0) {
-            local12.aClass133Array1 = new HashTable[local98];
-            for (local107 = 0; local107 < local98; local107++) {
-                local114 = local42.g2();
-                @Pc(121) HashTable local121 = new HashTable(IntUtils.clp2(local114));
-                local12.aClass133Array1[local107] = local121;
-                while (local114-- > 0) {
-                    @Pc(136) int local136 = local42.g4();
-                    @Pc(140) int local140 = local42.g4();
-                    local121.put(new IntNode(local140), (long) local136);
+        script = new ClientScript();
+        @Pc(42) Buffer buffer = new Buffer(bytes);
+        buffer.offset = buffer.data.length - 2;
+        @Pc(53) int trailerLen = buffer.g2();
+        @Pc(63) int trailerPos = buffer.data.length - trailerLen - 12 - 2;
+        buffer.offset = trailerPos;
+        @Pc(70) int instructions = buffer.g4();
+        script.intLocals = buffer.g2();
+        script.stringLocals = buffer.g2();
+        script.intArgs = buffer.g2();
+        script.stringArgs = buffer.g2();
+        @Pc(98) int switches = buffer.g1();
+        if (switches > 0) {
+            script.switchTables = new HashTable[switches];
+            for (int i = 0; i < switches; i++) {
+                int cases = buffer.g2();
+                @Pc(121) HashTable table = new HashTable(IntUtils.clp2(cases));
+                script.switchTables[i] = table;
+                while (cases-- > 0) {
+                    @Pc(136) int value = buffer.g4();
+                    @Pc(140) int offset = buffer.g4();
+                    table.put(new IntNode(offset), value);
                 }
             }
         }
-        local42.offset = 0;
-        local12.name = local42.fastgjstr();
-        local12.opcodes = new int[local70];
-        local12.stringOperands = new JagString[local70];
-        local107 = 0;
-        local12.intOperands = new int[local70];
-        while (local63 > local42.offset) {
-            local114 = local42.g2();
-            if (local114 == 3) {
-                local12.stringOperands[local107] = local42.gjstr();
-            } else if (local114 >= 100 || local114 == 21 || local114 == 38 || local114 == 39) {
-                local12.intOperands[local107] = local42.g1();
+        buffer.offset = 0;
+        script.name = buffer.fastgjstr();
+        script.opcodes = new int[instructions];
+        script.stringOperands = new JagString[instructions];
+        int i = 0;
+        script.intOperands = new int[instructions];
+        while (trailerPos > buffer.offset) {
+            int cases = buffer.g2();
+            if (cases == 3) {
+                script.stringOperands[i] = buffer.gjstr();
+            } else if (cases >= 100 || cases == 21 || cases == 38 || cases == 39) {
+                script.intOperands[i] = buffer.g1();
             } else {
-                local12.intOperands[local107] = local42.g4();
+                script.intOperands[i] = buffer.g4();
             }
-            local12.opcodes[local107++] = local114;
+            script.opcodes[i++] = cases;
         }
-        scripts.put(local12, (long) id);
-        return local12;
+        scripts.put(script, id);
+        return script;
     }
 }
