@@ -155,14 +155,14 @@ public final class DelayedStateChange extends SecondaryNode {
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(B)Lclient!da;")
 	public static DelayedStateChange poll() {
-		@Pc(10) DelayedStateChange local10 = (DelayedStateChange) serverQueue.method795();
+		@Pc(10) DelayedStateChange local10 = (DelayedStateChange) serverQueue.head();
 		if (local10 != null) {
 			local10.unlink();
-			local10.method4365();
+			local10.unlinkSecondary();
 			return local10;
 		}
 		do {
-			local10 = (DelayedStateChange) clientQueue.method795();
+			local10 = (DelayedStateChange) clientQueue.head();
 			if (local10 == null) {
 				return null;
 			}
@@ -170,7 +170,7 @@ public final class DelayedStateChange extends SecondaryNode {
 				return null;
 			}
 			local10.unlink();
-			local10.method4365();
+			local10.unlinkSecondary();
 		} while ((Long.MIN_VALUE & local10.secondaryKey) == 0L);
 		return local10;
 	}

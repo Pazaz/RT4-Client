@@ -10,15 +10,15 @@ public final class Js5QuickChatCommandDecoder implements QuickChatCommandDecoder
 
 	@OriginalMember(owner = "client!af", name = "a", descriptor = "(I[IIJ)Lclient!na;")
 	@Override
-	public final JagString method30(@OriginalArg(0) int arg0, @OriginalArg(1) int[] arg1, @OriginalArg(3) long arg2) {
-		if (arg0 == 0) {
-			@Pc(12) EnumType local12 = EnumTypeList.get(arg1[0]);
-			return local12.getString((int) arg2);
-		} else if (arg0 == 1 || arg0 == 10) {
-			@Pc(31) ObjType local31 = ObjTypeList.get((int) arg2);
-			return local31.name;
-		} else if (arg0 == 6 || arg0 == 7 || arg0 == 11) {
-			return EnumTypeList.get(arg1[0]).getString((int) arg2);
+	public final JagString decode(@OriginalArg(0) int command, @OriginalArg(1) int[] params, @OriginalArg(3) long value) {
+		if (command == 0) {
+			@Pc(12) EnumType type = EnumTypeList.get(params[0]);
+			return type.getString((int) value);
+		} else if (command == 1 || command == 10) {
+			@Pc(31) ObjType type = ObjTypeList.get((int) value);
+			return type.name;
+		} else if (command == 6 || command == 7 || command == 11) {
+			return EnumTypeList.get(params[0]).getString((int) value);
 		} else {
 			return null;
 		}

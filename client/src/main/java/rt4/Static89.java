@@ -77,7 +77,7 @@ public final class Static89 {
 	@OriginalMember(owner = "client!ha", name = "a", descriptor = "([IJIZ)Lclient!na;")
 	public static JagString method1838(@OriginalArg(0) int[] arg0, @OriginalArg(1) long arg1, @OriginalArg(2) int arg2) {
 		if (QuickChatPhraseTypeList.decoder != null) {
-			@Pc(17) JagString local17 = QuickChatPhraseTypeList.decoder.method30(arg2, arg0, arg1);
+			@Pc(17) JagString local17 = QuickChatPhraseTypeList.decoder.decode(arg2, arg0, arg1);
 			if (local17 != null) {
 				return local17;
 			}

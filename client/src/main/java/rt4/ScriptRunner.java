@@ -332,7 +332,7 @@ public final class ScriptRunner {
 		Static5.anInt40 = local57;
 		Camera.renderX = local59;
 		Camera.cameraYaw = local125;
-		if (aBoolean43 && client.js5NetQueue.method2328() == 0) {
+		if (aBoolean43 && client.js5NetQueue.getUrgentRequestCount() == 0) {
 			aBoolean43 = false;
 		}
 		if (aBoolean43) {
@@ -4368,7 +4368,7 @@ public final class ScriptRunner {
 														str1 = stringStack[ssp];
 														local7566 = false;
 														@Pc(7577) SecondaryLinkedList local7577 = method3333(int1 >> 14 & 0x3FFF, int1 & 0x3FFF);
-														for (@Pc(7582) Map local7582 = (Map) local7577.method795(); local7582 != null; local7582 = (Map) local7577.method797()) {
+														for (@Pc(7582) Map local7582 = (Map) local7577.head(); local7582 != null; local7582 = (Map) local7577.next()) {
 															if (local7582.group.equalsIgnoreCase(str1)) {
 																local7566 = true;
 																break;

@@ -60,12 +60,12 @@ public final class Js5MasterIndex {
 		@Pc(13) int local13;
 		for (local13 = 0; local13 < this.resourceProviders.length; local13++) {
 			if (this.resourceProviders[local13] != null) {
-				this.resourceProviders[local13].method537();
+				this.resourceProviders[local13].processPrefetchQueue();
 			}
 		}
 		for (local13 = 0; local13 < this.resourceProviders.length; local13++) {
 			if (this.resourceProviders[local13] != null) {
-				this.resourceProviders[local13].method534();
+				this.resourceProviders[local13].loop();
 			}
 		}
 	}

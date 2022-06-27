@@ -329,9 +329,9 @@ public final class Static87 {
 								objId = 0;
 								local556 = 0;
 								for (local563 = 0; local563 < 28; local563++) {
-									cardMemory += client.js5Providers[local563].method535();
-									local556 += client.js5Providers[local563].method529();
-									objId += client.js5Providers[local563].method533();
+									cardMemory += client.js5Providers[local563].getIndexSize();
+									local556 += client.js5Providers[local563].getVerifiedGroups();
+									objId += client.js5Providers[local563].getTotalVerifiedGroups();
 								}
 								local571 = local556 * 10000 / cardMemory;
 								local563 = objId * 100 / cardMemory;

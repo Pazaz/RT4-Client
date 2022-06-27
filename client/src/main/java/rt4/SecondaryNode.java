@@ -10,18 +10,18 @@ public class SecondaryNode extends Node {
 	public long secondaryKey;
 
 	@OriginalMember(owner = "client!rg", name = "w", descriptor = "Lclient!rg;")
-	public SecondaryNode aClass3_Sub2_66;
+	public SecondaryNode secondaryPrev;
 
 	@OriginalMember(owner = "client!rg", name = "G", descriptor = "Lclient!rg;")
-	public SecondaryNode aClass3_Sub2_67;
+	public SecondaryNode secondaryNext;
 
 	@OriginalMember(owner = "client!rg", name = "e", descriptor = "(B)V")
-	public final void method4365() {
-		if (this.aClass3_Sub2_66 != null) {
-			this.aClass3_Sub2_66.aClass3_Sub2_67 = this.aClass3_Sub2_67;
-			this.aClass3_Sub2_67.aClass3_Sub2_66 = this.aClass3_Sub2_66;
-			this.aClass3_Sub2_67 = null;
-			this.aClass3_Sub2_66 = null;
+	public final void unlinkSecondary() {
+		if (this.secondaryPrev != null) {
+			this.secondaryPrev.secondaryNext = this.secondaryNext;
+			this.secondaryNext.secondaryPrev = this.secondaryPrev;
+			this.secondaryNext = null;
+			this.secondaryPrev = null;
 		}
 	}
 }
