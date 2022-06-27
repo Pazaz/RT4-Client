@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!we")
-public class Class106_Sub1 extends Class106 {
+public class MaterialManager_Class106_Sub1 extends MaterialManager_Class106 {
 
 	@OriginalMember(owner = "client!we", name = "B", descriptor = "I")
 	private int anInt4135;
@@ -35,7 +35,7 @@ public class Class106_Sub1 extends Class106 {
 	private int anInt4129;
 
 	@OriginalMember(owner = "client!we", name = "<init>", descriptor = "(IIIIIFFF)V")
-	protected Class106_Sub1(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) float arg5, @OriginalArg(6) float arg6, @OriginalArg(7) float arg7) {
+	protected MaterialManager_Class106_Sub1(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) float arg5, @OriginalArg(6) float arg6, @OriginalArg(7) float arg7) {
 		super(arg0, arg1, arg2, arg3, arg4);
 		this.anInt4134 = (int) (arg7 * 4096.0F);
 		this.anInt4139 = (int) (arg6 * 4096.0F);

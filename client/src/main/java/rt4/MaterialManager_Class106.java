@@ -7,7 +7,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!wf")
-public abstract class Class106 {
+public abstract class MaterialManager_Class106 {
 
 	@OriginalMember(owner = "client!wf", name = "c", descriptor = "[S")
 	private short[] aShortArray70;
@@ -31,7 +31,7 @@ public abstract class Class106 {
 	protected int anInt5008 = 4;
 
 	@OriginalMember(owner = "client!wf", name = "<init>", descriptor = "(IIIII)V")
-	protected Class106(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+	protected MaterialManager_Class106(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		this.anInt5002 = arg3;
 		this.anInt5008 = arg1;
 		this.anInt5000 = arg0;

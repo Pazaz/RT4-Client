@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!vd")
-public class Class106_Sub2 extends Class106 {
+public class MaterialManager_Class106_Sub2 extends MaterialManager_Class106 {
 
 	@OriginalMember(owner = "client!vd", name = "x", descriptor = "I")
 	private int anInt5010;
@@ -21,7 +21,7 @@ public class Class106_Sub2 extends Class106 {
 	private final int[] anIntArray441 = new int[this.anInt5008];
 
 	@OriginalMember(owner = "client!vd", name = "<init>", descriptor = "(IIIIIF)V")
-	protected Class106_Sub2(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) float arg5) {
+	protected MaterialManager_Class106_Sub2(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) float arg5) {
 		super(arg0, arg1, arg2, arg3, arg4);
 		for (@Pc(15) int local15 = 0; local15 < this.anInt5008; local15++) {
 			this.anIntArray441[local15] = (short) (Math.pow((double) arg5, (double) local15) * 4096.0D);

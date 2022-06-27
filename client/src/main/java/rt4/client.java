@@ -1536,7 +1536,7 @@ public final class client extends GameShell {
 			mainLoadState = 150;
 			clean = true;
 		} else if (mainLoadState == 150) {
-			Static151.method2807();
+			MaterialManager.method2807();
 			if (Preferences.safeMode) {
 				Preferences.windowMode = 0;
 				Preferences.antiAliasingMode = 0;

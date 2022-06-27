@@ -6,13 +6,13 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!sb")
-public final class Class106_Sub2_Sub1 extends Class106_Sub2 {
+public final class MaterialManager_Class106_Sub2_Sub1 extends MaterialManager_Class106_Sub2 {
 
 	@OriginalMember(owner = "client!sb", name = "I", descriptor = "[B")
 	private byte[] aByteArray68;
 
 	@OriginalMember(owner = "client!sb", name = "<init>", descriptor = "()V")
-	public Class106_Sub2_Sub1() {
+	public MaterialManager_Class106_Sub2_Sub1() {
 		super(12, 5, 16, 2, 2, 0.45F);
 	}
 
