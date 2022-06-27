@@ -17,7 +17,8 @@ public final class client extends Applet_Sub1 {
 	public static void main(@OriginalArg(0) String[] arg0) {
 		try {
 			if (arg0.length != 4) {
-				Static131.method2577("argument count");
+				arg0 = new String[] { "1", "live", "english", "game0" };
+				// Static131.method2577("argument count");
 			}
 			@Pc(15) int local15 = -1;
 			Static187.anInt4413 = Integer.parseInt(arg0[0]);
