@@ -63,10 +63,10 @@ public class LocTypeList {
 
     @OriginalMember(owner = "client!oe", name = "b", descriptor = "(I)V")
     public static void method3323() {
-        types.method3103();
-        aClass99_24.method3103();
-        aClass99_14.method3103();
-        aClass99_36.method3103();
+        types.removeSoft();
+        aClass99_24.removeSoft();
+        aClass99_14.removeSoft();
+        aClass99_36.removeSoft();
     }
 
     @OriginalMember(owner = "client!va", name = "b", descriptor = "(II)V")

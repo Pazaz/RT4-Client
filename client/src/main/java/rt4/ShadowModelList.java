@@ -15,7 +15,7 @@ public class ShadowModelList {
 
     @OriginalMember(owner = "client!ug", name = "b", descriptor = "(B)V")
     public static void method4276() {
-        SHADOWS.method3103();
+        SHADOWS.removeSoft();
     }
 
     @OriginalMember(owner = "client!dc", name = "a", descriptor = "(IZLclient!tk;IIIIILclient!ak;IIIIB)Lclient!ak;")
@@ -75,11 +75,11 @@ public class ShadowModelList {
         @Pc(376) int local376 = -local367;
         @Pc(379) int local379 = -local367;
         @Pc(381) int local381 = local367;
-        @Pc(384) int local384 = arg8.method4562();
+        @Pc(384) int local384 = arg8.getMinX();
         @Pc(386) AnimFrameset local386 = null;
-        local115 = arg8.method4561();
-        local126 = arg8.method4576();
-        local130 = arg8.method4550();
+        local115 = arg8.getMaxX();
+        local126 = arg8.getMinZ();
+        local130 = arg8.getMaxZ();
         if (arg2 != null) {
             @Pc(403) int local403 = arg2.frames[arg10];
             local386 = SeqTypeList.getAnimFrameset(local403 >> 16);
@@ -129,7 +129,7 @@ public class ShadowModelList {
             @Pc(650) GlModel local650 = (GlModel) local33;
             if (SceneGraph.getTileHeight(Player.level, arg3 + local384, local126 + arg5) != arg11 || SceneGraph.getTileHeight(Player.level, local115 + arg3, arg5 - -local130) != arg11) {
                 for (local162 = 0; local162 < local650.vertexCount; local162++) {
-                    local650.anIntArray465[local162] += SceneGraph.getTileHeight(Player.level, local650.anIntArray461[local162] + arg3, arg5 + local650.anIntArray466[local162]) - arg11;
+                    local650.vertexY[local162] += SceneGraph.getTileHeight(Player.level, local650.vertexX[local162] + arg3, arg5 + local650.vertexZ[local162]) - arg11;
                 }
                 local650.vertexBuffer.valid = false;
                 local650.bounds.valid = false;
@@ -138,7 +138,7 @@ public class ShadowModelList {
             @Pc(574) SoftwareModel local574 = (SoftwareModel) local33;
             if (SceneGraph.getTileHeight(Player.level, arg3 + local384, arg5 - -local126) != arg11 || arg11 != SceneGraph.getTileHeight(Player.level, arg3 + local115, arg5 - -local130)) {
                 for (local162 = 0; local162 < local574.vertexCount; local162++) {
-                    local574.anIntArray527[local162] += SceneGraph.getTileHeight(Player.level, arg3 + local574.anIntArray528[local162], arg5 + local574.anIntArray531[local162]) - arg11;
+                    local574.vertexY[local162] += SceneGraph.getTileHeight(Player.level, arg3 + local574.vertexX[local162], arg5 + local574.vertexZ[local162]) - arg11;
                 }
                 local574.boundsValid = false;
             }

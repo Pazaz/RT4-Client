@@ -58,8 +58,8 @@ public class SeqTypeList {
 
     @OriginalMember(owner = "client!sg", name = "a", descriptor = "(B)V")
     public static void method3903() {
-        types.method3103();
-        animFramesets.method3103();
+        types.removeSoft();
+        animFramesets.removeSoft();
     }
 
     @OriginalMember(owner = "client!fl", name = "a", descriptor = "(IB)V")

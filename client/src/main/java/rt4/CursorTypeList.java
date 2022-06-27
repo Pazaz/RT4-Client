@@ -49,7 +49,7 @@ public class CursorTypeList {
 
     @OriginalMember(owner = "client!ca", name = "a", descriptor = "(Z)V")
     public static void method741() {
-        types.method3103();
-        sprites.method3103();
+        types.removeSoft();
+        sprites.removeSoft();
     }
 }

@@ -41,9 +41,9 @@ public class NpcTypeList {
 
     @OriginalMember(owner = "client!t", name = "b", descriptor = "(B)V")
     public static void method4001() {
-        types.method3103();
-        models.method3103();
-        headModels.method3103();
+        types.removeSoft();
+        models.removeSoft();
+        headModels.removeSoft();
     }
 
     @OriginalMember(owner = "client!qi", name = "e", descriptor = "(B)V")

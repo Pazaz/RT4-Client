@@ -43,6 +43,6 @@ public class BasTypeList {
 
     @OriginalMember(owner = "client!di", name = "d", descriptor = "(I)V")
     public static void method1172() {
-        types.method3103();
+        types.removeSoft();
     }
 }

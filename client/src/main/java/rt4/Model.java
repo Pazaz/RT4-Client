@@ -28,7 +28,7 @@ public abstract class Model extends Entity {
     }
 
     @OriginalMember(owner = "client!ak", name = "c", descriptor = "()I")
-	public abstract int method4550();
+	public abstract int getMaxZ();
 
 	@OriginalMember(owner = "client!ak", name = "b", descriptor = "()I")
 	public abstract int getMinY();
@@ -242,10 +242,10 @@ public abstract class Model extends Entity {
 	public abstract Model method4560(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2);
 
 	@OriginalMember(owner = "client!ak", name = "g", descriptor = "()I")
-	public abstract int method4561();
+	public abstract int getMaxX();
 
 	@OriginalMember(owner = "client!ak", name = "h", descriptor = "()I")
-	public abstract int method4562();
+	public abstract int getMinX();
 
 	@OriginalMember(owner = "client!ak", name = "i", descriptor = "()V")
 	public abstract void method4563();
@@ -373,7 +373,7 @@ public abstract class Model extends Entity {
 	public abstract void translate(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2);
 
 	@OriginalMember(owner = "client!ak", name = "k", descriptor = "()I")
-	public abstract int method4576();
+	public abstract int getMinZ();
 
 	@OriginalMember(owner = "client!ak", name = "a", descriptor = "(IIIIIIIIJILclient!ga;)V")
 	public abstract void render(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) long arg8, @OriginalArg(9) int arg9, @OriginalArg(10) ParticleSystem arg10);

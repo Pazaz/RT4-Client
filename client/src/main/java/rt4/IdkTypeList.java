@@ -38,7 +38,7 @@ public class IdkTypeList {
 
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(I)V")
 	public static void method3342() {
-		types.method3103();
+		types.removeSoft();
 	}
 
 	@OriginalMember(owner = "client!t", name = "b", descriptor = "(I)V")

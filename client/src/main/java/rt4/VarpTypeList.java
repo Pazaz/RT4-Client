@@ -40,7 +40,7 @@ public class VarpTypeList {
 
     @OriginalMember(owner = "client!ab", name = "b", descriptor = "(B)V")
     public static void method4657() {
-        types.method3103();
+        types.removeSoft();
     }
 
     @OriginalMember(owner = "client!bn", name = "c", descriptor = "(II)V")
