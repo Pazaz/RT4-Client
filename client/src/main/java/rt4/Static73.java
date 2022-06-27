@@ -2,7 +2,6 @@ package rt4;
 
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
-import org.openrs2.deob.annotation.Pc;
 
 public final class Static73 {
 
@@ -11,98 +10,21 @@ public final class Static73 {
 
 	@OriginalMember(owner = "client!fm", name = "fb", descriptor = "[I")
 	public static final int[] anIntArray183 = new int[14];
-    @OriginalMember(owner = "client!li", name = "t", descriptor = "I")
+	@OriginalMember(owner = "client!ph", name = "b", descriptor = "[[Lclient!li;")
+	public static final Environment[][] aClass92ArrayArray1 = new Environment[13][13];
+	@OriginalMember(owner = "client!li", name = "t", descriptor = "I")
     public static int anInt3534;
 	@OriginalMember(owner = "client!mi", name = "Z", descriptor = "I")
 	public static int anInt3893;
-
-	@OriginalMember(owner = "client!fm", name = "a", descriptor = "(ZI)V")
-	public static void method1596(@OriginalArg(0) boolean arg0) {
-		if (arg0) {
-			if (InterfaceList.topLevelInterface != -1) {
-				InterfaceList.method2275(InterfaceList.topLevelInterface);
-			}
-			for (@Pc(18) ComponentPointer local18 = (ComponentPointer) InterfaceList.openInterfaces.head(); local18 != null; local18 = (ComponentPointer) InterfaceList.openInterfaces.next()) {
-				InterfaceList.closeInterface(true, local18);
-			}
-			InterfaceList.topLevelInterface = -1;
-			InterfaceList.openInterfaces = new HashTable(8);
-			InterfaceList.method1287();
-			InterfaceList.topLevelInterface = Static156.loginScreenId;
-			InterfaceList.method3712(false);
-			Static87.method1807();
-			InterfaceList.method1626(InterfaceList.topLevelInterface);
-		}
-		MiniMenu.anInt1092 = -1;
-		Static81.method1750(ScriptRunner.anInt5794);
-		PlayerList.self = new Player();
-		PlayerList.self.zFine = 3000;
-		PlayerList.self.xFine = 3000;
-		if (!GlRenderer.enabled) {
-			Static145.method2743(client.js5Archive8);
-			client.setGameState(10);
-			return;
-		}
-		if (Camera.cameraType == 2) {
-			Camera.renderX = Camera.anInt5375 << 7;
-			Camera.renderZ = Camera.anInt4232 << 7;
-		} else {
-			Camera.updateLoginScreenCamera();
-		}
-		Static103.setInstantFade();
-		LoginManager.setupLoadingScreenRegion();
-		client.setGameState(28);
-	}
+	@OriginalMember(owner = "client!gl", name = "f", descriptor = "I")
+	public static int anInt2263;
 
 	@OriginalMember(owner = "client!fm", name = "a", descriptor = "(ZII)V")
 	public static void setLightPosition(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
-		Static103.anInt2263 = Static103.aClass92ArrayArray1[arg1][arg0].anInt3530;
-		anInt3893 = Static103.aClass92ArrayArray1[arg1][arg0].anInt3528;
-		anInt3534 = Static103.aClass92ArrayArray1[arg1][arg0].anInt3527;
-		FogManager.method3063((float) Static103.anInt2263, (float) anInt3893, (float) anInt3534);
+		anInt2263 = aClass92ArrayArray1[arg1][arg0].anInt3530;
+		anInt3893 = aClass92ArrayArray1[arg1][arg0].anInt3528;
+		anInt3534 = aClass92ArrayArray1[arg1][arg0].anInt3527;
+		FogManager.method3063((float) anInt2263, (float) anInt3893, (float) anInt3534);
 	}
 
-	@OriginalMember(owner = "client!fm", name = "a", descriptor = "(ILclient!na;Lclient!na;Lclient!na;I)V")
-	public static void method1598(@OriginalArg(1) JagString arg0, @OriginalArg(2) JagString arg1, @OriginalArg(3) JagString arg2) {
-		Chat.add(-1, 9, arg0, arg2, arg1);
-	}
-
-	@OriginalMember(owner = "client!fm", name = "a", descriptor = "(IIIIII)Z")
-	public static boolean method1599(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
-		@Pc(16) int local16;
-		@Pc(20) int local20;
-		if (arg1 != arg2 || arg3 != arg4) {
-			for (local16 = arg1; local16 <= arg2; local16++) {
-				for (local20 = arg3; local20 <= arg4; local20++) {
-					if (SceneGraph.anIntArrayArrayArray12[arg0][local16][local20] == -Static156.anInt437) {
-						return false;
-					}
-				}
-			}
-			local16 = (arg1 << 7) + 1;
-			local20 = (arg3 << 7) + 2;
-			@Pc(156) int local156 = SceneGraph.tileHeights[arg0][arg1][arg3] + arg5;
-			if (!SceneGraph.method4394(local16, local156, local20)) {
-				return false;
-			}
-			@Pc(169) int local169 = (arg2 << 7) - 1;
-			if (!SceneGraph.method4394(local169, local156, local20)) {
-				return false;
-			}
-			@Pc(182) int local182 = (arg4 << 7) - 1;
-			if (!SceneGraph.method4394(local16, local156, local182)) {
-				return false;
-			} else if (SceneGraph.method4394(local169, local156, local182)) {
-				return true;
-			} else {
-				return false;
-			}
-		} else if (Static9.method187(arg0, arg1, arg3)) {
-			local16 = arg1 << 7;
-			local20 = arg3 << 7;
-			return SceneGraph.method4394(local16 + 1, SceneGraph.tileHeights[arg0][arg1][arg3] + arg5, local20 + 1) && SceneGraph.method4394(local16 + 128 - 1, SceneGraph.tileHeights[arg0][arg1 + 1][arg3] + arg5, local20 + 1) && SceneGraph.method4394(local16 + 128 - 1, SceneGraph.tileHeights[arg0][arg1 + 1][arg3 + 1] + arg5, local20 + 128 - 1) && SceneGraph.method4394(local16 + 1, SceneGraph.tileHeights[arg0][arg1][arg3 + 1] + arg5, local20 + 128 - 1);
-		} else {
-			return false;
-		}
-	}
 }

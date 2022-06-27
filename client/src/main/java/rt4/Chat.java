@@ -52,4 +52,9 @@ public class Chat {
     public static void add(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) JagString arg2) {
         add(-1, arg1, arg2, null, arg0);
     }
+
+    @OriginalMember(owner = "client!fm", name = "a", descriptor = "(ILclient!na;Lclient!na;Lclient!na;I)V")
+    public static void method1598(@OriginalArg(1) JagString arg0, @OriginalArg(2) JagString arg1, @OriginalArg(3) JagString arg2) {
+        add(-1, 9, arg0, arg2, arg1);
+    }
 }

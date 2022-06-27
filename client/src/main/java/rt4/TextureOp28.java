@@ -80,8 +80,8 @@ public final class TextureOp28 extends TextureOp {
 		@Pc(113) Random local113 = new Random((long) this.anInt4354);
 		while (true) {
 			while (true) {
-				@Pc(123) int local123 = local54 + Static171.method3219(local61 - local54, local113);
-				@Pc(133) int local133 = Static171.method3219(local68 - local75, local113) + local75;
+				@Pc(123) int local123 = local54 + Texture.method3219(local61 - local54, local113);
+				@Pc(133) int local133 = Texture.method3219(local68 - local75, local113) + local75;
 				@Pc(137) int local137 = local31 + local123;
 				if (Texture.width < local137) {
 					local137 = Texture.width;
@@ -173,7 +173,7 @@ public final class TextureOp28 extends TextureOp {
 					local47 = 0;
 					local407[2] = local133 + local158;
 					local407[1] = local137;
-					local37 = Static171.method3219(Texture.width, local113);
+					local37 = Texture.method3219(Texture.width, local113);
 					local35 = local37 - local33;
 					@Pc(439) int[][] local439 = local102;
 					local31 = 0;
@@ -210,9 +210,9 @@ public final class TextureOp28 extends TextureOp {
 
 	@OriginalMember(owner = "client!ol", name = "a", descriptor = "(ILjava/util/Random;IIBI[[I)V")
 	private void method3386(@OriginalArg(0) int arg0, @OriginalArg(1) Random arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int[][] arg5) {
-		@Pc(26) int local26 = this.anInt4360 > 0 ? 4096 - Static171.method3219(this.anInt4360, arg1) : 4096;
+		@Pc(26) int local26 = this.anInt4360 > 0 ? 4096 - Texture.method3219(this.anInt4360, arg1) : 4096;
 		@Pc(34) int local34 = this.anInt4344 * this.anInt4356 >> 12;
-		@Pc(47) int local47 = this.anInt4356 - (local34 > 0 ? Static171.method3219(local34, arg1) : 0);
+		@Pc(47) int local47 = this.anInt4356 - (local34 > 0 ? Texture.method3219(local34, arg1) : 0);
 		if (Texture.width <= arg2) {
 			arg2 -= Texture.width;
 		}

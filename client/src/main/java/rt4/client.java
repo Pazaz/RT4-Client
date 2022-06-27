@@ -505,7 +505,7 @@ public final class client extends GameShell {
             TitleScreen.load(js5Archive8);
         }
         if (gameState == 10) {
-            Static73.method1596(false);
+            InterfaceList.method1596(false);
         }
         if (gameState == 30) {
             setGameState(25);
@@ -1550,7 +1550,7 @@ public final class client extends GameShell {
 			mainLoadState = 160;
 			mainLoadSecondaryText = LocalizedText.MAINLOAD150B;
 		} else if (mainLoadState == 160) {
-			Static73.method1596(true);
+			InterfaceList.method1596(true);
 		}
 	}
 

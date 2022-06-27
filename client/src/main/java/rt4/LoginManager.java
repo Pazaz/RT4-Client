@@ -648,7 +648,7 @@ public class LoginManager {
         Camera.resetCameraEffects();
         Protocol.verifyId = 0;
         VarpDomain.reset();
-        Static73.method1596(true);
+        InterfaceList.method1596(true);
     }
 
     @OriginalMember(owner = "client!k", name = "a", descriptor = "(IIIIZIZ)V")

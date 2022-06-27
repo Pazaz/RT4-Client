@@ -608,8 +608,8 @@ public final class Static87 {
 													if (GlRenderer.enabled) {
 														GlRaster.method1183(local123, local114, component.width + local123, component.height + local114);
 
-														@Pc(2274) boolean local2274 = Static171.method3702(sprite.width);
-														@Pc(2279) boolean local2279 = Static171.method3702(sprite.height);
+														@Pc(2274) boolean local2274 = Texture.method3702(sprite.width);
+														@Pc(2279) boolean local2279 = Texture.method3702(sprite.height);
 														@Pc(2282) GlSprite local2282 = (GlSprite) sprite;
 														if (local2274 && local2279) {
 															if (alpha == 0) {
@@ -1099,7 +1099,7 @@ public final class Static87 {
 							local243 = local117 + (arg4 >> 3);
 							local188 = (arg3 >> 3) + local515;
 							if (local243 >= 0 && local243 < 13 && local188 >= 0 && local188 < 13) {
-								Static103.aClass92ArrayArray1[local243][local188] = local490;
+								Static73.aClass92ArrayArray1[local243][local188] = local490;
 							}
 						}
 					}
@@ -1111,13 +1111,13 @@ public final class Static87 {
 						@Pc(541) LightType local541 = LightTypeList.get(local95.g2());
 						local529.method1762(local541.anInt2865, local541.anInt2873, local541.anInt2867, local541.anInt2872);
 					}
-					local529.anInt2245 += arg3 << 7;
-					local529.anInt2240 += arg4 << 7;
-					local194 = local529.anInt2245 >> 7;
-					local190 = local529.anInt2240 >> 7;
+					local529.z += arg3 << 7;
+					local529.x += arg4 << 7;
+					local194 = local529.z >> 7;
+					local190 = local529.x >> 7;
 					if (local190 >= 0 && local194 >= 0 && local190 < 104 && local194 < 104) {
 						local529.aBoolean125 = (SceneGraph.tileFlags[1][local190][local194] & 0x2) != 0;
-						local529.anInt2235 = SceneGraph.tileHeights[local529.anInt2241][local190][local194] - local529.anInt2235;
+						local529.y = SceneGraph.tileHeights[local529.level][local190][local194] - local529.y;
 						LightingManager.method2389(local529);
 					}
 				}

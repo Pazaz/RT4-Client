@@ -501,7 +501,7 @@ public final class Static247 {
 												}
 												@Pc(1697) Scenery local1697 = SceneGraph.aClass31Array2[local115];
 												local1697.anInt1707 = Static156.anInt437;
-												if (!Static73.method1599(local27, local1697.xMin, local1697.xMax, local1697.zMin, local1697.zMax, local1697.entity.getMinY())) {
+												if (!SceneGraph.method1599(local27, local1697.xMin, local1697.xMax, local1697.zMin, local1697.zMax, local1697.entity.getMinY())) {
 													if (GlRenderer.enabled) {
 														if ((local1697.key & 0xFC000L) == 147456L) {
 															LightingManager.method2393(Static123.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
