@@ -8,22 +8,22 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class HardReferenceNode extends ReferenceNode {
 
 	@OriginalMember(owner = "client!he", name = "X", descriptor = "Ljava/lang/Object;")
-	private final Object anObject3;
+	private final Object referent;
 
 	@OriginalMember(owner = "client!he", name = "<init>", descriptor = "(Ljava/lang/Object;)V")
 	public HardReferenceNode(@OriginalArg(0) Object arg0) {
-		this.anObject3 = arg0;
+		this.referent = arg0;
 	}
 
 	@OriginalMember(owner = "client!he", name = "a", descriptor = "(Z)Ljava/lang/Object;")
 	@Override
-	public final Object method3618() {
-		return this.anObject3;
+	public final Object get() {
+		return this.referent;
 	}
 
 	@OriginalMember(owner = "client!he", name = "e", descriptor = "(I)Z")
 	@Override
-	public final boolean method3619() {
+	public final boolean isSoft() {
 		return false;
 	}
 }

@@ -8,7 +8,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class StockMarketOffer {
 
 	@OriginalMember(owner = "client!sg", name = "a", descriptor = "B")
-	private byte aByte17;
+	private byte statusAndType;
 
 	@OriginalMember(owner = "client!sg", name = "f", descriptor = "I")
 	public int completedCount;
@@ -31,7 +31,7 @@ public final class StockMarketOffer {
 
 	@OriginalMember(owner = "client!sg", name = "<init>", descriptor = "(Lclient!wa;)V")
 	public StockMarketOffer(@OriginalArg(0) Buffer arg0) {
-		this.aByte17 = arg0.g1b();
+		this.statusAndType = arg0.g1b();
 		this.item = arg0.g2();
 		this.price = arg0.g4();
 		this.count = arg0.g4();
@@ -41,11 +41,11 @@ public final class StockMarketOffer {
 
 	@OriginalMember(owner = "client!sg", name = "a", descriptor = "(Z)I")
 	public final int getStatus() {
-		return this.aByte17 & 0x7;
+		return this.statusAndType & 0x7;
 	}
 
 	@OriginalMember(owner = "client!sg", name = "b", descriptor = "(B)I")
 	public final int getType() {
-		return (this.aByte17 & 0x8) == 8 ? 1 : 0;
+		return (this.statusAndType & 0x8) == 8 ? 1 : 0;
 	}
 }

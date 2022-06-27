@@ -4322,8 +4322,8 @@ public final class ScriptRunner {
 															intStack[isp++] = 0;
 															intStack[isp++] = 0;
 														} else {
-															intStack[isp++] = local7293.anInt770 - local7293.anInt763;
-															intStack[isp++] = local7293.anInt758 - local7293.anInt771;
+															intStack[isp++] = local7293.displayMaxZ - local7293.displayMinX;
+															intStack[isp++] = local7293.displayMinZ - local7293.displayMaxX;
 														}
 														continue;
 													}
