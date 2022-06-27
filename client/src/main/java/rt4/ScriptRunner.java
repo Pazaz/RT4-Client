@@ -3746,7 +3746,7 @@ public final class ScriptRunner {
 														}
 														if (int1 != Preferences.musicVolume) {
 															if (Preferences.musicVolume == 0 && MusicPlayer.groupId != -1) {
-																MidiPlayer.method2410(client.js5Archive6, MusicPlayer.groupId, int1);
+																MidiPlayer.playImmediate(client.js5Archive6, MusicPlayer.groupId, int1);
 																MidiPlayer.jingle = false;
 															} else if (int1 == 0) {
 																MidiPlayer.method4548();

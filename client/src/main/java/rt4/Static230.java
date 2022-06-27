@@ -87,10 +87,10 @@ public final class Static230 {
 
 	@OriginalMember(owner = "client!sj", name = "c", descriptor = "(II)V")
 	public static void method3956(@OriginalArg(0) int arg0) {
-		if (MidiPlayer.anInt441 == 0) {
-			MidiPlayer.midiPcmStream.method4447(arg0);
+		if (MidiPlayer.state == 0) {
+			MidiPlayer.stream.setVolume(arg0);
 		} else {
-			MidiPlayer.anInt5527 = arg0;
+			MidiPlayer.volume = arg0;
 		}
 	}
 }

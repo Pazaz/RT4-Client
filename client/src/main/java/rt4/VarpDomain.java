@@ -13,6 +13,8 @@ public class VarpDomain {
     public static final int[] activeVarps = new int[3500];
     @OriginalMember(owner = "client!uj", name = "s", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1061 = JagString.parse("null");
+    @OriginalMember(owner = "client!ea", name = "s", descriptor = "[I")
+    public static final int[] anIntArray135 = new int[32];
     @OriginalMember(owner = "client!fi", name = "n", descriptor = "I")
     public static int updatedVarpsWriterIndex = 0;
     @OriginalMember(owner = "client!qc", name = "K", descriptor = "Lclient!sc;")
@@ -23,6 +25,14 @@ public class VarpDomain {
 	public static int anInt2952 = 0;
 	@OriginalMember(owner = "client!oe", name = "b", descriptor = "I")
 	public static int inserting = 0;
+
+	static {
+		@Pc(10) int local10 = 2;
+		for (@Pc(12) int local12 = 0; local12 < 32; local12++) {
+			anIntArray135[local12] = local10 - 1;
+			local10 += local10;
+		}
+	}
 
 	@OriginalMember(owner = "client!nh", name = "a", descriptor = "(BII)V")
     public static void set(@OriginalArg(1) int value, @OriginalArg(2) int id) {
@@ -66,7 +76,7 @@ public class VarpDomain {
 		@Pc(16) int local16 = local13.baseVar;
 		@Pc(19) int local19 = local13.endBit;
 		@Pc(22) int local22 = local13.startBit;
-		@Pc(29) int local29 = Song_Class3_Sub9.anIntArray135[local19 - local22];
+		@Pc(29) int local29 = anIntArray135[local19 - local22];
 		return activeVarps[local16] >> local22 & local29;
 	}
 
@@ -76,7 +86,7 @@ public class VarpDomain {
         @Pc(10) int local10 = local7.endBit;
         @Pc(16) int local16 = local7.startBit;
         @Pc(19) int local19 = local7.baseVar;
-        @Pc(25) int local25 = Song_Class3_Sub9.anIntArray135[local10 - local16];
+        @Pc(25) int local25 = anIntArray135[local10 - local16];
         if (arg1 < 0 || arg1 > local25) {
             arg1 = 0;
         }
@@ -90,7 +100,7 @@ public class VarpDomain {
 		@Pc(17) int local17 = local14.baseVar;
 		@Pc(20) int local20 = local14.endBit;
 		@Pc(23) int local23 = local14.startBit;
-		@Pc(29) int local29 = Song_Class3_Sub9.anIntArray135[local20 - local23];
+		@Pc(29) int local29 = anIntArray135[local20 - local23];
 		if (arg0 < 0 || local29 < arg0) {
 			arg0 = 0;
 		}

@@ -130,11 +130,11 @@ public class AudioChannel {
 
     @OriginalMember(owner = "client!nd", name = "a", descriptor = "(ZLclient!qb;)V")
     public static void setInactive(@OriginalArg(1) PcmStream arg0) {
-        if (arg0.aClass3_Sub16_5 != null) {
-            arg0.aClass3_Sub16_5.anInt3313 = 0;
+        if (arg0.sound != null) {
+            arg0.sound.position = 0;
         }
-        arg0.aBoolean292 = false;
-        for (@Pc(14) PcmStream local14 = arg0.method4406(); local14 != null; local14 = arg0.method4409()) {
+        arg0.active = false;
+        for (@Pc(14) PcmStream local14 = arg0.firstSubStream(); local14 != null; local14 = arg0.nextSubStream()) {
             setInactive(local14);
         }
     }
@@ -186,23 +186,23 @@ public class AudioChannel {
 								if (local96 == null) {
 									break label100;
 								}
-								@Pc(101) Sound local101 = local96.aClass3_Sub16_5;
-								if (local101 == null || local101.anInt3313 <= local62) {
-									local96.aBoolean292 = true;
+								@Pc(101) Sound local101 = local96.sound;
+								if (local101 == null || local101.position <= local62) {
+									local96.active = true;
 									@Pc(125) int local125 = local96.method4404();
 									local45 += local125;
 									if (local101 != null) {
-										local101.anInt3313 += local125;
+										local101.position += local125;
 									}
 									if (local45 >= this.anInt4621) {
 										break label106;
 									}
-									@Pc(145) PcmStream local145 = local96.method4406();
+									@Pc(145) PcmStream local145 = local96.firstSubStream();
 									if (local145 != null) {
 										@Pc(150) int local150 = local96.anInt5626;
 										while (local145 != null) {
 											this.method3567(local145, local150 * local145.method4407() >> 8);
-											local145 = local96.method4409();
+											local145 = local96.nextSubStream();
 										}
 									}
 									@Pc(169) PcmStream local169 = local96.aClass3_Sub3_8;

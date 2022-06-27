@@ -609,7 +609,7 @@ public class LoginManager {
         }
         WorldMap.clear(false);
         System.gc();
-        MidiPlayer.method801();
+        MidiPlayer.playFadeOut();
         MidiPlayer.jingle = false;
         MusicPlayer.groupId = -1;
         AreaSoundManager.clear(true);
@@ -762,7 +762,7 @@ public class LoginManager {
         } else {
             Camera.cameraType = 1;
         }
-        SoundPlayer.anInt4451 = 0;
+        SoundPlayer.size = 0;
         if (mapFlagX != 0) {
             mapFlagZ -= local81;
             mapFlagX -= local86;

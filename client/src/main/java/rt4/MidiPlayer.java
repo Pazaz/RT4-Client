@@ -8,151 +8,151 @@ public class MidiPlayer {
     @OriginalMember(owner = "client!le", name = "k", descriptor = "Z")
     public static boolean jingle = false;
     @OriginalMember(owner = "client!cb", name = "hb", descriptor = "Lclient!le;")
-    public static SoundBank aClass89_1;
+    public static SoundBank soundBank;
     @OriginalMember(owner = "client!bd", name = "i", descriptor = "I")
-    public static int anInt441 = 0;
+    public static int state = 0;
     @OriginalMember(owner = "client!uh", name = "P", descriptor = "Lclient!ve;")
-    public static Js5 aClass153_103;
+    public static Js5 vorbisArchive;
     @OriginalMember(owner = "client!ui", name = "R", descriptor = "I")
-    public static int anInt5527;
+    public static int volume;
     @OriginalMember(owner = "client!wi", name = "ab", descriptor = "I")
-    public static int anInt5853;
+    public static int songGroupId;
     @OriginalMember(owner = "client!eg", name = "t", descriptor = "I")
-    public static int anInt1757;
+    public static int volumeFadeRate;
     @OriginalMember(owner = "client!fl", name = "u", descriptor = "Z")
     public static boolean aBoolean116;
     @OriginalMember(owner = "client!rb", name = "f", descriptor = "Lclient!ve;")
-    public static Js5 aClass153_87;
+    public static Js5 instrumentsArchive;
     @OriginalMember(owner = "client!gd", name = "m", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_32;
+	public static Js5 synthArchive;
     @OriginalMember(owner = "client!le", name = "c", descriptor = "Lclient!rf;")
-    public static Song aClass3_Sub29_1;
+    public static Song song;
     @OriginalMember(owner = "client!nj", name = "g", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_70;
+	public static Js5 songArchive;
     @OriginalMember(owner = "client!nj", name = "e", descriptor = "Lclient!va;")
-	public static MidiPcmStream midiPcmStream;
+	public static MidiPcmStream stream;
     @OriginalMember(owner = "client!sf", name = "j", descriptor = "I")
-    public static int anInt5085;
+    public static int songFileId;
 
     @OriginalMember(owner = "client!km", name = "c", descriptor = "(Z)Z")
     public static boolean method2699() {
         try {
-            if (anInt441 == 2) {
-                if (aClass3_Sub29_1 == null) {
-                    aClass3_Sub29_1 = Song.create(aClass153_70, anInt5853, anInt5085);
-                    if (aClass3_Sub29_1 == null) {
+            if (state == 2) {
+                if (song == null) {
+                    song = Song.create(songArchive, songGroupId, songFileId);
+                    if (song == null) {
                         return false;
                     }
                 }
-                if (aClass89_1 == null) {
-                    aClass89_1 = new SoundBank(aClass153_32, aClass153_103);
+                if (soundBank == null) {
+                    soundBank = new SoundBank(synthArchive, vorbisArchive);
                 }
-                if (midiPcmStream.method4411(aClass3_Sub29_1, aClass153_87, aClass89_1)) {
-                    midiPcmStream.method4412();
-                    midiPcmStream.method4447(anInt5527);
-                    midiPcmStream.method4431(aBoolean116, aClass3_Sub29_1);
-                    anInt441 = 0;
-                    aClass3_Sub29_1 = null;
-                    aClass89_1 = null;
-                    aClass153_70 = null;
+                if (stream.isSongReady(song, instrumentsArchive, soundBank)) {
+                    stream.releaseInstruments();
+                    stream.setVolume(volume);
+                    stream.method4431(aBoolean116, song);
+                    state = 0;
+                    song = null;
+                    soundBank = null;
+                    songArchive = null;
                     return true;
                 }
             }
-        } catch (@Pc(68) Exception local68) {
-            local68.printStackTrace();
-            midiPcmStream.method4446();
-            aClass153_70 = null;
-            aClass3_Sub29_1 = null;
-            anInt441 = 0;
-            aClass89_1 = null;
+        } catch (@Pc(68) Exception ex) {
+            ex.printStackTrace();
+            stream.method4446();
+            songArchive = null;
+            song = null;
+            state = 0;
+            soundBank = null;
         }
         return false;
     }
 
     @OriginalMember(owner = "client!ce", name = "a", descriptor = "(II)V")
-    public static void method801() {
-        anInt5527 = 0;
-        anInt5085 = -1;
-        anInt441 = 1;
-        anInt1757 = 2;
+    public static void playFadeOut() {
+        volume = 0;
+        songFileId = -1;
+        state = 1;
+        volumeFadeRate = 2;
         aBoolean116 = false;
-        aClass153_70 = null;
-        anInt5853 = -1;
+        songArchive = null;
+        songGroupId = -1;
     }
 
     @OriginalMember(owner = "client!v", name = "a", descriptor = "(ZIILclient!ve;ZII)V")
-    public static void playFadeOut(@OriginalArg(1) int arg0, @OriginalArg(3) Js5 arg1, @OriginalArg(5) int arg2) {
-        aClass153_70 = arg1;
-        anInt5085 = 0;
-        anInt5853 = arg0;
+    public static void playFadeOut(@OriginalArg(1) int group, @OriginalArg(3) Js5 archive, @OriginalArg(5) int arg2) {
+        songArchive = archive;
+        songFileId = 0;
+        songGroupId = group;
         aBoolean116 = false;
-        anInt441 = 1;
-        anInt1757 = 2;
-        anInt5527 = arg2;
+        state = 1;
+        volumeFadeRate = 2;
+        volume = arg2;
     }
 
     @OriginalMember(owner = "client!ck", name = "a", descriptor = "(ILclient!va;Lclient!ve;Lclient!ve;Lclient!ve;)Z")
-    public static boolean init(@OriginalArg(1) MidiPcmStream arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) Js5 arg2, @OriginalArg(4) Js5 arg3) {
-        aClass153_87 = arg1;
-        aClass153_32 = arg3;
-        aClass153_103 = arg2;
-        midiPcmStream = arg0;
+    public static boolean init(@OriginalArg(1) MidiPcmStream pcmStream, @OriginalArg(2) Js5 instruments, @OriginalArg(3) Js5 vorbis, @OriginalArg(4) Js5 synth) {
+        instrumentsArchive = instruments;
+        synthArchive = synth;
+        vorbisArchive = vorbis;
+        stream = pcmStream;
         return true;
     }
 
     @OriginalMember(owner = "client!sj", name = "a", descriptor = "(Z)V")
     public static void loop() {
         try {
-            if (anInt441 == 1) {
-                @Pc(16) int local16 = midiPcmStream.method4440();
-                if (local16 > 0 && midiPcmStream.method4414()) {
-                    local16 -= anInt1757;
-                    if (local16 < 0) {
-                        local16 = 0;
+            if (state == 1) {
+                @Pc(16) int volume = stream.getVolume();
+                if (volume > 0 && stream.isValid()) {
+                    volume -= volumeFadeRate;
+                    if (volume < 0) {
+                        volume = 0;
                     }
-                    midiPcmStream.method4447(local16);
+                    stream.setVolume(volume);
                     return;
                 }
-                midiPcmStream.method4446();
-                midiPcmStream.method4426();
-                aClass3_Sub29_1 = null;
-                aClass89_1 = null;
-                if (aClass153_70 == null) {
-                    anInt441 = 0;
+                stream.method4446();
+                stream.clearInstruments();
+                song = null;
+                soundBank = null;
+                if (songArchive == null) {
+                    state = 0;
                 } else {
-                    anInt441 = 2;
+                    state = 2;
                 }
             }
-        } catch (@Pc(62) Exception local62) {
-            local62.printStackTrace();
-            midiPcmStream.method4446();
-            aClass153_70 = null;
-            aClass3_Sub29_1 = null;
-            anInt441 = 0;
-            aClass89_1 = null;
+        } catch (@Pc(62) Exception ex) {
+            ex.printStackTrace();
+            stream.method4446();
+            songArchive = null;
+            song = null;
+            state = 0;
+            soundBank = null;
         }
     }
 
     @OriginalMember(owner = "client!kk", name = "a", descriptor = "(I)Z")
-	public static boolean method2655() {
-		return anInt441 != 0 || midiPcmStream.method4414();
+	public static boolean isPlaying() {
+		return state != 0 || stream.isValid();
 	}
 
     @OriginalMember(owner = "client!jh", name = "a", descriptor = "(Lclient!ve;ZIIZI)V")
-    public static void method2410(@OriginalArg(0) Js5 arg0, @OriginalArg(2) int arg1, @OriginalArg(5) int arg2) {
-        aClass153_70 = arg0;
-        anInt441 = 1;
-        anInt5527 = arg2;
-        anInt5085 = 0;
-        anInt5853 = arg1;
+    public static void playImmediate(@OriginalArg(0) Js5 archive, @OriginalArg(2) int group, @OriginalArg(5) int vol) {
+        songArchive = archive;
+        state = 1;
+        volume = vol;
+        songFileId = 0;
+        songGroupId = group;
         aBoolean116 = false;
-        anInt1757 = 10000;
+        volumeFadeRate = 10000;
     }
 
     @OriginalMember(owner = "client!th", name = "a", descriptor = "(Z)V")
     public static void method4548() {
-        midiPcmStream.method4446();
-        anInt441 = 1;
-        aClass153_70 = null;
+        stream.method4446();
+        state = 1;
+        songArchive = null;
     }
 }

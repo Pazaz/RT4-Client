@@ -414,9 +414,9 @@ public final class MidiInstrument extends Node {
 					if (local8 != local35) {
 						local8 = local35--;
 						if ((local35 & 0x1) == 0) {
-							local10 = arg1.method2738(local35 >> 2, arg0);
+							local10 = arg1.getSynthSound(local35 >> 2, arg0);
 						} else {
-							local10 = arg1.method2741(local35 >> 2, arg0);
+							local10 = arg1.getVorbisSound(local35 >> 2, arg0);
 						}
 						if (local10 == null) {
 							local16 = false;
