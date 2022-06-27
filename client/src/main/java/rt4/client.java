@@ -165,7 +165,7 @@ public final class client extends GameShell {
 	@OriginalMember(owner = "client!qi", name = "C", descriptor = "Lclient!ei;")
 	public static MixerPcmStream soundStream;
 	@OriginalMember(owner = "client!ef", name = "p", descriptor = "Lclient!vj;")
-	public static Resampler resampler;
+	public static PcmResampler resampler;
 	@OriginalMember(owner = "client!t", name = "F", descriptor = "I")
 	public static int js5PrevErrors = 0;
 	@OriginalMember(owner = "client!ld", name = "k", descriptor = "Ljava/lang/String;")
@@ -1346,7 +1346,7 @@ public final class client extends GameShell {
 			soundChannel = AudioChannel.create(2048, GameShell.signLink, GameShell.canvas, 1);
 			soundStream = new MixerPcmStream();
 			soundChannel.setStream(soundStream);
-			resampler = new Resampler(22050, AudioChannel.sampleRate);
+			resampler = new PcmResampler(22050, AudioChannel.sampleRate);
 			MusicPlayer.titleSong = js5Archive6.getGroupId(Static1.TITLE_SONG);
 			mainLoadPercentage = 30;
 			mainLoadState = 50;

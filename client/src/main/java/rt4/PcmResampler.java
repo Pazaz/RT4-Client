@@ -6,26 +6,26 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!vj")
-public final class Resampler {
+public final class PcmResampler {
 
 	@OriginalMember(owner = "client!vj", name = "k", descriptor = "I")
-	private int anInt5769;
+	private int outputRate;
 
 	@OriginalMember(owner = "client!vj", name = "i", descriptor = "[[I")
 	private int[][] anIntArrayArray40;
 
 	@OriginalMember(owner = "client!vj", name = "e", descriptor = "I")
-	private int anInt5766;
+	private int inputRate;
 
 	@OriginalMember(owner = "client!vj", name = "<init>", descriptor = "(II)V")
-	public Resampler(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+	public PcmResampler(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		if (arg1 != arg0) {
-			@Pc(12) int local12 = method3330(arg1, arg0);
+			@Pc(12) int local12 = gcd(arg1, arg0);
 			@Pc(16) int local16 = arg1 / local12;
-			this.anInt5769 = local16;
+			this.outputRate = local16;
 			@Pc(23) int local23 = arg0 / local12;
 			this.anIntArrayArray40 = new int[local23][14];
-			this.anInt5766 = local23;
+			this.inputRate = local23;
 			for (@Pc(33) int local33 = 0; local33 < local23; local33++) {
 				@Pc(41) int[] local41 = this.anIntArrayArray40[local33];
 				@Pc(49) double local49 = (double) local33 / (double) local23 + 6.0D;
@@ -53,7 +53,7 @@ public final class Resampler {
 	}
 
 	@OriginalMember(owner = "client!og", name = "a", descriptor = "(III)I")
-	public static int method3330(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
+	public static int gcd(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
 		if (arg0 > 22050) {
 			arg1 = arg0;
 			arg0 = 22050;
@@ -69,7 +69,7 @@ public final class Resampler {
 	@OriginalMember(owner = "client!vj", name = "a", descriptor = "([BB)[B")
 	public final byte[] method4520(@OriginalArg(0) byte[] arg0) {
 		if (this.anIntArrayArray40 != null) {
-			@Pc(31) int local31 = (int) ((long) arg0.length * (long) this.anInt5769 / (long) this.anInt5766) + 14;
+			@Pc(31) int local31 = (int) ((long) arg0.length * (long) this.outputRate / (long) this.inputRate) + 14;
 			@Pc(34) int[] local34 = new int[local31];
 			@Pc(36) int local36 = 0;
 			@Pc(38) int local38 = 0;
@@ -81,10 +81,10 @@ public final class Resampler {
 				for (local59 = 0; local59 < 14; local59++) {
 					local34[local36 + local59] += local53[local59] * local57;
 				}
-				local38 += this.anInt5769;
-				local59 = local38 / this.anInt5766;
+				local38 += this.outputRate;
+				local59 = local38 / this.inputRate;
 				local36 += local59;
-				local38 -= local59 * this.anInt5766;
+				local38 -= local59 * this.inputRate;
 			}
 			arg0 = new byte[local31];
 			for (local40 = 0; local40 < local31; local40++) {
@@ -102,17 +102,17 @@ public final class Resampler {
 	}
 
 	@OriginalMember(owner = "client!vj", name = "a", descriptor = "(IB)I")
-	public final int method4524(@OriginalArg(0) int arg0) {
+	public final int scaleRate(@OriginalArg(0) int arg0) {
 		if (this.anIntArrayArray40 != null) {
-			arg0 = (int) ((long) this.anInt5769 * (long) arg0 / (long) this.anInt5766);
+			arg0 = (int) ((long) this.outputRate * (long) arg0 / (long) this.inputRate);
 		}
 		return arg0;
 	}
 
 	@OriginalMember(owner = "client!vj", name = "a", descriptor = "(ZI)I")
-	public final int method4525(@OriginalArg(1) int arg0) {
+	public final int scalePosition(@OriginalArg(1) int arg0) {
 		if (this.anIntArrayArray40 != null) {
-			arg0 = (int) ((long) this.anInt5769 * (long) arg0 / (long) this.anInt5766) + 6;
+			arg0 = (int) ((long) this.outputRate * (long) arg0 / (long) this.inputRate) + 6;
 		}
 		return arg0;
 	}
