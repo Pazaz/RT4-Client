@@ -3,15 +3,16 @@ package rt4;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
+import org.openrs2.deob.annotation.Pc;
 
-@OriginalClass("client!hc")
-public final class ByteArrayNode extends SecondaryNode {
+@OriginalClass("client!ea")
+public final class ByteArrayNode extends Node {
 
-	@OriginalMember(owner = "client!hc", name = "Q", descriptor = "[B")
+	@OriginalMember(owner = "client!ea", name = "t", descriptor = "[B")
 	public final byte[] value;
 
-	@OriginalMember(owner = "client!hc", name = "<init>", descriptor = "([B)V")
-	public ByteArrayNode(@OriginalArg(0) byte[] arg0) {
-		this.value = arg0;
+	@OriginalMember(owner = "client!ea", name = "<init>", descriptor = "([B)V")
+	public ByteArrayNode(@OriginalArg(0) byte[] value) {
+		this.value = value;
 	}
 }

@@ -119,7 +119,7 @@ public final class VorbisSound extends Node {
     }
 
     @OriginalMember(owner = "client!jc", name = "a", descriptor = "(Lclient!ve;II)Lclient!jc;")
-    public static VorbisSound method2345(@OriginalArg(0) Js5 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+    public static VorbisSound create(@OriginalArg(0) Js5 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
         if (method2344(arg0)) {
             @Pc(16) byte[] local16 = arg0.fetchFile(arg1, arg2);
             return local16 == null ? null : new VorbisSound(local16);
@@ -262,7 +262,7 @@ public final class VorbisSound extends Node {
 	}
 
 	@OriginalMember(owner = "client!jc", name = "a", descriptor = "([I)Lclient!kj;")
-	public final PcmSound method2341(@OriginalArg(0) int[] arg0) {
+	public final PcmSound toPcmSound(@OriginalArg(0) int[] arg0) {
 		if (arg0 != null && arg0[0] <= 0) {
 			return null;
 		}

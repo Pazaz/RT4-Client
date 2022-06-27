@@ -22,13 +22,13 @@ public final class MidiNote extends Node {
 	public int anInt3767;
 
 	@OriginalMember(owner = "client!mf", name = "z", descriptor = "Lclient!b;")
-	public SoundPcmStream aClass3_Sub3_Sub1_3;
+	public SoundPcmStream stream;
 
 	@OriginalMember(owner = "client!mf", name = "A", descriptor = "I")
 	public int anInt3768;
 
 	@OriginalMember(owner = "client!mf", name = "B", descriptor = "Lclient!kj;")
-	public PcmSound aClass3_Sub16_Sub1_1;
+	public PcmSound sound;
 
 	@OriginalMember(owner = "client!mf", name = "C", descriptor = "I")
 	public int anInt3769;
@@ -43,7 +43,7 @@ public final class MidiNote extends Node {
 	public int anInt3772;
 
 	@OriginalMember(owner = "client!mf", name = "G", descriptor = "I")
-	public int anInt3773;
+	public int channel;
 
 	@OriginalMember(owner = "client!mf", name = "H", descriptor = "I")
 	public int anInt3774;
@@ -67,13 +67,13 @@ public final class MidiNote extends Node {
 	public int anInt3782;
 
 	@OriginalMember(owner = "client!mf", name = "V", descriptor = "Lclient!jk;")
-	public MidiInstrument aClass3_Sub18_1;
+	public MidiInstrument instrument;
 
 	@OriginalMember(owner = "client!mf", name = "d", descriptor = "(I)V")
-	public final void method2957() {
+	public final void release() {
 		this.aClass162_1 = null;
-		this.aClass3_Sub16_Sub1_1 = null;
-		this.aClass3_Sub3_Sub1_3 = null;
-		this.aClass3_Sub18_1 = null;
+		this.sound = null;
+		this.stream = null;
+		this.instrument = null;
 	}
 }

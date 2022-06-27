@@ -305,13 +305,13 @@ public class Protocol {
             int local45 = local31 & 0x7;
             if (local23 >= 0 && local19 >= 0 && local23 < 104 && local19 < 104) {
                 int local224 = local39 + 1;
-                if (PlayerList.self.movementQueueX[0] >= local23 - local224 && local224 + local23 >= PlayerList.self.movementQueueX[0] && PlayerList.self.movementQueueZ[0] >= local19 - local224 && PlayerList.self.movementQueueZ[0] <= local224 + local19 && Preferences.ambientSoundsVolume != 0 && local45 > 0 && SoundPlayer.anInt4451 < 50 && local27 != -1) {
-                    SoundPlayer.anIntArray421[SoundPlayer.anInt4451] = local27;
-                    SoundPlayer.anIntArray563[SoundPlayer.anInt4451] = local45;
-                    SoundPlayer.anIntArray362[SoundPlayer.anInt4451] = local218;
-                    SoundPlayer.aClass138Array1[SoundPlayer.anInt4451] = null;
-                    SoundPlayer.anIntArray68[SoundPlayer.anInt4451] = local39 + (local23 << 16) + (local19 << 8);
-                    SoundPlayer.anInt4451++;
+                if (PlayerList.self.movementQueueX[0] >= local23 - local224 && local224 + local23 >= PlayerList.self.movementQueueX[0] && PlayerList.self.movementQueueZ[0] >= local19 - local224 && PlayerList.self.movementQueueZ[0] <= local224 + local19 && Preferences.ambientSoundsVolume != 0 && local45 > 0 && SoundPlayer.size < 50 && local27 != -1) {
+                    SoundPlayer.ids[SoundPlayer.size] = local27;
+                    SoundPlayer.loops[SoundPlayer.size] = local45;
+                    SoundPlayer.delays[SoundPlayer.size] = local218;
+                    SoundPlayer.sounds[SoundPlayer.size] = null;
+                    SoundPlayer.positions[SoundPlayer.size] = local39 + (local23 << 16) + (local19 << 8);
+                    SoundPlayer.size++;
                 }
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_240) {

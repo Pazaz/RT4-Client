@@ -332,13 +332,13 @@ public final class client extends GameShell {
             if (local37) {
                 MusicPlayer.groupId = MusicPlayer.titleSong;
                 if (Preferences.musicVolume == 0) {
-                    MidiPlayer.method801();
+                    MidiPlayer.playFadeOut();
                 } else {
                     MidiPlayer.playFadeOut(MusicPlayer.titleSong, js5Archive6, 255);
                 }
                 js5NetQueue.writeLoggedIn(false);
             } else {
-                MidiPlayer.method801();
+                MidiPlayer.playFadeOut();
                 js5NetQueue.writeLoggedIn(true);
             }
         }
@@ -543,7 +543,7 @@ public final class client extends GameShell {
         Static206.anInt4774 = (int) (Math.random() * 110.0D) - 55;
         Static241.aBoolean302 = false;
         MiniMap.anInt4130 = (int) (Math.random() * 30.0D) - 20;
-        SoundPlayer.anInt4451 = 0;
+        SoundPlayer.size = 0;
         LoginManager.mapFlagX = 0;
         MiniMap.anInt1814 = (int) (Math.random() * 120.0D) - 60;
         Chat.size = 0;

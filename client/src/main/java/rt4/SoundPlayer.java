@@ -6,129 +6,128 @@ import org.openrs2.deob.annotation.Pc;
 
 public class SoundPlayer {
     @OriginalMember(owner = "client!qe", name = "t", descriptor = "[I")
-	public static final int[] anIntArray421 = new int[50];
+	public static final int[] ids = new int[50];
     @OriginalMember(owner = "client!wh", name = "g", descriptor = "[I")
-    public static final int[] anIntArray563 = new int[50];
+    public static final int[] loops = new int[50];
     @OriginalMember(owner = "client!na", name = "mb", descriptor = "[I")
-    public static final int[] anIntArray362 = new int[50];
+    public static final int[] delays = new int[50];
     @OriginalMember(owner = "client!nk", name = "n", descriptor = "[Lclient!sl;")
-    public static final SynthSound[] aClass138Array1 = new SynthSound[50];
+    public static final SynthSound[] sounds = new SynthSound[50];
     @OriginalMember(owner = "client!ca", name = "fb", descriptor = "[I")
-    public static final int[] anIntArray68 = new int[50];
+    public static final int[] positions = new int[50];
     @OriginalMember(owner = "client!pe", name = "j", descriptor = "I")
-    public static int anInt4451 = 0;
+    public static int size = 0;
 
     @OriginalMember(owner = "client!ma", name = "a", descriptor = "(ILclient!tk;IIZI)V")
-    public static void playSeqSound(@OriginalArg(0) int arg0, @OriginalArg(1) SeqType arg1, @OriginalArg(3) int arg2, @OriginalArg(4) boolean self, @OriginalArg(5) int arg4) {
-        if (anInt4451 >= 50 || (arg1.sounds == null || arg4 >= arg1.sounds.length || arg1.sounds[arg4] == null)) {
+    public static void playSeqSound(@OriginalArg(0) int zFine, @OriginalArg(1) SeqType seqType, @OriginalArg(3) int xFine, @OriginalArg(4) boolean self, @OriginalArg(5) int index) {
+        if (size >= 50 || (seqType.sounds == null || index >= seqType.sounds.length || seqType.sounds[index] == null)) {
             return;
         }
-        @Pc(36) int local36 = arg1.sounds[arg4][0];
-        @Pc(40) int local40 = local36 >> 8;
-        @Pc(57) int local57;
-        if (arg1.sounds[arg4].length > 1) {
-            local57 = (int) ((double) arg1.sounds[arg4].length * Math.random());
-            if (local57 > 0) {
-                local40 = arg1.sounds[arg4][local57];
+        @Pc(36) int sound = seqType.sounds[index][0];
+        @Pc(40) int id = sound >> 8;
+        if (seqType.sounds[index].length > 1) {
+            int alternativeIdIndex = (int) ((double) seqType.sounds[index].length * Math.random());
+            if (alternativeIdIndex > 0) {
+                id = seqType.sounds[index][alternativeIdIndex];
             }
         }
-        @Pc(73) int local73 = local36 >> 5 & 0x7;
-        @Pc(77) int minDistance = local36 & 0x1F;
+        @Pc(73) int loops = sound >> 5 & 0x7;
+        @Pc(77) int minDistance = sound & 0x1F;
         if (minDistance == 0) {
             if (self) {
-                play(local73, local40, 0);
+                play(loops, id, 0);
             }
         } else if (Preferences.ambientSoundsVolume != 0) {
-            anIntArray421[anInt4451] = local40;
-            anIntArray563[anInt4451] = local73;
-            @Pc(111) int local111 = (arg0 - 64) / 128;
-            local57 = (arg2 - 64) / 128;
-            anIntArray362[anInt4451] = 0;
-            aClass138Array1[anInt4451] = null;
-            anIntArray68[anInt4451] = minDistance + (local57 << 16) + (local111 << 8);
-            anInt4451++;
+            ids[size] = id;
+            SoundPlayer.loops[size] = loops;
+            @Pc(111) int z = (zFine - 64) / 128;
+            int x = (xFine - 64) / 128;
+            delays[size] = 0;
+            sounds[size] = null;
+            positions[size] = minDistance + (x << 16) + (z << 8);
+            size++;
         }
     }
 
     @OriginalMember(owner = "client!ca", name = "a", descriptor = "(IIII)V")
-    public static void play(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-        if (Preferences.soundEffectVolume == 0 || arg0 == 0 || anInt4451 >= 50 || arg1 == -1) {
+    public static void play(@OriginalArg(0) int loops, @OriginalArg(1) int id, @OriginalArg(2) int delay) {
+        if (Preferences.soundEffectVolume == 0 || loops == 0 || size >= 50 || id == -1) {
             return;
         }
-        anIntArray421[anInt4451] = arg1;
-        anIntArray563[anInt4451] = arg0;
-        anIntArray362[anInt4451] = arg2;
-        aClass138Array1[anInt4451] = null;
-        anIntArray68[anInt4451] = 0;
-        anInt4451++;
+        ids[size] = id;
+        SoundPlayer.loops[size] = loops;
+        delays[size] = delay;
+        sounds[size] = null;
+        positions[size] = 0;
+        size++;
     }
 
     @OriginalMember(owner = "client!ed", name = "d", descriptor = "(B)V")
     public static void loop() {
-        for (@Pc(5) int local5 = 0; local5 < anInt4451; local5++) {
-            @Pc(12) int local12 = anIntArray362[local5]--;
-            if (anIntArray362[local5] >= -10) {
-                @Pc(79) SynthSound local79 = aClass138Array1[local5];
-                if (local79 == null) {
-                    local79 = SynthSound.create(client.js5Archive4, anIntArray421[local5], 0);
-                    if (local79 == null) {
+        for (@Pc(5) int i = 0; i < size; i++) {
+            @Pc(12) int local12 = delays[i]--;
+            if (delays[i] >= -10) {
+                @Pc(79) SynthSound sound = sounds[i];
+                if (sound == null) {
+                    sound = SynthSound.create(client.js5Archive4, ids[i], 0);
+                    if (sound == null) {
                         continue;
                     }
-                    anIntArray362[local5] += local79.method3990();
-                    aClass138Array1[local5] = local79;
+                    delays[i] += sound.getStart();
+                    sounds[i] = sound;
                 }
-                if (anIntArray362[local5] < 0) {
-                    @Pc(209) int local209;
-                    if (anIntArray68[local5] == 0) {
-                        local209 = Preferences.soundEffectVolume;
+                if (delays[i] < 0) {
+                    @Pc(209) int volume;
+                    if (positions[i] == 0) {
+                        volume = Preferences.soundEffectVolume;
                     } else {
-                        @Pc(125) int local125 = (anIntArray68[local5] & 0xFF) * 128;
-                        @Pc(133) int local133 = anIntArray68[local5] >> 8 & 0xFF;
-                        @Pc(141) int local141 = anIntArray68[local5] >> 16 & 0xFF;
-                        @Pc(151) int local151 = local133 * 128 + 64 - PlayerList.self.zFine;
-                        if (local151 < 0) {
-                            local151 = -local151;
+                        @Pc(125) int minDistance = (positions[i] & 0xFF) * 128;
+                        @Pc(133) int z = positions[i] >> 8 & 0xFF;
+                        @Pc(141) int x = positions[i] >> 16 & 0xFF;
+                        @Pc(151) int zFine = z * 128 + 64 - PlayerList.self.zFine;
+                        if (zFine < 0) {
+                            zFine = -zFine;
                         }
-                        @Pc(167) int local167 = local141 * 128 + 64 - PlayerList.self.xFine;
-                        if (local167 < 0) {
-                            local167 = -local167;
+                        @Pc(167) int xFine = x * 128 + 64 - PlayerList.self.xFine;
+                        if (xFine < 0) {
+                            xFine = -xFine;
                         }
-                        @Pc(180) int local180 = local167 + local151 - 128;
-                        if (local125 < local180) {
-                            anIntArray362[local5] = -100;
+                        @Pc(180) int distance = xFine + zFine - 128;
+                        if (minDistance < distance) {
+                            delays[i] = -100;
                             continue;
                         }
-                        if (local180 < 0) {
-                            local180 = 0;
+                        if (distance < 0) {
+                            distance = 0;
                         }
-                        local209 = Preferences.ambientSoundsVolume * (local125 - local180) / local125;
+                        volume = Preferences.ambientSoundsVolume * (minDistance - distance) / minDistance;
                     }
-                    if (local209 > 0) {
-                        @Pc(223) PcmSound local223 = local79.toPcmSound().resample(client.resampler);
-                        @Pc(228) SoundPcmStream local228 = SoundPcmStream.create(local223, local209);
-                        local228.setLoops(anIntArray563[local5] - 1);
-                        client.soundStream.addSubStream(local228);
+                    if (volume > 0) {
+                        @Pc(223) PcmSound pcmSound = sound.toPcmSound().resample(client.resampler);
+                        @Pc(228) SoundPcmStream stream = SoundPcmStream.create(pcmSound, volume);
+                        stream.setLoops(loops[i] - 1);
+                        client.soundStream.addSubStream(stream);
                     }
-                    anIntArray362[local5] = -100;
+                    delays[i] = -100;
                 }
             } else {
-                anInt4451--;
-                for (@Pc(28) int local28 = local5; local28 < anInt4451; local28++) {
-                    anIntArray421[local28] = anIntArray421[local28 + 1];
-                    aClass138Array1[local28] = aClass138Array1[local28 + 1];
-                    anIntArray563[local28] = anIntArray563[local28 + 1];
-                    anIntArray362[local28] = anIntArray362[local28 + 1];
-                    anIntArray68[local28] = anIntArray68[local28 + 1];
+                size--;
+                for (@Pc(28) int j = i; j < size; j++) {
+                    ids[j] = ids[j + 1];
+                    sounds[j] = sounds[j + 1];
+                    loops[j] = loops[j + 1];
+                    delays[j] = delays[j + 1];
+                    positions[j] = positions[j + 1];
                 }
-                local5--;
+                i--;
             }
         }
-        if (MidiPlayer.jingle && !MidiPlayer.method2655()) {
+        if (MidiPlayer.jingle && !MidiPlayer.isPlaying()) {
             if (Preferences.musicVolume != 0 && MusicPlayer.groupId != -1) {
-                MidiPlayer.method2410(client.js5Archive6, MusicPlayer.groupId, Preferences.musicVolume);
+                MidiPlayer.playImmediate(client.js5Archive6, MusicPlayer.groupId, Preferences.musicVolume);
             }
             MidiPlayer.jingle = false;
-        } else if (Preferences.musicVolume != 0 && MusicPlayer.groupId != -1 && !MidiPlayer.method2655()) {
+        } else if (Preferences.musicVolume != 0 && MusicPlayer.groupId != -1 && !MidiPlayer.isPlaying()) {
             Protocol.outboundBuffer.p1isaac(137);
             Protocol.outboundBuffer.p4(MusicPlayer.groupId);
             MusicPlayer.groupId = -1;

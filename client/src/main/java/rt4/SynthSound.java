@@ -75,7 +75,7 @@ public final class SynthSound {
 	}
 
 	@OriginalMember(owner = "client!sl", name = "c", descriptor = "()I")
-	public final int method3990() {
+	public final int getStart() {
 		@Pc(1) int local1 = 9999999;
 		@Pc(3) int local3;
 		for (local3 = 0; local3 < 10; local3++) {
