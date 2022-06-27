@@ -99,7 +99,7 @@ public final class UnderwaterMaterialRenderer implements MaterialRenderer {
 		local1.glNewList(this.anInt5806, GL2.GL_COMPILE);
 		local1.glActiveTexture(GL2.GL_TEXTURE1);
 		if (aBoolean308) {
-			local1.glBindTexture(GL2.GL_TEXTURE_3D, Static151.anInt3587);
+			local1.glBindTexture(GL2.GL_TEXTURE_3D, MaterialManager.texture3D);
 			local1.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_RGB, GL2.GL_ADD);
 			local1.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_OPERAND0_RGB, GL2.GL_SRC_COLOR);
 			local1.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_COMBINE_ALPHA, GL2.GL_REPLACE);
