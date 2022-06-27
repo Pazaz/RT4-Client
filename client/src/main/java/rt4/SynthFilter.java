@@ -9,117 +9,117 @@ import org.openrs2.deob.annotation.Pc;
 public final class SynthFilter {
 
 	@OriginalMember(owner = "client!nl", name = "f", descriptor = "[[I")
-	public static final int[][] anIntArrayArray32 = new int[2][8];
+	public static final int[][] coefficients = new int[2][8];
 	@OriginalMember(owner = "client!nl", name = "b", descriptor = "[[F")
-	public static final float[][] aFloatArrayArray2 = new float[2][8];
+	public static final float[][] floatingCoefficients = new float[2][8];
 	@OriginalMember(owner = "client!nl", name = "d", descriptor = "F")
-	public static float aFloat22;
+	public static float floatingInverseA0;
 	@OriginalMember(owner = "client!nl", name = "g", descriptor = "I")
-	public static int anInt4191;
+	public static int inverseA0;
 	@OriginalMember(owner = "client!nl", name = "e", descriptor = "[I")
-	public final int[] anIntArray368 = new int[2];
+	public final int[] pairs = new int[2];
 
 	@OriginalMember(owner = "client!nl", name = "c", descriptor = "[[[I")
-	private final int[][][] anIntArrayArrayArray15 = new int[2][2][4];
+	private final int[][][] gain = new int[2][2][4];
 
 	@OriginalMember(owner = "client!nl", name = "a", descriptor = "[[[I")
-	private final int[][][] anIntArrayArrayArray14 = new int[2][2][4];
+	private final int[][][] octaves = new int[2][2][4];
 
 	@OriginalMember(owner = "client!nl", name = "h", descriptor = "[I")
-	private final int[] anIntArray369 = new int[2];
+	private final int[] inverseGain = new int[2];
 
 	@OriginalMember(owner = "client!nl", name = "a", descriptor = "(F)F")
-	public static float method3250(@OriginalArg(0) float arg0) {
+	public static float getOctavePhase(@OriginalArg(0) float arg0) {
 		@Pc(7) float local7 = (float) Math.pow(2.0D, (double) arg0) * 32.703197F;
 		return local7 * 3.1415927F / 11025.0F;
 	}
 
 	@OriginalMember(owner = "client!nl", name = "a", descriptor = "(Lclient!wa;Lclient!ff;)V")
-	public final void method3249(@OriginalArg(0) Buffer arg0, @OriginalArg(1) SynthEnvelope arg1) {
+	public final void decode(@OriginalArg(0) Buffer arg0, @OriginalArg(1) SynthEnvelope arg1) {
 		@Pc(3) int local3 = arg0.g1();
-		this.anIntArray368[0] = local3 >> 4;
-		this.anIntArray368[1] = local3 & 0xF;
+		this.pairs[0] = local3 >> 4;
+		this.pairs[1] = local3 & 0xF;
 		if (local3 == 0) {
-			this.anIntArray369[0] = this.anIntArray369[1] = 0;
+			this.inverseGain[0] = this.inverseGain[1] = 0;
 			return;
 		}
-		this.anIntArray369[0] = arg0.g2();
-		this.anIntArray369[1] = arg0.g2();
+		this.inverseGain[0] = arg0.g2();
+		this.inverseGain[1] = arg0.g2();
 		@Pc(37) int local37 = arg0.g1();
 		@Pc(39) int local39;
 		@Pc(44) int local44;
 		for (local39 = 0; local39 < 2; local39++) {
-			for (local44 = 0; local44 < this.anIntArray368[local39]; local44++) {
-				this.anIntArrayArrayArray14[local39][0][local44] = arg0.g2();
-				this.anIntArrayArrayArray15[local39][0][local44] = arg0.g2();
+			for (local44 = 0; local44 < this.pairs[local39]; local44++) {
+				this.octaves[local39][0][local44] = arg0.g2();
+				this.gain[local39][0][local44] = arg0.g2();
 			}
 		}
 		for (local39 = 0; local39 < 2; local39++) {
-			for (local44 = 0; local44 < this.anIntArray368[local39]; local44++) {
+			for (local44 = 0; local44 < this.pairs[local39]; local44++) {
 				if ((local37 & 0x1 << local39 * 4 << local44) == 0) {
-					this.anIntArrayArrayArray14[local39][1][local44] = this.anIntArrayArrayArray14[local39][0][local44];
-					this.anIntArrayArrayArray15[local39][1][local44] = this.anIntArrayArrayArray15[local39][0][local44];
+					this.octaves[local39][1][local44] = this.octaves[local39][0][local44];
+					this.gain[local39][1][local44] = this.gain[local39][0][local44];
 				} else {
-					this.anIntArrayArrayArray14[local39][1][local44] = arg0.g2();
-					this.anIntArrayArrayArray15[local39][1][local44] = arg0.g2();
+					this.octaves[local39][1][local44] = arg0.g2();
+					this.gain[local39][1][local44] = arg0.g2();
 				}
 			}
 		}
-		if (local37 != 0 || this.anIntArray369[1] != this.anIntArray369[0]) {
-			arg1.method1514(arg0);
+		if (local37 != 0 || this.inverseGain[1] != this.inverseGain[0]) {
+			arg1.decodeStages(arg0);
 		}
 	}
 
 	@OriginalMember(owner = "client!nl", name = "a", descriptor = "(IF)I")
-	public final int method3251(@OriginalArg(0) int arg0, @OriginalArg(1) float arg1) {
+	public final int compute(@OriginalArg(0) int arg0, @OriginalArg(1) float arg1) {
 		@Pc(20) float local20;
 		if (arg0 == 0) {
-			local20 = (float) this.anIntArray369[0] + (float) (this.anIntArray369[1] - this.anIntArray369[0]) * arg1;
+			local20 = (float) this.inverseGain[0] + (float) (this.inverseGain[1] - this.inverseGain[0]) * arg1;
 			@Pc(24) float local24 = local20 * 0.0030517578F;
-			aFloat22 = (float) Math.pow(0.1D, (double) (local24 / 20.0F));
-			anInt4191 = (int) (aFloat22 * 65536.0F);
+			floatingInverseA0 = (float) Math.pow(0.1D, (double) (local24 / 20.0F));
+			inverseA0 = (int) (floatingInverseA0 * 65536.0F);
 		}
-		if (this.anIntArray368[arg0] == 0) {
+		if (this.pairs[arg0] == 0) {
 			return 0;
 		}
-		local20 = this.method3253(arg0, 0, arg1);
-		aFloatArrayArray2[arg0][0] = -2.0F * local20 * (float) Math.cos((double) this.method3254(arg0, 0, arg1));
-		aFloatArrayArray2[arg0][1] = local20 * local20;
+		local20 = this.getAmplitude(arg0, 0, arg1);
+		floatingCoefficients[arg0][0] = -2.0F * local20 * (float) Math.cos((double) this.method3254(arg0, 0, arg1));
+		floatingCoefficients[arg0][1] = local20 * local20;
 		@Pc(77) int local77;
-		for (local77 = 1; local77 < this.anIntArray368[arg0]; local77++) {
-			local20 = this.method3253(arg0, local77, arg1);
+		for (local77 = 1; local77 < this.pairs[arg0]; local77++) {
+			local20 = this.getAmplitude(arg0, local77, arg1);
 			@Pc(102) float local102 = -2.0F * local20 * (float) Math.cos((double) this.method3254(arg0, local77, arg1));
 			@Pc(106) float local106 = local20 * local20;
-			aFloatArrayArray2[arg0][local77 * 2 + 1] = aFloatArrayArray2[arg0][local77 * 2 - 1] * local106;
-			aFloatArrayArray2[arg0][local77 * 2] = aFloatArrayArray2[arg0][local77 * 2 - 1] * local102 + aFloatArrayArray2[arg0][local77 * 2 - 2] * local106;
+			floatingCoefficients[arg0][local77 * 2 + 1] = floatingCoefficients[arg0][local77 * 2 - 1] * local106;
+			floatingCoefficients[arg0][local77 * 2] = floatingCoefficients[arg0][local77 * 2 - 1] * local102 + floatingCoefficients[arg0][local77 * 2 - 2] * local106;
 			for (@Pc(162) int local162 = local77 * 2 - 1; local162 >= 2; local162--) {
-				aFloatArrayArray2[arg0][local162] += aFloatArrayArray2[arg0][local162 - 1] * local102 + aFloatArrayArray2[arg0][local162 - 2] * local106;
+				floatingCoefficients[arg0][local162] += floatingCoefficients[arg0][local162 - 1] * local102 + floatingCoefficients[arg0][local162 - 2] * local106;
 			}
-			aFloatArrayArray2[arg0][1] += aFloatArrayArray2[arg0][0] * local102 + local106;
-			aFloatArrayArray2[arg0][0] += local102;
+			floatingCoefficients[arg0][1] += floatingCoefficients[arg0][0] * local102 + local106;
+			floatingCoefficients[arg0][0] += local102;
 		}
 		if (arg0 == 0) {
-			for (local77 = 0; local77 < this.anIntArray368[0] * 2; local77++) {
-				aFloatArrayArray2[0][local77] *= aFloat22;
+			for (local77 = 0; local77 < this.pairs[0] * 2; local77++) {
+				floatingCoefficients[0][local77] *= floatingInverseA0;
 			}
 		}
-		for (local77 = 0; local77 < this.anIntArray368[arg0] * 2; local77++) {
-			anIntArrayArray32[arg0][local77] = (int) (aFloatArrayArray2[arg0][local77] * 65536.0F);
+		for (local77 = 0; local77 < this.pairs[arg0] * 2; local77++) {
+			coefficients[arg0][local77] = (int) (floatingCoefficients[arg0][local77] * 65536.0F);
 		}
-		return this.anIntArray368[arg0] * 2;
+		return this.pairs[arg0] * 2;
 	}
 
 	@OriginalMember(owner = "client!nl", name = "a", descriptor = "(IIF)F")
-	private float method3253(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) float arg2) {
-		@Pc(30) float local30 = (float) this.anIntArrayArrayArray15[arg0][0][arg1] + arg2 * (float) (this.anIntArrayArrayArray15[arg0][1][arg1] - this.anIntArrayArrayArray15[arg0][0][arg1]);
+	private float getAmplitude(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) float arg2) {
+		@Pc(30) float local30 = (float) this.gain[arg0][0][arg1] + arg2 * (float) (this.gain[arg0][1][arg1] - this.gain[arg0][0][arg1]);
 		@Pc(34) float local34 = local30 * 0.0015258789F;
 		return 1.0F - (float) Math.pow(10.0D, (double) (-local34 / 20.0F));
 	}
 
 	@OriginalMember(owner = "client!nl", name = "b", descriptor = "(IIF)F")
 	private float method3254(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) float arg2) {
-		@Pc(30) float local30 = (float) this.anIntArrayArrayArray14[arg0][0][arg1] + arg2 * (float) (this.anIntArrayArrayArray14[arg0][1][arg1] - this.anIntArrayArrayArray14[arg0][0][arg1]);
+		@Pc(30) float local30 = (float) this.octaves[arg0][0][arg1] + arg2 * (float) (this.octaves[arg0][1][arg1] - this.octaves[arg0][0][arg1]);
 		@Pc(34) float local34 = local30 * 1.2207031E-4F;
-		return method3250(local34);
+		return getOctavePhase(local34);
 	}
 }
