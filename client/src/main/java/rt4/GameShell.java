@@ -454,7 +454,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			if (lastFpsIndex >= 5) {
 				lastFpsIndex = 0;
 			}
-			framesPerSecond = total / 5;
+			framesPerSecond = Math.ceil(total / 5);
 			lastFpsUpdate = now;
 		}
 
