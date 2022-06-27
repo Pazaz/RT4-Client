@@ -5,63 +5,72 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
-@OriginalClass("client!gm")
+@OriginalClass("client!ag")
 public final class TextureOp12 extends TextureOp {
 
-	@OriginalMember(owner = "client!gm", name = "Z", descriptor = "I")
-	private int anInt2298 = 1365;
+	@OriginalMember(owner = "client!ag", name = "S", descriptor = "I")
+	private int anInt100 = 0;
 
-	@OriginalMember(owner = "client!gm", name = "ab", descriptor = "I")
-	private int anInt2299 = 0;
+	@OriginalMember(owner = "client!ag", name = "X", descriptor = "I")
+	private int anInt105 = 0;
 
-	@OriginalMember(owner = "client!gm", name = "V", descriptor = "I")
-	private int anInt2296 = 0;
+	@OriginalMember(owner = "client!ag", name = "W", descriptor = "I")
+	private int anInt104 = 1;
 
-	@OriginalMember(owner = "client!gm", name = "Y", descriptor = "I")
-	private int anInt2297 = 20;
-
-	@OriginalMember(owner = "client!gm", name = "<init>", descriptor = "()V")
+	@OriginalMember(owner = "client!ag", name = "<init>", descriptor = "()V")
 	public TextureOp12() {
 		super(0, true);
 	}
 
-	@OriginalMember(owner = "client!gm", name = "a", descriptor = "(ILclient!wa;Z)V")
+	@OriginalMember(owner = "client!ag", name = "a", descriptor = "(IB)[I")
 	@Override
-	public final void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
-		if (arg0 == 0) {
-			this.anInt2298 = arg1.g2();
-		} else if (arg0 == 1) {
-			this.anInt2297 = arg1.g2();
-		} else if (arg0 == 2) {
-			this.anInt2296 = arg1.g2();
-		} else if (arg0 == 3) {
-			this.anInt2299 = arg1.g2();
-		}
-	}
-
-	@OriginalMember(owner = "client!gm", name = "a", descriptor = "(IB)[I")
-	@Override
-	public final int[] method4626(@OriginalArg(0) int arg0) {
-		@Pc(19) int[] local19 = this.aClass121_41.method3445(arg0);
-		if (this.aClass121_41.invalid) {
-			for (@Pc(26) int local26 = 0; local26 < Static10.anInt4457; local26++) {
-				@Pc(45) int local45 = this.anInt2299 + (Static10.anIntArray153[arg0] << 12) / this.anInt2298;
-				@Pc(57) int local57 = this.anInt2296 + (Static173.anIntArray367[local26] << 12) / this.anInt2298;
-				@Pc(61) int local61 = local57;
-				@Pc(65) int local65 = local45;
-				@Pc(67) int local67 = 0;
-				@Pc(73) int local73 = local57 * local57 >> 12;
-				@Pc(79) int local79 = local45 * local45 >> 12;
-				while (local73 + local79 < 16384 && this.anInt2297 > local67) {
-					local65 = (local61 * local65 >> 12) * 2 + local45;
-					local67++;
-					local61 = local73 + local57 - local79;
-					local79 = local65 * local65 >> 12;
-					local73 = local61 * local61 >> 12;
+	public final int[] getMonochromeOutput(@OriginalArg(0) int arg0) {
+		@Pc(11) int[] local11 = this.monochromeImageCache.get(arg0);
+		if (this.monochromeImageCache.invalid) {
+			@Pc(20) int local20 = Texture.heightFractions[arg0];
+			@Pc(26) int local26 = local20 - 2048 >> 1;
+			for (@Pc(28) int local28 = 0; local28 < Texture.width; local28++) {
+				@Pc(35) int local35 = Texture.widthFractions[local28];
+				@Pc(41) int local41 = local35 - 2048 >> 1;
+				@Pc(68) int local68;
+				if (this.anInt105 == 0) {
+					local68 = (local35 - local20) * this.anInt104;
+				} else {
+					@Pc(58) int local58 = local41 * local41 + local26 * local26 >> 12;
+					local68 = (int) (Math.sqrt((double) ((float) local58 / 4096.0F)) * 4096.0D);
+					local68 = (int) ((double) (local68 * this.anInt104) * 3.141592653589793D);
 				}
-				local19[local26] = local67 >= this.anInt2297 - 1 ? 0 : (local67 << 12) / this.anInt2297;
+				local68 -= local68 & 0xFFFFF000;
+				if (this.anInt100 == 0) {
+					local68 = TextureOp.SINE[local68 >> 4 & 0xFF] + 4096 >> 1;
+				} else if (this.anInt100 == 2) {
+					local68 -= 2048;
+					if (local68 < 0) {
+						local68 = -local68;
+					}
+					local68 = 2048 - local68 << 1;
+				}
+				local11[local28] = local68;
 			}
 		}
-		return local19;
+		return local11;
+	}
+
+	@OriginalMember(owner = "client!ag", name = "e", descriptor = "(I)V")
+	@Override
+	public final void postDecode() {
+		TextureOp.createTrigonometryTables();
+	}
+
+	@OriginalMember(owner = "client!ag", name = "a", descriptor = "(ILclient!wa;Z)V")
+	@Override
+	public final void decode(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
+		if (arg0 == 0) {
+			this.anInt105 = arg1.g1();
+		} else if (arg0 == 1) {
+			this.anInt100 = arg1.g1();
+		} else if (arg0 == 3) {
+			this.anInt104 = arg1.g1();
+		}
 	}
 }

@@ -24,8 +24,6 @@ public final class Static176 {
 	public static final JagString aClass100_945 = JagString.parse("0");
 	@OriginalMember(owner = "client!q", name = "a", descriptor = "Lclient!na;")
 	public static final JagString aClass100_260 = JagString.parse(")1a2)1m");
-	@OriginalMember(owner = "client!ob", name = "f", descriptor = "Lclient!ve;")
-	public static Js5 aClass153_76;
 
 	@OriginalMember(owner = "client!ob", name = "a", descriptor = "[Z")
 	public static final boolean[] customCameraActive = new boolean[5];

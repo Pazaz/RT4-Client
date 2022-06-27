@@ -6,10 +6,10 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!rj")
-public final class TextureOp26 extends TextureOp {
+public final class TextureOpNoise extends TextureOp {
 
 	@OriginalMember(owner = "client!rj", name = "<init>", descriptor = "()V")
-	public TextureOp26() {
+	public TextureOpNoise() {
 		super(0, true);
 	}
 
@@ -22,12 +22,12 @@ public final class TextureOp26 extends TextureOp {
 
 	@OriginalMember(owner = "client!rj", name = "a", descriptor = "(IB)[I")
 	@Override
-	public final int[] method4626(@OriginalArg(0) int arg0) {
-		@Pc(15) int[] local15 = this.aClass121_41.method3445(arg0);
-		if (this.aClass121_41.invalid) {
-			@Pc(27) int local27 = Static10.anIntArray153[arg0];
-			for (@Pc(29) int local29 = 0; local29 < Static10.anInt4457; local29++) {
-				local15[local29] = this.method3769(local27, Static173.anIntArray367[local29]) % 4096;
+	public final int[] getMonochromeOutput(@OriginalArg(0) int arg0) {
+		@Pc(15) int[] local15 = this.monochromeImageCache.get(arg0);
+		if (this.monochromeImageCache.invalid) {
+			@Pc(27) int local27 = Texture.heightFractions[arg0];
+			for (@Pc(29) int local29 = 0; local29 < Texture.width; local29++) {
+				local15[local29] = this.method3769(local27, Texture.widthFractions[local29]) % 4096;
 			}
 		}
 		return local15;

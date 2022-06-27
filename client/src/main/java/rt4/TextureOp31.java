@@ -5,53 +5,63 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
-@OriginalClass("client!tb")
+@OriginalClass("client!gm")
 public final class TextureOp31 extends TextureOp {
 
-	@OriginalMember(owner = "client!tb", name = "<init>", descriptor = "()V")
+	@OriginalMember(owner = "client!gm", name = "Z", descriptor = "I")
+	private int anInt2298 = 1365;
+
+	@OriginalMember(owner = "client!gm", name = "ab", descriptor = "I")
+	private int anInt2299 = 0;
+
+	@OriginalMember(owner = "client!gm", name = "V", descriptor = "I")
+	private int anInt2296 = 0;
+
+	@OriginalMember(owner = "client!gm", name = "Y", descriptor = "I")
+	private int anInt2297 = 20;
+
+	@OriginalMember(owner = "client!gm", name = "<init>", descriptor = "()V")
 	public TextureOp31() {
-		super(1, false);
+		super(0, true);
 	}
 
-	@OriginalMember(owner = "client!tb", name = "a", descriptor = "(IB)[I")
+	@OriginalMember(owner = "client!gm", name = "a", descriptor = "(ILclient!wa;Z)V")
 	@Override
-	public final int[] method4626(@OriginalArg(0) int arg0) {
-		@Pc(7) int[] local7 = this.aClass121_41.method3445(arg0);
-		if (this.aClass121_41.invalid) {
-			@Pc(21) int[] local21 = this.method4624(0, arg0);
-			for (@Pc(23) int local23 = 0; local23 < Static10.anInt4457; local23++) {
-				local7[local23] = 4096 - local21[local23];
-			}
-		}
-		return local7;
-	}
-
-	@OriginalMember(owner = "client!tb", name = "a", descriptor = "(ILclient!wa;Z)V")
-	@Override
-	public final void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
+	public final void decode(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		if (arg0 == 0) {
-			this.aBoolean309 = arg1.g1() == 1;
+			this.anInt2298 = arg1.g2();
+		} else if (arg0 == 1) {
+			this.anInt2297 = arg1.g2();
+		} else if (arg0 == 2) {
+			this.anInt2296 = arg1.g2();
+		} else if (arg0 == 3) {
+			this.anInt2299 = arg1.g2();
 		}
 	}
 
-	@OriginalMember(owner = "client!tb", name = "b", descriptor = "(II)[[I")
+	@OriginalMember(owner = "client!gm", name = "a", descriptor = "(IB)[I")
 	@Override
-	public final int[][] method4638(@OriginalArg(1) int arg0) {
-		@Pc(18) int[][] local18 = this.aClass103_41.method3173(arg0);
-		if (this.aClass103_41.aBoolean195) {
-			@Pc(28) int[][] local28 = this.method4634(arg0, 0);
-			@Pc(32) int[] local32 = local28[2];
-			@Pc(36) int[] local36 = local28[0];
-			@Pc(40) int[] local40 = local28[1];
-			@Pc(44) int[] local44 = local18[0];
-			@Pc(48) int[] local48 = local18[1];
-			@Pc(52) int[] local52 = local18[2];
-			for (@Pc(54) int local54 = 0; local54 < Static10.anInt4457; local54++) {
-				local44[local54] = 4096 - local36[local54];
-				local48[local54] = 4096 - local40[local54];
-				local52[local54] = 4096 - local32[local54];
+	public final int[] getMonochromeOutput(@OriginalArg(0) int arg0) {
+		@Pc(19) int[] local19 = this.monochromeImageCache.get(arg0);
+		if (this.monochromeImageCache.invalid) {
+			for (@Pc(26) int local26 = 0; local26 < Texture.width; local26++) {
+				@Pc(45) int local45 = this.anInt2299 + (Texture.heightFractions[arg0] << 12) / this.anInt2298;
+				@Pc(57) int local57 = this.anInt2296 + (Texture.widthFractions[local26] << 12) / this.anInt2298;
+				@Pc(61) int local61 = local57;
+				@Pc(65) int local65 = local45;
+				@Pc(67) int local67 = 0;
+				@Pc(73) int local73 = local57 * local57 >> 12;
+				@Pc(79) int local79 = local45 * local45 >> 12;
+				while (local73 + local79 < 16384 && this.anInt2297 > local67) {
+					local65 = (local61 * local65 >> 12) * 2 + local45;
+					local67++;
+					local61 = local73 + local57 - local79;
+					local79 = local65 * local65 >> 12;
+					local73 = local61 * local61 >> 12;
+				}
+				local19[local26] = local67 >= this.anInt2297 - 1 ? 0 : (local67 << 12) / this.anInt2297;
 			}
 		}
-		return local18;
+		return local19;
 	}
 }

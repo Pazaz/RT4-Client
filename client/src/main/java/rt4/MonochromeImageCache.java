@@ -26,7 +26,7 @@ public final class MonochromeImageCache {
 	private LinkedList aClass69_96 = new LinkedList();
 
 	@OriginalMember(owner = "client!nd", name = "w", descriptor = "Z")
-	public boolean aBoolean195 = false;
+	public boolean invalid = false;
 
 	@OriginalMember(owner = "client!nd", name = "l", descriptor = "I")
 	private final int anInt4067;
@@ -95,19 +95,19 @@ public final class MonochromeImageCache {
 	}
 
 	@OriginalMember(owner = "client!nd", name = "a", descriptor = "(BI)[[I")
-	public final int[][] method3173(@OriginalArg(1) int arg0) {
+	public final int[][] get(@OriginalArg(1) int arg0) {
 		if (this.anInt4064 == this.anInt4067) {
-			this.aBoolean195 = this.aClass3_Sub23Array1[arg0] == null;
+			this.invalid = this.aClass3_Sub23Array1[arg0] == null;
 			this.aClass3_Sub23Array1[arg0] = aClass3_Sub23_1;
 			return this.anIntArrayArrayArray13[arg0];
 		} else if (this.anInt4064 == 1) {
-			this.aBoolean195 = this.anInt4062 != arg0;
+			this.invalid = this.anInt4062 != arg0;
 			this.anInt4062 = arg0;
 			return this.anIntArrayArrayArray13[0];
 		} else {
 			@Pc(44) MonochromeImageCache_Class3_Sub23 local44 = this.aClass3_Sub23Array1[arg0];
 			if (local44 == null) {
-				this.aBoolean195 = true;
+				this.invalid = true;
 				if (this.anInt4066 < this.anInt4064) {
 					local44 = new MonochromeImageCache_Class3_Sub23(arg0, this.anInt4066);
 					this.anInt4066++;
@@ -119,7 +119,7 @@ public final class MonochromeImageCache {
 				}
 				this.aClass3_Sub23Array1[arg0] = local44;
 			} else {
-				this.aBoolean195 = false;
+				this.invalid = false;
 			}
 			this.aClass69_96.addHead(local44);
 			return this.anIntArrayArrayArray13[local44.anInt3468];

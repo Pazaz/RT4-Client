@@ -6,10 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static173 {
 
-	@OriginalMember(owner = "client!nk", name = "d", descriptor = "[I")
-	public static int[] anIntArray367;
-
-    @OriginalMember(owner = "client!nk", name = "a", descriptor = "(Z[J[I)V")
+	@OriginalMember(owner = "client!nk", name = "a", descriptor = "(Z[J[I)V")
 	public static void method3243(@OriginalArg(1) long[] arg0, @OriginalArg(2) int[] arg1) {
 		method436(arg0, 0, arg0.length - 1, arg1);
 	}

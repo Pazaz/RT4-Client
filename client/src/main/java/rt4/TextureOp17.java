@@ -1,170 +1,169 @@
 package rt4;
 
-import java.util.Random;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
-@OriginalClass("client!mc")
+@OriginalClass("client!hk")
 public final class TextureOp17 extends TextureOp {
 
-	@OriginalMember(owner = "client!mc", name = "U", descriptor = "I")
-	private int anInt3670;
+	@OriginalMember(owner = "client!hk", name = "Q", descriptor = "I")
+	private int anInt2543;
 
-	@OriginalMember(owner = "client!mc", name = "V", descriptor = "I")
-	private int anInt3671;
+	@OriginalMember(owner = "client!hk", name = "Z", descriptor = "I")
+	private int anInt2551;
 
-	@OriginalMember(owner = "client!mc", name = "X", descriptor = "[[I")
-	private int[][] anIntArrayArray26;
+	@OriginalMember(owner = "client!hk", name = "cb", descriptor = "I")
+	private int anInt2553;
 
-	@OriginalMember(owner = "client!mc", name = "cb", descriptor = "[I")
-	private int[] anIntArray352;
+	@OriginalMember(owner = "client!hk", name = "gb", descriptor = "I")
+	private int anInt2554;
 
-	@OriginalMember(owner = "client!mc", name = "jb", descriptor = "I")
-	private int anInt3679;
+	@OriginalMember(owner = "client!hk", name = "ib", descriptor = "I")
+	private int anInt2556;
 
-	@OriginalMember(owner = "client!mc", name = "sb", descriptor = "[[I")
-	private int[][] anIntArrayArray27;
+	@OriginalMember(owner = "client!hk", name = "jb", descriptor = "I")
+	private int anInt2557;
 
-	@OriginalMember(owner = "client!mc", name = "P", descriptor = "I")
-	private int anInt3667 = 204;
+	@OriginalMember(owner = "client!hk", name = "T", descriptor = "I")
+	private int anInt2546 = 0;
 
-	@OriginalMember(owner = "client!mc", name = "bb", descriptor = "I")
-	private int anInt3673 = 1024;
+	@OriginalMember(owner = "client!hk", name = "U", descriptor = "I")
+	private int anInt2547 = 0;
 
-	@OriginalMember(owner = "client!mc", name = "eb", descriptor = "I")
-	private int anInt3675 = 0;
+	@OriginalMember(owner = "client!hk", name = "X", descriptor = "I")
+	private int anInt2549 = 0;
 
-	@OriginalMember(owner = "client!mc", name = "lb", descriptor = "I")
-	private int anInt3681 = 409;
-
-	@OriginalMember(owner = "client!mc", name = "hb", descriptor = "I")
-	private int anInt3677 = 8;
-
-	@OriginalMember(owner = "client!mc", name = "W", descriptor = "I")
-	private int anInt3672 = 81;
-
-	@OriginalMember(owner = "client!mc", name = "ub", descriptor = "I")
-	private int anInt3685 = 4;
-
-	@OriginalMember(owner = "client!mc", name = "ib", descriptor = "I")
-	private int anInt3678 = 1024;
-
-	@OriginalMember(owner = "client!mc", name = "<init>", descriptor = "()V")
+	@OriginalMember(owner = "client!hk", name = "<init>", descriptor = "()V")
 	public TextureOp17() {
-		super(0, true);
+		super(1, false);
 	}
 
-	@OriginalMember(owner = "client!mc", name = "e", descriptor = "(I)V")
+	@OriginalMember(owner = "client!hk", name = "a", descriptor = "(ILclient!wa;Z)V")
 	@Override
-	public final void method4630() {
-		this.method2908();
-	}
-
-	@OriginalMember(owner = "client!mc", name = "a", descriptor = "(ILclient!wa;Z)V")
-	@Override
-	public final void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
+	public final void decode(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		if (arg0 == 0) {
-			this.anInt3685 = arg1.g1();
+			this.anInt2546 = arg1.g2b();
 		} else if (arg0 == 1) {
-			this.anInt3677 = arg1.g1();
+			this.anInt2549 = (arg1.g1b() << 12) / 100;
 		} else if (arg0 == 2) {
-			this.anInt3681 = arg1.g2();
-		} else if (arg0 == 3) {
-			this.anInt3667 = arg1.g2();
-		} else if (arg0 == 4) {
-			this.anInt3678 = arg1.g2();
-		} else if (arg0 == 5) {
-			this.anInt3675 = arg1.g2();
-		} else if (arg0 == 6) {
-			this.anInt3672 = arg1.g2();
-		} else if (arg0 == 7) {
-			this.anInt3673 = arg1.g2();
+			this.anInt2547 = (arg1.g1b() << 12) / 100;
 		}
 	}
 
-	@OriginalMember(owner = "client!mc", name = "i", descriptor = "(I)V")
-	private void method2908() {
-		@Pc(8) Random local8 = new Random((long) this.anInt3677);
-		this.anInt3670 = 4096 / this.anInt3677;
-		this.anInt3671 = this.anInt3672 / 2;
-		this.anIntArrayArray26 = new int[this.anInt3677][this.anInt3685 + 1];
-		@Pc(34) int local34 = this.anInt3670 / 2;
-		this.anIntArray352 = new int[this.anInt3677 + 1];
-		this.anIntArrayArray27 = new int[this.anInt3677][this.anInt3685];
-		this.anInt3679 = 4096 / this.anInt3685;
-		this.anIntArray352[0] = 0;
-		@Pc(64) int local64 = this.anInt3679 / 2;
-		for (@Pc(66) int local66 = 0; local66 < this.anInt3677; local66++) {
-			@Pc(82) int local82;
-			@Pc(94) int local94;
-			if (local66 > 0) {
-				local82 = this.anInt3670;
-				local94 = (Static171.method3219(4096, local8) - 2048) * this.anInt3667 >> 12;
-				@Pc(102) int local102 = local82 + (local94 * local34 >> 12);
-				this.anIntArray352[local66] = this.anIntArray352[local66 - 1] + local102;
-			}
-			this.anIntArrayArray26[local66][0] = 0;
-			for (local82 = 0; local82 < this.anInt3685; local82++) {
-				if (local82 > 0) {
-					local94 = this.anInt3679;
-					@Pc(150) int local150 = (Static171.method3219(4096, local8) - 2048) * this.anInt3681 >> 12;
-					local94 += local64 * local150 >> 12;
-					this.anIntArrayArray26[local66][local82] = this.anIntArrayArray26[local66][local82 - 1] + local94;
-				}
-				this.anIntArrayArray27[local66][local82] = this.anInt3673 <= 0 ? 4096 : 4096 - Static171.method3219(this.anInt3673, local8);
-			}
-			this.anIntArrayArray26[local66][this.anInt3685] = 4096;
+	@OriginalMember(owner = "client!hk", name = "a", descriptor = "(IIII)V")
+	private void method1991(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2) {
+		@Pc(35) int local35 = arg0 <= 2048 ? arg0 * (arg1 + 4096) >> 12 : arg0 + arg1 - (arg0 * arg1 >> 12);
+		if (local35 <= 0) {
+			this.anInt2554 = this.anInt2543 = this.anInt2553 = arg0;
+			return;
 		}
-		this.anIntArray352[this.anInt3677] = 4096;
+		@Pc(44) int local44 = arg2 * 6;
+		@Pc(51) int local51 = arg0 + arg0 - local35;
+		@Pc(55) int local55 = local44 >> 12;
+		@Pc(64) int local64 = (local35 - local51 << 12) / local35;
+		@Pc(70) int local70 = local44 - (local55 << 12);
+		@Pc(78) int local78 = local35 * local64 >> 12;
+		@Pc(84) int local84 = local78 * local70 >> 12;
+		@Pc(88) int local88 = local84 + local51;
+		@Pc(93) int local93 = local35 - local84;
+		if (local55 == 0) {
+			this.anInt2553 = local51;
+			this.anInt2554 = local35;
+			this.anInt2543 = local88;
+		} else if (local55 == 1) {
+			this.anInt2553 = local51;
+			this.anInt2543 = local35;
+			this.anInt2554 = local93;
+		} else if (local55 == 2) {
+			this.anInt2554 = local51;
+			this.anInt2543 = local35;
+			this.anInt2553 = local88;
+		} else if (local55 == 3) {
+			this.anInt2543 = local93;
+			this.anInt2553 = local35;
+			this.anInt2554 = local51;
+		} else if (local55 == 4) {
+			this.anInt2553 = local35;
+			this.anInt2554 = local88;
+			this.anInt2543 = local51;
+		} else if (local55 == 5) {
+			this.anInt2543 = local51;
+			this.anInt2554 = local35;
+			this.anInt2553 = local93;
+		}
 	}
 
-	@OriginalMember(owner = "client!mc", name = "a", descriptor = "(IB)[I")
-	@Override
-	public final int[] method4626(@OriginalArg(0) int arg0) {
-		@Pc(11) int[] local11 = this.aClass121_41.method3445(arg0);
-		if (this.aClass121_41.invalid) {
-			@Pc(18) int local18 = 0;
-			@Pc(25) int local25;
-			for (local25 = Static10.anIntArray153[arg0] + this.anInt3675; local25 < 0; local25 += 4096) {
-			}
-			while (local25 > 4096) {
-				local25 -= 4096;
-			}
-			while (this.anInt3677 > local18 && local25 >= this.anIntArray352[local18]) {
-				local18++;
-			}
-			@Pc(60) int local60 = local18 - 1;
-			@Pc(65) int local65 = this.anIntArray352[local18];
-			@Pc(74) boolean local74 = (local18 & 0x1) == 0;
-			@Pc(81) int local81 = this.anIntArray352[local18 - 1];
-			if (local81 + this.anInt3671 < local25 && local65 - this.anInt3671 > local25) {
-				for (@Pc(100) int local100 = 0; local100 < Static10.anInt4457; local100++) {
-					@Pc(105) int local105 = 0;
-					@Pc(114) int local114 = local74 ? this.anInt3678 : -this.anInt3678;
-					@Pc(126) int local126;
-					for (local126 = Static173.anIntArray367[local100] + (this.anInt3679 * local114 >> 12); local126 < 0; local126 += 4096) {
-					}
-					while (local126 > 4096) {
-						local126 -= 4096;
-					}
-					while (this.anInt3685 > local105 && local126 >= this.anIntArrayArray26[local60][local105]) {
-						local105++;
-					}
-					@Pc(172) int local172 = this.anIntArrayArray26[local60][local105];
-					@Pc(176) int local176 = local105 - 1;
-					@Pc(183) int local183 = this.anIntArrayArray26[local60][local176];
-					if (local183 + this.anInt3671 < local126 && local172 - this.anInt3671 > local126) {
-						local11[local100] = this.anIntArrayArray27[local60][local176];
-					} else {
-						local11[local100] = 0;
-					}
-				}
+	@OriginalMember(owner = "client!hk", name = "a", descriptor = "(BIII)V")
+	private void method1992(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
+		@Pc(12) int local12 = arg0 > arg1 ? arg0 : arg1;
+		@Pc(31) int local31 = arg2 <= local12 ? local12 : arg2;
+		@Pc(38) int local38 = arg1 > arg0 ? arg0 : arg1;
+		@Pc(49) int local49 = arg2 >= local38 ? local38 : arg2;
+		@Pc(54) int local54 = local31 - local49;
+		if (local54 > 0) {
+			@Pc(65) int local65 = (local31 - arg1 << 12) / local54;
+			@Pc(74) int local74 = (local31 - arg0 << 12) / local54;
+			@Pc(83) int local83 = (local31 - arg2 << 12) / local54;
+			if (arg0 == local31) {
+				this.anInt2551 = local49 == arg1 ? local83 + 20480 : -local65 + 4096;
+			} else if (local31 == arg1) {
+				this.anInt2551 = local49 == arg2 ? local74 + 4096 : -local83 + 12288;
 			} else {
-				ArrayUtils.fill(local11, 0, Static10.anInt4457, 0);
+				this.anInt2551 = local49 == arg0 ? local65 + 12288 : -local74 + 20480;
+			}
+			this.anInt2551 /= 6;
+		} else {
+			this.anInt2551 = 0;
+		}
+		this.anInt2556 = (local49 + local31) / 2;
+		if (this.anInt2556 > 0 && this.anInt2556 < 4096) {
+			this.anInt2557 = (local54 << 12) / (this.anInt2556 > 2048 ? 8192 - this.anInt2556 * 2 : this.anInt2556 * 2);
+		} else {
+			this.anInt2557 = 0;
+		}
+	}
+
+	@OriginalMember(owner = "client!hk", name = "b", descriptor = "(II)[[I")
+	@Override
+	public final int[][] getColorOutput(@OriginalArg(1) int arg0) {
+		@Pc(17) int[][] local17 = this.colorImageCache.get(arg0);
+		if (this.colorImageCache.invalid) {
+			@Pc(28) int[][] local28 = this.getChildColorOutput(arg0, 0);
+			@Pc(32) int[] local32 = local28[0];
+			@Pc(36) int[] local36 = local28[1];
+			@Pc(40) int[] local40 = local28[2];
+			@Pc(44) int[] local44 = local17[1];
+			@Pc(48) int[] local48 = local17[2];
+			@Pc(52) int[] local52 = local17[0];
+			for (@Pc(54) int local54 = 0; local54 < Texture.width; local54++) {
+				this.method1992(local32[local54], local36[local54], local40[local54]);
+				this.anInt2556 += this.anInt2547;
+				if (this.anInt2556 < 0) {
+					this.anInt2556 = 0;
+				}
+				this.anInt2557 += this.anInt2549;
+				if (this.anInt2556 > 4096) {
+					this.anInt2556 = 4096;
+				}
+				if (this.anInt2557 < 0) {
+					this.anInt2557 = 0;
+				}
+				if (this.anInt2557 > 4096) {
+					this.anInt2557 = 4096;
+				}
+				for (this.anInt2551 += this.anInt2546; this.anInt2551 < 0; this.anInt2551 += 4096) {
+				}
+				while (this.anInt2551 > 4096) {
+					this.anInt2551 -= 4096;
+				}
+				this.method1991(this.anInt2556, this.anInt2557, this.anInt2551);
+				local52[local54] = this.anInt2554;
+				local44[local54] = this.anInt2543;
+				local48[local54] = this.anInt2553;
 			}
 		}
-		return local11;
+		return local17;
 	}
 }
