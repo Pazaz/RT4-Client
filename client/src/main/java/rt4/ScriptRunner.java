@@ -385,9 +385,9 @@ public final class ScriptRunner {
 		@Pc(44) byte op = -1;
 		@Pc(58) int cycles;
 		try {
-			intLocals = new int[script.anInt4667];
+			intLocals = new int[script.intLocals];
 			@Pc(50) int intLocalIndex = 0;
-			stringLocals = new JagString[script.anInt4671];
+			stringLocals = new JagString[script.stringLocals];
 			@Pc(56) int stringLocalIndex = 0;
 			@Pc(77) int id;
 			@Pc(194) JagString value;
@@ -571,16 +571,16 @@ public final class ScriptRunner {
 					if (opcode == 40) {
 						id = intOperands[pc];
 						@Pc(642) ClientScript local642 = ClientScriptList.get(id);
-						@Pc(646) int[] local646 = new int[local642.anInt4667];
-						@Pc(650) JagString[] local650 = new JagString[local642.anInt4671];
-						for (local652 = 0; local652 < local642.anInt4665; local652++) {
-							local646[local652] = intStack[local652 + isp - local642.anInt4665];
+						@Pc(646) int[] local646 = new int[local642.intLocals];
+						@Pc(650) JagString[] local650 = new JagString[local642.stringLocals];
+						for (local652 = 0; local652 < local642.intArgs; local652++) {
+							local646[local652] = intStack[local652 + isp - local642.intArgs];
 						}
-						for (local652 = 0; local652 < local642.anInt4669; local652++) {
-							local650[local652] = stringStack[local652 + ssp - local642.anInt4669];
+						for (local652 = 0; local652 < local642.stringArgs; local652++) {
+							local650[local652] = stringStack[local652 + ssp - local642.stringArgs];
 						}
-						isp -= local642.anInt4665;
-						ssp -= local642.anInt4669;
+						isp -= local642.intArgs;
+						ssp -= local642.stringArgs;
 						@Pc(705) GoSubFrame local705 = new GoSubFrame();
 						local705.stringLocals = stringLocals;
 						local705.intLocals = intLocals;
@@ -667,7 +667,7 @@ public final class ScriptRunner {
 						continue;
 					}
 					if (opcode == 51) {
-						@Pc(992) HashTable local992 = script.aClass133Array1[intOperands[pc]];
+						@Pc(992) HashTable local992 = script.switchTables[intOperands[pc]];
 						isp--;
 						@Pc(1002) IntNode local1002 = (IntNode) local992.get((long) intStack[isp]);
 						if (local1002 != null) {
