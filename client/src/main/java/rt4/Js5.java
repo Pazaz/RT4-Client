@@ -44,8 +44,8 @@ public final class Js5 {
 			return false;
 		}
 		@Pc(20) boolean success = true;
-		for (@Pc(22) int i = 0; i < this.index.anIntArray269.length; i++) {
-			@Pc(38) int groupId = this.index.anIntArray269[i];
+		for (@Pc(22) int i = 0; i < this.index.groupIds.length; i++) {
+			@Pc(38) int groupId = this.index.groupIds[i];
 			if (this.packed[groupId] == null) {
 				this.fetchGroup(groupId);
 				if (this.packed[groupId] == null) {

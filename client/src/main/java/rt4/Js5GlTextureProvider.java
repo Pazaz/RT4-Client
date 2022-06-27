@@ -9,10 +9,10 @@ import org.openrs2.deob.annotation.Pc;
 public final class Js5GlTextureProvider implements TextureProvider {
 
 	@OriginalMember(owner = "client!nk", name = "z", descriptor = "Z")
-	private boolean aBoolean200 = false;
+	private boolean lowDetail = false;
 
 	@OriginalMember(owner = "client!nk", name = "J", descriptor = "I")
-	private int anInt4186 = 50;
+	private int capacity = 50;
 
 	@OriginalMember(owner = "client!nk", name = "b", descriptor = "Lclient!ve;")
 	private final Js5 aClass153_72;
@@ -21,10 +21,10 @@ public final class Js5GlTextureProvider implements TextureProvider {
 	private final Js5 aClass153_73;
 
 	@OriginalMember(owner = "client!nk", name = "P", descriptor = "Lclient!gn;")
-	private LruHashTable aClass54_12;
+	private LruHashTable glTextures;
 
 	@OriginalMember(owner = "client!nk", name = "G", descriptor = "Lclient!gn;")
-	private LruHashTable aClass54_11;
+	private LruHashTable solidColorSprites;
 
 	@OriginalMember(owner = "client!nk", name = "Q", descriptor = "[B")
 	private final byte[] aByteArray61;
@@ -59,15 +59,16 @@ public final class Js5GlTextureProvider implements TextureProvider {
 	@OriginalMember(owner = "client!nk", name = "<init>", descriptor = "(Lclient!ve;Lclient!ve;Lclient!ve;IZ)V")
 	public Js5GlTextureProvider(@OriginalArg(0) Js5 arg0, @OriginalArg(1) Js5 arg1, @OriginalArg(2) Js5 arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4) {
 		this.aClass153_72 = arg2;
-		this.aBoolean200 = arg4;
-		this.anInt4186 = arg3;
+		this.lowDetail = arg4;
+		this.capacity = arg3;
 		this.aClass153_73 = arg0;
-		this.aClass54_12 = new LruHashTable(this.anInt4186);
+		this.glTextures = new LruHashTable(this.capacity);
 		if (GlRenderer.enabled) {
-			this.aClass54_11 = new LruHashTable(this.anInt4186);
+			this.solidColorSprites = new LruHashTable(this.capacity);
 		} else {
-			this.aClass54_11 = null;
+			this.solidColorSprites = null;
 		}
+
 		@Pc(51) Buffer local51 = new Buffer(arg1.fetchFile(0, 0));
 		@Pc(55) int local55 = local51.g2();
 		this.aByteArray61 = new byte[local55];
@@ -133,7 +134,7 @@ public final class Js5GlTextureProvider implements TextureProvider {
 
 	@OriginalMember(owner = "client!nk", name = "a", descriptor = "(ZI)V")
 	public final void method3239(@OriginalArg(1) int arg0) {
-		for (@Pc(19) GlTexture local19 = (GlTexture) this.aClass54_12.method1808(); local19 != null; local19 = (GlTexture) this.aClass54_12.method1813()) {
+		for (@Pc(19) GlTexture local19 = (GlTexture) this.glTextures.method1808(); local19 != null; local19 = (GlTexture) this.glTextures.method1813()) {
 			if (local19.aBoolean287) {
 				local19.method4300(arg0);
 				local19.aBoolean287 = false;
@@ -145,7 +146,7 @@ public final class Js5GlTextureProvider implements TextureProvider {
 	@Override
 	public final int[] method3235(@OriginalArg(1) int arg0) {
 		@Pc(16) GlTexture local16 = this.method3242(arg0);
-		return local16 == null ? null : local16.method4297(this.aBoolean200 || this.aBooleanArray89[arg0], this, this.aClass153_72);
+		return local16 == null ? null : local16.method4297(this.lowDetail || this.aBooleanArray89[arg0], this, this.aClass153_72);
 	}
 
 	@OriginalMember(owner = "client!nk", name = "a", descriptor = "(IZ)V")
@@ -155,7 +156,7 @@ public final class Js5GlTextureProvider implements TextureProvider {
 		@Pc(23) boolean local23 = false;
 		@Pc(28) GlTexture local28 = this.method3242(arg0);
 		if (local28 != null) {
-			local23 = local28.method4296(this.aClass153_72, this, this.aBoolean200 || this.aBooleanArray89[arg0]);
+			local23 = local28.method4296(this.aClass153_72, this, this.lowDetail || this.aBooleanArray89[arg0]);
 		}
 		if (!local23) {
 			@Pc(56) GlSolidColorTexture local56 = this.method3244(arg0);
@@ -165,7 +166,7 @@ public final class Js5GlTextureProvider implements TextureProvider {
 
 	@OriginalMember(owner = "client!nk", name = "i", descriptor = "(II)Lclient!uh;")
 	private GlTexture method3242(@OriginalArg(0) int arg0) {
-		@Pc(14) GlTexture local14 = (GlTexture) this.aClass54_12.get((long) arg0);
+		@Pc(14) GlTexture local14 = (GlTexture) this.glTextures.get((long) arg0);
 		if (local14 != null) {
 			return local14;
 		}
@@ -175,7 +176,7 @@ public final class Js5GlTextureProvider implements TextureProvider {
 		} else {
 			@Pc(41) Buffer local41 = new Buffer(local30);
 			local14 = new GlTexture(local41);
-			this.aClass54_12.put(local14, (long) arg0);
+			this.glTextures.put(local14, (long) arg0);
 			return local14;
 		}
 	}
@@ -206,10 +207,10 @@ public final class Js5GlTextureProvider implements TextureProvider {
 
 	@OriginalMember(owner = "client!nk", name = "j", descriptor = "(II)Lclient!sd;")
 	private GlSolidColorTexture method3244(@OriginalArg(1) int arg0) {
-		@Pc(19) GlSolidColorTexture local19 = (GlSolidColorTexture) this.aClass54_11.get((long) arg0);
+		@Pc(19) GlSolidColorTexture local19 = (GlSolidColorTexture) this.solidColorSprites.get((long) arg0);
 		if (local19 == null) {
 			local19 = new GlSolidColorTexture(this.aShortArray59[arg0] & 0xFFFF);
-			this.aClass54_11.put(local19, (long) arg0);
+			this.solidColorSprites.put(local19, (long) arg0);
 			return local19;
 		} else {
 			return local19;
@@ -225,7 +226,7 @@ public final class Js5GlTextureProvider implements TextureProvider {
 
 	@OriginalMember(owner = "client!nk", name = "b", descriptor = "(ZI)V")
 	public final void method3245(@OriginalArg(0) boolean arg0) {
-		this.aBoolean200 = arg0;
+		this.lowDetail = arg0;
 		this.clear();
 	}
 
@@ -243,9 +244,9 @@ public final class Js5GlTextureProvider implements TextureProvider {
 
 	@OriginalMember(owner = "client!nk", name = "b", descriptor = "(I)V")
 	public final void clear() {
-		this.aClass54_12.clear();
-		if (this.aClass54_11 != null) {
-			this.aClass54_11.clear();
+		this.glTextures.clear();
+		if (this.solidColorSprites != null) {
+			this.solidColorSprites.clear();
 		}
 	}
 
@@ -258,17 +259,17 @@ public final class Js5GlTextureProvider implements TextureProvider {
 	@OriginalMember(owner = "client!nk", name = "b", descriptor = "(BI)Z")
 	@Override
 	public final boolean isLowDetail(@OriginalArg(1) int arg0) {
-		return this.aBoolean200 || this.aBooleanArray89[arg0];
+		return this.lowDetail || this.aBooleanArray89[arg0];
 	}
 
 	@OriginalMember(owner = "client!nk", name = "k", descriptor = "(II)V")
 	public final void method3248(@OriginalArg(0) int arg0) {
-		this.anInt4186 = arg0;
-		this.aClass54_12 = new LruHashTable(this.anInt4186);
+		this.capacity = arg0;
+		this.glTextures = new LruHashTable(this.capacity);
 		if (GlRenderer.enabled) {
-			this.aClass54_11 = new LruHashTable(this.anInt4186);
+			this.solidColorSprites = new LruHashTable(this.capacity);
 		} else {
-			this.aClass54_11 = null;
+			this.solidColorSprites = null;
 		}
 	}
 
@@ -286,7 +287,7 @@ public final class Js5GlTextureProvider implements TextureProvider {
 			return null;
 		} else {
 			local8.aBoolean287 = true;
-			return local8.method4295(this, arg1, this.aClass153_72, this.aBoolean200 || this.aBooleanArray89[arg0]);
+			return local8.method4295(this, arg1, this.aClass153_72, this.lowDetail || this.aBooleanArray89[arg0]);
 		}
 	}
 }

@@ -32,22 +32,22 @@ public final class SoftLruHashTable {
 
 	@OriginalMember(owner = "client!gk", name = "a", descriptor = "(Lclient!rg;Lclient!rg;B)V")
 	public static void method1772(@OriginalArg(0) SecondaryNode arg0, @OriginalArg(1) SecondaryNode arg1) {
-		if (arg1.aClass3_Sub2_66 != null) {
-			arg1.method4365();
+		if (arg1.secondaryPrev != null) {
+			arg1.unlinkSecondary();
 		}
-		arg1.aClass3_Sub2_66 = arg0;
-		arg1.aClass3_Sub2_67 = arg0.aClass3_Sub2_67;
-		arg1.aClass3_Sub2_66.aClass3_Sub2_67 = arg1;
-		arg1.aClass3_Sub2_67.aClass3_Sub2_66 = arg1;
+		arg1.secondaryPrev = arg0;
+		arg1.secondaryNext = arg0.secondaryNext;
+		arg1.secondaryPrev.secondaryNext = arg1;
+		arg1.secondaryNext.secondaryPrev = arg1;
 	}
 
 	@OriginalMember(owner = "client!n", name = "a", descriptor = "(BLjava/lang/Object;J)V")
 	public final void put(@OriginalArg(1) Object arg0, @OriginalArg(2) long arg1) {
 		this.method3098(arg1);
 		if (this.anInt3966 == 0) {
-			@Pc(26) ReferenceNode local26 = (ReferenceNode) this.aClass16_8.method796();
+			@Pc(26) ReferenceNode local26 = (ReferenceNode) this.aClass16_8.removeHead();
 			local26.unlink();
-			local26.method4365();
+			local26.unlinkSecondary();
 		} else {
 			this.anInt3966--;
 		}
@@ -62,7 +62,7 @@ public final class SoftLruHashTable {
 		@Pc(6) ReferenceNode local6 = (ReferenceNode) this.aClass133_18.get(arg0);
 		if (local6 != null) {
 			local6.unlink();
-			local6.method4365();
+			local6.unlinkSecondary();
 			this.anInt3966++;
 		}
 	}
@@ -70,7 +70,7 @@ public final class SoftLruHashTable {
 	@OriginalMember(owner = "client!n", name = "a", descriptor = "(I)I")
 	public final int method3100() {
 		@Pc(10) int local10 = 0;
-		for (@Pc(16) ReferenceNode local16 = (ReferenceNode) this.aClass16_8.method795(); local16 != null; local16 = (ReferenceNode) this.aClass16_8.method797()) {
+		for (@Pc(16) ReferenceNode local16 = (ReferenceNode) this.aClass16_8.head(); local16 != null; local16 = (ReferenceNode) this.aClass16_8.next()) {
 			if (!local16.method3619()) {
 				local10++;
 			}
@@ -83,11 +83,11 @@ public final class SoftLruHashTable {
 		if (ReferenceNodeFactory.SOFT_REFERENCE_NODE_FACTORY == null) {
 			return;
 		}
-		for (@Pc(9) ReferenceNode local9 = (ReferenceNode) this.aClass16_8.method795(); local9 != null; local9 = (ReferenceNode) this.aClass16_8.method797()) {
+		for (@Pc(9) ReferenceNode local9 = (ReferenceNode) this.aClass16_8.head(); local9 != null; local9 = (ReferenceNode) this.aClass16_8.next()) {
 			if (local9.method3619()) {
 				if (local9.method3618() == null) {
 					local9.unlink();
-					local9.method4365();
+					local9.unlinkSecondary();
 					this.anInt3966++;
 				}
 			} else if (++local9.secondaryKey > (long) arg0) {
@@ -95,17 +95,17 @@ public final class SoftLruHashTable {
 				this.aClass133_18.put(local33, local9.key);
 				method1772(local9, local33);
 				local9.unlink();
-				local9.method4365();
+				local9.unlinkSecondary();
 			}
 		}
 	}
 
 	@OriginalMember(owner = "client!n", name = "b", descriptor = "(B)V")
 	public final void method3103() {
-		for (@Pc(7) ReferenceNode local7 = (ReferenceNode) this.aClass16_8.method795(); local7 != null; local7 = (ReferenceNode) this.aClass16_8.method797()) {
+		for (@Pc(7) ReferenceNode local7 = (ReferenceNode) this.aClass16_8.head(); local7 != null; local7 = (ReferenceNode) this.aClass16_8.next()) {
 			if (local7.method3619()) {
 				local7.unlink();
-				local7.method4365();
+				local7.unlinkSecondary();
 				this.anInt3966++;
 			}
 		}
@@ -127,7 +127,7 @@ public final class SoftLruHashTable {
 		@Pc(27) Object local27 = local12.method3618();
 		if (local27 == null) {
 			local12.unlink();
-			local12.method4365();
+			local12.unlinkSecondary();
 			this.anInt3966++;
 			return null;
 		}
@@ -137,7 +137,7 @@ public final class SoftLruHashTable {
 			this.aClass16_8.addTail(local53);
 			local53.secondaryKey = 0L;
 			local12.unlink();
-			local12.method4365();
+			local12.unlinkSecondary();
 		} else {
 			this.aClass16_8.addTail(local12);
 			local12.secondaryKey = 0L;

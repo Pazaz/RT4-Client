@@ -7,13 +7,13 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class Js5CacheRequest extends Js5Request {
 
 	@OriginalMember(owner = "client!c", name = "X", descriptor = "Lclient!ge;")
-	public Cache aClass49_3;
+	public Cache cache;
 
 	@OriginalMember(owner = "client!c", name = "ab", descriptor = "[B")
-	public byte[] aByteArray11;
+	public byte[] data;
 
 	@OriginalMember(owner = "client!c", name = "cb", descriptor = "I")
-	public int anInt824;
+	public int type;
 
 	@OriginalMember(owner = "client!c", name = "b", descriptor = "(Z)[B")
 	@Override
@@ -21,12 +21,12 @@ public final class Js5CacheRequest extends Js5Request {
 		if (this.incomplete) {
 			throw new RuntimeException();
 		}
-		return this.aByteArray11;
+		return this.data;
 	}
 
 	@OriginalMember(owner = "client!c", name = "a", descriptor = "(Z)I")
 	@Override
-	public final int method3553() {
+	public final int getPercentageComplete() {
 		return this.incomplete ? 0 : 100;
 	}
 }
