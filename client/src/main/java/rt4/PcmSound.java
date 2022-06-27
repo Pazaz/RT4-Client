@@ -40,14 +40,14 @@ public final class PcmSound extends Sound {
 	}
 
 	@OriginalMember(owner = "client!kj", name = "a", descriptor = "(Lclient!vj;)Lclient!kj;")
-	public final PcmSound resample(@OriginalArg(0) Resampler arg0) {
+	public final PcmSound resample(@OriginalArg(0) PcmResampler arg0) {
 		this.samples = arg0.method4520(this.samples);
-		this.rate = arg0.method4524(this.rate);
+		this.rate = arg0.scaleRate(this.rate);
 		if (this.start == this.end) {
-			this.start = this.end = arg0.method4525(this.start);
+			this.start = this.end = arg0.scalePosition(this.start);
 		} else {
-			this.start = arg0.method4525(this.start);
-			this.end = arg0.method4525(this.end);
+			this.start = arg0.scalePosition(this.start);
+			this.end = arg0.scalePosition(this.end);
 			if (this.start == this.end) {
 				this.start--;
 			}
