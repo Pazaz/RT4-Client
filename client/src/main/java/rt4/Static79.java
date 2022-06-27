@@ -29,7 +29,7 @@ public final class Static79 {
 		if (arg0 >= 0) {
 			@Pc(92) boolean local92 = Preferences.showGroundDecorations;
 			Preferences.showGroundDecorations = true;
-			LoginManager.method3397(local39, false, arg2, false, PathFinder.collisionMaps[arg2], arg0, arg5, arg1, arg4, arg3);
+			SceneGraph.method3397(local39, false, arg2, false, PathFinder.collisionMaps[arg2], arg0, arg5, arg1, arg4, arg3);
 			Preferences.showGroundDecorations = local92;
 		}
 	}

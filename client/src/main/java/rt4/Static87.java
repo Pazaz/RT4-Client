@@ -244,7 +244,7 @@ public final class Static87 {
 								local556 = local276 * color + local270 * cardMemory >> 11;
 								local563 = PlayerList.self.xFine + local556 >> 7;
 								local571 = PlayerList.self.zFine - objId >> 7;
-								if (Static241.aBoolean302 && (MiniMenu.anInt4999 & 0x40) != 0) {
+								if (MiniMenu.aBoolean302 && (MiniMenu.anInt4999 & 0x40) != 0) {
 									@Pc(583) Component local583 = InterfaceList.method1418(MiniMenu.anInt2512, MiniMenu.anInt506);
 									if (local583 == null) {
 										MiniMenu.method1294();
@@ -416,7 +416,7 @@ public final class Static87 {
 												if (arg0 < x + 32 && x < arg4 && arg6 < y + 32 && y < arg7 || component == InterfaceList.clickedInventoryComponent && Static4.mouseOverInventoryObjectIndex == local270) {
 													@Pc(1476) Sprite sprite;
 
-													if (MiniMenu.anInt5014 == 1 && Static185.anInt4370 == local270 && component.id == MiniMap.anInt5062) {
+													if (MiniMenu.anInt5014 == 1 && MiniMenu.anInt4370 == local270 && component.id == MiniMap.anInt5062) {
 														sprite = Inv.getObjectSprite(2, objId, component.objDrawText, component.objCounts[local270], 0);
 													} else {
 														sprite = Inv.getObjectSprite(1, objId, component.objDrawText, component.objCounts[local270], 3153952);

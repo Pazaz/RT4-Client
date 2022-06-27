@@ -104,6 +104,8 @@ public class Protocol {
 	public static int anInt4422 = 0;
     @OriginalMember(owner = "client!fe", name = "R", descriptor = "Z")
     public static boolean prevFocus = true;
+    @OriginalMember(owner = "client!rm", name = "c", descriptor = "I")
+    public static int anInt4941 = 1;
 
     @OriginalMember(owner = "client!g", name = "b", descriptor = "(B)V")
     public static void readLocationPacket() {
@@ -132,7 +134,7 @@ public class Protocol {
                     SceneGraph.objStacks[Player.level][local19][local27] = new LinkedList();
                 }
                 SceneGraph.objStacks[Player.level][local19][local27].addTail(new ObjStackNode(local122));
-                Static220.spawnGroundObject(local27, local19);
+                spawnGroundObject(local27, local19);
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_121) {
             int local15 = inboundBuffer.g1();
@@ -233,7 +235,7 @@ public class Protocol {
                             break;
                         }
                     }
-                    Static220.spawnGroundObject(local19, local23);
+                    spawnGroundObject(local19, local23);
                 }
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_135) {
@@ -251,7 +253,7 @@ public class Protocol {
                     SceneGraph.objStacks[Player.level][local19][local27] = new LinkedList();
                 }
                 SceneGraph.objStacks[Player.level][local19][local27].addTail(new ObjStackNode(local812));
-                Static220.spawnGroundObject(local27, local19);
+                spawnGroundObject(local27, local19);
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_16) {
             int local15 = inboundBuffer.g1();
@@ -381,7 +383,7 @@ public class Protocol {
                     if (local1565.head() == null) {
                         SceneGraph.objStacks[Player.level][local23][local19] = null;
                     }
-                    Static220.spawnGroundObject(local19, local23);
+                    spawnGroundObject(local19, local23);
                 }
             }
         }
@@ -554,7 +556,7 @@ public class Protocol {
                     @Pc(106) int local106 = -1;
                     @Pc(127) JagString message;
                     if (local35) {
-                        @Pc(112) QuickChatPhrase phrase = Static264.method3568(chatBuffer);
+                        @Pc(112) QuickChatPhrase phrase = QuickChatPhraseType.method3568(chatBuffer);
                         int1 &= 0x7FFF;
                         local106 = phrase.id;
                         message = phrase.type.decodeMessage(chatBuffer);
@@ -1495,7 +1497,7 @@ public class Protocol {
                 for (int z = SceneGraph.currentChunkZ; z < SceneGraph.currentChunkZ + 8; z++) {
                     if (SceneGraph.objStacks[Player.level][x][z] != null) {
                         SceneGraph.objStacks[Player.level][x][z] = null;
-                        Static220.spawnGroundObject(z, x);
+                        spawnGroundObject(z, x);
                     }
                 }
             }
@@ -2419,9 +2421,9 @@ public class Protocol {
                         y = -1;
                         x = -1;
                     }
-                    if (Static264.mouseRecorderPrevX != x || y != MouseRecorder.mouseRecorderPrevY) {
-                        dx = x - Static264.mouseRecorderPrevX;
-                        Static264.mouseRecorderPrevX = x;
+                    if (MouseRecorder.mouseRecorderPrevX != x || y != MouseRecorder.mouseRecorderPrevY) {
+                        dx = x - MouseRecorder.mouseRecorderPrevX;
+                        MouseRecorder.mouseRecorderPrevX = x;
                         dy = y - MouseRecorder.mouseRecorderPrevY;
                         MouseRecorder.mouseRecorderPrevY = y;
                         if (anInt4762 < 8 && dx >= -32 && dx <= 31 && dy >= -32 && dy <= 31) {
@@ -2531,7 +2533,7 @@ public class Protocol {
             outboundBuffer.p4(Preferences.toInt());
             Preferences.sentToServer = true;
         }
-        LightingManager.method846();
+        SceneGraph.method846();
         if (client.gameState != 30) {
             return;
         }
@@ -2694,7 +2696,7 @@ public class Protocol {
 
             if (Mouse.pressedButton == 0) {
                 if (Static123.draggingClickedInventoryObject && InterfaceList.clickedInventoryComponentCycle >= 5) {
-                    if (InterfaceList.clickedInventoryComponent == InterfaceList.mouseOverInventoryInterface && Static4.mouseOverInventoryObjectIndex != Static18.clickedInventoryIndex) {
+                    if (InterfaceList.clickedInventoryComponent == InterfaceList.mouseOverInventoryInterface && Static4.mouseOverInventoryObjectIndex != MiniMenu.clickedInventoryIndex) {
                         component = InterfaceList.clickedInventoryComponent;
                         @Pc(1363) byte inserting = 0;
 
@@ -2702,19 +2704,19 @@ public class Protocol {
                             inserting = 1;
                         }
 
-                        if (component.objTypes[Static18.clickedInventoryIndex] <= 0) {
+                        if (component.objTypes[MiniMenu.clickedInventoryIndex] <= 0) {
                             inserting = 0;
                         }
 
                         if (InterfaceList.getServerActiveProperties(component).isObjReplaceEnabled()) {
                             int newIndex = Static4.mouseOverInventoryObjectIndex;
-                            int currentIndex = Static18.clickedInventoryIndex;
+                            int currentIndex = MiniMenu.clickedInventoryIndex;
                             component.objTypes[currentIndex] = component.objTypes[newIndex];
                             component.objCounts[currentIndex] = component.objCounts[newIndex];
                             component.objTypes[newIndex] = -1;
                             component.objCounts[newIndex] = 0;
                         } else if (inserting == 1) {
-                            int currentIndex = Static18.clickedInventoryIndex;
+                            int currentIndex = MiniMenu.clickedInventoryIndex;
                             int newIndex = Static4.mouseOverInventoryObjectIndex;
                             while (currentIndex != newIndex) {
                                 if (currentIndex > newIndex) {
@@ -2726,12 +2728,12 @@ public class Protocol {
                                 }
                             }
                         } else {
-                            component.swapObjs(Static18.clickedInventoryIndex, Static4.mouseOverInventoryObjectIndex);
+                            component.swapObjs(MiniMenu.clickedInventoryIndex, Static4.mouseOverInventoryObjectIndex);
                         }
                         outboundBuffer.p1isaac(231);
                         outboundBuffer.p2(Static4.mouseOverInventoryObjectIndex);
                         outboundBuffer.ip4(InterfaceList.clickedInventoryComponent.id);
-                        outboundBuffer.p2add(Static18.clickedInventoryIndex);
+                        outboundBuffer.p2add(MiniMenu.clickedInventoryIndex);
                         outboundBuffer.p1sub(inserting);
                     }
                 } else if ((VarpDomain.anInt2952 == 1 || MiniMenu.method4640(MiniMenu.size - 1)) && MiniMenu.size > 2) {
@@ -2892,7 +2894,7 @@ public class Protocol {
                                                 anInt3486 = 0;
                                                 modelId = (int) (Math.random() * 8.0D);
                                                 if ((modelId & 0x4) == 4) {
-                                                    Camera.anInt5161 += Static220.anInt4941;
+                                                    Camera.anInt5161 += anInt4941;
                                                 }
                                                 if ((modelId & 0x2) == 2) {
                                                     Camera.anInt4774 += anInt659;
@@ -2927,13 +2929,13 @@ public class Protocol {
                                                 anInt659 = -2;
                                             }
                                             if (Camera.anInt5161 < -40) {
-                                                Static220.anInt4941 = 1;
+                                                anInt4941 = 1;
                                             }
                                             if (Camera.anInt3291 > 50) {
                                                 Camera.anInt4229 = -2;
                                             }
                                             if (Camera.anInt5161 > 40) {
-                                                Static220.anInt4941 = -1;
+                                                anInt4941 = -1;
                                             }
                                             if (MiniMap.anInt4130 > 10) {
                                                 MiniMap.anInt4262 = -1;
@@ -3443,5 +3445,48 @@ public class Protocol {
         local126.chars = local61;
         local126.length = local51;
         return local126;
+    }
+
+    @OriginalMember(owner = "client!rm", name = "a", descriptor = "(IBI)V")
+    public static void spawnGroundObject(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
+        @Pc(9) LinkedList local9 = SceneGraph.objStacks[Player.level][arg1][arg0];
+        if (local9 == null) {
+            SceneGraph.method3420(Player.level, arg1, arg0);
+            return;
+        }
+        @Pc(28) int local28 = -99999999;
+        @Pc(30) ObjStackNode local30 = null;
+        @Pc(35) ObjStackNode local35;
+        for (local35 = (ObjStackNode) local9.head(); local35 != null; local35 = (ObjStackNode) local9.next()) {
+            @Pc(44) ObjType local44 = ObjTypeList.get(local35.value.type);
+            @Pc(47) int local47 = local44.cost;
+            if (local44.stackable == 1) {
+                local47 *= local35.value.anInt5550 + 1;
+            }
+            if (local28 < local47) {
+                local28 = local47;
+                local30 = local35;
+            }
+        }
+        if (local30 == null) {
+            SceneGraph.method3420(Player.level, arg1, arg0);
+            return;
+        }
+        local9.addHead(local30);
+        @Pc(89) ObjStack local89 = null;
+        @Pc(91) ObjStack local91 = null;
+        for (local35 = (ObjStackNode) local9.head(); local35 != null; local35 = (ObjStackNode) local9.next()) {
+            @Pc(103) ObjStack local103 = local35.value;
+            if (local103.type != local30.value.type) {
+                if (local89 == null) {
+                    local89 = local103;
+                }
+                if (local103.type != local89.type && local91 == null) {
+                    local91 = local103;
+                }
+            }
+        }
+        @Pc(152) long local152 = (long) ((arg0 << 7) + arg1 + 1610612736);
+        SceneGraph.method1543(Player.level, arg1, arg0, SceneGraph.getTileHeight(Player.level, arg1 * 128 + 64, arg0 * 128 + 64), local30.value, local152, local89, local91);
     }
 }

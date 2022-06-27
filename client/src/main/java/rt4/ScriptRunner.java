@@ -232,9 +232,9 @@ public final class ScriptRunner {
 			if (Static176.customCameraActive[4] && Camera.cameraAmplitude[4] + 128 > local59) {
 				local59 = Camera.cameraAmplitude[4] + 128;
 			}
-			Static18.method555(Camera.cameraX, arg0, SceneGraph.getTileHeight(Player.level, PlayerList.self.xFine, PlayerList.self.zFine) - 50, Camera.ZOOM - -(local59 * 3), local57, Camera.cameraZ, local59);
+			Camera.method555(Camera.cameraX, arg0, SceneGraph.getTileHeight(Player.level, PlayerList.self.xFine, PlayerList.self.zFine) - 50, Camera.ZOOM - -(local59 * 3), local57, Camera.cameraZ, local59);
 		}
-		local57 = Static5.anInt40;
+		local57 = Camera.anInt40;
 		local59 = Camera.renderX;
 		@Pc(121) int local121 = Camera.renderZ;
 		@Pc(123) int local123 = Camera.cameraPitch;
@@ -260,7 +260,7 @@ public final class ScriptRunner {
 					Camera.renderZ += local171;
 				}
 				if (local127 == 1) {
-					Static5.anInt40 += local171;
+					Camera.anInt40 += local171;
 				}
 				if (local127 == 0) {
 					Camera.renderX += local171;
@@ -307,9 +307,9 @@ public final class ScriptRunner {
 			}
 			LightingManager.method2394(client.loop, !Preferences.flickeringEffectsOn);
 			GlRenderer.clearColorAndDepthBuffers(local171);
-			MaterialManager.method2731(Camera.cameraPitch, Camera.renderZ, Static5.anInt40, Camera.renderX, Camera.cameraYaw);
+			MaterialManager.method2731(Camera.cameraPitch, Camera.renderZ, Camera.anInt40, Camera.renderX, Camera.cameraYaw);
 			GlRenderer.anInt5323 = client.loop;
-			Static156.method2954(Camera.renderX, Static5.anInt40, Camera.renderZ, Camera.cameraPitch, Camera.cameraYaw, aByteArrayArrayArray15, anIntArray205, anIntArray338, anIntArray518, anIntArray134, anIntArray476, Player.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
+			SceneGraph.method2954(Camera.renderX, Camera.anInt40, Camera.renderZ, Camera.cameraPitch, Camera.cameraYaw, aByteArrayArrayArray15, anIntArray205, anIntArray338, anIntArray518, anIntArray134, anIntArray476, Player.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
 			aBoolean299 = true;
 			LightingManager.method2390();
 			MaterialManager.method2731(0, 0, 0, 0, 0);
@@ -319,7 +319,7 @@ public final class ScriptRunner {
 			Static233.method4000(arg3, arg2, arg0, anInt5029, anInt5029, arg4);
 		} else {
 			SoftwareRaster.fillRect(arg2, arg4, arg3, arg0, 0);
-			Static156.method2954(Camera.renderX, Static5.anInt40, Camera.renderZ, Camera.cameraPitch, Camera.cameraYaw, aByteArrayArrayArray15, anIntArray205, anIntArray338, anIntArray518, anIntArray134, anIntArray476, Player.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
+			SceneGraph.method2954(Camera.renderX, Camera.anInt40, Camera.renderZ, Camera.cameraPitch, Camera.cameraYaw, aByteArrayArrayArray15, anIntArray205, anIntArray338, anIntArray518, anIntArray134, anIntArray476, Player.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
 			client.audioLoop();
 			method3858();
 			method2726(arg4, arg3, arg2, 256, arg0, 256);
@@ -329,7 +329,7 @@ public final class ScriptRunner {
 		Player.method2310(arg3, arg4, arg0, arg2);
 		Camera.cameraPitch = local123;
 		Camera.renderZ = local121;
-		Static5.anInt40 = local57;
+		Camera.anInt40 = local57;
 		Camera.renderX = local59;
 		Camera.cameraYaw = local125;
 		if (aBoolean43 && client.js5NetQueue.getUrgentRequestCount() == 0) {
@@ -1236,7 +1236,7 @@ public final class ScriptRunner {
 		}
 		@Pc(38) int local38 = SceneGraph.getTileHeight(Player.level, arg5, arg2) - arg3;
 		@Pc(42) int local42 = arg2 - Camera.renderZ;
-		@Pc(46) int local46 = local38 - Static5.anInt40;
+		@Pc(46) int local46 = local38 - Camera.anInt40;
 		@Pc(50) int local50 = arg5 - Camera.renderX;
 		@Pc(54) int local54 = MathUtils.sin[Camera.cameraPitch];
 		@Pc(58) int local58 = MathUtils.cos[Camera.cameraPitch];
@@ -5283,7 +5283,7 @@ public final class ScriptRunner {
 													@Pc(10247) WorldInfo local10247;
 													@Pc(10191) World world;
 													if (opcode == Cs2Opcodes.getFirstWorldData) {
-														world = Static18.getFirstWorld();
+														world = WorldList.getFirstWorld();
 														if (world == null) {
 															intStack[isp++] = -1;
 															intStack[isp++] = 0;
