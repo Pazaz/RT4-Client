@@ -28,7 +28,7 @@ public final class Static123 {
 	public static void method2419() {
 		SceneGraph.anInt4870 = 0;
 		label194: for (@Pc(3) int local3 = 0; local3 < SceneGraph.anInt917; local3++) {
-			@Pc(10) Class120 local10 = SceneGraph.aClass120Array1[local3];
+			@Pc(10) SceneGraph_Class120 local10 = SceneGraph.aClass120Array1[local3];
 			@Pc(14) int local14;
 			if (Static8.anIntArray8 != null) {
 				for (local14 = 0; local14 < Static8.anIntArray8.length; local14++) {

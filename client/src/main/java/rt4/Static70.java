@@ -56,9 +56,9 @@ public final class Static70 {
 						local72 = 127;
 					}
 					local95 = (local66 & 0x380) + (arg1 + local66 & 0xFC00) + local72;
-					local53 = Rasteriser.palette[Static230.method3949(local95, 96)];
+					local53 = Rasteriser.palette[ColorUtils.multiplyLightnessGrayscale(local95, 96)];
 				} else if (local24 >= 0) {
-					local53 = Rasteriser.palette[Static230.method3949(Rasteriser.textureProvider.getAverageColor(local24), 96)];
+					local53 = Rasteriser.palette[ColorUtils.multiplyLightnessGrayscale(Rasteriser.textureProvider.getAverageColor(local24), 96)];
 				} else if (local18.anInt5899 == -1) {
 					local53 = -1;
 				} else {
@@ -70,7 +70,7 @@ public final class Static70 {
 						local72 = 127;
 					}
 					local95 = local72 + (local66 & 0x380) + (local66 + arg1 & 0xFC00);
-					local53 = Rasteriser.palette[Static230.method3949(local95, 96)];
+					local53 = Rasteriser.palette[ColorUtils.multiplyLightnessGrayscale(local95, 96)];
 				}
 				WorldMap.overlayColors[local11 + 1] = local53;
 			}

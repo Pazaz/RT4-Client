@@ -99,7 +99,7 @@ public final class Static185 {
 				}
 				SceneGraph.setGroundDecor(arg2, arg7, arg8, local199, local387, local261, local62.aBoolean211);
 				if (local62.anInt4435 == 1 && arg4 != null) {
-					arg4.method3057(arg7, arg8);
+					arg4.flagGroundDecor(arg7, arg8);
 				}
 			}
 		} else if (arg6 == 10 || arg6 == 11) {
@@ -198,7 +198,7 @@ public final class Static185 {
 				}
 			}
 			if (local62.anInt4435 != 0 && arg4 != null) {
-				arg4.method3040(arg9, arg6, local62.aBoolean207, arg8, arg7);
+				arg4.flagWall(arg9, arg6, local62.aBoolean207, arg8, arg7);
 			}
 			if (local62.wallDecorOffsetScale != 16) {
 				Static18.method559(arg2, arg7, arg8, local62.wallDecorOffsetScale);
@@ -226,7 +226,7 @@ public final class Static185 {
 				}
 			}
 			if (local62.anInt4435 != 0 && arg4 != null) {
-				arg4.method3040(arg9, arg6, local62.aBoolean207, arg8, arg7);
+				arg4.flagWall(arg9, arg6, local62.aBoolean207, arg8, arg7);
 			}
 		} else {
 			@Pc(1226) int local1226;
@@ -266,7 +266,7 @@ public final class Static185 {
 					}
 				}
 				if (local62.anInt4435 != 0 && arg4 != null) {
-					arg4.method3040(arg9, arg6, local62.aBoolean207, arg8, arg7);
+					arg4.flagWall(arg9, arg6, local62.aBoolean207, arg8, arg7);
 				}
 				if (local62.wallDecorOffsetScale != 16) {
 					Static18.method559(arg2, arg7, arg8, local62.wallDecorOffsetScale);
@@ -294,7 +294,7 @@ public final class Static185 {
 					}
 				}
 				if (local62.anInt4435 != 0 && arg4 != null) {
-					arg4.method3040(arg9, arg6, local62.aBoolean207, arg8, arg7);
+					arg4.flagWall(arg9, arg6, local62.aBoolean207, arg8, arg7);
 				}
 			} else if (arg6 == 9) {
 				if (local62.anInt4430 == -1 && local62.multiLocs == null && !local62.aBoolean214) {

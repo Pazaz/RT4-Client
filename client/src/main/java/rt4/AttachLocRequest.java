@@ -1,5 +1,6 @@
 package rt4;
 
+import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
@@ -9,11 +10,12 @@ public final class AttachLocRequest extends Node {
 
     @OriginalMember(owner = "client!ka", name = "q", descriptor = "Lclient!ih;")
 	public static final LinkedList queue = new LinkedList();
+
     @OriginalMember(owner = "client!cn", name = "p", descriptor = "I")
-	public int anInt1187;
+	public int setLoops;
 
 	@OriginalMember(owner = "client!cn", name = "r", descriptor = "I")
-	public int anInt1188;
+	public int x0Delta;
 
 	@OriginalMember(owner = "client!cn", name = "t", descriptor = "I")
 	public int locId;
@@ -22,25 +24,25 @@ public final class AttachLocRequest extends Node {
 	public int x;
 
 	@OriginalMember(owner = "client!cn", name = "v", descriptor = "I")
-	public int anInt1191;
+	public int x1Delta;
 
 	@OriginalMember(owner = "client!cn", name = "w", descriptor = "I")
 	public int entityId;
 
 	@OriginalMember(owner = "client!cn", name = "D", descriptor = "I")
-	public int anInt1197;
+	public int z0Delta;
 
 	@OriginalMember(owner = "client!cn", name = "E", descriptor = "I")
 	public int shape;
 
 	@OriginalMember(owner = "client!cn", name = "H", descriptor = "I")
-	public int anInt1200;
+	public int z1Delta;
 
 	@OriginalMember(owner = "client!cn", name = "M", descriptor = "I")
 	public int z;
 
 	@OriginalMember(owner = "client!cn", name = "N", descriptor = "I")
-	public int anInt1205;
+	public int resetLoops;
 
 	@OriginalMember(owner = "client!cn", name = "O", descriptor = "I")
 	public int angle;
@@ -99,26 +101,26 @@ public final class AttachLocRequest extends Node {
 				} else if (layer == 2) {
 					@Pc(198) Scenery scenery = SceneGraph.getScenery(Player.level, request.x, request.z);
 					if (scenery != null) {
-						attachment = scenery.primary;
+						attachment = scenery.entity;
 					}
 				} else if (layer == 3) {
 					@Pc(216) GroundDecor groundDecor = SceneGraph.getGroundDecor(Player.level, request.x, request.z);
 					if (groundDecor != null) {
-						attachment = groundDecor.primary;
+						attachment = groundDecor.entity;
 					}
 				}
 				if (attachment != null) {
-					ChangeLocRequest.push(Player.level, request.z, 0, request.x, request.anInt1205 + 1, -1, layer, 0, request.anInt1187 + 1);
-					entity.anInt3375 = request.anInt1205 + client.loop;
+					ChangeLocRequest.push(Player.level, request.z, 0, request.x, request.resetLoops + 1, -1, layer, 0, request.setLoops + 1);
+					entity.attachmentResetAt = request.resetLoops + client.loop;
 					entity.attachmentZFine = length * 64 + request.z * 128;
 					entity.attachmentXFine = width * 64 + request.x * 128;
 					entity.attachment = attachment;
-					@Pc(292) int x0Delta = request.anInt1188;
+					@Pc(292) int x0Delta = request.x0Delta;
 					entity.attachmentY = y;
-					entity.anInt3390 = client.loop + request.anInt1187;
-					@Pc(304) int x1Delta = request.anInt1191;
-					@Pc(307) int z0Delta = request.anInt1197;
-					@Pc(310) int z1Delta = request.anInt1200;
+					entity.attachmentSetAt = client.loop + request.setLoops;
+					@Pc(304) int x1Delta = request.x1Delta;
+					@Pc(307) int z0Delta = request.z0Delta;
+					@Pc(310) int z1Delta = request.z1Delta;
 					@Pc(316) int temp;
 					if (x0Delta > x1Delta) {
 						temp = x0Delta;
@@ -138,4 +140,22 @@ public final class AttachLocRequest extends Node {
 			}
 		}
 	}
+
+    @OriginalMember(owner = "client!nh", name = "a", descriptor = "(IIIIIIIIIIIII)V")
+    public static void push(@OriginalArg(0) int x1Delta, @OriginalArg(1) int setLoops, @OriginalArg(2) int entityId, @OriginalArg(3) int resetLoops, @OriginalArg(4) int z, @OriginalArg(5) int z1Delta, @OriginalArg(6) int angle, @OriginalArg(7) int x0Delta, @OriginalArg(8) int x, @OriginalArg(9) int shape, @OriginalArg(11) int z0Delta, @OriginalArg(12) int locId) {
+        @Pc(7) AttachLocRequest req = new AttachLocRequest();
+        req.angle = angle;
+        req.resetLoops = resetLoops;
+        req.setLoops = setLoops;
+        req.z1Delta = z1Delta;
+        req.entityId = entityId;
+        req.x = x;
+        req.z0Delta = z0Delta;
+        req.z = z;
+        req.locId = locId;
+        req.x0Delta = x0Delta;
+        req.x1Delta = x1Delta;
+        req.shape = shape;
+        queue.addTail(req);
+    }
 }

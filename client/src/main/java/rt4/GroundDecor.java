@@ -7,10 +7,10 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class GroundDecor {
 
 	@OriginalMember(owner = "client!bm", name = "c", descriptor = "Lclient!th;")
-	public Entity primary;
+	public Entity entity;
 
 	@OriginalMember(owner = "client!bm", name = "g", descriptor = "I")
-	public int anInt732;
+	public int xFine;
 
 	@OriginalMember(owner = "client!bm", name = "i", descriptor = "I")
 	public int anInt733;
@@ -19,7 +19,7 @@ public final class GroundDecor {
 	public long key;
 
 	@OriginalMember(owner = "client!bm", name = "o", descriptor = "I")
-	public int anInt736;
+	public int zFine;
 
 	@OriginalMember(owner = "client!bm", name = "n", descriptor = "Z")
 	public boolean aBoolean49 = false;

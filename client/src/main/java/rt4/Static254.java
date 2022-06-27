@@ -76,9 +76,9 @@ public final class Static254 {
 						if (local395 != null && local395.sceneryLen > 0) {
 							for (local227 = 0; local227 < local395.sceneryLen; local227++) {
 								@Pc(418) Scenery local418 = local395.scenery[local227];
-								if (local418.anInt1713 != local418.anInt1701 || local418.anInt1698 != local418.anInt1696) {
-									for (local358 = local418.anInt1701; local358 <= local418.anInt1713; local358++) {
-										for (@Pc(450) int local450 = local418.anInt1696; local450 <= local418.anInt1698; local450++) {
+								if (local418.xMax != local418.xMin || local418.zMax != local418.zMin) {
+									for (local358 = local418.xMin; local358 <= local418.xMax; local358++) {
+										for (@Pc(450) int local450 = local418.zMin; local450 <= local418.zMax; local450++) {
 											Static266.aByteArrayArrayArray15[local150][local358][local450] = local14;
 										}
 									}

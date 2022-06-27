@@ -10,7 +10,7 @@ public final class WallDecor {
 	public int anInt1388;
 
 	@OriginalMember(owner = "client!df", name = "d", descriptor = "Lclient!th;")
-	public Entity aClass8_2;
+	public Entity secondary;
 
 	@OriginalMember(owner = "client!df", name = "e", descriptor = "I")
 	public int anInt1390;

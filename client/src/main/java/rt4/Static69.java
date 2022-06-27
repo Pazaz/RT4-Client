@@ -40,7 +40,7 @@ public final class Static69 {
 			for (@Pc(46) int local46 = 0; local46 < local42.sceneryLen; local46++) {
 				@Pc(55) Scenery local55 = local42.scenery[local46];
 				if ((local55.key & 0x400000L) == 4194304L) {
-					@Pc(66) int local66 = local55.primary.getMinY();
+					@Pc(66) int local66 = local55.entity.getMinY();
 					if (local66 != -32768 && local66 < local34) {
 						local34 = local66;
 					}
@@ -62,7 +62,7 @@ public final class Static69 {
 		@Pc(11) int local11 = arg3 - 1;
 		@Pc(15) int local15 = arg3 + arg5;
 		for (@Pc(17) int local17 = arg1; local17 <= arg1 + 1; local17++) {
-			if (local17 != SceneGraph.anInt3114) {
+			if (local17 != SceneGraph.levels) {
 				for (@Pc(28) int local28 = local3; local28 <= local7; local28++) {
 					if (local28 >= 0 && local28 < SceneGraph.width) {
 						for (@Pc(39) int local39 = local11; local39 <= local15; local39++) {
@@ -75,16 +75,16 @@ public final class Static69 {
 										if (local161.primary.method4543()) {
 											arg0.method4544(local161.primary, (local28 - arg2) * 128 + (1 - arg4) * 64, local158, (local39 - arg3) * 128 + (1 - arg5) * 64, local1);
 										}
-										if (local161.aClass8_6 != null && local161.aClass8_6.method4543()) {
-											arg0.method4544(local161.aClass8_6, (local28 - arg2) * 128 + (1 - arg4) * 64, local158, (local39 - arg3) * 128 + (1 - arg5) * 64, local1);
+										if (local161.secondary != null && local161.secondary.method4543()) {
+											arg0.method4544(local161.secondary, (local28 - arg2) * 128 + (1 - arg4) * 64, local158, (local39 - arg3) * 128 + (1 - arg5) * 64, local1);
 										}
 									}
 									for (@Pc(232) int local232 = 0; local232 < local71.sceneryLen; local232++) {
 										@Pc(241) Scenery local241 = local71.scenery[local232];
-										if (local241 != null && local241.primary.method4543() && (local28 == local241.anInt1701 || local28 == local3) && (local39 == local241.anInt1696 || local39 == local11)) {
-											@Pc(270) int local270 = local241.anInt1713 + 1 - local241.anInt1701;
-											@Pc(278) int local278 = local241.anInt1698 + 1 - local241.anInt1696;
-											arg0.method4544(local241.primary, (local241.anInt1701 - arg2) * 128 + (local270 - arg4) * 64, local158, (local241.anInt1696 - arg3) * 128 + (local278 - arg5) * 64, local1);
+										if (local241 != null && local241.entity.method4543() && (local28 == local241.xMin || local28 == local3) && (local39 == local241.zMin || local39 == local11)) {
+											@Pc(270) int local270 = local241.xMax + 1 - local241.xMin;
+											@Pc(278) int local278 = local241.zMax + 1 - local241.zMin;
+											arg0.method4544(local241.entity, (local241.xMin - arg2) * 128 + (local270 - arg4) * 64, local158, (local241.zMin - arg3) * 128 + (local278 - arg5) * 64, local1);
 										}
 									}
 								}

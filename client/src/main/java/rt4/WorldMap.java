@@ -156,13 +156,13 @@ public class WorldMap {
             @Pc(235) int length = WorldMap.length >> 6;
             @Pc(239) int width = WorldMap.width >> 6;
             aByteArrayArrayArray8 = new byte[width][length][];
-            @Pc(249) int local249 = Static45.anInt2293 >> 2 << 10;
+            @Pc(249) int local249 = SceneGraph.anInt2293 >> 2 << 10;
             aByteArrayArrayArray7 = new byte[width][length][];
             underlayColors = new int[width][length][];
             aByteArrayArrayArray3 = new byte[width][length][];
             anIntArrayArrayArray17 = new int[width][length][];
             aByteArrayArrayArray12 = new byte[width][length][];
-            @Pc(273) int local273 = Static183.anInt4272 >> 1;
+            @Pc(273) int local273 = SceneGraph.anInt4272 >> 1;
             aByteArrayArrayArray10 = new byte[width][length][];
             scenery = new int[width][length][];
             Static70.loadOverlayColors(local273, local249);
@@ -375,7 +375,7 @@ public class WorldMap {
                                 local519 = 127;
                             }
                             @Pc(541) int local541 = local519 + (local480 & 0x380) + (local480 + local19 & 0xFC00);
-                            local462[((local367 & 0x3F) << 6) + (local102 & 0x3F)] = Rasteriser.palette[Static87.method1814(96, local541)];
+                            local462[((local367 & 0x3F) << 6) + (local102 & 0x3F)] = Rasteriser.palette[ColorUtils.multiplyLightnessSafe(96, local541)];
                         } else if (local462 != null) {
                             local462[((local367 & 0x3F) << 6) + (local102 & 0x3F)] = 0;
                         }

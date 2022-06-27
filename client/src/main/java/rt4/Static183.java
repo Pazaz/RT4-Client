@@ -9,10 +9,7 @@ public final class Static183 {
 	@OriginalMember(owner = "client!ok", name = "b", descriptor = "I")
 	public static int anInt4271;
 
-	@OriginalMember(owner = "client!ok", name = "c", descriptor = "I")
-	public static int anInt4272 = (int) (Math.random() * 33.0D) - 16;
-
-	@OriginalMember(owner = "client!ok", name = "f", descriptor = "J")
+    @OriginalMember(owner = "client!ok", name = "f", descriptor = "J")
 	public static long prevClickTime = 0L;
 
 	@OriginalMember(owner = "client!ok", name = "a", descriptor = "(IIB)Lclient!ce;")

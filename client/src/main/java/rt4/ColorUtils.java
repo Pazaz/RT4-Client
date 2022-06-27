@@ -82,4 +82,40 @@ public class ColorUtils {
         Static251.aFloatArray28[2] = (float) (arg0 & 0xFF) / 255.0F * local74 * local11 * local7;
         return Static251.aFloatArray28;
     }
+
+    @OriginalMember(owner = "client!gn", name = "a", descriptor = "(IZI)I")
+    public static int multiplyLightnessSafe(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
+        if (arg1 == -1) {
+            return 12345678;
+        }
+        arg0 = arg0 * (arg1 & 0x7F) >> 7;
+        if (arg0 < 2) {
+            arg0 = 2;
+        } else if (arg0 > 126) {
+            arg0 = 126;
+        }
+        return arg0 + (arg1 & 0xFF80);
+    }
+
+    @OriginalMember(owner = "client!sj", name = "a", descriptor = "(BII)I")
+    public static int multiplyLightnessGrayscale(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
+        if (arg0 == -2) {
+            return 12345678;
+        } else if (arg0 == -1) {
+            if (arg1 < 2) {
+                arg1 = 2;
+            } else if (arg1 > 126) {
+                arg1 = 126;
+            }
+            return arg1;
+        } else {
+            arg1 = (arg0 & 0x7F) * arg1 >> 7;
+            if (arg1 < 2) {
+                arg1 = 2;
+            } else if (arg1 > 126) {
+                arg1 = 126;
+            }
+            return (arg0 & 0xFF80) + arg1;
+        }
+    }
 }

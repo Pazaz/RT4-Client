@@ -18,8 +18,8 @@ public final class Static224 {
 				local30.anInt672--;
 				for (@Pc(40) int local40 = 0; local40 < local30.sceneryLen; local40++) {
 					@Pc(49) Scenery local49 = local30.scenery[local40];
-					if ((local49.key >> 29 & 0x3L) == 2L && local49.anInt1701 == arg0 && local49.anInt1696 == arg1) {
-						local49.anInt1709--;
+					if ((local49.key >> 29 & 0x3L) == 2L && local49.xMin == arg0 && local49.zMin == arg1) {
+						local49.level--;
 					}
 				}
 			}

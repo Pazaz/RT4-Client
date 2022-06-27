@@ -20,7 +20,7 @@ public final class Static91 {
 		local6.anInt1393 = arg2 * 128 + 64;
 		local6.anInt1391 = arg3;
 		local6.primary = arg4;
-		local6.aClass8_2 = arg5;
+		local6.secondary = arg5;
 		local6.anInt1395 = arg6;
 		local6.anInt1388 = arg7;
 		local6.anInt1394 = arg8;

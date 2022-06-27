@@ -42,28 +42,6 @@ public final class Static230 {
 		PlayerAppearance.aClass99_21.clear();
 	}
 
-	@OriginalMember(owner = "client!sj", name = "a", descriptor = "(BII)I")
-	public static int method3949(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
-		if (arg0 == -2) {
-			return 12345678;
-		} else if (arg0 == -1) {
-			if (arg1 < 2) {
-				arg1 = 2;
-			} else if (arg1 > 126) {
-				arg1 = 126;
-			}
-			return arg1;
-		} else {
-			arg1 = (arg0 & 0x7F) * arg1 >> 7;
-			if (arg1 < 2) {
-				arg1 = 2;
-			} else if (arg1 > 126) {
-				arg1 = 126;
-			}
-			return (arg0 & 0xFF80) + arg1;
-		}
-	}
-
 	@OriginalMember(owner = "client!sj", name = "a", descriptor = "(IIBIII)V")
 	public static void method3950(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
 		if (arg0 >= TextureOp29.anInt4164 && arg3 <= TextureOp29.anInt5063 && TextureOp29.anInt5773 <= arg4 && TextureOp29.anInt2869 >= arg2) {

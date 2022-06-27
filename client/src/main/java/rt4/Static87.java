@@ -901,20 +901,6 @@ public final class Static87 {
 		}
 	}
 
-	@OriginalMember(owner = "client!gn", name = "a", descriptor = "(IZI)I")
-	public static int method1814(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		if (arg1 == -1) {
-			return 12345678;
-		}
-		arg0 = arg0 * (arg1 & 0x7F) >> 7;
-		if (arg0 < 2) {
-			arg0 = 2;
-		} else if (arg0 > 126) {
-			arg0 = 126;
-		}
-		return arg0 + (arg1 & 0xFF80);
-	}
-
 	@OriginalMember(owner = "client!fn", name = "a", descriptor = "(BIIIII)V")
 	public static void method1624(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
 		Sprites.scrollbars[0].renderTransparent(arg2, arg3);

@@ -53,13 +53,13 @@ public final class Tile extends Node {
 	public ObjStackEntity aClass79_1;
 
 	@OriginalMember(owner = "client!bj", name = "D", descriptor = "I")
-	public int anInt664 = 0;
+	public int allInteriorFlags = 0;
 
 	@OriginalMember(owner = "client!bj", name = "w", descriptor = "[Lclient!ec;")
 	public final Scenery[] scenery = new Scenery[5];
 
 	@OriginalMember(owner = "client!bj", name = "P", descriptor = "[I")
-	public final int[] anIntArray59 = new int[5];
+	public final int[] interiorFlags = new int[5];
 
 	@OriginalMember(owner = "client!bj", name = "H", descriptor = "I")
 	public final int anInt666;
