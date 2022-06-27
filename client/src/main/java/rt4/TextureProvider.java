@@ -35,7 +35,7 @@ public interface TextureProvider {
 	int getAverageColor(@OriginalArg(0) int arg0);
 
 	@OriginalMember(owner = "client!m", name = "e", descriptor = "(II)[I")
-	int[] method3235(@OriginalArg(1) int arg0);
+	int[] getPixels(@OriginalArg(1) int arg0);
 
 	@OriginalMember(owner = "client!m", name = "f", descriptor = "(II)Z")
 	boolean method3236(@OriginalArg(0) int arg0);

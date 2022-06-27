@@ -54,7 +54,7 @@ public final class ColorImageCache {
 	}
 
 	@OriginalMember(owner = "client!pf", name = "b", descriptor = "(II)[I")
-	public final int[] method3445(@OriginalArg(1) int row) {
+	public final int[] get(@OriginalArg(1) int row) {
 		if (this.height == this.capacity) {
 			this.invalid = this.entries[row] == null;
 			this.entries[row] = VALID;

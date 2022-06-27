@@ -34,20 +34,20 @@ public final class TextureOp29 extends TextureOp {
 
 	@OriginalMember(owner = "client!si", name = "a", descriptor = "(IB)[I")
 	@Override
-	public final int[] method4626(@OriginalArg(0) int arg0) {
-		@Pc(13) int[] local13 = this.aClass121_41.method3445(arg0);
-		if (this.aClass121_41.invalid) {
-			this.method3934(this.aClass121_41.method3446());
+	public final int[] getMonochromeOutput(@OriginalArg(0) int arg0) {
+		@Pc(13) int[] local13 = this.monochromeImageCache.get(arg0);
+		if (this.monochromeImageCache.invalid) {
+			this.method3934(this.monochromeImageCache.method3446());
 		}
 		return local13;
 	}
 
 	@OriginalMember(owner = "client!si", name = "a", descriptor = "(I[[I)V")
 	private void method3934(@OriginalArg(1) int[][] arg0) {
-		@Pc(7) int local7 = Static10.anInt4165;
-		@Pc(9) int local9 = Static10.anInt4457;
+		@Pc(7) int local7 = Texture.height;
+		@Pc(9) int local9 = Texture.width;
 		Static81.method1751(arg0);
-		method2263(Static10.anInt3473, Static34.anInt1060);
+		method2263(Texture.heightMask, Texture.widthMask);
 		if (this.aClass18Array1 == null) {
 			return;
 		}
@@ -69,7 +69,7 @@ public final class TextureOp29 extends TextureOp {
 
 	@OriginalMember(owner = "client!si", name = "a", descriptor = "(ILclient!wa;Z)V")
 	@Override
-	public final void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
+	public final void decode(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		if (arg0 == 0) {
 			this.aClass18Array1 = new TextureOp29SubOp[arg1.g1()];
 			for (@Pc(11) int local11 = 0; local11 < this.aClass18Array1.length; local11++) {
@@ -85,27 +85,27 @@ public final class TextureOp29 extends TextureOp {
 				}
 			}
 		} else if (arg0 == 1) {
-			this.aBoolean309 = arg1.g1() == 1;
+			this.monochrome = arg1.g1() == 1;
 		}
 	}
 
 	@OriginalMember(owner = "client!si", name = "b", descriptor = "(II)[[I")
 	@Override
-	public final int[][] method4638(@OriginalArg(1) int arg0) {
-		@Pc(14) int[][] local14 = this.aClass103_41.method3173(arg0);
-		if (this.aClass103_41.aBoolean195) {
-			@Pc(20) int local20 = Static10.anInt4457;
-			@Pc(22) int local22 = Static10.anInt4165;
+	public final int[][] getColorOutput(@OriginalArg(1) int arg0) {
+		@Pc(14) int[][] local14 = this.colorImageCache.get(arg0);
+		if (this.colorImageCache.invalid) {
+			@Pc(20) int local20 = Texture.width;
+			@Pc(22) int local22 = Texture.height;
 			@Pc(26) int[][] local26 = new int[local22][local20];
-			@Pc(31) int[][][] local31 = this.aClass103_41.method3168();
+			@Pc(31) int[][][] local31 = this.colorImageCache.method3168();
 			this.method3934(local26);
-			for (@Pc(37) int local37 = 0; local37 < Static10.anInt4165; local37++) {
+			for (@Pc(37) int local37 = 0; local37 < Texture.height; local37++) {
 				@Pc(44) int[] local44 = local26[local37];
 				@Pc(48) int[][] local48 = local31[local37];
 				@Pc(52) int[] local52 = local48[0];
 				@Pc(56) int[] local56 = local48[1];
 				@Pc(60) int[] local60 = local48[2];
-				for (@Pc(62) int local62 = 0; local62 < Static10.anInt4457; local62++) {
+				for (@Pc(62) int local62 = 0; local62 < Texture.width; local62++) {
 					@Pc(73) int local73 = local44[local62];
 					local60[local62] = (local73 & 0xFF) << 4;
 					local56[local62] = local73 >> 4 & 0xFF0;

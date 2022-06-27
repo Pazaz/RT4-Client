@@ -144,7 +144,7 @@ public final class Js5GlTextureProvider implements TextureProvider {
 
 	@OriginalMember(owner = "client!nk", name = "e", descriptor = "(II)[I")
 	@Override
-	public final int[] method3235(@OriginalArg(1) int arg0) {
+	public final int[] getPixels(@OriginalArg(1) int arg0) {
 		@Pc(16) GlTexture local16 = this.method3242(arg0);
 		return local16 == null ? null : local16.method4297(this.lowDetail || this.aBooleanArray89[arg0], this, this.aClass153_72);
 	}

@@ -6,41 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static10 {
 
-    @OriginalMember(owner = "client!nj", name = "k", descriptor = "I")
-    public static int anInt4165;
-    @OriginalMember(owner = "client!pe", name = "r", descriptor = "I")
-    public static int anInt4457;
-    @OriginalMember(owner = "client!fb", name = "h", descriptor = "[I")
-    public static int[] anIntArray153;
-    @OriginalMember(owner = "client!lb", name = "z", descriptor = "I")
-    public static int anInt3473;
-
-    @OriginalMember(owner = "client!an", name = "c", descriptor = "(III)V")
-	public static void method348(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
-		if (anInt4457 != arg1) {
-			Static173.anIntArray367 = new int[arg1];
-			for (@Pc(10) int local10 = 0; local10 < arg1; local10++) {
-				Static173.anIntArray367[local10] = (local10 << 12) / arg1;
-			}
-			Static165.anInt4042 = arg1 == 64 ? 2048 : 4096;
-			Static34.anInt1060 = arg1 - 1;
-			anInt4457 = arg1;
-		}
-		if (anInt4165 == arg0) {
-			return;
-		}
-		if (anInt4457 == arg0) {
-			anIntArray153 = Static173.anIntArray367;
-		} else {
-			anIntArray153 = new int[arg0];
-			for (@Pc(61) int local61 = 0; local61 < arg0; local61++) {
-				anIntArray153[local61] = (local61 << 12) / arg0;
-			}
-		}
-		anInt4165 = arg0;
-		anInt3473 = arg0 - 1;
-	}
-
 	@OriginalMember(owner = "client!an", name = "a", descriptor = "(IIIIIII)V")
 	public static void method352(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
 		@Pc(11) int local11 = Static231.method1690(TextureOp29.anInt2869, arg5, TextureOp29.anInt5773);

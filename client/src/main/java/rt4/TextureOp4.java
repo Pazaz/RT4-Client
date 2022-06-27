@@ -1,256 +1,170 @@
 package rt4;
 
+import java.util.Random;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
-@OriginalClass("client!bi")
+@OriginalClass("client!mc")
 public final class TextureOp4 extends TextureOp {
 
-	@OriginalMember(owner = "client!bi", name = "ib", descriptor = "[S")
-	private short[] aShortArray3;
+	@OriginalMember(owner = "client!mc", name = "U", descriptor = "I")
+	private int anInt3670;
 
-	@OriginalMember(owner = "client!bi", name = "lb", descriptor = "[S")
-	private short[] aShortArray4;
+	@OriginalMember(owner = "client!mc", name = "V", descriptor = "I")
+	private int anInt3671;
 
-	@OriginalMember(owner = "client!bi", name = "X", descriptor = "I")
-	public int anInt641 = 4;
+	@OriginalMember(owner = "client!mc", name = "X", descriptor = "[[I")
+	private int[][] anIntArrayArray26;
 
-	@OriginalMember(owner = "client!bi", name = "eb", descriptor = "I")
-	public int anInt646 = 4;
+	@OriginalMember(owner = "client!mc", name = "cb", descriptor = "[I")
+	private int[] anIntArray352;
 
-	@OriginalMember(owner = "client!bi", name = "kb", descriptor = "Z")
-	public boolean aBoolean44 = true;
+	@OriginalMember(owner = "client!mc", name = "jb", descriptor = "I")
+	private int anInt3679;
 
-	@OriginalMember(owner = "client!bi", name = "gb", descriptor = "I")
-	public int anInt648 = 1638;
+	@OriginalMember(owner = "client!mc", name = "sb", descriptor = "[[I")
+	private int[][] anIntArrayArray27;
 
-	@OriginalMember(owner = "client!bi", name = "ab", descriptor = "[B")
-	private byte[] aByteArray10 = new byte[512];
+	@OriginalMember(owner = "client!mc", name = "P", descriptor = "I")
+	private int anInt3667 = 204;
 
-	@OriginalMember(owner = "client!bi", name = "Z", descriptor = "I")
-	public int anInt642 = 4;
+	@OriginalMember(owner = "client!mc", name = "bb", descriptor = "I")
+	private int anInt3673 = 1024;
 
-	@OriginalMember(owner = "client!bi", name = "mb", descriptor = "I")
-	public int anInt650 = 0;
+	@OriginalMember(owner = "client!mc", name = "eb", descriptor = "I")
+	private int anInt3675 = 0;
 
-	@OriginalMember(owner = "client!bi", name = "<init>", descriptor = "()V")
+	@OriginalMember(owner = "client!mc", name = "lb", descriptor = "I")
+	private int anInt3681 = 409;
+
+	@OriginalMember(owner = "client!mc", name = "hb", descriptor = "I")
+	private int anInt3677 = 8;
+
+	@OriginalMember(owner = "client!mc", name = "W", descriptor = "I")
+	private int anInt3672 = 81;
+
+	@OriginalMember(owner = "client!mc", name = "ub", descriptor = "I")
+	private int anInt3685 = 4;
+
+	@OriginalMember(owner = "client!mc", name = "ib", descriptor = "I")
+	private int anInt3678 = 1024;
+
+	@OriginalMember(owner = "client!mc", name = "<init>", descriptor = "()V")
 	public TextureOp4() {
 		super(0, true);
 	}
 
-	@OriginalMember(owner = "client!bi", name = "a", descriptor = "(ZI[I)V")
-	public final void method584(@OriginalArg(1) int arg0, @OriginalArg(2) int[] arg1) {
-		@Pc(12) int local12 = this.anInt641 * Static10.anIntArray153[arg0];
-		@Pc(115) int local115;
-		@Pc(129) int local129;
-		@Pc(40) int local40;
-		@Pc(27) short local27;
-		@Pc(105) int local105;
-		@Pc(60) int local60;
-		@Pc(54) int local54;
-		@Pc(47) int local47;
-		@Pc(85) int local85;
-		@Pc(64) int local64;
-		@Pc(68) int local68;
-		@Pc(77) int local77;
-		@Pc(103) int local103;
-		if (this.anInt642 == 1) {
-			local27 = this.aShortArray4[0];
-			local40 = this.aShortArray3[0] << 12;
-			local60 = local12 * local40 >> 12;
-			local54 = this.anInt646 * local40 >> 12;
-			local47 = local40 * this.anInt641 >> 12;
-			local64 = local60 >> 12;
-			local77 = this.aByteArray10[local64 & 0xFF] & 0xFF;
-			local60 &= 0xFFF;
-			local85 = MonochromeImageCache.anIntArray1[local60];
-			local68 = local64 + 1;
-			if (local47 <= local68) {
-				local68 = 0;
+	@OriginalMember(owner = "client!mc", name = "e", descriptor = "(I)V")
+	@Override
+	public final void postDecode() {
+		this.method2908();
+	}
+
+	@OriginalMember(owner = "client!mc", name = "a", descriptor = "(ILclient!wa;Z)V")
+	@Override
+	public final void decode(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
+		if (arg0 == 0) {
+			this.anInt3685 = arg1.g1();
+		} else if (arg0 == 1) {
+			this.anInt3677 = arg1.g1();
+		} else if (arg0 == 2) {
+			this.anInt3681 = arg1.g2();
+		} else if (arg0 == 3) {
+			this.anInt3667 = arg1.g2();
+		} else if (arg0 == 4) {
+			this.anInt3678 = arg1.g2();
+		} else if (arg0 == 5) {
+			this.anInt3675 = arg1.g2();
+		} else if (arg0 == 6) {
+			this.anInt3672 = arg1.g2();
+		} else if (arg0 == 7) {
+			this.anInt3673 = arg1.g2();
+		}
+	}
+
+	@OriginalMember(owner = "client!mc", name = "i", descriptor = "(I)V")
+	private void method2908() {
+		@Pc(8) Random local8 = new Random((long) this.anInt3677);
+		this.anInt3670 = 4096 / this.anInt3677;
+		this.anInt3671 = this.anInt3672 / 2;
+		this.anIntArrayArray26 = new int[this.anInt3677][this.anInt3685 + 1];
+		@Pc(34) int local34 = this.anInt3670 / 2;
+		this.anIntArray352 = new int[this.anInt3677 + 1];
+		this.anIntArrayArray27 = new int[this.anInt3677][this.anInt3685];
+		this.anInt3679 = 4096 / this.anInt3685;
+		this.anIntArray352[0] = 0;
+		@Pc(64) int local64 = this.anInt3679 / 2;
+		for (@Pc(66) int local66 = 0; local66 < this.anInt3677; local66++) {
+			@Pc(82) int local82;
+			@Pc(94) int local94;
+			if (local66 > 0) {
+				local82 = this.anInt3670;
+				local94 = (Static171.method3219(4096, local8) - 2048) * this.anInt3667 >> 12;
+				@Pc(102) int local102 = local82 + (local94 * local34 >> 12);
+				this.anIntArray352[local66] = this.anIntArray352[local66 - 1] + local102;
 			}
-			local103 = this.aByteArray10[local68 & 0xFF] & 0xFF;
-			if (this.aBoolean44) {
-				for (local105 = 0; local105 < Static10.anInt4457; local105++) {
-					local115 = this.anInt646 * Static173.anIntArray367[local105];
-					local129 = this.method590(local40 * local115 >> 12, local103, local77, local54, local60, local85);
-					local129 = local27 * local129 >> 12;
-					arg1[local105] = (local129 >> 1) + 2048;
+			this.anIntArrayArray26[local66][0] = 0;
+			for (local82 = 0; local82 < this.anInt3685; local82++) {
+				if (local82 > 0) {
+					local94 = this.anInt3679;
+					@Pc(150) int local150 = (Static171.method3219(4096, local8) - 2048) * this.anInt3681 >> 12;
+					local94 += local64 * local150 >> 12;
+					this.anIntArrayArray26[local66][local82] = this.anIntArrayArray26[local66][local82 - 1] + local94;
+				}
+				this.anIntArrayArray27[local66][local82] = this.anInt3673 <= 0 ? 4096 : 4096 - Static171.method3219(this.anInt3673, local8);
+			}
+			this.anIntArrayArray26[local66][this.anInt3685] = 4096;
+		}
+		this.anIntArray352[this.anInt3677] = 4096;
+	}
+
+	@OriginalMember(owner = "client!mc", name = "a", descriptor = "(IB)[I")
+	@Override
+	public final int[] getMonochromeOutput(@OriginalArg(0) int arg0) {
+		@Pc(11) int[] local11 = this.monochromeImageCache.get(arg0);
+		if (this.monochromeImageCache.invalid) {
+			@Pc(18) int local18 = 0;
+			@Pc(25) int local25;
+			for (local25 = Texture.heightFractions[arg0] + this.anInt3675; local25 < 0; local25 += 4096) {
+			}
+			while (local25 > 4096) {
+				local25 -= 4096;
+			}
+			while (this.anInt3677 > local18 && local25 >= this.anIntArray352[local18]) {
+				local18++;
+			}
+			@Pc(60) int local60 = local18 - 1;
+			@Pc(65) int local65 = this.anIntArray352[local18];
+			@Pc(74) boolean local74 = (local18 & 0x1) == 0;
+			@Pc(81) int local81 = this.anIntArray352[local18 - 1];
+			if (local81 + this.anInt3671 < local25 && local65 - this.anInt3671 > local25) {
+				for (@Pc(100) int local100 = 0; local100 < Texture.width; local100++) {
+					@Pc(105) int local105 = 0;
+					@Pc(114) int local114 = local74 ? this.anInt3678 : -this.anInt3678;
+					@Pc(126) int local126;
+					for (local126 = Texture.widthFractions[local100] + (this.anInt3679 * local114 >> 12); local126 < 0; local126 += 4096) {
+					}
+					while (local126 > 4096) {
+						local126 -= 4096;
+					}
+					while (this.anInt3685 > local105 && local126 >= this.anIntArrayArray26[local60][local105]) {
+						local105++;
+					}
+					@Pc(172) int local172 = this.anIntArrayArray26[local60][local105];
+					@Pc(176) int local176 = local105 - 1;
+					@Pc(183) int local183 = this.anIntArrayArray26[local60][local176];
+					if (local183 + this.anInt3671 < local126 && local172 - this.anInt3671 > local126) {
+						local11[local100] = this.anIntArrayArray27[local60][local176];
+					} else {
+						local11[local100] = 0;
+					}
 				}
 			} else {
-				for (local105 = 0; local105 < Static10.anInt4457; local105++) {
-					local115 = this.anInt646 * Static173.anIntArray367[local105];
-					local129 = this.method590(local40 * local115 >> 12, local103, local77, local54, local60, local85);
-					arg1[local105] = local27 * local129 >> 12;
-				}
-			}
-			return;
-		}
-		local27 = this.aShortArray4[0];
-		if (local27 > 8 || local27 < -8) {
-			local40 = this.aShortArray3[0] << 12;
-			local47 = local40 * this.anInt641 >> 12;
-			local54 = this.anInt646 * local40 >> 12;
-			local60 = local12 * local40 >> 12;
-			local64 = local60 >> 12;
-			local68 = local64 + 1;
-			local77 = this.aByteArray10[local64 & 0xFF] & 0xFF;
-			@Pc(81) int local81 = local60 & 0xFFF;
-			local85 = MonochromeImageCache.anIntArray1[local81];
-			if (local68 >= local47) {
-				local68 = 0;
-			}
-			local103 = this.aByteArray10[local68 & 0xFF] & 0xFF;
-			for (local105 = 0; local105 < Static10.anInt4457; local105++) {
-				local115 = Static173.anIntArray367[local105] * this.anInt646;
-				local129 = this.method590(local115 * local40 >> 12, local103, local77, local54, local81, local85);
-				arg1[local105] = local129 * local27 >> 12;
+				ArrayUtils.fill(local11, 0, Texture.width, 0);
 			}
 		}
-		for (@Pc(142) int local142 = 1; local142 < this.anInt642; local142++) {
-			local27 = this.aShortArray4[local142];
-			if (local27 > 8 || local27 < -8) {
-				local40 = this.aShortArray3[local142] << 12;
-				local60 = local40 * local12 >> 12;
-				local64 = local60 >> 12;
-				local77 = this.aByteArray10[local64 & 0xFF] & 0xFF;
-				local54 = this.anInt646 * local40 >> 12;
-				local68 = local64 + 1;
-				local60 &= 0xFFF;
-				local85 = MonochromeImageCache.anIntArray1[local60];
-				local47 = this.anInt641 * local40 >> 12;
-				if (local68 >= local47) {
-					local68 = 0;
-				}
-				local103 = this.aByteArray10[local68 & 0xFF] & 0xFF;
-				if (this.aBoolean44 && local142 == this.anInt642 - 1) {
-					for (local105 = 0; local105 < Static10.anInt4457; local105++) {
-						local115 = Static173.anIntArray367[local105] * this.anInt646;
-						local129 = this.method590(local40 * local115 >> 12, local103, local77, local54, local60, local85);
-						local129 = (local27 * local129 >> 12) + arg1[local105];
-						arg1[local105] = (local129 >> 1) + 2048;
-					}
-				} else {
-					for (local105 = 0; local105 < Static10.anInt4457; local105++) {
-						local115 = Static173.anIntArray367[local105] * this.anInt646;
-						local129 = this.method590(local115 * local40 >> 12, local103, local77, local54, local60, local85);
-						arg1[local105] += local129 * local27 >> 12;
-					}
-				}
-			}
-		}
-	}
-
-	@OriginalMember(owner = "client!bi", name = "e", descriptor = "(I)V")
-	@Override
-	public final void method4630() {
-		this.aByteArray10 = Static89.method1837(this.anInt650);
-		this.method589();
-		for (@Pc(15) int local15 = this.anInt642 - 1; local15 >= 1; local15--) {
-			@Pc(23) short local23 = this.aShortArray4[local15];
-			if (local23 > 8 || local23 < -8) {
-				break;
-			}
-			this.anInt642--;
-		}
-	}
-
-	@OriginalMember(owner = "client!bi", name = "a", descriptor = "(ILclient!wa;Z)V")
-	@Override
-	public final void method4629(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
-		if (arg0 == 0) {
-			this.aBoolean44 = arg1.g1() == 1;
-		} else if (arg0 == 1) {
-			this.anInt642 = arg1.g1();
-		} else if (arg0 == 2) {
-			this.anInt648 = arg1.g2b();
-			if (this.anInt648 < 0) {
-				this.aShortArray4 = new short[this.anInt642];
-				for (@Pc(93) int local93 = 0; local93 < this.anInt642; local93++) {
-					this.aShortArray4[local93] = (short) arg1.g2b();
-				}
-			}
-		} else if (arg0 == 3) {
-			this.anInt646 = this.anInt641 = arg1.g1();
-		} else if (arg0 == 4) {
-			this.anInt650 = arg1.g1();
-		} else if (arg0 == 5) {
-			this.anInt646 = arg1.g1();
-		} else if (arg0 == 6) {
-			this.anInt641 = arg1.g1();
-		}
-	}
-
-	@OriginalMember(owner = "client!bi", name = "b", descriptor = "(Z)V")
-	private void method589() {
-		@Pc(21) int local21;
-		if (this.anInt648 > 0) {
-			this.aShortArray4 = new short[this.anInt642];
-			this.aShortArray3 = new short[this.anInt642];
-			for (local21 = 0; local21 < this.anInt642; local21++) {
-				this.aShortArray4[local21] = (short) (Math.pow((double) ((float) this.anInt648 / 4096.0F), (double) local21) * 4096.0D);
-				this.aShortArray3[local21] = (short) Math.pow(2.0D, (double) local21);
-			}
-		} else if (this.aShortArray4 != null && this.aShortArray4.length == this.anInt642) {
-			this.aShortArray3 = new short[this.anInt642];
-			for (local21 = 0; local21 < this.anInt642; local21++) {
-				this.aShortArray3[local21] = (short) Math.pow(2.0D, (double) local21);
-			}
-		}
-	}
-
-	@OriginalMember(owner = "client!bi", name = "a", descriptor = "(IIIIIII)I")
-	private int method590(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
-		@Pc(15) int local15 = arg4 - 4096;
-		@Pc(19) int local19 = arg0 >> 12;
-		@Pc(23) int local23 = local19 + 1;
-		@Pc(27) int local27 = local19 & 0xFF;
-		if (local23 >= arg3) {
-			local23 = 0;
-		}
-		@Pc(40) int local40 = arg0 & 0xFFF;
-		@Pc(50) int local50 = this.aByteArray10[local27 + arg2] & 0x3;
-		@Pc(54) int local54 = MonochromeImageCache.anIntArray1[local40];
-		@Pc(70) int local70;
-		if (local50 > 1) {
-			local70 = local50 == 2 ? local40 - arg4 : -local40 + -arg4;
-		} else {
-			local70 = local50 == 0 ? arg4 + local40 : -local40 + arg4;
-		}
-		local23 &= 0xFF;
-		@Pc(92) int local92 = local40 - 4096;
-		local50 = this.aByteArray10[arg2 + local23] & 0x3;
-		@Pc(118) int local118;
-		if (local50 <= 1) {
-			local118 = local50 == 0 ? arg4 + local92 : -local92 + arg4;
-		} else {
-			local118 = local50 == 2 ? local92 - arg4 : -local92 + -arg4;
-		}
-		local50 = this.aByteArray10[local27 + arg1] & 0x3;
-		@Pc(155) int local155 = local70 + ((local118 - local70) * local54 >> 12);
-		if (local50 > 1) {
-			local70 = local50 == 2 ? local40 - local15 : -local40 - local15;
-		} else {
-			local70 = local50 == 0 ? local40 + local15 : local15 + -local40;
-		}
-		local50 = this.aByteArray10[arg1 + local23] & 0x3;
-		if (local50 > 1) {
-			local118 = local50 == 2 ? local92 - local15 : -local15 + -local92;
-		} else {
-			local118 = local50 == 0 ? local92 + local15 : local15 + -local92;
-		}
-		@Pc(237) int local237 = local70 + ((local118 - local70) * local54 >> 12);
-		return local155 + (arg5 * (local237 - local155) >> 12);
-	}
-
-	@OriginalMember(owner = "client!bi", name = "a", descriptor = "(IB)[I")
-	@Override
-	public final int[] method4626(@OriginalArg(0) int arg0) {
-		@Pc(17) int[] local17 = this.aClass121_41.method3445(arg0);
-		if (this.aClass121_41.invalid) {
-			this.method584(arg0, local17);
-		}
-		return local17;
+		return local11;
 	}
 }

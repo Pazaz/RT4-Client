@@ -11,12 +11,8 @@ public final class Static9 {
 
 	@OriginalMember(owner = "client!al", name = "r", descriptor = "Lclient!na;")
 	public static final JagString aClass100_35 = JagString.parse("showVideoAd");
-    @OriginalMember(owner = "client!kc", name = "p", descriptor = "[I")
-    public static int[] anIntArray299;
-    @OriginalMember(owner = "client!je", name = "eb", descriptor = "[I")
-    public static int[] anIntArray282;
 
-    @OriginalMember(owner = "client!al", name = "a", descriptor = "(Z)V")
+	@OriginalMember(owner = "client!al", name = "a", descriptor = "(Z)V")
 	public static void method182() {
 		Static241.aClass13Array13 = null;
 		Static87.method86(InterfaceList.topLevelInterface, 0, GameShell.canvasWidth, 0, -1, GameShell.canvasHeight, 0, 0);
@@ -29,20 +25,6 @@ public final class Static9 {
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "(ILclient!wa;)Lclient!ci;")
 	public static TextureOp29SubOp1 method184(@OriginalArg(1) Buffer arg0) {
 		return new TextureOp29SubOp1(arg0.g2b(), arg0.g2b(), arg0.g2b(), arg0.g2b(), arg0.g3(), arg0.g1());
-	}
-
-	@OriginalMember(owner = "client!al", name = "b", descriptor = "(B)V")
-	public static void method185() {
-		if (anIntArray282 != null && anIntArray299 != null) {
-			return;
-		}
-		anIntArray282 = new int[256];
-		anIntArray299 = new int[256];
-		for (@Pc(26) int local26 = 0; local26 < 256; local26++) {
-			@Pc(36) double local36 = (double) local26 / 255.0D * 6.283185307179586D;
-			anIntArray282[local26] = (int) (Math.sin(local36) * 4096.0D);
-			anIntArray299[local26] = (int) (Math.cos(local36) * 4096.0D);
-		}
 	}
 
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "(III)Z")

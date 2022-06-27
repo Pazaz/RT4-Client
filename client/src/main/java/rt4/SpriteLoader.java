@@ -341,7 +341,7 @@ public class SpriteLoader {
     }
 
     @OriginalMember(owner = "client!na", name = "a", descriptor = "(Lclient!ve;IZ)Lclient!mm;")
-    public static SoftwareSprite method3117(@OriginalArg(0) Js5 arg0, @OriginalArg(1) int arg1) {
+    public static SoftwareSprite loadSoftwareSpriteAutoDetect(@OriginalArg(0) Js5 arg0, @OriginalArg(1) int arg1) {
         return decode(arg0, arg1) ? method3537() : null;
     }
 }
