@@ -1,8 +1,6 @@
 package rt4;
 
-import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
-import org.openrs2.deob.annotation.Pc;
 
 public final class Static266 {
 
@@ -15,30 +13,4 @@ public final class Static266 {
     @OriginalMember(owner = "client!vk", name = "d", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1010 = JagString.parse("null");
 
-	@OriginalMember(owner = "client!vk", name = "a", descriptor = "(Lclient!ec;)V")
-	public static void method4193(@OriginalArg(0) Scenery arg0) {
-		for (@Pc(2) int local2 = arg0.anInt1701; local2 <= arg0.anInt1713; local2++) {
-			for (@Pc(9) int local9 = arg0.anInt1696; local9 <= arg0.anInt1698; local9++) {
-				@Pc(22) Tile local22 = SceneGraph.tiles[arg0.anInt1709][local2][local9];
-				if (local22 != null) {
-					@Pc(26) int local26;
-					for (local26 = 0; local26 < local22.sceneryLen; local26++) {
-						if (local22.scenery[local26] == arg0) {
-							local22.sceneryLen--;
-							for (@Pc(44) int local44 = local26; local44 < local22.sceneryLen; local44++) {
-								local22.scenery[local44] = local22.scenery[local44 + 1];
-								local22.anIntArray59[local44] = local22.anIntArray59[local44 + 1];
-							}
-							local22.scenery[local22.sceneryLen] = null;
-							break;
-						}
-					}
-					local22.anInt664 = 0;
-					for (local26 = 0; local26 < local22.sceneryLen; local26++) {
-						local22.anInt664 |= local22.anIntArray59[local26];
-					}
-				}
-			}
-		}
-	}
 }

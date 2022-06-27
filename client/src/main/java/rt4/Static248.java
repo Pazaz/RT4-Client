@@ -21,7 +21,7 @@ public final class Static248 {
 		@Pc(32) int local32;
 		@Pc(37) int local37;
 		@Pc(183) int local183;
-		for (@Pc(23) int local23 = Static235.anInt5276; local23 < SceneGraph.anInt3114; local23++) {
+		for (@Pc(23) int local23 = Static235.anInt5276; local23 < SceneGraph.levels; local23++) {
 			@Pc(30) Tile[][] local30 = SceneGraph.tiles[local23];
 			for (local32 = Static31.anInt987; local32 < Static2.anInt15; local32++) {
 				for (local37 = Static80.anInt4698; local37 < Static215.anInt4866; local37++) {
@@ -43,26 +43,26 @@ public final class Static248 {
 							if (local32 >= local9 && local32 <= local13 && local37 >= local17 && local37 <= local21) {
 								if (local46.wall != null) {
 									@Pc(103) Wall local103 = local46.wall;
-									local103.primary.method4545(0, local23, local103.anInt3051, local103.anInt3048, local103.anInt3044);
-									if (local103.aClass8_6 != null) {
-										local103.aClass8_6.method4545(0, local23, local103.anInt3051, local103.anInt3048, local103.anInt3044);
+									local103.primary.method4545(0, local23, local103.anInt3051, local103.xFine, local103.zFine);
+									if (local103.secondary != null) {
+										local103.secondary.method4545(0, local23, local103.anInt3051, local103.xFine, local103.zFine);
 									}
 								}
 								if (local46.wallDecor != null) {
 									@Pc(134) WallDecor local134 = local46.wallDecor;
 									local134.primary.method4545(local134.anInt1388, local23, local134.anInt1391, local134.anInt1390, local134.anInt1393);
-									if (local134.aClass8_2 != null) {
-										local134.aClass8_2.method4545(local134.anInt1388, local23, local134.anInt1391, local134.anInt1390, local134.anInt1393);
+									if (local134.secondary != null) {
+										local134.secondary.method4545(local134.anInt1388, local23, local134.anInt1391, local134.anInt1390, local134.anInt1393);
 									}
 								}
 								if (local46.groundDecor != null) {
 									@Pc(167) GroundDecor local167 = local46.groundDecor;
-									local167.primary.method4545(0, local23, local167.anInt733, local167.anInt732, local167.anInt736);
+									local167.entity.method4545(0, local23, local167.anInt733, local167.xFine, local167.zFine);
 								}
 								if (local46.scenery != null) {
 									for (local183 = 0; local183 < local46.sceneryLen; local183++) {
 										@Pc(192) Scenery local192 = local46.scenery[local183];
-										local192.primary.method4545(local192.anInt1714, local23, local192.anInt1706, local192.anInt1699, local192.anInt1703);
+										local192.entity.method4545(local192.anInt1714, local23, local192.anInt1706, local192.anInt1699, local192.anInt1703);
 									}
 								}
 							}
@@ -97,7 +97,7 @@ public final class Static248 {
 			} else {
 				local32 = Static235.anInt5276;
 				while (true) {
-					if (local32 >= SceneGraph.anInt3114) {
+					if (local32 >= SceneGraph.levels) {
 						LightingManager.method2402(Static167.anInt4069, Static193.anInt4539, SceneGraph.tiles);
 						break;
 					}
@@ -125,7 +125,7 @@ public final class Static248 {
 		@Pc(406) Tile[][] local406;
 		@Pc(415) int local415;
 		@Pc(428) int local428;
-		for (local399 = Static235.anInt5276; local399 < SceneGraph.anInt3114; local399++) {
+		for (local399 = Static235.anInt5276; local399 < SceneGraph.levels; local399++) {
 			local406 = SceneGraph.tiles[local399];
 			for (local37 = -SceneGraph.visibility; local37 <= 0; local37++) {
 				local415 = Static167.anInt4069 + local37;
@@ -172,7 +172,7 @@ public final class Static248 {
 				}
 			}
 		}
-		for (local399 = Static235.anInt5276; local399 < SceneGraph.anInt3114; local399++) {
+		for (local399 = Static235.anInt5276; local399 < SceneGraph.levels; local399++) {
 			local406 = SceneGraph.tiles[local399];
 			for (local37 = -SceneGraph.visibility; local37 <= 0; local37++) {
 				local415 = Static167.anInt4069 + local37;

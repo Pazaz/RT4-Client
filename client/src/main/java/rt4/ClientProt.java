@@ -305,7 +305,7 @@ public class ClientProt {
         client.audioLoop();
         System.gc();
         ping(true);
-        SceneGraph.method3535(false);
+        SceneGraph.load(false);
         if (!Static230.dynamicMapRegion) {
             Static87.method1805(false);
             ping(true);
@@ -331,7 +331,7 @@ public class ClientProt {
         }
         client.method3768();
         ping(true);
-        Static45.method1169(PathFinder.collisionMaps, false);
+        SceneGraph.method1169(PathFinder.collisionMaps, false);
         if (GlRenderer.enabled) {
             LightingManager.method2395();
         }
@@ -347,10 +347,10 @@ public class ClientProt {
         } else {
             Static146.method2750(SceneGraph.firstVisibleLevel);
         }
-        SceneGraph.method2255();
+        SceneGraph.unload();
         if (GlRenderer.enabled && hasUnderWaterMap) {
             SceneGraph.setUnderwater(true);
-            SceneGraph.method3535(true);
+            SceneGraph.load(true);
             if (!Static230.dynamicMapRegion) {
                 Static87.method1805(true);
                 ping(true);
@@ -363,9 +363,9 @@ public class ClientProt {
             }
             client.method3768();
             ping(true);
-            Static45.method1169(PathFinder.collisionMaps, true);
+            SceneGraph.method1169(PathFinder.collisionMaps, true);
             ping(true);
-            SceneGraph.method2255();
+            SceneGraph.unload();
             SceneGraph.setUnderwater(false);
         }
         if (GlRenderer.enabled) {

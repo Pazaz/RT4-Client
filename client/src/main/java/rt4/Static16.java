@@ -27,8 +27,8 @@ public final class Static16 {
 					@Pc(54) Tile local54 = local30[local32][local42];
 					if (local54 != null) {
 						@Pc(71) GlModel local71;
-						if (local54.groundDecor != null && local54.groundDecor.primary instanceof GlModel) {
-							local71 = (GlModel) local54.groundDecor.primary;
+						if (local54.groundDecor != null && local54.groundDecor.entity instanceof GlModel) {
+							local71 = (GlModel) local54.groundDecor.entity;
 							if ((local54.groundDecor.key & Long.MIN_VALUE) == 0L) {
 								local71.method4111(false, true, true, false, true, true);
 							} else {
@@ -44,8 +44,8 @@ public final class Static16 {
 									local71.method4111(true, true, true, true, true, true);
 								}
 							}
-							if (local54.wallDecor.aClass8_2 instanceof GlModel) {
-								local71 = (GlModel) local54.wallDecor.aClass8_2;
+							if (local54.wallDecor.secondary instanceof GlModel) {
+								local71 = (GlModel) local54.wallDecor.secondary;
 								if ((Long.MIN_VALUE & local54.wallDecor.key) == 0L) {
 									local71.method4111(false, true, true, false, true, true);
 								} else {
@@ -62,8 +62,8 @@ public final class Static16 {
 									local71.method4111(true, true, true, true, true, true);
 								}
 							}
-							if (local54.wall.aClass8_6 instanceof GlModel) {
-								local71 = (GlModel) local54.wall.aClass8_6;
+							if (local54.wall.secondary instanceof GlModel) {
+								local71 = (GlModel) local54.wall.secondary;
 								if ((Long.MIN_VALUE & local54.wall.key) == 0L) {
 									local71.method4111(false, true, true, false, true, true);
 								} else {
@@ -72,8 +72,8 @@ public final class Static16 {
 							}
 						}
 						for (@Pc(270) int local270 = 0; local270 < local54.sceneryLen; local270++) {
-							if (local54.scenery[local270].primary instanceof GlModel) {
-								@Pc(293) GlModel local293 = (GlModel) local54.scenery[local270].primary;
+							if (local54.scenery[local270].entity instanceof GlModel) {
+								@Pc(293) GlModel local293 = (GlModel) local54.scenery[local270].entity;
 								if ((Long.MIN_VALUE & local54.scenery[local270].key) == 0L) {
 									local293.method4111(false, true, true, false, true, true);
 								} else {

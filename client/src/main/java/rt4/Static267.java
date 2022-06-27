@@ -20,18 +20,6 @@ public final class Static267 {
 	@OriginalMember(owner = "client!vl", name = "l", descriptor = "I")
 	public static int anInt5776 = 0;
 
-	@OriginalMember(owner = "client!vl", name = "a", descriptor = "(III)Lclient!bm;")
-	public static GroundDecor method4526(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		@Pc(7) Tile local7 = SceneGraph.tiles[arg0][arg1][arg2];
-		if (local7 == null) {
-			return null;
-		} else {
-			@Pc(14) GroundDecor local14 = local7.groundDecor;
-			local7.groundDecor = null;
-			return local14;
-		}
-	}
-
 	@OriginalMember(owner = "client!vl", name = "a", descriptor = "(I)Z")
 	public static boolean isShowingVideoAd() {
 		if (client.objectTag) {

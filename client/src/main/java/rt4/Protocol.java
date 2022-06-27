@@ -164,7 +164,7 @@ public class Protocol {
             int local247 = inboundBuffer.g2();
             int local633 = inboundBuffer.ig2badd();
             if (!GlRenderer.enabled) {
-                SceneGraph.method2574(local625, local247, local633, local232, local39, local613, local19, local605, local31, local23, local609, local228);
+                AttachLocRequest.push(local625, local247, local633, local232, local39, local613, local19, local605, local31, local23, local609, local228);
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_14) {
             int local15 = inboundBuffer.g1();

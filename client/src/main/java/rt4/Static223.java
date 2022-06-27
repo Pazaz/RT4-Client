@@ -43,7 +43,7 @@ public final class Static223 {
 	public static void method3858() {
 		for (@Pc(1) int local1 = 0; local1 < SceneGraph.sceneryLen; local1++) {
 			@Pc(8) Scenery local8 = SceneGraph.scenery[local1];
-			Static266.method4193(local8);
+			SceneGraph.removeScenery(local8);
 			SceneGraph.scenery[local1] = null;
 		}
 		SceneGraph.sceneryLen = 0;

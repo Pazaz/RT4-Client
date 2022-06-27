@@ -24,16 +24,16 @@ public final class Static105 {
 		}
 		@Pc(58) Scenery local58 = new Scenery();
 		local58.key = arg11;
-		local58.anInt1709 = arg0;
+		local58.level = arg0;
 		local58.anInt1699 = arg5;
 		local58.anInt1703 = arg6;
 		local58.anInt1706 = arg7;
-		local58.primary = arg8;
+		local58.entity = arg8;
 		local58.anInt1714 = arg9;
-		local58.anInt1701 = arg1;
-		local58.anInt1696 = arg2;
-		local58.anInt1713 = arg1 + arg3 - 1;
-		local58.anInt1698 = arg2 + arg4 - 1;
+		local58.xMin = arg1;
+		local58.zMin = arg2;
+		local58.xMax = arg1 + arg3 - 1;
+		local58.zMax = arg2 + arg4 - 1;
 		@Pc(108) int local108;
 		for (local17 = arg1; local17 < arg1 + arg3; local17++) {
 			for (local108 = arg2; local108 < arg2 + arg4; local108++) {
@@ -57,8 +57,8 @@ public final class Static105 {
 				}
 				@Pc(174) Tile local174 = SceneGraph.tiles[arg0][local17][local108];
 				local174.scenery[local174.sceneryLen] = local58;
-				local174.anIntArray59[local174.sceneryLen] = local115;
-				local174.anInt664 |= local115;
+				local174.interiorFlags[local174.sceneryLen] = local115;
+				local174.allInteriorFlags |= local115;
 				local174.sceneryLen++;
 				if (local6 && SceneGraph.anIntArrayArray11[local17][local108] != 0) {
 					local8 = SceneGraph.anIntArrayArray11[local17][local108];

@@ -604,7 +604,7 @@ public final class Static253 {
                         }
                     }
                 }
-                if (local39.attachment == null || client.loop < local39.anInt3390 || local39.anInt3375 <= client.loop) {
+                if (local39.attachment == null || client.loop < local39.attachmentSetAt || local39.attachmentResetAt <= client.loop) {
                     local39.anInt3424 = SceneGraph.getTileHeight(Player.level, local39.xFine, local39.zFine);
                     Static43.method1141(Player.level, local39.xFine, local39.zFine, local39.anInt3424, (local82 - 1) * 64 + 60, local39, local39.anInt3381, local272, local39.aBoolean171);
                 } else {

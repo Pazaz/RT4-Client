@@ -132,7 +132,7 @@ public abstract class PathingEntity extends Entity {
 	public int anInt3385 = 0;
 
 	@OriginalMember(owner = "client!fe", name = "pb", descriptor = "I")
-	public int anInt3390 = 0;
+	public int attachmentSetAt = 0;
 
 	@OriginalMember(owner = "client!fe", name = "mb", descriptor = "[B")
 	public final byte[] movementQueueSpeed = new byte[10];
@@ -162,7 +162,7 @@ public abstract class PathingEntity extends Entity {
 	public int chatLoops = 100;
 
 	@OriginalMember(owner = "client!fe", name = "V", descriptor = "I")
-	public int anInt3375 = 0;
+	public int attachmentResetAt = 0;
 
 	@OriginalMember(owner = "client!fe", name = "Y", descriptor = "I")
 	public int hitpointsBarVisibleUntil = -1000;
