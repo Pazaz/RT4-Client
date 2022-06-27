@@ -105,7 +105,7 @@ public class WorldMap {
     public static int anInt1864;
 
     @OriginalMember(owner = "client!pa", name = "d", descriptor = "(I)V")
-    public static void method3413() {
+    public static void load() {
         if (currentMap == null) {
             return;
         }
@@ -121,10 +121,10 @@ public class WorldMap {
         }
 
         if (loadPercentage == 10) {
-            originX = currentMap.anInt763 >> 6 << 6;
-            originZ = currentMap.anInt771 >> 6 << 6;
-            length = (currentMap.anInt758 >> 6 << 6) + 64 - originZ;
-            width = (currentMap.anInt770 >> 6 << 6) + 64 - originX;
+            originX = currentMap.displayMinX >> 6 << 6;
+            originZ = currentMap.displayMaxX >> 6 << 6;
+            length = (currentMap.displayMinZ >> 6 << 6) + 64 - originZ;
+            width = (currentMap.displayMaxZ >> 6 << 6) + 64 - originX;
             if (currentMap.defaultZoom == 37) {
                 zoom = 3.0F;
                 targetZoom = 3.0F;
@@ -171,7 +171,7 @@ public class WorldMap {
             @Pc(273) int local273 = SceneGraph.anInt4272 >> 1;
             aByteArrayArrayArray10 = new byte[width][length][];
             scenery = new int[width][length][];
-            Static70.loadOverlayColors(local273, local249);
+            loadOverlayColors(local273, local249);
             loadPercentage = 20;
         } else if (loadPercentage == 20) {
             readUnderlay(new Buffer(MapList.archive.fetchFile(UNDERLAY, currentMap.group)));
@@ -1595,4 +1595,197 @@ public class WorldMap {
         method2735(arg1, arg5, arg3, arg2, arg4, arg7, local30, local16);
     }
 
+    @OriginalMember(owner = "client!wa", name = "a", descriptor = "(IIIII)V")
+    public static void method2225(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
+        if (loadPercentage < 100) {
+            load();
+        }
+        if (GlRenderer.enabled) {
+            GlRaster.setClip(arg0, arg1, arg0 + arg3, arg2 + arg1);
+        } else {
+            SoftwareRaster.setClip(arg0, arg1, arg0 + arg3, arg2 + arg1);
+        }
+        @Pc(50) int local50;
+        @Pc(61) int local61;
+        if (loadPercentage < 100) {
+            local50 = arg0 + arg3 / 2;
+            local61 = arg2 / 2 + arg1 - 18 - 20;
+            if (GlRenderer.enabled) {
+                GlRaster.method1186(arg0, arg1, arg3, arg2, 0);
+                GlRaster.method1179(local50 - 152, local61, 304, 34, 9179409);
+                GlRaster.method1179(local50 - 151, local61 + 1, 302, 32, 0);
+                GlRaster.method1186(local50 - 150, local61 + 2, loadPercentage * 3, 30, 9179409);
+                GlRaster.method1186(local50 + loadPercentage * 3 - 150, local61 - -2, 300 - loadPercentage * 3, 30, 0);
+            } else {
+                SoftwareRaster.fillRect(arg0, arg1, arg3, arg2, 0);
+                SoftwareRaster.drawRect(local50 - 152, local61, 304, 34, 9179409);
+                SoftwareRaster.drawRect(local50 - 151, local61 + 1, 302, 32, 0);
+                SoftwareRaster.fillRect(local50 - 150, local61 + 2, loadPercentage * 3, 30, 9179409);
+                SoftwareRaster.fillRect(loadPercentage * 3 + local50 - 150, local61 - -2, 300 - loadPercentage * 3, 30, 0);
+            }
+            Fonts.b12Full.renderCenter(LocalizedText.LOADINGDOTDOTDOT, local50, local61 + 20, 16777215, -1);
+            return;
+        }
+        anInt1176 = (int) ((float) (arg2 * 2) / zoom);
+        Static1.anInt2882 = anInt435 - (int) ((float) arg3 / zoom);
+        @Pc(211) int local211 = anInt435 - (int) ((float) arg3 / zoom);
+        local50 = anInt919 - (int) ((float) arg2 / zoom);
+        Static1.anInt2884 = anInt919 - (int) ((float) arg2 / zoom);
+        @Pc(236) int local236 = anInt919 + (int) ((float) arg2 / zoom);
+        local61 = (int) ((float) arg3 / zoom) + anInt435;
+        anInt2387 = (int) ((float) (arg3 * 2) / zoom);
+        if (GlRenderer.enabled) {
+            if (aClass3_Sub2_Sub1_Sub1_2 == null || aClass3_Sub2_Sub1_Sub1_2.width != arg3 || aClass3_Sub2_Sub1_Sub1_2.height != arg2) {
+                aClass3_Sub2_Sub1_Sub1_2 = null;
+                aClass3_Sub2_Sub1_Sub1_2 = new SoftwareSprite(arg3, arg2);
+            }
+            SoftwareRaster.setSize(aClass3_Sub2_Sub1_Sub1_2.pixels, arg3, arg2);
+            method4364(arg3, 0, local61, local50, 0, local236, arg2, local211);
+            method1195(arg3, 0, local61, local236, arg2, 0, local211, local50);
+            Static38.method959(0, 0, local211, arg3, local236, local50, local61, arg2);
+            GlRaster.method1178(aClass3_Sub2_Sub1_Sub1_2.pixels, arg0, arg1, arg3, arg2);
+            SoftwareRaster.pixels = null;
+        } else {
+            method4364(arg3 + arg0, arg1, local61, local50, arg0, local236, arg1 + arg2, local211);
+            method1195(arg0 + arg3, arg0, local61, local236, arg2 + arg1, arg1, local211, local50);
+            Static38.method959(arg0, arg1, local211, arg0 + arg3, local236, local50, local61, arg2 + arg1);
+        }
+        if (anInt1864 > 0) {
+            Static1.anInt2428--;
+            if (Static1.anInt2428 == 0) {
+                Static1.anInt2428 = 20;
+                anInt1864--;
+            }
+        }
+
+        if (Cheat.displayFps) {
+            @Pc(405) int local405 = arg1 + arg2 - 8;
+            @Pc(412) int local412 = arg0 + arg3 - 5;
+            Fonts.p12Full.renderRight(JagString.concatenate(new JagString[]{Cheat.DEBUG_FPS, JagString.parseInt((int)GameShell.framesPerSecond)}), local412, local405, 16776960, -1);
+            @Pc(434) Runtime runtime = Runtime.getRuntime();
+            @Pc(443) int memory = (int) ((runtime.totalMemory() - runtime.freeMemory()) / 1024L / 1024L);
+            @Pc(445) int color = 16776960;
+            @Pc(446) int local446 = local405 - 15;
+            if (memory > 95) {
+                color = 16711680;
+            }
+            Fonts.p12Full.renderRight(JagString.concatenate(new JagString[]{Cheat.DEBUG_MEMORY, JagString.parseInt(memory), Cheat.DEBUG_MEMORY_UNIT}), local412, local446, color, -1);
+            local405 = local446 - 15;
+        }
+    }
+
+    @OriginalMember(owner = "client!dl", name = "a", descriptor = "(IIIIIIIII)V")
+    public static void method1195(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7) {
+        @Pc(13) int local13 = arg2 - arg6;
+        @Pc(17) int local17 = arg3 - arg7;
+        @Pc(26) int local26 = (arg0 - arg1 << 16) / local13;
+        @Pc(35) int local35 = (arg4 - arg5 << 16) / local17;
+        method3991(arg1, arg3, arg2, local35, arg6, local26, arg7, arg5);
+    }
+
+    @OriginalMember(owner = "client!sm", name = "a", descriptor = "(IIIIIIIIIII)V")
+	public static void method3991(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(8) int arg5, @OriginalArg(9) int arg6, @OriginalArg(10) int arg7) {
+		@Pc(9) int local9 = arg2 - arg4;
+		@Pc(11) int local11 = -1;
+		if (anInt1864 > 0) {
+			if (Static1.anInt2428 <= 10) {
+				local11 = Static1.anInt2428 * 5;
+			} else {
+				local11 = 50 - (Static1.anInt2428 - 10) * 5;
+			}
+		}
+		@Pc(39) int local39 = arg1 - arg6;
+		@Pc(43) int local43 = 983040 / arg5;
+		@Pc(47) int local47 = 983040 / arg3;
+		for (@Pc(50) int local50 = -local43; local50 < local9 + local43; local50++) {
+			@Pc(65) int local65 = local50 * arg5 >> 16;
+			@Pc(75) int local75 = arg5 * (local50 + 1) >> 16;
+			@Pc(80) int local80 = local75 - local65;
+			if (local80 > 0) {
+				@Pc(91) int local91 = arg4 + local50 >> 6;
+				local65 += arg0;
+				if (local91 >= 0 && local91 <= underlayColors.length - 1) {
+					@Pc(116) int[][] local116 = underlayColors[local91];
+					for (@Pc(119) int local119 = -local47; local119 < local39 + local47; local119++) {
+						@Pc(136) int local136 = arg3 * (local119 + 1) >> 16;
+						@Pc(144) int local144 = local119 * arg3 >> 16;
+						@Pc(149) int local149 = local136 - local144;
+						if (local149 > 0) {
+							local144 += arg7;
+							@Pc(163) int local163 = arg6 + local119 >> 6;
+							if (local163 >= 0 && local163 <= local116.length - 1 && local116[local163] != null) {
+								@Pc(203) int local203 = (local50 + arg4 & 0x3F) + ((arg6 + local119 & 0x3F) << 6);
+								@Pc(209) int local209 = local116[local163][local203];
+								if (local209 != 0) {
+									@Pc(222) LocType local222 = LocTypeList.get(local209 - 1);
+									if (!MapList.aBooleanArray130[local222.mapElement]) {
+										if (local11 != -1 && local222.mapElement == Static9.anInt172) {
+											@Pc(243) MapElement local243 = new MapElement();
+											local243.anInt4307 = local65;
+											local243.anInt4314 = local144;
+											local243.id = local222.mapElement;
+											Static232.aClass69_97.addTail(local243);
+										} else {
+											MapList.sprites[local222.mapElement].render(local65 - 7, local144 + -7);
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		for (@Pc(285) MapElement local285 = (MapElement) Static232.aClass69_97.head(); local285 != null; local285 = (MapElement) Static232.aClass69_97.next()) {
+			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 15, local11);
+			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 13, local11);
+			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 11, local11);
+			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 9, local11);
+			MapList.sprites[local285.id].render(local285.anInt4307 - 7, local285.anInt4314 + -7);
+		}
+		Static232.aClass69_97.clear();
+	}
+
+    @OriginalMember(owner = "client!fi", name = "a", descriptor = "(III)V")
+    public static void loadOverlayColors(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
+        for (@Pc(11) int local11 = 0; local11 < FloTypeList.capacity; local11++) {
+            @Pc(18) FloType local18 = FloTypeList.method4395(local11);
+            if (local18 != null) {
+                @Pc(24) int local24 = local18.texture;
+                if (local24 >= 0 && !Rasteriser.textureProvider.method3236(local24)) {
+                    local24 = -1;
+                }
+                @Pc(53) int local53;
+                @Pc(66) int local66;
+                @Pc(72) int local72;
+                @Pc(95) int local95;
+                if (local18.anInt5894 >= 0) {
+                    local66 = local18.anInt5894;
+                    local72 = (local66 & 0x7F) + arg0;
+                    if (local72 < 0) {
+                        local72 = 0;
+                    } else if (local72 > 127) {
+                        local72 = 127;
+                    }
+                    local95 = (local66 & 0x380) + (arg1 + local66 & 0xFC00) + local72;
+                    local53 = Rasteriser.palette[ColorUtils.multiplyLightnessGrayscale(local95, 96)];
+                } else if (local24 >= 0) {
+                    local53 = Rasteriser.palette[ColorUtils.multiplyLightnessGrayscale(Rasteriser.textureProvider.getAverageColor(local24), 96)];
+                } else if (local18.anInt5899 == -1) {
+                    local53 = -1;
+                } else {
+                    local66 = local18.anInt5899;
+                    local72 = arg0 + (local66 & 0x7F);
+                    if (local72 < 0) {
+                        local72 = 0;
+                    } else if (local72 > 127) {
+                        local72 = 127;
+                    }
+                    local95 = local72 + (local66 & 0x380) + (local66 + arg1 & 0xFC00);
+                    local53 = Rasteriser.palette[ColorUtils.multiplyLightnessGrayscale(local95, 96)];
+                }
+                overlayColors[local11 + 1] = local53;
+            }
+        }
+    }
 }

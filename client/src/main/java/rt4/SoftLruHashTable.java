@@ -71,7 +71,7 @@ public final class SoftLruHashTable {
 	public final int method3100() {
 		@Pc(10) int local10 = 0;
 		for (@Pc(16) ReferenceNode local16 = (ReferenceNode) this.aClass16_8.head(); local16 != null; local16 = (ReferenceNode) this.aClass16_8.next()) {
-			if (!local16.method3619()) {
+			if (!local16.isSoft()) {
 				local10++;
 			}
 		}
@@ -84,8 +84,8 @@ public final class SoftLruHashTable {
 			return;
 		}
 		for (@Pc(9) ReferenceNode local9 = (ReferenceNode) this.aClass16_8.head(); local9 != null; local9 = (ReferenceNode) this.aClass16_8.next()) {
-			if (local9.method3619()) {
-				if (local9.method3618() == null) {
+			if (local9.isSoft()) {
+				if (local9.get() == null) {
 					local9.unlink();
 					local9.unlinkSecondary();
 					this.anInt3966++;
@@ -103,7 +103,7 @@ public final class SoftLruHashTable {
 	@OriginalMember(owner = "client!n", name = "b", descriptor = "(B)V")
 	public final void method3103() {
 		for (@Pc(7) ReferenceNode local7 = (ReferenceNode) this.aClass16_8.head(); local7 != null; local7 = (ReferenceNode) this.aClass16_8.next()) {
-			if (local7.method3619()) {
+			if (local7.isSoft()) {
 				local7.unlink();
 				local7.unlinkSecondary();
 				this.anInt3966++;
@@ -124,14 +124,14 @@ public final class SoftLruHashTable {
 		if (local12 == null) {
 			return null;
 		}
-		@Pc(27) Object local27 = local12.method3618();
+		@Pc(27) Object local27 = local12.get();
 		if (local27 == null) {
 			local12.unlink();
 			local12.unlinkSecondary();
 			this.anInt3966++;
 			return null;
 		}
-		if (local12.method3619()) {
+		if (local12.isSoft()) {
 			@Pc(53) HardReferenceNode local53 = new HardReferenceNode(local27);
 			this.aClass133_18.put(local53, local12.key);
 			this.aClass16_8.addTail(local53);

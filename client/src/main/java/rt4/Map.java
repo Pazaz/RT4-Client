@@ -9,19 +9,19 @@ import org.openrs2.deob.annotation.Pc;
 public final class Map extends SecondaryNode {
 
 	@OriginalMember(owner = "client!bn", name = "K", descriptor = "I")
-	public int anInt758 = 0;
+	public int displayMinZ = 0;
 
 	@OriginalMember(owner = "client!bn", name = "L", descriptor = "I")
 	public int anInt759 = -1;
 
 	@OriginalMember(owner = "client!bn", name = "S", descriptor = "I")
-	public int anInt763 = 12800;
+	public int displayMinX = 12800;
 
 	@OriginalMember(owner = "client!bn", name = "Z", descriptor = "I")
-	public int anInt770 = 0;
+	public int displayMaxZ = 0;
 
 	@OriginalMember(owner = "client!bn", name = "cb", descriptor = "I")
-	public int anInt771 = 12800;
+	public int displayMaxX = 12800;
 
 	@OriginalMember(owner = "client!bn", name = "P", descriptor = "Z")
 	public boolean aBoolean50 = true;
@@ -72,7 +72,7 @@ public final class Map extends SecondaryNode {
 
     @OriginalMember(owner = "client!bn", name = "a", descriptor = "(IBI)Z")
 	public final boolean method664(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		if (this.anInt763 > arg1 || arg1 > this.anInt770 || arg0 < this.anInt771 || arg0 > this.anInt758) {
+		if (this.displayMinX > arg1 || arg1 > this.displayMaxZ || arg0 < this.displayMaxX || arg0 > this.displayMinZ) {
 			return false;
 		}
 		for (@Pc(33) MapChunk local33 = (MapChunk) this.chunks.head(); local33 != null; local33 = (MapChunk) this.chunks.next()) {
@@ -85,22 +85,22 @@ public final class Map extends SecondaryNode {
 
 	@OriginalMember(owner = "client!bn", name = "f", descriptor = "(B)V")
 	public final void computeBounds() {
-		this.anInt771 = 12800;
-		this.anInt770 = 0;
-		this.anInt758 = 0;
-		this.anInt763 = 12800;
+		this.displayMaxX = 12800;
+		this.displayMaxZ = 0;
+		this.displayMinZ = 0;
+		this.displayMinX = 12800;
 		for (@Pc(29) MapChunk local29 = (MapChunk) this.chunks.head(); local29 != null; local29 = (MapChunk) this.chunks.next()) {
-			if (local29.anInt3522 < this.anInt771) {
-				this.anInt771 = local29.anInt3522;
+			if (local29.anInt3522 < this.displayMaxX) {
+				this.displayMaxX = local29.anInt3522;
 			}
-			if (local29.anInt3520 < this.anInt763) {
-				this.anInt763 = local29.anInt3520;
+			if (local29.anInt3520 < this.displayMinX) {
+				this.displayMinX = local29.anInt3520;
 			}
-			if (local29.anInt3523 > this.anInt770) {
-				this.anInt770 = local29.anInt3523;
+			if (local29.anInt3523 > this.displayMaxZ) {
+				this.displayMaxZ = local29.anInt3523;
 			}
-			if (this.anInt758 < local29.anInt3524) {
-				this.anInt758 = local29.anInt3524;
+			if (this.displayMinZ < local29.anInt3524) {
+				this.displayMinZ = local29.anInt3524;
 			}
 		}
 	}

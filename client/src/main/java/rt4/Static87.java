@@ -271,7 +271,7 @@ public final class Static87 {
 								continue;
 							}
 							if (component.clientCode == 1400) {
-								Static269.method2225(local123, local114, component.height, component.width);
+								WorldMap.method2225(local123, local114, component.height, component.width);
 								InterfaceList.aBooleanArray100[rectangle] = true;
 								InterfaceList.rectangleRedraw[rectangle] = true;
 								if (GlRenderer.enabled) {
