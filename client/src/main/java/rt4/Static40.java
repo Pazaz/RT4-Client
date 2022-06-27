@@ -68,9 +68,9 @@ public final class Static40 {
 
     @OriginalMember(owner = "client!da", name = "h", descriptor = "(B)V")
 	public static void method1019() {
-		Component.sprites.method3103();
-		Component.models.method3103();
-		Component.fonts.method3103();
+		Component.sprites.removeSoft();
+		Component.models.removeSoft();
+		Component.fonts.removeSoft();
 	}
 
 	@OriginalMember(owner = "client!ha", name = "a", descriptor = "(ILclient!be;)Lclient!be;")

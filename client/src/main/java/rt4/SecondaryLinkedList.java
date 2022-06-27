@@ -20,7 +20,18 @@ public final class SecondaryLinkedList {
 		this.sentinel.secondaryPrev = this.sentinel;
 	}
 
-	@OriginalMember(owner = "client!ce", name = "a", descriptor = "(I)I")
+    @OriginalMember(owner = "client!gk", name = "a", descriptor = "(Lclient!rg;Lclient!rg;B)V")
+    public static void insertAfter(@OriginalArg(0) SecondaryNode arg0, @OriginalArg(1) SecondaryNode arg1) {
+        if (arg1.secondaryPrev != null) {
+            arg1.unlinkSecondary();
+        }
+        arg1.secondaryPrev = arg0;
+        arg1.secondaryNext = arg0.secondaryNext;
+        arg1.secondaryPrev.secondaryNext = arg1;
+        arg1.secondaryNext.secondaryPrev = arg1;
+    }
+
+    @OriginalMember(owner = "client!ce", name = "a", descriptor = "(I)I")
 	public final int size() {
 		@Pc(3) int local3 = 0;
 		@Pc(7) SecondaryNode local7 = this.sentinel.secondaryNext;

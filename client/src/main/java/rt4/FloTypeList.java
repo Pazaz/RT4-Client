@@ -35,7 +35,7 @@ public class FloTypeList {
 
     @OriginalMember(owner = "client!uh", name = "e", descriptor = "(I)V")
     public static void method4301() {
-        types.method3103();
+        types.removeSoft();
     }
 
     @OriginalMember(owner = "client!wh", name = "a", descriptor = "(I)V")

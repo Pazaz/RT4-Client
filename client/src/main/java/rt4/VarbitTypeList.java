@@ -37,7 +37,7 @@ public class VarbitTypeList {
 
     @OriginalMember(owner = "client!gd", name = "a", descriptor = "(I)V")
     public static void method1694() {
-        types.method3103();
+        types.removeSoft();
     }
 
     @OriginalMember(owner = "client!ec", name = "b", descriptor = "(I)V")

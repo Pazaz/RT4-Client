@@ -57,8 +57,8 @@ public class MsiTypeList {
 
     @OriginalMember(owner = "client!vl", name = "b", descriptor = "(I)V")
     public static void method4529() {
-        types.method3103();
-        sprites.method3103();
+        types.removeSoft();
+        sprites.removeSoft();
     }
 
     @OriginalMember(owner = "client!wh", name = "a", descriptor = "(II)V")

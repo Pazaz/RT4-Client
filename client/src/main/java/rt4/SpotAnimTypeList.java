@@ -60,7 +60,7 @@ public class SpotAnimTypeList {
 
 	@OriginalMember(owner = "client!fk", name = "a", descriptor = "(B)V")
 	public static void method1441() {
-		types.method3103();
-		models.method3103();
+		types.removeSoft();
+		models.removeSoft();
 	}
 }

@@ -32,7 +32,7 @@ public class FluTypeList {
 
     @OriginalMember(owner = "client!sd", name = "f", descriptor = "(B)V")
     public static void method3885() {
-        types.method3103();
+        types.removeSoft();
     }
 
     @OriginalMember(owner = "client!ed", name = "c", descriptor = "(I)V")

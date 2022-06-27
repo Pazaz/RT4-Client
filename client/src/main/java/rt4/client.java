@@ -385,10 +385,10 @@ public final class client extends GameShell {
 		CursorTypeList.method741();
 		PlayerAppearance.method3474();
 		Static40.method1019();
-		HintArrowManager.method3329();
+		HintArrowManager.removeSoft();
 		ShadowModelList.method4276();
-		HitBarList.hitBars.method3103();
-		FontMetricsList.fontMetrics.method3103();
+		HitBarList.hitBars.removeSoft();
+		FontMetricsList.fontMetrics.removeSoft();
 	}
 
 	@OriginalMember(owner = "client!rj", name = "f", descriptor = "(B)V")

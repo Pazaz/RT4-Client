@@ -42,6 +42,6 @@ public class LightTypeList {
 
     @OriginalMember(owner = "client!hd", name = "a", descriptor = "(I)V")
     public static void method1882() {
-        types.method3103();
+        types.removeSoft();
     }
 }

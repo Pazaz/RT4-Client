@@ -86,8 +86,8 @@ public final class PlayerAppearance {
 
     @OriginalMember(owner = "client!ph", name = "b", descriptor = "(B)V")
 	public static void method3474() {
-		aClass99_33.method3103();
-		aClass99_21.method3103();
+		aClass99_33.removeSoft();
+		aClass99_21.removeSoft();
 	}
 
     @OriginalMember(owner = "client!sj", name = "c", descriptor = "(I)V")
@@ -98,7 +98,7 @@ public final class PlayerAppearance {
 
     @OriginalMember(owner = "client!q", name = "a", descriptor = "(B)I")
     public static int method1029() {
-        return aClass99_33.method3100();
+        return aClass99_33.size();
     }
 
     @OriginalMember(owner = "client!hh", name = "a", descriptor = "(IIIILclient!tk;III)Lclient!ak;")
@@ -161,7 +161,7 @@ public final class PlayerAppearance {
 		}
 		this.aLong88 = local13[(int) (((long) (this.gender ? 1 : 0) ^ this.aLong88) & 0xFFL)] ^ this.aLong88 >>> 8;
 		if (local8 != 0L && this.aLong88 != local8) {
-			aClass99_33.method3098(local8);
+			aClass99_33.remove(local8);
 		}
 	}
 

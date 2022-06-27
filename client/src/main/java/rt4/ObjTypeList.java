@@ -70,9 +70,9 @@ public class ObjTypeList {
 
     @OriginalMember(owner = "client!i", name = "r", descriptor = "(I)V")
     public static void method2239() {
-        types.method3103();
-        models.method3103();
-        objectSpriteCache.method3103();
+        types.removeSoft();
+        models.removeSoft();
+        objectSpriteCache.removeSoft();
     }
 
     @OriginalMember(owner = "client!ob", name = "a", descriptor = "(B)V")
