@@ -34,13 +34,13 @@ public final class TextureOp3 extends TextureOp {
 	public final int[][] method4638(@OriginalArg(1) int arg0) {
 		@Pc(11) int[][] local11 = this.aClass103_41.method3173(arg0);
 		if (this.aClass103_41.aBoolean195) {
-			@Pc(25) int[] local25 = this.method4624(0, Static141.anInt3473 & arg0 - 1);
+			@Pc(25) int[] local25 = this.method4624(0, Static10.anInt3473 & arg0 - 1);
 			@Pc(31) int[] local31 = this.method4624(0, arg0);
-			@Pc(41) int[] local41 = this.method4624(0, arg0 + 1 & Static141.anInt3473);
+			@Pc(41) int[] local41 = this.method4624(0, arg0 + 1 & Static10.anInt3473);
 			@Pc(45) int[] local45 = local11[0];
 			@Pc(49) int[] local49 = local11[1];
 			@Pc(53) int[] local53 = local11[2];
-			for (@Pc(55) int local55 = 0; local55 < Static189.anInt4457; local55++) {
+			for (@Pc(55) int local55 = 0; local55 < Static10.anInt4457; local55++) {
 				@Pc(70) int local70 = this.anInt316 * (local41[local55] - local25[local55]);
 				@Pc(90) int local90 = this.anInt316 * (local31[local55 + 1 & Static34.anInt1060] - local31[Static34.anInt1060 & local55 - 1]);
 				@Pc(94) int local94 = local70 >> 12;

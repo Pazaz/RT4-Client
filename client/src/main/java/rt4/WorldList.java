@@ -38,6 +38,8 @@ public class WorldList {
     public static World[] worlds;
     @OriginalMember(owner = "client!k", name = "t", descriptor = "I")
     public static int errors = 0;
+    @OriginalMember(owner = "client!ea", name = "w", descriptor = "I")
+    public static int worldPos = 1;
 
     @OriginalMember(owner = "client!ql", name = "b", descriptor = "(I)I")
     public static int fetch() {
@@ -123,7 +125,7 @@ public class WorldList {
                 sorted = new World[size];
                 local124 = 0;
                 for (@Pc(240) int local240 = minId; local240 <= maxId; local240++) {
-                    @Pc(247) World local247 = Static54.getWorld(local240);
+                    @Pc(247) World local247 = ScriptRunner.getWorld(local240);
                     if (local247 != null) {
                         sorted[local124++] = local247;
                     }
@@ -222,6 +224,34 @@ public class WorldList {
 
     @OriginalMember(owner = "client!h", name = "a", descriptor = "(I)Lclient!ba;")
     public static World getNextWorld() {
-        return sorted.length > Static51.worldPos ? sorted[Static51.worldPos++] : null;
+        return sorted.length > worldPos ? sorted[worldPos++] : null;
     }
+
+    @OriginalMember(owner = "client!sh", name = "a", descriptor = "(IZBIZ)V")
+    public static void sortWorldList(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(3) int arg2, @OriginalArg(4) boolean arg3) {
+        method1697(arg0, arg2, sorted.length - 1, arg3, 0, arg1);
+    }
+
+    @OriginalMember(owner = "client!ge", name = "a", descriptor = "(IIIZIZZ)V")
+	public static void method1697(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) boolean arg3, @OriginalArg(4) int arg4, @OriginalArg(5) boolean arg5) {
+		if (arg2 <= arg4) {
+			return;
+		}
+		@Pc(13) int local13 = (arg2 + arg4) / 2;
+		@Pc(15) int local15 = arg4;
+		@Pc(19) World local19 = sorted[local13];
+		sorted[local13] = sorted[arg2];
+		sorted[arg2] = local19;
+		for (@Pc(31) int local31 = arg4; local31 < arg2; local31++) {
+			if (Static164.method3115(local19, sorted[local31], arg0, arg1, arg3, arg5) <= 0) {
+				@Pc(53) World local53 = sorted[local31];
+				sorted[local31] = sorted[local15];
+				sorted[local15++] = local53;
+			}
+		}
+		sorted[arg2] = sorted[local15];
+		sorted[local15] = local19;
+		method1697(arg0, arg1, local15 - 1, arg3, arg4, arg5);
+		method1697(arg0, arg1, arg2, arg3, local15 + 1, arg5);
+	}
 }

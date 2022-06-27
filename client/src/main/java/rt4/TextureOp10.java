@@ -22,7 +22,7 @@ public final class TextureOp10 extends TextureOp {
 			@Pc(34) int[] local34 = local30[0];
 			@Pc(38) int[] local38 = local30[2];
 			@Pc(42) int[] local42 = local30[1];
-			for (@Pc(44) int local44 = 0; local44 < Static189.anInt4457; local44++) {
+			for (@Pc(44) int local44 = 0; local44 < Static10.anInt4457; local44++) {
 				local19[local44] = (local38[local44] + local34[local44] + local42[local44]) / 3;
 			}
 		}

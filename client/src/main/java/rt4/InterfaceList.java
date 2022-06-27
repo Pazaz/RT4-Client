@@ -25,6 +25,10 @@ public class InterfaceList {
 	public static final int[] rectangleHeight = new int[100];
     @OriginalMember(owner = "client!pa", name = "R", descriptor = "[Z")
     public static final boolean[] aBooleanArray100 = new boolean[100];
+    @OriginalMember(owner = "client!ql", name = "h", descriptor = "Lclient!na;")
+    public static final JagString aClass100_903 = JagString.parse("Hidden)2");
+    @OriginalMember(owner = "client!ja", name = "f", descriptor = "Lclient!ih;")
+	public static final LinkedList mediumPriorityRequests = new LinkedList();
     @OriginalMember(owner = "client!bn", name = "V", descriptor = "I")
     public static int rectangles = 0;
     @OriginalMember(owner = "client!md", name = "W", descriptor = "I")
@@ -49,6 +53,32 @@ public class InterfaceList {
     public static int miscTransmitAt = 0;
     @OriginalMember(owner = "client!je", name = "T", descriptor = "Lclient!sc;")
     public static HashTable openInterfaces = new HashTable(8);
+    @OriginalMember(owner = "client!wl", name = "h", descriptor = "Lclient!be;")
+    public static Component aClass13_26 = null;
+    @OriginalMember(owner = "client!jd", name = "i", descriptor = "Lclient!be;")
+	public static Component clickedInventoryComponent;
+    @OriginalMember(owner = "client!nf", name = "h", descriptor = "Lclient!be;")
+	public static Component mouseOverInventoryInterface;
+    @OriginalMember(owner = "client!qk", name = "f", descriptor = "I")
+    public static int clickedInventoryComponentY = 0;
+    @OriginalMember(owner = "client!ef", name = "r", descriptor = "Lclient!be;")
+    public static Component aClass13_12 = null;
+    @OriginalMember(owner = "client!bn", name = "O", descriptor = "I")
+    public static int anInt761;
+    @OriginalMember(owner = "client!bc", name = "X", descriptor = "I")
+	public static int anInt436;
+    @OriginalMember(owner = "client!si", name = "ab", descriptor = "I")
+    public static int anInt5138;
+    @OriginalMember(owner = "client!sh", name = "f", descriptor = "I")
+    public static int anInt5103 = -1;
+    @OriginalMember(owner = "client!gd", name = "j", descriptor = "I")
+    public static int clickedInventoryComponentCycle = 0;
+    @OriginalMember(owner = "client!lj", name = "w", descriptor = "I")
+    public static int clickedInventoryComponentX = 0;
+    @OriginalMember(owner = "client!og", name = "e", descriptor = "Lclient!be;")
+    public static Component aClass13_22;
+    @OriginalMember(owner = "client!ok", name = "b", descriptor = "I")
+    public static int anInt4271;
 
     @OriginalMember(owner = "client!ab", name = "a", descriptor = "(ZLclient!ve;Lclient!ve;Lclient!ve;Lclient!ve;)V")
     public static void init(@OriginalArg(1) Js5 arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) Js5 arg2, @OriginalArg(4) Js5 arg3) {
@@ -194,7 +224,7 @@ public class InterfaceList {
         if (!getServerActiveProperties(arg0).method503(arg1) && arg0.onOptionClick == null) {
             return null;
         } else if (arg0.ops == null || arg0.ops.length <= arg1 || arg0.ops[arg1] == null || arg0.ops[arg1].trim().length() == 0) {
-            return Static121.qaOpTest ? JagString.concatenate(new JagString[] { Static207.aClass100_903, JagString.parseInt(arg1) }) : null;
+            return Static121.qaOpTest ? JagString.concatenate(new JagString[] { aClass100_903, JagString.parseInt(arg1) }) : null;
         } else {
             return arg0.ops[arg1];
         }
@@ -259,8 +289,8 @@ public class InterfaceList {
 		for (@Pc(3) int local3 = 0; local3 < arg4.length; local3++) {
 			@Pc(19) Component local19 = arg4[local3];
 			if (local19 != null && local19.layer == arg0) {
-				Static150.method2801(arg3, arg2, local19, arg1);
-				Static111.method2291(local19, arg3, arg2);
+				method2801(arg3, arg2, local19, arg1);
+				method2291(local19, arg3, arg2);
 				if (local19.scrollMaxH - local19.width < local19.scrollX) {
 					local19.scrollX = local19.scrollMaxH - local19.width;
 				}
@@ -305,7 +335,7 @@ public class InterfaceList {
         if (arg0) {
             method2275(local16);
         }
-        Static132.method3214(local16);
+        method3214(local16);
         @Pc(32) Component local32 = getComponent(local9);
         if (local32 != null) {
             redraw(local32);
@@ -313,15 +343,15 @@ public class InterfaceList {
         @Pc(41) int local41 = MiniMenu.size;
         @Pc(43) int local43;
         for (local43 = 0; local43 < local41; local43++) {
-            if (Static2.method5(MiniMenu.actions[local43])) {
+            if (method5(MiniMenu.actions[local43])) {
                 MiniMenu.remove(local43);
             }
         }
         if (MiniMenu.size == 1) {
             Static40.aBoolean108 = false;
-            Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
+            method4012(anInt4271, anInt761, anInt5138, anInt436);
         } else {
-            Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
+            method4012(anInt4271, anInt761, anInt5138, anInt436);
             local43 = Fonts.b12Full.getStringWidth(LocalizedText.CHOOSE_OPTION);
             for (@Pc(75) int local75 = 0; local75 < MiniMenu.size; local75++) {
                 @Pc(88) int local88 = Fonts.b12Full.getStringWidth(MiniMenu.getOp(local75));
@@ -329,11 +359,679 @@ public class InterfaceList {
                     local43 = local88;
                 }
             }
-            Static13.anInt436 = MiniMenu.size * 15 + (Static40.aBoolean298 ? 26 : 22);
-            Static24.anInt761 = local43 + 8;
+            anInt436 = MiniMenu.size * 15 + (Static40.aBoolean298 ? 26 : 22);
+            anInt761 = local43 + 8;
         }
         if (topLevelInterface != -1) {
-            Static54.runScripts(1, topLevelInterface);
+            runScripts(1, topLevelInterface);
+        }
+    }
+
+    @OriginalMember(owner = "client!ii", name = "a", descriptor = "(Lclient!be;III)V")
+	public static void method2291(@OriginalArg(0) Component arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
+		if (arg0.xMode == 0) {
+			arg0.y = arg0.baseY;
+		} else if (arg0.xMode == 1) {
+			arg0.y = (arg1 - arg0.height) / 2 + arg0.baseY;
+		} else if (arg0.xMode == 2) {
+			arg0.y = arg1 - arg0.height - arg0.baseY;
+		} else if (arg0.xMode == 3) {
+			arg0.y = arg0.baseY * arg1 >> 14;
+		} else if (arg0.xMode == 4) {
+			arg0.y = (arg1 * arg0.baseY >> 14) + (arg1 - arg0.height) / 2;
+		} else {
+			arg0.y = arg1 - (arg1 * arg0.baseY >> 14) - arg0.height;
+		}
+		if (arg0.yMode == 0) {
+			arg0.x = arg0.baseX;
+		} else if (arg0.yMode == 1) {
+			arg0.x = arg0.baseX + (arg2 - arg0.width) / 2;
+		} else if (arg0.yMode == 2) {
+			arg0.x = arg2 - arg0.baseX - arg0.width;
+		} else if (arg0.yMode == 3) {
+			arg0.x = arg0.baseX * arg2 >> 14;
+		} else if (arg0.yMode == 4) {
+			arg0.x = (arg0.baseX * arg2 >> 14) + (arg2 - arg0.width) / 2;
+		} else {
+			arg0.x = arg2 - (arg2 * arg0.baseX >> 14) - arg0.width;
+		}
+		if (!Static121.qaOpTest || getServerActiveProperties(arg0).events == 0 && arg0.type != 0) {
+			return;
+		}
+		if (arg0.y < 0) {
+			arg0.y = 0;
+		} else if (arg0.height + arg0.y > arg1) {
+			arg0.y = arg1 - arg0.height;
+		}
+		if (arg0.x < 0) {
+			arg0.x = 0;
+		} else if (arg2 < arg0.x + arg0.width) {
+			arg0.x = arg2 - arg0.width;
+		}
+	}
+
+    @OriginalMember(owner = "client!fn", name = "a", descriptor = "(ILclient!be;)V")
+    public static void update(@OriginalArg(1) Component arg0) {
+        @Pc(7) Component local7 = method4668(arg0);
+        @Pc(19) int local19;
+        @Pc(17) int local17;
+        if (local7 == null) {
+            local17 = GameShell.canvasHeight;
+            local19 = GameShell.canvasWidth;
+        } else {
+            local17 = local7.height;
+            local19 = local7.width;
+        }
+        method2801(local17, local19, arg0, false);
+        method2291(arg0, local17, local19);
+    }
+
+    @OriginalMember(owner = "client!lk", name = "a", descriptor = "(IIILclient!be;Z)V")
+	public static void method2801(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Component arg2, @OriginalArg(4) boolean arg3) {
+		@Pc(4) int local4 = arg2.width;
+		@Pc(7) int local7 = arg2.height;
+		if (arg2.dynamicWidthValue == 0) {
+			arg2.width = arg2.baseWidth;
+		} else if (arg2.dynamicWidthValue == 1) {
+			arg2.width = arg1 - arg2.baseWidth;
+		} else if (arg2.dynamicWidthValue == 2) {
+			arg2.width = arg2.baseWidth * arg1 >> 14;
+		} else if (arg2.dynamicWidthValue == 3) {
+			if (arg2.type == 2) {
+				arg2.width = arg2.baseWidth * 32 + (arg2.baseWidth - 1) * arg2.anInt512;
+			} else if (arg2.type == 7) {
+				arg2.width = arg2.baseWidth * 115 + arg2.anInt512 * (arg2.baseWidth - 1);
+			}
+		}
+		if (arg2.dynamicHeightValue == 0) {
+			arg2.height = arg2.baseHeight;
+		} else if (arg2.dynamicHeightValue == 1) {
+			arg2.height = arg0 - arg2.baseHeight;
+		} else if (arg2.dynamicHeightValue == 2) {
+			arg2.height = arg0 * arg2.baseHeight >> 14;
+		} else if (arg2.dynamicHeightValue == 3) {
+			if (arg2.type == 2) {
+				arg2.height = (arg2.baseHeight - 1) * arg2.anInt516 + arg2.baseHeight * 32;
+			} else if (arg2.type == 7) {
+				arg2.height = arg2.baseHeight * 12 + (arg2.baseHeight - 1) * arg2.anInt516;
+			}
+		}
+		if (arg2.dynamicWidthValue == 4) {
+			arg2.width = arg2.aspectWidth * arg2.height / arg2.aspectHeight;
+		}
+		if (arg2.dynamicHeightValue == 4) {
+			arg2.height = arg2.aspectHeight * arg2.width / arg2.aspectWidth;
+		}
+		if (Static121.qaOpTest && (getServerActiveProperties(arg2).events != 0 || arg2.type == 0)) {
+			if (arg2.height < 5 && arg2.width < 5) {
+				arg2.height = 5;
+				arg2.width = 5;
+			} else {
+				if (arg2.width <= 0) {
+					arg2.width = 5;
+				}
+				if (arg2.height <= 0) {
+					arg2.height = 5;
+				}
+			}
+		}
+		if (arg2.clientCode == 1337) {
+			aClass13_26 = arg2;
+		}
+		if (arg3 && arg2.onResize != null && (local4 != arg2.width || arg2.height != local7)) {
+			@Pc(305) HookRequest local305 = new HookRequest();
+			local305.arguments = arg2.onResize;
+			local305.source = arg2;
+			lowPriorityRequests.addTail(local305);
+		}
+	}
+
+    @OriginalMember(owner = "client!wl", name = "a", descriptor = "(Lclient!be;I)Lclient!be;")
+    public static Component method4668(@OriginalArg(0) Component arg0) {
+        if (arg0.layer != -1) {
+            return getComponent(arg0.layer);
+        }
+        @Pc(28) int local28 = arg0.id >>> 16;
+        @Pc(33) HashTableIterator local33 = new HashTableIterator(openInterfaces);
+        for (@Pc(38) ComponentPointer local38 = (ComponentPointer) local33.method2701(); local38 != null; local38 = (ComponentPointer) local33.method2700()) {
+            if (local28 == local38.anInt5878) {
+                return getComponent((int) local38.key);
+            }
+        }
+        return null;
+    }
+
+    @OriginalMember(owner = "client!kf", name = "a", descriptor = "(IIBII)V")
+    public static void method4012(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
+        for (@Pc(12) int local12 = 0; local12 < rectangles; local12++) {
+            if (rectangleWidth[local12] + rectangleX[local12] > arg0 && arg1 + arg0 > rectangleX[local12] && arg2 < rectangleHeight[local12] + rectangleY[local12] && rectangleY[local12] < arg2 + arg3) {
+                aBooleanArray100[local12] = true;
+            }
+        }
+    }
+
+    @OriginalMember(owner = "client!we", name = "b", descriptor = "(BI)V")
+    public static void method3214(@OriginalArg(1) int arg0) {
+        for (@Pc(11) Node local11 = properties.head(); local11 != null; local11 = properties.next()) {
+            if ((local11.key >> 48 & 0xFFFFL) == (long) arg0) {
+                local11.unlink();
+            }
+        }
+    }
+
+    @OriginalMember(owner = "client!ed", name = "a", descriptor = "(III)V")
+    public static void runScripts(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
+        if (load(arg1)) {
+            method7(components[arg1], arg0);
+        }
+    }
+
+    @OriginalMember(owner = "client!aa", name = "a", descriptor = "([Lclient!be;ZI)V")
+    public static void method7(@OriginalArg(0) Component[] arg0, @OriginalArg(2) int arg1) {
+        for (@Pc(11) int local11 = 0; local11 < arg0.length; local11++) {
+            @Pc(23) Component local23 = arg0[local11];
+            if (local23 != null) {
+                if (local23.type == 0) {
+                    if (local23.createdComponents != null) {
+                        method7(local23.createdComponents, arg1);
+                    }
+                    @Pc(49) ComponentPointer local49 = (ComponentPointer) openInterfaces.get((long) local23.id);
+                    if (local49 != null) {
+                        runScripts(arg1, local49.anInt5878);
+                    }
+                }
+                @Pc(72) HookRequest local72;
+                if (arg1 == 0 && local23.onDialogAbort != null) {
+                    local72 = new HookRequest();
+                    local72.arguments = local23.onDialogAbort;
+                    local72.source = local23;
+                    ScriptRunner.run(local72);
+                }
+                if (arg1 == 1 && local23.onWidgetsOpenClose != null) {
+                    if (local23.createdComponentId >= 0) {
+                        @Pc(103) Component local103 = getComponent(local23.id);
+                        if (local103 == null || local103.createdComponents == null || local23.createdComponentId >= local103.createdComponents.length || local103.createdComponents[local23.createdComponentId] != local23) {
+                            continue;
+                        }
+                    }
+                    local72 = new HookRequest();
+                    local72.arguments = local23.onWidgetsOpenClose;
+                    local72.source = local23;
+                    ScriptRunner.run(local72);
+                }
+            }
+        }
+    }
+
+    @OriginalMember(owner = "client!eg", name = "a", descriptor = "(IIIIIIII)V")
+    public static void method1320(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6) {
+        if (load(arg4)) {
+            method946(components[arg4], -1, arg5, arg1, arg3, arg6, arg0, arg2);
+        }
+    }
+
+    @OriginalMember(owner = "client!client", name = "a", descriptor = "([Lclient!be;IIIIIII)V")
+    public static void method946(@OriginalArg(0) Component[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7) {
+        for (@Pc(1) int local1 = 0; local1 < arg0.length; local1++) {
+            @Pc(9) Component component = arg0[local1];
+            if (component != null && component.layer == arg1 && (!component.if3 || component.type == 0 || component.aBoolean25 || getServerActiveProperties(component).events != 0 || component == Static40.aClass13_1 || component.clientCode == 1338) && (!component.if3 || !Static36.method947(component))) {
+                @Pc(50) int local50 = component.x + arg6;
+                @Pc(55) int local55 = component.y + arg7;
+                @Pc(61) int local61;
+                @Pc(63) int local63;
+                @Pc(65) int local65;
+                @Pc(67) int local67;
+                if (component.type == 2) {
+                    local61 = arg2;
+                    local63 = arg3;
+                    local65 = arg4;
+                    local67 = arg5;
+                } else {
+                    @Pc(73) int local73 = local50 + component.width;
+                    @Pc(78) int local78 = local55 + component.height;
+                    if (component.type == 9) {
+                        local73++;
+                        local78++;
+                    }
+                    local61 = local50 > arg2 ? local50 : arg2;
+                    local63 = local55 > arg3 ? local55 : arg3;
+                    local65 = local73 < arg4 ? local73 : arg4;
+                    local67 = local78 < arg5 ? local78 : arg5;
+                }
+                if (component == Static40.aClass13_14) {
+                    Static44.aBoolean83 = true;
+                    Static36.anInt3075 = local50;
+                    Static36.anInt660 = local55;
+                }
+                if (!component.if3 || local61 < local65 && local63 < local67) {
+                    if (component.type == 0) {
+                        if (!component.if3 && Static36.method947(component) && aClass13_22 != component) {
+                            continue;
+                        }
+                        if (component.noClickThrough && Mouse.lastMouseX >= local61 && Mouse.lastMouseY >= local63 && Mouse.lastMouseX < local65 && Mouse.lastMouseY < local67) {
+                            for (@Pc(164) HookRequest local164 = (HookRequest) lowPriorityRequests.head(); local164 != null; local164 = (HookRequest) lowPriorityRequests.next()) {
+                                if (local164.aBoolean158) {
+                                    local164.unlink();
+                                    local164.source.aBoolean19 = false;
+                                }
+                            }
+                            if (Static40.anInt4851 == 0) {
+                                Static40.aClass13_14 = null;
+                                Static40.aClass13_1 = null;
+                            }
+                            Static36.anInt3337 = 0;
+                        }
+                    }
+                    if (component.if3) {
+                        @Pc(207) boolean local207;
+                        if (Mouse.lastMouseX >= local61 && Mouse.lastMouseY >= local63 && Mouse.lastMouseX < local65 && Mouse.lastMouseY < local67) {
+                            local207 = true;
+                        } else {
+                            local207 = false;
+                        }
+                        @Pc(212) boolean local212 = false;
+                        if (Mouse.pressedButton == 1 && local207) {
+                            local212 = true;
+                        }
+                        @Pc(221) boolean local221 = false;
+                        if (Mouse.clickButton == 1 && Mouse.clickX >= local61 && Mouse.clickY >= local63 && Mouse.clickX < local65 && Mouse.clickY < local67) {
+                            local221 = true;
+                        }
+                        @Pc(243) int i;
+                        @Pc(322) int k;
+                        if (component.aByteArray8 != null) {
+                            for (i = 0; i < component.aByteArray8.length; i++) {
+                                if (Keyboard.pressedKeys[component.aByteArray8[i]]) {
+                                    if (component.anIntArray49 == null || client.loop >= component.anIntArray49[i]) {
+                                        @Pc(279) byte local279 = component.aByteArray7[i];
+                                        if (local279 == 0 || ((local279 & 0x2) == 0 || Keyboard.pressedKeys[Keyboard.KEY_ALT]) && ((local279 & 0x1) == 0 || Keyboard.pressedKeys[Keyboard.KEY_CTRL]) && ((local279 & 0x4) == 0 || Keyboard.pressedKeys[Keyboard.KEY_SHIFT])) {
+                                            ClientProt.method4512(JagString.EMPTY, -1, i + 1, component.id);
+                                            k = component.anIntArray46[i];
+                                            if (component.anIntArray49 == null) {
+                                                component.anIntArray49 = new int[component.aByteArray8.length];
+                                            }
+                                            if (k == 0) {
+                                                component.anIntArray49[i] = Integer.MAX_VALUE;
+                                            } else {
+                                                component.anIntArray49[i] = client.loop + k;
+                                            }
+                                        }
+                                    }
+                                } else if (component.anIntArray49 != null) {
+                                    component.anIntArray49[i] = 0;
+                                }
+                            }
+                        }
+                        if (local221) {
+                            Static40.method1015(Mouse.clickY - local55, Mouse.clickX - local50, component);
+                        }
+                        if (Static40.aClass13_14 != null && Static40.aClass13_14 != component && local207 && getServerActiveProperties(component).method509()) {
+                            aClass13_12 = component;
+                        }
+                        if (component == Static40.aClass13_1) {
+                            Static146.aBoolean174 = true;
+                            Static81.anInt2225 = local50;
+                            anInt5103 = local55;
+                        }
+                        if (component.aBoolean25 || component.clientCode != 0) {
+                            @Pc(399) HookRequest request;
+                            if (local207 && MouseWheel.wheelRotation != 0 && component.onScroll != null) {
+                                request = new HookRequest();
+                                request.aBoolean158 = true;
+                                request.source = component;
+                                request.mouseY = MouseWheel.wheelRotation;
+                                request.arguments = component.onScroll;
+                                lowPriorityRequests.addTail(request);
+                            }
+                            if (Static40.aClass13_14 != null || clickedInventoryComponent != null || Static40.aBoolean108 || component.clientCode != 1400 && Static36.anInt3337 > 0) {
+                                local221 = false;
+                                local212 = false;
+                                local207 = false;
+                            }
+                            @Pc(508) int skill;
+                            if (component.clientCode != 0) {
+                                if (component.clientCode == 1337) {
+                                    aClass13_26 = component;
+                                    redraw(component);
+                                    continue;
+                                }
+                                if (component.clientCode == 1338) {
+                                    if (local221) {
+                                        Static1.anInt5 = Mouse.clickX - local50;
+                                        MiniMenu.anInt2878 = Mouse.clickY - local55;
+                                    }
+                                    continue;
+                                }
+                                if (component.clientCode == 1400) {
+                                    WorldMap.component = component;
+                                    if (local221) {
+                                        if (Keyboard.pressedKeys[Keyboard.KEY_CTRL] && LoginManager.staffModLevel > 0) {
+                                            i = (int) ((double) (Mouse.clickX - local50 - component.width / 2) * 2.0D / (double) WorldMap.zoom);
+                                            skill = (int) ((double) (Mouse.clickY - local55 - component.height / 2) * 2.0D / (double) WorldMap.zoom);
+                                            k = WorldMap.anInt435 + i;
+                                            @Pc(516) int local516 = WorldMap.anInt919 + skill;
+                                            @Pc(520) int local520 = k + WorldMap.originX;
+                                            @Pc(528) int local528 = WorldMap.length + WorldMap.originZ - local516 - 1;
+                                            Cheat.teleport(local520, local528, 0);
+                                            ClientProt.closeWidget();
+                                            continue;
+                                        }
+                                        Static36.anInt3337 = 1;
+                                        Static40.anInt5388 = Mouse.lastMouseX;
+                                        Static40.anInt4035 = Mouse.lastMouseY;
+                                        continue;
+                                    }
+                                    if (local212 && Static36.anInt3337 > 0) {
+                                        if (Static36.anInt3337 == 1 && (Static40.anInt5388 != Mouse.lastMouseX || Static40.anInt4035 != Mouse.lastMouseY)) {
+                                            Static36.anInt4620 = WorldMap.anInt435;
+                                            Static36.anInt1885 = WorldMap.anInt919;
+                                            Static36.anInt3337 = 2;
+                                        }
+                                        if (Static36.anInt3337 == 2) {
+                                            WorldMap.method1964(Static36.anInt4620 + (int) ((double) (Static40.anInt5388 - Mouse.lastMouseX) * 2.0D / (double) WorldMap.targetZoom));
+                                            WorldMap.method4641(Static36.anInt1885 + (int) ((double) (Static40.anInt4035 - Mouse.lastMouseY) * 2.0D / (double) WorldMap.targetZoom));
+                                        }
+                                        continue;
+                                    }
+                                    Static36.anInt3337 = 0;
+                                    continue;
+                                }
+                                if (component.clientCode == 1401) {
+                                    if (local212) {
+                                        WorldMap.method2387(component.width, Mouse.lastMouseY - local55, Mouse.lastMouseX - local50, component.height);
+                                    }
+                                    continue;
+                                }
+                                if (component.clientCode == 1402) {
+                                    if (!GlRenderer.enabled) {
+                                        redraw(component);
+                                    }
+                                    continue;
+                                }
+                            }
+                            if (!component.aBoolean24 && local221) {
+                                component.aBoolean24 = true;
+                                if (component.onClickRepeat != null) {
+                                    request = new HookRequest();
+                                    request.aBoolean158 = true;
+                                    request.source = component;
+                                    request.mouseX = Mouse.clickX - local50;
+                                    request.mouseY = Mouse.clickY - local55;
+                                    request.arguments = component.onClickRepeat;
+                                    lowPriorityRequests.addTail(request);
+                                }
+                            }
+                            if (component.aBoolean24 && local212 && component.onDrag != null) {
+                                request = new HookRequest();
+                                request.aBoolean158 = true;
+                                request.source = component;
+                                request.mouseX = Mouse.lastMouseX - local50;
+                                request.mouseY = Mouse.lastMouseY - local55;
+                                request.arguments = component.onDrag;
+                                lowPriorityRequests.addTail(request);
+                            }
+                            if (component.aBoolean24 && !local212) {
+                                component.aBoolean24 = false;
+                                if (component.onRelease != null) {
+                                    request = new HookRequest();
+                                    request.aBoolean158 = true;
+                                    request.source = component;
+                                    request.mouseX = Mouse.lastMouseX - local50;
+                                    request.mouseY = Mouse.lastMouseY - local55;
+                                    request.arguments = component.onRelease;
+                                    mediumPriorityRequests.addTail(request);
+                                }
+                            }
+                            if (local212 && component.onHold != null) {
+                                request = new HookRequest();
+                                request.aBoolean158 = true;
+                                request.source = component;
+                                request.mouseX = Mouse.lastMouseX - local50;
+                                request.mouseY = Mouse.lastMouseY - local55;
+                                request.arguments = component.onHold;
+                                lowPriorityRequests.addTail(request);
+                            }
+                            if (!component.aBoolean19 && local207) {
+                                component.aBoolean19 = true;
+                                if (component.onMouseOver != null) {
+                                    request = new HookRequest();
+                                    request.aBoolean158 = true;
+                                    request.source = component;
+                                    request.mouseX = Mouse.lastMouseX - local50;
+                                    request.mouseY = Mouse.lastMouseY - local55;
+                                    request.arguments = component.onMouseOver;
+                                    lowPriorityRequests.addTail(request);
+                                }
+                            }
+                            if (component.aBoolean19 && local207 && component.onMouseRepeat != null) {
+                                request = new HookRequest();
+                                request.aBoolean158 = true;
+                                request.source = component;
+                                request.mouseX = Mouse.lastMouseX - local50;
+                                request.mouseY = Mouse.lastMouseY - local55;
+                                request.arguments = component.onMouseRepeat;
+                                lowPriorityRequests.addTail(request);
+                            }
+                            if (component.aBoolean19 && !local207) {
+                                component.aBoolean19 = false;
+                                if (component.onMouseLeave != null) {
+                                    request = new HookRequest();
+                                    request.aBoolean158 = true;
+                                    request.source = component;
+                                    request.mouseX = Mouse.lastMouseX - local50;
+                                    request.mouseY = Mouse.lastMouseY - local55;
+                                    request.arguments = component.onMouseLeave;
+                                    mediumPriorityRequests.addTail(request);
+                                }
+                            }
+                            if (component.onTimer != null) {
+                                request = new HookRequest();
+                                request.source = component;
+                                request.arguments = component.onTimer;
+                                Static4.highPriorityRequests.addTail(request);
+                            }
+                            @Pc(966) HookRequest request2;
+                            if (component.onVarcTransmit != null && VarcDomain.updatedVarcsWriterIndex > component.updatedVarcsReaderIndex) {
+                                if (component.varcTriggers == null || VarcDomain.updatedVarcsWriterIndex - component.updatedVarcsReaderIndex > 32) {
+                                    request = new HookRequest();
+                                    request.source = component;
+                                    request.arguments = component.onVarcTransmit;
+                                    lowPriorityRequests.addTail(request);
+                                } else {
+                                    label563: for (i = component.updatedVarcsReaderIndex; i < VarcDomain.updatedVarcsWriterIndex; i++) {
+                                        skill = VarcDomain.updatedVarcs[i & 0x1F];
+                                        for (k = 0; k < component.varcTriggers.length; k++) {
+                                            if (component.varcTriggers[k] == skill) {
+                                                request2 = new HookRequest();
+                                                request2.source = component;
+                                                request2.arguments = component.onVarcTransmit;
+                                                lowPriorityRequests.addTail(request2);
+                                                break label563;
+                                            }
+                                        }
+                                    }
+                                }
+                                component.updatedVarcsReaderIndex = VarcDomain.updatedVarcsWriterIndex;
+                            }
+                            if (component.onVarcstrTransmit != null && VarcDomain.updatedVarcstrsWriterIndex > component.updatedVarcstrsReaderIndex) {
+                                if (component.varcstrTriggers == null || VarcDomain.updatedVarcstrsWriterIndex - component.updatedVarcstrsReaderIndex > 32) {
+                                    request = new HookRequest();
+                                    request.source = component;
+                                    request.arguments = component.onVarcstrTransmit;
+                                    lowPriorityRequests.addTail(request);
+                                } else {
+                                    label539: for (i = component.updatedVarcstrsReaderIndex; i < VarcDomain.updatedVarcstrsWriterIndex; i++) {
+                                        skill = VarcDomain.updatedVarcstrs[i & 0x1F];
+                                        for (k = 0; k < component.varcstrTriggers.length; k++) {
+                                            if (component.varcstrTriggers[k] == skill) {
+                                                request2 = new HookRequest();
+                                                request2.source = component;
+                                                request2.arguments = component.onVarcstrTransmit;
+                                                lowPriorityRequests.addTail(request2);
+                                                break label539;
+                                            }
+                                        }
+                                    }
+                                }
+                                component.updatedVarcstrsReaderIndex = VarcDomain.updatedVarcstrsWriterIndex;
+                            }
+                            if (component.onVarpTransmit != null && VarpDomain.updatedVarpsWriterIndex > component.updatedVarpsReaderIndex) {
+                                if (component.varpTriggers == null || VarpDomain.updatedVarpsWriterIndex - component.updatedVarpsReaderIndex > 32) {
+                                    request = new HookRequest();
+                                    request.source = component;
+                                    request.arguments = component.onVarpTransmit;
+                                    lowPriorityRequests.addTail(request);
+                                } else {
+                                    label515: for (i = component.updatedVarpsReaderIndex; i < VarpDomain.updatedVarpsWriterIndex; i++) {
+                                        skill = VarpDomain.updatedVarps[i & 0x1F];
+                                        for (k = 0; k < component.varpTriggers.length; k++) {
+                                            if (component.varpTriggers[k] == skill) {
+                                                request2 = new HookRequest();
+                                                request2.source = component;
+                                                request2.arguments = component.onVarpTransmit;
+                                                lowPriorityRequests.addTail(request2);
+                                                break label515;
+                                            }
+                                        }
+                                    }
+                                }
+                                component.updatedVarpsReaderIndex = VarpDomain.updatedVarpsWriterIndex;
+                            }
+                            if (component.onInvTransmit != null && Inv.updatedInventoriesWriterIndex > component.updatedInventoriesReaderIndex) {
+                                if (component.inventoryTriggers == null || Inv.updatedInventoriesWriterIndex - component.updatedInventoriesReaderIndex > 32) {
+                                    request = new HookRequest();
+                                    request.source = component;
+                                    request.arguments = component.onInvTransmit;
+                                    lowPriorityRequests.addTail(request);
+                                } else {
+                                    outer:
+                                    for (i = component.updatedInventoriesReaderIndex; i < Inv.updatedInventoriesWriterIndex; i++) {
+                                        skill = Inv.updatedInventories[i & 0x1F];
+                                        for (k = 0; k < component.inventoryTriggers.length; k++) {
+                                            if (component.inventoryTriggers[k] == skill) {
+                                                request2 = new HookRequest();
+                                                request2.source = component;
+                                                request2.arguments = component.onInvTransmit;
+                                                lowPriorityRequests.addTail(request2);
+                                                break outer;
+                                            }
+                                        }
+                                    }
+                                }
+                                component.updatedInventoriesReaderIndex = Inv.updatedInventoriesWriterIndex;
+                            }
+                            if (component.onStatTransmit != null && PlayerSkillXpTable.updatedStatsWriterIndex > component.updatedStatsReaderIndex) {
+                                if (component.statTriggers == null || PlayerSkillXpTable.updatedStatsWriterIndex - component.updatedStatsReaderIndex > 32) {
+                                    request = new HookRequest();
+                                    request.source = component;
+                                    request.arguments = component.onStatTransmit;
+                                    lowPriorityRequests.addTail(request);
+                                } else {
+                                    outer:
+                                    for (i = component.updatedStatsReaderIndex; i < PlayerSkillXpTable.updatedStatsWriterIndex; i++) {
+                                        skill = PlayerSkillXpTable.updatedStats[i & 0x1F];
+                                        for (k = 0; k < component.statTriggers.length; k++) {
+                                            if (component.statTriggers[k] == skill) {
+                                                request2 = new HookRequest();
+                                                request2.source = component;
+                                                request2.arguments = component.onStatTransmit;
+                                                lowPriorityRequests.addTail(request2);
+                                                break outer;
+                                            }
+                                        }
+                                    }
+                                }
+                                component.updatedStatsReaderIndex = PlayerSkillXpTable.updatedStatsWriterIndex;
+                            }
+                            if (Chat.transmitAt > component.lastTransmitTimer && component.onMsg != null) {
+                                request = new HookRequest();
+                                request.source = component;
+                                request.arguments = component.onMsg;
+                                lowPriorityRequests.addTail(request);
+                            }
+                            if (FriendsList.transmitAt > component.lastTransmitTimer && component.onFriendTransmit != null) {
+                                request = new HookRequest();
+                                request.source = component;
+                                request.arguments = component.onFriendTransmit;
+                                lowPriorityRequests.addTail(request);
+                            }
+                            if (ClanChat.transmitAt > component.lastTransmitTimer && component.onClanTransmit != null) {
+                                request = new HookRequest();
+                                request.source = component;
+                                request.arguments = component.onClanTransmit;
+                                lowPriorityRequests.addTail(request);
+                            }
+                            if (StockMarketManager.transmitAt > component.lastTransmitTimer && component.onStockTransmit != null) {
+                                request = new HookRequest();
+                                request.source = component;
+                                request.arguments = component.onStockTransmit;
+                                lowPriorityRequests.addTail(request);
+                            }
+                            if (miscTransmitAt > component.lastTransmitTimer && component.onMiscTransmit != null) {
+                                request = new HookRequest();
+                                request.source = component;
+                                request.arguments = component.onMiscTransmit;
+                                lowPriorityRequests.addTail(request);
+                            }
+                            component.lastTransmitTimer = transmitTimer;
+                            if (component.onKey != null) {
+                                for (i = 0; i < keyQueueSize; i++) {
+                                    @Pc(1430) HookRequest local1430 = new HookRequest();
+                                    local1430.source = component;
+                                    local1430.keyCode = keyCodes[i];
+                                    local1430.keyChar = keyChars[i];
+                                    local1430.arguments = component.onKey;
+                                    lowPriorityRequests.addTail(local1430);
+                                }
+                            }
+                            if (Camera.aBoolean16 && component.onMinimapUnlock != null) {
+                                request = new HookRequest();
+                                request.source = component;
+                                request.arguments = component.onMinimapUnlock;
+                                lowPriorityRequests.addTail(request);
+                            }
+                        }
+                    }
+                    if (!component.if3 && Static40.aClass13_14 == null && clickedInventoryComponent == null && !Static40.aBoolean108) {
+                        if ((component.anInt470 >= 0 || component.anInt480 != 0) && Mouse.lastMouseX >= local61 && Mouse.lastMouseY >= local63 && Mouse.lastMouseX < local65 && Mouse.lastMouseY < local67) {
+                            if (component.anInt470 >= 0) {
+                                aClass13_22 = arg0[component.anInt470];
+                            } else {
+                                aClass13_22 = component;
+                            }
+                        }
+                        if (component.type == 8 && Mouse.lastMouseX >= local61 && Mouse.lastMouseY >= local63 && Mouse.lastMouseX < local65 && Mouse.lastMouseY < local67) {
+                            Protocol.aClass13_11 = component;
+                        }
+                        if (component.scrollMaxV > component.height) {
+                            Static36.method4049(Mouse.lastMouseY, component.height, component, Mouse.lastMouseX, local50 + component.width, local55, component.scrollMaxV);
+                        }
+                    }
+                    if (component.type == 0) {
+                        method946(arg0, component.id, local61, local63, local65, local67, local50 - component.scrollX, local55 - component.scrollY);
+                        if (component.createdComponents != null) {
+                            method946(component.createdComponents, component.id, local61, local63, local65, local67, local50 - component.scrollX, local55 - component.scrollY);
+                        }
+                        @Pc(1595) ComponentPointer local1595 = (ComponentPointer) openInterfaces.get((long) component.id);
+                        if (local1595 != null) {
+                            method1320(local50, local63, local55, local65, local1595.anInt5878, local61, local67);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @OriginalMember(owner = "client!aa", name = "a", descriptor = "(SI)Z")
+    public static boolean method5(@OriginalArg(0) short arg0) {
+        if (arg0 == 47 || arg0 == 5 || arg0 == 43 || arg0 == 35 || arg0 == 58 || arg0 == 22 || arg0 == 40 || arg0 == 3) {
+            return true;
+        } else if (arg0 == 9 || arg0 == 12 || arg0 == 1006 || arg0 == 1003) {
+            return true;
+        } else if (arg0 == 25 || arg0 == 23 || arg0 == 48 || arg0 == 7 || arg0 == 13) {
+            return true;
+        } else {
+            return arg0 == 8 || arg0 == 32 || arg0 == 28 || arg0 == 59 || arg0 == 51 || arg0 == 41;
         }
     }
 }

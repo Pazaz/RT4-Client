@@ -51,8 +51,10 @@ public final class Static103 {
 	public static int anInt2161;
 	@OriginalMember(owner = "client!sa", name = "W", descriptor = "Z")
 	public static boolean instantScreenFade = true;
+    @OriginalMember(owner = "client!gl", name = "f", descriptor = "I")
+	public static int anInt2263;
 
-	@OriginalMember(owner = "client!i", name = "b", descriptor = "(IIIII)I")
+    @OriginalMember(owner = "client!i", name = "b", descriptor = "(IIIII)I")
 	public static int method2235(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		if (instantScreenFade) {
 			arg0 = 1000000;
@@ -101,14 +103,9 @@ public final class Static103 {
 		}
 		FogManager.method3060(anInt5731, aFloat7, aFloat36, aFloat5);
 		FogManager.method3062(anInt3709, anInt2161);
-		FogManager.method3063((float) Static85.anInt2263, (float) Static159.anInt3893, (float) Static148.anInt3534);
+		FogManager.method3063((float) anInt2263, (float) Static73.anInt3893, (float) Static73.anInt3534);
 		FogManager.method3058();
 		return anInt3709;
-	}
-
-	@OriginalMember(owner = "client!i", name = "e", descriptor = "(BI)I")
-	public static int method2236(@OriginalArg(1) int arg0) {
-		return arg0 & 0xFF;
 	}
 
 	@OriginalMember(owner = "client!gm", name = "f", descriptor = "(B)V")

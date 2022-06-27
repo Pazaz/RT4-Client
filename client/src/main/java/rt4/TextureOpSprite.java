@@ -32,7 +32,7 @@ public class TextureOpSprite extends TextureOp {
 		} else if (this.anInt3235 < 0) {
 			return false;
 		} else {
-			@Pc(43) SoftwareSprite local43 = Static215.anInt4868 < 0 ? SpriteLoader.method3117(Static176.aClass153_76, this.anInt3235) : SpriteLoader.loadSoftwareSprite(this.anInt3235, Static176.aClass153_76, Static215.anInt4868);
+			@Pc(43) SoftwareSprite local43 = Texture.anInt4868 < 0 ? SpriteLoader.method3117(Static176.aClass153_76, this.anInt3235) : SpriteLoader.loadSoftwareSprite(this.anInt3235, Static176.aClass153_76, Texture.anInt4868);
 			local43.trim();
 			this.anInt3240 = local43.height;
 			this.anInt3239 = local43.width;
@@ -55,19 +55,19 @@ public class TextureOpSprite extends TextureOp {
 			@Pc(31) int[] local31 = local18[0];
 			@Pc(35) int[] local35 = local18[1];
 			@Pc(39) int[] local39 = local18[2];
-			@Pc(59) int local59 = (this.anInt3240 == Static172.anInt4165 ? arg0 : this.anInt3240 * arg0 / Static172.anInt4165) * this.anInt3239;
+			@Pc(59) int local59 = (this.anInt3240 == Static10.anInt4165 ? arg0 : this.anInt3240 * arg0 / Static10.anInt4165) * this.anInt3239;
 			@Pc(65) int local65;
 			@Pc(78) int local78;
-			if (Static189.anInt4457 == this.anInt3239) {
-				for (local65 = 0; local65 < Static189.anInt4457; local65++) {
+			if (Static10.anInt4457 == this.anInt3239) {
+				for (local65 = 0; local65 < Static10.anInt4457; local65++) {
 					local78 = this.anIntArray305[local59++];
 					local39[local65] = (local78 & 0xFF) << 4;
 					local35[local65] = local78 >> 4 & 0xFF0;
 					local31[local65] = local78 >> 12 & 0xFF0;
 				}
 			} else {
-				for (local65 = 0; local65 < Static189.anInt4457; local65++) {
-					local78 = this.anInt3239 * local65 / Static189.anInt4457;
+				for (local65 = 0; local65 < Static10.anInt4457; local65++) {
+					local78 = this.anInt3239 * local65 / Static10.anInt4457;
 					@Pc(127) int local127 = this.anIntArray305[local59 + local78];
 					local39[local65] = (local127 & 0xFF) << 4;
 					local35[local65] = local127 >> 4 & 0xFF0;

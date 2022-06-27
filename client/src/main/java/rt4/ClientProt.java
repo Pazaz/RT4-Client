@@ -7,8 +7,12 @@ import org.openrs2.deob.annotation.Pc;
 import java.io.IOException;
 
 public class ClientProt {
+    @OriginalMember(owner = "client!e", name = "Dc", descriptor = "Lclient!na;")
+    public static final JagString aClass100_363 = JagString.parse("_labels");
     @OriginalMember(owner = "client!wc", name = "g", descriptor = "I")
     public static int anInt5804 = 0;
+    @OriginalMember(owner = "client!nm", name = "U", descriptor = "I")
+    public static int mapFilesMissingCount = 0;
 
     @OriginalMember(owner = "client!vg", name = "a", descriptor = "(Lclient!na;IIBI)V")
     public static void method4512(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {
@@ -124,9 +128,9 @@ public class ClientProt {
                 InterfaceList.closeInterface(true, local18);
             }
         }
-        if (Static39.aClass13_10 != null) {
-            InterfaceList.redraw(Static39.aClass13_10);
-            Static39.aClass13_10 = null;
+        if (Static44.aClass13_10 != null) {
+            InterfaceList.redraw(Static44.aClass13_10);
+            Static44.aClass13_10 = null;
         }
     }
 
@@ -166,14 +170,14 @@ public class ClientProt {
     @OriginalMember(owner = "client!gd", name = "c", descriptor = "(I)V")
     public static void rebuildMap() {
         ping(false);
-        Static175.mapFilesMissingCount = 0;
+        mapFilesMissingCount = 0;
         @Pc(12) boolean fileExists = true;
         @Pc(14) int id;
         for (id = 0; id < LoginManager.mapFilesBuffer.length; id++) {
             if (LoginManager.mapFileIds[id] != -1 && LoginManager.mapFilesBuffer[id] == null) {
                 LoginManager.mapFilesBuffer[id] = client.js5Archive5.fetchFile(LoginManager.mapFileIds[id], 0);
                 if (LoginManager.mapFilesBuffer[id] == null) {
-                    Static175.mapFilesMissingCount++;
+                    mapFilesMissingCount++;
                     fileExists = false;
                 }
             }
@@ -181,7 +185,7 @@ public class ClientProt {
                 LoginManager.locationMapFilesBuffer[id] = client.js5Archive5.fetchFile(LoginManager.locationsMapFileIds[id], LoginManager.regionsXteaKeys[id], 0);
                 if (LoginManager.locationMapFilesBuffer[id] == null) {
                     fileExists = false;
-                    Static175.mapFilesMissingCount++;
+                    mapFilesMissingCount++;
                 }
             }
 
@@ -190,13 +194,13 @@ public class ClientProt {
                     LoginManager.underWaterMapFilesBuffer[id] = client.js5Archive5.fetchFile(LoginManager.underWaterMapFileIds[id], 0);
                     if (LoginManager.underWaterMapFilesBuffer[id] == null) {
                         fileExists = false;
-                        Static175.mapFilesMissingCount++;
+                        mapFilesMissingCount++;
                     }
                 }
                 if (LoginManager.underWaterLocationsMapFileIds[id] != -1 && LoginManager.underWaterLocationsMapFilesBuffer[id] == null) {
                     LoginManager.underWaterLocationsMapFilesBuffer[id] = client.js5Archive5.fetchFile(LoginManager.underWaterLocationsMapFileIds[id], 0);
                     if (LoginManager.underWaterLocationsMapFilesBuffer[id] == null) {
-                        Static175.mapFilesMissingCount++;
+                        mapFilesMissingCount++;
                         fileExists = false;
                     }
                 }
@@ -205,20 +209,20 @@ public class ClientProt {
             if (LoginManager.npcSpawnsFileIds != null && LoginManager.npcSpawnsFilesBuffer[id] == null && LoginManager.npcSpawnsFileIds[id] != -1) {
                 LoginManager.npcSpawnsFilesBuffer[id] = client.js5Archive5.fetchFile(LoginManager.npcSpawnsFileIds[id], LoginManager.regionsXteaKeys[id], 0);
                 if (LoginManager.npcSpawnsFilesBuffer[id] == null) {
-                    Static175.mapFilesMissingCount++;
+                    mapFilesMissingCount++;
                     fileExists = false;
                 }
             }
         }
 
         if (LoginManager.mapElementList == null) {
-            if (LoginManager.map == null || !client.js5Archive23.isGroupNameValid(JagString.concatenate(new JagString[] { LoginManager.map.group, Static50.aClass100_363 }))) {
+            if (LoginManager.map == null || !client.js5Archive23.isGroupNameValid(JagString.concatenate(new JagString[] { LoginManager.map.group, aClass100_363 }))) {
                 LoginManager.mapElementList = new MapElementList(0);
-            } else if (client.js5Archive23.isGroupReady(JagString.concatenate(new JagString[] { LoginManager.map.group, Static50.aClass100_363 }))) {
-                LoginManager.mapElementList = MapElementList.create(JagString.concatenate(new JagString[] { LoginManager.map.group, Static50.aClass100_363 }), client.js5Archive23);
+            } else if (client.js5Archive23.isGroupReady(JagString.concatenate(new JagString[] { LoginManager.map.group, aClass100_363 }))) {
+                LoginManager.mapElementList = MapElementList.create(JagString.concatenate(new JagString[] { LoginManager.map.group, aClass100_363 }), client.js5Archive23);
             } else {
                 fileExists = false;
-                Static175.mapFilesMissingCount++;
+                mapFilesMissingCount++;
             }
         }
 
@@ -236,7 +240,7 @@ public class ClientProt {
             if (local294 != null) {
                 chunkZ = (LoginManager.regionBitPacked[id] & 0xFF) * 64 - Camera.originZ;
                 chunkX = (LoginManager.regionBitPacked[id] >> 8) * 64 - Camera.originX;
-                if (Static230.dynamicMapRegion) {
+                if (LoginManager.dynamicMapRegion) {
                     chunkZ = 10;
                     chunkX = 10;
                 }
@@ -247,7 +251,7 @@ public class ClientProt {
                 if (local294 != null) {
                     chunkX = (LoginManager.regionBitPacked[id] >> 8) * 64 - Camera.originX;
                     chunkZ = (LoginManager.regionBitPacked[id] & 0xFF) * 64 - Camera.originZ;
-                    if (Static230.dynamicMapRegion) {
+                    if (LoginManager.dynamicMapRegion) {
                         chunkZ = 10;
                         chunkX = 10;
                     }
@@ -289,10 +293,10 @@ public class ClientProt {
         }
         AreaSoundManager.clear(false);
         if (GlRenderer.enabled) {
-            Static242.shadowMapImage.clear();
+            ShadowManager.shadowMapImage.clear();
             for (i = 0; i < 13; i++) {
                 for (chunkX = 0; chunkX < 13; chunkX++) {
-                    Static242.shadows[i][chunkX].outputToSprite = true;
+                    ShadowManager.shadows[i][chunkX].outputToSprite = true;
                 }
             }
         }
@@ -300,13 +304,13 @@ public class ClientProt {
             LightingManager.method2404();
         }
         if (GlRenderer.enabled) {
-            Static75.setDefaultChunksAtmosphere();
+            setDefaultChunksAtmosphere();
         }
         client.audioLoop();
         System.gc();
         ping(true);
         SceneGraph.load(false);
-        if (!Static230.dynamicMapRegion) {
+        if (!LoginManager.dynamicMapRegion) {
             Static87.method1805(false);
             ping(true);
             if (GlRenderer.enabled) {
@@ -314,12 +318,12 @@ public class ClientProt {
                 chunkX = PlayerList.self.movementQueueZ[0] >> 3;
                 Static73.setLightPosition(chunkX, i);
             }
-            Static26.method743(false);
+            LoginManager.method743(false);
             if (LoginManager.npcSpawnsFilesBuffer != null) {
                 Static158.decodeNpcFiles();
             }
         }
-        if (Static230.dynamicMapRegion) {
+        if (LoginManager.dynamicMapRegion) {
             Static89.method1835(false);
             ping(true);
             if (GlRenderer.enabled) {
@@ -351,12 +355,12 @@ public class ClientProt {
         if (GlRenderer.enabled && hasUnderWaterMap) {
             SceneGraph.setUnderwater(true);
             SceneGraph.load(true);
-            if (!Static230.dynamicMapRegion) {
+            if (!LoginManager.dynamicMapRegion) {
                 Static87.method1805(true);
                 ping(true);
-                Static26.method743(true);
+                LoginManager.method743(true);
             }
-            if (Static230.dynamicMapRegion) {
+            if (LoginManager.dynamicMapRegion) {
                 Static89.method1835(true);
                 ping(true);
                 Static233.method4002(true);
@@ -371,7 +375,7 @@ public class ClientProt {
         if (GlRenderer.enabled) {
             for (chunkX = 0; chunkX < 13; chunkX++) {
                 for (chunkZ = 0; chunkZ < 13; chunkZ++) {
-                    Static242.shadows[chunkX][chunkZ].method4676(SceneGraph.tileHeights[0], chunkX * 8, chunkZ * 8);
+                    ShadowManager.shadows[chunkX][chunkZ].method4676(SceneGraph.tileHeights[0], chunkX * 8, chunkZ * 8);
                 }
             }
         }
@@ -380,7 +384,7 @@ public class ClientProt {
                 Static220.spawnGroundObject(chunkZ, chunkX);
             }
         }
-        Static269.method2218();
+        ScriptRunner.method2218();
         client.audioLoop();
         ChangeLocRequest.flush();
         client.method3768();
@@ -389,7 +393,7 @@ public class ClientProt {
             Protocol.outboundBuffer.p1isaac(20);
             Protocol.outboundBuffer.p4(1057001181);
         }
-        if (!Static230.dynamicMapRegion) {
+        if (!LoginManager.dynamicMapRegion) {
             @Pc(815) int local815 = (LoginManager.centralZoneZ + 6) / 8;
             @Pc(821) int local821 = (LoginManager.centralZoneZ - 6) / 8;
             chunkX = (LoginManager.centralZoneX - 6) / 8;
@@ -463,16 +467,16 @@ public class ClientProt {
                 local30 = Static81.anInt2225 + Static40.aClass13_1.width - Static40.aClass13_14.width;
             }
             local41 -= Static40.anInt4035;
-            if (local41 < Static228.anInt5103) {
-                local41 = Static228.anInt5103;
+            if (local41 < InterfaceList.anInt5103) {
+                local41 = InterfaceList.anInt5103;
             }
-            if (Static228.anInt5103 + Static40.aClass13_1.height < local41 - -Static40.aClass13_14.height) {
-                local41 = Static228.anInt5103 + Static40.aClass13_1.height - Static40.aClass13_14.height;
+            if (InterfaceList.anInt5103 + Static40.aClass13_1.height < local41 - -Static40.aClass13_14.height) {
+                local41 = InterfaceList.anInt5103 + Static40.aClass13_1.height - Static40.aClass13_14.height;
             }
             @Pc(109) int local109 = local41 - Static36.anInt660;
             @Pc(114) int local114 = local30 - Static36.anInt3075;
             @Pc(122) int local122 = local30 + Static40.aClass13_1.scrollX - Static81.anInt2225;
-            @Pc(130) int local130 = Static40.aClass13_1.scrollY + local41 - Static228.anInt5103;
+            @Pc(130) int local130 = Static40.aClass13_1.scrollY + local41 - InterfaceList.anInt5103;
             @Pc(133) int local133 = Static40.aClass13_14.dragDeadzone;
             if (Static40.anInt4851 > Static40.aClass13_14.dragDeadtime && (local133 < local114 || -local133 > local114 || local109 > local133 || local109 < -local133)) {
                 Static40.aBoolean172 = true;
@@ -491,17 +495,17 @@ public class ClientProt {
                     if (Static40.aClass13_14.onDragRelease != null) {
                         local176 = new HookRequest();
                         local176.mouseY = local130;
-                        local176.target = Static56.aClass13_12;
+                        local176.target = InterfaceList.aClass13_12;
                         local176.mouseX = local122;
                         local176.arguments = Static40.aClass13_14.onDragRelease;
                         local176.source = Static40.aClass13_14;
                         ScriptRunner.run(local176);
                     }
-                    if (Static56.aClass13_12 != null && Static36.method938(Static40.aClass13_14) != null) {
+                    if (InterfaceList.aClass13_12 != null && Static36.method938(Static40.aClass13_14) != null) {
                         Protocol.outboundBuffer.p1isaac(79);
                         Protocol.outboundBuffer.mp4(Static40.aClass13_14.id);
-                        Protocol.outboundBuffer.ip2(Static56.aClass13_12.createdComponentId);
-                        Protocol.outboundBuffer.p4(Static56.aClass13_12.id);
+                        Protocol.outboundBuffer.ip2(InterfaceList.aClass13_12.createdComponentId);
+                        Protocol.outboundBuffer.p4(InterfaceList.aClass13_12.id);
                         Protocol.outboundBuffer.ip2(Static40.aClass13_14.createdComponentId);
                     }
                 } else if ((VarpDomain.anInt2952 == 1 || MiniMenu.method4640(MiniMenu.size - 1)) && MiniMenu.size > 2) {
@@ -522,4 +526,14 @@ public class ClientProt {
         Protocol.outboundBuffer.imp4(arg1);
         Protocol.outboundBuffer.ip2(arg0);
     }
+
+    @OriginalMember(owner = "client!g", name = "b", descriptor = "(I)V")
+	public static void setDefaultChunksAtmosphere() {
+		@Pc(9) Environment local9 = new Environment();
+		for (@Pc(18) int local18 = 0; local18 < 13; local18++) {
+			for (@Pc(25) int local25 = 0; local25 < 13; local25++) {
+				Static103.aClass92ArrayArray1[local18][local25] = local9;
+			}
+		}
+	}
 }

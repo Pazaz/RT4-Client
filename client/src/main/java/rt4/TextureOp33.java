@@ -61,11 +61,11 @@ public final class TextureOp33 extends TextureOp {
 			@Pc(40) Random local40 = new Random((long) this.anInt5716);
 			for (@Pc(42) int local42 = 0; local42 < this.anInt5712; local42++) {
 				@Pc(64) int local64 = this.anInt5714 > 0 ? this.anInt5709 + Static171.method3219(this.anInt5714, local40) - local28 : this.anInt5709;
-				@Pc(69) int local69 = Static171.method3219(Static189.anInt4457, local40);
+				@Pc(69) int local69 = Static171.method3219(Static10.anInt4457, local40);
 				@Pc(75) int local75 = local64 >> 4 & 0xFF;
-				@Pc(80) int local80 = Static171.method3219(Static172.anInt4165, local40);
-				@Pc(92) int local92 = local69 + (this.anInt5715 * Static130.anIntArray299[local75] >> 12);
-				@Pc(103) int local103 = local80 + (Static119.anIntArray282[local75] * this.anInt5715 >> 12);
+				@Pc(80) int local80 = Static171.method3219(Static10.anInt4165, local40);
+				@Pc(92) int local92 = local69 + (this.anInt5715 * Static9.anIntArray299[local75] >> 12);
+				@Pc(103) int local103 = local80 + (Static9.anIntArray282[local75] * this.anInt5715 >> 12);
 				@Pc(107) int local107 = local92 - local69;
 				@Pc(112) int local112 = local103 - local80;
 				if (local107 != 0 || local112 != 0) {
@@ -107,7 +107,7 @@ public final class TextureOp33 extends TextureOp {
 					for (@Pc(233) int local233 = local69; local233 < local92; local233++) {
 						local206 += local190;
 						@Pc(251) int local251 = local231 * (local233 - local69) + local216 + 1024;
-						@Pc(255) int local255 = local150 & Static141.anInt3473;
+						@Pc(255) int local255 = local150 & Static10.anInt3473;
 						if (local206 > 0) {
 							local206 += -local152;
 							local150 += local227;

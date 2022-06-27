@@ -177,7 +177,7 @@ public final class VorbisSound extends Node {
                 local138[local140 * 2 + 1] = -((float) Math.sin((double) (local140 * 4 + 2) * 3.141592653589793D / (double) local26));
             }
             @Pc(187) int[] local187 = new int[local38];
-            @Pc(193) int local193 = Static204.method3674(local38 - 1);
+            @Pc(193) int local193 = VorbisCodebook.method3674(local38 - 1);
             for (@Pc(195) int local195 = 0; local195 < local38; local195++) {
                 local187[local195] = method667(local193, local195);
             }
@@ -334,7 +334,7 @@ public final class VorbisSound extends Node {
 	private float[] method2348(@OriginalArg(0) int arg0) {
 		method2347(this.aByteArrayArray10[arg0]);
 		method2346();
-		@Pc(15) int local15 = method2350(Static204.method3674(anIntArray278.length - 1));
+		@Pc(15) int local15 = method2350(VorbisCodebook.method3674(anIntArray278.length - 1));
 		@Pc(19) boolean local19 = aBooleanArray63[local15];
 		@Pc(25) int local25 = local19 ? anInt2975 : anInt2978;
 		@Pc(27) boolean local27 = false;
@@ -431,7 +431,7 @@ public final class VorbisSound extends Node {
 				local214[local272 * 4 + 3] = (local291 - local315) * local432 - (local309 - local323) * local442;
 				local214[local272 * 4 + 1] = (local309 - local323) * local432 + (local291 - local315) * local442;
 			}
-			local272 = Static204.method3674(local25 - 1);
+			local272 = VorbisCodebook.method3674(local25 - 1);
 			@Pc(488) int local488;
 			@Pc(499) int local499;
 			@Pc(503) int local503;

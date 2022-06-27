@@ -44,6 +44,8 @@ public final class PlayerAppearance {
     public static final AnimFrameset[] aClass3_Sub2_Sub7Array8 = new AnimFrameset[14];
     @OriginalMember(owner = "client!vf", name = "g", descriptor = "[I")
 	public static final int[] anIntArray515 = new int[14];
+    @OriginalMember(owner = "client!kf", name = "d", descriptor = "[Lclient!cl;")
+    public static final AnimFrameset[] aClass3_Sub2_Sub7Array7 = new AnimFrameset[14];
     @OriginalMember(owner = "client!cj", name = "e", descriptor = "[[S")
     public static short[][] aShortArrayArray2;
 	@OriginalMember(owner = "client!nj", name = "m", descriptor = "[[S")
@@ -87,6 +89,17 @@ public final class PlayerAppearance {
 		aClass99_33.method3103();
 		aClass99_21.method3103();
 	}
+
+    @OriginalMember(owner = "client!sj", name = "c", descriptor = "(I)V")
+    public static void method3947() {
+        aClass99_33.clear();
+        aClass99_21.clear();
+    }
+
+    @OriginalMember(owner = "client!q", name = "a", descriptor = "(B)I")
+    public static int method1029() {
+        return aClass99_33.method3100();
+    }
 
     @OriginalMember(owner = "client!hh", name = "a", descriptor = "(IIIILclient!tk;III)Lclient!ak;")
 	public final Model method1946(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) SeqType arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6) {
@@ -388,17 +401,17 @@ public final class PlayerAppearance {
 						anIntArray515[local353] = local858.anIntArray474[local374];
 						Static73.anIntArray183[local353] = arg0[local353].anInt5404;
 						local979 = local858.frames[local367];
-						Static133.aClass3_Sub2_Sub7Array7[local353] = SeqTypeList.getAnimFrameset(local979 >>> 16);
+						aClass3_Sub2_Sub7Array7[local353] = SeqTypeList.getAnimFrameset(local979 >>> 16);
 						@Pc(991) int local991 = local979 & 0xFFFF;
 						anIntArray187[local353] = local991;
-						if (Static133.aClass3_Sub2_Sub7Array7[local353] != null) {
-							local836 |= Static133.aClass3_Sub2_Sub7Array7[local353].isColorTransformed(local991);
-							local827 |= Static133.aClass3_Sub2_Sub7Array7[local353].isAlphaTransformed(local991);
+						if (aClass3_Sub2_Sub7Array7[local353] != null) {
+							local836 |= aClass3_Sub2_Sub7Array7[local353].isColorTransformed(local991);
+							local827 |= aClass3_Sub2_Sub7Array7[local353].isAlphaTransformed(local991);
 						}
 					} else {
 						anIntArray515[local353] = 0;
 						Static73.anIntArray183[local353] = 0;
-						Static133.aClass3_Sub2_Sub7Array7[local353] = null;
+						aClass3_Sub2_Sub7Array7[local353] = null;
 						anIntArray187[local353] = -1;
 					}
 				}
@@ -474,7 +487,7 @@ public final class PlayerAppearance {
 		local598 = 1;
 		while (local481 < local346) {
 			if (aClass3_Sub2_Sub7Array8[local481] != null) {
-				local1284.method4565(aClass3_Sub2_Sub7Array8[local481], Static241.anIntArray520[local481], Static133.aClass3_Sub2_Sub7Array7[local481], anIntArray187[local481], Static73.anIntArray183[local481] - 1, anIntArray515[local481], local598, aClass144Array2[local481].aBoolean278, this.anIntArrayArray19[local481]);
+				local1284.method4565(aClass3_Sub2_Sub7Array8[local481], Static241.anIntArray520[local481], aClass3_Sub2_Sub7Array7[local481], anIntArray187[local481], Static73.anIntArray183[local481] - 1, anIntArray515[local481], local598, aClass144Array2[local481].aBoolean278, this.anIntArrayArray19[local481]);
 			}
 			local481++;
 			local598 <<= 0x1;
@@ -488,7 +501,7 @@ public final class PlayerAppearance {
 		}
 		for (local481 = 0; local481 < local346; local481++) {
 			aClass3_Sub2_Sub7Array8[local481] = null;
-			Static133.aClass3_Sub2_Sub7Array7[local481] = null;
+			aClass3_Sub2_Sub7Array7[local481] = null;
 			aClass144Array2[local481] = null;
 		}
 		return local1284;

@@ -90,14 +90,14 @@ public final class Npc extends PathingEntity {
 				model.translate(0, -this.spotAnimY, 0);
 
 				if (spotAnimType.aBoolean100) {
-					if (Static101.anInt2640 != 0) {
-						model.rotateX(Static101.anInt2640);
+					if (PathingEntity.anInt2640 != 0) {
+						model.rotateX(PathingEntity.anInt2640);
 					}
 					if (PathingEntity.anInt2680 != 0) {
 						model.rotateZ(PathingEntity.anInt2680);
 					}
-					if (Static62.anInt1938 != 0) {
-						model.translate(0, Static62.anInt1938, 0);
+					if (PathingEntity.anInt1938 != 0) {
+						model.translate(0, PathingEntity.anInt1938, 0);
 					}
 				}
 			}

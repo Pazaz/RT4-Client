@@ -40,7 +40,7 @@ public final class TextureOp9 extends TextureOp {
 		@Pc(19) int[] local19 = this.aClass121_41.method3445(arg0);
 		if (this.aClass121_41.invalid) {
 			@Pc(30) int[] local30 = this.method4624(0, arg0);
-			for (@Pc(32) int local32 = 0; local32 < Static189.anInt4457; local32++) {
+			for (@Pc(32) int local32 = 0; local32 < Static10.anInt4457; local32++) {
 				local19[local32] = this.anInt2007 + (local30[local32] * this.anInt2001 >> 12);
 			}
 		}
@@ -59,7 +59,7 @@ public final class TextureOp9 extends TextureOp {
 			@Pc(33) int[] local33 = local7[0];
 			@Pc(37) int[] local37 = local7[1];
 			@Pc(41) int[] local41 = local7[2];
-			for (@Pc(43) int local43 = 0; local43 < Static189.anInt4457; local43++) {
+			for (@Pc(43) int local43 = 0; local43 < Static10.anInt4457; local43++) {
 				local33[local43] = this.anInt2007 + (this.anInt2001 * local29[local43] >> 12);
 				local37[local43] = (this.anInt2001 * local21[local43] >> 12) + this.anInt2007;
 				local41[local43] = this.anInt2007 + (this.anInt2001 * local25[local43] >> 12);

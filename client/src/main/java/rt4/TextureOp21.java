@@ -31,15 +31,15 @@ public final class TextureOp21 extends TextureOp {
 			@Pc(50) int[][] local50 = new int[local31][];
 			@Pc(56) int local56;
 			for (local56 = arg0 - this.anInt4223; local56 <= arg0 + this.anInt4223; local56++) {
-				@Pc(75) int[] local75 = this.method4624(0, local56 & Static141.anInt3473);
-				@Pc(78) int[] local78 = new int[Static189.anInt4457];
+				@Pc(75) int[] local75 = this.method4624(0, local56 & Static10.anInt3473);
+				@Pc(78) int[] local78 = new int[Static10.anInt4457];
 				@Pc(80) int local80 = 0;
 				@Pc(84) int local84;
 				for (local84 = -this.anInt4221; local84 <= this.anInt4221; local84++) {
 					local80 += local75[local84 & Static34.anInt1060];
 				}
 				local84 = 0;
-				while (Static189.anInt4457 > local84) {
+				while (Static10.anInt4457 > local84) {
 					local78[local84] = local47 * local80 >> 16;
 					local80 -= local75[Static34.anInt1060 & local84 - this.anInt4221];
 					local84++;
@@ -47,7 +47,7 @@ public final class TextureOp21 extends TextureOp {
 				}
 				local50[this.anInt4223 + local56 - arg0] = local78;
 			}
-			for (local56 = 0; local56 < Static189.anInt4457; local56++) {
+			for (local56 = 0; local56 < Static10.anInt4457; local56++) {
 				@Pc(169) int local169 = 0;
 				for (@Pc(171) int local171 = 0; local171 < local31; local171++) {
 					local169 += local50[local171][local56];
@@ -72,10 +72,10 @@ public final class TextureOp21 extends TextureOp {
 			@Pc(72) int local72;
 			@Pc(78) int local78;
 			for (@Pc(54) int local54 = arg0 - this.anInt4223; local54 <= this.anInt4223 + arg0; local54++) {
-				@Pc(68) int[][] local68 = this.method4634(Static141.anInt3473 & local54, 0);
+				@Pc(68) int[][] local68 = this.method4634(Static10.anInt3473 & local54, 0);
 				local70 = 0;
 				local72 = 0;
-				@Pc(76) int[][] local76 = new int[3][Static189.anInt4457];
+				@Pc(76) int[][] local76 = new int[3][Static10.anInt4457];
 				local78 = 0;
 				@Pc(82) int[] local82 = local68[0];
 				@Pc(86) int[] local86 = local68[1];
@@ -90,7 +90,7 @@ public final class TextureOp21 extends TextureOp {
 				@Pc(131) int[] local131 = local76[0];
 				@Pc(135) int[] local135 = local76[1];
 				@Pc(137) int local137 = 0;
-				while (Static189.anInt4457 > local137) {
+				while (Static10.anInt4457 > local137) {
 					local131[local137] = local70 * local34 >> 16;
 					local135[local137] = local72 * local34 >> 16;
 					local127[local137] = local34 * local78 >> 16;
@@ -109,7 +109,7 @@ public final class TextureOp21 extends TextureOp {
 			@Pc(235) int[] local235 = local13[0];
 			@Pc(239) int[] local239 = local13[1];
 			@Pc(243) int[] local243 = local13[2];
-			for (local70 = 0; local70 < Static189.anInt4457; local70++) {
+			for (local70 = 0; local70 < Static10.anInt4457; local70++) {
 				local78 = 0;
 				local72 = 0;
 				@Pc(258) int local258 = 0;

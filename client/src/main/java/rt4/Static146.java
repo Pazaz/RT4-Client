@@ -14,7 +14,7 @@ public final class Static146 {
 
 	@OriginalMember(owner = "client!lg", name = "a", descriptor = "(I)V")
 	public static void method2750(@OriginalArg(0) int arg0) {
-		Static235.anInt5276 = arg0;
+		Static156.anInt5276 = arg0;
 		for (@Pc(3) int local3 = 0; local3 < SceneGraph.width; local3++) {
 			for (@Pc(8) int local8 = 0; local8 < SceneGraph.length; local8++) {
 				if (SceneGraph.tiles[arg0][local3][local8] == null) {

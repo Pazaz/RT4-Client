@@ -76,8 +76,10 @@ public final class NpcType {
 	@OriginalMember(owner = "client!me", name = "r", descriptor = "S")
 	public short aShort23 = 0;
 
+	@OriginalMember(owner = "client!vk", name = "d", descriptor = "Lclient!na;")
+	public static final JagString aClass100_1010 = JagString.parse("null");
 	@OriginalMember(owner = "client!me", name = "L", descriptor = "Lclient!na;")
-	public JagString name = Static266.aClass100_1010;
+	public JagString name = aClass100_1010;
 
 	@OriginalMember(owner = "client!me", name = "x", descriptor = "I")
 	public int combatLevel = -1;

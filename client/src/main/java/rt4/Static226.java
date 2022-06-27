@@ -9,8 +9,10 @@ public final class Static226 {
 	public static int anInt5084 = 0;
     @OriginalMember(owner = "client!ml", name = "Q", descriptor = "I")
     public static int anInt3953 = 0;
+    @OriginalMember(owner = "client!wl", name = "u", descriptor = "I")
+    public static int anInt5895 = 0;
 
-	@OriginalMember(owner = "client!sf", name = "b", descriptor = "(B)V")
+    @OriginalMember(owner = "client!sf", name = "b", descriptor = "(B)V")
 	public static void method3901() {
 		@Pc(16) int local16 = Fonts.b12Full.getStringWidth(LocalizedText.CHOOSE_OPTION);
 		@Pc(18) int local18;
@@ -22,9 +24,9 @@ public final class Static226 {
 			}
 		}
 		local18 = MiniMenu.size * 15 + 21;
-		@Pc(43) int local43 = Static60.anInt1892;
+		@Pc(43) int local43 = ScriptRunner.anInt1892;
 		local16 += 8;
-		local27 = Static155.anInt3751 - local16 / 2;
+		local27 = ScriptRunner.anInt3751 - local16 / 2;
 		if (local43 + local18 > GameShell.canvasHeight) {
 			local43 = GameShell.canvasHeight - local18;
 		}
@@ -38,23 +40,23 @@ public final class Static226 {
 			local43 = 0;
 		}
 		if (anInt3953 == 1) {
-			if (Static155.anInt3751 == Mouse.anInt5850 && Static280.anInt5895 == Static60.anInt1892) {
-				Static13.anInt436 = MiniMenu.size * 15 + (Static40.aBoolean298 ? 26 : 22);
+			if (ScriptRunner.anInt3751 == Mouse.anInt5850 && anInt5895 == ScriptRunner.anInt1892) {
+				InterfaceList.anInt436 = MiniMenu.size * 15 + (Static40.aBoolean298 ? 26 : 22);
 				anInt3953 = 0;
-				Static229.anInt5138 = local43;
-				Static183.anInt4271 = local27;
+				InterfaceList.anInt5138 = local43;
+				InterfaceList.anInt4271 = local27;
 				Static40.aBoolean108 = true;
-				Static24.anInt761 = local16;
+				InterfaceList.anInt761 = local16;
 			}
-		} else if (Static155.anInt3751 == Mouse.clickX && Static60.anInt1892 == Mouse.clickY) {
-			Static183.anInt4271 = local27;
+		} else if (ScriptRunner.anInt3751 == Mouse.clickX && ScriptRunner.anInt1892 == Mouse.clickY) {
+			InterfaceList.anInt4271 = local27;
 			anInt3953 = 0;
-			Static24.anInt761 = local16;
-			Static229.anInt5138 = local43;
-			Static13.anInt436 = (Static40.aBoolean298 ? 26 : 22) + MiniMenu.size * 15;
+			InterfaceList.anInt761 = local16;
+			InterfaceList.anInt5138 = local43;
+			InterfaceList.anInt436 = (Static40.aBoolean298 ? 26 : 22) + MiniMenu.size * 15;
 			Static40.aBoolean108 = true;
 		} else {
-			Static280.anInt5895 = Mouse.clickY;
+			anInt5895 = Mouse.clickY;
 			Mouse.anInt5850 = Mouse.clickX;
 			anInt3953 = 1;
 		}

@@ -44,10 +44,10 @@ public final class TextureOp29 extends TextureOp {
 
 	@OriginalMember(owner = "client!si", name = "a", descriptor = "(I[[I)V")
 	private void method3934(@OriginalArg(1) int[][] arg0) {
-		@Pc(7) int local7 = Static172.anInt4165;
-		@Pc(9) int local9 = Static189.anInt4457;
+		@Pc(7) int local7 = Static10.anInt4165;
+		@Pc(9) int local9 = Static10.anInt4457;
 		Static81.method1751(arg0);
-		method2263(Static141.anInt3473, Static34.anInt1060);
+		method2263(Static10.anInt3473, Static34.anInt1060);
 		if (this.aClass18Array1 == null) {
 			return;
 		}
@@ -94,18 +94,18 @@ public final class TextureOp29 extends TextureOp {
 	public final int[][] method4638(@OriginalArg(1) int arg0) {
 		@Pc(14) int[][] local14 = this.aClass103_41.method3173(arg0);
 		if (this.aClass103_41.aBoolean195) {
-			@Pc(20) int local20 = Static189.anInt4457;
-			@Pc(22) int local22 = Static172.anInt4165;
+			@Pc(20) int local20 = Static10.anInt4457;
+			@Pc(22) int local22 = Static10.anInt4165;
 			@Pc(26) int[][] local26 = new int[local22][local20];
 			@Pc(31) int[][][] local31 = this.aClass103_41.method3168();
 			this.method3934(local26);
-			for (@Pc(37) int local37 = 0; local37 < Static172.anInt4165; local37++) {
+			for (@Pc(37) int local37 = 0; local37 < Static10.anInt4165; local37++) {
 				@Pc(44) int[] local44 = local26[local37];
 				@Pc(48) int[][] local48 = local31[local37];
 				@Pc(52) int[] local52 = local48[0];
 				@Pc(56) int[] local56 = local48[1];
 				@Pc(60) int[] local60 = local48[2];
-				for (@Pc(62) int local62 = 0; local62 < Static189.anInt4457; local62++) {
+				for (@Pc(62) int local62 = 0; local62 < Static10.anInt4457; local62++) {
 					@Pc(73) int local73 = local44[local62];
 					local60[local62] = (local73 & 0xFF) << 4;
 					local56[local62] = local73 >> 4 & 0xFF0;

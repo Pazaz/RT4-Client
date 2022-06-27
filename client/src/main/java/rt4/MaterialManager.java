@@ -15,6 +15,16 @@ public class MaterialManager {
     public static MaterialRenderer[] renderers;
     @OriginalMember(owner = "client!mh", name = "eb", descriptor = "I")
     public static int currentArg = 0;
+    @OriginalMember(owner = "client!sj", name = "D", descriptor = "I")
+    public static int anInt5158;
+    @OriginalMember(owner = "client!ej", name = "X", descriptor = "I")
+    public static int anInt1815;
+    @OriginalMember(owner = "client!uj", name = "H", descriptor = "I")
+	public static int anInt5559;
+    @OriginalMember(owner = "client!bb", name = "M", descriptor = "I")
+    public static int anInt406;
+    @OriginalMember(owner = "client!qc", name = "cb", descriptor = "I")
+    public static int anInt4675;
 
     @OriginalMember(owner = "client!cb", name = "b", descriptor = "(III)V")
     public static void setMaterial(@OriginalArg(1) int arg, @OriginalArg(2) int type) {
@@ -71,5 +81,14 @@ public class MaterialManager {
         renderers[4] = new WaterMaterialRenderer();
         renderers[5] = new WaterfallMaterialRenderer();
         renderers[6] = new UnlitMaterialRenderer();
+    }
+
+    @OriginalMember(owner = "client!ld", name = "a", descriptor = "(IIIIZI)V")
+    public static void method2731(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4) {
+        anInt5158 = arg1;
+        anInt1815 = arg4;
+        anInt5559 = arg0;
+        anInt406 = arg3;
+        anInt4675 = arg2;
     }
 }

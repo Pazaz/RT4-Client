@@ -127,7 +127,7 @@ public final class TextureOp17 extends TextureOp {
 		if (this.aClass121_41.invalid) {
 			@Pc(18) int local18 = 0;
 			@Pc(25) int local25;
-			for (local25 = Static64.anIntArray153[arg0] + this.anInt3675; local25 < 0; local25 += 4096) {
+			for (local25 = Static10.anIntArray153[arg0] + this.anInt3675; local25 < 0; local25 += 4096) {
 			}
 			while (local25 > 4096) {
 				local25 -= 4096;
@@ -140,7 +140,7 @@ public final class TextureOp17 extends TextureOp {
 			@Pc(74) boolean local74 = (local18 & 0x1) == 0;
 			@Pc(81) int local81 = this.anIntArray352[local18 - 1];
 			if (local81 + this.anInt3671 < local25 && local65 - this.anInt3671 > local25) {
-				for (@Pc(100) int local100 = 0; local100 < Static189.anInt4457; local100++) {
+				for (@Pc(100) int local100 = 0; local100 < Static10.anInt4457; local100++) {
 					@Pc(105) int local105 = 0;
 					@Pc(114) int local114 = local74 ? this.anInt3678 : -this.anInt3678;
 					@Pc(126) int local126;
@@ -162,7 +162,7 @@ public final class TextureOp17 extends TextureOp {
 					}
 				}
 			} else {
-				ArrayUtils.fill(local11, 0, Static189.anInt4457, 0);
+				ArrayUtils.fill(local11, 0, Static10.anInt4457, 0);
 			}
 		}
 		return local11;

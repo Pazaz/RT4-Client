@@ -5,6 +5,9 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 public class ColorUtils {
+    @OriginalMember(owner = "client!ug", name = "b", descriptor = "[F")
+	public static final float[] aFloatArray28 = new float[4];
+
     @OriginalMember(owner = "client!ib", name = "a", descriptor = "(II)I")
     public static int rgbToHsl(@OriginalArg(1) int arg0) {
         @Pc(10) double local10 = (double) (arg0 >> 16 & 0xFF) / 256.0D;
@@ -73,14 +76,14 @@ public class ColorUtils {
         @Pc(7) float local7 = FogManager.method3068() + FogManager.method3059();
         @Pc(9) int local9 = FogManager.method3064();
         @Pc(11) float local11 = 0.58823526F;
-        Static251.aFloatArray28[3] = 1.0F;
+        aFloatArray28[3] = 1.0F;
         @Pc(24) float local24 = (float) (local9 >> 16 & 0xFF) / 255.0F;
         @Pc(33) float local33 = (float) (local9 >> 8 & 0xFF) / 255.0F;
-        Static251.aFloatArray28[1] = local7 * (float) (arg0 >> 8 & 0xFF) / 255.0F * local33 * local11;
-        Static251.aFloatArray28[0] = local7 * local11 * local24 * ((float) (arg0 >> 16 & 0xFF) / 255.0F);
+        aFloatArray28[1] = local7 * (float) (arg0 >> 8 & 0xFF) / 255.0F * local33 * local11;
+        aFloatArray28[0] = local7 * local11 * local24 * ((float) (arg0 >> 16 & 0xFF) / 255.0F);
         @Pc(74) float local74 = (float) (local9 & 0xFF) / 255.0F;
-        Static251.aFloatArray28[2] = (float) (arg0 & 0xFF) / 255.0F * local74 * local11 * local7;
-        return Static251.aFloatArray28;
+        aFloatArray28[2] = (float) (arg0 & 0xFF) / 255.0F * local74 * local11 * local7;
+        return aFloatArray28;
     }
 
     @OriginalMember(owner = "client!gn", name = "a", descriptor = "(IZI)I")

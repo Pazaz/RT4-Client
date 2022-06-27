@@ -10,7 +10,9 @@ public final class Texture {
 
     @OriginalMember(owner = "client!i", name = "ac", descriptor = "[I")
     public static final int[] brightnessMap = new int[256];
-	@OriginalMember(owner = "client!jh", name = "f", descriptor = "D")
+    @OriginalMember(owner = "client!rh", name = "g", descriptor = "I")
+    public static final int anInt4868 = -1;
+    @OriginalMember(owner = "client!jh", name = "f", descriptor = "D")
 	public static double brightness = -1.0D;
     @OriginalMember(owner = "client!cm", name = "a", descriptor = "Lclient!m;")
     public static TextureProvider anInterface1_1;
@@ -41,7 +43,7 @@ public final class Texture {
 		@Pc(45) int local45;
 		@Pc(52) int local52;
 		for (local20 = 0; local20 < local7; local20++) {
-			local27 = Static206.method3680(arg0);
+			local27 = method3680(arg0);
 			if (local27.method4631() >= 0) {
 				local18++;
 			}
@@ -90,6 +92,108 @@ public final class Texture {
 			brightnessMap[local12] = local25 > 255 ? 255 : local25;
 		}
 		brightness = arg0;
+	}
+
+	@OriginalMember(owner = "client!qk", name = "a", descriptor = "(BLclient!wa;)Lclient!j;")
+	public static TextureOp method3680(@OriginalArg(1) Buffer arg0) {
+		arg0.g1();
+		@Pc(13) int local13 = arg0.g1();
+		@Pc(17) TextureOp local17 = method3860(local13);
+		local17.anInt5840 = arg0.g1();
+		@Pc(26) int local26 = arg0.g1();
+		for (@Pc(34) int local34 = 0; local34 < local26; local34++) {
+			@Pc(41) int local41 = arg0.g1();
+			local17.method4629(local41, arg0);
+		}
+		local17.method4630();
+		return local17;
+	}
+
+	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(IZ)Lclient!j;")
+	public static TextureOp method3860(@OriginalArg(0) int arg0) {
+		if (arg0 == 0) {
+			return new TextureOp20();
+		} else if (arg0 == 1) {
+			return new TextureOpColorFill();
+		} else if (arg0 == 2) {
+			return new TextureOp27();
+		} else if (arg0 == 3) {
+			return new TextureOp25();
+		} else if (arg0 == 4) {
+			return new TextureOp17();
+		} else if (arg0 == 5) {
+			return new TextureOp21();
+		} else if (arg0 == 6) {
+			return new TextureOp2();
+		} else if (arg0 == 7) {
+			return new TextureOpCombine();
+		} else if (arg0 == 8) {
+			return new TextureOpCurve();
+		} else if (arg0 == 9) {
+			return new TextureOp7();
+		} else if (arg0 == 10) {
+			return new TextureOpColorGradient();
+		} else if (arg0 == 11) {
+			return new TextureOp18();
+		} else if (arg0 == 12) {
+			return new TextureOp1();
+		} else if (arg0 == 13) {
+			return new TextureOp26();
+		} else if (arg0 == 14) {
+			return new TextureOp28();
+		} else if (arg0 == 15) {
+			return new TextureOp14();
+		} else if (arg0 == 16) {
+			return new TextureOp8();
+		} else if (arg0 == 17) {
+			return new TextureOp13();
+		} else if (arg0 == 18) {
+			return new TextureOpTiledSprite();
+		} else if (arg0 == 19) {
+			return new TextureOp16();
+		} else if (arg0 == 20) {
+			return new TextureOp11();
+		} else if (arg0 == 21) {
+			return new TextureOp5();
+		} else if (arg0 == 22) {
+			return new TextureOp31();
+		} else if (arg0 == 23) {
+			return new TextureOp15();
+		} else if (arg0 == 24) {
+			return new TextureOp10();
+		} else if (arg0 == 25) {
+			return new TextureOp30();
+		} else if (arg0 == 26) {
+			return new TextureOpBinary();
+		} else if (arg0 == 27) {
+			return new TextureOp6();
+		} else if (arg0 == 28) {
+			return new TextureOp22();
+		} else if (arg0 == 29) {
+			return new TextureOp29();
+		} else if (arg0 == 30) {
+			return new TextureOp9();
+		} else if (arg0 == 31) {
+			return new TextureOp12();
+		} else if (arg0 == 32) {
+			return new TextureOp24();
+		} else if (arg0 == 33) {
+			return new TextureOp3();
+		} else if (arg0 == 34) {
+			return new TextureOp4();
+		} else if (arg0 == 35) {
+			return new TextureOp23();
+		} else if (arg0 == 36) {
+			return new TextureOp32();
+		} else if (arg0 == 37) {
+			return new TextureOp19();
+		} else if (arg0 == 38) {
+			return new TextureOp33();
+		} else if (arg0 == 39) {
+			return new TextureOpSprite();
+		} else {
+			return null;
+		}
 	}
 
 	@OriginalMember(owner = "client!lc", name = "a", descriptor = "(IZIDILclient!ve;Lclient!m;Z)[I")
@@ -263,9 +367,9 @@ public final class Texture {
 	@OriginalMember(owner = "client!lc", name = "a", descriptor = "(ZLclient!m;Lclient!ve;)Z")
 	public final boolean method2729(@OriginalArg(1) TextureProvider arg0, @OriginalArg(2) Js5 arg1) {
 		@Pc(10) int local10;
-		if (Static215.anInt4868 > 0) {
+		if (anInt4868 > 0) {
 			for (local10 = 0; local10 < this.anIntArray327.length; local10++) {
-				if (!arg1.isFileReady(this.anIntArray327[local10], Static215.anInt4868)) {
+				if (!arg1.isFileReady(this.anIntArray327[local10], anInt4868)) {
 					return false;
 				}
 			}

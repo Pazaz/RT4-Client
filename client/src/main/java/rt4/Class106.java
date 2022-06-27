@@ -41,7 +41,15 @@ public abstract class Class106 {
 		this.method3847();
 	}
 
-	@OriginalMember(owner = "client!wf", name = "a", descriptor = "(IIII)V")
+    @OriginalMember(owner = "client!se", name = "a", descriptor = "(IIIIZ)I")
+    public static int method3891(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+        @Pc(8) int local8 = arg3 & 0xF;
+        @Pc(29) int local29 = local8 >= 4 ? (local8 == 12 || local8 == 14 ? arg0 : arg1) : arg2;
+        @Pc(42) int local42 = local8 < 8 ? arg0 : arg2;
+        return ((local8 & 0x1) == 0 ? local42 : -local42) + ((local8 & 0x2) == 0 ? local29 : -local29);
+    }
+
+    @OriginalMember(owner = "client!wf", name = "a", descriptor = "(IIII)V")
 	protected final void method3841() {
 		@Pc(8) int[] local8 = new int[64];
 		@Pc(11) int[] local11 = new int[64];
@@ -110,18 +118,18 @@ public abstract class Class106 {
 						@Pc(304) int local304 = MonochromeImageCache.anIntArray1[local190];
 						@Pc(308) int local308 = local126 - 4096;
 						@Pc(315) short local315 = this.aShortArray69[local227 + local236];
-						@Pc(327) int local327 = Static225.method3891(local166, local126, local190, this.aShortArray69[local285 + local207]);
-						@Pc(340) int local340 = Static225.method3891(local174, local126, local190, this.aShortArray69[local178 + local285]);
+						@Pc(327) int local327 = method3891(local166, local126, local190, this.aShortArray69[local285 + local207]);
+						@Pc(340) int local340 = method3891(local174, local126, local190, this.aShortArray69[local178 + local285]);
 						@Pc(351) int local351 = local327 + (local194 * (local340 - local327) >> 12);
-						@Pc(363) int local363 = Static225.method3891(local166, local126, local300, this.aShortArray69[local315 + local207]);
-						@Pc(375) int local375 = Static225.method3891(local174, local126, local300, this.aShortArray69[local178 + local315]);
+						@Pc(363) int local363 = method3891(local166, local126, local300, this.aShortArray69[local315 + local207]);
+						@Pc(375) int local375 = method3891(local174, local126, local300, this.aShortArray69[local178 + local315]);
 						@Pc(386) int local386 = local363 + (local194 * (local375 - local363) >> 12);
 						@Pc(397) int local397 = ((local386 - local351) * local304 >> 12) + local351;
-						@Pc(409) int local409 = Static225.method3891(local166, local308, local190, this.aShortArray69[local207 + local278]);
-						@Pc(421) int local421 = Static225.method3891(local174, local308, local190, this.aShortArray69[local178 + local278]);
+						@Pc(409) int local409 = method3891(local166, local308, local190, this.aShortArray69[local207 + local278]);
+						@Pc(421) int local421 = method3891(local174, local308, local190, this.aShortArray69[local178 + local278]);
 						@Pc(432) int local432 = (local194 * (local421 - local409) >> 12) + local409;
-						@Pc(445) int local445 = Static225.method3891(local166, local308, local300, this.aShortArray69[local207 + local259]);
-						@Pc(457) int local457 = Static225.method3891(local174, local308, local300, this.aShortArray69[local178 + local259]);
+						@Pc(445) int local445 = method3891(local166, local308, local300, this.aShortArray69[local207 + local259]);
+						@Pc(457) int local457 = method3891(local174, local308, local300, this.aShortArray69[local178 + local259]);
 						@Pc(468) int local468 = local445 + ((local457 - local445) * local194 >> 12);
 						@Pc(480) int local480 = local432 + ((local468 - local432) * local304 >> 12);
 						this.method3848(((local480 - local397) * local271 >> 12) + local397, local96);

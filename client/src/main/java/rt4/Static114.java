@@ -22,7 +22,7 @@ public final class Static114 {
 			SoftwareRaster.drawRect(6, 6, local24 + 8, 4 + 4 + local31, 16777215);
 		}
 		Fonts.p12Full.method2852(arg1, 10, 10, local24, local31, 16777215, -1, 1, 1, 0);
-		Static133.method4012(6, local24 + 8, 6, local31 + 4 + 4);
+		InterfaceList.method4012(6, local24 + 8, 6, local31 + 4 + 4);
 		if (!arg0) {
 			Static121.method2407(10, 10, local31, local24);
 		} else if (GlRenderer.enabled) {

@@ -1,19 +1,11 @@
 package rt4;
 
-import java.util.Calendar;
-import java.util.Date;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 public final class Static33 {
 
-	@OriginalMember(owner = "client!dm", name = "j", descriptor = "Lclient!na;")
-	public static final JagString aClass100_351 = JagString.parse(" ");
-	@OriginalMember(owner = "client!fn", name = "Z", descriptor = "Lclient!na;")
-	public static final JagString aClass100_461 = JagString.parse(")1 ");
-	@OriginalMember(owner = "client!ee", name = "a", descriptor = "Lclient!na;")
-	public static final JagString aClass100_376 = JagString.parse(" GMT");
 	@OriginalMember(owner = "client!cj", name = "n", descriptor = "Lsignlink!im;")
 	public static PrivilegedRequest openUrlRequest;
 
@@ -51,19 +43,6 @@ public final class Static33 {
 			local42.method1390(arg0 * 4 + 48, (-local52 + -arg2 + 104) * 4 + 48, local66, local69, local10.anInt11);
 		}
 		return true;
-	}
-
-	@OriginalMember(owner = "client!cj", name = "a", descriptor = "(JB)Lclient!na;")
-	public static JagString method873(@OriginalArg(0) long arg0) {
-		Static35.aCalendar1.setTime(new Date(arg0));
-		@Pc(13) int local13 = Static35.aCalendar1.get(Calendar.DAY_OF_WEEK);
-		@Pc(17) int local17 = Static35.aCalendar1.get(Calendar.DATE);
-		@Pc(21) int local21 = Static35.aCalendar1.get(Calendar.MONTH);
-		@Pc(32) int local32 = Static35.aCalendar1.get(Calendar.YEAR);
-		@Pc(36) int local36 = Static35.aCalendar1.get(Calendar.HOUR_OF_DAY);
-		@Pc(40) int local40 = Static35.aCalendar1.get(Calendar.MINUTE);
-		@Pc(44) int local44 = Static35.aCalendar1.get(Calendar.SECOND);
-		return JagString.concatenate(new JagString[] { Static219.aClass100Array149[local13 - 1], aClass100_461, JagString.parseInt(local17 / 10), JagString.parseInt(local17 % 10), Static270.aClass100_1089, Static138.aClass100Array102[local21], Static270.aClass100_1089, JagString.parseInt(local32), aClass100_351, JagString.parseInt(local36 / 10), JagString.parseInt(local36 % 10), Static264.COLON, JagString.parseInt(local40 / 10), JagString.parseInt(local40 % 10), Static264.COLON, JagString.parseInt(local44 / 10), JagString.parseInt(local44 % 10), aClass100_376 });
 	}
 
 	@OriginalMember(owner = "client!cj", name = "a", descriptor = "(ZIIIIIIFB)[[I")

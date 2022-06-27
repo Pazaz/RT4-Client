@@ -44,7 +44,7 @@ public class Find {
         for (@Pc(115) int local115 = 0; local115 < index; local115++) {
             local113[local115] = QuickChatPhraseTypeList.get(local22[local115]).getText();
         }
-        Static202.method3656(local113, results);
+        method3656(local113, results);
     }
 
     @OriginalMember(owner = "client!me", name = "a", descriptor = "(ZLclient!na;I)V")
@@ -77,6 +77,42 @@ public class Find {
         for (@Pc(119) int local119 = 0; local119 < index; local119++) {
             local117[local119] = ObjTypeList.get(local8[local119]).name;
         }
-        Static202.method3656(local117, results);
+        method3656(local117, results);
+    }
+
+    @OriginalMember(owner = "client!qg", name = "a", descriptor = "([Lclient!na;[SI)V")
+    public static void method3656(@OriginalArg(0) JagString[] arg0, @OriginalArg(1) short[] arg1) {
+        method1307(arg1, arg0.length - 1, arg0, 0);
+    }
+
+    @OriginalMember(owner = "client!ed", name = "a", descriptor = "([SI[Lclient!na;II)V")
+    public static void method1307(@OriginalArg(0) short[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) JagString[] arg2, @OriginalArg(4) int arg3) {
+        if (arg1 <= arg3) {
+            return;
+        }
+        @Pc(14) int local14 = arg3;
+        @Pc(21) int local21 = (arg3 + arg1) / 2;
+        @Pc(25) JagString local25 = arg2[local21];
+        arg2[local21] = arg2[arg1];
+        arg2[arg1] = local25;
+        @Pc(39) short local39 = arg0[local21];
+        arg0[local21] = arg0[arg1];
+        arg0[arg1] = local39;
+        for (@Pc(51) int local51 = arg3; local51 < arg1; local51++) {
+            if (local25 == null || arg2[local51] != null && arg2[local51].method3139(local25) < (local51 & 0x1)) {
+                @Pc(80) JagString local80 = arg2[local51];
+                arg2[local51] = arg2[local14];
+                arg2[local14] = local80;
+                @Pc(94) short local94 = arg0[local51];
+                arg0[local51] = arg0[local14];
+                arg0[local14++] = local94;
+            }
+        }
+        arg2[arg1] = arg2[local14];
+        arg2[local14] = local25;
+        arg0[arg1] = arg0[local14];
+        arg0[local14] = local39;
+        method1307(arg0, local14 - 1, arg2, arg3);
+        method1307(arg0, arg1, arg2, local14 + 1);
     }
 }

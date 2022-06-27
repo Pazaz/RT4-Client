@@ -16,7 +16,7 @@ public final class Static220 {
 	public static void spawnGroundObject(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
 		@Pc(9) LinkedList local9 = SceneGraph.objStacks[Player.level][arg1][arg0];
 		if (local9 == null) {
-			Static187.method3420(Player.level, arg1, arg0);
+			method3420(Player.level, arg1, arg0);
 			return;
 		}
 		@Pc(28) int local28 = -99999999;
@@ -34,7 +34,7 @@ public final class Static220 {
 			}
 		}
 		if (local30 == null) {
-			Static187.method3420(Player.level, arg1, arg0);
+			method3420(Player.level, arg1, arg0);
 			return;
 		}
 		local9.addHead(local30);
@@ -55,4 +55,15 @@ public final class Static220 {
 		Static69.method1543(Player.level, arg1, arg0, SceneGraph.getTileHeight(Player.level, arg1 * 128 + 64, arg0 * 128 + 64), local30.value, local152, local89, local91);
 	}
 
+    @OriginalMember(owner = "client!pb", name = "b", descriptor = "(III)Lclient!jj;")
+    public static ObjStackEntity method3420(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+        @Pc(7) Tile local7 = SceneGraph.tiles[arg0][arg1][arg2];
+        if (local7 == null) {
+            return null;
+        } else {
+            @Pc(14) ObjStackEntity local14 = local7.aClass79_1;
+            local7.aClass79_1 = null;
+            return local14;
+        }
+    }
 }

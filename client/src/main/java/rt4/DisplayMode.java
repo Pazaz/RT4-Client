@@ -16,8 +16,10 @@ public final class DisplayMode {
     public static boolean aBoolean73 = false;
     @OriginalMember(owner = "client!jk", name = "y", descriptor = "Z")
     public static boolean aBoolean156 = false;
+	@OriginalMember(owner = "client!hi", name = "f", descriptor = "J")
+	public static long aLong89 = 0L;
 
-    @OriginalMember(owner = "client!od", name = "j", descriptor = "I")
+	@OriginalMember(owner = "client!od", name = "j", descriptor = "I")
 	public int width;
 
 	@OriginalMember(owner = "client!od", name = "k", descriptor = "I")
@@ -47,7 +49,7 @@ public final class DisplayMode {
 
 	@OriginalMember(owner = "client!th", name = "a", descriptor = "(ZIIII)V")
 	public static void setWindowMode(@OriginalArg(0) boolean arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
-		Static97.aLong89 = 0L;
+		aLong89 = 0L;
 		@Pc(4) int mode = getWindowMode();
 		if (arg1 == 3 || mode == 3) {
 			arg0 = true;
@@ -85,7 +87,7 @@ public final class DisplayMode {
 			GameShell.fullScreenFrame = null;
 		}
 		if (arg1 == 3 && GameShell.fullScreenFrame == null) {
-			GameShell.fullScreenFrame = Static169.method3176(0, arg5, arg4, GameShell.signLink);
+			GameShell.fullScreenFrame = method3176(0, arg5, arg4, GameShell.signLink);
 			if (GameShell.fullScreenFrame != null) {
 				Preferences.fullScreenHeight = arg5;
 				Preferences.fullScreenWidth = arg4;
@@ -202,7 +204,7 @@ public final class DisplayMode {
 			GameShell.thread.setPriority(1);
 			SoftwareRaster.frameBuffer = Static131.create(503, 765, GameShell.canvas);
 			SoftwareModel.method4583();
-			Static76.method1643();
+			ParticleSystem.quit();
 			((Js5GlTextureProvider) Rasteriser.textureProvider).method3248(20);
 			if (Preferences.highDetailLighting) {
 				if (Preferences.brightness == 1) {
@@ -271,7 +273,7 @@ public final class DisplayMode {
 				@Pc(122) DisplayMode local122 = aClass114Array1[local114];
 				local112[local114] = local122.height * local122.width;
 			}
-			Static181.method3346(local112, aClass114Array1);
+			method3346(local112, aClass114Array1);
 		}
 		return aClass114Array1;
 	}
@@ -299,5 +301,75 @@ public final class DisplayMode {
 			local59.refreshRate = local39[(local47 << 2) + 3];
 		}
 		return local45;
+	}
+
+	@OriginalMember(owner = "client!nf", name = "a", descriptor = "(IIIIILsignlink!ll;)Ljava/awt/Frame;")
+	public static Frame method3176(@OriginalArg(2) int arg0, @OriginalArg(3) int arg1, @OriginalArg(4) int arg2, @OriginalArg(5) SignLink arg3) {
+		if (!arg3.isFullScreenSupported()) {
+			return null;
+		}
+		@Pc(20) DisplayMode[] local20 = method3558(arg3);
+		if (local20 == null) {
+			return null;
+		}
+		@Pc(27) boolean local27 = false;
+		for (@Pc(29) int local29 = 0; local29 < local20.length; local29++) {
+			if (arg2 == local20[local29].width && arg1 == local20[local29].height && (!local27 || local20[local29].bitDepth > arg0)) {
+				arg0 = local20[local29].bitDepth;
+				local27 = true;
+			}
+		}
+		if (!local27) {
+			return null;
+		}
+		@Pc(90) PrivilegedRequest local90 = arg3.enterFullScreen(arg0, arg1, arg2);
+		while (local90.status == 0) {
+			ThreadUtils.sleep(10L);
+		}
+		@Pc(103) Frame local103 = (Frame) local90.result;
+		if (local103 == null) {
+			return null;
+		} else if (local90.status == 2) {
+			exitFullScreen(local103, arg3);
+			return null;
+		} else {
+			return local103;
+		}
+	}
+
+	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(I[I[Ljava/lang/Object;)V")
+	public static void method3346(@OriginalArg(1) int[] arg0, @OriginalArg(2) Object[] arg1) {
+		method1292(arg1, arg0.length - 1, arg0, 0);
+	}
+
+	@OriginalMember(owner = "client!ec", name = "a", descriptor = "([Ljava/lang/Object;I[III)V")
+	public static void method1292(@OriginalArg(0) Object[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int[] arg2, @OriginalArg(4) int arg3) {
+		if (arg3 >= arg1) {
+			return;
+		}
+		@Pc(11) int local11 = (arg3 + arg1) / 2;
+		@Pc(15) int local15 = arg2[local11];
+		@Pc(17) int local17 = arg3;
+		arg2[local11] = arg2[arg1];
+		arg2[arg1] = local15;
+		@Pc(31) Object local31 = arg0[local11];
+		arg0[local11] = arg0[arg1];
+		arg0[arg1] = local31;
+		for (@Pc(43) int local43 = arg3; local43 < arg1; local43++) {
+			if ((local43 & 0x1) + local15 > arg2[local43]) {
+				@Pc(67) int local67 = arg2[local43];
+				arg2[local43] = arg2[local17];
+				arg2[local17] = local67;
+				@Pc(81) Object local81 = arg0[local43];
+				arg0[local43] = arg0[local17];
+				arg0[local17++] = local81;
+			}
+		}
+		arg2[arg1] = arg2[local17];
+		arg2[local17] = local15;
+		arg0[arg1] = arg0[local17];
+		arg0[local17] = local31;
+		method1292(arg0, local17 - 1, arg2, arg3);
+		method1292(arg0, arg1, arg2, local17 + 1);
 	}
 }

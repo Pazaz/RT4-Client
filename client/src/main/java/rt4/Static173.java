@@ -11,7 +11,7 @@ public final class Static173 {
 
     @OriginalMember(owner = "client!nk", name = "a", descriptor = "(Z[J[I)V")
 	public static void method3243(@OriginalArg(1) long[] arg0, @OriginalArg(2) int[] arg1) {
-		Static83.method436(arg0, 0, arg0.length - 1, arg1);
+		method436(arg0, 0, arg0.length - 1, arg1);
 	}
 
 	@OriginalMember(owner = "client!nk", name = "a", descriptor = "(IIIIIB)V")
@@ -42,27 +42,58 @@ public final class Static173 {
 		if (TextureOp29.anInt5773 > arg4) {
 			arg4 = TextureOp29.anInt5773;
 		} else {
-			Static131.method2576(Static71.anIntArrayArray10[arg4++], arg1, arg3, arg0);
+			TextureOp29SubOp4.method2576(TextureOp29SubOp4.anIntArrayArray10[arg4++], arg1, arg3, arg0);
 		}
 		if (arg2 <= TextureOp29.anInt2869) {
-			Static131.method2576(Static71.anIntArrayArray10[arg2--], arg1, arg3, arg0);
+			TextureOp29SubOp4.method2576(TextureOp29SubOp4.anIntArrayArray10[arg2--], arg1, arg3, arg0);
 		} else {
 			arg2 = TextureOp29.anInt2869;
 		}
 		@Pc(98) int local98;
 		if (local24 && local43) {
 			for (local98 = arg4; local98 <= arg2; local98++) {
-				@Pc(105) int[] local105 = Static71.anIntArrayArray10[local98];
+				@Pc(105) int[] local105 = TextureOp29SubOp4.anIntArrayArray10[local98];
 				local105[arg1] = local105[arg3] = arg0;
 			}
 		} else if (local24) {
 			for (local98 = arg4; local98 <= arg2; local98++) {
-				Static71.anIntArrayArray10[local98][arg1] = arg0;
+				TextureOp29SubOp4.anIntArrayArray10[local98][arg1] = arg0;
 			}
 		} else if (local43) {
 			for (local98 = arg4; local98 <= arg2; local98++) {
-				Static71.anIntArrayArray10[local98][arg3] = arg0;
+				TextureOp29SubOp4.anIntArrayArray10[local98][arg3] = arg0;
 			}
 		}
 	}
+
+    @OriginalMember(owner = "client!gj", name = "a", descriptor = "([JII[II)V")
+    public static void method436(@OriginalArg(0) long[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int[] arg3) {
+        if (arg1 >= arg2) {
+            return;
+        }
+        @Pc(20) int local20 = arg1;
+        @Pc(26) int local26 = (arg2 + arg1) / 2;
+        @Pc(30) long local30 = arg0[local26];
+        arg0[local26] = arg0[arg2];
+        arg0[arg2] = local30;
+        @Pc(44) int local44 = arg3[local26];
+        arg3[local26] = arg3[arg2];
+        arg3[arg2] = local44;
+        for (@Pc(56) int local56 = arg1; local56 < arg2; local56++) {
+            if (arg0[local56] < local30 + (long) (local56 & 0x1)) {
+                @Pc(76) long local76 = arg0[local56];
+                arg0[local56] = arg0[local20];
+                arg0[local20] = local76;
+                @Pc(90) int local90 = arg3[local56];
+                arg3[local56] = arg3[local20];
+                arg3[local20++] = local90;
+            }
+        }
+        arg0[arg2] = arg0[local20];
+        arg0[local20] = local30;
+        arg3[arg2] = arg3[local20];
+        arg3[local20] = local44;
+        method436(arg0, arg1, local20 - 1, arg3);
+        method436(arg0, local20 + 1, arg2, arg3);
+    }
 }

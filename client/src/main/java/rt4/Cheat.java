@@ -127,7 +127,7 @@ public class Cheat {
                 local29 = Runtime.getRuntime();
                 local38 = (int) ((local29.totalMemory() - local29.freeMemory()) / 1024L);
                 Chat.add(null, 0, JagString.concatenate(new JagString[] { aClass100_893, JagString.parseInt(local38), DEBUG_MEM_UNIT}));
-                Static16.method501();
+                Player.method501();
                 client.method2380();
                 for (local117 = 0; local117 < 10; local117++) {
                     System.gc();
@@ -136,7 +136,7 @@ public class Cheat {
                 Chat.add(null, 0, JagString.concatenate(new JagString[] {aClass100_1093, JagString.parseInt(local38), DEBUG_MEM_UNIT}));
             }
             if (arg0.equalsIgnoreCase(PCACHESIZE)) {
-                Chat.add(null, 0, JagString.concatenate(new JagString[] { aClass100_335, JagString.parseInt(Static198.method1029()) }));
+                Chat.add(null, 0, JagString.concatenate(new JagString[] { aClass100_335, JagString.parseInt(PlayerAppearance.method1029()) }));
             }
             if (GlRenderer.enabled && arg0.equalsIgnoreCase(CARDMEM)) {
                 System.out.println("oncard_geometry:" + GlCleaner.onCardGeometry);
@@ -144,7 +144,7 @@ public class Cheat {
                 System.out.println("oncard_texture:" + GlCleaner.onCardTexture);
             }
             if (arg0.equalsIgnoreCase(CLIENTDROP)) {
-                Static175.method3279();
+                Protocol.method3279();
             }
             if (arg0.equalsIgnoreCase(CLIENTJS5DROP)) {
                 client.js5NetQueue.quit();
@@ -231,4 +231,5 @@ public class Cheat {
         Protocol.outboundBuffer.p1(arg0.length() - 1);
         Protocol.outboundBuffer.pjstr(arg0.substring(2));
     }
+
 }

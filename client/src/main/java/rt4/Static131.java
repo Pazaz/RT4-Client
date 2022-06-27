@@ -13,35 +13,6 @@ public final class Static131 {
     @OriginalMember(owner = "client!kd", name = "Bb", descriptor = "I")
 	public static int anInt3260 = -1;
 
-	@OriginalMember(owner = "client!kd", name = "a", descriptor = "([IIIII)V")
-	public static void method2576(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
-		arg1--;
-		@Pc(14) int local14 = arg2 - 1;
-		@Pc(17) int local17 = local14 - 7;
-		while (local17 > arg1) {
-			@Pc(22) int local22 = arg1 + 1;
-			arg0[local22] = arg3;
-			@Pc(27) int local27 = local22 + 1;
-			arg0[local27] = arg3;
-			@Pc(32) int local32 = local27 + 1;
-			arg0[local32] = arg3;
-			@Pc(37) int local37 = local32 + 1;
-			arg0[local37] = arg3;
-			@Pc(42) int local42 = local37 + 1;
-			arg0[local42] = arg3;
-			@Pc(47) int local47 = local42 + 1;
-			arg0[local47] = arg3;
-			@Pc(52) int local52 = local47 + 1;
-			arg0[local52] = arg3;
-			arg1 = local52 + 1;
-			arg0[arg1] = arg3;
-		}
-		while (local14 > arg1) {
-			arg1++;
-			arg0[arg1] = arg3;
-		}
-	}
-
 	@OriginalMember(owner = "client!kd", name = "a", descriptor = "([[F[[II[[FI[ILclient!fj;BLclient!gi;[[FI)V")
 	public static void method2578(@OriginalArg(0) float[][] arg0, @OriginalArg(1) int[][] arg1, @OriginalArg(2) int arg2, @OriginalArg(3) float[][] arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int[] arg5, @OriginalArg(6) Light_Class45 arg6, @OriginalArg(8) Light arg7, @OriginalArg(9) float[][] arg8, @OriginalArg(10) int arg9) {
 		@Pc(7) int[] local7 = new int[arg5.length / 2];

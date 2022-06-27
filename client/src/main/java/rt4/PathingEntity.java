@@ -14,6 +14,10 @@ public abstract class PathingEntity extends Entity {
 	public static final BasType aClass20_1 = new BasType();
     @OriginalMember(owner = "client!hn", name = "Y", descriptor = "I")
     public static int anInt2680 = 0;
+    @OriginalMember(owner = "client!hm", name = "ab", descriptor = "I")
+    public static int anInt2640 = 0;
+    @OriginalMember(owner = "client!f", name = "V", descriptor = "I")
+	public static int anInt1938 = 0;
     @OriginalMember(owner = "client!fe", name = "A", descriptor = "I")
 	public int spotAnimStart;
 
@@ -357,8 +361,8 @@ public abstract class PathingEntity extends Entity {
 	@OriginalMember(owner = "client!fe", name = "a", descriptor = "(BLclient!ak;I)V")
 	protected final void method2685(@OriginalArg(1) Model arg0, @OriginalArg(2) int arg1) {
 		anInt2680 = 0;
-		Static101.anInt2640 = 0;
-		Static62.anInt1938 = 0;
+		anInt2640 = 0;
+		anInt1938 = 0;
 		@Pc(21) BasType local21 = this.getBasType();
 		@Pc(24) int local24 = local21.anInt1059;
 		@Pc(27) int local27 = local21.anInt1050;
@@ -391,21 +395,21 @@ public abstract class PathingEntity extends Entity {
 		@Pc(231) int local231 = local224 > local201 ? local201 : local224;
 		@Pc(238) int local238 = local224 > local134 ? local134 : local224;
 		@Pc(245) int local245 = local201 <= local87 ? local201 : local87;
-		Static101.anInt2640 = (int) (Math.atan2((double) (local212 - local231), (double) local27) * 325.95D) & 0x7FF;
-		if (Static101.anInt2640 != 0) {
-			arg0.rotateX(Static101.anInt2640);
+		anInt2640 = (int) (Math.atan2((double) (local212 - local231), (double) local27) * 325.95D) & 0x7FF;
+		if (anInt2640 != 0) {
+			arg0.rotateX(anInt2640);
 		}
 		anInt2680 = (int) (Math.atan2((double) (local245 - local238), (double) local24) * 325.95D) & 0x7FF;
 		if (anInt2680 != 0) {
 			arg0.rotateZ(anInt2680);
 		}
-		Static62.anInt1938 = local224 + local87;
-		if (local201 + local134 < Static62.anInt1938) {
-			Static62.anInt1938 = local201 + local134;
+		anInt1938 = local224 + local87;
+		if (local201 + local134 < anInt1938) {
+			anInt1938 = local201 + local134;
 		}
-		Static62.anInt1938 = (Static62.anInt1938 >> 1) - this.anInt3424;
-		if (Static62.anInt1938 != 0) {
-			arg0.translate(0, Static62.anInt1938, 0);
+		anInt1938 = (anInt1938 >> 1) - this.anInt3424;
+		if (anInt1938 != 0) {
+			arg0.translate(0, anInt1938, 0);
 		}
 	}
 

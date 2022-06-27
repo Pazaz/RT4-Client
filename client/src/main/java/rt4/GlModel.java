@@ -54,8 +54,10 @@ public final class GlModel extends Model {
 	public static int anInt5300;
 	@OriginalMember(owner = "client!td", name = "zb", descriptor = "F")
 	public static float aFloat28;
+    @OriginalMember(owner = "client!lk", name = "V", descriptor = "I")
+	public static int anInt3582 = 0;
 
-	@OriginalMember(owner = "client!td", name = "t", descriptor = "[S")
+    @OriginalMember(owner = "client!td", name = "t", descriptor = "[S")
 	private short[] aShortArray75;
 
 	@OriginalMember(owner = "client!td", name = "v", descriptor = "[S")
@@ -909,7 +911,18 @@ public final class GlModel extends Model {
 		aClass8_Sub1_Sub1_6 = new GlModel();
 	}
 
-	@OriginalMember(owner = "client!td", name = "a", descriptor = "(ZZZ)Lclient!ak;")
+    @OriginalMember(owner = "client!vg", name = "a", descriptor = "(I[S)[S")
+    public static short[] method4511(@OriginalArg(1) short[] arg0) {
+        if (arg0 == null) {
+            return null;
+        } else {
+            @Pc(19) short[] local19 = new short[arg0.length];
+            ArrayUtils.copy(arg0, 0, local19, 0, arg0.length);
+            return local19;
+        }
+    }
+
+    @OriginalMember(owner = "client!td", name = "a", descriptor = "(ZZZ)Lclient!ak;")
 	@Override
 	public final Model method4560(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2) {
 		return this.method4114(arg0, arg1, arg2, aClass8_Sub1_Sub1_4, aClass8_Sub1_Sub1_3);
@@ -961,7 +974,7 @@ public final class GlModel extends Model {
 			local161 = MathUtils.sin[arg0];
 			local163 = MathUtils.cos[arg0];
 		}
-		if (arg8 > 0L && Static39.aBoolean77 && local70 > 0) {
+		if (arg8 > 0L && ScriptRunner.aBoolean77 && local70 > 0) {
 			@Pc(187) int local187;
 			@Pc(191) int local191;
 			if (local84 > 0) {
@@ -980,7 +993,7 @@ public final class GlModel extends Model {
 				local206 = local153 / local70;
 				local210 = local132 / local53;
 			}
-			if (Static150.anInt3582 >= local187 && Static150.anInt3582 <= local191 && Static34.anInt1053 >= local206 && Static34.anInt1053 <= local210) {
+			if (anInt3582 >= local187 && anInt3582 <= local191 && Static34.anInt1053 >= local206 && Static34.anInt1053 <= local210) {
 				local187 = 999999;
 				local191 = -999999;
 				local206 = 999999;
@@ -1033,9 +1046,9 @@ public final class GlModel extends Model {
 						}
 					}
 				}
-				if (Static150.anInt3582 >= local187 && Static150.anInt3582 <= local191 && Static34.anInt1053 >= local206 && Static34.anInt1053 <= local210) {
+				if (anInt3582 >= local187 && anInt3582 <= local191 && Static34.anInt1053 >= local206 && Static34.anInt1053 <= local210) {
 					if (this.aBoolean303) {
-						Model.aLongArray11[Static2.anInt7++] = arg8;
+						Model.aLongArray11[MiniMenu.anInt7++] = arg8;
 					} else {
 						if (anIntArray468.length < this.anInt5296) {
 							anIntArray468 = new int[this.anInt5296];
@@ -1052,8 +1065,8 @@ public final class GlModel extends Model {
 									@Pc(698) short local698 = this.aShortArray77[local362];
 									@Pc(703) short local703 = this.aShortArray82[local362];
 									@Pc(708) short local708 = this.aShortArray83[local362];
-									if (this.method4118(Static150.anInt3582, Static34.anInt1053, anIntArray467[local698], anIntArray467[local703], anIntArray467[local708], anIntArray468[local698], anIntArray468[local703], anIntArray468[local708])) {
-										Model.aLongArray11[Static2.anInt7++] = arg8;
+									if (this.method4118(anInt3582, Static34.anInt1053, anIntArray467[local698], anIntArray467[local703], anIntArray467[local708], anIntArray468[local698], anIntArray468[local703], anIntArray468[local708])) {
+										Model.aLongArray11[MiniMenu.anInt7++] = arg8;
 										break label118;
 									}
 									local362++;
@@ -1288,17 +1301,17 @@ public final class GlModel extends Model {
 									if (local237 != -1) {
 										if (local40 == null) {
 											this.aClass23_1 = new GlModel_Class23();
-											local40 = this.aClass23_1.aShortArray8 = Static263.method4511(this.aShortArray76);
-											local44 = this.aClass23_1.aShortArray10 = Static263.method4511(this.aShortArray79);
-											local48 = this.aClass23_1.aShortArray9 = Static263.method4511(this.aShortArray85);
-											local52 = this.aClass23_1.aShortArray7 = Static263.method4511(this.aShortArray86);
+											local40 = this.aClass23_1.aShortArray8 = method4511(this.aShortArray76);
+											local44 = this.aClass23_1.aShortArray10 = method4511(this.aShortArray79);
+											local48 = this.aClass23_1.aShortArray9 = method4511(this.aShortArray85);
+											local52 = this.aClass23_1.aShortArray7 = method4511(this.aShortArray86);
 										}
 										if (local68 == null) {
 											@Pc(325) GlModel_Class23 local325 = local2.aClass23_1 = new GlModel_Class23();
-											local68 = local325.aShortArray8 = Static263.method4511(local24);
-											local72 = local325.aShortArray10 = Static263.method4511(local27);
-											local76 = local325.aShortArray9 = Static263.method4511(local30);
-											local80 = local325.aShortArray7 = Static263.method4511(local33);
+											local68 = local325.aShortArray8 = method4511(local24);
+											local72 = local325.aShortArray10 = method4511(local27);
+											local76 = local325.aShortArray9 = method4511(local30);
+											local80 = local325.aShortArray7 = method4511(local33);
 										}
 										@Pc(358) short local358 = this.aShortArray76[local175];
 										@Pc(363) short local363 = this.aShortArray79[local175];
@@ -2819,7 +2832,7 @@ public final class GlModel extends Model {
 		if (arg2) {
 			local3.aShortArray75 = this.aShortArray75;
 		} else {
-			local3.aShortArray75 = Static263.method4511(this.aShortArray75);
+			local3.aShortArray75 = method4511(this.aShortArray75);
 		}
 		local3.aByteArray71 = this.aByteArray71;
 		if (arg2 && arg3 && (arg6 && arg4 || Preferences.highDetailLighting)) {
@@ -2833,10 +2846,10 @@ public final class GlModel extends Model {
 			local3.aShortArray85 = this.aShortArray85;
 			local3.aShortArray86 = this.aShortArray86;
 		} else {
-			local3.aShortArray76 = Static263.method4511(this.aShortArray76);
-			local3.aShortArray79 = Static263.method4511(this.aShortArray79);
-			local3.aShortArray85 = Static263.method4511(this.aShortArray85);
-			local3.aShortArray86 = Static263.method4511(this.aShortArray86);
+			local3.aShortArray76 = method4511(this.aShortArray76);
+			local3.aShortArray79 = method4511(this.aShortArray79);
+			local3.aShortArray85 = method4511(this.aShortArray85);
+			local3.aShortArray86 = method4511(this.aShortArray86);
 		}
 		if (!Preferences.highDetailLighting) {
 			local3.aClass127_2 = null;
@@ -2854,15 +2867,15 @@ public final class GlModel extends Model {
 			local3.aShortArray83 = this.aShortArray83;
 			local3.aClass127_5 = this.aClass127_5;
 		} else {
-			local3.aShortArray77 = Static263.method4511(this.aShortArray77);
-			local3.aShortArray82 = Static263.method4511(this.aShortArray82);
-			local3.aShortArray83 = Static263.method4511(this.aShortArray83);
+			local3.aShortArray77 = method4511(this.aShortArray77);
+			local3.aShortArray82 = method4511(this.aShortArray82);
+			local3.aShortArray83 = method4511(this.aShortArray83);
 			local3.aClass127_5 = new GlBuffer();
 		}
 		if (arg8) {
 			local3.aShortArray80 = this.aShortArray80;
 		} else {
-			local3.aShortArray80 = Static263.method4511(this.aShortArray80);
+			local3.aShortArray80 = method4511(this.aShortArray80);
 		}
 		local3.anIntArray464 = this.anIntArray464;
 		local3.anIntArrayArray36 = this.anIntArrayArray36;

@@ -11,6 +11,10 @@ public final class Static73 {
 
 	@OriginalMember(owner = "client!fm", name = "fb", descriptor = "[I")
 	public static final int[] anIntArray183 = new int[14];
+    @OriginalMember(owner = "client!li", name = "t", descriptor = "I")
+    public static int anInt3534;
+	@OriginalMember(owner = "client!mi", name = "Z", descriptor = "I")
+	public static int anInt3893;
 
 	@OriginalMember(owner = "client!fm", name = "a", descriptor = "(ZI)V")
 	public static void method1596(@OriginalArg(0) boolean arg0) {
@@ -29,8 +33,8 @@ public final class Static73 {
 			Static87.method1807();
 			InterfaceList.method1626(InterfaceList.topLevelInterface);
 		}
-		Static35.anInt1092 = -1;
-		Static81.method1750(Static270.anInt5794);
+		MiniMenu.anInt1092 = -1;
+		Static81.method1750(ScriptRunner.anInt5794);
 		PlayerList.self = new Player();
 		PlayerList.self.zFine = 3000;
 		PlayerList.self.xFine = 3000;
@@ -52,10 +56,10 @@ public final class Static73 {
 
 	@OriginalMember(owner = "client!fm", name = "a", descriptor = "(ZII)V")
 	public static void setLightPosition(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
-		Static85.anInt2263 = Static103.aClass92ArrayArray1[arg1][arg0].anInt3530;
-		Static159.anInt3893 = Static103.aClass92ArrayArray1[arg1][arg0].anInt3528;
-		Static148.anInt3534 = Static103.aClass92ArrayArray1[arg1][arg0].anInt3527;
-		FogManager.method3063((float) Static85.anInt2263, (float) Static159.anInt3893, (float) Static148.anInt3534);
+		Static103.anInt2263 = Static103.aClass92ArrayArray1[arg1][arg0].anInt3530;
+		anInt3893 = Static103.aClass92ArrayArray1[arg1][arg0].anInt3528;
+		anInt3534 = Static103.aClass92ArrayArray1[arg1][arg0].anInt3527;
+		FogManager.method3063((float) Static103.anInt2263, (float) anInt3893, (float) anInt3534);
 	}
 
 	@OriginalMember(owner = "client!fm", name = "a", descriptor = "(ILclient!na;Lclient!na;Lclient!na;I)V")
@@ -70,7 +74,7 @@ public final class Static73 {
 		if (arg1 != arg2 || arg3 != arg4) {
 			for (local16 = arg1; local16 <= arg2; local16++) {
 				for (local20 = arg3; local20 <= arg4; local20++) {
-					if (SceneGraph.anIntArrayArrayArray12[arg0][local16][local20] == -Static13.anInt437) {
+					if (SceneGraph.anIntArrayArrayArray12[arg0][local16][local20] == -Static156.anInt437) {
 						return false;
 					}
 				}

@@ -59,7 +59,7 @@ public final class TextureOp30 extends TextureOp {
 			@Pc(41) int[] local41 = local15[0];
 			@Pc(45) int[] local45 = local15[1];
 			@Pc(49) int[] local49 = local15[2];
-			for (@Pc(51) int local51 = 0; local51 < Static189.anInt4457; local51++) {
+			for (@Pc(51) int local51 = 0; local51 < Static10.anInt4457; local51++) {
 				@Pc(58) int local58 = local29[local51];
 				@Pc(66) int local66 = local58 - this.anIntArray450[0];
 				if (local66 < 0) {

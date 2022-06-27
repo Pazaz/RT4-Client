@@ -254,7 +254,7 @@ public final class VorbisRange {
 			anIntArray264[local15] = this.anIntArray261[local15];
 		}
 		local15 = anIntArray267[this.anInt2880 - 1];
-		@Pc(40) int local40 = Static204.method3674(local15 - 1);
+		@Pc(40) int local40 = VorbisCodebook.method3674(local15 - 1);
 		anIntArray266[0] = VorbisSound.method2350(local40);
 		anIntArray266[1] = VorbisSound.method2350(local40);
 		@Pc(52) int local52 = 2;

@@ -155,4 +155,13 @@ public class MidiPlayer {
         state = 1;
         songArchive = null;
     }
+
+    @OriginalMember(owner = "client!sj", name = "c", descriptor = "(II)V")
+    public static void method3956(@OriginalArg(0) int arg0) {
+        if (state == 0) {
+            stream.setVolume(arg0);
+        } else {
+            volume = arg0;
+        }
+    }
 }

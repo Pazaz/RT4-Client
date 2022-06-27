@@ -75,7 +75,7 @@ public final class TextureOpCurve extends TextureOp {
 				local59 = this.anIntArrayArray47[local29 - 1];
 				local52 = this.anIntArrayArray47[local29];
 				local68 = (local27 - local59[0] << 12) / (local52[0] - local59[0]);
-				local76 = 4096 - Static130.anIntArray299[local68 >> 5 & 0xFF] >> 1;
+				local76 = 4096 - Static9.anIntArray299[local68 >> 5 & 0xFF] >> 1;
 				local72 = 4096 - local76;
 				local89 = local76 * local52[1] + local59[1] * local72 >> 12;
 				if (local89 <= -32768) {
@@ -113,7 +113,7 @@ public final class TextureOpCurve extends TextureOp {
 		@Pc(19) int[] local19 = this.aClass121_41.method3445(arg0);
 		if (this.aClass121_41.invalid) {
 			@Pc(29) int[] local29 = this.method4624(0, arg0);
-			for (@Pc(31) int local31 = 0; local31 < Static189.anInt4457; local31++) {
+			for (@Pc(31) int local31 = 0; local31 < Static10.anInt4457; local31++) {
 				@Pc(44) int local44 = local29[local31] >> 4;
 				if (local44 < 0) {
 					local44 = 0;

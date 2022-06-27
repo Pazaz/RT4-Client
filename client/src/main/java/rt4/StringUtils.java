@@ -5,7 +5,12 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 public class StringUtils {
-    @OriginalMember(owner = "client!gj", name = "a", descriptor = "(II)Z")
+	@OriginalMember(owner = "client!ag", name = "ab", descriptor = "Lclient!na;")
+	public static final JagString aClass100_17 = JagString.parse("0");
+	@OriginalMember(owner = "client!ca", name = "cb", descriptor = "Lclient!na;")
+	public static final JagString nonBreakingSpace = JagString.getNbsp();
+
+	@OriginalMember(owner = "client!gj", name = "a", descriptor = "(II)Z")
 	public static boolean isAlphaNumeric(@OriginalArg(0) int arg0) {
 		if (arg0 >= 97 && arg0 <= 122) {
 			return true;
@@ -83,7 +88,7 @@ public class StringUtils {
 		}
 		if (arg0 == 2) {
 			local28 = Static182.aClass100_1017;
-			local26 = Static26.aClass100_160;
+			local26 = nonBreakingSpace;
 		}
 		if (arg0 == 3) {
 			local26 = Static182.aClass100_185;
@@ -98,7 +103,7 @@ public class StringUtils {
 		local61 = 0;
 		@Pc(137) JagString local137;
 		if (arg3 == 0L) {
-			local137 = Static6.aClass100_17;
+			local137 = aClass100_17;
 		} else {
 			@Pc(95) JagString local95 = Static87.allocate(0);
 			while (arg3 > 0L) {

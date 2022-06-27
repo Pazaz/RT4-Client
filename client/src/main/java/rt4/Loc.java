@@ -186,7 +186,7 @@ public final class Loc extends Entity {
             local158 = SceneGraph.tileHeights[arg7 + 1];
         }
         @Pc(215) Loc_Class139 local215 = arg0.method3428(arg2, local80, local120, arg4, local148, local158, false, null, true, local88);
-        Static242.method4207(local215.aClass36_Sub1_3, local80 - arg3, local122, local88 - arg1);
+        ShadowManager.method4207(local215.aClass36_Sub1_3, local80 - arg3, local122, local88 - arg1);
     }
 
     @OriginalMember(owner = "client!dc", name = "a", descriptor = "(IIIII)V")
@@ -211,7 +211,7 @@ public final class Loc extends Entity {
 	@OriginalMember(owner = "client!dc", name = "c", descriptor = "(I)V")
 	public final void method1046() {
 		if (this.aClass36_Sub1_2 != null) {
-			Static242.method4207(this.aClass36_Sub1_2, this.anInt1296, this.anInt1294, this.anInt1319);
+			ShadowManager.method4207(this.aClass36_Sub1_2, this.anInt1296, this.anInt1294, this.anInt1319);
 		}
 		this.anInt1321 = -1;
 		this.anInt1322 = -1;
@@ -338,7 +338,7 @@ public final class Loc extends Entity {
 			local314 = SceneGraph.tileHeights[this.anInt1303 + 1];
 		}
 		if (GlRenderer.enabled && local256) {
-			Static242.method4207(this.aClass36_Sub1_2, this.anInt1296, this.anInt1294, this.anInt1319);
+			ShadowManager.method4207(this.aClass36_Sub1_2, this.anInt1296, this.anInt1294, this.anInt1319);
 		}
 		@Pc(356) boolean local356 = this.aClass36_Sub1_2 == null;
 		@Pc(389) Loc_Class139 local389;
@@ -360,11 +360,11 @@ public final class Loc extends Entity {
 				local429 = local293 - (local439[local178][local192] + local439[local185][local192] + local439[local185][local201] + local439[local178][local201] >> 2);
 			}
 			@Pc(471) SoftwareIndexedSprite local471 = local389.aClass36_Sub1_3;
-			if (this.aBoolean81 && Static242.method4209(local471, local302, local429, local311)) {
+			if (this.aBoolean81 && ShadowManager.method4209(local471, local302, local429, local311)) {
 				this.aBoolean81 = false;
 			}
 			if (!this.aBoolean81) {
-				Static242.method4211(local471, local302, local429, local311);
+				ShadowManager.method4211(local471, local302, local429, local311);
 				this.aClass36_Sub1_2 = local471;
 				this.anInt1319 = local311;
 				if (local356) {
