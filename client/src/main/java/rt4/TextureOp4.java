@@ -42,7 +42,7 @@ public final class TextureOp4 extends TextureOp {
 
 	@OriginalMember(owner = "client!bi", name = "a", descriptor = "(ZI[I)V")
 	public final void method584(@OriginalArg(1) int arg0, @OriginalArg(2) int[] arg1) {
-		@Pc(12) int local12 = this.anInt641 * Static64.anIntArray153[arg0];
+		@Pc(12) int local12 = this.anInt641 * Static10.anIntArray153[arg0];
 		@Pc(115) int local115;
 		@Pc(129) int local129;
 		@Pc(40) int local40;
@@ -72,14 +72,14 @@ public final class TextureOp4 extends TextureOp {
 			}
 			local103 = this.aByteArray10[local68 & 0xFF] & 0xFF;
 			if (this.aBoolean44) {
-				for (local105 = 0; local105 < Static189.anInt4457; local105++) {
+				for (local105 = 0; local105 < Static10.anInt4457; local105++) {
 					local115 = this.anInt646 * Static173.anIntArray367[local105];
 					local129 = this.method590(local40 * local115 >> 12, local103, local77, local54, local60, local85);
 					local129 = local27 * local129 >> 12;
 					arg1[local105] = (local129 >> 1) + 2048;
 				}
 			} else {
-				for (local105 = 0; local105 < Static189.anInt4457; local105++) {
+				for (local105 = 0; local105 < Static10.anInt4457; local105++) {
 					local115 = this.anInt646 * Static173.anIntArray367[local105];
 					local129 = this.method590(local40 * local115 >> 12, local103, local77, local54, local60, local85);
 					arg1[local105] = local27 * local129 >> 12;
@@ -102,7 +102,7 @@ public final class TextureOp4 extends TextureOp {
 				local68 = 0;
 			}
 			local103 = this.aByteArray10[local68 & 0xFF] & 0xFF;
-			for (local105 = 0; local105 < Static189.anInt4457; local105++) {
+			for (local105 = 0; local105 < Static10.anInt4457; local105++) {
 				local115 = Static173.anIntArray367[local105] * this.anInt646;
 				local129 = this.method590(local115 * local40 >> 12, local103, local77, local54, local81, local85);
 				arg1[local105] = local129 * local27 >> 12;
@@ -125,14 +125,14 @@ public final class TextureOp4 extends TextureOp {
 				}
 				local103 = this.aByteArray10[local68 & 0xFF] & 0xFF;
 				if (this.aBoolean44 && local142 == this.anInt642 - 1) {
-					for (local105 = 0; local105 < Static189.anInt4457; local105++) {
+					for (local105 = 0; local105 < Static10.anInt4457; local105++) {
 						local115 = Static173.anIntArray367[local105] * this.anInt646;
 						local129 = this.method590(local40 * local115 >> 12, local103, local77, local54, local60, local85);
 						local129 = (local27 * local129 >> 12) + arg1[local105];
 						arg1[local105] = (local129 >> 1) + 2048;
 					}
 				} else {
-					for (local105 = 0; local105 < Static189.anInt4457; local105++) {
+					for (local105 = 0; local105 < Static10.anInt4457; local105++) {
 						local115 = Static173.anIntArray367[local105] * this.anInt646;
 						local129 = this.method590(local115 * local40 >> 12, local103, local77, local54, local60, local85);
 						arg1[local105] += local129 * local27 >> 12;

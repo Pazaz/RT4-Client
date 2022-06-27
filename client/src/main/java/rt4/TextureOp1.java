@@ -27,9 +27,9 @@ public final class TextureOp1 extends TextureOp {
 	public final int[] method4626(@OriginalArg(0) int arg0) {
 		@Pc(11) int[] local11 = this.aClass121_41.method3445(arg0);
 		if (this.aClass121_41.invalid) {
-			@Pc(20) int local20 = Static64.anIntArray153[arg0];
+			@Pc(20) int local20 = Static10.anIntArray153[arg0];
 			@Pc(26) int local26 = local20 - 2048 >> 1;
-			for (@Pc(28) int local28 = 0; local28 < Static189.anInt4457; local28++) {
+			for (@Pc(28) int local28 = 0; local28 < Static10.anInt4457; local28++) {
 				@Pc(35) int local35 = Static173.anIntArray367[local28];
 				@Pc(41) int local41 = local35 - 2048 >> 1;
 				@Pc(68) int local68;
@@ -42,7 +42,7 @@ public final class TextureOp1 extends TextureOp {
 				}
 				local68 -= local68 & 0xFFFFF000;
 				if (this.anInt100 == 0) {
-					local68 = Static119.anIntArray282[local68 >> 4 & 0xFF] + 4096 >> 1;
+					local68 = Static9.anIntArray282[local68 >> 4 & 0xFF] + 4096 >> 1;
 				} else if (this.anInt100 == 2) {
 					local68 -= 2048;
 					if (local68 < 0) {

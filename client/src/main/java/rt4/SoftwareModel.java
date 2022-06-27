@@ -559,7 +559,38 @@ public final class SoftwareModel extends Model {
 		return (arg0 & 0xFF80) + arg1;
 	}
 
-	@OriginalMember(owner = "client!w", name = "e", descriptor = "(I)V")
+    @OriginalMember(owner = "client!nj", name = "a", descriptor = "(IIZ[I[I)V")
+    public static void method3223(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int[] arg2, @OriginalArg(4) int[] arg3) {
+        if (arg0 >= arg1) {
+            return;
+        }
+        @Pc(22) int local22 = (arg1 + arg0) / 2;
+        @Pc(24) int local24 = arg0;
+        @Pc(28) int local28 = arg2[local22];
+        arg2[local22] = arg2[arg1];
+        arg2[arg1] = local28;
+        @Pc(42) int local42 = arg3[local22];
+        arg3[local22] = arg3[arg1];
+        arg3[arg1] = local42;
+        for (@Pc(54) int local54 = arg0; local54 < arg1; local54++) {
+            if (arg2[local54] > (local54 & 0x1) + local28) {
+                @Pc(79) int local79 = arg2[local54];
+                arg2[local54] = arg2[local24];
+                arg2[local24] = local79;
+                @Pc(93) int local93 = arg3[local54];
+                arg3[local54] = arg3[local24];
+                arg3[local24++] = local93;
+            }
+        }
+        arg2[arg1] = arg2[local24];
+        arg2[local24] = local28;
+        arg3[arg1] = arg3[local24];
+        arg3[local24] = local42;
+        method3223(arg0, local24 - 1, arg2, arg3);
+        method3223(local24 + 1, arg1, arg2, arg3);
+    }
+
+    @OriginalMember(owner = "client!w", name = "e", descriptor = "(I)V")
 	private void method4579(@OriginalArg(0) int arg0) {
 		if (aBooleanArray132[arg0]) {
 			this.method4587(arg0);
@@ -802,7 +833,7 @@ public final class SoftwareModel extends Model {
 		@Pc(223) int local223;
 		@Pc(208) int local208;
 		@Pc(227) int local227;
-		if (arg8 > 0L && Static39.aBoolean77 && local53 > 0) {
+		if (arg8 > 0L && ScriptRunner.aBoolean77 && local53 > 0) {
 			if (local71 > 0) {
 				local204 = local91 / local38;
 				local208 = local78 / local53;
@@ -817,7 +848,7 @@ public final class SoftwareModel extends Model {
 				local223 = local146 / local53;
 				local227 = local123 / local38;
 			}
-			if (Static150.anInt3582 >= local204 && Static150.anInt3582 <= local208 && Static34.anInt1053 >= local223 && Static34.anInt1053 <= local227) {
+			if (GlModel.anInt3582 >= local204 && GlModel.anInt3582 <= local208 && Static34.anInt1053 >= local223 && Static34.anInt1053 <= local227) {
 				local204 = 999999;
 				local208 = -999999;
 				local223 = 999999;
@@ -860,9 +891,9 @@ public final class SoftwareModel extends Model {
 						}
 					}
 				}
-				if (Static150.anInt3582 >= local204 && Static150.anInt3582 <= local208 && Static34.anInt1053 >= local223 && Static34.anInt1053 <= local227) {
+				if (GlModel.anInt3582 >= local204 && GlModel.anInt3582 <= local208 && Static34.anInt1053 >= local223 && Static34.anInt1053 <= local227) {
 					if (this.aBoolean303) {
-						Model.aLongArray11[Static2.anInt7++] = arg8;
+						Model.aLongArray11[MiniMenu.anInt7++] = arg8;
 					} else {
 						local190 = true;
 					}
@@ -1627,8 +1658,8 @@ public final class SoftwareModel extends Model {
 						}
 					}
 				} else {
-					if (arg1 && this.method4589(Static150.anInt3582 + Rasteriser.centerX, Static34.anInt1053 + Rasteriser.centerY, anIntArray551[local51], anIntArray551[local56], anIntArray551[local61], local65, local69, local73)) {
-						Model.aLongArray11[Static2.anInt7++] = arg2;
+					if (arg1 && this.method4589(GlModel.anInt3582 + Rasteriser.centerX, Static34.anInt1053 + Rasteriser.centerY, anIntArray551[local51], anIntArray551[local56], anIntArray551[local61], local65, local69, local73)) {
+						Model.aLongArray11[MiniMenu.anInt7++] = arg2;
 						arg1 = false;
 					}
 					if ((local65 - local69) * (anIntArray551[local61] - anIntArray551[local56]) - (anIntArray551[local51] - anIntArray551[local56]) * (local73 - local69) > 0) {
@@ -1662,7 +1693,7 @@ public final class SoftwareModel extends Model {
 			}
 		}
 		if (aBoolean307) {
-			Static172.method3223(0, local5 - 1, anIntArray550, anIntArray549);
+			method3223(0, local5 - 1, anIntArray550, anIntArray549);
 			if (this.aByteArray73 == null) {
 				for (local11 = 0; local11 < local5; local11++) {
 					this.method4579(anIntArray549[local11]);

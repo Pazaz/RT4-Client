@@ -19,7 +19,12 @@ public final class ServerActiveProperties extends Node {
 		this.events = arg0;
 	}
 
-	@OriginalMember(owner = "client!bf", name = "a", descriptor = "(IB)Z")
+    @OriginalMember(owner = "client!qc", name = "a", descriptor = "(BI)I")
+	public static int method3594(@OriginalArg(1) int arg0) {
+		return arg0 >> 11 & 0x7F;
+	}
+
+    @OriginalMember(owner = "client!bf", name = "a", descriptor = "(IB)Z")
 	public final boolean method503(@OriginalArg(0) int arg0) {
 		return (this.events >> arg0 + 1 & 0x1) != 0;
 	}
@@ -66,6 +71,6 @@ public final class ServerActiveProperties extends Node {
 
 	@OriginalMember(owner = "client!bf", name = "i", descriptor = "(I)I")
 	public final int getTargetMask() {
-		return Static199.method3594(this.events);
+		return method3594(this.events);
 	}
 }

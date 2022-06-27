@@ -23,6 +23,10 @@ public class WorldMap {
     public static final LinkedList mapElements = new LinkedList();
     @OriginalMember(owner = "client!he", name = "db", descriptor = "Lclient!na;")
     public static final JagString aClass100_517 = JagString.parse("");
+    @OriginalMember(owner = "client!hm", name = "T", descriptor = "Lclient!na;")
+	public static final JagString aClass100_538 = JagString.parse(" ");
+    @OriginalMember(owner = "client!pm", name = "Y", descriptor = "Lclient!na;")
+    public static final JagString aClass100_872 = JagString.parse("<br>");
     @OriginalMember(owner = "client!wa", name = "ub", descriptor = "Lclient!bn;")
     public static Map currentMap;
     @OriginalMember(owner = "client!dc", name = "O", descriptor = "I")
@@ -97,6 +101,8 @@ public class WorldMap {
     public static int anInt1176;
     @OriginalMember(owner = "client!sm", name = "m", descriptor = "I")
     public static int anInt5212;
+    @OriginalMember(owner = "client!qf", name = "S", descriptor = "I")
+    public static int anInt1864;
 
     @OriginalMember(owner = "client!pa", name = "d", descriptor = "(I)V")
     public static void method3413() {
@@ -110,7 +116,7 @@ public class WorldMap {
                 return;
             }
 
-            Static6.method84();
+            client.method84();
             loadPercentage = 10;
         }
 
@@ -363,7 +369,7 @@ public class WorldMap {
                     }
                     if (local367 >= 0 && local363 > 0) {
                         @Pc(462) int[] local462 = local355[local367 >> 6];
-                        @Pc(480) int local480 = local361 == 0 ? 0 : Static54.method1309(local293 / local363, local225 / local363, local114 * 256 / local361);
+                        @Pc(480) int local480 = local361 == 0 ? 0 : SceneGraph.method1309(local293 / local363, local225 / local363, local114 * 256 / local361);
                         if (underlays[local102][local367] != 0) {
                             if (local462 == null) {
                                 local462 = local355[local367 >> 6] = new int[4096];
@@ -1010,8 +1016,8 @@ public class WorldMap {
     @OriginalMember(owner = "client!va", name = "c", descriptor = "(BI)V")
     public static void method4444(@OriginalArg(1) int arg0) {
         Static9.anInt172 = arg0;
-        Static91.anInt2428 = 20;
-        Static201.anInt1864 = 3;
+        Static1.anInt2428 = 20;
+        anInt1864 = 3;
     }
 
     @OriginalMember(owner = "client!ab", name = "a", descriptor = "(Lclient!na;I)V")
@@ -1025,7 +1031,7 @@ public class WorldMap {
     @OriginalMember(owner = "client!rc", name = "a", descriptor = "(Lclient!na;Z)Lclient!na;")
     public static JagString method923(@OriginalArg(0) JagString arg0) {
         @Pc(12) int local12 = Static171.method3218(arg0);
-        return local12 == -1 ? aClass100_517 : labels.aClass100Array153[local12].method3140(Static101.aClass100_538, Static197.aClass100_872);
+        return local12 == -1 ? aClass100_517 : labels.aClass100Array153[local12].method3140(aClass100_538, aClass100_872);
     }
 
     @OriginalMember(owner = "client!rg", name = "d", descriptor = "(B)Lclient!bn;")
@@ -1089,7 +1095,7 @@ public class WorldMap {
 			return -1;
 		}
 		for (@Pc(20) int local20 = 0; local20 < labels.anInt5074; local20++) {
-			if (labels.aClass100Array153[local20].method3140(Static101.aClass100_538, Static197.aClass100_872).strEquals(arg0)) {
+			if (labels.aClass100Array153[local20].method3140(aClass100_538, aClass100_872).strEquals(arg0)) {
 				return local20;
 			}
 		}
@@ -1579,4 +1585,14 @@ public class WorldMap {
             }
         }
     }
+
+    @OriginalMember(owner = "client!rg", name = "a", descriptor = "(IIIIIIIII)V")
+    public static void method4364(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7) {
+        @Pc(7) int local7 = arg2 - arg7;
+        @Pc(16) int local16 = (arg0 - arg4 << 16) / local7;
+        @Pc(21) int local21 = arg5 - arg3;
+        @Pc(30) int local30 = (arg6 - arg1 << 16) / local21;
+        method2735(arg1, arg5, arg3, arg2, arg4, arg7, local30, local16);
+    }
+
 }

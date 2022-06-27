@@ -22,7 +22,7 @@ public final class Static5 {
 		} else {
 			@Pc(11) int local11 = arg1 * 128 + arg4 * 64;
 			@Pc(19) int local19 = arg2 * 128 + arg5 * 64;
-			return Static105.method2256(arg0, arg1, arg2, arg4, arg5, local11, local19, arg3, arg6, 0, false, arg7);
+			return SceneGraph.method2256(arg0, arg1, arg2, arg4, arg5, local11, local19, arg3, arg6, 0, false, arg7);
 		}
 	}
 }

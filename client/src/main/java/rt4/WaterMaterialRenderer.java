@@ -37,14 +37,14 @@ public final class WaterMaterialRenderer implements MaterialRenderer {
 		@Pc(3) float local3 = FogManager.method3068() + FogManager.method3059();
 		@Pc(9) int local9 = FogManager.method3064();
 		@Pc(18) float local18 = (float) (local9 >> 16 & 0xFF) / 255.0F;
-		Static251.aFloatArray28[3] = 1.0F;
+		ColorUtils.aFloatArray28[3] = 1.0F;
 		@Pc(37) float local37 = (float) (local9 >> 8 & 0xFF) / 255.0F;
 		@Pc(39) float local39 = 0.58823526F;
 		@Pc(46) float local46 = (float) (local9 & 0xFF) / 255.0F;
-		Static251.aFloatArray28[2] = aFloatArray2[2] * local46 * local39 * local3;
-		Static251.aFloatArray28[0] = aFloatArray2[0] * local18 * local39 * local3;
-		Static251.aFloatArray28[1] = local3 * local39 * local37 * aFloatArray2[1];
-		return Static251.aFloatArray28;
+		ColorUtils.aFloatArray28[2] = aFloatArray2[2] * local46 * local39 * local3;
+		ColorUtils.aFloatArray28[0] = aFloatArray2[0] * local18 * local39 * local3;
+		ColorUtils.aFloatArray28[1] = local3 * local39 * local37 * aFloatArray2[1];
+		return ColorUtils.aFloatArray28;
 	}
 
     @OriginalMember(owner = "client!bk", name = "a", descriptor = "(BI)V")
@@ -177,7 +177,7 @@ public final class WaterMaterialRenderer implements MaterialRenderer {
 		GlRenderer.resetTextureMatrix();
 		local1.glCallList(this.anInt4440);
 		@Pc(12) float local12 = 2662.4001F;
-		local12 += (float) (Static253.anInt5559 - 128) * 0.5F;
+		local12 += (float) (MaterialManager.anInt5559 - 128) * 0.5F;
 		float max = (float) GlobalConfig.VIEW_DISTANCE - GlobalConfig.VIEW_FADE_DISTANCE;
 		if (local12 >= max) {
 			local12 = max - 1.0f;

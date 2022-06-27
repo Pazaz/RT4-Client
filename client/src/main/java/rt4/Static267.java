@@ -11,16 +11,12 @@ public final class Static267 {
 	@OriginalMember(owner = "client!je", name = "U", descriptor = "Lclient!na;")
 	public static final JagString aClass100_588 = JagString.parse("showingVideoAd");
 
-	@OriginalMember(owner = "client!vl", name = "i", descriptor = "[I")
-	public static int[] anIntArray518 = new int[2];
-
-	@OriginalMember(owner = "client!vl", name = "k", descriptor = "I")
-	public static int anInt5775 = 0;
-
-	@OriginalMember(owner = "client!vl", name = "l", descriptor = "I")
+    @OriginalMember(owner = "client!vl", name = "l", descriptor = "I")
 	public static int anInt5776 = 0;
+    @OriginalMember(owner = "client!wb", name = "b", descriptor = "[I")
+    public static int[] anIntArray562;
 
-	@OriginalMember(owner = "client!vl", name = "a", descriptor = "(I)Z")
+    @OriginalMember(owner = "client!vl", name = "a", descriptor = "(I)Z")
 	public static boolean isShowingVideoAd() {
 		if (client.objectTag) {
 			try {
@@ -41,8 +37,8 @@ public final class Static267 {
 		}
 		Static123.anInt3058 += arg0 * 128;
 		@Pc(40) int local40;
-		if (Static270.anIntArray562.length < Static123.anInt3058) {
-			Static123.anInt3058 -= Static270.anIntArray562.length;
+		if (anIntArray562.length < Static123.anInt3058) {
+			Static123.anInt3058 -= anIntArray562.length;
 			local40 = (int) (Math.random() * 12.0D);
 			Static69.method1545(Static233.aClass36_Sub1Array1[local40]);
 		}
@@ -52,11 +48,11 @@ public final class Static267 {
 		@Pc(60) int local60;
 		@Pc(89) int local89;
 		for (local60 = 0; local60 < local54; local60++) {
-			local89 = Static216.anIntArray188[local40 + local58] - arg0 * Static270.anIntArray562[Static270.anIntArray562.length - 1 & Static123.anInt3058 + local40] / 6;
+			local89 = Static145.anIntArray188[local40 + local58] - arg0 * anIntArray562[anIntArray562.length - 1 & Static123.anInt3058 + local40] / 6;
 			if (local89 < 0) {
 				local89 = 0;
 			}
-			Static216.anIntArray188[local40++] = local89;
+			Static145.anIntArray188[local40++] = local89;
 		}
 		@Pc(117) int local117;
 		@Pc(125) int local125;
@@ -65,17 +61,17 @@ public final class Static267 {
 			for (local117 = 0; local117 < 128; local117++) {
 				local125 = (int) (Math.random() * 100.0D);
 				if (local125 < 50 && local117 > 10 && local117 < 118) {
-					Static216.anIntArray188[local117 + local89] = 255;
+					Static145.anIntArray188[local117 + local89] = 255;
 				} else {
-					Static216.anIntArray188[local117 + local89] = 0;
+					Static145.anIntArray188[local117 + local89] = 0;
 				}
 			}
 		}
 		for (local60 = 0; local60 < 256 - arg0; local60++) {
-			Static35.anIntArray83[local60] = Static35.anIntArray83[local60 + arg0];
+			Static221.anIntArray83[local60] = Static221.anIntArray83[local60 + arg0];
 		}
 		for (local60 = 256 - arg0; local60 < 256; local60++) {
-			Static35.anIntArray83[local60] = (int) (Math.sin((double) Static1.anInt6 / 14.0D) * 16.0D + Math.sin((double) Static1.anInt6 / 15.0D) * 14.0D + Math.sin((double) Static1.anInt6 / 16.0D) * 12.0D);
+			Static221.anIntArray83[local60] = (int) (Math.sin((double) Static1.anInt6 / 14.0D) * 16.0D + Math.sin((double) Static1.anInt6 / 15.0D) * 14.0D + Math.sin((double) Static1.anInt6 / 16.0D) * 12.0D);
 			Static1.anInt6++;
 		}
 		Static226.anInt5084 += arg0;
@@ -86,7 +82,7 @@ public final class Static267 {
 		for (local89 = 0; local89 < Static226.anInt5084; local89++) {
 			local117 = (int) (Math.random() * 124.0D) + 2;
 			local125 = (int) (Math.random() * 128.0D) + 128;
-			Static216.anIntArray188[local117 + (local125 << 7)] = 192;
+			Static145.anIntArray188[local117 + (local125 << 7)] = 192;
 		}
 		Static226.anInt5084 = 0;
 		@Pc(290) int local290;
@@ -95,10 +91,10 @@ public final class Static267 {
 			local117 = 0;
 			for (local290 = -local60; local290 < 128; local290++) {
 				if (local60 + local290 < 128) {
-					local117 += Static216.anIntArray188[local125 + local290 + local60];
+					local117 += Static145.anIntArray188[local125 + local290 + local60];
 				}
 				if (local290 - local60 - 1 >= 0) {
-					local117 -= Static216.anIntArray188[local290 + local125 - local60 - 1];
+					local117 -= Static145.anIntArray188[local290 + local125 - local60 - 1];
 				}
 				if (local290 >= 0) {
 					Static103.anIntArray254[local290 + local125] = local117 / (local60 * 2 + 1);
@@ -116,7 +112,7 @@ public final class Static267 {
 					local117 -= Static103.anIntArray254[local89 + local290 - (local60 + 1) * 128];
 				}
 				if (local125 >= 0) {
-					Static216.anIntArray188[local290 + local89] = local117 / (local60 * 2 + 1);
+					Static145.anIntArray188[local290 + local89] = local117 / (local60 * 2 + 1);
 				}
 			}
 		}

@@ -28,6 +28,36 @@ public class Protocol {
 	public static final JagString CLAN = JagString.parse(":clan:");
     @OriginalMember(owner = "client!ij", name = "a", descriptor = "Lclient!na;")
     public static final JagString DUELFRIEND = JagString.parse(":duelfriend:");
+    @OriginalMember(owner = "client!km", name = "Sc", descriptor = "Lclient!na;")
+    public static final JagString TRADE = JagString.parse(":trade:");
+    @OriginalMember(owner = "client!pb", name = "x", descriptor = "[[[I")
+	public static final int[][][] anIntArrayArrayArray18 = new int[4][13][13];
+    @OriginalMember(owner = "client!fc", name = "f", descriptor = "Lclient!na;")
+    public static final JagString IMG0 = JagString.parse("<img=0>");
+    @OriginalMember(owner = "client!en", name = "h", descriptor = "Lclient!na;")
+	public static final JagString CHALREQ = JagString.parse(":chalreq:");
+    @OriginalMember(owner = "client!ef", name = "f", descriptor = "Lclient!na;")
+    public static final JagString DUELSTAKE = JagString.parse(":duelstake:");
+    @OriginalMember(owner = "client!wd", name = "e", descriptor = "Lclient!na;")
+    public static final JagString aClass100_989 = JagString.parse("cookieprefix");
+    @OriginalMember(owner = "client!u", name = "g", descriptor = "Lclient!na;")
+    public static final JagString aClass100_1029 = JagString.parse("cookiehost");
+    @OriginalMember(owner = "client!lc", name = "m", descriptor = "Lclient!na;")
+    public static final JagString aClass100_667 = JagString.parse("settings=");
+    @OriginalMember(owner = "client!wh", name = "n", descriptor = "Lclient!na;")
+    public static final JagString aClass100_1095 = JagString.parse("; version=1; path=)4; domain=");
+    @OriginalMember(owner = "client!tm", name = "d", descriptor = "Lclient!na;")
+    public static final JagString aClass100_1018 = JagString.parse("; Expires=Thu)1 01)2Jan)21970 00:00:00 GMT; Max)2Age=0");
+    @OriginalMember(owner = "client!vg", name = "h", descriptor = "Lclient!na;")
+    public static final JagString aClass100_1082 = JagString.parse("; Expires=");
+    @OriginalMember(owner = "client!s", name = "g", descriptor = "Lclient!na;")
+    public static final JagString aClass100_821 = JagString.parse("document)3cookie=(R");
+    @OriginalMember(owner = "client!sc", name = "f", descriptor = "Lclient!na;")
+    public static final JagString aClass100_946 = JagString.parse("(R");
+    @OriginalMember(owner = "client!fb", name = "i", descriptor = "Lclient!na;")
+    public static final JagString aClass100_431 = JagString.parse("; Max)2Age=");
+    @OriginalMember(owner = "client!ch", name = "z", descriptor = "[I")
+    public static final int[] anIntArray76 = new int[5];
     @OriginalMember(owner = "client!jk", name = "B", descriptor = "Lclient!ma;")
     public static BufferedSocket socket;
     @OriginalMember(owner = "client!fl", name = "C", descriptor = "Lsignlink!im;")
@@ -54,6 +84,26 @@ public class Protocol {
 	public static int opcode2 = 0;
     @OriginalMember(owner = "client!bj", name = "r", descriptor = "I")
     public static int anInt659 = 2;
+    @OriginalMember(owner = "client!dg", name = "h", descriptor = "Lclient!be;")
+    public static Component aClass13_11;
+    @OriginalMember(owner = "client!ld", name = "i", descriptor = "I")
+    public static int anInt3486 = 0;
+    @OriginalMember(owner = "client!kf", name = "l", descriptor = "I")
+    public static int anInt5235 = 0;
+    @OriginalMember(owner = "client!pm", name = "ab", descriptor = "Z")
+    public static boolean aBoolean228 = true;
+    @OriginalMember(owner = "client!vl", name = "k", descriptor = "I")
+	public static int anInt5775 = 0;
+    @OriginalMember(owner = "client!t", name = "l", descriptor = "Lclient!ma;")
+    public static BufferedSocket aClass95_4;
+    @OriginalMember(owner = "client!od", name = "i", descriptor = "I")
+    public static int anInt4247 = 0;
+    @OriginalMember(owner = "client!bf", name = "G", descriptor = "I")
+    public static int anInt551 = 0;
+    @OriginalMember(owner = "client!pb", name = "ab", descriptor = "I")
+	public static int anInt4422 = 0;
+    @OriginalMember(owner = "client!fe", name = "R", descriptor = "Z")
+    public static boolean prevFocus = true;
 
     @OriginalMember(owner = "client!g", name = "b", descriptor = "(B)V")
     public static void readLocationPacket() {
@@ -121,7 +171,7 @@ public class Protocol {
                 local23 = local23 * 128 + 64;
                 local19 = local19 * 128 + 64;
                 @Pc(427) SpotAnim local427 = new SpotAnim(local27, Player.level, local23, local19, SceneGraph.getTileHeight(Player.level, local23, local19) - local31, local39, client.loop);
-                Static99.aClass69_64.addTail(new SpotAnimNode(local427));
+                LoginManager.aClass69_64.addTail(new SpotAnimNode(local427));
             }
         } else if (opcode == ServerProt.LOCATION_PACKET_179) {
             int local15 = inboundBuffer.g1add();
@@ -339,7 +389,7 @@ public class Protocol {
 
     @OriginalMember(owner = "client!g", name = "a", descriptor = "(IZ)V")
     public static void readRebuildPacket(@OriginalArg(1) boolean arg0) {
-        Static230.dynamicMapRegion = arg0;
+        LoginManager.dynamicMapRegion = arg0;
         @Pc(13) int local13;
         @Pc(20) int local20;
         @Pc(26) int local26;
@@ -349,7 +399,7 @@ public class Protocol {
         @Pc(138) int local138;
         @Pc(151) int local151;
         @Pc(169) int local169;
-        if (!Static230.dynamicMapRegion) {
+        if (!LoginManager.dynamicMapRegion) {
             local13 = inboundBuffer.g2add();
             local20 = (length - inboundBuffer.offset) / 16;
             LoginManager.regionsXteaKeys = new int[local20][4];
@@ -411,9 +461,9 @@ public class Protocol {
                 for (local391 = 0; local391 < 13; local391++) {
                     local138 = inboundBuffer.gBits(1);
                     if (local138 == 1) {
-                        Static187.anIntArrayArrayArray18[local60][local64][local391] = inboundBuffer.gBits(26);
+                        anIntArrayArrayArray18[local60][local64][local391] = inboundBuffer.gBits(26);
                     } else {
-                        Static187.anIntArrayArrayArray18[local60][local64][local391] = -1;
+                        anIntArrayArrayArray18[local60][local64][local391] = -1;
                     }
                 }
             }
@@ -442,7 +492,7 @@ public class Protocol {
         for (local391 = 0; local391 < 4; local391++) {
             for (local138 = 0; local138 < 13; local138++) {
                 for (local151 = 0; local151 < 13; local151++) {
-                    local169 = Static187.anIntArrayArrayArray18[local391][local138][local151];
+                    local169 = anIntArrayArrayArray18[local391][local138][local151];
                     if (local169 != -1) {
                         @Pc(555) int local555 = local169 >> 14 & 0x3FF;
                         @Pc(561) int local561 = local169 >> 3 & 0x7FF;
@@ -509,7 +559,7 @@ public class Protocol {
                         local106 = phrase.id;
                         message = phrase.type.decodeMessage(chatBuffer);
                     } else {
-                        message = Font.escape(Static65.formatChatMessage(chatBuffer).encodeMessage());
+                        message = Font.escape(formatChatMessage(chatBuffer).encodeMessage());
                     }
                     player.chatMessage = message.trim();
                     player.chatEffect = int1 & 0xFF;
@@ -518,7 +568,7 @@ public class Protocol {
                     if (int2 == 2) {
                         Chat.add(local106, local35 ? 17 : 1, message, null, JagString.concatenate(new JagString[] { Static44.IMG1, player.getName() }));
                     } else if (int2 == 1) {
-                        Chat.add(local106, local35 ? 17 : 1, message, null, JagString.concatenate(new JagString[] { Static65.IMG0, player.getName() }));
+                        Chat.add(local106, local35 ? 17 : 1, message, null, JagString.concatenate(new JagString[] { IMG0, player.getName() }));
                     } else {
                         Chat.add(local106, local35 ? 17 : 2, message, null, player.getName());
                     }
@@ -872,7 +922,7 @@ public class Protocol {
         opcode4 = opcode3;
         opcode3 = opcode2;
         opcode2 = opcode;
-        Static201.anInt1862 = 0;
+        LoginManager.anInt1862 = 0;
 
         if (opcode == ServerProt.VARP_SMALL) {
             int id = inboundBuffer.g2add();
@@ -901,7 +951,7 @@ public class Protocol {
         } else if (opcode == ServerProt.MESSAGE_GAME) {
             @Pc(245) JagString message = inboundBuffer.gjstr();
             if (message.endsWith(TRADEREQ)) {
-                JagString name = message.substring(message.indexOf(Static264.COLON), 0);
+                JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
                 long name37 = name.encode37();
                 boolean ignored = false;
                 for (int i = 0; i < IgnoreList.size; i++) {
@@ -913,8 +963,8 @@ public class Protocol {
                 if (!ignored && Player.inTutorialIsland == 0) {
                     Chat.add(name, 4, LocalizedText.TRADEREQ);
                 }
-            } else if (message.endsWith(Static61.CHALREQ)) {
-                JagString name = message.substring(message.indexOf(Static264.COLON), 0);
+            } else if (message.endsWith(CHALREQ)) {
+                JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
                 long name37 = name.encode37();
                 boolean ignored = false;
                 for (int i = 0; i < IgnoreList.size; i++) {
@@ -924,11 +974,11 @@ public class Protocol {
                     }
                 }
                 if (!ignored && Player.inTutorialIsland == 0) {
-                    JagString local506 = message.substring(message.length() - 9, message.indexOf(Static264.COLON) + 1);
+                    JagString local506 = message.substring(message.length() - 9, message.indexOf(DateUtil.COLON) + 1);
                     Chat.add(name, 8, local506);
                 }
             } else if (message.endsWith(Static191.ASSISTREQ)) {
-                JagString name = message.substring(message.indexOf(Static264.COLON), 0);
+                JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
                 long name37 = name.encode37();
                 boolean ignored = false;
                 for (int i = 0; i < IgnoreList.size; i++) {
@@ -943,8 +993,8 @@ public class Protocol {
             } else if (message.endsWith(CLAN)) {
                 JagString name = message.substring(message.indexOf(CLAN), 0);
                 Chat.add(JagString.EMPTY, 11, name);
-            } else if (message.endsWith(Static138.TRADE)) {
-                JagString name = message.substring(message.indexOf(Static138.TRADE), 0);
+            } else if (message.endsWith(TRADE)) {
+                JagString name = message.substring(message.indexOf(TRADE), 0);
                 if (Player.inTutorialIsland == 0) {
                     Chat.add(JagString.EMPTY, 12, name);
                 }
@@ -953,8 +1003,8 @@ public class Protocol {
                 if (Player.inTutorialIsland == 0) {
                     Chat.add(JagString.EMPTY, 13, name);
                 }
-            } else if (message.endsWith(Static56.DUELSTAKE)) {
-                JagString name = message.substring(message.indexOf(Static264.COLON), 0);
+            } else if (message.endsWith(DUELSTAKE)) {
+                JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
                 long name37 = name.encode37();
                 boolean ignored = false;
                 for (int i = 0; i < IgnoreList.size; i++) {
@@ -967,7 +1017,7 @@ public class Protocol {
                     Chat.add(name, 14, JagString.EMPTY);
                 }
             } else if (message.endsWith(DUELFRIEND)) {
-                JagString name = message.substring(message.indexOf(Static264.COLON), 0);
+                JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
                 long name37 = name.encode37();
                 boolean ignored = false;
                 for (int local277 = 0; local277 < IgnoreList.size; local277++) {
@@ -980,7 +1030,7 @@ public class Protocol {
                     Chat.add(name, 15, JagString.EMPTY);
                 }
             } else if (message.endsWith(Static217.aClass100_916)) {
-                JagString name = message.substring(message.indexOf(Static264.COLON), 0);
+                JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
                 long name37 = name.encode37();
                 boolean ignored = false;
                 for (int i = 0; i < IgnoreList.size; i++) {
@@ -993,7 +1043,7 @@ public class Protocol {
                     Chat.add(name, 16, JagString.EMPTY);
                 }
             } else if (message.endsWith(Static164.aClass100_770)) {
-                JagString name = message.substring(message.indexOf(Static264.COLON), 0);
+                JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
                 long name37 = name.encode37();
                 boolean ignored = false;
                 for (int i = 0; i < IgnoreList.size; i++) {
@@ -1003,7 +1053,7 @@ public class Protocol {
                     }
                 }
                 if (!ignored && Player.inTutorialIsland == 0) {
-                    JagString local506 = message.substring(message.length() - 9, message.indexOf(Static264.COLON) + 1);
+                    JagString local506 = message.substring(message.length() - 9, message.indexOf(DateUtil.COLON) + 1);
                     Chat.add(name, 21, local506);
                 }
             } else {
@@ -1080,7 +1130,7 @@ public class Protocol {
                 if (rights == 2 || rights == 3) {
                     Chat.add(quickchatId, 20, message, Base37.decode37(clan37).toTitleCase(), JagString.concatenate(new JagString[] { Static44.IMG1, Base37.decode37(name37).toTitleCase() }));
                 } else if (rights == 1) {
-                    Chat.add(quickchatId, 20, message, Base37.decode37(clan37).toTitleCase(), JagString.concatenate(new JagString[] { Static65.IMG0, Base37.decode37(name37).toTitleCase() }));
+                    Chat.add(quickchatId, 20, message, Base37.decode37(clan37).toTitleCase(), JagString.concatenate(new JagString[] { IMG0, Base37.decode37(name37).toTitleCase() }));
                 } else {
                     Chat.add(quickchatId, 20, message, Base37.decode37(clan37).toTitleCase(), Base37.decode37(name37).toTitleCase());
                 }
@@ -1366,7 +1416,7 @@ public class Protocol {
                     posZ = posZ * 128 + 64;
                     posX = posX * 128 + 64;
                     @Pc(2241) SpotAnim spotAnim = new SpotAnim(gfxId, plane, posX, posZ, SceneGraph.getTileHeight(plane, posX, posZ) - height, delay, client.loop);
-                    Static99.aClass69_64.addTail(new SpotAnimNode(spotAnim));
+                    LoginManager.aClass69_64.addTail(new SpotAnimNode(spotAnim));
                 }
             }
             opcode = -1;
@@ -1408,9 +1458,9 @@ public class Protocol {
             if (pointer != null) {
                 InterfaceList.closeInterface(true, pointer);
             }
-            if (Static39.aClass13_10 != null) {
-                InterfaceList.redraw(Static39.aClass13_10);
-                Static39.aClass13_10 = null;
+            if (Static44.aClass13_10 != null) {
+                InterfaceList.redraw(Static44.aClass13_10);
+                Static44.aClass13_10 = null;
             }
             opcode = -1;
             return true;
@@ -1631,7 +1681,7 @@ public class Protocol {
                 if (rights == 2) {
                     Chat.add(chatId, 18, message, null, JagString.concatenate(new JagString[] { Static44.IMG1, Base37.decode37(name).toTitleCase() }));
                 } else if (rights == 1) {
-                    Chat.add(chatId, 18, message, null, JagString.concatenate(new JagString[] { Static65.IMG0, Base37.decode37(name).toTitleCase() }));
+                    Chat.add(chatId, 18, message, null, JagString.concatenate(new JagString[] { IMG0, Base37.decode37(name).toTitleCase() }));
                 } else {
                     Chat.add(chatId, 18, message, null, Base37.decode37(name).toTitleCase());
                 }
@@ -1662,7 +1712,7 @@ public class Protocol {
                 InterfaceList.method531(component, true);
             }
             if (InterfaceList.topLevelInterface != -1) {
-                Static54.runScripts(1, InterfaceList.topLevelInterface);
+                InterfaceList.runScripts(1, InterfaceList.topLevelInterface);
             }
             opcode = -1;
             return true;
@@ -1678,7 +1728,7 @@ public class Protocol {
             Camera.cameraJitter[cameraId] = jitter;
             Camera.cameraAmplitude[cameraId] = amplitude;
             Camera.cameraFrequency[cameraId] = frequency;
-            Static31.anIntArray76[cameraId] = shake4;
+            anIntArray76[cameraId] = shake4;
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.IF_SETCOLOUR) {
@@ -1714,7 +1764,7 @@ public class Protocol {
             return true;
         } else if (opcode == ServerProt.GAME_FRAME_UNK) {
             if (InterfaceList.topLevelInterface != -1) {
-                Static54.runScripts(0, InterfaceList.topLevelInterface);
+                InterfaceList.runScripts(0, InterfaceList.topLevelInterface);
             }
             opcode = -1;
             return true;
@@ -1730,7 +1780,7 @@ public class Protocol {
             int seqId = inboundBuffer.g2();
             @Pc(3766) Npc npc = NpcList.npcs[npcId];
             if (npc != null) {
-                Static223.animateNpc(value, seqId, npc);
+                animateNpc(value, seqId, npc);
             }
             opcode = -1;
             return true;
@@ -1742,7 +1792,7 @@ public class Protocol {
             return true;
         } else if (opcode == ServerProt.MESSAGE_PRIVATE_ECHO) {
             long name37 = inboundBuffer.g8();
-            JagString message = Font.escape(Static65.formatChatMessage(inboundBuffer).encodeMessage());
+            JagString message = Font.escape(formatChatMessage(inboundBuffer).encodeMessage());
             Chat.add(Base37.decode37(name37).toTitleCase(), 6, message);
             opcode = -1;
             return true;
@@ -1754,9 +1804,9 @@ public class Protocol {
             inboundBuffer.gBytesIsaac(data, length);
             JagString url = JagString.decodeString(data, length, 0);
             if (GameShell.frame == null && (SignLink.anInt5928 == 3 || !SignLink.osName.startsWith("win") || client.haveIe6)) {
-                Static169.openUrl(url, true);
+                ScriptRunner.openUrl(url, true);
             } else {
-                Static175.url = url;
+                ScriptRunner.url = url;
                 Static164.newTab = true;
                 Static33.openUrlRequest = GameShell.signLink.openUrl(new String(url.method3148(), StandardCharsets.ISO_8859_1));
             }
@@ -1844,7 +1894,7 @@ public class Protocol {
                 if (mapMarker.playerModelId == 65535) {
                     mapMarker.playerModelId = -1;
                 }
-                Static143.hintMapMarkers[slot] = mapMarker;
+                MiniMap.hintMapMarkers[slot] = mapMarker;
             }
             opcode = -1;
             return true;
@@ -1921,11 +1971,11 @@ public class Protocol {
             if (!ignored && Player.inTutorialIsland == 0) {
                 Chat.recentMessages[Chat.messageCounter] = messageId;
                 Chat.messageCounter = (Chat.messageCounter + 1) % 100;
-                @Pc(4518) JagString message = Font.escape(Static65.formatChatMessage(inboundBuffer).encodeMessage());
+                @Pc(4518) JagString message = Font.escape(formatChatMessage(inboundBuffer).encodeMessage());
                 if (rights == 2 || rights == 3) {
                     Chat.add(JagString.concatenate(new JagString[] { Static44.IMG1, Base37.decode37(name37).toTitleCase() }), 7, message);
                 } else if (rights == 1) {
-                    Chat.add(JagString.concatenate(new JagString[] { Static65.IMG0, Base37.decode37(name37).toTitleCase() }), 7, message);
+                    Chat.add(JagString.concatenate(new JagString[] { IMG0, Base37.decode37(name37).toTitleCase() }), 7, message);
                 } else {
                     Chat.add(Base37.decode37(name37).toTitleCase(), 3, message);
                 }
@@ -1967,11 +2017,11 @@ public class Protocol {
             if (!ignored && Player.inTutorialIsland == 0) {
                 Chat.recentMessages[Chat.messageCounter] = local4626;
                 Chat.messageCounter = (Chat.messageCounter + 1) % 100;
-                JagString message = Font.escape(Static65.formatChatMessage(inboundBuffer).encodeMessage());
+                JagString message = Font.escape(formatChatMessage(inboundBuffer).encodeMessage());
                 if (rights == 2 || rights == 3) {
                     Static73.method1598(message, JagString.concatenate(new JagString[] { Static44.IMG1, Base37.decode37(name37).toTitleCase() }), Base37.decode37(chat37).toTitleCase());
                 } else if (rights == 1) {
-                    Static73.method1598(message, JagString.concatenate(new JagString[] { Static65.IMG0, Base37.decode37(name37).toTitleCase() }), Base37.decode37(chat37).toTitleCase());
+                    Static73.method1598(message, JagString.concatenate(new JagString[] { IMG0, Base37.decode37(name37).toTitleCase() }), Base37.decode37(chat37).toTitleCase());
                 } else {
                     Static73.method1598(message, Base37.decode37(name37).toTitleCase(), Base37.decode37(chat37).toTitleCase());
                 }
@@ -2238,7 +2288,7 @@ public class Protocol {
                     component.objCounts[i] = 0;
                 }
             }
-            Static14.method475(containerId);
+            Inv.method475(containerId);
             int total = inboundBuffer.g2();
             for (int slot = 0; slot < total; slot++) {
                 int amount = inboundBuffer.g1sub();
@@ -2260,7 +2310,7 @@ public class Protocol {
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.SET_SETTINGS_STRING) {
-            Static230.method3954(inboundBuffer.gjstr());
+            method3954(inboundBuffer.gjstr());
             opcode = -1;
             return true;
         } else if (opcode == ServerProt.UPDATE_CURRENT_LOCATION) {
@@ -2298,7 +2348,7 @@ public class Protocol {
             return readPacketInternal();
         } catch (@Pc(14) IOException ex) {
 			ex.printStackTrace();
-            Static175.method3279();
+            method3279();
             return true;
         } catch (@Pc(19) Exception ex) {
 			ex.printStackTrace();
@@ -2315,8 +2365,8 @@ public class Protocol {
     @OriginalMember(owner = "client!gg", name = "a", descriptor = "(Z)V")
     public static void method1756() {
         // todo: consolidate/rename static classes
-        if (Static267.anInt5775 > 0) {
-            Static267.anInt5775--;
+        if (anInt5775 > 0) {
+            anInt5775--;
         }
         if (Player.rebootTimer > 1) {
             Player.rebootTimer--;
@@ -2324,7 +2374,7 @@ public class Protocol {
         }
         if (LoginManager.aBoolean247) {
             LoginManager.aBoolean247 = false;
-            Static175.method3279();
+            method3279();
             return;
         }
         for (@Pc(34) int i = 0; i < 100 && readPacket(); i++) {
@@ -2419,7 +2469,7 @@ public class Protocol {
             }
         }
         if (Mouse.clickButton != 0) {
-            @Pc(411) long loops = (Mouse.clickTime - Static183.prevClickTime) / 50L;
+            @Pc(411) long loops = (Mouse.clickTime - Mouse.prevClickTime) / 50L;
             type = Mouse.clickY;
             if (type < 0) {
                 type = 0;
@@ -2430,7 +2480,7 @@ public class Protocol {
                 loops = 32767L;
             }
             i = Mouse.clickX;
-            Static183.prevClickTime = Mouse.clickTime;
+            Mouse.prevClickTime = Mouse.clickTime;
             @Pc(437) byte button = 0;
             if (i < 0) {
                 i = 0;
@@ -2445,34 +2495,34 @@ public class Protocol {
             outboundBuffer.ip2add(button << 15 | x);
             outboundBuffer.mp4(i | type << 16);
         }
-        if (Static16.anInt551 > 0) {
-            Static16.anInt551--;
+        if (anInt551 > 0) {
+            anInt551--;
         }
         if (Preferences.aBoolean63) {
             for (i = 0; i < InterfaceList.keyQueueSize; i++) {
                 offset = InterfaceList.keyCodes[i];
                 if (offset == 98 || offset == 99 || offset == 96 || offset == 97) {
-                    Static197.aBoolean228 = true;
+                    aBoolean228 = true;
                     break;
                 }
             }
         } else if (Keyboard.pressedKeys[Keyboard.KEY_LEFT] || Keyboard.pressedKeys[Keyboard.KEY_RIGHT] || Keyboard.pressedKeys[Keyboard.KEY_UP] || Keyboard.pressedKeys[Keyboard.KEY_DOWN]) {
-            Static197.aBoolean228 = true;
+            aBoolean228 = true;
         }
-        if (Static197.aBoolean228 && Static16.anInt551 <= 0) {
-            Static16.anInt551 = 20;
-            Static197.aBoolean228 = false;
+        if (aBoolean228 && anInt551 <= 0) {
+            anInt551 = 20;
+            aBoolean228 = false;
             outboundBuffer.p1isaac(21);
             outboundBuffer.p2add((int)Camera.pitchTarget);
             outboundBuffer.ip2((int)Camera.yawTarget);
         }
-        if (GameShell.focus && !Static67.prevFocus) {
-            Static67.prevFocus = true;
+        if (GameShell.focus && !prevFocus) {
+            prevFocus = true;
             outboundBuffer.p1isaac(22);
             outboundBuffer.p1(1);
         }
-        if (!GameShell.focus && Static67.prevFocus) {
-            Static67.prevFocus = false;
+        if (!GameShell.focus && prevFocus) {
+            prevFocus = false;
             outboundBuffer.p1isaac(22);
             outboundBuffer.p1(0);
         }
@@ -2481,19 +2531,19 @@ public class Protocol {
             outboundBuffer.p4(Preferences.toInt());
             Preferences.sentToServer = true;
         }
-        Static31.method846();
+        LightingManager.method846();
         if (client.gameState != 30) {
             return;
         }
         ChangeLocRequest.loop();
         AttachLocRequest.loop();
         SoundPlayer.loop();
-        Static201.anInt1862++;
-        if (Static201.anInt1862 > 750) {
-            Static175.method3279();
+        LoginManager.anInt1862++;
+        if (LoginManager.anInt1862 > 750) {
+            method3279();
             return;
         }
-        Static71.method1444();
+        PlayerList.method1444();
         NpcList.method2274();
         OverheadChat.loop();
         if (WorldMap.component != null) {
@@ -2625,7 +2675,7 @@ public class Protocol {
                 Cross.type = 0;
             }
         }
-        Static178.anInt4247++;
+        anInt4247++;
         if (MiniMenu.pressedInventoryComponent != null) {
             MiniMenu.anInt2043++;
             if (MiniMenu.anInt2043 >= 15) {
@@ -2635,17 +2685,17 @@ public class Protocol {
         }
 
         @Pc(1361) Component component;
-        if (Static118.clickedInventoryComponent != null) {
-            InterfaceList.redraw(Static118.clickedInventoryComponent);
-            if (Static149.clickedInventoryComponentX + 5 < Mouse.lastMouseX || Mouse.lastMouseX < Static149.clickedInventoryComponentX - 5 || Static206.clickedInventoryComponentY + 5 < Mouse.lastMouseY || Static206.clickedInventoryComponentY - 5 > Mouse.lastMouseY) {
+        if (InterfaceList.clickedInventoryComponent != null) {
+            InterfaceList.redraw(InterfaceList.clickedInventoryComponent);
+            if (InterfaceList.clickedInventoryComponentX + 5 < Mouse.lastMouseX || Mouse.lastMouseX < InterfaceList.clickedInventoryComponentX - 5 || InterfaceList.clickedInventoryComponentY + 5 < Mouse.lastMouseY || InterfaceList.clickedInventoryComponentY - 5 > Mouse.lastMouseY) {
                 Static123.draggingClickedInventoryObject = true;
             }
-            Static78.clickedInventoryComponentCycle++;
+            InterfaceList.clickedInventoryComponentCycle++;
 
             if (Mouse.pressedButton == 0) {
-                if (Static123.draggingClickedInventoryObject && Static78.clickedInventoryComponentCycle >= 5) {
-                    if (Static118.clickedInventoryComponent == Static169.mouseOverInventoryInterface && Static4.mouseOverInventoryObjectIndex != Static18.clickedInventoryIndex) {
-                        component = Static118.clickedInventoryComponent;
+                if (Static123.draggingClickedInventoryObject && InterfaceList.clickedInventoryComponentCycle >= 5) {
+                    if (InterfaceList.clickedInventoryComponent == InterfaceList.mouseOverInventoryInterface && Static4.mouseOverInventoryObjectIndex != Static18.clickedInventoryIndex) {
+                        component = InterfaceList.clickedInventoryComponent;
                         @Pc(1363) byte inserting = 0;
 
                         if (VarpDomain.inserting == 1 && component.clientCode == 206) {
@@ -2680,7 +2730,7 @@ public class Protocol {
                         }
                         outboundBuffer.p1isaac(231);
                         outboundBuffer.p2(Static4.mouseOverInventoryObjectIndex);
-                        outboundBuffer.ip4(Static118.clickedInventoryComponent.id);
+                        outboundBuffer.ip4(InterfaceList.clickedInventoryComponent.id);
                         outboundBuffer.p2add(Static18.clickedInventoryIndex);
                         outboundBuffer.p1sub(inserting);
                     }
@@ -2691,17 +2741,17 @@ public class Protocol {
                 }
                 Mouse.clickButton = 0;
                 MiniMenu.anInt2043 = 10;
-                Static118.clickedInventoryComponent = null;
+                InterfaceList.clickedInventoryComponent = null;
             }
         }
         Static146.aBoolean174 = false;
-        Static56.aClass13_12 = null;
+        InterfaceList.aClass13_12 = null;
         Static44.aBoolean83 = false;
         InterfaceList.keyQueueSize = 0;
-        component = Static180.aClass13_22;
-        Static180.aClass13_22 = null;
-        @Pc(1508) Component local1508 = Static43.aClass13_11;
-        Static43.aClass13_11 = null;
+        component = InterfaceList.aClass13_22;
+        InterfaceList.aClass13_22 = null;
+        @Pc(1508) Component local1508 = aClass13_11;
+        aClass13_11 = null;
         while (Keyboard.nextKey() && InterfaceList.keyQueueSize < 128) {
             InterfaceList.keyCodes[InterfaceList.keyQueueSize] = Keyboard.keyCode;
             InterfaceList.keyChars[InterfaceList.keyQueueSize] = Keyboard.keyChar;
@@ -2709,7 +2759,7 @@ public class Protocol {
         }
         WorldMap.component = null;
         if (InterfaceList.topLevelInterface != -1) {
-            Static57.method1320(0, 0, 0, GameShell.canvasWidth, InterfaceList.topLevelInterface, 0, GameShell.canvasHeight);
+            InterfaceList.method1320(0, 0, 0, GameShell.canvasWidth, InterfaceList.topLevelInterface, 0, GameShell.canvasHeight);
         }
         InterfaceList.transmitTimer++;
         while (true) {
@@ -2721,7 +2771,7 @@ public class Protocol {
                 if (priorityRequest == null) {
                     while (true) {
                         do {
-                            priorityRequest = (HookRequest) Static115.mediumPriorityRequests.removeHead();
+                            priorityRequest = (HookRequest) InterfaceList.mediumPriorityRequests.removeHead();
                             if (priorityRequest == null) {
                                 while (true) {
                                     do {
@@ -2747,7 +2797,7 @@ public class Protocol {
                                                 if (MiniMenu.anInt1742 != -1) {
                                                     Cheat.teleport(Camera.originX + MiniMenu.anInt1742, Camera.originZ - -MiniMenu.anInt2954, Player.level);
                                                 }
-                                                Static187.anInt4422 = 0;
+                                                anInt4422 = 0;
                                                 MiniMenu.anInt3096 = 0;
                                             } else if (MiniMenu.anInt3096 == 2) {
                                                 if (MiniMenu.anInt1742 != -1) {
@@ -2762,7 +2812,7 @@ public class Protocol {
                                                     Cross.x = Mouse.clickX;
                                                 }
                                                 MiniMenu.anInt3096 = 0;
-                                            } else if (Static187.anInt4422 == 2) {
+                                            } else if (anInt4422 == 2) {
                                                 if (MiniMenu.anInt1742 != -1) {
                                                     outboundBuffer.p1isaac(179);
                                                     outboundBuffer.p2(Camera.originZ + MiniMenu.anInt2954);
@@ -2772,8 +2822,8 @@ public class Protocol {
                                                     Cross.x = Mouse.clickX;
                                                     Cross.y = Mouse.clickY;
                                                 }
-                                                Static187.anInt4422 = 0;
-                                            } else if (MiniMenu.anInt1742 != -1 && MiniMenu.anInt3096 == 0 && Static187.anInt4422 == 0) {
+                                                anInt4422 = 0;
+                                            } else if (MiniMenu.anInt1742 != -1 && MiniMenu.anInt3096 == 0 && anInt4422 == 0) {
                                                 @Pc(1871) boolean local1871 = PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 0, true, 0, MiniMenu.anInt1742, 0, 0, 0, MiniMenu.anInt2954, PlayerList.self.movementQueueX[0]);
                                                 if (local1871) {
                                                     Cross.y = Mouse.clickY;
@@ -2784,30 +2834,30 @@ public class Protocol {
                                             }
                                             MiniMenu.anInt1742 = -1;
                                             Static7.method843();
-                                            if (Static180.aClass13_22 != component) {
+                                            if (InterfaceList.aClass13_22 != component) {
                                                 if (component != null) {
                                                     InterfaceList.redraw(component);
                                                 }
-                                                if (Static180.aClass13_22 != null) {
-                                                    InterfaceList.redraw(Static180.aClass13_22);
+                                                if (InterfaceList.aClass13_22 != null) {
+                                                    InterfaceList.redraw(InterfaceList.aClass13_22);
                                                 }
                                             }
-                                            if (local1508 != Static43.aClass13_11 && Static191.anInt4504 == Static133.anInt5235) {
+                                            if (local1508 != aClass13_11 && Static191.anInt4504 == anInt5235) {
                                                 if (local1508 != null) {
                                                     InterfaceList.redraw(local1508);
                                                 }
-                                                if (Static43.aClass13_11 != null) {
-                                                    InterfaceList.redraw(Static43.aClass13_11);
+                                                if (aClass13_11 != null) {
+                                                    InterfaceList.redraw(aClass13_11);
                                                 }
                                             }
-                                            if (Static43.aClass13_11 == null) {
-                                                if (Static133.anInt5235 > 0) {
-                                                    Static133.anInt5235--;
+                                            if (aClass13_11 == null) {
+                                                if (anInt5235 > 0) {
+                                                    anInt5235--;
                                                 }
-                                            } else if (Static133.anInt5235 < Static191.anInt4504) {
-                                                Static133.anInt5235++;
-                                                if (Static191.anInt4504 == Static133.anInt5235) {
-                                                    InterfaceList.redraw(Static43.aClass13_11);
+                                            } else if (anInt5235 < Static191.anInt4504) {
+                                                anInt5235++;
+                                                if (Static191.anInt4504 == anInt5235) {
+                                                    InterfaceList.redraw(aClass13_11);
                                                 }
                                             }
                                             if (Camera.cameraType == 1) {
@@ -2818,37 +2868,37 @@ public class Protocol {
                                                 Camera.updateLoginScreenCamera();
                                             }
                                             for (y = 0; y < 5; y++) {
-                                                @Pc(2001) int local2001 = Static31.anIntArray76[y]++;
+                                                @Pc(2001) int local2001 = anIntArray76[y]++;
                                             }
                                             y = Mouse.getIdleLoops();
                                             x = Keyboard.getIdleLoops();
                                             if (y > 15000 && x > 15000) {
-                                                Static267.anInt5775 = 250;
+                                                anInt5775 = 250;
                                                 Mouse.setIdleLoops(14500);
                                                 outboundBuffer.p1isaac(245);
                                             }
                                             if (Static33.openUrlRequest != null && Static33.openUrlRequest.status == 1) {
                                                 if (Static33.openUrlRequest.result != null) {
-                                                    Static169.openUrl(Static175.url, Static164.newTab);
+                                                    ScriptRunner.openUrl(ScriptRunner.url, Static164.newTab);
                                                 }
-                                                Static175.url = null;
+                                                ScriptRunner.url = null;
                                                 Static33.openUrlRequest = null;
                                                 Static164.newTab = false;
                                             }
                                             Static131.anInt3251++;
                                             MiniMap.anInt2252++;
-                                            Static143.anInt3486++;
-                                            if (Static143.anInt3486 > 500) {
-                                                Static143.anInt3486 = 0;
+                                            anInt3486++;
+                                            if (anInt3486 > 500) {
+                                                anInt3486 = 0;
                                                 modelId = (int) (Math.random() * 8.0D);
                                                 if ((modelId & 0x4) == 4) {
-                                                    Static230.anInt5161 += Static220.anInt4941;
+                                                    Camera.anInt5161 += Static220.anInt4941;
                                                 }
                                                 if ((modelId & 0x2) == 2) {
-                                                    Static206.anInt4774 += anInt659;
+                                                    Camera.anInt4774 += anInt659;
                                                 }
                                                 if ((modelId & 0x1) == 1) {
-                                                    Static132.anInt3291 += Static248.anInt4229;
+                                                    Camera.anInt3291 += Camera.anInt4229;
                                                 }
                                             }
                                             if (MiniMap.anInt2252 > 500) {
@@ -2861,8 +2911,8 @@ public class Protocol {
                                                     MiniMap.anInt4130 += MiniMap.anInt4262;
                                                 }
                                             }
-                                            if (Static132.anInt3291 < -50) {
-                                                Static248.anInt4229 = 2;
+                                            if (Camera.anInt3291 < -50) {
+                                                Camera.anInt4229 = 2;
                                             }
                                             if (MiniMap.anInt1814 < -60) {
                                                 MiniMap.anInt5755 = 2;
@@ -2870,19 +2920,19 @@ public class Protocol {
                                             if (MiniMap.anInt4130 < -20) {
                                                 MiniMap.anInt4262 = 1;
                                             }
-                                            if (Static206.anInt4774 < -55) {
+                                            if (Camera.anInt4774 < -55) {
                                                 anInt659 = 2;
                                             }
-                                            if (Static206.anInt4774 > 55) {
+                                            if (Camera.anInt4774 > 55) {
                                                 anInt659 = -2;
                                             }
-                                            if (Static230.anInt5161 < -40) {
+                                            if (Camera.anInt5161 < -40) {
                                                 Static220.anInt4941 = 1;
                                             }
-                                            if (Static132.anInt3291 > 50) {
-                                                Static248.anInt4229 = -2;
+                                            if (Camera.anInt3291 > 50) {
+                                                Camera.anInt4229 = -2;
                                             }
-                                            if (Static230.anInt5161 > 40) {
+                                            if (Camera.anInt5161 > 40) {
                                                 Static220.anInt4941 = -1;
                                             }
                                             if (MiniMap.anInt4130 > 10) {
@@ -2905,7 +2955,7 @@ public class Protocol {
                                                     outboundBuffer.offset = 0;
                                                 }
                                             } catch (@Pc(2266) IOException local2266) {
-                                                Static175.method3279();
+                                                method3279();
                                             }
                                             return;
                                         }
@@ -2974,7 +3024,7 @@ public class Protocol {
                 if (local43 == 65535) {
                     local43 = -1;
                 }
-                Static223.animateNpc(local47, local43, npc);
+                animateNpc(local47, local43, npc);
             }
 
             boolean hasFaceEntity = (local18 & 0x4) != 0;
@@ -3047,7 +3097,7 @@ public class Protocol {
                     local334[i1] = inboundBuffer.g1sub();
                     local337[i1] = inboundBuffer.g2();
                 }
-                Static159.method3037(local337, npc, local334, local331);
+                method3037(local337, npc, local334, local331);
             }
 
             boolean hasFaceLocation = (local18 & 0x200) != 0;
@@ -3225,5 +3275,173 @@ public class Protocol {
             }
         }
         buffer.offset += 24;
+    }
+
+    @OriginalMember(owner = "client!nm", name = "a", descriptor = "(Z)V")
+    public static void method3279() {
+        if (anInt5775 > 0) {
+            LoginManager.processLogout();
+        } else {
+            aClass95_4 = socket;
+            socket = null;
+            client.setGameState(40);
+        }
+    }
+
+    @OriginalMember(owner = "client!fc", name = "a", descriptor = "(Lclient!wa;I)Lclient!na;")
+    public static JagString formatChatMessage(@OriginalArg(0) Buffer arg0) {
+        return method4350(arg0);
+    }
+
+    @OriginalMember(owner = "client!uj", name = "a", descriptor = "(Lclient!wa;II)Lclient!na;")
+    public static JagString method4350(@OriginalArg(0) Buffer arg0) {
+        try {
+            @Pc(7) int local7 = arg0.gsmarts();
+            if (local7 > 32767) {
+                local7 = 32767;
+            }
+            @Pc(15) byte[] local15 = new byte[local7];
+            arg0.offset += WordPack.codec.method1552(0, local7, local15, arg0.data, arg0.offset);
+            return JagString.decodeString(local15, local7, 0);
+        } catch (@Pc(47) Exception local47) {
+            return WordPack.CABBAGE;
+        }
+    }
+
+    @OriginalMember(owner = "client!mi", name = "a", descriptor = "([IBLclient!km;[I[I)V")
+    public static void method3037(@OriginalArg(0) int[] arg0, @OriginalArg(2) Npc arg1, @OriginalArg(3) int[] arg2, @OriginalArg(4) int[] arg3) {
+        for (@Pc(3) int local3 = 0; local3 < arg3.length; local3++) {
+            @Pc(15) int local15 = arg3[local3];
+            @Pc(19) int local19 = arg0[local3];
+            @Pc(23) int local23 = arg2[local3];
+            for (@Pc(25) int local25 = 0; local19 != 0 && arg1.aClass147Array3.length > local25; local25++) {
+                if ((local19 & 0x1) != 0) {
+                    if (local15 == -1) {
+                        arg1.aClass147Array3[local25] = null;
+                    } else {
+                        @Pc(60) SeqType local60 = SeqTypeList.get(local15);
+                        @Pc(65) Npc_Class147 local65 = arg1.aClass147Array3[local25];
+                        @Pc(68) int local68 = local60.anInt5347;
+                        if (local65 != null) {
+                            if (local15 == local65.anInt5396) {
+                                if (local68 == 0) {
+                                    local65 = arg1.aClass147Array3[local25] = null;
+                                } else if (local68 == 1) {
+                                    local65.anInt5399 = 0;
+                                    local65.anInt5400 = 0;
+                                    local65.anInt5398 = 1;
+                                    local65.anInt5404 = 0;
+                                    local65.anInt5408 = local23;
+                                    SoundPlayer.playSeqSound(arg1.zFine, local60, arg1.xFine, false, 0);
+                                } else if (local68 == 2) {
+                                    local65.anInt5400 = 0;
+                                }
+                            } else if (local60.forcedPriority >= SeqTypeList.get(local65.anInt5396).forcedPriority) {
+                                local65 = arg1.aClass147Array3[local25] = null;
+                            }
+                        }
+                        if (local65 == null) {
+                            local65 = arg1.aClass147Array3[local25] = new Npc_Class147();
+                            local65.anInt5398 = 1;
+                            local65.anInt5404 = 0;
+                            local65.anInt5408 = local23;
+                            local65.anInt5396 = local15;
+                            local65.anInt5400 = 0;
+                            local65.anInt5399 = 0;
+                            SoundPlayer.playSeqSound(arg1.zFine, local60, arg1.xFine, false, 0);
+                        }
+                    }
+                }
+                local19 >>>= 0x1;
+            }
+        }
+    }
+
+    @OriginalMember(owner = "client!sc", name = "a", descriptor = "(IIILclient!km;)V")
+    public static void animateNpc(@OriginalArg(0) int arg0, @OriginalArg(1) int animationId, @OriginalArg(3) Npc npc) {
+        if (npc.seqId == animationId && animationId != -1) {
+            @Pc(10) SeqType seqType = SeqTypeList.get(animationId);
+            @Pc(13) int local13 = seqType.anInt5347;
+            if (local13 == 1) {
+                npc.anInt3373 = 1;
+                npc.anInt3425 = 0;
+                npc.anInt3360 = 0;
+                npc.anInt3371 = 0;
+                npc.anInt3420 = arg0;
+                SoundPlayer.playSeqSound(npc.zFine, seqType, npc.xFine, false, npc.anInt3425);
+            }
+            if (local13 == 2) {
+                npc.anInt3371 = 0;
+            }
+        } else if (animationId == -1 || npc.seqId == -1 || SeqTypeList.get(animationId).forcedPriority >= SeqTypeList.get(npc.seqId).forcedPriority) {
+            npc.anInt3360 = 0;
+            npc.seqId = animationId;
+            npc.anInt3373 = 1;
+            npc.anInt3371 = 0;
+            npc.anInt3420 = arg0;
+            npc.anInt3405 = npc.movementQueueSize;
+            npc.anInt3425 = 0;
+            if (npc.seqId != -1) {
+                SoundPlayer.playSeqSound(npc.zFine, SeqTypeList.get(npc.seqId), npc.xFine, false, npc.anInt3425);
+            }
+        }
+    }
+
+    @OriginalMember(owner = "client!sj", name = "a", descriptor = "(ILclient!na;)V")
+    public static void method3954(@OriginalArg(1) JagString arg0) {
+        client.settings = arg0;
+        if (GameShell.signLink.applet == null) {
+            return;
+        }
+        try {
+            @Pc(17) JagString local17 = aClass100_989.fromParameters(GameShell.signLink.applet);
+            @Pc(23) JagString local23 = aClass100_1029.fromParameters(GameShell.signLink.applet);
+            @Pc(48) JagString local48 = JagString.concatenate(new JagString[] { local17, aClass100_667, arg0, aClass100_1095, local23 });
+            if (arg0.length() == 0) {
+                local48 = JagString.concatenate(new JagString[] { local48, aClass100_1018 });
+            } else {
+                local48 = JagString.concatenate(new JagString[] { local48, aClass100_1082, DateUtil.getDateString(MonotonicClock.currentTimeMillis() + 94608000000L), aClass100_431, method2929(94608000L) });
+            }
+            JagString.concatenate(new JagString[] { aClass100_821, local48, aClass100_946 }).method3134(GameShell.signLink.applet);
+        } catch (@Pc(124) Throwable local124) {
+        }
+    }
+
+    @OriginalMember(owner = "client!md", name = "a", descriptor = "(JB)Lclient!na;")
+    public static JagString method2929(@OriginalArg(0) long arg0) {
+        return method1376(arg0);
+    }
+
+    @OriginalMember(owner = "client!ej", name = "a", descriptor = "(IZIJ)Lclient!na;")
+    public static JagString method1376(@OriginalArg(3) long arg0) {
+        @Pc(35) long local35 = arg0 / (long) 10;
+        @Pc(37) int local37 = 1;
+        while (local35 != 0L) {
+            local37++;
+            local35 /= 10;
+        }
+        @Pc(51) int local51 = local37;
+        if (arg0 < 0L) {
+            local51 = local37 + 1;
+        }
+        @Pc(61) byte[] local61 = new byte[local51];
+        if (arg0 < 0L) {
+            local61[0] = 45;
+        }
+        for (@Pc(79) int local79 = 0; local79 < local37; local79++) {
+            @Pc(92) int local92 = (int) (arg0 % (long) 10);
+            arg0 /= 10;
+            if (local92 < 0) {
+                local92 = -local92;
+            }
+            if (local92 > 9) {
+                local92 += 39;
+            }
+            local61[local51 - local79 - 1] = (byte) (local92 + 48);
+        }
+        @Pc(126) JagString local126 = new JagString();
+        local126.chars = local61;
+        local126.length = local51;
+        return local126;
     }
 }

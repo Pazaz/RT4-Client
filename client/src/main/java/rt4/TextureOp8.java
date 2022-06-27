@@ -39,9 +39,9 @@ public final class TextureOp8 extends TextureOp {
 	public final int[] method4626(@OriginalArg(0) int arg0) {
 		@Pc(19) int[] local19 = this.aClass121_41.method3445(arg0);
 		if (this.aClass121_41.invalid) {
-			for (@Pc(25) int local25 = 0; local25 < Static189.anInt4457; local25++) {
+			for (@Pc(25) int local25 = 0; local25 < Static10.anInt4457; local25++) {
 				@Pc(32) int local32 = Static173.anIntArray367[local25];
-				@Pc(36) int local36 = Static64.anIntArray153[arg0];
+				@Pc(36) int local36 = Static10.anIntArray153[arg0];
 				@Pc(43) int local43 = this.anInt1934 * local32 >> 12;
 				@Pc(50) int local50 = local36 * this.anInt1940 >> 12;
 				@Pc(60) int local60 = this.anInt1934 * (local32 % (4096 / this.anInt1934));

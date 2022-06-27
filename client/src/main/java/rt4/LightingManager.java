@@ -12,6 +12,16 @@ public class LightingManager {
     public static int lightCount = 0;
     @OriginalMember(owner = "client!jf", name = "a", descriptor = "[Lclient!gi;")
     public static Light[] lights;
+    @OriginalMember(owner = "client!rh", name = "d", descriptor = "I")
+	public static int anInt4866;
+    @OriginalMember(owner = "client!aa", name = "m", descriptor = "I")
+    public static int anInt15;
+    @OriginalMember(owner = "client!gf", name = "M", descriptor = "I")
+    public static int anInt4698;
+    @OriginalMember(owner = "client!ch", name = "w", descriptor = "I")
+    public static int anInt987;
+    @OriginalMember(owner = "client!id", name = "b", descriptor = "I")
+public static int anInt2875 = -1;
     @OriginalMember(owner = "client!jf", name = "c", descriptor = "[I")
     private static int[] anIntArray283;
     @OriginalMember(owner = "client!jf", name = "d", descriptor = "I")
@@ -377,22 +387,22 @@ public class LightingManager {
                 @Pc(76) int local76 = 0;
                 @Pc(84) int local84 = (local63.anInt2245 >> 7) - local63.anInt2236;
                 @Pc(92) int local92 = (local63.anInt2245 >> 7) + local63.anInt2236;
-                if (local92 >= Static215.anInt4866) {
-                    local92 = Static215.anInt4866 - 1;
+                if (local92 >= anInt4866) {
+                    local92 = anInt4866 - 1;
                 }
-                if (local84 < Static80.anInt4698) {
-                    local76 = Static80.anInt4698 - local84;
-                    local84 = Static80.anInt4698;
+                if (local84 < anInt4698) {
+                    local76 = anInt4698 - local84;
+                    local84 = anInt4698;
                 }
                 for (@Pc(112) int local112 = local84; local112 <= local92; local112++) {
                     @Pc(121) short local121 = local63.aShortArray30[local76++];
                     @Pc(133) int local133 = (local63.anInt2240 >> 7) + (local121 >> 8) - local63.anInt2236;
                     @Pc(141) int local141 = local133 + (local121 & 0xFF) - 1;
-                    if (local133 < Static31.anInt987) {
-                        local133 = Static31.anInt987;
+                    if (local133 < anInt987) {
+                        local133 = anInt987;
                     }
-                    if (local141 >= Static2.anInt15) {
-                        local141 = Static2.anInt15 - 1;
+                    if (local141 >= anInt15) {
+                        local141 = anInt15 - 1;
                     }
                     for (@Pc(155) int local155 = local133; local155 <= local141; local155++) {
                         @Pc(160) Tile local160 = null;
@@ -443,6 +453,16 @@ public class LightingManager {
                     anIntArrayArrayArray11[local3][local8][local13] = 0;
                 }
             }
+        }
+    }
+
+    @OriginalMember(owner = "client!ch", name = "c", descriptor = "(I)V")
+    public static void method846() {
+        if (!SceneGraph.allLevelsAreVisible() && LoginManager.centralPlane != Player.level) {
+            LoginManager.method2463(Player.level, LoginManager.centralZoneZ, LoginManager.centralZoneX, PlayerList.self.movementQueueZ[0], false, PlayerList.self.movementQueueX[0]);
+        } else if (Player.level != anInt2875 && MiniMap.renderMap(Player.level)) {
+            anInt2875 = Player.level;
+            ScriptRunner.method2218();
         }
     }
 }

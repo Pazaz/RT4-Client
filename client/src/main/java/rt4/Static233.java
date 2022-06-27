@@ -6,9 +6,6 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static233 {
 
-	@OriginalMember(owner = "client!t", name = "l", descriptor = "Lclient!ma;")
-	public static BufferedSocket aClass95_4;
-
 	@OriginalMember(owner = "client!t", name = "o", descriptor = "I")
 	public static int anInt5217;
 
@@ -24,13 +21,13 @@ public final class Static233 {
     @OriginalMember(owner = "client!t", name = "a", descriptor = "(IIIZIII)V")
 	public static void method4000(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
 		@Pc(3) int local3 = 0;
-		@Pc(5) MapMarker[] local5 = Static143.hintMapMarkers;
+		@Pc(5) MapMarker[] local5 = MiniMap.hintMapMarkers;
 		while (local5.length > local3) {
 			@Pc(17) MapMarker local17 = local5[local3];
 			if (local17 != null && local17.type == 2) {
-				Static198.method1026(arg0 >> 1, arg4, (local17.anInt4046 - Camera.originZ << 7) + local17.anInt4047, local17.anInt4050 * 2, arg2 >> 1, local17.anInt4045 + (local17.targetX - Camera.originX << 7), arg3);
-				if (Static65.anInt1951 > -1 && client.loop % 20 < 10) {
-					Sprites.headhints[local17.anInt4048].render(arg1 + Static65.anInt1951 - 12, arg5 + -28 - -Static16.anInt548);
+				ScriptRunner.method1026(arg0 >> 1, arg4, (local17.anInt4046 - Camera.originZ << 7) + local17.anInt4047, local17.anInt4050 * 2, arg2 >> 1, local17.anInt4045 + (local17.targetX - Camera.originX << 7), arg3);
+				if (ScriptRunner.anInt1951 > -1 && client.loop % 20 < 10) {
+					Sprites.headhints[local17.anInt4048].render(arg1 + ScriptRunner.anInt1951 - 12, arg5 + -28 - -ScriptRunner.anInt548);
 				}
 			}
 			local3++;
@@ -52,7 +49,7 @@ public final class Static233 {
 			client.audioLoop();
 			for (@Pc(36) int local36 = 0; local36 < 13; local36++) {
 				for (@Pc(43) int local43 = 0; local43 < 13; local43++) {
-					@Pc(56) int local56 = Static187.anIntArrayArrayArray18[local29][local36][local43];
+					@Pc(56) int local56 = Protocol.anIntArrayArrayArray18[local29][local36][local43];
 					if (local56 != -1) {
 						@Pc(67) int local67 = local56 >> 24 & 0x3;
 						if (!arg0 || local67 == 0) {

@@ -17,37 +17,6 @@ public final class Static74 {
 		}
 	}
 
-	@OriginalMember(owner = "client!fn", name = "a", descriptor = "(ILclient!be;)V")
-	public static void update(@OriginalArg(1) Component arg0) {
-		@Pc(7) Component local7 = method4668(arg0);
-		@Pc(19) int local19;
-		@Pc(17) int local17;
-		if (local7 == null) {
-			local17 = GameShell.canvasHeight;
-			local19 = GameShell.canvasWidth;
-		} else {
-			local17 = local7.height;
-			local19 = local7.width;
-		}
-		Static150.method2801(local17, local19, arg0, false);
-		Static111.method2291(arg0, local17, local19);
-	}
-
-    @OriginalMember(owner = "client!wl", name = "a", descriptor = "(Lclient!be;I)Lclient!be;")
-	public static Component method4668(@OriginalArg(0) Component arg0) {
-		if (arg0.layer != -1) {
-			return InterfaceList.getComponent(arg0.layer);
-		}
-		@Pc(28) int local28 = arg0.id >>> 16;
-		@Pc(33) HashTableIterator local33 = new HashTableIterator(InterfaceList.openInterfaces);
-		for (@Pc(38) ComponentPointer local38 = (ComponentPointer) local33.method2701(); local38 != null; local38 = (ComponentPointer) local33.method2700()) {
-			if (local28 == local38.anInt5878) {
-				return InterfaceList.getComponent((int) local38.key);
-			}
-		}
-		return null;
-	}
-
 	@OriginalMember(owner = "client!wb", name = "a", descriptor = "(IIIIIIII)V")
 	public static void method4594(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6) {
 		@Pc(7) int local7 = 0;
@@ -81,10 +50,10 @@ public final class Static74 {
 		@Pc(138) int local138 = local114;
 		@Pc(144) int local144 = (local25 - 1) * local106;
 		@Pc(162) int local162 = (arg5 - 1) * local93;
-		@Pc(166) int[] local166 = Static71.anIntArrayArray10[arg2];
-		Static131.method2576(local166, arg1 - arg4, -local16 + arg1, arg3);
-		Static131.method2576(local166, arg1 - local16, arg1 - -local16, arg0);
-		Static131.method2576(local166, arg1 + local16, arg4 + arg1, arg3);
+		@Pc(166) int[] local166 = TextureOp29SubOp4.anIntArrayArray10[arg2];
+		TextureOp29SubOp4.method2576(local166, arg1 - arg4, -local16 + arg1, arg3);
+		TextureOp29SubOp4.method2576(local166, arg1 - local16, arg1 - -local16, arg0);
+		TextureOp29SubOp4.method2576(local166, arg1 + local16, arg4 + arg1, arg3);
 		while (local9 > 0) {
 			if (local89 < 0) {
 				while (local89 < 0) {
@@ -137,15 +106,15 @@ public final class Static74 {
 			if (local258) {
 				@Pc(371) int local371 = arg1 + local11;
 				@Pc(376) int local376 = arg1 - local11;
-				Static131.method2576(Static71.anIntArrayArray10[local348], local365, local376, arg3);
-				Static131.method2576(Static71.anIntArrayArray10[local348], local376, local371, arg0);
-				Static131.method2576(Static71.anIntArrayArray10[local348], local371, local352, arg3);
-				Static131.method2576(Static71.anIntArrayArray10[local360], local365, local376, arg3);
-				Static131.method2576(Static71.anIntArrayArray10[local360], local376, local371, arg0);
-				Static131.method2576(Static71.anIntArrayArray10[local360], local371, local352, arg3);
+				TextureOp29SubOp4.method2576(TextureOp29SubOp4.anIntArrayArray10[local348], local365, local376, arg3);
+				TextureOp29SubOp4.method2576(TextureOp29SubOp4.anIntArrayArray10[local348], local376, local371, arg0);
+				TextureOp29SubOp4.method2576(TextureOp29SubOp4.anIntArrayArray10[local348], local371, local352, arg3);
+				TextureOp29SubOp4.method2576(TextureOp29SubOp4.anIntArrayArray10[local360], local365, local376, arg3);
+				TextureOp29SubOp4.method2576(TextureOp29SubOp4.anIntArrayArray10[local360], local376, local371, arg0);
+				TextureOp29SubOp4.method2576(TextureOp29SubOp4.anIntArrayArray10[local360], local371, local352, arg3);
 			} else {
-				Static131.method2576(Static71.anIntArrayArray10[local348], local365, local352, arg3);
-				Static131.method2576(Static71.anIntArrayArray10[local360], local365, local352, arg3);
+				TextureOp29SubOp4.method2576(TextureOp29SubOp4.anIntArrayArray10[local348], local365, local352, arg3);
+				TextureOp29SubOp4.method2576(TextureOp29SubOp4.anIntArrayArray10[local360], local365, local352, arg3);
 			}
 		}
 	}
@@ -197,14 +166,14 @@ public final class Static74 {
 		@Pc(192) int local192;
 		@Pc(201) int local201;
 		if (arg4 >= TextureOp29.anInt5773 && TextureOp29.anInt2869 >= arg4) {
-			@Pc(166) int[] local166 = Static71.anIntArrayArray10[arg4];
-			local174 = Static78.method1690(TextureOp29.anInt5063, arg5 - arg0, TextureOp29.anInt4164);
-			local183 = Static78.method1690(TextureOp29.anInt5063, arg5 + arg0, TextureOp29.anInt4164);
-			local192 = Static78.method1690(TextureOp29.anInt5063, arg5 - local12, TextureOp29.anInt4164);
-			local201 = Static78.method1690(TextureOp29.anInt5063, arg5 + local12, TextureOp29.anInt4164);
-			Static131.method2576(local166, local174, local192, arg2);
-			Static131.method2576(local166, local192, local201, arg1);
-			Static131.method2576(local166, local201, local183, arg2);
+			@Pc(166) int[] local166 = TextureOp29SubOp4.anIntArrayArray10[arg4];
+			local174 = Static231.method1690(TextureOp29.anInt5063, arg5 - arg0, TextureOp29.anInt4164);
+			local183 = Static231.method1690(TextureOp29.anInt5063, arg5 + arg0, TextureOp29.anInt4164);
+			local192 = Static231.method1690(TextureOp29.anInt5063, arg5 - local12, TextureOp29.anInt4164);
+			local201 = Static231.method1690(TextureOp29.anInt5063, arg5 + local12, TextureOp29.anInt4164);
+			TextureOp29SubOp4.method2576(local166, local174, local192, arg2);
+			TextureOp29SubOp4.method2576(local166, local192, local201, arg1);
+			TextureOp29SubOp4.method2576(local166, local201, local183, arg2);
 		}
 		while (local16 > 0) {
 			if (local70 < 0) {
@@ -254,30 +223,30 @@ public final class Static74 {
 			local183 = arg4 + local16;
 			local174 = arg4 - local16;
 			if (TextureOp29.anInt5773 <= local183 && TextureOp29.anInt2869 >= local174) {
-				local192 = Static78.method1690(TextureOp29.anInt5063, arg5 + local7, TextureOp29.anInt4164);
-				local201 = Static78.method1690(TextureOp29.anInt5063, arg5 - local7, TextureOp29.anInt4164);
+				local192 = Static231.method1690(TextureOp29.anInt5063, arg5 + local7, TextureOp29.anInt4164);
+				local201 = Static231.method1690(TextureOp29.anInt5063, arg5 - local7, TextureOp29.anInt4164);
 				if (local255) {
-					@Pc(404) int local404 = Static78.method1690(TextureOp29.anInt5063, arg5 + local14, TextureOp29.anInt4164);
-					@Pc(412) int local412 = Static78.method1690(TextureOp29.anInt5063, arg5 - local14, TextureOp29.anInt4164);
+					@Pc(404) int local404 = Static231.method1690(TextureOp29.anInt5063, arg5 + local14, TextureOp29.anInt4164);
+					@Pc(412) int local412 = Static231.method1690(TextureOp29.anInt5063, arg5 - local14, TextureOp29.anInt4164);
 					@Pc(420) int[] local420;
 					if (TextureOp29.anInt5773 <= local174) {
-						local420 = Static71.anIntArrayArray10[local174];
-						Static131.method2576(local420, local201, local412, arg2);
-						Static131.method2576(local420, local412, local404, arg1);
-						Static131.method2576(local420, local404, local192, arg2);
+						local420 = TextureOp29SubOp4.anIntArrayArray10[local174];
+						TextureOp29SubOp4.method2576(local420, local201, local412, arg2);
+						TextureOp29SubOp4.method2576(local420, local412, local404, arg1);
+						TextureOp29SubOp4.method2576(local420, local404, local192, arg2);
 					}
 					if (local183 <= TextureOp29.anInt2869) {
-						local420 = Static71.anIntArrayArray10[local183];
-						Static131.method2576(local420, local201, local412, arg2);
-						Static131.method2576(local420, local412, local404, arg1);
-						Static131.method2576(local420, local404, local192, arg2);
+						local420 = TextureOp29SubOp4.anIntArrayArray10[local183];
+						TextureOp29SubOp4.method2576(local420, local201, local412, arg2);
+						TextureOp29SubOp4.method2576(local420, local412, local404, arg1);
+						TextureOp29SubOp4.method2576(local420, local404, local192, arg2);
 					}
 				} else {
 					if (TextureOp29.anInt5773 <= local174) {
-						Static131.method2576(Static71.anIntArrayArray10[local174], local201, local192, arg2);
+						TextureOp29SubOp4.method2576(TextureOp29SubOp4.anIntArrayArray10[local174], local201, local192, arg2);
 					}
 					if (TextureOp29.anInt2869 >= local183) {
-						Static131.method2576(Static71.anIntArrayArray10[local183], local201, local192, arg2);
+						TextureOp29SubOp4.method2576(TextureOp29SubOp4.anIntArrayArray10[local183], local201, local192, arg2);
 					}
 				}
 			}

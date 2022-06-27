@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
-public final class Static242 {
+public final class ShadowManager {
 
 	@OriginalMember(owner = "client!tj", name = "a", descriptor = "Lclient!ek;")
 	public static SoftwareIndexedSprite shadowMapImage;

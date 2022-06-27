@@ -309,7 +309,7 @@ public final class TextureOpColorGradient extends TextureOp {
 			@Pc(35) int[] local35 = local11[1];
 			@Pc(39) int[] local39 = local11[0];
 			@Pc(43) int[] local43 = local11[2];
-			for (@Pc(45) int local45 = 0; local45 < Static189.anInt4457; local45++) {
+			for (@Pc(45) int local45 = 0; local45 < Static10.anInt4457; local45++) {
 				@Pc(54) int local54 = local31[local45] >> 4;
 				if (local54 < 0) {
 					local54 = 0;

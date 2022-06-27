@@ -15,6 +15,10 @@ public class MiniMap {
     public static final int[] locX = new int[1000];
     @OriginalMember(owner = "client!he", name = "eb", descriptor = "[I")
     public static final int[] locZ = new int[1000];
+    @OriginalMember(owner = "client!ld", name = "b", descriptor = "[Lclient!nc;")
+    public static final MapMarker[] hintMapMarkers = new MapMarker[4];
+    @OriginalMember(owner = "client!ld", name = "d", descriptor = "Lclient!na;")
+    public static final JagString aClass100_668 = JagString.parse("Hidden)2use");
     @OriginalMember(owner = "client!ef", name = "j", descriptor = "Lclient!mm;")
     public static SoftwareSprite softwareSprite;
     @OriginalMember(owner = "client!ha", name = "i", descriptor = "Lclient!qf;")
@@ -33,6 +37,12 @@ public class MiniMap {
     public static int anInt4262 = 1;
     @OriginalMember(owner = "client!gi", name = "H", descriptor = "I")
 	public static int anInt2252 = 0;
+    @OriginalMember(owner = "client!nf", name = "i", descriptor = "I")
+    public static int anInt4075 = -1;
+    @OriginalMember(owner = "client!se", name = "h", descriptor = "I")
+	public static int anInt5073 = -1;
+    @OriginalMember(owner = "client!sd", name = "R", descriptor = "I")
+	public static int anInt5062;
 
     @OriginalMember(owner = "client!ma", name = "a", descriptor = "([IIIIII)V")
     public static void renderTile(@OriginalArg(0) int[] pixels, @OriginalArg(1) int index, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
@@ -356,7 +366,7 @@ public class MiniMap {
                     }
                 }
             }
-            @Pc(756) MapMarker[] local756 = Static143.hintMapMarkers;
+            @Pc(756) MapMarker[] local756 = hintMapMarkers;
             for (local181 = 0; local181 < local756.length; local181++) {
                 @Pc(770) MapMarker local770 = local756[local181];
                 if (local770 != null && local770.type != 0 && client.loop % 20 < 10) {
@@ -365,20 +375,20 @@ public class MiniMap {
                         if (local804 != null) {
                             local231 = local804.xFine / 32 - PlayerList.self.xFine / 32;
                             local200 = local804.zFine / 32 - PlayerList.self.zFine / 32;
-                            Static97.method1960(local770.anInt4048, arg1, arg2, local231, local200, arg3);
+                            method1960(local770.anInt4048, arg1, arg2, local231, local200, arg3);
                         }
                     }
                     if (local770.type == 2) {
                         local154 = (local770.targetX - Camera.originX) * 4 + 2 - PlayerList.self.xFine / 32;
                         local231 = (-Camera.originZ + local770.anInt4046) * 4 + 2 - PlayerList.self.zFine / 32;
-                        Static97.method1960(local770.anInt4048, arg1, arg2, local154, local231, arg3);
+                        method1960(local770.anInt4048, arg1, arg2, local154, local231, arg3);
                     }
                     if (local770.type == 10 && local770.actorTargetId >= 0 && PlayerList.players.length > local770.actorTargetId) {
                         @Pc(905) Player local905 = PlayerList.players[local770.actorTargetId];
                         if (local905 != null) {
                             local200 = local905.zFine / 32 - PlayerList.self.zFine / 32;
                             local231 = local905.xFine / 32 - PlayerList.self.xFine / 32;
-                            Static97.method1960(local770.anInt4048, arg1, arg2, local231, local200, arg3);
+                            method1960(local770.anInt4048, arg1, arg2, local231, local200, arg3);
                         }
                     }
                 }
@@ -427,4 +437,44 @@ public class MiniMap {
 			((SoftwareSprite) arg1).method312(arg0.width / 2 + arg5 + local81 - arg1.anInt1860 / 2, -(arg1.anInt1866 / 2) + arg0.height / 2 + arg4 + -local92, arg0.anIntArray37, arg0.anIntArray45);
 		}
 	}
+
+    @OriginalMember(owner = "client!hi", name = "a", descriptor = "(IIIIILclient!be;Z)V")
+    public static void method1960(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) Component arg5) {
+        @Pc(13) int local13 = arg3 * arg3 + arg4 * arg4;
+        if (local13 > 360000) {
+            return;
+        }
+        @Pc(30) int local30 = Math.min(arg5.width / 2, arg5.height / 2);
+        if (local30 * local30 >= local13) {
+            method1446(arg5, Sprites.mapmarkhints[arg0], arg4, arg3, arg1, arg2);
+            return;
+        }
+        local30 -= 10;
+        @Pc(58) int local58 = anInt1814 + (int)Camera.yawTarget & 0x7FF;
+        @Pc(62) int local62 = MathUtils.cos[local58];
+        @Pc(66) int local66 = MathUtils.sin[local58];
+        @Pc(74) int local74 = local66 * 256 / (anInt4130 + 256);
+        @Pc(82) int local82 = local62 * 256 / (anInt4130 + 256);
+        @Pc(93) int local93 = arg4 * local74 + local82 * arg3 >> 16;
+        @Pc(104) int local104 = arg4 * local82 - local74 * arg3 >> 16;
+        @Pc(110) double local110 = Math.atan2((double) local93, (double) local104);
+        @Pc(117) int local117 = (int) (Math.sin(local110) * (double) local30);
+        @Pc(124) int local124 = (int) (Math.cos(local110) * (double) local30);
+        if (GlRenderer.enabled) {
+            ((GlSprite) Sprites.hintMapEdge[arg0]).method1428((arg5.width / 2 + arg2 + local117) * 16, (arg5.height / 2 + arg1 - local124) * 16, (int) (local110 * 10430.378D));
+        } else {
+            ((SoftwareSprite) Sprites.hintMapEdge[arg0]).method306(local117 + arg5.width / 2 + arg2 - 10, arg5.height / 2 + -10 + arg1 + -local124, local110);
+        }
+    }
+
+    @OriginalMember(owner = "client!hi", name = "a", descriptor = "(Lclient!be;B)Lclient!na;")
+    public static JagString getTargetVerb(@OriginalArg(0) Component arg0) {
+        if (InterfaceList.getServerActiveProperties(arg0).getTargetMask() == 0) {
+            return null;
+        } else if (arg0.targetVerb == null || arg0.targetVerb.trim().length() == 0) {
+            return Static121.qaOpTest ? aClass100_668 : null;
+        } else {
+            return arg0.targetVerb;
+        }
+    }
 }

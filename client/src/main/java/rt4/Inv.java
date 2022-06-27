@@ -10,6 +10,14 @@ public final class Inv extends Node {
 
     @OriginalMember(owner = "client!cb", name = "I", descriptor = "[I")
     public static final int[] updatedInventories = new int[32];
+    @OriginalMember(owner = "client!kl", name = "u", descriptor = "Lclient!na;")
+    public static final JagString aClass100_637 = JagString.parse("<col=ffffff>");
+    @OriginalMember(owner = "client!ol", name = "Y", descriptor = "Lclient!na;")
+    public static final JagString aClass100_819 = JagString.parse("<col=00ff80>");
+    @OriginalMember(owner = "client!ib", name = "g", descriptor = "Lclient!na;")
+    public static final JagString aClass100_559 = JagString.parse("<col=ffff00>");
+    @OriginalMember(owner = "client!jj", name = "m", descriptor = "Lclient!na;")
+    public static final JagString aClass100_594 = JagString.parse("<)4col>");
     @OriginalMember(owner = "client!ii", name = "c", descriptor = "I")
     public static int updatedInventoriesWriterIndex = 0;
     @OriginalMember(owner = "client!bj", name = "v", descriptor = "Lclient!sc;")
@@ -255,11 +263,22 @@ public final class Inv extends Node {
     @OriginalMember(owner = "client!eb", name = "b", descriptor = "(II)Lclient!na;")
     public static JagString formatObjAmount(@OriginalArg(1) int arg0) {
         if (arg0 < 100000) {
-            return JagString.concatenate(new JagString[] { Static52.aClass100_559, JagString.parseInt(arg0), Static52.aClass100_594 });
+            return JagString.concatenate(new JagString[] { aClass100_559, JagString.parseInt(arg0), aClass100_594 });
         } else if (arg0 >= 10000000) {
-            return JagString.concatenate(new JagString[] { Static52.aClass100_819, JagString.parseInt(arg0 / 1000000), LocalizedText.MILLION, Static52.aClass100_594 });
+            return JagString.concatenate(new JagString[] { aClass100_819, JagString.parseInt(arg0 / 1000000), LocalizedText.MILLION, aClass100_594 });
         } else {
-            return JagString.concatenate(new JagString[] { Static52.aClass100_637, JagString.parseInt(arg0 / 1000), LocalizedText.THOUSAND, Static52.aClass100_594 });
+            return JagString.concatenate(new JagString[] { aClass100_637, JagString.parseInt(arg0 / 1000), LocalizedText.THOUSAND, aClass100_594 });
+        }
+    }
+
+    @OriginalMember(owner = "client!bd", name = "a", descriptor = "(BI)V")
+    public static void method475(@OriginalArg(1) int arg0) {
+        @Pc(8) Inv local8 = (Inv) objectContainerCache.get((long) arg0);
+        if (local8 != null) {
+            for (@Pc(24) int local24 = 0; local24 < local8.objectIds.length; local24++) {
+                local8.objectIds[local24] = -1;
+                local8.anIntArray422[local24] = 0;
+            }
         }
     }
 }

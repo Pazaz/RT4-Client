@@ -28,7 +28,7 @@ public final class Static18 {
 			} else if (local5 > 100) {
 				local5 = 100;
 			}
-			local29 = local5 * (Static187.aShort27 - Static263.aShort30) / 100 + Static263.aShort30;
+			local29 = local5 * (ScriptRunner.aShort27 - ScriptRunner.aShort30) / 100 + ScriptRunner.aShort30;
 			arg3 = local29 * arg3 >> 8;
 		}
 		local5 = 2048 - arg6 & 0x7FF;
@@ -59,7 +59,7 @@ public final class Static18 {
 
 	@OriginalMember(owner = "client!bh", name = "a", descriptor = "(B)Lclient!ba;")
 	public static World getFirstWorld() {
-		Static51.worldPos = 0;
+		WorldList.worldPos = 0;
 		return WorldList.getNextWorld();
 	}
 

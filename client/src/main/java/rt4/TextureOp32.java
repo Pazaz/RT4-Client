@@ -30,22 +30,22 @@ public final class TextureOp32 extends TextureOp {
 	public final int[][] method4638(@OriginalArg(1) int arg0) {
 		@Pc(17) int[][] local17 = this.aClass103_41.method3173(arg0);
 		if (this.aClass103_41.aBoolean195 && this.method4327()) {
-			@Pc(42) int local42 = (this.anInt5536 == Static172.anInt4165 ? arg0 : this.anInt5536 * arg0 / Static172.anInt4165) * this.anInt5535;
+			@Pc(42) int local42 = (this.anInt5536 == Static10.anInt4165 ? arg0 : this.anInt5536 * arg0 / Static10.anInt4165) * this.anInt5535;
 			@Pc(46) int[] local46 = local17[0];
 			@Pc(50) int[] local50 = local17[1];
 			@Pc(54) int[] local54 = local17[2];
 			@Pc(64) int local64;
 			@Pc(73) int local73;
-			if (Static189.anInt4457 == this.anInt5535) {
-				for (local64 = 0; local64 < Static189.anInt4457; local64++) {
+			if (Static10.anInt4457 == this.anInt5535) {
+				for (local64 = 0; local64 < Static10.anInt4457; local64++) {
 					local73 = this.anIntArray483[local42++];
 					local54[local64] = (local73 & 0xFF) << 4;
 					local50[local64] = local73 >> 4 & 0xFF0;
 					local46[local64] = local73 >> 12 & 0xFF0;
 				}
 			} else {
-				for (local64 = 0; local64 < Static189.anInt4457; local64++) {
-					local73 = this.anInt5535 * local64 / Static189.anInt4457;
+				for (local64 = 0; local64 < Static10.anInt4457; local64++) {
+					local73 = this.anInt5535 * local64 / Static10.anInt4457;
 					@Pc(122) int local122 = this.anIntArray483[local42 + local73];
 					local54[local64] = (local122 & 0xFF) << 4;
 					local50[local64] = local122 >> 4 & 0xFF0;
@@ -63,8 +63,8 @@ public final class TextureOp32 extends TextureOp {
 		} else if (this.anInt5539 < 0) {
 			return false;
 		} else {
-			@Pc(22) int local22 = Static189.anInt4457;
-			@Pc(24) int local24 = Static172.anInt4165;
+			@Pc(22) int local22 = Static10.anInt4457;
+			@Pc(24) int local24 = Static10.anInt4165;
 			@Pc(34) int local34 = Texture.anInterface1_1.isLowDetail(this.anInt5539) ? 64 : 128;
 			this.anIntArray483 = Texture.anInterface1_1.method3235(this.anInt5539);
 			this.anInt5536 = local34;

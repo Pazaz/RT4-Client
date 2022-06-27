@@ -87,9 +87,9 @@ public final class LiquidMaterialRenderer implements MaterialRenderer {
 		local5.glCallList(this.anInt4831);
 		local5.glActiveTexture(GL2.GL_TEXTURE1);
 		local5.glMatrixMode(GL2.GL_TEXTURE);
-		local5.glTranslatef((float) Static253.anInt406, (float) Static253.anInt4675, (float) Static253.anInt5158);
-		local5.glRotatef(-((float) Static253.anInt1815 * 360.0F) / 2048.0F, 0.0F, 1.0F, 0.0F);
-		local5.glRotatef(-((float) Static253.anInt5559 * 360.0F) / 2048.0F, 1.0F, 0.0F, 0.0F);
+		local5.glTranslatef((float) MaterialManager.anInt406, (float) MaterialManager.anInt4675, (float) MaterialManager.anInt5158);
+		local5.glRotatef(-((float) MaterialManager.anInt1815 * 360.0F) / 2048.0F, 0.0F, 1.0F, 0.0F);
+		local5.glRotatef(-((float) MaterialManager.anInt5559 * 360.0F) / 2048.0F, 1.0F, 0.0F, 0.0F);
 		local5.glRotatef(-180.0F, 1.0F, 0.0F, 0.0F);
 		local5.glMatrixMode(GL2.GL_MODELVIEW);
 		if (!Static151.allows3DTextureMapping) {

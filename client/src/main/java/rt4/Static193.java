@@ -6,7 +6,9 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static193 {
 
-	@OriginalMember(owner = "client!pi", name = "U", descriptor = "I")
+    @OriginalMember(owner = "client!ec", name = "B", descriptor = "[[I")
+    public static final int[][] anIntArrayArray8 = new int[][] { new int[0], { 128, 0, 128, 128, 0, 128 }, { 0, 0, 128, 0, 128, 128, 64, 128 }, { 0, 128, 0, 0, 128, 0, 64, 128 }, { 0, 0, 64, 128, 0, 128 }, { 128, 128, 64, 128, 128, 0 }, { 64, 0, 128, 0, 128, 128, 64, 128 }, { 128, 0, 128, 128, 0, 128, 0, 64, 64, 0 }, { 0, 0, 64, 0, 0, 64 }, { 0, 0, 128, 0, 128, 128, 64, 96, 32, 64 }, { 0, 128, 0, 0, 32, 64, 64, 96, 128, 128 }, { 0, 128, 0, 0, 32, 32, 96, 32, 128, 0, 128, 128 } };
+    @OriginalMember(owner = "client!pi", name = "U", descriptor = "I")
 	public static int anInt4539;
 
 	@OriginalMember(owner = "client!pi", name = "a", descriptor = "([[[B[[B[[B[[I[[F[[I[[B[[B[[FI[[F[[I[[I[[II)[Lclient!hg;")
@@ -41,9 +43,9 @@ public final class Static193 {
 				if (arg2[local16][local112] != 0) {
 					@Pc(135) int[] local135;
 					if (arg6[local16][local112] == 0) {
-						local135 = Static228.anIntArrayArray35[0];
+						local135 = Static1.anIntArrayArray35[0];
 					} else {
-						local135 = Static53.anIntArrayArray8[arg1[local16][local112]];
+						local135 = anIntArrayArray8[arg1[local16][local112]];
 						if (local135.length == 0) {
 							continue;
 						}
@@ -128,7 +130,7 @@ public final class Static193 {
 					@Pc(754) int local754;
 					if (arg6[local16][local112] == 0) {
 						local655 = local524 == arg2[local16 - 1][local112 - 1] ? 1 : -1;
-						local614 = Static228.anIntArrayArray35[0];
+						local614 = Static1.anIntArrayArray35[0];
 						local678 = local524 == arg2[local16 + 1][local112 - 1] ? 1 : -1;
 						if (arg2[local16][local112 - 1] == local524) {
 							local678++;
@@ -171,7 +173,7 @@ public final class Static193 {
 						local628 = (byte) (local794 <= local789 ? 0 : 1);
 						arg7[local16][local112] = local628;
 					} else {
-						local614 = Static53.anIntArrayArray8[arg1[local16][local112]];
+						local614 = anIntArrayArray8[arg1[local16][local112]];
 						local574 = Static69.aBooleanArrayArray2[arg1[local16][local112]];
 						local628 = arg7[local16][local112];
 						if (local614.length == 0) {
@@ -198,19 +200,19 @@ public final class Static193 {
 					@Pc(969) int local969 = (local655 >> 16) - 1;
 					@Pc(975) int local975 = (local712 >> 16) - 1;
 					@Pc(981) GlTile local981 = (GlTile) local103.get(local861);
-					Static53.method1291(arg13, local655 <= local655, Static19.method588(local969, local883, local931), local981, local614, local112, local155, local16, local655 <= local712, arg8, local754 >= local655, arg4, local169, Static19.method588(local969, local925, local957), Static19.method588(local969, local901, local949), local655 <= local678, arg12, arg10, local628, Static19.method588(local969, local909, local939), local574);
+					method1291(arg13, local655 <= local655, Static1.method588(local969, local883, local931), local981, local614, local112, local155, local16, local655 <= local712, arg8, local754 >= local655, arg4, local169, Static1.method588(local969, local925, local957), Static1.method588(local969, local901, local949), local655 <= local678, arg12, arg10, local628, Static1.method588(local969, local909, local939), local574);
 					@Pc(1050) int local1050 = (local754 >> 16) - 1;
 					if (local869 != local861) {
 						local981 = (GlTile) local103.get(local869);
-						Static53.method1291(arg13, local678 <= local655, Static19.method588(local963, local883, local931), local981, local614, local112, local155, local16, local712 >= local678, arg8, local678 <= local754, arg4, local169, Static19.method588(local963, local925, local957), Static19.method588(local963, local901, local949), local678 <= local678, arg12, arg10, local628, Static19.method588(local963, local909, local939), local574);
+						method1291(arg13, local678 <= local655, Static1.method588(local963, local883, local931), local981, local614, local112, local155, local16, local712 >= local678, arg8, local678 <= local754, arg4, local169, Static1.method588(local963, local925, local957), Static1.method588(local963, local901, local949), local678 <= local678, arg12, arg10, local628, Static1.method588(local963, local909, local939), local574);
 					}
 					if (local877 != local861 && local877 != local869) {
 						local981 = (GlTile) local103.get(local877);
-						Static53.method1291(arg13, local655 >= local712, Static19.method588(local975, local883, local931), local981, local614, local112, local155, local16, local712 <= local712, arg8, local712 <= local754, arg4, local169, Static19.method588(local975, local925, local957), Static19.method588(local975, local901, local949), local678 >= local712, arg12, arg10, local628, Static19.method588(local975, local909, local939), local574);
+						method1291(arg13, local655 >= local712, Static1.method588(local975, local883, local931), local981, local614, local112, local155, local16, local712 <= local712, arg8, local712 <= local754, arg4, local169, Static1.method588(local975, local925, local957), Static1.method588(local975, local901, local949), local678 >= local712, arg12, arg10, local628, Static1.method588(local975, local909, local939), local574);
 					}
 					if (local917 != local861 && local917 != local869 && local917 != local877) {
 						local981 = (GlTile) local103.get(local917);
-						Static53.method1291(arg13, local754 <= local655, Static19.method588(local1050, local883, local931), local981, local614, local112, local155, local16, local754 <= local712, arg8, local754 >= local754, arg4, local169, Static19.method588(local1050, local925, local957), Static19.method588(local1050, local901, local949), local678 >= local754, arg12, arg10, local628, Static19.method588(local1050, local909, local939), local574);
+						method1291(arg13, local754 <= local655, Static1.method588(local1050, local883, local931), local981, local614, local112, local155, local16, local754 <= local712, arg8, local754 >= local754, arg4, local169, Static1.method588(local1050, local925, local957), Static1.method588(local1050, local901, local949), local678 >= local754, arg12, arg10, local628, Static1.method588(local1050, local909, local939), local574);
 					}
 				}
 			}
@@ -233,4 +235,19 @@ public final class Static193 {
 		return local1348;
 	}
 
+    @OriginalMember(owner = "client!ec", name = "a", descriptor = "([[IZILclient!hg;[IIIIZ[[FZI[[FIIIZ[[I[[FBI[Z)V")
+    public static void method1291(@OriginalArg(0) int[][] arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(3) GlTile arg3, @OriginalArg(4) int[] arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) boolean arg8, @OriginalArg(9) float[][] arg9, @OriginalArg(10) boolean arg10, @OriginalArg(12) float[][] arg11, @OriginalArg(13) int arg12, @OriginalArg(14) int arg13, @OriginalArg(15) int arg14, @OriginalArg(16) boolean arg15, @OriginalArg(17) int[][] arg16, @OriginalArg(18) float[][] arg17, @OriginalArg(19) byte arg18, @OriginalArg(20) int arg19, @OriginalArg(21) boolean[] arg20) {
+        @Pc(11) int local11 = (arg2 << 8) + (arg1 ? 255 : 0);
+        @Pc(25) int local25 = (arg8 ? 255 : 0) + (arg14 << 8);
+        @Pc(31) int[] local31 = new int[arg4.length / 2];
+        @Pc(41) int local41 = (arg10 ? 255 : 0) + (arg13 << 8);
+        @Pc(51) int local51 = (arg19 << 8) + (arg15 ? 255 : 0);
+        for (@Pc(53) int local53 = 0; local53 < local31.length; local53++) {
+            @Pc(67) int local67 = arg4[local53 + local53];
+            @Pc(80) int[][] local80 = arg0 == null || arg20 == null || !arg20[local53] ? arg16 : arg0;
+            @Pc(88) int local88 = arg4[local53 + local53 + 1];
+            local31[local53] = Static1.method3683(local41, (float) arg12, local11, local51, arg0, local80, arg7, arg17, local25, arg18, false, arg3, arg9, arg5, local67, arg11, local88);
+        }
+        arg3.method1945(arg6, arg7, arg5, local31, null, false);
+    }
 }

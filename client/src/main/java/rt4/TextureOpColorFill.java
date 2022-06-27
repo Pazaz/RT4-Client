@@ -43,7 +43,7 @@ public final class TextureOpColorFill extends TextureOp {
 			@Pc(31) int[] local31 = local22[0];
 			@Pc(35) int[] local35 = local22[1];
 			@Pc(39) int[] local39 = local22[2];
-			for (@Pc(41) int local41 = 0; local41 < Static189.anInt4457; local41++) {
+			for (@Pc(41) int local41 = 0; local41 < Static10.anInt4457; local41++) {
 				local31[local41] = this.anInt2073;
 				local35[local41] = this.anInt2078;
 				local39[local41] = this.anInt2080;

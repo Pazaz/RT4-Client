@@ -43,10 +43,10 @@ public final class Static241 {
 		@Pc(14) int local14 = arg3 - arg4;
 		if (local14 == 0) {
 			if (local9 != 0) {
-				Static101.method2054(arg2, arg4, arg1, arg0);
+				Static231.method2054(arg2, arg4, arg1, arg0);
 			}
 		} else if (local9 == 0) {
-			Static222.method3826(arg0, arg2, arg3, arg4);
+			Static231.method3826(arg0, arg2, arg3, arg4);
 		} else {
 			if (local9 < 0) {
 				local9 = -local9;
@@ -84,7 +84,7 @@ public final class Static241 {
 			@Pc(136) int local136;
 			if (local70) {
 				for (local136 = arg4; local136 <= arg3; local136++) {
-					Static71.anIntArrayArray10[local136][local74] = arg0;
+					TextureOp29SubOp4.anIntArrayArray10[local136][local74] = arg0;
 					local116 += local111;
 					if (local116 > 0) {
 						local74 += local123;
@@ -94,7 +94,7 @@ public final class Static241 {
 			} else {
 				for (local136 = arg4; local136 <= arg3; local136++) {
 					local116 += local111;
-					Static71.anIntArrayArray10[local74][local136] = arg0;
+					TextureOp29SubOp4.anIntArrayArray10[local74][local136] = arg0;
 					if (local116 > 0) {
 						local74 += local123;
 						local116 -= local78;
@@ -104,4 +104,10 @@ public final class Static241 {
 		}
 	}
 
+    @OriginalMember(owner = "client!ug", name = "a", descriptor = "(II)V")
+    public static void method4278(@OriginalArg(0) int arg0) {
+        if (anIntArray522 == null || anIntArray522.length < arg0) {
+            anIntArray522 = new int[arg0];
+        }
+    }
 }

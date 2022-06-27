@@ -36,6 +36,8 @@ public final class Player extends PathingEntity {
 	public static PrivilegedRequest lastLogAddress;
     @OriginalMember(owner = "client!ib", name = "l", descriptor = "I")
     public static int anInt2863 = 0;
+    @OriginalMember(owner = "client!ea", name = "r", descriptor = "[[B")
+    public static byte[][] aByteArrayArray8;
     @OriginalMember(owner = "client!e", name = "Bc", descriptor = "Lclient!hh;")
 	public PlayerAppearance appearance;
 
@@ -195,6 +197,101 @@ public final class Player extends PathingEntity {
         }
     }
 
+	@OriginalMember(owner = "client!rg", name = "a", descriptor = "(Lclient!e;I)V")
+	public static void method4359(@OriginalArg(0) Player arg0) {
+		@Pc(12) AreaSound local12 = (AreaSound) AreaSoundManager.playerSounds.get(arg0.username.encode37());
+		if (local12 == null) {
+			AreaSoundManager.add(arg0.movementQueueZ[0], null, 0, null, arg0.movementQueueX[0], level, arg0);
+		} else {
+			local12.update();
+		}
+	}
+
+    @OriginalMember(owner = "client!bf", name = "c", descriptor = "(I)V")
+    public static void method501() {
+        if (!GlRenderer.enabled || Static231.aBoolean252) {
+            return;
+        }
+        @Pc(14) Tile[][][] local14 = SceneGraph.tiles;
+        for (@Pc(22) int local22 = 0; local22 < local14.length; local22++) {
+            @Pc(30) Tile[][] local30 = local14[local22];
+            for (@Pc(32) int local32 = 0; local32 < local30.length; local32++) {
+                for (@Pc(42) int local42 = 0; local42 < local30[local32].length; local42++) {
+                    @Pc(54) Tile local54 = local30[local32][local42];
+                    if (local54 != null) {
+                        @Pc(71) GlModel local71;
+                        if (local54.groundDecor != null && local54.groundDecor.entity instanceof GlModel) {
+                            local71 = (GlModel) local54.groundDecor.entity;
+                            if ((local54.groundDecor.key & Long.MIN_VALUE) == 0L) {
+                                local71.method4111(false, true, true, false, true, true);
+                            } else {
+                                local71.method4111(true, true, true, true, true, true);
+                            }
+                        }
+                        if (local54.wallDecor != null) {
+                            if (local54.wallDecor.primary instanceof GlModel) {
+                                local71 = (GlModel) local54.wallDecor.primary;
+                                if ((local54.wallDecor.key & Long.MIN_VALUE) == 0L) {
+                                    local71.method4111(false, true, true, false, true, true);
+                                } else {
+                                    local71.method4111(true, true, true, true, true, true);
+                                }
+                            }
+                            if (local54.wallDecor.secondary instanceof GlModel) {
+                                local71 = (GlModel) local54.wallDecor.secondary;
+                                if ((Long.MIN_VALUE & local54.wallDecor.key) == 0L) {
+                                    local71.method4111(false, true, true, false, true, true);
+                                } else {
+                                    local71.method4111(true, true, true, true, true, true);
+                                }
+                            }
+                        }
+                        if (local54.wall != null) {
+                            if (local54.wall.primary instanceof GlModel) {
+                                local71 = (GlModel) local54.wall.primary;
+                                if ((local54.wall.key & Long.MIN_VALUE) == 0L) {
+                                    local71.method4111(false, true, true, false, true, true);
+                                } else {
+                                    local71.method4111(true, true, true, true, true, true);
+                                }
+                            }
+                            if (local54.wall.secondary instanceof GlModel) {
+                                local71 = (GlModel) local54.wall.secondary;
+                                if ((Long.MIN_VALUE & local54.wall.key) == 0L) {
+                                    local71.method4111(false, true, true, false, true, true);
+                                } else {
+                                    local71.method4111(true, true, true, true, true, true);
+                                }
+                            }
+                        }
+                        for (@Pc(270) int local270 = 0; local270 < local54.sceneryLen; local270++) {
+                            if (local54.scenery[local270].entity instanceof GlModel) {
+                                @Pc(293) GlModel local293 = (GlModel) local54.scenery[local270].entity;
+                                if ((Long.MIN_VALUE & local54.scenery[local270].key) == 0L) {
+                                    local293.method4111(false, true, true, false, true, true);
+                                } else {
+                                    local293.method4111(true, true, true, true, true, true);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        Static231.aBoolean252 = true;
+    }
+
+    @OriginalMember(owner = "client!ja", name = "a", descriptor = "(IIIIB)V")
+    public static void method2310(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+        if (Cross.type == 1) {
+            Sprites.crosses[Cross.milliseconds / 100].render(Cross.x - 8, Cross.y + -8);
+        }
+        if (Cross.type == 2) {
+            Sprites.crosses[Cross.milliseconds / 100 + 4].render(Cross.x - 8, Cross.y + -8);
+        }
+        setTutorialIsland();
+    }
+
     @OriginalMember(owner = "client!e", name = "c", descriptor = "(B)I")
 	@Override
 	public final int getSize() {
@@ -289,7 +386,7 @@ public final class Player extends PathingEntity {
 			this.anInt1654 = arg0.g2();
 			this.anInt1670 = arg0.g2();
 			if (this.soundRadius != local134 || this.anInt1648 != local175 || this.anInt1658 != local309 || local312 != this.anInt1654 || this.anInt1670 != local315) {
-				Static214.method4359(this);
+				method4359(this);
 			}
 		}
 		if (this.appearance == null) {
@@ -315,20 +412,20 @@ public final class Player extends PathingEntity {
 		@Pc(25) SeqType local25 = this.seqId != -1 && this.anInt3420 == 0 ? SeqTypeList.get(this.seqId) : null;
 		@Pc(54) SeqType local54 = this.movementSeqId == -1 || this.aBoolean98 || this.movementSeqId == this.getBasType().idleAnimationId && local25 != null ? null : SeqTypeList.get(this.movementSeqId);
 		@Pc(76) Model local76 = this.appearance.method1954(this.aClass147Array3, this.anInt3373, local54, local25, this.anInt3396, this.anInt3388, this.anInt3360, this.anInt3425, this.anInt3407);
-		@Pc(79) int local79 = Static198.method1029();
+		@Pc(79) int local79 = PlayerAppearance.method1029();
 		if (GlRenderer.enabled && GameShell.maxMemory < 96 && local79 > 50) {
-			Static16.method501();
+			method501();
 		}
 		@Pc(102) int local102;
 		if (client.modeWhat != 0 && local79 < 50) {
 			local102 = 50 - local79;
 			while (anInt2863 < local102) {
-				Static51.aByteArrayArray8[anInt2863] = new byte[102400];
+				aByteArrayArray8[anInt2863] = new byte[102400];
 				anInt2863++;
 			}
 			while (anInt2863 > local102) {
 				anInt2863--;
-				Static51.aByteArrayArray8[anInt2863] = null;
+				aByteArrayArray8[anInt2863] = null;
 			}
 		}
 		if (local76 == null) {
@@ -351,8 +448,8 @@ public final class Player extends PathingEntity {
 			}
 		}
 		if (PlayerList.self == this) {
-			for (local102 = Static143.hintMapMarkers.length - 1; local102 >= 0; local102--) {
-				@Pc(245) MapMarker local245 = Static143.hintMapMarkers[local102];
+			for (local102 = MiniMap.hintMapMarkers.length - 1; local102 >= 0; local102--) {
+				@Pc(245) MapMarker local245 = MiniMap.hintMapMarkers[local102];
 				if (local245 != null && local245.playerModelId != -1) {
 					@Pc(291) int local291;
 					@Pc(302) int local302;
@@ -389,14 +486,14 @@ public final class Player extends PathingEntity {
 			if (local184 != null) {
 				local184.translate(0, -this.spotAnimY, 0);
 				if (local471.aBoolean100) {
-					if (Static101.anInt2640 != 0) {
-						local184.rotateX(Static101.anInt2640);
+					if (PathingEntity.anInt2640 != 0) {
+						local184.rotateX(PathingEntity.anInt2640);
 					}
 					if (PathingEntity.anInt2680 != 0) {
 						local184.rotateZ(PathingEntity.anInt2680);
 					}
-					if (Static62.anInt1938 != 0) {
-						local184.translate(0, Static62.anInt1938, 0);
+					if (PathingEntity.anInt1938 != 0) {
+						local184.translate(0, PathingEntity.anInt1938, 0);
 					}
 				}
 			}

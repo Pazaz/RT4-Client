@@ -40,7 +40,7 @@ public final class VorbisCodebook {
 			local27 = 0;
 			local32 = VorbisSound.method2350(5) + 1;
 			while (local27 < this.anInt3056) {
-				@Pc(44) int local44 = VorbisSound.method2350(Static204.method3674(this.anInt3056 - local27));
+				@Pc(44) int local44 = VorbisSound.method2350(method3674(this.anInt3056 - local27));
 				for (local46 = 0; local46 < local44; local46++) {
 					this.anIntArray286[local27++] = local32;
 				}
@@ -115,6 +115,32 @@ public final class VorbisCodebook {
         for (returnValue = (int) Math.pow((double) arg0, 1.0D / (double) arg1) + 1; IntUtils.pow(arg1, returnValue) > arg0; returnValue--) {
         }
         return returnValue;
+    }
+
+    @OriginalMember(owner = "client!qi", name = "b", descriptor = "(II)I")
+    public static int method3674(@OriginalArg(0) int arg0) {
+        @Pc(5) int local5 = 0;
+        if (arg0 < 0 || arg0 >= 65536) {
+            local5 += 16;
+            arg0 >>>= 0x10;
+        }
+        if (arg0 >= 256) {
+            local5 += 8;
+            arg0 >>>= 0x8;
+        }
+        if (arg0 >= 16) {
+            local5 += 4;
+            arg0 >>>= 0x4;
+        }
+        if (arg0 >= 4) {
+            arg0 >>>= 0x2;
+            local5 += 2;
+        }
+        if (arg0 >= 1) {
+            arg0 >>>= 0x1;
+            local5++;
+        }
+        return arg0 + local5;
     }
 
     @OriginalMember(owner = "client!ji", name = "a", descriptor = "()[F")

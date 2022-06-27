@@ -18,7 +18,13 @@ public final class Static176 {
 	public static final JagString aClass100_783 = JagString.parse(")4p=");
     @OriginalMember(owner = "client!rc", name = "G", descriptor = "Lclient!na;")
     public static final JagString aClass100_230 = JagString.parse("");
-    @OriginalMember(owner = "client!ob", name = "f", descriptor = "Lclient!ve;")
+	@OriginalMember(owner = "client!ja", name = "s", descriptor = "Lclient!na;")
+	public static final JagString HTTP_PROTOCOL = JagString.parse("http:)4)4");
+    @OriginalMember(owner = "client!vd", name = "F", descriptor = "Lclient!na;")
+	public static final JagString aClass100_945 = JagString.parse("0");
+	@OriginalMember(owner = "client!q", name = "a", descriptor = "Lclient!na;")
+	public static final JagString aClass100_260 = JagString.parse(")1a2)1m");
+	@OriginalMember(owner = "client!ob", name = "f", descriptor = "Lclient!ve;")
 	public static Js5 aClass153_76;
 
 	@OriginalMember(owner = "client!ob", name = "a", descriptor = "[Z")
@@ -35,7 +41,7 @@ public final class Static176 {
 
 	@OriginalMember(owner = "client!ob", name = "a", descriptor = "(IB)Z")
 	public static boolean hopWorld(@OriginalArg(0) int arg0) {
-		@Pc(3) World local3 = Static54.getWorld(arg0);
+		@Pc(3) World local3 = ScriptRunner.getWorld(arg0);
 		if (local3 == null) {
 			return false;
 		} else if (SignLink.anInt5928 == 1 || SignLink.anInt5928 == 2 || client.modeWhere == 2) {
@@ -57,7 +63,7 @@ public final class Static176 {
 			if (client.settings != null) {
 				local89 = JagString.concatenate(new JagString[] { aClass100_783, client.settings});
 			}
-			@Pc(182) JagString local182 = JagString.concatenate(new JagString[] { Static115.HTTP_PROTOCOL, local3.hostname, local62, aClass100_1107, JagString.parseInt(client.language), aClass100_801, JagString.parseInt(client.affiliate), local89, Static139.aClass100_659, client.objectTag ? aClass100_184 : Static260.aClass100_945, aClass100_420, client.javaScript ? aClass100_184 : Static260.aClass100_945, Static198.aClass100_260, client.advertSuppressed ? aClass100_184 : Static260.aClass100_945 });
+			@Pc(182) JagString local182 = JagString.concatenate(new JagString[] { HTTP_PROTOCOL, local3.hostname, local62, aClass100_1107, JagString.parseInt(client.language), aClass100_801, JagString.parseInt(client.affiliate), local89, Static139.aClass100_659, client.objectTag ? aClass100_184 : aClass100_945, aClass100_420, client.javaScript ? aClass100_184 : aClass100_945, aClass100_260, client.advertSuppressed ? aClass100_184 : aClass100_945 });
 			try {
 				client.instance.getAppletContext().showDocument(local182.method3107(), "_self");
 				return true;
@@ -67,10 +73,4 @@ public final class Static176 {
 		}
 	}
 
-	@OriginalMember(owner = "client!ob", name = "a", descriptor = "(IIIIII)V")
-	public static void method3308(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
-		for (@Pc(8) int local8 = arg2; local8 <= arg0; local8++) {
-			Static131.method2576(Static71.anIntArrayArray10[local8], arg3, arg1, arg4);
-		}
-	}
 }

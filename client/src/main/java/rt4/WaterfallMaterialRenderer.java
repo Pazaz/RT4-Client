@@ -50,9 +50,9 @@ public final class WaterfallMaterialRenderer implements MaterialRenderer {
 		local7.glPushMatrix();
 		local7.glLoadIdentity();
 		local7.glRotatef(180.0F, 1.0F, 0.0F, 0.0F);
-		local7.glRotatef((float) Static253.anInt5559 * 360.0F / 2048.0F, 1.0F, 0.0F, 0.0F);
-		local7.glRotatef((float) Static253.anInt1815 * 360.0F / 2048.0F, 0.0F, 1.0F, 0.0F);
-		local7.glTranslatef((float) -Static253.anInt406, (float) -Static253.anInt4675, (float) -Static253.anInt5158);
+		local7.glRotatef((float) MaterialManager.anInt5559 * 360.0F / 2048.0F, 1.0F, 0.0F, 0.0F);
+		local7.glRotatef((float) MaterialManager.anInt1815 * 360.0F / 2048.0F, 0.0F, 1.0F, 0.0F);
+		local7.glTranslatef((float) -MaterialManager.anInt406, (float) -MaterialManager.anInt4675, (float) -MaterialManager.anInt5158);
 		local7.glTexGenfv(GL2.GL_S, GL2.GL_EYE_PLANE, this.aFloatArray21, 0);
 		this.aFloatArray21[3] = local27 * (float) GlRenderer.anInt5323;
 		this.aFloatArray21[0] = 0.0F;

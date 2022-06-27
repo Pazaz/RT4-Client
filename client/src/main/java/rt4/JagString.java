@@ -21,7 +21,27 @@ public final class JagString implements StringInterface {
 	public static final JagString aClass100_853 = parse("null");
 	@OriginalMember(owner = "client!t", name = "C", descriptor = "Lclient!na;")
 	public static final JagString aClass100_994 = parse(")3");
-	@OriginalMember(owner = "client!na", name = "T", descriptor = "[B")
+	@OriginalMember(owner = "client!dm", name = "n", descriptor = "Lclient!na;")
+	public static final JagString PERCENT_SIGN = parse("(U");
+	@OriginalMember(owner = "client!jh", name = "g", descriptor = "Lclient!na;")
+	public static final JagString aClass100_591 = parse("(Udns");
+	@OriginalMember(owner = "client!tb", name = "P", descriptor = "Lclient!na;")
+	public static final JagString aClass100_1002 = parse("(U5");
+	@OriginalMember(owner = "client!hh", name = "a", descriptor = "Lclient!na;")
+	public static final JagString aClass100_520 = parse("(U4");
+	@OriginalMember(owner = "client!mj", name = "g", descriptor = "Lclient!na;")
+	public static final JagString aClass100_761 = parse("(U3");
+	@OriginalMember(owner = "client!wh", name = "u", descriptor = "Lclient!na;")
+	public static final JagString aClass100_1097 = parse("(U2");
+	@OriginalMember(owner = "client!bm", name = "p", descriptor = "Lclient!na;")
+	public static final JagString aClass100_133 = parse("(U1");
+	@OriginalMember(owner = "client!vk", name = "a", descriptor = "[I")
+	public static final int[] anIntArray471 = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 73, 74, 76, 78, 83, 84, 85, 86, 91, 92, 93, 94, 95, 97, 103, 104, 105, 106, 107, 108, 113, 114, 115, 116, 118, 119, 120, 121, 122, 123, 124, 125, 133, 134, 136, 138, 143, 144, 145, 146, 151, 152, 153, 154, 155, 157, 163, 164, 165, 166, 168, 169, 174, 175, 176, 177, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 97, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 157, 215, 216, 117, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 66, 66, 66, 66, 66, 66, 65, 75, 79, 79, 79, 79, 87, 87, 87, 87, 77, 96, 98, 98, 98, 98, 98, 250, 251, 109, 109, 109, 109, 117, 252, 167, 126, 126, 126, 126, 126, 126, 125, 135, 139, 139, 139, 139, 147, 147, 147, 147, 137, 156, 158, 158, 158, 158, 158, 253, 254, 170, 170, 170, 170, 178, 255, 178 };
+	@OriginalMember(owner = "client!sh", name = "e", descriptor = "Lclient!na;")
+	public static final JagString aClass100_967 = parse("");
+	@OriginalMember(owner = "client!li", name = "w", descriptor = "Lclient!sc;")
+    public static HashTable aClass133_13;
+    @OriginalMember(owner = "client!na", name = "T", descriptor = "[B")
 	public byte[] chars;
 
 	@OriginalMember(owner = "client!na", name = "lb", descriptor = "I")
@@ -201,26 +221,26 @@ public final class JagString implements StringInterface {
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(Lclient!be;Lclient!na;I)Lclient!na;")
 	public static JagString method2465(@OriginalArg(0) Component arg0, @OriginalArg(1) JagString arg1) {
-		if (arg1.indexOf(Static127.PERCENT_SIGN) == -1) {
+		if (arg1.indexOf(PERCENT_SIGN) == -1) {
 			return arg1;
 		}
 		while (true) {
-			@Pc(14) int local14 = arg1.indexOf(Static127.aClass100_133);
+			@Pc(14) int local14 = arg1.indexOf(aClass100_133);
 			if (local14 == -1) {
 				while (true) {
-					local14 = arg1.indexOf(Static127.aClass100_1097);
+					local14 = arg1.indexOf(aClass100_1097);
 					if (local14 == -1) {
 						while (true) {
-							local14 = arg1.indexOf(Static127.aClass100_761);
+							local14 = arg1.indexOf(aClass100_761);
 							if (local14 == -1) {
 								while (true) {
-									local14 = arg1.indexOf(Static127.aClass100_520);
+									local14 = arg1.indexOf(aClass100_520);
 									if (local14 == -1) {
 										while (true) {
-											local14 = arg1.indexOf(Static127.aClass100_1002);
+											local14 = arg1.indexOf(aClass100_1002);
 											if (local14 == -1) {
 												while (true) {
-													local14 = arg1.indexOf(Static127.aClass100_591);
+													local14 = arg1.indexOf(aClass100_591);
 													if (local14 == -1) {
 														return arg1;
 													}
@@ -235,20 +255,175 @@ public final class JagString implements StringInterface {
 													arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), local246, arg1.substring(local14 + 4) });
 												}
 											}
-											arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), StringUtils.method4510(Static127.method3212(4, arg0)), arg1.substring(local14 + 2) });
+											arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), StringUtils.method4510(method3212(4, arg0)), arg1.substring(local14 + 2) });
 										}
 									}
-									arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), StringUtils.method4510(Static127.method3212(3, arg0)), arg1.substring(local14 + 2) });
+									arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), StringUtils.method4510(method3212(3, arg0)), arg1.substring(local14 + 2) });
 								}
 							}
-							arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), StringUtils.method4510(Static127.method3212(2, arg0)), arg1.substring(local14 + 2) });
+							arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), StringUtils.method4510(method3212(2, arg0)), arg1.substring(local14 + 2) });
 						}
 					}
-					arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), StringUtils.method4510(Static127.method3212(1, arg0)), arg1.substring(local14 + 2) });
+					arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), StringUtils.method4510(method3212(1, arg0)), arg1.substring(local14 + 2) });
 				}
 			}
-			arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), StringUtils.method4510(Static127.method3212(0, arg0)), arg1.substring(local14 + 2) });
+			arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), StringUtils.method4510(method3212(0, arg0)), arg1.substring(local14 + 2) });
 		}
+	}
+
+    @OriginalMember(owner = "client!we", name = "a", descriptor = "(BILclient!be;)I")
+    public static int method3212(@OriginalArg(1) int arg0, @OriginalArg(2) Component arg1) {
+        if (arg1.anIntArrayArray4 == null || arg0 >= arg1.anIntArrayArray4.length) {
+            return -2;
+        }
+        try {
+            @Pc(33) int[] local33 = arg1.anIntArrayArray4[arg0];
+            @Pc(35) byte local35 = 0;
+            @Pc(37) int local37 = 0;
+            @Pc(39) int local39 = 0;
+            while (true) {
+                @Pc(41) int local41 = 0;
+                @Pc(46) int local46 = local33[local39++];
+                @Pc(48) byte local48 = 0;
+                if (local46 == 0) {
+                    return local37;
+                }
+                if (local46 == 15) {
+                    local48 = 1;
+                }
+                if (local46 == 16) {
+                    local48 = 2;
+                }
+                if (local46 == 1) {
+                    local41 = PlayerSkillXpTable.boostedLevels[local33[local39++]];
+                }
+                if (local46 == 17) {
+                    local48 = 3;
+                }
+                if (local46 == 2) {
+                    local41 = PlayerSkillXpTable.baseLevels[local33[local39++]];
+                }
+                if (local46 == 3) {
+                    local41 = PlayerSkillXpTable.experience[local33[local39++]];
+                }
+                @Pc(124) int local124;
+                @Pc(135) Component local135;
+                @Pc(140) int local140;
+                @Pc(152) int local152;
+                if (local46 == 4) {
+                    local124 = local33[local39++] << 16;
+                    @Pc(131) int local131 = local124 + local33[local39++];
+                    local135 = InterfaceList.getComponent(local131);
+                    local140 = local33[local39++];
+                    if (local140 != -1 && (!ObjTypeList.get(local140).members || LoginManager.mapMembers)) {
+                        for (local152 = 0; local152 < local135.objTypes.length; local152++) {
+                            if (local140 + 1 == local135.objTypes[local152]) {
+                                local41 += local135.objCounts[local152];
+                            }
+                        }
+                    }
+                }
+                if (local46 == 5) {
+                    local41 = VarpDomain.activeVarps[local33[local39++]];
+                }
+                if (local46 == 6) {
+                    local41 = PlayerSkillXpTable.xpLevelLookup[PlayerSkillXpTable.baseLevels[local33[local39++]] - 1];
+                }
+                if (local46 == 7) {
+                    local41 = VarpDomain.activeVarps[local33[local39++]] * 100 / 46875;
+                }
+                if (local46 == 8) {
+                    local41 = PlayerList.self.combatLevel;
+                }
+                if (local46 == 9) {
+                    for (local124 = 0; local124 < 25; local124++) {
+                        if (Static182.aBooleanArray97[local124]) {
+                            local41 += PlayerSkillXpTable.baseLevels[local124];
+                        }
+                    }
+                }
+                if (local46 == 10) {
+                    local124 = local33[local39++] << 16;
+                    local124 += local33[local39++];
+                    local135 = InterfaceList.getComponent(local124);
+                    local140 = local33[local39++];
+                    if (local140 != -1 && (!ObjTypeList.get(local140).members || LoginManager.mapMembers)) {
+                        for (local152 = 0; local152 < local135.objTypes.length; local152++) {
+                            if (local135.objTypes[local152] == local140 + 1) {
+                                local41 = 999999999;
+                                break;
+                            }
+                        }
+                    }
+                }
+                if (local46 == 11) {
+                    local41 = Player.runEnergy;
+                }
+                if (local46 == 12) {
+                    local41 = Player.weight;
+                }
+                if (local46 == 13) {
+                    local124 = VarpDomain.activeVarps[local33[local39++]];
+                    @Pc(353) int local353 = local33[local39++];
+                    local41 = (0x1 << local353 & local124) == 0 ? 0 : 1;
+                }
+                if (local46 == 14) {
+                    local124 = local33[local39++];
+                    local41 = VarpDomain.getVarbit(local124);
+                }
+                if (local46 == 18) {
+                    local41 = (PlayerList.self.xFine >> 7) + Camera.originX;
+                }
+                if (local46 == 19) {
+                    local41 = (PlayerList.self.zFine >> 7) + Camera.originZ;
+                }
+                if (local46 == 20) {
+                    local41 = local33[local39++];
+                }
+                if (local48 == 0) {
+                    if (local35 == 0) {
+                        local37 += local41;
+                    }
+                    if (local35 == 1) {
+                        local37 -= local41;
+                    }
+                    if (local35 == 2 && local41 != 0) {
+                        local37 /= local41;
+                    }
+                    if (local35 == 3) {
+                        local37 *= local41;
+                    }
+                    local35 = 0;
+                } else {
+                    local35 = local48;
+                }
+            }
+        } catch (@Pc(464) Exception local464) {
+            return -1;
+        }
+    }
+
+    @OriginalMember(owner = "client!nb", name = "a", descriptor = "(II)Lclient!na;")
+    public static JagString getNbsp() {
+        @Pc(21) JagString str = new JagString();
+        str.length = 1;
+        str.chars = new byte[1];
+        str.chars[0] = -96; // 0xA0 - NBSP
+        return str;
+    }
+
+	@OriginalMember(owner = "client!sj", name = "a", descriptor = "(Ljava/lang/String;I)Lclient!na;")
+	public static JagString method3952(@OriginalArg(0) String arg0) {
+		@Pc(14) byte[] local14 = arg0.getBytes(StandardCharsets.ISO_8859_1);
+		@Pc(23) JagString local23 = new JagString();
+		local23.chars = local14;
+		local23.length = 0;
+		for (@Pc(31) int local31 = 0; local31 < local14.length; local31++) {
+			if (local14[local31] != 0) {
+				local14[local23.length++] = local14[local31];
+			}
+		}
+		return local23;
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(Z)Ljava/net/URL;")
@@ -527,10 +702,10 @@ public final class JagString implements StringInterface {
 			} else {
 				local17--;
 			}
-			if (Static266.anIntArray471[local12] < Static266.anIntArray471[local14]) {
+			if (anIntArray471[local12] < anIntArray471[local14]) {
 				return -1;
 			}
-			if (Static266.anIntArray471[local14] < Static266.anIntArray471[local12]) {
+			if (anIntArray471[local14] < anIntArray471[local12]) {
 				return 1;
 			}
 		}
@@ -918,10 +1093,10 @@ public final class JagString implements StringInterface {
 		@Pc(19) Class local19 = JagString.class;
 		synchronized (local19) {
 			@Pc(30) StringNode local30;
-			if (Static148.aClass133_13 == null) {
-				Static148.aClass133_13 = new HashTable(4096);
+			if (aClass133_13 == null) {
+				aClass133_13 = new HashTable(4096);
 			} else {
-				for (local30 = (StringNode) Static148.aClass133_13.get(local9); local30 != null; local30 = (StringNode) Static148.aClass133_13.nextWithKey()) {
+				for (local30 = (StringNode) aClass133_13.get(local9); local30 != null; local30 = (StringNode) aClass133_13.nextWithKey()) {
 					if (this.strEquals(local30.value)) {
 						return local30.value;
 					}
@@ -930,7 +1105,7 @@ public final class JagString implements StringInterface {
 			local30 = new StringNode();
 			local30.value = this;
 			this.aBoolean193 = false;
-			Static148.aClass133_13.put(local30, local9);
+			aClass133_13.put(local30, local9);
 			return this;
 		}
 	}
@@ -959,7 +1134,7 @@ public final class JagString implements StringInterface {
 	public final JagString fromParameters(@OriginalArg(1) Applet arg0) {
 		@Pc(19) String local19 = new String(this.chars, 0, this.length);
 		@Pc(23) String local23 = arg0.getParameter(local19);
-		return local23 == null ? null : Static230.method3952(local23);
+		return local23 == null ? null : method3952(local23);
 	}
 
 	@OriginalMember(owner = "client!na", name = "d", descriptor = "(Z)I")
@@ -1024,7 +1199,7 @@ public final class JagString implements StringInterface {
 	@OriginalMember(owner = "client!na", name = "k", descriptor = "(I)Lclient!na;")
 	public final JagString method3159() {
 		@Pc(9) JagString local9 = Base37.decode37(this.encode37());
-		return local9 == null ? Static228.aClass100_967 : local9;
+		return local9 == null ? aClass100_967 : local9;
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(Z[BIII)I")

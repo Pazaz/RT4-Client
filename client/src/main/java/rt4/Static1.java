@@ -10,7 +10,11 @@ public final class Static1 {
     public static final boolean[][] aBooleanArrayArray4 = new boolean[][] { { true, true, true }, { false, false }, { false, true }, { true, false }, { false, true, true }, { true, false, true }, { false, true, false }, { true, false, false } };
     @OriginalMember(owner = "client!kc", name = "s", descriptor = "[I")
 	public static final int[] anIntArray300 = new int[] { 1, 1, 1, 1, 4, 1, 1, 5, 6, 1, 5, 0, 7, 0, 4, 1, 7, 2, 1, 1, 6, 1, 1, 3, 6, 1, 7, 0, 0, 6, 7, 0, 1, 7, 6, 1, 1, 1, 5, 4, 3, 2, 1, 1, 0, 4, 1, 5 };
-    @OriginalMember(owner = "client!a", name = "h", descriptor = "I")
+    @OriginalMember(owner = "client!sh", name = "i", descriptor = "[[I")
+    public static final int[][] anIntArrayArray35 = new int[][] { { 0, 128, 0, 0, 128, 0, 128, 128 }, { 0, 128, 0, 0, 128, 0 }, { 0, 0, 64, 128, 0, 128 }, { 128, 128, 64, 128, 128, 0 }, { 0, 0, 128, 0, 128, 128, 64, 128 }, { 0, 128, 0, 0, 128, 0, 64, 128 }, { 64, 128, 0, 128, 0, 0, 64, 0 }, { 0, 0, 64, 0, 0, 64 }, { 128, 0, 128, 128, 0, 128, 0, 64, 64, 0 }, { 0, 128, 0, 0, 32, 64, 64, 96, 128, 128 }, { 0, 0, 128, 0, 128, 128, 64, 96, 32, 64 }, { 0, 0, 128, 0, 96, 32, 32, 32 } };
+	@OriginalMember(owner = "client!gf", name = "S", descriptor = "[I")
+	public static final int[] anIntArray419 = new int[] { 0, 2, 2, 2, 1, 1, 2, 2, 1, 3, 1, 1 };
+	@OriginalMember(owner = "client!a", name = "h", descriptor = "I")
 	public static int anInt5;
 
 	@OriginalMember(owner = "client!a", name = "e", descriptor = "Lclient!na;")
@@ -18,6 +22,12 @@ public final class Static1 {
 
 	@OriginalMember(owner = "client!a", name = "i", descriptor = "I")
 	public static int anInt6 = 0;
+    @OriginalMember(owner = "client!ig", name = "b", descriptor = "I")
+    public static int anInt2882;
+    @OriginalMember(owner = "client!ig", name = "f", descriptor = "I")
+    public static int anInt2884;
+    @OriginalMember(owner = "client!hc", name = "P", descriptor = "I")
+	public static int anInt2428;
 
     @OriginalMember(owner = "client!a", name = "a", descriptor = "([[F[[F[[II[[F[[B[[II[[B[[B[[B[[[B)[Lclient!hg;")
 	public static GlTile[] method2(@OriginalArg(0) float[][] arg0, @OriginalArg(1) float[][] arg1, @OriginalArg(2) int[][] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) float[][] arg4, @OriginalArg(5) byte[][] arg5, @OriginalArg(6) int[][] arg6, @OriginalArg(8) byte[][] arg7, @OriginalArg(9) byte[][] arg8, @OriginalArg(10) byte[][] arg9, @OriginalArg(11) byte[][][] arg10) {
@@ -57,11 +67,11 @@ public final class Static1 {
 					}
 					@Pc(61) GlTile local61 = method4212(local10, local50);
 					@Pc(67) byte local67 = arg7[local12][local17];
-					@Pc(71) int[] local71 = Static228.anIntArrayArray35[local67];
+					@Pc(71) int[] local71 = anIntArrayArray35[local67];
 					local61.anInt2482 += local71.length / 2;
 					local61.anInt2484++;
 					if (local50.aBoolean310 && local30 != 0) {
-						local61.anInt2482 += Static80.anIntArray419[local67];
+						local61.anInt2482 += anIntArray419[local67];
 					}
 				}
 				if ((arg8[local12][local17] & 0xFF) != 0 || local38 != 0 && arg7[local12][local17] == 0) {
@@ -264,11 +274,11 @@ public final class Static1 {
 					@Pc(1261) GlTile local1261 = method4212(local10, local1250);
 					@Pc(1267) byte local1267 = arg7[local12][local17];
 					@Pc(1273) byte local1273 = arg5[local12][local17];
-					local168 = Static19.method588(local1250.texture, local1250.anInt5899, arg6[local12][local17]);
-					local143 = Static19.method588(local1250.texture, local1250.anInt5899, arg6[local12 + 1][local17]);
-					local163 = Static19.method588(local1250.texture, local1250.anInt5899, arg6[local12 + 1][local17 + 1]);
-					local153 = Static19.method588(local1250.texture, local1250.anInt5899, arg6[local12][local17 + 1]);
-					Static58.method1324(local168, arg2, arg1, local12, arg0, local143, local1273, local30, local163, local38 != 0 && local1250.aBoolean310, local1267, local17, arg4, local153, local1261);
+					local168 = method588(local1250.texture, local1250.anInt5899, arg6[local12][local17]);
+					local143 = method588(local1250.texture, local1250.anInt5899, arg6[local12 + 1][local17]);
+					local163 = method588(local1250.texture, local1250.anInt5899, arg6[local12 + 1][local17 + 1]);
+					local153 = method588(local1250.texture, local1250.anInt5899, arg6[local12][local17 + 1]);
+					method1324(local168, arg2, arg1, local12, arg0, local143, local1273, local30, local163, local38 != 0 && local1250.aBoolean310, local1267, local17, arg4, local153, local1261);
 				}
 				if ((arg8[local12][local17] & 0xFF) != 0 || local127 != 0 && arg7[local12][local17] == 0) {
 					@Pc(1382) int[] local1382 = new int[8];
@@ -462,10 +472,10 @@ public final class Static1 {
 						@Pc(2318) boolean[] local2318 = aBooleanArrayArray4[local2003 == local180 ? local143 : 0];
 						@Pc(2324) FloType local2324 = FloTypeList.method4395(local2003 - 1);
 						@Pc(2329) GlTile local2329 = method4212(local10, local2324);
-						@Pc(2345) int local2345 = Static19.method588(local2324.texture, local2324.anInt5899, arg6[local12][local17]) << 8 | 0xFF;
-						@Pc(2365) int local2365 = Static19.method588(local2324.texture, local2324.anInt5899, arg6[local12 + 1][local17]) << 8 | 0xFF;
-						@Pc(2385) int local2385 = Static19.method588(local2324.texture, local2324.anInt5899, arg6[local12 + 1][local17 + 1]) << 8 | 0xFF;
-						@Pc(2403) int local2403 = Static19.method588(local2324.texture, local2324.anInt5899, arg6[local12][local17 + 1]) << 8 | 0xFF;
+						@Pc(2345) int local2345 = method588(local2324.texture, local2324.anInt5899, arg6[local12][local17]) << 8 | 0xFF;
+						@Pc(2365) int local2365 = method588(local2324.texture, local2324.anInt5899, arg6[local12 + 1][local17]) << 8 | 0xFF;
+						@Pc(2385) int local2385 = method588(local2324.texture, local2324.anInt5899, arg6[local12 + 1][local17 + 1]) << 8 | 0xFF;
+						@Pc(2403) int local2403 = method588(local2324.texture, local2324.anInt5899, arg6[local12][local17 + 1]) << 8 | 0xFF;
 						@Pc(2422) boolean local2422 = local2003 != local202 && local1086[0] && local1068[1];
 						@Pc(2441) boolean local2441 = local2003 != local1035 && local1055[0] && local2318[1];
 						@Pc(2456) boolean local2456 = local214 != local2003 && local1068[0] && local1055[1];
@@ -474,32 +484,32 @@ public final class Static1 {
 						@Pc(2489) int local2489 = local2463 + local1068.length - 2;
 						@Pc(2496) int local2496 = local2489 + local1086.length - 2;
 						@Pc(2503) int local2503 = local2496 + local2318.length - 2;
-						@Pc(2524) int local2524 = Static207.method3683(local2403, 0.0F, local2345, local2365, null, arg2, local12, arg4, local2385, 0, true, local2329, arg1, local17, 64, arg0, 64);
+						@Pc(2524) int local2524 = method3683(local2403, 0.0F, local2345, local2365, null, arg2, local12, arg4, local2385, 0, true, local2329, arg1, local17, 64, arg0, 64);
 						@Pc(2527) int[] local2527 = new int[local2503];
 						@Pc(2529) byte local2529 = 0;
-						@Pc(2550) int local2550 = Static207.method3683(local2403, 0.0F, local2345, local2365, null, arg2, local12, arg4, local2385, 0, local2456, local2329, arg1, local17, 0, arg0, 128);
-						@Pc(2571) int local2571 = Static207.method3683(local2403, 0.0F, local2345, local2365, null, arg2, local12, arg4, local2385, 0, local2441, local2329, arg1, local17, 128, arg0, 128);
-						@Pc(2592) int local2592 = Static207.method3683(local2403, 0.0F, local2345, local2365, null, arg2, local12, arg4, local2385, 0, local2422, local2329, arg1, local17, 0, arg0, 0);
-						@Pc(2613) int local2613 = Static207.method3683(local2403, 0.0F, local2345, local2365, null, arg2, local12, arg4, local2385, 0, local2482, local2329, arg1, local17, 128, arg0, 0);
+						@Pc(2550) int local2550 = method3683(local2403, 0.0F, local2345, local2365, null, arg2, local12, arg4, local2385, 0, local2456, local2329, arg1, local17, 0, arg0, 128);
+						@Pc(2571) int local2571 = method3683(local2403, 0.0F, local2345, local2365, null, arg2, local12, arg4, local2385, 0, local2441, local2329, arg1, local17, 128, arg0, 128);
+						@Pc(2592) int local2592 = method3683(local2403, 0.0F, local2345, local2365, null, arg2, local12, arg4, local2385, 0, local2422, local2329, arg1, local17, 0, arg0, 0);
+						@Pc(2613) int local2613 = method3683(local2403, 0.0F, local2345, local2365, null, arg2, local12, arg4, local2385, 0, local2482, local2329, arg1, local17, 128, arg0, 0);
 						@Pc(2616) int local2616 = local2529 + 1;
 						local2527[0] = local2524;
 						@Pc(2621) int local2621 = local2616 + 1;
 						local2527[1] = local2571;
 						if (local1055.length > 2) {
 							local2621++;
-							local2527[2] = Static207.method3683(local2403, 0.0F, local2345, local2365, null, arg2, local12, arg4, local2385, 0, local1055[2], local2329, arg1, local17, 64, arg0, 128);
+							local2527[2] = method3683(local2403, 0.0F, local2345, local2365, null, arg2, local12, arg4, local2385, 0, local1055[2], local2329, arg1, local17, 64, arg0, 128);
 						}
 						local2527[local2621++] = local2550;
 						if (local1068.length > 2) {
-							local2527[local2621++] = Static207.method3683(local2403, 0.0F, local2345, local2365, null, arg2, local12, arg4, local2385, 0, local1068[2], local2329, arg1, local17, 0, arg0, 64);
+							local2527[local2621++] = method3683(local2403, 0.0F, local2345, local2365, null, arg2, local12, arg4, local2385, 0, local1068[2], local2329, arg1, local17, 0, arg0, 64);
 						}
 						local2527[local2621++] = local2592;
 						if (local1086.length > 2) {
-							local2527[local2621++] = Static207.method3683(local2403, 0.0F, local2345, local2365, null, arg2, local12, arg4, local2385, 0, local1086[2], local2329, arg1, local17, 64, arg0, 0);
+							local2527[local2621++] = method3683(local2403, 0.0F, local2345, local2365, null, arg2, local12, arg4, local2385, 0, local1086[2], local2329, arg1, local17, 64, arg0, 0);
 						}
 						local2527[local2621++] = local2613;
 						if (local2318.length > 2) {
-							local2527[local2621++] = Static207.method3683(local2403, 0.0F, local2345, local2365, null, arg2, local12, arg4, local2385, 0, local2318[2], local2329, arg1, local17, 128, arg0, 64);
+							local2527[local2621++] = method3683(local2403, 0.0F, local2345, local2365, null, arg2, local12, arg4, local2385, 0, local2318[2], local2329, arg1, local17, 128, arg0, 64);
 						}
 						local2527[local2621++] = local2571;
 						local2329.method1945(local30, local12, local17, local2527, null, true);
@@ -540,7 +550,7 @@ public final class Static1 {
 		if (WorldMap.aClass3_Sub2_Sub1_2 == null || arg2 != WorldMap.aClass3_Sub2_Sub1_2.width || WorldMap.aClass3_Sub2_Sub1_2.height != arg1) {
 			@Pc(63) SoftwareSprite local63 = new SoftwareSprite(arg2, arg1);
 			SoftwareRaster.setSize(local63.pixels, arg2, arg1);
-			Static214.method4364(arg2, 0, WorldMap.width, 0, 0, WorldMap.length, arg1, 0);
+			WorldMap.method4364(arg2, 0, WorldMap.width, 0, 0, WorldMap.length, arg1, 0);
 			if (GlRenderer.enabled) {
 				WorldMap.aClass3_Sub2_Sub1_2 = new GlSprite(local63);
 			} else {
@@ -553,9 +563,9 @@ public final class Static1 {
 			}
 		}
 		WorldMap.aClass3_Sub2_Sub1_2.method1415(arg0, arg3);
-		@Pc(147) int local147 = arg1 * Static109.anInt2884 / WorldMap.length + arg3;
+		@Pc(147) int local147 = arg1 * anInt2884 / WorldMap.length + arg3;
 		@Pc(153) int local153 = WorldMap.anInt1176 * arg1 / WorldMap.length;
-		@Pc(161) int local161 = arg0 + arg2 * Static109.anInt2882 / WorldMap.width;
+		@Pc(161) int local161 = arg0 + arg2 * anInt2882 / WorldMap.width;
 		@Pc(167) int local167 = arg2 * WorldMap.anInt2387 / WorldMap.width;
 		@Pc(169) int local169 = 16711680;
 		if (client.game == 1) {
@@ -568,14 +578,14 @@ public final class Static1 {
 			SoftwareRaster.fillRectAlpha(local161, local147, local167, local153, local169, 128);
 			SoftwareRaster.drawRect(local161, local147, local167, local153, local169);
 		}
-		if (Static201.anInt1864 <= 0) {
+		if (WorldMap.anInt1864 <= 0) {
 			return;
 		}
 		@Pc(225) int local225;
-		if (Static91.anInt2428 > 10) {
-			local225 = (20 - Static91.anInt2428) * 25;
+		if (anInt2428 > 10) {
+			local225 = (20 - anInt2428) * 25;
 		} else {
-			local225 = Static91.anInt2428 * 25;
+			local225 = anInt2428 * 25;
 		}
 		for (@Pc(238) MapElement local238 = (MapElement) WorldMap.mapElements.head(); local238 != null; local238 = (MapElement) WorldMap.mapElements.next()) {
 			if (local238.id == Static9.anInt172) {
@@ -599,5 +609,230 @@ public final class Static1 {
             arg0.put(local38, local23);
         }
         return local38;
+    }
+
+    @OriginalMember(owner = "client!bi", name = "a", descriptor = "(IIBI)I")
+    public static int method588(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2) {
+        @Pc(19) int local19 = Rasteriser.palette[SoftwareModel.method4585(arg1, arg2)];
+        if (arg0 > 0) {
+            @Pc(31) int local31 = Rasteriser.textureProvider.method3238(arg0 & 0xFFFF);
+            @Pc(49) int local49;
+            @Pc(73) int local73;
+            if (local31 != 0) {
+                if (arg2 < 0) {
+                    local49 = 0;
+                } else if (arg2 > 127) {
+                    local49 = 16777215;
+                } else {
+                    local49 = arg2 * 131586;
+                }
+                if (local31 == 256) {
+                    local19 = local49;
+                } else {
+                    local73 = 256 - local31;
+                    local19 = ((local49 & 0xFF00) * local31 + local73 * (local19 & 0xFF00) & 0xFF0000) + (local31 * (local49 & 0xFF00FF) + ((local19 & 0xFF00FF) * local73) & 0xFF00FF00) >> 8;
+                }
+            }
+            local49 = Rasteriser.textureProvider.method3229(arg0 & 0xFFFF);
+            if (local49 != 0) {
+                local49 += 256;
+                @Pc(125) int local125 = (local19 >> 16 & 0xFF) * local49;
+                if (local125 > 65535) {
+                    local125 = 65535;
+                }
+                local73 = (local19 >> 8 & 0xFF) * local49;
+                if (local73 > 65535) {
+                    local73 = 65535;
+                }
+                @Pc(150) int local150 = local49 * (local19 & 0xFF);
+                if (local150 > 65535) {
+                    local150 = 65535;
+                }
+                local19 = (local150 >> 8) + (local73 & 0xFF00) + (local125 << 8 & 0xFF001F);
+            }
+        }
+        return local19;
+    }
+
+	@OriginalMember(owner = "client!eh", name = "a", descriptor = "(I[[I[[FI[[FIBIIBZBI[[FILclient!hg;)V")
+	public static void method1324(@OriginalArg(0) int arg0, @OriginalArg(1) int[][] arg1, @OriginalArg(2) float[][] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) float[][] arg4, @OriginalArg(5) int arg5, @OriginalArg(6) byte arg6, @OriginalArg(7) int arg7, @OriginalArg(8) int arg8, @OriginalArg(10) boolean arg9, @OriginalArg(11) byte arg10, @OriginalArg(12) int arg11, @OriginalArg(13) float[][] arg12, @OriginalArg(14) int arg13, @OriginalArg(15) GlTile arg14) {
+		@Pc(11) int local11 = (arg0 << 8) + 255;
+		@Pc(17) int local17 = (arg5 << 8) + 255;
+		@Pc(23) int local23 = (arg8 << 8) + 255;
+		@Pc(29) int local29 = (arg13 << 8) + 255;
+		@Pc(33) int[] local33 = anIntArrayArray35[arg10];
+		@Pc(39) int[] local39 = new int[local33.length >> 1];
+		@Pc(41) int local41;
+		for (local41 = 0; local41 < local39.length; local41++) {
+			local39[local41] = method3683(local29, 0.0F, local11, local17, null, arg1, arg3, arg12, local23, arg6, false, arg14, arg2, arg11, local33[local41 + local41], arg4, local33[local41 + local41 + 1]);
+		}
+		@Pc(87) int[] local87 = null;
+		if (arg9) {
+			@Pc(191) int local191;
+			if (arg10 == 1) {
+				local41 = method3683(local29, 0.0F, local11, local17, null, arg1, arg3, arg12, local23, arg6, true, arg14, arg2, arg11, 64, arg4, 128);
+				local191 = method3683(local29, 0.0F, local11, local17, null, arg1, arg3, arg12, local23, arg6, true, arg14, arg2, arg11, 128, arg4, 64);
+				local87 = new int[] { local191, local41, local39[2], local41, local39[0], local39[2] };
+			} else if (arg10 == 2) {
+				local87 = new int[6];
+				local41 = method3683(local29, 0.0F, local11, local17, null, arg1, arg3, arg12, local23, arg6, true, arg14, arg2, arg11, 128, arg4, 128);
+				local191 = method3683(local29, 0.0F, local11, local17, null, arg1, arg3, arg12, local23, arg6, true, arg14, arg2, arg11, 64, arg4, 0);
+				local87[2] = local41;
+				local87[0] = local39[0];
+				local87[5] = local39[0];
+				local87[3] = local41;
+				local87[1] = local191;
+				local87[4] = local39[1];
+			} else if (arg10 == 3) {
+				local87 = new int[6];
+				local41 = method3683(local29, 0.0F, local11, local17, null, arg1, arg3, arg12, local23, arg6, true, arg14, arg2, arg11, 0, arg4, 128);
+				local191 = method3683(local29, 0.0F, local11, local17, null, arg1, arg3, arg12, local23, arg6, true, arg14, arg2, arg11, 64, arg4, 0);
+				local87[4] = local191;
+				local87[1] = local39[1];
+				local87[0] = local39[2];
+				local87[3] = local41;
+				local87[2] = local41;
+				local87[5] = local39[2];
+			} else if (arg10 == 4) {
+				local87 = new int[3];
+				local41 = method3683(local29, 0.0F, local11, local17, null, arg1, arg3, arg12, local23, arg6, true, arg14, arg2, arg11, 0, arg4, 128);
+				local87[0] = local39[3];
+				local87[2] = local39[0];
+				local87[1] = local41;
+			} else if (arg10 == 5) {
+				local87 = new int[3];
+				local41 = method3683(local29, 0.0F, local11, local17, null, arg1, arg3, arg12, local23, arg6, true, arg14, arg2, arg11, 128, arg4, 128);
+				local87[1] = local41;
+				local87[0] = local39[2];
+				local87[2] = local39[3];
+			} else if (arg10 == 6) {
+				local87 = new int[6];
+				local41 = method3683(local29, 0.0F, local11, local17, null, arg1, arg3, arg12, local23, arg6, true, arg14, arg2, arg11, 128, arg4, 0);
+				local191 = method3683(local29, 0.0F, local11, local17, null, arg1, arg3, arg12, local23, arg6, true, arg14, arg2, arg11, 128, arg4, 128);
+				local87[1] = local41;
+				local87[0] = local39[3];
+				local87[2] = local191;
+				local87[4] = local39[0];
+				local87[3] = local191;
+				local87[5] = local39[3];
+			} else if (arg10 == 7) {
+				local87 = new int[6];
+				local41 = method3683(local29, 0.0F, local11, local17, null, arg1, arg3, arg12, local23, arg6, true, arg14, arg2, arg11, 0, arg4, 128);
+				local191 = method3683(local29, 0.0F, local11, local17, null, arg1, arg3, arg12, local23, arg6, true, arg14, arg2, arg11, 128, arg4, 0);
+				local87[3] = local41;
+				local87[2] = local41;
+				local87[0] = local39[1];
+				local87[4] = local39[2];
+				local87[1] = local191;
+				local87[5] = local39[1];
+			} else if (arg10 == 8) {
+				local87 = new int[3];
+				local41 = method3683(local29, 0.0F, local11, local17, null, arg1, arg3, arg12, local23, arg6, true, arg14, arg2, arg11, 0, arg4, 0);
+				local87[2] = local39[4];
+				local87[0] = local39[3];
+				local87[1] = local41;
+			} else if (arg10 == 9) {
+				local41 = method3683(local29, 0.0F, local11, local17, null, arg1, arg3, arg12, local23, arg6, true, arg14, arg2, arg11, 128, arg4, 64);
+				local191 = method3683(local29, 0.0F, local11, local17, null, arg1, arg3, arg12, local23, arg6, true, arg14, arg2, arg11, 96, arg4, 32);
+				@Pc(715) int local715 = method3683(local29, 0.0F, local11, local17, null, arg1, arg3, arg12, local23, arg6, true, arg14, arg2, arg11, 64, arg4, 0);
+				local87 = new int[] { local191, local41, local39[4], local191, local39[4], local39[3], local191, local39[3], local39[2], local191, local39[2], local39[1], local191, local39[1], local715 };
+			} else if (arg10 == 10) {
+				local87 = new int[9];
+				local41 = method3683(local29, 0.0F, local11, local17, null, arg1, arg3, arg12, local23, arg6, true, arg14, arg2, arg11, 0, arg4, 128);
+				local87[0] = local39[2];
+				local87[8] = local39[0];
+				local87[1] = local41;
+				local87[4] = local41;
+				local87[2] = local39[3];
+				local87[7] = local41;
+				local87[3] = local39[3];
+				local87[5] = local39[4];
+				local87[6] = local39[4];
+			} else if (arg10 == 11) {
+				local87 = new int[12];
+				local41 = method3683(local29, 0.0F, local11, local17, null, arg1, arg3, arg12, local23, arg6, true, arg14, arg2, arg11, 0, arg4, 64);
+				local191 = method3683(local29, 0.0F, local11, local17, null, arg1, arg3, arg12, local23, arg6, true, arg14, arg2, arg11, 128, arg4, 64);
+				local87[5] = local41;
+				local87[1] = local41;
+				local87[8] = local41;
+				local87[0] = local39[3];
+				local87[2] = local39[0];
+				local87[11] = local191;
+				local87[6] = local39[2];
+				local87[7] = local191;
+				local87[10] = local39[1];
+				local87[3] = local39[3];
+				local87[4] = local39[2];
+				local87[9] = local39[2];
+			}
+		}
+		arg14.method1945(arg7, arg3, arg11, local39, local87, false);
+	}
+
+    @OriginalMember(owner = "client!ql", name = "a", descriptor = "(IFII[[I[[II[[FIBIZLclient!hg;[[FII[[FI)I")
+    public static int method3683(@OriginalArg(0) int arg0, @OriginalArg(1) float arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int[][] arg4, @OriginalArg(5) int[][] arg5, @OriginalArg(6) int arg6, @OriginalArg(7) float[][] arg7, @OriginalArg(8) int arg8, @OriginalArg(10) int arg9, @OriginalArg(11) boolean arg10, @OriginalArg(12) GlTile arg11, @OriginalArg(13) float[][] arg12, @OriginalArg(14) int arg13, @OriginalArg(15) int arg14, @OriginalArg(16) float[][] arg15, @OriginalArg(17) int arg16) {
+        @Pc(20) int local20;
+        if (arg9 == 1) {
+            local20 = arg14;
+            arg14 = arg16;
+            arg16 = 128 - local20;
+        } else if (arg9 == 2) {
+            arg16 = 128 - arg16;
+            arg14 = 128 - arg14;
+        } else if (arg9 == 3) {
+            local20 = arg14;
+            arg14 = 128 - arg16;
+            arg16 = local20;
+        }
+        @Pc(66) float local66;
+        @Pc(72) float local72;
+        @Pc(80) int local80;
+        @Pc(78) float local78;
+        if (arg14 == 0 && arg16 == 0) {
+            local66 = arg15[arg6][arg13];
+            local72 = arg7[arg6][arg13];
+            local78 = arg12[arg6][arg13];
+            local80 = arg2;
+        } else if (arg14 == 128 && arg16 == 0) {
+            local80 = arg3;
+            local66 = arg15[arg6 + 1][arg13];
+            local72 = arg7[arg6 + 1][arg13];
+            local78 = arg12[arg6 + 1][arg13];
+        } else if (arg14 == 128 && arg16 == 128) {
+            local72 = arg7[arg6 + 1][arg13 + 1];
+            local78 = arg12[arg6 + 1][arg13 + 1];
+            local66 = arg15[arg6 + 1][arg13 + 1];
+            local80 = arg8;
+        } else if (arg14 == 0 && arg16 == 128) {
+            local72 = arg7[arg6][arg13 + 1];
+            local66 = arg15[arg6][arg13 + 1];
+            local78 = arg12[arg6][arg13 + 1];
+            local80 = arg0;
+        } else {
+            local78 = arg12[arg6][arg13];
+            local66 = arg15[arg6][arg13];
+            @Pc(219) float local219 = (float) arg16 / 128.0F;
+            @Pc(224) float local224 = (float) arg14 / 128.0F;
+            @Pc(238) float local238 = local78 + (arg12[arg6 + 1][arg13] - local78) * local224;
+            @Pc(253) float local253 = local66 + (arg15[arg6 + 1][arg13] - local66) * local224;
+            @Pc(261) float local261 = arg12[arg6][arg13 + 1];
+            @Pc(269) float local269 = arg15[arg6][arg13 + 1];
+            @Pc(286) float local286 = local269 + (arg15[arg6 + 1][arg13 + 1] - local269) * local224;
+            local72 = arg7[arg6][arg13];
+            local66 = local253 + local219 * (local286 - local253);
+            @Pc(309) float local309 = arg7[arg6][arg13 + 1];
+            @Pc(326) float local326 = local261 + (arg12[arg6 + 1][arg13 + 1] - local261) * local224;
+            local78 = local238 + local219 * (local326 - local238);
+            @Pc(352) float local352 = local309 + (arg7[arg6 + 1][arg13 + 1] - local309) * local224;
+            @Pc(367) float local367 = local72 + (arg7[arg6 + 1][arg13] - local72) * local224;
+            local72 = local367 + (local352 - local367) * local219;
+            @Pc(382) int local382 = Static69.method1540(arg14, arg2, arg3);
+            @Pc(388) int local388 = Static69.method1540(arg14, arg0, arg8);
+            local80 = Static69.method1540(arg16, local382, local388);
+        }
+        @Pc(405) int local405 = arg16 + (arg13 << 7);
+        @Pc(413) int local413 = Static182.method3361(arg14, arg13, arg5, arg6, arg16);
+        @Pc(420) int local420 = (arg6 << 7) + arg14;
+        return arg11.method1941(local420, local413, local405, local78, local66, local72, arg10 ? local80 & 0xFFFFFF00 : local80, arg4 == null ? 0.0F : (float) (local413 - Static182.method3361(arg14, arg13, arg4, arg6, arg16)) / arg1);
     }
 }

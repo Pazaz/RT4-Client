@@ -1135,7 +1135,7 @@ public final class Component {
 		this.dragRenderBehavior = buffer.g1() == 1;
 		local567 = -1;
 		this.targetVerb = buffer.gjstr();
-		if (Static199.method3594(local175) != 0) {
+		if (ServerActiveProperties.method3594(local175) != 0) {
 			local567 = buffer.g2();
 			this.anInt499 = buffer.g2();
 			if (local567 == 65535) {

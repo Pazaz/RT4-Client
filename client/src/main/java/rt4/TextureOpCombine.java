@@ -25,65 +25,65 @@ public final class TextureOpCombine extends TextureOp {
 			@Pc(28) int[] local28 = this.method4624(1, arg0);
 			@Pc(31) int local31 = this.anInt4543;
 			if (local31 == 1) {
-				for (local31 = 0; local31 < Static189.anInt4457; local31++) {
+				for (local31 = 0; local31 < Static10.anInt4457; local31++) {
 					local11[local31] = local28[local31] + local22[local31];
 				}
 			} else if (local31 == 2) {
-				for (local31 = 0; local31 < Static189.anInt4457; local31++) {
+				for (local31 = 0; local31 < Static10.anInt4457; local31++) {
 					local11[local31] = local22[local31] - local28[local31];
 				}
 			} else if (local31 == 3) {
-				for (local31 = 0; local31 < Static189.anInt4457; local31++) {
+				for (local31 = 0; local31 < Static10.anInt4457; local31++) {
 					local11[local31] = local28[local31] * local22[local31] >> 12;
 				}
 			} else {
 				@Pc(180) int local180;
 				if (local31 == 4) {
-					for (local31 = 0; local31 < Static189.anInt4457; local31++) {
+					for (local31 = 0; local31 < Static10.anInt4457; local31++) {
 						local180 = local28[local31];
 						local11[local31] = local180 == 0 ? 4096 : (local22[local31] << 12) / local180;
 					}
 				} else if (local31 == 5) {
-					for (local31 = 0; local31 < Static189.anInt4457; local31++) {
+					for (local31 = 0; local31 < Static10.anInt4457; local31++) {
 						local11[local31] = 4096 - ((4096 - local22[local31]) * (-local28[local31] + 4096) >> 12);
 					}
 				} else if (local31 == 6) {
-					for (local31 = 0; local31 < Static189.anInt4457; local31++) {
+					for (local31 = 0; local31 < Static10.anInt4457; local31++) {
 						local180 = local28[local31];
 						local11[local31] = local180 >= 2048 ? 4096 - ((4096 - local22[local31]) * (-local180 + 4096) >> 11) : local180 * local22[local31] >> 11;
 					}
 				} else {
 					@Pc(295) int local295;
 					if (local31 == 7) {
-						for (local31 = 0; local31 < Static189.anInt4457; local31++) {
+						for (local31 = 0; local31 < Static10.anInt4457; local31++) {
 							local295 = local22[local31];
 							local11[local31] = local295 == 4096 ? 4096 : (local28[local31] << 12) / (4096 - local295);
 						}
 					} else if (local31 == 8) {
-						for (local31 = 0; local31 < Static189.anInt4457; local31++) {
+						for (local31 = 0; local31 < Static10.anInt4457; local31++) {
 							local295 = local22[local31];
 							local11[local31] = local295 == 0 ? 0 : 4096 - (4096 - local28[local31] << 12) / local295;
 						}
 					} else if (local31 == 9) {
-						for (local31 = 0; local31 < Static189.anInt4457; local31++) {
+						for (local31 = 0; local31 < Static10.anInt4457; local31++) {
 							local180 = local28[local31];
 							local295 = local22[local31];
 							local11[local31] = local295 < local180 ? local295 : local180;
 						}
 					} else if (local31 == 10) {
-						for (local31 = 0; local31 < Static189.anInt4457; local31++) {
+						for (local31 = 0; local31 < Static10.anInt4457; local31++) {
 							local180 = local28[local31];
 							local295 = local22[local31];
 							local11[local31] = local295 > local180 ? local295 : local180;
 						}
 					} else if (local31 == 11) {
-						for (local31 = 0; local31 < Static189.anInt4457; local31++) {
+						for (local31 = 0; local31 < Static10.anInt4457; local31++) {
 							local295 = local22[local31];
 							local180 = local28[local31];
 							local11[local31] = local180 < local295 ? local295 - local180 : local180 - local295;
 						}
 					} else if (local31 == 12) {
-						for (local31 = 0; local31 < Static189.anInt4457; local31++) {
+						for (local31 = 0; local31 < Static10.anInt4457; local31++) {
 							local295 = local22[local31];
 							local180 = local28[local31];
 							local11[local31] = local180 + local295 - (local295 * local180 >> 11);
@@ -113,19 +113,19 @@ public final class TextureOpCombine extends TextureOp {
 			@Pc(72) int[] local72 = local36[2];
 			@Pc(75) int local75 = this.anInt4543;
 			if (local75 == 1) {
-				for (local75 = 0; local75 < Static189.anInt4457; local75++) {
+				for (local75 = 0; local75 < Static10.anInt4457; local75++) {
 					local40[local75] = local64[local75] + local52[local75];
 					local44[local75] = local68[local75] + local56[local75];
 					local48[local75] = local60[local75] + local72[local75];
 				}
 			} else if (local75 == 2) {
-				for (local75 = 0; local75 < Static189.anInt4457; local75++) {
+				for (local75 = 0; local75 < Static10.anInt4457; local75++) {
 					local40[local75] = local52[local75] - local64[local75];
 					local44[local75] = local56[local75] - local68[local75];
 					local48[local75] = local60[local75] - local72[local75];
 				}
 			} else if (local75 == 3) {
-				for (local75 = 0; local75 < Static189.anInt4457; local75++) {
+				for (local75 = 0; local75 < Static10.anInt4457; local75++) {
 					local40[local75] = local64[local75] * local52[local75] >> 12;
 					local44[local75] = local56[local75] * local68[local75] >> 12;
 					local48[local75] = local72[local75] * local60[local75] >> 12;
@@ -135,7 +135,7 @@ public final class TextureOpCombine extends TextureOp {
 				@Pc(282) int local282;
 				@Pc(278) int local278;
 				if (local75 == 4) {
-					for (local75 = 0; local75 < Static189.anInt4457; local75++) {
+					for (local75 = 0; local75 < Static10.anInt4457; local75++) {
 						local278 = local72[local75];
 						local282 = local68[local75];
 						local286 = local64[local75];
@@ -144,13 +144,13 @@ public final class TextureOpCombine extends TextureOp {
 						local48[local75] = local278 == 0 ? 4096 : (local60[local75] << 12) / local278;
 					}
 				} else if (local75 == 5) {
-					for (local75 = 0; local75 < Static189.anInt4457; local75++) {
+					for (local75 = 0; local75 < Static10.anInt4457; local75++) {
 						local40[local75] = 4096 - ((4096 - local64[local75]) * (4096 - local52[local75]) >> 12);
 						local44[local75] = 4096 - ((4096 - local68[local75]) * (-local56[local75] + 4096) >> 12);
 						local48[local75] = 4096 - ((4096 - local72[local75]) * (-local60[local75] + 4096) >> 12);
 					}
 				} else if (local75 == 6) {
-					for (local75 = 0; local75 < Static189.anInt4457; local75++) {
+					for (local75 = 0; local75 < Static10.anInt4457; local75++) {
 						local278 = local72[local75];
 						local286 = local64[local75];
 						local282 = local68[local75];
@@ -163,7 +163,7 @@ public final class TextureOpCombine extends TextureOp {
 					@Pc(543) int local543;
 					@Pc(535) int local535;
 					if (local75 == 7) {
-						for (local75 = 0; local75 < Static189.anInt4457; local75++) {
+						for (local75 = 0; local75 < Static10.anInt4457; local75++) {
 							local535 = local60[local75];
 							local539 = local52[local75];
 							local543 = local56[local75];
@@ -172,7 +172,7 @@ public final class TextureOpCombine extends TextureOp {
 							local48[local75] = local535 == 4096 ? 4096 : (local72[local75] << 12) / (4096 - local535);
 						}
 					} else if (local75 == 8) {
-						for (local75 = 0; local75 < Static189.anInt4457; local75++) {
+						for (local75 = 0; local75 < Static10.anInt4457; local75++) {
 							local539 = local52[local75];
 							local543 = local56[local75];
 							local535 = local60[local75];
@@ -181,7 +181,7 @@ public final class TextureOpCombine extends TextureOp {
 							local48[local75] = local535 == 0 ? 0 : 4096 - (4096 - local72[local75] << 12) / local535;
 						}
 					} else if (local75 == 9) {
-						for (local75 = 0; local75 < Static189.anInt4457; local75++) {
+						for (local75 = 0; local75 < Static10.anInt4457; local75++) {
 							local535 = local60[local75];
 							local278 = local72[local75];
 							local282 = local68[local75];
@@ -193,7 +193,7 @@ public final class TextureOpCombine extends TextureOp {
 							local48[local75] = local535 < local278 ? local535 : local278;
 						}
 					} else if (local75 == 10) {
-						for (local75 = 0; local75 < Static189.anInt4457; local75++) {
+						for (local75 = 0; local75 < Static10.anInt4457; local75++) {
 							local278 = local72[local75];
 							local535 = local60[local75];
 							local282 = local68[local75];
@@ -205,7 +205,7 @@ public final class TextureOpCombine extends TextureOp {
 							local48[local75] = local278 < local535 ? local535 : local278;
 						}
 					} else if (local75 == 11) {
-						for (local75 = 0; local75 < Static189.anInt4457; local75++) {
+						for (local75 = 0; local75 < Static10.anInt4457; local75++) {
 							local282 = local68[local75];
 							local286 = local64[local75];
 							local543 = local56[local75];
@@ -217,7 +217,7 @@ public final class TextureOpCombine extends TextureOp {
 							local48[local75] = local278 < local535 ? local535 - local278 : -local535 + local278;
 						}
 					} else if (local75 == 12) {
-						for (local75 = 0; local75 < Static189.anInt4457; local75++) {
+						for (local75 = 0; local75 < Static10.anInt4457; local75++) {
 							local539 = local52[local75];
 							local278 = local72[local75];
 							local286 = local64[local75];

@@ -8,8 +8,12 @@ public final class Static145 {
 
 	@OriginalMember(owner = "client!lf", name = "k", descriptor = "I")
 	public static int anInt3502 = -1;
+    @OriginalMember(owner = "client!vg", name = "e", descriptor = "[I")
+    public static int[] anIntArray516;
+    @OriginalMember(owner = "client!ri", name = "d", descriptor = "[I")
+    public static int[] anIntArray188;
 
-	@OriginalMember(owner = "client!lf", name = "a", descriptor = "(I)V")
+    @OriginalMember(owner = "client!lf", name = "a", descriptor = "(I)V")
 	public static void method2742() {
 		if (client.gameState == 10 && GlRenderer.enabled) {
 			client.setGameState(28);
@@ -44,20 +48,20 @@ public final class Static145 {
 		for (local15 = 192; local15 < 255; local15++) {
 			Static221.anIntArray235[local15] = Flames.anIntArray445[3];
 		}
-		Static270.anIntArray562 = new int[32768];
-		Static263.anIntArray516 = new int[32768];
+		Static267.anIntArray562 = new int[32768];
+		anIntArray516 = new int[32768];
 		Static69.method1545(null);
 		Static103.anIntArray254 = new int[32768];
-		Static216.anIntArray188 = new int[32768];
+		anIntArray188 = new int[32768];
 		Static221.aClass3_Sub2_Sub1_Sub1_3 = new SoftwareSprite(128, 254);
 	}
 
 	@OriginalMember(owner = "client!lf", name = "b", descriptor = "(I)V")
 	public static void method2744() {
-		@Pc(3) int local3 = Static229.anInt5138;
-		@Pc(9) int local9 = Static24.anInt761;
-		@Pc(11) int local11 = Static183.anInt4271;
-		@Pc(15) int local15 = Static13.anInt436;
+		@Pc(3) int local3 = InterfaceList.anInt5138;
+		@Pc(9) int local9 = InterfaceList.anInt761;
+		@Pc(11) int local11 = InterfaceList.anInt4271;
+		@Pc(15) int local15 = InterfaceList.anInt436;
 		if (GlRenderer.enabled) {
 			GlRaster.method1186(local11, local3, local9, local15, 6116423);
 			GlRaster.method1186(local11 + 1, local3 + 1, local9 - 2, 16, 0);
@@ -78,7 +82,7 @@ public final class Static145 {
 			}
 			Fonts.b12Full.renderLeft(MiniMenu.getOp(local107), local11 + 3, local127, local129, 0);
 		}
-		Static121.method2407(Static183.anInt4271, Static229.anInt5138, Static13.anInt436, Static24.anInt761);
+		Static121.method2407(InterfaceList.anInt4271, InterfaceList.anInt5138, InterfaceList.anInt436, InterfaceList.anInt761);
 	}
 
 }

@@ -5,6 +5,11 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static126 {
 
+    @OriginalMember(owner = "client!sc", name = "z", descriptor = "[Z")
+	public static final boolean[] aBooleanArray116 = new boolean[100];
+    @OriginalMember(owner = "client!rg", name = "s", descriptor = "I")
+    public static int anInt5574 = -1;
+
     @OriginalMember(owner = "client!jm", name = "a", descriptor = "(Z)V")
 	public static void method2460() {
 		if (InterfaceList.topLevelInterface != -1) {
@@ -14,16 +19,16 @@ public final class Static126 {
 			if (InterfaceList.aBooleanArray100[local15]) {
 				InterfaceList.rectangleRedraw[local15] = true;
 			}
-			Static223.aBooleanArray116[local15] = InterfaceList.aBooleanArray100[local15];
+			aBooleanArray116[local15] = InterfaceList.aBooleanArray100[local15];
 			InterfaceList.aBooleanArray100[local15] = false;
 		}
-		Static97.anInt2503 = -1;
-		Static169.mouseOverInventoryInterface = null;
+		Static87.anInt2503 = -1;
+		InterfaceList.mouseOverInventoryInterface = null;
 		Static182.anInt4311 = client.loop;
 		if (GlRenderer.enabled) {
-			Static263.aBoolean299 = true;
+			ScriptRunner.aBoolean299 = true;
 		}
-		Static214.anInt5574 = -1;
+		anInt5574 = -1;
 		if (InterfaceList.topLevelInterface != -1) {
 			InterfaceList.rectangles = 0;
 			Static9.method182();
@@ -33,6 +38,6 @@ public final class Static126 {
 		} else {
 			SoftwareRaster.method2503();
 		}
-		Static178.anInt4247 = 0;
+		Protocol.anInt4247 = 0;
 	}
 }

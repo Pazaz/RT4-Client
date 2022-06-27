@@ -17,7 +17,7 @@ public final class TextureOpTiledSprite extends TextureOpSprite {
 			@Pc(32) int local32 = arg0 % this.anInt3240 * this.anInt3240;
 			@Pc(36) int[] local36 = local11[1];
 			@Pc(40) int[] local40 = local11[2];
-			for (@Pc(42) int local42 = 0; local42 < Static189.anInt4457; local42++) {
+			for (@Pc(42) int local42 = 0; local42 < Static10.anInt4457; local42++) {
 				@Pc(55) int local55 = this.anIntArray305[local32 + local42 % this.anInt3239];
 				local40[local42] = (local55 & 0xFF) << 4;
 				local36[local42] = local55 >> 4 & 0xFF0;

@@ -85,9 +85,9 @@ public final class Static40 {
 	@OriginalMember(owner = "client!j", name = "g", descriptor = "(I)V")
 	public static void method4637() {
 		Static165.aClass3_Sub2_Sub1_8 = null;
-		Static39.aClass3_Sub2_Sub1_1 = null;
+		Static112.aClass3_Sub2_Sub1_1 = null;
 		Static112.aClass3_Sub2_Sub1_6 = null;
-		Static181.aClass3_Sub2_Sub1_9 = null;
-		Static204.aClass3_Sub2_Sub1_10 = null;
+		Static112.aClass3_Sub2_Sub1_9 = null;
+		Static112.aClass3_Sub2_Sub1_10 = null;
 	}
 }

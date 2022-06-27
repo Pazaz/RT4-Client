@@ -59,8 +59,10 @@ public final class ObjType {
 	@OriginalMember(owner = "client!h", name = "T", descriptor = "I")
 	public int team = 0;
 
+	@OriginalMember(owner = "client!gd", name = "b", descriptor = "Lclient!na;")
+	public static final JagString aClass100_464 = JagString.parse("null");
 	@OriginalMember(owner = "client!h", name = "E", descriptor = "Lclient!na;")
-	public JagString name = Static78.aClass100_464;
+	public JagString name = aClass100_464;
 
 	@OriginalMember(owner = "client!h", name = "J", descriptor = "I")
 	private int manWearZOff = 0;

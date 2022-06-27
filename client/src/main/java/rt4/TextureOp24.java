@@ -49,10 +49,10 @@ public final class TextureOp24 extends TextureOp {
 		@Pc(19) int[] local19 = this.aClass121_41.method3445(arg0);
 		if (this.aClass121_41.invalid) {
 			@Pc(30) int local30 = Static165.anInt4042 * this.anInt4580 >> 12;
-			@Pc(40) int[] local40 = this.method4624(0, Static141.anInt3473 & arg0 - 1);
+			@Pc(40) int[] local40 = this.method4624(0, Static10.anInt3473 & arg0 - 1);
 			@Pc(46) int[] local46 = this.method4624(0, arg0);
-			@Pc(56) int[] local56 = this.method4624(0, arg0 + 1 & Static141.anInt3473);
-			for (@Pc(58) int local58 = 0; local58 < Static189.anInt4457; local58++) {
+			@Pc(56) int[] local56 = this.method4624(0, arg0 + 1 & Static10.anInt3473);
+			for (@Pc(58) int local58 = 0; local58 < Static10.anInt4457; local58++) {
 				@Pc(81) int local81 = (local46[Static34.anInt1060 & local58 - 1] - local46[local58 + 1 & Static34.anInt1060]) * local30 >> 12;
 				@Pc(94) int local94 = local30 * (local56[local58] - local40[local58]) >> 12;
 				@Pc(98) int local98 = local81 >> 4;

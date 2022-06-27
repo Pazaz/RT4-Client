@@ -21,12 +21,22 @@ public class EnumTypeList {
         if (local10 != null) {
             return local10;
         }
-        @Pc(24) byte[] local24 = archive.fetchFile(Static97.method1959(arg0), Static103.method2236(arg0));
+        @Pc(24) byte[] local24 = archive.fetchFile(getGroupId(arg0), getFileId(arg0));
         local10 = new EnumType();
         if (local24 != null) {
             local10.decode(new Buffer(local24));
         }
         types.put(local10, (long) arg0);
         return local10;
+    }
+
+    @OriginalMember(owner = "client!i", name = "e", descriptor = "(BI)I")
+    public static int getFileId(@OriginalArg(1) int arg0) {
+        return arg0 & 0xFF;
+    }
+
+    @OriginalMember(owner = "client!hi", name = "a", descriptor = "(BI)I")
+    public static int getGroupId(@OriginalArg(1) int arg0) {
+        return arg0 >>> 8;
     }
 }

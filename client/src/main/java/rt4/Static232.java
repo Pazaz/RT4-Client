@@ -6,15 +6,18 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static232 {
 
-	@OriginalMember(owner = "client!sm", name = "a", descriptor = "(IIIIIIIIIII)V")
+    @OriginalMember(owner = "client!nj", name = "h", descriptor = "Lclient!ih;")
+    public static final LinkedList aClass69_97 = new LinkedList();
+
+    @OriginalMember(owner = "client!sm", name = "a", descriptor = "(IIIIIIIIIII)V")
 	public static void method3991(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(8) int arg5, @OriginalArg(9) int arg6, @OriginalArg(10) int arg7) {
 		@Pc(9) int local9 = arg2 - arg4;
 		@Pc(11) int local11 = -1;
-		if (Static201.anInt1864 > 0) {
-			if (Static91.anInt2428 <= 10) {
-				local11 = Static91.anInt2428 * 5;
+		if (WorldMap.anInt1864 > 0) {
+			if (Static1.anInt2428 <= 10) {
+				local11 = Static1.anInt2428 * 5;
 			} else {
-				local11 = 50 - (Static91.anInt2428 - 10) * 5;
+				local11 = 50 - (Static1.anInt2428 - 10) * 5;
 			}
 		}
 		@Pc(39) int local39 = arg1 - arg6;
@@ -47,7 +50,7 @@ public final class Static232 {
 											local243.anInt4307 = local65;
 											local243.anInt4314 = local144;
 											local243.id = local222.mapElement;
-											Static172.aClass69_97.addTail(local243);
+											aClass69_97.addTail(local243);
 										} else {
 											MapList.sprites[local222.mapElement].render(local65 - 7, local144 + -7);
 										}
@@ -59,22 +62,14 @@ public final class Static232 {
 				}
 			}
 		}
-		for (@Pc(285) MapElement local285 = (MapElement) Static172.aClass69_97.head(); local285 != null; local285 = (MapElement) Static172.aClass69_97.next()) {
+		for (@Pc(285) MapElement local285 = (MapElement) aClass69_97.head(); local285 != null; local285 = (MapElement) aClass69_97.next()) {
 			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 15, local11);
 			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 13, local11);
 			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 11, local11);
 			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 9, local11);
 			MapList.sprites[local285.id].render(local285.anInt4307 - 7, local285.anInt4314 + -7);
 		}
-		Static172.aClass69_97.clear();
+		aClass69_97.clear();
 	}
 
-	@OriginalMember(owner = "client!sm", name = "a", descriptor = "(II)V")
-	public static void method3993(@OriginalArg(0) int arg0) {
-		Static149.anIntArray338 = new int[arg0];
-		Static267.anIntArray518 = new int[arg0];
-		Static243.anIntArray476 = new int[arg0];
-		Static50.anIntArray134 = new int[arg0];
-		Static79.anIntArray205 = new int[arg0];
-	}
 }

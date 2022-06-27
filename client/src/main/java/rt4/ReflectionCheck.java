@@ -182,7 +182,7 @@ public final class ReflectionCheck extends Node {
 					}
 					local17.anIntArray139[local59] = local71;
 					local17.anIntArray137[local59] = local95;
-					local17.aClass212Array2[local59] = arg0.getDeclaredField(local104, Static6.method85(local93));
+					local17.aClass212Array2[local59] = arg0.getDeclaredField(local104, method85(local93));
 				} else if (local71 == 3 || local71 == 4) {
 					local93 = new String(arg1.gjstr().method3148());
 					local104 = new String(arg1.gjstr().method3148());
@@ -203,9 +203,9 @@ public final class ReflectionCheck extends Node {
 					local17.anIntArray139[local59] = local71;
 					@Pc(234) Class[] local234 = new Class[local95];
 					for (local210 = 0; local210 < local95; local210++) {
-						local234[local210] = Static6.method85(local171[local210]);
+						local234[local210] = method85(local171[local210]);
 					}
-					local17.aClass212Array1[local59] = arg0.getDeclaredMethod(Static6.method85(local93), local234, local104);
+					local17.aClass212Array1[local59] = arg0.getDeclaredMethod(method85(local93), local234, local104);
 					local17.aByteArrayArrayArray6[local59] = local193;
 				}
 			} catch (@Pc(269) ClassNotFoundException local269) {
@@ -226,5 +226,28 @@ public final class ReflectionCheck extends Node {
     @OriginalMember(owner = "client!j", name = "c", descriptor = "(I)V")
     public static void method4625() {
         aClass69_113 = new LinkedList();
+    }
+
+    @OriginalMember(owner = "client!ag", name = "a", descriptor = "(ILjava/lang/String;)Ljava/lang/Class;")
+    public static Class method85(@OriginalArg(1) String arg0) throws ClassNotFoundException {
+        if (arg0.equals("B")) {
+            return Byte.TYPE;
+        } else if (arg0.equals("I")) {
+            return Integer.TYPE;
+        } else if (arg0.equals("S")) {
+            return Short.TYPE;
+        } else if (arg0.equals("J")) {
+            return Long.TYPE;
+        } else if (arg0.equals("Z")) {
+            return Boolean.TYPE;
+        } else if (arg0.equals("F")) {
+            return Float.TYPE;
+        } else if (arg0.equals("D")) {
+            return Double.TYPE;
+        } else if (arg0.equals("C")) {
+            return Character.TYPE;
+        } else {
+            return Class.forName(arg0);
+        }
     }
 }

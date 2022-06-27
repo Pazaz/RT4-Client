@@ -36,7 +36,7 @@ public final class TextureOp20 extends TextureOp {
 	public final int[] method4626(@OriginalArg(0) int arg0) {
 		@Pc(17) int[] local17 = this.aClass121_41.method3445(arg0);
 		if (this.aClass121_41.invalid) {
-			ArrayUtils.fill(local17, 0, Static189.anInt4457, this.anInt3894);
+			ArrayUtils.fill(local17, 0, Static10.anInt4457, this.anInt3894);
 		}
 		return local17;
 	}

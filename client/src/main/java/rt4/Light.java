@@ -100,7 +100,23 @@ public final class Light {
 
 	@OriginalMember(owner = "client!gk", name = "b", descriptor = "(B)V")
 	public static void method1771() {
-		anIntArray150 = Static206.method3679(0.4F);
+		anIntArray150 = method3679(0.4F);
+	}
+
+	@OriginalMember(owner = "client!qk", name = "a", descriptor = "(ZIIIIFII)[I")
+	public static int[] method3679(@OriginalArg(5) float arg0) {
+		@Pc(11) int[] local11 = new int[2048];
+		@Pc(15) TextureOp4 local15 = new TextureOp4();
+		local15.anInt646 = 8;
+		local15.anInt642 = 4;
+		local15.anInt650 = 35;
+		local15.anInt641 = 8;
+		local15.anInt648 = (int) (arg0 * 4096.0F);
+		local15.aBoolean44 = true;
+		local15.method4630();
+		Static10.method348(1, 2048);
+		local15.method584(0, local11);
+		return local11;
 	}
 
 	@OriginalMember(owner = "client!gi", name = "a", descriptor = "(BIIII)V")

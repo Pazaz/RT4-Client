@@ -13,7 +13,7 @@ public final class Static7 {
 
 	@OriginalMember(owner = "client!ah", name = "b", descriptor = "(I)V")
 	public static void method843() {
-		if (Static118.clickedInventoryComponent != null || Static40.aClass13_14 != null) {
+		if (InterfaceList.clickedInventoryComponent != null || Static40.aClass13_14 != null) {
 			return;
 		}
 		@Pc(20) int local20 = Mouse.clickButton;
@@ -28,16 +28,16 @@ public final class Static7 {
 					@Pc(103) Component local103 = InterfaceList.getComponent(local99);
 					@Pc(106) ServerActiveProperties local106 = InterfaceList.getServerActiveProperties(local103);
 					if (local106.method511() || local106.isObjReplaceEnabled()) {
-						Static78.clickedInventoryComponentCycle = 0;
+						InterfaceList.clickedInventoryComponentCycle = 0;
 						Static123.draggingClickedInventoryObject = false;
-						if (Static118.clickedInventoryComponent != null) {
-							InterfaceList.redraw(Static118.clickedInventoryComponent);
+						if (InterfaceList.clickedInventoryComponent != null) {
+							InterfaceList.redraw(InterfaceList.clickedInventoryComponent);
 						}
-						Static118.clickedInventoryComponent = InterfaceList.getComponent(local99);
-						Static149.clickedInventoryComponentX = Mouse.clickX;
-						Static206.clickedInventoryComponentY = Mouse.clickY;
+						InterfaceList.clickedInventoryComponent = InterfaceList.getComponent(local99);
+						InterfaceList.clickedInventoryComponentX = Mouse.clickX;
+						InterfaceList.clickedInventoryComponentY = Mouse.clickY;
 						Static4.mouseOverInventoryObjectIndex = local93;
-						InterfaceList.redraw(Static118.clickedInventoryComponent);
+						InterfaceList.redraw(InterfaceList.clickedInventoryComponent);
 						return;
 					}
 				}
@@ -57,17 +57,17 @@ public final class Static7 {
 		if (local20 != 1) {
 			local93 = Mouse.lastMouseY;
 			local204 = Mouse.lastMouseX;
-			if (local204 < Static183.anInt4271 - 10 || local204 > Static24.anInt761 + Static183.anInt4271 + 10 || Static229.anInt5138 - 10 > local93 || local93 > Static13.anInt436 + Static229.anInt5138 + 10) {
+			if (local204 < InterfaceList.anInt4271 - 10 || local204 > InterfaceList.anInt761 + InterfaceList.anInt4271 + 10 || InterfaceList.anInt5138 - 10 > local93 || local93 > InterfaceList.anInt436 + InterfaceList.anInt5138 + 10) {
 				Static40.aBoolean108 = false;
-				Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
+				InterfaceList.method4012(InterfaceList.anInt4271, InterfaceList.anInt761, InterfaceList.anInt5138, InterfaceList.anInt436);
 			}
 		}
 		if (local20 != 1) {
 			return;
 		}
-		local204 = Static183.anInt4271;
-		local93 = Static229.anInt5138;
-		local99 = Static24.anInt761;
+		local204 = InterfaceList.anInt4271;
+		local93 = InterfaceList.anInt5138;
+		local99 = InterfaceList.anInt761;
 		@Pc(265) int local265 = Mouse.clickX;
 		@Pc(267) int local267 = Mouse.clickY;
 		@Pc(269) int local269 = -1;
@@ -86,6 +86,6 @@ public final class Static7 {
 			MiniMenu.doAction(local269);
 		}
 		Static40.aBoolean108 = false;
-		Static133.method4012(Static183.anInt4271, Static24.anInt761, Static229.anInt5138, Static13.anInt436);
+		InterfaceList.method4012(InterfaceList.anInt4271, InterfaceList.anInt761, InterfaceList.anInt5138, InterfaceList.anInt436);
 	}
 }
