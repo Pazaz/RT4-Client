@@ -256,8 +256,10 @@ public final class Component {
 	@OriginalMember(owner = "client!be", name = "J", descriptor = "Z")
 	public boolean aBoolean24 = false;
 
+	@OriginalMember(owner = "client!ob", name = "e", descriptor = "Lclient!na;")
+	public static final JagString aClass100_800 = JagString.parse("");
 	@OriginalMember(owner = "client!be", name = "Sb", descriptor = "Lclient!na;")
-	public JagString aClass100_85 = Static176.aClass100_800;
+	public JagString aClass100_85 = aClass100_800;
 
 	@OriginalMember(owner = "client!be", name = "i", descriptor = "Z")
 	public boolean aBoolean19 = false;
@@ -308,7 +310,7 @@ public final class Component {
 	public int anInt492 = 0;
 
 	@OriginalMember(owner = "client!be", name = "Gb", descriptor = "Lclient!na;")
-	public JagString text = Static176.aClass100_800;
+	public JagString text = aClass100_800;
 
 	@OriginalMember(owner = "client!be", name = "n", descriptor = "I")
 	public int width = 0;
@@ -338,7 +340,7 @@ public final class Component {
 	public int modelZOffset = 0;
 
 	@OriginalMember(owner = "client!be", name = "Dc", descriptor = "Lclient!na;")
-	public JagString optionBase = Static176.aClass100_800;
+	public JagString optionBase = aClass100_800;
 
 	@OriginalMember(owner = "client!be", name = "Lc", descriptor = "I")
 	public int updatedVarcsReaderIndex = 0;
@@ -365,13 +367,13 @@ public final class Component {
 	public int modelXOffset = 0;
 
 	@OriginalMember(owner = "client!be", name = "Ub", descriptor = "Lclient!na;")
-	public JagString targetVerb = Static176.aClass100_800;
+	public JagString targetVerb = aClass100_800;
 
 	@OriginalMember(owner = "client!be", name = "Lb", descriptor = "I")
 	public int modelRotationSpeed = 0;
 
 	@OriginalMember(owner = "client!be", name = "r", descriptor = "Lclient!na;")
-	public JagString aClass100_82 = Static176.aClass100_800;
+	public JagString aClass100_82 = aClass100_800;
 
 	@OriginalMember(owner = "client!be", name = "Pc", descriptor = "I")
 	public int outlineThickness = 0;

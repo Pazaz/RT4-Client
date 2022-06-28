@@ -14,12 +14,16 @@ public final class GlTile extends Node {
 
 	@OriginalMember(owner = "client!hg", name = "J", descriptor = "Ljava/nio/ByteBuffer;")
 	public static ByteBuffer aByteBuffer4;
+
 	@OriginalMember(owner = "client!hg", name = "U", descriptor = "Lclient!wa;")
 	public static Buffer aClass3_Sub15_3;
+
 	@OriginalMember(owner = "client!hg", name = "K", descriptor = "Lclient!wa;")
 	public static Buffer aClass3_Sub15_2;
+
 	@OriginalMember(owner = "client!hg", name = "Q", descriptor = "Ljava/nio/ByteBuffer;")
 	public static ByteBuffer aByteBuffer5;
+
 	@OriginalMember(owner = "client!hg", name = "s", descriptor = "Ljava/nio/ByteBuffer;")
 	private ByteBuffer aByteBuffer3;
 
@@ -208,7 +212,7 @@ public final class GlTile extends Node {
 		if (GlRenderer.arbVboSupported) {
 			@Pc(200) ByteBuffer local200 = ByteBuffer.wrap(local12.data, 0, local12.offset);
 			this.aClass155_3 = new GlVertexBufferObject();
-			this.aClass155_3.method4519(local200);
+			this.aClass155_3.setArrayBuffer(local200);
 		} else {
 			this.aByteBuffer3 = ByteBuffer.allocateDirect(local12.offset).order(ByteOrder.nativeOrder());
 			this.aByteBuffer3.put(local12.data, 0, local12.offset);
@@ -323,7 +327,7 @@ public final class GlTile extends Node {
 				gl.glClientActiveTexture(GL2.GL_TEXTURE0);
 			}
 		} else {
-			this.aClass155_3.method4516();
+			this.aClass155_3.bindArray();
 			gl.glVertexPointer(3, GL2.GL_FLOAT, i, 0L);
 			gl.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, i, 12L);
 			if (Preferences.highDetailLighting) {

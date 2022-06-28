@@ -241,7 +241,7 @@ public final class SoftwareModel extends Model {
 		this.aShortArray89 = arg0.triangleColors;
 		this.anIntArrayArray41 = arg0.boneVertices;
 		this.anIntArrayArray42 = arg0.boneTriangles;
-		this.aShortArray90 = arg0.aShortArray22;
+		this.aShortArray90 = arg0.triangleSources;
 		this.aShortArray91 = arg0.vertexSources;
 		@Pc(102) int local102 = (int) Math.sqrt(arg3 * arg3 + arg4 * arg4 + arg5 * arg5);
 		@Pc(108) int local108 = arg2 * local102 >> 8;
@@ -848,7 +848,7 @@ public final class SoftwareModel extends Model {
 				local223 = local146 / local53;
 				local227 = local123 / local38;
 			}
-			if (GlModel.anInt3582 >= local204 && GlModel.anInt3582 <= local208 && Static34.anInt1053 >= local223 && Static34.anInt1053 <= local227) {
+			if (GlModel.anInt3582 >= local204 && GlModel.anInt3582 <= local208 && RawModel.anInt1053 >= local223 && RawModel.anInt1053 <= local227) {
 				local204 = 999999;
 				local208 = -999999;
 				local223 = 999999;
@@ -891,7 +891,7 @@ public final class SoftwareModel extends Model {
 						}
 					}
 				}
-				if (GlModel.anInt3582 >= local204 && GlModel.anInt3582 <= local208 && Static34.anInt1053 >= local223 && Static34.anInt1053 <= local227) {
+				if (GlModel.anInt3582 >= local204 && GlModel.anInt3582 <= local208 && RawModel.anInt1053 >= local223 && RawModel.anInt1053 <= local227) {
 					if (this.aBoolean303) {
 						Model.aLongArray11[MiniMenu.anInt7++] = arg8;
 					} else {
@@ -994,9 +994,9 @@ public final class SoftwareModel extends Model {
 			local150.aShortArray90 = this.aShortArray90;
 			local150.aBoolean303 = this.aBoolean303;
 			if (arg0 == 3) {
-				local150.vertexX = RawModel.method2308(this.vertexX);
-				local150.vertexY = RawModel.method2308(this.vertexY);
-				local150.vertexZ = RawModel.method2308(this.vertexZ);
+				local150.vertexX = ArrayUtils.copyOfNullable(this.vertexX);
+				local150.vertexY = ArrayUtils.copyOfNullable(this.vertexY);
+				local150.vertexZ = ArrayUtils.copyOfNullable(this.vertexZ);
 			} else {
 				local150.vertexX = this.vertexX;
 				local150.vertexY = new int[local150.vertexCount];
@@ -1658,7 +1658,7 @@ public final class SoftwareModel extends Model {
 						}
 					}
 				} else {
-					if (arg1 && this.method4589(GlModel.anInt3582 + Rasteriser.centerX, Static34.anInt1053 + Rasteriser.centerY, anIntArray551[local51], anIntArray551[local56], anIntArray551[local61], local65, local69, local73)) {
+					if (arg1 && this.method4589(GlModel.anInt3582 + Rasteriser.centerX, RawModel.anInt1053 + Rasteriser.centerY, anIntArray551[local51], anIntArray551[local56], anIntArray551[local61], local65, local69, local73)) {
 						Model.aLongArray11[MiniMenu.anInt7++] = arg2;
 						arg1 = false;
 					}

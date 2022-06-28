@@ -16,7 +16,7 @@ public class FriendsList {
 	@OriginalMember(owner = "client!jh", name = "b", descriptor = "[Lclient!na;")
 	public static final JagString[] usernames = new JagString[200];
 	@OriginalMember(owner = "client!ab", name = "c", descriptor = "[Z")
-	public static final boolean[] aBooleanArray135 = new boolean[200];
+	public static final boolean[] sameGame = new boolean[200];
 	@OriginalMember(owner = "client!p", name = "d", descriptor = "I")
 	public static int transmitAt = 0;
 	@OriginalMember(owner = "client!nc", name = "m", descriptor = "I")
@@ -69,7 +69,7 @@ public class FriendsList {
 		worlds[size] = 0;
 		worldNames[size] = JagString.EMPTY;
 		ranks[size] = 0;
-		aBooleanArray135[size] = false;
+		sameGame[size] = false;
 		size++;
 		transmitAt = InterfaceList.transmitTimer;
 		Protocol.outboundBuffer.p1isaac(120);
@@ -90,7 +90,7 @@ public class FriendsList {
 					worldNames[local41] = worldNames[local41 + 1];
 					encodedUsernames[local41] = encodedUsernames[local41 + 1];
 					ranks[local41] = ranks[local41 + 1];
-					aBooleanArray135[local41] = aBooleanArray135[local41 + 1];
+					sameGame[local41] = sameGame[local41 + 1];
 				}
 				transmitAt = InterfaceList.transmitTimer;
 				Protocol.outboundBuffer.p1isaac(57);
@@ -108,7 +108,7 @@ public class FriendsList {
 	}
 
 	@OriginalMember(owner = "client!ac", name = "a", descriptor = "(Lclient!na;I)I")
-	public static int method25(@OriginalArg(0) JagString arg0) {
+	public static int indexOf(@OriginalArg(0) JagString arg0) {
 		if (arg0 == null) {
 			return -1;
 		}

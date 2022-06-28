@@ -69,7 +69,7 @@ public abstract class Font extends SecondaryNode {
 	@OriginalMember(owner = "client!rk", name = "ub", descriptor = "I")
 	public static int underlineColor = -1;
 	@OriginalMember(owner = "client!rk", name = "vb", descriptor = "I")
-	public static int anInt3629 = 0;
+	public static int extraSpaceWidth = 0;
 	@OriginalMember(owner = "client!rk", name = "wb", descriptor = "I")
 	public static int color = 0;
 	@OriginalMember(owner = "client!rk", name = "xb", descriptor = "I")
@@ -285,9 +285,9 @@ public abstract class Font extends SecondaryNode {
 					local120 = this.spriteInnerHeights[local22];
 					if (local22 == 32) {
 						if (spaceWidth > 0) {
-							anInt3629 += spaceWidth;
-							arg1 += anInt3629 >> 8;
-							anInt3629 &= 0xFF;
+							extraSpaceWidth += spaceWidth;
+							arg1 += extraSpaceWidth >> 8;
+							extraSpaceWidth &= 0xFF;
 						}
 					} else if (alphaOverride == 256) {
 						if (shadowColorOverride != -1) {
@@ -764,7 +764,7 @@ public abstract class Font extends SecondaryNode {
 		alpha = 256;
 		alphaOverride = 256;
 		spaceWidth = 0;
-		anInt3629 = 0;
+		extraSpaceWidth = 0;
 	}
 
 	@OriginalMember(owner = "client!rk", name = "c", descriptor = "(Lclient!na;IIII)V")
@@ -843,7 +843,7 @@ public abstract class Font extends SecondaryNode {
 		alpha = arg2;
 		alphaOverride = arg2;
 		spaceWidth = 0;
-		anInt3629 = 0;
+		extraSpaceWidth = 0;
 	}
 
 	@OriginalMember(owner = "client!rk", name = "a", descriptor = "(Lclient!na;IIIIIIIILjava/util/Random;I[I)I")
@@ -977,9 +977,9 @@ public abstract class Font extends SecondaryNode {
 					local10++;
 					if (local24 == 32) {
 						if (spaceWidth > 0) {
-							anInt3629 += spaceWidth;
-							arg1 += anInt3629 >> 8;
-							anInt3629 &= 0xFF;
+							extraSpaceWidth += spaceWidth;
+							arg1 += extraSpaceWidth >> 8;
+							extraSpaceWidth &= 0xFF;
 						}
 					} else if (alphaOverride == 256) {
 						if (shadowColorOverride != -1) {

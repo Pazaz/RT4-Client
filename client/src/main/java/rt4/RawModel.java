@@ -22,6 +22,8 @@ public final class RawModel extends Entity {
 
 	@OriginalMember(owner = "client!gb", name = "S", descriptor = "I")
 	public static int anInt2138 = 0;
+	@OriginalMember(owner = "client!ck", name = "K", descriptor = "I")
+	public static int anInt1053 = 0;
 
 	@OriginalMember(owner = "client!gb", name = "s", descriptor = "[B")
 	public byte[] triangleAlpha;
@@ -51,7 +53,7 @@ public final class RawModel extends Entity {
 	private short minY;
 
 	@OriginalMember(owner = "client!gb", name = "E", descriptor = "[S")
-	public short[] aShortArray22;
+	public short[] triangleSources;
 
 	@OriginalMember(owner = "client!gb", name = "F", descriptor = "[[I")
 	public int[][] boneTriangles;
@@ -267,7 +269,7 @@ public final class RawModel extends Entity {
 		}
 
 		this.triangleColors = new short[this.triangleCount];
-		this.aShortArray22 = new short[this.triangleCount];
+		this.triangleSources = new short[this.triangleCount];
 
 		if (this.texturedCount > 0) {
 			this.textureTypes = new byte[this.texturedCount];
@@ -332,7 +334,7 @@ public final class RawModel extends Entity {
 					}
 
 					this.triangleColors[this.triangleCount] = other.triangleColors[t];
-					this.aShortArray22[this.triangleCount] = local323;
+					this.triangleSources[this.triangleCount] = local323;
 					this.triangleVertexA[this.triangleCount] = this.addVertex(other, other.triangleVertexA[t], local323);
 					this.triangleVertexB[this.triangleCount] = this.addVertex(other, other.triangleVertexB[t], local323);
 					this.triangleVertexC[this.triangleCount] = this.addVertex(other, other.triangleVertexC[t], local323);
@@ -450,17 +452,6 @@ public final class RawModel extends Entity {
 	public static RawModel create(@OriginalArg(0) Js5 archive, @OriginalArg(1) int id) {
 		@Pc(5) byte[] data = archive.fetchFile(id, 0);
 		return data == null ? null : new RawModel(data);
-	}
-
-	@OriginalMember(owner = "client!ja", name = "a", descriptor = "([II)[I")
-	public static int[] method2308(@OriginalArg(0) int[] arg0) {
-		if (arg0 == null) {
-			return null;
-		} else {
-			@Pc(18) int[] local18 = new int[arg0.length];
-			ArrayUtils.copy(arg0, 0, local18, 0, arg0.length);
-			return local18;
-		}
 	}
 
 	@OriginalMember(owner = "client!gb", name = "c", descriptor = "()V")
@@ -786,9 +777,9 @@ public final class RawModel extends Entity {
 		m.triangleNormals = this.triangleNormals;
 		m.aClass57Array2 = this.aClass57Array2;
 		if (orientation == 3) {
-			m.vertexX = method2308(this.vertexX);
-			m.vertexY = method2308(this.vertexY);
-			m.vertexZ = method2308(this.vertexZ);
+			m.vertexX = ArrayUtils.copyOfNullable(this.vertexX);
+			m.vertexY = ArrayUtils.copyOfNullable(this.vertexY);
+			m.vertexZ = ArrayUtils.copyOfNullable(this.vertexZ);
 		} else {
 			m.vertexX = this.vertexX;
 			m.vertexY = new int[m.vertexCount];

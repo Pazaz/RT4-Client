@@ -29,6 +29,10 @@ public class InterfaceList {
 	public static final JagString aClass100_903 = JagString.parse("Hidden)2");
 	@OriginalMember(owner = "client!ja", name = "f", descriptor = "Lclient!ih;")
 	public static final LinkedList mediumPriorityRequests = new LinkedList();
+	@OriginalMember(owner = "client!ac", name = "i", descriptor = "Lclient!ih;")
+	public static final LinkedList highPriorityRequests = new LinkedList();
+	@OriginalMember(owner = "client!sc", name = "z", descriptor = "[Z")
+	public static final boolean[] aBooleanArray116 = new boolean[100];
 	@OriginalMember(owner = "client!bn", name = "V", descriptor = "I")
 	public static int rectangles = 0;
 	@OriginalMember(owner = "client!md", name = "W", descriptor = "I")
@@ -79,6 +83,16 @@ public class InterfaceList {
 	public static Component aClass13_22;
 	@OriginalMember(owner = "client!ok", name = "b", descriptor = "I")
 	public static int anInt4271;
+	@OriginalMember(owner = "client!lg", name = "b", descriptor = "Z")
+	public static boolean aBoolean174 = false;
+	@OriginalMember(owner = "client!ac", name = "n", descriptor = "I")
+	public static int mouseOverInventoryObjectIndex = 0;
+	@OriginalMember(owner = "client!jj", name = "j", descriptor = "Z")
+	public static boolean draggingClickedInventoryObject = false;
+	@OriginalMember(owner = "client!rg", name = "s", descriptor = "I")
+	public static int anInt5574 = -1;
+	@OriginalMember(owner = "client!oj", name = "v", descriptor = "I")
+	public static int anInt4311 = -2;
 
 	@OriginalMember(owner = "client!ab", name = "a", descriptor = "(ZLclient!ve;Lclient!ve;Lclient!ve;Lclient!ve;)V")
 	public static void init(@OriginalArg(1) Js5 arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) Js5 arg2, @OriginalArg(4) Js5 arg3) {
@@ -214,7 +228,7 @@ public class InterfaceList {
 
 	@OriginalMember(owner = "client!dg", name = "a", descriptor = "(ILclient!be;)V")
 	public static void redraw(@OriginalArg(1) Component arg0) {
-		if (Static182.anInt4311 == arg0.rectangleLoop) {
+		if (anInt4311 == arg0.rectangleLoop) {
 			aBooleanArray100[arg0.rectangle] = true;
 		}
 	}
@@ -224,7 +238,7 @@ public class InterfaceList {
 		if (!getServerActiveProperties(arg0).isButtonEnabled(arg1) && arg0.onOptionClick == null) {
 			return null;
 		} else if (arg0.ops == null || arg0.ops.length <= arg1 || arg0.ops[arg1] == null || arg0.ops[arg1].trim().length() == 0) {
-			return Static121.qaOpTest ? JagString.concatenate(new JagString[]{aClass100_903, JagString.parseInt(arg1)}) : null;
+			return Cheat.qaOpTest ? JagString.concatenate(new JagString[]{aClass100_903, JagString.parseInt(arg1)}) : null;
 		} else {
 			return arg0.ops[arg1];
 		}
@@ -395,7 +409,7 @@ public class InterfaceList {
 		} else {
 			arg0.x = arg2 - (arg2 * arg0.baseX >> 14) - arg0.width;
 		}
-		if (!Static121.qaOpTest || getServerActiveProperties(arg0).events == 0 && arg0.type != 0) {
+		if (!Cheat.qaOpTest || getServerActiveProperties(arg0).events == 0 && arg0.type != 0) {
 			return;
 		}
 		if (arg0.y < 0) {
@@ -462,7 +476,7 @@ public class InterfaceList {
 		if (arg2.dynamicHeightValue == 4) {
 			arg2.height = arg2.aspectHeight * arg2.width / arg2.aspectWidth;
 		}
-		if (Static121.qaOpTest && (getServerActiveProperties(arg2).events != 0 || arg2.type == 0)) {
+		if (Cheat.qaOpTest && (getServerActiveProperties(arg2).events != 0 || arg2.type == 0)) {
 			if (arg2.height < 5 && arg2.width < 5) {
 				arg2.height = 5;
 				arg2.width = 5;
@@ -659,7 +673,7 @@ public class InterfaceList {
 							aClass13_12 = component;
 						}
 						if (component == Static40.aClass13_1) {
-							Static146.aBoolean174 = true;
+							aBoolean174 = true;
 							Static81.anInt2225 = local50;
 							anInt5103 = local55;
 						}
@@ -818,7 +832,7 @@ public class InterfaceList {
 								request = new HookRequest();
 								request.source = component;
 								request.arguments = component.onTimer;
-								Static4.highPriorityRequests.addTail(request);
+								highPriorityRequests.addTail(request);
 							}
 							@Pc(966) HookRequest request2;
 							if (component.onVarcTransmit != null && VarcDomain.updatedVarcsWriterIndex > component.updatedVarcsReaderIndex) {
@@ -1051,7 +1065,7 @@ public class InterfaceList {
 		PlayerList.self.zFine = 3000;
 		PlayerList.self.xFine = 3000;
 		if (!GlRenderer.enabled) {
-			Flames.method2743(client.js5Archive8);
+			Flames.load(client.js5Archive8);
 			client.setGameState(10);
 			return;
 		}
@@ -1064,5 +1078,45 @@ public class InterfaceList {
 		FogManager.setInstantFade();
 		LoginManager.setupLoadingScreenRegion();
 		client.setGameState(28);
+	}
+
+	@OriginalMember(owner = "client!jg", name = "a", descriptor = "(IBIII)V")
+	public static void forceRedrawScreen(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
+		for (@Pc(3) int local3 = 0; local3 < rectangles; local3++) {
+			if (arg0 < rectangleX[local3] + rectangleWidth[local3] && arg0 + arg3 > rectangleX[local3] && rectangleY[local3] + rectangleHeight[local3] > arg1 && rectangleY[local3] < arg2 + arg1) {
+				rectangleRedraw[local3] = true;
+			}
+		}
+	}
+
+	@OriginalMember(owner = "client!jm", name = "a", descriptor = "(Z)V")
+	public static void method2460() {
+		if (topLevelInterface != -1) {
+			Static96.method1949(topLevelInterface);
+		}
+		for (@Pc(15) int local15 = 0; local15 < rectangles; local15++) {
+			if (aBooleanArray100[local15]) {
+				rectangleRedraw[local15] = true;
+			}
+			aBooleanArray116[local15] = aBooleanArray100[local15];
+			aBooleanArray100[local15] = false;
+		}
+		Static87.anInt2503 = -1;
+		mouseOverInventoryInterface = null;
+		anInt4311 = client.loop;
+		if (GlRenderer.enabled) {
+			ScriptRunner.aBoolean299 = true;
+		}
+		anInt5574 = -1;
+		if (topLevelInterface != -1) {
+			rectangles = 0;
+			Static9.method182();
+		}
+		if (GlRenderer.enabled) {
+			GlRaster.method1177();
+		} else {
+			SoftwareRaster.method2503();
+		}
+		Protocol.anInt4247 = 0;
 	}
 }

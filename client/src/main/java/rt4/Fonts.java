@@ -71,7 +71,7 @@ public class Fonts {
 		p12Full.drawInterfaceText(arg1, 10, 10, local24, local31, 16777215, -1, 1, 1, 0);
 		InterfaceList.redrawScreen(6, local24 + 8, 6, local31 + 4 + 4);
 		if (!arg0) {
-			Static121.redrawScreen(10, 10, local31, local24);
+			InterfaceList.forceRedrawScreen(10, 10, local31, local24);
 		} else if (GlRenderer.enabled) {
 			GlRenderer.swapBuffers();
 		} else {

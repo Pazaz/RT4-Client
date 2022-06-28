@@ -12,16 +12,16 @@ import java.nio.ByteBuffer;
 public final class GlVertexBufferObject {
 
 	@OriginalMember(owner = "client!vi", name = "a", descriptor = "I")
-	private int anInt5760;
+	private int id;
 
 	@OriginalMember(owner = "client!vi", name = "b", descriptor = "I")
-	private final int anInt5761;
+	private final int contextId;
 
 	@OriginalMember(owner = "client!vi", name = "c", descriptor = "I")
-	private int anInt5762;
+	private int size;
 
 	@OriginalMember(owner = "client!vi", name = "d", descriptor = "Z")
-	private final boolean aBoolean300;
+	private final boolean stream;
 
 	@OriginalMember(owner = "client!vi", name = "<init>", descriptor = "()V")
 	public GlVertexBufferObject() {
@@ -29,66 +29,66 @@ public final class GlVertexBufferObject {
 	}
 
 	@OriginalMember(owner = "client!vi", name = "<init>", descriptor = "(Z)V")
-	public GlVertexBufferObject(@OriginalArg(0) boolean arg0) {
-		this.anInt5760 = -1;
-		this.anInt5762 = 0;
-		@Pc(9) GL2 local9 = GlRenderer.gl;
-		@Pc(12) int[] local12 = new int[1];
-		local9.glGenBuffers(1, local12, 0);
-		this.aBoolean300 = arg0;
-		this.anInt5760 = local12[0];
-		this.anInt5761 = GlCleaner.contextId;
+	public GlVertexBufferObject(@OriginalArg(0) boolean stream) {
+		this.id = -1;
+		this.size = 0;
+		@Pc(9) GL2 gl = GlRenderer.gl;
+		@Pc(12) int[] temp = new int[1];
+		gl.glGenBuffers(1, temp, 0);
+		this.stream = stream;
+		this.id = temp[0];
+		this.contextId = GlCleaner.contextId;
 	}
 
 	@OriginalMember(owner = "client!vi", name = "a", descriptor = "(Ljava/nio/ByteBuffer;)V")
-	public final void method4515(@OriginalArg(0) ByteBuffer arg0) {
-		if (arg0.limit() <= this.anInt5762) {
-			@Pc(6) GL2 local6 = GlRenderer.gl;
-			local6.glBindBuffer(GL2.GL_ARRAY_BUFFER, this.anInt5760);
-			local6.glBufferSubData(GL2.GL_ARRAY_BUFFER, 0, arg0.limit(), arg0);
+	public final void updateArrayBuffer(@OriginalArg(0) ByteBuffer buffer) {
+		if (buffer.limit() <= this.size) {
+			@Pc(6) GL2 gl = GlRenderer.gl;
+			gl.glBindBuffer(GL2.GL_ARRAY_BUFFER, this.id);
+			gl.glBufferSubData(GL2.GL_ARRAY_BUFFER, 0, buffer.limit(), buffer);
 		} else {
-			this.method4519(arg0);
+			this.setArrayBuffer(buffer);
 		}
 	}
 
 	@OriginalMember(owner = "client!vi", name = "finalize", descriptor = "()V")
 	@Override
 	public final void finalize() throws Throwable {
-		if (this.anInt5760 != -1) {
-			GlCleaner.method1489(this.anInt5760, this.anInt5762, this.anInt5761);
-			this.anInt5760 = -1;
-			this.anInt5762 = 0;
+		if (this.id != -1) {
+			GlCleaner.deleteBuffer(this.id, this.size, this.contextId);
+			this.id = -1;
+			this.size = 0;
 		}
 		super.finalize();
 	}
 
 	@OriginalMember(owner = "client!vi", name = "a", descriptor = "()V")
-	public final void method4516() {
-		@Pc(1) GL2 local1 = GlRenderer.gl;
-		local1.glBindBuffer(GL2.GL_ARRAY_BUFFER, this.anInt5760);
+	public final void bindArray() {
+		@Pc(1) GL2 gl = GlRenderer.gl;
+		gl.glBindBuffer(GL2.GL_ARRAY_BUFFER, this.id);
 	}
 
 	@OriginalMember(owner = "client!vi", name = "b", descriptor = "(Ljava/nio/ByteBuffer;)V")
-	public final void method4517(@OriginalArg(0) ByteBuffer arg0) {
-		@Pc(1) GL2 local1 = GlRenderer.gl;
-		local1.glBindBuffer(GL2.GL_ELEMENT_ARRAY_BUFFER, this.anInt5760);
-		local1.glBufferData(GL2.GL_ELEMENT_ARRAY_BUFFER, arg0.limit(), arg0, this.aBoolean300 ? GL2.GL_STREAM_DRAW : GL2.GL_STATIC_DRAW);
-		GlCleaner.onCardGeometry += arg0.limit() - this.anInt5762;
-		this.anInt5762 = arg0.limit();
+	public final void setElementArrayBuffer(@OriginalArg(0) ByteBuffer buffer) {
+		@Pc(1) GL2 gl = GlRenderer.gl;
+		gl.glBindBuffer(GL2.GL_ELEMENT_ARRAY_BUFFER, this.id);
+		gl.glBufferData(GL2.GL_ELEMENT_ARRAY_BUFFER, buffer.limit(), buffer, this.stream ? GL2.GL_STREAM_DRAW : GL2.GL_STATIC_DRAW);
+		GlCleaner.onCardGeometry += buffer.limit() - this.size;
+		this.size = buffer.limit();
 	}
 
 	@OriginalMember(owner = "client!vi", name = "b", descriptor = "()V")
-	public final void method4518() {
-		@Pc(1) GL2 local1 = GlRenderer.gl;
-		local1.glBindBuffer(GL2.GL_ELEMENT_ARRAY_BUFFER, this.anInt5760);
+	public final void bindElementArray() {
+		@Pc(1) GL2 gl = GlRenderer.gl;
+		gl.glBindBuffer(GL2.GL_ELEMENT_ARRAY_BUFFER, this.id);
 	}
 
 	@OriginalMember(owner = "client!vi", name = "c", descriptor = "(Ljava/nio/ByteBuffer;)V")
-	public final void method4519(@OriginalArg(0) ByteBuffer arg0) {
-		@Pc(1) GL2 local1 = GlRenderer.gl;
-		local1.glBindBuffer(GL2.GL_ARRAY_BUFFER, this.anInt5760);
-		local1.glBufferData(GL2.GL_ARRAY_BUFFER, arg0.limit(), arg0, this.aBoolean300 ? GL2.GL_STREAM_DRAW : GL2.GL_STATIC_DRAW);
-		GlCleaner.onCardGeometry += arg0.limit() - this.anInt5762;
-		this.anInt5762 = arg0.limit();
+	public final void setArrayBuffer(@OriginalArg(0) ByteBuffer buffer) {
+		@Pc(1) GL2 gl = GlRenderer.gl;
+		gl.glBindBuffer(GL2.GL_ARRAY_BUFFER, this.id);
+		gl.glBufferData(GL2.GL_ARRAY_BUFFER, buffer.limit(), buffer, this.stream ? GL2.GL_STREAM_DRAW : GL2.GL_STATIC_DRAW);
+		GlCleaner.onCardGeometry += buffer.limit() - this.size;
+		this.size = buffer.limit();
 	}
 }

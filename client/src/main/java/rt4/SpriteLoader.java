@@ -338,11 +338,18 @@ public class SpriteLoader {
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(IZILclient!ve;)Lclient!ek;")
 	public static SoftwareIndexedSprite loadSoftwareIndexedSprite(@OriginalArg(2) int arg0, @OriginalArg(3) Js5 arg1) {
-		return decode(arg1, 0, arg0) ? Static134.method2619() : null;
+		return decode(arg1, 0, arg0) ? method2619() : null;
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(Lclient!ve;IZ)Lclient!mm;")
 	public static SoftwareSprite loadSoftwareSpriteAutoDetect(@OriginalArg(0) Js5 arg0, @OriginalArg(1) int arg1) {
 		return decode(arg0, arg1) ? method3537() : null;
+	}
+
+	@OriginalMember(owner = "client!kh", name = "a", descriptor = "(B)Lclient!ek;")
+	public static SoftwareIndexedSprite method2619() {
+		@Pc(25) SoftwareIndexedSprite local25 = new SoftwareIndexedSprite(width, height, xOffsets[0], yOffsets[0], innerWidths[0], innerHeights[0], pixels[0], palette);
+		clear();
+		return local25;
 	}
 }

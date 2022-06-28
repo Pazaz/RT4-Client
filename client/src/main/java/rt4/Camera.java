@@ -13,6 +13,8 @@ public class Camera {
 	public static final int[] cameraAmplitude = new int[5];
 	@OriginalMember(owner = "client!qg", name = "Y", descriptor = "[I")
 	public static final int[] cameraFrequency = new int[5];
+	@OriginalMember(owner = "client!ob", name = "a", descriptor = "[Z")
+	public static final boolean[] customCameraActive = new boolean[5];
 	@OriginalMember(owner = "client!fl", name = "s", descriptor = "I")
 	public static double pitchTarget = 128;
 
@@ -87,6 +89,10 @@ public class Camera {
 	public static int anInt5161 = 0;
 	@OriginalMember(owner = "client!af", name = "d", descriptor = "I")
 	public static int anInt40;
+	@OriginalMember(owner = "client!lg", name = "d", descriptor = "F")
+	public static float aFloat15;
+	@OriginalMember(owner = "client!sk", name = "jb", descriptor = "I")
+	public static int anInt5203;
 
 	public static double mod(double a, double b) {
 		return ((a % b) + b) % b;
@@ -138,11 +144,11 @@ public class Camera {
 	public static void updateLockedCamera() {
 		@Pc(9) int local9 = anInt4232 * 128 + 64;
 		@Pc(15) int local15 = anInt5375 * 128 + 64;
-		@Pc(23) int local23 = SceneGraph.getTileHeight(Player.level, local15, local9) - Static231.anInt5203;
+		@Pc(23) int local23 = SceneGraph.getTileHeight(Player.level, local15, local9) - anInt5203;
 		if (anInt4612 >= 100) {
 			renderX = anInt5375 * 128 + 64;
 			renderZ = anInt4232 * 128 + 64;
-			anInt40 = SceneGraph.getTileHeight(Player.level, renderX, renderZ) - Static231.anInt5203;
+			anInt40 = SceneGraph.getTileHeight(Player.level, renderX, renderZ) - anInt5203;
 		} else {
 			if (renderX < local15) {
 				renderX += Static233.anInt5225 + anInt4612 * (local15 - renderX) / 1000;
@@ -289,9 +295,9 @@ public class Camera {
 		@Pc(371) float local371 = local226[2] - renderCoordinates[2];
 		@Pc(382) float local382 = (local226[1] - renderCoordinates[1]) * -1.0F;
 		@Pc(392) double local392 = Math.sqrt(local371 * local371 + local363 * local363);
-		Static146.aFloat15 = (float) Math.atan2(local382, local392);
+		aFloat15 = (float) Math.atan2(local382, local392);
 		aFloat10 = -((float) Math.atan2(local363, local371));
-		cameraPitch = (int) ((double) Static146.aFloat15 * 325.949D) & 0x7FF;
+		cameraPitch = (int) ((double) aFloat15 * 325.949D) & 0x7FF;
 		cameraYaw = (int) ((double) aFloat10 * 325.949D) & 0x7FF;
 	}
 
@@ -325,14 +331,14 @@ public class Camera {
 	@OriginalMember(owner = "client!lb", name = "a", descriptor = "(ZIIIBII)V")
 	public static void method2722(@OriginalArg(0) boolean arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
 		anInt4612 = arg3;
-		Static231.anInt5203 = arg2;
+		anInt5203 = arg2;
 		anInt5375 = arg5;
 		Static233.anInt5225 = arg1;
 		anInt4232 = arg4;
 		if (arg0 && anInt4612 >= 100) {
 			renderX = anInt5375 * 128 + 64;
 			renderZ = anInt4232 * 128 + 64;
-			anInt40 = SceneGraph.getTileHeight(Player.level, renderX, renderZ) - Static231.anInt5203;
+			anInt40 = SceneGraph.getTileHeight(Player.level, renderX, renderZ) - anInt5203;
 		}
 		cameraType = 2;
 	}
@@ -340,7 +346,7 @@ public class Camera {
 	@OriginalMember(owner = "client!cl", name = "e", descriptor = "(I)V")
 	public static void resetCameraEffects() {
 		for (@Pc(3) int local3 = 0; local3 < 5; local3++) {
-			Static176.customCameraActive[local3] = false;
+			customCameraActive[local3] = false;
 		}
 		anInt5230 = 0;
 		Static233.anInt5217 = 0;

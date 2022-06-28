@@ -34,8 +34,8 @@ public final class LiquidMaterialRenderer implements MaterialRenderer {
 			@Pc(21) GL2 local21 = GlRenderer.gl;
 			local21.glGenProgramsARB(1, local19, 0);
 			this.anInt4830 = local19[0];
-			@Pc(42) int[][] local42 = Static33.method874(0.4F);
-			@Pc(53) int[][] local53 = Static33.method874(0.4F);
+			@Pc(42) int[][] local42 = method874(0.4F);
+			@Pc(53) int[][] local53 = method874(0.4F);
 			@Pc(58) Buffer local58 = new Buffer(262144);
 			for (@Pc(60) int local60 = 0; local60 < 256; local60++) {
 				@Pc(67) int[] local67 = local42[local60];
@@ -61,6 +61,23 @@ public final class LiquidMaterialRenderer implements MaterialRenderer {
 			this.method3719();
 			this.method3720();
 		}
+	}
+
+	@OriginalMember(owner = "client!cj", name = "a", descriptor = "(ZIIIIIIFB)[[I")
+	public static int[][] method874(@OriginalArg(7) float arg0) {
+		@Pc(15) int[][] local15 = new int[256][64];
+		@Pc(19) TextureOp34 local19 = new TextureOp34();
+		local19.anInt648 = (int) (arg0 * 4096.0F);
+		local19.anInt642 = 3;
+		local19.anInt641 = 4;
+		local19.aBoolean44 = false;
+		local19.anInt646 = 8;
+		local19.postDecode();
+		Texture.setSize(256, 64);
+		for (@Pc(46) int local46 = 0; local46 < 256; local46++) {
+			local19.method584(local46, local15[local46]);
+		}
+		return local15;
 	}
 
 	@OriginalMember(owner = "client!rd", name = "a", descriptor = "()V")

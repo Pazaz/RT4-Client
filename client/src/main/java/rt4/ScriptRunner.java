@@ -62,6 +62,10 @@ public final class ScriptRunner {
 	public static final JagString aClass100_767 = JagString.parse(")2");
 	@OriginalMember(owner = "client!je", name = "U", descriptor = "Lclient!na;")
 	public static final JagString aClass100_588 = JagString.parse("showingVideoAd");
+	@OriginalMember(owner = "client!ob", name = "p", descriptor = "Lclient!na;")
+	public static final JagString aClass100_802 = JagString.parse("(U0a )2 non)2existant gosub script)2num: ");
+	@OriginalMember(owner = "client!af", name = "m", descriptor = "Lclient!na;")
+	public static final JagString aClass100_10 = JagString.parse("<br>");
 	@OriginalMember(owner = "client!jh", name = "n", descriptor = "Lclient!bd;")
 	public static QuickChatPhrase activePhrase;
 	@OriginalMember(owner = "client!wf", name = "j", descriptor = "Lclient!be;")
@@ -228,7 +232,7 @@ public final class ScriptRunner {
 			if (local59 < Camera.anInt5245 / 256) {
 				local59 = Camera.anInt5245 / 256;
 			}
-			if (Static176.customCameraActive[4] && Camera.cameraAmplitude[4] + 128 > local59) {
+			if (Camera.customCameraActive[4] && Camera.cameraAmplitude[4] + 128 > local59) {
 				local59 = Camera.cameraAmplitude[4] + 128;
 			}
 			Camera.method555(Camera.cameraX, arg0, SceneGraph.getTileHeight(Player.level, PlayerList.self.xFine, PlayerList.self.zFine) - 50, Camera.ZOOM - -(local59 * 3), local57, Camera.cameraZ, local59);
@@ -241,7 +245,7 @@ public final class ScriptRunner {
 		@Pc(127) int local127;
 		@Pc(171) int local171;
 		for (local127 = 0; local127 < 5; local127++) {
-			if (Static176.customCameraActive[local127]) {
+			if (Camera.customCameraActive[local127]) {
 				local171 = (int) ((double) -Camera.cameraJitter[local127] + (double) (Camera.cameraJitter[local127] * 2 + 1) * Math.random() + Math.sin((double) Protocol.anIntArray76[local127] * ((double) Camera.cameraFrequency[local127] / 100.0D)) * (double) Camera.cameraAmplitude[local127]);
 				if (local127 == 3) {
 					Camera.cameraYaw = local171 + Camera.cameraYaw & 0x7FF;
@@ -266,13 +270,13 @@ public final class ScriptRunner {
 				}
 			}
 		}
-		Static252.method4302();
+		method4302();
 		if (GlRenderer.enabled) {
 			GlRaster.setClip(arg2, arg4, arg2 + arg3, arg4 - -arg0);
 			@Pc(248) float local248 = (float) Camera.cameraPitch * 0.17578125F;
 			@Pc(253) float local253 = (float) Camera.cameraYaw * 0.17578125F;
 			if (Camera.cameraType == 3) {
-				local248 = Static146.aFloat15 * 360.0F / 6.2831855F;
+				local248 = Camera.aFloat15 * 360.0F / 6.2831855F;
 				local253 = Camera.aFloat10 * 360.0F / 6.2831855F;
 			}
 			GlRenderer.method4171(arg2, arg4, arg3, arg0, arg3 / 2 + arg2, arg4 - -(arg0 / 2), local248, local253, anInt5029, anInt5029);
@@ -291,7 +295,7 @@ public final class ScriptRunner {
 			local127 = Rasteriser.screenLowerX;
 			GlModel.anInt3582 = local127 + (local171 - local127) * (-arg2 + anInt3751) / arg3;
 			@Pc(361) int local361 = Rasteriser.screenUpperY;
-			Static34.anInt1053 = (local361 - local344) * (anInt1892 - arg4) / arg0 + local344;
+			RawModel.anInt1053 = (local361 - local344) * (anInt1892 - arg4) / arg0 + local344;
 		}
 		client.audioLoop();
 		@Pc(387) byte local387 = method4047() == 2 ? (byte) anInt3325 : 1;
@@ -985,7 +989,7 @@ public final class ScriptRunner {
 	public static SecondaryLinkedList method3333(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		@Pc(9) SecondaryLinkedList local9 = new SecondaryLinkedList();
 		for (@Pc(14) Map local14 = (Map) MapList.aClass69_120.head(); local14 != null; local14 = (Map) MapList.aClass69_120.next()) {
-			if (local14.aBoolean50 && local14.method664(arg1, arg0)) {
+			if (local14.valid && local14.method664(arg1, arg0)) {
 				local9.addTail(local14);
 			}
 		}
@@ -1302,6 +1306,118 @@ public final class ScriptRunner {
 			}
 		}
 		return true;
+	}
+
+	@OriginalMember(owner = "client!uh", name = "f", descriptor = "(I)V")
+	public static void method4302() {
+		if (method4047() != 2) {
+			return;
+		}
+		@Pc(27) byte local27 = (byte) (anInt3325 - 4 & 0xFF);
+		@Pc(31) int local31 = anInt3325 % 104;
+		@Pc(33) int local33;
+		@Pc(40) int local40;
+		for (local33 = 0; local33 < 4; local33++) {
+			for (local40 = 0; local40 < 104; local40++) {
+				aByteArrayArrayArray15[local33][local31][local40] = local27;
+			}
+		}
+		if (Player.level == 3) {
+			return;
+		}
+		for (local33 = 0; local33 < 2; local33++) {
+			anIntArray205[local33] = -1000000;
+			anIntArray338[local33] = 1000000;
+			anIntArray518[local33] = 0;
+			anIntArray476[local33] = 1000000;
+			anIntArray134[local33] = 0;
+		}
+		if (Camera.cameraType != 1) {
+			local33 = SceneGraph.getTileHeight(Player.level, Camera.renderX, Camera.renderZ);
+			if (local33 - Camera.anInt40 < 800 && (SceneGraph.tileFlags[Player.level][Camera.renderX >> 7][Camera.renderZ >> 7] & 0x4) != 0) {
+				method4348(false, Camera.renderX >> 7, Camera.renderZ >> 7, SceneGraph.tiles, 1);
+			}
+			return;
+		}
+		if ((SceneGraph.tileFlags[Player.level][PlayerList.self.xFine >> 7][PlayerList.self.zFine >> 7] & 0x4) != 0) {
+			method4348(false, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7, SceneGraph.tiles, 0);
+		}
+		if (Camera.cameraPitch >= 310) {
+			return;
+		}
+		@Pc(135) int local135 = PlayerList.self.zFine >> 7;
+		local40 = Camera.renderZ >> 7;
+		@Pc(146) int local146;
+		if (local40 < local135) {
+			local146 = local135 - local40;
+		} else {
+			local146 = local40 - local135;
+		}
+		local33 = Camera.renderX >> 7;
+		@Pc(162) int local162 = PlayerList.self.xFine >> 7;
+		@Pc(174) int local174;
+		if (local162 > local33) {
+			local174 = local162 - local33;
+		} else {
+			local174 = local33 - local162;
+		}
+		@Pc(192) int local192;
+		@Pc(186) int local186;
+		if (local174 <= local146) {
+			local186 = 32768;
+			local192 = local174 * 65536 / local146;
+			while (local40 != local135) {
+				if (local40 < local135) {
+					local40++;
+				} else if (local40 > local135) {
+					local40--;
+				}
+				if ((SceneGraph.tileFlags[Player.level][local33][local40] & 0x4) != 0) {
+					method4348(false, local33, local40, SceneGraph.tiles, 1);
+					break;
+				}
+				local186 += local192;
+				if (local186 >= 65536) {
+					if (local162 > local33) {
+						local33++;
+					} else if (local162 < local33) {
+						local33--;
+					}
+					local186 -= 65536;
+					if ((SceneGraph.tileFlags[Player.level][local33][local40] & 0x4) != 0) {
+						method4348(false, local33, local40, SceneGraph.tiles, 1);
+						break;
+					}
+				}
+			}
+			return;
+		}
+		local186 = 32768;
+		local192 = local146 * 65536 / local174;
+		while (local162 != local33) {
+			if (local162 > local33) {
+				local33++;
+			} else if (local33 > local162) {
+				local33--;
+			}
+			if ((SceneGraph.tileFlags[Player.level][local33][local40] & 0x4) != 0) {
+				method4348(false, local33, local40, SceneGraph.tiles, 1);
+				break;
+			}
+			local186 += local192;
+			if (local186 >= 65536) {
+				if (local40 < local135) {
+					local40++;
+				} else if (local135 < local40) {
+					local40--;
+				}
+				local186 -= 65536;
+				if ((SceneGraph.tileFlags[Player.level][local33][local40] & 0x4) != 0) {
+					method4348(false, local33, local40, SceneGraph.tiles, 1);
+					break;
+				}
+			}
+		}
 	}
 
 	public static class Cs2Opcodes {
@@ -3406,7 +3522,7 @@ public final class ScriptRunner {
 										isp--;
 										int1 = intStack[isp];
 										if (FriendsList.state == 2 && int1 >= 0 && int1 < FriendsList.size) {
-											intStack[isp++] = FriendsList.aBooleanArray135[int1] ? 1 : 0;
+											intStack[isp++] = FriendsList.sameGame[int1] ? 1 : 0;
 											continue;
 										}
 										intStack[isp++] = 0;
@@ -3418,7 +3534,7 @@ public final class ScriptRunner {
 										if (string.startsWith(aClass100_446) || string.startsWith(aClass100_537)) {
 											string = string.substring(7);
 										}
-										intStack[isp++] = FriendsList.method25(string);
+										intStack[isp++] = FriendsList.indexOf(string);
 										continue;
 									}
 									if (opcode == 3629) {
@@ -4287,12 +4403,12 @@ public final class ScriptRunner {
 														}
 														continue;
 													}
-													@Pc(7293) Map local7293;
+													@Pc(7293) Map map;
 													if (opcode == Cs2Opcodes.getDungeonMapName) {
 														ssp--;
-														local7293 = MapList.get(stringStack[ssp]);
-														if (local7293 != null && local7293.aClass100_137 != null) {
-															stringStack[ssp++] = local7293.aClass100_137;
+														map = MapList.get(stringStack[ssp]);
+														if (map != null && map.name != null) {
+															stringStack[ssp++] = map.name;
 															continue;
 														}
 														stringStack[ssp++] = EMPTY_STRING;
@@ -4309,24 +4425,24 @@ public final class ScriptRunner {
 														continue;
 													}
 													if (opcode == Cs2Opcodes.getDungeonmapCenter) {
-														local7293 = WorldMap.method4361();
-														if (local7293 == null) {
+														map = WorldMap.getCurrentMap();
+														if (map == null) {
 															intStack[isp++] = 0;
 															intStack[isp++] = 0;
 														} else {
-															intStack[isp++] = local7293.anInt769 * 64;
-															intStack[isp++] = local7293.anInt764 * 64;
+															intStack[isp++] = map.originX * 64;
+															intStack[isp++] = map.originZ * 64;
 														}
 														continue;
 													}
 													if (opcode == 5211) {
-														local7293 = WorldMap.method4361();
-														if (local7293 == null) {
+														map = WorldMap.getCurrentMap();
+														if (map == null) {
 															intStack[isp++] = 0;
 															intStack[isp++] = 0;
 														} else {
-															intStack[isp++] = local7293.displayMaxZ - local7293.displayMinX;
-															intStack[isp++] = local7293.displayMinZ - local7293.displayMaxX;
+															intStack[isp++] = map.displayMaxZ - map.displayMinX;
+															intStack[isp++] = map.displayMinZ - map.displayMaxX;
 														}
 														continue;
 													}
@@ -4339,7 +4455,7 @@ public final class ScriptRunner {
 															str1 = WorldMap.labels.aClass100Array153[int1];
 															int2 = WorldMap.labels.method3894(int1);
 														}
-														str1 = str1.method3140(aClass100_639, Static5.aClass100_10);
+														str1 = str1.method3140(aClass100_639, aClass100_10);
 														stringStack[ssp++] = str1;
 														intStack[isp++] = int2;
 														continue;
@@ -4353,7 +4469,7 @@ public final class ScriptRunner {
 															str1 = WorldMap.labels.aClass100Array153[int1];
 															int2 = WorldMap.labels.method3894(int1);
 														}
-														str1 = str1.method3140(aClass100_639, Static5.aClass100_10);
+														str1 = str1.method3140(aClass100_639, aClass100_10);
 														stringStack[ssp++] = str1;
 														intStack[isp++] = int2;
 														continue;
@@ -4401,11 +4517,11 @@ public final class ScriptRunner {
 														continue;
 													}
 													if (opcode == Cs2Opcodes.getMapDefaultZoom) {
-														local7293 = WorldMap.method4361();
-														if (local7293 == null) {
+														map = WorldMap.getCurrentMap();
+														if (map == null) {
 															intStack[isp++] = -1;
 														} else {
-															intStack[isp++] = local7293.defaultZoom;
+															intStack[isp++] = map.defaultZoom;
 														}
 														continue;
 													}
@@ -4581,7 +4697,7 @@ public final class ScriptRunner {
 														if (GameShell.frame != null || local1552 && SignLink.anInt5928 != 3 && SignLink.osName.startsWith("win") && !client.haveIe6) {
 															Static164.newTab = local1552;
 															url = local8356;
-															Static33.openUrlRequest = GameShell.signLink.openUrl(new String(local8356.method3148(), StandardCharsets.ISO_8859_1));
+															Protocol.openUrlRequest = GameShell.signLink.openUrl(new String(local8356.method3148(), StandardCharsets.ISO_8859_1));
 															continue;
 														}
 														openUrl(local8356, local1552);
@@ -5329,7 +5445,7 @@ public final class ScriptRunner {
 														isp--;
 														int1 = intStack[isp];
 														if (client.gameState == 10 && LoginManager.anInt4937 == 0 && LoginManager.step == 0 && CreateManager.step == 0) {
-															intStack[isp++] = Static176.hopWorld(int1) ? 1 : 0;
+															intStack[isp++] = WorldList.hopWorld(int1) ? 1 : 0;
 															continue;
 														}
 														intStack[isp++] = 0;
@@ -5449,7 +5565,7 @@ public final class ScriptRunner {
 										local652 = aCalendar2.get(Calendar.DATE);
 										c = aCalendar2.get(Calendar.MONTH);
 										local1087 = aCalendar2.get(Calendar.YEAR);
-										stringStack[ssp++] = JagString.concatenate(new JagString[]{JagString.parseInt(local652), aClass100_767, Static34.aClass100Array40[c], aClass100_767, JagString.parseInt(local1087)});
+										stringStack[ssp++] = JagString.concatenate(new JagString[]{JagString.parseInt(local652), aClass100_767, DateUtil.aClass100Array40[c], aClass100_767, JagString.parseInt(local1087)});
 										continue;
 									}
 									if (opcode == Cs2Opcodes.strForGender) {
@@ -5730,7 +5846,7 @@ public final class ScriptRunner {
 				}
 				if (op == 40) {
 					cycles = intOperands[pc];
-					str.method3113(Static176.aClass100_802).method3113(JagString.parseInt(cycles));
+					str.method3113(aClass100_802).method3113(JagString.parseInt(cycles));
 				}
 				if (client.modeWhere != 0) {
 					Chat.add(EMPTY_STRING, 0, JagString.concatenate(new JagString[]{aClass100_780, script.name}));

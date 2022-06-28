@@ -32,6 +32,8 @@ public final class client extends GameShell {
 	public static final JagString LOGINSCREEN = JagString.parse("loginscreen");
 	@OriginalMember(owner = "client!qk", name = "a", descriptor = "Lclient!na;")
 	public static final JagString aClass100_899 = JagString.parse("0(U");
+	@OriginalMember(owner = "client!uh", name = "Y", descriptor = "Lclient!na;")
+	public static final JagString HUFFMAN_GROUP = JagString.parse("huffman");
 	@OriginalMember(owner = "client!jm", name = "A", descriptor = "Lclient!na;")
 	static final JagString aClass100_603 = JagString.parse("");
 	@OriginalMember(owner = "client!jm", name = "z", descriptor = "Lclient!na;")
@@ -517,7 +519,7 @@ public final class client extends GameShell {
 		Mouse.prevClickTime = 0L;
 		MouseRecorder.instance.samples = 0;
 		focus = true;
-		ReflectionCheck.method4625();
+		ReflectionCheck.clear();
 		Protocol.opcode4 = -1;
 		Protocol.opcode3 = -1;
 		Protocol.opcode = -1;
@@ -580,7 +582,7 @@ public final class client extends GameShell {
 		Camera.anInt5230 = 0;
 		Static233.anInt5217 = 0;
 		Camera.anInt5765 = 0;
-		Static231.anInt5203 = 0;
+		Camera.anInt5203 = 0;
 		Camera.anInt4232 = 0;
 		Camera.anInt5375 = 0;
 		Camera.anInt1744 = 0;
@@ -718,7 +720,7 @@ public final class client extends GameShell {
 		} else if (gameState == 5) {
 			LoadingBar.render(false, Fonts.b12Full);
 		} else if (gameState == 10) {
-			Static126.method2460();
+			InterfaceList.method2460();
 		} else if (gameState == 25 || gameState == 28) {
 			if (LoginManager.loadingScreenState == 1) {
 				if (anInt5150 < LoginManager.mapFilesMissingCount) {
@@ -1063,7 +1065,7 @@ public final class client extends GameShell {
 			@Pc(379) Component prioritySource;
 			@Pc(387) Component priorityComponent;
 			do {
-				priorityRequest = (HookRequest) Static4.highPriorityRequests.removeHead();
+				priorityRequest = (HookRequest) InterfaceList.highPriorityRequests.removeHead();
 				if (priorityRequest == null) {
 					while (true) {
 						do {
@@ -1076,13 +1078,13 @@ public final class client extends GameShell {
 											if (Static40.aClass13_14 != null) {
 												ClientProt.method28();
 											}
-											if (Static33.openUrlRequest != null && Static33.openUrlRequest.status == 1) {
-												if (Static33.openUrlRequest.result != null) {
+											if (Protocol.openUrlRequest != null && Protocol.openUrlRequest.status == 1) {
+												if (Protocol.openUrlRequest.result != null) {
 													ScriptRunner.openUrl(ScriptRunner.url, Static164.newTab);
 												}
 												Static164.newTab = false;
 												ScriptRunner.url = null;
-												Static33.openUrlRequest = null;
+												Protocol.openUrlRequest = null;
 											}
 											if (loop % 1500 == 0) {
 												Static123.topBannerRefresh();
@@ -1461,8 +1463,8 @@ public final class client extends GameShell {
 			mainLoadPercentage = 75;
 			mainLoadState = 120;
 		} else if (mainLoadState == 120) {
-			if (js5Archive10.isFileReady(JagString.EMPTY, Static252.HUFFMAN_GROUP)) {
-				@Pc(1060) HuffmanCodec codec = new HuffmanCodec(js5Archive10.fetchFile(JagString.EMPTY, Static252.HUFFMAN_GROUP));
+			if (js5Archive10.isFileReady(JagString.EMPTY, HUFFMAN_GROUP)) {
+				@Pc(1060) HuffmanCodec codec = new HuffmanCodec(js5Archive10.fetchFile(JagString.EMPTY, HUFFMAN_GROUP));
 				WordPack.init(codec);
 				mainLoadSecondaryText = LocalizedText.MAINLOAD120B;
 				mainLoadState = 130;

@@ -20,6 +20,9 @@ public class PlayerSkillXpTable {
 	@OriginalMember(owner = "client!h", name = "S", descriptor = "[I")
 	public static final int[] xpLevelLookup = new int[99];
 
+	@OriginalMember(owner = "client!oj", name = "z", descriptor = "[Z")
+	public static final boolean[] ENABLED_SKILLS = new boolean[]{true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, false};
+
 	@OriginalMember(owner = "client!ha", name = "m", descriptor = "I")
 	public static int updatedStatsWriterIndex = 0;
 

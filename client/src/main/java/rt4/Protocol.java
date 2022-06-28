@@ -60,6 +60,8 @@ public class Protocol {
 	public static final int[] anIntArray76 = new int[5];
 	@OriginalMember(owner = "client!pg", name = "db", descriptor = "Lclient!na;")
 	public static final JagString ASSISTREQ = JagString.parse(":assistreq:");
+	@OriginalMember(owner = "client!rj", name = "ab", descriptor = "Lclient!na;")
+	public static final JagString aClass100_916 = JagString.parse(":clanreq:");
 	@OriginalMember(owner = "client!jk", name = "B", descriptor = "Lclient!ma;")
 	public static BufferedSocket socket;
 	@OriginalMember(owner = "client!fl", name = "C", descriptor = "Lsignlink!im;")
@@ -108,6 +110,8 @@ public class Protocol {
 	public static boolean prevFocus = true;
 	@OriginalMember(owner = "client!rm", name = "c", descriptor = "I")
 	public static int anInt4941 = 1;
+	@OriginalMember(owner = "client!cj", name = "n", descriptor = "Lsignlink!im;")
+	public static PrivilegedRequest openUrlRequest;
 
 	@OriginalMember(owner = "client!g", name = "b", descriptor = "(B)V")
 	public static void readZonePacket() {
@@ -1033,7 +1037,7 @@ public class Protocol {
 				if (!ignored && Player.inTutorialIsland == 0) {
 					Chat.add(name, 15, JagString.EMPTY);
 				}
-			} else if (message.endsWith(Static217.aClass100_916)) {
+			} else if (message.endsWith(aClass100_916)) {
 				JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
 				long name37 = name.encode37();
 				boolean ignored = false;
@@ -1571,7 +1575,7 @@ public class Protocol {
 					FriendsList.worldNames[i] = worldName;
 					FriendsList.ranks[i] = x;
 					name = null;
-					FriendsList.aBooleanArray135[i] = ignored;
+					FriendsList.sameGame[i] = ignored;
 					break;
 				}
 			}
@@ -1581,7 +1585,7 @@ public class Protocol {
 				FriendsList.worlds[FriendsList.size] = worldId;
 				FriendsList.worldNames[FriendsList.size] = worldName;
 				FriendsList.ranks[FriendsList.size] = x;
-				FriendsList.aBooleanArray135[FriendsList.size] = ignored;
+				FriendsList.sameGame[FriendsList.size] = ignored;
 				FriendsList.size++;
 			}
 			FriendsList.transmitAt = InterfaceList.transmitTimer;
@@ -1607,9 +1611,9 @@ public class Protocol {
 						@Pc(3074) int local3074 = FriendsList.ranks[i];
 						FriendsList.ranks[i] = FriendsList.ranks[i + 1];
 						FriendsList.ranks[i + 1] = local3074;
-						@Pc(3092) boolean local3092 = FriendsList.aBooleanArray135[i];
-						FriendsList.aBooleanArray135[i] = FriendsList.aBooleanArray135[i + 1];
-						FriendsList.aBooleanArray135[i + 1] = local3092;
+						@Pc(3092) boolean local3092 = FriendsList.sameGame[i];
+						FriendsList.sameGame[i] = FriendsList.sameGame[i + 1];
+						FriendsList.sameGame[i + 1] = local3092;
 					}
 				}
 				if (sorting) {
@@ -1728,7 +1732,7 @@ public class Protocol {
 			int frequency = inboundBuffer.g1();
 			int shake4 = inboundBuffer.g2();
 			setVerifyId(tracknum);
-			Static176.customCameraActive[cameraId] = true;
+			Camera.customCameraActive[cameraId] = true;
 			Camera.cameraJitter[cameraId] = jitter;
 			Camera.cameraAmplitude[cameraId] = amplitude;
 			Camera.cameraFrequency[cameraId] = frequency;
@@ -1749,7 +1753,7 @@ public class Protocol {
 			InterfaceList.miscTransmitAt = InterfaceList.transmitTimer;
 			return true;
 		} else if (opcode == ServerProt.REFLECTION_CHEAT_CHECK) {
-			ReflectionCheck.method3654(GameShell.signLink, inboundBuffer, length);
+			ReflectionCheck.push(GameShell.signLink, inboundBuffer, length);
 			opcode = -1;
 			return true;
 		} else if (opcode == ServerProt.CLIENT_SETVARC_SMALL) {
@@ -1812,7 +1816,7 @@ public class Protocol {
 			} else {
 				ScriptRunner.url = url;
 				Static164.newTab = true;
-				Static33.openUrlRequest = GameShell.signLink.openUrl(new String(url.method3148(), StandardCharsets.ISO_8859_1));
+				openUrlRequest = GameShell.signLink.openUrl(new String(url.method3148(), StandardCharsets.ISO_8859_1));
 			}
 			opcode = -1;
 			return true;
@@ -1906,7 +1910,7 @@ public class Protocol {
 			IgnoreList.size = length / 8;
 			for (int i = 0; i < IgnoreList.size; i++) {
 				IgnoreList.encodedUsernames[i] = inboundBuffer.g8();
-				IgnoreList.aClass100Array134[i] = Base37.decode37(IgnoreList.encodedUsernames[i]);
+				IgnoreList.usernames[i] = Base37.decode37(IgnoreList.encodedUsernames[i]);
 			}
 			FriendsList.transmitAt = InterfaceList.transmitTimer;
 			opcode = -1;
@@ -2694,13 +2698,13 @@ public class Protocol {
 		if (InterfaceList.clickedInventoryComponent != null) {
 			InterfaceList.redraw(InterfaceList.clickedInventoryComponent);
 			if (InterfaceList.clickedInventoryComponentX + 5 < Mouse.lastMouseX || Mouse.lastMouseX < InterfaceList.clickedInventoryComponentX - 5 || InterfaceList.clickedInventoryComponentY + 5 < Mouse.lastMouseY || InterfaceList.clickedInventoryComponentY - 5 > Mouse.lastMouseY) {
-				Static123.draggingClickedInventoryObject = true;
+				InterfaceList.draggingClickedInventoryObject = true;
 			}
 			InterfaceList.clickedInventoryComponentCycle++;
 
 			if (Mouse.pressedButton == 0) {
-				if (Static123.draggingClickedInventoryObject && InterfaceList.clickedInventoryComponentCycle >= 5) {
-					if (InterfaceList.clickedInventoryComponent == InterfaceList.mouseOverInventoryInterface && Static4.mouseOverInventoryObjectIndex != MiniMenu.clickedInventoryIndex) {
+				if (InterfaceList.draggingClickedInventoryObject && InterfaceList.clickedInventoryComponentCycle >= 5) {
+					if (InterfaceList.clickedInventoryComponent == InterfaceList.mouseOverInventoryInterface && InterfaceList.mouseOverInventoryObjectIndex != MiniMenu.clickedInventoryIndex) {
 						component = InterfaceList.clickedInventoryComponent;
 						@Pc(1363) byte inserting = 0;
 
@@ -2713,7 +2717,7 @@ public class Protocol {
 						}
 
 						if (InterfaceList.getServerActiveProperties(component).isObjReplaceEnabled()) {
-							int newIndex = Static4.mouseOverInventoryObjectIndex;
+							int newIndex = InterfaceList.mouseOverInventoryObjectIndex;
 							int currentIndex = MiniMenu.clickedInventoryIndex;
 							component.objTypes[currentIndex] = component.objTypes[newIndex];
 							component.objCounts[currentIndex] = component.objCounts[newIndex];
@@ -2721,7 +2725,7 @@ public class Protocol {
 							component.objCounts[newIndex] = 0;
 						} else if (inserting == 1) {
 							int currentIndex = MiniMenu.clickedInventoryIndex;
-							int newIndex = Static4.mouseOverInventoryObjectIndex;
+							int newIndex = InterfaceList.mouseOverInventoryObjectIndex;
 							while (currentIndex != newIndex) {
 								if (currentIndex > newIndex) {
 									component.swapObjs(currentIndex - 1, currentIndex);
@@ -2732,10 +2736,10 @@ public class Protocol {
 								}
 							}
 						} else {
-							component.swapObjs(MiniMenu.clickedInventoryIndex, Static4.mouseOverInventoryObjectIndex);
+							component.swapObjs(MiniMenu.clickedInventoryIndex, InterfaceList.mouseOverInventoryObjectIndex);
 						}
 						outboundBuffer.p1isaac(231);
-						outboundBuffer.p2(Static4.mouseOverInventoryObjectIndex);
+						outboundBuffer.p2(InterfaceList.mouseOverInventoryObjectIndex);
 						outboundBuffer.ip4(InterfaceList.clickedInventoryComponent.id);
 						outboundBuffer.p2add(MiniMenu.clickedInventoryIndex);
 						outboundBuffer.p1sub(inserting);
@@ -2750,7 +2754,7 @@ public class Protocol {
 				InterfaceList.clickedInventoryComponent = null;
 			}
 		}
-		Static146.aBoolean174 = false;
+		InterfaceList.aBoolean174 = false;
 		InterfaceList.aClass13_12 = null;
 		Static44.aBoolean83 = false;
 		InterfaceList.keyQueueSize = 0;
@@ -2773,7 +2777,7 @@ public class Protocol {
 			@Pc(1560) Component prioritySource;
 			@Pc(1555) HookRequest priorityRequest;
 			do {
-				priorityRequest = (HookRequest) Static4.highPriorityRequests.removeHead();
+				priorityRequest = (HookRequest) InterfaceList.highPriorityRequests.removeHead();
 				if (priorityRequest == null) {
 					while (true) {
 						do {
@@ -2883,12 +2887,12 @@ public class Protocol {
 												Mouse.setIdleLoops(14500);
 												outboundBuffer.p1isaac(245);
 											}
-											if (Static33.openUrlRequest != null && Static33.openUrlRequest.status == 1) {
-												if (Static33.openUrlRequest.result != null) {
+											if (openUrlRequest != null && openUrlRequest.status == 1) {
+												if (openUrlRequest.result != null) {
 													ScriptRunner.openUrl(ScriptRunner.url, Static164.newTab);
 												}
 												ScriptRunner.url = null;
-												Static33.openUrlRequest = null;
+												openUrlRequest = null;
 												Static164.newTab = false;
 											}
 											Static131.anInt3251++;

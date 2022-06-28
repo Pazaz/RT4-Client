@@ -131,8 +131,8 @@ public class ShadowModelList {
 				for (local162 = 0; local162 < local650.vertexCount; local162++) {
 					local650.vertexY[local162] += SceneGraph.getTileHeight(Player.level, local650.vertexX[local162] + arg3, arg5 + local650.vertexZ[local162]) - arg11;
 				}
-				local650.vertexBuffer.valid = false;
 				local650.bounds.valid = false;
+				local650.vertexBuffer.valid = false;
 			}
 		} else {
 			@Pc(574) SoftwareModel local574 = (SoftwareModel) local33;

@@ -6,43 +6,43 @@ import org.openrs2.deob.annotation.Pc;
 
 public class Flames {
 	@OriginalMember(owner = "client!se", name = "t", descriptor = "[I")
-	public static final int[] anIntArray445 = new int[]{12543016, 15504954, 15914854, 16773818};
+	public static final int[] flameGradientSource = new int[]{0xbf6428, 0xec963a, 0xf2d766, 0xfff2ba};
 
 	@OriginalMember(owner = "client!bb", name = "m", descriptor = "Lclient!na;")
 	public static final JagString RUNES = JagString.parse("runes");
 
 	@OriginalMember(owner = "client!cl", name = "ab", descriptor = "[I")
-	public static final int[] anIntArray83 = new int[256];
+	public static final int[] flameShiftX = new int[256];
 
 	@OriginalMember(owner = "client!km", name = "Yc", descriptor = "I")
 	public static int runesId;
 
 	@OriginalMember(owner = "client!uf", name = "e", descriptor = "I")
-	public static int anInt5434 = 0;
+	public static int flameCycle = 0;
 
 	@OriginalMember(owner = "client!wb", name = "b", descriptor = "[I")
-	public static int[] anIntArray562;
+	public static int[] flameBuffer1;
 
 	@OriginalMember(owner = "client!t", name = "G", descriptor = "[Lclient!ek;")
 	public static SoftwareIndexedSprite[] runes;
 
 	@OriginalMember(owner = "client!hh", name = "r", descriptor = "[I")
-	public static int[] anIntArray235;
+	public static int[] flameGradient;
 
 	@OriginalMember(owner = "client!vg", name = "e", descriptor = "[I")
-	public static int[] anIntArray516;
+	public static int[] flameBuffer2;
 
 	@OriginalMember(owner = "client!ri", name = "d", descriptor = "[I")
-	public static int[] anIntArray188;
+	public static int[] flameIntensityBuffer;
 
 	@OriginalMember(owner = "client!nd", name = "y", descriptor = "Lclient!mm;")
-	public static SoftwareSprite aClass3_Sub2_Sub1_Sub1_3;
+	public static SoftwareSprite imageFlames;
 
 	@OriginalMember(owner = "client!i", name = "ec", descriptor = "[I")
-	public static int[] anIntArray254;
+	public static int[] flameIntensity;
 
 	@OriginalMember(owner = "client!jj", name = "e", descriptor = "I")
-	public static int anInt3058 = 0;
+	public static int flameOffset = 0;
 
 	@OriginalMember(owner = "client!a", name = "i", descriptor = "I")
 	public static int anInt6 = 0;
@@ -62,40 +62,40 @@ public class Flames {
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(Z)V")
 	public static void update() {
-		anInt5434++;
+		flameCycle++;
 	}
 
 	@OriginalMember(owner = "client!lf", name = "a", descriptor = "(ILclient!ve;)V")
-	public static void method2743(@OriginalArg(1) Js5 archive) {
+	public static void load(@OriginalArg(1) Js5 archive) {
 		runes = SpriteLoader.loadSoftwareIndexedSpritesAutoDetect(runesId, archive);
-		anIntArray235 = new int[256];
+		flameGradient = new int[256];
 		@Pc(15) int local15;
 		for (local15 = 0; local15 < 3; local15++) {
-			@Pc(30) int local30 = anIntArray445[local15 + 1] >> 16 & 0xFF;
-			@Pc(39) float local39 = (float) (anIntArray445[local15] >> 16 & 0xFF);
-			@Pc(48) float local48 = (float) (anIntArray445[local15] >> 8 & 0xFF);
-			@Pc(55) float local55 = (float) (anIntArray445[local15] & 0xFF);
+			@Pc(30) int local30 = flameGradientSource[local15 + 1] >> 16 & 0xFF;
+			@Pc(39) float local39 = (float) (flameGradientSource[local15] >> 16 & 0xFF);
+			@Pc(48) float local48 = (float) (flameGradientSource[local15] >> 8 & 0xFF);
+			@Pc(55) float local55 = (float) (flameGradientSource[local15] & 0xFF);
 			@Pc(62) float local62 = ((float) local30 - local39) / 64.0F;
-			@Pc(72) int local72 = anIntArray445[local15 + 1] >> 8 & 0xFF;
+			@Pc(72) int local72 = flameGradientSource[local15 + 1] >> 8 & 0xFF;
 			@Pc(80) float local80 = ((float) local72 - local48) / 64.0F;
-			@Pc(88) int local88 = anIntArray445[local15 + 1] & 0xFF;
+			@Pc(88) int local88 = flameGradientSource[local15 + 1] & 0xFF;
 			@Pc(95) float local95 = ((float) local88 - local55) / 64.0F;
 			for (@Pc(97) int local97 = 0; local97 < 64; local97++) {
-				anIntArray235[local97 + local15 * 64] = (int) local55 | (int) local48 << 8 | (int) local39 << 16;
+				flameGradient[local97 + local15 * 64] = (int) local55 | (int) local48 << 8 | (int) local39 << 16;
 				local48 += local80;
 				local55 += local95;
 				local39 += local62;
 			}
 		}
 		for (local15 = 192; local15 < 255; local15++) {
-			anIntArray235[local15] = anIntArray445[3];
+			flameGradient[local15] = flameGradientSource[3];
 		}
-		anIntArray562 = new int[32768];
-		anIntArray516 = new int[32768];
+		flameBuffer1 = new int[32768];
+		flameBuffer2 = new int[32768];
 		setRune(null);
-		anIntArray254 = new int[32768];
-		anIntArray188 = new int[32768];
-		aClass3_Sub2_Sub1_Sub1_3 = new SoftwareSprite(128, 254);
+		flameIntensity = new int[32768];
+		flameIntensityBuffer = new int[32768];
+		imageFlames = new SoftwareSprite(128, 254);
 	}
 
 	@OriginalMember(owner = "client!vl", name = "a", descriptor = "(II)V")
@@ -106,10 +106,10 @@ public class Flames {
 		if (arg0 > 10) {
 			arg0 = 10;
 		}
-		anInt3058 += arg0 * 128;
+		flameOffset += arg0 * 128;
 		@Pc(40) int local40;
-		if (anIntArray562.length < anInt3058) {
-			anInt3058 -= anIntArray562.length;
+		if (flameBuffer1.length < flameOffset) {
+			flameOffset -= flameBuffer1.length;
 			local40 = (int) (Math.random() * 12.0D);
 			setRune(runes[local40]);
 		}
@@ -119,11 +119,11 @@ public class Flames {
 		@Pc(60) int local60;
 		@Pc(89) int local89;
 		for (local60 = 0; local60 < local54; local60++) {
-			local89 = anIntArray188[local40 + local58] - arg0 * anIntArray562[anIntArray562.length - 1 & anInt3058 + local40] / 6;
+			local89 = flameIntensityBuffer[local40 + local58] - arg0 * flameBuffer1[flameBuffer1.length - 1 & flameOffset + local40] / 6;
 			if (local89 < 0) {
 				local89 = 0;
 			}
-			anIntArray188[local40++] = local89;
+			flameIntensityBuffer[local40++] = local89;
 		}
 		@Pc(117) int local117;
 		@Pc(125) int local125;
@@ -132,17 +132,17 @@ public class Flames {
 			for (local117 = 0; local117 < 128; local117++) {
 				local125 = (int) (Math.random() * 100.0D);
 				if (local125 < 50 && local117 > 10 && local117 < 118) {
-					anIntArray188[local117 + local89] = 255;
+					flameIntensityBuffer[local117 + local89] = 255;
 				} else {
-					anIntArray188[local117 + local89] = 0;
+					flameIntensityBuffer[local117 + local89] = 0;
 				}
 			}
 		}
 		for (local60 = 0; local60 < 256 - arg0; local60++) {
-			anIntArray83[local60] = anIntArray83[local60 + arg0];
+			flameShiftX[local60] = flameShiftX[local60 + arg0];
 		}
 		for (local60 = 256 - arg0; local60 < 256; local60++) {
-			anIntArray83[local60] = (int) (Math.sin((double) anInt6 / 14.0D) * 16.0D + Math.sin((double) anInt6 / 15.0D) * 14.0D + Math.sin((double) anInt6 / 16.0D) * 12.0D);
+			flameShiftX[local60] = (int) (Math.sin((double) anInt6 / 14.0D) * 16.0D + Math.sin((double) anInt6 / 15.0D) * 14.0D + Math.sin((double) anInt6 / 16.0D) * 12.0D);
 			anInt6++;
 		}
 		anInt5084 += arg0;
@@ -153,7 +153,7 @@ public class Flames {
 		for (local89 = 0; local89 < anInt5084; local89++) {
 			local117 = (int) (Math.random() * 124.0D) + 2;
 			local125 = (int) (Math.random() * 128.0D) + 128;
-			anIntArray188[local117 + (local125 << 7)] = 192;
+			flameIntensityBuffer[local117 + (local125 << 7)] = 192;
 		}
 		anInt5084 = 0;
 		@Pc(290) int local290;
@@ -162,13 +162,13 @@ public class Flames {
 			local117 = 0;
 			for (local290 = -local60; local290 < 128; local290++) {
 				if (local60 + local290 < 128) {
-					local117 += anIntArray188[local125 + local290 + local60];
+					local117 += flameIntensityBuffer[local125 + local290 + local60];
 				}
 				if (local290 - local60 - 1 >= 0) {
-					local117 -= anIntArray188[local290 + local125 - local60 - 1];
+					local117 -= flameIntensityBuffer[local290 + local125 - local60 - 1];
 				}
 				if (local290 >= 0) {
-					anIntArray254[local290 + local125] = local117 / (local60 * 2 + 1);
+					flameIntensity[local290 + local125] = local117 / (local60 * 2 + 1);
 				}
 			}
 		}
@@ -177,13 +177,13 @@ public class Flames {
 			for (local125 = -local60; local125 < 256; local125++) {
 				local290 = local125 * 128;
 				if (local125 + local60 < 256) {
-					local117 += anIntArray254[local60 * 128 + local89 + local290];
+					local117 += flameIntensity[local60 * 128 + local89 + local290];
 				}
 				if (local125 - local60 - 1 >= 0) {
-					local117 -= anIntArray254[local89 + local290 - (local60 + 1) * 128];
+					local117 -= flameIntensity[local89 + local290 - (local60 + 1) * 128];
 				}
 				if (local125 >= 0) {
-					anIntArray188[local290 + local89] = local117 / (local60 * 2 + 1);
+					flameIntensityBuffer[local290 + local89] = local117 / (local60 * 2 + 1);
 				}
 			}
 		}
@@ -192,13 +192,13 @@ public class Flames {
 	@OriginalMember(owner = "client!fh", name = "a", descriptor = "(BLclient!ek;)V")
 	public static void setRune(@OriginalArg(1) SoftwareIndexedSprite sprite) {
 		@Pc(5) int local5;
-		for (local5 = 0; local5 < anIntArray562.length; local5++) {
-			anIntArray562[local5] = 0;
+		for (local5 = 0; local5 < flameBuffer1.length; local5++) {
+			flameBuffer1[local5] = 0;
 		}
 		@Pc(36) int local36;
 		for (local5 = 0; local5 < 5000; local5++) {
 			local36 = (int) ((double) 256 * Math.random() * 128.0D);
-			anIntArray562[local36] = (int) (Math.random() * 284.0D);
+			flameBuffer1[local36] = (int) (Math.random() * 284.0D);
 		}
 		@Pc(66) int local66;
 		@Pc(76) int local76;
@@ -206,12 +206,12 @@ public class Flames {
 			for (local36 = 1; local36 < 255; local36++) {
 				for (local66 = 1; local66 < 127; local66++) {
 					local76 = local66 + (local36 << 7);
-					anIntArray516[local76] = (anIntArray562[local76 + 128] + anIntArray562[local76 - 1] + anIntArray562[local76 + 1] + anIntArray562[local76 + -128]) / 4;
+					flameBuffer2[local76] = (flameBuffer1[local76 + 128] + flameBuffer1[local76 - 1] + flameBuffer1[local76 + 1] + flameBuffer1[local76 + -128]) / 4;
 				}
 			}
-			@Pc(113) int[] local113 = anIntArray562;
-			anIntArray562 = anIntArray516;
-			anIntArray516 = local113;
+			@Pc(113) int[] local113 = flameBuffer1;
+			flameBuffer1 = flameBuffer2;
+			flameBuffer2 = local113;
 		}
 		if (sprite == null) {
 			return;
@@ -223,7 +223,7 @@ public class Flames {
 					local76 = sprite.xOffset + local66 + 16;
 					@Pc(162) int local162 = sprite.yOffset + local36 + 16;
 					@Pc(169) int local169 = local76 + (local162 << 7);
-					anIntArray562[local169] = 0;
+					flameBuffer1[local169] = 0;
 				}
 			}
 		}
@@ -231,15 +231,15 @@ public class Flames {
 
 	@OriginalMember(owner = "client!s", name = "b", descriptor = "(III)V")
 	public static void render(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		if (anInt5434 > 0) {
-			method4528(anInt5434);
-			anInt5434 = 0;
+		if (flameCycle > 0) {
+			method4528(flameCycle);
+			flameCycle = 0;
 		}
 		@Pc(20) int local20 = 0;
 		@Pc(24) int local24 = SoftwareRaster.width * arg1;
 		@Pc(26) int local26 = 0;
 		for (@Pc(28) int local28 = 1; local28 < 255; local28++) {
-			@Pc(43) int local43 = (256 - local28) * anIntArray83[local28] / 256;
+			@Pc(43) int local43 = (256 - local28) * flameShiftX[local28] / 256;
 			if (local43 < 0) {
 				local43 = 0;
 			}
@@ -247,9 +247,9 @@ public class Flames {
 			@Pc(55) int local55;
 			for (local55 = local43; local55 < 128; local55++) {
 				@Pc(65) int local65 = SoftwareRaster.pixels[local24++ + arg0];
-				@Pc(70) int local70 = anIntArray188[local20++];
+				@Pc(70) int local70 = flameIntensityBuffer[local20++];
 				if (local70 == 0) {
-					aClass3_Sub2_Sub1_Sub1_3.pixels[local26++] = local65;
+					imageFlames.pixels[local26++] = local65;
 				} else {
 					@Pc(76) int local76 = local70 + 18;
 					if (local76 > 255) {
@@ -259,19 +259,19 @@ public class Flames {
 					if (local89 > 255) {
 						local89 = 255;
 					}
-					local70 = anIntArray235[local70];
-					aClass3_Sub2_Sub1_Sub1_3.pixels[local26++] = (local89 * (local65 & 0xFF00FF) + (local70 & 0xFF00FF) * local76 & 0xFF00FF00) + ((local70 & 0xFF00) * local76 + ((local65 & 0xFF00) * local89) & 0xFF0000) >> 8;
+					local70 = flameGradient[local70];
+					imageFlames.pixels[local26++] = (local89 * (local65 & 0xFF00FF) + (local70 & 0xFF00FF) * local76 & 0xFF00FF00) + ((local70 & 0xFF00) * local76 + ((local65 & 0xFF00) * local89) & 0xFF0000) >> 8;
 				}
 			}
 			for (local55 = 0; local55 < local43; local55++) {
-				aClass3_Sub2_Sub1_Sub1_3.pixels[local26++] = SoftwareRaster.pixels[arg0 + local24++];
+				imageFlames.pixels[local26++] = SoftwareRaster.pixels[arg0 + local24++];
 			}
 			local24 += SoftwareRaster.width - 128;
 		}
 		if (GlRenderer.enabled) {
-			GlRaster.drawPixels(aClass3_Sub2_Sub1_Sub1_3.pixels, arg0, arg1, aClass3_Sub2_Sub1_Sub1_3.width, aClass3_Sub2_Sub1_Sub1_3.height);
+			GlRaster.drawPixels(imageFlames.pixels, arg0, arg1, imageFlames.width, imageFlames.height);
 		} else {
-			aClass3_Sub2_Sub1_Sub1_3.drawPixels(arg0, arg1);
+			imageFlames.drawPixels(arg0, arg1);
 		}
 	}
 }

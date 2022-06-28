@@ -148,10 +148,10 @@ public final class Light_Class45 {
 		if (GlRenderer.arbVboSupported) {
 			this.aClass155_1 = new GlVertexBufferObject();
 			@Pc(173) ByteBuffer local173 = ByteBuffer.wrap(local15.data);
-			this.aClass155_1.method4519(local173);
+			this.aClass155_1.setArrayBuffer(local173);
 			this.aClass155_2 = new GlVertexBufferObject();
 			@Pc(186) ByteBuffer local186 = ByteBuffer.wrap(local7.data);
-			this.aClass155_2.method4517(local186);
+			this.aClass155_2.setElementArrayBuffer(local186);
 		} else {
 			this.aByteBuffer1 = ByteBuffer.allocateDirect(local15.offset);
 			this.aByteBuffer1.put(local15.data);
@@ -186,10 +186,10 @@ public final class Light_Class45 {
 	public final void method1556() {
 		@Pc(1) GL2 local1 = GlRenderer.gl;
 		if (GlRenderer.arbVboSupported) {
-			this.aClass155_1.method4516();
+			this.aClass155_1.bindArray();
 			local1.glInterleavedArrays(GL2.GL_C4UB_V3F, 16, 0L);
 			GlRenderer.normalArrayEnabled = false;
-			this.aClass155_2.method4518();
+			this.aClass155_2.bindElementArray();
 			local1.glDrawElements(GL2.GL_TRIANGLES, this.anInt2018, GL2.GL_UNSIGNED_INT, 0L);
 			return;
 		}

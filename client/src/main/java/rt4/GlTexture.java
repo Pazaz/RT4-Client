@@ -11,6 +11,8 @@ import java.nio.ByteBuffer;
 @OriginalClass("client!uh")
 public final class GlTexture extends SecondaryNode {
 
+	@OriginalMember(owner = "client!oj", name = "t", descriptor = "[I")
+	public static int[] anIntArray372;
 	@OriginalMember(owner = "client!uh", name = "K", descriptor = "F")
 	private float aFloat35;
 
@@ -285,8 +287,8 @@ public final class GlTexture extends SecondaryNode {
 		if (this.anIntArray481 == null || this.anInt5497 == 0 && this.anInt5485 == 0) {
 			return;
 		}
-		if (Static182.anIntArray372 == null || Static182.anIntArray372.length < this.anIntArray481.length) {
-			Static182.anIntArray372 = new int[this.anIntArray481.length];
+		if (anIntArray372 == null || anIntArray372.length < this.anIntArray481.length) {
+			anIntArray372 = new int[this.anIntArray481.length];
 		}
 		@Pc(47) int local47 = arg0 * this.anInt5485;
 		@Pc(58) int local58 = this.anIntArray481.length == 4096 ? 64 : 128;
@@ -299,19 +301,19 @@ public final class GlTexture extends SecondaryNode {
 			for (@Pc(90) int local90 = 0; local90 < local58; local90++) {
 				@Pc(102) int local102 = (local66 & local90 + local47) + local88;
 				@Pc(106) int local106 = local90 + local79;
-				Static182.anIntArray372[local106] = this.anIntArray481[local102];
+				anIntArray372[local106] = this.anIntArray481[local102];
 			}
 		}
 		@Pc(125) int[] local125 = this.anIntArray481;
-		this.anIntArray481 = Static182.anIntArray372;
-		Static182.anIntArray372 = local125;
+		this.anIntArray481 = anIntArray372;
+		anIntArray372 = local125;
 	}
 
 	@OriginalMember(owner = "client!uh", name = "finalize", descriptor = "()V")
 	@Override
 	public final void finalize() throws Throwable {
 		if (this.textureId != -1) {
-			GlCleaner.method1485(this.textureId, this.textureSize, this.anInt5492);
+			GlCleaner.deleteTexture(this.textureId, this.textureSize, this.anInt5492);
 			this.textureSize = 0;
 			this.textureId = -1;
 		}

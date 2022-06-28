@@ -58,4 +58,9 @@ public class IntUtils {
 		}
 		return arg0 + local5;
 	}
+
+	@OriginalMember(owner = "client!gd", name = "a", descriptor = "(IIBI)I")
+	public static int clamp(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2) {
+		return arg2 > arg1 ? arg2 : arg1 > arg0 ? arg0 : arg1;
+	}
 }

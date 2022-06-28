@@ -14,7 +14,7 @@ public final class GlModel extends Model {
 	@OriginalMember(owner = "client!tf", name = "G", descriptor = "Z")
 	public static boolean arbVboSupported;
 	@OriginalMember(owner = "client!td", name = "D", descriptor = "Lclient!wa;")
-	public static Buffer aClass3_Sub15_8 = new Buffer(10000);
+	public static Buffer tempBuffer = new Buffer(10000);
 	@OriginalMember(owner = "client!td", name = "bb", descriptor = "Lclient!td;")
 	public static GlModel aClass8_Sub1_Sub1_1 = new GlModel();
 	@OriginalMember(owner = "client!td", name = "jb", descriptor = "Lclient!td;")
@@ -59,7 +59,7 @@ public final class GlModel extends Model {
 	public static int anInt3582 = 0;
 
 	@OriginalMember(owner = "client!td", name = "t", descriptor = "[S")
-	private short[] aShortArray75;
+	private short[] triangleColors;
 
 	@OriginalMember(owner = "client!td", name = "v", descriptor = "[S")
 	private short[] aShortArray76;
@@ -71,46 +71,46 @@ public final class GlModel extends Model {
 	private GlVertexBufferObject aClass155_5;
 
 	@OriginalMember(owner = "client!td", name = "y", descriptor = "[S")
-	private short[] aShortArray78;
+	private short[] triangleSources;
 
 	@OriginalMember(owner = "client!td", name = "z", descriptor = "Lclient!ql;")
-	private GlBuffer aClass127_1;
+	private GlBuffer colorBuffer;
 
 	@OriginalMember(owner = "client!td", name = "A", descriptor = "Lclient!ql;")
-	private GlBuffer aClass127_2;
+	private GlBuffer normalsBuffer;
 
 	@OriginalMember(owner = "client!td", name = "B", descriptor = "[B")
-	private byte[] aByteArray71;
+	private byte[] triangleAlpha;
 
 	@OriginalMember(owner = "client!td", name = "C", descriptor = "Lclient!ql;")
-	private GlBuffer aClass127_3;
+	private GlBuffer texCoordBuffer;
 
 	@OriginalMember(owner = "client!td", name = "E", descriptor = "S")
 	private short aShort28;
 
 	@OriginalMember(owner = "client!td", name = "F", descriptor = "[B")
-	private byte[] aByteArray72;
+	private byte[] triangleBones;
 
 	@OriginalMember(owner = "client!td", name = "H", descriptor = "[I")
 	public int[] vertexX;
 
 	@OriginalMember(owner = "client!td", name = "J", descriptor = "[F")
-	private float[] aFloatArray25;
+	private float[] vertexS;
 
 	@OriginalMember(owner = "client!td", name = "K", descriptor = "[[I")
-	private int[][] anIntArrayArray36;
+	private int[][] boneVertices;
 
 	@OriginalMember(owner = "client!td", name = "L", descriptor = "[S")
 	private short[] aShortArray79;
 
 	@OriginalMember(owner = "client!td", name = "M", descriptor = "[S")
-	private short[] aShortArray80;
+	private short[] triangleTextures;
 
 	@OriginalMember(owner = "client!td", name = "N", descriptor = "[S")
 	private short[] aShortArray81;
 
 	@OriginalMember(owner = "client!td", name = "O", descriptor = "[[I")
-	private int[][] anIntArrayArray37;
+	private int[][] boneTriangles;
 
 	@OriginalMember(owner = "client!td", name = "P", descriptor = "[S")
 	private short[] aShortArray82;
@@ -119,10 +119,10 @@ public final class GlModel extends Model {
 	private short[] aShortArray83;
 
 	@OriginalMember(owner = "client!td", name = "R", descriptor = "[S")
-	private short[] aShortArray84;
+	private short[] vertexSources;
 
 	@OriginalMember(owner = "client!td", name = "U", descriptor = "Lclient!ae;")
-	public GlVertexBuffer vertexBuffer;
+	public GlBoundingBox bounds;
 
 	@OriginalMember(owner = "client!td", name = "W", descriptor = "[S")
 	private short[] aShortArray85;
@@ -131,7 +131,7 @@ public final class GlModel extends Model {
 	private int[] anIntArray462;
 
 	@OriginalMember(owner = "client!td", name = "Y", descriptor = "Lclient!ql;")
-	public GlBuffer bounds;
+	public GlBuffer vertexBuffer;
 
 	@OriginalMember(owner = "client!td", name = "Z", descriptor = "[I")
 	private int[] anIntArray463;
@@ -143,16 +143,16 @@ public final class GlModel extends Model {
 	private GlModel_Class23 aClass23_1;
 
 	@OriginalMember(owner = "client!td", name = "db", descriptor = "[I")
-	private int[] anIntArray464;
+	private int[] vertexBones;
 
 	@OriginalMember(owner = "client!td", name = "eb", descriptor = "[I")
 	public int[] vertexY;
 
 	@OriginalMember(owner = "client!td", name = "fb", descriptor = "Lclient!ql;")
-	private GlBuffer aClass127_5;
+	private GlBuffer indexBuffer;
 
 	@OriginalMember(owner = "client!td", name = "gb", descriptor = "[F")
-	private float[] aFloatArray26;
+	private float[] vertexT;
 
 	@OriginalMember(owner = "client!td", name = "hb", descriptor = "[I")
 	public int[] vertexZ;
@@ -176,7 +176,7 @@ public final class GlModel extends Model {
 	private byte aByte19 = 0;
 
 	@OriginalMember(owner = "client!td", name = "lb", descriptor = "I")
-	private int anInt5297 = 0;
+	private int triangleCount = 0;
 
 	@OriginalMember(owner = "client!td", name = "<init>", descriptor = "()V")
 	public GlModel() {
@@ -188,18 +188,18 @@ public final class GlModel extends Model {
 		this.anIntArray462 = new int[arg0.vertexCount + 1];
 		for (@Pc(32) int local32 = 0; local32 < arg0.triangleCount; local32++) {
 			if ((arg0.triangleInfo == null || arg0.triangleInfo[local32] != 2) && (arg0.triangleTextures == null || arg0.triangleTextures[local32] == -1 || !Rasteriser.textureProvider.method3231(arg0.triangleTextures[local32] & 0xFFFF))) {
-				local23[this.anInt5297++] = local32;
+				local23[this.triangleCount++] = local32;
 				this.anIntArray462[arg0.triangleVertexA[local32]]++;
 				this.anIntArray462[arg0.triangleVertexB[local32]]++;
 				this.anIntArray462[arg0.triangleVertexC[local32]]++;
 			}
 		}
-		@Pc(115) long[] local115 = new long[this.anInt5297];
+		@Pc(115) long[] local115 = new long[this.triangleCount];
 		@Pc(117) int local117;
 		@Pc(125) int local125;
 		@Pc(127) int local127;
 		@Pc(226) int local226;
-		for (local117 = 0; local117 < this.anInt5297; local117++) {
+		for (local117 = 0; local117 < this.triangleCount; local117++) {
 			local125 = local23[local117];
 			local127 = 0;
 			@Pc(129) byte local129 = 0;
@@ -226,40 +226,40 @@ public final class GlModel extends Model {
 			@Pc(232) int local232 = local226 + (local117 & 0xFFFF);
 			local115[local117] = ((long) local127 << 32) + (long) local232;
 		}
-		Static173.method3243(local115, local23);
+		ArrayUtils.sort(local115, local23);
 		this.vertexCount = arg0.vertexCount;
 		this.vertexX = arg0.vertexX;
 		this.vertexY = arg0.vertexY;
 		this.vertexZ = arg0.vertexZ;
-		this.anIntArray464 = arg0.vertexBones;
-		this.aShortArray84 = arg0.vertexSources;
-		local117 = this.anInt5297 * 3;
+		this.vertexBones = arg0.vertexBones;
+		this.vertexSources = arg0.vertexSources;
+		local117 = this.triangleCount * 3;
 		this.aShortArray76 = new short[local117];
 		this.aShortArray79 = new short[local117];
 		this.aShortArray85 = new short[local117];
 		this.aShortArray86 = new short[local117];
-		this.aFloatArray25 = new float[local117];
-		this.aFloatArray26 = new float[local117];
-		this.aShortArray75 = new short[this.anInt5297];
-		this.aByteArray71 = new byte[this.anInt5297];
-		this.aShortArray77 = new short[this.anInt5297];
-		this.aShortArray82 = new short[this.anInt5297];
-		this.aShortArray83 = new short[this.anInt5297];
-		this.aShortArray80 = new short[this.anInt5297];
+		this.vertexS = new float[local117];
+		this.vertexT = new float[local117];
+		this.triangleColors = new short[this.triangleCount];
+		this.triangleAlpha = new byte[this.triangleCount];
+		this.aShortArray77 = new short[this.triangleCount];
+		this.aShortArray82 = new short[this.triangleCount];
+		this.aShortArray83 = new short[this.triangleCount];
+		this.triangleTextures = new short[this.triangleCount];
 		if (arg0.triangleBones != null) {
-			this.aByteArray72 = new byte[this.anInt5297];
+			this.triangleBones = new byte[this.triangleCount];
 		}
-		if (arg0.aShortArray22 != null) {
-			this.aShortArray78 = new short[this.anInt5297];
+		if (arg0.triangleSources != null) {
+			this.triangleSources = new short[this.triangleCount];
 		}
-		this.vertexBuffer = new GlVertexBuffer();
-		this.bounds = new GlBuffer();
-		this.aClass127_1 = new GlBuffer();
+		this.bounds = new GlBoundingBox();
+		this.vertexBuffer = new GlBuffer();
+		this.colorBuffer = new GlBuffer();
 		if (Preferences.highDetailLighting) {
-			this.aClass127_2 = new GlBuffer();
+			this.normalsBuffer = new GlBuffer();
 		}
-		this.aClass127_3 = new GlBuffer();
-		this.aClass127_5 = new GlBuffer();
+		this.texCoordBuffer = new GlBuffer();
+		this.indexBuffer = new GlBuffer();
 		this.aShort29 = (short) arg1;
 		this.aShort28 = (short) arg2;
 		this.aShortArray81 = new short[local117];
@@ -297,7 +297,7 @@ public final class GlModel extends Model {
 				local454[local459] = Integer.MAX_VALUE;
 				local457[local459] = -2147483647;
 			}
-			for (local459 = 0; local459 < this.anInt5297; local459++) {
+			for (local459 = 0; local459 < this.triangleCount; local459++) {
 				@Pc(498) int local498 = local23[local459];
 				if (arg0.triangleTextureIndex[local498] != -1) {
 					@Pc(511) int local511 = arg0.triangleTextureIndex[local498] & 0xFF;
@@ -372,7 +372,7 @@ public final class GlModel extends Model {
 		}
 		@Pc(817) int local817;
 		@Pc(822) short local822;
-		for (local439 = 0; local439 < this.anInt5297; local439++) {
+		for (local439 = 0; local439 < this.triangleCount; local439++) {
 			@Pc(810) int local810 = local23[local439];
 			local817 = arg0.triangleColors[local810] & 0xFFFF;
 			if (arg0.triangleTextures == null) {
@@ -621,25 +621,25 @@ public final class GlModel extends Model {
 				this.aShortArray83[local439] = this.method4098(arg0, arg0.triangleVertexC[local810], local2137 + (long) local868, local2096.anInt4769, local2096.anInt4770, local2096.anInt4767, 0, local714, local685);
 			}
 			if (arg0.triangleTextures == null) {
-				this.aShortArray80[local439] = -1;
+				this.triangleTextures[local439] = -1;
 			} else {
-				this.aShortArray80[local439] = arg0.triangleTextures[local810];
+				this.triangleTextures[local439] = arg0.triangleTextures[local810];
 			}
-			if (this.aByteArray72 != null) {
-				this.aByteArray72[local439] = (byte) arg0.triangleBones[local810];
+			if (this.triangleBones != null) {
+				this.triangleBones[local439] = (byte) arg0.triangleBones[local810];
 			}
-			this.aShortArray75[local439] = arg0.triangleColors[local810];
+			this.triangleColors[local439] = arg0.triangleColors[local810];
 			if (arg0.triangleAlpha != null) {
-				this.aByteArray71[local439] = arg0.triangleAlpha[local810];
+				this.triangleAlpha[local439] = arg0.triangleAlpha[local810];
 			}
-			if (arg0.aShortArray22 != null) {
-				this.aShortArray78[local439] = arg0.aShortArray22[local810];
+			if (arg0.triangleSources != null) {
+				this.triangleSources[local439] = arg0.triangleSources[local810];
 			}
 		}
 		local439 = 0;
 		@Pc(2271) short local2271 = -10000;
-		for (local817 = 0; local817 < this.anInt5297; local817++) {
-			local822 = this.aShortArray80[local817];
+		for (local817 = 0; local817 < this.triangleCount; local817++) {
+			local822 = this.triangleTextures[local817];
 			if (local822 != local2271) {
 				local439++;
 				local2271 = local822;
@@ -648,21 +648,21 @@ public final class GlModel extends Model {
 		this.anIntArray463 = new int[local439 + 1];
 		local439 = 0;
 		local2271 = -10000;
-		for (local817 = 0; local817 < this.anInt5297; local817++) {
-			local822 = this.aShortArray80[local817];
+		for (local817 = 0; local817 < this.triangleCount; local817++) {
+			local822 = this.triangleTextures[local817];
 			if (local822 != local2271) {
 				this.anIntArray463[local439++] = local817;
 				local2271 = local822;
 			}
 		}
-		this.anIntArray463[local439] = this.anInt5297;
+		this.anIntArray463[local439] = this.triangleCount;
 		aLongArray10 = null;
-		this.aShortArray76 = method4119(this.aShortArray76, this.anInt5296);
-		this.aShortArray79 = method4119(this.aShortArray79, this.anInt5296);
-		this.aShortArray85 = method4119(this.aShortArray85, this.anInt5296);
-		this.aShortArray86 = method4119(this.aShortArray86, this.anInt5296);
-		this.aFloatArray25 = method4112(this.aFloatArray25, this.anInt5296);
-		this.aFloatArray26 = method4112(this.aFloatArray26, this.anInt5296);
+		this.aShortArray76 = ArrayUtils.copyOf(this.aShortArray76, this.anInt5296);
+		this.aShortArray79 = ArrayUtils.copyOf(this.aShortArray79, this.anInt5296);
+		this.aShortArray85 = ArrayUtils.copyOf(this.aShortArray85, this.anInt5296);
+		this.aShortArray86 = ArrayUtils.copyOf(this.aShortArray86, this.anInt5296);
+		this.vertexS = ArrayUtils.copyOf(this.vertexS, this.anInt5296);
+		this.vertexT = ArrayUtils.copyOf(this.vertexT, this.anInt5296);
 	}
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(FFF)I")
@@ -888,20 +888,6 @@ public final class GlModel extends Model {
 		aFloat24 = local89;
 	}
 
-	@OriginalMember(owner = "client!td", name = "a", descriptor = "([FI)[F")
-	public static float[] method4112(@OriginalArg(0) float[] arg0, @OriginalArg(1) int arg1) {
-		@Pc(2) float[] local2 = new float[arg1];
-		ArrayUtils.copy(arg0, 0, local2, 0, arg1);
-		return local2;
-	}
-
-	@OriginalMember(owner = "client!td", name = "a", descriptor = "([SI)[S")
-	public static short[] method4119(@OriginalArg(0) short[] arg0, @OriginalArg(1) int arg1) {
-		@Pc(2) short[] local2 = new short[arg1];
-		ArrayUtils.copy(arg0, 0, local2, 0, arg1);
-		return local2;
-	}
-
 	@OriginalMember(owner = "client!td", name = "v", descriptor = "()V")
 	public static void method4120() {
 		aClass8_Sub1_Sub1_1 = new GlModel();
@@ -910,17 +896,6 @@ public final class GlModel extends Model {
 		aClass8_Sub1_Sub1_4 = new GlModel();
 		aClass8_Sub1_Sub1_5 = new GlModel();
 		aClass8_Sub1_Sub1_6 = new GlModel();
-	}
-
-	@OriginalMember(owner = "client!vg", name = "a", descriptor = "(I[S)[S")
-	public static short[] method4511(@OriginalArg(1) short[] arg0) {
-		if (arg0 == null) {
-			return null;
-		} else {
-			@Pc(19) short[] local19 = new short[arg0.length];
-			ArrayUtils.copy(arg0, 0, local19, 0, arg0.length);
-			return local19;
-		}
 	}
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(ZZZ)Lclient!ak;")
@@ -935,12 +910,12 @@ public final class GlModel extends Model {
 		if (this.anInt5296 == 0) {
 			return;
 		}
-		if (!this.vertexBuffer.valid) {
-			this.method4108();
+		if (!this.bounds.valid) {
+			this.calculateBounds();
 		}
-		@Pc(13) short local13 = this.vertexBuffer.aShort4;
-		@Pc(17) short local17 = this.vertexBuffer.aShort2;
-		@Pc(21) short local21 = this.vertexBuffer.aShort3;
+		@Pc(13) short local13 = this.bounds.cylinderRadius;
+		@Pc(17) short local17 = this.bounds.minY;
+		@Pc(21) short local21 = this.bounds.maxY;
 		@Pc(31) int local31 = arg7 * arg4 - arg5 * arg3 >> 16;
 		@Pc(41) int local41 = arg6 * arg1 + local31 * arg2 >> 16;
 		@Pc(53) int local53 = local41 + (local13 * arg2 + local21 * arg1 >> 16);
@@ -994,15 +969,15 @@ public final class GlModel extends Model {
 				local206 = local153 / local70;
 				local210 = local132 / local53;
 			}
-			if (anInt3582 >= local187 && anInt3582 <= local191 && Static34.anInt1053 >= local206 && Static34.anInt1053 <= local210) {
+			if (anInt3582 >= local187 && anInt3582 <= local191 && RawModel.anInt1053 >= local206 && RawModel.anInt1053 <= local210) {
 				local187 = 999999;
 				local191 = -999999;
 				local206 = 999999;
 				local210 = -999999;
-				@Pc(243) short local243 = this.vertexBuffer.aShort6;
-				@Pc(247) short local247 = this.vertexBuffer.aShort5;
-				@Pc(251) short local251 = this.vertexBuffer.aShort8;
-				@Pc(255) short local255 = this.vertexBuffer.aShort7;
+				@Pc(243) short local243 = this.bounds.minX;
+				@Pc(247) short local247 = this.bounds.maxX;
+				@Pc(251) short local251 = this.bounds.minZ;
+				@Pc(255) short local255 = this.bounds.maxZ;
 				@Pc(290) int[] local290 = new int[]{local243, local247, local243, local247, local243, local247, local243, local247};
 				@Pc(325) int[] local325 = new int[]{local251, local251, local255, local255, local251, local251, local255, local255};
 				@Pc(360) int[] local360 = new int[]{local17, local17, local17, local17, local21, local21, local21, local21};
@@ -1047,7 +1022,7 @@ public final class GlModel extends Model {
 						}
 					}
 				}
-				if (anInt3582 >= local187 && anInt3582 <= local191 && Static34.anInt1053 >= local206 && Static34.anInt1053 <= local210) {
+				if (anInt3582 >= local187 && anInt3582 <= local191 && RawModel.anInt1053 >= local206 && RawModel.anInt1053 <= local210) {
 					if (this.aBoolean303) {
 						Model.aLongArray11[MiniMenu.anInt7++] = arg8;
 					} else {
@@ -1061,13 +1036,13 @@ public final class GlModel extends Model {
 							if (local362 >= this.vertexCount) {
 								local362 = 0;
 								while (true) {
-									if (local362 >= this.anInt5297) {
+									if (local362 >= this.triangleCount) {
 										break label118;
 									}
 									@Pc(698) short local698 = this.aShortArray77[local362];
 									@Pc(703) short local703 = this.aShortArray82[local362];
 									@Pc(708) short local708 = this.aShortArray83[local362];
-									if (this.method4118(anInt3582, Static34.anInt1053, anIntArray467[local698], anIntArray467[local703], anIntArray467[local708], anIntArray468[local698], anIntArray468[local703], anIntArray468[local708])) {
+									if (this.method4118(anInt3582, RawModel.anInt1053, anIntArray467[local698], anIntArray467[local703], anIntArray467[local708], anIntArray468[local698], anIntArray468[local703], anIntArray468[local708])) {
 										Model.aLongArray11[MiniMenu.anInt7++] = arg8;
 										break label118;
 									}
@@ -1138,10 +1113,10 @@ public final class GlModel extends Model {
 			this.aShortArray85[local7] = this.aShortArray76[local7];
 			this.aShortArray76[local7] = (short) -local43;
 		}
-		this.vertexBuffer.valid = false;
 		this.bounds.valid = false;
-		if (this.aClass127_2 != null) {
-			this.aClass127_2.valid = false;
+		this.vertexBuffer.valid = false;
+		if (this.normalsBuffer != null) {
+			this.normalsBuffer.valid = false;
 		}
 	}
 
@@ -1160,26 +1135,26 @@ public final class GlModel extends Model {
 			this.vertexY[local9] = this.vertexY[local9] * local7 - this.vertexX[local9] * local3 >> 16;
 			this.vertexX[local9] = local29;
 		}
-		this.vertexBuffer.valid = false;
 		this.bounds.valid = false;
+		this.vertexBuffer.valid = false;
 	}
 
 	@OriginalMember(owner = "client!td", name = "g", descriptor = "()I")
 	@Override
 	public final int getMaxX() {
-		if (!this.vertexBuffer.valid) {
-			this.method4108();
+		if (!this.bounds.valid) {
+			this.calculateBounds();
 		}
-		return this.vertexBuffer.aShort5;
+		return this.bounds.maxX;
 	}
 
 	@OriginalMember(owner = "client!td", name = "c", descriptor = "()I")
 	@Override
 	public final int getMaxZ() {
-		if (!this.vertexBuffer.valid) {
-			this.method4108();
+		if (!this.bounds.valid) {
+			this.calculateBounds();
 		}
-		return this.vertexBuffer.aShort7;
+		return this.bounds.maxZ;
 	}
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "()Z")
@@ -1191,10 +1166,10 @@ public final class GlModel extends Model {
 	@OriginalMember(owner = "client!td", name = "k", descriptor = "()I")
 	@Override
 	public final int getMinZ() {
-		if (!this.vertexBuffer.valid) {
-			this.method4108();
+		if (!this.bounds.valid) {
+			this.calculateBounds();
 		}
-		return this.vertexBuffer.aShort8;
+		return this.bounds.minZ;
 	}
 
 	@OriginalMember(owner = "client!td", name = "c", descriptor = "(III)V")
@@ -1205,8 +1180,8 @@ public final class GlModel extends Model {
 			this.vertexY[local1] += arg1;
 			this.vertexZ[local1] += arg2;
 		}
-		this.vertexBuffer.valid = false;
 		this.bounds.valid = false;
+		this.vertexBuffer.valid = false;
 	}
 
 	@OriginalMember(owner = "client!td", name = "b", descriptor = "(ZZZ)Lclient!ak;")
@@ -1219,7 +1194,7 @@ public final class GlModel extends Model {
 	@Override
 	public final void method4544(@OriginalArg(0) Entity arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4) {
 		@Pc(2) GlModel local2 = (GlModel) arg0;
-		if (this.anInt5297 == 0 || local2.anInt5297 == 0) {
+		if (this.triangleCount == 0 || local2.triangleCount == 0) {
 			return;
 		}
 		@Pc(12) int local12 = local2.vertexCount;
@@ -1262,15 +1237,15 @@ public final class GlModel extends Model {
 		}
 		@Pc(92) int[] local92 = local2.anIntArray462;
 		@Pc(95) short[] local95 = local2.aShortArray81;
-		if (!local2.vertexBuffer.valid) {
-			local2.method4108();
+		if (!local2.bounds.valid) {
+			local2.calculateBounds();
 		}
-		@Pc(105) short local105 = local2.vertexBuffer.aShort2;
-		@Pc(109) short local109 = local2.vertexBuffer.aShort3;
-		@Pc(113) short local113 = local2.vertexBuffer.aShort6;
-		@Pc(117) short local117 = local2.vertexBuffer.aShort5;
-		@Pc(121) short local121 = local2.vertexBuffer.aShort8;
-		@Pc(125) short local125 = local2.vertexBuffer.aShort7;
+		@Pc(105) short local105 = local2.bounds.minY;
+		@Pc(109) short local109 = local2.bounds.maxY;
+		@Pc(113) short local113 = local2.bounds.minX;
+		@Pc(117) short local117 = local2.bounds.maxX;
+		@Pc(121) short local121 = local2.bounds.minZ;
+		@Pc(125) short local125 = local2.bounds.maxZ;
 		for (@Pc(127) int local127 = 0; local127 < this.vertexCount; local127++) {
 			@Pc(138) int local138 = this.vertexY[local127] - arg2;
 			if (local138 >= local105 && local138 <= local109) {
@@ -1303,17 +1278,17 @@ public final class GlModel extends Model {
 									if (local237 != -1) {
 										if (local40 == null) {
 											this.aClass23_1 = new GlModel_Class23();
-											local40 = this.aClass23_1.aShortArray8 = method4511(this.aShortArray76);
-											local44 = this.aClass23_1.aShortArray10 = method4511(this.aShortArray79);
-											local48 = this.aClass23_1.aShortArray9 = method4511(this.aShortArray85);
-											local52 = this.aClass23_1.aShortArray7 = method4511(this.aShortArray86);
+											local40 = this.aClass23_1.aShortArray8 = ArrayUtils.copyOfNullable(this.aShortArray76);
+											local44 = this.aClass23_1.aShortArray10 = ArrayUtils.copyOfNullable(this.aShortArray79);
+											local48 = this.aClass23_1.aShortArray9 = ArrayUtils.copyOfNullable(this.aShortArray85);
+											local52 = this.aClass23_1.aShortArray7 = ArrayUtils.copyOfNullable(this.aShortArray86);
 										}
 										if (local68 == null) {
 											@Pc(325) GlModel_Class23 local325 = local2.aClass23_1 = new GlModel_Class23();
-											local68 = local325.aShortArray8 = method4511(local24);
-											local72 = local325.aShortArray10 = method4511(local27);
-											local76 = local325.aShortArray9 = method4511(local30);
-											local80 = local325.aShortArray7 = method4511(local33);
+											local68 = local325.aShortArray8 = ArrayUtils.copyOfNullable(local24);
+											local72 = local325.aShortArray10 = ArrayUtils.copyOfNullable(local27);
+											local76 = local325.aShortArray9 = ArrayUtils.copyOfNullable(local30);
+											local80 = local325.aShortArray7 = ArrayUtils.copyOfNullable(local33);
 										}
 										@Pc(358) short local358 = this.aShortArray76[local175];
 										@Pc(363) short local363 = this.aShortArray79[local175];
@@ -1406,8 +1381,8 @@ public final class GlModel extends Model {
 		this.aShortArray79[this.anInt5296] = (short) arg4;
 		this.aShortArray85[this.anInt5296] = (short) arg5;
 		this.aShortArray86[this.anInt5296] = (short) arg6;
-		this.aFloatArray25[this.anInt5296] = arg7;
-		this.aFloatArray26[this.anInt5296] = arg8;
+		this.vertexS[this.anInt5296] = arg7;
+		this.vertexT[this.anInt5296] = arg8;
 		return (short) this.anInt5296++;
 	}
 
@@ -1421,8 +1396,8 @@ public final class GlModel extends Model {
 			this.vertexZ[local9] = this.vertexZ[local9] * local7 - this.vertexX[local9] * local3 >> 16;
 			this.vertexX[local9] = local29;
 		}
-		this.vertexBuffer.valid = false;
 		this.bounds.valid = false;
+		this.vertexBuffer.valid = false;
 	}
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(I[IIIIZI[I)V")
@@ -1444,11 +1419,11 @@ public final class GlModel extends Model {
 			anInt5299 = 0;
 			for (local26 = 0; local26 < local2; local26++) {
 				local33 = arg1[local26];
-				if (local33 < this.anIntArrayArray36.length) {
-					@Pc(43) int[] local43 = this.anIntArrayArray36[local33];
+				if (local33 < this.boneVertices.length) {
+					@Pc(43) int[] local43 = this.boneVertices[local33];
 					for (local45 = 0; local45 < local43.length; local45++) {
 						local53 = local43[local45];
-						if (this.aShortArray84 == null || (arg6 & this.aShortArray84[local53]) != 0) {
+						if (this.vertexSources == null || (arg6 & this.vertexSources[local53]) != 0) {
 							anInt5298 += this.vertexX[local53];
 							anInt5300 += this.vertexY[local53];
 							anInt5299 += this.vertexZ[local53];
@@ -1485,11 +1460,11 @@ public final class GlModel extends Model {
 			arg4 <<= 0x4;
 			for (local18 = 0; local18 < local2; local18++) {
 				local26 = arg1[local18];
-				if (local26 < this.anIntArrayArray36.length) {
-					local228 = this.anIntArrayArray36[local26];
+				if (local26 < this.boneVertices.length) {
+					local228 = this.boneVertices[local26];
 					for (local230 = 0; local230 < local228.length; local230++) {
 						local45 = local228[local230];
-						if (this.aShortArray84 == null || (arg6 & this.aShortArray84[local45]) != 0) {
+						if (this.vertexSources == null || (arg6 & this.vertexSources[local45]) != 0) {
 							this.vertexX[local45] += arg2;
 							this.vertexY[local45] += arg3;
 							this.vertexZ[local45] += arg4;
@@ -1525,11 +1500,11 @@ public final class GlModel extends Model {
 			if (arg7 == null) {
 				for (local18 = 0; local18 < local2; local18++) {
 					local26 = arg1[local18];
-					if (local26 < this.anIntArrayArray36.length) {
-						local228 = this.anIntArrayArray36[local26];
+					if (local26 < this.boneVertices.length) {
+						local228 = this.boneVertices[local26];
 						for (local230 = 0; local230 < local228.length; local230++) {
 							local45 = local228[local230];
-							if (this.aShortArray84 == null || (arg6 & this.aShortArray84[local45]) != 0) {
+							if (this.vertexSources == null || (arg6 & this.vertexSources[local45]) != 0) {
 								this.vertexX[local45] -= anInt5298;
 								this.vertexY[local45] -= anInt5300;
 								this.vertexZ[local45] -= anInt5299;
@@ -1564,11 +1539,11 @@ public final class GlModel extends Model {
 				if (arg5 && this.aShortArray76 != null) {
 					for (local18 = 0; local18 < local2; local18++) {
 						local26 = arg1[local18];
-						if (local26 < this.anIntArrayArray36.length) {
-							local228 = this.anIntArrayArray36[local26];
+						if (local26 < this.boneVertices.length) {
+							local228 = this.boneVertices[local26];
 							for (local230 = 0; local230 < local228.length; local230++) {
 								local45 = local228[local230];
-								if (this.aShortArray84 == null || (arg6 & this.aShortArray84[local45]) != 0) {
+								if (this.vertexSources == null || (arg6 & this.vertexSources[local45]) != 0) {
 									local53 = this.anIntArray462[local45];
 									local343 = this.anIntArray462[local45 + 1];
 									for (local365 = local53; local365 < local343; local365++) {
@@ -1602,8 +1577,8 @@ public final class GlModel extends Model {
 							}
 						}
 					}
-					if (this.aClass127_2 != null) {
-						this.aClass127_2.valid = false;
+					if (this.normalsBuffer != null) {
+						this.normalsBuffer.valid = false;
 					}
 				}
 			} else {
@@ -1683,11 +1658,11 @@ public final class GlModel extends Model {
 				local801 += local33;
 				for (local803 = 0; local803 < local2; local803++) {
 					local929 = arg1[local803];
-					if (local929 < this.anIntArrayArray36.length) {
-						@Pc(939) int[] local939 = this.anIntArrayArray36[local929];
+					if (local929 < this.boneVertices.length) {
+						@Pc(939) int[] local939 = this.boneVertices[local929];
 						for (@Pc(941) int local941 = 0; local941 < local939.length; local941++) {
 							@Pc(949) int local949 = local939[local941];
-							if (this.aShortArray84 == null || (arg6 & this.aShortArray84[local949]) != 0) {
+							if (this.vertexSources == null || (arg6 & this.vertexSources[local949]) != 0) {
 								@Pc(991) int local991 = local789[0] * this.vertexX[local949] + local789[1] * this.vertexY[local949] + local789[2] * this.vertexZ[local949] + 16384 >> 15;
 								@Pc(1022) int local1022 = local789[3] * this.vertexX[local949] + local789[4] * this.vertexY[local949] + local789[5] * this.vertexZ[local949] + 16384 >> 15;
 								@Pc(1053) int local1053 = local789[6] * this.vertexX[local949] + local789[7] * this.vertexY[local949] + local789[8] * this.vertexZ[local949] + 16384 >> 15;
@@ -1706,11 +1681,11 @@ public final class GlModel extends Model {
 			if (arg7 == null) {
 				for (local18 = 0; local18 < local2; local18++) {
 					local26 = arg1[local18];
-					if (local26 < this.anIntArrayArray36.length) {
-						local228 = this.anIntArrayArray36[local26];
+					if (local26 < this.boneVertices.length) {
+						local228 = this.boneVertices[local26];
 						for (local230 = 0; local230 < local228.length; local230++) {
 							local45 = local228[local230];
-							if (this.aShortArray84 == null || (arg6 & this.aShortArray84[local45]) != 0) {
+							if (this.vertexSources == null || (arg6 & this.vertexSources[local45]) != 0) {
 								this.vertexX[local45] -= anInt5298;
 								this.vertexY[local45] -= anInt5300;
 								this.vertexZ[local45] -= anInt5299;
@@ -1778,11 +1753,11 @@ public final class GlModel extends Model {
 				local657 += local33;
 				for (local662 = 0; local662 < local2; local662++) {
 					local667 = arg1[local662];
-					if (local667 < this.anIntArrayArray36.length) {
-						local789 = this.anIntArrayArray36[local667];
+					if (local667 < this.boneVertices.length) {
+						local789 = this.boneVertices[local667];
 						for (local791 = 0; local791 < local789.length; local791++) {
 							local796 = local789[local791];
-							if (this.aShortArray84 == null || (arg6 & this.aShortArray84[local796]) != 0) {
+							if (this.vertexSources == null || (arg6 & this.vertexSources[local796]) != 0) {
 								local801 = local1930[0] * this.vertexX[local796] + local1930[1] * this.vertexY[local796] + local1930[2] * this.vertexZ[local796] + 16384 >> 15;
 								local803 = local1930[3] * this.vertexX[local796] + local1930[4] * this.vertexY[local796] + local1930[5] * this.vertexZ[local796] + 16384 >> 15;
 								local929 = local1930[6] * this.vertexX[local796] + local1930[7] * this.vertexY[local796] + local1930[8] * this.vertexZ[local796] + 16384 >> 15;
@@ -1798,38 +1773,38 @@ public final class GlModel extends Model {
 				}
 			}
 		} else if (arg0 == 5) {
-			if (this.anIntArrayArray37 != null && this.aByteArray71 != null) {
+			if (this.boneTriangles != null && this.triangleAlpha != null) {
 				for (local18 = 0; local18 < local2; local18++) {
 					local26 = arg1[local18];
-					if (local26 < this.anIntArrayArray37.length) {
-						local228 = this.anIntArrayArray37[local26];
+					if (local26 < this.boneTriangles.length) {
+						local228 = this.boneTriangles[local26];
 						for (local230 = 0; local230 < local228.length; local230++) {
 							local45 = local228[local230];
-							if (this.aShortArray78 == null || (arg6 & this.aShortArray78[local45]) != 0) {
-								local53 = (this.aByteArray71[local45] & 0xFF) + arg2 * 8;
+							if (this.triangleSources == null || (arg6 & this.triangleSources[local45]) != 0) {
+								local53 = (this.triangleAlpha[local45] & 0xFF) + arg2 * 8;
 								if (local53 < 0) {
 									local53 = 0;
 								} else if (local53 > 255) {
 									local53 = 255;
 								}
-								this.aByteArray71[local45] = (byte) local53;
+								this.triangleAlpha[local45] = (byte) local53;
 							}
 						}
 						if (local228.length > 0) {
-							this.aClass127_1.valid = false;
+							this.colorBuffer.valid = false;
 						}
 					}
 				}
 			}
-		} else if (arg0 == 7 && this.anIntArrayArray37 != null) {
+		} else if (arg0 == 7 && this.boneTriangles != null) {
 			for (local18 = 0; local18 < local2; local18++) {
 				local26 = arg1[local18];
-				if (local26 < this.anIntArrayArray37.length) {
-					local228 = this.anIntArrayArray37[local26];
+				if (local26 < this.boneTriangles.length) {
+					local228 = this.boneTriangles[local26];
 					for (local230 = 0; local230 < local228.length; local230++) {
 						local45 = local228[local230];
-						if (this.aShortArray78 == null || (arg6 & this.aShortArray78[local45]) != 0) {
-							local53 = this.aShortArray75[local45] & 0xFFFF;
+						if (this.triangleSources == null || (arg6 & this.triangleSources[local45]) != 0) {
+							local53 = this.triangleColors[local45] & 0xFFFF;
 							local343 = local53 >> 10 & 0x3F;
 							local365 = local53 >> 7 & 0x7;
 							local387 = local53 & 0x7F;
@@ -1846,11 +1821,11 @@ public final class GlModel extends Model {
 							} else if (local387 > 127) {
 								local387 = 127;
 							}
-							this.aShortArray75[local45] = (short) (local2518 << 10 | local365 << 7 | local387);
+							this.triangleColors[local45] = (short) (local2518 << 10 | local365 << 7 | local387);
 						}
 					}
 					if (local228.length > 0) {
-						this.aClass127_1.valid = false;
+						this.colorBuffer.valid = false;
 					}
 				}
 			}
@@ -1860,10 +1835,10 @@ public final class GlModel extends Model {
 	@OriginalMember(owner = "client!td", name = "b", descriptor = "()I")
 	@Override
 	public final int getMinY() {
-		if (!this.vertexBuffer.valid) {
-			this.method4108();
+		if (!this.bounds.valid) {
+			this.calculateBounds();
 		}
-		return this.vertexBuffer.aShort2;
+		return this.bounds.minY;
 	}
 
 	@OriginalMember(owner = "client!td", name = "o", descriptor = "()V")
@@ -1873,58 +1848,58 @@ public final class GlModel extends Model {
 		@Pc(24) int local24;
 		@Pc(9) int local9;
 		@Pc(20) int local20;
-		if (this.anIntArray464 != null) {
+		if (this.vertexBones != null) {
 			local5 = new int[256];
 			local7 = 0;
 			for (local9 = 0; local9 < this.vertexCount; local9++) {
-				local20 = this.anIntArray464[local9] & 0xFF;
+				local20 = this.vertexBones[local9] & 0xFF;
 				local24 = local5[local20]++;
 				if (local20 > local7) {
 					local7 = local20;
 				}
 			}
-			this.anIntArrayArray36 = new int[local7 + 1][];
+			this.boneVertices = new int[local7 + 1][];
 			for (local9 = 0; local9 <= local7; local9++) {
-				this.anIntArrayArray36[local9] = new int[local5[local9]];
+				this.boneVertices[local9] = new int[local5[local9]];
 				local5[local9] = 0;
 			}
 			local9 = 0;
 			while (local9 < this.vertexCount) {
-				local20 = this.anIntArray464[local9] & 0xFF;
-				this.anIntArrayArray36[local20][local5[local20]++] = local9++;
+				local20 = this.vertexBones[local9] & 0xFF;
+				this.boneVertices[local20][local5[local20]++] = local9++;
 			}
-			this.anIntArray464 = null;
+			this.vertexBones = null;
 		}
-		if (this.aByteArray72 == null) {
+		if (this.triangleBones == null) {
 			return;
 		}
 		local5 = new int[256];
 		local7 = 0;
-		for (local9 = 0; local9 < this.anInt5297; local9++) {
-			local20 = this.aByteArray72[local9] & 0xFF;
+		for (local9 = 0; local9 < this.triangleCount; local9++) {
+			local20 = this.triangleBones[local9] & 0xFF;
 			local24 = local5[local20]++;
 			if (local20 > local7) {
 				local7 = local20;
 			}
 		}
-		this.anIntArrayArray37 = new int[local7 + 1][];
+		this.boneTriangles = new int[local7 + 1][];
 		for (local9 = 0; local9 <= local7; local9++) {
-			this.anIntArrayArray37[local9] = new int[local5[local9]];
+			this.boneTriangles[local9] = new int[local5[local9]];
 			local5[local9] = 0;
 		}
 		local9 = 0;
-		while (local9 < this.anInt5297) {
-			local20 = this.aByteArray72[local9] & 0xFF;
-			this.anIntArrayArray37[local20][local5[local20]++] = local9++;
+		while (local9 < this.triangleCount) {
+			local20 = this.triangleBones[local9] & 0xFF;
+			this.boneTriangles[local20][local5[local20]++] = local9++;
 		}
-		this.aByteArray72 = null;
+		this.triangleBones = null;
 	}
 
 	@OriginalMember(owner = "client!td", name = "e", descriptor = "(I)V")
 	public final void method4100(@OriginalArg(0) int arg0) {
 		this.aShort28 = (short) arg0;
-		if (this.aClass127_2 != null) {
-			this.aClass127_2.valid = false;
+		if (this.normalsBuffer != null) {
+			this.normalsBuffer.valid = false;
 		}
 	}
 
@@ -1943,10 +1918,10 @@ public final class GlModel extends Model {
 			this.aShortArray76[local7] = (short) -this.aShortArray76[local7];
 			this.aShortArray85[local7] = (short) -this.aShortArray85[local7];
 		}
-		this.vertexBuffer.valid = false;
 		this.bounds.valid = false;
-		if (this.aClass127_2 != null) {
-			this.aClass127_2.valid = false;
+		this.vertexBuffer.valid = false;
+		if (this.normalsBuffer != null) {
+			this.normalsBuffer.valid = false;
 		}
 	}
 
@@ -1958,8 +1933,8 @@ public final class GlModel extends Model {
 			this.vertexY[local1] = this.vertexY[local1] * arg1 >> 7;
 			this.vertexZ[local1] = this.vertexZ[local1] * arg2 >> 7;
 		}
-		this.vertexBuffer.valid = false;
 		this.bounds.valid = false;
+		this.vertexBuffer.valid = false;
 	}
 
 	@OriginalMember(owner = "client!td", name = "c", descriptor = "(ZZZ)Lclient!ak;")
@@ -1975,58 +1950,58 @@ public final class GlModel extends Model {
 			this.vertexX[local1] = -this.vertexX[local1];
 			this.vertexZ[local1] = -this.vertexZ[local1];
 		}
-		this.vertexBuffer.valid = false;
 		this.bounds.valid = false;
+		this.vertexBuffer.valid = false;
 	}
 
 	@OriginalMember(owner = "client!td", name = "q", descriptor = "()V")
 	private void method4103() {
-		if (aClass3_Sub15_8.data.length < this.anInt5296 * 12) {
-			aClass3_Sub15_8 = new Buffer((this.anInt5296 + 100) * 12);
+		if (tempBuffer.data.length < this.anInt5296 * 12) {
+			tempBuffer = new Buffer((this.anInt5296 + 100) * 12);
 		} else {
-			aClass3_Sub15_8.offset = 0;
+			tempBuffer.offset = 0;
 		}
 		@Pc(25) int local25;
 		if (GlRenderer.bigEndian) {
-			for (local25 = 0; local25 < this.anInt5297; local25++) {
-				aClass3_Sub15_8.p4(this.aShortArray77[local25]);
-				aClass3_Sub15_8.p4(this.aShortArray82[local25]);
-				aClass3_Sub15_8.p4(this.aShortArray83[local25]);
+			for (local25 = 0; local25 < this.triangleCount; local25++) {
+				tempBuffer.p4(this.aShortArray77[local25]);
+				tempBuffer.p4(this.aShortArray82[local25]);
+				tempBuffer.p4(this.aShortArray83[local25]);
 			}
 		} else {
-			for (local25 = 0; local25 < this.anInt5297; local25++) {
-				aClass3_Sub15_8.ip4(this.aShortArray77[local25]);
-				aClass3_Sub15_8.ip4(this.aShortArray82[local25]);
-				aClass3_Sub15_8.ip4(this.aShortArray83[local25]);
+			for (local25 = 0; local25 < this.triangleCount; local25++) {
+				tempBuffer.ip4(this.aShortArray77[local25]);
+				tempBuffer.ip4(this.aShortArray82[local25]);
+				tempBuffer.ip4(this.aShortArray83[local25]);
 			}
 		}
 		if (!GlRenderer.arbVboSupported) {
-			@Pc(115) ByteBuffer local115 = ByteBuffer.allocateDirect(aClass3_Sub15_8.offset);
-			local115.put(aClass3_Sub15_8.data, 0, aClass3_Sub15_8.offset);
+			@Pc(115) ByteBuffer local115 = ByteBuffer.allocateDirect(tempBuffer.offset);
+			local115.put(tempBuffer.data, 0, tempBuffer.offset);
 			local115.flip();
-			this.aClass127_5.valid = true;
-			this.aClass127_5.aByteBuffer8 = local115;
-			this.aClass127_5.aClass155_4 = null;
+			this.indexBuffer.valid = true;
+			this.indexBuffer.buffer = local115;
+			this.indexBuffer.vbo = null;
 			return;
 		}
-		@Pc(88) GlVertexBufferObject local88 = new GlVertexBufferObject();
-		@Pc(95) ByteBuffer local95 = ByteBuffer.wrap(aClass3_Sub15_8.data, 0, aClass3_Sub15_8.offset);
-		local88.method4519(local95);
-		this.aClass127_5.valid = true;
-		this.aClass127_5.aByteBuffer8 = null;
-		this.aClass127_5.aClass155_4 = local88;
+		@Pc(88) GlVertexBufferObject vbo = new GlVertexBufferObject();
+		@Pc(95) ByteBuffer buffer = ByteBuffer.wrap(tempBuffer.data, 0, tempBuffer.offset);
+		vbo.setArrayBuffer(buffer);
+		this.indexBuffer.valid = true;
+		this.indexBuffer.buffer = null;
+		this.indexBuffer.vbo = vbo;
 	}
 
 	@OriginalMember(owner = "client!td", name = "f", descriptor = "(I)V")
 	public final void method4105(@OriginalArg(0) int arg0) {
 		this.aShort29 = (short) arg0;
-		this.aClass127_1.valid = false;
+		this.colorBuffer.valid = false;
 	}
 
 	@OriginalMember(owner = "client!td", name = "d", descriptor = "()Z")
 	@Override
 	protected final boolean method4551() {
-		if (this.anIntArrayArray36 == null) {
+		if (this.boneVertices == null) {
 			return false;
 		}
 		for (@Pc(6) int local6 = 0; local6 < this.vertexCount; local6++) {
@@ -2043,9 +2018,9 @@ public final class GlModel extends Model {
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(SS)V")
 	public final void method4107(@OriginalArg(0) short arg0, @OriginalArg(1) short arg1) {
 		@Pc(1) int local1;
-		for (local1 = 0; local1 < this.anInt5297; local1++) {
-			if (this.aShortArray80[local1] == arg0) {
-				this.aShortArray80[local1] = arg1;
+		for (local1 = 0; local1 < this.triangleCount; local1++) {
+			if (this.triangleTextures[local1] == arg0) {
+				this.triangleTextures[local1] = arg1;
 			}
 		}
 		local1 = 0;
@@ -2061,81 +2036,81 @@ public final class GlModel extends Model {
 			local43 = Rasteriser.textureProvider.method3229(arg1 & 0xFFFF);
 		}
 		if (local1 != local41 || local22 != local43) {
-			this.aClass127_1.valid = false;
+			this.colorBuffer.valid = false;
 		}
 	}
 
 	@OriginalMember(owner = "client!td", name = "s", descriptor = "()V")
-	private void method4108() {
-		@Pc(1) int local1 = 32767;
-		@Pc(3) int local3 = 32767;
-		@Pc(5) int local5 = 32767;
-		@Pc(7) int local7 = -32768;
-		@Pc(9) int local9 = -32768;
-		@Pc(11) int local11 = -32768;
-		@Pc(13) int local13 = 0;
-		@Pc(15) int local15 = 0;
-		for (@Pc(17) int local17 = 0; local17 < this.vertexCount; local17++) {
-			@Pc(26) int local26 = this.vertexX[local17];
-			@Pc(31) int local31 = this.vertexY[local17];
-			@Pc(36) int local36 = this.vertexZ[local17];
-			if (local26 < local1) {
-				local1 = local26;
+	private void calculateBounds() {
+		@Pc(1) int minX = 32767;
+		@Pc(3) int minY = 32767;
+		@Pc(5) int minZ = 32767;
+		@Pc(7) int maxX = -32768;
+		@Pc(9) int maxY = -32768;
+		@Pc(11) int maxZ = -32768;
+		@Pc(13) int maxCylinderRadiusSquared = 0;
+		@Pc(15) int maxSphereRadiusSquared = 0;
+		for (@Pc(17) int i = 0; i < this.vertexCount; i++) {
+			@Pc(26) int x = this.vertexX[i];
+			@Pc(31) int y = this.vertexY[i];
+			@Pc(36) int z = this.vertexZ[i];
+			if (x < minX) {
+				minX = x;
 			}
-			if (local26 > local7) {
-				local7 = local26;
+			if (x > maxX) {
+				maxX = x;
 			}
-			if (local31 < local3) {
-				local3 = local31;
+			if (y < minY) {
+				minY = y;
 			}
-			if (local31 > local9) {
-				local9 = local31;
+			if (y > maxY) {
+				maxY = y;
 			}
-			if (local36 < local5) {
-				local5 = local36;
+			if (z < minZ) {
+				minZ = z;
 			}
-			if (local36 > local11) {
-				local11 = local36;
+			if (z > maxZ) {
+				maxZ = z;
 			}
-			@Pc(74) int local74 = local26 * local26 + local36 * local36;
-			if (local74 > local13) {
-				local13 = local74;
+			@Pc(74) int cylinderRadiusSquared = x * x + z * z;
+			if (cylinderRadiusSquared > maxCylinderRadiusSquared) {
+				maxCylinderRadiusSquared = cylinderRadiusSquared;
 			}
-			local74 = local26 * local26 + local36 * local36 + local31 * local31;
-			if (local74 > local15) {
-				local15 = local74;
+			int sphereRadiusSquared = x * x + z * z + y * y;
+			if (sphereRadiusSquared > maxSphereRadiusSquared) {
+				maxSphereRadiusSquared = sphereRadiusSquared;
 			}
 		}
-		this.vertexBuffer.aShort6 = (short) local1;
-		this.vertexBuffer.aShort5 = (short) local7;
-		this.vertexBuffer.aShort2 = (short) local3;
-		this.vertexBuffer.aShort3 = (short) local9;
-		this.vertexBuffer.aShort8 = (short) local5;
-		this.vertexBuffer.aShort7 = (short) local11;
-		this.vertexBuffer.aShort4 = (short) (Math.sqrt(local13) + 0.99D);
-		Math.sqrt(local15);
-		this.vertexBuffer.valid = true;
+		this.bounds.minX = (short) minX;
+		this.bounds.maxX = (short) maxX;
+		this.bounds.minY = (short) minY;
+		this.bounds.maxY = (short) maxY;
+		this.bounds.minZ = (short) minZ;
+		this.bounds.maxZ = (short) maxZ;
+		this.bounds.cylinderRadius = (short) (Math.sqrt(maxCylinderRadiusSquared) + 0.99D);
+		Math.sqrt(maxSphereRadiusSquared);
+		this.bounds.valid = true;
 	}
 
 	@OriginalMember(owner = "client!td", name = "b", descriptor = "(SS)V")
 	public final void method4109(@OriginalArg(0) short arg0, @OriginalArg(1) short arg1) {
-		for (@Pc(1) int local1 = 0; local1 < this.anInt5297; local1++) {
-			if (this.aShortArray75[local1] == arg0) {
-				this.aShortArray75[local1] = arg1;
+		for (@Pc(1) int local1 = 0; local1 < this.triangleCount; local1++) {
+			if (this.triangleColors[local1] == arg0) {
+				this.triangleColors[local1] = arg1;
 			}
 		}
-		this.aClass127_1.valid = false;
+		this.colorBuffer.valid = false;
 	}
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(IILclient!td;[[I[[IIII)V")
 	public final void method4110(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) GlModel arg2, @OriginalArg(3) int[][] arg3, @OriginalArg(4) int[][] arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7) {
-		if (!arg2.vertexBuffer.valid) {
-			arg2.method4108();
+		if (!arg2.bounds.valid) {
+			arg2.calculateBounds();
 		}
-		@Pc(11) int local11 = arg5 + arg2.vertexBuffer.aShort6;
-		@Pc(17) int local17 = arg5 + arg2.vertexBuffer.aShort5;
-		@Pc(23) int local23 = arg7 + arg2.vertexBuffer.aShort8;
-		@Pc(29) int local29 = arg7 + arg2.vertexBuffer.aShort7;
+		@Pc(11) int local11 = arg5 + arg2.bounds.minX;
+		@Pc(17) int local17 = arg5 + arg2.bounds.maxX;
+		@Pc(23) int local23 = arg7 + arg2.bounds.minZ;
+		@Pc(29) int local29 = arg7 + arg2.bounds.maxZ;
 		if ((arg0 == 1 || arg0 == 2 || arg0 == 3 || arg0 == 5) && (local11 < 0 || local17 + 128 >> 7 >= arg3.length || local23 < 0 || local29 + 128 >> 7 >= arg3[0].length)) {
 			return;
 		}
@@ -2182,7 +2157,7 @@ public final class GlModel extends Model {
 			@Pc(362) int local362;
 			@Pc(374) int local374;
 			if (arg0 == 2) {
-				@Pc(266) short local266 = arg2.vertexBuffer.aShort2;
+				@Pc(266) short local266 = arg2.bounds.minY;
 				for (local161 = 0; local161 < this.vertexCount; local161++) {
 					local168 = (this.vertexY[local161] << 16) / local266;
 					if (local168 < arg1) {
@@ -2203,7 +2178,7 @@ public final class GlModel extends Model {
 				local161 = (arg1 >> 8 & 0xFF) * 4;
 				this.method4573(arg3, arg5, arg6, arg7, local150, local161);
 			} else if (arg0 == 4) {
-				local150 = arg2.vertexBuffer.aShort3 - arg2.vertexBuffer.aShort2;
+				local150 = arg2.bounds.maxY - arg2.bounds.minY;
 				for (local161 = 0; local161 < this.vertexCount; local161++) {
 					local168 = this.vertexX[local161] + arg5;
 					local172 = this.vertexZ[local161] + arg7;
@@ -2217,7 +2192,7 @@ public final class GlModel extends Model {
 					this.vertexY[local161] = this.vertexY[local161] + local362 + local150 - arg6;
 				}
 			} else if (arg0 == 5) {
-				local150 = arg2.vertexBuffer.aShort3 - arg2.vertexBuffer.aShort2;
+				local150 = arg2.bounds.maxY - arg2.bounds.minY;
 				for (local161 = 0; local161 < this.vertexCount; local161++) {
 					local168 = this.vertexX[local161] + arg5;
 					local172 = this.vertexZ[local161] + arg7;
@@ -2236,8 +2211,8 @@ public final class GlModel extends Model {
 				}
 			}
 		}
-		this.bounds.valid = false;
 		this.vertexBuffer.valid = false;
+		this.bounds.valid = false;
 	}
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(ZZZZZZZ)V")
@@ -2246,16 +2221,16 @@ public final class GlModel extends Model {
 			throw new IllegalArgumentException();
 		} else if (this.anInt5296 != 0) {
 			if (arg5) {
-				@Pc(26) boolean local26 = !this.aClass127_1.valid && (arg1 || arg2 && !Preferences.highDetailLighting);
-				this.method4113(false, !this.bounds.valid && arg0, local26, this.aClass127_2 != null && !this.aClass127_2.valid && arg2, !this.aClass127_3.valid);
-				if (!this.aClass127_5.valid && arg3 && arg1) {
+				@Pc(26) boolean local26 = !this.colorBuffer.valid && (arg1 || arg2 && !Preferences.highDetailLighting);
+				this.method4113(false, !this.vertexBuffer.valid && arg0, local26, this.normalsBuffer != null && !this.normalsBuffer.valid && arg2, !this.texCoordBuffer.valid);
+				if (!this.indexBuffer.valid && arg3 && arg1) {
 					this.method4103();
 				}
 			}
 			if (arg0) {
-				if (this.bounds.valid) {
-					if (!this.vertexBuffer.valid) {
-						this.method4108();
+				if (this.vertexBuffer.valid) {
+					if (!this.bounds.valid) {
+						this.calculateBounds();
 					}
 					this.vertexX = null;
 					this.vertexY = null;
@@ -2267,15 +2242,15 @@ public final class GlModel extends Model {
 				}
 			}
 			if (arg1) {
-				if (this.aClass127_1.valid) {
-					this.aShortArray75 = null;
-					this.aByteArray71 = null;
+				if (this.colorBuffer.valid) {
+					this.triangleColors = null;
+					this.triangleAlpha = null;
 				} else {
 					this.aByte19 = (byte) (this.aByte19 | 0x2);
 				}
 			}
 			if (arg2 && Preferences.highDetailLighting) {
-				if (this.aClass127_2.valid) {
+				if (this.normalsBuffer.valid) {
 					this.aShortArray76 = null;
 					this.aShortArray79 = null;
 					this.aShortArray85 = null;
@@ -2284,14 +2259,14 @@ public final class GlModel extends Model {
 					this.aByte19 = (byte) (this.aByte19 | 0x4);
 				}
 			}
-			if (this.aClass127_3.valid) {
-				this.aFloatArray25 = null;
-				this.aFloatArray26 = null;
+			if (this.texCoordBuffer.valid) {
+				this.vertexS = null;
+				this.vertexT = null;
 			} else {
 				this.aByte19 = (byte) (this.aByte19 | 0x8);
 			}
 			if (arg3 && arg1) {
-				if (this.aClass127_5.valid && this.aClass127_1.valid) {
+				if (this.indexBuffer.valid && this.colorBuffer.valid) {
 					this.aShortArray77 = null;
 					this.aShortArray82 = null;
 					this.aShortArray83 = null;
@@ -2300,40 +2275,40 @@ public final class GlModel extends Model {
 				}
 			}
 			if (arg4) {
-				this.anIntArray464 = null;
-				this.aByteArray72 = null;
-				this.anIntArrayArray36 = null;
-				this.anIntArrayArray37 = null;
+				this.vertexBones = null;
+				this.triangleBones = null;
+				this.boneVertices = null;
+				this.boneTriangles = null;
 			}
 		}
 	}
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(ZZZZZ)V")
 	private void method4113(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) boolean arg3, @OriginalArg(4) boolean arg4) {
-		@Pc(1) int local1 = 0;
+		@Pc(1) int stride = 0;
 		if (arg1) {
-			this.bounds.anInt4777 = 0;
-			local1 += 12;
+			this.vertexBuffer.pointer = 0;
+			stride += 12;
 		}
 		if (arg2) {
-			this.aClass127_1.anInt4777 = local1;
-			local1 += 4;
+			this.colorBuffer.pointer = stride;
+			stride += 4;
 		}
 		if (arg3) {
-			this.aClass127_2.anInt4777 = local1;
-			local1 += 12;
+			this.normalsBuffer.pointer = stride;
+			stride += 12;
 		}
 		if (arg4) {
-			this.aClass127_3.anInt4777 = local1;
-			local1 += 8;
+			this.texCoordBuffer.pointer = stride;
+			stride += 8;
 		}
-		if (local1 == 0) {
+		if (stride == 0) {
 			return;
 		}
-		if (aClass3_Sub15_8.data.length < this.anInt5296 * local1) {
-			aClass3_Sub15_8 = new Buffer((this.anInt5296 + 100) * local1);
+		if (tempBuffer.data.length < this.anInt5296 * stride) {
+			tempBuffer = new Buffer((this.anInt5296 + 100) * stride);
 		} else {
-			aClass3_Sub15_8.offset = 0;
+			tempBuffer.offset = 0;
 		}
 		@Pc(60) int local60;
 		@Pc(71) int local71;
@@ -2356,10 +2331,10 @@ public final class GlModel extends Model {
 						if (local109 == -1) {
 							break;
 						}
-						aClass3_Sub15_8.offset = local109 * local1;
-						aClass3_Sub15_8.p4(local71);
-						aClass3_Sub15_8.p4(local78);
-						aClass3_Sub15_8.p4(local85);
+						tempBuffer.offset = local109 * stride;
+						tempBuffer.p4(local71);
+						tempBuffer.p4(local78);
+						tempBuffer.p4(local85);
 					}
 				}
 			} else {
@@ -2374,24 +2349,24 @@ public final class GlModel extends Model {
 						if (local109 == -1) {
 							break;
 						}
-						aClass3_Sub15_8.offset = local109 * local1;
-						aClass3_Sub15_8.ip4(local71);
-						aClass3_Sub15_8.ip4(local78);
-						aClass3_Sub15_8.ip4(local85);
+						tempBuffer.offset = local109 * stride;
+						tempBuffer.ip4(local71);
+						tempBuffer.ip4(local78);
+						tempBuffer.ip4(local85);
 					}
 				}
 			}
 		}
 		if (arg2) {
 			if (Preferences.highDetailLighting) {
-				for (local60 = 0; local60 < this.anInt5297; local60++) {
-					local71 = method4096(this.aShortArray75[local60], this.aShortArray80[local60], this.aShort29, this.aByteArray71[local60]);
-					aClass3_Sub15_8.offset = this.aClass127_1.anInt4777 + this.aShortArray77[local60] * local1;
-					aClass3_Sub15_8.p4(local71);
-					aClass3_Sub15_8.offset = this.aClass127_1.anInt4777 + this.aShortArray82[local60] * local1;
-					aClass3_Sub15_8.p4(local71);
-					aClass3_Sub15_8.offset = this.aClass127_1.anInt4777 + this.aShortArray83[local60] * local1;
-					aClass3_Sub15_8.p4(local71);
+				for (local60 = 0; local60 < this.triangleCount; local60++) {
+					local71 = method4096(this.triangleColors[local60], this.triangleTextures[local60], this.aShort29, this.triangleAlpha[local60]);
+					tempBuffer.offset = this.colorBuffer.pointer + this.aShortArray77[local60] * stride;
+					tempBuffer.p4(local71);
+					tempBuffer.offset = this.colorBuffer.pointer + this.aShortArray82[local60] * stride;
+					tempBuffer.p4(local71);
+					tempBuffer.offset = this.colorBuffer.pointer + this.aShortArray83[local60] * stride;
+					tempBuffer.p4(local71);
 				}
 			} else {
 				local60 = (int) FogManager.light0Position[0];
@@ -2400,7 +2375,7 @@ public final class GlModel extends Model {
 				local85 = (int) Math.sqrt(local60 * local60 + local71 * local71 + local78 * local78);
 				local90 = (int) ((float) this.aShort29 * 1.3F);
 				local97 = this.aShort28 * local85 >> 8;
-				for (local99 = 0; local99 < this.anInt5297; local99++) {
+				for (local99 = 0; local99 < this.triangleCount; local99++) {
 					@Pc(270) short local270 = this.aShortArray77[local99];
 					@Pc(275) short local275 = this.aShortArray86[local270];
 					@Pc(281) int local281;
@@ -2455,15 +2430,15 @@ public final class GlModel extends Model {
 						}
 						this.aShortArray86[local458] = (short) (-local469 - 1);
 					}
-					@Pc(562) int local562 = method4096(this.aShortArray75[local99], this.aShortArray80[local99], local281, this.aByteArray71[local99]);
-					@Pc(577) int local577 = method4096(this.aShortArray75[local99], this.aShortArray80[local99], local375, this.aByteArray71[local99]);
-					@Pc(592) int local592 = method4096(this.aShortArray75[local99], this.aShortArray80[local99], local469, this.aByteArray71[local99]);
-					aClass3_Sub15_8.offset = this.aClass127_1.anInt4777 + local270 * local1;
-					aClass3_Sub15_8.p4(local562);
-					aClass3_Sub15_8.offset = this.aClass127_1.anInt4777 + local364 * local1;
-					aClass3_Sub15_8.p4(local577);
-					aClass3_Sub15_8.offset = this.aClass127_1.anInt4777 + local458 * local1;
-					aClass3_Sub15_8.p4(local592);
+					@Pc(562) int local562 = method4096(this.triangleColors[local99], this.triangleTextures[local99], local281, this.triangleAlpha[local99]);
+					@Pc(577) int local577 = method4096(this.triangleColors[local99], this.triangleTextures[local99], local375, this.triangleAlpha[local99]);
+					@Pc(592) int local592 = method4096(this.triangleColors[local99], this.triangleTextures[local99], local469, this.triangleAlpha[local99]);
+					tempBuffer.offset = this.colorBuffer.pointer + local270 * stride;
+					tempBuffer.p4(local562);
+					tempBuffer.offset = this.colorBuffer.pointer + local364 * stride;
+					tempBuffer.p4(local577);
+					tempBuffer.offset = this.colorBuffer.pointer + local458 * stride;
+					tempBuffer.p4(local592);
 				}
 				this.aShortArray76 = null;
 				this.aShortArray79 = null;
@@ -2473,180 +2448,180 @@ public final class GlModel extends Model {
 		if (arg3) {
 			@Pc(723) float local723 = 3.0F / (float) this.aShort28;
 			@Pc(734) float local734 = 3.0F / (float) (this.aShort28 + this.aShort28 / 2);
-			aClass3_Sub15_8.offset = this.aClass127_2.anInt4777;
+			tempBuffer.offset = this.normalsBuffer.pointer;
 			@Pc(752) short local752;
 			@Pc(790) float local790;
 			if (GlRenderer.bigEndian) {
 				for (local78 = 0; local78 < this.anInt5296; local78++) {
 					local752 = this.aShortArray86[local78];
 					if (local752 == 0) {
-						aClass3_Sub15_8.pFloat((float) this.aShortArray76[local78] * local734);
-						aClass3_Sub15_8.pFloat((float) this.aShortArray79[local78] * local734);
-						aClass3_Sub15_8.pFloat((float) this.aShortArray85[local78] * local734);
+						tempBuffer.pFloat((float) this.aShortArray76[local78] * local734);
+						tempBuffer.pFloat((float) this.aShortArray79[local78] * local734);
+						tempBuffer.pFloat((float) this.aShortArray85[local78] * local734);
 					} else {
 						local790 = local723 / (float) local752;
-						aClass3_Sub15_8.pFloat((float) this.aShortArray76[local78] * local790);
-						aClass3_Sub15_8.pFloat((float) this.aShortArray79[local78] * local790);
-						aClass3_Sub15_8.pFloat((float) this.aShortArray85[local78] * local790);
+						tempBuffer.pFloat((float) this.aShortArray76[local78] * local790);
+						tempBuffer.pFloat((float) this.aShortArray79[local78] * local790);
+						tempBuffer.pFloat((float) this.aShortArray85[local78] * local790);
 					}
-					aClass3_Sub15_8.offset += local1 - 12;
+					tempBuffer.offset += stride - 12;
 				}
 			} else {
 				for (local78 = 0; local78 < this.anInt5296; local78++) {
 					local752 = this.aShortArray86[local78];
 					if (local752 == 0) {
-						aClass3_Sub15_8.gFloat((float) this.aShortArray76[local78] * local734);
-						aClass3_Sub15_8.gFloat((float) this.aShortArray79[local78] * local734);
-						aClass3_Sub15_8.gFloat((float) this.aShortArray85[local78] * local734);
+						tempBuffer.gFloat((float) this.aShortArray76[local78] * local734);
+						tempBuffer.gFloat((float) this.aShortArray79[local78] * local734);
+						tempBuffer.gFloat((float) this.aShortArray85[local78] * local734);
 					} else {
 						local790 = local723 / (float) local752;
-						aClass3_Sub15_8.gFloat((float) this.aShortArray76[local78] * local790);
-						aClass3_Sub15_8.gFloat((float) this.aShortArray79[local78] * local790);
-						aClass3_Sub15_8.gFloat((float) this.aShortArray85[local78] * local790);
+						tempBuffer.gFloat((float) this.aShortArray76[local78] * local790);
+						tempBuffer.gFloat((float) this.aShortArray79[local78] * local790);
+						tempBuffer.gFloat((float) this.aShortArray85[local78] * local790);
 					}
-					aClass3_Sub15_8.offset += local1 - 12;
+					tempBuffer.offset += stride - 12;
 				}
 			}
 		}
 		if (arg4) {
-			aClass3_Sub15_8.offset = this.aClass127_3.anInt4777;
+			tempBuffer.offset = this.texCoordBuffer.pointer;
 			if (GlRenderer.bigEndian) {
 				for (local60 = 0; local60 < this.anInt5296; local60++) {
-					aClass3_Sub15_8.pFloat(this.aFloatArray25[local60]);
-					aClass3_Sub15_8.pFloat(this.aFloatArray26[local60]);
-					aClass3_Sub15_8.offset += local1 - 8;
+					tempBuffer.pFloat(this.vertexS[local60]);
+					tempBuffer.pFloat(this.vertexT[local60]);
+					tempBuffer.offset += stride - 8;
 				}
 			} else {
 				for (local60 = 0; local60 < this.anInt5296; local60++) {
-					aClass3_Sub15_8.gFloat(this.aFloatArray25[local60]);
-					aClass3_Sub15_8.gFloat(this.aFloatArray26[local60]);
-					aClass3_Sub15_8.offset += local1 - 8;
+					tempBuffer.gFloat(this.vertexS[local60]);
+					tempBuffer.gFloat(this.vertexT[local60]);
+					tempBuffer.offset += stride - 8;
 				}
 			}
 		}
-		aClass3_Sub15_8.offset = local1 * this.anInt5296;
+		tempBuffer.offset = stride * this.anInt5296;
 		@Pc(1007) ByteBuffer local1007;
 		if (arg0) {
 			if (arbVboSupported) {
-				local1007 = ByteBuffer.wrap(aClass3_Sub15_8.data, 0, aClass3_Sub15_8.offset);
+				local1007 = ByteBuffer.wrap(tempBuffer.data, 0, tempBuffer.offset);
 				if (this.aClass155_5 == null) {
 					this.aClass155_5 = new GlVertexBufferObject(true);
-					this.aClass155_5.method4519(local1007);
+					this.aClass155_5.setArrayBuffer(local1007);
 				} else {
-					this.aClass155_5.method4515(local1007);
+					this.aClass155_5.updateArrayBuffer(local1007);
 				}
 				if (arg1) {
-					this.bounds.valid = true;
-					this.bounds.aByteBuffer8 = null;
-					this.bounds.aClass155_4 = this.aClass155_5;
-					this.bounds.anInt4782 = local1;
+					this.vertexBuffer.valid = true;
+					this.vertexBuffer.buffer = null;
+					this.vertexBuffer.vbo = this.aClass155_5;
+					this.vertexBuffer.stride = stride;
 				}
 				if (arg2) {
-					this.aClass127_1.valid = true;
-					this.aClass127_1.aByteBuffer8 = null;
-					this.aClass127_1.aClass155_4 = this.aClass155_5;
-					this.aClass127_1.anInt4782 = local1;
+					this.colorBuffer.valid = true;
+					this.colorBuffer.buffer = null;
+					this.colorBuffer.vbo = this.aClass155_5;
+					this.colorBuffer.stride = stride;
 				}
 				if (arg3) {
-					this.aClass127_2.valid = true;
-					this.aClass127_2.aByteBuffer8 = null;
-					this.aClass127_2.aClass155_4 = this.aClass155_5;
-					this.aClass127_2.anInt4782 = local1;
+					this.normalsBuffer.valid = true;
+					this.normalsBuffer.buffer = null;
+					this.normalsBuffer.vbo = this.aClass155_5;
+					this.normalsBuffer.stride = stride;
 				}
 				if (arg4) {
-					this.aClass127_3.valid = true;
-					this.aClass127_3.aByteBuffer8 = null;
-					this.aClass127_3.aClass155_4 = this.aClass155_5;
-					this.aClass127_3.anInt4782 = local1;
+					this.texCoordBuffer.valid = true;
+					this.texCoordBuffer.buffer = null;
+					this.texCoordBuffer.vbo = this.aClass155_5;
+					this.texCoordBuffer.stride = stride;
 				}
 			} else {
-				if (aByteBuffer9 == null || aByteBuffer9.capacity() < aClass3_Sub15_8.offset) {
-					aByteBuffer9 = ByteBuffer.allocateDirect(aClass3_Sub15_8.offset + local1 * 100);
+				if (aByteBuffer9 == null || aByteBuffer9.capacity() < tempBuffer.offset) {
+					aByteBuffer9 = ByteBuffer.allocateDirect(tempBuffer.offset + stride * 100);
 				} else {
 					aByteBuffer9.clear();
 				}
-				aByteBuffer9.put(aClass3_Sub15_8.data, 0, aClass3_Sub15_8.offset);
+				aByteBuffer9.put(tempBuffer.data, 0, tempBuffer.offset);
 				aByteBuffer9.flip();
 				if (arg1) {
-					this.bounds.valid = true;
-					this.bounds.aByteBuffer8 = aByteBuffer9;
-					this.bounds.aClass155_4 = null;
-					this.bounds.anInt4782 = local1;
+					this.vertexBuffer.valid = true;
+					this.vertexBuffer.buffer = aByteBuffer9;
+					this.vertexBuffer.vbo = null;
+					this.vertexBuffer.stride = stride;
 				}
 				if (arg2) {
-					this.aClass127_1.valid = true;
-					this.aClass127_1.aByteBuffer8 = aByteBuffer9;
-					this.bounds.aClass155_4 = null;
-					this.aClass127_1.anInt4782 = local1;
+					this.colorBuffer.valid = true;
+					this.colorBuffer.buffer = aByteBuffer9;
+					this.vertexBuffer.vbo = null;
+					this.colorBuffer.stride = stride;
 				}
 				if (arg3) {
-					this.aClass127_2.valid = true;
-					this.aClass127_2.aByteBuffer8 = aByteBuffer9;
-					this.aClass127_2.aClass155_4 = null;
-					this.aClass127_2.anInt4782 = local1;
+					this.normalsBuffer.valid = true;
+					this.normalsBuffer.buffer = aByteBuffer9;
+					this.normalsBuffer.vbo = null;
+					this.normalsBuffer.stride = stride;
 				}
 				if (arg4) {
-					this.aClass127_3.valid = true;
-					this.aClass127_3.aByteBuffer8 = aByteBuffer9;
-					this.aClass127_3.aClass155_4 = null;
-					this.aClass127_3.anInt4782 = local1;
+					this.texCoordBuffer.valid = true;
+					this.texCoordBuffer.buffer = aByteBuffer9;
+					this.texCoordBuffer.vbo = null;
+					this.texCoordBuffer.stride = stride;
 				}
 			}
 		} else if (GlRenderer.arbVboSupported) {
 			@Pc(1211) GlVertexBufferObject local1211 = new GlVertexBufferObject();
-			@Pc(1218) ByteBuffer local1218 = ByteBuffer.wrap(aClass3_Sub15_8.data, 0, aClass3_Sub15_8.offset);
-			local1211.method4519(local1218);
+			@Pc(1218) ByteBuffer local1218 = ByteBuffer.wrap(tempBuffer.data, 0, tempBuffer.offset);
+			local1211.setArrayBuffer(local1218);
 			if (arg1) {
-				this.bounds.valid = true;
-				this.bounds.aByteBuffer8 = null;
-				this.bounds.aClass155_4 = local1211;
-				this.bounds.anInt4782 = local1;
+				this.vertexBuffer.valid = true;
+				this.vertexBuffer.buffer = null;
+				this.vertexBuffer.vbo = local1211;
+				this.vertexBuffer.stride = stride;
 			}
 			if (arg2) {
-				this.aClass127_1.valid = true;
-				this.aClass127_1.aByteBuffer8 = null;
-				this.aClass127_1.aClass155_4 = local1211;
-				this.aClass127_1.anInt4782 = local1;
+				this.colorBuffer.valid = true;
+				this.colorBuffer.buffer = null;
+				this.colorBuffer.vbo = local1211;
+				this.colorBuffer.stride = stride;
 			}
 			if (arg3) {
-				this.aClass127_2.valid = true;
-				this.aClass127_2.aByteBuffer8 = null;
-				this.aClass127_2.aClass155_4 = local1211;
-				this.aClass127_2.anInt4782 = local1;
+				this.normalsBuffer.valid = true;
+				this.normalsBuffer.buffer = null;
+				this.normalsBuffer.vbo = local1211;
+				this.normalsBuffer.stride = stride;
 			}
 			if (arg4) {
-				this.aClass127_3.valid = true;
-				this.aClass127_3.aByteBuffer8 = null;
-				this.aClass127_3.aClass155_4 = local1211;
-				this.aClass127_3.anInt4782 = local1;
+				this.texCoordBuffer.valid = true;
+				this.texCoordBuffer.buffer = null;
+				this.texCoordBuffer.vbo = local1211;
+				this.texCoordBuffer.stride = stride;
 			}
 		} else {
-			local1007 = ByteBuffer.allocateDirect(aClass3_Sub15_8.offset);
-			local1007.put(aClass3_Sub15_8.data, 0, aClass3_Sub15_8.offset);
+			local1007 = ByteBuffer.allocateDirect(tempBuffer.offset);
+			local1007.put(tempBuffer.data, 0, tempBuffer.offset);
 			local1007.flip();
 			if (arg1) {
-				this.bounds.valid = true;
-				this.bounds.aByteBuffer8 = local1007;
-				this.bounds.aClass155_4 = null;
-				this.bounds.anInt4782 = local1;
+				this.vertexBuffer.valid = true;
+				this.vertexBuffer.buffer = local1007;
+				this.vertexBuffer.vbo = null;
+				this.vertexBuffer.stride = stride;
 			}
 			if (arg2) {
-				this.aClass127_1.valid = true;
-				this.aClass127_1.aByteBuffer8 = local1007;
-				this.bounds.aClass155_4 = null;
-				this.aClass127_1.anInt4782 = local1;
+				this.colorBuffer.valid = true;
+				this.colorBuffer.buffer = local1007;
+				this.vertexBuffer.vbo = null;
+				this.colorBuffer.stride = stride;
 			}
 			if (arg3) {
-				this.aClass127_2.valid = true;
-				this.aClass127_2.aByteBuffer8 = local1007;
-				this.aClass127_2.aClass155_4 = null;
-				this.aClass127_2.anInt4782 = local1;
+				this.normalsBuffer.valid = true;
+				this.normalsBuffer.buffer = local1007;
+				this.normalsBuffer.vbo = null;
+				this.normalsBuffer.stride = stride;
 			}
 			if (arg4) {
-				this.aClass127_3.valid = true;
-				this.aClass127_3.aByteBuffer8 = local1007;
-				this.aClass127_3.aClass155_4 = null;
-				this.aClass127_3.anInt4782 = local1;
+				this.texCoordBuffer.valid = true;
+				this.texCoordBuffer.buffer = local1007;
+				this.texCoordBuffer.vbo = null;
+				this.texCoordBuffer.stride = stride;
 			}
 		}
 	}
@@ -2655,7 +2630,7 @@ public final class GlModel extends Model {
 	private Model method4114(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) GlModel arg3, @OriginalArg(4) GlModel arg4) {
 		arg3.vertexCount = this.vertexCount;
 		arg3.anInt5296 = this.anInt5296;
-		arg3.anInt5297 = this.anInt5297;
+		arg3.triangleCount = this.triangleCount;
 		arg3.aShort29 = this.aShort29;
 		arg3.aShort28 = this.aShort28;
 		arg3.aByte18 = (byte) ((arg0 && arg1 ? 0 : 2) | 0x1 | (arg2 ? 0 : 4));
@@ -2670,51 +2645,51 @@ public final class GlModel extends Model {
 			arg3.vertexY[local69] = this.vertexY[local69];
 			arg3.vertexZ[local69] = this.vertexZ[local69];
 		}
-		if (arg3.bounds == null) {
-			arg3.bounds = new GlBuffer();
-		}
-		arg3.bounds.valid = false;
 		if (arg3.vertexBuffer == null) {
-			arg3.vertexBuffer = new GlVertexBuffer();
+			arg3.vertexBuffer = new GlBuffer();
 		}
 		arg3.vertexBuffer.valid = false;
+		if (arg3.bounds == null) {
+			arg3.bounds = new GlBoundingBox();
+		}
+		arg3.bounds.valid = false;
 		if (arg0) {
-			arg3.aByteArray71 = this.aByteArray71;
+			arg3.triangleAlpha = this.triangleAlpha;
 		} else {
-			if (arg4.aByteArray71 == null || arg4.aByteArray71.length < this.anInt5297) {
-				arg4.aByteArray71 = new byte[this.anInt5297 + 100];
+			if (arg4.triangleAlpha == null || arg4.triangleAlpha.length < this.triangleCount) {
+				arg4.triangleAlpha = new byte[this.triangleCount + 100];
 			}
-			arg3.aByteArray71 = arg4.aByteArray71;
-			for (local69 = 0; local69 < this.anInt5297; local69++) {
-				arg3.aByteArray71[local69] = this.aByteArray71[local69];
+			arg3.triangleAlpha = arg4.triangleAlpha;
+			for (local69 = 0; local69 < this.triangleCount; local69++) {
+				arg3.triangleAlpha[local69] = this.triangleAlpha[local69];
 			}
 		}
 		if (arg1) {
-			arg3.aShortArray75 = this.aShortArray75;
+			arg3.triangleColors = this.triangleColors;
 		} else {
-			if (arg4.aShortArray75 == null || arg4.aShortArray75.length < this.anInt5297) {
-				arg4.aShortArray75 = new short[this.anInt5297 + 100];
+			if (arg4.triangleColors == null || arg4.triangleColors.length < this.triangleCount) {
+				arg4.triangleColors = new short[this.triangleCount + 100];
 			}
-			arg3.aShortArray75 = arg4.aShortArray75;
-			for (local69 = 0; local69 < this.anInt5297; local69++) {
-				arg3.aShortArray75[local69] = this.aShortArray75[local69];
+			arg3.triangleColors = arg4.triangleColors;
+			for (local69 = 0; local69 < this.triangleCount; local69++) {
+				arg3.triangleColors[local69] = this.triangleColors[local69];
 			}
 		}
 		if (arg0 && arg1) {
-			arg3.aClass127_1 = this.aClass127_1;
+			arg3.colorBuffer = this.colorBuffer;
 		} else {
-			if (arg4.aClass127_1 == null) {
-				arg4.aClass127_1 = new GlBuffer();
+			if (arg4.colorBuffer == null) {
+				arg4.colorBuffer = new GlBuffer();
 			}
-			arg3.aClass127_1 = arg4.aClass127_1;
-			arg3.aClass127_1.valid = false;
+			arg3.colorBuffer = arg4.colorBuffer;
+			arg3.colorBuffer.valid = false;
 		}
 		if (arg2 || this.aShortArray76 == null) {
 			arg3.aShortArray76 = this.aShortArray76;
 			arg3.aShortArray79 = this.aShortArray79;
 			arg3.aShortArray85 = this.aShortArray85;
 			arg3.aShortArray86 = this.aShortArray86;
-			arg3.aClass127_2 = this.aClass127_2;
+			arg3.normalsBuffer = this.normalsBuffer;
 		} else {
 			if (arg4.aShortArray76 == null || arg4.aShortArray76.length < this.anInt5296) {
 				arg4.aShortArray76 = new short[this.anInt5296 + 100];
@@ -2733,33 +2708,33 @@ public final class GlModel extends Model {
 				arg3.aShortArray86[local69] = this.aShortArray86[local69];
 			}
 			if (Preferences.highDetailLighting) {
-				if (arg4.aClass127_2 == null) {
-					arg4.aClass127_2 = new GlBuffer();
+				if (arg4.normalsBuffer == null) {
+					arg4.normalsBuffer = new GlBuffer();
 				}
-				arg3.aClass127_2 = arg4.aClass127_2;
-				arg3.aClass127_2.valid = false;
+				arg3.normalsBuffer = arg4.normalsBuffer;
+				arg3.normalsBuffer.valid = false;
 			} else {
-				arg3.aClass127_2 = null;
+				arg3.normalsBuffer = null;
 			}
 		}
-		arg3.aFloatArray25 = this.aFloatArray25;
-		arg3.aFloatArray26 = this.aFloatArray26;
-		arg3.anIntArray464 = this.anIntArray464;
-		arg3.anIntArrayArray36 = this.anIntArrayArray36;
+		arg3.vertexS = this.vertexS;
+		arg3.vertexT = this.vertexT;
+		arg3.vertexBones = this.vertexBones;
+		arg3.boneVertices = this.boneVertices;
 		arg3.aShortArray77 = this.aShortArray77;
 		arg3.aShortArray82 = this.aShortArray82;
 		arg3.aShortArray83 = this.aShortArray83;
-		arg3.aShortArray80 = this.aShortArray80;
-		arg3.aByteArray72 = this.aByteArray72;
-		arg3.anIntArrayArray37 = this.anIntArrayArray37;
-		arg3.aClass127_3 = this.aClass127_3;
-		arg3.aClass127_5 = this.aClass127_5;
+		arg3.triangleTextures = this.triangleTextures;
+		arg3.triangleBones = this.triangleBones;
+		arg3.boneTriangles = this.boneTriangles;
+		arg3.texCoordBuffer = this.texCoordBuffer;
+		arg3.indexBuffer = this.indexBuffer;
 		arg3.anIntArray463 = this.anIntArray463;
 		arg3.aShortArray81 = this.aShortArray81;
 		arg3.anIntArray462 = this.anIntArray462;
 		arg3.aBoolean303 = this.aBoolean303;
-		arg3.aShortArray84 = this.aShortArray84;
-		arg3.aShortArray78 = this.aShortArray78;
+		arg3.vertexSources = this.vertexSources;
+		arg3.triangleSources = this.triangleSources;
 		return arg3;
 	}
 
@@ -2799,98 +2774,98 @@ public final class GlModel extends Model {
 			this.aShortArray76[local7] = this.aShortArray85[local7];
 			this.aShortArray85[local7] = (short) -local43;
 		}
-		this.vertexBuffer.valid = false;
 		this.bounds.valid = false;
-		if (this.aClass127_2 != null) {
-			this.aClass127_2.valid = false;
+		this.vertexBuffer.valid = false;
+		if (this.normalsBuffer != null) {
+			this.normalsBuffer.valid = false;
 		}
 	}
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(ZZZZZZZZZZZ)Lclient!td;")
 	public final GlModel method4117(@OriginalArg(0) boolean arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) boolean arg2, @OriginalArg(4) boolean arg3, @OriginalArg(5) boolean arg4, @OriginalArg(6) boolean arg5, @OriginalArg(7) boolean arg6, @OriginalArg(9) boolean arg7, @OriginalArg(10) boolean arg8) {
-		@Pc(3) GlModel local3 = new GlModel();
-		local3.vertexCount = this.vertexCount;
-		local3.anInt5296 = this.anInt5296;
-		local3.anInt5297 = this.anInt5297;
+		@Pc(3) GlModel model = new GlModel();
+		model.vertexCount = this.vertexCount;
+		model.anInt5296 = this.anInt5296;
+		model.triangleCount = this.triangleCount;
 		if (arg0) {
-			local3.vertexX = this.vertexX;
-			local3.vertexZ = this.vertexZ;
+			model.vertexX = this.vertexX;
+			model.vertexZ = this.vertexZ;
 		} else {
-			local3.vertexX = RawModel.method2308(this.vertexX);
-			local3.vertexZ = RawModel.method2308(this.vertexZ);
+			model.vertexX = ArrayUtils.copyOfNullable(this.vertexX);
+			model.vertexZ = ArrayUtils.copyOfNullable(this.vertexZ);
 		}
 		if (arg1) {
-			local3.vertexY = this.vertexY;
+			model.vertexY = this.vertexY;
 		} else {
-			local3.vertexY = RawModel.method2308(this.vertexY);
+			model.vertexY = ArrayUtils.copyOfNullable(this.vertexY);
 		}
 		if (arg0 && arg1) {
-			local3.bounds = this.bounds;
-			local3.vertexBuffer = this.vertexBuffer;
+			model.vertexBuffer = this.vertexBuffer;
+			model.bounds = this.bounds;
 		} else {
-			local3.bounds = new GlBuffer();
-			local3.vertexBuffer = new GlVertexBuffer();
+			model.vertexBuffer = new GlBuffer();
+			model.bounds = new GlBoundingBox();
 		}
 		if (arg2) {
-			local3.aShortArray75 = this.aShortArray75;
+			model.triangleColors = this.triangleColors;
 		} else {
-			local3.aShortArray75 = method4511(this.aShortArray75);
+			model.triangleColors = ArrayUtils.copyOfNullable(this.triangleColors);
 		}
-		local3.aByteArray71 = this.aByteArray71;
+		model.triangleAlpha = this.triangleAlpha;
 		if (arg2 && arg3 && (arg6 && arg4 || Preferences.highDetailLighting)) {
-			local3.aClass127_1 = this.aClass127_1;
+			model.colorBuffer = this.colorBuffer;
 		} else {
-			local3.aClass127_1 = new GlBuffer();
+			model.colorBuffer = new GlBuffer();
 		}
 		if (arg4) {
-			local3.aShortArray76 = this.aShortArray76;
-			local3.aShortArray79 = this.aShortArray79;
-			local3.aShortArray85 = this.aShortArray85;
-			local3.aShortArray86 = this.aShortArray86;
+			model.aShortArray76 = this.aShortArray76;
+			model.aShortArray79 = this.aShortArray79;
+			model.aShortArray85 = this.aShortArray85;
+			model.aShortArray86 = this.aShortArray86;
 		} else {
-			local3.aShortArray76 = method4511(this.aShortArray76);
-			local3.aShortArray79 = method4511(this.aShortArray79);
-			local3.aShortArray85 = method4511(this.aShortArray85);
-			local3.aShortArray86 = method4511(this.aShortArray86);
+			model.aShortArray76 = ArrayUtils.copyOfNullable(this.aShortArray76);
+			model.aShortArray79 = ArrayUtils.copyOfNullable(this.aShortArray79);
+			model.aShortArray85 = ArrayUtils.copyOfNullable(this.aShortArray85);
+			model.aShortArray86 = ArrayUtils.copyOfNullable(this.aShortArray86);
 		}
 		if (!Preferences.highDetailLighting) {
-			local3.aClass127_2 = null;
+			model.normalsBuffer = null;
 		} else if (arg4 && arg5 && arg6) {
-			local3.aClass127_2 = this.aClass127_2;
+			model.normalsBuffer = this.normalsBuffer;
 		} else {
-			local3.aClass127_2 = new GlBuffer();
+			model.normalsBuffer = new GlBuffer();
 		}
-		local3.aFloatArray25 = this.aFloatArray25;
-		local3.aFloatArray26 = this.aFloatArray26;
-		local3.aClass127_3 = this.aClass127_3;
+		model.vertexS = this.vertexS;
+		model.vertexT = this.vertexT;
+		model.texCoordBuffer = this.texCoordBuffer;
 		if (arg7) {
-			local3.aShortArray77 = this.aShortArray77;
-			local3.aShortArray82 = this.aShortArray82;
-			local3.aShortArray83 = this.aShortArray83;
-			local3.aClass127_5 = this.aClass127_5;
+			model.aShortArray77 = this.aShortArray77;
+			model.aShortArray82 = this.aShortArray82;
+			model.aShortArray83 = this.aShortArray83;
+			model.indexBuffer = this.indexBuffer;
 		} else {
-			local3.aShortArray77 = method4511(this.aShortArray77);
-			local3.aShortArray82 = method4511(this.aShortArray82);
-			local3.aShortArray83 = method4511(this.aShortArray83);
-			local3.aClass127_5 = new GlBuffer();
+			model.aShortArray77 = ArrayUtils.copyOfNullable(this.aShortArray77);
+			model.aShortArray82 = ArrayUtils.copyOfNullable(this.aShortArray82);
+			model.aShortArray83 = ArrayUtils.copyOfNullable(this.aShortArray83);
+			model.indexBuffer = new GlBuffer();
 		}
 		if (arg8) {
-			local3.aShortArray80 = this.aShortArray80;
+			model.triangleTextures = this.triangleTextures;
 		} else {
-			local3.aShortArray80 = method4511(this.aShortArray80);
+			model.triangleTextures = ArrayUtils.copyOfNullable(this.triangleTextures);
 		}
-		local3.anIntArray464 = this.anIntArray464;
-		local3.anIntArrayArray36 = this.anIntArrayArray36;
-		local3.aByteArray72 = this.aByteArray72;
-		local3.anIntArrayArray37 = this.anIntArrayArray37;
-		local3.anIntArray463 = this.anIntArray463;
-		local3.aShortArray81 = this.aShortArray81;
-		local3.anIntArray462 = this.anIntArray462;
-		local3.aShort29 = this.aShort29;
-		local3.aShort28 = this.aShort28;
-		local3.aShortArray84 = this.aShortArray84;
-		local3.aShortArray78 = this.aShortArray78;
-		return local3;
+		model.vertexBones = this.vertexBones;
+		model.boneVertices = this.boneVertices;
+		model.triangleBones = this.triangleBones;
+		model.boneTriangles = this.boneTriangles;
+		model.anIntArray463 = this.anIntArray463;
+		model.aShortArray81 = this.aShortArray81;
+		model.anIntArray462 = this.anIntArray462;
+		model.aShort29 = this.aShort29;
+		model.aShort28 = this.aShort28;
+		model.vertexSources = this.vertexSources;
+		model.triangleSources = this.triangleSources;
+		return model;
 	}
 
 	@OriginalMember(owner = "client!td", name = "i", descriptor = "()V")
@@ -2901,8 +2876,8 @@ public final class GlModel extends Model {
 			this.vertexX[local1] = this.vertexZ[local1];
 			this.vertexZ[local1] = -local10;
 		}
-		this.vertexBuffer.valid = false;
 		this.bounds.valid = false;
+		this.vertexBuffer.valid = false;
 	}
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(IIIIIIII)Z")
@@ -2921,10 +2896,10 @@ public final class GlModel extends Model {
 	@OriginalMember(owner = "client!td", name = "j", descriptor = "()I")
 	@Override
 	public final int method4566() {
-		if (!this.vertexBuffer.valid) {
-			this.method4108();
+		if (!this.bounds.valid) {
+			this.calculateBounds();
 		}
-		return this.vertexBuffer.aShort4;
+		return this.bounds.cylinderRadius;
 	}
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(I[IIIIZ)V")
@@ -2948,8 +2923,8 @@ public final class GlModel extends Model {
 			anInt5299 = 0;
 			for (local26 = 0; local26 < local2; local26++) {
 				@Pc(33) int local33 = arg1[local26];
-				if (local33 < this.anIntArrayArray36.length) {
-					@Pc(43) int[] local43 = this.anIntArrayArray36[local33];
+				if (local33 < this.boneVertices.length) {
+					@Pc(43) int[] local43 = this.boneVertices[local33];
 					for (local45 = 0; local45 < local43.length; local45++) {
 						local53 = local43[local45];
 						anInt5298 += this.vertexX[local53];
@@ -2978,8 +2953,8 @@ public final class GlModel extends Model {
 			local16 = arg4 << 4;
 			for (local18 = 0; local18 < local2; local18++) {
 				local26 = arg1[local18];
-				if (local26 < this.anIntArrayArray36.length) {
-					local141 = this.anIntArrayArray36[local26];
+				if (local26 < this.boneVertices.length) {
+					local141 = this.boneVertices[local26];
 					for (local143 = 0; local143 < local141.length; local143++) {
 						local45 = local141[local143];
 						this.vertexX[local45] += local8;
@@ -2996,8 +2971,8 @@ public final class GlModel extends Model {
 		if (arg0 == 2) {
 			for (local18 = 0; local18 < local2; local18++) {
 				local26 = arg1[local18];
-				if (local26 < this.anIntArrayArray36.length) {
-					local141 = this.anIntArrayArray36[local26];
+				if (local26 < this.boneVertices.length) {
+					local141 = this.boneVertices[local26];
 					for (local143 = 0; local143 < local141.length; local143++) {
 						local45 = local141[local143];
 						this.vertexX[local45] -= anInt5298;
@@ -3033,8 +3008,8 @@ public final class GlModel extends Model {
 			if (arg5 && this.aShortArray76 != null) {
 				for (local18 = 0; local18 < local2; local18++) {
 					local26 = arg1[local18];
-					if (local26 < this.anIntArrayArray36.length) {
-						local141 = this.anIntArrayArray36[local26];
+					if (local26 < this.boneVertices.length) {
+						local141 = this.boneVertices[local26];
 						for (local143 = 0; local143 < local141.length; local143++) {
 							local45 = local141[local143];
 							local53 = this.anIntArray462[local45];
@@ -3072,15 +3047,15 @@ public final class GlModel extends Model {
 						}
 					}
 				}
-				if (this.aClass127_2 != null) {
-					this.aClass127_2.valid = false;
+				if (this.normalsBuffer != null) {
+					this.normalsBuffer.valid = false;
 				}
 			}
 		} else if (arg0 == 3) {
 			for (local18 = 0; local18 < local2; local18++) {
 				local26 = arg1[local18];
-				if (local26 < this.anIntArrayArray36.length) {
-					local141 = this.anIntArrayArray36[local26];
+				if (local26 < this.boneVertices.length) {
+					local141 = this.boneVertices[local26];
 					for (local143 = 0; local143 < local141.length; local143++) {
 						local45 = local141[local143];
 						this.vertexX[local45] -= anInt5298;
@@ -3096,35 +3071,35 @@ public final class GlModel extends Model {
 				}
 			}
 		} else if (arg0 == 5) {
-			if (this.anIntArrayArray37 != null && this.aByteArray71 != null) {
+			if (this.boneTriangles != null && this.triangleAlpha != null) {
 				for (local18 = 0; local18 < local2; local18++) {
 					local26 = arg1[local18];
-					if (local26 < this.anIntArrayArray37.length) {
-						local141 = this.anIntArrayArray37[local26];
+					if (local26 < this.boneTriangles.length) {
+						local141 = this.boneTriangles[local26];
 						for (local143 = 0; local143 < local141.length; local143++) {
 							local45 = local141[local143];
-							local53 = (this.aByteArray71[local45] & 0xFF) + arg2 * 8;
+							local53 = (this.triangleAlpha[local45] & 0xFF) + arg2 * 8;
 							if (local53 < 0) {
 								local53 = 0;
 							} else if (local53 > 255) {
 								local53 = 255;
 							}
-							this.aByteArray71[local45] = (byte) local53;
+							this.triangleAlpha[local45] = (byte) local53;
 						}
 						if (local141.length > 0) {
-							this.aClass127_1.valid = false;
+							this.colorBuffer.valid = false;
 						}
 					}
 				}
 			}
-		} else if (arg0 == 7 && this.anIntArrayArray37 != null) {
+		} else if (arg0 == 7 && this.boneTriangles != null) {
 			for (local18 = 0; local18 < local2; local18++) {
 				local26 = arg1[local18];
-				if (local26 < this.anIntArrayArray37.length) {
-					local141 = this.anIntArrayArray37[local26];
+				if (local26 < this.boneTriangles.length) {
+					local141 = this.boneTriangles[local26];
 					for (local143 = 0; local143 < local141.length; local143++) {
 						local45 = local141[local143];
-						local53 = this.aShortArray75[local45] & 0xFFFF;
+						local53 = this.triangleColors[local45] & 0xFFFF;
 						local246 = local53 >> 10 & 0x3F;
 						local264 = local53 >> 7 & 0x7;
 						local484 = local53 & 0x7F;
@@ -3141,10 +3116,10 @@ public final class GlModel extends Model {
 						} else if (local484 > 127) {
 							local484 = 127;
 						}
-						this.aShortArray75[local45] = (short) (local932 << 10 | local264 << 7 | local484);
+						this.triangleColors[local45] = (short) (local932 << 10 | local264 << 7 | local484);
 					}
 					if (local141.length > 0) {
-						this.aClass127_1.valid = false;
+						this.colorBuffer.valid = false;
 					}
 				}
 			}
@@ -3228,19 +3203,19 @@ public final class GlModel extends Model {
 					this.vertexZ[local3] += anInt5299;
 				}
 			} else if (arg0 == 5) {
-				for (local3 = 0; local3 < this.anInt5297; local3++) {
-					local11 = (this.aByteArray71[local3] & 0xFF) + arg1 * 8;
+				for (local3 = 0; local3 < this.triangleCount; local3++) {
+					local11 = (this.triangleAlpha[local3] & 0xFF) + arg1 * 8;
 					if (local11 < 0) {
 						local11 = 0;
 					} else if (local11 > 255) {
 						local11 = 255;
 					}
-					this.aByteArray71[local3] = (byte) local11;
+					this.triangleAlpha[local3] = (byte) local11;
 				}
-				this.aClass127_1.valid = false;
+				this.colorBuffer.valid = false;
 			} else if (arg0 == 7) {
-				for (local3 = 0; local3 < this.anInt5297; local3++) {
-					local11 = this.aShortArray75[local3] & 0xFFFF;
+				for (local3 = 0; local3 < this.triangleCount; local3++) {
+					local11 = this.triangleColors[local3] & 0xFFFF;
 					local146 = local11 >> 10 & 0x3F;
 					local164 = local11 >> 7 & 0x7;
 					@Pc(496) int local496 = local11 & 0x7F;
@@ -3257,9 +3232,9 @@ public final class GlModel extends Model {
 					} else if (local496 > 127) {
 						local496 = 127;
 					}
-					this.aShortArray75[local3] = (short) (local502 << 10 | local164 << 7 | local496);
+					this.triangleColors[local3] = (short) (local502 << 10 | local164 << 7 | local496);
 				}
-				this.aClass127_1.valid = false;
+				this.colorBuffer.valid = false;
 			}
 		}
 	}
@@ -3267,23 +3242,23 @@ public final class GlModel extends Model {
 	@OriginalMember(owner = "client!td", name = "h", descriptor = "()I")
 	@Override
 	public final int getMinX() {
-		if (!this.vertexBuffer.valid) {
-			this.method4108();
+		if (!this.bounds.valid) {
+			this.calculateBounds();
 		}
-		return this.vertexBuffer.aShort6;
+		return this.bounds.minX;
 	}
 
 	@OriginalMember(owner = "client!td", name = "w", descriptor = "()V")
 	private void method4121() {
 		@Pc(1) GL2 local1 = GlRenderer.gl;
-		if (this.anInt5297 == 0) {
+		if (this.triangleCount == 0) {
 			return;
 		}
 		if (this.aByte18 != 0) {
-			this.method4113(true, !this.bounds.valid && (this.aByte18 & 0x1) != 0, !this.aClass127_1.valid && (this.aByte18 & 0x2) != 0, this.aClass127_2 != null && !this.aClass127_2.valid && (this.aByte18 & 0x4) != 0, false);
+			this.method4113(true, !this.vertexBuffer.valid && (this.aByte18 & 0x1) != 0, !this.colorBuffer.valid && (this.aByte18 & 0x2) != 0, this.normalsBuffer != null && !this.normalsBuffer.valid && (this.aByte18 & 0x4) != 0, false);
 		}
-		this.method4113(false, !this.bounds.valid, !this.aClass127_1.valid, this.aClass127_2 != null && !this.aClass127_2.valid, !this.aClass127_3.valid);
-		if (!this.aClass127_5.valid) {
+		this.method4113(false, !this.vertexBuffer.valid, !this.colorBuffer.valid, this.normalsBuffer != null && !this.normalsBuffer.valid, !this.texCoordBuffer.valid);
+		if (!this.indexBuffer.valid) {
 			this.method4103();
 		}
 		if (this.aByte19 != 0) {
@@ -3295,8 +3270,8 @@ public final class GlModel extends Model {
 				this.anIntArray462 = null;
 			}
 			if ((this.aByte19 & 0x2) != 0) {
-				this.aShortArray75 = null;
-				this.aByteArray71 = null;
+				this.triangleColors = null;
+				this.triangleAlpha = null;
 			}
 			if ((this.aByte19 & 0x4) != 0) {
 				this.aShortArray76 = null;
@@ -3305,8 +3280,8 @@ public final class GlModel extends Model {
 				this.aShortArray86 = null;
 			}
 			if ((this.aByte19 & 0x8) != 0) {
-				this.aFloatArray25 = null;
-				this.aFloatArray26 = null;
+				this.vertexS = null;
+				this.vertexT = null;
 			}
 			if ((this.aByte19 & 0x10) != 0) {
 				this.aShortArray77 = null;
@@ -3316,75 +3291,75 @@ public final class GlModel extends Model {
 			this.aByte19 = 0;
 		}
 		@Pc(172) GlVertexBufferObject local172 = null;
-		if (this.bounds.aClass155_4 != null) {
-			this.bounds.aClass155_4.method4516();
-			local172 = this.bounds.aClass155_4;
-			local1.glVertexPointer(3, GL2.GL_FLOAT, this.bounds.anInt4782, this.bounds.anInt4777);
+		if (this.vertexBuffer.vbo != null) {
+			this.vertexBuffer.vbo.bindArray();
+			local172 = this.vertexBuffer.vbo;
+			local1.glVertexPointer(3, GL2.GL_FLOAT, this.vertexBuffer.stride, this.vertexBuffer.pointer);
 		}
-		if (this.aClass127_1.aClass155_4 != null) {
-			if (local172 != this.aClass127_1.aClass155_4) {
-				this.aClass127_1.aClass155_4.method4516();
-				local172 = this.aClass127_1.aClass155_4;
+		if (this.colorBuffer.vbo != null) {
+			if (local172 != this.colorBuffer.vbo) {
+				this.colorBuffer.vbo.bindArray();
+				local172 = this.colorBuffer.vbo;
 			}
-			local1.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, this.aClass127_1.anInt4782, this.aClass127_1.anInt4777);
+			local1.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, this.colorBuffer.stride, this.colorBuffer.pointer);
 		}
-		if (Preferences.highDetailLighting && this.aClass127_2.aClass155_4 != null) {
-			if (local172 != this.aClass127_2.aClass155_4) {
-				this.aClass127_2.aClass155_4.method4516();
-				local172 = this.aClass127_2.aClass155_4;
+		if (Preferences.highDetailLighting && this.normalsBuffer.vbo != null) {
+			if (local172 != this.normalsBuffer.vbo) {
+				this.normalsBuffer.vbo.bindArray();
+				local172 = this.normalsBuffer.vbo;
 			}
-			local1.glNormalPointer(GL2.GL_FLOAT, this.aClass127_2.anInt4782, this.aClass127_2.anInt4777);
+			local1.glNormalPointer(GL2.GL_FLOAT, this.normalsBuffer.stride, this.normalsBuffer.pointer);
 		}
-		if (this.aClass127_3.aClass155_4 != null) {
-			if (local172 != this.aClass127_3.aClass155_4) {
-				this.aClass127_3.aClass155_4.method4516();
-				local172 = this.aClass127_3.aClass155_4;
+		if (this.texCoordBuffer.vbo != null) {
+			if (local172 != this.texCoordBuffer.vbo) {
+				this.texCoordBuffer.vbo.bindArray();
+				local172 = this.texCoordBuffer.vbo;
 			}
-			local1.glTexCoordPointer(2, GL2.GL_FLOAT, this.aClass127_3.anInt4782, this.aClass127_3.anInt4777);
+			local1.glTexCoordPointer(2, GL2.GL_FLOAT, this.texCoordBuffer.stride, this.texCoordBuffer.pointer);
 		}
-		if (this.aClass127_5.aClass155_4 != null) {
-			this.aClass127_5.aClass155_4.method4518();
+		if (this.indexBuffer.vbo != null) {
+			this.indexBuffer.vbo.bindElementArray();
 		}
-		if (this.bounds.aClass155_4 == null || this.aClass127_1.aClass155_4 == null || Preferences.highDetailLighting && this.aClass127_2.aClass155_4 == null || this.aClass127_3.aClass155_4 == null) {
+		if (this.vertexBuffer.vbo == null || this.colorBuffer.vbo == null || Preferences.highDetailLighting && this.normalsBuffer.vbo == null || this.texCoordBuffer.vbo == null) {
 			if (GlRenderer.arbVboSupported) {
 				local1.glBindBuffer(GL2.GL_ARRAY_BUFFER, 0);
 			}
-			if (this.bounds.aClass155_4 == null) {
-				this.bounds.aByteBuffer8.position(this.bounds.anInt4777);
-				local1.glVertexPointer(3, GL2.GL_FLOAT, this.bounds.anInt4782, this.bounds.aByteBuffer8);
+			if (this.vertexBuffer.vbo == null) {
+				this.vertexBuffer.buffer.position(this.vertexBuffer.pointer);
+				local1.glVertexPointer(3, GL2.GL_FLOAT, this.vertexBuffer.stride, this.vertexBuffer.buffer);
 			}
-			if (this.aClass127_1.aClass155_4 == null) {
-				this.aClass127_1.aByteBuffer8.position(this.aClass127_1.anInt4777);
-				local1.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, this.aClass127_1.anInt4782, this.aClass127_1.aByteBuffer8);
+			if (this.colorBuffer.vbo == null) {
+				this.colorBuffer.buffer.position(this.colorBuffer.pointer);
+				local1.glColorPointer(4, GL2.GL_UNSIGNED_BYTE, this.colorBuffer.stride, this.colorBuffer.buffer);
 			}
-			if (Preferences.highDetailLighting && this.aClass127_2.aClass155_4 == null) {
-				this.aClass127_2.aByteBuffer8.position(this.aClass127_2.anInt4777);
-				local1.glNormalPointer(GL2.GL_FLOAT, this.aClass127_2.anInt4782, this.aClass127_2.aByteBuffer8);
+			if (Preferences.highDetailLighting && this.normalsBuffer.vbo == null) {
+				this.normalsBuffer.buffer.position(this.normalsBuffer.pointer);
+				local1.glNormalPointer(GL2.GL_FLOAT, this.normalsBuffer.stride, this.normalsBuffer.buffer);
 			}
-			if (this.aClass127_3.aClass155_4 == null) {
-				this.aClass127_3.aByteBuffer8.position(this.aClass127_3.anInt4777);
-				local1.glTexCoordPointer(2, GL2.GL_FLOAT, this.aClass127_3.anInt4782, this.aClass127_3.aByteBuffer8);
+			if (this.texCoordBuffer.vbo == null) {
+				this.texCoordBuffer.buffer.position(this.texCoordBuffer.pointer);
+				local1.glTexCoordPointer(2, GL2.GL_FLOAT, this.texCoordBuffer.stride, this.texCoordBuffer.buffer);
 			}
 		}
-		if (this.aClass127_5.aClass155_4 == null && GlRenderer.arbVboSupported) {
+		if (this.indexBuffer.vbo == null && GlRenderer.arbVboSupported) {
 			local1.glBindBuffer(GL2.GL_ELEMENT_ARRAY_BUFFER, 0);
 		}
 		@Pc(417) int local417 = this.anIntArray463.length - 1;
 		for (@Pc(419) int local419 = 0; local419 < local417; local419++) {
 			@Pc(427) int local427 = this.anIntArray463[local419];
 			@Pc(434) int local434 = this.anIntArray463[local419 + 1];
-			@Pc(439) short local439 = this.aShortArray80[local427];
+			@Pc(439) short local439 = this.triangleTextures[local427];
 			if (local439 == -1) {
 				GlRenderer.setTextureId(-1);
 				MaterialManager.setMaterial(0, 0);
 			} else {
 				Rasteriser.textureProvider.method3227(local439 & 0xFFFF);
 			}
-			if (this.aClass127_5.aClass155_4 == null) {
-				this.aClass127_5.aByteBuffer8.position(local427 * 12);
-				local1.glDrawElements(GL2.GL_TRIANGLES, (local434 - local427) * 3, GL2.GL_UNSIGNED_INT, this.aClass127_5.aByteBuffer8);
+			if (this.indexBuffer.vbo == null) {
+				this.indexBuffer.buffer.position(local427 * 12);
+				local1.glDrawElements(GL2.GL_TRIANGLES, (local434 - local427) * 3, GL2.GL_UNSIGNED_INT, this.indexBuffer.buffer);
 			} else {
-				local1.glDrawElements(GL2.GL_TRIANGLES, (local434 - local427) * 3, GL2.GL_UNSIGNED_INT, local427 * 12);
+				local1.glDrawElements(GL2.GL_TRIANGLES, (local434 - local427) * 3, GL2.GL_UNSIGNED_INT, local427 * 12L);
 			}
 		}
 	}
@@ -3397,8 +3372,8 @@ public final class GlModel extends Model {
 			this.vertexY[local1] = this.vertexY[local1] + 7 >> 4;
 			this.vertexZ[local1] = this.vertexZ[local1] + 7 >> 4;
 		}
-		this.vertexBuffer.valid = false;
 		this.bounds.valid = false;
+		this.vertexBuffer.valid = false;
 	}
 
 	@OriginalMember(owner = "client!td", name = "x", descriptor = "()V")
@@ -3412,17 +3387,17 @@ public final class GlModel extends Model {
 				this.aShortArray85[local1] = (short) -this.aShortArray85[local1];
 			}
 		}
-		for (local1 = 0; local1 < this.anInt5297; local1++) {
+		for (local1 = 0; local1 < this.triangleCount; local1++) {
 			@Pc(48) short local48 = this.aShortArray77[local1];
 			this.aShortArray77[local1] = this.aShortArray83[local1];
 			this.aShortArray83[local1] = local48;
 		}
-		this.vertexBuffer.valid = false;
 		this.bounds.valid = false;
-		if (this.aClass127_2 != null) {
-			this.aClass127_2.valid = false;
+		this.vertexBuffer.valid = false;
+		if (this.normalsBuffer != null) {
+			this.normalsBuffer.valid = false;
 		}
-		this.aClass127_5.valid = false;
+		this.indexBuffer.valid = false;
 	}
 
 	@OriginalMember(owner = "client!td", name = "d", descriptor = "(I)V")
@@ -3435,8 +3410,8 @@ public final class GlModel extends Model {
 			this.vertexZ[local9] = this.vertexY[local9] * local3 + this.vertexZ[local9] * local7 >> 16;
 			this.vertexY[local9] = local29;
 		}
-		this.vertexBuffer.valid = false;
 		this.bounds.valid = false;
+		this.vertexBuffer.valid = false;
 	}
 
 	@OriginalMember(owner = "client!td", name = "g", descriptor = "(I)V")
@@ -3459,10 +3434,10 @@ public final class GlModel extends Model {
 			this.aShortArray85[local16] = (short) (this.aShortArray85[local16] * local14 - this.aShortArray76[local16] * local10 >> 16);
 			this.aShortArray76[local16] = (short) local36;
 		}
-		this.vertexBuffer.valid = false;
 		this.bounds.valid = false;
-		if (this.aClass127_2 != null) {
-			this.aClass127_2.valid = false;
+		this.vertexBuffer.valid = false;
+		if (this.normalsBuffer != null) {
+			this.normalsBuffer.valid = false;
 		}
 	}
 
@@ -3471,26 +3446,26 @@ public final class GlModel extends Model {
 		if (this.anInt5296 == 0) {
 			return null;
 		}
-		if (!this.vertexBuffer.valid) {
-			this.method4108();
+		if (!this.bounds.valid) {
+			this.calculateBounds();
 		}
 		@Pc(26) int local26;
 		@Pc(40) int local40;
 		if (FogManager.lightX > 0) {
-			local26 = this.vertexBuffer.aShort6 - (this.vertexBuffer.aShort3 * FogManager.lightX >> 8) >> 3;
-			local40 = this.vertexBuffer.aShort5 - (this.vertexBuffer.aShort2 * FogManager.lightX >> 8) >> 3;
+			local26 = this.bounds.minX - (this.bounds.maxY * FogManager.lightX >> 8) >> 3;
+			local40 = this.bounds.maxX - (this.bounds.minY * FogManager.lightX >> 8) >> 3;
 		} else {
-			local26 = this.vertexBuffer.aShort6 - (this.vertexBuffer.aShort2 * FogManager.lightX >> 8) >> 3;
-			local40 = this.vertexBuffer.aShort5 - (this.vertexBuffer.aShort3 * FogManager.lightX >> 8) >> 3;
+			local26 = this.bounds.minX - (this.bounds.minY * FogManager.lightX >> 8) >> 3;
+			local40 = this.bounds.maxX - (this.bounds.maxY * FogManager.lightX >> 8) >> 3;
 		}
 		@Pc(85) int local85;
 		@Pc(99) int local99;
 		if (FogManager.lightZ > 0) {
-			local85 = this.vertexBuffer.aShort8 - (this.vertexBuffer.aShort3 * FogManager.lightZ >> 8) >> 3;
-			local99 = this.vertexBuffer.aShort7 - (this.vertexBuffer.aShort2 * FogManager.lightZ >> 8) >> 3;
+			local85 = this.bounds.minZ - (this.bounds.maxY * FogManager.lightZ >> 8) >> 3;
+			local99 = this.bounds.maxZ - (this.bounds.minY * FogManager.lightZ >> 8) >> 3;
 		} else {
-			local85 = this.vertexBuffer.aShort8 - (this.vertexBuffer.aShort2 * FogManager.lightZ >> 8) >> 3;
-			local99 = this.vertexBuffer.aShort7 - (this.vertexBuffer.aShort3 * FogManager.lightZ >> 8) >> 3;
+			local85 = this.bounds.minZ - (this.bounds.minY * FogManager.lightZ >> 8) >> 3;
+			local99 = this.bounds.maxZ - (this.bounds.maxY * FogManager.lightZ >> 8) >> 3;
 		}
 		@Pc(134) int local134 = local40 + 1 - local26;
 		@Pc(140) int local140 = local99 + 1 - local85;
@@ -3527,8 +3502,8 @@ public final class GlModel extends Model {
 				anIntArray467[local258] = local234;
 			}
 		}
-		for (local194 = 0; local194 < this.anInt5297; local194++) {
-			if (this.aByteArray71[local194] <= 128) {
+		for (local194 = 0; local194 < this.triangleCount; local194++) {
+			if (this.triangleAlpha[local194] <= 128) {
 				@Pc(292) short local292 = this.aShortArray77[local194];
 				@Pc(297) short local297 = this.aShortArray82[local194];
 				@Pc(302) short local302 = this.aShortArray83[local194];
@@ -3554,7 +3529,7 @@ public final class GlModel extends Model {
 			this.vertexZ[local1] = this.vertexX[local1];
 			this.vertexX[local1] = -local10;
 		}
-		this.vertexBuffer.valid = false;
 		this.bounds.valid = false;
+		this.vertexBuffer.valid = false;
 	}
 }
