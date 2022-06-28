@@ -765,9 +765,9 @@ public class SceneGraph {
 					}
 				}
 			} else {
-				local168 = (int) FogManager.aFloatArray18[0];
-				local173 = (int) FogManager.aFloatArray18[1];
-				local178 = (int) FogManager.aFloatArray18[2];
+				local168 = (int) FogManager.light0Position[0];
+				local173 = (int) FogManager.light0Position[1];
+				local178 = (int) FogManager.light0Position[2];
 				overlay = (int) Math.sqrt(local173 * local173 + local168 * local168 + local178 * local178);
 				local200 = overlay * 1024 >> 8;
 				for (local202 = 1; local202 < 103; local202++) {
@@ -1600,7 +1600,7 @@ public class SceneGraph {
 													if (var10 != Static152.anInt3604) {
 														Static152.anInt3604 = var10;
 														WaterMaterialRenderer.method619(var10);
-														FogManager.method3066(WaterMaterialRenderer.method2422());
+														FogManager.setFogColor(WaterMaterialRenderer.method2422());
 													}
 													local65 = var9 >>> 24 << 3;
 													if (local65 != Static247.anInt730) {
@@ -2860,7 +2860,7 @@ public class SceneGraph {
 			if (GlRenderer.enabled) {
 				MaterialManager.renderingUnderwater = false;
 				MaterialManager.setMaterial(0, 0);
-				FogManager.method3066(null);
+				FogManager.setFogColor(null);
 				LightingManager.method2390();
 			}
 			setUnderwater(false);
@@ -2943,7 +2943,7 @@ public class SceneGraph {
 					if (local285.underwaterColor != Static152.anInt3604) {
 						Static152.anInt3604 = local285.underwaterColor;
 						WaterMaterialRenderer.method619(local285.underwaterColor);
-						FogManager.method3066(WaterMaterialRenderer.method2422());
+						FogManager.setFogColor(WaterMaterialRenderer.method2422());
 					}
 					local285.method1944(tiles, local294, false);
 				}

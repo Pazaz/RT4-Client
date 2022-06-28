@@ -10,10 +10,6 @@ public final class Static221 {
 	public static final int[] anIntArray83 = new int[256];
 	@OriginalMember(owner = "client!s", name = "a", descriptor = "[I")
 	public static int[] tt;
-	@OriginalMember(owner = "client!nd", name = "y", descriptor = "Lclient!mm;")
-	public static SoftwareSprite aClass3_Sub2_Sub1_Sub1_3;
-	@OriginalMember(owner = "client!hh", name = "r", descriptor = "[I")
-	public static int[] anIntArray235;
 
 	@OriginalMember(owner = "client!s", name = "b", descriptor = "(III)V")
 	public static void method3392(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
@@ -35,7 +31,7 @@ public final class Static221 {
 				@Pc(65) int local65 = SoftwareRaster.pixels[local24++ + arg0];
 				@Pc(70) int local70 = Static145.anIntArray188[local20++];
 				if (local70 == 0) {
-					aClass3_Sub2_Sub1_Sub1_3.pixels[local26++] = local65;
+					Static145.aClass3_Sub2_Sub1_Sub1_3.pixels[local26++] = local65;
 				} else {
 					@Pc(76) int local76 = local70 + 18;
 					if (local76 > 255) {
@@ -45,19 +41,19 @@ public final class Static221 {
 					if (local89 > 255) {
 						local89 = 255;
 					}
-					local70 = anIntArray235[local70];
-					aClass3_Sub2_Sub1_Sub1_3.pixels[local26++] = (local89 * (local65 & 0xFF00FF) + (local70 & 0xFF00FF) * local76 & 0xFF00FF00) + ((local70 & 0xFF00) * local76 + ((local65 & 0xFF00) * local89) & 0xFF0000) >> 8;
+					local70 = Static145.anIntArray235[local70];
+					Static145.aClass3_Sub2_Sub1_Sub1_3.pixels[local26++] = (local89 * (local65 & 0xFF00FF) + (local70 & 0xFF00FF) * local76 & 0xFF00FF00) + ((local70 & 0xFF00) * local76 + ((local65 & 0xFF00) * local89) & 0xFF0000) >> 8;
 				}
 			}
 			for (local55 = 0; local55 < local43; local55++) {
-				aClass3_Sub2_Sub1_Sub1_3.pixels[local26++] = SoftwareRaster.pixels[arg0 + local24++];
+				Static145.aClass3_Sub2_Sub1_Sub1_3.pixels[local26++] = SoftwareRaster.pixels[arg0 + local24++];
 			}
 			local24 += SoftwareRaster.width - 128;
 		}
 		if (GlRenderer.enabled) {
-			GlRaster.method1178(aClass3_Sub2_Sub1_Sub1_3.pixels, arg0, arg1, aClass3_Sub2_Sub1_Sub1_3.width, aClass3_Sub2_Sub1_Sub1_3.height);
+			GlRaster.method1178(Static145.aClass3_Sub2_Sub1_Sub1_3.pixels, arg0, arg1, Static145.aClass3_Sub2_Sub1_Sub1_3.width, Static145.aClass3_Sub2_Sub1_Sub1_3.height);
 		} else {
-			aClass3_Sub2_Sub1_Sub1_3.method1415(arg0, arg1);
+			Static145.aClass3_Sub2_Sub1_Sub1_3.method1415(arg0, arg1);
 		}
 	}
 

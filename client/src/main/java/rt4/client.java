@@ -625,7 +625,7 @@ public final class client extends GameShell {
 			PlayerSkillXpTable.experience[local3506] = 0;
 		}
 		if (GlRenderer.enabled) {
-			Static103.setInstantFade();
+			FogManager.setInstantFade();
 		}
 		Protocol.aBoolean228 = true;
 		Protocol.verifyId = 0;
@@ -929,8 +929,8 @@ public final class client extends GameShell {
 
 		if (game == 1) {
 			Cheat.shiftClick = true;
-			FogManager.anInt3923 = 16777215;
-			FogManager.anInt3922 = 0;
+			FogManager.defaultLightColorRgb = 16777215;
+			FogManager.defaulFogColorRgb = 0;
 			PlayerAppearance.aShortArrayArray2 = PlayerAppearance.aShortArrayArray4;
 			PlayerAppearance.aShortArrayArray7 = PlayerAppearance.aShortArrayArray1;
 			PlayerAppearance.aShortArray65 = PlayerAppearance.aShortArray1;

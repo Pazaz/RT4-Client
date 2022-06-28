@@ -12,9 +12,6 @@ public final class Static233 {
 	@OriginalMember(owner = "client!t", name = "A", descriptor = "I")
 	public static int anInt5225;
 
-	@OriginalMember(owner = "client!t", name = "G", descriptor = "[Lclient!ek;")
-	public static SoftwareIndexedSprite[] aClass36_Sub1Array1;
-
 	@OriginalMember(owner = "client!t", name = "y", descriptor = "I")
 	public static int loadingScreenState = 0;
 

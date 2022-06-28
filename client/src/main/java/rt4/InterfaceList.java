@@ -1061,7 +1061,7 @@ public class InterfaceList {
 		} else {
 			Camera.updateLoginScreenCamera();
 		}
-		Static103.setInstantFade();
+		FogManager.setInstantFade();
 		LoginManager.setupLoadingScreenRegion();
 		client.setGameState(28);
 	}

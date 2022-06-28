@@ -776,7 +776,7 @@ public class LoginManager {
 			mapFlagX -= local86;
 		}
 		if (GlRenderer.enabled && arg4 && (Math.abs(local86) > 104 || Math.abs(local81) > 104)) {
-			Static103.setInstantFade();
+			FogManager.setInstantFade();
 		}
 		LightingManager.anInt2875 = -1;
 		aClass69_64.clear();

@@ -13,8 +13,6 @@ public final class Static267 {
 
 	@OriginalMember(owner = "client!vl", name = "l", descriptor = "I")
 	public static int anInt5776 = 0;
-	@OriginalMember(owner = "client!wb", name = "b", descriptor = "[I")
-	public static int[] anIntArray562;
 
 	@OriginalMember(owner = "client!vl", name = "a", descriptor = "(I)Z")
 	public static boolean isShowingVideoAd() {
@@ -37,10 +35,10 @@ public final class Static267 {
 		}
 		Static123.anInt3058 += arg0 * 128;
 		@Pc(40) int local40;
-		if (anIntArray562.length < Static123.anInt3058) {
-			Static123.anInt3058 -= anIntArray562.length;
+		if (Static145.anIntArray562.length < Static123.anInt3058) {
+			Static123.anInt3058 -= Static145.anIntArray562.length;
 			local40 = (int) (Math.random() * 12.0D);
-			Static69.method1545(Static233.aClass36_Sub1Array1[local40]);
+			Static145.method1545(Static145.aClass36_Sub1Array1[local40]);
 		}
 		local40 = 0;
 		@Pc(54) int local54 = (256 - arg0) * 128;
@@ -48,7 +46,7 @@ public final class Static267 {
 		@Pc(60) int local60;
 		@Pc(89) int local89;
 		for (local60 = 0; local60 < local54; local60++) {
-			local89 = Static145.anIntArray188[local40 + local58] - arg0 * anIntArray562[anIntArray562.length - 1 & Static123.anInt3058 + local40] / 6;
+			local89 = Static145.anIntArray188[local40 + local58] - arg0 * Static145.anIntArray562[Static145.anIntArray562.length - 1 & Static123.anInt3058 + local40] / 6;
 			if (local89 < 0) {
 				local89 = 0;
 			}
@@ -97,7 +95,7 @@ public final class Static267 {
 					local117 -= Static145.anIntArray188[local290 + local125 - local60 - 1];
 				}
 				if (local290 >= 0) {
-					Static103.anIntArray254[local290 + local125] = local117 / (local60 * 2 + 1);
+					Static145.anIntArray254[local290 + local125] = local117 / (local60 * 2 + 1);
 				}
 			}
 		}
@@ -106,10 +104,10 @@ public final class Static267 {
 			for (local125 = -local60; local125 < 256; local125++) {
 				local290 = local125 * 128;
 				if (local125 + local60 < 256) {
-					local117 += Static103.anIntArray254[local60 * 128 + local89 + local290];
+					local117 += Static145.anIntArray254[local60 * 128 + local89 + local290];
 				}
 				if (local125 - local60 - 1 >= 0) {
-					local117 -= Static103.anIntArray254[local89 + local290 - (local60 + 1) * 128];
+					local117 -= Static145.anIntArray254[local89 + local290 - (local60 + 1) * 128];
 				}
 				if (local125 >= 0) {
 					Static145.anIntArray188[local290 + local89] = local117 / (local60 * 2 + 1);

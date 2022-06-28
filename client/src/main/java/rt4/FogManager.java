@@ -7,38 +7,87 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class FogManager {
 
+	@OriginalMember(owner = "client!ph", name = "b", descriptor = "[[Lclient!li;")
+	public static final Environment[][] chunksAtmosphere = new Environment[13][13];
+
 	@OriginalMember(owner = "client!mk", name = "c", descriptor = "I")
-	public static int anInt3920;
+	public static int lightX;
 
 	@OriginalMember(owner = "client!mk", name = "d", descriptor = "I")
-	public static int anInt3921;
+	public static int lightZ;
+	@OriginalMember(owner = "client!ig", name = "d", descriptor = "I")
+	public static int anInt2883;
+	@OriginalMember(owner = "client!jm", name = "s", descriptor = "F")
+	public static float aFloat13;
+	@OriginalMember(owner = "client!ui", name = "mb", descriptor = "F")
+	public static float aFloat37;
+	@OriginalMember(owner = "client!ej", name = "bb", descriptor = "F")
+	public static float aFloat6;
+	@OriginalMember(owner = "client!vh", name = "e", descriptor = "I")
+	public static int anInt4623;
+	@OriginalMember(owner = "client!ni", name = "h", descriptor = "I")
+	public static int anInt4153;
+	@OriginalMember(owner = "client!be", name = "Vb", descriptor = "F")
+	public static float aFloat4;
+	@OriginalMember(owner = "client!ab", name = "b", descriptor = "I")
+	public static int anInt5868 = 0;
+	@OriginalMember(owner = "client!sf", name = "c", descriptor = "I")
+	public static int anInt5080;
+	@OriginalMember(owner = "client!kd", name = "ub", descriptor = "I")
+	public static int anInt3255;
+	@OriginalMember(owner = "client!aj", name = "X", descriptor = "F")
+	public static float aFloat1;
+	@OriginalMember(owner = "client!p", name = "g", descriptor = "F")
+	public static float aFloat23;
+	@OriginalMember(owner = "client!nc", name = "a", descriptor = "I")
+	public static int anInt4044;
+	@OriginalMember(owner = "client!bm", name = "a", descriptor = "F")
+	public static float aFloat5;
+	@OriginalMember(owner = "client!ve", name = "t", descriptor = "I")
+	public static int anInt5731;
+	@OriginalMember(owner = "client!md", name = "S", descriptor = "I")
+	public static int anInt3709;
+	@OriginalMember(owner = "client!ui", name = "T", descriptor = "F")
+	public static float aFloat36;
+	@OriginalMember(owner = "client!en", name = "z", descriptor = "F")
+	public static float aFloat7;
+	@OriginalMember(owner = "client!ge", name = "q", descriptor = "I")
+	public static int anInt2161;
+	@OriginalMember(owner = "client!sa", name = "W", descriptor = "Z")
+	public static boolean instantScreenFade = true;
+	@OriginalMember(owner = "client!li", name = "t", descriptor = "I")
+	public static int currentLightZ;
+	@OriginalMember(owner = "client!mi", name = "Z", descriptor = "I")
+	public static int currentLightY;
+	@OriginalMember(owner = "client!gl", name = "f", descriptor = "I")
+	public static int currentLightX;
 
 	@OriginalMember(owner = "client!mk", name = "i", descriptor = "F")
-	private static float aFloat21;
+	private static float lightModelAmbient;
 
 	@OriginalMember(owner = "client!mk", name = "a", descriptor = "[F")
-	public static final float[] aFloatArray18 = new float[4];
+	public static final float[] light0Position = new float[4];
 
 	@OriginalMember(owner = "client!mk", name = "b", descriptor = "I")
-	private static int anInt3919 = -1;
+	private static int lightColor = -1;
 
 	@OriginalMember(owner = "client!mk", name = "e", descriptor = "I")
-	public static int anInt3922 = 13156520;
+	public static int defaulFogColorRgb = 13156520;
 
 	@OriginalMember(owner = "client!mk", name = "f", descriptor = "F")
-	private static float aFloat19 = -1.0F;
+	private static float light0Diffuse = -1.0F;
 
 	@OriginalMember(owner = "client!mk", name = "g", descriptor = "F")
-	private static float aFloat20 = -1.0F;
+	private static float light1Diffuse = -1.0F;
 
 	@OriginalMember(owner = "client!mk", name = "h", descriptor = "[F")
 	public static final float[] fogColor = new float[4];
 
 	@OriginalMember(owner = "client!mk", name = "j", descriptor = "[F")
-	private static final float[] aFloatArray20 = new float[4];
+	private static final float[] light1Position = new float[4];
 
 	@OriginalMember(owner = "client!mk", name = "k", descriptor = "I")
-	public static int anInt3923 = 16777215;
+	public static int defaultLightColorRgb = 16777215;
 
 	@OriginalMember(owner = "client!mk", name = "l", descriptor = "I")
 	private static int fogOffset = -1;
@@ -47,40 +96,40 @@ public final class FogManager {
 	private static int fogColorRGB = -1;
 
 	@OriginalMember(owner = "client!mk", name = "a", descriptor = "()V")
-	public static void method3058() {
-		@Pc(1) GL2 local1 = GlRenderer.gl;
-		local1.glLightfv(GL2.GL_LIGHT0, GL2.GL_POSITION, aFloatArray18, 0);
-		local1.glLightfv(GL2.GL_LIGHT1, GL2.GL_POSITION, aFloatArray20, 0);
+	public static void applyLightPosition() {
+		@Pc(1) GL2 gl = GlRenderer.gl;
+		gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_POSITION, light0Position, 0);
+		gl.glLightfv(GL2.GL_LIGHT1, GL2.GL_POSITION, light1Position, 0);
 	}
 
 	@OriginalMember(owner = "client!mk", name = "b", descriptor = "()F")
-	public static float method3059() {
-		return aFloat19;
+	public static float getLight0Diffuse() {
+		return light0Diffuse;
 	}
 
 	@OriginalMember(owner = "client!mk", name = "a", descriptor = "(IFFF)V")
-	public static void method3060(@OriginalArg(0) int arg0, @OriginalArg(1) float arg1, @OriginalArg(2) float arg2, @OriginalArg(3) float arg3) {
-		if (anInt3919 == arg0 && aFloat21 == arg1 && aFloat19 == arg2 && aFloat20 == arg3) {
+	public static void setLightParams(@OriginalArg(0) int color, @OriginalArg(1) float ambientMod, @OriginalArg(2) float l0Diffuse, @OriginalArg(3) float l1Diffuse) {
+		if (lightColor == color && lightModelAmbient == ambientMod && light0Diffuse == l0Diffuse && light1Diffuse == l1Diffuse) {
 			return;
 		}
-		anInt3919 = arg0;
-		aFloat21 = arg1;
-		aFloat19 = arg2;
-		aFloat20 = arg3;
-		@Pc(25) GL2 local25 = GlRenderer.gl;
-		@Pc(34) float local34 = (float) (arg0 >> 16 & 0xFF) / 255.0F;
-		@Pc(43) float local43 = (float) (arg0 >> 8 & 0xFF) / 255.0F;
-		@Pc(50) float local50 = (float) (arg0 & 0xFF) / 255.0F;
-		@Pc(75) float[] local75 = new float[]{arg1 * local34, arg1 * local43, arg1 * local50, 1.0F};
-		local25.glLightModelfv(GL2.GL_LIGHT_MODEL_AMBIENT, local75, 0);
-		@Pc(105) float[] local105 = new float[]{arg2 * local34, arg2 * local43, arg2 * local50, 1.0F};
-		local25.glLightfv(GL2.GL_LIGHT0, GL2.GL_DIFFUSE, local105, 0);
-		@Pc(139) float[] local139 = new float[]{-arg3 * local34, -arg3 * local43, -arg3 * local50, 1.0F};
-		local25.glLightfv(GL2.GL_LIGHT1, GL2.GL_DIFFUSE, local139, 0);
+		lightColor = color;
+		lightModelAmbient = ambientMod;
+		light0Diffuse = l0Diffuse;
+		light1Diffuse = l1Diffuse;
+		@Pc(25) GL2 gl = GlRenderer.gl;
+		@Pc(34) float red = (float) (color >> 16 & 0xFF) / 255.0F;
+		@Pc(43) float green = (float) (color >> 8 & 0xFF) / 255.0F;
+		@Pc(50) float blue = (float) (color & 0xFF) / 255.0F;
+		@Pc(75) float[] lightModelAmbientParams = new float[]{ambientMod * red, ambientMod * green, ambientMod * blue, 1.0F};
+		gl.glLightModelfv(GL2.GL_LIGHT_MODEL_AMBIENT, lightModelAmbientParams, 0);
+		@Pc(105) float[] light0Params = new float[]{l0Diffuse * red, l0Diffuse * green, l0Diffuse * blue, 1.0F};
+		gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_DIFFUSE, light0Params, 0);
+		@Pc(139) float[] light1Params = new float[]{-l1Diffuse * red, -l1Diffuse * green, -l1Diffuse * blue, 1.0F};
+		gl.glLightfv(GL2.GL_LIGHT1, GL2.GL_DIFFUSE, light1Params, 0);
 	}
 
 	@OriginalMember(owner = "client!mk", name = "a", descriptor = "(II)V")
-	public static void method3062(@OriginalArg(0) int color, @OriginalArg(1) int offset) {
+	public static void setFogParams(@OriginalArg(0) int color, @OriginalArg(1) int offset) {
 		if (fogColorRGB == color && fogOffset == offset) {
 			return;
 		}
@@ -104,67 +153,134 @@ public final class FogManager {
 	}
 
 	@OriginalMember(owner = "client!mk", name = "a", descriptor = "(FFF)V")
-	public static void method3063(@OriginalArg(0) float arg0, @OriginalArg(1) float arg1, @OriginalArg(2) float arg2) {
-		if (aFloatArray18[0] == arg0 && aFloatArray18[1] == arg1 && aFloatArray18[2] == arg2) {
+	public static void setLightPosition(@OriginalArg(0) float x, @OriginalArg(1) float y, @OriginalArg(2) float z) {
+		if (light0Position[0] == x && light0Position[1] == y && light0Position[2] == z) {
 			return;
 		}
-		aFloatArray18[0] = arg0;
-		aFloatArray18[1] = arg1;
-		aFloatArray18[2] = arg2;
-		aFloatArray20[0] = -arg0;
-		aFloatArray20[1] = -arg1;
-		aFloatArray20[2] = -arg2;
-		anInt3920 = (int) (arg0 * 256.0F / arg1);
-		anInt3921 = (int) (arg2 * 256.0F / arg1);
+		light0Position[0] = x;
+		light0Position[1] = y;
+		light0Position[2] = z;
+		light1Position[0] = -x;
+		light1Position[1] = -y;
+		light1Position[2] = -z;
+		lightX = (int) (x * 256.0F / y);
+		lightZ = (int) (z * 256.0F / y);
 	}
 
 	@OriginalMember(owner = "client!mk", name = "d", descriptor = "()I")
-	public static int method3064() {
-		return anInt3919;
+	public static int getLightColor() {
+		return lightColor;
 	}
 
 	@OriginalMember(owner = "client!mk", name = "e", descriptor = "()V")
-	public static void method3065() {
-		@Pc(1) GL2 local1 = GlRenderer.gl;
-		local1.glColorMaterial(GL2.GL_FRONT, GL2.GL_AMBIENT_AND_DIFFUSE);
-		local1.glEnable(GL2.GL_COLOR_MATERIAL);
-		@Pc(27) float[] local27 = new float[]{0.0F, 0.0F, 0.0F, 1.0F};
-		local1.glLightfv(GL2.GL_LIGHT0, GL2.GL_AMBIENT, local27, 0);
-		local1.glEnable(GL2.GL_LIGHT0);
-		@Pc(55) float[] local55 = new float[]{0.0F, 0.0F, 0.0F, 1.0F};
-		local1.glLightfv(GL2.GL_LIGHT1, GL2.GL_AMBIENT, local55, 0);
-		local1.glEnable(GL2.GL_LIGHT1);
-		anInt3919 = -1;
+	public static void setup() {
+		@Pc(1) GL2 gl = GlRenderer.gl;
+		gl.glColorMaterial(GL2.GL_FRONT, GL2.GL_AMBIENT_AND_DIFFUSE);
+		gl.glEnable(GL2.GL_COLOR_MATERIAL);
+		@Pc(27) float[] light0Params = new float[]{0.0F, 0.0F, 0.0F, 1.0F};
+		gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_AMBIENT, light0Params, 0);
+		gl.glEnable(GL2.GL_LIGHT0);
+		@Pc(55) float[] light1Params = new float[]{0.0F, 0.0F, 0.0F, 1.0F};
+		gl.glLightfv(GL2.GL_LIGHT1, GL2.GL_AMBIENT, light1Params, 0);
+		gl.glEnable(GL2.GL_LIGHT1);
+		lightColor = -1;
 		fogColorRGB = -1;
-		method3067();
+		initDefaults();
 	}
 
 	@OriginalMember(owner = "client!mk", name = "a", descriptor = "([F)V")
-	public static void method3066(@OriginalArg(0) float[] arg0) {
-		if (arg0 == null) {
-			arg0 = fogColor;
+	public static void setFogColor(@OriginalArg(0) float[] params) {
+		if (params == null) {
+			params = fogColor;
 		}
-		@Pc(5) GL2 local5 = GlRenderer.gl;
-		local5.glFogfv(GL2.GL_FOG_COLOR, arg0, 0);
+		@Pc(5) GL2 gl = GlRenderer.gl;
+		gl.glFogfv(GL2.GL_FOG_COLOR, params, 0);
 	}
 
 	@OriginalMember(owner = "client!mk", name = "f", descriptor = "()V")
-	private static void method3067() {
-		method3060(anInt3923, 1.1523438F, 0.69921875F, 1.2F);
-		method3063(-50.0F, -60.0F, -50.0F);
-		method3062(anInt3922, 0);
+	private static void initDefaults() {
+		setLightParams(defaultLightColorRgb, 1.1523438F, 0.69921875F, 1.2F);
+		setLightPosition(-50.0F, -60.0F, -50.0F);
+		setFogParams(defaulFogColorRgb, 0);
 	}
 
 	@OriginalMember(owner = "client!mk", name = "g", descriptor = "()F")
-	public static float method3068() {
-		return aFloat21;
+	public static float getLightingModelAmbient() {
+		return lightModelAmbient;
 	}
 
 	@OriginalMember(owner = "client!si", name = "a", descriptor = "(IZ)V")
-	public static void method3935(@OriginalArg(0) int arg0) {
-		method3060(anInt3923, ((float) arg0 * 0.1F + 0.7F) * 1.1523438F, 0.69921875F, 0.69921875F);
-		method3063(-50.0F, -60.0F, -50.0F);
-		method3062(anInt3922, 0);
-		method3058();
+	public static void init(@OriginalArg(0) int arg0) {
+		setLightParams(defaultLightColorRgb, ((float) arg0 * 0.1F + 0.7F) * 1.1523438F, 0.69921875F, 0.69921875F);
+		setLightPosition(-50.0F, -60.0F, -50.0F);
+		setFogParams(defaulFogColorRgb, 0);
+		applyLightPosition();
+	}
+
+	@OriginalMember(owner = "client!i", name = "b", descriptor = "(IIIII)I")
+	public static int method2235(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+		if (instantScreenFade) {
+			arg0 = 1000000;
+			instantScreenFade = false;
+		}
+		@Pc(15) Environment local15 = chunksAtmosphere[arg3][arg1];
+		@Pc(25) float local25 = ((float) arg2 * 0.1F + 0.7F) * local15.lightModelAmbient;
+		@Pc(28) float local28 = local15.light0Diffuse;
+		@Pc(31) int local31 = local15.screenColorRgb;
+		@Pc(34) int local34 = local15.fogDepth;
+		@Pc(37) int local37 = local15.fogColorRgb;
+		if (!Preferences.fogEnabled) {
+			local34 = 0;
+		}
+		@Pc(44) float local44 = local15.light1Diffuse;
+		if (local31 != anInt2883 || aFloat13 != local25 || aFloat1 != local28 || local44 != aFloat4 || anInt4044 != local37 || anInt5080 != local34) {
+			aFloat13 = local25;
+			aFloat37 = aFloat36;
+			aFloat6 = aFloat7;
+			anInt2883 = local31;
+			anInt4623 = anInt3709;
+			anInt4153 = anInt2161;
+			aFloat4 = local44;
+			anInt5868 = 0;
+			anInt3255 = anInt5731;
+			anInt5080 = local34;
+			aFloat1 = local28;
+			anInt4044 = local37;
+			aFloat23 = aFloat5;
+		}
+		if (anInt5868 < 65536) {
+			anInt5868 += arg0 * 250;
+			if (anInt5868 >= 65536) {
+				anInt5868 = 65536;
+			}
+			@Pc(114) float local114 = (float) anInt5868 / 65536.0F;
+			@Pc(118) int local118 = anInt5868 >> 8;
+			@Pc(125) int local125 = 65536 - anInt5868 >> 8;
+			anInt3709 = (local118 * (anInt4044 & 0xFF00FF) + (anInt4623 & 0xFF00FF) * local125 & 0xFF00FF00) + (local125 * (anInt4623 & 0xFF00) + (anInt4044 & 0xFF00) * local118 & 0xFF0000) >> 8;
+			@Pc(162) float local162 = (float) (65536 - anInt5868) / 65536.0F;
+			aFloat7 = local162 * aFloat6 + local114 * aFloat13;
+			aFloat36 = aFloat37 * local162 + local114 * aFloat1;
+			aFloat5 = local114 * aFloat4 + local162 * aFloat23;
+			anInt5731 = ((anInt2883 & 0xFF00) * local118 + local125 * (anInt3255 & 0xFF00) & 0xFF0000) + ((anInt3255 & 0xFF00FF) * local125 + ((anInt2883 & 0xFF00FF) * local118) & 0xFF00FF00) >> 8;
+			anInt2161 = local118 * anInt5080 + local125 * anInt4153 >> 8;
+		}
+		setLightParams(anInt5731, aFloat7, aFloat36, aFloat5);
+		setFogParams(anInt3709, anInt2161);
+		setLightPosition((float) currentLightX, (float) currentLightY, (float) currentLightZ);
+		applyLightPosition();
+		return anInt3709;
+	}
+
+	@OriginalMember(owner = "client!gm", name = "f", descriptor = "(B)V")
+	public static void setInstantFade() {
+		instantScreenFade = true;
+	}
+
+	@OriginalMember(owner = "client!fm", name = "a", descriptor = "(ZII)V")
+	public static void setLightPosition(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
+		currentLightX = chunksAtmosphere[arg1][arg0].lightX;
+		currentLightY = chunksAtmosphere[arg1][arg0].lightY;
+		currentLightZ = chunksAtmosphere[arg1][arg0].lightZ;
+		setLightPosition((float) currentLightX, (float) currentLightY, (float) currentLightZ);
 	}
 }

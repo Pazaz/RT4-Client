@@ -758,7 +758,7 @@ public final class Static87 {
 													GlRenderer.restoreLighting();
 													GlRenderer.setDepthTestEnabled(true);
 													GlRenderer.setFogEnabled(false);
-													FogManager.method3935(Preferences.brightness);
+													FogManager.init(Preferences.brightness);
 													if (ScriptRunner.aBoolean299) {
 														GlRaster.method1177();
 														GlRenderer.clearDepthBuffer();
@@ -1101,7 +1101,7 @@ public final class Static87 {
 							local243 = local117 + (arg4 >> 3);
 							local188 = (arg3 >> 3) + local515;
 							if (local243 >= 0 && local243 < 13 && local188 >= 0 && local188 < 13) {
-								Static73.aClass92ArrayArray1[local243][local188] = local490;
+								FogManager.chunksAtmosphere[local243][local188] = local490;
 							}
 						}
 					}

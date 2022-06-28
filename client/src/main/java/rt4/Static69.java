@@ -24,44 +24,4 @@ public final class Static69 {
 		}
 	}
 
-	@OriginalMember(owner = "client!fh", name = "a", descriptor = "(BLclient!ek;)V")
-	public static void method1545(@OriginalArg(1) SoftwareIndexedSprite arg0) {
-		@Pc(5) int local5;
-		for (local5 = 0; local5 < Static267.anIntArray562.length; local5++) {
-			Static267.anIntArray562[local5] = 0;
-		}
-		@Pc(36) int local36;
-		for (local5 = 0; local5 < 5000; local5++) {
-			local36 = (int) ((double) 256 * Math.random() * 128.0D);
-			Static267.anIntArray562[local36] = (int) (Math.random() * 284.0D);
-		}
-		@Pc(66) int local66;
-		@Pc(76) int local76;
-		for (local5 = 0; local5 < 20; local5++) {
-			for (local36 = 1; local36 < 255; local36++) {
-				for (local66 = 1; local66 < 127; local66++) {
-					local76 = local66 + (local36 << 7);
-					Static145.anIntArray516[local76] = (Static267.anIntArray562[local76 + 128] + Static267.anIntArray562[local76 - 1] + Static267.anIntArray562[local76 + 1] + Static267.anIntArray562[local76 + -128]) / 4;
-				}
-			}
-			@Pc(113) int[] local113 = Static267.anIntArray562;
-			Static267.anIntArray562 = Static145.anIntArray516;
-			Static145.anIntArray516 = local113;
-		}
-		if (arg0 == null) {
-			return;
-		}
-		local5 = 0;
-		for (local36 = 0; local36 < arg0.height; local36++) {
-			for (local66 = 0; local66 < arg0.width; local66++) {
-				if (arg0.aByteArray18[local5++] != 0) {
-					local76 = arg0.anInt4280 + local66 + 16;
-					@Pc(162) int local162 = arg0.anInt4273 + local36 + 16;
-					@Pc(169) int local169 = local76 + (local162 << 7);
-					Static267.anIntArray562[local169] = 0;
-				}
-			}
-		}
-	}
-
 }

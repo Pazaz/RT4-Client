@@ -46,6 +46,8 @@ public final class PlayerAppearance {
 	public static final int[] anIntArray515 = new int[14];
 	@OriginalMember(owner = "client!kf", name = "d", descriptor = "[Lclient!cl;")
 	public static final AnimFrameset[] aClass3_Sub2_Sub7Array7 = new AnimFrameset[14];
+	@OriginalMember(owner = "client!fm", name = "fb", descriptor = "[I")
+	public static final int[] anIntArray183 = new int[14];
 	@OriginalMember(owner = "client!cj", name = "e", descriptor = "[[S")
 	public static short[][] aShortArrayArray2;
 	@OriginalMember(owner = "client!nj", name = "m", descriptor = "[[S")
@@ -399,7 +401,7 @@ public final class PlayerAppearance {
 					}
 					if ((local858.tween || SeqType.applyTweening) && local367 != -1 && local367 < local858.frames.length) {
 						anIntArray515[local353] = local858.anIntArray474[local374];
-						Static73.anIntArray183[local353] = arg0[local353].anInt5404;
+						anIntArray183[local353] = arg0[local353].anInt5404;
 						local979 = local858.frames[local367];
 						aClass3_Sub2_Sub7Array7[local353] = SeqTypeList.getAnimFrameset(local979 >>> 16);
 						@Pc(991) int local991 = local979 & 0xFFFF;
@@ -410,7 +412,7 @@ public final class PlayerAppearance {
 						}
 					} else {
 						anIntArray515[local353] = 0;
-						Static73.anIntArray183[local353] = 0;
+						anIntArray183[local353] = 0;
 						aClass3_Sub2_Sub7Array7[local353] = null;
 						anIntArray187[local353] = -1;
 					}
@@ -487,7 +489,7 @@ public final class PlayerAppearance {
 		local598 = 1;
 		while (local481 < local346) {
 			if (aClass3_Sub2_Sub7Array8[local481] != null) {
-				local1284.method4565(aClass3_Sub2_Sub7Array8[local481], Static241.anIntArray520[local481], aClass3_Sub2_Sub7Array7[local481], anIntArray187[local481], Static73.anIntArray183[local481] - 1, anIntArray515[local481], local598, aClass144Array2[local481].aBoolean278, this.anIntArrayArray19[local481]);
+				local1284.method4565(aClass3_Sub2_Sub7Array8[local481], Static241.anIntArray520[local481], aClass3_Sub2_Sub7Array7[local481], anIntArray187[local481], anIntArray183[local481] - 1, anIntArray515[local481], local598, aClass144Array2[local481].aBoolean278, this.anIntArrayArray19[local481]);
 			}
 			local481++;
 			local598 <<= 0x1;
