@@ -122,7 +122,7 @@ public final class Inv extends Node {
 	}
 
 	@OriginalMember(owner = "client!hn", name = "f", descriptor = "(B)V")
-	public static void method2073() {
+	public static void clear() {
 		objectContainerCache = new HashTable(32);
 	}
 

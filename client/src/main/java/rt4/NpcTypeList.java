@@ -40,14 +40,14 @@ public class NpcTypeList {
 	}
 
 	@OriginalMember(owner = "client!t", name = "b", descriptor = "(B)V")
-	public static void method4001() {
+	public static void removeSoft() {
 		types.removeSoft();
 		models.removeSoft();
 		headModels.removeSoft();
 	}
 
 	@OriginalMember(owner = "client!qi", name = "e", descriptor = "(B)V")
-	public static void method3673() {
+	public static void clear() {
 		types.clear();
 		models.clear();
 		headModels.clear();

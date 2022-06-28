@@ -31,12 +31,12 @@ public class FluTypeList {
 	}
 
 	@OriginalMember(owner = "client!sd", name = "f", descriptor = "(B)V")
-	public static void method3885() {
+	public static void removeSoft() {
 		types.removeSoft();
 	}
 
 	@OriginalMember(owner = "client!ed", name = "c", descriptor = "(I)V")
-	public static void method1308() {
+	public static void clear() {
 		types.clear();
 	}
 

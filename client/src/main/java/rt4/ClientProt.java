@@ -7,12 +7,6 @@ import org.openrs2.deob.annotation.Pc;
 import java.io.IOException;
 
 public class ClientProt {
-	@OriginalMember(owner = "client!e", name = "Dc", descriptor = "Lclient!na;")
-	public static final JagString aClass100_363 = JagString.parse("_labels");
-	@OriginalMember(owner = "client!bh", name = "C", descriptor = "Lclient!na;")
-	public static final JagString COMPLETE_PERCENT = JagString.parse("<br>(X100(U(Y");
-	@OriginalMember(owner = "client!wc", name = "g", descriptor = "I")
-	public static int anInt5804 = 0;
 
 	@OriginalMember(owner = "client!vg", name = "a", descriptor = "(Lclient!na;IIBI)V")
 	public static void method4512(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {
@@ -168,7 +162,7 @@ public class ClientProt {
 	}
 
 	@OriginalMember(owner = "client!ej", name = "i", descriptor = "(I)V")
-	public static void method1373() {
+	public static void sendWindowDetails() {
 		Protocol.outboundBuffer.p1isaac(243);
 		Protocol.outboundBuffer.p1(DisplayMode.getWindowMode());
 		Protocol.outboundBuffer.p2(GameShell.canvasWidth);
@@ -199,88 +193,4 @@ public class ClientProt {
 		client.audioLoop();
 	}
 
-	@OriginalMember(owner = "client!ac", name = "b", descriptor = "(I)V")
-	public static void method28() {
-		InterfaceList.redraw(Cs1ScriptRunner.aClass13_14);
-		Cs1ScriptRunner.anInt4851++;
-		if (InterfaceList.aBoolean83 && InterfaceList.aBoolean174) {
-			@Pc(30) int local30 = Mouse.lastMouseX;
-			local30 -= Cs1ScriptRunner.anInt5388;
-			if (Cs1ScriptRunner.anInt2225 > local30) {
-				local30 = Cs1ScriptRunner.anInt2225;
-			}
-			@Pc(41) int local41 = Mouse.lastMouseY;
-			if (Cs1ScriptRunner.anInt2225 + Cs1ScriptRunner.aClass13_1.width < local30 - -Cs1ScriptRunner.aClass13_14.width) {
-				local30 = Cs1ScriptRunner.anInt2225 + Cs1ScriptRunner.aClass13_1.width - Cs1ScriptRunner.aClass13_14.width;
-			}
-			local41 -= Cs1ScriptRunner.anInt4035;
-			if (local41 < InterfaceList.anInt5103) {
-				local41 = InterfaceList.anInt5103;
-			}
-			if (InterfaceList.anInt5103 + Cs1ScriptRunner.aClass13_1.height < local41 - -Cs1ScriptRunner.aClass13_14.height) {
-				local41 = InterfaceList.anInt5103 + Cs1ScriptRunner.aClass13_1.height - Cs1ScriptRunner.aClass13_14.height;
-			}
-			@Pc(109) int local109 = local41 - InterfaceList.anInt660;
-			@Pc(114) int local114 = local30 - InterfaceList.anInt3075;
-			@Pc(122) int local122 = local30 + Cs1ScriptRunner.aClass13_1.scrollX - Cs1ScriptRunner.anInt2225;
-			@Pc(130) int local130 = Cs1ScriptRunner.aClass13_1.scrollY + local41 - InterfaceList.anInt5103;
-			@Pc(133) int local133 = Cs1ScriptRunner.aClass13_14.dragDeadzone;
-			if (Cs1ScriptRunner.anInt4851 > Cs1ScriptRunner.aClass13_14.dragDeadtime && (local133 < local114 || -local133 > local114 || local109 > local133 || local109 < -local133)) {
-				Cs1ScriptRunner.aBoolean172 = true;
-			}
-			@Pc(176) HookRequest local176;
-			if (Cs1ScriptRunner.aClass13_14.onDragStart != null && Cs1ScriptRunner.aBoolean172) {
-				local176 = new HookRequest();
-				local176.source = Cs1ScriptRunner.aClass13_14;
-				local176.arguments = Cs1ScriptRunner.aClass13_14.onDragStart;
-				local176.mouseX = local122;
-				local176.mouseY = local130;
-				ScriptRunner.run(local176);
-			}
-			if (Mouse.pressedButton == 0) {
-				if (Cs1ScriptRunner.aBoolean172) {
-					if (Cs1ScriptRunner.aClass13_14.onDragRelease != null) {
-						local176 = new HookRequest();
-						local176.mouseY = local130;
-						local176.target = InterfaceList.aClass13_12;
-						local176.mouseX = local122;
-						local176.arguments = Cs1ScriptRunner.aClass13_14.onDragRelease;
-						local176.source = Cs1ScriptRunner.aClass13_14;
-						ScriptRunner.run(local176);
-					}
-					if (InterfaceList.aClass13_12 != null && InterfaceList.method938(Cs1ScriptRunner.aClass13_14) != null) {
-						Protocol.outboundBuffer.p1isaac(79);
-						Protocol.outboundBuffer.mp4(Cs1ScriptRunner.aClass13_14.id);
-						Protocol.outboundBuffer.ip2(InterfaceList.aClass13_12.createdComponentId);
-						Protocol.outboundBuffer.p4(InterfaceList.aClass13_12.id);
-						Protocol.outboundBuffer.ip2(Cs1ScriptRunner.aClass13_14.createdComponentId);
-					}
-				} else if ((VarpDomain.anInt2952 == 1 || MiniMenu.method4640(MiniMenu.size - 1)) && MiniMenu.size > 2) {
-					ScriptRunner.method3901();
-				} else if (MiniMenu.size > 0) {
-					MiniMenu.method1372();
-				}
-				Cs1ScriptRunner.aClass13_14 = null;
-			}
-		} else if (Cs1ScriptRunner.anInt4851 > 1) {
-			Cs1ScriptRunner.aClass13_14 = null;
-		}
-	}
-
-	@OriginalMember(owner = "client!aa", name = "a", descriptor = "(IZI)V")
-	public static void method10(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		Protocol.outboundBuffer.p1isaac(132);
-		Protocol.outboundBuffer.imp4(arg1);
-		Protocol.outboundBuffer.ip2(arg0);
-	}
-
-	@OriginalMember(owner = "client!g", name = "b", descriptor = "(I)V")
-	public static void setDefaultChunksAtmosphere() {
-		@Pc(9) Environment local9 = new Environment();
-		for (@Pc(18) int local18 = 0; local18 < 13; local18++) {
-			for (@Pc(25) int local25 = 0; local25 < 13; local25++) {
-				FogManager.chunksAtmosphere[local18][local25] = local9;
-			}
-		}
-	}
 }

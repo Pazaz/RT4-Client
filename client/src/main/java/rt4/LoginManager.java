@@ -30,6 +30,10 @@ public class LoginManager {
 	public static final int[] anIntArray204 = new int[]{16, 32, 64, 128};
 	@OriginalMember(owner = "client!rj", name = "Z", descriptor = "[I")
 	public static final int[] anIntArray434 = new int[64];
+	@OriginalMember(owner = "client!e", name = "Dc", descriptor = "Lclient!na;")
+	public static final JagString aClass100_363 = JagString.parse("_labels");
+	@OriginalMember(owner = "client!bh", name = "C", descriptor = "Lclient!na;")
+	public static final JagString COMPLETE_PERCENT = JagString.parse("<br>(X100(U(Y");
 	@OriginalMember(owner = "client!rl", name = "X", descriptor = "I")
 	public static int anInt4937 = 0;
 	@OriginalMember(owner = "client!sd", name = "X", descriptor = "Z")
@@ -94,10 +98,6 @@ public class LoginManager {
 	public static int[] locationsMapFileIds;
 	@OriginalMember(owner = "client!bi", name = "Y", descriptor = "[[B")
 	public static byte[][] underWaterLocationsMapFilesBuffer;
-	@OriginalMember(owner = "client!gf", name = "R", descriptor = "I")
-	public static int centralZoneX;
-	@OriginalMember(owner = "client!eb", name = "u", descriptor = "I")
-	public static int centralZoneZ;
 	@OriginalMember(owner = "client!dc", name = "ab", descriptor = "I")
 	public static int centralPlane = 0;
 	@OriginalMember(owner = "client!mh", name = "hb", descriptor = "Lclient!bn;")
@@ -110,8 +110,6 @@ public class LoginManager {
 	public static int mapFlagZ = 0;
 	@OriginalMember(owner = "client!qf", name = "M", descriptor = "I")
 	public static int anInt1862 = 0;
-	@OriginalMember(owner = "client!sj", name = "u", descriptor = "Z")
-	public static boolean dynamicMapRegion = false;
 	@OriginalMember(owner = "client!nm", name = "U", descriptor = "I")
 	public static int mapFilesMissingCount = 0;
 	@OriginalMember(owner = "client!t", name = "y", descriptor = "I")
@@ -156,6 +154,8 @@ public class LoginManager {
 	public static int anInt3324;
 	@OriginalMember(owner = "client!uj", name = "E", descriptor = "I")
 	public static int anInt5556;
+	@OriginalMember(owner = "client!wc", name = "g", descriptor = "I")
+	public static int anInt5804 = 0;
 
 	@OriginalMember(owner = "client!dm", name = "d", descriptor = "(I)V")
 	public static void clear() {
@@ -425,8 +425,8 @@ public class LoginManager {
 				buffer.pdata(Protocol.outboundBuffer.data, Protocol.outboundBuffer.offset);
 				Protocol.socket.write(buffer.data, buffer.offset);
 				Protocol.outboundBuffer.setKey(key);
-				for (@Pc(583) int local583 = 0; local583 < 4; local583++) {
-					key[local583] += 50;
+				for (@Pc(583) int i = 0; i < 4; i++) {
+					key[i] += 50;
 				}
 				Protocol.inboundBuffer.setKey(key);
 				step = 4;
@@ -435,22 +435,22 @@ public class LoginManager {
 				if (Protocol.socket.available() < 1) {
 					return;
 				}
-				@Pc(623) int local623 = Protocol.socket.read();
-				if (local623 == 21) {
+				@Pc(623) int reply = Protocol.socket.read();
+				if (reply == 21) {
 					step = 7;
-				} else if (local623 == 29) {
+				} else if (reply == 29) {
 					step = 10;
-				} else if (local623 == 1) {
+				} else if (reply == 1) {
 					step = 5;
-					reply = local623;
+					LoginManager.reply = reply;
 					return;
-				} else if (local623 == 2) {
+				} else if (reply == 2) {
 					step = 8;
-				} else if (local623 == 15) {
+				} else if (reply == 15) {
 					step = 0;
-					reply = local623;
+					LoginManager.reply = reply;
 					return;
-				} else if (local623 == 23 && errors < 1) {
+				} else if (reply == 23 && errors < 1) {
 					step = 1;
 					errors++;
 					loops = 0;
@@ -458,7 +458,7 @@ public class LoginManager {
 					Protocol.socket = null;
 					return;
 				} else {
-					reply = local623;
+					LoginManager.reply = reply;
 					step = 0;
 					Protocol.socket.close();
 					Protocol.socket = null;
@@ -516,12 +516,12 @@ public class LoginManager {
 					if (playerUnderage && !parentalAdvertConsent || playerMember) {
 						try {
 							ZAP.browserControlCall(GameShell.signLink.applet);
-						} catch (@Pc(910) Throwable local910) {
+						} catch (@Pc(910) Throwable ignored) {
 						}
 					} else {
 						try {
 							UNZAP.browserControlCall(GameShell.signLink.applet);
-						} catch (@Pc(920) Throwable local920) {
+						} catch (@Pc(920) Throwable ignored) {
 						}
 					}
 				}
@@ -538,7 +538,7 @@ public class LoginManager {
 				reply = 2;
 				step = 0;
 				client.method4221();
-				centralZoneX = -1;
+				SceneGraph.centralZoneX = -1;
 				Protocol.readRebuildPacket(false);
 				Protocol.opcode = -1;
 			}
@@ -652,11 +652,11 @@ public class LoginManager {
 			Protocol.socket.close();
 			Protocol.socket = null;
 		}
-		client.method3768();
+		client.unload();
 		SceneGraph.clear();
-		@Pc(19) int local19;
-		for (local19 = 0; local19 < 4; local19++) {
-			PathFinder.collisionMaps[local19].clear();
+		@Pc(19) int i;
+		for (i = 0; i < 4; i++) {
+			PathFinder.collisionMaps[i].clear();
 		}
 		WorldMap.clear(false);
 		System.gc();
@@ -664,27 +664,27 @@ public class LoginManager {
 		MidiPlayer.jingle = false;
 		MusicPlayer.groupId = -1;
 		AreaSoundManager.clear(true);
-		dynamicMapRegion = false;
+		SceneGraph.dynamicMapRegion = false;
 		Camera.originZ = 0;
-		centralZoneX = 0;
-		centralZoneZ = 0;
+		SceneGraph.centralZoneX = 0;
+		SceneGraph.centralZoneZ = 0;
 		Camera.originX = 0;
-		for (local19 = 0; local19 < MiniMap.hintMapMarkers.length; local19++) {
-			MiniMap.hintMapMarkers[local19] = null;
+		for (i = 0; i < MiniMap.hintMapMarkers.length; i++) {
+			MiniMap.hintMapMarkers[i] = null;
 		}
 		PlayerList.size = 0;
 		NpcList.size = 0;
-		for (local19 = 0; local19 < 2048; local19++) {
-			PlayerList.players[local19] = null;
-			PlayerList.appearanceCache[local19] = null;
+		for (i = 0; i < 2048; i++) {
+			PlayerList.players[i] = null;
+			PlayerList.appearanceCache[i] = null;
 		}
-		for (local19 = 0; local19 < 32768; local19++) {
-			NpcList.npcs[local19] = null;
+		for (i = 0; i < 32768; i++) {
+			NpcList.npcs[i] = null;
 		}
-		for (local19 = 0; local19 < 4; local19++) {
-			for (@Pc(115) int local115 = 0; local115 < 104; local115++) {
-				for (@Pc(122) int local122 = 0; local122 < 104; local122++) {
-					SceneGraph.objStacks[local19][local115][local122] = null;
+		for (int level = 0; level < 4; level++) {
+			for (@Pc(115) int x = 0; x < 104; x++) {
+				for (@Pc(122) int z = 0; z < 104; z++) {
+					SceneGraph.objStacks[level][x][z] = null;
 				}
 			}
 		}
@@ -696,11 +696,11 @@ public class LoginManager {
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(IIIIZIZ)V")
 	public static void method2463(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4, @OriginalArg(5) int arg5) {
-		if (centralZoneX == arg2 && arg1 == centralZoneZ && (centralPlane == arg0 || SceneGraph.allLevelsAreVisible())) {
+		if (SceneGraph.centralZoneX == arg2 && arg1 == SceneGraph.centralZoneZ && (centralPlane == arg0 || SceneGraph.allLevelsAreVisible())) {
 			return;
 		}
-		centralZoneX = arg2;
-		centralZoneZ = arg1;
+		SceneGraph.centralZoneX = arg2;
+		SceneGraph.centralZoneZ = arg1;
 		centralPlane = arg0;
 		if (SceneGraph.allLevelsAreVisible()) {
 			centralPlane = 0;
@@ -715,7 +715,7 @@ public class LoginManager {
 		@Pc(55) int local55 = Camera.originX;
 		Camera.originZ = arg1 * 8 - 48;
 		Camera.originX = (arg2 - 6) * 8;
-		map = MapList.getContainingSource(centralZoneX * 8, centralZoneZ * 8);
+		map = MapList.getContainingSource(SceneGraph.centralZoneX * 8, SceneGraph.centralZoneZ * 8);
 		@Pc(81) int local81 = Camera.originZ - local53;
 		@Pc(86) int local86 = Camera.originX - local55;
 		mapElementList = null;
@@ -841,24 +841,24 @@ public class LoginManager {
 		Protocol.inboundBuffer.offset = 0;
 		anInt1862 = 0;
 		Protocol.opcode = -1;
-		@Pc(35) int local35;
-		for (local35 = 0; local35 < PlayerList.players.length; local35++) {
-			if (PlayerList.players[local35] != null) {
-				PlayerList.players[local35].faceEntity = -1;
+		@Pc(35) int i;
+		for (i = 0; i < PlayerList.players.length; i++) {
+			if (PlayerList.players[i] != null) {
+				PlayerList.players[i].faceEntity = -1;
 			}
 		}
-		for (local35 = 0; local35 < NpcList.npcs.length; local35++) {
-			if (NpcList.npcs[local35] != null) {
-				NpcList.npcs[local35].faceEntity = -1;
+		for (i = 0; i < NpcList.npcs.length; i++) {
+			if (NpcList.npcs[i] != null) {
+				NpcList.npcs[i].faceEntity = -1;
 			}
 		}
-		Inv.method2073();
+		Inv.clear();
 		Camera.cameraType = 1;
 		client.setGameState(30);
-		for (local35 = 0; local35 < 100; local35++) {
-			InterfaceList.aBooleanArray100[local35] = true;
+		for (i = 0; i < 100; i++) {
+			InterfaceList.aBooleanArray100[i] = true;
 		}
-		ClientProt.method1373();
+		ClientProt.sendWindowDetails();
 	}
 
 	@OriginalMember(owner = "client!ca", name = "a", descriptor = "(ZI)V")
@@ -930,10 +930,10 @@ public class LoginManager {
 		}
 
 		if (mapElementList == null) {
-			if (map == null || !client.js5Archive23.isGroupNameValid(JagString.concatenate(new JagString[]{map.group, ClientProt.aClass100_363}))) {
+			if (map == null || !client.js5Archive23.isGroupNameValid(JagString.concatenate(new JagString[]{map.group, aClass100_363}))) {
 				mapElementList = new MapElementList(0);
-			} else if (client.js5Archive23.isGroupReady(JagString.concatenate(new JagString[]{map.group, ClientProt.aClass100_363}))) {
-				mapElementList = MapElementList.create(JagString.concatenate(new JagString[]{map.group, ClientProt.aClass100_363}), client.js5Archive23);
+			} else if (client.js5Archive23.isGroupReady(JagString.concatenate(new JagString[]{map.group, aClass100_363}))) {
+				mapElementList = MapElementList.create(JagString.concatenate(new JagString[]{map.group, aClass100_363}), client.js5Archive23);
 			} else {
 				fileExists = false;
 				mapFilesMissingCount++;
@@ -945,7 +945,7 @@ public class LoginManager {
 			return;
 		}
 
-		ClientProt.anInt5804 = 0;
+		anInt5804 = 0;
 		fileExists = true;
 		@Pc(320) int chunkX;
 		@Pc(309) int chunkZ;
@@ -954,7 +954,7 @@ public class LoginManager {
 			if (local294 != null) {
 				chunkZ = (regionBitPacked[id] & 0xFF) * 64 - Camera.originZ;
 				chunkX = (regionBitPacked[id] >> 8) * 64 - Camera.originX;
-				if (dynamicMapRegion) {
+				if (SceneGraph.dynamicMapRegion) {
 					chunkZ = 10;
 					chunkX = 10;
 				}
@@ -965,7 +965,7 @@ public class LoginManager {
 				if (local294 != null) {
 					chunkX = (regionBitPacked[id] >> 8) * 64 - Camera.originX;
 					chunkZ = (regionBitPacked[id] & 0xFF) * 64 - Camera.originZ;
-					if (dynamicMapRegion) {
+					if (SceneGraph.dynamicMapRegion) {
 						chunkZ = 10;
 						chunkX = 10;
 					}
@@ -979,11 +979,11 @@ public class LoginManager {
 		}
 
 		if (loadingScreenState != 0) {
-			Fonts.drawTextOnScreen(true, JagString.concatenate(new JagString[]{LocalizedText.LOADING, ClientProt.COMPLETE_PERCENT}));
+			Fonts.drawTextOnScreen(true, JagString.concatenate(new JagString[]{LocalizedText.LOADING, COMPLETE_PERCENT}));
 		}
 
 		client.audioLoop();
-		client.method3768();
+		client.unload();
 		@Pc(420) boolean hasUnderWaterMap = false;
 		@Pc(427) int i;
 		if (GlRenderer.enabled && Preferences.highWaterDetail) {
@@ -1018,13 +1018,13 @@ public class LoginManager {
 			LightingManager.method2404();
 		}
 		if (GlRenderer.enabled) {
-			ClientProt.setDefaultChunksAtmosphere();
+			FogManager.setDefaultChunksAtmosphere();
 		}
 		client.audioLoop();
 		System.gc();
 		ClientProt.ping(true);
 		SceneGraph.load(false);
-		if (!dynamicMapRegion) {
+		if (!SceneGraph.dynamicMapRegion) {
 			method1805(false);
 			ClientProt.ping(true);
 			if (GlRenderer.enabled) {
@@ -1037,7 +1037,7 @@ public class LoginManager {
 				decodeNpcFiles();
 			}
 		}
-		if (dynamicMapRegion) {
+		if (SceneGraph.dynamicMapRegion) {
 			method1835(false);
 			ClientProt.ping(true);
 			if (GlRenderer.enabled) {
@@ -1047,7 +1047,7 @@ public class LoginManager {
 			}
 			method4002(false);
 		}
-		client.method3768();
+		client.unload();
 		ClientProt.ping(true);
 		SceneGraph.method1169(PathFinder.collisionMaps, false);
 		if (GlRenderer.enabled) {
@@ -1069,17 +1069,17 @@ public class LoginManager {
 		if (GlRenderer.enabled && hasUnderWaterMap) {
 			SceneGraph.setUnderwater(true);
 			SceneGraph.load(true);
-			if (!dynamicMapRegion) {
+			if (!SceneGraph.dynamicMapRegion) {
 				method1805(true);
 				ClientProt.ping(true);
 				method743(true);
 			}
-			if (dynamicMapRegion) {
+			if (SceneGraph.dynamicMapRegion) {
 				method1835(true);
 				ClientProt.ping(true);
 				method4002(true);
 			}
-			client.method3768();
+			client.unload();
 			ClientProt.ping(true);
 			SceneGraph.method1169(PathFinder.collisionMaps, true);
 			ClientProt.ping(true);
@@ -1101,17 +1101,17 @@ public class LoginManager {
 		ScriptRunner.method2218();
 		client.audioLoop();
 		ChangeLocRequest.flush();
-		client.method3768();
+		client.unload();
 		aBoolean252 = false;
 		if (GameShell.frame != null && Protocol.socket != null && client.gameState == 25) {
 			Protocol.outboundBuffer.p1isaac(20);
 			Protocol.outboundBuffer.p4(1057001181);
 		}
-		if (!dynamicMapRegion) {
-			@Pc(815) int local815 = (centralZoneZ + 6) / 8;
-			@Pc(821) int local821 = (centralZoneZ - 6) / 8;
-			chunkX = (centralZoneX - 6) / 8;
-			chunkZ = (centralZoneX + 6) / 8;
+		if (!SceneGraph.dynamicMapRegion) {
+			@Pc(815) int local815 = (SceneGraph.centralZoneZ + 6) / 8;
+			@Pc(821) int local821 = (SceneGraph.centralZoneZ - 6) / 8;
+			chunkX = (SceneGraph.centralZoneX - 6) / 8;
+			chunkZ = (SceneGraph.centralZoneX + 6) / 8;
 			for (@Pc(837) int local837 = chunkX - 1; local837 <= chunkZ + 1; local837++) {
 				for (@Pc(850) int local850 = local821 - 1; local850 <= local815 + 1; local850++) {
 					if (local837 < chunkX || local837 > chunkZ || local850 < local821 || local850 > local815) {
@@ -1185,7 +1185,7 @@ public class LoginManager {
 				local39 = true;
 				if (!local95.isReady()) {
 					local15 = false;
-					ClientProt.anInt5804++;
+					anInt5804++;
 				}
 			}
 		}
@@ -1866,14 +1866,14 @@ public class LoginManager {
 			local53 = local9[local20];
 			if (local53 != null) {
 				client.audioLoop();
-				method2203(PathFinder.collisionMaps, arg0, centralZoneX * 8 - 48, local49, local38, (centralZoneZ - 6) * 8, local53);
+				method2203(PathFinder.collisionMaps, arg0, SceneGraph.centralZoneX * 8 - 48, local49, local38, (SceneGraph.centralZoneZ - 6) * 8, local53);
 			}
 		}
 		for (local20 = 0; local20 < local18; local20++) {
 			local38 = (regionBitPacked[local20] >> 8) * 64 - Camera.originX;
 			local49 = (regionBitPacked[local20] & 0xFF) * 64 - Camera.originZ;
 			local53 = local9[local20];
-			if (local53 == null && centralZoneZ < 800) {
+			if (local53 == null && SceneGraph.centralZoneZ < 800) {
 				client.audioLoop();
 				for (@Pc(130) int local130 = 0; local130 < local7; local130++) {
 					method645(local130, local49, local38, 64, 64);

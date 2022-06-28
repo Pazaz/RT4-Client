@@ -34,12 +34,12 @@ public class VarpTypeList {
 	}
 
 	@OriginalMember(owner = "client!ud", name = "d", descriptor = "(I)V")
-	public static void method4266() {
+	public static void clear() {
 		types.clear();
 	}
 
 	@OriginalMember(owner = "client!ab", name = "b", descriptor = "(B)V")
-	public static void method4657() {
+	public static void removeSoft() {
 		types.removeSoft();
 	}
 

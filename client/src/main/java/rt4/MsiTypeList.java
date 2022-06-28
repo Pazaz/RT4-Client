@@ -50,13 +50,13 @@ public class MsiTypeList {
 	}
 
 	@OriginalMember(owner = "client!qg", name = "h", descriptor = "(I)V")
-	public static void method3653() {
+	public static void clear() {
 		types.clear();
 		sprites.clear();
 	}
 
 	@OriginalMember(owner = "client!vl", name = "b", descriptor = "(I)V")
-	public static void method4529() {
+	public static void removeSoft() {
 		types.removeSoft();
 		sprites.removeSoft();
 	}

@@ -112,7 +112,7 @@ public class Cheat {
 			@Pc(38) int local38;
 			@Pc(29) Runtime local29;
 			if (arg0.equalsIgnoreCase(aClass100_476)) {
-				client.method2380();
+				client.unloadSoft();
 				for (local18 = 0; local18 < 10; local18++) {
 					System.gc();
 				}
@@ -122,7 +122,7 @@ public class Cheat {
 			}
 			@Pc(117) int local117;
 			if (arg0.equalsIgnoreCase(MM)) {
-				client.method2380();
+				client.unloadSoft();
 				for (local18 = 0; local18 < 10; local18++) {
 					System.gc();
 				}
@@ -130,7 +130,7 @@ public class Cheat {
 				local38 = (int) ((local29.totalMemory() - local29.freeMemory()) / 1024L);
 				Chat.add(null, 0, JagString.concatenate(new JagString[]{aClass100_893, JagString.parseInt(local38), DEBUG_MEM_UNIT}));
 				Player.method501();
-				client.method2380();
+				client.unloadSoft();
 				for (local117 = 0; local117 < 10; local117++) {
 					System.gc();
 				}

@@ -62,7 +62,7 @@ public class LocTypeList {
 	}
 
 	@OriginalMember(owner = "client!oe", name = "b", descriptor = "(I)V")
-	public static void method3323() {
+	public static void removeSoft() {
 		types.removeSoft();
 		aClass99_24.removeSoft();
 		aClass99_14.removeSoft();

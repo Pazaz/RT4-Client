@@ -593,7 +593,7 @@ public class MiniMenu {
 			}
 		}
 		if (local23 == 41 && Cs1ScriptRunner.aClass13_10 == null) {
-			ClientProt.method10(local15, local19);
+			method10(local15, local19);
 			Cs1ScriptRunner.aClass13_10 = InterfaceList.method1418(local19, local15);
 			InterfaceList.redraw(Cs1ScriptRunner.aClass13_10);
 		}
@@ -1597,4 +1597,10 @@ public class MiniMenu {
 		}
 	}
 
+	@OriginalMember(owner = "client!aa", name = "a", descriptor = "(IZI)V")
+	public static void method10(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
+		Protocol.outboundBuffer.p1isaac(132);
+		Protocol.outboundBuffer.imp4(arg1);
+		Protocol.outboundBuffer.ip2(arg0);
+	}
 }

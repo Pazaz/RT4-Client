@@ -34,12 +34,12 @@ public class FloTypeList {
 	}
 
 	@OriginalMember(owner = "client!uh", name = "e", descriptor = "(I)V")
-	public static void method4301() {
+	public static void removeSoft() {
 		types.removeSoft();
 	}
 
 	@OriginalMember(owner = "client!wh", name = "a", descriptor = "(I)V")
-	public static void method4612() {
+	public static void clear() {
 		types.clear();
 	}
 

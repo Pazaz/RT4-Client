@@ -51,13 +51,13 @@ public class SeqTypeList {
 	}
 
 	@OriginalMember(owner = "client!an", name = "a", descriptor = "(Z)V")
-	public static void method350() {
+	public static void clear() {
 		types.clear();
 		animFramesets.clear();
 	}
 
 	@OriginalMember(owner = "client!sg", name = "a", descriptor = "(B)V")
-	public static void method3903() {
+	public static void removeSoft() {
 		types.removeSoft();
 		animFramesets.removeSoft();
 	}

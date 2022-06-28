@@ -69,14 +69,14 @@ public class ObjTypeList {
 	}
 
 	@OriginalMember(owner = "client!i", name = "r", descriptor = "(I)V")
-	public static void method2239() {
+	public static void removeSoft() {
 		types.removeSoft();
 		models.removeSoft();
 		objectSpriteCache.removeSoft();
 	}
 
 	@OriginalMember(owner = "client!ob", name = "a", descriptor = "(B)V")
-	public static void method3302() {
+	public static void clear() {
 		types.clear();
 		models.clear();
 		objectSpriteCache.clear();
@@ -93,7 +93,7 @@ public class ObjTypeList {
 	public static void setAllowMembers(@OriginalArg(0) boolean arg0) {
 		if (arg0 != aBoolean276) {
 			aBoolean276 = arg0;
-			method3302();
+			clear();
 		}
 	}
 

@@ -32,7 +32,7 @@ public class BasTypeList {
 	}
 
 	@OriginalMember(owner = "client!jk", name = "e", descriptor = "(B)V")
-	public static void method2433() {
+	public static void clear() {
 		types.clear();
 	}
 
@@ -42,7 +42,7 @@ public class BasTypeList {
 	}
 
 	@OriginalMember(owner = "client!di", name = "d", descriptor = "(I)V")
-	public static void method1172() {
+	public static void removeSoft() {
 		types.removeSoft();
 	}
 }

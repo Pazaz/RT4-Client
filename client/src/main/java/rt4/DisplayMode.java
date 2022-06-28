@@ -229,7 +229,7 @@ public final class DisplayMode {
 			InterfaceList.method3712(true);
 		}
 		if (Protocol.socket != null && (client.gameState == 30 || client.gameState == 25)) {
-			ClientProt.method1373();
+			ClientProt.sendWindowDetails();
 		}
 		for (@Pc(466) int local466 = 0; local466 < 100; local466++) {
 			InterfaceList.aBooleanArray100[local466] = true;
