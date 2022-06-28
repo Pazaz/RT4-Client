@@ -41,6 +41,9 @@ public class Buffer extends Node {
 	@OriginalMember(owner = "client!dc", name = "db", descriptor = "[[B")
 	public static final byte[][] allocatedMax = new byte[50][];
 
+	@OriginalMember(owner = "client!qj", name = "a", descriptor = "[J")
+	public static final long[] CRC64_TABLE = new long[256];
+
 	@OriginalMember(owner = "client!ja", name = "j", descriptor = "I")
 	public static int allocatedMinCount = 0;
 
@@ -55,6 +58,20 @@ public class Buffer extends Node {
 
 	@OriginalMember(owner = "client!wa", name = "T", descriptor = "I")
 	public int offset;
+
+	static {
+		for (@Pc(4) int local4 = 0; local4 < 256; local4++) {
+			@Pc(10) long local10 = local4;
+			for (@Pc(12) int local12 = 0; local12 < 8; local12++) {
+				if ((local10 & 0x1L) == 1L) {
+					local10 = local10 >>> 1 ^ 0xC96C5795D7870F42L;
+				} else {
+					local10 >>>= 0x1;
+				}
+			}
+			CRC64_TABLE[local4] = local10;
+		}
+	}
 
 	@OriginalMember(owner = "client!wa", name = "<init>", descriptor = "(I)V")
 	public Buffer(@OriginalArg(0) int size) {

@@ -136,7 +136,7 @@ public class Cheat {
 				Chat.add(null, 0, JagString.concatenate(new JagString[]{aClass100_1093, JagString.parseInt(local38), DEBUG_MEM_UNIT}));
 			}
 			if (arg0.equalsIgnoreCase(PCACHESIZE)) {
-				Chat.add(null, 0, JagString.concatenate(new JagString[]{aClass100_335, JagString.parseInt(PlayerAppearance.method1029())}));
+				Chat.add(null, 0, JagString.concatenate(new JagString[]{aClass100_335, JagString.parseInt(PlayerAppearance.getModelCacheSize())}));
 			}
 			if (GlRenderer.enabled && arg0.equalsIgnoreCase(CARDMEM)) {
 				System.out.println("oncard_geometry:" + GlCleaner.onCardGeometry);

@@ -602,7 +602,7 @@ public final class client extends GameShell {
 		Static44.aClass13_10 = null;
 		Static40.aBoolean108 = false;
 		MiniMenu.size = 0;
-		PlayerAppearance.DEFAULT.method1950(new int[]{0, 0, 0, 0, 0}, -1, false, null, -1);
+		PlayerAppearance.DEFAULT.set(new int[]{0, 0, 0, 0, 0}, -1, false, null, -1);
 		for (local3506 = 0; local3506 < 8; local3506++) {
 			Player.options[local3506] = null;
 			Player.secondaryOptions[local3506] = false;
@@ -931,15 +931,15 @@ public final class client extends GameShell {
 			Cheat.shiftClick = true;
 			FogManager.defaultLightColorRgb = 16777215;
 			FogManager.defaulFogColorRgb = 0;
-			PlayerAppearance.aShortArrayArray2 = PlayerAppearance.aShortArrayArray4;
-			PlayerAppearance.aShortArrayArray7 = PlayerAppearance.aShortArrayArray1;
-			PlayerAppearance.aShortArray65 = PlayerAppearance.aShortArray1;
-			PlayerAppearance.aShortArray41 = PlayerAppearance.aShortArray5;
+			PlayerAppearance.destinationBodyColors = PlayerAppearance.GAME1_DESTINATION_BODY_COLORS;
+			PlayerAppearance.destinationSkinColors = PlayerAppearance.GAME1_DESTINATION_SKIN_COLORS;
+			PlayerAppearance.aShortArray65 = PlayerAppearance.GAME1_SOURCE_BODY_COLORS;
+			PlayerAppearance.aShortArray41 = PlayerAppearance.GAME1_SOURCE_SKIN_COLORS;
 		} else {
-			PlayerAppearance.aShortArrayArray2 = PlayerAppearance.aShortArrayArray6;
-			PlayerAppearance.aShortArray41 = PlayerAppearance.aShortArray64;
-			PlayerAppearance.aShortArrayArray7 = PlayerAppearance.aShortArrayArray5;
-			PlayerAppearance.aShortArray65 = PlayerAppearance.aShortArray71;
+			PlayerAppearance.destinationBodyColors = PlayerAppearance.GAME0_DESTINATION_BODY_COLORS;
+			PlayerAppearance.aShortArray41 = PlayerAppearance.GAME0_SOURCE_SKIN_COLORS;
+			PlayerAppearance.destinationSkinColors = PlayerAppearance.GAME0_DESTINATION_SKIN_COLORS;
+			PlayerAppearance.aShortArray65 = PlayerAppearance.GAME0_SOURCE_BODY_COLORS;
 		}
 
 		alternatePort = worldListAlternatePort;
