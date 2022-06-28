@@ -114,6 +114,8 @@ public class LoginManager {
 	public static int mapFilesMissingCount = 0;
 	@OriginalMember(owner = "client!t", name = "y", descriptor = "I")
 	public static int loadingScreenState = 0;
+	@OriginalMember(owner = "client!sk", name = "lb", descriptor = "Z")
+	public static boolean aBoolean252 = false;
 
 	@OriginalMember(owner = "client!dm", name = "d", descriptor = "(I)V")
 	public static void clear() {
@@ -193,7 +195,7 @@ public class LoginManager {
 					return;
 				}
 				local126 = Protocol.socket.read() << 8 | Protocol.socket.read();
-				Static176.hopWorld(local126);
+				WorldList.hopWorld(local126);
 				if (Player.worldId == -1) {
 					anInt4937 = 0;
 					reply = 6;
@@ -1060,7 +1062,7 @@ public class LoginManager {
 		client.audioLoop();
 		ChangeLocRequest.flush();
 		client.method3768();
-		Static231.aBoolean252 = false;
+		aBoolean252 = false;
 		if (GameShell.frame != null && Protocol.socket != null && client.gameState == 25) {
 			Protocol.outboundBuffer.p1isaac(20);
 			Protocol.outboundBuffer.p4(1057001181);

@@ -27,6 +27,8 @@ public class WorldMap {
 	public static final JagString aClass100_538 = JagString.parse(" ");
 	@OriginalMember(owner = "client!pm", name = "Y", descriptor = "Lclient!na;")
 	public static final JagString aClass100_872 = JagString.parse("<br>");
+	@OriginalMember(owner = "client!nj", name = "h", descriptor = "Lclient!ih;")
+	public static final LinkedList aClass69_97 = new LinkedList();
 	@OriginalMember(owner = "client!wa", name = "ub", descriptor = "Lclient!bn;")
 	public static Map currentMap;
 	@OriginalMember(owner = "client!dc", name = "O", descriptor = "I")
@@ -153,8 +155,8 @@ public class WorldMap {
 				anInt435 = local153;
 				anInt919 = local177;
 			} else {
-				anInt919 = originZ + length - currentMap.anInt764 * 64 - 1;
-				anInt435 = currentMap.anInt769 * 64 - originX;
+				anInt919 = originZ + length - currentMap.originZ * 64 - 1;
+				anInt435 = currentMap.originX * 64 - originX;
 			}
 
 			method965();
@@ -666,8 +668,8 @@ public class WorldMap {
 							local270 = local32 + arg5 & 0x3F;
 							local276 = (local260 << 6) + local270;
 							if (angle < 0 || local185.length - 1 < angle || local185[angle] == null) {
-								if (currentMap.anInt759 != -1) {
-									local312 = currentMap.anInt759;
+								if (currentMap.backgroundColor != -1) {
+									local312 = currentMap.backgroundColor;
 								} else if ((local211 + arg2 & 0x4) == (arg5 + local32 & 0x4)) {
 									local312 = overlayColors[FloType.anInt865 + 1];
 								} else {
@@ -783,8 +785,8 @@ public class WorldMap {
 				} else {
 					local47 += arg4;
 					for (@Pc(90) int local90 = 0; local90 < local14; local90++) {
-						if (currentMap.anInt759 != -1) {
-							local104 = currentMap.anInt759;
+						if (currentMap.backgroundColor != -1) {
+							local104 = currentMap.backgroundColor;
 						} else if ((local32 + arg5 & 0x4) == (local90 + arg2 & 0x4)) {
 							local104 = overlayColors[FloType.anInt865 + 1];
 						} else {
@@ -1038,7 +1040,7 @@ public class WorldMap {
 	}
 
 	@OriginalMember(owner = "client!rg", name = "d", descriptor = "(B)Lclient!bn;")
-	public static Map method4361() {
+	public static Map getCurrentMap() {
 		return currentMap;
 	}
 
@@ -1727,7 +1729,7 @@ public class WorldMap {
 											local243.anInt4307 = local65;
 											local243.anInt4314 = local144;
 											local243.id = local222.mapElement;
-											Static232.aClass69_97.addTail(local243);
+											aClass69_97.addTail(local243);
 										} else {
 											MapList.sprites[local222.mapElement].render(local65 - 7, local144 + -7);
 										}
@@ -1739,14 +1741,14 @@ public class WorldMap {
 				}
 			}
 		}
-		for (@Pc(285) MapElement local285 = (MapElement) Static232.aClass69_97.head(); local285 != null; local285 = (MapElement) Static232.aClass69_97.next()) {
+		for (@Pc(285) MapElement local285 = (MapElement) aClass69_97.head(); local285 != null; local285 = (MapElement) aClass69_97.next()) {
 			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 15, local11);
 			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 13, local11);
 			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 11, local11);
 			SoftwareRaster.method2502(local285.anInt4307, local285.anInt4314, 9, local11);
 			MapList.sprites[local285.id].render(local285.anInt4307 - 7, local285.anInt4314 + -7);
 		}
-		Static232.aClass69_97.clear();
+		aClass69_97.clear();
 	}
 
 	@OriginalMember(owner = "client!fi", name = "a", descriptor = "(III)V")

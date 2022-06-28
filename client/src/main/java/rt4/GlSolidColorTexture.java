@@ -12,53 +12,53 @@ import java.nio.ByteBuffer;
 public final class GlSolidColorTexture extends SecondaryNode {
 
 	@OriginalMember(owner = "client!sd", name = "U", descriptor = "I")
-	private int anInt5065 = 0;
+	private int textureSize = 0;
 
 	@OriginalMember(owner = "client!sd", name = "K", descriptor = "I")
-	private int anInt5058 = -1;
+	private int textureId = -1;
 
 	@OriginalMember(owner = "client!sd", name = "L", descriptor = "I")
-	private final int anInt5059;
+	private final int contextId;
 
 	@OriginalMember(owner = "client!sd", name = "<init>", descriptor = "(I)V")
-	public GlSolidColorTexture(@OriginalArg(0) int arg0) {
-		@Pc(9) GL2 local9 = GlRenderer.gl;
-		@Pc(12) int[] local12 = new int[1];
-		local9.glGenTextures(1, local12, 0);
-		this.anInt5058 = local12[0];
-		this.anInt5059 = GlCleaner.contextId;
-		GlRenderer.setTextureId(this.anInt5058);
-		@Pc(32) int local32 = Rasteriser.palette[arg0];
-		@Pc(58) byte[] local58 = new byte[]{(byte) (local32 >> 16), (byte) (local32 >> 8), (byte) local32, -1};
-		@Pc(61) ByteBuffer local61 = ByteBuffer.wrap(local58);
-		local9.glTexImage2D(GL2.GL_TEXTURE_2D, 0, GL2.GL_RGBA, 1, 1, 0, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, local61);
-		local9.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR);
-		local9.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
-		GlCleaner.onCardTexture += local61.limit() - this.anInt5065;
-		this.anInt5065 = local61.limit();
+	public GlSolidColorTexture(@OriginalArg(0) int hsl) {
+		@Pc(9) GL2 gl = GlRenderer.gl;
+		@Pc(12) int[] temp = new int[1];
+		gl.glGenTextures(1, temp, 0);
+		this.textureId = temp[0];
+		this.contextId = GlCleaner.contextId;
+		GlRenderer.setTextureId(this.textureId);
+		@Pc(32) int rgb = Rasteriser.palette[hsl];
+		@Pc(58) byte[] bytes = new byte[]{(byte) (rgb >> 16), (byte) (rgb >> 8), (byte) rgb, -1};
+		@Pc(61) ByteBuffer buffer = ByteBuffer.wrap(bytes);
+		gl.glTexImage2D(GL2.GL_TEXTURE_2D, 0, GL2.GL_RGBA, 1, 1, 0, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, buffer);
+		gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR);
+		gl.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MAG_FILTER, GL2.GL_LINEAR);
+		GlCleaner.onCardTexture += buffer.limit() - this.textureSize;
+		this.textureSize = buffer.limit();
 	}
 
 	@OriginalMember(owner = "client!sd", name = "finalize", descriptor = "()V")
 	@Override
 	public final void finalize() throws Throwable {
-		if (this.anInt5058 != -1) {
-			GlCleaner.method1485(this.anInt5058, this.anInt5065, this.anInt5059);
-			this.anInt5058 = -1;
-			this.anInt5065 = 0;
+		if (this.textureId != -1) {
+			GlCleaner.deleteTexture(this.textureId, this.textureSize, this.contextId);
+			this.textureId = -1;
+			this.textureSize = 0;
 		}
 		super.finalize();
 	}
 
 	@OriginalMember(owner = "client!sd", name = "g", descriptor = "(B)V")
 	public final void method3887() {
-		@Pc(8) int local8 = MaterialManager.getFlags();
-		if ((local8 & 0x1) == 0) {
-			GlRenderer.setTextureId(this.anInt5058);
+		@Pc(8) int flags = MaterialManager.getFlags();
+		if ((flags & 0x1) == 0) {
+			GlRenderer.setTextureId(this.textureId);
 		}
-		if ((local8 & 0x2) == 0) {
+		if ((flags & 0x2) == 0) {
 			GlRenderer.setTextureCombineRgbMode(0);
 		}
-		if ((local8 & 0x4) == 0) {
+		if ((flags & 0x4) == 0) {
 			GlRenderer.setTextureCombineAlphaMode(0);
 		}
 	}

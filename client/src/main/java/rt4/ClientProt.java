@@ -203,7 +203,7 @@ public class ClientProt {
 	public static void method28() {
 		InterfaceList.redraw(Static40.aClass13_14);
 		Static40.anInt4851++;
-		if (Static44.aBoolean83 && Static146.aBoolean174) {
+		if (Static44.aBoolean83 && InterfaceList.aBoolean174) {
 			@Pc(30) int local30 = Mouse.lastMouseX;
 			local30 -= Static40.anInt5388;
 			if (Static81.anInt2225 > local30) {

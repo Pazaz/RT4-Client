@@ -529,7 +529,7 @@ public final class Static1 {
 		for (local38 = 0; local38 < local12; local38++) {
 			local2826[local38] = local2823[local38].key;
 		}
-		Static4.method23(local2826, local2823);
+		SceneGraph.method23(local2826, local2823);
 		return local2823;
 	}
 
@@ -829,8 +829,15 @@ public final class Static1 {
 			local80 = Static69.method1540(arg16, local382, local388);
 		}
 		@Pc(405) int local405 = arg16 + (arg13 << 7);
-		@Pc(413) int local413 = Static182.method3361(arg14, arg13, arg5, arg6, arg16);
+		@Pc(413) int local413 = method3361(arg14, arg13, arg5, arg6, arg16);
 		@Pc(420) int local420 = (arg6 << 7) + arg14;
-		return arg11.method1941(local420, local413, local405, local78, local66, local72, arg10 ? local80 & 0xFFFFFF00 : local80, arg4 == null ? 0.0F : (float) (local413 - Static182.method3361(arg14, arg13, arg4, arg6, arg16)) / arg1);
+		return arg11.method1941(local420, local413, local405, local78, local66, local72, arg10 ? local80 & 0xFFFFFF00 : local80, arg4 == null ? 0.0F : (float) (local413 - method3361(arg14, arg13, arg4, arg6, arg16)) / arg1);
+	}
+
+	@OriginalMember(owner = "client!oj", name = "a", descriptor = "(IBI[[III)I")
+	public static int method3361(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int[][] arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
+		@Pc(25) int local25 = arg0 * arg2[arg3 + 1][arg1] + (128 - arg0) * arg2[arg3][arg1] >> 7;
+		@Pc(52) int local52 = arg2[arg3][arg1 + 1] * (128 - arg0) + arg2[arg3 + 1][arg1 + 1] * arg0 >> 7;
+		return local25 * (128 - arg4) + arg4 * local52 >> 7;
 	}
 }

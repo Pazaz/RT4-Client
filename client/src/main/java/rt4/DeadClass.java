@@ -11,6 +11,8 @@ public final class DeadClass {
 
 	@OriginalMember(owner = "client!ck", name = "b", descriptor = "Lclient!na;")
 	private static final JagString aClass100_195 = JagString.parse("Discard");
+	@OriginalMember(owner = "client!ck", name = "o", descriptor = "Lclient!na;")
+	private static final JagString aClass100_200 = JagString.parse("Loaded world list data");
 
 	@OriginalMember(owner = "client!rc", name = "R", descriptor = "Z")
 	private static boolean aBoolean74;

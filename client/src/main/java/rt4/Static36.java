@@ -38,7 +38,7 @@ public final class Static36 {
 
 	@OriginalMember(owner = "client!client", name = "c", descriptor = "(Lclient!be;)Z")
 	public static boolean method947(@OriginalArg(0) Component arg0) {
-		if (Static121.qaOpTest) {
+		if (Cheat.qaOpTest) {
 			if (InterfaceList.getServerActiveProperties(arg0).events != 0) {
 				return false;
 			}

@@ -8,27 +8,27 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class MapChunk extends Node {
 
 	@OriginalMember(owner = "client!lh", name = "y", descriptor = "I")
-	public final int anInt3524;
+	public final int displayMinZ;
 
 	@OriginalMember(owner = "client!lh", name = "v", descriptor = "I")
-	public final int anInt3522;
+	public final int displayMaxX;
 
 	@OriginalMember(owner = "client!lh", name = "w", descriptor = "I")
-	public final int anInt3523;
+	public final int displayMaxZ;
 
 	@OriginalMember(owner = "client!lh", name = "t", descriptor = "I")
-	public final int anInt3520;
+	public final int displayMinX;
 
 	@OriginalMember(owner = "client!lh", name = "<init>", descriptor = "(IIII)V")
 	public MapChunk(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		this.anInt3524 = arg3;
-		this.anInt3522 = arg1;
-		this.anInt3523 = arg2;
-		this.anInt3520 = arg0;
+		this.displayMinZ = arg3;
+		this.displayMaxX = arg1;
+		this.displayMaxZ = arg2;
+		this.displayMinX = arg0;
 	}
 
 	@OriginalMember(owner = "client!lh", name = "a", descriptor = "(BII)Z")
-	public final boolean method2760(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
-		return arg1 >= this.anInt3520 && this.anInt3523 >= arg1 && this.anInt3522 <= arg0 && arg0 <= this.anInt3524;
+	public final boolean containsDisplay(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
+		return arg1 >= this.displayMinX && this.displayMaxZ >= arg1 && this.displayMaxX <= arg0 && arg0 <= this.displayMinZ;
 	}
 }

@@ -9,17 +9,17 @@ import java.nio.ByteBuffer;
 public final class GlBuffer {
 
 	@OriginalMember(owner = "client!ql", name = "e", descriptor = "Lclient!vi;")
-	public GlVertexBufferObject aClass155_4;
+	public GlVertexBufferObject vbo;
 
 	@OriginalMember(owner = "client!ql", name = "f", descriptor = "Ljava/nio/ByteBuffer;")
-	public ByteBuffer aByteBuffer8;
+	public ByteBuffer buffer;
 
 	@OriginalMember(owner = "client!ql", name = "b", descriptor = "Z")
 	public boolean valid = false;
 
 	@OriginalMember(owner = "client!ql", name = "a", descriptor = "I")
-	public int anInt4777 = 0;
+	public int pointer = 0;
 
 	@OriginalMember(owner = "client!ql", name = "m", descriptor = "I")
-	public int anInt4782 = 0;
+	public int stride = 0;
 }

@@ -7,9 +7,6 @@ import java.awt.*;
 
 public final class Static139 {
 
-	@OriginalMember(owner = "client!l", name = "d", descriptor = "Lclient!na;")
-	public static final JagString aClass100_659 = JagString.parse(")4j");
-
 	@OriginalMember(owner = "client!l", name = "b", descriptor = "(I)V")
 	public static void method2704() {
 		@Pc(7) int local7 = GameShell.topMargin;

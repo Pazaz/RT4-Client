@@ -29,14 +29,14 @@ public final class Static7 {
 					@Pc(106) ServerActiveProperties local106 = InterfaceList.getServerActiveProperties(local103);
 					if (local106.isObjSwapEnabled() || local106.isObjReplaceEnabled()) {
 						InterfaceList.clickedInventoryComponentCycle = 0;
-						Static123.draggingClickedInventoryObject = false;
+						InterfaceList.draggingClickedInventoryObject = false;
 						if (InterfaceList.clickedInventoryComponent != null) {
 							InterfaceList.redraw(InterfaceList.clickedInventoryComponent);
 						}
 						InterfaceList.clickedInventoryComponent = InterfaceList.getComponent(local99);
 						InterfaceList.clickedInventoryComponentX = Mouse.clickX;
 						InterfaceList.clickedInventoryComponentY = Mouse.clickY;
-						Static4.mouseOverInventoryObjectIndex = local93;
+						InterfaceList.mouseOverInventoryObjectIndex = local93;
 						InterfaceList.redraw(InterfaceList.clickedInventoryComponent);
 						return;
 					}

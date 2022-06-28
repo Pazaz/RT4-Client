@@ -38,7 +38,7 @@ public final class GlCleaner {
 	private static final int[] anIntArray151 = new int[1000];
 
 	@OriginalMember(owner = "client!fa", name = "a", descriptor = "(III)V")
-	public static synchronized void method1485(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+	public static synchronized void deleteTexture(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		if (arg2 == contextId) {
 			@Pc(8) IntNode local8 = new IntNode(arg1);
 			local8.key = arg0;
@@ -68,7 +68,7 @@ public final class GlCleaner {
 	}
 
 	@OriginalMember(owner = "client!fa", name = "b", descriptor = "(III)V")
-	public static synchronized void method1489(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+	public static synchronized void deleteBuffer(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		if (arg2 == contextId) {
 			@Pc(8) IntNode local8 = new IntNode(arg1);
 			local8.key = arg0;

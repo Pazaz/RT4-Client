@@ -134,7 +134,7 @@ public final class Js5GlTextureProvider implements TextureProvider {
 
 	@OriginalMember(owner = "client!nk", name = "a", descriptor = "(ZI)V")
 	public final void method3239(@OriginalArg(1) int arg0) {
-		for (@Pc(19) GlTexture local19 = (GlTexture) this.glTextures.method1808(); local19 != null; local19 = (GlTexture) this.glTextures.method1813()) {
+		for (@Pc(19) GlTexture local19 = (GlTexture) this.glTextures.method1808(); local19 != null; local19 = (GlTexture) this.glTextures.next()) {
 			if (local19.aBoolean287) {
 				local19.method4300(arg0);
 				local19.aBoolean287 = false;

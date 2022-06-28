@@ -44,7 +44,7 @@ public final class Static145 {
 			}
 			Fonts.b12Full.renderLeft(MiniMenu.getOp(local107), local11 + 3, local127, local129, 0);
 		}
-		Static121.redrawScreen(InterfaceList.anInt4271, InterfaceList.anInt5138, InterfaceList.anInt436, InterfaceList.anInt761);
+		InterfaceList.forceRedrawScreen(InterfaceList.anInt4271, InterfaceList.anInt5138, InterfaceList.anInt436, InterfaceList.anInt761);
 	}
 
 }

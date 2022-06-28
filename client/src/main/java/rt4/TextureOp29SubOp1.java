@@ -46,6 +46,6 @@ public final class TextureOp29SubOp1 extends TextureOp29SubOp {
 		@Pc(25) int local25 = this.anInt1017 * arg1 >> 12;
 		@Pc(32) int local32 = arg0 * this.anInt1012 >> 12;
 		@Pc(39) int local39 = arg0 * this.anInt1015 >> 12;
-		Static231.method3982(this.anInt5229, local39, local10, local32, local25);
+		TextureOp29.method3982(this.anInt5229, local39, local10, local32, local25);
 	}
 }

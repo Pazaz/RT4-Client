@@ -5,6 +5,8 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static158 {
 
+	@OriginalMember(owner = "client!rj", name = "Z", descriptor = "[I")
+	public static final int[] anIntArray434 = new int[64];
 	@OriginalMember(owner = "client!mh", name = "X", descriptor = "I")
 	public static int anInt3851 = -1;
 	@OriginalMember(owner = "client!mg", name = "Q", descriptor = "I")
@@ -17,13 +19,13 @@ public final class Static158 {
 			if (LoginManager.npcSpawnsFilesBuffer[local16] != null) {
 				@Pc(25) int local25 = -1;
 				for (@Pc(27) int local27 = 0; local27 < anInt3811; local27++) {
-					if (Static217.anIntArray434[local27] == LoginManager.regionBitPacked[local16]) {
+					if (anIntArray434[local27] == LoginManager.regionBitPacked[local16]) {
 						local25 = local27;
 						break;
 					}
 				}
 				if (local25 == -1) {
-					Static217.anIntArray434[anInt3811] = LoginManager.regionBitPacked[local16];
+					anIntArray434[anInt3811] = LoginManager.regionBitPacked[local16];
 					local25 = anInt3811++;
 				}
 				@Pc(67) int local67 = 0;

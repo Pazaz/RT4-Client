@@ -95,6 +95,8 @@ public class Cheat {
 	public static boolean shiftClick = GlobalConfig.USE_SHIFT_CLICK;
 	@OriginalMember(owner = "client!qc", name = "U", descriptor = "I")
 	public static int rectDebug = 0;
+	@OriginalMember(owner = "client!jg", name = "e", descriptor = "Z")
+	public static boolean qaOpTest = false;
 
 	@OriginalMember(owner = "client!en", name = "a", descriptor = "(IIIB)V")
 	public static void teleport(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
@@ -206,7 +208,7 @@ public class Cheat {
 				Chat.add(null, 0, JagString.concatenate(new JagString[]{RECT_DEBUG_EQUALS, JagString.parseInt(rectDebug)}));
 			}
 			if (arg0.equalsIgnoreCase(QA_OP_TEST)) {
-				Static121.qaOpTest = true;
+				qaOpTest = true;
 			}
 			if (arg0.equalsIgnoreCase(TWEENING)) {
 				if (SeqType.applyTweening) {

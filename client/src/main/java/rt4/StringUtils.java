@@ -13,6 +13,10 @@ public class StringUtils {
 	public static final JagString aClass100_930 = JagString.parse("(Z");
 	@OriginalMember(owner = "client!fm", name = "W", descriptor = "Lclient!na;")
 	public static final JagString aClass100_453 = JagString.parse(")2");
+	@OriginalMember(owner = "client!cg", name = "h", descriptor = "Lclient!na;")
+	public static final JagString aClass100_185 = JagString.parse(")3");
+	@OriginalMember(owner = "client!tl", name = "i", descriptor = "Lclient!na;")
+	public static final JagString aClass100_1017 = JagString.parse(")1");
 
 	@OriginalMember(owner = "client!gj", name = "a", descriptor = "(II)Z")
 	public static boolean isAlphaNumeric(@OriginalArg(0) int arg0) {
@@ -84,19 +88,19 @@ public class StringUtils {
 			arg3 = -arg3;
 			local9.method3113(aClass100_453);
 		}
-		@Pc(26) JagString local26 = Static182.aClass100_1017;
-		@Pc(28) JagString local28 = Static182.aClass100_185;
+		@Pc(26) JagString local26 = aClass100_1017;
+		@Pc(28) JagString local28 = aClass100_185;
 		if (arg0 == 1) {
-			local26 = Static182.aClass100_185;
-			local28 = Static182.aClass100_1017;
+			local26 = aClass100_185;
+			local28 = aClass100_1017;
 		}
 		if (arg0 == 2) {
-			local28 = Static182.aClass100_1017;
+			local28 = aClass100_1017;
 			local26 = nonBreakingSpace;
 		}
 		if (arg0 == 3) {
-			local26 = Static182.aClass100_185;
-			local28 = Static182.aClass100_1017;
+			local26 = aClass100_185;
+			local28 = aClass100_1017;
 		}
 		@Pc(59) JagString local59 = Static87.allocate(0);
 		@Pc(61) int local61;

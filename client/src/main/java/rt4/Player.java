@@ -209,7 +209,7 @@ public final class Player extends PathingEntity {
 
 	@OriginalMember(owner = "client!bf", name = "c", descriptor = "(I)V")
 	public static void method501() {
-		if (!GlRenderer.enabled || Static231.aBoolean252) {
+		if (!GlRenderer.enabled || LoginManager.aBoolean252) {
 			return;
 		}
 		@Pc(14) Tile[][][] local14 = SceneGraph.tiles;
@@ -278,7 +278,7 @@ public final class Player extends PathingEntity {
 				}
 			}
 		}
-		Static231.aBoolean252 = true;
+		LoginManager.aBoolean252 = true;
 	}
 
 	@OriginalMember(owner = "client!ja", name = "a", descriptor = "(IIIIB)V")

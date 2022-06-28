@@ -4,28 +4,28 @@ import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 
 @OriginalClass("client!ae")
-public final class GlVertexBuffer {
+public final class GlBoundingBox {
 
 	@OriginalMember(owner = "client!ae", name = "a", descriptor = "S")
-	public short aShort2;
+	public short minY;
 
 	@OriginalMember(owner = "client!ae", name = "b", descriptor = "S")
-	public short aShort3;
+	public short maxY;
 
 	@OriginalMember(owner = "client!ae", name = "c", descriptor = "S")
-	public short aShort4;
+	public short cylinderRadius;
 
 	@OriginalMember(owner = "client!ae", name = "d", descriptor = "S")
-	public short aShort5;
+	public short maxX;
 
 	@OriginalMember(owner = "client!ae", name = "e", descriptor = "S")
-	public short aShort6;
+	public short minX;
 
 	@OriginalMember(owner = "client!ae", name = "f", descriptor = "S")
-	public short aShort7;
+	public short maxZ;
 
 	@OriginalMember(owner = "client!ae", name = "g", descriptor = "S")
-	public short aShort8;
+	public short minZ;
 
 	@OriginalMember(owner = "client!ae", name = "h", descriptor = "Z")
 	public boolean valid = false;

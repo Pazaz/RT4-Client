@@ -336,7 +336,7 @@ public final class JagString implements StringInterface {
 				}
 				if (local46 == 9) {
 					for (local124 = 0; local124 < 25; local124++) {
-						if (Static182.aBooleanArray97[local124]) {
+						if (PlayerSkillXpTable.ENABLED_SKILLS[local124]) {
 							local41 += PlayerSkillXpTable.baseLevels[local124];
 						}
 					}

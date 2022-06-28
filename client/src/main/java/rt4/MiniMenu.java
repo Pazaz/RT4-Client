@@ -75,6 +75,8 @@ public class MiniMenu {
 	public static final JagString aClass100_1042 = JagString.parse("Null");
 	@OriginalMember(owner = "client!e", name = "pc", descriptor = "[I")
 	public static final int[] anIntArray132 = new int[4];
+	@OriginalMember(owner = "client!af", name = "l", descriptor = "[S")
+	public static final short[] aShortArray2 = new short[]{30, 6, 31, 29, 10, 44, 37, 57};
 	@OriginalMember(owner = "client!ck", name = "D", descriptor = "Lclient!na;")
 	public static JagString aClass100_203 = null;
 	@OriginalMember(owner = "client!hn", name = "W", descriptor = "Lclient!na;")
@@ -1454,7 +1456,7 @@ public class MiniMenu {
 					} else if (Player.secondaryOptions[local275]) {
 						local291 = 2000;
 					}
-					@Pc(353) short local353 = Static5.aShortArray2[local275];
+					@Pc(353) short local353 = aShortArray2[local275];
 					@Pc(358) short local358 = (short) (local353 + local291);
 					add(Player.cursors[local275], arg0, JagString.concatenate(new JagString[]{COLOR_WHITE, string}), arg3, local358, Player.options[local275], arg1);
 				}

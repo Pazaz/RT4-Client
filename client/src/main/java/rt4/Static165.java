@@ -15,7 +15,7 @@ public final class Static165 {
 	@OriginalMember(owner = "client!nb", name = "a", descriptor = "(IIIIIIIIII)V")
 	public static void method3162(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7, @OriginalArg(9) int arg8) {
 		if (arg0 == arg1 && arg8 == arg2 && arg7 == arg6 && arg4 == arg5) {
-			Static231.method3982(arg3, arg4, arg0, arg8, arg6);
+			TextureOp29.method3982(arg3, arg4, arg0, arg8, arg6);
 			return;
 		}
 		@Pc(32) int local32 = arg0;
@@ -43,7 +43,7 @@ public final class Static165 {
 			@Pc(156) int local156 = arg0 + (local136 + local140 + local144 >> 12);
 			@Pc(160) int local160 = local107 * local105;
 			@Pc(172) int local172 = arg8 + (local160 + local132 + local128 >> 12);
-			Static231.method3982(arg3, local172, local32, local42, local156);
+			TextureOp29.method3982(arg3, local172, local32, local42, local156);
 			local32 = local156;
 			local42 = local172;
 		}
@@ -71,7 +71,7 @@ public final class Static165 {
 
 	@OriginalMember(owner = "client!fl", name = "a", descriptor = "(IIIIII)V")
 	public static void method1568(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
-		TextureOp29SubOp4.method2576(TextureOp29SubOp4.anIntArrayArray10[arg0], arg1 - arg2, arg2 + arg1, arg4);
+		ArrayUtils.fillRange(TextureOp29SubOp4.anIntArrayArray10[arg0], arg1 - arg2, arg2 + arg1, arg4);
 		@Pc(17) int local17 = 0;
 		@Pc(21) int local21 = arg2 * arg2;
 		@Pc(25) int local25 = arg3 * arg3;
@@ -113,8 +113,8 @@ public final class Static165 {
 			local48 += -local98;
 			@Pc(179) int local179 = arg1 - local17;
 			local98 -= local60;
-			TextureOp29SubOp4.method2576(TextureOp29SubOp4.anIntArrayArray10[local109], local179, local160, arg4);
-			TextureOp29SubOp4.method2576(TextureOp29SubOp4.anIntArrayArray10[local105], local179, local160, arg4);
+			ArrayUtils.fillRange(TextureOp29SubOp4.anIntArrayArray10[local109], local179, local160, arg4);
+			ArrayUtils.fillRange(TextureOp29SubOp4.anIntArrayArray10[local105], local179, local160, arg4);
 		}
 	}
 
@@ -137,9 +137,9 @@ public final class Static165 {
 		@Pc(95) int local95;
 		@Pc(104) int local104;
 		if (arg4 >= TextureOp29.anInt5773 && TextureOp29.anInt2869 >= arg4) {
-			local95 = Static231.method1690(TextureOp29.anInt5063, arg2 + arg3, TextureOp29.anInt4164);
-			local104 = Static231.method1690(TextureOp29.anInt5063, arg3 - arg2, TextureOp29.anInt4164);
-			TextureOp29SubOp4.method2576(TextureOp29SubOp4.anIntArrayArray10[arg4], local104, local95, arg0);
+			local95 = IntUtils.clamp(TextureOp29.anInt5063, arg2 + arg3, TextureOp29.anInt4164);
+			local104 = IntUtils.clamp(TextureOp29.anInt5063, arg3 - arg2, TextureOp29.anInt4164);
+			ArrayUtils.fillRange(TextureOp29SubOp4.anIntArrayArray10[arg4], local104, local95, arg0);
 		}
 		@Pc(118) int local118 = local67 * (arg1 - 1);
 		while (local17 > 0) {
@@ -166,13 +166,13 @@ public final class Static165 {
 			local42 += -local118;
 			local104 = local17 + arg4;
 			if (TextureOp29.anInt5773 <= local104 && TextureOp29.anInt2869 >= local95) {
-				@Pc(213) int local213 = Static231.method1690(TextureOp29.anInt5063, local15 + arg3, TextureOp29.anInt4164);
-				@Pc(222) int local222 = Static231.method1690(TextureOp29.anInt5063, arg3 - local15, TextureOp29.anInt4164);
+				@Pc(213) int local213 = IntUtils.clamp(TextureOp29.anInt5063, local15 + arg3, TextureOp29.anInt4164);
+				@Pc(222) int local222 = IntUtils.clamp(TextureOp29.anInt5063, arg3 - local15, TextureOp29.anInt4164);
 				if (local95 >= TextureOp29.anInt5773) {
-					TextureOp29SubOp4.method2576(TextureOp29SubOp4.anIntArrayArray10[local95], local222, local213, arg0);
+					ArrayUtils.fillRange(TextureOp29SubOp4.anIntArrayArray10[local95], local222, local213, arg0);
 				}
 				if (TextureOp29.anInt2869 >= local104) {
-					TextureOp29SubOp4.method2576(TextureOp29SubOp4.anIntArrayArray10[local104], local222, local213, arg0);
+					ArrayUtils.fillRange(TextureOp29SubOp4.anIntArrayArray10[local104], local222, local213, arg0);
 				}
 			}
 			local118 -= local67;

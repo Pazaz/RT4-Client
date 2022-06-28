@@ -93,7 +93,7 @@ public final class Static164 {
 						local75[local90 + 1539] = local65;
 					}
 				}
-			} else if (!Static33.method867(arg0, local46, arg2, local28)) {
+			} else if (!MiniMap.renderScenery(arg0, local46, arg2, local28)) {
 				return false;
 			}
 		}
@@ -123,7 +123,7 @@ public final class Static164 {
 						local75[local90 + 1536 + 3] = local65;
 					}
 				}
-			} else if (!Static33.method867(arg0, local46, arg2, local28)) {
+			} else if (!MiniMap.renderScenery(arg0, local46, arg2, local28)) {
 				return false;
 			}
 		}
@@ -132,7 +132,7 @@ public final class Static164 {
 			local28 = (int) local14 >> 20 & 0x3;
 			local35 = (int) (local14 >>> 32) & Integer.MAX_VALUE;
 			@Pc(586) LocType local586 = LocTypeList.get(local35);
-			return local586.mapSceneId == -1 || Static33.method867(arg0, local586, arg2, local28);
+			return local586.mapSceneId == -1 || MiniMap.renderScenery(arg0, local586, arg2, local28);
 		}
 		return true;
 	}

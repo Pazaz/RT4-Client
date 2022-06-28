@@ -469,9 +469,45 @@ public class MiniMap {
 		if (InterfaceList.getServerActiveProperties(arg0).getTargetMask() == 0) {
 			return null;
 		} else if (arg0.targetVerb == null || arg0.targetVerb.trim().length() == 0) {
-			return Static121.qaOpTest ? aClass100_668 : null;
+			return Cheat.qaOpTest ? aClass100_668 : null;
 		} else {
 			return arg0.targetVerb;
 		}
+	}
+
+	@OriginalMember(owner = "client!cj", name = "a", descriptor = "(ILclient!pb;ZIIII)Z")
+	public static boolean renderScenery(@OriginalArg(0) int arg0, @OriginalArg(1) LocType arg1, @OriginalArg(5) int arg2, @OriginalArg(6) int arg3) {
+		@Pc(10) MsiType msiType = MsiTypeList.get(arg1.mapSceneId);
+		if (msiType.spriteId == -1) {
+			return true;
+		}
+		if (arg1.mapSceneRotated) {
+			@Pc(24) int local24 = arg3 + arg1.mapSceneAngleOffset;
+			arg3 = local24 & 0x3;
+		} else {
+			arg3 = 0;
+		}
+		@Pc(42) SoftwareIndexedSprite local42 = msiType.getSprite(arg3);
+		if (local42 == null) {
+			return false;
+		}
+		@Pc(49) int local49 = arg1.width;
+		@Pc(52) int local52 = arg1.length;
+		if ((arg3 & 0x1) == 1) {
+			local49 = arg1.length;
+			local52 = arg1.width;
+		}
+		@Pc(66) int local66 = local42.innerWidth;
+		@Pc(69) int local69 = local42.innerHeight;
+		if (msiType.aBoolean2) {
+			local69 = local52 * 4;
+			local66 = local49 * 4;
+		}
+		if (msiType.anInt11 == 0) {
+			local42.method1398(arg0 * 4 + 48, (-local52 + -arg2 + 104) * 4 + 48, local66, local69);
+		} else {
+			local42.method1390(arg0 * 4 + 48, (-local52 + -arg2 + 104) * 4 + 48, local66, local69, msiType.anInt11);
+		}
+		return true;
 	}
 }

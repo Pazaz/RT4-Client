@@ -73,7 +73,7 @@ public final class Static131 {
 			}
 			@Pc(393) int local393 = (arg2 << 7) + local27;
 			@Pc(400) int local400 = (arg4 << 7) + local35;
-			@Pc(408) int local408 = Static182.method3361(local27, arg4, arg1, arg2, local35);
+			@Pc(408) int local408 = Static1.method3361(local27, arg4, arg1, arg2, local35);
 			local7[local13] = arg6.method1553(arg7, local393, local408, local400, local115, local123, local107);
 		}
 		arg6.method1557(local7);

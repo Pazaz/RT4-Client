@@ -91,7 +91,7 @@ public final class Static38 {
 	@OriginalMember(owner = "client!cn", name = "a", descriptor = "(IIIIIIIIII)V")
 	public static void method962(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7, @OriginalArg(9) int arg8) {
 		if (arg8 == arg7 && arg2 == arg6 && arg4 == arg3 && arg0 == arg5) {
-			Static241.method4547(arg1, arg5, arg6, arg4, arg8);
+			TextureOp29SubOp4.method4547(arg1, arg5, arg6, arg4, arg8);
 			return;
 		}
 		@Pc(37) int local37 = arg6;
@@ -119,7 +119,7 @@ public final class Static38 {
 			@Pc(156) int local156 = local113 * local115;
 			@Pc(167) int local167 = (local152 + local144 + local140 >> 12) + arg8;
 			@Pc(177) int local177 = arg6 + (local156 + local136 + local148 >> 12);
-			Static241.method4547(arg1, local177, local37, local167, local39);
+			TextureOp29SubOp4.method4547(arg1, local177, local37, local167, local39);
 			local39 = local167;
 			local37 = local177;
 		}

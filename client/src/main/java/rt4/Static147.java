@@ -37,7 +37,7 @@ public final class Static147 {
 		for (local5 = 0; local5 < local3; local5++) {
 			local15 = arg0.anIntArray168[local5] - Static123.anInt3555;
 			local22 = arg0.anIntArray160[local5] - Static123.anInt3947;
-			local29 = arg0.anIntArray163[local5] - Static217.anInt4903;
+			local29 = arg0.anIntArray163[local5] - SceneGraph.anInt4903;
 			local39 = local29 * arg3 + local15 * arg4 >> 16;
 			@Pc(49) int local49 = local29 * arg4 - local15 * arg3 >> 16;
 			@Pc(61) int local61 = local22 * arg2 - local49 * arg1 >> 16;

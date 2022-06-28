@@ -11,14 +11,16 @@ public final class Static9 {
 
 	@OriginalMember(owner = "client!al", name = "r", descriptor = "Lclient!na;")
 	public static final JagString aClass100_35 = JagString.parse("showVideoAd");
+	@OriginalMember(owner = "client!th", name = "m", descriptor = "[Lclient!be;")
+	public static Component[] aClass13Array13;
 
 	@OriginalMember(owner = "client!al", name = "a", descriptor = "(Z)V")
 	public static void method182() {
-		Static241.aClass13Array13 = null;
+		aClass13Array13 = null;
 		Static87.method86(InterfaceList.topLevelInterface, 0, GameShell.canvasWidth, 0, -1, GameShell.canvasHeight, 0, 0);
-		if (Static241.aClass13Array13 != null) {
-			Static87.method1809(0, Static87.anInt3126, Static87.anInt4696, Static241.aClass13Array13, GameShell.canvasWidth, -1412584499, 0, GameShell.canvasHeight, Static40.aClass13_1.rectangle);
-			Static241.aClass13Array13 = null;
+		if (aClass13Array13 != null) {
+			Static87.method1809(0, Static87.anInt3126, Static87.anInt4696, aClass13Array13, GameShell.canvasWidth, -1412584499, 0, GameShell.canvasHeight, Static40.aClass13_1.rectangle);
+			aClass13Array13 = null;
 		}
 	}
 

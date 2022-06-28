@@ -137,7 +137,7 @@ public final class Static87 {
 					@Pc(114) int local114 = arg1 + component.y;
 					@Pc(117) int alpha = component.alpha;
 					@Pc(123) int local123 = component.x + arg2;
-					if (Static121.qaOpTest && (InterfaceList.getServerActiveProperties(component).events != 0 || component.type == 0) && alpha > 127) {
+					if (Cheat.qaOpTest && (InterfaceList.getServerActiveProperties(component).events != 0 || component.type == 0) && alpha > 127) {
 						alpha = 127;
 					}
 					@Pc(166) int local166;
@@ -146,10 +146,10 @@ public final class Static87 {
 						if (layer != 0xabcdabcd && !component.dragRenderBehavior) {
 							anInt4696 = arg2;
 							anInt3126 = arg1;
-							Static241.aClass13Array13 = components;
+							Static9.aClass13Array13 = components;
 							continue;
 						}
-						if (Static40.aBoolean172 && Static146.aBoolean174) {
+						if (Static40.aBoolean172 && InterfaceList.aBoolean174) {
 							local164 = Mouse.lastMouseY;
 							local166 = Mouse.lastMouseX;
 							local164 -= Static40.anInt4035;
@@ -206,7 +206,7 @@ public final class Static87 {
 						if (component.clientCode != 0) {
 							if (component.clientCode == 1337 || component.clientCode == 1403 && GlRenderer.enabled) {
 								InterfaceList.aClass13_26 = component;
-								Static126.anInt5574 = local114;
+								InterfaceList.anInt5574 = local114;
 								anInt2503 = local123;
 								ScriptRunner.method4326(component.height, component.clientCode == 1403, local123, component.width, local114);
 								if (GlRenderer.enabled) {
@@ -352,7 +352,7 @@ public final class Static87 {
 							}
 						}
 						if (!Static40.aBoolean108) {
-							if (component.type == 0 && component.noClickThrough && ScriptRunner.anInt3751 >= local166 && ScriptRunner.anInt1892 >= local164 && ScriptRunner.anInt3751 < local302 && local291 > ScriptRunner.anInt1892 && !Static121.qaOpTest) {
+							if (component.type == 0 && component.noClickThrough && ScriptRunner.anInt3751 >= local166 && ScriptRunner.anInt1892 >= local164 && ScriptRunner.anInt3751 < local302 && local291 > ScriptRunner.anInt1892 && !Cheat.qaOpTest) {
 								MiniMenu.size = 1;
 								MiniMenu.cursors[0] = MiniMenu.anInt1092;
 								MiniMenu.ops[0] = LocalizedText.CANCEL;
@@ -381,7 +381,7 @@ public final class Static87 {
 							}
 							@Pc(1186) ComponentPointer local1186 = (ComponentPointer) InterfaceList.openInterfaces.get(component.id);
 							if (local1186 != null) {
-								if (local1186.anInt5879 == 0 && !Static40.aBoolean108 && ScriptRunner.anInt3751 >= local166 && local164 <= ScriptRunner.anInt1892 && local302 > ScriptRunner.anInt3751 && ScriptRunner.anInt1892 < local291 && !Static121.qaOpTest) {
+								if (local1186.anInt5879 == 0 && !Static40.aBoolean108 && ScriptRunner.anInt3751 >= local166 && local164 <= ScriptRunner.anInt1892 && local302 > ScriptRunner.anInt3751 && ScriptRunner.anInt1892 < local291 && !Cheat.qaOpTest) {
 									MiniMenu.ops[0] = LocalizedText.CANCEL;
 									MiniMenu.size = 1;
 									MiniMenu.cursors[0] = MiniMenu.anInt1092;
@@ -397,7 +397,7 @@ public final class Static87 {
 								Rasteriser.prepare();
 							}
 						}
-						if (Static126.aBooleanArray116[rectangle] || Cheat.rectDebug > 1) {
+						if (InterfaceList.aBooleanArray116[rectangle] || Cheat.rectDebug > 1) {
 							if (component.type == 0 && !component.if3 && component.scrollMaxV > component.height) {
 								method1624(component.scrollY, component.scrollMaxV, component.width + local123, local114, component.height);
 							}
@@ -415,7 +415,7 @@ public final class Static87 {
 											}
 											if (component.objTypes[local270] > 0) {
 												objId = component.objTypes[local270] - 1;
-												if (arg0 < x + 32 && x < arg4 && arg6 < y + 32 && y < arg7 || component == InterfaceList.clickedInventoryComponent && Static4.mouseOverInventoryObjectIndex == local270) {
+												if (arg0 < x + 32 && x < arg4 && arg6 < y + 32 && y < arg7 || component == InterfaceList.clickedInventoryComponent && InterfaceList.mouseOverInventoryObjectIndex == local270) {
 													@Pc(1476) Sprite sprite;
 
 													if (MiniMenu.anInt5014 == 1 && MiniMenu.anInt4370 == local270 && component.id == MiniMap.anInt5062) {
@@ -430,7 +430,7 @@ public final class Static87 {
 
 													if (sprite == null) {
 														InterfaceList.redraw(component);
-													} else if (InterfaceList.clickedInventoryComponent == component && local270 == Static4.mouseOverInventoryObjectIndex) {
+													} else if (InterfaceList.clickedInventoryComponent == component && local270 == InterfaceList.mouseOverInventoryObjectIndex) {
 														int dragX = Mouse.lastMouseX - InterfaceList.clickedInventoryComponentX;
 														int dragY = Mouse.lastMouseY - InterfaceList.clickedInventoryComponentY;
 

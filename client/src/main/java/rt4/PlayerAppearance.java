@@ -67,6 +67,8 @@ public final class PlayerAppearance {
 
 	@OriginalMember(owner = "client!fm", name = "fb", descriptor = "[I")
 	public static final int[] anIntArray183 = new int[14];
+	@OriginalMember(owner = "client!th", name = "i", descriptor = "[I")
+	public static final int[] anIntArray520 = new int[14];
 
 	@OriginalMember(owner = "client!cj", name = "e", descriptor = "[[S")
 	public static short[][] destinationBodyColors;
@@ -416,7 +418,7 @@ public final class PlayerAppearance {
 					local381 = local858.frames[local374];
 					aClass3_Sub2_Sub7Array8[local353] = SeqTypeList.getAnimFrameset(local381 >>> 16);
 					local381 &= 0xFFFF;
-					Static241.anIntArray520[local353] = local381;
+					anIntArray520[local353] = local381;
 					if (aClass3_Sub2_Sub7Array8[local353] != null) {
 						local836 |= aClass3_Sub2_Sub7Array8[local353].isColorTransformed(local381);
 						local827 |= aClass3_Sub2_Sub7Array8[local353].isAlphaTransformed(local381);
@@ -512,7 +514,7 @@ public final class PlayerAppearance {
 		local598 = 1;
 		while (local481 < local346) {
 			if (aClass3_Sub2_Sub7Array8[local481] != null) {
-				local1284.method4565(aClass3_Sub2_Sub7Array8[local481], Static241.anIntArray520[local481], aClass3_Sub2_Sub7Array7[local481], anIntArray187[local481], anIntArray183[local481] - 1, anIntArray515[local481], local598, aClass144Array2[local481].aBoolean278, this.anIntArrayArray19[local481]);
+				local1284.method4565(aClass3_Sub2_Sub7Array8[local481], anIntArray520[local481], aClass3_Sub2_Sub7Array7[local481], anIntArray187[local481], anIntArray183[local481] - 1, anIntArray515[local481], local598, aClass144Array2[local481].aBoolean278, this.anIntArrayArray19[local481]);
 			}
 			local481++;
 			local598 <<= 0x1;

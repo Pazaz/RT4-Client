@@ -50,8 +50,8 @@ public class HintArrowManager {
 				for (local94 = 0; local94 < local68.vertexCount; local94++) {
 					local68.vertexY[local94] += SceneGraph.getTileHeight(Player.level, local68.vertexX[local94] + arg3, local68.vertexZ[local94] + arg1) - arg5;
 				}
-				local68.bounds.valid = false;
 				local68.vertexBuffer.valid = false;
+				local68.bounds.valid = false;
 			}
 		} else {
 			@Pc(142) SoftwareModel local142 = (SoftwareModel) model;
