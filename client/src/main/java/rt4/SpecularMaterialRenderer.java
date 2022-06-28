@@ -1,11 +1,12 @@
 package rt4;
 
-import java.nio.ByteBuffer;
-import com.jogamp.opengl.*;
+import com.jogamp.opengl.GL2;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+
+import java.nio.ByteBuffer;
 
 @OriginalClass("client!vm")
 public final class SpecularMaterialRenderer implements MaterialRenderer {
@@ -180,7 +181,7 @@ public final class SpecularMaterialRenderer implements MaterialRenderer {
 				for (@Pc(39) int local39 = 0; local39 < 64; local39++) {
 					@Pc(51) float local51 = (float) local39 * 2.0F / 64.0F - 1.0F;
 					@Pc(60) float local60 = (float) local34 * 2.0F / 64.0F - 1.0F;
-					@Pc(75) float local75 = (float) (1.0D / Math.sqrt((double) (local51 * local51 + local60 * local60 + 1.0F)));
+					@Pc(75) float local75 = (float) (1.0D / Math.sqrt(local51 * local51 + local60 * local60 + 1.0F));
 					@Pc(79) float local79 = local51 * local75;
 					@Pc(83) float local83 = local60 * local75;
 					@Pc(88) float local88;
@@ -201,9 +202,9 @@ public final class SpecularMaterialRenderer implements MaterialRenderer {
 					@Pc(137) int local137;
 					@Pc(145) int local145;
 					if (local88 > 0.0F) {
-						local129 = (int) (Math.pow((double) local88, 96.0D) * 255.0D);
-						local137 = (int) (Math.pow((double) local88, 36.0D) * 255.0D);
-						local145 = (int) (Math.pow((double) local88, 12.0D) * 255.0D);
+						local129 = (int) (Math.pow(local88, 96.0D) * 255.0D);
+						local137 = (int) (Math.pow(local88, 36.0D) * 255.0D);
+						local145 = (int) (Math.pow(local88, 12.0D) * 255.0D);
 					} else {
 						local145 = 0;
 						local137 = 0;

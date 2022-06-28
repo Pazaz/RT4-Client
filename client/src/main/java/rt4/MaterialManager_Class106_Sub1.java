@@ -39,7 +39,7 @@ public class MaterialManager_Class106_Sub1 extends MaterialManager_Class106 {
 		super(arg0, arg1, arg2, arg3, arg4);
 		this.anInt4134 = (int) (arg7 * 4096.0F);
 		this.anInt4139 = (int) (arg6 * 4096.0F);
-		this.anInt4129 = this.anInt4133 = (int) (Math.pow(0.5D, (double) -arg5) * 4096.0D);
+		this.anInt4129 = this.anInt4133 = (int) (Math.pow(0.5D, -arg5) * 4096.0D);
 	}
 
 	@OriginalMember(owner = "client!we", name = "a", descriptor = "(IB)V")

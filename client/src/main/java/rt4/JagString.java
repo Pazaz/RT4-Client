@@ -1,22 +1,21 @@
 package rt4;
 
-import java.applet.Applet;
-import java.awt.FontMetrics;
-import java.awt.Graphics;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
-
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
+import java.applet.Applet;
+import java.awt.*;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+
 @OriginalClass("client!na")
 public final class JagString implements StringInterface {
 
-    @OriginalMember(owner = "client!pa", name = "O", descriptor = "Lclient!na;")
-    public static final JagString EMPTY = parse("");
+	@OriginalMember(owner = "client!pa", name = "O", descriptor = "Lclient!na;")
+	public static final JagString EMPTY = parse("");
 	@OriginalMember(owner = "client!pi", name = "Q", descriptor = "Lclient!na;")
 	public static final JagString aClass100_853 = parse("null");
 	@OriginalMember(owner = "client!t", name = "C", descriptor = "Lclient!na;")
@@ -36,12 +35,12 @@ public final class JagString implements StringInterface {
 	@OriginalMember(owner = "client!bm", name = "p", descriptor = "Lclient!na;")
 	public static final JagString aClass100_133 = parse("(U1");
 	@OriginalMember(owner = "client!vk", name = "a", descriptor = "[I")
-	public static final int[] anIntArray471 = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 73, 74, 76, 78, 83, 84, 85, 86, 91, 92, 93, 94, 95, 97, 103, 104, 105, 106, 107, 108, 113, 114, 115, 116, 118, 119, 120, 121, 122, 123, 124, 125, 133, 134, 136, 138, 143, 144, 145, 146, 151, 152, 153, 154, 155, 157, 163, 164, 165, 166, 168, 169, 174, 175, 176, 177, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 97, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 157, 215, 216, 117, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 66, 66, 66, 66, 66, 66, 65, 75, 79, 79, 79, 79, 87, 87, 87, 87, 77, 96, 98, 98, 98, 98, 98, 250, 251, 109, 109, 109, 109, 117, 252, 167, 126, 126, 126, 126, 126, 126, 125, 135, 139, 139, 139, 139, 147, 147, 147, 147, 137, 156, 158, 158, 158, 158, 158, 253, 254, 170, 170, 170, 170, 178, 255, 178 };
+	public static final int[] anIntArray471 = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 73, 74, 76, 78, 83, 84, 85, 86, 91, 92, 93, 94, 95, 97, 103, 104, 105, 106, 107, 108, 113, 114, 115, 116, 118, 119, 120, 121, 122, 123, 124, 125, 133, 134, 136, 138, 143, 144, 145, 146, 151, 152, 153, 154, 155, 157, 163, 164, 165, 166, 168, 169, 174, 175, 176, 177, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 97, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 157, 215, 216, 117, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 66, 66, 66, 66, 66, 66, 65, 75, 79, 79, 79, 79, 87, 87, 87, 87, 77, 96, 98, 98, 98, 98, 98, 250, 251, 109, 109, 109, 109, 117, 252, 167, 126, 126, 126, 126, 126, 126, 125, 135, 139, 139, 139, 139, 147, 147, 147, 147, 137, 156, 158, 158, 158, 158, 158, 253, 254, 170, 170, 170, 170, 178, 255, 178};
 	@OriginalMember(owner = "client!sh", name = "e", descriptor = "Lclient!na;")
 	public static final JagString aClass100_967 = parse("");
 	@OriginalMember(owner = "client!li", name = "w", descriptor = "Lclient!sc;")
-    public static HashTable aClass133_13;
-    @OriginalMember(owner = "client!na", name = "T", descriptor = "[B")
+	public static HashTable aClass133_13;
+	@OriginalMember(owner = "client!na", name = "T", descriptor = "[B")
 	public byte[] chars;
 
 	@OriginalMember(owner = "client!na", name = "lb", descriptor = "I")
@@ -50,13 +49,13 @@ public final class JagString implements StringInterface {
 	@OriginalMember(owner = "client!na", name = "N", descriptor = "Z")
 	private boolean aBoolean193 = true;
 
-    @OriginalMember(owner = "client!ck", name = "a", descriptor = "([Lclient!na;B)Lclient!na;")
-    public static JagString concatenate(@OriginalArg(0) JagString[] arg0) {
-        if (arg0.length < 2) {
-            throw new IllegalArgumentException();
-        }
-        return method2355(0, arg0.length, arg0);
-    }
+	@OriginalMember(owner = "client!ck", name = "a", descriptor = "([Lclient!na;B)Lclient!na;")
+	public static JagString concatenate(@OriginalArg(0) JagString[] arg0) {
+		if (arg0.length < 2) {
+			throw new IllegalArgumentException();
+		}
+		return method2355(0, arg0.length, arg0);
+	}
 
 	@OriginalMember(owner = "client!jd", name = "a", descriptor = "(II[Lclient!na;I)Lclient!na;")
 	public static JagString method2355(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) JagString[] arg2) {
@@ -128,33 +127,33 @@ public final class JagString implements StringInterface {
 		}
 	}
 
-    @OriginalMember(owner = "client!cd", name = "a", descriptor = "(Ljava/lang/String;B)Lclient!na;")
-    public static JagString parse(@OriginalArg(0) String arg0) {
-        @Pc(6) byte[] local6 = arg0.getBytes();
-        @Pc(9) int local9 = local6.length;
-        @Pc(13) JagString local13 = new JagString();
-        @Pc(15) int local15 = 0;
-        local13.chars = new byte[local9];
-        while (local9 > local15) {
-            @Pc(29) int local29 = local6[local15++] & 0xFF;
-            if (local29 <= 45 && local29 >= 40) {
-                if (local15 >= local9) {
-                    break;
-                }
-                @Pc(51) int local51 = local6[local15++] & 0xFF;
-                local13.chars[local13.length++] = (byte) (local51 + (local29 + -40) * 43 - 48);
-            } else if (local29 != 0) {
-                local13.chars[local13.length++] = (byte) local29;
-            }
-        }
-        local13.method3156();
-        return local13.method3151();
-    }
+	@OriginalMember(owner = "client!cd", name = "a", descriptor = "(Ljava/lang/String;B)Lclient!na;")
+	public static JagString parse(@OriginalArg(0) String arg0) {
+		@Pc(6) byte[] local6 = arg0.getBytes();
+		@Pc(9) int local9 = local6.length;
+		@Pc(13) JagString local13 = new JagString();
+		@Pc(15) int local15 = 0;
+		local13.chars = new byte[local9];
+		while (local9 > local15) {
+			@Pc(29) int local29 = local6[local15++] & 0xFF;
+			if (local29 <= 45 && local29 >= 40) {
+				if (local15 >= local9) {
+					break;
+				}
+				@Pc(51) int local51 = local6[local15++] & 0xFF;
+				local13.chars[local13.length++] = (byte) (local51 + (local29 + -40) * 43 - 48);
+			} else if (local29 != 0) {
+				local13.chars[local13.length++] = (byte) local29;
+			}
+		}
+		local13.method3156();
+		return local13.method3151();
+	}
 
-    @OriginalMember(owner = "client!jj", name = "b", descriptor = "(BI)Lclient!na;")
-    public static JagString parseInt(@OriginalArg(1) int arg0) {
-        return parseInt(false, arg0);
-    }
+	@OriginalMember(owner = "client!jj", name = "b", descriptor = "(BI)Lclient!na;")
+	public static JagString parseInt(@OriginalArg(1) int arg0) {
+		return parseInt(false, arg0);
+	}
 
 	@OriginalMember(owner = "client!q", name = "a", descriptor = "(BZII)Lclient!na;")
 	public static JagString parseInt(@OriginalArg(1) boolean arg0, @OriginalArg(3) int arg1) {
@@ -191,33 +190,33 @@ public final class JagString implements StringInterface {
 		return local112;
 	}
 
-    @OriginalMember(owner = "client!an", name = "a", descriptor = "([BIII)Lclient!na;")
-    public static JagString decodeString(@OriginalArg(0) byte[] arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-        @Pc(7) JagString local7 = new JagString();
-        local7.chars = new byte[arg1];
-        local7.length = 0;
-        for (@Pc(22) int local22 = arg2; local22 < arg1 + arg2; local22++) {
-            if (arg0[local22] != 0) {
-                local7.chars[local7.length++] = arg0[local22];
-            }
-        }
-        return local7;
-    }
+	@OriginalMember(owner = "client!an", name = "a", descriptor = "([BIII)Lclient!na;")
+	public static JagString decodeString(@OriginalArg(0) byte[] arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
+		@Pc(7) JagString local7 = new JagString();
+		local7.chars = new byte[arg1];
+		local7.length = 0;
+		for (@Pc(22) int local22 = arg2; local22 < arg1 + arg2; local22++) {
+			if (arg0[local22] != 0) {
+				local7.chars[local7.length++] = arg0[local22];
+			}
+		}
+		return local7;
+	}
 
-    @OriginalMember(owner = "client!bg", name = "d", descriptor = "(II)Z")
-    public static boolean method530(@OriginalArg(0) int arg0) {
-        return arg0 == 198 || arg0 == 230 || arg0 == 156 || arg0 == 140 || arg0 == 223;
-    }
+	@OriginalMember(owner = "client!bg", name = "d", descriptor = "(II)Z")
+	public static boolean method530(@OriginalArg(0) int arg0) {
+		return arg0 == 198 || arg0 == 230 || arg0 == 156 || arg0 == 140 || arg0 == 223;
+	}
 
-    @OriginalMember(owner = "client!ih", name = "a", descriptor = "(ZII)Lclient!na;")
-    public static JagString parseIntTrue(@OriginalArg(2) int arg0) {
-        return parseInt(true, arg0);
-    }
+	@OriginalMember(owner = "client!ih", name = "a", descriptor = "(ZII)Lclient!na;")
+	public static JagString parseIntTrue(@OriginalArg(2) int arg0) {
+		return parseInt(true, arg0);
+	}
 
-    @OriginalMember(owner = "client!oi", name = "a", descriptor = "(II)Lclient!na;")
-    public static JagString formatIp(@OriginalArg(0) int arg0) {
-        return concatenate(new JagString[] { parseInt(arg0 >> 24 & 0xFF), aClass100_994, parseInt(arg0 >> 16 & 0xFF), aClass100_994, parseInt(arg0 >> 8 & 0xFF), aClass100_994, parseInt(arg0 & 0xFF) });
-    }
+	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(II)Lclient!na;")
+	public static JagString formatIp(@OriginalArg(0) int arg0) {
+		return concatenate(new JagString[]{parseInt(arg0 >> 24 & 0xFF), aClass100_994, parseInt(arg0 >> 16 & 0xFF), aClass100_994, parseInt(arg0 >> 8 & 0xFF), aClass100_994, parseInt(arg0 & 0xFF)});
+	}
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(Lclient!be;Lclient!na;I)Lclient!na;")
 	public static JagString method2465(@OriginalArg(0) Component arg0, @OriginalArg(1) JagString arg1) {
@@ -252,165 +251,165 @@ public final class JagString implements StringInterface {
 															local246 = decodeString(local265, local265.length, 0);
 														}
 													}
-													arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), local246, arg1.substring(local14 + 4) });
+													arg1 = concatenate(new JagString[]{arg1.substring(local14, 0), local246, arg1.substring(local14 + 4)});
 												}
 											}
-											arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), StringUtils.method4510(method3212(4, arg0)), arg1.substring(local14 + 2) });
+											arg1 = concatenate(new JagString[]{arg1.substring(local14, 0), StringUtils.method4510(method3212(4, arg0)), arg1.substring(local14 + 2)});
 										}
 									}
-									arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), StringUtils.method4510(method3212(3, arg0)), arg1.substring(local14 + 2) });
+									arg1 = concatenate(new JagString[]{arg1.substring(local14, 0), StringUtils.method4510(method3212(3, arg0)), arg1.substring(local14 + 2)});
 								}
 							}
-							arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), StringUtils.method4510(method3212(2, arg0)), arg1.substring(local14 + 2) });
+							arg1 = concatenate(new JagString[]{arg1.substring(local14, 0), StringUtils.method4510(method3212(2, arg0)), arg1.substring(local14 + 2)});
 						}
 					}
-					arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), StringUtils.method4510(method3212(1, arg0)), arg1.substring(local14 + 2) });
+					arg1 = concatenate(new JagString[]{arg1.substring(local14, 0), StringUtils.method4510(method3212(1, arg0)), arg1.substring(local14 + 2)});
 				}
 			}
-			arg1 = concatenate(new JagString[] { arg1.substring(local14, 0), StringUtils.method4510(method3212(0, arg0)), arg1.substring(local14 + 2) });
+			arg1 = concatenate(new JagString[]{arg1.substring(local14, 0), StringUtils.method4510(method3212(0, arg0)), arg1.substring(local14 + 2)});
 		}
 	}
 
-    @OriginalMember(owner = "client!we", name = "a", descriptor = "(BILclient!be;)I")
-    public static int method3212(@OriginalArg(1) int arg0, @OriginalArg(2) Component arg1) {
-        if (arg1.anIntArrayArray4 == null || arg0 >= arg1.anIntArrayArray4.length) {
-            return -2;
-        }
-        try {
-            @Pc(33) int[] local33 = arg1.anIntArrayArray4[arg0];
-            @Pc(35) byte local35 = 0;
-            @Pc(37) int local37 = 0;
-            @Pc(39) int local39 = 0;
-            while (true) {
-                @Pc(41) int local41 = 0;
-                @Pc(46) int local46 = local33[local39++];
-                @Pc(48) byte local48 = 0;
-                if (local46 == 0) {
-                    return local37;
-                }
-                if (local46 == 15) {
-                    local48 = 1;
-                }
-                if (local46 == 16) {
-                    local48 = 2;
-                }
-                if (local46 == 1) {
-                    local41 = PlayerSkillXpTable.boostedLevels[local33[local39++]];
-                }
-                if (local46 == 17) {
-                    local48 = 3;
-                }
-                if (local46 == 2) {
-                    local41 = PlayerSkillXpTable.baseLevels[local33[local39++]];
-                }
-                if (local46 == 3) {
-                    local41 = PlayerSkillXpTable.experience[local33[local39++]];
-                }
-                @Pc(124) int local124;
-                @Pc(135) Component local135;
-                @Pc(140) int local140;
-                @Pc(152) int local152;
-                if (local46 == 4) {
-                    local124 = local33[local39++] << 16;
-                    @Pc(131) int local131 = local124 + local33[local39++];
-                    local135 = InterfaceList.getComponent(local131);
-                    local140 = local33[local39++];
-                    if (local140 != -1 && (!ObjTypeList.get(local140).members || LoginManager.mapMembers)) {
-                        for (local152 = 0; local152 < local135.objTypes.length; local152++) {
-                            if (local140 + 1 == local135.objTypes[local152]) {
-                                local41 += local135.objCounts[local152];
-                            }
-                        }
-                    }
-                }
-                if (local46 == 5) {
-                    local41 = VarpDomain.activeVarps[local33[local39++]];
-                }
-                if (local46 == 6) {
-                    local41 = PlayerSkillXpTable.xpLevelLookup[PlayerSkillXpTable.baseLevels[local33[local39++]] - 1];
-                }
-                if (local46 == 7) {
-                    local41 = VarpDomain.activeVarps[local33[local39++]] * 100 / 46875;
-                }
-                if (local46 == 8) {
-                    local41 = PlayerList.self.combatLevel;
-                }
-                if (local46 == 9) {
-                    for (local124 = 0; local124 < 25; local124++) {
-                        if (Static182.aBooleanArray97[local124]) {
-                            local41 += PlayerSkillXpTable.baseLevels[local124];
-                        }
-                    }
-                }
-                if (local46 == 10) {
-                    local124 = local33[local39++] << 16;
-                    local124 += local33[local39++];
-                    local135 = InterfaceList.getComponent(local124);
-                    local140 = local33[local39++];
-                    if (local140 != -1 && (!ObjTypeList.get(local140).members || LoginManager.mapMembers)) {
-                        for (local152 = 0; local152 < local135.objTypes.length; local152++) {
-                            if (local135.objTypes[local152] == local140 + 1) {
-                                local41 = 999999999;
-                                break;
-                            }
-                        }
-                    }
-                }
-                if (local46 == 11) {
-                    local41 = Player.runEnergy;
-                }
-                if (local46 == 12) {
-                    local41 = Player.weight;
-                }
-                if (local46 == 13) {
-                    local124 = VarpDomain.activeVarps[local33[local39++]];
-                    @Pc(353) int local353 = local33[local39++];
-                    local41 = (0x1 << local353 & local124) == 0 ? 0 : 1;
-                }
-                if (local46 == 14) {
-                    local124 = local33[local39++];
-                    local41 = VarpDomain.getVarbit(local124);
-                }
-                if (local46 == 18) {
-                    local41 = (PlayerList.self.xFine >> 7) + Camera.originX;
-                }
-                if (local46 == 19) {
-                    local41 = (PlayerList.self.zFine >> 7) + Camera.originZ;
-                }
-                if (local46 == 20) {
-                    local41 = local33[local39++];
-                }
-                if (local48 == 0) {
-                    if (local35 == 0) {
-                        local37 += local41;
-                    }
-                    if (local35 == 1) {
-                        local37 -= local41;
-                    }
-                    if (local35 == 2 && local41 != 0) {
-                        local37 /= local41;
-                    }
-                    if (local35 == 3) {
-                        local37 *= local41;
-                    }
-                    local35 = 0;
-                } else {
-                    local35 = local48;
-                }
-            }
-        } catch (@Pc(464) Exception local464) {
-            return -1;
-        }
-    }
+	@OriginalMember(owner = "client!we", name = "a", descriptor = "(BILclient!be;)I")
+	public static int method3212(@OriginalArg(1) int arg0, @OriginalArg(2) Component arg1) {
+		if (arg1.anIntArrayArray4 == null || arg0 >= arg1.anIntArrayArray4.length) {
+			return -2;
+		}
+		try {
+			@Pc(33) int[] local33 = arg1.anIntArrayArray4[arg0];
+			@Pc(35) byte local35 = 0;
+			@Pc(37) int local37 = 0;
+			@Pc(39) int local39 = 0;
+			while (true) {
+				@Pc(41) int local41 = 0;
+				@Pc(46) int local46 = local33[local39++];
+				@Pc(48) byte local48 = 0;
+				if (local46 == 0) {
+					return local37;
+				}
+				if (local46 == 15) {
+					local48 = 1;
+				}
+				if (local46 == 16) {
+					local48 = 2;
+				}
+				if (local46 == 1) {
+					local41 = PlayerSkillXpTable.boostedLevels[local33[local39++]];
+				}
+				if (local46 == 17) {
+					local48 = 3;
+				}
+				if (local46 == 2) {
+					local41 = PlayerSkillXpTable.baseLevels[local33[local39++]];
+				}
+				if (local46 == 3) {
+					local41 = PlayerSkillXpTable.experience[local33[local39++]];
+				}
+				@Pc(124) int local124;
+				@Pc(135) Component local135;
+				@Pc(140) int local140;
+				@Pc(152) int local152;
+				if (local46 == 4) {
+					local124 = local33[local39++] << 16;
+					@Pc(131) int local131 = local124 + local33[local39++];
+					local135 = InterfaceList.getComponent(local131);
+					local140 = local33[local39++];
+					if (local140 != -1 && (!ObjTypeList.get(local140).members || LoginManager.mapMembers)) {
+						for (local152 = 0; local152 < local135.objTypes.length; local152++) {
+							if (local140 + 1 == local135.objTypes[local152]) {
+								local41 += local135.objCounts[local152];
+							}
+						}
+					}
+				}
+				if (local46 == 5) {
+					local41 = VarpDomain.activeVarps[local33[local39++]];
+				}
+				if (local46 == 6) {
+					local41 = PlayerSkillXpTable.xpLevelLookup[PlayerSkillXpTable.baseLevels[local33[local39++]] - 1];
+				}
+				if (local46 == 7) {
+					local41 = VarpDomain.activeVarps[local33[local39++]] * 100 / 46875;
+				}
+				if (local46 == 8) {
+					local41 = PlayerList.self.combatLevel;
+				}
+				if (local46 == 9) {
+					for (local124 = 0; local124 < 25; local124++) {
+						if (Static182.aBooleanArray97[local124]) {
+							local41 += PlayerSkillXpTable.baseLevels[local124];
+						}
+					}
+				}
+				if (local46 == 10) {
+					local124 = local33[local39++] << 16;
+					local124 += local33[local39++];
+					local135 = InterfaceList.getComponent(local124);
+					local140 = local33[local39++];
+					if (local140 != -1 && (!ObjTypeList.get(local140).members || LoginManager.mapMembers)) {
+						for (local152 = 0; local152 < local135.objTypes.length; local152++) {
+							if (local135.objTypes[local152] == local140 + 1) {
+								local41 = 999999999;
+								break;
+							}
+						}
+					}
+				}
+				if (local46 == 11) {
+					local41 = Player.runEnergy;
+				}
+				if (local46 == 12) {
+					local41 = Player.weight;
+				}
+				if (local46 == 13) {
+					local124 = VarpDomain.activeVarps[local33[local39++]];
+					@Pc(353) int local353 = local33[local39++];
+					local41 = (0x1 << local353 & local124) == 0 ? 0 : 1;
+				}
+				if (local46 == 14) {
+					local124 = local33[local39++];
+					local41 = VarpDomain.getVarbit(local124);
+				}
+				if (local46 == 18) {
+					local41 = (PlayerList.self.xFine >> 7) + Camera.originX;
+				}
+				if (local46 == 19) {
+					local41 = (PlayerList.self.zFine >> 7) + Camera.originZ;
+				}
+				if (local46 == 20) {
+					local41 = local33[local39++];
+				}
+				if (local48 == 0) {
+					if (local35 == 0) {
+						local37 += local41;
+					}
+					if (local35 == 1) {
+						local37 -= local41;
+					}
+					if (local35 == 2 && local41 != 0) {
+						local37 /= local41;
+					}
+					if (local35 == 3) {
+						local37 *= local41;
+					}
+					local35 = 0;
+				} else {
+					local35 = local48;
+				}
+			}
+		} catch (@Pc(464) Exception local464) {
+			return -1;
+		}
+	}
 
-    @OriginalMember(owner = "client!nb", name = "a", descriptor = "(II)Lclient!na;")
-    public static JagString getNbsp() {
-        @Pc(21) JagString str = new JagString();
-        str.length = 1;
-        str.chars = new byte[1];
-        str.chars[0] = -96; // 0xA0 - NBSP
-        return str;
-    }
+	@OriginalMember(owner = "client!nb", name = "a", descriptor = "(II)Lclient!na;")
+	public static JagString getNbsp() {
+		@Pc(21) JagString str = new JagString();
+		str.length = 1;
+		str.chars = new byte[1];
+		str.chars[0] = -96; // 0xA0 - NBSP
+		return str;
+	}
 
 	@OriginalMember(owner = "client!sj", name = "a", descriptor = "(Ljava/lang/String;I)Lclient!na;")
 	public static JagString method3952(@OriginalArg(0) String arg0) {

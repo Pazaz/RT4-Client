@@ -5,10 +5,10 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static7 {
 
-    @OriginalMember(owner = "client!ah", name = "t", descriptor = "I")
+	@OriginalMember(owner = "client!ah", name = "t", descriptor = "I")
 	public static int anInt986;
 
-    @OriginalMember(owner = "client!ah", name = "p", descriptor = "Lclient!ih;")
+	@OriginalMember(owner = "client!ah", name = "p", descriptor = "Lclient!ih;")
 	public static final LinkedList aClass69_32 = new LinkedList();
 
 	@OriginalMember(owner = "client!ah", name = "b", descriptor = "(I)V")

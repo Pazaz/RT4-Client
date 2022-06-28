@@ -47,7 +47,7 @@ public final class TextureOp33 extends TextureOp {
 				@Pc(98) int local98 = local90 >> 12;
 				@Pc(104) int local104 = local94 * local94 >> 12;
 				@Pc(110) int local110 = local98 * local98 >> 12;
-				@Pc(124) int local124 = (int) (Math.sqrt((double) ((float) (local110 + local104 + 4096) / 4096.0F)) * 4096.0D);
+				@Pc(124) int local124 = (int) (Math.sqrt((float) (local110 + local104 + 4096) / 4096.0F) * 4096.0D);
 				@Pc(131) int local131;
 				@Pc(133) int local133;
 				@Pc(129) int local129;

@@ -178,7 +178,8 @@ public final class Song extends Node {
 		@Pc(542) int local542 = 0;
 		@Pc(545) int[] values = new int[128];
 		controller = 0;
-		track: for (@Pc(549) int local549 = 0; local549 < tracks; local549++) {
+		track:
+		for (@Pc(549) int local549 = 0; local549 < tracks; local549++) {
 			out.p4(1297379947);
 			out.offset += 4;
 			@Pc(565) int local565 = out.offset;
@@ -299,13 +300,13 @@ public final class Song extends Node {
 		}
 	}
 
-    @OriginalMember(owner = "client!rf", name = "a", descriptor = "(Lclient!ve;II)Lclient!rf;")
-    public static Song create(@OriginalArg(0) Js5 archive, @OriginalArg(1) int group, @OriginalArg(2) int file) {
-        @Pc(5) byte[] bytes = archive.fetchFile(group, file);
-        return bytes == null ? null : new Song(new Buffer(bytes));
-    }
+	@OriginalMember(owner = "client!rf", name = "a", descriptor = "(Lclient!ve;II)Lclient!rf;")
+	public static Song create(@OriginalArg(0) Js5 archive, @OriginalArg(1) int group, @OriginalArg(2) int file) {
+		@Pc(5) byte[] bytes = archive.fetchFile(group, file);
+		return bytes == null ? null : new Song(new Buffer(bytes));
+	}
 
-    @OriginalMember(owner = "client!rf", name = "a", descriptor = "()V")
+	@OriginalMember(owner = "client!rf", name = "a", descriptor = "()V")
 	public final void releasePrograms() {
 		this.programs = null;
 	}
@@ -327,7 +328,8 @@ public final class Song extends Node {
 			song.addDeltaTime(track);
 			song.saveTrackPosition(track);
 		}
-		label53: do {
+		label53:
+		do {
 			while (true) {
 				track = song.getNextTrack();
 				@Pc(56) int local56 = song.times[track];
@@ -365,10 +367,10 @@ public final class Song extends Node {
 						local104 = event >> 16 & 0x7F;
 						if (local104 > 0) {
 							@Pc(179) int program = programs[controller];
-							@Pc(187) ByteArrayNode node = (ByteArrayNode) this.programs.get((long) program);
+							@Pc(187) ByteArrayNode node = (ByteArrayNode) this.programs.get(program);
 							if (node == null) {
 								node = new ByteArrayNode(new byte[128]);
-								this.programs.put(node, (long) program);
+								this.programs.put(node, program);
 							}
 							node.value[local98] = 1;
 						}

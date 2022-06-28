@@ -101,7 +101,7 @@ public final class SpotAnimType {
 
 	@OriginalMember(owner = "client!eg", name = "a", descriptor = "(IBII)Lclient!ak;")
 	public final Model constructModel(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-		@Pc(13) Model local13 = (Model) SpotAnimTypeList.models.get((long) this.id);
+		@Pc(13) Model local13 = (Model) SpotAnimTypeList.models.get(this.id);
 		if (local13 == null) {
 			@Pc(28) RawModel local28 = RawModel.create(SpotAnimTypeList.modelsArchive, this.modelId);
 			if (local28 == null) {
@@ -119,7 +119,7 @@ public final class SpotAnimType {
 				}
 			}
 			local13 = local28.createModel(this.anInt1749 + 64, this.anInt1748 + 850, -30, -50, -30);
-			SpotAnimTypeList.models.put(local13, (long) this.id);
+			SpotAnimTypeList.models.put(local13, this.id);
 		}
 		@Pc(118) Model local118;
 		if (this.seqId == -1 || arg1 == -1) {

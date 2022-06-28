@@ -1,10 +1,11 @@
 package rt4;
 
-import java.util.Random;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+
+import java.util.Random;
 
 @OriginalClass("client!rk")
 public abstract class Font extends SecondaryNode {
@@ -198,7 +199,7 @@ public abstract class Font extends SecondaryNode {
 		return -local37;
 	}
 
-    @OriginalMember(owner = "client!ce", name = "a", descriptor = "(I[B)Lclient!rk;")
+	@OriginalMember(owner = "client!ce", name = "a", descriptor = "(I[B)Lclient!rk;")
 	public static Font method799(@OriginalArg(1) byte[] arg0) {
 		if (arg0 == null) {
 			return null;
@@ -329,7 +330,7 @@ public abstract class Font extends SecondaryNode {
 
 	@OriginalMember(owner = "client!rk", name = "b", descriptor = "(Lclient!na;I)I")
 	public final int getMaxLineWidth(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1) {
-		@Pc(10) int local10 = this.splitParagraph(arg0, new int[] { arg1 }, lines);
+		@Pc(10) int local10 = this.splitParagraph(arg0, new int[]{arg1}, lines);
 		@Pc(12) int local12 = 0;
 		for (@Pc(14) int local14 = 0; local14 < local10; local14++) {
 			@Pc(23) int local23 = this.getStringWidth(lines[local14]);
@@ -411,7 +412,7 @@ public abstract class Font extends SecondaryNode {
 		if (arg0 == null) {
 			return 0;
 		}
-		arg3.setSeed((long) arg4);
+		arg3.setSeed(arg4);
 		this.setColors(16777215, 0, (arg3.nextInt() & 0x1F) + 192);
 		@Pc(21) int local21 = arg0.length();
 		@Pc(24) int[] local24 = new int[local21];
@@ -428,7 +429,7 @@ public abstract class Font extends SecondaryNode {
 
 	@OriginalMember(owner = "client!rk", name = "c", descriptor = "(Lclient!na;I)I")
 	public final int getParagraphLineCount(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1) {
-		return this.splitParagraph(arg0, new int[] { arg1 }, lines);
+		return this.splitParagraph(arg0, new int[]{arg1}, lines);
 	}
 
 	@OriginalMember(owner = "client!rk", name = "b", descriptor = "(Lclient!na;)V")
@@ -670,7 +671,7 @@ public abstract class Font extends SecondaryNode {
 		if (arg9 == 0) {
 			arg9 = this.lineHeight;
 		}
-		@Pc(20) int[] local20 = new int[] { arg3 };
+		@Pc(20) int[] local20 = new int[]{arg3};
 		if (arg4 < this.paragraphTopPadding + this.paragraphBottomPadding + arg9 && arg4 < arg9 + arg9) {
 			local20 = null;
 		}
@@ -850,7 +851,7 @@ public abstract class Font extends SecondaryNode {
 		if (arg0 == null) {
 			return 0;
 		}
-		arg9.setSeed((long) arg10);
+		arg9.setSeed(arg10);
 		this.setColors(arg5, arg6, (arg9.nextInt() & 0x1F) + 192);
 		@Pc(21) int local21 = arg0.length();
 		@Pc(24) int[] local24 = new int[local21];

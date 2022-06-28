@@ -385,19 +385,19 @@ public final class MidiInstrument extends Node {
 		}
 	}
 
-    @OriginalMember(owner = "client!sa", name = "c", descriptor = "(III)I")
+	@OriginalMember(owner = "client!sa", name = "c", descriptor = "(III)I")
 	public static int method3825(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
 		@Pc(12) int local12 = arg0 >>> 31;
 		return (arg0 + local12) / arg1 - local12;
 	}
 
-    @OriginalMember(owner = "client!jb", name = "a", descriptor = "(ILclient!ve;I)Lclient!jk;")
+	@OriginalMember(owner = "client!jb", name = "a", descriptor = "(ILclient!ve;I)Lclient!jk;")
 	public static MidiInstrument method2320(@OriginalArg(1) Js5 arg0, @OriginalArg(2) int arg1) {
 		@Pc(9) byte[] local9 = arg0.fetchFile(arg1);
 		return local9 == null ? null : new MidiInstrument(local9);
 	}
 
-    @OriginalMember(owner = "client!jk", name = "d", descriptor = "(B)V")
+	@OriginalMember(owner = "client!jk", name = "d", descriptor = "(B)V")
 	public final void method2432() {
 		this.anIntArray289 = null;
 	}

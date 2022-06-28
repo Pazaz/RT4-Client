@@ -6,8 +6,8 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static87 {
 
-    @OriginalMember(owner = "client!bj", name = "V", descriptor = "I")
-    public static final int anInt671 = 0x332d25;
+	@OriginalMember(owner = "client!bj", name = "V", descriptor = "I")
+	public static final int anInt671 = 0x332d25;
 
 	@OriginalMember(owner = "client!rl", name = "Z", descriptor = "I")
 	public static final int anInt4938 = 0x766654;
@@ -17,30 +17,30 @@ public final class Static87 {
 
 	@OriginalMember(owner = "client!oj", name = "p", descriptor = "I")
 	public static final int anInt4306 = 0x23201b;
-    @OriginalMember(owner = "client!wa", name = "pb", descriptor = "Lclient!na;")
-    public static final JagString aClass100_556 = JagString.parse("<br>");
+	@OriginalMember(owner = "client!wa", name = "pb", descriptor = "Lclient!na;")
+	public static final JagString aClass100_556 = JagString.parse("<br>");
 	@OriginalMember(owner = "client!ed", name = "H", descriptor = "Lclient!na;")
 	public static final JagString aClass100_375 = JagString.parse("<)4col> x");
-    @OriginalMember(owner = "client!bd", name = "b", descriptor = "Lclient!na;")
+	@OriginalMember(owner = "client!bd", name = "b", descriptor = "Lclient!na;")
 	public static final JagString aClass100_80 = JagString.parse("(U(Y");
 
-    @OriginalMember(owner = "client!gn", name = "d", descriptor = "Z")
+	@OriginalMember(owner = "client!gn", name = "d", descriptor = "Z")
 	public static boolean aBoolean130 = false;
 
 	@OriginalMember(owner = "client!gn", name = "v", descriptor = "Lclient!na;")
 	public static final JagString NULL = JagString.parse("null");
 	@OriginalMember(owner = "client!k", name = "j", descriptor = "I")
 	public static int anInt3126;
-    @OriginalMember(owner = "client!ld", name = "c", descriptor = "I")
-    public static int anInt3484 = -1;
-    @OriginalMember(owner = "client!qf", name = "X", descriptor = "Lclient!be;")
-    public static Component aClass13_13 = null;
-    @OriginalMember(owner = "client!gf", name = "K", descriptor = "I")
-    public static int anInt4696;
-    @OriginalMember(owner = "client!hi", name = "a", descriptor = "I")
-    public static int anInt2503 = -1;
+	@OriginalMember(owner = "client!ld", name = "c", descriptor = "I")
+	public static int anInt3484 = -1;
+	@OriginalMember(owner = "client!qf", name = "X", descriptor = "Lclient!be;")
+	public static Component aClass13_13 = null;
+	@OriginalMember(owner = "client!gf", name = "K", descriptor = "I")
+	public static int anInt4696;
+	@OriginalMember(owner = "client!hi", name = "a", descriptor = "I")
+	public static int anInt2503 = -1;
 
-    @OriginalMember(owner = "client!gn", name = "a", descriptor = "(Z)Z")
+	@OriginalMember(owner = "client!gn", name = "a", descriptor = "(Z)Z")
 	public static boolean showVideoAd() {
 		if (client.objectTag) {
 			try {
@@ -234,7 +234,7 @@ public final class Static87 {
 									continue;
 								}
 								local276 -= component.height / 2;
-								memory = (int)Camera.yawTarget + MiniMap.anInt1814 & 0x7FF;
+								memory = (int) Camera.yawTarget + MiniMap.anInt1814 & 0x7FF;
 								local270 -= component.width / 2;
 								color = MathUtils.sin[memory];
 								cardMemory = MathUtils.cos[memory];
@@ -306,7 +306,7 @@ public final class Static87 {
 								}
 								local270 = component.width + local123;
 								local276 = local114 + 15;
-								Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Cheat.DEBUG_FPS2, JagString.parseInt((int)GameShell.framesPerSecond) }), local270, local276, 16776960, 0);
+								Fonts.p12Full.renderRight(JagString.concatenate(new JagString[]{Cheat.DEBUG_FPS2, JagString.parseInt((int) GameShell.framesPerSecond)}), local270, local276, 16776960, 0);
 								local276 += 15;
 								@Pc(795) Runtime runtime = Runtime.getRuntime();
 								memory = (int) ((runtime.totalMemory() - runtime.freeMemory()) / 1024L / 1024L);
@@ -314,7 +314,7 @@ public final class Static87 {
 								if (memory > 128) {
 									color = 16711680;
 								}
-								Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Cheat.DEBUG_MEM, JagString.parseInt(memory), Cheat.DEBUG_MEM_UNIT}), local270, local276, color, 0);
+								Fonts.p12Full.renderRight(JagString.concatenate(new JagString[]{Cheat.DEBUG_MEM, JagString.parseInt(memory), Cheat.DEBUG_MEM_UNIT}), local270, local276, color, 0);
 								local276 += 15;
 								if (GlRenderer.enabled) {
 									color = 16776960;
@@ -322,7 +322,7 @@ public final class Static87 {
 									if (cardMemory > 64) {
 										color = 16711680;
 									}
-									Fonts.p12Full.renderRight(JagString.concatenate(new JagString[] { Cheat.DEBUG_CARD, JagString.parseInt(cardMemory), Cheat.DEBUG_MEM_UNIT}), local270, local276, color, 0);
+									Fonts.p12Full.renderRight(JagString.concatenate(new JagString[]{Cheat.DEBUG_CARD, JagString.parseInt(cardMemory), Cheat.DEBUG_MEM_UNIT}), local270, local276, color, 0);
 									local276 += 15;
 								}
 								cardMemory = 0;
@@ -335,7 +335,7 @@ public final class Static87 {
 								}
 								local571 = local556 * 10000 / cardMemory;
 								local563 = objId * 100 / cardMemory;
-								@Pc(968) JagString local968 = JagString.concatenate(new JagString[] { Cheat.DEBUG_CAHE, StringUtils.formatNumber(0, true, 2, (long) local571), Static147.aClass100_672, JagString.parseInt(local563), aClass100_80 });
+								@Pc(968) JagString local968 = JagString.concatenate(new JagString[]{Cheat.DEBUG_CAHE, StringUtils.formatNumber(0, true, 2, local571), Static147.aClass100_672, JagString.parseInt(local563), aClass100_80});
 								Fonts.p11Full.renderRight(local968, local270, local276, 16776960, 0);
 								local276 += 12;
 								InterfaceList.aBooleanArray100[rectangle] = true;
@@ -377,7 +377,7 @@ public final class Static87 {
 							if (component.createdComponents != null) {
 								method1809(local166, local114 - component.scrollY, -component.scrollX + local123, component.createdComponents, local302, component.id, local164, local291, rectangle);
 							}
-							@Pc(1186) ComponentPointer local1186 = (ComponentPointer) InterfaceList.openInterfaces.get((long) component.id);
+							@Pc(1186) ComponentPointer local1186 = (ComponentPointer) InterfaceList.openInterfaces.get(component.id);
 							if (local1186 != null) {
 								if (local1186.anInt5879 == 0 && !Static40.aBoolean108 && ScriptRunner.anInt3751 >= local166 && local164 <= ScriptRunner.anInt1892 && local302 > ScriptRunner.anInt3751 && ScriptRunner.anInt1892 < local291 && !Static121.qaOpTest) {
 									MiniMenu.ops[0] = LocalizedText.CANCEL;
@@ -574,7 +574,7 @@ public final class Static87 {
 													local1934 = MiniMenu.NULL;
 												}
 												if ((local1989.stackable == 1 || component.objCount != 1) && component.objCount != -1) {
-													local1934 = JagString.concatenate(new JagString[] { MiniMenu.aClass100_32, local1934, aClass100_375, Static70.method1548(component.objCount) });
+													local1934 = JagString.concatenate(new JagString[]{MiniMenu.aClass100_32, local1934, aClass100_375, Static70.method1548(component.objCount)});
 												}
 											}
 											if (Static44.aClass13_10 == component) {
@@ -753,7 +753,7 @@ public final class Static87 {
 														GlRenderer.method4182(local556, objId, component.modelZoom, component.aShort11, color, cardMemory);
 													} else {
 														GlRenderer.method4148(local556, objId, color, cardMemory);
-														GlRenderer.method4152((float) component.aShort10, (float) component.aShort11 * 1.5F);
+														GlRenderer.method4152(component.aShort10, (float) component.aShort11 * 1.5F);
 													}
 													GlRenderer.restoreLighting();
 													GlRenderer.setDepthTestEnabled(true);
@@ -808,9 +808,9 @@ public final class Static87 {
 															local2611 = ObjTypeList.get(component.objTypes[local276] - 1);
 															@Pc(3159) JagString local3159;
 															if (local2611.stackable != 1 && component.objCounts[local276] == 1) {
-																local3159 = JagString.concatenate(new JagString[] { MiniMenu.aClass100_32, local2611.name, Static70.aClass100_978 });
+																local3159 = JagString.concatenate(new JagString[]{MiniMenu.aClass100_32, local2611.name, Static70.aClass100_978});
 															} else {
-																local3159 = JagString.concatenate(new JagString[] { MiniMenu.aClass100_32, local2611.name, aClass100_375, Static70.method1548(component.objCounts[local276]) });
+																local3159 = JagString.concatenate(new JagString[]{MiniMenu.aClass100_32, local2611.name, aClass100_375, Static70.method1548(component.objCounts[local276])});
 															}
 															local556 = local123 + memory * (component.anInt512 + 115);
 															objId = (component.anInt516 + 12) * local468 + local114;
@@ -1078,8 +1078,10 @@ public final class Static87 {
 		@Pc(515) int local515;
 		if (GlRenderer.enabled && !arg1) {
 			@Pc(490) Environment local490 = null;
-			label270: while (true) {
-				label263: do {
+			label270:
+			while (true) {
+				label263:
+				do {
 					while (local95.offset < local95.data.length) {
 						local117 = local95.g1();
 						if (local117 != 0) {
@@ -1139,20 +1141,20 @@ public final class Static87 {
 		}
 	}
 
-    @OriginalMember(owner = "client!ag", name = "a", descriptor = "(IIIIIIIII)V")
-    public static void method86(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7) {
-        if (InterfaceList.load(arg0)) {
-            method1809(arg1, arg7, arg3, InterfaceList.components[arg0], arg2, -1, arg6, arg5, arg4);
-        } else if (arg4 == -1) {
-            for (@Pc(27) int local27 = 0; local27 < 100; local27++) {
-                InterfaceList.aBooleanArray100[local27] = true;
-            }
-        } else {
-            InterfaceList.aBooleanArray100[arg4] = true;
-        }
-    }
+	@OriginalMember(owner = "client!ag", name = "a", descriptor = "(IIIIIIIII)V")
+	public static void method86(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7) {
+		if (InterfaceList.load(arg0)) {
+			method1809(arg1, arg7, arg3, InterfaceList.components[arg0], arg2, -1, arg6, arg5, arg4);
+		} else if (arg4 == -1) {
+			for (@Pc(27) int local27 = 0; local27 < 100; local27++) {
+				InterfaceList.aBooleanArray100[local27] = true;
+			}
+		} else {
+			InterfaceList.aBooleanArray100[arg4] = true;
+		}
+	}
 
-    @OriginalMember(owner = "client!bm", name = "a", descriptor = "(IBIIII)V")
+	@OriginalMember(owner = "client!bm", name = "a", descriptor = "(IBIIII)V")
 	public static void method645(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
 		@Pc(3) int local3;
 		@Pc(10) int local10;

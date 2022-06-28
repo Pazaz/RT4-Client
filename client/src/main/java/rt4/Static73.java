@@ -13,7 +13,7 @@ public final class Static73 {
 	@OriginalMember(owner = "client!ph", name = "b", descriptor = "[[Lclient!li;")
 	public static final Environment[][] aClass92ArrayArray1 = new Environment[13][13];
 	@OriginalMember(owner = "client!li", name = "t", descriptor = "I")
-    public static int anInt3534;
+	public static int anInt3534;
 	@OriginalMember(owner = "client!mi", name = "Z", descriptor = "I")
 	public static int anInt3893;
 	@OriginalMember(owner = "client!gl", name = "f", descriptor = "I")

@@ -1,9 +1,10 @@
 package rt4;
 
-import java.awt.Component;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
+
+import java.awt.Component;
 
 @OriginalClass("client!hl")
 public final class SignLinkAudioChannel extends AudioChannel {

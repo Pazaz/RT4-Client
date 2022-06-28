@@ -7,10 +7,10 @@ public final class Static158 {
 
 	@OriginalMember(owner = "client!mh", name = "X", descriptor = "I")
 	public static int anInt3851 = -1;
-    @OriginalMember(owner = "client!mg", name = "Q", descriptor = "I")
-    public static int anInt3811 = 0;
+	@OriginalMember(owner = "client!mg", name = "Q", descriptor = "I")
+	public static int anInt3811 = 0;
 
-    @OriginalMember(owner = "client!mh", name = "h", descriptor = "(B)V")
+	@OriginalMember(owner = "client!mh", name = "h", descriptor = "(B)V")
 	public static void decodeNpcFiles() {
 		@Pc(10) int local10 = LoginManager.npcSpawnsFilesBuffer.length;
 		for (@Pc(16) int local16 = 0; local16 < local10; local16++) {

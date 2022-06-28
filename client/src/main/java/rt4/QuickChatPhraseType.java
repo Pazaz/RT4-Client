@@ -8,16 +8,16 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!cb")
 public final class QuickChatPhraseType extends SecondaryNode {
 
-    @OriginalMember(owner = "client!ld", name = "a", descriptor = "[I")
-	public static final int[] DYNAMIC_COMMAND_ENCODE_BYTES = new int[] { 2, 2, 4, 0, 1, 8, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0 };
+	@OriginalMember(owner = "client!ld", name = "a", descriptor = "[I")
+	public static final int[] DYNAMIC_COMMAND_ENCODE_BYTES = new int[]{2, 2, 4, 0, 1, 8, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0};
 	@OriginalMember(owner = "client!rc", name = "I", descriptor = "Lclient!na;")
 	public static final JagString aClass100_231 = JagString.parse(")3)3)3");
 	@OriginalMember(owner = "client!bf", name = "C", descriptor = "[I")
-	public static final int[] anIntArray51 = new int[] { 2, 2, 4, 2, 1, 8, 4, 1, 4, 4, 2, 1, 1, 1, 4, 1 };
+	public static final int[] anIntArray51 = new int[]{2, 2, 4, 2, 1, 8, 4, 1, 4, 4, 2, 1, 1, 1, 4, 1};
 	@OriginalMember(owner = "client!qg", name = "U", descriptor = "Lclient!na;")
 	public static final JagString aClass100_891 = JagString.parse("");
 	@OriginalMember(owner = "client!vh", name = "p", descriptor = "[I")
-	public static final int[] anIntArray412 = new int[] { 1, 0, 0, 0, 1, 0, 2, 1, 1, 1, 0, 2, 0, 0, 1, 0 };
+	public static final int[] anIntArray412 = new int[]{1, 0, 0, 0, 1, 0, 2, 1, 1, 1, 0, 2, 0, 0, 1, 0};
 	@OriginalMember(owner = "client!cb", name = "L", descriptor = "[I")
 	private int[] anIntArray71;
 
@@ -33,15 +33,15 @@ public final class QuickChatPhraseType extends SecondaryNode {
 	@OriginalMember(owner = "client!cb", name = "O", descriptor = "Z")
 	public boolean aBoolean60 = true;
 
-    @OriginalMember(owner = "client!vh", name = "a", descriptor = "(ILclient!wa;)Lclient!bd;")
-    public static QuickChatPhrase method3568(@OriginalArg(1) Buffer arg0) {
-        @Pc(3) QuickChatPhrase local3 = new QuickChatPhrase();
-        local3.id = arg0.g2();
-        local3.type = QuickChatPhraseTypeList.get(local3.id);
-        return local3;
-    }
+	@OriginalMember(owner = "client!vh", name = "a", descriptor = "(ILclient!wa;)Lclient!bd;")
+	public static QuickChatPhrase method3568(@OriginalArg(1) Buffer arg0) {
+		@Pc(3) QuickChatPhrase local3 = new QuickChatPhrase();
+		local3.id = arg0.g2();
+		local3.type = QuickChatPhraseTypeList.get(local3.id);
+		return local3;
+	}
 
-    @OriginalMember(owner = "client!cb", name = "a", descriptor = "(Lclient!wa;[IZ)V")
+	@OriginalMember(owner = "client!cb", name = "a", descriptor = "(Lclient!wa;[IZ)V")
 	public final void encodeMessage(@OriginalArg(0) Buffer arg0, @OriginalArg(1) int[] arg1) {
 		if (this.anIntArray71 == null) {
 			return;
@@ -49,7 +49,7 @@ public final class QuickChatPhraseType extends SecondaryNode {
 		for (@Pc(14) int local14 = 0; this.anIntArray71.length > local14 && local14 < arg1.length; local14++) {
 			@Pc(38) int local38 = DYNAMIC_COMMAND_ENCODE_BYTES[this.getDynamicCommand(local14)];
 			if (local38 > 0) {
-				arg0.pVarLong(local38, (long) arg1[local14]);
+				arg0.pVarLong(local38, arg1[local14]);
 			}
 		}
 	}

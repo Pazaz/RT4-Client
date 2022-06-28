@@ -1,11 +1,12 @@
 package rt4;
 
-import java.nio.ByteBuffer;
-import com.jogamp.opengl.*;
+import com.jogamp.opengl.GL2;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+
+import java.nio.ByteBuffer;
 
 @OriginalClass("client!uh")
 public final class GlTexture extends SecondaryNode {
@@ -86,7 +87,7 @@ public final class GlTexture extends SecondaryNode {
 				return null;
 			}
 			@Pc(36) int local36 = arg3 ? 64 : 128;
-			this.anIntArray481 = this.aClass88_1.method2725(local36, this.aBoolean288, local36, (double) arg1, arg2, arg0, true);
+			this.anIntArray481 = this.aClass88_1.method2725(local36, this.aBoolean288, local36, arg1, arg2, arg0, true);
 			this.aFloat35 = arg1;
 			if (this.aBoolean286) {
 				@Pc(62) int[] local62 = new int[local36];

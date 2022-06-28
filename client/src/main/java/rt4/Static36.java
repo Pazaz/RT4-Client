@@ -7,21 +7,21 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static36 {
 
 	@OriginalMember(owner = "client!fk", name = "e", descriptor = "I")
-    public static int anInt1885;
+	public static int anInt1885;
 	@OriginalMember(owner = "client!bj", name = "s", descriptor = "I")
 	public static int anInt660 = -1;
-    @OriginalMember(owner = "client!kl", name = "s", descriptor = "I")
-    public static int anInt3337 = 0;
+	@OriginalMember(owner = "client!kl", name = "s", descriptor = "I")
+	public static int anInt3337 = 0;
 	@OriginalMember(owner = "client!jk", name = "p", descriptor = "I")
 	public static int anInt3075 = -1;
 	@OriginalMember(owner = "client!df", name = "n", descriptor = "I")
 	public static int anInt1396 = 0;
 	@OriginalMember(owner = "client!di", name = "H", descriptor = "Z")
-    public static boolean aBoolean84 = false;
-    @OriginalMember(owner = "client!pm", name = "hb", descriptor = "I")
-    public static int anInt4620;
+	public static boolean aBoolean84 = false;
+	@OriginalMember(owner = "client!pm", name = "hb", descriptor = "I")
+	public static int anInt4620;
 
-    @OriginalMember(owner = "client!client", name = "a", descriptor = "(Lclient!be;)Lclient!be;")
+	@OriginalMember(owner = "client!client", name = "a", descriptor = "(Lclient!be;)Lclient!be;")
 	public static Component method938(@OriginalArg(0) Component arg0) {
 		@Pc(4) int local4 = InterfaceList.getServerActiveProperties(arg0).method505();
 		if (local4 == 0) {

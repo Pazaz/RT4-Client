@@ -109,13 +109,13 @@ public final class VorbisCodebook {
 		}
 	}
 
-    @OriginalMember(owner = "client!ji", name = "a", descriptor = "(II)I")
-    public static int lookup1Values(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-        @Pc(10) int returnValue;
-        for (returnValue = (int) Math.pow((double) arg0, 1.0D / (double) arg1) + 1; IntUtils.pow(arg1, returnValue) > arg0; returnValue--) {
-        }
-        return returnValue;
-    }
+	@OriginalMember(owner = "client!ji", name = "a", descriptor = "(II)I")
+	public static int lookup1Values(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+		@Pc(10) int returnValue;
+		for (returnValue = (int) Math.pow(arg0, 1.0D / (double) arg1) + 1; IntUtils.pow(arg1, returnValue) > arg0; returnValue--) {
+		}
+		return returnValue;
+	}
 
 	@OriginalMember(owner = "client!ji", name = "a", descriptor = "()[F")
 	public final float[] decodeVq() {

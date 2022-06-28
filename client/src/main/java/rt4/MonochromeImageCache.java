@@ -11,13 +11,13 @@ public final class MonochromeImageCache {
 	@OriginalMember(owner = "client!nd", name = "c", descriptor = "[B")
 	public static final byte[] aByteArray53 = new byte[32896];
 
-    @OriginalMember(owner = "client!a", name = "b", descriptor = "[I")
-    public static final int[] anIntArray1 = new int[4096];
+	@OriginalMember(owner = "client!a", name = "b", descriptor = "[I")
+	public static final int[] anIntArray1 = new int[4096];
 
-    @OriginalMember(owner = "client!bc", name = "N", descriptor = "Lclient!lb;")
-    public static final MonochromeImageCacheEntry entry = new MonochromeImageCacheEntry(0, 0);
+	@OriginalMember(owner = "client!bc", name = "N", descriptor = "Lclient!lb;")
+	public static final MonochromeImageCacheEntry entry = new MonochromeImageCacheEntry(0, 0);
 
-    @OriginalMember(owner = "client!nd", name = "f", descriptor = "I")
+	@OriginalMember(owner = "client!nd", name = "f", descriptor = "I")
 	private int singleRow = -1;
 
 	@OriginalMember(owner = "client!nd", name = "k", descriptor = "I")
@@ -45,7 +45,7 @@ public final class MonochromeImageCache {
 		@Pc(8) int local8 = 0;
 		for (@Pc(10) int local10 = 0; local10 < 256; local10++) {
 			for (@Pc(15) int local15 = 0; local15 <= local10; local15++) {
-				aByteArray53[local8++] = (byte) (255.0D / Math.sqrt((double) ((float) (local15 * local15 + local10 * local10 + 65535) / 65535.0F)));
+				aByteArray53[local8++] = (byte) (255.0D / Math.sqrt((float) (local15 * local15 + local10 * local10 + 65535) / 65535.0F));
 			}
 		}
 

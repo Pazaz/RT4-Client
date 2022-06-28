@@ -1,19 +1,20 @@
 package rt4;
 
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import com.jogamp.opengl.*;
+import com.jogamp.opengl.GL2;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+
 @OriginalClass("client!wm")
 public final class Shadow {
 
-    @OriginalMember(owner = "client!wm", name = "g", descriptor = "[B")
-    public static final byte[] pixels = new byte[16384];
-    @OriginalMember(owner = "client!wm", name = "a", descriptor = "Lclient!vi;")
+	@OriginalMember(owner = "client!wm", name = "g", descriptor = "[B")
+	public static final byte[] pixels = new byte[16384];
+	@OriginalMember(owner = "client!wm", name = "a", descriptor = "Lclient!vi;")
 	private GlVertexBufferObject aClass155_6;
 
 	@OriginalMember(owner = "client!wm", name = "c", descriptor = "Ljava/nio/ByteBuffer;")

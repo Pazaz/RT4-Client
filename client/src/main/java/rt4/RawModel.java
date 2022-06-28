@@ -607,13 +607,13 @@ public final class RawModel extends Entity {
 		@Pc(98) int local98 = local42 < local77 ? local42 : local77;
 		@Pc(105) int local105 = local24 < local60 ? local24 : local60;
 		if (arg5 != 0) {
-			@Pc(120) int local120 = (int) (Math.atan2((double) (local84 - local91), (double) arg5) * 325.95D) & 0x7FF;
+			@Pc(120) int local120 = (int) (Math.atan2(local84 - local91, arg5) * 325.95D) & 0x7FF;
 			if (local120 != 0) {
 				this.method1677(local120);
 			}
 		}
 		if (arg4 != 0) {
-			@Pc(140) int local140 = (int) (Math.atan2((double) (local105 - local98), (double) arg4) * 325.95D) & 0x7FF;
+			@Pc(140) int local140 = (int) (Math.atan2(local105 - local98, arg4) * 325.95D) & 0x7FF;
 			if (local140 != 0) {
 				this.rotate(local140);
 			}
@@ -665,7 +665,7 @@ public final class RawModel extends Entity {
 				local120 >>= 0x1;
 			}
 
-			@Pc(174) int local174 = (int) Math.sqrt((double) (local112 * local112 + local120 * local120 + local128 * local128));
+			@Pc(174) int local174 = (int) Math.sqrt(local112 * local112 + local120 * local120 + local128 * local128);
 			if (local174 <= 0) {
 				local174 = 1;
 			}

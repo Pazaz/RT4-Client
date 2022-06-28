@@ -166,7 +166,7 @@ public final class Js5GlTextureProvider implements TextureProvider {
 
 	@OriginalMember(owner = "client!nk", name = "i", descriptor = "(II)Lclient!uh;")
 	private GlTexture method3242(@OriginalArg(0) int arg0) {
-		@Pc(14) GlTexture local14 = (GlTexture) this.glTextures.get((long) arg0);
+		@Pc(14) GlTexture local14 = (GlTexture) this.glTextures.get(arg0);
 		if (local14 != null) {
 			return local14;
 		}
@@ -176,7 +176,7 @@ public final class Js5GlTextureProvider implements TextureProvider {
 		} else {
 			@Pc(41) Buffer local41 = new Buffer(local30);
 			local14 = new GlTexture(local41);
-			this.glTextures.put(local14, (long) arg0);
+			this.glTextures.put(local14, arg0);
 			return local14;
 		}
 	}
@@ -207,10 +207,10 @@ public final class Js5GlTextureProvider implements TextureProvider {
 
 	@OriginalMember(owner = "client!nk", name = "j", descriptor = "(II)Lclient!sd;")
 	private GlSolidColorTexture method3244(@OriginalArg(1) int arg0) {
-		@Pc(19) GlSolidColorTexture local19 = (GlSolidColorTexture) this.solidColorSprites.get((long) arg0);
+		@Pc(19) GlSolidColorTexture local19 = (GlSolidColorTexture) this.solidColorSprites.get(arg0);
 		if (local19 == null) {
 			local19 = new GlSolidColorTexture(this.aShortArray59[arg0] & 0xFFFF);
-			this.solidColorSprites.put(local19, (long) arg0);
+			this.solidColorSprites.put(local19, arg0);
 			return local19;
 		} else {
 			return local19;
@@ -221,7 +221,7 @@ public final class Js5GlTextureProvider implements TextureProvider {
 	@Override
 	public final boolean method3230(@OriginalArg(1) int arg0) {
 		@Pc(15) GlTexture local15 = this.method3242(arg0);
-		return local15 == null ? false : local15.method4299(this, this.aClass153_72);
+		return local15 != null && local15.method4299(this, this.aClass153_72);
 	}
 
 	@OriginalMember(owner = "client!nk", name = "b", descriptor = "(ZI)V")

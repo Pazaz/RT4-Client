@@ -1,20 +1,21 @@
 package rt4;
 
-import java.awt.Component;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
+import java.awt.Component;
+
 @OriginalClass("client!vh")
 public class AudioChannel {
 
-    @OriginalMember(owner = "client!na", name = "w", descriptor = "Z")
-    public static boolean stereo;
-    @OriginalMember(owner = "client!va", name = "O", descriptor = "I")
-    public static int threadPriority;
-    @OriginalMember(owner = "client!em", name = "x", descriptor = "Lclient!cj;")
-    public static AudioThread thread;
+	@OriginalMember(owner = "client!na", name = "w", descriptor = "Z")
+	public static boolean stereo;
+	@OriginalMember(owner = "client!va", name = "O", descriptor = "I")
+	public static int threadPriority;
+	@OriginalMember(owner = "client!em", name = "x", descriptor = "Lclient!cj;")
+	public static AudioThread thread;
 	@OriginalMember(owner = "client!dh", name = "h", descriptor = "I")
 	public static int sampleRate;
 
@@ -66,12 +67,12 @@ public class AudioChannel {
 	@OriginalMember(owner = "client!vh", name = "C", descriptor = "I")
 	private int prevBufferSize = 0;
 
-    @OriginalMember(owner = "client!dc", name = "a", descriptor = "(IIIZ)V")
-    public static void init(@OriginalArg(3) boolean stereo) {
-        threadPriority = 2;
-        AudioChannel.stereo = stereo;
-        sampleRate = 22050;
-    }
+	@OriginalMember(owner = "client!dc", name = "a", descriptor = "(IIIZ)V")
+	public static void init(@OriginalArg(3) boolean stereo) {
+		threadPriority = 2;
+		AudioChannel.stereo = stereo;
+		sampleRate = 22050;
+	}
 
 	@OriginalMember(owner = "client!id", name = "a", descriptor = "(ILsignlink!ll;Ljava/awt/Component;II)Lclient!vh;")
 	public static AudioChannel create(@OriginalArg(0) int arg0, @OriginalArg(1) SignLink arg1, @OriginalArg(2) Component arg2, @OriginalArg(3) int arg3) {
@@ -128,18 +129,18 @@ public class AudioChannel {
 		}
 	}
 
-    @OriginalMember(owner = "client!nd", name = "a", descriptor = "(ZLclient!qb;)V")
-    public static void setInactive(@OriginalArg(1) PcmStream arg0) {
-        if (arg0.sound != null) {
-            arg0.sound.position = 0;
-        }
-        arg0.active = false;
-        for (@Pc(14) PcmStream local14 = arg0.firstSubStream(); local14 != null; local14 = arg0.nextSubStream()) {
-            setInactive(local14);
-        }
-    }
+	@OriginalMember(owner = "client!nd", name = "a", descriptor = "(ZLclient!qb;)V")
+	public static void setInactive(@OriginalArg(1) PcmStream arg0) {
+		if (arg0.sound != null) {
+			arg0.sound.position = 0;
+		}
+		arg0.active = false;
+		for (@Pc(14) PcmStream local14 = arg0.firstSubStream(); local14 != null; local14 = arg0.nextSubStream()) {
+			setInactive(local14);
+		}
+	}
 
-    @OriginalMember(owner = "client!vh", name = "a", descriptor = "()V")
+	@OriginalMember(owner = "client!vh", name = "a", descriptor = "()V")
 	protected void write() throws Exception {
 	}
 
@@ -166,7 +167,8 @@ public class AudioChannel {
 			@Pc(45) int local45 = 0;
 			@Pc(47) int local47 = 255;
 			@Pc(49) int local49 = 7;
-			label106: while (local47 != 0) {
+			label106:
+			while (local47 != 0) {
 				@Pc(57) int local57;
 				@Pc(62) int local62;
 				if (local49 < 0) {
@@ -181,7 +183,8 @@ public class AudioChannel {
 						local47 &= ~(0x1 << local57);
 						@Pc(91) PcmStream local91 = null;
 						@Pc(96) PcmStream local96 = this.aClass3_Sub3Array5[local57];
-						label100: while (true) {
+						label100:
+						while (true) {
 							while (true) {
 								if (local96 == null) {
 									break label100;

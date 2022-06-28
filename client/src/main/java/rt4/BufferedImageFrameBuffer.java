@@ -1,18 +1,14 @@
 package rt4;
 
-import java.awt.Component;
-import java.awt.Graphics;
-import java.awt.Shape;
-import java.awt.image.BufferedImage;
-import java.awt.image.DataBufferInt;
-import java.awt.image.DirectColorModel;
-import java.awt.image.Raster;
-import java.awt.image.WritableRaster;
-import java.util.Hashtable;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+
+import java.awt.Component;
+import java.awt.*;
+import java.awt.image.*;
+import java.util.Hashtable;
 
 @OriginalClass("client!ti")
 public final class BufferedImageFrameBuffer extends FrameBuffer {

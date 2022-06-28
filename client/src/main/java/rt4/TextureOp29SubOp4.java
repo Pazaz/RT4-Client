@@ -142,12 +142,12 @@ public final class TextureOp29SubOp4 extends TextureOp29SubOp {
 		}
 	}
 
-    @OriginalMember(owner = "client!mf", name = "a", descriptor = "(BLclient!wa;)Lclient!ta;")
+	@OriginalMember(owner = "client!mf", name = "a", descriptor = "(BLclient!wa;)Lclient!ta;")
 	public static TextureOp29SubOp4 method2960(@OriginalArg(1) Buffer arg0) {
 		return new TextureOp29SubOp4(arg0.g2b(), arg0.g2b(), arg0.g2b(), arg0.g2b(), arg0.g3(), arg0.g3(), arg0.g1());
 	}
 
-    @OriginalMember(owner = "client!ta", name = "a", descriptor = "(IZI)V")
+	@OriginalMember(owner = "client!ta", name = "a", descriptor = "(IZI)V")
 	@Override
 	public final void method4009(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
 		@Pc(10) int local10 = arg1 * this.anInt5238 >> 12;

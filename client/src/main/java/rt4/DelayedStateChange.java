@@ -31,19 +31,19 @@ public final class DelayedStateChange extends SecondaryNode {
 		this.key = (long) arg0 << 32 | (long) arg1;
 	}
 
-    @OriginalMember(owner = "client!bj", name = "d", descriptor = "(B)V")
-    public static void clear() {
-        changes.clear();
-        clientQueue.clear();
-        serverQueue.clear();
-    }
+	@OriginalMember(owner = "client!bj", name = "d", descriptor = "(B)V")
+	public static void clear() {
+		changes.clear();
+		clientQueue.clear();
+		serverQueue.clear();
+	}
 
-    @OriginalMember(owner = "client!pf", name = "a", descriptor = "(III)V")
-    public static void setComponentModelRotationSpeedServer(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-        @Pc(14) DelayedStateChange local14 = create(13, arg1);
-        local14.pushServer();
-        local14.intArg1 = arg0;
-    }
+	@OriginalMember(owner = "client!pf", name = "a", descriptor = "(III)V")
+	public static void setComponentModelRotationSpeedServer(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+		@Pc(14) DelayedStateChange local14 = create(13, arg1);
+		local14.pushServer();
+		local14.intArg1 = arg0;
+	}
 
 	@OriginalMember(owner = "client!pi", name = "a", descriptor = "(Lclient!na;BI)V")
 	public static void method3498(@OriginalArg(0) JagString arg0, @OriginalArg(2) int arg1) {
@@ -106,18 +106,18 @@ public final class DelayedStateChange extends SecondaryNode {
 		local18.intArg1 = arg0;
 	}
 
-    @OriginalMember(owner = "client!gf", name = "a", descriptor = "(Lclient!na;II)V")
-    public static void method3617(@OriginalArg(0) JagString arg0, @OriginalArg(2) int arg1) {
-        @Pc(6) DelayedStateChange local6 = create(3, arg1);
-        local6.pushServer();
-        local6.stringArg = arg0;
-    }
+	@OriginalMember(owner = "client!gf", name = "a", descriptor = "(Lclient!na;II)V")
+	public static void method3617(@OriginalArg(0) JagString arg0, @OriginalArg(2) int arg1) {
+		@Pc(6) DelayedStateChange local6 = create(3, arg1);
+		local6.pushServer();
+		local6.stringArg = arg0;
+	}
 
-    @OriginalMember(owner = "client!ug", name = "a", descriptor = "(IB)V")
-    public static void setComponentObjClient(@OriginalArg(0) int arg0) {
-        @Pc(14) DelayedStateChange local14 = create(9, arg0);
-        local14.pushClient();
-    }
+	@OriginalMember(owner = "client!ug", name = "a", descriptor = "(IB)V")
+	public static void setComponentObjClient(@OriginalArg(0) int arg0) {
+		@Pc(14) DelayedStateChange local14 = create(9, arg0);
+		local14.pushClient();
+	}
 
 	@OriginalMember(owner = "client!mc", name = "a", descriptor = "(BI)V")
 	public static void setComponentModelAngleClient(@OriginalArg(1) int arg0) {

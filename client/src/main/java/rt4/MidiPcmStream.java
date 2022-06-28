@@ -111,17 +111,17 @@ public final class MidiPcmStream extends PcmStream {
 	public final synchronized boolean isSongReady(@OriginalArg(0) Song arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) SoundBank arg2) {
 		arg0.createPrograms();
 		@Pc(5) boolean local5 = true;
-		@Pc(20) int[] local20 = new int[] { 22050 };
+		@Pc(20) int[] local20 = new int[]{22050};
 		for (@Pc(34) ByteArrayNode local34 = (ByteArrayNode) arg0.programs.head(); local34 != null; local34 = (ByteArrayNode) arg0.programs.next()) {
 			@Pc(40) int local40 = (int) local34.key;
-			@Pc(48) MidiInstrument local48 = (MidiInstrument) this.aClass133_23.get((long) local40);
+			@Pc(48) MidiInstrument local48 = (MidiInstrument) this.aClass133_23.get(local40);
 			if (local48 == null) {
 				local48 = MidiInstrument.method2320(arg1, local40);
 				if (local48 == null) {
 					local5 = false;
 					continue;
 				}
-				this.aClass133_23.put(local48, (long) local40);
+				this.aClass133_23.put(local48, local40);
 			}
 			if (!local48.method2436(local20, arg2, local34.value)) {
 				local5 = false;
@@ -278,7 +278,7 @@ public final class MidiPcmStream extends PcmStream {
 				}
 			}
 		}
-		@Pc(118) MidiInstrument local118 = (MidiInstrument) this.aClass133_23.get((long) this.anIntArray506[arg1]);
+		@Pc(118) MidiInstrument local118 = (MidiInstrument) this.aClass133_23.get(this.anIntArray506[arg1]);
 		if (local118 == null) {
 			return;
 		}

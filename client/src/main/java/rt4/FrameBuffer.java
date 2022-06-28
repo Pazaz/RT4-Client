@@ -1,11 +1,11 @@
 package rt4;
 
-import java.awt.Component;
-import java.awt.Graphics;
-import java.awt.Image;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
+
+import java.awt.Component;
+import java.awt.*;
 
 @OriginalClass("client!vk")
 public abstract class FrameBuffer {

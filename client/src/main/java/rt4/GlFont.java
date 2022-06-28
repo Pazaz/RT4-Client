@@ -1,18 +1,19 @@
 package rt4;
 
-import java.nio.ByteBuffer;
-import com.jogamp.opengl.*;
+import com.jogamp.opengl.GL2;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
+import java.nio.ByteBuffer;
+
 @OriginalClass("client!mb")
 public final class GlFont extends Font {
 
-    @OriginalMember(owner = "client!dj", name = "a", descriptor = "Lclient!cf;")
-    public static GlSprite masked = null;
-    @OriginalMember(owner = "client!mb", name = "Gb", descriptor = "[I")
+	@OriginalMember(owner = "client!dj", name = "a", descriptor = "Lclient!cf;")
+	public static GlSprite masked = null;
+	@OriginalMember(owner = "client!mb", name = "Gb", descriptor = "[I")
 	private int[] listIds;
 
 	@OriginalMember(owner = "client!mb", name = "Hb", descriptor = "I")
@@ -121,13 +122,13 @@ public final class GlFont extends Font {
 	@OriginalMember(owner = "client!mb", name = "a", descriptor = "(IIIIIIIZ)V")
 	@Override
 	protected final void renderGlyphTransparent(@OriginalArg(0) int glyph, @OriginalArg(1) int x, @OriginalArg(2) int y, @OriginalArg(3) int width, @OriginalArg(4) int height, @OriginalArg(5) int color, @OriginalArg(6) int alpha) {
-		 GlRenderer.method4151();
-		 @Pc(2) GL2 gl = GlRenderer.gl;
-		 GlRenderer.setTextureId(this.textureId);
-		 gl.glColor4ub((byte) (color >> 16), (byte) (color >> 8), (byte) color, alpha > 255 ? -1 : (byte) alpha);
-		 gl.glTranslatef((float) x, (float) (GlRenderer.canvasHeight - y), 0.0F);
-		 gl.glCallList(this.listIds[glyph]);
-		 gl.glLoadIdentity();
+		GlRenderer.method4151();
+		@Pc(2) GL2 gl = GlRenderer.gl;
+		GlRenderer.setTextureId(this.textureId);
+		gl.glColor4ub((byte) (color >> 16), (byte) (color >> 8), (byte) color, alpha > 255 ? -1 : (byte) alpha);
+		gl.glTranslatef((float) x, (float) (GlRenderer.canvasHeight - y), 0.0F);
+		gl.glCallList(this.listIds[glyph]);
+		gl.glLoadIdentity();
 	}
 
 	@OriginalMember(owner = "client!mb", name = "b", descriptor = "()V")

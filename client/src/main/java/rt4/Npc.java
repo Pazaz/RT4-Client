@@ -11,28 +11,28 @@ public final class Npc extends PathingEntity {
 	@OriginalMember(owner = "client!km", name = "rc", descriptor = "Lclient!me;")
 	public NpcType type;
 
-    @OriginalMember(owner = "client!ij", name = "a", descriptor = "(Lclient!km;I)I")
-    public static int getSound(@OriginalArg(0) Npc arg0) {
-        @Pc(13) NpcType local13 = arg0.type;
-        if (local13.multiNpcs != null) {
-            local13 = local13.getMultiNpc();
-            if (local13 == null) {
-                return -1;
-            }
-        }
-        @Pc(29) int local29 = local13.walkSound;
-        @Pc(33) BasType local33 = arg0.getBasType();
-        if (local33.idleAnimationId == arg0.movementSeqId) {
-            local29 = local13.idleSound;
-        } else if (arg0.movementSeqId == local33.runAnimationId || local33.runAnimationId2 == arg0.movementSeqId || arg0.movementSeqId == local33.runAnimationId4 || arg0.movementSeqId == local33.runAnimationId3) {
-            local29 = local13.runSound;
-        } else if (local33.anInt1062 == arg0.movementSeqId || arg0.movementSeqId == local33.anInt1042 || arg0.movementSeqId == local33.anInt1048 || arg0.movementSeqId == local33.anInt1066) {
-            local29 = local13.crawlSound;
-        }
-        return local29;
-    }
+	@OriginalMember(owner = "client!ij", name = "a", descriptor = "(Lclient!km;I)I")
+	public static int getSound(@OriginalArg(0) Npc arg0) {
+		@Pc(13) NpcType local13 = arg0.type;
+		if (local13.multiNpcs != null) {
+			local13 = local13.getMultiNpc();
+			if (local13 == null) {
+				return -1;
+			}
+		}
+		@Pc(29) int local29 = local13.walkSound;
+		@Pc(33) BasType local33 = arg0.getBasType();
+		if (local33.idleAnimationId == arg0.movementSeqId) {
+			local29 = local13.idleSound;
+		} else if (arg0.movementSeqId == local33.runAnimationId || local33.runAnimationId2 == arg0.movementSeqId || arg0.movementSeqId == local33.runAnimationId4 || arg0.movementSeqId == local33.runAnimationId3) {
+			local29 = local13.runSound;
+		} else if (local33.anInt1062 == arg0.movementSeqId || arg0.movementSeqId == local33.anInt1042 || arg0.movementSeqId == local33.anInt1048 || arg0.movementSeqId == local33.anInt1066) {
+			local29 = local13.crawlSound;
+		}
+		return local29;
+	}
 
-    @OriginalMember(owner = "client!km", name = "finalize", descriptor = "()V")
+	@OriginalMember(owner = "client!km", name = "finalize", descriptor = "()V")
 	@Override
 	public final void finalize() {
 	}
@@ -146,7 +146,6 @@ public final class Npc extends PathingEntity {
 	@Override
 	public final void method4545(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		if (this.type == null) {
-			;
 		}
 	}
 

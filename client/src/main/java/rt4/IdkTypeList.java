@@ -23,7 +23,7 @@ public class IdkTypeList {
 
 	@OriginalMember(owner = "client!gg", name = "d", descriptor = "(II)Lclient!dm;")
 	public static IdkType get(@OriginalArg(0) int arg0) {
-		@Pc(10) IdkType local10 = (IdkType) types.get((long) arg0);
+		@Pc(10) IdkType local10 = (IdkType) types.get(arg0);
 		if (local10 != null) {
 			return local10;
 		}
@@ -32,7 +32,7 @@ public class IdkTypeList {
 		if (local21 != null) {
 			local10.decode(new Buffer(local21));
 		}
-		types.put(local10, (long) arg0);
+		types.put(local10, arg0);
 		return local10;
 	}
 

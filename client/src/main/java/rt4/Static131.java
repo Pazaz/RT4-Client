@@ -1,16 +1,17 @@
 package rt4;
 
-import java.awt.Component;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
+import java.awt.Component;
+
 public final class Static131 {
 
-    @OriginalMember(owner = "client!kd", name = "ob", descriptor = "I")
+	@OriginalMember(owner = "client!kd", name = "ob", descriptor = "I")
 	public static int anInt3251 = 0;
 
-    @OriginalMember(owner = "client!kd", name = "Bb", descriptor = "I")
+	@OriginalMember(owner = "client!kd", name = "Bb", descriptor = "I")
 	public static int anInt3260 = -1;
 
 	@OriginalMember(owner = "client!kd", name = "a", descriptor = "([[F[[II[[FI[ILclient!fj;BLclient!gi;[[FI)V")

@@ -37,7 +37,8 @@ public final class Bzip2Decompressor {
 		@Pc(25) int local25 = arg0.strmAvailOut;
 		@Pc(27) int local27 = local25;
 		@Pc(32) int local32 = arg0.saveNblock + 1;
-		returnNotr: while (true) {
+		returnNotr:
+		while (true) {
 			if (local5 > 0) {
 				while (true) {
 					if (local25 == 0) {
@@ -226,11 +227,7 @@ public final class Bzip2Decompressor {
 				@Pc(141) int local141;
 				for (local141 = 0; local141 < 16; local141++) {
 					local61 = getBit(arg0);
-					if (local61 == 1) {
-						arg0.inUse16[local141] = true;
-					} else {
-						arg0.inUse16[local141] = false;
-					}
+					arg0.inUse16[local141] = local61 == 1;
 				}
 				for (local141 = 0; local141 < 256; local141++) {
 					arg0.inUse[local141] = false;

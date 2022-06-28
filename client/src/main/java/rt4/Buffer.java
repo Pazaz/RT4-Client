@@ -36,7 +36,7 @@ public class Buffer extends Node {
 	public static final byte[][] allocatedMin = new byte[1000][];
 
 	@OriginalMember(owner = "client!bb", name = "t", descriptor = "[[B")
-    public static final byte[][] allocatedMid = new byte[250][];
+	public static final byte[][] allocatedMid = new byte[250][];
 
 	@OriginalMember(owner = "client!dc", name = "db", descriptor = "[[B")
 	public static final byte[][] allocatedMax = new byte[50][];
@@ -51,22 +51,22 @@ public class Buffer extends Node {
 	public static int allocatedMaxCount = 0;
 
 	@OriginalMember(owner = "client!wa", name = "y", descriptor = "[B")
-    public byte[] data;
+	public byte[] data;
 
-    @OriginalMember(owner = "client!wa", name = "T", descriptor = "I")
-    public int offset;
+	@OriginalMember(owner = "client!wa", name = "T", descriptor = "I")
+	public int offset;
 
-    @OriginalMember(owner = "client!wa", name = "<init>", descriptor = "(I)V")
-    public Buffer(@OriginalArg(0) int size) {
-        this.data = allocate(size);
-        this.offset = 0;
-    }
+	@OriginalMember(owner = "client!wa", name = "<init>", descriptor = "(I)V")
+	public Buffer(@OriginalArg(0) int size) {
+		this.data = allocate(size);
+		this.offset = 0;
+	}
 
-    @OriginalMember(owner = "client!wa", name = "<init>", descriptor = "([B)V")
-    public Buffer(@OriginalArg(0) byte[] src) {
-        this.offset = 0;
-        this.data = src;
-    }
+	@OriginalMember(owner = "client!wa", name = "<init>", descriptor = "([B)V")
+	public Buffer(@OriginalArg(0) byte[] src) {
+		this.offset = 0;
+		this.data = src;
+	}
 
 	@OriginalMember(owner = "client!sh", name = "a", descriptor = "(II)[B")
 	public static synchronized byte[] allocate(@OriginalArg(1) int length) {
@@ -421,11 +421,11 @@ public class Buffer extends Node {
 		this.data[this.offset - length - 1] = (byte) length;
 	}
 
-    @OriginalMember(owner = "client!wa", name = "o", descriptor = "(II)V")
-    public final void p2(@OriginalArg(1) int value) {
-        this.data[this.offset++] = (byte) (value >> 8);
-        this.data[this.offset++] = (byte) value;
-    }
+	@OriginalMember(owner = "client!wa", name = "o", descriptor = "(II)V")
+	public final void p2(@OriginalArg(1) int value) {
+		this.data[this.offset++] = (byte) (value >> 8);
+		this.data[this.offset++] = (byte) value;
+	}
 
 	@OriginalMember(owner = "client!wa", name = "l", descriptor = "(II)V")
 	public final void p2add(@OriginalArg(0) int value) {

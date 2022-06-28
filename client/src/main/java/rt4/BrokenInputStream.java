@@ -1,8 +1,9 @@
 package rt4;
 
-import java.io.InputStream;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
+
+import java.io.InputStream;
 
 @OriginalClass("client!qk")
 public final class BrokenInputStream extends InputStream {

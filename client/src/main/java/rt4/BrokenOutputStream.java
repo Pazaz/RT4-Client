@@ -1,10 +1,11 @@
 package rt4;
 
-import java.io.IOException;
-import java.io.OutputStream;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
+
+import java.io.IOException;
+import java.io.OutputStream;
 
 @OriginalClass("client!vg")
 public final class BrokenOutputStream extends OutputStream {

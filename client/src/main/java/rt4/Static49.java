@@ -9,14 +9,15 @@ public final class Static49 {
 	@OriginalMember(owner = "client!e", name = "pc", descriptor = "[I")
 	public static final int[] anIntArray132 = new int[4];
 	@OriginalMember(owner = "client!em", name = "D", descriptor = "I")
-    public static int gregorianDateSeed;
+	public static int gregorianDateSeed;
 
-    @OriginalMember(owner = "client!dm", name = "a", descriptor = "(BII[B)Z")
+	@OriginalMember(owner = "client!dm", name = "a", descriptor = "(BII[B)Z")
 	public static boolean method1201(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) byte[] arg2) {
 		@Pc(15) boolean local15 = true;
 		@Pc(17) int local17 = -1;
 		@Pc(22) Buffer local22 = new Buffer(arg2);
-		label70: while (true) {
+		label70:
+		while (true) {
 			@Pc(26) int local26 = local22.gVarSmart();
 			if (local26 == 0) {
 				return local15;

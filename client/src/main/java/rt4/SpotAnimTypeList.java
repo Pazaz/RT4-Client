@@ -22,7 +22,7 @@ public class SpotAnimTypeList {
 
 	@OriginalMember(owner = "client!ck", name = "a", descriptor = "(BI)Lclient!eg;")
 	public static SpotAnimType get(@OriginalArg(1) int arg0) {
-		@Pc(10) SpotAnimType local10 = (SpotAnimType) types.get((long) arg0);
+		@Pc(10) SpotAnimType local10 = (SpotAnimType) types.get(arg0);
 		if (local10 != null) {
 			return local10;
 		}
@@ -32,7 +32,7 @@ public class SpotAnimTypeList {
 		if (local26 != null) {
 			local10.decode(new Buffer(local26));
 		}
-		types.put(local10, (long) arg0);
+		types.put(local10, arg0);
 		return local10;
 	}
 

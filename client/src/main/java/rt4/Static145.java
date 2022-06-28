@@ -8,12 +8,12 @@ public final class Static145 {
 
 	@OriginalMember(owner = "client!lf", name = "k", descriptor = "I")
 	public static int anInt3502 = -1;
-    @OriginalMember(owner = "client!vg", name = "e", descriptor = "[I")
-    public static int[] anIntArray516;
-    @OriginalMember(owner = "client!ri", name = "d", descriptor = "[I")
-    public static int[] anIntArray188;
+	@OriginalMember(owner = "client!vg", name = "e", descriptor = "[I")
+	public static int[] anIntArray516;
+	@OriginalMember(owner = "client!ri", name = "d", descriptor = "[I")
+	public static int[] anIntArray188;
 
-    @OriginalMember(owner = "client!lf", name = "a", descriptor = "(I)V")
+	@OriginalMember(owner = "client!lf", name = "a", descriptor = "(I)V")
 	public static void method2742() {
 		if (client.gameState == 10 && GlRenderer.enabled) {
 			client.setGameState(28);

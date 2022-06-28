@@ -1,12 +1,13 @@
 package rt4;
 
-import java.awt.Component;
-import java.awt.event.MouseWheelEvent;
-import java.awt.event.MouseWheelListener;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+
+import java.awt.Component;
+import java.awt.event.MouseWheelEvent;
+import java.awt.event.MouseWheelListener;
 
 import static rt4.MathUtils.clamp;
 
@@ -38,7 +39,7 @@ public final class JavaMouseWheel extends MouseWheel implements MouseWheelListen
 		int diff = this.anInt4233 - previous;
 
 		if (((GlobalJsonConfig.instance != null && GlobalJsonConfig.instance.mouseWheelZoom) || (GlobalJsonConfig.instance == null && GlobalConfig.MOUSEWHEEL_ZOOM)) && Keyboard.pressedKeys[Keyboard.KEY_SHIFT]) {
-			Camera.ZOOM = clamp(200, 1200, Camera.ZOOM + (diff >= 0 ? 50: -50));
+			Camera.ZOOM = clamp(200, 1200, Camera.ZOOM + (diff >= 0 ? 50 : -50));
 		}
 	}
 

@@ -1,6 +1,6 @@
 package rt4;
 
-import com.jogamp.opengl.*;
+import com.jogamp.opengl.GL2;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
@@ -71,11 +71,11 @@ public final class FogManager {
 		@Pc(34) float local34 = (float) (arg0 >> 16 & 0xFF) / 255.0F;
 		@Pc(43) float local43 = (float) (arg0 >> 8 & 0xFF) / 255.0F;
 		@Pc(50) float local50 = (float) (arg0 & 0xFF) / 255.0F;
-		@Pc(75) float[] local75 = new float[] { arg1 * local34, arg1 * local43, arg1 * local50, 1.0F };
+		@Pc(75) float[] local75 = new float[]{arg1 * local34, arg1 * local43, arg1 * local50, 1.0F};
 		local25.glLightModelfv(GL2.GL_LIGHT_MODEL_AMBIENT, local75, 0);
-		@Pc(105) float[] local105 = new float[] { arg2 * local34, arg2 * local43, arg2 * local50, 1.0F };
+		@Pc(105) float[] local105 = new float[]{arg2 * local34, arg2 * local43, arg2 * local50, 1.0F};
 		local25.glLightfv(GL2.GL_LIGHT0, GL2.GL_DIFFUSE, local105, 0);
-		@Pc(139) float[] local139 = new float[] { -arg3 * local34, -arg3 * local43, -arg3 * local50, 1.0F };
+		@Pc(139) float[] local139 = new float[]{-arg3 * local34, -arg3 * local43, -arg3 * local50, 1.0F};
 		local25.glLightfv(GL2.GL_LIGHT1, GL2.GL_DIFFUSE, local139, 0);
 	}
 
@@ -94,7 +94,7 @@ public final class FogManager {
 		gl.glFogf(GL2.GL_FOG_DENSITY, 0.95F);
 		gl.glHint(GL2.GL_FOG_HINT, GL2.GL_FASTEST);
 		int fogEnd = GlobalConfig.VIEW_DISTANCE;
-		@Pc(65) int fogStart = fogEnd - (int)(GlobalConfig.VIEW_FADE_DISTANCE * 2.0f) - offset;
+		@Pc(65) int fogStart = fogEnd - (int) (GlobalConfig.VIEW_FADE_DISTANCE * 2.0f) - offset;
 		if (fogStart < 50) {
 			fogStart = 50;
 		}
@@ -128,10 +128,10 @@ public final class FogManager {
 		@Pc(1) GL2 local1 = GlRenderer.gl;
 		local1.glColorMaterial(GL2.GL_FRONT, GL2.GL_AMBIENT_AND_DIFFUSE);
 		local1.glEnable(GL2.GL_COLOR_MATERIAL);
-		@Pc(27) float[] local27 = new float[] { 0.0F, 0.0F, 0.0F, 1.0F };
+		@Pc(27) float[] local27 = new float[]{0.0F, 0.0F, 0.0F, 1.0F};
 		local1.glLightfv(GL2.GL_LIGHT0, GL2.GL_AMBIENT, local27, 0);
 		local1.glEnable(GL2.GL_LIGHT0);
-		@Pc(55) float[] local55 = new float[] { 0.0F, 0.0F, 0.0F, 1.0F };
+		@Pc(55) float[] local55 = new float[]{0.0F, 0.0F, 0.0F, 1.0F};
 		local1.glLightfv(GL2.GL_LIGHT1, GL2.GL_AMBIENT, local55, 0);
 		local1.glEnable(GL2.GL_LIGHT1);
 		anInt3919 = -1;
@@ -160,11 +160,11 @@ public final class FogManager {
 		return aFloat21;
 	}
 
-    @OriginalMember(owner = "client!si", name = "a", descriptor = "(IZ)V")
-    public static void method3935(@OriginalArg(0) int arg0) {
-        method3060(anInt3923, ((float) arg0 * 0.1F + 0.7F) * 1.1523438F, 0.69921875F, 0.69921875F);
-        method3063(-50.0F, -60.0F, -50.0F);
-        method3062(anInt3922, 0);
-        method3058();
-    }
+	@OriginalMember(owner = "client!si", name = "a", descriptor = "(IZ)V")
+	public static void method3935(@OriginalArg(0) int arg0) {
+		method3060(anInt3923, ((float) arg0 * 0.1F + 0.7F) * 1.1523438F, 0.69921875F, 0.69921875F);
+		method3063(-50.0F, -60.0F, -50.0F);
+		method3062(anInt3922, 0);
+		method3058();
+	}
 }

@@ -8,10 +8,10 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!cn")
 public final class AttachLocRequest extends Node {
 
-    @OriginalMember(owner = "client!ka", name = "q", descriptor = "Lclient!ih;")
+	@OriginalMember(owner = "client!ka", name = "q", descriptor = "Lclient!ih;")
 	public static final LinkedList queue = new LinkedList();
 
-    @OriginalMember(owner = "client!cn", name = "p", descriptor = "I")
+	@OriginalMember(owner = "client!cn", name = "p", descriptor = "I")
 	public int setLoops;
 
 	@OriginalMember(owner = "client!cn", name = "r", descriptor = "I")
@@ -141,21 +141,21 @@ public final class AttachLocRequest extends Node {
 		}
 	}
 
-    @OriginalMember(owner = "client!nh", name = "a", descriptor = "(IIIIIIIIIIIII)V")
-    public static void push(@OriginalArg(0) int x1Delta, @OriginalArg(1) int setLoops, @OriginalArg(2) int entityId, @OriginalArg(3) int resetLoops, @OriginalArg(4) int z, @OriginalArg(5) int z1Delta, @OriginalArg(6) int angle, @OriginalArg(7) int x0Delta, @OriginalArg(8) int x, @OriginalArg(9) int shape, @OriginalArg(11) int z0Delta, @OriginalArg(12) int locId) {
-        @Pc(7) AttachLocRequest req = new AttachLocRequest();
-        req.angle = angle;
-        req.resetLoops = resetLoops;
-        req.setLoops = setLoops;
-        req.z1Delta = z1Delta;
-        req.entityId = entityId;
-        req.x = x;
-        req.z0Delta = z0Delta;
-        req.z = z;
-        req.locId = locId;
-        req.x0Delta = x0Delta;
-        req.x1Delta = x1Delta;
-        req.shape = shape;
-        queue.addTail(req);
-    }
+	@OriginalMember(owner = "client!nh", name = "a", descriptor = "(IIIIIIIIIIIII)V")
+	public static void push(@OriginalArg(0) int x1Delta, @OriginalArg(1) int setLoops, @OriginalArg(2) int entityId, @OriginalArg(3) int resetLoops, @OriginalArg(4) int z, @OriginalArg(5) int z1Delta, @OriginalArg(6) int angle, @OriginalArg(7) int x0Delta, @OriginalArg(8) int x, @OriginalArg(9) int shape, @OriginalArg(11) int z0Delta, @OriginalArg(12) int locId) {
+		@Pc(7) AttachLocRequest req = new AttachLocRequest();
+		req.angle = angle;
+		req.resetLoops = resetLoops;
+		req.setLoops = setLoops;
+		req.z1Delta = z1Delta;
+		req.entityId = entityId;
+		req.x = x;
+		req.z0Delta = z0Delta;
+		req.z = z;
+		req.locId = locId;
+		req.x0Delta = x0Delta;
+		req.x1Delta = x1Delta;
+		req.shape = shape;
+		queue.addTail(req);
+	}
 }

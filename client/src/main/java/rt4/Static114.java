@@ -1,14 +1,15 @@
 package rt4;
 
-import java.awt.Graphics;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
+import java.awt.*;
+
 public final class Static114 {
 
-    @OriginalMember(owner = "client!j", name = "O", descriptor = "[I")
-	public static final int[] anIntArray565 = new int[] { 1, -1, -1, 1 };
+	@OriginalMember(owner = "client!j", name = "O", descriptor = "[I")
+	public static final int[] anIntArray565 = new int[]{1, -1, -1, 1};
 
 	@OriginalMember(owner = "client!j", name = "a", descriptor = "(BZLclient!na;)V")
 	public static void drawTextOnScreen(@OriginalArg(1) boolean arg0, @OriginalArg(2) JagString arg1) {

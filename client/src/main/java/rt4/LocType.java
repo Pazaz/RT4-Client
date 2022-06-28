@@ -8,11 +8,11 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!pb")
 public final class LocType {
 
-    @OriginalMember(owner = "client!wf", name = "o", descriptor = "[Lclient!gb;")
-    public static final RawModel[] tempModels = new RawModel[4];
-    @OriginalMember(owner = "client!ni", name = "n", descriptor = "Lclient!sm;")
+	@OriginalMember(owner = "client!wf", name = "o", descriptor = "[Lclient!gb;")
+	public static final RawModel[] tempModels = new RawModel[4];
+	@OriginalMember(owner = "client!ni", name = "n", descriptor = "Lclient!sm;")
 	public static Loc_Class139 aClass139_1 = new Loc_Class139();
-    @OriginalMember(owner = "client!pb", name = "a", descriptor = "[S")
+	@OriginalMember(owner = "client!pb", name = "a", descriptor = "[S")
 	private short[] retextureSource;
 
 	@OriginalMember(owner = "client!pb", name = "b", descriptor = "[S")
@@ -251,7 +251,7 @@ public final class LocType {
 				if (local10) {
 					local60 += 65536;
 				}
-				local7 = (RawModel) LocTypeList.aClass99_24.get((long) local60);
+				local7 = (RawModel) LocTypeList.aClass99_24.get(local60);
 				if (local7 == null) {
 					local7 = RawModel.create(LocTypeList.modelsArchive, local60 & 0xFFFF);
 					if (local7 == null) {
@@ -260,7 +260,7 @@ public final class LocType {
 					if (local10) {
 						local7.method1673();
 					}
-					LocTypeList.aClass99_24.put(local7, (long) local60);
+					LocTypeList.aClass99_24.put(local7, local60);
 				}
 				if (local46 > 1) {
 					tempModels[local48] = local7;
@@ -284,7 +284,7 @@ public final class LocType {
 			if (local10) {
 				local48 += 65536;
 			}
-			local7 = (RawModel) LocTypeList.aClass99_24.get((long) local48);
+			local7 = (RawModel) LocTypeList.aClass99_24.get(local48);
 			if (local7 == null) {
 				local7 = RawModel.create(LocTypeList.modelsArchive, local48 & 0xFFFF);
 				if (local7 == null) {
@@ -293,21 +293,13 @@ public final class LocType {
 				if (local10) {
 					local7.method1673();
 				}
-				LocTypeList.aClass99_24.put(local7, (long) local48);
+				LocTypeList.aClass99_24.put(local7, local48);
 			}
 		}
 		@Pc(211) boolean local211;
-		if (this.resizeX == 128 && this.resizeY == 128 && this.resizeZ == 128) {
-			local211 = false;
-		} else {
-			local211 = true;
-		}
+		local211 = this.resizeX != 128 || this.resizeY != 128 || this.resizeZ != 128;
 		@Pc(230) boolean local230;
-		if (this.translateX == 0 && this.translateY == 0 && this.translateZ == 0) {
-			local230 = false;
-		} else {
-			local230 = true;
-		}
+		local230 = this.translateX != 0 || this.translateY != 0 || this.translateZ != 0;
 		@Pc(265) RawModel local265 = new RawModel(local7, arg0 == 0 && !local211 && !local230, this.recolorSource == null, this.retextureSource == null, true);
 		if (arg1 == 4 && arg0 > 3) {
 			local265.method1682();
@@ -385,7 +377,7 @@ public final class LocType {
 		if (this.params == null) {
 			return arg0;
 		} else {
-			@Pc(21) IntNode local21 = (IntNode) this.params.get((long) arg1);
+			@Pc(21) IntNode local21 = (IntNode) this.params.get(arg1);
 			return local21 == null ? arg0 : local21.value;
 		}
 	}
@@ -605,7 +597,7 @@ public final class LocType {
 				} else {
 					local589 = new IntNode(arg0.g4());
 				}
-				this.params.put(local589, (long) local580);
+				this.params.put(local589, local580);
 			}
 		}
 	}
@@ -681,14 +673,14 @@ public final class LocType {
 			if (arg1) {
 				local26 += 65536;
 			}
-			local79 = (GlModel) LocTypeList.aClass99_24.get((long) local26);
+			local79 = (GlModel) LocTypeList.aClass99_24.get(local26);
 			if (local79 == null) {
 				@Pc(90) RawModel local90 = RawModel.create(LocTypeList.modelsArchive, local26 & 0xFFFF);
 				if (local90 == null) {
 					return null;
 				}
 				local79 = new GlModel(local90, local10, local17, arg1);
-				LocTypeList.aClass99_24.put(local79, (long) local26);
+				LocTypeList.aClass99_24.put(local79, local26);
 			}
 		}
 		@Pc(236) boolean local236 = this.aBoolean217;
@@ -918,7 +910,7 @@ public final class LocType {
 		if (this.params == null) {
 			return arg0;
 		} else {
-			@Pc(26) StringNode local26 = (StringNode) this.params.get((long) arg1);
+			@Pc(26) StringNode local26 = (StringNode) this.params.get(arg1);
 			return local26 == null ? arg0 : local26.value;
 		}
 	}

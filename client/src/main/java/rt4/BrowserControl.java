@@ -1,9 +1,9 @@
 package rt4;
 
-import java.applet.Applet;
-// import netscape.javascript.JSObject;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
+
+import java.applet.Applet;
 
 public final class BrowserControl {
 

@@ -12,10 +12,10 @@ public final class DisplayMode {
 
 	@OriginalMember(owner = "client!ib", name = "i", descriptor = "[Lclient!od;")
 	public static DisplayMode[] aClass114Array1;
-    @OriginalMember(owner = "client!rc", name = "M", descriptor = "Z")
-    public static boolean aBoolean73 = false;
-    @OriginalMember(owner = "client!jk", name = "y", descriptor = "Z")
-    public static boolean aBoolean156 = false;
+	@OriginalMember(owner = "client!rc", name = "M", descriptor = "Z")
+	public static boolean aBoolean73 = false;
+	@OriginalMember(owner = "client!jk", name = "y", descriptor = "Z")
+	public static boolean aBoolean156 = false;
 	@OriginalMember(owner = "client!hi", name = "f", descriptor = "J")
 	public static long aLong89 = 0L;
 
@@ -54,10 +54,7 @@ public final class DisplayMode {
 		if (arg1 == 3 || mode == 3) {
 			arg0 = true;
 		}
-		@Pc(44) boolean useHd = false;
-		if (mode > 0 != arg1 > 0) {
-			useHd = true;
-		}
+		@Pc(44) boolean useHd = mode > 0 != arg1 > 0;
 		if (arg0 && arg1 > 0) {
 			useHd = true;
 		}
@@ -227,11 +224,7 @@ public final class DisplayMode {
 		if (arg2) {
 			client.method2721();
 		}
-		if (arg1 >= 2) {
-			aBoolean156 = true;
-		} else {
-			aBoolean156 = false;
-		}
+		aBoolean156 = arg1 >= 2;
 		if (InterfaceList.topLevelInterface != -1) {
 			InterfaceList.method3712(true);
 		}
@@ -250,7 +243,8 @@ public final class DisplayMode {
 			@Pc(16) DisplayMode[] local16 = method3558(GameShell.signLink);
 			@Pc(20) DisplayMode[] local20 = new DisplayMode[local16.length];
 			@Pc(22) int local22 = 0;
-			label52: for (@Pc(24) int local24 = 0; local24 < local16.length; local24++) {
+			label52:
+			for (@Pc(24) int local24 = 0; local24 < local16.length; local24++) {
 				@Pc(32) DisplayMode local32 = local16[local24];
 				if ((local32.bitDepth <= 0 || local32.bitDepth >= 24) && local32.width >= 800 && local32.height >= 600) {
 					for (@Pc(52) int local52 = 0; local52 < local22; local52++) {

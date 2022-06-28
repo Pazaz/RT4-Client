@@ -6,9 +6,9 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static221 {
 
-    @OriginalMember(owner = "client!cl", name = "ab", descriptor = "[I")
-    public static final int[] anIntArray83 = new int[256];
-    @OriginalMember(owner = "client!s", name = "a", descriptor = "[I")
+	@OriginalMember(owner = "client!cl", name = "ab", descriptor = "[I")
+	public static final int[] anIntArray83 = new int[256];
+	@OriginalMember(owner = "client!s", name = "a", descriptor = "[I")
 	public static int[] tt;
 	@OriginalMember(owner = "client!nd", name = "y", descriptor = "Lclient!mm;")
 	public static SoftwareSprite aClass3_Sub2_Sub1_Sub1_3;

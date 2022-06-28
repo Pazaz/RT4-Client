@@ -30,7 +30,7 @@ public final class MsiType {
 
 	@OriginalMember(owner = "client!aa", name = "a", descriptor = "(IB)Lclient!ek;")
 	public final SoftwareIndexedSprite getSprite(@OriginalArg(0) int arg0) {
-		@Pc(17) SoftwareIndexedSprite local17 = (SoftwareIndexedSprite) MsiTypeList.sprites.get((long) (arg0 << 16 | this.spriteId));
+		@Pc(17) SoftwareIndexedSprite local17 = (SoftwareIndexedSprite) MsiTypeList.sprites.get(arg0 << 16 | this.spriteId);
 		if (local17 != null) {
 			return local17;
 		}
@@ -43,7 +43,7 @@ public final class MsiType {
 			for (@Pc(59) int local59 = 0; local59 < arg0; local59++) {
 				local17.flipVertical();
 			}
-			MsiTypeList.sprites.put(local17, (long) (arg0 << 16 | this.spriteId));
+			MsiTypeList.sprites.put(local17, arg0 << 16 | this.spriteId);
 		}
 		return local17;
 	}

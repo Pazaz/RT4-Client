@@ -4,7 +4,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 
 public final class Static59 {
 
-    @OriginalMember(owner = "client!ej", name = "h", descriptor = "(I)V")
+	@OriginalMember(owner = "client!ej", name = "h", descriptor = "(I)V")
 	public static void method1372() {
 		if (Static226.anInt3953 == 2) {
 			if (ScriptRunner.anInt3751 == Mouse.anInt5850 && ScriptRunner.anInt1892 == Static226.anInt5895) {

@@ -5,12 +5,12 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static126 {
 
-    @OriginalMember(owner = "client!sc", name = "z", descriptor = "[Z")
+	@OriginalMember(owner = "client!sc", name = "z", descriptor = "[Z")
 	public static final boolean[] aBooleanArray116 = new boolean[100];
-    @OriginalMember(owner = "client!rg", name = "s", descriptor = "I")
-    public static int anInt5574 = -1;
+	@OriginalMember(owner = "client!rg", name = "s", descriptor = "I")
+	public static int anInt5574 = -1;
 
-    @OriginalMember(owner = "client!jm", name = "a", descriptor = "(Z)V")
+	@OriginalMember(owner = "client!jm", name = "a", descriptor = "(Z)V")
 	public static void method2460() {
 		if (InterfaceList.topLevelInterface != -1) {
 			Static96.method1949(InterfaceList.topLevelInterface);

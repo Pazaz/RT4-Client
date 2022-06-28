@@ -227,7 +227,7 @@ public final class NpcType {
 		if (this.params == null) {
 			return arg1;
 		} else {
-			@Pc(18) IntNode local18 = (IntNode) this.params.get((long) arg0);
+			@Pc(18) IntNode local18 = (IntNode) this.params.get(arg0);
 			return local18 == null ? arg1 : local18.value;
 		}
 	}
@@ -238,7 +238,7 @@ public final class NpcType {
 			@Pc(13) NpcType local13 = this.getMultiNpc();
 			return local13 == null ? null : local13.getBodyModel(seqs, arg1, arg2, arg3, arg4, arg5, seqType1, arg7, seqType2);
 		}
-		@Pc(40) Model local40 = (Model) NpcTypeList.models.get((long) this.id);
+		@Pc(40) Model local40 = (Model) NpcTypeList.models.get(this.id);
 		@Pc(46) boolean local46;
 		@Pc(173) int local173;
 		@Pc(235) int local235;
@@ -352,7 +352,7 @@ public final class NpcType {
 			if (GlRenderer.enabled) {
 				((GlModel) local40).method4111(false, false, false, false, false, true);
 			}
-			NpcTypeList.models.put(local40, (long) this.id);
+			NpcTypeList.models.put(local40, this.id);
 		}
 		local46 = false;
 		@Pc(721) boolean local721 = false;
@@ -497,7 +497,7 @@ public final class NpcType {
 		if (this.params == null) {
 			return arg1;
 		} else {
-			@Pc(18) StringNode local18 = (StringNode) this.params.get((long) arg0);
+			@Pc(18) StringNode local18 = (StringNode) this.params.get(arg0);
 			return local18 == null ? arg1 : local18.value;
 		}
 	}
@@ -525,7 +525,7 @@ public final class NpcType {
 		} else if (this.anIntArray354 == null) {
 			return null;
 		} else {
-			@Pc(41) Model local41 = (Model) NpcTypeList.headModels.get((long) this.id);
+			@Pc(41) Model local41 = (Model) NpcTypeList.headModels.get(this.id);
 			if (local41 == null) {
 				@Pc(46) boolean local46 = false;
 				for (@Pc(48) int local48 = 0; local48 < this.anIntArray354.length; local48++) {
@@ -562,7 +562,7 @@ public final class NpcType {
 					}
 				}
 				local41 = local119.createModel(64, 768, -50, -10, -50);
-				NpcTypeList.headModels.put(local41, (long) this.id);
+				NpcTypeList.headModels.put(local41, this.id);
 			}
 			if (arg0 != null) {
 				local41 = arg0.method4215(local41, arg2, arg1, arg3);
@@ -746,7 +746,7 @@ public final class NpcType {
 					} else {
 						local605 = new IntNode(arg1.g4());
 					}
-					this.params.put(local605, (long) local596);
+					this.params.put(local605, local596);
 				}
 			}
 		}

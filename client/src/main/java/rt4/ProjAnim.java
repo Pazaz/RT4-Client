@@ -174,7 +174,7 @@ public final class ProjAnim extends Entity {
 	public final void method3705(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		@Pc(17) double local17;
 		if (!this.aBoolean239) {
-			@Pc(10) double local10 = (double) (arg0 - this.anInt4817);
+			@Pc(10) double local10 = arg0 - this.anInt4817;
 			local17 = arg3 - this.anInt4804;
 			@Pc(26) double local26 = Math.sqrt(local17 * local17 + local10 * local10);
 			this.aDouble6 = this.anInt4813;

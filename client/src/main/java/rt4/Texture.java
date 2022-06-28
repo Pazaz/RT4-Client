@@ -10,16 +10,16 @@ import java.util.Random;
 @OriginalClass("client!lc")
 public final class Texture {
 
-    @OriginalMember(owner = "client!i", name = "ac", descriptor = "[I")
-    public static final int[] brightnessMap = new int[256];
-    @OriginalMember(owner = "client!rh", name = "g", descriptor = "I")
-    public static final int spriteGroupId = -1;
-    @OriginalMember(owner = "client!jh", name = "f", descriptor = "D")
+	@OriginalMember(owner = "client!i", name = "ac", descriptor = "[I")
+	public static final int[] brightnessMap = new int[256];
+	@OriginalMember(owner = "client!rh", name = "g", descriptor = "I")
+	public static final int spriteGroupId = -1;
+	@OriginalMember(owner = "client!jh", name = "f", descriptor = "D")
 	public static double brightness = -1.0D;
-    @OriginalMember(owner = "client!cm", name = "a", descriptor = "Lclient!m;")
-    public static TextureProvider provider;
-    @OriginalMember(owner = "client!pe", name = "r", descriptor = "I")
-    public static int width;
+	@OriginalMember(owner = "client!cm", name = "a", descriptor = "Lclient!m;")
+	public static TextureProvider provider;
+	@OriginalMember(owner = "client!pe", name = "r", descriptor = "I")
+	public static int width;
 	@OriginalMember(owner = "client!ob", name = "f", descriptor = "Lclient!ve;")
 	public static Js5 spritesArchive;
 	@OriginalMember(owner = "client!nj", name = "k", descriptor = "I")
@@ -240,21 +240,21 @@ public final class Texture {
 		heightMask = height - 1;
 	}
 
-    @OriginalMember(owner = "client!ni", name = "a", descriptor = "(BILjava/util/Random;)I")
-    public static int method3219(@OriginalArg(1) int arg0, @OriginalArg(2) Random arg1) {
-        if (arg0 <= 0) {
-            throw new IllegalArgumentException();
-        } else if (method3702(arg0)) {
-            return (int) (((long) arg1.nextInt() & 0xFFFFFFFFL) * (long) arg0 >> 32);
-        } else {
-            @Pc(38) int local38 = Integer.MIN_VALUE - (int) (0x100000000L % (long) arg0);
-            @Pc(41) int local41;
-            do {
-                local41 = arg1.nextInt();
-            } while (local38 <= local41);
-            return method990(local41, arg0);
-        }
-    }
+	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(BILjava/util/Random;)I")
+	public static int method3219(@OriginalArg(1) int arg0, @OriginalArg(2) Random arg1) {
+		if (arg0 <= 0) {
+			throw new IllegalArgumentException();
+		} else if (method3702(arg0)) {
+			return (int) (((long) arg1.nextInt() & 0xFFFFFFFFL) * (long) arg0 >> 32);
+		} else {
+			@Pc(38) int local38 = Integer.MIN_VALUE - (int) (0x100000000L % (long) arg0);
+			@Pc(41) int local41;
+			do {
+				local41 = arg1.nextInt();
+			} while (local38 <= local41);
+			return method990(local41, arg0);
+		}
+	}
 
 	@OriginalMember(owner = "client!d", name = "c", descriptor = "(III)I")
 	public static int method990(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
@@ -263,9 +263,9 @@ public final class Texture {
 	}
 
 	@OriginalMember(owner = "client!ra", name = "a", descriptor = "(BI)Z")
-    public static boolean method3702(@OriginalArg(1) int arg0) {
-        return arg0 == (-arg0 & arg0);
-    }
+	public static boolean method3702(@OriginalArg(1) int arg0) {
+		return arg0 == (-arg0 & arg0);
+	}
 
 	@OriginalMember(owner = "client!lc", name = "a", descriptor = "(IZIDILclient!ve;Lclient!m;Z)[I")
 	public final int[] method2725(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(3) double arg3, @OriginalArg(5) Js5 arg4, @OriginalArg(6) TextureProvider arg5, @OriginalArg(7) boolean arg6) {

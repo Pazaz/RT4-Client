@@ -202,10 +202,10 @@ public class SoftwareSprite extends Sprite {
 		}
 	}
 
-    @OriginalMember(owner = "client!gf", name = "a", descriptor = "(Lclient!ve;IIB)Lclient!mm;")
-    public static SoftwareSprite loadSoftwareAlphaSprite(@OriginalArg(0) Js5 arg0, @OriginalArg(2) int arg1) {
-        return SpriteLoader.decode(arg0, 0, arg1) ? method2071() : null;
-    }
+	@OriginalMember(owner = "client!gf", name = "a", descriptor = "(Lclient!ve;IIB)Lclient!mm;")
+	public static SoftwareSprite loadSoftwareAlphaSprite(@OriginalArg(0) Js5 arg0, @OriginalArg(2) int arg1) {
+		return SpriteLoader.decode(arg0, 0, arg1) ? method2071() : null;
+	}
 
 	@OriginalMember(owner = "client!hn", name = "d", descriptor = "(I)Lclient!mm;")
 	public static SoftwareSprite method2071() {

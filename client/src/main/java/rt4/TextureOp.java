@@ -8,8 +8,8 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!j")
 public abstract class TextureOp extends Node {
 
-    @OriginalMember(owner = "client!kc", name = "p", descriptor = "[I")
-    public static int[] COSINE;
+	@OriginalMember(owner = "client!kc", name = "p", descriptor = "[I")
+	public static int[] COSINE;
 	@OriginalMember(owner = "client!je", name = "eb", descriptor = "[I")
 	public static int[] SINE;
 	@OriginalMember(owner = "client!j", name = "t", descriptor = "Lclient!nd;")
@@ -100,7 +100,7 @@ public abstract class TextureOp extends Node {
 	protected final int[][] getChildColorOutput(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		if (this.aClass3_Sub1Array42[arg1].monochrome) {
 			@Pc(32) int[] local32 = this.aClass3_Sub1Array42[arg1].getMonochromeOutput(arg0);
-			return new int[][] { local32, local32, local32 };
+			return new int[][]{local32, local32, local32};
 		} else {
 			return this.aClass3_Sub1Array42[arg1].getColorOutput(arg0);
 		}

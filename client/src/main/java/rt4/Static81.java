@@ -1,10 +1,10 @@
 package rt4;
 
-import java.awt.Point;
-
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+
+import java.awt.*;
 
 public final class Static81 {
 
@@ -13,10 +13,10 @@ public final class Static81 {
 
 	@OriginalMember(owner = "client!gg", name = "db", descriptor = "I")
 	public static int anInt2225 = -1;
-    @OriginalMember(owner = "client!ja", name = "r", descriptor = "I")
+	@OriginalMember(owner = "client!ja", name = "r", descriptor = "I")
 	public static int anInt2941 = -1;
 
-    @OriginalMember(owner = "client!gg", name = "c", descriptor = "(II)V")
+	@OriginalMember(owner = "client!gg", name = "c", descriptor = "(II)V")
 	public static void method1750(@OriginalArg(0) int arg0) {
 		if (!Preferences.cursorsEnabled) {
 			arg0 = -1;

@@ -9,7 +9,7 @@ public final class Static44 {
 	@OriginalMember(owner = "client!dh", name = "a", descriptor = "Z")
 	public static boolean aBoolean83 = false;
 
-    @OriginalMember(owner = "client!dh", name = "i", descriptor = "Lclient!na;")
+	@OriginalMember(owner = "client!dh", name = "i", descriptor = "Lclient!na;")
 	public static final JagString IMG1 = JagString.parse("<img=1>");
 	@OriginalMember(owner = "client!d", name = "R", descriptor = "Lclient!be;")
 	public static Component aClass13_10 = null;
@@ -19,7 +19,7 @@ public final class Static44 {
 		@Pc(9) ComponentPointer local9 = new ComponentPointer();
 		local9.anInt5879 = arg2;
 		local9.anInt5878 = arg0;
-		InterfaceList.openInterfaces.put(local9, (long) arg1);
+		InterfaceList.openInterfaces.put(local9, arg1);
 		InterfaceList.method1753(arg0);
 		@Pc(28) Component local28 = InterfaceList.getComponent(arg1);
 		if (local28 != null) {

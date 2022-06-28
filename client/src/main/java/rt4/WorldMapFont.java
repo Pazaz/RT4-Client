@@ -1,27 +1,25 @@
 package rt4;
 
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Font;
-import java.awt.FontMetrics;
-import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.image.PixelGrabber;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
+import java.awt.Component;
+import java.awt.Font;
+import java.awt.*;
+import java.awt.image.PixelGrabber;
+
 @OriginalClass("client!fd")
 public final class WorldMapFont {
 
 	@OriginalMember(owner = "client!fd", name = "d", descriptor = "Ljava/lang/String;")
-	public static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"£$%^&*()-_=+[{]};:'@#~,<.>/?\\| " + String.valueOf('Ä') + 'Ë' + 'Ï' + 'Ö' + 'Ü' + 'ä' + 'ë' + 'ï' + 'ö' + 'ü' + 'ÿ' + 'ß' + 'Á' + 'À' + 'É' + 'È' + 'Í' + 'Ì' + 'Ó' + 'Ò' + 'Ú' + 'Ù' + 'á' + 'à' + 'é' + 'è' + 'í' + 'ì' + 'ó' + 'ò' + 'ú' + 'ù' + 'Â' + 'Ê' + 'Î' + 'Ô' + 'Û' + 'â' + 'ê' + 'î' + 'ô' + 'û' + 'Æ' + 'æ';
+	public static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"£$%^&*()-_=+[{]};:'@#~,<.>/?\\| " + 'Ä' + 'Ë' + 'Ï' + 'Ö' + 'Ü' + 'ä' + 'ë' + 'ï' + 'ö' + 'ü' + 'ÿ' + 'ß' + 'Á' + 'À' + 'É' + 'È' + 'Í' + 'Ì' + 'Ó' + 'Ò' + 'Ú' + 'Ù' + 'á' + 'à' + 'é' + 'è' + 'í' + 'ì' + 'ó' + 'ò' + 'ú' + 'ù' + 'Â' + 'Ê' + 'Î' + 'Ô' + 'Û' + 'â' + 'ê' + 'î' + 'ô' + 'û' + 'Æ' + 'æ';
 
-    @OriginalMember(owner = "client!fd", name = "e", descriptor = "I")
-    public static final int ALPHABET_SIZE = ALPHABET.length();
+	@OriginalMember(owner = "client!fd", name = "e", descriptor = "I")
+	public static final int ALPHABET_SIZE = ALPHABET.length();
 
-    @OriginalMember(owner = "client!fd", name = "f", descriptor = "[I")
+	@OriginalMember(owner = "client!fd", name = "f", descriptor = "[I")
 	private static final int[] CHAR_INDEXES = new int[256];
 
 	@OriginalMember(owner = "client!fd", name = "c", descriptor = "I")
@@ -253,7 +251,8 @@ public final class WorldMapFont {
 		@Pc(142) int local142;
 		@Pc(147) int local147;
 		@Pc(158) int local158;
-		label135: for (local142 = 0; local142 < local54; local142++) {
+		label135:
+		for (local142 = 0; local142 < local54; local142++) {
 			for (local147 = 0; local147 < local3; local147++) {
 				local158 = local111[local147 + local142 * local3];
 				if ((local158 & 0xFFFFFF) != 0) {
@@ -262,7 +261,8 @@ public final class WorldMapFont {
 				}
 			}
 		}
-		label123: for (local142 = 0; local142 < local3; local142++) {
+		label123:
+		for (local142 = 0; local142 < local3; local142++) {
 			for (local147 = 0; local147 < local54; local147++) {
 				local158 = local111[local142 + local147 * local3];
 				if ((local158 & 0xFFFFFF) != 0) {
@@ -271,7 +271,8 @@ public final class WorldMapFont {
 				}
 			}
 		}
-		label111: for (local142 = local54 - 1; local142 >= 0; local142--) {
+		label111:
+		for (local142 = local54 - 1; local142 >= 0; local142--) {
 			for (local147 = 0; local147 < local3; local147++) {
 				local158 = local111[local147 + local142 * local3];
 				if ((local158 & 0xFFFFFF) != 0) {
@@ -280,7 +281,8 @@ public final class WorldMapFont {
 				}
 			}
 		}
-		label99: for (local142 = local3 - 1; local142 >= 0; local142--) {
+		label99:
+		for (local142 = local3 - 1; local142 >= 0; local142--) {
 			for (local147 = 0; local147 < local54; local147++) {
 				local158 = local111[local142 + local147 * local3];
 				if ((local158 & 0xFFFFFF) != 0) {

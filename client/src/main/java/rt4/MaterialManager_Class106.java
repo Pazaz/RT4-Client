@@ -1,10 +1,11 @@
 package rt4;
 
-import java.util.Random;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+
+import java.util.Random;
 
 @OriginalClass("client!wf")
 public abstract class MaterialManager_Class106 {
@@ -41,15 +42,15 @@ public abstract class MaterialManager_Class106 {
 		this.method3847();
 	}
 
-    @OriginalMember(owner = "client!se", name = "a", descriptor = "(IIIIZ)I")
-    public static int method3891(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-        @Pc(8) int local8 = arg3 & 0xF;
-        @Pc(29) int local29 = local8 >= 4 ? (local8 == 12 || local8 == 14 ? arg0 : arg1) : arg2;
-        @Pc(42) int local42 = local8 < 8 ? arg0 : arg2;
-        return ((local8 & 0x1) == 0 ? local42 : -local42) + ((local8 & 0x2) == 0 ? local29 : -local29);
-    }
+	@OriginalMember(owner = "client!se", name = "a", descriptor = "(IIIIZ)I")
+	public static int method3891(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+		@Pc(8) int local8 = arg3 & 0xF;
+		@Pc(29) int local29 = local8 >= 4 ? (local8 == 12 || local8 == 14 ? arg0 : arg1) : arg2;
+		@Pc(42) int local42 = local8 < 8 ? arg0 : arg2;
+		return ((local8 & 0x1) == 0 ? local42 : -local42) + ((local8 & 0x2) == 0 ? local29 : -local29);
+	}
 
-    @OriginalMember(owner = "client!wf", name = "a", descriptor = "(IIII)V")
+	@OriginalMember(owner = "client!wf", name = "a", descriptor = "(IIII)V")
 	protected final void method3841() {
 		@Pc(8) int[] local8 = new int[64];
 		@Pc(11) int[] local11 = new int[64];
@@ -147,7 +148,7 @@ public abstract class MaterialManager_Class106 {
 	private void method3843() {
 		this.aShortArray70 = new short[this.anInt5008];
 		for (@Pc(12) int local12 = 0; local12 < this.anInt5008; local12++) {
-			this.aShortArray70[local12] = (short) Math.pow(2.0D, (double) local12);
+			this.aShortArray70[local12] = (short) Math.pow(2.0D, local12);
 		}
 	}
 
@@ -156,7 +157,7 @@ public abstract class MaterialManager_Class106 {
 
 	@OriginalMember(owner = "client!wf", name = "c", descriptor = "(I)V")
 	private void method3847() {
-		@Pc(12) Random local12 = new Random((long) this.anInt5000);
+		@Pc(12) Random local12 = new Random(this.anInt5000);
 		@Pc(14) int local14;
 		for (local14 = 0; local14 < 255; local14++) {
 			this.aShortArray69[local14] = (short) local14;

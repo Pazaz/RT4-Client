@@ -1,17 +1,18 @@
 package rt4;
 
-import java.util.Random;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
+import java.util.Random;
+
 @OriginalClass("client!hm")
 public final class TextureOp15 extends TextureOp {
 
-    @OriginalMember(owner = "client!ui", name = "Q", descriptor = "I")
-    public static int anInt5526;
-    @OriginalMember(owner = "client!uf", name = "p", descriptor = "I")
+	@OriginalMember(owner = "client!ui", name = "Q", descriptor = "I")
+	public static int anInt5526;
+	@OriginalMember(owner = "client!uf", name = "p", descriptor = "I")
 	public static int anInt5443;
 	@OriginalMember(owner = "client!cl", name = "X", descriptor = "I")
 	public static int anInt1091;
@@ -48,7 +49,7 @@ public final class TextureOp15 extends TextureOp {
 
 	@OriginalMember(owner = "client!hm", name = "f", descriptor = "(B)V")
 	private void method2052() {
-		@Pc(12) Random local12 = new Random((long) this.anInt2639);
+		@Pc(12) Random local12 = new Random(this.anInt2639);
 		this.aShortArray35 = new short[512];
 		if (this.anInt2636 > 0) {
 			for (@Pc(26) int local26 = 0; local26 < 512; local26++) {
@@ -98,18 +99,18 @@ public final class TextureOp15 extends TextureOp {
 							local162 = local162 >= 0 ? local162 : -local162;
 							local201 = local162 >= local151 ? local162 : local151;
 						} else if (local165 == 4) {
-							local151 = (int) (Math.sqrt((double) ((float) (local151 < 0 ? -local151 : local151) / 4096.0F)) * 4096.0D);
-							local162 = (int) (Math.sqrt((double) ((float) (local162 >= 0 ? local162 : -local162) / 4096.0F)) * 4096.0D);
+							local151 = (int) (Math.sqrt((float) (local151 < 0 ? -local151 : local151) / 4096.0F) * 4096.0D);
+							local162 = (int) (Math.sqrt((float) (local162 >= 0 ? local162 : -local162) / 4096.0F) * 4096.0D);
 							local201 = local162 + local151;
 							local201 = local201 * local201 >> 12;
 						} else if (local165 == 5) {
 							local151 *= local151;
 							local162 *= local162;
-							local201 = (int) (Math.sqrt(Math.sqrt((double) ((float) (local162 + local151) / 1.6777216E7F))) * 4096.0D);
+							local201 = (int) (Math.sqrt(Math.sqrt((float) (local162 + local151) / 1.6777216E7F)) * 4096.0D);
 						} else if (local165 == 2) {
 							local201 = (local151 >= 0 ? local151 : -local151) + (local162 < 0 ? -local162 : local162);
 						} else {
-							local201 = (int) (Math.sqrt((double) ((float) (local162 * local162 + local151 * local151) / 1.6777216E7F)) * 4096.0D);
+							local201 = (int) (Math.sqrt((float) (local162 * local162 + local151 * local151) / 1.6777216E7F) * 4096.0D);
 						}
 						if (local201 < anInt1091) {
 							anInt5526 = anInt5443;

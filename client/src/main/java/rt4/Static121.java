@@ -9,7 +9,7 @@ public final class Static121 {
 	@OriginalMember(owner = "client!jg", name = "a", descriptor = "I")
 	public static int anInt3038;
 
-    @OriginalMember(owner = "client!jg", name = "e", descriptor = "Z")
+	@OriginalMember(owner = "client!jg", name = "e", descriptor = "Z")
 	public static boolean qaOpTest = false;
 
 	@OriginalMember(owner = "client!jg", name = "a", descriptor = "(IBIII)V")

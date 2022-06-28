@@ -1,14 +1,15 @@
 package rt4;
 
+import org.openrs2.deob.annotation.OriginalArg;
+import org.openrs2.deob.annotation.OriginalClass;
+import org.openrs2.deob.annotation.OriginalMember;
+import org.openrs2.deob.annotation.Pc;
+
 import java.io.EOFException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
-import org.openrs2.deob.annotation.OriginalArg;
-import org.openrs2.deob.annotation.OriginalClass;
-import org.openrs2.deob.annotation.OriginalMember;
-import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!ma")
 public final class BufferedSocket implements Runnable {
@@ -60,9 +61,11 @@ public final class BufferedSocket implements Runnable {
 			while (true) {
 				@Pc(39) int len;
 				@Pc(24) int off;
-				ready: {
+				ready:
+				{
 					synchronized (this) {
-						close: {
+						close:
+						{
 							if (this.writePointer == this.readPointer) {
 								if (this.closed) {
 									break close;

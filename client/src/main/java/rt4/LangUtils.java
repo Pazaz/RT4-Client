@@ -15,7 +15,7 @@ public final class LangUtils {
 	@OriginalMember(owner = "client!mc", name = "pb", descriptor = "Lclient!na;")
 	private static final JagString LANG_FR = JagString.parse("fr");
 	@OriginalMember(owner = "client!mc", name = "ob", descriptor = "[Lclient!na;")
-	public static final JagString[] LANGUAGES = new JagString[] {LANG_EN, LANG_DE, LANG_FR, LANG_PT};
+	public static final JagString[] LANGUAGES = new JagString[]{LANG_EN, LANG_DE, LANG_FR, LANG_PT};
 
 	@OriginalMember(owner = "client!hm", name = "a", descriptor = "(Lclient!na;B)I")
 	public static int method2053(@OriginalArg(0) JagString arg0) {

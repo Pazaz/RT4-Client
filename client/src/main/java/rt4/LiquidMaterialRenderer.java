@@ -1,20 +1,21 @@
 package rt4;
 
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.nio.FloatBuffer;
-import com.jogamp.opengl.*;
+import com.jogamp.opengl.GL2;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.nio.FloatBuffer;
+
 @OriginalClass("client!rd")
 public final class LiquidMaterialRenderer implements MaterialRenderer {
 
-    @OriginalMember(owner = "client!rd", name = "d", descriptor = "[F")
-    public static final float[] aFloatArray24 = new float[4];
-    @OriginalMember(owner = "client!rd", name = "a", descriptor = "I")
+	@OriginalMember(owner = "client!rd", name = "d", descriptor = "[F")
+	public static final float[] aFloatArray24 = new float[4];
+	@OriginalMember(owner = "client!rd", name = "a", descriptor = "I")
 	private int anInt4829 = -1;
 
 	@OriginalMember(owner = "client!rd", name = "e", descriptor = "I")

@@ -413,9 +413,7 @@ public final class CollisionMap {
 				if (endX == startX - 1 && endZ == startZ && (this.flags[endX][endZ] & 0x8) == 0) {
 					return true;
 				}
-				if (startX + 1 == endX && startZ == endZ && (this.flags[endX][endZ] & 0x80) == 0) {
-					return true;
-				}
+				return startX + 1 == endX && startZ == endZ && (this.flags[endX][endZ] & 0x80) == 0;
 			}
 		} else {
 			@Pc(785) int x1 = size + endX - 1;
@@ -528,9 +526,7 @@ public final class CollisionMap {
 				if (startX - size == endX && startZ >= endZ && startZ <= z1 && (this.flags[x1][startZ] & 0x12C0108) == 0) {
 					return true;
 				}
-				if (endX == startX + 1 && startZ >= endZ && z1 >= startZ && (this.flags[endX][startZ] & 0x12C0180) == 0) {
-					return true;
-				}
+				return endX == startX + 1 && startZ >= endZ && z1 >= startZ && (this.flags[endX][startZ] & 0x12C0180) == 0;
 			}
 		}
 		return false;
@@ -618,9 +614,7 @@ public final class CollisionMap {
 				if (startX - 1 == endX && endZ == startZ && (this.flags[endX][endZ] & 0x8) == 0) {
 					return true;
 				}
-				if (endX == startX + 1 && startZ == endZ && (this.flags[endX][endZ] & 0x80) == 0) {
-					return true;
-				}
+				return endX == startX + 1 && startZ == endZ && (this.flags[endX][endZ] & 0x80) == 0;
 			}
 		} else {
 			@Pc(414) int x1 = endX + size - 1;
@@ -669,9 +663,7 @@ public final class CollisionMap {
 				if (endX == startX - size && endZ <= startZ && z1 >= startZ && (this.flags[x1][startZ] & 0x8) == 0) {
 					return true;
 				}
-				if (endX == startX + 1 && startZ >= endZ && startZ <= z1 && (this.flags[endX][startZ] & 0x80) == 0) {
-					return true;
-				}
+				return endX == startX + 1 && startZ >= endZ && startZ <= z1 && (this.flags[endX][startZ] & 0x80) == 0;
 			}
 		}
 		return false;

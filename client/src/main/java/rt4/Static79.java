@@ -6,7 +6,7 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static79 {
 
-    @OriginalMember(owner = "client!ge", name = "a", descriptor = "(IIIIIIII)V")
+	@OriginalMember(owner = "client!ge", name = "a", descriptor = "(IIIIIIII)V")
 	public static void method1698(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6) {
 		if (arg1 < 1 || arg4 < 1 || arg1 > 102 || arg4 > 102) {
 			return;

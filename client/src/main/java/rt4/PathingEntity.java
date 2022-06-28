@@ -8,17 +8,17 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!fe")
 public abstract class PathingEntity extends Entity {
 
-    @OriginalMember(owner = "client!ef", name = "a", descriptor = "[I")
-	public static final int[] ANGLES = new int[] { 768, 1024, 1280, 512, 1536, 256, 0, 1792 };
+	@OriginalMember(owner = "client!ef", name = "a", descriptor = "[I")
+	public static final int[] ANGLES = new int[]{768, 1024, 1280, 512, 1536, 256, 0, 1792};
 	@OriginalMember(owner = "client!ac", name = "l", descriptor = "Lclient!ck;")
 	public static final BasType aClass20_1 = new BasType();
-    @OriginalMember(owner = "client!hn", name = "Y", descriptor = "I")
-    public static int anInt2680 = 0;
-    @OriginalMember(owner = "client!hm", name = "ab", descriptor = "I")
-    public static int anInt2640 = 0;
-    @OriginalMember(owner = "client!f", name = "V", descriptor = "I")
+	@OriginalMember(owner = "client!hn", name = "Y", descriptor = "I")
+	public static int anInt2680 = 0;
+	@OriginalMember(owner = "client!hm", name = "ab", descriptor = "I")
+	public static int anInt2640 = 0;
+	@OriginalMember(owner = "client!f", name = "V", descriptor = "I")
 	public static int anInt1938 = 0;
-    @OriginalMember(owner = "client!fe", name = "A", descriptor = "I")
+	@OriginalMember(owner = "client!fe", name = "A", descriptor = "I")
 	public int spotAnimStart;
 
 	@OriginalMember(owner = "client!fe", name = "S", descriptor = "I")
@@ -395,11 +395,11 @@ public abstract class PathingEntity extends Entity {
 		@Pc(231) int local231 = local224 > local201 ? local201 : local224;
 		@Pc(238) int local238 = local224 > local134 ? local134 : local224;
 		@Pc(245) int local245 = local201 <= local87 ? local201 : local87;
-		anInt2640 = (int) (Math.atan2((double) (local212 - local231), (double) local27) * 325.95D) & 0x7FF;
+		anInt2640 = (int) (Math.atan2(local212 - local231, local27) * 325.95D) & 0x7FF;
 		if (anInt2640 != 0) {
 			arg0.rotateX(anInt2640);
 		}
-		anInt2680 = (int) (Math.atan2((double) (local245 - local238), (double) local24) * 325.95D) & 0x7FF;
+		anInt2680 = (int) (Math.atan2(local245 - local238, local24) * 325.95D) & 0x7FF;
 		if (anInt2680 != 0) {
 			arg0.rotateZ(anInt2680);
 		}

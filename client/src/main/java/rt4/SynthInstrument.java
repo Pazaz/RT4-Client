@@ -1,27 +1,28 @@
 package rt4;
 
-import java.util.Random;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
+import java.util.Random;
+
 @OriginalClass("client!pj")
 public final class SynthInstrument {
 
-    @OriginalMember(owner = "client!pj", name = "o", descriptor = "[I")
-    public static final int[] samples = new int[220500];
-    @OriginalMember(owner = "client!pj", name = "p", descriptor = "[I")
-    public static final int[] oscillatorIntervalRanges = new int[5];
-    @OriginalMember(owner = "client!pj", name = "q", descriptor = "[I")
-    public static final int[] oscillatorMinIntervals = new int[5];
-    @OriginalMember(owner = "client!pj", name = "r", descriptor = "[I")
-    public static final int[] oscillatorTimes = new int[5];
-    @OriginalMember(owner = "client!pj", name = "s", descriptor = "[I")
-    public static final int[] oscillatorStartSamples = new int[5];
-    @OriginalMember(owner = "client!pj", name = "t", descriptor = "[I")
-    public static final int[] scaledOscillatorAmplitudes = new int[5];
-    @OriginalMember(owner = "client!pj", name = "k", descriptor = "[I")
+	@OriginalMember(owner = "client!pj", name = "o", descriptor = "[I")
+	public static final int[] samples = new int[220500];
+	@OriginalMember(owner = "client!pj", name = "p", descriptor = "[I")
+	public static final int[] oscillatorIntervalRanges = new int[5];
+	@OriginalMember(owner = "client!pj", name = "q", descriptor = "[I")
+	public static final int[] oscillatorMinIntervals = new int[5];
+	@OriginalMember(owner = "client!pj", name = "r", descriptor = "[I")
+	public static final int[] oscillatorTimes = new int[5];
+	@OriginalMember(owner = "client!pj", name = "s", descriptor = "[I")
+	public static final int[] oscillatorStartSamples = new int[5];
+	@OriginalMember(owner = "client!pj", name = "t", descriptor = "[I")
+	public static final int[] scaledOscillatorAmplitudes = new int[5];
+	@OriginalMember(owner = "client!pj", name = "k", descriptor = "[I")
 	private static final int[] NOISE = new int[32768];
 
 	@OriginalMember(owner = "client!pj", name = "h", descriptor = "[I")
@@ -67,16 +68,16 @@ public final class SynthInstrument {
 	public int start = 0;
 
 	@OriginalMember(owner = "client!pj", name = "m", descriptor = "[I")
-	private final int[] harmonicVolume = new int[] { 0, 0, 0, 0, 0 };
+	private final int[] harmonicVolume = new int[]{0, 0, 0, 0, 0};
 
 	@OriginalMember(owner = "client!pj", name = "n", descriptor = "[I")
-	private final int[] harmonicDelay = new int[] { 0, 0, 0, 0, 0 };
+	private final int[] harmonicDelay = new int[]{0, 0, 0, 0, 0};
 
 	@OriginalMember(owner = "client!pj", name = "u", descriptor = "I")
 	private int reverbVolume = 100;
 
 	@OriginalMember(owner = "client!pj", name = "v", descriptor = "[I")
-	private final int[] harmonicSemitone = new int[] { 0, 0, 0, 0, 0 };
+	private final int[] harmonicSemitone = new int[]{0, 0, 0, 0, 0};
 
 	static {
 		@Pc(7) Random rand = new Random(0L);
@@ -138,7 +139,7 @@ public final class SynthInstrument {
 				oscillatorTimes[local102] = 0;
 				oscillatorStartSamples[local102] = (int) ((double) this.harmonicDelay[local102] * local16);
 				scaledOscillatorAmplitudes[local102] = (this.harmonicVolume[local102] << 14) / 100;
-				oscillatorIntervalRanges[local102] = (int) ((double) (this.phaseEnvelope.maxInterval - this.phaseEnvelope.minInterval) * 32.768D * Math.pow(1.0057929410678534D, (double) this.harmonicSemitone[local102]) / local16);
+				oscillatorIntervalRanges[local102] = (int) ((double) (this.phaseEnvelope.maxInterval - this.phaseEnvelope.minInterval) * 32.768D * Math.pow(1.0057929410678534D, this.harmonicSemitone[local102]) / local16);
 				oscillatorMinIntervals[local102] = (int) ((double) this.phaseEnvelope.minInterval * 32.768D / local16);
 			}
 		}
