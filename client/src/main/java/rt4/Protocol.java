@@ -2162,10 +2162,10 @@ public class Protocol {
 				ServerActiveProperties properties = (ServerActiveProperties) InterfaceList.properties.get(local904);
 				ServerActiveProperties target;
 				if (properties != null) {
-					target = new ServerActiveProperties(accessMask, properties.anInt540);
+					target = new ServerActiveProperties(accessMask, properties.targetParam);
 					properties.unlink();
 				} else if (local277 == -1) {
-					target = new ServerActiveProperties(accessMask, InterfaceList.getComponent(pointer).properties.anInt540);
+					target = new ServerActiveProperties(accessMask, InterfaceList.getComponent(pointer).properties.targetParam);
 				} else {
 					target = new ServerActiveProperties(accessMask, -1);
 				}

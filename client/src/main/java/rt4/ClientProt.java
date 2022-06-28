@@ -32,7 +32,7 @@ public class ClientProt {
 		if (local8.clientCode > 0) {
 			local37 = MiniMenu.method4265(local8);
 		}
-		if (!local37 || !InterfaceList.getServerActiveProperties(local8).method503(arg2 - 1)) {
+		if (!local37 || !InterfaceList.getServerActiveProperties(local8).isButtonEnabled(arg2 - 1)) {
 			return;
 		}
 		if (arg2 == 1) {

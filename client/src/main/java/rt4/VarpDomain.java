@@ -20,7 +20,7 @@ public class VarpDomain {
 	@OriginalMember(owner = "client!qc", name = "K", descriptor = "Lclient!sc;")
 	public static HashTable aClass133_20 = new HashTable(16);
 	@OriginalMember(owner = "client!ge", name = "m", descriptor = "I")
-	public static int anInt2157 = 0;
+	public static int chatEffectsDisabled = 0;
 	@OriginalMember(owner = "client!jb", name = "n", descriptor = "I")
 	public static int anInt2952 = 0;
 	@OriginalMember(owner = "client!oe", name = "b", descriptor = "I")
@@ -118,7 +118,7 @@ public class VarpDomain {
 		}
 		@Pc(25) int local25 = activeVarps[arg0];
 		if (local17 == 6) {
-			anInt2157 = local25;
+			chatEffectsDisabled = local25;
 		}
 		if (local17 == 5) {
 			anInt2952 = local25;

@@ -221,7 +221,7 @@ public class InterfaceList {
 
 	@OriginalMember(owner = "client!qj", name = "a", descriptor = "(Lclient!be;BI)Lclient!na;")
 	public static JagString getOp(@OriginalArg(0) Component arg0, @OriginalArg(2) int arg1) {
-		if (!getServerActiveProperties(arg0).method503(arg1) && arg0.onOptionClick == null) {
+		if (!getServerActiveProperties(arg0).isButtonEnabled(arg1) && arg0.onOptionClick == null) {
 			return null;
 		} else if (arg0.ops == null || arg0.ops.length <= arg1 || arg0.ops[arg1] == null || arg0.ops[arg1].trim().length() == 0) {
 			return Static121.qaOpTest ? JagString.concatenate(new JagString[]{aClass100_903, JagString.parseInt(arg1)}) : null;
@@ -655,7 +655,7 @@ public class InterfaceList {
 						if (local221) {
 							Static40.method1015(Mouse.clickY - local55, Mouse.clickX - local50, component);
 						}
-						if (Static40.aClass13_14 != null && Static40.aClass13_14 != component && local207 && getServerActiveProperties(component).method509()) {
+						if (Static40.aClass13_14 != null && Static40.aClass13_14 != component && local207 && getServerActiveProperties(component).isDragTarget()) {
 							aClass13_12 = component;
 						}
 						if (component == Static40.aClass13_1) {

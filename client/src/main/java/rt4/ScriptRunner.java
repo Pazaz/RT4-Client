@@ -548,7 +548,7 @@ public final class ScriptRunner {
 			anInt1951 = OverheadChat.anIntArray385[local5];
 			anInt548 = OverheadChat.anIntArray392[local5] = local74;
 			@Pc(962) JagString local962 = OverheadChat.messages[local5];
-			if (VarpDomain.anInt2157 == 0) {
+			if (VarpDomain.chatEffectsDisabled == 0) {
 				local639 = 16776960;
 				if (OverheadChat.colors[local5] < 6) {
 					local639 = OverheadChat.COLORS[OverheadChat.colors[local5]];

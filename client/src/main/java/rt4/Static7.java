@@ -27,7 +27,7 @@ public final class Static7 {
 					local99 = MiniMenu.intArgs2[MiniMenu.size - 1];
 					@Pc(103) Component local103 = InterfaceList.getComponent(local99);
 					@Pc(106) ServerActiveProperties local106 = InterfaceList.getServerActiveProperties(local103);
-					if (local106.method511() || local106.isObjReplaceEnabled()) {
+					if (local106.isObjSwapEnabled() || local106.isObjReplaceEnabled()) {
 						InterfaceList.clickedInventoryComponentCycle = 0;
 						Static123.draggingClickedInventoryObject = false;
 						if (InterfaceList.clickedInventoryComponent != null) {
