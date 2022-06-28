@@ -10,6 +10,8 @@ import java.util.Random;
 @OriginalClass("client!hm")
 public final class TextureOp15 extends TextureOp {
 
+	@OriginalMember(owner = "client!ec", name = "d", descriptor = "Lclient!gn;")
+	public static final LruHashTable aClass54_5 = new LruHashTable(16);
 	@OriginalMember(owner = "client!ui", name = "Q", descriptor = "I")
 	public static int anInt5526;
 	@OriginalMember(owner = "client!uf", name = "p", descriptor = "I")
@@ -47,6 +49,29 @@ public final class TextureOp15 extends TextureOp {
 		super(0, true);
 	}
 
+	@OriginalMember(owner = "client!ha", name = "a", descriptor = "(II)[B")
+	public static byte[] method1837(@OriginalArg(1) int arg0) {
+		@Pc(10) ByteArrayNodeSecondary local10 = (ByteArrayNodeSecondary) aClass54_5.get(arg0);
+		if (local10 == null) {
+			@Pc(24) Random local24 = new Random(arg0);
+			@Pc(27) byte[] local27 = new byte[512];
+			@Pc(29) int local29;
+			for (local29 = 0; local29 < 255; local29++) {
+				local27[local29] = (byte) local29;
+			}
+			for (local29 = 0; local29 < 255; local29++) {
+				@Pc(53) int local53 = 255 - local29;
+				@Pc(58) int local58 = Texture.method3219(local53, local24);
+				@Pc(62) byte local62 = local27[local58];
+				local27[local58] = local27[local53];
+				local27[local53] = local27[511 - local29] = local62;
+			}
+			local10 = new ByteArrayNodeSecondary(local27);
+			aClass54_5.put(local10, arg0);
+		}
+		return local10.value;
+	}
+
 	@OriginalMember(owner = "client!hm", name = "f", descriptor = "(B)V")
 	private void method2052() {
 		@Pc(12) Random local12 = new Random(this.anInt2639);
@@ -61,7 +86,7 @@ public final class TextureOp15 extends TextureOp {
 	@OriginalMember(owner = "client!hm", name = "e", descriptor = "(I)V")
 	@Override
 	public final void postDecode() {
-		this.aByteArray38 = Static89.method1837(this.anInt2639);
+		this.aByteArray38 = method1837(this.anInt2639);
 		this.method2052();
 	}
 

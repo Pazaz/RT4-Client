@@ -400,7 +400,7 @@ public final class LocType {
 		if (arg1 == 1) {
 			defaultMultiLoc = arg0.g1();
 			if (defaultMultiLoc > 0) {
-				if (this.models == null || Static87.aBoolean130) {
+				if (this.models == null || SceneGraph.aBoolean130) {
 					this.shapes = new int[defaultMultiLoc];
 					this.models = new int[defaultMultiLoc];
 					for (len = 0; len < defaultMultiLoc; len++) {
@@ -416,7 +416,7 @@ public final class LocType {
 		} else if (arg1 == 5) {
 			defaultMultiLoc = arg0.g1();
 			if (defaultMultiLoc > 0) {
-				if (this.models == null || Static87.aBoolean130) {
+				if (this.models == null || SceneGraph.aBoolean130) {
 					this.models = new int[defaultMultiLoc];
 					this.shapes = null;
 					for (len = 0; len < defaultMultiLoc; len++) {

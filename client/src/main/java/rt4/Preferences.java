@@ -157,7 +157,7 @@ public class Preferences {
 	@OriginalMember(owner = "client!ec", name = "a", descriptor = "(IZ)V")
 	public static void setAllVisibleLevels(@OriginalArg(1) boolean arg0) {
 		allLevelsVisible = arg0;
-		Static87.aBoolean130 = !SceneGraph.allLevelsAreVisible();
+		SceneGraph.aBoolean130 = !SceneGraph.allLevelsAreVisible();
 	}
 
 	@OriginalMember(owner = "client!ga", name = "b", descriptor = "(I)V")

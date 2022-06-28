@@ -4,6 +4,8 @@ import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
+import java.awt.*;
+
 public class InterfaceList {
 	@OriginalMember(owner = "client!p", name = "c", descriptor = "Lclient!ih;")
 	public static final LinkedList lowPriorityRequests = new LinkedList();
@@ -93,6 +95,28 @@ public class InterfaceList {
 	public static int anInt5574 = -1;
 	@OriginalMember(owner = "client!oj", name = "v", descriptor = "I")
 	public static int anInt4311 = -2;
+	@OriginalMember(owner = "client!pm", name = "hb", descriptor = "I")
+	public static int anInt4620;
+	@OriginalMember(owner = "client!fk", name = "e", descriptor = "I")
+	public static int anInt1885;
+	@OriginalMember(owner = "client!bj", name = "s", descriptor = "I")
+	public static int anInt660 = -1;
+	@OriginalMember(owner = "client!kl", name = "s", descriptor = "I")
+	public static int anInt3337 = 0;
+	@OriginalMember(owner = "client!jk", name = "p", descriptor = "I")
+	public static int anInt3075 = -1;
+	@OriginalMember(owner = "client!df", name = "n", descriptor = "I")
+	public static int anInt1396 = 0;
+	@OriginalMember(owner = "client!di", name = "H", descriptor = "Z")
+	public static boolean aBoolean84 = false;
+	@OriginalMember(owner = "client!dh", name = "a", descriptor = "Z")
+	public static boolean aBoolean83 = false;
+	@OriginalMember(owner = "client!ja", name = "r", descriptor = "I")
+	public static int anInt2941 = -1;
+	@OriginalMember(owner = "client!a", name = "h", descriptor = "I")
+	public static int anInt5;
+	@OriginalMember(owner = "client!ve", name = "w", descriptor = "Z")
+	public static boolean aBoolean298 = false;
 
 	@OriginalMember(owner = "client!ab", name = "a", descriptor = "(ZLclient!ve;Lclient!ve;Lclient!ve;Lclient!ve;)V")
 	public static void init(@OriginalArg(1) Js5 arg0, @OriginalArg(2) Js5 arg1, @OriginalArg(3) Js5 arg2, @OriginalArg(4) Js5 arg3) {
@@ -362,7 +386,7 @@ public class InterfaceList {
 			}
 		}
 		if (MiniMenu.size == 1) {
-			Static40.aBoolean108 = false;
+			Cs1ScriptRunner.aBoolean108 = false;
 			redrawScreen(anInt4271, anInt761, anInt5138, anInt436);
 		} else {
 			redrawScreen(anInt4271, anInt761, anInt5138, anInt436);
@@ -373,7 +397,7 @@ public class InterfaceList {
 					local43 = local88;
 				}
 			}
-			anInt436 = MiniMenu.size * 15 + (Static40.aBoolean298 ? 26 : 22);
+			anInt436 = MiniMenu.size * 15 + (aBoolean298 ? 26 : 22);
 			anInt761 = local43 + 8;
 		}
 		if (topLevelInterface != -1) {
@@ -588,7 +612,7 @@ public class InterfaceList {
 	public static void method946(@OriginalArg(0) Component[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7) {
 		for (@Pc(1) int local1 = 0; local1 < arg0.length; local1++) {
 			@Pc(9) Component component = arg0[local1];
-			if (component != null && component.layer == arg1 && (!component.if3 || component.type == 0 || component.aBoolean25 || getServerActiveProperties(component).events != 0 || component == Static40.aClass13_1 || component.clientCode == 1338) && (!component.if3 || !Static36.method947(component))) {
+			if (component != null && component.layer == arg1 && (!component.if3 || component.type == 0 || component.aBoolean25 || getServerActiveProperties(component).events != 0 || component == Cs1ScriptRunner.aClass13_1 || component.clientCode == 1338) && (!component.if3 || !method947(component))) {
 				@Pc(50) int local50 = component.x + arg6;
 				@Pc(55) int local55 = component.y + arg7;
 				@Pc(61) int local61;
@@ -612,14 +636,14 @@ public class InterfaceList {
 					local65 = local73 < arg4 ? local73 : arg4;
 					local67 = local78 < arg5 ? local78 : arg5;
 				}
-				if (component == Static40.aClass13_14) {
-					Static44.aBoolean83 = true;
-					Static36.anInt3075 = local50;
-					Static36.anInt660 = local55;
+				if (component == Cs1ScriptRunner.aClass13_14) {
+					aBoolean83 = true;
+					anInt3075 = local50;
+					anInt660 = local55;
 				}
 				if (!component.if3 || local61 < local65 && local63 < local67) {
 					if (component.type == 0) {
-						if (!component.if3 && Static36.method947(component) && aClass13_22 != component) {
+						if (!component.if3 && method947(component) && aClass13_22 != component) {
 							continue;
 						}
 						if (component.noClickThrough && Mouse.lastMouseX >= local61 && Mouse.lastMouseY >= local63 && Mouse.lastMouseX < local65 && Mouse.lastMouseY < local67) {
@@ -629,11 +653,11 @@ public class InterfaceList {
 									local164.source.aBoolean19 = false;
 								}
 							}
-							if (Static40.anInt4851 == 0) {
-								Static40.aClass13_14 = null;
-								Static40.aClass13_1 = null;
+							if (Cs1ScriptRunner.anInt4851 == 0) {
+								Cs1ScriptRunner.aClass13_14 = null;
+								Cs1ScriptRunner.aClass13_1 = null;
 							}
-							Static36.anInt3337 = 0;
+							anInt3337 = 0;
 						}
 					}
 					if (component.if3) {
@@ -667,14 +691,14 @@ public class InterfaceList {
 							}
 						}
 						if (local221) {
-							Static40.method1015(Mouse.clickY - local55, Mouse.clickX - local50, component);
+							Cs1ScriptRunner.method1015(Mouse.clickY - local55, Mouse.clickX - local50, component);
 						}
-						if (Static40.aClass13_14 != null && Static40.aClass13_14 != component && local207 && getServerActiveProperties(component).isDragTarget()) {
+						if (Cs1ScriptRunner.aClass13_14 != null && Cs1ScriptRunner.aClass13_14 != component && local207 && getServerActiveProperties(component).isDragTarget()) {
 							aClass13_12 = component;
 						}
-						if (component == Static40.aClass13_1) {
+						if (component == Cs1ScriptRunner.aClass13_1) {
 							aBoolean174 = true;
-							Static81.anInt2225 = local50;
+							Cs1ScriptRunner.anInt2225 = local50;
 							anInt5103 = local55;
 						}
 						if (component.aBoolean25 || component.clientCode != 0) {
@@ -687,7 +711,7 @@ public class InterfaceList {
 								request.arguments = component.onScroll;
 								lowPriorityRequests.addTail(request);
 							}
-							if (Static40.aClass13_14 != null || clickedInventoryComponent != null || Static40.aBoolean108 || component.clientCode != 1400 && Static36.anInt3337 > 0) {
+							if (Cs1ScriptRunner.aClass13_14 != null || clickedInventoryComponent != null || Cs1ScriptRunner.aBoolean108 || component.clientCode != 1400 && anInt3337 > 0) {
 								local221 = false;
 								local212 = false;
 								local207 = false;
@@ -701,7 +725,7 @@ public class InterfaceList {
 								}
 								if (component.clientCode == 1338) {
 									if (local221) {
-										Static1.anInt5 = Mouse.clickX - local50;
+										anInt5 = Mouse.clickX - local50;
 										MiniMenu.anInt2878 = Mouse.clickY - local55;
 									}
 									continue;
@@ -720,24 +744,24 @@ public class InterfaceList {
 											ClientProt.closeWidget();
 											continue;
 										}
-										Static36.anInt3337 = 1;
-										Static40.anInt5388 = Mouse.lastMouseX;
-										Static40.anInt4035 = Mouse.lastMouseY;
+										anInt3337 = 1;
+										Cs1ScriptRunner.anInt5388 = Mouse.lastMouseX;
+										Cs1ScriptRunner.anInt4035 = Mouse.lastMouseY;
 										continue;
 									}
-									if (local212 && Static36.anInt3337 > 0) {
-										if (Static36.anInt3337 == 1 && (Static40.anInt5388 != Mouse.lastMouseX || Static40.anInt4035 != Mouse.lastMouseY)) {
-											Static36.anInt4620 = WorldMap.anInt435;
-											Static36.anInt1885 = WorldMap.anInt919;
-											Static36.anInt3337 = 2;
+									if (local212 && anInt3337 > 0) {
+										if (anInt3337 == 1 && (Cs1ScriptRunner.anInt5388 != Mouse.lastMouseX || Cs1ScriptRunner.anInt4035 != Mouse.lastMouseY)) {
+											anInt4620 = WorldMap.anInt435;
+											anInt1885 = WorldMap.anInt919;
+											anInt3337 = 2;
 										}
-										if (Static36.anInt3337 == 2) {
-											WorldMap.method1964(Static36.anInt4620 + (int) ((double) (Static40.anInt5388 - Mouse.lastMouseX) * 2.0D / (double) WorldMap.targetZoom));
-											WorldMap.method4641(Static36.anInt1885 + (int) ((double) (Static40.anInt4035 - Mouse.lastMouseY) * 2.0D / (double) WorldMap.targetZoom));
+										if (anInt3337 == 2) {
+											WorldMap.method1964(anInt4620 + (int) ((double) (Cs1ScriptRunner.anInt5388 - Mouse.lastMouseX) * 2.0D / (double) WorldMap.targetZoom));
+											WorldMap.method4641(anInt1885 + (int) ((double) (Cs1ScriptRunner.anInt4035 - Mouse.lastMouseY) * 2.0D / (double) WorldMap.targetZoom));
 										}
 										continue;
 									}
-									Static36.anInt3337 = 0;
+									anInt3337 = 0;
 									continue;
 								}
 								if (component.clientCode == 1401) {
@@ -999,7 +1023,7 @@ public class InterfaceList {
 							}
 						}
 					}
-					if (!component.if3 && Static40.aClass13_14 == null && clickedInventoryComponent == null && !Static40.aBoolean108) {
+					if (!component.if3 && Cs1ScriptRunner.aClass13_14 == null && clickedInventoryComponent == null && !Cs1ScriptRunner.aBoolean108) {
 						if ((component.anInt470 >= 0 || component.anInt480 != 0) && Mouse.lastMouseX >= local61 && Mouse.lastMouseY >= local63 && Mouse.lastMouseX < local65 && Mouse.lastMouseY < local67) {
 							if (component.anInt470 >= 0) {
 								aClass13_22 = arg0[component.anInt470];
@@ -1011,7 +1035,7 @@ public class InterfaceList {
 							Protocol.aClass13_11 = component;
 						}
 						if (component.scrollMaxV > component.height) {
-							Static36.method4049(Mouse.lastMouseY, component.height, component, Mouse.lastMouseX, local50 + component.width, local55, component.scrollMaxV);
+							method4049(Mouse.lastMouseY, component.height, component, Mouse.lastMouseX, local50 + component.width, local55, component.scrollMaxV);
 						}
 					}
 					if (component.type == 0) {
@@ -1054,13 +1078,13 @@ public class InterfaceList {
 			topLevelInterface = -1;
 			openInterfaces = new HashTable(8);
 			method1287();
-			topLevelInterface = Static156.loginScreenId;
+			topLevelInterface = LoginManager.loginScreenId;
 			method3712(false);
-			Static87.method1807();
+			ScriptRunner.method1807();
 			method1626(topLevelInterface);
 		}
 		MiniMenu.anInt1092 = -1;
-		Static81.method1750(ScriptRunner.anInt5794);
+		method1750(ScriptRunner.anInt5794);
 		PlayerList.self = new Player();
 		PlayerList.self.zFine = 3000;
 		PlayerList.self.xFine = 3000;
@@ -1092,7 +1116,7 @@ public class InterfaceList {
 	@OriginalMember(owner = "client!jm", name = "a", descriptor = "(Z)V")
 	public static void method2460() {
 		if (topLevelInterface != -1) {
-			Static96.method1949(topLevelInterface);
+			method1949(topLevelInterface);
 		}
 		for (@Pc(15) int local15 = 0; local15 < rectangles; local15++) {
 			if (aBooleanArray100[local15]) {
@@ -1101,7 +1125,7 @@ public class InterfaceList {
 			aBooleanArray116[local15] = aBooleanArray100[local15];
 			aBooleanArray100[local15] = false;
 		}
-		Static87.anInt2503 = -1;
+		Cs1ScriptRunner.anInt2503 = -1;
 		mouseOverInventoryInterface = null;
 		anInt4311 = client.loop;
 		if (GlRenderer.enabled) {
@@ -1110,7 +1134,7 @@ public class InterfaceList {
 		anInt5574 = -1;
 		if (topLevelInterface != -1) {
 			rectangles = 0;
-			Static9.method182();
+			Cs1ScriptRunner.method182();
 		}
 		if (GlRenderer.enabled) {
 			GlRaster.method1177();
@@ -1118,5 +1142,168 @@ public class InterfaceList {
 			SoftwareRaster.method2503();
 		}
 		Protocol.anInt4247 = 0;
+	}
+
+	@OriginalMember(owner = "client!client", name = "a", descriptor = "(Lclient!be;)Lclient!be;")
+	public static Component method938(@OriginalArg(0) Component arg0) {
+		@Pc(4) int local4 = getServerActiveProperties(arg0).getDragDepth();
+		if (local4 == 0) {
+			return null;
+		}
+		for (@Pc(10) int local10 = 0; local10 < local4; local10++) {
+			arg0 = getComponent(arg0.layer);
+			if (arg0 == null) {
+				return null;
+			}
+		}
+		return arg0;
+	}
+
+	@OriginalMember(owner = "client!client", name = "c", descriptor = "(Lclient!be;)Z")
+	public static boolean method947(@OriginalArg(0) Component arg0) {
+		if (Cheat.qaOpTest) {
+			if (getServerActiveProperties(arg0).events != 0) {
+				return false;
+			}
+			if (arg0.type == 0) {
+				return false;
+			}
+		}
+		return arg0.hidden;
+	}
+
+	@OriginalMember(owner = "client!tc", name = "a", descriptor = "(IILclient!be;BIIII)V")
+	public static void method4049(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Component arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6) {
+		if (aBoolean84) {
+			anInt1396 = 32;
+		} else {
+			anInt1396 = 0;
+		}
+		aBoolean84 = false;
+		@Pc(139) int local139;
+		if (Mouse.pressedButton != 0) {
+			if (arg4 <= arg3 && arg4 + 16 > arg3 && arg0 >= arg5 && arg5 + 16 > arg0) {
+				arg2.scrollY -= 4;
+				redraw(arg2);
+			} else if (arg3 >= arg4 && arg3 < arg4 + 16 && arg0 >= arg1 + arg5 - 16 && arg1 + arg5 > arg0) {
+				arg2.scrollY += 4;
+				redraw(arg2);
+			} else if (arg3 >= arg4 - anInt1396 && arg3 < arg4 + anInt1396 + 16 && arg0 >= arg5 + 16 && arg1 + arg5 - 16 > arg0) {
+				local139 = arg1 * (arg1 - 32) / arg6;
+				if (local139 < 8) {
+					local139 = 8;
+				}
+				@Pc(150) int local150 = arg1 - local139 - 32;
+				@Pc(162) int local162 = arg0 - local139 / 2 - arg5 - 16;
+				arg2.scrollY = (arg6 - arg1) * local162 / local150;
+				redraw(arg2);
+				aBoolean84 = true;
+			}
+		}
+		if (MouseWheel.wheelRotation == 0) {
+			return;
+		}
+		local139 = arg2.width;
+		if (arg4 - local139 <= arg3 && arg5 <= arg0 && arg3 < arg4 + 16 && arg1 + arg5 >= arg0) {
+			arg2.scrollY += MouseWheel.wheelRotation * 45;
+			redraw(arg2);
+		}
+	}
+
+	@OriginalMember(owner = "client!hh", name = "a", descriptor = "(II)V")
+	public static void method1949(@OriginalArg(1) int arg0) {
+		if (load(arg0)) {
+			method2354(-1, components[arg0]);
+		}
+	}
+
+	@OriginalMember(owner = "client!jd", name = "a", descriptor = "(II[Lclient!be;)V")
+	public static void method2354(@OriginalArg(1) int arg0, @OriginalArg(2) Component[] arg1) {
+		for (@Pc(7) int local7 = 0; local7 < arg1.length; local7++) {
+			@Pc(15) Component local15 = arg1[local7];
+			if (local15 != null && local15.layer == arg0 && (!local15.if3 || !method947(local15))) {
+				if (local15.type == 0) {
+					if (!local15.if3 && method947(local15) && local15 != aClass13_22) {
+						continue;
+					}
+					method2354(local15.id, arg1);
+					if (local15.createdComponents != null) {
+						method2354(local15.id, local15.createdComponents);
+					}
+					@Pc(73) ComponentPointer local73 = (ComponentPointer) openInterfaces.get(local15.id);
+					if (local73 != null) {
+						method1949(local73.anInt5878);
+					}
+				}
+				if (local15.type == 6) {
+					@Pc(105) int local105;
+					if (local15.modelSeqId != -1 || local15.anInt462 != -1) {
+						@Pc(100) boolean local100 = Cs1ScriptRunner.isTrue(local15);
+						if (local100) {
+							local105 = local15.anInt462;
+						} else {
+							local105 = local15.modelSeqId;
+						}
+						if (local105 != -1) {
+							@Pc(118) SeqType local118 = SeqTypeList.get(local105);
+							if (local118 != null) {
+								local15.anInt500 += Protocol.anInt4247;
+								while (local15.anInt500 > local118.anIntArray474[local15.anInt510]) {
+									local15.anInt500 -= local118.anIntArray474[local15.anInt510];
+									local15.anInt510++;
+									if (local118.frames.length <= local15.anInt510) {
+										local15.anInt510 -= local118.anInt5362;
+										if (local15.anInt510 < 0 || local118.frames.length <= local15.anInt510) {
+											local15.anInt510 = 0;
+										}
+									}
+									local15.anInt496 = local15.anInt510 + 1;
+									if (local118.frames.length <= local15.anInt496) {
+										local15.anInt496 -= local118.anInt5362;
+										if (local15.anInt496 < 0 || local118.frames.length <= local15.anInt496) {
+											local15.anInt496 = -1;
+										}
+									}
+									redraw(local15);
+								}
+							}
+						}
+					}
+					if (local15.modelRotationSpeed != 0 && !local15.if3) {
+						@Pc(239) int local239 = local15.modelRotationSpeed >> 16;
+						@Pc(243) int local243 = local239 * Protocol.anInt4247;
+						local105 = local15.modelRotationSpeed << 16 >> 16;
+						local15.modelXAngle = local243 + local15.modelXAngle & 0x7FF;
+						local105 *= Protocol.anInt4247;
+						local15.modelYAngle = local15.modelYAngle + local105 & 0x7FF;
+						redraw(local15);
+					}
+				}
+			}
+		}
+	}
+
+	@OriginalMember(owner = "client!gg", name = "c", descriptor = "(II)V")
+	public static void method1750(@OriginalArg(0) int arg0) {
+		if (!Preferences.cursorsEnabled) {
+			arg0 = -1;
+		}
+		if (arg0 == anInt2941) {
+			return;
+		}
+		if (arg0 != -1) {
+			@Pc(24) CursorType local24 = CursorTypeList.get(arg0);
+			@Pc(28) SoftwareSprite local28 = local24.getSprite();
+			if (local28 == null) {
+				arg0 = -1;
+			} else {
+				GameShell.signLink.setCursor(local28.method301(), local28.anInt1860, GameShell.canvas, new Point(local24.hotSpotX, local24.hotSpotY), local28.anInt1866);
+				anInt2941 = arg0;
+			}
+		}
+		if (arg0 == -1 && anInt2941 != -1) {
+			GameShell.signLink.setCursor(null, -1, GameShell.canvas, new Point(), -1);
+			anInt2941 = -1;
+		}
 	}
 }

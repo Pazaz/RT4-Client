@@ -120,6 +120,8 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 
 	@OriginalMember(owner = "client!te", name = "C", descriptor = "I")
 	public static int maxMemory = 64;
+	@OriginalMember(owner = "client!fh", name = "cb", descriptor = "Lsignlink!ll;")
+	public static SignLink signLink2;
 
 	@OriginalMember(owner = "client!rc", name = "b", descriptor = "Z")
 	private boolean error = false;
@@ -137,7 +139,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 	@OriginalMember(owner = "client!rc", name = "providesignlink", descriptor = "(Lsignlink!ll;)V")
 	public static void providesignlink(@OriginalArg(0) SignLink signLink) {
 		GameShell.signLink = signLink;
-		Static69.signLink = signLink;
+		signLink2 = signLink;
 	}
 
 	@OriginalMember(owner = "client!sd", name = "e", descriptor = "(I)V")
@@ -220,7 +222,50 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 		if (InterfaceList.topLevelInterface != -1) {
 			InterfaceList.method3712(true);
 		}
-		Static139.method2704();
+		method2704();
+	}
+
+	@OriginalMember(owner = "client!l", name = "b", descriptor = "(I)V")
+	public static void method2704() {
+		@Pc(7) int local7 = topMargin;
+		@Pc(9) int local9 = leftMargin;
+		@Pc(16) int local16 = frameHeight - canvasHeight - local7;
+		@Pc(23) int local23 = frameWidth - local9 - canvasWidth;
+		if (local9 <= 0 && local23 <= 0 && local7 <= 0 && local16 <= 0) {
+			return;
+		}
+		try {
+			@Pc(46) Container local46;
+			if (fullScreenFrame != null) {
+				local46 = fullScreenFrame;
+			} else if (frame == null) {
+				local46 = signLink.applet;
+			} else {
+				local46 = frame;
+			}
+			@Pc(59) int local59 = 0;
+			@Pc(61) int local61 = 0;
+			if (frame == local46) {
+				@Pc(68) Insets local68 = frame.getInsets();
+				local61 = local68.left;
+				local59 = local68.top;
+			}
+			@Pc(77) Graphics local77 = local46.getGraphics();
+			local77.setColor(Color.black);
+			if (local9 > 0) {
+				local77.fillRect(local61, local59, local9, frameHeight);
+			}
+			if (local7 > 0) {
+				local77.fillRect(local61, local59, frameWidth, local7);
+			}
+			if (local23 > 0) {
+				local77.fillRect(local61 + frameWidth - local23, local59, local23, frameHeight);
+			}
+			if (local16 > 0) {
+				local77.fillRect(local61, local59 + frameHeight - local16, frameWidth, local16);
+			}
+		} catch (@Pc(132) Exception local132) {
+		}
 	}
 
 	@OriginalMember(owner = "client!rc", name = "focusLost", descriptor = "(Ljava/awt/event/FocusEvent;)V")
@@ -315,7 +360,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 		if (instance == this && !shutdown) {
 			killTime = MonotonicClock.currentTimeMillis();
 			ThreadUtils.sleep(5000L);
-			Static69.signLink = null;
+			signLink2 = null;
 			this.shutdown(false);
 		}
 	}
@@ -561,7 +606,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			}
 			getMaxMemory();
 			this.addCanvas();
-			SoftwareRaster.frameBuffer = Static131.create(canvasHeight, canvasWidth, canvas);
+			SoftwareRaster.frameBuffer = FrameBuffer.create(canvasHeight, canvasWidth, canvas);
 			this.mainInit();
 			timer = Timer.create();
 
@@ -644,7 +689,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			@Pc(44) Insets insets = frame.getInsets();
 			frame.setSize(insets.left + frameWidth + insets.right, insets.top + frameHeight + insets.bottom);
 			GameShell.setFpsTarget(getCurrentDevice().getDisplayMode().getRefreshRate());
-			Static69.signLink = signLink = new SignLink(null, cacheId, cacheSubDir, 28);
+			signLink2 = signLink = new SignLink(null, cacheId, cacheSubDir, 28);
 			@Pc(76) PrivilegedRequest request = signLink.startThread(1, this);
 			while (request.status == 0) {
 				ThreadUtils.sleep(10L);
@@ -691,7 +736,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			@Pc(54) String openWindowJavaScriptStr = this.getParameter("openwinjs");
 			openWindowJavaScript = openWindowJavaScriptStr != null && openWindowJavaScriptStr.equals("1");
 			if (signLink == null) {
-				Static69.signLink = signLink = new SignLink(this, cacheId, null, 0);
+				signLink2 = signLink = new SignLink(this, cacheId, null, 0);
 			}
 			@Pc(86) PrivilegedRequest request = signLink.startThread(1, this);
 			while (request.status == 0) {

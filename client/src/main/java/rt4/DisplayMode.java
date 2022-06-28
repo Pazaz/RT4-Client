@@ -154,7 +154,7 @@ public final class DisplayMode {
 			if (!aBoolean73) {
 				SceneGraph.clear();
 				SoftwareRaster.frameBuffer = null;
-				SoftwareRaster.frameBuffer = Static131.create(GameShell.canvasHeight, GameShell.canvasWidth, GameShell.canvas);
+				SoftwareRaster.frameBuffer = FrameBuffer.create(GameShell.canvasHeight, GameShell.canvasWidth, GameShell.canvas);
 				SoftwareRaster.clear();
 				if (client.gameState == 5) {
 					LoadingBar.render(true, Fonts.b12Full);
@@ -166,9 +166,9 @@ public final class DisplayMode {
 					SoftwareRaster.frameBuffer.draw(local269);
 				} catch (@Pc(277) Exception local277) {
 				}
-				Static139.method2704();
+				GameShell.method2704();
 				if (arg3 == 0) {
-					SoftwareRaster.frameBuffer = Static131.create(503, 765, GameShell.canvas);
+					SoftwareRaster.frameBuffer = FrameBuffer.create(503, 765, GameShell.canvas);
 				} else {
 					SoftwareRaster.frameBuffer = null;
 				}
@@ -196,10 +196,10 @@ public final class DisplayMode {
 			if (Preferences.highDetailLighting) {
 				Rasteriser.setBrightness(0.7F);
 			}
-			Static40.method4637();
+			LoginManager.method4637();
 		} else if (arg1 == 0 && arg3 > 0) {
 			GameShell.thread.setPriority(1);
-			SoftwareRaster.frameBuffer = Static131.create(503, 765, GameShell.canvas);
+			SoftwareRaster.frameBuffer = FrameBuffer.create(503, 765, GameShell.canvas);
 			SoftwareModel.method4583();
 			ParticleSystem.quit();
 			((Js5GlTextureProvider) Rasteriser.textureProvider).method3248(20);
@@ -218,9 +218,9 @@ public final class DisplayMode {
 				}
 			}
 			GlTile.method1939();
-			Static40.method4637();
+			LoginManager.method4637();
 		}
-		Static87.aBoolean130 = !SceneGraph.allLevelsAreVisible();
+		SceneGraph.aBoolean130 = !SceneGraph.allLevelsAreVisible();
 		if (arg2) {
 			client.method2721();
 		}

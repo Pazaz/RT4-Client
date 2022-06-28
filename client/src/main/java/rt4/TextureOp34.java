@@ -145,7 +145,7 @@ public final class TextureOp34 extends TextureOp {
 	@OriginalMember(owner = "client!bi", name = "e", descriptor = "(I)V")
 	@Override
 	public final void postDecode() {
-		this.aByteArray10 = Static89.method1837(this.anInt650);
+		this.aByteArray10 = TextureOp15.method1837(this.anInt650);
 		this.method589();
 		for (@Pc(15) int local15 = this.anInt642 - 1; local15 >= 1; local15--) {
 			@Pc(23) short local23 = this.aShortArray4[local15];

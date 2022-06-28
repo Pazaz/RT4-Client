@@ -93,6 +93,10 @@ public class Camera {
 	public static float aFloat15;
 	@OriginalMember(owner = "client!sk", name = "jb", descriptor = "I")
 	public static int anInt5203;
+	@OriginalMember(owner = "client!t", name = "o", descriptor = "I")
+	public static int anInt5217;
+	@OriginalMember(owner = "client!t", name = "A", descriptor = "I")
+	public static int anInt5225;
 
 	public static double mod(double a, double b) {
 		return ((a % b) + b) % b;
@@ -151,37 +155,37 @@ public class Camera {
 			anInt40 = SceneGraph.getTileHeight(Player.level, renderX, renderZ) - anInt5203;
 		} else {
 			if (renderX < local15) {
-				renderX += Static233.anInt5225 + anInt4612 * (local15 - renderX) / 1000;
+				renderX += anInt5225 + anInt4612 * (local15 - renderX) / 1000;
 				if (renderX > local15) {
 					renderX = local15;
 				}
 			}
 			if (anInt40 < local23) {
-				anInt40 += (local23 - anInt40) * anInt4612 / 1000 + Static233.anInt5225;
+				anInt40 += (local23 - anInt40) * anInt4612 / 1000 + anInt5225;
 				if (anInt40 > local23) {
 					anInt40 = local23;
 				}
 			}
 			if (renderX > local15) {
-				renderX -= Static233.anInt5225 + (renderX - local15) * anInt4612 / 1000;
+				renderX -= anInt5225 + (renderX - local15) * anInt4612 / 1000;
 				if (renderX < local15) {
 					renderX = local15;
 				}
 			}
 			if (renderZ < local9) {
-				renderZ += Static233.anInt5225 + anInt4612 * (local9 - renderZ) / 1000;
+				renderZ += anInt5225 + anInt4612 * (local9 - renderZ) / 1000;
 				if (local9 < renderZ) {
 					renderZ = local9;
 				}
 			}
 			if (local23 < anInt40) {
-				anInt40 -= (anInt40 - local23) * anInt4612 / 1000 + Static233.anInt5225;
+				anInt40 -= (anInt40 - local23) * anInt4612 / 1000 + anInt5225;
 				if (local23 > anInt40) {
 					anInt40 = local23;
 				}
 			}
 			if (renderZ > local9) {
-				renderZ -= Static233.anInt5225 + (renderZ - local9) * anInt4612 / 1000;
+				renderZ -= anInt5225 + (renderZ - local9) * anInt4612 / 1000;
 				if (local9 > renderZ) {
 					renderZ = local9;
 				}
@@ -203,13 +207,13 @@ public class Camera {
 		}
 		@Pc(292) int local292 = (int) (-325.949D * Math.atan2(local246, local241)) & 0x7FF;
 		if (cameraPitch < local268) {
-			cameraPitch += anInt5230 + Static233.anInt5217 * (local268 - cameraPitch) / 1000;
+			cameraPitch += anInt5230 + anInt5217 * (local268 - cameraPitch) / 1000;
 			if (cameraPitch > local268) {
 				cameraPitch = local268;
 			}
 		}
 		if (cameraPitch > local268) {
-			cameraPitch -= (cameraPitch - local268) * Static233.anInt5217 / 1000 + anInt5230;
+			cameraPitch -= (cameraPitch - local268) * anInt5217 / 1000 + anInt5230;
 			if (cameraPitch < local268) {
 				cameraPitch = local268;
 			}
@@ -222,11 +226,11 @@ public class Camera {
 			local350 += 2048;
 		}
 		if (local350 > 0) {
-			cameraYaw += local350 * Static233.anInt5217 / 1000 + anInt5230;
+			cameraYaw += local350 * anInt5217 / 1000 + anInt5230;
 			cameraYaw &= 0x7FF;
 		}
 		if (local350 < 0) {
-			cameraYaw -= Static233.anInt5217 * -local350 / 1000 + anInt5230;
+			cameraYaw -= anInt5217 * -local350 / 1000 + anInt5230;
 			cameraYaw &= 0x7FF;
 		}
 		@Pc(404) int local404 = local292 - cameraYaw;
@@ -305,10 +309,10 @@ public class Camera {
 	public static void method3849(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4) {
 		anInt5230 = arg2;
 		anInt5765 = arg1;
-		Static233.anInt5217 = arg4;
+		anInt5217 = arg4;
 		anInt5449 = arg3;
 		anInt1744 = arg0;
-		if (Static233.anInt5217 >= 100) {
+		if (anInt5217 >= 100) {
 			@Pc(30) int local30 = anInt5449 * 128 + 64;
 			@Pc(36) int local36 = anInt5765 * 128 + 64;
 			@Pc(44) int local44 = SceneGraph.getTileHeight(Player.level, local30, local36) - anInt1744;
@@ -333,7 +337,7 @@ public class Camera {
 		anInt4612 = arg3;
 		anInt5203 = arg2;
 		anInt5375 = arg5;
-		Static233.anInt5225 = arg1;
+		anInt5225 = arg1;
 		anInt4232 = arg4;
 		if (arg0 && anInt4612 >= 100) {
 			renderX = anInt5375 * 128 + 64;
@@ -349,7 +353,7 @@ public class Camera {
 			customCameraActive[local3] = false;
 		}
 		anInt5230 = 0;
-		Static233.anInt5217 = 0;
+		anInt5217 = 0;
 		anInt3718 = -1;
 		anInt1694 = -1;
 		cameraType = 1;

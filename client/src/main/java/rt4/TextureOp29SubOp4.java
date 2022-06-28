@@ -115,7 +115,7 @@ public final class TextureOp29SubOp4 extends TextureOp29SubOp {
 	}
 
 	@OriginalMember(owner = "client!mf", name = "a", descriptor = "(BLclient!wa;)Lclient!ta;")
-	public static TextureOp29SubOp4 method2960(@OriginalArg(1) Buffer arg0) {
+	public static TextureOp29SubOp4 create(@OriginalArg(1) Buffer arg0) {
 		return new TextureOp29SubOp4(arg0.g2b(), arg0.g2b(), arg0.g2b(), arg0.g2b(), arg0.g3(), arg0.g3(), arg0.g1());
 	}
 
@@ -360,6 +360,11 @@ public final class TextureOp29SubOp4 extends TextureOp29SubOp {
 			ArrayUtils.fillRange(local117, local23, local95, arg4);
 			ArrayUtils.fillRange(local117, local104, local29, arg4);
 		}
+	}
+
+	@OriginalMember(owner = "client!gg", name = "a", descriptor = "([[IZ)V")
+	public static void method1751(@OriginalArg(0) int[][] arg0) {
+		anIntArrayArray10 = arg0;
 	}
 
 	@OriginalMember(owner = "client!ta", name = "a", descriptor = "(IZI)V")

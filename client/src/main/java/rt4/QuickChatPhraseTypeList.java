@@ -53,4 +53,15 @@ public class QuickChatPhraseTypeList {
 		types.put(local10, arg0);
 		return local10;
 	}
+
+	@OriginalMember(owner = "client!ha", name = "a", descriptor = "([IJIZ)Lclient!na;")
+	public static JagString method1838(@OriginalArg(0) int[] arg0, @OriginalArg(1) long arg1, @OriginalArg(2) int arg2) {
+		if (decoder != null) {
+			@Pc(17) JagString local17 = decoder.decode(arg2, arg0, arg1);
+			if (local17 != null) {
+				return local17;
+			}
+		}
+		return JagString.method2929(arg1);
+	}
 }
