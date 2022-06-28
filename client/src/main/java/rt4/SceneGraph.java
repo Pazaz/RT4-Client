@@ -20,6 +20,10 @@ public class SceneGraph {
 	public static final int[] anIntArray517 = new int[]{1, 2, 4, 8};
 	@OriginalMember(owner = "client!pg", name = "T", descriptor = "[I")
 	public static final int[] anIntArray386 = new int[]{76, 8, 137, 4, 0, 1, 38, 2, 19};
+	@OriginalMember(owner = "client!rj", name = "U", descriptor = "Lclient!ih;")
+	public static final LinkedList projectiles = new LinkedList();
+	@OriginalMember(owner = "client!hk", name = "W", descriptor = "Lclient!ih;")
+	public static final LinkedList spotanims = new LinkedList();
 	@OriginalMember(owner = "client!kc", name = "o", descriptor = "[[[Lclient!bj;")
 	public static Tile[][][] tiles;
 
@@ -1543,14 +1547,14 @@ public class SceneGraph {
 	}
 
 	@OriginalMember(owner = "client!pb", name = "b", descriptor = "(III)Lclient!jj;")
-	public static ObjStackEntity method3420(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-		@Pc(7) Tile local7 = tiles[arg0][arg1][arg2];
-		if (local7 == null) {
+	public static ObjStackEntity removeObjStack(@OriginalArg(0) int level, @OriginalArg(1) int x, @OriginalArg(2) int z) {
+		@Pc(7) Tile tile = tiles[level][x][z];
+		if (tile == null) {
 			return null;
 		} else {
-			@Pc(14) ObjStackEntity local14 = local7.aClass79_1;
-			local7.aClass79_1 = null;
-			return local14;
+			@Pc(14) ObjStackEntity entity = tile.objStack;
+			tile.objStack = null;
+			return entity;
 		}
 	}
 
@@ -1834,19 +1838,19 @@ public class SceneGraph {
 														GlRenderer.method4159(local33);
 													}
 												}
-												@Pc(1064) ObjStackEntity local1064 = local8.aClass79_1;
+												@Pc(1064) ObjStackEntity local1064 = local8.objStack;
 												if (local1064 != null && local1064.anInt3063 == 0) {
 													if (GlRenderer.enabled) {
 														LightingManager.method2393(Static123.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
 													}
-													if (local1064.aClass8_7 != null) {
-														local1064.aClass8_7.render(0, Static160.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local1064.anInt3064 - Static123.anInt3555, local1064.anInt3057 - Static123.anInt3947, local1064.anInt3061 - Static217.anInt4903, local1064.aLong108, local24, null);
+													if (local1064.secondary != null) {
+														local1064.secondary.render(0, Static160.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local1064.xFine - Static123.anInt3555, local1064.anInt3057 - Static123.anInt3947, local1064.zFine - Static217.anInt4903, local1064.key, local24, null);
 													}
-													if (local1064.aClass8_8 != null) {
-														local1064.aClass8_8.render(0, Static160.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local1064.anInt3064 - Static123.anInt3555, local1064.anInt3057 - Static123.anInt3947, local1064.anInt3061 - Static217.anInt4903, local1064.aLong108, local24, null);
+													if (local1064.tertiary != null) {
+														local1064.tertiary.render(0, Static160.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local1064.xFine - Static123.anInt3555, local1064.anInt3057 - Static123.anInt3947, local1064.zFine - Static217.anInt4903, local1064.key, local24, null);
 													}
-													if (local1064.aClass8_9 != null) {
-														local1064.aClass8_9.render(0, Static160.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local1064.anInt3064 - Static123.anInt3555, local1064.anInt3057 - Static123.anInt3947, local1064.anInt3061 - Static217.anInt4903, local1064.aLong108, local24, null);
+													if (local1064.primary != null) {
+														local1064.primary.render(0, Static160.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local1064.xFine - Static123.anInt3555, local1064.anInt3057 - Static123.anInt3947, local1064.zFine - Static217.anInt4903, local1064.key, local24, null);
 													}
 												}
 											}
@@ -2081,19 +2085,19 @@ public class SceneGraph {
 			} while (local153 != null && local153.aBoolean46);
 			local8.aBoolean46 = false;
 			Static156.anInt1142--;
-			@Pc(1999) ObjStackEntity local1999 = local8.aClass79_1;
+			@Pc(1999) ObjStackEntity local1999 = local8.objStack;
 			if (local1999 != null && local1999.anInt3063 != 0) {
 				if (GlRenderer.enabled) {
 					LightingManager.method2393(Static123.anInt3555, Static123.anInt3947, Static217.anInt4903, local24, local18, local21);
 				}
-				if (local1999.aClass8_7 != null) {
-					local1999.aClass8_7.render(0, Static160.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local1999.anInt3064 - Static123.anInt3555, local1999.anInt3057 - Static123.anInt3947 - local1999.anInt3063, local1999.anInt3061 - Static217.anInt4903, local1999.aLong108, local24, null);
+				if (local1999.secondary != null) {
+					local1999.secondary.render(0, Static160.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local1999.xFine - Static123.anInt3555, local1999.anInt3057 - Static123.anInt3947 - local1999.anInt3063, local1999.zFine - Static217.anInt4903, local1999.key, local24, null);
 				}
-				if (local1999.aClass8_8 != null) {
-					local1999.aClass8_8.render(0, Static160.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local1999.anInt3064 - Static123.anInt3555, local1999.anInt3057 - Static123.anInt3947 - local1999.anInt3063, local1999.anInt3061 - Static217.anInt4903, local1999.aLong108, local24, null);
+				if (local1999.tertiary != null) {
+					local1999.tertiary.render(0, Static160.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local1999.xFine - Static123.anInt3555, local1999.anInt3057 - Static123.anInt3947 - local1999.anInt3063, local1999.zFine - Static217.anInt4903, local1999.key, local24, null);
 				}
-				if (local1999.aClass8_9 != null) {
-					local1999.aClass8_9.render(0, Static160.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local1999.anInt3064 - Static123.anInt3555, local1999.anInt3057 - Static123.anInt3947 - local1999.anInt3063, local1999.anInt3061 - Static217.anInt4903, local1999.aLong108, local24, null);
+				if (local1999.primary != null) {
+					local1999.primary.render(0, Static160.anInt2886, Static121.anInt3038, Static231.anInt5205, Static81.anInt2222, local1999.xFine - Static123.anInt3555, local1999.anInt3057 - Static123.anInt3947 - local1999.anInt3063, local1999.zFine - Static217.anInt4903, local1999.key, local24, null);
 				}
 			}
 			if (local8.anInt670 != 0) {
@@ -3095,33 +3099,33 @@ public class SceneGraph {
 	}
 
 	@OriginalMember(owner = "client!fh", name = "a", descriptor = "(IIIILclient!th;JLclient!th;Lclient!th;)V")
-	public static void method1543(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Entity arg4, @OriginalArg(5) long arg5, @OriginalArg(6) Entity arg6, @OriginalArg(7) Entity arg7) {
-		@Pc(3) ObjStackEntity local3 = new ObjStackEntity();
-		local3.aClass8_9 = arg4;
-		local3.anInt3064 = arg1 * 128 + 64;
-		local3.anInt3061 = arg2 * 128 + 64;
-		local3.anInt3057 = arg3;
-		local3.aLong108 = arg5;
-		local3.aClass8_7 = arg6;
-		local3.aClass8_8 = arg7;
+	public static void setObjStack(@OriginalArg(0) int level, @OriginalArg(1) int x, @OriginalArg(2) int z, @OriginalArg(3) int arg3, @OriginalArg(4) Entity primary, @OriginalArg(5) long arg5, @OriginalArg(6) Entity secondary, @OriginalArg(7) Entity tertiary) {
+		@Pc(3) ObjStackEntity entity = new ObjStackEntity();
+		entity.primary = primary;
+		entity.xFine = x * 128 + 64;
+		entity.zFine = z * 128 + 64;
+		entity.anInt3057 = arg3;
+		entity.key = arg5;
+		entity.secondary = secondary;
+		entity.tertiary = tertiary;
 		@Pc(34) int local34 = 0;
-		@Pc(42) Tile local42 = tiles[arg0][arg1][arg2];
+		@Pc(42) Tile local42 = tiles[level][x][z];
 		if (local42 != null) {
-			for (@Pc(46) int local46 = 0; local46 < local42.sceneryLen; local46++) {
-				@Pc(55) Scenery local55 = local42.scenery[local46];
-				if ((local55.key & 0x400000L) == 4194304L) {
-					@Pc(66) int local66 = local55.entity.getMinY();
-					if (local66 != -32768 && local66 < local34) {
-						local34 = local66;
+			for (@Pc(46) int i = 0; i < local42.sceneryLen; i++) {
+				@Pc(55) Scenery scenery = local42.scenery[i];
+				if ((scenery.key & 0x400000L) == 4194304L) {
+					@Pc(66) int minY = scenery.entity.getMinY();
+					if (minY != -32768 && minY < local34) {
+						local34 = minY;
 					}
 				}
 			}
 		}
-		local3.anInt3063 = -local34;
-		if (tiles[arg0][arg1][arg2] == null) {
-			tiles[arg0][arg1][arg2] = new Tile(arg0, arg1, arg2);
+		entity.anInt3063 = -local34;
+		if (tiles[level][x][z] == null) {
+			tiles[level][x][z] = new Tile(level, x, z);
 		}
-		tiles[arg0][arg1][arg2].aClass79_1 = local3;
+		tiles[level][x][z].objStack = entity;
 	}
 
 	@OriginalMember(owner = "client!fh", name = "a", descriptor = "(Lclient!th;IIIII)V")

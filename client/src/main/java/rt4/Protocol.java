@@ -110,8 +110,8 @@ public class Protocol {
 	public static int anInt4941 = 1;
 
 	@OriginalMember(owner = "client!g", name = "b", descriptor = "(B)V")
-	public static void readLocationPacket() {
-		if (opcode == ServerProt.LOCATION_PACKET_195) {
+	public static void readZonePacket() {
+		if (opcode == ServerProt.LOC_DEL) {
 			int local15 = inboundBuffer.g1neg();
 			int local19 = local15 & 0x3;
 			int local23 = local15 >> 2;
@@ -122,7 +122,7 @@ public class Protocol {
 			if (local39 >= 0 && local45 >= 0 && local39 < 104 && local45 < 104) {
 				ChangeLocRequest.push(Player.level, local45, local19, local39, -1, -1, local27, local23, 0);
 			}
-		} else if (opcode == ServerProt.LOCATION_PACKET_33) {
+		} else if (opcode == ServerProt.OBJ_REVEAL) {
 			int local15 = inboundBuffer.ig2();
 			int local23 = inboundBuffer.g1();
 			int local27 = (local23 & 0x7) + SceneGraph.currentChunkZ;
@@ -130,7 +130,7 @@ public class Protocol {
 			int local31 = inboundBuffer.g2add();
 			if (local19 >= 0 && local27 >= 0 && local19 < 104 && local27 < 104) {
 				@Pc(122) ObjStack local122 = new ObjStack();
-				local122.anInt5550 = local31;
+				local122.amount = local31;
 				local122.type = local15;
 				if (SceneGraph.objStacks[Player.level][local19][local27] == null) {
 					SceneGraph.objStacks[Player.level][local19][local27] = new LinkedList();
@@ -138,7 +138,7 @@ public class Protocol {
 				SceneGraph.objStacks[Player.level][local19][local27].addTail(new ObjStackNode(local122));
 				spawnGroundObject(local27, local19);
 			}
-		} else if (opcode == ServerProt.LOCATION_PACKET_121) {
+		} else if (opcode == ServerProt.MAP_PROJANIM_3) {
 			int local15 = inboundBuffer.g1();
 			int local23 = SceneGraph.currentChunkX * 2 + (local15 >> 4 & 0xF);
 			int local19 = (local15 & 0xF) + SceneGraph.currentChunkZ * 2;
@@ -161,10 +161,10 @@ public class Protocol {
 				local19 = local19 * 64;
 				local23 = local23 * 64;
 				ProjAnim local317 = new ProjAnim(local45, Player.level, local23, local19, SceneGraph.getTileHeight(Player.level, local23, local19) - local218, client.loop + local228, local232 + client.loop, local236, local247, local39, local224);
-				local317.method3705(local31, client.loop + local228, -local224 + SceneGraph.getTileHeight(Player.level, local27, local31), local27);
-				Static217.aClass69_116.addTail(new ProjAnimNode(local317));
+				local317.setTarget(local31, client.loop + local228, -local224 + SceneGraph.getTileHeight(Player.level, local27, local31), local27);
+				SceneGraph.projectiles.addTail(new ProjAnimNode(local317));
 			}
-		} else if (opcode == ServerProt.LOCATION_PACKET_17) {
+		} else if (opcode == ServerProt.SPOTANIM_SPECIFIC) {
 			int local15 = inboundBuffer.g1();
 			int local23 = SceneGraph.currentChunkX + (local15 >> 4 & 0x7);
 			int local19 = SceneGraph.currentChunkZ + (local15 & 0x7);
@@ -175,9 +175,9 @@ public class Protocol {
 				local23 = local23 * 128 + 64;
 				local19 = local19 * 128 + 64;
 				@Pc(427) SpotAnim local427 = new SpotAnim(local27, Player.level, local23, local19, SceneGraph.getTileHeight(Player.level, local23, local19) - local31, local39, client.loop);
-				LoginManager.aClass69_64.addTail(new SpotAnimNode(local427));
+				SceneGraph.spotanims.addTail(new SpotAnimNode(local427));
 			}
-		} else if (opcode == ServerProt.LOCATION_PACKET_179) {
+		} else if (opcode == ServerProt.LOC_ADD) {
 			int local15 = inboundBuffer.g1add();
 			int local23 = local15 >> 2;
 			int local19 = local15 & 0x3;
@@ -189,7 +189,7 @@ public class Protocol {
 			if (local39 >= 0 && local45 >= 0 && local39 < 104 && local45 < 104) {
 				ChangeLocRequest.push(Player.level, local45, local19, local39, -1, local218, local27, local23, 0);
 			}
-		} else if (opcode == ServerProt.LOCATION_PACKET_20) {
+		} else if (opcode == ServerProt.LOC_ANIM) {
 			int local15 = inboundBuffer.g1sub();
 			int local23 = (local15 >> 4 & 0x7) + SceneGraph.currentChunkX;
 			int local19 = SceneGraph.currentChunkZ + (local15 & 0x7);
@@ -202,7 +202,7 @@ public class Protocol {
 				local218 = -1;
 			}
 			SceneGraph.method1881(Player.level, local39, local31, local19, local45, local23, local218);
-		} else if (opcode == ServerProt.LOCATION_PACKET_202) {
+		} else if (opcode == ServerProt.LOC_ADD_CHANGE) {
 			int local15 = inboundBuffer.g1();
 			int local23 = local15 >> 2;
 			int local19 = local15 & 0x3;
@@ -220,7 +220,7 @@ public class Protocol {
 			if (!GlRenderer.enabled) {
 				AttachLocRequest.push(local625, local247, local633, local232, local39, local613, local19, local605, local31, local23, local609, local228);
 			}
-		} else if (opcode == ServerProt.LOCATION_PACKET_14) {
+		} else if (opcode == ServerProt.OBJ_COUNT) {
 			int local15 = inboundBuffer.g1();
 			int local19 = SceneGraph.currentChunkZ + (local15 & 0x7);
 			int local23 = (local15 >> 4 & 0x7) + SceneGraph.currentChunkX;
@@ -232,15 +232,15 @@ public class Protocol {
 				if (local710 != null) {
 					for (@Pc(718) ObjStackNode local718 = (ObjStackNode) local710.head(); local718 != null; local718 = (ObjStackNode) local710.next()) {
 						@Pc(723) ObjStack local723 = local718.value;
-						if ((local27 & 0x7FFF) == local723.type && local31 == local723.anInt5550) {
-							local723.anInt5550 = local39;
+						if ((local27 & 0x7FFF) == local723.type && local31 == local723.amount) {
+							local723.amount = local39;
 							break;
 						}
 					}
 					spawnGroundObject(local19, local23);
 				}
 			}
-		} else if (opcode == ServerProt.LOCATION_PACKET_135) {
+		} else if (opcode == ServerProt.OBJ_ADD) {
 			int local15 = inboundBuffer.ig2add();
 			int local23 = inboundBuffer.g1neg();
 			int local27 = SceneGraph.currentChunkZ + (local23 & 0x7);
@@ -249,7 +249,7 @@ public class Protocol {
 			int local39 = inboundBuffer.ig2();
 			if (local19 >= 0 && local27 >= 0 && local19 < 104 && local27 < 104 && PlayerList.selfId != local15) {
 				@Pc(812) ObjStack local812 = new ObjStack();
-				local812.anInt5550 = local31;
+				local812.amount = local31;
 				local812.type = local39;
 				if (SceneGraph.objStacks[Player.level][local19][local27] == null) {
 					SceneGraph.objStacks[Player.level][local19][local27] = new LinkedList();
@@ -257,7 +257,7 @@ public class Protocol {
 				SceneGraph.objStacks[Player.level][local19][local27].addTail(new ObjStackNode(local812));
 				spawnGroundObject(local27, local19);
 			}
-		} else if (opcode == ServerProt.LOCATION_PACKET_16) {
+		} else if (opcode == ServerProt.MAP_PROJANIM_2) {
 			int local15 = inboundBuffer.g1();
 			int local23 = SceneGraph.currentChunkX + (local15 >> 4 & 0x7);
 			int local19 = (local15 & 0x7) + SceneGraph.currentChunkZ;
@@ -280,10 +280,10 @@ public class Protocol {
 				local23 = local23 * 128 + 64;
 				local27 = local27 * 128 + 64;
 				ProjAnim local317 = new ProjAnim(local45, Player.level, local23, local19, SceneGraph.getTileHeight(Player.level, local23, local19) - local218, local228 + client.loop, local232 + client.loop, local236, local247, local39, local224);
-				local317.method3705(local31, client.loop + local228, SceneGraph.getTileHeight(Player.level, local27, local31) - local224, local27);
-				Static217.aClass69_116.addTail(new ProjAnimNode(local317));
+				local317.setTarget(local31, client.loop + local228, SceneGraph.getTileHeight(Player.level, local27, local31) - local224, local27);
+				SceneGraph.projectiles.addTail(new ProjAnimNode(local317));
 			}
-		} else if (opcode == ServerProt.LOCATION_PACKET_104) {
+		} else if (opcode == ServerProt.MAP_PROJANIM) {
 			int local15 = inboundBuffer.g1();
 			int local19 = SceneGraph.currentChunkZ * 2 + (local15 & 0xF);
 			int local23 = SceneGraph.currentChunkX * 2 + (local15 >> 4 & 0xF);
@@ -342,10 +342,10 @@ public class Protocol {
 					}
 				}
 				@Pc(1331) ProjAnim local1331 = new ProjAnim(local218, Player.level, local23, local19, SceneGraph.getTileHeight(Player.level, local23, local19) - local224, local232 + client.loop, local236 + client.loop, local247, local633, local45, local228);
-				local1331.method3705(local31, local232 + client.loop, -local228 + SceneGraph.getTileHeight(Player.level, local27, local31), local27);
-				Static217.aClass69_116.addTail(new ProjAnimNode(local1331));
+				local1331.setTarget(local31, local232 + client.loop, -local228 + SceneGraph.getTileHeight(Player.level, local27, local31), local27);
+				SceneGraph.projectiles.addTail(new ProjAnimNode(local1331));
 			}
-		} else if (opcode == ServerProt.LOCATION_PACKET_97) {
+		} else if (opcode == ServerProt.SOUND_AREA) {
 			int local15 = inboundBuffer.g1();
 			int local23 = SceneGraph.currentChunkX + (local15 >> 4 & 0x7);
 			int local19 = SceneGraph.currentChunkZ + (local15 & 0x7);
@@ -368,7 +368,7 @@ public class Protocol {
 					SoundPlayer.size++;
 				}
 			}
-		} else if (opcode == ServerProt.LOCATION_PACKET_240) {
+		} else if (opcode == ServerProt.OBJ_DEL) {
 			int local15 = inboundBuffer.g1sub();
 			int local19 = SceneGraph.currentChunkZ + (local15 & 0x7);
 			int local23 = (local15 >> 4 & 0x7) + SceneGraph.currentChunkX;
@@ -1073,12 +1073,12 @@ public class Protocol {
 			DelayedStateChange.method3498(value, id);
 			opcode = -1;
 			return true;
-		} else if (opcode == ServerProt.BATCH_LOCATION_PACKET) {
+		} else if (opcode == ServerProt.UPDATE_ZONE_PARTIAL_ENCLOSED) {
 			SceneGraph.currentChunkZ = inboundBuffer.g1add();
 			SceneGraph.currentChunkX = inboundBuffer.g1sub();
 			while (length > inboundBuffer.offset) {
 				opcode = inboundBuffer.g1();
-				readLocationPacket();
+				readZonePacket();
 			}
 			opcode = -1;
 			return true;
@@ -1341,7 +1341,7 @@ public class Protocol {
 			}
 			opcode = -1;
 			return true;
-		} else if (opcode == ServerProt.SPOTANIM_SPECIFIC) {
+		} else if (opcode == ServerProt.SPOTANIM_ENTITY) {
 			int delay = inboundBuffer.g2();
 			int height = inboundBuffer.ig2();
 			int target = inboundBuffer.img4();
@@ -1420,7 +1420,7 @@ public class Protocol {
 					posZ = posZ * 128 + 64;
 					posX = posX * 128 + 64;
 					@Pc(2241) SpotAnim spotAnim = new SpotAnim(gfxId, plane, posX, posZ, SceneGraph.getTileHeight(plane, posX, posZ) - height, delay, client.loop);
-					LoginManager.aClass69_64.addTail(new SpotAnimNode(spotAnim));
+					SceneGraph.spotanims.addTail(new SpotAnimNode(spotAnim));
 				}
 			}
 			opcode = -1;
@@ -1450,8 +1450,8 @@ public class Protocol {
 			PlayerSkillXpTable.updatedStats[PlayerSkillXpTable.updatedStatsWriterIndex++ & 0x1F] = skill;
 			opcode = -1;
 			return true;
-		} else if (opcode == ServerProt.LOCATION_PACKET_104 || opcode == ServerProt.LOCATION_PACKET_121 || opcode == ServerProt.LOCATION_PACKET_97 || opcode == ServerProt.LOCATION_PACKET_14 || opcode == ServerProt.LOCATION_PACKET_202 || opcode == ServerProt.LOCATION_PACKET_135 || opcode == ServerProt.LOCATION_PACKET_17 || opcode == ServerProt.LOCATION_PACKET_16 || opcode == ServerProt.LOCATION_PACKET_240 || opcode == ServerProt.LOCATION_PACKET_33 || opcode == ServerProt.LOCATION_PACKET_20 || opcode == ServerProt.LOCATION_PACKET_195 || opcode == ServerProt.LOCATION_PACKET_179) {
-			readLocationPacket();
+		} else if (opcode == ServerProt.MAP_PROJANIM || opcode == ServerProt.MAP_PROJANIM_3 || opcode == ServerProt.SOUND_AREA || opcode == ServerProt.OBJ_COUNT || opcode == ServerProt.LOC_ADD_CHANGE || opcode == ServerProt.OBJ_ADD || opcode == ServerProt.SPOTANIM_SPECIFIC || opcode == ServerProt.MAP_PROJANIM_2 || opcode == ServerProt.OBJ_DEL || opcode == ServerProt.OBJ_REVEAL || opcode == ServerProt.LOC_ANIM || opcode == ServerProt.LOC_DEL || opcode == ServerProt.LOC_ADD) {
+			readZonePacket();
 			opcode = -1;
 			return true;
 		} else if (opcode == ServerProt.IF_CLOSESUB) {
@@ -1492,7 +1492,7 @@ public class Protocol {
 			DelayedStateChange.updateView(scale, ptr, yaw, pitch);
 			opcode = -1;
 			return true;
-		} else if (opcode == ServerProt.CLEAR_GROUND_ITEMS) {
+		} else if (opcode == ServerProt.UPDATE_ZONE_FULL_FOLLOWS) {
 			SceneGraph.currentChunkX = inboundBuffer.g1();
 			SceneGraph.currentChunkZ = inboundBuffer.g1neg();
 			for (int x = SceneGraph.currentChunkX; x < SceneGraph.currentChunkX + 8; x++) {
@@ -1510,7 +1510,7 @@ public class Protocol {
 			}
 			opcode = -1;
 			return true;
-		} else if (opcode == ServerProt.INTERFACE_ITEMS_CLEAR) {
+		} else if (opcode == ServerProt.UPDATE_INV_CLEAR) {
 			int id = inboundBuffer.mg4();
 			@Pc(2666) Component component = InterfaceList.getComponent(id);
 			for (int i = 0; i < component.objTypes.length; i++) {
@@ -2034,7 +2034,7 @@ public class Protocol {
 			}
 			opcode = -1;
 			return true;
-		} else if (opcode == ServerProt.DYNAMIC_SCENE_GRAPH) {
+		} else if (opcode == ServerProt.REBUILD_REGION) {
 			readRebuildPacket(true);
 			opcode = -1;
 			return true;
@@ -2140,7 +2140,7 @@ public class Protocol {
 			DelayedStateChange.updateComponentModel(-1, 2, id, npcId);
 			opcode = -1;
 			return true;
-		} else if (opcode == ServerProt.UPDATE_SCENE_GRAPH) {
+		} else if (opcode == ServerProt.REBUILD_NORMAL) {
 			readRebuildPacket(false);
 			opcode = -1;
 			return true;
@@ -2319,7 +2319,7 @@ public class Protocol {
 			method3954(inboundBuffer.gjstr());
 			opcode = -1;
 			return true;
-		} else if (opcode == ServerProt.UPDATE_CURRENT_LOCATION) {
+		} else if (opcode == ServerProt.UPDATE_ZONE_PARTIAL_FOLLOWS) {
 			SceneGraph.currentChunkX = inboundBuffer.g1neg();
 			SceneGraph.currentChunkZ = inboundBuffer.g1();
 			opcode = -1;
@@ -3455,7 +3455,7 @@ public class Protocol {
 	public static void spawnGroundObject(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
 		@Pc(9) LinkedList local9 = SceneGraph.objStacks[Player.level][arg1][arg0];
 		if (local9 == null) {
-			SceneGraph.method3420(Player.level, arg1, arg0);
+			SceneGraph.removeObjStack(Player.level, arg1, arg0);
 			return;
 		}
 		@Pc(28) int local28 = -99999999;
@@ -3465,7 +3465,7 @@ public class Protocol {
 			@Pc(44) ObjType local44 = ObjTypeList.get(local35.value.type);
 			@Pc(47) int local47 = local44.cost;
 			if (local44.stackable == 1) {
-				local47 *= local35.value.anInt5550 + 1;
+				local47 *= local35.value.amount + 1;
 			}
 			if (local28 < local47) {
 				local28 = local47;
@@ -3473,7 +3473,7 @@ public class Protocol {
 			}
 		}
 		if (local30 == null) {
-			SceneGraph.method3420(Player.level, arg1, arg0);
+			SceneGraph.removeObjStack(Player.level, arg1, arg0);
 			return;
 		}
 		local9.addHead(local30);
@@ -3491,6 +3491,6 @@ public class Protocol {
 			}
 		}
 		@Pc(152) long local152 = (arg0 << 7) + arg1 + 1610612736;
-		SceneGraph.method1543(Player.level, arg1, arg0, SceneGraph.getTileHeight(Player.level, arg1 * 128 + 64, arg0 * 128 + 64), local30.value, local152, local89, local91);
+		SceneGraph.setObjStack(Player.level, arg1, arg0, SceneGraph.getTileHeight(Player.level, arg1 * 128 + 64, arg0 * 128 + 64), local30.value, local152, local89, local91);
 	}
 }

@@ -26,8 +26,6 @@ public class LoginManager {
 	public static final JagString aClass100_772 = JagString.parse("um");
 	@OriginalMember(owner = "client!gm", name = "W", descriptor = "Lclient!na;")
 	public static final JagString UNDERSCORE = JagString.parse("_");
-	@OriginalMember(owner = "client!hk", name = "W", descriptor = "Lclient!ih;")
-	public static final LinkedList aClass69_64 = new LinkedList();
 	@OriginalMember(owner = "client!gd", name = "h", descriptor = "[I")
 	public static final int[] anIntArray204 = new int[]{16, 32, 64, 128};
 	@OriginalMember(owner = "client!rl", name = "X", descriptor = "I")
@@ -782,8 +780,8 @@ public class LoginManager {
 			FogManager.setInstantFade();
 		}
 		LightingManager.anInt2875 = -1;
-		aClass69_64.clear();
-		Static217.aClass69_116.clear();
+		SceneGraph.spotanims.clear();
+		SceneGraph.projectiles.clear();
 	}
 
 	@OriginalMember(owner = "client!dh", name = "a", descriptor = "(Z)V")
