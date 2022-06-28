@@ -18,6 +18,8 @@ public class SceneGraph {
 	public static final int[] anIntArray565 = new int[]{1, -1, -1, 1};
 	@OriginalMember(owner = "client!vl", name = "e", descriptor = "[I")
 	public static final int[] anIntArray517 = new int[]{1, 2, 4, 8};
+	@OriginalMember(owner = "client!pg", name = "T", descriptor = "[I")
+	public static final int[] anIntArray386 = new int[]{76, 8, 137, 4, 0, 1, 38, 2, 19};
 	@OriginalMember(owner = "client!kc", name = "o", descriptor = "[[[Lclient!bj;")
 	public static Tile[][][] tiles;
 
@@ -1742,7 +1744,7 @@ public class SceneGraph {
 													var10 += 6;
 												}
 												local65 = Static247.anIntArray324[var10];
-												local8.anInt670 = Static191.anIntArray386[var10];
+												local8.anInt670 = anIntArray386[var10];
 											}
 											if (local616 != null) {
 												if ((local616.anInt3049 & Static247.anIntArray215[var10]) == 0) {

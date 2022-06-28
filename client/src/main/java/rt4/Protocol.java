@@ -58,6 +58,8 @@ public class Protocol {
 	public static final JagString aClass100_431 = JagString.parse("; Max)2Age=");
 	@OriginalMember(owner = "client!ch", name = "z", descriptor = "[I")
 	public static final int[] anIntArray76 = new int[5];
+	@OriginalMember(owner = "client!pg", name = "db", descriptor = "Lclient!na;")
+	public static final JagString ASSISTREQ = JagString.parse(":assistreq:");
 	@OriginalMember(owner = "client!jk", name = "B", descriptor = "Lclient!ma;")
 	public static BufferedSocket socket;
 	@OriginalMember(owner = "client!fl", name = "C", descriptor = "Lsignlink!im;")
@@ -979,7 +981,7 @@ public class Protocol {
 					JagString local506 = message.substring(message.length() - 9, message.indexOf(DateUtil.COLON) + 1);
 					Chat.add(name, 8, local506);
 				}
-			} else if (message.endsWith(Static191.ASSISTREQ)) {
+			} else if (message.endsWith(ASSISTREQ)) {
 				JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
 				long name37 = name.encode37();
 				boolean ignored = false;
@@ -2846,7 +2848,7 @@ public class Protocol {
 													InterfaceList.redraw(InterfaceList.aClass13_22);
 												}
 											}
-											if (local1508 != aClass13_11 && Static191.anInt4504 == anInt5235) {
+											if (local1508 != aClass13_11 && Static87.anInt4504 == anInt5235) {
 												if (local1508 != null) {
 													InterfaceList.redraw(local1508);
 												}
@@ -2858,9 +2860,9 @@ public class Protocol {
 												if (anInt5235 > 0) {
 													anInt5235--;
 												}
-											} else if (anInt5235 < Static191.anInt4504) {
+											} else if (anInt5235 < Static87.anInt4504) {
 												anInt5235++;
-												if (Static191.anInt4504 == anInt5235) {
+												if (Static87.anInt4504 == anInt5235) {
 													InterfaceList.redraw(aClass13_11);
 												}
 											}
