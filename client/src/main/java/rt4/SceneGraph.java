@@ -937,7 +937,7 @@ public class SceneGraph {
 							overlay -= rowLightness[local234];
 						}
 						if (local209 >= 0 && local202 > 0) {
-							local142[local168][local209] = method1309(overlay / local202, local178 / local202, local173 * 256 / local200);
+							local142[local168][local209] = ColorUtils.method1309(overlay / local202, local178 / local202, local173 * 256 / local200);
 						}
 					}
 				}
@@ -1533,20 +1533,6 @@ public class SceneGraph {
 		} else {
 			Loc.method181(type, 0, angle, 0, shape, x, z, arg4);
 		}
-	}
-
-	@OriginalMember(owner = "client!ed", name = "a", descriptor = "(IIII)I")
-	public static int method1309(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-		if (arg0 > 243) {
-			arg1 >>= 0x4;
-		} else if (arg0 > 217) {
-			arg1 >>= 0x3;
-		} else if (arg0 > 192) {
-			arg1 >>= 0x2;
-		} else if (arg0 > 179) {
-			arg1 >>= 0x1;
-		}
-		return (arg0 >> 1) + (arg1 >> 5 << 7) + (arg2 >> 2 << 10);
 	}
 
 	@OriginalMember(owner = "client!sd", name = "c", descriptor = "(II)V")
@@ -2452,7 +2438,7 @@ public class SceneGraph {
 			local201 = local199 - (local213[local112][local133] + local213[local112][local129] + local213[local103][local129] + local213[local103][local133] >> 2);
 		}
 		local213 = null;
-		@Pc(261) long local261 = arg7 | 0x40000000 | arg8 << 7 | arg6 << 14 | arg9 << 20;
+		@Pc(261) long local261 = arg7 | 0x40000000 | (long) arg8 << 7 | (long) arg6 << 14 | (long) arg9 << 20;
 		if (arg3) {
 			local213 = surfaceTileHeights[0];
 		} else if (arg0 < 3) {
@@ -3763,7 +3749,7 @@ public class SceneGraph {
 		for (local155 = 0; local155 < local16; local155++) {
 			local1358[local155] = local1348[local155].key;
 		}
-		method23(local1358, local1348);
+		ArrayUtils.sort(local1358, local1348);
 		return local1348;
 	}
 
@@ -3829,42 +3815,6 @@ public class SceneGraph {
 		} else {
 			return 0;
 		}
-	}
-
-	@OriginalMember(owner = "client!ac", name = "a", descriptor = "([J[Ljava/lang/Object;I)V")
-	public static void method23(@OriginalArg(0) long[] arg0, @OriginalArg(1) Object[] arg1) {
-		method3909(arg0.length - 1, arg0, 0, arg1);
-	}
-
-	@OriginalMember(owner = "client!sh", name = "a", descriptor = "(I[JII[Ljava/lang/Object;)V")
-	public static void method3909(@OriginalArg(0) int arg0, @OriginalArg(1) long[] arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Object[] arg3) {
-		if (arg2 >= arg0) {
-			return;
-		}
-		@Pc(16) int local16 = arg2;
-		@Pc(23) int local23 = (arg2 + arg0) / 2;
-		@Pc(27) long local27 = arg1[local23];
-		arg1[local23] = arg1[arg0];
-		arg1[arg0] = local27;
-		@Pc(41) Object local41 = arg3[local23];
-		arg3[local23] = arg3[arg0];
-		arg3[arg0] = local41;
-		for (@Pc(53) int local53 = arg2; local53 < arg0; local53++) {
-			if (local27 + (long) (local53 & 0x1) > arg1[local53]) {
-				@Pc(72) long local72 = arg1[local53];
-				arg1[local53] = arg1[local16];
-				arg1[local16] = local72;
-				@Pc(86) Object local86 = arg3[local53];
-				arg3[local53] = arg3[local16];
-				arg3[local16++] = local86;
-			}
-		}
-		arg1[arg0] = arg1[local16];
-		arg1[local16] = local27;
-		arg3[arg0] = arg3[local16];
-		arg3[local16] = local41;
-		method3909(local16 - 1, arg1, arg2, arg3);
-		method3909(arg0, arg1, local16 + 1, arg3);
 	}
 
 	@OriginalMember(owner = "client!ke", name = "a", descriptor = "(Lclient!rh;IIIIIIIZ)V")
@@ -3939,7 +3889,7 @@ public class SceneGraph {
 					}
 				} else if (!Preferences.manyGroundTextures) {
 					local475 = Rasteriser.textureProvider.getAverageColor(arg0.anInt4869);
-					Rasteriser.fillGouraudTriangle(local315, local331, local299, local307, local323, local291, method1640(local475, arg0.anInt4865), method1640(local475, arg0.anInt4864), method1640(local475, arg0.anInt4867));
+					Rasteriser.fillGouraudTriangle(local315, local331, local299, local307, local323, local291, ColorUtils.multiplyLightness3(local475, arg0.anInt4865), ColorUtils.multiplyLightness3(local475, arg0.anInt4864), ColorUtils.multiplyLightness3(local475, arg0.anInt4867));
 				} else if (arg0.aBoolean241) {
 					Rasteriser.fillTexturedTriangle(local315, local331, local299, local307, local323, local291, arg0.anInt4865, arg0.anInt4864, arg0.anInt4867, local97, local21, local241, local119, local49, local85, local117, local165, local261, arg0.anInt4869);
 				} else {
@@ -3966,7 +3916,7 @@ public class SceneGraph {
 			Rasteriser.fillTexturedTriangle(local283, local299, local331, local275, local291, local323, arg0.anInt4872, arg0.anInt4867, arg0.anInt4864, local97, local21, local241, local119, local49, local85, local117, local165, local261, arg0.anInt4869);
 		} else {
 			local475 = Rasteriser.textureProvider.getAverageColor(arg0.anInt4869);
-			Rasteriser.fillGouraudTriangle(local283, local299, local331, local275, local291, local323, method1640(local475, arg0.anInt4872), method1640(local475, arg0.anInt4867), method1640(local475, arg0.anInt4864));
+			Rasteriser.fillGouraudTriangle(local283, local299, local331, local275, local291, local323, ColorUtils.multiplyLightness3(local475, arg0.anInt4872), ColorUtils.multiplyLightness3(local475, arg0.anInt4867), ColorUtils.multiplyLightness3(local475, arg0.anInt4864));
 		}
 	}
 
@@ -4240,17 +4190,6 @@ public class SceneGraph {
 		}
 	}
 
-	@OriginalMember(owner = "client!ri", name = "a", descriptor = "(II)I")
-	public static int method1640(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		arg1 = arg1 * (arg0 & 0x7F) >> 7;
-		if (arg1 < 2) {
-			arg1 = 2;
-		} else if (arg1 > 126) {
-			arg1 = 126;
-		}
-		return (arg0 & 0xFF80) + arg1;
-	}
-
 	@OriginalMember(owner = "client!lh", name = "a", descriptor = "(Lclient!fg;IIIIIIZ)V")
 	public static void method2762(@OriginalArg(0) ShapedTile arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) boolean arg7) {
 		@Pc(3) int local3 = arg0.anIntArray168.length;
@@ -4303,7 +4242,7 @@ public class SceneGraph {
 						}
 					} else if (!Preferences.manyGroundTextures) {
 						@Pc(373) int local373 = Rasteriser.textureProvider.getAverageColor(arg0.anIntArray161[local5]);
-						Rasteriser.fillGouraudTriangle(local156, local160, local164, local39, local148, local152, method1640(local373, arg0.anIntArray167[local5]), method1640(local373, arg0.anIntArray172[local5]), method1640(local373, arg0.anIntArray171[local5]));
+						Rasteriser.fillGouraudTriangle(local156, local160, local164, local39, local148, local152, ColorUtils.multiplyLightness3(local373, arg0.anIntArray167[local5]), ColorUtils.multiplyLightness3(local373, arg0.anIntArray172[local5]), ColorUtils.multiplyLightness3(local373, arg0.anIntArray171[local5]));
 					} else if (arg0.aBoolean113) {
 						Rasteriser.fillTexturedTriangle(local156, local160, local164, local39, local148, local152, arg0.anIntArray167[local5], arg0.anIntArray172[local5], arg0.anIntArray171[local5], anIntArray159[0], anIntArray159[1], anIntArray159[3], anIntArray170[0], anIntArray170[1], anIntArray170[3], anIntArray169[0], anIntArray169[1], anIntArray169[3], arg0.anIntArray161[local5]);
 					} else {
@@ -4816,7 +4755,7 @@ public class SceneGraph {
 		for (local38 = 0; local38 < local12; local38++) {
 			local2826[local38] = local2823[local38].key;
 		}
-		method23(local2826, local2823);
+		ArrayUtils.sort(local2826, local2823);
 		return local2823;
 	}
 
@@ -4833,7 +4772,7 @@ public class SceneGraph {
 
 	@OriginalMember(owner = "client!bi", name = "a", descriptor = "(IIBI)I")
 	public static int method588(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2) {
-		@Pc(19) int local19 = Rasteriser.palette[SoftwareModel.method4585(arg1, arg2)];
+		@Pc(19) int local19 = Rasteriser.palette[ColorUtils.multiplyLightness2(arg1, arg2)];
 		if (arg0 > 0) {
 			@Pc(31) int local31 = Rasteriser.textureProvider.method3238(arg0 & 0xFFFF);
 			@Pc(49) int local49;
@@ -5072,6 +5011,464 @@ public class SceneGraph {
 			@Pc(50) int local50 = arg0 * (arg2 >>> 7 & 0x1FE01FE) + local17 * (arg1 >>> 7 & 0x1FE01FE) & 0xFF00FF00;
 			@Pc(65) int local65 = local17 * (arg1 & 0xFF00FF) + (arg2 & 0xFF00FF) * arg0 & 0xFF00FF00;
 			return local50 + (local65 >> 7);
+		}
+	}
+
+	@OriginalMember(owner = "client!bm", name = "a", descriptor = "(IBIIII)V")
+	public static void method645(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
+		@Pc(3) int local3;
+		@Pc(10) int local10;
+		for (local3 = arg1; local3 <= arg3 + arg1; local3++) {
+			for (local10 = arg2; local10 <= arg4 + arg2; local10++) {
+				if (local10 >= 0 && local10 < 104 && local3 >= 0 && local3 < 104) {
+					aByteArrayArrayArray9[arg0][local10][local3] = 127;
+				}
+			}
+		}
+		for (local3 = arg1; local3 < arg3 + arg1; local3++) {
+			for (local10 = arg2; local10 < arg2 + arg4; local10++) {
+				if (local10 >= 0 && local10 < 104 && local3 >= 0 && local3 < 104) {
+					tileHeights[arg0][local10][local3] = arg0 <= 0 ? 0 : tileHeights[arg0 - 1][local10][local3];
+				}
+			}
+		}
+		if (arg2 > 0 && arg2 < 104) {
+			for (local3 = arg1 + 1; local3 < arg1 + arg3; local3++) {
+				if (local3 >= 0 && local3 < 104) {
+					tileHeights[arg0][arg2][local3] = tileHeights[arg0][arg2 - 1][local3];
+				}
+			}
+		}
+		if (arg1 > 0 && arg1 < 104) {
+			for (local3 = arg2 + 1; local3 < arg2 + arg4; local3++) {
+				if (local3 >= 0 && local3 < 104) {
+					tileHeights[arg0][local3][arg1] = tileHeights[arg0][local3][arg1 - 1];
+				}
+			}
+		}
+		if (arg2 < 0 || arg1 < 0 || arg2 >= 104 || arg1 >= 104) {
+			return;
+		}
+		if (arg0 == 0) {
+			if (arg2 > 0 && tileHeights[arg0][arg2 - 1][arg1] != 0) {
+				tileHeights[arg0][arg2][arg1] = tileHeights[arg0][arg2 - 1][arg1];
+			} else if (arg1 > 0 && tileHeights[arg0][arg2][arg1 - 1] != 0) {
+				tileHeights[arg0][arg2][arg1] = tileHeights[arg0][arg2][arg1 - 1];
+			} else if (arg2 > 0 && arg1 > 0 && tileHeights[arg0][arg2 - 1][arg1 - 1] != 0) {
+				tileHeights[arg0][arg2][arg1] = tileHeights[arg0][arg2 - 1][arg1 - 1];
+			}
+		} else if (arg2 > 0 && tileHeights[arg0 - 1][arg2 - 1][arg1] != tileHeights[arg0][arg2 - 1][arg1]) {
+			tileHeights[arg0][arg2][arg1] = tileHeights[arg0][arg2 - 1][arg1];
+		} else if (arg1 > 0 && tileHeights[arg0][arg2][arg1 - 1] != tileHeights[arg0 - 1][arg2][arg1 - 1]) {
+			tileHeights[arg0][arg2][arg1] = tileHeights[arg0][arg2][arg1 - 1];
+		} else if (arg2 > 0 && arg1 > 0 && tileHeights[arg0][arg2 - 1][arg1 - 1] != tileHeights[arg0 - 1][arg2 - 1][arg1 - 1]) {
+			tileHeights[arg0][arg2][arg1] = tileHeights[arg0][arg2 - 1][arg1 - 1];
+		}
+	}
+
+	@OriginalMember(owner = "client!wa", name = "a", descriptor = "([Lclient!mj;ZIIIII[B)V")
+	public static void method2203(@OriginalArg(0) CollisionMap[] arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) byte[] arg6) {
+		@Pc(14) int local14;
+		@Pc(21) int local21;
+		if (!arg1) {
+			for (@Pc(9) int local9 = 0; local9 < 4; local9++) {
+				for (local14 = 0; local14 < 64; local14++) {
+					for (local21 = 0; local21 < 64; local21++) {
+						if (arg4 + local14 > 0 && local14 + arg4 < 103 && arg3 + local21 > 0 && local21 + arg3 < 103) {
+							arg0[local9].flags[local14 + arg4][arg3 + local21] &= 0xFEFFFFFF;
+						}
+					}
+				}
+			}
+		}
+		@Pc(95) Buffer local95 = new Buffer(arg6);
+		@Pc(99) byte local99;
+		if (arg1) {
+			local99 = 1;
+		} else {
+			local99 = 4;
+		}
+		@Pc(117) int local117;
+		for (local14 = 0; local14 < local99; local14++) {
+			for (local21 = 0; local21 < 64; local21++) {
+				for (local117 = 0; local117 < 64; local117++) {
+					readTile(arg2, arg5, arg1, local95, local117 + arg3, arg4 + local21, 0, local14);
+				}
+			}
+		}
+		@Pc(146) boolean local146 = false;
+		@Pc(243) int local243;
+		@Pc(188) int local188;
+		@Pc(190) int local190;
+		@Pc(194) int local194;
+		while (local95.offset < local95.data.length) {
+			local21 = local95.g1();
+			if (local21 != 129) {
+				local95.offset--;
+				break;
+			}
+			for (local117 = 0; local117 < 4; local117++) {
+				@Pc(168) byte local168 = local95.g1b();
+				if (local168 == 0) {
+					local243 = arg4;
+					if (arg4 < 0) {
+						local243 = 0;
+					} else if (arg4 >= 104) {
+						local243 = 104;
+					}
+					local190 = arg3;
+					if (arg3 < 0) {
+						local190 = 0;
+					} else if (arg3 >= 104) {
+						local190 = 104;
+					}
+					local188 = arg4 + 64;
+					local194 = arg3 + 64;
+					if (local194 < 0) {
+						local194 = 0;
+					} else if (local194 >= 104) {
+						local194 = 104;
+					}
+					if (local188 < 0) {
+						local188 = 0;
+					} else if (local188 >= 104) {
+						local188 = 104;
+					}
+					while (local243 < local188) {
+						while (local190 < local194) {
+							aByteArrayArrayArray13[local117][local243][local190] = 0;
+							local190++;
+						}
+						local243++;
+					}
+				} else if (local168 == 1) {
+					for (local243 = 0; local243 < 64; local243 += 4) {
+						for (local188 = 0; local188 < 64; local188 += 4) {
+							@Pc(305) byte local305 = local95.g1b();
+							for (local194 = local243 + arg4; local194 < arg4 + local243 + 4; local194++) {
+								for (@Pc(320) int local320 = arg3 + local188; local320 < arg3 + local188 + 4; local320++) {
+									if (local194 >= 0 && local194 < 104 && local320 >= 0 && local320 < 104) {
+										aByteArrayArrayArray13[local117][local194][local320] = local305;
+									}
+								}
+							}
+						}
+					}
+				} else if (local168 == 2 && local117 > 0) {
+					local188 = arg4 + 64;
+					local190 = arg3;
+					local194 = arg3 + 64;
+					if (local188 < 0) {
+						local188 = 0;
+					} else if (local188 >= 104) {
+						local188 = 104;
+					}
+					if (arg3 < 0) {
+						local190 = 0;
+					} else if (arg3 >= 104) {
+						local190 = 104;
+					}
+					if (local194 < 0) {
+						local194 = 0;
+					} else if (local194 >= 104) {
+						local194 = 104;
+					}
+					local243 = arg4;
+					if (arg4 < 0) {
+						local243 = 0;
+					} else if (arg4 >= 104) {
+						local243 = 104;
+					}
+					while (local188 > local243) {
+						while (local190 < local194) {
+							aByteArrayArrayArray13[local117][local243][local190] = aByteArrayArrayArray13[local117 - 1][local243][local190];
+							local190++;
+						}
+						local243++;
+					}
+				}
+			}
+			local146 = true;
+		}
+		@Pc(515) int local515;
+		if (GlRenderer.enabled && !arg1) {
+			@Pc(490) Environment local490 = null;
+			label270:
+			while (true) {
+				label263:
+				do {
+					while (local95.offset < local95.data.length) {
+						local117 = local95.g1();
+						if (local117 != 0) {
+							if (local117 != 1) {
+								throw new IllegalStateException();
+							}
+							local515 = local95.g1();
+							continue label263;
+						}
+						local490 = new Environment(local95);
+					}
+					if (local490 == null) {
+						local490 = new Environment();
+					}
+					for (local117 = 0; local117 < 8; local117++) {
+						for (local515 = 0; local515 < 8; local515++) {
+							local243 = local117 + (arg4 >> 3);
+							local188 = (arg3 >> 3) + local515;
+							if (local243 >= 0 && local243 < 13 && local188 >= 0 && local188 < 13) {
+								FogManager.chunksAtmosphere[local243][local188] = local490;
+							}
+						}
+					}
+					break label270;
+				} while (local515 <= 0);
+				for (local243 = 0; local243 < local515; local243++) {
+					@Pc(529) Light local529 = new Light(local95);
+					if (local529.anInt2243 == 31) {
+						@Pc(541) LightType local541 = LightTypeList.get(local95.g2());
+						local529.method1762(local541.anInt2865, local541.anInt2873, local541.anInt2867, local541.anInt2872);
+					}
+					local529.z += arg3 << 7;
+					local529.x += arg4 << 7;
+					local194 = local529.z >> 7;
+					local190 = local529.x >> 7;
+					if (local190 >= 0 && local194 >= 0 && local190 < 104 && local194 < 104) {
+						local529.aBoolean125 = (tileFlags[1][local190][local194] & 0x2) != 0;
+						local529.y = tileHeights[local529.level][local190][local194] - local529.y;
+						LightingManager.method2389(local529);
+					}
+				}
+			}
+		}
+		if (local146) {
+			return;
+		}
+		for (local21 = 0; local21 < 4; local21++) {
+			for (local117 = 0; local117 < 16; local117++) {
+				for (local515 = 0; local515 < 16; local515++) {
+					local243 = (arg4 >> 2) + local117;
+					local188 = local515 + (arg3 >> 2);
+					if (local243 >= 0 && local243 < 26 && local188 >= 0 && local188 < 26) {
+						aByteArrayArrayArray13[local21][local243][local188] = 0;
+					}
+				}
+			}
+		}
+	}
+
+	@OriginalMember(owner = "client!tm", name = "a", descriptor = "(III[Lclient!mj;IB[BIIIZ)V")
+	public static void method4228(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) CollisionMap[] arg3, @OriginalArg(4) int arg4, @OriginalArg(6) byte[] arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7, @OriginalArg(9) int arg8, @OriginalArg(10) boolean arg9) {
+		@Pc(17) int local17;
+		if (!arg9) {
+			for (@Pc(10) int local10 = 0; local10 < 8; local10++) {
+				for (local17 = 0; local17 < 8; local17++) {
+					if (arg1 + local10 > 0 && local10 + arg1 < 103 && local17 + arg4 > 0 && arg4 + local17 < 103) {
+						arg3[arg2].flags[local10 + arg1][local17 + arg4] &= 0xFEFFFFFF;
+					}
+				}
+			}
+		}
+		@Pc(87) byte local87;
+		if (arg9) {
+			local87 = 1;
+		} else {
+			local87 = 4;
+		}
+		@Pc(96) Buffer local96 = new Buffer(arg5);
+		@Pc(103) int local103;
+		@Pc(108) int local108;
+		for (local17 = 0; local17 < local87; local17++) {
+			for (local103 = 0; local103 < 64; local103++) {
+				for (local108 = 0; local108 < 64; local108++) {
+					if (arg6 == local17 && arg8 <= local103 && arg8 + 8 > local103 && arg7 <= local108 && local108 < arg7 + 8) {
+						readTile(0, 0, arg9, local96, rotateZ(arg0, local103 & 0x7, local108 & 0x7) + arg4, rotateX(arg0, local108 & 0x7, local103 & 0x7) + arg1, arg0, arg2);
+					} else {
+						readTile(0, 0, arg9, local96, -1, -1, 0, 0);
+					}
+				}
+			}
+		}
+		@Pc(232) int local232;
+		@Pc(417) int local417;
+		@Pc(255) int local255;
+		@Pc(266) int local266;
+		@Pc(316) int local316;
+		while (local96.data.length > local96.offset) {
+			local103 = local96.g1();
+			if (local103 != 129) {
+				local96.offset--;
+				break;
+			}
+			for (local108 = 0; local108 < 4; local108++) {
+				@Pc(223) byte local223 = local96.g1b();
+				@Pc(237) int local237;
+				if (local223 == 0) {
+					if (local108 <= arg6) {
+						local237 = arg1 + 7;
+						local232 = arg1;
+						local255 = arg4 + 7;
+						if (local255 < 0) {
+							local255 = 0;
+						} else if (local255 >= 104) {
+							local255 = 104;
+						}
+						if (local237 < 0) {
+							local237 = 0;
+						} else if (local237 >= 104) {
+							local237 = 104;
+						}
+						local417 = arg4;
+						if (arg4 < 0) {
+							local417 = 0;
+						} else if (arg4 >= 104) {
+							local417 = 104;
+						}
+						if (arg1 < 0) {
+							local232 = 0;
+						} else if (arg1 >= 104) {
+							local232 = 104;
+						}
+						while (local237 > local232) {
+							while (local417 < local255) {
+								aByteArrayArrayArray13[arg2][local232][local417] = 0;
+								local417++;
+							}
+							local232++;
+						}
+					}
+				} else if (local223 == 1) {
+					for (local232 = 0; local232 < 64; local232 += 4) {
+						for (local237 = 0; local237 < 64; local237 += 4) {
+							@Pc(246) byte local246 = local96.g1b();
+							if (local108 <= arg6) {
+								for (local255 = local232; local255 < local232 + 4; local255++) {
+									for (local266 = local237; local266 < local237 + 4; local266++) {
+										if (local255 >= arg8 && local255 < arg8 + 8 && local266 >= arg7 && arg7 + 8 > arg7) {
+											local316 = arg1 + rotateX(arg0, local266 & 0x7, local255 & 0x7);
+											@Pc(328) int local328 = rotateZ(arg0, local255 & 0x7, local266 & 0x7) + arg4;
+											if (local316 >= 0 && local316 < 104 && local328 >= 0 && local328 < 104) {
+												aByteArrayArrayArray13[arg2][local316][local328] = local246;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				} else if (local223 == 2) {
+				}
+			}
+		}
+		@Pc(497) int local497;
+		if (GlRenderer.enabled && !arg9) {
+			@Pc(472) Environment local472 = null;
+			label207:
+			while (true) {
+				label200:
+				do {
+					while (local96.data.length > local96.offset) {
+						local108 = local96.g1();
+						if (local108 != 0) {
+							if (local108 != 1) {
+								throw new IllegalStateException();
+							}
+							local497 = local96.g1();
+							continue label200;
+						}
+						local472 = new Environment(local96);
+					}
+					if (local472 == null) {
+						local472 = new Environment();
+					}
+					FogManager.chunksAtmosphere[arg1 >> 3][arg4 >> 3] = local472;
+					break label207;
+				} while (local497 <= 0);
+				for (local232 = 0; local232 < local497; local232++) {
+					@Pc(517) Light local517 = new Light(local96);
+					if (local517.anInt2243 == 31) {
+						@Pc(529) LightType local529 = LightTypeList.get(local96.g2());
+						local517.method1762(local529.anInt2865, local529.anInt2873, local529.anInt2867, local529.anInt2872);
+					}
+					local417 = local517.x >> 7;
+					local255 = local517.z >> 7;
+					if (arg6 == local517.level && local417 >= arg8 && arg8 + 8 > local417 && arg7 <= local255 && arg7 + 8 > local255) {
+						local266 = rotateXFine(arg0, local517.x & 0x3FF, local517.z & 0x3FF) + (arg1 << 7);
+						local316 = rotateZFine(local517.x & 0x3FF, arg0, local517.z & 0x3FF) + (arg4 << 7);
+						local517.x = local266;
+						local517.z = local316;
+						local417 = local517.x >> 7;
+						local255 = local517.z >> 7;
+						if (local417 >= 0 && local255 >= 0 && local417 < 104 && local255 < 104) {
+							local517.aBoolean125 = (tileFlags[1][local417][local255] & 0x2) != 0;
+							local517.y = tileHeights[local517.level][local417][local255] - local517.y;
+							LightingManager.method2389(local517);
+						}
+					}
+				}
+			}
+		}
+		local103 = arg1 + 7;
+		local108 = arg4 + 7;
+		for (local497 = arg1; local497 < local103; local497++) {
+			for (local232 = arg4; local232 < local108; local232++) {
+				aByteArrayArrayArray13[arg2][local497][local232] = 0;
+			}
+		}
+	}
+
+	@OriginalMember(owner = "client!rg", name = "a", descriptor = "(IZII)I")
+	public static int rotateX(@OriginalArg(0) int arg0, @OriginalArg(2) int z, @OriginalArg(3) int x) {
+		@Pc(3) int angle = arg0 & 0x3;
+		if (angle == 0) {
+			return x;
+		} else if (angle == 1) {
+			return z;
+		} else if (angle == 2) {
+			return 7 - x;
+		} else {
+			return 7 - z;
+		}
+	}
+
+	@OriginalMember(owner = "client!qg", name = "a", descriptor = "(IBII)I")
+	public static int rotateZ(@OriginalArg(0) int arg0, @OriginalArg(2) int x, @OriginalArg(3) int z) {
+		@Pc(3) int angle = arg0 & 0x3;
+		if (angle == 0) {
+			return z;
+		} else if (angle == 1) {
+			return 7 - x;
+		} else if (angle == 2) {
+			return 7 - z;
+		} else {
+			return x;
+		}
+	}
+
+	@OriginalMember(owner = "client!qi", name = "a", descriptor = "(IIBI)I")
+	public static int rotateXFine(@OriginalArg(0) int arg0, @OriginalArg(1) int x, @OriginalArg(3) int z) {
+		@Pc(3) int angle = arg0 & 0x3;
+		if (angle == 0) {
+			return x;
+		} else if (angle == 1) {
+			return z;
+		} else if (angle == 2) {
+			return 1023 - x;
+		} else {
+			return 1023 - z;
+		}
+	}
+
+	@OriginalMember(owner = "client!ol", name = "a", descriptor = "(IIZI)I")
+	public static int rotateZFine(@OriginalArg(0) int x, @OriginalArg(1) int arg1, @OriginalArg(3) int z) {
+		@Pc(3) int angle = arg1 & 0x3;
+		if (angle == 0) {
+			return z;
+		} else if (angle == 1) {
+			return 1023 - x;
+		} else if (angle == 2) {
+			return 1023 - z;
+		} else {
+			return x;
 		}
 	}
 }

@@ -164,7 +164,7 @@ public abstract class MaterialManager_Class106 {
 		}
 		for (local14 = 0; local14 < 255; local14++) {
 			@Pc(41) int local41 = 255 - local14;
-			@Pc(46) int local46 = Texture.method3219(local41, local12);
+			@Pc(46) int local46 = RandomUtils.nextInt(local41, local12);
 			@Pc(51) short local51 = this.aShortArray69[local46];
 			this.aShortArray69[local46] = this.aShortArray69[local41];
 			this.aShortArray69[local41] = this.aShortArray69[local41 + 256] = local51;

@@ -70,7 +70,7 @@ public final class Rasteriser {
 		@Pc(5) int[] texels = textureProvider.method3232(textureId, brightness);
 		if (texels == null) {
 			int averageColor = textureProvider.getAverageColor(textureId);
-			fillGouraudTriangle(yA, yB, yC, xA, xB, xC, multiplyLightness(averageColor, colorA), multiplyLightness(averageColor, colorB), multiplyLightness(averageColor, colorC));
+			fillGouraudTriangle(yA, yB, yC, xA, xB, xC, ColorUtils.multiplyLightness(averageColor, colorA), ColorUtils.multiplyLightness(averageColor, colorB), ColorUtils.multiplyLightness(averageColor, colorC));
 			return;
 		}
 
@@ -682,17 +682,6 @@ public final class Rasteriser {
 		}
 	}
 
-	@OriginalMember(owner = "client!hf", name = "a", descriptor = "(II)I")
-	private static int multiplyLightness(@OriginalArg(0) int a, @OriginalArg(1) int b) {
-		b = b * (a & 0x7F) >> 7;
-		if (b < 2) {
-			b = 2;
-		} else if (b > 126) {
-			b = 126;
-		}
-		return (a & 0xFF80) + b;
-	}
-
 	@OriginalMember(owner = "client!hf", name = "a", descriptor = "(F)V")
 	public static void setBrightness(@OriginalArg(0) float brightness) {
 		randBrightness(brightness);
@@ -705,7 +694,7 @@ public final class Rasteriser {
 		if (texels == null || alpha > 10) {
 			int average = textureProvider.getAverageColor(textureId);
 			textureHasTransparency = true;
-			fillGouraudTriangle(yA, yB, yC, xA, xB, xC, multiplyLightness(average, colorA), multiplyLightness(average, colorB), multiplyLightness(average, colorC));
+			fillGouraudTriangle(yA, yB, yC, xA, xB, xC, ColorUtils.multiplyLightness(average, colorA), ColorUtils.multiplyLightness(average, colorB), ColorUtils.multiplyLightness(average, colorC));
 			return;
 		}
 

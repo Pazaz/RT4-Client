@@ -369,7 +369,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(IILjava/awt/Graphics;B)V")
-	public final void method3112(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Graphics arg2) {
+	public final void drawString(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Graphics arg2) {
 		@Pc(17) String local17 = new String(this.chars, 0, this.length, StandardCharsets.ISO_8859_1);
 		arg2.drawString(local17, arg1, arg0);
 	}
@@ -996,7 +996,7 @@ public final class JagString implements StringInterface {
 	}
 
 	@OriginalMember(owner = "client!na", name = "a", descriptor = "(ILjava/awt/FontMetrics;)I")
-	public final int method3155(@OriginalArg(1) FontMetrics arg0) {
+	public final int stringWidth(@OriginalArg(1) FontMetrics arg0) {
 		@Pc(14) String local14 = new String(this.chars, 0, this.length, StandardCharsets.ISO_8859_1);
 		return arg0.stringWidth(local14);
 	}

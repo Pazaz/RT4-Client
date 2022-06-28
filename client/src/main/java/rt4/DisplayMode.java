@@ -267,7 +267,7 @@ public final class DisplayMode {
 				@Pc(122) DisplayMode local122 = aClass114Array1[local114];
 				local112[local114] = local122.height * local122.width;
 			}
-			method3346(local112, aClass114Array1);
+			ArrayUtils.sort(local112, aClass114Array1);
 		}
 		return aClass114Array1;
 	}
@@ -331,39 +331,4 @@ public final class DisplayMode {
 		}
 	}
 
-	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(I[I[Ljava/lang/Object;)V")
-	public static void method3346(@OriginalArg(1) int[] arg0, @OriginalArg(2) Object[] arg1) {
-		method1292(arg1, arg0.length - 1, arg0, 0);
-	}
-
-	@OriginalMember(owner = "client!ec", name = "a", descriptor = "([Ljava/lang/Object;I[III)V")
-	public static void method1292(@OriginalArg(0) Object[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int[] arg2, @OriginalArg(4) int arg3) {
-		if (arg3 >= arg1) {
-			return;
-		}
-		@Pc(11) int local11 = (arg3 + arg1) / 2;
-		@Pc(15) int local15 = arg2[local11];
-		@Pc(17) int local17 = arg3;
-		arg2[local11] = arg2[arg1];
-		arg2[arg1] = local15;
-		@Pc(31) Object local31 = arg0[local11];
-		arg0[local11] = arg0[arg1];
-		arg0[arg1] = local31;
-		for (@Pc(43) int local43 = arg3; local43 < arg1; local43++) {
-			if ((local43 & 0x1) + local15 > arg2[local43]) {
-				@Pc(67) int local67 = arg2[local43];
-				arg2[local43] = arg2[local17];
-				arg2[local17] = local67;
-				@Pc(81) Object local81 = arg0[local43];
-				arg0[local43] = arg0[local17];
-				arg0[local17++] = local81;
-			}
-		}
-		arg2[arg1] = arg2[local17];
-		arg2[local17] = local15;
-		arg0[arg1] = arg0[local17];
-		arg0[local17] = local31;
-		method1292(arg0, local17 - 1, arg2, arg3);
-		method1292(arg0, arg1, arg2, local17 + 1);
-	}
 }

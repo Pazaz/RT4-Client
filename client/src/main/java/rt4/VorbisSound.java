@@ -179,7 +179,7 @@ public final class VorbisSound extends Node {
 			@Pc(187) int[] local187 = new int[local38];
 			@Pc(193) int local193 = IntUtils.bitCount(local38 - 1);
 			for (@Pc(195) int local195 = 0; local195 < local38; local195++) {
-				local187[local195] = method667(local193, local195);
+				local187[local195] = IntUtils.bitReverse(local193, local195);
 			}
 			if (local17 == 0) {
 				trigA0 = local41;
@@ -248,17 +248,6 @@ public final class VorbisSound extends Node {
 			bitPosition += len;
 		}
 		return local1;
-	}
-
-	@OriginalMember(owner = "client!bn", name = "a", descriptor = "(III)I")
-	public static int method667(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		@Pc(8) int local8 = 0;
-		while (arg0 > 0) {
-			local8 = local8 << 1 | arg1 & 0x1;
-			arg1 >>>= 0x1;
-			arg0--;
-		}
-		return local8;
 	}
 
 	@OriginalMember(owner = "client!jc", name = "a", descriptor = "([I)Lclient!kj;")

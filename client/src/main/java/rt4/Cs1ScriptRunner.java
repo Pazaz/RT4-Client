@@ -806,8 +806,8 @@ public class Cs1ScriptRunner {
 													if (GlRenderer.enabled) {
 														GlRaster.method1183(local123, local114, component.width + local123, component.height + local114);
 
-														@Pc(2274) boolean local2274 = Texture.method3702(sprite.width);
-														@Pc(2279) boolean local2279 = Texture.method3702(sprite.height);
+														@Pc(2274) boolean local2274 = IntUtils.isPowerOfTwo(sprite.width);
+														@Pc(2279) boolean local2279 = IntUtils.isPowerOfTwo(sprite.height);
 														@Pc(2282) GlSprite local2282 = (GlSprite) sprite;
 														if (local2274 && local2279) {
 															if (alpha == 0) {

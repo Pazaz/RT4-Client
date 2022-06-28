@@ -121,4 +121,61 @@ public class ColorUtils {
 			return (arg0 & 0xFF80) + arg1;
 		}
 	}
+
+	@OriginalMember(owner = "client!w", name = "f", descriptor = "(I)I")
+	public static int method4582(@OriginalArg(0) int arg0) {
+		if (arg0 < 2) {
+			arg0 = 2;
+		} else if (arg0 > 126) {
+			arg0 = 126;
+		}
+		return arg0;
+	}
+
+	@OriginalMember(owner = "client!hf", name = "a", descriptor = "(II)I")
+	public static int multiplyLightness(@OriginalArg(0) int a, @OriginalArg(1) int b) {
+		b = b * (a & 0x7F) >> 7;
+		if (b < 2) {
+			b = 2;
+		} else if (b > 126) {
+			b = 126;
+		}
+		return (a & 0xFF80) + b;
+	}
+
+	@OriginalMember(owner = "client!w", name = "a", descriptor = "(II)I")
+	public static int multiplyLightness2(@OriginalArg(0) int a, @OriginalArg(1) int b) {
+		b = b * (a & 0x7F) >> 7;
+		if (b < 2) {
+			b = 2;
+		} else if (b > 126) {
+			b = 126;
+		}
+		return (a & 0xFF80) + b;
+	}
+
+	@OriginalMember(owner = "client!ri", name = "a", descriptor = "(II)I")
+	public static int multiplyLightness3(@OriginalArg(0) int a, @OriginalArg(1) int b) {
+		b = b * (a & 0x7F) >> 7;
+		if (b < 2) {
+			b = 2;
+		} else if (b > 126) {
+			b = 126;
+		}
+		return (a & 0xFF80) + b;
+	}
+
+	@OriginalMember(owner = "client!ed", name = "a", descriptor = "(IIII)I")
+	public static int method1309(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
+		if (arg0 > 243) {
+			arg1 >>= 0x4;
+		} else if (arg0 > 217) {
+			arg1 >>= 0x3;
+		} else if (arg0 > 192) {
+			arg1 >>= 0x2;
+		} else if (arg0 > 179) {
+			arg1 >>= 0x1;
+		}
+		return (arg0 >> 1) + (arg1 >> 5 << 7) + (arg2 >> 2 << 10);
+	}
 }

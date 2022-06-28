@@ -375,7 +375,7 @@ public class WorldMap {
 					}
 					if (local367 >= 0 && local363 > 0) {
 						@Pc(462) int[] local462 = local355[local367 >> 6];
-						@Pc(480) int local480 = local361 == 0 ? 0 : SceneGraph.method1309(local293 / local363, local225 / local363, local114 * 256 / local361);
+						@Pc(480) int local480 = local361 == 0 ? 0 : ColorUtils.method1309(local293 / local363, local225 / local363, local114 * 256 / local361);
 						if (underlays[local102][local367] != 0) {
 							if (local462 == null) {
 								local462 = local355[local367 >> 6] = new int[4096];

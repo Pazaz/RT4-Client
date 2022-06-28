@@ -61,7 +61,7 @@ public final class TextureOp15 extends TextureOp {
 			}
 			for (local29 = 0; local29 < 255; local29++) {
 				@Pc(53) int local53 = 255 - local29;
-				@Pc(58) int local58 = Texture.method3219(local53, local24);
+				@Pc(58) int local58 = RandomUtils.nextInt(local53, local24);
 				@Pc(62) byte local62 = local27[local58];
 				local27[local58] = local27[local53];
 				local27[local53] = local27[511 - local29] = local62;
@@ -78,7 +78,7 @@ public final class TextureOp15 extends TextureOp {
 		this.aShortArray35 = new short[512];
 		if (this.anInt2636 > 0) {
 			for (@Pc(26) int local26 = 0; local26 < 512; local26++) {
-				this.aShortArray35[local26] = (short) Texture.method3219(this.anInt2636, local12);
+				this.aShortArray35[local26] = (short) RandomUtils.nextInt(this.anInt2636, local12);
 			}
 		}
 	}

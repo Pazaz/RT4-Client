@@ -10,8 +10,10 @@ public final class Loc extends Entity {
 
 	@OriginalMember(owner = "client!kf", name = "h", descriptor = "[I")
 	public static final int[] LAYERS = new int[]{0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3};
+
 	@OriginalMember(owner = "client!ci", name = "q", descriptor = "Lclient!ek;")
 	public static SoftwareIndexedSprite aClass36_Sub1_1 = null;
+
 	@OriginalMember(owner = "client!dc", name = "U", descriptor = "Lclient!ga;")
 	private ParticleSystem aClass47_Sub1_2;
 
