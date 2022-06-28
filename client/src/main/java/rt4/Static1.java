@@ -20,8 +20,6 @@ public final class Static1 {
 	@OriginalMember(owner = "client!a", name = "e", descriptor = "Lclient!na;")
 	public static final JagString TITLE_SONG = JagString.parse("scape main");
 
-	@OriginalMember(owner = "client!a", name = "i", descriptor = "I")
-	public static int anInt6 = 0;
 	@OriginalMember(owner = "client!ig", name = "b", descriptor = "I")
 	public static int anInt2882;
 	@OriginalMember(owner = "client!ig", name = "f", descriptor = "I")
@@ -562,7 +560,7 @@ public final class Static1 {
 				SoftwareRaster.frameBuffer.makeTarget();
 			}
 		}
-		WorldMap.aClass3_Sub2_Sub1_2.method1415(arg0, arg3);
+		WorldMap.aClass3_Sub2_Sub1_2.drawPixels(arg0, arg3);
 		@Pc(147) int local147 = arg1 * anInt2884 / WorldMap.length + arg3;
 		@Pc(153) int local153 = WorldMap.anInt1176 * arg1 / WorldMap.length;
 		@Pc(161) int local161 = arg0 + arg2 * anInt2882 / WorldMap.width;

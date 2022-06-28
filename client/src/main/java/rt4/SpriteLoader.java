@@ -310,7 +310,7 @@ public class SpriteLoader {
 	}
 
 	@OriginalMember(owner = "client!ml", name = "a", descriptor = "(BILclient!ve;)[Lclient!ek;")
-	public static SoftwareIndexedSprite[] method3088(@OriginalArg(1) int arg0, @OriginalArg(2) Js5 arg1) {
+	public static SoftwareIndexedSprite[] loadSoftwareIndexedSpritesAutoDetect(@OriginalArg(1) int arg0, @OriginalArg(2) Js5 arg1) {
 		return decode(arg1, arg0) ? createSoftwareIndexedSprites() : null;
 	}
 

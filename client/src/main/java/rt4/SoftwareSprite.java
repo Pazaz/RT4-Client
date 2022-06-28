@@ -281,7 +281,7 @@ public class SoftwareSprite extends Sprite {
 
 	@OriginalMember(owner = "client!mm", name = "c", descriptor = "(II)V")
 	@Override
-	public void method1415(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+	public void drawPixels(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		arg0 += this.anInt1863;
 		arg1 += this.anInt1861;
 		@Pc(15) int local15 = arg0 + arg1 * SoftwareRaster.width;

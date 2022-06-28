@@ -532,13 +532,13 @@ public final class Component {
 			@Pc(50) int local50 = local18.width;
 			@Pc(52) int local52;
 			for (local52 = 0; local52 < local18.width; local52++) {
-				if (local18.aByteArray18[local18.width * local37 + local52] != 0) {
+				if (local18.pixels[local18.width * local37 + local52] != 0) {
 					local47 = local52;
 					break;
 				}
 			}
 			for (local52 = local47; local52 < local18.width; local52++) {
-				if (local18.aByteArray18[local37 * local18.width + local52] == 0) {
+				if (local18.pixels[local37 * local18.width + local52] == 0) {
 					local50 = local52;
 					break;
 				}

@@ -21,8 +21,8 @@ public final class ShadowManager {
 
 	@OriginalMember(owner = "client!tj", name = "a", descriptor = "(Lclient!ek;Lclient!ek;II)V")
 	private static void method4194(@OriginalArg(0) SoftwareIndexedSprite arg0, @OriginalArg(1) SoftwareIndexedSprite arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		arg2 += arg0.anInt4280;
-		arg3 += arg0.anInt4273;
+		arg2 += arg0.xOffset;
+		arg3 += arg0.yOffset;
 		@Pc(16) int local16 = arg2 + arg3 * arg1.width;
 		@Pc(18) int local18 = 0;
 		@Pc(21) int local21 = arg0.height;
@@ -57,7 +57,7 @@ public final class ShadowManager {
 			local29 += local37;
 		}
 		if (local24 > 0 && local21 > 0) {
-			method4204(arg1.aByteArray18, arg0.aByteArray18, local18, local16, local24, local21, local29, local31);
+			method4204(arg1.pixels, arg0.pixels, local18, local16, local24, local21, local29, local31);
 			method4196(arg2, arg3, local24, local21);
 		}
 	}
@@ -184,8 +184,8 @@ public final class ShadowManager {
 
 	@OriginalMember(owner = "client!tj", name = "b", descriptor = "(Lclient!ek;Lclient!ek;II)Z")
 	private static boolean method4200(@OriginalArg(0) SoftwareIndexedSprite arg0, @OriginalArg(1) SoftwareIndexedSprite arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		arg2 += arg0.anInt4280;
-		arg3 += arg0.anInt4273;
+		arg2 += arg0.xOffset;
+		arg3 += arg0.yOffset;
 		@Pc(16) int local16 = arg2 + arg3 * arg1.width;
 		@Pc(19) int local19 = arg0.height;
 		@Pc(22) int local22 = arg0.width;
@@ -216,7 +216,7 @@ public final class ShadowManager {
 		if (local22 > 0 && local19 > 0) {
 			local27 += arg1.width * 7;
 			method4196(arg2, arg3, local22, local19);
-			return method4199(arg1.aByteArray18, local16, local22, local19, local27);
+			return method4199(arg1.pixels, local16, local22, local19, local27);
 		} else {
 			return false;
 		}
@@ -237,8 +237,8 @@ public final class ShadowManager {
 
 	@OriginalMember(owner = "client!tj", name = "c", descriptor = "(Lclient!ek;Lclient!ek;II)V")
 	private static void method4202(@OriginalArg(0) SoftwareIndexedSprite arg0, @OriginalArg(1) SoftwareIndexedSprite arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		arg2 += arg0.anInt4280;
-		arg3 += arg0.anInt4273;
+		arg2 += arg0.xOffset;
+		arg3 += arg0.yOffset;
 		@Pc(16) int local16 = arg2 + arg3 * arg1.width;
 		@Pc(18) int local18 = 0;
 		@Pc(21) int local21 = arg0.height;
@@ -273,7 +273,7 @@ public final class ShadowManager {
 			local29 += local37;
 		}
 		if (local24 > 0 && local21 > 0) {
-			method4195(arg1.aByteArray18, arg0.aByteArray18, local18, local16, local24, local21, local29, local31);
+			method4195(arg1.pixels, arg0.pixels, local18, local16, local24, local21, local29, local31);
 			method4196(arg2, arg3, local24, local21);
 		}
 	}
@@ -403,9 +403,9 @@ public final class ShadowManager {
 			local41 = -255;
 		}
 		if (arg5) {
-			method4206(arg1.aByteArray18, arg0.aByteArray18, local32, local23, local28, local34, local41);
+			method4206(arg1.pixels, arg0.pixels, local32, local23, local28, local34, local41);
 		} else {
-			method4208(arg1.aByteArray18, arg0.aByteArray18, local32, local23, local28, local34, local41);
+			method4208(arg1.pixels, arg0.pixels, local32, local23, local28, local34, local41);
 		}
 		method4196(arg2, arg3, 16, 16);
 	}

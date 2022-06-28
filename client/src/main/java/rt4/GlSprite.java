@@ -315,7 +315,7 @@ public class GlSprite extends Sprite {
 
 	@OriginalMember(owner = "client!cf", name = "c", descriptor = "(II)V")
 	@Override
-	public final void method1415(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+	public final void drawPixels(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		GlRenderer.method4149();
 		@Pc(5) int local5 = arg0 + this.anInt1863;
 		@Pc(10) int local10 = arg1 + this.anInt1861;
