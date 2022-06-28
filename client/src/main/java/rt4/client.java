@@ -330,7 +330,7 @@ public final class client extends GameShell {
 			Protocol.aClass95_4 = null;
 		}
 		if (arg0 == 25 || arg0 == 28) {
-			ClientProt.anInt5804 = 0;
+			LoginManager.anInt5804 = 0;
 			anInt5150 = 1;
 			LoginManager.loadingScreenState = 0;
 			anInt1196 = 1;
@@ -380,55 +380,55 @@ public final class client extends GameShell {
 	}
 
 	@OriginalMember(owner = "client!je", name = "h", descriptor = "(I)V")
-	public static void method2380() {
-		FloTypeList.method4301();
-		FluTypeList.method3885();
-		IdkTypeList.method3342();
-		LocTypeList.method3323();
-		NpcTypeList.method4001();
-		ObjTypeList.method2239();
-		SeqTypeList.method3903();
-		SpotAnimTypeList.method1441();
-		VarbitTypeList.method1694();
-		VarpTypeList.method4657();
-		BasTypeList.method1172();
-		MsiTypeList.method4529();
-		LightTypeList.method1882();
-		CursorTypeList.method741();
-		PlayerAppearance.method3474();
-		Component.method1019();
+	public static void unloadSoft() {
+		FloTypeList.removeSoft();
+		FluTypeList.removeSoft();
+		IdkTypeList.removeSoft();
+		LocTypeList.removeSoft();
+		NpcTypeList.removeSoft();
+		ObjTypeList.removeSoft();
+		SeqTypeList.removeSoft();
+		SpotAnimTypeList.removeSoft();
+		VarbitTypeList.removeSoft();
+		VarpTypeList.removeSoft();
+		BasTypeList.removeSoft();
+		MsiTypeList.removeSoft();
+		LightTypeList.removeSoft();
+		CursorTypeList.removeSoft();
+		PlayerAppearance.removeSoft();
+		Component.removeSoft();
 		HintArrowManager.removeSoft();
-		ShadowModelList.method4276();
+		ShadowModelList.removeSoft();
 		HitBarList.hitBars.removeSoft();
 		FontMetricsList.fontMetrics.removeSoft();
 	}
 
 	@OriginalMember(owner = "client!rj", name = "f", descriptor = "(B)V")
-	public static void method3768() {
-		FloTypeList.method4612();
-		FluTypeList.method1308();
-		IdkTypeList.method3999();
+	public static void unload() {
+		FloTypeList.clear();
+		FluTypeList.clear();
+		IdkTypeList.clear();
 		LocTypeList.clear();
-		NpcTypeList.method3673();
-		ObjTypeList.method3302();
-		SeqTypeList.method350();
-		SpotAnimTypeList.method4249();
-		VarbitTypeList.method1295();
-		VarpTypeList.method4266();
-		BasTypeList.method2433();
-		MsiTypeList.method3653();
-		LightTypeList.method1695();
-		CursorTypeList.method351();
-		PlayerAppearance.method3947();
+		NpcTypeList.clear();
+		ObjTypeList.clear();
+		SeqTypeList.clear();
+		SpotAnimTypeList.clear();
+		VarbitTypeList.clear();
+		VarpTypeList.clear();
+		BasTypeList.clear();
+		MsiTypeList.clear();
+		LightTypeList.clear();
+		CursorTypeList.clear();
+		PlayerAppearance.clear();
 		Component.clear();
 		if (modeWhat != 0) {
-			for (@Pc(54) int local54 = 0; local54 < Player.aByteArrayArray8.length; local54++) {
-				Player.aByteArrayArray8[local54] = null;
+			for (@Pc(54) int i = 0; i < Player.aByteArrayArray8.length; i++) {
+				Player.aByteArrayArray8[i] = null;
 			}
 			Player.anInt2863 = 0;
 		}
 		HintArrowManager.clear();
-		ShadowModelList.method1857();
+		ShadowModelList.clear();
 		FontMetricsList.fontMetrics.clear();
 		if (!GlRenderer.enabled) {
 			((Js5GlTextureProvider) Rasteriser.textureProvider).clear();
@@ -485,7 +485,7 @@ public final class client extends GameShell {
 		SceneGraph.clear();
 		MiniMap.sprite = null;
 		LightingManager.anInt2875 = -1;
-		method3768();
+		unload();
 		DeadClass.cache.clear();
 		LocType.aClass139_1 = new Loc_Class139();
 		((Js5GlTextureProvider) Rasteriser.textureProvider).clear();
@@ -622,7 +622,7 @@ public final class client extends GameShell {
 			Player.secondaryOptions[local3506] = false;
 			Player.cursors[local3506] = -1;
 		}
-		Inv.method2073();
+		Inv.clear();
 		ScriptRunner.aBoolean43 = true;
 		for (local3506 = 0; local3506 < 100; local3506++) {
 			InterfaceList.aBooleanArray100[local3506] = true;
@@ -648,7 +648,7 @@ public final class client extends GameShell {
 		aShortArray88 = aShortArray19 = aShortArray74 = aShortArray87 = new short[256];
 		LoginManager.method4637();
 		InterfaceList.aBoolean298 = false;
-		ClientProt.method1373();
+		ClientProt.sendWindowDetails();
 	}
 
 	@OriginalMember(owner = "client!rc", name = "d", descriptor = "(I)V")
@@ -763,10 +763,10 @@ public final class client extends GameShell {
 				local80 = (anInt5150 - LoginManager.mapFilesMissingCount) * 50 / anInt5150;
 				Fonts.drawTextOnScreen(false, JagString.concatenate(new JagString[]{LocalizedText.LOADING, aClass100_974, JagString.parseInt(local80), Cs1ScriptRunner.aClass100_80}));
 			} else if (LoginManager.loadingScreenState == 2) {
-				if (anInt1196 < ClientProt.anInt5804) {
-					anInt1196 = ClientProt.anInt5804;
+				if (anInt1196 < LoginManager.anInt5804) {
+					anInt1196 = LoginManager.anInt5804;
 				}
-				local80 = (anInt1196 - ClientProt.anInt5804) * 50 / anInt1196 + 50;
+				local80 = (anInt1196 - LoginManager.anInt5804) * 50 / anInt1196 + 50;
 				Fonts.drawTextOnScreen(false, JagString.concatenate(new JagString[]{LocalizedText.LOADING, aClass100_974, JagString.parseInt(local80), Cs1ScriptRunner.aClass100_80}));
 			} else {
 				Fonts.drawTextOnScreen(false, LocalizedText.LOADING);
@@ -1110,7 +1110,7 @@ public final class client extends GameShell {
 										priorityRequest = (HookRequest) InterfaceList.lowPriorityRequests.removeHead();
 										if (priorityRequest == null) {
 											if (Cs1ScriptRunner.aClass13_14 != null) {
-												ClientProt.method28();
+												Cs1ScriptRunner.method28();
 											}
 											if (Protocol.openUrlRequest != null && Protocol.openUrlRequest.status == 1) {
 												if (Protocol.openUrlRequest.result != null) {

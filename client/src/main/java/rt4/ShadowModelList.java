@@ -14,7 +14,7 @@ public class ShadowModelList {
 	}
 
 	@OriginalMember(owner = "client!ug", name = "b", descriptor = "(B)V")
-	public static void method4276() {
+	public static void removeSoft() {
 		SHADOWS.removeSoft();
 	}
 
@@ -147,7 +147,7 @@ public class ShadowModelList {
 	}
 
 	@OriginalMember(owner = "client!hb", name = "a", descriptor = "(Z)V")
-	public static void method1857() {
+	public static void clear() {
 		SHADOWS.clear();
 	}
 }

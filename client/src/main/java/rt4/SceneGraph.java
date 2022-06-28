@@ -185,6 +185,12 @@ public class SceneGraph {
 	public static boolean aBoolean130 = false;
 	@OriginalMember(owner = "client!gg", name = "Z", descriptor = "I")
 	public static int anInt2222;
+	@OriginalMember(owner = "client!sj", name = "u", descriptor = "Z")
+	public static boolean dynamicMapRegion = false;
+	@OriginalMember(owner = "client!gf", name = "R", descriptor = "I")
+	public static int centralZoneX;
+	@OriginalMember(owner = "client!eb", name = "u", descriptor = "I")
+	public static int centralZoneZ;
 
 	@OriginalMember(owner = "client!km", name = "f", descriptor = "(I)Z")
 	public static boolean allLevelsAreVisible() {
@@ -2788,7 +2794,7 @@ public class SceneGraph {
 	@OriginalMember(owner = "client!ch", name = "c", descriptor = "(I)V")
 	public static void method846() {
 		if (!allLevelsAreVisible() && LoginManager.centralPlane != Player.level) {
-			LoginManager.method2463(Player.level, LoginManager.centralZoneZ, LoginManager.centralZoneX, PlayerList.self.movementQueueZ[0], false, PlayerList.self.movementQueueX[0]);
+			LoginManager.method2463(Player.level, centralZoneZ, centralZoneX, PlayerList.self.movementQueueZ[0], false, PlayerList.self.movementQueueX[0]);
 		} else if (Player.level != LightingManager.anInt2875 && MiniMap.renderMap(Player.level)) {
 			LightingManager.anInt2875 = Player.level;
 			ScriptRunner.method2218();

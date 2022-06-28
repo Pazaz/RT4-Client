@@ -53,13 +53,13 @@ public class SpotAnimTypeList {
 	}
 
 	@OriginalMember(owner = "client!ub", name = "a", descriptor = "(Z)V")
-	public static void method4249() {
+	public static void clear() {
 		types.clear();
 		models.clear();
 	}
 
 	@OriginalMember(owner = "client!fk", name = "a", descriptor = "(B)V")
-	public static void method1441() {
+	public static void removeSoft() {
 		types.removeSoft();
 		models.removeSoft();
 	}

@@ -113,13 +113,13 @@ public final class PlayerAppearance {
 	}
 
 	@OriginalMember(owner = "client!ph", name = "b", descriptor = "(B)V")
-	public static void method3474() {
+	public static void removeSoft() {
 		bodyModels.removeSoft();
 		headModels.removeSoft();
 	}
 
 	@OriginalMember(owner = "client!sj", name = "c", descriptor = "(I)V")
-	public static void method3947() {
+	public static void clear() {
 		bodyModels.clear();
 		headModels.clear();
 	}

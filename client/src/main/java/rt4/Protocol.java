@@ -405,7 +405,7 @@ public class Protocol {
 
 	@OriginalMember(owner = "client!g", name = "a", descriptor = "(IZ)V")
 	public static void readRebuildPacket(@OriginalArg(1) boolean arg0) {
-		LoginManager.dynamicMapRegion = arg0;
+		SceneGraph.dynamicMapRegion = arg0;
 		@Pc(13) int local13;
 		@Pc(20) int local20;
 		@Pc(26) int local26;
@@ -415,7 +415,7 @@ public class Protocol {
 		@Pc(138) int local138;
 		@Pc(151) int local151;
 		@Pc(169) int local169;
-		if (!LoginManager.dynamicMapRegion) {
+		if (!SceneGraph.dynamicMapRegion) {
 			local13 = inboundBuffer.g2add();
 			local20 = (length - inboundBuffer.offset) / 16;
 			LoginManager.regionsXteaKeys = new int[local20][4];
@@ -2799,7 +2799,7 @@ public class Protocol {
 												InterfaceList.anInt3337 = 0;
 											}
 											if (Cs1ScriptRunner.aClass13_14 != null) {
-												ClientProt.method28();
+												Cs1ScriptRunner.method28();
 											}
 											if (LoginManager.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && MouseWheel.wheelRotation != 0) {
 												y = Player.level - MouseWheel.wheelRotation;

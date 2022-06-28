@@ -36,12 +36,12 @@ public class VarbitTypeList {
 	}
 
 	@OriginalMember(owner = "client!gd", name = "a", descriptor = "(I)V")
-	public static void method1694() {
+	public static void removeSoft() {
 		types.removeSoft();
 	}
 
 	@OriginalMember(owner = "client!ec", name = "b", descriptor = "(I)V")
-	public static void method1295() {
+	public static void clear() {
 		types.clear();
 	}
 

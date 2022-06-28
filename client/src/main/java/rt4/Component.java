@@ -507,7 +507,7 @@ public final class Component {
 	}
 
 	@OriginalMember(owner = "client!da", name = "h", descriptor = "(B)V")
-	public static void method1019() {
+	public static void removeSoft() {
 		sprites.removeSoft();
 		models.removeSoft();
 		fonts.removeSoft();

@@ -36,7 +36,7 @@ public class CursorTypeList {
 	}
 
 	@OriginalMember(owner = "client!an", name = "i", descriptor = "(I)V")
-	public static void method351() {
+	public static void clear() {
 		types.clear();
 		sprites.clear();
 	}
@@ -48,7 +48,7 @@ public class CursorTypeList {
 	}
 
 	@OriginalMember(owner = "client!ca", name = "a", descriptor = "(Z)V")
-	public static void method741() {
+	public static void removeSoft() {
 		types.removeSoft();
 		sprites.removeSoft();
 	}

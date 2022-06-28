@@ -36,12 +36,12 @@ public class LightTypeList {
 	}
 
 	@OriginalMember(owner = "client!gd", name = "b", descriptor = "(I)V")
-	public static void method1695() {
+	public static void clear() {
 		types.clear();
 	}
 
 	@OriginalMember(owner = "client!hd", name = "a", descriptor = "(I)V")
-	public static void method1882() {
+	public static void removeSoft() {
 		types.removeSoft();
 	}
 }

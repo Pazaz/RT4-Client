@@ -1339,4 +1339,72 @@ public class Cs1ScriptRunner {
 		}
 		return local12;
 	}
+
+	@OriginalMember(owner = "client!ac", name = "b", descriptor = "(I)V")
+	public static void method28() {
+		InterfaceList.redraw(aClass13_14);
+		anInt4851++;
+		if (InterfaceList.aBoolean83 && InterfaceList.aBoolean174) {
+			@Pc(30) int local30 = Mouse.lastMouseX;
+			local30 -= anInt5388;
+			if (anInt2225 > local30) {
+				local30 = anInt2225;
+			}
+			@Pc(41) int local41 = Mouse.lastMouseY;
+			if (anInt2225 + aClass13_1.width < local30 - -aClass13_14.width) {
+				local30 = anInt2225 + aClass13_1.width - aClass13_14.width;
+			}
+			local41 -= anInt4035;
+			if (local41 < InterfaceList.anInt5103) {
+				local41 = InterfaceList.anInt5103;
+			}
+			if (InterfaceList.anInt5103 + aClass13_1.height < local41 - -aClass13_14.height) {
+				local41 = InterfaceList.anInt5103 + aClass13_1.height - aClass13_14.height;
+			}
+			@Pc(109) int local109 = local41 - InterfaceList.anInt660;
+			@Pc(114) int local114 = local30 - InterfaceList.anInt3075;
+			@Pc(122) int local122 = local30 + aClass13_1.scrollX - anInt2225;
+			@Pc(130) int local130 = aClass13_1.scrollY + local41 - InterfaceList.anInt5103;
+			@Pc(133) int local133 = aClass13_14.dragDeadzone;
+			if (anInt4851 > aClass13_14.dragDeadtime && (local133 < local114 || -local133 > local114 || local109 > local133 || local109 < -local133)) {
+				aBoolean172 = true;
+			}
+			@Pc(176) HookRequest local176;
+			if (aClass13_14.onDragStart != null && aBoolean172) {
+				local176 = new HookRequest();
+				local176.source = aClass13_14;
+				local176.arguments = aClass13_14.onDragStart;
+				local176.mouseX = local122;
+				local176.mouseY = local130;
+				ScriptRunner.run(local176);
+			}
+			if (Mouse.pressedButton == 0) {
+				if (aBoolean172) {
+					if (aClass13_14.onDragRelease != null) {
+						local176 = new HookRequest();
+						local176.mouseY = local130;
+						local176.target = InterfaceList.aClass13_12;
+						local176.mouseX = local122;
+						local176.arguments = aClass13_14.onDragRelease;
+						local176.source = aClass13_14;
+						ScriptRunner.run(local176);
+					}
+					if (InterfaceList.aClass13_12 != null && InterfaceList.method938(aClass13_14) != null) {
+						Protocol.outboundBuffer.p1isaac(79);
+						Protocol.outboundBuffer.mp4(aClass13_14.id);
+						Protocol.outboundBuffer.ip2(InterfaceList.aClass13_12.createdComponentId);
+						Protocol.outboundBuffer.p4(InterfaceList.aClass13_12.id);
+						Protocol.outboundBuffer.ip2(aClass13_14.createdComponentId);
+					}
+				} else if ((VarpDomain.anInt2952 == 1 || MiniMenu.method4640(MiniMenu.size - 1)) && MiniMenu.size > 2) {
+					ScriptRunner.method3901();
+				} else if (MiniMenu.size > 0) {
+					MiniMenu.method1372();
+				}
+				aClass13_14 = null;
+			}
+		} else if (anInt4851 > 1) {
+			aClass13_14 = null;
+		}
+	}
 }
