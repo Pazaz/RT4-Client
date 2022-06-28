@@ -3307,7 +3307,7 @@ public class Protocol {
 				local7 = 32767;
 			}
 			@Pc(15) byte[] local15 = new byte[local7];
-			arg0.offset += WordPack.codec.method1552(0, local7, local15, arg0.data, arg0.offset);
+			arg0.offset += WordPack.codec.decode(0, local7, local15, arg0.data, arg0.offset);
 			return JagString.decodeString(local15, local7, 0);
 		} catch (@Pc(47) Exception local47) {
 			return WordPack.CABBAGE;

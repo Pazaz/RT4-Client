@@ -41,6 +41,9 @@ public class Buffer extends Node {
 	@OriginalMember(owner = "client!dc", name = "db", descriptor = "[[B")
 	public static final byte[][] allocatedMax = new byte[50][];
 
+	@OriginalMember(owner = "client!fi", name = "c", descriptor = "[I")
+	public static final int[] CRC32_TABLE = new int[256];
+
 	@OriginalMember(owner = "client!qj", name = "a", descriptor = "[J")
 	public static final long[] CRC64_TABLE = new long[256];
 
@@ -60,6 +63,18 @@ public class Buffer extends Node {
 	public int offset;
 
 	static {
+		for (@Pc(4) int i = 0; i < 256; i++) {
+			@Pc(9) int temp = i;
+			for (@Pc(11) int j = 0; j < 8; j++) {
+				if ((temp & 0x1) == 1) {
+					temp = temp >>> 1 ^ 0xEDB88320;
+				} else {
+					temp >>>= 0x1;
+				}
+			}
+			CRC32_TABLE[i] = temp;
+		}
+
 		for (@Pc(4) int local4 = 0; local4 < 256; local4++) {
 			@Pc(10) long local10 = local4;
 			for (@Pc(12) int local12 = 0; local12 < 8; local12++) {
@@ -110,7 +125,7 @@ public class Buffer extends Node {
 	public static int crc32(@OriginalArg(0) int offset, @OriginalArg(1) int size, @OriginalArg(2) byte[] src) {
 		@Pc(5) int crc = -1;
 		for (@Pc(15) int i = offset; i < size; i++) {
-			crc = crc >>> 8 ^ HuffmanCodec.crctable[(crc ^ src[i]) & 0xFF];
+			crc = crc >>> 8 ^ CRC32_TABLE[(crc ^ src[i]) & 0xFF];
 		}
 		return ~crc;
 	}
