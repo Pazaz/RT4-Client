@@ -318,9 +318,9 @@ public final class client extends GameShell {
 		if (arg0 == 25 || arg0 == 28) {
 			ClientProt.anInt5804 = 0;
 			anInt5150 = 1;
-			Static233.loadingScreenState = 0;
+			LoginManager.loadingScreenState = 0;
 			Static38.anInt1196 = 1;
-			ClientProt.mapFilesMissingCount = 0;
+			LoginManager.mapFilesMissingCount = 0;
 			WorldMap.clear(true);
 		}
 		if (arg0 == 25 || arg0 == 10) {
@@ -720,25 +720,25 @@ public final class client extends GameShell {
 		} else if (gameState == 10) {
 			Static126.method2460();
 		} else if (gameState == 25 || gameState == 28) {
-			if (Static233.loadingScreenState == 1) {
-				if (anInt5150 < ClientProt.mapFilesMissingCount) {
-					anInt5150 = ClientProt.mapFilesMissingCount;
+			if (LoginManager.loadingScreenState == 1) {
+				if (anInt5150 < LoginManager.mapFilesMissingCount) {
+					anInt5150 = LoginManager.mapFilesMissingCount;
 				}
-				local80 = (anInt5150 - ClientProt.mapFilesMissingCount) * 50 / anInt5150;
-				Static114.drawTextOnScreen(false, JagString.concatenate(new JagString[]{LocalizedText.LOADING, aClass100_974, JagString.parseInt(local80), Static87.aClass100_80}));
-			} else if (Static233.loadingScreenState == 2) {
+				local80 = (anInt5150 - LoginManager.mapFilesMissingCount) * 50 / anInt5150;
+				Fonts.drawTextOnScreen(false, JagString.concatenate(new JagString[]{LocalizedText.LOADING, aClass100_974, JagString.parseInt(local80), Static87.aClass100_80}));
+			} else if (LoginManager.loadingScreenState == 2) {
 				if (Static38.anInt1196 < ClientProt.anInt5804) {
 					Static38.anInt1196 = ClientProt.anInt5804;
 				}
 				local80 = (Static38.anInt1196 - ClientProt.anInt5804) * 50 / Static38.anInt1196 + 50;
-				Static114.drawTextOnScreen(false, JagString.concatenate(new JagString[]{LocalizedText.LOADING, aClass100_974, JagString.parseInt(local80), Static87.aClass100_80}));
+				Fonts.drawTextOnScreen(false, JagString.concatenate(new JagString[]{LocalizedText.LOADING, aClass100_974, JagString.parseInt(local80), Static87.aClass100_80}));
 			} else {
-				Static114.drawTextOnScreen(false, LocalizedText.LOADING);
+				Fonts.drawTextOnScreen(false, LocalizedText.LOADING);
 			}
 		} else if (gameState == 30) {
 			Static89.method1841();
 		} else if (gameState == 40) {
-			Static114.drawTextOnScreen(false, JagString.concatenate(new JagString[]{LocalizedText.CONLOST, Static87.aClass100_556, LocalizedText.ATTEMPT_TO_REESTABLISH}));
+			Fonts.drawTextOnScreen(false, JagString.concatenate(new JagString[]{LocalizedText.CONLOST, Static87.aClass100_556, LocalizedText.ATTEMPT_TO_REESTABLISH}));
 		}
 		if (GlRenderer.enabled && gameState != 0) {
 			GlRenderer.swapBuffers();
@@ -1546,8 +1546,8 @@ public final class client extends GameShell {
 		loop++;
 		if (loop % 1000 == 1) {
 			@Pc(24) GregorianCalendar gregorianCalendar = new GregorianCalendar();
-			Static49.gregorianDateSeed = gregorianCalendar.get(Calendar.HOUR_OF_DAY) * 600 + gregorianCalendar.get(Calendar.MINUTE) * 10 + gregorianCalendar.get(Calendar.SECOND) / 6;
-			aRandom1.setSeed(Static49.gregorianDateSeed);
+			MiniMenu.gregorianDateSeed = gregorianCalendar.get(Calendar.HOUR_OF_DAY) * 600 + gregorianCalendar.get(Calendar.MINUTE) * 10 + gregorianCalendar.get(Calendar.SECOND) / 6;
+			aRandom1.setSeed(MiniMenu.gregorianDateSeed);
 		}
 		this.js5NetworkLoop();
 		if (js5MasterIndex != null) {
@@ -1571,7 +1571,7 @@ public final class client extends GameShell {
 			this.mainLoad();
 			GameShell.resetTimer();
 		} else if (gameState == 25 || gameState == 28) {
-			ClientProt.rebuildMap();
+			LoginManager.rebuildMap();
 		}
 		if (gameState == 10) {
 			this.mainUpdate();

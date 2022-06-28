@@ -295,6 +295,7 @@ public final class Js5 {
 			try {
 				uncompressed = Js5Compression.uncompress(compressed);
 			} catch (@Pc(142) RuntimeException ex) {
+				ex.printStackTrace();
 				System.out.println("T3 - " + (key != null) + "," + group + "," + compressed.length + "," + Buffer.crc32(compressed, compressed.length) + "," + Buffer.crc32(compressed, compressed.length - 2) + "," + this.index.groupChecksums[group] + "," + this.index.checksum);
 				uncompressed = new byte[]{0};
 			}

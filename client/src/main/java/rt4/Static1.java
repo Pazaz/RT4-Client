@@ -539,7 +539,7 @@ public final class Static1 {
 	public static void method4(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {
 		if (GlRenderer.enabled) {
 			GlRaster.setClip(arg0, arg3, arg2 + arg0, arg1 + arg3);
-			GlRaster.method1186(arg0, arg3, arg2, arg1, 0);
+			GlRaster.fillRect(arg0, arg3, arg2, arg1, 0);
 		} else {
 			SoftwareRaster.setClip(arg0, arg3, arg2 + arg0, arg3 + arg1);
 			SoftwareRaster.fillRect(arg0, arg3, arg2, arg1, 0);
@@ -573,7 +573,7 @@ public final class Static1 {
 		}
 		if (GlRenderer.enabled) {
 			GlRaster.fillRectAlpha(local161, local147, local167, local153, local169, 128);
-			GlRaster.method1179(local161, local147, local167, local153, local169);
+			GlRaster.drawRect(local161, local147, local167, local153, local169);
 		} else {
 			SoftwareRaster.fillRectAlpha(local161, local147, local167, local153, local169, 128);
 			SoftwareRaster.drawRect(local161, local147, local167, local153, local169);

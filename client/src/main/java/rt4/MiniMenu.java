@@ -73,6 +73,8 @@ public class MiniMenu {
 	public static final JagString aClass100_1008 = JagString.parse("<col=00ffff>");
 	@OriginalMember(owner = "client!uf", name = "q", descriptor = "Lclient!na;")
 	public static final JagString aClass100_1042 = JagString.parse("Null");
+	@OriginalMember(owner = "client!e", name = "pc", descriptor = "[I")
+	public static final int[] anIntArray132 = new int[4];
 	@OriginalMember(owner = "client!ck", name = "D", descriptor = "Lclient!na;")
 	public static JagString aClass100_203 = null;
 	@OriginalMember(owner = "client!hn", name = "W", descriptor = "Lclient!na;")
@@ -129,6 +131,8 @@ public class MiniMenu {
 	public static boolean aBoolean302 = false;
 	@OriginalMember(owner = "client!bh", name = "t", descriptor = "I")
 	public static int clickedInventoryIndex = 0;
+	@OriginalMember(owner = "client!em", name = "D", descriptor = "I")
+	public static int gregorianDateSeed;
 
 	@OriginalMember(owner = "client!va", name = "a", descriptor = "(IZILclient!be;)V")
 	public static void addComponentEntries(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Component component) {
@@ -1543,5 +1547,24 @@ public class MiniMenu {
 		anInt5393 = arg4;
 		anInt1092 = arg5;
 		InterfaceList.redraw(local8);
+	}
+
+	@OriginalMember(owner = "client!dm", name = "a", descriptor = "(Lclient!be;III)V")
+	public static void method1207(@OriginalArg(0) Component arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
+		if (size < 2 && anInt5014 == 0 && !aBoolean302) {
+			return;
+		}
+		@Pc(24) JagString local24 = method471();
+		if (arg0 == null) {
+			@Pc(40) int local40 = Fonts.b12Full.method2859(local24, arg2 + 4, arg1 - -15, client.aRandom1, gregorianDateSeed);
+			InterfaceList.redrawScreen(arg2 + 4, Fonts.b12Full.getStringWidth(local24) + local40, arg1, 15);
+			return;
+		}
+		@Pc(59) Font local59 = arg0.method491(Sprites.nameIcons);
+		if (local59 == null) {
+			local59 = Fonts.b12Full;
+		}
+		local59.method2878(local24, arg2, arg1, arg0.width, arg0.height, arg0.color, arg0.shadowColor, arg0.anInt460, arg0.anInt478, client.aRandom1, gregorianDateSeed, anIntArray132);
+		InterfaceList.redrawScreen(anIntArray132[0], anIntArray132[2], anIntArray132[1], anIntArray132[3]);
 	}
 }

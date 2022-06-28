@@ -14,6 +14,8 @@ public class SceneGraph {
 	public static final int[] anIntArray469 = new int[]{0, -1, 0, 1};
 	@OriginalMember(owner = "client!fb", name = "q", descriptor = "[I")
 	public static final int[] anIntArray154 = new int[]{-1, -1, 1, 1};
+	@OriginalMember(owner = "client!j", name = "O", descriptor = "[I")
+	public static final int[] anIntArray565 = new int[]{1, -1, -1, 1};
 	@OriginalMember(owner = "client!kc", name = "o", descriptor = "[[[Lclient!bj;")
 	public static Tile[][][] tiles;
 
@@ -1409,7 +1411,7 @@ public class SceneGraph {
 			if (local100 instanceof Loc) {
 				((Loc) local100).method1046();
 			} else {
-				Loc.method181(type, anIntArray154[angle] * 8, angle + 4, Static114.anIntArray565[angle] * 8, 4, x, z, arg4);
+				Loc.method181(type, anIntArray154[angle] * 8, angle + 4, anIntArray565[angle] * 8, 4, x, z, arg4);
 			}
 		} else if (shape == 7) {
 			if (local100 instanceof Loc) {
@@ -1421,12 +1423,12 @@ public class SceneGraph {
 			if (local100 instanceof Loc) {
 				((Loc) local100).method1046();
 			} else {
-				Loc.method181(type, anIntArray154[angle] * 8, angle + 4, Static114.anIntArray565[angle] * 8, 4, x, z, arg4);
+				Loc.method181(type, anIntArray154[angle] * 8, angle + 4, anIntArray565[angle] * 8, 4, x, z, arg4);
 			}
 			if (local102 instanceof Loc) {
 				((Loc) local102).method1046();
 			} else {
-				Loc.method181(type, anIntArray154[angle] * 8, (angle + 2 & 0x3) + 4, Static114.anIntArray565[angle] * 8, 4, x, z, arg4);
+				Loc.method181(type, anIntArray154[angle] * 8, (angle + 2 & 0x3) + 4, anIntArray565[angle] * 8, 4, x, z, arg4);
 			}
 		} else if (shape == 11) {
 			if (local100 instanceof Loc) {
@@ -2647,13 +2649,13 @@ public class SceneGraph {
 					if (local62.anInt4430 == -1 && local62.multiLocs == null && !local62.aBoolean214) {
 						local1950 = local62.method3428(arg9 + 4, local165, local153, 4, local199, local213, arg1, null, local330, local173);
 						if (GlRenderer.enabled && local330) {
-							ShadowManager.method4211(local1950.aClass36_Sub1_3, local165 - Static114.anIntArray565[arg9] * 8, local201, local173 - anIntArray154[arg9] * 8);
+							ShadowManager.method4211(local1950.aClass36_Sub1_3, local165 - anIntArray565[arg9] * 8, local201, local173 - anIntArray154[arg9] * 8);
 						}
 						local1934 = local1950.aClass8_10;
 					} else {
 						local1934 = new Loc(arg5, 4, arg9 + 4, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
 					}
-					setWallDecor(arg2, arg7, arg8, local199, local1934, null, 256, arg9, local1226 * Static114.anIntArray565[arg9], local1226 * anIntArray154[arg9], local261);
+					setWallDecor(arg2, arg7, arg8, local199, local1934, null, 256, arg9, local1226 * anIntArray565[arg9], local1226 * anIntArray154[arg9], local261);
 				} else if (arg6 == 7) {
 					@Pc(2137) int local2137 = arg9 + 2 & 0x3;
 					if (local62.anInt4430 == -1 && local62.multiLocs == null && !local62.aBoolean214) {
@@ -2676,7 +2678,7 @@ public class SceneGraph {
 					@Pc(2289) Entity local2289;
 					if (local62.anInt4430 == -1 && local62.multiLocs == null && !local62.aBoolean214) {
 						@Pc(2297) int local2297 = anIntArray154[arg9] * 8;
-						@Pc(2303) int local2303 = Static114.anIntArray565[arg9] * 8;
+						@Pc(2303) int local2303 = anIntArray565[arg9] * 8;
 						@Pc(2319) Loc_Class139 local2319 = local62.method3428(arg9 + 4, local165, local153, 4, local199, local213, arg1, null, local330, local173);
 						if (GlRenderer.enabled && local330) {
 							ShadowManager.method4211(local2319.aClass36_Sub1_3, local165 - local2303, local201, local173 - local2297);
@@ -2691,7 +2693,7 @@ public class SceneGraph {
 						local1934 = new Loc(arg5, 4, arg9 + 4, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
 						local2289 = new Loc(arg5, 4, local2244 + 4, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
 					}
-					setWallDecor(arg2, arg7, arg8, local199, local1934, local2289, 256, arg9, local1226 * Static114.anIntArray565[arg9], anIntArray154[arg9] * local1226, local261);
+					setWallDecor(arg2, arg7, arg8, local199, local1934, local2289, 256, arg9, local1226 * anIntArray565[arg9], anIntArray154[arg9] * local1226, local261);
 				}
 			}
 		}

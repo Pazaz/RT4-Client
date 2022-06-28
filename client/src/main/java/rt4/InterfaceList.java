@@ -349,9 +349,9 @@ public class InterfaceList {
 		}
 		if (MiniMenu.size == 1) {
 			Static40.aBoolean108 = false;
-			method4012(anInt4271, anInt761, anInt5138, anInt436);
+			redrawScreen(anInt4271, anInt761, anInt5138, anInt436);
 		} else {
-			method4012(anInt4271, anInt761, anInt5138, anInt436);
+			redrawScreen(anInt4271, anInt761, anInt5138, anInt436);
 			local43 = Fonts.b12Full.getStringWidth(LocalizedText.CHOOSE_OPTION);
 			for (@Pc(75) int local75 = 0; local75 < MiniMenu.size; local75++) {
 				@Pc(88) int local88 = Fonts.b12Full.getStringWidth(MiniMenu.getOp(local75));
@@ -502,7 +502,7 @@ public class InterfaceList {
 	}
 
 	@OriginalMember(owner = "client!kf", name = "a", descriptor = "(IIBII)V")
-	public static void method4012(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
+	public static void redrawScreen(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		for (@Pc(12) int local12 = 0; local12 < rectangles; local12++) {
 			if (rectangleWidth[local12] + rectangleX[local12] > arg0 && arg1 + arg0 > rectangleX[local12] && arg2 < rectangleHeight[local12] + rectangleY[local12] && rectangleY[local12] < arg2 + arg3) {
 				aBooleanArray100[local12] = true;
