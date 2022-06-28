@@ -171,7 +171,7 @@ public final class ProjAnim extends Entity {
 	}
 
 	@OriginalMember(owner = "client!ra", name = "b", descriptor = "(IIIII)V")
-	public final void method3705(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
+	public final void setTarget(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		@Pc(17) double local17;
 		if (!this.aBoolean239) {
 			@Pc(10) double local10 = arg0 - this.anInt4817;

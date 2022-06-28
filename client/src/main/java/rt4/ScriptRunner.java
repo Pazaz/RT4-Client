@@ -908,7 +908,7 @@ public final class ScriptRunner {
 
 	@OriginalMember(owner = "client!pk", name = "i", descriptor = "(I)V")
 	public static void method3532() {
-		for (@Pc(16) ProjAnimNode local16 = (ProjAnimNode) Static217.aClass69_116.head(); local16 != null; local16 = (ProjAnimNode) Static217.aClass69_116.next()) {
+		for (@Pc(16) ProjAnimNode local16 = (ProjAnimNode) SceneGraph.projectiles.head(); local16 != null; local16 = (ProjAnimNode) SceneGraph.projectiles.next()) {
 			@Pc(21) ProjAnim local21 = local16.aClass8_Sub6_1;
 			if (Player.level != local21.anInt4810 || local21.anInt4800 < client.loop) {
 				local16.unlink();
@@ -916,7 +916,7 @@ public final class ScriptRunner {
 				if (local21.anInt4819 > 0) {
 					@Pc(54) Npc local54 = NpcList.npcs[local21.anInt4819 - 1];
 					if (local54 != null && local54.xFine >= 0 && local54.xFine < 13312 && local54.zFine >= 0 && local54.zFine < 13312) {
-						local21.method3705(local54.zFine, client.loop, SceneGraph.getTileHeight(local21.anInt4810, local54.xFine, local54.zFine) - local21.anInt4805, local54.xFine);
+						local21.setTarget(local54.zFine, client.loop, SceneGraph.getTileHeight(local21.anInt4810, local54.xFine, local54.zFine) - local21.anInt4805, local54.xFine);
 					}
 				}
 				if (local21.anInt4819 < 0) {
@@ -928,7 +928,7 @@ public final class ScriptRunner {
 						local107 = PlayerList.players[local102];
 					}
 					if (local107 != null && local107.xFine >= 0 && local107.xFine < 13312 && local107.zFine >= 0 && local107.zFine < 13312) {
-						local21.method3705(local107.zFine, client.loop, SceneGraph.getTileHeight(local21.anInt4810, local107.xFine, local107.zFine) - local21.anInt4805, local107.xFine);
+						local21.setTarget(local107.zFine, client.loop, SceneGraph.getTileHeight(local21.anInt4810, local107.xFine, local107.zFine) - local21.anInt4805, local107.xFine);
 					}
 				}
 				local21.method3704(Protocol.anInt4247);
@@ -939,7 +939,7 @@ public final class ScriptRunner {
 
 	@OriginalMember(owner = "client!u", name = "a", descriptor = "(Z)V")
 	public static void method4239() {
-		for (@Pc(9) SpotAnimNode local9 = (SpotAnimNode) LoginManager.aClass69_64.head(); local9 != null; local9 = (SpotAnimNode) LoginManager.aClass69_64.next()) {
+		for (@Pc(9) SpotAnimNode local9 = (SpotAnimNode) SceneGraph.spotanims.head(); local9 != null; local9 = (SpotAnimNode) SceneGraph.spotanims.next()) {
 			@Pc(15) SpotAnim local15 = local9.aClass8_Sub2_1;
 			if (local15.anInt606 != Player.level || local15.aBoolean41) {
 				local9.unlink();

@@ -2,26 +2,26 @@ package rt4;
 
 public class ServerProt {
 	/// map
-	public static final int UPDATE_CURRENT_LOCATION = 26;
-	public static final int CLEAR_GROUND_ITEMS = 112;
-	public static final int UPDATE_SCENE_GRAPH = 162;
-	public static final int DYNAMIC_SCENE_GRAPH = 214;
-	public static final int BATCH_LOCATION_PACKET = 230;
+	public static final int REBUILD_NORMAL = 162;
+	public static final int REBUILD_REGION = 214; // Dynamic regions
 
-	// TODO: these are the batched packets that modify projectiles, locs, etc.
-	public static final int LOCATION_PACKET_14 = 14;
-	public static final int LOCATION_PACKET_16 = 16;
-	public static final int LOCATION_PACKET_17 = 17;
-	public static final int LOCATION_PACKET_20 = 20;
-	public static final int LOCATION_PACKET_33 = 33;
-	public static final int LOCATION_PACKET_97 = 97;
-	public static final int LOCATION_PACKET_104 = 104;
-	public static final int LOCATION_PACKET_121 = 121;
-	public static final int LOCATION_PACKET_135 = 135;
-	public static final int LOCATION_PACKET_179 = 179;
-	public static final int LOCATION_PACKET_195 = 195;
-	public static final int LOCATION_PACKET_202 = 202;
-	public static final int LOCATION_PACKET_240 = 240;
+	// zone updates
+	public static final int UPDATE_ZONE_FULL_FOLLOWS = 112; // NXT naming
+	public static final int UPDATE_ZONE_PARTIAL_FOLLOWS = 26; // NXT naming
+	public static final int UPDATE_ZONE_PARTIAL_ENCLOSED = 230; // NXT naming
+	public static final int OBJ_COUNT = 14; // NXT naming
+	public static final int MAP_PROJANIM_2 = 16;
+	public static final int SPOTANIM_SPECIFIC = 17; // NXT naming
+	public static final int LOC_ANIM = 20; // NXT naming
+	public static final int OBJ_REVEAL = 33; // NXT naming
+	public static final int SOUND_AREA = 97; // NXT naming
+	public static final int MAP_PROJANIM = 104; // NXT naming
+	public static final int MAP_PROJANIM_3 = 121;
+	public static final int OBJ_ADD = 135; // NXT naming
+	public static final int LOC_ADD = 179; // NXT naming
+	public static final int LOC_DEL = 195; // NXT naming
+	public static final int LOC_ADD_CHANGE = 202; // NXT naming
+	public static final int OBJ_DEL = 240; // NXT naming
 
 	/// updates
 	public static final int NPC_INFO = 32; // NXT naming
@@ -85,7 +85,7 @@ public class ServerProt {
 	public static final int GENERATE_CHAT_HEAD_FROM_BODY = 111;
 
 	/// inventory
-	public static final int INTERFACE_ITEMS_CLEAR = 144;
+	public static final int UPDATE_INV_CLEAR = 144;
 	public static final int UPDATE_INV_PARTIAL = 22; // NXT naming
 	public static final int UPDATE_INV_FULL = 105; // NXT naming
 
@@ -103,7 +103,7 @@ public class ServerProt {
 	public static final int URL_OPEN = 42; // NXT naming
 	public static final int CAM_RESET = 24; // NXT naming
 	public static final int CAM_SHAKE = 27; // NXT naming
-	public static final int SPOTANIM_SPECIFIC = 56; // NXT naming
+	public static final int SPOTANIM_ENTITY = 56;
 	public static final int NPC_ANIM_SPECIFIC = 102; // NXT naming
 	public static final int CAM_LOOKAT = 125; // NXT naming
 	public static final int RESET_ANIMS = 131; // NXT naming

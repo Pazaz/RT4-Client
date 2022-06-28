@@ -561,8 +561,8 @@ public final class client extends GameShell {
 			NpcList.npcs[local3506] = null;
 		}
 		PlayerList.self = PlayerList.players[2047] = new Player();
-		Static217.aClass69_116.clear();
-		LoginManager.aClass69_64.clear();
+		SceneGraph.projectiles.clear();
+		SceneGraph.spotanims.clear();
 		if (SceneGraph.objStacks != null) {
 			for (local3506 = 0; local3506 < 4; local3506++) {
 				for (@Pc(3663) int local3663 = 0; local3663 < 104; local3663++) {

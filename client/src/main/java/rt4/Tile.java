@@ -50,7 +50,7 @@ public final class Tile extends Node {
 	public int anInt670;
 
 	@OriginalMember(owner = "client!bj", name = "X", descriptor = "Lclient!jj;")
-	public ObjStackEntity aClass79_1;
+	public ObjStackEntity objStack;
 
 	@OriginalMember(owner = "client!bj", name = "D", descriptor = "I")
 	public int allInteriorFlags = 0;
