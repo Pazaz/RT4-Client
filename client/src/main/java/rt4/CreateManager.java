@@ -8,14 +8,19 @@ import java.io.IOException;
 import java.net.Socket;
 
 public class CreateManager {
+
 	@OriginalMember(owner = "client!oe", name = "l", descriptor = "I")
 	public static int step = 0;
+
 	@OriginalMember(owner = "client!sf", name = "a", descriptor = "I")
 	public static int loops = 0;
+
 	@OriginalMember(owner = "client!eg", name = "v", descriptor = "I")
 	public static int errors = 0;
+
 	@OriginalMember(owner = "client!sc", name = "y", descriptor = "I")
 	public static int reply = -2;
+
 	@OriginalMember(owner = "client!si", name = "S", descriptor = "[Lclient!na;")
 	public static JagString[] suggestedNames;
 
@@ -101,9 +106,8 @@ public class CreateManager {
 				step = 0;
 				Protocol.socket.close();
 				Protocol.socket = null;
-				return;
 			}
-		} catch (@Pc(238) IOException local238) {
+		} catch (@Pc(238) IOException ignored) {
 			if (Protocol.socket != null) {
 				Protocol.socket.close();
 				Protocol.socket = null;
@@ -125,7 +129,7 @@ public class CreateManager {
 	}
 
 	@OriginalMember(owner = "client!gd", name = "a", descriptor = "(JI)V")
-	public static void method1691(@OriginalArg(0) long name) {
+	public static void checkName(@OriginalArg(0) long name) {
 		Protocol.outboundBuffer.offset = 0;
 		Protocol.outboundBuffer.p1(186);
 		if (GlobalConfig.LOGIN_USE_STRINGS) {
@@ -140,13 +144,13 @@ public class CreateManager {
 	}
 
 	@OriginalMember(owner = "client!jl", name = "a", descriptor = "(IIIII)V")
-	public static void method2448(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	public static void checkInfo(@OriginalArg(0) int year, @OriginalArg(1) int country, @OriginalArg(2) int day, @OriginalArg(3) int month) {
 		Protocol.outboundBuffer.offset = 0;
 		Protocol.outboundBuffer.p1(147);
-		Protocol.outboundBuffer.p1(arg2);
-		Protocol.outboundBuffer.p1(arg3);
-		Protocol.outboundBuffer.p2(arg0);
-		Protocol.outboundBuffer.p2(arg1);
+		Protocol.outboundBuffer.p1(day);
+		Protocol.outboundBuffer.p1(month);
+		Protocol.outboundBuffer.p2(year);
+		Protocol.outboundBuffer.p2(country);
 		loops = 0;
 		errors = 0;
 		step = 1;
@@ -154,31 +158,31 @@ public class CreateManager {
 	}
 
 	@OriginalMember(owner = "client!da", name = "a", descriptor = "(IIIILclient!na;JI)V")
-	public static void method1016(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) JagString password, @OriginalArg(5) long name, @OriginalArg(6) int arg5) {
-		@Pc(8) Buffer local8 = new Buffer(GlobalConfig.LOGIN_USE_STRINGS ? 129 : 128);
-		local8.p1(10);
-		local8.p2((int) (Math.random() * 99999.0D));
-		local8.p2(530);
+	public static void createAccount(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) JagString password, @OriginalArg(5) long name, @OriginalArg(6) int arg5) {
+		@Pc(8) Buffer buffer = new Buffer(GlobalConfig.LOGIN_USE_STRINGS ? 129 : 128);
+		buffer.p1(10);
+		buffer.p2((int) (Math.random() * 99999.0D));
+		buffer.p2(530);
 		if (GlobalConfig.LOGIN_USE_STRINGS) {
-			local8.pjstr(Base37.decode37(name));
+			buffer.pjstr(Base37.decode37(name));
 		} else {
-			local8.p8(name);
+			buffer.p8(name);
 		}
-		local8.p4((int) (Math.random() * 9.9999999E7D));
-		local8.pjstr(password);
-		local8.p4((int) (Math.random() * 9.9999999E7D));
-		local8.p2(client.affiliate);
-		local8.p1(arg0);
-		local8.p1(arg2);
-		local8.p4((int) (Math.random() * 9.9999999E7D));
-		local8.p2(arg5);
-		local8.p2(arg1);
-		local8.p4((int) (Math.random() * 9.9999999E7D));
-		local8.rsaenc(GlobalConfig.RSA_EXPONENT, GlobalConfig.RSA_MODULUS);
+		buffer.p4((int) (Math.random() * 9.9999999E7D));
+		buffer.pjstr(password);
+		buffer.p4((int) (Math.random() * 9.9999999E7D));
+		buffer.p2(client.affiliate);
+		buffer.p1(arg0);
+		buffer.p1(arg2);
+		buffer.p4((int) (Math.random() * 9.9999999E7D));
+		buffer.p2(arg5);
+		buffer.p2(arg1);
+		buffer.p4((int) (Math.random() * 9.9999999E7D));
+		buffer.rsaenc(GlobalConfig.RSA_EXPONENT, GlobalConfig.RSA_MODULUS);
 		Protocol.outboundBuffer.offset = 0;
 		Protocol.outboundBuffer.p1(36);
-		Protocol.outboundBuffer.p1(local8.offset);
-		Protocol.outboundBuffer.pdata(local8.data, local8.offset);
+		Protocol.outboundBuffer.p1(buffer.offset);
+		Protocol.outboundBuffer.pdata(buffer.data, buffer.offset);
 		reply = -3;
 		step = 1;
 		loops = 0;

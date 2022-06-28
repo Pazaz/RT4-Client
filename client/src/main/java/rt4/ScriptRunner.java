@@ -4927,14 +4927,14 @@ public final class ScriptRunner {
 													if (opcode == 5603) {
 														isp -= 4;
 														if (client.gameState == 10 && LoginManager.anInt4937 == 0 && LoginManager.step == 0 && CreateManager.step == 0 && WorldList.step == 0) {
-															CreateManager.method2448(intStack[isp + 2], intStack[isp + 3], intStack[isp], intStack[isp + 1]);
+															CreateManager.checkInfo(intStack[isp + 2], intStack[isp + 3], intStack[isp], intStack[isp + 1]);
 														}
 														continue;
 													}
 													if (opcode == Cs2Opcodes.sendRequestAccount) {
 														ssp--;
 														if (client.gameState == 10 && LoginManager.anInt4937 == 0 && LoginManager.step == 0 && CreateManager.step == 0 && WorldList.step == 0) {
-															CreateManager.method1691(stringStack[ssp].encode37());
+															CreateManager.checkName(stringStack[ssp].encode37());
 														}
 														continue;
 													}
@@ -4942,7 +4942,7 @@ public final class ScriptRunner {
 														isp -= 4;
 														ssp -= 2;
 														if (client.gameState == 10 && LoginManager.anInt4937 == 0 && LoginManager.step == 0 && CreateManager.step == 0 && WorldList.step == 0) {
-															CreateManager.method1016(intStack[isp], intStack[isp + 3], intStack[isp + 1], stringStack[ssp + 1], stringStack[ssp].encode37(), intStack[isp + 2]);
+															CreateManager.createAccount(intStack[isp], intStack[isp + 3], intStack[isp + 1], stringStack[ssp + 1], stringStack[ssp].encode37(), intStack[isp + 2]);
 														}
 														continue;
 													}
