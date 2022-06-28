@@ -5,22 +5,22 @@ import org.openrs2.deob.annotation.Pc;
 
 public class Equipment {
 	@OriginalMember(owner = "client!ta", name = "p", descriptor = "[I")
-	public static int[] anIntArray455;
+	public static int[] objIds;
 
 	@OriginalMember(owner = "client!eh", name = "a", descriptor = "(I)V")
 	public static void init() {
-		@Pc(8) int[] local8 = new int[ObjTypeList.anInt3245];
-		@Pc(10) int local10 = 0;
-		@Pc(12) int local12;
-		for (local12 = 0; local12 < ObjTypeList.anInt3245; local12++) {
-			@Pc(19) ObjType local19 = ObjTypeList.get(local12);
-			if (local19.manwear >= 0 || local19.womanwear >= 0) {
-				local8[local10++] = local12;
+		@Pc(8) int[] ids = new int[ObjTypeList.capacity];
+		@Pc(10) int j = 0;
+		@Pc(12) int i;
+		for (i = 0; i < ObjTypeList.capacity; i++) {
+			@Pc(19) ObjType type = ObjTypeList.get(i);
+			if (type.manwear >= 0 || type.womanwear >= 0) {
+				ids[j++] = i;
 			}
 		}
-		anIntArray455 = new int[local10];
-		for (local12 = 0; local12 < local10; local12++) {
-			anIntArray455[local12] = local8[local12];
+		objIds = new int[j];
+		for (i = 0; i < j; i++) {
+			objIds[i] = ids[i];
 		}
 	}
 }
