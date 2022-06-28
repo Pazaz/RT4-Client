@@ -368,7 +368,7 @@ public final class ScriptRunner {
 			} else {
 				local17 = NpcList.npcs[NpcList.ids[local5 - PlayerList.size]];
 			}
-			if (local17 != null && local17.method2682()) {
+			if (local17 != null && local17.isVisible()) {
 				@Pc(58) NpcType local58;
 				if (local17 instanceof Npc) {
 					local58 = ((Npc) local17).type;
@@ -500,7 +500,7 @@ public final class ScriptRunner {
 					}
 				}
 				for (local74 = 0; local74 < 4; local74++) {
-					if (local17.anIntArray319[local74] > client.loop) {
+					if (local17.hitVisibleUntil[local74] > client.loop) {
 						if (local17 instanceof Npc) {
 							@Pc(725) Npc local725 = (Npc) local17;
 							@Pc(728) NpcType local728 = local725.type;
@@ -525,8 +525,8 @@ public final class ScriptRunner {
 								anInt548 -= 10;
 								anInt1951 += 15;
 							}
-							Sprites.hitmarks[local17.anIntArray321[local74]].render(arg2 + anInt1951 - 12, arg0 + anInt548 - 12);
-							Fonts.p11Full.renderCenter(JagString.parseInt(local17.anIntArray322[local74]), anInt1951 + arg2 - 1, anInt548 + 3 + arg0, 16777215, 0);
+							Sprites.hitmarks[local17.hitTypes[local74]].render(arg2 + anInt1951 - 12, arg0 + anInt548 - 12);
+							Fonts.p11Full.renderCenter(JagString.parseInt(local17.hitDamages[local74]), anInt1951 + arg2 - 1, anInt548 + 3 + arg0, 16777215, 0);
 						}
 					}
 				}
@@ -678,7 +678,7 @@ public final class ScriptRunner {
 			} else {
 				local39 = PlayerList.players[PlayerList.ids[local28]];
 			}
-			if (local39 != null && local39.method2682()) {
+			if (local39 != null && local39.isVisible()) {
 				@Pc(55) int local55 = local39.getSize();
 				@Pc(77) int local77;
 				if (local55 == 1) {
@@ -724,7 +724,7 @@ public final class ScriptRunner {
 				local39 = PlayerList.players[PlayerList.ids[local28]];
 				local272 = (long) PlayerList.ids[local28] << 32;
 			}
-			if (local39 != null && local39.method2682()) {
+			if (local39 != null && local39.isVisible()) {
 				local39.aBoolean98 = (Preferences.manyIdleAnimations && PlayerList.size > 200 || PlayerList.size > 50) && !arg0 && local39.movementSeqId == local39.getBasType().idleAnimationId;
 				local82 = local39.getSize();
 				if (local82 == 1) {
@@ -804,7 +804,7 @@ public final class ScriptRunner {
 		@Pc(171) int local171;
 		for (local7 = 0; local7 < NpcList.size; local7++) {
 			local16 = NpcList.npcs[NpcList.ids[local7]];
-			if (local16 != null && local16.method2682() && local16.type.aBoolean182 == arg0 && local16.type.isMultiNpcValid()) {
+			if (local16 != null && local16.isVisible() && local16.type.aBoolean182 == arg0 && local16.type.isMultiNpcValid()) {
 				@Pc(42) int local42 = local16.getSize();
 				@Pc(97) int local97;
 				if (local42 == 1) {
@@ -844,7 +844,7 @@ public final class ScriptRunner {
 		for (local7 = 0; local7 < NpcList.size; local7++) {
 			local16 = NpcList.npcs[NpcList.ids[local7]];
 			@Pc(262) long local262 = (long) NpcList.ids[local7] << 32 | 0x20000000L;
-			if (local16 != null && local16.method2682() && local16.type.aBoolean182 == arg0 && local16.type.isMultiNpcValid()) {
+			if (local16 != null && local16.isVisible() && local16.type.aBoolean182 == arg0 && local16.type.isMultiNpcValid()) {
 				local107 = local16.getSize();
 				if (local107 == 1) {
 					if ((local16.xFine & 0x7F) == 64 && (local16.zFine & 0x7F) == 64) {

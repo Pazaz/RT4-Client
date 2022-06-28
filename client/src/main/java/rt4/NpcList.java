@@ -477,140 +477,141 @@ public class NpcList {
 	}
 
 	@OriginalMember(owner = "client!ck", name = "a", descriptor = "(Lclient!fe;I)V")
-	public static void method879(@OriginalArg(0) PathingEntity arg0) {
-		arg0.aBoolean171 = false;
+	public static void method879(@OriginalArg(0) PathingEntity entity) {
+		entity.aBoolean171 = false;
 		@Pc(18) SeqType local18;
-		if (arg0.movementSeqId != -1) {
-			local18 = SeqTypeList.get(arg0.movementSeqId);
+		if (entity.movementSeqId != -1) {
+			local18 = SeqTypeList.get(entity.movementSeqId);
 			if (local18 == null || local18.frames == null) {
-				arg0.movementSeqId = -1;
+				entity.movementSeqId = -1;
 			} else {
-				arg0.anInt3396++;
-				if (local18.frames.length > arg0.anInt3407 && arg0.anInt3396 > local18.anIntArray474[arg0.anInt3407]) {
-					arg0.anInt3396 = 1;
-					arg0.anInt3407++;
-					arg0.anInt3388++;
-					SoundPlayer.playSeqSound(arg0.zFine, local18, arg0.xFine, arg0 == PlayerList.self, arg0.anInt3407);
+				entity.anInt3396++;
+				if (local18.frames.length > entity.anInt3407 && entity.anInt3396 > local18.anIntArray474[entity.anInt3407]) {
+					entity.anInt3396 = 1;
+					entity.anInt3407++;
+					entity.anInt3388++;
+					SoundPlayer.playSeqSound(entity.zFine, local18, entity.xFine, entity == PlayerList.self, entity.anInt3407);
 				}
-				if (arg0.anInt3407 >= local18.frames.length) {
-					arg0.anInt3407 = 0;
-					arg0.anInt3396 = 0;
-					SoundPlayer.playSeqSound(arg0.zFine, local18, arg0.xFine, PlayerList.self == arg0, arg0.anInt3407);
+				if (entity.anInt3407 >= local18.frames.length) {
+					entity.anInt3407 = 0;
+					entity.anInt3396 = 0;
+					SoundPlayer.playSeqSound(entity.zFine, local18, entity.xFine, PlayerList.self == entity, entity.anInt3407);
 				}
-				arg0.anInt3388 = arg0.anInt3407 + 1;
-				if (arg0.anInt3388 >= local18.frames.length) {
-					arg0.anInt3388 = 0;
+				entity.anInt3388 = entity.anInt3407 + 1;
+				if (entity.anInt3388 >= local18.frames.length) {
+					entity.anInt3388 = 0;
 				}
 			}
 		}
 		@Pc(156) int local156;
-		if (arg0.spotAnimId != -1 && client.loop >= arg0.spotAnimStart) {
-			local156 = SpotAnimTypeList.get(arg0.spotAnimId).seqId;
+		if (entity.spotAnimId != -1 && client.loop >= entity.spotAnimStart) {
+			local156 = SpotAnimTypeList.get(entity.spotAnimId).seqId;
 			if (local156 == -1) {
-				arg0.spotAnimId = -1;
+				entity.spotAnimId = -1;
 			} else {
 				@Pc(165) SeqType local165 = SeqTypeList.get(local156);
 				if (local165 == null || local165.frames == null) {
-					arg0.spotAnimId = -1;
+					entity.spotAnimId = -1;
 				} else {
-					if (arg0.anInt3399 < 0) {
-						arg0.anInt3399 = 0;
-						SoundPlayer.playSeqSound(arg0.zFine, local165, arg0.xFine, PlayerList.self == arg0, 0);
+					if (entity.anInt3399 < 0) {
+						entity.anInt3399 = 0;
+						SoundPlayer.playSeqSound(entity.zFine, local165, entity.xFine, PlayerList.self == entity, 0);
 					}
-					arg0.anInt3361++;
-					if (arg0.anInt3399 < local165.frames.length && local165.anIntArray474[arg0.anInt3399] < arg0.anInt3361) {
-						arg0.anInt3399++;
-						arg0.anInt3361 = 1;
-						SoundPlayer.playSeqSound(arg0.zFine, local165, arg0.xFine, PlayerList.self == arg0, arg0.anInt3399);
+					entity.anInt3361++;
+					if (entity.anInt3399 < local165.frames.length && local165.anIntArray474[entity.anInt3399] < entity.anInt3361) {
+						entity.anInt3399++;
+						entity.anInt3361 = 1;
+						SoundPlayer.playSeqSound(entity.zFine, local165, entity.xFine, PlayerList.self == entity, entity.anInt3399);
 					}
-					if (arg0.anInt3399 >= local165.frames.length) {
-						arg0.spotAnimId = -1;
+					if (entity.anInt3399 >= local165.frames.length) {
+						entity.spotAnimId = -1;
 					}
-					arg0.anInt3418 = arg0.anInt3399 + 1;
-					if (local165.frames.length <= arg0.anInt3418) {
-						arg0.anInt3418 = -1;
+					entity.anInt3418 = entity.anInt3399 + 1;
+					if (local165.frames.length <= entity.anInt3418) {
+						entity.anInt3418 = -1;
 					}
 				}
 			}
 		}
-		if (arg0.seqId != -1 && arg0.anInt3420 <= 1) {
-			local18 = SeqTypeList.get(arg0.seqId);
-			if (local18.anInt5363 == 1 && arg0.anInt3405 > 0 && client.loop >= arg0.anInt3395 && client.loop > arg0.anInt3386) {
-				arg0.anInt3420 = 1;
+		if (entity.seqId != -1 && entity.anInt3420 <= 1) {
+			local18 = SeqTypeList.get(entity.seqId);
+			if (local18.anInt5363 == 1 && entity.anInt3405 > 0 && client.loop >= entity.anInt3395 && client.loop > entity.anInt3386) {
+				entity.anInt3420 = 1;
 				return;
 			}
 		}
-		if (arg0.seqId != -1 && arg0.anInt3420 == 0) {
-			local18 = SeqTypeList.get(arg0.seqId);
+		if (entity.seqId != -1 && entity.anInt3420 == 0) {
+			local18 = SeqTypeList.get(entity.seqId);
 			if (local18 == null || local18.frames == null) {
-				arg0.seqId = -1;
+				entity.seqId = -1;
 			} else {
-				arg0.anInt3360++;
-				if (arg0.anInt3425 < local18.frames.length && arg0.anInt3360 > local18.anIntArray474[arg0.anInt3425]) {
-					arg0.anInt3360 = 1;
-					arg0.anInt3425++;
-					SoundPlayer.playSeqSound(arg0.zFine, local18, arg0.xFine, arg0 == PlayerList.self, arg0.anInt3425);
+				entity.anInt3360++;
+				if (entity.anInt3425 < local18.frames.length && entity.anInt3360 > local18.anIntArray474[entity.anInt3425]) {
+					entity.anInt3360 = 1;
+					entity.anInt3425++;
+					SoundPlayer.playSeqSound(entity.zFine, local18, entity.xFine, entity == PlayerList.self, entity.anInt3425);
 				}
-				if (local18.frames.length <= arg0.anInt3425) {
-					arg0.anInt3425 -= local18.anInt5362;
-					arg0.anInt3371++;
-					if (arg0.anInt3371 >= local18.anInt5357) {
-						arg0.seqId = -1;
-					} else if (arg0.anInt3425 >= 0 && local18.frames.length > arg0.anInt3425) {
-						SoundPlayer.playSeqSound(arg0.zFine, local18, arg0.xFine, PlayerList.self == arg0, arg0.anInt3425);
+				if (local18.frames.length <= entity.anInt3425) {
+					entity.anInt3425 -= local18.anInt5362;
+					entity.anInt3371++;
+					if (entity.anInt3371 >= local18.anInt5357) {
+						entity.seqId = -1;
+					} else if (entity.anInt3425 >= 0 && local18.frames.length > entity.anInt3425) {
+						SoundPlayer.playSeqSound(entity.zFine, local18, entity.xFine, PlayerList.self == entity, entity.anInt3425);
 					} else {
-						arg0.seqId = -1;
+						entity.seqId = -1;
 					}
 				}
-				arg0.anInt3373 = arg0.anInt3425 + 1;
-				if (arg0.anInt3373 >= local18.frames.length) {
-					arg0.anInt3373 -= local18.anInt5362;
-					if (local18.anInt5357 <= arg0.anInt3371 + 1) {
-						arg0.anInt3373 = -1;
-					} else if (arg0.anInt3373 < 0 || arg0.anInt3373 >= local18.frames.length) {
-						arg0.anInt3373 = -1;
+				entity.anInt3373 = entity.anInt3425 + 1;
+				if (entity.anInt3373 >= local18.frames.length) {
+					entity.anInt3373 -= local18.anInt5362;
+					if (local18.anInt5357 <= entity.anInt3371 + 1) {
+						entity.anInt3373 = -1;
+					} else if (entity.anInt3373 < 0 || entity.anInt3373 >= local18.frames.length) {
+						entity.anInt3373 = -1;
 					}
 				}
-				arg0.aBoolean171 = local18.aBoolean279;
+				entity.aBoolean171 = local18.aBoolean279;
 			}
 		}
-		if (arg0.anInt3420 > 0) {
-			arg0.anInt3420--;
+		if (entity.anInt3420 > 0) {
+			entity.anInt3420--;
 		}
-		for (local156 = 0; local156 < arg0.aClass147Array3.length; local156++) {
-			@Pc(545) Npc_Class147 local545 = arg0.aClass147Array3[local156];
-			if (local545 != null) {
-				if (local545.anInt5408 > 0) {
-					local545.anInt5408--;
+
+		for (local156 = 0; local156 < entity.aClass147Array3.length; local156++) {
+			@Pc(545) PathingEntity_Class147 c147 = entity.aClass147Array3[local156];
+			if (c147 != null) {
+				if (c147.anInt5408 > 0) {
+					c147.anInt5408--;
 				} else {
-					@Pc(570) SeqType local570 = SeqTypeList.get(local545.anInt5396);
+					@Pc(570) SeqType local570 = SeqTypeList.get(c147.anInt5396);
 					if (local570 == null || local570.frames == null) {
-						arg0.aClass147Array3[local156] = null;
+						entity.aClass147Array3[local156] = null;
 					} else {
-						local545.anInt5404++;
-						if (local545.anInt5399 < local570.frames.length && local545.anInt5404 > local570.anIntArray474[local545.anInt5399]) {
-							local545.anInt5399++;
-							local545.anInt5404 = 1;
-							SoundPlayer.playSeqSound(arg0.zFine, local570, arg0.xFine, arg0 == PlayerList.self, local545.anInt5399);
+						c147.anInt5404++;
+						if (c147.anInt5399 < local570.frames.length && c147.anInt5404 > local570.anIntArray474[c147.anInt5399]) {
+							c147.anInt5399++;
+							c147.anInt5404 = 1;
+							SoundPlayer.playSeqSound(entity.zFine, local570, entity.xFine, entity == PlayerList.self, c147.anInt5399);
 						}
-						if (local570.frames.length <= local545.anInt5399) {
-							local545.anInt5400++;
-							local545.anInt5399 -= local570.anInt5362;
-							if (local570.anInt5357 <= local545.anInt5400) {
-								arg0.aClass147Array3[local156] = null;
-							} else if (local545.anInt5399 >= 0 && local545.anInt5399 < local570.frames.length) {
-								SoundPlayer.playSeqSound(arg0.zFine, local570, arg0.xFine, PlayerList.self == arg0, local545.anInt5399);
+						if (local570.frames.length <= c147.anInt5399) {
+							c147.anInt5400++;
+							c147.anInt5399 -= local570.anInt5362;
+							if (local570.anInt5357 <= c147.anInt5400) {
+								entity.aClass147Array3[local156] = null;
+							} else if (c147.anInt5399 >= 0 && c147.anInt5399 < local570.frames.length) {
+								SoundPlayer.playSeqSound(entity.zFine, local570, entity.xFine, PlayerList.self == entity, c147.anInt5399);
 							} else {
-								arg0.aClass147Array3[local156] = null;
+								entity.aClass147Array3[local156] = null;
 							}
 						}
-						local545.anInt5398 = local545.anInt5399 + 1;
-						if (local570.frames.length <= local545.anInt5398) {
-							local545.anInt5398 -= local570.anInt5362;
-							if (local545.anInt5400 + 1 >= local570.anInt5357) {
-								local545.anInt5398 = -1;
-							} else if (local545.anInt5398 < 0 || local570.frames.length <= local545.anInt5398) {
-								local545.anInt5398 = -1;
+						c147.anInt5398 = c147.anInt5399 + 1;
+						if (local570.frames.length <= c147.anInt5398) {
+							c147.anInt5398 -= local570.anInt5362;
+							if (c147.anInt5400 + 1 >= local570.anInt5357) {
+								c147.anInt5398 = -1;
+							} else if (c147.anInt5398 < 0 || local570.frames.length <= c147.anInt5398) {
+								c147.anInt5398 = -1;
 							}
 						}
 					}

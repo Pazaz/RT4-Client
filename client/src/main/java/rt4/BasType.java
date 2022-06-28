@@ -8,6 +8,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!ck")
 public final class BasType {
 
+	@OriginalMember(owner = "client!ac", name = "l", descriptor = "Lclient!ck;")
+	public static final BasType DEFAULT = new BasType();
+
 	@OriginalMember(owner = "client!ck", name = "g", descriptor = "[[I")
 	public int[][] modelRotateTranslate;
 

@@ -40,7 +40,7 @@ public final class Npc extends PathingEntity {
 	@OriginalMember(owner = "client!km", name = "b", descriptor = "()I")
 	@Override
 	public final int getMinY() {
-		return this.anInt3413;
+		return this.minY;
 	}
 
 	@OriginalMember(owner = "client!km", name = "a", descriptor = "(IIIIIIIIJILclient!ga;)V")
@@ -57,7 +57,7 @@ public final class Npc extends PathingEntity {
 			return;
 		}
 
-		this.anInt3413 = body.getMinY();
+		this.minY = body.getMinY();
 		@Pc(84) NpcType local84 = this.type;
 		if (local84.multiNpcs != null) {
 			local84 = local84.getMultiNpc();
@@ -71,11 +71,11 @@ public final class Npc extends PathingEntity {
 				@Pc(146) float local146 = GlRenderer.method4166();
 				GlRenderer.disableDepthMask();
 				GlRenderer.method4152(local144, local146 - 150.0F);
-				model.render(0, arg1, arg2, arg3, arg4, x, z, y, -1L, arg9, this.aClass47_Sub1_5);
+				model.render(0, arg1, arg2, arg3, arg4, x, z, y, -1L, arg9, this.particleSystem);
 				GlRenderer.enableDepthMask();
 				GlRenderer.method4152(local144, local146);
 			} else {
-				model.render(0, arg1, arg2, arg3, arg4, x, z, y, -1L, arg9, this.aClass47_Sub1_5);
+				model.render(0, arg1, arg2, arg3, arg4, x, z, y, -1L, arg9, this.particleSystem);
 			}
 		}
 
@@ -112,7 +112,7 @@ public final class Npc extends PathingEntity {
 				body.aBoolean303 = true;
 			}
 
-			body.render(orientation, arg1, arg2, arg3, arg4, x, z, y, key, arg9, this.aClass47_Sub1_5);
+			body.render(orientation, arg1, arg2, arg3, arg4, x, z, y, key, arg9, this.particleSystem);
 			return;
 		}
 
@@ -120,19 +120,19 @@ public final class Npc extends PathingEntity {
 			body.aBoolean303 = true;
 		}
 
-		body.render(orientation, arg1, arg2, arg3, arg4, x, z, y, key, arg9, this.aClass47_Sub1_5);
+		body.render(orientation, arg1, arg2, arg3, arg4, x, z, y, key, arg9, this.particleSystem);
 		if (model != null) {
 			if (this.type.size == 1) {
 				model.aBoolean303 = true;
 			}
 
-			model.render(orientation, arg1, arg2, arg3, arg4, x, z, y, key, arg9, this.aClass47_Sub1_5);
+			model.render(orientation, arg1, arg2, arg3, arg4, x, z, y, key, arg9, this.particleSystem);
 		}
 	}
 
 	@OriginalMember(owner = "client!km", name = "b", descriptor = "(I)I")
 	@Override
-	protected final int method2688() {
+	protected final int getBasId() {
 		if (client.game != 0 && this.type.multiNpcs != null) {
 			@Pc(17) NpcType local17 = this.type.getMultiNpc();
 			if (local17 != null && local17.basId != -1) {
@@ -151,15 +151,15 @@ public final class Npc extends PathingEntity {
 
 	@OriginalMember(owner = "client!km", name = "a", descriptor = "(B)Z")
 	@Override
-	public final boolean method2682() {
+	public final boolean isVisible() {
 		return this.type != null;
 	}
 
 	@OriginalMember(owner = "client!km", name = "a", descriptor = "(ILclient!me;)V")
 	public final void setNpcType(@OriginalArg(1) NpcType arg0) {
 		this.type = arg0;
-		if (this.aClass47_Sub1_5 != null) {
-			this.aClass47_Sub1_5.method1646();
+		if (this.particleSystem != null) {
+			this.particleSystem.method1646();
 		}
 	}
 }
