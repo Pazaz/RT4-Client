@@ -23,7 +23,7 @@ public final class Static36 {
 
 	@OriginalMember(owner = "client!client", name = "a", descriptor = "(Lclient!be;)Lclient!be;")
 	public static Component method938(@OriginalArg(0) Component arg0) {
-		@Pc(4) int local4 = InterfaceList.getServerActiveProperties(arg0).method505();
+		@Pc(4) int local4 = InterfaceList.getServerActiveProperties(arg0).getDragDepth();
 		if (local4 == 0) {
 			return null;
 		}

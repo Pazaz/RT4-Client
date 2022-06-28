@@ -204,7 +204,7 @@ public class MiniMenu {
 										}
 									}
 								}
-								if (local267.method507()) {
+								if (local267.isObjUseEnabled()) {
 									add(MiniMap.anInt4075, local276.id, JagString.concatenate(new JagString[]{aClass100_32, local276.name}), local171, (short) 22, LocalizedText.USE, component.id);
 								}
 								if (local267.isObjOpsEnabled() && local296 != null) {
@@ -279,10 +279,10 @@ public class MiniMenu {
 					add(getOpCursor(local173, component), local173 + 1, component.optionBase, component.createdComponentId, (short) 9, local828, component.id);
 				}
 			}
-			if (InterfaceList.getServerActiveProperties(component).method506()) {
+			if (InterfaceList.getServerActiveProperties(component).isResumePauseButtonEnabled()) {
 				add(-1, 0L, JagString.EMPTY, component.createdComponentId, (short) 41, LocalizedText.CONTINUE, component.id);
 			}
-		} else if (InterfaceList.getServerActiveProperties(component).method508() && (anInt4999 & 0x20) != 0) {
+		} else if (InterfaceList.getServerActiveProperties(component).isUseTarget() && (anInt4999 & 0x20) != 0) {
 			add(anInt5393, 0L, JagString.concatenate(new JagString[]{aClass100_466, aClass100_408, component.optionBase}), component.createdComponentId, (short) 12, aClass100_545, component.id);
 		}
 	}
@@ -677,7 +677,7 @@ public class MiniMenu {
 			if (local693 != null) {
 				method1294();
 				@Pc(1493) ServerActiveProperties local1493 = InterfaceList.getServerActiveProperties(local693);
-				method4246(local19, local15, local1493.getTargetMask(), local1493.anInt540, local693.anInt499, local693.anInt484);
+				method4246(local19, local15, local1493.getTargetMask(), local1493.targetParam, local693.anInt499, local693.anInt484);
 				anInt5014 = 0;
 				aClass100_545 = MiniMap.getTargetVerb(local693);
 				if (aClass100_545 == null) {
@@ -1472,7 +1472,7 @@ public class MiniMenu {
 
 	@OriginalMember(owner = "client!aj", name = "a", descriptor = "(BILclient!be;)I")
 	public static int getOpCursor(@OriginalArg(1) int arg0, @OriginalArg(2) Component arg1) {
-		if (!InterfaceList.getServerActiveProperties(arg1).method503(arg0) && arg1.onOptionClick == null) {
+		if (!InterfaceList.getServerActiveProperties(arg1).isButtonEnabled(arg0) && arg1.onOptionClick == null) {
 			return -1;
 		} else if (arg1.anIntArray39 == null || arg0 >= arg1.anIntArray39.length) {
 			return -1;
