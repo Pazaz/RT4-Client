@@ -6,9 +6,9 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static38 {
 
-    @OriginalMember(owner = "client!di", name = "q", descriptor = "[Lclient!na;")
-    public static final JagString[] aClass100Array53 = new JagString[5];
-    @OriginalMember(owner = "client!cn", name = "B", descriptor = "I")
+	@OriginalMember(owner = "client!di", name = "q", descriptor = "[Lclient!na;")
+	public static final JagString[] aClass100Array53 = new JagString[5];
+	@OriginalMember(owner = "client!cn", name = "B", descriptor = "I")
 	public static int anInt1196 = 1;
 
 	@OriginalMember(owner = "client!cn", name = "L", descriptor = "I")
@@ -88,7 +88,7 @@ public final class Static38 {
 		}
 	}
 
-    @OriginalMember(owner = "client!cn", name = "a", descriptor = "(IIIIIIIIII)V")
+	@OriginalMember(owner = "client!cn", name = "a", descriptor = "(IIIIIIIIII)V")
 	public static void method962(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7, @OriginalArg(9) int arg8) {
 		if (arg8 == arg7 && arg2 == arg6 && arg4 == arg3 && arg0 == arg5) {
 			Static241.method4547(arg1, arg5, arg6, arg4, arg8);

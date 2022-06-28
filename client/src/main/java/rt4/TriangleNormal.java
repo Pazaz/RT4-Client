@@ -21,7 +21,7 @@ public final class TriangleNormal {
 
 	static {
 		for (@Pc(4) int local4 = 0; local4 < 256; local4++) {
-			@Pc(10) long local10 = (long) local4;
+			@Pc(10) long local10 = local4;
 			for (@Pc(12) int local12 = 0; local12 < 8; local12++) {
 				if ((local10 & 0x1L) == 1L) {
 					local10 = local10 >>> 1 ^ 0xC96C5795D7870F42L;

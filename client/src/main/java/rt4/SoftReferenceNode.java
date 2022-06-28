@@ -1,9 +1,10 @@
 package rt4;
 
-import java.lang.ref.SoftReference;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
+
+import java.lang.ref.SoftReference;
 
 @OriginalClass("client!qd")
 public final class SoftReferenceNode extends ReferenceNode {

@@ -1,9 +1,10 @@
 package rt4;
 
-import java.util.Random;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+
+import java.util.Random;
 
 public final class Static89 {
 
@@ -53,9 +54,9 @@ public final class Static89 {
 
 	@OriginalMember(owner = "client!ha", name = "a", descriptor = "(II)[B")
 	public static byte[] method1837(@OriginalArg(1) int arg0) {
-		@Pc(10) ByteArrayNodeSecondary local10 = (ByteArrayNodeSecondary) aClass54_5.get((long) arg0);
+		@Pc(10) ByteArrayNodeSecondary local10 = (ByteArrayNodeSecondary) aClass54_5.get(arg0);
 		if (local10 == null) {
-			@Pc(24) Random local24 = new Random((long) arg0);
+			@Pc(24) Random local24 = new Random(arg0);
 			@Pc(27) byte[] local27 = new byte[512];
 			@Pc(29) int local29;
 			for (local29 = 0; local29 < 255; local29++) {
@@ -69,7 +70,7 @@ public final class Static89 {
 				local27[local53] = local27[511 - local29] = local62;
 			}
 			local10 = new ByteArrayNodeSecondary(local27);
-			aClass54_5.put(local10, (long) arg0);
+			aClass54_5.put(local10, arg0);
 		}
 		return local10.value;
 	}
@@ -330,8 +331,10 @@ public final class Static89 {
 		@Pc(497) int local497;
 		if (GlRenderer.enabled && !arg9) {
 			@Pc(472) Environment local472 = null;
-			label207: while (true) {
-				label200: do {
+			label207:
+			while (true) {
+				label200:
+				do {
 					while (local96.data.length > local96.offset) {
 						local108 = local96.g1();
 						if (local108 != 0) {
@@ -387,33 +390,33 @@ public final class Static89 {
 		return Cheat.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && MiniMenu.size > 2 ? MiniMenu.cursors[MiniMenu.size - 2] : MiniMenu.cursors[MiniMenu.size - 1];
 	}
 
-    @OriginalMember(owner = "client!rg", name = "a", descriptor = "(IZII)I")
-    public static int method4360(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-        @Pc(3) int local3 = arg0 & 0x3;
-        if (local3 == 0) {
-            return arg2;
-        } else if (local3 == 1) {
-            return arg1;
-        } else if (local3 == 2) {
-            return 7 - arg2;
-        } else {
-            return 7 - arg1;
-        }
-    }
+	@OriginalMember(owner = "client!rg", name = "a", descriptor = "(IZII)I")
+	public static int method4360(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
+		@Pc(3) int local3 = arg0 & 0x3;
+		if (local3 == 0) {
+			return arg2;
+		} else if (local3 == 1) {
+			return arg1;
+		} else if (local3 == 2) {
+			return 7 - arg2;
+		} else {
+			return 7 - arg1;
+		}
+	}
 
-    @OriginalMember(owner = "client!qg", name = "a", descriptor = "(IBII)I")
-    public static int method3659(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
-        @Pc(3) int local3 = arg0 & 0x3;
-        if (local3 == 0) {
-            return arg2;
-        } else if (local3 == 1) {
-            return 7 - arg1;
-        } else if (local3 == 2) {
-            return 7 - arg2;
-        } else {
-            return arg1;
-        }
-    }
+	@OriginalMember(owner = "client!qg", name = "a", descriptor = "(IBII)I")
+	public static int method3659(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
+		@Pc(3) int local3 = arg0 & 0x3;
+		if (local3 == 0) {
+			return arg2;
+		} else if (local3 == 1) {
+			return 7 - arg1;
+		} else if (local3 == 2) {
+			return 7 - arg2;
+		} else {
+			return arg1;
+		}
+	}
 
 	@OriginalMember(owner = "client!qi", name = "a", descriptor = "(IIBI)I")
 	public static int method3675(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2) {

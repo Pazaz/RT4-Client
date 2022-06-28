@@ -1,6 +1,6 @@
 package rt4;
 
-import com.jogamp.opengl.*;
+import com.jogamp.opengl.GL2;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
@@ -128,7 +128,8 @@ public final class ShadowManager {
 		MaterialManager.setMaterial(0, 0);
 		local1.glDepthMask(false);
 		for (@Pc(17) int local17 = 0; local17 < anInt5346; local17++) {
-			label52: for (@Pc(22) int local22 = 0; local22 < anInt5345; local22++) {
+			label52:
+			for (@Pc(22) int local22 = 0; local22 < anInt5345; local22++) {
 				for (@Pc(29) int local29 = local17 * 8; local29 < local17 * 8 + 8; local29++) {
 					if (local29 - arg0 >= -arg2 && local29 - arg0 <= arg2) {
 						for (@Pc(51) int local51 = local22 * 8; local51 < local22 * 8 + 8; local51++) {

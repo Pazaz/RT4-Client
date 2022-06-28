@@ -8,10 +8,10 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!je")
 public final class TextureOp23 extends TextureOp {
 
-    @OriginalMember(owner = "client!hd", name = "i", descriptor = "I")
-    public static int anInt2433 = 0;
+	@OriginalMember(owner = "client!hd", name = "i", descriptor = "I")
+	public static int anInt2433 = 0;
 
-    @OriginalMember(owner = "client!je", name = "<init>", descriptor = "()V")
+	@OriginalMember(owner = "client!je", name = "<init>", descriptor = "()V")
 	public TextureOp23() {
 		super(1, false);
 	}
@@ -20,7 +20,7 @@ public final class TextureOp23 extends TextureOp {
 	private void method2382(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
 		@Pc(13) int local13 = Texture.widthFractions[arg1];
 		@Pc(17) int local17 = Texture.heightFractions[arg0];
-		@Pc(28) float local28 = (float) Math.atan2((double) (local13 - 2048), (double) (local17 - 2048));
+		@Pc(28) float local28 = (float) Math.atan2(local13 - 2048, local17 - 2048);
 		if ((double) local28 >= -3.141592653589793D && -2.356194490192345D >= (double) local28) {
 			anInt2433 = arg0;
 			Static267.anInt5776 = arg1;

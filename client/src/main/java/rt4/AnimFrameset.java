@@ -38,34 +38,34 @@ public final class AnimFrameset extends SecondaryNode {
 		}
 	}
 
-    @OriginalMember(owner = "client!gn", name = "a", descriptor = "(Lclient!ve;ZLclient!ve;BI)Lclient!cl;")
-    public static AnimFrameset create(@OriginalArg(0) Js5 animsArchive, @OriginalArg(2) Js5 basesArchive, @OriginalArg(4) int id) {
-        @Pc(5) boolean ready = true;
-        @Pc(16) int[] fileIds = animsArchive.getFileIds(id);
-        for (@Pc(18) int i = 0; i < fileIds.length; i++) {
-            @Pc(30) byte[] bytes = animsArchive.fetchFileNoDiscard(fileIds[i], id);
-            if (bytes == null) {
-                ready = false;
-            } else {
-                @Pc(49) int baseId = (bytes[0] & 0xFF) << 8 | bytes[1] & 0xFF;
-                @Pc(57) byte[] baseBytes = basesArchive.fetchFileNoDiscard(0, baseId);
-                if (baseBytes == null) {
-                    ready = false;
-                }
-            }
-        }
-        if (!ready) {
-            return null;
-        }
-        try {
-            return new AnimFrameset(animsArchive, basesArchive, id, false);
-        } catch (@Pc(84) Exception ex) {
+	@OriginalMember(owner = "client!gn", name = "a", descriptor = "(Lclient!ve;ZLclient!ve;BI)Lclient!cl;")
+	public static AnimFrameset create(@OriginalArg(0) Js5 animsArchive, @OriginalArg(2) Js5 basesArchive, @OriginalArg(4) int id) {
+		@Pc(5) boolean ready = true;
+		@Pc(16) int[] fileIds = animsArchive.getFileIds(id);
+		for (@Pc(18) int i = 0; i < fileIds.length; i++) {
+			@Pc(30) byte[] bytes = animsArchive.fetchFileNoDiscard(fileIds[i], id);
+			if (bytes == null) {
+				ready = false;
+			} else {
+				@Pc(49) int baseId = (bytes[0] & 0xFF) << 8 | bytes[1] & 0xFF;
+				@Pc(57) byte[] baseBytes = basesArchive.fetchFileNoDiscard(0, baseId);
+				if (baseBytes == null) {
+					ready = false;
+				}
+			}
+		}
+		if (!ready) {
+			return null;
+		}
+		try {
+			return new AnimFrameset(animsArchive, basesArchive, id, false);
+		} catch (@Pc(84) Exception ex) {
 			ex.printStackTrace();
-            return null;
-        }
-    }
+			return null;
+		}
+	}
 
-    @OriginalMember(owner = "client!cl", name = "c", descriptor = "(II)Z")
+	@OriginalMember(owner = "client!cl", name = "c", descriptor = "(II)Z")
 	public final boolean isAlphaTransformed(@OriginalArg(1) int frame) {
 		return this.frames[frame].transformsAlpha;
 	}

@@ -79,10 +79,10 @@ public final class SoundPcmStream extends PcmStream {
 		this.method416();
 	}
 
-    @OriginalMember(owner = "client!b", name = "a", descriptor = "(Lclient!kj;II)Lclient!b;")
-    public static SoundPcmStream create(@OriginalArg(0) PcmSound sound, @OriginalArg(2) int volume) {
-        return sound.samples == null || sound.samples.length == 0 ? null : new SoundPcmStream(sound, (int) ((long) sound.rate * 256L * (long) 100 / (AudioChannel.sampleRate * 100L)), volume << 6);
-    }
+	@OriginalMember(owner = "client!b", name = "a", descriptor = "(Lclient!kj;II)Lclient!b;")
+	public static SoundPcmStream create(@OriginalArg(0) PcmSound sound, @OriginalArg(2) int volume) {
+		return sound.samples == null || sound.samples.length == 0 ? null : new SoundPcmStream(sound, (int) ((long) sound.rate * 256L * (long) 100 / (AudioChannel.sampleRate * 100L)), volume << 6);
+	}
 
 	@OriginalMember(owner = "client!b", name = "a", descriptor = "(I[B[IIIIIIIILclient!b;)I")
 	public static int method387(@OriginalArg(1) byte[] arg0, @OriginalArg(2) int[] arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(8) int arg6, @OriginalArg(9) int arg7, @OriginalArg(10) SoundPcmStream arg8) {
@@ -855,7 +855,8 @@ public final class SoundPcmStream extends PcmStream {
 		if (this.anInt350 >= 0) {
 			if (this.anInt350 > 0) {
 				if (this.aBoolean14) {
-					label131: {
+					label131:
+					{
 						if (this.anInt342 < 0) {
 							local40 = this.method403(arg0, arg1, local18, local44, local13.samples[this.start]);
 							if (this.anInt346 >= local18) {
@@ -1195,7 +1196,8 @@ public final class SoundPcmStream extends PcmStream {
 		if (this.anInt350 >= 0) {
 			if (this.anInt350 > 0) {
 				if (this.aBoolean14) {
-					label121: {
+					label121:
+					{
 						if (this.anInt342 < 0) {
 							if (this.anInt346 >= local76) {
 								return;
@@ -1223,7 +1225,8 @@ public final class SoundPcmStream extends PcmStream {
 						} while (--this.anInt350 != 0);
 					}
 				} else {
-					label153: {
+					label153:
+					{
 						@Pc(362) int local362;
 						if (this.anInt342 < 0) {
 							if (this.anInt346 >= local76) {

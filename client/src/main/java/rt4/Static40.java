@@ -66,7 +66,7 @@ public final class Static40 {
 		anInt4035 = arg0;
 	}
 
-    @OriginalMember(owner = "client!da", name = "h", descriptor = "(B)V")
+	@OriginalMember(owner = "client!da", name = "h", descriptor = "(B)V")
 	public static void method1019() {
 		Component.sprites.removeSoft();
 		Component.models.removeSoft();

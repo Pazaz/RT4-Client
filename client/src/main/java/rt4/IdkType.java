@@ -24,7 +24,7 @@ public final class IdkType {
 	private int[] bodyModels;
 
 	@OriginalMember(owner = "client!dm", name = "x", descriptor = "[I")
-	private final int[] headModels = new int[] { -1, -1, -1, -1, -1 };
+	private final int[] headModels = new int[]{-1, -1, -1, -1, -1};
 
 	@OriginalMember(owner = "client!dm", name = "k", descriptor = "I")
 	public int feature = -1;

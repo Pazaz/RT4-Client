@@ -37,7 +37,7 @@ public final class TextureOp12 extends TextureOp {
 					local68 = (local35 - local20) * this.anInt104;
 				} else {
 					@Pc(58) int local58 = local41 * local41 + local26 * local26 >> 12;
-					local68 = (int) (Math.sqrt((double) ((float) local58 / 4096.0F)) * 4096.0D);
+					local68 = (int) (Math.sqrt((float) local58 / 4096.0F) * 4096.0D);
 					local68 = (int) ((double) (local68 * this.anInt104) * 3.141592653589793D);
 				}
 				local68 -= local68 & 0xFFFFF000;

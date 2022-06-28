@@ -1,11 +1,12 @@
 package rt4;
 
-import java.nio.ByteBuffer;
-import com.jogamp.opengl.*;
+import com.jogamp.opengl.GL2;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+
+import java.nio.ByteBuffer;
 
 @OriginalClass("client!sd")
 public final class GlSolidColorTexture extends SecondaryNode {
@@ -28,7 +29,7 @@ public final class GlSolidColorTexture extends SecondaryNode {
 		this.anInt5059 = GlCleaner.contextId;
 		GlRenderer.setTextureId(this.anInt5058);
 		@Pc(32) int local32 = Rasteriser.palette[arg0];
-		@Pc(58) byte[] local58 = new byte[] { (byte) (local32 >> 16), (byte) (local32 >> 8), (byte) local32, -1 };
+		@Pc(58) byte[] local58 = new byte[]{(byte) (local32 >> 16), (byte) (local32 >> 8), (byte) local32, -1};
 		@Pc(61) ByteBuffer local61 = ByteBuffer.wrap(local58);
 		local9.glTexImage2D(GL2.GL_TEXTURE_2D, 0, GL2.GL_RGBA, 1, 1, 0, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, local61);
 		local9.glTexParameteri(GL2.GL_TEXTURE_2D, GL2.GL_TEXTURE_MIN_FILTER, GL2.GL_LINEAR);

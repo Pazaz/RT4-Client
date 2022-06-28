@@ -44,23 +44,23 @@ public class StringUtils {
 		}
 	}
 
-    @OriginalMember(owner = "client!vf", name = "a", descriptor = "(IB)Lclient!na;")
-    public static JagString method4510(@OriginalArg(0) int arg0) {
-        return arg0 >= 999999999 ? aClass100_930 : JagString.parseInt(arg0);
-    }
+	@OriginalMember(owner = "client!vf", name = "a", descriptor = "(IB)Lclient!na;")
+	public static JagString method4510(@OriginalArg(0) int arg0) {
+		return arg0 >= 999999999 ? aClass100_930 : JagString.parseInt(arg0);
+	}
 
-    @OriginalMember(owner = "client!ld", name = "a", descriptor = "(IB)I")
-    public static int toUpperCase(@OriginalArg(0) int c) {
-        if (c >= 97 && c <= 122 || c >= 224 && c <= 254 && c != 247) {
-            return c - 32;
-        } else if (c == 255) {
-            return 159;
-        } else if (c == 156) {
-            return 140;
-        } else {
-            return c;
-        }
-    }
+	@OriginalMember(owner = "client!ld", name = "a", descriptor = "(IB)I")
+	public static int toUpperCase(@OriginalArg(0) int c) {
+		if (c >= 97 && c <= 122 || c >= 224 && c <= 254 && c != 247) {
+			return c - 32;
+		} else if (c == 255) {
+			return 159;
+		} else if (c == 156) {
+			return 140;
+		} else {
+			return c;
+		}
+	}
 
 	@OriginalMember(owner = "client!sk", name = "c", descriptor = "(II)I")
 	public static int toLowerCase(@OriginalArg(1) int c) {
@@ -121,6 +121,6 @@ public class StringUtils {
 		if (local59.length() > 0) {
 			local59.method3113(local28);
 		}
-		return JagString.concatenate(new JagString[] { local9, local137.method3124(), local59.method3124() });
+		return JagString.concatenate(new JagString[]{local9, local137.method3124(), local59.method3124()});
 	}
 }

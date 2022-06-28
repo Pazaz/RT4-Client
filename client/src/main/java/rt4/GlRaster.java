@@ -1,10 +1,11 @@
 package rt4;
 
-import java.nio.IntBuffer;
-import com.jogamp.opengl.*;
+import com.jogamp.opengl.GL2;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+
+import java.nio.IntBuffer;
 
 public final class GlRaster {
 
@@ -64,7 +65,7 @@ public final class GlRaster {
 		GlRenderer.method4162();
 		@Pc(2) GL2 gl = GlRenderer.gl;
 		gl.glRasterPos2i(x, GlRenderer.canvasHeight - y);
-	 	gl.glPixelZoom((float) GameShell.canvasScale, (float) -GameShell.canvasScale);
+		gl.glPixelZoom((float) GameShell.canvasScale, (float) -GameShell.canvasScale);
 		gl.glDisable(GL2.GL_BLEND);
 		gl.glDisable(GL2.GL_ALPHA_TEST);
 		gl.glDrawPixels(width, height, GL2.GL_BGRA, GlRenderer.bigEndian ? GL2.GL_UNSIGNED_INT_8_8_8_8_REV : GL2.GL_UNSIGNED_BYTE, IntBuffer.wrap(arg0));
@@ -191,7 +192,7 @@ public final class GlRaster {
 		@Pc(21) GL2 gl = GlRenderer.gl;
 		gl.glEnable(GL2.GL_SCISSOR_TEST);
 		if (clipLeft <= clipRight && clipTop <= clipBottom) {
-			gl.glScissor((int)(clipLeft * GameShell.canvasScale + GameShell.subpixelX), (int)((GlRenderer.canvasHeight - clipBottom) * GameShell.canvasScale + GameShell.subpixelY), (int)((clipRight - clipLeft) * GameShell.canvasScale + GameShell.subpixelX), (int)((clipBottom - clipTop) * GameShell.canvasScale + GameShell.subpixelY));
+			gl.glScissor((int) (clipLeft * GameShell.canvasScale + GameShell.subpixelX), (int) ((GlRenderer.canvasHeight - clipBottom) * GameShell.canvasScale + GameShell.subpixelY), (int) ((clipRight - clipLeft) * GameShell.canvasScale + GameShell.subpixelX), (int) ((clipBottom - clipTop) * GameShell.canvasScale + GameShell.subpixelY));
 		} else {
 			gl.glScissor(0, 0, 0, 0);
 		}
@@ -256,7 +257,7 @@ public final class GlRaster {
 		@Pc(27) GL2 local27 = GlRenderer.gl;
 		local27.glEnable(GL2.GL_SCISSOR_TEST);
 		if (clipLeft <= clipRight && clipTop <= clipBottom) {
-			local27.glScissor((int)(clipLeft * GameShell.canvasScale + GameShell.subpixelX), (int)((GlRenderer.canvasHeight - clipBottom) * GameShell.canvasScale + GameShell.subpixelY), (int)((clipRight - clipLeft) * GameShell.canvasScale + GameShell.subpixelX), (int)((clipBottom - clipTop) * GameShell.canvasScale + GameShell.subpixelY));
+			local27.glScissor((int) (clipLeft * GameShell.canvasScale + GameShell.subpixelX), (int) ((GlRenderer.canvasHeight - clipBottom) * GameShell.canvasScale + GameShell.subpixelY), (int) ((clipRight - clipLeft) * GameShell.canvasScale + GameShell.subpixelX), (int) ((clipBottom - clipTop) * GameShell.canvasScale + GameShell.subpixelY));
 		} else {
 			local27.glScissor(0, 0, 0, 0);
 		}

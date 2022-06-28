@@ -8,15 +8,15 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!be")
 public final class Component {
 
-    @OriginalMember(owner = "client!pf", name = "b", descriptor = "Lclient!n;")
+	@OriginalMember(owner = "client!pf", name = "b", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable sprites = new SoftLruHashTable(200);
 	@OriginalMember(owner = "client!jk", name = "z", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable models = new SoftLruHashTable(50);
 	@OriginalMember(owner = "client!gn", name = "i", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable fonts = new SoftLruHashTable(20);
-    @OriginalMember(owner = "client!rc", name = "C", descriptor = "Z")
-    public static boolean aBoolean72 = false;
-    @OriginalMember(owner = "client!be", name = "b", descriptor = "[Ljava/lang/Object;")
+	@OriginalMember(owner = "client!rc", name = "C", descriptor = "Z")
+	public static boolean aBoolean72 = false;
+	@OriginalMember(owner = "client!be", name = "b", descriptor = "[Ljava/lang/Object;")
 	public Object[] onFriendTransmit;
 
 	@OriginalMember(owner = "client!be", name = "d", descriptor = "[Ljava/lang/Object;")
@@ -794,7 +794,7 @@ public final class Component {
 		if (local29 == -1) {
 			return null;
 		}
-		@Pc(43) Sprite local43 = (Sprite) sprites.get((long) local29);
+		@Pc(43) Sprite local43 = (Sprite) sprites.get(local29);
 		if (local43 != null) {
 			return local43;
 		}
@@ -802,7 +802,7 @@ public final class Component {
 		if (local43 == null) {
 			aBoolean72 = true;
 		} else {
-			sprites.put(local43, (long) local29);
+			sprites.put(local43, local29);
 		}
 		return local43;
 	}
@@ -869,7 +869,7 @@ public final class Component {
 		} else {
 			@Pc(61) Model local61;
 			if (local10 == 1) {
-				local61 = (Model) models.get((long) ((local10 << 16) + local13));
+				local61 = (Model) models.get((local10 << 16) + local13);
 				if (local61 == null) {
 					@Pc(69) RawModel local69 = RawModel.create(InterfaceList.aClass153_85, local13);
 					if (local69 == null) {
@@ -877,7 +877,7 @@ public final class Component {
 						return null;
 					}
 					local61 = local69.createModel(64, 768, -50, -10, -50);
-					models.put(local61, (long) (local13 + (local10 << 16)));
+					models.put(local61, local13 + (local10 << 16));
 				}
 				if (arg1 != null) {
 					local61 = arg1.method4215(local61, arg0, arg3, arg2);
@@ -1183,7 +1183,7 @@ public final class Component {
 		if (this.font == -1) {
 			return null;
 		}
-		@Pc(21) Font local21 = (Font) fonts.get((long) this.font);
+		@Pc(21) Font local21 = (Font) fonts.get(this.font);
 		if (local21 != null) {
 			return local21;
 		}
@@ -1192,7 +1192,7 @@ public final class Component {
 			aBoolean72 = true;
 		} else {
 			local21.setNameIcons(arg0, null);
-			fonts.put(local21, (long) this.font);
+			fonts.put(local21, this.font);
 		}
 		return local21;
 	}

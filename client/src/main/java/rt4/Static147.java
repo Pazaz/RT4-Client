@@ -6,20 +6,20 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static147 {
 
-    @OriginalMember(owner = "client!lh", name = "z", descriptor = "Lclient!na;")
+	@OriginalMember(owner = "client!lh", name = "z", descriptor = "Lclient!na;")
 	public static final JagString aClass100_672 = JagString.parse("(U (X");
-    @OriginalMember(owner = "client!fg", name = "d", descriptor = "[I")
-    public static final int[] anIntArray159 = new int[6];
-    @OriginalMember(owner = "client!fg", name = "l", descriptor = "[I")
-    public static final int[] anIntArray164 = new int[6];
-    @OriginalMember(owner = "client!fg", name = "m", descriptor = "[I")
-    public static final int[] anIntArray165 = new int[6];
-    @OriginalMember(owner = "client!fg", name = "r", descriptor = "[I")
-    public static final int[] anIntArray169 = new int[6];
-    @OriginalMember(owner = "client!fg", name = "t", descriptor = "[I")
-    public static final int[] anIntArray170 = new int[6];
+	@OriginalMember(owner = "client!fg", name = "d", descriptor = "[I")
+	public static final int[] anIntArray159 = new int[6];
+	@OriginalMember(owner = "client!fg", name = "l", descriptor = "[I")
+	public static final int[] anIntArray164 = new int[6];
+	@OriginalMember(owner = "client!fg", name = "m", descriptor = "[I")
+	public static final int[] anIntArray165 = new int[6];
+	@OriginalMember(owner = "client!fg", name = "r", descriptor = "[I")
+	public static final int[] anIntArray169 = new int[6];
+	@OriginalMember(owner = "client!fg", name = "t", descriptor = "[I")
+	public static final int[] anIntArray170 = new int[6];
 
-    @OriginalMember(owner = "client!lh", name = "b", descriptor = "(II)V")
+	@OriginalMember(owner = "client!lh", name = "b", descriptor = "(II)V")
 	public static void method2761(@OriginalArg(0) int arg0) {
 		UnderwaterMaterialRenderer.anInt3241 = arg0;
 		MaterialManager.resetArgument(3);
@@ -71,10 +71,7 @@ public final class Static147 {
 					MiniMenu.anInt2954 = arg6;
 				}
 				if (!GlRenderer.enabled && !arg7) {
-					Rasteriser.testX = false;
-					if (local39 < 0 || local148 < 0 || local152 < 0 || local39 > Rasteriser.width || local148 > Rasteriser.width || local152 > Rasteriser.width) {
-						Rasteriser.testX = true;
-					}
+					Rasteriser.testX = local39 < 0 || local148 < 0 || local152 < 0 || local39 > Rasteriser.width || local148 > Rasteriser.width || local152 > Rasteriser.width;
 					if (arg0.anIntArray161 == null || arg0.anIntArray161[local5] == -1) {
 						if (arg0.anIntArray167[local5] != 12345678) {
 							Rasteriser.fillGouraudTriangle(local156, local160, local164, local39, local148, local152, arg0.anIntArray167[local5], arg0.anIntArray172[local5], arg0.anIntArray171[local5]);
@@ -99,7 +96,7 @@ public final class Static147 {
 		Component.fonts.clear();
 	}
 
-    @OriginalMember(owner = "client!bi", name = "a", descriptor = "(IIIIIIII)Z")
+	@OriginalMember(owner = "client!bi", name = "a", descriptor = "(IIIIIIII)Z")
 	public static boolean method583(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7) {
 		if (arg1 < arg2 && arg1 < arg3 && arg1 < arg4) {
 			return false;
@@ -117,14 +114,14 @@ public final class Static147 {
 		}
 	}
 
-    @OriginalMember(owner = "client!ri", name = "a", descriptor = "(II)I")
-    public static int method1640(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-        arg1 = arg1 * (arg0 & 0x7F) >> 7;
-        if (arg1 < 2) {
-            arg1 = 2;
-        } else if (arg1 > 126) {
-            arg1 = 126;
-        }
-        return (arg0 & 0xFF80) + arg1;
-    }
+	@OriginalMember(owner = "client!ri", name = "a", descriptor = "(II)I")
+	public static int method1640(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+		arg1 = arg1 * (arg0 & 0x7F) >> 7;
+		if (arg1 < 2) {
+			arg1 = 2;
+		} else if (arg1 > 126) {
+			arg1 = 126;
+		}
+		return (arg0 & 0xFF80) + arg1;
+	}
 }

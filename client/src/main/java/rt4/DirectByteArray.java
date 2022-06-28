@@ -1,10 +1,11 @@
 package rt4;
 
-import java.nio.ByteBuffer;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+
+import java.nio.ByteBuffer;
 
 @OriginalClass("client!ua")
 public final class DirectByteArray extends ByteArray {

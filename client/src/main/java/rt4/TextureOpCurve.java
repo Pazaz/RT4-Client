@@ -131,7 +131,7 @@ public final class TextureOpCurve extends TextureOp {
 	@Override
 	public final void postDecode() {
 		if (this.markers == null) {
-			this.markers = new int[][] { { 0, 0 }, { 4096, 4096 } };
+			this.markers = new int[][]{{0, 0}, {4096, 4096}};
 		}
 		if (this.markers.length < 2) {
 			throw new RuntimeException("Curve operation requires at least two markers");
@@ -149,8 +149,8 @@ public final class TextureOpCurve extends TextureOp {
 		@Pc(20) int[] local20 = this.markers[1];
 		@Pc(29) int[] local29 = this.markers[this.markers.length - 2];
 		@Pc(38) int[] local38 = this.markers[this.markers.length - 1];
-		this.lastMarker = new int[] { local8[0] + local8[0] - local20[0], -local20[1] + local8[1] + local8[1] };
-		this.firstMarker = new int[] { local29[0] + local29[0] - local38[0], -local38[1] - -local29[1] + local29[1] };
+		this.lastMarker = new int[]{local8[0] + local8[0] - local20[0], -local20[1] + local8[1] + local8[1]};
+		this.firstMarker = new int[]{local29[0] + local29[0] - local38[0], -local38[1] - -local29[1] + local29[1]};
 	}
 
 	@OriginalMember(owner = "client!wi", name = "a", descriptor = "(ILclient!wa;Z)V")

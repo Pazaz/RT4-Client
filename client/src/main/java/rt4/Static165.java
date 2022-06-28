@@ -9,7 +9,7 @@ public final class Static165 {
 	@OriginalMember(owner = "client!nb", name = "i", descriptor = "Lclient!qf;")
 	public static Sprite aClass3_Sub2_Sub1_8;
 
-    @OriginalMember(owner = "client!nb", name = "n", descriptor = "Lclient!na;")
+	@OriginalMember(owner = "client!nb", name = "n", descriptor = "Lclient!na;")
 	public static final JagString DETAILS = JagString.parse("details");
 
 	@OriginalMember(owner = "client!nb", name = "a", descriptor = "(IIIIIIIIII)V")

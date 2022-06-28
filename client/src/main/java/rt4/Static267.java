@@ -7,16 +7,16 @@ import org.openrs2.deob.annotation.Pc;
 public final class Static267 {
 
 	@OriginalMember(owner = "client!vl", name = "e", descriptor = "[I")
-	public static final int[] anIntArray517 = new int[] { 1, 2, 4, 8 };
+	public static final int[] anIntArray517 = new int[]{1, 2, 4, 8};
 	@OriginalMember(owner = "client!je", name = "U", descriptor = "Lclient!na;")
 	public static final JagString aClass100_588 = JagString.parse("showingVideoAd");
 
-    @OriginalMember(owner = "client!vl", name = "l", descriptor = "I")
+	@OriginalMember(owner = "client!vl", name = "l", descriptor = "I")
 	public static int anInt5776 = 0;
-    @OriginalMember(owner = "client!wb", name = "b", descriptor = "[I")
-    public static int[] anIntArray562;
+	@OriginalMember(owner = "client!wb", name = "b", descriptor = "[I")
+	public static int[] anIntArray562;
 
-    @OriginalMember(owner = "client!vl", name = "a", descriptor = "(I)Z")
+	@OriginalMember(owner = "client!vl", name = "a", descriptor = "(I)Z")
 	public static boolean isShowingVideoAd() {
 		if (client.objectTag) {
 			try {

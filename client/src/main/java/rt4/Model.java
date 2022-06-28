@@ -8,26 +8,26 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!ak")
 public abstract class Model extends Entity {
 
-    @OriginalMember(owner = "client!vc", name = "V", descriptor = "[J")
-    public static final long[] aLongArray11 = new long[1000];
-    @OriginalMember(owner = "client!ak", name = "s", descriptor = "Z")
+	@OriginalMember(owner = "client!vc", name = "V", descriptor = "[J")
+	public static final long[] aLongArray11 = new long[1000];
+	@OriginalMember(owner = "client!ak", name = "s", descriptor = "Z")
 	public boolean aBoolean303 = false;
 
-    @OriginalMember(owner = "client!ak", name = "a", descriptor = "([[III)I")
-    public static int method4556(@OriginalArg(0) int[][] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
-        @Pc(3) int local3 = arg1 >> 7;
-        @Pc(7) int local7 = arg2 >> 7;
-        if (local3 < 0 || local7 < 0 || local3 >= arg0.length || local7 >= arg0[0].length) {
-            return 0;
-        }
-        @Pc(27) int local27 = arg1 & 0x7F;
-        @Pc(31) int local31 = arg2 & 0x7F;
-        @Pc(53) int local53 = arg0[local3][local7] * (128 - local27) + arg0[local3 + 1][local7] * local27 >> 7;
-        @Pc(79) int local79 = arg0[local3][local7 + 1] * (128 - local27) + arg0[local3 + 1][local7 + 1] * local27 >> 7;
-        return local53 * (128 - local31) + local79 * local31 >> 7;
-    }
+	@OriginalMember(owner = "client!ak", name = "a", descriptor = "([[III)I")
+	public static int method4556(@OriginalArg(0) int[][] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+		@Pc(3) int local3 = arg1 >> 7;
+		@Pc(7) int local7 = arg2 >> 7;
+		if (local3 < 0 || local7 < 0 || local3 >= arg0.length || local7 >= arg0[0].length) {
+			return 0;
+		}
+		@Pc(27) int local27 = arg1 & 0x7F;
+		@Pc(31) int local31 = arg2 & 0x7F;
+		@Pc(53) int local53 = arg0[local3][local7] * (128 - local27) + arg0[local3 + 1][local7] * local27 >> 7;
+		@Pc(79) int local79 = arg0[local3][local7 + 1] * (128 - local27) + arg0[local3 + 1][local7 + 1] * local27 >> 7;
+		return local53 * (128 - local31) + local79 * local31 >> 7;
+	}
 
-    @OriginalMember(owner = "client!ak", name = "c", descriptor = "()I")
+	@OriginalMember(owner = "client!ak", name = "c", descriptor = "()I")
 	public abstract int getMaxZ();
 
 	@OriginalMember(owner = "client!ak", name = "b", descriptor = "()I")
@@ -69,14 +69,8 @@ public abstract class Model extends Entity {
 		local5 = 0;
 		@Pc(136) int local136 = 0;
 		for (@Pc(138) int local138 = 0; local138 < arg0.transforms; local138++) {
-			@Pc(144) boolean local144 = false;
-			if (local5 < arg1.length && arg1.indices[local5] == local138) {
-				local144 = true;
-			}
-			@Pc(158) boolean local158 = false;
-			if (local136 < arg2.length && arg2.indices[local136] == local138) {
-				local158 = true;
-			}
+			@Pc(144) boolean local144 = local5 < arg1.length && arg1.indices[local5] == local138;
+			@Pc(158) boolean local158 = local136 < arg2.length && arg2.indices[local136] == local138;
 			if (local144 || local158) {
 				if (arg5 == null || arg5[local138] == arg6 || arg0.types[local138] == 0) {
 					@Pc(196) short local196 = 0;
@@ -340,13 +334,13 @@ public abstract class Model extends Entity {
 		@Pc(98) int local98 = local42 < local77 ? local42 : local77;
 		@Pc(105) int local105 = local24 < local60 ? local24 : local60;
 		if (arg5 != 0) {
-			@Pc(120) int local120 = (int) (Math.atan2((double) (local84 - local91), (double) arg5) * 325.95D) & 0x7FF;
+			@Pc(120) int local120 = (int) (Math.atan2(local84 - local91, arg5) * 325.95D) & 0x7FF;
 			if (local120 != 0) {
 				this.rotateX(local120);
 			}
 		}
 		if (arg4 != 0) {
-			@Pc(140) int local140 = (int) (Math.atan2((double) (local105 - local98), (double) arg4) * 325.95D) & 0x7FF;
+			@Pc(140) int local140 = (int) (Math.atan2(local105 - local98, arg4) * 325.95D) & 0x7FF;
 			if (local140 != 0) {
 				this.rotateZ(local140);
 			}

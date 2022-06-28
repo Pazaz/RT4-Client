@@ -19,13 +19,13 @@ public final class CursorType {
 
 	@OriginalMember(owner = "client!ia", name = "a", descriptor = "(B)Lclient!mm;")
 	public final SoftwareSprite getSprite() {
-		@Pc(7) SoftwareSprite local7 = (SoftwareSprite) CursorTypeList.sprites.get((long) this.spriteId);
+		@Pc(7) SoftwareSprite local7 = (SoftwareSprite) CursorTypeList.sprites.get(this.spriteId);
 		if (local7 != null) {
 			return local7;
 		}
 		local7 = SoftwareSprite.loadSoftwareAlphaSprite(CursorTypeList.spritesArchive, this.spriteId);
 		if (local7 != null) {
-			CursorTypeList.sprites.put(local7, (long) this.spriteId);
+			CursorTypeList.sprites.put(local7, this.spriteId);
 		}
 		return local7;
 	}

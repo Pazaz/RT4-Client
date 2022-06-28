@@ -1,19 +1,16 @@
 package rt4;
 
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Graphics;
-import java.awt.Insets;
-
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+
+import java.awt.*;
 
 public final class Static139 {
 
 	@OriginalMember(owner = "client!l", name = "d", descriptor = "Lclient!na;")
 	public static final JagString aClass100_659 = JagString.parse(")4j");
 
-    @OriginalMember(owner = "client!l", name = "b", descriptor = "(I)V")
+	@OriginalMember(owner = "client!l", name = "b", descriptor = "(I)V")
 	public static void method2704() {
 		@Pc(7) int local7 = GameShell.topMargin;
 		@Pc(9) int local9 = GameShell.leftMargin;

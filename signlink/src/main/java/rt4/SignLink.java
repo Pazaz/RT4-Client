@@ -1,12 +1,13 @@
 package rt4;
 
+import com.jogamp.opengl.GLProfile;
+import org.openrs2.deob.annotation.OriginalArg;
+import org.openrs2.deob.annotation.OriginalClass;
+import org.openrs2.deob.annotation.OriginalMember;
+import org.openrs2.deob.annotation.Pc;
+
 import java.applet.Applet;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.EventQueue;
-import java.awt.Frame;
-import java.awt.Point;
-import java.awt.Toolkit;
+import java.awt.*;
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.IOException;
@@ -18,12 +19,6 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.util.Hashtable;
-
-import com.jogamp.opengl.*;
-import org.openrs2.deob.annotation.OriginalArg;
-import org.openrs2.deob.annotation.OriginalClass;
-import org.openrs2.deob.annotation.OriginalMember;
-import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("signlink!ll")
 public final class SignLink implements Runnable {
@@ -111,7 +106,7 @@ public final class SignLink implements Runnable {
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(ZLjava/lang/String;)Lsignlink!qm;")
 	private static FileOnDisk openPreferencesInternal(@OriginalArg(1) String cacheSubDir) {
-		@Pc(41) String[] cacheLocations = new String[] { "c:/rscache/", "/rscache/", homeDir, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", "" };
+		@Pc(41) String[] cacheLocations = new String[]{"c:/rscache/", "/rscache/", homeDir, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
 		for (@Pc(43) int i = 0; i < cacheLocations.length; i++) {
 			@Pc(51) String cacheLocation = cacheLocations[i];
 			if (cacheLocation.length() <= 0 || (new File(cacheLocation)).exists()) {
@@ -130,8 +125,8 @@ public final class SignLink implements Runnable {
 		if (cachedFile != null) {
 			return cachedFile;
 		}
-		@Pc(53) String[] cacheLocations = new String[] { homeDir, "c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/", "/tmp/", "" };
-		@Pc(78) String[] cacheDirs = new String[] { "cache", ".runite_rs", ".530file_store_" + storeId, ".jagex_cache_" + storeId, ".file_store_" + storeId };
+		@Pc(53) String[] cacheLocations = new String[]{homeDir, "c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
+		@Pc(78) String[] cacheDirs = new String[]{"cache", ".runite_rs", ".530file_store_" + storeId, ".jagex_cache_" + storeId, ".file_store_" + storeId};
 		for (@Pc(80) int attempt = 0; attempt < 2; attempt++) {
 			for (@Pc(87) int i = 0; i < cacheDirs.length; i++) {
 				for (@Pc(93) int j = 0; j < cacheLocations.length; j++) {
@@ -203,13 +198,13 @@ public final class SignLink implements Runnable {
 			if (homeDir != null) {
 				homeDir = homeDir + "/";
 				// 2009scape-specific behavior
-                if (osName.startsWith("linux")) {
-                    File oldCache = new File(homeDir + "/.runite_rs");
-                    homeDir = homeDir + ".local/share/2009scape/";
-                    File newCache = new File(homeDir + "cache");
-                    if (oldCache.isDirectory() && !newCache.exists()) {
-                        Files.move(oldCache.toPath(), newCache.toPath(), StandardCopyOption.REPLACE_EXISTING);
-                    }
+				if (osName.startsWith("linux")) {
+					File oldCache = new File(homeDir + "/.runite_rs");
+					homeDir = homeDir + ".local/share/2009scape/";
+					File newCache = new File(homeDir + "cache");
+					if (oldCache.isDirectory() && !newCache.exists()) {
+						Files.move(oldCache.toPath(), newCache.toPath(), StandardCopyOption.REPLACE_EXISTING);
+					}
 				}
 			}
 		} catch (@Pc(86) Exception ex) {
@@ -296,7 +291,7 @@ public final class SignLink implements Runnable {
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "([IIILjava/awt/Component;Ljava/awt/Point;I)Lsignlink!im;")
 	public final PrivilegedRequest setCursor(@OriginalArg(0) int[] pixels, @OriginalArg(2) int width, @OriginalArg(3) Component component, @OriginalArg(4) Point hotSpot, @OriginalArg(5) int height) {
-		return this.enqueue(17, height, new Object[] { component, pixels, hotSpot }, width);
+		return this.enqueue(17, height, new Object[]{component, pixels, hotSpot}, width);
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(IILjava/lang/Object;II)Lsignlink!im;")
@@ -341,7 +336,7 @@ public final class SignLink implements Runnable {
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(Ljava/lang/Class;[Ljava/lang/Class;ILjava/lang/String;)Lsignlink!im;")
 	public final PrivilegedRequest getDeclaredMethod(@OriginalArg(0) Class targetClass, @OriginalArg(1) Class[] parameterTypes, @OriginalArg(3) String name) {
-		return this.enqueue(8, 0, new Object[] { targetClass, name, parameterTypes }, 0);
+		return this.enqueue(8, 0, new Object[]{targetClass, name, parameterTypes}, 0);
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "run", descriptor = "()V")
@@ -518,7 +513,7 @@ public final class SignLink implements Runnable {
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(ILjava/lang/String;Ljava/lang/Class;)Lsignlink!im;")
 	public final PrivilegedRequest getDeclaredField(@OriginalArg(1) String name, @OriginalArg(2) Class targetClass) {
-		return this.enqueue(9, 0, new Object[] { targetClass, name }, 0);
+		return this.enqueue(9, 0, new Object[]{targetClass, name}, 0);
 	}
 
 	@OriginalMember(owner = "signlink!ll", name = "a", descriptor = "(II)Lsignlink!im;")

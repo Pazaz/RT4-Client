@@ -6,8 +6,8 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static5 {
 
-    @OriginalMember(owner = "client!af", name = "l", descriptor = "[S")
-	public static final short[] aShortArray2 = new short[] { 30, 6, 31, 29, 10, 44, 37, 57 };
+	@OriginalMember(owner = "client!af", name = "l", descriptor = "[S")
+	public static final short[] aShortArray2 = new short[]{30, 6, 31, 29, 10, 44, 37, 57};
 
 	@OriginalMember(owner = "client!af", name = "m", descriptor = "Lclient!na;")
 	public static final JagString aClass100_10 = JagString.parse("<br>");

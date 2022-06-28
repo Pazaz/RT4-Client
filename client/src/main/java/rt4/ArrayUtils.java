@@ -46,7 +46,7 @@ public final class ArrayUtils {
 		}
 	}
 
-    @OriginalMember(owner = "client!kg", name = "a", descriptor = "([II[III)V")
+	@OriginalMember(owner = "client!kg", name = "a", descriptor = "([II[III)V")
 	public static void copy(@OriginalArg(0) int[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int[] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		@Pc(15) int local15;
 		if (arg0 == arg2) {

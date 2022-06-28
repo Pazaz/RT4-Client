@@ -152,7 +152,7 @@ public final class ObjType {
 	public int manwear = -1;
 
 	@OriginalMember(owner = "client!h", name = "qb", descriptor = "[Lclient!na;")
-	public JagString[] ops = new JagString[] { null, null, LocalizedText.TAKE, null, null };
+	public JagString[] ops = new JagString[]{null, null, LocalizedText.TAKE, null, null};
 
 	@OriginalMember(owner = "client!h", name = "ub", descriptor = "I")
 	private int resizeX = 128;
@@ -164,7 +164,7 @@ public final class ObjType {
 	private int manWearYOff = 0;
 
 	@OriginalMember(owner = "client!h", name = "U", descriptor = "[Lclient!na;")
-	public JagString[] iops = new JagString[] { null, null, null, null, LocalizedText.DROP};
+	public JagString[] iops = new JagString[]{null, null, null, null, LocalizedText.DROP};
 
 	@OriginalMember(owner = "client!h", name = "Ab", descriptor = "I")
 	public int zoom2d = 2000;
@@ -183,10 +183,7 @@ public final class ObjType {
 		if (manhead1 == -1) {
 			return true;
 		}
-		@Pc(33) boolean ready = true;
-		if (!ObjTypeList.modelsArchive.isFileReady(0, manhead1)) {
-			ready = false;
-		}
+		@Pc(33) boolean ready = ObjTypeList.modelsArchive.isFileReady(0, manhead1);
 		if (manhead2 != -1 && !ObjTypeList.modelsArchive.isFileReady(0, manhead2)) {
 			ready = false;
 		}
@@ -232,10 +229,7 @@ public final class ObjType {
 		if (wear1 == -1) {
 			return true;
 		}
-		@Pc(41) boolean ready = true;
-		if (!ObjTypeList.modelsArchive.isFileReady(0, wear1)) {
-			ready = false;
-		}
+		@Pc(41) boolean ready = ObjTypeList.modelsArchive.isFileReady(0, wear1);
 		if (wear2 != -1 && !ObjTypeList.modelsArchive.isFileReady(0, wear2)) {
 			ready = false;
 		}
@@ -577,7 +571,7 @@ public final class ObjType {
 		@Pc(36) RawModel model = RawModel.create(ObjTypeList.modelsArchive, head);
 		if (head2 != -1) {
 			@Pc(44) RawModel model2 = RawModel.create(ObjTypeList.modelsArchive, head2);
-			@Pc(55) RawModel[] models = new RawModel[] { model, model2 };
+			@Pc(55) RawModel[] models = new RawModel[]{model, model2};
 			model = new RawModel(models, 2);
 		}
 		@Pc(66) int i;
@@ -611,11 +605,11 @@ public final class ObjType {
 		if (wear2 != -1) {
 			@Pc(54) RawModel model2 = RawModel.create(ObjTypeList.modelsArchive, wear2);
 			if (wear3 == -1) {
-				@Pc(68) RawModel[] models = new RawModel[] { model, model2 };
+				@Pc(68) RawModel[] models = new RawModel[]{model, model2};
 				model = new RawModel(models, 2);
 			} else {
 				@Pc(81) RawModel model3 = RawModel.create(ObjTypeList.modelsArchive, wear3);
-				@Pc(96) RawModel[] models = new RawModel[] { model, model2, model3 };
+				@Pc(96) RawModel[] models = new RawModel[]{model, model2, model3};
 				model = new RawModel(models, 3);
 			}
 		}

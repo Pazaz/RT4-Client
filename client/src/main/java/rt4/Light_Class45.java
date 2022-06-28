@@ -1,11 +1,12 @@
 package rt4;
 
-import java.nio.ByteBuffer;
-import com.jogamp.opengl.*;
+import com.jogamp.opengl.GL2;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+
+import java.nio.ByteBuffer;
 
 @OriginalClass("client!fj")
 public final class Light_Class45 {
@@ -72,7 +73,7 @@ public final class Light_Class45 {
 		@Pc(37) float local37 = (float) (arg0.x - arg1);
 		@Pc(43) float local43 = (float) (arg0.y - arg2);
 		@Pc(49) float local49 = (float) (arg0.z - arg3);
-		@Pc(64) float local64 = (float) Math.sqrt((double) (local37 * local37 + local43 * local43 + local49 * local49));
+		@Pc(64) float local64 = (float) Math.sqrt(local37 * local37 + local43 * local43 + local49 * local49);
 		@Pc(68) float local68 = 1.0F / local64;
 		@Pc(72) float local72 = local37 * local68;
 		@Pc(76) float local76 = local43 * local68;

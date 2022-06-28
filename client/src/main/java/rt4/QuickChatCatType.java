@@ -23,12 +23,12 @@ public final class QuickChatCatType extends SecondaryNode {
 	@OriginalMember(owner = "client!bc", name = "ab", descriptor = "[I")
 	public int[] phrases;
 
-    @OriginalMember(owner = "client!si", name = "a", descriptor = "(ZB)I")
-    public static int method3933(@OriginalArg(1) byte arg0) {
-        return arg0 & 0xFF;
-    }
+	@OriginalMember(owner = "client!si", name = "a", descriptor = "(ZB)I")
+	public static int method3933(@OriginalArg(1) byte arg0) {
+		return arg0 & 0xFF;
+	}
 
-    @OriginalMember(owner = "client!bc", name = "d", descriptor = "(I)V")
+	@OriginalMember(owner = "client!bc", name = "d", descriptor = "(I)V")
 	public final void method465() {
 		@Pc(8) int local8;
 		if (this.phrases != null) {

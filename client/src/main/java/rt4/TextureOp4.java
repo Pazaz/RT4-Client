@@ -1,10 +1,11 @@
 package rt4;
 
-import java.util.Random;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+
+import java.util.Random;
 
 @OriginalClass("client!mc")
 public final class TextureOp4 extends TextureOp {
@@ -86,7 +87,7 @@ public final class TextureOp4 extends TextureOp {
 
 	@OriginalMember(owner = "client!mc", name = "i", descriptor = "(I)V")
 	private void method2908() {
-		@Pc(8) Random local8 = new Random((long) this.anInt3677);
+		@Pc(8) Random local8 = new Random(this.anInt3677);
 		this.anInt3670 = 4096 / this.anInt3677;
 		this.anInt3671 = this.anInt3672 / 2;
 		this.anIntArrayArray26 = new int[this.anInt3677][this.anInt3685 + 1];

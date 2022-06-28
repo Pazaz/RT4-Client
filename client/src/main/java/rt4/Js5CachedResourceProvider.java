@@ -10,10 +10,10 @@ import java.util.zip.CRC32;
 @OriginalClass("client!bg")
 public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 
-    @OriginalMember(owner = "client!fn", name = "X", descriptor = "Ljava/util/zip/CRC32;")
-    public static final CRC32 crc32 = new CRC32();
+	@OriginalMember(owner = "client!fn", name = "X", descriptor = "Ljava/util/zip/CRC32;")
+	public static final CRC32 crc32 = new CRC32();
 
-    @OriginalMember(owner = "client!bg", name = "m", descriptor = "Lclient!ii;")
+	@OriginalMember(owner = "client!bg", name = "m", descriptor = "Lclient!ii;")
 	private Js5Index index;
 
 	@OriginalMember(owner = "client!bg", name = "w", descriptor = "[B")
@@ -305,7 +305,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 	@OriginalMember(owner = "client!bg", name = "b", descriptor = "(II)I")
 	@Override
 	public final int getPercentageComplete(@OriginalArg(0) int arg0) {
-		@Pc(15) Js5Request request = (Js5Request) this.requests.get((long) arg0);
+		@Pc(15) Js5Request request = (Js5Request) this.requests.get(arg0);
 		return request == null ? 0 : request.getPercentageComplete();
 	}
 
@@ -316,7 +316,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 
 	@OriginalMember(owner = "client!bg", name = "a", descriptor = "(III)Lclient!il;")
 	private Js5Request fetchGroupInner(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		@Pc(13) Js5Request local13 = (Js5Request) this.requests.get((long) arg1);
+		@Pc(13) Js5Request local13 = (Js5Request) this.requests.get(arg1);
 		if (local13 != null && arg0 == 0 && !local13.urgent && local13.incomplete) {
 			local13.unlink();
 			local13 = null;
@@ -350,7 +350,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 			} else {
 				throw new RuntimeException();
 			}
-			this.requests.put(local13, (long) arg1);
+			this.requests.put(local13, arg1);
 		}
 		if (local13.incomplete) {
 			return null;
@@ -376,7 +376,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 				local13.unlink();
 				if (local13.urgent && !this.netQueue.isUrgentRequestQueueFull()) {
 					local252 = this.netQueue.read(this.archive, (byte) 2, arg1, true);
-					this.requests.put(local252, (long) arg1);
+					this.requests.put(local252, arg1);
 				}
 				return null;
 			}
@@ -423,7 +423,7 @@ public final class Js5CachedResourceProvider extends Js5ResourceProvider {
 			local13.unlink();
 			if (local13.urgent && !this.netQueue.isUrgentRequestQueueFull()) {
 				local252 = this.netQueue.read(this.archive, (byte) 2, arg1, true);
-				this.requests.put(local252, (long) arg1);
+				this.requests.put(local252, arg1);
 			}
 			return null;
 		}

@@ -8,9 +8,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!wl")
 public final class FloType {
 
-    @OriginalMember(owner = "client!ca", name = "db", descriptor = "I")
-    public static int anInt865 = 0;
-    @OriginalMember(owner = "client!wl", name = "j", descriptor = "Z")
+	@OriginalMember(owner = "client!ca", name = "db", descriptor = "I")
+	public static int anInt865 = 0;
+	@OriginalMember(owner = "client!wl", name = "j", descriptor = "Z")
 	public boolean aBoolean310 = false;
 
 	@OriginalMember(owner = "client!wl", name = "l", descriptor = "Z")
@@ -40,12 +40,12 @@ public final class FloType {
 	@OriginalMember(owner = "client!wl", name = "m", descriptor = "I")
 	public int anInt5889 = 1190717;
 
-    @OriginalMember(owner = "client!be", name = "a", descriptor = "(II)I")
-    public static int method492(@OriginalArg(1) int arg0) {
-        return arg0 == 16711935 ? -1 : ColorUtils.rgbToHsl(arg0);
-    }
+	@OriginalMember(owner = "client!be", name = "a", descriptor = "(II)I")
+	public static int method492(@OriginalArg(1) int arg0) {
+		return arg0 == 16711935 ? -1 : ColorUtils.rgbToHsl(arg0);
+	}
 
-    @OriginalMember(owner = "client!wl", name = "a", descriptor = "(ILclient!wa;I)V")
+	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(ILclient!wa;I)V")
 	public final void decode(@OriginalArg(1) Buffer arg0, @OriginalArg(2) int arg1) {
 		while (true) {
 			@Pc(5) int local5 = arg0.g1();

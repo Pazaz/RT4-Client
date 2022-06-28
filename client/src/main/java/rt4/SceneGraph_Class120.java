@@ -62,7 +62,7 @@ public final class SceneGraph_Class120 {
 	@OriginalMember(owner = "client!pe", name = "y", descriptor = "I")
 	public int anInt4464;
 
-    @OriginalMember(owner = "client!wj", name = "a", descriptor = "(IIIIIII)V")
+	@OriginalMember(owner = "client!wj", name = "a", descriptor = "(IIIIIII)V")
 	public static void method4647(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6) {
 		@Pc(3) SceneGraph_Class120 local3 = new SceneGraph_Class120();
 		local3.anInt4452 = arg1 / 128;

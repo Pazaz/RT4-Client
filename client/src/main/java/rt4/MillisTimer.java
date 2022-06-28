@@ -78,7 +78,7 @@ public final class MillisTimer extends Timer {
 		if (arg0 > this.anInt3552) {
 			this.anInt3552 = arg0;
 		}
-		ThreadUtils.sleep((long) this.anInt3552);
+		ThreadUtils.sleep(this.anInt3552);
 		local139 = 0;
 		while (this.anInt3553 < 256) {
 			this.anInt3553 += this.anInt3550;

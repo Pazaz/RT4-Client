@@ -1,10 +1,11 @@
 package rt4;
 
-import java.io.IOException;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+
+import java.io.IOException;
 
 @OriginalClass("client!jb")
 public final class Js5NetQueue {
@@ -155,7 +156,7 @@ public final class Js5NetQueue {
 							@Pc(476) int local476 = this.inBuffer.g4();
 							@Pc(480) int local480 = local471 & 0x7F;
 							@Pc(491) boolean local491 = (local471 & 0x80) != 0;
-							@Pc(501) long local501 = (long) ((local235 << 16) + local283);
+							@Pc(501) long local501 = (local235 << 16) + local283;
 							@Pc(509) Js5NetRequest local509;
 							if (local491) {
 								for (local509 = (Js5NetRequest) this.inFlightPrefetchRequests.head(); local509 != null && local509.secondaryKey != local501; local509 = (Js5NetRequest) this.inFlightPrefetchRequests.next()) {

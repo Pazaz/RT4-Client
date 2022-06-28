@@ -1,10 +1,5 @@
 package rt4;
 
-import java.awt.Canvas;
-import java.nio.ByteOrder;
-import java.nio.IntBuffer;
-import java.nio.charset.StandardCharsets;
-
 import com.jogamp.nativewindow.awt.AWTGraphicsConfiguration;
 import com.jogamp.nativewindow.awt.JAWTWindow;
 import com.jogamp.opengl.*;
@@ -12,6 +7,11 @@ import jogamp.newt.awt.NewtFactoryAWT;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+
+import java.awt.*;
+import java.nio.ByteOrder;
+import java.nio.IntBuffer;
+import java.nio.charset.StandardCharsets;
 
 public final class GlRenderer {
 
@@ -693,7 +693,7 @@ public final class GlRenderer {
 			if (window.getLock().isLocked()) {
 				window.unlockSurface();
 			}
-            gl = GLContext.getCurrentGL().getGL2();
+			gl = GLContext.getCurrentGL().getGL2();
 			gl.glLineWidth((float) GameShell.canvasScale);
 			enabled = true;
 			canvasWidth = canvas.getSize().width;
@@ -767,7 +767,7 @@ public final class GlRenderer {
 		@Pc(23) float local23 = (float) arg2 / 512.0F;
 		@Pc(30) float local30 = local23 * (256.0F / (float) arg4);
 		@Pc(37) float local37 = local23 * (256.0F / (float) arg5);
-		gl.glOrtho((double) ((float) local2 * local30), (double) ((float) local6 * local30), (double) ((float) -local13 * local37), (double) ((float) -local9 * local37), (double) (50 - arg3), (double) (GlobalConfig.VIEW_DISTANCE - arg3));
+		gl.glOrtho((float) local2 * local30, (float) local6 * local30, (float) -local13 * local37, (float) -local9 * local37, 50 - arg3, GlobalConfig.VIEW_DISTANCE - arg3);
 		setViewportBounds(0, 0, canvasWidth, canvasHeight);
 		gl.glMatrixMode(GL2.GL_MODELVIEW);
 		gl.glLoadIdentity();
@@ -807,7 +807,7 @@ public final class GlRenderer {
 		gl.glGenTextures(1, local2, 0);
 		anInt5328 = local2[0];
 		gl.glBindTexture(GL2.GL_TEXTURE_2D, anInt5328);
-		gl.glTexImage2D(GL2.GL_TEXTURE_2D, 0, 4, 1, 1, 0, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, IntBuffer.wrap(new int[] { -1 }));
+		gl.glTexImage2D(GL2.GL_TEXTURE_2D, 0, 4, 1, 1, 0, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, IntBuffer.wrap(new int[]{-1}));
 		LightingManager.method2401();
 		MaterialManager.init();
 	}

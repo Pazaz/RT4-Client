@@ -33,10 +33,10 @@ public final class SoftwareRaster {
 	@OriginalMember(owner = "client!kb", name = "h", descriptor = "I")
 	public static int clipBottom = 0;
 
-    @OriginalMember(owner = "client!vd", name = "w", descriptor = "Lclient!vk;")
-    public static FrameBuffer frameBuffer;
+	@OriginalMember(owner = "client!vd", name = "w", descriptor = "Lclient!vk;")
+	public static FrameBuffer frameBuffer;
 
-    @OriginalMember(owner = "client!kb", name = "a", descriptor = "()V")
+	@OriginalMember(owner = "client!kb", name = "a", descriptor = "()V")
 	public static void method2482() {
 		anIntArray295 = null;
 		anIntArray296 = null;

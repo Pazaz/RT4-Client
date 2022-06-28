@@ -1,18 +1,19 @@
 package rt4;
 
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import com.jogamp.opengl.*;
+import com.jogamp.opengl.GL2;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+
 @OriginalClass("client!hg")
 public final class GlTile extends Node {
 
-    @OriginalMember(owner = "client!hg", name = "J", descriptor = "Ljava/nio/ByteBuffer;")
-    public static ByteBuffer aByteBuffer4;
+	@OriginalMember(owner = "client!hg", name = "J", descriptor = "Ljava/nio/ByteBuffer;")
+	public static ByteBuffer aByteBuffer4;
 	@OriginalMember(owner = "client!hg", name = "U", descriptor = "Lclient!wa;")
 	public static Buffer aClass3_Sub15_3;
 	@OriginalMember(owner = "client!hg", name = "K", descriptor = "Lclient!wa;")

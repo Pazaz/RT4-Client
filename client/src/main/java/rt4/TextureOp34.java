@@ -189,13 +189,13 @@ public final class TextureOp34 extends TextureOp {
 			this.aShortArray4 = new short[this.anInt642];
 			this.aShortArray3 = new short[this.anInt642];
 			for (local21 = 0; local21 < this.anInt642; local21++) {
-				this.aShortArray4[local21] = (short) (Math.pow((double) ((float) this.anInt648 / 4096.0F), (double) local21) * 4096.0D);
-				this.aShortArray3[local21] = (short) Math.pow(2.0D, (double) local21);
+				this.aShortArray4[local21] = (short) (Math.pow((float) this.anInt648 / 4096.0F, local21) * 4096.0D);
+				this.aShortArray3[local21] = (short) Math.pow(2.0D, local21);
 			}
 		} else if (this.aShortArray4 != null && this.aShortArray4.length == this.anInt642) {
 			this.aShortArray3 = new short[this.anInt642];
 			for (local21 = 0; local21 < this.anInt642; local21++) {
-				this.aShortArray3[local21] = (short) Math.pow(2.0D, (double) local21);
+				this.aShortArray3[local21] = (short) Math.pow(2.0D, local21);
 			}
 		}
 	}

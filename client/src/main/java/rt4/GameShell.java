@@ -1,15 +1,16 @@
 package rt4;
 
+import org.openrs2.deob.annotation.OriginalArg;
+import org.openrs2.deob.annotation.OriginalClass;
+import org.openrs2.deob.annotation.OriginalMember;
+import org.openrs2.deob.annotation.Pc;
+
 import java.applet.Applet;
 import java.applet.AppletContext;
 import java.awt.*;
 import java.awt.event.*;
 import java.lang.reflect.Method;
 import java.net.URL;
-import org.openrs2.deob.annotation.OriginalArg;
-import org.openrs2.deob.annotation.OriginalClass;
-import org.openrs2.deob.annotation.OriginalMember;
-import org.openrs2.deob.annotation.Pc;
 
 @OriginalClass("client!rc")
 public abstract class GameShell extends Applet implements Runnable, FocusListener, WindowListener {
@@ -85,10 +86,10 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 
 	@OriginalMember(owner = "client!ba", name = "B", descriptor = "I")
 	public static double VARIABLE_RENDER_RATE = 20.0d;
-	public static long VARIABLE_RENDER_RATE_NS = (long)(VARIABLE_RENDER_RATE * 1_000_000.0d);
+	public static long VARIABLE_RENDER_RATE_NS = (long) (VARIABLE_RENDER_RATE * 1_000_000.0d);
 
 	public static final double FIXED_UPDATE_RATE = 20.0d;
-	public static final long FIXED_UPDATE_RATE_NS = (long)(FIXED_UPDATE_RATE * 1_000_000.0d);
+	public static final long FIXED_UPDATE_RATE_NS = (long) (FIXED_UPDATE_RATE * 1_000_000.0d);
 
 	@OriginalMember(owner = "client!cm", name = "b", descriptor = "Ljava/lang/Thread;")
 	public static Thread thread;
@@ -158,26 +159,26 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 		}
 	}
 
-    @OriginalMember(owner = "client!ta", name = "a", descriptor = "(Z)V")
-    public static void resetTimer() {
-        timer.reset();
-        @Pc(10) int local10;
-        for (local10 = 0; local10 < 32; local10++) {
-            redrawTimes[local10] = 0L;
-        }
-        for (local10 = 0; local10 < 32; local10++) {
-            logicTimes[local10] = 0L;
-        }
-        logicCycles = 0;
-    }
-
-    @OriginalMember(owner = "client!ja", name = "a", descriptor = "(II)V")
-	public static void setFpsTarget(@OriginalArg(0) int fps) {
-		VARIABLE_RENDER_RATE = 1000.0d / (double)fps;
-		VARIABLE_RENDER_RATE_NS = (int)(VARIABLE_RENDER_RATE * 1_000_000.0d);
+	@OriginalMember(owner = "client!ta", name = "a", descriptor = "(Z)V")
+	public static void resetTimer() {
+		timer.reset();
+		@Pc(10) int local10;
+		for (local10 = 0; local10 < 32; local10++) {
+			redrawTimes[local10] = 0L;
+		}
+		for (local10 = 0; local10 < 32; local10++) {
+			logicTimes[local10] = 0L;
+		}
+		logicCycles = 0;
 	}
 
-    @OriginalMember(owner = "client!qh", name = "a", descriptor = "(Z)V")
+	@OriginalMember(owner = "client!ja", name = "a", descriptor = "(II)V")
+	public static void setFpsTarget(@OriginalArg(0) int fps) {
+		VARIABLE_RENDER_RATE = 1000.0d / (double) fps;
+		VARIABLE_RENDER_RATE_NS = (int) (VARIABLE_RENDER_RATE * 1_000_000.0d);
+	}
+
+	@OriginalMember(owner = "client!qh", name = "a", descriptor = "(Z)V")
 	public static void method3662() {
 		@Pc(8) Container local8;
 		if (fullScreenFrame != null) {
@@ -222,7 +223,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 		Static139.method2704();
 	}
 
-    @OriginalMember(owner = "client!rc", name = "focusLost", descriptor = "(Ljava/awt/event/FocusEvent;)V")
+	@OriginalMember(owner = "client!rc", name = "focusLost", descriptor = "(Ljava/awt/event/FocusEvent;)V")
 	@Override
 	public final void focusLost(@OriginalArg(0) FocusEvent event) {
 		focusIn = false;
@@ -446,7 +447,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 	private void mainRedrawWrapper() {
 		long now = System.currentTimeMillis();
 		if (now - lastFpsUpdate > 1000) {
-			lastFps[lastFpsIndex++] = 1_000_000_000.0d / (double)renderDelta;
+			lastFps[lastFpsIndex++] = 1_000_000_000.0d / (double) renderDelta;
 			double total = 0.0d;
 			for (int i = 0; i < lastFps.length; ++i) {
 				total += lastFps[i];
@@ -575,7 +576,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 
 				updateDelta = currentTime - lastUpdateTime;
 				if (updateDelta >= FIXED_UPDATE_RATE_NS) {
-					logicCycles = timer.count(minimumDelay, (int)FIXED_UPDATE_RATE);
+					logicCycles = timer.count(minimumDelay, (int) FIXED_UPDATE_RATE);
 					for (int cycle = 0; cycle < logicCycles; ++cycle) {
 						this.mainLoopWrapper();
 					}
@@ -688,11 +689,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			canvasHeight = 503;
 			frameHeight = 503;
 			@Pc(54) String openWindowJavaScriptStr = this.getParameter("openwinjs");
-			if (openWindowJavaScriptStr != null && openWindowJavaScriptStr.equals("1")) {
-				openWindowJavaScript = true;
-			} else {
-				openWindowJavaScript = false;
-			}
+			openWindowJavaScript = openWindowJavaScriptStr != null && openWindowJavaScriptStr.equals("1");
 			if (signLink == null) {
 				Static69.signLink = signLink = new SignLink(this, cacheId, null, 0);
 			}

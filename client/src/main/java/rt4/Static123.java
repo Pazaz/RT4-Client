@@ -10,23 +10,23 @@ public final class Static123 {
 	@OriginalMember(owner = "client!jj", name = "e", descriptor = "I")
 	public static int anInt3058 = 0;
 
-    @OriginalMember(owner = "client!jj", name = "j", descriptor = "Z")
+	@OriginalMember(owner = "client!jj", name = "j", descriptor = "Z")
 	public static boolean draggingClickedInventoryObject = false;
 
 	@OriginalMember(owner = "client!ml", name = "K", descriptor = "I")
 	public static int anInt3947;
-    @OriginalMember(owner = "client!k", name = "l", descriptor = "[I")
-    public static int[] anIntArray292;
-    @OriginalMember(owner = "client!ta", name = "o", descriptor = "[I")
-    public static int[] anIntArray454;
-    @OriginalMember(owner = "client!nd", name = "s", descriptor = "I")
-    public static int anInt4069;
+	@OriginalMember(owner = "client!k", name = "l", descriptor = "[I")
+	public static int[] anIntArray292;
+	@OriginalMember(owner = "client!ta", name = "o", descriptor = "[I")
+	public static int[] anIntArray454;
+	@OriginalMember(owner = "client!nd", name = "s", descriptor = "I")
+	public static int anInt4069;
 	@OriginalMember(owner = "client!qk", name = "c", descriptor = "[I")
 	public static int[] anIntArray427;
-    @OriginalMember(owner = "client!lj", name = "B", descriptor = "I")
-    public static int anInt3555;
+	@OriginalMember(owner = "client!lj", name = "B", descriptor = "I")
+	public static int anInt3555;
 
-    @OriginalMember(owner = "client!jj", name = "a", descriptor = "(Z)V")
+	@OriginalMember(owner = "client!jj", name = "a", descriptor = "(Z)V")
 	public static void topBannerRefresh() {
 		if (!client.advertSuppressed && client.modeWhere != 2) {
 			try {
@@ -39,7 +39,8 @@ public final class Static123 {
 	@OriginalMember(owner = "client!jj", name = "a", descriptor = "()V")
 	public static void method2419() {
 		SceneGraph.anInt4870 = 0;
-		label194: for (@Pc(3) int local3 = 0; local3 < SceneGraph.anInt917; local3++) {
+		label194:
+		for (@Pc(3) int local3 = 0; local3 < SceneGraph.anInt917; local3++) {
 			@Pc(10) SceneGraph_Class120 local10 = SceneGraph.aClass120Array1[local3];
 			@Pc(14) int local14;
 			if (Static8.anIntArray8 != null) {
@@ -146,7 +147,8 @@ public final class Static123 {
 							local158 = SceneGraph.visibility + SceneGraph.visibility;
 						}
 						@Pc(430) boolean local430 = false;
-						label166: for (@Pc(432) int local432 = local408; local432 <= local158; local432++) {
+						label166:
+						for (@Pc(432) int local432 = local408; local432 <= local158; local432++) {
 							for (@Pc(437) int local437 = local115; local437 <= local126; local437++) {
 								if (SceneGraph.aBooleanArrayArray1[local432][local437]) {
 									local430 = true;

@@ -73,7 +73,7 @@ public final class SpotAnim extends Entity {
 		} else {
 			local26 = local8.constructModel(this.anInt602, this.anInt593, this.anInt607);
 		}
-		return local26 == null ? null : local26;
+		return local26;
 	}
 
 	@OriginalMember(owner = "client!bh", name = "b", descriptor = "()I")

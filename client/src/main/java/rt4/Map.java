@@ -59,18 +59,18 @@ public final class Map extends SecondaryNode {
 		this.chunks = new LinkedList();
 	}
 
-    @OriginalMember(owner = "client!rb", name = "a", descriptor = "(Lclient!wa;Z)Lclient!bn;")
-    public static Map create(@OriginalArg(0) Buffer arg0) {
-        @Pc(35) Map local35 = new Map(arg0.gjstr(), arg0.gjstr(), arg0.g2(), arg0.g2(), arg0.g4(), arg0.g1() == 1, arg0.g1());
-        @Pc(39) int local39 = arg0.g1();
-        for (@Pc(41) int local41 = 0; local41 < local39; local41++) {
-            local35.chunks.addTail(new MapChunk(arg0.g2(), arg0.g2(), arg0.g2(), arg0.g2()));
-        }
-        local35.computeBounds();
-        return local35;
-    }
+	@OriginalMember(owner = "client!rb", name = "a", descriptor = "(Lclient!wa;Z)Lclient!bn;")
+	public static Map create(@OriginalArg(0) Buffer arg0) {
+		@Pc(35) Map local35 = new Map(arg0.gjstr(), arg0.gjstr(), arg0.g2(), arg0.g2(), arg0.g4(), arg0.g1() == 1, arg0.g1());
+		@Pc(39) int local39 = arg0.g1();
+		for (@Pc(41) int local41 = 0; local41 < local39; local41++) {
+			local35.chunks.addTail(new MapChunk(arg0.g2(), arg0.g2(), arg0.g2(), arg0.g2()));
+		}
+		local35.computeBounds();
+		return local35;
+	}
 
-    @OriginalMember(owner = "client!bn", name = "a", descriptor = "(IBI)Z")
+	@OriginalMember(owner = "client!bn", name = "a", descriptor = "(IBI)Z")
 	public final boolean method664(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
 		if (this.displayMinX > arg1 || arg1 > this.displayMaxZ || arg0 < this.displayMaxX || arg0 > this.displayMinZ) {
 			return false;

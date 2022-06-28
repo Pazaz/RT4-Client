@@ -1,10 +1,11 @@
 package rt4;
 
-import java.util.Random;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+
+import java.util.Random;
 
 @OriginalClass("client!vc")
 public final class TextureOp38 extends TextureOp {
@@ -58,7 +59,7 @@ public final class TextureOp38 extends TextureOp {
 		if (this.monochromeImageCache.invalid) {
 			@Pc(28) int local28 = this.anInt5714 >> 1;
 			@Pc(33) int[][] local33 = this.monochromeImageCache.method3446();
-			@Pc(40) Random local40 = new Random((long) this.anInt5716);
+			@Pc(40) Random local40 = new Random(this.anInt5716);
 			for (@Pc(42) int local42 = 0; local42 < this.anInt5712; local42++) {
 				@Pc(64) int local64 = this.anInt5714 > 0 ? this.anInt5709 + Texture.method3219(this.anInt5714, local40) - local28 : this.anInt5709;
 				@Pc(69) int local69 = Texture.method3219(Texture.width, local40);

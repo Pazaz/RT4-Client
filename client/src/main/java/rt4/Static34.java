@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class Static34 {
 
 	@OriginalMember(owner = "client!ck", name = "d", descriptor = "[I")
-	public static final int[] anIntArray80 = new int[] { 1, 0, -1, 0 };
+	public static final int[] anIntArray80 = new int[]{1, 0, -1, 0};
 
 	@OriginalMember(owner = "client!ck", name = "T", descriptor = "Lclient!na;")
 	private static final JagString aClass100_207 = JagString.parse("Jan");
@@ -44,12 +44,12 @@ public final class Static34 {
 	private static final JagString aClass100_205 = JagString.parse("Dec");
 
 	@OriginalMember(owner = "client!ck", name = "f", descriptor = "[Lclient!na;")
-	public static final JagString[] aClass100Array40 = new JagString[] { aClass100_207, aClass100_212, aClass100_211, aClass100_210, aClass100_199, aClass100_204, aClass100_202, aClass100_198, aClass100_208, aClass100_206, aClass100_209, aClass100_205 };
+	public static final JagString[] aClass100Array40 = new JagString[]{aClass100_207, aClass100_212, aClass100_211, aClass100_210, aClass100_199, aClass100_204, aClass100_202, aClass100_198, aClass100_208, aClass100_206, aClass100_209, aClass100_205};
 
 	@OriginalMember(owner = "client!ck", name = "o", descriptor = "Lclient!na;")
 	private static final JagString aClass100_200 = JagString.parse("Loaded world list data");
 
-    @OriginalMember(owner = "client!ck", name = "K", descriptor = "I")
+	@OriginalMember(owner = "client!ck", name = "K", descriptor = "I")
 	public static int anInt1053 = 0;
 
 }

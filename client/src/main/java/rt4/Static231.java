@@ -93,7 +93,7 @@ public final class Static231 {
 		}
 	}
 
-    @OriginalMember(owner = "client!ed", name = "a", descriptor = "(ZIIII)V")
+	@OriginalMember(owner = "client!ed", name = "a", descriptor = "(ZIIII)V")
 	public static void method1306(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		if (arg3 >= TextureOp29.anInt4164 && arg3 <= TextureOp29.anInt5063) {
 			@Pc(22) int local22 = method1690(TextureOp29.anInt2869, arg1, TextureOp29.anInt5773);

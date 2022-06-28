@@ -15,30 +15,30 @@ public final class Player extends PathingEntity {
 	@OriginalMember(owner = "client!a", name = "f", descriptor = "[Z")
 	public static final boolean[] secondaryOptions = new boolean[8];
 	@OriginalMember(owner = "client!pa", name = "P", descriptor = "Lclient!na;")
-    public static JagString password = JagString.EMPTY;
+	public static JagString password = JagString.EMPTY;
 	@OriginalMember(owner = "client!pa", name = "S", descriptor = "Lclient!na;")
 	public static JagString usernameInput = JagString.EMPTY;
 	@OriginalMember(owner = "client!ba", name = "w", descriptor = "I")
 	public static int inTutorialIsland = 0;
 	@OriginalMember(owner = "client!ee", name = "b", descriptor = "I")
 	public static int level;
-    @OriginalMember(owner = "client!bb", name = "E", descriptor = "I")
-    public static int runEnergy = 0;
+	@OriginalMember(owner = "client!bb", name = "E", descriptor = "I")
+	public static int runEnergy = 0;
 	@OriginalMember(owner = "client!ug", name = "o", descriptor = "I")
 	public static int weight = 0;
 	@OriginalMember(owner = "client!jl", name = "H", descriptor = "I")
 	public static int worldId = -1;
 	@OriginalMember(owner = "client!em", name = "B", descriptor = "I")
 	public static int rebootTimer = 0;
-    @OriginalMember(owner = "client!hm", name = "gb", descriptor = "J")
-    public static long name37;
+	@OriginalMember(owner = "client!hm", name = "gb", descriptor = "J")
+	public static long name37;
 	@OriginalMember(owner = "client!sm", name = "k", descriptor = "Lsignlink!im;")
 	public static PrivilegedRequest lastLogAddress;
-    @OriginalMember(owner = "client!ib", name = "l", descriptor = "I")
-    public static int anInt2863 = 0;
-    @OriginalMember(owner = "client!ea", name = "r", descriptor = "[[B")
-    public static byte[][] aByteArrayArray8;
-    @OriginalMember(owner = "client!e", name = "Bc", descriptor = "Lclient!hh;")
+	@OriginalMember(owner = "client!ib", name = "l", descriptor = "I")
+	public static int anInt2863 = 0;
+	@OriginalMember(owner = "client!ea", name = "r", descriptor = "[[B")
+	public static byte[][] aByteArrayArray8;
+	@OriginalMember(owner = "client!e", name = "Bc", descriptor = "Lclient!hh;")
 	public PlayerAppearance appearance;
 
 	@OriginalMember(owner = "client!e", name = "Mc", descriptor = "Lclient!na;")
@@ -167,35 +167,35 @@ public final class Player extends PathingEntity {
 		}
 	}
 
-    @OriginalMember(owner = "client!la", name = "a", descriptor = "(ILclient!e;)I")
-    public static int getSound(@OriginalArg(1) Player arg0) {
-        @Pc(14) int local14 = arg0.anInt1654;
-        @Pc(18) BasType local18 = arg0.getBasType();
-        if (local18.idleAnimationId == arg0.movementSeqId) {
-            local14 = arg0.anInt1648;
-        } else if (local18.runAnimationId == arg0.movementSeqId || arg0.movementSeqId == local18.runAnimationId2 || arg0.movementSeqId == local18.runAnimationId4 || local18.runAnimationId3 == arg0.movementSeqId) {
-            local14 = arg0.anInt1670;
-        } else if (arg0.movementSeqId == local18.anInt1062 || arg0.movementSeqId == local18.anInt1042 || arg0.movementSeqId == local18.anInt1048 || arg0.movementSeqId == local18.anInt1066) {
-            local14 = arg0.anInt1658;
-        }
-        return local14;
-    }
+	@OriginalMember(owner = "client!la", name = "a", descriptor = "(ILclient!e;)I")
+	public static int getSound(@OriginalArg(1) Player arg0) {
+		@Pc(14) int local14 = arg0.anInt1654;
+		@Pc(18) BasType local18 = arg0.getBasType();
+		if (local18.idleAnimationId == arg0.movementSeqId) {
+			local14 = arg0.anInt1648;
+		} else if (local18.runAnimationId == arg0.movementSeqId || arg0.movementSeqId == local18.runAnimationId2 || arg0.movementSeqId == local18.runAnimationId4 || local18.runAnimationId3 == arg0.movementSeqId) {
+			local14 = arg0.anInt1670;
+		} else if (arg0.movementSeqId == local18.anInt1062 || arg0.movementSeqId == local18.anInt1042 || arg0.movementSeqId == local18.anInt1048 || arg0.movementSeqId == local18.anInt1066) {
+			local14 = arg0.anInt1658;
+		}
+		return local14;
+	}
 
-    @OriginalMember(owner = "client!um", name = "a", descriptor = "(Z)V")
-    public static void setTutorialIsland() {
-        inTutorialIsland = 0;
-        @Pc(17) int local17 = Camera.originX + (PlayerList.self.xFine >> 7);
-        @Pc(25) int local25 = (PlayerList.self.zFine >> 7) + Camera.originZ;
-        if (local17 >= 3053 && local17 <= 3156 && local25 >= 3056 && local25 <= 3136) {
-            inTutorialIsland = 1;
-        }
-        if (local17 >= 3072 && local17 <= 3118 && local25 >= 9492 && local25 <= 9535) {
-            inTutorialIsland = 1;
-        }
-        if (inTutorialIsland == 1 && local17 >= 3139 && local17 <= 3199 && local25 >= 3008 && local25 <= 3062) {
-            inTutorialIsland = 0;
-        }
-    }
+	@OriginalMember(owner = "client!um", name = "a", descriptor = "(Z)V")
+	public static void setTutorialIsland() {
+		inTutorialIsland = 0;
+		@Pc(17) int local17 = Camera.originX + (PlayerList.self.xFine >> 7);
+		@Pc(25) int local25 = (PlayerList.self.zFine >> 7) + Camera.originZ;
+		if (local17 >= 3053 && local17 <= 3156 && local25 >= 3056 && local25 <= 3136) {
+			inTutorialIsland = 1;
+		}
+		if (local17 >= 3072 && local17 <= 3118 && local25 >= 9492 && local25 <= 9535) {
+			inTutorialIsland = 1;
+		}
+		if (inTutorialIsland == 1 && local17 >= 3139 && local17 <= 3199 && local25 >= 3008 && local25 <= 3062) {
+			inTutorialIsland = 0;
+		}
+	}
 
 	@OriginalMember(owner = "client!rg", name = "a", descriptor = "(Lclient!e;I)V")
 	public static void method4359(@OriginalArg(0) Player arg0) {
@@ -207,92 +207,92 @@ public final class Player extends PathingEntity {
 		}
 	}
 
-    @OriginalMember(owner = "client!bf", name = "c", descriptor = "(I)V")
-    public static void method501() {
-        if (!GlRenderer.enabled || Static231.aBoolean252) {
-            return;
-        }
-        @Pc(14) Tile[][][] local14 = SceneGraph.tiles;
-        for (@Pc(22) int local22 = 0; local22 < local14.length; local22++) {
-            @Pc(30) Tile[][] local30 = local14[local22];
-            for (@Pc(32) int local32 = 0; local32 < local30.length; local32++) {
-                for (@Pc(42) int local42 = 0; local42 < local30[local32].length; local42++) {
-                    @Pc(54) Tile local54 = local30[local32][local42];
-                    if (local54 != null) {
-                        @Pc(71) GlModel local71;
-                        if (local54.groundDecor != null && local54.groundDecor.entity instanceof GlModel) {
-                            local71 = (GlModel) local54.groundDecor.entity;
-                            if ((local54.groundDecor.key & Long.MIN_VALUE) == 0L) {
-                                local71.method4111(false, true, true, false, true, true);
-                            } else {
-                                local71.method4111(true, true, true, true, true, true);
-                            }
-                        }
-                        if (local54.wallDecor != null) {
-                            if (local54.wallDecor.primary instanceof GlModel) {
-                                local71 = (GlModel) local54.wallDecor.primary;
-                                if ((local54.wallDecor.key & Long.MIN_VALUE) == 0L) {
-                                    local71.method4111(false, true, true, false, true, true);
-                                } else {
-                                    local71.method4111(true, true, true, true, true, true);
-                                }
-                            }
-                            if (local54.wallDecor.secondary instanceof GlModel) {
-                                local71 = (GlModel) local54.wallDecor.secondary;
-                                if ((Long.MIN_VALUE & local54.wallDecor.key) == 0L) {
-                                    local71.method4111(false, true, true, false, true, true);
-                                } else {
-                                    local71.method4111(true, true, true, true, true, true);
-                                }
-                            }
-                        }
-                        if (local54.wall != null) {
-                            if (local54.wall.primary instanceof GlModel) {
-                                local71 = (GlModel) local54.wall.primary;
-                                if ((local54.wall.key & Long.MIN_VALUE) == 0L) {
-                                    local71.method4111(false, true, true, false, true, true);
-                                } else {
-                                    local71.method4111(true, true, true, true, true, true);
-                                }
-                            }
-                            if (local54.wall.secondary instanceof GlModel) {
-                                local71 = (GlModel) local54.wall.secondary;
-                                if ((Long.MIN_VALUE & local54.wall.key) == 0L) {
-                                    local71.method4111(false, true, true, false, true, true);
-                                } else {
-                                    local71.method4111(true, true, true, true, true, true);
-                                }
-                            }
-                        }
-                        for (@Pc(270) int local270 = 0; local270 < local54.sceneryLen; local270++) {
-                            if (local54.scenery[local270].entity instanceof GlModel) {
-                                @Pc(293) GlModel local293 = (GlModel) local54.scenery[local270].entity;
-                                if ((Long.MIN_VALUE & local54.scenery[local270].key) == 0L) {
-                                    local293.method4111(false, true, true, false, true, true);
-                                } else {
-                                    local293.method4111(true, true, true, true, true, true);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        Static231.aBoolean252 = true;
-    }
+	@OriginalMember(owner = "client!bf", name = "c", descriptor = "(I)V")
+	public static void method501() {
+		if (!GlRenderer.enabled || Static231.aBoolean252) {
+			return;
+		}
+		@Pc(14) Tile[][][] local14 = SceneGraph.tiles;
+		for (@Pc(22) int local22 = 0; local22 < local14.length; local22++) {
+			@Pc(30) Tile[][] local30 = local14[local22];
+			for (@Pc(32) int local32 = 0; local32 < local30.length; local32++) {
+				for (@Pc(42) int local42 = 0; local42 < local30[local32].length; local42++) {
+					@Pc(54) Tile local54 = local30[local32][local42];
+					if (local54 != null) {
+						@Pc(71) GlModel local71;
+						if (local54.groundDecor != null && local54.groundDecor.entity instanceof GlModel) {
+							local71 = (GlModel) local54.groundDecor.entity;
+							if ((local54.groundDecor.key & Long.MIN_VALUE) == 0L) {
+								local71.method4111(false, true, true, false, true, true);
+							} else {
+								local71.method4111(true, true, true, true, true, true);
+							}
+						}
+						if (local54.wallDecor != null) {
+							if (local54.wallDecor.primary instanceof GlModel) {
+								local71 = (GlModel) local54.wallDecor.primary;
+								if ((local54.wallDecor.key & Long.MIN_VALUE) == 0L) {
+									local71.method4111(false, true, true, false, true, true);
+								} else {
+									local71.method4111(true, true, true, true, true, true);
+								}
+							}
+							if (local54.wallDecor.secondary instanceof GlModel) {
+								local71 = (GlModel) local54.wallDecor.secondary;
+								if ((Long.MIN_VALUE & local54.wallDecor.key) == 0L) {
+									local71.method4111(false, true, true, false, true, true);
+								} else {
+									local71.method4111(true, true, true, true, true, true);
+								}
+							}
+						}
+						if (local54.wall != null) {
+							if (local54.wall.primary instanceof GlModel) {
+								local71 = (GlModel) local54.wall.primary;
+								if ((local54.wall.key & Long.MIN_VALUE) == 0L) {
+									local71.method4111(false, true, true, false, true, true);
+								} else {
+									local71.method4111(true, true, true, true, true, true);
+								}
+							}
+							if (local54.wall.secondary instanceof GlModel) {
+								local71 = (GlModel) local54.wall.secondary;
+								if ((Long.MIN_VALUE & local54.wall.key) == 0L) {
+									local71.method4111(false, true, true, false, true, true);
+								} else {
+									local71.method4111(true, true, true, true, true, true);
+								}
+							}
+						}
+						for (@Pc(270) int local270 = 0; local270 < local54.sceneryLen; local270++) {
+							if (local54.scenery[local270].entity instanceof GlModel) {
+								@Pc(293) GlModel local293 = (GlModel) local54.scenery[local270].entity;
+								if ((Long.MIN_VALUE & local54.scenery[local270].key) == 0L) {
+									local293.method4111(false, true, true, false, true, true);
+								} else {
+									local293.method4111(true, true, true, true, true, true);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		Static231.aBoolean252 = true;
+	}
 
-    @OriginalMember(owner = "client!ja", name = "a", descriptor = "(IIIIB)V")
-    public static void method2310(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-        if (Cross.type == 1) {
-            Sprites.crosses[Cross.milliseconds / 100].render(Cross.x - 8, Cross.y + -8);
-        }
-        if (Cross.type == 2) {
-            Sprites.crosses[Cross.milliseconds / 100 + 4].render(Cross.x - 8, Cross.y + -8);
-        }
-        setTutorialIsland();
-    }
+	@OriginalMember(owner = "client!ja", name = "a", descriptor = "(IIIIB)V")
+	public static void method2310(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+		if (Cross.type == 1) {
+			Sprites.crosses[Cross.milliseconds / 100].render(Cross.x - 8, Cross.y + -8);
+		}
+		if (Cross.type == 2) {
+			Sprites.crosses[Cross.milliseconds / 100 + 4].render(Cross.x - 8, Cross.y + -8);
+		}
+		setTutorialIsland();
+	}
 
-    @OriginalMember(owner = "client!e", name = "c", descriptor = "(B)I")
+	@OriginalMember(owner = "client!e", name = "c", descriptor = "(B)I")
 	@Override
 	public final int getSize() {
 		return this.appearance == null || this.appearance.anInt2492 == -1 ? super.getSize() : NpcTypeList.get(this.appearance.anInt2492).size;
@@ -555,7 +555,7 @@ public final class Player extends PathingEntity {
 		if (local12 < 16 || local12 > 360000) {
 			return;
 		}
-		@Pc(34) int local34 = (int) (Math.atan2((double) arg3, (double) arg1) * 325.949D) & 0x7FF;
+		@Pc(34) int local34 = (int) (Math.atan2(arg3, arg1) * 325.949D) & 0x7FF;
 		@Pc(46) Model local46 = HintArrowManager.getModel(local34, this.zFine, arg11, this.xFine, arg2, this.anInt3424);
 		if (local46 == null) {
 			return;
@@ -583,10 +583,10 @@ public final class Player extends PathingEntity {
 	public final JagString getName() {
 		@Pc(2) JagString local2 = this.username;
 		if (PlayerList.playerNames != null) {
-			local2 = JagString.concatenate(new JagString[] { PlayerList.playerNames[this.anInt1651], local2 });
+			local2 = JagString.concatenate(new JagString[]{PlayerList.playerNames[this.anInt1651], local2});
 		}
 		if (PlayerList.playerNames2 != null) {
-			local2 = JagString.concatenate(new JagString[] { local2, PlayerList.playerNames2[this.anInt1651] });
+			local2 = JagString.concatenate(new JagString[]{local2, PlayerList.playerNames2[this.anInt1651]});
 		}
 		return local2;
 	}

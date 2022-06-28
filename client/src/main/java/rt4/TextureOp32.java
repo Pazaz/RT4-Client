@@ -84,14 +84,14 @@ public final class TextureOp32 extends TextureOp {
 
 	@OriginalMember(owner = "client!pk", name = "g", descriptor = "(B)V")
 	private void method3533() {
-		@Pc(7) double local7 = Math.cos((double) ((float) this.anInt4584 / 4096.0F));
-		this.anIntArray406[0] = (int) (local7 * 4096.0D * Math.sin((double) ((float) this.anInt4577 / 4096.0F)));
-		this.anIntArray406[1] = (int) (Math.cos((double) ((float) this.anInt4577 / 4096.0F)) * local7 * 4096.0D);
-		this.anIntArray406[2] = (int) (Math.sin((double) ((float) this.anInt4584 / 4096.0F)) * 4096.0D);
+		@Pc(7) double local7 = Math.cos((float) this.anInt4584 / 4096.0F);
+		this.anIntArray406[0] = (int) (local7 * 4096.0D * Math.sin((float) this.anInt4577 / 4096.0F));
+		this.anIntArray406[1] = (int) (Math.cos((float) this.anInt4577 / 4096.0F) * local7 * 4096.0D);
+		this.anIntArray406[2] = (int) (Math.sin((float) this.anInt4584 / 4096.0F) * 4096.0D);
 		@Pc(73) int local73 = this.anIntArray406[2] * this.anIntArray406[2] >> 12;
 		@Pc(85) int local85 = this.anIntArray406[1] * this.anIntArray406[1] >> 12;
 		@Pc(97) int local97 = this.anIntArray406[0] * this.anIntArray406[0] >> 12;
-		@Pc(111) int local111 = (int) (Math.sqrt((double) (local97 + local85 + local73 >> 12)) * 4096.0D);
+		@Pc(111) int local111 = (int) (Math.sqrt(local97 + local85 + local73 >> 12) * 4096.0D);
 		if (local111 != 0) {
 			this.anIntArray406[2] = (this.anIntArray406[2] << 12) / local111;
 			this.anIntArray406[0] = (this.anIntArray406[0] << 12) / local111;

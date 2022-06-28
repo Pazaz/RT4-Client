@@ -47,7 +47,7 @@ public final class EnumType extends SecondaryNode {
 				} else {
 					local70 = new IntNode(arg1.g4());
 				}
-				this.table.put(local70, (long) local58);
+				this.table.put(local70, local58);
 			}
 		}
 	}
@@ -57,7 +57,7 @@ public final class EnumType extends SecondaryNode {
 		if (this.table == null) {
 			return this.defaultString;
 		} else {
-			@Pc(26) StringNode local26 = (StringNode) this.table.get((long) arg0);
+			@Pc(26) StringNode local26 = (StringNode) this.table.get(arg0);
 			return local26 == null ? this.defaultString : local26.value;
 		}
 	}
@@ -92,7 +92,7 @@ public final class EnumType extends SecondaryNode {
 		if (this.table == null) {
 			return this.defaultInt;
 		} else {
-			@Pc(18) IntNode local18 = (IntNode) this.table.get((long) arg0);
+			@Pc(18) IntNode local18 = (IntNode) this.table.get(arg0);
 			return local18 == null ? this.defaultInt : local18.value;
 		}
 	}
@@ -105,7 +105,7 @@ public final class EnumType extends SecondaryNode {
 		if (this.inverseTable == null) {
 			this.inverseInts();
 		}
-		@Pc(34) IntNode node = (IntNode) this.inverseTable.get((long) arg0);
+		@Pc(34) IntNode node = (IntNode) this.inverseTable.get(arg0);
 		return node != null;
 	}
 
@@ -114,7 +114,7 @@ public final class EnumType extends SecondaryNode {
 		this.inverseTable = new HashTable(this.table.getBucketCount());
 		for (@Pc(24) IntNode node = (IntNode) this.table.head(); node != null; node = (IntNode) this.table.next()) {
 			@Pc(34) IntNode inverseNode = new IntNode((int) node.key);
-			this.inverseTable.put(inverseNode, (long) node.value);
+			this.inverseTable.put(inverseNode, node.value);
 		}
 	}
 

@@ -1,11 +1,12 @@
 package rt4;
 
-import java.nio.charset.StandardCharsets;
-import java.util.Calendar;
-import java.util.Date;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+
+import java.nio.charset.StandardCharsets;
+import java.util.Calendar;
+import java.util.Date;
 
 public final class ScriptRunner {
 
@@ -21,7 +22,7 @@ public final class ScriptRunner {
 	public static final JagString EVENT_OPBASE = JagString.parse("event_opbase");
 	@OriginalMember(owner = "client!da", name = "O", descriptor = "Lclient!na;")
 	public static final JagString aClass100_253 = JagString.parse("(U0a )2 via: ");
-    @OriginalMember(owner = "client!fl", name = "H", descriptor = "Lclient!na;")
+	@OriginalMember(owner = "client!fl", name = "H", descriptor = "Lclient!na;")
 	public static final JagString aClass100_446 = JagString.parse("<img=0>");
 	@OriginalMember(owner = "client!nd", name = "b", descriptor = "Lclient!na;")
 	public static final JagString aClass100_780 = JagString.parse("Clientscript error in: ");
@@ -40,28 +41,28 @@ public final class ScriptRunner {
 	@OriginalMember(owner = "client!rl", name = "eb", descriptor = "Lclient!na;")
 	public static final JagString aClass100_928 = JagString.parse("(U0a )2 in: ");
 	@OriginalMember(owner = "client!bf", name = "I", descriptor = "[I")
-	public static final int[] anIntArray52 = new int[] { 16776960, 16711680, 65280, 65535, 16711935, 16777215 };
+	public static final int[] anIntArray52 = new int[]{16776960, 16711680, 65280, 65535, 16711935, 16777215};
 	@OriginalMember(owner = "client!fe", name = "I", descriptor = "Lclient!na;")
 	public static final JagString aClass100_639 = JagString.parse(" ");
-    @OriginalMember(owner = "client!dc", name = "M", descriptor = "Lclient!na;")
-    public static final JagString aClass100_268 = JagString.parse(")4");
-    @OriginalMember(owner = "client!he", name = "gb", descriptor = "Lclient!na;")
-    public static final JagString aClass100_518 = JagString.parse("www");
-    @OriginalMember(owner = "client!e", name = "Tc", descriptor = "Lclient!na;")
-    public static final JagString aClass100_365 = JagString.parse("www)2wtqa");
-    @OriginalMember(owner = "client!lk", name = "J", descriptor = "Lclient!na;")
-    public static final JagString aClass100_687 = JagString.parse(")4p=");
-    @OriginalMember(owner = "client!en", name = "x", descriptor = "Lclient!na;")
-    public static final JagString aClass100_424 = JagString.parse("http:)4)4");
-    @OriginalMember(owner = "client!gf", name = "I", descriptor = "Lclient!na;")
-    public static final JagString aClass100_886 = JagString.parse(")3runescape)3com)4l=");
-    @OriginalMember(owner = "client!v", name = "a", descriptor = "Lclient!na;")
-    public static final JagString aClass100_98 = JagString.parse(")4a=");
-    @OriginalMember(owner = "client!ch", name = "C", descriptor = "[[I")
-    public static final int[][] anIntArrayArray6 = new int[104][104];
-    @OriginalMember(owner = "client!n", name = "e", descriptor = "Lclient!na;")
-    public static final JagString aClass100_767 = JagString.parse(")2");
-    @OriginalMember(owner = "client!jh", name = "n", descriptor = "Lclient!bd;")
+	@OriginalMember(owner = "client!dc", name = "M", descriptor = "Lclient!na;")
+	public static final JagString aClass100_268 = JagString.parse(")4");
+	@OriginalMember(owner = "client!he", name = "gb", descriptor = "Lclient!na;")
+	public static final JagString aClass100_518 = JagString.parse("www");
+	@OriginalMember(owner = "client!e", name = "Tc", descriptor = "Lclient!na;")
+	public static final JagString aClass100_365 = JagString.parse("www)2wtqa");
+	@OriginalMember(owner = "client!lk", name = "J", descriptor = "Lclient!na;")
+	public static final JagString aClass100_687 = JagString.parse(")4p=");
+	@OriginalMember(owner = "client!en", name = "x", descriptor = "Lclient!na;")
+	public static final JagString aClass100_424 = JagString.parse("http:)4)4");
+	@OriginalMember(owner = "client!gf", name = "I", descriptor = "Lclient!na;")
+	public static final JagString aClass100_886 = JagString.parse(")3runescape)3com)4l=");
+	@OriginalMember(owner = "client!v", name = "a", descriptor = "Lclient!na;")
+	public static final JagString aClass100_98 = JagString.parse(")4a=");
+	@OriginalMember(owner = "client!ch", name = "C", descriptor = "[[I")
+	public static final int[][] anIntArrayArray6 = new int[104][104];
+	@OriginalMember(owner = "client!n", name = "e", descriptor = "Lclient!na;")
+	public static final JagString aClass100_767 = JagString.parse(")2");
+	@OriginalMember(owner = "client!jh", name = "n", descriptor = "Lclient!bd;")
 	public static QuickChatPhrase activePhrase;
 	@OriginalMember(owner = "client!wf", name = "j", descriptor = "Lclient!be;")
 	public static Component staticActiveComponent1;
@@ -73,28 +74,28 @@ public final class ScriptRunner {
 	public static int[] intLocals;
 	@OriginalMember(owner = "client!km", name = "ad", descriptor = "I")
 	public static int fp = 0;
-    @OriginalMember(owner = "client!od", name = "g", descriptor = "S")
-    public static short aShort25 = 256;
-    @OriginalMember(owner = "client!an", name = "db", descriptor = "S")
-    public static short aShort9 = 205;
-    @OriginalMember(owner = "client!mc", name = "tb", descriptor = "S")
-    public static short aShort22 = 1;
-    @OriginalMember(owner = "client!ac", name = "k", descriptor = "S")
-    public static short aShort1 = 32767;
-    @OriginalMember(owner = "client!nc", name = "n", descriptor = "I")
-    public static int anInt4055 = 0;
-    @OriginalMember(owner = "client!tm", name = "i", descriptor = "I")
-    public static int anInt5377 = 0;
-    @OriginalMember(owner = "client!bn", name = "eb", descriptor = "I")
-    public static int anInt773 = 0;
-    @OriginalMember(owner = "client!ah", name = "n", descriptor = "I")
-    public static int anInt983 = 0;
-    @OriginalMember(owner = "client!sc", name = "p", descriptor = "I")
-    public static int anInt5029 = 0;
-    @OriginalMember(owner = "client!kd", name = "yb", descriptor = "S")
-    public static short aShort21 = 32767;
-    @OriginalMember(owner = "client!ee", name = "f", descriptor = "S")
-    public static short aShort12 = 1;
+	@OriginalMember(owner = "client!od", name = "g", descriptor = "S")
+	public static short aShort25 = 256;
+	@OriginalMember(owner = "client!an", name = "db", descriptor = "S")
+	public static short aShort9 = 205;
+	@OriginalMember(owner = "client!mc", name = "tb", descriptor = "S")
+	public static short aShort22 = 1;
+	@OriginalMember(owner = "client!ac", name = "k", descriptor = "S")
+	public static short aShort1 = 32767;
+	@OriginalMember(owner = "client!nc", name = "n", descriptor = "I")
+	public static int anInt4055 = 0;
+	@OriginalMember(owner = "client!tm", name = "i", descriptor = "I")
+	public static int anInt5377 = 0;
+	@OriginalMember(owner = "client!bn", name = "eb", descriptor = "I")
+	public static int anInt773 = 0;
+	@OriginalMember(owner = "client!ah", name = "n", descriptor = "I")
+	public static int anInt983 = 0;
+	@OriginalMember(owner = "client!sc", name = "p", descriptor = "I")
+	public static int anInt5029 = 0;
+	@OriginalMember(owner = "client!kd", name = "yb", descriptor = "S")
+	public static short aShort21 = 32767;
+	@OriginalMember(owner = "client!ee", name = "f", descriptor = "S")
+	public static short aShort12 = 1;
 	@OriginalMember(owner = "client!kk", name = "j", descriptor = "I")
 	public static int anInt3325 = 0;
 	@OriginalMember(owner = "client!bi", name = "jb", descriptor = "Z")
@@ -121,22 +122,22 @@ public final class ScriptRunner {
 	public static int[] anIntArray134 = new int[2];
 	@OriginalMember(owner = "client!ge", name = "k", descriptor = "[I")
 	public static int[] anIntArray205 = new int[2];
-    @OriginalMember(owner = "client!d", name = "db", descriptor = "Z")
-    public static boolean aBoolean77 = false;
-    @OriginalMember(owner = "client!nm", name = "W", descriptor = "Lclient!na;")
+	@OriginalMember(owner = "client!d", name = "db", descriptor = "Z")
+	public static boolean aBoolean77 = false;
+	@OriginalMember(owner = "client!nm", name = "W", descriptor = "Lclient!na;")
 	public static JagString url;
 	@OriginalMember(owner = "client!bf", name = "B", descriptor = "I")
 	public static int anInt548 = -1;
 	@OriginalMember(owner = "client!pb", name = "rb", descriptor = "S")
 	public static short aShort27 = 320;
-    @OriginalMember(owner = "client!fc", name = "a", descriptor = "I")
-    public static int anInt1951 = -1;
+	@OriginalMember(owner = "client!fc", name = "a", descriptor = "I")
+	public static int anInt1951 = -1;
 	@OriginalMember(owner = "client!em", name = "w", descriptor = "I")
 	public static int anInt1892;
-    @OriginalMember(owner = "client!me", name = "nb", descriptor = "I")
-    public static int anInt3751;
+	@OriginalMember(owner = "client!me", name = "nb", descriptor = "I")
+	public static int anInt3751;
 
-    @OriginalMember(owner = "client!ja", name = "a", descriptor = "(IIIIIZ)V")
+	@OriginalMember(owner = "client!ja", name = "a", descriptor = "(IIIIIZ)V")
 	public static void method2314(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) boolean arg4) {
 		if (arg0 < 1) {
 			arg0 = 1;
@@ -224,8 +225,8 @@ public final class ScriptRunner {
 		@Pc(59) int local59;
 		@Pc(57) int local57;
 		if (Camera.cameraType == 1) {
-			local57 = Camera.anInt5161 + (int)Camera.yawTarget & 0x7FF;
-			local59 = (int)Camera.pitchTarget;
+			local57 = Camera.anInt5161 + (int) Camera.yawTarget & 0x7FF;
+			local59 = (int) Camera.pitchTarget;
 			if (local59 < Camera.anInt5245 / 256) {
 				local59 = Camera.anInt5245 / 256;
 			}
@@ -458,11 +459,11 @@ public final class ScriptRunner {
 					@Pc(512) Sprite local512 = Sprites.hitbars[1];
 					if (local17 instanceof Npc) {
 						@Pc(518) Npc local518 = (Npc) local17;
-						@Pc(528) Sprite[] local528 = (Sprite[]) HitBarList.hitBars.get((long) local518.type.hitBarId);
+						@Pc(528) Sprite[] local528 = (Sprite[]) HitBarList.hitBars.get(local518.type.hitBarId);
 						if (local528 == null) {
 							local528 = SpriteLoader.loadAlphaSprites(local518.type.hitBarId, client.js5Archive8);
 							if (local528 != null) {
-								HitBarList.hitBars.put(local528, (long) local518.type.hitBarId);
+								HitBarList.hitBars.put(local528, local518.type.hitBarId);
 							}
 						}
 						if (local528 != null && local528.length == 2) {
@@ -713,7 +714,8 @@ public final class ScriptRunner {
 				}
 			}
 		}
-		label220: for (local28 = 0; local28 < local3; local28++) {
+		label220:
+		for (local28 = 0; local28 < local3; local28++) {
 			@Pc(272) long local272;
 			if (arg0) {
 				local39 = PlayerList.self;
@@ -723,10 +725,7 @@ public final class ScriptRunner {
 				local272 = (long) PlayerList.ids[local28] << 32;
 			}
 			if (local39 != null && local39.method2682()) {
-				local39.aBoolean98 = false;
-				if ((Preferences.manyIdleAnimations && PlayerList.size > 200 || PlayerList.size > 50) && !arg0 && local39.movementSeqId == local39.getBasType().idleAnimationId) {
-					local39.aBoolean98 = true;
-				}
+				local39.aBoolean98 = (Preferences.manyIdleAnimations && PlayerList.size > 200 || PlayerList.size > 50) && !arg0 && local39.movementSeqId == local39.getBasType().idleAnimationId;
 				local82 = local39.getSize();
 				if (local82 == 1) {
 					if ((local39.xFine & 0x7F) == 64 && (local39.zFine & 0x7F) == 64) {
@@ -841,7 +840,8 @@ public final class ScriptRunner {
 				}
 			}
 		}
-		label200: for (local7 = 0; local7 < NpcList.size; local7++) {
+		label200:
+		for (local7 = 0; local7 < NpcList.size; local7++) {
 			local16 = NpcList.npcs[NpcList.ids[local7]];
 			@Pc(262) long local262 = (long) NpcList.ids[local7] << 32 | 0x20000000L;
 			if (local16 != null && local16.method2682() && local16.type.aBoolean182 == arg0 && local16.type.isMultiNpcValid()) {
@@ -1060,7 +1060,8 @@ public final class ScriptRunner {
 				}
 				@Pc(150) int local150;
 				@Pc(191) int local191;
-				label238: for (local150 = Player.level + 1; local150 <= 3; local150++) {
+				label238:
+				for (local150 = Player.level + 1; local150 <= 3; local150++) {
 					if ((SceneGraph.tileFlags[local150][local108][local122] & 0x8) == 0) {
 						@Pc(227) int local227;
 						@Pc(358) int local358;
@@ -1200,27 +1201,27 @@ public final class ScriptRunner {
 		}
 	}
 
-    @OriginalMember(owner = "client!nf", name = "a", descriptor = "(Lclient!na;BZ)V")
-    public static void openUrl(@OriginalArg(0) JagString arg0, @OriginalArg(2) boolean arg1) {
-        if (!arg1) {
-            try {
-                GameShell.instance.getAppletContext().showDocument(arg0.method3127(GameShell.instance.getCodeBase()), "_top");
-            } catch (@Pc(22) Exception local22) {
-            }
-            return;
-        }
-        if (GlRenderer.enabled && GameShell.openWindowJavaScript) {
-            try {
-                BrowserControl.call(GameShell.signLink.applet, "openjs", new Object[] { arg0.method3127(GameShell.instance.getCodeBase()).toString() });
-                return;
-            } catch (@Pc(48) Throwable local48) {
-            }
-        }
-        try {
-            GameShell.instance.getAppletContext().showDocument(arg0.method3127(GameShell.instance.getCodeBase()), "_blank");
-        } catch (@Pc(59) Exception local59) {
-        }
-    }
+	@OriginalMember(owner = "client!nf", name = "a", descriptor = "(Lclient!na;BZ)V")
+	public static void openUrl(@OriginalArg(0) JagString arg0, @OriginalArg(2) boolean arg1) {
+		if (!arg1) {
+			try {
+				GameShell.instance.getAppletContext().showDocument(arg0.method3127(GameShell.instance.getCodeBase()), "_top");
+			} catch (@Pc(22) Exception local22) {
+			}
+			return;
+		}
+		if (GlRenderer.enabled && GameShell.openWindowJavaScript) {
+			try {
+				BrowserControl.call(GameShell.signLink.applet, "openjs", new Object[]{arg0.method3127(GameShell.instance.getCodeBase()).toString()});
+				return;
+			} catch (@Pc(48) Throwable local48) {
+			}
+		}
+		try {
+			GameShell.instance.getAppletContext().showDocument(arg0.method3127(GameShell.instance.getCodeBase()), "_blank");
+		} catch (@Pc(59) Exception local59) {
+		}
+	}
 
 	@OriginalMember(owner = "client!og", name = "a", descriptor = "(BIILclient!fe;III)V")
 	public static void method3326(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) PathingEntity arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
@@ -1261,33 +1262,33 @@ public final class ScriptRunner {
 		}
 	}
 
-    @OriginalMember(owner = "client!ed", name = "b", descriptor = "(II)Lclient!ba;")
-    public static World getWorld(@OriginalArg(1) int arg0) {
-        return WorldList.loaded && arg0 >= WorldList.minId && arg0 <= WorldList.maxId ? WorldList.worlds[arg0 - WorldList.minId] : null;
-    }
+	@OriginalMember(owner = "client!ed", name = "b", descriptor = "(II)Lclient!ba;")
+	public static World getWorld(@OriginalArg(1) int arg0) {
+		return WorldList.loaded && arg0 >= WorldList.minId && arg0 <= WorldList.maxId ? WorldList.worlds[arg0 - WorldList.minId] : null;
+	}
 
-    @OriginalMember(owner = "client!sc", name = "a", descriptor = "()V")
-    public static void method3858() {
-        for (@Pc(1) int local1 = 0; local1 < SceneGraph.sceneryLen; local1++) {
-            @Pc(8) Scenery local8 = SceneGraph.scenery[local1];
-            SceneGraph.removeScenery(local8);
-            SceneGraph.scenery[local1] = null;
-        }
-        SceneGraph.sceneryLen = 0;
-    }
+	@OriginalMember(owner = "client!sc", name = "a", descriptor = "()V")
+	public static void method3858() {
+		for (@Pc(1) int local1 = 0; local1 < SceneGraph.sceneryLen; local1++) {
+			@Pc(8) Scenery local8 = SceneGraph.scenery[local1];
+			SceneGraph.removeScenery(local8);
+			SceneGraph.scenery[local1] = null;
+		}
+		SceneGraph.sceneryLen = 0;
+	}
 
-    @OriginalMember(owner = "client!be", name = "a", descriptor = "(Z)Lclient!na;")
-    public static JagString method479() {
-        @Pc(8) JagString local8 = aClass100_518;
-        @Pc(10) JagString local10 = JagString.EMPTY;
-        if (client.modeWhere != 0) {
-            local8 = aClass100_365;
-        }
-        if (client.settings != null) {
-            local10 = JagString.concatenate(new JagString[] { aClass100_687, client.settings});
-        }
-        return JagString.concatenate(new JagString[] { aClass100_424, local8, aClass100_886, JagString.parseInt(client.language), aClass100_98, JagString.parseInt(client.affiliate), local10, aClass100_268 });
-    }
+	@OriginalMember(owner = "client!be", name = "a", descriptor = "(Z)Lclient!na;")
+	public static JagString method479() {
+		@Pc(8) JagString local8 = aClass100_518;
+		@Pc(10) JagString local10 = JagString.EMPTY;
+		if (client.modeWhere != 0) {
+			local8 = aClass100_365;
+		}
+		if (client.settings != null) {
+			local10 = JagString.concatenate(new JagString[]{aClass100_687, client.settings});
+		}
+		return JagString.concatenate(new JagString[]{aClass100_424, local8, aClass100_886, JagString.parseInt(client.language), aClass100_98, JagString.parseInt(client.affiliate), local10, aClass100_268});
+	}
 
 	@OriginalMember(owner = "client!ol", name = "a", descriptor = "(IIIILclient!th;IJIIII)Z")
 	public static boolean method3387(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Entity arg4, @OriginalArg(5) int arg5, @OriginalArg(6) long arg6, @OriginalArg(7) int arg7, @OriginalArg(8) int arg8, @OriginalArg(9) int arg9, @OriginalArg(10) int arg10) {
@@ -1675,7 +1676,8 @@ public final class ScriptRunner {
 				}
 			}
 			cycles = 0;
-			nextOp: while (true) {
+			nextOp:
+			while (true) {
 				cycles++;
 				if (maxCycles < cycles) {
 					throw new RuntimeException("slow");
@@ -1913,7 +1915,7 @@ public final class ScriptRunner {
 					if (opcode == 51) {
 						@Pc(992) HashTable local992 = script.switchTables[intOperands[pc]];
 						isp--;
-						@Pc(1002) IntNode local1002 = (IntNode) local992.get((long) intStack[isp]);
+						@Pc(1002) IntNode local1002 = (IntNode) local992.get(intStack[isp]);
 						if (local1002 != null) {
 							pc += local1002.value;
 						}
@@ -1921,11 +1923,7 @@ public final class ScriptRunner {
 					}
 				}
 				@Pc(1020) boolean local1020;
-				if (intOperands[pc] == 1) {
-					local1020 = true;
-				} else {
-					local1020 = false;
-				}
+				local1020 = intOperands[pc] == 1;
 				@Pc(1182) Component component;
 				@Pc(1052) int int2;
 				@Pc(1063) Component local1063;
@@ -2310,11 +2308,7 @@ public final class ScriptRunner {
 										} else if (component.baseWidth > 0) {
 											component.modelZoom = component.modelZoom * 32 / component.baseWidth;
 										}
-										if (opcode == Cs2Opcodes.setItemNoNum) {
-											component.objDrawText = false;
-										} else {
-											component.objDrawText = true;
-										}
+										component.objDrawText = opcode != Cs2Opcodes.setItemNoNum;
 									}
 									continue;
 								}
@@ -2759,7 +2753,7 @@ public final class ScriptRunner {
 									if (opcode == Cs2Opcodes.hasChild) {
 										isp--;
 										int1 = intStack[isp];
-										@Pc(12566) ComponentPointer local12566 = (ComponentPointer) InterfaceList.openInterfaces.get((long) int1);
+										@Pc(12566) ComponentPointer local12566 = (ComponentPointer) InterfaceList.openInterfaces.get(int1);
 										if (local12566 == null) {
 											intStack[isp++] = 0;
 										} else {
@@ -2788,7 +2782,7 @@ public final class ScriptRunner {
 										isp -= 2;
 										int1 = intStack[isp];
 										int3 = intStack[isp + 1];
-										@Pc(12663) ComponentPointer local12663 = (ComponentPointer) InterfaceList.openInterfaces.get((long) int1);
+										@Pc(12663) ComponentPointer local12663 = (ComponentPointer) InterfaceList.openInterfaces.get(int1);
 										if (local12663 != null && local12663.anInt5878 == int3) {
 											intStack[isp++] = 1;
 											continue;
@@ -3631,7 +3625,7 @@ public final class ScriptRunner {
 										isp -= 3;
 										local4892 = intStack[isp];
 										local4899 = intStack[isp + 1];
-										@Pc(5251) long local5251 = (long) intStack[isp + 2];
+										@Pc(5251) long local5251 = intStack[isp + 2];
 										intStack[isp++] = (int) (local4892 * local5251 / local4899);
 										continue;
 									}
@@ -4528,8 +4522,8 @@ public final class ScriptRunner {
 														@Pc(8108) int local8108 = intStack[isp + 6];
 														local1087 = intStack[isp + 5];
 														if (int1 >= 0 && int1 < 2 && Camera.anIntArrayArrayArray9[int1] != null && int3 >= 0 && Camera.anIntArrayArrayArray9[int1].length > int3) {
-															Camera.anIntArrayArrayArray9[int1][int3] = new int[] { (int2 >> 14 & 0x3FFF) * 128, local652, (int2 & 0x3FFF) * 128, local8108 };
-															Camera.anIntArrayArrayArray9[int1][int3 + 1] = new int[] { (c >> 14 & 0x3FFF) * 128, local1087, (c & 0x3FFF) * 128 };
+															Camera.anIntArrayArrayArray9[int1][int3] = new int[]{(int2 >> 14 & 0x3FFF) * 128, local652, (int2 & 0x3FFF) * 128, local8108};
+															Camera.anIntArrayArrayArray9[int1][int3 + 1] = new int[]{(c >> 14 & 0x3FFF) * 128, local1087, (c & 0x3FFF) * 128};
 														}
 														continue;
 													}
@@ -4574,7 +4568,7 @@ public final class ScriptRunner {
 														local1552 = intStack[isp] == 1;
 														ssp--;
 														string = stringStack[ssp];
-														@Pc(8356) JagString local8356 = JagString.concatenate(new JagString[] { method479(), string });
+														@Pc(8356) JagString local8356 = JagString.concatenate(new JagString[]{method479(), string});
 														if (GameShell.frame != null || local1552 && SignLink.anInt5928 != 3 && SignLink.osName.startsWith("win") && !client.haveIe6) {
 															Static164.newTab = local1552;
 															url = local8356;
@@ -4702,18 +4696,18 @@ public final class ScriptRunner {
 														Camera.pitchTarget = intStack[isp];
 														Camera.yawTarget = intStack[isp + 1];
 														if (Camera.cameraType == 2) {
-															Camera.cameraYaw = (int)Camera.yawTarget;
-															Camera.cameraPitch = (int)Camera.pitchTarget;
+															Camera.cameraYaw = (int) Camera.yawTarget;
+															Camera.cameraPitch = (int) Camera.pitchTarget;
 														}
 														Camera.clampCameraAngle();
 														continue;
 													}
 													if (opcode == Cs2Opcodes.cameraGetVrot) {
-														intStack[isp++] = (int)Camera.pitchTarget;
+														intStack[isp++] = (int) Camera.pitchTarget;
 														continue;
 													}
 													if (opcode == Cs2Opcodes.cameraGetHrot) {
-														intStack[isp++] = (int)Camera.yawTarget;
+														intStack[isp++] = (int) Camera.yawTarget;
 														continue;
 													}
 												} else if (opcode < 5700) {
@@ -5414,14 +5408,14 @@ public final class ScriptRunner {
 										string = stringStack[ssp];
 										isp--;
 										int3 = intStack[isp];
-										stringStack[ssp++] = JagString.concatenate(new JagString[] { string, JagString.parseInt(int3) });
+										stringStack[ssp++] = JagString.concatenate(new JagString[]{string, JagString.parseInt(int3)});
 										continue;
 									}
 									if (opcode == Cs2Opcodes.concatString) {
 										ssp -= 2;
 										str1 = stringStack[ssp + 1];
 										string = stringStack[ssp];
-										stringStack[ssp++] = JagString.concatenate(new JagString[] { string, str1 });
+										stringStack[ssp++] = JagString.concatenate(new JagString[]{string, str1});
 										continue;
 									}
 									if (opcode == Cs2Opcodes.concatSignedInt) {
@@ -5429,7 +5423,7 @@ public final class ScriptRunner {
 										string = stringStack[ssp];
 										isp--;
 										int3 = intStack[isp];
-										stringStack[ssp++] = JagString.concatenate(new JagString[] { string, JagString.parseIntTrue(int3) });
+										stringStack[ssp++] = JagString.concatenate(new JagString[]{string, JagString.parseIntTrue(int3)});
 										continue;
 									}
 									if (opcode == Cs2Opcodes.toLowerStr) {
@@ -5446,7 +5440,7 @@ public final class ScriptRunner {
 										local652 = aCalendar2.get(Calendar.DATE);
 										c = aCalendar2.get(Calendar.MONTH);
 										local1087 = aCalendar2.get(Calendar.YEAR);
-										stringStack[ssp++] = JagString.concatenate(new JagString[] { JagString.parseInt(local652), aClass100_767, Static34.aClass100Array40[c], aClass100_767, JagString.parseInt(local1087) });
+										stringStack[ssp++] = JagString.concatenate(new JagString[]{JagString.parseInt(local652), aClass100_767, Static34.aClass100Array40[c], aClass100_767, JagString.parseInt(local1087)});
 										continue;
 									}
 									if (opcode == Cs2Opcodes.strForGender) {
@@ -5615,7 +5609,7 @@ public final class ScriptRunner {
 										local12388 = intStack[isp] != 0;
 										isp--;
 										int3 = intStack[isp];
-										stringStack[ssp++] = StringUtils.formatNumber(client.language, local12388, 0, (long) int3);
+										stringStack[ssp++] = StringUtils.formatNumber(client.language, local12388, 0, int3);
 										continue;
 									}
 								}
@@ -5730,14 +5724,14 @@ public final class ScriptRunner {
 					str.method3113(Static176.aClass100_802).method3113(JagString.parseInt(cycles));
 				}
 				if (client.modeWhere != 0) {
-					Chat.add(EMPTY_STRING, 0, JagString.concatenate(new JagString[] { aClass100_780, script.name}));
+					Chat.add(EMPTY_STRING, 0, JagString.concatenate(new JagString[]{aClass100_780, script.name}));
 				}
 				TracingException.report("CS2 - scr:" + script.key + " op:" + op + new String(str.method3148()), ex);
 			}
 		}
 	}
 
-    @OriginalMember(owner = "client!gi", name = "a", descriptor = "(ILclient!jl;)V")
+	@OriginalMember(owner = "client!gi", name = "a", descriptor = "(ILclient!jl;)V")
 	public static void run(@OriginalArg(1) HookRequest request) {
 		run(200000, request);
 	}

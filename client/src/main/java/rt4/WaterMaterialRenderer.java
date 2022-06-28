@@ -1,19 +1,21 @@
 package rt4;
 
-import java.nio.ByteBuffer;
-import com.jogamp.opengl.*;
+import com.jogamp.opengl.GL2;
+import com.jogamp.opengl.GL2GL3;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
+import java.nio.ByteBuffer;
+
 @OriginalClass("client!pd")
 public final class WaterMaterialRenderer implements MaterialRenderer {
 
-    @OriginalMember(owner = "client!v", name = "c", descriptor = "[F")
-    public static final float[] aFloatArray2 = new float[] { 0.073F, 0.169F, 0.24F, 1.0F };
+	@OriginalMember(owner = "client!v", name = "c", descriptor = "[F")
+	public static final float[] aFloatArray2 = new float[]{0.073F, 0.169F, 0.24F, 1.0F};
 	@OriginalMember(owner = "client!pd", name = "b", descriptor = "[F")
-	public static final float[] aFloatArray22 = new float[] { 0.1F, 0.1F, 0.15F, 0.1F };
+	public static final float[] aFloatArray22 = new float[]{0.1F, 0.1F, 0.15F, 0.1F};
 	@OriginalMember(owner = "client!pd", name = "a", descriptor = "I")
 	private int anInt4440 = -1;
 
@@ -47,18 +49,18 @@ public final class WaterMaterialRenderer implements MaterialRenderer {
 		return ColorUtils.aFloatArray28;
 	}
 
-    @OriginalMember(owner = "client!bk", name = "a", descriptor = "(BI)V")
-    public static void method619(@OriginalArg(1) int color) {
-        aFloatArray2[0] = (float) (color >> 16 & 0xFF) / 255.0F;
-        aFloatArray2[1] = (float) (color >> 8 & 0xFF) / 255.0F;
-        aFloatArray2[2] = (float) (color & 0xFF) / 255.0F;
-        MaterialManager.resetArgument(3);
-        MaterialManager.resetArgument(4);
-    }
+	@OriginalMember(owner = "client!bk", name = "a", descriptor = "(BI)V")
+	public static void method619(@OriginalArg(1) int color) {
+		aFloatArray2[0] = (float) (color >> 16 & 0xFF) / 255.0F;
+		aFloatArray2[1] = (float) (color >> 8 & 0xFF) / 255.0F;
+		aFloatArray2[2] = (float) (color & 0xFF) / 255.0F;
+		MaterialManager.resetArgument(3);
+		MaterialManager.resetArgument(4);
+	}
 
-    @OriginalMember(owner = "client!pd", name = "d", descriptor = "()V")
+	@OriginalMember(owner = "client!pd", name = "d", descriptor = "()V")
 	private void method3435() {
-		@Pc(2) byte[] local2 = new byte[] { 0, -1 };
+		@Pc(2) byte[] local2 = new byte[]{0, -1};
 		@Pc(12) GL2 local12 = GlRenderer.gl;
 		@Pc(15) int[] local15 = new int[1];
 		local12.glGenTextures(1, local15, 0);
@@ -81,15 +83,15 @@ public final class WaterMaterialRenderer implements MaterialRenderer {
 		local1.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2GL3.GL_SRC1_ALPHA, GL2.GL_CONSTANT);
 		local1.glTexGeni(GL2.GL_S, GL2.GL_TEXTURE_GEN_MODE, GL2.GL_OBJECT_LINEAR);
 		local1.glTexGeni(GL2.GL_T, GL2.GL_TEXTURE_GEN_MODE, GL2.GL_OBJECT_LINEAR);
-		local1.glTexGenfv(GL2.GL_S, GL2.GL_OBJECT_PLANE, new float[] { 9.765625E-4F, 0.0F, 0.0F, 0.0F }, 0);
-		local1.glTexGenfv(GL2.GL_T, GL2.GL_OBJECT_PLANE, new float[] { 0.0F, 0.0F, 9.765625E-4F, 0.0F }, 0);
+		local1.glTexGenfv(GL2.GL_S, GL2.GL_OBJECT_PLANE, new float[]{9.765625E-4F, 0.0F, 0.0F, 0.0F}, 0);
+		local1.glTexGenfv(GL2.GL_T, GL2.GL_OBJECT_PLANE, new float[]{0.0F, 0.0F, 9.765625E-4F, 0.0F}, 0);
 		local1.glEnable(GL2.GL_TEXTURE_GEN_S);
 		local1.glEnable(GL2.GL_TEXTURE_GEN_T);
 		if (MaterialManager.allows3DTextureMapping) {
 			local1.glBindTexture(GL2.GL_TEXTURE_3D, MaterialManager.texture3D);
 			local1.glTexGeni(GL2.GL_R, GL2.GL_TEXTURE_GEN_MODE, GL2.GL_OBJECT_LINEAR);
 			local1.glTexGeni(GL2.GL_Q, GL2.GL_TEXTURE_GEN_MODE, GL2.GL_OBJECT_LINEAR);
-			local1.glTexGenfv(GL2.GL_Q, GL2.GL_OBJECT_PLANE, new float[] { 0.0F, 0.0F, 0.0F, 1.0F }, 0);
+			local1.glTexGenfv(GL2.GL_Q, GL2.GL_OBJECT_PLANE, new float[]{0.0F, 0.0F, 0.0F, 1.0F}, 0);
 			local1.glEnable(GL2.GL_TEXTURE_GEN_R);
 			local1.glEnable(GL2.GL_TEXTURE_GEN_Q);
 			local1.glEnable(GL2.GL_TEXTURE_3D);

@@ -9,10 +9,10 @@ import org.openrs2.deob.annotation.Pc;
 public final class Loc extends Entity {
 
 	@OriginalMember(owner = "client!kf", name = "h", descriptor = "[I")
-	public static final int[] LAYERS = new int[] { 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3 };
+	public static final int[] LAYERS = new int[]{0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3};
 	@OriginalMember(owner = "client!ci", name = "q", descriptor = "Lclient!ek;")
-    public static SoftwareIndexedSprite aClass36_Sub1_1 = null;
-    @OriginalMember(owner = "client!dc", name = "U", descriptor = "Lclient!ga;")
+	public static SoftwareIndexedSprite aClass36_Sub1_1 = null;
+	@OriginalMember(owner = "client!dc", name = "U", descriptor = "Lclient!ga;")
 	private ParticleSystem aClass47_Sub1_2;
 
 	@OriginalMember(owner = "client!dc", name = "x", descriptor = "I")
@@ -141,55 +141,55 @@ public final class Loc extends Entity {
 		}
 	}
 
-    @OriginalMember(owner = "client!al", name = "a", descriptor = "(Lclient!pb;BIIIIIII)V")
-    public static void method181(@OriginalArg(0) LocType arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7) {
-        @Pc(5) int local5 = arg2 & 0x3;
-        @Pc(28) int local28;
-        @Pc(31) int local31;
-        if (local5 == 1 || local5 == 3) {
-            local28 = arg0.length;
-            local31 = arg0.width;
-        } else {
-            local31 = arg0.length;
-            local28 = arg0.width;
-        }
-        @Pc(53) int local53;
-        @Pc(51) int local51;
-        if (arg6 + local31 > 104) {
-            local51 = arg6 + 1;
-            local53 = arg6;
-        } else {
-            local53 = arg6 + (local31 >> 1);
-            local51 = arg6 + (local31 + 1 >> 1);
-        }
-        @Pc(80) int local80 = (arg5 << 7) + (local28 << 6);
-        @Pc(88) int local88 = (arg6 << 7) + (local31 << 6);
-        @Pc(96) int local96;
-        @Pc(100) int local100;
-        if (arg5 + local28 > 104) {
-            local96 = arg5;
-            local100 = arg5 + 1;
-        } else {
-            local96 = arg5 + (local28 >> 1);
-            local100 = (local28 + 1 >> 1) + arg5;
-        }
-        @Pc(120) int[][] local120 = SceneGraph.tileHeights[arg7];
-        @Pc(122) int local122 = 0;
-        @Pc(148) int local148 = local120[local96][local51] + local120[local96][local53] + local120[local100][local53] + local120[local100][local51] >> 2;
-        @Pc(158) int[][] local158;
-        if (arg7 != 0) {
-            local158 = SceneGraph.tileHeights[0];
-            local122 = local148 - (local158[local96][local51] + local158[local100][local53] + local158[local96][local53] + local158[local100][local51] >> 2);
-        }
-        local158 = null;
-        if (arg7 < 3) {
-            local158 = SceneGraph.tileHeights[arg7 + 1];
-        }
-        @Pc(215) Loc_Class139 local215 = arg0.method3428(arg2, local80, local120, arg4, local148, local158, false, null, true, local88);
-        ShadowManager.method4207(local215.aClass36_Sub1_3, local80 - arg3, local122, local88 - arg1);
-    }
+	@OriginalMember(owner = "client!al", name = "a", descriptor = "(Lclient!pb;BIIIIIII)V")
+	public static void method181(@OriginalArg(0) LocType arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7) {
+		@Pc(5) int local5 = arg2 & 0x3;
+		@Pc(28) int local28;
+		@Pc(31) int local31;
+		if (local5 == 1 || local5 == 3) {
+			local28 = arg0.length;
+			local31 = arg0.width;
+		} else {
+			local31 = arg0.length;
+			local28 = arg0.width;
+		}
+		@Pc(53) int local53;
+		@Pc(51) int local51;
+		if (arg6 + local31 > 104) {
+			local51 = arg6 + 1;
+			local53 = arg6;
+		} else {
+			local53 = arg6 + (local31 >> 1);
+			local51 = arg6 + (local31 + 1 >> 1);
+		}
+		@Pc(80) int local80 = (arg5 << 7) + (local28 << 6);
+		@Pc(88) int local88 = (arg6 << 7) + (local31 << 6);
+		@Pc(96) int local96;
+		@Pc(100) int local100;
+		if (arg5 + local28 > 104) {
+			local96 = arg5;
+			local100 = arg5 + 1;
+		} else {
+			local96 = arg5 + (local28 >> 1);
+			local100 = (local28 + 1 >> 1) + arg5;
+		}
+		@Pc(120) int[][] local120 = SceneGraph.tileHeights[arg7];
+		@Pc(122) int local122 = 0;
+		@Pc(148) int local148 = local120[local96][local51] + local120[local96][local53] + local120[local100][local53] + local120[local100][local51] >> 2;
+		@Pc(158) int[][] local158;
+		if (arg7 != 0) {
+			local158 = SceneGraph.tileHeights[0];
+			local122 = local148 - (local158[local96][local51] + local158[local100][local53] + local158[local96][local53] + local158[local100][local51] >> 2);
+		}
+		local158 = null;
+		if (arg7 < 3) {
+			local158 = SceneGraph.tileHeights[arg7 + 1];
+		}
+		@Pc(215) Loc_Class139 local215 = arg0.method3428(arg2, local80, local120, arg4, local148, local158, false, null, true, local88);
+		ShadowManager.method4207(local215.aClass36_Sub1_3, local80 - arg3, local122, local88 - arg1);
+	}
 
-    @OriginalMember(owner = "client!dc", name = "a", descriptor = "(IIIII)V")
+	@OriginalMember(owner = "client!dc", name = "a", descriptor = "(IIIII)V")
 	@Override
 	public final void method4545(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		if (GlRenderer.enabled) {

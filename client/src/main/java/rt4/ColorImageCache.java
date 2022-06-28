@@ -8,9 +8,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!pf")
 public final class ColorImageCache {
 
-    @OriginalMember(owner = "client!ib", name = "c", descriptor = "Lclient!qi;")
+	@OriginalMember(owner = "client!ib", name = "c", descriptor = "Lclient!qi;")
 	public static final ColorImageCacheEntry VALID = new ColorImageCacheEntry(0, 0);
-    @OriginalMember(owner = "client!pf", name = "d", descriptor = "I")
+	@OriginalMember(owner = "client!pf", name = "d", descriptor = "I")
 	private int size = 0;
 
 	@OriginalMember(owner = "client!pf", name = "m", descriptor = "I")

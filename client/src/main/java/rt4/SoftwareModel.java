@@ -49,7 +49,7 @@ public final class SoftwareModel extends Model {
 	@OriginalMember(owner = "client!w", name = "Wb", descriptor = "[I")
 	public static final int[] anIntArray561 = new int[8192];
 	@OriginalMember(owner = "client!w", name = "vb", descriptor = "[[I")
-    public static int[][] anIntArrayArray43;
+	public static int[][] anIntArrayArray43;
 	@OriginalMember(owner = "client!w", name = "Ob", descriptor = "Z")
 	public static boolean aBoolean307 = false;
 	@OriginalMember(owner = "client!w", name = "Lb", descriptor = "[I")
@@ -243,7 +243,7 @@ public final class SoftwareModel extends Model {
 		this.anIntArrayArray42 = arg0.boneTriangles;
 		this.aShortArray90 = arg0.aShortArray22;
 		this.aShortArray91 = arg0.vertexSources;
-		@Pc(102) int local102 = (int) Math.sqrt((double) (arg3 * arg3 + arg4 * arg4 + arg5 * arg5));
+		@Pc(102) int local102 = (int) Math.sqrt(arg3 * arg3 + arg4 * arg4 + arg5 * arg5);
 		@Pc(108) int local108 = arg2 * local102 >> 8;
 		this.anIntArray533 = new int[this.triangleCount];
 		this.anIntArray523 = new int[this.triangleCount];
@@ -527,16 +527,16 @@ public final class SoftwareModel extends Model {
 		anIntArrayArray43 = null;
 	}
 
-    @OriginalMember(owner = "client!w", name = "o", descriptor = "()V")
-    public static void method4583() {
-        aBoolean307 = false;
-        anIntArray550 = null;
-        anIntArray549 = null;
-        anIntArray558 = new int[1600];
-        anIntArrayArray44 = new int[1600][64];
-        anIntArray552 = new int[32];
-        anIntArrayArray43 = new int[32][512];
-    }
+	@OriginalMember(owner = "client!w", name = "o", descriptor = "()V")
+	public static void method4583() {
+		aBoolean307 = false;
+		anIntArray550 = null;
+		anIntArray549 = null;
+		anIntArray558 = new int[1600];
+		anIntArrayArray44 = new int[1600][64];
+		anIntArray552 = new int[32];
+		anIntArrayArray43 = new int[32][512];
+	}
 
 	@OriginalMember(owner = "client!w", name = "f", descriptor = "(I)I")
 	public static int method4582(@OriginalArg(0) int arg0) {
@@ -559,38 +559,38 @@ public final class SoftwareModel extends Model {
 		return (arg0 & 0xFF80) + arg1;
 	}
 
-    @OriginalMember(owner = "client!nj", name = "a", descriptor = "(IIZ[I[I)V")
-    public static void method3223(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int[] arg2, @OriginalArg(4) int[] arg3) {
-        if (arg0 >= arg1) {
-            return;
-        }
-        @Pc(22) int local22 = (arg1 + arg0) / 2;
-        @Pc(24) int local24 = arg0;
-        @Pc(28) int local28 = arg2[local22];
-        arg2[local22] = arg2[arg1];
-        arg2[arg1] = local28;
-        @Pc(42) int local42 = arg3[local22];
-        arg3[local22] = arg3[arg1];
-        arg3[arg1] = local42;
-        for (@Pc(54) int local54 = arg0; local54 < arg1; local54++) {
-            if (arg2[local54] > (local54 & 0x1) + local28) {
-                @Pc(79) int local79 = arg2[local54];
-                arg2[local54] = arg2[local24];
-                arg2[local24] = local79;
-                @Pc(93) int local93 = arg3[local54];
-                arg3[local54] = arg3[local24];
-                arg3[local24++] = local93;
-            }
-        }
-        arg2[arg1] = arg2[local24];
-        arg2[local24] = local28;
-        arg3[arg1] = arg3[local24];
-        arg3[local24] = local42;
-        method3223(arg0, local24 - 1, arg2, arg3);
-        method3223(local24 + 1, arg1, arg2, arg3);
-    }
+	@OriginalMember(owner = "client!nj", name = "a", descriptor = "(IIZ[I[I)V")
+	public static void method3223(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int[] arg2, @OriginalArg(4) int[] arg3) {
+		if (arg0 >= arg1) {
+			return;
+		}
+		@Pc(22) int local22 = (arg1 + arg0) / 2;
+		@Pc(24) int local24 = arg0;
+		@Pc(28) int local28 = arg2[local22];
+		arg2[local22] = arg2[arg1];
+		arg2[arg1] = local28;
+		@Pc(42) int local42 = arg3[local22];
+		arg3[local22] = arg3[arg1];
+		arg3[arg1] = local42;
+		for (@Pc(54) int local54 = arg0; local54 < arg1; local54++) {
+			if (arg2[local54] > (local54 & 0x1) + local28) {
+				@Pc(79) int local79 = arg2[local54];
+				arg2[local54] = arg2[local24];
+				arg2[local24] = local79;
+				@Pc(93) int local93 = arg3[local54];
+				arg3[local54] = arg3[local24];
+				arg3[local24++] = local93;
+			}
+		}
+		arg2[arg1] = arg2[local24];
+		arg2[local24] = local28;
+		arg3[arg1] = arg3[local24];
+		arg3[local24] = local42;
+		method3223(arg0, local24 - 1, arg2, arg3);
+		method3223(local24 + 1, arg1, arg2, arg3);
+	}
 
-    @OriginalMember(owner = "client!w", name = "e", descriptor = "(I)V")
+	@OriginalMember(owner = "client!w", name = "e", descriptor = "(I)V")
 	private void method4579(@OriginalArg(0) int arg0) {
 		if (aBooleanArray132[arg0]) {
 			this.method4587(arg0);
@@ -853,9 +853,9 @@ public final class SoftwareModel extends Model {
 				local208 = -999999;
 				local223 = 999999;
 				local227 = -999999;
-				@Pc(299) int[] local299 = new int[] { this.minX, this.maxX, this.minX, this.maxX, this.minX, this.maxX, this.minX, this.maxX};
-				@Pc(342) int[] local342 = new int[] { this.minZ, this.minZ, this.maxZ, this.maxZ, this.minZ, this.minZ, this.maxZ, this.maxZ};
-				@Pc(385) int[] local385 = new int[] { this.minY, this.minY, this.minY, this.minY, this.maxY, this.maxY, this.maxY, this.maxY};
+				@Pc(299) int[] local299 = new int[]{this.minX, this.maxX, this.minX, this.maxX, this.minX, this.maxX, this.minX, this.maxX};
+				@Pc(342) int[] local342 = new int[]{this.minZ, this.minZ, this.maxZ, this.maxZ, this.minZ, this.minZ, this.maxZ, this.maxZ};
+				@Pc(385) int[] local385 = new int[]{this.minY, this.minY, this.minY, this.minY, this.maxY, this.maxY, this.maxY, this.maxY};
 				for (@Pc(387) int local387 = 0; local387 < 8; local387++) {
 					@Pc(394) int local394 = local299[local387];
 					@Pc(398) int local398 = local385[local387];
@@ -1356,7 +1356,7 @@ public final class SoftwareModel extends Model {
 
 	@OriginalMember(owner = "client!w", name = "a", descriptor = "(Lclient!ak;)Lclient!ak;")
 	public final Model method4588(@OriginalArg(0) Model arg0) {
-		return new SoftwareModel(new SoftwareModel[] { this, (SoftwareModel) arg0 }, 2);
+		return new SoftwareModel(new SoftwareModel[]{this, (SoftwareModel) arg0}, 2);
 	}
 
 	@OriginalMember(owner = "client!w", name = "g", descriptor = "()I")
@@ -1664,11 +1664,7 @@ public final class SoftwareModel extends Model {
 					}
 					if ((local65 - local69) * (anIntArray551[local61] - anIntArray551[local56]) - (anIntArray551[local51] - anIntArray551[local56]) * (local73 - local69) > 0) {
 						aBooleanArray132[local11] = false;
-						if (local65 >= 0 && local69 >= 0 && local73 >= 0 && local65 <= Rasteriser.width && local69 <= Rasteriser.width && local73 <= Rasteriser.width) {
-							aBooleanArray133[local11] = false;
-						} else {
-							aBooleanArray133[local11] = true;
-						}
+						aBooleanArray133[local11] = local65 < 0 || local69 < 0 || local73 < 0 || local65 > Rasteriser.width || local69 > Rasteriser.width || local73 > Rasteriser.width;
 						if (aBoolean307) {
 							anIntArray550[local5] = (anIntArray543[local51] + anIntArray543[local56] + anIntArray543[local61]) / 3;
 							anIntArray549[local5++] = local11;
@@ -2002,8 +1998,8 @@ public final class SoftwareModel extends Model {
 		this.maxY = (short) local9;
 		this.minZ = (short) local5;
 		this.maxZ = (short) local11;
-		this.aShort34 = (short) (Math.sqrt((double) local13) + 0.99D);
-		this.aShort35 = (short) (Math.sqrt((double) local15) + 0.99D);
+		this.aShort34 = (short) (Math.sqrt(local13) + 0.99D);
+		this.aShort35 = (short) (Math.sqrt(local15) + 0.99D);
 		this.boundsValid = true;
 	}
 
@@ -2292,7 +2288,7 @@ public final class SoftwareModel extends Model {
 				local410 = local392 + anInt5793;
 				local418 = local398 + anInt5791;
 				local426 = local404 + anInt5792;
-				@Pc(1481) int[] local1481 = new int[] { local307 * arg7[0] + 16384 >> 15, local307 * arg7[3] + 16384 >> 15, local307 * arg7[6] + 16384 >> 15, local329 * arg7[1] + 16384 >> 15, local329 * arg7[4] + 16384 >> 15, local329 * arg7[7] + 16384 >> 15, local351 * arg7[2] + 16384 >> 15, local351 * arg7[5] + 16384 >> 15, local351 * arg7[8] + 16384 >> 15 };
+				@Pc(1481) int[] local1481 = new int[]{local307 * arg7[0] + 16384 >> 15, local307 * arg7[3] + 16384 >> 15, local307 * arg7[6] + 16384 >> 15, local329 * arg7[1] + 16384 >> 15, local329 * arg7[4] + 16384 >> 15, local329 * arg7[7] + 16384 >> 15, local351 * arg7[2] + 16384 >> 15, local351 * arg7[5] + 16384 >> 15, local351 * arg7[8] + 16384 >> 15};
 				local579 = local307 * local206 + 16384 >> 15;
 				local604 = local329 * local33 + 16384 >> 15;
 				local608 = local351 * local41 + 16384 >> 15;

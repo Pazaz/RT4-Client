@@ -5,16 +5,16 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static112 {
 
-    @OriginalMember(owner = "client!hd", name = "e", descriptor = "Lclient!qf;")
-    public static Sprite aClass3_Sub2_Sub1_6;
-    @OriginalMember(owner = "client!d", name = "ib", descriptor = "Lclient!qf;")
+	@OriginalMember(owner = "client!hd", name = "e", descriptor = "Lclient!qf;")
+	public static Sprite aClass3_Sub2_Sub1_6;
+	@OriginalMember(owner = "client!d", name = "ib", descriptor = "Lclient!qf;")
 	public static Sprite aClass3_Sub2_Sub1_1;
-    @OriginalMember(owner = "client!oi", name = "h", descriptor = "Lclient!qf;")
-    public static Sprite aClass3_Sub2_Sub1_9;
-    @OriginalMember(owner = "client!qi", name = "z", descriptor = "Lclient!qf;")
-    public static Sprite aClass3_Sub2_Sub1_10;
+	@OriginalMember(owner = "client!oi", name = "h", descriptor = "Lclient!qf;")
+	public static Sprite aClass3_Sub2_Sub1_9;
+	@OriginalMember(owner = "client!qi", name = "z", descriptor = "Lclient!qf;")
+	public static Sprite aClass3_Sub2_Sub1_10;
 
-    @OriginalMember(owner = "client!ij", name = "a", descriptor = "(B)V")
+	@OriginalMember(owner = "client!ij", name = "a", descriptor = "(B)V")
 	public static void method2297() {
 		@Pc(3) int local3 = InterfaceList.anInt4271;
 		@Pc(9) int local9 = InterfaceList.anInt5138;

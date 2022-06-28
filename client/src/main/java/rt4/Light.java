@@ -8,9 +8,9 @@ import org.openrs2.deob.annotation.Pc;
 @OriginalClass("client!gi")
 public final class Light {
 
-    @OriginalMember(owner = "client!f", name = "P", descriptor = "[I")
-    public static int[] NOISE;
-    @OriginalMember(owner = "client!gi", name = "a", descriptor = "Z")
+	@OriginalMember(owner = "client!f", name = "P", descriptor = "[I")
+	public static int[] NOISE;
+	@OriginalMember(owner = "client!gi", name = "a", descriptor = "Z")
 	public final boolean aBoolean124;
 
 	@OriginalMember(owner = "client!gi", name = "d", descriptor = "I")

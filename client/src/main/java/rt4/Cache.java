@@ -1,11 +1,12 @@
 package rt4;
 
-import java.io.EOFException;
-import java.io.IOException;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+
+import java.io.EOFException;
+import java.io.IOException;
 
 @OriginalClass("client!ge")
 public final class Cache {
@@ -64,7 +65,7 @@ public final class Cache {
 					local27 = null;
 					return (byte[]) local27;
 				}
-				this.index.seek((long) (group * 6));
+				this.index.seek(group * 6);
 				this.index.read(0, buffer, 6);
 				@Pc(69) int local69 = ((buffer[3] & 0xFF) << 16) - (-((buffer[4] & 0xFF) << 8) - (buffer[5] & 0xFF));
 				@Pc(99) int local99 = (buffer[2] & 0xFF) + ((buffer[1] & 0xFF) << 8) + ((buffer[0] & 0xFF) << 16);
@@ -84,7 +85,7 @@ public final class Cache {
 							return (byte[]) local27;
 						}
 						@Pc(157) int local157 = local99 - local136;
-						this.data.seek((long) (local69 * 520));
+						this.data.seek(local69 * 520);
 						if (local157 > 512) {
 							local157 = 512;
 						}
@@ -129,7 +130,7 @@ public final class Cache {
 						local27 = false;
 						return local27;
 					}
-					this.index.seek((long) (arg1 * 6));
+					this.index.seek(arg1 * 6);
 					this.index.read(0, buffer, 6);
 					local67 = ((buffer[3] & 0xFF) << 16) + (buffer[4] << 8 & 0xFF00) + (buffer[5] & 0xFF);
 					if (local67 <= 0 || this.data.length() / 520L < (long) local67) {
@@ -150,15 +151,16 @@ public final class Cache {
 				buffer[3] = (byte) (local67 >> 16);
 				@Pc(156) int local156 = 0;
 				buffer[1] = (byte) (arg0 >> 8);
-				this.index.seek((long) (arg1 * 6));
+				this.index.seek(arg1 * 6);
 				this.index.write(buffer, 0, 6);
 				while (true) {
 					if (local125 < arg0) {
-						label134: {
+						label134:
+						{
 							@Pc(189) int local189 = 0;
 							@Pc(248) int local248;
 							if (arg3) {
-								this.data.seek((long) (local67 * 520));
+								this.data.seek(local67 * 520);
 								try {
 									this.data.read(0, buffer, 8);
 								} catch (@Pc(209) EOFException local209) {
@@ -203,7 +205,7 @@ public final class Cache {
 							buffer[3] = (byte) local156;
 							local156++;
 							buffer[5] = (byte) (local189 >> 8);
-							this.data.seek((long) (local67 * 520));
+							this.data.seek(local67 * 520);
 							local67 = local189;
 							this.data.write(buffer, 0, 8);
 							this.data.write(arg2, local125, local248);

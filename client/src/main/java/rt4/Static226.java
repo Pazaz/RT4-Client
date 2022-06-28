@@ -5,14 +5,14 @@ import org.openrs2.deob.annotation.Pc;
 
 public final class Static226 {
 
-    @OriginalMember(owner = "client!sf", name = "i", descriptor = "I")
+	@OriginalMember(owner = "client!sf", name = "i", descriptor = "I")
 	public static int anInt5084 = 0;
-    @OriginalMember(owner = "client!ml", name = "Q", descriptor = "I")
-    public static int anInt3953 = 0;
-    @OriginalMember(owner = "client!wl", name = "u", descriptor = "I")
-    public static int anInt5895 = 0;
+	@OriginalMember(owner = "client!ml", name = "Q", descriptor = "I")
+	public static int anInt3953 = 0;
+	@OriginalMember(owner = "client!wl", name = "u", descriptor = "I")
+	public static int anInt5895 = 0;
 
-    @OriginalMember(owner = "client!sf", name = "b", descriptor = "(B)V")
+	@OriginalMember(owner = "client!sf", name = "b", descriptor = "(B)V")
 	public static void method3901() {
 		@Pc(16) int local16 = Fonts.b12Full.getStringWidth(LocalizedText.CHOOSE_OPTION);
 		@Pc(18) int local18;
