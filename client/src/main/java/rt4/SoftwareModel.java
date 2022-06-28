@@ -340,25 +340,25 @@ public final class SoftwareModel extends Model {
 						local435 = arg0.aClass57Array2[this.anIntArray534[local133]];
 					}
 					local468 = arg1 + (arg3 * local435.x + arg4 * local435.y + arg5 * local435.z) / (local108 * local435.triangles) << 17;
-					this.anIntArray533[local133] = local468 | method4585(local416, local468 >> 17);
+					this.anIntArray533[local133] = local468 | ColorUtils.multiplyLightness2(local416, local468 >> 17);
 					if (arg0.aClass57Array2 == null || arg0.aClass57Array2[this.anIntArray524[local133]] == null) {
 						local435 = arg0.vertexNormals[this.anIntArray524[local133]];
 					} else {
 						local435 = arg0.aClass57Array2[this.anIntArray524[local133]];
 					}
 					local468 = arg1 + (arg3 * local435.x + arg4 * local435.y + arg5 * local435.z) / (local108 * local435.triangles) << 17;
-					this.anIntArray523[local133] = local468 | method4585(local416, local468 >> 17);
+					this.anIntArray523[local133] = local468 | ColorUtils.multiplyLightness2(local416, local468 >> 17);
 					if (arg0.aClass57Array2 == null || arg0.aClass57Array2[this.anIntArray529[local133]] == null) {
 						local435 = arg0.vertexNormals[this.anIntArray529[local133]];
 					} else {
 						local435 = arg0.aClass57Array2[this.anIntArray529[local133]];
 					}
 					local468 = arg1 + (arg3 * local435.x + arg4 * local435.y + arg5 * local435.z) / (local108 * local435.triangles) << 17;
-					this.anIntArray532[local133] = local468 | method4585(local416, local468 >> 17);
+					this.anIntArray532[local133] = local468 | ColorUtils.multiplyLightness2(local416, local468 >> 17);
 				} else if (local366 == 1) {
 					local614 = arg0.triangleNormals[local133];
 					local468 = arg1 + (arg3 * local614.anInt4769 + arg4 * local614.anInt4770 + arg5 * local614.anInt4767) / (local108 + local108 / 2) << 17;
-					this.anIntArray533[local133] = local468 | method4585(arg0.triangleColors[local133] & 0xFFFF, local468 >> 17);
+					this.anIntArray533[local133] = local468 | ColorUtils.multiplyLightness2(arg0.triangleColors[local133] & 0xFFFF, local468 >> 17);
 					this.anIntArray532[local133] = -1;
 				} else if (local366 == 3) {
 					this.anIntArray533[local133] = 128;
@@ -373,25 +373,25 @@ public final class SoftwareModel extends Model {
 					local435 = arg0.aClass57Array2[this.anIntArray534[local133]];
 				}
 				local468 = arg1 + (arg3 * local435.x + arg4 * local435.y + arg5 * local435.z) / (local108 * local435.triangles);
-				this.anIntArray533[local133] = method4582(local468);
+				this.anIntArray533[local133] = ColorUtils.method4582(local468);
 				if (arg0.aClass57Array2 == null || arg0.aClass57Array2[this.anIntArray524[local133]] == null) {
 					local435 = arg0.vertexNormals[this.anIntArray524[local133]];
 				} else {
 					local435 = arg0.aClass57Array2[this.anIntArray524[local133]];
 				}
 				local468 = arg1 + (arg3 * local435.x + arg4 * local435.y + arg5 * local435.z) / (local108 * local435.triangles);
-				this.anIntArray523[local133] = method4582(local468);
+				this.anIntArray523[local133] = ColorUtils.method4582(local468);
 				if (arg0.aClass57Array2 == null || arg0.aClass57Array2[this.anIntArray529[local133]] == null) {
 					local435 = arg0.vertexNormals[this.anIntArray529[local133]];
 				} else {
 					local435 = arg0.aClass57Array2[this.anIntArray529[local133]];
 				}
 				local468 = arg1 + (arg3 * local435.x + arg4 * local435.y + arg5 * local435.z) / (local108 * local435.triangles);
-				this.anIntArray532[local133] = method4582(local468);
+				this.anIntArray532[local133] = ColorUtils.method4582(local468);
 			} else if (local366 == 1) {
 				local614 = arg0.triangleNormals[local133];
 				local468 = arg1 + (arg3 * local614.anInt4769 + arg4 * local614.anInt4770 + arg5 * local614.anInt4767) / (local108 + local108 / 2);
-				this.anIntArray533[local133] = method4582(local468);
+				this.anIntArray533[local133] = ColorUtils.method4582(local468);
 				this.anIntArray532[local133] = -1;
 			} else {
 				this.anIntArray532[local133] = -2;
@@ -538,58 +538,6 @@ public final class SoftwareModel extends Model {
 		anIntArrayArray43 = new int[32][512];
 	}
 
-	@OriginalMember(owner = "client!w", name = "f", descriptor = "(I)I")
-	public static int method4582(@OriginalArg(0) int arg0) {
-		if (arg0 < 2) {
-			arg0 = 2;
-		} else if (arg0 > 126) {
-			arg0 = 126;
-		}
-		return arg0;
-	}
-
-	@OriginalMember(owner = "client!w", name = "a", descriptor = "(II)I")
-	public static int method4585(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		arg1 = arg1 * (arg0 & 0x7F) >> 7;
-		if (arg1 < 2) {
-			arg1 = 2;
-		} else if (arg1 > 126) {
-			arg1 = 126;
-		}
-		return (arg0 & 0xFF80) + arg1;
-	}
-
-	@OriginalMember(owner = "client!nj", name = "a", descriptor = "(IIZ[I[I)V")
-	public static void method3223(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int[] arg2, @OriginalArg(4) int[] arg3) {
-		if (arg0 >= arg1) {
-			return;
-		}
-		@Pc(22) int local22 = (arg1 + arg0) / 2;
-		@Pc(24) int local24 = arg0;
-		@Pc(28) int local28 = arg2[local22];
-		arg2[local22] = arg2[arg1];
-		arg2[arg1] = local28;
-		@Pc(42) int local42 = arg3[local22];
-		arg3[local22] = arg3[arg1];
-		arg3[arg1] = local42;
-		for (@Pc(54) int local54 = arg0; local54 < arg1; local54++) {
-			if (arg2[local54] > (local54 & 0x1) + local28) {
-				@Pc(79) int local79 = arg2[local54];
-				arg2[local54] = arg2[local24];
-				arg2[local24] = local79;
-				@Pc(93) int local93 = arg3[local54];
-				arg3[local54] = arg3[local24];
-				arg3[local24++] = local93;
-			}
-		}
-		arg2[arg1] = arg2[local24];
-		arg2[local24] = local28;
-		arg3[arg1] = arg3[local24];
-		arg3[local24] = local42;
-		method3223(arg0, local24 - 1, arg2, arg3);
-		method3223(local24 + 1, arg1, arg2, arg3);
-	}
-
 	@OriginalMember(owner = "client!w", name = "e", descriptor = "(I)V")
 	private void method4579(@OriginalArg(0) int arg0) {
 		if (aBooleanArray132[arg0]) {
@@ -650,14 +598,14 @@ public final class SoftwareModel extends Model {
 				@Pc(38) int local38;
 				if (this.anIntArray532[local1] == -1) {
 					local38 = this.anIntArray533[local1] & 0xFFFE0000;
-					this.anIntArray533[local1] = local38 | method4585(local25, local38 >> 17);
+					this.anIntArray533[local1] = local38 | ColorUtils.multiplyLightness2(local25, local38 >> 17);
 				} else if (this.anIntArray532[local1] != -2) {
 					local38 = this.anIntArray533[local1] & 0xFFFE0000;
-					this.anIntArray533[local1] = local38 | method4585(local25, local38 >> 17);
+					this.anIntArray533[local1] = local38 | ColorUtils.multiplyLightness2(local25, local38 >> 17);
 					local38 = this.anIntArray523[local1] & 0xFFFE0000;
-					this.anIntArray523[local1] = local38 | method4585(local25, local38 >> 17);
+					this.anIntArray523[local1] = local38 | ColorUtils.multiplyLightness2(local25, local38 >> 17);
 					local38 = this.anIntArray532[local1] & 0xFFFE0000;
-					this.anIntArray532[local1] = local38 | method4585(local25, local38 >> 17);
+					this.anIntArray532[local1] = local38 | ColorUtils.multiplyLightness2(local25, local38 >> 17);
 				}
 			}
 		}
@@ -1689,7 +1637,7 @@ public final class SoftwareModel extends Model {
 			}
 		}
 		if (aBoolean307) {
-			method3223(0, local5 - 1, anIntArray550, anIntArray549);
+			ArrayUtils.sort(0, local5 - 1, anIntArray550, anIntArray549);
 			if (this.aByteArray73 == null) {
 				for (local11 = 0; local11 < local5; local11++) {
 					this.method4579(anIntArray549[local11]);

@@ -46,7 +46,7 @@ public final class TextureOp29 extends TextureOp {
 		if (arg3 >= anInt5773 && arg3 <= anInt2869) {
 			@Pc(15) int local15 = IntUtils.clamp(anInt5063, arg0, anInt4164);
 			@Pc(21) int local21 = IntUtils.clamp(anInt5063, arg2, anInt4164);
-			TextureOp29SubOp4.method3826(arg1, arg3, local21, local15);
+			TextureOp29SubOp4.fillRange(arg1, arg3, local21, local15);
 		}
 	}
 

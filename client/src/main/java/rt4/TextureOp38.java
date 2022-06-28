@@ -61,10 +61,10 @@ public final class TextureOp38 extends TextureOp {
 			@Pc(33) int[][] local33 = this.monochromeImageCache.method3446();
 			@Pc(40) Random local40 = new Random(this.anInt5716);
 			for (@Pc(42) int local42 = 0; local42 < this.anInt5712; local42++) {
-				@Pc(64) int local64 = this.anInt5714 > 0 ? this.anInt5709 + Texture.method3219(this.anInt5714, local40) - local28 : this.anInt5709;
-				@Pc(69) int local69 = Texture.method3219(Texture.width, local40);
+				@Pc(64) int local64 = this.anInt5714 > 0 ? this.anInt5709 + RandomUtils.nextInt(this.anInt5714, local40) - local28 : this.anInt5709;
+				@Pc(69) int local69 = RandomUtils.nextInt(Texture.width, local40);
 				@Pc(75) int local75 = local64 >> 4 & 0xFF;
-				@Pc(80) int local80 = Texture.method3219(Texture.height, local40);
+				@Pc(80) int local80 = RandomUtils.nextInt(Texture.height, local40);
 				@Pc(92) int local92 = local69 + (this.anInt5715 * TextureOp.COSINE[local75] >> 12);
 				@Pc(103) int local103 = local80 + (TextureOp.SINE[local75] * this.anInt5715 >> 12);
 				@Pc(107) int local107 = local92 - local69;
@@ -102,7 +102,7 @@ public final class TextureOp38 extends TextureOp {
 						local190 = -local190;
 					}
 					@Pc(206) int local206 = -local152 / 2;
-					@Pc(216) int local216 = 1024 - (Texture.method3219(4096, local40) >> 2);
+					@Pc(216) int local216 = 1024 - (RandomUtils.nextInt(4096, local40) >> 2);
 					@Pc(227) int local227 = local103 <= local80 ? -1 : 1;
 					@Pc(231) int local231 = 2048 / local152;
 					for (@Pc(233) int local233 = local69; local233 < local92; local233++) {

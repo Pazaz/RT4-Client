@@ -713,7 +713,7 @@ public final class GlModel extends Model {
 
 	@OriginalMember(owner = "client!td", name = "a", descriptor = "(ISIB)I")
 	public static int method4096(@OriginalArg(0) int arg0, @OriginalArg(1) short arg1, @OriginalArg(2) int arg2, @OriginalArg(3) byte arg3) {
-		@Pc(5) int local5 = Rasteriser.palette[SoftwareModel.method4585(arg0, arg2)];
+		@Pc(5) int local5 = Rasteriser.palette[ColorUtils.multiplyLightness2(arg0, arg2)];
 		if (arg1 != -1) {
 			@Pc(15) int local15 = Rasteriser.textureProvider.method3238(arg1 & 0xFFFF);
 			@Pc(21) int local21;

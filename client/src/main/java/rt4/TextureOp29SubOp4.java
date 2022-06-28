@@ -150,7 +150,7 @@ public final class TextureOp29SubOp4 extends TextureOp29SubOp {
 	}
 
 	@OriginalMember(owner = "client!sa", name = "a", descriptor = "(IIIBI)V")
-	public static void method3826(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {
+	public static void fillRange(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {
 		if (arg3 <= arg2) {
 			ArrayUtils.fillRange(anIntArrayArray10[arg1], arg3, arg2, arg0);
 		} else {
@@ -181,7 +181,7 @@ public final class TextureOp29SubOp4 extends TextureOp29SubOp {
 				method2054(arg2, arg4, arg1, arg0);
 			}
 		} else if (local9 == 0) {
-			method3826(arg0, arg2, arg3, arg4);
+			fillRange(arg0, arg2, arg3, arg4);
 		} else {
 			if (local9 < 0) {
 				local9 = -local9;

@@ -63,4 +63,30 @@ public class IntUtils {
 	public static int clamp(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2) {
 		return arg2 > arg1 ? arg2 : arg1 > arg0 ? arg0 : arg1;
 	}
+
+	@OriginalMember(owner = "client!bn", name = "a", descriptor = "(III)I")
+	public static int bitReverse(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
+		@Pc(8) int local8 = 0;
+		while (arg0 > 0) {
+			local8 = local8 << 1 | arg1 & 0x1;
+			arg1 >>>= 0x1;
+			arg0--;
+		}
+		return local8;
+	}
+
+	@OriginalMember(owner = "client!uc", name = "a", descriptor = "(II)I")
+	public static int bitCountFast(@OriginalArg(0) int v) {
+		@Pc(9) int a = (v >>> 1 & 0xD5555555) + (v & 0x55555555);
+		@Pc(19) int b = (a >>> 2 & 0x33333333) + (a & 0x33333333);
+		@Pc(31) int c = (b >>> 4) + b & 0xF0F0F0F;
+		@Pc(37) int d = c + (c >>> 8);
+		@Pc(43) int e = d + (d >>> 16);
+		return e & 0xFF;
+	}
+
+	@OriginalMember(owner = "client!ra", name = "a", descriptor = "(BI)Z")
+	public static boolean isPowerOfTwo(@OriginalArg(1) int v) {
+		return v == (-v & v);
+	}
 }
