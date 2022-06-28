@@ -1051,7 +1051,7 @@ public class InterfaceList {
 		PlayerList.self.zFine = 3000;
 		PlayerList.self.xFine = 3000;
 		if (!GlRenderer.enabled) {
-			Static145.method2743(client.js5Archive8);
+			Flames.method2743(client.js5Archive8);
 			client.setGameState(10);
 			return;
 		}

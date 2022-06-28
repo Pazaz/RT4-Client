@@ -294,7 +294,7 @@ public final class Static87 {
 							}
 							if (component.clientCode == 1402) {
 								if (!GlRenderer.enabled) {
-									Static221.method3392(local123, local114);
+									Flames.render(local123, local114);
 									InterfaceList.aBooleanArray100[rectangle] = true;
 									InterfaceList.rectangleRedraw[rectangle] = true;
 								}

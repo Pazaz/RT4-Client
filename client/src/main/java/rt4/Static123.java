@@ -7,8 +7,6 @@ public final class Static123 {
 
 	@OriginalMember(owner = "client!qk", name = "b", descriptor = "Lclient!na;")
 	public static final JagString aClass100_900 = JagString.parse("tbrefresh");
-	@OriginalMember(owner = "client!jj", name = "e", descriptor = "I")
-	public static int anInt3058 = 0;
 
 	@OriginalMember(owner = "client!jj", name = "j", descriptor = "Z")
 	public static boolean draggingClickedInventoryObject = false;

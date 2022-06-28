@@ -1646,7 +1646,7 @@ public class WorldMap {
 			method4364(arg3, 0, local61, local50, 0, local236, arg2, local211);
 			method1195(arg3, 0, local61, local236, arg2, 0, local211, local50);
 			Static38.method959(0, 0, local211, arg3, local236, local50, local61, arg2);
-			GlRaster.method1178(aClass3_Sub2_Sub1_Sub1_2.pixels, arg0, arg1, arg3, arg2);
+			GlRaster.drawPixels(aClass3_Sub2_Sub1_Sub1_2.pixels, arg0, arg1, arg3, arg2);
 			SoftwareRaster.pixels = null;
 		} else {
 			method4364(arg3 + arg0, arg1, local61, local50, arg0, local236, arg1 + arg2, local211);

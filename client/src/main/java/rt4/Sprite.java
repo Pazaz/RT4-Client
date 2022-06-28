@@ -31,7 +31,7 @@ public abstract class Sprite extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!qf", name = "c", descriptor = "(II)V")
-	public abstract void method1415(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1);
+	public abstract void drawPixels(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1);
 
 	@OriginalMember(owner = "client!qf", name = "a", descriptor = "(IIIIII)V")
 	protected abstract void method1416(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5);

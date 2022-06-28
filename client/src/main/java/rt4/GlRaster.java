@@ -61,7 +61,7 @@ public final class GlRaster {
 	}
 
 	@OriginalMember(owner = "client!dj", name = "a", descriptor = "([IIIII)V")
-	public static void method1178(@OriginalArg(0) int[] arg0, @OriginalArg(1) int x, @OriginalArg(2) int y, @OriginalArg(3) int width, @OriginalArg(4) int height) {
+	public static void drawPixels(@OriginalArg(0) int[] arg0, @OriginalArg(1) int x, @OriginalArg(2) int y, @OriginalArg(3) int width, @OriginalArg(4) int height) {
 		GlRenderer.method4162();
 		@Pc(2) GL2 gl = GlRenderer.gl;
 		gl.glRasterPos2i(x, GlRenderer.canvasHeight - y);

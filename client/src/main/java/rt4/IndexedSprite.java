@@ -11,7 +11,7 @@ public abstract class IndexedSprite {
 	public int width;
 
 	@OriginalMember(owner = "client!ok", name = "d", descriptor = "I")
-	public int anInt4273;
+	public int yOffset;
 
 	@OriginalMember(owner = "client!ok", name = "i", descriptor = "I")
 	public int innerHeight;
@@ -23,7 +23,7 @@ public abstract class IndexedSprite {
 	public int innerWidth;
 
 	@OriginalMember(owner = "client!ok", name = "m", descriptor = "I")
-	public int anInt4280;
+	public int xOffset;
 
 	@OriginalMember(owner = "client!ok", name = "<init>", descriptor = "()V")
 	protected IndexedSprite() {

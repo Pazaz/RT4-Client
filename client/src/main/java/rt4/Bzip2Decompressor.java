@@ -9,6 +9,9 @@ public final class Bzip2Decompressor {
 	@OriginalMember(owner = "client!oc", name = "a", descriptor = "Lclient!bb;")
 	private static final Bzip2DState state = new Bzip2DState();
 
+	@OriginalMember(owner = "client!s", name = "a", descriptor = "[I")
+	public static int[] tt;
+
 	@OriginalMember(owner = "client!oc", name = "a", descriptor = "(ILclient!bb;)I")
 	private static int getBits(@OriginalArg(0) int arg0, @OriginalArg(1) Bzip2DState arg1) {
 		while (arg1.bsLive < arg0) {
@@ -30,7 +33,7 @@ public final class Bzip2Decompressor {
 		@Pc(5) int local5 = arg0.stateOutLen;
 		@Pc(8) int local8 = arg0.nblockused;
 		@Pc(11) int local11 = arg0.k0;
-		@Pc(13) int[] local13 = Static221.tt;
+		@Pc(13) int[] local13 = tt;
 		@Pc(16) int local16 = arg0.tPos;
 		@Pc(19) byte[] local19 = arg0.strmNextOut;
 		@Pc(22) int local22 = arg0.strmNextOutPtr;
@@ -134,7 +137,7 @@ public final class Bzip2Decompressor {
 		arg0.stateOutLen = local5;
 		arg0.nblockused = local8;
 		arg0.k0 = local11;
-		Static221.tt = local13;
+		tt = local13;
 		arg0.tPos = local16;
 		arg0.strmNextOut = local19;
 		arg0.strmNextOutPtr = local22;
@@ -195,8 +198,8 @@ public final class Bzip2Decompressor {
 	@OriginalMember(owner = "client!oc", name = "d", descriptor = "(Lclient!bb;)V")
 	private static void decompress(@OriginalArg(0) Bzip2DState arg0) {
 		arg0.blockSize100k = 1;
-		if (Static221.tt == null) {
-			Static221.tt = new int[arg0.blockSize100k * 100000];
+		if (tt == null) {
+			tt = new int[arg0.blockSize100k * 100000];
 		}
 		@Pc(56) boolean local56 = true;
 		while (true) {
@@ -371,7 +374,7 @@ public final class Bzip2Decompressor {
 							local61 = arg0.seqToUnseq[arg0.mfta[arg0.mtfbase[0]] & 0xFF];
 							arg0.unfztab[local61 & 0xFF] += local548;
 							while (local548 > 0) {
-								Static221.tt[local475] = local61 & 0xFF;
+								tt[local475] = local61 & 0xFF;
 								local475++;
 								local548--;
 							}
@@ -423,7 +426,7 @@ public final class Bzip2Decompressor {
 								}
 							}
 							arg0.unfztab[arg0.seqToUnseq[local61 & 0xFF] & 0xFF]++;
-							Static221.tt[local475] = arg0.seqToUnseq[local61 & 0xFF] & 0xFF;
+							tt[local475] = arg0.seqToUnseq[local61 & 0xFF] & 0xFF;
 							local475++;
 							if (local506 == 0) {
 								local478++;
@@ -453,13 +456,13 @@ public final class Bzip2Decompressor {
 						arg0.cftab[local141] += arg0.cftab[local141 - 1];
 					}
 					for (local141 = 0; local141 < local475; local141++) {
-						local61 = (byte) (Static221.tt[local141] & 0xFF);
-						Static221.tt[arg0.cftab[local61 & 0xFF]] |= local141 << 8;
+						local61 = (byte) (tt[local141] & 0xFF);
+						tt[arg0.cftab[local61 & 0xFF]] |= local141 << 8;
 						arg0.cftab[local61 & 0xFF]++;
 					}
-					arg0.tPos = Static221.tt[arg0.origPtr] >> 8;
+					arg0.tPos = tt[arg0.origPtr] >> 8;
 					arg0.nblockused = 0;
-					arg0.tPos = Static221.tt[arg0.tPos];
+					arg0.tPos = tt[arg0.tPos];
 					arg0.k0 = (byte) (arg0.tPos & 0xFF);
 					arg0.tPos >>= 0x8;
 					arg0.nblockused++;

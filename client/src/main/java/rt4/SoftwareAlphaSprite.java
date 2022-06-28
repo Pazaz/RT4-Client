@@ -186,7 +186,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 
 	@OriginalMember(owner = "client!am", name = "c", descriptor = "(II)V")
 	@Override
-	public final void method1415(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+	public final void drawPixels(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		arg0 += this.anInt1863;
 		arg1 += this.anInt1861;
 		@Pc(15) int local15 = arg0 + arg1 * SoftwareRaster.width;
