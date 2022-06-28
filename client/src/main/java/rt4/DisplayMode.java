@@ -159,7 +159,7 @@ public final class DisplayMode {
 				if (client.gameState == 5) {
 					LoadingBar.render(true, Fonts.b12Full);
 				} else {
-					Static114.drawTextOnScreen(false, LocalizedText.LOADING);
+					Fonts.drawTextOnScreen(false, LocalizedText.LOADING);
 				}
 				try {
 					@Pc(269) Graphics local269 = GameShell.canvas.getGraphics();

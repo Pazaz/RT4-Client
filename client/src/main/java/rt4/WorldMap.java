@@ -1614,11 +1614,11 @@ public class WorldMap {
 			local50 = arg0 + arg3 / 2;
 			local61 = arg2 / 2 + arg1 - 18 - 20;
 			if (GlRenderer.enabled) {
-				GlRaster.method1186(arg0, arg1, arg3, arg2, 0);
-				GlRaster.method1179(local50 - 152, local61, 304, 34, 9179409);
-				GlRaster.method1179(local50 - 151, local61 + 1, 302, 32, 0);
-				GlRaster.method1186(local50 - 150, local61 + 2, loadPercentage * 3, 30, 9179409);
-				GlRaster.method1186(local50 + loadPercentage * 3 - 150, local61 - -2, 300 - loadPercentage * 3, 30, 0);
+				GlRaster.fillRect(arg0, arg1, arg3, arg2, 0);
+				GlRaster.drawRect(local50 - 152, local61, 304, 34, 9179409);
+				GlRaster.drawRect(local50 - 151, local61 + 1, 302, 32, 0);
+				GlRaster.fillRect(local50 - 150, local61 + 2, loadPercentage * 3, 30, 9179409);
+				GlRaster.fillRect(local50 + loadPercentage * 3 - 150, local61 - -2, 300 - loadPercentage * 3, 30, 0);
 			} else {
 				SoftwareRaster.fillRect(arg0, arg1, arg3, arg2, 0);
 				SoftwareRaster.drawRect(local50 - 152, local61, 304, 34, 9179409);

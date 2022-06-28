@@ -141,9 +141,9 @@ public final class Static89 {
 				Static145.method2744();
 			}
 		} else if (Static87.aClass13_13 != null) {
-			Static49.method1207(Static87.aClass13_13, Static87.anInt3484, Static131.anInt3260);
+			MiniMenu.method1207(Static87.aClass13_13, Static87.anInt3484, Static131.anInt3260);
 		} else if (Static87.anInt2503 != -1) {
-			Static49.method1207(null, Static126.anInt5574, Static87.anInt2503);
+			MiniMenu.method1207(null, Static126.anInt5574, Static87.anInt2503);
 		}
 		local60 = Static40.aBoolean108 ? -1 : method4044();
 		if (local60 == -1) {

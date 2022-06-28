@@ -112,6 +112,10 @@ public class LoginManager {
 	public static int anInt1862 = 0;
 	@OriginalMember(owner = "client!sj", name = "u", descriptor = "Z")
 	public static boolean dynamicMapRegion = false;
+	@OriginalMember(owner = "client!nm", name = "U", descriptor = "I")
+	public static int mapFilesMissingCount = 0;
+	@OriginalMember(owner = "client!t", name = "y", descriptor = "I")
+	public static int loadingScreenState = 0;
 
 	@OriginalMember(owner = "client!dm", name = "d", descriptor = "(I)V")
 	public static void clear() {
@@ -497,7 +501,6 @@ public class LoginManager {
 				centralZoneX = -1;
 				Protocol.readRebuildPacket(false);
 				Protocol.opcode = -1;
-				return;
 			}
 		} catch (@Pc(977) IOException ex) {
 			if (Protocol.socket != null) {
@@ -667,7 +670,7 @@ public class LoginManager {
 		} else {
 			client.setGameState(25);
 		}
-		Static114.drawTextOnScreen(true, LocalizedText.LOADING);
+		Fonts.drawTextOnScreen(true, LocalizedText.LOADING);
 		@Pc(53) int local53 = Camera.originZ;
 		@Pc(55) int local55 = Camera.originX;
 		Camera.originZ = arg1 * 8 - 48;
@@ -838,4 +841,313 @@ public class LoginManager {
 		}
 	}
 
+	@OriginalMember(owner = "client!gd", name = "c", descriptor = "(I)V")
+	public static void rebuildMap() {
+		ClientProt.ping(false);
+		mapFilesMissingCount = 0;
+		@Pc(12) boolean fileExists = true;
+		@Pc(14) int id;
+		for (id = 0; id < mapFilesBuffer.length; id++) {
+			if (mapFileIds[id] != -1 && mapFilesBuffer[id] == null) {
+				mapFilesBuffer[id] = client.js5Archive5.fetchFile(mapFileIds[id], 0);
+				if (mapFilesBuffer[id] == null) {
+					mapFilesMissingCount++;
+					fileExists = false;
+				}
+			}
+			if (locationsMapFileIds[id] != -1 && locationMapFilesBuffer[id] == null) {
+				locationMapFilesBuffer[id] = client.js5Archive5.fetchFile(locationsMapFileIds[id], regionsXteaKeys[id], 0);
+				if (locationMapFilesBuffer[id] == null) {
+					fileExists = false;
+					mapFilesMissingCount++;
+				}
+			}
+
+			if (GlRenderer.enabled) {
+				if (underWaterMapFileIds[id] != -1 && underWaterMapFilesBuffer[id] == null) {
+					underWaterMapFilesBuffer[id] = client.js5Archive5.fetchFile(underWaterMapFileIds[id], 0);
+					if (underWaterMapFilesBuffer[id] == null) {
+						fileExists = false;
+						mapFilesMissingCount++;
+					}
+				}
+				if (underWaterLocationsMapFileIds[id] != -1 && underWaterLocationsMapFilesBuffer[id] == null) {
+					underWaterLocationsMapFilesBuffer[id] = client.js5Archive5.fetchFile(underWaterLocationsMapFileIds[id], 0);
+					if (underWaterLocationsMapFilesBuffer[id] == null) {
+						mapFilesMissingCount++;
+						fileExists = false;
+					}
+				}
+			}
+
+			if (npcSpawnsFileIds != null && npcSpawnsFilesBuffer[id] == null && npcSpawnsFileIds[id] != -1) {
+				npcSpawnsFilesBuffer[id] = client.js5Archive5.fetchFile(npcSpawnsFileIds[id], regionsXteaKeys[id], 0);
+				if (npcSpawnsFilesBuffer[id] == null) {
+					mapFilesMissingCount++;
+					fileExists = false;
+				}
+			}
+		}
+
+		if (mapElementList == null) {
+			if (map == null || !client.js5Archive23.isGroupNameValid(JagString.concatenate(new JagString[]{map.group, ClientProt.aClass100_363}))) {
+				mapElementList = new MapElementList(0);
+			} else if (client.js5Archive23.isGroupReady(JagString.concatenate(new JagString[]{map.group, ClientProt.aClass100_363}))) {
+				mapElementList = MapElementList.create(JagString.concatenate(new JagString[]{map.group, ClientProt.aClass100_363}), client.js5Archive23);
+			} else {
+				fileExists = false;
+				mapFilesMissingCount++;
+			}
+		}
+
+		if (!fileExists) {
+			loadingScreenState = 1;
+			return;
+		}
+
+		ClientProt.anInt5804 = 0;
+		fileExists = true;
+		@Pc(320) int chunkX;
+		@Pc(309) int chunkZ;
+		for (id = 0; id < mapFilesBuffer.length; id++) {
+			@Pc(294) byte[] local294 = locationMapFilesBuffer[id];
+			if (local294 != null) {
+				chunkZ = (regionBitPacked[id] & 0xFF) * 64 - Camera.originZ;
+				chunkX = (regionBitPacked[id] >> 8) * 64 - Camera.originX;
+				if (dynamicMapRegion) {
+					chunkZ = 10;
+					chunkX = 10;
+				}
+				fileExists &= method1201(chunkX, chunkZ, local294);
+			}
+			if (GlRenderer.enabled) {
+				local294 = underWaterLocationsMapFilesBuffer[id];
+				if (local294 != null) {
+					chunkX = (regionBitPacked[id] >> 8) * 64 - Camera.originX;
+					chunkZ = (regionBitPacked[id] & 0xFF) * 64 - Camera.originZ;
+					if (dynamicMapRegion) {
+						chunkZ = 10;
+						chunkX = 10;
+					}
+					fileExists &= method1201(chunkX, chunkZ, local294);
+				}
+			}
+		}
+		if (!fileExists) {
+			loadingScreenState = 2;
+			return;
+		}
+
+		if (loadingScreenState != 0) {
+			Fonts.drawTextOnScreen(true, JagString.concatenate(new JagString[]{LocalizedText.LOADING, ClientProt.COMPLETE_PERCENT}));
+		}
+
+		client.audioLoop();
+		client.method3768();
+		@Pc(420) boolean hasUnderWaterMap = false;
+		@Pc(427) int i;
+		if (GlRenderer.enabled && Preferences.highWaterDetail) {
+			for (i = 0; i < mapFilesBuffer.length; i++) {
+				if (underWaterLocationsMapFilesBuffer[i] != null || underWaterMapFilesBuffer[i] != null) {
+					hasUnderWaterMap = true;
+					break;
+				}
+			}
+		}
+		SceneGraph.init(GlRenderer.enabled ? GlobalConfig.TILE_DISTANCE : 25, hasUnderWaterMap);
+		for (i = 0; i < 4; i++) {
+			PathFinder.collisionMaps[i].clear();
+		}
+		for (i = 0; i < 4; i++) {
+			for (chunkX = 0; chunkX < 104; chunkX++) {
+				for (chunkZ = 0; chunkZ < 104; chunkZ++) {
+					SceneGraph.tileFlags[i][chunkX][chunkZ] = 0;
+				}
+			}
+		}
+		AreaSoundManager.clear(false);
+		if (GlRenderer.enabled) {
+			ShadowManager.shadowMapImage.clear();
+			for (i = 0; i < 13; i++) {
+				for (chunkX = 0; chunkX < 13; chunkX++) {
+					ShadowManager.shadows[i][chunkX].outputToSprite = true;
+				}
+			}
+		}
+		if (GlRenderer.enabled) {
+			LightingManager.method2404();
+		}
+		if (GlRenderer.enabled) {
+			ClientProt.setDefaultChunksAtmosphere();
+		}
+		client.audioLoop();
+		System.gc();
+		ClientProt.ping(true);
+		SceneGraph.load(false);
+		if (!dynamicMapRegion) {
+			Static87.method1805(false);
+			ClientProt.ping(true);
+			if (GlRenderer.enabled) {
+				i = PlayerList.self.movementQueueX[0] >> 3;
+				chunkX = PlayerList.self.movementQueueZ[0] >> 3;
+				FogManager.setLightPosition(chunkX, i);
+			}
+			method743(false);
+			if (npcSpawnsFilesBuffer != null) {
+				Static158.decodeNpcFiles();
+			}
+		}
+		if (dynamicMapRegion) {
+			Static89.method1835(false);
+			ClientProt.ping(true);
+			if (GlRenderer.enabled) {
+				i = PlayerList.self.movementQueueX[0] >> 3;
+				chunkX = PlayerList.self.movementQueueZ[0] >> 3;
+				FogManager.setLightPosition(chunkX, i);
+			}
+			Static233.method4002(false);
+		}
+		client.method3768();
+		ClientProt.ping(true);
+		SceneGraph.method1169(PathFinder.collisionMaps, false);
+		if (GlRenderer.enabled) {
+			LightingManager.method2395();
+		}
+		ClientProt.ping(true);
+		i = SceneGraph.firstVisibleLevel;
+		if (i > Player.level) {
+			i = Player.level;
+		}
+		if (i < Player.level - 1) {
+		}
+		if (SceneGraph.allLevelsAreVisible()) {
+			SceneGraph.method2750(0);
+		} else {
+			SceneGraph.method2750(SceneGraph.firstVisibleLevel);
+		}
+		SceneGraph.unload();
+		if (GlRenderer.enabled && hasUnderWaterMap) {
+			SceneGraph.setUnderwater(true);
+			SceneGraph.load(true);
+			if (!dynamicMapRegion) {
+				Static87.method1805(true);
+				ClientProt.ping(true);
+				method743(true);
+			}
+			if (dynamicMapRegion) {
+				Static89.method1835(true);
+				ClientProt.ping(true);
+				Static233.method4002(true);
+			}
+			client.method3768();
+			ClientProt.ping(true);
+			SceneGraph.method1169(PathFinder.collisionMaps, true);
+			ClientProt.ping(true);
+			SceneGraph.unload();
+			SceneGraph.setUnderwater(false);
+		}
+		if (GlRenderer.enabled) {
+			for (chunkX = 0; chunkX < 13; chunkX++) {
+				for (chunkZ = 0; chunkZ < 13; chunkZ++) {
+					ShadowManager.shadows[chunkX][chunkZ].method4676(SceneGraph.tileHeights[0], chunkX * 8, chunkZ * 8);
+				}
+			}
+		}
+		for (chunkX = 0; chunkX < 104; chunkX++) {
+			for (chunkZ = 0; chunkZ < 104; chunkZ++) {
+				Protocol.spawnGroundObject(chunkZ, chunkX);
+			}
+		}
+		ScriptRunner.method2218();
+		client.audioLoop();
+		ChangeLocRequest.flush();
+		client.method3768();
+		Static231.aBoolean252 = false;
+		if (GameShell.frame != null && Protocol.socket != null && client.gameState == 25) {
+			Protocol.outboundBuffer.p1isaac(20);
+			Protocol.outboundBuffer.p4(1057001181);
+		}
+		if (!dynamicMapRegion) {
+			@Pc(815) int local815 = (centralZoneZ + 6) / 8;
+			@Pc(821) int local821 = (centralZoneZ - 6) / 8;
+			chunkX = (centralZoneX - 6) / 8;
+			chunkZ = (centralZoneX + 6) / 8;
+			for (@Pc(837) int local837 = chunkX - 1; local837 <= chunkZ + 1; local837++) {
+				for (@Pc(850) int local850 = local821 - 1; local850 <= local815 + 1; local850++) {
+					if (local837 < chunkX || local837 > chunkZ || local850 < local821 || local850 > local815) {
+						client.js5Archive5.prefetchGroup(JagString.concatenate(new JagString[]{aClass100_558, JagString.parseInt(local837), UNDERSCORE, JagString.parseInt(local850)}));
+						client.js5Archive5.prefetchGroup(JagString.concatenate(new JagString[]{aClass100_1090, JagString.parseInt(local837), UNDERSCORE, JagString.parseInt(local850)}));
+					}
+				}
+			}
+		}
+		if (client.gameState == 28) {
+			client.setGameState(10);
+		} else {
+			client.setGameState(30);
+			if (Protocol.socket != null) {
+				Protocol.outboundBuffer.p1isaac(110);
+			}
+		}
+		WorldMap.method2720();
+		client.audioLoop();
+		GameShell.resetTimer();
+	}
+
+	@OriginalMember(owner = "client!dm", name = "a", descriptor = "(BII[B)Z")
+	public static boolean method1201(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) byte[] arg2) {
+		@Pc(15) boolean local15 = true;
+		@Pc(17) int local17 = -1;
+		@Pc(22) Buffer local22 = new Buffer(arg2);
+		label70:
+		while (true) {
+			@Pc(26) int local26 = local22.gVarSmart();
+			if (local26 == 0) {
+				return local15;
+			}
+			@Pc(33) int local33 = 0;
+			local17 += local26;
+			@Pc(39) boolean local39 = false;
+			while (true) {
+				@Pc(78) int local78;
+				@Pc(95) LocType local95;
+				do {
+					@Pc(72) int local72;
+					@Pc(68) int local68;
+					do {
+						do {
+							do {
+								do {
+									@Pc(45) int local45;
+									while (local39) {
+										local45 = local22.gsmarts();
+										if (local45 == 0) {
+											continue label70;
+										}
+										local22.g1();
+									}
+									local45 = local22.gsmarts();
+									if (local45 == 0) {
+										continue label70;
+									}
+									local33 += local45 - 1;
+									@Pc(58) int local58 = local33 & 0x3F;
+									@Pc(64) int local64 = local33 >> 6 & 0x3F;
+									local68 = arg1 + local58;
+									local72 = arg0 + local64;
+									local78 = local22.g1() >> 2;
+								} while (local72 <= 0);
+							} while (local68 <= 0);
+						} while (local72 >= 103);
+					} while (local68 >= 103);
+					local95 = LocTypeList.get(local17);
+				} while (local78 == 22 && !Preferences.showGroundDecorations && local95.anInt4429 == 0 && local95.anInt4435 != 1 && !local95.aBoolean206);
+				local39 = true;
+				if (!local95.isReady()) {
+					local15 = false;
+					ClientProt.anInt5804++;
+				}
+			}
+		}
+	}
 }

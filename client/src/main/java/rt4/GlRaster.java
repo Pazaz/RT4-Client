@@ -75,7 +75,7 @@ public final class GlRaster {
 	}
 
 	@OriginalMember(owner = "client!dj", name = "a", descriptor = "(IIIII)V")
-	public static void method1179(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+	public static void drawRect(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		GlRenderer.method4162();
 		@Pc(5) float local5 = (float) arg0 + 0.3F;
 		@Pc(12) float local12 = local5 + (float) (arg2 - 1);
@@ -220,7 +220,7 @@ public final class GlRaster {
 	}
 
 	@OriginalMember(owner = "client!dj", name = "c", descriptor = "(IIIII)V")
-	public static void method1186(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+	public static void fillRect(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		GlRenderer.method4162();
 		@Pc(3) float local3 = (float) arg0;
 		@Pc(8) float local8 = local3 + (float) arg2;

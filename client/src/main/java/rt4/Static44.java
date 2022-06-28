@@ -38,9 +38,9 @@ public final class Static44 {
 		}
 		if (MiniMenu.size == 1) {
 			Static40.aBoolean108 = false;
-			InterfaceList.method4012(InterfaceList.anInt4271, InterfaceList.anInt761, InterfaceList.anInt5138, InterfaceList.anInt436);
+			InterfaceList.redrawScreen(InterfaceList.anInt4271, InterfaceList.anInt761, InterfaceList.anInt5138, InterfaceList.anInt436);
 		} else {
-			InterfaceList.method4012(InterfaceList.anInt4271, InterfaceList.anInt761, InterfaceList.anInt5138, InterfaceList.anInt436);
+			InterfaceList.redrawScreen(InterfaceList.anInt4271, InterfaceList.anInt761, InterfaceList.anInt5138, InterfaceList.anInt436);
 			local53 = Fonts.b12Full.getStringWidth(LocalizedText.CHOOSE_OPTION);
 			for (@Pc(95) int local95 = 0; local95 < MiniMenu.size; local95++) {
 				@Pc(104) int local104 = Fonts.b12Full.getStringWidth(MiniMenu.getOp(local95));

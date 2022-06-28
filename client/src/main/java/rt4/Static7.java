@@ -59,7 +59,7 @@ public final class Static7 {
 			local204 = Mouse.lastMouseX;
 			if (local204 < InterfaceList.anInt4271 - 10 || local204 > InterfaceList.anInt761 + InterfaceList.anInt4271 + 10 || InterfaceList.anInt5138 - 10 > local93 || local93 > InterfaceList.anInt436 + InterfaceList.anInt5138 + 10) {
 				Static40.aBoolean108 = false;
-				InterfaceList.method4012(InterfaceList.anInt4271, InterfaceList.anInt761, InterfaceList.anInt5138, InterfaceList.anInt436);
+				InterfaceList.redrawScreen(InterfaceList.anInt4271, InterfaceList.anInt761, InterfaceList.anInt5138, InterfaceList.anInt436);
 			}
 		}
 		if (local20 != 1) {
@@ -86,6 +86,6 @@ public final class Static7 {
 			MiniMenu.doAction(local269);
 		}
 		Static40.aBoolean108 = false;
-		InterfaceList.method4012(InterfaceList.anInt4271, InterfaceList.anInt761, InterfaceList.anInt5138, InterfaceList.anInt436);
+		InterfaceList.redrawScreen(InterfaceList.anInt4271, InterfaceList.anInt761, InterfaceList.anInt5138, InterfaceList.anInt436);
 	}
 }

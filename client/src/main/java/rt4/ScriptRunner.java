@@ -171,8 +171,8 @@ public final class ScriptRunner {
 					local122 = (arg0 - local115) / 2;
 					if (arg4) {
 						GlRaster.method1177();
-						GlRaster.method1186(arg3, arg1, local122, arg2, 0);
-						GlRaster.method1186(arg0 + arg3 - local122, arg1, local122, arg2, 0);
+						GlRaster.fillRect(arg3, arg1, local122, arg2, 0);
+						GlRaster.fillRect(arg0 + arg3 - local122, arg1, local122, arg2, 0);
 					}
 					arg3 += local122;
 					arg0 -= local122 * 2;
@@ -186,8 +186,8 @@ public final class ScriptRunner {
 					local122 = (arg2 - local115) / 2;
 					if (arg4) {
 						GlRaster.method1177();
-						GlRaster.method1186(arg3, arg1, arg0, local122, 0);
-						GlRaster.method1186(arg3, arg1 + arg2 - local122, arg0, local122, 0);
+						GlRaster.fillRect(arg3, arg1, arg0, local122, 0);
+						GlRaster.fillRect(arg3, arg1 + arg2 - local122, arg0, local122, 0);
 					}
 					arg2 -= local122 * 2;
 					arg1 += local122;
@@ -338,11 +338,11 @@ public final class ScriptRunner {
 		}
 		if (aBoolean43) {
 			if (GlRenderer.enabled) {
-				GlRaster.method1186(arg2, arg4, arg3, arg0, 0);
+				GlRaster.fillRect(arg2, arg4, arg3, arg0, 0);
 			} else {
 				SoftwareRaster.fillRect(arg2, arg4, arg3, arg0, 0);
 			}
-			Static114.drawTextOnScreen(false, LocalizedText.LOADING);
+			Fonts.drawTextOnScreen(false, LocalizedText.LOADING);
 		}
 		if (!arg1 && !aBoolean43 && !Static40.aBoolean108 && arg2 <= anInt3751 && arg3 + arg2 > anInt3751 && arg4 <= anInt1892 && arg0 + arg4 > anInt1892) {
 			MiniMenu.addEntries(arg4, arg3, arg0, arg2, anInt1892, anInt3751);

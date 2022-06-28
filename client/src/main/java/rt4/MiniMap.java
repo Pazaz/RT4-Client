@@ -396,7 +396,7 @@ public class MiniMap {
 				method1446(arg3, Sprites.mapflags, local181, local146, arg1, arg2);
 			}
 			if (GlRenderer.enabled) {
-				GlRaster.method1186(arg2 + arg3.width / 2 - 1, arg1 + -1 - -(arg3.height / 2), 3, 3, 16777215);
+				GlRaster.fillRect(arg2 + arg3.width / 2 - 1, arg1 + -1 - -(arg3.height / 2), 3, 3, 16777215);
 			} else {
 				SoftwareRaster.fillRect(arg3.width / 2 + arg2 - 1, arg3.height / 2 + -1 + arg1, 3, 3, 16777215);
 			}

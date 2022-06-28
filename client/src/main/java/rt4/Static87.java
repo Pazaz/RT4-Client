@@ -527,12 +527,12 @@ public final class Static87 {
 									if (alpha == 0) {
 										if (component.filled) {
 											if (GlRenderer.enabled) {
-												GlRaster.method1186(local123, local114, component.width, component.height, local270);
+												GlRaster.fillRect(local123, local114, component.width, component.height, local270);
 											} else {
 												SoftwareRaster.fillRect(local123, local114, component.width, component.height, local270);
 											}
 										} else if (GlRenderer.enabled) {
-											GlRaster.method1179(local123, local114, component.width, component.height, local270);
+											GlRaster.drawRect(local123, local114, component.width, component.height, local270);
 										} else {
 											SoftwareRaster.drawRect(local123, local114, component.width, component.height, local270);
 										}
@@ -584,7 +584,7 @@ public final class Static87 {
 											if (!component.if3) {
 												local1934 = JagString.method2465(component, local1934);
 											}
-											local1921.method2852(local1934, local123, local114, component.width, component.height, local276, component.textAntiMacro ? 0 : -1, component.anInt460, component.anInt478, component.anInt467);
+											local1921.drawInterfaceText(local1934, local123, local114, component.width, component.height, local276, component.textAntiMacro ? 0 : -1, component.anInt460, component.anInt478, component.anInt467);
 										} else if (Component.aBoolean72) {
 											InterfaceList.redraw(component);
 										}
@@ -862,8 +862,8 @@ public final class Static87 {
 													cardMemory = arg4 - local270;
 												}
 												if (GlRenderer.enabled) {
-													GlRaster.method1186(cardMemory, local556, local270, local276, 16777120);
-													GlRaster.method1179(cardMemory, local556, local270, local276, 0);
+													GlRaster.fillRect(cardMemory, local556, local270, local276, 16777120);
+													GlRaster.drawRect(cardMemory, local556, local270, local276, 0);
 												} else {
 													SoftwareRaster.fillRect(cardMemory, local556, local270, local276, 16777120);
 													SoftwareRaster.drawRect(cardMemory, local556, local270, local276, 0);
@@ -939,8 +939,8 @@ public final class Static87 {
 			SoftwareRaster.drawHorizontalLine(arg2 + 1, local35 + arg3 - (-local54 + -14), 15, anInt671);
 			return;
 		}
-		GlRaster.method1186(arg2, arg3 + 16, 16, arg4 - 32, anInt4306);
-		GlRaster.method1186(arg2, arg3 + local54 + 16, 16, local35, anInt1704);
+		GlRaster.fillRect(arg2, arg3 + 16, 16, arg4 - 32, anInt4306);
+		GlRaster.fillRect(arg2, arg3 + local54 + 16, 16, local35, anInt1704);
 		GlRaster.method1176(arg2, local54 + arg3 + 16, local35, anInt4938);
 		GlRaster.method1176(arg2 + 1, local54 + 16 + arg3, local35, anInt4938);
 		GlRaster.method1174(arg2, local54 + arg3 + 16, 16, anInt4938);

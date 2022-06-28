@@ -73,9 +73,9 @@ public final class Static145 {
 		@Pc(11) int local11 = InterfaceList.anInt4271;
 		@Pc(15) int local15 = InterfaceList.anInt436;
 		if (GlRenderer.enabled) {
-			GlRaster.method1186(local11, local3, local9, local15, 6116423);
-			GlRaster.method1186(local11 + 1, local3 + 1, local9 - 2, 16, 0);
-			GlRaster.method1179(local11 + 1, local3 + 18, local9 - 2, local15 + -19, 0);
+			GlRaster.fillRect(local11, local3, local9, local15, 6116423);
+			GlRaster.fillRect(local11 + 1, local3 + 1, local9 - 2, 16, 0);
+			GlRaster.drawRect(local11 + 1, local3 + 18, local9 - 2, local15 + -19, 0);
 		} else {
 			SoftwareRaster.fillRect(local11, local3, local9, local15, 6116423);
 			SoftwareRaster.fillRect(local11 + 1, local3 + 1, local9 - 2, 16, 0);
@@ -92,7 +92,7 @@ public final class Static145 {
 			}
 			Fonts.b12Full.renderLeft(MiniMenu.getOp(local107), local11 + 3, local127, local129, 0);
 		}
-		Static121.method2407(InterfaceList.anInt4271, InterfaceList.anInt5138, InterfaceList.anInt436, InterfaceList.anInt761);
+		Static121.redrawScreen(InterfaceList.anInt4271, InterfaceList.anInt5138, InterfaceList.anInt436, InterfaceList.anInt761);
 	}
 
 	@OriginalMember(owner = "client!fh", name = "a", descriptor = "(BLclient!ek;)V")
