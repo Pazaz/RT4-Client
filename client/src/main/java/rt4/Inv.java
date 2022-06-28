@@ -54,7 +54,7 @@ public final class Inv extends Node {
 		}
 		@Pc(27) int local27 = 0;
 		for (@Pc(29) int local29 = 0; local29 < local19.objectIds.length; local29++) {
-			if (local19.objectIds[local29] >= 0 && ObjTypeList.anInt3245 > local19.objectIds[local29]) {
+			if (local19.objectIds[local29] >= 0 && ObjTypeList.capacity > local19.objectIds[local29]) {
 				@Pc(56) ObjType local56 = ObjTypeList.get(local19.objectIds[local29]);
 				if (local56.params != null) {
 					@Pc(68) IntNode local68 = (IntNode) local56.params.get(arg2);

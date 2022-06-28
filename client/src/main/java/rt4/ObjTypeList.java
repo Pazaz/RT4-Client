@@ -22,7 +22,7 @@ public class ObjTypeList {
 	@OriginalMember(owner = "client!ld", name = "g", descriptor = "[Lclient!na;")
 	public static JagString[] aClass100Array104 = null;
 	@OriginalMember(owner = "client!nh", name = "eb", descriptor = "I")
-	public static int anInt3245;
+	public static int capacity;
 	@OriginalMember(owner = "client!nd", name = "n", descriptor = "Lclient!ve;")
 	public static Js5 archive;
 
@@ -32,7 +32,7 @@ public class ObjTypeList {
 		modelsArchive = arg2;
 		archive = arg0;
 		@Pc(23) int local23 = archive.capacity() - 1;
-		anInt3245 = archive.getGroupCapacity(local23) + local23 * 256;
+		capacity = archive.getGroupCapacity(local23) + local23 * 256;
 		aClass100Array104 = new JagString[]{null, null, null, null, LocalizedText.DROP};
 		aClass100Array87 = new JagString[]{null, null, LocalizedText.TAKE, null, null};
 		font = arg1;

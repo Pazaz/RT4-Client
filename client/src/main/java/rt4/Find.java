@@ -52,7 +52,7 @@ public class Find {
 		@Pc(8) short[] local8 = new short[16];
 		@Pc(12) JagString local12 = arg1.toLowerCase();
 		@Pc(14) int local14 = 0;
-		for (@Pc(16) int local16 = 0; local16 < ObjTypeList.anInt3245; local16++) {
+		for (@Pc(16) int local16 = 0; local16 < ObjTypeList.capacity; local16++) {
 			@Pc(27) ObjType local27 = ObjTypeList.get(local16);
 			if ((!arg0 || local27.stockMarket) && local27.certtemplate == -1 && local27.lentTemplate == -1 && local27.dummyItem == 0 && local27.name.toLowerCase().indexOf(local12) != -1) {
 				if (local14 >= 250) {
