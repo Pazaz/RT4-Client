@@ -909,7 +909,7 @@ public final class ScriptRunner {
 	@OriginalMember(owner = "client!pk", name = "i", descriptor = "(I)V")
 	public static void method3532() {
 		for (@Pc(16) ProjAnimNode local16 = (ProjAnimNode) SceneGraph.projectiles.head(); local16 != null; local16 = (ProjAnimNode) SceneGraph.projectiles.next()) {
-			@Pc(21) ProjAnim local21 = local16.aClass8_Sub6_1;
+			@Pc(21) ProjAnim local21 = local16.value;
 			if (Player.level != local21.anInt4810 || local21.anInt4800 < client.loop) {
 				local16.unlink();
 			} else if (client.loop >= local21.anInt4822) {
@@ -2038,7 +2038,7 @@ public final class ScriptRunner {
 							int1 = intStack[isp];
 							for (int2 = 0; int2 < PlayerAppearance.MALE_FEATURES.length; int2++) {
 								if (int1 == PlayerAppearance.MALE_FEATURES[int2]) {
-									PlayerList.self.appearance.method1953(int2, int3);
+									PlayerList.self.appearance.setIdentikit(int2, int3);
 									continue nextOp;
 								}
 							}
@@ -2048,7 +2048,7 @@ public final class ScriptRunner {
 									continue nextOp;
 								}
 								if (int1 == PlayerAppearance.FEMALE_FEATURES[int2]) {
-									PlayerList.self.appearance.method1953(int2, int3);
+									PlayerList.self.appearance.setIdentikit(int2, int3);
 									continue nextOp;
 								}
 								int2++;
@@ -2058,13 +2058,13 @@ public final class ScriptRunner {
 							isp -= 2;
 							int1 = intStack[isp];
 							int3 = intStack[isp + 1];
-							PlayerList.self.appearance.setBaseColor(int1, int3);
+							PlayerList.self.appearance.setColor(int1, int3);
 							continue;
 						}
 						if (opcode == Cs2Opcodes.setFemale) {
 							isp--;
 							local12388 = intStack[isp] != 0;
-							PlayerList.self.appearance.setFemale(local12388);
+							PlayerList.self.appearance.setGender(local12388);
 							continue;
 						}
 					} else {

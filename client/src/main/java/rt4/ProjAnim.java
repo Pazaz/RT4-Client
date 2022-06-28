@@ -18,7 +18,7 @@ public final class ProjAnim extends Entity {
 	private double aDouble4;
 
 	@OriginalMember(owner = "client!ra", name = "Q", descriptor = "Lclient!ga;")
-	private ParticleSystem aClass47_Sub1_6;
+	private ParticleSystem particleSystem;
 
 	@OriginalMember(owner = "client!ra", name = "U", descriptor = "D")
 	private double aDouble5;
@@ -54,7 +54,7 @@ public final class ProjAnim extends Entity {
 	private int anInt4820 = 0;
 
 	@OriginalMember(owner = "client!ra", name = "T", descriptor = "I")
-	private int anInt4814 = -32768;
+	private int minY = -32768;
 
 	@OriginalMember(owner = "client!ra", name = "z", descriptor = "I")
 	public final int anInt4800;
@@ -200,14 +200,14 @@ public final class ProjAnim extends Entity {
 	public final void render(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) long arg8, @OriginalArg(9) int arg9, @OriginalArg(10) ParticleSystem arg10) {
 		@Pc(3) Model local3 = this.method3703();
 		if (local3 != null) {
-			local3.render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.aClass47_Sub1_6);
-			this.anInt4814 = local3.getMinY();
+			local3.render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.particleSystem);
+			this.minY = local3.getMinY();
 		}
 	}
 
 	@OriginalMember(owner = "client!ra", name = "b", descriptor = "()I")
 	@Override
 	public final int getMinY() {
-		return this.anInt4814;
+		return this.minY;
 	}
 }

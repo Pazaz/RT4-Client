@@ -8,10 +8,10 @@ import org.openrs2.deob.annotation.OriginalMember;
 public final class ProjAnimNode extends SecondaryNode {
 
 	@OriginalMember(owner = "client!ud", name = "R", descriptor = "Lclient!ra;")
-	public final ProjAnim aClass8_Sub6_1;
+	public final ProjAnim value;
 
 	@OriginalMember(owner = "client!ud", name = "<init>", descriptor = "(Lclient!ra;)V")
-	public ProjAnimNode(@OriginalArg(0) ProjAnim arg0) {
-		this.aClass8_Sub6_1 = arg0;
+	public ProjAnimNode(@OriginalArg(0) ProjAnim value) {
+		this.value = value;
 	}
 }
