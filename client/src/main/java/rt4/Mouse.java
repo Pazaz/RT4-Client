@@ -48,6 +48,8 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
 	public static int anInt5850 = 0;
 	@OriginalMember(owner = "client!ok", name = "f", descriptor = "J")
 	public static long prevClickTime = 0L;
+	@OriginalMember(owner = "client!wl", name = "u", descriptor = "I")
+	public static int anInt5895 = 0;
 	public int mouseWheelX;
 	public int mouseWheelY;
 

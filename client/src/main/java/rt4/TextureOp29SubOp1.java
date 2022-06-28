@@ -29,6 +29,11 @@ public final class TextureOp29SubOp1 extends TextureOp29SubOp {
 		this.anInt1017 = arg2;
 	}
 
+	@OriginalMember(owner = "client!al", name = "a", descriptor = "(ILclient!wa;)Lclient!ci;")
+	public static TextureOp29SubOp1 create(@OriginalArg(1) Buffer arg0) {
+		return new TextureOp29SubOp1(arg0.g2b(), arg0.g2b(), arg0.g2b(), arg0.g2b(), arg0.g3(), arg0.g1());
+	}
+
 	@OriginalMember(owner = "client!ci", name = "a", descriptor = "(III)V")
 	@Override
 	public final void method4007(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {

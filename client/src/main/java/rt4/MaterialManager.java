@@ -223,4 +223,11 @@ public class MaterialManager {
 		}
 		GlCleaner.onCardTexture += aByteBuffer6.limit() * 2;
 	}
+
+	@OriginalMember(owner = "client!lh", name = "b", descriptor = "(II)V")
+	public static void method2761(@OriginalArg(0) int arg0) {
+		UnderwaterMaterialRenderer.anInt3241 = arg0;
+		resetArgument(3);
+		resetArgument(4);
+	}
 }

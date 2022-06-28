@@ -30,6 +30,8 @@ public class WorldList {
 	public static final JagString aClass100_260 = JagString.parse(")1a2)1m");
 	@OriginalMember(owner = "client!ch", name = "x", descriptor = "Lclient!na;")
 	public static final JagString aClass100_193 = JagString.parse(":");
+	@OriginalMember(owner = "client!ii", name = "e", descriptor = "Lclient!na;")
+	public static final JagString aClass100_570 = JagString.parse(")2");
 	@OriginalMember(owner = "client!gi", name = "c", descriptor = "I")
 	public static int step = 0;
 	@OriginalMember(owner = "client!be", name = "kc", descriptor = "J")
@@ -265,7 +267,7 @@ public class WorldList {
 		sorted[local13] = sorted[arg2];
 		sorted[arg2] = local19;
 		for (@Pc(31) int local31 = arg4; local31 < arg2; local31++) {
-			if (Static164.method3115(local19, sorted[local31], arg0, arg1, arg3, arg5) <= 0) {
+			if (method3115(local19, sorted[local31], arg0, arg1, arg3, arg5) <= 0) {
 				@Pc(53) World local53 = sorted[local31];
 				sorted[local31] = sorted[local15];
 				sorted[local15++] = local53;
@@ -314,6 +316,62 @@ public class WorldList {
 			} catch (@Pc(191) Exception local191) {
 				return false;
 			}
+		}
+	}
+
+	@OriginalMember(owner = "client!na", name = "a", descriptor = "(Lclient!ba;Lclient!ba;IIIZZ)I")
+	public static int method3115(@OriginalArg(0) World arg0, @OriginalArg(1) World arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) boolean arg4, @OriginalArg(6) boolean arg5) {
+		@Pc(8) int local8 = method4595(arg1, arg3, arg0, arg5);
+		if (local8 != 0) {
+			return arg5 ? -local8 : local8;
+		} else if (arg2 == -1) {
+			return 0;
+		} else {
+			@Pc(42) int local42 = method4595(arg1, arg2, arg0, arg4);
+			return arg4 ? -local42 : local42;
+		}
+	}
+
+	@OriginalMember(owner = "client!wb", name = "a", descriptor = "(Lclient!ba;IILclient!ba;Z)I")
+	public static int method4595(@OriginalArg(0) World arg0, @OriginalArg(1) int arg1, @OriginalArg(3) World arg2, @OriginalArg(4) boolean arg3) {
+		if (arg1 == 1) {
+			@Pc(11) int local11 = arg0.players;
+			@Pc(14) int local14 = arg2.players;
+			if (!arg3) {
+				if (local14 == -1) {
+					local14 = 2001;
+				}
+				if (local11 == -1) {
+					local11 = 2001;
+				}
+			}
+			return local11 - local14;
+		} else if (arg1 == 2) {
+			return arg0.getWorldInfo().name.compare(arg2.getWorldInfo().name);
+		} else if (arg1 == 3) {
+			if (arg0.activity.strEquals(aClass100_570)) {
+				if (arg2.activity.strEquals(aClass100_570)) {
+					return 0;
+				} else if (arg3) {
+					return -1;
+				} else {
+					return 1;
+				}
+			} else if (arg2.activity.strEquals(aClass100_570)) {
+				return arg3 ? 1 : -1;
+			} else {
+				return arg0.activity.compare(arg2.activity);
+			}
+		} else if (arg1 == 4) {
+			return arg0.isLootShare() ? (arg2.isLootShare() ? 0 : 1) : arg2.isLootShare() ? -1 : 0;
+		} else if (arg1 == 5) {
+			return arg0.isQuickChat() ? (arg2.isQuickChat() ? 0 : 1) : (arg2.isQuickChat() ? -1 : 0);
+		} else if (arg1 == 6) {
+			return arg0.isPvp() ? (arg2.isPvp() ? 0 : 1) : (arg2.isPvp() ? -1 : 0);
+		} else if (arg1 == 7) {
+			return arg0.isMembers() ? (arg2.isMembers() ? 0 : 1) : (arg2.isMembers() ? -1 : 0);
+		} else {
+			return arg0.id - arg2.id;
 		}
 	}
 }

@@ -135,6 +135,8 @@ public class MiniMenu {
 	public static int clickedInventoryIndex = 0;
 	@OriginalMember(owner = "client!em", name = "D", descriptor = "I")
 	public static int gregorianDateSeed;
+	@OriginalMember(owner = "client!ml", name = "Q", descriptor = "I")
+	public static int anInt3953 = 0;
 
 	@OriginalMember(owner = "client!va", name = "a", descriptor = "(IZILclient!be;)V")
 	public static void addComponentEntries(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Component component) {
@@ -157,7 +159,7 @@ public class MiniMenu {
 		if (component.anInt530 == 5) {
 			add(-1, 0L, JagString.EMPTY, 0, (short) 51, component.aClass100_89, component.id);
 		}
-		if (component.anInt530 == 6 && Static44.aClass13_10 == null) {
+		if (component.anInt530 == 6 && Cs1ScriptRunner.aClass13_10 == null) {
 			add(-1, 0L, JagString.EMPTY, -1, (short) 41, component.aClass100_89, component.id);
 		}
 		@Pc(173) int local173;
@@ -291,7 +293,7 @@ public class MiniMenu {
 
 	@OriginalMember(owner = "client!hj", name = "a", descriptor = "(IJBLclient!na;ISLclient!na;I)V")
 	public static void add(@OriginalArg(0) int cursor, @OriginalArg(1) long arg1, @OriginalArg(3) JagString arg2, @OriginalArg(4) int arg3, @OriginalArg(5) short arg4, @OriginalArg(6) JagString arg5, @OriginalArg(7) int arg6) {
-		if (Static40.aBoolean108 || size >= 500) {
+		if (Cs1ScriptRunner.aBoolean108 || size >= 500) {
 			return;
 		}
 		ops[size] = arg5;
@@ -527,7 +529,7 @@ public class MiniMenu {
 				if (LoginManager.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT]) {
 					Cheat.teleport(Camera.originX + local15, Camera.originZ + local19, Player.level);
 				} else if (PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 0, true, 0, local15, 0, 0, 1, local19, PlayerList.self.movementQueueX[0])) {
-					Protocol.outboundBuffer.p1(Static1.anInt5);
+					Protocol.outboundBuffer.p1(InterfaceList.anInt5);
 					Protocol.outboundBuffer.p1(anInt2878);
 					Protocol.outboundBuffer.p2((int) Camera.yawTarget);
 					Protocol.outboundBuffer.p1(57);
@@ -590,10 +592,10 @@ public class MiniMenu {
 				Protocol.outboundBuffer.ip2(local36);
 			}
 		}
-		if (local23 == 41 && Static44.aClass13_10 == null) {
+		if (local23 == 41 && Cs1ScriptRunner.aClass13_10 == null) {
 			ClientProt.method10(local15, local19);
-			Static44.aClass13_10 = InterfaceList.method1418(local19, local15);
-			InterfaceList.redraw(Static44.aClass13_10);
+			Cs1ScriptRunner.aClass13_10 = InterfaceList.method1418(local19, local15);
+			InterfaceList.redraw(Cs1ScriptRunner.aClass13_10);
 		}
 		if (local23 == 49) {
 			PathFinder.findPathToLoc(local31, local19, local15);
@@ -772,10 +774,10 @@ public class MiniMenu {
 			Protocol.outboundBuffer.p1isaac(10);
 			Protocol.outboundBuffer.p4(local19);
 			local693 = InterfaceList.getComponent(local19);
-			if (local693.anIntArrayArray4 != null && local693.anIntArrayArray4[0][0] == 5) {
-				local1955 = local693.anIntArrayArray4[0][1];
-				if (VarpDomain.activeVarps[local1955] != local693.anIntArray48[0]) {
-					VarpDomain.activeVarps[local1955] = local693.anIntArray48[0];
+			if (local693.cs1Scripts != null && local693.cs1Scripts[0][0] == 5) {
+				local1955 = local693.cs1Scripts[0][1];
+				if (VarpDomain.activeVarps[local1955] != local693.cs1ComparisonOperands[0]) {
+					VarpDomain.activeVarps[local1955] = local693.cs1ComparisonOperands[0];
 					VarpDomain.refreshMagicVarp(local1955);
 				}
 			}
@@ -799,8 +801,8 @@ public class MiniMenu {
 			Protocol.outboundBuffer.p1isaac(10);
 			Protocol.outboundBuffer.p4(local19);
 			local693 = InterfaceList.getComponent(local19);
-			if (local693.anIntArrayArray4 != null && local693.anIntArrayArray4[0][0] == 5) {
-				local1955 = local693.anIntArrayArray4[0][1];
+			if (local693.cs1Scripts != null && local693.cs1Scripts[0][0] == 5) {
+				local1955 = local693.cs1Scripts[0][1];
 				VarpDomain.activeVarps[local1955] = 1 - VarpDomain.activeVarps[local1955];
 				VarpDomain.refreshMagicVarp(local1955);
 			}
@@ -1569,4 +1571,30 @@ public class MiniMenu {
 		local59.method2878(local24, arg2, arg1, arg0.width, arg0.height, arg0.color, arg0.shadowColor, arg0.anInt460, arg0.anInt478, client.aRandom1, gregorianDateSeed, anIntArray132);
 		InterfaceList.redrawScreen(anIntArray132[0], anIntArray132[2], anIntArray132[1], anIntArray132[3]);
 	}
+
+	@OriginalMember(owner = "client!ej", name = "h", descriptor = "(I)V")
+	public static void method1372() {
+		if (anInt3953 == 2) {
+			if (ScriptRunner.anInt3751 == Mouse.anInt5850 && ScriptRunner.anInt1892 == Mouse.anInt5895) {
+				anInt3953 = 0;
+				if (Cheat.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && size > 2) {
+					doAction(size - 2);
+				} else {
+					doAction(size - 1);
+				}
+			}
+		} else if (ScriptRunner.anInt3751 == Mouse.clickX && ScriptRunner.anInt1892 == Mouse.clickY) {
+			anInt3953 = 0;
+			if (Cheat.shiftClick && Keyboard.pressedKeys[Keyboard.KEY_SHIFT] && size > 2) {
+				doAction(size - 2);
+			} else {
+				doAction(size - 1);
+			}
+		} else {
+			Mouse.anInt5895 = Mouse.clickY;
+			anInt3953 = 2;
+			Mouse.anInt5850 = Mouse.clickX;
+		}
+	}
+
 }

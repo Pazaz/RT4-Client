@@ -23,8 +23,10 @@ public final class EnumType extends SecondaryNode {
 	@OriginalMember(owner = "client!ml", name = "cb", descriptor = "I")
 	private int defaultInt;
 
+	@OriginalMember(owner = "client!gn", name = "v", descriptor = "Lclient!na;")
+	public static final JagString NULL = JagString.parse("null");
 	@OriginalMember(owner = "client!ml", name = "Z", descriptor = "Lclient!na;")
-	private JagString defaultString = Static87.NULL;
+	private JagString defaultString = NULL;
 
 	@OriginalMember(owner = "client!ml", name = "a", descriptor = "(ILclient!wa;B)V")
 	private void decode(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {

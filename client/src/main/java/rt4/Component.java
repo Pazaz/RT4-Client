@@ -137,7 +137,7 @@ public final class Component {
 	public int[] statTriggers;
 
 	@OriginalMember(owner = "client!be", name = "Bc", descriptor = "[I")
-	public int[] anIntArray43;
+	public int[] cs1ComparisonOpcodes;
 
 	@OriginalMember(owner = "client!be", name = "Cc", descriptor = "[Ljava/lang/Object;")
 	public Object[] onMouseRepeat;
@@ -158,7 +158,7 @@ public final class Component {
 	public Object[] onDragStart;
 
 	@OriginalMember(owner = "client!be", name = "ad", descriptor = "[[I")
-	public int[][] anIntArrayArray4;
+	public int[][] cs1Scripts;
 
 	@OriginalMember(owner = "client!be", name = "bd", descriptor = "[I")
 	public int[] anIntArray46;
@@ -170,7 +170,7 @@ public final class Component {
 	public Object[] onUseWith;
 
 	@OriginalMember(owner = "client!be", name = "kd", descriptor = "[I")
-	public int[] anIntArray48;
+	public int[] cs1ComparisonOperands;
 
 	@OriginalMember(owner = "client!be", name = "nd", descriptor = "[I")
 	public int[] anIntArray49;
@@ -499,6 +499,20 @@ public final class Component {
 		fonts.clean(50);
 	}
 
+	@OriginalMember(owner = "client!lh", name = "d", descriptor = "(B)V")
+	public static void clear() {
+		sprites.clear();
+		models.clear();
+		fonts.clear();
+	}
+
+	@OriginalMember(owner = "client!da", name = "h", descriptor = "(B)V")
+	public static void method1019() {
+		sprites.removeSoft();
+		models.removeSoft();
+		fonts.removeSoft();
+	}
+
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(IIB)V")
 	public final void method477(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		if (this.anIntArray39 == null || this.anIntArray39.length <= arg0) {
@@ -593,11 +607,11 @@ public final class Component {
 		@Pc(109) int local109 = arg0.g1();
 		@Pc(125) int local125;
 		if (local109 > 0) {
-			this.anIntArray48 = new int[local109];
-			this.anIntArray43 = new int[local109];
+			this.cs1ComparisonOperands = new int[local109];
+			this.cs1ComparisonOpcodes = new int[local109];
 			for (local125 = 0; local125 < local109; local125++) {
-				this.anIntArray43[local125] = arg0.g1();
-				this.anIntArray48[local125] = arg0.g2();
+				this.cs1ComparisonOpcodes[local125] = arg0.g1();
+				this.cs1ComparisonOperands[local125] = arg0.g2();
 			}
 		}
 		local125 = arg0.g1();
@@ -605,14 +619,14 @@ public final class Component {
 		@Pc(175) int local175;
 		@Pc(183) int local183;
 		if (local125 > 0) {
-			this.anIntArrayArray4 = new int[local125][];
+			this.cs1Scripts = new int[local125][];
 			for (local164 = 0; local164 < local125; local164++) {
 				local175 = arg0.g2();
-				this.anIntArrayArray4[local164] = new int[local175];
+				this.cs1Scripts[local164] = new int[local175];
 				for (local183 = 0; local183 < local175; local183++) {
-					this.anIntArrayArray4[local164][local183] = arg0.g2();
-					if (this.anIntArrayArray4[local164][local183] == 65535) {
-						this.anIntArrayArray4[local164][local183] = -1;
+					this.cs1Scripts[local164][local183] = arg0.g2();
+					if (this.cs1Scripts[local164][local183] == 65535) {
+						this.cs1Scripts[local164][local183] = -1;
 					}
 				}
 			}

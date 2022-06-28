@@ -128,9 +128,9 @@ public class ClientProt {
 				InterfaceList.closeInterface(true, local18);
 			}
 		}
-		if (Static44.aClass13_10 != null) {
-			InterfaceList.redraw(Static44.aClass13_10);
-			Static44.aClass13_10 = null;
+		if (Cs1ScriptRunner.aClass13_10 != null) {
+			InterfaceList.redraw(Cs1ScriptRunner.aClass13_10);
+			Cs1ScriptRunner.aClass13_10 = null;
 		}
 	}
 
@@ -182,11 +182,11 @@ public class ClientProt {
 		if (client.gameState != 30 && client.gameState != 25) {
 			return;
 		}
-		Static131.anInt3251++;
-		if (Static131.anInt3251 < 50 && !arg0) {
+		Protocol.anInt3251++;
+		if (Protocol.anInt3251 < 50 && !arg0) {
 			return;
 		}
-		Static131.anInt3251 = 0;
+		Protocol.anInt3251 = 0;
 		if (!LoginManager.aBoolean247 && Protocol.socket != null) {
 			Protocol.outboundBuffer.p1isaac(93);
 			try {
@@ -201,69 +201,69 @@ public class ClientProt {
 
 	@OriginalMember(owner = "client!ac", name = "b", descriptor = "(I)V")
 	public static void method28() {
-		InterfaceList.redraw(Static40.aClass13_14);
-		Static40.anInt4851++;
-		if (Static44.aBoolean83 && InterfaceList.aBoolean174) {
+		InterfaceList.redraw(Cs1ScriptRunner.aClass13_14);
+		Cs1ScriptRunner.anInt4851++;
+		if (InterfaceList.aBoolean83 && InterfaceList.aBoolean174) {
 			@Pc(30) int local30 = Mouse.lastMouseX;
-			local30 -= Static40.anInt5388;
-			if (Static81.anInt2225 > local30) {
-				local30 = Static81.anInt2225;
+			local30 -= Cs1ScriptRunner.anInt5388;
+			if (Cs1ScriptRunner.anInt2225 > local30) {
+				local30 = Cs1ScriptRunner.anInt2225;
 			}
 			@Pc(41) int local41 = Mouse.lastMouseY;
-			if (Static81.anInt2225 + Static40.aClass13_1.width < local30 - -Static40.aClass13_14.width) {
-				local30 = Static81.anInt2225 + Static40.aClass13_1.width - Static40.aClass13_14.width;
+			if (Cs1ScriptRunner.anInt2225 + Cs1ScriptRunner.aClass13_1.width < local30 - -Cs1ScriptRunner.aClass13_14.width) {
+				local30 = Cs1ScriptRunner.anInt2225 + Cs1ScriptRunner.aClass13_1.width - Cs1ScriptRunner.aClass13_14.width;
 			}
-			local41 -= Static40.anInt4035;
+			local41 -= Cs1ScriptRunner.anInt4035;
 			if (local41 < InterfaceList.anInt5103) {
 				local41 = InterfaceList.anInt5103;
 			}
-			if (InterfaceList.anInt5103 + Static40.aClass13_1.height < local41 - -Static40.aClass13_14.height) {
-				local41 = InterfaceList.anInt5103 + Static40.aClass13_1.height - Static40.aClass13_14.height;
+			if (InterfaceList.anInt5103 + Cs1ScriptRunner.aClass13_1.height < local41 - -Cs1ScriptRunner.aClass13_14.height) {
+				local41 = InterfaceList.anInt5103 + Cs1ScriptRunner.aClass13_1.height - Cs1ScriptRunner.aClass13_14.height;
 			}
-			@Pc(109) int local109 = local41 - Static36.anInt660;
-			@Pc(114) int local114 = local30 - Static36.anInt3075;
-			@Pc(122) int local122 = local30 + Static40.aClass13_1.scrollX - Static81.anInt2225;
-			@Pc(130) int local130 = Static40.aClass13_1.scrollY + local41 - InterfaceList.anInt5103;
-			@Pc(133) int local133 = Static40.aClass13_14.dragDeadzone;
-			if (Static40.anInt4851 > Static40.aClass13_14.dragDeadtime && (local133 < local114 || -local133 > local114 || local109 > local133 || local109 < -local133)) {
-				Static40.aBoolean172 = true;
+			@Pc(109) int local109 = local41 - InterfaceList.anInt660;
+			@Pc(114) int local114 = local30 - InterfaceList.anInt3075;
+			@Pc(122) int local122 = local30 + Cs1ScriptRunner.aClass13_1.scrollX - Cs1ScriptRunner.anInt2225;
+			@Pc(130) int local130 = Cs1ScriptRunner.aClass13_1.scrollY + local41 - InterfaceList.anInt5103;
+			@Pc(133) int local133 = Cs1ScriptRunner.aClass13_14.dragDeadzone;
+			if (Cs1ScriptRunner.anInt4851 > Cs1ScriptRunner.aClass13_14.dragDeadtime && (local133 < local114 || -local133 > local114 || local109 > local133 || local109 < -local133)) {
+				Cs1ScriptRunner.aBoolean172 = true;
 			}
 			@Pc(176) HookRequest local176;
-			if (Static40.aClass13_14.onDragStart != null && Static40.aBoolean172) {
+			if (Cs1ScriptRunner.aClass13_14.onDragStart != null && Cs1ScriptRunner.aBoolean172) {
 				local176 = new HookRequest();
-				local176.source = Static40.aClass13_14;
-				local176.arguments = Static40.aClass13_14.onDragStart;
+				local176.source = Cs1ScriptRunner.aClass13_14;
+				local176.arguments = Cs1ScriptRunner.aClass13_14.onDragStart;
 				local176.mouseX = local122;
 				local176.mouseY = local130;
 				ScriptRunner.run(local176);
 			}
 			if (Mouse.pressedButton == 0) {
-				if (Static40.aBoolean172) {
-					if (Static40.aClass13_14.onDragRelease != null) {
+				if (Cs1ScriptRunner.aBoolean172) {
+					if (Cs1ScriptRunner.aClass13_14.onDragRelease != null) {
 						local176 = new HookRequest();
 						local176.mouseY = local130;
 						local176.target = InterfaceList.aClass13_12;
 						local176.mouseX = local122;
-						local176.arguments = Static40.aClass13_14.onDragRelease;
-						local176.source = Static40.aClass13_14;
+						local176.arguments = Cs1ScriptRunner.aClass13_14.onDragRelease;
+						local176.source = Cs1ScriptRunner.aClass13_14;
 						ScriptRunner.run(local176);
 					}
-					if (InterfaceList.aClass13_12 != null && Static36.method938(Static40.aClass13_14) != null) {
+					if (InterfaceList.aClass13_12 != null && InterfaceList.method938(Cs1ScriptRunner.aClass13_14) != null) {
 						Protocol.outboundBuffer.p1isaac(79);
-						Protocol.outboundBuffer.mp4(Static40.aClass13_14.id);
+						Protocol.outboundBuffer.mp4(Cs1ScriptRunner.aClass13_14.id);
 						Protocol.outboundBuffer.ip2(InterfaceList.aClass13_12.createdComponentId);
 						Protocol.outboundBuffer.p4(InterfaceList.aClass13_12.id);
-						Protocol.outboundBuffer.ip2(Static40.aClass13_14.createdComponentId);
+						Protocol.outboundBuffer.ip2(Cs1ScriptRunner.aClass13_14.createdComponentId);
 					}
 				} else if ((VarpDomain.anInt2952 == 1 || MiniMenu.method4640(MiniMenu.size - 1)) && MiniMenu.size > 2) {
-					Static226.method3901();
+					ScriptRunner.method3901();
 				} else if (MiniMenu.size > 0) {
-					Static59.method1372();
+					MiniMenu.method1372();
 				}
-				Static40.aClass13_14 = null;
+				Cs1ScriptRunner.aClass13_14 = null;
 			}
-		} else if (Static40.anInt4851 > 1) {
-			Static40.aClass13_14 = null;
+		} else if (Cs1ScriptRunner.anInt4851 > 1) {
+			Cs1ScriptRunner.aClass13_14 = null;
 		}
 	}
 

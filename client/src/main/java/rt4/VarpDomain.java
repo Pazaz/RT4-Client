@@ -127,4 +127,21 @@ public class VarpDomain {
 			inserting = local25;
 		}
 	}
+
+	@OriginalMember(owner = "client!cn", name = "a", descriptor = "(ZI)I")
+	public static int poll(@OriginalArg(0) boolean arg0) {
+		@Pc(4) long local4 = MonotonicClock.currentTimeMillis();
+		for (@Pc(28) LongNode local28 = arg0 ? (LongNode) aClass133_20.head() : (LongNode) aClass133_20.next(); local28 != null; local28 = (LongNode) aClass133_20.next()) {
+			if ((local28.value & 0x3FFFFFFFFFFFFFFFL) < local4) {
+				if ((local28.value & 0x4000000000000000L) != 0L) {
+					@Pc(58) int local58 = (int) local28.key;
+					activeVarps[local58] = varp[local58];
+					local28.unlink();
+					return local58;
+				}
+				local28.unlink();
+			}
+		}
+		return -1;
+	}
 }

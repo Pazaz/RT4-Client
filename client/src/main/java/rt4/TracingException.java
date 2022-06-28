@@ -31,14 +31,14 @@ public final class TracingException extends RuntimeException {
 				local13 = local13 + arg0;
 			}
 			method31(local13);
-			local13 = Static40.method1014(":", "%3a", local13);
-			local13 = Static40.method1014("@", "%40", local13);
-			local13 = Static40.method1014("&", "%26", local13);
-			local13 = Static40.method1014("#", "%23", local13);
-			if (Static69.signLink.applet == null) {
+			local13 = method1014(":", "%3a", local13);
+			local13 = method1014("@", "%40", local13);
+			local13 = method1014("&", "%26", local13);
+			local13 = method1014("#", "%23", local13);
+			if (GameShell.signLink2.applet == null) {
 				return;
 			}
-			@Pc(109) PrivilegedRequest local109 = Static69.signLink.openUrlStream(new URL(Static69.signLink.applet.getCodeBase(), "clienterror.ws?c=" + GameShell.clientBuild + "&u=" + Player.name37 + "&v1=" + SignLink.javaVendor + "&v2=" + SignLink.javaVersion + "&e=" + local13));
+			@Pc(109) PrivilegedRequest local109 = GameShell.signLink2.openUrlStream(new URL(GameShell.signLink2.applet.getCodeBase(), "clienterror.ws?c=" + GameShell.clientBuild + "&u=" + Player.name37 + "&v1=" + SignLink.javaVendor + "&v2=" + SignLink.javaVersion + "&e=" + local13));
 			while (local109.status == 0) {
 				ThreadUtils.sleep(1L);
 			}
@@ -53,7 +53,7 @@ public final class TracingException extends RuntimeException {
 
 	@OriginalMember(owner = "client!af", name = "a", descriptor = "(ILjava/lang/String;)V")
 	public static void method31(@OriginalArg(1) String arg0) {
-		System.out.println("Error: " + Static40.method1014("%0a", "\n", arg0));
+		System.out.println("Error: " + method1014("%0a", "\n", arg0));
 	}
 
 	@OriginalMember(owner = "client!hi", name = "a", descriptor = "(ILjava/lang/Throwable;)Ljava/lang/String;")
@@ -98,5 +98,13 @@ public final class TracingException extends RuntimeException {
 			}
 			local24 = local24 + ' ';
 		}
+	}
+
+	@OriginalMember(owner = "client!da", name = "a", descriptor = "(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;")
+	public static String method1014(@OriginalArg(0) String arg0, @OriginalArg(1) String arg1, @OriginalArg(3) String arg2) {
+		for (@Pc(5) int local5 = arg2.indexOf(arg0); local5 != -1; local5 = arg2.indexOf(arg0, local5 + arg1.length())) {
+			arg2 = arg2.substring(0, local5) + arg1 + arg2.substring(arg0.length() + local5);
+		}
+		return arg2;
 	}
 }

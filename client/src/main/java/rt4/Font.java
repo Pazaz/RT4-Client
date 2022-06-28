@@ -57,7 +57,7 @@ public abstract class Font extends SecondaryNode {
 	@OriginalMember(owner = "client!rk", name = "rb", descriptor = "Lclient!na;")
 	public static final JagString TAG_STR2 = JagString.parse("str");
 	@OriginalMember(owner = "client!rk", name = "sb", descriptor = "Lclient!na;")
-	public static final JagString buffer = Static87.allocate(100);
+	public static final JagString buffer = JagString.allocate(100);
 	@OriginalMember(owner = "client!rk", name = "Ab", descriptor = "[Lclient!na;")
 	public static final JagString[] lines = new JagString[100];
 	@OriginalMember(owner = "client!rk", name = "Z", descriptor = "Lclient!na;")
@@ -154,7 +154,7 @@ public abstract class Font extends SecondaryNode {
 				local5 += 3;
 			}
 		}
-		@Pc(30) JagString local30 = Static87.allocate(local3 + local5);
+		@Pc(30) JagString local30 = JagString.allocate(local3 + local5);
 		for (local15 = 0; local15 < local3; local15++) {
 			@Pc(40) int local40 = arg0.charAt(local15);
 			if (local40 == 60) {

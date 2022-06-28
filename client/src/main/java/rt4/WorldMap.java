@@ -29,6 +29,8 @@ public class WorldMap {
 	public static final JagString aClass100_872 = JagString.parse("<br>");
 	@OriginalMember(owner = "client!nj", name = "h", descriptor = "Lclient!ih;")
 	public static final LinkedList aClass69_97 = new LinkedList();
+	@OriginalMember(owner = "client!di", name = "q", descriptor = "[Lclient!na;")
+	public static final JagString[] aClass100Array53 = new JagString[5];
 	@OriginalMember(owner = "client!wa", name = "ub", descriptor = "Lclient!bn;")
 	public static Map currentMap;
 	@OriginalMember(owner = "client!dc", name = "O", descriptor = "I")
@@ -105,6 +107,8 @@ public class WorldMap {
 	public static int anInt5212;
 	@OriginalMember(owner = "client!qf", name = "S", descriptor = "I")
 	public static int anInt1864;
+	@OriginalMember(owner = "client!al", name = "e", descriptor = "I")
+	public static int anInt172;
 
 	@OriginalMember(owner = "client!pa", name = "d", descriptor = "(I)V")
 	public static void load() {
@@ -1020,8 +1024,8 @@ public class WorldMap {
 
 	@OriginalMember(owner = "client!va", name = "c", descriptor = "(BI)V")
 	public static void method4444(@OriginalArg(1) int arg0) {
-		Static9.anInt172 = arg0;
-		Static1.anInt2428 = 20;
+		anInt172 = arg0;
+		Cs1ScriptRunner.anInt2428 = 20;
 		anInt1864 = 3;
 	}
 
@@ -1632,10 +1636,10 @@ public class WorldMap {
 			return;
 		}
 		anInt1176 = (int) ((float) (arg2 * 2) / zoom);
-		Static1.anInt2882 = anInt435 - (int) ((float) arg3 / zoom);
+		Cs1ScriptRunner.anInt2882 = anInt435 - (int) ((float) arg3 / zoom);
 		@Pc(211) int local211 = anInt435 - (int) ((float) arg3 / zoom);
 		local50 = anInt919 - (int) ((float) arg2 / zoom);
-		Static1.anInt2884 = anInt919 - (int) ((float) arg2 / zoom);
+		Cs1ScriptRunner.anInt2884 = anInt919 - (int) ((float) arg2 / zoom);
 		@Pc(236) int local236 = anInt919 + (int) ((float) arg2 / zoom);
 		local61 = (int) ((float) arg3 / zoom) + anInt435;
 		anInt2387 = (int) ((float) (arg3 * 2) / zoom);
@@ -1647,18 +1651,18 @@ public class WorldMap {
 			SoftwareRaster.setSize(aClass3_Sub2_Sub1_Sub1_2.pixels, arg3, arg2);
 			method4364(arg3, 0, local61, local50, 0, local236, arg2, local211);
 			method1195(arg3, 0, local61, local236, arg2, 0, local211, local50);
-			Static38.method959(0, 0, local211, arg3, local236, local50, local61, arg2);
+			method959(0, 0, local211, arg3, local236, local50, local61, arg2);
 			GlRaster.drawPixels(aClass3_Sub2_Sub1_Sub1_2.pixels, arg0, arg1, arg3, arg2);
 			SoftwareRaster.pixels = null;
 		} else {
 			method4364(arg3 + arg0, arg1, local61, local50, arg0, local236, arg1 + arg2, local211);
 			method1195(arg0 + arg3, arg0, local61, local236, arg2 + arg1, arg1, local211, local50);
-			Static38.method959(arg0, arg1, local211, arg0 + arg3, local236, local50, local61, arg2 + arg1);
+			method959(arg0, arg1, local211, arg0 + arg3, local236, local50, local61, arg2 + arg1);
 		}
 		if (anInt1864 > 0) {
-			Static1.anInt2428--;
-			if (Static1.anInt2428 == 0) {
-				Static1.anInt2428 = 20;
+			Cs1ScriptRunner.anInt2428--;
+			if (Cs1ScriptRunner.anInt2428 == 0) {
+				Cs1ScriptRunner.anInt2428 = 20;
 				anInt1864--;
 			}
 		}
@@ -1693,10 +1697,10 @@ public class WorldMap {
 		@Pc(9) int local9 = arg2 - arg4;
 		@Pc(11) int local11 = -1;
 		if (anInt1864 > 0) {
-			if (Static1.anInt2428 <= 10) {
-				local11 = Static1.anInt2428 * 5;
+			if (Cs1ScriptRunner.anInt2428 <= 10) {
+				local11 = Cs1ScriptRunner.anInt2428 * 5;
 			} else {
-				local11 = 50 - (Static1.anInt2428 - 10) * 5;
+				local11 = 50 - (Cs1ScriptRunner.anInt2428 - 10) * 5;
 			}
 		}
 		@Pc(39) int local39 = arg1 - arg6;
@@ -1724,7 +1728,7 @@ public class WorldMap {
 								if (local209 != 0) {
 									@Pc(222) LocType local222 = LocTypeList.get(local209 - 1);
 									if (!MapList.aBooleanArray130[local222.mapElement]) {
-										if (local11 != -1 && local222.mapElement == Static9.anInt172) {
+										if (local11 != -1 && local222.mapElement == anInt172) {
 											@Pc(243) MapElement local243 = new MapElement();
 											local243.anInt4307 = local65;
 											local243.anInt4314 = local144;
@@ -1805,5 +1809,79 @@ public class WorldMap {
 			}
 		}
 		return -1;
+	}
+
+	@OriginalMember(owner = "client!cn", name = "a", descriptor = "(BIIIIIIII)V")
+	public static void method959(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7) {
+		for (@Pc(11) int local11 = 0; local11 < labels.anInt5074; local11++) {
+			if (labels.method3890(local11)) {
+				@Pc(32) int local32 = labels.aShortArray73[local11] - originX;
+				@Pc(43) int local43 = originZ + length - labels.aShortArray72[local11] - 1;
+				@Pc(59) int local59 = arg0 + (arg3 - arg0) * (local32 - arg2) / (arg6 - arg2);
+				@Pc(64) int local64 = labels.method3894(local11);
+				@Pc(80) int local80 = (arg7 - arg1) * (local43 - arg5) / (arg4 - arg5) + arg1;
+				@Pc(82) int local82 = 16777215;
+				@Pc(84) WorldMapFont local84 = null;
+				if (local64 == 0) {
+					if ((double) zoom == 3.0D) {
+						local84 = font11;
+					}
+					if ((double) zoom == 4.0D) {
+						local84 = font12;
+					}
+					if ((double) zoom == 6.0D) {
+						local84 = font14;
+					}
+					if ((double) zoom >= 8.0D) {
+						local84 = font17;
+					}
+				}
+				if (local64 == 1) {
+					if ((double) zoom == 3.0D) {
+						local84 = font14;
+					}
+					if ((double) zoom == 4.0D) {
+						local84 = font17;
+					}
+					if ((double) zoom == 6.0D) {
+						local84 = font19;
+					}
+					if ((double) zoom >= 8.0D) {
+						local84 = font22;
+					}
+				}
+				if (local64 == 2) {
+					if ((double) zoom == 3.0D) {
+						local84 = font19;
+					}
+					local82 = 16755200;
+					if ((double) zoom == 4.0D) {
+						local84 = font22;
+					}
+					if ((double) zoom == 6.0D) {
+						local84 = font26;
+					}
+					if ((double) zoom >= 8.0D) {
+						local84 = font30;
+					}
+				}
+				if (labels.anIntArray444[local11] != -1) {
+					local82 = labels.anIntArray444[local11];
+				}
+				if (local84 != null) {
+					@Pc(211) int local211 = Fonts.p11Full.splitParagraph(labels.aClass100Array153[local11], null, aClass100Array53);
+					local80 -= local84.method1503() * (local211 - 1) / 2;
+					local80 += local84.method1511() / 2;
+					for (@Pc(231) int local231 = 0; local231 < local211; local231++) {
+						@Pc(242) JagString local242 = aClass100Array53[local231];
+						if (local211 - 1 > local231) {
+							local242.method3133(local242.length() - 4);
+						}
+						local84.renderStringCenter(local242, local59, local80, local82);
+						local80 += local84.method1503();
+					}
+				}
+			}
+		}
 	}
 }

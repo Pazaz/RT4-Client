@@ -187,7 +187,7 @@ public class MiniMap {
 		local35 = (int) (Math.random() * 20.0D) + 238 - 10 << 16;
 		for (local37 = 1; local37 < 103; local37++) {
 			for (local76 = 1; local76 < 103; local76++) {
-				if ((SceneGraph.tileFlags[arg0][local76][local37] & 0x18) == 0 && !Static164.method3109(local76, local455, local37, local35, arg0)) {
+				if ((SceneGraph.tileFlags[arg0][local76][local37] & 0x18) == 0 && !method3109(local76, local455, local37, local35, arg0)) {
 					if (GlRenderer.enabled) {
 						SoftwareRaster.pixels = null;
 					} else {
@@ -195,7 +195,7 @@ public class MiniMap {
 					}
 					return false;
 				}
-				if (arg0 < 3 && (SceneGraph.tileFlags[arg0 + 1][local76][local37] & 0x8) != 0 && !Static164.method3109(local76, local455, local37, local35, arg0 + 1)) {
+				if (arg0 < 3 && (SceneGraph.tileFlags[arg0 + 1][local76][local37] & 0x8) != 0 && !method3109(local76, local455, local37, local35, arg0 + 1)) {
 					if (GlRenderer.enabled) {
 						SoftwareRaster.pixels = null;
 					} else {
@@ -507,6 +507,145 @@ public class MiniMap {
 			local42.method1398(arg0 * 4 + 48, (-local52 + -arg2 + 104) * 4 + 48, local66, local69);
 		} else {
 			local42.method1390(arg0 * 4 + 48, (-local52 + -arg2 + 104) * 4 + 48, local66, local69, msiType.anInt11);
+		}
+		return true;
+	}
+
+	@OriginalMember(owner = "client!t", name = "a", descriptor = "(IIIZIII)V")
+	public static void method4000(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
+		@Pc(3) int local3 = 0;
+		@Pc(5) MapMarker[] local5 = hintMapMarkers;
+		while (local5.length > local3) {
+			@Pc(17) MapMarker local17 = local5[local3];
+			if (local17 != null && local17.type == 2) {
+				ScriptRunner.method1026(arg0 >> 1, arg4, (local17.anInt4046 - Camera.originZ << 7) + local17.anInt4047, local17.anInt4050 * 2, arg2 >> 1, local17.anInt4045 + (local17.targetX - Camera.originX << 7), arg3);
+				if (ScriptRunner.anInt1951 > -1 && client.loop % 20 < 10) {
+					Sprites.headhints[local17.anInt4048].render(arg1 + ScriptRunner.anInt1951 - 12, arg5 + -28 - -ScriptRunner.anInt548);
+				}
+			}
+			local3++;
+		}
+	}
+
+	@OriginalMember(owner = "client!na", name = "a", descriptor = "(IIIIIIIZ)Z")
+	public static boolean method3109(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(6) int arg4) {
+		@Pc(14) long local14 = SceneGraph.getWallKey(arg4, arg0 + 0, arg2);
+		@Pc(28) int local28;
+		@Pc(35) int local35;
+		@Pc(42) int local42;
+		@Pc(46) LocType local46;
+		@Pc(65) int local65;
+		@Pc(75) int[] local75;
+		@Pc(90) int local90;
+		if (local14 != 0L) {
+			local28 = (int) local14 >> 20 & 0x3;
+			local35 = (int) local14 >> 14 & 0x1F;
+			local42 = Integer.MAX_VALUE & (int) (local14 >>> 32);
+			local46 = LocTypeList.get(local42);
+			if (local46.mapSceneId == -1) {
+				local65 = arg1;
+				if (local14 > 0L) {
+					local65 = arg3;
+				}
+				local75 = SoftwareRaster.pixels;
+				local90 = (52736 - arg2 * 512) * 4 + arg0 * 4 + 24624;
+				if (local35 == 0 || local35 == 2) {
+					if (local28 == 0) {
+						local75[local90] = local65;
+						local75[local90 + 512] = local65;
+						local75[local90 + 1024] = local65;
+						local75[local90 + 1536] = local65;
+					} else if (local28 == 1) {
+						local75[local90] = local65;
+						local75[local90 + 1] = local65;
+						local75[local90 + 2] = local65;
+						local75[local90 + 3] = local65;
+					} else if (local28 == 2) {
+						local75[local90 + 3] = local65;
+						local75[local90 + 3 + 512] = local65;
+						local75[local90 + 3 + 1024] = local65;
+						local75[local90 + 3 + 1536] = local65;
+					} else if (local28 == 3) {
+						local75[local90 + 1536] = local65;
+						local75[local90 + 1536 + 1] = local65;
+						local75[local90 + 1538] = local65;
+						local75[local90 + 3 + 1536] = local65;
+					}
+				}
+				if (local35 == 3) {
+					if (local28 == 0) {
+						local75[local90] = local65;
+					} else if (local28 == 1) {
+						local75[local90 + 3] = local65;
+					} else if (local28 == 2) {
+						local75[local90 + 3 + 1536] = local65;
+					} else if (local28 == 3) {
+						local75[local90 + 1536] = local65;
+					}
+				}
+				if (local35 == 2) {
+					if (local28 == 3) {
+						local75[local90] = local65;
+						local75[local90 + 512] = local65;
+						local75[local90 + 1024] = local65;
+						local75[local90 + 1536] = local65;
+					} else if (local28 == 0) {
+						local75[local90] = local65;
+						local75[local90 + 1] = local65;
+						local75[local90 + 2] = local65;
+						local75[local90 + 3] = local65;
+					} else if (local28 == 1) {
+						local75[local90 + 3] = local65;
+						local75[local90 + 512 + 3] = local65;
+						local75[local90 + 1024 + 3] = local65;
+						local75[local90 + 1536 + 3] = local65;
+					} else if (local28 == 2) {
+						local75[local90 + 1536] = local65;
+						local75[local90 + 1536 + 1] = local65;
+						local75[local90 + 1536 + 2] = local65;
+						local75[local90 + 1539] = local65;
+					}
+				}
+			} else if (!renderScenery(arg0, local46, arg2, local28)) {
+				return false;
+			}
+		}
+		local14 = SceneGraph.getSceneryKey(arg4, arg0 + 0, arg2);
+		if (local14 != 0L) {
+			local28 = (int) local14 >> 20 & 0x3;
+			local35 = (int) local14 >> 14 & 0x1F;
+			local42 = (int) (local14 >>> 32) & Integer.MAX_VALUE;
+			local46 = LocTypeList.get(local42);
+			if (local46.mapSceneId == -1) {
+				if (local35 == 9) {
+					local65 = 15658734;
+					if (local14 > 0L) {
+						local65 = 15597568;
+					}
+					local90 = arg0 * 4 + (103 - arg2) * 2048 + 24624;
+					local75 = SoftwareRaster.pixels;
+					if (local28 == 0 || local28 == 2) {
+						local75[local90 + 1536] = local65;
+						local75[local90 + 1025] = local65;
+						local75[local90 + 512 + 2] = local65;
+						local75[local90 + 3] = local65;
+					} else {
+						local75[local90] = local65;
+						local75[local90 + 512 + 1] = local65;
+						local75[local90 + 1024 + 2] = local65;
+						local75[local90 + 1536 + 3] = local65;
+					}
+				}
+			} else if (!renderScenery(arg0, local46, arg2, local28)) {
+				return false;
+			}
+		}
+		local14 = SceneGraph.getGroundDecorKey(arg4, arg0 + 0, arg2);
+		if (local14 != 0L) {
+			local28 = (int) local14 >> 20 & 0x3;
+			local35 = (int) (local14 >>> 32) & Integer.MAX_VALUE;
+			@Pc(586) LocType local586 = LocTypeList.get(local35);
+			return local586.mapSceneId == -1 || renderScenery(arg0, local586, arg2, local28);
 		}
 		return true;
 	}

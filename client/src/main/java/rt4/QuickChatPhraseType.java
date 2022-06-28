@@ -128,7 +128,7 @@ public final class QuickChatPhraseType extends SecondaryNode {
 
 	@OriginalMember(owner = "client!cb", name = "f", descriptor = "(I)Lclient!na;")
 	public final JagString getText() {
-		@Pc(15) JagString local15 = Static87.allocate(80);
+		@Pc(15) JagString local15 = JagString.allocate(80);
 		if (this.aClass100Array35 == null) {
 			return aClass100_891;
 		}
@@ -142,11 +142,11 @@ public final class QuickChatPhraseType extends SecondaryNode {
 
 	@OriginalMember(owner = "client!cb", name = "a", descriptor = "(ILclient!wa;)Lclient!na;")
 	public final JagString decodeMessage(@OriginalArg(1) Buffer arg0) {
-		@Pc(17) JagString local17 = Static87.allocate(80);
+		@Pc(17) JagString local17 = JagString.allocate(80);
 		if (this.anIntArray71 != null) {
 			for (@Pc(22) int local22 = 0; local22 < this.anIntArray71.length; local22++) {
 				local17.method3113(this.aClass100Array35[local22]);
-				local17.method3113(Static89.method1838(this.anIntArrayArray5[local22], arg0.gVarLong(anIntArray51[this.anIntArray71[local22]]), this.anIntArray71[local22]));
+				local17.method3113(QuickChatPhraseTypeList.method1838(this.anIntArrayArray5[local22], arg0.gVarLong(anIntArray51[this.anIntArray71[local22]]), this.anIntArray71[local22]));
 			}
 		}
 		local17.method3113(this.aClass100Array35[this.aClass100Array35.length - 1]);
