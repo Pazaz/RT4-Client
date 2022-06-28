@@ -349,7 +349,7 @@ public final class Static89 {
 					if (local472 == null) {
 						local472 = new Environment();
 					}
-					Static73.aClass92ArrayArray1[arg1 >> 3][arg4 >> 3] = local472;
+					FogManager.chunksAtmosphere[arg1 >> 3][arg4 >> 3] = local472;
 					break label207;
 				} while (local497 <= 0);
 				for (local232 = 0; local232 < local497; local232++) {

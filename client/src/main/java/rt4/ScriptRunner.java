@@ -302,9 +302,9 @@ public final class ScriptRunner {
 			GlRenderer.setDepthTestEnabled(true);
 			GlRenderer.setFogEnabled(true);
 			if (client.gameState == 10) {
-				local171 = Static103.method2235(Protocol.anInt4247, Camera.renderZ >> 10, Preferences.brightness, Camera.renderX >> 10);
+				local171 = FogManager.method2235(Protocol.anInt4247, Camera.renderZ >> 10, Preferences.brightness, Camera.renderX >> 10);
 			} else {
-				local171 = Static103.method2235(Protocol.anInt4247, PlayerList.self.movementQueueZ[0] >> 3, Preferences.brightness, PlayerList.self.movementQueueX[0] >> 3);
+				local171 = FogManager.method2235(Protocol.anInt4247, PlayerList.self.movementQueueZ[0] >> 3, Preferences.brightness, PlayerList.self.movementQueueX[0] >> 3);
 			}
 			LightingManager.method2394(client.loop, !Preferences.flickeringEffectsOn);
 			GlRenderer.clearColorAndDepthBuffers(local171);
@@ -4809,7 +4809,7 @@ public final class ScriptRunner {
 															}
 														}
 														if (GlRenderer.enabled) {
-															Static103.setInstantFade();
+															FogManager.setInstantFade();
 															if (!Preferences.highDetailLighting) {
 																Static145.method2742();
 															}
@@ -4933,7 +4933,7 @@ public final class ScriptRunner {
 														isp--;
 														Preferences.fogEnabled = intStack[isp] == 1;
 														if (GlRenderer.enabled) {
-															Static103.setInstantFade();
+															FogManager.setInstantFade();
 														}
 														Preferences.write(GameShell.signLink);
 														Preferences.sentToServer = false;

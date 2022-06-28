@@ -270,7 +270,7 @@ public final class GlRenderer {
 		gl.glEnableClientState(GL2.GL_TEXTURE_COORD_ARRAY);
 		gl.glMatrixMode(GL2.GL_MODELVIEW);
 		gl.glLoadIdentity();
-		FogManager.method3065();
+		FogManager.setup();
 		LightingManager.method2400();
 	}
 

@@ -308,7 +308,7 @@ public abstract class PathingEntity extends Entity {
 		this.zFine = arg0 * 64 + this.movementQueueZ[0] * 128;
 		this.xFine = arg0 * 64 + this.movementQueueX[0] * 128;
 		if (GlRenderer.enabled && PlayerList.self == this) {
-			Static103.setInstantFade();
+			FogManager.setInstantFade();
 		}
 	}
 

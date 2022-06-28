@@ -11,6 +11,8 @@ public class StringUtils {
 	public static final JagString nonBreakingSpace = JagString.getNbsp();
 	@OriginalMember(owner = "client!rm", name = "i", descriptor = "Lclient!na;")
 	public static final JagString aClass100_930 = JagString.parse("(Z");
+	@OriginalMember(owner = "client!fm", name = "W", descriptor = "Lclient!na;")
+	public static final JagString aClass100_453 = JagString.parse(")2");
 
 	@OriginalMember(owner = "client!gj", name = "a", descriptor = "(II)Z")
 	public static boolean isAlphaNumeric(@OriginalArg(0) int arg0) {
@@ -80,7 +82,7 @@ public class StringUtils {
 		@Pc(9) JagString local9 = Static87.allocate(0);
 		if (arg3 < 0L) {
 			arg3 = -arg3;
-			local9.method3113(Static73.aClass100_453);
+			local9.method3113(aClass100_453);
 		}
 		@Pc(26) JagString local26 = Static182.aClass100_1017;
 		@Pc(28) JagString local28 = Static182.aClass100_185;

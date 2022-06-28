@@ -36,8 +36,8 @@ public final class WaterMaterialRenderer implements MaterialRenderer {
 
 	@OriginalMember(owner = "client!jj", name = "a", descriptor = "(B)[F")
 	public static float[] method2422() {
-		@Pc(3) float local3 = FogManager.method3068() + FogManager.method3059();
-		@Pc(9) int local9 = FogManager.method3064();
+		@Pc(3) float local3 = FogManager.getLightingModelAmbient() + FogManager.getLight0Diffuse();
+		@Pc(9) int local9 = FogManager.getLightColor();
 		@Pc(18) float local18 = (float) (local9 >> 16 & 0xFF) / 255.0F;
 		ColorUtils.aFloatArray28[3] = 1.0F;
 		@Pc(37) float local37 = (float) (local9 >> 8 & 0xFF) / 255.0F;
