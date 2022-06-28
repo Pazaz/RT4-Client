@@ -4,31 +4,64 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 public class OverheadChat {
+	@OriginalMember(owner = "client!bf", name = "I", descriptor = "[I")
+	public static final int[] COLORS = new int[]{16776960, 16711680, 65280, 65535, 16711935, 16777215};
+
+	@OriginalMember(owner = "client!pg", name = "fb", descriptor = "I")
+	public static final int CAPACITY = 50;
+
+	@OriginalMember(owner = "client!pg", name = "cb", descriptor = "[I")
+	public static final int[] anIntArray389 = new int[CAPACITY];
+
+	@OriginalMember(owner = "client!pg", name = "Z", descriptor = "[I")
+	public static final int[] anIntArray387 = new int[CAPACITY];
+
+	@OriginalMember(owner = "client!pg", name = "kb", descriptor = "[I")
+	public static final int[] effects = new int[CAPACITY];
+
+	@OriginalMember(owner = "client!pg", name = "Q", descriptor = "[I")
+	public static final int[] loops = new int[CAPACITY];
+
+	@OriginalMember(owner = "client!pg", name = "eb", descriptor = "[I")
+	public static final int[] colors = new int[CAPACITY];
+
+	@OriginalMember(owner = "client!pg", name = "lb", descriptor = "[I")
+	public static final int[] anIntArray392 = new int[CAPACITY];
+
+	@OriginalMember(owner = "client!pg", name = "R", descriptor = "[I")
+	public static final int[] anIntArray385 = new int[CAPACITY];
+
+	@OriginalMember(owner = "client!pg", name = "P", descriptor = "[Lclient!na;")
+	public static final JagString[] messages = new JagString[CAPACITY];
+
+	@OriginalMember(owner = "client!wi", name = "bb", descriptor = "I")
+	public static int size = 0;
+
 	@OriginalMember(owner = "client!bi", name = "f", descriptor = "(B)V")
 	public static void loop() {
-		@Pc(11) int local11;
-		for (local11 = -1; local11 < PlayerList.size; local11++) {
-			@Pc(22) int local22;
-			if (local11 == -1) {
-				local22 = 2047;
+		@Pc(11) int i;
+		for (i = -1; i < PlayerList.size; i++) {
+			@Pc(22) int id;
+			if (i == -1) {
+				id = 2047;
 			} else {
-				local22 = PlayerList.ids[local11];
+				id = PlayerList.ids[i];
 			}
-			@Pc(30) Player local30 = PlayerList.players[local22];
-			if (local30 != null && local30.chatLoops > 0) {
-				local30.chatLoops--;
-				if (local30.chatLoops == 0) {
-					local30.chatMessage = null;
+			@Pc(30) Player player = PlayerList.players[id];
+			if (player != null && player.chatLoops > 0) {
+				player.chatLoops--;
+				if (player.chatLoops == 0) {
+					player.chatMessage = null;
 				}
 			}
 		}
-		for (local11 = 0; local11 < NpcList.size; local11++) {
-			@Pc(68) int local68 = NpcList.ids[local11];
-			@Pc(72) Npc local72 = NpcList.npcs[local68];
-			if (local72 != null && local72.chatLoops > 0) {
-				local72.chatLoops--;
-				if (local72.chatLoops == 0) {
-					local72.chatMessage = null;
+		for (i = 0; i < NpcList.size; i++) {
+			@Pc(68) int id = NpcList.ids[i];
+			@Pc(72) Npc npc = NpcList.npcs[id];
+			if (npc != null && npc.chatLoops > 0) {
+				npc.chatLoops--;
+				if (npc.chatLoops == 0) {
+					npc.chatMessage = null;
 				}
 			}
 		}

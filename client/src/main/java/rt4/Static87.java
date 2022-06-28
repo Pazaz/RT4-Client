@@ -23,6 +23,8 @@ public final class Static87 {
 	public static final JagString aClass100_375 = JagString.parse("<)4col> x");
 	@OriginalMember(owner = "client!bd", name = "b", descriptor = "Lclient!na;")
 	public static final JagString aClass100_80 = JagString.parse("(U(Y");
+	@OriginalMember(owner = "client!pg", name = "V", descriptor = "I")
+	public static final int anInt4504 = 50;
 
 	@OriginalMember(owner = "client!gn", name = "d", descriptor = "Z")
 	public static boolean aBoolean130 = false;
@@ -826,7 +828,7 @@ public final class Static87 {
 													}
 												}
 											}
-											if (component.type == 8 && Protocol.aClass13_11 == component && Protocol.anInt5235 == Static191.anInt4504) {
+											if (component.type == 8 && Protocol.aClass13_11 == component && Protocol.anInt5235 == anInt4504) {
 												local276 = 0;
 												local270 = 0;
 												@Pc(3297) JagString local3297 = component.text;
