@@ -315,7 +315,7 @@ public class MiniMap {
 			}
 			for (local146 = 0; local146 < NpcList.size; local146++) {
 				@Pc(498) Npc local498 = NpcList.npcs[NpcList.ids[local146]];
-				if (local498 != null && local498.method2682()) {
+				if (local498 != null && local498.isVisible()) {
 					@Pc(507) NpcType local507 = local498.type;
 					if (local507 != null && local507.multiNpcs != null) {
 						local507 = local507.getMultiNpc();
@@ -333,7 +333,7 @@ public class MiniMap {
 			}
 			for (local146 = 0; local146 < PlayerList.size; local146++) {
 				@Pc(591) Player local591 = PlayerList.players[PlayerList.ids[local146]];
-				if (local591 != null && local591.method2682()) {
+				if (local591 != null && local591.isVisible()) {
 					local154 = local591.zFine / 32 - PlayerList.self.zFine / 32;
 					local150 = local591.xFine / 32 - PlayerList.self.xFine / 32;
 					@Pc(624) long local624 = local591.username.encode37();

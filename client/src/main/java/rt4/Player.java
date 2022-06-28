@@ -130,7 +130,7 @@ public final class Player extends PathingEntity {
 					} else {
 						@Pc(68) SeqType local68 = SeqTypeList.get(local20);
 						@Pc(71) int local71 = local68.anInt5347;
-						@Pc(76) Npc_Class147 local76 = arg2.aClass147Array3[local30];
+						@Pc(76) PathingEntity_Class147 local76 = arg2.aClass147Array3[local30];
 						if (local76 != null) {
 							if (local20 == local76.anInt5396) {
 								if (local71 == 0) {
@@ -150,7 +150,7 @@ public final class Player extends PathingEntity {
 							}
 						}
 						if (local76 == null) {
-							local76 = arg2.aClass147Array3[local30] = new Npc_Class147();
+							local76 = arg2.aClass147Array3[local30] = new PathingEntity_Class147();
 							local76.anInt5396 = local20;
 							local76.anInt5398 = 1;
 							local76.anInt5404 = 0;
@@ -300,7 +300,7 @@ public final class Player extends PathingEntity {
 
 	@OriginalMember(owner = "client!e", name = "b", descriptor = "(I)I")
 	@Override
-	protected final int method2688() {
+	protected final int getBasId() {
 		return this.anInt3365;
 	}
 
@@ -398,8 +398,8 @@ public final class Player extends PathingEntity {
 			this.xFine = this.movementQueueX[0] * 128 + this.getSize() * 64;
 			this.zFine = this.movementQueueZ[0] * 128 + this.getSize() * 64;
 		}
-		if (this.aClass47_Sub1_5 != null) {
-			this.aClass47_Sub1_5.method1646();
+		if (this.particleSystem != null) {
+			this.particleSystem.method1646();
 		}
 	}
 
@@ -431,7 +431,7 @@ public final class Player extends PathingEntity {
 		if (local76 == null) {
 			return;
 		}
-		this.anInt3413 = local76.getMinY();
+		this.minY = local76.getMinY();
 		@Pc(184) Model local184;
 		if (Preferences.characterShadowsOn && (this.appearance.anInt2492 == -1 || NpcTypeList.get(this.appearance.anInt2492).shadow)) {
 			local184 = ShadowModelList.method1043(160, this.aBoolean171, local54 == null ? local25 : local54, this.xFine, 0, this.zFine, 0, 1, local76, arg0, local54 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, 240);
@@ -521,10 +521,10 @@ public final class Player extends PathingEntity {
 		}
 		if (GlRenderer.enabled) {
 			local76.aBoolean303 = true;
-			local76.render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.aClass47_Sub1_5);
+			local76.render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.particleSystem);
 			if (local184 != null) {
 				local184.aBoolean303 = true;
-				local184.render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.aClass47_Sub1_5);
+				local184.render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.particleSystem);
 			}
 		} else {
 			if (local184 != null) {
@@ -534,7 +534,7 @@ public final class Player extends PathingEntity {
 				local76 = ((SoftwareModel) local76).method4588(local515);
 			}
 			local76.aBoolean303 = true;
-			local76.render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.aClass47_Sub1_5);
+			local76.render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.particleSystem);
 		}
 		if (local515 == null) {
 			return;
@@ -575,7 +575,7 @@ public final class Player extends PathingEntity {
 
 	@OriginalMember(owner = "client!e", name = "a", descriptor = "(B)Z")
 	@Override
-	public final boolean method2682() {
+	public final boolean isVisible() {
 		return this.appearance != null;
 	}
 
@@ -609,6 +609,6 @@ public final class Player extends PathingEntity {
 	@OriginalMember(owner = "client!e", name = "b", descriptor = "()I")
 	@Override
 	public final int getMinY() {
-		return this.anInt3413;
+		return this.minY;
 	}
 }
