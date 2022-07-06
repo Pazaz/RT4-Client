@@ -1568,7 +1568,7 @@ public class MiniMenu {
 		if (local59 == null) {
 			local59 = Fonts.b12Full;
 		}
-		local59.method2878(local24, arg2, arg1, arg0.width, arg0.height, arg0.color, arg0.shadowColor, arg0.halign, arg0.anInt478, client.aRandom1, gregorianDateSeed, anIntArray132);
+		local59.method2878(local24, arg2, arg1, arg0.width, arg0.height, arg0.color, arg0.shadowColor, arg0.halign, arg0.valign, client.aRandom1, gregorianDateSeed, anIntArray132);
 		InterfaceList.redrawScreen(anIntArray132[0], anIntArray132[2], anIntArray132[1], anIntArray132[3]);
 	}
 
