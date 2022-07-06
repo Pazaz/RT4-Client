@@ -243,7 +243,7 @@ public final class Component {
 	public int spriteId = -1;
 
 	@OriginalMember(owner = "client!be", name = "eb", descriptor = "I")
-	public int anInt467 = 0;
+	public int vpadding = 0;
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "Z")
 	public boolean hidden = false;
@@ -269,7 +269,7 @@ public final class Component {
 	public boolean aBoolean19 = false;
 
 	@OriginalMember(owner = "client!be", name = "yb", descriptor = "I")
-	public int anInt478 = 0;
+	public int valign = 0;
 
 	@OriginalMember(owner = "client!be", name = "lb", descriptor = "I")
 	public int anInt470 = -1;
@@ -461,7 +461,7 @@ public final class Component {
 	public byte dynamicWidthValue = 0;
 
 	@OriginalMember(owner = "client!be", name = "Wc", descriptor = "I")
-	private int anInt518 = 1;
+	private int activeModelType = 1;
 
 	@OriginalMember(owner = "client!be", name = "pd", descriptor = "I")
 	public int anInt526 = 0;
@@ -695,8 +695,8 @@ public final class Component {
 		}
 		if (this.type == 4 || this.type == 1) {
 			this.halign = buffer.g1();
-			this.anInt478 = buffer.g1();
-			this.anInt467 = buffer.g1();
+			this.valign = buffer.g1(); // this is an educated guess, follow arg8 in Font.renderParagraphAlpha
+			this.vpadding = buffer.g1(); // this is an educated guess, follow arg9 in Font.renderParagraphAlpha
 			this.font = buffer.g2();
 			if (this.font == 65535) {
 				this.font = -1;
@@ -722,10 +722,10 @@ public final class Component {
 		if (this.type == 6) {
 			this.modelType = 1;
 			this.modelId = buffer.g2();
-			this.anInt518 = 1;
 			if (this.modelId == 65535) {
 				this.modelId = -1;
 			}
+			this.activeModelType = 1;
 			this.activeModelId = buffer.g2();
 			if (this.activeModelId == 65535) {
 				this.activeModelId = -1;
@@ -876,7 +876,7 @@ public final class Component {
 		@Pc(10) int local10;
 		@Pc(13) int local13;
 		if (arg4) {
-			local10 = this.anInt518;
+			local10 = this.activeModelType;
 			local13 = this.activeModelId;
 		} else {
 			local13 = this.modelId;
@@ -1090,9 +1090,9 @@ public final class Component {
 				this.font = -1;
 			}
 			this.text = buffer.gjstr();
-			this.anInt467 = buffer.g1();
+			this.vpadding = buffer.g1();
 			this.halign = buffer.g1();
-			this.anInt478 = buffer.g1();
+			this.valign = buffer.g1();
 			this.shadowed = buffer.g1() == 1;
 			this.color = buffer.g4();
 		}

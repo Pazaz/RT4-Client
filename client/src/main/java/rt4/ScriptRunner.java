@@ -2396,8 +2396,8 @@ public final class ScriptRunner {
 								if (opcode == Cs2Opcodes.setTextAlignment) {
 									isp -= 3;
 									component.halign = intStack[isp];
-									component.anInt478 = intStack[isp + 1];
-									component.anInt467 = intStack[isp + 2];
+									component.valign = intStack[isp + 1];
+									component.vpadding = intStack[isp + 2];
 									InterfaceList.redraw(component);
 									continue;
 								}
