@@ -140,27 +140,27 @@ public class MiniMenu {
 
 	@OriginalMember(owner = "client!va", name = "a", descriptor = "(IZILclient!be;)V")
 	public static void addComponentEntries(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Component component) {
-		if (component.anInt530 == 1) {
-			add(-1, 0L, JagString.EMPTY, 0, (short) 8, component.aClass100_89, component.id);
+		if (component.buttonType == 1) {
+			add(-1, 0L, JagString.EMPTY, 0, (short) 8, component.option, component.id);
 		}
 		@Pc(47) JagString local47;
-		if (component.anInt530 == 2 && !aBoolean302) {
+		if (component.buttonType == 2 && !aBoolean302) {
 			local47 = MiniMap.getTargetVerb(component);
 			if (local47 != null) {
-				add(-1, 0L, JagString.concatenate(new JagString[]{COLOR_GREEN, component.aClass100_85}), -1, (short) 32, local47, component.id);
+				add(-1, 0L, JagString.concatenate(new JagString[]{COLOR_GREEN, component.optionSuffix}), -1, (short) 32, local47, component.id);
 			}
 		}
-		if (component.anInt530 == 3) {
+		if (component.buttonType == 3) {
 			add(-1, 0L, JagString.EMPTY, 0, (short) 28, LocalizedText.CLOSE, component.id);
 		}
-		if (component.anInt530 == 4) {
-			add(-1, 0L, JagString.EMPTY, 0, (short) 59, component.aClass100_89, component.id);
+		if (component.buttonType == 4) {
+			add(-1, 0L, JagString.EMPTY, 0, (short) 59, component.option, component.id);
 		}
-		if (component.anInt530 == 5) {
-			add(-1, 0L, JagString.EMPTY, 0, (short) 51, component.aClass100_89, component.id);
+		if (component.buttonType == 5) {
+			add(-1, 0L, JagString.EMPTY, 0, (short) 51, component.option, component.id);
 		}
-		if (component.anInt530 == 6 && Cs1ScriptRunner.aClass13_10 == null) {
-			add(-1, 0L, JagString.EMPTY, -1, (short) 41, component.aClass100_89, component.id);
+		if (component.buttonType == 6 && Cs1ScriptRunner.aClass13_10 == null) {
+			add(-1, 0L, JagString.EMPTY, -1, (short) 41, component.option, component.id);
 		}
 		@Pc(173) int local173;
 		@Pc(171) int local171;
@@ -168,11 +168,11 @@ public class MiniMenu {
 			local171 = 0;
 			for (local173 = 0; local173 < component.baseHeight; local173++) {
 				for (@Pc(183) int local183 = 0; local183 < component.baseWidth; local183++) {
-					@Pc(195) int local195 = (component.anInt512 + 32) * local183;
-					@Pc(202) int local202 = (component.anInt516 + 32) * local173;
+					@Pc(195) int local195 = (component.invMarginX + 32) * local183;
+					@Pc(202) int local202 = (component.invMarginY + 32) * local173;
 					if (local171 < 20) {
-						local202 += component.anIntArray47[local171];
-						local195 += component.anIntArray41[local171];
+						local202 += component.invOffsetY[local171];
+						local195 += component.invOffsetX[local171];
 					}
 					if (arg1 >= local195 && local202 <= arg0 && local195 + 32 > arg1 && local202 + 32 > arg0) {
 						InterfaceList.mouseOverInventoryInterface = component;
@@ -228,7 +228,7 @@ public class MiniMenu {
 										}
 									}
 								}
-								local296 = component.aClass100Array19;
+								local296 = component.invOptions;
 								if (aBoolean237) {
 									local296 = annotateOps(local296);
 								}
@@ -690,7 +690,7 @@ public class MiniMenu {
 				if (local693.if3) {
 					aClass100_466 = JagString.concatenate(new JagString[]{local693.optionBase, COLOR_WHITE});
 				} else {
-					aClass100_466 = JagString.concatenate(new JagString[]{COLOR_GREEN, local693.aClass100_85, COLOR_WHITE});
+					aClass100_466 = JagString.concatenate(new JagString[]{COLOR_GREEN, local693.optionSuffix, COLOR_WHITE});
 				}
 			}
 			return;
@@ -1568,7 +1568,7 @@ public class MiniMenu {
 		if (local59 == null) {
 			local59 = Fonts.b12Full;
 		}
-		local59.method2878(local24, arg2, arg1, arg0.width, arg0.height, arg0.color, arg0.shadowColor, arg0.anInt460, arg0.anInt478, client.aRandom1, gregorianDateSeed, anIntArray132);
+		local59.method2878(local24, arg2, arg1, arg0.width, arg0.height, arg0.color, arg0.shadowColor, arg0.halign, arg0.anInt478, client.aRandom1, gregorianDateSeed, anIntArray132);
 		InterfaceList.redrawScreen(anIntArray132[0], anIntArray132[2], anIntArray132[1], anIntArray132[3]);
 	}
 

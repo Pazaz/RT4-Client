@@ -468,10 +468,10 @@ public class MiniMap {
 	public static JagString getTargetVerb(@OriginalArg(0) Component arg0) {
 		if (InterfaceList.getServerActiveProperties(arg0).getTargetMask() == 0) {
 			return null;
-		} else if (arg0.targetVerb == null || arg0.targetVerb.trim().length() == 0) {
+		} else if (arg0.optionCircumfix == null || arg0.optionCircumfix.trim().length() == 0) {
 			return Cheat.qaOpTest ? aClass100_668 : null;
 		} else {
-			return arg0.targetVerb;
+			return arg0.optionCircumfix;
 		}
 	}
 

@@ -2981,7 +2981,7 @@ public class Protocol {
 										if (prioritySource.createdComponentId < 0) {
 											break;
 										}
-										priorityComponent = InterfaceList.getComponent(prioritySource.layer);
+										priorityComponent = InterfaceList.getComponent(prioritySource.overlayer);
 									} while (priorityComponent == null || priorityComponent.createdComponents == null || prioritySource.createdComponentId >= priorityComponent.createdComponents.length || prioritySource != priorityComponent.createdComponents[prioritySource.createdComponentId]);
 									ScriptRunner.run(priorityRequest);
 								}
@@ -2990,7 +2990,7 @@ public class Protocol {
 							if (prioritySource.createdComponentId < 0) {
 								break;
 							}
-							priorityComponent = InterfaceList.getComponent(prioritySource.layer);
+							priorityComponent = InterfaceList.getComponent(prioritySource.overlayer);
 						} while (priorityComponent == null || priorityComponent.createdComponents == null || priorityComponent.createdComponents.length <= prioritySource.createdComponentId || priorityComponent.createdComponents[prioritySource.createdComponentId] != prioritySource);
 						ScriptRunner.run(priorityRequest);
 					}
@@ -2999,7 +2999,7 @@ public class Protocol {
 				if (prioritySource.createdComponentId < 0) {
 					break;
 				}
-				priorityComponent = InterfaceList.getComponent(prioritySource.layer);
+				priorityComponent = InterfaceList.getComponent(prioritySource.overlayer);
 			} while (priorityComponent == null || priorityComponent.createdComponents == null || prioritySource.createdComponentId >= priorityComponent.createdComponents.length || priorityComponent.createdComponents[prioritySource.createdComponentId] != prioritySource);
 			ScriptRunner.run(priorityRequest);
 		}
