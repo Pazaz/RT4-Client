@@ -1129,7 +1129,7 @@ public final class client extends GameShell {
 										if (prioritySource.createdComponentId < 0) {
 											break;
 										}
-										priorityComponent = InterfaceList.getComponent(prioritySource.layer);
+										priorityComponent = InterfaceList.getComponent(prioritySource.overlayer);
 									} while (priorityComponent == null || priorityComponent.createdComponents == null || priorityComponent.createdComponents.length <= prioritySource.createdComponentId || prioritySource != priorityComponent.createdComponents[prioritySource.createdComponentId]);
 									ScriptRunner.run(priorityRequest);
 								}
@@ -1138,7 +1138,7 @@ public final class client extends GameShell {
 							if (prioritySource.createdComponentId < 0) {
 								break;
 							}
-							priorityComponent = InterfaceList.getComponent(prioritySource.layer);
+							priorityComponent = InterfaceList.getComponent(prioritySource.overlayer);
 						} while (priorityComponent == null || priorityComponent.createdComponents == null || prioritySource.createdComponentId >= priorityComponent.createdComponents.length || prioritySource != priorityComponent.createdComponents[prioritySource.createdComponentId]);
 						ScriptRunner.run(priorityRequest);
 					}
@@ -1147,7 +1147,7 @@ public final class client extends GameShell {
 				if (prioritySource.createdComponentId < 0) {
 					break;
 				}
-				priorityComponent = InterfaceList.getComponent(prioritySource.layer);
+				priorityComponent = InterfaceList.getComponent(prioritySource.overlayer);
 			} while (priorityComponent == null || priorityComponent.createdComponents == null || priorityComponent.createdComponents.length <= prioritySource.createdComponentId || prioritySource != priorityComponent.createdComponents[prioritySource.createdComponentId]);
 			ScriptRunner.run(priorityRequest);
 		}

@@ -10,12 +10,16 @@ public final class Component {
 
 	@OriginalMember(owner = "client!pf", name = "b", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable sprites = new SoftLruHashTable(200);
+
 	@OriginalMember(owner = "client!jk", name = "z", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable models = new SoftLruHashTable(50);
+
 	@OriginalMember(owner = "client!gn", name = "i", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable fonts = new SoftLruHashTable(20);
+
 	@OriginalMember(owner = "client!rc", name = "C", descriptor = "Z")
 	public static boolean aBoolean72 = false;
+
 	@OriginalMember(owner = "client!be", name = "b", descriptor = "[Ljava/lang/Object;")
 	public Object[] onFriendTransmit;
 
@@ -38,7 +42,7 @@ public final class Component {
 	public JagString[] ops;
 
 	@OriginalMember(owner = "client!be", name = "s", descriptor = "[Lclient!na;")
-	public JagString[] aClass100Array19;
+	public JagString[] invOptions;
 
 	@OriginalMember(owner = "client!be", name = "t", descriptor = "[Ljava/lang/Object;")
 	public Object[] onInvTransmit;
@@ -65,7 +69,7 @@ public final class Component {
 	public int type;
 
 	@OriginalMember(owner = "client!be", name = "V", descriptor = "[I")
-	public int[] anIntArray36;
+	public int[] invSprite;
 
 	@OriginalMember(owner = "client!be", name = "X", descriptor = "Z")
 	public boolean hFlip;
@@ -131,7 +135,7 @@ public final class Component {
 	public Object[] onTimer;
 
 	@OriginalMember(owner = "client!be", name = "yc", descriptor = "[I")
-	public int[] anIntArray41;
+	public int[] invOffsetX;
 
 	@OriginalMember(owner = "client!be", name = "Ac", descriptor = "[I")
 	public int[] statTriggers;
@@ -164,7 +168,7 @@ public final class Component {
 	public int[] anIntArray46;
 
 	@OriginalMember(owner = "client!be", name = "cd", descriptor = "[I")
-	public int[] anIntArray47;
+	public int[] invOffsetY;
 
 	@OriginalMember(owner = "client!be", name = "gd", descriptor = "[Ljava/lang/Object;")
 	public Object[] onUseWith;
@@ -197,7 +201,7 @@ public final class Component {
 	public int height = 0;
 
 	@OriginalMember(owner = "client!be", name = "S", descriptor = "I")
-	public int anInt460 = 0;
+	public int halign = 0;
 
 	@OriginalMember(owner = "client!be", name = "j", descriptor = "I")
 	public int modelZoom = 100;
@@ -212,7 +216,7 @@ public final class Component {
 	public int dragDeadzone = 0;
 
 	@OriginalMember(owner = "client!be", name = "W", descriptor = "I")
-	public int anInt462 = -1;
+	public int activeModelSeqId = -1;
 
 	@OriginalMember(owner = "client!be", name = "o", descriptor = "S")
 	public short aShort10 = 3000;
@@ -257,9 +261,9 @@ public final class Component {
 	public boolean aBoolean24 = false;
 
 	@OriginalMember(owner = "client!ob", name = "e", descriptor = "Lclient!na;")
-	public static final JagString aClass100_800 = JagString.parse("");
+	public static final JagString EMPTY_STRING = JagString.parse("");
 	@OriginalMember(owner = "client!be", name = "Sb", descriptor = "Lclient!na;")
-	public JagString aClass100_85 = aClass100_800;
+	public JagString optionSuffix = EMPTY_STRING;
 
 	@OriginalMember(owner = "client!be", name = "i", descriptor = "Z")
 	public boolean aBoolean19 = false;
@@ -286,7 +290,7 @@ public final class Component {
 	public boolean dragRenderBehavior = false;
 
 	@OriginalMember(owner = "client!be", name = "ob", descriptor = "Z")
-	public boolean textAntiMacro = false;
+	public boolean shadowed = false;
 
 	@OriginalMember(owner = "client!be", name = "cb", descriptor = "I")
 	public int rectangleLoop = -1;
@@ -295,7 +299,7 @@ public final class Component {
 	public int anInt496 = 1;
 
 	@OriginalMember(owner = "client!be", name = "Cb", descriptor = "I")
-	public int anInt480 = 0;
+	public int overColor = 0;
 
 	@OriginalMember(owner = "client!be", name = "Hb", descriptor = "Z")
 	public boolean if3 = false;
@@ -307,10 +311,10 @@ public final class Component {
 	public ServerActiveProperties properties = DEFAULT_SERVER_ACTIVE_PROPERTIES;
 
 	@OriginalMember(owner = "client!be", name = "cc", descriptor = "I")
-	public int anInt492 = 0;
+	public int activeColor = 0;
 
 	@OriginalMember(owner = "client!be", name = "Gb", descriptor = "Lclient!na;")
-	public JagString text = aClass100_800;
+	public JagString text = EMPTY_STRING;
 
 	@OriginalMember(owner = "client!be", name = "n", descriptor = "I")
 	public int width = 0;
@@ -322,10 +326,10 @@ public final class Component {
 	public boolean noClickThrough = false;
 
 	@OriginalMember(owner = "client!be", name = "U", descriptor = "I")
-	private int anInt461 = -1;
+	private int activeModelId = -1;
 
 	@OriginalMember(owner = "client!be", name = "N", descriptor = "I")
-	public int layer = -1;
+	public int overlayer = -1;
 
 	@OriginalMember(owner = "client!be", name = "pb", descriptor = "I")
 	public int aspectWidth = 1;
@@ -340,7 +344,7 @@ public final class Component {
 	public int modelZOffset = 0;
 
 	@OriginalMember(owner = "client!be", name = "Dc", descriptor = "Lclient!na;")
-	public JagString optionBase = aClass100_800;
+	public JagString optionBase = EMPTY_STRING;
 
 	@OriginalMember(owner = "client!be", name = "Lc", descriptor = "I")
 	public int updatedVarcsReaderIndex = 0;
@@ -349,7 +353,7 @@ public final class Component {
 	public int baseWidth = 0;
 
 	@OriginalMember(owner = "client!be", name = "Mc", descriptor = "I")
-	public int anInt512 = 0;
+	public int invMarginX = 0;
 
 	@OriginalMember(owner = "client!be", name = "Ib", descriptor = "I")
 	public int lastTransmitTimer = -1;
@@ -367,13 +371,13 @@ public final class Component {
 	public int modelXOffset = 0;
 
 	@OriginalMember(owner = "client!be", name = "Ub", descriptor = "Lclient!na;")
-	public JagString targetVerb = aClass100_800;
+	public JagString optionCircumfix = EMPTY_STRING;
 
 	@OriginalMember(owner = "client!be", name = "Lb", descriptor = "I")
 	public int modelRotationSpeed = 0;
 
 	@OriginalMember(owner = "client!be", name = "r", descriptor = "Lclient!na;")
-	public JagString aClass100_82 = aClass100_800;
+	public JagString activeText = EMPTY_STRING;
 
 	@OriginalMember(owner = "client!be", name = "Pc", descriptor = "I")
 	public int outlineThickness = 0;
@@ -388,7 +392,7 @@ public final class Component {
 	public int anInt495 = 0;
 
 	@OriginalMember(owner = "client!be", name = "Sc", descriptor = "I")
-	public int anInt516 = 0;
+	public int invMarginY = 0;
 
 	@OriginalMember(owner = "client!be", name = "Tb", descriptor = "I")
 	public int baseHeight = 0;
@@ -397,7 +401,7 @@ public final class Component {
 	public int id = -1;
 
 	@OriginalMember(owner = "client!be", name = "Yc", descriptor = "I")
-	public int anInt519 = -1;
+	public int activeSpriteId = -1;
 
 	@OriginalMember(owner = "client!be", name = "zc", descriptor = "B")
 	public byte yMode = 0;
@@ -424,7 +428,7 @@ public final class Component {
 	public int modelSeqId = -1;
 
 	@OriginalMember(owner = "client!be", name = "Rc", descriptor = "Lclient!na;")
-	public JagString aClass100_89 = LocalizedText.OK;
+	public JagString option = LocalizedText.OK;
 
 	@OriginalMember(owner = "client!be", name = "Gc", descriptor = "I")
 	public int modelYOffset = 0;
@@ -490,7 +494,7 @@ public final class Component {
 	public int color = 0;
 
 	@OriginalMember(owner = "client!be", name = "xd", descriptor = "I")
-	public int anInt530 = 0;
+	public int buttonType = 0;
 
 	@OriginalMember(owner = "client!ec", name = "a", descriptor = "(II)V")
 	public static void clean() {
@@ -580,51 +584,51 @@ public final class Component {
 	}
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(ILclient!wa;)V")
-	public final void decodeNoScripts(@OriginalArg(1) Buffer arg0) {
+	public final void decodeIf1(@OriginalArg(1) Buffer buffer) {
 		this.if3 = false;
-		this.type = arg0.g1();
-		this.anInt530 = arg0.g1();
-		this.clientCode = arg0.g2();
-		this.baseX = arg0.g2b();
-		this.baseY = arg0.g2b();
-		this.baseWidth = arg0.g2();
-		this.baseHeight = arg0.g2();
+		this.type = buffer.g1();
+		this.buttonType = buffer.g1();
+		this.clientCode = buffer.g2();
+		this.baseX = buffer.g2b();
+		this.baseY = buffer.g2b();
+		this.baseWidth = buffer.g2();
+		this.baseHeight = buffer.g2();
 		this.dynamicWidthValue = 0;
 		this.dynamicHeightValue = 0;
 		this.yMode = 0;
 		this.xMode = 0;
-		this.alpha = arg0.g1();
-		this.layer = arg0.g2();
-		if (this.layer == 65535) {
-			this.layer = -1;
+		this.alpha = buffer.g1();
+		this.overlayer = buffer.g2();
+		if (this.overlayer == 65535) {
+			this.overlayer = -1;
 		} else {
-			this.layer += this.id & 0xFFFF0000;
+			this.overlayer += this.id & 0xFFFF0000;
 		}
-		this.anInt470 = arg0.g2();
+		this.anInt470 = buffer.g2();
 		if (this.anInt470 == 65535) {
 			this.anInt470 = -1;
 		}
-		@Pc(109) int local109 = arg0.g1();
+		@Pc(109) int local109 = buffer.g1();
 		@Pc(125) int local125;
 		if (local109 > 0) {
 			this.cs1ComparisonOperands = new int[local109];
 			this.cs1ComparisonOpcodes = new int[local109];
 			for (local125 = 0; local125 < local109; local125++) {
-				this.cs1ComparisonOpcodes[local125] = arg0.g1();
-				this.cs1ComparisonOperands[local125] = arg0.g2();
+				this.cs1ComparisonOpcodes[local125] = buffer.g1();
+				this.cs1ComparisonOperands[local125] = buffer.g2();
 			}
 		}
-		local125 = arg0.g1();
+		local125 = buffer.g1();
 		@Pc(164) int local164;
 		@Pc(175) int local175;
 		@Pc(183) int local183;
 		if (local125 > 0) {
 			this.cs1Scripts = new int[local125][];
 			for (local164 = 0; local164 < local125; local164++) {
-				local175 = arg0.g2();
+				local175 = buffer.g2();
 				this.cs1Scripts[local164] = new int[local175];
 				for (local183 = 0; local183 < local175; local183++) {
-					this.cs1Scripts[local164][local183] = arg0.g2();
+					this.cs1Scripts[local164][local183] = buffer.g2();
 					if (this.cs1Scripts[local164][local183] == 65535) {
 						this.cs1Scripts[local164][local183] = -1;
 					}
@@ -632,12 +636,12 @@ public final class Component {
 			}
 		}
 		if (this.type == 0) {
-			this.scrollMaxV = arg0.g2();
-			this.hidden = arg0.g1() == 1;
+			this.scrollMaxV = buffer.g2();
+			this.hidden = buffer.g1() == 1;
 		}
 		if (this.type == 1) {
-			arg0.g2();
-			arg0.g1();
+			buffer.g2();
+			buffer.g1();
 		}
 		local164 = 0;
 		if (this.type == 2) {
@@ -645,156 +649,156 @@ public final class Component {
 			this.objCounts = new int[this.baseWidth * this.baseHeight];
 			this.objTypes = new int[this.baseHeight * this.baseWidth];
 			this.dynamicWidthValue = 3;
-			local175 = arg0.g1();
-			local183 = arg0.g1();
+			local175 = buffer.g1();
+			local183 = buffer.g1();
 			if (local175 == 1) {
 				local164 = 268435456;
 			}
-			@Pc(312) int local312 = arg0.g1();
+			@Pc(312) int local312 = buffer.g1();
 			if (local183 == 1) {
 				local164 |= 0x40000000;
 			}
 			if (local312 == 1) {
 				local164 |= Integer.MIN_VALUE;
 			}
-			@Pc(333) int local333 = arg0.g1();
+			@Pc(333) int local333 = buffer.g1();
 			if (local333 == 1) {
 				local164 |= 0x20000000;
 			}
-			this.anInt512 = arg0.g1();
-			this.anInt516 = arg0.g1();
-			this.anIntArray47 = new int[20];
-			this.anIntArray41 = new int[20];
-			this.anIntArray36 = new int[20];
-			@Pc(364) int local364;
-			for (local364 = 0; local364 < 20; local364++) {
-				@Pc(371) int local371 = arg0.g1();
-				if (local371 == 1) {
-					this.anIntArray41[local364] = arg0.g2b();
-					this.anIntArray47[local364] = arg0.g2b();
-					this.anIntArray36[local364] = arg0.g4();
+			this.invMarginX = buffer.g1();
+			this.invMarginY = buffer.g1();
+			this.invOffsetY = new int[20];
+			this.invOffsetX = new int[20];
+			this.invSprite = new int[20];
+			@Pc(364) int i;
+			for (i = 0; i < 20; i++) {
+				@Pc(371) int hasSprite = buffer.g1();
+				if (hasSprite == 1) {
+					this.invOffsetX[i] = buffer.g2b();
+					this.invOffsetY[i] = buffer.g2b();
+					this.invSprite[i] = buffer.g4();
 				} else {
-					this.anIntArray36[local364] = -1;
+					this.invSprite[i] = -1;
 				}
 			}
-			this.aClass100Array19 = new JagString[5];
-			for (local364 = 0; local364 < 5; local364++) {
-				@Pc(418) JagString local418 = arg0.gjstr();
-				if (local418.length() > 0) {
-					this.aClass100Array19[local364] = local418;
-					local164 |= 0x1 << local364 + 23;
+			this.invOptions = new JagString[5];
+			for (i = 0; i < 5; i++) {
+				@Pc(418) JagString option = buffer.gjstr();
+				if (option.length() > 0) {
+					this.invOptions[i] = option;
+					local164 |= 0x1 << i + 23;
 				}
 			}
 		}
 		if (this.type == 3) {
-			this.filled = arg0.g1() == 1;
+			this.filled = buffer.g1() == 1;
 		}
 		if (this.type == 4 || this.type == 1) {
-			this.anInt460 = arg0.g1();
-			this.anInt478 = arg0.g1();
-			this.anInt467 = arg0.g1();
-			this.font = arg0.g2();
+			this.halign = buffer.g1();
+			this.anInt478 = buffer.g1();
+			this.anInt467 = buffer.g1();
+			this.font = buffer.g2();
 			if (this.font == 65535) {
 				this.font = -1;
 			}
-			this.textAntiMacro = arg0.g1() == 1;
+			this.shadowed = buffer.g1() == 1;
 		}
 		if (this.type == 4) {
-			this.text = arg0.gjstr();
-			this.aClass100_82 = arg0.gjstr();
+			this.text = buffer.gjstr();
+			this.activeText = buffer.gjstr();
 		}
 		if (this.type == 1 || this.type == 3 || this.type == 4) {
-			this.color = arg0.g4();
+			this.color = buffer.g4();
 		}
 		if (this.type == 3 || this.type == 4) {
-			this.anInt492 = arg0.g4();
-			this.anInt480 = arg0.g4();
-			this.anInt475 = arg0.g4();
+			this.activeColor = buffer.g4();
+			this.overColor = buffer.g4();
+			this.anInt475 = buffer.g4();
 		}
 		if (this.type == 5) {
-			this.spriteId = arg0.g4();
-			this.anInt519 = arg0.g4();
+			this.spriteId = buffer.g4();
+			this.activeSpriteId = buffer.g4();
 		}
 		if (this.type == 6) {
 			this.modelType = 1;
-			this.modelId = arg0.g2();
+			this.modelId = buffer.g2();
 			this.anInt518 = 1;
 			if (this.modelId == 65535) {
 				this.modelId = -1;
 			}
-			this.anInt461 = arg0.g2();
-			if (this.anInt461 == 65535) {
-				this.anInt461 = -1;
+			this.activeModelId = buffer.g2();
+			if (this.activeModelId == 65535) {
+				this.activeModelId = -1;
 			}
-			this.modelSeqId = arg0.g2();
+			this.modelSeqId = buffer.g2();
 			if (this.modelSeqId == 65535) {
 				this.modelSeqId = -1;
 			}
-			this.anInt462 = arg0.g2();
-			if (this.anInt462 == 65535) {
-				this.anInt462 = -1;
+			this.activeModelSeqId = buffer.g2();
+			if (this.activeModelSeqId == 65535) {
+				this.activeModelSeqId = -1;
 			}
-			this.modelZoom = arg0.g2();
-			this.modelXAngle = arg0.g2();
-			this.modelYAngle = arg0.g2();
+			this.modelZoom = buffer.g2();
+			this.modelXAngle = buffer.g2();
+			this.modelYAngle = buffer.g2();
 		}
 		if (this.type == 7) {
 			this.dynamicHeightValue = 3;
 			this.dynamicWidthValue = 3;
 			this.objCounts = new int[this.baseHeight * this.baseWidth];
 			this.objTypes = new int[this.baseWidth * this.baseHeight];
-			this.anInt460 = arg0.g1();
-			this.font = arg0.g2();
+			this.halign = buffer.g1();
+			this.font = buffer.g2();
 			if (this.font == 65535) {
 				this.font = -1;
 			}
-			this.textAntiMacro = arg0.g1() == 1;
-			this.color = arg0.g4();
-			this.anInt512 = arg0.g2b();
-			this.anInt516 = arg0.g2b();
-			local175 = arg0.g1();
-			if (local175 == 1) {
+			this.shadowed = buffer.g1() == 1;
+			this.color = buffer.g4();
+			this.invMarginX = buffer.g2b();
+			this.invMarginY = buffer.g2b();
+			int invHasOptions = buffer.g1();
+			if (invHasOptions == 1) {
 				local164 |= 0x40000000;
 			}
-			this.aClass100Array19 = new JagString[5];
-			for (local183 = 0; local183 < 5; local183++) {
-				@Pc(756) JagString local756 = arg0.gjstr();
-				if (local756.length() > 0) {
-					this.aClass100Array19[local183] = local756;
-					local164 |= 0x1 << local183 + 23;
+			this.invOptions = new JagString[5];
+			for (int i = 0; i < 5; i++) {
+				@Pc(756) JagString option = buffer.gjstr();
+				if (option.length() > 0) {
+					this.invOptions[i] = option;
+					local164 |= 0x1 << i + 23;
 				}
 			}
 		}
 		if (this.type == 8) {
-			this.text = arg0.gjstr();
+			this.text = buffer.gjstr();
 		}
-		if (this.anInt530 == 2 || this.type == 2) {
-			this.targetVerb = arg0.gjstr();
-			this.aClass100_85 = arg0.gjstr();
-			local175 = arg0.g2() & 0x3F;
+		if (this.buttonType == 2 || this.type == 2) {
+			this.optionCircumfix = buffer.gjstr();
+			this.optionSuffix = buffer.gjstr();
+			local175 = buffer.g2() & 0x3F;
 			local164 |= local175 << 11;
 		}
-		if (this.anInt530 == 1 || this.anInt530 == 4 || this.anInt530 == 5 || this.anInt530 == 6) {
-			this.aClass100_89 = arg0.gjstr();
-			if (this.aClass100_89.length() == 0) {
-				if (this.anInt530 == 1) {
-					this.aClass100_89 = LocalizedText.OK;
+		if (this.buttonType == 1 || this.buttonType == 4 || this.buttonType == 5 || this.buttonType == 6) {
+			this.option = buffer.gjstr();
+			if (this.option.length() == 0) {
+				if (this.buttonType == 1) {
+					this.option = LocalizedText.OK;
 				}
-				if (this.anInt530 == 4) {
-					this.aClass100_89 = LocalizedText.SELECT;
+				if (this.buttonType == 4) {
+					this.option = LocalizedText.SELECT;
 				}
-				if (this.anInt530 == 5) {
-					this.aClass100_89 = LocalizedText.SELECT;
+				if (this.buttonType == 5) {
+					this.option = LocalizedText.SELECT;
 				}
-				if (this.anInt530 == 6) {
-					this.aClass100_89 = LocalizedText.CONTINUE;
+				if (this.buttonType == 6) {
+					this.option = LocalizedText.CONTINUE;
 				}
 			}
 		}
-		if (this.anInt530 == 1 || this.anInt530 == 4 || this.anInt530 == 5) {
+		if (this.buttonType == 1 || this.buttonType == 4 || this.buttonType == 5) {
 			local164 |= 0x400000;
 		}
-		if (this.anInt530 == 6) {
+		if (this.buttonType == 6) {
 			local164 |= 0x1;
 		}
 		this.properties = new ServerActiveProperties(local164, -1);
@@ -803,10 +807,10 @@ public final class Component {
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(ZI)Lclient!qf;")
 	public final Sprite method482(@OriginalArg(1) int arg0) {
 		aBoolean72 = false;
-		if (arg0 < 0 || arg0 >= this.anIntArray36.length) {
+		if (arg0 < 0 || arg0 >= this.invSprite.length) {
 			return null;
 		}
-		@Pc(29) int local29 = this.anIntArray36[arg0];
+		@Pc(29) int local29 = this.invSprite[arg0];
 		if (local29 == -1) {
 			return null;
 		}
@@ -873,7 +877,7 @@ public final class Component {
 		@Pc(13) int local13;
 		if (arg4) {
 			local10 = this.anInt518;
-			local13 = this.anInt461;
+			local13 = this.activeModelId;
 		} else {
 			local13 = this.modelId;
 			local10 = this.modelType;
@@ -959,7 +963,7 @@ public final class Component {
 		aBoolean72 = false;
 		@Pc(12) int local12;
 		if (arg0) {
-			local12 = this.anInt519;
+			local12 = this.activeSpriteId;
 		} else {
 			local12 = this.spriteId;
 		}
@@ -1011,7 +1015,7 @@ public final class Component {
 	}
 
 	@OriginalMember(owner = "client!be", name = "c", descriptor = "(ILclient!wa;)V")
-	public final void decodeScriptFormat(@OriginalArg(1) Buffer buffer) {
+	public final void decodeIf3(@OriginalArg(1) Buffer buffer) {
 		this.if3 = true;
 		buffer.offset++;
 		this.type = buffer.g1();
@@ -1028,11 +1032,11 @@ public final class Component {
 		this.dynamicHeightValue = buffer.g1b();
 		this.yMode = buffer.g1b();
 		this.xMode = buffer.g1b();
-		this.layer = buffer.g2();
-		if (this.layer == 65535) {
-			this.layer = -1;
+		this.overlayer = buffer.g2();
+		if (this.overlayer == 65535) {
+			this.overlayer = -1;
 		} else {
-			this.layer = (this.id & 0xFFFF0000) + this.layer;
+			this.overlayer = (this.id & 0xFFFF0000) + this.overlayer;
 		}
 		this.hidden = buffer.g1() == 1;
 		if (this.type == 0) {
@@ -1087,9 +1091,9 @@ public final class Component {
 			}
 			this.text = buffer.gjstr();
 			this.anInt467 = buffer.g1();
-			this.anInt460 = buffer.g1();
+			this.halign = buffer.g1();
 			this.anInt478 = buffer.g1();
-			this.textAntiMacro = buffer.g1() == 1;
+			this.shadowed = buffer.g1() == 1;
 			this.color = buffer.g4();
 		}
 		if (this.type == 3) {
@@ -1150,7 +1154,7 @@ public final class Component {
 		this.dragDeadtime = buffer.g1();
 		this.dragRenderBehavior = buffer.g1() == 1;
 		local567 = -1;
-		this.targetVerb = buffer.gjstr();
+		this.optionCircumfix = buffer.gjstr();
 		if (ServerActiveProperties.getTargetMask(local175) != 0) {
 			local567 = buffer.g2();
 			this.anInt499 = buffer.g2();

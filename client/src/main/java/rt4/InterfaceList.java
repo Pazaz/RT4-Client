@@ -175,9 +175,9 @@ public class InterfaceList {
 						@Pc(74) Component local74 = components[arg0][local46] = new Component();
 						local74.id = local46 + (arg0 << 16);
 						if (local62[0] == -1) {
-							local74.decodeScriptFormat(new Buffer(local62));
+							local74.decodeIf3(new Buffer(local62));
 						} else {
-							local74.decodeNoScripts(new Buffer(local62));
+							local74.decodeIf1(new Buffer(local62));
 						}
 					}
 				}
@@ -326,7 +326,7 @@ public class InterfaceList {
 	public static void method4190(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) Component[] arg4) {
 		for (@Pc(3) int local3 = 0; local3 < arg4.length; local3++) {
 			@Pc(19) Component local19 = arg4[local3];
-			if (local19 != null && local19.layer == arg0) {
+			if (local19 != null && local19.overlayer == arg0) {
 				method2801(arg3, arg2, local19, arg1);
 				method2291(local19, arg3, arg2);
 				if (local19.scrollMaxH - local19.width < local19.scrollX) {
@@ -476,9 +476,9 @@ public class InterfaceList {
 			arg2.width = arg2.baseWidth * arg1 >> 14;
 		} else if (arg2.dynamicWidthValue == 3) {
 			if (arg2.type == 2) {
-				arg2.width = arg2.baseWidth * 32 + (arg2.baseWidth - 1) * arg2.anInt512;
+				arg2.width = arg2.baseWidth * 32 + (arg2.baseWidth - 1) * arg2.invMarginX;
 			} else if (arg2.type == 7) {
-				arg2.width = arg2.baseWidth * 115 + arg2.anInt512 * (arg2.baseWidth - 1);
+				arg2.width = arg2.baseWidth * 115 + arg2.invMarginX * (arg2.baseWidth - 1);
 			}
 		}
 		if (arg2.dynamicHeightValue == 0) {
@@ -489,9 +489,9 @@ public class InterfaceList {
 			arg2.height = arg0 * arg2.baseHeight >> 14;
 		} else if (arg2.dynamicHeightValue == 3) {
 			if (arg2.type == 2) {
-				arg2.height = (arg2.baseHeight - 1) * arg2.anInt516 + arg2.baseHeight * 32;
+				arg2.height = (arg2.baseHeight - 1) * arg2.invMarginY + arg2.baseHeight * 32;
 			} else if (arg2.type == 7) {
-				arg2.height = arg2.baseHeight * 12 + (arg2.baseHeight - 1) * arg2.anInt516;
+				arg2.height = arg2.baseHeight * 12 + (arg2.baseHeight - 1) * arg2.invMarginY;
 			}
 		}
 		if (arg2.dynamicWidthValue == 4) {
@@ -526,8 +526,8 @@ public class InterfaceList {
 
 	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(Lclient!be;I)Lclient!be;")
 	public static Component method4668(@OriginalArg(0) Component arg0) {
-		if (arg0.layer != -1) {
-			return getComponent(arg0.layer);
+		if (arg0.overlayer != -1) {
+			return getComponent(arg0.overlayer);
 		}
 		@Pc(28) int local28 = arg0.id >>> 16;
 		@Pc(33) HashTableIterator local33 = new HashTableIterator(openInterfaces);
@@ -612,7 +612,7 @@ public class InterfaceList {
 	public static void method946(@OriginalArg(0) Component[] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7) {
 		for (@Pc(1) int local1 = 0; local1 < arg0.length; local1++) {
 			@Pc(9) Component component = arg0[local1];
-			if (component != null && component.layer == arg1 && (!component.if3 || component.type == 0 || component.aBoolean25 || getServerActiveProperties(component).events != 0 || component == Cs1ScriptRunner.aClass13_1 || component.clientCode == 1338) && (!component.if3 || !method947(component))) {
+			if (component != null && component.overlayer == arg1 && (!component.if3 || component.type == 0 || component.aBoolean25 || getServerActiveProperties(component).events != 0 || component == Cs1ScriptRunner.aClass13_1 || component.clientCode == 1338) && (!component.if3 || !method947(component))) {
 				@Pc(50) int local50 = component.x + arg6;
 				@Pc(55) int local55 = component.y + arg7;
 				@Pc(61) int local61;
@@ -1024,7 +1024,7 @@ public class InterfaceList {
 						}
 					}
 					if (!component.if3 && Cs1ScriptRunner.aClass13_14 == null && clickedInventoryComponent == null && !Cs1ScriptRunner.aBoolean108) {
-						if ((component.anInt470 >= 0 || component.anInt480 != 0) && Mouse.lastMouseX >= local61 && Mouse.lastMouseY >= local63 && Mouse.lastMouseX < local65 && Mouse.lastMouseY < local67) {
+						if ((component.anInt470 >= 0 || component.overColor != 0) && Mouse.lastMouseX >= local61 && Mouse.lastMouseY >= local63 && Mouse.lastMouseX < local65 && Mouse.lastMouseY < local67) {
 							if (component.anInt470 >= 0) {
 								aClass13_22 = arg0[component.anInt470];
 							} else {
@@ -1151,7 +1151,7 @@ public class InterfaceList {
 			return null;
 		}
 		for (@Pc(10) int local10 = 0; local10 < local4; local10++) {
-			arg0 = getComponent(arg0.layer);
+			arg0 = getComponent(arg0.overlayer);
 			if (arg0 == null) {
 				return null;
 			}
@@ -1221,7 +1221,7 @@ public class InterfaceList {
 	public static void method2354(@OriginalArg(1) int arg0, @OriginalArg(2) Component[] arg1) {
 		for (@Pc(7) int local7 = 0; local7 < arg1.length; local7++) {
 			@Pc(15) Component local15 = arg1[local7];
-			if (local15 != null && local15.layer == arg0 && (!local15.if3 || !method947(local15))) {
+			if (local15 != null && local15.overlayer == arg0 && (!local15.if3 || !method947(local15))) {
 				if (local15.type == 0) {
 					if (!local15.if3 && method947(local15) && local15 != aClass13_22) {
 						continue;
@@ -1237,10 +1237,10 @@ public class InterfaceList {
 				}
 				if (local15.type == 6) {
 					@Pc(105) int local105;
-					if (local15.modelSeqId != -1 || local15.anInt462 != -1) {
+					if (local15.modelSeqId != -1 || local15.activeModelSeqId != -1) {
 						@Pc(100) boolean local100 = Cs1ScriptRunner.isTrue(local15);
 						if (local100) {
-							local105 = local15.anInt462;
+							local105 = local15.activeModelSeqId;
 						} else {
 							local105 = local15.modelSeqId;
 						}

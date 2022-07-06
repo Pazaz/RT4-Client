@@ -2145,7 +2145,7 @@ public final class ScriptRunner {
 							@Pc(1137) Component local1137 = new Component();
 							local1137.if3 = true;
 							local1137.createdComponentId = int2;
-							local1137.layer = local1137.id = local1063.id;
+							local1137.overlayer = local1137.id = local1063.id;
 							local1137.type = int3;
 							local1063.createdComponents[int2] = local1137;
 							if (local1020) {
@@ -2395,7 +2395,7 @@ public final class ScriptRunner {
 								}
 								if (opcode == Cs2Opcodes.setTextAlignment) {
 									isp -= 3;
-									component.anInt460 = intStack[isp];
+									component.halign = intStack[isp];
 									component.anInt478 = intStack[isp + 1];
 									component.anInt467 = intStack[isp + 2];
 									InterfaceList.redraw(component);
@@ -2403,7 +2403,7 @@ public final class ScriptRunner {
 								}
 								if (opcode == Cs2Opcodes.setTextAntiMacro) {
 									isp--;
-									component.textAntiMacro = intStack[isp] == 1;
+									component.shadowed = intStack[isp] == 1;
 									InterfaceList.redraw(component);
 									continue;
 								}
@@ -2587,7 +2587,7 @@ public final class ScriptRunner {
 								}
 								if (opcode == Cs2Opcodes.setTargetVerb) {
 									ssp--;
-									component.targetVerb = stringStack[ssp];
+									component.optionCircumfix = stringStack[ssp];
 									continue;
 								}
 								if (opcode == Cs2Opcodes.setNoOptions) {
@@ -2743,7 +2743,7 @@ public final class ScriptRunner {
 										continue;
 									}
 									if (opcode == Cs2Opcodes.getLayer) {
-										intStack[isp++] = component.layer;
+										intStack[isp++] = component.overlayer;
 										continue;
 									}
 								} else if (opcode < 1700) {
@@ -2867,7 +2867,7 @@ public final class ScriptRunner {
 										continue;
 									}
 									if (opcode == Cs2Opcodes.getLayer2) {
-										intStack[isp++] = component.layer;
+										intStack[isp++] = component.overlayer;
 										continue;
 									}
 								} else if (opcode < 2700) {

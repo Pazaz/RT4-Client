@@ -313,7 +313,7 @@ public class Cs1ScriptRunner {
 
 		for (@Pc(18) int i = 0; i < components.length; i++) {
 			@Pc(30) Component component = components[i];
-			if (component != null && (component.layer == layer || layer == 0xabcdabcd && component == aClass13_14)) {
+			if (component != null && (component.overlayer == layer || layer == 0xabcdabcd && component == aClass13_14)) {
 				@Pc(57) int rectangle;
 				if (parentRectangle == -1) {
 					InterfaceList.rectangleX[InterfaceList.rectangles] = arg2 + component.x;
@@ -603,11 +603,11 @@ public class Cs1ScriptRunner {
 									local270 = 0;
 									for (local276 = 0; local276 < component.baseHeight; local276++) {
 										for (local468 = 0; local468 < component.baseWidth; local468++) {
-											int y = local114 + local276 * (component.anInt516 + 32);
-											int x = (component.anInt512 + 32) * local468 + local123;
+											int y = local114 + local276 * (component.invMarginY + 32);
+											int x = (component.invMarginX + 32) * local468 + local123;
 											if (local270 < 20) {
-												y += component.anIntArray47[local270];
-												x += component.anIntArray41[local270];
+												y += component.invOffsetY[local270];
+												x += component.invOffsetX[local270];
 											}
 											if (component.objTypes[local270] > 0) {
 												objId = component.objTypes[local270] - 1;
@@ -698,7 +698,7 @@ public class Cs1ScriptRunner {
 														// sprite.renderResized(x, y, 36, 32);
 													}
 												}
-											} else if (component.anIntArray36 != null && local270 < 20) {
+											} else if (component.invSprite != null && local270 < 20) {
 												@Pc(1381) Sprite local1381 = component.method482(local270);
 												if (local1381 != null) {
 													local1381.render(x, y);
@@ -712,14 +712,14 @@ public class Cs1ScriptRunner {
 									}
 								} else if (component.type == 3) {
 									if (isTrue(component)) {
-										local270 = component.anInt492;
+										local270 = component.activeColor;
 										if (InterfaceList.aClass13_22 == component && component.anInt475 != 0) {
 											local270 = component.anInt475;
 										}
 									} else {
 										local270 = component.color;
-										if (component == InterfaceList.aClass13_22 && component.anInt480 != 0) {
-											local270 = component.anInt480;
+										if (component == InterfaceList.aClass13_22 && component.overColor != 0) {
+											local270 = component.overColor;
 										}
 									}
 									if (alpha == 0) {
@@ -752,17 +752,17 @@ public class Cs1ScriptRunner {
 										if (local1921 != null) {
 											@Pc(1934) JagString local1934 = component.text;
 											if (isTrue(component)) {
-												local276 = component.anInt492;
+												local276 = component.activeColor;
 												if (InterfaceList.aClass13_22 == component && component.anInt475 != 0) {
 													local276 = component.anInt475;
 												}
-												if (component.aClass100_82.length() > 0) {
-													local1934 = component.aClass100_82;
+												if (component.activeText.length() > 0) {
+													local1934 = component.activeText;
 												}
 											} else {
 												local276 = component.color;
-												if (InterfaceList.aClass13_22 == component && component.anInt480 != 0) {
-													local276 = component.anInt480;
+												if (InterfaceList.aClass13_22 == component && component.overColor != 0) {
+													local276 = component.overColor;
 												}
 											}
 											if (component.if3 && component.objId != -1) {
@@ -782,7 +782,7 @@ public class Cs1ScriptRunner {
 											if (!component.if3) {
 												local1934 = interpolate(component, local1934);
 											}
-											local1921.drawInterfaceText(local1934, local123, local114, component.width, component.height, local276, component.textAntiMacro ? 0 : -1, component.anInt460, component.anInt478, component.anInt467);
+											local1921.drawInterfaceText(local1934, local123, local114, component.width, component.height, local276, component.shadowed ? 0 : -1, component.halign, component.anInt478, component.anInt467);
 										} else if (Component.aBoolean72) {
 											InterfaceList.redraw(component);
 										}
@@ -890,7 +890,7 @@ public class Cs1ScriptRunner {
 											@Pc(2587) boolean local2587 = isTrue(component);
 											@Pc(2589) Model local2589 = null;
 											if (local2587) {
-												local276 = component.anInt462;
+												local276 = component.activeModelSeqId;
 											} else {
 												local276 = component.modelSeqId;
 											}
@@ -1010,14 +1010,14 @@ public class Cs1ScriptRunner {
 															} else {
 																local3159 = JagString.concatenate(new JagString[]{MiniMenu.aClass100_32, local2611.name, aClass100_375, method1548(component.objCounts[local276])});
 															}
-															local556 = local123 + memory * (component.anInt512 + 115);
-															objId = (component.anInt516 + 12) * local468 + local114;
-															if (component.anInt460 == 0) {
-																local1921.renderLeft(local3159, local556, objId, component.color, component.textAntiMacro ? 0 : -1);
-															} else if (component.anInt460 == 1) {
-																local1921.renderCenter(local3159, local556 + 57, objId, component.color, component.textAntiMacro ? 0 : -1);
+															local556 = local123 + memory * (component.invMarginX + 115);
+															objId = (component.invMarginY + 12) * local468 + local114;
+															if (component.halign == 0) {
+																local1921.renderLeft(local3159, local556, objId, component.color, component.shadowed ? 0 : -1);
+															} else if (component.halign == 1) {
+																local1921.renderCenter(local3159, local556 + 57, objId, component.color, component.shadowed ? 0 : -1);
 															} else {
-																local1921.renderRight(local3159, local556 + 115 - 1, objId, component.color, component.textAntiMacro ? 0 : -1);
+																local1921.renderRight(local3159, local556 + 115 - 1, objId, component.color, component.shadowed ? 0 : -1);
 															}
 														}
 														local276++;
@@ -1200,7 +1200,7 @@ public class Cs1ScriptRunner {
 		if (local16 == 324) {
 			if (anInt3851 == -1) {
 				anInt3851 = arg0.spriteId;
-				anInt3502 = arg0.anInt519;
+				anInt3502 = arg0.activeSpriteId;
 			}
 			if (PlayerAppearance.DEFAULT.gender) {
 				arg0.spriteId = anInt3851;
@@ -1209,7 +1209,7 @@ public class Cs1ScriptRunner {
 			}
 		} else if (local16 == 325) {
 			if (anInt3851 == -1) {
-				anInt3502 = arg0.anInt519;
+				anInt3502 = arg0.activeSpriteId;
 				anInt3851 = arg0.spriteId;
 			}
 			if (PlayerAppearance.DEFAULT.gender) {
