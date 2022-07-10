@@ -99,4 +99,8 @@ public class PluginRepository {
     public static void ComponentDraw(int componentIndex, Component component, int screenX, int screenY) {
         loadedPlugins.values().forEach((plugin) -> plugin.ComponentDraw(componentIndex, component, screenX, screenY));
     }
+
+    public static void OnVarpUpdate(int id, int value) {
+        loadedPlugins.values().forEach((plugin) -> plugin.OnVarpUpdate(id, value));
+    }
 }

@@ -3,6 +3,7 @@ package rt4;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+import plugin.PluginRepository;
 
 public class VarpDomain {
 	@OriginalMember(owner = "client!gj", name = "q", descriptor = "[I")
@@ -36,6 +37,10 @@ public class VarpDomain {
 
 	@OriginalMember(owner = "client!nh", name = "a", descriptor = "(BII)V")
 	public static void set(@OriginalArg(1) int value, @OriginalArg(2) int id) {
+		PluginRepository.OnVarpUpdate(id, value);
+
+		if (id > varp.length) return;
+
 		varp[id] = value;
 		@Pc(20) LongNode local20 = (LongNode) aClass133_20.get(id);
 		if (local20 == null) {

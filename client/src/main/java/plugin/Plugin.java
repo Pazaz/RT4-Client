@@ -59,8 +59,26 @@ public abstract class Plugin {
      */
     public void NPCOverheadDraw(Npc npc, int screenX, int screenY) {}
 
+    /**
+     * ProcessCommand is called when a user types and sends a message prefixed with ::
+     * @param commandStr the command the user used - should include :: in comparisons, eg <pre>commandStr.equals("::command")</pre>
+     * @param args any other tokens included with the initial message. Tokens are determined by spaces.
+     */
     public void ProcessCommand(String commandStr, String[] args) {}
 
+    /**
+     * ComponentDraw is called when an interface component is being rendered by the client.
+     * @param componentIndex the index of the component in its parent interface.
+     * @param component the component itself
+     * @param screenX the screen X coordinate of this component
+     * @param screenY the screen Y coordinate of this component
+     */
     public void ComponentDraw(int componentIndex, Component component, int screenX, int screenY) {}
 
+    /**
+     * OnVarpUpdate is called when varps are updated by the server sending packets.
+     * @param id the ID of the varp
+     * @param value the value the varp is being set to.
+     */
+    public void OnVarpUpdate(int id, int value) {}
 }
