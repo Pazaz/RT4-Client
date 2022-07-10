@@ -3,6 +3,7 @@ package rt4;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+import plugin.PluginRepository;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -967,7 +968,7 @@ public class Protocol {
 		} else if (opcode == ServerProt.MESSAGE_GAME) {
 			@Pc(245) JagString message = inboundBuffer.gjstr();
 			if (message.endsWith(TRADEREQ)) {
-				JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
+				JagString name = message.substring(message.indexOf(JagString.COLON), 0);
 				long name37 = name.encode37();
 				boolean ignored = false;
 				for (int i = 0; i < IgnoreList.size; i++) {
@@ -980,7 +981,7 @@ public class Protocol {
 					Chat.add(name, 4, LocalizedText.TRADEREQ);
 				}
 			} else if (message.endsWith(CHALREQ)) {
-				JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
+				JagString name = message.substring(message.indexOf(JagString.COLON), 0);
 				long name37 = name.encode37();
 				boolean ignored = false;
 				for (int i = 0; i < IgnoreList.size; i++) {
@@ -990,11 +991,11 @@ public class Protocol {
 					}
 				}
 				if (!ignored && Player.inTutorialIsland == 0) {
-					JagString local506 = message.substring(message.length() - 9, message.indexOf(DateUtil.COLON) + 1);
+					JagString local506 = message.substring(message.length() - 9, message.indexOf(JagString.COLON) + 1);
 					Chat.add(name, 8, local506);
 				}
 			} else if (message.endsWith(ASSISTREQ)) {
-				JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
+				JagString name = message.substring(message.indexOf(JagString.COLON), 0);
 				long name37 = name.encode37();
 				boolean ignored = false;
 				for (int i = 0; i < IgnoreList.size; i++) {
@@ -1020,7 +1021,7 @@ public class Protocol {
 					Chat.add(JagString.EMPTY, 13, name);
 				}
 			} else if (message.endsWith(DUELSTAKE)) {
-				JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
+				JagString name = message.substring(message.indexOf(JagString.COLON), 0);
 				long name37 = name.encode37();
 				boolean ignored = false;
 				for (int i = 0; i < IgnoreList.size; i++) {
@@ -1033,7 +1034,7 @@ public class Protocol {
 					Chat.add(name, 14, JagString.EMPTY);
 				}
 			} else if (message.endsWith(DUELFRIEND)) {
-				JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
+				JagString name = message.substring(message.indexOf(JagString.COLON), 0);
 				long name37 = name.encode37();
 				boolean ignored = false;
 				for (int local277 = 0; local277 < IgnoreList.size; local277++) {
@@ -1046,7 +1047,7 @@ public class Protocol {
 					Chat.add(name, 15, JagString.EMPTY);
 				}
 			} else if (message.endsWith(aClass100_916)) {
-				JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
+				JagString name = message.substring(message.indexOf(JagString.COLON), 0);
 				long name37 = name.encode37();
 				boolean ignored = false;
 				for (int i = 0; i < IgnoreList.size; i++) {
@@ -1059,7 +1060,7 @@ public class Protocol {
 					Chat.add(name, 16, JagString.EMPTY);
 				}
 			} else if (message.endsWith(aClass100_770)) {
-				JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
+				JagString name = message.substring(message.indexOf(JagString.COLON), 0);
 				long name37 = name.encode37();
 				boolean ignored = false;
 				for (int i = 0; i < IgnoreList.size; i++) {
@@ -1069,7 +1070,7 @@ public class Protocol {
 					}
 				}
 				if (!ignored && Player.inTutorialIsland == 0) {
-					JagString local506 = message.substring(message.length() - 9, message.indexOf(DateUtil.COLON) + 1);
+					JagString local506 = message.substring(message.length() - 9, message.indexOf(JagString.COLON) + 1);
 					Chat.add(name, 21, local506);
 				}
 			} else {
@@ -1459,6 +1460,7 @@ public class Protocol {
 					PlayerSkillXpTable.baseLevels[skill] = i + 2;
 				}
 			}
+			PluginRepository.OnXPUpdate(skill, xp);
 			PlayerSkillXpTable.updatedStats[PlayerSkillXpTable.updatedStatsWriterIndex++ & 0x1F] = skill;
 			opcode = -1;
 			return true;

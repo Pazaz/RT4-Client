@@ -12,6 +12,6 @@ public class FontColor {
     }
 
     public static FontColor fromColor(Color color) {
-        return new FontColor(color.getRed() << 16 + color.getGreen() << 8 + color.getBlue());
+        return new FontColor((color.getRed() << 16) + (color.getGreen() << 8) + color.getBlue());
     }
 }

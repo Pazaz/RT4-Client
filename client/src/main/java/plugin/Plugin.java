@@ -37,8 +37,10 @@ public abstract class Plugin {
 
     /**
      * OnXPUpdate() is called when the client receives an XP update packet. This includes at login.
+     * @param skill - the skill ID being updated
+     * @param xp - the new total XP for the skill.
      */
-    public void OnXPUpdate() {}
+    public void OnXPUpdate(int skill, int xp) {}
 
     /**
      * Update() is called once per tick, aka once every 600ms.
@@ -81,4 +83,9 @@ public abstract class Plugin {
      * @param value the value the varp is being set to.
      */
     public void OnVarpUpdate(int id, int value) {}
+
+    /**
+     * OnLogout is called when the client logs out. This should be used to clear player-relevant plugin state.
+     */
+    public void OnLogout() {}
 }

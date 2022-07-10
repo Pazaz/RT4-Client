@@ -103,4 +103,12 @@ public class PluginRepository {
     public static void OnVarpUpdate(int id, int value) {
         loadedPlugins.values().forEach((plugin) -> plugin.OnVarpUpdate(id, value));
     }
+
+    public static void OnXPUpdate(int skill, int xp) {
+        loadedPlugins.values().forEach((plugin) -> plugin.OnXPUpdate(skill, xp));
+    }
+
+    public static void OnLogout() {
+        loadedPlugins.values().forEach(Plugin::OnLogout);
+    }
 }

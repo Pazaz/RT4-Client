@@ -12,16 +12,6 @@ public final class DateUtil {
 
 	@OriginalMember(owner = "client!cl", name = "K", descriptor = "Ljava/util/Calendar;")
 	public static final Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
-	@OriginalMember(owner = "client!fn", name = "Z", descriptor = "Lclient!na;")
-	public static final JagString aClass100_461 = JagString.parse(")1 ");
-	@OriginalMember(owner = "client!wb", name = "a", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1089 = JagString.parse(")2");
-	@OriginalMember(owner = "client!dm", name = "j", descriptor = "Lclient!na;")
-	public static final JagString SPACE = JagString.parse(" ");
-	@OriginalMember(owner = "client!vh", name = "c", descriptor = "Lclient!na;")
-	public static final JagString COLON = JagString.parse(":");
-	@OriginalMember(owner = "client!ee", name = "a", descriptor = "Lclient!na;")
-	public static final JagString TIMEZONE = JagString.parse(" GMT");
 
 	@OriginalMember(owner = "client!km", name = "tc", descriptor = "Lclient!na;")
 	private static final JagString DEC = JagString.parse("Dec");
@@ -104,6 +94,6 @@ public final class DateUtil {
 		@Pc(36) int local36 = calendar.get(Calendar.HOUR_OF_DAY);
 		@Pc(40) int local40 = calendar.get(Calendar.MINUTE);
 		@Pc(44) int local44 = calendar.get(Calendar.SECOND);
-		return JagString.concatenate(new JagString[]{DAYS[local13 - 1], aClass100_461, JagString.parseInt(local17 / 10), JagString.parseInt(local17 % 10), aClass100_1089, MONTHS[local21], aClass100_1089, JagString.parseInt(local32), SPACE, JagString.parseInt(local36 / 10), JagString.parseInt(local36 % 10), COLON, JagString.parseInt(local40 / 10), JagString.parseInt(local40 % 10), COLON, JagString.parseInt(local44 / 10), JagString.parseInt(local44 % 10), TIMEZONE});
+		return JagString.concatenate(new JagString[]{DAYS[local13 - 1], JagString.aClass100_461, JagString.parseInt(local17 / 10), JagString.parseInt(local17 % 10), JagString.aClass100_1089, MONTHS[local21], JagString.aClass100_1089, JagString.parseInt(local32), JagString.SPACE, JagString.parseInt(local36 / 10), JagString.parseInt(local36 % 10), JagString.COLON, JagString.parseInt(local40 / 10), JagString.parseInt(local40 % 10), JagString.COLON, JagString.parseInt(local44 / 10), JagString.parseInt(local44 % 10), JagString.TIMEZONE});
 	}
 }
