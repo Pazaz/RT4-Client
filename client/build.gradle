@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.10'
 }
 
 mainClassName = 'rt4.client'
@@ -35,6 +36,8 @@ dependencies {
     implementation 'lib:jogl-all-natives-linux-i586'
     implementation 'lib:jogl-all-natives-macosx-universal'
     implementation 'lib:jogl-all-natives-android-aarch64'
+
+    runtime 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.10'
 }
 
 jar {
@@ -42,4 +45,5 @@ jar {
         attributes 'Main-Class': "$mainClassName"
     }
     from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
 }

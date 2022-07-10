@@ -19,13 +19,39 @@ public final class JagString implements StringInterface {
 	@OriginalMember(owner = "client!pi", name = "Q", descriptor = "Lclient!na;")
 	public static final JagString aClass100_853 = parse("null");
 	@OriginalMember(owner = "client!t", name = "C", descriptor = "Lclient!na;")
-	public static final JagString aClass100_994 = parse(")3");
+	public static final JagString PERIOD = parse(")3");
 	@OriginalMember(owner = "client!vk", name = "a", descriptor = "[I")
 	public static final int[] anIntArray471 = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 73, 74, 76, 78, 83, 84, 85, 86, 91, 92, 93, 94, 95, 97, 103, 104, 105, 106, 107, 108, 113, 114, 115, 116, 118, 119, 120, 121, 122, 123, 124, 125, 133, 134, 136, 138, 143, 144, 145, 146, 151, 152, 153, 154, 155, 157, 163, 164, 165, 166, 168, 169, 174, 175, 176, 177, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 97, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 157, 215, 216, 117, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 66, 66, 66, 66, 66, 66, 65, 75, 79, 79, 79, 79, 87, 87, 87, 87, 77, 96, 98, 98, 98, 98, 98, 250, 251, 109, 109, 109, 109, 117, 252, 167, 126, 126, 126, 126, 126, 126, 125, 135, 139, 139, 139, 139, 147, 147, 147, 147, 137, 156, 158, 158, 158, 158, 158, 253, 254, 170, 170, 170, 170, 178, 255, 178};
 	@OriginalMember(owner = "client!sh", name = "e", descriptor = "Lclient!na;")
 	public static final JagString aClass100_967 = parse("");
 	@OriginalMember(owner = "client!dm", name = "n", descriptor = "Lclient!na;")
 	public static final JagString PERCENT_SIGN = parse("(U");
+	@OriginalMember(owner = "client!wa", name = "pb", descriptor = "Lclient!na;")
+	public static final JagString aClass100_556 = parse("<br>");
+	@OriginalMember(owner = "client!ed", name = "H", descriptor = "Lclient!na;")
+	public static final JagString aClass100_375 = parse("<)4col> x");
+	@OriginalMember(owner = "client!je", name = "db", descriptor = "Lclient!na;")
+	public static final JagString aClass100_589 = parse(" <col=ffffff>");
+	@OriginalMember(owner = "client!uf", name = "s", descriptor = "Lclient!na;")
+	public static final JagString aClass100_1043 = parse(" <col=00ff80>");
+	@OriginalMember(owner = "client!wj", name = "b", descriptor = "Lclient!na;")
+	public static final JagString aClass100_1101 = parse(" <col=ffff00>");
+	@OriginalMember(owner = "client!mi", name = "R", descriptor = "Lclient!na;")
+	public static final JagString aClass100_760 = parse(")1");
+	@OriginalMember(owner = "client!sj", name = "w", descriptor = "Lclient!na;")
+	public static final JagString aClass100_978 = parse("<)4col>");
+	@OriginalMember(owner = "client!jb", name = "c", descriptor = "Lclient!na;")
+	public static final JagString aClass100_583 = parse("(Y<)4col>");
+	@OriginalMember(owner = "client!fn", name = "Z", descriptor = "Lclient!na;")
+	public static final JagString aClass100_461 = parse(")1 ");
+	@OriginalMember(owner = "client!wb", name = "a", descriptor = "Lclient!na;")
+	public static final JagString aClass100_1089 = parse(")2");
+	@OriginalMember(owner = "client!dm", name = "j", descriptor = "Lclient!na;")
+	public static final JagString SPACE = parse(" ");
+	@OriginalMember(owner = "client!vh", name = "c", descriptor = "Lclient!na;")
+	public static final JagString COLON = parse(":");
+	@OriginalMember(owner = "client!ee", name = "a", descriptor = "Lclient!na;")
+	public static final JagString TIMEZONE = parse(" GMT");
 	@OriginalMember(owner = "client!li", name = "w", descriptor = "Lclient!sc;")
 	public static HashTable aClass133_13;
 	@OriginalMember(owner = "client!na", name = "T", descriptor = "[B")
@@ -203,7 +229,7 @@ public final class JagString implements StringInterface {
 
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(II)Lclient!na;")
 	public static JagString formatIp(@OriginalArg(0) int arg0) {
-		return concatenate(new JagString[]{parseInt(arg0 >> 24 & 0xFF), aClass100_994, parseInt(arg0 >> 16 & 0xFF), aClass100_994, parseInt(arg0 >> 8 & 0xFF), aClass100_994, parseInt(arg0 & 0xFF)});
+		return concatenate(new JagString[]{parseInt(arg0 >> 24 & 0xFF), PERIOD, parseInt(arg0 >> 16 & 0xFF), PERIOD, parseInt(arg0 >> 8 & 0xFF), PERIOD, parseInt(arg0 & 0xFF)});
 	}
 
 	@OriginalMember(owner = "client!nb", name = "a", descriptor = "(II)Lclient!na;")
@@ -215,18 +241,21 @@ public final class JagString implements StringInterface {
 		return str;
 	}
 
+	/**
+	 * @return A JagString consisting of the actual bytes in the provided string.
+	 */
 	@OriginalMember(owner = "client!sj", name = "a", descriptor = "(Ljava/lang/String;I)Lclient!na;")
-	public static JagString method3952(@OriginalArg(0) String arg0) {
-		@Pc(14) byte[] local14 = arg0.getBytes(StandardCharsets.ISO_8859_1);
-		@Pc(23) JagString local23 = new JagString();
-		local23.chars = local14;
-		local23.length = 0;
-		for (@Pc(31) int local31 = 0; local31 < local14.length; local31++) {
-			if (local14[local31] != 0) {
-				local14[local23.length++] = local14[local31];
+	public static JagString of(@OriginalArg(0) String string) {
+		@Pc(14) byte[] bytes = string.getBytes(StandardCharsets.ISO_8859_1);
+		@Pc(23) JagString js = new JagString();
+		js.chars = bytes;
+		js.length = 0;
+		for (@Pc(31) int i = 0; i < bytes.length; i++) {
+			if (bytes[i] != 0) {
+				bytes[js.length++] = bytes[i];
 			}
 		}
-		return local23;
+		return js;
 	}
 
 	@OriginalMember(owner = "client!gn", name = "a", descriptor = "(BI)Lclient!na;")
@@ -983,7 +1012,7 @@ public final class JagString implements StringInterface {
 	public final JagString fromParameters(@OriginalArg(1) Applet arg0) {
 		@Pc(19) String local19 = new String(this.chars, 0, this.length);
 		@Pc(23) String local23 = arg0.getParameter(local19);
-		return local23 == null ? null : method3952(local23);
+		return local23 == null ? null : of(local23);
 	}
 
 	@OriginalMember(owner = "client!na", name = "d", descriptor = "(Z)I")

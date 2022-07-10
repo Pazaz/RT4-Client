@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class plugin extends Plugin {
-    boolean isEnabled;
+    boolean isEnabled = false;
 
     int MAX_VISIBLE_UPDATES = 5;
 

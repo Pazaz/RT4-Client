@@ -776,7 +776,7 @@ public final class client extends GameShell {
 		} else if (gameState == 30) {
 			LoginManager.method1841();
 		} else if (gameState == 40) {
-			Fonts.drawTextOnScreen(false, JagString.concatenate(new JagString[]{LocalizedText.CONLOST, Cs1ScriptRunner.aClass100_556, LocalizedText.ATTEMPT_TO_REESTABLISH}));
+			Fonts.drawTextOnScreen(false, JagString.concatenate(new JagString[]{LocalizedText.CONLOST, JagString.aClass100_556, LocalizedText.ATTEMPT_TO_REESTABLISH}));
 		}
 		if (GlRenderer.enabled && gameState != 0) {
 			GlRenderer.swapBuffers();
@@ -1020,7 +1020,7 @@ public final class client extends GameShell {
 		}
 		mainLoadPrimaryText = LocalizedText.GAME0_LOADING;
 		if (modeWhere != 0) {
-			Cheat.displayFps = true;
+			//Cheat.displayFps = true;
 		}
 	}
 

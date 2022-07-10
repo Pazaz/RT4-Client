@@ -3,6 +3,7 @@ package rt4;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+import plugin.PluginRepository;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -690,6 +691,7 @@ public class LoginManager {
 		Protocol.verifyId = 0;
 		VarpDomain.reset();
 		InterfaceList.method1596(true);
+		PluginRepository.OnLogout();
 	}
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(IIIIZIZ)V")
