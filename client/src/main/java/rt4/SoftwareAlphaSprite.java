@@ -740,7 +740,7 @@ public final class SoftwareAlphaSprite extends SoftwareSprite {
 
 	@OriginalMember(owner = "client!am", name = "b", descriptor = "(IIIII)V")
 	@Override
-	public final void method1422(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+	public final void renderAlpha(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		if (arg2 <= 0 || arg3 <= 0) {
 			return;
 		}

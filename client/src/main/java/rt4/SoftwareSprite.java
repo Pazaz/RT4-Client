@@ -1213,7 +1213,7 @@ public class SoftwareSprite extends Sprite {
 
 	@OriginalMember(owner = "client!mm", name = "b", descriptor = "(IIIII)V")
 	@Override
-	public void method1422(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+	public void renderAlpha(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
 		if (arg2 <= 0 || arg3 <= 0) {
 			return;
 		}

@@ -1712,7 +1712,7 @@ public class Protocol {
 			@Pc(3449) ComponentPointer src = (ComponentPointer) InterfaceList.openInterfaces.get(source);
 			ComponentPointer tgt = (ComponentPointer) InterfaceList.openInterfaces.get(target);
 			if (tgt != null) {
-				InterfaceList.closeInterface(src == null || tgt.anInt5878 != src.anInt5878, tgt);
+				InterfaceList.closeInterface(src == null || tgt.interfaceId != src.interfaceId, tgt);
 			}
 			if (src != null) {
 				src.unlink();
@@ -1852,7 +1852,7 @@ public class Protocol {
 			setVerifyId(tracknum);
 			ComponentPointer ptr = (ComponentPointer) InterfaceList.openInterfaces.get(pointer);
 			if (ptr != null) {
-				InterfaceList.closeInterface(ptr.anInt5878 != component, ptr);
+				InterfaceList.closeInterface(ptr.interfaceId != component, ptr);
 			}
 			method1148(component, pointer, type);
 			opcode = -1;
@@ -3472,7 +3472,7 @@ public class Protocol {
 	public static ComponentPointer method1148(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
 		@Pc(9) ComponentPointer local9 = new ComponentPointer();
 		local9.anInt5879 = arg2;
-		local9.anInt5878 = arg0;
+		local9.interfaceId = arg0;
 		InterfaceList.openInterfaces.put(local9, arg1);
 		InterfaceList.method1753(arg0);
 		@Pc(28) Component local28 = InterfaceList.getComponent(arg1);
