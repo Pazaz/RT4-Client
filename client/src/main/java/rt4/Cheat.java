@@ -109,6 +109,7 @@ public class Cheat {
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(Lclient!na;Z)V")
 	public static void execute(@OriginalArg(0) JagString arg0) {
+		PluginRepository.ProcessCommand(arg0);
 		// if (LoginManager.staffModLevel >= 2) {
 			@Pc(18) int local18;
 			@Pc(38) int local38;

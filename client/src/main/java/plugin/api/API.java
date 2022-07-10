@@ -1,9 +1,11 @@
 package plugin.api;
 
-import rt4.Font;
-import rt4.Fonts;
-import rt4.JagString;
+import rt4.*;
 
+/**
+ * API used for writing plugins, so dozens of plugins don't break when we rename shit :)
+ * @author ceikry
+ */
 public class API {
     public static void DrawText(FontType fontType, FontColor color, TextModifier mod, String text, int screenX, int screenY) {
         JagString js = JagString.parse(text);
@@ -40,5 +42,9 @@ public class API {
                 font.renderWave2(js, screenX, screenY, color.colorCode, -1);
                 break;
         }
+    }
+
+    public static boolean PlayerHasPrivilege(Privileges privilege) {
+        return LoginManager.staffModLevel >= privilege.ordinal();
     }
 }

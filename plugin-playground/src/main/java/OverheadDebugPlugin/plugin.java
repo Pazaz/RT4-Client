@@ -1,15 +1,19 @@
 package OverheadDebugPlugin;
 
 import plugin.Plugin;
-import plugin.api.API;
-import plugin.api.FontColor;
-import plugin.api.FontType;
-import plugin.api.TextModifier;
+import plugin.api.*;
 import rt4.*;
 
+/**
+ * @author ceikry
+ */
 public class plugin extends Plugin {
+    private boolean isEnabled = false;
+
     @Override
     public void PlayerOverheadDraw(Player player, int screenX, int screenY) {
+        if (!isEnabled) return;
+
         API.DrawText(
                 FontType.SMALL,
                 FontColor.YELLOW,
@@ -22,6 +26,8 @@ public class plugin extends Plugin {
 
     @Override
     public void NPCOverheadDraw(Npc npc, int screenX, int screenY) {
+        if (!isEnabled) return;
+
         String npcSb =
                 (npc.type.name.strEquals(JagString.parse("null"))
                         ? npc.type.getMultiNpc() != null
@@ -43,5 +49,14 @@ public class plugin extends Plugin {
                 screenX,
                 screenY
         );
+    }
+
+    @Override
+    public void ProcessCommand(String commandStr, String[] args) {
+        if (!API.PlayerHasPrivilege(Privileges.JMOD)) return;
+
+        if (commandStr.equalsIgnoreCase("::npcdebug")) {
+            isEnabled = !isEnabled;
+        }
     }
 }
