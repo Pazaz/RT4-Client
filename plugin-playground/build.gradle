@@ -21,7 +21,46 @@ test {
     useJUnitPlatform()
 }
 
-task buildPlugins {
-    dependsOn(classes)
+task initializeNewPlugin {
+    doLast {
+        def pluginFile = new File("src/main/java/MyPlugin")
+        pluginFile.mkdirs()
 
+        def props = new File(rootProject.project("plugin-playground").projectDir.absolutePath + File.separator + "src/main/java/MyPlugin/plugin.properties").text = """
+AUTHOR='Me'
+DESCRIPTION='Make sure to rename both the MyPlugin folder and the package statement in plugin.java!
+VERSION=-1.1
+"""
+        def java = new File(rootProject.project("plugin-playground").projectDir.absolutePath + File.separator + "src/main/java/MyPlugin/plugin.java").text = """
+package MyPlugin;
+    
+import plugin.Plugin;
+    
+public class plugin extends Plugin {
+    @Override
+    public void Init() {
+        //Init() is called when the plugin is loaded
+    }
+ 
+    @Override
+    public void Update() {
+        //Update() is called once per tick (600ms)
+    }
+    
+    @Override
+    public void Draw(long deltaTime) {
+        //Draw() is called once per frame, with deltaTime being the time since last frame.
+    }
+ 
+    //Check the source of plugin.Plugin for more methods you can override! Happy hacking! <3
+    //There are also many methods to aid in plugin development in plugin.api.API
+}
+"""
+    }
+}
+
+task buildPlugins(type: Copy, dependsOn: classes) {
+    def pluginsPath = rootProject.project("client").projectDir.absolutePath + File.separator + "plugins"
+    from "build/classes/java/main"
+    into pluginsPath
 }

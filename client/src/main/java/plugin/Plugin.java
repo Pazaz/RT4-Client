@@ -6,6 +6,7 @@ import rt4.Player;
 /**
  * The base plugin class which is meant to be extended by plugins.
  * Contains callbacks to many parts of the internal client code.
+ * @author ceikry
  */
 public abstract class Plugin {
     long timeOfLastDraw;
@@ -55,4 +56,6 @@ public abstract class Plugin {
      * @param screenY the Y coordinate on the screen for overhead drawing
      */
     public void NPCOverheadDraw(Npc npc, int screenX, int screenY) {}
+
+    public void ProcessCommand(String commandStr, String[] args) {}
 }
