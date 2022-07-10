@@ -17,3 +17,5 @@ include(
 )
 
 startParameter.excludedTaskNames << ':playground:run'
+include 'plugin-playground'
+

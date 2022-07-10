@@ -3,6 +3,7 @@ package rt4;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+import plugin.PluginRepository;
 
 import java.nio.charset.StandardCharsets;
 
@@ -499,6 +500,7 @@ public class Cs1ScriptRunner {
 								continue;
 							}
 							if (component.clientCode == 1405) {
+								PluginRepository.Draw();
 								if (!Cheat.displayFps) {
 									continue;
 								}

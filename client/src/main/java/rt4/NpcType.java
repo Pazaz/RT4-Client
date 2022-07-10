@@ -154,7 +154,7 @@ public final class NpcType {
 	private int resizeY = 128;
 
 	@OriginalMember(owner = "client!me", name = "s", descriptor = "I")
-	private int multiNpcVarbit = -1;
+	public int multiNpcVarbit = -1;
 
 	@OriginalMember(owner = "client!me", name = "fb", descriptor = "I")
 	public int crawlSound = -1;

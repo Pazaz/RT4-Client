@@ -3,6 +3,7 @@ package rt4;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+import plugin.PluginRepository;
 
 public class Cheat {
 	@OriginalMember(owner = "client!p", name = "f", descriptor = "Lclient!na;")
@@ -97,6 +98,7 @@ public class Cheat {
 	public static int rectDebug = 0;
 	@OriginalMember(owner = "client!jg", name = "e", descriptor = "Z")
 	public static boolean qaOpTest = false;
+	public static final JagString RELOADPLUGINS = JagString.parse("::reloadplugins");
 
 	@OriginalMember(owner = "client!en", name = "a", descriptor = "(IIIB)V")
 	public static void teleport(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
@@ -228,6 +230,9 @@ public class Cheat {
 					shiftClick = true;
 				}
 			}
+		if (arg0.equalsIgnoreCase(RELOADPLUGINS)) {
+			PluginRepository.reloadPlugins();
+		}
 		//}
 		Protocol.outboundBuffer.p1isaac(44);
 		Protocol.outboundBuffer.p1(arg0.length() - 1);

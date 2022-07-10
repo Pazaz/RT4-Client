@@ -4,6 +4,7 @@ import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+import plugin.PluginRepository;
 
 import java.awt.*;
 import java.io.IOException;
@@ -217,6 +218,7 @@ public final class client extends GameShell {
 	public static void main(@OriginalArg(0) String[] arg0) {
 		try {
 			GlobalJsonConfig.load(GlobalConfig.EXTENDED_CONFIG_PATH);
+			PluginRepository.Init();
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
