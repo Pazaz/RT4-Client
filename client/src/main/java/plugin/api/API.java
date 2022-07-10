@@ -47,4 +47,8 @@ public class API {
     public static boolean PlayerHasPrivilege(Privileges privilege) {
         return LoginManager.staffModLevel >= privilege.ordinal();
     }
+
+    public static boolean IsHD() {
+        return GlRenderer.enabled;
+    }
 }

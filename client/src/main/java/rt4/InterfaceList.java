@@ -198,7 +198,7 @@ public class InterfaceList {
 	@OriginalMember(owner = "client!i", name = "i", descriptor = "(Z)V")
 	public static void redrawActiveInterfaces() {
 		for (@Pc(6) ComponentPointer local6 = (ComponentPointer) openInterfaces.head(); local6 != null; local6 = (ComponentPointer) openInterfaces.next()) {
-			@Pc(14) int local14 = local6.anInt5878;
+			@Pc(14) int local14 = local6.interfaceId;
 			if (load(local14)) {
 				@Pc(21) boolean local21 = true;
 				@Pc(25) Component[] local25 = components[local14];
@@ -318,7 +318,7 @@ public class InterfaceList {
 		}
 		@Pc(66) ComponentPointer local66 = (ComponentPointer) openInterfaces.get(arg0.id);
 		if (local66 != null) {
-			method4017(local32, arg1, local66.anInt5878, local20);
+			method4017(local32, arg1, local66.interfaceId, local20);
 		}
 	}
 
@@ -368,7 +368,7 @@ public class InterfaceList {
 	@OriginalMember(owner = "client!ke", name = "a", descriptor = "(ZLclient!wk;Z)V")
 	public static void closeInterface(@OriginalArg(0) boolean arg0, @OriginalArg(1) ComponentPointer arg1) {
 		@Pc(9) int local9 = (int) arg1.key;
-		@Pc(16) int local16 = arg1.anInt5878;
+		@Pc(16) int local16 = arg1.interfaceId;
 		arg1.unlink();
 		if (arg0) {
 			method2275(local16);
@@ -532,7 +532,7 @@ public class InterfaceList {
 		@Pc(28) int local28 = arg0.id >>> 16;
 		@Pc(33) HashTableIterator local33 = new HashTableIterator(openInterfaces);
 		for (@Pc(38) ComponentPointer local38 = (ComponentPointer) local33.method2701(); local38 != null; local38 = (ComponentPointer) local33.method2700()) {
-			if (local28 == local38.anInt5878) {
+			if (local28 == local38.interfaceId) {
 				return getComponent((int) local38.key);
 			}
 		}
@@ -575,7 +575,7 @@ public class InterfaceList {
 					}
 					@Pc(49) ComponentPointer local49 = (ComponentPointer) openInterfaces.get(local23.id);
 					if (local49 != null) {
-						runScripts(arg1, local49.anInt5878);
+						runScripts(arg1, local49.interfaceId);
 					}
 				}
 				@Pc(72) HookRequest local72;
@@ -1045,7 +1045,7 @@ public class InterfaceList {
 						}
 						@Pc(1595) ComponentPointer local1595 = (ComponentPointer) openInterfaces.get(component.id);
 						if (local1595 != null) {
-							method1320(local50, local63, local55, local65, local1595.anInt5878, local61, local67);
+							method1320(local50, local63, local55, local65, local1595.interfaceId, local61, local67);
 						}
 					}
 				}
@@ -1232,7 +1232,7 @@ public class InterfaceList {
 					}
 					@Pc(73) ComponentPointer local73 = (ComponentPointer) openInterfaces.get(local15.id);
 					if (local73 != null) {
-						method1949(local73.anInt5878);
+						method1949(local73.interfaceId);
 					}
 				}
 				if (local15.type == 6) {

@@ -1,7 +1,9 @@
 package plugin;
 
+import rt4.Component;
 import rt4.Npc;
 import rt4.Player;
+import rt4.Tile;
 
 /**
  * The base plugin class which is meant to be extended by plugins.
@@ -58,4 +60,7 @@ public abstract class Plugin {
     public void NPCOverheadDraw(Npc npc, int screenX, int screenY) {}
 
     public void ProcessCommand(String commandStr, String[] args) {}
+
+    public void ComponentDraw(int componentIndex, Component component, int screenX, int screenY) {}
+
 }

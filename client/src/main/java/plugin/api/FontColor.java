@@ -7,7 +7,7 @@ public class FontColor {
 
     public final int colorCode;
 
-    FontColor(int colorCode) {
+    public FontColor(int colorCode) {
         this.colorCode = colorCode;
     }
 

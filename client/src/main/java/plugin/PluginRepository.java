@@ -1,9 +1,6 @@
 package plugin;
 
-import rt4.GlobalJsonConfig;
-import rt4.JagString;
-import rt4.Npc;
-import rt4.Player;
+import rt4.*;
 
 import java.io.File;
 import java.net.URL;
@@ -97,5 +94,9 @@ public class PluginRepository {
         String[] tokens = commandStr.toString().split(" ");
         String[] args = Arrays.copyOfRange(tokens, 1, tokens.length);
         loadedPlugins.values().forEach((plugin) -> plugin.ProcessCommand(tokens[0], args));
+    }
+
+    public static void ComponentDraw(int componentIndex, Component component, int screenX, int screenY) {
+        loadedPlugins.values().forEach((plugin) -> plugin.ComponentDraw(componentIndex, component, screenX, screenY));
     }
 }

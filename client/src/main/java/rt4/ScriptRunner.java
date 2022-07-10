@@ -2989,7 +2989,7 @@ public final class ScriptRunner {
 										int1 = intStack[isp];
 										int3 = intStack[isp + 1];
 										@Pc(12663) ComponentPointer local12663 = (ComponentPointer) InterfaceList.openInterfaces.get(int1);
-										if (local12663 != null && local12663.anInt5878 == int3) {
+										if (local12663 != null && local12663.interfaceId == int3) {
 											intStack[isp++] = 1;
 											continue;
 										}
