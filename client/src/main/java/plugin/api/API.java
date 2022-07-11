@@ -66,6 +66,10 @@ public class API {
         return rawSprite;
     }
 
+    public static Sprite GetObjSprite(int objId, int qty, boolean drawText, int outlineType, int shadowIntensity) {
+        return Inv.getObjectSprite(outlineType, objId, drawText, qty, shadowIntensity);
+    }
+
     public static WindowMode GetWindowMode() {
         int mode = DisplayMode.getWindowMode();
         switch(mode) {

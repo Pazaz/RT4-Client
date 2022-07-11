@@ -23,17 +23,17 @@ test {
     useJUnitPlatform()
 }
 
-task initializeNewPlugin {
+task initializeNewJavaPlugin {
     doLast {
         def pluginFile = new File("src/main/java/MyPlugin")
         pluginFile.mkdirs()
 
-        def props = new File(rootProject.project("plugin-playground").projectDir.absolutePath + File.separator + "src/main/java/MyPlugin/plugin.properties").text = """
+        new File(rootProject.project("plugin-playground").projectDir.absolutePath + File.separator + "src/main/java/MyPlugin/plugin.properties").text = """
 AUTHOR='Me'
 DESCRIPTION='Make sure to rename both the MyPlugin folder and the package statement in plugin.java!
 VERSION=-1.1
 """
-        def java = new File(rootProject.project("plugin-playground").projectDir.absolutePath + File.separator + "src/main/java/MyPlugin/plugin.java").text = """
+        new File(rootProject.project("plugin-playground").projectDir.absolutePath + File.separator + "src/main/java/MyPlugin/plugin.java").text = """
 package MyPlugin;
     
 import plugin.Plugin;
@@ -51,6 +51,41 @@ public class plugin extends Plugin {
     
     @Override
     public void Draw(long deltaTime) {
+        //Draw() is called once per frame, with deltaTime being the time since last frame.
+    }
+ 
+    //Check the source of plugin.Plugin for more methods you can override! Happy hacking! <3
+    //There are also many methods to aid in plugin development in plugin.api.API
+}
+"""
+    }
+}
+
+task initializeNewKotlinPlugin {
+    doLast {
+        def pluginFile = new File("src/main/kotlin/MyPlugin")
+        pluginFile.mkdirs()
+
+        new File(rootProject.project("plugin-playground").projectDir.absolutePath + File.separator + "src/main/kotlin/MyPlugin/plugin.properties").text = """
+AUTHOR='Me'
+DESCRIPTION='Make sure to rename both the MyPlugin folder and the package statement in plugin.java!
+VERSION=-1.1
+"""
+        new File(rootProject.project("plugin-playground").projectDir.absolutePath + File.separator + "src/main/kotlin/MyPlugin/plugin.kt").text = """
+package MyPlugin
+    
+import plugin.Plugin
+    
+class plugin : Plugin() {
+    override fun Init() {
+        //Init() is called when the plugin is loaded
+    }
+ 
+    override fun Update() {
+        //Update() is called once per tick (600ms)
+    }
+    
+    override fun Draw(deltaTime: Long) {
         //Draw() is called once per frame, with deltaTime being the time since last frame.
     }
  
