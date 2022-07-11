@@ -59,6 +59,11 @@ class plugin : Plugin() {
         val gain = xp - lastXp[skill]
         if (gain <= 0) return
 
+        if (lastXp[skill] == 0) {
+            lastXp[skill] = xp
+            totalXp += xp
+            return
+        }
         lastXp[skill] = xp
 
         val currentTail = try {
