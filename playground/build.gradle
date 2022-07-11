@@ -24,4 +24,5 @@ jar {
         attributes 'Main-Class': "$mainClassName"
     }
     from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
 }
