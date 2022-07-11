@@ -41,7 +41,7 @@ public class plugin extends Plugin {
                 FontType.SMALL,
                 color,
                 TextModifier.LEFT,
-                componentIndex + "",
+                componentIndex + "" + (component.modelId != 0 ? " (" +  component.modelId + ")" : ""),
                 screenX,
                 screenY
         );
