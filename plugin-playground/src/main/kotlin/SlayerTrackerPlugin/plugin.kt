@@ -9,6 +9,10 @@ import rt4.Sprite
 import java.awt.Color
 import java.lang.Exception
 
+/**
+ * Very simple slayer task tracker
+ * @author Ceikry
+ */
 class plugin : Plugin() {
     val boxColor = 6116423
     val posX = 5
