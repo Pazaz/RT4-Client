@@ -31,13 +31,13 @@ public class plugin extends Plugin {
         String npcSb =
                 (npc.type.name.strEquals(JagString.parse("null"))
                         ? npc.type.getMultiNpc() != null
-                            ? "Wrapper [" + npc.type.getMultiNpc().name + " " + npc.type.getMultiNpc().id + "]"
+                            ? "Wrapper [" + npc.type.getMultiNpc().name + "]"
                             : "Wrapper"
                         : npc.type.name) +
-                " [Lvl: " +
-                npc.type.combatLevel +
-                "] [ID: " +
-                npc.type.id +
+                " [G: " +
+                npc.spotAnimId +
+                "] [R: " + npc.getBasId() +
+                "] [A: " + npc.seqId +
                 "] [Vb: " +
                 npc.type.multiNpcVarbit + "]";
 
