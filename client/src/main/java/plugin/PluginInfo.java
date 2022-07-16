@@ -1,5 +1,7 @@
 package plugin;
 
+import plugin.annotations.PluginMeta;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -42,7 +44,21 @@ class PluginInfo {
     );
   }
 
-  @Override
+  public static PluginInfo loadFromClass(Class<?> clazz) {
+    PluginMeta info = clazz.getAnnotation(PluginMeta.class);
+
+    if (info == null) {
+      return null;
+    }
+
+    return new PluginInfo(
+            info.author(),
+            info.description(),
+            info.version()
+    );
+  }
+
+    @Override
   public boolean equals(Object o) {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;

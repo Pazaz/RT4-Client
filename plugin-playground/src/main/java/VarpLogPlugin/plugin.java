@@ -1,12 +1,18 @@
 package VarpLogPlugin;
     
 import plugin.Plugin;
+import plugin.annotations.PluginMeta;
 import plugin.api.*;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+@PluginMeta(
+        author = "Ceikry",
+        description = "Adds a simple log of varp changes drawn directly to the screen.",
+        version = 1.0
+)
 public class plugin extends Plugin {
     boolean isEnabled = false;
 
