@@ -1,14 +1,16 @@
 package XPDropPlugin;
     
 import plugin.Plugin
+import plugin.annotations.PluginMeta
 import plugin.api.*
 import java.awt.Color
 import kotlin.math.ceil
 
-/**
- * Displays some simple XP drops.
- * @author Ceikry
- */
+@PluginMeta(
+    author = "Ceikry",
+    description = "Draws nice and clean experience drops onto the screen.",
+    version = 1.2
+)
 class plugin : Plugin() {
     private val displayTimeout = 10000L // 10 seconds
     private val drawStart = 175
@@ -37,7 +39,7 @@ class plugin : Plugin() {
                 removeList.add(gain)
                 totalXp += gain.xp
             } else if (gain.currentPos <= drawStart){
-                val sprite = API.GetSprite(getSpriteArchive(gain.skill))
+                val sprite = XPSprites.getSpriteForSkill(skillId = gain.skill)
                 sprite?.render(posX - 25, gain.currentPos - 20)
                 API.DrawText(
                     FontType.SMALL,
@@ -142,35 +144,5 @@ class plugin : Plugin() {
             counter++
         }
         return newString.reversed()
-    }
-
-    fun getSpriteArchive(skillId: Int): Int{
-        return when(skillId) {
-            0 -> 197
-            1 -> 199
-            2 -> 198
-            3 -> 203
-            4 -> 200
-            5 -> 201
-            6 -> 202
-            7 -> 212
-            8 -> 214
-            9 -> 208
-            10 -> 211
-            11 -> 213
-            12 -> 207
-            13 -> 210
-            14 -> 209
-            15 -> 205
-            16 -> 204
-            17 -> 206
-            18 -> 216
-            19 -> 217
-            20 -> 215
-            21 -> 220
-            22 -> 221
-            23 -> 222
-            else -> 222
-        }
     }
 }

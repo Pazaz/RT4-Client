@@ -1,6 +1,7 @@
 package SlayerTrackerPlugin
     
 import plugin.Plugin
+import plugin.annotations.PluginMeta
 import plugin.api.API
 import plugin.api.FontColor
 import plugin.api.FontType
@@ -9,10 +10,11 @@ import rt4.Sprite
 import java.awt.Color
 import java.lang.Exception
 
-/**
- * Very simple slayer task tracker
- * @author Ceikry
- */
+@PluginMeta(
+    author = "Ceikry",
+    description = "Draws a simple slayer task tracker onto the screen if one is active.",
+    version = 1.0
+)
 class plugin : Plugin() {
     val boxColor = 6116423
     val posX = 5

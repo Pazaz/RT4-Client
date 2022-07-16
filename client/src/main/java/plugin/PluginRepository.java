@@ -7,7 +7,9 @@ import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 /**
  * Responsible for loading and broadcasting methods to all plugins.
@@ -39,15 +41,10 @@ public class PluginRepository {
 
             for(File file : Objects.requireNonNull(pluginsDirectory.listFiles())) {
                 if(!file.isDirectory()) continue;
+                if(file.getName().equals("META-INF")) continue;
 
                 File infoFile = new File(file.getAbsoluteFile() + File.separator + "plugin.properties");
                 File pluginRoot = new File(file.getAbsoluteFile() + File.separator + "plugin.class");
-
-                PluginInfo info;
-                if (infoFile.exists())
-                    info = PluginInfo.loadFromFile(infoFile);
-                else
-                    info = new PluginInfo("Unknown", "", 1.0);
 
                 if (!pluginRoot.exists()) {
                     System.err.println("Unable to load plugin " + file.getName() + " because plugin.class is absent!");
@@ -55,6 +52,17 @@ public class PluginRepository {
                 }
 
                 Class<?> clazz = loader.loadClass(file.getName() + ".plugin");
+
+                PluginInfo info;
+                if (infoFile.exists())
+                    info = PluginInfo.loadFromFile(infoFile);
+                else
+                    info = PluginInfo.loadFromClass(clazz);
+
+                if (info == null) {
+                    System.err.println("Unable to load plugin " + file.getName() + " because it contains no information about author, version, etc!");
+                    continue;
+                }
 
                 try {
                     Plugin thisPlugin = (Plugin) clazz.newInstance();
@@ -64,6 +72,15 @@ public class PluginRepository {
                     System.err.println("Error loading plugin " + file.getName() + ":");
                     e.printStackTrace();
                     return;
+                }
+
+                List<File> otherClasses = Arrays.stream(Objects.requireNonNull(file.listFiles()))
+                        .filter((f) ->
+                                !f.getName().equals("plugin.class") && f.getName().contains(".class"))
+                        .collect(Collectors.toList());
+
+                for (File f : otherClasses) {
+                    loader.loadClass(file.getName() + "." + f.getName().replace(".class",""));
                 }
 
                 System.out.println("Successfully loaded plugin " + file.getName() + ", version " + info.version);
