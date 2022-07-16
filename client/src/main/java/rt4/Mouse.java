@@ -39,9 +39,9 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
 	@OriginalMember(owner = "client!dc", name = "W", descriptor = "I")
 	public static volatile int anInt1313 = 0;
 	@OriginalMember(owner = "client!nb", name = "j", descriptor = "I")
-	public static volatile int anInt4039 = -1;
+	public static volatile int currentMouseY = -1;
 	@OriginalMember(owner = "client!lh", name = "u", descriptor = "I")
-	public static volatile int anInt3521 = -1;
+	public static volatile int currentMouseX = -1;
 	@OriginalMember(owner = "client!sa", name = "Y", descriptor = "I")
 	public static volatile int anInt4973 = 0;
 	@OriginalMember(owner = "client!wi", name = "W", descriptor = "I")
@@ -50,8 +50,6 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
 	public static long prevClickTime = 0L;
 	@OriginalMember(owner = "client!wl", name = "u", descriptor = "I")
 	public static int anInt5895 = 0;
-	public int mouseWheelX;
-	public int mouseWheelY;
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(ILjava/awt/Component;)V")
 	public static void stop(@OriginalArg(1) Component arg0) {
@@ -76,8 +74,8 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
 		@Pc(2) Mouse local2 = instance;
 		synchronized (instance) {
 			pressedButton = anInt1759;
-			lastMouseX = anInt3521;
-			lastMouseY = anInt4039;
+			lastMouseX = currentMouseX;
+			lastMouseY = currentMouseY;
 			clickButton = anInt1313;
 			clickX = anInt1034;
 			anInt2467++;
@@ -112,8 +110,8 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
 	public final synchronized void mouseMoved(@OriginalArg(0) MouseEvent arg0) {
 		if (instance != null) {
 			anInt2467 = 0;
-			anInt3521 = arg0.getX();
-			anInt4039 = arg0.getY();
+			currentMouseX = arg0.getX();
+			currentMouseY = arg0.getY();
 		}
 	}
 
@@ -130,21 +128,13 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
 	public final synchronized void mouseDragged(@OriginalArg(0) MouseEvent event) {
 		int x = event.getX();
 		int y = event.getY();
-		if (SwingUtilities.isMiddleMouseButton(event)) {
-			int accelX = this.mouseWheelX - x;
-			int accelY = this.mouseWheelY - y;
-			this.mouseWheelX = x;
-			this.mouseWheelY = y;
-			Camera.yawTarget += accelX * 2;
-			Camera.pitchTarget -= accelY * 2;
-			Camera.clampCameraAngle();
-			return;
-		}
+
+		if (SwingUtilities.isMiddleMouseButton(event)) return;
 
 		if (instance != null) {
 			anInt2467 = 0;
-			anInt3521 = x;
-			anInt4039 = y;
+			currentMouseX = x;
+			currentMouseY = y;
 		}
 	}
 
@@ -184,8 +174,6 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
 	@Override
 	public final synchronized void mousePressed(@OriginalArg(0) MouseEvent event) {
 		if (SwingUtilities.isMiddleMouseButton(event)) {
-			this.mouseWheelX = event.getX();
-			this.mouseWheelY = event.getY();
 			return;
 		}
 
@@ -219,8 +207,8 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
 	public final synchronized void mouseExited(@OriginalArg(0) MouseEvent arg0) {
 		if (instance != null) {
 			anInt2467 = 0;
-			anInt3521 = -1;
-			anInt4039 = -1;
+			currentMouseX = -1;
+			currentMouseY = -1;
 		}
 	}
 
@@ -229,8 +217,8 @@ public final class Mouse implements MouseListener, MouseMotionListener, FocusLis
 	public final synchronized void mouseEntered(@OriginalArg(0) MouseEvent arg0) {
 		if (instance != null) {
 			anInt2467 = 0;
-			anInt3521 = arg0.getX();
-			anInt4039 = arg0.getY();
+			currentMouseX = arg0.getX();
+			currentMouseY = arg0.getY();
 		}
 	}
 }
