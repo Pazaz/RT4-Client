@@ -5,6 +5,9 @@ import rt4.DisplayMode;
 import rt4.Font;
 
 import java.awt.*;
+import java.awt.event.*;
+
+import static rt4.MathUtils.clamp;
 
 /**
  * API used for writing plugins, so dozens of plugins don't break when we rename shit :)
@@ -114,5 +117,82 @@ public class API {
         } else {
             SoftwareRaster.setClip(x,y,width,height);
         }
+    }
+
+    public static void AddMouseListener(MouseAdapter m) {
+        GameShell.canvas.addMouseListener(m);
+        GameShell.canvas.addMouseMotionListener(m);
+    }
+
+    public static void AddMouseWheelListener(MouseWheelListener mw) {
+        GameShell.canvas.addMouseWheelListener(mw);
+    }
+
+    public static void AddKeyboardListener(KeyAdapter k) {
+        GameShell.canvas.addKeyListener(k);
+    }
+
+    public static void SetCameraYaw(double targetYaw) {
+        Camera.yawTarget = targetYaw;
+        Camera.clampCameraAngle();
+    }
+
+    public static void UpdateCameraYaw(double yawDiff) {
+        Camera.yawTarget += yawDiff;
+        Camera.clampCameraAngle();
+    }
+
+    public static double GetCameraYaw() {
+        return Camera.yawTarget;
+    }
+
+    public static void SetCameraPitch(double targetPitch) {
+        Camera.pitchTarget = targetPitch;
+        Camera.clampCameraAngle();
+    }
+
+    public static void UpdateCameraPitch(double pitchDiff) {
+        Camera.pitchTarget += pitchDiff;
+        Camera.clampCameraAngle();
+    }
+
+    public static double GetCameraPitch() {
+        return Camera.pitchTarget;
+    }
+
+    public static void UpdateCameraZoom(int zoomDiff) {
+        Camera.ZOOM = clamp(200, 1200, Camera.ZOOM + (zoomDiff >= 0 ? 50 : -50));
+    }
+
+    public static void SetCameraZoom(int zoomTarget) {
+        Camera.ZOOM = clamp(200, 1200, zoomTarget);
+    }
+
+    public static int GetCameraZoom() {
+        return Camera.ZOOM;
+    }
+
+    public static int GetMouseWheelRotation() {
+        return ((JavaMouseWheel) client.mouseWheel).currentRotation;
+    }
+
+    public static int GetPreviousMouseWheelRotation() {
+        return ((JavaMouseWheel) client.mouseWheel).previousRotation;
+    }
+
+    public static int GetMouseX() {
+        return Mouse.currentMouseX;
+    }
+
+    public static int GetMouseY() {
+        return Mouse.currentMouseY;
+    }
+
+    /**
+     * Very simple wrapper around the already rename Keyboard checks.
+     * @param keycode the keycode to use. Keyboard class has named constants for these
+     */
+    public static boolean IsKeyPressed(int keycode) {
+        return Keyboard.pressedKeys[keycode];
     }
 }

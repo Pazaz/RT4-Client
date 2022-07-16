@@ -18,7 +18,7 @@ public class plugin extends Plugin {
     private boolean isEnabled;
     private boolean isVerbose;
 
-    private ArrayList<Integer> activeVarps = new ArrayList<>();
+    private final ArrayList<Integer> activeVarps = new ArrayList<>();
 
     @Override
     public void ComponentDraw(int componentIndex, Component component, int screenX, int screenY) {

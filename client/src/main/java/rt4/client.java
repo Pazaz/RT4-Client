@@ -218,7 +218,6 @@ public final class client extends GameShell {
 	public static void main(@OriginalArg(0) String[] arg0) {
 		try {
 			GlobalJsonConfig.load(GlobalConfig.EXTENDED_CONFIG_PATH);
-			PluginRepository.Init();
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
@@ -1022,6 +1021,7 @@ public final class client extends GameShell {
 		if (modeWhere != 0) {
 			//Cheat.displayFps = true;
 		}
+		PluginRepository.Init();
 	}
 
 	@OriginalMember(owner = "client!client", name = "c", descriptor = "(I)V")
