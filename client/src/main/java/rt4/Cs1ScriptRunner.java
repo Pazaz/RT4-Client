@@ -485,6 +485,11 @@ public class Cs1ScriptRunner {
 							}
 							if (component.clientCode == 1405) {
 								PluginRepository.Draw();
+								InterfaceList.aBooleanArray100[rectangle] = true;
+								InterfaceList.rectangleRedraw[rectangle] = true;
+
+								//Above are inauthentic changes to call plugin draws and redraw this interface. Below I have left intact all the authentic code.
+
 								if (!Cheat.displayFps) {
 									continue;
 								}
