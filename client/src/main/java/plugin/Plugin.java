@@ -1,5 +1,6 @@
 package plugin;
 
+import plugin.api.MiniMenuEntry;
 import rt4.Component;
 import rt4.Npc;
 import rt4.Player;
@@ -88,4 +89,10 @@ public abstract class Plugin {
      * OnLogout is called when the client logs out. This should be used to clear player-relevant plugin state.
      */
     public void OnLogout() {}
+
+    /**
+     * DrawMiniMenu is called when a MiniMenu entry has been created.
+     * @param entry the entry
+     */
+    public void DrawMiniMenu(MiniMenuEntry entry) {}
 }

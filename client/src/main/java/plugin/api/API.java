@@ -6,6 +6,7 @@ import rt4.Font;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 
 import static rt4.MathUtils.clamp;
 
@@ -194,5 +195,14 @@ public class API {
      */
     public static boolean IsKeyPressed(int keycode) {
         return Keyboard.pressedKeys[keycode];
+    }
+
+    public static MiniMenuEntry[] GetMiniMenuEntries() {
+        ArrayList<MiniMenuEntry> entries = new ArrayList<>();
+        for (int i = 0; i < MiniMenu.size; i++) {
+            if (MiniMenu.opBases[i] == null) continue;
+            entries.add(new MiniMenuEntry(i));
+        }
+        return entries.toArray(new MiniMenuEntry[]{});
     }
 }
