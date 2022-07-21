@@ -637,7 +637,7 @@ public class PathFinder {
 				local59 = local46.width;
 				local62 = local46.length;
 			}
-			@Pc(73) int local73 = local46.blockedSides;
+			@Pc(73) int local73 = local46.blockSides;
 			if (angle != 0) {
 				local73 = (local73 << angle & 0xF) + (local73 >> 4 - angle);
 			}

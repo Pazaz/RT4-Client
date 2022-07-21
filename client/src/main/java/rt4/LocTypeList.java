@@ -37,8 +37,8 @@ public class LocTypeList {
 			local15.ops = null;
 		}
 		if (local15.breakroutefinding) {
-			local15.anInt4435 = 0;
-			local15.aBoolean207 = false;
+			local15.blockwalk = 0;
+			local15.blockrange = false;
 		}
 		types.put(local15, id);
 		return local15;
