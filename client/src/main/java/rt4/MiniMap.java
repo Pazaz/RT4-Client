@@ -124,10 +124,10 @@ public class MiniMap {
 			for (local37 = 1; local37 < 103; local37++) {
 				local76 = 4 * 512 * (103 - local37) + 24628;
 				for (local80 = 1; local80 < 103; local80++) {
-					if ((SceneGraph.tileFlags[arg0][local80][local37] & 0x18) == 0) {
+					if ((SceneGraph.renderFlags[arg0][local80][local37] & 0x18) == 0) {
 						renderTile(local32, local76, arg0, local80, local37);
 					}
-					if (arg0 < 3 && (SceneGraph.tileFlags[arg0 + 1][local80][local37] & 0x8) != 0) {
+					if (arg0 < 3 && (SceneGraph.renderFlags[arg0 + 1][local80][local37] & 0x8) != 0) {
 						renderTile(local32, local76, arg0 + 1, local80, local37);
 					}
 					local76 += 4;
@@ -139,14 +139,14 @@ public class MiniMap {
 					@Pc(169) long local169 = SceneGraph.getGroundDecorKey(Player.level, local37 + 0, local76);
 					if (local169 != 0L) {
 						@Pc(184) LocType local184 = LocTypeList.get((int) (local169 >>> 32) & Integer.MAX_VALUE);
-						@Pc(187) int local187 = local184.mapElement;
+						@Pc(187) int local187 = local184.mapfunction;
 						@Pc(194) int local194;
 						if (local184.multiLocs != null) {
 							for (local194 = 0; local194 < local184.multiLocs.length; local194++) {
 								if (local184.multiLocs[local194] != -1) {
 									@Pc(216) LocType local216 = LocTypeList.get(local184.multiLocs[local194]);
-									if (local216.mapElement >= 0) {
-										local187 = local216.mapElement;
+									if (local216.mapfunction >= 0) {
+										local187 = local216.mapfunction;
 										break;
 									}
 								}
@@ -187,7 +187,7 @@ public class MiniMap {
 		local35 = (int) (Math.random() * 20.0D) + 238 - 10 << 16;
 		for (local37 = 1; local37 < 103; local37++) {
 			for (local76 = 1; local76 < 103; local76++) {
-				if ((SceneGraph.tileFlags[arg0][local76][local37] & 0x18) == 0 && !method3109(local76, local455, local37, local35, arg0)) {
+				if ((SceneGraph.renderFlags[arg0][local76][local37] & 0x18) == 0 && !method3109(local76, local455, local37, local35, arg0)) {
 					if (GlRenderer.enabled) {
 						SoftwareRaster.pixels = null;
 					} else {
@@ -195,7 +195,7 @@ public class MiniMap {
 					}
 					return false;
 				}
-				if (arg0 < 3 && (SceneGraph.tileFlags[arg0 + 1][local76][local37] & 0x8) != 0 && !method3109(local76, local455, local37, local35, arg0 + 1)) {
+				if (arg0 < 3 && (SceneGraph.renderFlags[arg0 + 1][local76][local37] & 0x8) != 0 && !method3109(local76, local455, local37, local35, arg0 + 1)) {
 					if (GlRenderer.enabled) {
 						SoftwareRaster.pixels = null;
 					} else {
@@ -297,11 +297,11 @@ public class MiniMap {
 				@Pc(382) LocType local382 = LocTypeList.get(locId[local146]);
 				if (local382.multiLocs != null) {
 					local382 = local382.getMultiLoc();
-					if (local382 == null || local382.mapElement == -1) {
+					if (local382 == null || local382.mapfunction == -1) {
 						continue;
 					}
 				}
-				method1446(arg3, Sprites.mapfuncs[local382.mapElement], local150, local181, arg1, arg2);
+				method1446(arg3, Sprites.mapfuncs[local382.mapfunction], local150, local181, arg1, arg2);
 			}
 			for (local146 = 0; local146 < 104; local146++) {
 				for (local181 = 0; local181 < 104; local181++) {

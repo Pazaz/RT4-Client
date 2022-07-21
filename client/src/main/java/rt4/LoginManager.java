@@ -98,8 +98,6 @@ public class LoginManager {
 	public static int[] locationsMapFileIds;
 	@OriginalMember(owner = "client!bi", name = "Y", descriptor = "[[B")
 	public static byte[][] underWaterLocationsMapFilesBuffer;
-	@OriginalMember(owner = "client!dc", name = "ab", descriptor = "I")
-	public static int centralPlane = 0;
 	@OriginalMember(owner = "client!mh", name = "hb", descriptor = "Lclient!bn;")
 	public static Map map;
 	@OriginalMember(owner = "client!tb", name = "X", descriptor = "Lclient!se;")
@@ -696,14 +694,14 @@ public class LoginManager {
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(IIIIZIZ)V")
 	public static void method2463(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) boolean arg4, @OriginalArg(5) int arg5) {
-		if (SceneGraph.centralZoneX == arg2 && arg1 == SceneGraph.centralZoneZ && (centralPlane == arg0 || SceneGraph.allLevelsAreVisible())) {
+		if (SceneGraph.centralZoneX == arg2 && arg1 == SceneGraph.centralZoneZ && (SceneGraph.centralPlane == arg0 || SceneGraph.allLevelsAreVisible())) {
 			return;
 		}
 		SceneGraph.centralZoneX = arg2;
 		SceneGraph.centralZoneZ = arg1;
-		centralPlane = arg0;
+		SceneGraph.centralPlane = arg0;
 		if (SceneGraph.allLevelsAreVisible()) {
-			centralPlane = 0;
+			SceneGraph.centralPlane = 0;
 		}
 		if (arg4) {
 			client.setGameState(28);
@@ -876,7 +874,7 @@ public class LoginManager {
 				@Pc(45) int local45 = (regionBitPacked[local25] >> 8) * 64 - Camera.originX;
 				@Pc(56) int local56 = (regionBitPacked[local25] & 0xFF) * 64 - Camera.originZ;
 				client.audioLoop();
-				SceneGraph.method2437(local45, arg0, local32, local56, PathFinder.collisionMaps);
+				SceneGraph.readLocs(local45, arg0, local32, local56, PathFinder.collisionMaps);
 			}
 		}
 	}
@@ -1001,7 +999,7 @@ public class LoginManager {
 		for (i = 0; i < 4; i++) {
 			for (chunkX = 0; chunkX < 104; chunkX++) {
 				for (chunkZ = 0; chunkZ < 104; chunkZ++) {
-					SceneGraph.tileFlags[i][chunkX][chunkZ] = 0;
+					SceneGraph.renderFlags[i][chunkX][chunkZ] = 0;
 				}
 			}
 		}
@@ -1181,7 +1179,7 @@ public class LoginManager {
 						} while (local72 >= 103);
 					} while (local68 >= 103);
 					local95 = LocTypeList.get(local17);
-				} while (local78 == 22 && !Preferences.showGroundDecorations && local95.anInt4429 == 0 && local95.anInt4435 != 1 && !local95.aBoolean206);
+				} while (local78 == 22 && !Preferences.showGroundDecorations && local95.interactive == 0 && local95.blockwalk != 1 && !local95.forcedecor);
 				local39 = true;
 				if (!local95.isReady()) {
 					local15 = false;
@@ -1258,14 +1256,14 @@ public class LoginManager {
 						@Pc(154) CollisionMap local154 = null;
 						if (!arg7) {
 							@Pc(159) int local159 = arg1;
-							if ((SceneGraph.tileFlags[1][local120][local137] & 0x2) == 2) {
+							if ((SceneGraph.renderFlags[1][local120][local137] & 0x2) == 2) {
 								local159 = arg1 - 1;
 							}
 							if (local159 >= 0) {
 								local154 = arg0[local159];
 							}
 						}
-						SceneGraph.method3397(arg1, !arg7, arg1, arg7, local154, local7, local68, local120, local137, local72 + arg4 & 0x3);
+						SceneGraph.addLoc(arg1, !arg7, arg1, arg7, local154, local7, local68, local120, local137, local72 + arg4 & 0x3);
 					}
 				}
 			}
@@ -1337,7 +1335,7 @@ public class LoginManager {
 					@Pc(129) int local129 = local103 & 0x3F;
 					@Pc(142) int local142 = local129 + (regionBitPacked[local16] & 0xFF) * 64 - Camera.originZ;
 					@Pc(148) NpcType local148 = NpcTypeList.get(local74.g2());
-					if (NpcList.npcs[local97] == null && (local148.aByte10 & 0x1) > 0 && local107 == centralPlane && local125 >= 0 && local148.size + local125 < 104 && local142 >= 0 && local142 + local148.size < 104) {
+					if (NpcList.npcs[local97] == null && (local148.aByte10 & 0x1) > 0 && local107 == SceneGraph.centralPlane && local125 >= 0 && local148.size + local125 < 104 && local142 >= 0 && local142 + local148.size < 104) {
 						NpcList.npcs[local97] = new Npc();
 						@Pc(198) Npc local198 = NpcList.npcs[local97];
 						NpcList.ids[NpcList.size++] = local97;

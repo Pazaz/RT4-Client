@@ -576,13 +576,13 @@ public class WorldMap {
 										@Pc(312) LocType local312 = LocTypeList.get(id);
 										if (local312.multiLocs != null) {
 											local312 = local312.getMultiLoc();
-											if (local312 == null || local312.mapElement == -1) {
+											if (local312 == null || local312.mapfunction == -1) {
 												continue;
 											}
 										}
 										underlayColors[local84][local95][(63 - local155 << 6) + local150] = local312.id + 1;
 										@Pc(353) MapElement element = new MapElement();
-										element.id = local312.mapElement;
+										element.id = local312.mapfunction;
 										element.anInt4307 = local53;
 										element.anInt4314 = local65;
 										mapElements.addTail(element);
@@ -1727,15 +1727,15 @@ public class WorldMap {
 								@Pc(209) int local209 = local116[local163][local203];
 								if (local209 != 0) {
 									@Pc(222) LocType local222 = LocTypeList.get(local209 - 1);
-									if (!MapList.aBooleanArray130[local222.mapElement]) {
-										if (local11 != -1 && local222.mapElement == anInt172) {
+									if (!MapList.aBooleanArray130[local222.mapfunction]) {
+										if (local11 != -1 && local222.mapfunction == anInt172) {
 											@Pc(243) MapElement local243 = new MapElement();
 											local243.anInt4307 = local65;
 											local243.anInt4314 = local144;
-											local243.id = local222.mapElement;
+											local243.id = local222.mapfunction;
 											aClass69_97.addTail(local243);
 										} else {
-											MapList.sprites[local222.mapElement].render(local65 - 7, local144 + -7);
+											MapList.sprites[local222.mapfunction].render(local65 - 7, local144 + -7);
 										}
 									}
 								}

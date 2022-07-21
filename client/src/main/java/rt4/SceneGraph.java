@@ -6,18 +6,19 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 public class SceneGraph {
+
 	@OriginalMember(owner = "client!bb", name = "g", descriptor = "[[[B")
-	public static final byte[][][] tileFlags = new byte[4][104][104];
+	public static final byte[][][] renderFlags = new byte[4][104][104];
 	@OriginalMember(owner = "client!mi", name = "Y", descriptor = "[[[Lclient!ih;")
 	public static final LinkedList[][][] objStacks = new LinkedList[4][104][104];
 	@OriginalMember(owner = "client!te", name = "B", descriptor = "[I")
-	public static final int[] anIntArray469 = new int[]{0, -1, 0, 1};
+	public static final int[] WALL_DECO_ROT_SIZE_Y_DIR = new int[]{0, -1, 0, 1};
 	@OriginalMember(owner = "client!fb", name = "q", descriptor = "[I")
 	public static final int[] anIntArray154 = new int[]{-1, -1, 1, 1};
 	@OriginalMember(owner = "client!j", name = "O", descriptor = "[I")
 	public static final int[] anIntArray565 = new int[]{1, -1, -1, 1};
 	@OriginalMember(owner = "client!vl", name = "e", descriptor = "[I")
-	public static final int[] anIntArray517 = new int[]{1, 2, 4, 8};
+	public static final int[] WALL_ROTATION_TYPE1 = new int[]{1, 2, 4, 8};
 	@OriginalMember(owner = "client!pg", name = "T", descriptor = "[I")
 	public static final int[] anIntArray386 = new int[]{76, 8, 137, 4, 0, 1, 38, 2, 19};
 	@OriginalMember(owner = "client!rj", name = "U", descriptor = "Lclient!ih;")
@@ -27,7 +28,7 @@ public class SceneGraph {
 	@OriginalMember(owner = "client!ec", name = "B", descriptor = "[[I")
 	public static final int[][] anIntArrayArray8 = new int[][]{new int[0], {128, 0, 128, 128, 0, 128}, {0, 0, 128, 0, 128, 128, 64, 128}, {0, 128, 0, 0, 128, 0, 64, 128}, {0, 0, 64, 128, 0, 128}, {128, 128, 64, 128, 128, 0}, {64, 0, 128, 0, 128, 128, 64, 128}, {128, 0, 128, 128, 0, 128, 0, 64, 64, 0}, {0, 0, 64, 0, 0, 64}, {0, 0, 128, 0, 128, 128, 64, 96, 32, 64}, {0, 128, 0, 0, 32, 64, 64, 96, 128, 128}, {0, 128, 0, 0, 32, 32, 96, 32, 128, 0, 128, 128}};
 	@OriginalMember(owner = "client!ck", name = "d", descriptor = "[I")
-	public static final int[] anIntArray80 = new int[]{1, 0, -1, 0};
+	public static final int[] WALL_DECO_ROT_SIZE_X_DIR = new int[]{1, 0, -1, 0};
 	@OriginalMember(owner = "client!ka", name = "t", descriptor = "[I")
 	public static final int[] anIntArray294 = new int[]{0, 0, 2, 0, 0, 2, 1, 1, 0};
 	@OriginalMember(owner = "client!uj", name = "A", descriptor = "[I")
@@ -78,7 +79,7 @@ public class SceneGraph {
 	@OriginalMember(owner = "client!ui", name = "eb", descriptor = "[[[B")
 	public static byte[][][] tileUnderlays;
 	@OriginalMember(owner = "client!em", name = "t", descriptor = "[[[I")
-	public static int[][][] anIntArrayArrayArray6;
+	public static int[][][] occludeFlags;
 	@OriginalMember(owner = "client!ka", name = "r", descriptor = "[I")
 	public static int[] rowCount;
 	@OriginalMember(owner = "client!lg", name = "k", descriptor = "I")
@@ -90,7 +91,7 @@ public class SceneGraph {
 	@OriginalMember(owner = "client!s", name = "i", descriptor = "[I")
 	public static int[] rowWeightedHue;
 	@OriginalMember(owner = "client!jd", name = "d", descriptor = "[[[B")
-	public static byte[][][] aByteArrayArrayArray9;
+	public static byte[][][] shadowmap;
 	@OriginalMember(owner = "client!wk", name = "v", descriptor = "[I")
 	public static int[] rowLightness;
 	@OriginalMember(owner = "client!ub", name = "h", descriptor = "[Lclient!pe;")
@@ -191,6 +192,8 @@ public class SceneGraph {
 	public static int centralZoneX;
 	@OriginalMember(owner = "client!eb", name = "u", descriptor = "I")
 	public static int centralZoneZ;
+	@OriginalMember(owner = "client!dc", name = "ab", descriptor = "I")
+	public static int centralPlane = 0;
 
 	@OriginalMember(owner = "client!km", name = "f", descriptor = "(I)Z")
 	public static boolean allLevelsAreVisible() {
@@ -210,7 +213,7 @@ public class SceneGraph {
 		@Pc(36) int xFine2 = xFine & 0x7F;
 		@Pc(40) int zFine2 = zFine & 0x7F;
 		@Pc(42) int virtualLevel = level;
-		if (level < 3 && (tileFlags[1][x][z] & 0x2) == 2) {
+		if (level < 3 && (renderFlags[1][x][z] & 0x2) == 2) {
 			virtualLevel = level + 1;
 		}
 		@Pc(91) int heightZ0 = xFine2 * tileHeights[virtualLevel][x + 1][z + 1] + tileHeights[virtualLevel][x][z + 1] * (128 - xFine2) >> 7;
@@ -342,8 +345,8 @@ public class SceneGraph {
 		}
 		tileShapes = new byte[plane][104][104];
 		rowCount = new int[104];
-		anIntArrayArrayArray6 = new int[plane][105][105];
-		aByteArrayArrayArray9 = new byte[plane][105][105];
+		occludeFlags = new int[plane][105][105];
+		shadowmap = new byte[plane][105][105];
 		tileOverlays = new byte[plane][104][104];
 		rowLightness = new int[104];
 		tileAngles = new byte[plane][104][104];
@@ -353,11 +356,11 @@ public class SceneGraph {
 	@OriginalMember(owner = "client!ib", name = "b", descriptor = "(I)V")
 	public static void unload() {
 		rowChroma = null;
-		anIntArrayArrayArray6 = null;
+		occludeFlags = null;
 		rowCount = null;
 		tileShapes = null;
 		tileAngles = null;
-		aByteArrayArrayArray9 = null;
+		shadowmap = null;
 		tileOverlays = null;
 		tileUnderlays = null;
 		rowSaturation = null;
@@ -474,7 +477,7 @@ public class SceneGraph {
 			return;
 		}
 		if (!arg2) {
-			tileFlags[level][x][z] = 0;
+			renderFlags[level][x][z] = 0;
 		}
 		while (true) {
 			opcode = buffer.g1();
@@ -511,7 +514,7 @@ public class SceneGraph {
 			} else if (opcode > 81) {
 				tileUnderlays[level][x][z] = (byte) (opcode - 81);
 			} else if (!arg2) {
-				tileFlags[level][x][z] = (byte) (opcode - 49);
+				renderFlags[level][x][z] = (byte) (opcode - 49);
 			}
 		}
 	}
@@ -780,9 +783,9 @@ public class SceneGraph {
 			for (level = 0; level < 4; level++) {
 				for (x = 0; x < 104; x++) {
 					for (@Pc(22) int z = 0; z < 104; z++) {
-						if ((tileFlags[level][x][z] & 0x1) == 1) {
+						if ((renderFlags[level][x][z] & 0x1) == 1) {
 							@Pc(43) int transformedLevel = level;
-							if ((tileFlags[1][x][z] & 0x2) == 2) {
+							if ((renderFlags[1][x][z] & 0x2) == 2) {
 								transformedLevel = level - 1;
 							}
 							if (transformedLevel >= 0) {
@@ -830,7 +833,7 @@ public class SceneGraph {
 		@Pc(254) int local254;
 		@Pc(267) int local267;
 		for (local152 = 0; local152 < levels; local152++) {
-			@Pc(159) byte[][] local159 = aByteArrayArrayArray9[local152];
+			@Pc(159) byte[][] local159 = shadowmap[local152];
 			@Pc(273) int local273;
 			@Pc(326) int local326;
 			@Pc(332) int local332;
@@ -945,7 +948,7 @@ public class SceneGraph {
 			for (local168 = 1; local168 < 103; local168++) {
 				label771:
 				for (local173 = 1; local173 < 103; local173++) {
-					if (underwater || allLevelsAreVisible() || (tileFlags[0][local168][local173] & 0x2) != 0 || (tileFlags[local152][local168][local173] & 0x10) == 0 && method22(local173, local168, local152) == LoginManager.centralPlane) {
+					if (underwater || allLevelsAreVisible() || (renderFlags[0][local168][local173] & 0x2) != 0 || (renderFlags[local152][local168][local173] & 0x10) == 0 && getRenderLevel(local173, local168, local152) == centralPlane) {
 						if (firstVisibleLevel > local152) {
 							firstVisibleLevel = local152;
 						}
@@ -962,7 +965,7 @@ public class SceneGraph {
 									local1067 = false;
 								}
 								if (local1067 && local200 == local202 && local200 == local209 && local349 == local200) {
-									anIntArrayArrayArray6[local152][local168][local173] |= 0x4;
+									occludeFlags[local152][local168][local173] |= 0x4;
 								}
 							}
 							if (local178 <= 0) {
@@ -1085,12 +1088,12 @@ public class SceneGraph {
 					if (local200 > 103) {
 						@Pc(2025) GlTile[] local2025;
 						if (underwater) {
-							local2025 = method3501(tileFlags, tileShapes[local152], tileUnderlays[local152], local146, local1896, anIntArrayArray11, tileOverlays[local152], tileAngles[local152], local1888, local152, local1900, local142, tileHeights[local152], surfaceTileHeights[0]);
+							local2025 = method3501(renderFlags, tileShapes[local152], tileUnderlays[local152], local146, local1896, anIntArrayArray11, tileOverlays[local152], tileAngles[local152], local1888, local152, local1900, local142, tileHeights[local152], surfaceTileHeights[0]);
 							method2280(local152, local2025);
 							break;
 						}
-						local2025 = method3501(tileFlags, tileShapes[local152], tileUnderlays[local152], local146, local1896, null, tileOverlays[local152], tileAngles[local152], local1888, local152, local1900, local142, tileHeights[local152], null);
-						@Pc(2049) GlTile[] local2049 = method2(local1896, local1888, tileHeights[local152], local152, local1900, tileAngles[local152], local146, tileShapes[local152], tileUnderlays[local152], tileOverlays[local152], tileFlags);
+						local2025 = method3501(renderFlags, tileShapes[local152], tileUnderlays[local152], local146, local1896, null, tileOverlays[local152], tileAngles[local152], local1888, local152, local1900, local142, tileHeights[local152], null);
+						@Pc(2049) GlTile[] local2049 = method2(local1896, local1888, tileHeights[local152], local152, local1900, tileAngles[local152], local146, tileShapes[local152], tileUnderlays[local152], tileOverlays[local152], renderFlags);
 						@Pc(2057) GlTile[] local2057 = new GlTile[local2025.length + local2049.length];
 						for (local349 = 0; local349 < local2025.length; local349++) {
 							local2057[local349] = local2025[local349];
@@ -1117,7 +1120,7 @@ public class SceneGraph {
 			tileOverlays[local152] = null;
 			tileShapes[local152] = null;
 			tileAngles[local152] = null;
-			aByteArrayArrayArray9[local152] = null;
+			shadowmap[local152] = null;
 		}
 		method3801();
 		if (underwater) {
@@ -1126,7 +1129,7 @@ public class SceneGraph {
 		@Pc(2204) int local2204;
 		for (local152 = 0; local152 < 104; local152++) {
 			for (local2204 = 0; local2204 < 104; local2204++) {
-				if ((tileFlags[1][local152][local2204] & 0x2) == 2) {
+				if ((renderFlags[1][local152][local2204] & 0x2) == 2) {
 					method3884(local152, local2204);
 				}
 			}
@@ -1134,17 +1137,17 @@ public class SceneGraph {
 		for (local152 = 0; local152 < 4; local152++) {
 			for (local2204 = 0; local2204 <= 104; local2204++) {
 				for (local168 = 0; local168 <= 104; local168++) {
-					if ((anIntArrayArrayArray6[local152][local168][local2204] & 0x1) != 0) {
+					if ((occludeFlags[local152][local168][local2204] & 0x1) != 0) {
 						local200 = local152;
-						for (local173 = local2204; local173 > 0 && (anIntArrayArrayArray6[local152][local168][local173 - 1] & 0x1) != 0; local173--) {
+						for (local173 = local2204; local173 > 0 && (occludeFlags[local152][local168][local173 - 1] & 0x1) != 0; local173--) {
 						}
 						overlay = local152;
-						for (local178 = local2204; local178 < 104 && (anIntArrayArrayArray6[local152][local168][local178 + 1] & 0x1) != 0; local178++) {
+						for (local178 = local2204; local178 < 104 && (occludeFlags[local152][local168][local178 + 1] & 0x1) != 0; local178++) {
 						}
 						label454:
 						while (overlay > 0) {
 							for (local202 = local173; local202 <= local178; local202++) {
-								if ((anIntArrayArrayArray6[overlay - 1][local168][local202] & 0x1) == 0) {
+								if ((occludeFlags[overlay - 1][local168][local202] & 0x1) == 0) {
 									break label454;
 								}
 							}
@@ -1153,7 +1156,7 @@ public class SceneGraph {
 						label443:
 						while (local200 < 3) {
 							for (local202 = local173; local202 <= local178; local202++) {
-								if ((anIntArrayArrayArray6[local200 + 1][local168][local202] & 0x1) == 0) {
+								if ((occludeFlags[local200 + 1][local168][local202] & 0x1) == 0) {
 									break label443;
 								}
 							}
@@ -1166,22 +1169,22 @@ public class SceneGraph {
 							SceneGraph_Class120.method4647(1, local168 * 128, local168 * 128, local173 * 128, local178 * 128 + 128, local349, local234);
 							for (local254 = overlay; local254 <= local200; local254++) {
 								for (local267 = local173; local267 <= local178; local267++) {
-									anIntArrayArrayArray6[local254][local168][local267] &= 0xFFFFFFFE;
+									occludeFlags[local254][local168][local267] &= 0xFFFFFFFE;
 								}
 							}
 						}
 					}
-					if ((anIntArrayArrayArray6[local152][local168][local2204] & 0x2) != 0) {
-						for (local173 = local168; local173 > 0 && (anIntArrayArrayArray6[local152][local173 - 1][local2204] & 0x2) != 0; local173--) {
+					if ((occludeFlags[local152][local168][local2204] & 0x2) != 0) {
+						for (local173 = local168; local173 > 0 && (occludeFlags[local152][local173 - 1][local2204] & 0x2) != 0; local173--) {
 						}
 						local200 = local152;
 						overlay = local152;
-						for (local178 = local168; local178 < 104 && (anIntArrayArrayArray6[local152][local178 + 1][local2204] & 0x2) != 0; local178++) {
+						for (local178 = local168; local178 < 104 && (occludeFlags[local152][local178 + 1][local2204] & 0x2) != 0; local178++) {
 						}
 						label508:
 						while (overlay > 0) {
 							for (local202 = local173; local202 <= local178; local202++) {
-								if ((anIntArrayArrayArray6[overlay - 1][local202][local2204] & 0x2) == 0) {
+								if ((occludeFlags[overlay - 1][local202][local2204] & 0x2) == 0) {
 									break label508;
 								}
 							}
@@ -1190,7 +1193,7 @@ public class SceneGraph {
 						label497:
 						while (local200 < 3) {
 							for (local202 = local173; local202 <= local178; local202++) {
-								if ((anIntArrayArrayArray6[local200 + 1][local202][local2204] & 0x2) == 0) {
+								if ((occludeFlags[local200 + 1][local202][local2204] & 0x2) == 0) {
 									break label497;
 								}
 							}
@@ -1203,22 +1206,22 @@ public class SceneGraph {
 							SceneGraph_Class120.method4647(2, local173 * 128, local178 * 128 + 128, local2204 * 128, local2204 * 128, local349, local234);
 							for (local254 = overlay; local254 <= local200; local254++) {
 								for (local267 = local173; local267 <= local178; local267++) {
-									anIntArrayArrayArray6[local254][local267][local2204] &= 0xFFFFFFFD;
+									occludeFlags[local254][local267][local2204] &= 0xFFFFFFFD;
 								}
 							}
 						}
 					}
-					if ((anIntArrayArrayArray6[local152][local168][local2204] & 0x4) != 0) {
+					if ((occludeFlags[local152][local168][local2204] & 0x4) != 0) {
 						local173 = local168;
 						local178 = local168;
-						for (overlay = local2204; overlay > 0 && (anIntArrayArrayArray6[local152][local168][overlay - 1] & 0x4) != 0; overlay--) {
+						for (overlay = local2204; overlay > 0 && (occludeFlags[local152][local168][overlay - 1] & 0x4) != 0; overlay--) {
 						}
-						for (local200 = local2204; local200 < 104 && (anIntArrayArrayArray6[local152][local168][local200 + 1] & 0x4) != 0; local200++) {
+						for (local200 = local2204; local200 < 104 && (occludeFlags[local152][local168][local200 + 1] & 0x4) != 0; local200++) {
 						}
 						label562:
 						while (local173 > 0) {
 							for (local202 = overlay; local202 <= local200; local202++) {
-								if ((anIntArrayArrayArray6[local152][local173 - 1][local202] & 0x4) == 0) {
+								if ((occludeFlags[local152][local173 - 1][local202] & 0x4) == 0) {
 									break label562;
 								}
 							}
@@ -1227,7 +1230,7 @@ public class SceneGraph {
 						label551:
 						while (local178 < 104) {
 							for (local202 = overlay; local202 <= local200; local202++) {
-								if ((anIntArrayArrayArray6[local152][local178 + 1][local202] & 0x4) == 0) {
+								if ((occludeFlags[local152][local178 + 1][local202] & 0x4) == 0) {
 									break label551;
 								}
 							}
@@ -1238,7 +1241,7 @@ public class SceneGraph {
 							SceneGraph_Class120.method4647(4, local173 * 128, local178 * 128 + 128, overlay * 128, local200 * 128 + 128, local202, local202);
 							for (local209 = local173; local209 <= local178; local209++) {
 								for (local349 = overlay; local349 <= local200; local349++) {
-									anIntArrayArrayArray6[local152][local209][local349] &= 0xFFFFFFFB;
+									occludeFlags[local152][local209][local349] &= 0xFFFFFFFB;
 								}
 							}
 						}
@@ -1453,8 +1456,8 @@ public class SceneGraph {
 				local100 = wall.primary;
 				local102 = wall.secondary;
 			}
-			if (type.anInt4435 != 0) {
-				collision.unflagWall(angle, type.aBoolean207, z, shape, x);
+			if (type.blockwalk != 0) {
+				collision.unflagWall(angle, type.blockrange, z, shape, x);
 			}
 		} else if (arg3 == 1) {
 			@Pc(233) WallDecor wallDecor = removeWallDecor(level, x, z);
@@ -1467,15 +1470,15 @@ public class SceneGraph {
 			if (scenery != null) {
 				local100 = scenery.entity;
 			}
-			if (type.anInt4435 != 0 && type.width + x < 104 && type.width + z < 104 && x + type.length < 104 && z + type.length < 104) {
-				collision.unflagScenery(x, type.width, type.aBoolean207, angle, type.length, z);
+			if (type.blockwalk != 0 && type.width + x < 104 && type.width + z < 104 && x + type.length < 104 && z + type.length < 104) {
+				collision.unflagScenery(x, type.width, type.blockrange, angle, type.length, z);
 			}
 		} else if (arg3 == 3) {
 			@Pc(211) GroundDecor groundDecor = removeGroundDecor(level, x, z);
 			if (groundDecor != null) {
 				local100 = groundDecor.entity;
 			}
-			if (type.anInt4435 == 1) {
+			if (type.blockwalk == 1) {
 				collision.unflagGroundDecor(z, x);
 			}
 		}
@@ -1497,7 +1500,7 @@ public class SceneGraph {
 			if (local100 instanceof Loc) {
 				((Loc) local100).method1046();
 			} else {
-				Loc.method181(type, anIntArray469[angle] * 8, angle, anIntArray80[angle] * 8, 4, x, z, arg4);
+				Loc.method181(type, WALL_DECO_ROT_SIZE_Y_DIR[angle] * 8, angle, WALL_DECO_ROT_SIZE_X_DIR[angle] * 8, 4, x, z, arg4);
 			}
 		} else if (shape == 6) {
 			if (local100 instanceof Loc) {
@@ -2384,402 +2387,426 @@ public class SceneGraph {
 	}
 
 	@OriginalMember(owner = "client!p", name = "a", descriptor = "(IZIZLclient!mj;IIIBII)V")
-	public static void method3397(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) int arg2, @OriginalArg(3) boolean arg3, @OriginalArg(4) CollisionMap arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(9) int arg8, @OriginalArg(10) int arg9) {
-		if (arg1 && !allLevelsAreVisible() && (tileFlags[0][arg7][arg8] & 0x2) == 0) {
-			if ((tileFlags[arg2][arg7][arg8] & 0x10) != 0) {
-				return;
-			}
-			if (method22(arg8, arg7, arg2) != LoginManager.centralPlane) {
+	public static void addLoc(@OriginalArg(0) int currentPlane, @OriginalArg(1) boolean lowmem, @OriginalArg(2) int plane, @OriginalArg(3) boolean highmem, @OriginalArg(4) CollisionMap map, @OriginalArg(5) int locIndex, @OriginalArg(6) int locType, @OriginalArg(7) int x, @OriginalArg(9) int z, @OriginalArg(10) int orientation) {
+		if (lowmem && !allLevelsAreVisible() && (renderFlags[0][x][z] & 0x2) == 0) {
+			if ((renderFlags[plane][x][z] & 0x10) != 0 || getRenderLevel(z, x, plane) != centralPlane) {
 				return;
 			}
 		}
-		if (arg2 < firstVisibleLevel) {
-			firstVisibleLevel = arg2;
+
+		if (plane < firstVisibleLevel) {
+			firstVisibleLevel = plane;
 		}
-		@Pc(62) LocType local62 = LocTypeList.get(arg5);
-		if (GlRenderer.enabled && local62.aBoolean216) {
+
+		@Pc(62) LocType loc = LocTypeList.get(locIndex);
+		if (GlRenderer.enabled && loc.aBoolean216) {
 			return;
 		}
-		@Pc(84) int local84;
-		@Pc(81) int local81;
-		if (arg9 == 1 || arg9 == 3) {
-			local81 = local62.width;
-			local84 = local62.length;
+
+		@Pc(84) int width;
+		@Pc(81) int length;
+		if (orientation == 1 || orientation == 3) {
+			length = loc.width;
+			width = loc.length;
 		} else {
-			local84 = local62.width;
-			local81 = local62.length;
+			width = loc.width;
+			length = loc.length;
 		}
-		@Pc(103) int local103;
-		@Pc(112) int local112;
-		if (arg7 + local84 <= 104) {
-			local103 = arg7 + (local84 >> 1);
-			local112 = arg7 + (local84 + 1 >> 1);
+
+		@Pc(103) int west;
+		@Pc(112) int east;
+		if (x + width <= 104) {
+			west = x + (width >> 1);
+			east = x + (width + 1 >> 1);
 		} else {
-			local112 = arg7 + 1;
-			local103 = arg7;
+			east = x + 1;
+			west = x;
 		}
-		@Pc(129) int local129;
-		@Pc(133) int local133;
-		if (local81 + arg8 > 104) {
-			local129 = arg8;
-			local133 = arg8 + 1;
+
+		@Pc(129) int south;
+		@Pc(133) int north;
+		if (length + z > 104) {
+			south = z;
+			north = z + 1;
 		} else {
-			local129 = (local81 >> 1) + arg8;
-			local133 = arg8 + (local81 + 1 >> 1);
+			south = (length >> 1) + z;
+			north = z + (length + 1 >> 1);
 		}
-		@Pc(153) int[][] local153 = tileHeights[arg0];
-		@Pc(165) int local165 = (local84 << 6) + (arg7 << 7);
-		@Pc(173) int local173 = (local81 << 6) + (arg8 << 7);
-		@Pc(199) int local199 = local153[local103][local133] + local153[local112][local129] + local153[local103][local129] + local153[local112][local133] >> 2;
-		@Pc(201) int local201 = 0;
-		@Pc(213) int[][] local213;
-		if (GlRenderer.enabled && arg0 != 0) {
-			local213 = tileHeights[0];
-			local201 = local199 - (local213[local112][local133] + local213[local112][local129] + local213[local103][local129] + local213[local103][local133] >> 2);
+
+		@Pc(153) int[][] currentHeightmap = tileHeights[currentPlane];
+		@Pc(165) int local165 = (width << 6) + (x << 7);
+		@Pc(173) int local173 = (length << 6) + (z << 7);
+		@Pc(199) int averageY = currentHeightmap[west][north] + currentHeightmap[east][south] + currentHeightmap[west][south] + currentHeightmap[east][north] >> 2;
+
+		@Pc(201) int diffAverageY = 0;
+		@Pc(213) int[][] heightmap;
+		if (GlRenderer.enabled && currentPlane != 0) {
+			heightmap = tileHeights[0];
+			diffAverageY = averageY - (heightmap[east][north] + heightmap[east][south] + heightmap[west][south] + heightmap[west][north] >> 2);
 		}
-		local213 = null;
-		@Pc(261) long local261 = arg7 | 0x40000000 | (long) arg8 << 7 | (long) arg6 << 14 | (long) arg9 << 20;
-		if (arg3) {
-			local213 = surfaceTileHeights[0];
-		} else if (arg0 < 3) {
-			local213 = tileHeights[arg0 + 1];
+		heightmap = null;
+
+		@Pc(261) long bitset = x | 0x40000000 | (long) z << 7 | (long) locType << 14 | (long) orientation << 20;
+
+		if (highmem) {
+			heightmap = surfaceTileHeights[0];
+		} else if (currentPlane < 3) {
+			heightmap = tileHeights[currentPlane + 1];
 		}
-		if (local62.anInt4429 == 0 || arg3) {
-			local261 |= Long.MIN_VALUE;
+
+		if (loc.interactive == 0 || highmem) {
+			bitset |= Long.MIN_VALUE;
 		}
-		if (local62.anInt4438 == 1) {
-			local261 |= 0x400000L;
+
+		if (loc.anInt4438 == 1) {
+			bitset |= 0x400000L;
 		}
-		if (local62.aBoolean213) {
-			local261 |= 0x80000000L;
+
+		if (loc.aBoolean213) {
+			bitset |= Integer.MIN_VALUE;
 		}
-		if (local62.hasAreaSound()) {
-			AreaSoundManager.add(arg8, local62, arg9, null, arg7, arg2, null);
+
+		if (loc.hasAreaSound()) {
+			AreaSoundManager.add(z, loc, orientation, null, x, plane, null);
 		}
-		@Pc(330) boolean local330 = local62.aBoolean212 & !arg3;
-		local261 |= (long) arg5 << 32;
-		@Pc(387) Entity local387;
+
+		@Pc(330) boolean local330 = loc.aBoolean212 & !highmem;
+		bitset |= (long) locIndex << 32;
+		@Pc(387) Entity entity;
 		@Pc(403) Loc_Class139 local403;
-		if (arg6 == 22) {
-			if (Preferences.showGroundDecorations || local62.anInt4429 != 0 || local62.anInt4435 == 1 || local62.aBoolean206) {
-				if (local62.anInt4430 == -1 && local62.multiLocs == null && !local62.aBoolean214) {
-					local403 = local62.method3428(arg9, local165, local153, 22, local199, local213, arg1, null, local330, local173);
+		@Pc(1226) int local1226;
+		@Pc(1889) long local1889;
+		@Pc(1934) Entity local1934;
+		@Pc(1950) Loc_Class139 local1950;
+
+		if (locType == LocType.GROUNDDECOR) {
+			if (Preferences.showGroundDecorations || loc.interactive != 0 || loc.blockwalk == 1 || loc.forcedecor) {
+				if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
+					local403 = loc.method3428(orientation, local165, currentHeightmap, LocType.GROUNDDECOR, averageY, heightmap, lowmem, null, local330, local173);
 					if (GlRenderer.enabled && local330) {
-						ShadowManager.method4211(local403.aClass36_Sub1_3, local165, local201, local173);
+						ShadowManager.method4211(local403.aClass36_Sub1_3, local165, diffAverageY, local173);
 					}
-					local387 = local403.aClass8_10;
+					entity = local403.aClass8_10;
 				} else {
-					local387 = new Loc(arg5, 22, arg9, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
+					entity = new Loc(locIndex, LocType.GROUNDDECOR, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
 				}
-				setGroundDecor(arg2, arg7, arg8, local199, local387, local261, local62.aBoolean211);
-				if (local62.anInt4435 == 1 && arg4 != null) {
-					arg4.flagGroundDecor(arg7, arg8);
+
+				setGroundDecor(plane, x, z, averageY, entity, bitset, loc.aBoolean211);
+
+				if (loc.blockwalk == 1 && map != null) {
+					map.flagGroundDecor(x, z);
 				}
 			}
-		} else if (arg6 == 10 || arg6 == 11) {
-			if (local62.anInt4430 == -1 && local62.multiLocs == null && !local62.aBoolean214) {
-				local403 = local62.method3428(arg6 == 11 ? arg9 + 4 : arg9, local165, local153, 10, local199, local213, arg1, null, local330, local173);
+		} else if (locType == LocType.CENTREPIECE_STRAIGHT || locType == LocType.CENTREPIECE_DIAGONAL) {
+			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
+				local403 = loc.method3428(locType == LocType.CENTREPIECE_DIAGONAL ? orientation + 4 : orientation, local165, currentHeightmap, LocType.CENTREPIECE_STRAIGHT, averageY, heightmap, lowmem, null, local330, local173);
 				if (GlRenderer.enabled && local330) {
-					ShadowManager.method4211(local403.aClass36_Sub1_3, local165, local201, local173);
+					ShadowManager.method4211(local403.aClass36_Sub1_3, local165, diffAverageY, local173);
 				}
-				local387 = local403.aClass8_10;
+				entity = local403.aClass8_10;
 			} else {
-				local387 = new Loc(arg5, 10, arg6 == 11 ? arg9 + 4 : arg9, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
+				entity = new Loc(locIndex, LocType.CENTREPIECE_STRAIGHT, locType == LocType.CENTREPIECE_DIAGONAL ? orientation + 4 : orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
 			}
-			if (local387 != null) {
-				@Pc(531) boolean local531 = method35(arg2, arg7, arg8, local199, local84, local81, local387, local261);
-				if (local62.aBoolean215 && local531 && arg1) {
+
+			if (entity != null) {
+				@Pc(531) boolean local531 = method35(plane, x, z, averageY, width, length, entity, bitset);
+				if (loc.active && local531 && lowmem) {
 					@Pc(541) int local541 = 15;
-					if (local387 instanceof Model) {
-						local541 = ((Model) local387).method4566() / 4;
+					if (entity instanceof Model) {
+						local541 = ((Model) entity).method4566() / 4;
 						if (local541 > 30) {
 							local541 = 30;
 						}
 					}
-					for (@Pc(560) int local560 = 0; local560 <= local84; local560++) {
-						for (@Pc(565) int local565 = 0; local565 <= local81; local565++) {
-							if (aByteArrayArrayArray9[arg2][arg7 + local560][local565 + arg8] < local541) {
-								aByteArrayArrayArray9[arg2][arg7 + local560][arg8 + local565] = (byte) local541;
+					for (@Pc(560) int local560 = 0; local560 <= width; local560++) {
+						for (@Pc(565) int local565 = 0; local565 <= length; local565++) {
+							if (shadowmap[plane][x + local560][local565 + z] < local541) {
+								shadowmap[plane][x + local560][z + local565] = (byte) local541;
 							}
 						}
 					}
 				}
 			}
-			if (local62.anInt4435 != 0 && arg4 != null) {
-				arg4.flagScenery(arg7, local62.aBoolean207, arg8, local84, local81);
+
+			if (loc.blockwalk != 0 && map != null) {
+				map.flagScenery(x, loc.blockrange, z, width, length);
 			}
-		} else if (arg6 >= 12) {
-			if (local62.anInt4430 == -1 && local62.multiLocs == null && !local62.aBoolean214) {
-				local403 = local62.method3428(arg9, local165, local153, arg6, local199, local213, arg1, null, local330, local173);
+		} else if (locType >= LocType.ROOF_STRAIGHT) {
+			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
+				local403 = loc.method3428(orientation, local165, currentHeightmap, locType, averageY, heightmap, lowmem, null, local330, local173);
 				if (GlRenderer.enabled && local330) {
-					ShadowManager.method4211(local403.aClass36_Sub1_3, local165, local201, local173);
+					ShadowManager.method4211(local403.aClass36_Sub1_3, local165, diffAverageY, local173);
 				}
-				local387 = local403.aClass8_10;
+				entity = local403.aClass8_10;
 			} else {
-				local387 = new Loc(arg5, arg6, arg9, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
+				entity = new Loc(locIndex, locType, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
 			}
-			method35(arg2, arg7, arg8, local199, 1, 1, local387, local261);
-			if (arg1 && arg6 >= 12 && arg6 <= 17 && arg6 != 13 && arg2 > 0) {
-				anIntArrayArrayArray6[arg2][arg7][arg8] |= 0x4;
+
+			method35(plane, x, z, averageY, 1, 1, entity, bitset);
+			if (lowmem && locType <= LocType.ROOF_FLAT && locType != LocType.ROOF_DIAGONAL_WITH_ROOFEDGE && plane > 0) {
+				occludeFlags[plane][x][z] |= 0x4;
 			}
-			if (local62.anInt4435 != 0 && arg4 != null) {
-				arg4.flagScenery(arg7, local62.aBoolean207, arg8, local84, local81);
+
+			if (loc.blockwalk != 0 && map != null) {
+				map.flagScenery(x, loc.blockrange, z, width, length);
 			}
-		} else if (arg6 == 0) {
-			if (local62.anInt4430 == -1 && local62.multiLocs == null && !local62.aBoolean214) {
-				local403 = local62.method3428(arg9, local165, local153, 0, local199, local213, arg1, null, local330, local173);
+		} else if (locType == LocType.WALL_STRAIGHT) {
+			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
+				local403 = loc.method3428(orientation, local165, currentHeightmap, LocType.WALL_STRAIGHT, averageY, heightmap, lowmem, null, local330, local173);
 				if (GlRenderer.enabled && local330) {
-					ShadowManager.method4211(local403.aClass36_Sub1_3, local165, local201, local173);
+					ShadowManager.method4211(local403.aClass36_Sub1_3, local165, diffAverageY, local173);
 				}
-				local387 = local403.aClass8_10;
+				entity = local403.aClass8_10;
 			} else {
-				local387 = new Loc(arg5, 0, arg9, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
+				entity = new Loc(locIndex, LocType.WALL_STRAIGHT, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
 			}
-			setWall(arg2, arg7, arg8, local199, local387, null, anIntArray517[arg9], 0, local261);
-			if (arg1) {
-				if (arg9 == 0) {
-					if (local62.aBoolean215) {
-						aByteArrayArrayArray9[arg2][arg7][arg8] = 50;
-						aByteArrayArrayArray9[arg2][arg7][arg8 + 1] = 50;
+
+			setWall(plane, x, z, averageY, entity, null, WALL_ROTATION_TYPE1[orientation], 0, bitset);
+
+			if (lowmem) {
+				if (orientation == 0) {
+					if (loc.active) {
+						shadowmap[plane][x][z] = 50;
+						shadowmap[plane][x][z + 1] = 50;
 					}
-					if (local62.aBoolean220) {
-						anIntArrayArrayArray6[arg2][arg7][arg8] |= 0x1;
+
+					if (loc.occlude) {
+						occludeFlags[plane][x][z] |= 0x1;
 					}
-				} else if (arg9 == 1) {
-					if (local62.aBoolean215) {
-						aByteArrayArrayArray9[arg2][arg7][arg8 + 1] = 50;
-						aByteArrayArrayArray9[arg2][arg7 + 1][arg8 + 1] = 50;
+				} else if (orientation == 1) {
+					if (loc.active) {
+						shadowmap[plane][x][z + 1] = 50;
+						shadowmap[plane][x + 1][z + 1] = 50;
 					}
-					if (local62.aBoolean220) {
-						anIntArrayArrayArray6[arg2][arg7][arg8 + 1] |= 0x2;
+
+					if (loc.occlude) {
+						occludeFlags[plane][x][z + 1] |= 0x2;
 					}
-				} else if (arg9 == 2) {
-					if (local62.aBoolean215) {
-						aByteArrayArrayArray9[arg2][arg7 + 1][arg8] = 50;
-						aByteArrayArrayArray9[arg2][arg7 + 1][arg8 + 1] = 50;
+				} else if (orientation == 2) {
+					if (loc.active) {
+						shadowmap[plane][x + 1][z] = 50;
+						shadowmap[plane][x + 1][z + 1] = 50;
 					}
-					if (local62.aBoolean220) {
-						anIntArrayArrayArray6[arg2][arg7 + 1][arg8] |= 0x1;
+
+					if (loc.occlude) {
+						occludeFlags[plane][x + 1][z] |= 0x1;
 					}
-				} else if (arg9 == 3) {
-					if (local62.aBoolean215) {
-						aByteArrayArrayArray9[arg2][arg7][arg8] = 50;
-						aByteArrayArrayArray9[arg2][arg7 + 1][arg8] = 50;
+				} else if (orientation == 3) {
+					if (loc.active) {
+						shadowmap[plane][x][z] = 50;
+						shadowmap[plane][x + 1][z] = 50;
 					}
-					if (local62.aBoolean220) {
-						anIntArrayArrayArray6[arg2][arg7][arg8] |= 0x2;
+
+					if (loc.occlude) {
+						occludeFlags[plane][x][z] |= 0x2;
 					}
 				}
 			}
-			if (local62.anInt4435 != 0 && arg4 != null) {
-				arg4.flagWall(arg9, arg6, local62.aBoolean207, arg8, arg7);
+
+			if (loc.blockwalk != 0 && map != null) {
+				map.flagWall(orientation, locType, loc.blockrange, z, x);
 			}
-			if (local62.wallDecorOffsetScale != 16) {
-				method559(arg2, arg7, arg8, local62.wallDecorOffsetScale);
+
+			if (loc.walloff != 16) {
+				setWallDecoration(plane, x, z, loc.walloff);
 			}
-		} else if (arg6 == 1) {
-			if (local62.anInt4430 == -1 && local62.multiLocs == null && !local62.aBoolean214) {
-				local403 = local62.method3428(arg9, local165, local153, 1, local199, local213, arg1, null, local330, local173);
+		} else if (locType == LocType.WALL_DIAGONALCORNER) {
+			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
+				local403 = loc.method3428(orientation, local165, currentHeightmap, LocType.WALL_DIAGONALCORNER, averageY, heightmap, lowmem, null, local330, local173);
 				if (GlRenderer.enabled && local330) {
-					ShadowManager.method4211(local403.aClass36_Sub1_3, local165, local201, local173);
+					ShadowManager.method4211(local403.aClass36_Sub1_3, local165, diffAverageY, local173);
 				}
-				local387 = local403.aClass8_10;
+				entity = local403.aClass8_10;
 			} else {
-				local387 = new Loc(arg5, 1, arg9, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
+				entity = new Loc(locIndex, LocType.WALL_DIAGONALCORNER, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
 			}
-			setWall(arg2, arg7, arg8, local199, local387, null, LoginManager.anIntArray204[arg9], 0, local261);
-			if (local62.aBoolean215 && arg1) {
-				if (arg9 == 0) {
-					aByteArrayArrayArray9[arg2][arg7][arg8 + 1] = 50;
-				} else if (arg9 == 1) {
-					aByteArrayArrayArray9[arg2][arg7 + 1][arg8 + 1] = 50;
-				} else if (arg9 == 2) {
-					aByteArrayArrayArray9[arg2][arg7 + 1][arg8] = 50;
-				} else if (arg9 == 3) {
-					aByteArrayArrayArray9[arg2][arg7][arg8] = 50;
+
+			setWall(plane, x, z, averageY, entity, null, LoginManager.anIntArray204[orientation], 0, bitset);
+			if (loc.active && lowmem) {
+				if (orientation == 0) {
+					shadowmap[plane][x][z + 1] = 50;
+				} else if (orientation == 1) {
+					shadowmap[plane][x + 1][z + 1] = 50;
+				} else if (orientation == 2) {
+					shadowmap[plane][x + 1][z] = 50;
+				} else if (orientation == 3) {
+					shadowmap[plane][x][z] = 50;
 				}
 			}
-			if (local62.anInt4435 != 0 && arg4 != null) {
-				arg4.flagWall(arg9, arg6, local62.aBoolean207, arg8, arg7);
+
+			if (loc.blockwalk != 0 && map != null) {
+				map.flagWall(orientation, locType, loc.blockrange, z, x);
 			}
-		} else {
-			@Pc(1226) int local1226;
-			if (arg6 == 2) {
-				local1226 = arg9 + 1 & 0x3;
-				@Pc(1269) Entity local1269;
-				@Pc(1254) Entity local1254;
-				if (local62.anInt4430 == -1 && local62.multiLocs == null && !local62.aBoolean214) {
-					@Pc(1287) Loc_Class139 local1287 = local62.method3428(arg9 + 4, local165, local153, 2, local199, local213, arg1, null, local330, local173);
-					if (GlRenderer.enabled && local330) {
-						ShadowManager.method4211(local1287.aClass36_Sub1_3, local165, local201, local173);
-					}
-					local1254 = local1287.aClass8_10;
-					local1287 = local62.method3428(local1226, local165, local153, 2, local199, local213, arg1, null, local330, local173);
-					if (GlRenderer.enabled && local330) {
-						ShadowManager.method4211(local1287.aClass36_Sub1_3, local165, local201, local173);
-					}
-					local1269 = local1287.aClass8_10;
-				} else {
-					local1254 = new Loc(arg5, 2, arg9 + 4, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
-					local1269 = new Loc(arg5, 2, local1226, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
+		} else if (locType == LocType.WALL_L) {
+			local1226 = orientation + 1 & 0x3;
+			@Pc(1269) Entity local1269;
+			@Pc(1254) Entity local1254;
+			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
+				@Pc(1287) Loc_Class139 local1287 = loc.method3428(orientation + 4, local165, currentHeightmap, LocType.WALL_L, averageY, heightmap, lowmem, null, local330, local173);
+				if (GlRenderer.enabled && local330) {
+					ShadowManager.method4211(local1287.aClass36_Sub1_3, local165, diffAverageY, local173);
 				}
-				setWall(arg2, arg7, arg8, local199, local1254, local1269, anIntArray517[arg9], anIntArray517[local1226], local261);
-				if (local62.aBoolean220 && arg1) {
-					if (arg9 == 0) {
-						anIntArrayArrayArray6[arg2][arg7][arg8] |= 0x1;
-						anIntArrayArrayArray6[arg2][arg7][arg8 + 1] |= 0x2;
-					} else if (arg9 == 1) {
-						anIntArrayArrayArray6[arg2][arg7][arg8 + 1] |= 0x2;
-						anIntArrayArrayArray6[arg2][arg7 + 1][arg8] |= 0x1;
-					} else if (arg9 == 2) {
-						anIntArrayArrayArray6[arg2][arg7 + 1][arg8] |= 0x1;
-						anIntArrayArrayArray6[arg2][arg7][arg8] |= 0x2;
-					} else if (arg9 == 3) {
-						anIntArrayArrayArray6[arg2][arg7][arg8] |= 0x2;
-						anIntArrayArrayArray6[arg2][arg7][arg8] |= 0x1;
-					}
+				local1254 = local1287.aClass8_10;
+				local1287 = loc.method3428(local1226, local165, currentHeightmap, LocType.WALL_L, averageY, heightmap, lowmem, null, local330, local173);
+				if (GlRenderer.enabled && local330) {
+					ShadowManager.method4211(local1287.aClass36_Sub1_3, local165, diffAverageY, local173);
 				}
-				if (local62.anInt4435 != 0 && arg4 != null) {
-					arg4.flagWall(arg9, arg6, local62.aBoolean207, arg8, arg7);
-				}
-				if (local62.wallDecorOffsetScale != 16) {
-					method559(arg2, arg7, arg8, local62.wallDecorOffsetScale);
-				}
-			} else if (arg6 == 3) {
-				if (local62.anInt4430 == -1 && local62.multiLocs == null && !local62.aBoolean214) {
-					local403 = local62.method3428(arg9, local165, local153, 3, local199, local213, arg1, null, local330, local173);
-					if (GlRenderer.enabled && local330) {
-						ShadowManager.method4211(local403.aClass36_Sub1_3, local165, local201, local173);
-					}
-					local387 = local403.aClass8_10;
-				} else {
-					local387 = new Loc(arg5, 3, arg9, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
-				}
-				setWall(arg2, arg7, arg8, local199, local387, null, LoginManager.anIntArray204[arg9], 0, local261);
-				if (local62.aBoolean215 && arg1) {
-					if (arg9 == 0) {
-						aByteArrayArrayArray9[arg2][arg7][arg8 + 1] = 50;
-					} else if (arg9 == 1) {
-						aByteArrayArrayArray9[arg2][arg7 + 1][arg8 + 1] = 50;
-					} else if (arg9 == 2) {
-						aByteArrayArrayArray9[arg2][arg7 + 1][arg8] = 50;
-					} else if (arg9 == 3) {
-						aByteArrayArrayArray9[arg2][arg7][arg8] = 50;
-					}
-				}
-				if (local62.anInt4435 != 0 && arg4 != null) {
-					arg4.flagWall(arg9, arg6, local62.aBoolean207, arg8, arg7);
-				}
-			} else if (arg6 == 9) {
-				if (local62.anInt4430 == -1 && local62.multiLocs == null && !local62.aBoolean214) {
-					local403 = local62.method3428(arg9, local165, local153, arg6, local199, local213, arg1, null, local330, local173);
-					if (GlRenderer.enabled && local330) {
-						ShadowManager.method4211(local403.aClass36_Sub1_3, local165, local201, local173);
-					}
-					local387 = local403.aClass8_10;
-				} else {
-					local387 = new Loc(arg5, arg6, arg9, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
-				}
-				method35(arg2, arg7, arg8, local199, 1, 1, local387, local261);
-				if (local62.anInt4435 != 0 && arg4 != null) {
-					arg4.flagScenery(arg7, local62.aBoolean207, arg8, local84, local81);
-				}
-				if (local62.wallDecorOffsetScale != 16) {
-					method559(arg2, arg7, arg8, local62.wallDecorOffsetScale);
-				}
-			} else if (arg6 == 4) {
-				if (local62.anInt4430 == -1 && local62.multiLocs == null && !local62.aBoolean214) {
-					local403 = local62.method3428(arg9, local165, local153, 4, local199, local213, arg1, null, local330, local173);
-					if (GlRenderer.enabled && local330) {
-						ShadowManager.method4211(local403.aClass36_Sub1_3, local165, local201, local173);
-					}
-					local387 = local403.aClass8_10;
-				} else {
-					local387 = new Loc(arg5, 4, arg9, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
-				}
-				setWallDecor(arg2, arg7, arg8, local199, local387, null, anIntArray517[arg9], 0, 0, 0, local261);
+				local1269 = local1287.aClass8_10;
 			} else {
-				@Pc(1889) long local1889;
-				@Pc(1934) Entity local1934;
-				@Pc(1950) Loc_Class139 local1950;
-				if (arg6 == 5) {
-					local1226 = 16;
-					local1889 = getWallKey(arg2, arg7, arg8);
-					if (local1889 != 0L) {
-						local1226 = LocTypeList.get(Integer.MAX_VALUE & (int) (local1889 >>> 32)).wallDecorOffsetScale;
-					}
-					if (local62.anInt4430 == -1 && local62.multiLocs == null && !local62.aBoolean214) {
-						local1950 = local62.method3428(arg9, local165, local153, 4, local199, local213, arg1, null, local330, local173);
-						if (GlRenderer.enabled && local330) {
-							ShadowManager.method4211(local1950.aClass36_Sub1_3, local165 - anIntArray80[arg9] * 8, local201, local173 - anIntArray469[arg9] * 8);
-						}
-						local1934 = local1950.aClass8_10;
-					} else {
-						local1934 = new Loc(arg5, 4, arg9, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
-					}
-					setWallDecor(arg2, arg7, arg8, local199, local1934, null, anIntArray517[arg9], 0, local1226 * anIntArray80[arg9], anIntArray469[arg9] * local1226, local261);
-				} else if (arg6 == 6) {
-					local1226 = 8;
-					local1889 = getWallKey(arg2, arg7, arg8);
-					if (local1889 != 0L) {
-						local1226 = LocTypeList.get(Integer.MAX_VALUE & (int) (local1889 >>> 32)).wallDecorOffsetScale / 2;
-					}
-					if (local62.anInt4430 == -1 && local62.multiLocs == null && !local62.aBoolean214) {
-						local1950 = local62.method3428(arg9 + 4, local165, local153, 4, local199, local213, arg1, null, local330, local173);
-						if (GlRenderer.enabled && local330) {
-							ShadowManager.method4211(local1950.aClass36_Sub1_3, local165 - anIntArray565[arg9] * 8, local201, local173 - anIntArray154[arg9] * 8);
-						}
-						local1934 = local1950.aClass8_10;
-					} else {
-						local1934 = new Loc(arg5, 4, arg9 + 4, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
-					}
-					setWallDecor(arg2, arg7, arg8, local199, local1934, null, 256, arg9, local1226 * anIntArray565[arg9], local1226 * anIntArray154[arg9], local261);
-				} else if (arg6 == 7) {
-					@Pc(2137) int local2137 = arg9 + 2 & 0x3;
-					if (local62.anInt4430 == -1 && local62.multiLocs == null && !local62.aBoolean214) {
-						@Pc(2183) Loc_Class139 local2183 = local62.method3428(local2137 + 4, local165, local153, 4, local199, local213, arg1, null, local330, local173);
-						if (GlRenderer.enabled && local330) {
-							ShadowManager.method4211(local2183.aClass36_Sub1_3, local165, local201, local173);
-						}
-						local387 = local2183.aClass8_10;
-					} else {
-						local387 = new Loc(arg5, 4, local2137 + 4, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
-					}
-					setWallDecor(arg2, arg7, arg8, local199, local387, null, 256, local2137, 0, 0, local261);
-				} else if (arg6 == 8) {
-					local1226 = 8;
-					local1889 = getWallKey(arg2, arg7, arg8);
-					if (local1889 != 0L) {
-						local1226 = LocTypeList.get(Integer.MAX_VALUE & (int) (local1889 >>> 32)).wallDecorOffsetScale / 2;
-					}
-					@Pc(2244) int local2244 = arg9 + 2 & 0x3;
-					@Pc(2289) Entity local2289;
-					if (local62.anInt4430 == -1 && local62.multiLocs == null && !local62.aBoolean214) {
-						@Pc(2297) int local2297 = anIntArray154[arg9] * 8;
-						@Pc(2303) int local2303 = anIntArray565[arg9] * 8;
-						@Pc(2319) Loc_Class139 local2319 = local62.method3428(arg9 + 4, local165, local153, 4, local199, local213, arg1, null, local330, local173);
-						if (GlRenderer.enabled && local330) {
-							ShadowManager.method4211(local2319.aClass36_Sub1_3, local165 - local2303, local201, local173 - local2297);
-						}
-						local1934 = local2319.aClass8_10;
-						local2319 = local62.method3428(local2244 + 4, local165, local153, 4, local199, local213, arg1, null, local330, local173);
-						if (GlRenderer.enabled && local330) {
-							ShadowManager.method4211(local2319.aClass36_Sub1_3, local165 - local2303, local201, local173 - local2297);
-						}
-						local2289 = local2319.aClass8_10;
-					} else {
-						local1934 = new Loc(arg5, 4, arg9 + 4, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
-						local2289 = new Loc(arg5, 4, local2244 + 4, arg0, arg7, arg8, local62.anInt4430, local62.aBoolean209, null);
-					}
-					setWallDecor(arg2, arg7, arg8, local199, local1934, local2289, 256, arg9, local1226 * anIntArray565[arg9], anIntArray154[arg9] * local1226, local261);
+				local1254 = new Loc(locIndex, LocType.WALL_L, orientation + 4, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+				local1269 = new Loc(locIndex, LocType.WALL_L, local1226, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+			}
+			setWall(plane, x, z, averageY, local1254, local1269, WALL_ROTATION_TYPE1[orientation], WALL_ROTATION_TYPE1[local1226], bitset);
+			if (loc.occlude && lowmem) {
+				if (orientation == 0) {
+					occludeFlags[plane][x][z] |= 0x1;
+					occludeFlags[plane][x][z + 1] |= 0x2;
+				} else if (orientation == 1) {
+					occludeFlags[plane][x][z + 1] |= 0x2;
+					occludeFlags[plane][x + 1][z] |= 0x1;
+				} else if (orientation == 2) {
+					occludeFlags[plane][x + 1][z] |= 0x1;
+					occludeFlags[plane][x][z] |= 0x2;
+				} else if (orientation == 3) {
+					occludeFlags[plane][x][z] |= 0x2;
+					occludeFlags[plane][x][z] |= 0x1;
 				}
 			}
+			if (loc.blockwalk != 0 && map != null) {
+				map.flagWall(orientation, locType, loc.blockrange, z, x);
+			}
+			if (loc.walloff != 16) {
+				setWallDecoration(plane, x, z, loc.walloff);
+			}
+		} else if (locType == LocType.WALL_SQUARECORNER) {
+			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
+				local403 = loc.method3428(orientation, local165, currentHeightmap, LocType.WALL_SQUARECORNER, averageY, heightmap, lowmem, null, local330, local173);
+				if (GlRenderer.enabled && local330) {
+					ShadowManager.method4211(local403.aClass36_Sub1_3, local165, diffAverageY, local173);
+				}
+				entity = local403.aClass8_10;
+			} else {
+				entity = new Loc(locIndex, LocType.WALL_SQUARECORNER, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+			}
+			setWall(plane, x, z, averageY, entity, null, LoginManager.anIntArray204[orientation], 0, bitset);
+			if (loc.active && lowmem) {
+				if (orientation == 0) {
+					shadowmap[plane][x][z + 1] = 50;
+				} else if (orientation == 1) {
+					shadowmap[plane][x + 1][z + 1] = 50;
+				} else if (orientation == 2) {
+					shadowmap[plane][x + 1][z] = 50;
+				} else if (orientation == 3) {
+					shadowmap[plane][x][z] = 50;
+				}
+			}
+			if (loc.blockwalk != 0 && map != null) {
+				map.flagWall(orientation, locType, loc.blockrange, z, x);
+			}
+		} else if (locType == LocType.WALL_DIAGONAL) {
+			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
+				local403 = loc.method3428(orientation, local165, currentHeightmap, locType, averageY, heightmap, lowmem, null, local330, local173);
+				if (GlRenderer.enabled && local330) {
+					ShadowManager.method4211(local403.aClass36_Sub1_3, local165, diffAverageY, local173);
+				}
+				entity = local403.aClass8_10;
+			} else {
+				entity = new Loc(locIndex, locType, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+			}
+			method35(plane, x, z, averageY, 1, 1, entity, bitset);
+			if (loc.blockwalk != 0 && map != null) {
+				map.flagScenery(x, loc.blockrange, z, width, length);
+			}
+			if (loc.walloff != 16) {
+				setWallDecoration(plane, x, z, loc.walloff);
+			}
+		} else if (locType == LocType.WALLDECOR_STRAIGHT_XOFFSET) {
+			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
+				local403 = loc.method3428(orientation, local165, currentHeightmap, 4, averageY, heightmap, lowmem, null, local330, local173);
+				if (GlRenderer.enabled && local330) {
+					ShadowManager.method4211(local403.aClass36_Sub1_3, local165, diffAverageY, local173);
+				}
+				entity = local403.aClass8_10;
+			} else {
+				entity = new Loc(locIndex, 4, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+			}
+			setWallDecor(plane, x, z, averageY, entity, null, WALL_ROTATION_TYPE1[orientation], 0, 0, 0, bitset);
+		} else if (locType == LocType.WALLDECOR_STRAIGHT_ZOFFSET) {
+			local1226 = 16;
+			local1889 = getWallKey(plane, x, z);
+			if (local1889 != 0L) {
+				local1226 = LocTypeList.get(Integer.MAX_VALUE & (int) (local1889 >>> 32)).walloff;
+			}
+			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
+				local1950 = loc.method3428(orientation, local165, currentHeightmap, 4, averageY, heightmap, lowmem, null, local330, local173);
+				if (GlRenderer.enabled && local330) {
+					ShadowManager.method4211(local1950.aClass36_Sub1_3, local165 - WALL_DECO_ROT_SIZE_X_DIR[orientation] * 8, diffAverageY, local173 - WALL_DECO_ROT_SIZE_Y_DIR[orientation] * 8);
+				}
+				local1934 = local1950.aClass8_10;
+			} else {
+				local1934 = new Loc(locIndex, 4, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+			}
+			setWallDecor(plane, x, z, averageY, local1934, null, WALL_ROTATION_TYPE1[orientation], 0, local1226 * WALL_DECO_ROT_SIZE_X_DIR[orientation], WALL_DECO_ROT_SIZE_Y_DIR[orientation] * local1226, bitset);
+		} else if (locType == LocType.WALLDECOR_DIAGONAL_XOFFSET) {
+			local1226 = 8;
+			local1889 = getWallKey(plane, x, z);
+			if (local1889 != 0L) {
+				local1226 = LocTypeList.get(Integer.MAX_VALUE & (int) (local1889 >>> 32)).walloff / 2;
+			}
+			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
+				local1950 = loc.method3428(orientation + 4, local165, currentHeightmap, 4, averageY, heightmap, lowmem, null, local330, local173);
+				if (GlRenderer.enabled && local330) {
+					ShadowManager.method4211(local1950.aClass36_Sub1_3, local165 - anIntArray565[orientation] * 8, diffAverageY, local173 - anIntArray154[orientation] * 8);
+				}
+				local1934 = local1950.aClass8_10;
+			} else {
+				local1934 = new Loc(locIndex, 4, orientation + 4, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+			}
+			setWallDecor(plane, x, z, averageY, local1934, null, 256, orientation, local1226 * anIntArray565[orientation], local1226 * anIntArray154[orientation], bitset);
+		} else if (locType == LocType.WALLDECOR_DIAGONAL_ZOFFSET) {
+			@Pc(2137) int local2137 = orientation + 2 & 0x3;
+			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
+				@Pc(2183) Loc_Class139 local2183 = loc.method3428(local2137 + 4, local165, currentHeightmap, 4, averageY, heightmap, lowmem, null, local330, local173);
+				if (GlRenderer.enabled && local330) {
+					ShadowManager.method4211(local2183.aClass36_Sub1_3, local165, diffAverageY, local173);
+				}
+				entity = local2183.aClass8_10;
+			} else {
+				entity = new Loc(locIndex, 4, local2137 + 4, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+			}
+			setWallDecor(plane, x, z, averageY, entity, null, 256, local2137, 0, 0, bitset);
+		} else if (locType == LocType.WALLDECOR_DIAGONAL_BOTH) {
+			local1226 = 8;
+			local1889 = getWallKey(plane, x, z);
+			if (local1889 != 0L) {
+				local1226 = LocTypeList.get(Integer.MAX_VALUE & (int) (local1889 >>> 32)).walloff / 2;
+			}
+			@Pc(2244) int local2244 = orientation + 2 & 0x3;
+			@Pc(2289) Entity local2289;
+			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
+				@Pc(2297) int local2297 = anIntArray154[orientation] * 8;
+				@Pc(2303) int local2303 = anIntArray565[orientation] * 8;
+				@Pc(2319) Loc_Class139 local2319 = loc.method3428(orientation + 4, local165, currentHeightmap, 4, averageY, heightmap, lowmem, null, local330, local173);
+				if (GlRenderer.enabled && local330) {
+					ShadowManager.method4211(local2319.aClass36_Sub1_3, local165 - local2303, diffAverageY, local173 - local2297);
+				}
+				local1934 = local2319.aClass8_10;
+				local2319 = loc.method3428(local2244 + 4, local165, currentHeightmap, 4, averageY, heightmap, lowmem, null, local330, local173);
+				if (GlRenderer.enabled && local330) {
+					ShadowManager.method4211(local2319.aClass36_Sub1_3, local165 - local2303, diffAverageY, local173 - local2297);
+				}
+				local2289 = local2319.aClass8_10;
+			} else {
+				local1934 = new Loc(locIndex, 4, orientation + 4, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+				local2289 = new Loc(locIndex, 4, local2244 + 4, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+			}
+			setWallDecor(plane, x, z, averageY, local1934, local2289, 256, orientation, local1226 * anIntArray565[orientation], anIntArray154[orientation] * local1226, bitset);
 		}
 	}
 
 	@OriginalMember(owner = "client!ch", name = "c", descriptor = "(I)V")
 	public static void method846() {
-		if (!allLevelsAreVisible() && LoginManager.centralPlane != Player.level) {
+		if (!allLevelsAreVisible() && centralPlane != Player.level) {
 			LoginManager.method2463(Player.level, centralZoneZ, centralZoneX, PlayerList.self.movementQueueZ[0], false, PlayerList.self.movementQueueX[0]);
 		} else if (Player.level != LightingManager.anInt2875 && MiniMap.renderMap(Player.level)) {
 			LightingManager.anInt2875 = Player.level;
@@ -2788,42 +2815,49 @@ public class SceneGraph {
 	}
 
 	@OriginalMember(owner = "client!jk", name = "a", descriptor = "(IZ[BII[Lclient!mj;)V")
-	public static void method2437(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1, @OriginalArg(2) byte[] arg2, @OriginalArg(3) int arg3, @OriginalArg(5) CollisionMap[] arg4) {
-		@Pc(10) Buffer local10 = new Buffer(arg2);
-		@Pc(12) int local12 = -1;
+	public static void readLocs(@OriginalArg(0) int baseX, @OriginalArg(1) boolean highmem, @OriginalArg(2) byte[] src, @OriginalArg(3) int baseZ, @OriginalArg(5) CollisionMap[] maps) {
+		@Pc(10) Buffer b = new Buffer(src);
+
+		@Pc(12) int locIndex = -1;
 		while (true) {
-			@Pc(16) int local16 = local10.gVarSmart();
-			if (local16 == 0) {
+			@Pc(16) int locOffset = b.gVarSmart();
+			if (locOffset == 0) {
 				return;
 			}
-			local12 += local16;
-			@Pc(27) int local27 = 0;
+			locIndex += locOffset;
+
+			@Pc(27) int position = 0;
 			while (true) {
-				@Pc(31) int local31 = local10.gsmarts();
-				if (local31 == 0) {
+				@Pc(31) int posOffset = b.gsmarts();
+				if (posOffset == 0) {
 					break;
 				}
-				local27 += local31 - 1;
-				@Pc(46) int local46 = local27 & 0x3F;
-				@Pc(50) int local50 = local27 >> 12;
-				@Pc(56) int local56 = local27 >> 6 & 0x3F;
-				@Pc(60) int local60 = local10.g1();
-				@Pc(64) int local64 = local60 >> 2;
-				@Pc(68) int local68 = local60 & 0x3;
-				@Pc(72) int local72 = arg0 + local56;
-				@Pc(76) int local76 = local46 + arg3;
-				if (local72 > 0 && local76 > 0 && local72 < 103 && local76 < 103) {
-					@Pc(90) CollisionMap local90 = null;
-					if (!arg1) {
-						@Pc(95) int local95 = local50;
-						if ((tileFlags[1][local72][local76] & 0x2) == 2) {
-							local95 = local50 - 1;
+				position += posOffset - 1;
+
+				@Pc(46) int z = position & 0x3F;
+				@Pc(56) int x = position >> 6 & 0x3F;
+				@Pc(50) int plane = position >> 12;
+
+				@Pc(60) int flags = b.g1();
+				@Pc(64) int type = flags >> 2;
+				@Pc(68) int orientation = flags & 0x3;
+
+				@Pc(72) int tileX = x + baseX;
+				@Pc(76) int tileZ = z + baseZ;
+				if (tileX > 0 && tileZ > 0 && tileX < 103 && tileZ < 103) {
+					@Pc(90) CollisionMap map = null;
+					if (!highmem) {
+						@Pc(95) int markingPlane = plane;
+						// might be used with bridges?
+						if ((renderFlags[1][tileX][tileZ] & 0x2) == 2) {
+							markingPlane--;
 						}
-						if (local95 >= 0) {
-							local90 = arg4[local95];
+						if (markingPlane >= 0) {
+							map = maps[markingPlane];
 						}
 					}
-					method3397(local50, !arg1, local50, arg1, local90, local12, local64, local72, local76, local68);
+
+					addLoc(plane, !highmem, plane, highmem, map, locIndex, type, tileX, tileZ, orientation);
 				}
 			}
 		}
@@ -3243,7 +3277,7 @@ public class SceneGraph {
 	}
 
 	@OriginalMember(owner = "client!bh", name = "a", descriptor = "(IIII)V")
-	public static void method559(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	public static void setWallDecoration(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
 		@Pc(7) Tile local7 = tiles[arg0][arg1][arg2];
 		if (local7 == null) {
 			return;
@@ -3775,24 +3809,24 @@ public class SceneGraph {
 			return;
 		}
 		@Pc(39) int local39;
-		if (!allLevelsAreVisible() && (tileFlags[0][arg1][arg4] & 0x2) == 0) {
+		if (!allLevelsAreVisible() && (renderFlags[0][arg1][arg4] & 0x2) == 0) {
 			local39 = arg2;
-			if ((tileFlags[arg2][arg1][arg4] & 0x8) != 0) {
+			if ((renderFlags[arg2][arg1][arg4] & 0x8) != 0) {
 				local39 = 0;
 			}
-			if (local39 != LoginManager.centralPlane) {
+			if (local39 != centralPlane) {
 				return;
 			}
 		}
 		local39 = arg2;
-		if (arg2 < 3 && (tileFlags[1][arg1][arg4] & 0x2) == 2) {
+		if (arg2 < 3 && (renderFlags[1][arg1][arg4] & 0x2) == 2) {
 			local39 = arg2 + 1;
 		}
 		method1144(arg4, arg1, arg2, arg6, local39, PathFinder.collisionMaps[arg2]);
 		if (arg0 >= 0) {
 			@Pc(92) boolean local92 = Preferences.showGroundDecorations;
 			Preferences.showGroundDecorations = true;
-			method3397(local39, false, arg2, false, PathFinder.collisionMaps[arg2], arg0, arg5, arg1, arg4, arg3);
+			addLoc(local39, false, arg2, false, PathFinder.collisionMaps[arg2], arg0, arg5, arg1, arg4, arg3);
 			Preferences.showGroundDecorations = local92;
 		}
 	}
@@ -3809,9 +3843,9 @@ public class SceneGraph {
 	}
 
 	@OriginalMember(owner = "client!ac", name = "a", descriptor = "(IIII)I")
-	public static int method22(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2) {
-		if ((tileFlags[arg2][arg1][arg0] & 0x8) == 0) {
-			return arg2 <= 0 || (tileFlags[1][arg1][arg0] & 0x2) == 0 ? arg2 : arg2 - 1;
+	public static int getRenderLevel(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(3) int arg2) {
+		if ((renderFlags[arg2][arg1][arg0] & 0x8) == 0) {
+			return arg2 <= 0 || (renderFlags[1][arg1][arg0] & 0x2) == 0 ? arg2 : arg2 - 1;
 		} else {
 			return 0;
 		}
@@ -5021,7 +5055,7 @@ public class SceneGraph {
 		for (local3 = arg1; local3 <= arg3 + arg1; local3++) {
 			for (local10 = arg2; local10 <= arg4 + arg2; local10++) {
 				if (local10 >= 0 && local10 < 104 && local3 >= 0 && local3 < 104) {
-					aByteArrayArrayArray9[arg0][local10][local3] = 127;
+					shadowmap[arg0][local10][local3] = 127;
 				}
 			}
 		}
@@ -5233,7 +5267,7 @@ public class SceneGraph {
 					local194 = local529.z >> 7;
 					local190 = local529.x >> 7;
 					if (local190 >= 0 && local194 >= 0 && local190 < 104 && local194 < 104) {
-						local529.aBoolean125 = (tileFlags[1][local190][local194] & 0x2) != 0;
+						local529.aBoolean125 = (renderFlags[1][local190][local194] & 0x2) != 0;
 						local529.y = tileHeights[local529.level][local190][local194] - local529.y;
 						LightingManager.method2389(local529);
 					}
@@ -5399,7 +5433,7 @@ public class SceneGraph {
 						local417 = local517.x >> 7;
 						local255 = local517.z >> 7;
 						if (local417 >= 0 && local255 >= 0 && local417 < 104 && local255 < 104) {
-							local517.aBoolean125 = (tileFlags[1][local417][local255] & 0x2) != 0;
+							local517.aBoolean125 = (renderFlags[1][local417][local255] & 0x2) != 0;
 							local517.y = tileHeights[local517.level][local417][local255] - local517.y;
 							LightingManager.method2389(local517);
 						}

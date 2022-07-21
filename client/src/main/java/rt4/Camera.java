@@ -120,7 +120,7 @@ public class Camera {
 			for (local64 = local33 - 4; local64 <= local33 + 4; local64++) {
 				for (@Pc(73) int local73 = local37 - 4; local73 <= local37 + 4; local73++) {
 					@Pc(80) int local80 = Player.level;
-					if (local80 < 3 && (SceneGraph.tileFlags[1][local64][local73] & 0x2) == 2) {
+					if (local80 < 3 && (SceneGraph.renderFlags[1][local64][local73] & 0x2) == 2) {
 						local80++;
 					}
 					@Pc(117) int local117 = (SceneGraph.aByteArrayArrayArray13[local80][local64][local73] & 0xFF) * 8 + local43 - SceneGraph.tileHeights[local80][local64][local73];
