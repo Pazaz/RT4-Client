@@ -34,12 +34,12 @@ public class AreaSoundManager {
 		sound.minXFine = x * 128;
 		sound.level = level;
 		if (loc != null) {
-			sound.sounds = loc.anIntArray381;
-			sound.radius = loc.soundRadius * 128;
-			sound.maxInterval = loc.anInt4414;
+			sound.sounds = loc.bgsounds;
+			sound.radius = loc.bgsoundrange * 128;
+			sound.maxInterval = loc.bgsoundmax;
 			sound.locType = loc;
-			sound.sound = loc.sound;
-			sound.minInterval = loc.anInt4419;
+			sound.sound = loc.bgsound;
+			sound.minInterval = loc.bgsoundmin;
 			@Pc(57) int local57 = loc.width;
 			@Pc(60) int local60 = loc.length;
 			if (arg2 == 1 || arg2 == 3) {

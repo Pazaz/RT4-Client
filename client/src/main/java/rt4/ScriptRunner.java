@@ -5588,7 +5588,7 @@ public final class ScriptRunner {
 										int1 = intStack[isp];
 										local5294 = ParamTypeList.get(int3);
 										if (local5294.isString()) {
-											stringStack[ssp++] = LocTypeList.get(int1).method3430(local5294.defaultString, int3);
+											stringStack[ssp++] = LocTypeList.get(int1).getParam(local5294.defaultString, int3);
 										} else {
 											intStack[isp++] = LocTypeList.get(int1).getParam(local5294.defaultInt, int3);
 										}
