@@ -1179,7 +1179,7 @@ public class LoginManager {
 						} while (local72 >= 103);
 					} while (local68 >= 103);
 					local95 = LocTypeList.get(local17);
-				} while (local78 == 22 && !Preferences.showGroundDecorations && local95.interactive == 0 && local95.blockwalk != 1 && !local95.forcedecor);
+				} while (local78 == 22 && !Preferences.showGroundDecorations && local95.interactable == 0 && local95.blockwalk != 1 && !local95.forcedecor);
 				local39 = true;
 				if (!local95.isReady()) {
 					local15 = false;

@@ -2454,7 +2454,7 @@ public class SceneGraph {
 			heightmap = tileHeights[currentPlane + 1];
 		}
 
-		if (loc.interactive == 0 || highmem) {
+		if (loc.interactable == 0 || highmem) {
 			bitset |= Long.MIN_VALUE;
 		}
 
@@ -2480,7 +2480,7 @@ public class SceneGraph {
 		@Pc(1950) Loc_Class139 local1950;
 
 		if (locType == LocType.GROUNDDECOR) {
-			if (Preferences.showGroundDecorations || loc.interactive != 0 || loc.blockwalk == 1 || loc.forcedecor) {
+			if (Preferences.showGroundDecorations || loc.interactable != 0 || loc.blockwalk == 1 || loc.forcedecor) {
 				if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
 					local403 = loc.method3428(orientation, local165, currentHeightmap, LocType.GROUNDDECOR, averageY, heightmap, lowmem, null, local330, local173);
 					if (GlRenderer.enabled && local330) {

@@ -477,7 +477,7 @@ public class MiniMap {
 
 	@OriginalMember(owner = "client!cj", name = "a", descriptor = "(ILclient!pb;ZIIII)Z")
 	public static boolean renderScenery(@OriginalArg(0) int arg0, @OriginalArg(1) LocType arg1, @OriginalArg(5) int arg2, @OriginalArg(6) int arg3) {
-		@Pc(10) MsiType msiType = MsiTypeList.get(arg1.mapSceneId);
+		@Pc(10) MsiType msiType = MsiTypeList.get(arg1.mapscene);
 		if (msiType.spriteId == -1) {
 			return true;
 		}
@@ -542,7 +542,7 @@ public class MiniMap {
 			local35 = (int) local14 >> 14 & 0x1F;
 			local42 = Integer.MAX_VALUE & (int) (local14 >>> 32);
 			local46 = LocTypeList.get(local42);
-			if (local46.mapSceneId == -1) {
+			if (local46.mapscene == -1) {
 				local65 = arg1;
 				if (local14 > 0L) {
 					local65 = arg3;
@@ -616,7 +616,7 @@ public class MiniMap {
 			local35 = (int) local14 >> 14 & 0x1F;
 			local42 = (int) (local14 >>> 32) & Integer.MAX_VALUE;
 			local46 = LocTypeList.get(local42);
-			if (local46.mapSceneId == -1) {
+			if (local46.mapscene == -1) {
 				if (local35 == 9) {
 					local65 = 15658734;
 					if (local14 > 0L) {
@@ -645,7 +645,7 @@ public class MiniMap {
 			local28 = (int) local14 >> 20 & 0x3;
 			local35 = (int) (local14 >>> 32) & Integer.MAX_VALUE;
 			@Pc(586) LocType local586 = LocTypeList.get(local35);
-			return local586.mapSceneId == -1 || renderScenery(arg0, local586, arg2, local28);
+			return local586.mapscene == -1 || renderScenery(arg0, local586, arg2, local28);
 		}
 		return true;
 	}
