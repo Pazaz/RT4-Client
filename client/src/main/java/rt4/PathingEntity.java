@@ -279,7 +279,7 @@ public abstract class PathingEntity extends Entity {
 
 	@OriginalMember(owner = "client!fe", name = "a", descriptor = "(IIIIZ)V")
 	public final void method2683(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) boolean arg3) {
-		if (this.seqId != -1 && SeqTypeList.get(this.seqId).anInt5349 == 1) {
+		if (this.seqId != -1 && SeqTypeList.get(this.seqId).movetype == 1) {
 			this.seqId = -1;
 		}
 		if (!arg3) {
@@ -320,7 +320,7 @@ public abstract class PathingEntity extends Entity {
 			local10--;
 			local15++;
 		}
-		if (this.seqId != -1 && SeqTypeList.get(this.seqId).anInt5349 == 1) {
+		if (this.seqId != -1 && SeqTypeList.get(this.seqId).movetype == 1) {
 			this.seqId = -1;
 		}
 		if (this.movementQueueSize < 9) {
@@ -377,13 +377,13 @@ public abstract class PathingEntity extends Entity {
 		@Pc(53) int local53 = -local27 / 2;
 		@Pc(64) int local64 = local53 * local43 - local48 * local39 >> 16;
 		@Pc(75) int local75 = local39 * local53 + local43 * local48 >> 16;
-		@Pc(87) int local87 = SceneGraph.getTileHeight(Player.level, local75 + this.xFine, this.zFine + local64);
+		@Pc(87) int local87 = SceneGraph.getTileHeight(Player.plane, local75 + this.xFine, this.zFine + local64);
 		@Pc(91) int local91 = local24 / 2;
 		@Pc(96) int local96 = -local27 / 2;
 		@Pc(106) int local106 = local91 * local43 + local96 * local39 >> 16;
 		@Pc(110) int local110 = local27 / 2;
 		@Pc(121) int local121 = local96 * local43 - local91 * local39 >> 16;
-		@Pc(134) int local134 = SceneGraph.getTileHeight(Player.level, local106 + this.xFine, this.zFine - -local121);
+		@Pc(134) int local134 = SceneGraph.getTileHeight(Player.plane, local106 + this.xFine, this.zFine - -local121);
 		@Pc(139) int local139 = -local24 / 2;
 		@Pc(150) int local150 = local110 * local43 - local39 * local139 >> 16;
 		@Pc(154) int local154 = local27 / 2;
@@ -391,9 +391,9 @@ public abstract class PathingEntity extends Entity {
 		@Pc(169) int local169 = local39 * local110 + local43 * local139 >> 16;
 		@Pc(179) int local179 = local154 * local43 - local39 * local158 >> 16;
 		@Pc(189) int local189 = local39 * local154 + local43 * local158 >> 16;
-		@Pc(201) int local201 = SceneGraph.getTileHeight(Player.level, this.xFine + local169, local150 + this.zFine);
+		@Pc(201) int local201 = SceneGraph.getTileHeight(Player.plane, this.xFine + local169, local150 + this.zFine);
 		@Pc(212) int local212 = local134 > local87 ? local87 : local134;
-		@Pc(224) int local224 = SceneGraph.getTileHeight(Player.level, local189 + this.xFine, local179 + this.zFine);
+		@Pc(224) int local224 = SceneGraph.getTileHeight(Player.plane, local189 + this.xFine, local179 + this.zFine);
 		@Pc(231) int local231 = local224 > local201 ? local201 : local224;
 		@Pc(238) int local238 = local224 > local134 ? local134 : local224;
 		@Pc(245) int local245 = local201 <= local87 ? local201 : local87;

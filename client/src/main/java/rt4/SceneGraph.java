@@ -1397,7 +1397,7 @@ public class SceneGraph {
 	}
 
 	@OriginalMember(owner = "client!dg", name = "a", descriptor = "(IIIIILclient!th;IJZ)Z")
-	public static boolean method1141(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) Entity arg5, @OriginalArg(6) int arg6, @OriginalArg(7) long arg7, @OriginalArg(8) boolean arg8) {
+	public static boolean add(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) Entity arg5, @OriginalArg(6) int arg6, @OriginalArg(7) long arg7, @OriginalArg(8) boolean arg8) {
 		if (arg5 == null) {
 			return true;
 		}
@@ -2473,20 +2473,20 @@ public class SceneGraph {
 		@Pc(330) boolean local330 = loc.aBoolean212 & !highmem;
 		bitset |= (long) locIndex << 32;
 		@Pc(387) Entity entity;
-		@Pc(403) Loc_Class139 local403;
+		@Pc(403) LocEntity local403;
 		@Pc(1226) int local1226;
 		@Pc(1889) long local1889;
 		@Pc(1934) Entity local1934;
-		@Pc(1950) Loc_Class139 local1950;
+		@Pc(1950) LocEntity local1950;
 
 		if (locType == LocType.GROUNDDECOR) {
 			if (Preferences.showGroundDecorations || loc.interactable != 0 || loc.blockwalk == 1 || loc.forcedecor) {
 				if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
 					local403 = loc.method3428(orientation, local165, currentHeightmap, LocType.GROUNDDECOR, averageY, heightmap, lowmem, null, local330, local173);
 					if (GlRenderer.enabled && local330) {
-						ShadowManager.method4211(local403.aClass36_Sub1_3, local165, diffAverageY, local173);
+						ShadowManager.method4211(local403.sprite, local165, diffAverageY, local173);
 					}
-					entity = local403.aClass8_10;
+					entity = local403.model;
 				} else {
 					entity = new Loc(locIndex, LocType.GROUNDDECOR, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
 				}
@@ -2501,9 +2501,9 @@ public class SceneGraph {
 			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
 				local403 = loc.method3428(locType == LocType.CENTREPIECE_DIAGONAL ? orientation + 4 : orientation, local165, currentHeightmap, LocType.CENTREPIECE_STRAIGHT, averageY, heightmap, lowmem, null, local330, local173);
 				if (GlRenderer.enabled && local330) {
-					ShadowManager.method4211(local403.aClass36_Sub1_3, local165, diffAverageY, local173);
+					ShadowManager.method4211(local403.sprite, local165, diffAverageY, local173);
 				}
-				entity = local403.aClass8_10;
+				entity = local403.model;
 			} else {
 				entity = new Loc(locIndex, LocType.CENTREPIECE_STRAIGHT, locType == LocType.CENTREPIECE_DIAGONAL ? orientation + 4 : orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
 			}
@@ -2535,9 +2535,9 @@ public class SceneGraph {
 			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
 				local403 = loc.method3428(orientation, local165, currentHeightmap, locType, averageY, heightmap, lowmem, null, local330, local173);
 				if (GlRenderer.enabled && local330) {
-					ShadowManager.method4211(local403.aClass36_Sub1_3, local165, diffAverageY, local173);
+					ShadowManager.method4211(local403.sprite, local165, diffAverageY, local173);
 				}
-				entity = local403.aClass8_10;
+				entity = local403.model;
 			} else {
 				entity = new Loc(locIndex, locType, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
 			}
@@ -2554,9 +2554,9 @@ public class SceneGraph {
 			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
 				local403 = loc.method3428(orientation, local165, currentHeightmap, LocType.WALL_STRAIGHT, averageY, heightmap, lowmem, null, local330, local173);
 				if (GlRenderer.enabled && local330) {
-					ShadowManager.method4211(local403.aClass36_Sub1_3, local165, diffAverageY, local173);
+					ShadowManager.method4211(local403.sprite, local165, diffAverageY, local173);
 				}
-				entity = local403.aClass8_10;
+				entity = local403.model;
 			} else {
 				entity = new Loc(locIndex, LocType.WALL_STRAIGHT, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
 			}
@@ -2614,9 +2614,9 @@ public class SceneGraph {
 			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
 				local403 = loc.method3428(orientation, local165, currentHeightmap, LocType.WALL_DIAGONALCORNER, averageY, heightmap, lowmem, null, local330, local173);
 				if (GlRenderer.enabled && local330) {
-					ShadowManager.method4211(local403.aClass36_Sub1_3, local165, diffAverageY, local173);
+					ShadowManager.method4211(local403.sprite, local165, diffAverageY, local173);
 				}
-				entity = local403.aClass8_10;
+				entity = local403.model;
 			} else {
 				entity = new Loc(locIndex, LocType.WALL_DIAGONALCORNER, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
 			}
@@ -2642,16 +2642,16 @@ public class SceneGraph {
 			@Pc(1269) Entity local1269;
 			@Pc(1254) Entity local1254;
 			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
-				@Pc(1287) Loc_Class139 local1287 = loc.method3428(orientation + 4, local165, currentHeightmap, LocType.WALL_L, averageY, heightmap, lowmem, null, local330, local173);
+				@Pc(1287) LocEntity local1287 = loc.method3428(orientation + 4, local165, currentHeightmap, LocType.WALL_L, averageY, heightmap, lowmem, null, local330, local173);
 				if (GlRenderer.enabled && local330) {
-					ShadowManager.method4211(local1287.aClass36_Sub1_3, local165, diffAverageY, local173);
+					ShadowManager.method4211(local1287.sprite, local165, diffAverageY, local173);
 				}
-				local1254 = local1287.aClass8_10;
+				local1254 = local1287.model;
 				local1287 = loc.method3428(local1226, local165, currentHeightmap, LocType.WALL_L, averageY, heightmap, lowmem, null, local330, local173);
 				if (GlRenderer.enabled && local330) {
-					ShadowManager.method4211(local1287.aClass36_Sub1_3, local165, diffAverageY, local173);
+					ShadowManager.method4211(local1287.sprite, local165, diffAverageY, local173);
 				}
-				local1269 = local1287.aClass8_10;
+				local1269 = local1287.model;
 			} else {
 				local1254 = new Loc(locIndex, LocType.WALL_L, orientation + 4, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
 				local1269 = new Loc(locIndex, LocType.WALL_L, local1226, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
@@ -2682,9 +2682,9 @@ public class SceneGraph {
 			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
 				local403 = loc.method3428(orientation, local165, currentHeightmap, LocType.WALL_SQUARECORNER, averageY, heightmap, lowmem, null, local330, local173);
 				if (GlRenderer.enabled && local330) {
-					ShadowManager.method4211(local403.aClass36_Sub1_3, local165, diffAverageY, local173);
+					ShadowManager.method4211(local403.sprite, local165, diffAverageY, local173);
 				}
-				entity = local403.aClass8_10;
+				entity = local403.model;
 			} else {
 				entity = new Loc(locIndex, LocType.WALL_SQUARECORNER, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
 			}
@@ -2707,9 +2707,9 @@ public class SceneGraph {
 			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
 				local403 = loc.method3428(orientation, local165, currentHeightmap, locType, averageY, heightmap, lowmem, null, local330, local173);
 				if (GlRenderer.enabled && local330) {
-					ShadowManager.method4211(local403.aClass36_Sub1_3, local165, diffAverageY, local173);
+					ShadowManager.method4211(local403.sprite, local165, diffAverageY, local173);
 				}
-				entity = local403.aClass8_10;
+				entity = local403.model;
 			} else {
 				entity = new Loc(locIndex, locType, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
 			}
@@ -2724,9 +2724,9 @@ public class SceneGraph {
 			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
 				local403 = loc.method3428(orientation, local165, currentHeightmap, 4, averageY, heightmap, lowmem, null, local330, local173);
 				if (GlRenderer.enabled && local330) {
-					ShadowManager.method4211(local403.aClass36_Sub1_3, local165, diffAverageY, local173);
+					ShadowManager.method4211(local403.sprite, local165, diffAverageY, local173);
 				}
-				entity = local403.aClass8_10;
+				entity = local403.model;
 			} else {
 				entity = new Loc(locIndex, 4, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
 			}
@@ -2740,9 +2740,9 @@ public class SceneGraph {
 			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
 				local1950 = loc.method3428(orientation, local165, currentHeightmap, 4, averageY, heightmap, lowmem, null, local330, local173);
 				if (GlRenderer.enabled && local330) {
-					ShadowManager.method4211(local1950.aClass36_Sub1_3, local165 - WALL_DECO_ROT_SIZE_X_DIR[orientation] * 8, diffAverageY, local173 - WALL_DECO_ROT_SIZE_Y_DIR[orientation] * 8);
+					ShadowManager.method4211(local1950.sprite, local165 - WALL_DECO_ROT_SIZE_X_DIR[orientation] * 8, diffAverageY, local173 - WALL_DECO_ROT_SIZE_Y_DIR[orientation] * 8);
 				}
-				local1934 = local1950.aClass8_10;
+				local1934 = local1950.model;
 			} else {
 				local1934 = new Loc(locIndex, 4, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
 			}
@@ -2756,9 +2756,9 @@ public class SceneGraph {
 			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
 				local1950 = loc.method3428(orientation + 4, local165, currentHeightmap, 4, averageY, heightmap, lowmem, null, local330, local173);
 				if (GlRenderer.enabled && local330) {
-					ShadowManager.method4211(local1950.aClass36_Sub1_3, local165 - anIntArray565[orientation] * 8, diffAverageY, local173 - anIntArray154[orientation] * 8);
+					ShadowManager.method4211(local1950.sprite, local165 - anIntArray565[orientation] * 8, diffAverageY, local173 - anIntArray154[orientation] * 8);
 				}
-				local1934 = local1950.aClass8_10;
+				local1934 = local1950.model;
 			} else {
 				local1934 = new Loc(locIndex, 4, orientation + 4, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
 			}
@@ -2766,11 +2766,11 @@ public class SceneGraph {
 		} else if (locType == LocType.WALLDECOR_DIAGONAL_ZOFFSET) {
 			@Pc(2137) int local2137 = orientation + 2 & 0x3;
 			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
-				@Pc(2183) Loc_Class139 local2183 = loc.method3428(local2137 + 4, local165, currentHeightmap, 4, averageY, heightmap, lowmem, null, local330, local173);
+				@Pc(2183) LocEntity local2183 = loc.method3428(local2137 + 4, local165, currentHeightmap, 4, averageY, heightmap, lowmem, null, local330, local173);
 				if (GlRenderer.enabled && local330) {
-					ShadowManager.method4211(local2183.aClass36_Sub1_3, local165, diffAverageY, local173);
+					ShadowManager.method4211(local2183.sprite, local165, diffAverageY, local173);
 				}
-				entity = local2183.aClass8_10;
+				entity = local2183.model;
 			} else {
 				entity = new Loc(locIndex, 4, local2137 + 4, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
 			}
@@ -2786,16 +2786,16 @@ public class SceneGraph {
 			if (loc.anim == -1 && loc.multiLocs == null && !loc.aBoolean214) {
 				@Pc(2297) int local2297 = anIntArray154[orientation] * 8;
 				@Pc(2303) int local2303 = anIntArray565[orientation] * 8;
-				@Pc(2319) Loc_Class139 local2319 = loc.method3428(orientation + 4, local165, currentHeightmap, 4, averageY, heightmap, lowmem, null, local330, local173);
+				@Pc(2319) LocEntity local2319 = loc.method3428(orientation + 4, local165, currentHeightmap, 4, averageY, heightmap, lowmem, null, local330, local173);
 				if (GlRenderer.enabled && local330) {
-					ShadowManager.method4211(local2319.aClass36_Sub1_3, local165 - local2303, diffAverageY, local173 - local2297);
+					ShadowManager.method4211(local2319.sprite, local165 - local2303, diffAverageY, local173 - local2297);
 				}
-				local1934 = local2319.aClass8_10;
+				local1934 = local2319.model;
 				local2319 = loc.method3428(local2244 + 4, local165, currentHeightmap, 4, averageY, heightmap, lowmem, null, local330, local173);
 				if (GlRenderer.enabled && local330) {
-					ShadowManager.method4211(local2319.aClass36_Sub1_3, local165 - local2303, diffAverageY, local173 - local2297);
+					ShadowManager.method4211(local2319.sprite, local165 - local2303, diffAverageY, local173 - local2297);
 				}
-				local2289 = local2319.aClass8_10;
+				local2289 = local2319.model;
 			} else {
 				local1934 = new Loc(locIndex, 4, orientation + 4, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
 				local2289 = new Loc(locIndex, 4, local2244 + 4, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
@@ -2806,10 +2806,10 @@ public class SceneGraph {
 
 	@OriginalMember(owner = "client!ch", name = "c", descriptor = "(I)V")
 	public static void method846() {
-		if (!allLevelsAreVisible() && centralPlane != Player.level) {
-			LoginManager.method2463(Player.level, centralZoneZ, centralZoneX, PlayerList.self.movementQueueZ[0], false, PlayerList.self.movementQueueX[0]);
-		} else if (Player.level != LightingManager.anInt2875 && MiniMap.renderMap(Player.level)) {
-			LightingManager.anInt2875 = Player.level;
+		if (!allLevelsAreVisible() && centralPlane != Player.plane) {
+			LoginManager.method2463(Player.plane, centralZoneZ, centralZoneX, PlayerList.self.movementQueueZ[0], false, PlayerList.self.movementQueueX[0]);
+		} else if (Player.plane != LightingManager.anInt2875 && MiniMap.renderMap(Player.plane)) {
+			LightingManager.anInt2875 = Player.plane;
 			ScriptRunner.method2218();
 		}
 	}

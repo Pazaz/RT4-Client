@@ -12,10 +12,10 @@ public final class Loc extends Entity {
 	public static final int[] LAYERS = new int[]{0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3};
 
 	@OriginalMember(owner = "client!ci", name = "q", descriptor = "Lclient!ek;")
-	public static SoftwareIndexedSprite aClass36_Sub1_1 = null;
+	public static SoftwareIndexedSprite sprite1 = null;
 
 	@OriginalMember(owner = "client!dc", name = "U", descriptor = "Lclient!ga;")
-	private ParticleSystem aClass47_Sub1_2;
+	private ParticleSystem particles;
 
 	@OriginalMember(owner = "client!dc", name = "x", descriptor = "I")
 	private int anInt1296 = 0;
@@ -30,7 +30,7 @@ public final class Loc extends Entity {
 	private boolean aBoolean81 = true;
 
 	@OriginalMember(owner = "client!dc", name = "Q", descriptor = "Lclient!ek;")
-	private SoftwareIndexedSprite aClass36_Sub1_2 = null;
+	private SoftwareIndexedSprite sprite2 = null;
 
 	@OriginalMember(owner = "client!dc", name = "T", descriptor = "I")
 	private final int anInt1311 = -32768;
@@ -78,7 +78,7 @@ public final class Loc extends Entity {
 	private int anInt1320;
 
 	@OriginalMember(owner = "client!dc", name = "<init>", descriptor = "(IIIIIIIZLclient!th;)V")
-	public Loc(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) boolean arg7, @OriginalArg(8) Entity arg8) {
+	public Loc(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int seqId, @OriginalArg(7) boolean arg7, @OriginalArg(8) Entity arg8) {
 		this.anInt1303 = arg3;
 		this.anInt1295 = arg2;
 		this.anInt1308 = arg4;
@@ -99,8 +99,8 @@ public final class Loc extends Entity {
 				}
 			}
 		}
-		if (arg6 != -1) {
-			this.aClass144_2 = SeqTypeList.get(arg6);
+		if (seqId != -1) {
+			this.aClass144_2 = SeqTypeList.get(seqId);
 			this.anInt1297 = 0;
 			if (this.aClass144_2.frames.length <= 1) {
 				this.anInt1304 = 0;
@@ -109,7 +109,7 @@ public final class Loc extends Entity {
 			}
 			this.anInt1317 = 1;
 			this.anInt1320 = client.loop - 1;
-			if (this.aClass144_2.anInt5347 == 0 && arg8 != null && arg8 instanceof Loc) {
+			if (this.aClass144_2.exactmove == 0 && arg8 != null && arg8 instanceof Loc) {
 				@Pc(142) Loc local142 = (Loc) arg8;
 				if (this.aClass144_2 == local142.aClass144_2) {
 					this.anInt1297 = local142.anInt1297;
@@ -119,16 +119,16 @@ public final class Loc extends Entity {
 					return;
 				}
 			}
-			if (arg7 && this.aClass144_2.anInt5362 != -1) {
+			if (arg7 && this.aClass144_2.replayoff != -1) {
 				this.anInt1297 = (int) (Math.random() * (double) this.aClass144_2.frames.length);
 				this.anInt1304 = this.anInt1297 + 1;
 				if (this.anInt1304 >= this.aClass144_2.frames.length) {
-					this.anInt1304 -= this.aClass144_2.anInt5362;
+					this.anInt1304 -= this.aClass144_2.replayoff;
 					if (this.anInt1304 < 0 || this.anInt1304 >= this.aClass144_2.frames.length) {
 						this.anInt1304 = -1;
 					}
 				}
-				this.anInt1317 = (int) (Math.random() * (double) this.aClass144_2.anIntArray474[this.anInt1297]) + 1;
+				this.anInt1317 = (int) (Math.random() * (double) this.aClass144_2.frameDelay[this.anInt1297]) + 1;
 				this.anInt1320 = client.loop - this.anInt1317;
 			}
 		}
@@ -187,8 +187,8 @@ public final class Loc extends Entity {
 		if (arg7 < 3) {
 			local158 = SceneGraph.tileHeights[arg7 + 1];
 		}
-		@Pc(215) Loc_Class139 local215 = arg0.method3428(arg2, local80, local120, arg4, local148, local158, false, null, true, local88);
-		ShadowManager.method4207(local215.aClass36_Sub1_3, local80 - arg3, local122, local88 - arg1);
+		@Pc(215) LocEntity local215 = arg0.method3428(arg2, local80, local120, arg4, local148, local158, false, null, true, local88);
+		ShadowManager.method4207(local215.sprite, local80 - arg3, local122, local88 - arg1);
 	}
 
 	@OriginalMember(owner = "client!dc", name = "a", descriptor = "(IIIII)V")
@@ -206,18 +206,18 @@ public final class Loc extends Entity {
 	public final void render(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) long arg8, @OriginalArg(9) int arg9, @OriginalArg(10) ParticleSystem arg10) {
 		@Pc(3) Entity local3 = this.method1049();
 		if (local3 != null) {
-			local3.render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.aClass47_Sub1_2);
+			local3.render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.particles);
 		}
 	}
 
 	@OriginalMember(owner = "client!dc", name = "c", descriptor = "(I)V")
 	public final void method1046() {
-		if (this.aClass36_Sub1_2 != null) {
-			ShadowManager.method4207(this.aClass36_Sub1_2, this.anInt1296, this.anInt1294, this.anInt1319);
+		if (this.sprite2 != null) {
+			ShadowManager.method4207(this.sprite2, this.anInt1296, this.anInt1294, this.anInt1319);
 		}
 		this.anInt1321 = -1;
 		this.anInt1322 = -1;
-		this.aClass36_Sub1_2 = null;
+		this.sprite2 = null;
 	}
 
 	@OriginalMember(owner = "client!dc", name = "finalize", descriptor = "()V")
@@ -231,33 +231,33 @@ public final class Loc extends Entity {
 			return;
 		}
 		@Pc(10) int local10 = client.loop - this.anInt1320;
-		if (local10 > 100 && this.aClass144_2.anInt5362 > 0) {
-			@Pc(29) int local29 = this.aClass144_2.frames.length - this.aClass144_2.anInt5362;
-			while (this.anInt1297 < local29 && this.aClass144_2.anIntArray474[this.anInt1297] < local10) {
-				local10 -= this.aClass144_2.anIntArray474[this.anInt1297];
+		if (local10 > 100 && this.aClass144_2.replayoff > 0) {
+			@Pc(29) int local29 = this.aClass144_2.frames.length - this.aClass144_2.replayoff;
+			while (this.anInt1297 < local29 && this.aClass144_2.frameDelay[this.anInt1297] < local10) {
+				local10 -= this.aClass144_2.frameDelay[this.anInt1297];
 				this.anInt1297++;
 			}
 			if (this.anInt1297 >= local29) {
 				@Pc(77) int local77 = 0;
 				for (@Pc(79) int local79 = local29; local79 < this.aClass144_2.frames.length; local79++) {
-					local77 += this.aClass144_2.anIntArray474[local79];
+					local77 += this.aClass144_2.frameDelay[local79];
 				}
 				local10 %= local77;
 			}
 			this.anInt1304 = this.anInt1297 + 1;
 			if (this.anInt1304 >= this.aClass144_2.frames.length) {
-				this.anInt1304 -= this.aClass144_2.anInt5362;
+				this.anInt1304 -= this.aClass144_2.replayoff;
 				if (this.anInt1304 < 0 || this.aClass144_2.frames.length <= this.anInt1304) {
 					this.anInt1304 = -1;
 				}
 			}
 		}
-		while (local10 > this.aClass144_2.anIntArray474[this.anInt1297]) {
+		while (local10 > this.aClass144_2.frameDelay[this.anInt1297]) {
 			SoundPlayer.playSeqSound(arg0, this.aClass144_2, arg1, false, this.anInt1297);
-			local10 -= this.aClass144_2.anIntArray474[this.anInt1297];
+			local10 -= this.aClass144_2.frameDelay[this.anInt1297];
 			this.anInt1297++;
 			if (this.aClass144_2.frames.length <= this.anInt1297) {
-				this.anInt1297 -= this.aClass144_2.anInt5362;
+				this.anInt1297 -= this.aClass144_2.replayoff;
 				if (this.anInt1297 < 0 || this.aClass144_2.frames.length <= this.anInt1297) {
 					this.aClass144_2 = null;
 					break;
@@ -265,7 +265,7 @@ public final class Loc extends Entity {
 			}
 			this.anInt1304 = this.anInt1297 + 1;
 			if (this.aClass144_2.frames.length <= this.anInt1304) {
-				this.anInt1304 -= this.aClass144_2.anInt5362;
+				this.anInt1304 -= this.aClass144_2.replayoff;
 				if (this.anInt1304 < 0 || this.anInt1304 >= this.aClass144_2.frames.length) {
 					this.anInt1304 = -1;
 				}
@@ -301,9 +301,9 @@ public final class Loc extends Entity {
 				this.aClass144_2 = SeqTypeList.get(local69);
 			}
 			if (this.aClass144_2 != null) {
-				if (local19.aBoolean209 && this.aClass144_2.anInt5362 != -1) {
+				if (local19.aBoolean209 && this.aClass144_2.replayoff != -1) {
 					this.anInt1297 = (int) (Math.random() * (double) this.aClass144_2.frames.length);
-					this.anInt1320 -= (int) (Math.random() * (double) this.aClass144_2.anIntArray474[this.anInt1297]);
+					this.anInt1320 -= (int) (Math.random() * (double) this.aClass144_2.frameDelay[this.anInt1297]);
 				} else {
 					this.anInt1297 = 0;
 					this.anInt1320 = client.loop - 1;
@@ -340,37 +340,37 @@ public final class Loc extends Entity {
 			local314 = SceneGraph.tileHeights[this.anInt1303 + 1];
 		}
 		if (GlRenderer.enabled && local256) {
-			ShadowManager.method4207(this.aClass36_Sub1_2, this.anInt1296, this.anInt1294, this.anInt1319);
+			ShadowManager.method4207(this.sprite2, this.anInt1296, this.anInt1294, this.anInt1319);
 		}
-		@Pc(356) boolean local356 = this.aClass36_Sub1_2 == null;
-		@Pc(389) Loc_Class139 local389;
+		@Pc(356) boolean local356 = this.sprite2 == null;
+		@Pc(389) LocEntity local389;
 		if (this.aClass144_2 == null) {
-			local389 = local19.method3428(this.anInt1295, local302, local267, this.anInt1307, local293, local314, false, local356 ? aClass36_Sub1_1 : this.aClass36_Sub1_2, local256, local311);
+			local389 = local19.method3428(this.anInt1295, local302, local267, this.anInt1307, local293, local314, false, local356 ? sprite1 : this.sprite2, local256, local311);
 		} else {
-			local389 = local19.method3429(local311, local302, local356 ? aClass36_Sub1_1 : this.aClass36_Sub1_2, local293, this.aClass144_2, this.anInt1295, local267, local256, this.anInt1297, local314, this.anInt1304, this.anInt1307, this.anInt1317);
+			local389 = local19.method3429(local311, local302, local356 ? sprite1 : this.sprite2, local293, this.aClass144_2, this.anInt1295, local267, local256, this.anInt1297, local314, this.anInt1304, this.anInt1307, this.anInt1317);
 		}
 		if (local389 == null) {
 			return null;
 		}
 		if (GlRenderer.enabled && local256) {
 			if (local356) {
-				aClass36_Sub1_1 = local389.aClass36_Sub1_3;
+				sprite1 = local389.sprite;
 			}
 			@Pc(429) int local429 = 0;
 			if (this.anInt1303 != 0) {
 				@Pc(439) int[][] local439 = SceneGraph.tileHeights[0];
 				local429 = local293 - (local439[local178][local192] + local439[local185][local192] + local439[local185][local201] + local439[local178][local201] >> 2);
 			}
-			@Pc(471) SoftwareIndexedSprite local471 = local389.aClass36_Sub1_3;
+			@Pc(471) SoftwareIndexedSprite local471 = local389.sprite;
 			if (this.aBoolean81 && ShadowManager.method4209(local471, local302, local429, local311)) {
 				this.aBoolean81 = false;
 			}
 			if (!this.aBoolean81) {
 				ShadowManager.method4211(local471, local302, local429, local311);
-				this.aClass36_Sub1_2 = local471;
+				this.sprite2 = local471;
 				this.anInt1319 = local311;
 				if (local356) {
-					aClass36_Sub1_1 = null;
+					sprite1 = null;
 				}
 				this.anInt1294 = local429;
 				this.anInt1296 = local302;
@@ -378,7 +378,7 @@ public final class Loc extends Entity {
 			this.anInt1321 = local19.id;
 			this.anInt1322 = this.anInt1297;
 		}
-		return local389.aClass8_10;
+		return local389.model;
 	}
 
 	@OriginalMember(owner = "client!dc", name = "d", descriptor = "(I)Lclient!th;")

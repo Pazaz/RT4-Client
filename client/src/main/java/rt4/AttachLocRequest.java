@@ -69,7 +69,7 @@ public final class AttachLocRequest extends Node {
 			}
 			if (entity != null) {
 				@Pc(63) LocType type = LocTypeList.get(request.locId);
-				if (Player.level < 3) {
+				if (Player.plane < 3) {
 				}
 				@Pc(86) int width;
 				@Pc(83) int length;
@@ -84,33 +84,33 @@ public final class AttachLocRequest extends Node {
 				@Pc(110) int centerX0 = (width >> 1) + request.x;
 				@Pc(117) int centerZ0 = (length >> 1) + request.z;
 				@Pc(126) int centerZ1 = (length + 1 >> 1) + request.z;
-				@Pc(130) int[][] tileHeights = SceneGraph.tileHeights[Player.level];
+				@Pc(130) int[][] tileHeights = SceneGraph.tileHeights[Player.plane];
 				@Pc(157) int y = tileHeights[centerX1][centerZ1] + tileHeights[centerX0][centerZ1] + tileHeights[centerX0][centerZ0] + tileHeights[centerX1][centerZ0] >> 2;
 				@Pc(159) Entity attachment = null;
 				@Pc(164) int layer = Loc.LAYERS[request.shape];
 				if (layer == 0) {
-					@Pc(176) Wall wall = SceneGraph.getWall(Player.level, request.x, request.z);
+					@Pc(176) Wall wall = SceneGraph.getWall(Player.plane, request.x, request.z);
 					if (wall != null) {
 						attachment = wall.primary;
 					}
 				} else if (layer == 1) {
-					@Pc(231) WallDecor wallDecor = SceneGraph.getWallDecor(Player.level, request.x, request.z);
+					@Pc(231) WallDecor wallDecor = SceneGraph.getWallDecor(Player.plane, request.x, request.z);
 					if (wallDecor != null) {
 						attachment = wallDecor.primary;
 					}
 				} else if (layer == 2) {
-					@Pc(198) Scenery scenery = SceneGraph.getScenery(Player.level, request.x, request.z);
+					@Pc(198) Scenery scenery = SceneGraph.getScenery(Player.plane, request.x, request.z);
 					if (scenery != null) {
 						attachment = scenery.entity;
 					}
 				} else if (layer == 3) {
-					@Pc(216) GroundDecor groundDecor = SceneGraph.getGroundDecor(Player.level, request.x, request.z);
+					@Pc(216) GroundDecor groundDecor = SceneGraph.getGroundDecor(Player.plane, request.x, request.z);
 					if (groundDecor != null) {
 						attachment = groundDecor.entity;
 					}
 				}
 				if (attachment != null) {
-					ChangeLocRequest.push(Player.level, request.z, 0, request.x, request.resetLoops + 1, -1, layer, 0, request.setLoops + 1);
+					ChangeLocRequest.push(Player.plane, request.z, 0, request.x, request.resetLoops + 1, -1, layer, 0, request.setLoops + 1);
 					entity.attachmentResetAt = request.resetLoops + client.loop;
 					entity.attachmentZFine = length * 64 + request.z * 128;
 					entity.attachmentXFine = width * 64 + request.x * 128;

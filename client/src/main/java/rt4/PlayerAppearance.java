@@ -250,26 +250,26 @@ public final class PlayerAppearance {
 		}
 		@Pc(38) int[] local38 = this.identikit;
 		@Pc(41) long local41 = this.checksum;
-		if (arg3 != null && (arg3.anInt5353 >= 0 || arg3.anInt5348 >= 0)) {
+		if (arg3 != null && (arg3.mainhand >= 0 || arg3.offhand >= 0)) {
 			local38 = new int[12];
 			for (@Pc(61) int local61 = 0; local61 < 12; local61++) {
 				local38[local61] = this.identikit[local61];
 			}
-			if (arg3.anInt5353 >= 0) {
-				if (arg3.anInt5353 == 65535) {
+			if (arg3.mainhand >= 0) {
+				if (arg3.mainhand == 65535) {
 					local41 ^= 0xFFFFFFFF00000000L;
 					local38[5] = 0;
 				} else {
-					local38[5] = arg3.anInt5353 | 0x40000000;
+					local38[5] = arg3.mainhand | 0x40000000;
 					local41 ^= (long) local38[5] << 32;
 				}
 			}
-			if (arg3.anInt5348 >= 0) {
-				if (arg3.anInt5348 == 65535) {
+			if (arg3.offhand >= 0) {
+				if (arg3.offhand == 65535) {
 					local38[3] = 0;
 					local41 ^= 0xFFFFFFFFL;
 				} else {
-					local38[3] = arg3.anInt5348 | 0x40000000;
+					local38[3] = arg3.offhand | 0x40000000;
 					local41 ^= local38[3];
 				}
 			}
@@ -425,7 +425,7 @@ public final class PlayerAppearance {
 						local838 |= local858.aBoolean278;
 					}
 					if ((local858.tween || SeqType.applyTweening) && local367 != -1 && local367 < local858.frames.length) {
-						anIntArray515[local353] = local858.anIntArray474[local374];
+						anIntArray515[local353] = local858.frameDelay[local374];
 						anIntArray183[local353] = arg0[local353].anInt5404;
 						local979 = local858.frames[local367];
 						aClass3_Sub2_Sub7Array7[local353] = SeqTypeList.getAnimFrameset(local979 >>> 16);
@@ -466,7 +466,7 @@ public final class PlayerAppearance {
 				local360 = arg3.frames[arg1];
 				local451 = local360 >>> 16;
 				local360 &= 0xFFFF;
-				local374 = arg3.anIntArray474[arg7];
+				local374 = arg3.frameDelay[arg7];
 				if (local979 == local451) {
 					local1040 = local1042;
 				} else {
@@ -494,7 +494,7 @@ public final class PlayerAppearance {
 				local838 |= arg2.aBoolean278;
 			}
 			if ((arg2.tween || SeqType.applyTweening) && arg5 != -1 && arg2.frames.length > arg5) {
-				local457 = arg2.anIntArray474[arg8];
+				local457 = arg2.frameDelay[arg8];
 				local451 = arg2.frames[arg5];
 				local481 = local451 >>> 16;
 				local451 &= 0xFFFF;
@@ -520,7 +520,7 @@ public final class PlayerAppearance {
 			local598 <<= 0x1;
 		}
 		if (local1042 != null && local1154 != null) {
-			local1284.method4570(local1042, local353, local1040, local360, arg6 - 1, local374, local1154, local979, local1156, local451, arg4 - 1, local457, arg3.aBooleanArray123, arg3.aBoolean278 | arg2.aBoolean278);
+			local1284.method4570(local1042, local353, local1040, local360, arg6 - 1, local374, local1154, local979, local1156, local451, arg4 - 1, local457, arg3.framegroup, arg3.aBoolean278 | arg2.aBoolean278);
 		} else if (local1042 != null) {
 			local1284.method4558(local1042, local353, local1040, local360, arg6 - 1, local374, arg3.aBoolean278);
 		} else if (local1154 != null) {

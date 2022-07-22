@@ -127,18 +127,18 @@ public class ShadowModelList {
 		}
 		if (GlRenderer.enabled) {
 			@Pc(650) GlModel local650 = (GlModel) local33;
-			if (SceneGraph.getTileHeight(Player.level, arg3 + local384, local126 + arg5) != arg11 || SceneGraph.getTileHeight(Player.level, local115 + arg3, arg5 - -local130) != arg11) {
+			if (SceneGraph.getTileHeight(Player.plane, arg3 + local384, local126 + arg5) != arg11 || SceneGraph.getTileHeight(Player.plane, local115 + arg3, arg5 - -local130) != arg11) {
 				for (local162 = 0; local162 < local650.vertexCount; local162++) {
-					local650.vertexY[local162] += SceneGraph.getTileHeight(Player.level, local650.vertexX[local162] + arg3, arg5 + local650.vertexZ[local162]) - arg11;
+					local650.vertexY[local162] += SceneGraph.getTileHeight(Player.plane, local650.vertexX[local162] + arg3, arg5 + local650.vertexZ[local162]) - arg11;
 				}
 				local650.bounds.valid = false;
 				local650.vertexBuffer.valid = false;
 			}
 		} else {
 			@Pc(574) SoftwareModel local574 = (SoftwareModel) local33;
-			if (SceneGraph.getTileHeight(Player.level, arg3 + local384, arg5 - -local126) != arg11 || arg11 != SceneGraph.getTileHeight(Player.level, arg3 + local115, arg5 - -local130)) {
+			if (SceneGraph.getTileHeight(Player.plane, arg3 + local384, arg5 - -local126) != arg11 || arg11 != SceneGraph.getTileHeight(Player.plane, arg3 + local115, arg5 - -local130)) {
 				for (local162 = 0; local162 < local574.vertexCount; local162++) {
-					local574.vertexY[local162] += SceneGraph.getTileHeight(Player.level, arg3 + local574.vertexX[local162], arg5 + local574.vertexZ[local162]) - arg11;
+					local574.vertexY[local162] += SceneGraph.getTileHeight(Player.plane, arg3 + local574.vertexX[local162], arg5 + local574.vertexZ[local162]) - arg11;
 				}
 				local574.boundsValid = false;
 			}

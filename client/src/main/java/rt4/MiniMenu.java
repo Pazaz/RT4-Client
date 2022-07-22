@@ -524,10 +524,10 @@ public class MiniMenu {
 		}
 		if (local23 == 60) {
 			if (local36 == 0) {
-				method3556(Player.level, local15, local19);
+				method3556(Player.plane, local15, local19);
 			} else if (local36 == 1) {
 				if (LoginManager.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT]) {
-					Cheat.teleport(Camera.originX + local15, Camera.originZ + local19, Player.level);
+					Cheat.teleport(Camera.originX + local15, Camera.originZ + local19, Player.plane);
 				} else if (PathFinder.findPath(PlayerList.self.movementQueueZ[0], 0, 0, true, 0, local15, 0, 0, 1, local19, PlayerList.self.movementQueueX[0])) {
 					Protocol.outboundBuffer.p1(InterfaceList.anInt5);
 					Protocol.outboundBuffer.p1(anInt2878);
@@ -835,7 +835,7 @@ public class MiniMenu {
 		if (local23 == 11) {
 			if (local36 == 0) {
 				anInt3096 = 1;
-				method3556(Player.level, local15, local19);
+				method3556(Player.plane, local15, local19);
 			} else if (local36 == 1) {
 				Protocol.outboundBuffer.p1isaac(131);
 				Protocol.outboundBuffer.mp4(anInt2512);
@@ -1003,9 +1003,9 @@ public class MiniMenu {
 		if (local23 == 36) {
 			if (local36 == 0) {
 				Protocol.anInt4422 = 1;
-				method3556(Player.level, local15, local19);
+				method3556(Player.plane, local15, local19);
 			} else if (LoginManager.staffModLevel > 0 && Keyboard.pressedKeys[Keyboard.KEY_CTRL] && Keyboard.pressedKeys[Keyboard.KEY_SHIFT]) {
-				Cheat.teleport(local15 + Camera.originX, Camera.originZ - -local19, Player.level);
+				Cheat.teleport(local15 + Camera.originX, Camera.originZ - -local19, Player.plane);
 			} else {
 				Protocol.outboundBuffer.p1isaac(179);
 				Protocol.outboundBuffer.p2(local19 + Camera.originZ);
@@ -1123,7 +1123,7 @@ public class MiniMenu {
 			if (local121 != local112) {
 				local112 = local121;
 				@Pc(240) int local240;
-				if (local133 == 2 && SceneGraph.isLocValid(Player.level, x, z, local121)) {
+				if (local133 == 2 && SceneGraph.isLocValid(Player.plane, x, z, local121)) {
 					@Pc(172) LocType local172 = LocTypeList.get(local140);
 					if (local172.multiLocs != null) {
 						local172 = local172.getMultiLoc();
@@ -1231,7 +1231,7 @@ public class MiniMenu {
 					addPlayerEntries(local140, z, player, x);
 				}
 				if (local133 == 3) {
-					@Pc(931) LinkedList objStacks = SceneGraph.objStacks[Player.level][x][z];
+					@Pc(931) LinkedList objStacks = SceneGraph.objStacks[Player.plane][x][z];
 					if (objStacks != null) {
 						for (@Pc(940) ObjStackNode node = (ObjStackNode) objStacks.tail(); node != null; node = (ObjStackNode) objStacks.prev()) {
 							local240 = node.value.type;

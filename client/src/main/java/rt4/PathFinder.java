@@ -49,7 +49,7 @@ public class PathFinder {
 		@Pc(61) int local61 = 0;
 		@Pc(64) int queueWriterIndex = local53 + 1;
 		queueZ[0] = arg3;
-		@Pc(71) int[][] flags = collisionMaps[Player.level].flags;
+		@Pc(71) int[][] flags = collisionMaps[Player.plane].flags;
 		@Pc(193) int cost;
 		while (local61 != queueWriterIndex) {
 			x = queueX[local61];
@@ -60,16 +60,16 @@ public class PathFinder {
 				break;
 			}
 			if (arg1 != 0) {
-				if ((arg1 < 5 || arg1 == 10) && collisionMaps[Player.level].isAtWall(arg4, x, z, arg8, arg1 - 1, 2, arg7)) {
+				if ((arg1 < 5 || arg1 == 10) && collisionMaps[Player.plane].isAtWall(arg4, x, z, arg8, arg1 - 1, 2, arg7)) {
 					local59 = true;
 					break;
 				}
-				if (arg1 < 10 && collisionMaps[Player.level].isAtWallDecor(arg4, arg1 - 1, arg8, z, 2, arg7, x)) {
+				if (arg1 < 10 && collisionMaps[Player.plane].isAtWallDecor(arg4, arg1 - 1, arg8, z, 2, arg7, x)) {
 					local59 = true;
 					break;
 				}
 			}
-			if (arg0 != 0 && arg6 != 0 && collisionMaps[Player.level].isInsideOrOutsideRect(arg8, z, x, 2, arg0, arg2, arg4, arg6)) {
+			if (arg0 != 0 && arg6 != 0 && collisionMaps[Player.plane].isInsideOrOutsideRect(arg8, z, x, 2, arg0, arg2, arg4, arg6)) {
 				local59 = true;
 				break;
 			}
@@ -221,7 +221,7 @@ public class PathFinder {
 		queueX[0] = arg2;
 		@Pc(71) int local71 = local51 + 1;
 		queueZ[0] = arg9;
-		@Pc(78) int[][] local78 = collisionMaps[Player.level].flags;
+		@Pc(78) int[][] local78 = collisionMaps[Player.plane].flags;
 		@Pc(198) int local198;
 		while (local71 != local64) {
 			local10 = queueZ[local64];
@@ -232,16 +232,16 @@ public class PathFinder {
 				break;
 			}
 			if (arg8 != 0) {
-				if ((arg8 < 5 || arg8 == 10) && collisionMaps[Player.level].isAtWall(arg3, local3, local10, arg0, arg8 - 1, 1, arg6)) {
+				if ((arg8 < 5 || arg8 == 10) && collisionMaps[Player.plane].isAtWall(arg3, local3, local10, arg0, arg8 - 1, 1, arg6)) {
 					local53 = true;
 					break;
 				}
-				if (arg8 < 10 && collisionMaps[Player.level].isAtWallDecor(arg3, arg8 - 1, arg0, local10, 1, arg6, local3)) {
+				if (arg8 < 10 && collisionMaps[Player.plane].isAtWallDecor(arg3, arg8 - 1, arg0, local10, 1, arg6, local3)) {
 					local53 = true;
 					break;
 				}
 			}
-			if (arg10 != 0 && arg5 != 0 && collisionMaps[Player.level].isInsideOrOutsideRect(arg0, local10, local3, 1, arg10, arg1, arg3, arg5)) {
+			if (arg10 != 0 && arg5 != 0 && collisionMaps[Player.plane].isInsideOrOutsideRect(arg0, local10, local3, 1, arg10, arg1, arg3, arg5)) {
 				local53 = true;
 				break;
 			}
@@ -393,7 +393,7 @@ public class PathFinder {
 		queueZ[0] = arg11;
 		@Pc(69) int local69 = 0;
 		@Pc(71) boolean local71 = false;
-		@Pc(76) int[][] local76 = collisionMaps[Player.level].flags;
+		@Pc(76) int[][] local76 = collisionMaps[Player.plane].flags;
 		@Pc(201) int local201;
 		@Pc(242) int local242;
 		label397:
@@ -406,16 +406,16 @@ public class PathFinder {
 				break;
 			}
 			if (arg6 != 0) {
-				if ((arg6 < 5 || arg6 == 10) && collisionMaps[Player.level].isAtWall(arg0, local3, local10, arg5, arg6 - 1, arg4, arg3)) {
+				if ((arg6 < 5 || arg6 == 10) && collisionMaps[Player.plane].isAtWall(arg0, local3, local10, arg5, arg6 - 1, arg4, arg3)) {
 					local71 = true;
 					break;
 				}
-				if (arg6 < 10 && collisionMaps[Player.level].isAtWallDecor(arg0, arg6 - 1, arg5, local10, arg4, arg3, local3)) {
+				if (arg6 < 10 && collisionMaps[Player.plane].isAtWallDecor(arg0, arg6 - 1, arg5, local10, arg4, arg3, local3)) {
 					local71 = true;
 					break;
 				}
 			}
-			if (arg1 != 0 && arg9 != 0 && collisionMaps[Player.level].isInsideOrOutsideRect(arg5, local10, local3, arg4, arg1, arg7, arg0, arg9)) {
+			if (arg1 != 0 && arg9 != 0 && collisionMaps[Player.plane].isInsideOrOutsideRect(arg5, local10, local3, arg4, arg1, arg7, arg0, arg9)) {
 				local71 = true;
 				break;
 			}

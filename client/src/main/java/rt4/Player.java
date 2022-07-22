@@ -21,7 +21,7 @@ public final class Player extends PathingEntity {
 	@OriginalMember(owner = "client!ba", name = "w", descriptor = "I")
 	public static int inTutorialIsland = 0;
 	@OriginalMember(owner = "client!ee", name = "b", descriptor = "I")
-	public static int level;
+	public static int plane;
 	@OriginalMember(owner = "client!bb", name = "E", descriptor = "I")
 	public static int runEnergy = 0;
 	@OriginalMember(owner = "client!ug", name = "o", descriptor = "I")
@@ -90,7 +90,7 @@ public final class Player extends PathingEntity {
 	public static void animate(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Player arg2) {
 		if (arg1 == arg2.seqId && arg1 != -1) {
 			@Pc(89) SeqType local89 = SeqTypeList.get(arg1);
-			@Pc(92) int local92 = local89.anInt5347;
+			@Pc(92) int local92 = local89.exactmove;
 			if (local92 == 1) {
 				arg2.anInt3420 = arg0;
 				arg2.anInt3360 = 0;
@@ -102,7 +102,7 @@ public final class Player extends PathingEntity {
 			if (local92 == 2) {
 				arg2.anInt3371 = 0;
 			}
-		} else if (arg1 == -1 || arg2.seqId == -1 || SeqTypeList.get(arg1).forcedPriority >= SeqTypeList.get(arg2.seqId).forcedPriority) {
+		} else if (arg1 == -1 || arg2.seqId == -1 || SeqTypeList.get(arg1).priority >= SeqTypeList.get(arg2.seqId).priority) {
 			arg2.anInt3373 = 1;
 			arg2.anInt3425 = 0;
 			arg2.anInt3420 = arg0;
@@ -129,7 +129,7 @@ public final class Player extends PathingEntity {
 						arg2.aClass147Array3[local30] = null;
 					} else {
 						@Pc(68) SeqType local68 = SeqTypeList.get(local20);
-						@Pc(71) int local71 = local68.anInt5347;
+						@Pc(71) int local71 = local68.exactmove;
 						@Pc(76) PathingEntity_Class147 local76 = arg2.aClass147Array3[local30];
 						if (local76 != null) {
 							if (local20 == local76.anInt5396) {
@@ -145,7 +145,7 @@ public final class Player extends PathingEntity {
 								} else if (local71 == 2) {
 									local76.anInt5400 = 0;
 								}
-							} else if (local68.forcedPriority >= SeqTypeList.get(local76.anInt5396).forcedPriority) {
+							} else if (local68.priority >= SeqTypeList.get(local76.anInt5396).priority) {
 								local76 = arg2.aClass147Array3[local30] = null;
 							}
 						}
@@ -201,7 +201,7 @@ public final class Player extends PathingEntity {
 	public static void method4359(@OriginalArg(0) Player arg0) {
 		@Pc(12) AreaSound local12 = (AreaSound) AreaSoundManager.playerSounds.get(arg0.username.encode37());
 		if (local12 == null) {
-			AreaSoundManager.add(arg0.movementQueueZ[0], null, 0, null, arg0.movementQueueX[0], level, arg0);
+			AreaSoundManager.add(arg0.movementQueueZ[0], null, 0, null, arg0.movementQueueX[0], plane, arg0);
 		} else {
 			local12.update();
 		}

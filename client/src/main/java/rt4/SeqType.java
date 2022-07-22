@@ -15,70 +15,70 @@ public final class SeqType {
 	public int[] frames;
 
 	@OriginalMember(owner = "client!tk", name = "n", descriptor = "[Z")
-	public boolean[] aBooleanArray123;
+	public boolean[] framegroup;
 
 	@OriginalMember(owner = "client!tk", name = "y", descriptor = "I")
 	public int id;
 
 	@OriginalMember(owner = "client!tk", name = "C", descriptor = "[[I")
-	public int[][] sounds;
+	public int[][] soundeffect;
 
 	@OriginalMember(owner = "client!tk", name = "G", descriptor = "[I")
-	public int[] anIntArray474;
+	public int[] frameDelay;
 
 	@OriginalMember(owner = "client!tk", name = "I", descriptor = "[I")
-	private int[] anIntArray475;
+	private int[] frameset;
 
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "I")
-	public int anInt5347 = 2;
+	public int exactmove = 2;
 
 	@OriginalMember(owner = "client!tk", name = "b", descriptor = "Z")
 	public boolean tween = false;
 
 	@OriginalMember(owner = "client!tk", name = "f", descriptor = "I")
-	public int anInt5349 = -1;
+	public int movetype = -1;
 
 	@OriginalMember(owner = "client!tk", name = "e", descriptor = "I")
-	public int anInt5348 = -1;
+	public int offhand = -1;
 
 	@OriginalMember(owner = "client!tk", name = "d", descriptor = "Z")
 	public boolean aBoolean278 = false;
 
 	@OriginalMember(owner = "client!tk", name = "t", descriptor = "I")
-	public int anInt5357 = 99;
+	public int replaycount = 99;
 
 	@OriginalMember(owner = "client!tk", name = "z", descriptor = "I")
-	public int anInt5362 = -1;
+	public int replayoff = -1;
 
 	@OriginalMember(owner = "client!tk", name = "B", descriptor = "I")
-	public int anInt5363 = -1;
+	public int looptype = -1;
 
 	@OriginalMember(owner = "client!tk", name = "p", descriptor = "I")
-	public int forcedPriority = 5;
+	public int priority = 5;
 
 	@OriginalMember(owner = "client!tk", name = "r", descriptor = "Z")
-	public boolean aBoolean279 = false;
+	public boolean stretches = false;
 
 	@OriginalMember(owner = "client!tk", name = "l", descriptor = "I")
-	public int anInt5353 = -1;
+	public int mainhand = -1;
 
 	@OriginalMember(owner = "client!tk", name = "L", descriptor = "Z")
 	public boolean aBoolean280 = false;
 
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(Lclient!wa;B)V")
-	public final void decode(@OriginalArg(0) Buffer arg0) {
+	public void decode(@OriginalArg(0) Buffer buffer) {
 		while (true) {
-			@Pc(19) int local19 = arg0.g1();
-			if (local19 == 0) {
+			@Pc(19) int opcode = buffer.g1();
+			if (opcode == 0) {
 				return;
 			}
-			this.decode(local19, arg0);
+			this.decode(opcode, buffer);
 		}
 	}
 
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(IIILclient!ak;II)Lclient!ak;")
-	public final Model method4214(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Model arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
-		@Pc(10) int local10 = this.anIntArray474[arg0];
+	public Model method4214(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) Model arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
+		@Pc(10) int local10 = this.frameDelay[arg0];
 		@Pc(15) int local15 = this.frames[arg0];
 		@Pc(23) AnimFrameset local23 = SeqTypeList.getAnimFrameset(local15 >> 16);
 		@Pc(27) int local27 = local15 & 0xFFFF;
@@ -133,9 +133,9 @@ public final class SeqType {
 	}
 
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(Lclient!ak;BIII)Lclient!ak;")
-	public final Model method4215(@OriginalArg(0) Model arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
+	public Model method4215(@OriginalArg(0) Model arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3) {
 		@Pc(8) int local8 = this.frames[arg3];
-		@Pc(13) int local13 = this.anIntArray474[arg3];
+		@Pc(13) int local13 = this.frameDelay[arg3];
 		@Pc(19) AnimFrameset local19 = SeqTypeList.getAnimFrameset(local8 >> 16);
 		@Pc(23) int local23 = local8 & 0xFFFF;
 		if (local19 == null) {
@@ -151,16 +151,16 @@ public final class SeqType {
 		@Pc(81) AnimFrameset local81 = null;
 		@Pc(83) int local83 = 0;
 		@Pc(85) int local85 = 0;
-		if (this.anIntArray475 != null) {
-			if (this.anIntArray475.length > arg3) {
-				local83 = this.anIntArray475[arg3];
+		if (this.frameset != null) {
+			if (this.frameset.length > arg3) {
+				local83 = this.frameset[arg3];
 				if (local83 != 65535) {
 					local71 = SeqTypeList.getAnimFrameset(local83 >> 16);
 					local83 &= 0xFFFF;
 				}
 			}
-			if ((this.tween || applyTweening) && arg1 != -1 && this.anIntArray475.length > arg1) {
-				local85 = this.anIntArray475[arg1];
+			if ((this.tween || applyTweening) && arg1 != -1 && this.frameset.length > arg1) {
+				local85 = this.frameset[arg1];
 				if (local85 != 65535) {
 					local81 = SeqTypeList.getAnimFrameset(local85 >> 16);
 					local85 &= 0xFFFF;
@@ -190,8 +190,8 @@ public final class SeqType {
 	}
 
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(IIIILclient!ak;I)Lclient!ak;")
-	public final Model method4216(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Model arg4) {
-		@Pc(6) int local6 = this.anIntArray474[arg1];
+	public Model method4216(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) Model arg4) {
+		@Pc(6) int local6 = this.frameDelay[arg1];
 		@Pc(11) int local11 = this.frames[arg1];
 		@Pc(19) AnimFrameset local19 = SeqTypeList.getAnimFrameset(local11 >> 16);
 		@Pc(27) int local27 = local11 & 0xFFFF;
@@ -246,27 +246,27 @@ public final class SeqType {
 	}
 
 	@OriginalMember(owner = "client!tk", name = "b", descriptor = "(B)V")
-	public final void postDecode() {
-		if (this.anInt5363 == -1) {
-			if (this.aBooleanArray123 == null) {
-				this.anInt5363 = 0;
+	public void postDecode() {
+		if (this.looptype == -1) {
+			if (this.framegroup == null) {
+				this.looptype = 0;
 			} else {
-				this.anInt5363 = 2;
+				this.looptype = 2;
 			}
 		}
-		if (this.anInt5349 != -1) {
-			return;
-		}
-		if (this.aBooleanArray123 == null) {
-			this.anInt5349 = 0;
-		} else {
-			this.anInt5349 = 2;
+
+		if (this.movetype == -1) {
+			if (this.framegroup == null) {
+				this.movetype = 0;
+			} else {
+				this.movetype = 2;
+			}
 		}
 	}
 
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(IIIBLclient!ak;)Lclient!ak;")
-	public final Model method4219(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) Model arg3) {
-		@Pc(16) int local16 = this.anIntArray474[arg2];
+	public Model method4219(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) Model arg3) {
+		@Pc(16) int local16 = this.frameDelay[arg2];
 		@Pc(21) int local21 = this.frames[arg2];
 		@Pc(27) AnimFrameset local27 = SeqTypeList.getAnimFrameset(local21 >> 16);
 		@Pc(31) int local31 = local21 & 0xFFFF;
@@ -290,73 +290,74 @@ public final class SeqType {
 	}
 
 	@OriginalMember(owner = "client!tk", name = "a", descriptor = "(IBLclient!wa;)V")
-	private void decode(@OriginalArg(0) int arg0, @OriginalArg(2) Buffer arg1) {
-		@Pc(8) int local8;
-		@Pc(14) int local14;
-		if (arg0 == 1) {
-			local8 = arg1.g2();
-			this.anIntArray474 = new int[local8];
-			for (local14 = 0; local14 < local8; local14++) {
-				this.anIntArray474[local14] = arg1.g2();
+	private void decode(@OriginalArg(0) int opcode, @OriginalArg(2) Buffer buffer) {
+		@Pc(8) int count;
+		@Pc(14) int i;
+
+		if (opcode == 1) {
+			count = buffer.g2();
+			this.frameDelay = new int[count];
+			for (i = 0; i < count; i++) {
+				this.frameDelay[i] = buffer.g2();
 			}
-			this.frames = new int[local8];
-			for (local14 = 0; local14 < local8; local14++) {
-				this.frames[local14] = arg1.g2();
+			this.frames = new int[count];
+			for (i = 0; i < count; i++) {
+				this.frames[i] = buffer.g2();
 			}
-			for (local14 = 0; local14 < local8; local14++) {
-				this.frames[local14] += arg1.g2() << 16;
+			for (i = 0; i < count; i++) {
+				this.frames[i] += buffer.g2() << 16;
 			}
-		} else if (arg0 == 2) {
-			this.anInt5362 = arg1.g2();
-		} else if (arg0 == 3) {
-			this.aBooleanArray123 = new boolean[256];
-			local8 = arg1.g1();
-			for (local14 = 0; local14 < local8; local14++) {
-				this.aBooleanArray123[arg1.g1()] = true;
+		} else if (opcode == 2) {
+			this.replayoff = buffer.g2();
+		} else if (opcode == 3) {
+			this.framegroup = new boolean[256];
+			count = buffer.g1();
+			for (i = 0; i < count; i++) {
+				this.framegroup[buffer.g1()] = true;
 			}
-		} else if (arg0 == 4) {
-			this.aBoolean279 = true;
-		} else if (arg0 == 5) {
-			this.forcedPriority = arg1.g1();
-		} else if (arg0 == 6) {
-			this.anInt5353 = arg1.g2();
-		} else if (arg0 == 7) {
-			this.anInt5348 = arg1.g2();
-		} else if (arg0 == 8) {
-			this.anInt5357 = arg1.g1();
-		} else if (arg0 == 9) {
-			this.anInt5363 = arg1.g1();
-		} else if (arg0 == 10) {
-			this.anInt5349 = arg1.g1();
-		} else if (arg0 == 11) {
-			this.anInt5347 = arg1.g1();
-		} else if (arg0 == 12) {
-			local8 = arg1.g1();
-			this.anIntArray475 = new int[local8];
-			for (local14 = 0; local14 < local8; local14++) {
-				this.anIntArray475[local14] = arg1.g2();
+		} else if (opcode == 4) {
+			this.stretches = true;
+		} else if (opcode == 5) {
+			this.priority = buffer.g1();
+		} else if (opcode == 6) {
+			this.mainhand = buffer.g2();
+		} else if (opcode == 7) {
+			this.offhand = buffer.g2();
+		} else if (opcode == 8) {
+			this.replaycount = buffer.g1();
+		} else if (opcode == 9) { // TODO: confirm
+			this.looptype = buffer.g1();
+		} else if (opcode == 10) { // TODO: confirm
+			this.movetype = buffer.g1();
+		} else if (opcode == 11) { // TODO: confirm
+			this.exactmove = buffer.g1();
+		} else if (opcode == 12) { // TODO: confirm
+			count = buffer.g1();
+			this.frameset = new int[count];
+			for (i = 0; i < count; i++) {
+				this.frameset[i] = buffer.g2();
 			}
-			for (local14 = 0; local14 < local8; local14++) {
-				this.anIntArray475[local14] += arg1.g2() << 16;
+			for (i = 0; i < count; i++) {
+				this.frameset[i] += buffer.g2() << 16;
 			}
-		} else if (arg0 == 13) {
-			local8 = arg1.g2();
-			this.sounds = new int[local8][];
-			for (local14 = 0; local14 < local8; local14++) {
-				@Pc(163) int local163 = arg1.g1();
-				if (local163 > 0) {
-					this.sounds[local14] = new int[local163];
-					this.sounds[local14][0] = arg1.g3();
-					for (@Pc(182) int local182 = 1; local182 < local163; local182++) {
-						this.sounds[local14][local182] = arg1.g2();
+		} else if (opcode == 13) {
+			count = buffer.g2();
+			this.soundeffect = new int[count][];
+			for (i = 0; i < count; i++) {
+				@Pc(163) int count2 = buffer.g1();
+				if (count2 > 0) {
+					this.soundeffect[i] = new int[count2];
+					this.soundeffect[i][0] = buffer.g3();
+					for (@Pc(182) int j = 1; j < count2; j++) {
+						this.soundeffect[i][j] = buffer.g2();
 					}
 				}
 			}
-		} else if (arg0 == 14) {
+		} else if (opcode == 14) {
 			this.aBoolean278 = true;
-		} else if (arg0 == 15) {
+		} else if (opcode == 15) { // TODO: (probably) not an authentic name
 			this.tween = true;
-		} else if (arg0 == 16) {
+		} else if (opcode == 16) {
 			this.aBoolean280 = true;
 		}
 	}
