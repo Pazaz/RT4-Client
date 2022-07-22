@@ -207,9 +207,9 @@ public final class PlayerAppearance {
 		if (identikit == null) {
 			identikit = new int[12];
 			for (@Pc(24) int i = 0; i < 8; i++) {
-				for (@Pc(31) int id = 0; id < IdkTypeList.anInt1716; id++) {
+				for (@Pc(31) int id = 0; id < IdkTypeList.count; id++) {
 					@Pc(38) IdkType type = IdkTypeList.get(id);
-					if (type != null && !type.aBoolean85 && type.feature == (female ? FEMALE_FEATURES[i] : MALE_FEATURES[i])) {
+					if (type != null && !type.disable && type.feature == (female ? FEMALE_FEATURES[i] : MALE_FEATURES[i])) {
 						identikit[BASE_PART_MAP[i]] = Integer.MIN_VALUE | id;
 						break;
 					}
