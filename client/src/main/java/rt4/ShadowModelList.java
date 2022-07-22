@@ -123,7 +123,7 @@ public class ShadowModelList {
 			local33.method4555(local386, arg10);
 		}
 		if (arg9 != 0) {
-			local33.method4554(arg9);
+			local33.rotateY(arg9);
 		}
 		if (GlRenderer.enabled) {
 			@Pc(650) GlModel local650 = (GlModel) local33;

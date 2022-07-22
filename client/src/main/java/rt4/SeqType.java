@@ -111,7 +111,7 @@ public final class SeqType {
 		} else if (local39 == 2) {
 			local124.method4552();
 		} else if (local39 == 3) {
-			local124.method4563();
+			local124.rotateCounterClockwise();
 		}
 		local124.method4558(local23, local27, local41, arg1, arg4 - 1, local10, this.aBoolean278);
 		if (GlRenderer.enabled && this.aBoolean278) {
@@ -123,7 +123,7 @@ public final class SeqType {
 				((GlModel) local124).method4093();
 			}
 		} else if (local39 == 1) {
-			local124.method4563();
+			local124.rotateCounterClockwise();
 		} else if (local39 == 2) {
 			local124.method4552();
 		} else if (local39 == 3) {
@@ -224,7 +224,7 @@ public final class SeqType {
 		} else if (local40 == 2) {
 			local106.method4552();
 		} else if (local40 == 3) {
-			local106.method4563();
+			local106.rotateCounterClockwise();
 		}
 		local106.method4558(local19, local27, local42, arg0, arg2 - 1, local6, this.aBoolean278);
 		if (this.aBoolean278 && GlRenderer.enabled) {
@@ -236,7 +236,7 @@ public final class SeqType {
 				((GlModel) local106).method4093();
 			}
 		} else if (local40 == 1) {
-			local106.method4563();
+			local106.rotateCounterClockwise();
 		} else if (local40 == 2) {
 			local106.method4552();
 		} else if (local40 == 3) {

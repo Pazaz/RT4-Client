@@ -124,8 +124,6 @@ public final class ScriptRunner {
 	public static int[] anIntArray134 = new int[2];
 	@OriginalMember(owner = "client!ge", name = "k", descriptor = "[I")
 	public static int[] anIntArray205 = new int[2];
-	@OriginalMember(owner = "client!d", name = "db", descriptor = "Z")
-	public static boolean aBoolean77 = false;
 	@OriginalMember(owner = "client!nm", name = "W", descriptor = "Lclient!na;")
 	public static JagString url;
 	@OriginalMember(owner = "client!bf", name = "B", descriptor = "I")
@@ -285,10 +283,10 @@ public final class ScriptRunner {
 			Rasteriser.prepare();
 		}
 		if (Cs1ScriptRunner.aBoolean108 || anInt3751 < arg2 || anInt3751 >= arg3 + arg2 || arg4 > anInt1892 || arg0 + arg4 <= anInt1892) {
-			aBoolean77 = false;
+			RawModel.allowInput = false;
 			MiniMenu.anInt7 = 0;
 		} else {
-			aBoolean77 = true;
+			RawModel.allowInput = true;
 			MiniMenu.anInt7 = 0;
 			local171 = Rasteriser.screenUpperX;
 			@Pc(344) int local344 = Rasteriser.screenLowerY;

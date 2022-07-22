@@ -41,7 +41,7 @@ public class HintArrowManager {
 		@Pc(51) int maxZ = arg4.getMaxZ();
 		model = model.method4560(true, true, true);
 		if (arg0 != 0) {
-			model.method4554(arg0);
+			model.rotateY(arg0);
 		}
 		@Pc(94) int local94;
 		if (GlRenderer.enabled) {

@@ -10,8 +10,9 @@ public abstract class Model extends Entity {
 
 	@OriginalMember(owner = "client!vc", name = "V", descriptor = "[J")
 	public static final long[] aLongArray11 = new long[1000];
+
 	@OriginalMember(owner = "client!ak", name = "s", descriptor = "Z")
-	public boolean aBoolean303 = false;
+	public boolean pickable = false;
 
 	@OriginalMember(owner = "client!ak", name = "a", descriptor = "([[III)I")
 	public static int method4556(@OriginalArg(0) int[][] arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
@@ -187,7 +188,7 @@ public abstract class Model extends Entity {
 	}
 
 	@OriginalMember(owner = "client!ak", name = "b", descriptor = "(I)V")
-	public abstract void method4554(@OriginalArg(0) int arg0);
+	public abstract void rotateY(@OriginalArg(0) int arg0);
 
 	@OriginalMember(owner = "client!ak", name = "a", descriptor = "(Lclient!cl;I)V")
 	public final void method4555(@OriginalArg(0) AnimFrameset arg0, @OriginalArg(1) int arg1) {
@@ -242,7 +243,7 @@ public abstract class Model extends Entity {
 	public abstract int getMinX();
 
 	@OriginalMember(owner = "client!ak", name = "i", descriptor = "()V")
-	public abstract void method4563();
+	public abstract void rotateCounterClockwise();
 
 	@OriginalMember(owner = "client!ak", name = "c", descriptor = "(I)V")
 	public abstract void rotateZ(@OriginalArg(0) int arg0);
@@ -266,7 +267,7 @@ public abstract class Model extends Entity {
 	}
 
 	@OriginalMember(owner = "client!ak", name = "j", descriptor = "()I")
-	public abstract int method4566();
+	public abstract int getLengthXZ();
 
 	@OriginalMember(owner = "client!ak", name = "a", descriptor = "(IIII)V")
 	protected abstract void method4567(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3);

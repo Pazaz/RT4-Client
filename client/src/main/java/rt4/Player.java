@@ -515,15 +515,15 @@ public final class Player extends PathingEntity {
 				} else if (this.anInt3400 == 1024) {
 					local515.method4552();
 				} else if (this.anInt3400 == 1536) {
-					local515.method4563();
+					local515.rotateCounterClockwise();
 				}
 			}
 		}
 		if (GlRenderer.enabled) {
-			local76.aBoolean303 = true;
+			local76.pickable = true;
 			local76.render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.particleSystem);
 			if (local184 != null) {
-				local184.aBoolean303 = true;
+				local184.pickable = true;
 				local184.render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.particleSystem);
 			}
 		} else {
@@ -533,14 +533,14 @@ public final class Player extends PathingEntity {
 			if (local515 != null) {
 				local76 = ((SoftwareModel) local76).method4588(local515);
 			}
-			local76.aBoolean303 = true;
+			local76.pickable = true;
 			local76.render(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, this.particleSystem);
 		}
 		if (local515 == null) {
 			return;
 		}
 		if (this.anInt3400 == 512) {
-			local515.method4563();
+			local515.rotateCounterClockwise();
 		} else if (this.anInt3400 == 1024) {
 			local515.method4552();
 		} else if (this.anInt3400 == 1536) {
