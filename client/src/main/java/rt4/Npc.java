@@ -109,7 +109,7 @@ public final class Npc extends PathingEntity {
 			}
 
 			if (this.type.size == 1) {
-				body.aBoolean303 = true;
+				body.pickable = true;
 			}
 
 			body.render(orientation, arg1, arg2, arg3, arg4, x, z, y, key, arg9, this.particleSystem);
@@ -117,13 +117,13 @@ public final class Npc extends PathingEntity {
 		}
 
 		if (this.type.size == 1) {
-			body.aBoolean303 = true;
+			body.pickable = true;
 		}
 
 		body.render(orientation, arg1, arg2, arg3, arg4, x, z, y, key, arg9, this.particleSystem);
 		if (model != null) {
 			if (this.type.size == 1) {
-				model.aBoolean303 = true;
+				model.pickable = true;
 			}
 
 			model.render(orientation, arg1, arg2, arg3, arg4, x, z, y, key, arg9, this.particleSystem);

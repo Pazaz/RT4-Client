@@ -2513,7 +2513,7 @@ public class SceneGraph {
 				if (loc.active && local531 && lowmem) {
 					@Pc(541) int local541 = 15;
 					if (entity instanceof Model) {
-						local541 = ((Model) entity).method4566() / 4;
+						local541 = ((Model) entity).getLengthXZ() / 4;
 						if (local541 > 30) {
 							local541 = 30;
 						}

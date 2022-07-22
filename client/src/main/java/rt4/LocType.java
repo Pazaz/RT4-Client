@@ -783,7 +783,7 @@ public final class LocType {
 					return aClass139_1;
 				}
 				if (arg3 == 10 && arg0 > 3) {
-					local235.method4554(256);
+					local235.rotateY(256);
 				}
 				if (arg8) {
 					local265 = local235.method4124(arg7);
@@ -884,7 +884,7 @@ public final class LocType {
 					local234 = true;
 					local195 = (SoftwareModel) local195.method4568(true, true, true);
 				}
-				local195.method4554(256);
+				local195.rotateY(256);
 			}
 			if (this.hillskew != 0) {
 				if (!local234) {
@@ -921,7 +921,7 @@ public final class LocType {
 				local82 = (GlModel) local82.method4568(true, true, true);
 				local80 = true;
 			}
-			local82.method4554(256);
+			local82.rotateY(256);
 		}
 		if (arg7) {
 			aClass139_1.sprite = local82.method4124(arg2);

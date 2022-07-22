@@ -132,7 +132,7 @@ public final class SpotAnimType {
 		}
 		if (this.angle != 0) {
 			if (this.angle == 90) {
-				local118.method4563();
+				local118.rotateCounterClockwise();
 			}
 			if (this.angle == 180) {
 				local118.method4552();

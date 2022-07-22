@@ -322,7 +322,7 @@ public final class ObjType {
 			if (this.resizeX != 128 || this.resizeY != 128 || this.resizeZ != 128) {
 				model.resize(this.resizeX, this.resizeY, this.resizeZ);
 			}
-			model.aBoolean303 = true;
+			model.pickable = true;
 			if (GlRenderer.enabled) {
 				((GlModel) model).method4111(false, false, false, false, false, true);
 			}

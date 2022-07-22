@@ -22,8 +22,12 @@ public final class RawModel extends Entity {
 
 	@OriginalMember(owner = "client!gb", name = "S", descriptor = "I")
 	public static int anInt2138 = 0;
+
 	@OriginalMember(owner = "client!ck", name = "K", descriptor = "I")
 	public static int anInt1053 = 0;
+
+	@OriginalMember(owner = "client!d", name = "db", descriptor = "Z")
+	public static boolean allowInput = false;
 
 	@OriginalMember(owner = "client!gb", name = "s", descriptor = "[B")
 	public byte[] triangleAlpha;

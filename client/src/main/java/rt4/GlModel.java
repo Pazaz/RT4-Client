@@ -13,48 +13,70 @@ public final class GlModel extends Model {
 
 	@OriginalMember(owner = "client!tf", name = "G", descriptor = "Z")
 	public static boolean arbVboSupported;
+
 	@OriginalMember(owner = "client!td", name = "D", descriptor = "Lclient!wa;")
 	public static Buffer tempBuffer = new Buffer(10000);
+
 	@OriginalMember(owner = "client!td", name = "bb", descriptor = "Lclient!td;")
 	public static GlModel aClass8_Sub1_Sub1_1 = new GlModel();
+
 	@OriginalMember(owner = "client!td", name = "jb", descriptor = "Lclient!td;")
 	public static GlModel aClass8_Sub1_Sub1_2 = new GlModel();
+
 	@OriginalMember(owner = "client!td", name = "mb", descriptor = "Lclient!td;")
 	public static GlModel aClass8_Sub1_Sub1_3 = new GlModel();
+
 	@OriginalMember(owner = "client!td", name = "nb", descriptor = "Lclient!td;")
 	public static GlModel aClass8_Sub1_Sub1_4 = new GlModel();
+
 	@OriginalMember(owner = "client!td", name = "ob", descriptor = "Lclient!td;")
 	public static GlModel aClass8_Sub1_Sub1_5 = new GlModel();
+
 	@OriginalMember(owner = "client!td", name = "pb", descriptor = "Lclient!td;")
 	public static GlModel aClass8_Sub1_Sub1_6 = new GlModel();
+
 	@OriginalMember(owner = "client!td", name = "qb", descriptor = "[I")
 	public static int[] anIntArray467 = new int[1];
+
 	@OriginalMember(owner = "client!td", name = "ub", descriptor = "[I")
 	public static int[] anIntArray468 = new int[1];
+
 	@OriginalMember(owner = "client!td", name = "Bb", descriptor = "Z")
 	public static boolean aBoolean260 = false;
+
 	@OriginalMember(owner = "client!td", name = "Ab", descriptor = "F")
 	public static float aFloat29;
+
 	@OriginalMember(owner = "client!td", name = "G", descriptor = "[J")
 	public static long[] aLongArray10;
+
 	@OriginalMember(owner = "client!td", name = "T", descriptor = "Ljava/nio/ByteBuffer;")
 	public static ByteBuffer aByteBuffer9;
+
 	@OriginalMember(owner = "client!td", name = "rb", descriptor = "F")
 	public static float aFloat24;
+
 	@OriginalMember(owner = "client!td", name = "sb", descriptor = "I")
 	public static int anInt5298;
+
 	@OriginalMember(owner = "client!td", name = "tb", descriptor = "F")
 	public static float aFloat25;
+
 	@OriginalMember(owner = "client!td", name = "vb", descriptor = "I")
 	public static int anInt5299;
+
 	@OriginalMember(owner = "client!td", name = "wb", descriptor = "F")
 	public static float aFloat26;
+
 	@OriginalMember(owner = "client!td", name = "xb", descriptor = "F")
 	public static float aFloat27;
+
 	@OriginalMember(owner = "client!td", name = "yb", descriptor = "I")
 	public static int anInt5300;
+
 	@OriginalMember(owner = "client!td", name = "zb", descriptor = "F")
 	public static float aFloat28;
+
 	@OriginalMember(owner = "client!lk", name = "V", descriptor = "I")
 	public static int anInt3582 = 0;
 
@@ -183,15 +205,15 @@ public final class GlModel extends Model {
 	}
 
 	@OriginalMember(owner = "client!td", name = "<init>", descriptor = "(Lclient!gb;IIZ)V")
-	public GlModel(@OriginalArg(0) RawModel arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) boolean arg3) {
-		@Pc(23) int[] local23 = new int[arg0.triangleCount];
-		this.anIntArray462 = new int[arg0.vertexCount + 1];
-		for (@Pc(32) int local32 = 0; local32 < arg0.triangleCount; local32++) {
-			if ((arg0.triangleInfo == null || arg0.triangleInfo[local32] != 2) && (arg0.triangleTextures == null || arg0.triangleTextures[local32] == -1 || !Rasteriser.textureProvider.method3231(arg0.triangleTextures[local32] & 0xFFFF))) {
+	public GlModel(@OriginalArg(0) RawModel model, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) boolean arg3) {
+		@Pc(23) int[] local23 = new int[model.triangleCount];
+		this.anIntArray462 = new int[model.vertexCount + 1];
+		for (@Pc(32) int local32 = 0; local32 < model.triangleCount; local32++) {
+			if ((model.triangleInfo == null || model.triangleInfo[local32] != 2) && (model.triangleTextures == null || model.triangleTextures[local32] == -1 || !Rasteriser.textureProvider.method3231(model.triangleTextures[local32] & 0xFFFF))) {
 				local23[this.triangleCount++] = local32;
-				this.anIntArray462[arg0.triangleVertexA[local32]]++;
-				this.anIntArray462[arg0.triangleVertexB[local32]]++;
-				this.anIntArray462[arg0.triangleVertexC[local32]]++;
+				this.anIntArray462[model.triangleVertexA[local32]]++;
+				this.anIntArray462[model.triangleVertexB[local32]]++;
+				this.anIntArray462[model.triangleVertexC[local32]]++;
 			}
 		}
 		@Pc(115) long[] local115 = new long[this.triangleCount];
@@ -206,16 +228,16 @@ public final class GlModel extends Model {
 			@Pc(131) int local131 = 0;
 			@Pc(133) int local133 = 0;
 			@Pc(135) short local135 = -1;
-			if (arg0.triangleTextures != null) {
-				local135 = arg0.triangleTextures[local125];
+			if (model.triangleTextures != null) {
+				local135 = model.triangleTextures[local125];
 				if (local135 != -1) {
 					local131 = Rasteriser.textureProvider.getMaterialType(local135 & 0xFFFF);
 					local133 = Rasteriser.textureProvider.method3228(local135 & 0xFFFF);
 				}
 			}
-			@Pc(182) boolean local182 = arg0.triangleAlpha != null && arg0.triangleAlpha[local125] != 0 || local135 != -1 && !Rasteriser.textureProvider.isOpaque(local135 & 0xFFFF);
-			if ((arg3 || local182) && arg0.trianglePriorities != null) {
-				local127 += arg0.trianglePriorities[local125] << 17;
+			@Pc(182) boolean local182 = model.triangleAlpha != null && model.triangleAlpha[local125] != 0 || local135 != -1 && !Rasteriser.textureProvider.isOpaque(local135 & 0xFFFF);
+			if ((arg3 || local182) && model.trianglePriorities != null) {
+				local127 += model.trianglePriorities[local125] << 17;
 			}
 			if (local182) {
 				local127 += 65536;
@@ -227,12 +249,12 @@ public final class GlModel extends Model {
 			local115[local117] = ((long) local127 << 32) + (long) local232;
 		}
 		ArrayUtils.sort(local115, local23);
-		this.vertexCount = arg0.vertexCount;
-		this.vertexX = arg0.vertexX;
-		this.vertexY = arg0.vertexY;
-		this.vertexZ = arg0.vertexZ;
-		this.vertexBones = arg0.vertexBones;
-		this.vertexSources = arg0.vertexSources;
+		this.vertexCount = model.vertexCount;
+		this.vertexX = model.vertexX;
+		this.vertexY = model.vertexY;
+		this.vertexZ = model.vertexZ;
+		this.vertexBones = model.vertexBones;
+		this.vertexSources = model.vertexSources;
 		local117 = this.triangleCount * 3;
 		this.aShortArray76 = new short[local117];
 		this.aShortArray79 = new short[local117];
@@ -246,10 +268,10 @@ public final class GlModel extends Model {
 		this.aShortArray82 = new short[this.triangleCount];
 		this.aShortArray83 = new short[this.triangleCount];
 		this.triangleTextures = new short[this.triangleCount];
-		if (arg0.triangleBones != null) {
+		if (model.triangleBones != null) {
 			this.triangleBones = new byte[this.triangleCount];
 		}
-		if (arg0.triangleSources != null) {
+		if (model.triangleSources != null) {
 			this.triangleSources = new short[this.triangleCount];
 		}
 		this.bounds = new GlBoundingBox();
@@ -265,12 +287,12 @@ public final class GlModel extends Model {
 		this.aShortArray81 = new short[local117];
 		aLongArray10 = new long[local117];
 		local125 = 0;
-		for (local127 = 0; local127 < arg0.vertexCount; local127++) {
+		for (local127 = 0; local127 < model.vertexCount; local127++) {
 			local226 = this.anIntArray462[local127];
 			this.anIntArray462[local127] = local125;
 			local125 += local226;
 		}
-		this.anIntArray462[arg0.vertexCount] = local125;
+		this.anIntArray462[model.vertexCount] = local125;
 		@Pc(426) int[] local426 = null;
 		@Pc(428) int[] local428 = null;
 		@Pc(430) int[] local430 = null;
@@ -280,8 +302,8 @@ public final class GlModel extends Model {
 		@Pc(683) float local683;
 		@Pc(714) float local714;
 		@Pc(685) float local685;
-		if (arg0.triangleTextureIndex != null) {
-			local439 = arg0.texturedCount;
+		if (model.triangleTextureIndex != null) {
+			local439 = model.texturedCount;
 			@Pc(442) int[] local442 = new int[local439];
 			@Pc(445) int[] local445 = new int[local439];
 			@Pc(448) int[] local448 = new int[local439];
@@ -299,20 +321,20 @@ public final class GlModel extends Model {
 			}
 			for (local459 = 0; local459 < this.triangleCount; local459++) {
 				@Pc(498) int local498 = local23[local459];
-				if (arg0.triangleTextureIndex[local498] != -1) {
-					@Pc(511) int local511 = arg0.triangleTextureIndex[local498] & 0xFF;
+				if (model.triangleTextureIndex[local498] != -1) {
+					@Pc(511) int local511 = model.triangleTextureIndex[local498] & 0xFF;
 					for (@Pc(513) int local513 = 0; local513 < 3; local513++) {
 						@Pc(523) int local523;
 						if (local513 == 0) {
-							local523 = arg0.triangleVertexA[local498];
+							local523 = model.triangleVertexA[local498];
 						} else if (local513 == 1) {
-							local523 = arg0.triangleVertexB[local498];
+							local523 = model.triangleVertexB[local498];
 						} else {
-							local523 = arg0.triangleVertexC[local498];
+							local523 = model.triangleVertexC[local498];
 						}
-						@Pc(543) int local543 = arg0.vertexX[local523];
-						@Pc(548) int local548 = arg0.vertexY[local523];
-						local553 = arg0.vertexZ[local523];
+						@Pc(543) int local543 = model.vertexX[local523];
+						@Pc(548) int local548 = model.vertexY[local523];
+						local553 = model.vertexZ[local523];
 						if (local543 < local442[local511]) {
 							local442[local511] = local543;
 						}
@@ -339,13 +361,13 @@ public final class GlModel extends Model {
 			local430 = new int[local439];
 			local433 = new float[local439][];
 			for (local459 = 0; local459 < local439; local459++) {
-				@Pc(633) byte local633 = arg0.textureTypes[local459];
+				@Pc(633) byte local633 = model.textureTypes[local459];
 				if (local633 > 0) {
 					local426[local459] = (local442[local459] + local445[local459]) / 2;
 					local428[local459] = (local448[local459] + local451[local459]) / 2;
 					local430[local459] = (local454[local459] + local457[local459]) / 2;
 					if (local633 == 1) {
-						@Pc(679) short local679 = arg0.texturesScaleX[local459];
+						@Pc(679) short local679 = model.texturesScaleX[local459];
 						if (local679 == 0) {
 							local683 = 1.0F;
 							local685 = 1.0F;
@@ -356,17 +378,17 @@ public final class GlModel extends Model {
 							local685 = 1.0F;
 							local683 = (float) -local679 / 1024.0F;
 						}
-						local714 = 64.0F / (float) (arg0.texturesScaleY[local459] & 0xFFFF);
+						local714 = 64.0F / (float) (model.texturesScaleY[local459] & 0xFFFF);
 					} else if (local633 == 2) {
-						local683 = 64.0F / (float) (arg0.texturesScaleX[local459] & 0xFFFF);
-						local714 = 64.0F / (float) (arg0.texturesScaleY[local459] & 0xFFFF);
-						local685 = 64.0F / (float) (arg0.texturesScaleZ[local459] & 0xFFFF);
+						local683 = 64.0F / (float) (model.texturesScaleX[local459] & 0xFFFF);
+						local714 = 64.0F / (float) (model.texturesScaleY[local459] & 0xFFFF);
+						local685 = 64.0F / (float) (model.texturesScaleZ[local459] & 0xFFFF);
 					} else {
-						local683 = (float) arg0.texturesScaleX[local459] / 1024.0F;
-						local714 = (float) arg0.texturesScaleY[local459] / 1024.0F;
-						local685 = (float) arg0.texturesScaleZ[local459] / 1024.0F;
+						local683 = (float) model.texturesScaleX[local459] / 1024.0F;
+						local714 = (float) model.texturesScaleY[local459] / 1024.0F;
+						local685 = (float) model.texturesScaleZ[local459] / 1024.0F;
 					}
-					local433[local459] = method4097(arg0.textureFacesP[local459], arg0.textureFacesM[local459], arg0.textureFacesN[local459], arg0.textureRotationY[local459] & 0xFF, local683, local714, local685);
+					local433[local459] = method4097(model.textureFacesP[local459], model.textureFacesM[local459], model.textureFacesN[local459], model.textureRotationY[local459] & 0xFF, local683, local714, local685);
 				}
 			}
 		}
@@ -374,23 +396,23 @@ public final class GlModel extends Model {
 		@Pc(822) short local822;
 		for (local439 = 0; local439 < this.triangleCount; local439++) {
 			@Pc(810) int local810 = local23[local439];
-			local817 = arg0.triangleColors[local810] & 0xFFFF;
-			if (arg0.triangleTextures == null) {
+			local817 = model.triangleColors[local810] & 0xFFFF;
+			if (model.triangleTextures == null) {
 				local822 = -1;
 			} else {
-				local822 = arg0.triangleTextures[local810];
+				local822 = model.triangleTextures[local810];
 			}
 			@Pc(833) int local833;
-			if (arg0.triangleTextureIndex == null) {
+			if (model.triangleTextureIndex == null) {
 				local833 = -1;
 			} else {
-				local833 = arg0.triangleTextureIndex[local810];
+				local833 = model.triangleTextureIndex[local810];
 			}
 			@Pc(844) int local844;
-			if (arg0.triangleAlpha == null) {
+			if (model.triangleAlpha == null) {
 				local844 = 0;
 			} else {
-				local844 = arg0.triangleAlpha[local810] & 0xFF;
+				local844 = model.triangleAlpha[local810] & 0xFF;
 			}
 			@Pc(854) float local854 = 0.0F;
 			@Pc(856) float local856 = 0.0F;
@@ -416,7 +438,7 @@ public final class GlModel extends Model {
 					local868 = 2;
 				} else {
 					local833 &= 0xFF;
-					local902 = arg0.textureTypes[local833];
+					local902 = model.textureTypes[local833];
 					@Pc(909) int local909;
 					@Pc(914) int local914;
 					@Pc(952) float local952;
@@ -429,30 +451,30 @@ public final class GlModel extends Model {
 					@Pc(1080) float local1080;
 					@Pc(1088) float local1088;
 					if (local902 == 0) {
-						local909 = arg0.triangleVertexA[local810];
-						local914 = arg0.triangleVertexB[local810];
-						local919 = arg0.triangleVertexC[local810];
-						@Pc(924) short local924 = arg0.textureFacesP[local833];
-						@Pc(929) short local929 = arg0.textureFacesM[local833];
-						@Pc(934) short local934 = arg0.textureFacesN[local833];
-						@Pc(940) float local940 = (float) arg0.vertexX[local924];
-						@Pc(946) float local946 = (float) arg0.vertexY[local924];
-						local952 = arg0.vertexZ[local924];
-						local960 = (float) arg0.vertexX[local929] - local940;
-						local968 = (float) arg0.vertexY[local929] - local946;
-						@Pc(976) float local976 = (float) arg0.vertexZ[local929] - local952;
-						@Pc(984) float local984 = (float) arg0.vertexX[local934] - local940;
-						@Pc(992) float local992 = (float) arg0.vertexY[local934] - local946;
-						@Pc(1000) float local1000 = (float) arg0.vertexZ[local934] - local952;
-						@Pc(1008) float local1008 = (float) arg0.vertexX[local909] - local940;
-						@Pc(1016) float local1016 = (float) arg0.vertexY[local909] - local946;
-						@Pc(1024) float local1024 = (float) arg0.vertexZ[local909] - local952;
-						@Pc(1032) float local1032 = (float) arg0.vertexX[local914] - local940;
-						@Pc(1040) float local1040 = (float) arg0.vertexY[local914] - local946;
-						local1048 = (float) arg0.vertexZ[local914] - local952;
-						local1056 = (float) arg0.vertexX[local919] - local940;
-						local1064 = (float) arg0.vertexY[local919] - local946;
-						local1072 = (float) arg0.vertexZ[local919] - local952;
+						local909 = model.triangleVertexA[local810];
+						local914 = model.triangleVertexB[local810];
+						local919 = model.triangleVertexC[local810];
+						@Pc(924) short local924 = model.textureFacesP[local833];
+						@Pc(929) short local929 = model.textureFacesM[local833];
+						@Pc(934) short local934 = model.textureFacesN[local833];
+						@Pc(940) float local940 = (float) model.vertexX[local924];
+						@Pc(946) float local946 = (float) model.vertexY[local924];
+						local952 = model.vertexZ[local924];
+						local960 = (float) model.vertexX[local929] - local940;
+						local968 = (float) model.vertexY[local929] - local946;
+						@Pc(976) float local976 = (float) model.vertexZ[local929] - local952;
+						@Pc(984) float local984 = (float) model.vertexX[local934] - local940;
+						@Pc(992) float local992 = (float) model.vertexY[local934] - local946;
+						@Pc(1000) float local1000 = (float) model.vertexZ[local934] - local952;
+						@Pc(1008) float local1008 = (float) model.vertexX[local909] - local940;
+						@Pc(1016) float local1016 = (float) model.vertexY[local909] - local946;
+						@Pc(1024) float local1024 = (float) model.vertexZ[local909] - local952;
+						@Pc(1032) float local1032 = (float) model.vertexX[local914] - local940;
+						@Pc(1040) float local1040 = (float) model.vertexY[local914] - local946;
+						local1048 = (float) model.vertexZ[local914] - local952;
+						local1056 = (float) model.vertexX[local919] - local940;
+						local1064 = (float) model.vertexY[local919] - local946;
+						local1072 = (float) model.vertexZ[local919] - local952;
 						local1080 = local968 * local1000 - local976 * local992;
 						local1088 = local976 * local984 - local960 * local1000;
 						@Pc(1096) float local1096 = local960 * local992 - local968 * local984;
@@ -471,24 +493,24 @@ public final class GlModel extends Model {
 						local683 = (local1184 * local1032 + local1192 * local1040 + local1200 * local1048) * local1214;
 						local685 = (local1184 * local1056 + local1192 * local1064 + local1200 * local1072) * local1214;
 					} else {
-						local909 = arg0.triangleVertexA[local810];
-						local914 = arg0.triangleVertexB[local810];
-						local919 = arg0.triangleVertexC[local810];
+						local909 = model.triangleVertexA[local810];
+						local914 = model.triangleVertexB[local810];
+						local919 = model.triangleVertexC[local810];
 						@Pc(1276) int local1276 = local426[local833];
 						local1280 = local428[local833];
 						@Pc(1284) int local1284 = local430[local833];
 						@Pc(1288) float[] local1288 = local433[local833];
-						@Pc(1293) byte local1293 = arg0.aByteArray32[local833];
-						local952 = (float) arg0.aByteArray34[local833] / 256.0F;
+						@Pc(1293) byte local1293 = model.aByteArray32[local833];
+						local952 = (float) model.aByteArray34[local833] / 256.0F;
 						if (local902 == 1) {
-							local960 = (float) (arg0.texturesScaleZ[local833] & 0xFFFF) / 1024.0F;
-							method4095(arg0.vertexX[local909], arg0.vertexY[local909], arg0.vertexZ[local909], local1276, local1280, local1284, local1288, local960, local1293, local952);
+							local960 = (float) (model.texturesScaleZ[local833] & 0xFFFF) / 1024.0F;
+							method4095(model.vertexX[local909], model.vertexY[local909], model.vertexZ[local909], local1276, local1280, local1284, local1288, local960, local1293, local952);
 							local854 = aFloat26;
 							local856 = aFloat28;
-							method4095(arg0.vertexX[local914], arg0.vertexY[local914], arg0.vertexZ[local914], local1276, local1280, local1284, local1288, local960, local1293, local952);
+							method4095(model.vertexX[local914], model.vertexY[local914], model.vertexZ[local914], local1276, local1280, local1284, local1288, local960, local1293, local952);
 							local858 = aFloat26;
 							local683 = aFloat28;
-							method4095(arg0.vertexX[local919], arg0.vertexY[local919], arg0.vertexZ[local919], local1276, local1280, local1284, local1288, local960, local1293, local952);
+							method4095(model.vertexX[local919], model.vertexY[local919], model.vertexZ[local919], local1276, local1280, local1284, local1288, local960, local1293, local952);
 							local714 = aFloat26;
 							local685 = aFloat28;
 							local968 = local960 / 2.0F;
@@ -524,41 +546,41 @@ public final class GlModel extends Model {
 								}
 							}
 						} else if (local902 == 2) {
-							local960 = (float) arg0.aByteArray28[local833] / 256.0F;
-							local968 = (float) arg0.aByteArray33[local833] / 256.0F;
-							@Pc(1525) int local1525 = arg0.vertexX[local914] - arg0.vertexX[local909];
-							@Pc(1535) int local1535 = arg0.vertexY[local914] - arg0.vertexY[local909];
-							@Pc(1545) int local1545 = arg0.vertexZ[local914] - arg0.vertexZ[local909];
-							@Pc(1555) int local1555 = arg0.vertexX[local919] - arg0.vertexX[local909];
-							@Pc(1565) int local1565 = arg0.vertexY[local919] - arg0.vertexY[local909];
-							@Pc(1575) int local1575 = arg0.vertexZ[local919] - arg0.vertexZ[local909];
+							local960 = (float) model.aByteArray28[local833] / 256.0F;
+							local968 = (float) model.aByteArray33[local833] / 256.0F;
+							@Pc(1525) int local1525 = model.vertexX[local914] - model.vertexX[local909];
+							@Pc(1535) int local1535 = model.vertexY[local914] - model.vertexY[local909];
+							@Pc(1545) int local1545 = model.vertexZ[local914] - model.vertexZ[local909];
+							@Pc(1555) int local1555 = model.vertexX[local919] - model.vertexX[local909];
+							@Pc(1565) int local1565 = model.vertexY[local919] - model.vertexY[local909];
+							@Pc(1575) int local1575 = model.vertexZ[local919] - model.vertexZ[local909];
 							@Pc(1583) int local1583 = local1535 * local1575 - local1565 * local1545;
 							@Pc(1591) int local1591 = local1545 * local1555 - local1575 * local1525;
 							@Pc(1599) int local1599 = local1525 * local1565 - local1555 * local1535;
-							local1048 = 64.0F / (float) (arg0.texturesScaleX[local833] & 0xFFFF);
-							local1056 = 64.0F / (float) (arg0.texturesScaleY[local833] & 0xFFFF);
-							local1064 = 64.0F / (float) (arg0.texturesScaleZ[local833] & 0xFFFF);
+							local1048 = 64.0F / (float) (model.texturesScaleX[local833] & 0xFFFF);
+							local1056 = 64.0F / (float) (model.texturesScaleY[local833] & 0xFFFF);
+							local1064 = 64.0F / (float) (model.texturesScaleZ[local833] & 0xFFFF);
 							local1072 = ((float) local1583 * local1288[0] + (float) local1591 * local1288[1] + (float) local1599 * local1288[2]) / local1048;
 							local1080 = ((float) local1583 * local1288[3] + (float) local1591 * local1288[4] + (float) local1599 * local1288[5]) / local1056;
 							local1088 = ((float) local1583 * local1288[6] + (float) local1591 * local1288[7] + (float) local1599 * local1288[8]) / local1064;
 							local553 = method4092(local1072, local1080, local1088);
-							method4104(arg0.vertexX[local909], arg0.vertexY[local909], arg0.vertexZ[local909], local1276, local1280, local1284, local553, local1288, local1293, local952, local960, local968);
+							method4104(model.vertexX[local909], model.vertexY[local909], model.vertexZ[local909], local1276, local1280, local1284, local553, local1288, local1293, local952, local960, local968);
 							local854 = aFloat27;
 							local856 = aFloat24;
-							method4104(arg0.vertexX[local914], arg0.vertexY[local914], arg0.vertexZ[local914], local1276, local1280, local1284, local553, local1288, local1293, local952, local960, local968);
+							method4104(model.vertexX[local914], model.vertexY[local914], model.vertexZ[local914], local1276, local1280, local1284, local553, local1288, local1293, local952, local960, local968);
 							local858 = aFloat27;
 							local683 = aFloat24;
-							method4104(arg0.vertexX[local919], arg0.vertexY[local919], arg0.vertexZ[local919], local1276, local1280, local1284, local553, local1288, local1293, local952, local960, local968);
+							method4104(model.vertexX[local919], model.vertexY[local919], model.vertexZ[local919], local1276, local1280, local1284, local553, local1288, local1293, local952, local960, local968);
 							local714 = aFloat27;
 							local685 = aFloat24;
 						} else if (local902 == 3) {
-							method4101(arg0.vertexX[local909], arg0.vertexY[local909], arg0.vertexZ[local909], local1276, local1280, local1284, local1288, local1293, local952);
+							method4101(model.vertexX[local909], model.vertexY[local909], model.vertexZ[local909], local1276, local1280, local1284, local1288, local1293, local952);
 							local854 = aFloat29;
 							local856 = aFloat25;
-							method4101(arg0.vertexX[local914], arg0.vertexY[local914], arg0.vertexZ[local914], local1276, local1280, local1284, local1288, local1293, local952);
+							method4101(model.vertexX[local914], model.vertexY[local914], model.vertexZ[local914], local1276, local1280, local1284, local1288, local1293, local952);
 							local858 = aFloat29;
 							local683 = aFloat25;
-							method4101(arg0.vertexX[local919], arg0.vertexY[local919], arg0.vertexZ[local919], local1276, local1280, local1284, local1288, local1293, local952);
+							method4101(model.vertexX[local919], model.vertexY[local919], model.vertexZ[local919], local1276, local1280, local1284, local1288, local1293, local952);
 							local714 = aFloat29;
 							local685 = aFloat25;
 							if ((local1293 & 0x1) == 0) {
@@ -596,44 +618,44 @@ public final class GlModel extends Model {
 					}
 				}
 			}
-			arg0.calculateNormals();
-			if (arg0.triangleInfo == null) {
+			model.calculateNormals();
+			if (model.triangleInfo == null) {
 				local902 = 0;
 			} else {
-				local902 = arg0.triangleInfo[local810];
+				local902 = model.triangleInfo[local810];
 			}
 			if (local902 == 0) {
 				@Pc(1994) long local1994 = (long) (local833 << 2) + ((long) (local553 << 24) + (long) (local817 << 8) + (long) local844 << 32);
-				local919 = arg0.triangleVertexA[local810];
-				@Pc(2004) VertexNormal local2004 = arg0.vertexNormals[local919];
-				this.aShortArray77[local439] = this.method4098(arg0, local919, local1994, local2004.x, local2004.y, local2004.z, local2004.triangles, local854, local856);
-				local1280 = arg0.triangleVertexB[local810];
-				@Pc(2033) VertexNormal local2033 = arg0.vertexNormals[local1280];
-				this.aShortArray82[local439] = this.method4098(arg0, local1280, local1994 + (long) local866, local2033.x, local2033.y, local2033.z, local2033.triangles, local858, local683);
-				@Pc(2060) int local2060 = arg0.triangleVertexC[local810];
-				@Pc(2065) VertexNormal local2065 = arg0.vertexNormals[local2060];
-				this.aShortArray83[local439] = this.method4098(arg0, local2060, local1994 + (long) local868, local2065.x, local2065.y, local2065.z, local2065.triangles, local714, local685);
+				local919 = model.triangleVertexA[local810];
+				@Pc(2004) VertexNormal local2004 = model.vertexNormals[local919];
+				this.aShortArray77[local439] = this.method4098(model, local919, local1994, local2004.x, local2004.y, local2004.z, local2004.triangles, local854, local856);
+				local1280 = model.triangleVertexB[local810];
+				@Pc(2033) VertexNormal local2033 = model.vertexNormals[local1280];
+				this.aShortArray82[local439] = this.method4098(model, local1280, local1994 + (long) local866, local2033.x, local2033.y, local2033.z, local2033.triangles, local858, local683);
+				@Pc(2060) int local2060 = model.triangleVertexC[local810];
+				@Pc(2065) VertexNormal local2065 = model.vertexNormals[local2060];
+				this.aShortArray83[local439] = this.method4098(model, local2060, local1994 + (long) local868, local2065.x, local2065.y, local2065.z, local2065.triangles, local714, local685);
 			} else if (local902 == 1) {
-				@Pc(2096) TriangleNormal local2096 = arg0.triangleNormals[local810];
+				@Pc(2096) TriangleNormal local2096 = model.triangleNormals[local810];
 				@Pc(2137) long local2137 = (long) ((local833 << 2) + (local2096.anInt4769 > 0 ? 1024 : 2048) + (local2096.anInt4770 + 256 << 12) + (local2096.anInt4767 + 256 << 22)) + ((long) (local553 << 24) + (long) (local817 << 8) + (long) local844 << 32);
-				this.aShortArray77[local439] = this.method4098(arg0, arg0.triangleVertexA[local810], local2137, local2096.anInt4769, local2096.anInt4770, local2096.anInt4767, 0, local854, local856);
-				this.aShortArray82[local439] = this.method4098(arg0, arg0.triangleVertexB[local810], local2137 + (long) local866, local2096.anInt4769, local2096.anInt4770, local2096.anInt4767, 0, local858, local683);
-				this.aShortArray83[local439] = this.method4098(arg0, arg0.triangleVertexC[local810], local2137 + (long) local868, local2096.anInt4769, local2096.anInt4770, local2096.anInt4767, 0, local714, local685);
+				this.aShortArray77[local439] = this.method4098(model, model.triangleVertexA[local810], local2137, local2096.anInt4769, local2096.anInt4770, local2096.anInt4767, 0, local854, local856);
+				this.aShortArray82[local439] = this.method4098(model, model.triangleVertexB[local810], local2137 + (long) local866, local2096.anInt4769, local2096.anInt4770, local2096.anInt4767, 0, local858, local683);
+				this.aShortArray83[local439] = this.method4098(model, model.triangleVertexC[local810], local2137 + (long) local868, local2096.anInt4769, local2096.anInt4770, local2096.anInt4767, 0, local714, local685);
 			}
-			if (arg0.triangleTextures == null) {
+			if (model.triangleTextures == null) {
 				this.triangleTextures[local439] = -1;
 			} else {
-				this.triangleTextures[local439] = arg0.triangleTextures[local810];
+				this.triangleTextures[local439] = model.triangleTextures[local810];
 			}
 			if (this.triangleBones != null) {
-				this.triangleBones[local439] = (byte) arg0.triangleBones[local810];
+				this.triangleBones[local439] = (byte) model.triangleBones[local810];
 			}
-			this.triangleColors[local439] = arg0.triangleColors[local810];
-			if (arg0.triangleAlpha != null) {
-				this.triangleAlpha[local439] = arg0.triangleAlpha[local810];
+			this.triangleColors[local439] = model.triangleColors[local810];
+			if (model.triangleAlpha != null) {
+				this.triangleAlpha[local439] = model.triangleAlpha[local810];
 			}
-			if (arg0.triangleSources != null) {
-				this.triangleSources[local439] = arg0.triangleSources[local810];
+			if (model.triangleSources != null) {
+				this.triangleSources[local439] = model.triangleSources[local810];
 			}
 		}
 		local439 = 0;
@@ -950,7 +972,7 @@ public final class GlModel extends Model {
 			local161 = MathUtils.sin[arg0];
 			local163 = MathUtils.cos[arg0];
 		}
-		if (arg8 > 0L && ScriptRunner.aBoolean77 && local70 > 0) {
+		if (arg8 > 0L && RawModel.allowInput && local70 > 0) {
 			@Pc(187) int local187;
 			@Pc(191) int local191;
 			if (local84 > 0) {
@@ -1023,7 +1045,7 @@ public final class GlModel extends Model {
 					}
 				}
 				if (anInt3582 >= local187 && anInt3582 <= local191 && RawModel.anInt1053 >= local206 && RawModel.anInt1053 <= local210) {
-					if (this.aBoolean303) {
+					if (this.pickable) {
 						Model.aLongArray11[MiniMenu.anInt7++] = arg8;
 					} else {
 						if (anIntArray468.length < this.anInt5296) {
@@ -1388,7 +1410,7 @@ public final class GlModel extends Model {
 
 	@OriginalMember(owner = "client!td", name = "b", descriptor = "(I)V")
 	@Override
-	public final void method4554(@OriginalArg(0) int arg0) {
+	public final void rotateY(@OriginalArg(0) int arg0) {
 		@Pc(3) int local3 = MathUtils.sin[arg0];
 		@Pc(7) int local7 = MathUtils.cos[arg0];
 		for (@Pc(9) int local9 = 0; local9 < this.vertexCount; local9++) {
@@ -2732,7 +2754,7 @@ public final class GlModel extends Model {
 		arg3.anIntArray463 = this.anIntArray463;
 		arg3.aShortArray81 = this.aShortArray81;
 		arg3.anIntArray462 = this.anIntArray462;
-		arg3.aBoolean303 = this.aBoolean303;
+		arg3.pickable = this.pickable;
 		arg3.vertexSources = this.vertexSources;
 		arg3.triangleSources = this.triangleSources;
 		return arg3;
@@ -2760,7 +2782,7 @@ public final class GlModel extends Model {
 	@OriginalMember(owner = "client!td", name = "u", descriptor = "()V")
 	public final void method4116() {
 		if (this.aShortArray76 == null) {
-			this.method4563();
+			this.rotateCounterClockwise();
 			return;
 		}
 		@Pc(7) int local7;
@@ -2870,7 +2892,7 @@ public final class GlModel extends Model {
 
 	@OriginalMember(owner = "client!td", name = "i", descriptor = "()V")
 	@Override
-	public final void method4563() {
+	public final void rotateCounterClockwise() {
 		for (@Pc(1) int local1 = 0; local1 < this.vertexCount; local1++) {
 			@Pc(10) int local10 = this.vertexX[local1];
 			this.vertexX[local1] = this.vertexZ[local1];
@@ -2895,7 +2917,7 @@ public final class GlModel extends Model {
 
 	@OriginalMember(owner = "client!td", name = "j", descriptor = "()I")
 	@Override
-	public final int method4566() {
+	public final int getLengthXZ() {
 		if (!this.bounds.valid) {
 			this.calculateBounds();
 		}
@@ -3417,7 +3439,7 @@ public final class GlModel extends Model {
 	@OriginalMember(owner = "client!td", name = "g", descriptor = "(I)V")
 	public final void method4123() {
 		if (this.aShortArray76 == null) {
-			this.method4554(256);
+			this.rotateY(256);
 			return;
 		}
 		@Pc(10) int local10 = MathUtils.sin[256];
