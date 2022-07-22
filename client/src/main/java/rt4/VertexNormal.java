@@ -11,7 +11,7 @@ public final class VertexNormal {
 	public int y;
 
 	@OriginalMember(owner = "client!hd", name = "d", descriptor = "I")
-	public int triangles;
+	public int magnitude;
 
 	@OriginalMember(owner = "client!hd", name = "m", descriptor = "I")
 	public int z;
@@ -25,7 +25,7 @@ public final class VertexNormal {
 
 	@OriginalMember(owner = "client!hd", name = "<init>", descriptor = "(Lclient!hd;)V")
 	public VertexNormal(@OriginalArg(0) VertexNormal arg0) {
-		this.triangles = arg0.triangles;
+		this.magnitude = arg0.magnitude;
 		this.x = arg0.x;
 		this.y = arg0.y;
 		this.z = arg0.z;
