@@ -41,7 +41,7 @@ public final class LocType {
 	public static final RawModel[] tempModels = new RawModel[4];
 
 	@OriginalMember(owner = "client!ni", name = "n", descriptor = "Lclient!sm;")
-	public static Loc_Class139 aClass139_1 = new Loc_Class139();
+	public static LocEntity aClass139_1 = new LocEntity();
 
 	@OriginalMember(owner = "client!pb", name = "a", descriptor = "[S")
 	private short[] retex_d;
@@ -764,7 +764,7 @@ public final class LocType {
 	}
 
 	@OriginalMember(owner = "client!pb", name = "a", descriptor = "(II[[III[[IZLclient!ek;BZI)Lclient!sm;")
-	public Loc_Class139 method3428(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int[][] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int[][] arg5, @OriginalArg(6) boolean arg6, @OriginalArg(7) SoftwareIndexedSprite arg7, @OriginalArg(9) boolean arg8, @OriginalArg(10) int arg9) {
+	public LocEntity method3428(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int[][] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int[][] arg5, @OriginalArg(6) boolean arg6, @OriginalArg(7) SoftwareIndexedSprite arg7, @OriginalArg(9) boolean arg8, @OriginalArg(10) int arg9) {
 		@Pc(29) long local29;
 		if (GlRenderer.enabled) {
 			if (this.shapes == null) {
@@ -772,14 +772,14 @@ public final class LocType {
 			} else {
 				local29 = arg0 + (this.id << 10) + (arg3 << 3);
 			}
-			@Pc(225) Loc_Class139 local225 = (Loc_Class139) LocTypeList.aClass99_14.get(local29);
+			@Pc(225) LocEntity local225 = (LocEntity) LocTypeList.aClass99_14.get(local29);
 			@Pc(235) GlModel local235;
 			@Pc(265) SoftwareIndexedSprite local265;
 			if (local225 == null) {
 				local235 = this.getGlModel(arg0, false, arg3);
 				if (local235 == null) {
-					aClass139_1.aClass8_10 = null;
-					aClass139_1.aClass36_Sub1_3 = null;
+					aClass139_1.model = null;
+					aClass139_1.sprite = null;
 					return aClass139_1;
 				}
 				if (arg3 == 10 && arg0 > 3) {
@@ -790,13 +790,13 @@ public final class LocType {
 				} else {
 					local265 = null;
 				}
-				local225 = new Loc_Class139();
-				local225.aClass8_10 = local235;
-				local225.aClass36_Sub1_3 = local265;
+				local225 = new LocEntity();
+				local225.model = local235;
+				local225.sprite = local265;
 				LocTypeList.aClass99_14.put(local225, local29);
 			} else {
-				local235 = (GlModel) local225.aClass8_10;
-				local265 = local225.aClass36_Sub1_3;
+				local235 = (GlModel) local225.model;
+				local265 = local225.sprite;
 			}
 			@Pc(298) boolean local298 = this.computeVertexColors & arg6;
 			@Pc(330) GlModel local330 = local235.method4117(this.hillskew != 3, this.hillskew == 0, true, true, true, !local298, true, true, true);
@@ -804,9 +804,9 @@ public final class LocType {
 				local330.method4110(this.hillskew, this.aShort26, local235, arg2, arg5, arg1, arg4, arg9);
 			}
 			local330.method4111(this.interactable == 0 && !this.aBoolean214, true, true, this.interactable == 0, true, false);
-			aClass139_1.aClass8_10 = local330;
+			aClass139_1.model = local330;
 			local330.aBoolean259 = local298;
-			aClass139_1.aClass36_Sub1_3 = local265;
+			aClass139_1.sprite = local265;
 			return aClass139_1;
 		}
 		if (this.shapes == null) {
@@ -825,7 +825,7 @@ public final class LocType {
 		if (local60 == null) {
 			@Pc(69) RawModel local69 = this.getRawModel(arg0, arg3);
 			if (local69 == null) {
-				aClass139_1.aClass8_10 = null;
+				aClass139_1.model = null;
 				return aClass139_1;
 			}
 			local69.resetBones();
@@ -852,12 +852,12 @@ public final class LocType {
 				local60 = ((RawModel) local60).method1670(this.hillskew, this.aShort26, arg2, arg5, arg1, arg4, arg9);
 			}
 		}
-		aClass139_1.aClass8_10 = local60;
+		aClass139_1.model = local60;
 		return aClass139_1;
 	}
 
 	@OriginalMember(owner = "client!pb", name = "a", descriptor = "(IILclient!ek;ILclient!tk;I[[IZII[[IIII)Lclient!sm;")
-	public Loc_Class139 method3429(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) SoftwareIndexedSprite arg2, @OriginalArg(3) int arg3, @OriginalArg(4) SeqType arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int[][] arg6, @OriginalArg(7) boolean arg7, @OriginalArg(8) int arg8, @OriginalArg(10) int[][] arg9, @OriginalArg(11) int arg10, @OriginalArg(12) int arg11, @OriginalArg(13) int arg12) {
+	public LocEntity method3429(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) SoftwareIndexedSprite arg2, @OriginalArg(3) int arg3, @OriginalArg(4) SeqType arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int[][] arg6, @OriginalArg(7) boolean arg7, @OriginalArg(8) int arg8, @OriginalArg(10) int[][] arg9, @OriginalArg(11) int arg10, @OriginalArg(12) int arg11, @OriginalArg(13) int arg12) {
 		@Pc(30) long local30;
 		if (!GlRenderer.enabled) {
 			if (this.shapes == null) {
@@ -892,7 +892,7 @@ public final class LocType {
 				}
 				local195 = local195.method4586(this.hillskew, this.aShort26, arg6, arg9, arg1, arg3, arg0, false);
 			}
-			aClass139_1.aClass8_10 = local195;
+			aClass139_1.model = local195;
 			return aClass139_1;
 		}
 		if (this.shapes == null) {
@@ -924,9 +924,9 @@ public final class LocType {
 			local82.method4554(256);
 		}
 		if (arg7) {
-			aClass139_1.aClass36_Sub1_3 = local82.method4124(arg2);
+			aClass139_1.sprite = local82.method4124(arg2);
 		} else {
-			aClass139_1.aClass36_Sub1_3 = null;
+			aClass139_1.sprite = null;
 		}
 		if (this.hillskew != 0) {
 			if (!local80) {
@@ -934,7 +934,7 @@ public final class LocType {
 			}
 			local82.method4110(this.hillskew, this.aShort26, local46, arg6, arg9, arg1, arg3, arg0);
 		}
-		aClass139_1.aClass8_10 = local82;
+		aClass139_1.model = local82;
 		return aClass139_1;
 	}
 

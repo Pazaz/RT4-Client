@@ -5,14 +5,19 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 
 public class SeqTypeList {
+
 	@OriginalMember(owner = "client!lc", name = "e", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable types = new SoftLruHashTable(64);
+
 	@OriginalMember(owner = "client!vl", name = "a", descriptor = "Lclient!n;")
 	public static final SoftLruHashTable animFramesets = new SoftLruHashTable(100);
+
 	@OriginalMember(owner = "client!tk", name = "s", descriptor = "Lclient!ve;")
 	public static Js5 archive;
+
 	@OriginalMember(owner = "client!af", name = "a", descriptor = "Lclient!ve;")
 	public static Js5 basesArchive;
+
 	@OriginalMember(owner = "client!se", name = "l", descriptor = "Lclient!ve;")
 	public static Js5 animsArchive;
 

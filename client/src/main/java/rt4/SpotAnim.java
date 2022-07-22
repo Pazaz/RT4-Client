@@ -98,8 +98,8 @@ public final class SpotAnim extends Entity {
 			return;
 		}
 		this.anInt607 += arg0;
-		while (this.anInt607 > this.aClass144_1.anIntArray474[this.anInt593]) {
-			this.anInt607 -= this.aClass144_1.anIntArray474[this.anInt593];
+		while (this.anInt607 > this.aClass144_1.frameDelay[this.anInt593]) {
+			this.anInt607 -= this.aClass144_1.frameDelay[this.anInt593];
 			this.anInt593++;
 			if (this.aClass144_1.frames.length <= this.anInt593) {
 				this.aBoolean41 = true;

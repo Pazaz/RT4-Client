@@ -136,7 +136,7 @@ public class MiniMap {
 			locs = 0;
 			for (local37 = 0; local37 < 104; local37++) {
 				for (local76 = 0; local76 < 104; local76++) {
-					@Pc(169) long local169 = SceneGraph.getGroundDecorKey(Player.level, local37 + 0, local76);
+					@Pc(169) long local169 = SceneGraph.getGroundDecorKey(Player.plane, local37 + 0, local76);
 					if (local169 != 0L) {
 						@Pc(184) LocType local184 = LocTypeList.get((int) (local169 >>> 32) & Integer.MAX_VALUE);
 						@Pc(187) int local187 = local184.mapfunction;
@@ -156,7 +156,7 @@ public class MiniMap {
 							@Pc(237) int local237 = local76;
 							local194 = local37;
 							if (local187 != 22 && local187 != 29 && local187 != 34 && local187 != 36 && local187 != 46 && local187 != 47 && local187 != 48) {
-								@Pc(269) int[][] local269 = PathFinder.collisionMaps[Player.level].flags;
+								@Pc(269) int[][] local269 = PathFinder.collisionMaps[Player.plane].flags;
 								for (@Pc(271) int local271 = 0; local271 < 10; local271++) {
 									@Pc(281) int local281 = (int) (Math.random() * 4.0D);
 									if (local281 == 0 && local194 > 0 && local37 - 3 < local194 && (local269[local194 - 1][local237] & 0x12C0108) == 0) {
@@ -305,7 +305,7 @@ public class MiniMap {
 			}
 			for (local146 = 0; local146 < 104; local146++) {
 				for (local181 = 0; local181 < 104; local181++) {
-					@Pc(439) LinkedList local439 = SceneGraph.objStacks[Player.level][local146][local181];
+					@Pc(439) LinkedList local439 = SceneGraph.objStacks[Player.plane][local146][local181];
 					if (local439 != null) {
 						local154 = local146 * 4 + 2 - PlayerList.self.xFine / 32;
 						local231 = local181 * 4 + 2 - PlayerList.self.zFine / 32;

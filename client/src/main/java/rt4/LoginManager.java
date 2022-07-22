@@ -763,7 +763,7 @@ public class LoginManager {
 				local265.zFine -= local81 * 128;
 			}
 		}
-		Player.level = arg0;
+		Player.plane = arg0;
 		PlayerList.self.teleport(arg5, false, arg3);
 		@Pc(322) byte local322 = 104;
 		@Pc(324) byte local324 = 0;
@@ -1053,10 +1053,10 @@ public class LoginManager {
 		}
 		ClientProt.ping(true);
 		i = SceneGraph.firstVisibleLevel;
-		if (i > Player.level) {
-			i = Player.level;
+		if (i > Player.plane) {
+			i = Player.plane;
 		}
-		if (i < Player.level - 1) {
+		if (i < Player.plane - 1) {
 		}
 		if (SceneGraph.allLevelsAreVisible()) {
 			SceneGraph.method2750(0);
@@ -1483,8 +1483,8 @@ public class LoginManager {
 				}
 			}
 		}
-		AreaSoundManager.redraw(Protocol.anInt4247, PlayerList.self.xFine, PlayerList.self.zFine, Player.level);
-		Protocol.anInt4247 = 0;
+		AreaSoundManager.redraw(Protocol.sceneDelta, PlayerList.self.xFine, PlayerList.self.zFine, Player.plane);
+		Protocol.sceneDelta = 0;
 	}
 
 	@OriginalMember(owner = "client!tb", name = "h", descriptor = "(I)I")

@@ -21,19 +21,19 @@ public class SpotAnimTypeList {
 	}
 
 	@OriginalMember(owner = "client!ck", name = "a", descriptor = "(BI)Lclient!eg;")
-	public static SpotAnimType get(@OriginalArg(1) int arg0) {
-		@Pc(10) SpotAnimType local10 = (SpotAnimType) types.get(arg0);
-		if (local10 != null) {
-			return local10;
+	public static SpotAnimType get(@OriginalArg(1) int id) {
+		@Pc(10) SpotAnimType type = (SpotAnimType) types.get(id);
+		if (type != null) {
+			return type;
 		}
-		@Pc(26) byte[] local26 = archive.fetchFile(method3681(arg0), method4010(arg0));
-		local10 = new SpotAnimType();
-		local10.id = arg0;
-		if (local26 != null) {
-			local10.decode(new Buffer(local26));
+		@Pc(26) byte[] src = archive.fetchFile(method3681(id), method4010(id));
+		type = new SpotAnimType();
+		type.id = id;
+		if (src != null) {
+			type.decode(new Buffer(src));
 		}
-		types.put(local10, arg0);
-		return local10;
+		types.put(type, id);
+		return type;
 	}
 
 	@OriginalMember(owner = "client!qk", name = "a", descriptor = "(ZI)I")

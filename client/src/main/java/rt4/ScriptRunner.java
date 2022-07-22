@@ -214,7 +214,7 @@ public final class ScriptRunner {
 		}
 		method3240(false);
 		if (!arg1) {
-			method3532();
+			updateSceneProjectiles();
 		}
 		method4239();
 		if (GlRenderer.enabled) {
@@ -235,7 +235,7 @@ public final class ScriptRunner {
 			if (Camera.customCameraActive[4] && Camera.cameraAmplitude[4] + 128 > local59) {
 				local59 = Camera.cameraAmplitude[4] + 128;
 			}
-			Camera.method555(Camera.cameraX, arg0, SceneGraph.getTileHeight(Player.level, PlayerList.self.xFine, PlayerList.self.zFine) - 50, Camera.ZOOM - -(local59 * 3), local57, Camera.cameraZ, local59);
+			Camera.method555(Camera.cameraX, arg0, SceneGraph.getTileHeight(Player.plane, PlayerList.self.xFine, PlayerList.self.zFine) - 50, Camera.ZOOM - -(local59 * 3), local57, Camera.cameraZ, local59);
 		}
 		local57 = Camera.anInt40;
 		local59 = Camera.renderX;
@@ -304,15 +304,15 @@ public final class ScriptRunner {
 			GlRenderer.setDepthTestEnabled(true);
 			GlRenderer.setFogEnabled(true);
 			if (client.gameState == 10) {
-				local171 = FogManager.method2235(Protocol.anInt4247, Camera.renderZ >> 10, Preferences.brightness, Camera.renderX >> 10);
+				local171 = FogManager.method2235(Protocol.sceneDelta, Camera.renderZ >> 10, Preferences.brightness, Camera.renderX >> 10);
 			} else {
-				local171 = FogManager.method2235(Protocol.anInt4247, PlayerList.self.movementQueueZ[0] >> 3, Preferences.brightness, PlayerList.self.movementQueueX[0] >> 3);
+				local171 = FogManager.method2235(Protocol.sceneDelta, PlayerList.self.movementQueueZ[0] >> 3, Preferences.brightness, PlayerList.self.movementQueueX[0] >> 3);
 			}
 			LightingManager.method2394(client.loop, !Preferences.flickeringEffectsOn);
 			GlRenderer.clearColorAndDepthBuffers(local171);
 			MaterialManager.method2731(Camera.cameraPitch, Camera.renderZ, Camera.anInt40, Camera.renderX, Camera.cameraYaw);
 			GlRenderer.anInt5323 = client.loop;
-			SceneGraph.method2954(Camera.renderX, Camera.anInt40, Camera.renderZ, Camera.cameraPitch, Camera.cameraYaw, aByteArrayArrayArray15, anIntArray205, anIntArray338, anIntArray518, anIntArray134, anIntArray476, Player.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
+			SceneGraph.method2954(Camera.renderX, Camera.anInt40, Camera.renderZ, Camera.cameraPitch, Camera.cameraYaw, aByteArrayArrayArray15, anIntArray205, anIntArray338, anIntArray518, anIntArray134, anIntArray476, Player.plane + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
 			aBoolean299 = true;
 			LightingManager.method2390();
 			MaterialManager.method2731(0, 0, 0, 0, 0);
@@ -322,13 +322,13 @@ public final class ScriptRunner {
 			MiniMap.method4000(arg3, arg2, arg0, anInt5029, anInt5029, arg4);
 		} else {
 			SoftwareRaster.fillRect(arg2, arg4, arg3, arg0, 0);
-			SceneGraph.method2954(Camera.renderX, Camera.anInt40, Camera.renderZ, Camera.cameraPitch, Camera.cameraYaw, aByteArrayArrayArray15, anIntArray205, anIntArray338, anIntArray518, anIntArray134, anIntArray476, Player.level + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
+			SceneGraph.method2954(Camera.renderX, Camera.anInt40, Camera.renderZ, Camera.cameraPitch, Camera.cameraYaw, aByteArrayArrayArray15, anIntArray205, anIntArray338, anIntArray518, anIntArray134, anIntArray476, Player.plane + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
 			client.audioLoop();
 			method3858();
 			method2726(arg4, arg3, arg2, 256, arg0, 256);
 			MiniMap.method4000(arg3, arg2, arg0, 256, 256, arg4);
 		}
-		((Js5GlTextureProvider) Rasteriser.textureProvider).method3239(Protocol.anInt4247);
+		((Js5GlTextureProvider) Rasteriser.textureProvider).method3239(Protocol.sceneDelta);
 		Player.method2310(arg3, arg4, arg0, arg2);
 		Camera.cameraPitch = local123;
 		Camera.renderZ = local121;
@@ -783,12 +783,12 @@ public final class ScriptRunner {
 					}
 				}
 				if (local39.attachment == null || client.loop < local39.attachmentSetAt || local39.attachmentResetAt <= client.loop) {
-					local39.anInt3424 = SceneGraph.getTileHeight(Player.level, local39.xFine, local39.zFine);
-					SceneGraph.method1141(Player.level, local39.xFine, local39.zFine, local39.anInt3424, (local82 - 1) * 64 + 60, local39, local39.anInt3381, local272, local39.aBoolean171);
+					local39.anInt3424 = SceneGraph.getTileHeight(Player.plane, local39.xFine, local39.zFine);
+					SceneGraph.add(Player.plane, local39.xFine, local39.zFine, local39.anInt3424, (local82 - 1) * 64 + 60, local39, local39.anInt3381, local272, local39.aBoolean171);
 				} else {
 					local39.aBoolean98 = false;
-					local39.anInt3424 = SceneGraph.getTileHeight(Player.level, local39.xFine, local39.zFine);
-					method3387(Player.level, local39.xFine, local39.zFine, local39.anInt3424, local39, local39.anInt3381, local272, local39.atachmentX0, local39.attachmentZ0, local39.attachmentX1, local39.attachmentZ1);
+					local39.anInt3424 = SceneGraph.getTileHeight(Player.plane, local39.xFine, local39.zFine);
+					method3387(Player.plane, local39.xFine, local39.zFine, local39.anInt3424, local39, local39.anInt3381, local272, local39.atachmentX0, local39.attachmentZ0, local39.attachmentX1, local39.attachmentZ1);
 				}
 			}
 		}
@@ -904,27 +904,27 @@ public final class ScriptRunner {
 				if (!local16.type.aBoolean183) {
 					local262 |= Long.MIN_VALUE;
 				}
-				local16.anInt3424 = SceneGraph.getTileHeight(Player.level, local16.xFine, local16.zFine);
-				SceneGraph.method1141(Player.level, local16.xFine, local16.zFine, local16.anInt3424, local107 * 64 + 60 - 64, local16, local16.anInt3381, local262, local16.aBoolean171);
+				local16.anInt3424 = SceneGraph.getTileHeight(Player.plane, local16.xFine, local16.zFine);
+				SceneGraph.add(Player.plane, local16.xFine, local16.zFine, local16.anInt3424, local107 * 64 + 60 - 64, local16, local16.anInt3381, local262, local16.aBoolean171);
 			}
 		}
 	}
 
 	@OriginalMember(owner = "client!pk", name = "i", descriptor = "(I)V")
-	public static void method3532() {
+	public static void updateSceneProjectiles() {
 		for (@Pc(16) ProjAnimNode local16 = (ProjAnimNode) SceneGraph.projectiles.head(); local16 != null; local16 = (ProjAnimNode) SceneGraph.projectiles.next()) {
 			@Pc(21) ProjAnim local21 = local16.value;
-			if (Player.level != local21.anInt4810 || local21.anInt4800 < client.loop) {
+			if (Player.plane != local21.currentPlane || local21.lastCycle < client.loop) {
 				local16.unlink();
-			} else if (client.loop >= local21.anInt4822) {
-				if (local21.anInt4819 > 0) {
-					@Pc(54) Npc local54 = NpcList.npcs[local21.anInt4819 - 1];
+			} else if (client.loop >= local21.firstCycle) {
+				if (local21.targetIndex > 0) {
+					@Pc(54) Npc local54 = NpcList.npcs[local21.targetIndex - 1];
 					if (local54 != null && local54.xFine >= 0 && local54.xFine < 13312 && local54.zFine >= 0 && local54.zFine < 13312) {
-						local21.setTarget(local54.zFine, client.loop, SceneGraph.getTileHeight(local21.anInt4810, local54.xFine, local54.zFine) - local21.anInt4805, local54.xFine);
+						local21.setTarget(local54.zFine, client.loop, SceneGraph.getTileHeight(local21.currentPlane, local54.xFine, local54.zFine) - local21.baseZ, local54.xFine);
 					}
 				}
-				if (local21.anInt4819 < 0) {
-					@Pc(102) int local102 = -local21.anInt4819 - 1;
+				if (local21.targetIndex < 0) {
+					@Pc(102) int local102 = -local21.targetIndex - 1;
 					@Pc(107) Player local107;
 					if (PlayerList.selfId == local102) {
 						local107 = PlayerList.self;
@@ -932,11 +932,11 @@ public final class ScriptRunner {
 						local107 = PlayerList.players[local102];
 					}
 					if (local107 != null && local107.xFine >= 0 && local107.xFine < 13312 && local107.zFine >= 0 && local107.zFine < 13312) {
-						local21.setTarget(local107.zFine, client.loop, SceneGraph.getTileHeight(local21.anInt4810, local107.xFine, local107.zFine) - local21.anInt4805, local107.xFine);
+						local21.setTarget(local107.zFine, client.loop, SceneGraph.getTileHeight(local21.currentPlane, local107.xFine, local107.zFine) - local21.baseZ, local107.xFine);
 					}
 				}
-				local21.method3704(Protocol.anInt4247);
-				SceneGraph.method1141(Player.level, (int) local21.aDouble8, (int) local21.aDouble3, (int) local21.aDouble6, 60, local21, local21.anInt4821, -1L, false);
+				local21.update(Protocol.sceneDelta);
+				SceneGraph.add(Player.plane, (int) local21.x, (int) local21.y, (int) local21.z, 60, local21, local21.yaw, -1L, false);
 			}
 		}
 	}
@@ -945,14 +945,14 @@ public final class ScriptRunner {
 	public static void method4239() {
 		for (@Pc(9) SpotAnimNode local9 = (SpotAnimNode) SceneGraph.spotanims.head(); local9 != null; local9 = (SpotAnimNode) SceneGraph.spotanims.next()) {
 			@Pc(15) SpotAnim local15 = local9.aClass8_Sub2_1;
-			if (local15.anInt606 != Player.level || local15.aBoolean41) {
+			if (local15.anInt606 != Player.plane || local15.aBoolean41) {
 				local9.unlink();
 			} else if (local15.anInt590 <= client.loop) {
-				local15.method558(Protocol.anInt4247);
+				local15.method558(Protocol.sceneDelta);
 				if (local15.aBoolean41) {
 					local9.unlink();
 				} else {
-					SceneGraph.method1141(local15.anInt606, local15.anInt604, local15.anInt598, local15.anInt599, 60, local15, 0, -1L, false);
+					SceneGraph.add(local15.anInt606, local15.anInt604, local15.anInt598, local15.anInt599, 60, local15, 0, -1L, false);
 				}
 			}
 		}
@@ -1037,9 +1037,9 @@ public final class ScriptRunner {
 	@OriginalMember(owner = "client!uj", name = "a", descriptor = "(BZII[[[Lclient!bj;I)Z")
 	public static boolean method4348(@OriginalArg(1) boolean arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) Tile[][][] arg3, @OriginalArg(5) int arg4) {
 		@Pc(14) byte local14 = arg0 ? 1 : (byte) (anInt3325 & 0xFF);
-		if (local14 == aByteArrayArrayArray15[Player.level][arg1][arg2]) {
+		if (local14 == aByteArrayArrayArray15[Player.plane][arg1][arg2]) {
 			return false;
-		} else if ((SceneGraph.renderFlags[Player.level][arg1][arg2] & 0x4) == 0) {
+		} else if ((SceneGraph.renderFlags[Player.plane][arg1][arg2] & 0x4) == 0) {
 			return false;
 		} else {
 			@Pc(47) int local47 = 0;
@@ -1047,7 +1047,7 @@ public final class ScriptRunner {
 			PathFinder.queueX[0] = arg1;
 			@Pc(69) int local69 = local49 + 1;
 			PathFinder.queueZ[0] = arg2;
-			aByteArrayArrayArray15[Player.level][arg1][arg2] = local14;
+			aByteArrayArrayArray15[Player.plane][arg1][arg2] = local14;
 			while (local47 != local69) {
 				@Pc(94) int local94 = PathFinder.queueX[local47] >> 16 & 0xFF;
 				@Pc(102) int local102 = PathFinder.queueX[local47] >> 24 & 0xFF;
@@ -1057,13 +1057,13 @@ public final class ScriptRunner {
 				local47 = local47 + 1 & 0xFFF;
 				@Pc(130) boolean local130 = false;
 				@Pc(132) boolean local132 = false;
-				if ((SceneGraph.renderFlags[Player.level][local108][local122] & 0x4) == 0) {
+				if ((SceneGraph.renderFlags[Player.plane][local108][local122] & 0x4) == 0) {
 					local130 = true;
 				}
 				@Pc(150) int local150;
 				@Pc(191) int local191;
 				label238:
-				for (local150 = Player.level + 1; local150 <= 3; local150++) {
+				for (local150 = Player.plane + 1; local150 <= 3; local150++) {
 					if ((SceneGraph.renderFlags[local150][local108][local122] & 0x8) == 0) {
 						@Pc(227) int local227;
 						@Pc(358) int local358;
@@ -1118,8 +1118,8 @@ public final class ScriptRunner {
 					}
 				}
 				if (local132) {
-					if (SceneGraph.tileHeights[Player.level + 1][local108][local122] > anIntArray205[arg4]) {
-						anIntArray205[arg4] = SceneGraph.tileHeights[Player.level + 1][local108][local122];
+					if (SceneGraph.tileHeights[Player.plane + 1][local108][local122] > anIntArray205[arg4]) {
+						anIntArray205[arg4] = SceneGraph.tileHeights[Player.plane + 1][local108][local122];
 					}
 					local150 = local108 << 7;
 					if (local150 < anIntArray338[arg4]) {
@@ -1135,58 +1135,58 @@ public final class ScriptRunner {
 					}
 				}
 				if (!local130) {
-					if (local108 >= 1 && aByteArrayArrayArray15[Player.level][local108 - 1][local122] != local14) {
+					if (local108 >= 1 && aByteArrayArrayArray15[Player.plane][local108 - 1][local122] != local14) {
 						PathFinder.queueX[local69] = local108 - 1 | 0x120000 | 0xD3000000;
 						PathFinder.queueZ[local69] = local122 | 0x130000;
 						local69 = local69 + 1 & 0xFFF;
-						aByteArrayArrayArray15[Player.level][local108 - 1][local122] = local14;
+						aByteArrayArrayArray15[Player.plane][local108 - 1][local122] = local14;
 					}
 					local122++;
 					if (local122 < 104) {
-						if (local108 - 1 >= 0 && local14 != aByteArrayArrayArray15[Player.level][local108 - 1][local122] && (SceneGraph.renderFlags[Player.level][local108][local122] & 0x4) == 0 && (SceneGraph.renderFlags[Player.level][local108 - 1][local122 - 1] & 0x4) == 0) {
+						if (local108 - 1 >= 0 && local14 != aByteArrayArrayArray15[Player.plane][local108 - 1][local122] && (SceneGraph.renderFlags[Player.plane][local108][local122] & 0x4) == 0 && (SceneGraph.renderFlags[Player.plane][local108 - 1][local122 - 1] & 0x4) == 0) {
 							PathFinder.queueX[local69] = 0x52000000 | 0x120000 | local108 - 1;
 							PathFinder.queueZ[local69] = local122 | 0x130000;
-							aByteArrayArrayArray15[Player.level][local108 - 1][local122] = local14;
+							aByteArrayArrayArray15[Player.plane][local108 - 1][local122] = local14;
 							local69 = local69 + 1 & 0xFFF;
 						}
-						if (local14 != aByteArrayArrayArray15[Player.level][local108][local122]) {
+						if (local14 != aByteArrayArrayArray15[Player.plane][local108][local122]) {
 							PathFinder.queueX[local69] = local108 | 0x13000000 | 0x520000;
 							PathFinder.queueZ[local69] = local122 | 0x530000;
 							local69 = local69 + 1 & 0xFFF;
-							aByteArrayArrayArray15[Player.level][local108][local122] = local14;
+							aByteArrayArrayArray15[Player.plane][local108][local122] = local14;
 						}
-						if (local108 + 1 < 104 && aByteArrayArrayArray15[Player.level][local108 + 1][local122] != local14 && (SceneGraph.renderFlags[Player.level][local108][local122] & 0x4) == 0 && (SceneGraph.renderFlags[Player.level][local108 + 1][local122 - 1] & 0x4) == 0) {
+						if (local108 + 1 < 104 && aByteArrayArrayArray15[Player.plane][local108 + 1][local122] != local14 && (SceneGraph.renderFlags[Player.plane][local108][local122] & 0x4) == 0 && (SceneGraph.renderFlags[Player.plane][local108 + 1][local122 - 1] & 0x4) == 0) {
 							PathFinder.queueX[local69] = 0x92000000 | 0x520000 | local108 + 1;
 							PathFinder.queueZ[local69] = local122 | 0x530000;
-							aByteArrayArrayArray15[Player.level][local108 + 1][local122] = local14;
+							aByteArrayArrayArray15[Player.plane][local108 + 1][local122] = local14;
 							local69 = local69 + 1 & 0xFFF;
 						}
 					}
 					local122--;
-					if (local108 + 1 < 104 && local14 != aByteArrayArrayArray15[Player.level][local108 + 1][local122]) {
+					if (local108 + 1 < 104 && local14 != aByteArrayArrayArray15[Player.plane][local108 + 1][local122]) {
 						PathFinder.queueX[local69] = local108 + 1 | 0x920000 | 0x53000000;
 						PathFinder.queueZ[local69] = local122 | 0x930000;
-						aByteArrayArrayArray15[Player.level][local108 + 1][local122] = local14;
+						aByteArrayArrayArray15[Player.plane][local108 + 1][local122] = local14;
 						local69 = local69 + 1 & 0xFFF;
 					}
 					local122--;
 					if (local122 >= 0) {
-						if (local108 - 1 >= 0 && aByteArrayArrayArray15[Player.level][local108 - 1][local122] != local14 && (SceneGraph.renderFlags[Player.level][local108][local122] & 0x4) == 0 && (SceneGraph.renderFlags[Player.level][local108 - 1][local122 + 1] & 0x4) == 0) {
+						if (local108 - 1 >= 0 && aByteArrayArrayArray15[Player.plane][local108 - 1][local122] != local14 && (SceneGraph.renderFlags[Player.plane][local108][local122] & 0x4) == 0 && (SceneGraph.renderFlags[Player.plane][local108 - 1][local122 + 1] & 0x4) == 0) {
 							PathFinder.queueX[local69] = local108 - 1 | 0xD20000 | 0x12000000;
 							PathFinder.queueZ[local69] = local122 | 0xD30000;
-							aByteArrayArrayArray15[Player.level][local108 - 1][local122] = local14;
+							aByteArrayArrayArray15[Player.plane][local108 - 1][local122] = local14;
 							local69 = local69 + 1 & 0xFFF;
 						}
-						if (local14 != aByteArrayArrayArray15[Player.level][local108][local122]) {
+						if (local14 != aByteArrayArrayArray15[Player.plane][local108][local122]) {
 							PathFinder.queueX[local69] = local108 | 0xD20000 | 0x93000000;
 							PathFinder.queueZ[local69] = local122 | 0xD30000;
 							local69 = local69 + 1 & 0xFFF;
-							aByteArrayArrayArray15[Player.level][local108][local122] = local14;
+							aByteArrayArrayArray15[Player.plane][local108][local122] = local14;
 						}
-						if (local108 + 1 < 104 && aByteArrayArrayArray15[Player.level][local108 + 1][local122] != local14 && (SceneGraph.renderFlags[Player.level][local108][local122] & 0x4) == 0 && (SceneGraph.renderFlags[Player.level][local108 + 1][local122 + 1] & 0x4) == 0) {
+						if (local108 + 1 < 104 && aByteArrayArrayArray15[Player.plane][local108 + 1][local122] != local14 && (SceneGraph.renderFlags[Player.plane][local108][local122] & 0x4) == 0 && (SceneGraph.renderFlags[Player.plane][local108 + 1][local122 + 1] & 0x4) == 0) {
 							PathFinder.queueX[local69] = local108 + 1 | 0xD2000000 | 0x920000;
 							PathFinder.queueZ[local69] = local122 | 0x930000;
-							aByteArrayArrayArray15[Player.level][local108 + 1][local122] = local14;
+							aByteArrayArrayArray15[Player.plane][local108 + 1][local122] = local14;
 							local69 = local69 + 1 & 0xFFF;
 						}
 					}
@@ -1237,7 +1237,7 @@ public final class ScriptRunner {
 			anInt1951 = -1;
 			return;
 		}
-		@Pc(38) int local38 = SceneGraph.getTileHeight(Player.level, arg5, arg2) - arg3;
+		@Pc(38) int local38 = SceneGraph.getTileHeight(Player.plane, arg5, arg2) - arg3;
 		@Pc(42) int local42 = arg2 - Camera.renderZ;
 		@Pc(46) int local46 = local38 - Camera.anInt40;
 		@Pc(50) int local50 = arg5 - Camera.renderX;
@@ -1322,7 +1322,7 @@ public final class ScriptRunner {
 				aByteArrayArrayArray15[local33][local31][local40] = local27;
 			}
 		}
-		if (Player.level == 3) {
+		if (Player.plane == 3) {
 			return;
 		}
 		for (local33 = 0; local33 < 2; local33++) {
@@ -1333,13 +1333,13 @@ public final class ScriptRunner {
 			anIntArray134[local33] = 0;
 		}
 		if (Camera.cameraType != 1) {
-			local33 = SceneGraph.getTileHeight(Player.level, Camera.renderX, Camera.renderZ);
-			if (local33 - Camera.anInt40 < 800 && (SceneGraph.renderFlags[Player.level][Camera.renderX >> 7][Camera.renderZ >> 7] & 0x4) != 0) {
+			local33 = SceneGraph.getTileHeight(Player.plane, Camera.renderX, Camera.renderZ);
+			if (local33 - Camera.anInt40 < 800 && (SceneGraph.renderFlags[Player.plane][Camera.renderX >> 7][Camera.renderZ >> 7] & 0x4) != 0) {
 				method4348(false, Camera.renderX >> 7, Camera.renderZ >> 7, SceneGraph.tiles, 1);
 			}
 			return;
 		}
-		if ((SceneGraph.renderFlags[Player.level][PlayerList.self.xFine >> 7][PlayerList.self.zFine >> 7] & 0x4) != 0) {
+		if ((SceneGraph.renderFlags[Player.plane][PlayerList.self.xFine >> 7][PlayerList.self.zFine >> 7] & 0x4) != 0) {
 			method4348(false, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7, SceneGraph.tiles, 0);
 		}
 		if (Camera.cameraPitch >= 310) {
@@ -1372,7 +1372,7 @@ public final class ScriptRunner {
 				} else if (local40 > local135) {
 					local40--;
 				}
-				if ((SceneGraph.renderFlags[Player.level][local33][local40] & 0x4) != 0) {
+				if ((SceneGraph.renderFlags[Player.plane][local33][local40] & 0x4) != 0) {
 					method4348(false, local33, local40, SceneGraph.tiles, 1);
 					break;
 				}
@@ -1384,7 +1384,7 @@ public final class ScriptRunner {
 						local33--;
 					}
 					local186 -= 65536;
-					if ((SceneGraph.renderFlags[Player.level][local33][local40] & 0x4) != 0) {
+					if ((SceneGraph.renderFlags[Player.plane][local33][local40] & 0x4) != 0) {
 						method4348(false, local33, local40, SceneGraph.tiles, 1);
 						break;
 					}
@@ -1400,7 +1400,7 @@ public final class ScriptRunner {
 			} else if (local33 > local162) {
 				local33--;
 			}
-			if ((SceneGraph.renderFlags[Player.level][local33][local40] & 0x4) != 0) {
+			if ((SceneGraph.renderFlags[Player.plane][local33][local40] & 0x4) != 0) {
 				method4348(false, local33, local40, SceneGraph.tiles, 1);
 				break;
 			}
@@ -1412,7 +1412,7 @@ public final class ScriptRunner {
 					local40--;
 				}
 				local186 -= 65536;
-				if ((SceneGraph.renderFlags[Player.level][local33][local40] & 0x4) != 0) {
+				if ((SceneGraph.renderFlags[Player.plane][local33][local40] & 0x4) != 0) {
 					method4348(false, local33, local40, SceneGraph.tiles, 1);
 					break;
 				}
@@ -1577,6 +1577,10 @@ public final class ScriptRunner {
 		public static final int itemAttribute = 4208;
 		public static final int searchItem = 4210;
 
+		// Params
+		public static final int getLocParam = 4400;
+		public static final int getStructParam = 4500;
+
 		// Privacy
 		public static final int getPublicChatSetting = 5000;
 		public static final int setChatSettings = 5001;
@@ -1590,6 +1594,10 @@ public final class ScriptRunner {
 		public static final int getFirstWorldData = 6501;
 		public static final int getNextWorldData = 6502;
 		public static final int setWorldHost = 6503;
+		public static final int setLastWorld = 6504;
+		public static final int getLastWorld = 6505;
+		public static final int sortWorldList = 6507;
+
 		public static final int setChild = 200;
 		public static final int setChild2 = 201;
 		public static final int setBaseIdkit = 403;
@@ -3149,7 +3157,7 @@ public final class ScriptRunner {
 										continue;
 									}
 									if (opcode == Cs2Opcodes.getMyLocation) {
-										int1 = Player.level;
+										int1 = Player.plane;
 										int3 = Camera.originX + (PlayerList.self.xFine >> 7);
 										int2 = (PlayerList.self.zFine >> 7) + Camera.originZ;
 										intStack[isp++] = (int1 << 28) - (-(int3 << 14) - int2);
@@ -5518,13 +5526,13 @@ public final class ScriptRunner {
 														intStack[isp++] = 0;
 														continue;
 													}
-													if (opcode == 6504) {
+													if (opcode == Cs2Opcodes.setLastWorld) {
 														isp--;
 														Preferences.lastWorldId = intStack[isp];
 														Preferences.write(GameShell.signLink);
 														continue;
 													}
-													if (opcode == 6505) {
+													if (opcode == Cs2Opcodes.getLastWorld) {
 														intStack[isp++] = Preferences.lastWorldId;
 														continue;
 													}
@@ -5548,7 +5556,7 @@ public final class ScriptRunner {
 														}
 														continue;
 													}
-													if (opcode == 6507) {
+													if (opcode == Cs2Opcodes.sortWorldList) {
 														isp -= 4;
 														int2 = intStack[isp + 2];
 														int1 = intStack[isp];
@@ -5570,7 +5578,7 @@ public final class ScriptRunner {
 													}
 												}
 											}
-										} else if (opcode == 4500) {
+										} else if (opcode == Cs2Opcodes.getStructParam) {
 											isp -= 2;
 											int1 = intStack[isp];
 											int3 = intStack[isp + 1];
@@ -5582,7 +5590,7 @@ public final class ScriptRunner {
 											}
 											continue;
 										}
-									} else if (opcode == 4400) {
+									} else if (opcode == Cs2Opcodes.getLocParam) {
 										isp -= 2;
 										int3 = intStack[isp + 1];
 										int1 = intStack[isp];

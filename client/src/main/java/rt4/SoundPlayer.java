@@ -20,15 +20,15 @@ public class SoundPlayer {
 
 	@OriginalMember(owner = "client!ma", name = "a", descriptor = "(ILclient!tk;IIZI)V")
 	public static void playSeqSound(@OriginalArg(0) int zFine, @OriginalArg(1) SeqType seqType, @OriginalArg(3) int xFine, @OriginalArg(4) boolean self, @OriginalArg(5) int index) {
-		if (size >= 50 || (seqType.sounds == null || index >= seqType.sounds.length || seqType.sounds[index] == null)) {
+		if (size >= 50 || (seqType.soundeffect == null || index >= seqType.soundeffect.length || seqType.soundeffect[index] == null)) {
 			return;
 		}
-		@Pc(36) int sound = seqType.sounds[index][0];
+		@Pc(36) int sound = seqType.soundeffect[index][0];
 		@Pc(40) int id = sound >> 8;
-		if (seqType.sounds[index].length > 1) {
-			int alternativeIdIndex = (int) ((double) seqType.sounds[index].length * Math.random());
+		if (seqType.soundeffect[index].length > 1) {
+			int alternativeIdIndex = (int) ((double) seqType.soundeffect[index].length * Math.random());
 			if (alternativeIdIndex > 0) {
-				id = seqType.sounds[index][alternativeIdIndex];
+				id = seqType.soundeffect[index][alternativeIdIndex];
 			}
 		}
 		@Pc(73) int loops = sound >> 5 & 0x7;

@@ -113,13 +113,13 @@ public class Camera {
 		yawTarget = mod(yawTarget, 2047.0d);
 		@Pc(33) int local33 = cameraX >> 7;
 		@Pc(37) int local37 = cameraZ >> 7;
-		@Pc(43) int local43 = SceneGraph.getTileHeight(Player.level, cameraX, cameraZ);
+		@Pc(43) int local43 = SceneGraph.getTileHeight(Player.plane, cameraX, cameraZ);
 		@Pc(45) int local45 = 0;
 		@Pc(64) int local64;
 		if (local33 > 3 && local37 > 3 && local33 < 100 && local37 < 100) {
 			for (local64 = local33 - 4; local64 <= local33 + 4; local64++) {
 				for (@Pc(73) int local73 = local37 - 4; local73 <= local37 + 4; local73++) {
-					@Pc(80) int local80 = Player.level;
+					@Pc(80) int local80 = Player.plane;
 					if (local80 < 3 && (SceneGraph.renderFlags[1][local64][local73] & 0x2) == 2) {
 						local80++;
 					}
@@ -148,11 +148,11 @@ public class Camera {
 	public static void updateLockedCamera() {
 		@Pc(9) int local9 = anInt4232 * 128 + 64;
 		@Pc(15) int local15 = anInt5375 * 128 + 64;
-		@Pc(23) int local23 = SceneGraph.getTileHeight(Player.level, local15, local9) - anInt5203;
+		@Pc(23) int local23 = SceneGraph.getTileHeight(Player.plane, local15, local9) - anInt5203;
 		if (anInt4612 >= 100) {
 			renderX = anInt5375 * 128 + 64;
 			renderZ = anInt4232 * 128 + 64;
-			anInt40 = SceneGraph.getTileHeight(Player.level, renderX, renderZ) - anInt5203;
+			anInt40 = SceneGraph.getTileHeight(Player.plane, renderX, renderZ) - anInt5203;
 		} else {
 			if (renderX < local15) {
 				renderX += anInt5225 + anInt4612 * (local15 - renderX) / 1000;
@@ -193,7 +193,7 @@ public class Camera {
 		}
 		local9 = anInt5765 * 128 + 64;
 		local15 = anInt5449 * 128 + 64;
-		local23 = SceneGraph.getTileHeight(Player.level, local15, local9) - anInt1744;
+		local23 = SceneGraph.getTileHeight(Player.plane, local15, local9) - anInt1744;
 		@Pc(236) int local236 = local23 - anInt40;
 		@Pc(241) int local241 = local9 - renderZ;
 		@Pc(246) int local246 = local15 - renderX;
@@ -315,7 +315,7 @@ public class Camera {
 		if (anInt5217 >= 100) {
 			@Pc(30) int local30 = anInt5449 * 128 + 64;
 			@Pc(36) int local36 = anInt5765 * 128 + 64;
-			@Pc(44) int local44 = SceneGraph.getTileHeight(Player.level, local30, local36) - anInt1744;
+			@Pc(44) int local44 = SceneGraph.getTileHeight(Player.plane, local30, local36) - anInt1744;
 			@Pc(49) int local49 = local44 - anInt40;
 			@Pc(54) int local54 = local30 - renderX;
 			@Pc(59) int local59 = local36 - renderZ;
@@ -342,7 +342,7 @@ public class Camera {
 		if (arg0 && anInt4612 >= 100) {
 			renderX = anInt5375 * 128 + 64;
 			renderZ = anInt4232 * 128 + 64;
-			anInt40 = SceneGraph.getTileHeight(Player.level, renderX, renderZ) - anInt5203;
+			anInt40 = SceneGraph.getTileHeight(Player.plane, renderX, renderZ) - anInt5203;
 		}
 		cameraType = 2;
 	}

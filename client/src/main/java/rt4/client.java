@@ -487,7 +487,7 @@ public final class client extends GameShell {
 		LightingManager.anInt2875 = -1;
 		unload();
 		DeadClass.cache.clear();
-		LocType.aClass139_1 = new Loc_Class139();
+		LocType.aClass139_1 = new LocEntity();
 		((Js5GlTextureProvider) Rasteriser.textureProvider).clear();
 		LightingManager.lightCount = 0;
 		LightingManager.lights = new Light[255];
@@ -1042,7 +1042,7 @@ public final class client extends GameShell {
 			InterfaceList.keyCodes[InterfaceList.keyQueueSize] = Keyboard.keyCode;
 			InterfaceList.keyChars[InterfaceList.keyQueueSize] = Keyboard.keyChar;
 		}
-		Protocol.anInt4247++;
+		Protocol.sceneDelta++;
 		if (InterfaceList.topLevelInterface != -1) {
 			InterfaceList.method1320(0, 0, 0, GameShell.canvasWidth, InterfaceList.topLevelInterface, 0, GameShell.canvasHeight);
 		}
@@ -1060,12 +1060,12 @@ public final class client extends GameShell {
 							local66.movementQueueSpeed[0] = 1;
 							local66.movementQueueX[0] = local98 + (local66.xFine >> 7);
 							local66.movementQueueZ[0] = local106 + (local66.zFine >> 7);
-							PathFinder.collisionMaps[Player.level].unflagScenery(local66.xFine >> 7, local66.getSize(), false, 0, local66.getSize(), local66.zFine >> 7);
-							if (local66.movementQueueX[0] >= 0 && local66.movementQueueX[0] <= 104 - local66.getSize() && local66.movementQueueZ[0] >= 0 && local66.movementQueueZ[0] <= 104 - local66.getSize() && PathFinder.collisionMaps[Player.level].method3054(local66.zFine >> 7, local66.movementQueueZ[0], local66.movementQueueX[0], local66.xFine >> 7)) {
+							PathFinder.collisionMaps[Player.plane].unflagScenery(local66.xFine >> 7, local66.getSize(), false, 0, local66.getSize(), local66.zFine >> 7);
+							if (local66.movementQueueX[0] >= 0 && local66.movementQueueX[0] <= 104 - local66.getSize() && local66.movementQueueZ[0] >= 0 && local66.movementQueueZ[0] <= 104 - local66.getSize() && PathFinder.collisionMaps[Player.plane].method3054(local66.zFine >> 7, local66.movementQueueZ[0], local66.movementQueueX[0], local66.xFine >> 7)) {
 								if (local66.getSize() > 1) {
 									for (@Pc(226) int local226 = local66.movementQueueX[0]; local66.movementQueueX[0] + local66.getSize() > local226; local226++) {
 										for (@Pc(246) int local246 = local66.movementQueueZ[0]; local66.movementQueueZ[0] + local66.getSize() > local246; local246++) {
-											if ((PathFinder.collisionMaps[Player.level].flags[local226][local246] & 0x12401FF) != 0) {
+											if ((PathFinder.collisionMaps[Player.plane].flags[local226][local246] & 0x12401FF) != 0) {
 												continue nextNpc;
 											}
 										}
@@ -1078,7 +1078,7 @@ public final class client extends GameShell {
 					NpcList.method2247(local66);
 					NpcList.method949(local66);
 					NpcList.method879(local66);
-					PathFinder.collisionMaps[Player.level].flagScenery(local66.xFine >> 7, false, local66.zFine >> 7, local66.getSize(), local66.getSize());
+					PathFinder.collisionMaps[Player.plane].flagScenery(local66.xFine >> 7, false, local66.zFine >> 7, local66.getSize(), local66.getSize());
 				}
 			}
 		}

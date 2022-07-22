@@ -1141,7 +1141,7 @@ public class InterfaceList {
 		} else {
 			SoftwareRaster.method2503();
 		}
-		Protocol.anInt4247 = 0;
+		Protocol.sceneDelta = 0;
 	}
 
 	@OriginalMember(owner = "client!client", name = "a", descriptor = "(Lclient!be;)Lclient!be;")
@@ -1247,19 +1247,19 @@ public class InterfaceList {
 						if (local105 != -1) {
 							@Pc(118) SeqType local118 = SeqTypeList.get(local105);
 							if (local118 != null) {
-								local15.anInt500 += Protocol.anInt4247;
-								while (local15.anInt500 > local118.anIntArray474[local15.anInt510]) {
-									local15.anInt500 -= local118.anIntArray474[local15.anInt510];
+								local15.anInt500 += Protocol.sceneDelta;
+								while (local15.anInt500 > local118.frameDelay[local15.anInt510]) {
+									local15.anInt500 -= local118.frameDelay[local15.anInt510];
 									local15.anInt510++;
 									if (local118.frames.length <= local15.anInt510) {
-										local15.anInt510 -= local118.anInt5362;
+										local15.anInt510 -= local118.replayoff;
 										if (local15.anInt510 < 0 || local118.frames.length <= local15.anInt510) {
 											local15.anInt510 = 0;
 										}
 									}
 									local15.anInt496 = local15.anInt510 + 1;
 									if (local118.frames.length <= local15.anInt496) {
-										local15.anInt496 -= local118.anInt5362;
+										local15.anInt496 -= local118.replayoff;
 										if (local15.anInt496 < 0 || local118.frames.length <= local15.anInt496) {
 											local15.anInt496 = -1;
 										}
@@ -1271,10 +1271,10 @@ public class InterfaceList {
 					}
 					if (local15.modelRotationSpeed != 0 && !local15.if3) {
 						@Pc(239) int local239 = local15.modelRotationSpeed >> 16;
-						@Pc(243) int local243 = local239 * Protocol.anInt4247;
+						@Pc(243) int local243 = local239 * Protocol.sceneDelta;
 						local105 = local15.modelRotationSpeed << 16 >> 16;
 						local15.modelXAngle = local243 + local15.modelXAngle & 0x7FF;
-						local105 *= Protocol.anInt4247;
+						local105 *= Protocol.sceneDelta;
 						local15.modelYAngle = local15.modelYAngle + local105 & 0x7FF;
 						redraw(local15);
 					}

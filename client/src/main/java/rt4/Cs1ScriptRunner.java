@@ -661,9 +661,9 @@ public class Cs1ScriptRunner {
 
 															@Pc(1611) int local1611;
 															if (top > dragY + y && local1571.scrollY > 0) {
-																local1611 = Protocol.anInt4247 * (top - dragY - y) / 3;
-																if (local1611 > Protocol.anInt4247 * 10) {
-																	local1611 = Protocol.anInt4247 * 10;
+																local1611 = Protocol.sceneDelta * (top - dragY - y) / 3;
+																if (local1611 > Protocol.sceneDelta * 10) {
+																	local1611 = Protocol.sceneDelta * 10;
 																}
 
 																if (local1611 > local1571.scrollY) {
@@ -676,9 +676,9 @@ public class Cs1ScriptRunner {
 															}
 
 															if (bottom < dragY + y + 32 && local1571.scrollY < local1571.scrollMaxV - local1571.height) {
-																local1611 = (y + dragY + 32 - bottom) * Protocol.anInt4247 / 3;
-																if (local1611 > Protocol.anInt4247 * 10) {
-																	local1611 = Protocol.anInt4247 * 10;
+																local1611 = (y + dragY + 32 - bottom) * Protocol.sceneDelta / 3;
+																if (local1611 > Protocol.sceneDelta * 10) {
+																	local1611 = Protocol.sceneDelta * 10;
 																}
 
 																if (local1571.scrollMaxV - local1571.scrollY - local1571.height < local1611) {
