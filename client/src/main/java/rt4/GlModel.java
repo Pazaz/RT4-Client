@@ -628,13 +628,13 @@ public final class GlModel extends Model {
 				@Pc(1994) long local1994 = (long) (local833 << 2) + ((long) (local553 << 24) + (long) (local817 << 8) + (long) local844 << 32);
 				local919 = model.triangleVertexA[local810];
 				@Pc(2004) VertexNormal local2004 = model.vertexNormals[local919];
-				this.aShortArray77[local439] = this.method4098(model, local919, local1994, local2004.x, local2004.y, local2004.z, local2004.triangles, local854, local856);
+				this.aShortArray77[local439] = this.method4098(model, local919, local1994, local2004.x, local2004.y, local2004.z, local2004.magnitude, local854, local856);
 				local1280 = model.triangleVertexB[local810];
 				@Pc(2033) VertexNormal local2033 = model.vertexNormals[local1280];
-				this.aShortArray82[local439] = this.method4098(model, local1280, local1994 + (long) local866, local2033.x, local2033.y, local2033.z, local2033.triangles, local858, local683);
+				this.aShortArray82[local439] = this.method4098(model, local1280, local1994 + (long) local866, local2033.x, local2033.y, local2033.z, local2033.magnitude, local858, local683);
 				@Pc(2060) int local2060 = model.triangleVertexC[local810];
 				@Pc(2065) VertexNormal local2065 = model.vertexNormals[local2060];
-				this.aShortArray83[local439] = this.method4098(model, local2060, local1994 + (long) local868, local2065.x, local2065.y, local2065.z, local2065.triangles, local714, local685);
+				this.aShortArray83[local439] = this.method4098(model, local2060, local1994 + (long) local868, local2065.x, local2065.y, local2065.z, local2065.magnitude, local714, local685);
 			} else if (local902 == 1) {
 				@Pc(2096) TriangleNormal local2096 = model.triangleNormals[local810];
 				@Pc(2137) long local2137 = (long) ((local833 << 2) + (local2096.anInt4769 > 0 ? 1024 : 2048) + (local2096.anInt4770 + 256 << 12) + (local2096.anInt4767 + 256 << 22)) + ((long) (local553 << 24) + (long) (local817 << 8) + (long) local844 << 32);

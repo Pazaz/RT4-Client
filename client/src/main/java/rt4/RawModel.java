@@ -681,17 +681,17 @@ public final class RawModel extends Entity {
 				n1.x += local112;
 				n1.y += local120;
 				n1.z += local128;
-				n1.triangles++;
+				n1.magnitude++;
 				@Pc(243) VertexNormal n2 = this.vertexNormals[local39];
 				n2.x += local112;
 				n2.y += local120;
 				n2.z += local128;
-				n2.triangles++;
+				n2.magnitude++;
 				@Pc(272) VertexNormal n3 = this.vertexNormals[local44];
 				n3.x += local112;
 				n3.y += local120;
 				n3.z += local128;
-				n3.triangles++;
+				n3.magnitude++;
 			} else if (info == 1) {
 				if (this.triangleNormals == null) {
 					this.triangleNormals = new TriangleNormal[this.triangleCount];
@@ -1414,7 +1414,7 @@ public final class RawModel extends Entity {
 		@Pc(20) int local20;
 		for (local20 = 0; local20 < this.vertexCount; local20++) {
 			@Pc(29) VertexNormal local29 = this.vertexNormals[local20];
-			if (local29.triangles != 0) {
+			if (local29.magnitude != 0) {
 				@Pc(40) int local40 = this.vertexY[local20] - arg2;
 				if (local40 >= m.minY && local40 <= m.maxY) {
 					@Pc(56) int local56 = this.vertexX[local20] - arg1;
@@ -1423,7 +1423,7 @@ public final class RawModel extends Entity {
 						if (local72 >= m.minZ && local72 <= m.maxZ) {
 							for (@Pc(83) int local83 = 0; local83 < local18; local83++) {
 								@Pc(91) VertexNormal local91 = m.vertexNormals[local83];
-								if (local56 == local15[local83] && local72 == m.vertexZ[local83] && local40 == m.vertexY[local83] && local91.triangles != 0) {
+								if (local56 == local15[local83] && local72 == m.vertexZ[local83] && local40 == m.vertexY[local83] && local91.magnitude != 0) {
 									if (this.aClass57Array2 == null) {
 										this.aClass57Array2 = new VertexNormal[this.vertexCount];
 									}
@@ -1441,11 +1441,11 @@ public final class RawModel extends Entity {
 									local131.x += local91.x;
 									local131.y += local91.y;
 									local131.z += local91.z;
-									local131.triangles += local91.triangles;
+									local131.magnitude += local91.magnitude;
 									local148.x += local29.x;
 									local148.y += local29.y;
 									local148.z += local29.z;
-									local148.triangles += local29.triangles;
+									local148.magnitude += local29.magnitude;
 									local12++;
 									anIntArray194[local20] = anInt2138;
 									anIntArray199[local83] = anInt2138;

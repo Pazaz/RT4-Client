@@ -386,21 +386,21 @@ public final class SoftwareModel extends Model {
 					} else {
 						local435 = model.aClass57Array2[this.triangleVertexA[i]];
 					}
-					local468 = arg1 + (arg3 * local435.x + arg4 * local435.y + arg5 * local435.z) / (local108 * local435.triangles) << 17;
+					local468 = arg1 + (arg3 * local435.x + arg4 * local435.y + arg5 * local435.z) / (local108 * local435.magnitude) << 17;
 					this.anIntArray533[i] = local468 | ColorUtils.multiplyLightness2(local416, local468 >> 17);
 					if (model.aClass57Array2 == null || model.aClass57Array2[this.triangleVertexB[i]] == null) {
 						local435 = model.vertexNormals[this.triangleVertexB[i]];
 					} else {
 						local435 = model.aClass57Array2[this.triangleVertexB[i]];
 					}
-					local468 = arg1 + (arg3 * local435.x + arg4 * local435.y + arg5 * local435.z) / (local108 * local435.triangles) << 17;
+					local468 = arg1 + (arg3 * local435.x + arg4 * local435.y + arg5 * local435.z) / (local108 * local435.magnitude) << 17;
 					this.anIntArray523[i] = local468 | ColorUtils.multiplyLightness2(local416, local468 >> 17);
 					if (model.aClass57Array2 == null || model.aClass57Array2[this.triangleVertexC[i]] == null) {
 						local435 = model.vertexNormals[this.triangleVertexC[i]];
 					} else {
 						local435 = model.aClass57Array2[this.triangleVertexC[i]];
 					}
-					local468 = arg1 + (arg3 * local435.x + arg4 * local435.y + arg5 * local435.z) / (local108 * local435.triangles) << 17;
+					local468 = arg1 + (arg3 * local435.x + arg4 * local435.y + arg5 * local435.z) / (local108 * local435.magnitude) << 17;
 					this.triangleInfo[i] = local468 | ColorUtils.multiplyLightness2(local416, local468 >> 17);
 				} else if (local366 == 1) {
 					local614 = model.triangleNormals[i];
@@ -419,21 +419,21 @@ public final class SoftwareModel extends Model {
 				} else {
 					local435 = model.aClass57Array2[this.triangleVertexA[i]];
 				}
-				local468 = arg1 + (arg3 * local435.x + arg4 * local435.y + arg5 * local435.z) / (local108 * local435.triangles);
+				local468 = arg1 + (arg3 * local435.x + arg4 * local435.y + arg5 * local435.z) / (local108 * local435.magnitude);
 				this.anIntArray533[i] = ColorUtils.method4582(local468);
 				if (model.aClass57Array2 == null || model.aClass57Array2[this.triangleVertexB[i]] == null) {
 					local435 = model.vertexNormals[this.triangleVertexB[i]];
 				} else {
 					local435 = model.aClass57Array2[this.triangleVertexB[i]];
 				}
-				local468 = arg1 + (arg3 * local435.x + arg4 * local435.y + arg5 * local435.z) / (local108 * local435.triangles);
+				local468 = arg1 + (arg3 * local435.x + arg4 * local435.y + arg5 * local435.z) / (local108 * local435.magnitude);
 				this.anIntArray523[i] = ColorUtils.method4582(local468);
 				if (model.aClass57Array2 == null || model.aClass57Array2[this.triangleVertexC[i]] == null) {
 					local435 = model.vertexNormals[this.triangleVertexC[i]];
 				} else {
 					local435 = model.aClass57Array2[this.triangleVertexC[i]];
 				}
-				local468 = arg1 + (arg3 * local435.x + arg4 * local435.y + arg5 * local435.z) / (local108 * local435.triangles);
+				local468 = arg1 + (arg3 * local435.x + arg4 * local435.y + arg5 * local435.z) / (local108 * local435.magnitude);
 				this.triangleInfo[i] = ColorUtils.method4582(local468);
 			} else if (local366 == 1) {
 				local614 = model.triangleNormals[i];
