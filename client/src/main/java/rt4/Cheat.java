@@ -107,7 +107,7 @@ public class Cheat {
 
 	@OriginalMember(owner = "client!k", name = "a", descriptor = "(Lclient!na;Z)V")
 	public static void execute(@OriginalArg(0) JagString arg0) {
-		if (LoginManager.staffModLevel >= 2) {
+		// if (LoginManager.staffModLevel >= 2) {
 			@Pc(18) int local18;
 			@Pc(38) int local38;
 			@Pc(29) Runtime local29;
@@ -228,7 +228,7 @@ public class Cheat {
 					shiftClick = true;
 				}
 			}
-		}
+		//}
 		Protocol.outboundBuffer.p1isaac(44);
 		Protocol.outboundBuffer.p1(arg0.length() - 1);
 		Protocol.outboundBuffer.pjstr(arg0.substring(2));
