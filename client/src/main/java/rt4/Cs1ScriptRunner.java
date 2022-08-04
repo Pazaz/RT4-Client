@@ -693,7 +693,7 @@ public class Cs1ScriptRunner {
 													} else if (component == MiniMenu.pressedInventoryComponent && local270 == MiniMenu.anInt5444) {
 														sprite.renderAlpha(x, y, 128);
 													} else {
-														sprite.render(x, y);
+														sprite.render(x - 2, y); // TODO: x - 2 is a temp fix! look at commit b57d5a00315df977aba3d60f4dce7947a5acf909
 														// downscale:
 														// sprite.renderResized(x, y, 36, 32);
 													}
