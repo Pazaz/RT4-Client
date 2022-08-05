@@ -215,7 +215,7 @@ public final class Inv extends Node {
 		@Pc(133) SoftwareSprite canvas = new SoftwareSprite(canvasWidth, canvasHeight);
 		SoftwareRaster.setSize(canvas.pixels, canvasWidth, canvasHeight);
 		Rasteriser.prepare();
-		Rasteriser.setBounds(canvasWidth / 2, canvasHeight / 2);
+		Rasteriser.setBounds(16, 16); // canvasWidth / 2, canvasHeight / 2);
 		Rasteriser.jagged = false;
 
 		@Pc(145) int zoom = objType.zoom2d; // / 4;
