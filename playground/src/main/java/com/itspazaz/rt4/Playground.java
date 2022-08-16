@@ -232,7 +232,7 @@ public class Playground extends GameShell {
 	public void loadNpc(int id) {
 		npcType = NpcTypeList.get(id);
 		npc = new Npc();
-		BasType basType = BasTypeList.get(npcType.basId);
+		BasType basType = BasTypeList.get(npcType.bastypeid);
 		npc.seqId = basType.idleAnimationId;
 		npc.setNpcType(npcType);
 		GameShell.frame.setTitle(npcType.name + " - " + id);

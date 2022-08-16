@@ -1482,7 +1482,7 @@ public class SceneGraph {
 				collision.unflagGroundDecor(z, x);
 			}
 		}
-		if (!GlRenderer.enabled || !type.aBoolean212) {
+		if (!GlRenderer.enabled || !type.castshadow) {
 			return;
 		}
 		if (shape == 2) {
@@ -2399,7 +2399,7 @@ public class SceneGraph {
 		}
 
 		@Pc(62) LocType loc = LocTypeList.get(locIndex);
-		if (GlRenderer.enabled && loc.aBoolean216) {
+		if (GlRenderer.enabled && loc.render) {
 			return;
 		}
 
@@ -2458,11 +2458,11 @@ public class SceneGraph {
 			bitset |= Long.MIN_VALUE;
 		}
 
-		if (loc.anInt4438 == 1) {
+		if (loc.supportitems == 1) {
 			bitset |= 0x400000L;
 		}
 
-		if (loc.aBoolean213) {
+		if (loc.hasanimation) {
 			bitset |= Integer.MIN_VALUE;
 		}
 
@@ -2470,7 +2470,7 @@ public class SceneGraph {
 			AreaSoundManager.add(z, loc, orientation, null, x, plane, null);
 		}
 
-		@Pc(330) boolean local330 = loc.aBoolean212 & !highmem;
+		@Pc(330) boolean local330 = loc.castshadow & !highmem;
 		bitset |= (long) locIndex << 32;
 		@Pc(387) Entity entity;
 		@Pc(403) LocEntity local403;
@@ -2488,7 +2488,7 @@ public class SceneGraph {
 					}
 					entity = local403.model;
 				} else {
-					entity = new Loc(locIndex, LocType.GROUNDDECOR, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+					entity = new Loc(locIndex, LocType.GROUNDDECOR, orientation, currentPlane, x, z, loc.anim, loc.allowrandomizedanimation, null);
 				}
 
 				setGroundDecor(plane, x, z, averageY, entity, bitset, loc.aBoolean211);
@@ -2505,7 +2505,7 @@ public class SceneGraph {
 				}
 				entity = local403.model;
 			} else {
-				entity = new Loc(locIndex, LocType.CENTREPIECE_STRAIGHT, locType == LocType.CENTREPIECE_DIAGONAL ? orientation + 4 : orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+				entity = new Loc(locIndex, LocType.CENTREPIECE_STRAIGHT, locType == LocType.CENTREPIECE_DIAGONAL ? orientation + 4 : orientation, currentPlane, x, z, loc.anim, loc.allowrandomizedanimation, null);
 			}
 
 			if (entity != null) {
@@ -2539,7 +2539,7 @@ public class SceneGraph {
 				}
 				entity = local403.model;
 			} else {
-				entity = new Loc(locIndex, locType, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+				entity = new Loc(locIndex, locType, orientation, currentPlane, x, z, loc.anim, loc.allowrandomizedanimation, null);
 			}
 
 			method35(plane, x, z, averageY, 1, 1, entity, bitset);
@@ -2558,7 +2558,7 @@ public class SceneGraph {
 				}
 				entity = local403.model;
 			} else {
-				entity = new Loc(locIndex, LocType.WALL_STRAIGHT, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+				entity = new Loc(locIndex, LocType.WALL_STRAIGHT, orientation, currentPlane, x, z, loc.anim, loc.allowrandomizedanimation, null);
 			}
 
 			setWall(plane, x, z, averageY, entity, null, WALL_ROTATION_TYPE1[orientation], 0, bitset);
@@ -2618,7 +2618,7 @@ public class SceneGraph {
 				}
 				entity = local403.model;
 			} else {
-				entity = new Loc(locIndex, LocType.WALL_DIAGONALCORNER, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+				entity = new Loc(locIndex, LocType.WALL_DIAGONALCORNER, orientation, currentPlane, x, z, loc.anim, loc.allowrandomizedanimation, null);
 			}
 
 			setWall(plane, x, z, averageY, entity, null, LoginManager.anIntArray204[orientation], 0, bitset);
@@ -2653,8 +2653,8 @@ public class SceneGraph {
 				}
 				local1269 = local1287.model;
 			} else {
-				local1254 = new Loc(locIndex, LocType.WALL_L, orientation + 4, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
-				local1269 = new Loc(locIndex, LocType.WALL_L, local1226, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+				local1254 = new Loc(locIndex, LocType.WALL_L, orientation + 4, currentPlane, x, z, loc.anim, loc.allowrandomizedanimation, null);
+				local1269 = new Loc(locIndex, LocType.WALL_L, local1226, currentPlane, x, z, loc.anim, loc.allowrandomizedanimation, null);
 			}
 			setWall(plane, x, z, averageY, local1254, local1269, WALL_ROTATION_TYPE1[orientation], WALL_ROTATION_TYPE1[local1226], bitset);
 			if (loc.occlude && lowmem) {
@@ -2686,7 +2686,7 @@ public class SceneGraph {
 				}
 				entity = local403.model;
 			} else {
-				entity = new Loc(locIndex, LocType.WALL_SQUARECORNER, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+				entity = new Loc(locIndex, LocType.WALL_SQUARECORNER, orientation, currentPlane, x, z, loc.anim, loc.allowrandomizedanimation, null);
 			}
 			setWall(plane, x, z, averageY, entity, null, LoginManager.anIntArray204[orientation], 0, bitset);
 			if (loc.active && lowmem) {
@@ -2711,7 +2711,7 @@ public class SceneGraph {
 				}
 				entity = local403.model;
 			} else {
-				entity = new Loc(locIndex, locType, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+				entity = new Loc(locIndex, locType, orientation, currentPlane, x, z, loc.anim, loc.allowrandomizedanimation, null);
 			}
 			method35(plane, x, z, averageY, 1, 1, entity, bitset);
 			if (loc.blockwalk != 0 && map != null) {
@@ -2728,7 +2728,7 @@ public class SceneGraph {
 				}
 				entity = local403.model;
 			} else {
-				entity = new Loc(locIndex, 4, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+				entity = new Loc(locIndex, 4, orientation, currentPlane, x, z, loc.anim, loc.allowrandomizedanimation, null);
 			}
 			setWallDecor(plane, x, z, averageY, entity, null, WALL_ROTATION_TYPE1[orientation], 0, 0, 0, bitset);
 		} else if (locType == LocType.WALLDECOR_STRAIGHT_ZOFFSET) {
@@ -2744,7 +2744,7 @@ public class SceneGraph {
 				}
 				local1934 = local1950.model;
 			} else {
-				local1934 = new Loc(locIndex, 4, orientation, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+				local1934 = new Loc(locIndex, 4, orientation, currentPlane, x, z, loc.anim, loc.allowrandomizedanimation, null);
 			}
 			setWallDecor(plane, x, z, averageY, local1934, null, WALL_ROTATION_TYPE1[orientation], 0, local1226 * WALL_DECO_ROT_SIZE_X_DIR[orientation], WALL_DECO_ROT_SIZE_Y_DIR[orientation] * local1226, bitset);
 		} else if (locType == LocType.WALLDECOR_DIAGONAL_XOFFSET) {
@@ -2760,7 +2760,7 @@ public class SceneGraph {
 				}
 				local1934 = local1950.model;
 			} else {
-				local1934 = new Loc(locIndex, 4, orientation + 4, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+				local1934 = new Loc(locIndex, 4, orientation + 4, currentPlane, x, z, loc.anim, loc.allowrandomizedanimation, null);
 			}
 			setWallDecor(plane, x, z, averageY, local1934, null, 256, orientation, local1226 * anIntArray565[orientation], local1226 * anIntArray154[orientation], bitset);
 		} else if (locType == LocType.WALLDECOR_DIAGONAL_ZOFFSET) {
@@ -2772,7 +2772,7 @@ public class SceneGraph {
 				}
 				entity = local2183.model;
 			} else {
-				entity = new Loc(locIndex, 4, local2137 + 4, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+				entity = new Loc(locIndex, 4, local2137 + 4, currentPlane, x, z, loc.anim, loc.allowrandomizedanimation, null);
 			}
 			setWallDecor(plane, x, z, averageY, entity, null, 256, local2137, 0, 0, bitset);
 		} else if (locType == LocType.WALLDECOR_DIAGONAL_BOTH) {
@@ -2797,8 +2797,8 @@ public class SceneGraph {
 				}
 				local2289 = local2319.model;
 			} else {
-				local1934 = new Loc(locIndex, 4, orientation + 4, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
-				local2289 = new Loc(locIndex, 4, local2244 + 4, currentPlane, x, z, loc.anim, loc.aBoolean209, null);
+				local1934 = new Loc(locIndex, 4, orientation + 4, currentPlane, x, z, loc.anim, loc.allowrandomizedanimation, null);
+				local2289 = new Loc(locIndex, 4, local2244 + 4, currentPlane, x, z, loc.anim, loc.allowrandomizedanimation, null);
 			}
 			setWallDecor(plane, x, z, averageY, local1934, local2289, 256, orientation, local1226 * anIntArray565[orientation], anIntArray154[orientation] * local1226, bitset);
 		}

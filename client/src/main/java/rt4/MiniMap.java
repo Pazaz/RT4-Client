@@ -320,13 +320,13 @@ public class MiniMap {
 					if (local507 != null && local507.multiNpcs != null) {
 						local507 = local507.getMultiNpc();
 					}
-					if (local507 != null && local507.aBoolean184 && local507.aBoolean183) {
+					if (local507 != null && local507.minimapdisplay && local507.interactive) {
 						local154 = local498.xFine / 32 - PlayerList.self.xFine / 32;
 						local231 = local498.zFine / 32 - PlayerList.self.zFine / 32;
-						if (local507.anInt3739 == -1) {
+						if (local507.minimapmarkerobjectentry == -1) {
 							method1446(arg3, Sprites.mapdots[1], local231, local154, arg1, arg2);
 						} else {
-							method1446(arg3, Sprites.mapfuncs[local507.anInt3739], local231, local154, arg1, arg2);
+							method1446(arg3, Sprites.mapfuncs[local507.minimapmarkerobjectentry], local231, local154, arg1, arg2);
 						}
 					}
 				}

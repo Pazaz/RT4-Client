@@ -1052,7 +1052,7 @@ public final class client extends GameShell {
 			for (@Pc(57) int local57 = 0; local57 < 32768; local57++) {
 				@Pc(66) Npc local66 = NpcList.npcs[local57];
 				if (local66 != null) {
-					@Pc(73) byte local73 = local66.type.aByte10;
+					@Pc(73) byte local73 = local66.type.loginscreenproperties;
 					if ((local73 & 0x2) > 0 && local66.movementQueueSize == 0 && Math.random() * 1000.0D < 10.0D) {
 						@Pc(98) int local98 = (int) Math.round(Math.random() * 2.0D - 1.0D);
 						@Pc(106) int local106 = (int) Math.round(Math.random() * 2.0D - 1.0D);

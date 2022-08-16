@@ -97,7 +97,7 @@ public final class LocType {
 	public JagString name = aClass100_475;
 
 	@OriginalMember(owner = "client!pb", name = "D", descriptor = "Z")
-	public boolean aBoolean212 = true;
+	public boolean castshadow = true;
 
 	@OriginalMember(owner = "client!pb", name = "t", descriptor = "I")
 	public int cursor1Op = -1;
@@ -145,7 +145,7 @@ public final class LocType {
 	private int resizex = 128;
 
 	@OriginalMember(owner = "client!pb", name = "s", descriptor = "Z")
-	public boolean aBoolean209 = true;
+	public boolean allowrandomizedanimation = true;
 
 	@OriginalMember(owner = "client!pb", name = "o", descriptor = "I")
 	private int resizey = 128;
@@ -157,7 +157,7 @@ public final class LocType {
 	public int interactable = -1;
 
 	@OriginalMember(owner = "client!pb", name = "lb", descriptor = "Z")
-	public boolean aBoolean216 = false;
+	public boolean render = false;
 
 	@OriginalMember(owner = "client!pb", name = "fb", descriptor = "Z")
 	public boolean active = true;
@@ -199,7 +199,7 @@ public final class LocType {
 	public int anim = -1;
 
 	@OriginalMember(owner = "client!pb", name = "I", descriptor = "Z")
-	public boolean aBoolean213 = false;
+	public boolean hasanimation = false;
 
 	@OriginalMember(owner = "client!pb", name = "O", descriptor = "I")
 	public int bgsound = -1;
@@ -214,7 +214,7 @@ public final class LocType {
 	private int multiLocVarbit = -1;
 
 	@OriginalMember(owner = "client!pb", name = "yb", descriptor = "I")
-	public int anInt4438 = -1;
+	public int supportitems = -1;
 
 	@OriginalMember(owner = "client!pb", name = "zb", descriptor = "Z")
 	private boolean computeVertexColors = false;
@@ -382,8 +382,8 @@ public final class LocType {
 				}
 			}
 		}
-		if (this.anInt4438 == -1) {
-			this.anInt4438 = this.blockwalk == 0 ? 0 : 1;
+		if (this.supportitems == -1) {
+			this.supportitems = this.blockwalk == 0 ? 0 : 1;
 		}
 	}
 
@@ -540,7 +540,7 @@ public final class LocType {
 		} else if (opcode == 74) {
 			this.breakroutefinding = true;
 		} else if (opcode == 75) {
-			this.anInt4438 = buffer.g1();
+			this.supportitems = buffer.g1();
 		} else if (opcode == 77 || opcode == 92) {
 			count = -1;
 			this.multiLocVarbit = buffer.g2();
@@ -579,15 +579,15 @@ public final class LocType {
 			for (len = 0; len < count; len++) {
 				this.bgsounds[len] = buffer.g2();
 			}
-		} else if (opcode == 81) {
+		} else if (opcode == 81) { // sethillskew
 			this.hillskew = 2;
 			this.aShort26 = (short) (buffer.g1() * 256);
 		} else if (opcode == 82) {
-			this.aBoolean216 = true;
+			this.render = true;
 		} else if (opcode == 88) {
-			this.aBoolean212 = false;
+			this.castshadow = false;
 		} else if (opcode == 89) {
-			this.aBoolean209 = false;
+			this.allowrandomizedanimation = false;
 		} else if (opcode == 90) {
 			this.aBoolean211 = true;
 		} else if (opcode == 91) {
@@ -600,7 +600,7 @@ public final class LocType {
 		} else if (opcode == 95) {
 			this.hillskew = 5;
 		} else if (opcode == 96) {
-			this.aBoolean213 = true;
+			this.hasanimation = true;
 		} else if (opcode == 97) {
 			this.mapSceneRotated = true;
 		} else if (opcode == 98) {

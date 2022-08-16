@@ -1323,7 +1323,7 @@ public class MiniMenu {
 		if (arg0.multiNpcs != null) {
 			arg0 = arg0.getMultiNpc();
 		}
-		if (arg0 == null || !arg0.aBoolean183) {
+		if (arg0 == null || !arg0.interactive) {
 			return;
 		}
 		@Pc(35) JagString local35 = arg0.name;

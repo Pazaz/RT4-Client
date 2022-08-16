@@ -433,7 +433,7 @@ public final class Player extends PathingEntity {
 		}
 		this.minY = local76.getMinY();
 		@Pc(184) Model local184;
-		if (Preferences.characterShadowsOn && (this.appearance.npcId == -1 || NpcTypeList.get(this.appearance.npcId).shadow)) {
+		if (Preferences.characterShadowsOn && (this.appearance.npcId == -1 || NpcTypeList.get(this.appearance.npcId).hasshadow)) {
 			local184 = ShadowModelList.method1043(160, this.aBoolean171, local54 == null ? local25 : local54, this.xFine, 0, this.zFine, 0, 1, local76, arg0, local54 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, 240);
 			if (GlRenderer.enabled) {
 				@Pc(188) float local188 = GlRenderer.method4179();
