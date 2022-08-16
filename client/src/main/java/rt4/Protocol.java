@@ -3090,7 +3090,7 @@ public class Protocol {
 				}
 				npc.setNpcType(NpcTypeList.get(inboundBuffer.ig2()));
 				npc.setSize(npc.type.size);
-				npc.anInt3365 = npc.type.basId;
+				npc.anInt3365 = npc.type.bastypeid;
 				if (npc.type.hasAreaSound()) {
 					AreaSoundManager.add(npc.movementQueueZ[0], null, 0, npc, npc.movementQueueX[0], Player.plane, null);
 				}
@@ -3253,8 +3253,8 @@ public class Protocol {
 						local124 -= 32;
 					}
 					npc.setSize(npc.type.size);
-					npc.anInt3365 = npc.type.basId;
-					npc.anInt3376 = npc.type.anInt3733;
+					npc.anInt3365 = npc.type.bastypeid;
+					npc.anInt3376 = npc.type.rotationspeed;
 					if (npc.anInt3376 == 0) {
 						npc.anInt3381 = 0;
 					}

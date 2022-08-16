@@ -1335,19 +1335,19 @@ public class LoginManager {
 					@Pc(129) int local129 = local103 & 0x3F;
 					@Pc(142) int local142 = local129 + (regionBitPacked[local16] & 0xFF) * 64 - Camera.originZ;
 					@Pc(148) NpcType local148 = NpcTypeList.get(local74.g2());
-					if (NpcList.npcs[local97] == null && (local148.aByte10 & 0x1) > 0 && local107 == SceneGraph.centralPlane && local125 >= 0 && local148.size + local125 < 104 && local142 >= 0 && local142 + local148.size < 104) {
+					if (NpcList.npcs[local97] == null && (local148.loginscreenproperties & 0x1) > 0 && local107 == SceneGraph.centralPlane && local125 >= 0 && local148.size + local125 < 104 && local142 >= 0 && local142 + local148.size < 104) {
 						NpcList.npcs[local97] = new Npc();
 						@Pc(198) Npc local198 = NpcList.npcs[local97];
 						NpcList.ids[NpcList.size++] = local97;
 						local198.lastSeenLoop = client.loop;
 						local198.setNpcType(local148);
 						local198.setSize(local198.type.size);
-						local198.anInt3400 = local198.anInt3381 = PathingEntity.ANGLES[local198.type.aByte11];
-						local198.anInt3376 = local198.type.anInt3733;
+						local198.anInt3400 = local198.anInt3381 = PathingEntity.ANGLES[local198.type.spawndirection];
+						local198.anInt3376 = local198.type.rotationspeed;
 						if (local198.anInt3376 == 0) {
 							local198.anInt3381 = 0;
 						}
-						local198.anInt3365 = local198.type.basId;
+						local198.anInt3365 = local198.type.bastypeid;
 						local198.method2683(local198.getSize(), local125, local142, true);
 					}
 				}

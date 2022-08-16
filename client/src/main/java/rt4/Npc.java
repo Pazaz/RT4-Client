@@ -64,8 +64,8 @@ public final class Npc extends PathingEntity {
 		}
 
 		@Pc(140) Model model;
-		if (Preferences.characterShadowsOn && local84.shadow) {
-			model = ShadowModelList.method1043(this.type.aByte13, this.aBoolean171, local53 == null ? local29 : local53, this.xFine, this.type.aShort23, this.zFine, this.type.aShort24, this.type.size, body, orientation, local53 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, this.type.aByte12);
+		if (Preferences.characterShadowsOn && local84.hasshadow) {
+			model = ShadowModelList.method1043(this.type.shadowcolormodifier1, this.aBoolean171, local53 == null ? local29 : local53, this.xFine, this.type.shadowcolor2, this.zFine, this.type.shadowcolor1, this.type.size, body, orientation, local53 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, this.type.shadowcolormodifier2);
 			if (GlRenderer.enabled) {
 				@Pc(144) float local144 = GlRenderer.method4179();
 				@Pc(146) float local146 = GlRenderer.method4166();
@@ -135,8 +135,8 @@ public final class Npc extends PathingEntity {
 	protected final int getBasId() {
 		if (client.game != 0 && this.type.multiNpcs != null) {
 			@Pc(17) NpcType local17 = this.type.getMultiNpc();
-			if (local17 != null && local17.basId != -1) {
-				return local17.basId;
+			if (local17 != null && local17.bastypeid != -1) {
+				return local17.bastypeid;
 			}
 		}
 		return this.anInt3365;

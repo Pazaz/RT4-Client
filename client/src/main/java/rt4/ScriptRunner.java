@@ -385,25 +385,25 @@ public final class ScriptRunner {
 					if (local58.multiNpcs != null) {
 						local58 = local58.getMultiNpc();
 					}
-					if (local58.prayerIcon >= 0 && Sprites.headiconPrayers.length > local58.prayerIcon) {
-						if (local58.anInt3730 == -1) {
+					if (local58.headicon >= 0 && Sprites.headiconPrayers.length > local58.headicon) {
+						if (local58.iconHeight == -1) {
 							local265 = local17.method2691() + 15;
 						} else {
-							local265 = local58.anInt3730 + 15;
+							local265 = local58.iconHeight + 15;
 						}
 						method3326(arg4 >> 1, arg3, local17, arg5, local265, arg1 >> 1);
 						if (anInt1951 > -1) {
-							Sprites.headiconPrayers[local58.prayerIcon].render(arg2 + anInt1951 - 12, arg0 + -30 - -anInt548);
+							Sprites.headiconPrayers[local58.headicon].render(arg2 + anInt1951 - 12, arg0 + -30 - -anInt548);
 						}
 					}
 					@Pc(308) MapMarker[] local308 = MiniMap.hintMapMarkers;
 					for (local310 = 0; local310 < local308.length; local310++) {
 						@Pc(322) MapMarker local322 = local308[local310];
 						if (local322 != null && local322.type == 1 && local322.actorTargetId == NpcList.ids[local5 - PlayerList.size] && client.loop % 20 < 10) {
-							if (local58.anInt3730 == -1) {
+							if (local58.iconHeight == -1) {
 								local359 = local17.method2691() + 15;
 							} else {
-								local359 = local58.anInt3730 + 15;
+								local359 = local58.iconHeight + 15;
 							}
 							method3326(arg4 >> 1, arg3, local17, arg5, local359, arg1 >> 1);
 							if (anInt1951 > -1) {
@@ -471,10 +471,10 @@ public final class ScriptRunner {
 							local508 = local528[0];
 						}
 						@Pc(571) NpcType local571 = local518.type;
-						if (local571.anInt3730 == -1) {
+						if (local571.iconHeight == -1) {
 							local310 = local17.method2691();
 						} else {
-							local310 = local571.anInt3730;
+							local310 = local571.iconHeight;
 						}
 					} else {
 						local310 = local17.method2691();
@@ -504,10 +504,10 @@ public final class ScriptRunner {
 						if (local17 instanceof Npc) {
 							@Pc(725) Npc local725 = (Npc) local17;
 							@Pc(728) NpcType local728 = local725.type;
-							if (local728.anInt3730 == -1) {
+							if (local728.iconHeight == -1) {
 								local265 = local17.method2691() / 2;
 							} else {
-								local265 = local728.anInt3730 / 2;
+								local265 = local728.iconHeight / 2;
 							}
 						} else {
 							local265 = local17.method2691() / 2;
@@ -804,7 +804,7 @@ public final class ScriptRunner {
 		@Pc(171) int local171;
 		for (local7 = 0; local7 < NpcList.size; local7++) {
 			local16 = NpcList.npcs[NpcList.ids[local7]];
-			if (local16 != null && local16.isVisible() && local16.type.aBoolean182 == arg0 && local16.type.isMultiNpcValid()) {
+			if (local16 != null && local16.isVisible() && local16.type.toprenderpriority == arg0 && local16.type.isMultiNpcValid()) {
 				@Pc(42) int local42 = local16.getSize();
 				@Pc(97) int local97;
 				if (local42 == 1) {
@@ -844,7 +844,7 @@ public final class ScriptRunner {
 		for (local7 = 0; local7 < NpcList.size; local7++) {
 			local16 = NpcList.npcs[NpcList.ids[local7]];
 			@Pc(262) long local262 = (long) NpcList.ids[local7] << 32 | 0x20000000L;
-			if (local16 != null && local16.isVisible() && local16.type.aBoolean182 == arg0 && local16.type.isMultiNpcValid()) {
+			if (local16 != null && local16.isVisible() && local16.type.toprenderpriority == arg0 && local16.type.isMultiNpcValid()) {
 				local107 = local16.getSize();
 				if (local107 == 1) {
 					if ((local16.xFine & 0x7F) == 64 && (local16.zFine & 0x7F) == 64) {
@@ -899,7 +899,7 @@ public final class ScriptRunner {
 						}
 					}
 				}
-				if (!local16.type.aBoolean183) {
+				if (!local16.type.interactive) {
 					local262 |= Long.MIN_VALUE;
 				}
 				local16.anInt3424 = SceneGraph.getTileHeight(Player.plane, local16.xFine, local16.zFine);

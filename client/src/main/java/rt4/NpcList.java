@@ -173,7 +173,7 @@ public class NpcList {
 		}
 		arg0.movementSeqId = local227;
 		if (arg0 instanceof Npc) {
-			local233 = ((Npc) arg0).type.aBoolean181;
+			local233 = ((Npc) arg0).type.rotationflag;
 		}
 		if (local233) {
 			if (arg0.anInt3381 != arg0.anInt3400 && arg0.faceEntity == -1 && arg0.anInt3376 != 0) {
