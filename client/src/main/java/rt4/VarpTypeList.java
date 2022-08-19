@@ -19,18 +19,18 @@ public class VarpTypeList {
 	}
 
 	@OriginalMember(owner = "client!ub", name = "a", descriptor = "(II)Lclient!eh;")
-	public static VarpType get(@OriginalArg(1) int arg0) {
-		@Pc(10) VarpType local10 = (VarpType) types.get(arg0);
-		if (local10 != null) {
-			return local10;
+	public static VarpType get(@OriginalArg(1) int id) {
+		@Pc(10) VarpType varp = (VarpType) types.get(id);
+		if (varp != null) {
+			return varp;
 		}
-		@Pc(20) byte[] local20 = archive.fetchFile(16, arg0);
-		local10 = new VarpType();
-		if (local20 != null) {
-			local10.decode(new Buffer(local20));
+		@Pc(20) byte[] data = archive.fetchFile(16, id);
+		varp = new VarpType();
+		if (data != null) {
+			varp.decode(new Buffer(data));
 		}
-		types.put(local10, arg0);
-		return local10;
+		types.put(varp, id);
+		return varp;
 	}
 
 	@OriginalMember(owner = "client!ud", name = "d", descriptor = "(I)V")

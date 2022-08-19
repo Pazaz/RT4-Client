@@ -23,20 +23,20 @@ public class NpcTypeList {
 	}
 
 	@OriginalMember(owner = "client!rg", name = "b", descriptor = "(II)Lclient!me;")
-	public static NpcType get(@OriginalArg(0) int arg0) {
-		@Pc(10) NpcType local10 = (NpcType) types.get(arg0);
-		if (local10 != null) {
-			return local10;
+	public static NpcType get(@OriginalArg(0) int id) {
+		@Pc(10) NpcType npc = (NpcType) types.get(id);
+		if (npc != null) {
+			return npc;
 		}
-		@Pc(26) byte[] local26 = archive.fetchFile(method1447(arg0), method3322(arg0));
-		local10 = new NpcType();
-		local10.id = arg0;
-		if (local26 != null) {
-			local10.decode(new Buffer(local26));
+		@Pc(26) byte[] data = archive.fetchFile(getGroupId(id), getFileId(id));
+		npc = new NpcType();
+		npc.id = id;
+		if (data != null) {
+			npc.decode(new Buffer(data));
 		}
-		local10.method2942();
-		types.put(local10, arg0);
-		return local10;
+		npc.method2942();
+		types.put(npc, id);
+		return npc;
 	}
 
 	@OriginalMember(owner = "client!t", name = "b", descriptor = "(B)V")
@@ -61,13 +61,13 @@ public class NpcTypeList {
 	}
 
 	@OriginalMember(owner = "client!em", name = "a", descriptor = "(II)I")
-	public static int method1447(@OriginalArg(0) int arg0) {
-		return arg0 >>> 7;
+	public static int getGroupId(@OriginalArg(0) int id) {
+		return id >>> 7;
 	}
 
 	@OriginalMember(owner = "client!oe", name = "a", descriptor = "(IZ)I")
-	public static int method3322(@OriginalArg(0) int arg0) {
-		return arg0 & 0x7F;
+	public static int getFileId(@OriginalArg(0) int id) {
+		return id & 0x7F;
 	}
 
 	@OriginalMember(owner = "client!wj", name = "b", descriptor = "(I)V")

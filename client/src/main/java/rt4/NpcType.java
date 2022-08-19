@@ -23,19 +23,19 @@ public final class NpcType {
 	@OriginalMember(owner = "client!en", name = "t", descriptor = "[I")
 	public static final int[] anIntArray148 = new int[14];
 	@OriginalMember(owner = "client!me", name = "b", descriptor = "[S")
-	private short[] retextureSource;
+	private short[] retex_d;
 
 	@OriginalMember(owner = "client!me", name = "c", descriptor = "[B")
-	private byte[] aByteArray51;
+	private byte[] recol_p;
 
 	@OriginalMember(owner = "client!me", name = "d", descriptor = "[S")
-	private short[] recolorDestination;
+	private short[] recol_s;
 
 	@OriginalMember(owner = "client!me", name = "g", descriptor = "[I")
-	private int[] anIntArray354;
+	private int[] headmodels;
 
 	@OriginalMember(owner = "client!me", name = "o", descriptor = "[S")
-	private short[] recolorSource;
+	private short[] recol_d;
 
 	@OriginalMember(owner = "client!me", name = "t", descriptor = "[[I")
 	private int[][] anIntArrayArray28;
@@ -44,7 +44,7 @@ public final class NpcType {
 	private int[][] modeloffsets;
 
 	@OriginalMember(owner = "client!me", name = "J", descriptor = "[S")
-	private short[] retextureDestination;
+	private short[] retex_s;
 
 	@OriginalMember(owner = "client!me", name = "K", descriptor = "Lclient!sc;")
 	private HashTable params;
@@ -169,7 +169,7 @@ public final class NpcType {
 	private int multiNpcVarp = -1;
 
 	@OriginalMember(owner = "client!me", name = "ob", descriptor = "I")
-	public int anInt3752 = -1;
+	public int attackCursor = -1;
 
 	@OriginalMember(owner = "client!me", name = "a", descriptor = "(B)Lclient!me;")
 	public final NpcType getMultiNpc() {
@@ -334,18 +334,18 @@ public final class NpcType {
 			} else {
 				local593 = new RawModel(local84, local84.length);
 			}
-			if (this.recolorDestination != null) {
-				for (local173 = 0; local173 < this.recolorDestination.length; local173++) {
-					if (this.aByteArray51 == null || this.aByteArray51.length <= local173) {
-						local593.recolor(this.recolorDestination[local173], this.recolorSource[local173]);
+			if (this.recol_s != null) {
+				for (local173 = 0; local173 < this.recol_s.length; local173++) {
+					if (this.recol_p == null || this.recol_p.length <= local173) {
+						local593.recolor(this.recol_s[local173], this.recol_d[local173]);
 					} else {
-						local593.recolor(this.recolorDestination[local173], client.aShortArray74[this.aByteArray51[local173] & 0xFF]);
+						local593.recolor(this.recol_s[local173], client.aShortArray74[this.recol_p[local173] & 0xFF]);
 					}
 				}
 			}
-			if (this.retextureDestination != null) {
-				for (local173 = 0; local173 < this.retextureDestination.length; local173++) {
-					local593.retexture(this.retextureDestination[local173], this.retextureSource[local173]);
+			if (this.retex_s != null) {
+				for (local173 = 0; local173 < this.retex_s.length; local173++) {
+					local593.retexture(this.retex_s[local173], this.retex_d[local173]);
 				}
 			}
 			local40 = local593.createModel(this.ambient + 64, this.contrast + 850, -30, -50, -30);
@@ -503,13 +503,13 @@ public final class NpcType {
 	}
 
 	@OriginalMember(owner = "client!me", name = "a", descriptor = "(Lclient!wa;I)V")
-	public final void decode(@OriginalArg(0) Buffer arg0) {
+	public final void decode(@OriginalArg(0) Buffer buffer) {
 		while (true) {
-			@Pc(9) int local9 = arg0.g1();
-			if (local9 == 0) {
+			@Pc(9) int opcode = buffer.g1();
+			if (opcode == 0) {
 				return;
 			}
-			this.decode(local9, arg0);
+			this.decode(opcode, buffer);
 		}
 	}
 
@@ -522,23 +522,23 @@ public final class NpcType {
 		if (this.multiNpcs != null) {
 			@Pc(13) NpcType local13 = this.getMultiNpc();
 			return local13 == null ? null : local13.getHeadModel(arg0, arg1, arg2, arg3);
-		} else if (this.anIntArray354 == null) {
+		} else if (this.headmodels == null) {
 			return null;
 		} else {
 			@Pc(41) Model local41 = (Model) NpcTypeList.headModels.get(this.id);
 			if (local41 == null) {
 				@Pc(46) boolean local46 = false;
-				for (@Pc(48) int local48 = 0; local48 < this.anIntArray354.length; local48++) {
-					if (!NpcTypeList.modelsArchive.isFileReady(0, this.anIntArray354[local48])) {
+				for (@Pc(48) int local48 = 0; local48 < this.headmodels.length; local48++) {
+					if (!NpcTypeList.modelsArchive.isFileReady(0, this.headmodels[local48])) {
 						local46 = true;
 					}
 				}
 				if (local46) {
 					return null;
 				}
-				@Pc(82) RawModel[] local82 = new RawModel[this.anIntArray354.length];
-				for (@Pc(84) int local84 = 0; local84 < this.anIntArray354.length; local84++) {
-					local82[local84] = RawModel.create(NpcTypeList.modelsArchive, this.anIntArray354[local84]);
+				@Pc(82) RawModel[] local82 = new RawModel[this.headmodels.length];
+				for (@Pc(84) int local84 = 0; local84 < this.headmodels.length; local84++) {
+					local82[local84] = RawModel.create(NpcTypeList.modelsArchive, this.headmodels[local84]);
 				}
 				@Pc(119) RawModel local119;
 				if (local82.length == 1) {
@@ -547,18 +547,18 @@ public final class NpcType {
 					local119 = new RawModel(local82, local82.length);
 				}
 				@Pc(130) int local130;
-				if (this.recolorDestination != null) {
-					for (local130 = 0; local130 < this.recolorDestination.length; local130++) {
-						if (this.aByteArray51 == null || local130 >= this.aByteArray51.length) {
-							local119.recolor(this.recolorDestination[local130], this.recolorSource[local130]);
+				if (this.recol_s != null) {
+					for (local130 = 0; local130 < this.recol_s.length; local130++) {
+						if (this.recol_p == null || local130 >= this.recol_p.length) {
+							local119.recolor(this.recol_s[local130], this.recol_d[local130]);
 						} else {
-							local119.recolor(this.recolorDestination[local130], client.aShortArray74[this.aByteArray51[local130] & 0xFF]);
+							local119.recolor(this.recol_s[local130], client.aShortArray74[this.recol_p[local130] & 0xFF]);
 						}
 					}
 				}
-				if (this.retextureDestination != null) {
-					for (local130 = 0; local130 < this.retextureDestination.length; local130++) {
-						local119.retexture(this.retextureDestination[local130], this.retextureSource[local130]);
+				if (this.retex_s != null) {
+					for (local130 = 0; local130 < this.retex_s.length; local130++) {
+						local119.retexture(this.retex_s[local130], this.retex_d[local130]);
 					}
 				}
 				local41 = local119.createModel(64, 768, -50, -10, -50);
@@ -595,31 +595,31 @@ public final class NpcType {
 			}
 		} else if (opcode == 40) {
 			count = buffer.g1();
-			this.recolorSource = new short[count];
-			this.recolorDestination = new short[count];
+			this.recol_d = new short[count];
+			this.recol_s = new short[count];
 			for (i = 0; i < count; i++) {
-				this.recolorDestination[i] = (short) buffer.g2();
-				this.recolorSource[i] = (short) buffer.g2();
+				this.recol_s[i] = (short) buffer.g2();
+				this.recol_d[i] = (short) buffer.g2();
 			}
 		} else if (opcode == 41) {
 			count = buffer.g1();
-			this.retextureSource = new short[count];
-			this.retextureDestination = new short[count];
+			this.retex_d = new short[count];
+			this.retex_s = new short[count];
 			for (i = 0; i < count; i++) {
-				this.retextureDestination[i] = (short) buffer.g2();
-				this.retextureSource[i] = (short) buffer.g2();
+				this.retex_s[i] = (short) buffer.g2();
+				this.retex_d[i] = (short) buffer.g2();
 			}
 		} else if (opcode == 42) {
 			count = buffer.g1();
-			this.aByteArray51 = new byte[count];
+			this.recol_p = new byte[count];
 			for (i = 0; i < count; i++) {
-				this.aByteArray51[i] = buffer.g1b();
+				this.recol_p[i] = buffer.g1b();
 			}
 		} else if (opcode == 60) {
 			count = buffer.g1();
-			this.anIntArray354 = new int[count];
+			this.headmodels = new int[count];
 			for (i = 0; i < count; i++) {
-				this.anIntArray354[i] = buffer.g2();
+				this.headmodels[i] = buffer.g2();
 			}
 		} else if (opcode == 93) {
 			this.minimapdisplay = false;
@@ -688,10 +688,10 @@ public final class NpcType {
 				count = buffer.g1();
 				for (i = 0; i < count; i++) {
 					local297 = buffer.g1();
-					@Pc(439) int[] local439 = this.modeloffsets[local297] = new int[3];
-					local439[0] = buffer.g1b();
-					local439[1] = buffer.g1b();
-					local439[2] = buffer.g1b();
+					@Pc(439) int[] tempArray = this.modeloffsets[local297] = new int[3];
+					tempArray[0] = buffer.g1b();
+					tempArray[1] = buffer.g1b();
+					tempArray[2] = buffer.g1b();
 				}
 			} else if (opcode == 122) {
 				this.hitBarId = buffer.g2();
@@ -730,7 +730,7 @@ public final class NpcType {
 				this.cursor2Op = buffer.g1();
 				this.cursor2 = buffer.g2();
 			} else if (opcode == 137) {
-				this.anInt3752 = buffer.g2();
+				this.attackCursor = buffer.g2();
 			} else if (opcode == 249) {
 				count = buffer.g1();
 				if (this.params == null) {
@@ -738,15 +738,15 @@ public final class NpcType {
 					this.params = new HashTable(i);
 				}
 				for (i = 0; i < count; i++) {
-					@Pc(592) boolean local592 = buffer.g1() == 1;
-					@Pc(596) int local596 = buffer.g3();
-					@Pc(605) Node local605;
-					if (local592) {
-						local605 = new StringNode(buffer.gjstr());
+					@Pc(592) boolean isString = buffer.g1() == 1;
+					@Pc(596) int key = buffer.g3();
+					@Pc(605) Node value;
+					if (isString) {
+						value = new StringNode(buffer.gjstr());
 					} else {
-						local605 = new IntNode(buffer.g4());
+						value = new IntNode(buffer.g4());
 					}
-					this.params.put(local605, local596);
+					this.params.put(value, key);
 				}
 			}
 		}

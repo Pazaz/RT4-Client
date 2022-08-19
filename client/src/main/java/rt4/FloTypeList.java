@@ -19,18 +19,18 @@ public class FloTypeList {
 	}
 
 	@OriginalMember(owner = "client!um", name = "a", descriptor = "(BI)Lclient!wl;")
-	public static FloType method4395(@OriginalArg(1) int arg0) {
-		@Pc(6) FloType local6 = (FloType) types.get(arg0);
-		if (local6 != null) {
-			return local6;
+	public static FloType method4395(@OriginalArg(1) int id) {
+		@Pc(6) FloType floorOverlay = (FloType) types.get(id);
+		if (floorOverlay != null) {
+			return floorOverlay;
 		}
-		@Pc(30) byte[] local30 = archive.fetchFile(4, arg0);
-		local6 = new FloType();
-		if (local30 != null) {
-			local6.decode(new Buffer(local30), arg0);
+		@Pc(30) byte[] data = archive.fetchFile(4, id);
+		floorOverlay = new FloType();
+		if (data != null) {
+			floorOverlay.decode(new Buffer(data), id);
 		}
-		types.put(local6, arg0);
-		return local6;
+		types.put(floorOverlay, id);
+		return floorOverlay;
 	}
 
 	@OriginalMember(owner = "client!uh", name = "e", descriptor = "(I)V")

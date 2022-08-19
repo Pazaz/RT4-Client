@@ -57,30 +57,30 @@ public final class QuickChatCatType extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!bc", name = "a", descriptor = "(Lclient!wa;II)V")
-	private void method467(@OriginalArg(0) Buffer arg0, @OriginalArg(2) int arg1) {
-		if (arg1 == 1) {
-			this.description = arg0.gjstr();
+	private void decode(@OriginalArg(0) Buffer buffer, @OriginalArg(2) int opcode) {
+		if (opcode == 1) {
+			this.description = buffer.gjstr();
 			return;
 		}
 		@Pc(28) int local28;
 		@Pc(38) int local38;
-		if (arg1 == 2) {
-			local28 = arg0.g1();
+		if (opcode == 2) {
+			local28 = buffer.g1();
 			this.subcategories = new int[local28];
 			this.subcategoryShortcuts = new int[local28];
 			for (local38 = 0; local38 < local28; local38++) {
-				this.subcategories[local38] = arg0.g2();
-				this.subcategoryShortcuts[local38] = method3933(arg0.g1b());
+				this.subcategories[local38] = buffer.g2();
+				this.subcategoryShortcuts[local38] = method3933(buffer.g1b());
 			}
-		} else if (arg1 == 3) {
-			local28 = arg0.g1();
+		} else if (opcode == 3) {
+			local28 = buffer.g1();
 			this.phrases = new int[local28];
 			this.phraseShortcuts = new int[local28];
 			for (local38 = 0; local38 < local28; local38++) {
-				this.phrases[local38] = arg0.g2();
-				this.phraseShortcuts[local38] = method3933(arg0.g1b());
+				this.phrases[local38] = buffer.g2();
+				this.phraseShortcuts[local38] = method3933(buffer.g1b());
 			}
-		} else if (arg1 == 4) {
+		} else if (opcode == 4) {
 		}
 	}
 
@@ -98,13 +98,13 @@ public final class QuickChatCatType extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!bc", name = "a", descriptor = "(Lclient!wa;B)V")
-	public final void decode(@OriginalArg(0) Buffer arg0) {
+	public final void decode(@OriginalArg(0) Buffer buffer) {
 		while (true) {
-			@Pc(12) int local12 = arg0.g1();
-			if (local12 == 0) {
+			@Pc(12) int opcode = buffer.g1();
+			if (opcode == 0) {
 				return;
 			}
-			this.method467(arg0, local12);
+			this.decode(buffer, opcode);
 		}
 	}
 }
