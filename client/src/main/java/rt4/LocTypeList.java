@@ -22,36 +22,36 @@ public class LocTypeList {
 
 	@OriginalMember(owner = "client!wc", name = "a", descriptor = "(II)Lclient!pb;")
 	public static LocType get(@OriginalArg(1) int id) {
-		@Pc(15) LocType local15 = (LocType) types.get(id);
-		if (local15 != null) {
-			return local15;
+		@Pc(15) LocType loc = (LocType) types.get(id);
+		if (loc != null) {
+			return loc;
 		}
-		@Pc(30) byte[] local30 = locsArchive.fetchFile(getGroupId(id), getFileId(id));
-		local15 = new LocType();
-		local15.id = id;
-		if (local30 != null) {
-			local15.decode(new Buffer(local30));
+		@Pc(30) byte[] data = locsArchive.fetchFile(getGroupId(id), getFileId(id));
+		loc = new LocType();
+		loc.id = id;
+		if (data != null) {
+			loc.decode(new Buffer(data));
 		}
-		local15.postDecode();
-		if (!allowMembers && local15.members) {
-			local15.ops = null;
+		loc.postDecode();
+		if (!allowMembers && loc.members) {
+			loc.ops = null;
 		}
-		if (local15.breakroutefinding) {
-			local15.blockwalk = 0;
-			local15.blockrange = false;
+		if (loc.breakroutefinding) {
+			loc.blockwalk = 0;
+			loc.blockrange = false;
 		}
-		types.put(local15, id);
-		return local15;
+		types.put(loc, id);
+		return loc;
 	}
 
 	@OriginalMember(owner = "client!ui", name = "c", descriptor = "(II)I")
-	public static int getGroupId(@OriginalArg(0) int arg0) {
-		return arg0 >>> 8;
+	public static int getGroupId(@OriginalArg(0) int id) {
+		return id >>> 8;
 	}
 
 	@OriginalMember(owner = "client!cj", name = "a", descriptor = "(IB)I")
-	public static int getFileId(@OriginalArg(0) int arg0) {
-		return arg0 & 0xFF;
+	public static int getFileId(@OriginalArg(0) int id) {
+		return id & 0xFF;
 	}
 
 	@OriginalMember(owner = "client!oi", name = "a", descriptor = "(ILclient!ve;Lclient!ve;Z)V")

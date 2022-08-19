@@ -39,33 +39,33 @@ public class ObjTypeList {
 	}
 
 	@OriginalMember(owner = "client!fk", name = "a", descriptor = "(IB)Lclient!h;")
-	public static ObjType get(@OriginalArg(0) int arg0) {
-		@Pc(6) ObjType local6 = (ObjType) types.get(arg0);
-		if (local6 != null) {
-			return local6;
+	public static ObjType get(@OriginalArg(0) int id) {
+		@Pc(6) ObjType obj = (ObjType) types.get(id);
+		if (obj != null) {
+			return obj;
 		}
-		@Pc(25) byte[] local25 = archive.fetchFile(method554(arg0), method4247(arg0));
-		local6 = new ObjType();
-		local6.id = arg0;
-		if (local25 != null) {
-			local6.decode(new Buffer(local25));
+		@Pc(25) byte[] data = archive.fetchFile(getGroupId(id), getFileId(id));
+		obj = new ObjType();
+		obj.id = id;
+		if (data != null) {
+			obj.decode(new Buffer(data));
 		}
-		local6.postDecode();
-		if (local6.certtemplate != -1) {
-			local6.generateCertificate(get(local6.certlink), get(local6.certtemplate));
+		obj.postDecode();
+		if (obj.certtemplate != -1) {
+			obj.generateCertificate(get(obj.certlink), get(obj.certtemplate));
 		}
-		if (local6.lentTemplate != -1) {
-			local6.generateLent(get(local6.lentLink), get(local6.lentTemplate));
+		if (obj.lentTemplate != -1) {
+			obj.generateLent(get(obj.lentLink), get(obj.lentTemplate));
 		}
-		if (!aBoolean276 && local6.members) {
-			local6.name = LocalizedText.MEMBERS_OBJECT;
-			local6.team = 0;
-			local6.iops = aClass100Array104;
-			local6.stockMarket = false;
-			local6.ops = aClass100Array87;
+		if (!aBoolean276 && obj.members) {
+			obj.name = LocalizedText.MEMBERS_OBJECT;
+			obj.team = 0;
+			obj.iops = aClass100Array104;
+			obj.stockMarket = false;
+			obj.ops = aClass100Array87;
 		}
-		types.put(local6, arg0);
-		return local6;
+		types.put(obj, id);
+		return obj;
 	}
 
 	@OriginalMember(owner = "client!i", name = "r", descriptor = "(I)V")
@@ -108,12 +108,12 @@ public class ObjTypeList {
 	}
 
 	@OriginalMember(owner = "client!ub", name = "a", descriptor = "(IB)I")
-	public static int method4247(@OriginalArg(0) int arg0) {
-		return arg0 & 0xFF;
+	public static int getFileId(@OriginalArg(0) int id) {
+		return id & 0xFF;
 	}
 
 	@OriginalMember(owner = "client!bh", name = "a", descriptor = "(IB)I")
-	public static int method554(@OriginalArg(0) int arg0) {
-		return arg0 >>> 8;
+	public static int getGroupId(@OriginalArg(0) int id) {
+		return id >>> 8;
 	}
 }

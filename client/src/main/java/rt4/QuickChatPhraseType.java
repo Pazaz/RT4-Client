@@ -55,13 +55,13 @@ public final class QuickChatPhraseType extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!cb", name = "a", descriptor = "(Lclient!wa;I)V")
-	public final void decode(@OriginalArg(0) Buffer arg0) {
+	public final void decode(@OriginalArg(0) Buffer buffer) {
 		while (true) {
-			@Pc(9) int local9 = arg0.g1();
-			if (local9 == 0) {
+			@Pc(9) int opcode = buffer.g1();
+			if (opcode == 0) {
 				return;
 			}
-			this.method768(arg0, local9);
+			this.decode(buffer, opcode);
 		}
 	}
 
@@ -96,32 +96,32 @@ public final class QuickChatPhraseType extends SecondaryNode {
 	}
 
 	@OriginalMember(owner = "client!cb", name = "a", descriptor = "(Lclient!wa;II)V")
-	private void method768(@OriginalArg(0) Buffer arg0, @OriginalArg(1) int arg1) {
-		if (arg1 == 1) {
-			this.aClass100Array35 = arg0.gjstr().split(60);
+	private void decode(@OriginalArg(0) Buffer buffer, @OriginalArg(1) int opcode) {
+		if (opcode == 1) {
+			this.aClass100Array35 = buffer.gjstr().split(60);
 			return;
 		}
 		@Pc(32) int local32;
 		@Pc(42) int local42;
-		if (arg1 == 2) {
-			local32 = arg0.g1();
+		if (opcode == 2) {
+			local32 = buffer.g1();
 			this.automaticResponses = new int[local32];
 			for (local42 = 0; local42 < local32; local42++) {
-				this.automaticResponses[local42] = arg0.g2();
+				this.automaticResponses[local42] = buffer.g2();
 			}
-		} else if (arg1 == 3) {
-			local32 = arg0.g1();
+		} else if (opcode == 3) {
+			local32 = buffer.g1();
 			this.anIntArray71 = new int[local32];
 			this.anIntArrayArray5 = new int[local32][];
 			for (local42 = 0; local42 < local32; local42++) {
-				@Pc(49) int local49 = arg0.g2();
+				@Pc(49) int local49 = buffer.g2();
 				this.anIntArray71[local42] = local49;
 				this.anIntArrayArray5[local42] = new int[anIntArray412[local49]];
 				for (@Pc(64) int local64 = 0; local64 < anIntArray412[local49]; local64++) {
-					this.anIntArrayArray5[local42][local64] = arg0.g2();
+					this.anIntArrayArray5[local42][local64] = buffer.g2();
 				}
 			}
-		} else if (arg1 == 4) {
+		} else if (opcode == 4) {
 			this.aBoolean60 = false;
 		}
 	}

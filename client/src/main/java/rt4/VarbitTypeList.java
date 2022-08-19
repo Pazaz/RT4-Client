@@ -16,18 +16,18 @@ public class VarbitTypeList {
 	}
 
 	@OriginalMember(owner = "client!jl", name = "a", descriptor = "(IB)Lclient!kk;")
-	public static VarbitType get(@OriginalArg(0) int arg0) {
-		@Pc(10) VarbitType local10 = (VarbitType) types.get(arg0);
-		if (local10 != null) {
-			return local10;
+	public static VarbitType get(@OriginalArg(0) int id) {
+		@Pc(10) VarbitType varbit = (VarbitType) types.get(id);
+		if (varbit != null) {
+			return varbit;
 		}
-		@Pc(31) byte[] local31 = archive.fetchFile(method4349(arg0), method3845(arg0));
-		local10 = new VarbitType();
-		if (local31 != null) {
-			local10.decode(new Buffer(local31));
+		@Pc(31) byte[] data = archive.fetchFile(getGroupId(id), getFileId(id));
+		varbit = new VarbitType();
+		if (data != null) {
+			varbit.decode(new Buffer(data));
 		}
-		types.put(local10, arg0);
-		return local10;
+		types.put(varbit, id);
+		return varbit;
 	}
 
 	@OriginalMember(owner = "client!wa", name = "d", descriptor = "(BI)V")
@@ -46,12 +46,12 @@ public class VarbitTypeList {
 	}
 
 	@OriginalMember(owner = "client!wf", name = "a", descriptor = "(II)I")
-	public static int method3845(@OriginalArg(0) int arg0) {
+	public static int getFileId(@OriginalArg(0) int arg0) {
 		return arg0 & 0x3FF;
 	}
 
 	@OriginalMember(owner = "client!uj", name = "a", descriptor = "(II)I")
-	public static int method4349(@OriginalArg(0) int arg0) {
+	public static int getGroupId(@OriginalArg(0) int arg0) {
 		return arg0 >>> 10;
 	}
 }

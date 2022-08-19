@@ -11,7 +11,7 @@ public final class FloType {
 	@OriginalMember(owner = "client!ca", name = "db", descriptor = "I")
 	public static int anInt865 = 0;
 	@OriginalMember(owner = "client!wl", name = "j", descriptor = "Z")
-	public boolean aBoolean310 = false;
+	public boolean blendTexture = false;
 
 	@OriginalMember(owner = "client!wl", name = "l", descriptor = "Z")
 	public boolean aBoolean311 = true;
@@ -23,68 +23,75 @@ public final class FloType {
 	public int anInt5885 = 128;
 
 	@OriginalMember(owner = "client!wl", name = "w", descriptor = "I")
-	public int anInt5897 = 8;
+	public int textureBrightness = 8;
 
 	@OriginalMember(owner = "client!wl", name = "x", descriptor = "I")
-	public int anInt5898 = 16;
+	public int waterOpacity = 16;
 
 	@OriginalMember(owner = "client!wl", name = "t", descriptor = "I")
-	public int anInt5894 = -1;
+	public int secondaryColor = -1;
 
 	@OriginalMember(owner = "client!wl", name = "y", descriptor = "Z")
-	public boolean aBoolean312 = true;
+	public boolean occludeUnderlay = true;
 
 	@OriginalMember(owner = "client!wl", name = "z", descriptor = "I")
-	public int anInt5899 = 0;
+	public int baseColor = 0;
 
 	@OriginalMember(owner = "client!wl", name = "m", descriptor = "I")
-	public int anInt5889 = 1190717;
+	public int waterColor = 1190717;
 
 	@OriginalMember(owner = "client!be", name = "a", descriptor = "(II)I")
-	public static int method492(@OriginalArg(1) int arg0) {
-		return arg0 == 16711935 ? -1 : ColorUtils.rgbToHsl(arg0);
+	public static int method492(@OriginalArg(1) int color) {
+		return color == 16711935 ? -1 : ColorUtils.rgbToHsl(color);
 	}
 
 	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(ILclient!wa;I)V")
-	public final void decode(@OriginalArg(1) Buffer arg0, @OriginalArg(2) int arg1) {
+	public final void decode(@OriginalArg(1) Buffer buffer, @OriginalArg(2) int id) {
 		while (true) {
-			@Pc(5) int local5 = arg0.g1();
-			if (local5 == 0) {
+			@Pc(5) int opcode = buffer.g1();
+			if (opcode == 0) {
 				return;
 			}
-			this.method4674(local5, arg0, arg1);
+			this.decode(opcode, buffer, id);
 		}
 	}
 
 	@OriginalMember(owner = "client!wl", name = "a", descriptor = "(IILclient!wa;I)V")
-	private void method4674(@OriginalArg(1) int arg0, @OriginalArg(2) Buffer arg1, @OriginalArg(3) int arg2) {
-		if (arg0 == 1) {
-			this.anInt5899 = method492(arg1.g3());
-		} else if (arg0 == 2) {
-			this.texture = arg1.g1();
-		} else if (arg0 == 3) {
-			this.texture = arg1.g2();
+	private void decode(@OriginalArg(1) int opcode, @OriginalArg(2) Buffer buffer, @OriginalArg(3) int id) {
+		if (opcode == 1) {
+			this.baseColor = method492(buffer.g3());
+		} else if (opcode == 2) {
+			this.texture = buffer.g1();
+		} else if (opcode == 3) {
+			this.texture = buffer.g2();
 			if (this.texture == 65535) {
 				this.texture = -1;
 			}
-		} else if (arg0 == 5) {
-			this.aBoolean312 = false;
-		} else if (arg0 == 7) {
-			this.anInt5894 = method492(arg1.g3());
-		} else if (arg0 == 8) {
-			anInt865 = arg2;
-		} else if (arg0 == 9) {
-			this.anInt5885 = arg1.g2();
-		} else if (arg0 == 10) {
+		} else if (opcode == 5) {
+			this.occludeUnderlay = false;
+		} else if (opcode == 7) {
+			this.secondaryColor = method492(buffer.g3());
+		} else if (opcode == 8) {
+			anInt865 = id;
+		} else if (opcode == 9) {
+			this.anInt5885 = buffer.g2();
+		} else if (opcode == 10) {
 			this.aBoolean311 = false;
-		} else if (arg0 == 11) {
-			this.anInt5897 = arg1.g1();
-		} else if (arg0 == 12) {
-			this.aBoolean310 = true;
-		} else if (arg0 == 13) {
-			this.anInt5889 = arg1.g3();
-		} else if (arg0 == 14) {
-			this.anInt5898 = arg1.g1();
+		} else if (opcode == 11) {
+			this.textureBrightness = buffer.g1();
+		} else if (opcode == 12) {
+			this.blendTexture = true;
+		} else if (opcode == 13) {
+			this.waterColor = buffer.g3();
+		} else if (opcode == 14) {
+			/*
+			 * Handles how deep into water the player is able to see,
+			 * seems to (but not confirmed) work in jumps of 2, so: "0, 2, 4, 6" etc.
+			 * It seems any number equals to or less than 0, removes any visual
+			 * effect obscuring the depth view. The first increment in order,
+			 * being 2, blocks almost 100% of the view of the underwater map (UM).
+			 */
+			this.waterOpacity = buffer.g1();
 		}
 	}
 }

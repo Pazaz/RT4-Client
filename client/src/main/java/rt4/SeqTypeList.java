@@ -23,19 +23,19 @@ public class SeqTypeList {
 
 	@OriginalMember(owner = "client!client", name = "a", descriptor = "(IB)Lclient!tk;")
 	public static SeqType get(@OriginalArg(0) int id) {
-		@Pc(17) SeqType local17 = (SeqType) types.get(id);
-		if (local17 != null) {
-			return local17;
+		@Pc(17) SeqType sequence = (SeqType) types.get(id);
+		if (sequence != null) {
+			return sequence;
 		}
-		@Pc(32) byte[] local32 = archive.fetchFile(getGroupId(id), getFileId(id));
-		local17 = new SeqType();
-		local17.id = id;
-		if (local32 != null) {
-			local17.decode(new Buffer(local32));
+		@Pc(32) byte[] data = archive.fetchFile(getGroupId(id), getFileId(id));
+		sequence = new SeqType();
+		sequence.id = id;
+		if (data != null) {
+			sequence.decode(new Buffer(data));
 		}
-		local17.postDecode();
-		types.put(local17, id);
-		return local17;
+		sequence.postDecode();
+		types.put(sequence, id);
+		return sequence;
 	}
 
 	@OriginalMember(owner = "client!s", name = "a", descriptor = "(II)I")
