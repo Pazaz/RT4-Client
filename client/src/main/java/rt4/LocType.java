@@ -44,7 +44,7 @@ public final class LocType {
 	public static LocEntity aClass139_1 = new LocEntity();
 
 	@OriginalMember(owner = "client!pb", name = "a", descriptor = "[S")
-	private short[] retex_d;
+	private short[] retex_s;
 
 	@OriginalMember(owner = "client!pb", name = "b", descriptor = "[S")
 	private short[] recol_s;
@@ -53,7 +53,7 @@ public final class LocType {
 	private int[] shapes;
 
 	@OriginalMember(owner = "client!pb", name = "v", descriptor = "[S")
-	private short[] retex_s;
+	private short[] retex_d;
 
 	@OriginalMember(owner = "client!pb", name = "B", descriptor = "Lclient!sc;")
 	private HashTable params;
@@ -62,7 +62,7 @@ public final class LocType {
 	private short[] recol_d;
 
 	@OriginalMember(owner = "client!pb", name = "P", descriptor = "[B")
-	public byte[] aByteArray63;
+	public byte[] recol_p;
 
 	@OriginalMember(owner = "client!pb", name = "X", descriptor = "[I")
 	private int[] models;
@@ -109,7 +109,7 @@ public final class LocType {
 	public int mapscene = -1;
 
 	@OriginalMember(owner = "client!pb", name = "G", descriptor = "B")
-	private byte hillskew = 0;
+	private byte hillskewType = 0;
 
 	@OriginalMember(owner = "client!pb", name = "r", descriptor = "Z")
 	public boolean members = false;
@@ -133,7 +133,7 @@ public final class LocType {
 	public int cursor2Op = -1;
 
 	@OriginalMember(owner = "client!pb", name = "A", descriptor = "S")
-	public short aShort26 = -1;
+	public short hillskewAmount = -1;
 
 	@OriginalMember(owner = "client!pb", name = "g", descriptor = "I")
 	private int resizez = 128;
@@ -331,7 +331,7 @@ public final class LocType {
 		local211 = this.resizex != 128 || this.resizey != 128 || this.resizez != 128;
 		@Pc(230) boolean local230;
 		local230 = this.xoff != 0 || this.yoff != 0 || this.zoff != 0;
-		@Pc(265) RawModel local265 = new RawModel(local7, arg0 == 0 && !local211 && !local230, this.recol_s == null, this.retex_d == null, true);
+		@Pc(265) RawModel local265 = new RawModel(local7, arg0 == 0 && !local211 && !local230, this.recol_s == null, this.retex_s == null, true);
 		if (arg1 == 4 && arg0 > 3) {
 			local265.method1682();
 			local265.translate(45, 0, -45);
@@ -347,16 +347,16 @@ public final class LocType {
 		@Pc(315) int local315;
 		if (this.recol_s != null) {
 			for (local315 = 0; local315 < this.recol_s.length; local315++) {
-				if (this.aByteArray63 == null || this.aByteArray63.length <= local315) {
+				if (this.recol_p == null || this.recol_p.length <= local315) {
 					local265.recolor(this.recol_s[local315], this.recol_d[local315]);
 				} else {
-					local265.recolor(this.recol_s[local315], client.aShortArray19[this.aByteArray63[local315] & 0xFF]);
+					local265.recolor(this.recol_s[local315], client.aShortArray19[this.recol_p[local315] & 0xFF]);
 				}
 			}
 		}
-		if (this.retex_d != null) {
-			for (local315 = 0; local315 < this.retex_d.length; local315++) {
-				local265.retexture(this.retex_d[local315], this.retex_s[local315]);
+		if (this.retex_s != null) {
+			for (local315 = 0; local315 < this.retex_s.length; local315++) {
+				local265.retexture(this.retex_s[local315], this.retex_d[local315]);
 			}
 		}
 		if (local211) {
@@ -469,7 +469,7 @@ public final class LocType {
 		} else if (opcode == 19) {
 			this.interactable = buffer.g1();
 		} else if (opcode == 21) {
-			this.hillskew = 1;
+			this.hillskewType = 1;
 		} else if (opcode == 22) { // sharelight
 			this.computeVertexColors = true;
 		} else if (opcode == 23) {
@@ -502,18 +502,17 @@ public final class LocType {
 			}
 		} else if (opcode == 41) {
 			count = buffer.g1();
-			this.retex_s = new short[count];
 			this.retex_d = new short[count];
+			this.retex_s = new short[count];
 			for (len = 0; len < count; len++) {
-				this.retex_d[len] = (short) buffer.g2();
 				this.retex_s[len] = (short) buffer.g2();
+				this.retex_d[len] = (short) buffer.g2();
 			}
 		} else if (opcode == 42) {
-			// recolor-related
 			count = buffer.g1();
-			this.aByteArray63 = new byte[count];
+			this.recol_p = new byte[count];
 			for (len = 0; len < count; len++) {
-				this.aByteArray63[len] = buffer.g1b();
+				this.recol_p[len] = buffer.g1b();
 			}
 		} else if (opcode == 60) {
 			this.mapfunction = buffer.g2();
@@ -580,8 +579,8 @@ public final class LocType {
 				this.bgsounds[len] = buffer.g2();
 			}
 		} else if (opcode == 81) { // sethillskew
-			this.hillskew = 2;
-			this.aShort26 = (short) (buffer.g1() * 256);
+			this.hillskewType = 2;
+			this.hillskewAmount = (short) (buffer.g1() * 256);
 		} else if (opcode == 82) {
 			this.render = true;
 		} else if (opcode == 88) {
@@ -593,12 +592,12 @@ public final class LocType {
 		} else if (opcode == 91) {
 			this.members = true;
 		} else if (opcode == 93) {
-			this.hillskew = 3;
-			this.aShort26 = (short) buffer.g2();
+			this.hillskewType = 3;
+			this.hillskewAmount = (short) buffer.g2();
 		} else if (opcode == 94) {
-			this.hillskew = 4;
+			this.hillskewType = 4;
 		} else if (opcode == 95) {
-			this.hillskew = 5;
+			this.hillskewType = 5;
 		} else if (opcode == 96) {
 			this.hasanimation = true;
 		} else if (opcode == 97) {
@@ -722,7 +721,7 @@ public final class LocType {
 		}
 		@Pc(264) boolean local264 = this.resizey == 128 && this.yoff == 0;
 		@Pc(294) boolean local294 = arg0 == 0 && this.resizex == 128 && this.resizez == 128 && this.xoff == 0 && this.zoff == 0 && !local236;
-		@Pc(351) GlModel local351 = local79.method4117(local294, local264, this.recol_s == null, local79.method4094() == local10, arg0 == 0 && !local236, true, local17 == local79.method4115(), !local236, this.retex_d == null);
+		@Pc(351) GlModel local351 = local79.method4117(local294, local264, this.recol_s == null, local79.method4094() == local10, arg0 == 0 && !local236, true, local17 == local79.method4115(), !local236, this.retex_s == null);
 		if (local236) {
 			local351.method4122();
 		}
@@ -743,9 +742,9 @@ public final class LocType {
 				local351.method4109(this.recol_s[local177], this.recol_d[local177]);
 			}
 		}
-		if (this.retex_d != null) {
-			for (local177 = 0; local177 < this.retex_d.length; local177++) {
-				local351.method4107(this.retex_d[local177], this.retex_s[local177]);
+		if (this.retex_s != null) {
+			for (local177 = 0; local177 < this.retex_s.length; local177++) {
+				local351.method4107(this.retex_s[local177], this.retex_d[local177]);
 			}
 		}
 		if (this.resizex != 128 || this.resizey != 128 || this.resizez != 128) {
@@ -799,9 +798,9 @@ public final class LocType {
 				local265 = local225.sprite;
 			}
 			@Pc(298) boolean local298 = this.computeVertexColors & arg6;
-			@Pc(330) GlModel local330 = local235.method4117(this.hillskew != 3, this.hillskew == 0, true, true, true, !local298, true, true, true);
-			if (this.hillskew != 0) {
-				local330.method4110(this.hillskew, this.aShort26, local235, arg2, arg5, arg1, arg4, arg9);
+			@Pc(330) GlModel local330 = local235.method4117(this.hillskewType != 3, this.hillskewType == 0, true, true, true, !local298, true, true, true);
+			if (this.hillskewType != 0) {
+				local330.method4110(this.hillskewType, this.hillskewAmount, local235, arg2, arg5, arg1, arg4, arg9);
 			}
 			local330.method4111(this.interactable == 0 && !this.aBoolean214, true, true, this.interactable == 0, true, false);
 			aClass139_1.model = local330;
@@ -845,11 +844,11 @@ public final class LocType {
 		if (local50) {
 			local60 = ((RawModel) local60).method1675();
 		}
-		if (this.hillskew != 0) {
+		if (this.hillskewType != 0) {
 			if (local60 instanceof SoftwareModel) {
-				local60 = ((SoftwareModel) local60).method4586(this.hillskew, this.aShort26, arg2, arg5, arg1, arg4, arg9, true);
+				local60 = ((SoftwareModel) local60).method4586(this.hillskewType, this.hillskewAmount, arg2, arg5, arg1, arg4, arg9, true);
 			} else if (local60 instanceof RawModel) {
-				local60 = ((RawModel) local60).method1670(this.hillskew, this.aShort26, arg2, arg5, arg1, arg4, arg9);
+				local60 = ((RawModel) local60).method1670(this.hillskewType, this.hillskewAmount, arg2, arg5, arg1, arg4, arg9);
 			}
 		}
 		aClass139_1.model = local60;
@@ -886,11 +885,11 @@ public final class LocType {
 				}
 				local195.rotateY(256);
 			}
-			if (this.hillskew != 0) {
+			if (this.hillskewType != 0) {
 				if (!local234) {
 					local195 = (SoftwareModel) local195.method4568(true, true, true);
 				}
-				local195 = local195.method4586(this.hillskew, this.aShort26, arg6, arg9, arg1, arg3, arg0, false);
+				local195 = local195.method4586(this.hillskewType, this.hillskewAmount, arg6, arg9, arg1, arg3, arg0, false);
 			}
 			aClass139_1.model = local195;
 			return aClass139_1;
@@ -928,11 +927,11 @@ public final class LocType {
 		} else {
 			aClass139_1.sprite = null;
 		}
-		if (this.hillskew != 0) {
+		if (this.hillskewType != 0) {
 			if (!local80) {
 				local82 = (GlModel) local82.method4568(true, true, true);
 			}
-			local82.method4110(this.hillskew, this.aShort26, local46, arg6, arg9, arg1, arg3, arg0);
+			local82.method4110(this.hillskewType, this.hillskewAmount, local46, arg6, arg9, arg1, arg3, arg0);
 		}
 		aClass139_1.model = local82;
 		return aClass139_1;

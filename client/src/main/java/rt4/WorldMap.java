@@ -1768,8 +1768,8 @@ public class WorldMap {
 				@Pc(66) int local66;
 				@Pc(72) int local72;
 				@Pc(95) int local95;
-				if (local18.anInt5894 >= 0) {
-					local66 = local18.anInt5894;
+				if (local18.secondaryColor >= 0) {
+					local66 = local18.secondaryColor;
 					local72 = (local66 & 0x7F) + arg0;
 					if (local72 < 0) {
 						local72 = 0;
@@ -1780,10 +1780,10 @@ public class WorldMap {
 					local53 = Rasteriser.palette[ColorUtils.multiplyLightnessGrayscale(local95, 96)];
 				} else if (local24 >= 0) {
 					local53 = Rasteriser.palette[ColorUtils.multiplyLightnessGrayscale(Rasteriser.textureProvider.getAverageColor(local24), 96)];
-				} else if (local18.anInt5899 == -1) {
+				} else if (local18.baseColor == -1) {
 					local53 = -1;
 				} else {
-					local66 = local18.anInt5899;
+					local66 = local18.baseColor;
 					local72 = arg0 + (local66 & 0x7F);
 					if (local72 < 0) {
 						local72 = 0;

@@ -32,26 +32,26 @@ public class QuickChatPhraseTypeList {
 	}
 
 	@OriginalMember(owner = "client!sj", name = "b", descriptor = "(II)Lclient!cb;")
-	public static QuickChatPhraseType get(@OriginalArg(1) int arg0) {
-		@Pc(10) QuickChatPhraseType local10 = (QuickChatPhraseType) types.get(arg0);
-		if (local10 != null) {
-			return local10;
+	public static QuickChatPhraseType get(@OriginalArg(1) int id) {
+		@Pc(10) QuickChatPhraseType quickChatPhrase = (QuickChatPhraseType) types.get(id);
+		if (quickChatPhrase != null) {
+			return quickChatPhrase;
 		}
-		@Pc(27) byte[] local27;
-		if (arg0 < 32768) {
-			local27 = archive1.fetchFile(1, arg0);
+		@Pc(27) byte[] data;
+		if (id < 32768) {
+			data = archive1.fetchFile(1, id);
 		} else {
-			local27 = archive2.fetchFile(1, arg0 & 0x7FFF);
+			data = archive2.fetchFile(1, id & 0x7FFF);
 		}
-		local10 = new QuickChatPhraseType();
-		if (local27 != null) {
-			local10.decode(new Buffer(local27));
+		quickChatPhrase = new QuickChatPhraseType();
+		if (data != null) {
+			quickChatPhrase.decode(new Buffer(data));
 		}
-		if (arg0 >= 32768) {
-			local10.method763();
+		if (id >= 32768) {
+			quickChatPhrase.method763();
 		}
-		types.put(local10, arg0);
-		return local10;
+		types.put(quickChatPhrase, id);
+		return quickChatPhrase;
 	}
 
 	@OriginalMember(owner = "client!ha", name = "a", descriptor = "([IJIZ)Lclient!na;")

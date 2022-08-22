@@ -1400,7 +1400,7 @@ public class MiniMenu {
 						if (local281 != 0) {
 							local281 += local271;
 						}
-						add(arg0.anInt3752, arg2, JagString.concatenate(new JagString[]{aClass100_965, local35}), arg1, local281, local129[local140], arg3);
+						add(arg0.attackCursor, arg2, JagString.concatenate(new JagString[]{aClass100_965, local35}), arg1, local281, local129[local140], arg3);
 					}
 				}
 			}

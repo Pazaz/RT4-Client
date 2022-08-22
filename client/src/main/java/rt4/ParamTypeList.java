@@ -16,17 +16,17 @@ public class ParamTypeList {
 	}
 
 	@OriginalMember(owner = "client!ih", name = "a", descriptor = "(II)Lclient!hn;")
-	public static ParamType get(@OriginalArg(1) int arg0) {
-		@Pc(6) ParamType local6 = (ParamType) types.get(arg0);
-		if (local6 != null) {
-			return local6;
+	public static ParamType get(@OriginalArg(1) int id) {
+		@Pc(6) ParamType paramType = (ParamType) types.get(id);
+		if (paramType != null) {
+			return paramType;
 		}
-		@Pc(30) byte[] local30 = archive.fetchFile(11, arg0);
-		local6 = new ParamType();
-		if (local30 != null) {
-			local6.decode(new Buffer(local30));
+		@Pc(30) byte[] data = archive.fetchFile(11, id);
+		paramType = new ParamType();
+		if (data != null) {
+			paramType.decode(new Buffer(data));
 		}
-		types.put(local6, arg0);
-		return local6;
+		types.put(paramType, id);
+		return paramType;
 	}
 }

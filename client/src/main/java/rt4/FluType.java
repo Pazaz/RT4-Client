@@ -24,13 +24,13 @@ public final class FluType {
 	private int color = 0;
 
 	@OriginalMember(owner = "client!ni", name = "m", descriptor = "I")
-	public int anInt4155 = -1;
+	public int texture = -1;
 
 	@OriginalMember(owner = "client!ni", name = "o", descriptor = "I")
 	public int anInt4156 = 128;
 
 	@OriginalMember(owner = "client!ni", name = "l", descriptor = "Z")
-	public boolean aBoolean198 = true;
+	public boolean blockShadow = true;
 
 	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(IB)V")
 	private void rgbToHsl(@OriginalArg(0) int arg0) {
@@ -94,30 +94,30 @@ public final class FluType {
 	}
 
 	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(ILclient!wa;I)V")
-	public final void decode(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
+	public final void decode(@OriginalArg(0) int id, @OriginalArg(1) Buffer buffer) {
 		while (true) {
-			@Pc(7) int local7 = arg1.g1();
-			if (local7 == 0) {
+			@Pc(7) int opcode = buffer.g1();
+			if (opcode == 0) {
 				return;
 			}
-			this.method3220(local7, arg1, arg0);
+			this.decode(opcode, buffer, id);
 		}
 	}
 
 	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(BILclient!wa;I)V")
-	private void method3220(@OriginalArg(1) int arg0, @OriginalArg(2) Buffer arg1, @OriginalArg(3) int arg2) {
-		if (arg0 == 1) {
-			this.color = arg1.g3();
+	private void decode(@OriginalArg(1) int opcode, @OriginalArg(2) Buffer buffer, @OriginalArg(3) int arg2) {
+		if (opcode == 1) {
+			this.color = buffer.g3();
 			this.rgbToHsl(this.color);
-		} else if (arg0 == 2) {
-			this.anInt4155 = arg1.g2();
-			if (this.anInt4155 == 65535) {
-				this.anInt4155 = -1;
+		} else if (opcode == 2) {
+			this.texture = buffer.g2();
+			if (this.texture == 65535) {
+				this.texture = -1;
 			}
-		} else if (arg0 == 3) {
-			this.anInt4156 = arg1.g2();
-		} else if (arg0 == 4) {
-			this.aBoolean198 = false;
+		} else if (opcode == 3) {
+			this.anInt4156 = buffer.g2();
+		} else if (opcode == 4) {
+			this.blockShadow = false;
 		}
 	}
 }

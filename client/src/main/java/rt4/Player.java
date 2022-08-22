@@ -173,9 +173,9 @@ public final class Player extends PathingEntity {
 		@Pc(18) BasType local18 = arg0.getBasType();
 		if (local18.idleAnimationId == arg0.movementSeqId) {
 			local14 = arg0.anInt1648;
-		} else if (local18.runAnimationId == arg0.movementSeqId || arg0.movementSeqId == local18.runAnimationId2 || arg0.movementSeqId == local18.runAnimationId4 || local18.runAnimationId3 == arg0.movementSeqId) {
+		} else if (local18.runAnimationId == arg0.movementSeqId || arg0.movementSeqId == local18.runFullTurnAnimationId || arg0.movementSeqId == local18.runCWTurnAnimationId || local18.runCCWTurnAnimationId == arg0.movementSeqId) {
 			local14 = arg0.anInt1670;
-		} else if (arg0.movementSeqId == local18.anInt1062 || arg0.movementSeqId == local18.anInt1042 || arg0.movementSeqId == local18.anInt1048 || arg0.movementSeqId == local18.anInt1066) {
+		} else if (arg0.movementSeqId == local18.slowWalkAnimationId || arg0.movementSeqId == local18.slowWalkFullTurnAnimationId || arg0.movementSeqId == local18.slowWalkCWTurnAnimationId || arg0.movementSeqId == local18.slowWalkCCWTurnAnimationId) {
 			local14 = arg0.anInt1658;
 		}
 		return local14;

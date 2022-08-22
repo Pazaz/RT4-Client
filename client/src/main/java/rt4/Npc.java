@@ -12,24 +12,24 @@ public final class Npc extends PathingEntity {
 	public NpcType type;
 
 	@OriginalMember(owner = "client!ij", name = "a", descriptor = "(Lclient!km;I)I")
-	public static int getSound(@OriginalArg(0) Npc arg0) {
-		@Pc(13) NpcType local13 = arg0.type;
-		if (local13.multiNpcs != null) {
-			local13 = local13.getMultiNpc();
-			if (local13 == null) {
+	public static int getSound(@OriginalArg(0) Npc npc) {
+		@Pc(13) NpcType npcType = npc.type;
+		if (npcType.multiNpcs != null) {
+			npcType = npcType.getMultiNpc();
+			if (npcType == null) {
 				return -1;
 			}
 		}
-		@Pc(29) int local29 = local13.walkSound;
-		@Pc(33) BasType local33 = arg0.getBasType();
-		if (local33.idleAnimationId == arg0.movementSeqId) {
-			local29 = local13.idleSound;
-		} else if (arg0.movementSeqId == local33.runAnimationId || local33.runAnimationId2 == arg0.movementSeqId || arg0.movementSeqId == local33.runAnimationId4 || arg0.movementSeqId == local33.runAnimationId3) {
-			local29 = local13.runSound;
-		} else if (local33.anInt1062 == arg0.movementSeqId || arg0.movementSeqId == local33.anInt1042 || arg0.movementSeqId == local33.anInt1048 || arg0.movementSeqId == local33.anInt1066) {
-			local29 = local13.crawlSound;
+		@Pc(29) int sound = npcType.walkSound;
+		@Pc(33) BasType npcBas = npc.getBasType();
+		if (npcBas.idleAnimationId == npc.movementSeqId) {
+			sound = npcType.idleSound;
+		} else if (npc.movementSeqId == npcBas.runAnimationId || npcBas.runFullTurnAnimationId == npc.movementSeqId || npc.movementSeqId == npcBas.runCWTurnAnimationId || npc.movementSeqId == npcBas.runCCWTurnAnimationId) {
+			sound = npcType.runSound;
+		} else if (npcBas.slowWalkAnimationId == npc.movementSeqId || npc.movementSeqId == npcBas.slowWalkFullTurnAnimationId || npc.movementSeqId == npcBas.slowWalkCWTurnAnimationId || npc.movementSeqId == npcBas.slowWalkCCWTurnAnimationId) {
+			sound = npcType.crawlSound;
 		}
-		return local29;
+		return sound;
 	}
 
 	@OriginalMember(owner = "client!km", name = "finalize", descriptor = "()V")
