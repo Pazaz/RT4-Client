@@ -19,25 +19,25 @@ public class QuickChatCatTypeList {
 	}
 
 	@OriginalMember(owner = "client!tb", name = "b", descriptor = "(IB)Lclient!bc;")
-	public static QuickChatCatType get(@OriginalArg(0) int arg0) {
-		@Pc(10) QuickChatCatType local10 = (QuickChatCatType) types.get(arg0);
-		if (local10 != null) {
-			return local10;
+	public static QuickChatCatType get(@OriginalArg(0) int id) {
+		@Pc(10) QuickChatCatType quickChatCat = (QuickChatCatType) types.get(id);
+		if (quickChatCat != null) {
+			return quickChatCat;
 		}
-		@Pc(24) byte[] local24;
-		if (arg0 < 32768) {
-			local24 = archive1.fetchFile(0, arg0);
+		@Pc(24) byte[] data;
+		if (id < 32768) {
+			data = archive1.fetchFile(0, id);
 		} else {
-			local24 = archive2.fetchFile(0, arg0 & 0x7FFF);
+			data = archive2.fetchFile(0, id & 0x7FFF);
 		}
-		local10 = new QuickChatCatType();
-		if (local24 != null) {
-			local10.decode(new Buffer(local24));
+		quickChatCat = new QuickChatCatType();
+		if (data != null) {
+			quickChatCat.decode(new Buffer(data));
 		}
-		if (arg0 >= 32768) {
-			local10.method465();
+		if (id >= 32768) {
+			quickChatCat.method465();
 		}
-		types.put(local10, arg0);
-		return local10;
+		types.put(quickChatCat, id);
+		return quickChatCat;
 	}
 }

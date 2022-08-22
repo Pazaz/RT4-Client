@@ -22,18 +22,18 @@ public class SpotAnimTypeList {
 
 	@OriginalMember(owner = "client!ck", name = "a", descriptor = "(BI)Lclient!eg;")
 	public static SpotAnimType get(@OriginalArg(1) int id) {
-		@Pc(10) SpotAnimType type = (SpotAnimType) types.get(id);
-		if (type != null) {
-			return type;
+		@Pc(10) SpotAnimType spotAnim = (SpotAnimType) types.get(id);
+		if (spotAnim != null) {
+			return spotAnim;
 		}
 		@Pc(26) byte[] src = archive.fetchFile(method3681(id), method4010(id));
-		type = new SpotAnimType();
-		type.id = id;
+		spotAnim = new SpotAnimType();
+		spotAnim.id = id;
 		if (src != null) {
-			type.decode(new Buffer(src));
+			spotAnim.decode(new Buffer(src));
 		}
-		types.put(type, id);
-		return type;
+		types.put(spotAnim, id);
+		return spotAnim;
 	}
 
 	@OriginalMember(owner = "client!qk", name = "a", descriptor = "(ZI)I")

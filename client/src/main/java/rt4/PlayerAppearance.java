@@ -296,7 +296,7 @@ public final class PlayerAppearance {
 					if ((local169 & Integer.MIN_VALUE) != 0 && !IdkTypeList.get(local169 & 0x3FFFFFFF).isBodyModelReady()) {
 						local158 = true;
 					}
-				} else if (!ObjTypeList.get(local169 & 0x3FFFFFFF).method1822(this.gender)) {
+				} else if (!ObjTypeList.get(local169 & 0x3FFFFFFF).isWearModelReady(this.gender)) {
 					local158 = true;
 				}
 			}
@@ -549,7 +549,7 @@ public final class PlayerAppearance {
 					if ((local52 & Integer.MIN_VALUE) != 0 && !IdkTypeList.get(local52 & 0x3FFFFFFF).isHeadModelReady()) {
 						local42 = true;
 					}
-				} else if (!ObjTypeList.get(local52 & 0x3FFFFFFF).method1816(this.gender)) {
+				} else if (!ObjTypeList.get(local52 & 0x3FFFFFFF).isHeadModelReady(this.gender)) {
 					local42 = true;
 				}
 			}

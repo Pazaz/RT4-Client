@@ -108,9 +108,9 @@ public class AreaSoundManager {
 			basType = areaSound.npc.getBasType();
 			if (basType.idleAnimationId == areaSound.npc.movementSeqId) {
 				movementSpeed = 0;
-			} else if (basType.runAnimationId == areaSound.npc.movementSeqId || basType.runAnimationId2 == areaSound.npc.movementSeqId || basType.runAnimationId4 == areaSound.npc.movementSeqId || basType.runAnimationId3 == areaSound.npc.movementSeqId) {
+			} else if (basType.runAnimationId == areaSound.npc.movementSeqId || basType.runFullTurnAnimationId == areaSound.npc.movementSeqId || basType.runCWTurnAnimationId == areaSound.npc.movementSeqId || basType.runCCWTurnAnimationId == areaSound.npc.movementSeqId) {
 				movementSpeed = 2;
-			} else if (basType.anInt1062 == areaSound.npc.movementSeqId || basType.anInt1042 == areaSound.npc.movementSeqId || areaSound.npc.movementSeqId == basType.anInt1048 || basType.anInt1066 == areaSound.npc.movementSeqId) {
+			} else if (basType.slowWalkAnimationId == areaSound.npc.movementSeqId || basType.slowWalkFullTurnAnimationId == areaSound.npc.movementSeqId || areaSound.npc.movementSeqId == basType.slowWalkCWTurnAnimationId || basType.slowWalkCCWTurnAnimationId == areaSound.npc.movementSeqId) {
 				movementSpeed = 3;
 			}
 			if (areaSound.movementSpeed != movementSpeed) {
@@ -135,9 +135,9 @@ public class AreaSoundManager {
 			basType = areaSound.player.getBasType();
 			if (areaSound.player.movementSeqId == basType.idleAnimationId) {
 				movementSpeed = 0;
-			} else if (areaSound.player.movementSeqId == basType.runAnimationId || areaSound.player.movementSeqId == basType.runAnimationId2 || areaSound.player.movementSeqId == basType.runAnimationId4 || basType.runAnimationId3 == areaSound.player.movementSeqId) {
+			} else if (areaSound.player.movementSeqId == basType.runAnimationId || areaSound.player.movementSeqId == basType.runFullTurnAnimationId || areaSound.player.movementSeqId == basType.runCWTurnAnimationId || basType.runCCWTurnAnimationId == areaSound.player.movementSeqId) {
 				movementSpeed = 2;
-			} else if (basType.anInt1062 == areaSound.player.movementSeqId || areaSound.player.movementSeqId == basType.anInt1042 || areaSound.player.movementSeqId == basType.anInt1048 || areaSound.player.movementSeqId == basType.anInt1066) {
+			} else if (basType.slowWalkAnimationId == areaSound.player.movementSeqId || areaSound.player.movementSeqId == basType.slowWalkFullTurnAnimationId || areaSound.player.movementSeqId == basType.slowWalkCWTurnAnimationId || areaSound.player.movementSeqId == basType.slowWalkCCWTurnAnimationId) {
 				movementSpeed = 3;
 			}
 			if (areaSound.movementSpeed != movementSpeed) {

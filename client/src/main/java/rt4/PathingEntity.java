@@ -430,17 +430,17 @@ public abstract class PathingEntity extends Entity {
 	@OriginalMember(owner = "client!fe", name = "a", descriptor = "(Lclient!ak;B)V")
 	protected final void method2687(@OriginalArg(0) Model arg0) {
 		@Pc(16) BasType local16 = this.getBasType();
-		if (local16.anInt1064 == 0 && local16.anInt1041 == 0) {
+		if (local16.rollTargetAngle == 0 && local16.pitchTargetAngle == 0) {
 			return;
 		}
 		@Pc(26) int local26 = 0;
 		@Pc(28) int local28 = 0;
 		if (this.aBoolean167 && this.anInt3414 != 0) {
-			local28 = local16.anInt1041;
+			local28 = local16.pitchTargetAngle;
 			if (this.anInt3414 >= 0) {
-				local26 = local16.anInt1064;
+				local26 = local16.rollTargetAngle;
 			} else {
-				local26 = -local16.anInt1064;
+				local26 = -local16.rollTargetAngle;
 			}
 		}
 		@Pc(101) int local101;
@@ -450,12 +450,12 @@ public abstract class PathingEntity extends Entity {
 		if (this.anInt3419 != local26) {
 			this.anInt3419 = local26;
 			if (this.anInt3355 > 0 && this.anInt3383 < local26) {
-				local101 = this.anInt3355 * this.anInt3355 / (local16.anInt1055 * 2);
+				local101 = this.anInt3355 * this.anInt3355 / (local16.rollAcceleration * 2);
 				local106 = local26 - this.anInt3383;
 				if (local101 <= local106) {
 					this.aBoolean170 = true;
 					this.anInt3398 = (local26 + this.anInt3383 - local101) / 2;
-					local134 = local16.anInt1040 * local16.anInt1040 / (local16.anInt1055 * 2);
+					local134 = local16.rollMaxSpeed * local16.rollMaxSpeed / (local16.rollAcceleration * 2);
 					local138 = local26 - local134;
 					if (this.anInt3398 < local138) {
 						this.anInt3398 = local138;
@@ -464,12 +464,12 @@ public abstract class PathingEntity extends Entity {
 					this.aBoolean170 = false;
 				}
 			} else if (this.anInt3355 < 0 && this.anInt3383 > local26) {
-				local101 = this.anInt3355 * this.anInt3355 / (local16.anInt1055 * 2);
+				local101 = this.anInt3355 * this.anInt3355 / (local16.rollAcceleration * 2);
 				local106 = local26 - this.anInt3383;
 				if (local106 >= local101) {
 					this.aBoolean170 = true;
 					this.anInt3398 = (this.anInt3383 + local101 + local26) / 2;
-					local134 = local16.anInt1040 * local16.anInt1040 / (local16.anInt1055 * 2);
+					local134 = local16.rollMaxSpeed * local16.rollMaxSpeed / (local16.rollAcceleration * 2);
 					local138 = local134 + local26;
 					if (this.anInt3398 > local138) {
 						this.anInt3398 = local138;
@@ -483,20 +483,20 @@ public abstract class PathingEntity extends Entity {
 		}
 		if (this.anInt3355 == 0) {
 			local101 = this.anInt3419 - this.anInt3383;
-			if (-local16.anInt1055 < local101 && local16.anInt1055 > local101) {
+			if (-local16.rollAcceleration < local101 && local16.rollAcceleration > local101) {
 				this.anInt3383 = this.anInt3419;
 			} else {
 				this.aBoolean170 = true;
-				local106 = local16.anInt1040 * local16.anInt1040 / (local16.anInt1055 * 2);
+				local106 = local16.rollMaxSpeed * local16.rollMaxSpeed / (local16.rollAcceleration * 2);
 				this.anInt3398 = (this.anInt3419 + this.anInt3383) / 2;
 				if (local101 >= 0) {
 					local134 = this.anInt3419 - local106;
-					this.anInt3355 = local16.anInt1055;
+					this.anInt3355 = local16.rollAcceleration;
 					if (local134 > this.anInt3398) {
 						this.anInt3398 = local134;
 					}
 				} else {
-					this.anInt3355 = -local16.anInt1055;
+					this.anInt3355 = -local16.rollAcceleration;
 					local134 = local106 + this.anInt3419;
 					if (this.anInt3398 > local134) {
 						this.anInt3398 = local134;
@@ -508,24 +508,24 @@ public abstract class PathingEntity extends Entity {
 				this.aBoolean170 = false;
 			}
 			if (!this.aBoolean170) {
-				this.anInt3355 -= local16.anInt1055;
+				this.anInt3355 -= local16.rollAcceleration;
 				if (this.anInt3355 < 0) {
 					this.anInt3355 = 0;
 				}
-			} else if (local16.anInt1040 > this.anInt3355) {
-				this.anInt3355 += local16.anInt1055;
+			} else if (local16.rollMaxSpeed > this.anInt3355) {
+				this.anInt3355 += local16.rollAcceleration;
 			}
 		} else {
 			if (this.anInt3398 >= this.anInt3383) {
 				this.aBoolean170 = false;
 			}
 			if (!this.aBoolean170) {
-				this.anInt3355 += local16.anInt1055;
+				this.anInt3355 += local16.rollAcceleration;
 				if (this.anInt3355 > 0) {
 					this.anInt3355 = 0;
 				}
-			} else if (this.anInt3355 > -local16.anInt1040) {
-				this.anInt3355 -= local16.anInt1055;
+			} else if (this.anInt3355 > -local16.rollMaxSpeed) {
+				this.anInt3355 -= local16.rollAcceleration;
 			}
 		}
 		this.anInt3383 += this.anInt3355;
@@ -539,14 +539,14 @@ public abstract class PathingEntity extends Entity {
 		if (local28 != this.anInt3367) {
 			this.anInt3367 = local28;
 			if (this.anInt3423 > 0 && this.anInt3427 < local28) {
-				local101 = this.anInt3423 * this.anInt3423 / (local16.anInt1065 * 2);
+				local101 = this.anInt3423 * this.anInt3423 / (local16.pitchAcceleration * 2);
 				local106 = local28 - this.anInt3427;
 				if (local101 > local106) {
 					this.aBoolean169 = false;
 				} else {
 					this.anInt3357 = (this.anInt3427 + local28 - local101) / 2;
 					this.aBoolean169 = true;
-					local134 = local16.anInt1063 * local16.anInt1063 / (local16.anInt1065 * 2);
+					local134 = local16.pitchMaxSpeed * local16.pitchMaxSpeed / (local16.pitchAcceleration * 2);
 					local138 = local28 - local134;
 					if (this.anInt3357 < local138) {
 						this.anInt3357 = local138;
@@ -554,11 +554,11 @@ public abstract class PathingEntity extends Entity {
 				}
 			} else if (this.anInt3423 < 0 && this.anInt3427 > local28) {
 				local106 = local28 - this.anInt3427;
-				local101 = this.anInt3423 * this.anInt3423 / (local16.anInt1065 * 2);
+				local101 = this.anInt3423 * this.anInt3423 / (local16.pitchAcceleration * 2);
 				if (local106 >= local101) {
 					this.anInt3357 = (local101 + this.anInt3427 + local28) / 2;
 					this.aBoolean169 = true;
-					local134 = local16.anInt1063 * local16.anInt1063 / (local16.anInt1065 * 2);
+					local134 = local16.pitchMaxSpeed * local16.pitchMaxSpeed / (local16.pitchAcceleration * 2);
 					local138 = local134 + local28;
 					if (local138 < this.anInt3357) {
 						this.anInt3357 = local138;
@@ -572,20 +572,20 @@ public abstract class PathingEntity extends Entity {
 		}
 		if (this.anInt3423 == 0) {
 			local101 = this.anInt3367 - this.anInt3427;
-			if (local101 > -local16.anInt1065 && local16.anInt1065 > local101) {
+			if (local101 > -local16.pitchAcceleration && local16.pitchAcceleration > local101) {
 				this.anInt3427 = this.anInt3367;
 			} else {
 				this.anInt3357 = (this.anInt3367 + this.anInt3427) / 2;
 				this.aBoolean169 = true;
-				local106 = local16.anInt1063 * local16.anInt1063 / (local16.anInt1065 * 2);
+				local106 = local16.pitchMaxSpeed * local16.pitchMaxSpeed / (local16.pitchAcceleration * 2);
 				if (local101 < 0) {
-					this.anInt3423 = -local16.anInt1065;
+					this.anInt3423 = -local16.pitchAcceleration;
 					local134 = local106 + this.anInt3367;
 					if (this.anInt3357 > local134) {
 						this.anInt3357 = local134;
 					}
 				} else {
-					this.anInt3423 = local16.anInt1065;
+					this.anInt3423 = local16.pitchAcceleration;
 					local134 = this.anInt3367 - local106;
 					if (this.anInt3357 < local134) {
 						this.anInt3357 = local134;
@@ -597,24 +597,24 @@ public abstract class PathingEntity extends Entity {
 				this.aBoolean169 = false;
 			}
 			if (!this.aBoolean169) {
-				this.anInt3423 -= local16.anInt1065;
+				this.anInt3423 -= local16.pitchAcceleration;
 				if (this.anInt3423 < 0) {
 					this.anInt3423 = 0;
 				}
-			} else if (this.anInt3423 < local16.anInt1063) {
-				this.anInt3423 += local16.anInt1065;
+			} else if (this.anInt3423 < local16.pitchMaxSpeed) {
+				this.anInt3423 += local16.pitchAcceleration;
 			}
 		} else {
 			if (this.anInt3357 >= this.anInt3427) {
 				this.aBoolean169 = false;
 			}
 			if (!this.aBoolean169) {
-				this.anInt3423 += local16.anInt1065;
+				this.anInt3423 += local16.pitchAcceleration;
 				if (this.anInt3423 > 0) {
 					this.anInt3423 = 0;
 				}
-			} else if (-local16.anInt1063 < this.anInt3423) {
-				this.anInt3423 -= local16.anInt1065;
+			} else if (-local16.pitchMaxSpeed < this.anInt3423) {
+				this.anInt3423 -= local16.pitchAcceleration;
 			}
 		}
 		this.anInt3427 += this.anInt3423;

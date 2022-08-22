@@ -11,18 +11,18 @@ public class FluTypeList {
 	public static Js5 archive;
 
 	@OriginalMember(owner = "client!qc", name = "a", descriptor = "(ZI)Lclient!ni;")
-	public static FluType get(@OriginalArg(1) int arg0) {
-		@Pc(10) FluType local10 = (FluType) types.get(arg0);
-		if (local10 != null) {
-			return local10;
+	public static FluType get(@OriginalArg(1) int id) {
+		@Pc(10) FluType floorUnderlay = (FluType) types.get(id);
+		if (floorUnderlay != null) {
+			return floorUnderlay;
 		}
-		@Pc(27) byte[] local27 = archive.fetchFile(1, arg0);
-		local10 = new FluType();
-		if (local27 != null) {
-			local10.decode(arg0, new Buffer(local27));
+		@Pc(27) byte[] data = archive.fetchFile(1, id);
+		floorUnderlay = new FluType();
+		if (data != null) {
+			floorUnderlay.decode(id, new Buffer(data));
 		}
-		types.put(local10, arg0);
-		return local10;
+		types.put(floorUnderlay, id);
+		return floorUnderlay;
 	}
 
 	@OriginalMember(owner = "client!hc", name = "a", descriptor = "(Lclient!ve;I)V")

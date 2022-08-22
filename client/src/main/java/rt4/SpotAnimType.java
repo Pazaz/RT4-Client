@@ -9,13 +9,13 @@ import org.openrs2.deob.annotation.Pc;
 public final class SpotAnimType {
 
 	@OriginalMember(owner = "client!eg", name = "f", descriptor = "[S")
-	private short[] recolorSource;
+	private short[] recol_s;
 
 	@OriginalMember(owner = "client!eg", name = "g", descriptor = "[S")
-	private short[] retextureSource;
+	private short[] retex_s;
 
 	@OriginalMember(owner = "client!eg", name = "h", descriptor = "[S")
-	private short[] retextureDestination;
+	private short[] retex_d;
 
 	@OriginalMember(owner = "client!eg", name = "m", descriptor = "I")
 	public int id;
@@ -24,16 +24,16 @@ public final class SpotAnimType {
 	private int modelId;
 
 	@OriginalMember(owner = "client!eg", name = "s", descriptor = "[S")
-	private short[] recolorDestination;
+	private short[] recol_d;
 
 	@OriginalMember(owner = "client!eg", name = "i", descriptor = "Z")
 	public boolean aBoolean100 = false;
 
 	@OriginalMember(owner = "client!eg", name = "j", descriptor = "I")
-	private int anInt1748 = 0;
+	private int contrast = 0;
 
 	@OriginalMember(owner = "client!eg", name = "k", descriptor = "I")
-	private int anInt1749 = 0;
+	private int ambient = 0;
 
 	@OriginalMember(owner = "client!eg", name = "p", descriptor = "I")
 	public int seqId = -1;
@@ -48,52 +48,52 @@ public final class SpotAnimType {
 	private int angle = 0;
 
 	@OriginalMember(owner = "client!eg", name = "a", descriptor = "(Lclient!wa;B)V")
-	public final void decode(@OriginalArg(0) Buffer arg0) {
+	public final void decode(@OriginalArg(0) Buffer buffer) {
 		while (true) {
-			@Pc(17) int local17 = arg0.g1();
-			if (local17 == 0) {
+			@Pc(17) int opcode = buffer.g1();
+			if (opcode == 0) {
 				return;
 			}
-			this.decode(arg0, local17);
+			this.decode(buffer, opcode);
 		}
 	}
 
 	@OriginalMember(owner = "client!eg", name = "a", descriptor = "(Lclient!wa;II)V")
-	private void decode(@OriginalArg(0) Buffer arg0, @OriginalArg(1) int arg1) {
-		if (arg1 == 1) {
-			this.modelId = arg0.g2();
-		} else if (arg1 == 2) {
-			this.seqId = arg0.g2();
-		} else if (arg1 == 4) {
-			this.resizeXZ = arg0.g2();
-		} else if (arg1 == 5) {
-			this.resizeY = arg0.g2();
-		} else if (arg1 == 6) {
-			this.angle = arg0.g2();
-		} else if (arg1 == 7) {
-			this.anInt1749 = arg0.g1();
-		} else if (arg1 == 8) {
-			this.anInt1748 = arg0.g1();
-		} else if (arg1 == 9) {
+	private void decode(@OriginalArg(0) Buffer buffer, @OriginalArg(1) int opcode) {
+		if (opcode == 1) {
+			this.modelId = buffer.g2();
+		} else if (opcode == 2) {
+			this.seqId = buffer.g2();
+		} else if (opcode == 4) {
+			this.resizeXZ = buffer.g2();
+		} else if (opcode == 5) {
+			this.resizeY = buffer.g2();
+		} else if (opcode == 6) {
+			this.angle = buffer.g2();
+		} else if (opcode == 7) {
+			this.ambient = buffer.g1();
+		} else if (opcode == 8) {
+			this.contrast = buffer.g1();
+		} else if (opcode == 9) {
 			this.aBoolean100 = true;
 		} else {
-			@Pc(78) int local78;
-			@Pc(88) int local88;
-			if (arg1 == 40) {
-				local78 = arg0.g1();
-				this.recolorSource = new short[local78];
-				this.recolorDestination = new short[local78];
-				for (local88 = 0; local88 < local78; local88++) {
-					this.recolorSource[local88] = (short) arg0.g2();
-					this.recolorDestination[local88] = (short) arg0.g2();
+			@Pc(78) int size;
+			@Pc(88) int count;
+			if (opcode == 40) {
+				size = buffer.g1();
+				this.recol_s = new short[size];
+				this.recol_d = new short[size];
+				for (count = 0; count < size; count++) {
+					this.recol_s[count] = (short) buffer.g2();
+					this.recol_d[count] = (short) buffer.g2();
 				}
-			} else if (arg1 == 41) {
-				local78 = arg0.g1();
-				this.retextureSource = new short[local78];
-				this.retextureDestination = new short[local78];
-				for (local88 = 0; local88 < local78; local88++) {
-					this.retextureSource[local88] = (short) arg0.g2();
-					this.retextureDestination[local88] = (short) arg0.g2();
+			} else if (opcode == 41) {
+				size = buffer.g1();
+				this.retex_s = new short[size];
+				this.retex_d = new short[size];
+				for (count = 0; count < size; count++) {
+					this.retex_s[count] = (short) buffer.g2();
+					this.retex_d[count] = (short) buffer.g2();
 				}
 			}
 		}
@@ -108,17 +108,17 @@ public final class SpotAnimType {
 				return null;
 			}
 			@Pc(40) int local40;
-			if (this.recolorSource != null) {
-				for (local40 = 0; local40 < this.recolorSource.length; local40++) {
-					local28.recolor(this.recolorSource[local40], this.recolorDestination[local40]);
+			if (this.recol_s != null) {
+				for (local40 = 0; local40 < this.recol_s.length; local40++) {
+					local28.recolor(this.recol_s[local40], this.recol_d[local40]);
 				}
 			}
-			if (this.retextureSource != null) {
-				for (local40 = 0; local40 < this.retextureSource.length; local40++) {
-					local28.retexture(this.retextureSource[local40], this.retextureDestination[local40]);
+			if (this.retex_s != null) {
+				for (local40 = 0; local40 < this.retex_s.length; local40++) {
+					local28.retexture(this.retex_s[local40], this.retex_d[local40]);
 				}
 			}
-			local13 = local28.createModel(this.anInt1749 + 64, this.anInt1748 + 850, -30, -50, -30);
+			local13 = local28.createModel(this.ambient + 64, this.contrast + 850, -30, -50, -30);
 			SpotAnimTypeList.models.put(local13, this.id);
 		}
 		@Pc(118) Model local118;

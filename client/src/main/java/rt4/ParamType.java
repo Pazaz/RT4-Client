@@ -17,25 +17,25 @@ public final class ParamType extends SecondaryNode {
 	@OriginalMember(owner = "client!hn", name = "Q", descriptor = "Lclient!na;")
 	public JagString defaultString;
 
-	@OriginalMember(owner = "client!hn", name = "a", descriptor = "(ILclient!wa;I)V")
-	private void decode(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
-		if (arg0 == 1) {
-			this.type = arg1.g1();
-		} else if (arg0 == 2) {
-			this.defaultInt = arg1.g4();
-		} else if (arg0 == 5) {
-			this.defaultString = arg1.gjstr();
+	@OriginalMember(owner = "client!hn", name = "a", descriptor = "(ILclient!wa;)V")
+	public final void decode(@OriginalArg(1) Buffer buffer) {
+		while (true) {
+			@Pc(13) int opcode = buffer.g1();
+			if (opcode == 0) {
+				return;
+			}
+			this.decode(opcode, buffer);
 		}
 	}
 
-	@OriginalMember(owner = "client!hn", name = "a", descriptor = "(ILclient!wa;)V")
-	public final void decode(@OriginalArg(1) Buffer arg0) {
-		while (true) {
-			@Pc(13) int local13 = arg0.g1();
-			if (local13 == 0) {
-				return;
-			}
-			this.decode(local13, arg0);
+	@OriginalMember(owner = "client!hn", name = "a", descriptor = "(ILclient!wa;I)V")
+	private void decode(@OriginalArg(0) int opcode, @OriginalArg(1) Buffer buffer) {
+		if (opcode == 1) {
+			this.type = buffer.g1();
+		} else if (opcode == 2) {
+			this.defaultInt = buffer.g4();
+		} else if (opcode == 5) {
+			this.defaultString = buffer.gjstr();
 		}
 	}
 
