@@ -139,6 +139,7 @@ public class PluginRepository {
     }
 
     public static void OnMiniMenuCreate() {
+        API.customMiniMenuIndex = 0;
         loadedPlugins.values().forEach((plugin) -> plugin.OnMiniMenuCreate(API.GetMiniMenuEntries()));
     }
 }
