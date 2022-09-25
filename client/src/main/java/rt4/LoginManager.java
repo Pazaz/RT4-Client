@@ -1445,6 +1445,9 @@ public class LoginManager {
 		} else {
 			SoftwareRaster.method2503();
 		}
+		if (!Cs1ScriptRunner.aBoolean108) {
+			PluginRepository.OnMiniMenuCreate();
+		}
 		MiniMenu.sort();
 		if (Cs1ScriptRunner.aBoolean108) {
 			if (InterfaceList.aBoolean298) {
