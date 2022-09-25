@@ -6,5 +6,6 @@ public enum MiniMenuType {
     LOCATION,
     TILE,
     OBJ,
-    OBJSTACK
+    OBJSTACK,
+    CUSTOM
 }

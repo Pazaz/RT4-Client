@@ -1,5 +1,6 @@
 package plugin;
 
+import plugin.api.API;
 import plugin.api.MiniMenuEntry;
 import plugin.api.MiniMenuType;
 import rt4.*;
@@ -23,6 +24,8 @@ public class PluginRepository {
     public static void registerPlugin(PluginInfo info, Plugin plugin) {
         loadedPlugins.put(info, plugin);
     }
+
+    public static int lastMiniMenu;
 
     public static void reloadPlugins() {
         loadedPlugins.clear();
@@ -133,5 +136,10 @@ public class PluginRepository {
 
     public static void DrawMiniMenu(MiniMenuEntry entry) {
         loadedPlugins.values().forEach((plugin) -> plugin.DrawMiniMenu(entry));
+    }
+
+    public static void OnMiniMenuCreate() {
+        API.customMiniMenuIndex = 0;
+        loadedPlugins.values().forEach((plugin) -> plugin.OnMiniMenuCreate(API.GetMiniMenuEntries()));
     }
 }
