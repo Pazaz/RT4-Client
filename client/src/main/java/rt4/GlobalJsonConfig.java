@@ -26,5 +26,5 @@ public class GlobalJsonConfig {
 	int wl_port;
 	int js5_port;
 	boolean mouseWheelZoom = GlobalConfig.MOUSEWHEEL_ZOOM;
-
+	public String pluginsFolder = "plugins";
 }

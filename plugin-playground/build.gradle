@@ -1,0 +1,105 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.10'
+}
+
+version 'unspecified'
+
+targetCompatibility = 1.8
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation(rootProject.project("client"))
+    compile 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.10'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+task initializeNewJavaPlugin {
+    doLast {
+        def pluginFile = new File("src/main/java/MyPlugin")
+        pluginFile.mkdirs()
+
+        new File(rootProject.project("plugin-playground").projectDir.absolutePath + File.separator + "src/main/java/MyPlugin/plugin.properties").text = """
+AUTHOR='Me'
+DESCRIPTION='Make sure to rename both the MyPlugin folder and the package statement in plugin.java!
+VERSION=-1.1
+"""
+        new File(rootProject.project("plugin-playground").projectDir.absolutePath + File.separator + "src/main/java/MyPlugin/plugin.java").text = """
+package MyPlugin;
+    
+import plugin.Plugin;
+    
+public class plugin extends Plugin {
+    @Override
+    public void Init() {
+        //Init() is called when the plugin is loaded
+    }
+ 
+    @Override
+    public void Update() {
+        //Update() is called once per tick (600ms)
+    }
+    
+    @Override
+    public void Draw(long deltaTime) {
+        //Draw() is called once per frame, with deltaTime being the time since last frame.
+    }
+ 
+    //Check the source of plugin.Plugin for more methods you can override! Happy hacking! <3
+    //There are also many methods to aid in plugin development in plugin.api.API
+}
+"""
+    }
+}
+
+task initializeNewKotlinPlugin {
+    doLast {
+        def pluginFile = new File("src/main/kotlin/MyPlugin")
+        pluginFile.mkdirs()
+
+        new File(rootProject.project("plugin-playground").projectDir.absolutePath + File.separator + "src/main/kotlin/MyPlugin/plugin.properties").text = """
+AUTHOR='Me'
+DESCRIPTION='Make sure to rename both the MyPlugin folder and the package statement in plugin.java!
+VERSION=-1.1
+"""
+        new File(rootProject.project("plugin-playground").projectDir.absolutePath + File.separator + "src/main/kotlin/MyPlugin/plugin.kt").text = """
+package MyPlugin
+    
+import plugin.Plugin
+    
+class plugin : Plugin() {
+    override fun Init() {
+        //Init() is called when the plugin is loaded
+    }
+ 
+    override fun Update() {
+        //Update() is called once per tick (600ms)
+    }
+    
+    override fun Draw(deltaTime: Long) {
+        //Draw() is called once per frame, with deltaTime being the time since last frame.
+    }
+ 
+    //Check the source of plugin.Plugin for more methods you can override! Happy hacking! <3
+    //There are also many methods to aid in plugin development in plugin.api.API
+}
+"""
+    }
+}
+
+task buildPlugins(type: Copy, dependsOn: classes) {
+    def pluginsPath = rootProject.project("client").projectDir.absolutePath + File.separator + "plugins"
+    from "build/classes/java/main"
+    into pluginsPath
+    from "build/classes/kotlin/main"
+    into pluginsPath
+}

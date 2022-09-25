@@ -300,7 +300,7 @@ public final class Player extends PathingEntity {
 
 	@OriginalMember(owner = "client!e", name = "b", descriptor = "(I)I")
 	@Override
-	protected final int getBasId() {
+	public final int getBasId() {
 		return this.anInt3365;
 	}
 
