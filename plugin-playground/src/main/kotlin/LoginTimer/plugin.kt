@@ -123,7 +123,6 @@ class plugin : Plugin() {
     }
 
     override fun OnMiniMenuCreate(currentEntries: Array<out MiniMenuEntry>) {
-        API.customMiniMenuIndex = 0;
         var hasReportAbuse = false
         for (entry in currentEntries) {
             if (entry.verb == "Report Abuse")
