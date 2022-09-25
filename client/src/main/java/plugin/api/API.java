@@ -15,6 +15,9 @@ import static rt4.MathUtils.clamp;
  * @author ceikry
  */
 public class API {
+    public static Runnable[] miniMenuCustomActions = new Runnable[10];
+    public static int customMiniMenuIndex = 0;
+
     public static void DrawText(FontType fontType, FontColor color, TextModifier mod, String text, int screenX, int screenY) {
         JagString js = JagString.of(text);
 
@@ -204,5 +207,23 @@ public class API {
             entries.add(new MiniMenuEntry(i));
         }
         return entries.toArray(new MiniMenuEntry[]{});
+    }
+
+    public static MiniMenuEntry InsertMiniMenuEntry(String verb, String subject, Runnable onClick) {
+        if (customMiniMenuIndex == 10) {
+            return null;
+        }
+
+        MiniMenuEntry entry = new MiniMenuEntry(MiniMenu.size);
+        entry.setVerb(verb);
+        entry.setSubject(subject);
+        MiniMenu.actions[MiniMenu.size] = (short) (9990 + customMiniMenuIndex);
+        miniMenuCustomActions[customMiniMenuIndex++] = onClick;
+        MiniMenu.size++;
+        return entry;
+    }
+
+    public static void UpdateMenuSize(int size) {
+        MiniMenu.size = size;
     }
 }

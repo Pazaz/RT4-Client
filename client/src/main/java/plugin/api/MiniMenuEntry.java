@@ -33,7 +33,7 @@ public class MiniMenuEntry {
         if (color.equals("ffff00")) return MiniMenuType.NPC;
         if (color.equals("ffffff")) return MiniMenuType.PLAYER;
         if (color.equals("ff9040")) return MiniMenuType.OBJ;
-        else return MiniMenuType.TILE;
+        else return MiniMenuType.CUSTOM;
     }
 
     public String getVerb() {
