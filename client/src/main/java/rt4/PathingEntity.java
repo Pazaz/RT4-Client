@@ -628,7 +628,7 @@ public abstract class PathingEntity extends Entity {
 	}
 
 	@OriginalMember(owner = "client!fe", name = "b", descriptor = "(I)I")
-	protected abstract int getBasId();
+	public abstract int getBasId();
 
 	@OriginalMember(owner = "client!fe", name = "c", descriptor = "(I)V")
 	public final void method2689() {

@@ -3,6 +3,7 @@ package rt4;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+import plugin.PluginRepository;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -967,7 +968,7 @@ public class Protocol {
 		} else if (opcode == ServerProt.MESSAGE_GAME) {
 			@Pc(245) JagString message = inboundBuffer.gjstr();
 			if (message.endsWith(TRADEREQ)) {
-				JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
+				JagString name = message.substring(message.indexOf(JagString.COLON), 0);
 				long name37 = name.encode37();
 				boolean ignored = false;
 				for (int i = 0; i < IgnoreList.size; i++) {
@@ -980,7 +981,7 @@ public class Protocol {
 					Chat.add(name, 4, LocalizedText.TRADEREQ);
 				}
 			} else if (message.endsWith(CHALREQ)) {
-				JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
+				JagString name = message.substring(message.indexOf(JagString.COLON), 0);
 				long name37 = name.encode37();
 				boolean ignored = false;
 				for (int i = 0; i < IgnoreList.size; i++) {
@@ -990,11 +991,11 @@ public class Protocol {
 					}
 				}
 				if (!ignored && Player.inTutorialIsland == 0) {
-					JagString local506 = message.substring(message.length() - 9, message.indexOf(DateUtil.COLON) + 1);
+					JagString local506 = message.substring(message.length() - 9, message.indexOf(JagString.COLON) + 1);
 					Chat.add(name, 8, local506);
 				}
 			} else if (message.endsWith(ASSISTREQ)) {
-				JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
+				JagString name = message.substring(message.indexOf(JagString.COLON), 0);
 				long name37 = name.encode37();
 				boolean ignored = false;
 				for (int i = 0; i < IgnoreList.size; i++) {
@@ -1020,7 +1021,7 @@ public class Protocol {
 					Chat.add(JagString.EMPTY, 13, name);
 				}
 			} else if (message.endsWith(DUELSTAKE)) {
-				JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
+				JagString name = message.substring(message.indexOf(JagString.COLON), 0);
 				long name37 = name.encode37();
 				boolean ignored = false;
 				for (int i = 0; i < IgnoreList.size; i++) {
@@ -1033,7 +1034,7 @@ public class Protocol {
 					Chat.add(name, 14, JagString.EMPTY);
 				}
 			} else if (message.endsWith(DUELFRIEND)) {
-				JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
+				JagString name = message.substring(message.indexOf(JagString.COLON), 0);
 				long name37 = name.encode37();
 				boolean ignored = false;
 				for (int local277 = 0; local277 < IgnoreList.size; local277++) {
@@ -1046,7 +1047,7 @@ public class Protocol {
 					Chat.add(name, 15, JagString.EMPTY);
 				}
 			} else if (message.endsWith(aClass100_916)) {
-				JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
+				JagString name = message.substring(message.indexOf(JagString.COLON), 0);
 				long name37 = name.encode37();
 				boolean ignored = false;
 				for (int i = 0; i < IgnoreList.size; i++) {
@@ -1059,7 +1060,7 @@ public class Protocol {
 					Chat.add(name, 16, JagString.EMPTY);
 				}
 			} else if (message.endsWith(aClass100_770)) {
-				JagString name = message.substring(message.indexOf(DateUtil.COLON), 0);
+				JagString name = message.substring(message.indexOf(JagString.COLON), 0);
 				long name37 = name.encode37();
 				boolean ignored = false;
 				for (int i = 0; i < IgnoreList.size; i++) {
@@ -1069,7 +1070,7 @@ public class Protocol {
 					}
 				}
 				if (!ignored && Player.inTutorialIsland == 0) {
-					JagString local506 = message.substring(message.length() - 9, message.indexOf(DateUtil.COLON) + 1);
+					JagString local506 = message.substring(message.length() - 9, message.indexOf(JagString.COLON) + 1);
 					Chat.add(name, 21, local506);
 				}
 			} else {
@@ -1459,6 +1460,7 @@ public class Protocol {
 					PlayerSkillXpTable.baseLevels[skill] = i + 2;
 				}
 			}
+			PluginRepository.OnXPUpdate(skill, xp);
 			PlayerSkillXpTable.updatedStats[PlayerSkillXpTable.updatedStatsWriterIndex++ & 0x1F] = skill;
 			opcode = -1;
 			return true;
@@ -1712,7 +1714,7 @@ public class Protocol {
 			@Pc(3449) ComponentPointer src = (ComponentPointer) InterfaceList.openInterfaces.get(source);
 			ComponentPointer tgt = (ComponentPointer) InterfaceList.openInterfaces.get(target);
 			if (tgt != null) {
-				InterfaceList.closeInterface(src == null || tgt.anInt5878 != src.anInt5878, tgt);
+				InterfaceList.closeInterface(src == null || tgt.interfaceId != src.interfaceId, tgt);
 			}
 			if (src != null) {
 				src.unlink();
@@ -1852,7 +1854,7 @@ public class Protocol {
 			setVerifyId(tracknum);
 			ComponentPointer ptr = (ComponentPointer) InterfaceList.openInterfaces.get(pointer);
 			if (ptr != null) {
-				InterfaceList.closeInterface(ptr.anInt5878 != component, ptr);
+				InterfaceList.closeInterface(ptr.interfaceId != component, ptr);
 			}
 			method1148(component, pointer, type);
 			opcode = -1;
@@ -3472,7 +3474,7 @@ public class Protocol {
 	public static ComponentPointer method1148(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2) {
 		@Pc(9) ComponentPointer local9 = new ComponentPointer();
 		local9.anInt5879 = arg2;
-		local9.anInt5878 = arg0;
+		local9.interfaceId = arg0;
 		InterfaceList.openInterfaces.put(local9, arg1);
 		InterfaceList.method1753(arg0);
 		@Pc(28) Component local28 = InterfaceList.getComponent(arg1);

@@ -4,6 +4,7 @@ import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+import plugin.PluginRepository;
 
 import java.awt.*;
 import java.io.IOException;
@@ -774,7 +775,7 @@ public final class client extends GameShell {
 		} else if (gameState == 30) {
 			LoginManager.method1841();
 		} else if (gameState == 40) {
-			Fonts.drawTextOnScreen(false, JagString.concatenate(new JagString[]{LocalizedText.CONLOST, Cs1ScriptRunner.aClass100_556, LocalizedText.ATTEMPT_TO_REESTABLISH}));
+			Fonts.drawTextOnScreen(false, JagString.concatenate(new JagString[]{LocalizedText.CONLOST, JagString.aClass100_556, LocalizedText.ATTEMPT_TO_REESTABLISH}));
 		}
 		if (GlRenderer.enabled && gameState != 0) {
 			GlRenderer.swapBuffers();
@@ -1018,8 +1019,9 @@ public final class client extends GameShell {
 		}
 		mainLoadPrimaryText = LocalizedText.GAME0_LOADING;
 		if (modeWhere != 0) {
-			Cheat.displayFps = true;
+			//Cheat.displayFps = true;
 		}
+		PluginRepository.Init();
 	}
 
 	@OriginalMember(owner = "client!client", name = "c", descriptor = "(I)V")

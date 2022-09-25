@@ -3,6 +3,7 @@ package rt4;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+import plugin.PluginRepository;
 
 import java.nio.charset.StandardCharsets;
 
@@ -33,22 +34,6 @@ public class Cs1ScriptRunner {
 	public static final int anInt671 = 0x332d25;
 	@OriginalMember(owner = "client!pg", name = "V", descriptor = "I")
 	public static final int anInt4504 = 50;
-	@OriginalMember(owner = "client!wa", name = "pb", descriptor = "Lclient!na;")
-	public static final JagString aClass100_556 = JagString.parse("<br>");
-	@OriginalMember(owner = "client!ed", name = "H", descriptor = "Lclient!na;")
-	public static final JagString aClass100_375 = JagString.parse("<)4col> x");
-	@OriginalMember(owner = "client!je", name = "db", descriptor = "Lclient!na;")
-	public static final JagString aClass100_589 = JagString.parse(" <col=ffffff>");
-	@OriginalMember(owner = "client!uf", name = "s", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1043 = JagString.parse(" <col=00ff80>");
-	@OriginalMember(owner = "client!wj", name = "b", descriptor = "Lclient!na;")
-	public static final JagString aClass100_1101 = JagString.parse(" <col=ffff00>");
-	@OriginalMember(owner = "client!mi", name = "R", descriptor = "Lclient!na;")
-	public static final JagString aClass100_760 = JagString.parse(")1");
-	@OriginalMember(owner = "client!sj", name = "w", descriptor = "Lclient!na;")
-	public static final JagString aClass100_978 = JagString.parse("<)4col>");
-	@OriginalMember(owner = "client!jb", name = "c", descriptor = "Lclient!na;")
-	public static final JagString aClass100_583 = JagString.parse("(Y<)4col>");
 	@OriginalMember(owner = "client!th", name = "m", descriptor = "[Lclient!be;")
 	public static Component[] aClass13Array13;
 	@OriginalMember(owner = "client!k", name = "j", descriptor = "I")
@@ -303,7 +288,7 @@ public class Cs1ScriptRunner {
 	}
 
 	@OriginalMember(owner = "client!gn", name = "a", descriptor = "(III[Lclient!be;IIIIBI)V")
-	public static void method1809(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) Component[] components, @OriginalArg(4) int arg4, @OriginalArg(5) int layer, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(9) int parentRectangle) {
+	public static void renderComponent(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) Component[] components, @OriginalArg(4) int arg4, @OriginalArg(5) int layer, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(9) int parentRectangle) {
 		if (GlRenderer.enabled) {
 			GlRaster.setClip(arg0, arg6, arg4, arg7);
 		} else {
@@ -499,6 +484,12 @@ public class Cs1ScriptRunner {
 								continue;
 							}
 							if (component.clientCode == 1405) {
+								PluginRepository.Draw();
+								InterfaceList.aBooleanArray100[rectangle] = true;
+								InterfaceList.rectangleRedraw[rectangle] = true;
+
+								//Above are inauthentic changes to call plugin draws and redraw this interface. Below I have left intact all the authentic code.
+
 								if (!Cheat.displayFps) {
 									continue;
 								}
@@ -571,9 +562,9 @@ public class Cs1ScriptRunner {
 									component.scrollY = 0;
 								}
 							}
-							method1809(local166, local114 - component.scrollY, -component.scrollX + local123, components, local302, component.id, local164, local291, rectangle);
+							renderComponent(local166, local114 - component.scrollY, -component.scrollX + local123, components, local302, component.id, local164, local291, rectangle);
 							if (component.createdComponents != null) {
-								method1809(local166, local114 - component.scrollY, -component.scrollX + local123, component.createdComponents, local302, component.id, local164, local291, rectangle);
+								renderComponent(local166, local114 - component.scrollY, -component.scrollX + local123, component.createdComponents, local302, component.id, local164, local291, rectangle);
 							}
 							@Pc(1186) ComponentPointer local1186 = (ComponentPointer) InterfaceList.openInterfaces.get(component.id);
 							if (local1186 != null) {
@@ -584,7 +575,7 @@ public class Cs1ScriptRunner {
 									MiniMenu.actions[0] = 1005;
 									MiniMenu.opBases[0] = JagString.EMPTY;
 								}
-								method86(local1186.anInt5878, local166, local302, local123, rectangle, local291, local164, local114);
+								method86(local1186.interfaceId, local166, local302, local123, rectangle, local291, local164, local114);
 							}
 							if (GlRenderer.enabled) {
 								GlRaster.setClip(arg0, arg6, arg4, arg7);
@@ -710,6 +701,7 @@ public class Cs1ScriptRunner {
 											local270++;
 										}
 									}
+									PluginRepository.ComponentDraw(i, component, local123, local114);
 								} else if (component.type == 3) {
 									if (isTrue(component)) {
 										local270 = component.activeColor;
@@ -745,6 +737,7 @@ public class Cs1ScriptRunner {
 									} else {
 										SoftwareRaster.method2487(local123, local114, component.width, component.height, local270, 256 - (alpha & 0xFF));
 									}
+									PluginRepository.ComponentDraw(i, component, local123, local114);
 								} else {
 									@Pc(1921) Font local1921;
 									if (component.type == 4) {
@@ -772,7 +765,7 @@ public class Cs1ScriptRunner {
 													local1934 = MiniMenu.NULL;
 												}
 												if ((local1989.stackable == 1 || component.objCount != 1) && component.objCount != -1) {
-													local1934 = JagString.concatenate(new JagString[]{MiniMenu.aClass100_32, local1934, aClass100_375, method1548(component.objCount)});
+													local1934 = JagString.concatenate(new JagString[]{MiniMenu.aClass100_32, local1934, JagString.aClass100_375, method1548(component.objCount)});
 												}
 											}
 											if (aClass13_10 == component) {
@@ -783,6 +776,7 @@ public class Cs1ScriptRunner {
 												local1934 = interpolate(component, local1934);
 											}
 											local1921.drawInterfaceText(local1934, local123, local114, component.width, component.height, local276, component.shadowed ? 0 : -1, component.halign, component.valign, component.vpadding);
+											PluginRepository.ComponentDraw(i, component, local123, local114);
 										} else if (Component.aBoolean72) {
 											InterfaceList.redraw(component);
 										}
@@ -815,6 +809,7 @@ public class Cs1ScriptRunner {
 															} else {
 																local2282.method1426(local123, local114, 256 - (alpha & 0xFF), memory, color);
 															}
+															PluginRepository.ComponentDraw(i, component, local123, local114);
 														} else if (local2274) {
 															for (local563 = 0; local563 < color; local563++) {
 																if (alpha == 0) {
@@ -823,6 +818,7 @@ public class Cs1ScriptRunner {
 																	local2282.method1426(local123, local114 + local563 * local468, -(alpha & 0xFF) + 256, memory, 1);
 																}
 															}
+															PluginRepository.ComponentDraw(i, component, local123, local114);
 														} else if (local2279) {
 															for (local563 = 0; local563 < memory; local563++) {
 																if (alpha == 0) {
@@ -831,6 +827,7 @@ public class Cs1ScriptRunner {
 																	local2282.method1426(local276 * local563 + local123, local114, 256 - (alpha & 0xFF), 1, color);
 																}
 															}
+															PluginRepository.ComponentDraw(i, component, local123, local114);
 														} else {
 															for (local563 = 0; local563 < memory; local563++) {
 																for (local571 = 0; local571 < color; local571++) {
@@ -841,6 +838,7 @@ public class Cs1ScriptRunner {
 																	}
 																}
 															}
+															PluginRepository.ComponentDraw(i, component, local123 + local276, local468 + local114);
 														}
 
 														GlRaster.setClip(arg0, arg6, arg4, arg7);
@@ -849,7 +847,7 @@ public class Cs1ScriptRunner {
 														for (cardMemory = 0; cardMemory < memory; cardMemory++) {
 															for (local556 = 0; local556 < color; local556++) {
 																if (component.angle2d != 0) {
-																	sprite.method1420(local114 + local468 * local556 + local468 / 2, component.angle2d, 4096, cardMemory * local276 + local123 + local276 / 2);
+																	sprite.renderAngled(local114 + local468 * local556 + local468 / 2, component.angle2d, 4096, cardMemory * local276 + local123 + local276 / 2);
 																} else if (alpha == 0) {
 																	sprite.render(cardMemory * local276 + local123, local468 * local556 + local114);
 																} else {
@@ -857,21 +855,23 @@ public class Cs1ScriptRunner {
 																}
 															}
 														}
+														PluginRepository.ComponentDraw(i, component, local123 + local276, local114 + local468);
 
 														SoftwareRaster.setClip(arg0, arg6, arg4, arg7);
 													}
 												} else {
 													memory = component.width * 4096 / local276;
 													if (component.angle2d != 0) {
-														sprite.method1420(local114 + component.height / 2, component.angle2d, memory, local123 + component.width / 2);
+														sprite.renderAngled(local114 + component.height / 2, component.angle2d, memory, local123 + component.width / 2);
 													} else if (alpha != 0) {
-														sprite.method1422(local123, local114, component.width, component.height, 256 - (alpha & 0xFF));
+														sprite.renderAlpha(local123, local114, component.width, component.height, 256 - (alpha & 0xFF));
 													} else if (local276 == component.width && local468 == component.height) {
 														sprite.render(local123, local114);
 													} else {
 														// render icons in a container i.e bank icons
 														sprite.renderResized(local123, local114, component.width, component.height);
 													}
+													PluginRepository.ComponentDraw(i, component, local123, local114);
 												}
 											} else if (Component.aBoolean72) {
 												InterfaceList.redraw(component);
@@ -990,6 +990,7 @@ public class Cs1ScriptRunner {
 													Rasteriser.prepareOffsets();
 												}
 											}
+											PluginRepository.ComponentDraw(i, component, local123 + component.width / 2, local114 + component.height / 2);
 										} else {
 											if (component.type == 7) {
 												local1921 = component.method491(Sprites.nameIcons);
@@ -1006,9 +1007,9 @@ public class Cs1ScriptRunner {
 															local2611 = ObjTypeList.get(component.objTypes[local276] - 1);
 															@Pc(3159) JagString local3159;
 															if (local2611.stackable != 1 && component.objCounts[local276] == 1) {
-																local3159 = JagString.concatenate(new JagString[]{MiniMenu.aClass100_32, local2611.name, aClass100_978});
+																local3159 = JagString.concatenate(new JagString[]{MiniMenu.aClass100_32, local2611.name, JagString.aClass100_978});
 															} else {
-																local3159 = JagString.concatenate(new JagString[]{MiniMenu.aClass100_32, local2611.name, aClass100_375, method1548(component.objCounts[local276])});
+																local3159 = JagString.concatenate(new JagString[]{MiniMenu.aClass100_32, local2611.name, JagString.aClass100_375, method1548(component.objCounts[local276])});
 															}
 															local556 = local123 + memory * (component.invMarginX + 115);
 															objId = (component.invMarginY + 12) * local468 + local114;
@@ -1023,6 +1024,7 @@ public class Cs1ScriptRunner {
 														local276++;
 													}
 												}
+												PluginRepository.ComponentDraw(i, component, local123 + component.invMarginX + 115, local114 + component.invMarginY + 12);
 											}
 											if (component.type == 8 && Protocol.aClass13_11 == component && Protocol.anInt5235 == anInt4504) {
 												local276 = 0;
@@ -1032,7 +1034,7 @@ public class Cs1ScriptRunner {
 												local3297 = interpolate(component, local3297);
 												@Pc(3325) JagString local3325;
 												while (local3297.length() > 0) {
-													cardMemory = local3297.indexOf(aClass100_556);
+													cardMemory = local3297.indexOf(JagString.aClass100_556);
 													if (cardMemory == -1) {
 														local3325 = local3297;
 														local3297 = JagString.EMPTY;
@@ -1070,7 +1072,7 @@ public class Cs1ScriptRunner {
 												objId = local556 + local3299.lineHeight + 2;
 												local3297 = interpolate(component, local3297);
 												while (local3297.length() > 0) {
-													local563 = local3297.indexOf(aClass100_556);
+													local563 = local3297.indexOf(JagString.aClass100_556);
 													if (local563 == -1) {
 														local3325 = local3297;
 														local3297 = JagString.EMPTY;
@@ -1081,6 +1083,7 @@ public class Cs1ScriptRunner {
 													local3299.renderLeft(local3325, cardMemory + 3, objId, 0, -1);
 													objId += local3299.lineHeight + 1;
 												}
+												PluginRepository.ComponentDraw(i, component, cardMemory + 3, objId);
 											}
 											if (component.type == 9) {
 												if (component.aBoolean20) {
@@ -1103,6 +1106,7 @@ public class Cs1ScriptRunner {
 												} else {
 													SoftwareRaster.method2494(local123, local276, local468, memory, component.color, component.lineWidth);
 												}
+												PluginRepository.ComponentDraw(i, component, local468, local276);
 											}
 										}
 									}
@@ -1118,7 +1122,7 @@ public class Cs1ScriptRunner {
 	@OriginalMember(owner = "client!ag", name = "a", descriptor = "(IIIIIIIII)V")
 	public static void method86(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6, @OriginalArg(8) int arg7) {
 		if (InterfaceList.load(arg0)) {
-			method1809(arg1, arg7, arg3, InterfaceList.components[arg0], arg2, -1, arg6, arg5, arg4);
+			renderComponent(arg1, arg7, arg3, InterfaceList.components[arg0], arg2, -1, arg6, arg5, arg4);
 		} else if (arg4 == -1) {
 			for (@Pc(27) int local27 = 0; local27 < 100; local27++) {
 				InterfaceList.aBooleanArray100[local27] = true;
@@ -1133,7 +1137,7 @@ public class Cs1ScriptRunner {
 		aClass13Array13 = null;
 		method86(InterfaceList.topLevelInterface, 0, GameShell.canvasWidth, 0, -1, GameShell.canvasHeight, 0, 0);
 		if (aClass13Array13 != null) {
-			method1809(0, anInt3126, anInt4696, aClass13Array13, GameShell.canvasWidth, -1412584499, 0, GameShell.canvasHeight, aClass13_1.rectangle);
+			renderComponent(0, anInt3126, anInt4696, aClass13Array13, GameShell.canvasWidth, -1412584499, 0, GameShell.canvasHeight, aClass13_1.rectangle);
 			aClass13Array13 = null;
 		}
 	}
@@ -1242,14 +1246,14 @@ public class Cs1ScriptRunner {
 	public static JagString method1548(@OriginalArg(1) int arg0) {
 		@Pc(9) JagString local9 = JagString.parseInt(arg0);
 		for (@Pc(21) int local21 = local9.length() - 3; local21 > 0; local21 -= 3) {
-			local9 = JagString.concatenate(new JagString[]{local9.substring(local21, 0), aClass100_760, local9.substring(local21)});
+			local9 = JagString.concatenate(new JagString[]{local9.substring(local21, 0), JagString.aClass100_760, local9.substring(local21)});
 		}
 		if (local9.length() > 9) {
-			return JagString.concatenate(new JagString[]{aClass100_1043, local9.substring(local9.length() - 8, 0), LocalizedText.MILLION_SHORT, MiniMenu.OPEN_PARENTHESIS, local9, aClass100_583});
+			return JagString.concatenate(new JagString[]{JagString.aClass100_1043, local9.substring(local9.length() - 8, 0), LocalizedText.MILLION_SHORT, MiniMenu.OPEN_PARENTHESIS, local9, JagString.aClass100_583});
 		} else if (local9.length() > 6) {
-			return JagString.concatenate(new JagString[]{aClass100_589, local9.substring(local9.length() - 4, 0), LocalizedText.THOUSAND_SHORT, MiniMenu.OPEN_PARENTHESIS, local9, aClass100_583});
+			return JagString.concatenate(new JagString[]{JagString.aClass100_589, local9.substring(local9.length() - 4, 0), LocalizedText.THOUSAND_SHORT, MiniMenu.OPEN_PARENTHESIS, local9, JagString.aClass100_583});
 		} else {
-			return JagString.concatenate(new JagString[]{aClass100_1101, local9, aClass100_978});
+			return JagString.concatenate(new JagString[]{JagString.aClass100_1101, local9, JagString.aClass100_978});
 		}
 	}
 

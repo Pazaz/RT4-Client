@@ -15,7 +15,8 @@ import static rt4.MathUtils.clamp;
 public final class JavaMouseWheel extends MouseWheel implements MouseWheelListener {
 
 	@OriginalMember(owner = "client!o", name = "g", descriptor = "I")
-	private int anInt4233 = 0;
+	public int currentRotation = 0;
+	public int previousRotation = 0;
 
 	@OriginalMember(owner = "client!o", name = "a", descriptor = "(ZLjava/awt/Component;)V")
 	@Override
@@ -26,21 +27,16 @@ public final class JavaMouseWheel extends MouseWheel implements MouseWheelListen
 	@OriginalMember(owner = "client!o", name = "a", descriptor = "(I)I")
 	@Override
 	public final synchronized int getRotation() {
-		@Pc(2) int local2 = this.anInt4233;
-		this.anInt4233 = 0;
+		@Pc(2) int local2 = this.currentRotation;
+		this.currentRotation = 0;
 		return local2;
 	}
 
 	@OriginalMember(owner = "client!o", name = "mouseWheelMoved", descriptor = "(Ljava/awt/event/MouseWheelEvent;)V")
 	@Override
 	public final synchronized void mouseWheelMoved(@OriginalArg(0) MouseWheelEvent arg0) {
-		int previous = this.anInt4233;
-		this.anInt4233 += arg0.getWheelRotation();
-		int diff = this.anInt4233 - previous;
-
-		if (((GlobalJsonConfig.instance != null && GlobalJsonConfig.instance.mouseWheelZoom) || (GlobalJsonConfig.instance == null && GlobalConfig.MOUSEWHEEL_ZOOM)) && Keyboard.pressedKeys[Keyboard.KEY_SHIFT]) {
-			Camera.ZOOM = clamp(200, 1200, Camera.ZOOM + (diff >= 0 ? 50 : -50));
-		}
+		this.previousRotation = this.currentRotation;
+		this.currentRotation += arg0.getWheelRotation();
 	}
 
 	@OriginalMember(owner = "client!o", name = "a", descriptor = "(Ljava/awt/Component;I)V")

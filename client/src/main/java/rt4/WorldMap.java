@@ -3,6 +3,7 @@ package rt4;
 import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+import plugin.PluginRepository;
 
 public class WorldMap {
 	@OriginalMember(owner = "client!nc", name = "e", descriptor = "Lclient!na;")

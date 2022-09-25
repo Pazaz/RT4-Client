@@ -75,7 +75,7 @@ public final class DisplayMode {
 	}
 
 	@OriginalMember(owner = "client!pm", name = "a", descriptor = "(ZIZIZII)V")
-	public static void setWindowMode(@OriginalArg(0) boolean arg0, @OriginalArg(1) int arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) int arg3, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
+	public static void setWindowMode(@OriginalArg(0) boolean arg0, @OriginalArg(1) int arg1, @OriginalArg(2) boolean arg2, @OriginalArg(3) int mode, @OriginalArg(5) int arg4, @OriginalArg(6) int arg5) {
 		if (arg2) {
 			GlRenderer.quit();
 		}
@@ -92,7 +92,7 @@ public final class DisplayMode {
 			}
 		}
 		if (arg1 == 3 && GameShell.fullScreenFrame == null) {
-			setWindowMode(true, Preferences.favoriteWorlds, true, arg3, -1, -1);
+			setWindowMode(true, Preferences.favoriteWorlds, true, mode, -1, -1);
 			return;
 		}
 		@Pc(85) Container local85;
@@ -146,7 +146,7 @@ public final class DisplayMode {
 				GameShell.canvas.setLocation(GameShell.leftMargin, GameShell.topMargin);
 			}
 		}
-		if (arg1 == 0 && arg3 > 0) {
+		if (arg1 == 0 && mode > 0) {
 			GlRenderer.createAndDestroyContext(GameShell.canvas);
 		}
 		if (arg2 && arg1 > 0) {
@@ -167,7 +167,7 @@ public final class DisplayMode {
 				} catch (@Pc(277) Exception local277) {
 				}
 				GameShell.method2704();
-				if (arg3 == 0) {
+				if (mode == 0) {
 					SoftwareRaster.frameBuffer = FrameBuffer.create(503, 765, GameShell.canvas);
 				} else {
 					SoftwareRaster.frameBuffer = null;
@@ -185,10 +185,10 @@ public final class DisplayMode {
 			}
 		}
 		if (!GlRenderer.enabled && arg1 > 0) {
-			setWindowMode(true, 0, true, arg3, -1, -1);
+			setWindowMode(true, 0, true, mode, -1, -1);
 			return;
 		}
-		if (arg1 > 0 && arg3 == 0) {
+		if (arg1 > 0 && mode == 0) {
 			GameShell.thread.setPriority(5);
 			SoftwareRaster.frameBuffer = null;
 			SoftwareModel.method4580();
@@ -197,7 +197,7 @@ public final class DisplayMode {
 				Rasteriser.setBrightness(0.7F);
 			}
 			LoginManager.method4637();
-		} else if (arg1 == 0 && arg3 > 0) {
+		} else if (arg1 == 0 && mode > 0) {
 			GameShell.thread.setPriority(1);
 			SoftwareRaster.frameBuffer = FrameBuffer.create(503, 765, GameShell.canvas);
 			SoftwareModel.method4583();
