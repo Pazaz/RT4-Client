@@ -95,4 +95,10 @@ public abstract class Plugin {
      * @param entry the entry
      */
     public void DrawMiniMenu(MiniMenuEntry entry) {}
+
+    /**
+     * Called by the client code when we generate the MiniMenu
+     * @param currentEntries
+     */
+    public void OnMiniMenuCreate(MiniMenuEntry[] currentEntries) {}
 }

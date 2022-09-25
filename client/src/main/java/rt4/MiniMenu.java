@@ -4,6 +4,7 @@ import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 import plugin.PluginRepository;
+import plugin.api.API;
 import plugin.api.MiniMenuEntry;
 
 public class MiniMenu {
@@ -388,7 +389,7 @@ public class MiniMenu {
 		while (!sorted) {
 			sorted = true;
 			for (@Pc(13) int i = 0; i < size - 1; i++) {
-				if (actions[i] < 1000 && actions[i + 1] > 1000) {
+				if ((actions[i] < 1000 && actions[i + 1] > 1000) || (actions[i] > 7000 && actions[i + 1] > actions[i])) {
 					@Pc(41) JagString local41 = opBases[i];
 					sorted = false;
 					opBases[i] = opBases[i + 1];
@@ -433,7 +434,12 @@ public class MiniMenu {
 
 	@OriginalMember(owner = "client!wa", name = "a", descriptor = "(IZ)Lclient!na;")
 	public static JagString getOp(@OriginalArg(0) int i) {
-		return opBases[i].length() > 0 ? JagString.concatenate(new JagString[]{ops[i], LocalizedText.MINISEPARATOR, opBases[i]}) : ops[i];
+		try {
+			return opBases[i].length() > 0 ? JagString.concatenate(new JagString[]{ops[i], LocalizedText.MINISEPARATOR, opBases[i]}) : ops[i];
+		} catch (NullPointerException npe) {
+			int ui = 4;
+			return JagString.EMPTY;
+		}
 	}
 
 	@OriginalMember(owner = "client!i", name = "p", descriptor = "(II)V")
@@ -1129,6 +1135,10 @@ public class MiniMenu {
 				Protocol.outboundBuffer.p1isaac(3);
 				Protocol.outboundBuffer.ip2add(local36);
 			}
+		}
+		if (actionCode >= 7990 && actionCode <= 7999) {
+			int index = actionCode - 7990;
+			API.miniMenuCustomActions[index].run();
 		}
 		if (anInt5014 != 0) {
 			anInt5014 = 0;

@@ -29,7 +29,17 @@ public enum MiniMenuAction {
     LOC_3(49),
     LOC_4(46),
     LOC_5(1001),
-    LOC_EXAMINE(1004)
+    LOC_EXAMINE(1004),
+    CUSTOM_1(9990),
+    CUSTOM_2(9991),
+    CUSTOM_3(9992),
+    CUSTOM_4(9993),
+    CUSTOM_5(9994),
+    CUSTOM_6(9995),
+    CUSTOM_7(9996),
+    CUSTOM_8(9997),
+    CUSTOM_9(9998),
+    CUSTOM_10(9999),
     ;
 
     public final short actionCode;
