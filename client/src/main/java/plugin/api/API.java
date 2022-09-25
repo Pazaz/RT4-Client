@@ -222,8 +222,4 @@ public class API {
         MiniMenu.size++;
         return entry;
     }
-
-    public static void UpdateMenuSize(int size) {
-        MiniMenu.size = size;
-    }
 }
