@@ -1,5 +1,6 @@
 package plugin.api;
 
+import plugin.PluginRepository;
 import rt4.*;
 import rt4.DisplayMode;
 import rt4.Font;
@@ -221,5 +222,35 @@ public class API {
         miniMenuCustomActions[customMiniMenuIndex++] = onClick;
         MiniMenu.size++;
         return entry;
+    }
+
+    public static boolean IsLoggedIn() {
+        return client.gameState == 30;
+    }
+
+    public static void StoreData(String key, Object value) {
+        PluginRepository.pluginStorage.put(key, value);
+    }
+
+    public static Object GetData(String key) {
+        return PluginRepository.pluginStorage.get(key);
+    }
+
+    public static void SetVarcStr(int varcId, String str) {
+        VarcDomain.varcstrs[varcId] = JagString.of(str);
+        VarcDomain.updatedVarcstrs[VarcDomain.updatedVarcstrsWriterIndex++] = varcId;
+    }
+
+    public static void SetVarc(int varcId, int value) {
+        VarcDomain.varcs[varcId] = value;
+        VarcDomain.updatedVarcs[VarcDomain.updatedVarcsWriterIndex++] = varcId;
+    }
+
+    public static void SetVarp(int varpId, int value) {
+        VarpDomain.setVarbit(varpId, value);
+    }
+
+    public static void SetVarbit(int varbitId, int value) {
+        VarpDomain.setVarbitClient(varbitId, value);
     }
 }
