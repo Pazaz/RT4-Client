@@ -86,6 +86,11 @@ public abstract class Plugin {
     public void OnVarpUpdate(int id, int value) {}
 
     /**
+     * OnLogin is called when the client processes a login.
+     */
+    public void OnLogin() {}
+
+    /**
      * OnLogout is called when the client logs out. This should be used to clear player-relevant plugin state.
      */
     public void OnLogout() {}

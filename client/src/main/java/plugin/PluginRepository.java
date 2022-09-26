@@ -5,7 +5,7 @@ import plugin.api.MiniMenuEntry;
 import plugin.api.MiniMenuType;
 import rt4.*;
 
-import java.io.File;
+import java.io.*;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.Arrays;
@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
  */
 public class PluginRepository {
     static HashMap<PluginInfo, Plugin> loadedPlugins = new HashMap<>();
+    public static HashMap<String, Object> pluginStorage = new HashMap<>();
 
     public static void registerPlugin(PluginInfo info, Plugin plugin) {
         loadedPlugins.put(info, plugin);
@@ -39,6 +40,23 @@ public class PluginRepository {
             System.out.println("Skipping plugin initialization - " + pluginsDirectory.getAbsolutePath() + " does not exist.");
             return;
         }
+
+        File pluginStorage = new File(GlobalJsonConfig.instance.pluginsFolder + File.separator + "plsto");
+        if (pluginStorage.exists()) {
+           try (FileInputStream fis = new FileInputStream(pluginStorage)) {
+               ObjectInputStream ois = new ObjectInputStream(fis);
+               PluginRepository.pluginStorage = (HashMap<String, Object>) ois.readObject();
+               ois.close();
+           } catch (Exception e) {e.printStackTrace();}
+        }
+
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            try(FileOutputStream fos = new FileOutputStream(GlobalJsonConfig.instance.pluginsFolder + File.separator + "plsto")) {
+                ObjectOutputStream oos = new ObjectOutputStream(fos);
+                oos.writeObject(PluginRepository.pluginStorage);
+                oos.close();
+            } catch (Exception e) {e.printStackTrace();}
+        }));
 
         try {
             URL[] classPath = {pluginsDirectory.toURI().toURL()};
@@ -141,5 +159,9 @@ public class PluginRepository {
     public static void OnMiniMenuCreate() {
         API.customMiniMenuIndex = 0;
         loadedPlugins.values().forEach((plugin) -> plugin.OnMiniMenuCreate(API.GetMiniMenuEntries()));
+    }
+
+    public static void OnLogin() {
+        loadedPlugins.values().forEach((plugin) -> plugin.OnLogin());
     }
 }
