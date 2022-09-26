@@ -253,4 +253,8 @@ public class API {
     public static void SetVarbit(int varbitId, int value) {
         VarpDomain.setVarbitClient(varbitId, value);
     }
+
+    public static void DispatchCommand(String command) {
+        Cheat.sendCheatPacket(JagString.of(command));
+    }
 }
