@@ -322,6 +322,9 @@ public final class client extends GameShell {
 		if (gameState == 0) {
 			LoadingBarAwt.clear();
 		}
+		if (gameState == 30) {
+			PluginRepository.OnLogin();
+		}
 		if (arg0 == 40) {
 			LoginManager.clear();
 		}
