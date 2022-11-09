@@ -128,9 +128,13 @@ public class SoundPlayer {
 			}
 			MidiPlayer.jingle = false;
 		} else if (Preferences.musicVolume != 0 && MusicPlayer.groupId != -1 && !MidiPlayer.isPlaying()) {
-			Protocol.outboundBuffer.p1isaac(137);
-			Protocol.outboundBuffer.p4(MusicPlayer.groupId);
-			MusicPlayer.groupId = -1;
+			sendTrackEndPacket();
 		}
+	}
+
+	public static void sendTrackEndPacket() {
+		Protocol.outboundBuffer.p1isaac(137);
+		Protocol.outboundBuffer.p4(MusicPlayer.groupId);
+		MusicPlayer.groupId = -1;
 	}
 }

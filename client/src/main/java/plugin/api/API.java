@@ -253,4 +253,60 @@ public class API {
     public static void SetVarbit(int varbitId, int value) {
         VarpDomain.setVarbitClient(varbitId, value);
     }
+
+    public static void DispatchCommand(String command) {
+        Cheat.sendCheatPacket(JagString.of(command));
+    }
+
+    public static void PlaySound(int volume, int trackId, int delay) {
+        SoundPlayer.play(volume, trackId, delay);
+    }
+
+    public static void PlayMusic(int volume, int trackId) {
+        MidiPlayer.playFadeOut(trackId, client.js5Archive6, volume);
+    }
+
+    public static void PlayJingle(int jingleId) {
+        MusicPlayer.playJingle(-1, jingleId);
+    }
+
+    public static void SetMusicVolume(int volume) {
+        Preferences.musicVolume = volume;
+    }
+
+    public static int GetMusicVolume() {
+        return Preferences.musicVolume;
+    }
+
+    public static void SetSoundVolume(int volume) {
+        Preferences.soundEffectVolume = volume;
+    }
+
+    public static int GetSoundVolume() {
+        return Preferences.soundEffectVolume;
+    }
+
+    public static void SetAmbientVolume(int volume) {
+        Preferences.ambientSoundsVolume = volume;
+    }
+
+    public static int GetAmbientVolume() {
+        return Preferences.ambientSoundsVolume;
+    }
+
+    public static boolean IsMusicPlaying() {
+        return MidiPlayer.isPlaying();
+    }
+
+    public static boolean IsSoundPlaying() {
+        return SoundPlayer.size != 0;
+    }
+
+    public static void SendMessage(String message) {
+        Chat.add(JagString.EMPTY, 0, JagString.of(message));
+    }
+
+    public static void RequestNewSong() {
+        SoundPlayer.sendTrackEndPacket();
+    }
 }

@@ -44,7 +44,9 @@ public abstract class Plugin {
     public void OnXPUpdate(int skill, int xp) {}
 
     /**
-     * Update() is called once per tick, aka once every 600ms.
+     * Update() is called once every 1000 client loops.
+     * This should be used for things that do need to update occasionally during runtime,
+     * but don't need to update super often.
      */
     public void Update() {}
 
