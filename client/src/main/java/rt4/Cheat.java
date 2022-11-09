@@ -235,9 +235,13 @@ public class Cheat {
 			PluginRepository.reloadPlugins();
 		}
 		//}
+		sendCheatPacket(arg0);
+	}
+
+	public static void sendCheatPacket(JagString commandLine) {
 		Protocol.outboundBuffer.p1isaac(44);
-		Protocol.outboundBuffer.p1(arg0.length() - 1);
-		Protocol.outboundBuffer.pjstr(arg0.substring(2));
+		Protocol.outboundBuffer.p1(commandLine.length() - 1);
+		Protocol.outboundBuffer.pjstr(commandLine.substring(2));
 	}
 
 }
