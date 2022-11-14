@@ -200,7 +200,9 @@ public final class SignLink implements Runnable {
 				// 2009scape-specific behavior
 				if (osName.startsWith("linux")) {
 					File oldCache = new File(homeDir + "/.runite_rs");
-					homeDir = homeDir + ".local/share/2009scape/";
+					// Use XDG_DATA_HOME if it exists, otherwise default to ~/.local/share
+					homeDir = System.getenv("XDG_DATA_HOME") != null ? System.getenv("XDG_DATA_HOME") : homeDir + ".local/share";
+					homeDir = homeDir + "/2009scape/";
 					File newCache = new File(homeDir + "cache");
 					if (oldCache.isDirectory() && !newCache.exists()) {
 						Files.move(oldCache.toPath(), newCache.toPath(), StandardCopyOption.REPLACE_EXISTING);
@@ -214,7 +216,9 @@ public final class SignLink implements Runnable {
 			// 2009scape-specific behavior
 			if (osName.startsWith("linux")) {
 				File oldCache = new File(homeDir + "/.runite_rs");
-				homeDir = homeDir + ".local/share/2009scape/";
+				// Use XDG_DATA_HOME if it exists, otherwise default to ~/.local/share
+				homeDir = System.getenv("XDG_DATA_HOME") != null ? System.getenv("XDG_DATA_HOME") : homeDir + ".local/share";
+				homeDir = homeDir + "/2009scape/";
 				File newCache = new File(homeDir + "cache");
 				if (oldCache.isDirectory() && !newCache.exists()) {
 					Files.move(oldCache.toPath(), newCache.toPath(), StandardCopyOption.REPLACE_EXISTING);
