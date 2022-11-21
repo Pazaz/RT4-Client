@@ -309,4 +309,8 @@ public class API {
     public static void RequestNewSong() {
         SoundPlayer.sendTrackEndPacket();
     }
+    public static JagString getHexFromRGB(int red, int green, int blue) {
+        String hexFromRGB = String.format("%02X%02X%02X", red, green, blue);
+        return JagString.parse("<col=" + hexFromRGB + ">");
+    }
 }

@@ -1154,24 +1154,13 @@ public class MiniMenu {
 
 	@OriginalMember(owner = "client!jj", name = "a", descriptor = "(IBI)Lclient!na;")
 	public static JagString getCombatLevelColor(@OriginalArg(0) int otherLevel, @OriginalArg(2) int selfLevel) {
-		@Pc(4) int delta = selfLevel - otherLevel;
-		if (delta < -9) {
-			return aClass100_798;
-		} else if (delta < -6) {
-			return aClass100_433;
-		} else if (delta < -3) {
-			return aClass100_951;
-		} else if (delta < 0) {
-			return aClass100_972;
-		} else if (delta > 9) {
-			return COLOR_GREEN;
-		} else if (delta > 6) {
-			return aClass100_18;
-		} else if (delta <= 3) {
-			return delta > 0 ? aClass100_266 : aClass100_965;
-		} else {
-			return aClass100_1081;
-		}
+		int levelDifference = otherLevel - selfLevel;
+		if (levelDifference > 0)
+			return API.getHexFromRGB(255, levelDifference > 10 ? 0 : 255 - (25 * levelDifference), 0);
+		else if (levelDifference < 0)
+			return API.getHexFromRGB(levelDifference < -10 ? 0 : 255 - (25 * Math.abs(levelDifference)), 255, 0);
+		else
+			return API.getHexFromRGB(255, 255, 0);
 	}
 
 	@OriginalMember(owner = "client!ob", name = "a", descriptor = "(IIIIIIB)V")
@@ -1518,7 +1507,7 @@ public class MiniMenu {
 			if (other.combatLevelWithSummoning > other.combatLevel) {
 				string = JagString.concatenate(new JagString[]{other.getName(), markCombatDifference ? getCombatLevelColor(other.combatLevel, PlayerList.self.combatLevel) : COLOR_WHITE, OPEN_PARENTHESIS, local95, JagString.parseInt(other.combatLevel), PLUS, JagString.parseInt(other.combatLevelWithSummoning - other.combatLevel), CLOSE_PARENTHESIS});
 			} else {
-				string = JagString.concatenate(new JagString[]{other.getName(), markCombatDifference ? getCombatLevelColor(other.combatLevel, PlayerList.self.combatLevel) : COLOR_WHITE, OPEN_PARENTHESIS, local95, JagString.parseInt(other.combatLevel), CLOSE_PARENTHESIS});
+				string = JagString.concatenate(new JagString[]{other.getName(), getCombatLevelColor(other.combatLevel, PlayerList.self.combatLevel), OPEN_PARENTHESIS, local95, JagString.parseInt(other.combatLevel), CLOSE_PARENTHESIS});
 			}
 		} else {
 			string = JagString.concatenate(new JagString[]{other.getName(), OPEN_PARENTHESIS, LocalizedText.SKILL, JagString.parseInt(other.skill), CLOSE_PARENTHESIS});
