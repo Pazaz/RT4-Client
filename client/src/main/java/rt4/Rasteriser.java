@@ -25,7 +25,7 @@ public final class Rasteriser {
 	public static int screenUpperY;
 
 	@OriginalMember(owner = "client!hf", name = "k", descriptor = "I")
-	private static int height;
+	public static int height;
 
 	@OriginalMember(owner = "client!hf", name = "m", descriptor = "I")
 	public static int centerX;

@@ -164,4 +164,8 @@ public class PluginRepository {
     public static void OnLogin() {
         loadedPlugins.values().forEach((plugin) -> plugin.OnLogin());
     }
+
+    public static void OnMoveCameraWithPlayer() {
+        loadedPlugins.values().forEach(Plugin::OnMoveCameraWithPlayer);
+    }
 }

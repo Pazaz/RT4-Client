@@ -108,4 +108,9 @@ public abstract class Plugin {
      * @param currentEntries
      */
     public void OnMiniMenuCreate(MiniMenuEntry[] currentEntries) {}
+
+    /**
+     * OnMoveCameraWithPlayer is called when the camera moves with the player (so outside of cutscenes etc.)
+     */
+    public void OnMoveCameraWithPlayer() {}
 }

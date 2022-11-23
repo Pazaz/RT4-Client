@@ -128,11 +128,11 @@ public final class ScriptRunner {
 	@OriginalMember(owner = "client!nm", name = "W", descriptor = "Lclient!na;")
 	public static JagString url;
 	@OriginalMember(owner = "client!bf", name = "B", descriptor = "I")
-	public static int anInt548 = -1;
+	public static int spriteDrawX = -1;
 	@OriginalMember(owner = "client!pb", name = "rb", descriptor = "S")
 	public static short aShort27 = 320;
 	@OriginalMember(owner = "client!fc", name = "a", descriptor = "I")
-	public static int anInt1951 = -1;
+	public static int spriteDrawY = -1;
 	@OriginalMember(owner = "client!em", name = "w", descriptor = "I")
 	public static int anInt1892;
 	@OriginalMember(owner = "client!me", name = "nb", descriptor = "I")
@@ -319,6 +319,7 @@ public final class ScriptRunner {
 			method3858();
 			drawOverheads(arg4, arg3, arg2, anInt5029, arg0, anInt5029);
 			MiniMap.method4000(arg3, arg2, arg0, anInt5029, anInt5029, arg4);
+			PluginRepository.OnMoveCameraWithPlayer();
 		} else {
 			SoftwareRaster.fillRect(arg2, arg4, arg3, arg0, 0);
 			SceneGraph.method2954(Camera.renderX, Camera.anInt40, Camera.renderZ, Camera.cameraPitch, Camera.cameraYaw, aByteArrayArrayArray15, anIntArray205, anIntArray338, anIntArray518, anIntArray134, anIntArray476, Player.plane + 1, local387, PlayerList.self.xFine >> 7, PlayerList.self.zFine >> 7);
@@ -326,6 +327,7 @@ public final class ScriptRunner {
 			method3858();
 			drawOverheads(arg4, arg3, arg2, 256, arg0, 256);
 			MiniMap.method4000(arg3, arg2, arg0, 256, 256, arg4);
+			PluginRepository.OnMoveCameraWithPlayer();
 		}
 		((Js5GlTextureProvider) Rasteriser.textureProvider).method3239(Protocol.sceneDelta);
 		Player.method2310(arg3, arg4, arg0, arg2);
@@ -372,9 +374,9 @@ public final class ScriptRunner {
 			if (entity != null && entity.isVisible()) {
 				setOverheadScreenCoordinateOffsets(arg4 >> 1, arg3, entity, arg5, entity.method2691() + 15, arg1 >> 1);
 				if (local5 >= PlayerList.size) {
-					PluginRepository.NPCOverheadDraw((Npc) entity,arg2 + anInt1951, arg0 + anInt548);
+					PluginRepository.NPCOverheadDraw((Npc) entity,arg2 + spriteDrawY, arg0 + spriteDrawX);
 				} else {
-					PluginRepository.PlayerOverheadDraw((Player) entity,arg2 + anInt1951, arg0 + anInt548);
+					PluginRepository.PlayerOverheadDraw((Player) entity,arg2 + spriteDrawY, arg0 + spriteDrawX);
 				}
 
 				@Pc(58) NpcType local58;
@@ -400,8 +402,8 @@ public final class ScriptRunner {
 							local265 = local58.iconHeight + 15;
 						}
 						setOverheadScreenCoordinateOffsets(arg4 >> 1, arg3, entity, arg5, local265, arg1 >> 1);
-						if (anInt1951 > -1) {
-							Sprites.headiconPrayers[local58.headicon].render(arg2 + anInt1951 - 12, arg0 + -30 - -anInt548);
+						if (spriteDrawY > -1) {
+							Sprites.headiconPrayers[local58.headicon].render(arg2 + spriteDrawY - 12, arg0 + -30 - -spriteDrawX);
 						}
 					}
 					@Pc(308) MapMarker[] local308 = MiniMap.hintMapMarkers;
@@ -414,8 +416,8 @@ public final class ScriptRunner {
 								local359 = local58.iconHeight + 15;
 							}
 							setOverheadScreenCoordinateOffsets(arg4 >> 1, arg3, entity, arg5, local359, arg1 >> 1);
-							if (anInt1951 > -1) {
-								Sprites.headhints[local322.anInt4048].render(arg2 + anInt1951 - 12, anInt548 + -28 + arg0);
+							if (spriteDrawY > -1) {
+								Sprites.headhints[local322.anInt4048].render(arg2 + spriteDrawY - 12, spriteDrawX + -28 + arg0);
 							}
 						}
 					}
@@ -424,13 +426,13 @@ public final class ScriptRunner {
 					@Pc(77) Player local77 = (Player) entity;
 					if (local77.anInt1669 != -1 || local77.anInt1649 != -1) {
 						setOverheadScreenCoordinateOffsets(arg4 >> 1, arg3, entity, arg5, entity.method2691() + 15, arg1 >> 1);
-						if (anInt1951 > -1) {
+						if (spriteDrawY > -1) {
 							if (local77.anInt1669 != -1) {
-								Sprites.headiconPks[local77.anInt1669].render(anInt1951 + arg2 - 12, arg0 + -30 + anInt548);
+								Sprites.headiconPks[local77.anInt1669].render(spriteDrawY + arg2 - 12, arg0 + -30 + spriteDrawX);
 								local74 += 25;
 							}
 							if (local77.anInt1649 != -1) {
-								Sprites.headiconPrayers[local77.anInt1649].render(arg2 + anInt1951 - 12, arg0 - (-anInt548 + local74));
+								Sprites.headiconPrayers[local77.anInt1649].render(arg2 + spriteDrawY - 12, arg0 - (-spriteDrawX + local74));
 								local74 += 25;
 							}
 						}
@@ -441,8 +443,8 @@ public final class ScriptRunner {
 							@Pc(173) MapMarker local173 = local159[local161];
 							if (local173 != null && local173.type == 10 && PlayerList.ids[local5] == local173.actorTargetId) {
 								setOverheadScreenCoordinateOffsets(arg4 >> 1, arg3, entity, arg5, entity.method2691() + 15, arg1 >> 1);
-								if (anInt1951 > -1) {
-									Sprites.headhints[local173.anInt4048].render(arg2 + anInt1951 - 12, arg0 + (anInt548 - local74));
+								if (spriteDrawY > -1) {
+									Sprites.headhints[local173.anInt4048].render(arg2 + spriteDrawY - 12, arg0 + (spriteDrawX - local74));
 								}
 							}
 						}
@@ -450,11 +452,11 @@ public final class ScriptRunner {
 				}
 				if (entity.chatMessage != null && (local5 >= PlayerList.size || Chat.publicFilter == 0 || Chat.publicFilter == 3 || Chat.publicFilter == 1 && FriendsList.contains(((Player) entity).username))) {
 					setOverheadScreenCoordinateOffsets(arg4 >> 1, arg3, entity, arg5, entity.method2691(), arg1 >> 1);
-					if (anInt1951 > -1 && OverheadChat.size < OverheadChat.CAPACITY) {
+					if (spriteDrawY > -1 && OverheadChat.size < OverheadChat.CAPACITY) {
 						OverheadChat.anIntArray389[OverheadChat.size] = Fonts.b12Full.getStringWidth(entity.chatMessage) / 2;
 						OverheadChat.anIntArray387[OverheadChat.size] = Fonts.b12Full.lineHeight;
-						OverheadChat.anIntArray385[OverheadChat.size] = anInt1951;
-						OverheadChat.anIntArray392[OverheadChat.size] = anInt548;
+						OverheadChat.anIntArray385[OverheadChat.size] = spriteDrawY;
+						OverheadChat.anIntArray392[OverheadChat.size] = spriteDrawX;
 						OverheadChat.colors[OverheadChat.size] = entity.chatColor;
 						OverheadChat.effects[OverheadChat.size] = entity.chatEffect;
 						OverheadChat.loops[OverheadChat.size] = entity.chatLoops;
@@ -488,9 +490,9 @@ public final class ScriptRunner {
 						local310 = entity.method2691();
 					}
 					setOverheadScreenCoordinateOffsets(arg4 >> 1, arg3, entity, arg5, local508.height + local310 + 10, arg1 >> 1);
-					if (anInt1951 > -1) {
-						local161 = anInt1951 + arg2 - (local508.width >> 1);
-						local359 = anInt548 + arg0 - 3;
+					if (spriteDrawY > -1) {
+						local161 = spriteDrawY + arg2 - (local508.width >> 1);
+						local359 = spriteDrawX + arg0 - 3;
 						local508.render(local161, local359);
 						local639 = local508.width * entity.hitpointsBar / 255;
 						local642 = local508.height;
@@ -521,20 +523,20 @@ public final class ScriptRunner {
 							local265 = entity.method2691() / 2;
 						}
 						setOverheadScreenCoordinateOffsets(arg4 >> 1, arg3, entity, arg5, local265, arg1 >> 1);
-						if (anInt1951 > -1) {
+						if (spriteDrawY > -1) {
 							if (local74 == 1) {
-								anInt548 -= 20;
+								spriteDrawX -= 20;
 							}
 							if (local74 == 2) {
-								anInt548 -= 10;
-								anInt1951 -= 15;
+								spriteDrawX -= 10;
+								spriteDrawY -= 15;
 							}
 							if (local74 == 3) {
-								anInt548 -= 10;
-								anInt1951 += 15;
+								spriteDrawX -= 10;
+								spriteDrawY += 15;
 							}
-							Sprites.hitmarks[entity.hitTypes[local74]].render(arg2 + anInt1951 - 12, arg0 + anInt548 - 12);
-							Fonts.p11Full.renderCenter(JagString.parseInt(entity.hitDamages[local74]), anInt1951 + arg2 - 1, anInt548 + 3 + arg0, 16777215, 0);
+							Sprites.hitmarks[entity.hitTypes[local74]].render(arg2 + spriteDrawY - 12, arg0 + spriteDrawX - 12);
+							Fonts.p11Full.renderCenter(JagString.parseInt(entity.hitDamages[local74]), spriteDrawY + arg2 - 1, spriteDrawX + 3 + arg0, 16777215, 0);
 						}
 					}
 				}
@@ -555,8 +557,8 @@ public final class ScriptRunner {
 					}
 				}
 			}
-			anInt1951 = OverheadChat.anIntArray385[local5];
-			anInt548 = OverheadChat.anIntArray392[local5] = local74;
+			spriteDrawY = OverheadChat.anIntArray385[local5];
+			spriteDrawX = OverheadChat.anIntArray392[local5] = local74;
 			@Pc(962) JagString local962 = OverheadChat.messages[local5];
 			if (VarpDomain.chatEffectsDisabled == 0) {
 				local639 = 16776960;
@@ -603,25 +605,25 @@ public final class ScriptRunner {
 					}
 				}
 				if (OverheadChat.effects[local5] == 0) {
-					Fonts.b12Full.renderCenter(local962, anInt1951 + arg2, arg0 + anInt548, local639, 0);
+					Fonts.b12Full.renderCenter(local962, spriteDrawY + arg2, arg0 + spriteDrawX, local639, 0);
 				}
 				if (OverheadChat.effects[local5] == 1) {
-					Fonts.b12Full.renderWave(local962, arg2 + anInt1951, anInt548 + arg0, local639, anInt3325);
+					Fonts.b12Full.renderWave(local962, arg2 + spriteDrawY, spriteDrawX + arg0, local639, anInt3325);
 				}
 				if (OverheadChat.effects[local5] == 2) {
-					Fonts.b12Full.renderWave2(local962, arg2 + anInt1951, arg0 - -anInt548, local639, anInt3325);
+					Fonts.b12Full.renderWave2(local962, arg2 + spriteDrawY, arg0 - -spriteDrawX, local639, anInt3325);
 				}
 				if (OverheadChat.effects[local5] == 3) {
-					Fonts.b12Full.renderShake(local962, arg2 + anInt1951, anInt548 + arg0, local639, anInt3325, 150 - OverheadChat.loops[local5]);
+					Fonts.b12Full.renderShake(local962, arg2 + spriteDrawY, spriteDrawX + arg0, local639, anInt3325, 150 - OverheadChat.loops[local5]);
 				}
 				if (OverheadChat.effects[local5] == 4) {
 					local642 = (150 - OverheadChat.loops[local5]) * (Fonts.b12Full.getStringWidth(local962) + 100) / 150;
 					if (GlRenderer.enabled) {
-						GlRaster.method1183(anInt1951 + arg2 - 50, arg0, anInt1951 + arg2 + 50, arg4 + arg0);
+						GlRaster.method1183(spriteDrawY + arg2 - 50, arg0, spriteDrawY + arg2 + 50, arg4 + arg0);
 					} else {
-						SoftwareRaster.method2498(arg2 + anInt1951 - 50, arg0, anInt1951 + arg2 + 50, arg4 + arg0);
+						SoftwareRaster.method2498(arg2 + spriteDrawY - 50, arg0, spriteDrawY + arg2 + 50, arg4 + arg0);
 					}
-					Fonts.b12Full.renderLeft(local962, arg2 + anInt1951 + 50 - local642, arg0 + anInt548, local639, 0);
+					Fonts.b12Full.renderLeft(local962, arg2 + spriteDrawY + 50 - local642, arg0 + spriteDrawX, local639, 0);
 					if (GlRenderer.enabled) {
 						GlRaster.setClip(arg2, arg0, arg1 + arg2, arg4 + arg0);
 					} else {
@@ -632,16 +634,16 @@ public final class ScriptRunner {
 					@Pc(1372) int local1372 = 0;
 					local642 = 150 - OverheadChat.loops[local5];
 					if (GlRenderer.enabled) {
-						GlRaster.method1183(arg2, anInt548 + arg0 - Fonts.b12Full.lineHeight - 1, arg1 + arg2, arg0 + anInt548 + 5);
+						GlRaster.method1183(arg2, spriteDrawX + arg0 - Fonts.b12Full.lineHeight - 1, arg1 + arg2, arg0 + spriteDrawX + 5);
 					} else {
-						SoftwareRaster.method2498(arg2, anInt548 + arg0 - Fonts.b12Full.lineHeight - 1, arg2 + arg1, anInt548 + arg0 + 5);
+						SoftwareRaster.method2498(arg2, spriteDrawX + arg0 - Fonts.b12Full.lineHeight - 1, arg2 + arg1, spriteDrawX + arg0 + 5);
 					}
 					if (local642 < 25) {
 						local1372 = local642 - 25;
 					} else if (local642 > 125) {
 						local1372 = local642 - 125;
 					}
-					Fonts.b12Full.renderCenter(local962, anInt1951 + arg2, local1372 + arg0 + anInt548, local639, 0);
+					Fonts.b12Full.renderCenter(local962, spriteDrawY + arg2, local1372 + arg0 + spriteDrawX, local639, 0);
 					if (GlRenderer.enabled) {
 						GlRaster.setClip(arg2, arg0, arg2 + arg1, arg0 + arg4);
 					} else {
@@ -649,7 +651,7 @@ public final class ScriptRunner {
 					}
 				}
 			} else {
-				Fonts.b12Full.renderCenter(local962, arg2 + anInt1951, arg0 + anInt548, 16776960, 0);
+				Fonts.b12Full.renderCenter(local962, arg2 + spriteDrawY, arg0 + spriteDrawX, 16776960, 0);
 			}
 		}
 	}
@@ -1239,8 +1241,8 @@ public final class ScriptRunner {
 	@OriginalMember(owner = "client!q", name = "a", descriptor = "(IIIIIIBI)V")
 	public static void method1026(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(7) int arg6) {
 		if (arg5 < 128 || arg2 < 128 || arg5 > 13056 || arg2 > 13056) {
-			anInt548 = -1;
-			anInt1951 = -1;
+			spriteDrawX = -1;
+			spriteDrawY = -1;
 			return;
 		}
 		@Pc(38) int local38 = SceneGraph.getTileHeight(Player.plane, arg5, arg2) - arg3;
@@ -1257,16 +1259,16 @@ public final class ScriptRunner {
 		@Pc(99) int local99 = local58 * local46 - local87 * local54 >> 16;
 		@Pc(113) int local113 = local87 * local58 + local46 * local54 >> 16;
 		if (local113 < 50) {
-			anInt548 = -1;
-			anInt1951 = -1;
+			spriteDrawX = -1;
+			spriteDrawY = -1;
 		} else if (GlRenderer.enabled) {
 			@Pc(150) int local150 = arg1 * 512 >> 8;
-			anInt1951 = local150 * local89 / local113 + arg0;
+			spriteDrawY = local150 * local89 / local113 + arg0;
 			@Pc(164) int local164 = arg6 * 512 >> 8;
-			anInt548 = local164 * local99 / local113 + arg4;
+			spriteDrawX = local164 * local99 / local113 + arg4;
 		} else {
-			anInt1951 = (local89 << 9) / local113 + arg0;
-			anInt548 = (local99 << 9) / local113 + arg4;
+			spriteDrawY = (local89 << 9) / local113 + arg0;
+			spriteDrawX = (local99 << 9) / local113 + arg4;
 		}
 	}
 
