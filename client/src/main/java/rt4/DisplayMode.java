@@ -4,6 +4,7 @@ import org.openrs2.deob.annotation.OriginalArg;
 import org.openrs2.deob.annotation.OriginalClass;
 import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
+import plugin.PluginRepository;
 
 import java.awt.*;
 
@@ -235,6 +236,7 @@ public final class DisplayMode {
 			InterfaceList.aBooleanArray100[local466] = true;
 		}
 		GameShell.fullRedraw = true;
+		PluginRepository.reloadPlugins();
 	}
 
 	@OriginalMember(owner = "client!ab", name = "c", descriptor = "(B)[Lclient!od;")
