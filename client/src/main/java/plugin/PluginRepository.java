@@ -5,6 +5,10 @@ import plugin.api.MiniMenuEntry;
 import plugin.api.MiniMenuType;
 import rt4.*;
 
+import java.awt.event.KeyAdapter;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseWheelListener;
 import java.io.*;
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -29,6 +33,19 @@ public class PluginRepository {
     public static int lastMiniMenu;
 
     public static void reloadPlugins() {
+        for (KeyAdapter k : API.registeredKeyListeners) {
+            GameShell.canvas.removeKeyListener(k);
+        }
+        for (MouseAdapter m : API.registeredMouseListeners) {
+            GameShell.canvas.removeMouseListener(m);
+            GameShell.canvas.removeMouseMotionListener(m);
+        }
+        for (MouseWheelListener mw : API.registeredWheelListeners) {
+            GameShell.canvas.removeMouseWheelListener(mw);
+        }
+        API.registeredWheelListeners.clear();
+        API.registeredMouseListeners.clear();
+        API.registeredKeyListeners.clear();
         loadedPlugins.clear();
         Init();
     }
