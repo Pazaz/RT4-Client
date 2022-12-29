@@ -90,7 +90,7 @@ class plugin : Plugin() {
         override fun mouseClicked(e: MouseEvent?) {
             e ?: return
 
-            val width = API.GetWindowDimensions().width;
+/*            val width = API.GetWindowDimensions().width;
             val compassBordersX = intArrayOf(width - 165, width - 125)
             val compassBordersY = intArrayOf(0, 45)
 
@@ -101,7 +101,7 @@ class plugin : Plugin() {
             {
                 API.SetCameraPitch(defaultCameraPYZ.first)
                 API.SetCameraYaw(defaultCameraPYZ.second)
-            }
+            }*/
         }
 
         override fun mousePressed(e: MouseEvent?) {

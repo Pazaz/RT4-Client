@@ -19,6 +19,9 @@ import static rt4.Player.plane;
 public class API {
     public static Runnable[] miniMenuCustomActions = new Runnable[10];
     public static int customMiniMenuIndex = 0;
+    public static ArrayList<KeyAdapter> registeredKeyListeners = new ArrayList<>();
+    public static ArrayList<MouseAdapter> registeredMouseListeners = new ArrayList<>();
+    public static ArrayList<MouseWheelListener> registeredWheelListeners = new ArrayList<>();
 
     public static void DrawText(FontType fontType, FontColor color, TextModifier mod, String text, int screenX, int screenY) {
         JagString js = JagString.of(text);
@@ -131,14 +134,17 @@ public class API {
     public static void AddMouseListener(MouseAdapter m) {
         GameShell.canvas.addMouseListener(m);
         GameShell.canvas.addMouseMotionListener(m);
+        registeredMouseListeners.add(m);
     }
 
     public static void AddMouseWheelListener(MouseWheelListener mw) {
         GameShell.canvas.addMouseWheelListener(mw);
+        registeredWheelListeners.add(mw);
     }
 
     public static void AddKeyboardListener(KeyAdapter k) {
         GameShell.canvas.addKeyListener(k);
+        registeredKeyListeners.add(k);
     }
 
     public static void SetCameraYaw(double targetYaw) {
