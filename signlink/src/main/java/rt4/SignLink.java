@@ -207,9 +207,7 @@ public final class SignLink implements Runnable {
 					String xdgHome = System.getenv("XDG_DATA_HOME");
 
 					if (xdgHome != null) {
-						homeDir = xdgHome
-								+ File.separatorChar
-								+ "2009scape/";
+						homeDir = xdgHome + "/2009scape/";
 					} else {
 						homeDir += ".local/share/2009scape/";
 					}
