@@ -17,6 +17,7 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.URL;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.util.Hashtable;
 
@@ -193,38 +194,34 @@ public final class SignLink implements Runnable {
 		} catch (@Pc(67) Exception local67) {
 			osVersion = "";
 		}
-		try {
-			homeDir = System.getProperty("user.home");
-			if (homeDir != null) {
-				homeDir = homeDir + "/";
-				// 2009scape-specific behavior
+
+		String homeDirOverride = System.getProperty("clientHomeOverride");
+		if (homeDirOverride != null) {
+			homeDir = homeDirOverride;
+ 		} else {
+			try {
+				if (homeDir == null)
+					homeDir = System.getProperty("user.home") + File.separatorChar;
+
 				if (osName.startsWith("linux")) {
-					File oldCache = new File(homeDir + "/.runite_rs");
-					// Use XDG_DATA_HOME if it exists, otherwise default to ~/.local/share
-					homeDir = System.getenv("XDG_DATA_HOME") != null ? System.getenv("XDG_DATA_HOME") : homeDir + ".local/share";
-					homeDir = homeDir + "/2009scape/";
-					File newCache = new File(homeDir + "cache");
-					if (oldCache.isDirectory() && !newCache.exists()) {
-						Files.move(oldCache.toPath(), newCache.toPath(), StandardCopyOption.REPLACE_EXISTING);
+					String xdgHome = System.getenv("XDG_DATA_HOME");
+
+					if (xdgHome != null) {
+						homeDir = xdgHome
+								+ File.separatorChar
+								+ "2009scape/";
+					} else {
+						homeDir += ".local/share/2009scape/";
 					}
+				} else if (osName.startsWith("mac")) {
+					homeDir += "Library/Application Support/2009scape/";
+				} else if (osName.startsWith("windows")) {
+					homeDir += "2009scape\\";
 				}
-			}
-		} catch (@Pc(86) Exception ex) {
-		}
-		if (homeDir == null) {
-			homeDir = "~/";
-			// 2009scape-specific behavior
-			if (osName.startsWith("linux")) {
-				File oldCache = new File(homeDir + "/.runite_rs");
-				// Use XDG_DATA_HOME if it exists, otherwise default to ~/.local/share
-				homeDir = System.getenv("XDG_DATA_HOME") != null ? System.getenv("XDG_DATA_HOME") : homeDir + ".local/share";
-				homeDir = homeDir + "/2009scape/";
-				File newCache = new File(homeDir + "cache");
-				if (oldCache.isDirectory() && !newCache.exists()) {
-					Files.move(oldCache.toPath(), newCache.toPath(), StandardCopyOption.REPLACE_EXISTING);
-				}
+			} catch (@Pc(86) Exception ex) {
 			}
 		}
+
 		try {
 			this.eventQueue = Toolkit.getDefaultToolkit().getSystemEventQueue();
 		} catch (@Pc(97) Throwable ex) {
