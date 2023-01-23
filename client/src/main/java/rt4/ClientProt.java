@@ -8,6 +8,31 @@ import java.io.IOException;
 
 public class ClientProt {
 
+	public static final int CLIENT_CHEAT = 44;
+	public static final int CLAN_JOINCHAT_LEAVECHAT = 104;
+	public static final int CLAN_KICKUSER = 162; // or CLANCHANNEL_KICKUSER
+	public static final int FRIENDLIST_ADD = 120;
+	public static final int FRIENDLIST_DEL = 57;
+	public static final int FRIEND_SETRANK = 188;
+	public static final int IGNORELIST_ADD = 34;
+	public static final int IGNORELIST_DEL = 213;
+	public static final int WINDOW_STATUS = 243; // assumed
+	public static final int TRANSMITVAR_VERIFYID = 177;
+	public static final int EVENT_MOUSE_MOVE = 123;
+	public static final int EVENT_MOUSE_CLICK = 75;
+	public static final int EVENT_CAMERA_POSITION = 21;
+	public static final int EVENT_APPLET_FOCUS = 22;
+	public static final int RESUME_P_COUNTDIALOG = 23;
+	public static final int RESUME_P_NAMEDIALOG = 244;
+	public static final int RESUME_P_STRINGDIALOG = 65;
+	public static final int SET_CHATFILTERSETTINGS = 157;
+	public static final int BUG_REPORT = 99;
+	public static final int SOUND_SONGEND = 137;
+	public static final int MOVE_GAMECLICK = 215;
+	public static final int MOVE_MINIMAPCLICK = 39;
+	public static final int CLOSE_MODAL = 184;
+	public static final int NO_TIMEOUT = 93; // assumed
+
 	@OriginalMember(owner = "client!vg", name = "a", descriptor = "(Lclient!na;IIBI)V")
 	public static void method4512(@OriginalArg(0) JagString arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(4) int arg3) {
 		@Pc(8) Component local8 = InterfaceList.method1418(arg3, arg1);
@@ -91,11 +116,11 @@ public class ClientProt {
 		@Pc(23) int local23 = PathFinder.queueX[arg0];
 		@Pc(27) int local27 = PathFinder.queueZ[arg0];
 		if (arg1 == 0) {
-			Protocol.outboundBuffer.p1isaac(215);
+			Protocol.outboundBuffer.p1isaac(ClientProt.MOVE_GAMECLICK);
 			Protocol.outboundBuffer.p1(local13 + local13 + 3);
 		}
 		if (arg1 == 1) {
-			Protocol.outboundBuffer.p1isaac(39);
+			Protocol.outboundBuffer.p1isaac(ClientProt.MOVE_MINIMAPCLICK);
 			Protocol.outboundBuffer.p1(local13 + local13 + 3 + 14);
 		}
 		if (arg1 == 2) {
@@ -116,7 +141,7 @@ public class ClientProt {
 
 	@OriginalMember(owner = "client!mc", name = "f", descriptor = "(B)V")
 	public static void closeWidget() {
-		Protocol.outboundBuffer.p1isaac(184);
+		Protocol.outboundBuffer.p1isaac(ClientProt.CLOSE_MODAL);
 		for (@Pc(18) ComponentPointer local18 = (ComponentPointer) InterfaceList.openInterfaces.head(); local18 != null; local18 = (ComponentPointer) InterfaceList.openInterfaces.next()) {
 			if (local18.anInt5879 == 0) {
 				InterfaceList.closeInterface(true, local18);
@@ -163,7 +188,7 @@ public class ClientProt {
 
 	@OriginalMember(owner = "client!ej", name = "i", descriptor = "(I)V")
 	public static void sendWindowDetails() {
-		Protocol.outboundBuffer.p1isaac(243);
+		Protocol.outboundBuffer.p1isaac(ClientProt.WINDOW_STATUS);
 		Protocol.outboundBuffer.p1(DisplayMode.getWindowMode());
 		Protocol.outboundBuffer.p2(GameShell.canvasWidth);
 		Protocol.outboundBuffer.p2(GameShell.canvasHeight);
@@ -182,7 +207,7 @@ public class ClientProt {
 		}
 		Protocol.anInt3251 = 0;
 		if (!LoginManager.aBoolean247 && Protocol.socket != null) {
-			Protocol.outboundBuffer.p1isaac(93);
+			Protocol.outboundBuffer.p1isaac(ClientProt.NO_TIMEOUT);
 			try {
 				Protocol.socket.write(Protocol.outboundBuffer.data, Protocol.outboundBuffer.offset);
 				Protocol.outboundBuffer.offset = 0;

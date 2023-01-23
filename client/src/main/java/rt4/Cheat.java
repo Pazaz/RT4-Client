@@ -239,7 +239,7 @@ public class Cheat {
 	}
 
 	public static void sendCheatPacket(JagString commandLine) {
-		Protocol.outboundBuffer.p1isaac(44);
+		Protocol.outboundBuffer.p1isaac(ClientProt.CLIENT_CHEAT);
 		Protocol.outboundBuffer.p1(commandLine.length() - 1);
 		Protocol.outboundBuffer.pjstr(commandLine.substring(2));
 	}

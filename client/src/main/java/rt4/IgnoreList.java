@@ -55,7 +55,7 @@ public class IgnoreList {
 		encodedUsernames[size] = arg0;
 		usernames[size++] = Base37.decode37(arg0);
 		FriendsList.transmitAt = InterfaceList.transmitTimer;
-		Protocol.outboundBuffer.p1isaac(34);
+		Protocol.outboundBuffer.p1isaac(ClientProt.IGNORELIST_ADD);
 		Protocol.outboundBuffer.p8(arg0);
 	}
 
@@ -72,7 +72,7 @@ public class IgnoreList {
 					usernames[local36] = usernames[local36 + 1];
 				}
 				FriendsList.transmitAt = InterfaceList.transmitTimer;
-				Protocol.outboundBuffer.p1isaac(213);
+				Protocol.outboundBuffer.p1isaac(ClientProt.IGNORELIST_DEL);
 				Protocol.outboundBuffer.p8(arg0);
 				break;
 			}

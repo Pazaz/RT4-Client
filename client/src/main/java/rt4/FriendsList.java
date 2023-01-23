@@ -72,7 +72,7 @@ public class FriendsList {
 		sameGame[size] = false;
 		size++;
 		transmitAt = InterfaceList.transmitTimer;
-		Protocol.outboundBuffer.p1isaac(120);
+		Protocol.outboundBuffer.p1isaac(ClientProt.FRIENDLIST_ADD);
 		Protocol.outboundBuffer.p8(arg0);
 	}
 
@@ -93,7 +93,7 @@ public class FriendsList {
 					sameGame[local41] = sameGame[local41 + 1];
 				}
 				transmitAt = InterfaceList.transmitTimer;
-				Protocol.outboundBuffer.p1isaac(57);
+				Protocol.outboundBuffer.p1isaac(ClientProt.FRIENDLIST_DEL);
 				Protocol.outboundBuffer.p8(arg0);
 				break;
 			}
@@ -102,7 +102,7 @@ public class FriendsList {
 
 	@OriginalMember(owner = "client!ni", name = "a", descriptor = "(ILclient!na;I)V")
 	public static void setRank(@OriginalArg(1) JagString arg0, @OriginalArg(2) int arg1) {
-		Protocol.outboundBuffer.p1isaac(188);
+		Protocol.outboundBuffer.p1isaac(ClientProt.FRIEND_SETRANK);
 		Protocol.outboundBuffer.p1add(arg1);
 		Protocol.outboundBuffer.p8(arg0.encode37());
 	}

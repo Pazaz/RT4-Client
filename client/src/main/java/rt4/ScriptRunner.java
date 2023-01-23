@@ -3045,21 +3045,21 @@ public final class ScriptRunner {
 										if (string.isInt()) {
 											int3 = string.parseInt();
 										}
-										Protocol.outboundBuffer.p1isaac(23);
+										Protocol.outboundBuffer.p1isaac(ClientProt.RESUME_P_COUNTDIALOG);
 										Protocol.outboundBuffer.p4(int3);
 										continue;
 									}
 									if (opcode == Cs2Opcodes.sendNameInput) {
 										ssp--;
 										string = stringStack[ssp];
-										Protocol.outboundBuffer.p1isaac(244);
+										Protocol.outboundBuffer.p1isaac(ClientProt.RESUME_P_NAMEDIALOG);
 										Protocol.outboundBuffer.p8(string.encode37());
 										continue;
 									}
 									if (opcode == Cs2Opcodes.sendStringInput) {
 										ssp--;
 										string = stringStack[ssp];
-										Protocol.outboundBuffer.p1isaac(65);
+										Protocol.outboundBuffer.p1isaac(ClientProt.RESUME_P_STRINGDIALOG);
 										Protocol.outboundBuffer.p1(string.length() + 1);
 										Protocol.outboundBuffer.pjstr(string);
 										continue;
@@ -3968,7 +3968,7 @@ public final class ScriptRunner {
 													Chat.publicFilter = intStack[isp];
 													Chat.privateFilter = intStack[isp + 1];
 													Chat.tradeFilter = intStack[isp + 2];
-													Protocol.outboundBuffer.p1isaac(157);
+													Protocol.outboundBuffer.p1isaac(ClientProt.SET_CHATFILTERSETTINGS);
 													Protocol.outboundBuffer.p1(Chat.publicFilter);
 													Protocol.outboundBuffer.p1(Chat.privateFilter);
 													Protocol.outboundBuffer.p1(Chat.tradeFilter);
@@ -3980,7 +3980,7 @@ public final class ScriptRunner {
 													isp -= 2;
 													int3 = intStack[isp];
 													int2 = intStack[isp + 1];
-													Protocol.outboundBuffer.p1isaac(99);
+													Protocol.outboundBuffer.p1isaac(ClientProt.BUG_REPORT);
 													Protocol.outboundBuffer.p8(string.encode37());
 													Protocol.outboundBuffer.p1(int3 - 1);
 													Protocol.outboundBuffer.p1(int2);
