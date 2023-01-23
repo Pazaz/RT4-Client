@@ -133,7 +133,7 @@ public class SoundPlayer {
 	}
 
 	public static void sendTrackEndPacket() {
-		Protocol.outboundBuffer.p1isaac(137);
+		Protocol.outboundBuffer.p1isaac(ClientProt.SOUND_SONGEND);
 		Protocol.outboundBuffer.p4(MusicPlayer.groupId);
 		MusicPlayer.groupId = -1;
 	}

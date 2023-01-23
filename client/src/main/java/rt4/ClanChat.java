@@ -22,14 +22,14 @@ public class ClanChat {
 
 	@OriginalMember(owner = "client!kh", name = "b", descriptor = "(I)V")
 	public static void leave() {
-		Protocol.outboundBuffer.p1isaac(104);
+		Protocol.outboundBuffer.p1isaac(ClientProt.CLAN_JOINCHAT_LEAVECHAT);
 		Protocol.outboundBuffer.p8(0L);
 	}
 
 	@OriginalMember(owner = "client!mf", name = "a", descriptor = "(JI)V")
 	public static void join(@OriginalArg(0) long arg0) {
 		if ((long) 0 != arg0) {
-			Protocol.outboundBuffer.p1isaac(104);
+			Protocol.outboundBuffer.p1isaac(ClientProt.CLAN_JOINCHAT_LEAVECHAT);
 			Protocol.outboundBuffer.p8(arg0);
 		}
 	}
@@ -48,7 +48,7 @@ public class ClanChat {
 			local24++;
 		}
 		if (local24 < members.length && members[local24] != null) {
-			Protocol.outboundBuffer.p1isaac(162);
+			Protocol.outboundBuffer.p1isaac(ClientProt.CLAN_KICKUSER);
 			Protocol.outboundBuffer.p8(members[local24].key);
 		}
 	}

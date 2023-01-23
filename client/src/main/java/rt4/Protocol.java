@@ -2415,7 +2415,7 @@ public class Protocol {
 			if (!MouseRecorder.enabled) {
 				MouseRecorder.instance.samples = 0;
 			} else if (Mouse.clickButton != 0 || MouseRecorder.instance.samples >= 40) {
-				outboundBuffer.p1isaac(123);
+				outboundBuffer.p1isaac(ClientProt.EVENT_MOUSE_MOVE);
 				type = 0;
 				outboundBuffer.p1(0);
 				offset = outboundBuffer.offset;
@@ -2511,7 +2511,7 @@ public class Protocol {
 			if (Mouse.clickButton == 2) {
 				button = 1;
 			}
-			outboundBuffer.p1isaac(75);
+			outboundBuffer.p1isaac(ClientProt.EVENT_MOUSE_CLICK);
 			outboundBuffer.ip2add(button << 15 | x);
 			outboundBuffer.mp4(i | type << 16);
 		}
@@ -2532,18 +2532,18 @@ public class Protocol {
 		if (aBoolean228 && anInt551 <= 0) {
 			anInt551 = 20;
 			aBoolean228 = false;
-			outboundBuffer.p1isaac(21);
+			outboundBuffer.p1isaac(ClientProt.EVENT_CAMERA_POSITION);
 			outboundBuffer.p2add((int) Camera.pitchTarget);
 			outboundBuffer.ip2((int) Camera.yawTarget);
 		}
 		if (GameShell.focus && !prevFocus) {
 			prevFocus = true;
-			outboundBuffer.p1isaac(22);
+			outboundBuffer.p1isaac(ClientProt.EVENT_APPLET_FOCUS);
 			outboundBuffer.p1(1);
 		}
 		if (!GameShell.focus && prevFocus) {
 			prevFocus = false;
-			outboundBuffer.p1isaac(22);
+			outboundBuffer.p1isaac(ClientProt.EVENT_APPLET_FOCUS);
 			outboundBuffer.p1(0);
 		}
 		if (!Preferences.sentToServer) {
@@ -3281,7 +3281,7 @@ public class Protocol {
 
 	@OriginalMember(owner = "client!fk", name = "c", descriptor = "(I)V")
 	public static void transmitVerifyId() {
-		outboundBuffer.p1isaac(177);
+		outboundBuffer.p1isaac(ClientProt.TRANSMITVAR_VERIFYID);
 		outboundBuffer.p2(verifyId);
 	}
 
