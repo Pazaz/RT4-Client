@@ -3086,12 +3086,17 @@ public class SceneGraph {
 		for (l = firstVisibleLevel; l < levels; l++) {
 			levelTiles = tiles[l];
 			for (z = -visibility; z <= 0; z++) {
-				local415 = cameraTileX + z;
-				local183 = cameraTileX - z;
+				// TODO: These clamps are slightly breaking, i.e. changes the functionality a bit
+				// this happens because some of the values, when put into method4245,
+				// get added to or subtracted depending on the direction the tile is from the camera.
+				// the clamps ensure none of those error causing mutations can cause a crash but that means
+				// a few cases cannot occur and thus rendering behavior is a little different.
+				local415 = MathUtils.clamp(1, 102, cameraTileX + z);
+				local183 = MathUtils.clamp(1, 102, cameraTileX - z);
 				if (local415 >= LightingManager.minimumVisibleX || local183 < LightingManager.maximumVisibleX) {
 					for (local428 = -visibility; local428 <= 0; local428++) {
-						local434 = cameraTileZ + local428;
-						local438 = cameraTileZ - local428;
+						local434 = MathUtils.clamp(1, 102, cameraTileZ + local428);
+						local438 = MathUtils.clamp(1, 102, cameraTileZ - local428);
 						if (local415 >= LightingManager.minimumVisibleX) {
 							if (local434 >= LightingManager.minimumVisibleZ) {
 								tileToRender = levelTiles[local415][local434];
@@ -3133,12 +3138,12 @@ public class SceneGraph {
 		for (l = firstVisibleLevel; l < levels; l++) {
 			levelTiles = tiles[l];
 			for (z = -visibility; z <= 0; z++) {
-				local415 = cameraTileX + z;
-				local183 = cameraTileX - z;
+				local415 = MathUtils.clamp(1, 102, cameraTileX + z);
+				local183 = MathUtils.clamp(1, 102, cameraTileX - z);
 				if (local415 >= LightingManager.minimumVisibleX || local183 < LightingManager.maximumVisibleX) {
 					for (local428 = -visibility; local428 <= 0; local428++) {
-						local434 = cameraTileZ + local428;
-						local438 = cameraTileZ - local428;
+						local434 = MathUtils.clamp(1, 102, cameraTileZ + local428);
+						local438 = MathUtils.clamp(1, 102, cameraTileZ - local428);
 						if (local415 >= LightingManager.minimumVisibleX) {
 							if (local434 >= LightingManager.minimumVisibleZ) {
 								tileToRender = levelTiles[local415][local434];
