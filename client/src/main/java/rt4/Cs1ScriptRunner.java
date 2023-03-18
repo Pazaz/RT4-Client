@@ -389,7 +389,7 @@ public class Cs1ScriptRunner {
 								InterfaceList.aClass13_26 = component;
 								InterfaceList.anInt5574 = local114;
 								anInt2503 = local123;
-								ScriptRunner.method4326(component.height, component.clientCode == 1403, local123, component.width, local114);
+								ScriptRunner.renderComponent(component.height, component.clientCode == 1403, local123, component.width, local114);
 								if (GlRenderer.enabled) {
 									GlRaster.setClip(arg0, arg6, arg4, arg7);
 								} else {

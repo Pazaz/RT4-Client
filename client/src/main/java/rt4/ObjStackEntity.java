@@ -10,7 +10,7 @@ public final class ObjStackEntity {
 	public Entity secondary;
 
 	@OriginalMember(owner = "client!jj", name = "b", descriptor = "I")
-	public int anInt3057;
+	public int yFine;
 
 	@OriginalMember(owner = "client!jj", name = "c", descriptor = "Lclient!th;")
 	public Entity tertiary;
@@ -22,7 +22,7 @@ public final class ObjStackEntity {
 	public int zFine;
 
 	@OriginalMember(owner = "client!jj", name = "n", descriptor = "I")
-	public int anInt3063;
+	public int minY;
 
 	@OriginalMember(owner = "client!jj", name = "o", descriptor = "I")
 	public int xFine;

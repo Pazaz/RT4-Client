@@ -124,10 +124,10 @@ public class MiniMap {
 			for (local37 = 1; local37 < 103; local37++) {
 				local76 = 4 * 512 * (103 - local37) + 24628;
 				for (local80 = 1; local80 < 103; local80++) {
-					if ((SceneGraph.renderFlags[arg0][local80][local37] & 0x18) == 0) {
+					if ((SceneGraph.tileRenderFlags[arg0][local80][local37] & 0x18) == 0) {
 						renderTile(local32, local76, arg0, local80, local37);
 					}
-					if (arg0 < 3 && (SceneGraph.renderFlags[arg0 + 1][local80][local37] & 0x8) != 0) {
+					if (arg0 < 3 && (SceneGraph.tileRenderFlags[arg0 + 1][local80][local37] & 0x8) != 0) {
 						renderTile(local32, local76, arg0 + 1, local80, local37);
 					}
 					local76 += 4;
@@ -187,7 +187,7 @@ public class MiniMap {
 		local35 = (int) (Math.random() * 20.0D) + 238 - 10 << 16;
 		for (local37 = 1; local37 < 103; local37++) {
 			for (local76 = 1; local76 < 103; local76++) {
-				if ((SceneGraph.renderFlags[arg0][local76][local37] & 0x18) == 0 && !method3109(local76, local455, local37, local35, arg0)) {
+				if ((SceneGraph.tileRenderFlags[arg0][local76][local37] & 0x18) == 0 && !method3109(local76, local455, local37, local35, arg0)) {
 					if (GlRenderer.enabled) {
 						SoftwareRaster.pixels = null;
 					} else {
@@ -195,7 +195,7 @@ public class MiniMap {
 					}
 					return false;
 				}
-				if (arg0 < 3 && (SceneGraph.renderFlags[arg0 + 1][local76][local37] & 0x8) != 0 && !method3109(local76, local455, local37, local35, arg0 + 1)) {
+				if (arg0 < 3 && (SceneGraph.tileRenderFlags[arg0 + 1][local76][local37] & 0x8) != 0 && !method3109(local76, local455, local37, local35, arg0 + 1)) {
 					if (GlRenderer.enabled) {
 						SoftwareRaster.pixels = null;
 					} else {

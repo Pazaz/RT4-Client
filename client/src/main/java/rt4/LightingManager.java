@@ -177,8 +177,8 @@ public class LightingManager {
 	}
 
 	@OriginalMember(owner = "client!jf", name = "a", descriptor = "(IIIIII)V")
-	public static void method2393(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
-		if (!Preferences.highDetailLighting || anInt3031 == arg3 && anInt3033 == arg4 && anInt3029 == arg5 && anInt3035 == arg4 && anInt3030 == arg5) {
+	public static void method2393(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int z, @OriginalArg(3) int level, @OriginalArg(4) int nodeX, @OriginalArg(5) int nodeY) {
+		if (!Preferences.highDetailLighting || anInt3031 == level && anInt3033 == nodeX && anInt3029 == nodeY && anInt3035 == nodeX && anInt3030 == nodeY) {
 			return;
 		}
 		@Pc(20) int local20;
@@ -186,7 +186,7 @@ public class LightingManager {
 			aBooleanArray66[local20] = false;
 		}
 		local20 = 0;
-		@Pc(39) int local39 = anIntArrayArrayArray11[arg3][arg4][arg5];
+		@Pc(39) int local39 = anIntArrayArrayArray11[level][nodeX][nodeY];
 		while (true) {
 			@Pc(47) int local47;
 			@Pc(53) int local53;
@@ -207,7 +207,7 @@ public class LightingManager {
 					if (!aBooleanArray66[local53]) {
 						anIntArray284[local53] = anIntArray283[local47];
 						aBooleanArray66[local53] = true;
-						method2403(local53, lights[anIntArray283[local47]], arg0, arg1, arg2);
+						method2403(local53, lights[anIntArray283[local47]], x, y, z);
 						break;
 					}
 				}
@@ -218,11 +218,11 @@ public class LightingManager {
 					disableLight(local47);
 				}
 			}
-			anInt3031 = arg3;
-			anInt3033 = arg4;
-			anInt3029 = arg5;
-			anInt3035 = arg4;
-			anInt3030 = arg5;
+			anInt3031 = level;
+			anInt3033 = nodeX;
+			anInt3029 = nodeY;
+			anInt3035 = nodeX;
+			anInt3030 = nodeY;
 			return;
 		}
 	}
