@@ -16,7 +16,7 @@ public final class WallDecor {
 	public int xFine;
 
 	@OriginalMember(owner = "client!df", name = "f", descriptor = "I")
-	public int anInt1391;
+	public int yFine;
 
 	@OriginalMember(owner = "client!df", name = "g", descriptor = "I")
 	public int zOffset;

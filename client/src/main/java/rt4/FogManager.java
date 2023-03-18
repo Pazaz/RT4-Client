@@ -218,38 +218,38 @@ public final class FogManager {
 	}
 
 	@OriginalMember(owner = "client!i", name = "b", descriptor = "(IIIII)I")
-	public static int method2235(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
+	public static int fadeFog(@OriginalArg(0) int speed, @OriginalArg(1) int z, @OriginalArg(2) int brightness, @OriginalArg(3) int x) {
 		if (instantScreenFade) {
-			arg0 = 1000000;
+			speed = 1000000;
 			instantScreenFade = false;
 		}
-		@Pc(15) Environment local15 = chunksAtmosphere[arg3][arg1];
-		@Pc(25) float local25 = ((float) arg2 * 0.1F + 0.7F) * local15.lightModelAmbient;
-		@Pc(28) float local28 = local15.light0Diffuse;
-		@Pc(31) int local31 = local15.screenColorRgb;
-		@Pc(34) int local34 = local15.fogDepth;
-		@Pc(37) int local37 = local15.fogColorRgb;
+		@Pc(15) Environment environment = chunksAtmosphere[x][z];
+		@Pc(25) float fogBrightness = ((float) brightness * 0.1F + 0.7F) * environment.lightModelAmbient;
+		@Pc(28) float light0Diffuse = environment.light0Diffuse;
+		@Pc(31) int screenColorRgb = environment.screenColorRgb;
+		@Pc(34) int fogDepth = environment.fogDepth;
+		@Pc(37) int fogColor = environment.fogColorRgb;
 		if (!Preferences.fogEnabled) {
-			local34 = 0;
+			fogDepth = 0;
 		}
-		@Pc(44) float local44 = local15.light1Diffuse;
-		if (local31 != anInt2883 || aFloat13 != local25 || aFloat1 != local28 || local44 != aFloat4 || anInt4044 != local37 || anInt5080 != local34) {
-			aFloat13 = local25;
+		@Pc(44) float light1Diffuse = environment.light1Diffuse;
+		if (screenColorRgb != anInt2883 || aFloat13 != fogBrightness || aFloat1 != light0Diffuse || light1Diffuse != aFloat4 || anInt4044 != fogColor || anInt5080 != fogDepth) {
+			aFloat13 = fogBrightness;
 			aFloat37 = aFloat36;
 			aFloat6 = aFloat7;
-			anInt2883 = local31;
+			anInt2883 = screenColorRgb;
 			anInt4623 = anInt3709;
 			anInt4153 = anInt2161;
-			aFloat4 = local44;
+			aFloat4 = light1Diffuse;
 			anInt5868 = 0;
 			anInt3255 = anInt5731;
-			anInt5080 = local34;
-			aFloat1 = local28;
-			anInt4044 = local37;
+			anInt5080 = fogDepth;
+			aFloat1 = light0Diffuse;
+			anInt4044 = fogColor;
 			aFloat23 = aFloat5;
 		}
 		if (anInt5868 < 65536) {
-			anInt5868 += arg0 * 250;
+			anInt5868 += speed * 250;
 			if (anInt5868 >= 65536) {
 				anInt5868 = 65536;
 			}
@@ -277,19 +277,19 @@ public final class FogManager {
 	}
 
 	@OriginalMember(owner = "client!fm", name = "a", descriptor = "(ZII)V")
-	public static void setLightPosition(@OriginalArg(1) int arg0, @OriginalArg(2) int arg1) {
-		currentLightX = chunksAtmosphere[arg1][arg0].lightX;
-		currentLightY = chunksAtmosphere[arg1][arg0].lightY;
-		currentLightZ = chunksAtmosphere[arg1][arg0].lightZ;
+	public static void setLightPosition(@OriginalArg(1) int z, @OriginalArg(2) int x) {
+		currentLightX = chunksAtmosphere[x][z].lightX;
+		currentLightY = chunksAtmosphere[x][z].lightY;
+		currentLightZ = chunksAtmosphere[x][z].lightZ;
 		setLightPosition((float) currentLightX, (float) currentLightY, (float) currentLightZ);
 	}
 
 	@OriginalMember(owner = "client!g", name = "b", descriptor = "(I)V")
 	public static void setDefaultChunksAtmosphere() {
-		@Pc(9) Environment local9 = new Environment();
-		for (@Pc(18) int local18 = 0; local18 < 13; local18++) {
-			for (@Pc(25) int local25 = 0; local25 < 13; local25++) {
-				chunksAtmosphere[local18][local25] = local9;
+		@Pc(9) Environment defaultEnv = new Environment();
+		for (@Pc(18) int x = 0; x < 13; x++) {
+			for (@Pc(25) int z = 0; z < 13; z++) {
+				chunksAtmosphere[x][z] = defaultEnv;
 			}
 		}
 	}
