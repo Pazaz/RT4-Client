@@ -13,13 +13,13 @@ public class LightingManager {
 	@OriginalMember(owner = "client!jf", name = "a", descriptor = "[Lclient!gi;")
 	public static Light[] lights;
 	@OriginalMember(owner = "client!rh", name = "d", descriptor = "I")
-	public static int anInt4866;
+	public static int maximumVisibleZ;
 	@OriginalMember(owner = "client!aa", name = "m", descriptor = "I")
-	public static int anInt15;
+	public static int maximumVisibleX;
 	@OriginalMember(owner = "client!gf", name = "M", descriptor = "I")
-	public static int anInt4698;
+	public static int minimumVisibleZ;
 	@OriginalMember(owner = "client!ch", name = "w", descriptor = "I")
-	public static int anInt987;
+	public static int minimumVisibleX;
 	@OriginalMember(owner = "client!id", name = "b", descriptor = "I")
 	public static int anInt2875 = -1;
 	@OriginalMember(owner = "client!jf", name = "c", descriptor = "[I")
@@ -393,22 +393,22 @@ public class LightingManager {
 				@Pc(76) int local76 = 0;
 				@Pc(84) int local84 = (local63.z >> 7) - local63.radius;
 				@Pc(92) int local92 = (local63.z >> 7) + local63.radius;
-				if (local92 >= anInt4866) {
-					local92 = anInt4866 - 1;
+				if (local92 >= maximumVisibleZ) {
+					local92 = maximumVisibleZ - 1;
 				}
-				if (local84 < anInt4698) {
-					local76 = anInt4698 - local84;
-					local84 = anInt4698;
+				if (local84 < minimumVisibleZ) {
+					local76 = minimumVisibleZ - local84;
+					local84 = minimumVisibleZ;
 				}
 				for (@Pc(112) int local112 = local84; local112 <= local92; local112++) {
 					@Pc(121) short local121 = local63.aShortArray30[local76++];
 					@Pc(133) int local133 = (local63.x >> 7) + (local121 >> 8) - local63.radius;
 					@Pc(141) int local141 = local133 + (local121 & 0xFF) - 1;
-					if (local133 < anInt987) {
-						local133 = anInt987;
+					if (local133 < minimumVisibleX) {
+						local133 = minimumVisibleX;
 					}
-					if (local141 >= anInt15) {
-						local141 = anInt15 - 1;
+					if (local141 >= maximumVisibleX) {
+						local141 = maximumVisibleX - 1;
 					}
 					for (@Pc(155) int local155 = local133; local155 <= local141; local155++) {
 						@Pc(160) Tile local160 = null;
