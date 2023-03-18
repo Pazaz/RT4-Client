@@ -109,7 +109,7 @@ public final class NpcType {
 	public byte loginscreenproperties = 0;
 
 	@OriginalMember(owner = "client!me", name = "e", descriptor = "Z")
-	public boolean hasshadow = true;
+	public boolean hasShadow = true;
 
 	@OriginalMember(owner = "client!me", name = "ab", descriptor = "S")
 	public short shadowcolor1 = 0;
@@ -671,7 +671,7 @@ public final class NpcType {
 			} else if (opcode == 109) {
 				this.rotationflag = false;
 			} else if (opcode == 111) {
-				this.hasshadow = false;
+				this.hasShadow = false;
 			} else if (opcode == 113) {
 				this.shadowcolor1 = (short) buffer.g2();
 				this.shadowcolor2 = (short) buffer.g2();

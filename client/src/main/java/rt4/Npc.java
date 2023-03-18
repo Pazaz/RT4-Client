@@ -58,13 +58,13 @@ public final class Npc extends PathingEntity {
 		}
 
 		this.minY = body.getMinY();
-		@Pc(84) NpcType local84 = this.type;
-		if (local84.multiNpcs != null) {
-			local84 = local84.getMultiNpc();
+		@Pc(84) NpcType npcType = this.type;
+		if (npcType.multiNpcs != null) {
+			npcType = npcType.getMultiNpc();
 		}
 
 		@Pc(140) Model model;
-		if (Preferences.characterShadowsOn && local84.hasshadow) {
+		if (Preferences.characterShadowsOn && npcType.hasShadow) {
 			model = ShadowModelList.method1043(this.type.shadowcolormodifier1, this.aBoolean171, local53 == null ? local29 : local53, this.xFine, this.type.shadowcolor2, this.zFine, this.type.shadowcolor1, this.type.size, body, orientation, local53 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, this.type.shadowcolormodifier2);
 			if (GlRenderer.enabled) {
 				@Pc(144) float local144 = GlRenderer.method4179();

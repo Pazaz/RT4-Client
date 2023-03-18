@@ -62,7 +62,7 @@ public final class Tile extends Node {
 	public final int[] interiorFlags = new int[5];
 
 	@OriginalMember(owner = "client!bj", name = "H", descriptor = "I")
-	public final int y;
+	public final int z;
 
 	@OriginalMember(owner = "client!bj", name = "W", descriptor = "I")
 	public int level;
@@ -74,8 +74,8 @@ public final class Tile extends Node {
 	public final int x;
 
 	@OriginalMember(owner = "client!bj", name = "<init>", descriptor = "(III)V")
-	public Tile(@OriginalArg(0) int level, @OriginalArg(1) int x, @OriginalArg(2) int y) {
-		this.y = y;
+	public Tile(@OriginalArg(0) int level, @OriginalArg(1) int x, @OriginalArg(2) int z) {
+		this.z = z;
 		this.plane = this.level = level;
 		this.x = x;
 	}

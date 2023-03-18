@@ -1637,7 +1637,7 @@ public class SceneGraph {
 		while (true) {
 			@Pc(8) Tile node;
 			@Pc(18) int nodeX;
-			@Pc(21) int nodeY;
+			@Pc(21) int nodeZ;
 			@Pc(24) int level;
 			@Pc(27) int plane;
 			@Pc(31) Tile[][] levelTiles;
@@ -1671,14 +1671,14 @@ public class SceneGraph {
 												}
 											} while (!node.aBoolean46);
 											nodeX = node.x;
-											nodeY = node.y;
+											nodeZ = node.z;
 											level = node.level;
 											plane = node.plane;
 											levelTiles = tiles[level];
 											@Pc(33) float local33 = 0.0F;
 											if (GlRenderer.enabled) {
 												if (underwaterTileHeights == tileHeights) {
-													sceneryLength = underWaterColors[nodeX][nodeY];
+													sceneryLength = underWaterColors[nodeX][nodeZ];
 													var10 = sceneryLength & 0xFFFFFF;
 													if (var10 != anInt3604) {
 														anInt3604 = var10;
@@ -1690,7 +1690,7 @@ public class SceneGraph {
 														anInt730 = sceneryIndex;
 														MaterialManager.method2761(sceneryIndex);
 													}
-													local115 = surfaceTileHeights[0][nodeX][nodeY] + surfaceTileHeights[0][nodeX + 1][nodeY] + surfaceTileHeights[0][nodeX][nodeY + 1] + surfaceTileHeights[0][nodeX + 1][nodeY + 1] >> 2;
+													local115 = surfaceTileHeights[0][nodeX][nodeZ] + surfaceTileHeights[0][nodeX + 1][nodeZ] + surfaceTileHeights[0][nodeX][nodeZ + 1] + surfaceTileHeights[0][nodeX + 1][nodeZ + 1] >> 2;
 													MaterialManager.setMaterial(-local115, 3);
 													local33 = 201.5F;
 													GlRenderer.method4159(local33);
@@ -1704,31 +1704,31 @@ public class SceneGraph {
 											}
 											if (arg1) {
 												if (level > 0) {
-													local153 = tiles[level - 1][nodeX][nodeY];
+													local153 = tiles[level - 1][nodeX][nodeZ];
 													if (local153 != null && local153.aBoolean46) {
 														continue;
 													}
 												}
 												if (nodeX <= cameraTileX && nodeX > LightingManager.anInt987) {
-													local153 = levelTiles[nodeX - 1][nodeY];
+													local153 = levelTiles[nodeX - 1][nodeZ];
 													if (local153 != null && local153.aBoolean46 && (local153.aBoolean45 || (node.allInteriorFlags & 0x1) == 0)) {
 														continue;
 													}
 												}
 												if (nodeX >= cameraTileX && nodeX < LightingManager.anInt15 - 1) {
-													local153 = levelTiles[nodeX + 1][nodeY];
+													local153 = levelTiles[nodeX + 1][nodeZ];
 													if (local153 != null && local153.aBoolean46 && (local153.aBoolean45 || (node.allInteriorFlags & 0x4) == 0)) {
 														continue;
 													}
 												}
-												if (nodeY <= cameraTileZ && nodeY > LightingManager.anInt4698) {
-													local153 = levelTiles[nodeX][nodeY - 1];
+												if (nodeZ <= cameraTileZ && nodeZ > LightingManager.anInt4698) {
+													local153 = levelTiles[nodeX][nodeZ - 1];
 													if (local153 != null && local153.aBoolean46 && (local153.aBoolean45 || (node.allInteriorFlags & 0x8) == 0)) {
 														continue;
 													}
 												}
-												if (nodeY >= cameraTileZ && nodeY < LightingManager.anInt4866 - 1) {
-													local153 = levelTiles[nodeX][nodeY + 1];
+												if (nodeZ >= cameraTileZ && nodeZ < LightingManager.anInt4866 - 1) {
+													local153 = levelTiles[nodeX][nodeZ + 1];
 													if (local153 != null && local153.aBoolean46 && (local153.aBoolean45 || (node.allInteriorFlags & 0x2) == 0)) {
 														continue;
 													}
@@ -1744,17 +1744,17 @@ public class SceneGraph {
 												}
 												if (local153.plainTile == null) {
 													if (local153.shapedTile != null) {
-														method2762(local153.shapedTile, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeY, method187(0, nodeX, nodeY));
+														method2762(local153.shapedTile, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeZ, method187(0, nodeX, nodeZ));
 													}
 												} else
-													method2610(local153.plainTile, 0, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeY, method187(0, nodeX, nodeY));
+													method2610(local153.plainTile, 0, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeZ, method187(0, nodeX, nodeZ));
 												var22 = local153.wall;
 												if (var22 != null) {
 													if (GlRenderer.enabled) {
 														if ((var22.anInt3049 & node.anInt670) == 0) {
-															LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeY);
+															LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeZ);
 														} else {
-															LightingManager.method2388(var22.anInt3049, cameraX, cameraY, cameraZ, plane, nodeX, nodeY);
+															LightingManager.method2388(var22.anInt3049, cameraX, cameraY, cameraZ, plane, nodeX, nodeZ);
 														}
 													}
 													var22.primary.render(0, pitchSin, pitchCos, yawSin, yawCos, var22.xFine - cameraX, var22.anInt3051 - cameraY, var22.zFine - cameraZ, var22.key, level, null);
@@ -1763,7 +1763,7 @@ public class SceneGraph {
 													scenery = local153.scenery[sceneryIndex];
 													if (scenery != null) {
 														if (GlRenderer.enabled) {
-															LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeY);
+															LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeZ);
 														}
 														scenery.entity.render(scenery.anInt1714, pitchSin, pitchCos, yawSin, yawCos, scenery.anInt1699 - cameraX, scenery.anInt1706 - cameraY, scenery.anInt1703 - cameraZ, scenery.key, level, null);
 													}
@@ -1775,19 +1775,19 @@ public class SceneGraph {
 											var24 = false;
 											if (node.plainTile == null) {
 												if (node.shapedTile != null) {
-													if (method187(plane, nodeX, nodeY)) {
-														method2762(node.shapedTile, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeY, true);
+													if (method187(plane, nodeX, nodeZ)) {
+														method2762(node.shapedTile, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeZ, true);
 													} else {
 														var24 = true;
-														method2762(node.shapedTile, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeY, false);
+														method2762(node.shapedTile, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeZ, false);
 													}
 												}
-											} else if (method187(plane, nodeX, nodeY)) {
-												method2610(node.plainTile, plane, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeY, true);
+											} else if (method187(plane, nodeX, nodeZ)) {
+												method2610(node.plainTile, plane, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeZ, true);
 											} else {
 												var24 = true;
 												if (node.plainTile.anInt4865 != 12345678 || MiniMenu.aBoolean187 && level <= MiniMenu.anInt3902) {
-													method2610(node.plainTile, plane, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeY, false);
+													method2610(node.plainTile, plane, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeZ, false);
 												}
 											}
 											if (var24) {
@@ -1797,7 +1797,7 @@ public class SceneGraph {
 														GlRenderer.method4159(local33 + 50.0F - 1.5F);
 													}
 													if (GlRenderer.enabled) {
-														LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeY);
+														LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeZ);
 													}
 													local549.entity.render(0, pitchSin, pitchCos, yawSin, yawCos, local549.xFine - cameraX, local549.anInt733 - cameraY, local549.zFine - cameraZ, local549.key, level, null);
 													if (GlRenderer.enabled && local549.aBoolean49) {
@@ -1815,9 +1815,9 @@ public class SceneGraph {
 												} else if (cameraTileX < nodeX) {
 													var10 += 2;
 												}
-												if (cameraTileZ == nodeY) {
+												if (cameraTileZ == nodeZ) {
 													var10 += 3;
-												} else if (cameraTileZ > nodeY) {
+												} else if (cameraTileZ > nodeZ) {
 													var10 += 6;
 												}
 												sceneryIndex = anIntArray324[var10];
@@ -1843,26 +1843,26 @@ public class SceneGraph {
 													node.anInt665 = anIntArray307[var10];
 													node.anInt667 = 9 - node.anInt665;
 												}
-												if ((wall.anInt3049 & sceneryIndex) != 0 && !method3850(plane, nodeX, nodeY, wall.anInt3049)) {
+												if ((wall.anInt3049 & sceneryIndex) != 0 && !method3850(plane, nodeX, nodeZ, wall.anInt3049)) {
 													if (GlRenderer.enabled) {
-														LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeY);
+														LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeZ);
 													}
 													wall.primary.render(0, pitchSin, pitchCos, yawSin, yawCos, wall.xFine - cameraX, wall.anInt3051 - cameraY, wall.zFine - cameraZ, wall.key, level, null);
 												}
-												if ((wall.anInt3052 & sceneryIndex) != 0 && !method3850(plane, nodeX, nodeY, wall.anInt3052)) {
+												if ((wall.anInt3052 & sceneryIndex) != 0 && !method3850(plane, nodeX, nodeZ, wall.anInt3052)) {
 													if (GlRenderer.enabled) {
-														LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeY);
+														LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeZ);
 													}
 													wall.secondary.render(0, pitchSin, pitchCos, yawSin, yawCos, wall.xFine - cameraX, wall.anInt3051 - cameraY, wall.zFine - cameraZ, wall.key, level, null);
 												}
 											}
-											if (wallDecor != null && !method4611(plane, nodeX, nodeY, wallDecor.primary.getMinY())) {
+											if (wallDecor != null && !method4611(plane, nodeX, nodeZ, wallDecor.primary.getMinY())) {
 												if (GlRenderer.enabled) {
 													GlRenderer.method4159(local33 - 0.5F);
 												}
 												if ((wallDecor.anInt1395 & sceneryIndex) != 0) {
 													if (GlRenderer.enabled) {
-														LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeY);
+														LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeZ);
 													}
 													wallDecor.primary.render(0, pitchSin, pitchCos, yawSin, yawCos, wallDecor.xFine + wallDecor.xOffset - cameraX, wallDecor.yFine - cameraY, wallDecor.zFine + wallDecor.zOffset - cameraZ, wallDecor.key, level, null);
 												} else if (wallDecor.anInt1395 == 256) {
@@ -1883,12 +1883,12 @@ public class SceneGraph {
 													}
 													if (local928 < var18) {
 														if (GlRenderer.enabled) {
-															LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeY);
+															LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeZ);
 														}
 														wallDecor.primary.render(0, pitchSin, pitchCos, yawSin, yawCos, local894 + wallDecor.xOffset, local899, local904 + wallDecor.zOffset, wallDecor.key, level, null);
 													} else if (wallDecor.secondary != null) {
 														if (GlRenderer.enabled) {
-															LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeY);
+															LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeZ);
 														}
 														wallDecor.secondary.render(0, pitchSin, pitchCos, yawSin, yawCos, local894, local899, local904, wallDecor.key, level, null);
 													}
@@ -1904,7 +1904,7 @@ public class SceneGraph {
 														GlRenderer.method4159(local33 + 50.0F - 1.5F);
 													}
 													if (GlRenderer.enabled) {
-														LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeY);
+														LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeZ);
 													}
 													local1001.entity.render(0, pitchSin, pitchCos, yawSin, yawCos, local1001.xFine - cameraX, local1001.anInt733 - cameraY, local1001.zFine - cameraZ, local1001.key, level, null);
 													if (GlRenderer.enabled && local1001.aBoolean49) {
@@ -1914,7 +1914,7 @@ public class SceneGraph {
 												@Pc(1064) ObjStackEntity stackEntity = node.objStack;
 												if (stackEntity != null && stackEntity.minY == 0) {
 													if (GlRenderer.enabled) {
-														LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeY);
+														LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeZ);
 													}
 													if (stackEntity.secondary != null) {
 														stackEntity.secondary.render(0, pitchSin, pitchCos, yawSin, yawCos, stackEntity.xFine - cameraX, stackEntity.yFine - cameraY, stackEntity.zFine - cameraZ, stackEntity.key, level, null);
@@ -1930,25 +1930,25 @@ public class SceneGraph {
 											local894 = node.allInteriorFlags;
 											if (local894 != 0) {
 												if (nodeX < cameraTileX && (local894 & 0x4) != 0) {
-													var32 = levelTiles[nodeX + 1][nodeY];
+													var32 = levelTiles[nodeX + 1][nodeZ];
 													if (var32 != null && var32.aBoolean46) {
 														aClass69_32.addTail(var32);
 													}
 												}
-												if (nodeY < cameraTileZ && (local894 & 0x2) != 0) {
-													var32 = levelTiles[nodeX][nodeY + 1];
+												if (nodeZ < cameraTileZ && (local894 & 0x2) != 0) {
+													var32 = levelTiles[nodeX][nodeZ + 1];
 													if (var32 != null && var32.aBoolean46) {
 														aClass69_32.addTail(var32);
 													}
 												}
 												if (nodeX > cameraTileX && (local894 & 0x1) != 0) {
-													var32 = levelTiles[nodeX - 1][nodeY];
+													var32 = levelTiles[nodeX - 1][nodeZ];
 													if (var32 != null && var32.aBoolean46) {
 														aClass69_32.addTail(var32);
 													}
 												}
-												if (nodeY > cameraTileZ && (local894 & 0x8) != 0) {
-													var32 = levelTiles[nodeX][nodeY - 1];
+												if (nodeZ > cameraTileZ && (local894 & 0x8) != 0) {
+													var32 = levelTiles[nodeX][nodeZ - 1];
 													if (var32 != null && var32.aBoolean46) {
 														aClass69_32.addTail(var32);
 													}
@@ -1966,7 +1966,7 @@ public class SceneGraph {
 											}
 											if (var24) {
 												var22 = node.wall;
-												if (!method3850(plane, nodeX, nodeY, var22.anInt3049)) {
+												if (!method3850(plane, nodeX, nodeZ, var22.anInt3049)) {
 													if (GlRenderer.enabled) {
 														label882:
 														{
@@ -1977,34 +1977,34 @@ public class SceneGraph {
 																if (local1332 == 0) {
 																	sceneryIndex -= 64;
 																	local115 += 64;
-																	if (local115 < sceneryIndex && nodeX > 0 && nodeY < length - 1) {
-																		LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX - 1, nodeY + 1);
+																	if (local115 < sceneryIndex && nodeX > 0 && nodeZ < length - 1) {
+																		LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX - 1, nodeZ + 1);
 																		break label882;
 																	}
 																} else if (local1332 == 1) {
 																	sceneryIndex += 64;
 																	local115 += 64;
-																	if (local115 < -sceneryIndex && nodeX < width - 1 && nodeY < length - 1) {
-																		LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX + 1, nodeY + 1);
+																	if (local115 < -sceneryIndex && nodeX < width - 1 && nodeZ < length - 1) {
+																		LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX + 1, nodeZ + 1);
 																		break label882;
 																	}
 																} else if (local1332 == 2) {
 																	sceneryIndex += 64;
 																	local115 -= 64;
-																	if (local115 > sceneryIndex && nodeX < width - 1 && nodeY > 0) {
-																		LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX + 1, nodeY - 1);
+																	if (local115 > sceneryIndex && nodeX < width - 1 && nodeZ > 0) {
+																		LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX + 1, nodeZ - 1);
 																		break label882;
 																	}
 																} else if (local1332 == 3) {
 																	sceneryIndex -= 64;
 																	local115 -= 64;
-																	if (local115 > -sceneryIndex && nodeX > 0 && nodeY > 0) {
-																		LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX - 1, nodeY - 1);
+																	if (local115 > -sceneryIndex && nodeX > 0 && nodeZ > 0) {
+																		LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX - 1, nodeZ - 1);
 																		break label882;
 																	}
 																}
 															}
-															LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeY);
+															LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeZ);
 														}
 													}
 													var22.primary.render(0, pitchSin, pitchCos, yawSin, yawCos, var22.xFine - cameraX, var22.anInt3051 - cameraY, var22.zFine - cameraZ, var22.key, level, null);
@@ -2094,20 +2094,20 @@ public class SceneGraph {
 												if (!method1599(plane, local1697.xMin, local1697.xMax, local1697.zMin, local1697.zMax, local1697.entity.getMinY())) {
 													if (GlRenderer.enabled) {
 														if ((local1697.key & 0xFC000L) == 147456L) {
-															LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeY);
+															LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeZ);
 															local894 = local1697.anInt1699 - cameraX;
 															local899 = local1697.anInt1703 - cameraZ;
 															local904 = (int) (local1697.key >> 20 & 0x3L);
 															if (local904 == 1 || local904 == 3) {
 																if (local899 > -local894) {
-																	LightingManager.method2397(level, nodeX, nodeY - 1, nodeX - 1, nodeY);
+																	LightingManager.method2397(level, nodeX, nodeZ - 1, nodeX - 1, nodeZ);
 																} else {
-																	LightingManager.method2397(level, nodeX, nodeY + 1, nodeX + 1, nodeY);
+																	LightingManager.method2397(level, nodeX, nodeZ + 1, nodeX + 1, nodeZ);
 																}
 															} else if (local899 > local894) {
-																LightingManager.method2397(level, nodeX, nodeY - 1, nodeX + 1, nodeY);
+																LightingManager.method2397(level, nodeX, nodeZ - 1, nodeX + 1, nodeZ);
 															} else {
-																LightingManager.method2397(level, nodeX, nodeY + 1, nodeX - 1, nodeY);
+																LightingManager.method2397(level, nodeX, nodeZ + 1, nodeX - 1, nodeZ);
 															}
 														} else {
 															LightingManager.method2391(cameraX, cameraY, cameraZ, level, local1697.xMin, local1697.zMin, local1697.xMax, local1697.zMax);
@@ -2120,7 +2120,7 @@ public class SceneGraph {
 														@Pc(1863) Tile local1863 = levelTiles[local894][local899];
 														if (local1863.anInt663 != 0) {
 															aClass69_32.addTail(local1863);
-														} else if ((local894 != nodeX || local899 != nodeY) && local1863.aBoolean46) {
+														} else if ((local894 != nodeX || local899 != nodeZ) && local1863.aBoolean46) {
 															aClass69_32.addTail(local1863);
 														}
 													}
@@ -2139,29 +2139,29 @@ public class SceneGraph {
 							if (nodeX > cameraTileX || nodeX <= LightingManager.anInt987) {
 								break;
 							}
-							local153 = levelTiles[nodeX - 1][nodeY];
+							local153 = levelTiles[nodeX - 1][nodeZ];
 						} while (local153 != null && local153.aBoolean46);
 						if (nodeX < cameraTileX || nodeX >= LightingManager.anInt15 - 1) {
 							break;
 						}
-						local153 = levelTiles[nodeX + 1][nodeY];
+						local153 = levelTiles[nodeX + 1][nodeZ];
 					} while (local153 != null && local153.aBoolean46);
-					if (nodeY > cameraTileZ || nodeY <= LightingManager.anInt4698) {
+					if (nodeZ > cameraTileZ || nodeZ <= LightingManager.anInt4698) {
 						break;
 					}
-					local153 = levelTiles[nodeX][nodeY - 1];
+					local153 = levelTiles[nodeX][nodeZ - 1];
 				} while (local153 != null && local153.aBoolean46);
-				if (nodeY < cameraTileZ || nodeY >= LightingManager.anInt4866 - 1) {
+				if (nodeZ < cameraTileZ || nodeZ >= LightingManager.anInt4866 - 1) {
 					break;
 				}
-				local153 = levelTiles[nodeX][nodeY + 1];
+				local153 = levelTiles[nodeX][nodeZ + 1];
 			} while (local153 != null && local153.aBoolean46);
 			node.aBoolean46 = false;
 			anInt1142--;
 			@Pc(1999) ObjStackEntity stackEntity = node.objStack;
 			if (stackEntity != null && stackEntity.minY != 0) {
 				if (GlRenderer.enabled) {
-					LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeY);
+					LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeZ);
 				}
 				if (stackEntity.secondary != null) {
 					stackEntity.secondary.render(0, pitchSin, pitchCos, yawSin, yawCos, stackEntity.xFine - cameraX, stackEntity.yFine - cameraY - stackEntity.minY, stackEntity.zFine - cameraZ, stackEntity.key, level, null);
@@ -2175,10 +2175,10 @@ public class SceneGraph {
 			}
 			if (node.anInt670 != 0) {
 				@Pc(2109) WallDecor wallDecor = node.wallDecor;
-				if (wallDecor != null && !method4611(plane, nodeX, nodeY, wallDecor.primary.getMinY())) {
+				if (wallDecor != null && !method4611(plane, nodeX, nodeZ, wallDecor.primary.getMinY())) {
 					if ((wallDecor.anInt1395 & node.anInt670) != 0) {
 						if (GlRenderer.enabled) {
-							LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeY);
+							LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeZ);
 						}
 						wallDecor.primary.render(0, pitchSin, pitchCos, yawSin, yawCos, wallDecor.xFine + wallDecor.xOffset - cameraX, wallDecor.yFine - cameraY, wallDecor.zFine + wallDecor.zOffset - cameraZ, wallDecor.key, level, null);
 					} else if (wallDecor.anInt1395 == 256) {
@@ -2198,12 +2198,12 @@ public class SceneGraph {
 						}
 						if (local904 >= local899) {
 							if (GlRenderer.enabled) {
-								LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeY);
+								LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeZ);
 							}
 							wallDecor.primary.render(0, pitchSin, pitchCos, yawSin, yawCos, sceneryIndex + wallDecor.xOffset, local115, local1332 + wallDecor.zOffset, wallDecor.key, level, null);
 						} else if (wallDecor.secondary != null) {
 							if (GlRenderer.enabled) {
-								LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeY);
+								LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeZ);
 							}
 							wallDecor.secondary.render(0, pitchSin, pitchCos, yawSin, yawCos, sceneryIndex, local115, local1332, wallDecor.key, level, null);
 						}
@@ -2211,15 +2211,15 @@ public class SceneGraph {
 				}
 				@Pc(2275) Wall local2275 = node.wall;
 				if (local2275 != null) {
-					if ((local2275.anInt3052 & node.anInt670) != 0 && !method3850(plane, nodeX, nodeY, local2275.anInt3052)) {
+					if ((local2275.anInt3052 & node.anInt670) != 0 && !method3850(plane, nodeX, nodeZ, local2275.anInt3052)) {
 						if (GlRenderer.enabled) {
-							LightingManager.method2388(local2275.anInt3052, cameraX, cameraY, cameraZ, plane, nodeX, nodeY);
+							LightingManager.method2388(local2275.anInt3052, cameraX, cameraY, cameraZ, plane, nodeX, nodeZ);
 						}
 						local2275.secondary.render(0, pitchSin, pitchCos, yawSin, yawCos, local2275.xFine - cameraX, local2275.anInt3051 - cameraY, local2275.zFine - cameraZ, local2275.key, level, null);
 					}
-					if ((local2275.anInt3049 & node.anInt670) != 0 && !method3850(plane, nodeX, nodeY, local2275.anInt3049)) {
+					if ((local2275.anInt3049 & node.anInt670) != 0 && !method3850(plane, nodeX, nodeZ, local2275.anInt3049)) {
 						if (GlRenderer.enabled) {
-							LightingManager.method2388(local2275.anInt3049, cameraX, cameraY, cameraZ, plane, nodeX, nodeY);
+							LightingManager.method2388(local2275.anInt3049, cameraX, cameraY, cameraZ, plane, nodeX, nodeZ);
 						}
 						local2275.primary.render(0, pitchSin, pitchCos, yawSin, yawCos, local2275.xFine - cameraX, local2275.anInt3051 - cameraY, local2275.zFine - cameraZ, local2275.key, level, null);
 					}
@@ -2227,31 +2227,31 @@ public class SceneGraph {
 			}
 			@Pc(2388) Tile nextLevelTile;
 			if (level < levels - 1) {
-				nextLevelTile = tiles[level + 1][nodeX][nodeY];
+				nextLevelTile = tiles[level + 1][nodeX][nodeZ];
 				if (nextLevelTile != null && nextLevelTile.aBoolean46) {
 					aClass69_32.addTail(nextLevelTile);
 				}
 			}
 			if (nodeX < cameraTileX) {
-				nextLevelTile = levelTiles[nodeX + 1][nodeY];
+				nextLevelTile = levelTiles[nodeX + 1][nodeZ];
 				if (nextLevelTile != null && nextLevelTile.aBoolean46) {
 					aClass69_32.addTail(nextLevelTile);
 				}
 			}
-			if (nodeY < cameraTileZ) {
-				nextLevelTile = levelTiles[nodeX][nodeY + 1];
+			if (nodeZ < cameraTileZ) {
+				nextLevelTile = levelTiles[nodeX][nodeZ + 1];
 				if (nextLevelTile != null && nextLevelTile.aBoolean46) {
 					aClass69_32.addTail(nextLevelTile);
 				}
 			}
 			if (nodeX > cameraTileX) {
-				nextLevelTile = levelTiles[nodeX - 1][nodeY];
+				nextLevelTile = levelTiles[nodeX - 1][nodeZ];
 				if (nextLevelTile != null && nextLevelTile.aBoolean46) {
 					aClass69_32.addTail(nextLevelTile);
 				}
 			}
-			if (nodeY > cameraTileZ) {
-				nextLevelTile = levelTiles[nodeX][nodeY - 1];
+			if (nodeZ > cameraTileZ) {
+				nextLevelTile = levelTiles[nodeX][nodeZ - 1];
 				if (nextLevelTile != null && nextLevelTile.aBoolean46) {
 					aClass69_32.addTail(nextLevelTile);
 				}
@@ -3204,13 +3204,13 @@ public class SceneGraph {
 	}
 
 	@OriginalMember(owner = "client!fh", name = "a", descriptor = "(IIIILclient!th;JLclient!th;Lclient!th;)V")
-	public static void setObjStack(@OriginalArg(0) int level, @OriginalArg(1) int x, @OriginalArg(2) int z, @OriginalArg(3) int arg3, @OriginalArg(4) Entity primary, @OriginalArg(5) long arg5, @OriginalArg(6) Entity secondary, @OriginalArg(7) Entity tertiary) {
+	public static void setObjStack(@OriginalArg(0) int level, @OriginalArg(1) int x, @OriginalArg(2) int z, @OriginalArg(3) int y, @OriginalArg(4) Entity primary, @OriginalArg(5) long key, @OriginalArg(6) Entity secondary, @OriginalArg(7) Entity tertiary) {
 		@Pc(3) ObjStackEntity entity = new ObjStackEntity();
 		entity.primary = primary;
 		entity.xFine = x * 128 + 64;
 		entity.zFine = z * 128 + 64;
-		entity.yFine = arg3;
-		entity.key = arg5;
+		entity.yFine = y;
+		entity.key = key;
 		entity.secondary = secondary;
 		entity.tertiary = tertiary;
 		@Pc(34) int minEntityY = 0;
@@ -3291,19 +3291,19 @@ public class SceneGraph {
 	}
 
 	@OriginalMember(owner = "client!s", name = "a", descriptor = "([[F[[B[[B[Lclient!gi;II[[F[[B[[B[[II[[F)V")
-	public static void method3393(@OriginalArg(0) float[][] arg0, @OriginalArg(1) byte[][] arg1, @OriginalArg(2) byte[][] arg2, @OriginalArg(3) Light[] arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) float[][] arg6, @OriginalArg(7) byte[][] arg7, @OriginalArg(8) byte[][] arg8, @OriginalArg(9) int[][] arg9, @OriginalArg(11) float[][] arg10) {
-		for (@Pc(7) int local7 = 0; local7 < arg5; local7++) {
-			@Pc(18) Light local18 = arg3[local7];
-			if (local18.level == arg4) {
+	public static void method3393(@OriginalArg(0) float[][] arg0, @OriginalArg(1) byte[][] arg1, @OriginalArg(2) byte[][] arg2, @OriginalArg(3) Light[] lights, @OriginalArg(4) int level, @OriginalArg(5) int lightCount, @OriginalArg(6) float[][] arg6, @OriginalArg(7) byte[][] arg7, @OriginalArg(8) byte[][] arg8, @OriginalArg(9) int[][] arg9, @OriginalArg(11) float[][] arg10) {
+		for (@Pc(7) int i = 0; i < lightCount; i++) {
+			@Pc(18) Light light = lights[i];
+			if (light.level == level) {
 				@Pc(24) int local24 = 0;
 				@Pc(28) Light_Class45 local28 = new Light_Class45();
-				@Pc(37) int local37 = (local18.x >> 7) - local18.radius;
-				@Pc(46) int local46 = (local18.z >> 7) - local18.radius;
+				@Pc(37) int local37 = (light.x >> 7) - light.radius;
+				@Pc(46) int local46 = (light.z >> 7) - light.radius;
 				if (local46 < 0) {
 					local24 = -local46;
 					local46 = 0;
 				}
-				@Pc(65) int local65 = local18.radius + (local18.z >> 7);
+				@Pc(65) int local65 = light.radius + (light.z >> 7);
 				if (local65 > 103) {
 					local65 = 103;
 				}
@@ -3316,7 +3316,7 @@ public class SceneGraph {
 				@Pc(328) boolean local328;
 				@Pc(355) int local355;
 				for (local72 = local46; local72 <= local65; local72++) {
-					local84 = local18.aShortArray30[local24];
+					local84 = light.aShortArray30[local24];
 					local90 = local37 + (local84 >> 8);
 					local99 = local90 + (local84 & 0xFF) - 1;
 					if (local99 > 103) {
@@ -3363,7 +3363,7 @@ public class SceneGraph {
 								local135 = true;
 							}
 						}
-						@Pc(275) Scenery local275 = getScenery(arg4, local114, local72);
+						@Pc(275) Scenery local275 = getScenery(level, local114, local72);
 						if (local275 != null) {
 							@Pc(287) int local287 = (int) (local275.key >> 14) & 0x3F;
 							if (local287 == 9) {
@@ -3376,13 +3376,13 @@ public class SceneGraph {
 									local328 = local99 >= local114 + 1;
 									local315 = local114 - 1 >= local90;
 									if (!local315 && local72 + 1 <= local65) {
-										local343 = local18.aShortArray30[local24 + 1];
+										local343 = light.aShortArray30[local24 + 1];
 										local349 = local37 + (local343 >> 8);
 										local355 = local349 + (local343 & 0xFF);
 										local315 = local349 < local114 && local114 < local355;
 									}
 									if (!local328 && local72 - 1 >= local46) {
-										local343 = local18.aShortArray30[local24 - 1];
+										local343 = light.aShortArray30[local24 - 1];
 										local349 = local37 + (local343 >> 8);
 										local355 = local349 + (local343 & 0xFF);
 										local328 = local114 > local349 && local114 < local355;
@@ -3398,13 +3398,13 @@ public class SceneGraph {
 									local315 = local90 <= local114 - 1;
 									local328 = local114 + 1 <= local99;
 									if (!local315 && local72 - 1 >= local46) {
-										local343 = local18.aShortArray30[local24 - 1];
+										local343 = light.aShortArray30[local24 - 1];
 										local349 = (local343 >> 8) + local37;
 										local355 = local349 + (local343 & 0xFF);
 										local315 = local349 < local114 && local114 < local355;
 									}
 									if (!local328 && local72 + 1 <= local65) {
-										local343 = local18.aShortArray30[local24 + 1];
+										local343 = light.aShortArray30[local24 + 1];
 										local349 = (local343 >> 8) + local37;
 										local355 = local349 + (local343 & 0xFF);
 										local328 = local349 < local114 && local355 > local114;
@@ -3441,11 +3441,11 @@ public class SceneGraph {
 				}
 				local24 = 0;
 				local28.method1555();
-				if ((local18.z >> 7) - local18.radius < 0) {
-					local24 = local18.radius - (local18.z >> 7);
+				if ((light.z >> 7) - light.radius < 0) {
+					local24 = light.radius - (light.z >> 7);
 				}
 				for (local72 = local46; local72 <= local65; local72++) {
-					local84 = local18.aShortArray30[local24];
+					local84 = light.aShortArray30[local24];
 					local90 = (local84 >> 8) + local37;
 					local99 = (local84 & 0xFF) + local90 - 1;
 					if (local99 > 103) {
@@ -3469,13 +3469,13 @@ public class SceneGraph {
 								continue;
 							}
 							if (arg7[local114][local72] != 0) {
-								method2578(arg0, arg9, local114, arg6, local72, anIntArrayArray35[arg7[local114][local72]], local28, local18, arg10, arg2[local114][local72]);
+								method2578(arg0, arg9, local114, arg6, local72, anIntArrayArray35[arg7[local114][local72]], local28, light, arg10, arg2[local114][local72]);
 								continue;
 							}
 						} else if (local775 != 0) {
 							local805 = FloTypeList.method4395(local775 - 1);
 							if (local805.baseColor == -1) {
-								method2578(arg0, arg9, local114, arg6, local72, anIntArrayArray8[arg7[local114][local72]], local28, local18, arg10, arg2[local114][local72]);
+								method2578(arg0, arg9, local114, arg6, local72, anIntArrayArray8[arg7[local114][local72]], local28, light, arg10, arg2[local114][local72]);
 								continue;
 							}
 							@Pc(815) byte local815 = arg7[local114][local72];
@@ -3483,7 +3483,7 @@ public class SceneGraph {
 								local791 = true;
 							}
 						}
-						@Pc(899) Scenery local899 = getScenery(arg4, local114, local72);
+						@Pc(899) Scenery local899 = getScenery(level, local114, local72);
 						if (local899 != null) {
 							@Pc(911) int local911 = (int) (local899.key >> 14) & 0x3F;
 							if (local911 == 9) {
@@ -3496,13 +3496,13 @@ public class SceneGraph {
 									local328 = local114 - 1 >= local90;
 									local947 = local99 >= local114 + 1;
 									if (!local328 && local65 >= local72 + 1) {
-										local961 = local18.aShortArray30[local24 + 1];
+										local961 = light.aShortArray30[local24 + 1];
 										local355 = (local961 >> 8) + local37;
 										local973 = (local961 & 0xFF) + local355;
 										local328 = local114 > local355 && local973 > local114;
 									}
 									if (!local947 && local72 - 1 >= local46) {
-										local961 = local18.aShortArray30[local24 - 1];
+										local961 = light.aShortArray30[local24 - 1];
 										local355 = local37 + (local961 >> 8);
 										local973 = (local961 & 0xFF) + local355;
 										local947 = local355 < local114 && local973 > local114;
@@ -3520,13 +3520,13 @@ public class SceneGraph {
 									local328 = local114 - 1 >= local90;
 									local947 = local99 >= local114 + 1;
 									if (!local328 && local46 <= local72 - 1) {
-										local961 = local18.aShortArray30[local24 - 1];
+										local961 = light.aShortArray30[local24 - 1];
 										local355 = local37 + (local961 >> 8);
 										local973 = (local961 & 0xFF) + local355;
 										local328 = local114 > local355 && local973 > local114;
 									}
 									if (!local947 && local65 >= local72 + 1) {
-										local961 = local18.aShortArray30[local24 + 1];
+										local961 = light.aShortArray30[local24 + 1];
 										local355 = local37 + (local961 >> 8);
 										local973 = (local961 & 0xFF) + local355;
 										local947 = local114 > local355 && local973 > local114;
@@ -3542,23 +3542,23 @@ public class SceneGraph {
 									}
 								}
 								if (local917 != null) {
-									method2578(arg0, arg9, local114, arg6, local72, local917, local28, local18, arg10, local789);
+									method2578(arg0, arg9, local114, arg6, local72, local917, local28, light, arg10, local789);
 								}
 								continue;
 							}
 						}
 						if (local791) {
-							method2578(arg0, arg9, local114, arg6, local72, anIntArrayArray8[arg7[local114][local72]], local28, local18, arg10, arg2[local114][local72]);
-							method2578(arg0, arg9, local114, arg6, local72, anIntArrayArray35[arg7[local114][local72]], local28, local18, arg10, arg2[local114][local72]);
+							method2578(arg0, arg9, local114, arg6, local72, anIntArrayArray8[arg7[local114][local72]], local28, light, arg10, arg2[local114][local72]);
+							method2578(arg0, arg9, local114, arg6, local72, anIntArrayArray35[arg7[local114][local72]], local28, light, arg10, arg2[local114][local72]);
 						} else {
-							method2578(arg0, arg9, local114, arg6, local72, anIntArrayArray35[0], local28, local18, arg10, local789);
+							method2578(arg0, arg9, local114, arg6, local72, anIntArrayArray35[0], local28, light, arg10, local789);
 						}
 					}
 					local24++;
 				}
 				if (local28.anInt2017 > 0 && local28.anInt2018 > 0) {
 					local28.method1554();
-					local18.aClass45_1 = local28;
+					light.aClass45_1 = local28;
 				}
 			}
 		}
@@ -5259,9 +5259,9 @@ public class SceneGraph {
 				} while (local515 <= 0);
 				for (local243 = 0; local243 < local515; local243++) {
 					@Pc(529) Light local529 = new Light(local95);
-					if (local529.anInt2243 == 31) {
-						@Pc(541) LightType local541 = LightTypeList.get(local95.g2());
-						local529.method1762(local541.anInt2865, local541.anInt2873, local541.anInt2867, local541.anInt2872);
+					if (local529.lightType == 31) {
+						@Pc(541) LightType lightType = LightTypeList.get(local95.g2());
+						local529.setUpLightType(lightType.flickerType, lightType.anInt2873, lightType.alphaMin, lightType.alphaMax);
 					}
 					local529.z += arg3 << 7;
 					local529.x += arg4 << 7;
@@ -5420,9 +5420,9 @@ public class SceneGraph {
 				} while (local497 <= 0);
 				for (local232 = 0; local232 < local497; local232++) {
 					@Pc(517) Light local517 = new Light(local96);
-					if (local517.anInt2243 == 31) {
-						@Pc(529) LightType local529 = LightTypeList.get(local96.g2());
-						local517.method1762(local529.anInt2865, local529.anInt2873, local529.anInt2867, local529.anInt2872);
+					if (local517.lightType == 31) {
+						@Pc(529) LightType lightType = LightTypeList.get(local96.g2());
+						local517.setUpLightType(lightType.flickerType, lightType.anInt2873, lightType.alphaMin, lightType.alphaMax);
 					}
 					local417 = local517.x >> 7;
 					local255 = local517.z >> 7;

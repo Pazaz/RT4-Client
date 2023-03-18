@@ -1051,7 +1051,7 @@ public class LoginManager {
 		ClientProt.ping(true);
 		SceneGraph.method1169(PathFinder.collisionMaps, false);
 		if (GlRenderer.enabled) {
-			LightingManager.method2395();
+			LightingManager.calculateLightRadiuses();
 		}
 		ClientProt.ping(true);
 		i = SceneGraph.lastVisibleLevel;
