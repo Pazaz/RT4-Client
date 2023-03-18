@@ -37,7 +37,7 @@ public class LightingManager {
 	@OriginalMember(owner = "client!jf", name = "i", descriptor = "I")
 	private static int anInt3031;
 	@OriginalMember(owner = "client!jf", name = "j", descriptor = "I")
-	private static int anInt3032;
+	private static int levels;
 	@OriginalMember(owner = "client!jf", name = "k", descriptor = "I")
 	private static int anInt3033;
 	@OriginalMember(owner = "client!jf", name = "m", descriptor = "[Z")
@@ -169,11 +169,11 @@ public class LightingManager {
 	}
 
 	@OriginalMember(owner = "client!jf", name = "a", descriptor = "(III)V")
-	public static void method2392() {
-		anInt3032 = 4;
+	public static void setSize() {
+		levels = 4;
 		width = 104;
 		length = 104;
-		anIntArrayArrayArray11 = new int[anInt3032][width][length];
+		anIntArrayArrayArray11 = new int[levels][width][length];
 	}
 
 	@OriginalMember(owner = "client!jf", name = "a", descriptor = "(IIIIII)V")
@@ -181,11 +181,11 @@ public class LightingManager {
 		if (!Preferences.highDetailLighting || anInt3031 == level && anInt3033 == nodeX && anInt3029 == nodeY && anInt3035 == nodeX && anInt3030 == nodeY) {
 			return;
 		}
-		@Pc(20) int local20;
-		for (local20 = 0; local20 < 4; local20++) {
-			aBooleanArray66[local20] = false;
+		@Pc(20) int i;
+		for (i = 0; i < 4; i++) {
+			aBooleanArray66[i] = false;
 		}
-		local20 = 0;
+		i = 0;
 		@Pc(39) int local39 = anIntArrayArrayArray11[level][nodeX][nodeY];
 		while (true) {
 			@Pc(47) int local47;
@@ -200,9 +200,9 @@ public class LightingManager {
 						continue label72;
 					}
 				}
-				anIntArray283[local20++] = local47;
+				anIntArray283[i++] = local47;
 			}
-			for (local47 = 0; local47 < local20; local47++) {
+			for (local47 = 0; local47 < i; local47++) {
 				for (local53 = 0; local53 < 4; local53++) {
 					if (!aBooleanArray66[local53]) {
 						anIntArray284[local53] = anIntArray283[local47];
@@ -228,9 +228,9 @@ public class LightingManager {
 	}
 
 	@OriginalMember(owner = "client!jf", name = "a", descriptor = "(IZ)V")
-	public static void method2394(@OriginalArg(0) int arg0, @OriginalArg(1) boolean arg1) {
-		for (@Pc(1) int local1 = 0; local1 < lightCount; local1++) {
-			lights[local1].method1765(arg1, arg0);
+	public static void method2394(@OriginalArg(0) int time, @OriginalArg(1) boolean arg1) {
+		for (@Pc(1) int i = 0; i < lightCount; i++) {
+			lights[i].method1765(arg1, time);
 		}
 		anInt3031 = -1;
 		anInt3033 = -1;
@@ -240,31 +240,31 @@ public class LightingManager {
 	}
 
 	@OriginalMember(owner = "client!jf", name = "b", descriptor = "()V")
-	public static void method2395() {
-		for (@Pc(1) int local1 = 0; local1 < lightCount; local1++) {
-			@Pc(8) Light local8 = lights[local1];
-			@Pc(11) int local11 = local8.level;
-			if (local8.aBoolean124) {
-				local11 = 0;
+	public static void calculateLightRadiuses() {
+		for (@Pc(1) int i = 0; i < lightCount; i++) {
+			@Pc(8) Light light = lights[i];
+			@Pc(11) int minLevel = light.level;
+			if (light.shineOnLowerLevels) {
+				minLevel = 0;
 			}
-			@Pc(19) int local19 = local8.level;
-			if (local8.aBoolean126) {
-				local19 = 3;
+			@Pc(19) int maxLevel = light.level;
+			if (light.shineOnHigherLevels) {
+				maxLevel = 3;
 			}
-			for (@Pc(26) int local26 = local11; local26 <= local19; local26++) {
+			for (@Pc(26) int level = minLevel; level <= maxLevel; level++) {
 				@Pc(31) int local31 = 0;
-				@Pc(39) int local39 = (local8.z >> 7) - local8.radius;
+				@Pc(39) int local39 = (light.z >> 7) - light.radius;
 				if (local39 < 0) {
 					local31 = -local39;
 					local39 = 0;
 				}
-				@Pc(55) int local55 = (local8.z >> 7) + local8.radius;
+				@Pc(55) int local55 = (light.z >> 7) + light.radius;
 				if (local55 > length - 1) {
 					local55 = length - 1;
 				}
 				for (@Pc(66) int local66 = local39; local66 <= local55; local66++) {
-					@Pc(75) short local75 = local8.aShortArray30[local31++];
-					@Pc(87) int local87 = (local8.x >> 7) + (local75 >> 8) - local8.radius;
+					@Pc(75) short local75 = light.aShortArray30[local31++];
+					@Pc(87) int local87 = (light.x >> 7) + (local75 >> 8) - light.radius;
 					@Pc(95) int local95 = local87 + (local75 & 0xFF) - 1;
 					if (local87 < 0) {
 						local87 = 0;
@@ -273,15 +273,15 @@ public class LightingManager {
 						local95 = width - 1;
 					}
 					for (@Pc(110) int local110 = local87; local110 <= local95; local110++) {
-						@Pc(121) int local121 = anIntArrayArrayArray11[local26][local110][local66];
+						@Pc(121) int local121 = anIntArrayArrayArray11[level][local110][local66];
 						if ((local121 & 0xFF) == 0) {
-							anIntArrayArrayArray11[local26][local110][local66] = local121 | local1 + 1;
+							anIntArrayArrayArray11[level][local110][local66] = local121 | i + 1;
 						} else if ((local121 & 0xFF00) == 0) {
-							anIntArrayArrayArray11[local26][local110][local66] = local121 | local1 + 1 << 8;
+							anIntArrayArrayArray11[level][local110][local66] = local121 | i + 1 << 8;
 						} else if ((local121 & 0xFF0000) == 0) {
-							anIntArrayArrayArray11[local26][local110][local66] = local121 | local1 + 1 << 16;
+							anIntArrayArrayArray11[level][local110][local66] = local121 | i + 1 << 16;
 						} else if ((local121 & 0xFF000000) == 0) {
-							anIntArrayArrayArray11[local26][local110][local66] = local121 | local1 + 1 << 24;
+							anIntArrayArrayArray11[level][local110][local66] = local121 | i + 1 << 24;
 						}
 					}
 				}
@@ -300,14 +300,14 @@ public class LightingManager {
 	}
 
 	@OriginalMember(owner = "client!jf", name = "a", descriptor = "(IIIII)V")
-	public static void method2397(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
+	public static void method2397(@OriginalArg(0) int level, @OriginalArg(1) int tileX, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int tileZ) {
 		if (!Preferences.highDetailLighting) {
 			return;
 		}
 		label43:
 		for (@Pc(4) int local4 = 0; local4 < 4; local4++) {
 			if (anIntArray284[local4] != -1) {
-				@Pc(20) int local20 = anIntArrayArrayArray11[arg0][arg1][arg2];
+				@Pc(20) int local20 = anIntArrayArrayArray11[level][tileX][arg2];
 				@Pc(28) int local28;
 				while (local20 != 0) {
 					local28 = (local20 & 0xFF) - 1;
@@ -316,7 +316,7 @@ public class LightingManager {
 						continue label43;
 					}
 				}
-				local20 = anIntArrayArrayArray11[arg0][arg3][arg4];
+				local20 = anIntArrayArrayArray11[level][arg3][tileZ];
 				while (local20 != 0) {
 					local28 = (local20 & 0xFF) - 1;
 					local20 >>>= 0x8;
@@ -331,7 +331,7 @@ public class LightingManager {
 	}
 
 	@OriginalMember(owner = "client!jf", name = "c", descriptor = "()V")
-	public static void method2398() {
+	public static void clear() {
 		lights = null;
 		anIntArray284 = null;
 		enabledLights = null;
@@ -357,13 +357,13 @@ public class LightingManager {
 	}
 
 	@OriginalMember(owner = "client!jf", name = "f", descriptor = "()V")
-	public static void method2401() {
+	public static void init() {
 		lights = new Light[255];
 		anIntArray284 = new int[4];
 		enabledLights = new boolean[4];
 		anIntArray283 = new int[4];
 		aBooleanArray66 = new boolean[4];
-		anIntArrayArrayArray11 = new int[anInt3032][width][length];
+		anIntArrayArrayArray11 = new int[levels][width][length];
 	}
 
 	@OriginalMember(owner = "client!jf", name = "a", descriptor = "(II[[[Lclient!bj;)V")
@@ -453,10 +453,10 @@ public class LightingManager {
 	@OriginalMember(owner = "client!jf", name = "g", descriptor = "()V")
 	public static void method2404() {
 		lightCount = 0;
-		for (@Pc(3) int local3 = 0; local3 < anInt3032; local3++) {
-			for (@Pc(8) int local8 = 0; local8 < width; local8++) {
-				for (@Pc(13) int local13 = 0; local13 < length; local13++) {
-					anIntArrayArrayArray11[local3][local8][local13] = 0;
+		for (@Pc(3) int level = 0; level < levels; level++) {
+			for (@Pc(8) int x = 0; x < width; x++) {
+				for (@Pc(13) int z = 0; z < length; z++) {
+					anIntArrayArrayArray11[level][x][z] = 0;
 				}
 			}
 		}
