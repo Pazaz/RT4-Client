@@ -73,7 +73,9 @@ class plugin : Plugin() {
     }
 
     private fun loadDefaultZoom() {
-        API.SetCameraZoom(API.GetData(defaultZoomKey) as Int, minZoom, maxZoom)
+        val zoom: Int = API.GetData(defaultZoomKey) as? Int ?: return
+
+        API.SetCameraZoom(zoom, minZoom, maxZoom)
     }
 
     override fun Draw() {
