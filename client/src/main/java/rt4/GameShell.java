@@ -688,7 +688,7 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			frame.toFront();
 			@Pc(44) Insets insets = frame.getInsets();
 			frame.setSize(insets.left + frameWidth + insets.right, insets.top + frameHeight + insets.bottom);
-			GameShell.setFpsTarget(getCurrentDevice().getDisplayMode().getRefreshRate());
+                        configureTargetFPS();
 			signLink2 = signLink = new SignLink(null, cacheId, cacheSubDir, 28);
 			@Pc(76) PrivilegedRequest request = signLink.startThread(1, this);
 			while (request.status == 0) {
@@ -699,6 +699,14 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			TracingException.report(null, ex);
 		}
 	}
+
+        private final void configureTargetFPS() {
+            int refreshRate = getCurrentDevice().getDisplayMode().getRefreshRate();
+            if (refreshRate == java.awt.DisplayMode.REFRESH_RATE_UNKNOWN) {  
+                refreshRate = 60; //just assume 60hz and call it a day.
+            }
+            GameShell.setFpsTarget(refreshRate);
+        }
 
 	@OriginalMember(owner = "client!rc", name = "windowOpened", descriptor = "(Ljava/awt/event/WindowEvent;)V")
 	@Override
