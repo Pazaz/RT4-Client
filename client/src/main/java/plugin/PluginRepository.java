@@ -180,6 +180,6 @@ public class PluginRepository {
     }
 
     public static void OnLogin() {
-        loadedPlugins.values().forEach((plugin) -> plugin.OnLogin());
+        loadedPlugins.values().forEach(Plugin::OnLogin);
     }
 }

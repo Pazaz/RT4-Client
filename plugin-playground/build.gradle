@@ -43,15 +43,15 @@ public class plugin extends Plugin {
     public void Init() {
         //Init() is called when the plugin is loaded
     }
-    
-    @Override
-    public void Update(long deltaTime) {
-        //Update() is called once per game loop, with deltaTime being the time since last loop.
-    }
  
     @Override
     public void Tick() {
         //Tick() is called once per tick (600ms)
+    }
+    
+    @Override
+    public void Update(long deltaTime) {
+        //Update() is called once per game loop, with deltaTime being the time since last loop.
     }
     
     @Override
@@ -85,13 +85,13 @@ class plugin : Plugin() {
     override fun Init() {
         //Init() is called when the plugin is loaded
     }
-    
-    override fun Update(deltaTime: Long) {
-        //Update() is called once per game loop, with deltaTime being the time since last loop.
-    }
  
     override fun Tick() {
         //Tick() is called once per tick (600ms)
+    }
+    
+    override fun Update(deltaTime: Long) {
+        //Update() is called once per game loop, with deltaTime being the time since last loop.
     }
     
     override fun Draw() {
