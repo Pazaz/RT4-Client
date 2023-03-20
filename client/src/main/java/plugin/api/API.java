@@ -171,12 +171,20 @@ public class API {
         return Camera.pitchTarget;
     }
 
+    public static void UpdateCameraZoom(int zoomDiff, int min, int max) {
+        Camera.ZOOM = clamp(min, max, Camera.ZOOM + (zoomDiff >= 0 ? 50 : -50));
+    }
+
     public static void UpdateCameraZoom(int zoomDiff) {
-        Camera.ZOOM = clamp(200, 1200, Camera.ZOOM + (zoomDiff >= 0 ? 50 : -50));
+        UpdateCameraZoom(zoomDiff, 200, 1200);
+    }
+
+    public static void SetCameraZoom(int zoomTarget, int min, int max) {
+        Camera.ZOOM = clamp(min, max, zoomTarget);
     }
 
     public static void SetCameraZoom(int zoomTarget) {
-        Camera.ZOOM = clamp(200, 1200, zoomTarget);
+        SetCameraZoom(zoomTarget, 200, 1200);
     }
 
     public static int GetCameraZoom() {

@@ -24,7 +24,7 @@ public abstract class Plugin {
     }
 
     /**
-     * Init() is called when the plugin is first loaded
+     * Init() is called when the plugin is first loaded and any time the window is resized
      */
     public void Init() {}
 
