@@ -16,6 +16,7 @@ class plugin : Plugin() {
     override fun Init() {
         GlobalConfig.TILE_DISTANCE = API.GetData(viewDistanceKey) as? Int ?: return;
         GlobalConfig.VIEW_DISTANCE = GlobalConfig.TILE_DISTANCE * 128
+        GlobalConfig.VIEW_FADE_DISTANCE = GlobalConfig.TILE_DISTANCE.toFloat() / 28.0f * 256.0f
     }
 
     override fun ProcessCommand(commandStr: String?, args: Array<out String>?) {
