@@ -22,7 +22,7 @@ class plugin : Plugin() {
         }
     }
 
-    override fun Draw(timeDelta: Long) {
+    override fun Draw() {
         if (!debugEnabled) return
         val sb = StringBuilder()
         val entries = API.GetMiniMenuEntries()

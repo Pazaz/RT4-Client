@@ -37,7 +37,7 @@ class plugin : Plugin() {
         }
     }
 
-    override fun Draw(timeDelta: Long) {
+    override fun Draw() {
         if (mouseDebugEnabled) {
             API.DrawText(
                 FontType.SMALL,
