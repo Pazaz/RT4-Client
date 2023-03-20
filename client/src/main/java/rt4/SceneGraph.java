@@ -2909,6 +2909,10 @@ public class SceneGraph {
 		cameraTileX = renderX / 128;
 		cameraTileZ = renderZ / 128;
 		LightingManager.minimumVisibleX = cameraTileX - visibility;
+		// TODO: Setting these to 1 instead of 0 is slightly breaking, i.e. changes the functionality a bit
+		// when the camera is outside the bounds of the map, the very first tile on the
+		// negative edge X and negative edge Z don't get rendered because minimumVisibleX/Z
+		// are 1 when they should ideally be 0 but the game crashes. needs fixing.
 		if (LightingManager.minimumVisibleX <= 0) {
 			LightingManager.minimumVisibleX = 1;
 		}
@@ -3092,10 +3096,6 @@ public class SceneGraph {
 		for (l = firstVisibleLevel; l < levels; l++) {
 			levelTiles = tiles[l];
 			for (worldZ = -visibility; worldZ <= 0; worldZ++) {
-				// TODO: These clamps are slightly breaking, i.e. changes the functionality a bit
-				// when the camera is outside the bounds of the map, the very first tile on the
-				// negative edge X and negative edge Z don't get rendered because minimumVisibleX/Z
-				// are 1 when they should ideally be 0 but the game crashes. needs fixing.
 				positiveXEdge = cameraTileX + worldZ;
 				negativeXEdge = cameraTileX - worldZ;
 				if (positiveXEdge >= LightingManager.minimumVisibleX || negativeXEdge < LightingManager.maximumVisibleX) {
