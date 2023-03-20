@@ -270,7 +270,7 @@ public final class ScriptRunner {
 			}
 		}
 
-		method4302();
+		handleRemoveRoofsSelectively();
 		if (GlRenderer.enabled) {
 			GlRaster.setClip(x, y, x + width, y - -height);
 			@Pc(248) float local248 = (float) Camera.cameraPitch * 0.17578125F;
@@ -1316,33 +1316,33 @@ public final class ScriptRunner {
 	}
 
 	@OriginalMember(owner = "client!uh", name = "f", descriptor = "(I)V")
-	public static void method4302() {
+	public static void handleRemoveRoofsSelectively() {
 		if (getShouldRemoveRoofs() != 2) {
 			return;
 		}
 
 		@Pc(27) byte local27 = (byte) (anInt3325 - 4 & 0xFF);
 		@Pc(31) int local31 = anInt3325 % 104;
-		@Pc(33) int renderTileX;
-		@Pc(40) int renderTileZ;
-		for (renderTileX = 0; renderTileX < 4; renderTileX++) {
-			for (renderTileZ = 0; renderTileZ < 104; renderTileZ++) {
-				removeRoofTiles[renderTileX][local31][renderTileZ] = local27;
+		@Pc(33) int level;
+		@Pc(40) int tileZ;
+		for (level = 0; level < 4; level++) {
+			for (tileZ = 0; tileZ < 104; tileZ++) {
+				removeRoofTiles[level][local31][tileZ] = local27;
 			}
 		}
 		if (Player.plane == 3) {
 			return;
 		}
-		for (renderTileX = 0; renderTileX < 2; renderTileX++) {
-			anIntArray205[renderTileX] = -1000000;
-			anIntArray338[renderTileX] = 1000000;
-			anIntArray518[renderTileX] = 0;
-			anIntArray476[renderTileX] = 1000000;
-			anIntArray134[renderTileX] = 0;
+		for (level = 0; level < 2; level++) {
+			anIntArray205[level] = -1000000;
+			anIntArray338[level] = 1000000;
+			anIntArray518[level] = 0;
+			anIntArray476[level] = 1000000;
+			anIntArray134[level] = 0;
 		}
 		if (Camera.cameraType != 1) {
-			renderTileX = SceneGraph.getTileHeight(Player.plane, Camera.renderX, Camera.renderZ);
-			if (renderTileX - Camera.renderY < 800 && (SceneGraph.tileRenderFlags[Player.plane][Camera.renderX >> 7][Camera.renderZ >> 7] & 0x4) != 0) {
+			level = SceneGraph.getTileHeight(Player.plane, Camera.renderX, Camera.renderZ);
+			if (level - Camera.renderY < 800 && (SceneGraph.tileRenderFlags[Player.plane][Camera.renderX >> 7][Camera.renderZ >> 7] & 0x4) != 0) {
 				method4348(false, Camera.renderX >> 7, Camera.renderZ >> 7, SceneGraph.tiles, 1);
 			}
 			return;
@@ -1353,21 +1353,27 @@ public final class ScriptRunner {
 		if (Camera.cameraPitch >= 310) {
 			return;
 		}
-		@Pc(135) int playerTileZ = PlayerList.self.zFine >> 7;
-		renderTileZ = Camera.renderZ >> 7;
-		@Pc(146) int cameraTileDistanceZ;
-		if (renderTileZ < playerTileZ) {
-			cameraTileDistanceZ = playerTileZ - renderTileZ;
-		} else {
-			cameraTileDistanceZ = renderTileZ - playerTileZ;
+		int renderTileZ = Camera.renderZ >> 7;
+		int renderTileX = Camera.renderX >> 7;
+
+		if (renderTileZ < 0 || renderTileZ >= 104 || renderTileX < 0 || renderTileX >= 104)
+		{
+			return;
 		}
-		renderTileX = Camera.renderX >> 7;
+
+		@Pc(135) int playerTileZ = PlayerList.self.zFine >> 7;
 		@Pc(162) int playerTileX = PlayerList.self.xFine >> 7;
 		@Pc(174) int cameraTileDistanceX;
 		if (playerTileX > renderTileX) {
 			cameraTileDistanceX = playerTileX - renderTileX;
 		} else {
 			cameraTileDistanceX = renderTileX - playerTileX;
+		}
+		@Pc(146) int cameraTileDistanceZ;
+		if (renderTileZ < playerTileZ) {
+			cameraTileDistanceZ = playerTileZ - renderTileZ;
+		} else {
+			cameraTileDistanceZ = renderTileZ - playerTileZ;
 		}
 		@Pc(192) int local192;
 		@Pc(186) int local186;
@@ -1430,7 +1436,7 @@ public final class ScriptRunner {
 	}
 
 	@OriginalMember(owner = "client!lf", name = "a", descriptor = "(I)V")
-	public static void method2742() {
+	public static void setLoadingState() {
 		if (client.gameState == 10 && GlRenderer.enabled) {
 			client.setGameState(28);
 		}
@@ -5020,7 +5026,7 @@ public final class ScriptRunner {
 														if (GlRenderer.enabled) {
 															FogManager.setInstantFade();
 															if (!Preferences.highDetailLighting) {
-																method2742();
+																setLoadingState();
 															}
 														}
 														ObjTypeList.clearSprites();
@@ -5032,7 +5038,7 @@ public final class ScriptRunner {
 														isp--;
 														Preferences.setAllVisibleLevels(intStack[isp] == 1);
 														LocTypeList.clear();
-														method2742();
+														setLoadingState();
 														setUpRemoveRoofTiles();
 														Preferences.write(GameShell.signLink);
 														Preferences.sentToServer = false;
@@ -5049,7 +5055,7 @@ public final class ScriptRunner {
 													if (opcode == 6005) {
 														isp--;
 														Preferences.showGroundDecorations = intStack[isp] == 1;
-														method2742();
+														setLoadingState();
 														Preferences.write(GameShell.signLink);
 														Preferences.sentToServer = false;
 														continue;
@@ -5123,7 +5129,7 @@ public final class ScriptRunner {
 																Rasteriser.setBrightness(0.6F);
 															}
 														}
-														method2742();
+														setLoadingState();
 														Preferences.write(GameShell.signLink);
 														Preferences.sentToServer = false;
 														continue;
@@ -5132,7 +5138,7 @@ public final class ScriptRunner {
 														isp--;
 														Preferences.highWaterDetail = intStack[isp] == 1;
 														if (GlRenderer.enabled) {
-															method2742();
+															setLoadingState();
 														}
 														Preferences.write(GameShell.signLink);
 														Preferences.sentToServer = false;
