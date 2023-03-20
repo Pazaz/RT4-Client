@@ -383,42 +383,42 @@ public class LightingManager {
 		gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_SRC0_RGB, GL2.GL_CONSTANT);
 		gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_OPERAND0_RGB, GL2.GL_SRC_ALPHA);
 		label71:
-		for (@Pc(56) int local56 = 0; local56 < lightCount; local56++) {
-			@Pc(63) Light local63 = lights[local56];
-			@Pc(66) int local66 = local63.level;
-			if (local63.aBoolean125) {
-				local66--;
+		for (@Pc(56) int i = 0; i < lightCount; i++) {
+			@Pc(63) Light light = lights[i];
+			@Pc(66) int lightLevel = light.level;
+			if (light.aBoolean125) {
+				lightLevel--;
 			}
-			if (local63.aClass45_1 != null) {
-				@Pc(76) int local76 = 0;
-				@Pc(84) int local84 = (local63.z >> 7) - local63.radius;
-				@Pc(92) int local92 = (local63.z >> 7) + local63.radius;
-				if (local92 >= maximumVisibleZ) {
-					local92 = maximumVisibleZ - 1;
+			if (light.aClass45_1 != null) {
+				@Pc(76) int difference = 0;
+				@Pc(84) int negativeRadiusEdge = (light.z >> 7) - light.radius;
+				@Pc(92) int positiveRadiusEdge = (light.z >> 7) + light.radius;
+				if (positiveRadiusEdge >= maximumVisibleZ) {
+					positiveRadiusEdge = maximumVisibleZ - 1;
 				}
-				if (local84 < minimumVisibleZ) {
-					local76 = minimumVisibleZ - local84;
-					local84 = minimumVisibleZ;
+				if (negativeRadiusEdge < minimumVisibleZ) {
+					difference = minimumVisibleZ - negativeRadiusEdge;
+					negativeRadiusEdge = minimumVisibleZ;
 				}
-				for (@Pc(112) int local112 = local84; local112 <= local92; local112++) {
-					@Pc(121) short local121 = local63.aShortArray30[local76++];
-					@Pc(133) int local133 = (local63.x >> 7) + (local121 >> 8) - local63.radius;
-					@Pc(141) int local141 = local133 + (local121 & 0xFF) - 1;
-					if (local133 < minimumVisibleX) {
-						local133 = minimumVisibleX;
+				for (@Pc(112) int zD = negativeRadiusEdge; zD <= positiveRadiusEdge; zD++) {
+					@Pc(121) short local121 = light.aShortArray30[difference++];
+					@Pc(133) int radiusLeftEdge = (light.x >> 7) + (local121 >> 8) - light.radius;
+					@Pc(141) int radiusRightEdge = radiusLeftEdge + (local121 & 0xFF) - 1;
+					if (radiusLeftEdge < minimumVisibleX) {
+						radiusLeftEdge = minimumVisibleX;
 					}
-					if (local141 >= maximumVisibleX) {
-						local141 = maximumVisibleX - 1;
+					if (radiusRightEdge >= maximumVisibleX) {
+						radiusRightEdge = maximumVisibleX - 1;
 					}
-					for (@Pc(155) int local155 = local133; local155 <= local141; local155++) {
-						@Pc(160) Tile local160 = null;
-						if (local66 >= 0) {
-							local160 = arg2[local66][local155][local112];
+					for (@Pc(155) int xD = radiusLeftEdge; xD <= radiusRightEdge; xD++) {
+						@Pc(160) Tile tile = null;
+						if (lightLevel >= 0) {
+							tile = arg2[lightLevel][xD][zD];
 						}
-						if (local66 < 0 || local160 != null && local160.aBoolean45) {
-							GlRenderer.method4159(201.5F - (float) local63.level * 50.0F - 1.5F);
-							gl.glTexEnvfv(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_COLOR, new float[]{0.0F, 0.0F, 0.0F, local63.alpha}, 0);
-							local63.aClass45_1.method1556();
+						if (lightLevel < 0 || tile != null && tile.aBoolean45) {
+							GlRenderer.method4159(201.5F - (float) light.level * 50.0F - 1.5F);
+							gl.glTexEnvfv(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_COLOR, new float[]{0.0F, 0.0F, 0.0F, light.alpha}, 0);
+							light.aClass45_1.method1556();
 							continue label71;
 						}
 					}

@@ -11,11 +11,11 @@ public final class Light {
 	@OriginalMember(owner = "client!f", name = "P", descriptor = "[I")
 	public static int[] NOISE;
 
-	// THIS IS A WILD STAB IN THE DARK (hehe)
+	// TODO: this is an educated guess, needs confirming
 	@OriginalMember(owner = "client!gi", name = "a", descriptor = "Z")
 	public final boolean shineOnLowerLevels;
 
-	// THIS IS A WILD STAB IN THE DARK (hehe)
+	// confirm
 	@OriginalMember(owner = "client!gi", name = "A", descriptor = "Z")
 	public final boolean shineOnHigherLevels;
 
