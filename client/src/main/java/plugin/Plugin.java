@@ -29,8 +29,8 @@ public abstract class Plugin {
     public void Init() {}
 
     /**
-     * Update() is called by the client rendering loop so that plugins can draw information onto the screen.
-     * This will be called once per frame, meaning it is framerate bound.
+     * Update() is called once before every game loop so that plugins can grab inputs
+     * and update things that need to be drawn later.
      * @param deltaTime the time (ms) elapsed since the last update call.
      */
     public void Update(long deltaTime) {}
