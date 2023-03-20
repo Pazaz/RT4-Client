@@ -1589,8 +1589,9 @@ public final class client extends GameShell {
 			@Pc(24) GregorianCalendar gregorianCalendar = new GregorianCalendar();
 			MiniMenu.gregorianDateSeed = gregorianCalendar.get(Calendar.HOUR_OF_DAY) * 600 + gregorianCalendar.get(Calendar.MINUTE) * 10 + gregorianCalendar.get(Calendar.SECOND) / 6;
 			aRandom1.setSeed(MiniMenu.gregorianDateSeed);
-			PluginRepository.Update();
+			PluginRepository.Tick();
 		}
+		PluginRepository.Update();
 		this.js5NetworkLoop();
 		if (js5MasterIndex != null) {
 			js5MasterIndex.method179();

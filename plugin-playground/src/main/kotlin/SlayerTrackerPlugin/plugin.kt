@@ -31,7 +31,7 @@ class plugin : Plugin() {
     var slayerTaskAmount = 0
     var curSprite: Sprite? = null
 
-    override fun Draw(deltaTime: Long) {
+    override fun Draw() {
         if (slayerTaskAmount == 0 || slayerTaskID == -1) return
 
         API.FillRect(posX, posY, boxWidth, boxHeight, boxColor, boxOpacity)

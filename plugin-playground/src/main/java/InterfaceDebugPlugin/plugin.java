@@ -58,7 +58,7 @@ public class plugin extends Plugin {
     }
 
     @Override
-    public void Draw(long timeDelta) {
+    public void Draw() {
        if (!isEnabled) return;
 
        StringBuilder sb = new StringBuilder();

@@ -40,7 +40,7 @@ class plugin : Plugin() {
         displayMessageCounter = 0
     }
 
-    override fun Draw(timeDelta: Long) {
+    override fun Update(deltaTime: Long) {
         if (component == null)
             return
         when (timeMode) {
