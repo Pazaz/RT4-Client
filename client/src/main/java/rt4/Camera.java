@@ -111,19 +111,22 @@ public class Camera {
 			pitchTarget = 383;
 		}
 		yawTarget = mod(yawTarget, 2047.0d);
-		@Pc(33) int local33 = cameraX >> 7;
-		@Pc(37) int local37 = cameraZ >> 7;
-		@Pc(43) int local43 = SceneGraph.getTileHeight(Player.plane, cameraX, cameraZ);
+		@Pc(33) int cameraTileX = cameraX >> 7;
+		@Pc(37) int cameraTileZ = cameraZ >> 7;
+		@Pc(43) int playerTileHeight = SceneGraph.getTileHeight(Player.plane, cameraX, cameraZ);
+		if (playerTileHeight <= 0) {
+			return;
+		}
 		@Pc(45) int local45 = 0;
 		@Pc(64) int local64;
-		if (local33 > 3 && local37 > 3 && local33 < 100 && local37 < 100) {
-			for (local64 = local33 - 4; local64 <= local33 + 4; local64++) {
-				for (@Pc(73) int local73 = local37 - 4; local73 <= local37 + 4; local73++) {
+		if (cameraTileX > 3 && cameraTileZ > 3 && cameraTileX < 100 && cameraTileZ < 100) {
+			for (local64 = cameraTileX - 4; local64 <= cameraTileX + 4; local64++) {
+				for (@Pc(73) int local73 = cameraTileZ - 4; local73 <= cameraTileZ + 4; local73++) {
 					@Pc(80) int local80 = Player.plane;
 					if (local80 < 3 && (SceneGraph.tileRenderFlags[1][local64][local73] & 0x2) == 2) {
 						local80++;
 					}
-					@Pc(117) int local117 = (SceneGraph.aByteArrayArrayArray13[local80][local64][local73] & 0xFF) * 8 + local43 - SceneGraph.tileHeights[local80][local64][local73];
+					@Pc(117) int local117 = (SceneGraph.aByteArrayArrayArray13[local80][local64][local73] & 0xFF) * 8 + playerTileHeight - SceneGraph.tileHeights[local80][local64][local73];
 					if (local117 > local45) {
 						local45 = local117;
 					}
