@@ -26,7 +26,7 @@ public final class PlainTile {
 	public final int anInt4864;
 
 	@OriginalMember(owner = "client!rh", name = "i", descriptor = "I")
-	public final int anInt4869;
+	public final int tileTexture;
 
 	@OriginalMember(owner = "client!rh", name = "<init>", descriptor = "(IIIIIIZ)V")
 	public PlainTile(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) boolean arg6) {
@@ -36,6 +36,6 @@ public final class PlainTile {
 		this.anInt4871 = arg5;
 		this.aBoolean241 = arg6;
 		this.anInt4864 = arg3;
-		this.anInt4869 = arg4;
+		this.tileTexture = arg4;
 	}
 }

@@ -10,7 +10,7 @@ public final class MapMarker {
 	public int anInt4045;
 
 	@OriginalMember(owner = "client!nc", name = "c", descriptor = "I")
-	public int anInt4046;
+	public int targetZ;
 
 	@OriginalMember(owner = "client!nc", name = "f", descriptor = "I")
 	public int anInt4047;

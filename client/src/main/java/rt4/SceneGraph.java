@@ -628,7 +628,7 @@ public class SceneGraph {
 	}
 
 	@OriginalMember(owner = "client!vf", name = "a", descriptor = "(IIIILclient!th;Lclient!th;IIJ)V")
-	public static void setWall(@OriginalArg(0) int level, @OriginalArg(1) int x, @OriginalArg(2) int z, @OriginalArg(3) int arg3, @OriginalArg(4) Entity primary, @OriginalArg(5) Entity secondary, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) long key) {
+	public static void setWall(@OriginalArg(0) int level, @OriginalArg(1) int x, @OriginalArg(2) int z, @OriginalArg(3) int y, @OriginalArg(4) Entity primary, @OriginalArg(5) Entity secondary, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) long key) {
 		if (primary == null && secondary == null) {
 			return;
 		}
@@ -636,7 +636,7 @@ public class SceneGraph {
 		wall.key = key;
 		wall.xFine = x * 128 + 64;
 		wall.zFine = z * 128 + 64;
-		wall.anInt3051 = arg3;
+		wall.yFine = y;
 		wall.primary = primary;
 		wall.secondary = secondary;
 		wall.anInt3049 = arg6;
@@ -1282,13 +1282,13 @@ public class SceneGraph {
 			}
 			tiles[level][x][z].plainTile = tile;
 		} else {
-			@Pc(134) ShapedTile local134 = new ShapedTile(arg3, arg4, arg5, x, z, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
+			@Pc(134) ShapedTile shapedTile = new ShapedTile(arg3, arg4, arg5, x, z, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19);
 			for (level0 = level; level0 >= 0; level0--) {
 				if (tiles[level0][x][z] == null) {
 					tiles[level0][x][z] = new Tile(level0, x, z);
 				}
 			}
-			tiles[level][x][z].shapedTile = local134;
+			tiles[level][x][z].shapedTile = shapedTile;
 		}
 	}
 
@@ -1329,7 +1329,7 @@ public class SceneGraph {
 
 	@OriginalMember(owner = "client!ib", name = "a", descriptor = "(IIIIIIIILclient!th;IZJ)Z")
 	public static boolean method2256(@OriginalArg(0) int highestLevel, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) Entity arg8, @OriginalArg(9) int arg9, @OriginalArg(10) boolean arg10, @OriginalArg(11) long arg11) {
-		@Pc(6) boolean local6 = tileHeights == underwaterTileHeights;
+		@Pc(6) boolean underwater = tileHeights == underwaterTileHeights;
 		@Pc(8) int local8 = 0;
 		@Pc(17) int x;
 		for (@Pc(10) int local10 = arg1; local10 < arg1 + arg3; local10++) {
@@ -1381,12 +1381,12 @@ public class SceneGraph {
 				highestTile.interiorFlags[highestTile.sceneryLen] = local115;
 				highestTile.allInteriorFlags |= local115;
 				highestTile.sceneryLen++;
-				if (local6 && underWaterColors[x][y] != 0) {
+				if (underwater && underWaterColors[x][y] != 0) {
 					local8 = underWaterColors[x][y];
 				}
 			}
 		}
-		if (local6 && local8 != 0) {
+		if (underwater && local8 != 0) {
 			for (x = arg1; x < arg1 + arg3; x++) {
 				for (y = arg2; y < arg2 + arg4; y++) {
 					if (underWaterColors[x][y] == 0) {
@@ -1749,10 +1749,10 @@ public class SceneGraph {
 												}
 												if (local153.plainTile == null) {
 													if (local153.shapedTile != null) {
-														method2762(local153.shapedTile, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeZ, method187(0, nodeX, nodeZ));
+														renderShapedTile(local153.shapedTile, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeZ, method187(0, nodeX, nodeZ));
 													}
 												} else
-													method2610(local153.plainTile, 0, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeZ, method187(0, nodeX, nodeZ));
+													renderPlainTile(local153.plainTile, 0, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeZ, method187(0, nodeX, nodeZ));
 												var22 = local153.wall;
 												if (var22 != null) {
 													if (GlRenderer.enabled) {
@@ -1762,7 +1762,7 @@ public class SceneGraph {
 															LightingManager.method2388(var22.anInt3049, cameraX, cameraY, cameraZ, plane, nodeX, nodeZ);
 														}
 													}
-													var22.primary.render(0, pitchSin, pitchCos, yawSin, yawCos, var22.xFine - cameraX, var22.anInt3051 - cameraY, var22.zFine - cameraZ, var22.key, level, null);
+													var22.primary.render(0, pitchSin, pitchCos, yawSin, yawCos, var22.xFine - cameraX, var22.yFine - cameraY, var22.zFine - cameraZ, var22.key, level, null);
 												}
 												for (sceneryIndex = 0; sceneryIndex < local153.sceneryLen; sceneryIndex++) {
 													scenery = local153.scenery[sceneryIndex];
@@ -1781,18 +1781,18 @@ public class SceneGraph {
 											if (node.plainTile == null) {
 												if (node.shapedTile != null) {
 													if (method187(plane, nodeX, nodeZ)) {
-														method2762(node.shapedTile, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeZ, true);
+														renderShapedTile(node.shapedTile, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeZ, true);
 													} else {
 														var24 = true;
-														method2762(node.shapedTile, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeZ, false);
+														renderShapedTile(node.shapedTile, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeZ, false);
 													}
 												}
 											} else if (method187(plane, nodeX, nodeZ)) {
-												method2610(node.plainTile, plane, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeZ, true);
+												renderPlainTile(node.plainTile, plane, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeZ, true);
 											} else {
 												var24 = true;
 												if (node.plainTile.anInt4865 != 12345678 || MiniMenu.aBoolean187 && level <= MiniMenu.anInt3902) {
-													method2610(node.plainTile, plane, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeZ, false);
+													renderPlainTile(node.plainTile, plane, pitchSin, pitchCos, yawSin, yawCos, nodeX, nodeZ, false);
 												}
 											}
 											if (var24) {
@@ -1852,13 +1852,13 @@ public class SceneGraph {
 													if (GlRenderer.enabled) {
 														LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeZ);
 													}
-													wall.primary.render(0, pitchSin, pitchCos, yawSin, yawCos, wall.xFine - cameraX, wall.anInt3051 - cameraY, wall.zFine - cameraZ, wall.key, level, null);
+													wall.primary.render(0, pitchSin, pitchCos, yawSin, yawCos, wall.xFine - cameraX, wall.yFine - cameraY, wall.zFine - cameraZ, wall.key, level, null);
 												}
 												if ((wall.anInt3052 & sceneryIndex) != 0 && !method3850(plane, nodeX, nodeZ, wall.anInt3052)) {
 													if (GlRenderer.enabled) {
 														LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeZ);
 													}
-													wall.secondary.render(0, pitchSin, pitchCos, yawSin, yawCos, wall.xFine - cameraX, wall.anInt3051 - cameraY, wall.zFine - cameraZ, wall.key, level, null);
+													wall.secondary.render(0, pitchSin, pitchCos, yawSin, yawCos, wall.xFine - cameraX, wall.yFine - cameraY, wall.zFine - cameraZ, wall.key, level, null);
 												}
 											}
 											if (wallDecor != null && !method4611(plane, nodeX, nodeZ, wallDecor.primary.getMinY())) {
@@ -2012,7 +2012,7 @@ public class SceneGraph {
 															LightingManager.method2393(cameraX, cameraY, cameraZ, level, nodeX, nodeZ);
 														}
 													}
-													var22.primary.render(0, pitchSin, pitchCos, yawSin, yawCos, var22.xFine - cameraX, var22.anInt3051 - cameraY, var22.zFine - cameraZ, var22.key, level, null);
+													var22.primary.render(0, pitchSin, pitchCos, yawSin, yawCos, var22.xFine - cameraX, var22.yFine - cameraY, var22.zFine - cameraZ, var22.key, level, null);
 												}
 												node.anInt663 = 0;
 											}
@@ -2220,13 +2220,13 @@ public class SceneGraph {
 						if (GlRenderer.enabled) {
 							LightingManager.method2388(local2275.anInt3052, cameraX, cameraY, cameraZ, plane, nodeX, nodeZ);
 						}
-						local2275.secondary.render(0, pitchSin, pitchCos, yawSin, yawCos, local2275.xFine - cameraX, local2275.anInt3051 - cameraY, local2275.zFine - cameraZ, local2275.key, level, null);
+						local2275.secondary.render(0, pitchSin, pitchCos, yawSin, yawCos, local2275.xFine - cameraX, local2275.yFine - cameraY, local2275.zFine - cameraZ, local2275.key, level, null);
 					}
 					if ((local2275.anInt3049 & node.anInt670) != 0 && !method3850(plane, nodeX, nodeZ, local2275.anInt3049)) {
 						if (GlRenderer.enabled) {
 							LightingManager.method2388(local2275.anInt3049, cameraX, cameraY, cameraZ, plane, nodeX, nodeZ);
 						}
-						local2275.primary.render(0, pitchSin, pitchCos, yawSin, yawCos, local2275.xFine - cameraX, local2275.anInt3051 - cameraY, local2275.zFine - cameraZ, local2275.key, level, null);
+						local2275.primary.render(0, pitchSin, pitchCos, yawSin, yawCos, local2275.xFine - cameraX, local2275.yFine - cameraY, local2275.zFine - cameraZ, local2275.key, level, null);
 					}
 				}
 			}
@@ -2265,11 +2265,11 @@ public class SceneGraph {
 	}
 
 	@OriginalMember(owner = "client!wh", name = "a", descriptor = "(IIII)Z")
-	public static boolean method4611(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3) {
-		if (method187(arg0, arg1, arg2)) {
-			@Pc(10) int local10 = arg1 << 7;
-			@Pc(14) int local14 = arg2 << 7;
-			return method4394(local10 + 1, tileHeights[arg0][arg1][arg2] + arg3, local14 + 1) && method4394(local10 + 128 - 1, tileHeights[arg0][arg1 + 1][arg2] + arg3, local14 + 1) && method4394(local10 + 128 - 1, tileHeights[arg0][arg1 + 1][arg2 + 1] + arg3, local14 + 128 - 1) && method4394(local10 + 1, tileHeights[arg0][arg1][arg2 + 1] + arg3, local14 + 128 - 1);
+	public static boolean method4611(@OriginalArg(0) int level, @OriginalArg(1) int x, @OriginalArg(2) int z, @OriginalArg(3) int heightOffset) {
+		if (method187(level, x, z)) {
+			@Pc(10) int xFine = x << 7;
+			@Pc(14) int zFine = z << 7;
+			return method4394(xFine + 1, tileHeights[level][x][z] + heightOffset, zFine + 1) && method4394(xFine + 128 - 1, tileHeights[level][x + 1][z] + heightOffset, zFine + 1) && method4394(xFine + 128 - 1, tileHeights[level][x + 1][z + 1] + heightOffset, zFine + 128 - 1) && method4394(xFine + 1, tileHeights[level][x][z + 1] + heightOffset, zFine + 128 - 1);
 		} else {
 			return false;
 		}
@@ -3009,9 +3009,9 @@ public class SceneGraph {
 							if (x >= local9 && x <= local13 && z >= local17 && z <= local21) {
 								if (tile.wall != null) {
 									@Pc(103) Wall wall = tile.wall;
-									wall.primary.method4545(0, currentLevel, wall.anInt3051, wall.xFine, wall.zFine);
+									wall.primary.method4545(0, currentLevel, wall.yFine, wall.xFine, wall.zFine);
 									if (wall.secondary != null) {
-										wall.secondary.method4545(0, currentLevel, wall.anInt3051, wall.xFine, wall.zFine);
+										wall.secondary.method4545(0, currentLevel, wall.yFine, wall.xFine, wall.zFine);
 									}
 								}
 								if (tile.wallDecor != null) {
@@ -3828,29 +3828,29 @@ public class SceneGraph {
 	}
 
 	@OriginalMember(owner = "client!ge", name = "a", descriptor = "(IIIIIIII)V")
-	public static void method1698(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6) {
-		if (arg1 < 1 || arg4 < 1 || arg1 > 102 || arg4 > 102) {
+	public static void method1698(@OriginalArg(0) int arg0, @OriginalArg(1) int x, @OriginalArg(2) int level, @OriginalArg(3) int arg3, @OriginalArg(4) int z, @OriginalArg(6) int arg5, @OriginalArg(7) int arg6) {
+		if (x < 1 || z < 1 || x > 102 || z > 102) {
 			return;
 		}
 		@Pc(39) int local39;
-		if (!allLevelsAreVisible() && (tileRenderFlags[0][arg1][arg4] & 0x2) == 0) {
-			local39 = arg2;
-			if ((tileRenderFlags[arg2][arg1][arg4] & 0x8) != 0) {
+		if (!allLevelsAreVisible() && (tileRenderFlags[0][x][z] & 0x2) == 0) {
+			local39 = level;
+			if ((tileRenderFlags[level][x][z] & 0x8) != 0) {
 				local39 = 0;
 			}
 			if (local39 != centralPlane) {
 				return;
 			}
 		}
-		local39 = arg2;
-		if (arg2 < 3 && (tileRenderFlags[1][arg1][arg4] & 0x2) == 2) {
-			local39 = arg2 + 1;
+		local39 = level;
+		if (level < 3 && (tileRenderFlags[1][x][z] & 0x2) == 2) {
+			local39 = level + 1;
 		}
-		method1144(arg4, arg1, arg2, arg6, local39, PathFinder.collisionMaps[arg2]);
+		method1144(z, x, level, arg6, local39, PathFinder.collisionMaps[level]);
 		if (arg0 >= 0) {
 			@Pc(92) boolean local92 = Preferences.showGroundDecorations;
 			Preferences.showGroundDecorations = true;
-			addLoc(local39, false, arg2, false, PathFinder.collisionMaps[arg2], arg0, arg5, arg1, arg4, arg3);
+			addLoc(local39, false, level, false, PathFinder.collisionMaps[level], arg0, arg5, x, z, arg3);
 			Preferences.showGroundDecorations = local92;
 		}
 	}
@@ -3876,51 +3876,51 @@ public class SceneGraph {
 	}
 
 	@OriginalMember(owner = "client!ke", name = "a", descriptor = "(Lclient!rh;IIIIIIIZ)V")
-	public static void method2610(@OriginalArg(0) PlainTile arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) int arg7, @OriginalArg(8) boolean arg8) {
+	public static void renderPlainTile(@OriginalArg(0) PlainTile tile, @OriginalArg(1) int plane, @OriginalArg(2) int pitchSin, @OriginalArg(3) int pitchCos, @OriginalArg(4) int yawSin, @OriginalArg(5) int yawCos, @OriginalArg(6) int tileX, @OriginalArg(7) int tileZ, @OriginalArg(8) boolean arg8) {
 		@Pc(6) int local6;
-		@Pc(7) int local7 = local6 = (arg6 << 7) - cameraX;
+		@Pc(7) int local7 = local6 = (tileX << 7) - cameraX;
 		@Pc(14) int local14;
-		@Pc(15) int local15 = local14 = (arg7 << 7) - cameraZ;
+		@Pc(15) int local15 = local14 = (tileZ << 7) - cameraZ;
 		@Pc(20) int local20;
 		@Pc(21) int local21 = local20 = local7 + 128;
 		@Pc(26) int local26;
 		@Pc(27) int local27 = local26 = local15 + 128;
-		@Pc(37) int local37 = tileHeights[arg1][arg6][arg7] - cameraY;
-		@Pc(49) int local49 = tileHeights[arg1][arg6 + 1][arg7] - cameraY;
-		@Pc(63) int local63 = tileHeights[arg1][arg6 + 1][arg7 + 1] - cameraY;
-		@Pc(75) int local75 = tileHeights[arg1][arg6][arg7 + 1] - cameraY;
-		@Pc(85) int local85 = local15 * arg4 + local7 * arg5 >> 16;
-		@Pc(95) int local95 = local15 * arg5 - local7 * arg4 >> 16;
+		@Pc(37) int local37 = tileHeights[plane][tileX][tileZ] - cameraY;
+		@Pc(49) int local49 = tileHeights[plane][tileX + 1][tileZ] - cameraY;
+		@Pc(63) int local63 = tileHeights[plane][tileX + 1][tileZ + 1] - cameraY;
+		@Pc(75) int local75 = tileHeights[plane][tileX][tileZ + 1] - cameraY;
+		@Pc(85) int local85 = local15 * yawSin + local7 * yawCos >> 16;
+		@Pc(95) int local95 = local15 * yawCos - local7 * yawSin >> 16;
 		@Pc(97) int local97 = local85;
-		@Pc(107) int local107 = local37 * arg3 - local95 * arg2 >> 16;
-		@Pc(117) int local117 = local37 * arg2 + local95 * arg3 >> 16;
+		@Pc(107) int local107 = local37 * pitchCos - local95 * pitchSin >> 16;
+		@Pc(117) int local117 = local37 * pitchSin + local95 * pitchCos >> 16;
 		@Pc(119) int local119 = local107;
 		if (local117 < 50) {
 			return;
 		}
-		local85 = local14 * arg4 + local21 * arg5 >> 16;
-		@Pc(143) int local143 = local14 * arg5 - local21 * arg4 >> 16;
+		local85 = local14 * yawSin + local21 * yawCos >> 16;
+		@Pc(143) int local143 = local14 * yawCos - local21 * yawSin >> 16;
 		local21 = local85;
-		local85 = local49 * arg3 - local143 * arg2 >> 16;
-		@Pc(165) int local165 = local49 * arg2 + local143 * arg3 >> 16;
+		local85 = local49 * pitchCos - local143 * pitchSin >> 16;
+		@Pc(165) int local165 = local49 * pitchSin + local143 * pitchCos >> 16;
 		local49 = local85;
 		if (local165 < 50) {
 			return;
 		}
-		local85 = local27 * arg4 + local20 * arg5 >> 16;
-		local27 = local27 * arg5 - local20 * arg4 >> 16;
+		local85 = local27 * yawSin + local20 * yawCos >> 16;
+		local27 = local27 * yawCos - local20 * yawSin >> 16;
 		@Pc(193) int local193 = local85;
-		local85 = local63 * arg3 - local27 * arg2 >> 16;
-		local27 = local63 * arg2 + local27 * arg3 >> 16;
+		local85 = local63 * pitchCos - local27 * pitchSin >> 16;
+		local27 = local63 * pitchSin + local27 * pitchCos >> 16;
 		local63 = local85;
 		if (local27 < 50) {
 			return;
 		}
-		local85 = local26 * arg4 + local6 * arg5 >> 16;
-		@Pc(239) int local239 = local26 * arg5 - local6 * arg4 >> 16;
+		local85 = local26 * yawSin + local6 * yawCos >> 16;
+		@Pc(239) int local239 = local26 * yawCos - local6 * yawSin >> 16;
 		@Pc(241) int local241 = local85;
-		local85 = local75 * arg3 - local239 * arg2 >> 16;
-		@Pc(261) int local261 = local75 * arg2 + local239 * arg3 >> 16;
+		local85 = local75 * pitchCos - local239 * pitchSin >> 16;
+		@Pc(261) int local261 = local75 * pitchSin + local239 * pitchCos >> 16;
 		if (local261 < 50) {
 			return;
 		}
@@ -3936,22 +3936,22 @@ public class SceneGraph {
 		@Pc(475) int local475;
 		if ((local307 - local323) * (local299 - local331) - (local315 - local331) * (local291 - local323) > 0) {
 			if (MiniMenu.aBoolean187 && method583(MiniMenu.anInt2388 + Rasteriser.centerX, MiniMenu.anInt3259 + Rasteriser.centerY, local315, local331, local299, local307, local323, local291)) {
-				MiniMenu.anInt1742 = arg6;
-				MiniMenu.anInt2954 = arg7;
+				MiniMenu.anInt1742 = tileX;
+				MiniMenu.anInt2954 = tileZ;
 			}
 			if (!GlRenderer.enabled && !arg8) {
 				Rasteriser.testX = local307 < 0 || local323 < 0 || local291 < 0 || local307 > Rasteriser.width || local323 > Rasteriser.width || local291 > Rasteriser.width;
-				if (arg0.anInt4869 == -1) {
-					if (arg0.anInt4865 != 12345678) {
-						Rasteriser.fillGouraudTriangle(local315, local331, local299, local307, local323, local291, arg0.anInt4865, arg0.anInt4864, arg0.anInt4867);
+				if (tile.tileTexture == -1) {
+					if (tile.anInt4865 != 12345678) {
+						Rasteriser.fillGouraudTriangle(local315, local331, local299, local307, local323, local291, tile.anInt4865, tile.anInt4864, tile.anInt4867);
 					}
 				} else if (!Preferences.manyGroundTextures) {
-					local475 = Rasteriser.textureProvider.getAverageColor(arg0.anInt4869);
-					Rasteriser.fillGouraudTriangle(local315, local331, local299, local307, local323, local291, ColorUtils.multiplyLightness3(local475, arg0.anInt4865), ColorUtils.multiplyLightness3(local475, arg0.anInt4864), ColorUtils.multiplyLightness3(local475, arg0.anInt4867));
-				} else if (arg0.aBoolean241) {
-					Rasteriser.fillTexturedTriangle(local315, local331, local299, local307, local323, local291, arg0.anInt4865, arg0.anInt4864, arg0.anInt4867, local97, local21, local241, local119, local49, local85, local117, local165, local261, arg0.anInt4869);
+					local475 = Rasteriser.textureProvider.getAverageColor(tile.tileTexture);
+					Rasteriser.fillGouraudTriangle(local315, local331, local299, local307, local323, local291, ColorUtils.multiplyLightness3(local475, tile.anInt4865), ColorUtils.multiplyLightness3(local475, tile.anInt4864), ColorUtils.multiplyLightness3(local475, tile.anInt4867));
+				} else if (tile.aBoolean241) {
+					Rasteriser.fillTexturedTriangle(local315, local331, local299, local307, local323, local291, tile.anInt4865, tile.anInt4864, tile.anInt4867, local97, local21, local241, local119, local49, local85, local117, local165, local261, tile.tileTexture);
 				} else {
-					Rasteriser.fillTexturedTriangle(local315, local331, local299, local307, local323, local291, arg0.anInt4865, arg0.anInt4864, arg0.anInt4867, local193, local241, local21, local63, local85, local49, local27, local261, local165, arg0.anInt4869);
+					Rasteriser.fillTexturedTriangle(local315, local331, local299, local307, local323, local291, tile.anInt4865, tile.anInt4864, tile.anInt4867, local193, local241, local21, local63, local85, local49, local27, local261, local165, tile.tileTexture);
 				}
 			}
 		}
@@ -3959,22 +3959,22 @@ public class SceneGraph {
 			return;
 		}
 		if (MiniMenu.aBoolean187 && method583(MiniMenu.anInt2388 + Rasteriser.centerX, MiniMenu.anInt3259 + Rasteriser.centerY, local283, local299, local331, local275, local291, local323)) {
-			MiniMenu.anInt1742 = arg6;
-			MiniMenu.anInt2954 = arg7;
+			MiniMenu.anInt1742 = tileX;
+			MiniMenu.anInt2954 = tileZ;
 		}
 		if (GlRenderer.enabled || arg8) {
 			return;
 		}
 		Rasteriser.testX = local275 < 0 || local291 < 0 || local323 < 0 || local275 > Rasteriser.width || local291 > Rasteriser.width || local323 > Rasteriser.width;
-		if (arg0.anInt4869 == -1) {
-			if (arg0.anInt4872 != 12345678) {
-				Rasteriser.fillGouraudTriangle(local283, local299, local331, local275, local291, local323, arg0.anInt4872, arg0.anInt4867, arg0.anInt4864);
+		if (tile.tileTexture == -1) {
+			if (tile.anInt4872 != 12345678) {
+				Rasteriser.fillGouraudTriangle(local283, local299, local331, local275, local291, local323, tile.anInt4872, tile.anInt4867, tile.anInt4864);
 			}
 		} else if (Preferences.manyGroundTextures) {
-			Rasteriser.fillTexturedTriangle(local283, local299, local331, local275, local291, local323, arg0.anInt4872, arg0.anInt4867, arg0.anInt4864, local97, local21, local241, local119, local49, local85, local117, local165, local261, arg0.anInt4869);
+			Rasteriser.fillTexturedTriangle(local283, local299, local331, local275, local291, local323, tile.anInt4872, tile.anInt4867, tile.anInt4864, local97, local21, local241, local119, local49, local85, local117, local165, local261, tile.tileTexture);
 		} else {
-			local475 = Rasteriser.textureProvider.getAverageColor(arg0.anInt4869);
-			Rasteriser.fillGouraudTriangle(local283, local299, local331, local275, local291, local323, ColorUtils.multiplyLightness3(local475, arg0.anInt4872), ColorUtils.multiplyLightness3(local475, arg0.anInt4867), ColorUtils.multiplyLightness3(local475, arg0.anInt4864));
+			local475 = Rasteriser.textureProvider.getAverageColor(tile.tileTexture);
+			Rasteriser.fillGouraudTriangle(local283, local299, local331, local275, local291, local323, ColorUtils.multiplyLightness3(local475, tile.anInt4872), ColorUtils.multiplyLightness3(local475, tile.anInt4867), ColorUtils.multiplyLightness3(local475, tile.anInt4864));
 		}
 	}
 
@@ -4249,25 +4249,25 @@ public class SceneGraph {
 	}
 
 	@OriginalMember(owner = "client!lh", name = "a", descriptor = "(Lclient!fg;IIIIIIZ)V")
-	public static void method2762(@OriginalArg(0) ShapedTile arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5, @OriginalArg(6) int arg6, @OriginalArg(7) boolean arg7) {
-		@Pc(3) int local3 = arg0.anIntArray168.length;
+	public static void renderShapedTile(@OriginalArg(0) ShapedTile tile, @OriginalArg(1) int pitchSin, @OriginalArg(2) int pitchCos, @OriginalArg(3) int yawSin, @OriginalArg(4) int yawCos, @OriginalArg(5) int x, @OriginalArg(6) int y, @OriginalArg(7) boolean arg7) {
+		@Pc(3) int local3 = tile.anIntArray168.length;
 		@Pc(5) int local5;
 		@Pc(15) int local15;
 		@Pc(22) int local22;
 		@Pc(29) int local29;
 		@Pc(39) int local39;
 		for (local5 = 0; local5 < local3; local5++) {
-			local15 = arg0.anIntArray168[local5] - cameraX;
-			local22 = arg0.anIntArray160[local5] - cameraY;
-			local29 = arg0.anIntArray163[local5] - cameraZ;
-			local39 = local29 * arg3 + local15 * arg4 >> 16;
-			@Pc(49) int local49 = local29 * arg4 - local15 * arg3 >> 16;
-			@Pc(61) int local61 = local22 * arg2 - local49 * arg1 >> 16;
-			@Pc(71) int local71 = local22 * arg1 + local49 * arg2 >> 16;
+			local15 = tile.anIntArray168[local5] - cameraX;
+			local22 = tile.anIntArray160[local5] - cameraY;
+			local29 = tile.anIntArray163[local5] - cameraZ;
+			local39 = local29 * yawSin + local15 * yawCos >> 16;
+			@Pc(49) int local49 = local29 * yawCos - local15 * yawSin >> 16;
+			@Pc(61) int local61 = local22 * pitchCos - local49 * pitchSin >> 16;
+			@Pc(71) int local71 = local22 * pitchSin + local49 * pitchCos >> 16;
 			if (local71 < 50) {
 				return;
 			}
-			if (arg0.anIntArray161 != null) {
+			if (tile.anIntArray161 != null) {
 				anIntArray159[local5] = local39;
 				anIntArray170[local5] = local61;
 				anIntArray169[local5] = local71;
@@ -4276,11 +4276,11 @@ public class SceneGraph {
 			anIntArray164[local5] = Rasteriser.centerY + (local61 << 9) / local71;
 		}
 		Rasteriser.alpha = 0;
-		local3 = arg0.anIntArray166.length;
+		local3 = tile.anIntArray166.length;
 		for (local5 = 0; local5 < local3; local5++) {
-			local15 = arg0.anIntArray166[local5];
-			local22 = arg0.anIntArray162[local5];
-			local29 = arg0.anIntArray158[local5];
+			local15 = tile.anIntArray166[local5];
+			local22 = tile.anIntArray162[local5];
+			local29 = tile.anIntArray158[local5];
 			local39 = anIntArray165[local15];
 			@Pc(148) int local148 = anIntArray165[local22];
 			@Pc(152) int local152 = anIntArray165[local29];
@@ -4289,22 +4289,22 @@ public class SceneGraph {
 			@Pc(164) int local164 = anIntArray164[local29];
 			if ((local39 - local148) * (local164 - local160) - (local156 - local160) * (local152 - local148) > 0) {
 				if (MiniMenu.aBoolean187 && method583(MiniMenu.anInt2388 + Rasteriser.centerX, MiniMenu.anInt3259 + Rasteriser.centerY, local156, local160, local164, local39, local148, local152)) {
-					MiniMenu.anInt1742 = arg5;
-					MiniMenu.anInt2954 = arg6;
+					MiniMenu.anInt1742 = x;
+					MiniMenu.anInt2954 = y;
 				}
 				if (!GlRenderer.enabled && !arg7) {
 					Rasteriser.testX = local39 < 0 || local148 < 0 || local152 < 0 || local39 > Rasteriser.width || local148 > Rasteriser.width || local152 > Rasteriser.width;
-					if (arg0.anIntArray161 == null || arg0.anIntArray161[local5] == -1) {
-						if (arg0.anIntArray167[local5] != 12345678) {
-							Rasteriser.fillGouraudTriangle(local156, local160, local164, local39, local148, local152, arg0.anIntArray167[local5], arg0.anIntArray172[local5], arg0.anIntArray171[local5]);
+					if (tile.anIntArray161 == null || tile.anIntArray161[local5] == -1) {
+						if (tile.anIntArray167[local5] != 12345678) {
+							Rasteriser.fillGouraudTriangle(local156, local160, local164, local39, local148, local152, tile.anIntArray167[local5], tile.anIntArray172[local5], tile.anIntArray171[local5]);
 						}
 					} else if (!Preferences.manyGroundTextures) {
-						@Pc(373) int local373 = Rasteriser.textureProvider.getAverageColor(arg0.anIntArray161[local5]);
-						Rasteriser.fillGouraudTriangle(local156, local160, local164, local39, local148, local152, ColorUtils.multiplyLightness3(local373, arg0.anIntArray167[local5]), ColorUtils.multiplyLightness3(local373, arg0.anIntArray172[local5]), ColorUtils.multiplyLightness3(local373, arg0.anIntArray171[local5]));
-					} else if (arg0.aBoolean113) {
-						Rasteriser.fillTexturedTriangle(local156, local160, local164, local39, local148, local152, arg0.anIntArray167[local5], arg0.anIntArray172[local5], arg0.anIntArray171[local5], anIntArray159[0], anIntArray159[1], anIntArray159[3], anIntArray170[0], anIntArray170[1], anIntArray170[3], anIntArray169[0], anIntArray169[1], anIntArray169[3], arg0.anIntArray161[local5]);
+						@Pc(373) int local373 = Rasteriser.textureProvider.getAverageColor(tile.anIntArray161[local5]);
+						Rasteriser.fillGouraudTriangle(local156, local160, local164, local39, local148, local152, ColorUtils.multiplyLightness3(local373, tile.anIntArray167[local5]), ColorUtils.multiplyLightness3(local373, tile.anIntArray172[local5]), ColorUtils.multiplyLightness3(local373, tile.anIntArray171[local5]));
+					} else if (tile.aBoolean113) {
+						Rasteriser.fillTexturedTriangle(local156, local160, local164, local39, local148, local152, tile.anIntArray167[local5], tile.anIntArray172[local5], tile.anIntArray171[local5], anIntArray159[0], anIntArray159[1], anIntArray159[3], anIntArray170[0], anIntArray170[1], anIntArray170[3], anIntArray169[0], anIntArray169[1], anIntArray169[3], tile.anIntArray161[local5]);
 					} else {
-						Rasteriser.fillTexturedTriangle(local156, local160, local164, local39, local148, local152, arg0.anIntArray167[local5], arg0.anIntArray172[local5], arg0.anIntArray171[local5], anIntArray159[local15], anIntArray159[local22], anIntArray159[local29], anIntArray170[local15], anIntArray170[local22], anIntArray170[local29], anIntArray169[local15], anIntArray169[local22], anIntArray169[local29], arg0.anIntArray161[local5]);
+						Rasteriser.fillTexturedTriangle(local156, local160, local164, local39, local148, local152, tile.anIntArray167[local5], tile.anIntArray172[local5], tile.anIntArray171[local5], anIntArray159[local15], anIntArray159[local22], anIntArray159[local29], anIntArray170[local15], anIntArray170[local22], anIntArray170[local29], anIntArray169[local15], anIntArray169[local22], anIntArray169[local29], tile.anIntArray161[local5]);
 					}
 				}
 			}
