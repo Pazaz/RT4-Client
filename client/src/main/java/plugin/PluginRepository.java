@@ -2,12 +2,10 @@ package plugin;
 
 import plugin.api.API;
 import plugin.api.MiniMenuEntry;
-import plugin.api.MiniMenuType;
 import rt4.*;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.MouseAdapter;
-import java.awt.event.MouseListener;
 import java.awt.event.MouseWheelListener;
 import java.io.*;
 import java.net.URL;
@@ -130,13 +128,16 @@ public class PluginRepository {
             e.printStackTrace();
         }
     }
-
     public static void Update() {
-        loadedPlugins.values().forEach(Plugin::Update);
+        loadedPlugins.values().forEach(Plugin::_update);
     }
 
     public static void Draw() {
-        loadedPlugins.values().forEach(Plugin::_draw);
+        loadedPlugins.values().forEach(Plugin::Draw);
+    }
+
+    public static void Tick() {
+        loadedPlugins.values().forEach(Plugin::Tick);
     }
 
     public static void NPCOverheadDraw(Npc npc, int screenX, int screenY) {
@@ -179,6 +180,6 @@ public class PluginRepository {
     }
 
     public static void OnLogin() {
-        loadedPlugins.values().forEach((plugin) -> plugin.OnLogin());
+        loadedPlugins.values().forEach(Plugin::OnLogin);
     }
 }

@@ -140,7 +140,7 @@ public final class GlRenderer {
 	@OriginalMember(owner = "client!tf", name = "a", descriptor = "()V")
 	public static void method4149() {
 		MaterialManager.setMaterial(0, 0);
-		method4163();
+		setupOrthographicProjection();
 		setTextureCombineRgbMode(1);
 		setTextureCombineAlphaMode(1);
 		setLightingEnabled(false);
@@ -162,7 +162,7 @@ public final class GlRenderer {
 	@OriginalMember(owner = "client!tf", name = "c", descriptor = "()V")
 	public static void method4151() {
 		MaterialManager.setMaterial(0, 0); // MaterialManager
-		method4163();
+		setupOrthographicProjection();
 		setTextureCombineRgbMode(0);
 		setTextureCombineAlphaMode(0);
 		setLightingEnabled(false);
@@ -217,7 +217,7 @@ public final class GlRenderer {
 	@OriginalMember(owner = "client!tf", name = "e", descriptor = "()V")
 	public static void method4155() {
 		MaterialManager.setMaterial(0, 0);
-		method4163();
+		setupOrthographicProjection();
 		setTextureCombineRgbMode(0);
 		setTextureCombineAlphaMode(0);
 		setLightingEnabled(false);
@@ -342,9 +342,9 @@ public final class GlRenderer {
 	}
 
 	@OriginalMember(owner = "client!tf", name = "i", descriptor = "()V")
-	public static void method4162() {
+	public static void setupBlankMaterial() {
 		MaterialManager.setMaterial(0, 0);
-		method4163();
+		setupOrthographicProjection();
 		setTextureId(-1);
 		setLightingEnabled(false);
 		setDepthTestEnabled(false);
@@ -353,7 +353,7 @@ public final class GlRenderer {
 	}
 
 	@OriginalMember(owner = "client!tf", name = "j", descriptor = "()V")
-	private static void method4163() {
+	private static void setupOrthographicProjection() {
 		if (aBoolean266) {
 			return;
 		}
@@ -511,7 +511,7 @@ public final class GlRenderer {
 		gl = null;
 		context = null;
 		drawable = null;
-		LightingManager.method2398(); // LightingManager
+		LightingManager.clear(); // LightingManager
 		enabled = false;
 	}
 
@@ -808,7 +808,7 @@ public final class GlRenderer {
 		anInt5328 = local2[0];
 		gl.glBindTexture(GL2.GL_TEXTURE_2D, anInt5328);
 		gl.glTexImage2D(GL2.GL_TEXTURE_2D, 0, 4, 1, 1, 0, GL2.GL_RGBA, GL2.GL_UNSIGNED_BYTE, IntBuffer.wrap(new int[]{-1}));
-		LightingManager.method2401();
+		LightingManager.init();
 		MaterialManager.init();
 	}
 

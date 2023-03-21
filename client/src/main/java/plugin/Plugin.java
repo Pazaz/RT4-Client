@@ -4,7 +4,6 @@ import plugin.api.MiniMenuEntry;
 import rt4.Component;
 import rt4.Npc;
 import rt4.Player;
-import rt4.Tile;
 
 /**
  * The base plugin class which is meant to be extended by plugins.
@@ -12,29 +11,42 @@ import rt4.Tile;
  * @author ceikry
  */
 public abstract class Plugin {
-    long timeOfLastDraw;
+    long timeOfLastUpdate;
 
     void _init() {
         Init();
     }
 
-    void _draw() {
+    void _update() {
         long nowTime = System.currentTimeMillis();
-        Draw(nowTime - timeOfLastDraw);
-        timeOfLastDraw = nowTime;
+        Update(nowTime - timeOfLastUpdate);
+        timeOfLastUpdate = nowTime;
     }
+
+    /**
+     * Init() is called when the plugin is first loaded and any time the window is resized
+     */
+    public void Init() {}
+
+    /**
+     * Update() is called once before every game loop so that plugins can grab inputs
+     * and update things that need to be drawn later.
+     * @param deltaTime the time (ms) elapsed since the last update call.
+     */
+    public void Update(long deltaTime) {}
 
     /**
      * Draw() is called by the client rendering loop so that plugins can draw information onto the screen.
      * This will be called once per frame, meaning it is framerate bound.
-     * @param timeDelta the time (ms) elapsed since the last draw call.
      */
-    public void Draw(long timeDelta) {}
+    public void Draw() {}
 
     /**
-     * Init() is called when the plugin is first loaded
+     * Tick() is called once every 1000 client loops.
+     * This should be used for things that do need to update occasionally during runtime,
+     * but don't need to update super often.
      */
-    public void Init() {}
+    public void Tick() {}
 
     /**
      * OnXPUpdate() is called when the client receives an XP update packet. This includes at login.
@@ -42,13 +54,6 @@ public abstract class Plugin {
      * @param xp - the new total XP for the skill.
      */
     public void OnXPUpdate(int skill, int xp) {}
-
-    /**
-     * Update() is called once every 1000 client loops.
-     * This should be used for things that do need to update occasionally during runtime,
-     * but don't need to update super often.
-     */
-    public void Update() {}
 
     /**
      * PlayerOverheadDraw() is called once per frame, for every player on the screen. :) Expensive.

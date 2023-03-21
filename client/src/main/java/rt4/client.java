@@ -322,7 +322,7 @@ public final class client extends GameShell {
 		if (gameState == 0) {
 			LoadingBarAwt.clear();
 		}
-		if (gameState == 30) {
+		if (gameState == 25) {
 			PluginRepository.OnLogin();
 		}
 		if (arg0 == 40) {
@@ -1295,7 +1295,7 @@ public final class client extends GameShell {
 		}
 		@Pc(98) int percentage;
 		if (mainLoadState == 10) {
-			LightingManager.method2392();
+			LightingManager.setSize();
 			for (percentage = 0; percentage < 4; percentage++) {
 				PathFinder.collisionMaps[percentage] = new CollisionMap(104, 104);
 			}
@@ -1589,8 +1589,9 @@ public final class client extends GameShell {
 			@Pc(24) GregorianCalendar gregorianCalendar = new GregorianCalendar();
 			MiniMenu.gregorianDateSeed = gregorianCalendar.get(Calendar.HOUR_OF_DAY) * 600 + gregorianCalendar.get(Calendar.MINUTE) * 10 + gregorianCalendar.get(Calendar.SECOND) / 6;
 			aRandom1.setSeed(MiniMenu.gregorianDateSeed);
-			PluginRepository.Update();
+			PluginRepository.Tick();
 		}
+		PluginRepository.Update();
 		this.js5NetworkLoop();
 		if (js5MasterIndex != null) {
 			js5MasterIndex.method179();

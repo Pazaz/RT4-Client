@@ -1001,7 +1001,7 @@ public class LoginManager {
 		for (i = 0; i < 4; i++) {
 			for (chunkX = 0; chunkX < 104; chunkX++) {
 				for (chunkZ = 0; chunkZ < 104; chunkZ++) {
-					SceneGraph.renderFlags[i][chunkX][chunkZ] = 0;
+					SceneGraph.tileRenderFlags[i][chunkX][chunkZ] = 0;
 				}
 			}
 		}
@@ -1051,19 +1051,19 @@ public class LoginManager {
 		ClientProt.ping(true);
 		SceneGraph.method1169(PathFinder.collisionMaps, false);
 		if (GlRenderer.enabled) {
-			LightingManager.method2395();
+			LightingManager.calculateLightRadiuses();
 		}
 		ClientProt.ping(true);
-		i = SceneGraph.firstVisibleLevel;
+		i = SceneGraph.lastVisibleLevel;
 		if (i > Player.plane) {
 			i = Player.plane;
 		}
 		if (i < Player.plane - 1) {
 		}
 		if (SceneGraph.allLevelsAreVisible()) {
-			SceneGraph.method2750(0);
+			SceneGraph.initializeLevelMap(0);
 		} else {
-			SceneGraph.method2750(SceneGraph.firstVisibleLevel);
+			SceneGraph.initializeLevelMap(SceneGraph.lastVisibleLevel);
 		}
 		SceneGraph.unload();
 		if (GlRenderer.enabled && hasUnderWaterMap) {
@@ -1098,7 +1098,7 @@ public class LoginManager {
 				Protocol.spawnGroundObject(chunkZ, chunkX);
 			}
 		}
-		ScriptRunner.method2218();
+		ScriptRunner.setUpRemoveRoofTiles();
 		client.audioLoop();
 		ChangeLocRequest.flush();
 		client.unload();
@@ -1258,7 +1258,7 @@ public class LoginManager {
 						@Pc(154) CollisionMap local154 = null;
 						if (!arg7) {
 							@Pc(159) int local159 = arg1;
-							if ((SceneGraph.renderFlags[1][local120][local137] & 0x2) == 2) {
+							if ((SceneGraph.tileRenderFlags[1][local120][local137] & 0x2) == 2) {
 								local159 = arg1 - 1;
 							}
 							if (local159 >= 0) {
@@ -1441,9 +1441,9 @@ public class LoginManager {
 			Cs1ScriptRunner.method182();
 		}
 		if (GlRenderer.enabled) {
-			GlRaster.method1177();
+			GlRaster.setFullClip();
 		} else {
-			SoftwareRaster.method2503();
+			SoftwareRaster.setFullClip();
 		}
 		if (!Cs1ScriptRunner.aBoolean108) {
 			PluginRepository.OnMiniMenuCreate();

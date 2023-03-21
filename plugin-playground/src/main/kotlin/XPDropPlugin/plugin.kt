@@ -21,7 +21,7 @@ class plugin : Plugin() {
     private val activeGains = ArrayList<XPGain>()
     private var lastGain = 0L
 
-    override fun Draw(deltaTime: Long) {
+    override fun Update(deltaTime: Long) {
         if (System.currentTimeMillis() - lastGain >= displayTimeout && activeGains.isEmpty())
             return
 
@@ -38,7 +38,20 @@ class plugin : Plugin() {
             if (gain.currentPos <= drawClear) {
                 removeList.add(gain)
                 totalXp += gain.xp
-            } else if (gain.currentPos <= drawStart){
+            }
+        }
+
+        activeGains.removeAll(removeList.toSet())
+    }
+
+    override fun Draw() {
+        var posX = API.GetWindowDimensions().width / 2
+
+        if (API.GetWindowMode() == WindowMode.FIXED)
+            posX += 60
+
+        for (gain in activeGains) {
+            if (gain.currentPos <= drawStart) {
                 val sprite = XPSprites.getSpriteForSkill(skillId = gain.skill)
                 sprite?.render(posX - 25, gain.currentPos - 20)
                 API.DrawText(
@@ -51,8 +64,6 @@ class plugin : Plugin() {
                 )
             }
         }
-
-        activeGains.removeAll(removeList.toSet())
     }
 
     override fun OnXPUpdate(skill: Int, xp: Int) {

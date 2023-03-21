@@ -4,31 +4,55 @@ import plugin.Plugin
 import plugin.annotations.PluginMeta
 import plugin.api.*
 import rt4.Keyboard
-import java.awt.event.*
+import java.awt.event.MouseAdapter
+import java.awt.event.MouseEvent
+import java.awt.event.MouseWheelEvent
+import java.awt.event.MouseWheelListener
 import javax.swing.SwingUtilities
 
 @PluginMeta(
-   author = "Ceikry",
+   author = "Ceikry, Enova",
    description = "Provides some basic input QOL like scroll zoom, middle click panning, etc.",
-   version = 1.0
+   version = 1.1
 )
 class plugin : Plugin() {
     private var cameraDebugEnabled = false
     private var mouseDebugEnabled = false
+    private var minZoomKey = "min-zoom";
+    private var maxZoomKey = "max-zoom";
+    private var defaultZoomKey = "default-zoom";
 
     companion object {
         private var lastMouseWheelX = 0
         private var lastMouseWheelY = 0
+        private var minZoom = 200;
+        private var maxZoom = 1200;
         private val defaultCameraPYZ = Triple(128.0, 0.0, 600)
     }
 
     override fun Init() {
+        minZoom = API.GetData(minZoomKey) as? Int ?: minZoom
+        maxZoom = API.GetData(maxZoomKey) as? Int ?: maxZoom
         API.AddMouseListener(MouseCallbacks)
         API.AddMouseWheelListener(MouseWheelCallbacks)
     }
 
     override fun ProcessCommand(commandStr: String?, args: Array<out String>?) {
         commandStr ?: return
+
+        when(commandStr) {
+            "::minZoom" -> {
+                args ?: return
+                minZoom = args[0].toInt()
+                API.StoreData(minZoomKey, minZoom)
+            }
+            "::maxZoom" -> {
+                args ?: return
+                maxZoom = args[0].toInt()
+                API.StoreData(maxZoomKey, maxZoom)
+            }
+        }
+
         if (API.PlayerHasPrivilege(Privileges.JMOD)) {
             when(commandStr) {
                 "::mousedebug" -> mouseDebugEnabled = !mouseDebugEnabled
@@ -37,7 +61,24 @@ class plugin : Plugin() {
         }
     }
 
-    override fun Draw(timeDelta: Long) {
+    override fun Tick() {
+        if (!API.IsLoggedIn())
+            return;
+
+        storeDefaultZoom()
+    }
+
+    private fun storeDefaultZoom() {
+        API.StoreData(defaultZoomKey, API.GetCameraZoom())
+    }
+
+    private fun loadDefaultZoom() {
+        val zoom: Int = API.GetData(defaultZoomKey) as? Int ?: return
+
+        API.SetCameraZoom(zoom, minZoom, maxZoom)
+    }
+
+    override fun Draw() {
         if (mouseDebugEnabled) {
             API.DrawText(
                 FontType.SMALL,
@@ -60,6 +101,14 @@ class plugin : Plugin() {
         }
     }
 
+    override fun OnLogin() {
+        loadDefaultZoom()
+    }
+
+    override fun OnLogout() {
+        storeDefaultZoom()
+    }
+
     object MouseWheelCallbacks : MouseWheelListener {
         override fun mouseWheelMoved(e: MouseWheelEvent?) {
             e ?: return
@@ -67,7 +116,7 @@ class plugin : Plugin() {
                 val previous = API.GetPreviousMouseWheelRotation()
                 val current = API.GetMouseWheelRotation()
                 val diff = current - previous
-                API.UpdateCameraZoom(diff)
+                API.UpdateCameraZoom(diff, minZoom, maxZoom)
             }
         }
     }

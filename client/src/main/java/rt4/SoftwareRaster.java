@@ -43,35 +43,35 @@ public final class SoftwareRaster {
 	}
 
 	@OriginalMember(owner = "client!kb", name = "a", descriptor = "(IIIII)V")
-	public static void drawRect(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int color) {
-		drawHorizontalLine(arg0, arg1, arg2, color);
-		drawHorizontalLine(arg0, arg1 + arg3 - 1, arg2, color);
-		drawVerticalLine(arg0, arg1, arg3, color);
-		drawVerticalLine(arg0 + arg2 - 1, arg1, arg3, color);
+	public static void drawRect(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int width, @OriginalArg(3) int height, @OriginalArg(4) int color) {
+		drawHorizontalLine(x, y, width, color);
+		drawHorizontalLine(x, y + height - 1, width, color);
+		drawVerticalLine(x, y, height, color);
+		drawVerticalLine(x + width - 1, y, height, color);
 	}
 
 	@OriginalMember(owner = "client!kb", name = "a", descriptor = "(IIIIII)V")
-	public static void fillRectAlpha(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
-		if (arg0 < clipLeft) {
-			arg2 -= clipLeft - arg0;
-			arg0 = clipLeft;
+	public static void fillRectAlpha(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int width, @OriginalArg(3) int height, @OriginalArg(4) int color, @OriginalArg(5) int alpha) {
+		if (x < clipLeft) {
+			width -= clipLeft - x;
+			x = clipLeft;
 		}
-		if (arg1 < clipTop) {
-			arg3 -= clipTop - arg1;
-			arg1 = clipTop;
+		if (y < clipTop) {
+			height -= clipTop - y;
+			y = clipTop;
 		}
-		if (arg0 + arg2 > clipRight) {
-			arg2 = clipRight - arg0;
+		if (x + width > clipRight) {
+			width = clipRight - x;
 		}
-		if (arg1 + arg3 > clipBottom) {
-			arg3 = clipBottom - arg1;
+		if (y + height > clipBottom) {
+			height = clipBottom - y;
 		}
-		@Pc(59) int local59 = ((arg4 & 0xFF00FF) * arg5 >> 8 & 0xFF00FF) + ((arg4 & 0xFF00) * arg5 >> 8 & 0xFF00);
-		@Pc(63) int local63 = 256 - arg5;
-		@Pc(67) int local67 = width - arg2;
-		@Pc(73) int local73 = arg0 + arg1 * width;
-		for (@Pc(75) int local75 = 0; local75 < arg3; local75++) {
-			for (@Pc(81) int local81 = -arg2; local81 < 0; local81++) {
+		@Pc(59) int local59 = ((color & 0xFF00FF) * alpha >> 8 & 0xFF00FF) + ((color & 0xFF00) * alpha >> 8 & 0xFF00);
+		@Pc(63) int local63 = 256 - alpha;
+		@Pc(67) int local67 = SoftwareRaster.width - width;
+		@Pc(73) int local73 = x + y * SoftwareRaster.width;
+		for (@Pc(75) int local75 = 0; local75 < height; local75++) {
+			for (@Pc(81) int local81 = -width; local81 < 0; local81++) {
 				@Pc(87) int local87 = pixels[local73];
 				@Pc(107) int local107 = ((local87 & 0xFF00FF) * local63 >> 8 & 0xFF00FF) + ((local87 & 0xFF00) * local63 >> 8 & 0xFF00);
 				pixels[local73++] = local59 + local107;
@@ -97,21 +97,21 @@ public final class SoftwareRaster {
 	}
 
 	@OriginalMember(owner = "client!kb", name = "b", descriptor = "(IIIIII)V")
-	public static void method2487(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
-		method2493(arg0, arg1, arg2, arg4, arg5);
-		method2493(arg0, arg1 + arg3 - 1, arg2, arg4, arg5);
-		if (arg3 >= 3) {
-			method2499(arg0, arg1 + 1, arg3 - 2, arg4, arg5);
-			method2499(arg0 + arg2 - 1, arg1 + 1, arg3 - 2, arg4, arg5);
+	public static void drawRectAlpha(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int width, @OriginalArg(3) int height, @OriginalArg(4) int color, @OriginalArg(5) int alpha) {
+		drawHorizontalLineAlpha(x, y, width, color, alpha);
+		drawHorizontalLineAlpha(x, y + height - 1, width, color, alpha);
+		if (height >= 3) {
+			drawVerticalLineAlpha(x, y + 1, height - 2, color, alpha);
+			drawVerticalLineAlpha(x + width - 1, y + 1, height - 2, color, alpha);
 		}
 	}
 
 	@OriginalMember(owner = "client!kb", name = "a", descriptor = "([I)V")
-	public static void restoreClip(@OriginalArg(0) int[] arg0) {
-		clipLeft = arg0[0];
-		clipTop = arg0[1];
-		clipRight = arg0[2];
-		clipBottom = arg0[3];
+	public static void restoreClip(@OriginalArg(0) int[] clipSides) {
+		clipLeft = clipSides[0];
+		clipTop = clipSides[1];
+		clipRight = clipSides[2];
+		clipBottom = clipSides[3];
 		method2482();
 	}
 
@@ -186,23 +186,23 @@ public final class SoftwareRaster {
 	}
 
 	@OriginalMember(owner = "client!kb", name = "b", descriptor = "(IIIII)V")
-	private static void method2493(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
-		if (arg1 < clipTop || arg1 >= clipBottom) {
+	private static void drawHorizontalLineAlpha(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int length, @OriginalArg(3) int color, @OriginalArg(4) int alpha) {
+		if (y < clipTop || y >= clipBottom) {
 			return;
 		}
-		if (arg0 < clipLeft) {
-			arg2 -= clipLeft - arg0;
-			arg0 = clipLeft;
+		if (x < clipLeft) {
+			length -= clipLeft - x;
+			x = clipLeft;
 		}
-		if (arg0 + arg2 > clipRight) {
-			arg2 = clipRight - arg0;
+		if (x + length > clipRight) {
+			length = clipRight - x;
 		}
-		@Pc(30) int local30 = 256 - arg4;
-		@Pc(38) int local38 = (arg3 >> 16 & 0xFF) * arg4;
-		@Pc(46) int local46 = (arg3 >> 8 & 0xFF) * arg4;
-		@Pc(52) int local52 = (arg3 & 0xFF) * arg4;
-		@Pc(58) int local58 = arg0 + arg1 * width;
-		for (@Pc(60) int local60 = 0; local60 < arg2; local60++) {
+		@Pc(30) int local30 = 256 - alpha;
+		@Pc(38) int local38 = (color >> 16 & 0xFF) * alpha;
+		@Pc(46) int local46 = (color >> 8 & 0xFF) * alpha;
+		@Pc(52) int local52 = (color & 0xFF) * alpha;
+		@Pc(58) int local58 = x + y * width;
+		for (@Pc(60) int local60 = 0; local60 < length; local60++) {
 			@Pc(73) int local73 = (pixels[local58] >> 16 & 0xFF) * local30;
 			@Pc(83) int local83 = (pixels[local58] >> 8 & 0xFF) * local30;
 			@Pc(91) int local91 = (pixels[local58] & 0xFF) * local30;
@@ -212,9 +212,9 @@ public final class SoftwareRaster {
 	}
 
 	@OriginalMember(owner = "client!kb", name = "c", descriptor = "(IIIIII)V")
-	public static void method2494(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
-		@Pc(3) int local3 = arg2 - arg0;
-		@Pc(7) int local7 = arg3 - arg1;
+	public static void renderLine(@OriginalArg(0) int x0, @OriginalArg(1) int y0, @OriginalArg(2) int x1, @OriginalArg(3) int y1, @OriginalArg(4) int color, @OriginalArg(5) int lineWidth) {
+		@Pc(3) int local3 = x1 - x0;
+		@Pc(7) int local7 = y1 - y0;
 		@Pc(14) int local14 = local3 >= 0 ? local3 : -local3;
 		@Pc(21) int local21 = local7 >= 0 ? local7 : -local7;
 		@Pc(23) int local23 = local14;
@@ -231,12 +231,12 @@ public final class SoftwareRaster {
 		} else {
 			local43 = -local43;
 		}
-		@Pc(59) int local59 = arg5 * local43 >> 17;
-		@Pc(67) int local67 = arg5 * local43 + 1 >> 17;
-		@Pc(73) int local73 = arg5 * local37 >> 17;
-		@Pc(81) int local81 = arg5 * local37 + 1 >> 17;
-		@Pc(85) int local85 = arg0 - Rasteriser.getOffsetRemainder();
-		@Pc(89) int local89 = arg1 - Rasteriser.getOffset();
+		@Pc(59) int local59 = lineWidth * local43 >> 17;
+		@Pc(67) int local67 = lineWidth * local43 + 1 >> 17;
+		@Pc(73) int local73 = lineWidth * local37 >> 17;
+		@Pc(81) int local81 = lineWidth * local37 + 1 >> 17;
+		@Pc(85) int local85 = x0 - Rasteriser.getOffsetRemainder();
+		@Pc(89) int local89 = y0 - Rasteriser.getOffset();
 		@Pc(93) int local93 = local85 + local59;
 		@Pc(97) int local97 = local85 - local67;
 		@Pc(103) int local103 = local85 + local3 - local67;
@@ -246,32 +246,32 @@ public final class SoftwareRaster {
 		@Pc(123) int local123 = local89 + local7 - local81;
 		@Pc(129) int local129 = local89 + local7 + local73;
 		Rasteriser.testPoints(local93, local97, local103);
-		Rasteriser.fillTriangle(local113, local117, local123, local93, local97, local103, arg4);
+		Rasteriser.fillTriangle(local113, local117, local123, local93, local97, local103, color);
 		Rasteriser.testPoints(local93, local103, local109);
-		Rasteriser.fillTriangle(local113, local123, local129, local93, local103, local109, arg4);
+		Rasteriser.fillTriangle(local113, local123, local129, local93, local103, local109, color);
 	}
 
 	@OriginalMember(owner = "client!kb", name = "c", descriptor = "(IIIII)V")
-	public static void fillRect(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
-		if (arg0 < clipLeft) {
-			arg2 -= clipLeft - arg0;
-			arg0 = clipLeft;
+	public static void fillRect(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int width, @OriginalArg(3) int height, @OriginalArg(4) int color) {
+		if (x < clipLeft) {
+			width -= clipLeft - x;
+			x = clipLeft;
 		}
-		if (arg1 < clipTop) {
-			arg3 -= clipTop - arg1;
-			arg1 = clipTop;
+		if (y < clipTop) {
+			height -= clipTop - y;
+			y = clipTop;
 		}
-		if (arg0 + arg2 > clipRight) {
-			arg2 = clipRight - arg0;
+		if (x + width > clipRight) {
+			width = clipRight - x;
 		}
-		if (arg1 + arg3 > clipBottom) {
-			arg3 = clipBottom - arg1;
+		if (y + height > clipBottom) {
+			height = clipBottom - y;
 		}
-		@Pc(43) int local43 = width - arg2;
-		@Pc(49) int local49 = arg0 + arg1 * width;
-		for (@Pc(52) int local52 = -arg3; local52 < 0; local52++) {
-			for (@Pc(57) int local57 = -arg2; local57 < 0; local57++) {
-				pixels[local49++] = arg4;
+		@Pc(43) int local43 = SoftwareRaster.width - width;
+		@Pc(49) int local49 = x + y * SoftwareRaster.width;
+		for (@Pc(52) int local52 = -height; local52 < 0; local52++) {
+			for (@Pc(57) int local57 = -width; local57 < 0; local57++) {
+				pixels[local49++] = color;
 			}
 			local49 += local43;
 		}
@@ -299,11 +299,11 @@ public final class SoftwareRaster {
 	}
 
 	@OriginalMember(owner = "client!kb", name = "b", descriptor = "([I)V")
-	public static void saveClip(@OriginalArg(0) int[] arg0) {
-		arg0[0] = clipLeft;
-		arg0[1] = clipTop;
-		arg0[2] = clipRight;
-		arg0[3] = clipBottom;
+	public static void saveClip(@OriginalArg(0) int[] clipArray) {
+		clipArray[0] = clipLeft;
+		clipArray[1] = clipTop;
+		clipArray[2] = clipRight;
+		clipArray[3] = clipBottom;
 	}
 
 	@OriginalMember(owner = "client!kb", name = "d", descriptor = "(IIII)V")
@@ -324,23 +324,23 @@ public final class SoftwareRaster {
 	}
 
 	@OriginalMember(owner = "client!kb", name = "d", descriptor = "(IIIII)V")
-	private static void method2499(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
-		if (arg0 < clipLeft || arg0 >= clipRight) {
+	private static void drawVerticalLineAlpha(@OriginalArg(0) int x, @OriginalArg(1) int y, @OriginalArg(2) int length, @OriginalArg(3) int color, @OriginalArg(4) int alpha) {
+		if (x < clipLeft || x >= clipRight) {
 			return;
 		}
-		if (arg1 < clipTop) {
-			arg2 -= clipTop - arg1;
-			arg1 = clipTop;
+		if (y < clipTop) {
+			length -= clipTop - y;
+			y = clipTop;
 		}
-		if (arg1 + arg2 > clipBottom) {
-			arg2 = clipBottom - arg1;
+		if (y + length > clipBottom) {
+			length = clipBottom - y;
 		}
-		@Pc(30) int local30 = 256 - arg4;
-		@Pc(38) int local38 = (arg3 >> 16 & 0xFF) * arg4;
-		@Pc(46) int local46 = (arg3 >> 8 & 0xFF) * arg4;
-		@Pc(52) int local52 = (arg3 & 0xFF) * arg4;
-		@Pc(58) int local58 = arg0 + arg1 * width;
-		for (@Pc(60) int local60 = 0; local60 < arg2; local60++) {
+		@Pc(30) int local30 = 256 - alpha;
+		@Pc(38) int local38 = (color >> 16 & 0xFF) * alpha;
+		@Pc(46) int local46 = (color >> 8 & 0xFF) * alpha;
+		@Pc(52) int local52 = (color & 0xFF) * alpha;
+		@Pc(58) int local58 = x + y * width;
+		for (@Pc(60) int local60 = 0; local60 < length; local60++) {
 			@Pc(73) int local73 = (pixels[local58] >> 16 & 0xFF) * local30;
 			@Pc(83) int local83 = (pixels[local58] >> 8 & 0xFF) * local30;
 			@Pc(91) int local91 = (pixels[local58] & 0xFF) * local30;
@@ -351,71 +351,71 @@ public final class SoftwareRaster {
 	}
 
 	@OriginalMember(owner = "client!kb", name = "e", descriptor = "(IIIII)V")
-	public static void method2500(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4) {
-		arg2 -= arg0;
-		arg3 -= arg1;
-		if (arg3 == 0) {
-			if (arg2 >= 0) {
-				drawHorizontalLine(arg0, arg1, arg2 + 1, arg4);
+	public static void renderLine(@OriginalArg(0) int x0, @OriginalArg(1) int y0, @OriginalArg(2) int x1, @OriginalArg(3) int y1, @OriginalArg(4) int color) {
+		x1 -= x0;
+		y1 -= y0;
+		if (y1 == 0) {
+			if (x1 >= 0) {
+				drawHorizontalLine(x0, y0, x1 + 1, color);
 			} else {
-				drawHorizontalLine(arg0 + arg2, arg1, 1 - arg2, arg4);
+				drawHorizontalLine(x0 + x1, y0, 1 - x1, color);
 			}
-		} else if (arg2 != 0) {
-			if (arg2 + arg3 < 0) {
-				arg0 += arg2;
-				arg2 = -arg2;
-				arg1 += arg3;
-				arg3 = -arg3;
+		} else if (x1 != 0) {
+			if (x1 + y1 < 0) {
+				x0 += x1;
+				x1 = -x1;
+				y0 += y1;
+				y1 = -y1;
 			}
 			@Pc(96) int local96;
 			@Pc(127) int local127;
-			if (arg2 > arg3) {
-				arg1 <<= 0x10;
-				arg1 += 32768;
-				@Pc(86) int local86 = arg3 << 16;
-				local96 = (int) Math.floor((double) local86 / (double) arg2 + 0.5D);
-				arg2 += arg0;
-				if (arg0 < clipLeft) {
-					arg1 += local96 * (clipLeft - arg0);
-					arg0 = clipLeft;
+			if (x1 > y1) {
+				y0 <<= 0x10;
+				y0 += 32768;
+				@Pc(86) int local86 = y1 << 16;
+				local96 = (int) Math.floor((double) local86 / (double) x1 + 0.5D);
+				x1 += x0;
+				if (x0 < clipLeft) {
+					y0 += local96 * (clipLeft - x0);
+					x0 = clipLeft;
 				}
-				if (arg2 >= clipRight) {
-					arg2 = clipRight - 1;
+				if (x1 >= clipRight) {
+					x1 = clipRight - 1;
 				}
-				while (arg0 <= arg2) {
-					local127 = arg1 >> 16;
+				while (x0 <= x1) {
+					local127 = y0 >> 16;
 					if (local127 >= clipTop && local127 < clipBottom) {
-						pixels[arg0 + local127 * width] = arg4;
+						pixels[x0 + local127 * width] = color;
 					}
-					arg1 += local96;
-					arg0++;
+					y0 += local96;
+					x0++;
 				}
 			} else {
-				arg0 <<= 0x10;
-				arg0 += 32768;
-				@Pc(160) int local160 = arg2 << 16;
-				local96 = (int) Math.floor((double) local160 / (double) arg3 + 0.5D);
-				arg3 += arg1;
-				if (arg1 < clipTop) {
-					arg0 += local96 * (clipTop - arg1);
-					arg1 = clipTop;
+				x0 <<= 0x10;
+				x0 += 32768;
+				@Pc(160) int local160 = x1 << 16;
+				local96 = (int) Math.floor((double) local160 / (double) y1 + 0.5D);
+				y1 += y0;
+				if (y0 < clipTop) {
+					x0 += local96 * (clipTop - y0);
+					y0 = clipTop;
 				}
-				if (arg3 >= clipBottom) {
-					arg3 = clipBottom - 1;
+				if (y1 >= clipBottom) {
+					y1 = clipBottom - 1;
 				}
-				while (arg1 <= arg3) {
-					local127 = arg0 >> 16;
+				while (y0 <= y1) {
+					local127 = x0 >> 16;
 					if (local127 >= clipLeft && local127 < clipRight) {
-						pixels[local127 + arg1 * width] = arg4;
+						pixels[local127 + y0 * width] = color;
 					}
-					arg0 += local96;
-					arg1++;
+					x0 += local96;
+					y0++;
 				}
 			}
-		} else if (arg3 >= 0) {
-			drawVerticalLine(arg0, arg1, arg3 + 1, arg4);
+		} else if (y1 >= 0) {
+			drawVerticalLine(x0, y0, y1 + 1, color);
 		} else {
-			drawVerticalLine(arg0, arg1 + arg3, -arg3 + 1, arg4);
+			drawVerticalLine(x0, y0 + y1, -y1 + 1, color);
 		}
 	}
 
@@ -594,7 +594,7 @@ public final class SoftwareRaster {
 	}
 
 	@OriginalMember(owner = "client!kb", name = "c", descriptor = "()V")
-	public static void method2503() {
+	public static void setFullClip() {
 		clipLeft = 0;
 		clipTop = 0;
 		clipRight = width;

@@ -19,7 +19,7 @@ class plugin : Plugin() {
     var isMute = false
     var lastVolumes: Triple<Int,Int,Int>? = null
 
-    override fun Update() {
+    override fun Tick() {
         if (isMute) return
         API.StoreData("sound-vol", API.GetSoundVolume())
         API.StoreData("music-vol", API.GetMusicVolume())

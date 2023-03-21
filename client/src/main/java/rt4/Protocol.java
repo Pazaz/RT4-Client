@@ -1905,7 +1905,7 @@ public class Protocol {
 					}
 					mapMarker.type = 2;
 					mapMarker.targetX = inboundBuffer.g2();
-					mapMarker.anInt4046 = inboundBuffer.g2();
+					mapMarker.targetZ = inboundBuffer.g2();
 					mapMarker.anInt4050 = inboundBuffer.g1();
 				}
 				mapMarker.playerModelId = inboundBuffer.g2();
@@ -3428,36 +3428,36 @@ public class Protocol {
 	}
 
 	@OriginalMember(owner = "client!rm", name = "a", descriptor = "(IBI)V")
-	public static void spawnGroundObject(@OriginalArg(0) int arg0, @OriginalArg(2) int arg1) {
-		@Pc(9) LinkedList local9 = SceneGraph.objStacks[Player.plane][arg1][arg0];
-		if (local9 == null) {
-			SceneGraph.removeObjStack(Player.plane, arg1, arg0);
+	public static void spawnGroundObject(@OriginalArg(0) int z, @OriginalArg(2) int x) {
+		@Pc(9) LinkedList objStack = SceneGraph.objStacks[Player.plane][x][z];
+		if (objStack == null) {
+			SceneGraph.removeObjStack(Player.plane, x, z);
 			return;
 		}
-		@Pc(28) int local28 = -99999999;
-		@Pc(30) ObjStackNode local30 = null;
-		@Pc(35) ObjStackNode local35;
-		for (local35 = (ObjStackNode) local9.head(); local35 != null; local35 = (ObjStackNode) local9.next()) {
-			@Pc(44) ObjType local44 = ObjTypeList.get(local35.value.type);
-			@Pc(47) int local47 = local44.cost;
-			if (local44.stackable == 1) {
-				local47 *= local35.value.amount + 1;
+		@Pc(28) int cheapestCost = -99999999;
+		@Pc(30) ObjStackNode cheapestObj = null;
+		@Pc(35) ObjStackNode obj;
+		for (obj = (ObjStackNode) objStack.head(); obj != null; obj = (ObjStackNode) objStack.next()) {
+			@Pc(44) ObjType objType = ObjTypeList.get(obj.value.type);
+			@Pc(47) int cost = objType.cost;
+			if (objType.stackable == 1) {
+				cost *= obj.value.amount + 1;
 			}
-			if (local28 < local47) {
-				local28 = local47;
-				local30 = local35;
+			if (cheapestCost < cost) {
+				cheapestCost = cost;
+				cheapestObj = obj;
 			}
 		}
-		if (local30 == null) {
-			SceneGraph.removeObjStack(Player.plane, arg1, arg0);
+		if (cheapestObj == null) {
+			SceneGraph.removeObjStack(Player.plane, x, z);
 			return;
 		}
-		local9.addHead(local30);
+		objStack.addHead(cheapestObj);
 		@Pc(89) ObjStack local89 = null;
 		@Pc(91) ObjStack local91 = null;
-		for (local35 = (ObjStackNode) local9.head(); local35 != null; local35 = (ObjStackNode) local9.next()) {
-			@Pc(103) ObjStack local103 = local35.value;
-			if (local103.type != local30.value.type) {
+		for (obj = (ObjStackNode) objStack.head(); obj != null; obj = (ObjStackNode) objStack.next()) {
+			@Pc(103) ObjStack local103 = obj.value;
+			if (local103.type != cheapestObj.value.type) {
 				if (local89 == null) {
 					local89 = local103;
 				}
@@ -3466,8 +3466,8 @@ public class Protocol {
 				}
 			}
 		}
-		@Pc(152) long local152 = (arg0 << 7) + arg1 + 1610612736;
-		SceneGraph.setObjStack(Player.plane, arg1, arg0, SceneGraph.getTileHeight(Player.plane, arg1 * 128 + 64, arg0 * 128 + 64), local30.value, local152, local89, local91);
+		@Pc(152) long local152 = (z << 7) + x + 1610612736;
+		SceneGraph.setObjStack(Player.plane, x, z, SceneGraph.getTileHeight(Player.plane, x * 128 + 64, z * 128 + 64), cheapestObj.value, local152, local89, local91);
 	}
 
 	@OriginalMember(owner = "client!dh", name = "a", descriptor = "(IIII)Lclient!wk;")

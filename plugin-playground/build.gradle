@@ -45,13 +45,18 @@ public class plugin extends Plugin {
     }
  
     @Override
-    public void Update() {
-        //Update() is called once per tick (600ms)
+    public void Tick() {
+        //Tick() is called once per tick (600ms)
     }
     
     @Override
-    public void Draw(long deltaTime) {
-        //Draw() is called once per frame, with deltaTime being the time since last frame.
+    public void Update(long deltaTime) {
+        //Update() is called once per game loop, with deltaTime being the time since last loop.
+    }
+    
+    @Override
+    public void Draw() {
+        //Draw() is called once per frame
     }
  
     //Check the source of plugin.Plugin for more methods you can override! Happy hacking! <3
@@ -81,12 +86,16 @@ class plugin : Plugin() {
         //Init() is called when the plugin is loaded
     }
  
-    override fun Update() {
-        //Update() is called once per tick (600ms)
+    override fun Tick() {
+        //Tick() is called once per tick (600ms)
     }
     
-    override fun Draw(deltaTime: Long) {
-        //Draw() is called once per frame, with deltaTime being the time since last frame.
+    override fun Update(deltaTime: Long) {
+        //Update() is called once per game loop, with deltaTime being the time since last loop.
+    }
+    
+    override fun Draw() {
+        //Draw() is called once per frame
     }
  
     //Check the source of plugin.Plugin for more methods you can override! Happy hacking! <3

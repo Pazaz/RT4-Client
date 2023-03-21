@@ -389,7 +389,7 @@ public class Cs1ScriptRunner {
 								InterfaceList.aClass13_26 = component;
 								InterfaceList.anInt5574 = local114;
 								anInt2503 = local123;
-								ScriptRunner.method4326(component.height, component.clientCode == 1403, local123, component.width, local114);
+								ScriptRunner.renderComponent(component.height, component.clientCode == 1403, local123, component.width, local114);
 								if (GlRenderer.enabled) {
 									GlRaster.setClip(arg0, arg6, arg4, arg7);
 								} else {
@@ -733,9 +733,9 @@ public class Cs1ScriptRunner {
 											SoftwareRaster.fillRectAlpha(local123, local114, component.width, component.height, local270, 256 - (alpha & 0xFF));
 										}
 									} else if (GlRenderer.enabled) {
-										GlRaster.method1180(local123, local114, component.width, component.height, local270, 256 - (alpha & 0xFF));
+										GlRaster.drawRectAlpha(local123, local114, component.width, component.height, local270, 256 - (alpha & 0xFF));
 									} else {
-										SoftwareRaster.method2487(local123, local114, component.width, component.height, local270, 256 - (alpha & 0xFF));
+										SoftwareRaster.drawRectAlpha(local123, local114, component.width, component.height, local270, 256 - (alpha & 0xFF));
 									}
 									PluginRepository.ComponentDraw(i, component, local123, local114);
 								} else {
@@ -798,7 +798,7 @@ public class Cs1ScriptRunner {
 													color = (component.height + local468 - 1) / local468;
 
 													if (GlRenderer.enabled) {
-														GlRaster.method1183(local123, local114, component.width + local123, component.height + local114);
+														GlRaster.shrinkClip(local123, local114, component.width + local123, component.height + local114);
 
 														@Pc(2274) boolean local2274 = IntUtils.isPowerOfTwo(sprite.width);
 														@Pc(2279) boolean local2279 = IntUtils.isPowerOfTwo(sprite.height);
@@ -958,7 +958,7 @@ public class Cs1ScriptRunner {
 													GlRenderer.setFogEnabled(false);
 													FogManager.init(Preferences.brightness);
 													if (ScriptRunner.aBoolean299) {
-														GlRaster.method1177();
+														GlRaster.setFullClip();
 														GlRenderer.clearDepthBuffer();
 														GlRaster.setClip(arg0, arg6, arg4, arg7);
 														ScriptRunner.aBoolean299 = false;
@@ -1097,14 +1097,14 @@ public class Cs1ScriptRunner {
 												}
 												if (component.lineWidth == 1) {
 													if (GlRenderer.enabled) {
-														GlRaster.method1185(local123, local276, local468, memory, component.color);
+														GlRaster.renderLine(local123, local276, local468, memory, component.color);
 													} else {
-														SoftwareRaster.method2500(local123, local276, local468, memory, component.color);
+														SoftwareRaster.renderLine(local123, local276, local468, memory, component.color);
 													}
 												} else if (GlRenderer.enabled) {
-													GlRaster.method1181(local123, local276, local468, memory, component.color, component.lineWidth);
+													GlRaster.renderLine(local123, local276, local468, memory, component.color, component.lineWidth);
 												} else {
-													SoftwareRaster.method2494(local123, local276, local468, memory, component.color, component.lineWidth);
+													SoftwareRaster.renderLine(local123, local276, local468, memory, component.color, component.lineWidth);
 												}
 												PluginRepository.ComponentDraw(i, component, local468, local276);
 											}
@@ -1188,14 +1188,14 @@ public class Cs1ScriptRunner {
 		}
 		GlRaster.fillRect(arg2, arg3 + 16, 16, arg4 - 32, anInt4306);
 		GlRaster.fillRect(arg2, arg3 + local54 + 16, 16, local35, anInt1704);
-		GlRaster.method1176(arg2, local54 + arg3 + 16, local35, anInt4938);
-		GlRaster.method1176(arg2 + 1, local54 + 16 + arg3, local35, anInt4938);
-		GlRaster.method1174(arg2, local54 + arg3 + 16, 16, anInt4938);
-		GlRaster.method1174(arg2, local54 + arg3 + 17, 16, anInt4938);
-		GlRaster.method1176(arg2 + 15, arg3 + (16 - -local54), local35, anInt671);
-		GlRaster.method1176(arg2 + 14, arg3 - -local54 + 17, local35 - 1, anInt671);
-		GlRaster.method1174(arg2, local35 + arg3 + local54 + 15, 16, anInt671);
-		GlRaster.method1174(arg2 + 1, arg3 + 14 - -local54 + local35, 15, anInt671);
+		GlRaster.drawVerticalLine(arg2, local54 + arg3 + 16, local35, anInt4938);
+		GlRaster.drawVerticalLine(arg2 + 1, local54 + 16 + arg3, local35, anInt4938);
+		GlRaster.drawHorizontalLine(arg2, local54 + arg3 + 16, 16, anInt4938);
+		GlRaster.drawHorizontalLine(arg2, local54 + arg3 + 17, 16, anInt4938);
+		GlRaster.drawVerticalLine(arg2 + 15, arg3 + (16 - -local54), local35, anInt671);
+		GlRaster.drawVerticalLine(arg2 + 14, arg3 - -local54 + 17, local35 - 1, anInt671);
+		GlRaster.drawHorizontalLine(arg2, local35 + arg3 + local54 + 15, 16, anInt671);
+		GlRaster.drawHorizontalLine(arg2 + 1, arg3 + 14 - -local54 + local35, 15, anInt671);
 	}
 
 	@OriginalMember(owner = "client!aa", name = "a", descriptor = "(BLclient!be;)V")

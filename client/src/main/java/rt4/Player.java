@@ -212,65 +212,65 @@ public final class Player extends PathingEntity {
 		if (!GlRenderer.enabled || LoginManager.aBoolean252) {
 			return;
 		}
-		@Pc(14) Tile[][][] local14 = SceneGraph.tiles;
-		for (@Pc(22) int local22 = 0; local22 < local14.length; local22++) {
-			@Pc(30) Tile[][] local30 = local14[local22];
-			for (@Pc(32) int local32 = 0; local32 < local30.length; local32++) {
-				for (@Pc(42) int local42 = 0; local42 < local30[local32].length; local42++) {
-					@Pc(54) Tile local54 = local30[local32][local42];
-					if (local54 != null) {
+		@Pc(14) Tile[][][] worldTiles = SceneGraph.tiles;
+		for (@Pc(22) int level = 0; level < worldTiles.length; level++) {
+			@Pc(30) Tile[][] levelTiles = worldTiles[level];
+			for (@Pc(32) int x = 0; x < levelTiles.length; x++) {
+				for (@Pc(42) int z = 0; z < levelTiles[x].length; z++) {
+					@Pc(54) Tile tile = levelTiles[x][z];
+					if (tile != null) {
 						@Pc(71) GlModel local71;
-						if (local54.groundDecor != null && local54.groundDecor.entity instanceof GlModel) {
-							local71 = (GlModel) local54.groundDecor.entity;
-							if ((local54.groundDecor.key & Long.MIN_VALUE) == 0L) {
+						if (tile.groundDecor != null && tile.groundDecor.entity instanceof GlModel) {
+							local71 = (GlModel) tile.groundDecor.entity;
+							if ((tile.groundDecor.key & Long.MIN_VALUE) == 0L) {
 								local71.method4111(false, true, true, false, true, true);
 							} else {
 								local71.method4111(true, true, true, true, true, true);
 							}
 						}
-						if (local54.wallDecor != null) {
-							if (local54.wallDecor.primary instanceof GlModel) {
-								local71 = (GlModel) local54.wallDecor.primary;
-								if ((local54.wallDecor.key & Long.MIN_VALUE) == 0L) {
+						if (tile.wallDecor != null) {
+							if (tile.wallDecor.primary instanceof GlModel) {
+								local71 = (GlModel) tile.wallDecor.primary;
+								if ((tile.wallDecor.key & Long.MIN_VALUE) == 0L) {
 									local71.method4111(false, true, true, false, true, true);
 								} else {
 									local71.method4111(true, true, true, true, true, true);
 								}
 							}
-							if (local54.wallDecor.secondary instanceof GlModel) {
-								local71 = (GlModel) local54.wallDecor.secondary;
-								if ((Long.MIN_VALUE & local54.wallDecor.key) == 0L) {
-									local71.method4111(false, true, true, false, true, true);
-								} else {
-									local71.method4111(true, true, true, true, true, true);
-								}
-							}
-						}
-						if (local54.wall != null) {
-							if (local54.wall.primary instanceof GlModel) {
-								local71 = (GlModel) local54.wall.primary;
-								if ((local54.wall.key & Long.MIN_VALUE) == 0L) {
-									local71.method4111(false, true, true, false, true, true);
-								} else {
-									local71.method4111(true, true, true, true, true, true);
-								}
-							}
-							if (local54.wall.secondary instanceof GlModel) {
-								local71 = (GlModel) local54.wall.secondary;
-								if ((Long.MIN_VALUE & local54.wall.key) == 0L) {
+							if (tile.wallDecor.secondary instanceof GlModel) {
+								local71 = (GlModel) tile.wallDecor.secondary;
+								if ((Long.MIN_VALUE & tile.wallDecor.key) == 0L) {
 									local71.method4111(false, true, true, false, true, true);
 								} else {
 									local71.method4111(true, true, true, true, true, true);
 								}
 							}
 						}
-						for (@Pc(270) int local270 = 0; local270 < local54.sceneryLen; local270++) {
-							if (local54.scenery[local270].entity instanceof GlModel) {
-								@Pc(293) GlModel local293 = (GlModel) local54.scenery[local270].entity;
-								if ((Long.MIN_VALUE & local54.scenery[local270].key) == 0L) {
-									local293.method4111(false, true, true, false, true, true);
+						if (tile.wall != null) {
+							if (tile.wall.primary instanceof GlModel) {
+								local71 = (GlModel) tile.wall.primary;
+								if ((tile.wall.key & Long.MIN_VALUE) == 0L) {
+									local71.method4111(false, true, true, false, true, true);
 								} else {
-									local293.method4111(true, true, true, true, true, true);
+									local71.method4111(true, true, true, true, true, true);
+								}
+							}
+							if (tile.wall.secondary instanceof GlModel) {
+								local71 = (GlModel) tile.wall.secondary;
+								if ((Long.MIN_VALUE & tile.wall.key) == 0L) {
+									local71.method4111(false, true, true, false, true, true);
+								} else {
+									local71.method4111(true, true, true, true, true, true);
+								}
+							}
+						}
+						for (@Pc(270) int i = 0; i < tile.sceneryLen; i++) {
+							if (tile.scenery[i].entity instanceof GlModel) {
+								@Pc(293) GlModel sceneryEntity = (GlModel) tile.scenery[i].entity;
+								if ((Long.MIN_VALUE & tile.scenery[i].key) == 0L) {
+									sceneryEntity.method4111(false, true, true, false, true, true);
+								} else {
+									sceneryEntity.method4111(true, true, true, true, true, true);
 								}
 							}
 						}
@@ -433,7 +433,7 @@ public final class Player extends PathingEntity {
 		}
 		this.minY = local76.getMinY();
 		@Pc(184) Model local184;
-		if (Preferences.characterShadowsOn && (this.appearance.npcId == -1 || NpcTypeList.get(this.appearance.npcId).hasshadow)) {
+		if (Preferences.characterShadowsOn && (this.appearance.npcId == -1 || NpcTypeList.get(this.appearance.npcId).hasShadow)) {
 			local184 = ShadowModelList.method1043(160, this.aBoolean171, local54 == null ? local25 : local54, this.xFine, 0, this.zFine, 0, 1, local76, arg0, local54 == null ? this.anInt3425 : this.anInt3407, this.anInt3424, 240);
 			if (GlRenderer.enabled) {
 				@Pc(188) float local188 = GlRenderer.method4179();
@@ -463,7 +463,7 @@ public final class Player extends PathingEntity {
 					}
 					if (local245.type == 2) {
 						@Pc(340) int local340 = (local245.targetX - Camera.originX) * 4 + 2 - PlayerList.self.xFine / 32;
-						local291 = (local245.anInt4046 - Camera.originZ) * 4 + 2 - PlayerList.self.zFine / 32;
+						local291 = (local245.targetZ - Camera.originZ) * 4 + 2 - PlayerList.self.zFine / 32;
 						this.method1263(null, local291, local76, local340, arg5, arg9, arg0, arg7, arg4, arg3, arg1, local245.playerModelId, arg2, arg6);
 					}
 					if (local245.type == 10 && local245.actorTargetId >= 0 && PlayerList.players.length > local245.actorTargetId) {
