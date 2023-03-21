@@ -1137,9 +1137,9 @@ public class InterfaceList {
 			Cs1ScriptRunner.method182();
 		}
 		if (GlRenderer.enabled) {
-			GlRaster.method1177();
+			GlRaster.setFullClip();
 		} else {
-			SoftwareRaster.method2503();
+			SoftwareRaster.setFullClip();
 		}
 		Protocol.sceneDelta = 0;
 	}

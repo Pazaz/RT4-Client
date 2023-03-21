@@ -46,14 +46,14 @@ public class MiniMap {
 
 	@OriginalMember(owner = "client!ma", name = "a", descriptor = "([IIIIII)V")
 	public static void renderTile(@OriginalArg(0) int[] pixels, @OriginalArg(1) int index, @OriginalArg(3) int arg2, @OriginalArg(4) int arg3, @OriginalArg(5) int arg4) {
-		@Pc(7) Tile local7 = SceneGraph.tiles[arg2][arg3][arg4];
-		if (local7 == null) {
+		@Pc(7) Tile tile = SceneGraph.tiles[arg2][arg3][arg4];
+		if (tile == null) {
 			return;
 		}
-		@Pc(13) PlainTile local13 = local7.plainTile;
+		@Pc(13) PlainTile plainTile = tile.plainTile;
 		@Pc(23) int local23;
-		if (local13 != null) {
-			@Pc(18) int local18 = local13.anInt4871;
+		if (plainTile != null) {
+			@Pc(18) int local18 = plainTile.anInt4871;
 			if (local18 != 0) {
 				for (local23 = 0; local23 < 4; local23++) {
 					pixels[index] = local18;
@@ -65,14 +65,14 @@ public class MiniMap {
 			}
 			return;
 		}
-		@Pc(58) ShapedTile local58 = local7.shapedTile;
-		if (local58 == null) {
+		@Pc(58) ShapedTile shapedTile = tile.shapedTile;
+		if (shapedTile == null) {
 			return;
 		}
-		local23 = local58.anInt1966;
-		@Pc(67) int local67 = local58.anInt1967;
-		@Pc(70) int local70 = local58.anInt1969;
-		@Pc(73) int local73 = local58.anInt1968;
+		local23 = shapedTile.anInt1966;
+		@Pc(67) int local67 = shapedTile.anInt1967;
+		@Pc(70) int local70 = shapedTile.anInt1969;
+		@Pc(73) int local73 = shapedTile.anInt1968;
 		@Pc(77) int[] local77 = anIntArrayArray24[local23];
 		@Pc(81) int[] local81 = anIntArrayArray46[local67];
 		@Pc(83) int local83 = 0;
@@ -377,7 +377,7 @@ public class MiniMap {
 					}
 					if (local770.type == 2) {
 						local154 = (local770.targetX - Camera.originX) * 4 + 2 - PlayerList.self.xFine / 32;
-						local231 = (-Camera.originZ + local770.anInt4046) * 4 + 2 - PlayerList.self.zFine / 32;
+						local231 = (-Camera.originZ + local770.targetZ) * 4 + 2 - PlayerList.self.zFine / 32;
 						method1960(local770.anInt4048, arg1, arg2, local154, local231, arg3);
 					}
 					if (local770.type == 10 && local770.actorTargetId >= 0 && PlayerList.players.length > local770.actorTargetId) {
@@ -518,7 +518,7 @@ public class MiniMap {
 		while (local5.length > local3) {
 			@Pc(17) MapMarker local17 = local5[local3];
 			if (local17 != null && local17.type == 2) {
-				ScriptRunner.method1026(arg0 >> 1, arg4, (local17.anInt4046 - Camera.originZ << 7) + local17.anInt4047, local17.anInt4050 * 2, arg2 >> 1, local17.anInt4045 + (local17.targetX - Camera.originX << 7), arg3);
+				ScriptRunner.method1026(arg0 >> 1, arg4, (local17.targetZ - Camera.originZ << 7) + local17.anInt4047, local17.anInt4050 * 2, arg2 >> 1, local17.anInt4045 + (local17.targetX - Camera.originX << 7), arg3);
 				if (ScriptRunner.anInt1951 > -1 && client.loop % 20 < 10) {
 					Sprites.headhints[local17.anInt4048].render(arg1 + ScriptRunner.anInt1951 - 12, arg5 + -28 - -ScriptRunner.anInt548);
 				}

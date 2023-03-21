@@ -22,7 +22,7 @@ public final class Wall {
 	public int anInt3049;
 
 	@OriginalMember(owner = "client!jh", name = "o", descriptor = "I")
-	public int anInt3051;
+	public int yFine;
 
 	@OriginalMember(owner = "client!jh", name = "q", descriptor = "I")
 	public int anInt3052;

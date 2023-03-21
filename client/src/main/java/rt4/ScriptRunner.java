@@ -171,7 +171,7 @@ public final class ScriptRunner {
 					local115 = height * 512 * local51 / (local86 * 334);
 					local122 = (width - local115) / 2;
 					if (dontClip) {
-						GlRaster.method1177();
+						GlRaster.setFullClip();
 						GlRaster.fillRect(x, y, local122, height, 0);
 						GlRaster.fillRect(width + x - local122, y, local122, height, 0);
 					}
@@ -186,7 +186,7 @@ public final class ScriptRunner {
 					local115 = local86 * width * 334 / (local51 * 512);
 					local122 = (height - local115) / 2;
 					if (dontClip) {
-						GlRaster.method1177();
+						GlRaster.setFullClip();
 						GlRaster.fillRect(x, y, width, local122, 0);
 						GlRaster.fillRect(x, y + height - local122, width, local122, 0);
 					}
@@ -496,7 +496,7 @@ public final class ScriptRunner {
 						local639 = local508.width * entity.hitpointsBar / 255;
 						local642 = local508.height;
 						if (GlRenderer.enabled) {
-							GlRaster.method1183(local161, local359, local161 + local639, local359 + local642);
+							GlRaster.shrinkClip(local161, local359, local161 + local639, local359 + local642);
 						} else {
 							SoftwareRaster.method2498(local161, local359, local161 + local639, local642 + local359);
 						}
@@ -618,7 +618,7 @@ public final class ScriptRunner {
 				if (OverheadChat.effects[local5] == 4) {
 					local642 = (150 - OverheadChat.loops[local5]) * (Fonts.b12Full.getStringWidth(local962) + 100) / 150;
 					if (GlRenderer.enabled) {
-						GlRaster.method1183(anInt1951 + arg2 - 50, arg0, anInt1951 + arg2 + 50, arg4 + arg0);
+						GlRaster.shrinkClip(anInt1951 + arg2 - 50, arg0, anInt1951 + arg2 + 50, arg4 + arg0);
 					} else {
 						SoftwareRaster.method2498(arg2 + anInt1951 - 50, arg0, anInt1951 + arg2 + 50, arg4 + arg0);
 					}
@@ -633,7 +633,7 @@ public final class ScriptRunner {
 					@Pc(1372) int local1372 = 0;
 					local642 = 150 - OverheadChat.loops[local5];
 					if (GlRenderer.enabled) {
-						GlRaster.method1183(arg2, anInt548 + arg0 - Fonts.b12Full.lineHeight - 1, arg1 + arg2, arg0 + anInt548 + 5);
+						GlRaster.shrinkClip(arg2, anInt548 + arg0 - Fonts.b12Full.lineHeight - 1, arg1 + arg2, arg0 + anInt548 + 5);
 					} else {
 						SoftwareRaster.method2498(arg2, anInt548 + arg0 - Fonts.b12Full.lineHeight - 1, arg2 + arg1, anInt548 + arg0 + 5);
 					}

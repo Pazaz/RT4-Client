@@ -1905,7 +1905,7 @@ public class Protocol {
 					}
 					mapMarker.type = 2;
 					mapMarker.targetX = inboundBuffer.g2();
-					mapMarker.anInt4046 = inboundBuffer.g2();
+					mapMarker.targetZ = inboundBuffer.g2();
 					mapMarker.anInt4050 = inboundBuffer.g1();
 				}
 				mapMarker.playerModelId = inboundBuffer.g2();
