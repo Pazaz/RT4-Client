@@ -680,7 +680,16 @@ public abstract class GameShell extends Applet implements Runnable, FocusListene
 			topMargin = 0;
 			instance = this;
 			frame = new Frame();
-			frame.setTitle("Jagex");
+			String title = "Jagex";
+			if (GlobalJsonConfig.instance != null) {
+				String hostname = GlobalJsonConfig.instance.ip_management;
+				switch(hostname) {
+					case "play.2009scape.org": title = "2009Scape"; break;
+					case "test.2009scape.org": title = "2009Scape [Test]"; break;
+					case "localhost": title = "2009Scape [Local]"; break;
+				}
+			}
+			frame.setTitle(title);
 			frame.setResizable(true);
 			frame.addWindowListener(this);
 			frame.setVisible(true);
